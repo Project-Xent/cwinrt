@@ -1,0 +1,170 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  # Authoritative gate: MSVC, x64, the one toolchain×arch that can both build AND
+  # run everything (the e2e anchors need to execute). All correctness gates live
+  # here; the other jobs widen toolchain/arch coverage as build/link-only.
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install xmake
+        uses: xmake-io/github-action-setup-xmake@v1
+
+      - name: Build generator and runtime
+        run: |
+          # xmake build takes ONE target per call.
+          xmake build cwinrt-gen
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          xmake build cwinrt-rt
+
+      - name: Verify existing impl (no E_NOTIMPL)
+        run: xmake build verify-bindings
+
+      - name: Determinism gate (byte-stable across runs and --jobs)
+        shell: pwsh
+        run: ./scripts/check_determinism.ps1
+
+      - name: Golden gate (byte-stability + ABI surface unchanged)
+        shell: pwsh
+        run: ./scripts/snapshot_golden.ps1 -Check
+
+      - name: PIID gate (parameterized IIDs vs cppwinrt)
+        shell: pwsh
+        run: ./scripts/check_piids.ps1
+
+      - name: Slot gate (vtable slots vs WinRT ABI)
+        shell: pwsh
+        run: |
+          $sdk = (Get-Content sdk.version -Raw).Trim()
+          $winmd = "${env:ProgramFiles(x86)}\Windows Kits\10\UnionMetadata\$sdk\Windows.winmd"
+          ./build/windows/x64/release/cwinrt-gen.exe --check-slots "$winmd"
+
+      - name: All-headers compile gate
+        run: xmake build header-compile-all
+
+      - name: All-impl compile gate (header + impl per namespace)
+        run: xmake build impl-compile-all
+
+      - name: Full impl link gate
+        run: xmake build impl-link-all
+
+      - name: Runtime anchors (headless, real hardware)
+        shell: pwsh
+        run: |
+          foreach ($t in 'e2e_headless','e2e_async','e2e_piid','e2e_box','e2e_async_progress') {
+            xmake build $t
+            xmake run $t
+          }
+
+      - name: Integration gate (consumer links via add_deps("cwinrt") only)
+        run: |
+          xmake build consume_cwinrt
+          xmake run consume_cwinrt
+
+      - name: Samples (build-only; they need an interactive desktop + GPU to run)
+        run: |
+          foreach ($s in 'sample_mica','sample_acrylic','sample_flyout','sample_capture') {
+            xmake build $s
+            if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          }
+
+      - name: Composition runtime anchor (needs interactive desktop)
+        continue-on-error: true
+        run: |
+          xmake build e2e_composition
+          xmake run e2e_composition
+
+  # MSVC cross-compile breadth: build the full generated surface + samples for the
+  # non-native arches. A cross binary can't run on the x64 runner, so this is
+  # compile+link only; correctness is asserted by build-windows on x64.
+  msvc-cross:
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        arch: [arm64, x86]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install xmake
+        uses: xmake-io/github-action-setup-xmake@v1
+      - name: Configure MSVC ${{ matrix.arch }}
+        run: xmake f -p windows -a ${{ matrix.arch }} -m release --toolchain=msvc -c
+      - name: Build full surface + samples (build + link only)
+        run: |
+          # xmake build takes ONE target per call; stop on the first failure.
+          foreach ($t in 'cwinrt-rt','cwinrt-bindings-all','link_all',
+                         'sample_mica','sample_acrylic','sample_flyout','sample_capture') {
+            xmake build $t
+            if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          }
+
+  # clang-cl (clang with the MSVC driver/ABI) over the full surface. Informational:
+  # the non-MSVC compiler contract is already enforced by portability-clang +
+  # mingw-link; this just confirms the clang-cl driver path on the runner's LLVM.
+  clang-cl:
+    runs-on: windows-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install xmake
+        uses: xmake-io/github-action-setup-xmake@v1
+      - name: Build full surface with clang-cl (x64)
+        run: |
+          xmake f -p windows -a x64 -m release --toolchain=clang-cl -c
+          xmake build cwinrt-rt
+          xmake build cwinrt-bindings-all
+
+  # The deliverable must build cleanly on a non-MSVC toolchain. Compile the
+  # committed generated headers + impl + the runtime under clang with
+  # -Wall -Wextra -Werror: zero errors AND zero warnings.
+  portability-clang:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: clang portability (generated headers + impl + rt, -Werror)
+        shell: bash
+        run: |
+          set -e
+          F="-std=c17 -I include -fsyntax-only -Wall -Wextra -Werror"
+          for h in include/cwinrt/Windows.*.h; do clang $F -x c "$h"; done
+          for c in include/cwinrt/impl/*.impl.c; do clang $F "$c"; done
+          for c in rt/*.c; do clang $F "$c"; done
+          echo "clang: headers + impl + rt compile clean (0 errors, 0 warnings)"
+
+  # Lock the non-MSVC LINK recipe (-lwinstorecompat -luuid -lruntimeobject -lole32
+  # -loleaut32) by linking the ENTIRE generated surface (rt + every impl +
+  # e2e_headless) under llvm-mingw, one arch per matrix leg. The native x86_64 also
+  # RUNS the binary; a cross binary can't run on the x64 runner, so it is link-only.
+  mingw-link:
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { arch: x86_64,  run: "--run" }
+          - { arch: aarch64, run: "" }
+          - { arch: i686,    run: "" }
+          - { arch: armv7,    run: "" }
+    env:
+      LLVM_MINGW_VER: "20260324"
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install llvm-mingw
+        shell: pwsh
+        run: |
+          $ver = $env:LLVM_MINGW_VER
+          $name = "llvm-mingw-$ver-ucrt-x86_64"
+          $url = "https://github.com/mstorsjo/llvm-mingw/releases/download/$ver/$name.zip"
+          Invoke-WebRequest -Uri $url -OutFile llvm-mingw.zip
+          Expand-Archive -Path llvm-mingw.zip -DestinationPath C:\ -Force
+          "C:\$name\bin" | Out-File -FilePath $env:GITHUB_PATH -Append -Encoding utf8
+      - name: Full-surface link (${{ matrix.arch }})
+        shell: bash
+        run: bash scripts/mingw_link.sh ${{ matrix.arch }} ${{ matrix.run }}
