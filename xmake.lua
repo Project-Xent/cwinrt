@@ -122,6 +122,15 @@ target("cwinrt-bindings-numberformatting")
         add_syslinks("runtimeobject", "ole32", "oleaut32")
     end
 
+target("cwinrt-bindings-input")
+    set_kind("static")
+    add_files("include/cwinrt/impl/Windows.UI.Input.impl.c")
+    add_includedirs("include")
+    add_deps("cwinrt-rt")
+    if is_plat("windows", "mingw") then
+        add_syslinks("runtimeobject", "ole32", "oleaut32")
+    end
+
 -- All generated impl units (present after xmake gen-all-impl)
 target("cwinrt-bindings-all")
     set_kind("static")
