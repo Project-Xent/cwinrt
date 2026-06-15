@@ -27,7 +27,17 @@ elseif is_plat("windows") then
     add_cflags("/Gy", "/Gw")
 end
 
-includes("thirdparty/coetua/xmake_cwinrt.lua")
+-- True when cwinrt is built on its own; false when it's `includes()`'d as a
+-- dependency (then os.projectdir() is the *consuming* project, e.g. fluxent).
+-- Consumers only need the library targets (runtime + bindings + umbrella); the
+-- generator, tests, samples and dev tasks below are gated on this so a consumer's
+-- `xmake build` doesn't compile cwinrt's whole conformance suite (link_all alone
+-- pulls in all 343 *.impl.c) — nor coetua, which only the generator uses.
+local is_main = (os.projectdir() == os.scriptdir())
+
+if is_main then
+    includes("thirdparty/coetua/xmake_cwinrt.lua")
+end
 
 add_includedirs("include")
 add_includedirs("gen")
@@ -42,6 +52,7 @@ target("cwinrt-rt")
         add_syslinks("runtimeobject", "ole32", "oleaut32")
     end
 
+if is_main then
 -- Code generator (pure C ECMA-335 winmd reader)
 target("cwinrt-gen")
     set_kind("binary")
@@ -76,6 +87,7 @@ target("test_abi")
     if is_plat("windows", "mingw") then
         add_syslinks("runtimeobject", "ole32", "oleaut32")
     end
+end -- is_main (generator + smoke/abi tests)
 
 target("cwinrt-bindings-composition")
     set_kind("static")
@@ -160,6 +172,7 @@ target("cwinrt")
         add_syslinks("runtimeobject", "ole32", "oleaut32", {public = true})
     end
 
+if is_main then
 -- 4b integration gate: a consumer wired with ONLY `add_deps("cwinrt")` (no include
 -- dir, no syslinks). If it builds + runs, the public surface above is intact.
 target("consume_cwinrt")
@@ -360,8 +373,14 @@ target("test_conform_golden")
     end
 
 -- Phony targets (xmake 3.x: custom task() is not registered in this project)
+-- These are manual developer tasks (codegen / compile reports). set_default(false)
+-- keeps them out of a blanket `xmake build`; otherwise, when cwinrt is an included
+-- dep, they run during the consumer's build and fail. Their scripts live in
+-- cwinrt/scripts, so resolve via os.scriptdir() (this xmake.lua's dir) rather than
+-- os.projectdir(), which is the *consuming* project when cwinrt is a sub-include.
 target("gen-headers")
     set_kind("phony")
+    set_default(false)
     on_build(function()
         import("core.project.config")
         local plat = config.plat() or "windows"
@@ -371,38 +390,42 @@ target("gen-headers")
         if not os.isfile(gen) then
             os.exec("xmake build cwinrt-gen")
         end
-        local script = path.join(os.projectdir(), "scripts", "gen_all_windows.ps1")
+        local script = path.join(os.scriptdir(), "scripts", "gen_all_windows.ps1")
         os.exec("powershell -NoProfile -ExecutionPolicy Bypass -File " .. script)
     end)
 
 target("gen-all-impl")
     set_kind("phony")
+    set_default(false)
     on_build(function()
         if not os.isfile(path.join(os.projectdir(), "build", "windows", "x64", "release", "cwinrt-gen.exe")) then
             os.exec("xmake build cwinrt-gen")
         end
-        local script = path.join(os.projectdir(), "scripts", "gen_all_windows.ps1")
+        local script = path.join(os.scriptdir(), "scripts", "gen_all_windows.ps1")
         os.exec("powershell -NoProfile -ExecutionPolicy Bypass -File " .. script .. " -Impl")
     end)
 
 target("verify-bindings")
     set_kind("phony")
+    set_default(false)
     on_build(function()
-        local script = path.join(os.projectdir(), "scripts", "verify_impl.ps1")
+        local script = path.join(os.scriptdir(), "scripts", "verify_impl.ps1")
         os.exec("powershell -NoProfile -ExecutionPolicy Bypass -File " .. script)
     end)
 
 target("header-compile-all")
     set_kind("phony")
+    set_default(false)
     on_build(function()
-        local report = path.join(os.projectdir(), "scripts", "header_compile_report.ps1")
+        local report = path.join(os.scriptdir(), "scripts", "header_compile_report.ps1")
         os.exec("powershell -NoProfile -ExecutionPolicy Bypass -File " .. report)
     end)
 
 target("impl-compile-all")
     set_kind("phony")
+    set_default(false)
     on_build(function()
-        local report = path.join(os.projectdir(), "scripts", "impl_compile_report.ps1")
+        local report = path.join(os.scriptdir(), "scripts", "impl_compile_report.ps1")
         os.exec("powershell -NoProfile -ExecutionPolicy Bypass -File " .. report)
     end)
 
@@ -426,6 +449,7 @@ target("test_impl_link_all")
 -- until CI's job timeout). add_deps builds it in-process, no second xmake.
 target("impl-link-all")
     set_kind("phony")
+    set_default(false)
     -- test_impl_link_all is disabled on mingw (see above); only depend on it where built.
     if not is_plat("mingw") then
         add_deps("test_impl_link_all")
@@ -433,8 +457,9 @@ target("impl-link-all")
 
 target("register-conform-sparse")
     set_kind("phony")
+    set_default(false)
     on_build(function()
-        local script = path.join(os.projectdir(), "scripts", "register_conform_sparse.ps1")
+        local script = path.join(os.scriptdir(), "scripts", "register_conform_sparse.ps1")
         os.exec("powershell -NoProfile -ExecutionPolicy Bypass -File " .. script)
     end)
 
@@ -443,14 +468,15 @@ target("register-conform-sparse")
 -- run after, in on_build.
 target("test-conform-mapping")
     set_kind("phony")
+    set_default(false)
     -- The mapping-test binaries are disabled on mingw (see above); don't depend on
     -- disabled targets there or the build graph reports them as unknown.
     if not is_plat("mingw") then
         add_deps("test_conform_type_mapping", "test_conform_array_mapping")
     end
     on_build(function()
-        local naming = path.join(os.projectdir(), "scripts", "conform_check_naming.ps1")
-        local types = path.join(os.projectdir(), "scripts", "conform_check_types.ps1")
+        local naming = path.join(os.scriptdir(), "scripts", "conform_check_naming.ps1")
+        local types = path.join(os.scriptdir(), "scripts", "conform_check_types.ps1")
         os.exec("powershell -NoProfile -ExecutionPolicy Bypass -File " .. naming)
         os.exec("powershell -NoProfile -ExecutionPolicy Bypass -File " .. types)
     end)
@@ -466,4 +492,6 @@ for _, name in ipairs({"mica", "acrylic", "flyout", "capture"}) do
         if is_plat("windows", "mingw") then
             add_syslinks("user32", "dwmapi", "d3d11", "dxgi", "dxguid")
         end
-end
+end -- samples loop
+
+end -- is_main (tests, samples, dev tasks)

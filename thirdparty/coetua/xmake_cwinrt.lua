@@ -16,9 +16,10 @@ if not is_plat("windows") or is_plat("mingw") then
     add_defines("_FILE_OFFSET_BITS=64")
 end
 
-add_includedirs("thirdparty/coetua/src")
-
 local coetua_src = path.join(os.scriptdir(), "src")
+-- Absolute (os.scriptdir()-based): a bare relative "thirdparty/coetua/src" resolves
+-- against this script's own dir and doubles to .../coetua/thirdparty/coetua/src.
+add_includedirs(coetua_src)
 local units = {}
 for _, f in ipairs(os.files(path.join(coetua_src, "*.c"))) do
     local name = path.basename(f)
