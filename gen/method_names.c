@@ -277,18 +277,6 @@ static void type_short_snake(char *dst, char const *src) {
 	dst [di] = '\0';
 }
 
-static void
-type_method_snake(char const *type_short, char const *method_name, char *type_snake, char *meth_snake, size_t cap) {
-	( void ) cap;
-	type_snake [0] = '\0';
-	meth_snake [0] = '\0';
-	if (!type_short || !method_name) return;
-	type_short_snake(type_snake, type_short);
-	sanitize_ident(type_snake);
-	snake_into(meth_snake, 256, 0, method_name);
-	sanitize_ident(meth_snake);
-}
-
 static char *build_method_c_name(
   int arena, char const *ns_prefix, char const *winrt_ns, char const *type_short, char const *method_name,
   char const *suffix

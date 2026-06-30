@@ -5,70 +5,17 @@
 #include <stdlib.h>
 #include <string.h>
 
-static uint32_t read_idx_local(uint8_t const *p, uint8_t sz) {
-	if (sz == 4)
-		return ( uint32_t ) p [0] | (( uint32_t ) p [1] << 8) | (( uint32_t ) p [2] << 16) | (( uint32_t ) p [3] << 24);
-	return ( uint32_t ) p [0] | (( uint32_t ) p [1] << 8);
-}
-
-/* ECMA-335 compressed integer: header byte count is implied by the top bits of bp[0] alone. */
-static uint32_t blob_prefix_size(uint8_t b0) {
-	if (!(b0 & 0x80u)) return 1;
-	if ((b0 & 0xc0u) == 0x80u) return 2;
-	return 4;
-}
-
-/* Decode a compressed blob length prefix at bp; returns header byte count, *len gets the length. */
-static uint32_t blob_len_prefix(uint8_t const *bp, uint32_t *len) {
-	uint32_t pos = blob_prefix_size(bp [0]);
-	if (pos == 1) *len = bp [0];
-	else if (pos == 2) *len = (( uint32_t ) (bp [0] & 0x3fu) << 8) | bp [1];
-	else
-		*len = (( uint32_t ) (bp [0] & 0x1fu) << 24) | (( uint32_t ) bp [1] << 16) | (( uint32_t ) bp [2] << 8)
-		     | bp [3];
-	return pos;
-}
-
-static uint32_t cd_rows_local(winmd_tables const *t, int const *ids, int n, int tag) {
-	uint32_t m = 0;
-	int      i;
-	for (i = 0; i < n; i++)
-		if (t->rows [ids [i]] > m) m = t->rows [ids [i]];
-	return (m << tag) > 0xffff ? 4u : 2u;
-}
-
-static char const *str_heap(winmd_heap const *strings, uint32_t ix) {
-	if (!strings || !strings->data || !ix || ix >= strings->size) return "";
-	return ( char const * ) (strings->data + ix);
-}
-
-static char *str_dup_heap(winmd_heap const *strings, uint32_t ix) {
-	char const *s;
-	char       *p;
-	size_t      n;
-	if (!ix) {
-		p = ( char * ) malloc(1);
-		if (p) p [0] = '\0';
-		return p;
-	}
-	s = str_heap(strings, ix);
-	n = strlen(s);
-	p = ( char * ) malloc(n + 1);
-	if (p) memcpy(p, s, n + 1);
-	return p;
-}
-
 static uint32_t typedef_extends_off(winmd_tables const *t) { return 4u + ( uint32_t ) t->string_ix * 2u; }
 
 static uint32_t typedef_field_list_off(winmd_tables const *t) {
 	static int const cd [] = {2, 1, 27};
-	return typedef_extends_off(t) + cd_rows_local(t, cd, 3, 2);
+	return typedef_extends_off(t) + winmd_cd_rows(t, cd, 3, 2);
 }
 
 static uint32_t typedef_field_list(winmd_tables const *t, uint32_t row1) {
 	uint8_t const *p = winmd_row_ptr(t, WINMD_TBL_TYPEDEF, row1);
 	if (!p) return 0;
-	return read_idx_local(p + typedef_field_list_off(t), t->table_ix [WINMD_TBL_FIELD]);
+	return winmd_read_idx(p + typedef_field_list_off(t), t->table_ix [WINMD_TBL_FIELD]);
 }
 
 static uint32_t method_param_list(winmd_tables const *t, uint32_t method_row1) {
@@ -76,7 +23,7 @@ static uint32_t method_param_list(winmd_tables const *t, uint32_t method_row1) {
 	uint32_t       pos;
 	if (!p) return 0;
 	pos = 8u + t->string_ix + t->blob_ix;
-	return read_idx_local(p + pos, t->table_ix [WINMD_TBL_PARAM]);
+	return winmd_read_idx(p + pos, t->table_ix [WINMD_TBL_PARAM]);
 }
 
 uint32_t winmd_typedef_token(uint32_t typedef_row1) { return 0x02000000u | typedef_row1; }
@@ -88,14 +35,14 @@ uint32_t winmd_typedef_extends_coded(winmd_meta const *m, uint32_t typedef_row1)
 	if (!m || !typedef_row1) return 0;
 	p = winmd_row_ptr(&m->tabs, WINMD_TBL_TYPEDEF, typedef_row1);
 	if (!p) return 0;
-	cd_sz = cd_rows_local(&m->tabs, cd_tdr, 3, 2);
-	return read_idx_local(p + typedef_extends_off(&m->tabs), ( uint8_t ) cd_sz);
+	cd_sz = winmd_cd_rows(&m->tabs, cd_tdr, 3, 2);
+	return winmd_read_idx(p + typedef_extends_off(&m->tabs), ( uint8_t ) cd_sz);
 }
 
 /* Read the Name then Namespace string columns starting at offset pos in row p, and format "<ns>.<name>". */
 static void format_type_full_name(winmd_meta const *m, uint8_t const *p, uint32_t pos, char *buf, size_t bufsz) {
-	char const *name = str_heap(&m->strings, read_idx_local(p + pos, m->tabs.string_ix));
-	char const *ns   = str_heap(&m->strings, read_idx_local(p + pos + m->tabs.string_ix, m->tabs.string_ix));
+	char const *name = winmd_str_at(&m->strings, winmd_read_idx(p + pos, m->tabs.string_ix));
+	char const *ns   = winmd_str_at(&m->strings, winmd_read_idx(p + pos + m->tabs.string_ix, m->tabs.string_ix));
 	if (ns && ns [0]) snprintf(buf, bufsz, "%s.%s", ns, name ? name : "");
 	else snprintf(buf, bufsz, "%s", name ? name : "");
 }
@@ -103,7 +50,7 @@ static void format_type_full_name(winmd_meta const *m, uint8_t const *p, uint32_
 /* TypeRefs put a ResolutionScope coded index before the Name column; TypeDefs put 4-byte Flags. */
 static uint32_t typeref_name_off(winmd_tables const *t) {
 	static int const cd_tdr [] = {2, 1, 27};
-	return cd_rows_local(t, cd_tdr, 3, 2);
+	return winmd_cd_rows(t, cd_tdr, 3, 2);
 }
 
 int winmd_coded_type_full_name(winmd_meta const *m, uint32_t coded, char *buf, size_t bufsz) {
@@ -152,9 +99,9 @@ static int iface_impl_match(winmd_meta const *m, uint32_t i, uint32_t typedef_ro
 	uint8_t const      *p = winmd_row_ptr(t, WINMD_TBL_INTERFACEIMPL, i);
 	uint32_t            cls;
 	if (!p) return 0;
-	cls = read_idx_local(p, t->table_ix [WINMD_TBL_TYPEDEF]);
+	cls = winmd_read_idx(p, t->table_ix [WINMD_TBL_TYPEDEF]);
 	if (cls != typedef_row1) return 0;
-	*iface = read_idx_local(p + t->table_ix [WINMD_TBL_TYPEDEF], ( uint8_t ) typeref_name_off(t));
+	*iface = winmd_read_idx(p + t->table_ix [WINMD_TBL_TYPEDEF], ( uint8_t ) typeref_name_off(t));
 	return 1;
 }
 
@@ -223,7 +170,7 @@ static int decode_const_payload(uint8_t ctype, uint8_t const *blob, int64_t *val
 /* HasConstant coded-index size for the Constant.Parent column. */
 static uint32_t const_parent_cd(winmd_tables const *t) {
 	static int const hc [] = {4, 8, 23};
-	return cd_rows_local(t, hc, 3, 2);
+	return winmd_cd_rows(t, hc, 3, 2);
 }
 
 /* Decode Constant row i if it targets field_row1: 0/-1 = decoded result, -2 = not this field. */
@@ -237,12 +184,16 @@ static int const_row_for_field(winmd_meta const *m, uint32_t i, uint32_t field_r
 	if (!p) return -2;
 	/* Constant row layout (ECMA-335 II.22.9): Type(1 byte) + padding(1 byte),
 	 * then Parent (HasConstant coded index, cd bytes), then Value (blob index). */
-	parent = read_idx_local(p + 2, ( uint8_t ) cd);
+	parent = winmd_read_idx(p + 2, ( uint8_t ) cd);
 	if ((parent & 3u) != 0 || (parent >> 2) != field_row1) return -2;
-	blob_ix = read_idx_local(p + 2 + cd, m->tabs.blob_ix);
+	blob_ix = winmd_read_idx(p + 2 + cd, m->tabs.blob_ix);
 	if (!blob_ix || blob_ix >= m->blobs.size) return -1;
 	bp = m->blobs.data + blob_ix;
-	return decode_const_payload(p [0], bp + blob_len_prefix(bp, &blen), value);
+	{
+		uint32_t skip = winmd_decompress(bp, m->blobs.size - blob_ix, &blen);
+		if (!skip) return -1;
+		return decode_const_payload(p [0], bp + skip, value);
+	}
 }
 
 static int field_constant_value(winmd_meta const *m, uint32_t field_row1, int64_t *value) {
@@ -260,10 +211,10 @@ static int fill_field_info(winmd_meta const *m, uint32_t row, winmd_field_info *
 	uint8_t const *p = winmd_row_ptr(&m->tabs, WINMD_TBL_FIELD, row);
 	uint32_t       name_ix;
 	if (!p) return 0;
-	f->flags       = ( uint32_t ) read_idx_local(p, 2);
-	name_ix        = read_idx_local(p + 2, m->tabs.string_ix);
-	f->name        = str_dup_heap(&m->strings, name_ix);
-	f->sig_blob    = read_idx_local(p + 2 + m->tabs.string_ix, m->tabs.blob_ix);
+	f->flags       = ( uint32_t ) winmd_read_idx(p, 2);
+	name_ix        = winmd_read_idx(p + 2, m->tabs.string_ix);
+	f->name        = winmd_str_dup(&m->strings, name_ix);
+	f->sig_blob    = winmd_read_idx(p + 2 + m->tabs.string_ix, m->tabs.blob_ix);
 	f->has_const   = false;
 	f->const_value = 0;
 	if (field_constant_value(m, row, &f->const_value) == 0) f->has_const = true;
@@ -316,7 +267,7 @@ static uint32_t param_max_seq(winmd_meta const *m, uint32_t start, uint32_t end)
 		uint8_t const *p = winmd_row_ptr(&m->tabs, WINMD_TBL_PARAM, row);
 		uint32_t       seq;
 		if (!p) continue;
-		seq = read_idx_local(p + 2, 2);
+		seq = winmd_read_idx(p + 2, 2);
 		if (seq == 0 || seq > 256u) continue;
 		if (seq > max_seq) max_seq = seq;
 	}
@@ -331,10 +282,10 @@ static int param_fill_names(winmd_meta const *m, uint32_t start, uint32_t end, c
 		uint32_t       seq;
 		uint32_t       name_ix;
 		if (!p) continue;
-		seq = read_idx_local(p + 2, 2);
+		seq = winmd_read_idx(p + 2, 2);
 		if (seq == 0 || seq > max_seq) continue;
-		name_ix       = read_idx_local(p + 4, m->tabs.string_ix);
-		arr [seq - 1] = str_dup_heap(&m->strings, name_ix);
+		name_ix       = winmd_read_idx(p + 4, m->tabs.string_ix);
+		arr [seq - 1] = winmd_str_dup(&m->strings, name_ix);
 		if (!arr [seq - 1]) {
 			winmd_param_names_free(arr, max_seq);
 			return -1;
@@ -455,10 +406,10 @@ uint8_t const *winmd_blob_at(winmd_meta const *m, uint32_t blob_ix, uint32_t *le
 	if (len_out) *len_out = 0;
 	if (!m || !blob_ix || blob_ix >= m->blobs.size) return NULL;
 	bp  = m->blobs.data + blob_ix;
-	pos = blob_prefix_size(bp [0]);
-	/* The multi-byte prefix reads bytes past bp[0]: bound-check before decoding them. */
-	if (pos > 1 && blob_ix + pos > m->blobs.size) return NULL;
-	blob_len_prefix(bp, &blen);
+	/* winmd_decompress is bounded by the bytes left in the heap, so the
+	   multi-byte length prefix can never read past the stream. */
+	pos = winmd_decompress(bp, m->blobs.size - blob_ix, &blen);
+	if (!pos) return NULL;
 	if (( uint64_t ) blob_ix + pos + blen > m->blobs.size) return NULL;
 	if (len_out) *len_out = blen;
 	return bp + pos;
@@ -469,7 +420,7 @@ uint32_t winmd_typespec_sig_blob(winmd_meta const *m, uint32_t typespec_row1) {
 	if (!m) return 0;
 	sp = winmd_row_ptr(&m->tabs, WINMD_TBL_TYPESPEC, typespec_row1);
 	if (!sp) return 0;
-	return read_idx_local(sp, m->tabs.blob_ix);
+	return winmd_read_idx(sp, m->tabs.blob_ix);
 }
 
 int winmd_coded_to_typedef_row(winmd_db const *db, winmd_meta const *m, uint32_t coded, uint32_t *row1) {

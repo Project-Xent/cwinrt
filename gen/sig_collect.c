@@ -39,12 +39,22 @@ static int collect_read_genericinst(sig_reader *r, winmd_meta const *m, sig_toks
 static int collect_read_type(sig_reader *r, winmd_meta const *m, sig_tokset *ts) {
 	uint8_t elt;
 	if (sig_read_u8(r, &elt) != 0) return -1;
-	if (elt == ELT_BYREF || elt == ELT_SZARRAY) return collect_read_type(r, m, ts);
+	/* BYREF/PTR/SZARRAY wrap one inner type — recurse past the modifier. */
+	if (elt == ELT_BYREF || elt == ELT_PTR || elt == ELT_SZARRAY) return collect_read_type(r, m, ts);
 	if (elt == ELT_GENERICINST) return collect_read_genericinst(r, m, ts);
 	if (elt == ELT_VALUETYPE || elt == ELT_CLASS) {
 		uint32_t tok;
 		if (sig_read_compressed(r, &tok) != 0) return -1;
 		collect_push(ts, tok);
+		return 0;
+	}
+	/* VAR/MVAR carry a trailing compressed generic-param index that MUST be
+	   consumed (no token to collect) or the cursor desyncs — generic interface
+	   methods (IVector`1.Append(T) etc.) encode params this way. Mirrors
+	   read_type_ex in sig.c. */
+	if (elt == ELT_VAR || elt == ELT_MVAR) {
+		uint32_t ix;
+		return sig_read_compressed(r, &ix);
 	}
 	return 0;
 }

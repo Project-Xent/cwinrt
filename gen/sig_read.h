@@ -73,6 +73,10 @@ static inline int sig_reader_from_blob(winmd_meta const *m, uint32_t blob_ix, si
 	sr->p   = blob;
 	sr->end = m->blobs.data + m->blobs.size;
 	if (sig_read_compressed(sr, &blob_len) != 0) return -1;
-	if (sr->p + blob_len > sr->end) sr->end = sr->p + blob_len;
+	/* Clamp the reader to this blob's own bytes — DOWN, never past the heap.
+	   Extending end let a decoder bleed into the next blob, and a corrupt
+	   oversized length would have defeated every later bounds check. */
+	if (blob_len > ( uint32_t ) (sr->end - sr->p)) return -1;
+	sr->end = sr->p + blob_len;
 	return 0;
 }

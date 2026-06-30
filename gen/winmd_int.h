@@ -59,6 +59,38 @@ typedef struct winmd_field_info {
 
 uint8_t const *winmd_row_ptr(winmd_tables const *t, int tbl, uint32_t row1);
 
+/* --- Shared low-level metadata primitives (gen/winmd_util.c) --- */
+
+/* 2- or 4-byte little-endian unsigned at p. */
+uint32_t       winmd_read_idx(uint8_t const *p, uint8_t sz);
+
+/* Simple table index width: 4 bytes if rows > 0xffff, else 2. */
+uint32_t       winmd_idx_bytes(uint32_t rows);
+
+/* Coded-index column width: 4 if (max_rows << tag_bits) > 0xffff, else 2.
+   ids[0..n) are the constituent table ids; tag_bits is the discriminator width. */
+uint32_t       winmd_cd_rows(winmd_tables const *t, int const *ids, int n, int tag_bits);
+
+/* CustomAttribute coded-index column widths. Parent is a HasCustomAttribute
+   index (5 tag bits), Type a CustomAttributeType index (3 tag bits); both MUST
+   size on (max_rows << tag_bits), not max_rows alone. */
+uint8_t        winmd_ca_parent_ix(winmd_tables const *t);
+uint8_t        winmd_ca_type_ix(winmd_tables const *t);
+
+/* #Strings heap: borrowed pointer ("" for a 0 or out-of-range ix). */
+char const    *winmd_str_at(winmd_heap const *strings, uint32_t ix);
+
+/* #Strings heap: NUL-bounded owned copy ("" for ix 0; NULL on a bad heap,
+   out-of-range ix, or OOM). Caller frees. */
+char          *winmd_str_dup(winmd_heap const *strings, uint32_t ix);
+
+/* ECMA-335 compressed unsigned at p with `avail` readable bytes. Returns the
+   header byte count (1/2/4) and stores *value, or 0 when avail is too small. */
+uint32_t       winmd_decompress(uint8_t const *p, size_t avail, uint32_t *value);
+
+/* TypeDef.MethodList (1-based MethodDef row) for typedef row1; 0 if invalid. */
+uint32_t       winmd_typedef_method_list(winmd_tables const *t, uint32_t row1);
+
 int            winmd_type_full_name(winmd_meta const *m, uint32_t coded_token, char *buf, size_t bufsz);
 
 /* TypeDef row1 (1-based) -> coded extends token (TypeDef/TypeRef/TypeSpec), 0 if invalid row. */

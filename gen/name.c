@@ -223,17 +223,6 @@ static void abbrev_to_typedef_part(char const *abbrev, char *dst, size_t cap) {
 	dst [di] = '\0';
 }
 
-static void name_copy_lower(char *dst, char const *src, size_t cap) {
-	size_t i = 0;
-	while (src [i] && i + 1 < cap) {
-		char c = src [i];
-		if (c >= 'A' && c <= 'Z') c = ( char ) (c - 'A' + 'a');
-		dst [i] = c;
-		i++;
-	}
-	dst [i] = '\0';
-}
-
 static void safe_to_typedef_part(char const *safe, char *dst, size_t cap) {
 	size_t di   = 0;
 	size_t i    = 0;

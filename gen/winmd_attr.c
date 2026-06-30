@@ -3,22 +3,6 @@
 #include <stdio.h>
 #include <string.h>
 
-static uint32_t read_idx_local(uint8_t const *p, uint8_t sz) {
-	if (sz == 4)
-		return ( uint32_t ) p [0] | (( uint32_t ) p [1] << 8) | (( uint32_t ) p [2] << 16) | (( uint32_t ) p [3] << 24);
-	return ( uint32_t ) p [0] | (( uint32_t ) p [1] << 8);
-}
-
-static uint32_t cd_rows_local(winmd_tables const *t, int const *ids, int n, int tag) {
-	uint32_t m = 0;
-	int      i;
-	for (i = 0; i < n; i++)
-		if (t->rows [ids [i]] > m) m = t->rows [ids [i]];
-	return (m << tag) > 0xffff ? 4u : 2u;
-}
-
-static uint32_t idx_bytes(uint32_t max_rows) { return max_rows > 0xffff ? 4u : 2u; }
-
 enum
 {
 	WINMD_TBL_MEMBERREF = 10,
@@ -30,26 +14,13 @@ typedef struct ca_layout {
 	uint8_t blob_ix;
 } ca_layout;
 
+/* CustomAttribute row columns: Parent (HasCustomAttribute), Type
+   (CustomAttributeType), Value (blob). The two coded-index widths come from the
+   shared helper so they cannot drift from row_size_table's sizing. */
 static void ca_layout_init(winmd_tables const *t, ca_layout *out) {
-	static int const ha []  = {6, 4, 1, 2, 8, 9, 10, 0, 14, 23, 20, 17, 26, 27, 32, 35, 38, 39, 40, 42, 44, 43};
-	uint32_t         max_ha = 0;
-	uint32_t         i;
-
-	memset(out, 0, sizeof(*out));
-	for (i = 0; i < 22u; i++)
-		if (t->rows [ha [i]] > max_ha) max_ha = t->rows [ha [i]];
-	out->parent_ix = ( uint8_t ) idx_bytes(max_ha ? max_ha : 1u);
-	{
-		uint32_t max_ct = t->rows [6];
-		if (t->rows [10] > max_ct) max_ct = t->rows [10];
-		out->type_ix = ( uint8_t ) idx_bytes(max_ct ? max_ct : 1u);
-	}
-	out->blob_ix = t->blob_ix;
-}
-
-static char const *str_heap(winmd_heap const *strings, uint32_t ix) {
-	if (!strings || !strings->data || !ix || ix >= strings->size) return "";
-	return ( char const * ) (strings->data + ix);
+	out->parent_ix = winmd_ca_parent_ix(t);
+	out->type_ix   = winmd_ca_type_ix(t);
+	out->blob_ix   = t->blob_ix;
 }
 
 static void map_attr_suffix(char const *shortn, char *suffix, size_t suffix_sz) {
@@ -71,26 +42,14 @@ static void map_attr_suffix(char const *shortn, char *suffix, size_t suffix_sz) 
 	snprintf(suffix, suffix_sz, "%s", shortn);
 }
 
-static uint32_t typedef_method_list(winmd_tables const *t, uint32_t row1) {
-	uint8_t const *p = winmd_row_ptr(t, WINMD_TBL_TYPEDEF, row1);
-	uint32_t       pos;
-	if (!p) return 0;
-	pos = 4u + ( uint32_t ) t->string_ix * 2u;
-	{
-		static int const cd []  = {2, 1, 27};
-		pos                    += cd_rows_local(t, cd, 3, 2);
-	}
-	return read_idx_local(p + pos, t->table_ix [WINMD_TBL_METHODDEF]);
-}
-
 static uint32_t method_declaring_typedef(winmd_meta const *m, uint32_t method_row1) {
 	winmd_tables const *t    = &m->tabs;
 	uint32_t            td_n = t->rows [WINMD_TBL_TYPEDEF];
 	uint32_t            i;
 
 	for (i = 1; i <= td_n; i++) {
-		uint32_t start = typedef_method_list(t, i);
-		uint32_t end   = (i < td_n) ? typedef_method_list(t, i + 1) : t->rows [WINMD_TBL_METHODDEF] + 1;
+		uint32_t start = winmd_typedef_method_list(t, i);
+		uint32_t end   = (i < td_n) ? winmd_typedef_method_list(t, i + 1) : t->rows [WINMD_TBL_METHODDEF] + 1;
 		if (method_row1 >= start && method_row1 < end) return i;
 	}
 	return 0;
@@ -104,8 +63,8 @@ static int typedef_attr_suffix(winmd_meta const *m, uint32_t typedef_row1, char 
 
 	p = winmd_row_ptr(&m->tabs, WINMD_TBL_TYPEDEF, typedef_row1);
 	if (!p) return -1;
-	name   = str_heap(&m->strings, read_idx_local(p + 4, m->tabs.string_ix));
-	ns     = str_heap(&m->strings, read_idx_local(p + 4 + m->tabs.string_ix, m->tabs.string_ix));
+	name   = winmd_str_at(&m->strings, winmd_read_idx(p + 4, m->tabs.string_ix));
+	ns     = winmd_str_at(&m->strings, winmd_read_idx(p + 4 + m->tabs.string_ix, m->tabs.string_ix));
 	shortn = name;
 	if (ns && ns [0]) {
 		char full [256];
@@ -147,8 +106,8 @@ static int memberref_attr_suffix(winmd_meta const *m, uint32_t memberref_row1, c
 	suffix [0] = '\0';
 	p          = winmd_row_ptr(t, WINMD_TBL_MEMBERREF, memberref_row1);
 	if (!p) return -1;
-	cd_sz       = cd_rows_local(t, mrp, 5, 3);
-	class_coded = read_idx_local(p, ( uint8_t ) cd_sz);
+	cd_sz       = winmd_cd_rows(t, mrp, 5, 3);
+	class_coded = winmd_read_idx(p, ( uint8_t ) cd_sz);
 	if (memberref_parent_to_tdor(class_coded, &tdor) != 0) return -1;
 	if (winmd_coded_type_full_name(m, tdor, full, sizeof(full)) != 0) return -1;
 	shortn = strrchr(full, '.');
@@ -164,7 +123,7 @@ ca_constructor_suffix(winmd_meta const *m, uint8_t const *row, ca_layout const *
 	uint32_t tag;
 	uint32_t rid;
 
-	type_coded = read_idx_local(row + lay->parent_ix, lay->type_ix);
+	type_coded = winmd_read_idx(row + lay->parent_ix, lay->type_ix);
 	tag        = type_coded & 7u;
 	rid        = type_coded >> 3;
 	if (!rid) return -1;
@@ -179,23 +138,11 @@ ca_constructor_suffix(winmd_meta const *m, uint8_t const *row, ca_layout const *
 }
 
 static int blob_read_compressed(uint8_t const *blob, uint32_t len, uint32_t *pos, uint32_t *value) {
-	uint32_t b0;
-	if (!blob || !pos || !value || *pos >= len) return -1;
-	b0 = blob [(*pos)++];
-	if ((b0 & 0x80u) == 0) {
-		*value = b0;
-		return 0;
-	}
-	if ((b0 & 0xc0u) == 0x80u) {
-		if (*pos >= len) return -1;
-		*value = ((b0 & 0x3fu) << 8) | blob [(*pos)++];
-		return 0;
-	}
-	if (*pos + 3 > len) return -1;
-	*value = ((b0 & 0x1fu) << 24)
-	       | (( uint32_t ) blob [(*pos)++] << 16)
-	       | (( uint32_t ) blob [(*pos)++] << 8)
-	       | blob [(*pos)++];
+	uint32_t n;
+	if (!blob || !pos || !value || *pos > len) return -1;
+	n = winmd_decompress(blob + *pos, len - *pos, value);
+	if (!n) return -1;
+	*pos += n;
 	return 0;
 }
 
@@ -286,7 +233,7 @@ static int ca_row_matches(winmd_meta const *m, ca_layout const *lay, uint8_t con
 	char     attr [96];
 
 	if (!row) return 0;
-	parent = read_idx_local(row, lay->parent_ix);
+	parent = winmd_read_idx(row, lay->parent_ix);
 	if ((parent & 31u) != tgt->tag) return 0;
 	if ((parent >> 5) != tgt->row1) return 0;
 	if (ca_constructor_suffix(m, row, lay, attr, sizeof(attr)) != 0) return 0;
@@ -338,7 +285,7 @@ int winmd_method_overload_name(winmd_meta const *m, uint32_t method_row1, char *
 		uint32_t       blob_len;
 
 		if (!ca_row_matches(m, &lay, row, &ovl)) continue;
-		blob_off = read_idx_local(row + lay.parent_ix + lay.type_ix, lay.blob_ix);
+		blob_off = winmd_read_idx(row + lay.parent_ix + lay.type_ix, lay.blob_ix);
 		if (!blob_off || blob_off >= m->blobs.size) continue;
 		blob     = m->blobs.data + blob_off;
 		blob_len = ( uint32_t ) m->blobs.size - blob_off;
