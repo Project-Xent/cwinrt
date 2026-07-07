@@ -1,6 +1,7 @@
 #pragma once
 
 #include <unknwn.h>
+#include "attributes.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -16,7 +17,7 @@ extern "C" {
  * This is an explicit, O(1) cast to a known interface -- preferred over the
  * runtime's GetIids()+blind-QI fallback used during activation.
  */
-HRESULT cwinrt_query(void *obj, REFIID iid, void **out);
+CWINRT_NODISCARD HRESULT cwinrt_query(void *obj, REFIID iid, void **out);
 
 #ifdef __cplusplus
 }

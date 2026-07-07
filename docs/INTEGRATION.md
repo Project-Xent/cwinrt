@@ -70,7 +70,7 @@ live in **`libwinstorecompat.a`** — omit `-lwinstorecompat` and you get undefi
 link errors. This recipe is verified by `scripts/mingw_link.sh`, which links the entire
 generated surface for `x86_64`/`aarch64`/`i686`/`armv7` (the `mingw-link` CI job runs it).
 
-Minimum compiler flags: `-std=c17` (or `/std:c17`), `-I <cwinrt>/include`. On MSVC, define
+Minimum compiler flags: `-std=c23` (or `/std:clatest`), `-I <cwinrt>/include`. On MSVC, define
 `UNICODE`/`_UNICODE`. The generated headers and impl compile clean under MSVC `/W4` and
 clang/gcc `-Wall -Wextra -Werror`.
 

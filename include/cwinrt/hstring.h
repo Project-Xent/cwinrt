@@ -2,6 +2,7 @@
 
 #include <windows.h>
 #include <winstring.h>
+#include "attributes.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -10,13 +11,13 @@ extern "C" {
 typedef HSTRING cwinrt_hstring;
 
 /* Create from null-terminated wide string; caller must cwinrt_hstring_free. */
-HRESULT cwinrt_hstring_from(const wchar_t *src, cwinrt_hstring *out);
+CWINRT_NODISCARD HRESULT cwinrt_hstring_from(const wchar_t *src, cwinrt_hstring *out);
 
 /* Release; null-safe. */
 void cwinrt_hstring_free(cwinrt_hstring hs);
 
 /* utf-8 -> HSTRING; caller must cwinrt_hstring_free. */
-HRESULT cwinrt_hstring_from_utf8(const char *utf8, cwinrt_hstring *out);
+CWINRT_NODISCARD HRESULT cwinrt_hstring_from_utf8(const char *utf8, cwinrt_hstring *out);
 
 /* HSTRING -> utf-8 into buf (NUL-terminated). Returns the byte length written
    (excluding the NUL), or -1 on error or if buf is too small. */

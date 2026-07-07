@@ -2,13 +2,14 @@
 
 #include <windows.h>
 #include <unknwn.h>
+#include "attributes.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 /* Activate a runtime class by wide name; result is IInspectable* in *out. */
-HRESULT cwinrt_factory_activate(
+CWINRT_NODISCARD HRESULT cwinrt_factory_activate(
     const wchar_t *class_name,
     REFIID iid,
     void **out);
@@ -18,7 +19,7 @@ HRESULT cwinrt_factory_activate(
  * statics_iid may be NULL: resolve via IActivationFactory + GetIids (WinRT unique IIDs).
  * When non-NULL, tries RoGetActivationFactory(iid), QI, then GetIids fallback.
  */
-HRESULT cwinrt_factory_get_statics(
+CWINRT_NODISCARD HRESULT cwinrt_factory_get_statics(
     const wchar_t *class_name,
     REFIID         statics_iid,
     void         **out);
