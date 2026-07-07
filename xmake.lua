@@ -1,6 +1,6 @@
 set_project("cwinrt")
 set_version("0.1.0")
-set_languages("c17")
+set_languages("c23")
 set_warnings("all", "extra")
 -- Without this the "release" build carried no /O2, leaving the winmd parser /
 -- sig decoder unoptimized (full regen ~350s). Optimize for speed across targets.

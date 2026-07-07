@@ -588,16 +588,12 @@ static int emit_iid_block(int bd, cwinrt_mapped_unit const *u) {
 		cwinrt_name_iid_symbol(t->c_typedef, iid_sym, sizeof(iid_sym));
 		g = t->uuid;
 		/* These IIDs are header-only static const; most are unused in any given TU,
-		   so tag them maybe-unused to stay clean under clang/gcc -Wall -Wextra. */
+		   so tag them [[maybe_unused]] (C23) to stay clean under -Wall -Wextra. */
 		if (!any
 		    && emit_write_str(
 		         bd, "/* Interface IIDs */\n"
 		             "#ifndef CWINRT_MAYBE_UNUSED\n"
-		             "#  if defined(__GNUC__) || defined(__clang__)\n"
-		             "#    define CWINRT_MAYBE_UNUSED __attribute__((unused))\n"
-		             "#  else\n"
-		             "#    define CWINRT_MAYBE_UNUSED\n"
-		             "#  endif\n"
+		             "#  define CWINRT_MAYBE_UNUSED [[maybe_unused]]\n"
 		             "#endif\n"
 		       ) != 0)
 			return -1;

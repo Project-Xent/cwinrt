@@ -110,11 +110,7 @@ typedef enum WDAXMDO_NodeType {
 
 /* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
-#  if defined(__GNUC__) || defined(__clang__)
-#    define CWINRT_MAYBE_UNUSED __attribute__((unused))
-#  else
-#    define CWINRT_MAYBE_UNUSED
-#  endif
+#  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
 #ifndef CWINRT_IIDDEF_WDAXMDO_IXmlDocumentStatics
 #define CWINRT_IIDDEF_WDAXMDO_IXmlDocumentStatics
