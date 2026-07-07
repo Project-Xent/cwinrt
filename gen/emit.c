@@ -1,11 +1,7 @@
 #include "emit.h"
 
-#include "arena.h"
-#include "bio.h"
 #include "dispatch_util.h"
-#include "err.h"
-#include "fmt.h"
-#include "io.h"
+#include "io_util.h"
 #include "name.h"
 #include <stdio.h>
 #include <stdlib.h>

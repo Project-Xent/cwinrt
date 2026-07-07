@@ -1,15 +1,12 @@
 #include "gen_piids.h"
 
-#include "arena.h"
-#include "bio.h"
+#include "io_util.h"
 #include "name.h"
 #include "piid.h"
 #include "sig.h"
 #include "sigbuild.h"
 #include "winmd.h"
 #include "winmd_int.h"
-
-#include "err.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

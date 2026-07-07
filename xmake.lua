@@ -16,6 +16,17 @@ elseif is_plat("windows") then
     add_cxflags("/wd4996")
 end
 
+-- clang-cl: xmake's c23 -> MSVC-standard fallback list ends in `-TP` (compile as
+-- C++) -- see modules/core/tools/cl.lua. On a clang-cl that accepts neither
+-- /std:c23 nor /std:clatest, xmake falls through to -TP and hands our C sources
+-- (COM `->lpVtbl`, REFIID-as-pointer) to the C++ frontend, which does not compile.
+-- /TC forces C source mode; appended after the std flag, it overrides a stray -TP.
+-- {force = true} bypasses xmake's auto-ignore-flags probe so /TC is always emitted.
+-- No-op for MSVC/mingw (their C sources are already C); it only rescues clang-cl.
+if is_plat("windows") then
+    add_cflags("/TC", {force = true})
+end
+
 -- Emit each function/datum into its own section so the linker (--gc-sections /
 -- /OPT:REF) can drop unused wrappers at function granularity. Without it,
 -- referencing one function from a namespace pulls that impl TU's entire wrapper
@@ -32,12 +43,8 @@ end
 -- Consumers only need the library targets (runtime + bindings + umbrella); the
 -- generator, tests, samples and dev tasks below are gated on this so a consumer's
 -- `xmake build` doesn't compile cwinrt's whole conformance suite (link_all alone
--- pulls in all 343 *.impl.c) — nor coetua, which only the generator uses.
+-- pulls in all 343 *.impl.c).
 local is_main = (os.projectdir() == os.scriptdir())
-
-if is_main then
-    includes("thirdparty/coetua/xmake_cwinrt.lua")
-end
 
 add_includedirs("include")
 add_includedirs("gen")
@@ -57,8 +64,6 @@ if is_main then
 target("cwinrt-gen")
     set_kind("binary")
     add_files("gen/*.c")
-    add_deps("coetua")
-    add_includedirs("thirdparty/coetua/src")
     if is_plat("windows") then
         -- Deep winmd signatures (e.g. Windows.Security.Isolation) need >1MB default stack.
         add_ldflags("/STACK:8388608", {tools = {"link"}})

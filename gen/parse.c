@@ -6,8 +6,7 @@
 #include "sig.h"
 #include "winmd.h"
 #include "winmd_int.h"
-#include "arena.h"
-#include "err.h"
+#include "io_util.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

@@ -1,6 +1,6 @@
 #include "name.h"
 
-#include "arena.h"
+#include "io_util.h"
 #include <ctype.h>
 #include <stdio.h>
 #include <string.h>

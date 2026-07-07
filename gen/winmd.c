@@ -1,6 +1,6 @@
 #include "winmd.h"
 
-#include "err.h"
+#include "io_util.h"
 #include "name.h"
 #include "sig.h"
 #include <stdio.h>

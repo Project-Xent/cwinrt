@@ -1,7 +1,6 @@
 #include "topo.h"
 
-#include "arena.h"
-#include "err.h"
+#include "io_util.h"
 #include <stdlib.h>
 #include <string.h>
 

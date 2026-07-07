@@ -1,4 +1,3 @@
-#include "arena.h"
 #include "emit.h"
 #include "emit_impl.h"
 #include "gen_piids.h"
@@ -11,7 +10,7 @@
 #include "winmd_int.h"
 #include "sig.h"
 
-#include "err.h"
+#include "io_util.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

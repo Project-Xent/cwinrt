@@ -1,6 +1,6 @@
 #include "method_names.h"
 
-#include "arena.h"
+#include "io_util.h"
 #include "name.h"
 #include <stdio.h>
 #include <string.h>

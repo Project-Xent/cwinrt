@@ -3,8 +3,7 @@
 #include "dispatch_util.h"
 #include "method_names.h"
 #include "name.h"
-#include "arena.h"
-#include "err.h"
+#include "io_util.h"
 #include <stdio.h>
 #include <string.h>
 
