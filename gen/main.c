@@ -615,23 +615,29 @@ static int gen_check_slots(char const *winmd_path) {
 	return t.bad ? -1 : 0;
 }
 
-/* Print "<Full.WinRT.Name> <CANONICAL-GUID>" for every interface with a [Guid]. */
-static void dump_iids_ns(cwinrt_raw_db const *raw, void *ctx) {
-	uint32_t ti;
-	( void ) ctx;
-	for (ti = 0; ti < raw->type_count; ti++) {
-		cwinrt_raw_type const *t = &raw->types [ti];
-		uint8_t const         *g = t->uuid;
-		if (t->kind != CWINRT_RAW_IFACE || !t->has_uuid || !t->full_name) continue;
-		printf("%s %02X%02X%02X%02X-%02X%02X-%02X%02X-%02X%02X-%02X%02X%02X%02X%02X%02X\n", t->full_name, g [3], g [2],
-		       g [1], g [0], g [5], g [4], g [7], g [6], g [8], g [9], g [10], g [11], g [12], g [13], g [14], g [15]);
-	}
+static void print_iid(char const *name, uint8_t const g [16]) {
+	printf("%s %02X%02X%02X%02X-%02X%02X-%02X%02X-%02X%02X-%02X%02X%02X%02X%02X%02X\n", name, g [3], g [2], g [1],
+	       g [0], g [5], g [4], g [7], g [6], g [8], g [9], g [10], g [11], g [12], g [13], g [14], g [15]);
 }
 
-/* Differential check: emit a canonical GUID per [Guid] interface so a checker can
-   diff against cppwinrt's guid_v constants. */
+/* Emit a canonical GUID per [Guid] interface for SDK differential checks. */
 static int gen_dump_iids(char const *winmd_path) {
-	return foreach_ns_rawdb(winmd_path, dump_iids_ns, NULL) < 0 ? -1 : 0;
+	winmd_db wm;
+	uint32_t i;
+
+	if (winmd_open(winmd_path, &wm) != 0) return -1;
+	for (i = 0; i < wm.typedef_count; i++) {
+		winmd_row_typedef const *t = &wm.typedefs [i];
+		char                     name [384];
+		uint8_t                  uuid [16];
+		if (!t->name || !t->namespace_name || strncmp(t->namespace_name, "Windows", 7) != 0) continue;
+		if (winmd_typedef_classify(wm.meta, i + 1) != WINMD_KIND_INTERFACE) continue;
+		if (winmd_typedef_uuid(wm.meta, i + 1, uuid) != 0) continue;
+		snprintf(name, sizeof(name), "%s.%s", t->namespace_name, t->name);
+		print_iid(name, uuid);
+	}
+	winmd_close(&wm);
+	return 0;
 }
 
 
@@ -650,7 +656,7 @@ static int cmd_check_slots(char const *a, char const *b, char const *c) { ( void
 static int cmd_dump_iids(char const *a, char const *b, char const *c) { ( void ) b; ( void ) c; return gen_dump_iids(a) != 0; }
 static int cmd_selftest2(char const *a, char const *b, char const *c) { ( void ) b; ( void ) c; return gen_selftest_piid2(a) != 0; }
 static int cmd_dump_piids(char const *a, char const *b, char const *c) { ( void ) b; ( void ) c; return gen_dump_piids(a) != 0; }
-static int cmd_emit_piids(char const *a, char const *b, char const *c) { ( void ) c; return gen_emit_piids(a, b ? b : "include/cwinrt") != 0; }
+static int cmd_emit_piids(char const *a, char const *b, char const *c) { return gen_emit_piids(a, b, c) != 0; }
 static int cmd_dump_sig(char const *a, char const *b, char const *c) { ( void ) c; return gen_dump_sig(a, b) != 0; }
 static int cmd_selftest_rfc(char const *a, char const *b, char const *c) { ( void ) a; ( void ) b; ( void ) c; return gen_selftest_piid_rfc(); }
 
@@ -665,7 +671,7 @@ static struct subcmd {
   {"--dump-overload", 2, cmd_dump_overload}, {"--dump-method", 2, cmd_dump_method},
   {"--check-slots", 1, cmd_check_slots}, {"--dump-iids", 1, cmd_dump_iids},
   {"--selftest-piid2", 1, cmd_selftest2}, {"--dump-piids", 1, cmd_dump_piids},
-  {"--emit-piids", 1, cmd_emit_piids},   {"--dump-sig", 2, cmd_dump_sig},
+  {"--emit-piids", 3, cmd_emit_piids},   {"--dump-sig", 2, cmd_dump_sig},
   {"--selftest-piid", 0, cmd_selftest_rfc},
 };
 
@@ -710,7 +716,8 @@ static int run_generation(gen_args const *a) {
 int main(int argc, char **argv) {
 	gen_args a;
 	int      sub = run_subcommand(argc, argv);
-	if (sub >= 0) return sub;
+	if (sub > 0) efail();
+	if (sub == 0) return 0;
 	if (args_parse(argc, argv, &a) != 0) return 1;
 	return run_generation(&a);
 }

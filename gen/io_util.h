@@ -32,7 +32,7 @@ void *aden(int arena, uvlong size);  /* allocate `size` bytes; NULL on OOM  */
 int   bopen(int arena, char *file, omode mod);   /* stream id > 0, or -1 */
 int   bprint(int bd, char *fm, ...);             /* bytes written, or -1 */
 vlong bwrite(int bd, void *buf, uvlong len);     /* bytes written, or -1 */
-void  rmbio(int bd);                             /* flush + close        */
+int   rmbio(int bd);                             /* flush + close        */
 
 /* ── Thread-local error latch (was coetua err.h) ──
    errmsg(msg) records a pending error (msg must outlive the call, e.g. a

@@ -39,7 +39,8 @@ int cwinrt_sig_pinterface(
 /* Compute a PIID directly from a fully-built WinRT signature string. Result is
    written in winmd layout (Data1 little-endian). This is the WinRT v5 hash:
    SHA-1(namespace-guid || signature), with the version/variant bits placed the
-   way cppwinrt's generate_guid() does (byte 7 high nibble = 5, byte 8 = variant)
+   way the WinRT parameterized-IID algorithm does (byte 7 high nibble = 5,
+   byte 8 = variant)
    — which is NOT the conventional RFC-4122 byte position. */
 void cwinrt_piid_from_sig(char const *sig, size_t siglen, uint8_t out [16]);
 

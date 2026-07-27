@@ -8,8 +8,7 @@
 /*
  * Recursive WinRT type-signature builder.
  *
- * Produces the canonical WinRT signature string for a type, matching cppwinrt's
- * `signature<T>::data` (winrt/base.h):
+ * Produces the canonical WinRT parameterized-type signature:
  *   basic       -> "b1","i4","string","cinterface(IInspectable)", ...
  *   enum        -> "enum(Namespace.Name;<underlying>)"
  *   struct      -> "struct(Namespace.Name;f1;f2;...)"

@@ -73,7 +73,7 @@ Write-Host "cwinrt-gen --batch-union ($mode, winmd once, --jobs $Jobs)"
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
 # Parameterized IIDs for generic instantiations (cwinrt_piids.h + .impl.c).
-& $gen --emit-piids $winmd $OutDir
+& $gen --emit-piids $winmd $OutDir $ImplDir
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
 $count = (Get-ChildItem $OutDir -Filter "Windows.*.h").Count

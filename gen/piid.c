@@ -117,7 +117,7 @@ void cwinrt_uuid_v5(uint8_t const ns [16], char const *name, size_t namelen, uin
 
 /* ---- WinRT signature strings -------------------------------------------- */
 
-/* Matches cppwinrt basic_signature_v (winrt/base.h). */
+/* Canonical WinRT signatures for primitive types. */
 static struct {
 	uint8_t     element_type;
 	char const *sig;
@@ -196,7 +196,7 @@ void cwinrt_piid_from_sig(char const *sig, size_t siglen, uint8_t out [16]) {
 	cwinrt_sha1(buf, total, digest);
 	if (buf != stackbuf) free(buf);
 
-	/* WinRT (cppwinrt generate_guid): to_guid() reads the first 16 SHA-1 bytes as
+	/* WinRT reads the first 16 SHA-1 bytes as
 	   a little-endian guid, then endian_swap() reverses Data1/Data2/Data3 — the
 	   net effect on the in-memory (winmd) byte layout is to reverse those three
 	   fields' bytes; set_named_guid_fields then stamps version 5 into the high

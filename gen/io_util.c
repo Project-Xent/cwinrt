@@ -121,12 +121,12 @@ vlong bwrite(int bd, void *buf, uvlong len) {
     return w == (size_t)len ? (vlong)w : -1;
 }
 
-void rmbio(int bd) {
+int rmbio(int bd) {
     FILE *fp = io_stream(bd);
     if (!fp)
-        return;
-    fclose(fp);
+        return -1;
     g_streams[bd] = NULL;
+    return fclose(fp);
 }
 
 /* ── Thread-local error latch ──────────────────────────────────────── */
