@@ -42,7 +42,7 @@ if ($Parallel -gt 0) {
     $toRun | ForEach-Object -Parallel {
         $f = $_
         $obj = Join-Path $using:objDir ($f.BaseName + ".obj")
-        $args = @("/nologo", "/TC", "/std:c17", "/W4", "/c", "/I$($using:include)", $f.FullName, "/Fo$obj")
+        $args = @("/nologo", "/TC", "/std:clatest", "/W4", "/c", "/I$($using:include)", $f.FullName, "/Fo$obj")
         & cl.exe @args 2>&1 | Out-Null
         if ($LASTEXITCODE -ne 0) {
             $bag = $using:failed
@@ -56,7 +56,7 @@ if ($Parallel -gt 0) {
         $f = $toRun | Where-Object { $_.Name -eq $n } | Select-Object -First 1
         if ($f) {
             $obj = Join-Path $objDir ($f.BaseName + ".obj")
-            & cl.exe @("/nologo", "/TC", "/std:c17", "/W4", "/c", "/I$include", $f.FullName, "/Fo$obj")
+            & cl.exe @("/nologo", "/TC", "/std:clatest", "/W4", "/c", "/I$include", $f.FullName, "/Fo$obj")
         }
     }
 } else {
@@ -64,7 +64,7 @@ if ($Parallel -gt 0) {
         if ($Max -gt 0 -and $i -ge $Max) { break }
         $i++
         $obj = Join-Path $objDir ($f.BaseName + ".obj")
-        $args = @("/nologo", "/TC", "/std:c17", "/W4", "/c", "/I$include", $f.FullName, "/Fo$obj")
+        $args = @("/nologo", "/TC", "/std:clatest", "/W4", "/c", "/I$include", $f.FullName, "/Fo$obj")
         & cl.exe @args 2>&1 | Out-Null
         if ($LASTEXITCODE -ne 0) {
             Write-Host "FAIL $($f.Name)"

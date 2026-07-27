@@ -28,7 +28,7 @@ New-Item -ItemType Directory -Force -Path $objDir | Out-Null
 # which aborts before compiling and silently looks like "0 errors").
 $rsp = Join-Path $objDir "fast.rsp"
 $foDir = ($objDir -replace '\\', '/') + "/"
-$lines = @("/nologo", "/TC", "/std:c17", "/W4", "/c", "/MP", "/I`"$include`"", "/Fo`"$foDir`"")
+$lines = @("/nologo", "/TC", "/std:clatest", "/W4", "/c", "/MP", "/I`"$include`"", "/Fo`"$foDir`"")
 $lines += $files | ForEach-Object { "`"$($_.FullName)`"" }
 Set-Content -Path $rsp -Value $lines -Encoding ascii
 

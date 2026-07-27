@@ -29,7 +29,7 @@ $i = 0
 
 function Invoke-ImplShardCompile {
     param($File, $ObjPath, $IncludePath, [switch]$Quiet)
-    $args = @("/nologo", "/TC", "/std:c17", "/W4", "/c", "/I$IncludePath", $File.FullName, "/Fo$ObjPath")
+    $args = @("/nologo", "/TC", "/std:clatest", "/W4", "/c", "/I$IncludePath", $File.FullName, "/Fo$ObjPath")
     if ($Quiet) {
         & cl.exe @args 2>&1 | Out-Null
     } else {
@@ -53,7 +53,7 @@ if ($Parallel -gt 0) {
     $toRun | ForEach-Object -Parallel {
         $f = $_
         $obj = Join-Path $using:objDir ($f.BaseName + ".obj")
-        $args = @("/nologo", "/TC", "/std:c17", "/W4", "/c", "/I$($using:include)", $f.FullName, "/Fo$obj")
+        $args = @("/nologo", "/TC", "/std:clatest", "/W4", "/c", "/I$($using:include)", $f.FullName, "/Fo$obj")
         & cl.exe @args 2>&1 | Out-Null
         if ($LASTEXITCODE -ne 0) {
             $bag = $using:failed

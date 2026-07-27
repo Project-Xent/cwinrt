@@ -132,7 +132,7 @@ jobs:
         shell: bash
         run: |
           set -e
-          F="-std=c17 -I include -fsyntax-only -Wall -Wextra -Werror"
+          F="-std=c23 -I include -fsyntax-only -Wall -Wextra -Werror"
           for h in include/cwinrt/Windows.*.h; do clang $F -x c "$h"; done
           for c in include/cwinrt/impl/*.impl.c; do clang $F "$c"; done
           for c in rt/*.c; do clang $F "$c"; done

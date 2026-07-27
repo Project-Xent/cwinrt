@@ -27,7 +27,7 @@ obj="$(mktemp -d)"
 trap 'rm -rf "$obj"' EXIT
 
 export CWINRT_CC="$cc"
-export CWINRT_CFLAGS="-std=c17 -I $root/include -Wall -Wextra -c"
+export CWINRT_CFLAGS="-std=c23 -I $root/include -Wall -Wextra -c"
 export CWINRT_OBJ="$obj"
 compile_one() {  # source basenames are unique across rt/ + impl/ + the test, so no .o collision
   $CWINRT_CC $CWINRT_CFLAGS -o "$CWINRT_OBJ/$(basename "$1").o" "$1"
