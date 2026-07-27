@@ -4,10 +4,6 @@
 #include <winstring.h>
 #include "attributes.h"
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 typedef HSTRING cwinrt_hstring;
 
 /* Create from null-terminated wide string; caller must cwinrt_hstring_free. */
@@ -35,7 +31,3 @@ int cwinrt_hstring_to_utf8(cwinrt_hstring hs, char *buf, int bufsz);
         (UINT32)((sizeof(literal) / sizeof((literal)[0])) - 1),            \
         &name##_hdr,                                                       \
         &(name))
-
-#ifdef __cplusplus
-}
-#endif

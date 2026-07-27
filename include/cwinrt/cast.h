@@ -3,10 +3,6 @@
 #include <unknwn.h>
 #include "attributes.h"
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /*
  * cwinrt_query: the single cast primitive.
  *
@@ -18,7 +14,3 @@ extern "C" {
  * runtime's GetIids()+blind-QI fallback used during activation.
  */
 CWINRT_NODISCARD HRESULT cwinrt_query(void *obj, REFIID iid, void **out);
-
-#ifdef __cplusplus
-}
-#endif

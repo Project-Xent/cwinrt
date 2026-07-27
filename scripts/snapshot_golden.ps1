@@ -36,9 +36,9 @@ $lines = foreach ($f in $files) {
 (& $gen --dump-iids  $winmd | Sort-Object) -join "`n" | Set-Content (Join-Path $dest "iids.txt")  -NoNewline
 (& $gen --dump-piids $winmd | Sort-Object) -join "`n" | Set-Content (Join-Path $dest "piids.txt") -NoNewline
 
-# 4. Exported C function surface: every "HRESULT name(...)" declaration, sorted.
-$decls = Select-String -Path (Join-Path $inc "*.h") -Pattern '^HRESULT [a-z0-9_]+\(' |
-    ForEach-Object { $_.Line.Trim() }
+# 4. Exported C function surface. Attributes are not part of the ABI identity.
+$decls = Select-String -Path (Join-Path $inc "*.h") -Pattern '^(?:CWINRT_NODISCARD )?HRESULT [a-z0-9_]+\(' |
+    ForEach-Object { $_.Line.Trim() -replace '^CWINRT_NODISCARD ', '' }
 ($decls | Sort-Object -Unique) -join "`n" | Set-Content (Join-Path $dest "symbols.txt") -NoNewline
 
 if ($Check) {

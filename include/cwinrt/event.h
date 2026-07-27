@@ -4,10 +4,6 @@
 #include <windows.h>
 #include <unknwn.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 typedef struct { int64_t value; } cwinrt_token;
 
 /* Subscription handle: stores WinRT token + everything needed to unsubscribe. */
@@ -35,7 +31,3 @@ HRESULT cwinrt_event_unsubscribe(cwinrt_event_handle *handle);
  * Caller Release()s *out after a successful subscribe.
  */
 HRESULT cwinrt_event_handler_create(cwinrt_event_fn fn, void *ctx, IUnknown **out);
-
-#ifdef __cplusplus
-}
-#endif

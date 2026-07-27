@@ -5,10 +5,6 @@
 
 #include <windows.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 extern const IID CWINRT_IID_WF_TypedEventHandler_WAIAC_ActionInvocationHelpDetails_Object;
 extern const IID CWINRT_IID_WF_TypedEventHandler_WAIACHO_ActionCatalog_Object;
 extern const IID CWINRT_IID_WF_TypedEventHandler_WAIAC_StreamingTextActionEntity_WAIAC_StreamingTextActionEntityTextChangedArgs;
@@ -1147,9 +1143,5 @@ extern const IID CWINRT_IID_WF_TypedEventHandler_WWEUIIN_WebViewControlProcess_O
 extern const IID CWINRT_IID_WF_TypedEventHandler_WWEUIIN_WebViewControl_WWEUIIN_WebViewControlAcceleratorKeyPressedEventArgs;
 extern const IID CWINRT_IID_WF_TypedEventHandler_WWEUIIN_WebViewControl_WWEUIIN_WebViewControlMoveFocusRequestedEventArgs;
 extern const IID CWINRT_IID_WF_TypedEventHandler_WWEUIIN_WebViewControl_Object;
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif

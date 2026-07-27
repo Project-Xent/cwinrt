@@ -163,32 +163,3 @@ hr = wstst_data_writer_store_operation_get_results(op, &stored);
 
 `cwinrt_async_get(op, &CWINRT_IID_<ResultIface>, &result)` waits *and* casts the
 result in one call. *(`tests/conform/e2e_async.c`, `e2e_async_progress.c`)*
-
----
-
-# Migrating from C++/WinRT
-
-cwinrt is the same WinRT ABI without C++. The mental mapping:
-
-| C++/WinRT | cwinrt |
-| --- | --- |
-| `winrt::init_apartment()` | `cwinrt_init(RO_INIT_MULTITHREADED)` |
-| `Calendar c;` (or `Calendar c{};`) | `WGL_Calendar *c; wgl_calendar_new(&c);` |
-| `c.SetToNow();` | `wgl_calendar_set_to_now(c);` |
-| `auto y = c.Year();` (property get) | `int32_t y; wgl_calendar_get__year(c, &y);` |
-| `c.NumeralSystem(v);` (property set) | `wgl_calendar_put__numeral_system(c, v);` |
-| `obj.as<ICompositionObject>()` | `cwinrt_query(obj, &CWINRT_IID_WUC_ICompositionObject, &out)` |
-| `obj.try_as<T>()` | `cwinrt_query(...)` and check `HRESULT` |
-| `winrt::hstring{L"x"}` | `cwinrt_hstring_from(L"x", &hs)` (free it) / `CWINRT_HSTRING_STACK` |
-| `co_await op;` / `op.get();` | `cwinrt_async_wait((IUnknown*)op, INFINITE);` |
-| `co_await progressOp;` | `cwinrt_async_wait_with_progress((IUnknown*)op, INFINITE);` |
-| `box_value(x)` | `wf_property_value_create_*(x, &boxed)` |
-| `unbox_value<T>(o)` | `cwinrt_query(o, &CWINRT_IID_WF_IPropertyValue, &pv)` + `wf_property_value_get_*` |
-| `event += handler;` | `…_on_event(self, fn, ctx)` → returns `cwinrt_token` |
-| `event -= token;` | `…_off_event(self, token)` |
-| RAII release at scope end | explicit `p->lpVtbl->Release(p)` |
-| `winrt::guid_of<T>()` | `CWINRT_IID_<T>` constant |
-
-Key differences to keep in mind: no exceptions (check every `HRESULT`), no automatic
-ref-counting (release every interface you receive), `[out]` parameters instead of
-return values, and property getters/setters are explicit `get__`/`put__` functions.

@@ -35,7 +35,7 @@ jobs:
         shell: pwsh
         run: ./scripts/snapshot_golden.ps1 -Check
 
-      - name: PIID gate (parameterized IIDs vs cppwinrt)
+      - name: PIID gate (parameterized IIDs vs Windows)
         shell: pwsh
         run: ./scripts/check_piids.ps1
 
@@ -138,8 +138,8 @@ jobs:
           for c in rt/*.c; do clang $F "$c"; done
           echo "clang: headers + impl + rt compile clean (0 errors, 0 warnings)"
 
-  # Lock the non-MSVC LINK recipe (-lwinstorecompat -luuid -lruntimeobject -lole32
-  # -loleaut32) by linking the ENTIRE generated surface (rt + every impl +
+  # Lock the non-MSVC LINK recipe (-luuid -lruntimeobject -lole32 -loleaut32)
+  # by linking the ENTIRE generated surface (rt + every impl +
   # e2e_headless) under llvm-mingw, one arch per matrix leg. The native x86_64 also
   # RUNS the binary; a cross binary can't run on the x64 runner, so it is link-only.
   mingw-link:

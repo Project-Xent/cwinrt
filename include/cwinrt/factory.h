@@ -4,10 +4,6 @@
 #include <unknwn.h>
 #include "attributes.h"
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /* Activate a runtime class by wide name; result is IInspectable* in *out. */
 CWINRT_NODISCARD HRESULT cwinrt_factory_activate(
     const wchar_t *class_name,
@@ -26,7 +22,3 @@ CWINRT_NODISCARD HRESULT cwinrt_factory_get_statics(
 
 /* Release cached factories (call from cwinrt_uninit). */
 void cwinrt_factory_clear(void);
-
-#ifdef __cplusplus
-}
-#endif

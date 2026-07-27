@@ -16,10 +16,9 @@ elseif is_plat("windows") then
     add_cxflags("/wd4996")
 end
 
--- clang-cl: xmake's c23 -> MSVC-standard fallback list ends in `-TP` (compile as
--- C++) -- see modules/core/tools/cl.lua. On a clang-cl that accepts neither
--- /std:c23 nor /std:clatest, xmake falls through to -TP and hands our C sources
--- (COM `->lpVtbl`, REFIID-as-pointer) to the C++ frontend, which does not compile.
+-- clang-cl: xmake's c23 -> MSVC-standard fallback list ends in `-TP`. On a
+-- clang-cl that accepts neither /std:c23 nor /std:clatest, xmake falls through
+-- to that flag and hands C sources to the wrong frontend.
 -- /TC forces C source mode; appended after the std flag, it overrides a stray -TP.
 -- {force = true} bypasses xmake's auto-ignore-flags probe so /TC is always emitted.
 -- No-op for MSVC/mingw (their C sources are already C); it only rescues clang-cl.
@@ -363,16 +362,14 @@ target("test_conform_array_mapping")
 
 target("test_conform_golden")
     set_kind("binary")
-    add_files("tests/conform/golden_guid.cpp")
+    add_files("tests/conform/golden_guid.c")
     add_deps("cwinrt-rt", "cwinrt-bindings-foundation")
     add_links("cwinrt-bindings-foundation")
     add_includedirs("include")
-    set_languages("c++17")
     if is_plat("mingw") then
         set_enabled(false)
     elseif is_plat("windows") then
-        add_syslinks("runtimeobject", "ole32", "oleaut32", "oleaut32")
-        add_cxflags("/EHsc")
+        add_syslinks("runtimeobject", "ole32", "oleaut32")
     else
         set_enabled(false)
     end

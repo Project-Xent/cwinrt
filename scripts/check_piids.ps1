@@ -1,6 +1,5 @@
-# PIID gate: diff cwinrt-gen's computed parameterized IIDs against the
-# authoritative cppwinrt guid_v values. Builds the cppwinrt reference program and
-# cwinrt-gen, runs both over a curated instantiation set, and fails on mismatch.
+# PIID gate: diff cwinrt-gen's computed parameterized IIDs against the system
+# implementation over a curated instantiation set.
 param(
     [string]$SdkVersion = "10.0.26100.0"
 )
@@ -10,21 +9,20 @@ $root = Split-Path -Parent $PSScriptRoot
 
 $kits  = "${env:ProgramFiles(x86)}\Windows Kits\10"
 $winmd = Join-Path $kits "UnionMetadata\$SdkVersion\Windows.winmd"
-$inc   = Join-Path $kits "Include\$SdkVersion\cppwinrt"
 $gen   = Join-Path $root "build\windows\x64\release\cwinrt-gen.exe"
 $piidDir = Join-Path $root "tests\piid"
-$refSrc = Join-Path $piidDir "cppwinrt_piids.cpp"
-$refExe = Join-Path $piidDir "cppwinrt_piids.exe"
+$refSrc = Join-Path $piidDir "system_piids.c"
+$refExe = Join-Path $piidDir "system_piids.exe"
 
 if (-not (Test-Path $winmd)) { Write-Error "Union metadata not found: $winmd" }
 if (-not (Test-Path $gen))   { Write-Error "cwinrt-gen not built: run 'xmake build cwinrt-gen'" }
 
-# (Re)build the cppwinrt reference if stale.
+# Rebuild the system reference if stale.
 if (-not (Test-Path $refExe) -or (Get-Item $refSrc).LastWriteTime -gt (Get-Item $refExe).LastWriteTime) {
     Push-Location $piidDir
-    & cl /nologo /std:c++20 /EHsc /I "$inc" $refSrc /Fe:$refExe | Out-Null
+    & cl /nologo /std:clatest /Tc $refSrc /Fe:$refExe /link runtimeobject.lib | Out-Null
     Pop-Location
-    if ($LASTEXITCODE -ne 0) { Write-Error "cppwinrt reference build failed" }
+    if ($LASTEXITCODE -ne 0) { Write-Error "system PIID reference build failed" }
 }
 
 $mine = & $gen --selftest-piid2 "$winmd" 2>$null
@@ -41,5 +39,5 @@ foreach ($k in $refMap.Keys) {
     }
 }
 $ok = $refMap.Count - $bad
-Write-Host "piid check: $ok/$($refMap.Count) match cppwinrt ($bad mismatches)"
+Write-Host "piid check: $ok/$($refMap.Count) match the system implementation ($bad mismatches)"
 if ($bad -ne 0) { exit 1 }

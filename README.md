@@ -2,7 +2,7 @@
 
 Pure C projection for the Windows Runtime.
 
-- **Use it:** [docs/INTEGRATION.md](docs/INTEGRATION.md) (link into your build) · [docs/COOKBOOK.md](docs/COOKBOOK.md) (recipes + C++/WinRT migration) · [docs/MANGLING.md](docs/MANGLING.md) (predict C symbol names)
+- **Use it:** [docs/INTEGRATION.md](docs/INTEGRATION.md) (link into your build) · [docs/COOKBOOK.md](docs/COOKBOOK.md) (recipes) · [docs/MANGLING.md](docs/MANGLING.md) (predict C symbol names)
 - **Generate it:** [docs/GENERATION.md](docs/GENERATION.md) (regenerate bindings from your own SDK)
 
 ## Build
@@ -58,4 +58,3 @@ cwinrt-gen.exe --batch-union --winmd ...\Windows.winmd -o include/cwinrt
 - `gen/` — metadata parser and header emitter
 - `rt/` — runtime (`init`, `hstring`, `factory`, `async`, `event`)
 - `include/cwinrt/` — public headers (generated + runtime includes)
-- `thirdparty/coetua/` — vendored utilities used by `cwinrt-gen` only (generated bindings and `rt/` do not depend on coetua)

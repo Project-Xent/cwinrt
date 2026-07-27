@@ -2,10 +2,6 @@
 
 #include <unknwn.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /*
  * Inbound delegate shim: wrap a C callback as a WinRT delegate COM
  * object so it can be passed to add_<Event> / put_Completed / etc.
@@ -23,7 +19,3 @@ extern "C" {
 typedef void (*cwinrt_delegate_fn)(void *sender, void *args, void *ctx);
 
 HRESULT cwinrt_delegate_create(REFIID iid, cwinrt_delegate_fn fn, void *ctx, IUnknown **out);
-
-#ifdef __cplusplus
-}
-#endif

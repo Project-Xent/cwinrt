@@ -3,10 +3,6 @@
 #include <windows.h>
 #include <unknwn.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /*
  * Block until an async completes; timeout_ms may be INFINITE.
  *
@@ -30,7 +26,3 @@ HRESULT cwinrt_async_wait_with_progress(IUnknown *async_info, DWORD timeout_ms);
  */
 HRESULT cwinrt_async_get(void *async_op, REFIID result_iid, void **result);
 HRESULT cwinrt_async_get_with_progress(void *async_op, REFIID result_iid, void **result);
-
-#ifdef __cplusplus
-}
-#endif

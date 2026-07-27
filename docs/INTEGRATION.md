@@ -62,13 +62,14 @@ compiler directly, the two facts you need are the include path and the **link re
 | toolchain | link libraries |
 | --- | --- |
 | MSVC (`cl`/`link`) | `runtimeobject.lib ole32.lib oleaut32.lib` (the SDK supplies `uuid`/`IInspectable` automatically) |
-| mingw / llvm-mingw (clang or gcc) | `-lwinstorecompat -luuid -lruntimeobject -lole32 -loleaut32` |
+| mingw / llvm-mingw (clang or gcc) | `-luuid -lruntimeobject -lole32 -loleaut32` |
 
 The mingw recipe has one non-obvious trap: the COM/WinRT IID GUID symbols are split across
-libs. `IID_IUnknown` is in `libuuid.a`, but `IID_IInspectable` and `IID_IActivationFactory`
-live in **`libwinstorecompat.a`** — omit `-lwinstorecompat` and you get undefined-symbol
-link errors. This recipe is verified by `scripts/mingw_link.sh`, which links the entire
-generated surface for `x86_64`/`aarch64`/`i686`/`armv7` (the `mingw-link` CI job runs it).
+libs. `IID_IUnknown` is in `libuuid.a`; cwinrt defines `IID_IInspectable` and
+`IID_IActivationFactory` in `rt/cwinrt_guids.c`. Do not link `libwinstorecompat.a`: its
+Windows Store compatibility stubs replace desktop APIs and abort during CRT startup.
+This recipe is verified by `scripts/mingw_link.sh`, which links the entire generated
+surface for `x86_64`/`aarch64`/`i686`/`armv7` (the `mingw-link` CI job runs it).
 
 Minimum compiler flags: `-std=c23` (or `/std:clatest`), `-I <cwinrt>/include`. On MSVC, define
 `UNICODE`/`_UNICODE`. The generated headers and impl compile clean under MSVC `/W4` and
