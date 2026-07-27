@@ -1,5 +1,5 @@
 set_project("cwinrt")
-set_version("0.1.0")
+set_version("0.3.0")
 set_languages("c23")
 set_warnings("all", "extra")
 -- Without this the "release" build carried no /O2, leaving the winmd parser /
