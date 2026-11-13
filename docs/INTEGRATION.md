@@ -43,16 +43,22 @@ int main(void) {
 `cwinrt` links `cwinrt-bindings-all` (every namespace). Because each binding is a separate
 static-archive member, the linker only pulls the namespaces you reference, so an unused
 namespace costs nothing in the final binary. If you want to bound *compile* time instead,
-depend on `cwinrt-rt` directly and add only the impl files you need:
+name the per-namespace targets you need — every generated namespace has one, called
+`cwinrt-bindings-<namespace>` with the common `Windows.` prefix dropped, lowercased and
+dots turned into dashes:
 
 ```lua
 target("myapp")
     set_kind("binary")
-    add_files("src/*.c", "path/to/cwinrt/include/cwinrt/impl/Windows.Globalization.impl.c")
-    add_deps("cwinrt-rt")
-    add_includedirs("path/to/cwinrt/include")
-    -- then the link recipe below, by hand
+    add_files("src/*.c")
+    add_deps("cwinrt-rt",
+             "cwinrt-bindings-foundation",                        -- Windows.Foundation
+             "cwinrt-bindings-globalization",                     -- Windows.Globalization
+             "cwinrt-bindings-globalization-datetimeformatting")
 ```
+
+Namespaces are independent units: one never pulls in another, so name each namespace you
+call.
 
 ## Other toolchains (MSVC / mingw direct)
 

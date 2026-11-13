@@ -1,5 +1,5 @@
 set_project("cwinrt")
-set_version("0.3.0")
+set_version("0.3.1")
 set_languages("c23")
 set_warnings("all", "extra")
 -- Without this the "release" build carried no /O2, leaving the winmd parser /
@@ -93,59 +93,31 @@ target("test_abi")
     end
 end -- is_main (generator + smoke/abi tests)
 
-target("cwinrt-bindings-composition")
-    set_kind("static")
-    add_files("include/cwinrt/impl/Windows.UI.Composition.impl.c")
-    add_includedirs("include")
-    add_deps("cwinrt-rt")
-    if is_plat("windows", "mingw") then
-        add_syslinks("runtimeobject", "ole32", "oleaut32")
-    end
-
-target("cwinrt-bindings-foundation")
-    set_kind("static")
-    add_files("include/cwinrt/impl/Windows.Foundation.impl.c")
-    add_includedirs("include")
-    add_deps("cwinrt-rt")
-    if is_plat("windows", "mingw") then
-        add_syslinks("runtimeobject", "ole32", "oleaut32")
-    end
-
-target("cwinrt-bindings-interactions")
-    set_kind("static")
-    add_files("include/cwinrt/impl/Windows.UI.Composition.Interactions.impl.c")
-    add_includedirs("include")
-    add_deps("cwinrt-rt")
-    if is_plat("windows", "mingw") then
-        add_syslinks("runtimeobject", "ole32", "oleaut32")
-    end
-
-target("cwinrt-bindings-viewmanagement")
-    set_kind("static")
-    add_files("include/cwinrt/impl/Windows.UI.ViewManagement.impl.c")
-    add_includedirs("include")
-    add_deps("cwinrt-rt")
-    if is_plat("windows", "mingw") then
-        add_syslinks("runtimeobject", "ole32", "oleaut32")
-    end
-
-target("cwinrt-bindings-numberformatting")
-    set_kind("static")
-    add_files("include/cwinrt/impl/Windows.Globalization.NumberFormatting.impl.c")
-    add_includedirs("include")
-    add_deps("cwinrt-rt")
-    if is_plat("windows", "mingw") then
-        add_syslinks("runtimeobject", "ole32", "oleaut32")
-    end
-
-target("cwinrt-bindings-input")
-    set_kind("static")
-    add_files("include/cwinrt/impl/Windows.UI.Input.impl.c")
-    add_includedirs("include")
-    add_deps("cwinrt-rt")
-    if is_plat("windows", "mingw") then
-        add_syslinks("runtimeobject", "ole32", "oleaut32")
-    end
+-- One static target per generated namespace, so a consumer archives only the
+-- namespaces it calls instead of all 343. The name is the namespace with the
+-- common `Windows.` prefix dropped, lowercased, dots turned into dashes:
+-- Windows.Globalization.DateTimeFormatting is
+-- cwinrt-bindings-globalization-datetimeformatting. Namespaces are independent
+-- units -- one does not pull in another -- so a consumer that reaches across
+-- namespaces names each one it uses.
+--
+-- All of them are set_default(false): they exist to be named, and a bare
+-- `xmake` would otherwise archive every namespace twice (once here, once
+-- inside cwinrt-bindings-all).
+for _, implfile in ipairs(os.files("include/cwinrt/impl/*.impl.c")) do
+    local ns   = path.basename(implfile):gsub("%.impl$", "")
+    local name = ns:gsub("^Windows%.", ""):gsub("^cwinrt_", ""):gsub("[%._]", "-"):lower()
+    target("cwinrt-bindings-" .. name)
+        set_kind("static")
+        set_default(false)
+        add_files("include/cwinrt/impl/" .. path.filename(implfile))
+        add_includedirs("include")
+        add_deps("cwinrt-rt")
+        if is_plat("windows", "mingw") then
+            add_syslinks("runtimeobject", "ole32", "oleaut32")
+        end
+    target_end()
+end
 
 -- All generated impl units (present after xmake gen-all-impl)
 target("cwinrt-bindings-all")
@@ -287,8 +259,8 @@ target("test_conform_dispatch")
 target("test_conform_dispatch_composition_abi")
     set_kind("binary")
     add_files("tests/conform/test_dispatch_composition_abi.c")
-    add_deps("cwinrt-rt", "cwinrt-bindings-composition")
-    add_links("cwinrt-bindings-composition")
+    add_deps("cwinrt-rt", "cwinrt-bindings-ui-composition")
+    add_links("cwinrt-bindings-ui-composition")
     add_includedirs("include")
     if is_plat("mingw") then
         set_enabled(false)
@@ -299,8 +271,8 @@ target("test_conform_dispatch_composition_abi")
 target("test_conform_dispatch_composition_slots")
     set_kind("binary")
     add_files("tests/conform/test_dispatch_composition_slots.c")
-    add_deps("cwinrt-rt", "cwinrt-bindings-composition")
-    add_links("cwinrt-bindings-composition")
+    add_deps("cwinrt-rt", "cwinrt-bindings-ui-composition")
+    add_links("cwinrt-bindings-ui-composition")
     add_includedirs("include")
     if is_plat("mingw") then
         set_enabled(false)
@@ -311,8 +283,8 @@ target("test_conform_dispatch_composition_slots")
 target("test_conform_dispatch_compositor")
     set_kind("binary")
     add_files("tests/conform/test_dispatch_compositor.c")
-    add_deps("cwinrt-rt", "cwinrt-bindings-composition")
-    add_links("cwinrt-bindings-composition")
+    add_deps("cwinrt-rt", "cwinrt-bindings-ui-composition")
+    add_links("cwinrt-bindings-ui-composition")
     add_includedirs("include")
     if is_plat("mingw") then
         set_enabled(false)

@@ -48,18 +48,31 @@ Fails if any `.impl.c` still contains `E_NOTIMPL`.
 | Target | Use |
 |--------|-----|
 | `cwinrt-rt` | Factory, bootstrap, activation |
-| `cwinrt-bindings-foundation` | Foundation only |
-| `cwinrt-bindings-composition` | UI Composition only |
+| `cwinrt-bindings-<namespace>` | One namespace; every generated namespace has one |
 | `cwinrt-bindings-all` | All `impl/*.impl.c` (after `gen-all-impl`) |
+
+Every namespace gets its own static target, named by dropping the common
+`Windows.` prefix, lowercasing, and turning dots into dashes:
+
+| Namespace | Target |
+|-----------|--------|
+| `Windows.Foundation` | `cwinrt-bindings-foundation` |
+| `Windows.UI.Composition` | `cwinrt-bindings-ui-composition` |
+| `Windows.Globalization.DateTimeFormatting` | `cwinrt-bindings-globalization-datetimeformatting` |
+| (the shared PIID table) | `cwinrt-bindings-piids` |
+
+Namespaces are independent: linking one never pulls in another, so a consumer
+names each namespace it calls. These per-namespace targets are `set_default(false)`
+— a bare `xmake` builds the umbrella, not 343 separate archives.
 
 Example:
 
 ```text
 xmake build myapp
 # in xmake.lua: add_deps("cwinrt-rt", "cwinrt-bindings-all")
+#           or: add_deps("cwinrt-rt", "cwinrt-bindings-foundation",
+#                        "cwinrt-bindings-globalization")
 ```
-
-For smaller binaries, depend on individual `cwinrt-bindings-*` targets or compile only the `.impl.c` files you need.
 
 ## Header compile gate
 
