@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Graphics.Display.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WDESE_Accelerometer WDESE_Accelerometer;
 typedef struct WDESE_AccelerometerDataThreshold WDESE_AccelerometerDataThreshold;
 typedef struct WDESE_AccelerometerReading WDESE_AccelerometerReading;
@@ -246,7 +245,6 @@ typedef struct WDESE_IProximitySensorReading WDESE_IProximitySensorReading;
 typedef struct WDESE_IProximitySensorReadingChangedEventArgs WDESE_IProximitySensorReadingChangedEventArgs;
 typedef struct WDESE_ISensorDataThresholdTriggerDetails WDESE_ISensorDataThresholdTriggerDetails;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_TypedEventHandler_WDESE_Accelerometer_WDESE_AccelerometerReadingChangedEventArgs
 #define CWINRT_FWD_WF_TypedEventHandler_WDESE_Accelerometer_WDESE_AccelerometerReadingChangedEventArgs
 typedef struct WF_TypedEventHandler_WDESE_Accelerometer_WDESE_AccelerometerReadingChangedEventArgs WF_TypedEventHandler_WDESE_Accelerometer_WDESE_AccelerometerReadingChangedEventArgs;
@@ -602,7 +600,6 @@ struct WDESE_LightSensorChromaticity {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -1251,61 +1248,40 @@ static const IID CWINRT_IID_WDESE_IProximitySensorReadingChangedEventArgs CWINRT
 static const IID CWINRT_IID_WDESE_ISensorDataThresholdTriggerDetails CWINRT_MAYBE_UNUSED = { 0x9106F1B7, 0xE88D, 0x48B1, { 0xBC, 0x90, 0x61, 0x9C, 0x7B, 0x34, 0x93, 0x91 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Devices.Sensors.Accelerometer */
 HRESULT wdese_accelerometer_new(WDESE_Accelerometer **out);
 
-/* Windows.Devices.Sensors.Accelerometer */
-/* Windows.Devices.Sensors.Accelerometer.GetCurrentReading() */
 HRESULT wdese_accelerometer_get_current_reading(WDESE_Accelerometer *self, WDESE_AccelerometerReading** out);
 
-/* Windows.Devices.Sensors.Accelerometer.get_MinimumReportInterval() */
 HRESULT wdese_accelerometer_get__minimum_report_interval(WDESE_Accelerometer *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Accelerometer.put_ReportInterval() */
 HRESULT wdese_accelerometer_put__report_interval(WDESE_Accelerometer *self, uint32_t value);
 
-/* Windows.Devices.Sensors.Accelerometer.get_ReportInterval() */
 HRESULT wdese_accelerometer_get__report_interval(WDESE_Accelerometer *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Accelerometer.get_DeviceId() */
 HRESULT wdese_accelerometer_get__device_id(WDESE_Accelerometer *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sensors.Accelerometer.put_ReadingTransform() */
 HRESULT wdese_accelerometer_put__reading_transform(WDESE_Accelerometer *self, WGRDI_DisplayOrientations value);
 
-/* Windows.Devices.Sensors.Accelerometer.get_ReadingTransform() */
 HRESULT wdese_accelerometer_get__reading_transform(WDESE_Accelerometer *self, WGRDI_DisplayOrientations *value);
 
-/* Windows.Devices.Sensors.Accelerometer.put_ReportLatency() */
 HRESULT wdese_accelerometer_put__report_latency(WDESE_Accelerometer *self, uint32_t value);
 
-/* Windows.Devices.Sensors.Accelerometer.get_ReportLatency() */
 HRESULT wdese_accelerometer_get__report_latency(WDESE_Accelerometer *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Accelerometer.get_MaxBatchSize() */
 HRESULT wdese_accelerometer_get__max_batch_size(WDESE_Accelerometer *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Accelerometer.get_ReadingType() */
 HRESULT wdese_accelerometer_get__reading_type(WDESE_Accelerometer *self, WDESE_AccelerometerReadingType *value);
 
-/* Windows.Devices.Sensors.Accelerometer.get_ReportThreshold() */
 HRESULT wdese_accelerometer_get__report_threshold(WDESE_Accelerometer *self, WDESE_AccelerometerDataThreshold** value);
 
-/* Windows.Devices.Sensors.Accelerometer.FromIdAsync(deviceId) */
 HRESULT wdese_accelerometer_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDESE_Accelerometer** out);
 
-/* Windows.Devices.Sensors.Accelerometer.GetDeviceSelector(readingType) */
 HRESULT wdese_accelerometer_get_device_selector(WDESE_AccelerometerReadingType readingType, cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.Accelerometer.GetDefault(readingType) */
 HRESULT wdese_accelerometer_get_default_accelerometer_reading_type_p(WDESE_AccelerometerReadingType readingType, WDESE_Accelerometer** out);
 
-/* Windows.Devices.Sensors.Accelerometer.GetDefault() */
 HRESULT wdese_accelerometer_get_default(WDESE_Accelerometer** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdese_accelerometer_on_reading_changed(WDESE_Accelerometer *self, cwinrt_event_fn fn, void *ctx);
@@ -1314,2211 +1290,1339 @@ void wdese_accelerometer_off_reading_changed(WDESE_Accelerometer *self, cwinrt_t
 cwinrt_token wdese_accelerometer_on_shaken(WDESE_Accelerometer *self, cwinrt_event_fn fn, void *ctx);
 void wdese_accelerometer_off_shaken(WDESE_Accelerometer *self, cwinrt_token token);
 
-/* activate Windows.Devices.Sensors.AccelerometerDataThreshold */
 HRESULT wdese_accelerometer_data_threshold_new(WDESE_AccelerometerDataThreshold **out);
 
-/* Windows.Devices.Sensors.AccelerometerDataThreshold */
-/* Windows.Devices.Sensors.AccelerometerDataThreshold.get_XAxisInGForce() */
 HRESULT wdese_accelerometer_data_threshold_get__x_axis_in_g_force(WDESE_AccelerometerDataThreshold *self, double *value);
 
-/* Windows.Devices.Sensors.AccelerometerDataThreshold.put_XAxisInGForce() */
 HRESULT wdese_accelerometer_data_threshold_put__x_axis_in_g_force(WDESE_AccelerometerDataThreshold *self, double value);
 
-/* Windows.Devices.Sensors.AccelerometerDataThreshold.get_YAxisInGForce() */
 HRESULT wdese_accelerometer_data_threshold_get__y_axis_in_g_force(WDESE_AccelerometerDataThreshold *self, double *value);
 
-/* Windows.Devices.Sensors.AccelerometerDataThreshold.put_YAxisInGForce() */
 HRESULT wdese_accelerometer_data_threshold_put__y_axis_in_g_force(WDESE_AccelerometerDataThreshold *self, double value);
 
-/* Windows.Devices.Sensors.AccelerometerDataThreshold.get_ZAxisInGForce() */
 HRESULT wdese_accelerometer_data_threshold_get__z_axis_in_g_force(WDESE_AccelerometerDataThreshold *self, double *value);
 
-/* Windows.Devices.Sensors.AccelerometerDataThreshold.put_ZAxisInGForce() */
 HRESULT wdese_accelerometer_data_threshold_put__z_axis_in_g_force(WDESE_AccelerometerDataThreshold *self, double value);
 
-/* activate Windows.Devices.Sensors.AccelerometerReading */
 HRESULT wdese_accelerometer_reading_new(WDESE_AccelerometerReading **out);
 
-/* Windows.Devices.Sensors.AccelerometerReading */
-/* Windows.Devices.Sensors.AccelerometerReading.get_Timestamp() */
 HRESULT wdese_accelerometer_reading_get__timestamp(WDESE_AccelerometerReading *self, WF_DateTime *value);
 
-/* Windows.Devices.Sensors.AccelerometerReading.get_AccelerationX() */
 HRESULT wdese_accelerometer_reading_get__acceleration_x(WDESE_AccelerometerReading *self, double *value);
 
-/* Windows.Devices.Sensors.AccelerometerReading.get_AccelerationY() */
 HRESULT wdese_accelerometer_reading_get__acceleration_y(WDESE_AccelerometerReading *self, double *value);
 
-/* Windows.Devices.Sensors.AccelerometerReading.get_AccelerationZ() */
 HRESULT wdese_accelerometer_reading_get__acceleration_z(WDESE_AccelerometerReading *self, double *value);
 
-/* Windows.Devices.Sensors.AccelerometerReading.get_PerformanceCount() */
 HRESULT wdese_accelerometer_reading_get__performance_count(WDESE_AccelerometerReading *self, WF_TimeSpan** value);
 
-/* Windows.Devices.Sensors.AccelerometerReading.get_Properties() */
 HRESULT wdese_accelerometer_reading_get__properties(WDESE_AccelerometerReading *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* activate Windows.Devices.Sensors.AccelerometerReadingChangedEventArgs */
 HRESULT wdese_accelerometer_reading_changed_event_args_new(WDESE_AccelerometerReadingChangedEventArgs **out);
 
-/* Windows.Devices.Sensors.AccelerometerReadingChangedEventArgs */
-/* Windows.Devices.Sensors.AccelerometerReadingChangedEventArgs.get_Reading() */
 HRESULT wdese_accelerometer_reading_changed_event_args_get__reading(WDESE_AccelerometerReadingChangedEventArgs *self, WDESE_AccelerometerReading** value);
 
-/* activate Windows.Devices.Sensors.AccelerometerShakenEventArgs */
 HRESULT wdese_accelerometer_shaken_event_args_new(WDESE_AccelerometerShakenEventArgs **out);
 
-/* Windows.Devices.Sensors.AccelerometerShakenEventArgs */
-/* Windows.Devices.Sensors.AccelerometerShakenEventArgs.get_Timestamp() */
 HRESULT wdese_accelerometer_shaken_event_args_get__timestamp(WDESE_AccelerometerShakenEventArgs *self, WF_DateTime *value);
 
-/* activate Windows.Devices.Sensors.ActivitySensor */
 HRESULT wdese_activity_sensor_new(WDESE_ActivitySensor **out);
 
-/* Windows.Devices.Sensors.ActivitySensor */
-/* Windows.Devices.Sensors.ActivitySensor.GetCurrentReadingAsync() */
 HRESULT wdese_activity_sensor_get_current_reading_async(WDESE_ActivitySensor *self, WF_IAsyncOperation_WDESE_ActivitySensorReading** out);
 
-/* Windows.Devices.Sensors.ActivitySensor.get_SubscribedActivities() */
 HRESULT wdese_activity_sensor_get__subscribed_activities(WDESE_ActivitySensor *self, WFOCO_IVector_WDESE_ActivityType** value);
 
-/* Windows.Devices.Sensors.ActivitySensor.get_PowerInMilliwatts() */
 HRESULT wdese_activity_sensor_get__power_in_milliwatts(WDESE_ActivitySensor *self, double *value);
 
-/* Windows.Devices.Sensors.ActivitySensor.get_DeviceId() */
 HRESULT wdese_activity_sensor_get__device_id(WDESE_ActivitySensor *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sensors.ActivitySensor.get_SupportedActivities() */
 HRESULT wdese_activity_sensor_get__supported_activities(WDESE_ActivitySensor *self, WFOCO_IVectorView_WDESE_ActivityType** value);
 
-/* Windows.Devices.Sensors.ActivitySensor.get_MinimumReportInterval() */
 HRESULT wdese_activity_sensor_get__minimum_report_interval(WDESE_ActivitySensor *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.ActivitySensor.GetDefaultAsync() */
 HRESULT wdese_activity_sensor_get_default_async(WF_IAsyncOperation_WDESE_ActivitySensor** out);
 
-/* Windows.Devices.Sensors.ActivitySensor.GetDeviceSelector() */
 HRESULT wdese_activity_sensor_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.ActivitySensor.FromIdAsync(deviceId) */
 HRESULT wdese_activity_sensor_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDESE_ActivitySensor** out);
 
-/* Windows.Devices.Sensors.ActivitySensor.GetSystemHistoryAsync(fromTime) */
 HRESULT wdese_activity_sensor_get_system_history_async(WF_DateTime fromTime, WF_IAsyncOperation_WFOCO_IVectorView_WDESE_ActivitySensorReading** out);
 
-/* Windows.Devices.Sensors.ActivitySensor.GetSystemHistoryAsync(fromTime, duration) */
 HRESULT wdese_activity_sensor_get_system_history_async_date_time_time_span_p(WF_DateTime fromTime, WF_TimeSpan duration, WF_IAsyncOperation_WFOCO_IVectorView_WDESE_ActivitySensorReading** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdese_activity_sensor_on_reading_changed(WDESE_ActivitySensor *self, cwinrt_event_fn fn, void *ctx);
 void wdese_activity_sensor_off_reading_changed(WDESE_ActivitySensor *self, cwinrt_token token);
 
-/* activate Windows.Devices.Sensors.ActivitySensorReading */
 HRESULT wdese_activity_sensor_reading_new(WDESE_ActivitySensorReading **out);
 
-/* Windows.Devices.Sensors.ActivitySensorReading */
-/* Windows.Devices.Sensors.ActivitySensorReading.get_Timestamp() */
 HRESULT wdese_activity_sensor_reading_get__timestamp(WDESE_ActivitySensorReading *self, WF_DateTime *value);
 
-/* Windows.Devices.Sensors.ActivitySensorReading.get_Activity() */
 HRESULT wdese_activity_sensor_reading_get__activity(WDESE_ActivitySensorReading *self, WDESE_ActivityType *value);
 
-/* Windows.Devices.Sensors.ActivitySensorReading.get_Confidence() */
 HRESULT wdese_activity_sensor_reading_get__confidence(WDESE_ActivitySensorReading *self, WDESE_ActivitySensorReadingConfidence *value);
 
-/* activate Windows.Devices.Sensors.ActivitySensorReadingChangeReport */
 HRESULT wdese_activity_sensor_reading_change_report_new(WDESE_ActivitySensorReadingChangeReport **out);
 
-/* Windows.Devices.Sensors.ActivitySensorReadingChangeReport */
-/* Windows.Devices.Sensors.ActivitySensorReadingChangeReport.get_Reading() */
 HRESULT wdese_activity_sensor_reading_change_report_get__reading(WDESE_ActivitySensorReadingChangeReport *self, WDESE_ActivitySensorReading** value);
 
-/* activate Windows.Devices.Sensors.ActivitySensorReadingChangedEventArgs */
 HRESULT wdese_activity_sensor_reading_changed_event_args_new(WDESE_ActivitySensorReadingChangedEventArgs **out);
 
-/* Windows.Devices.Sensors.ActivitySensorReadingChangedEventArgs */
-/* Windows.Devices.Sensors.ActivitySensorReadingChangedEventArgs.get_Reading() */
 HRESULT wdese_activity_sensor_reading_changed_event_args_get__reading(WDESE_ActivitySensorReadingChangedEventArgs *self, WDESE_ActivitySensorReading** value);
 
-/* activate Windows.Devices.Sensors.ActivitySensorTriggerDetails */
 HRESULT wdese_activity_sensor_trigger_details_new(WDESE_ActivitySensorTriggerDetails **out);
 
-/* Windows.Devices.Sensors.ActivitySensorTriggerDetails */
-/* Windows.Devices.Sensors.ActivitySensorTriggerDetails.ReadReports() */
 HRESULT wdese_activity_sensor_trigger_details_read_reports(WDESE_ActivitySensorTriggerDetails *self, WFOCO_IVectorView_WDESE_ActivitySensorReadingChangeReport** out);
 
-/* activate Windows.Devices.Sensors.AdaptiveDimmingOptions */
 HRESULT wdese_adaptive_dimming_options_new(WDESE_AdaptiveDimmingOptions **out);
 
-/* Windows.Devices.Sensors.AdaptiveDimmingOptions */
-/* Windows.Devices.Sensors.AdaptiveDimmingOptions.get_AllowWhenExternalDisplayConnected() */
 HRESULT wdese_adaptive_dimming_options_get__allow_when_external_display_connected(WDESE_AdaptiveDimmingOptions *self, BOOL *value);
 
-/* Windows.Devices.Sensors.AdaptiveDimmingOptions.put_AllowWhenExternalDisplayConnected() */
 HRESULT wdese_adaptive_dimming_options_put__allow_when_external_display_connected(WDESE_AdaptiveDimmingOptions *self, BOOL value);
 
-/* activate Windows.Devices.Sensors.Altimeter */
 HRESULT wdese_altimeter_new(WDESE_Altimeter **out);
 
-/* Windows.Devices.Sensors.Altimeter */
-/* Windows.Devices.Sensors.Altimeter.GetCurrentReading() */
 HRESULT wdese_altimeter_get_current_reading(WDESE_Altimeter *self, WDESE_AltimeterReading** out);
 
-/* Windows.Devices.Sensors.Altimeter.get_DeviceId() */
 HRESULT wdese_altimeter_get__device_id(WDESE_Altimeter *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sensors.Altimeter.get_MinimumReportInterval() */
 HRESULT wdese_altimeter_get__minimum_report_interval(WDESE_Altimeter *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Altimeter.put_ReportInterval() */
 HRESULT wdese_altimeter_put__report_interval(WDESE_Altimeter *self, uint32_t value);
 
-/* Windows.Devices.Sensors.Altimeter.get_ReportInterval() */
 HRESULT wdese_altimeter_get__report_interval(WDESE_Altimeter *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Altimeter.put_ReportLatency() */
 HRESULT wdese_altimeter_put__report_latency(WDESE_Altimeter *self, uint32_t value);
 
-/* Windows.Devices.Sensors.Altimeter.get_ReportLatency() */
 HRESULT wdese_altimeter_get__report_latency(WDESE_Altimeter *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Altimeter.get_MaxBatchSize() */
 HRESULT wdese_altimeter_get__max_batch_size(WDESE_Altimeter *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Altimeter.GetDefault() */
 HRESULT wdese_altimeter_get_default(WDESE_Altimeter** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdese_altimeter_on_reading_changed(WDESE_Altimeter *self, cwinrt_event_fn fn, void *ctx);
 void wdese_altimeter_off_reading_changed(WDESE_Altimeter *self, cwinrt_token token);
 
-/* activate Windows.Devices.Sensors.AltimeterReading */
 HRESULT wdese_altimeter_reading_new(WDESE_AltimeterReading **out);
 
-/* Windows.Devices.Sensors.AltimeterReading */
-/* Windows.Devices.Sensors.AltimeterReading.get_Timestamp() */
 HRESULT wdese_altimeter_reading_get__timestamp(WDESE_AltimeterReading *self, WF_DateTime *value);
 
-/* Windows.Devices.Sensors.AltimeterReading.get_AltitudeChangeInMeters() */
 HRESULT wdese_altimeter_reading_get__altitude_change_in_meters(WDESE_AltimeterReading *self, double *value);
 
-/* Windows.Devices.Sensors.AltimeterReading.get_PerformanceCount() */
 HRESULT wdese_altimeter_reading_get__performance_count(WDESE_AltimeterReading *self, WF_TimeSpan** value);
 
-/* Windows.Devices.Sensors.AltimeterReading.get_Properties() */
 HRESULT wdese_altimeter_reading_get__properties(WDESE_AltimeterReading *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* activate Windows.Devices.Sensors.AltimeterReadingChangedEventArgs */
 HRESULT wdese_altimeter_reading_changed_event_args_new(WDESE_AltimeterReadingChangedEventArgs **out);
 
-/* Windows.Devices.Sensors.AltimeterReadingChangedEventArgs */
-/* Windows.Devices.Sensors.AltimeterReadingChangedEventArgs.get_Reading() */
 HRESULT wdese_altimeter_reading_changed_event_args_get__reading(WDESE_AltimeterReadingChangedEventArgs *self, WDESE_AltimeterReading** value);
 
-/* activate Windows.Devices.Sensors.Barometer */
 HRESULT wdese_barometer_new(WDESE_Barometer **out);
 
-/* Windows.Devices.Sensors.Barometer */
-/* Windows.Devices.Sensors.Barometer.GetCurrentReading() */
 HRESULT wdese_barometer_get_current_reading(WDESE_Barometer *self, WDESE_BarometerReading** out);
 
-/* Windows.Devices.Sensors.Barometer.get_DeviceId() */
 HRESULT wdese_barometer_get__device_id(WDESE_Barometer *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sensors.Barometer.get_MinimumReportInterval() */
 HRESULT wdese_barometer_get__minimum_report_interval(WDESE_Barometer *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Barometer.put_ReportInterval() */
 HRESULT wdese_barometer_put__report_interval(WDESE_Barometer *self, uint32_t value);
 
-/* Windows.Devices.Sensors.Barometer.get_ReportInterval() */
 HRESULT wdese_barometer_get__report_interval(WDESE_Barometer *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Barometer.put_ReportLatency() */
 HRESULT wdese_barometer_put__report_latency(WDESE_Barometer *self, uint32_t value);
 
-/* Windows.Devices.Sensors.Barometer.get_ReportLatency() */
 HRESULT wdese_barometer_get__report_latency(WDESE_Barometer *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Barometer.get_MaxBatchSize() */
 HRESULT wdese_barometer_get__max_batch_size(WDESE_Barometer *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Barometer.get_ReportThreshold() */
 HRESULT wdese_barometer_get__report_threshold(WDESE_Barometer *self, WDESE_BarometerDataThreshold** value);
 
-/* Windows.Devices.Sensors.Barometer.FromIdAsync(deviceId) */
 HRESULT wdese_barometer_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDESE_Barometer** out);
 
-/* Windows.Devices.Sensors.Barometer.GetDeviceSelector() */
 HRESULT wdese_barometer_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.Barometer.GetDefault() */
 HRESULT wdese_barometer_get_default(WDESE_Barometer** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdese_barometer_on_reading_changed(WDESE_Barometer *self, cwinrt_event_fn fn, void *ctx);
 void wdese_barometer_off_reading_changed(WDESE_Barometer *self, cwinrt_token token);
 
-/* activate Windows.Devices.Sensors.BarometerDataThreshold */
 HRESULT wdese_barometer_data_threshold_new(WDESE_BarometerDataThreshold **out);
 
-/* Windows.Devices.Sensors.BarometerDataThreshold */
-/* Windows.Devices.Sensors.BarometerDataThreshold.get_Hectopascals() */
 HRESULT wdese_barometer_data_threshold_get__hectopascals(WDESE_BarometerDataThreshold *self, double *value);
 
-/* Windows.Devices.Sensors.BarometerDataThreshold.put_Hectopascals() */
 HRESULT wdese_barometer_data_threshold_put__hectopascals(WDESE_BarometerDataThreshold *self, double value);
 
-/* activate Windows.Devices.Sensors.BarometerReading */
 HRESULT wdese_barometer_reading_new(WDESE_BarometerReading **out);
 
-/* Windows.Devices.Sensors.BarometerReading */
-/* Windows.Devices.Sensors.BarometerReading.get_Timestamp() */
 HRESULT wdese_barometer_reading_get__timestamp(WDESE_BarometerReading *self, WF_DateTime *value);
 
-/* Windows.Devices.Sensors.BarometerReading.get_StationPressureInHectopascals() */
 HRESULT wdese_barometer_reading_get__station_pressure_in_hectopascals(WDESE_BarometerReading *self, double *value);
 
-/* Windows.Devices.Sensors.BarometerReading.get_PerformanceCount() */
 HRESULT wdese_barometer_reading_get__performance_count(WDESE_BarometerReading *self, WF_TimeSpan** value);
 
-/* Windows.Devices.Sensors.BarometerReading.get_Properties() */
 HRESULT wdese_barometer_reading_get__properties(WDESE_BarometerReading *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* activate Windows.Devices.Sensors.BarometerReadingChangedEventArgs */
 HRESULT wdese_barometer_reading_changed_event_args_new(WDESE_BarometerReadingChangedEventArgs **out);
 
-/* Windows.Devices.Sensors.BarometerReadingChangedEventArgs */
-/* Windows.Devices.Sensors.BarometerReadingChangedEventArgs.get_Reading() */
 HRESULT wdese_barometer_reading_changed_event_args_get__reading(WDESE_BarometerReadingChangedEventArgs *self, WDESE_BarometerReading** value);
 
-/* activate Windows.Devices.Sensors.Compass */
 HRESULT wdese_compass_new(WDESE_Compass **out);
 
-/* Windows.Devices.Sensors.Compass */
-/* Windows.Devices.Sensors.Compass.GetCurrentReading() */
 HRESULT wdese_compass_get_current_reading(WDESE_Compass *self, WDESE_CompassReading** out);
 
-/* Windows.Devices.Sensors.Compass.get_MinimumReportInterval() */
 HRESULT wdese_compass_get__minimum_report_interval(WDESE_Compass *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Compass.put_ReportInterval() */
 HRESULT wdese_compass_put__report_interval(WDESE_Compass *self, uint32_t value);
 
-/* Windows.Devices.Sensors.Compass.get_ReportInterval() */
 HRESULT wdese_compass_get__report_interval(WDESE_Compass *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Compass.get_DeviceId() */
 HRESULT wdese_compass_get__device_id(WDESE_Compass *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sensors.Compass.put_ReadingTransform() */
 HRESULT wdese_compass_put__reading_transform(WDESE_Compass *self, WGRDI_DisplayOrientations value);
 
-/* Windows.Devices.Sensors.Compass.get_ReadingTransform() */
 HRESULT wdese_compass_get__reading_transform(WDESE_Compass *self, WGRDI_DisplayOrientations *value);
 
-/* Windows.Devices.Sensors.Compass.put_ReportLatency() */
 HRESULT wdese_compass_put__report_latency(WDESE_Compass *self, uint32_t value);
 
-/* Windows.Devices.Sensors.Compass.get_ReportLatency() */
 HRESULT wdese_compass_get__report_latency(WDESE_Compass *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Compass.get_MaxBatchSize() */
 HRESULT wdese_compass_get__max_batch_size(WDESE_Compass *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Compass.get_ReportThreshold() */
 HRESULT wdese_compass_get__report_threshold(WDESE_Compass *self, WDESE_CompassDataThreshold** value);
 
-/* Windows.Devices.Sensors.Compass.GetDeviceSelector() */
 HRESULT wdese_compass_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.Compass.FromIdAsync(deviceId) */
 HRESULT wdese_compass_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDESE_Compass** out);
 
-/* Windows.Devices.Sensors.Compass.GetDefault() */
 HRESULT wdese_compass_get_default(WDESE_Compass** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdese_compass_on_reading_changed(WDESE_Compass *self, cwinrt_event_fn fn, void *ctx);
 void wdese_compass_off_reading_changed(WDESE_Compass *self, cwinrt_token token);
 
-/* activate Windows.Devices.Sensors.CompassDataThreshold */
 HRESULT wdese_compass_data_threshold_new(WDESE_CompassDataThreshold **out);
 
-/* Windows.Devices.Sensors.CompassDataThreshold */
-/* Windows.Devices.Sensors.CompassDataThreshold.get_Degrees() */
 HRESULT wdese_compass_data_threshold_get__degrees(WDESE_CompassDataThreshold *self, double *value);
 
-/* Windows.Devices.Sensors.CompassDataThreshold.put_Degrees() */
 HRESULT wdese_compass_data_threshold_put__degrees(WDESE_CompassDataThreshold *self, double value);
 
-/* activate Windows.Devices.Sensors.CompassReading */
 HRESULT wdese_compass_reading_new(WDESE_CompassReading **out);
 
-/* Windows.Devices.Sensors.CompassReading */
-/* Windows.Devices.Sensors.CompassReading.get_Timestamp() */
 HRESULT wdese_compass_reading_get__timestamp(WDESE_CompassReading *self, WF_DateTime *value);
 
-/* Windows.Devices.Sensors.CompassReading.get_HeadingMagneticNorth() */
 HRESULT wdese_compass_reading_get__heading_magnetic_north(WDESE_CompassReading *self, double *value);
 
-/* Windows.Devices.Sensors.CompassReading.get_HeadingTrueNorth() */
 HRESULT wdese_compass_reading_get__heading_true_north(WDESE_CompassReading *self, double** value);
 
-/* Windows.Devices.Sensors.CompassReading.get_HeadingAccuracy() */
 HRESULT wdese_compass_reading_get__heading_accuracy(WDESE_CompassReading *self, WDESE_MagnetometerAccuracy *value);
 
-/* Windows.Devices.Sensors.CompassReading.get_PerformanceCount() */
 HRESULT wdese_compass_reading_get__performance_count(WDESE_CompassReading *self, WF_TimeSpan** value);
 
-/* Windows.Devices.Sensors.CompassReading.get_Properties() */
 HRESULT wdese_compass_reading_get__properties(WDESE_CompassReading *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* activate Windows.Devices.Sensors.CompassReadingChangedEventArgs */
 HRESULT wdese_compass_reading_changed_event_args_new(WDESE_CompassReadingChangedEventArgs **out);
 
-/* Windows.Devices.Sensors.CompassReadingChangedEventArgs */
-/* Windows.Devices.Sensors.CompassReadingChangedEventArgs.get_Reading() */
 HRESULT wdese_compass_reading_changed_event_args_get__reading(WDESE_CompassReadingChangedEventArgs *self, WDESE_CompassReading** value);
 
-/* activate Windows.Devices.Sensors.WakeOnApproachOptions */
 HRESULT wdese_wake_on_approach_options_new(WDESE_WakeOnApproachOptions **out);
 
-/* Windows.Devices.Sensors.WakeOnApproachOptions */
-/* Windows.Devices.Sensors.WakeOnApproachOptions.get_AllowWhenExternalDisplayConnected() */
 HRESULT wdese_wake_on_approach_options_get__allow_when_external_display_connected(WDESE_WakeOnApproachOptions *self, BOOL *value);
 
-/* Windows.Devices.Sensors.WakeOnApproachOptions.put_AllowWhenExternalDisplayConnected() */
 HRESULT wdese_wake_on_approach_options_put__allow_when_external_display_connected(WDESE_WakeOnApproachOptions *self, BOOL value);
 
-/* Windows.Devices.Sensors.WakeOnApproachOptions.get_DisableWhenBatterySaverOn() */
 HRESULT wdese_wake_on_approach_options_get__disable_when_battery_saver_on(WDESE_WakeOnApproachOptions *self, BOOL *value);
 
-/* Windows.Devices.Sensors.WakeOnApproachOptions.put_DisableWhenBatterySaverOn() */
 HRESULT wdese_wake_on_approach_options_put__disable_when_battery_saver_on(WDESE_WakeOnApproachOptions *self, BOOL value);
 
-/* activate Windows.Devices.Sensors.SimpleOrientationSensorOrientationChangedEventArgs */
 HRESULT wdese_simple_orientation_sensor_orientation_changed_event_args_new(WDESE_SimpleOrientationSensorOrientationChangedEventArgs **out);
 
-/* Windows.Devices.Sensors.SimpleOrientationSensorOrientationChangedEventArgs */
-/* Windows.Devices.Sensors.SimpleOrientationSensorOrientationChangedEventArgs.get_Timestamp() */
 HRESULT wdese_simple_orientation_sensor_orientation_changed_event_args_get__timestamp(WDESE_SimpleOrientationSensorOrientationChangedEventArgs *self, WF_DateTime *value);
 
-/* Windows.Devices.Sensors.SimpleOrientationSensorOrientationChangedEventArgs.get_Orientation() */
 HRESULT wdese_simple_orientation_sensor_orientation_changed_event_args_get__orientation(WDESE_SimpleOrientationSensorOrientationChangedEventArgs *self, WDESE_SimpleOrientation *value);
 
-/* activate Windows.Devices.Sensors.SimpleOrientationSensor */
 HRESULT wdese_simple_orientation_sensor_new(WDESE_SimpleOrientationSensor **out);
 
-/* Windows.Devices.Sensors.SimpleOrientationSensor */
-/* Windows.Devices.Sensors.SimpleOrientationSensor.GetCurrentOrientation() */
 HRESULT wdese_simple_orientation_sensor_get_current_orientation(WDESE_SimpleOrientationSensor *self, WDESE_SimpleOrientation *out);
 
-/* Windows.Devices.Sensors.SimpleOrientationSensor.get_DeviceId() */
 HRESULT wdese_simple_orientation_sensor_get__device_id(WDESE_SimpleOrientationSensor *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sensors.SimpleOrientationSensor.put_ReadingTransform() */
 HRESULT wdese_simple_orientation_sensor_put__reading_transform(WDESE_SimpleOrientationSensor *self, WGRDI_DisplayOrientations value);
 
-/* Windows.Devices.Sensors.SimpleOrientationSensor.get_ReadingTransform() */
 HRESULT wdese_simple_orientation_sensor_get__reading_transform(WDESE_SimpleOrientationSensor *self, WGRDI_DisplayOrientations *value);
 
-/* Windows.Devices.Sensors.SimpleOrientationSensor.GetDeviceSelector() */
 HRESULT wdese_simple_orientation_sensor_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.SimpleOrientationSensor.FromIdAsync(deviceId) */
 HRESULT wdese_simple_orientation_sensor_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDESE_SimpleOrientationSensor** out);
 
-/* Windows.Devices.Sensors.SimpleOrientationSensor.GetDefault() */
 HRESULT wdese_simple_orientation_sensor_get_default(WDESE_SimpleOrientationSensor** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdese_simple_orientation_sensor_on_orientation_changed(WDESE_SimpleOrientationSensor *self, cwinrt_event_fn fn, void *ctx);
 void wdese_simple_orientation_sensor_off_orientation_changed(WDESE_SimpleOrientationSensor *self, cwinrt_token token);
 
-/* activate Windows.Devices.Sensors.SensorRotationMatrix */
 HRESULT wdese_sensor_rotation_matrix_new(WDESE_SensorRotationMatrix **out);
 
-/* Windows.Devices.Sensors.SensorRotationMatrix */
-/* Windows.Devices.Sensors.SensorRotationMatrix.get_M11() */
 HRESULT wdese_sensor_rotation_matrix_get__m11(WDESE_SensorRotationMatrix *self, float *value);
 
-/* Windows.Devices.Sensors.SensorRotationMatrix.get_M12() */
 HRESULT wdese_sensor_rotation_matrix_get__m12(WDESE_SensorRotationMatrix *self, float *value);
 
-/* Windows.Devices.Sensors.SensorRotationMatrix.get_M13() */
 HRESULT wdese_sensor_rotation_matrix_get__m13(WDESE_SensorRotationMatrix *self, float *value);
 
-/* Windows.Devices.Sensors.SensorRotationMatrix.get_M21() */
 HRESULT wdese_sensor_rotation_matrix_get__m21(WDESE_SensorRotationMatrix *self, float *value);
 
-/* Windows.Devices.Sensors.SensorRotationMatrix.get_M22() */
 HRESULT wdese_sensor_rotation_matrix_get__m22(WDESE_SensorRotationMatrix *self, float *value);
 
-/* Windows.Devices.Sensors.SensorRotationMatrix.get_M23() */
 HRESULT wdese_sensor_rotation_matrix_get__m23(WDESE_SensorRotationMatrix *self, float *value);
 
-/* Windows.Devices.Sensors.SensorRotationMatrix.get_M31() */
 HRESULT wdese_sensor_rotation_matrix_get__m31(WDESE_SensorRotationMatrix *self, float *value);
 
-/* Windows.Devices.Sensors.SensorRotationMatrix.get_M32() */
 HRESULT wdese_sensor_rotation_matrix_get__m32(WDESE_SensorRotationMatrix *self, float *value);
 
-/* Windows.Devices.Sensors.SensorRotationMatrix.get_M33() */
 HRESULT wdese_sensor_rotation_matrix_get__m33(WDESE_SensorRotationMatrix *self, float *value);
 
-/* activate Windows.Devices.Sensors.SensorQuaternion */
 HRESULT wdese_sensor_quaternion_new(WDESE_SensorQuaternion **out);
 
-/* Windows.Devices.Sensors.SensorQuaternion */
-/* Windows.Devices.Sensors.SensorQuaternion.get_W() */
 HRESULT wdese_sensor_quaternion_get__w(WDESE_SensorQuaternion *self, float *value);
 
-/* Windows.Devices.Sensors.SensorQuaternion.get_X() */
 HRESULT wdese_sensor_quaternion_get__x(WDESE_SensorQuaternion *self, float *value);
 
-/* Windows.Devices.Sensors.SensorQuaternion.get_Y() */
 HRESULT wdese_sensor_quaternion_get__y(WDESE_SensorQuaternion *self, float *value);
 
-/* Windows.Devices.Sensors.SensorQuaternion.get_Z() */
 HRESULT wdese_sensor_quaternion_get__z(WDESE_SensorQuaternion *self, float *value);
 
-/* activate Windows.Devices.Sensors.DetectedPerson */
 HRESULT wdese_detected_person_new(WDESE_DetectedPerson **out);
 
-/* Windows.Devices.Sensors.DetectedPerson */
-/* Windows.Devices.Sensors.DetectedPerson.get_Engagement() */
 HRESULT wdese_detected_person_get__engagement(WDESE_DetectedPerson *self, WDESE_HumanEngagement *value);
 
-/* Windows.Devices.Sensors.DetectedPerson.get_DistanceInMillimeters() */
 HRESULT wdese_detected_person_get__distance_in_millimeters(WDESE_DetectedPerson *self, uint32_t** value);
 
-/* Windows.Devices.Sensors.DetectedPerson.get_HeadOrientation() */
 HRESULT wdese_detected_person_get__head_orientation(WDESE_DetectedPerson *self, WDESE_HeadOrientation** value);
 
-/* Windows.Devices.Sensors.DetectedPerson.get_HeadPosition() */
 HRESULT wdese_detected_person_get__head_position(WDESE_DetectedPerson *self, WDESE_HeadPosition** value);
 
-/* Windows.Devices.Sensors.DetectedPerson.get_PersonId() */
 HRESULT wdese_detected_person_get__person_id(WDESE_DetectedPerson *self, int32_t** value);
 
-/* activate Windows.Devices.Sensors.Gyrometer */
 HRESULT wdese_gyrometer_new(WDESE_Gyrometer **out);
 
-/* Windows.Devices.Sensors.Gyrometer */
-/* Windows.Devices.Sensors.Gyrometer.GetCurrentReading() */
 HRESULT wdese_gyrometer_get_current_reading(WDESE_Gyrometer *self, WDESE_GyrometerReading** out);
 
-/* Windows.Devices.Sensors.Gyrometer.get_MinimumReportInterval() */
 HRESULT wdese_gyrometer_get__minimum_report_interval(WDESE_Gyrometer *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Gyrometer.put_ReportInterval() */
 HRESULT wdese_gyrometer_put__report_interval(WDESE_Gyrometer *self, uint32_t value);
 
-/* Windows.Devices.Sensors.Gyrometer.get_ReportInterval() */
 HRESULT wdese_gyrometer_get__report_interval(WDESE_Gyrometer *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Gyrometer.get_DeviceId() */
 HRESULT wdese_gyrometer_get__device_id(WDESE_Gyrometer *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sensors.Gyrometer.put_ReadingTransform() */
 HRESULT wdese_gyrometer_put__reading_transform(WDESE_Gyrometer *self, WGRDI_DisplayOrientations value);
 
-/* Windows.Devices.Sensors.Gyrometer.get_ReadingTransform() */
 HRESULT wdese_gyrometer_get__reading_transform(WDESE_Gyrometer *self, WGRDI_DisplayOrientations *value);
 
-/* Windows.Devices.Sensors.Gyrometer.put_ReportLatency() */
 HRESULT wdese_gyrometer_put__report_latency(WDESE_Gyrometer *self, uint32_t value);
 
-/* Windows.Devices.Sensors.Gyrometer.get_ReportLatency() */
 HRESULT wdese_gyrometer_get__report_latency(WDESE_Gyrometer *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Gyrometer.get_MaxBatchSize() */
 HRESULT wdese_gyrometer_get__max_batch_size(WDESE_Gyrometer *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Gyrometer.get_ReportThreshold() */
 HRESULT wdese_gyrometer_get__report_threshold(WDESE_Gyrometer *self, WDESE_GyrometerDataThreshold** value);
 
-/* Windows.Devices.Sensors.Gyrometer.GetDeviceSelector() */
 HRESULT wdese_gyrometer_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.Gyrometer.FromIdAsync(deviceId) */
 HRESULT wdese_gyrometer_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDESE_Gyrometer** out);
 
-/* Windows.Devices.Sensors.Gyrometer.GetDefault() */
 HRESULT wdese_gyrometer_get_default(WDESE_Gyrometer** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdese_gyrometer_on_reading_changed(WDESE_Gyrometer *self, cwinrt_event_fn fn, void *ctx);
 void wdese_gyrometer_off_reading_changed(WDESE_Gyrometer *self, cwinrt_token token);
 
-/* activate Windows.Devices.Sensors.GyrometerDataThreshold */
 HRESULT wdese_gyrometer_data_threshold_new(WDESE_GyrometerDataThreshold **out);
 
-/* Windows.Devices.Sensors.GyrometerDataThreshold */
-/* Windows.Devices.Sensors.GyrometerDataThreshold.get_XAxisInDegreesPerSecond() */
 HRESULT wdese_gyrometer_data_threshold_get__x_axis_in_degrees_per_second(WDESE_GyrometerDataThreshold *self, double *value);
 
-/* Windows.Devices.Sensors.GyrometerDataThreshold.put_XAxisInDegreesPerSecond() */
 HRESULT wdese_gyrometer_data_threshold_put__x_axis_in_degrees_per_second(WDESE_GyrometerDataThreshold *self, double value);
 
-/* Windows.Devices.Sensors.GyrometerDataThreshold.get_YAxisInDegreesPerSecond() */
 HRESULT wdese_gyrometer_data_threshold_get__y_axis_in_degrees_per_second(WDESE_GyrometerDataThreshold *self, double *value);
 
-/* Windows.Devices.Sensors.GyrometerDataThreshold.put_YAxisInDegreesPerSecond() */
 HRESULT wdese_gyrometer_data_threshold_put__y_axis_in_degrees_per_second(WDESE_GyrometerDataThreshold *self, double value);
 
-/* Windows.Devices.Sensors.GyrometerDataThreshold.get_ZAxisInDegreesPerSecond() */
 HRESULT wdese_gyrometer_data_threshold_get__z_axis_in_degrees_per_second(WDESE_GyrometerDataThreshold *self, double *value);
 
-/* Windows.Devices.Sensors.GyrometerDataThreshold.put_ZAxisInDegreesPerSecond() */
 HRESULT wdese_gyrometer_data_threshold_put__z_axis_in_degrees_per_second(WDESE_GyrometerDataThreshold *self, double value);
 
-/* activate Windows.Devices.Sensors.GyrometerReading */
 HRESULT wdese_gyrometer_reading_new(WDESE_GyrometerReading **out);
 
-/* Windows.Devices.Sensors.GyrometerReading */
-/* Windows.Devices.Sensors.GyrometerReading.get_Timestamp() */
 HRESULT wdese_gyrometer_reading_get__timestamp(WDESE_GyrometerReading *self, WF_DateTime *value);
 
-/* Windows.Devices.Sensors.GyrometerReading.get_AngularVelocityX() */
 HRESULT wdese_gyrometer_reading_get__angular_velocity_x(WDESE_GyrometerReading *self, double *value);
 
-/* Windows.Devices.Sensors.GyrometerReading.get_AngularVelocityY() */
 HRESULT wdese_gyrometer_reading_get__angular_velocity_y(WDESE_GyrometerReading *self, double *value);
 
-/* Windows.Devices.Sensors.GyrometerReading.get_AngularVelocityZ() */
 HRESULT wdese_gyrometer_reading_get__angular_velocity_z(WDESE_GyrometerReading *self, double *value);
 
-/* Windows.Devices.Sensors.GyrometerReading.get_PerformanceCount() */
 HRESULT wdese_gyrometer_reading_get__performance_count(WDESE_GyrometerReading *self, WF_TimeSpan** value);
 
-/* Windows.Devices.Sensors.GyrometerReading.get_Properties() */
 HRESULT wdese_gyrometer_reading_get__properties(WDESE_GyrometerReading *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* activate Windows.Devices.Sensors.GyrometerReadingChangedEventArgs */
 HRESULT wdese_gyrometer_reading_changed_event_args_new(WDESE_GyrometerReadingChangedEventArgs **out);
 
-/* Windows.Devices.Sensors.GyrometerReadingChangedEventArgs */
-/* Windows.Devices.Sensors.GyrometerReadingChangedEventArgs.get_Reading() */
 HRESULT wdese_gyrometer_reading_changed_event_args_get__reading(WDESE_GyrometerReadingChangedEventArgs *self, WDESE_GyrometerReading** value);
 
-/* activate Windows.Devices.Sensors.HeadOrientation */
 HRESULT wdese_head_orientation_new(WDESE_HeadOrientation **out);
 
-/* Windows.Devices.Sensors.HeadOrientation */
-/* Windows.Devices.Sensors.HeadOrientation.get_RollInDegrees() */
 HRESULT wdese_head_orientation_get__roll_in_degrees(WDESE_HeadOrientation *self, double** value);
 
-/* Windows.Devices.Sensors.HeadOrientation.get_PitchInDegrees() */
 HRESULT wdese_head_orientation_get__pitch_in_degrees(WDESE_HeadOrientation *self, double** value);
 
-/* Windows.Devices.Sensors.HeadOrientation.get_YawInDegrees() */
 HRESULT wdese_head_orientation_get__yaw_in_degrees(WDESE_HeadOrientation *self, double** value);
 
-/* activate Windows.Devices.Sensors.HeadPosition */
 HRESULT wdese_head_position_new(WDESE_HeadPosition **out);
 
-/* Windows.Devices.Sensors.HeadPosition */
-/* Windows.Devices.Sensors.HeadPosition.get_AzimuthInDegrees() */
 HRESULT wdese_head_position_get__azimuth_in_degrees(WDESE_HeadPosition *self, double** value);
 
-/* Windows.Devices.Sensors.HeadPosition.get_AltitudeInDegrees() */
 HRESULT wdese_head_position_get__altitude_in_degrees(WDESE_HeadPosition *self, double** value);
 
-/* activate Windows.Devices.Sensors.HingeAngleReading */
 HRESULT wdese_hinge_angle_reading_new(WDESE_HingeAngleReading **out);
 
-/* Windows.Devices.Sensors.HingeAngleReading */
-/* Windows.Devices.Sensors.HingeAngleReading.get_Timestamp() */
 HRESULT wdese_hinge_angle_reading_get__timestamp(WDESE_HingeAngleReading *self, WF_DateTime *value);
 
-/* Windows.Devices.Sensors.HingeAngleReading.get_AngleInDegrees() */
 HRESULT wdese_hinge_angle_reading_get__angle_in_degrees(WDESE_HingeAngleReading *self, double *value);
 
-/* Windows.Devices.Sensors.HingeAngleReading.get_Properties() */
 HRESULT wdese_hinge_angle_reading_get__properties(WDESE_HingeAngleReading *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* activate Windows.Devices.Sensors.HingeAngleSensor */
 HRESULT wdese_hinge_angle_sensor_new(WDESE_HingeAngleSensor **out);
 
-/* Windows.Devices.Sensors.HingeAngleSensor */
-/* Windows.Devices.Sensors.HingeAngleSensor.GetCurrentReadingAsync() */
 HRESULT wdese_hinge_angle_sensor_get_current_reading_async(WDESE_HingeAngleSensor *self, WF_IAsyncOperation_WDESE_HingeAngleReading** out);
 
-/* Windows.Devices.Sensors.HingeAngleSensor.get_DeviceId() */
 HRESULT wdese_hinge_angle_sensor_get__device_id(WDESE_HingeAngleSensor *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sensors.HingeAngleSensor.get_MinReportThresholdInDegrees() */
 HRESULT wdese_hinge_angle_sensor_get__min_report_threshold_in_degrees(WDESE_HingeAngleSensor *self, double *value);
 
-/* Windows.Devices.Sensors.HingeAngleSensor.get_ReportThresholdInDegrees() */
 HRESULT wdese_hinge_angle_sensor_get__report_threshold_in_degrees(WDESE_HingeAngleSensor *self, double *value);
 
-/* Windows.Devices.Sensors.HingeAngleSensor.put_ReportThresholdInDegrees() */
 HRESULT wdese_hinge_angle_sensor_put__report_threshold_in_degrees(WDESE_HingeAngleSensor *self, double value);
 
-/* Windows.Devices.Sensors.HingeAngleSensor.GetDeviceSelector() */
 HRESULT wdese_hinge_angle_sensor_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.HingeAngleSensor.GetDefaultAsync() */
 HRESULT wdese_hinge_angle_sensor_get_default_async(WF_IAsyncOperation_WDESE_HingeAngleSensor** out);
 
-/* Windows.Devices.Sensors.HingeAngleSensor.GetRelatedToAdjacentPanelsAsync(firstPanelId, secondPanelId) */
 HRESULT wdese_hinge_angle_sensor_get_related_to_adjacent_panels_async(cwinrt_hstring firstPanelId, cwinrt_hstring secondPanelId, WF_IAsyncOperation_WDESE_HingeAngleSensor** out);
 
-/* Windows.Devices.Sensors.HingeAngleSensor.FromIdAsync(deviceId) */
 HRESULT wdese_hinge_angle_sensor_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDESE_HingeAngleSensor** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdese_hinge_angle_sensor_on_reading_changed(WDESE_HingeAngleSensor *self, cwinrt_event_fn fn, void *ctx);
 void wdese_hinge_angle_sensor_off_reading_changed(WDESE_HingeAngleSensor *self, cwinrt_token token);
 
-/* activate Windows.Devices.Sensors.HingeAngleSensorReadingChangedEventArgs */
 HRESULT wdese_hinge_angle_sensor_reading_changed_event_args_new(WDESE_HingeAngleSensorReadingChangedEventArgs **out);
 
-/* Windows.Devices.Sensors.HingeAngleSensorReadingChangedEventArgs */
-/* Windows.Devices.Sensors.HingeAngleSensorReadingChangedEventArgs.get_Reading() */
 HRESULT wdese_hinge_angle_sensor_reading_changed_event_args_get__reading(WDESE_HingeAngleSensorReadingChangedEventArgs *self, WDESE_HingeAngleReading** value);
 
-/* activate Windows.Devices.Sensors.HumanPresenceFeatures */
 HRESULT wdese_human_presence_features_new(WDESE_HumanPresenceFeatures **out);
 
-/* Windows.Devices.Sensors.HumanPresenceFeatures */
-/* Windows.Devices.Sensors.HumanPresenceFeatures.get_SensorId() */
 HRESULT wdese_human_presence_features_get__sensor_id(WDESE_HumanPresenceFeatures *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sensors.HumanPresenceFeatures.get_SupportedWakeOrLockDistancesInMillimeters() */
 HRESULT wdese_human_presence_features_get__supported_wake_or_lock_distances_in_millimeters(WDESE_HumanPresenceFeatures *self, WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Devices.Sensors.HumanPresenceFeatures.get_IsWakeOnApproachSupported() */
 HRESULT wdese_human_presence_features_get__is_wake_on_approach_supported(WDESE_HumanPresenceFeatures *self, BOOL *value);
 
-/* Windows.Devices.Sensors.HumanPresenceFeatures.get_IsLockOnLeaveSupported() */
 HRESULT wdese_human_presence_features_get__is_lock_on_leave_supported(WDESE_HumanPresenceFeatures *self, BOOL *value);
 
-/* Windows.Devices.Sensors.HumanPresenceFeatures.get_IsAttentionAwareDimmingSupported() */
 HRESULT wdese_human_presence_features_get__is_attention_aware_dimming_supported(WDESE_HumanPresenceFeatures *self, BOOL *value);
 
-/* Windows.Devices.Sensors.HumanPresenceFeatures.get_IsAdaptiveDimmingSupported() */
 HRESULT wdese_human_presence_features_get__is_adaptive_dimming_supported(WDESE_HumanPresenceFeatures *self, BOOL *value);
 
-/* Windows.Devices.Sensors.HumanPresenceFeatures.get_IsOnlookerDetectionSupported() */
 HRESULT wdese_human_presence_features_get__is_onlooker_detection_supported(WDESE_HumanPresenceFeatures *self, BOOL *value);
 
-/* activate Windows.Devices.Sensors.HumanPresenceSensor */
 HRESULT wdese_human_presence_sensor_new(WDESE_HumanPresenceSensor **out);
 
-/* Windows.Devices.Sensors.HumanPresenceSensor */
-/* Windows.Devices.Sensors.HumanPresenceSensor.get_DeviceId() */
 HRESULT wdese_human_presence_sensor_get__device_id(WDESE_HumanPresenceSensor *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sensors.HumanPresenceSensor.get_MaxDetectableDistanceInMillimeters() */
 HRESULT wdese_human_presence_sensor_get__max_detectable_distance_in_millimeters(WDESE_HumanPresenceSensor *self, uint32_t** value);
 
-/* Windows.Devices.Sensors.HumanPresenceSensor.get_MinDetectableDistanceInMillimeters() */
 HRESULT wdese_human_presence_sensor_get__min_detectable_distance_in_millimeters(WDESE_HumanPresenceSensor *self, uint32_t** value);
 
-/* Windows.Devices.Sensors.HumanPresenceSensor.GetCurrentReading() */
 HRESULT wdese_human_presence_sensor_get_current_reading(WDESE_HumanPresenceSensor *self, WDESE_HumanPresenceSensorReading** out);
 
-/* Windows.Devices.Sensors.HumanPresenceSensor.get_IsPresenceSupported() */
 HRESULT wdese_human_presence_sensor_get__is_presence_supported(WDESE_HumanPresenceSensor *self, BOOL *value);
 
-/* Windows.Devices.Sensors.HumanPresenceSensor.get_IsEngagementSupported() */
 HRESULT wdese_human_presence_sensor_get__is_engagement_supported(WDESE_HumanPresenceSensor *self, BOOL *value);
 
-/* Windows.Devices.Sensors.HumanPresenceSensor.get_MaxDetectablePersons() */
 HRESULT wdese_human_presence_sensor_get__max_detectable_persons(WDESE_HumanPresenceSensor *self, int32_t *value);
 
-/* Windows.Devices.Sensors.HumanPresenceSensor.get_MinDetectableAzimuthInDegrees() */
 HRESULT wdese_human_presence_sensor_get__min_detectable_azimuth_in_degrees(WDESE_HumanPresenceSensor *self, double** value);
 
-/* Windows.Devices.Sensors.HumanPresenceSensor.get_MaxDetectableAzimuthInDegrees() */
 HRESULT wdese_human_presence_sensor_get__max_detectable_azimuth_in_degrees(WDESE_HumanPresenceSensor *self, double** value);
 
-/* Windows.Devices.Sensors.HumanPresenceSensor.get_MinDetectableAltitudeInDegrees() */
 HRESULT wdese_human_presence_sensor_get__min_detectable_altitude_in_degrees(WDESE_HumanPresenceSensor *self, double** value);
 
-/* Windows.Devices.Sensors.HumanPresenceSensor.get_MaxDetectableAltitudeInDegrees() */
 HRESULT wdese_human_presence_sensor_get__max_detectable_altitude_in_degrees(WDESE_HumanPresenceSensor *self, double** value);
 
-/* Windows.Devices.Sensors.HumanPresenceSensor.FromId(sensorId) */
 HRESULT wdese_human_presence_sensor_from_id(cwinrt_hstring sensorId, WDESE_HumanPresenceSensor** out);
 
-/* Windows.Devices.Sensors.HumanPresenceSensor.GetDefault() */
 HRESULT wdese_human_presence_sensor_get_default(WDESE_HumanPresenceSensor** out);
 
-/* Windows.Devices.Sensors.HumanPresenceSensor.GetDeviceSelector() */
 HRESULT wdese_human_presence_sensor_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.HumanPresenceSensor.FromIdAsync(sensorId) */
 HRESULT wdese_human_presence_sensor_from_id_async(cwinrt_hstring sensorId, WF_IAsyncOperation_WDESE_HumanPresenceSensor** out);
 
-/* Windows.Devices.Sensors.HumanPresenceSensor.GetDefaultAsync() */
 HRESULT wdese_human_presence_sensor_get_default_async(WF_IAsyncOperation_WDESE_HumanPresenceSensor** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdese_human_presence_sensor_on_reading_changed(WDESE_HumanPresenceSensor *self, cwinrt_event_fn fn, void *ctx);
 void wdese_human_presence_sensor_off_reading_changed(WDESE_HumanPresenceSensor *self, cwinrt_token token);
 
-/* activate Windows.Devices.Sensors.HumanPresenceSensorReading */
 HRESULT wdese_human_presence_sensor_reading_new(WDESE_HumanPresenceSensorReading **out);
 
-/* Windows.Devices.Sensors.HumanPresenceSensorReading */
-/* Windows.Devices.Sensors.HumanPresenceSensorReading.get_Timestamp() */
 HRESULT wdese_human_presence_sensor_reading_get__timestamp(WDESE_HumanPresenceSensorReading *self, WF_DateTime *value);
 
-/* Windows.Devices.Sensors.HumanPresenceSensorReading.get_Presence() */
 HRESULT wdese_human_presence_sensor_reading_get__presence(WDESE_HumanPresenceSensorReading *self, WDESE_HumanPresence *value);
 
-/* Windows.Devices.Sensors.HumanPresenceSensorReading.get_Engagement() */
 HRESULT wdese_human_presence_sensor_reading_get__engagement(WDESE_HumanPresenceSensorReading *self, WDESE_HumanEngagement *value);
 
-/* Windows.Devices.Sensors.HumanPresenceSensorReading.get_DistanceInMillimeters() */
 HRESULT wdese_human_presence_sensor_reading_get__distance_in_millimeters(WDESE_HumanPresenceSensorReading *self, uint32_t** value);
 
-/* Windows.Devices.Sensors.HumanPresenceSensorReading.get_Properties() */
 HRESULT wdese_human_presence_sensor_reading_get__properties(WDESE_HumanPresenceSensorReading *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* Windows.Devices.Sensors.HumanPresenceSensorReading.get_OnlookerPresence() */
 HRESULT wdese_human_presence_sensor_reading_get__onlooker_presence(WDESE_HumanPresenceSensorReading *self, WDESE_HumanPresence *value);
 
-/* Windows.Devices.Sensors.HumanPresenceSensorReading.get_DetectedPersons() */
 HRESULT wdese_human_presence_sensor_reading_get__detected_persons(WDESE_HumanPresenceSensorReading *self, WFOCO_IVectorView_WDESE_DetectedPerson** value);
 
-/* activate Windows.Devices.Sensors.HumanPresenceSensorReadingChangedEventArgs */
 HRESULT wdese_human_presence_sensor_reading_changed_event_args_new(WDESE_HumanPresenceSensorReadingChangedEventArgs **out);
 
-/* Windows.Devices.Sensors.HumanPresenceSensorReadingChangedEventArgs */
-/* Windows.Devices.Sensors.HumanPresenceSensorReadingChangedEventArgs.get_Reading() */
 HRESULT wdese_human_presence_sensor_reading_changed_event_args_get__reading(WDESE_HumanPresenceSensorReadingChangedEventArgs *self, WDESE_HumanPresenceSensorReading** value);
 
-/* activate Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate */
 HRESULT wdese_human_presence_sensor_reading_update_new(WDESE_HumanPresenceSensorReadingUpdate **out);
 
-/* Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate */
-/* Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate.get_Timestamp() */
 HRESULT wdese_human_presence_sensor_reading_update_get__timestamp(WDESE_HumanPresenceSensorReadingUpdate *self, WF_DateTime** value);
 
-/* Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate.put_Timestamp() */
 HRESULT wdese_human_presence_sensor_reading_update_put__timestamp(WDESE_HumanPresenceSensorReadingUpdate *self, WF_DateTime* value);
 
-/* Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate.get_Presence() */
 HRESULT wdese_human_presence_sensor_reading_update_get__presence(WDESE_HumanPresenceSensorReadingUpdate *self, WDESE_HumanPresence** value);
 
-/* Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate.put_Presence() */
 HRESULT wdese_human_presence_sensor_reading_update_put__presence(WDESE_HumanPresenceSensorReadingUpdate *self, WDESE_HumanPresence* value);
 
-/* Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate.get_Engagement() */
 HRESULT wdese_human_presence_sensor_reading_update_get__engagement(WDESE_HumanPresenceSensorReadingUpdate *self, WDESE_HumanEngagement** value);
 
-/* Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate.put_Engagement() */
 HRESULT wdese_human_presence_sensor_reading_update_put__engagement(WDESE_HumanPresenceSensorReadingUpdate *self, WDESE_HumanEngagement* value);
 
-/* Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate.get_DistanceInMillimeters() */
 HRESULT wdese_human_presence_sensor_reading_update_get__distance_in_millimeters(WDESE_HumanPresenceSensorReadingUpdate *self, uint32_t** value);
 
-/* Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate.put_DistanceInMillimeters() */
 HRESULT wdese_human_presence_sensor_reading_update_put__distance_in_millimeters(WDESE_HumanPresenceSensorReadingUpdate *self, uint32_t* value);
 
-/* Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate.get_OnlookerPresence() */
 HRESULT wdese_human_presence_sensor_reading_update_get__onlooker_presence(WDESE_HumanPresenceSensorReadingUpdate *self, WDESE_HumanPresence** value);
 
-/* Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate.put_OnlookerPresence() */
 HRESULT wdese_human_presence_sensor_reading_update_put__onlooker_presence(WDESE_HumanPresenceSensorReadingUpdate *self, WDESE_HumanPresence* value);
 
-/* activate Windows.Devices.Sensors.HumanPresenceSettings */
 HRESULT wdese_human_presence_settings_new(WDESE_HumanPresenceSettings **out);
 
-/* Windows.Devices.Sensors.HumanPresenceSettings */
-/* Windows.Devices.Sensors.HumanPresenceSettings.get_SensorId() */
 HRESULT wdese_human_presence_settings_get__sensor_id(WDESE_HumanPresenceSettings *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sensors.HumanPresenceSettings.put_SensorId() */
 HRESULT wdese_human_presence_settings_put__sensor_id(WDESE_HumanPresenceSettings *self, cwinrt_hstring value);
 
-/* Windows.Devices.Sensors.HumanPresenceSettings.get_IsWakeOnApproachEnabled() */
 HRESULT wdese_human_presence_settings_get__is_wake_on_approach_enabled(WDESE_HumanPresenceSettings *self, BOOL *value);
 
-/* Windows.Devices.Sensors.HumanPresenceSettings.put_IsWakeOnApproachEnabled() */
 HRESULT wdese_human_presence_settings_put__is_wake_on_approach_enabled(WDESE_HumanPresenceSettings *self, BOOL value);
 
-/* Windows.Devices.Sensors.HumanPresenceSettings.get_WakeOnApproachDistanceInMillimeters() */
 HRESULT wdese_human_presence_settings_get__wake_on_approach_distance_in_millimeters(WDESE_HumanPresenceSettings *self, uint32_t** value);
 
-/* Windows.Devices.Sensors.HumanPresenceSettings.put_WakeOnApproachDistanceInMillimeters() */
 HRESULT wdese_human_presence_settings_put__wake_on_approach_distance_in_millimeters(WDESE_HumanPresenceSettings *self, uint32_t* value);
 
-/* Windows.Devices.Sensors.HumanPresenceSettings.get_IsLockOnLeaveEnabled() */
 HRESULT wdese_human_presence_settings_get__is_lock_on_leave_enabled(WDESE_HumanPresenceSettings *self, BOOL *value);
 
-/* Windows.Devices.Sensors.HumanPresenceSettings.put_IsLockOnLeaveEnabled() */
 HRESULT wdese_human_presence_settings_put__is_lock_on_leave_enabled(WDESE_HumanPresenceSettings *self, BOOL value);
 
-/* Windows.Devices.Sensors.HumanPresenceSettings.get_LockOnLeaveDistanceInMillimeters() */
 HRESULT wdese_human_presence_settings_get__lock_on_leave_distance_in_millimeters(WDESE_HumanPresenceSettings *self, uint32_t** value);
 
-/* Windows.Devices.Sensors.HumanPresenceSettings.put_LockOnLeaveDistanceInMillimeters() */
 HRESULT wdese_human_presence_settings_put__lock_on_leave_distance_in_millimeters(WDESE_HumanPresenceSettings *self, uint32_t* value);
 
-/* Windows.Devices.Sensors.HumanPresenceSettings.get_LockOnLeaveTimeout() */
 HRESULT wdese_human_presence_settings_get__lock_on_leave_timeout(WDESE_HumanPresenceSettings *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Sensors.HumanPresenceSettings.put_LockOnLeaveTimeout() */
 HRESULT wdese_human_presence_settings_put__lock_on_leave_timeout(WDESE_HumanPresenceSettings *self, WF_TimeSpan value);
 
-/* Windows.Devices.Sensors.HumanPresenceSettings.get_IsAttentionAwareDimmingEnabled() */
 HRESULT wdese_human_presence_settings_get__is_attention_aware_dimming_enabled(WDESE_HumanPresenceSettings *self, BOOL *value);
 
-/* Windows.Devices.Sensors.HumanPresenceSettings.put_IsAttentionAwareDimmingEnabled() */
 HRESULT wdese_human_presence_settings_put__is_attention_aware_dimming_enabled(WDESE_HumanPresenceSettings *self, BOOL value);
 
-/* Windows.Devices.Sensors.HumanPresenceSettings.get_IsAdaptiveDimmingEnabled() */
 HRESULT wdese_human_presence_settings_get__is_adaptive_dimming_enabled(WDESE_HumanPresenceSettings *self, BOOL *value);
 
-/* Windows.Devices.Sensors.HumanPresenceSettings.put_IsAdaptiveDimmingEnabled() */
 HRESULT wdese_human_presence_settings_put__is_adaptive_dimming_enabled(WDESE_HumanPresenceSettings *self, BOOL value);
 
-/* Windows.Devices.Sensors.HumanPresenceSettings.get_WakeOptions() */
 HRESULT wdese_human_presence_settings_get__wake_options(WDESE_HumanPresenceSettings *self, WDESE_WakeOnApproachOptions** value);
 
-/* Windows.Devices.Sensors.HumanPresenceSettings.get_DimmingOptions() */
 HRESULT wdese_human_presence_settings_get__dimming_options(WDESE_HumanPresenceSettings *self, WDESE_AdaptiveDimmingOptions** value);
 
-/* Windows.Devices.Sensors.HumanPresenceSettings.get_LockOptions() */
 HRESULT wdese_human_presence_settings_get__lock_options(WDESE_HumanPresenceSettings *self, WDESE_LockOnLeaveOptions** value);
 
-/* Windows.Devices.Sensors.HumanPresenceSettings.get_IsOnlookerDetectionEnabled() */
 HRESULT wdese_human_presence_settings_get__is_onlooker_detection_enabled(WDESE_HumanPresenceSettings *self, BOOL *value);
 
-/* Windows.Devices.Sensors.HumanPresenceSettings.put_IsOnlookerDetectionEnabled() */
 HRESULT wdese_human_presence_settings_put__is_onlooker_detection_enabled(WDESE_HumanPresenceSettings *self, BOOL value);
 
-/* Windows.Devices.Sensors.HumanPresenceSettings.get_OnlookerDetectionOptions() */
 HRESULT wdese_human_presence_settings_get__onlooker_detection_options(WDESE_HumanPresenceSettings *self, WDESE_OnlookerDetectionOptions** value);
 
-/* Windows.Devices.Sensors.HumanPresenceSettings.GetCurrentSettingsAsync() */
 HRESULT wdese_human_presence_settings_get_current_settings_async(WF_IAsyncOperation_WDESE_HumanPresenceSettings** out);
 
-/* Windows.Devices.Sensors.HumanPresenceSettings.GetCurrentSettings() */
 HRESULT wdese_human_presence_settings_get_current_settings(WDESE_HumanPresenceSettings** out);
 
-/* Windows.Devices.Sensors.HumanPresenceSettings.UpdateSettingsAsync(settings) */
 HRESULT wdese_human_presence_settings_update_settings_async(WDESE_HumanPresenceSettings* settings, WF_IAsyncAction** out);
 
-/* Windows.Devices.Sensors.HumanPresenceSettings.UpdateSettings(settings) */
 HRESULT wdese_human_presence_settings_update_settings(WDESE_HumanPresenceSettings* settings);
 
-/* Windows.Devices.Sensors.HumanPresenceSettings.GetSupportedFeaturesForSensorIdAsync(sensorId) */
 HRESULT wdese_human_presence_settings_get_supported_features_for_sensor_id_async(cwinrt_hstring sensorId, WF_IAsyncOperation_WDESE_HumanPresenceFeatures** out);
 
-/* Windows.Devices.Sensors.HumanPresenceSettings.GetSupportedFeaturesForSensorId(sensorId) */
 HRESULT wdese_human_presence_settings_get_supported_features_for_sensor_id(cwinrt_hstring sensorId, WDESE_HumanPresenceFeatures** out);
 
-/* Windows.Devices.Sensors.HumanPresenceSettings.GetSupportedLockOnLeaveTimeouts() */
 HRESULT wdese_human_presence_settings_get_supported_lock_on_leave_timeouts(WFOCO_IVectorView_WF_TimeSpan** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdese_human_presence_settings_on_settings_changed(WDESE_HumanPresenceSettings *self, cwinrt_event_fn fn, void *ctx);
 void wdese_human_presence_settings_off_settings_changed(WDESE_HumanPresenceSettings *self, cwinrt_token token);
 
-/* Windows.Devices.Sensors.IAccelerometerStatics */
-/* Windows.Devices.Sensors.IAccelerometerStatics.GetDefault() */
 HRESULT wdese_accelerometer_statics_get_default(WDESE_IAccelerometerStatics *self, WDESE_Accelerometer** out);
 
-/* Windows.Devices.Sensors.IAccelerometerStatics2 */
-/* Windows.Devices.Sensors.IAccelerometerStatics2.GetDefault(readingType) */
 HRESULT wdese_accelerometer_statics_2_get_default(WDESE_IAccelerometerStatics_2 *self, WDESE_AccelerometerReadingType readingType, WDESE_Accelerometer** out);
 
-/* Windows.Devices.Sensors.IAccelerometerStatics3 */
-/* Windows.Devices.Sensors.IAccelerometerStatics3.FromIdAsync(deviceId) */
 HRESULT wdese_accelerometer_statics_3_from_id_async(WDESE_IAccelerometerStatics_3 *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDESE_Accelerometer** out);
 
-/* Windows.Devices.Sensors.IAccelerometerStatics3.GetDeviceSelector(readingType) */
 HRESULT wdese_accelerometer_statics_3_get_device_selector(WDESE_IAccelerometerStatics_3 *self, WDESE_AccelerometerReadingType readingType, cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.IActivitySensorStatics */
-/* Windows.Devices.Sensors.IActivitySensorStatics.GetDefaultAsync() */
 HRESULT wdese_activity_sensor_statics_get_default_async(WDESE_IActivitySensorStatics *self, WF_IAsyncOperation_WDESE_ActivitySensor** out);
 
-/* Windows.Devices.Sensors.IActivitySensorStatics.GetDeviceSelector() */
 HRESULT wdese_activity_sensor_statics_get_device_selector(WDESE_IActivitySensorStatics *self, cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.IActivitySensorStatics.FromIdAsync(deviceId) */
 HRESULT wdese_activity_sensor_statics_from_id_async(WDESE_IActivitySensorStatics *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDESE_ActivitySensor** out);
 
-/* Windows.Devices.Sensors.IActivitySensorStatics.GetSystemHistoryAsync(fromTime) */
 HRESULT wdese_activity_sensor_statics_get_system_history_async(WDESE_IActivitySensorStatics *self, WF_DateTime fromTime, WF_IAsyncOperation_WFOCO_IVectorView_WDESE_ActivitySensorReading** out);
 
-/* Windows.Devices.Sensors.IActivitySensorStatics.GetSystemHistoryAsync(fromTime, duration) */
 HRESULT wdese_activity_sensor_statics_get_system_history_async_date_time_time_span_p(WDESE_IActivitySensorStatics *self, WF_DateTime fromTime, WF_TimeSpan duration, WF_IAsyncOperation_WFOCO_IVectorView_WDESE_ActivitySensorReading** out);
 
-/* Windows.Devices.Sensors.IAltimeterStatics */
-/* Windows.Devices.Sensors.IAltimeterStatics.GetDefault() */
 HRESULT wdese_altimeter_statics_get_default(WDESE_IAltimeterStatics *self, WDESE_Altimeter** out);
 
-/* Windows.Devices.Sensors.IBarometerStatics */
-/* Windows.Devices.Sensors.IBarometerStatics.GetDefault() */
 HRESULT wdese_barometer_statics_get_default(WDESE_IBarometerStatics *self, WDESE_Barometer** out);
 
-/* Windows.Devices.Sensors.IBarometerStatics2 */
-/* Windows.Devices.Sensors.IBarometerStatics2.FromIdAsync(deviceId) */
 HRESULT wdese_barometer_statics_2_from_id_async(WDESE_IBarometerStatics_2 *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDESE_Barometer** out);
 
-/* Windows.Devices.Sensors.IBarometerStatics2.GetDeviceSelector() */
 HRESULT wdese_barometer_statics_2_get_device_selector(WDESE_IBarometerStatics_2 *self, cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.ICompassStatics */
-/* Windows.Devices.Sensors.ICompassStatics.GetDefault() */
 HRESULT wdese_compass_statics_get_default(WDESE_ICompassStatics *self, WDESE_Compass** out);
 
-/* Windows.Devices.Sensors.ICompassStatics2 */
-/* Windows.Devices.Sensors.ICompassStatics2.GetDeviceSelector() */
 HRESULT wdese_compass_statics_2_get_device_selector(WDESE_ICompassStatics_2 *self, cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.ICompassStatics2.FromIdAsync(deviceId) */
 HRESULT wdese_compass_statics_2_from_id_async(WDESE_ICompassStatics_2 *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDESE_Compass** out);
 
-/* Windows.Devices.Sensors.IGyrometerStatics */
-/* Windows.Devices.Sensors.IGyrometerStatics.GetDefault() */
 HRESULT wdese_gyrometer_statics_get_default(WDESE_IGyrometerStatics *self, WDESE_Gyrometer** out);
 
-/* Windows.Devices.Sensors.IGyrometerStatics2 */
-/* Windows.Devices.Sensors.IGyrometerStatics2.GetDeviceSelector() */
 HRESULT wdese_gyrometer_statics_2_get_device_selector(WDESE_IGyrometerStatics_2 *self, cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.IGyrometerStatics2.FromIdAsync(deviceId) */
 HRESULT wdese_gyrometer_statics_2_from_id_async(WDESE_IGyrometerStatics_2 *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDESE_Gyrometer** out);
 
-/* Windows.Devices.Sensors.IHingeAngleSensorStatics */
-/* Windows.Devices.Sensors.IHingeAngleSensorStatics.GetDeviceSelector() */
 HRESULT wdese_hinge_angle_sensor_statics_get_device_selector(WDESE_IHingeAngleSensorStatics *self, cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.IHingeAngleSensorStatics.GetDefaultAsync() */
 HRESULT wdese_hinge_angle_sensor_statics_get_default_async(WDESE_IHingeAngleSensorStatics *self, WF_IAsyncOperation_WDESE_HingeAngleSensor** out);
 
-/* Windows.Devices.Sensors.IHingeAngleSensorStatics.GetRelatedToAdjacentPanelsAsync(firstPanelId, secondPanelId) */
 HRESULT wdese_hinge_angle_sensor_statics_get_related_to_adjacent_panels_async(WDESE_IHingeAngleSensorStatics *self, cwinrt_hstring firstPanelId, cwinrt_hstring secondPanelId, WF_IAsyncOperation_WDESE_HingeAngleSensor** out);
 
-/* Windows.Devices.Sensors.IHingeAngleSensorStatics.FromIdAsync(deviceId) */
 HRESULT wdese_hinge_angle_sensor_statics_from_id_async(WDESE_IHingeAngleSensorStatics *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDESE_HingeAngleSensor** out);
 
-/* Windows.Devices.Sensors.IHumanPresenceSensorExtension */
-/* Windows.Devices.Sensors.IHumanPresenceSensorExtension.Initialize(deviceInterface) */
 HRESULT wdese_human_presence_sensor_extension_initialize(WDESE_IHumanPresenceSensorExtension *self, cwinrt_hstring deviceInterface);
 
-/* Windows.Devices.Sensors.IHumanPresenceSensorExtension.Start() */
 HRESULT wdese_human_presence_sensor_extension_start(WDESE_IHumanPresenceSensorExtension *self);
 
-/* Windows.Devices.Sensors.IHumanPresenceSensorExtension.ProcessReading(reading) */
 HRESULT wdese_human_presence_sensor_extension_process_reading(WDESE_IHumanPresenceSensorExtension *self, WDESE_HumanPresenceSensorReading* reading, WDESE_HumanPresenceSensorReadingUpdate** out);
 
-/* Windows.Devices.Sensors.IHumanPresenceSensorExtension.ProcessReadingTimeoutExpired(reading) */
 HRESULT wdese_human_presence_sensor_extension_process_reading_timeout_expired(WDESE_IHumanPresenceSensorExtension *self, WDESE_HumanPresenceSensorReading* reading);
 
-/* Windows.Devices.Sensors.IHumanPresenceSensorExtension.Stop() */
 HRESULT wdese_human_presence_sensor_extension_stop(WDESE_IHumanPresenceSensorExtension *self);
 
-/* Windows.Devices.Sensors.IHumanPresenceSensorExtension.Uninitialize() */
 HRESULT wdese_human_presence_sensor_extension_uninitialize(WDESE_IHumanPresenceSensorExtension *self);
 
-/* Windows.Devices.Sensors.IHumanPresenceSensorExtension.Reset() */
 HRESULT wdese_human_presence_sensor_extension_reset(WDESE_IHumanPresenceSensorExtension *self);
 
-/* Windows.Devices.Sensors.IHumanPresenceSensorStatics */
-/* Windows.Devices.Sensors.IHumanPresenceSensorStatics.GetDeviceSelector() */
 HRESULT wdese_human_presence_sensor_statics_get_device_selector(WDESE_IHumanPresenceSensorStatics *self, cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.IHumanPresenceSensorStatics.FromIdAsync(sensorId) */
 HRESULT wdese_human_presence_sensor_statics_from_id_async(WDESE_IHumanPresenceSensorStatics *self, cwinrt_hstring sensorId, WF_IAsyncOperation_WDESE_HumanPresenceSensor** out);
 
-/* Windows.Devices.Sensors.IHumanPresenceSensorStatics.GetDefaultAsync() */
 HRESULT wdese_human_presence_sensor_statics_get_default_async(WDESE_IHumanPresenceSensorStatics *self, WF_IAsyncOperation_WDESE_HumanPresenceSensor** out);
 
-/* Windows.Devices.Sensors.IHumanPresenceSensorStatics2 */
-/* Windows.Devices.Sensors.IHumanPresenceSensorStatics2.FromId(sensorId) */
 HRESULT wdese_human_presence_sensor_statics_2_from_id(WDESE_IHumanPresenceSensorStatics_2 *self, cwinrt_hstring sensorId, WDESE_HumanPresenceSensor** out);
 
-/* Windows.Devices.Sensors.IHumanPresenceSensorStatics2.GetDefault() */
 HRESULT wdese_human_presence_sensor_statics_2_get_default(WDESE_IHumanPresenceSensorStatics_2 *self, WDESE_HumanPresenceSensor** out);
 
-/* Windows.Devices.Sensors.IHumanPresenceSettingsStatics */
-/* Windows.Devices.Sensors.IHumanPresenceSettingsStatics.GetCurrentSettingsAsync() */
 HRESULT wdese_human_presence_settings_statics_get_current_settings_async(WDESE_IHumanPresenceSettingsStatics *self, WF_IAsyncOperation_WDESE_HumanPresenceSettings** out);
 
-/* Windows.Devices.Sensors.IHumanPresenceSettingsStatics.GetCurrentSettings() */
 HRESULT wdese_human_presence_settings_statics_get_current_settings(WDESE_IHumanPresenceSettingsStatics *self, WDESE_HumanPresenceSettings** out);
 
-/* Windows.Devices.Sensors.IHumanPresenceSettingsStatics.UpdateSettingsAsync(settings) */
 HRESULT wdese_human_presence_settings_statics_update_settings_async(WDESE_IHumanPresenceSettingsStatics *self, WDESE_HumanPresenceSettings* settings, WF_IAsyncAction** out);
 
-/* Windows.Devices.Sensors.IHumanPresenceSettingsStatics.UpdateSettings(settings) */
 HRESULT wdese_human_presence_settings_statics_update_settings(WDESE_IHumanPresenceSettingsStatics *self, WDESE_HumanPresenceSettings* settings);
 
-/* Windows.Devices.Sensors.IHumanPresenceSettingsStatics.GetSupportedFeaturesForSensorIdAsync(sensorId) */
 HRESULT wdese_human_presence_settings_statics_get_supported_features_for_sensor_id_async(WDESE_IHumanPresenceSettingsStatics *self, cwinrt_hstring sensorId, WF_IAsyncOperation_WDESE_HumanPresenceFeatures** out);
 
-/* Windows.Devices.Sensors.IHumanPresenceSettingsStatics.GetSupportedFeaturesForSensorId(sensorId) */
 HRESULT wdese_human_presence_settings_statics_get_supported_features_for_sensor_id(WDESE_IHumanPresenceSettingsStatics *self, cwinrt_hstring sensorId, WDESE_HumanPresenceFeatures** out);
 
-/* Windows.Devices.Sensors.IHumanPresenceSettingsStatics.GetSupportedLockOnLeaveTimeouts() */
 HRESULT wdese_human_presence_settings_statics_get_supported_lock_on_leave_timeouts(WDESE_IHumanPresenceSettingsStatics *self, WFOCO_IVectorView_WF_TimeSpan** out);
 
-/* Windows.Devices.Sensors.IInclinometerStatics */
-/* Windows.Devices.Sensors.IInclinometerStatics.GetDefault() */
 HRESULT wdese_inclinometer_statics_get_default(WDESE_IInclinometerStatics *self, WDESE_Inclinometer** out);
 
-/* Windows.Devices.Sensors.IInclinometerStatics2 */
-/* Windows.Devices.Sensors.IInclinometerStatics2.GetDefaultForRelativeReadings() */
 HRESULT wdese_inclinometer_statics_2_get_default_for_relative_readings(WDESE_IInclinometerStatics_2 *self, WDESE_Inclinometer** out);
 
-/* Windows.Devices.Sensors.IInclinometerStatics3 */
-/* Windows.Devices.Sensors.IInclinometerStatics3.GetDefault(sensorReadingtype) */
 HRESULT wdese_inclinometer_statics_3_get_default(WDESE_IInclinometerStatics_3 *self, WDESE_SensorReadingType sensorReadingtype, WDESE_Inclinometer** out);
 
-/* Windows.Devices.Sensors.IInclinometerStatics4 */
-/* Windows.Devices.Sensors.IInclinometerStatics4.GetDeviceSelector(readingType) */
 HRESULT wdese_inclinometer_statics_4_get_device_selector(WDESE_IInclinometerStatics_4 *self, WDESE_SensorReadingType readingType, cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.IInclinometerStatics4.FromIdAsync(deviceId) */
 HRESULT wdese_inclinometer_statics_4_from_id_async(WDESE_IInclinometerStatics_4 *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDESE_Inclinometer** out);
 
-/* Windows.Devices.Sensors.ILightSensorStatics */
-/* Windows.Devices.Sensors.ILightSensorStatics.GetDefault() */
 HRESULT wdese_light_sensor_statics_get_default(WDESE_ILightSensorStatics *self, WDESE_LightSensor** out);
 
-/* Windows.Devices.Sensors.ILightSensorStatics2 */
-/* Windows.Devices.Sensors.ILightSensorStatics2.GetDeviceSelector() */
 HRESULT wdese_light_sensor_statics_2_get_device_selector(WDESE_ILightSensorStatics_2 *self, cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.ILightSensorStatics2.FromIdAsync(deviceId) */
 HRESULT wdese_light_sensor_statics_2_from_id_async(WDESE_ILightSensorStatics_2 *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDESE_LightSensor** out);
 
-/* Windows.Devices.Sensors.IMagnetometerStatics */
-/* Windows.Devices.Sensors.IMagnetometerStatics.GetDefault() */
 HRESULT wdese_magnetometer_statics_get_default(WDESE_IMagnetometerStatics *self, WDESE_Magnetometer** out);
 
-/* Windows.Devices.Sensors.IMagnetometerStatics2 */
-/* Windows.Devices.Sensors.IMagnetometerStatics2.GetDeviceSelector() */
 HRESULT wdese_magnetometer_statics_2_get_device_selector(WDESE_IMagnetometerStatics_2 *self, cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.IMagnetometerStatics2.FromIdAsync(deviceId) */
 HRESULT wdese_magnetometer_statics_2_from_id_async(WDESE_IMagnetometerStatics_2 *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDESE_Magnetometer** out);
 
-/* Windows.Devices.Sensors.IOrientationSensorStatics */
-/* Windows.Devices.Sensors.IOrientationSensorStatics.GetDefault() */
 HRESULT wdese_orientation_sensor_statics_get_default(WDESE_IOrientationSensorStatics *self, WDESE_OrientationSensor** out);
 
-/* Windows.Devices.Sensors.IOrientationSensorStatics2 */
-/* Windows.Devices.Sensors.IOrientationSensorStatics2.GetDefaultForRelativeReadings() */
 HRESULT wdese_orientation_sensor_statics_2_get_default_for_relative_readings(WDESE_IOrientationSensorStatics_2 *self, WDESE_OrientationSensor** out);
 
-/* Windows.Devices.Sensors.IOrientationSensorStatics3 */
-/* Windows.Devices.Sensors.IOrientationSensorStatics3.GetDefault(sensorReadingtype) */
 HRESULT wdese_orientation_sensor_statics_3_get_default(WDESE_IOrientationSensorStatics_3 *self, WDESE_SensorReadingType sensorReadingtype, WDESE_OrientationSensor** out);
 
-/* Windows.Devices.Sensors.IOrientationSensorStatics3.GetDefault(sensorReadingType, optimizationGoal) */
 HRESULT wdese_orientation_sensor_statics_3_get_default_sensor_reading_type_sensor_optimizat_bed5aea5(WDESE_IOrientationSensorStatics_3 *self, WDESE_SensorReadingType sensorReadingType, WDESE_SensorOptimizationGoal optimizationGoal, WDESE_OrientationSensor** out);
 
-/* Windows.Devices.Sensors.IOrientationSensorStatics4 */
-/* Windows.Devices.Sensors.IOrientationSensorStatics4.GetDeviceSelector(readingType) */
 HRESULT wdese_orientation_sensor_statics_4_get_device_selector(WDESE_IOrientationSensorStatics_4 *self, WDESE_SensorReadingType readingType, cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.IOrientationSensorStatics4.GetDeviceSelector(readingType, optimizationGoal) */
 HRESULT wdese_orientation_sensor_statics_4_get_device_selector_sensor_reading_type_sensor_optimizat_b2a4e94e(WDESE_IOrientationSensorStatics_4 *self, WDESE_SensorReadingType readingType, WDESE_SensorOptimizationGoal optimizationGoal, cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.IOrientationSensorStatics4.FromIdAsync(deviceId) */
 HRESULT wdese_orientation_sensor_statics_4_from_id_async(WDESE_IOrientationSensorStatics_4 *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDESE_OrientationSensor** out);
 
-/* Windows.Devices.Sensors.IPedometerDataThresholdFactory */
-/* Windows.Devices.Sensors.IPedometerDataThresholdFactory.Create(sensor, stepGoal) */
 HRESULT wdese_pedometer_data_threshold_factory_create(WDESE_IPedometerDataThresholdFactory *self, WDESE_Pedometer* sensor, int32_t stepGoal, WDESE_PedometerDataThreshold** out);
 
-/* Windows.Devices.Sensors.IPedometerStatics */
-/* Windows.Devices.Sensors.IPedometerStatics.FromIdAsync(deviceId) */
 HRESULT wdese_pedometer_statics_from_id_async(WDESE_IPedometerStatics *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDESE_Pedometer** out);
 
-/* Windows.Devices.Sensors.IPedometerStatics.GetDefaultAsync() */
 HRESULT wdese_pedometer_statics_get_default_async(WDESE_IPedometerStatics *self, WF_IAsyncOperation_WDESE_Pedometer** out);
 
-/* Windows.Devices.Sensors.IPedometerStatics.GetDeviceSelector() */
 HRESULT wdese_pedometer_statics_get_device_selector(WDESE_IPedometerStatics *self, cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.IPedometerStatics.GetSystemHistoryAsync(fromTime) */
 HRESULT wdese_pedometer_statics_get_system_history_async(WDESE_IPedometerStatics *self, WF_DateTime fromTime, WF_IAsyncOperation_WFOCO_IVectorView_WDESE_PedometerReading** out);
 
-/* Windows.Devices.Sensors.IPedometerStatics.GetSystemHistoryAsync(fromTime, duration) */
 HRESULT wdese_pedometer_statics_get_system_history_async_date_time_time_span_p(WDESE_IPedometerStatics *self, WF_DateTime fromTime, WF_TimeSpan duration, WF_IAsyncOperation_WFOCO_IVectorView_WDESE_PedometerReading** out);
 
-/* Windows.Devices.Sensors.IPedometerStatics2 */
-/* Windows.Devices.Sensors.IPedometerStatics2.GetReadingsFromTriggerDetails(triggerDetails) */
 HRESULT wdese_pedometer_statics_2_get_readings_from_trigger_details(WDESE_IPedometerStatics_2 *self, WDESE_SensorDataThresholdTriggerDetails* triggerDetails, WFOCO_IVectorView_WDESE_PedometerReading** out);
 
-/* Windows.Devices.Sensors.IProximitySensorDataThresholdFactory */
-/* Windows.Devices.Sensors.IProximitySensorDataThresholdFactory.Create(sensor) */
 HRESULT wdese_proximity_sensor_data_threshold_factory_create(WDESE_IProximitySensorDataThresholdFactory *self, WDESE_ProximitySensor* sensor, WDESE_ProximitySensorDataThreshold** out);
 
-/* Windows.Devices.Sensors.IProximitySensorStatics */
-/* Windows.Devices.Sensors.IProximitySensorStatics.GetDeviceSelector() */
 HRESULT wdese_proximity_sensor_statics_get_device_selector(WDESE_IProximitySensorStatics *self, cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.IProximitySensorStatics.FromId(sensorId) */
 HRESULT wdese_proximity_sensor_statics_from_id(WDESE_IProximitySensorStatics *self, cwinrt_hstring sensorId, WDESE_ProximitySensor** out);
 
-/* Windows.Devices.Sensors.IProximitySensorStatics2 */
-/* Windows.Devices.Sensors.IProximitySensorStatics2.GetReadingsFromTriggerDetails(triggerDetails) */
 HRESULT wdese_proximity_sensor_statics_2_get_readings_from_trigger_details(WDESE_IProximitySensorStatics_2 *self, WDESE_SensorDataThresholdTriggerDetails* triggerDetails, WFOCO_IVectorView_WDESE_ProximitySensorReading** out);
 
-/* Windows.Devices.Sensors.ISimpleOrientationSensorStatics */
-/* Windows.Devices.Sensors.ISimpleOrientationSensorStatics.GetDefault() */
 HRESULT wdese_simple_orientation_sensor_statics_get_default(WDESE_ISimpleOrientationSensorStatics *self, WDESE_SimpleOrientationSensor** out);
 
-/* Windows.Devices.Sensors.ISimpleOrientationSensorStatics2 */
-/* Windows.Devices.Sensors.ISimpleOrientationSensorStatics2.GetDeviceSelector() */
 HRESULT wdese_simple_orientation_sensor_statics_2_get_device_selector(WDESE_ISimpleOrientationSensorStatics_2 *self, cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.ISimpleOrientationSensorStatics2.FromIdAsync(deviceId) */
 HRESULT wdese_simple_orientation_sensor_statics_2_from_id_async(WDESE_ISimpleOrientationSensorStatics_2 *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDESE_SimpleOrientationSensor** out);
 
-/* activate Windows.Devices.Sensors.Inclinometer */
 HRESULT wdese_inclinometer_new(WDESE_Inclinometer **out);
 
-/* Windows.Devices.Sensors.Inclinometer */
-/* Windows.Devices.Sensors.Inclinometer.GetCurrentReading() */
 HRESULT wdese_inclinometer_get_current_reading(WDESE_Inclinometer *self, WDESE_InclinometerReading** out);
 
-/* Windows.Devices.Sensors.Inclinometer.get_MinimumReportInterval() */
 HRESULT wdese_inclinometer_get__minimum_report_interval(WDESE_Inclinometer *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Inclinometer.put_ReportInterval() */
 HRESULT wdese_inclinometer_put__report_interval(WDESE_Inclinometer *self, uint32_t value);
 
-/* Windows.Devices.Sensors.Inclinometer.get_ReportInterval() */
 HRESULT wdese_inclinometer_get__report_interval(WDESE_Inclinometer *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Inclinometer.get_DeviceId() */
 HRESULT wdese_inclinometer_get__device_id(WDESE_Inclinometer *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sensors.Inclinometer.put_ReadingTransform() */
 HRESULT wdese_inclinometer_put__reading_transform(WDESE_Inclinometer *self, WGRDI_DisplayOrientations value);
 
-/* Windows.Devices.Sensors.Inclinometer.get_ReadingTransform() */
 HRESULT wdese_inclinometer_get__reading_transform(WDESE_Inclinometer *self, WGRDI_DisplayOrientations *value);
 
-/* Windows.Devices.Sensors.Inclinometer.get_ReadingType() */
 HRESULT wdese_inclinometer_get__reading_type(WDESE_Inclinometer *self, WDESE_SensorReadingType *value);
 
-/* Windows.Devices.Sensors.Inclinometer.put_ReportLatency() */
 HRESULT wdese_inclinometer_put__report_latency(WDESE_Inclinometer *self, uint32_t value);
 
-/* Windows.Devices.Sensors.Inclinometer.get_ReportLatency() */
 HRESULT wdese_inclinometer_get__report_latency(WDESE_Inclinometer *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Inclinometer.get_MaxBatchSize() */
 HRESULT wdese_inclinometer_get__max_batch_size(WDESE_Inclinometer *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Inclinometer.get_ReportThreshold() */
 HRESULT wdese_inclinometer_get__report_threshold(WDESE_Inclinometer *self, WDESE_InclinometerDataThreshold** value);
 
-/* Windows.Devices.Sensors.Inclinometer.GetDeviceSelector(readingType) */
 HRESULT wdese_inclinometer_get_device_selector(WDESE_SensorReadingType readingType, cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.Inclinometer.FromIdAsync(deviceId) */
 HRESULT wdese_inclinometer_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDESE_Inclinometer** out);
 
-/* Windows.Devices.Sensors.Inclinometer.GetDefault(sensorReadingtype) */
 HRESULT wdese_inclinometer_get_default_sensor_reading_type_p(WDESE_SensorReadingType sensorReadingtype, WDESE_Inclinometer** out);
 
-/* Windows.Devices.Sensors.Inclinometer.GetDefaultForRelativeReadings() */
 HRESULT wdese_inclinometer_get_default_for_relative_readings(WDESE_Inclinometer** out);
 
-/* Windows.Devices.Sensors.Inclinometer.GetDefault() */
 HRESULT wdese_inclinometer_get_default(WDESE_Inclinometer** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdese_inclinometer_on_reading_changed(WDESE_Inclinometer *self, cwinrt_event_fn fn, void *ctx);
 void wdese_inclinometer_off_reading_changed(WDESE_Inclinometer *self, cwinrt_token token);
 
-/* activate Windows.Devices.Sensors.InclinometerDataThreshold */
 HRESULT wdese_inclinometer_data_threshold_new(WDESE_InclinometerDataThreshold **out);
 
-/* Windows.Devices.Sensors.InclinometerDataThreshold */
-/* Windows.Devices.Sensors.InclinometerDataThreshold.get_PitchInDegrees() */
 HRESULT wdese_inclinometer_data_threshold_get__pitch_in_degrees(WDESE_InclinometerDataThreshold *self, float *value);
 
-/* Windows.Devices.Sensors.InclinometerDataThreshold.put_PitchInDegrees() */
 HRESULT wdese_inclinometer_data_threshold_put__pitch_in_degrees(WDESE_InclinometerDataThreshold *self, float value);
 
-/* Windows.Devices.Sensors.InclinometerDataThreshold.get_RollInDegrees() */
 HRESULT wdese_inclinometer_data_threshold_get__roll_in_degrees(WDESE_InclinometerDataThreshold *self, float *value);
 
-/* Windows.Devices.Sensors.InclinometerDataThreshold.put_RollInDegrees() */
 HRESULT wdese_inclinometer_data_threshold_put__roll_in_degrees(WDESE_InclinometerDataThreshold *self, float value);
 
-/* Windows.Devices.Sensors.InclinometerDataThreshold.get_YawInDegrees() */
 HRESULT wdese_inclinometer_data_threshold_get__yaw_in_degrees(WDESE_InclinometerDataThreshold *self, float *value);
 
-/* Windows.Devices.Sensors.InclinometerDataThreshold.put_YawInDegrees() */
 HRESULT wdese_inclinometer_data_threshold_put__yaw_in_degrees(WDESE_InclinometerDataThreshold *self, float value);
 
-/* activate Windows.Devices.Sensors.InclinometerReading */
 HRESULT wdese_inclinometer_reading_new(WDESE_InclinometerReading **out);
 
-/* Windows.Devices.Sensors.InclinometerReading */
-/* Windows.Devices.Sensors.InclinometerReading.get_Timestamp() */
 HRESULT wdese_inclinometer_reading_get__timestamp(WDESE_InclinometerReading *self, WF_DateTime *value);
 
-/* Windows.Devices.Sensors.InclinometerReading.get_PitchDegrees() */
 HRESULT wdese_inclinometer_reading_get__pitch_degrees(WDESE_InclinometerReading *self, float *value);
 
-/* Windows.Devices.Sensors.InclinometerReading.get_RollDegrees() */
 HRESULT wdese_inclinometer_reading_get__roll_degrees(WDESE_InclinometerReading *self, float *value);
 
-/* Windows.Devices.Sensors.InclinometerReading.get_YawDegrees() */
 HRESULT wdese_inclinometer_reading_get__yaw_degrees(WDESE_InclinometerReading *self, float *value);
 
-/* Windows.Devices.Sensors.InclinometerReading.get_YawAccuracy() */
 HRESULT wdese_inclinometer_reading_get__yaw_accuracy(WDESE_InclinometerReading *self, WDESE_MagnetometerAccuracy *value);
 
-/* Windows.Devices.Sensors.InclinometerReading.get_PerformanceCount() */
 HRESULT wdese_inclinometer_reading_get__performance_count(WDESE_InclinometerReading *self, WF_TimeSpan** value);
 
-/* Windows.Devices.Sensors.InclinometerReading.get_Properties() */
 HRESULT wdese_inclinometer_reading_get__properties(WDESE_InclinometerReading *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* activate Windows.Devices.Sensors.InclinometerReadingChangedEventArgs */
 HRESULT wdese_inclinometer_reading_changed_event_args_new(WDESE_InclinometerReadingChangedEventArgs **out);
 
-/* Windows.Devices.Sensors.InclinometerReadingChangedEventArgs */
-/* Windows.Devices.Sensors.InclinometerReadingChangedEventArgs.get_Reading() */
 HRESULT wdese_inclinometer_reading_changed_event_args_get__reading(WDESE_InclinometerReadingChangedEventArgs *self, WDESE_InclinometerReading** value);
 
-/* activate Windows.Devices.Sensors.LightSensor */
 HRESULT wdese_light_sensor_new(WDESE_LightSensor **out);
 
-/* Windows.Devices.Sensors.LightSensor */
-/* Windows.Devices.Sensors.LightSensor.GetCurrentReading() */
 HRESULT wdese_light_sensor_get_current_reading(WDESE_LightSensor *self, WDESE_LightSensorReading** out);
 
-/* Windows.Devices.Sensors.LightSensor.get_MinimumReportInterval() */
 HRESULT wdese_light_sensor_get__minimum_report_interval(WDESE_LightSensor *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.LightSensor.put_ReportInterval() */
 HRESULT wdese_light_sensor_put__report_interval(WDESE_LightSensor *self, uint32_t value);
 
-/* Windows.Devices.Sensors.LightSensor.get_ReportInterval() */
 HRESULT wdese_light_sensor_get__report_interval(WDESE_LightSensor *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.LightSensor.get_DeviceId() */
 HRESULT wdese_light_sensor_get__device_id(WDESE_LightSensor *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sensors.LightSensor.put_ReportLatency() */
 HRESULT wdese_light_sensor_put__report_latency(WDESE_LightSensor *self, uint32_t value);
 
-/* Windows.Devices.Sensors.LightSensor.get_ReportLatency() */
 HRESULT wdese_light_sensor_get__report_latency(WDESE_LightSensor *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.LightSensor.get_MaxBatchSize() */
 HRESULT wdese_light_sensor_get__max_batch_size(WDESE_LightSensor *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.LightSensor.get_ReportThreshold() */
 HRESULT wdese_light_sensor_get__report_threshold(WDESE_LightSensor *self, WDESE_LightSensorDataThreshold** value);
 
-/* Windows.Devices.Sensors.LightSensor.IsChromaticitySupported() */
 HRESULT wdese_light_sensor_is_chromaticity_supported(WDESE_LightSensor *self, BOOL *out);
 
-/* Windows.Devices.Sensors.LightSensor.GetDeviceSelector() */
 HRESULT wdese_light_sensor_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.LightSensor.FromIdAsync(deviceId) */
 HRESULT wdese_light_sensor_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDESE_LightSensor** out);
 
-/* Windows.Devices.Sensors.LightSensor.GetDefault() */
 HRESULT wdese_light_sensor_get_default(WDESE_LightSensor** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdese_light_sensor_on_reading_changed(WDESE_LightSensor *self, cwinrt_event_fn fn, void *ctx);
 void wdese_light_sensor_off_reading_changed(WDESE_LightSensor *self, cwinrt_token token);
 
-/* activate Windows.Devices.Sensors.LightSensorDataThreshold */
 HRESULT wdese_light_sensor_data_threshold_new(WDESE_LightSensorDataThreshold **out);
 
-/* Windows.Devices.Sensors.LightSensorDataThreshold */
-/* Windows.Devices.Sensors.LightSensorDataThreshold.get_LuxPercentage() */
 HRESULT wdese_light_sensor_data_threshold_get__lux_percentage(WDESE_LightSensorDataThreshold *self, float *value);
 
-/* Windows.Devices.Sensors.LightSensorDataThreshold.put_LuxPercentage() */
 HRESULT wdese_light_sensor_data_threshold_put__lux_percentage(WDESE_LightSensorDataThreshold *self, float value);
 
-/* Windows.Devices.Sensors.LightSensorDataThreshold.get_AbsoluteLux() */
 HRESULT wdese_light_sensor_data_threshold_get__absolute_lux(WDESE_LightSensorDataThreshold *self, float *value);
 
-/* Windows.Devices.Sensors.LightSensorDataThreshold.put_AbsoluteLux() */
 HRESULT wdese_light_sensor_data_threshold_put__absolute_lux(WDESE_LightSensorDataThreshold *self, float value);
 
-/* Windows.Devices.Sensors.LightSensorDataThreshold.get_Chromaticity() */
 HRESULT wdese_light_sensor_data_threshold_get__chromaticity(WDESE_LightSensorDataThreshold *self, WDESE_LightSensorChromaticity *value);
 
-/* Windows.Devices.Sensors.LightSensorDataThreshold.put_Chromaticity() */
 HRESULT wdese_light_sensor_data_threshold_put__chromaticity(WDESE_LightSensorDataThreshold *self, WDESE_LightSensorChromaticity value);
 
-/* activate Windows.Devices.Sensors.LightSensorReading */
 HRESULT wdese_light_sensor_reading_new(WDESE_LightSensorReading **out);
 
-/* Windows.Devices.Sensors.LightSensorReading */
-/* Windows.Devices.Sensors.LightSensorReading.get_Timestamp() */
 HRESULT wdese_light_sensor_reading_get__timestamp(WDESE_LightSensorReading *self, WF_DateTime *value);
 
-/* Windows.Devices.Sensors.LightSensorReading.get_IlluminanceInLux() */
 HRESULT wdese_light_sensor_reading_get__illuminance_in_lux(WDESE_LightSensorReading *self, float *value);
 
-/* Windows.Devices.Sensors.LightSensorReading.get_PerformanceCount() */
 HRESULT wdese_light_sensor_reading_get__performance_count(WDESE_LightSensorReading *self, WF_TimeSpan** value);
 
-/* Windows.Devices.Sensors.LightSensorReading.get_Properties() */
 HRESULT wdese_light_sensor_reading_get__properties(WDESE_LightSensorReading *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* Windows.Devices.Sensors.LightSensorReading.get_Chromaticity() */
 HRESULT wdese_light_sensor_reading_get__chromaticity(WDESE_LightSensorReading *self, WDESE_LightSensorChromaticity *value);
 
-/* activate Windows.Devices.Sensors.LightSensorReadingChangedEventArgs */
 HRESULT wdese_light_sensor_reading_changed_event_args_new(WDESE_LightSensorReadingChangedEventArgs **out);
 
-/* Windows.Devices.Sensors.LightSensorReadingChangedEventArgs */
-/* Windows.Devices.Sensors.LightSensorReadingChangedEventArgs.get_Reading() */
 HRESULT wdese_light_sensor_reading_changed_event_args_get__reading(WDESE_LightSensorReadingChangedEventArgs *self, WDESE_LightSensorReading** value);
 
-/* activate Windows.Devices.Sensors.LockOnLeaveOptions */
 HRESULT wdese_lock_on_leave_options_new(WDESE_LockOnLeaveOptions **out);
 
-/* Windows.Devices.Sensors.LockOnLeaveOptions */
-/* Windows.Devices.Sensors.LockOnLeaveOptions.get_AllowWhenExternalDisplayConnected() */
 HRESULT wdese_lock_on_leave_options_get__allow_when_external_display_connected(WDESE_LockOnLeaveOptions *self, BOOL *value);
 
-/* Windows.Devices.Sensors.LockOnLeaveOptions.put_AllowWhenExternalDisplayConnected() */
 HRESULT wdese_lock_on_leave_options_put__allow_when_external_display_connected(WDESE_LockOnLeaveOptions *self, BOOL value);
 
-/* activate Windows.Devices.Sensors.Magnetometer */
 HRESULT wdese_magnetometer_new(WDESE_Magnetometer **out);
 
-/* Windows.Devices.Sensors.Magnetometer */
-/* Windows.Devices.Sensors.Magnetometer.GetCurrentReading() */
 HRESULT wdese_magnetometer_get_current_reading(WDESE_Magnetometer *self, WDESE_MagnetometerReading** out);
 
-/* Windows.Devices.Sensors.Magnetometer.get_MinimumReportInterval() */
 HRESULT wdese_magnetometer_get__minimum_report_interval(WDESE_Magnetometer *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Magnetometer.put_ReportInterval() */
 HRESULT wdese_magnetometer_put__report_interval(WDESE_Magnetometer *self, uint32_t value);
 
-/* Windows.Devices.Sensors.Magnetometer.get_ReportInterval() */
 HRESULT wdese_magnetometer_get__report_interval(WDESE_Magnetometer *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Magnetometer.get_DeviceId() */
 HRESULT wdese_magnetometer_get__device_id(WDESE_Magnetometer *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sensors.Magnetometer.put_ReadingTransform() */
 HRESULT wdese_magnetometer_put__reading_transform(WDESE_Magnetometer *self, WGRDI_DisplayOrientations value);
 
-/* Windows.Devices.Sensors.Magnetometer.get_ReadingTransform() */
 HRESULT wdese_magnetometer_get__reading_transform(WDESE_Magnetometer *self, WGRDI_DisplayOrientations *value);
 
-/* Windows.Devices.Sensors.Magnetometer.put_ReportLatency() */
 HRESULT wdese_magnetometer_put__report_latency(WDESE_Magnetometer *self, uint32_t value);
 
-/* Windows.Devices.Sensors.Magnetometer.get_ReportLatency() */
 HRESULT wdese_magnetometer_get__report_latency(WDESE_Magnetometer *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Magnetometer.get_MaxBatchSize() */
 HRESULT wdese_magnetometer_get__max_batch_size(WDESE_Magnetometer *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Magnetometer.get_ReportThreshold() */
 HRESULT wdese_magnetometer_get__report_threshold(WDESE_Magnetometer *self, WDESE_MagnetometerDataThreshold** value);
 
-/* Windows.Devices.Sensors.Magnetometer.GetDeviceSelector() */
 HRESULT wdese_magnetometer_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.Magnetometer.FromIdAsync(deviceId) */
 HRESULT wdese_magnetometer_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDESE_Magnetometer** out);
 
-/* Windows.Devices.Sensors.Magnetometer.GetDefault() */
 HRESULT wdese_magnetometer_get_default(WDESE_Magnetometer** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdese_magnetometer_on_reading_changed(WDESE_Magnetometer *self, cwinrt_event_fn fn, void *ctx);
 void wdese_magnetometer_off_reading_changed(WDESE_Magnetometer *self, cwinrt_token token);
 
-/* activate Windows.Devices.Sensors.MagnetometerDataThreshold */
 HRESULT wdese_magnetometer_data_threshold_new(WDESE_MagnetometerDataThreshold **out);
 
-/* Windows.Devices.Sensors.MagnetometerDataThreshold */
-/* Windows.Devices.Sensors.MagnetometerDataThreshold.get_XAxisMicroteslas() */
 HRESULT wdese_magnetometer_data_threshold_get__x_axis_microteslas(WDESE_MagnetometerDataThreshold *self, float *value);
 
-/* Windows.Devices.Sensors.MagnetometerDataThreshold.put_XAxisMicroteslas() */
 HRESULT wdese_magnetometer_data_threshold_put__x_axis_microteslas(WDESE_MagnetometerDataThreshold *self, float value);
 
-/* Windows.Devices.Sensors.MagnetometerDataThreshold.get_YAxisMicroteslas() */
 HRESULT wdese_magnetometer_data_threshold_get__y_axis_microteslas(WDESE_MagnetometerDataThreshold *self, float *value);
 
-/* Windows.Devices.Sensors.MagnetometerDataThreshold.put_YAxisMicroteslas() */
 HRESULT wdese_magnetometer_data_threshold_put__y_axis_microteslas(WDESE_MagnetometerDataThreshold *self, float value);
 
-/* Windows.Devices.Sensors.MagnetometerDataThreshold.get_ZAxisMicroteslas() */
 HRESULT wdese_magnetometer_data_threshold_get__z_axis_microteslas(WDESE_MagnetometerDataThreshold *self, float *value);
 
-/* Windows.Devices.Sensors.MagnetometerDataThreshold.put_ZAxisMicroteslas() */
 HRESULT wdese_magnetometer_data_threshold_put__z_axis_microteslas(WDESE_MagnetometerDataThreshold *self, float value);
 
-/* activate Windows.Devices.Sensors.MagnetometerReading */
 HRESULT wdese_magnetometer_reading_new(WDESE_MagnetometerReading **out);
 
-/* Windows.Devices.Sensors.MagnetometerReading */
-/* Windows.Devices.Sensors.MagnetometerReading.get_Timestamp() */
 HRESULT wdese_magnetometer_reading_get__timestamp(WDESE_MagnetometerReading *self, WF_DateTime *value);
 
-/* Windows.Devices.Sensors.MagnetometerReading.get_MagneticFieldX() */
 HRESULT wdese_magnetometer_reading_get__magnetic_field_x(WDESE_MagnetometerReading *self, float *value);
 
-/* Windows.Devices.Sensors.MagnetometerReading.get_MagneticFieldY() */
 HRESULT wdese_magnetometer_reading_get__magnetic_field_y(WDESE_MagnetometerReading *self, float *value);
 
-/* Windows.Devices.Sensors.MagnetometerReading.get_MagneticFieldZ() */
 HRESULT wdese_magnetometer_reading_get__magnetic_field_z(WDESE_MagnetometerReading *self, float *value);
 
-/* Windows.Devices.Sensors.MagnetometerReading.get_DirectionalAccuracy() */
 HRESULT wdese_magnetometer_reading_get__directional_accuracy(WDESE_MagnetometerReading *self, WDESE_MagnetometerAccuracy *value);
 
-/* Windows.Devices.Sensors.MagnetometerReading.get_PerformanceCount() */
 HRESULT wdese_magnetometer_reading_get__performance_count(WDESE_MagnetometerReading *self, WF_TimeSpan** value);
 
-/* Windows.Devices.Sensors.MagnetometerReading.get_Properties() */
 HRESULT wdese_magnetometer_reading_get__properties(WDESE_MagnetometerReading *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* activate Windows.Devices.Sensors.MagnetometerReadingChangedEventArgs */
 HRESULT wdese_magnetometer_reading_changed_event_args_new(WDESE_MagnetometerReadingChangedEventArgs **out);
 
-/* Windows.Devices.Sensors.MagnetometerReadingChangedEventArgs */
-/* Windows.Devices.Sensors.MagnetometerReadingChangedEventArgs.get_Reading() */
 HRESULT wdese_magnetometer_reading_changed_event_args_get__reading(WDESE_MagnetometerReadingChangedEventArgs *self, WDESE_MagnetometerReading** value);
 
-/* activate Windows.Devices.Sensors.OnlookerDetectionOptions */
 HRESULT wdese_onlooker_detection_options_new(WDESE_OnlookerDetectionOptions **out);
 
-/* Windows.Devices.Sensors.OnlookerDetectionOptions */
-/* Windows.Devices.Sensors.OnlookerDetectionOptions.get_Action() */
 HRESULT wdese_onlooker_detection_options_get__action(WDESE_OnlookerDetectionOptions *self, WDESE_OnlookerDetectionAction *value);
 
-/* Windows.Devices.Sensors.OnlookerDetectionOptions.put_Action() */
 HRESULT wdese_onlooker_detection_options_put__action(WDESE_OnlookerDetectionOptions *self, WDESE_OnlookerDetectionAction value);
 
-/* Windows.Devices.Sensors.OnlookerDetectionOptions.get_BackOnMode() */
 HRESULT wdese_onlooker_detection_options_get__back_on_mode(WDESE_OnlookerDetectionOptions *self, WDESE_OnlookerDetectionBackOnMode *value);
 
-/* Windows.Devices.Sensors.OnlookerDetectionOptions.put_BackOnMode() */
 HRESULT wdese_onlooker_detection_options_put__back_on_mode(WDESE_OnlookerDetectionOptions *self, WDESE_OnlookerDetectionBackOnMode value);
 
-/* activate Windows.Devices.Sensors.OrientationSensor */
 HRESULT wdese_orientation_sensor_new(WDESE_OrientationSensor **out);
 
-/* Windows.Devices.Sensors.OrientationSensor */
-/* Windows.Devices.Sensors.OrientationSensor.GetCurrentReading() */
 HRESULT wdese_orientation_sensor_get_current_reading(WDESE_OrientationSensor *self, WDESE_OrientationSensorReading** out);
 
-/* Windows.Devices.Sensors.OrientationSensor.get_MinimumReportInterval() */
 HRESULT wdese_orientation_sensor_get__minimum_report_interval(WDESE_OrientationSensor *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.OrientationSensor.put_ReportInterval() */
 HRESULT wdese_orientation_sensor_put__report_interval(WDESE_OrientationSensor *self, uint32_t value);
 
-/* Windows.Devices.Sensors.OrientationSensor.get_ReportInterval() */
 HRESULT wdese_orientation_sensor_get__report_interval(WDESE_OrientationSensor *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.OrientationSensor.get_DeviceId() */
 HRESULT wdese_orientation_sensor_get__device_id(WDESE_OrientationSensor *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sensors.OrientationSensor.put_ReadingTransform() */
 HRESULT wdese_orientation_sensor_put__reading_transform(WDESE_OrientationSensor *self, WGRDI_DisplayOrientations value);
 
-/* Windows.Devices.Sensors.OrientationSensor.get_ReadingTransform() */
 HRESULT wdese_orientation_sensor_get__reading_transform(WDESE_OrientationSensor *self, WGRDI_DisplayOrientations *value);
 
-/* Windows.Devices.Sensors.OrientationSensor.get_ReadingType() */
 HRESULT wdese_orientation_sensor_get__reading_type(WDESE_OrientationSensor *self, WDESE_SensorReadingType *value);
 
-/* Windows.Devices.Sensors.OrientationSensor.put_ReportLatency() */
 HRESULT wdese_orientation_sensor_put__report_latency(WDESE_OrientationSensor *self, uint32_t value);
 
-/* Windows.Devices.Sensors.OrientationSensor.get_ReportLatency() */
 HRESULT wdese_orientation_sensor_get__report_latency(WDESE_OrientationSensor *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.OrientationSensor.get_MaxBatchSize() */
 HRESULT wdese_orientation_sensor_get__max_batch_size(WDESE_OrientationSensor *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.OrientationSensor.GetDeviceSelector(readingType) */
 HRESULT wdese_orientation_sensor_get_device_selector(WDESE_SensorReadingType readingType, cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.OrientationSensor.GetDeviceSelector(readingType, optimizationGoal) */
 HRESULT wdese_orientation_sensor_get_device_selector_sensor_reading_type_sensor_optimizat_b2a4e94e(WDESE_SensorReadingType readingType, WDESE_SensorOptimizationGoal optimizationGoal, cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.OrientationSensor.FromIdAsync(deviceId) */
 HRESULT wdese_orientation_sensor_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDESE_OrientationSensor** out);
 
-/* Windows.Devices.Sensors.OrientationSensor.GetDefault(sensorReadingtype) */
 HRESULT wdese_orientation_sensor_get_default_sensor_reading_type_p(WDESE_SensorReadingType sensorReadingtype, WDESE_OrientationSensor** out);
 
-/* Windows.Devices.Sensors.OrientationSensor.GetDefault(sensorReadingType, optimizationGoal) */
 HRESULT wdese_orientation_sensor_get_default_sensor_reading_type_sensor_optimizat_bed5aea5(WDESE_SensorReadingType sensorReadingType, WDESE_SensorOptimizationGoal optimizationGoal, WDESE_OrientationSensor** out);
 
-/* Windows.Devices.Sensors.OrientationSensor.GetDefaultForRelativeReadings() */
 HRESULT wdese_orientation_sensor_get_default_for_relative_readings(WDESE_OrientationSensor** out);
 
-/* Windows.Devices.Sensors.OrientationSensor.GetDefault() */
 HRESULT wdese_orientation_sensor_get_default(WDESE_OrientationSensor** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdese_orientation_sensor_on_reading_changed(WDESE_OrientationSensor *self, cwinrt_event_fn fn, void *ctx);
 void wdese_orientation_sensor_off_reading_changed(WDESE_OrientationSensor *self, cwinrt_token token);
 
-/* activate Windows.Devices.Sensors.OrientationSensorReading */
 HRESULT wdese_orientation_sensor_reading_new(WDESE_OrientationSensorReading **out);
 
-/* Windows.Devices.Sensors.OrientationSensorReading */
-/* Windows.Devices.Sensors.OrientationSensorReading.get_Timestamp() */
 HRESULT wdese_orientation_sensor_reading_get__timestamp(WDESE_OrientationSensorReading *self, WF_DateTime *value);
 
-/* Windows.Devices.Sensors.OrientationSensorReading.get_RotationMatrix() */
 HRESULT wdese_orientation_sensor_reading_get__rotation_matrix(WDESE_OrientationSensorReading *self, WDESE_SensorRotationMatrix** value);
 
-/* Windows.Devices.Sensors.OrientationSensorReading.get_Quaternion() */
 HRESULT wdese_orientation_sensor_reading_get__quaternion(WDESE_OrientationSensorReading *self, WDESE_SensorQuaternion** value);
 
-/* Windows.Devices.Sensors.OrientationSensorReading.get_YawAccuracy() */
 HRESULT wdese_orientation_sensor_reading_get__yaw_accuracy(WDESE_OrientationSensorReading *self, WDESE_MagnetometerAccuracy *value);
 
-/* Windows.Devices.Sensors.OrientationSensorReading.get_PerformanceCount() */
 HRESULT wdese_orientation_sensor_reading_get__performance_count(WDESE_OrientationSensorReading *self, WF_TimeSpan** value);
 
-/* Windows.Devices.Sensors.OrientationSensorReading.get_Properties() */
 HRESULT wdese_orientation_sensor_reading_get__properties(WDESE_OrientationSensorReading *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* activate Windows.Devices.Sensors.OrientationSensorReadingChangedEventArgs */
 HRESULT wdese_orientation_sensor_reading_changed_event_args_new(WDESE_OrientationSensorReadingChangedEventArgs **out);
 
-/* Windows.Devices.Sensors.OrientationSensorReadingChangedEventArgs */
-/* Windows.Devices.Sensors.OrientationSensorReadingChangedEventArgs.get_Reading() */
 HRESULT wdese_orientation_sensor_reading_changed_event_args_get__reading(WDESE_OrientationSensorReadingChangedEventArgs *self, WDESE_OrientationSensorReading** value);
 
-/* activate Windows.Devices.Sensors.Pedometer */
 HRESULT wdese_pedometer_new(WDESE_Pedometer **out);
 
-/* Windows.Devices.Sensors.Pedometer */
-/* Windows.Devices.Sensors.Pedometer.get_DeviceId() */
 HRESULT wdese_pedometer_get__device_id(WDESE_Pedometer *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sensors.Pedometer.get_PowerInMilliwatts() */
 HRESULT wdese_pedometer_get__power_in_milliwatts(WDESE_Pedometer *self, double *value);
 
-/* Windows.Devices.Sensors.Pedometer.get_MinimumReportInterval() */
 HRESULT wdese_pedometer_get__minimum_report_interval(WDESE_Pedometer *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Pedometer.put_ReportInterval() */
 HRESULT wdese_pedometer_put__report_interval(WDESE_Pedometer *self, uint32_t value);
 
-/* Windows.Devices.Sensors.Pedometer.get_ReportInterval() */
 HRESULT wdese_pedometer_get__report_interval(WDESE_Pedometer *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Pedometer.GetCurrentReadings() */
 HRESULT wdese_pedometer_get_current_readings(WDESE_Pedometer *self, WFOCO_IMapView_WDESE_PedometerStepKind_WDESE_PedometerReading** out);
 
-/* Windows.Devices.Sensors.Pedometer.GetReadingsFromTriggerDetails(triggerDetails) */
 HRESULT wdese_pedometer_get_readings_from_trigger_details(WDESE_SensorDataThresholdTriggerDetails* triggerDetails, WFOCO_IVectorView_WDESE_PedometerReading** out);
 
-/* Windows.Devices.Sensors.Pedometer.FromIdAsync(deviceId) */
 HRESULT wdese_pedometer_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDESE_Pedometer** out);
 
-/* Windows.Devices.Sensors.Pedometer.GetDefaultAsync() */
 HRESULT wdese_pedometer_get_default_async(WF_IAsyncOperation_WDESE_Pedometer** out);
 
-/* Windows.Devices.Sensors.Pedometer.GetDeviceSelector() */
 HRESULT wdese_pedometer_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.Pedometer.GetSystemHistoryAsync(fromTime) */
 HRESULT wdese_pedometer_get_system_history_async(WF_DateTime fromTime, WF_IAsyncOperation_WFOCO_IVectorView_WDESE_PedometerReading** out);
 
-/* Windows.Devices.Sensors.Pedometer.GetSystemHistoryAsync(fromTime, duration) */
 HRESULT wdese_pedometer_get_system_history_async_date_time_time_span_p(WF_DateTime fromTime, WF_TimeSpan duration, WF_IAsyncOperation_WFOCO_IVectorView_WDESE_PedometerReading** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdese_pedometer_on_reading_changed(WDESE_Pedometer *self, cwinrt_event_fn fn, void *ctx);
 void wdese_pedometer_off_reading_changed(WDESE_Pedometer *self, cwinrt_token token);
 
-/* activate Windows.Devices.Sensors.PedometerReading */
 HRESULT wdese_pedometer_reading_new(WDESE_PedometerReading **out);
 
-/* Windows.Devices.Sensors.PedometerReading */
-/* Windows.Devices.Sensors.PedometerReading.get_StepKind() */
 HRESULT wdese_pedometer_reading_get__step_kind(WDESE_PedometerReading *self, WDESE_PedometerStepKind *value);
 
-/* Windows.Devices.Sensors.PedometerReading.get_CumulativeSteps() */
 HRESULT wdese_pedometer_reading_get__cumulative_steps(WDESE_PedometerReading *self, int32_t *value);
 
-/* Windows.Devices.Sensors.PedometerReading.get_Timestamp() */
 HRESULT wdese_pedometer_reading_get__timestamp(WDESE_PedometerReading *self, WF_DateTime *value);
 
-/* Windows.Devices.Sensors.PedometerReading.get_CumulativeStepsDuration() */
 HRESULT wdese_pedometer_reading_get__cumulative_steps_duration(WDESE_PedometerReading *self, WF_TimeSpan *value);
 
-/* activate Windows.Devices.Sensors.PedometerReadingChangedEventArgs */
 HRESULT wdese_pedometer_reading_changed_event_args_new(WDESE_PedometerReadingChangedEventArgs **out);
 
-/* Windows.Devices.Sensors.PedometerReadingChangedEventArgs */
-/* Windows.Devices.Sensors.PedometerReadingChangedEventArgs.get_Reading() */
 HRESULT wdese_pedometer_reading_changed_event_args_get__reading(WDESE_PedometerReadingChangedEventArgs *self, WDESE_PedometerReading** value);
 
-/* activate Windows.Devices.Sensors.ProximitySensor */
 HRESULT wdese_proximity_sensor_new(WDESE_ProximitySensor **out);
 
-/* Windows.Devices.Sensors.ProximitySensor */
-/* Windows.Devices.Sensors.ProximitySensor.get_DeviceId() */
 HRESULT wdese_proximity_sensor_get__device_id(WDESE_ProximitySensor *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sensors.ProximitySensor.get_MaxDistanceInMillimeters() */
 HRESULT wdese_proximity_sensor_get__max_distance_in_millimeters(WDESE_ProximitySensor *self, uint32_t** value);
 
-/* Windows.Devices.Sensors.ProximitySensor.get_MinDistanceInMillimeters() */
 HRESULT wdese_proximity_sensor_get__min_distance_in_millimeters(WDESE_ProximitySensor *self, uint32_t** value);
 
-/* Windows.Devices.Sensors.ProximitySensor.GetCurrentReading() */
 HRESULT wdese_proximity_sensor_get_current_reading(WDESE_ProximitySensor *self, WDESE_ProximitySensorReading** out);
 
-/* Windows.Devices.Sensors.ProximitySensor.CreateDisplayOnOffController() */
 HRESULT wdese_proximity_sensor_create_display_on_off_controller(WDESE_ProximitySensor *self, WDESE_ProximitySensorDisplayOnOffController** out);
 
-/* Windows.Devices.Sensors.ProximitySensor.GetReadingsFromTriggerDetails(triggerDetails) */
 HRESULT wdese_proximity_sensor_get_readings_from_trigger_details(WDESE_SensorDataThresholdTriggerDetails* triggerDetails, WFOCO_IVectorView_WDESE_ProximitySensorReading** out);
 
-/* Windows.Devices.Sensors.ProximitySensor.GetDeviceSelector() */
 HRESULT wdese_proximity_sensor_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.ProximitySensor.FromId(sensorId) */
 HRESULT wdese_proximity_sensor_from_id(cwinrt_hstring sensorId, WDESE_ProximitySensor** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdese_proximity_sensor_on_reading_changed(WDESE_ProximitySensor *self, cwinrt_event_fn fn, void *ctx);
 void wdese_proximity_sensor_off_reading_changed(WDESE_ProximitySensor *self, cwinrt_token token);
 
-/* activate Windows.Devices.Sensors.ProximitySensorDisplayOnOffController */
 HRESULT wdese_proximity_sensor_display_on_off_controller_new(WDESE_ProximitySensorDisplayOnOffController **out);
 
-/* Windows.Devices.Sensors.ProximitySensorDisplayOnOffController */
-/* Windows.Devices.Sensors.ProximitySensorDisplayOnOffController.Close() */
 HRESULT wdese_proximity_sensor_display_on_off_controller_close(WDESE_ProximitySensorDisplayOnOffController *self);
 
-/* activate Windows.Devices.Sensors.ProximitySensorReading */
 HRESULT wdese_proximity_sensor_reading_new(WDESE_ProximitySensorReading **out);
 
-/* Windows.Devices.Sensors.ProximitySensorReading */
-/* Windows.Devices.Sensors.ProximitySensorReading.get_Timestamp() */
 HRESULT wdese_proximity_sensor_reading_get__timestamp(WDESE_ProximitySensorReading *self, WF_DateTime *value);
 
-/* Windows.Devices.Sensors.ProximitySensorReading.get_IsDetected() */
 HRESULT wdese_proximity_sensor_reading_get__is_detected(WDESE_ProximitySensorReading *self, BOOL *value);
 
-/* Windows.Devices.Sensors.ProximitySensorReading.get_DistanceInMillimeters() */
 HRESULT wdese_proximity_sensor_reading_get__distance_in_millimeters(WDESE_ProximitySensorReading *self, uint32_t** value);
 
-/* activate Windows.Devices.Sensors.ProximitySensorReadingChangedEventArgs */
 HRESULT wdese_proximity_sensor_reading_changed_event_args_new(WDESE_ProximitySensorReadingChangedEventArgs **out);
 
-/* Windows.Devices.Sensors.ProximitySensorReadingChangedEventArgs */
-/* Windows.Devices.Sensors.ProximitySensorReadingChangedEventArgs.get_Reading() */
 HRESULT wdese_proximity_sensor_reading_changed_event_args_get__reading(WDESE_ProximitySensorReadingChangedEventArgs *self, WDESE_ProximitySensorReading** value);
 
-/* activate Windows.Devices.Sensors.SensorDataThresholdTriggerDetails */
 HRESULT wdese_sensor_data_threshold_trigger_details_new(WDESE_SensorDataThresholdTriggerDetails **out);
 
-/* Windows.Devices.Sensors.SensorDataThresholdTriggerDetails */
-/* Windows.Devices.Sensors.SensorDataThresholdTriggerDetails.get_DeviceId() */
 HRESULT wdese_sensor_data_threshold_trigger_details_get__device_id(WDESE_SensorDataThresholdTriggerDetails *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sensors.SensorDataThresholdTriggerDetails.get_SensorType() */
 HRESULT wdese_sensor_data_threshold_trigger_details_get__sensor_type(WDESE_SensorDataThresholdTriggerDetails *self, WDESE_SensorType *value);
 
-/* Windows.Devices.Sensors.IAccelerometer */
-/* Windows.Devices.Sensors.IAccelerometerDeviceId */
-/* Windows.Devices.Sensors.IAccelerometerDeviceId.get_DeviceId() */
 HRESULT wdese_accelerometer_device_id_get__device_id(WDESE_IAccelerometerDeviceId *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sensors.IAccelerometer2 */
-/* Windows.Devices.Sensors.IAccelerometer2.put_ReadingTransform() */
 HRESULT wdese_accelerometer_2_put__reading_transform(WDESE_IAccelerometer_2 *self, WGRDI_DisplayOrientations value);
 
-/* Windows.Devices.Sensors.IAccelerometer2.get_ReadingTransform() */
 HRESULT wdese_accelerometer_2_get__reading_transform(WDESE_IAccelerometer_2 *self, WGRDI_DisplayOrientations *value);
 
-/* Windows.Devices.Sensors.IAccelerometer3 */
-/* Windows.Devices.Sensors.IAccelerometer3.put_ReportLatency() */
 HRESULT wdese_accelerometer_3_put__report_latency(WDESE_IAccelerometer_3 *self, uint32_t value);
 
-/* Windows.Devices.Sensors.IAccelerometer3.get_ReportLatency() */
 HRESULT wdese_accelerometer_3_get__report_latency(WDESE_IAccelerometer_3 *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.IAccelerometer3.get_MaxBatchSize() */
 HRESULT wdese_accelerometer_3_get__max_batch_size(WDESE_IAccelerometer_3 *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.IAccelerometer4 */
-/* Windows.Devices.Sensors.IAccelerometer4.get_ReadingType() */
 HRESULT wdese_accelerometer_4_get__reading_type(WDESE_IAccelerometer_4 *self, WDESE_AccelerometerReadingType *value);
 
-/* Windows.Devices.Sensors.IAccelerometer5 */
-/* Windows.Devices.Sensors.IAccelerometer5.get_ReportThreshold() */
 HRESULT wdese_accelerometer_5_get__report_threshold(WDESE_IAccelerometer_5 *self, WDESE_AccelerometerDataThreshold** value);
 
-/* Windows.Devices.Sensors.IAccelerometerDataThreshold */
-/* Windows.Devices.Sensors.IAccelerometerReading */
-/* Windows.Devices.Sensors.IAccelerometerReading2 */
-/* Windows.Devices.Sensors.IAccelerometerReading2.get_PerformanceCount() */
 HRESULT wdese_accelerometer_reading_2_get__performance_count(WDESE_IAccelerometerReading_2 *self, WF_TimeSpan** value);
 
-/* Windows.Devices.Sensors.IAccelerometerReading2.get_Properties() */
 HRESULT wdese_accelerometer_reading_2_get__properties(WDESE_IAccelerometerReading_2 *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* Windows.Devices.Sensors.IAccelerometerReadingChangedEventArgs */
-/* Windows.Devices.Sensors.IAccelerometerShakenEventArgs */
-/* Windows.Devices.Sensors.IActivitySensor */
-/* Windows.Devices.Sensors.IActivitySensorReading */
-/* Windows.Devices.Sensors.IActivitySensorReadingChangeReport */
-/* Windows.Devices.Sensors.IActivitySensorReadingChangedEventArgs */
-/* Windows.Devices.Sensors.IActivitySensorTriggerDetails */
-/* Windows.Devices.Sensors.IAdaptiveDimmingOptions */
-/* Windows.Devices.Sensors.IAltimeter */
-/* Windows.Devices.Sensors.IAltimeter2 */
-/* Windows.Devices.Sensors.IAltimeter2.put_ReportLatency() */
 HRESULT wdese_altimeter_2_put__report_latency(WDESE_IAltimeter_2 *self, uint32_t value);
 
-/* Windows.Devices.Sensors.IAltimeter2.get_ReportLatency() */
 HRESULT wdese_altimeter_2_get__report_latency(WDESE_IAltimeter_2 *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.IAltimeter2.get_MaxBatchSize() */
 HRESULT wdese_altimeter_2_get__max_batch_size(WDESE_IAltimeter_2 *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.IAltimeterReading */
-/* Windows.Devices.Sensors.IAltimeterReading2 */
-/* Windows.Devices.Sensors.IAltimeterReading2.get_PerformanceCount() */
 HRESULT wdese_altimeter_reading_2_get__performance_count(WDESE_IAltimeterReading_2 *self, WF_TimeSpan** value);
 
-/* Windows.Devices.Sensors.IAltimeterReading2.get_Properties() */
 HRESULT wdese_altimeter_reading_2_get__properties(WDESE_IAltimeterReading_2 *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* Windows.Devices.Sensors.IAltimeterReadingChangedEventArgs */
-/* Windows.Devices.Sensors.IBarometer */
-/* Windows.Devices.Sensors.IBarometer2 */
-/* Windows.Devices.Sensors.IBarometer2.put_ReportLatency() */
 HRESULT wdese_barometer_2_put__report_latency(WDESE_IBarometer_2 *self, uint32_t value);
 
-/* Windows.Devices.Sensors.IBarometer2.get_ReportLatency() */
 HRESULT wdese_barometer_2_get__report_latency(WDESE_IBarometer_2 *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.IBarometer2.get_MaxBatchSize() */
 HRESULT wdese_barometer_2_get__max_batch_size(WDESE_IBarometer_2 *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.IBarometer3 */
-/* Windows.Devices.Sensors.IBarometer3.get_ReportThreshold() */
 HRESULT wdese_barometer_3_get__report_threshold(WDESE_IBarometer_3 *self, WDESE_BarometerDataThreshold** value);
 
-/* Windows.Devices.Sensors.IBarometerDataThreshold */
-/* Windows.Devices.Sensors.IBarometerReading */
-/* Windows.Devices.Sensors.IBarometerReading2 */
-/* Windows.Devices.Sensors.IBarometerReading2.get_PerformanceCount() */
 HRESULT wdese_barometer_reading_2_get__performance_count(WDESE_IBarometerReading_2 *self, WF_TimeSpan** value);
 
-/* Windows.Devices.Sensors.IBarometerReading2.get_Properties() */
 HRESULT wdese_barometer_reading_2_get__properties(WDESE_IBarometerReading_2 *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* Windows.Devices.Sensors.IBarometerReadingChangedEventArgs */
-/* Windows.Devices.Sensors.ICompass */
-/* Windows.Devices.Sensors.ICompassDeviceId */
-/* Windows.Devices.Sensors.ICompassDeviceId.get_DeviceId() */
 HRESULT wdese_compass_device_id_get__device_id(WDESE_ICompassDeviceId *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sensors.ICompass2 */
-/* Windows.Devices.Sensors.ICompass2.put_ReadingTransform() */
 HRESULT wdese_compass_2_put__reading_transform(WDESE_ICompass_2 *self, WGRDI_DisplayOrientations value);
 
-/* Windows.Devices.Sensors.ICompass2.get_ReadingTransform() */
 HRESULT wdese_compass_2_get__reading_transform(WDESE_ICompass_2 *self, WGRDI_DisplayOrientations *value);
 
-/* Windows.Devices.Sensors.ICompass3 */
-/* Windows.Devices.Sensors.ICompass3.put_ReportLatency() */
 HRESULT wdese_compass_3_put__report_latency(WDESE_ICompass_3 *self, uint32_t value);
 
-/* Windows.Devices.Sensors.ICompass3.get_ReportLatency() */
 HRESULT wdese_compass_3_get__report_latency(WDESE_ICompass_3 *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.ICompass3.get_MaxBatchSize() */
 HRESULT wdese_compass_3_get__max_batch_size(WDESE_ICompass_3 *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.ICompass4 */
-/* Windows.Devices.Sensors.ICompass4.get_ReportThreshold() */
 HRESULT wdese_compass_4_get__report_threshold(WDESE_ICompass_4 *self, WDESE_CompassDataThreshold** value);
 
-/* Windows.Devices.Sensors.ICompassDataThreshold */
-/* Windows.Devices.Sensors.ICompassReading */
-/* Windows.Devices.Sensors.ICompassReadingHeadingAccuracy */
-/* Windows.Devices.Sensors.ICompassReadingHeadingAccuracy.get_HeadingAccuracy() */
 HRESULT wdese_compass_reading_heading_accuracy_get__heading_accuracy(WDESE_ICompassReadingHeadingAccuracy *self, WDESE_MagnetometerAccuracy *value);
 
-/* Windows.Devices.Sensors.ICompassReading2 */
-/* Windows.Devices.Sensors.ICompassReading2.get_PerformanceCount() */
 HRESULT wdese_compass_reading_2_get__performance_count(WDESE_ICompassReading_2 *self, WF_TimeSpan** value);
 
-/* Windows.Devices.Sensors.ICompassReading2.get_Properties() */
 HRESULT wdese_compass_reading_2_get__properties(WDESE_ICompassReading_2 *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* Windows.Devices.Sensors.ICompassReadingChangedEventArgs */
-/* Windows.Devices.Sensors.IWakeOnApproachOptions */
-/* Windows.Devices.Sensors.ISimpleOrientationSensorOrientationChangedEventArgs */
-/* Windows.Devices.Sensors.ISimpleOrientationSensor */
-/* Windows.Devices.Sensors.ISimpleOrientationSensorDeviceId */
-/* Windows.Devices.Sensors.ISimpleOrientationSensorDeviceId.get_DeviceId() */
 HRESULT wdese_simple_orientation_sensor_device_id_get__device_id(WDESE_ISimpleOrientationSensorDeviceId *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sensors.ISimpleOrientationSensor2 */
-/* Windows.Devices.Sensors.ISimpleOrientationSensor2.put_ReadingTransform() */
 HRESULT wdese_simple_orientation_sensor_2_put__reading_transform(WDESE_ISimpleOrientationSensor_2 *self, WGRDI_DisplayOrientations value);
 
-/* Windows.Devices.Sensors.ISimpleOrientationSensor2.get_ReadingTransform() */
 HRESULT wdese_simple_orientation_sensor_2_get__reading_transform(WDESE_ISimpleOrientationSensor_2 *self, WGRDI_DisplayOrientations *value);
 
-/* Windows.Devices.Sensors.ISensorRotationMatrix */
-/* Windows.Devices.Sensors.ISensorQuaternion */
-/* Windows.Devices.Sensors.IDetectedPerson */
-/* Windows.Devices.Sensors.IGyrometer */
-/* Windows.Devices.Sensors.IGyrometerDeviceId */
-/* Windows.Devices.Sensors.IGyrometerDeviceId.get_DeviceId() */
 HRESULT wdese_gyrometer_device_id_get__device_id(WDESE_IGyrometerDeviceId *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sensors.IGyrometer2 */
-/* Windows.Devices.Sensors.IGyrometer2.put_ReadingTransform() */
 HRESULT wdese_gyrometer_2_put__reading_transform(WDESE_IGyrometer_2 *self, WGRDI_DisplayOrientations value);
 
-/* Windows.Devices.Sensors.IGyrometer2.get_ReadingTransform() */
 HRESULT wdese_gyrometer_2_get__reading_transform(WDESE_IGyrometer_2 *self, WGRDI_DisplayOrientations *value);
 
-/* Windows.Devices.Sensors.IGyrometer3 */
-/* Windows.Devices.Sensors.IGyrometer3.put_ReportLatency() */
 HRESULT wdese_gyrometer_3_put__report_latency(WDESE_IGyrometer_3 *self, uint32_t value);
 
-/* Windows.Devices.Sensors.IGyrometer3.get_ReportLatency() */
 HRESULT wdese_gyrometer_3_get__report_latency(WDESE_IGyrometer_3 *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.IGyrometer3.get_MaxBatchSize() */
 HRESULT wdese_gyrometer_3_get__max_batch_size(WDESE_IGyrometer_3 *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.IGyrometer4 */
-/* Windows.Devices.Sensors.IGyrometer4.get_ReportThreshold() */
 HRESULT wdese_gyrometer_4_get__report_threshold(WDESE_IGyrometer_4 *self, WDESE_GyrometerDataThreshold** value);
 
-/* Windows.Devices.Sensors.IGyrometerDataThreshold */
-/* Windows.Devices.Sensors.IGyrometerReading */
-/* Windows.Devices.Sensors.IGyrometerReading2 */
-/* Windows.Devices.Sensors.IGyrometerReading2.get_PerformanceCount() */
 HRESULT wdese_gyrometer_reading_2_get__performance_count(WDESE_IGyrometerReading_2 *self, WF_TimeSpan** value);
 
-/* Windows.Devices.Sensors.IGyrometerReading2.get_Properties() */
 HRESULT wdese_gyrometer_reading_2_get__properties(WDESE_IGyrometerReading_2 *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* Windows.Devices.Sensors.IGyrometerReadingChangedEventArgs */
-/* Windows.Devices.Sensors.IHeadOrientation */
-/* Windows.Devices.Sensors.IHeadPosition */
-/* Windows.Devices.Sensors.IHingeAngleReading */
-/* Windows.Devices.Sensors.IHingeAngleSensor */
-/* Windows.Devices.Sensors.IHingeAngleSensorReadingChangedEventArgs */
-/* Windows.Devices.Sensors.IHumanPresenceFeatures */
-/* Windows.Devices.Sensors.IHumanPresenceFeatures2 */
-/* Windows.Devices.Sensors.IHumanPresenceFeatures2.get_IsAdaptiveDimmingSupported() */
 HRESULT wdese_human_presence_features_2_get__is_adaptive_dimming_supported(WDESE_IHumanPresenceFeatures_2 *self, BOOL *value);
 
-/* Windows.Devices.Sensors.IHumanPresenceFeatures3 */
-/* Windows.Devices.Sensors.IHumanPresenceFeatures3.get_IsOnlookerDetectionSupported() */
 HRESULT wdese_human_presence_features_3_get__is_onlooker_detection_supported(WDESE_IHumanPresenceFeatures_3 *self, BOOL *value);
 
-/* Windows.Devices.Sensors.IHumanPresenceSensor */
-/* Windows.Devices.Sensors.IHumanPresenceSensor2 */
-/* Windows.Devices.Sensors.IHumanPresenceSensor2.get_IsPresenceSupported() */
 HRESULT wdese_human_presence_sensor_2_get__is_presence_supported(WDESE_IHumanPresenceSensor_2 *self, BOOL *value);
 
-/* Windows.Devices.Sensors.IHumanPresenceSensor2.get_IsEngagementSupported() */
 HRESULT wdese_human_presence_sensor_2_get__is_engagement_supported(WDESE_IHumanPresenceSensor_2 *self, BOOL *value);
 
-/* Windows.Devices.Sensors.IHumanPresenceSensor3 */
-/* Windows.Devices.Sensors.IHumanPresenceSensor3.get_MaxDetectablePersons() */
 HRESULT wdese_human_presence_sensor_3_get__max_detectable_persons(WDESE_IHumanPresenceSensor_3 *self, int32_t *value);
 
-/* Windows.Devices.Sensors.IHumanPresenceSensor3.get_MinDetectableAzimuthInDegrees() */
 HRESULT wdese_human_presence_sensor_3_get__min_detectable_azimuth_in_degrees(WDESE_IHumanPresenceSensor_3 *self, double** value);
 
-/* Windows.Devices.Sensors.IHumanPresenceSensor3.get_MaxDetectableAzimuthInDegrees() */
 HRESULT wdese_human_presence_sensor_3_get__max_detectable_azimuth_in_degrees(WDESE_IHumanPresenceSensor_3 *self, double** value);
 
-/* Windows.Devices.Sensors.IHumanPresenceSensor3.get_MinDetectableAltitudeInDegrees() */
 HRESULT wdese_human_presence_sensor_3_get__min_detectable_altitude_in_degrees(WDESE_IHumanPresenceSensor_3 *self, double** value);
 
-/* Windows.Devices.Sensors.IHumanPresenceSensor3.get_MaxDetectableAltitudeInDegrees() */
 HRESULT wdese_human_presence_sensor_3_get__max_detectable_altitude_in_degrees(WDESE_IHumanPresenceSensor_3 *self, double** value);
 
-/* Windows.Devices.Sensors.IHumanPresenceSensorReading */
-/* Windows.Devices.Sensors.IHumanPresenceSensorReading2 */
-/* Windows.Devices.Sensors.IHumanPresenceSensorReading2.get_Properties() */
 HRESULT wdese_human_presence_sensor_reading_2_get__properties(WDESE_IHumanPresenceSensorReading_2 *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* Windows.Devices.Sensors.IHumanPresenceSensorReading3 */
-/* Windows.Devices.Sensors.IHumanPresenceSensorReading3.get_OnlookerPresence() */
 HRESULT wdese_human_presence_sensor_reading_3_get__onlooker_presence(WDESE_IHumanPresenceSensorReading_3 *self, WDESE_HumanPresence *value);
 
-/* Windows.Devices.Sensors.IHumanPresenceSensorReading3.get_DetectedPersons() */
 HRESULT wdese_human_presence_sensor_reading_3_get__detected_persons(WDESE_IHumanPresenceSensorReading_3 *self, WFOCO_IVectorView_WDESE_DetectedPerson** value);
 
-/* Windows.Devices.Sensors.IHumanPresenceSensorReadingChangedEventArgs */
-/* Windows.Devices.Sensors.IHumanPresenceSensorReadingUpdate */
-/* Windows.Devices.Sensors.IHumanPresenceSensorReadingUpdate2 */
-/* Windows.Devices.Sensors.IHumanPresenceSensorReadingUpdate2.get_OnlookerPresence() */
 HRESULT wdese_human_presence_sensor_reading_update_2_get__onlooker_presence(WDESE_IHumanPresenceSensorReadingUpdate_2 *self, WDESE_HumanPresence** value);
 
-/* Windows.Devices.Sensors.IHumanPresenceSensorReadingUpdate2.put_OnlookerPresence() */
 HRESULT wdese_human_presence_sensor_reading_update_2_put__onlooker_presence(WDESE_IHumanPresenceSensorReadingUpdate_2 *self, WDESE_HumanPresence* value);
 
-/* Windows.Devices.Sensors.IHumanPresenceSettings */
-/* Windows.Devices.Sensors.IHumanPresenceSettings2 */
-/* Windows.Devices.Sensors.IHumanPresenceSettings2.get_IsAdaptiveDimmingEnabled() */
 HRESULT wdese_human_presence_settings_2_get__is_adaptive_dimming_enabled(WDESE_IHumanPresenceSettings_2 *self, BOOL *value);
 
-/* Windows.Devices.Sensors.IHumanPresenceSettings2.put_IsAdaptiveDimmingEnabled() */
 HRESULT wdese_human_presence_settings_2_put__is_adaptive_dimming_enabled(WDESE_IHumanPresenceSettings_2 *self, BOOL value);
 
-/* Windows.Devices.Sensors.IHumanPresenceSettings2.get_WakeOptions() */
 HRESULT wdese_human_presence_settings_2_get__wake_options(WDESE_IHumanPresenceSettings_2 *self, WDESE_WakeOnApproachOptions** value);
 
-/* Windows.Devices.Sensors.IHumanPresenceSettings2.get_DimmingOptions() */
 HRESULT wdese_human_presence_settings_2_get__dimming_options(WDESE_IHumanPresenceSettings_2 *self, WDESE_AdaptiveDimmingOptions** value);
 
-/* Windows.Devices.Sensors.IHumanPresenceSettings2.get_LockOptions() */
 HRESULT wdese_human_presence_settings_2_get__lock_options(WDESE_IHumanPresenceSettings_2 *self, WDESE_LockOnLeaveOptions** value);
 
-/* Windows.Devices.Sensors.IHumanPresenceSettings3 */
-/* Windows.Devices.Sensors.IHumanPresenceSettings3.get_IsOnlookerDetectionEnabled() */
 HRESULT wdese_human_presence_settings_3_get__is_onlooker_detection_enabled(WDESE_IHumanPresenceSettings_3 *self, BOOL *value);
 
-/* Windows.Devices.Sensors.IHumanPresenceSettings3.put_IsOnlookerDetectionEnabled() */
 HRESULT wdese_human_presence_settings_3_put__is_onlooker_detection_enabled(WDESE_IHumanPresenceSettings_3 *self, BOOL value);
 
-/* Windows.Devices.Sensors.IHumanPresenceSettings3.get_OnlookerDetectionOptions() */
 HRESULT wdese_human_presence_settings_3_get__onlooker_detection_options(WDESE_IHumanPresenceSettings_3 *self, WDESE_OnlookerDetectionOptions** value);
 
-/* Windows.Devices.Sensors.IInclinometer */
-/* Windows.Devices.Sensors.IInclinometerDeviceId */
-/* Windows.Devices.Sensors.IInclinometerDeviceId.get_DeviceId() */
 HRESULT wdese_inclinometer_device_id_get__device_id(WDESE_IInclinometerDeviceId *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sensors.IInclinometer2 */
-/* Windows.Devices.Sensors.IInclinometer2.put_ReadingTransform() */
 HRESULT wdese_inclinometer_2_put__reading_transform(WDESE_IInclinometer_2 *self, WGRDI_DisplayOrientations value);
 
-/* Windows.Devices.Sensors.IInclinometer2.get_ReadingTransform() */
 HRESULT wdese_inclinometer_2_get__reading_transform(WDESE_IInclinometer_2 *self, WGRDI_DisplayOrientations *value);
 
-/* Windows.Devices.Sensors.IInclinometer2.get_ReadingType() */
 HRESULT wdese_inclinometer_2_get__reading_type(WDESE_IInclinometer_2 *self, WDESE_SensorReadingType *value);
 
-/* Windows.Devices.Sensors.IInclinometer3 */
-/* Windows.Devices.Sensors.IInclinometer3.put_ReportLatency() */
 HRESULT wdese_inclinometer_3_put__report_latency(WDESE_IInclinometer_3 *self, uint32_t value);
 
-/* Windows.Devices.Sensors.IInclinometer3.get_ReportLatency() */
 HRESULT wdese_inclinometer_3_get__report_latency(WDESE_IInclinometer_3 *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.IInclinometer3.get_MaxBatchSize() */
 HRESULT wdese_inclinometer_3_get__max_batch_size(WDESE_IInclinometer_3 *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.IInclinometer4 */
-/* Windows.Devices.Sensors.IInclinometer4.get_ReportThreshold() */
 HRESULT wdese_inclinometer_4_get__report_threshold(WDESE_IInclinometer_4 *self, WDESE_InclinometerDataThreshold** value);
 
-/* Windows.Devices.Sensors.IInclinometerDataThreshold */
-/* Windows.Devices.Sensors.IInclinometerReading */
-/* Windows.Devices.Sensors.IInclinometerReadingYawAccuracy */
-/* Windows.Devices.Sensors.IInclinometerReadingYawAccuracy.get_YawAccuracy() */
 HRESULT wdese_inclinometer_reading_yaw_accuracy_get__yaw_accuracy(WDESE_IInclinometerReadingYawAccuracy *self, WDESE_MagnetometerAccuracy *value);
 
-/* Windows.Devices.Sensors.IInclinometerReading2 */
-/* Windows.Devices.Sensors.IInclinometerReading2.get_PerformanceCount() */
 HRESULT wdese_inclinometer_reading_2_get__performance_count(WDESE_IInclinometerReading_2 *self, WF_TimeSpan** value);
 
-/* Windows.Devices.Sensors.IInclinometerReading2.get_Properties() */
 HRESULT wdese_inclinometer_reading_2_get__properties(WDESE_IInclinometerReading_2 *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* Windows.Devices.Sensors.IInclinometerReadingChangedEventArgs */
-/* Windows.Devices.Sensors.ILightSensor */
-/* Windows.Devices.Sensors.ILightSensorDeviceId */
-/* Windows.Devices.Sensors.ILightSensorDeviceId.get_DeviceId() */
 HRESULT wdese_light_sensor_device_id_get__device_id(WDESE_ILightSensorDeviceId *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sensors.ILightSensor2 */
-/* Windows.Devices.Sensors.ILightSensor2.put_ReportLatency() */
 HRESULT wdese_light_sensor_2_put__report_latency(WDESE_ILightSensor_2 *self, uint32_t value);
 
-/* Windows.Devices.Sensors.ILightSensor2.get_ReportLatency() */
 HRESULT wdese_light_sensor_2_get__report_latency(WDESE_ILightSensor_2 *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.ILightSensor2.get_MaxBatchSize() */
 HRESULT wdese_light_sensor_2_get__max_batch_size(WDESE_ILightSensor_2 *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.ILightSensor3 */
-/* Windows.Devices.Sensors.ILightSensor3.get_ReportThreshold() */
 HRESULT wdese_light_sensor_3_get__report_threshold(WDESE_ILightSensor_3 *self, WDESE_LightSensorDataThreshold** value);
 
-/* Windows.Devices.Sensors.ILightSensor4 */
-/* Windows.Devices.Sensors.ILightSensor4.IsChromaticitySupported() */
 HRESULT wdese_light_sensor_4_is_chromaticity_supported(WDESE_ILightSensor_4 *self, BOOL *out);
 
-/* Windows.Devices.Sensors.ILightSensorDataThreshold */
-/* Windows.Devices.Sensors.ILightSensorDataThreshold2 */
-/* Windows.Devices.Sensors.ILightSensorDataThreshold2.get_Chromaticity() */
 HRESULT wdese_light_sensor_data_threshold_2_get__chromaticity(WDESE_ILightSensorDataThreshold_2 *self, WDESE_LightSensorChromaticity *value);
 
-/* Windows.Devices.Sensors.ILightSensorDataThreshold2.put_Chromaticity() */
 HRESULT wdese_light_sensor_data_threshold_2_put__chromaticity(WDESE_ILightSensorDataThreshold_2 *self, WDESE_LightSensorChromaticity value);
 
-/* Windows.Devices.Sensors.ILightSensorReading */
-/* Windows.Devices.Sensors.ILightSensorReading2 */
-/* Windows.Devices.Sensors.ILightSensorReading2.get_PerformanceCount() */
 HRESULT wdese_light_sensor_reading_2_get__performance_count(WDESE_ILightSensorReading_2 *self, WF_TimeSpan** value);
 
-/* Windows.Devices.Sensors.ILightSensorReading2.get_Properties() */
 HRESULT wdese_light_sensor_reading_2_get__properties(WDESE_ILightSensorReading_2 *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* Windows.Devices.Sensors.ILightSensorReading3 */
-/* Windows.Devices.Sensors.ILightSensorReading3.get_Chromaticity() */
 HRESULT wdese_light_sensor_reading_3_get__chromaticity(WDESE_ILightSensorReading_3 *self, WDESE_LightSensorChromaticity *value);
 
-/* Windows.Devices.Sensors.ILightSensorReadingChangedEventArgs */
-/* Windows.Devices.Sensors.ILockOnLeaveOptions */
-/* Windows.Devices.Sensors.IMagnetometer */
-/* Windows.Devices.Sensors.IMagnetometerDeviceId */
-/* Windows.Devices.Sensors.IMagnetometerDeviceId.get_DeviceId() */
 HRESULT wdese_magnetometer_device_id_get__device_id(WDESE_IMagnetometerDeviceId *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sensors.IMagnetometer2 */
-/* Windows.Devices.Sensors.IMagnetometer2.put_ReadingTransform() */
 HRESULT wdese_magnetometer_2_put__reading_transform(WDESE_IMagnetometer_2 *self, WGRDI_DisplayOrientations value);
 
-/* Windows.Devices.Sensors.IMagnetometer2.get_ReadingTransform() */
 HRESULT wdese_magnetometer_2_get__reading_transform(WDESE_IMagnetometer_2 *self, WGRDI_DisplayOrientations *value);
 
-/* Windows.Devices.Sensors.IMagnetometer3 */
-/* Windows.Devices.Sensors.IMagnetometer3.put_ReportLatency() */
 HRESULT wdese_magnetometer_3_put__report_latency(WDESE_IMagnetometer_3 *self, uint32_t value);
 
-/* Windows.Devices.Sensors.IMagnetometer3.get_ReportLatency() */
 HRESULT wdese_magnetometer_3_get__report_latency(WDESE_IMagnetometer_3 *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.IMagnetometer3.get_MaxBatchSize() */
 HRESULT wdese_magnetometer_3_get__max_batch_size(WDESE_IMagnetometer_3 *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.IMagnetometer4 */
-/* Windows.Devices.Sensors.IMagnetometer4.get_ReportThreshold() */
 HRESULT wdese_magnetometer_4_get__report_threshold(WDESE_IMagnetometer_4 *self, WDESE_MagnetometerDataThreshold** value);
 
-/* Windows.Devices.Sensors.IMagnetometerDataThreshold */
-/* Windows.Devices.Sensors.IMagnetometerReading */
-/* Windows.Devices.Sensors.IMagnetometerReading2 */
-/* Windows.Devices.Sensors.IMagnetometerReading2.get_PerformanceCount() */
 HRESULT wdese_magnetometer_reading_2_get__performance_count(WDESE_IMagnetometerReading_2 *self, WF_TimeSpan** value);
 
-/* Windows.Devices.Sensors.IMagnetometerReading2.get_Properties() */
 HRESULT wdese_magnetometer_reading_2_get__properties(WDESE_IMagnetometerReading_2 *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* Windows.Devices.Sensors.IMagnetometerReadingChangedEventArgs */
-/* Windows.Devices.Sensors.IOnlookerDetectionOptions */
-/* Windows.Devices.Sensors.IOrientationSensor */
-/* Windows.Devices.Sensors.IOrientationSensorDeviceId */
-/* Windows.Devices.Sensors.IOrientationSensorDeviceId.get_DeviceId() */
 HRESULT wdese_orientation_sensor_device_id_get__device_id(WDESE_IOrientationSensorDeviceId *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sensors.IOrientationSensor2 */
-/* Windows.Devices.Sensors.IOrientationSensor2.put_ReadingTransform() */
 HRESULT wdese_orientation_sensor_2_put__reading_transform(WDESE_IOrientationSensor_2 *self, WGRDI_DisplayOrientations value);
 
-/* Windows.Devices.Sensors.IOrientationSensor2.get_ReadingTransform() */
 HRESULT wdese_orientation_sensor_2_get__reading_transform(WDESE_IOrientationSensor_2 *self, WGRDI_DisplayOrientations *value);
 
-/* Windows.Devices.Sensors.IOrientationSensor2.get_ReadingType() */
 HRESULT wdese_orientation_sensor_2_get__reading_type(WDESE_IOrientationSensor_2 *self, WDESE_SensorReadingType *value);
 
-/* Windows.Devices.Sensors.IOrientationSensor3 */
-/* Windows.Devices.Sensors.IOrientationSensor3.put_ReportLatency() */
 HRESULT wdese_orientation_sensor_3_put__report_latency(WDESE_IOrientationSensor_3 *self, uint32_t value);
 
-/* Windows.Devices.Sensors.IOrientationSensor3.get_ReportLatency() */
 HRESULT wdese_orientation_sensor_3_get__report_latency(WDESE_IOrientationSensor_3 *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.IOrientationSensor3.get_MaxBatchSize() */
 HRESULT wdese_orientation_sensor_3_get__max_batch_size(WDESE_IOrientationSensor_3 *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.IOrientationSensorReading */
-/* Windows.Devices.Sensors.IOrientationSensorReadingYawAccuracy */
-/* Windows.Devices.Sensors.IOrientationSensorReadingYawAccuracy.get_YawAccuracy() */
 HRESULT wdese_orientation_sensor_reading_yaw_accuracy_get__yaw_accuracy(WDESE_IOrientationSensorReadingYawAccuracy *self, WDESE_MagnetometerAccuracy *value);
 
-/* Windows.Devices.Sensors.IOrientationSensorReading2 */
-/* Windows.Devices.Sensors.IOrientationSensorReading2.get_PerformanceCount() */
 HRESULT wdese_orientation_sensor_reading_2_get__performance_count(WDESE_IOrientationSensorReading_2 *self, WF_TimeSpan** value);
 
-/* Windows.Devices.Sensors.IOrientationSensorReading2.get_Properties() */
 HRESULT wdese_orientation_sensor_reading_2_get__properties(WDESE_IOrientationSensorReading_2 *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* Windows.Devices.Sensors.IOrientationSensorReadingChangedEventArgs */
-/* Windows.Devices.Sensors.IPedometer */
-/* Windows.Devices.Sensors.IPedometer2 */
-/* Windows.Devices.Sensors.IPedometer2.GetCurrentReadings() */
 HRESULT wdese_pedometer_2_get_current_readings(WDESE_IPedometer_2 *self, WFOCO_IMapView_WDESE_PedometerStepKind_WDESE_PedometerReading** out);
 
-/* Windows.Devices.Sensors.IPedometerReading */
-/* Windows.Devices.Sensors.IPedometerReadingChangedEventArgs */
-/* Windows.Devices.Sensors.IProximitySensor */
-/* Windows.Devices.Sensors.IProximitySensorReading */
-/* Windows.Devices.Sensors.IProximitySensorReadingChangedEventArgs */
-/* Windows.Devices.Sensors.ISensorDataThresholdTriggerDetails */
 #endif /* CWINRT_WINDOWS_DEVICES_SENSORS_H */

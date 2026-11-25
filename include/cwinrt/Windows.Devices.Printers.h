@@ -14,7 +14,6 @@
 #include <cwinrt/Windows.Graphics.Printing.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
@@ -32,7 +31,6 @@ typedef struct WSTST_IOutputStream WSTST_IOutputStream;
 typedef struct WSTST_IRandomAccessStreamWithContentType WSTST_IRandomAccessStreamWithContentType;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDEPR_VirtualPrinterSupportedFormat WDEPR_VirtualPrinterSupportedFormat;
 typedef struct WDEPR_VirtualPrinterManager WDEPR_VirtualPrinterManager;
 typedef struct WDEPR_VirtualPrinterInstallationResult WDEPR_VirtualPrinterInstallationResult;
@@ -86,7 +84,6 @@ typedef struct WDEPR_IIppPrintDevice_4 WDEPR_IIppPrintDevice_4;
 typedef struct WDEPR_IIppPrintDevice_5 WDEPR_IIppPrintDevice_5;
 typedef struct WDEPR_IIppPrintDeviceInstallationResult WDEPR_IIppPrintDeviceInstallationResult;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WDEPR_VirtualPrinterInstallationResult
 #define CWINRT_FWD_WF_IAsyncOperation_WDEPR_VirtualPrinterInstallationResult
 typedef struct WF_IAsyncOperation_WDEPR_VirtualPrinterInstallationResult WF_IAsyncOperation_WDEPR_VirtualPrinterInstallationResult;
@@ -365,7 +362,6 @@ typedef enum WDEPR_IppAttributeValueKind {
 } WDEPR_IppAttributeValueKind;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -498,799 +494,498 @@ static const IID CWINRT_IID_WDEPR_IIppPrintDevice_5 CWINRT_MAYBE_UNUSED = { 0xEA
 static const IID CWINRT_IID_WDEPR_IIppPrintDeviceInstallationResult CWINRT_MAYBE_UNUSED = { 0xFB102FCC, 0x87BE, 0x57FF, { 0xA0, 0x86, 0x92, 0x27, 0x21, 0x48, 0xA2, 0x56 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Devices.Printers.VirtualPrinterSupportedFormat */
 HRESULT wdepr_virtual_printer_supported_format_new(WDEPR_VirtualPrinterSupportedFormat **out);
 
-/* Windows.Devices.Printers.VirtualPrinterSupportedFormat */
-/* Windows.Devices.Printers.VirtualPrinterSupportedFormat.get_ContentType() */
 HRESULT wdepr_virtual_printer_supported_format_get__content_type(WDEPR_VirtualPrinterSupportedFormat *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Printers.VirtualPrinterSupportedFormat.put_ContentType() */
 HRESULT wdepr_virtual_printer_supported_format_put__content_type(WDEPR_VirtualPrinterSupportedFormat *self, cwinrt_hstring value);
 
-/* Windows.Devices.Printers.VirtualPrinterSupportedFormat.get_MaxSupportedVersion() */
 HRESULT wdepr_virtual_printer_supported_format_get__max_supported_version(WDEPR_VirtualPrinterSupportedFormat *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Printers.VirtualPrinterSupportedFormat.put_MaxSupportedVersion() */
 HRESULT wdepr_virtual_printer_supported_format_put__max_supported_version(WDEPR_VirtualPrinterSupportedFormat *self, cwinrt_hstring value);
 
-/* activate Windows.Devices.Printers.VirtualPrinterManager */
 HRESULT wdepr_virtual_printer_manager_new(WDEPR_VirtualPrinterManager **out);
 
-/* Windows.Devices.Printers.VirtualPrinterManager */
-/* Windows.Devices.Printers.VirtualPrinterManager.InstallVirtualPrinterAsync(parameters) */
 HRESULT wdepr_virtual_printer_manager_install_virtual_printer_async(WDEPR_VirtualPrinterInstallationParameters* parameters, WF_IAsyncOperation_WDEPR_VirtualPrinterInstallationResult** out);
 
-/* Windows.Devices.Printers.VirtualPrinterManager.InstallVirtualPrinterAsync(parameters, appPackageFamilyName) */
 HRESULT wdepr_virtual_printer_manager_install_virtual_printer_async_p_str_p(WDEPR_VirtualPrinterInstallationParameters* parameters, cwinrt_hstring appPackageFamilyName, WF_IAsyncOperation_WDEPR_VirtualPrinterInstallationResult** out);
 
-/* Windows.Devices.Printers.VirtualPrinterManager.InstallVirtualPrinterForAllUsersAsync(parameters) */
 HRESULT wdepr_virtual_printer_manager_install_virtual_printer_for_all_users_async(WDEPR_VirtualPrinterInstallationParameters* parameters, WF_IAsyncOperation_WDEPR_VirtualPrinterInstallationResult** out);
 
-/* Windows.Devices.Printers.VirtualPrinterManager.InstallVirtualPrinterForAllUsersAsync(parameters, appPackageFamilyName) */
 HRESULT wdepr_virtual_printer_manager_install_virtual_printer_for_all_users_async_p_str_p(WDEPR_VirtualPrinterInstallationParameters* parameters, cwinrt_hstring appPackageFamilyName, WF_IAsyncOperation_WDEPR_VirtualPrinterInstallationResult** out);
 
-/* Windows.Devices.Printers.VirtualPrinterManager.FindAllVirtualPrinters() */
 HRESULT wdepr_virtual_printer_manager_find_all_virtual_printers(WFOCO_IVectorView_HSTRING** out);
 
-/* Windows.Devices.Printers.VirtualPrinterManager.FindAllVirtualPrinters(appPackageFamilyName) */
 HRESULT wdepr_virtual_printer_manager_find_all_virtual_printers_str_p(cwinrt_hstring appPackageFamilyName, WFOCO_IVectorView_HSTRING** out);
 
-/* Windows.Devices.Printers.VirtualPrinterManager.RemoveVirtualPrinterAsync(printerName) */
 HRESULT wdepr_virtual_printer_manager_remove_virtual_printer_async(cwinrt_hstring printerName, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.Printers.VirtualPrinterManager.RemoveVirtualPrinterForAllUsersAsync(printerName) */
 HRESULT wdepr_virtual_printer_manager_remove_virtual_printer_for_all_users_async(cwinrt_hstring printerName, WF_IAsyncOperation_Bool** out);
 
-/* activate Windows.Devices.Printers.VirtualPrinterInstallationResult */
 HRESULT wdepr_virtual_printer_installation_result_new(WDEPR_VirtualPrinterInstallationResult **out);
 
-/* Windows.Devices.Printers.VirtualPrinterInstallationResult */
-/* Windows.Devices.Printers.VirtualPrinterInstallationResult.get_Status() */
 HRESULT wdepr_virtual_printer_installation_result_get__status(WDEPR_VirtualPrinterInstallationResult *self, WDEPR_VirtualPrinterInstallationStatus *value);
 
-/* Windows.Devices.Printers.VirtualPrinterInstallationResult.get_ExtendedError() */
 HRESULT wdepr_virtual_printer_installation_result_get__extended_error(WDEPR_VirtualPrinterInstallationResult *self, HRESULT *value);
 
-/* activate Windows.Devices.Printers.VirtualPrinterInstallationParameters */
 HRESULT wdepr_virtual_printer_installation_parameters_new(WDEPR_VirtualPrinterInstallationParameters **out);
 
-/* Windows.Devices.Printers.VirtualPrinterInstallationParameters */
-/* Windows.Devices.Printers.VirtualPrinterInstallationParameters.get_PrinterName() */
 HRESULT wdepr_virtual_printer_installation_parameters_get__printer_name(WDEPR_VirtualPrinterInstallationParameters *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Printers.VirtualPrinterInstallationParameters.put_PrinterName() */
 HRESULT wdepr_virtual_printer_installation_parameters_put__printer_name(WDEPR_VirtualPrinterInstallationParameters *self, cwinrt_hstring value);
 
-/* Windows.Devices.Printers.VirtualPrinterInstallationParameters.get_OutputFileExtensions() */
 HRESULT wdepr_virtual_printer_installation_parameters_get__output_file_extensions(WDEPR_VirtualPrinterInstallationParameters *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Devices.Printers.VirtualPrinterInstallationParameters.get_SupportedInputFormats() */
 HRESULT wdepr_virtual_printer_installation_parameters_get__supported_input_formats(WDEPR_VirtualPrinterInstallationParameters *self, WFOCO_IVector_WDEPR_VirtualPrinterSupportedFormat** value);
 
-/* Windows.Devices.Printers.VirtualPrinterInstallationParameters.get_PrintDeviceCapabilitiesPackageRelativeFilePath() */
 HRESULT wdepr_virtual_printer_installation_parameters_get__print_device_capabilities_package_relative_file_path(WDEPR_VirtualPrinterInstallationParameters *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Printers.VirtualPrinterInstallationParameters.put_PrintDeviceCapabilitiesPackageRelativeFilePath() */
 HRESULT wdepr_virtual_printer_installation_parameters_put__print_device_capabilities_package_relative_file_path(WDEPR_VirtualPrinterInstallationParameters *self, cwinrt_hstring value);
 
-/* Windows.Devices.Printers.VirtualPrinterInstallationParameters.get_PrintDeviceResourcesPackageRelativeFilePath() */
 HRESULT wdepr_virtual_printer_installation_parameters_get__print_device_resources_package_relative_file_path(WDEPR_VirtualPrinterInstallationParameters *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Printers.VirtualPrinterInstallationParameters.put_PrintDeviceResourcesPackageRelativeFilePath() */
 HRESULT wdepr_virtual_printer_installation_parameters_put__print_device_resources_package_relative_file_path(WDEPR_VirtualPrinterInstallationParameters *self, cwinrt_hstring value);
 
-/* Windows.Devices.Printers.VirtualPrinterInstallationParameters.get_PreferredInputFormat() */
 HRESULT wdepr_virtual_printer_installation_parameters_get__preferred_input_format(WDEPR_VirtualPrinterInstallationParameters *self, WDEPR_VirtualPrinterPreferredInputFormat *value);
 
-/* Windows.Devices.Printers.VirtualPrinterInstallationParameters.put_PreferredInputFormat() */
 HRESULT wdepr_virtual_printer_installation_parameters_put__preferred_input_format(WDEPR_VirtualPrinterInstallationParameters *self, WDEPR_VirtualPrinterPreferredInputFormat value);
 
-/* Windows.Devices.Printers.VirtualPrinterInstallationParameters.get_PrinterUri() */
 HRESULT wdepr_virtual_printer_installation_parameters_get__printer_uri(WDEPR_VirtualPrinterInstallationParameters *self, WF_Uri** value);
 
-/* Windows.Devices.Printers.VirtualPrinterInstallationParameters.put_PrinterUri() */
 HRESULT wdepr_virtual_printer_installation_parameters_put__printer_uri(WDEPR_VirtualPrinterInstallationParameters *self, WF_Uri* value);
 
-/* Windows.Devices.Printers.VirtualPrinterInstallationParameters.get_EntryPoint() */
 HRESULT wdepr_virtual_printer_installation_parameters_get__entry_point(WDEPR_VirtualPrinterInstallationParameters *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Printers.VirtualPrinterInstallationParameters.put_EntryPoint() */
 HRESULT wdepr_virtual_printer_installation_parameters_put__entry_point(WDEPR_VirtualPrinterInstallationParameters *self, cwinrt_hstring value);
 
-/* activate Windows.Devices.Printers.ReplaceDevicePropertiesResult */
 HRESULT wdepr_replace_device_properties_result_new(WDEPR_ReplaceDevicePropertiesResult **out);
 
-/* Windows.Devices.Printers.ReplaceDevicePropertiesResult */
-/* Windows.Devices.Printers.ReplaceDevicePropertiesResult.get_Status() */
 HRESULT wdepr_replace_device_properties_result_get__status(WDEPR_ReplaceDevicePropertiesResult *self, WDEPR_ReplaceDevicePropertiesStatus *value);
 
-/* Windows.Devices.Printers.ReplaceDevicePropertiesResult.get_ExtendedError() */
 HRESULT wdepr_replace_device_properties_result_get__extended_error(WDEPR_ReplaceDevicePropertiesResult *self, HRESULT *value);
 
-/* activate Windows.Devices.Printers.PrintSchema */
 HRESULT wdepr_print_schema_new(WDEPR_PrintSchema **out);
 
-/* Windows.Devices.Printers.PrintSchema */
-/* Windows.Devices.Printers.PrintSchema.GetDefaultPrintTicketAsync() */
 HRESULT wdepr_print_schema_get_default_print_ticket_async(WDEPR_PrintSchema *self, WF_IAsyncOperation_WSTST_IRandomAccessStreamWithContentType** out);
 
-/* Windows.Devices.Printers.PrintSchema.GetCapabilitiesAsync(constrainTicket) */
 HRESULT wdepr_print_schema_get_capabilities_async(WDEPR_PrintSchema *self, WSTST_IRandomAccessStreamWithContentType* constrainTicket, WF_IAsyncOperation_WSTST_IRandomAccessStreamWithContentType** out);
 
-/* Windows.Devices.Printers.PrintSchema.MergeAndValidateWithDefaultPrintTicketAsync(deltaTicket) */
 HRESULT wdepr_print_schema_merge_and_validate_with_default_print_ticket_async(WDEPR_PrintSchema *self, WSTST_IRandomAccessStreamWithContentType* deltaTicket, WF_IAsyncOperation_WSTST_IRandomAccessStreamWithContentType** out);
 
-/* activate Windows.Devices.Printers.Print3DDevice */
 HRESULT wdepr_print3_d_device_new(WDEPR_Print3DDevice **out);
 
-/* Windows.Devices.Printers.Print3DDevice */
-/* Windows.Devices.Printers.Print3DDevice.get_PrintSchema() */
 HRESULT wdepr_print3_d_device_get__print_schema(WDEPR_Print3DDevice *self, WDEPR_PrintSchema** value);
 
-/* Windows.Devices.Printers.Print3DDevice.FromIdAsync(deviceId) */
 HRESULT wdepr_print3_d_device_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDEPR_Print3DDevice** out);
 
-/* Windows.Devices.Printers.Print3DDevice.GetDeviceSelector() */
 HRESULT wdepr_print3_d_device_get_device_selector(cwinrt_hstring *out);
 
-/* activate Windows.Devices.Printers.PdlPassthroughTarget */
 HRESULT wdepr_pdl_passthrough_target_new(WDEPR_PdlPassthroughTarget **out);
 
-/* Windows.Devices.Printers.PdlPassthroughTarget */
-/* Windows.Devices.Printers.PdlPassthroughTarget.get_PrintJobId() */
 HRESULT wdepr_pdl_passthrough_target_get__print_job_id(WDEPR_PdlPassthroughTarget *self, int32_t *value);
 
-/* Windows.Devices.Printers.PdlPassthroughTarget.GetOutputStream() */
 HRESULT wdepr_pdl_passthrough_target_get_output_stream(WDEPR_PdlPassthroughTarget *self, WSTST_IOutputStream** out);
 
-/* Windows.Devices.Printers.PdlPassthroughTarget.Submit() */
 HRESULT wdepr_pdl_passthrough_target_submit(WDEPR_PdlPassthroughTarget *self);
 
-/* Windows.Devices.Printers.PdlPassthroughTarget.Close() */
 HRESULT wdepr_pdl_passthrough_target_close(WDEPR_PdlPassthroughTarget *self);
 
-/* activate Windows.Devices.Printers.PdlPassthroughProvider */
 HRESULT wdepr_pdl_passthrough_provider_new(WDEPR_PdlPassthroughProvider **out);
 
-/* Windows.Devices.Printers.PdlPassthroughProvider */
-/* Windows.Devices.Printers.PdlPassthroughProvider.get_SupportedPdlContentTypes() */
 HRESULT wdepr_pdl_passthrough_provider_get__supported_pdl_content_types(WDEPR_PdlPassthroughProvider *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Devices.Printers.PdlPassthroughProvider.StartPrintJobWithTaskOptions(jobName, pdlContentType, taskOptions, pageConfigurationSettings) */
 HRESULT wdepr_pdl_passthrough_provider_start_print_job_with_task_options(WDEPR_PdlPassthroughProvider *self, cwinrt_hstring jobName, cwinrt_hstring pdlContentType, WGRPR_PrintTaskOptions* taskOptions, WDEPR_PageConfigurationSettings* pageConfigurationSettings, WDEPR_PdlPassthroughTarget** out);
 
-/* Windows.Devices.Printers.PdlPassthroughProvider.StartPrintJobWithPrintTicket(jobName, pdlContentType, printTicket, pageConfigurationSettings) */
 HRESULT wdepr_pdl_passthrough_provider_start_print_job_with_print_ticket(WDEPR_PdlPassthroughProvider *self, cwinrt_hstring jobName, cwinrt_hstring pdlContentType, WSTST_IInputStream* printTicket, WDEPR_PageConfigurationSettings* pageConfigurationSettings, WDEPR_PdlPassthroughTarget** out);
 
-/* Windows.Devices.Printers.PdlPassthroughProvider.get_IsPassthroughWithJobAttributesSupported() */
 HRESULT wdepr_pdl_passthrough_provider_get__is_passthrough_with_job_attributes_supported(WDEPR_PdlPassthroughProvider *self, BOOL *value);
 
-/* Windows.Devices.Printers.PdlPassthroughProvider.StartPrintJobWithIppJobAttributes(jobName, pdlContentType, jobAttributes, operationAttributes) */
 HRESULT wdepr_pdl_passthrough_provider_start_print_job_with_ipp_job_attributes(WDEPR_PdlPassthroughProvider *self, cwinrt_hstring jobName, cwinrt_hstring pdlContentType, WSTST_IBuffer* jobAttributes, WSTST_IBuffer* operationAttributes, WDEPR_PdlPassthroughTarget** out);
 
-/* activate Windows.Devices.Printers.PageConfigurationSettings */
 HRESULT wdepr_page_configuration_settings_new(WDEPR_PageConfigurationSettings **out);
 
-/* Windows.Devices.Printers.PageConfigurationSettings */
-/* Windows.Devices.Printers.PageConfigurationSettings.get_OrientationSource() */
 HRESULT wdepr_page_configuration_settings_get__orientation_source(WDEPR_PageConfigurationSettings *self, WDEPR_PageConfigurationSource *value);
 
-/* Windows.Devices.Printers.PageConfigurationSettings.put_OrientationSource() */
 HRESULT wdepr_page_configuration_settings_put__orientation_source(WDEPR_PageConfigurationSettings *self, WDEPR_PageConfigurationSource value);
 
-/* Windows.Devices.Printers.PageConfigurationSettings.get_SizeSource() */
 HRESULT wdepr_page_configuration_settings_get__size_source(WDEPR_PageConfigurationSettings *self, WDEPR_PageConfigurationSource *value);
 
-/* Windows.Devices.Printers.PageConfigurationSettings.put_SizeSource() */
 HRESULT wdepr_page_configuration_settings_put__size_source(WDEPR_PageConfigurationSettings *self, WDEPR_PageConfigurationSource value);
 
-/* activate Windows.Devices.Printers.IppTextWithLanguage */
 HRESULT wdepr_ipp_text_with_language_new(WDEPR_IppTextWithLanguage **out);
 
-/* Windows.Devices.Printers.IppTextWithLanguage */
-/* Windows.Devices.Printers.IppTextWithLanguage.get_Language() */
 HRESULT wdepr_ipp_text_with_language_get__language(WDEPR_IppTextWithLanguage *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Printers.IppTextWithLanguage.get_Value() */
 HRESULT wdepr_ipp_text_with_language_get__value(WDEPR_IppTextWithLanguage *self, cwinrt_hstring *value);
 
-/* activate Windows.Devices.Printers.IppSetAttributesResult */
 HRESULT wdepr_ipp_set_attributes_result_new(WDEPR_IppSetAttributesResult **out);
 
-/* Windows.Devices.Printers.IppSetAttributesResult */
-/* Windows.Devices.Printers.IppSetAttributesResult.get_Succeeded() */
 HRESULT wdepr_ipp_set_attributes_result_get__succeeded(WDEPR_IppSetAttributesResult *self, BOOL *value);
 
-/* Windows.Devices.Printers.IppSetAttributesResult.get_AttributeErrors() */
 HRESULT wdepr_ipp_set_attributes_result_get__attribute_errors(WDEPR_IppSetAttributesResult *self, WFOCO_IMapView_HSTRING_WDEPR_IppAttributeError** value);
 
-/* activate Windows.Devices.Printers.IppResolution */
 HRESULT wdepr_ipp_resolution_new(WDEPR_IppResolution **out);
 
-/* Windows.Devices.Printers.IppResolution */
-/* Windows.Devices.Printers.IppResolution.get_Width() */
 HRESULT wdepr_ipp_resolution_get__width(WDEPR_IppResolution *self, int32_t *value);
 
-/* Windows.Devices.Printers.IppResolution.get_Height() */
 HRESULT wdepr_ipp_resolution_get__height(WDEPR_IppResolution *self, int32_t *value);
 
-/* Windows.Devices.Printers.IppResolution.get_Unit() */
 HRESULT wdepr_ipp_resolution_get__unit(WDEPR_IppResolution *self, WDEPR_IppResolutionUnit *value);
 
-/* activate Windows.Devices.Printers.IppPrintDeviceManager */
 HRESULT wdepr_ipp_print_device_manager_new(WDEPR_IppPrintDeviceManager **out);
 
-/* Windows.Devices.Printers.IppPrintDeviceManager */
-/* Windows.Devices.Printers.IppPrintDeviceManager.CanInstallIppPrintDevice() */
 HRESULT wdepr_ipp_print_device_manager_can_install_ipp_print_device(BOOL *out);
 
-/* Windows.Devices.Printers.IppPrintDeviceManager.InstallIppPrintDeviceAsync(printerUri, printerName) */
 HRESULT wdepr_ipp_print_device_manager_install_ipp_print_device_async(WF_Uri* printerUri, cwinrt_hstring printerName, WF_IAsyncOperation_WDEPR_IppPrintDeviceInstallationResult** out);
 
-/* Windows.Devices.Printers.IIppAttributeConverterStatics */
-/* Windows.Devices.Printers.IIppAttributeConverterStatics.ConvertPrintTicketToIppAttributesForPrinter(printerName, printTicket, targetPdlFormat) */
 HRESULT wdepr_ipp_attribute_converter_statics_convert_print_ticket_to_ipp_attributes_for_printer(WDEPR_IIppAttributeConverterStatics *self, cwinrt_hstring printerName, WGRPRPR_WorkflowPrintTicket* printTicket, cwinrt_hstring targetPdlFormat, WFOCO_IMap_WDEPR_IppAttributeGroupKind_WFOCO_IMap_HSTRING_WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeConverterStatics.ConvertBufferToIppAttributes(attributesBuffer) */
 HRESULT wdepr_ipp_attribute_converter_statics_convert_buffer_to_ipp_attributes(WDEPR_IIppAttributeConverterStatics *self, WSTST_IBuffer* attributesBuffer, WFOCO_IMap_HSTRING_WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeConverterStatics.ConvertIppAttributesToBuffer(attributes, attributeGroupKind) */
 HRESULT wdepr_ipp_attribute_converter_statics_convert_ipp_attributes_to_buffer(WDEPR_IIppAttributeConverterStatics *self, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_WDEPR_IppAttributeValue* attributes, WDEPR_IppAttributeGroupKind attributeGroupKind, WSTST_IBuffer** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics */
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateUnsupported() */
 HRESULT wdepr_ipp_attribute_value_statics_create_unsupported(WDEPR_IIppAttributeValueStatics *self, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateUnknown() */
 HRESULT wdepr_ipp_attribute_value_statics_create_unknown(WDEPR_IIppAttributeValueStatics *self, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateNoValue() */
 HRESULT wdepr_ipp_attribute_value_statics_create_no_value(WDEPR_IIppAttributeValueStatics *self, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateInteger() */
 HRESULT wdepr_ipp_attribute_value_statics_create_integer(WDEPR_IIppAttributeValueStatics *self, int32_t value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateIntegerArray(values) */
 HRESULT wdepr_ipp_attribute_value_statics_create_integer_array(WDEPR_IIppAttributeValueStatics *self, WFOCO_IIterable_int32_t* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateBoolean() */
 HRESULT wdepr_ipp_attribute_value_statics_create_boolean(WDEPR_IIppAttributeValueStatics *self, BOOL value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateBooleanArray(values) */
 HRESULT wdepr_ipp_attribute_value_statics_create_boolean_array(WDEPR_IIppAttributeValueStatics *self, WFOCO_IIterable_Bool* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateEnum() */
 HRESULT wdepr_ipp_attribute_value_statics_create_enum(WDEPR_IIppAttributeValueStatics *self, int32_t value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateEnumArray(values) */
 HRESULT wdepr_ipp_attribute_value_statics_create_enum_array(WDEPR_IIppAttributeValueStatics *self, WFOCO_IIterable_int32_t* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateOctetString() */
 HRESULT wdepr_ipp_attribute_value_statics_create_octet_string(WDEPR_IIppAttributeValueStatics *self, WSTST_IBuffer* value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateOctetStringArray(values) */
 HRESULT wdepr_ipp_attribute_value_statics_create_octet_string_array(WDEPR_IIppAttributeValueStatics *self, WFOCO_IIterable_WSTST_IBuffer* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateDateTime() */
 HRESULT wdepr_ipp_attribute_value_statics_create_date_time(WDEPR_IIppAttributeValueStatics *self, WF_DateTime value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateDateTimeArray(values) */
 HRESULT wdepr_ipp_attribute_value_statics_create_date_time_array(WDEPR_IIppAttributeValueStatics *self, WFOCO_IIterable_WF_DateTime* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateResolution() */
 HRESULT wdepr_ipp_attribute_value_statics_create_resolution(WDEPR_IIppAttributeValueStatics *self, WDEPR_IppResolution* value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateResolutionArray(values) */
 HRESULT wdepr_ipp_attribute_value_statics_create_resolution_array(WDEPR_IIppAttributeValueStatics *self, WFOCO_IIterable_WDEPR_IppResolution* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateRangeOfInteger() */
 HRESULT wdepr_ipp_attribute_value_statics_create_range_of_integer(WDEPR_IIppAttributeValueStatics *self, WDEPR_IppIntegerRange* value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateRangeOfIntegerArray(values) */
 HRESULT wdepr_ipp_attribute_value_statics_create_range_of_integer_array(WDEPR_IIppAttributeValueStatics *self, WFOCO_IIterable_WDEPR_IppIntegerRange* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateCollection(memberAttributes) */
 HRESULT wdepr_ipp_attribute_value_statics_create_collection(WDEPR_IIppAttributeValueStatics *self, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_WDEPR_IppAttributeValue* memberAttributes, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateCollectionArray(memberAttributesArray) */
 HRESULT wdepr_ipp_attribute_value_statics_create_collection_array(WDEPR_IIppAttributeValueStatics *self, WFOCO_IIterable_WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_WDEPR_IppAttributeValue* memberAttributesArray, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateTextWithLanguage() */
 HRESULT wdepr_ipp_attribute_value_statics_create_text_with_language(WDEPR_IIppAttributeValueStatics *self, WDEPR_IppTextWithLanguage* value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateTextWithLanguageArray(values) */
 HRESULT wdepr_ipp_attribute_value_statics_create_text_with_language_array(WDEPR_IIppAttributeValueStatics *self, WFOCO_IIterable_WDEPR_IppTextWithLanguage* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateNameWithLanguage() */
 HRESULT wdepr_ipp_attribute_value_statics_create_name_with_language(WDEPR_IIppAttributeValueStatics *self, WDEPR_IppTextWithLanguage* value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateNameWithLanguageArray(values) */
 HRESULT wdepr_ipp_attribute_value_statics_create_name_with_language_array(WDEPR_IIppAttributeValueStatics *self, WFOCO_IIterable_WDEPR_IppTextWithLanguage* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateTextWithoutLanguage() */
 HRESULT wdepr_ipp_attribute_value_statics_create_text_without_language(WDEPR_IIppAttributeValueStatics *self, cwinrt_hstring value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateTextWithoutLanguageArray(values) */
 HRESULT wdepr_ipp_attribute_value_statics_create_text_without_language_array(WDEPR_IIppAttributeValueStatics *self, WFOCO_IIterable_HSTRING* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateNameWithoutLanguage() */
 HRESULT wdepr_ipp_attribute_value_statics_create_name_without_language(WDEPR_IIppAttributeValueStatics *self, cwinrt_hstring value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateNameWithoutLanguageArray(values) */
 HRESULT wdepr_ipp_attribute_value_statics_create_name_without_language_array(WDEPR_IIppAttributeValueStatics *self, WFOCO_IIterable_HSTRING* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateKeyword() */
 HRESULT wdepr_ipp_attribute_value_statics_create_keyword(WDEPR_IIppAttributeValueStatics *self, cwinrt_hstring value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateKeywordArray(values) */
 HRESULT wdepr_ipp_attribute_value_statics_create_keyword_array(WDEPR_IIppAttributeValueStatics *self, WFOCO_IIterable_HSTRING* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateUri() */
 HRESULT wdepr_ipp_attribute_value_statics_create_uri(WDEPR_IIppAttributeValueStatics *self, WF_Uri* value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateUriArray(values) */
 HRESULT wdepr_ipp_attribute_value_statics_create_uri_array(WDEPR_IIppAttributeValueStatics *self, WFOCO_IIterable_WF_Uri* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateUriSchema() */
 HRESULT wdepr_ipp_attribute_value_statics_create_uri_schema(WDEPR_IIppAttributeValueStatics *self, cwinrt_hstring value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateUriSchemaArray(values) */
 HRESULT wdepr_ipp_attribute_value_statics_create_uri_schema_array(WDEPR_IIppAttributeValueStatics *self, WFOCO_IIterable_HSTRING* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateCharset() */
 HRESULT wdepr_ipp_attribute_value_statics_create_charset(WDEPR_IIppAttributeValueStatics *self, cwinrt_hstring value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateCharsetArray(values) */
 HRESULT wdepr_ipp_attribute_value_statics_create_charset_array(WDEPR_IIppAttributeValueStatics *self, WFOCO_IIterable_HSTRING* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateNaturalLanguage() */
 HRESULT wdepr_ipp_attribute_value_statics_create_natural_language(WDEPR_IIppAttributeValueStatics *self, cwinrt_hstring value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateNaturalLanguageArray(values) */
 HRESULT wdepr_ipp_attribute_value_statics_create_natural_language_array(WDEPR_IIppAttributeValueStatics *self, WFOCO_IIterable_HSTRING* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateMimeMedia() */
 HRESULT wdepr_ipp_attribute_value_statics_create_mime_media(WDEPR_IIppAttributeValueStatics *self, cwinrt_hstring value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppAttributeValueStatics.CreateMimeMediaArray(values) */
 HRESULT wdepr_ipp_attribute_value_statics_create_mime_media_array(WDEPR_IIppAttributeValueStatics *self, WFOCO_IIterable_HSTRING* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IIppIntegerRangeFactory */
-/* Windows.Devices.Printers.IIppIntegerRangeFactory.CreateInstance(start, end) */
 HRESULT wdepr_ipp_integer_range_factory_create_instance(WDEPR_IIppIntegerRangeFactory *self, int32_t start, int32_t end, WDEPR_IppIntegerRange** out);
 
-/* Windows.Devices.Printers.IIppPrintDeviceManagerStatics */
-/* Windows.Devices.Printers.IIppPrintDeviceManagerStatics.CanInstallIppPrintDevice() */
 HRESULT wdepr_ipp_print_device_manager_statics_can_install_ipp_print_device(WDEPR_IIppPrintDeviceManagerStatics *self, BOOL *out);
 
-/* Windows.Devices.Printers.IIppPrintDeviceManagerStatics.InstallIppPrintDeviceAsync(printerUri, printerName) */
 HRESULT wdepr_ipp_print_device_manager_statics_install_ipp_print_device_async(WDEPR_IIppPrintDeviceManagerStatics *self, WF_Uri* printerUri, cwinrt_hstring printerName, WF_IAsyncOperation_WDEPR_IppPrintDeviceInstallationResult** out);
 
-/* Windows.Devices.Printers.IIppPrintDeviceStatics */
-/* Windows.Devices.Printers.IIppPrintDeviceStatics.GetDeviceSelector() */
 HRESULT wdepr_ipp_print_device_statics_get_device_selector(WDEPR_IIppPrintDeviceStatics *self, cwinrt_hstring *out);
 
-/* Windows.Devices.Printers.IIppPrintDeviceStatics.FromId(deviceId) */
 HRESULT wdepr_ipp_print_device_statics_from_id(WDEPR_IIppPrintDeviceStatics *self, cwinrt_hstring deviceId, WDEPR_IppPrintDevice** out);
 
-/* Windows.Devices.Printers.IIppPrintDeviceStatics.FromPrinterName(printerName) */
 HRESULT wdepr_ipp_print_device_statics_from_printer_name(WDEPR_IIppPrintDeviceStatics *self, cwinrt_hstring printerName, WDEPR_IppPrintDevice** out);
 
-/* Windows.Devices.Printers.IIppPrintDeviceStatics.IsIppPrinter(printerName) */
 HRESULT wdepr_ipp_print_device_statics_is_ipp_printer(WDEPR_IIppPrintDeviceStatics *self, cwinrt_hstring printerName, BOOL *out);
 
-/* Windows.Devices.Printers.IIppResolutionFactory */
-/* Windows.Devices.Printers.IIppResolutionFactory.CreateInstance(width, height, unit) */
 HRESULT wdepr_ipp_resolution_factory_create_instance(WDEPR_IIppResolutionFactory *self, int32_t width, int32_t height, WDEPR_IppResolutionUnit unit, WDEPR_IppResolution** out);
 
-/* Windows.Devices.Printers.IIppTextWithLanguageFactory */
-/* Windows.Devices.Printers.IIppTextWithLanguageFactory.CreateInstance(language, text) */
 HRESULT wdepr_ipp_text_with_language_factory_create_instance(WDEPR_IIppTextWithLanguageFactory *self, cwinrt_hstring language, cwinrt_hstring text, WDEPR_IppTextWithLanguage** out);
 
-/* Windows.Devices.Printers.IPrint3DDeviceStatics */
-/* Windows.Devices.Printers.IPrint3DDeviceStatics.FromIdAsync(deviceId) */
 HRESULT wdepr_print3_d_device_statics_from_id_async(WDEPR_IPrint3DDeviceStatics *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDEPR_Print3DDevice** out);
 
-/* Windows.Devices.Printers.IPrint3DDeviceStatics.GetDeviceSelector() */
 HRESULT wdepr_print3_d_device_statics_get_device_selector(WDEPR_IPrint3DDeviceStatics *self, cwinrt_hstring *out);
 
-/* Windows.Devices.Printers.IVirtualPrinterManagerStatics */
-/* Windows.Devices.Printers.IVirtualPrinterManagerStatics.InstallVirtualPrinterAsync(parameters) */
 HRESULT wdepr_virtual_printer_manager_statics_install_virtual_printer_async(WDEPR_IVirtualPrinterManagerStatics *self, WDEPR_VirtualPrinterInstallationParameters* parameters, WF_IAsyncOperation_WDEPR_VirtualPrinterInstallationResult** out);
 
-/* Windows.Devices.Printers.IVirtualPrinterManagerStatics.InstallVirtualPrinterAsync(parameters, appPackageFamilyName) */
 HRESULT wdepr_virtual_printer_manager_statics_install_virtual_printer_async_p_str_p(WDEPR_IVirtualPrinterManagerStatics *self, WDEPR_VirtualPrinterInstallationParameters* parameters, cwinrt_hstring appPackageFamilyName, WF_IAsyncOperation_WDEPR_VirtualPrinterInstallationResult** out);
 
-/* Windows.Devices.Printers.IVirtualPrinterManagerStatics.InstallVirtualPrinterForAllUsersAsync(parameters) */
 HRESULT wdepr_virtual_printer_manager_statics_install_virtual_printer_for_all_users_async(WDEPR_IVirtualPrinterManagerStatics *self, WDEPR_VirtualPrinterInstallationParameters* parameters, WF_IAsyncOperation_WDEPR_VirtualPrinterInstallationResult** out);
 
-/* Windows.Devices.Printers.IVirtualPrinterManagerStatics.InstallVirtualPrinterForAllUsersAsync(parameters, appPackageFamilyName) */
 HRESULT wdepr_virtual_printer_manager_statics_install_virtual_printer_for_all_users_async_p_str_p(WDEPR_IVirtualPrinterManagerStatics *self, WDEPR_VirtualPrinterInstallationParameters* parameters, cwinrt_hstring appPackageFamilyName, WF_IAsyncOperation_WDEPR_VirtualPrinterInstallationResult** out);
 
-/* Windows.Devices.Printers.IVirtualPrinterManagerStatics.FindAllVirtualPrinters() */
 HRESULT wdepr_virtual_printer_manager_statics_find_all_virtual_printers(WDEPR_IVirtualPrinterManagerStatics *self, WFOCO_IVectorView_HSTRING** out);
 
-/* Windows.Devices.Printers.IVirtualPrinterManagerStatics.FindAllVirtualPrinters(appPackageFamilyName) */
 HRESULT wdepr_virtual_printer_manager_statics_find_all_virtual_printers_str_p(WDEPR_IVirtualPrinterManagerStatics *self, cwinrt_hstring appPackageFamilyName, WFOCO_IVectorView_HSTRING** out);
 
-/* Windows.Devices.Printers.IVirtualPrinterManagerStatics.RemoveVirtualPrinterAsync(printerName) */
 HRESULT wdepr_virtual_printer_manager_statics_remove_virtual_printer_async(WDEPR_IVirtualPrinterManagerStatics *self, cwinrt_hstring printerName, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.Printers.IVirtualPrinterManagerStatics.RemoveVirtualPrinterForAllUsersAsync(printerName) */
 HRESULT wdepr_virtual_printer_manager_statics_remove_virtual_printer_for_all_users_async(WDEPR_IVirtualPrinterManagerStatics *self, cwinrt_hstring printerName, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.Printers.IVirtualPrinterSupportedFormatFactory */
-/* Windows.Devices.Printers.IVirtualPrinterSupportedFormatFactory.CreateInstance(contentType, maxSupportedVersion) */
 HRESULT wdepr_virtual_printer_supported_format_factory_create_instance(WDEPR_IVirtualPrinterSupportedFormatFactory *self, cwinrt_hstring contentType, cwinrt_hstring maxSupportedVersion, WDEPR_VirtualPrinterSupportedFormat** out);
 
-/* activate Windows.Devices.Printers.IppAttributeConverter */
 HRESULT wdepr_ipp_attribute_converter_new(WDEPR_IppAttributeConverter **out);
 
-/* Windows.Devices.Printers.IppAttributeConverter */
-/* Windows.Devices.Printers.IppAttributeConverter.ConvertPrintTicketToIppAttributesForPrinter(printerName, printTicket, targetPdlFormat) */
 HRESULT wdepr_ipp_attribute_converter_convert_print_ticket_to_ipp_attributes_for_printer(cwinrt_hstring printerName, WGRPRPR_WorkflowPrintTicket* printTicket, cwinrt_hstring targetPdlFormat, WFOCO_IMap_WDEPR_IppAttributeGroupKind_WFOCO_IMap_HSTRING_WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeConverter.ConvertBufferToIppAttributes(attributesBuffer) */
 HRESULT wdepr_ipp_attribute_converter_convert_buffer_to_ipp_attributes(WSTST_IBuffer* attributesBuffer, WFOCO_IMap_HSTRING_WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeConverter.ConvertIppAttributesToBuffer(attributes, attributeGroupKind) */
 HRESULT wdepr_ipp_attribute_converter_convert_ipp_attributes_to_buffer(WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_WDEPR_IppAttributeValue* attributes, WDEPR_IppAttributeGroupKind attributeGroupKind, WSTST_IBuffer** out);
 
-/* activate Windows.Devices.Printers.IppAttributeError */
 HRESULT wdepr_ipp_attribute_error_new(WDEPR_IppAttributeError **out);
 
-/* Windows.Devices.Printers.IppAttributeError */
-/* Windows.Devices.Printers.IppAttributeError.get_Reason() */
 HRESULT wdepr_ipp_attribute_error_get__reason(WDEPR_IppAttributeError *self, WDEPR_IppAttributeErrorReason *value);
 
-/* Windows.Devices.Printers.IppAttributeError.get_ExtendedError() */
 HRESULT wdepr_ipp_attribute_error_get__extended_error(WDEPR_IppAttributeError *self, HRESULT *value);
 
-/* Windows.Devices.Printers.IppAttributeError.GetUnsupportedValues() */
 HRESULT wdepr_ipp_attribute_error_get_unsupported_values(WDEPR_IppAttributeError *self, WFOCO_IVectorView_WDEPR_IppAttributeValue** out);
 
-/* activate Windows.Devices.Printers.IppAttributeValue */
 HRESULT wdepr_ipp_attribute_value_new(WDEPR_IppAttributeValue **out);
 
-/* Windows.Devices.Printers.IppAttributeValue */
-/* Windows.Devices.Printers.IppAttributeValue.get_Kind() */
 HRESULT wdepr_ipp_attribute_value_get__kind(WDEPR_IppAttributeValue *self, WDEPR_IppAttributeValueKind *value);
 
-/* Windows.Devices.Printers.IppAttributeValue.GetIntegerArray() */
 HRESULT wdepr_ipp_attribute_value_get_integer_array(WDEPR_IppAttributeValue *self, WFOCO_IVector_int32_t** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.GetBooleanArray() */
 HRESULT wdepr_ipp_attribute_value_get_boolean_array(WDEPR_IppAttributeValue *self, WFOCO_IVector_Bool** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.GetEnumArray() */
 HRESULT wdepr_ipp_attribute_value_get_enum_array(WDEPR_IppAttributeValue *self, WFOCO_IVector_int32_t** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.GetOctetStringArray() */
 HRESULT wdepr_ipp_attribute_value_get_octet_string_array(WDEPR_IppAttributeValue *self, WFOCO_IVector_WSTST_IBuffer** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.GetDateTimeArray() */
 HRESULT wdepr_ipp_attribute_value_get_date_time_array(WDEPR_IppAttributeValue *self, WFOCO_IVector_WF_DateTime** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.GetResolutionArray() */
 HRESULT wdepr_ipp_attribute_value_get_resolution_array(WDEPR_IppAttributeValue *self, WFOCO_IVector_WDEPR_IppResolution** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.GetRangeOfIntegerArray() */
 HRESULT wdepr_ipp_attribute_value_get_range_of_integer_array(WDEPR_IppAttributeValue *self, WFOCO_IVector_WDEPR_IppIntegerRange** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.GetCollectionArray() */
 HRESULT wdepr_ipp_attribute_value_get_collection_array(WDEPR_IppAttributeValue *self, WFOCO_IVector_WFOCO_IMapView_HSTRING_WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.GetTextWithLanguageArray() */
 HRESULT wdepr_ipp_attribute_value_get_text_with_language_array(WDEPR_IppAttributeValue *self, WFOCO_IVector_WDEPR_IppTextWithLanguage** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.GetNameWithLanguageArray() */
 HRESULT wdepr_ipp_attribute_value_get_name_with_language_array(WDEPR_IppAttributeValue *self, WFOCO_IVector_WDEPR_IppTextWithLanguage** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.GetTextWithoutLanguageArray() */
 HRESULT wdepr_ipp_attribute_value_get_text_without_language_array(WDEPR_IppAttributeValue *self, WFOCO_IVector_HSTRING** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.GetNameWithoutLanguageArray() */
 HRESULT wdepr_ipp_attribute_value_get_name_without_language_array(WDEPR_IppAttributeValue *self, WFOCO_IVector_HSTRING** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.GetKeywordArray() */
 HRESULT wdepr_ipp_attribute_value_get_keyword_array(WDEPR_IppAttributeValue *self, WFOCO_IVector_HSTRING** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.GetUriArray() */
 HRESULT wdepr_ipp_attribute_value_get_uri_array(WDEPR_IppAttributeValue *self, WFOCO_IVector_WF_Uri** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.GetUriSchemaArray() */
 HRESULT wdepr_ipp_attribute_value_get_uri_schema_array(WDEPR_IppAttributeValue *self, WFOCO_IVector_HSTRING** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.GetCharsetArray() */
 HRESULT wdepr_ipp_attribute_value_get_charset_array(WDEPR_IppAttributeValue *self, WFOCO_IVector_HSTRING** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.GetNaturalLanguageArray() */
 HRESULT wdepr_ipp_attribute_value_get_natural_language_array(WDEPR_IppAttributeValue *self, WFOCO_IVector_HSTRING** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.GetMimeMediaTypeArray() */
 HRESULT wdepr_ipp_attribute_value_get_mime_media_type_array(WDEPR_IppAttributeValue *self, WFOCO_IVector_HSTRING** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateUnsupported() */
 HRESULT wdepr_ipp_attribute_value_create_unsupported(WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateUnknown() */
 HRESULT wdepr_ipp_attribute_value_create_unknown(WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateNoValue() */
 HRESULT wdepr_ipp_attribute_value_create_no_value(WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateInteger() */
 HRESULT wdepr_ipp_attribute_value_create_integer(int32_t value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateIntegerArray(values) */
 HRESULT wdepr_ipp_attribute_value_create_integer_array(WFOCO_IIterable_int32_t* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateBoolean() */
 HRESULT wdepr_ipp_attribute_value_create_boolean(BOOL value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateBooleanArray(values) */
 HRESULT wdepr_ipp_attribute_value_create_boolean_array(WFOCO_IIterable_Bool* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateEnum() */
 HRESULT wdepr_ipp_attribute_value_create_enum(int32_t value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateEnumArray(values) */
 HRESULT wdepr_ipp_attribute_value_create_enum_array(WFOCO_IIterable_int32_t* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateOctetString() */
 HRESULT wdepr_ipp_attribute_value_create_octet_string(WSTST_IBuffer* value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateOctetStringArray(values) */
 HRESULT wdepr_ipp_attribute_value_create_octet_string_array(WFOCO_IIterable_WSTST_IBuffer* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateDateTime() */
 HRESULT wdepr_ipp_attribute_value_create_date_time(WF_DateTime value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateDateTimeArray(values) */
 HRESULT wdepr_ipp_attribute_value_create_date_time_array(WFOCO_IIterable_WF_DateTime* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateResolution() */
 HRESULT wdepr_ipp_attribute_value_create_resolution(WDEPR_IppResolution* value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateResolutionArray(values) */
 HRESULT wdepr_ipp_attribute_value_create_resolution_array(WFOCO_IIterable_WDEPR_IppResolution* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateRangeOfInteger() */
 HRESULT wdepr_ipp_attribute_value_create_range_of_integer(WDEPR_IppIntegerRange* value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateRangeOfIntegerArray(values) */
 HRESULT wdepr_ipp_attribute_value_create_range_of_integer_array(WFOCO_IIterable_WDEPR_IppIntegerRange* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateCollection(memberAttributes) */
 HRESULT wdepr_ipp_attribute_value_create_collection(WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_WDEPR_IppAttributeValue* memberAttributes, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateCollectionArray(memberAttributesArray) */
 HRESULT wdepr_ipp_attribute_value_create_collection_array(WFOCO_IIterable_WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_WDEPR_IppAttributeValue* memberAttributesArray, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateTextWithLanguage() */
 HRESULT wdepr_ipp_attribute_value_create_text_with_language(WDEPR_IppTextWithLanguage* value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateTextWithLanguageArray(values) */
 HRESULT wdepr_ipp_attribute_value_create_text_with_language_array(WFOCO_IIterable_WDEPR_IppTextWithLanguage* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateNameWithLanguage() */
 HRESULT wdepr_ipp_attribute_value_create_name_with_language(WDEPR_IppTextWithLanguage* value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateNameWithLanguageArray(values) */
 HRESULT wdepr_ipp_attribute_value_create_name_with_language_array(WFOCO_IIterable_WDEPR_IppTextWithLanguage* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateTextWithoutLanguage() */
 HRESULT wdepr_ipp_attribute_value_create_text_without_language(cwinrt_hstring value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateTextWithoutLanguageArray(values) */
 HRESULT wdepr_ipp_attribute_value_create_text_without_language_array(WFOCO_IIterable_HSTRING* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateNameWithoutLanguage() */
 HRESULT wdepr_ipp_attribute_value_create_name_without_language(cwinrt_hstring value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateNameWithoutLanguageArray(values) */
 HRESULT wdepr_ipp_attribute_value_create_name_without_language_array(WFOCO_IIterable_HSTRING* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateKeyword() */
 HRESULT wdepr_ipp_attribute_value_create_keyword(cwinrt_hstring value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateKeywordArray(values) */
 HRESULT wdepr_ipp_attribute_value_create_keyword_array(WFOCO_IIterable_HSTRING* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateUri() */
 HRESULT wdepr_ipp_attribute_value_create_uri(WF_Uri* value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateUriArray(values) */
 HRESULT wdepr_ipp_attribute_value_create_uri_array(WFOCO_IIterable_WF_Uri* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateUriSchema() */
 HRESULT wdepr_ipp_attribute_value_create_uri_schema(cwinrt_hstring value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateUriSchemaArray(values) */
 HRESULT wdepr_ipp_attribute_value_create_uri_schema_array(WFOCO_IIterable_HSTRING* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateCharset() */
 HRESULT wdepr_ipp_attribute_value_create_charset(cwinrt_hstring value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateCharsetArray(values) */
 HRESULT wdepr_ipp_attribute_value_create_charset_array(WFOCO_IIterable_HSTRING* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateNaturalLanguage() */
 HRESULT wdepr_ipp_attribute_value_create_natural_language(cwinrt_hstring value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateNaturalLanguageArray(values) */
 HRESULT wdepr_ipp_attribute_value_create_natural_language_array(WFOCO_IIterable_HSTRING* values, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateMimeMedia() */
 HRESULT wdepr_ipp_attribute_value_create_mime_media(cwinrt_hstring value, WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppAttributeValue.CreateMimeMediaArray(values) */
 HRESULT wdepr_ipp_attribute_value_create_mime_media_array(WFOCO_IIterable_HSTRING* values, WDEPR_IppAttributeValue** out);
 
-/* activate Windows.Devices.Printers.IppIntegerRange */
 HRESULT wdepr_ipp_integer_range_new(WDEPR_IppIntegerRange **out);
 
-/* Windows.Devices.Printers.IppIntegerRange */
-/* Windows.Devices.Printers.IppIntegerRange.get_Start() */
 HRESULT wdepr_ipp_integer_range_get__start(WDEPR_IppIntegerRange *self, int32_t *value);
 
-/* Windows.Devices.Printers.IppIntegerRange.get_End() */
 HRESULT wdepr_ipp_integer_range_get__end(WDEPR_IppIntegerRange *self, int32_t *value);
 
-/* activate Windows.Devices.Printers.IppPrintDevice */
 HRESULT wdepr_ipp_print_device_new(WDEPR_IppPrintDevice **out);
 
-/* Windows.Devices.Printers.IppPrintDevice */
-/* Windows.Devices.Printers.IppPrintDevice.get_PrinterName() */
 HRESULT wdepr_ipp_print_device_get__printer_name(WDEPR_IppPrintDevice *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Printers.IppPrintDevice.get_PrinterUri() */
 HRESULT wdepr_ipp_print_device_get__printer_uri(WDEPR_IppPrintDevice *self, WF_Uri** value);
 
-/* Windows.Devices.Printers.IppPrintDevice.GetPrinterAttributesAsBuffer(attributeNames) */
 HRESULT wdepr_ipp_print_device_get_printer_attributes_as_buffer(WDEPR_IppPrintDevice *self, WFOCO_IIterable_HSTRING* attributeNames, WSTST_IBuffer** out);
 
-/* Windows.Devices.Printers.IppPrintDevice.GetPrinterAttributes(attributeNames) */
 HRESULT wdepr_ipp_print_device_get_printer_attributes(WDEPR_IppPrintDevice *self, WFOCO_IIterable_HSTRING* attributeNames, WFOCO_IMap_HSTRING_WDEPR_IppAttributeValue** out);
 
-/* Windows.Devices.Printers.IppPrintDevice.SetPrinterAttributesFromBuffer(printerAttributesBuffer) */
 HRESULT wdepr_ipp_print_device_set_printer_attributes_from_buffer(WDEPR_IppPrintDevice *self, WSTST_IBuffer* printerAttributesBuffer, WDEPR_IppSetAttributesResult** out);
 
-/* Windows.Devices.Printers.IppPrintDevice.SetPrinterAttributes(printerAttributes) */
 HRESULT wdepr_ipp_print_device_set_printer_attributes(WDEPR_IppPrintDevice *self, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_WDEPR_IppAttributeValue* printerAttributes, WDEPR_IppSetAttributesResult** out);
 
-/* Windows.Devices.Printers.IppPrintDevice.GetMaxSupportedPdfSize() */
 HRESULT wdepr_ipp_print_device_get_max_supported_pdf_size(WDEPR_IppPrintDevice *self, uint64_t *out);
 
-/* Windows.Devices.Printers.IppPrintDevice.GetMaxSupportedPdfVersion() */
 HRESULT wdepr_ipp_print_device_get_max_supported_pdf_version(WDEPR_IppPrintDevice *self, cwinrt_hstring *out);
 
-/* Windows.Devices.Printers.IppPrintDevice.IsPdlPassthroughSupported(pdlContentType) */
 HRESULT wdepr_ipp_print_device_is_pdl_passthrough_supported(WDEPR_IppPrintDevice *self, cwinrt_hstring pdlContentType, BOOL *out);
 
-/* Windows.Devices.Printers.IppPrintDevice.GetPdlPassthroughProvider() */
 HRESULT wdepr_ipp_print_device_get_pdl_passthrough_provider(WDEPR_IppPrintDevice *self, WDEPR_PdlPassthroughProvider** out);
 
-/* Windows.Devices.Printers.IppPrintDevice.get_IsIppFaxOutPrinter() */
 HRESULT wdepr_ipp_print_device_get__is_ipp_fax_out_printer(WDEPR_IppPrintDevice *self, BOOL *value);
 
-/* Windows.Devices.Printers.IppPrintDevice.get_DeviceKind() */
 HRESULT wdepr_ipp_print_device_get__device_kind(WDEPR_IppPrintDevice *self, WDEPR_IppPrintDeviceKind *value);
 
-/* Windows.Devices.Printers.IppPrintDevice.get_CanModifyUserDefaultPrintTicket() */
 HRESULT wdepr_ipp_print_device_get__can_modify_user_default_print_ticket(WDEPR_IppPrintDevice *self, BOOL *value);
 
-/* Windows.Devices.Printers.IppPrintDevice.get_UserDefaultPrintTicket() */
 HRESULT wdepr_ipp_print_device_get__user_default_print_ticket(WDEPR_IppPrintDevice *self, WGRPRPR_WorkflowPrintTicket** value);
 
-/* Windows.Devices.Printers.IppPrintDevice.put_UserDefaultPrintTicket() */
 HRESULT wdepr_ipp_print_device_put__user_default_print_ticket(WDEPR_IppPrintDevice *self, WGRPRPR_WorkflowPrintTicket* value);
 
-/* Windows.Devices.Printers.IppPrintDevice.RefreshPrintDeviceCapabilities() */
 HRESULT wdepr_ipp_print_device_refresh_print_device_capabilities(WDEPR_IppPrintDevice *self);
 
-/* Windows.Devices.Printers.IppPrintDevice.GetMaxSupportedPdlVersion(pdlContentType) */
 HRESULT wdepr_ipp_print_device_get_max_supported_pdl_version(WDEPR_IppPrintDevice *self, cwinrt_hstring pdlContentType, cwinrt_hstring *out);
 
-/* Windows.Devices.Printers.IppPrintDevice.GetDeviceProperties() */
 HRESULT wdepr_ipp_print_device_get_device_properties(WDEPR_IppPrintDevice *self, WFOCO_ValueSet** out);
 
-/* Windows.Devices.Printers.IppPrintDevice.ReplaceDeviceProperties(deviceProperties) */
 HRESULT wdepr_ipp_print_device_replace_device_properties(WDEPR_IppPrintDevice *self, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_Object* deviceProperties, WDEPR_ReplaceDevicePropertiesResult** out);
 
-/* Windows.Devices.Printers.IppPrintDevice.GetDeviceSelector() */
 HRESULT wdepr_ipp_print_device_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Devices.Printers.IppPrintDevice.FromId(deviceId) */
 HRESULT wdepr_ipp_print_device_from_id(cwinrt_hstring deviceId, WDEPR_IppPrintDevice** out);
 
-/* Windows.Devices.Printers.IppPrintDevice.FromPrinterName(printerName) */
 HRESULT wdepr_ipp_print_device_from_printer_name(cwinrt_hstring printerName, WDEPR_IppPrintDevice** out);
 
-/* Windows.Devices.Printers.IppPrintDevice.IsIppPrinter(printerName) */
 HRESULT wdepr_ipp_print_device_is_ipp_printer(cwinrt_hstring printerName, BOOL *out);
 
-/* activate Windows.Devices.Printers.IppPrintDeviceInstallationResult */
 HRESULT wdepr_ipp_print_device_installation_result_new(WDEPR_IppPrintDeviceInstallationResult **out);
 
-/* Windows.Devices.Printers.IppPrintDeviceInstallationResult */
-/* Windows.Devices.Printers.IppPrintDeviceInstallationResult.get_Status() */
 HRESULT wdepr_ipp_print_device_installation_result_get__status(WDEPR_IppPrintDeviceInstallationResult *self, WDEPR_IppPrintDeviceInstallationStatus *value);
 
-/* Windows.Devices.Printers.IppPrintDeviceInstallationResult.get_InstalledPrinterName() */
 HRESULT wdepr_ipp_print_device_installation_result_get__installed_printer_name(WDEPR_IppPrintDeviceInstallationResult *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Printers.IppPrintDeviceInstallationResult.get_ExtendedError() */
 HRESULT wdepr_ipp_print_device_installation_result_get__extended_error(WDEPR_IppPrintDeviceInstallationResult *self, HRESULT *value);
 
-/* Windows.Devices.Printers.IVirtualPrinterSupportedFormat */
-/* Windows.Devices.Printers.IVirtualPrinterInstallationResult */
-/* Windows.Devices.Printers.IVirtualPrinterInstallationParameters */
-/* Windows.Devices.Printers.IReplaceDevicePropertiesResult */
-/* Windows.Devices.Printers.IPrintSchema */
-/* Windows.Devices.Printers.IPrint3DDevice */
-/* Windows.Devices.Printers.IPdlPassthroughTarget */
-/* Windows.Devices.Printers.IPdlPassthroughProvider */
-/* Windows.Devices.Printers.IPdlPassthroughProvider2 */
-/* Windows.Devices.Printers.IPdlPassthroughProvider2.get_IsPassthroughWithJobAttributesSupported() */
 HRESULT wdepr_pdl_passthrough_provider_2_get__is_passthrough_with_job_attributes_supported(WDEPR_IPdlPassthroughProvider_2 *self, BOOL *value);
 
-/* Windows.Devices.Printers.IPdlPassthroughProvider2.StartPrintJobWithIppJobAttributes(jobName, pdlContentType, jobAttributes, operationAttributes) */
 HRESULT wdepr_pdl_passthrough_provider_2_start_print_job_with_ipp_job_attributes(WDEPR_IPdlPassthroughProvider_2 *self, cwinrt_hstring jobName, cwinrt_hstring pdlContentType, WSTST_IBuffer* jobAttributes, WSTST_IBuffer* operationAttributes, WDEPR_PdlPassthroughTarget** out);
 
-/* Windows.Devices.Printers.IPageConfigurationSettings */
-/* Windows.Devices.Printers.IIppTextWithLanguage */
-/* Windows.Devices.Printers.IIppSetAttributesResult */
-/* Windows.Devices.Printers.IIppResolution */
-/* Windows.Devices.Printers.IIppAttributeError */
-/* Windows.Devices.Printers.IIppAttributeValue */
-/* Windows.Devices.Printers.IIppIntegerRange */
-/* Windows.Devices.Printers.IIppPrintDevice */
-/* Windows.Devices.Printers.IIppPrintDevice2 */
-/* Windows.Devices.Printers.IIppPrintDevice2.GetMaxSupportedPdfSize() */
 HRESULT wdepr_ipp_print_device_2_get_max_supported_pdf_size(WDEPR_IIppPrintDevice_2 *self, uint64_t *out);
 
-/* Windows.Devices.Printers.IIppPrintDevice2.GetMaxSupportedPdfVersion() */
 HRESULT wdepr_ipp_print_device_2_get_max_supported_pdf_version(WDEPR_IIppPrintDevice_2 *self, cwinrt_hstring *out);
 
-/* Windows.Devices.Printers.IIppPrintDevice2.IsPdlPassthroughSupported(pdlContentType) */
 HRESULT wdepr_ipp_print_device_2_is_pdl_passthrough_supported(WDEPR_IIppPrintDevice_2 *self, cwinrt_hstring pdlContentType, BOOL *out);
 
-/* Windows.Devices.Printers.IIppPrintDevice2.GetPdlPassthroughProvider() */
 HRESULT wdepr_ipp_print_device_2_get_pdl_passthrough_provider(WDEPR_IIppPrintDevice_2 *self, WDEPR_PdlPassthroughProvider** out);
 
-/* Windows.Devices.Printers.IIppPrintDevice3 */
-/* Windows.Devices.Printers.IIppPrintDevice3.get_IsIppFaxOutPrinter() */
 HRESULT wdepr_ipp_print_device_3_get__is_ipp_fax_out_printer(WDEPR_IIppPrintDevice_3 *self, BOOL *value);
 
-/* Windows.Devices.Printers.IIppPrintDevice4 */
-/* Windows.Devices.Printers.IIppPrintDevice4.get_DeviceKind() */
 HRESULT wdepr_ipp_print_device_4_get__device_kind(WDEPR_IIppPrintDevice_4 *self, WDEPR_IppPrintDeviceKind *value);
 
-/* Windows.Devices.Printers.IIppPrintDevice4.get_CanModifyUserDefaultPrintTicket() */
 HRESULT wdepr_ipp_print_device_4_get__can_modify_user_default_print_ticket(WDEPR_IIppPrintDevice_4 *self, BOOL *value);
 
-/* Windows.Devices.Printers.IIppPrintDevice4.get_UserDefaultPrintTicket() */
 HRESULT wdepr_ipp_print_device_4_get__user_default_print_ticket(WDEPR_IIppPrintDevice_4 *self, WGRPRPR_WorkflowPrintTicket** value);
 
-/* Windows.Devices.Printers.IIppPrintDevice4.put_UserDefaultPrintTicket() */
 HRESULT wdepr_ipp_print_device_4_put__user_default_print_ticket(WDEPR_IIppPrintDevice_4 *self, WGRPRPR_WorkflowPrintTicket* value);
 
-/* Windows.Devices.Printers.IIppPrintDevice4.RefreshPrintDeviceCapabilities() */
 HRESULT wdepr_ipp_print_device_4_refresh_print_device_capabilities(WDEPR_IIppPrintDevice_4 *self);
 
-/* Windows.Devices.Printers.IIppPrintDevice4.GetMaxSupportedPdlVersion(pdlContentType) */
 HRESULT wdepr_ipp_print_device_4_get_max_supported_pdl_version(WDEPR_IIppPrintDevice_4 *self, cwinrt_hstring pdlContentType, cwinrt_hstring *out);
 
-/* Windows.Devices.Printers.IIppPrintDevice5 */
-/* Windows.Devices.Printers.IIppPrintDevice5.GetDeviceProperties() */
 HRESULT wdepr_ipp_print_device_5_get_device_properties(WDEPR_IIppPrintDevice_5 *self, WFOCO_ValueSet** out);
 
-/* Windows.Devices.Printers.IIppPrintDevice5.ReplaceDeviceProperties(deviceProperties) */
 HRESULT wdepr_ipp_print_device_5_replace_device_properties(WDEPR_IIppPrintDevice_5 *self, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_Object* deviceProperties, WDEPR_ReplaceDevicePropertiesResult** out);
 
-/* Windows.Devices.Printers.IIppPrintDeviceInstallationResult */
 #endif /* CWINRT_WINDOWS_DEVICES_PRINTERS_H */

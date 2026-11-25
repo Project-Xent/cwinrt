@@ -13,13 +13,11 @@
 #include <cwinrt/Windows.Gaming.Input.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IInputStream
 #define CWINRT_FWD_WSTST_IInputStream
 typedef struct WSTST_IInputStream WSTST_IInputStream;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WGAINCU_GipFirmwareUpdateResult WGAINCU_GipFirmwareUpdateResult;
 typedef struct WGAINCU_GipGameControllerProvider WGAINCU_GipGameControllerProvider;
 typedef struct WGAINCU_HidGameControllerProvider WGAINCU_HidGameControllerProvider;
@@ -38,7 +36,6 @@ typedef struct WGAINCU_IXusbGameControllerProvider WGAINCU_IXusbGameControllerPr
 typedef struct WGAINCU_IGameControllerInputSink WGAINCU_IGameControllerInputSink;
 typedef struct WGAINCU_IGameControllerProvider WGAINCU_IGameControllerProvider;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSTST_IInputStream
 #define CWINRT_FWD_WSTST_IInputStream
 typedef struct WSTST_IInputStream WSTST_IInputStream;
@@ -121,7 +118,6 @@ struct WGAINCU_GipFirmwareUpdateProgress {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -174,185 +170,112 @@ static const IID CWINRT_IID_WGAINCU_IGameControllerInputSink CWINRT_MAYBE_UNUSED
 static const IID CWINRT_IID_WGAINCU_IGameControllerProvider CWINRT_MAYBE_UNUSED = { 0xE6D73982, 0x2996, 0x4559, { 0xB1, 0x6C, 0x3E, 0x57, 0xD4, 0x6E, 0x58, 0xD6 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Gaming.Input.Custom.GipFirmwareUpdateResult */
 HRESULT wgaincu_gip_firmware_update_result_new(WGAINCU_GipFirmwareUpdateResult **out);
 
-/* Windows.Gaming.Input.Custom.GipFirmwareUpdateResult */
-/* Windows.Gaming.Input.Custom.GipFirmwareUpdateResult.get_ExtendedErrorCode() */
 HRESULT wgaincu_gip_firmware_update_result_get__extended_error_code(WGAINCU_GipFirmwareUpdateResult *self, uint32_t *value);
 
-/* Windows.Gaming.Input.Custom.GipFirmwareUpdateResult.get_FinalComponentId() */
 HRESULT wgaincu_gip_firmware_update_result_get__final_component_id(WGAINCU_GipFirmwareUpdateResult *self, uint32_t *value);
 
-/* Windows.Gaming.Input.Custom.GipFirmwareUpdateResult.get_Status() */
 HRESULT wgaincu_gip_firmware_update_result_get__status(WGAINCU_GipFirmwareUpdateResult *self, WGAINCU_GipFirmwareUpdateStatus *value);
 
-/* activate Windows.Gaming.Input.Custom.GipGameControllerProvider */
 HRESULT wgaincu_gip_game_controller_provider_new(WGAINCU_GipGameControllerProvider **out);
 
-/* Windows.Gaming.Input.Custom.GipGameControllerProvider */
-/* Windows.Gaming.Input.Custom.GipGameControllerProvider.SendMessage(messageClass, messageId, messageBuffer) */
 HRESULT wgaincu_gip_game_controller_provider_send_message(WGAINCU_GipGameControllerProvider *self, WGAINCU_GipMessageClass messageClass, uint8_t messageId, uint8_t *messageBuffer, uint32_t messageBuffer_len);
 
-/* Windows.Gaming.Input.Custom.GipGameControllerProvider.SendReceiveMessage(messageClass, messageId, requestMessageBuffer, responseMessageBuffer) */
 HRESULT wgaincu_gip_game_controller_provider_send_receive_message(WGAINCU_GipGameControllerProvider *self, WGAINCU_GipMessageClass messageClass, uint8_t messageId, uint8_t *requestMessageBuffer, uint32_t requestMessageBuffer_len, uint8_t *responseMessageBuffer, uint32_t responseMessageBuffer_len);
 
-/* Windows.Gaming.Input.Custom.GipGameControllerProvider.UpdateFirmwareAsync(firmwareImage) */
 HRESULT wgaincu_gip_game_controller_provider_update_firmware_async(WGAINCU_GipGameControllerProvider *self, WSTST_IInputStream* firmwareImage, WF_IAsyncOperationWithProgress_WGAINCU_GipFirmwareUpdateResult_WGAINCU_GipFirmwareUpdateProgress** out);
 
-/* Windows.Gaming.Input.Custom.GipGameControllerProvider.get_FirmwareVersionInfo() */
 HRESULT wgaincu_gip_game_controller_provider_get__firmware_version_info(WGAINCU_GipGameControllerProvider *self, WGAINCU_GameControllerVersionInfo *value);
 
-/* Windows.Gaming.Input.Custom.GipGameControllerProvider.get_HardwareProductId() */
 HRESULT wgaincu_gip_game_controller_provider_get__hardware_product_id(WGAINCU_GipGameControllerProvider *self, uint16_t *value);
 
-/* Windows.Gaming.Input.Custom.GipGameControllerProvider.get_HardwareVendorId() */
 HRESULT wgaincu_gip_game_controller_provider_get__hardware_vendor_id(WGAINCU_GipGameControllerProvider *self, uint16_t *value);
 
-/* Windows.Gaming.Input.Custom.GipGameControllerProvider.get_HardwareVersionInfo() */
 HRESULT wgaincu_gip_game_controller_provider_get__hardware_version_info(WGAINCU_GipGameControllerProvider *self, WGAINCU_GameControllerVersionInfo *value);
 
-/* Windows.Gaming.Input.Custom.GipGameControllerProvider.get_IsConnected() */
 HRESULT wgaincu_gip_game_controller_provider_get__is_connected(WGAINCU_GipGameControllerProvider *self, BOOL *value);
 
-/* activate Windows.Gaming.Input.Custom.HidGameControllerProvider */
 HRESULT wgaincu_hid_game_controller_provider_new(WGAINCU_HidGameControllerProvider **out);
 
-/* Windows.Gaming.Input.Custom.HidGameControllerProvider */
-/* Windows.Gaming.Input.Custom.HidGameControllerProvider.get_UsageId() */
 HRESULT wgaincu_hid_game_controller_provider_get__usage_id(WGAINCU_HidGameControllerProvider *self, uint16_t *value);
 
-/* Windows.Gaming.Input.Custom.HidGameControllerProvider.get_UsagePage() */
 HRESULT wgaincu_hid_game_controller_provider_get__usage_page(WGAINCU_HidGameControllerProvider *self, uint16_t *value);
 
-/* Windows.Gaming.Input.Custom.HidGameControllerProvider.GetFeatureReport(reportId, reportBuffer) */
 HRESULT wgaincu_hid_game_controller_provider_get_feature_report(WGAINCU_HidGameControllerProvider *self, uint8_t reportId, uint8_t *reportBuffer, uint32_t reportBuffer_len);
 
-/* Windows.Gaming.Input.Custom.HidGameControllerProvider.SendFeatureReport(reportId, reportBuffer) */
 HRESULT wgaincu_hid_game_controller_provider_send_feature_report(WGAINCU_HidGameControllerProvider *self, uint8_t reportId, uint8_t *reportBuffer, uint32_t reportBuffer_len);
 
-/* Windows.Gaming.Input.Custom.HidGameControllerProvider.SendOutputReport(reportId, reportBuffer) */
 HRESULT wgaincu_hid_game_controller_provider_send_output_report(WGAINCU_HidGameControllerProvider *self, uint8_t reportId, uint8_t *reportBuffer, uint32_t reportBuffer_len);
 
-/* Windows.Gaming.Input.Custom.HidGameControllerProvider.get_FirmwareVersionInfo() */
 HRESULT wgaincu_hid_game_controller_provider_get__firmware_version_info(WGAINCU_HidGameControllerProvider *self, WGAINCU_GameControllerVersionInfo *value);
 
-/* Windows.Gaming.Input.Custom.HidGameControllerProvider.get_HardwareProductId() */
 HRESULT wgaincu_hid_game_controller_provider_get__hardware_product_id(WGAINCU_HidGameControllerProvider *self, uint16_t *value);
 
-/* Windows.Gaming.Input.Custom.HidGameControllerProvider.get_HardwareVendorId() */
 HRESULT wgaincu_hid_game_controller_provider_get__hardware_vendor_id(WGAINCU_HidGameControllerProvider *self, uint16_t *value);
 
-/* Windows.Gaming.Input.Custom.HidGameControllerProvider.get_HardwareVersionInfo() */
 HRESULT wgaincu_hid_game_controller_provider_get__hardware_version_info(WGAINCU_HidGameControllerProvider *self, WGAINCU_GameControllerVersionInfo *value);
 
-/* Windows.Gaming.Input.Custom.HidGameControllerProvider.get_IsConnected() */
 HRESULT wgaincu_hid_game_controller_provider_get__is_connected(WGAINCU_HidGameControllerProvider *self, BOOL *value);
 
-/* Windows.Gaming.Input.Custom.ICustomGameControllerFactory */
-/* Windows.Gaming.Input.Custom.ICustomGameControllerFactory.CreateGameController(provider) */
 HRESULT wgaincu_custom_game_controller_factory_create_game_controller(WGAINCU_ICustomGameControllerFactory *self, WGAINCU_IGameControllerProvider* provider, IInspectable** out);
 
-/* Windows.Gaming.Input.Custom.ICustomGameControllerFactory.OnGameControllerAdded() */
 HRESULT wgaincu_custom_game_controller_factory_handle_game_controller_added(WGAINCU_ICustomGameControllerFactory *self, WGAIN_IGameController* value);
 
-/* Windows.Gaming.Input.Custom.ICustomGameControllerFactory.OnGameControllerRemoved() */
 HRESULT wgaincu_custom_game_controller_factory_handle_game_controller_removed(WGAINCU_ICustomGameControllerFactory *self, WGAIN_IGameController* value);
 
-/* Windows.Gaming.Input.Custom.IGameControllerFactoryManagerStatics2 */
-/* Windows.Gaming.Input.Custom.IGameControllerFactoryManagerStatics2.TryGetFactoryControllerFromGameController(factory, gameController) */
 HRESULT wgaincu_game_controller_factory_manager_statics_2_try_get_factory_controller_from_game_controller(WGAINCU_IGameControllerFactoryManagerStatics_2 *self, WGAINCU_ICustomGameControllerFactory* factory, WGAIN_IGameController* gameController, WGAIN_IGameController** out);
 
-/* activate Windows.Gaming.Input.Custom.GameControllerFactoryManager */
 HRESULT wgaincu_game_controller_factory_manager_new(WGAINCU_GameControllerFactoryManager **out);
 
-/* Windows.Gaming.Input.Custom.GameControllerFactoryManager */
-/* Windows.Gaming.Input.Custom.GameControllerFactoryManager.TryGetFactoryControllerFromGameController(factory, gameController) */
 HRESULT wgaincu_game_controller_factory_manager_try_get_factory_controller_from_game_controller(WGAINCU_ICustomGameControllerFactory* factory, WGAIN_IGameController* gameController, WGAIN_IGameController** out);
 
-/* Windows.Gaming.Input.Custom.GameControllerFactoryManager.RegisterCustomFactoryForGipInterface(factory, interfaceId) */
 HRESULT wgaincu_game_controller_factory_manager_register_custom_factory_for_gip_interface(WGAINCU_ICustomGameControllerFactory* factory, GUID interfaceId);
 
-/* Windows.Gaming.Input.Custom.GameControllerFactoryManager.RegisterCustomFactoryForHardwareId(factory, hardwareVendorId, hardwareProductId) */
 HRESULT wgaincu_game_controller_factory_manager_register_custom_factory_for_hardware_id(WGAINCU_ICustomGameControllerFactory* factory, uint16_t hardwareVendorId, uint16_t hardwareProductId);
 
-/* Windows.Gaming.Input.Custom.GameControllerFactoryManager.RegisterCustomFactoryForXusbType(factory, xusbType, xusbSubtype) */
 HRESULT wgaincu_game_controller_factory_manager_register_custom_factory_for_xusb_type(WGAINCU_ICustomGameControllerFactory* factory, WGAINCU_XusbDeviceType xusbType, WGAINCU_XusbDeviceSubtype xusbSubtype);
 
-/* Windows.Gaming.Input.Custom.IGipGameControllerInputSink */
-/* Windows.Gaming.Input.Custom.IGipGameControllerInputSink.OnKeyReceived(timestamp, keyCode, isPressed) */
 HRESULT wgaincu_gip_game_controller_input_sink_handle_key_received(WGAINCU_IGipGameControllerInputSink *self, uint64_t timestamp, uint8_t keyCode, BOOL isPressed);
 
-/* Windows.Gaming.Input.Custom.IGipGameControllerInputSink.OnMessageReceived(timestamp, messageClass, messageId, sequenceId, messageBuffer) */
 HRESULT wgaincu_gip_game_controller_input_sink_handle_message_received(WGAINCU_IGipGameControllerInputSink *self, uint64_t timestamp, WGAINCU_GipMessageClass messageClass, uint8_t messageId, uint8_t sequenceId, uint8_t *messageBuffer, uint32_t messageBuffer_len);
 
-/* Windows.Gaming.Input.Custom.IHidGameControllerInputSink */
-/* Windows.Gaming.Input.Custom.IHidGameControllerInputSink.OnInputReportReceived(timestamp, reportId, reportBuffer) */
 HRESULT wgaincu_hid_game_controller_input_sink_handle_input_report_received(WGAINCU_IHidGameControllerInputSink *self, uint64_t timestamp, uint8_t reportId, uint8_t *reportBuffer, uint32_t reportBuffer_len);
 
-/* activate Windows.Gaming.Input.Custom.XusbGameControllerProvider */
 HRESULT wgaincu_xusb_game_controller_provider_new(WGAINCU_XusbGameControllerProvider **out);
 
-/* Windows.Gaming.Input.Custom.XusbGameControllerProvider */
-/* Windows.Gaming.Input.Custom.XusbGameControllerProvider.SetVibration(lowFrequencyMotorSpeed, highFrequencyMotorSpeed) */
 HRESULT wgaincu_xusb_game_controller_provider_set_vibration(WGAINCU_XusbGameControllerProvider *self, double lowFrequencyMotorSpeed, double highFrequencyMotorSpeed);
 
-/* Windows.Gaming.Input.Custom.XusbGameControllerProvider.get_FirmwareVersionInfo() */
 HRESULT wgaincu_xusb_game_controller_provider_get__firmware_version_info(WGAINCU_XusbGameControllerProvider *self, WGAINCU_GameControllerVersionInfo *value);
 
-/* Windows.Gaming.Input.Custom.XusbGameControllerProvider.get_HardwareProductId() */
 HRESULT wgaincu_xusb_game_controller_provider_get__hardware_product_id(WGAINCU_XusbGameControllerProvider *self, uint16_t *value);
 
-/* Windows.Gaming.Input.Custom.XusbGameControllerProvider.get_HardwareVendorId() */
 HRESULT wgaincu_xusb_game_controller_provider_get__hardware_vendor_id(WGAINCU_XusbGameControllerProvider *self, uint16_t *value);
 
-/* Windows.Gaming.Input.Custom.XusbGameControllerProvider.get_HardwareVersionInfo() */
 HRESULT wgaincu_xusb_game_controller_provider_get__hardware_version_info(WGAINCU_XusbGameControllerProvider *self, WGAINCU_GameControllerVersionInfo *value);
 
-/* Windows.Gaming.Input.Custom.XusbGameControllerProvider.get_IsConnected() */
 HRESULT wgaincu_xusb_game_controller_provider_get__is_connected(WGAINCU_XusbGameControllerProvider *self, BOOL *value);
 
-/* Windows.Gaming.Input.Custom.IXusbGameControllerInputSink */
-/* Windows.Gaming.Input.Custom.IXusbGameControllerInputSink.OnInputReceived(timestamp, reportId, inputBuffer) */
 HRESULT wgaincu_xusb_game_controller_input_sink_handle_input_received(WGAINCU_IXusbGameControllerInputSink *self, uint64_t timestamp, uint8_t reportId, uint8_t *inputBuffer, uint32_t inputBuffer_len);
 
-/* Windows.Gaming.Input.Custom.IGipFirmwareUpdateResult */
-/* Windows.Gaming.Input.Custom.IGipGameControllerProvider */
-/* Windows.Gaming.Input.Custom.IHidGameControllerProvider */
-/* Windows.Gaming.Input.Custom.IGameControllerFactoryManagerStatics */
-/* Windows.Gaming.Input.Custom.IGameControllerFactoryManagerStatics.RegisterCustomFactoryForGipInterface(factory, interfaceId) */
 HRESULT wgaincu_game_controller_factory_manager_statics_register_custom_factory_for_gip_interface(WGAINCU_IGameControllerFactoryManagerStatics *self, WGAINCU_ICustomGameControllerFactory* factory, GUID interfaceId);
 
-/* Windows.Gaming.Input.Custom.IGameControllerFactoryManagerStatics.RegisterCustomFactoryForHardwareId(factory, hardwareVendorId, hardwareProductId) */
 HRESULT wgaincu_game_controller_factory_manager_statics_register_custom_factory_for_hardware_id(WGAINCU_IGameControllerFactoryManagerStatics *self, WGAINCU_ICustomGameControllerFactory* factory, uint16_t hardwareVendorId, uint16_t hardwareProductId);
 
-/* Windows.Gaming.Input.Custom.IGameControllerFactoryManagerStatics.RegisterCustomFactoryForXusbType(factory, xusbType, xusbSubtype) */
 HRESULT wgaincu_game_controller_factory_manager_statics_register_custom_factory_for_xusb_type(WGAINCU_IGameControllerFactoryManagerStatics *self, WGAINCU_ICustomGameControllerFactory* factory, WGAINCU_XusbDeviceType xusbType, WGAINCU_XusbDeviceSubtype xusbSubtype);
 
-/* Windows.Gaming.Input.Custom.IXusbGameControllerProvider */
-/* Windows.Gaming.Input.Custom.IGameControllerInputSink */
-/* Windows.Gaming.Input.Custom.IGameControllerInputSink.OnInputResumed(timestamp) */
 HRESULT wgaincu_game_controller_input_sink_handle_input_resumed(WGAINCU_IGameControllerInputSink *self, uint64_t timestamp);
 
-/* Windows.Gaming.Input.Custom.IGameControllerInputSink.OnInputSuspended(timestamp) */
 HRESULT wgaincu_game_controller_input_sink_handle_input_suspended(WGAINCU_IGameControllerInputSink *self, uint64_t timestamp);
 
-/* Windows.Gaming.Input.Custom.IGameControllerProvider */
-/* Windows.Gaming.Input.Custom.IGameControllerProvider.get_FirmwareVersionInfo() */
 HRESULT wgaincu_game_controller_provider_get__firmware_version_info(WGAINCU_IGameControllerProvider *self, WGAINCU_GameControllerVersionInfo *value);
 
-/* Windows.Gaming.Input.Custom.IGameControllerProvider.get_HardwareProductId() */
 HRESULT wgaincu_game_controller_provider_get__hardware_product_id(WGAINCU_IGameControllerProvider *self, uint16_t *value);
 
-/* Windows.Gaming.Input.Custom.IGameControllerProvider.get_HardwareVendorId() */
 HRESULT wgaincu_game_controller_provider_get__hardware_vendor_id(WGAINCU_IGameControllerProvider *self, uint16_t *value);
 
-/* Windows.Gaming.Input.Custom.IGameControllerProvider.get_HardwareVersionInfo() */
 HRESULT wgaincu_game_controller_provider_get__hardware_version_info(WGAINCU_IGameControllerProvider *self, WGAINCU_GameControllerVersionInfo *value);
 
-/* Windows.Gaming.Input.Custom.IGameControllerProvider.get_IsConnected() */
 HRESULT wgaincu_game_controller_provider_get__is_connected(WGAINCU_IGameControllerProvider *self, BOOL *value);
 
 #endif /* CWINRT_WINDOWS_GAMING_INPUT_CUSTOM_H */

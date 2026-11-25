@@ -12,18 +12,15 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WSYIN_InstalledDesktopApp WSYIN_InstalledDesktopApp;
 typedef struct WSYIN_IInstalledDesktopAppStatics WSYIN_IInstalledDesktopAppStatics;
 typedef struct WSYIN_IInstalledDesktopApp WSYIN_IInstalledDesktopApp;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WFOCO_IVectorView_WSYIN_InstalledDesktopApp
 #define CWINRT_FWD_WF_IAsyncOperation_WFOCO_IVectorView_WSYIN_InstalledDesktopApp
 typedef struct WF_IAsyncOperation_WFOCO_IVectorView_WSYIN_InstalledDesktopApp WF_IAsyncOperation_WFOCO_IVectorView_WSYIN_InstalledDesktopApp;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -36,33 +33,20 @@ static const IID CWINRT_IID_WSYIN_IInstalledDesktopAppStatics CWINRT_MAYBE_UNUSE
 static const IID CWINRT_IID_WSYIN_IInstalledDesktopApp CWINRT_MAYBE_UNUSED = { 0x75EAB8ED, 0xC0BC, 0x5364, { 0x4C, 0x28, 0x16, 0x6E, 0x05, 0x45, 0x16, 0x7A } };
 #endif
 
-/* Methods */
-
-/* activate Windows.System.Inventory.InstalledDesktopApp */
 HRESULT wsyin_installed_desktop_app_new(WSYIN_InstalledDesktopApp **out);
 
-/* Windows.System.Inventory.InstalledDesktopApp */
-/* Windows.System.Inventory.InstalledDesktopApp.get_Id() */
 HRESULT wsyin_installed_desktop_app_get__id(WSYIN_InstalledDesktopApp *self, cwinrt_hstring *value);
 
-/* Windows.System.Inventory.InstalledDesktopApp.get_DisplayName() */
 HRESULT wsyin_installed_desktop_app_get__display_name(WSYIN_InstalledDesktopApp *self, cwinrt_hstring *value);
 
-/* Windows.System.Inventory.InstalledDesktopApp.get_Publisher() */
 HRESULT wsyin_installed_desktop_app_get__publisher(WSYIN_InstalledDesktopApp *self, cwinrt_hstring *value);
 
-/* Windows.System.Inventory.InstalledDesktopApp.get_DisplayVersion() */
 HRESULT wsyin_installed_desktop_app_get__display_version(WSYIN_InstalledDesktopApp *self, cwinrt_hstring *value);
 
-/* Windows.System.Inventory.InstalledDesktopApp.ToString() */
 HRESULT wsyin_installed_desktop_app_to_string(WSYIN_InstalledDesktopApp *self, cwinrt_hstring *out);
 
-/* Windows.System.Inventory.InstalledDesktopApp.GetInventoryAsync() */
 HRESULT wsyin_installed_desktop_app_get_inventory_async(WF_IAsyncOperation_WFOCO_IVectorView_WSYIN_InstalledDesktopApp** out);
 
-/* Windows.System.Inventory.IInstalledDesktopAppStatics */
-/* Windows.System.Inventory.IInstalledDesktopAppStatics.GetInventoryAsync() */
 HRESULT wsyin_installed_desktop_app_statics_get_inventory_async(WSYIN_IInstalledDesktopAppStatics *self, WF_IAsyncOperation_WFOCO_IVectorView_WSYIN_InstalledDesktopApp** out);
 
-/* Windows.System.Inventory.IInstalledDesktopApp */
 #endif /* CWINRT_WINDOWS_SYSTEM_INVENTORY_H */

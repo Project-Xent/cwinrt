@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WDESECU_ICustomSensorStatics WDESECU_ICustomSensorStatics;
 typedef struct WDESECU_CustomSensorReadingChangedEventArgs WDESECU_CustomSensorReadingChangedEventArgs;
 typedef struct WDESECU_CustomSensorReading WDESECU_CustomSensorReading;
@@ -23,7 +22,6 @@ typedef struct WDESECU_ICustomSensorReading_2 WDESECU_ICustomSensorReading_2;
 typedef struct WDESECU_ICustomSensor WDESECU_ICustomSensor;
 typedef struct WDESECU_ICustomSensor_2 WDESECU_ICustomSensor_2;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WDESECU_CustomSensor
 #define CWINRT_FWD_WF_IAsyncOperation_WDESECU_CustomSensor
 typedef struct WF_IAsyncOperation_WDESECU_CustomSensor WF_IAsyncOperation_WDESECU_CustomSensor;
@@ -45,7 +43,6 @@ typedef struct WF_TimeSpan WF_TimeSpan;
 typedef struct WF_TypedEventHandler_WDESECU_CustomSensor_WDESECU_CustomSensorReadingChangedEventArgs WF_TypedEventHandler_WDESECU_CustomSensor_WDESECU_CustomSensorReadingChangedEventArgs;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -74,90 +71,55 @@ static const IID CWINRT_IID_WDESECU_ICustomSensor CWINRT_MAYBE_UNUSED = { 0xA136
 static const IID CWINRT_IID_WDESECU_ICustomSensor_2 CWINRT_MAYBE_UNUSED = { 0x20DB3111, 0xEC58, 0x4D9F, { 0xBF, 0xBD, 0xE7, 0x78, 0x25, 0x08, 0x85, 0x10 } };
 #endif
 
-/* Methods */
-
-/* Windows.Devices.Sensors.Custom.ICustomSensorStatics */
-/* Windows.Devices.Sensors.Custom.ICustomSensorStatics.GetDeviceSelector(interfaceId) */
 HRESULT wdesecu_custom_sensor_statics_get_device_selector(WDESECU_ICustomSensorStatics *self, GUID interfaceId, cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.Custom.ICustomSensorStatics.FromIdAsync(sensorId) */
 HRESULT wdesecu_custom_sensor_statics_from_id_async(WDESECU_ICustomSensorStatics *self, cwinrt_hstring sensorId, WF_IAsyncOperation_WDESECU_CustomSensor** out);
 
-/* activate Windows.Devices.Sensors.Custom.CustomSensorReadingChangedEventArgs */
 HRESULT wdesecu_custom_sensor_reading_changed_event_args_new(WDESECU_CustomSensorReadingChangedEventArgs **out);
 
-/* Windows.Devices.Sensors.Custom.CustomSensorReadingChangedEventArgs */
-/* Windows.Devices.Sensors.Custom.CustomSensorReadingChangedEventArgs.get_Reading() */
 HRESULT wdesecu_custom_sensor_reading_changed_event_args_get__reading(WDESECU_CustomSensorReadingChangedEventArgs *self, WDESECU_CustomSensorReading** value);
 
-/* activate Windows.Devices.Sensors.Custom.CustomSensorReading */
 HRESULT wdesecu_custom_sensor_reading_new(WDESECU_CustomSensorReading **out);
 
-/* Windows.Devices.Sensors.Custom.CustomSensorReading */
-/* Windows.Devices.Sensors.Custom.CustomSensorReading.get_Timestamp() */
 HRESULT wdesecu_custom_sensor_reading_get__timestamp(WDESECU_CustomSensorReading *self, WF_DateTime *value);
 
-/* Windows.Devices.Sensors.Custom.CustomSensorReading.get_Properties() */
 HRESULT wdesecu_custom_sensor_reading_get__properties(WDESECU_CustomSensorReading *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* Windows.Devices.Sensors.Custom.CustomSensorReading.get_PerformanceCount() */
 HRESULT wdesecu_custom_sensor_reading_get__performance_count(WDESECU_CustomSensorReading *self, WF_TimeSpan** value);
 
-/* activate Windows.Devices.Sensors.Custom.CustomSensor */
 HRESULT wdesecu_custom_sensor_new(WDESECU_CustomSensor **out);
 
-/* Windows.Devices.Sensors.Custom.CustomSensor */
-/* Windows.Devices.Sensors.Custom.CustomSensor.GetCurrentReading() */
 HRESULT wdesecu_custom_sensor_get_current_reading(WDESECU_CustomSensor *self, WDESECU_CustomSensorReading** out);
 
-/* Windows.Devices.Sensors.Custom.CustomSensor.get_MinimumReportInterval() */
 HRESULT wdesecu_custom_sensor_get__minimum_report_interval(WDESECU_CustomSensor *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Custom.CustomSensor.put_ReportInterval() */
 HRESULT wdesecu_custom_sensor_put__report_interval(WDESECU_CustomSensor *self, uint32_t value);
 
-/* Windows.Devices.Sensors.Custom.CustomSensor.get_ReportInterval() */
 HRESULT wdesecu_custom_sensor_get__report_interval(WDESECU_CustomSensor *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Custom.CustomSensor.get_DeviceId() */
 HRESULT wdesecu_custom_sensor_get__device_id(WDESECU_CustomSensor *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sensors.Custom.CustomSensor.put_ReportLatency() */
 HRESULT wdesecu_custom_sensor_put__report_latency(WDESECU_CustomSensor *self, uint32_t value);
 
-/* Windows.Devices.Sensors.Custom.CustomSensor.get_ReportLatency() */
 HRESULT wdesecu_custom_sensor_get__report_latency(WDESECU_CustomSensor *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Custom.CustomSensor.get_MaxBatchSize() */
 HRESULT wdesecu_custom_sensor_get__max_batch_size(WDESECU_CustomSensor *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Custom.CustomSensor.GetDeviceSelector(interfaceId) */
 HRESULT wdesecu_custom_sensor_get_device_selector(GUID interfaceId, cwinrt_hstring *out);
 
-/* Windows.Devices.Sensors.Custom.CustomSensor.FromIdAsync(sensorId) */
 HRESULT wdesecu_custom_sensor_from_id_async(cwinrt_hstring sensorId, WF_IAsyncOperation_WDESECU_CustomSensor** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdesecu_custom_sensor_on_reading_changed(WDESECU_CustomSensor *self, cwinrt_event_fn fn, void *ctx);
 void wdesecu_custom_sensor_off_reading_changed(WDESECU_CustomSensor *self, cwinrt_token token);
 
-/* Windows.Devices.Sensors.Custom.ICustomSensorReadingChangedEventArgs */
-/* Windows.Devices.Sensors.Custom.ICustomSensorReading */
-/* Windows.Devices.Sensors.Custom.ICustomSensorReading2 */
-/* Windows.Devices.Sensors.Custom.ICustomSensorReading2.get_PerformanceCount() */
 HRESULT wdesecu_custom_sensor_reading_2_get__performance_count(WDESECU_ICustomSensorReading_2 *self, WF_TimeSpan** value);
 
-/* Windows.Devices.Sensors.Custom.ICustomSensor */
-/* Windows.Devices.Sensors.Custom.ICustomSensor2 */
-/* Windows.Devices.Sensors.Custom.ICustomSensor2.put_ReportLatency() */
 HRESULT wdesecu_custom_sensor_2_put__report_latency(WDESECU_ICustomSensor_2 *self, uint32_t value);
 
-/* Windows.Devices.Sensors.Custom.ICustomSensor2.get_ReportLatency() */
 HRESULT wdesecu_custom_sensor_2_get__report_latency(WDESECU_ICustomSensor_2 *self, uint32_t *value);
 
-/* Windows.Devices.Sensors.Custom.ICustomSensor2.get_MaxBatchSize() */
 HRESULT wdesecu_custom_sensor_2_get__max_batch_size(WDESECU_ICustomSensor_2 *self, uint32_t *value);
 
 #endif /* CWINRT_WINDOWS_DEVICES_SENSORS_CUSTOM_H */

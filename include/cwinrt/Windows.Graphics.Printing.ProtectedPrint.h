@@ -12,11 +12,9 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WGRPRPR_IWindowsProtectedPrintInfoStatics WGRPRPR_IWindowsProtectedPrintInfoStatics;
 typedef struct WGRPRPR_WindowsProtectedPrintInfo WGRPRPR_WindowsProtectedPrintInfo;
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -25,17 +23,10 @@ typedef struct WGRPRPR_WindowsProtectedPrintInfo WGRPRPR_WindowsProtectedPrintIn
 static const IID CWINRT_IID_WGRPRPR_IWindowsProtectedPrintInfoStatics CWINRT_MAYBE_UNUSED = { 0xA7D212F3, 0x4168, 0x5485, { 0x98, 0xAB, 0xD8, 0x9D, 0x04, 0x60, 0x3B, 0x40 } };
 #endif
 
-/* Methods */
-
-/* Windows.Graphics.Printing.ProtectedPrint.IWindowsProtectedPrintInfoStatics */
-/* Windows.Graphics.Printing.ProtectedPrint.IWindowsProtectedPrintInfoStatics.get_IsProtectedPrintEnabled() */
 HRESULT wgrprpr_windows_protected_print_info_statics_get__is_protected_print_enabled(WGRPRPR_IWindowsProtectedPrintInfoStatics *self, BOOL *value);
 
-/* activate Windows.Graphics.Printing.ProtectedPrint.WindowsProtectedPrintInfo */
 HRESULT wgrprpr_windows_protected_print_info_new(WGRPRPR_WindowsProtectedPrintInfo **out);
 
-/* Windows.Graphics.Printing.ProtectedPrint.WindowsProtectedPrintInfo */
-/* Windows.Graphics.Printing.ProtectedPrint.WindowsProtectedPrintInfo.get_IsProtectedPrintEnabled() */
 HRESULT wgrprpr_windows_protected_print_info_get__is_protected_print_enabled(BOOL *value);
 
 #endif /* CWINRT_WINDOWS_GRAPHICS_PRINTING_PROTECTEDPRINT_H */

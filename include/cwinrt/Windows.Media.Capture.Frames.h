@@ -16,7 +16,6 @@
 #include <cwinrt/Windows.Graphics.DirectX.Direct3D11.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WMEME_AudioEncodingProperties
 #define CWINRT_FWD_WMEME_AudioEncodingProperties
 typedef struct WMEME_AudioEncodingProperties WMEME_AudioEncodingProperties;
@@ -71,7 +70,6 @@ typedef enum WDEEN_Panel {
 typedef struct WUIWI_DisplayRegion WUIWI_DisplayRegion;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMECAFR_MultiSourceMediaFrameArrivedEventArgs WMECAFR_MultiSourceMediaFrameArrivedEventArgs;
 typedef struct WMECAFR_MediaFrameSourceInfo WMECAFR_MediaFrameSourceInfo;
 typedef struct WMECAFR_MediaFrameSourceGroup WMECAFR_MediaFrameSourceGroup;
@@ -122,7 +120,6 @@ typedef struct WMECAFR_IMediaFrameReference_2 WMECAFR_IMediaFrameReference_2;
 typedef struct WMECAFR_IMediaFrameSource WMECAFR_IMediaFrameSource;
 typedef struct WMECAFR_IVideoMediaFrameFormat WMECAFR_IVideoMediaFrameFormat;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WMECA_MediaStreamType
 #define CWINRT_FWD_WMECA_MediaStreamType
 typedef enum WMECA_MediaStreamType {
@@ -331,7 +328,6 @@ typedef enum WMECAFR_MediaFrameReaderStartStatus {
 } WMECAFR_MediaFrameReaderStartStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -456,441 +452,267 @@ static const IID CWINRT_IID_WMECAFR_IMediaFrameSource CWINRT_MAYBE_UNUSED = { 0x
 static const IID CWINRT_IID_WMECAFR_IVideoMediaFrameFormat CWINRT_MAYBE_UNUSED = { 0x46027FC0, 0xD71B, 0x45C7, { 0x8F, 0x14, 0x6D, 0x9A, 0x0A, 0xE6, 0x04, 0xE4 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Media.Capture.Frames.MediaFrameSourceInfo */
 HRESULT wmecafr_media_frame_source_info_new(WMECAFR_MediaFrameSourceInfo **out);
 
-/* Windows.Media.Capture.Frames.MediaFrameSourceInfo */
-/* Windows.Media.Capture.Frames.MediaFrameSourceInfo.get_Id() */
 HRESULT wmecafr_media_frame_source_info_get__id(WMECAFR_MediaFrameSourceInfo *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.Frames.MediaFrameSourceInfo.get_MediaStreamType() */
 HRESULT wmecafr_media_frame_source_info_get__media_stream_type(WMECAFR_MediaFrameSourceInfo *self, WMECA_MediaStreamType *value);
 
-/* Windows.Media.Capture.Frames.MediaFrameSourceInfo.get_SourceKind() */
 HRESULT wmecafr_media_frame_source_info_get__source_kind(WMECAFR_MediaFrameSourceInfo *self, WMECAFR_MediaFrameSourceKind *value);
 
-/* Windows.Media.Capture.Frames.MediaFrameSourceInfo.get_SourceGroup() */
 HRESULT wmecafr_media_frame_source_info_get__source_group(WMECAFR_MediaFrameSourceInfo *self, WMECAFR_MediaFrameSourceGroup** value);
 
-/* Windows.Media.Capture.Frames.MediaFrameSourceInfo.get_DeviceInformation() */
 HRESULT wmecafr_media_frame_source_info_get__device_information(WMECAFR_MediaFrameSourceInfo *self, WDEEN_DeviceInformation** value);
 
-/* Windows.Media.Capture.Frames.MediaFrameSourceInfo.get_Properties() */
 HRESULT wmecafr_media_frame_source_info_get__properties(WMECAFR_MediaFrameSourceInfo *self, WFOCO_IMapView_Guid_Object** value);
 
-/* Windows.Media.Capture.Frames.MediaFrameSourceInfo.get_CoordinateSystem() */
 HRESULT wmecafr_media_frame_source_info_get__coordinate_system(WMECAFR_MediaFrameSourceInfo *self, WPESP_SpatialCoordinateSystem** value);
 
-/* Windows.Media.Capture.Frames.MediaFrameSourceInfo.get_ProfileId() */
 HRESULT wmecafr_media_frame_source_info_get__profile_id(WMECAFR_MediaFrameSourceInfo *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.Frames.MediaFrameSourceInfo.get_VideoProfileMediaDescription() */
 HRESULT wmecafr_media_frame_source_info_get__video_profile_media_description(WMECAFR_MediaFrameSourceInfo *self, WFOCO_IVectorView_WMECA_MediaCaptureVideoProfileMediaDescription** value);
 
-/* Windows.Media.Capture.Frames.MediaFrameSourceInfo.GetRelativePanel(displayRegion) */
 HRESULT wmecafr_media_frame_source_info_get_relative_panel(WMECAFR_MediaFrameSourceInfo *self, WUIWI_DisplayRegion* displayRegion, WDEEN_Panel *out);
 
-/* Windows.Media.Capture.Frames.MediaFrameSourceInfo.get_IsShareable() */
 HRESULT wmecafr_media_frame_source_info_get__is_shareable(WMECAFR_MediaFrameSourceInfo *self, BOOL *value);
 
-/* activate Windows.Media.Capture.Frames.MediaFrameSourceGroup */
 HRESULT wmecafr_media_frame_source_group_new(WMECAFR_MediaFrameSourceGroup **out);
 
-/* Windows.Media.Capture.Frames.MediaFrameSourceGroup */
-/* Windows.Media.Capture.Frames.MediaFrameSourceGroup.get_Id() */
 HRESULT wmecafr_media_frame_source_group_get__id(WMECAFR_MediaFrameSourceGroup *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.Frames.MediaFrameSourceGroup.get_DisplayName() */
 HRESULT wmecafr_media_frame_source_group_get__display_name(WMECAFR_MediaFrameSourceGroup *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.Frames.MediaFrameSourceGroup.get_SourceInfos() */
 HRESULT wmecafr_media_frame_source_group_get__source_infos(WMECAFR_MediaFrameSourceGroup *self, WFOCO_IVectorView_WMECAFR_MediaFrameSourceInfo** value);
 
-/* Windows.Media.Capture.Frames.MediaFrameSourceGroup.FindAllAsync() */
 HRESULT wmecafr_media_frame_source_group_find_all_async(WF_IAsyncOperation_WFOCO_IVectorView_WMECAFR_MediaFrameSourceGroup** out);
 
-/* Windows.Media.Capture.Frames.MediaFrameSourceGroup.FromIdAsync(id) */
 HRESULT wmecafr_media_frame_source_group_from_id_async(cwinrt_hstring id, WF_IAsyncOperation_WMECAFR_MediaFrameSourceGroup** out);
 
-/* Windows.Media.Capture.Frames.MediaFrameSourceGroup.GetDeviceSelector() */
 HRESULT wmecafr_media_frame_source_group_get_device_selector(cwinrt_hstring *out);
 
-/* activate Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult */
 HRESULT wmecafr_media_frame_source_get_property_result_new(WMECAFR_MediaFrameSourceGetPropertyResult **out);
 
-/* Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult */
-/* Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult.get_Status() */
 HRESULT wmecafr_media_frame_source_get_property_result_get__status(WMECAFR_MediaFrameSourceGetPropertyResult *self, WMECAFR_MediaFrameSourceGetPropertyStatus *value);
 
-/* Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult.get_Value() */
 HRESULT wmecafr_media_frame_source_get_property_result_get__value(WMECAFR_MediaFrameSourceGetPropertyResult *self, IInspectable** value);
 
-/* activate Windows.Media.Capture.Frames.MediaFrameSourceController */
 HRESULT wmecafr_media_frame_source_controller_new(WMECAFR_MediaFrameSourceController **out);
 
-/* Windows.Media.Capture.Frames.MediaFrameSourceController */
-/* Windows.Media.Capture.Frames.MediaFrameSourceController.GetPropertyAsync(propertyId) */
 HRESULT wmecafr_media_frame_source_controller_get_property_async(WMECAFR_MediaFrameSourceController *self, cwinrt_hstring propertyId, WF_IAsyncOperation_WMECAFR_MediaFrameSourceGetPropertyResult** out);
 
-/* Windows.Media.Capture.Frames.MediaFrameSourceController.SetPropertyAsync(propertyId, propertyValue) */
 HRESULT wmecafr_media_frame_source_controller_set_property_async(WMECAFR_MediaFrameSourceController *self, cwinrt_hstring propertyId, IInspectable* propertyValue, WF_IAsyncOperation_WMECAFR_MediaFrameSourceSetPropertyStatus** out);
 
-/* Windows.Media.Capture.Frames.MediaFrameSourceController.get_VideoDeviceController() */
 HRESULT wmecafr_media_frame_source_controller_get__video_device_controller(WMECAFR_MediaFrameSourceController *self, WMEDE_VideoDeviceController** value);
 
-/* Windows.Media.Capture.Frames.MediaFrameSourceController.GetPropertyByExtendedIdAsync(extendedPropertyId, maxPropertyValueSize) */
 HRESULT wmecafr_media_frame_source_controller_get_property_by_extended_id_async(WMECAFR_MediaFrameSourceController *self, uint8_t *extendedPropertyId, uint32_t extendedPropertyId_len, uint32_t* maxPropertyValueSize, WF_IAsyncOperation_WMECAFR_MediaFrameSourceGetPropertyResult** out);
 
-/* Windows.Media.Capture.Frames.MediaFrameSourceController.SetPropertyByExtendedIdAsync(extendedPropertyId, propertyValue) */
 HRESULT wmecafr_media_frame_source_controller_set_property_by_extended_id_async(WMECAFR_MediaFrameSourceController *self, uint8_t *extendedPropertyId, uint32_t extendedPropertyId_len, uint8_t *propertyValue, uint32_t propertyValue_len, WF_IAsyncOperation_WMECAFR_MediaFrameSourceSetPropertyStatus** out);
 
-/* Windows.Media.Capture.Frames.MediaFrameSourceController.get_AudioDeviceController() */
 HRESULT wmecafr_media_frame_source_controller_get__audio_device_controller(WMECAFR_MediaFrameSourceController *self, WMEDE_AudioDeviceController** value);
 
-/* activate Windows.Media.Capture.Frames.MultiSourceMediaFrameReader */
 HRESULT wmecafr_multi_source_media_frame_reader_new(WMECAFR_MultiSourceMediaFrameReader **out);
 
-/* Windows.Media.Capture.Frames.MultiSourceMediaFrameReader */
-/* Windows.Media.Capture.Frames.MultiSourceMediaFrameReader.TryAcquireLatestFrame() */
 HRESULT wmecafr_multi_source_media_frame_reader_try_acquire_latest_frame(WMECAFR_MultiSourceMediaFrameReader *self, WMECAFR_MultiSourceMediaFrameReference** out);
 
-/* Windows.Media.Capture.Frames.MultiSourceMediaFrameReader.StartAsync() */
 HRESULT wmecafr_multi_source_media_frame_reader_start_async(WMECAFR_MultiSourceMediaFrameReader *self, WF_IAsyncOperation_WMECAFR_MultiSourceMediaFrameReaderStartStatus** out);
 
-/* Windows.Media.Capture.Frames.MultiSourceMediaFrameReader.StopAsync() */
 HRESULT wmecafr_multi_source_media_frame_reader_stop_async(WMECAFR_MultiSourceMediaFrameReader *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.Frames.MultiSourceMediaFrameReader.Close() */
 HRESULT wmecafr_multi_source_media_frame_reader_close(WMECAFR_MultiSourceMediaFrameReader *self);
 
-/* Windows.Media.Capture.Frames.MultiSourceMediaFrameReader.put_AcquisitionMode() */
 HRESULT wmecafr_multi_source_media_frame_reader_put__acquisition_mode(WMECAFR_MultiSourceMediaFrameReader *self, WMECAFR_MediaFrameReaderAcquisitionMode value);
 
-/* Windows.Media.Capture.Frames.MultiSourceMediaFrameReader.get_AcquisitionMode() */
 HRESULT wmecafr_multi_source_media_frame_reader_get__acquisition_mode(WMECAFR_MultiSourceMediaFrameReader *self, WMECAFR_MediaFrameReaderAcquisitionMode *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmecafr_multi_source_media_frame_reader_on_frame_arrived(WMECAFR_MultiSourceMediaFrameReader *self, cwinrt_event_fn fn, void *ctx);
 void wmecafr_multi_source_media_frame_reader_off_frame_arrived(WMECAFR_MultiSourceMediaFrameReader *self, cwinrt_token token);
 
-/* activate Windows.Media.Capture.Frames.DepthMediaFrameFormat */
 HRESULT wmecafr_depth_media_frame_format_new(WMECAFR_DepthMediaFrameFormat **out);
 
-/* Windows.Media.Capture.Frames.DepthMediaFrameFormat */
-/* Windows.Media.Capture.Frames.DepthMediaFrameFormat.get_VideoFormat() */
 HRESULT wmecafr_depth_media_frame_format_get__video_format(WMECAFR_DepthMediaFrameFormat *self, WMECAFR_VideoMediaFrameFormat** value);
 
-/* Windows.Media.Capture.Frames.DepthMediaFrameFormat.get_DepthScaleInMeters() */
 HRESULT wmecafr_depth_media_frame_format_get__depth_scale_in_meters(WMECAFR_DepthMediaFrameFormat *self, double *value);
 
-/* activate Windows.Media.Capture.Frames.DepthMediaFrame */
 HRESULT wmecafr_depth_media_frame_new(WMECAFR_DepthMediaFrame **out);
 
-/* Windows.Media.Capture.Frames.DepthMediaFrame */
-/* Windows.Media.Capture.Frames.DepthMediaFrame.get_FrameReference() */
 HRESULT wmecafr_depth_media_frame_get__frame_reference(WMECAFR_DepthMediaFrame *self, WMECAFR_MediaFrameReference** value);
 
-/* Windows.Media.Capture.Frames.DepthMediaFrame.get_VideoMediaFrame() */
 HRESULT wmecafr_depth_media_frame_get__video_media_frame(WMECAFR_DepthMediaFrame *self, WMECAFR_VideoMediaFrame** value);
 
-/* Windows.Media.Capture.Frames.DepthMediaFrame.get_DepthFormat() */
 HRESULT wmecafr_depth_media_frame_get__depth_format(WMECAFR_DepthMediaFrame *self, WMECAFR_DepthMediaFrameFormat** value);
 
-/* Windows.Media.Capture.Frames.DepthMediaFrame.TryCreateCoordinateMapper(cameraIntrinsics, coordinateSystem) */
 HRESULT wmecafr_depth_media_frame_try_create_coordinate_mapper(WMECAFR_DepthMediaFrame *self, WMEDECO_CameraIntrinsics* cameraIntrinsics, WPESP_SpatialCoordinateSystem* coordinateSystem, WMEDECO_DepthCorrelatedCoordinateMapper** out);
 
-/* Windows.Media.Capture.Frames.DepthMediaFrame.get_MaxReliableDepth() */
 HRESULT wmecafr_depth_media_frame_get__max_reliable_depth(WMECAFR_DepthMediaFrame *self, uint32_t *value);
 
-/* Windows.Media.Capture.Frames.DepthMediaFrame.get_MinReliableDepth() */
 HRESULT wmecafr_depth_media_frame_get__min_reliable_depth(WMECAFR_DepthMediaFrame *self, uint32_t *value);
 
-/* activate Windows.Media.Capture.Frames.BufferMediaFrame */
 HRESULT wmecafr_buffer_media_frame_new(WMECAFR_BufferMediaFrame **out);
 
-/* Windows.Media.Capture.Frames.BufferMediaFrame */
-/* Windows.Media.Capture.Frames.BufferMediaFrame.get_FrameReference() */
 HRESULT wmecafr_buffer_media_frame_get__frame_reference(WMECAFR_BufferMediaFrame *self, WMECAFR_MediaFrameReference** value);
 
-/* Windows.Media.Capture.Frames.BufferMediaFrame.get_Buffer() */
 HRESULT wmecafr_buffer_media_frame_get__buffer(WMECAFR_BufferMediaFrame *self, WSTST_IBuffer** value);
 
-/* activate Windows.Media.Capture.Frames.AudioMediaFrame */
 HRESULT wmecafr_audio_media_frame_new(WMECAFR_AudioMediaFrame **out);
 
-/* Windows.Media.Capture.Frames.AudioMediaFrame */
-/* Windows.Media.Capture.Frames.AudioMediaFrame.get_FrameReference() */
 HRESULT wmecafr_audio_media_frame_get__frame_reference(WMECAFR_AudioMediaFrame *self, WMECAFR_MediaFrameReference** value);
 
-/* Windows.Media.Capture.Frames.AudioMediaFrame.get_AudioEncodingProperties() */
 HRESULT wmecafr_audio_media_frame_get__audio_encoding_properties(WMECAFR_AudioMediaFrame *self, WMEME_AudioEncodingProperties** value);
 
-/* Windows.Media.Capture.Frames.AudioMediaFrame.GetAudioFrame() */
 HRESULT wmecafr_audio_media_frame_get_audio_frame(WMECAFR_AudioMediaFrame *self, WME_AudioFrame** out);
 
-/* activate Windows.Media.Capture.Frames.MultiSourceMediaFrameReference */
 HRESULT wmecafr_multi_source_media_frame_reference_new(WMECAFR_MultiSourceMediaFrameReference **out);
 
-/* Windows.Media.Capture.Frames.MultiSourceMediaFrameReference */
-/* Windows.Media.Capture.Frames.MultiSourceMediaFrameReference.TryGetFrameReferenceBySourceId(sourceId) */
 HRESULT wmecafr_multi_source_media_frame_reference_try_get_frame_reference_by_source_id(WMECAFR_MultiSourceMediaFrameReference *self, cwinrt_hstring sourceId, WMECAFR_MediaFrameReference** out);
 
-/* Windows.Media.Capture.Frames.MultiSourceMediaFrameReference.Close() */
 HRESULT wmecafr_multi_source_media_frame_reference_close(WMECAFR_MultiSourceMediaFrameReference *self);
 
-/* activate Windows.Media.Capture.Frames.VideoMediaFrame */
 HRESULT wmecafr_video_media_frame_new(WMECAFR_VideoMediaFrame **out);
 
-/* Windows.Media.Capture.Frames.VideoMediaFrame */
-/* Windows.Media.Capture.Frames.VideoMediaFrame.get_FrameReference() */
 HRESULT wmecafr_video_media_frame_get__frame_reference(WMECAFR_VideoMediaFrame *self, WMECAFR_MediaFrameReference** value);
 
-/* Windows.Media.Capture.Frames.VideoMediaFrame.get_VideoFormat() */
 HRESULT wmecafr_video_media_frame_get__video_format(WMECAFR_VideoMediaFrame *self, WMECAFR_VideoMediaFrameFormat** value);
 
-/* Windows.Media.Capture.Frames.VideoMediaFrame.get_SoftwareBitmap() */
 HRESULT wmecafr_video_media_frame_get__software_bitmap(WMECAFR_VideoMediaFrame *self, WGRIM_SoftwareBitmap** value);
 
-/* Windows.Media.Capture.Frames.VideoMediaFrame.get_Direct3DSurface() */
 HRESULT wmecafr_video_media_frame_get__direct3_d_surface(WMECAFR_VideoMediaFrame *self, WGRDIDI_IDirect3DSurface** value);
 
-/* Windows.Media.Capture.Frames.VideoMediaFrame.get_CameraIntrinsics() */
 HRESULT wmecafr_video_media_frame_get__camera_intrinsics(WMECAFR_VideoMediaFrame *self, WMEDECO_CameraIntrinsics** value);
 
-/* Windows.Media.Capture.Frames.VideoMediaFrame.get_InfraredMediaFrame() */
 HRESULT wmecafr_video_media_frame_get__infrared_media_frame(WMECAFR_VideoMediaFrame *self, WMECAFR_InfraredMediaFrame** value);
 
-/* Windows.Media.Capture.Frames.VideoMediaFrame.get_DepthMediaFrame() */
 HRESULT wmecafr_video_media_frame_get__depth_media_frame(WMECAFR_VideoMediaFrame *self, WMECAFR_DepthMediaFrame** value);
 
-/* Windows.Media.Capture.Frames.VideoMediaFrame.GetVideoFrame() */
 HRESULT wmecafr_video_media_frame_get_video_frame(WMECAFR_VideoMediaFrame *self, WME_VideoFrame** out);
 
-/* Windows.Media.Capture.Frames.IMediaFrameSourceGroupStatics */
-/* Windows.Media.Capture.Frames.IMediaFrameSourceGroupStatics.FindAllAsync() */
 HRESULT wmecafr_media_frame_source_group_statics_find_all_async(WMECAFR_IMediaFrameSourceGroupStatics *self, WF_IAsyncOperation_WFOCO_IVectorView_WMECAFR_MediaFrameSourceGroup** out);
 
-/* Windows.Media.Capture.Frames.IMediaFrameSourceGroupStatics.FromIdAsync(id) */
 HRESULT wmecafr_media_frame_source_group_statics_from_id_async(WMECAFR_IMediaFrameSourceGroupStatics *self, cwinrt_hstring id, WF_IAsyncOperation_WMECAFR_MediaFrameSourceGroup** out);
 
-/* Windows.Media.Capture.Frames.IMediaFrameSourceGroupStatics.GetDeviceSelector() */
 HRESULT wmecafr_media_frame_source_group_statics_get_device_selector(WMECAFR_IMediaFrameSourceGroupStatics *self, cwinrt_hstring *out);
 
-/* activate Windows.Media.Capture.Frames.InfraredMediaFrame */
 HRESULT wmecafr_infrared_media_frame_new(WMECAFR_InfraredMediaFrame **out);
 
-/* Windows.Media.Capture.Frames.InfraredMediaFrame */
-/* Windows.Media.Capture.Frames.InfraredMediaFrame.get_FrameReference() */
 HRESULT wmecafr_infrared_media_frame_get__frame_reference(WMECAFR_InfraredMediaFrame *self, WMECAFR_MediaFrameReference** value);
 
-/* Windows.Media.Capture.Frames.InfraredMediaFrame.get_VideoMediaFrame() */
 HRESULT wmecafr_infrared_media_frame_get__video_media_frame(WMECAFR_InfraredMediaFrame *self, WMECAFR_VideoMediaFrame** value);
 
-/* Windows.Media.Capture.Frames.InfraredMediaFrame.get_IsIlluminated() */
 HRESULT wmecafr_infrared_media_frame_get__is_illuminated(WMECAFR_InfraredMediaFrame *self, BOOL *value);
 
-/* activate Windows.Media.Capture.Frames.MediaFrameFormat */
 HRESULT wmecafr_media_frame_format_new(WMECAFR_MediaFrameFormat **out);
 
-/* Windows.Media.Capture.Frames.MediaFrameFormat */
-/* Windows.Media.Capture.Frames.MediaFrameFormat.get_MajorType() */
 HRESULT wmecafr_media_frame_format_get__major_type(WMECAFR_MediaFrameFormat *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.Frames.MediaFrameFormat.get_Subtype() */
 HRESULT wmecafr_media_frame_format_get__subtype(WMECAFR_MediaFrameFormat *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.Frames.MediaFrameFormat.get_FrameRate() */
 HRESULT wmecafr_media_frame_format_get__frame_rate(WMECAFR_MediaFrameFormat *self, WMEME_MediaRatio** value);
 
-/* Windows.Media.Capture.Frames.MediaFrameFormat.get_Properties() */
 HRESULT wmecafr_media_frame_format_get__properties(WMECAFR_MediaFrameFormat *self, WFOCO_IMapView_Guid_Object** value);
 
-/* Windows.Media.Capture.Frames.MediaFrameFormat.get_VideoFormat() */
 HRESULT wmecafr_media_frame_format_get__video_format(WMECAFR_MediaFrameFormat *self, WMECAFR_VideoMediaFrameFormat** value);
 
-/* Windows.Media.Capture.Frames.MediaFrameFormat.get_AudioEncodingProperties() */
 HRESULT wmecafr_media_frame_format_get__audio_encoding_properties(WMECAFR_MediaFrameFormat *self, WMEME_AudioEncodingProperties** value);
 
-/* activate Windows.Media.Capture.Frames.MediaFrameReader */
 HRESULT wmecafr_media_frame_reader_new(WMECAFR_MediaFrameReader **out);
 
-/* Windows.Media.Capture.Frames.MediaFrameReader */
-/* Windows.Media.Capture.Frames.MediaFrameReader.TryAcquireLatestFrame() */
 HRESULT wmecafr_media_frame_reader_try_acquire_latest_frame(WMECAFR_MediaFrameReader *self, WMECAFR_MediaFrameReference** out);
 
-/* Windows.Media.Capture.Frames.MediaFrameReader.StartAsync() */
 HRESULT wmecafr_media_frame_reader_start_async(WMECAFR_MediaFrameReader *self, WF_IAsyncOperation_WMECAFR_MediaFrameReaderStartStatus** out);
 
-/* Windows.Media.Capture.Frames.MediaFrameReader.StopAsync() */
 HRESULT wmecafr_media_frame_reader_stop_async(WMECAFR_MediaFrameReader *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.Frames.MediaFrameReader.Close() */
 HRESULT wmecafr_media_frame_reader_close(WMECAFR_MediaFrameReader *self);
 
-/* Windows.Media.Capture.Frames.MediaFrameReader.put_AcquisitionMode() */
 HRESULT wmecafr_media_frame_reader_put__acquisition_mode(WMECAFR_MediaFrameReader *self, WMECAFR_MediaFrameReaderAcquisitionMode value);
 
-/* Windows.Media.Capture.Frames.MediaFrameReader.get_AcquisitionMode() */
 HRESULT wmecafr_media_frame_reader_get__acquisition_mode(WMECAFR_MediaFrameReader *self, WMECAFR_MediaFrameReaderAcquisitionMode *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmecafr_media_frame_reader_on_frame_arrived(WMECAFR_MediaFrameReader *self, cwinrt_event_fn fn, void *ctx);
 void wmecafr_media_frame_reader_off_frame_arrived(WMECAFR_MediaFrameReader *self, cwinrt_token token);
 
-/* activate Windows.Media.Capture.Frames.MediaFrameReference */
 HRESULT wmecafr_media_frame_reference_new(WMECAFR_MediaFrameReference **out);
 
-/* Windows.Media.Capture.Frames.MediaFrameReference */
-/* Windows.Media.Capture.Frames.MediaFrameReference.get_SourceKind() */
 HRESULT wmecafr_media_frame_reference_get__source_kind(WMECAFR_MediaFrameReference *self, WMECAFR_MediaFrameSourceKind *value);
 
-/* Windows.Media.Capture.Frames.MediaFrameReference.get_Format() */
 HRESULT wmecafr_media_frame_reference_get__format(WMECAFR_MediaFrameReference *self, WMECAFR_MediaFrameFormat** value);
 
-/* Windows.Media.Capture.Frames.MediaFrameReference.get_SystemRelativeTime() */
 HRESULT wmecafr_media_frame_reference_get__system_relative_time(WMECAFR_MediaFrameReference *self, WF_TimeSpan** value);
 
-/* Windows.Media.Capture.Frames.MediaFrameReference.get_Duration() */
 HRESULT wmecafr_media_frame_reference_get__duration(WMECAFR_MediaFrameReference *self, WF_TimeSpan *value);
 
-/* Windows.Media.Capture.Frames.MediaFrameReference.get_Properties() */
 HRESULT wmecafr_media_frame_reference_get__properties(WMECAFR_MediaFrameReference *self, WFOCO_IMapView_Guid_Object** value);
 
-/* Windows.Media.Capture.Frames.MediaFrameReference.get_BufferMediaFrame() */
 HRESULT wmecafr_media_frame_reference_get__buffer_media_frame(WMECAFR_MediaFrameReference *self, WMECAFR_BufferMediaFrame** value);
 
-/* Windows.Media.Capture.Frames.MediaFrameReference.get_VideoMediaFrame() */
 HRESULT wmecafr_media_frame_reference_get__video_media_frame(WMECAFR_MediaFrameReference *self, WMECAFR_VideoMediaFrame** value);
 
-/* Windows.Media.Capture.Frames.MediaFrameReference.get_CoordinateSystem() */
 HRESULT wmecafr_media_frame_reference_get__coordinate_system(WMECAFR_MediaFrameReference *self, WPESP_SpatialCoordinateSystem** value);
 
-/* Windows.Media.Capture.Frames.MediaFrameReference.Close() */
 HRESULT wmecafr_media_frame_reference_close(WMECAFR_MediaFrameReference *self);
 
-/* Windows.Media.Capture.Frames.MediaFrameReference.get_AudioMediaFrame() */
 HRESULT wmecafr_media_frame_reference_get__audio_media_frame(WMECAFR_MediaFrameReference *self, WMECAFR_AudioMediaFrame** value);
 
-/* activate Windows.Media.Capture.Frames.MediaFrameSource */
 HRESULT wmecafr_media_frame_source_new(WMECAFR_MediaFrameSource **out);
 
-/* Windows.Media.Capture.Frames.MediaFrameSource */
-/* Windows.Media.Capture.Frames.MediaFrameSource.get_Info() */
 HRESULT wmecafr_media_frame_source_get__info(WMECAFR_MediaFrameSource *self, WMECAFR_MediaFrameSourceInfo** value);
 
-/* Windows.Media.Capture.Frames.MediaFrameSource.get_Controller() */
 HRESULT wmecafr_media_frame_source_get__controller(WMECAFR_MediaFrameSource *self, WMECAFR_MediaFrameSourceController** value);
 
-/* Windows.Media.Capture.Frames.MediaFrameSource.get_SupportedFormats() */
 HRESULT wmecafr_media_frame_source_get__supported_formats(WMECAFR_MediaFrameSource *self, WFOCO_IVectorView_WMECAFR_MediaFrameFormat** value);
 
-/* Windows.Media.Capture.Frames.MediaFrameSource.get_CurrentFormat() */
 HRESULT wmecafr_media_frame_source_get__current_format(WMECAFR_MediaFrameSource *self, WMECAFR_MediaFrameFormat** value);
 
-/* Windows.Media.Capture.Frames.MediaFrameSource.SetFormatAsync(format) */
 HRESULT wmecafr_media_frame_source_set_format_async(WMECAFR_MediaFrameSource *self, WMECAFR_MediaFrameFormat* format, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.Frames.MediaFrameSource.TryGetCameraIntrinsics(format) */
 HRESULT wmecafr_media_frame_source_try_get_camera_intrinsics(WMECAFR_MediaFrameSource *self, WMECAFR_MediaFrameFormat* format, WMEDECO_CameraIntrinsics** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmecafr_media_frame_source_on_format_changed(WMECAFR_MediaFrameSource *self, cwinrt_event_fn fn, void *ctx);
 void wmecafr_media_frame_source_off_format_changed(WMECAFR_MediaFrameSource *self, cwinrt_token token);
 
-/* activate Windows.Media.Capture.Frames.VideoMediaFrameFormat */
 HRESULT wmecafr_video_media_frame_format_new(WMECAFR_VideoMediaFrameFormat **out);
 
-/* Windows.Media.Capture.Frames.VideoMediaFrameFormat */
-/* Windows.Media.Capture.Frames.VideoMediaFrameFormat.get_MediaFrameFormat() */
 HRESULT wmecafr_video_media_frame_format_get__media_frame_format(WMECAFR_VideoMediaFrameFormat *self, WMECAFR_MediaFrameFormat** value);
 
-/* Windows.Media.Capture.Frames.VideoMediaFrameFormat.get_DepthFormat() */
 HRESULT wmecafr_video_media_frame_format_get__depth_format(WMECAFR_VideoMediaFrameFormat *self, WMECAFR_DepthMediaFrameFormat** value);
 
-/* Windows.Media.Capture.Frames.VideoMediaFrameFormat.get_Width() */
 HRESULT wmecafr_video_media_frame_format_get__width(WMECAFR_VideoMediaFrameFormat *self, uint32_t *value);
 
-/* Windows.Media.Capture.Frames.VideoMediaFrameFormat.get_Height() */
 HRESULT wmecafr_video_media_frame_format_get__height(WMECAFR_VideoMediaFrameFormat *self, uint32_t *value);
 
-/* Windows.Media.Capture.Frames.IMediaFrameSourceInfo */
-/* Windows.Media.Capture.Frames.IMediaFrameSourceInfo2 */
-/* Windows.Media.Capture.Frames.IMediaFrameSourceInfo2.get_ProfileId() */
 HRESULT wmecafr_media_frame_source_info_2_get__profile_id(WMECAFR_IMediaFrameSourceInfo_2 *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.Frames.IMediaFrameSourceInfo2.get_VideoProfileMediaDescription() */
 HRESULT wmecafr_media_frame_source_info_2_get__video_profile_media_description(WMECAFR_IMediaFrameSourceInfo_2 *self, WFOCO_IVectorView_WMECA_MediaCaptureVideoProfileMediaDescription** value);
 
-/* Windows.Media.Capture.Frames.IMediaFrameSourceInfo3 */
-/* Windows.Media.Capture.Frames.IMediaFrameSourceInfo3.GetRelativePanel(displayRegion) */
 HRESULT wmecafr_media_frame_source_info_3_get_relative_panel(WMECAFR_IMediaFrameSourceInfo_3 *self, WUIWI_DisplayRegion* displayRegion, WDEEN_Panel *out);
 
-/* Windows.Media.Capture.Frames.IMediaFrameSourceInfo4 */
-/* Windows.Media.Capture.Frames.IMediaFrameSourceInfo4.get_IsShareable() */
 HRESULT wmecafr_media_frame_source_info_4_get__is_shareable(WMECAFR_IMediaFrameSourceInfo_4 *self, BOOL *value);
 
-/* Windows.Media.Capture.Frames.IMediaFrameSourceGroup */
-/* Windows.Media.Capture.Frames.IMediaFrameSourceGetPropertyResult */
-/* Windows.Media.Capture.Frames.IMediaFrameSourceController */
-/* Windows.Media.Capture.Frames.IMediaFrameSourceController2 */
-/* Windows.Media.Capture.Frames.IMediaFrameSourceController2.GetPropertyByExtendedIdAsync(extendedPropertyId, maxPropertyValueSize) */
 HRESULT wmecafr_media_frame_source_controller_2_get_property_by_extended_id_async(WMECAFR_IMediaFrameSourceController_2 *self, uint8_t *extendedPropertyId, uint32_t extendedPropertyId_len, uint32_t* maxPropertyValueSize, WF_IAsyncOperation_WMECAFR_MediaFrameSourceGetPropertyResult** out);
 
-/* Windows.Media.Capture.Frames.IMediaFrameSourceController2.SetPropertyByExtendedIdAsync(extendedPropertyId, propertyValue) */
 HRESULT wmecafr_media_frame_source_controller_2_set_property_by_extended_id_async(WMECAFR_IMediaFrameSourceController_2 *self, uint8_t *extendedPropertyId, uint32_t extendedPropertyId_len, uint8_t *propertyValue, uint32_t propertyValue_len, WF_IAsyncOperation_WMECAFR_MediaFrameSourceSetPropertyStatus** out);
 
-/* Windows.Media.Capture.Frames.IMediaFrameSourceController3 */
-/* Windows.Media.Capture.Frames.IMediaFrameSourceController3.get_AudioDeviceController() */
 HRESULT wmecafr_media_frame_source_controller_3_get__audio_device_controller(WMECAFR_IMediaFrameSourceController_3 *self, WMEDE_AudioDeviceController** value);
 
-/* Windows.Media.Capture.Frames.IMultiSourceMediaFrameReader */
-/* Windows.Media.Capture.Frames.IMultiSourceMediaFrameReader2 */
-/* Windows.Media.Capture.Frames.IMultiSourceMediaFrameReader2.put_AcquisitionMode() */
 HRESULT wmecafr_multi_source_media_frame_reader_2_put__acquisition_mode(WMECAFR_IMultiSourceMediaFrameReader_2 *self, WMECAFR_MediaFrameReaderAcquisitionMode value);
 
-/* Windows.Media.Capture.Frames.IMultiSourceMediaFrameReader2.get_AcquisitionMode() */
 HRESULT wmecafr_multi_source_media_frame_reader_2_get__acquisition_mode(WMECAFR_IMultiSourceMediaFrameReader_2 *self, WMECAFR_MediaFrameReaderAcquisitionMode *value);
 
-/* Windows.Media.Capture.Frames.IDepthMediaFrameFormat */
-/* Windows.Media.Capture.Frames.IDepthMediaFrame */
-/* Windows.Media.Capture.Frames.IDepthMediaFrame2 */
-/* Windows.Media.Capture.Frames.IDepthMediaFrame2.get_MaxReliableDepth() */
 HRESULT wmecafr_depth_media_frame_2_get__max_reliable_depth(WMECAFR_IDepthMediaFrame_2 *self, uint32_t *value);
 
-/* Windows.Media.Capture.Frames.IDepthMediaFrame2.get_MinReliableDepth() */
 HRESULT wmecafr_depth_media_frame_2_get__min_reliable_depth(WMECAFR_IDepthMediaFrame_2 *self, uint32_t *value);
 
-/* Windows.Media.Capture.Frames.IBufferMediaFrame */
-/* Windows.Media.Capture.Frames.IAudioMediaFrame */
-/* Windows.Media.Capture.Frames.IMultiSourceMediaFrameReference */
-/* Windows.Media.Capture.Frames.IVideoMediaFrame */
-/* Windows.Media.Capture.Frames.IInfraredMediaFrame */
-/* Windows.Media.Capture.Frames.IMediaFrameFormat */
-/* Windows.Media.Capture.Frames.IMediaFrameFormat2 */
-/* Windows.Media.Capture.Frames.IMediaFrameFormat2.get_AudioEncodingProperties() */
 HRESULT wmecafr_media_frame_format_2_get__audio_encoding_properties(WMECAFR_IMediaFrameFormat_2 *self, WMEME_AudioEncodingProperties** value);
 
-/* Windows.Media.Capture.Frames.IMediaFrameReader */
-/* Windows.Media.Capture.Frames.IMediaFrameReader2 */
-/* Windows.Media.Capture.Frames.IMediaFrameReader2.put_AcquisitionMode() */
 HRESULT wmecafr_media_frame_reader_2_put__acquisition_mode(WMECAFR_IMediaFrameReader_2 *self, WMECAFR_MediaFrameReaderAcquisitionMode value);
 
-/* Windows.Media.Capture.Frames.IMediaFrameReader2.get_AcquisitionMode() */
 HRESULT wmecafr_media_frame_reader_2_get__acquisition_mode(WMECAFR_IMediaFrameReader_2 *self, WMECAFR_MediaFrameReaderAcquisitionMode *value);
 
-/* Windows.Media.Capture.Frames.IMediaFrameReference */
-/* Windows.Media.Capture.Frames.IMediaFrameReference2 */
-/* Windows.Media.Capture.Frames.IMediaFrameReference2.get_AudioMediaFrame() */
 HRESULT wmecafr_media_frame_reference_2_get__audio_media_frame(WMECAFR_IMediaFrameReference_2 *self, WMECAFR_AudioMediaFrame** value);
 
-/* Windows.Media.Capture.Frames.IMediaFrameSource */
-/* Windows.Media.Capture.Frames.IVideoMediaFrameFormat */
 #endif /* CWINRT_WINDOWS_MEDIA_CAPTURE_FRAMES_H */

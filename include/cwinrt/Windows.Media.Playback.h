@@ -16,7 +16,6 @@
 #include <cwinrt/Windows.Graphics.DirectX.Direct3D11.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WMECO_ISingleSelectMediaTrackList
 #define CWINRT_FWD_WMECO_ISingleSelectMediaTrackList
 typedef struct WMECO_ISingleSelectMediaTrackList WMECO_ISingleSelectMediaTrackList;
@@ -78,7 +77,6 @@ typedef struct WMECO_AudioTrack WMECO_AudioTrack;
 typedef struct WMECO_VideoTrack WMECO_VideoTrack;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMEPL_IMediaEnginePlaybackSource WMEPL_IMediaEnginePlaybackSource;
 typedef struct WMEPL_IMediaPlaybackItemFactory_2 WMEPL_IMediaPlaybackItemFactory_2;
 typedef struct WMEPL_IMediaPlaybackItemStatics WMEPL_IMediaPlaybackItemStatics;
@@ -188,7 +186,6 @@ typedef struct WMEPL_IMediaPlaybackItem WMEPL_IMediaPlaybackItem;
 typedef struct WMEPL_IMediaPlaybackList WMEPL_IMediaPlaybackList;
 typedef struct WMEPL_IMediaPlaybackSource WMEPL_IMediaPlaybackSource;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WMECO_MediaSource
 #define CWINRT_FWD_WMECO_MediaSource
 typedef struct WMECO_MediaSource WMECO_MediaSource;
@@ -641,7 +638,6 @@ typedef enum WMEPL_AutoLoadedDisplayPropertyKind {
 } WMEPL_AutoLoadedDisplayPropertyKind;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -906,79 +902,48 @@ static const IID CWINRT_IID_WMEPL_IMediaPlaybackList CWINRT_MAYBE_UNUSED = { 0x7
 static const IID CWINRT_IID_WMEPL_IMediaPlaybackSource CWINRT_MAYBE_UNUSED = { 0xEF9DC2BC, 0x9317, 0x4696, { 0xB0, 0x51, 0x2B, 0xAD, 0x64, 0x31, 0x77, 0xB5 } };
 #endif
 
-/* Methods */
-
-/* Windows.Media.Playback.IMediaEnginePlaybackSource */
-/* Windows.Media.Playback.IMediaEnginePlaybackSource.get_CurrentItem() */
 HRESULT wmepl_media_engine_playback_source_get__current_item(WMEPL_IMediaEnginePlaybackSource *self, WMEPL_MediaPlaybackItem** value);
 
-/* Windows.Media.Playback.IMediaEnginePlaybackSource.SetPlaybackSource(source) */
 HRESULT wmepl_media_engine_playback_source_set_playback_source(WMEPL_IMediaEnginePlaybackSource *self, WMEPL_IMediaPlaybackSource* source);
 
-/* Windows.Media.Playback.IMediaPlaybackItemFactory2 */
-/* Windows.Media.Playback.IMediaPlaybackItemFactory2.CreateWithStartTime(source, startTime) */
 HRESULT wmepl_media_playback_item_factory_2_create_with_start_time(WMEPL_IMediaPlaybackItemFactory_2 *self, WMECO_MediaSource* source, WF_TimeSpan startTime, WMEPL_MediaPlaybackItem** out);
 
-/* Windows.Media.Playback.IMediaPlaybackItemFactory2.CreateWithStartTimeAndDurationLimit(source, startTime, durationLimit) */
 HRESULT wmepl_media_playback_item_factory_2_create_with_start_time_and_duration_limit(WMEPL_IMediaPlaybackItemFactory_2 *self, WMECO_MediaSource* source, WF_TimeSpan startTime, WF_TimeSpan durationLimit, WMEPL_MediaPlaybackItem** out);
 
-/* Windows.Media.Playback.IMediaPlaybackItemStatics */
-/* Windows.Media.Playback.IMediaPlaybackItemStatics.FindFromMediaSource(source) */
 HRESULT wmepl_media_playback_item_statics_find_from_media_source(WMEPL_IMediaPlaybackItemStatics *self, WMECO_MediaSource* source, WMEPL_MediaPlaybackItem** out);
 
-/* Windows.Media.Playback.IPlaybackMediaMarkerFactory */
-/* Windows.Media.Playback.IPlaybackMediaMarkerFactory.CreateFromTime() */
 HRESULT wmepl_playback_media_marker_factory_create_from_time(WMEPL_IPlaybackMediaMarkerFactory *self, WF_TimeSpan value, WMEPL_PlaybackMediaMarker** out);
 
-/* Windows.Media.Playback.IPlaybackMediaMarkerFactory.Create(mediaMarketType, text) */
 HRESULT wmepl_playback_media_marker_factory_create(WMEPL_IPlaybackMediaMarkerFactory *self, WF_TimeSpan value, cwinrt_hstring mediaMarketType, cwinrt_hstring text, WMEPL_PlaybackMediaMarker** out);
 
-/* activate Windows.Media.Playback.MediaBreak */
 HRESULT wmepl_media_break_new(WMEPL_MediaBreak **out);
 
-/* Windows.Media.Playback.MediaBreak */
-/* Windows.Media.Playback.MediaBreak.get_PlaybackList() */
 HRESULT wmepl_media_break_get__playback_list(WMEPL_MediaBreak *self, WMEPL_MediaPlaybackList** value);
 
-/* Windows.Media.Playback.MediaBreak.get_PresentationPosition() */
 HRESULT wmepl_media_break_get__presentation_position(WMEPL_MediaBreak *self, WF_TimeSpan** value);
 
-/* Windows.Media.Playback.MediaBreak.get_InsertionMethod() */
 HRESULT wmepl_media_break_get__insertion_method(WMEPL_MediaBreak *self, WMEPL_MediaBreakInsertionMethod *value);
 
-/* Windows.Media.Playback.MediaBreak.get_CustomProperties() */
 HRESULT wmepl_media_break_get__custom_properties(WMEPL_MediaBreak *self, WFOCO_ValueSet** value);
 
-/* Windows.Media.Playback.MediaBreak.get_CanStart() */
 HRESULT wmepl_media_break_get__can_start(WMEPL_MediaBreak *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaBreak.put_CanStart() */
 HRESULT wmepl_media_break_put__can_start(WMEPL_MediaBreak *self, BOOL value);
 
-/* activate Windows.Media.Playback.MediaBreakEndedEventArgs */
 HRESULT wmepl_media_break_ended_event_args_new(WMEPL_MediaBreakEndedEventArgs **out);
 
-/* Windows.Media.Playback.MediaBreakEndedEventArgs */
-/* Windows.Media.Playback.MediaBreakEndedEventArgs.get_MediaBreak() */
 HRESULT wmepl_media_break_ended_event_args_get__media_break(WMEPL_MediaBreakEndedEventArgs *self, WMEPL_MediaBreak** value);
 
-/* activate Windows.Media.Playback.MediaBreakManager */
 HRESULT wmepl_media_break_manager_new(WMEPL_MediaBreakManager **out);
 
-/* Windows.Media.Playback.MediaBreakManager */
-/* Windows.Media.Playback.MediaBreakManager.get_CurrentBreak() */
 HRESULT wmepl_media_break_manager_get__current_break(WMEPL_MediaBreakManager *self, WMEPL_MediaBreak** value);
 
-/* Windows.Media.Playback.MediaBreakManager.get_PlaybackSession() */
 HRESULT wmepl_media_break_manager_get__playback_session(WMEPL_MediaBreakManager *self, WMEPL_MediaPlaybackSession** value);
 
-/* Windows.Media.Playback.MediaBreakManager.PlayBreak() */
 HRESULT wmepl_media_break_manager_play_break(WMEPL_MediaBreakManager *self, WMEPL_MediaBreak* value);
 
-/* Windows.Media.Playback.MediaBreakManager.SkipCurrentBreak() */
 HRESULT wmepl_media_break_manager_skip_current_break(WMEPL_MediaBreakManager *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmepl_media_break_manager_on_breaks_seeked_over(WMEPL_MediaBreakManager *self, cwinrt_event_fn fn, void *ctx);
@@ -993,167 +958,110 @@ void wmepl_media_break_manager_off_break_ended(WMEPL_MediaBreakManager *self, cw
 cwinrt_token wmepl_media_break_manager_on_break_skipped(WMEPL_MediaBreakManager *self, cwinrt_event_fn fn, void *ctx);
 void wmepl_media_break_manager_off_break_skipped(WMEPL_MediaBreakManager *self, cwinrt_token token);
 
-/* activate Windows.Media.Playback.MediaBreakSchedule */
 HRESULT wmepl_media_break_schedule_new(WMEPL_MediaBreakSchedule **out);
 
-/* Windows.Media.Playback.MediaBreakSchedule */
-/* Windows.Media.Playback.MediaBreakSchedule.InsertMidrollBreak(mediaBreak) */
 HRESULT wmepl_media_break_schedule_insert_midroll_break(WMEPL_MediaBreakSchedule *self, WMEPL_MediaBreak* mediaBreak);
 
-/* Windows.Media.Playback.MediaBreakSchedule.RemoveMidrollBreak(mediaBreak) */
 HRESULT wmepl_media_break_schedule_remove_midroll_break(WMEPL_MediaBreakSchedule *self, WMEPL_MediaBreak* mediaBreak);
 
-/* Windows.Media.Playback.MediaBreakSchedule.get_MidrollBreaks() */
 HRESULT wmepl_media_break_schedule_get__midroll_breaks(WMEPL_MediaBreakSchedule *self, WFOCO_IVectorView_WMEPL_MediaBreak** value);
 
-/* Windows.Media.Playback.MediaBreakSchedule.put_PrerollBreak() */
 HRESULT wmepl_media_break_schedule_put__preroll_break(WMEPL_MediaBreakSchedule *self, WMEPL_MediaBreak* value);
 
-/* Windows.Media.Playback.MediaBreakSchedule.get_PrerollBreak() */
 HRESULT wmepl_media_break_schedule_get__preroll_break(WMEPL_MediaBreakSchedule *self, WMEPL_MediaBreak** value);
 
-/* Windows.Media.Playback.MediaBreakSchedule.put_PostrollBreak() */
 HRESULT wmepl_media_break_schedule_put__postroll_break(WMEPL_MediaBreakSchedule *self, WMEPL_MediaBreak* value);
 
-/* Windows.Media.Playback.MediaBreakSchedule.get_PostrollBreak() */
 HRESULT wmepl_media_break_schedule_get__postroll_break(WMEPL_MediaBreakSchedule *self, WMEPL_MediaBreak** value);
 
-/* Windows.Media.Playback.MediaBreakSchedule.get_PlaybackItem() */
 HRESULT wmepl_media_break_schedule_get__playback_item(WMEPL_MediaBreakSchedule *self, WMEPL_MediaPlaybackItem** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmepl_media_break_schedule_on_schedule_changed(WMEPL_MediaBreakSchedule *self, cwinrt_event_fn fn, void *ctx);
 void wmepl_media_break_schedule_off_schedule_changed(WMEPL_MediaBreakSchedule *self, cwinrt_token token);
 
-/* activate Windows.Media.Playback.MediaBreakSeekedOverEventArgs */
 HRESULT wmepl_media_break_seeked_over_event_args_new(WMEPL_MediaBreakSeekedOverEventArgs **out);
 
-/* Windows.Media.Playback.MediaBreakSeekedOverEventArgs */
-/* Windows.Media.Playback.MediaBreakSeekedOverEventArgs.get_SeekedOverBreaks() */
 HRESULT wmepl_media_break_seeked_over_event_args_get__seeked_over_breaks(WMEPL_MediaBreakSeekedOverEventArgs *self, WFOCO_IVectorView_WMEPL_MediaBreak** value);
 
-/* Windows.Media.Playback.MediaBreakSeekedOverEventArgs.get_OldPosition() */
 HRESULT wmepl_media_break_seeked_over_event_args_get__old_position(WMEPL_MediaBreakSeekedOverEventArgs *self, WF_TimeSpan *value);
 
-/* Windows.Media.Playback.MediaBreakSeekedOverEventArgs.get_NewPosition() */
 HRESULT wmepl_media_break_seeked_over_event_args_get__new_position(WMEPL_MediaBreakSeekedOverEventArgs *self, WF_TimeSpan *value);
 
-/* activate Windows.Media.Playback.MediaBreakSkippedEventArgs */
 HRESULT wmepl_media_break_skipped_event_args_new(WMEPL_MediaBreakSkippedEventArgs **out);
 
-/* Windows.Media.Playback.MediaBreakSkippedEventArgs */
-/* Windows.Media.Playback.MediaBreakSkippedEventArgs.get_MediaBreak() */
 HRESULT wmepl_media_break_skipped_event_args_get__media_break(WMEPL_MediaBreakSkippedEventArgs *self, WMEPL_MediaBreak** value);
 
-/* activate Windows.Media.Playback.MediaBreakStartedEventArgs */
 HRESULT wmepl_media_break_started_event_args_new(WMEPL_MediaBreakStartedEventArgs **out);
 
-/* Windows.Media.Playback.MediaBreakStartedEventArgs */
-/* Windows.Media.Playback.MediaBreakStartedEventArgs.get_MediaBreak() */
 HRESULT wmepl_media_break_started_event_args_get__media_break(WMEPL_MediaBreakStartedEventArgs *self, WMEPL_MediaBreak** value);
 
-/* activate Windows.Media.Playback.MediaItemDisplayProperties */
 HRESULT wmepl_media_item_display_properties_new(WMEPL_MediaItemDisplayProperties **out);
 
-/* Windows.Media.Playback.MediaItemDisplayProperties */
-/* Windows.Media.Playback.MediaItemDisplayProperties.get_Type() */
 HRESULT wmepl_media_item_display_properties_get__type(WMEPL_MediaItemDisplayProperties *self, WME_MediaPlaybackType *value);
 
-/* Windows.Media.Playback.MediaItemDisplayProperties.put_Type() */
 HRESULT wmepl_media_item_display_properties_put__type(WMEPL_MediaItemDisplayProperties *self, WME_MediaPlaybackType value);
 
-/* Windows.Media.Playback.MediaItemDisplayProperties.get_MusicProperties() */
 HRESULT wmepl_media_item_display_properties_get__music_properties(WMEPL_MediaItemDisplayProperties *self, WME_MusicDisplayProperties** value);
 
-/* Windows.Media.Playback.MediaItemDisplayProperties.get_VideoProperties() */
 HRESULT wmepl_media_item_display_properties_get__video_properties(WMEPL_MediaItemDisplayProperties *self, WME_VideoDisplayProperties** value);
 
-/* Windows.Media.Playback.MediaItemDisplayProperties.get_Thumbnail() */
 HRESULT wmepl_media_item_display_properties_get__thumbnail(WMEPL_MediaItemDisplayProperties *self, WSTST_RandomAccessStreamReference** value);
 
-/* Windows.Media.Playback.MediaItemDisplayProperties.put_Thumbnail() */
 HRESULT wmepl_media_item_display_properties_put__thumbnail(WMEPL_MediaItemDisplayProperties *self, WSTST_RandomAccessStreamReference* value);
 
-/* Windows.Media.Playback.MediaItemDisplayProperties.ClearAll() */
 HRESULT wmepl_media_item_display_properties_clear_all(WMEPL_MediaItemDisplayProperties *self);
 
-/* activate Windows.Media.Playback.MediaPlaybackAudioTrackList */
 HRESULT wmepl_media_playback_audio_track_list_new(WMEPL_MediaPlaybackAudioTrackList **out);
 
-/* Windows.Media.Playback.MediaPlaybackAudioTrackList */
-/* Windows.Media.Playback.MediaPlaybackAudioTrackList.GetAt(index) */
 HRESULT wmepl_media_playback_audio_track_list_get_at(WMEPL_MediaPlaybackAudioTrackList *self, uint32_t index, WMECO_AudioTrack** out);
 
-/* Windows.Media.Playback.MediaPlaybackAudioTrackList.get_Size() */
 HRESULT wmepl_media_playback_audio_track_list_get__size(WMEPL_MediaPlaybackAudioTrackList *self, uint32_t *value);
 
-/* Windows.Media.Playback.MediaPlaybackAudioTrackList.IndexOf(index) */
 HRESULT wmepl_media_playback_audio_track_list_index_of(WMEPL_MediaPlaybackAudioTrackList *self, WMECO_AudioTrack* value, uint32_t index, BOOL *out);
 
-/* Windows.Media.Playback.MediaPlaybackAudioTrackList.GetMany(startIndex, items) */
 HRESULT wmepl_media_playback_audio_track_list_get_many(WMEPL_MediaPlaybackAudioTrackList *self, uint32_t startIndex, WMECO_AudioTrack *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Media.Playback.MediaPlaybackAudioTrackList.First() */
 HRESULT wmepl_media_playback_audio_track_list_first(WMEPL_MediaPlaybackAudioTrackList *self, WFOCO_IIterator_WMECO_AudioTrack** out);
 
-/* Windows.Media.Playback.MediaPlaybackAudioTrackList.put_SelectedIndex() */
 HRESULT wmepl_media_playback_audio_track_list_put__selected_index(WMEPL_MediaPlaybackAudioTrackList *self, int32_t value);
 
-/* Windows.Media.Playback.MediaPlaybackAudioTrackList.get_SelectedIndex() */
 HRESULT wmepl_media_playback_audio_track_list_get__selected_index(WMEPL_MediaPlaybackAudioTrackList *self, int32_t *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmepl_media_playback_audio_track_list_on_selected_index_changed(WMEPL_MediaPlaybackAudioTrackList *self, cwinrt_event_fn fn, void *ctx);
 void wmepl_media_playback_audio_track_list_off_selected_index_changed(WMEPL_MediaPlaybackAudioTrackList *self, cwinrt_token token);
 
-/* activate Windows.Media.Playback.MediaPlaybackCommandManager */
 HRESULT wmepl_media_playback_command_manager_new(WMEPL_MediaPlaybackCommandManager **out);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManager */
-/* Windows.Media.Playback.MediaPlaybackCommandManager.get_IsEnabled() */
 HRESULT wmepl_media_playback_command_manager_get__is_enabled(WMEPL_MediaPlaybackCommandManager *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManager.put_IsEnabled() */
 HRESULT wmepl_media_playback_command_manager_put__is_enabled(WMEPL_MediaPlaybackCommandManager *self, BOOL value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManager.get_MediaPlayer() */
 HRESULT wmepl_media_playback_command_manager_get__media_player(WMEPL_MediaPlaybackCommandManager *self, WMEPL_MediaPlayer** value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManager.get_PlayBehavior() */
 HRESULT wmepl_media_playback_command_manager_get__play_behavior(WMEPL_MediaPlaybackCommandManager *self, WMEPL_MediaPlaybackCommandManagerCommandBehavior** value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManager.get_PauseBehavior() */
 HRESULT wmepl_media_playback_command_manager_get__pause_behavior(WMEPL_MediaPlaybackCommandManager *self, WMEPL_MediaPlaybackCommandManagerCommandBehavior** value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManager.get_NextBehavior() */
 HRESULT wmepl_media_playback_command_manager_get__next_behavior(WMEPL_MediaPlaybackCommandManager *self, WMEPL_MediaPlaybackCommandManagerCommandBehavior** value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManager.get_PreviousBehavior() */
 HRESULT wmepl_media_playback_command_manager_get__previous_behavior(WMEPL_MediaPlaybackCommandManager *self, WMEPL_MediaPlaybackCommandManagerCommandBehavior** value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManager.get_FastForwardBehavior() */
 HRESULT wmepl_media_playback_command_manager_get__fast_forward_behavior(WMEPL_MediaPlaybackCommandManager *self, WMEPL_MediaPlaybackCommandManagerCommandBehavior** value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManager.get_RewindBehavior() */
 HRESULT wmepl_media_playback_command_manager_get__rewind_behavior(WMEPL_MediaPlaybackCommandManager *self, WMEPL_MediaPlaybackCommandManagerCommandBehavior** value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManager.get_ShuffleBehavior() */
 HRESULT wmepl_media_playback_command_manager_get__shuffle_behavior(WMEPL_MediaPlaybackCommandManager *self, WMEPL_MediaPlaybackCommandManagerCommandBehavior** value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManager.get_AutoRepeatModeBehavior() */
 HRESULT wmepl_media_playback_command_manager_get__auto_repeat_mode_behavior(WMEPL_MediaPlaybackCommandManager *self, WMEPL_MediaPlaybackCommandManagerCommandBehavior** value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManager.get_PositionBehavior() */
 HRESULT wmepl_media_playback_command_manager_get__position_behavior(WMEPL_MediaPlaybackCommandManager *self, WMEPL_MediaPlaybackCommandManagerCommandBehavior** value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManager.get_RateBehavior() */
 HRESULT wmepl_media_playback_command_manager_get__rate_behavior(WMEPL_MediaPlaybackCommandManager *self, WMEPL_MediaPlaybackCommandManagerCommandBehavior** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmepl_media_playback_command_manager_on_play_received(WMEPL_MediaPlaybackCommandManager *self, cwinrt_event_fn fn, void *ctx);
@@ -1186,226 +1094,145 @@ void wmepl_media_playback_command_manager_off_position_received(WMEPL_MediaPlayb
 cwinrt_token wmepl_media_playback_command_manager_on_rate_received(WMEPL_MediaPlaybackCommandManager *self, cwinrt_event_fn fn, void *ctx);
 void wmepl_media_playback_command_manager_off_rate_received(WMEPL_MediaPlaybackCommandManager *self, cwinrt_token token);
 
-/* activate Windows.Media.Playback.MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs */
 HRESULT wmepl_media_playback_command_manager_auto_repeat_mode_received_event_a_new(WMEPL_MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs **out);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs */
-/* Windows.Media.Playback.MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs.get_Handled() */
 HRESULT wmepl_media_playback_command_manager_auto_repeat_mode_received_event_a_get__handled(WMEPL_MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs.put_Handled() */
 HRESULT wmepl_media_playback_command_manager_auto_repeat_mode_received_event_a_put__handled(WMEPL_MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs *self, BOOL value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs.get_AutoRepeatMode() */
 HRESULT wmepl_media_playback_command_manager_auto_repeat_mode_received_event_a_get__auto_repeat_mode(WMEPL_MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs *self, WME_MediaPlaybackAutoRepeatMode *value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs.GetDeferral() */
 HRESULT wmepl_media_playback_command_manager_auto_repeat_mode_received_event_a_get_deferral(WMEPL_MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior */
 HRESULT wmepl_media_playback_command_manager_command_behavior_new(WMEPL_MediaPlaybackCommandManagerCommandBehavior **out);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior */
-/* Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior.get_CommandManager() */
 HRESULT wmepl_media_playback_command_manager_command_behavior_get__command_manager(WMEPL_MediaPlaybackCommandManagerCommandBehavior *self, WMEPL_MediaPlaybackCommandManager** value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior.get_IsEnabled() */
 HRESULT wmepl_media_playback_command_manager_command_behavior_get__is_enabled(WMEPL_MediaPlaybackCommandManagerCommandBehavior *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior.get_EnablingRule() */
 HRESULT wmepl_media_playback_command_manager_command_behavior_get__enabling_rule(WMEPL_MediaPlaybackCommandManagerCommandBehavior *self, WMEPL_MediaCommandEnablingRule *value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior.put_EnablingRule() */
 HRESULT wmepl_media_playback_command_manager_command_behavior_put__enabling_rule(WMEPL_MediaPlaybackCommandManagerCommandBehavior *self, WMEPL_MediaCommandEnablingRule value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmepl_media_playback_command_manager_command_behavior_on_is_enabled_changed(WMEPL_MediaPlaybackCommandManagerCommandBehavior *self, cwinrt_event_fn fn, void *ctx);
 void wmepl_media_playback_command_manager_command_behavior_off_is_enabled_changed(WMEPL_MediaPlaybackCommandManagerCommandBehavior *self, cwinrt_token token);
 
-/* activate Windows.Media.Playback.MediaPlaybackCommandManagerFastForwardReceivedEventArgs */
 HRESULT wmepl_media_playback_command_manager_fast_forward_received_event_args_new(WMEPL_MediaPlaybackCommandManagerFastForwardReceivedEventArgs **out);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerFastForwardReceivedEventArgs */
-/* Windows.Media.Playback.MediaPlaybackCommandManagerFastForwardReceivedEventArgs.get_Handled() */
 HRESULT wmepl_media_playback_command_manager_fast_forward_received_event_args_get__handled(WMEPL_MediaPlaybackCommandManagerFastForwardReceivedEventArgs *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerFastForwardReceivedEventArgs.put_Handled() */
 HRESULT wmepl_media_playback_command_manager_fast_forward_received_event_args_put__handled(WMEPL_MediaPlaybackCommandManagerFastForwardReceivedEventArgs *self, BOOL value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerFastForwardReceivedEventArgs.GetDeferral() */
 HRESULT wmepl_media_playback_command_manager_fast_forward_received_event_args_get_deferral(WMEPL_MediaPlaybackCommandManagerFastForwardReceivedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Media.Playback.MediaPlaybackCommandManagerNextReceivedEventArgs */
 HRESULT wmepl_media_playback_command_manager_next_received_event_args_new(WMEPL_MediaPlaybackCommandManagerNextReceivedEventArgs **out);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerNextReceivedEventArgs */
-/* Windows.Media.Playback.MediaPlaybackCommandManagerNextReceivedEventArgs.get_Handled() */
 HRESULT wmepl_media_playback_command_manager_next_received_event_args_get__handled(WMEPL_MediaPlaybackCommandManagerNextReceivedEventArgs *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerNextReceivedEventArgs.put_Handled() */
 HRESULT wmepl_media_playback_command_manager_next_received_event_args_put__handled(WMEPL_MediaPlaybackCommandManagerNextReceivedEventArgs *self, BOOL value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerNextReceivedEventArgs.GetDeferral() */
 HRESULT wmepl_media_playback_command_manager_next_received_event_args_get_deferral(WMEPL_MediaPlaybackCommandManagerNextReceivedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Media.Playback.MediaPlaybackCommandManagerPauseReceivedEventArgs */
 HRESULT wmepl_media_playback_command_manager_pause_received_event_args_new(WMEPL_MediaPlaybackCommandManagerPauseReceivedEventArgs **out);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerPauseReceivedEventArgs */
-/* Windows.Media.Playback.MediaPlaybackCommandManagerPauseReceivedEventArgs.get_Handled() */
 HRESULT wmepl_media_playback_command_manager_pause_received_event_args_get__handled(WMEPL_MediaPlaybackCommandManagerPauseReceivedEventArgs *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerPauseReceivedEventArgs.put_Handled() */
 HRESULT wmepl_media_playback_command_manager_pause_received_event_args_put__handled(WMEPL_MediaPlaybackCommandManagerPauseReceivedEventArgs *self, BOOL value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerPauseReceivedEventArgs.GetDeferral() */
 HRESULT wmepl_media_playback_command_manager_pause_received_event_args_get_deferral(WMEPL_MediaPlaybackCommandManagerPauseReceivedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Media.Playback.MediaPlaybackCommandManagerPlayReceivedEventArgs */
 HRESULT wmepl_media_playback_command_manager_play_received_event_args_new(WMEPL_MediaPlaybackCommandManagerPlayReceivedEventArgs **out);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerPlayReceivedEventArgs */
-/* Windows.Media.Playback.MediaPlaybackCommandManagerPlayReceivedEventArgs.get_Handled() */
 HRESULT wmepl_media_playback_command_manager_play_received_event_args_get__handled(WMEPL_MediaPlaybackCommandManagerPlayReceivedEventArgs *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerPlayReceivedEventArgs.put_Handled() */
 HRESULT wmepl_media_playback_command_manager_play_received_event_args_put__handled(WMEPL_MediaPlaybackCommandManagerPlayReceivedEventArgs *self, BOOL value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerPlayReceivedEventArgs.GetDeferral() */
 HRESULT wmepl_media_playback_command_manager_play_received_event_args_get_deferral(WMEPL_MediaPlaybackCommandManagerPlayReceivedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Media.Playback.MediaPlaybackCommandManagerPositionReceivedEventArgs */
 HRESULT wmepl_media_playback_command_manager_position_received_event_args_new(WMEPL_MediaPlaybackCommandManagerPositionReceivedEventArgs **out);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerPositionReceivedEventArgs */
-/* Windows.Media.Playback.MediaPlaybackCommandManagerPositionReceivedEventArgs.get_Handled() */
 HRESULT wmepl_media_playback_command_manager_position_received_event_args_get__handled(WMEPL_MediaPlaybackCommandManagerPositionReceivedEventArgs *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerPositionReceivedEventArgs.put_Handled() */
 HRESULT wmepl_media_playback_command_manager_position_received_event_args_put__handled(WMEPL_MediaPlaybackCommandManagerPositionReceivedEventArgs *self, BOOL value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerPositionReceivedEventArgs.get_Position() */
 HRESULT wmepl_media_playback_command_manager_position_received_event_args_get__position(WMEPL_MediaPlaybackCommandManagerPositionReceivedEventArgs *self, WF_TimeSpan *value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerPositionReceivedEventArgs.GetDeferral() */
 HRESULT wmepl_media_playback_command_manager_position_received_event_args_get_deferral(WMEPL_MediaPlaybackCommandManagerPositionReceivedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs */
 HRESULT wmepl_media_playback_command_manager_previous_received_event_args_new(WMEPL_MediaPlaybackCommandManagerPreviousReceivedEventArgs **out);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs */
-/* Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs.get_Handled() */
 HRESULT wmepl_media_playback_command_manager_previous_received_event_args_get__handled(WMEPL_MediaPlaybackCommandManagerPreviousReceivedEventArgs *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs.put_Handled() */
 HRESULT wmepl_media_playback_command_manager_previous_received_event_args_put__handled(WMEPL_MediaPlaybackCommandManagerPreviousReceivedEventArgs *self, BOOL value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs.GetDeferral() */
 HRESULT wmepl_media_playback_command_manager_previous_received_event_args_get_deferral(WMEPL_MediaPlaybackCommandManagerPreviousReceivedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Media.Playback.MediaPlaybackCommandManagerRateReceivedEventArgs */
 HRESULT wmepl_media_playback_command_manager_rate_received_event_args_new(WMEPL_MediaPlaybackCommandManagerRateReceivedEventArgs **out);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerRateReceivedEventArgs */
-/* Windows.Media.Playback.MediaPlaybackCommandManagerRateReceivedEventArgs.get_Handled() */
 HRESULT wmepl_media_playback_command_manager_rate_received_event_args_get__handled(WMEPL_MediaPlaybackCommandManagerRateReceivedEventArgs *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerRateReceivedEventArgs.put_Handled() */
 HRESULT wmepl_media_playback_command_manager_rate_received_event_args_put__handled(WMEPL_MediaPlaybackCommandManagerRateReceivedEventArgs *self, BOOL value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerRateReceivedEventArgs.get_PlaybackRate() */
 HRESULT wmepl_media_playback_command_manager_rate_received_event_args_get__playback_rate(WMEPL_MediaPlaybackCommandManagerRateReceivedEventArgs *self, double *value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerRateReceivedEventArgs.GetDeferral() */
 HRESULT wmepl_media_playback_command_manager_rate_received_event_args_get_deferral(WMEPL_MediaPlaybackCommandManagerRateReceivedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Media.Playback.MediaPlaybackCommandManagerRewindReceivedEventArgs */
 HRESULT wmepl_media_playback_command_manager_rewind_received_event_args_new(WMEPL_MediaPlaybackCommandManagerRewindReceivedEventArgs **out);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerRewindReceivedEventArgs */
-/* Windows.Media.Playback.MediaPlaybackCommandManagerRewindReceivedEventArgs.get_Handled() */
 HRESULT wmepl_media_playback_command_manager_rewind_received_event_args_get__handled(WMEPL_MediaPlaybackCommandManagerRewindReceivedEventArgs *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerRewindReceivedEventArgs.put_Handled() */
 HRESULT wmepl_media_playback_command_manager_rewind_received_event_args_put__handled(WMEPL_MediaPlaybackCommandManagerRewindReceivedEventArgs *self, BOOL value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerRewindReceivedEventArgs.GetDeferral() */
 HRESULT wmepl_media_playback_command_manager_rewind_received_event_args_get_deferral(WMEPL_MediaPlaybackCommandManagerRewindReceivedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Media.Playback.MediaPlaybackCommandManagerShuffleReceivedEventArgs */
 HRESULT wmepl_media_playback_command_manager_shuffle_received_event_args_new(WMEPL_MediaPlaybackCommandManagerShuffleReceivedEventArgs **out);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerShuffleReceivedEventArgs */
-/* Windows.Media.Playback.MediaPlaybackCommandManagerShuffleReceivedEventArgs.get_Handled() */
 HRESULT wmepl_media_playback_command_manager_shuffle_received_event_args_get__handled(WMEPL_MediaPlaybackCommandManagerShuffleReceivedEventArgs *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerShuffleReceivedEventArgs.put_Handled() */
 HRESULT wmepl_media_playback_command_manager_shuffle_received_event_args_put__handled(WMEPL_MediaPlaybackCommandManagerShuffleReceivedEventArgs *self, BOOL value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerShuffleReceivedEventArgs.get_IsShuffleRequested() */
 HRESULT wmepl_media_playback_command_manager_shuffle_received_event_args_get__is_shuffle_requested(WMEPL_MediaPlaybackCommandManagerShuffleReceivedEventArgs *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlaybackCommandManagerShuffleReceivedEventArgs.GetDeferral() */
 HRESULT wmepl_media_playback_command_manager_shuffle_received_event_args_get_deferral(WMEPL_MediaPlaybackCommandManagerShuffleReceivedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Media.Playback.MediaPlaybackItem */
 HRESULT wmepl_media_playback_item_new(WMEPL_MediaPlaybackItem **out);
 
-/* Windows.Media.Playback.MediaPlaybackItem */
-/* Windows.Media.Playback.MediaPlaybackItem.get_Source() */
 HRESULT wmepl_media_playback_item_get__source(WMEPL_MediaPlaybackItem *self, WMECO_MediaSource** value);
 
-/* Windows.Media.Playback.MediaPlaybackItem.get_AudioTracks() */
 HRESULT wmepl_media_playback_item_get__audio_tracks(WMEPL_MediaPlaybackItem *self, WMEPL_MediaPlaybackAudioTrackList** value);
 
-/* Windows.Media.Playback.MediaPlaybackItem.get_VideoTracks() */
 HRESULT wmepl_media_playback_item_get__video_tracks(WMEPL_MediaPlaybackItem *self, WMEPL_MediaPlaybackVideoTrackList** value);
 
-/* Windows.Media.Playback.MediaPlaybackItem.get_TimedMetadataTracks() */
 HRESULT wmepl_media_playback_item_get__timed_metadata_tracks(WMEPL_MediaPlaybackItem *self, WMEPL_MediaPlaybackTimedMetadataTrackList** value);
 
-/* Windows.Media.Playback.MediaPlaybackItem.get_BreakSchedule() */
 HRESULT wmepl_media_playback_item_get__break_schedule(WMEPL_MediaPlaybackItem *self, WMEPL_MediaBreakSchedule** value);
 
-/* Windows.Media.Playback.MediaPlaybackItem.get_StartTime() */
 HRESULT wmepl_media_playback_item_get__start_time(WMEPL_MediaPlaybackItem *self, WF_TimeSpan *value);
 
-/* Windows.Media.Playback.MediaPlaybackItem.get_DurationLimit() */
 HRESULT wmepl_media_playback_item_get__duration_limit(WMEPL_MediaPlaybackItem *self, WF_TimeSpan** value);
 
-/* Windows.Media.Playback.MediaPlaybackItem.get_CanSkip() */
 HRESULT wmepl_media_playback_item_get__can_skip(WMEPL_MediaPlaybackItem *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlaybackItem.put_CanSkip() */
 HRESULT wmepl_media_playback_item_put__can_skip(WMEPL_MediaPlaybackItem *self, BOOL value);
 
-/* Windows.Media.Playback.MediaPlaybackItem.GetDisplayProperties() */
 HRESULT wmepl_media_playback_item_get_display_properties(WMEPL_MediaPlaybackItem *self, WMEPL_MediaItemDisplayProperties** out);
 
-/* Windows.Media.Playback.MediaPlaybackItem.ApplyDisplayProperties() */
 HRESULT wmepl_media_playback_item_apply_display_properties(WMEPL_MediaPlaybackItem *self, WMEPL_MediaItemDisplayProperties* value);
 
-/* Windows.Media.Playback.MediaPlaybackItem.get_IsDisabledInPlaybackList() */
 HRESULT wmepl_media_playback_item_get__is_disabled_in_playback_list(WMEPL_MediaPlaybackItem *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlaybackItem.put_IsDisabledInPlaybackList() */
 HRESULT wmepl_media_playback_item_put__is_disabled_in_playback_list(WMEPL_MediaPlaybackItem *self, BOOL value);
 
-/* Windows.Media.Playback.MediaPlaybackItem.get_TotalDownloadProgress() */
 HRESULT wmepl_media_playback_item_get__total_download_progress(WMEPL_MediaPlaybackItem *self, double *value);
 
-/* Windows.Media.Playback.MediaPlaybackItem.get_AutoLoadedDisplayProperties() */
 HRESULT wmepl_media_playback_item_get__auto_loaded_display_properties(WMEPL_MediaPlaybackItem *self, WMEPL_AutoLoadedDisplayPropertyKind *value);
 
-/* Windows.Media.Playback.MediaPlaybackItem.put_AutoLoadedDisplayProperties() */
 HRESULT wmepl_media_playback_item_put__auto_loaded_display_properties(WMEPL_MediaPlaybackItem *self, WMEPL_AutoLoadedDisplayPropertyKind value);
 
-/* Windows.Media.Playback.MediaPlaybackItem.FindFromMediaSource(source) */
 HRESULT wmepl_media_playback_item_find_from_media_source(WMECO_MediaSource* source, WMEPL_MediaPlaybackItem** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmepl_media_playback_item_on_audio_tracks_changed(WMEPL_MediaPlaybackItem *self, cwinrt_event_fn fn, void *ctx);
@@ -1417,85 +1244,56 @@ void wmepl_media_playback_item_off_video_tracks_changed(WMEPL_MediaPlaybackItem 
 cwinrt_token wmepl_media_playback_item_on_timed_metadata_tracks_changed(WMEPL_MediaPlaybackItem *self, cwinrt_event_fn fn, void *ctx);
 void wmepl_media_playback_item_off_timed_metadata_tracks_changed(WMEPL_MediaPlaybackItem *self, cwinrt_token token);
 
-/* activate Windows.Media.Playback.MediaPlaybackItemError */
 HRESULT wmepl_media_playback_item_error_new(WMEPL_MediaPlaybackItemError **out);
 
-/* Windows.Media.Playback.MediaPlaybackItemError */
-/* Windows.Media.Playback.MediaPlaybackItemError.get_ErrorCode() */
 HRESULT wmepl_media_playback_item_error_get__error_code(WMEPL_MediaPlaybackItemError *self, WMEPL_MediaPlaybackItemErrorCode *value);
 
-/* Windows.Media.Playback.MediaPlaybackItemError.get_ExtendedError() */
 HRESULT wmepl_media_playback_item_error_get__extended_error(WMEPL_MediaPlaybackItemError *self, HRESULT *value);
 
-/* activate Windows.Media.Playback.MediaPlaybackItemFailedEventArgs */
 HRESULT wmepl_media_playback_item_failed_event_args_new(WMEPL_MediaPlaybackItemFailedEventArgs **out);
 
-/* Windows.Media.Playback.MediaPlaybackItemFailedEventArgs */
-/* Windows.Media.Playback.MediaPlaybackItemFailedEventArgs.get_Item() */
 HRESULT wmepl_media_playback_item_failed_event_args_get__item(WMEPL_MediaPlaybackItemFailedEventArgs *self, WMEPL_MediaPlaybackItem** value);
 
-/* Windows.Media.Playback.MediaPlaybackItemFailedEventArgs.get_Error() */
 HRESULT wmepl_media_playback_item_failed_event_args_get__error(WMEPL_MediaPlaybackItemFailedEventArgs *self, WMEPL_MediaPlaybackItemError** value);
 
-/* activate Windows.Media.Playback.MediaPlaybackList */
 HRESULT wmepl_media_playback_list_new(WMEPL_MediaPlaybackList **out);
 
-/* Windows.Media.Playback.MediaPlaybackList */
-/* Windows.Media.Playback.MediaPlaybackList.get_Items() */
 HRESULT wmepl_media_playback_list_get__items(WMEPL_MediaPlaybackList *self, WFOCO_IObservableVector_WMEPL_MediaPlaybackItem** value);
 
-/* Windows.Media.Playback.MediaPlaybackList.get_AutoRepeatEnabled() */
 HRESULT wmepl_media_playback_list_get__auto_repeat_enabled(WMEPL_MediaPlaybackList *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlaybackList.put_AutoRepeatEnabled() */
 HRESULT wmepl_media_playback_list_put__auto_repeat_enabled(WMEPL_MediaPlaybackList *self, BOOL value);
 
-/* Windows.Media.Playback.MediaPlaybackList.get_ShuffleEnabled() */
 HRESULT wmepl_media_playback_list_get__shuffle_enabled(WMEPL_MediaPlaybackList *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlaybackList.put_ShuffleEnabled() */
 HRESULT wmepl_media_playback_list_put__shuffle_enabled(WMEPL_MediaPlaybackList *self, BOOL value);
 
-/* Windows.Media.Playback.MediaPlaybackList.get_CurrentItem() */
 HRESULT wmepl_media_playback_list_get__current_item(WMEPL_MediaPlaybackList *self, WMEPL_MediaPlaybackItem** value);
 
-/* Windows.Media.Playback.MediaPlaybackList.get_CurrentItemIndex() */
 HRESULT wmepl_media_playback_list_get__current_item_index(WMEPL_MediaPlaybackList *self, uint32_t *value);
 
-/* Windows.Media.Playback.MediaPlaybackList.MoveNext() */
 HRESULT wmepl_media_playback_list_move_next(WMEPL_MediaPlaybackList *self, WMEPL_MediaPlaybackItem** out);
 
-/* Windows.Media.Playback.MediaPlaybackList.MovePrevious() */
 HRESULT wmepl_media_playback_list_move_previous(WMEPL_MediaPlaybackList *self, WMEPL_MediaPlaybackItem** out);
 
-/* Windows.Media.Playback.MediaPlaybackList.MoveTo(itemIndex) */
 HRESULT wmepl_media_playback_list_move_to(WMEPL_MediaPlaybackList *self, uint32_t itemIndex, WMEPL_MediaPlaybackItem** out);
 
-/* Windows.Media.Playback.MediaPlaybackList.get_MaxPrefetchTime() */
 HRESULT wmepl_media_playback_list_get__max_prefetch_time(WMEPL_MediaPlaybackList *self, WF_TimeSpan** value);
 
-/* Windows.Media.Playback.MediaPlaybackList.put_MaxPrefetchTime() */
 HRESULT wmepl_media_playback_list_put__max_prefetch_time(WMEPL_MediaPlaybackList *self, WF_TimeSpan* value);
 
-/* Windows.Media.Playback.MediaPlaybackList.get_StartingItem() */
 HRESULT wmepl_media_playback_list_get__starting_item(WMEPL_MediaPlaybackList *self, WMEPL_MediaPlaybackItem** value);
 
-/* Windows.Media.Playback.MediaPlaybackList.put_StartingItem() */
 HRESULT wmepl_media_playback_list_put__starting_item(WMEPL_MediaPlaybackList *self, WMEPL_MediaPlaybackItem* value);
 
-/* Windows.Media.Playback.MediaPlaybackList.get_ShuffledItems() */
 HRESULT wmepl_media_playback_list_get__shuffled_items(WMEPL_MediaPlaybackList *self, WFOCO_IVectorView_WMEPL_MediaPlaybackItem** value);
 
-/* Windows.Media.Playback.MediaPlaybackList.SetShuffledItems() */
 HRESULT wmepl_media_playback_list_set_shuffled_items(WMEPL_MediaPlaybackList *self, WFOCO_IIterable_WMEPL_MediaPlaybackItem* value);
 
-/* Windows.Media.Playback.MediaPlaybackList.get_MaxPlayedItemsToKeepOpen() */
 HRESULT wmepl_media_playback_list_get__max_played_items_to_keep_open(WMEPL_MediaPlaybackList *self, uint32_t** value);
 
-/* Windows.Media.Playback.MediaPlaybackList.put_MaxPlayedItemsToKeepOpen() */
 HRESULT wmepl_media_playback_list_put__max_played_items_to_keep_open(WMEPL_MediaPlaybackList *self, uint32_t* value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmepl_media_playback_list_on_item_failed(WMEPL_MediaPlaybackList *self, cwinrt_event_fn fn, void *ctx);
@@ -1507,95 +1305,64 @@ void wmepl_media_playback_list_off_current_item_changed(WMEPL_MediaPlaybackList 
 cwinrt_token wmepl_media_playback_list_on_item_opened(WMEPL_MediaPlaybackList *self, cwinrt_event_fn fn, void *ctx);
 void wmepl_media_playback_list_off_item_opened(WMEPL_MediaPlaybackList *self, cwinrt_token token);
 
-/* activate Windows.Media.Playback.MediaPlaybackSession */
 HRESULT wmepl_media_playback_session_new(WMEPL_MediaPlaybackSession **out);
 
-/* Windows.Media.Playback.MediaPlaybackSession */
-/* Windows.Media.Playback.MediaPlaybackSession.get_MediaPlayer() */
 HRESULT wmepl_media_playback_session_get__media_player(WMEPL_MediaPlaybackSession *self, WMEPL_MediaPlayer** value);
 
-/* Windows.Media.Playback.MediaPlaybackSession.get_NaturalDuration() */
 HRESULT wmepl_media_playback_session_get__natural_duration(WMEPL_MediaPlaybackSession *self, WF_TimeSpan *value);
 
-/* Windows.Media.Playback.MediaPlaybackSession.get_Position() */
 HRESULT wmepl_media_playback_session_get__position(WMEPL_MediaPlaybackSession *self, WF_TimeSpan *value);
 
-/* Windows.Media.Playback.MediaPlaybackSession.put_Position() */
 HRESULT wmepl_media_playback_session_put__position(WMEPL_MediaPlaybackSession *self, WF_TimeSpan value);
 
-/* Windows.Media.Playback.MediaPlaybackSession.get_PlaybackState() */
 HRESULT wmepl_media_playback_session_get__playback_state(WMEPL_MediaPlaybackSession *self, WMEPL_MediaPlaybackState *value);
 
-/* Windows.Media.Playback.MediaPlaybackSession.get_CanSeek() */
 HRESULT wmepl_media_playback_session_get__can_seek(WMEPL_MediaPlaybackSession *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlaybackSession.get_CanPause() */
 HRESULT wmepl_media_playback_session_get__can_pause(WMEPL_MediaPlaybackSession *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlaybackSession.get_IsProtected() */
 HRESULT wmepl_media_playback_session_get__is_protected(WMEPL_MediaPlaybackSession *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlaybackSession.get_PlaybackRate() */
 HRESULT wmepl_media_playback_session_get__playback_rate(WMEPL_MediaPlaybackSession *self, double *value);
 
-/* Windows.Media.Playback.MediaPlaybackSession.put_PlaybackRate() */
 HRESULT wmepl_media_playback_session_put__playback_rate(WMEPL_MediaPlaybackSession *self, double value);
 
-/* Windows.Media.Playback.MediaPlaybackSession.get_BufferingProgress() */
 HRESULT wmepl_media_playback_session_get__buffering_progress(WMEPL_MediaPlaybackSession *self, double *value);
 
-/* Windows.Media.Playback.MediaPlaybackSession.get_DownloadProgress() */
 HRESULT wmepl_media_playback_session_get__download_progress(WMEPL_MediaPlaybackSession *self, double *value);
 
-/* Windows.Media.Playback.MediaPlaybackSession.get_NaturalVideoHeight() */
 HRESULT wmepl_media_playback_session_get__natural_video_height(WMEPL_MediaPlaybackSession *self, uint32_t *value);
 
-/* Windows.Media.Playback.MediaPlaybackSession.get_NaturalVideoWidth() */
 HRESULT wmepl_media_playback_session_get__natural_video_width(WMEPL_MediaPlaybackSession *self, uint32_t *value);
 
-/* Windows.Media.Playback.MediaPlaybackSession.get_NormalizedSourceRect() */
 HRESULT wmepl_media_playback_session_get__normalized_source_rect(WMEPL_MediaPlaybackSession *self, WF_Rect *value);
 
-/* Windows.Media.Playback.MediaPlaybackSession.put_NormalizedSourceRect() */
 HRESULT wmepl_media_playback_session_put__normalized_source_rect(WMEPL_MediaPlaybackSession *self, WF_Rect value);
 
-/* Windows.Media.Playback.MediaPlaybackSession.get_StereoscopicVideoPackingMode() */
 HRESULT wmepl_media_playback_session_get__stereoscopic_video_packing_mode(WMEPL_MediaPlaybackSession *self, WMEME_StereoscopicVideoPackingMode *value);
 
-/* Windows.Media.Playback.MediaPlaybackSession.put_StereoscopicVideoPackingMode() */
 HRESULT wmepl_media_playback_session_put__stereoscopic_video_packing_mode(WMEPL_MediaPlaybackSession *self, WMEME_StereoscopicVideoPackingMode value);
 
-/* Windows.Media.Playback.MediaPlaybackSession.get_SphericalVideoProjection() */
 HRESULT wmepl_media_playback_session_get__spherical_video_projection(WMEPL_MediaPlaybackSession *self, WMEPL_MediaPlaybackSphericalVideoProjection** value);
 
-/* Windows.Media.Playback.MediaPlaybackSession.get_IsMirroring() */
 HRESULT wmepl_media_playback_session_get__is_mirroring(WMEPL_MediaPlaybackSession *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlaybackSession.put_IsMirroring() */
 HRESULT wmepl_media_playback_session_put__is_mirroring(WMEPL_MediaPlaybackSession *self, BOOL value);
 
-/* Windows.Media.Playback.MediaPlaybackSession.GetBufferedRanges() */
 HRESULT wmepl_media_playback_session_get_buffered_ranges(WMEPL_MediaPlaybackSession *self, WFOCO_IVectorView_WME_MediaTimeRange** out);
 
-/* Windows.Media.Playback.MediaPlaybackSession.GetPlayedRanges() */
 HRESULT wmepl_media_playback_session_get_played_ranges(WMEPL_MediaPlaybackSession *self, WFOCO_IVectorView_WME_MediaTimeRange** out);
 
-/* Windows.Media.Playback.MediaPlaybackSession.GetSeekableRanges() */
 HRESULT wmepl_media_playback_session_get_seekable_ranges(WMEPL_MediaPlaybackSession *self, WFOCO_IVectorView_WME_MediaTimeRange** out);
 
-/* Windows.Media.Playback.MediaPlaybackSession.IsSupportedPlaybackRateRange(rate1, rate2) */
 HRESULT wmepl_media_playback_session_is_supported_playback_rate_range(WMEPL_MediaPlaybackSession *self, double rate1, double rate2, BOOL *out);
 
-/* Windows.Media.Playback.MediaPlaybackSession.get_PlaybackRotation() */
 HRESULT wmepl_media_playback_session_get__playback_rotation(WMEPL_MediaPlaybackSession *self, WMEME_MediaRotation *value);
 
-/* Windows.Media.Playback.MediaPlaybackSession.put_PlaybackRotation() */
 HRESULT wmepl_media_playback_session_put__playback_rotation(WMEPL_MediaPlaybackSession *self, WMEME_MediaRotation value);
 
-/* Windows.Media.Playback.MediaPlaybackSession.GetOutputDegradationPolicyState() */
 HRESULT wmepl_media_playback_session_get_output_degradation_policy_state(WMEPL_MediaPlaybackSession *self, WMEPL_MediaPlaybackSessionOutputDegradationPolicyState** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmepl_media_playback_session_on_playback_state_changed(WMEPL_MediaPlaybackSession *self, cwinrt_event_fn fn, void *ctx);
@@ -1640,319 +1407,212 @@ void wmepl_media_playback_session_off_seekable_ranges_changed(WMEPL_MediaPlaybac
 cwinrt_token wmepl_media_playback_session_on_supported_playback_rates_changed(WMEPL_MediaPlaybackSession *self, cwinrt_event_fn fn, void *ctx);
 void wmepl_media_playback_session_off_supported_playback_rates_changed(WMEPL_MediaPlaybackSession *self, cwinrt_token token);
 
-/* activate Windows.Media.Playback.MediaPlaybackSessionBufferingStartedEventArgs */
 HRESULT wmepl_media_playback_session_buffering_started_event_args_new(WMEPL_MediaPlaybackSessionBufferingStartedEventArgs **out);
 
-/* Windows.Media.Playback.MediaPlaybackSessionBufferingStartedEventArgs */
-/* Windows.Media.Playback.MediaPlaybackSessionBufferingStartedEventArgs.get_IsPlaybackInterruption() */
 HRESULT wmepl_media_playback_session_buffering_started_event_args_get__is_playback_interruption(WMEPL_MediaPlaybackSessionBufferingStartedEventArgs *self, BOOL *value);
 
-/* activate Windows.Media.Playback.MediaPlaybackSessionOutputDegradationPolicyState */
 HRESULT wmepl_media_playback_session_output_degradation_policy_state_new(WMEPL_MediaPlaybackSessionOutputDegradationPolicyState **out);
 
-/* Windows.Media.Playback.MediaPlaybackSessionOutputDegradationPolicyState */
-/* Windows.Media.Playback.MediaPlaybackSessionOutputDegradationPolicyState.get_VideoConstrictionReason() */
 HRESULT wmepl_media_playback_session_output_degradation_policy_state_get__video_constriction_reason(WMEPL_MediaPlaybackSessionOutputDegradationPolicyState *self, WMEPL_MediaPlaybackSessionVideoConstrictionReason *value);
 
-/* activate Windows.Media.Playback.MediaPlaybackSphericalVideoProjection */
 HRESULT wmepl_media_playback_spherical_video_projection_new(WMEPL_MediaPlaybackSphericalVideoProjection **out);
 
-/* Windows.Media.Playback.MediaPlaybackSphericalVideoProjection */
-/* Windows.Media.Playback.MediaPlaybackSphericalVideoProjection.get_IsEnabled() */
 HRESULT wmepl_media_playback_spherical_video_projection_get__is_enabled(WMEPL_MediaPlaybackSphericalVideoProjection *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlaybackSphericalVideoProjection.put_IsEnabled() */
 HRESULT wmepl_media_playback_spherical_video_projection_put__is_enabled(WMEPL_MediaPlaybackSphericalVideoProjection *self, BOOL value);
 
-/* Windows.Media.Playback.MediaPlaybackSphericalVideoProjection.get_FrameFormat() */
 HRESULT wmepl_media_playback_spherical_video_projection_get__frame_format(WMEPL_MediaPlaybackSphericalVideoProjection *self, WMEME_SphericalVideoFrameFormat *value);
 
-/* Windows.Media.Playback.MediaPlaybackSphericalVideoProjection.put_FrameFormat() */
 HRESULT wmepl_media_playback_spherical_video_projection_put__frame_format(WMEPL_MediaPlaybackSphericalVideoProjection *self, WMEME_SphericalVideoFrameFormat value);
 
-/* Windows.Media.Playback.MediaPlaybackSphericalVideoProjection.get_HorizontalFieldOfViewInDegrees() */
 HRESULT wmepl_media_playback_spherical_video_projection_get__horizontal_field_of_view_in_degrees(WMEPL_MediaPlaybackSphericalVideoProjection *self, double *value);
 
-/* Windows.Media.Playback.MediaPlaybackSphericalVideoProjection.put_HorizontalFieldOfViewInDegrees() */
 HRESULT wmepl_media_playback_spherical_video_projection_put__horizontal_field_of_view_in_degrees(WMEPL_MediaPlaybackSphericalVideoProjection *self, double value);
 
-/* Windows.Media.Playback.MediaPlaybackSphericalVideoProjection.get_ViewOrientation() */
 HRESULT wmepl_media_playback_spherical_video_projection_get__view_orientation(WMEPL_MediaPlaybackSphericalVideoProjection *self, WFN_Quaternion *value);
 
-/* Windows.Media.Playback.MediaPlaybackSphericalVideoProjection.put_ViewOrientation() */
 HRESULT wmepl_media_playback_spherical_video_projection_put__view_orientation(WMEPL_MediaPlaybackSphericalVideoProjection *self, WFN_Quaternion value);
 
-/* Windows.Media.Playback.MediaPlaybackSphericalVideoProjection.get_ProjectionMode() */
 HRESULT wmepl_media_playback_spherical_video_projection_get__projection_mode(WMEPL_MediaPlaybackSphericalVideoProjection *self, WMEPL_SphericalVideoProjectionMode *value);
 
-/* Windows.Media.Playback.MediaPlaybackSphericalVideoProjection.put_ProjectionMode() */
 HRESULT wmepl_media_playback_spherical_video_projection_put__projection_mode(WMEPL_MediaPlaybackSphericalVideoProjection *self, WMEPL_SphericalVideoProjectionMode value);
 
-/* activate Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList */
 HRESULT wmepl_media_playback_timed_metadata_track_list_new(WMEPL_MediaPlaybackTimedMetadataTrackList **out);
 
-/* Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList */
-/* Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList.GetAt(index) */
 HRESULT wmepl_media_playback_timed_metadata_track_list_get_at(WMEPL_MediaPlaybackTimedMetadataTrackList *self, uint32_t index, WMECO_TimedMetadataTrack** out);
 
-/* Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList.get_Size() */
 HRESULT wmepl_media_playback_timed_metadata_track_list_get__size(WMEPL_MediaPlaybackTimedMetadataTrackList *self, uint32_t *value);
 
-/* Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList.IndexOf(index) */
 HRESULT wmepl_media_playback_timed_metadata_track_list_index_of(WMEPL_MediaPlaybackTimedMetadataTrackList *self, WMECO_TimedMetadataTrack* value, uint32_t index, BOOL *out);
 
-/* Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList.GetMany(startIndex, items) */
 HRESULT wmepl_media_playback_timed_metadata_track_list_get_many(WMEPL_MediaPlaybackTimedMetadataTrackList *self, uint32_t startIndex, WMECO_TimedMetadataTrack *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList.First() */
 HRESULT wmepl_media_playback_timed_metadata_track_list_first(WMEPL_MediaPlaybackTimedMetadataTrackList *self, WFOCO_IIterator_WMECO_TimedMetadataTrack** out);
 
-/* Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList.GetPresentationMode(index) */
 HRESULT wmepl_media_playback_timed_metadata_track_list_get_presentation_mode(WMEPL_MediaPlaybackTimedMetadataTrackList *self, uint32_t index, WMEPL_TimedMetadataTrackPresentationMode *out);
 
-/* Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList.SetPresentationMode(index) */
 HRESULT wmepl_media_playback_timed_metadata_track_list_set_presentation_mode(WMEPL_MediaPlaybackTimedMetadataTrackList *self, uint32_t index, WMEPL_TimedMetadataTrackPresentationMode value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmepl_media_playback_timed_metadata_track_list_on_presentation_mode_changed(WMEPL_MediaPlaybackTimedMetadataTrackList *self, cwinrt_event_fn fn, void *ctx);
 void wmepl_media_playback_timed_metadata_track_list_off_presentation_mode_changed(WMEPL_MediaPlaybackTimedMetadataTrackList *self, cwinrt_token token);
 
-/* activate Windows.Media.Playback.MediaPlaybackVideoTrackList */
 HRESULT wmepl_media_playback_video_track_list_new(WMEPL_MediaPlaybackVideoTrackList **out);
 
-/* Windows.Media.Playback.MediaPlaybackVideoTrackList */
-/* Windows.Media.Playback.MediaPlaybackVideoTrackList.GetAt(index) */
 HRESULT wmepl_media_playback_video_track_list_get_at(WMEPL_MediaPlaybackVideoTrackList *self, uint32_t index, WMECO_VideoTrack** out);
 
-/* Windows.Media.Playback.MediaPlaybackVideoTrackList.get_Size() */
 HRESULT wmepl_media_playback_video_track_list_get__size(WMEPL_MediaPlaybackVideoTrackList *self, uint32_t *value);
 
-/* Windows.Media.Playback.MediaPlaybackVideoTrackList.IndexOf(index) */
 HRESULT wmepl_media_playback_video_track_list_index_of(WMEPL_MediaPlaybackVideoTrackList *self, WMECO_VideoTrack* value, uint32_t index, BOOL *out);
 
-/* Windows.Media.Playback.MediaPlaybackVideoTrackList.GetMany(startIndex, items) */
 HRESULT wmepl_media_playback_video_track_list_get_many(WMEPL_MediaPlaybackVideoTrackList *self, uint32_t startIndex, WMECO_VideoTrack *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Media.Playback.MediaPlaybackVideoTrackList.First() */
 HRESULT wmepl_media_playback_video_track_list_first(WMEPL_MediaPlaybackVideoTrackList *self, WFOCO_IIterator_WMECO_VideoTrack** out);
 
-/* Windows.Media.Playback.MediaPlaybackVideoTrackList.put_SelectedIndex() */
 HRESULT wmepl_media_playback_video_track_list_put__selected_index(WMEPL_MediaPlaybackVideoTrackList *self, int32_t value);
 
-/* Windows.Media.Playback.MediaPlaybackVideoTrackList.get_SelectedIndex() */
 HRESULT wmepl_media_playback_video_track_list_get__selected_index(WMEPL_MediaPlaybackVideoTrackList *self, int32_t *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmepl_media_playback_video_track_list_on_selected_index_changed(WMEPL_MediaPlaybackVideoTrackList *self, cwinrt_event_fn fn, void *ctx);
 void wmepl_media_playback_video_track_list_off_selected_index_changed(WMEPL_MediaPlaybackVideoTrackList *self, cwinrt_token token);
 
-/* activate Windows.Media.Playback.MediaPlayer */
 HRESULT wmepl_media_player_new(WMEPL_MediaPlayer **out);
 
-/* Windows.Media.Playback.MediaPlayer */
-/* Windows.Media.Playback.MediaPlayer.get_AutoPlay() */
 HRESULT wmepl_media_player_get__auto_play(WMEPL_MediaPlayer *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlayer.put_AutoPlay() */
 HRESULT wmepl_media_player_put__auto_play(WMEPL_MediaPlayer *self, BOOL value);
 
-/* Windows.Media.Playback.MediaPlayer.get_NaturalDuration() */
 HRESULT wmepl_media_player_get__natural_duration(WMEPL_MediaPlayer *self, WF_TimeSpan *value);
 
-/* Windows.Media.Playback.MediaPlayer.get_Position() */
 HRESULT wmepl_media_player_get__position(WMEPL_MediaPlayer *self, WF_TimeSpan *value);
 
-/* Windows.Media.Playback.MediaPlayer.put_Position() */
 HRESULT wmepl_media_player_put__position(WMEPL_MediaPlayer *self, WF_TimeSpan value);
 
-/* Windows.Media.Playback.MediaPlayer.get_BufferingProgress() */
 HRESULT wmepl_media_player_get__buffering_progress(WMEPL_MediaPlayer *self, double *value);
 
-/* Windows.Media.Playback.MediaPlayer.get_CurrentState() */
 HRESULT wmepl_media_player_get__current_state(WMEPL_MediaPlayer *self, WMEPL_MediaPlayerState *value);
 
-/* Windows.Media.Playback.MediaPlayer.get_CanSeek() */
 HRESULT wmepl_media_player_get__can_seek(WMEPL_MediaPlayer *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlayer.get_CanPause() */
 HRESULT wmepl_media_player_get__can_pause(WMEPL_MediaPlayer *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlayer.get_IsLoopingEnabled() */
 HRESULT wmepl_media_player_get__is_looping_enabled(WMEPL_MediaPlayer *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlayer.put_IsLoopingEnabled() */
 HRESULT wmepl_media_player_put__is_looping_enabled(WMEPL_MediaPlayer *self, BOOL value);
 
-/* Windows.Media.Playback.MediaPlayer.get_IsProtected() */
 HRESULT wmepl_media_player_get__is_protected(WMEPL_MediaPlayer *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlayer.get_IsMuted() */
 HRESULT wmepl_media_player_get__is_muted(WMEPL_MediaPlayer *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlayer.put_IsMuted() */
 HRESULT wmepl_media_player_put__is_muted(WMEPL_MediaPlayer *self, BOOL value);
 
-/* Windows.Media.Playback.MediaPlayer.get_PlaybackRate() */
 HRESULT wmepl_media_player_get__playback_rate(WMEPL_MediaPlayer *self, double *value);
 
-/* Windows.Media.Playback.MediaPlayer.put_PlaybackRate() */
 HRESULT wmepl_media_player_put__playback_rate(WMEPL_MediaPlayer *self, double value);
 
-/* Windows.Media.Playback.MediaPlayer.get_Volume() */
 HRESULT wmepl_media_player_get__volume(WMEPL_MediaPlayer *self, double *value);
 
-/* Windows.Media.Playback.MediaPlayer.put_Volume() */
 HRESULT wmepl_media_player_put__volume(WMEPL_MediaPlayer *self, double value);
 
-/* Windows.Media.Playback.MediaPlayer.get_PlaybackMediaMarkers() */
 HRESULT wmepl_media_player_get__playback_media_markers(WMEPL_MediaPlayer *self, WMEPL_PlaybackMediaMarkerSequence** value);
 
-/* Windows.Media.Playback.MediaPlayer.Play() */
 HRESULT wmepl_media_player_play(WMEPL_MediaPlayer *self);
 
-/* Windows.Media.Playback.MediaPlayer.Pause() */
 HRESULT wmepl_media_player_pause(WMEPL_MediaPlayer *self);
 
-/* Windows.Media.Playback.MediaPlayer.SetUriSource() */
 HRESULT wmepl_media_player_set_uri_source(WMEPL_MediaPlayer *self, WF_Uri* value);
 
-/* Windows.Media.Playback.MediaPlayer.get_ProtectionManager() */
 HRESULT wmepl_media_player_get__protection_manager(WMEPL_MediaPlayer *self, WMEPR_MediaProtectionManager** value);
 
-/* Windows.Media.Playback.MediaPlayer.put_ProtectionManager() */
 HRESULT wmepl_media_player_put__protection_manager(WMEPL_MediaPlayer *self, WMEPR_MediaProtectionManager* value);
 
-/* Windows.Media.Playback.MediaPlayer.SetFileSource(file) */
 HRESULT wmepl_media_player_set_file_source(WMEPL_MediaPlayer *self, WS_IStorageFile* file);
 
-/* Windows.Media.Playback.MediaPlayer.SetStreamSource(stream) */
 HRESULT wmepl_media_player_set_stream_source(WMEPL_MediaPlayer *self, WSTST_IRandomAccessStream* stream);
 
-/* Windows.Media.Playback.MediaPlayer.SetMediaSource(source) */
 HRESULT wmepl_media_player_set_media_source(WMEPL_MediaPlayer *self, WMECO_IMediaSource* source);
 
-/* Windows.Media.Playback.MediaPlayer.get_Source() */
 HRESULT wmepl_media_player_get__source(WMEPL_MediaPlayer *self, WMEPL_IMediaPlaybackSource** value);
 
-/* Windows.Media.Playback.MediaPlayer.put_Source() */
 HRESULT wmepl_media_player_put__source(WMEPL_MediaPlayer *self, WMEPL_IMediaPlaybackSource* value);
 
-/* Windows.Media.Playback.MediaPlayer.get_SystemMediaTransportControls() */
 HRESULT wmepl_media_player_get__system_media_transport_controls(WMEPL_MediaPlayer *self, WME_SystemMediaTransportControls** value);
 
-/* Windows.Media.Playback.MediaPlayer.get_AudioCategory() */
 HRESULT wmepl_media_player_get__audio_category(WMEPL_MediaPlayer *self, WMEPL_MediaPlayerAudioCategory *value);
 
-/* Windows.Media.Playback.MediaPlayer.put_AudioCategory() */
 HRESULT wmepl_media_player_put__audio_category(WMEPL_MediaPlayer *self, WMEPL_MediaPlayerAudioCategory value);
 
-/* Windows.Media.Playback.MediaPlayer.get_AudioDeviceType() */
 HRESULT wmepl_media_player_get__audio_device_type(WMEPL_MediaPlayer *self, WMEPL_MediaPlayerAudioDeviceType *value);
 
-/* Windows.Media.Playback.MediaPlayer.put_AudioDeviceType() */
 HRESULT wmepl_media_player_put__audio_device_type(WMEPL_MediaPlayer *self, WMEPL_MediaPlayerAudioDeviceType value);
 
-/* Windows.Media.Playback.MediaPlayer.AddAudioEffect(activatableClassId, effectOptional, configuration) */
 HRESULT wmepl_media_player_add_audio_effect(WMEPL_MediaPlayer *self, cwinrt_hstring activatableClassId, BOOL effectOptional, WFOCO_IPropertySet* configuration);
 
-/* Windows.Media.Playback.MediaPlayer.RemoveAllEffects() */
 HRESULT wmepl_media_player_remove_all_effects(WMEPL_MediaPlayer *self);
 
-/* Windows.Media.Playback.MediaPlayer.Close() */
 HRESULT wmepl_media_player_close(WMEPL_MediaPlayer *self);
 
-/* Windows.Media.Playback.MediaPlayer.get_AudioBalance() */
 HRESULT wmepl_media_player_get__audio_balance(WMEPL_MediaPlayer *self, double *value);
 
-/* Windows.Media.Playback.MediaPlayer.put_AudioBalance() */
 HRESULT wmepl_media_player_put__audio_balance(WMEPL_MediaPlayer *self, double value);
 
-/* Windows.Media.Playback.MediaPlayer.get_RealTimePlayback() */
 HRESULT wmepl_media_player_get__real_time_playback(WMEPL_MediaPlayer *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlayer.put_RealTimePlayback() */
 HRESULT wmepl_media_player_put__real_time_playback(WMEPL_MediaPlayer *self, BOOL value);
 
-/* Windows.Media.Playback.MediaPlayer.get_StereoscopicVideoRenderMode() */
 HRESULT wmepl_media_player_get__stereoscopic_video_render_mode(WMEPL_MediaPlayer *self, WMEPL_StereoscopicVideoRenderMode *value);
 
-/* Windows.Media.Playback.MediaPlayer.put_StereoscopicVideoRenderMode() */
 HRESULT wmepl_media_player_put__stereoscopic_video_render_mode(WMEPL_MediaPlayer *self, WMEPL_StereoscopicVideoRenderMode value);
 
-/* Windows.Media.Playback.MediaPlayer.get_BreakManager() */
 HRESULT wmepl_media_player_get__break_manager(WMEPL_MediaPlayer *self, WMEPL_MediaBreakManager** value);
 
-/* Windows.Media.Playback.MediaPlayer.get_CommandManager() */
 HRESULT wmepl_media_player_get__command_manager(WMEPL_MediaPlayer *self, WMEPL_MediaPlaybackCommandManager** value);
 
-/* Windows.Media.Playback.MediaPlayer.get_AudioDevice() */
 HRESULT wmepl_media_player_get__audio_device(WMEPL_MediaPlayer *self, WDEEN_DeviceInformation** value);
 
-/* Windows.Media.Playback.MediaPlayer.put_AudioDevice() */
 HRESULT wmepl_media_player_put__audio_device(WMEPL_MediaPlayer *self, WDEEN_DeviceInformation* value);
 
-/* Windows.Media.Playback.MediaPlayer.get_TimelineController() */
 HRESULT wmepl_media_player_get__timeline_controller(WMEPL_MediaPlayer *self, WME_MediaTimelineController** value);
 
-/* Windows.Media.Playback.MediaPlayer.put_TimelineController() */
 HRESULT wmepl_media_player_put__timeline_controller(WMEPL_MediaPlayer *self, WME_MediaTimelineController* value);
 
-/* Windows.Media.Playback.MediaPlayer.get_TimelineControllerPositionOffset() */
 HRESULT wmepl_media_player_get__timeline_controller_position_offset(WMEPL_MediaPlayer *self, WF_TimeSpan *value);
 
-/* Windows.Media.Playback.MediaPlayer.put_TimelineControllerPositionOffset() */
 HRESULT wmepl_media_player_put__timeline_controller_position_offset(WMEPL_MediaPlayer *self, WF_TimeSpan value);
 
-/* Windows.Media.Playback.MediaPlayer.get_PlaybackSession() */
 HRESULT wmepl_media_player_get__playback_session(WMEPL_MediaPlayer *self, WMEPL_MediaPlaybackSession** value);
 
-/* Windows.Media.Playback.MediaPlayer.StepForwardOneFrame() */
 HRESULT wmepl_media_player_step_forward_one_frame(WMEPL_MediaPlayer *self);
 
-/* Windows.Media.Playback.MediaPlayer.StepBackwardOneFrame() */
 HRESULT wmepl_media_player_step_backward_one_frame(WMEPL_MediaPlayer *self);
 
-/* Windows.Media.Playback.MediaPlayer.GetAsCastingSource() */
 HRESULT wmepl_media_player_get_as_casting_source(WMEPL_MediaPlayer *self, WMECA_CastingSource** out);
 
-/* Windows.Media.Playback.MediaPlayer.SetSurfaceSize(size) */
 HRESULT wmepl_media_player_set_surface_size(WMEPL_MediaPlayer *self, WF_Size size);
 
-/* Windows.Media.Playback.MediaPlayer.GetSurface(compositor) */
 HRESULT wmepl_media_player_get_surface(WMEPL_MediaPlayer *self, WUC_Comp* compositor, WMEPL_MediaPlayerSurface** out);
 
-/* Windows.Media.Playback.MediaPlayer.AddVideoEffect(activatableClassId, effectOptional, effectConfiguration) */
 HRESULT wmepl_media_player_add_video_effect(WMEPL_MediaPlayer *self, cwinrt_hstring activatableClassId, BOOL effectOptional, WFOCO_IPropertySet* effectConfiguration);
 
-/* Windows.Media.Playback.MediaPlayer.get_IsVideoFrameServerEnabled() */
 HRESULT wmepl_media_player_get__is_video_frame_server_enabled(WMEPL_MediaPlayer *self, BOOL *value);
 
-/* Windows.Media.Playback.MediaPlayer.put_IsVideoFrameServerEnabled() */
 HRESULT wmepl_media_player_put__is_video_frame_server_enabled(WMEPL_MediaPlayer *self, BOOL value);
 
-/* Windows.Media.Playback.MediaPlayer.CopyFrameToVideoSurface(destination) */
 HRESULT wmepl_media_player_copy_frame_to_video_surface(WMEPL_MediaPlayer *self, WGRDIDI_IDirect3DSurface* destination);
 
-/* Windows.Media.Playback.MediaPlayer.CopyFrameToVideoSurface(destination, targetRectangle) */
 HRESULT wmepl_media_player_copy_frame_to_video_surface_p_rect(WMEPL_MediaPlayer *self, WGRDIDI_IDirect3DSurface* destination, WF_Rect targetRectangle);
 
-/* Windows.Media.Playback.MediaPlayer.CopyFrameToStereoscopicVideoSurfaces(destinationLeftEye, destinationRightEye) */
 HRESULT wmepl_media_player_copy_frame_to_stereoscopic_video_surfaces(WMEPL_MediaPlayer *self, WGRDIDI_IDirect3DSurface* destinationLeftEye, WGRDIDI_IDirect3DSurface* destinationRightEye);
 
-/* Windows.Media.Playback.MediaPlayer.RenderSubtitlesToSurface(destination) */
 HRESULT wmepl_media_player_render_subtitles_to_surface(WMEPL_MediaPlayer *self, WGRDIDI_IDirect3DSurface* destination, BOOL *out);
 
-/* Windows.Media.Playback.MediaPlayer.RenderSubtitlesToSurface(destination, targetRectangle) */
 HRESULT wmepl_media_player_render_subtitles_to_surface_p_rect_b(WMEPL_MediaPlayer *self, WGRDIDI_IDirect3DSurface* destination, WF_Rect targetRectangle, BOOL *out);
 
-/* Windows.Media.Playback.MediaPlayer.get_AudioStateMonitor() */
 HRESULT wmepl_media_player_get__audio_state_monitor(WMEPL_MediaPlayer *self, WMEAU_AudioStateMonitor** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmepl_media_player_on_media_opened(WMEPL_MediaPlayer *self, cwinrt_event_fn fn, void *ctx);
@@ -1997,154 +1657,96 @@ void wmepl_media_player_off_video_frame_available(WMEPL_MediaPlayer *self, cwinr
 cwinrt_token wmepl_media_player_on_subtitle_frame_changed(WMEPL_MediaPlayer *self, cwinrt_event_fn fn, void *ctx);
 void wmepl_media_player_off_subtitle_frame_changed(WMEPL_MediaPlayer *self, cwinrt_token token);
 
-/* activate Windows.Media.Playback.MediaPlayerDataReceivedEventArgs */
 HRESULT wmepl_media_player_data_received_event_args_new(WMEPL_MediaPlayerDataReceivedEventArgs **out);
 
-/* Windows.Media.Playback.MediaPlayerDataReceivedEventArgs */
-/* Windows.Media.Playback.MediaPlayerDataReceivedEventArgs.get_Data() */
 HRESULT wmepl_media_player_data_received_event_args_get__data(WMEPL_MediaPlayerDataReceivedEventArgs *self, WFOCO_ValueSet** value);
 
-/* activate Windows.Media.Playback.MediaPlayerFailedEventArgs */
 HRESULT wmepl_media_player_failed_event_args_new(WMEPL_MediaPlayerFailedEventArgs **out);
 
-/* Windows.Media.Playback.MediaPlayerFailedEventArgs */
-/* Windows.Media.Playback.MediaPlayerFailedEventArgs.get_Error() */
 HRESULT wmepl_media_player_failed_event_args_get__error(WMEPL_MediaPlayerFailedEventArgs *self, WMEPL_MediaPlayerError *value);
 
-/* Windows.Media.Playback.MediaPlayerFailedEventArgs.get_ExtendedErrorCode() */
 HRESULT wmepl_media_player_failed_event_args_get__extended_error_code(WMEPL_MediaPlayerFailedEventArgs *self, HRESULT *value);
 
-/* Windows.Media.Playback.MediaPlayerFailedEventArgs.get_ErrorMessage() */
 HRESULT wmepl_media_player_failed_event_args_get__error_message(WMEPL_MediaPlayerFailedEventArgs *self, cwinrt_hstring *value);
 
-/* activate Windows.Media.Playback.MediaPlayerRateChangedEventArgs */
 HRESULT wmepl_media_player_rate_changed_event_args_new(WMEPL_MediaPlayerRateChangedEventArgs **out);
 
-/* Windows.Media.Playback.MediaPlayerRateChangedEventArgs */
-/* Windows.Media.Playback.MediaPlayerRateChangedEventArgs.get_NewRate() */
 HRESULT wmepl_media_player_rate_changed_event_args_get__new_rate(WMEPL_MediaPlayerRateChangedEventArgs *self, double *value);
 
-/* activate Windows.Media.Playback.MediaPlayerSurface */
 HRESULT wmepl_media_player_surface_new(WMEPL_MediaPlayerSurface **out);
 
-/* Windows.Media.Playback.MediaPlayerSurface */
-/* Windows.Media.Playback.MediaPlayerSurface.get_CompositionSurface() */
 HRESULT wmepl_media_player_surface_get__composition_surface(WMEPL_MediaPlayerSurface *self, WUC_ICompositionSurface** value);
 
-/* Windows.Media.Playback.MediaPlayerSurface.get_Compositor() */
 HRESULT wmepl_media_player_surface_get__compositor(WMEPL_MediaPlayerSurface *self, WUC_Comp** value);
 
-/* Windows.Media.Playback.MediaPlayerSurface.get_MediaPlayer() */
 HRESULT wmepl_media_player_surface_get__media_player(WMEPL_MediaPlayerSurface *self, WMEPL_MediaPlayer** value);
 
-/* Windows.Media.Playback.MediaPlayerSurface.Close() */
 HRESULT wmepl_media_player_surface_close(WMEPL_MediaPlayerSurface *self);
 
-/* activate Windows.Media.Playback.PlaybackMediaMarker */
 HRESULT wmepl_playback_media_marker_new(WMEPL_PlaybackMediaMarker **out);
 
-/* Windows.Media.Playback.PlaybackMediaMarker */
-/* Windows.Media.Playback.PlaybackMediaMarker.get_Time() */
 HRESULT wmepl_playback_media_marker_get__time(WMEPL_PlaybackMediaMarker *self, WF_TimeSpan *value);
 
-/* Windows.Media.Playback.PlaybackMediaMarker.get_MediaMarkerType() */
 HRESULT wmepl_playback_media_marker_get__media_marker_type(WMEPL_PlaybackMediaMarker *self, cwinrt_hstring *value);
 
-/* Windows.Media.Playback.PlaybackMediaMarker.get_Text() */
 HRESULT wmepl_playback_media_marker_get__text(WMEPL_PlaybackMediaMarker *self, cwinrt_hstring *value);
 
-/* activate Windows.Media.Playback.PlaybackMediaMarkerReachedEventArgs */
 HRESULT wmepl_playback_media_marker_reached_event_args_new(WMEPL_PlaybackMediaMarkerReachedEventArgs **out);
 
-/* Windows.Media.Playback.PlaybackMediaMarkerReachedEventArgs */
-/* Windows.Media.Playback.PlaybackMediaMarkerReachedEventArgs.get_PlaybackMediaMarker() */
 HRESULT wmepl_playback_media_marker_reached_event_args_get__playback_media_marker(WMEPL_PlaybackMediaMarkerReachedEventArgs *self, WMEPL_PlaybackMediaMarker** value);
 
-/* activate Windows.Media.Playback.PlaybackMediaMarkerSequence */
 HRESULT wmepl_playback_media_marker_sequence_new(WMEPL_PlaybackMediaMarkerSequence **out);
 
-/* Windows.Media.Playback.PlaybackMediaMarkerSequence */
-/* Windows.Media.Playback.PlaybackMediaMarkerSequence.get_Size() */
 HRESULT wmepl_playback_media_marker_sequence_get__size(WMEPL_PlaybackMediaMarkerSequence *self, uint32_t *value);
 
-/* Windows.Media.Playback.PlaybackMediaMarkerSequence.Insert() */
 HRESULT wmepl_playback_media_marker_sequence_insert(WMEPL_PlaybackMediaMarkerSequence *self, WMEPL_PlaybackMediaMarker* value);
 
-/* Windows.Media.Playback.PlaybackMediaMarkerSequence.Clear() */
 HRESULT wmepl_playback_media_marker_sequence_clear(WMEPL_PlaybackMediaMarkerSequence *self);
 
-/* Windows.Media.Playback.PlaybackMediaMarkerSequence.First() */
 HRESULT wmepl_playback_media_marker_sequence_first(WMEPL_PlaybackMediaMarkerSequence *self, WFOCO_IIterator_WMEPL_PlaybackMediaMarker** out);
 
-/* activate Windows.Media.Playback.TimedMetadataPresentationModeChangedEventArgs */
 HRESULT wmepl_timed_metadata_presentation_mode_changed_event_args_new(WMEPL_TimedMetadataPresentationModeChangedEventArgs **out);
 
-/* Windows.Media.Playback.TimedMetadataPresentationModeChangedEventArgs */
-/* Windows.Media.Playback.TimedMetadataPresentationModeChangedEventArgs.get_Track() */
 HRESULT wmepl_timed_metadata_presentation_mode_changed_event_args_get__track(WMEPL_TimedMetadataPresentationModeChangedEventArgs *self, WMECO_TimedMetadataTrack** value);
 
-/* Windows.Media.Playback.TimedMetadataPresentationModeChangedEventArgs.get_OldPresentationMode() */
 HRESULT wmepl_timed_metadata_presentation_mode_changed_event_args_get__old_presentation_mode(WMEPL_TimedMetadataPresentationModeChangedEventArgs *self, WMEPL_TimedMetadataTrackPresentationMode *value);
 
-/* Windows.Media.Playback.TimedMetadataPresentationModeChangedEventArgs.get_NewPresentationMode() */
 HRESULT wmepl_timed_metadata_presentation_mode_changed_event_args_get__new_presentation_mode(WMEPL_TimedMetadataPresentationModeChangedEventArgs *self, WMEPL_TimedMetadataTrackPresentationMode *value);
 
-/* Windows.Media.Playback.IMediaBreakFactory */
-/* Windows.Media.Playback.IMediaBreakFactory.Create(insertionMethod) */
 HRESULT wmepl_media_break_factory_create(WMEPL_IMediaBreakFactory *self, WMEPL_MediaBreakInsertionMethod insertionMethod, WMEPL_MediaBreak** out);
 
-/* Windows.Media.Playback.IMediaBreakFactory.CreateWithPresentationPosition(insertionMethod, presentationPosition) */
 HRESULT wmepl_media_break_factory_create_with_presentation_position(WMEPL_IMediaBreakFactory *self, WMEPL_MediaBreakInsertionMethod insertionMethod, WF_TimeSpan presentationPosition, WMEPL_MediaBreak** out);
 
-/* Windows.Media.Playback.IBackgroundMediaPlayerStatics */
-/* Windows.Media.Playback.IBackgroundMediaPlayerStatics.get_Current() */
 HRESULT wmepl_background_media_player_statics_get__current(WMEPL_IBackgroundMediaPlayerStatics *self, WMEPL_MediaPlayer** value);
 
-/* Windows.Media.Playback.IBackgroundMediaPlayerStatics.SendMessageToBackground() */
 HRESULT wmepl_background_media_player_statics_send_message_to_background(WMEPL_IBackgroundMediaPlayerStatics *self, WFOCO_ValueSet* value);
 
-/* Windows.Media.Playback.IBackgroundMediaPlayerStatics.SendMessageToForeground() */
 HRESULT wmepl_background_media_player_statics_send_message_to_foreground(WMEPL_IBackgroundMediaPlayerStatics *self, WFOCO_ValueSet* value);
 
-/* Windows.Media.Playback.IBackgroundMediaPlayerStatics.IsMediaPlaying() */
 HRESULT wmepl_background_media_player_statics_is_media_playing(WMEPL_IBackgroundMediaPlayerStatics *self, BOOL *out);
 
-/* Windows.Media.Playback.IBackgroundMediaPlayerStatics.Shutdown() */
 HRESULT wmepl_background_media_player_statics_shutdown(WMEPL_IBackgroundMediaPlayerStatics *self);
 
-/* activate Windows.Media.Playback.CurrentMediaPlaybackItemChangedEventArgs */
 HRESULT wmepl_current_media_playback_item_changed_event_args_new(WMEPL_CurrentMediaPlaybackItemChangedEventArgs **out);
 
-/* Windows.Media.Playback.CurrentMediaPlaybackItemChangedEventArgs */
-/* Windows.Media.Playback.CurrentMediaPlaybackItemChangedEventArgs.get_NewItem() */
 HRESULT wmepl_current_media_playback_item_changed_event_args_get__new_item(WMEPL_CurrentMediaPlaybackItemChangedEventArgs *self, WMEPL_MediaPlaybackItem** value);
 
-/* Windows.Media.Playback.CurrentMediaPlaybackItemChangedEventArgs.get_OldItem() */
 HRESULT wmepl_current_media_playback_item_changed_event_args_get__old_item(WMEPL_CurrentMediaPlaybackItemChangedEventArgs *self, WMEPL_MediaPlaybackItem** value);
 
-/* Windows.Media.Playback.CurrentMediaPlaybackItemChangedEventArgs.get_Reason() */
 HRESULT wmepl_current_media_playback_item_changed_event_args_get__reason(WMEPL_CurrentMediaPlaybackItemChangedEventArgs *self, WMEPL_MediaPlaybackItemChangedReason *value);
 
-/* activate Windows.Media.Playback.BackgroundMediaPlayer */
 HRESULT wmepl_background_media_player_new(WMEPL_BackgroundMediaPlayer **out);
 
-/* Windows.Media.Playback.BackgroundMediaPlayer */
-/* Windows.Media.Playback.BackgroundMediaPlayer.get_Current() */
 HRESULT wmepl_background_media_player_get__current(WMEPL_MediaPlayer** value);
 
-/* Windows.Media.Playback.BackgroundMediaPlayer.SendMessageToBackground() */
 HRESULT wmepl_background_media_player_send_message_to_background(WFOCO_ValueSet* value);
 
-/* Windows.Media.Playback.BackgroundMediaPlayer.SendMessageToForeground() */
 HRESULT wmepl_background_media_player_send_message_to_foreground(WFOCO_ValueSet* value);
 
-/* Windows.Media.Playback.BackgroundMediaPlayer.IsMediaPlaying() */
 HRESULT wmepl_background_media_player_is_media_playing(BOOL *out);
 
-/* Windows.Media.Playback.BackgroundMediaPlayer.Shutdown() */
 HRESULT wmepl_background_media_player_shutdown(void);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmepl_background_media_player_on_message_received_from_background(WMEPL_BackgroundMediaPlayer *self, cwinrt_event_fn fn, void *ctx);
@@ -2153,294 +1755,158 @@ void wmepl_background_media_player_off_message_received_from_background(WMEPL_Ba
 cwinrt_token wmepl_background_media_player_on_message_received_from_foreground(WMEPL_BackgroundMediaPlayer *self, cwinrt_event_fn fn, void *ctx);
 void wmepl_background_media_player_off_message_received_from_foreground(WMEPL_BackgroundMediaPlayer *self, cwinrt_token token);
 
-/* activate Windows.Media.Playback.MediaPlaybackItemOpenedEventArgs */
 HRESULT wmepl_media_playback_item_opened_event_args_new(WMEPL_MediaPlaybackItemOpenedEventArgs **out);
 
-/* Windows.Media.Playback.MediaPlaybackItemOpenedEventArgs */
-/* Windows.Media.Playback.MediaPlaybackItemOpenedEventArgs.get_Item() */
 HRESULT wmepl_media_playback_item_opened_event_args_get__item(WMEPL_MediaPlaybackItemOpenedEventArgs *self, WMEPL_MediaPlaybackItem** value);
 
-/* Windows.Media.Playback.IMediaPlaybackItemFactory */
-/* Windows.Media.Playback.IMediaPlaybackItemFactory.Create(source) */
 HRESULT wmepl_media_playback_item_factory_create(WMEPL_IMediaPlaybackItemFactory *self, WMECO_MediaSource* source, WMEPL_MediaPlaybackItem** out);
 
-/* Windows.Media.Playback.IMediaBreak */
-/* Windows.Media.Playback.IMediaBreakEndedEventArgs */
-/* Windows.Media.Playback.IMediaBreakManager */
-/* Windows.Media.Playback.IMediaBreakSchedule */
-/* Windows.Media.Playback.IMediaBreakSeekedOverEventArgs */
-/* Windows.Media.Playback.IMediaBreakSkippedEventArgs */
-/* Windows.Media.Playback.IMediaBreakStartedEventArgs */
-/* Windows.Media.Playback.IMediaItemDisplayProperties */
-/* Windows.Media.Playback.IMediaPlaybackCommandManager */
-/* Windows.Media.Playback.IMediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs */
-/* Windows.Media.Playback.IMediaPlaybackCommandManagerCommandBehavior */
-/* Windows.Media.Playback.IMediaPlaybackCommandManagerFastForwardReceivedEventArgs */
-/* Windows.Media.Playback.IMediaPlaybackCommandManagerNextReceivedEventArgs */
-/* Windows.Media.Playback.IMediaPlaybackCommandManagerPauseReceivedEventArgs */
-/* Windows.Media.Playback.IMediaPlaybackCommandManagerPlayReceivedEventArgs */
-/* Windows.Media.Playback.IMediaPlaybackCommandManagerPositionReceivedEventArgs */
-/* Windows.Media.Playback.IMediaPlaybackCommandManagerPreviousReceivedEventArgs */
-/* Windows.Media.Playback.IMediaPlaybackCommandManagerRateReceivedEventArgs */
-/* Windows.Media.Playback.IMediaPlaybackCommandManagerRewindReceivedEventArgs */
-/* Windows.Media.Playback.IMediaPlaybackCommandManagerShuffleReceivedEventArgs */
-/* Windows.Media.Playback.IMediaPlaybackItem3 */
-/* Windows.Media.Playback.IMediaPlaybackItem3.get_IsDisabledInPlaybackList() */
 HRESULT wmepl_media_playback_item_3_get__is_disabled_in_playback_list(WMEPL_IMediaPlaybackItem_3 *self, BOOL *value);
 
-/* Windows.Media.Playback.IMediaPlaybackItem3.put_IsDisabledInPlaybackList() */
 HRESULT wmepl_media_playback_item_3_put__is_disabled_in_playback_list(WMEPL_IMediaPlaybackItem_3 *self, BOOL value);
 
-/* Windows.Media.Playback.IMediaPlaybackItem3.get_TotalDownloadProgress() */
 HRESULT wmepl_media_playback_item_3_get__total_download_progress(WMEPL_IMediaPlaybackItem_3 *self, double *value);
 
-/* Windows.Media.Playback.IMediaPlaybackItem3.get_AutoLoadedDisplayProperties() */
 HRESULT wmepl_media_playback_item_3_get__auto_loaded_display_properties(WMEPL_IMediaPlaybackItem_3 *self, WMEPL_AutoLoadedDisplayPropertyKind *value);
 
-/* Windows.Media.Playback.IMediaPlaybackItem3.put_AutoLoadedDisplayProperties() */
 HRESULT wmepl_media_playback_item_3_put__auto_loaded_display_properties(WMEPL_IMediaPlaybackItem_3 *self, WMEPL_AutoLoadedDisplayPropertyKind value);
 
-/* Windows.Media.Playback.IMediaPlaybackItemError */
-/* Windows.Media.Playback.IMediaPlaybackItemFailedEventArgs */
-/* Windows.Media.Playback.IMediaPlaybackList3 */
-/* Windows.Media.Playback.IMediaPlaybackList3.get_MaxPlayedItemsToKeepOpen() */
 HRESULT wmepl_media_playback_list_3_get__max_played_items_to_keep_open(WMEPL_IMediaPlaybackList_3 *self, uint32_t** value);
 
-/* Windows.Media.Playback.IMediaPlaybackList3.put_MaxPlayedItemsToKeepOpen() */
 HRESULT wmepl_media_playback_list_3_put__max_played_items_to_keep_open(WMEPL_IMediaPlaybackList_3 *self, uint32_t* value);
 
-/* Windows.Media.Playback.IMediaPlaybackSession */
-/* Windows.Media.Playback.IMediaPlaybackSession2 */
-/* Windows.Media.Playback.IMediaPlaybackSession2.get_SphericalVideoProjection() */
 HRESULT wmepl_media_playback_session_2_get__spherical_video_projection(WMEPL_IMediaPlaybackSession_2 *self, WMEPL_MediaPlaybackSphericalVideoProjection** value);
 
-/* Windows.Media.Playback.IMediaPlaybackSession2.get_IsMirroring() */
 HRESULT wmepl_media_playback_session_2_get__is_mirroring(WMEPL_IMediaPlaybackSession_2 *self, BOOL *value);
 
-/* Windows.Media.Playback.IMediaPlaybackSession2.put_IsMirroring() */
 HRESULT wmepl_media_playback_session_2_put__is_mirroring(WMEPL_IMediaPlaybackSession_2 *self, BOOL value);
 
-/* Windows.Media.Playback.IMediaPlaybackSession2.GetBufferedRanges() */
 HRESULT wmepl_media_playback_session_2_get_buffered_ranges(WMEPL_IMediaPlaybackSession_2 *self, WFOCO_IVectorView_WME_MediaTimeRange** out);
 
-/* Windows.Media.Playback.IMediaPlaybackSession2.GetPlayedRanges() */
 HRESULT wmepl_media_playback_session_2_get_played_ranges(WMEPL_IMediaPlaybackSession_2 *self, WFOCO_IVectorView_WME_MediaTimeRange** out);
 
-/* Windows.Media.Playback.IMediaPlaybackSession2.GetSeekableRanges() */
 HRESULT wmepl_media_playback_session_2_get_seekable_ranges(WMEPL_IMediaPlaybackSession_2 *self, WFOCO_IVectorView_WME_MediaTimeRange** out);
 
-/* Windows.Media.Playback.IMediaPlaybackSession2.IsSupportedPlaybackRateRange(rate1, rate2) */
 HRESULT wmepl_media_playback_session_2_is_supported_playback_rate_range(WMEPL_IMediaPlaybackSession_2 *self, double rate1, double rate2, BOOL *out);
 
-/* Windows.Media.Playback.IMediaPlaybackSession3 */
-/* Windows.Media.Playback.IMediaPlaybackSession3.get_PlaybackRotation() */
 HRESULT wmepl_media_playback_session_3_get__playback_rotation(WMEPL_IMediaPlaybackSession_3 *self, WMEME_MediaRotation *value);
 
-/* Windows.Media.Playback.IMediaPlaybackSession3.put_PlaybackRotation() */
 HRESULT wmepl_media_playback_session_3_put__playback_rotation(WMEPL_IMediaPlaybackSession_3 *self, WMEME_MediaRotation value);
 
-/* Windows.Media.Playback.IMediaPlaybackSession3.GetOutputDegradationPolicyState() */
 HRESULT wmepl_media_playback_session_3_get_output_degradation_policy_state(WMEPL_IMediaPlaybackSession_3 *self, WMEPL_MediaPlaybackSessionOutputDegradationPolicyState** out);
 
-/* Windows.Media.Playback.IMediaPlaybackSessionBufferingStartedEventArgs */
-/* Windows.Media.Playback.IMediaPlaybackSessionOutputDegradationPolicyState */
-/* Windows.Media.Playback.IMediaPlaybackSphericalVideoProjection */
-/* Windows.Media.Playback.IMediaPlaybackTimedMetadataTrackList */
-/* Windows.Media.Playback.IMediaPlayer */
-/* Windows.Media.Playback.IMediaPlayerSource */
-/* Windows.Media.Playback.IMediaPlayerSource.get_ProtectionManager() */
 HRESULT wmepl_media_player_source_get__protection_manager(WMEPL_IMediaPlayerSource *self, WMEPR_MediaProtectionManager** value);
 
-/* Windows.Media.Playback.IMediaPlayerSource.put_ProtectionManager() */
 HRESULT wmepl_media_player_source_put__protection_manager(WMEPL_IMediaPlayerSource *self, WMEPR_MediaProtectionManager* value);
 
-/* Windows.Media.Playback.IMediaPlayerSource.SetFileSource(file) */
 HRESULT wmepl_media_player_source_set_file_source(WMEPL_IMediaPlayerSource *self, WS_IStorageFile* file);
 
-/* Windows.Media.Playback.IMediaPlayerSource.SetStreamSource(stream) */
 HRESULT wmepl_media_player_source_set_stream_source(WMEPL_IMediaPlayerSource *self, WSTST_IRandomAccessStream* stream);
 
-/* Windows.Media.Playback.IMediaPlayerSource.SetMediaSource(source) */
 HRESULT wmepl_media_player_source_set_media_source(WMEPL_IMediaPlayerSource *self, WMECO_IMediaSource* source);
 
-/* Windows.Media.Playback.IMediaPlayerSource2 */
-/* Windows.Media.Playback.IMediaPlayerSource2.get_Source() */
 HRESULT wmepl_media_player_source_2_get__source(WMEPL_IMediaPlayerSource_2 *self, WMEPL_IMediaPlaybackSource** value);
 
-/* Windows.Media.Playback.IMediaPlayerSource2.put_Source() */
 HRESULT wmepl_media_player_source_2_put__source(WMEPL_IMediaPlayerSource_2 *self, WMEPL_IMediaPlaybackSource* value);
 
-/* Windows.Media.Playback.IMediaPlayer2 */
-/* Windows.Media.Playback.IMediaPlayer2.get_SystemMediaTransportControls() */
 HRESULT wmepl_media_player_2_get__system_media_transport_controls(WMEPL_IMediaPlayer_2 *self, WME_SystemMediaTransportControls** value);
 
-/* Windows.Media.Playback.IMediaPlayer2.get_AudioCategory() */
 HRESULT wmepl_media_player_2_get__audio_category(WMEPL_IMediaPlayer_2 *self, WMEPL_MediaPlayerAudioCategory *value);
 
-/* Windows.Media.Playback.IMediaPlayer2.put_AudioCategory() */
 HRESULT wmepl_media_player_2_put__audio_category(WMEPL_IMediaPlayer_2 *self, WMEPL_MediaPlayerAudioCategory value);
 
-/* Windows.Media.Playback.IMediaPlayer2.get_AudioDeviceType() */
 HRESULT wmepl_media_player_2_get__audio_device_type(WMEPL_IMediaPlayer_2 *self, WMEPL_MediaPlayerAudioDeviceType *value);
 
-/* Windows.Media.Playback.IMediaPlayer2.put_AudioDeviceType() */
 HRESULT wmepl_media_player_2_put__audio_device_type(WMEPL_IMediaPlayer_2 *self, WMEPL_MediaPlayerAudioDeviceType value);
 
-/* Windows.Media.Playback.IMediaPlayerEffects */
-/* Windows.Media.Playback.IMediaPlayerEffects.AddAudioEffect(activatableClassId, effectOptional, configuration) */
 HRESULT wmepl_media_player_effects_add_audio_effect(WMEPL_IMediaPlayerEffects *self, cwinrt_hstring activatableClassId, BOOL effectOptional, WFOCO_IPropertySet* configuration);
 
-/* Windows.Media.Playback.IMediaPlayerEffects.RemoveAllEffects() */
 HRESULT wmepl_media_player_effects_remove_all_effects(WMEPL_IMediaPlayerEffects *self);
 
-/* Windows.Media.Playback.IMediaPlayer3 */
-/* Windows.Media.Playback.IMediaPlayer3.get_AudioBalance() */
 HRESULT wmepl_media_player_3_get__audio_balance(WMEPL_IMediaPlayer_3 *self, double *value);
 
-/* Windows.Media.Playback.IMediaPlayer3.put_AudioBalance() */
 HRESULT wmepl_media_player_3_put__audio_balance(WMEPL_IMediaPlayer_3 *self, double value);
 
-/* Windows.Media.Playback.IMediaPlayer3.get_RealTimePlayback() */
 HRESULT wmepl_media_player_3_get__real_time_playback(WMEPL_IMediaPlayer_3 *self, BOOL *value);
 
-/* Windows.Media.Playback.IMediaPlayer3.put_RealTimePlayback() */
 HRESULT wmepl_media_player_3_put__real_time_playback(WMEPL_IMediaPlayer_3 *self, BOOL value);
 
-/* Windows.Media.Playback.IMediaPlayer3.get_StereoscopicVideoRenderMode() */
 HRESULT wmepl_media_player_3_get__stereoscopic_video_render_mode(WMEPL_IMediaPlayer_3 *self, WMEPL_StereoscopicVideoRenderMode *value);
 
-/* Windows.Media.Playback.IMediaPlayer3.put_StereoscopicVideoRenderMode() */
 HRESULT wmepl_media_player_3_put__stereoscopic_video_render_mode(WMEPL_IMediaPlayer_3 *self, WMEPL_StereoscopicVideoRenderMode value);
 
-/* Windows.Media.Playback.IMediaPlayer3.get_BreakManager() */
 HRESULT wmepl_media_player_3_get__break_manager(WMEPL_IMediaPlayer_3 *self, WMEPL_MediaBreakManager** value);
 
-/* Windows.Media.Playback.IMediaPlayer3.get_CommandManager() */
 HRESULT wmepl_media_player_3_get__command_manager(WMEPL_IMediaPlayer_3 *self, WMEPL_MediaPlaybackCommandManager** value);
 
-/* Windows.Media.Playback.IMediaPlayer3.get_AudioDevice() */
 HRESULT wmepl_media_player_3_get__audio_device(WMEPL_IMediaPlayer_3 *self, WDEEN_DeviceInformation** value);
 
-/* Windows.Media.Playback.IMediaPlayer3.put_AudioDevice() */
 HRESULT wmepl_media_player_3_put__audio_device(WMEPL_IMediaPlayer_3 *self, WDEEN_DeviceInformation* value);
 
-/* Windows.Media.Playback.IMediaPlayer3.get_TimelineController() */
 HRESULT wmepl_media_player_3_get__timeline_controller(WMEPL_IMediaPlayer_3 *self, WME_MediaTimelineController** value);
 
-/* Windows.Media.Playback.IMediaPlayer3.put_TimelineController() */
 HRESULT wmepl_media_player_3_put__timeline_controller(WMEPL_IMediaPlayer_3 *self, WME_MediaTimelineController* value);
 
-/* Windows.Media.Playback.IMediaPlayer3.get_TimelineControllerPositionOffset() */
 HRESULT wmepl_media_player_3_get__timeline_controller_position_offset(WMEPL_IMediaPlayer_3 *self, WF_TimeSpan *value);
 
-/* Windows.Media.Playback.IMediaPlayer3.put_TimelineControllerPositionOffset() */
 HRESULT wmepl_media_player_3_put__timeline_controller_position_offset(WMEPL_IMediaPlayer_3 *self, WF_TimeSpan value);
 
-/* Windows.Media.Playback.IMediaPlayer3.get_PlaybackSession() */
 HRESULT wmepl_media_player_3_get__playback_session(WMEPL_IMediaPlayer_3 *self, WMEPL_MediaPlaybackSession** value);
 
-/* Windows.Media.Playback.IMediaPlayer3.StepForwardOneFrame() */
 HRESULT wmepl_media_player_3_step_forward_one_frame(WMEPL_IMediaPlayer_3 *self);
 
-/* Windows.Media.Playback.IMediaPlayer3.StepBackwardOneFrame() */
 HRESULT wmepl_media_player_3_step_backward_one_frame(WMEPL_IMediaPlayer_3 *self);
 
-/* Windows.Media.Playback.IMediaPlayer3.GetAsCastingSource() */
 HRESULT wmepl_media_player_3_get_as_casting_source(WMEPL_IMediaPlayer_3 *self, WMECA_CastingSource** out);
 
-/* Windows.Media.Playback.IMediaPlayer4 */
-/* Windows.Media.Playback.IMediaPlayer4.SetSurfaceSize(size) */
 HRESULT wmepl_media_player_4_set_surface_size(WMEPL_IMediaPlayer_4 *self, WF_Size size);
 
-/* Windows.Media.Playback.IMediaPlayer4.GetSurface(compositor) */
 HRESULT wmepl_media_player_4_get_surface(WMEPL_IMediaPlayer_4 *self, WUC_Comp* compositor, WMEPL_MediaPlayerSurface** out);
 
-/* Windows.Media.Playback.IMediaPlayerEffects2 */
-/* Windows.Media.Playback.IMediaPlayerEffects2.AddVideoEffect(activatableClassId, effectOptional, effectConfiguration) */
 HRESULT wmepl_media_player_effects_2_add_video_effect(WMEPL_IMediaPlayerEffects_2 *self, cwinrt_hstring activatableClassId, BOOL effectOptional, WFOCO_IPropertySet* effectConfiguration);
 
-/* Windows.Media.Playback.IMediaPlayer5 */
-/* Windows.Media.Playback.IMediaPlayer5.get_IsVideoFrameServerEnabled() */
 HRESULT wmepl_media_player_5_get__is_video_frame_server_enabled(WMEPL_IMediaPlayer_5 *self, BOOL *value);
 
-/* Windows.Media.Playback.IMediaPlayer5.put_IsVideoFrameServerEnabled() */
 HRESULT wmepl_media_player_5_put__is_video_frame_server_enabled(WMEPL_IMediaPlayer_5 *self, BOOL value);
 
-/* Windows.Media.Playback.IMediaPlayer5.CopyFrameToVideoSurface(destination) */
 HRESULT wmepl_media_player_5_copy_frame_to_video_surface(WMEPL_IMediaPlayer_5 *self, WGRDIDI_IDirect3DSurface* destination);
 
-/* Windows.Media.Playback.IMediaPlayer5.CopyFrameToVideoSurface(destination, targetRectangle) */
 HRESULT wmepl_media_player_5_copy_frame_to_video_surface_p_rect(WMEPL_IMediaPlayer_5 *self, WGRDIDI_IDirect3DSurface* destination, WF_Rect targetRectangle);
 
-/* Windows.Media.Playback.IMediaPlayer5.CopyFrameToStereoscopicVideoSurfaces(destinationLeftEye, destinationRightEye) */
 HRESULT wmepl_media_player_5_copy_frame_to_stereoscopic_video_surfaces(WMEPL_IMediaPlayer_5 *self, WGRDIDI_IDirect3DSurface* destinationLeftEye, WGRDIDI_IDirect3DSurface* destinationRightEye);
 
-/* Windows.Media.Playback.IMediaPlayer6 */
-/* Windows.Media.Playback.IMediaPlayer6.RenderSubtitlesToSurface(destination) */
 HRESULT wmepl_media_player_6_render_subtitles_to_surface(WMEPL_IMediaPlayer_6 *self, WGRDIDI_IDirect3DSurface* destination, BOOL *out);
 
-/* Windows.Media.Playback.IMediaPlayer6.RenderSubtitlesToSurface(destination, targetRectangle) */
 HRESULT wmepl_media_player_6_render_subtitles_to_surface_p_rect_b(WMEPL_IMediaPlayer_6 *self, WGRDIDI_IDirect3DSurface* destination, WF_Rect targetRectangle, BOOL *out);
 
-/* Windows.Media.Playback.IMediaPlayer7 */
-/* Windows.Media.Playback.IMediaPlayer7.get_AudioStateMonitor() */
 HRESULT wmepl_media_player_7_get__audio_state_monitor(WMEPL_IMediaPlayer_7 *self, WMEAU_AudioStateMonitor** value);
 
-/* Windows.Media.Playback.IMediaPlayerDataReceivedEventArgs */
-/* Windows.Media.Playback.IMediaPlayerFailedEventArgs */
-/* Windows.Media.Playback.IMediaPlayerRateChangedEventArgs */
-/* Windows.Media.Playback.IMediaPlayerSurface */
-/* Windows.Media.Playback.IPlaybackMediaMarker */
-/* Windows.Media.Playback.IPlaybackMediaMarkerReachedEventArgs */
-/* Windows.Media.Playback.IPlaybackMediaMarkerSequence */
-/* Windows.Media.Playback.ITimedMetadataPresentationModeChangedEventArgs */
-/* Windows.Media.Playback.ICurrentMediaPlaybackItemChangedEventArgs2 */
-/* Windows.Media.Playback.ICurrentMediaPlaybackItemChangedEventArgs2.get_Reason() */
 HRESULT wmepl_current_media_playback_item_changed_event_args_2_get__reason(WMEPL_ICurrentMediaPlaybackItemChangedEventArgs_2 *self, WMEPL_MediaPlaybackItemChangedReason *value);
 
-/* Windows.Media.Playback.IMediaPlaybackItemOpenedEventArgs */
-/* Windows.Media.Playback.IMediaPlaybackItem2 */
-/* Windows.Media.Playback.IMediaPlaybackItem2.get_BreakSchedule() */
 HRESULT wmepl_media_playback_item_2_get__break_schedule(WMEPL_IMediaPlaybackItem_2 *self, WMEPL_MediaBreakSchedule** value);
 
-/* Windows.Media.Playback.IMediaPlaybackItem2.get_StartTime() */
 HRESULT wmepl_media_playback_item_2_get__start_time(WMEPL_IMediaPlaybackItem_2 *self, WF_TimeSpan *value);
 
-/* Windows.Media.Playback.IMediaPlaybackItem2.get_DurationLimit() */
 HRESULT wmepl_media_playback_item_2_get__duration_limit(WMEPL_IMediaPlaybackItem_2 *self, WF_TimeSpan** value);
 
-/* Windows.Media.Playback.IMediaPlaybackItem2.get_CanSkip() */
 HRESULT wmepl_media_playback_item_2_get__can_skip(WMEPL_IMediaPlaybackItem_2 *self, BOOL *value);
 
-/* Windows.Media.Playback.IMediaPlaybackItem2.put_CanSkip() */
 HRESULT wmepl_media_playback_item_2_put__can_skip(WMEPL_IMediaPlaybackItem_2 *self, BOOL value);
 
-/* Windows.Media.Playback.IMediaPlaybackItem2.GetDisplayProperties() */
 HRESULT wmepl_media_playback_item_2_get_display_properties(WMEPL_IMediaPlaybackItem_2 *self, WMEPL_MediaItemDisplayProperties** out);
 
-/* Windows.Media.Playback.IMediaPlaybackItem2.ApplyDisplayProperties() */
 HRESULT wmepl_media_playback_item_2_apply_display_properties(WMEPL_IMediaPlaybackItem_2 *self, WMEPL_MediaItemDisplayProperties* value);
 
-/* Windows.Media.Playback.IMediaPlaybackList2 */
-/* Windows.Media.Playback.IMediaPlaybackList2.get_MaxPrefetchTime() */
 HRESULT wmepl_media_playback_list_2_get__max_prefetch_time(WMEPL_IMediaPlaybackList_2 *self, WF_TimeSpan** value);
 
-/* Windows.Media.Playback.IMediaPlaybackList2.put_MaxPrefetchTime() */
 HRESULT wmepl_media_playback_list_2_put__max_prefetch_time(WMEPL_IMediaPlaybackList_2 *self, WF_TimeSpan* value);
 
-/* Windows.Media.Playback.IMediaPlaybackList2.get_StartingItem() */
 HRESULT wmepl_media_playback_list_2_get__starting_item(WMEPL_IMediaPlaybackList_2 *self, WMEPL_MediaPlaybackItem** value);
 
-/* Windows.Media.Playback.IMediaPlaybackList2.put_StartingItem() */
 HRESULT wmepl_media_playback_list_2_put__starting_item(WMEPL_IMediaPlaybackList_2 *self, WMEPL_MediaPlaybackItem* value);
 
-/* Windows.Media.Playback.IMediaPlaybackList2.get_ShuffledItems() */
 HRESULT wmepl_media_playback_list_2_get__shuffled_items(WMEPL_IMediaPlaybackList_2 *self, WFOCO_IVectorView_WMEPL_MediaPlaybackItem** value);
 
-/* Windows.Media.Playback.IMediaPlaybackList2.SetShuffledItems() */
 HRESULT wmepl_media_playback_list_2_set_shuffled_items(WMEPL_IMediaPlaybackList_2 *self, WFOCO_IIterable_WMEPL_MediaPlaybackItem* value);
 
-/* Windows.Media.Playback.ICurrentMediaPlaybackItemChangedEventArgs */
-/* Windows.Media.Playback.IMediaPlaybackItem */
-/* Windows.Media.Playback.IMediaPlaybackList */
 #endif /* CWINRT_WINDOWS_MEDIA_PLAYBACK_H */

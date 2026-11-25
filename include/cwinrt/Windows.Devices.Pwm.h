@@ -12,13 +12,11 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WDEPWPR_IPwmProvider
 #define CWINRT_FWD_WDEPWPR_IPwmProvider
 typedef struct WDEPWPR_IPwmProvider WDEPWPR_IPwmProvider;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDEPW_IPwmControllerStatics WDEPW_IPwmControllerStatics;
 typedef struct WDEPW_IPwmControllerStatics_2 WDEPW_IPwmControllerStatics_2;
 typedef struct WDEPW_IPwmControllerStatics_3 WDEPW_IPwmControllerStatics_3;
@@ -27,7 +25,6 @@ typedef struct WDEPW_PwmController WDEPW_PwmController;
 typedef struct WDEPW_IPwmPin WDEPW_IPwmPin;
 typedef struct WDEPW_IPwmController WDEPW_IPwmController;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WDEPWPR_IPwmProvider
 #define CWINRT_FWD_WDEPWPR_IPwmProvider
 typedef struct WDEPWPR_IPwmProvider WDEPWPR_IPwmProvider;
@@ -49,7 +46,6 @@ typedef enum WDEPW_PwmPulsePolarity {
 } WDEPW_PwmPulsePolarity;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -74,94 +70,58 @@ static const IID CWINRT_IID_WDEPW_IPwmPin CWINRT_MAYBE_UNUSED = { 0x22972DC8, 0x
 static const IID CWINRT_IID_WDEPW_IPwmController CWINRT_MAYBE_UNUSED = { 0xC45F5C85, 0xD2E8, 0x42CF, { 0x9B, 0xD6, 0xCF, 0x5E, 0xD0, 0x29, 0xE6, 0xA7 } };
 #endif
 
-/* Methods */
-
-/* Windows.Devices.Pwm.IPwmControllerStatics */
-/* Windows.Devices.Pwm.IPwmControllerStatics.GetControllersAsync(provider) */
 HRESULT wdepw_pwm_controller_statics_get_controllers_async(WDEPW_IPwmControllerStatics *self, WDEPWPR_IPwmProvider* provider, WF_IAsyncOperation_WFOCO_IVectorView_WDEPW_PwmController** out);
 
-/* Windows.Devices.Pwm.IPwmControllerStatics2 */
-/* Windows.Devices.Pwm.IPwmControllerStatics2.GetDefaultAsync() */
 HRESULT wdepw_pwm_controller_statics_2_get_default_async(WDEPW_IPwmControllerStatics_2 *self, WF_IAsyncOperation_WDEPW_PwmController** out);
 
-/* Windows.Devices.Pwm.IPwmControllerStatics3 */
-/* Windows.Devices.Pwm.IPwmControllerStatics3.GetDeviceSelector() */
 HRESULT wdepw_pwm_controller_statics_3_get_device_selector(WDEPW_IPwmControllerStatics_3 *self, cwinrt_hstring *out);
 
-/* Windows.Devices.Pwm.IPwmControllerStatics3.GetDeviceSelector(friendlyName) */
 HRESULT wdepw_pwm_controller_statics_3_get_device_selector_str_str(WDEPW_IPwmControllerStatics_3 *self, cwinrt_hstring friendlyName, cwinrt_hstring *out);
 
-/* Windows.Devices.Pwm.IPwmControllerStatics3.FromIdAsync(deviceId) */
 HRESULT wdepw_pwm_controller_statics_3_from_id_async(WDEPW_IPwmControllerStatics_3 *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDEPW_PwmController** out);
 
-/* activate Windows.Devices.Pwm.PwmPin */
 HRESULT wdepw_pwm_pin_new(WDEPW_PwmPin **out);
 
-/* Windows.Devices.Pwm.PwmPin */
-/* Windows.Devices.Pwm.PwmPin.get_Controller() */
 HRESULT wdepw_pwm_pin_get__controller(WDEPW_PwmPin *self, WDEPW_PwmController** value);
 
-/* Windows.Devices.Pwm.PwmPin.GetActiveDutyCyclePercentage() */
 HRESULT wdepw_pwm_pin_get_active_duty_cycle_percentage(WDEPW_PwmPin *self, double *out);
 
-/* Windows.Devices.Pwm.PwmPin.SetActiveDutyCyclePercentage(dutyCyclePercentage) */
 HRESULT wdepw_pwm_pin_set_active_duty_cycle_percentage(WDEPW_PwmPin *self, double dutyCyclePercentage);
 
-/* Windows.Devices.Pwm.PwmPin.get_Polarity() */
 HRESULT wdepw_pwm_pin_get__polarity(WDEPW_PwmPin *self, WDEPW_PwmPulsePolarity *value);
 
-/* Windows.Devices.Pwm.PwmPin.put_Polarity() */
 HRESULT wdepw_pwm_pin_put__polarity(WDEPW_PwmPin *self, WDEPW_PwmPulsePolarity value);
 
-/* Windows.Devices.Pwm.PwmPin.Start() */
 HRESULT wdepw_pwm_pin_start(WDEPW_PwmPin *self);
 
-/* Windows.Devices.Pwm.PwmPin.Stop() */
 HRESULT wdepw_pwm_pin_stop(WDEPW_PwmPin *self);
 
-/* Windows.Devices.Pwm.PwmPin.get_IsStarted() */
 HRESULT wdepw_pwm_pin_get__is_started(WDEPW_PwmPin *self, BOOL *value);
 
-/* Windows.Devices.Pwm.PwmPin.Close() */
 HRESULT wdepw_pwm_pin_close(WDEPW_PwmPin *self);
 
-/* activate Windows.Devices.Pwm.PwmController */
 HRESULT wdepw_pwm_controller_new(WDEPW_PwmController **out);
 
-/* Windows.Devices.Pwm.PwmController */
-/* Windows.Devices.Pwm.PwmController.get_PinCount() */
 HRESULT wdepw_pwm_controller_get__pin_count(WDEPW_PwmController *self, int32_t *value);
 
-/* Windows.Devices.Pwm.PwmController.get_ActualFrequency() */
 HRESULT wdepw_pwm_controller_get__actual_frequency(WDEPW_PwmController *self, double *value);
 
-/* Windows.Devices.Pwm.PwmController.SetDesiredFrequency(desiredFrequency) */
 HRESULT wdepw_pwm_controller_set_desired_frequency(WDEPW_PwmController *self, double desiredFrequency, double *out);
 
-/* Windows.Devices.Pwm.PwmController.get_MinFrequency() */
 HRESULT wdepw_pwm_controller_get__min_frequency(WDEPW_PwmController *self, double *value);
 
-/* Windows.Devices.Pwm.PwmController.get_MaxFrequency() */
 HRESULT wdepw_pwm_controller_get__max_frequency(WDEPW_PwmController *self, double *value);
 
-/* Windows.Devices.Pwm.PwmController.OpenPin(pinNumber) */
 HRESULT wdepw_pwm_controller_open_pin(WDEPW_PwmController *self, int32_t pinNumber, WDEPW_PwmPin** out);
 
-/* Windows.Devices.Pwm.PwmController.GetDeviceSelector() */
 HRESULT wdepw_pwm_controller_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Devices.Pwm.PwmController.GetDeviceSelector(friendlyName) */
 HRESULT wdepw_pwm_controller_get_device_selector_str_str(cwinrt_hstring friendlyName, cwinrt_hstring *out);
 
-/* Windows.Devices.Pwm.PwmController.FromIdAsync(deviceId) */
 HRESULT wdepw_pwm_controller_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDEPW_PwmController** out);
 
-/* Windows.Devices.Pwm.PwmController.GetDefaultAsync() */
 HRESULT wdepw_pwm_controller_get_default_async(WF_IAsyncOperation_WDEPW_PwmController** out);
 
-/* Windows.Devices.Pwm.PwmController.GetControllersAsync(provider) */
 HRESULT wdepw_pwm_controller_get_controllers_async(WDEPWPR_IPwmProvider* provider, WF_IAsyncOperation_WFOCO_IVectorView_WDEPW_PwmController** out);
 
-/* Windows.Devices.Pwm.IPwmPin */
-/* Windows.Devices.Pwm.IPwmController */
 #endif /* CWINRT_WINDOWS_DEVICES_PWM_H */

@@ -15,7 +15,6 @@
 #include <cwinrt/Windows.Storage.Search.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTSE_IStorageFolderQueryOperations
 #define CWINRT_FWD_WSTSE_IStorageFolderQueryOperations
 typedef struct WSTSE_IStorageFolderQueryOperations WSTSE_IStorageFolderQueryOperations;
@@ -99,7 +98,6 @@ typedef struct WSTSE_StorageItemQueryResult WSTSE_StorageItemQueryResult;
 typedef struct WSTSE_IStorageQueryResultBase WSTSE_IStorageQueryResultBase;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSTBU_FileInformationFactory WSTBU_FileInformationFactory;
 typedef struct WSTBU_FolderInformation WSTBU_FolderInformation;
 typedef struct WSTBU_IFileInformationFactoryFactory WSTBU_IFileInformationFactoryFactory;
@@ -107,7 +105,6 @@ typedef struct WSTBU_FileInformation WSTBU_FileInformation;
 typedef struct WSTBU_IFileInformationFactory WSTBU_IFileInformationFactory;
 typedef struct WSTBU_IStorageItemInformation WSTBU_IStorageItemInformation;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WFOCO_IVectorView_WSTBU_IStorageItemInformation
 #define CWINRT_FWD_WF_IAsyncOperation_WFOCO_IVectorView_WSTBU_IStorageItemInformation
 typedef struct WF_IAsyncOperation_WFOCO_IVectorView_WSTBU_IStorageItemInformation WF_IAsyncOperation_WFOCO_IVectorView_WSTBU_IStorageItemInformation;
@@ -367,7 +364,6 @@ typedef enum WS_StorageOpenOptions {
 } WS_StorageOpenOptions;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -384,206 +380,136 @@ static const IID CWINRT_IID_WSTBU_IFileInformationFactory CWINRT_MAYBE_UNUSED = 
 static const IID CWINRT_IID_WSTBU_IStorageItemInformation CWINRT_MAYBE_UNUSED = { 0x87A5CB8B, 0x8972, 0x4F40, { 0x8D, 0xE0, 0xD8, 0x6F, 0xB1, 0x79, 0xD8, 0xFA } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Storage.BulkAccess.FileInformationFactory */
 HRESULT wstbu_file_information_factory_new(WSTBU_FileInformationFactory **out);
 
-/* Windows.Storage.BulkAccess.FileInformationFactory */
-/* Windows.Storage.BulkAccess.FileInformationFactory.GetItemsAsync(startIndex, maxItemsToRetrieve) */
 HRESULT wstbu_file_information_factory_get_items_async_u32_u32_p(WSTBU_FileInformationFactory *self, uint32_t startIndex, uint32_t maxItemsToRetrieve, WF_IAsyncOperation_WFOCO_IVectorView_WSTBU_IStorageItemInformation** out);
 
-/* Windows.Storage.BulkAccess.FileInformationFactory.GetItemsAsync() */
 HRESULT wstbu_file_information_factory_get_items_async(WSTBU_FileInformationFactory *self, WF_IAsyncOperation_WFOCO_IVectorView_WSTBU_IStorageItemInformation** out);
 
-/* Windows.Storage.BulkAccess.FileInformationFactory.GetFilesAsync(startIndex, maxItemsToRetrieve) */
 HRESULT wstbu_file_information_factory_get_files_async_u32_u32_p(WSTBU_FileInformationFactory *self, uint32_t startIndex, uint32_t maxItemsToRetrieve, WF_IAsyncOperation_WFOCO_IVectorView_WSTBU_FileInformation** out);
 
-/* Windows.Storage.BulkAccess.FileInformationFactory.GetFilesAsync() */
 HRESULT wstbu_file_information_factory_get_files_async(WSTBU_FileInformationFactory *self, WF_IAsyncOperation_WFOCO_IVectorView_WSTBU_FileInformation** out);
 
-/* Windows.Storage.BulkAccess.FileInformationFactory.GetFoldersAsync(startIndex, maxItemsToRetrieve) */
 HRESULT wstbu_file_information_factory_get_folders_async_u32_u32_p(WSTBU_FileInformationFactory *self, uint32_t startIndex, uint32_t maxItemsToRetrieve, WF_IAsyncOperation_WFOCO_IVectorView_WSTBU_FolderInformation** out);
 
-/* Windows.Storage.BulkAccess.FileInformationFactory.GetFoldersAsync() */
 HRESULT wstbu_file_information_factory_get_folders_async(WSTBU_FileInformationFactory *self, WF_IAsyncOperation_WFOCO_IVectorView_WSTBU_FolderInformation** out);
 
-/* Windows.Storage.BulkAccess.FileInformationFactory.GetVirtualizedItemsVector() */
 HRESULT wstbu_file_information_factory_get_virtualized_items_vector(WSTBU_FileInformationFactory *self, IInspectable** out);
 
-/* Windows.Storage.BulkAccess.FileInformationFactory.GetVirtualizedFilesVector() */
 HRESULT wstbu_file_information_factory_get_virtualized_files_vector(WSTBU_FileInformationFactory *self, IInspectable** out);
 
-/* Windows.Storage.BulkAccess.FileInformationFactory.GetVirtualizedFoldersVector() */
 HRESULT wstbu_file_information_factory_get_virtualized_folders_vector(WSTBU_FileInformationFactory *self, IInspectable** out);
 
-/* activate Windows.Storage.BulkAccess.FolderInformation */
 HRESULT wstbu_folder_information_new(WSTBU_FolderInformation **out);
 
-/* Windows.Storage.BulkAccess.FolderInformation */
-/* Windows.Storage.BulkAccess.FolderInformation.get_MusicProperties() */
 HRESULT wstbu_folder_information_get__music_properties(WSTBU_FolderInformation *self, WSTFI_MusicProperties** value);
 
-/* Windows.Storage.BulkAccess.FolderInformation.get_VideoProperties() */
 HRESULT wstbu_folder_information_get__video_properties(WSTBU_FolderInformation *self, WSTFI_VideoProperties** value);
 
-/* Windows.Storage.BulkAccess.FolderInformation.get_ImageProperties() */
 HRESULT wstbu_folder_information_get__image_properties(WSTBU_FolderInformation *self, WSTFI_ImageProperties** value);
 
-/* Windows.Storage.BulkAccess.FolderInformation.get_DocumentProperties() */
 HRESULT wstbu_folder_information_get__document_properties(WSTBU_FolderInformation *self, WSTFI_DocumentProperties** value);
 
-/* Windows.Storage.BulkAccess.FolderInformation.get_BasicProperties() */
 HRESULT wstbu_folder_information_get__basic_properties(WSTBU_FolderInformation *self, WSTFI_BasicProperties** value);
 
-/* Windows.Storage.BulkAccess.FolderInformation.get_Thumbnail() */
 HRESULT wstbu_folder_information_get__thumbnail(WSTBU_FolderInformation *self, WSTFI_StorageItemThumbnail** value);
 
-/* Windows.Storage.BulkAccess.FolderInformation.CreateFileAsync(desiredName) */
 HRESULT wstbu_folder_information_create_file_async(WSTBU_FolderInformation *self, cwinrt_hstring desiredName, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.CreateFileAsync(desiredName, options) */
 HRESULT wstbu_folder_information_create_file_async_str_creation_collision_option_p(WSTBU_FolderInformation *self, cwinrt_hstring desiredName, WS_CreationCollisionOption options, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.CreateFolderAsync(desiredName) */
 HRESULT wstbu_folder_information_create_folder_async(WSTBU_FolderInformation *self, cwinrt_hstring desiredName, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.CreateFolderAsync(desiredName, options) */
 HRESULT wstbu_folder_information_create_folder_async_str_creation_collision_option_p(WSTBU_FolderInformation *self, cwinrt_hstring desiredName, WS_CreationCollisionOption options, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.GetFileAsync(name) */
 HRESULT wstbu_folder_information_get_file_async(WSTBU_FolderInformation *self, cwinrt_hstring name, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.GetFolderAsync(name) */
 HRESULT wstbu_folder_information_get_folder_async(WSTBU_FolderInformation *self, cwinrt_hstring name, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.GetItemAsync(name) */
 HRESULT wstbu_folder_information_get_item_async(WSTBU_FolderInformation *self, cwinrt_hstring name, WF_IAsyncOperation_WS_IStorageItem** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.GetFilesAsync() */
 HRESULT wstbu_folder_information_get_files_async(WSTBU_FolderInformation *self, WF_IAsyncOperation_WFOCO_IVectorView_WS_StorageFile** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.GetFoldersAsync() */
 HRESULT wstbu_folder_information_get_folders_async(WSTBU_FolderInformation *self, WF_IAsyncOperation_WFOCO_IVectorView_WS_StorageFolder** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.GetItemsAsync() */
 HRESULT wstbu_folder_information_get_items_async(WSTBU_FolderInformation *self, WF_IAsyncOperation_WFOCO_IVectorView_WS_IStorageItem** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.RenameAsync(desiredName) */
 HRESULT wstbu_folder_information_rename_async(WSTBU_FolderInformation *self, cwinrt_hstring desiredName, WF_IAsyncAction** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.RenameAsync(desiredName, option) */
 HRESULT wstbu_folder_information_rename_async_str_name_collision_option_p(WSTBU_FolderInformation *self, cwinrt_hstring desiredName, WS_NameCollisionOption option, WF_IAsyncAction** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.DeleteAsync() */
 HRESULT wstbu_folder_information_delete_async(WSTBU_FolderInformation *self, WF_IAsyncAction** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.DeleteAsync(option) */
 HRESULT wstbu_folder_information_delete_async_storage_delete_option_p(WSTBU_FolderInformation *self, WS_StorageDeleteOption option, WF_IAsyncAction** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.GetBasicPropertiesAsync() */
 HRESULT wstbu_folder_information_get_basic_properties_async(WSTBU_FolderInformation *self, WF_IAsyncOperation_WSTFI_BasicProperties** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.get_Name() */
 HRESULT wstbu_folder_information_get__name(WSTBU_FolderInformation *self, cwinrt_hstring *value);
 
-/* Windows.Storage.BulkAccess.FolderInformation.get_Path() */
 HRESULT wstbu_folder_information_get__path(WSTBU_FolderInformation *self, cwinrt_hstring *value);
 
-/* Windows.Storage.BulkAccess.FolderInformation.get_Attributes() */
 HRESULT wstbu_folder_information_get__attributes(WSTBU_FolderInformation *self, WS_FileAttributes *value);
 
-/* Windows.Storage.BulkAccess.FolderInformation.get_DateCreated() */
 HRESULT wstbu_folder_information_get__date_created(WSTBU_FolderInformation *self, WF_DateTime *value);
 
-/* Windows.Storage.BulkAccess.FolderInformation.IsOfType() */
 HRESULT wstbu_folder_information_is_of_type(WSTBU_FolderInformation *self, WS_StorageItemTypes type_, BOOL *out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.GetThumbnailAsync(mode) */
 HRESULT wstbu_folder_information_get_thumbnail_async(WSTBU_FolderInformation *self, WSTFI_ThumbnailMode mode, WF_IAsyncOperation_WSTFI_StorageItemThumbnail** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.GetThumbnailAsync(mode, requestedSize) */
 HRESULT wstbu_folder_information_get_thumbnail_async_thumbnail_mode_u32_p(WSTBU_FolderInformation *self, WSTFI_ThumbnailMode mode, uint32_t requestedSize, WF_IAsyncOperation_WSTFI_StorageItemThumbnail** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.GetThumbnailAsync(mode, requestedSize, options) */
 HRESULT wstbu_folder_information_get_thumbnail_async_thumbnail_mode_u32_thumbnail_options_p(WSTBU_FolderInformation *self, WSTFI_ThumbnailMode mode, uint32_t requestedSize, WSTFI_ThumbnailOptions options, WF_IAsyncOperation_WSTFI_StorageItemThumbnail** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.get_DisplayName() */
 HRESULT wstbu_folder_information_get__display_name(WSTBU_FolderInformation *self, cwinrt_hstring *value);
 
-/* Windows.Storage.BulkAccess.FolderInformation.get_DisplayType() */
 HRESULT wstbu_folder_information_get__display_type(WSTBU_FolderInformation *self, cwinrt_hstring *value);
 
-/* Windows.Storage.BulkAccess.FolderInformation.get_FolderRelativeId() */
 HRESULT wstbu_folder_information_get__folder_relative_id(WSTBU_FolderInformation *self, cwinrt_hstring *value);
 
-/* Windows.Storage.BulkAccess.FolderInformation.get_Properties() */
 HRESULT wstbu_folder_information_get__properties(WSTBU_FolderInformation *self, WSTFI_StorageItemContentProperties** value);
 
-/* Windows.Storage.BulkAccess.FolderInformation.GetIndexedStateAsync() */
 HRESULT wstbu_folder_information_get_indexed_state_async(WSTBU_FolderInformation *self, WF_IAsyncOperation_WSTSE_IndexedState** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.CreateFileQuery() */
 HRESULT wstbu_folder_information_create_file_query(WSTBU_FolderInformation *self, WSTSE_StorageFileQueryResult** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.CreateFileQuery(query) */
 HRESULT wstbu_folder_information_create_file_query_common_file_query_p(WSTBU_FolderInformation *self, WSTSE_CommonFileQuery query, WSTSE_StorageFileQueryResult** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.CreateFileQueryWithOptions(queryOptions) */
 HRESULT wstbu_folder_information_create_file_query_with_options(WSTBU_FolderInformation *self, WSTSE_QueryOptions* queryOptions, WSTSE_StorageFileQueryResult** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.CreateFolderQuery() */
 HRESULT wstbu_folder_information_create_folder_query(WSTBU_FolderInformation *self, WSTSE_StorageFolderQueryResult** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.CreateFolderQuery(query) */
 HRESULT wstbu_folder_information_create_folder_query_common_folder_query_p(WSTBU_FolderInformation *self, WSTSE_CommonFolderQuery query, WSTSE_StorageFolderQueryResult** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.CreateFolderQueryWithOptions(queryOptions) */
 HRESULT wstbu_folder_information_create_folder_query_with_options(WSTBU_FolderInformation *self, WSTSE_QueryOptions* queryOptions, WSTSE_StorageFolderQueryResult** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.CreateItemQuery() */
 HRESULT wstbu_folder_information_create_item_query(WSTBU_FolderInformation *self, WSTSE_StorageItemQueryResult** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.CreateItemQueryWithOptions(queryOptions) */
 HRESULT wstbu_folder_information_create_item_query_with_options(WSTBU_FolderInformation *self, WSTSE_QueryOptions* queryOptions, WSTSE_StorageItemQueryResult** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.GetFilesAsync(query, startIndex, maxItemsToRetrieve) */
 HRESULT wstbu_folder_information_get_files_async_common_file_query_u32_u32_p(WSTBU_FolderInformation *self, WSTSE_CommonFileQuery query, uint32_t startIndex, uint32_t maxItemsToRetrieve, WF_IAsyncOperation_WFOCO_IVectorView_WS_StorageFile** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.GetFilesAsync(query) */
 HRESULT wstbu_folder_information_get_files_async_common_file_query_p(WSTBU_FolderInformation *self, WSTSE_CommonFileQuery query, WF_IAsyncOperation_WFOCO_IVectorView_WS_StorageFile** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.GetFoldersAsync(query, startIndex, maxItemsToRetrieve) */
 HRESULT wstbu_folder_information_get_folders_async_common_folder_query_u32_u32_p(WSTBU_FolderInformation *self, WSTSE_CommonFolderQuery query, uint32_t startIndex, uint32_t maxItemsToRetrieve, WF_IAsyncOperation_WFOCO_IVectorView_WS_StorageFolder** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.GetFoldersAsync(query) */
 HRESULT wstbu_folder_information_get_folders_async_common_folder_query_p(WSTBU_FolderInformation *self, WSTSE_CommonFolderQuery query, WF_IAsyncOperation_WFOCO_IVectorView_WS_StorageFolder** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.GetItemsAsync(startIndex, maxItemsToRetrieve) */
 HRESULT wstbu_folder_information_get_items_async_u32_u32_p(WSTBU_FolderInformation *self, uint32_t startIndex, uint32_t maxItemsToRetrieve, WF_IAsyncOperation_WFOCO_IVectorView_WS_IStorageItem** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.AreQueryOptionsSupported(queryOptions) */
 HRESULT wstbu_folder_information_are_query_options_supported(WSTBU_FolderInformation *self, WSTSE_QueryOptions* queryOptions, BOOL *out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.IsCommonFolderQuerySupported(query) */
 HRESULT wstbu_folder_information_is_common_folder_query_supported(WSTBU_FolderInformation *self, WSTSE_CommonFolderQuery query, BOOL *out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.IsCommonFileQuerySupported(query) */
 HRESULT wstbu_folder_information_is_common_file_query_supported(WSTBU_FolderInformation *self, WSTSE_CommonFileQuery query, BOOL *out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.GetParentAsync() */
 HRESULT wstbu_folder_information_get_parent_async(WSTBU_FolderInformation *self, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.IsEqual(item) */
 HRESULT wstbu_folder_information_is_equal(WSTBU_FolderInformation *self, WS_IStorageItem* item, BOOL *out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.TryGetItemAsync(name) */
 HRESULT wstbu_folder_information_try_get_item_async(WSTBU_FolderInformation *self, cwinrt_hstring name, WF_IAsyncOperation_WS_IStorageItem** out);
 
-/* Windows.Storage.BulkAccess.FolderInformation.get_Provider() */
 HRESULT wstbu_folder_information_get__provider(WSTBU_FolderInformation *self, WS_StorageProvider** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wstbu_folder_information_on_thumbnail_updated(WSTBU_FolderInformation *self, cwinrt_event_fn fn, void *ctx);
@@ -592,153 +518,102 @@ void wstbu_folder_information_off_thumbnail_updated(WSTBU_FolderInformation *sel
 cwinrt_token wstbu_folder_information_on_properties_updated(WSTBU_FolderInformation *self, cwinrt_event_fn fn, void *ctx);
 void wstbu_folder_information_off_properties_updated(WSTBU_FolderInformation *self, cwinrt_token token);
 
-/* Windows.Storage.BulkAccess.IFileInformationFactoryFactory */
-/* Windows.Storage.BulkAccess.IFileInformationFactoryFactory.CreateWithMode(queryResult, mode) */
 HRESULT wstbu_file_information_factory_factory_create_with_mode(WSTBU_IFileInformationFactoryFactory *self, WSTSE_IStorageQueryResultBase* queryResult, WSTFI_ThumbnailMode mode, WSTBU_FileInformationFactory** out);
 
-/* Windows.Storage.BulkAccess.IFileInformationFactoryFactory.CreateWithModeAndSize(queryResult, mode, requestedThumbnailSize) */
 HRESULT wstbu_file_information_factory_factory_create_with_mode_and_size(WSTBU_IFileInformationFactoryFactory *self, WSTSE_IStorageQueryResultBase* queryResult, WSTFI_ThumbnailMode mode, uint32_t requestedThumbnailSize, WSTBU_FileInformationFactory** out);
 
-/* Windows.Storage.BulkAccess.IFileInformationFactoryFactory.CreateWithModeAndSizeAndOptions(queryResult, mode, requestedThumbnailSize, thumbnailOptions) */
 HRESULT wstbu_file_information_factory_factory_create_with_mode_and_size_and_options(WSTBU_IFileInformationFactoryFactory *self, WSTSE_IStorageQueryResultBase* queryResult, WSTFI_ThumbnailMode mode, uint32_t requestedThumbnailSize, WSTFI_ThumbnailOptions thumbnailOptions, WSTBU_FileInformationFactory** out);
 
-/* Windows.Storage.BulkAccess.IFileInformationFactoryFactory.CreateWithModeAndSizeAndOptionsAndFlags(queryResult, mode, requestedThumbnailSize, thumbnailOptions, delayLoad) */
 HRESULT wstbu_file_information_factory_factory_create_with_mode_and_size_and_options_and_flags(WSTBU_IFileInformationFactoryFactory *self, WSTSE_IStorageQueryResultBase* queryResult, WSTFI_ThumbnailMode mode, uint32_t requestedThumbnailSize, WSTFI_ThumbnailOptions thumbnailOptions, BOOL delayLoad, WSTBU_FileInformationFactory** out);
 
-/* activate Windows.Storage.BulkAccess.FileInformation */
 HRESULT wstbu_file_information_new(WSTBU_FileInformation **out);
 
-/* Windows.Storage.BulkAccess.FileInformation */
-/* Windows.Storage.BulkAccess.FileInformation.get_MusicProperties() */
 HRESULT wstbu_file_information_get__music_properties(WSTBU_FileInformation *self, WSTFI_MusicProperties** value);
 
-/* Windows.Storage.BulkAccess.FileInformation.get_VideoProperties() */
 HRESULT wstbu_file_information_get__video_properties(WSTBU_FileInformation *self, WSTFI_VideoProperties** value);
 
-/* Windows.Storage.BulkAccess.FileInformation.get_ImageProperties() */
 HRESULT wstbu_file_information_get__image_properties(WSTBU_FileInformation *self, WSTFI_ImageProperties** value);
 
-/* Windows.Storage.BulkAccess.FileInformation.get_DocumentProperties() */
 HRESULT wstbu_file_information_get__document_properties(WSTBU_FileInformation *self, WSTFI_DocumentProperties** value);
 
-/* Windows.Storage.BulkAccess.FileInformation.get_BasicProperties() */
 HRESULT wstbu_file_information_get__basic_properties(WSTBU_FileInformation *self, WSTFI_BasicProperties** value);
 
-/* Windows.Storage.BulkAccess.FileInformation.get_Thumbnail() */
 HRESULT wstbu_file_information_get__thumbnail(WSTBU_FileInformation *self, WSTFI_StorageItemThumbnail** value);
 
-/* Windows.Storage.BulkAccess.FileInformation.get_FileType() */
 HRESULT wstbu_file_information_get__file_type(WSTBU_FileInformation *self, cwinrt_hstring *value);
 
-/* Windows.Storage.BulkAccess.FileInformation.get_ContentType() */
 HRESULT wstbu_file_information_get__content_type(WSTBU_FileInformation *self, cwinrt_hstring *value);
 
-/* Windows.Storage.BulkAccess.FileInformation.OpenAsync(accessMode) */
 HRESULT wstbu_file_information_open_async(WSTBU_FileInformation *self, WS_FileAccessMode accessMode, WF_IAsyncOperation_WSTST_IRandomAccessStream** out);
 
-/* Windows.Storage.BulkAccess.FileInformation.OpenTransactedWriteAsync() */
 HRESULT wstbu_file_information_open_transacted_write_async(WSTBU_FileInformation *self, WF_IAsyncOperation_WS_StorageStreamTransaction** out);
 
-/* Windows.Storage.BulkAccess.FileInformation.CopyAsync(destinationFolder) */
 HRESULT wstbu_file_information_copy_async(WSTBU_FileInformation *self, WS_IStorageFolder* destinationFolder, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.BulkAccess.FileInformation.CopyAsync(destinationFolder, desiredNewName) */
 HRESULT wstbu_file_information_copy_async_p_str_p(WSTBU_FileInformation *self, WS_IStorageFolder* destinationFolder, cwinrt_hstring desiredNewName, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.BulkAccess.FileInformation.CopyAsync(destinationFolder, desiredNewName, option) */
 HRESULT wstbu_file_information_copy_async_p_str_name_collision_option_p(WSTBU_FileInformation *self, WS_IStorageFolder* destinationFolder, cwinrt_hstring desiredNewName, WS_NameCollisionOption option, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.BulkAccess.FileInformation.CopyAndReplaceAsync(fileToReplace) */
 HRESULT wstbu_file_information_copy_and_replace_async(WSTBU_FileInformation *self, WS_IStorageFile* fileToReplace, WF_IAsyncAction** out);
 
-/* Windows.Storage.BulkAccess.FileInformation.MoveAsync(destinationFolder) */
 HRESULT wstbu_file_information_move_async(WSTBU_FileInformation *self, WS_IStorageFolder* destinationFolder, WF_IAsyncAction** out);
 
-/* Windows.Storage.BulkAccess.FileInformation.MoveAsync(destinationFolder, desiredNewName) */
 HRESULT wstbu_file_information_move_async_p_str_p(WSTBU_FileInformation *self, WS_IStorageFolder* destinationFolder, cwinrt_hstring desiredNewName, WF_IAsyncAction** out);
 
-/* Windows.Storage.BulkAccess.FileInformation.MoveAsync(destinationFolder, desiredNewName, option) */
 HRESULT wstbu_file_information_move_async_p_str_name_collision_option_p(WSTBU_FileInformation *self, WS_IStorageFolder* destinationFolder, cwinrt_hstring desiredNewName, WS_NameCollisionOption option, WF_IAsyncAction** out);
 
-/* Windows.Storage.BulkAccess.FileInformation.MoveAndReplaceAsync(fileToReplace) */
 HRESULT wstbu_file_information_move_and_replace_async(WSTBU_FileInformation *self, WS_IStorageFile* fileToReplace, WF_IAsyncAction** out);
 
-/* Windows.Storage.BulkAccess.FileInformation.RenameAsync(desiredName) */
 HRESULT wstbu_file_information_rename_async(WSTBU_FileInformation *self, cwinrt_hstring desiredName, WF_IAsyncAction** out);
 
-/* Windows.Storage.BulkAccess.FileInformation.RenameAsync(desiredName, option) */
 HRESULT wstbu_file_information_rename_async_str_name_collision_option_p(WSTBU_FileInformation *self, cwinrt_hstring desiredName, WS_NameCollisionOption option, WF_IAsyncAction** out);
 
-/* Windows.Storage.BulkAccess.FileInformation.DeleteAsync() */
 HRESULT wstbu_file_information_delete_async(WSTBU_FileInformation *self, WF_IAsyncAction** out);
 
-/* Windows.Storage.BulkAccess.FileInformation.DeleteAsync(option) */
 HRESULT wstbu_file_information_delete_async_storage_delete_option_p(WSTBU_FileInformation *self, WS_StorageDeleteOption option, WF_IAsyncAction** out);
 
-/* Windows.Storage.BulkAccess.FileInformation.GetBasicPropertiesAsync() */
 HRESULT wstbu_file_information_get_basic_properties_async(WSTBU_FileInformation *self, WF_IAsyncOperation_WSTFI_BasicProperties** out);
 
-/* Windows.Storage.BulkAccess.FileInformation.get_Name() */
 HRESULT wstbu_file_information_get__name(WSTBU_FileInformation *self, cwinrt_hstring *value);
 
-/* Windows.Storage.BulkAccess.FileInformation.get_Path() */
 HRESULT wstbu_file_information_get__path(WSTBU_FileInformation *self, cwinrt_hstring *value);
 
-/* Windows.Storage.BulkAccess.FileInformation.get_Attributes() */
 HRESULT wstbu_file_information_get__attributes(WSTBU_FileInformation *self, WS_FileAttributes *value);
 
-/* Windows.Storage.BulkAccess.FileInformation.get_DateCreated() */
 HRESULT wstbu_file_information_get__date_created(WSTBU_FileInformation *self, WF_DateTime *value);
 
-/* Windows.Storage.BulkAccess.FileInformation.IsOfType() */
 HRESULT wstbu_file_information_is_of_type(WSTBU_FileInformation *self, WS_StorageItemTypes type_, BOOL *out);
 
-/* Windows.Storage.BulkAccess.FileInformation.OpenReadAsync() */
 HRESULT wstbu_file_information_open_read_async(WSTBU_FileInformation *self, WF_IAsyncOperation_WSTST_IRandomAccessStreamWithContentType** out);
 
-/* Windows.Storage.BulkAccess.FileInformation.OpenSequentialReadAsync() */
 HRESULT wstbu_file_information_open_sequential_read_async(WSTBU_FileInformation *self, WF_IAsyncOperation_WSTST_IInputStream** out);
 
-/* Windows.Storage.BulkAccess.FileInformation.GetThumbnailAsync(mode) */
 HRESULT wstbu_file_information_get_thumbnail_async(WSTBU_FileInformation *self, WSTFI_ThumbnailMode mode, WF_IAsyncOperation_WSTFI_StorageItemThumbnail** out);
 
-/* Windows.Storage.BulkAccess.FileInformation.GetThumbnailAsync(mode, requestedSize) */
 HRESULT wstbu_file_information_get_thumbnail_async_thumbnail_mode_u32_p(WSTBU_FileInformation *self, WSTFI_ThumbnailMode mode, uint32_t requestedSize, WF_IAsyncOperation_WSTFI_StorageItemThumbnail** out);
 
-/* Windows.Storage.BulkAccess.FileInformation.GetThumbnailAsync(mode, requestedSize, options) */
 HRESULT wstbu_file_information_get_thumbnail_async_thumbnail_mode_u32_thumbnail_options_p(WSTBU_FileInformation *self, WSTFI_ThumbnailMode mode, uint32_t requestedSize, WSTFI_ThumbnailOptions options, WF_IAsyncOperation_WSTFI_StorageItemThumbnail** out);
 
-/* Windows.Storage.BulkAccess.FileInformation.get_DisplayName() */
 HRESULT wstbu_file_information_get__display_name(WSTBU_FileInformation *self, cwinrt_hstring *value);
 
-/* Windows.Storage.BulkAccess.FileInformation.get_DisplayType() */
 HRESULT wstbu_file_information_get__display_type(WSTBU_FileInformation *self, cwinrt_hstring *value);
 
-/* Windows.Storage.BulkAccess.FileInformation.get_FolderRelativeId() */
 HRESULT wstbu_file_information_get__folder_relative_id(WSTBU_FileInformation *self, cwinrt_hstring *value);
 
-/* Windows.Storage.BulkAccess.FileInformation.get_Properties() */
 HRESULT wstbu_file_information_get__properties(WSTBU_FileInformation *self, WSTFI_StorageItemContentProperties** value);
 
-/* Windows.Storage.BulkAccess.FileInformation.GetParentAsync() */
 HRESULT wstbu_file_information_get_parent_async(WSTBU_FileInformation *self, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.BulkAccess.FileInformation.IsEqual(item) */
 HRESULT wstbu_file_information_is_equal(WSTBU_FileInformation *self, WS_IStorageItem* item, BOOL *out);
 
-/* Windows.Storage.BulkAccess.FileInformation.get_Provider() */
 HRESULT wstbu_file_information_get__provider(WSTBU_FileInformation *self, WS_StorageProvider** value);
 
-/* Windows.Storage.BulkAccess.FileInformation.get_IsAvailable() */
 HRESULT wstbu_file_information_get__is_available(WSTBU_FileInformation *self, BOOL *value);
 
-/* Windows.Storage.BulkAccess.FileInformation.OpenAsync(accessMode, options) */
 HRESULT wstbu_file_information_open_async_file_access_mode_storage_open_options_p(WSTBU_FileInformation *self, WS_FileAccessMode accessMode, WS_StorageOpenOptions options, WF_IAsyncOperation_WSTST_IRandomAccessStream** out);
 
-/* Windows.Storage.BulkAccess.FileInformation.OpenTransactedWriteAsync(options) */
 HRESULT wstbu_file_information_open_transacted_write_async_storage_open_options_p(WSTBU_FileInformation *self, WS_StorageOpenOptions options, WF_IAsyncOperation_WS_StorageStreamTransaction** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wstbu_file_information_on_thumbnail_updated(WSTBU_FileInformation *self, cwinrt_event_fn fn, void *ctx);
@@ -747,24 +622,16 @@ void wstbu_file_information_off_thumbnail_updated(WSTBU_FileInformation *self, c
 cwinrt_token wstbu_file_information_on_properties_updated(WSTBU_FileInformation *self, cwinrt_event_fn fn, void *ctx);
 void wstbu_file_information_off_properties_updated(WSTBU_FileInformation *self, cwinrt_token token);
 
-/* Windows.Storage.BulkAccess.IFileInformationFactory */
-/* Windows.Storage.BulkAccess.IStorageItemInformation */
-/* Windows.Storage.BulkAccess.IStorageItemInformation.get_MusicProperties() */
 HRESULT wstbu_storage_item_information_get__music_properties(WSTBU_IStorageItemInformation *self, WSTFI_MusicProperties** value);
 
-/* Windows.Storage.BulkAccess.IStorageItemInformation.get_VideoProperties() */
 HRESULT wstbu_storage_item_information_get__video_properties(WSTBU_IStorageItemInformation *self, WSTFI_VideoProperties** value);
 
-/* Windows.Storage.BulkAccess.IStorageItemInformation.get_ImageProperties() */
 HRESULT wstbu_storage_item_information_get__image_properties(WSTBU_IStorageItemInformation *self, WSTFI_ImageProperties** value);
 
-/* Windows.Storage.BulkAccess.IStorageItemInformation.get_DocumentProperties() */
 HRESULT wstbu_storage_item_information_get__document_properties(WSTBU_IStorageItemInformation *self, WSTFI_DocumentProperties** value);
 
-/* Windows.Storage.BulkAccess.IStorageItemInformation.get_BasicProperties() */
 HRESULT wstbu_storage_item_information_get__basic_properties(WSTBU_IStorageItemInformation *self, WSTFI_BasicProperties** value);
 
-/* Windows.Storage.BulkAccess.IStorageItemInformation.get_Thumbnail() */
 HRESULT wstbu_storage_item_information_get__thumbnail(WSTBU_IStorageItemInformation *self, WSTFI_StorageItemThumbnail** value);
 
 #endif /* CWINRT_WINDOWS_STORAGE_BULKACCESS_H */

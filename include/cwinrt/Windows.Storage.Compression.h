@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Storage.Streams.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IOutputStream
 #define CWINRT_FWD_WSTST_IOutputStream
 typedef struct WSTST_IOutputStream WSTST_IOutputStream;
@@ -27,7 +26,6 @@ typedef struct WSTST_IInputStream WSTST_IInputStream;
 typedef struct WSTST_IBuffer WSTST_IBuffer;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSTCO_Compressor WSTCO_Compressor;
 typedef struct WSTCO_Decompressor WSTCO_Decompressor;
 typedef struct WSTCO_ICompressorFactory WSTCO_ICompressorFactory;
@@ -35,7 +33,6 @@ typedef struct WSTCO_IDecompressorFactory WSTCO_IDecompressorFactory;
 typedef struct WSTCO_ICompressor WSTCO_ICompressor;
 typedef struct WSTCO_IDecompressor WSTCO_IDecompressor;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_Bool
 #define CWINRT_FWD_WF_IAsyncOperation_Bool
 typedef struct WF_IAsyncOperation_Bool WF_IAsyncOperation_Bool;
@@ -82,7 +79,6 @@ typedef enum WSTCO_CompressAlgorithm {
 } WSTCO_CompressAlgorithm;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -103,51 +99,30 @@ static const IID CWINRT_IID_WSTCO_ICompressor CWINRT_MAYBE_UNUSED = { 0x0AC3645A
 static const IID CWINRT_IID_WSTCO_IDecompressor CWINRT_MAYBE_UNUSED = { 0xB883FE46, 0xD68A, 0x4C8B, { 0xAD, 0xA0, 0x4E, 0xE8, 0x13, 0xFC, 0x52, 0x83 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Storage.Compression.Compressor */
 HRESULT wstco_compressor_new(WSTCO_Compressor **out);
 
-/* Windows.Storage.Compression.Compressor */
-/* Windows.Storage.Compression.Compressor.FinishAsync() */
 HRESULT wstco_compressor_finish_async(WSTCO_Compressor *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Storage.Compression.Compressor.DetachStream() */
 HRESULT wstco_compressor_detach_stream(WSTCO_Compressor *self, WSTST_IOutputStream** out);
 
-/* Windows.Storage.Compression.Compressor.WriteAsync(buffer) */
 HRESULT wstco_compressor_write_async(WSTCO_Compressor *self, WSTST_IBuffer* buffer, WF_IAsyncOperationWithProgress_uint32_t_uint32_t** out);
 
-/* Windows.Storage.Compression.Compressor.FlushAsync() */
 HRESULT wstco_compressor_flush_async(WSTCO_Compressor *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Storage.Compression.Compressor.Close() */
 HRESULT wstco_compressor_close(WSTCO_Compressor *self);
 
-/* activate Windows.Storage.Compression.Decompressor */
 HRESULT wstco_decompressor_new(WSTCO_Decompressor **out);
 
-/* Windows.Storage.Compression.Decompressor */
-/* Windows.Storage.Compression.Decompressor.DetachStream() */
 HRESULT wstco_decompressor_detach_stream(WSTCO_Decompressor *self, WSTST_IInputStream** out);
 
-/* Windows.Storage.Compression.Decompressor.ReadAsync(buffer, count, options) */
 HRESULT wstco_decompressor_read_async(WSTCO_Decompressor *self, WSTST_IBuffer* buffer, uint32_t count, WSTST_InputStreamOptions options, WF_IAsyncOperationWithProgress_WSTST_IBuffer_uint32_t** out);
 
-/* Windows.Storage.Compression.Decompressor.Close() */
 HRESULT wstco_decompressor_close(WSTCO_Decompressor *self);
 
-/* Windows.Storage.Compression.ICompressorFactory */
-/* Windows.Storage.Compression.ICompressorFactory.CreateCompressor(underlyingStream) */
 HRESULT wstco_compressor_factory_create_compressor(WSTCO_ICompressorFactory *self, WSTST_IOutputStream* underlyingStream, WSTCO_Compressor** out);
 
-/* Windows.Storage.Compression.ICompressorFactory.CreateCompressorEx(underlyingStream, algorithm, blockSize) */
 HRESULT wstco_compressor_factory_create_compressor_ex(WSTCO_ICompressorFactory *self, WSTST_IOutputStream* underlyingStream, WSTCO_CompressAlgorithm algorithm, uint32_t blockSize, WSTCO_Compressor** out);
 
-/* Windows.Storage.Compression.IDecompressorFactory */
-/* Windows.Storage.Compression.IDecompressorFactory.CreateDecompressor(underlyingStream) */
 HRESULT wstco_decompressor_factory_create_decompressor(WSTCO_IDecompressorFactory *self, WSTST_IInputStream* underlyingStream, WSTCO_Decompressor** out);
 
-/* Windows.Storage.Compression.ICompressor */
-/* Windows.Storage.Compression.IDecompressor */
 #endif /* CWINRT_WINDOWS_STORAGE_COMPRESSION_H */

@@ -15,13 +15,11 @@
 #include <cwinrt/Windows.System.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDELI_LampAvailabilityChangedEventArgs WDELI_LampAvailabilityChangedEventArgs;
 typedef struct WDELI_LampArray WDELI_LampArray;
 typedef struct WDELI_Lamp WDELI_Lamp;
@@ -34,7 +32,6 @@ typedef struct WDELI_ILampArray_2 WDELI_ILampArray_2;
 typedef struct WDELI_ILamp WDELI_ILamp;
 typedef struct WDELI_ILampInfo WDELI_ILampInfo;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_TimeSpan
 #define CWINRT_FWD_WF_TimeSpan
 typedef struct WF_TimeSpan WF_TimeSpan;
@@ -287,7 +284,6 @@ typedef enum WDELI_LampArrayKind {
 } WDELI_LampArrayKind;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -320,215 +316,138 @@ static const IID CWINRT_IID_WDELI_ILamp CWINRT_MAYBE_UNUSED = { 0x047D5B9A, 0xEA
 static const IID CWINRT_IID_WDELI_ILampInfo CWINRT_MAYBE_UNUSED = { 0x30BB521C, 0x0ACF, 0x49DA, { 0x8C, 0x10, 0x15, 0x0B, 0x9C, 0xF6, 0x27, 0x13 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Devices.Lights.LampAvailabilityChangedEventArgs */
 HRESULT wdeli_lamp_availability_changed_event_args_new(WDELI_LampAvailabilityChangedEventArgs **out);
 
-/* Windows.Devices.Lights.LampAvailabilityChangedEventArgs */
-/* Windows.Devices.Lights.LampAvailabilityChangedEventArgs.get_IsAvailable() */
 HRESULT wdeli_lamp_availability_changed_event_args_get__is_available(WDELI_LampAvailabilityChangedEventArgs *self, BOOL *value);
 
-/* activate Windows.Devices.Lights.LampArray */
 HRESULT wdeli_lamp_array_new(WDELI_LampArray **out);
 
-/* Windows.Devices.Lights.LampArray */
-/* Windows.Devices.Lights.LampArray.get_DeviceId() */
 HRESULT wdeli_lamp_array_get__device_id(WDELI_LampArray *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Lights.LampArray.get_HardwareVendorId() */
 HRESULT wdeli_lamp_array_get__hardware_vendor_id(WDELI_LampArray *self, uint16_t *value);
 
-/* Windows.Devices.Lights.LampArray.get_HardwareProductId() */
 HRESULT wdeli_lamp_array_get__hardware_product_id(WDELI_LampArray *self, uint16_t *value);
 
-/* Windows.Devices.Lights.LampArray.get_HardwareVersion() */
 HRESULT wdeli_lamp_array_get__hardware_version(WDELI_LampArray *self, uint16_t *value);
 
-/* Windows.Devices.Lights.LampArray.get_LampArrayKind() */
 HRESULT wdeli_lamp_array_get__lamp_array_kind(WDELI_LampArray *self, WDELI_LampArrayKind *value);
 
-/* Windows.Devices.Lights.LampArray.get_LampCount() */
 HRESULT wdeli_lamp_array_get__lamp_count(WDELI_LampArray *self, int32_t *value);
 
-/* Windows.Devices.Lights.LampArray.get_MinUpdateInterval() */
 HRESULT wdeli_lamp_array_get__min_update_interval(WDELI_LampArray *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Lights.LampArray.get_BoundingBox() */
 HRESULT wdeli_lamp_array_get__bounding_box(WDELI_LampArray *self, WFN_Vector_3 *value);
 
-/* Windows.Devices.Lights.LampArray.get_IsEnabled() */
 HRESULT wdeli_lamp_array_get__is_enabled(WDELI_LampArray *self, BOOL *value);
 
-/* Windows.Devices.Lights.LampArray.put_IsEnabled() */
 HRESULT wdeli_lamp_array_put__is_enabled(WDELI_LampArray *self, BOOL value);
 
-/* Windows.Devices.Lights.LampArray.get_BrightnessLevel() */
 HRESULT wdeli_lamp_array_get__brightness_level(WDELI_LampArray *self, double *value);
 
-/* Windows.Devices.Lights.LampArray.put_BrightnessLevel() */
 HRESULT wdeli_lamp_array_put__brightness_level(WDELI_LampArray *self, double value);
 
-/* Windows.Devices.Lights.LampArray.get_IsConnected() */
 HRESULT wdeli_lamp_array_get__is_connected(WDELI_LampArray *self, BOOL *value);
 
-/* Windows.Devices.Lights.LampArray.get_SupportsVirtualKeys() */
 HRESULT wdeli_lamp_array_get__supports_virtual_keys(WDELI_LampArray *self, BOOL *value);
 
-/* Windows.Devices.Lights.LampArray.GetLampInfo(lampIndex) */
 HRESULT wdeli_lamp_array_get_lamp_info(WDELI_LampArray *self, int32_t lampIndex, WDELI_LampInfo** out);
 
-/* Windows.Devices.Lights.LampArray.GetIndicesForKey(key) */
 HRESULT wdeli_lamp_array_get_indices_for_key(WDELI_LampArray *self, WSY_VirtualKey key, int32_t **out, uint32_t *out_len);
 
-/* Windows.Devices.Lights.LampArray.GetIndicesForPurposes(purposes) */
 HRESULT wdeli_lamp_array_get_indices_for_purposes(WDELI_LampArray *self, WDELI_LampPurposes purposes, int32_t **out, uint32_t *out_len);
 
-/* Windows.Devices.Lights.LampArray.SetColor(desiredColor) */
 HRESULT wdeli_lamp_array_set_color(WDELI_LampArray *self, WUI_Color desiredColor);
 
-/* Windows.Devices.Lights.LampArray.SetColorForIndex(lampIndex, desiredColor) */
 HRESULT wdeli_lamp_array_set_color_for_index(WDELI_LampArray *self, int32_t lampIndex, WUI_Color desiredColor);
 
-/* Windows.Devices.Lights.LampArray.SetSingleColorForIndices(desiredColor, lampIndexes) */
 HRESULT wdeli_lamp_array_set_single_color_for_indices(WDELI_LampArray *self, WUI_Color desiredColor, int32_t *lampIndexes, uint32_t lampIndexes_len);
 
-/* Windows.Devices.Lights.LampArray.SetColorsForIndices(desiredColors, lampIndexes) */
 HRESULT wdeli_lamp_array_set_colors_for_indices(WDELI_LampArray *self, WUI_Color *desiredColors, uint32_t desiredColors_len, int32_t *lampIndexes, uint32_t lampIndexes_len);
 
-/* Windows.Devices.Lights.LampArray.SetColorsForKey(desiredColor, key) */
 HRESULT wdeli_lamp_array_set_colors_for_key(WDELI_LampArray *self, WUI_Color desiredColor, WSY_VirtualKey key);
 
-/* Windows.Devices.Lights.LampArray.SetColorsForKeys(desiredColors, keys) */
 HRESULT wdeli_lamp_array_set_colors_for_keys(WDELI_LampArray *self, WUI_Color *desiredColors, uint32_t desiredColors_len, WSY_VirtualKey *keys, uint32_t keys_len);
 
-/* Windows.Devices.Lights.LampArray.SetColorsForPurposes(desiredColor, purposes) */
 HRESULT wdeli_lamp_array_set_colors_for_purposes(WDELI_LampArray *self, WUI_Color desiredColor, WDELI_LampPurposes purposes);
 
-/* Windows.Devices.Lights.LampArray.SendMessageAsync(messageId, message) */
 HRESULT wdeli_lamp_array_send_message_async(WDELI_LampArray *self, int32_t messageId, WSTST_IBuffer* message, WF_IAsyncAction** out);
 
-/* Windows.Devices.Lights.LampArray.RequestMessageAsync(messageId) */
 HRESULT wdeli_lamp_array_request_message_async(WDELI_LampArray *self, int32_t messageId, WF_IAsyncOperation_WSTST_IBuffer** out);
 
-/* Windows.Devices.Lights.LampArray.get_IsAvailable() */
 HRESULT wdeli_lamp_array_get__is_available(WDELI_LampArray *self, BOOL *value);
 
-/* Windows.Devices.Lights.LampArray.GetDeviceSelector() */
 HRESULT wdeli_lamp_array_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Devices.Lights.LampArray.FromIdAsync(deviceId) */
 HRESULT wdeli_lamp_array_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDELI_LampArray** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdeli_lamp_array_on_availability_changed(WDELI_LampArray *self, cwinrt_event_fn fn, void *ctx);
 void wdeli_lamp_array_off_availability_changed(WDELI_LampArray *self, cwinrt_token token);
 
-/* activate Windows.Devices.Lights.Lamp */
 HRESULT wdeli_lamp_new(WDELI_Lamp **out);
 
-/* Windows.Devices.Lights.Lamp */
-/* Windows.Devices.Lights.Lamp.get_DeviceId() */
 HRESULT wdeli_lamp_get__device_id(WDELI_Lamp *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Lights.Lamp.get_IsEnabled() */
 HRESULT wdeli_lamp_get__is_enabled(WDELI_Lamp *self, BOOL *value);
 
-/* Windows.Devices.Lights.Lamp.put_IsEnabled() */
 HRESULT wdeli_lamp_put__is_enabled(WDELI_Lamp *self, BOOL value);
 
-/* Windows.Devices.Lights.Lamp.get_BrightnessLevel() */
 HRESULT wdeli_lamp_get__brightness_level(WDELI_Lamp *self, float *value);
 
-/* Windows.Devices.Lights.Lamp.put_BrightnessLevel() */
 HRESULT wdeli_lamp_put__brightness_level(WDELI_Lamp *self, float value);
 
-/* Windows.Devices.Lights.Lamp.get_IsColorSettable() */
 HRESULT wdeli_lamp_get__is_color_settable(WDELI_Lamp *self, BOOL *value);
 
-/* Windows.Devices.Lights.Lamp.get_Color() */
 HRESULT wdeli_lamp_get__color(WDELI_Lamp *self, WUI_Color *value);
 
-/* Windows.Devices.Lights.Lamp.put_Color() */
 HRESULT wdeli_lamp_put__color(WDELI_Lamp *self, WUI_Color value);
 
-/* Windows.Devices.Lights.Lamp.Close() */
 HRESULT wdeli_lamp_close(WDELI_Lamp *self);
 
-/* Windows.Devices.Lights.Lamp.GetDeviceSelector() */
 HRESULT wdeli_lamp_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Devices.Lights.Lamp.FromIdAsync(deviceId) */
 HRESULT wdeli_lamp_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDELI_Lamp** out);
 
-/* Windows.Devices.Lights.Lamp.GetDefaultAsync() */
 HRESULT wdeli_lamp_get_default_async(WF_IAsyncOperation_WDELI_Lamp** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdeli_lamp_on_availability_changed(WDELI_Lamp *self, cwinrt_event_fn fn, void *ctx);
 void wdeli_lamp_off_availability_changed(WDELI_Lamp *self, cwinrt_token token);
 
-/* Windows.Devices.Lights.ILampStatics */
-/* Windows.Devices.Lights.ILampStatics.GetDeviceSelector() */
 HRESULT wdeli_lamp_statics_get_device_selector(WDELI_ILampStatics *self, cwinrt_hstring *out);
 
-/* Windows.Devices.Lights.ILampStatics.FromIdAsync(deviceId) */
 HRESULT wdeli_lamp_statics_from_id_async(WDELI_ILampStatics *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDELI_Lamp** out);
 
-/* Windows.Devices.Lights.ILampStatics.GetDefaultAsync() */
 HRESULT wdeli_lamp_statics_get_default_async(WDELI_ILampStatics *self, WF_IAsyncOperation_WDELI_Lamp** out);
 
-/* Windows.Devices.Lights.ILampArrayStatics */
-/* Windows.Devices.Lights.ILampArrayStatics.GetDeviceSelector() */
 HRESULT wdeli_lamp_array_statics_get_device_selector(WDELI_ILampArrayStatics *self, cwinrt_hstring *out);
 
-/* Windows.Devices.Lights.ILampArrayStatics.FromIdAsync(deviceId) */
 HRESULT wdeli_lamp_array_statics_from_id_async(WDELI_ILampArrayStatics *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDELI_LampArray** out);
 
-/* activate Windows.Devices.Lights.LampInfo */
 HRESULT wdeli_lamp_info_new(WDELI_LampInfo **out);
 
-/* Windows.Devices.Lights.LampInfo */
-/* Windows.Devices.Lights.LampInfo.get_Index() */
 HRESULT wdeli_lamp_info_get__index(WDELI_LampInfo *self, int32_t *value);
 
-/* Windows.Devices.Lights.LampInfo.get_Purposes() */
 HRESULT wdeli_lamp_info_get__purposes(WDELI_LampInfo *self, WDELI_LampPurposes *value);
 
-/* Windows.Devices.Lights.LampInfo.get_Position() */
 HRESULT wdeli_lamp_info_get__position(WDELI_LampInfo *self, WFN_Vector_3 *value);
 
-/* Windows.Devices.Lights.LampInfo.get_RedLevelCount() */
 HRESULT wdeli_lamp_info_get__red_level_count(WDELI_LampInfo *self, int32_t *value);
 
-/* Windows.Devices.Lights.LampInfo.get_GreenLevelCount() */
 HRESULT wdeli_lamp_info_get__green_level_count(WDELI_LampInfo *self, int32_t *value);
 
-/* Windows.Devices.Lights.LampInfo.get_BlueLevelCount() */
 HRESULT wdeli_lamp_info_get__blue_level_count(WDELI_LampInfo *self, int32_t *value);
 
-/* Windows.Devices.Lights.LampInfo.get_GainLevelCount() */
 HRESULT wdeli_lamp_info_get__gain_level_count(WDELI_LampInfo *self, int32_t *value);
 
-/* Windows.Devices.Lights.LampInfo.get_FixedColor() */
 HRESULT wdeli_lamp_info_get__fixed_color(WDELI_LampInfo *self, WUI_Color** value);
 
-/* Windows.Devices.Lights.LampInfo.GetNearestSupportedColor(desiredColor) */
 HRESULT wdeli_lamp_info_get_nearest_supported_color(WDELI_LampInfo *self, WUI_Color desiredColor, WUI_Color *out);
 
-/* Windows.Devices.Lights.LampInfo.get_UpdateLatency() */
 HRESULT wdeli_lamp_info_get__update_latency(WDELI_LampInfo *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Lights.ILampAvailabilityChangedEventArgs */
-/* Windows.Devices.Lights.ILampArray */
-/* Windows.Devices.Lights.ILampArray2 */
-/* Windows.Devices.Lights.ILampArray2.get_IsAvailable() */
 HRESULT wdeli_lamp_array_2_get__is_available(WDELI_ILampArray_2 *self, BOOL *value);
 
-/* Windows.Devices.Lights.ILamp */
-/* Windows.Devices.Lights.ILampInfo */
 #endif /* CWINRT_WINDOWS_DEVICES_LIGHTS_H */

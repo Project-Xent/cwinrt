@@ -2,7 +2,6 @@
 
 #include "model.h"
 
-/* Assign unique c_name on each raw method (overload-aware, per-type ns prefix). */
 void  cwinrt_assign_method_names(cwinrt_raw_db *db);
 
 /* WinRT-style method comment: Type.Method(arg1, arg2) */

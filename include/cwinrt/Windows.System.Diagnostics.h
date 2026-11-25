@@ -13,13 +13,11 @@
 #include <cwinrt/Windows.System.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WDAJS_JsonObject
 #define CWINRT_FWD_WDAJS_JsonObject
 typedef struct WDAJS_JsonObject WDAJS_JsonObject;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSYDI_IProcessDiagnosticInfoStatics_2 WSYDI_IProcessDiagnosticInfoStatics_2;
 typedef struct WSYDI_IProcessDiagnosticInfoStatics WSYDI_IProcessDiagnosticInfoStatics;
 typedef struct WSYDI_IDiagnosticInvokerStatics WSYDI_IDiagnosticInvokerStatics;
@@ -56,7 +54,6 @@ typedef struct WSYDI_IProcessDiskUsage WSYDI_IProcessDiskUsage;
 typedef struct WSYDI_IProcessDiskUsageReport WSYDI_IProcessDiskUsageReport;
 typedef struct WSYDI_IProcessMemoryUsage WSYDI_IProcessMemoryUsage;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IVectorView_WSYDI_ProcessDiagnosticInfo
 #define CWINRT_FWD_WFOCO_IVectorView_WSYDI_ProcessDiagnosticInfo
 typedef struct WFOCO_IVectorView_WSYDI_ProcessDiagnosticInfo WFOCO_IVectorView_WSYDI_ProcessDiagnosticInfo;
@@ -116,7 +113,6 @@ typedef enum WSYDI_DiagnosticActionState {
 } WSYDI_DiagnosticActionState;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -205,284 +201,166 @@ static const IID CWINRT_IID_WSYDI_IProcessDiskUsageReport CWINRT_MAYBE_UNUSED = 
 static const IID CWINRT_IID_WSYDI_IProcessMemoryUsage CWINRT_MAYBE_UNUSED = { 0xF50B229B, 0x827C, 0x42B7, { 0xB0, 0x7C, 0x0E, 0x32, 0x62, 0x7E, 0x6B, 0x3E } };
 #endif
 
-/* Methods */
-
-/* Windows.System.Diagnostics.IProcessDiagnosticInfoStatics2 */
-/* Windows.System.Diagnostics.IProcessDiagnosticInfoStatics2.TryGetForProcessId(processId) */
 HRESULT wsydi_process_diagnostic_info_statics_2_try_get_for_process_id(WSYDI_IProcessDiagnosticInfoStatics_2 *self, uint32_t processId, WSYDI_ProcessDiagnosticInfo** out);
 
-/* Windows.System.Diagnostics.IProcessDiagnosticInfoStatics */
-/* Windows.System.Diagnostics.IProcessDiagnosticInfoStatics.GetForProcesses() */
 HRESULT wsydi_process_diagnostic_info_statics_get_for_processes(WSYDI_IProcessDiagnosticInfoStatics *self, WFOCO_IVectorView_WSYDI_ProcessDiagnosticInfo** out);
 
-/* Windows.System.Diagnostics.IProcessDiagnosticInfoStatics.GetForCurrentProcess() */
 HRESULT wsydi_process_diagnostic_info_statics_get_for_current_process(WSYDI_IProcessDiagnosticInfoStatics *self, WSYDI_ProcessDiagnosticInfo** out);
 
-/* Windows.System.Diagnostics.IDiagnosticInvokerStatics */
-/* Windows.System.Diagnostics.IDiagnosticInvokerStatics.GetDefault() */
 HRESULT wsydi_diagnostic_invoker_statics_get_default(WSYDI_IDiagnosticInvokerStatics *self, WSYDI_DiagnosticInvoker** out);
 
-/* Windows.System.Diagnostics.IDiagnosticInvokerStatics.GetForUser(user) */
 HRESULT wsydi_diagnostic_invoker_statics_get_for_user(WSYDI_IDiagnosticInvokerStatics *self, WSY_User* user, WSYDI_DiagnosticInvoker** out);
 
-/* Windows.System.Diagnostics.IDiagnosticInvokerStatics.get_IsSupported() */
 HRESULT wsydi_diagnostic_invoker_statics_get__is_supported(WSYDI_IDiagnosticInvokerStatics *self, BOOL *value);
 
-/* activate Windows.System.Diagnostics.DiagnosticInvoker */
 HRESULT wsydi_diagnostic_invoker_new(WSYDI_DiagnosticInvoker **out);
 
-/* Windows.System.Diagnostics.DiagnosticInvoker */
-/* Windows.System.Diagnostics.DiagnosticInvoker.RunDiagnosticActionAsync(context) */
 HRESULT wsydi_diagnostic_invoker_run_diagnostic_action_async(WSYDI_DiagnosticInvoker *self, WDAJS_JsonObject* context, WF_IAsyncOperationWithProgress_WSYDI_DiagnosticActionResult_WSYDI_DiagnosticActionState** out);
 
-/* Windows.System.Diagnostics.DiagnosticInvoker.RunDiagnosticActionFromStringAsync(context) */
 HRESULT wsydi_diagnostic_invoker_run_diagnostic_action_from_string_async(WSYDI_DiagnosticInvoker *self, cwinrt_hstring context, WF_IAsyncOperationWithProgress_WSYDI_DiagnosticActionResult_WSYDI_DiagnosticActionState** out);
 
-/* Windows.System.Diagnostics.DiagnosticInvoker.GetDefault() */
 HRESULT wsydi_diagnostic_invoker_get_default(WSYDI_DiagnosticInvoker** out);
 
-/* Windows.System.Diagnostics.DiagnosticInvoker.GetForUser(user) */
 HRESULT wsydi_diagnostic_invoker_get_for_user(WSY_User* user, WSYDI_DiagnosticInvoker** out);
 
-/* Windows.System.Diagnostics.DiagnosticInvoker.get_IsSupported() */
 HRESULT wsydi_diagnostic_invoker_get__is_supported(BOOL *value);
 
-/* activate Windows.System.Diagnostics.DiagnosticActionResult */
 HRESULT wsydi_diagnostic_action_result_new(WSYDI_DiagnosticActionResult **out);
 
-/* Windows.System.Diagnostics.DiagnosticActionResult */
-/* Windows.System.Diagnostics.DiagnosticActionResult.get_ExtendedError() */
 HRESULT wsydi_diagnostic_action_result_get__extended_error(WSYDI_DiagnosticActionResult *self, HRESULT *value);
 
-/* Windows.System.Diagnostics.DiagnosticActionResult.get_Results() */
 HRESULT wsydi_diagnostic_action_result_get__results(WSYDI_DiagnosticActionResult *self, WFOCO_ValueSet** value);
 
-/* Windows.System.Diagnostics.ISystemDiagnosticInfoStatics */
-/* Windows.System.Diagnostics.ISystemDiagnosticInfoStatics.GetForCurrentSystem() */
 HRESULT wsydi_system_diagnostic_info_statics_get_for_current_system(WSYDI_ISystemDiagnosticInfoStatics *self, WSYDI_SystemDiagnosticInfo** out);
 
-/* activate Windows.System.Diagnostics.SystemMemoryUsageReport */
 HRESULT wsydi_system_memory_usage_report_new(WSYDI_SystemMemoryUsageReport **out);
 
-/* Windows.System.Diagnostics.SystemMemoryUsageReport */
-/* Windows.System.Diagnostics.SystemMemoryUsageReport.get_TotalPhysicalSizeInBytes() */
 HRESULT wsydi_system_memory_usage_report_get__total_physical_size_in_bytes(WSYDI_SystemMemoryUsageReport *self, uint64_t *value);
 
-/* Windows.System.Diagnostics.SystemMemoryUsageReport.get_AvailableSizeInBytes() */
 HRESULT wsydi_system_memory_usage_report_get__available_size_in_bytes(WSYDI_SystemMemoryUsageReport *self, uint64_t *value);
 
-/* Windows.System.Diagnostics.SystemMemoryUsageReport.get_CommittedSizeInBytes() */
 HRESULT wsydi_system_memory_usage_report_get__committed_size_in_bytes(WSYDI_SystemMemoryUsageReport *self, uint64_t *value);
 
-/* activate Windows.System.Diagnostics.SystemMemoryUsage */
 HRESULT wsydi_system_memory_usage_new(WSYDI_SystemMemoryUsage **out);
 
-/* Windows.System.Diagnostics.SystemMemoryUsage */
-/* Windows.System.Diagnostics.SystemMemoryUsage.GetReport() */
 HRESULT wsydi_system_memory_usage_get_report(WSYDI_SystemMemoryUsage *self, WSYDI_SystemMemoryUsageReport** out);
 
-/* activate Windows.System.Diagnostics.SystemDiagnosticInfo */
 HRESULT wsydi_system_diagnostic_info_new(WSYDI_SystemDiagnosticInfo **out);
 
-/* Windows.System.Diagnostics.SystemDiagnosticInfo */
-/* Windows.System.Diagnostics.SystemDiagnosticInfo.get_MemoryUsage() */
 HRESULT wsydi_system_diagnostic_info_get__memory_usage(WSYDI_SystemDiagnosticInfo *self, WSYDI_SystemMemoryUsage** value);
 
-/* Windows.System.Diagnostics.SystemDiagnosticInfo.get_CpuUsage() */
 HRESULT wsydi_system_diagnostic_info_get__cpu_usage(WSYDI_SystemDiagnosticInfo *self, WSYDI_SystemCpuUsage** value);
 
-/* Windows.System.Diagnostics.SystemDiagnosticInfo.IsArchitectureSupported() */
 HRESULT wsydi_system_diagnostic_info_is_architecture_supported(WSY_ProcessorArchitecture type_, BOOL *out);
 
-/* Windows.System.Diagnostics.SystemDiagnosticInfo.get_PreferredArchitecture() */
 HRESULT wsydi_system_diagnostic_info_get__preferred_architecture(WSY_ProcessorArchitecture *value);
 
-/* Windows.System.Diagnostics.SystemDiagnosticInfo.GetForCurrentSystem() */
 HRESULT wsydi_system_diagnostic_info_get_for_current_system(WSYDI_SystemDiagnosticInfo** out);
 
-/* activate Windows.System.Diagnostics.SystemCpuUsageReport */
 HRESULT wsydi_system_cpu_usage_report_new(WSYDI_SystemCpuUsageReport **out);
 
-/* Windows.System.Diagnostics.SystemCpuUsageReport */
-/* Windows.System.Diagnostics.SystemCpuUsageReport.get_KernelTime() */
 HRESULT wsydi_system_cpu_usage_report_get__kernel_time(WSYDI_SystemCpuUsageReport *self, WF_TimeSpan *value);
 
-/* Windows.System.Diagnostics.SystemCpuUsageReport.get_UserTime() */
 HRESULT wsydi_system_cpu_usage_report_get__user_time(WSYDI_SystemCpuUsageReport *self, WF_TimeSpan *value);
 
-/* Windows.System.Diagnostics.SystemCpuUsageReport.get_IdleTime() */
 HRESULT wsydi_system_cpu_usage_report_get__idle_time(WSYDI_SystemCpuUsageReport *self, WF_TimeSpan *value);
 
-/* activate Windows.System.Diagnostics.SystemCpuUsage */
 HRESULT wsydi_system_cpu_usage_new(WSYDI_SystemCpuUsage **out);
 
-/* Windows.System.Diagnostics.SystemCpuUsage */
-/* Windows.System.Diagnostics.SystemCpuUsage.GetReport() */
 HRESULT wsydi_system_cpu_usage_get_report(WSYDI_SystemCpuUsage *self, WSYDI_SystemCpuUsageReport** out);
 
-/* activate Windows.System.Diagnostics.ProcessMemoryUsageReport */
 HRESULT wsydi_process_memory_usage_report_new(WSYDI_ProcessMemoryUsageReport **out);
 
-/* Windows.System.Diagnostics.ProcessMemoryUsageReport */
-/* Windows.System.Diagnostics.ProcessMemoryUsageReport.get_NonPagedPoolSizeInBytes() */
 HRESULT wsydi_process_memory_usage_report_get__non_paged_pool_size_in_bytes(WSYDI_ProcessMemoryUsageReport *self, uint64_t *value);
 
-/* Windows.System.Diagnostics.ProcessMemoryUsageReport.get_PageFaultCount() */
 HRESULT wsydi_process_memory_usage_report_get__page_fault_count(WSYDI_ProcessMemoryUsageReport *self, uint32_t *value);
 
-/* Windows.System.Diagnostics.ProcessMemoryUsageReport.get_PageFileSizeInBytes() */
 HRESULT wsydi_process_memory_usage_report_get__page_file_size_in_bytes(WSYDI_ProcessMemoryUsageReport *self, uint64_t *value);
 
-/* Windows.System.Diagnostics.ProcessMemoryUsageReport.get_PagedPoolSizeInBytes() */
 HRESULT wsydi_process_memory_usage_report_get__paged_pool_size_in_bytes(WSYDI_ProcessMemoryUsageReport *self, uint64_t *value);
 
-/* Windows.System.Diagnostics.ProcessMemoryUsageReport.get_PeakNonPagedPoolSizeInBytes() */
 HRESULT wsydi_process_memory_usage_report_get__peak_non_paged_pool_size_in_bytes(WSYDI_ProcessMemoryUsageReport *self, uint64_t *value);
 
-/* Windows.System.Diagnostics.ProcessMemoryUsageReport.get_PeakPageFileSizeInBytes() */
 HRESULT wsydi_process_memory_usage_report_get__peak_page_file_size_in_bytes(WSYDI_ProcessMemoryUsageReport *self, uint64_t *value);
 
-/* Windows.System.Diagnostics.ProcessMemoryUsageReport.get_PeakPagedPoolSizeInBytes() */
 HRESULT wsydi_process_memory_usage_report_get__peak_paged_pool_size_in_bytes(WSYDI_ProcessMemoryUsageReport *self, uint64_t *value);
 
-/* Windows.System.Diagnostics.ProcessMemoryUsageReport.get_PeakVirtualMemorySizeInBytes() */
 HRESULT wsydi_process_memory_usage_report_get__peak_virtual_memory_size_in_bytes(WSYDI_ProcessMemoryUsageReport *self, uint64_t *value);
 
-/* Windows.System.Diagnostics.ProcessMemoryUsageReport.get_PeakWorkingSetSizeInBytes() */
 HRESULT wsydi_process_memory_usage_report_get__peak_working_set_size_in_bytes(WSYDI_ProcessMemoryUsageReport *self, uint64_t *value);
 
-/* Windows.System.Diagnostics.ProcessMemoryUsageReport.get_PrivatePageCount() */
 HRESULT wsydi_process_memory_usage_report_get__private_page_count(WSYDI_ProcessMemoryUsageReport *self, uint64_t *value);
 
-/* Windows.System.Diagnostics.ProcessMemoryUsageReport.get_VirtualMemorySizeInBytes() */
 HRESULT wsydi_process_memory_usage_report_get__virtual_memory_size_in_bytes(WSYDI_ProcessMemoryUsageReport *self, uint64_t *value);
 
-/* Windows.System.Diagnostics.ProcessMemoryUsageReport.get_WorkingSetSizeInBytes() */
 HRESULT wsydi_process_memory_usage_report_get__working_set_size_in_bytes(WSYDI_ProcessMemoryUsageReport *self, uint64_t *value);
 
-/* Windows.System.Diagnostics.ISystemDiagnosticInfoStatics2 */
-/* Windows.System.Diagnostics.ISystemDiagnosticInfoStatics2.IsArchitectureSupported() */
 HRESULT wsydi_system_diagnostic_info_statics_2_is_architecture_supported(WSYDI_ISystemDiagnosticInfoStatics_2 *self, WSY_ProcessorArchitecture type_, BOOL *out);
 
-/* Windows.System.Diagnostics.ISystemDiagnosticInfoStatics2.get_PreferredArchitecture() */
 HRESULT wsydi_system_diagnostic_info_statics_2_get__preferred_architecture(WSYDI_ISystemDiagnosticInfoStatics_2 *self, WSY_ProcessorArchitecture *value);
 
-/* activate Windows.System.Diagnostics.ProcessCpuUsage */
 HRESULT wsydi_process_cpu_usage_new(WSYDI_ProcessCpuUsage **out);
 
-/* Windows.System.Diagnostics.ProcessCpuUsage */
-/* Windows.System.Diagnostics.ProcessCpuUsage.GetReport() */
 HRESULT wsydi_process_cpu_usage_get_report(WSYDI_ProcessCpuUsage *self, WSYDI_ProcessCpuUsageReport** out);
 
-/* activate Windows.System.Diagnostics.ProcessCpuUsageReport */
 HRESULT wsydi_process_cpu_usage_report_new(WSYDI_ProcessCpuUsageReport **out);
 
-/* Windows.System.Diagnostics.ProcessCpuUsageReport */
-/* Windows.System.Diagnostics.ProcessCpuUsageReport.get_KernelTime() */
 HRESULT wsydi_process_cpu_usage_report_get__kernel_time(WSYDI_ProcessCpuUsageReport *self, WF_TimeSpan *value);
 
-/* Windows.System.Diagnostics.ProcessCpuUsageReport.get_UserTime() */
 HRESULT wsydi_process_cpu_usage_report_get__user_time(WSYDI_ProcessCpuUsageReport *self, WF_TimeSpan *value);
 
-/* activate Windows.System.Diagnostics.ProcessDiagnosticInfo */
 HRESULT wsydi_process_diagnostic_info_new(WSYDI_ProcessDiagnosticInfo **out);
 
-/* Windows.System.Diagnostics.ProcessDiagnosticInfo */
-/* Windows.System.Diagnostics.ProcessDiagnosticInfo.get_ProcessId() */
 HRESULT wsydi_process_diagnostic_info_get__process_id(WSYDI_ProcessDiagnosticInfo *self, uint32_t *value);
 
-/* Windows.System.Diagnostics.ProcessDiagnosticInfo.get_ExecutableFileName() */
 HRESULT wsydi_process_diagnostic_info_get__executable_file_name(WSYDI_ProcessDiagnosticInfo *self, cwinrt_hstring *value);
 
-/* Windows.System.Diagnostics.ProcessDiagnosticInfo.get_Parent() */
 HRESULT wsydi_process_diagnostic_info_get__parent(WSYDI_ProcessDiagnosticInfo *self, WSYDI_ProcessDiagnosticInfo** value);
 
-/* Windows.System.Diagnostics.ProcessDiagnosticInfo.get_ProcessStartTime() */
 HRESULT wsydi_process_diagnostic_info_get__process_start_time(WSYDI_ProcessDiagnosticInfo *self, WF_DateTime *value);
 
-/* Windows.System.Diagnostics.ProcessDiagnosticInfo.get_DiskUsage() */
 HRESULT wsydi_process_diagnostic_info_get__disk_usage(WSYDI_ProcessDiagnosticInfo *self, WSYDI_ProcessDiskUsage** value);
 
-/* Windows.System.Diagnostics.ProcessDiagnosticInfo.get_MemoryUsage() */
 HRESULT wsydi_process_diagnostic_info_get__memory_usage(WSYDI_ProcessDiagnosticInfo *self, WSYDI_ProcessMemoryUsage** value);
 
-/* Windows.System.Diagnostics.ProcessDiagnosticInfo.get_CpuUsage() */
 HRESULT wsydi_process_diagnostic_info_get__cpu_usage(WSYDI_ProcessDiagnosticInfo *self, WSYDI_ProcessCpuUsage** value);
 
-/* Windows.System.Diagnostics.ProcessDiagnosticInfo.GetAppDiagnosticInfos() */
 HRESULT wsydi_process_diagnostic_info_get_app_diagnostic_infos(WSYDI_ProcessDiagnosticInfo *self, WFOCO_IVector_WSY_AppDiagnosticInfo** out);
 
-/* Windows.System.Diagnostics.ProcessDiagnosticInfo.get_IsPackaged() */
 HRESULT wsydi_process_diagnostic_info_get__is_packaged(WSYDI_ProcessDiagnosticInfo *self, BOOL *value);
 
-/* Windows.System.Diagnostics.ProcessDiagnosticInfo.TryGetForProcessId(processId) */
 HRESULT wsydi_process_diagnostic_info_try_get_for_process_id(uint32_t processId, WSYDI_ProcessDiagnosticInfo** out);
 
-/* Windows.System.Diagnostics.ProcessDiagnosticInfo.GetForProcesses() */
 HRESULT wsydi_process_diagnostic_info_get_for_processes(WFOCO_IVectorView_WSYDI_ProcessDiagnosticInfo** out);
 
-/* Windows.System.Diagnostics.ProcessDiagnosticInfo.GetForCurrentProcess() */
 HRESULT wsydi_process_diagnostic_info_get_for_current_process(WSYDI_ProcessDiagnosticInfo** out);
 
-/* activate Windows.System.Diagnostics.ProcessDiskUsage */
 HRESULT wsydi_process_disk_usage_new(WSYDI_ProcessDiskUsage **out);
 
-/* Windows.System.Diagnostics.ProcessDiskUsage */
-/* Windows.System.Diagnostics.ProcessDiskUsage.GetReport() */
 HRESULT wsydi_process_disk_usage_get_report(WSYDI_ProcessDiskUsage *self, WSYDI_ProcessDiskUsageReport** out);
 
-/* activate Windows.System.Diagnostics.ProcessDiskUsageReport */
 HRESULT wsydi_process_disk_usage_report_new(WSYDI_ProcessDiskUsageReport **out);
 
-/* Windows.System.Diagnostics.ProcessDiskUsageReport */
-/* Windows.System.Diagnostics.ProcessDiskUsageReport.get_ReadOperationCount() */
 HRESULT wsydi_process_disk_usage_report_get__read_operation_count(WSYDI_ProcessDiskUsageReport *self, int64_t *value);
 
-/* Windows.System.Diagnostics.ProcessDiskUsageReport.get_WriteOperationCount() */
 HRESULT wsydi_process_disk_usage_report_get__write_operation_count(WSYDI_ProcessDiskUsageReport *self, int64_t *value);
 
-/* Windows.System.Diagnostics.ProcessDiskUsageReport.get_OtherOperationCount() */
 HRESULT wsydi_process_disk_usage_report_get__other_operation_count(WSYDI_ProcessDiskUsageReport *self, int64_t *value);
 
-/* Windows.System.Diagnostics.ProcessDiskUsageReport.get_BytesReadCount() */
 HRESULT wsydi_process_disk_usage_report_get__bytes_read_count(WSYDI_ProcessDiskUsageReport *self, int64_t *value);
 
-/* Windows.System.Diagnostics.ProcessDiskUsageReport.get_BytesWrittenCount() */
 HRESULT wsydi_process_disk_usage_report_get__bytes_written_count(WSYDI_ProcessDiskUsageReport *self, int64_t *value);
 
-/* Windows.System.Diagnostics.ProcessDiskUsageReport.get_OtherBytesCount() */
 HRESULT wsydi_process_disk_usage_report_get__other_bytes_count(WSYDI_ProcessDiskUsageReport *self, int64_t *value);
 
-/* activate Windows.System.Diagnostics.ProcessMemoryUsage */
 HRESULT wsydi_process_memory_usage_new(WSYDI_ProcessMemoryUsage **out);
 
-/* Windows.System.Diagnostics.ProcessMemoryUsage */
-/* Windows.System.Diagnostics.ProcessMemoryUsage.GetReport() */
 HRESULT wsydi_process_memory_usage_get_report(WSYDI_ProcessMemoryUsage *self, WSYDI_ProcessMemoryUsageReport** out);
 
-/* Windows.System.Diagnostics.IDiagnosticInvoker */
-/* Windows.System.Diagnostics.IDiagnosticInvoker2 */
-/* Windows.System.Diagnostics.IDiagnosticInvoker2.RunDiagnosticActionFromStringAsync(context) */
 HRESULT wsydi_diagnostic_invoker_2_run_diagnostic_action_from_string_async(WSYDI_IDiagnosticInvoker_2 *self, cwinrt_hstring context, WF_IAsyncOperationWithProgress_WSYDI_DiagnosticActionResult_WSYDI_DiagnosticActionState** out);
 
-/* Windows.System.Diagnostics.IDiagnosticActionResult */
-/* Windows.System.Diagnostics.ISystemMemoryUsageReport */
-/* Windows.System.Diagnostics.ISystemMemoryUsage */
-/* Windows.System.Diagnostics.ISystemDiagnosticInfo */
-/* Windows.System.Diagnostics.ISystemCpuUsageReport */
-/* Windows.System.Diagnostics.ISystemCpuUsage */
-/* Windows.System.Diagnostics.IProcessMemoryUsageReport */
-/* Windows.System.Diagnostics.IProcessCpuUsage */
-/* Windows.System.Diagnostics.IProcessCpuUsageReport */
-/* Windows.System.Diagnostics.IProcessDiagnosticInfo */
-/* Windows.System.Diagnostics.IProcessDiagnosticInfo2 */
-/* Windows.System.Diagnostics.IProcessDiagnosticInfo2.GetAppDiagnosticInfos() */
 HRESULT wsydi_process_diagnostic_info_2_get_app_diagnostic_infos(WSYDI_IProcessDiagnosticInfo_2 *self, WFOCO_IVector_WSY_AppDiagnosticInfo** out);
 
-/* Windows.System.Diagnostics.IProcessDiagnosticInfo2.get_IsPackaged() */
 HRESULT wsydi_process_diagnostic_info_2_get__is_packaged(WSYDI_IProcessDiagnosticInfo_2 *self, BOOL *value);
 
-/* Windows.System.Diagnostics.IProcessDiskUsage */
-/* Windows.System.Diagnostics.IProcessDiskUsageReport */
-/* Windows.System.Diagnostics.IProcessMemoryUsage */
 #endif /* CWINRT_WINDOWS_SYSTEM_DIAGNOSTICS_H */

@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.UI.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WAPCO_Contact
 #define CWINRT_FWD_WAPCO_Contact
 typedef struct WAPCO_Contact WAPCO_Contact;
@@ -27,7 +26,6 @@ typedef struct WAPAP_Appointment WAPAP_Appointment;
 typedef struct WAIACHO_ActionCatalog WAIACHO_ActionCatalog;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAIAC_ActionEntity WAIAC_ActionEntity;
 typedef struct WAIAC_ActionEntityDisplayInfo WAIAC_ActionEntityDisplayInfo;
 typedef struct WAIAC_ActionEntityFactory WAIAC_ActionEntityFactory;
@@ -97,7 +95,6 @@ typedef struct WAIAC_IRemoteFileActionEntity_2 WAIAC_IRemoteFileActionEntity_2;
 typedef struct WAIAC_IPhotoActionEntity WAIAC_IPhotoActionEntity;
 typedef struct WAIAC_INamedActionEntity WAIAC_INamedActionEntity;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_Uri
 #define CWINRT_FWD_WF_Uri
 typedef struct WF_Uri WF_Uri;
@@ -199,7 +196,6 @@ typedef enum WAIAC_RemoteFileKind {
 } WAIAC_RemoteFileKind;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -380,622 +376,374 @@ static const IID CWINRT_IID_WAIAC_IPhotoActionEntity CWINRT_MAYBE_UNUSED = { 0x4
 static const IID CWINRT_IID_WAIAC_INamedActionEntity CWINRT_MAYBE_UNUSED = { 0x1AAEBEEF, 0x435B, 0x5A0D, { 0x81, 0x82, 0x05, 0xFE, 0x4D, 0xD4, 0x77, 0x12 } };
 #endif
 
-/* Methods */
-
-/* Windows.AI.Actions.ActionEntity */
-/* Windows.AI.Actions.ActionEntity.get_Kind() */
 HRESULT waiac_action_entity_get__kind(WAIAC_ActionEntity *self, WAIAC_ActionEntityKind *value);
 
-/* Windows.AI.Actions.ActionEntity.get_DisplayInfo() */
 HRESULT waiac_action_entity_get__display_info(WAIAC_ActionEntity *self, WAIAC_ActionEntityDisplayInfo** value);
 
-/* Windows.AI.Actions.ActionEntity.get_Id() */
 HRESULT waiac_action_entity_get__id(WAIAC_ActionEntity *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.ActionEntity.Close() */
 HRESULT waiac_action_entity_close(WAIAC_ActionEntity *self);
 
-/* activate Windows.AI.Actions.ActionEntityDisplayInfo */
 HRESULT waiac_action_entity_display_info_new(WAIAC_ActionEntityDisplayInfo **out);
 
-/* Windows.AI.Actions.ActionEntityDisplayInfo */
-/* Windows.AI.Actions.ActionEntityDisplayInfo.get_Title() */
 HRESULT waiac_action_entity_display_info_get__title(WAIAC_ActionEntityDisplayInfo *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.ActionEntityDisplayInfo.Close() */
 HRESULT waiac_action_entity_display_info_close(WAIAC_ActionEntityDisplayInfo *self);
 
-/* Windows.AI.Actions.ActionEntityFactory */
-/* Windows.AI.Actions.ActionEntityFactory.CreateFileEntity(path) */
 HRESULT waiac_action_entity_factory_create_file_entity(WAIAC_ActionEntityFactory *self, cwinrt_hstring path, WAIAC_FileActionEntity** out);
 
-/* Windows.AI.Actions.ActionEntityFactory.CreateDocumentEntity(path) */
 HRESULT waiac_action_entity_factory_create_document_entity(WAIAC_ActionEntityFactory *self, cwinrt_hstring path, WAIAC_DocumentActionEntity** out);
 
-/* Windows.AI.Actions.ActionEntityFactory.CreatePhotoEntity(path) */
 HRESULT waiac_action_entity_factory_create_photo_entity(WAIAC_ActionEntityFactory *self, cwinrt_hstring path, WAIAC_PhotoActionEntity** out);
 
-/* Windows.AI.Actions.ActionEntityFactory.CreateTextEntity(text) */
 HRESULT waiac_action_entity_factory_create_text_entity(WAIAC_ActionEntityFactory *self, cwinrt_hstring text, WAIAC_TextActionEntity** out);
 
-/* Windows.AI.Actions.ActionEntityFactory.CreateRemoteFileEntity(sourceId, fileKind, sourceUri, fileId, contentType, driveId, accountId, extension) */
 HRESULT waiac_action_entity_factory_create_remote_file_entity(WAIAC_ActionEntityFactory *self, cwinrt_hstring sourceId, WAIAC_RemoteFileKind fileKind, WF_Uri* sourceUri, cwinrt_hstring fileId, cwinrt_hstring contentType, cwinrt_hstring driveId, cwinrt_hstring accountId, cwinrt_hstring extension, WAIAC_RemoteFileActionEntity** out);
 
-/* Windows.AI.Actions.ActionEntityFactory.CreateTextEntity(text, textFormat) */
 HRESULT waiac_action_entity_factory_create_text_entity_str_action_entity_text_format_p(WAIAC_ActionEntityFactory *self, cwinrt_hstring text, WAIAC_ActionEntityTextFormat textFormat, WAIAC_TextActionEntity** out);
 
-/* Windows.AI.Actions.ActionEntityFactory.CreateStreamingTextActionEntityWriter(textFormat) */
 HRESULT waiac_action_entity_factory_create_streaming_text_action_entity_writer(WAIAC_ActionEntityFactory *self, WAIAC_ActionEntityTextFormat textFormat, WAIAC_StreamingTextActionEntityWriter** out);
 
-/* Windows.AI.Actions.ActionEntityFactory.CreateTableEntity(data, columnCount) */
 HRESULT waiac_action_entity_factory_create_table_entity(WAIAC_ActionEntityFactory *self, cwinrt_hstring *data, uint32_t data_len, uint32_t columnCount, WAIAC_TableActionEntity** out);
 
-/* Windows.AI.Actions.ActionEntityFactory.CreateContactEntity(contact) */
 HRESULT waiac_action_entity_factory_create_contact_entity(WAIAC_ActionEntityFactory *self, WAPCO_Contact* contact, WAIAC_ContactActionEntity** out);
 
-/* Windows.AI.Actions.ActionEntityFactory.CreateUriEntity(Uri) */
 HRESULT waiac_action_entity_factory_create_uri_entity(WAIAC_ActionEntityFactory *self, WF_Uri* Uri, WAIAC_UriActionEntity** out);
 
-/* Windows.AI.Actions.ActionEntityFactory.CreateArrayEntity(kind, entities) */
 HRESULT waiac_action_entity_factory_create_array_entity(WAIAC_ActionEntityFactory *self, WAIAC_ActionEntityKind kind, WAIAC_ActionEntity *entities, uint32_t entities_len, WAIAC_ArrayActionEntity** out);
 
-/* Windows.AI.Actions.ActionEntityFactory.CreateDateTimeEntity(dateTime) */
 HRESULT waiac_action_entity_factory_create_date_time_entity(WAIAC_ActionEntityFactory *self, WF_DateTime dateTime, WAIAC_DateTimeActionEntity** out);
 
-/* Windows.AI.Actions.ActionEntityFactory.CreateAppointmentEntity(sourceId, appointment, attendees) */
 HRESULT waiac_action_entity_factory_create_appointment_entity(WAIAC_ActionEntityFactory *self, cwinrt_hstring sourceId, WAPAP_Appointment* appointment, WAIAC_ContactActionEntity *attendees, uint32_t attendees_len, WAIAC_AppointmentActionEntity** out);
 
-/* Windows.AI.Actions.ActionEntityFactory.CreateCustomTextEntity(kind, keyPhrase, props) */
 HRESULT waiac_action_entity_factory_create_custom_text_entity(WAIAC_ActionEntityFactory *self, cwinrt_hstring kind, cwinrt_hstring keyPhrase, WFOCO_IMapView_HSTRING_Object* props, WAIAC_CustomTextActionEntity** out);
 
-/* Windows.AI.Actions.ActionEntityFactory.CreateArrayEntityWithCustomKind(elementKind, customKind, entities) */
 HRESULT waiac_action_entity_factory_create_array_entity_with_custom_kind(WAIAC_ActionEntityFactory *self, WAIAC_ActionEntityKind elementKind, cwinrt_hstring customKind, WAIAC_ActionEntity *entities, uint32_t entities_len, WAIAC_ArrayActionEntity** out);
 
-/* Windows.AI.Actions.ActionEntityFactory.Close() */
 HRESULT waiac_action_entity_factory_close(WAIAC_ActionEntityFactory *self);
 
-/* activate Windows.AI.Actions.ActionFeedback */
 HRESULT waiac_action_feedback_new(WAIAC_ActionFeedback **out);
 
-/* Windows.AI.Actions.ActionFeedback */
-/* Windows.AI.Actions.ActionFeedback.get_FeedbackKind() */
 HRESULT waiac_action_feedback_get__feedback_kind(WAIAC_ActionFeedback *self, WAIAC_ActionFeedbackKind *value);
 
-/* Windows.AI.Actions.ActionFeedback.Close() */
 HRESULT waiac_action_feedback_close(WAIAC_ActionFeedback *self);
 
-/* activate Windows.AI.Actions.ActionInvocationContext */
 HRESULT waiac_action_invocation_context_new(WAIAC_ActionInvocationContext **out);
 
-/* Windows.AI.Actions.ActionInvocationContext */
-/* Windows.AI.Actions.ActionInvocationContext.get_EntityFactory() */
 HRESULT waiac_action_invocation_context_get__entity_factory(WAIAC_ActionInvocationContext *self, WAIAC_ActionEntityFactory** value);
 
-/* Windows.AI.Actions.ActionInvocationContext.SetInputEntity(inputName, inputValue) */
 HRESULT waiac_action_invocation_context_set_input_entity(WAIAC_ActionInvocationContext *self, cwinrt_hstring inputName, WAIAC_ActionEntity* inputValue);
 
-/* Windows.AI.Actions.ActionInvocationContext.GetInputEntities() */
 HRESULT waiac_action_invocation_context_get_input_entities(WAIAC_ActionInvocationContext *self, WAIAC_NamedActionEntity **out, uint32_t *out_len);
 
-/* Windows.AI.Actions.ActionInvocationContext.SetOutputEntity(outputName, outputValue) */
 HRESULT waiac_action_invocation_context_set_output_entity(WAIAC_ActionInvocationContext *self, cwinrt_hstring outputName, WAIAC_ActionEntity* outputValue);
 
-/* Windows.AI.Actions.ActionInvocationContext.GetOutputEntities() */
 HRESULT waiac_action_invocation_context_get_output_entities(WAIAC_ActionInvocationContext *self, WAIAC_NamedActionEntity **out, uint32_t *out_len);
 
-/* Windows.AI.Actions.ActionInvocationContext.get_Result() */
 HRESULT waiac_action_invocation_context_get__result(WAIAC_ActionInvocationContext *self, WAIAC_ActionInvocationResult *value);
 
-/* Windows.AI.Actions.ActionInvocationContext.put_Result() */
 HRESULT waiac_action_invocation_context_put__result(WAIAC_ActionInvocationContext *self, WAIAC_ActionInvocationResult value);
 
-/* Windows.AI.Actions.ActionInvocationContext.get_ExtendedError() */
 HRESULT waiac_action_invocation_context_get__extended_error(WAIAC_ActionInvocationContext *self, HRESULT *value);
 
-/* Windows.AI.Actions.ActionInvocationContext.put_ExtendedError() */
 HRESULT waiac_action_invocation_context_put__extended_error(WAIAC_ActionInvocationContext *self, HRESULT value);
 
-/* Windows.AI.Actions.ActionInvocationContext.get_InvokerWindowId() */
 HRESULT waiac_action_invocation_context_get__invoker_window_id(WAIAC_ActionInvocationContext *self, WUI_WindowId *value);
 
-/* Windows.AI.Actions.ActionInvocationContext.get_HelpDetails() */
 HRESULT waiac_action_invocation_context_get__help_details(WAIAC_ActionInvocationContext *self, WAIAC_ActionInvocationHelpDetails** value);
 
-/* Windows.AI.Actions.ActionInvocationContext.get_ActionId() */
 HRESULT waiac_action_invocation_context_get__action_id(WAIAC_ActionInvocationContext *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.ActionInvocationContext.get_InvokerAppUserModelId() */
 HRESULT waiac_action_invocation_context_get__invoker_app_user_model_id(WAIAC_ActionInvocationContext *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.ActionInvocationContext.Close() */
 HRESULT waiac_action_invocation_context_close(WAIAC_ActionInvocationContext *self);
 
-/* activate Windows.AI.Actions.ActionInvocationHelpDetails */
 HRESULT waiac_action_invocation_help_details_new(WAIAC_ActionInvocationHelpDetails **out);
 
-/* Windows.AI.Actions.ActionInvocationHelpDetails */
-/* Windows.AI.Actions.ActionInvocationHelpDetails.get_Kind() */
 HRESULT waiac_action_invocation_help_details_get__kind(WAIAC_ActionInvocationHelpDetails *self, WAIAC_ActionInvocationHelpKind *value);
 
-/* Windows.AI.Actions.ActionInvocationHelpDetails.put_Kind() */
 HRESULT waiac_action_invocation_help_details_put__kind(WAIAC_ActionInvocationHelpDetails *self, WAIAC_ActionInvocationHelpKind value);
 
-/* Windows.AI.Actions.ActionInvocationHelpDetails.get_Title() */
 HRESULT waiac_action_invocation_help_details_get__title(WAIAC_ActionInvocationHelpDetails *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.ActionInvocationHelpDetails.put_Title() */
 HRESULT waiac_action_invocation_help_details_put__title(WAIAC_ActionInvocationHelpDetails *self, cwinrt_hstring value);
 
-/* Windows.AI.Actions.ActionInvocationHelpDetails.get_Description() */
 HRESULT waiac_action_invocation_help_details_get__description(WAIAC_ActionInvocationHelpDetails *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.ActionInvocationHelpDetails.put_Description() */
 HRESULT waiac_action_invocation_help_details_put__description(WAIAC_ActionInvocationHelpDetails *self, cwinrt_hstring value);
 
-/* Windows.AI.Actions.ActionInvocationHelpDetails.get_HelpUri() */
 HRESULT waiac_action_invocation_help_details_get__help_uri(WAIAC_ActionInvocationHelpDetails *self, WF_Uri** value);
 
-/* Windows.AI.Actions.ActionInvocationHelpDetails.put_HelpUri() */
 HRESULT waiac_action_invocation_help_details_put__help_uri(WAIAC_ActionInvocationHelpDetails *self, WF_Uri* value);
 
-/* Windows.AI.Actions.ActionInvocationHelpDetails.get_HelpUriDescription() */
 HRESULT waiac_action_invocation_help_details_get__help_uri_description(WAIAC_ActionInvocationHelpDetails *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.ActionInvocationHelpDetails.put_HelpUriDescription() */
 HRESULT waiac_action_invocation_help_details_put__help_uri_description(WAIAC_ActionInvocationHelpDetails *self, cwinrt_hstring value);
 
-/* Windows.AI.Actions.ActionInvocationHelpDetails.Close() */
 HRESULT waiac_action_invocation_help_details_close(WAIAC_ActionInvocationHelpDetails *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token waiac_action_invocation_help_details_on_changed(WAIAC_ActionInvocationHelpDetails *self, cwinrt_event_fn fn, void *ctx);
 void waiac_action_invocation_help_details_off_changed(WAIAC_ActionInvocationHelpDetails *self, cwinrt_token token);
 
-/* Windows.AI.Actions.ActionRuntime */
-/* Windows.AI.Actions.ActionRuntime.get_ActionCatalog() */
 HRESULT waiac_action_runtime_get__action_catalog(WAIAC_ActionRuntime *self, WAIACHO_ActionCatalog** value);
 
-/* Windows.AI.Actions.ActionRuntime.get_EntityFactory() */
 HRESULT waiac_action_runtime_get__entity_factory(WAIAC_ActionRuntime *self, WAIAC_ActionEntityFactory** value);
 
-/* Windows.AI.Actions.ActionRuntime.CreateInvocationContext(actionId) */
 HRESULT waiac_action_runtime_create_invocation_context(WAIAC_ActionRuntime *self, cwinrt_hstring actionId, WAIAC_ActionInvocationContext** out);
 
-/* Windows.AI.Actions.ActionRuntime.CreateActionFeedback(feedbackKind) */
 HRESULT waiac_action_runtime_create_action_feedback(WAIAC_ActionRuntime *self, WAIAC_ActionFeedbackKind feedbackKind, WAIAC_ActionFeedback** out);
 
-/* Windows.AI.Actions.ActionRuntime.SetActionAvailability(actionId, isAvailable) */
 HRESULT waiac_action_runtime_set_action_availability(WAIAC_ActionRuntime *self, cwinrt_hstring actionId, BOOL isAvailable);
 
-/* Windows.AI.Actions.ActionRuntime.GetActionAvailability(actionId) */
 HRESULT waiac_action_runtime_get_action_availability(WAIAC_ActionRuntime *self, cwinrt_hstring actionId, BOOL *out);
 
-/* Windows.AI.Actions.ActionRuntime.CreateInvocationContextWithWindowId(actionId, invokerWindowId) */
 HRESULT waiac_action_runtime_create_invocation_context_with_window_id(WAIAC_ActionRuntime *self, cwinrt_hstring actionId, WUI_WindowId invokerWindowId, WAIAC_ActionInvocationContext** out);
 
-/* Windows.AI.Actions.ActionRuntime.GetActionEntityById(entityId) */
 HRESULT waiac_action_runtime_get_action_entity_by_id(WAIAC_ActionRuntime *self, cwinrt_hstring entityId, WAIAC_ActionEntity** out);
 
-/* Windows.AI.Actions.ActionRuntime.get_LatestSupportedSchemaVersion() */
 HRESULT waiac_action_runtime_get__latest_supported_schema_version(WAIAC_ActionRuntime *self, uint32_t *value);
 
-/* Windows.AI.Actions.ActionRuntime.GetActionInvocationContextFromToken(token) */
 HRESULT waiac_action_runtime_get_action_invocation_context_from_token(WAIAC_ActionRuntime *self, cwinrt_hstring token, WAIAC_ActionInvocationContext** out);
 
-/* Windows.AI.Actions.ActionRuntime.get_CustomEntityStore() */
 HRESULT waiac_action_runtime_get__custom_entity_store(WAIAC_ActionRuntime *self, WAIAC_CustomActionEntityStore** value);
 
-/* Windows.AI.Actions.ActionRuntime.Close() */
 HRESULT waiac_action_runtime_close(WAIAC_ActionRuntime *self);
 
-/* Windows.AI.Actions.ActionRuntime.GetDefault() */
 HRESULT waiac_action_runtime_get_default(WAIAC_ActionRuntime** out);
 
-/* activate Windows.AI.Actions.AppointmentActionEntity */
 HRESULT waiac_appointment_action_entity_new(WAIAC_AppointmentActionEntity **out);
 
-/* Windows.AI.Actions.AppointmentActionEntity */
-/* Windows.AI.Actions.AppointmentActionEntity.get_SourceId() */
 HRESULT waiac_appointment_action_entity_get__source_id(WAIAC_AppointmentActionEntity *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.AppointmentActionEntity.get_Appointment() */
 HRESULT waiac_appointment_action_entity_get__appointment(WAIAC_AppointmentActionEntity *self, WAPAP_Appointment** value);
 
-/* Windows.AI.Actions.AppointmentActionEntity.GetAttendees() */
 HRESULT waiac_appointment_action_entity_get_attendees(WAIAC_AppointmentActionEntity *self, WAIAC_ContactActionEntity **out, uint32_t *out_len);
 
-/* Windows.AI.Actions.AppointmentActionEntity.GetPresentedFiles() */
 HRESULT waiac_appointment_action_entity_get_presented_files(WAIAC_AppointmentActionEntity *self, WAIAC_RemoteFileActionEntity **out, uint32_t *out_len);
 
-/* Windows.AI.Actions.AppointmentActionEntity.SetPresentedFiles(files) */
 HRESULT waiac_appointment_action_entity_set_presented_files(WAIAC_AppointmentActionEntity *self, WAIAC_RemoteFileActionEntity *files, uint32_t files_len);
 
-/* Windows.AI.Actions.AppointmentActionEntity.GetSharedFiles() */
 HRESULT waiac_appointment_action_entity_get_shared_files(WAIAC_AppointmentActionEntity *self, WAIAC_RemoteFileActionEntity **out, uint32_t *out_len);
 
-/* Windows.AI.Actions.AppointmentActionEntity.SetSharedFiles(files) */
 HRESULT waiac_appointment_action_entity_set_shared_files(WAIAC_AppointmentActionEntity *self, WAIAC_RemoteFileActionEntity *files, uint32_t files_len);
 
-/* activate Windows.AI.Actions.ArrayActionEntity */
 HRESULT waiac_array_action_entity_new(WAIAC_ArrayActionEntity **out);
 
-/* Windows.AI.Actions.ArrayActionEntity */
-/* Windows.AI.Actions.ArrayActionEntity.get_ElementKind() */
 HRESULT waiac_array_action_entity_get__element_kind(WAIAC_ArrayActionEntity *self, WAIAC_ActionEntityKind *value);
 
-/* Windows.AI.Actions.ArrayActionEntity.GetAll() */
 HRESULT waiac_array_action_entity_get_all(WAIAC_ArrayActionEntity *self, WAIAC_ActionEntity **out, uint32_t *out_len);
 
-/* Windows.AI.Actions.ArrayActionEntity.get_CustomElementKind() */
 HRESULT waiac_array_action_entity_get__custom_element_kind(WAIAC_ArrayActionEntity *self, cwinrt_hstring *value);
 
-/* activate Windows.AI.Actions.ContactActionEntity */
 HRESULT waiac_contact_action_entity_new(WAIAC_ContactActionEntity **out);
 
-/* Windows.AI.Actions.ContactActionEntity */
-/* Windows.AI.Actions.ContactActionEntity.get_Contact() */
 HRESULT waiac_contact_action_entity_get__contact(WAIAC_ContactActionEntity *self, WAPCO_Contact** value);
 
-/* Windows.AI.Actions.CustomActionEntityStore */
-/* Windows.AI.Actions.CustomActionEntityStore.GetLastModifiedTime(kind) */
 HRESULT waiac_custom_action_entity_store_get_last_modified_time(WAIAC_CustomActionEntityStore *self, cwinrt_hstring kind, WF_DateTime *out);
 
-/* Windows.AI.Actions.CustomActionEntityStore.Insert(entity) */
 HRESULT waiac_custom_action_entity_store_insert(WAIAC_CustomActionEntityStore *self, WAIAC_CustomTextActionEntity* entity);
 
-/* Windows.AI.Actions.CustomActionEntityStore.InsertMany(entities) */
 HRESULT waiac_custom_action_entity_store_insert_many(WAIAC_CustomActionEntityStore *self, WAIAC_CustomTextActionEntity *entities, uint32_t entities_len);
 
-/* Windows.AI.Actions.CustomActionEntityStore.Delete(kind) */
 HRESULT waiac_custom_action_entity_store_delete(WAIAC_CustomActionEntityStore *self, cwinrt_hstring kind);
 
-/* Windows.AI.Actions.CustomActionEntityStore.Close() */
 HRESULT waiac_custom_action_entity_store_close(WAIAC_CustomActionEntityStore *self);
 
-/* activate Windows.AI.Actions.CustomTextActionEntity */
 HRESULT waiac_custom_text_action_entity_new(WAIAC_CustomTextActionEntity **out);
 
-/* Windows.AI.Actions.CustomTextActionEntity */
-/* Windows.AI.Actions.CustomTextActionEntity.get_CustomTextKind() */
 HRESULT waiac_custom_text_action_entity_get__custom_text_kind(WAIAC_CustomTextActionEntity *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.CustomTextActionEntity.get_KeyPhrase() */
 HRESULT waiac_custom_text_action_entity_get__key_phrase(WAIAC_CustomTextActionEntity *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.CustomTextActionEntity.get_Properties() */
 HRESULT waiac_custom_text_action_entity_get__properties(WAIAC_CustomTextActionEntity *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* activate Windows.AI.Actions.DateTimeActionEntity */
 HRESULT waiac_date_time_action_entity_new(WAIAC_DateTimeActionEntity **out);
 
-/* Windows.AI.Actions.DateTimeActionEntity */
-/* Windows.AI.Actions.DateTimeActionEntity.get_DateTime() */
 HRESULT waiac_date_time_action_entity_get__date_time(WAIAC_DateTimeActionEntity *self, WF_DateTime *value);
 
-/* activate Windows.AI.Actions.DocumentActionEntity */
 HRESULT waiac_document_action_entity_new(WAIAC_DocumentActionEntity **out);
 
-/* Windows.AI.Actions.DocumentActionEntity */
-/* Windows.AI.Actions.DocumentActionEntity.get_FullPath() */
 HRESULT waiac_document_action_entity_get__full_path(WAIAC_DocumentActionEntity *self, cwinrt_hstring *value);
 
-/* activate Windows.AI.Actions.FileActionEntity */
 HRESULT waiac_file_action_entity_new(WAIAC_FileActionEntity **out);
 
-/* Windows.AI.Actions.FileActionEntity */
-/* Windows.AI.Actions.FileActionEntity.get_FullPath() */
 HRESULT waiac_file_action_entity_get__full_path(WAIAC_FileActionEntity *self, cwinrt_hstring *value);
 
-/* activate Windows.AI.Actions.UriActionEntity */
 HRESULT waiac_uri_action_entity_new(WAIAC_UriActionEntity **out);
 
-/* Windows.AI.Actions.UriActionEntity */
-/* Windows.AI.Actions.UriActionEntity.get_Uri() */
 HRESULT waiac_uri_action_entity_get__uri(WAIAC_UriActionEntity *self, WF_Uri** value);
 
-/* activate Windows.AI.Actions.TextActionEntity */
 HRESULT waiac_text_action_entity_new(WAIAC_TextActionEntity **out);
 
-/* Windows.AI.Actions.TextActionEntity */
-/* Windows.AI.Actions.TextActionEntity.get_Text() */
 HRESULT waiac_text_action_entity_get__text(WAIAC_TextActionEntity *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.TextActionEntity.get_TextFormat() */
 HRESULT waiac_text_action_entity_get__text_format(WAIAC_TextActionEntity *self, WAIAC_ActionEntityTextFormat *value);
 
-/* activate Windows.AI.Actions.TableActionEntity */
 HRESULT waiac_table_action_entity_new(WAIAC_TableActionEntity **out);
 
-/* Windows.AI.Actions.TableActionEntity */
-/* Windows.AI.Actions.TableActionEntity.GetTextContent() */
 HRESULT waiac_table_action_entity_get_text_content(WAIAC_TableActionEntity *self, cwinrt_hstring **out, uint32_t *out_len);
 
-/* Windows.AI.Actions.TableActionEntity.get_RowCount() */
 HRESULT waiac_table_action_entity_get__row_count(WAIAC_TableActionEntity *self, uint32_t *value);
 
-/* Windows.AI.Actions.TableActionEntity.get_ColumnCount() */
 HRESULT waiac_table_action_entity_get__column_count(WAIAC_TableActionEntity *self, uint32_t *value);
 
-/* activate Windows.AI.Actions.StreamingTextActionEntityWriter */
 HRESULT waiac_streaming_text_action_entity_writer_new(WAIAC_StreamingTextActionEntityWriter **out);
 
-/* Windows.AI.Actions.StreamingTextActionEntityWriter */
-/* Windows.AI.Actions.StreamingTextActionEntityWriter.get_ReaderEntity() */
 HRESULT waiac_streaming_text_action_entity_writer_get__reader_entity(WAIAC_StreamingTextActionEntityWriter *self, WAIAC_StreamingTextActionEntity** value);
 
-/* Windows.AI.Actions.StreamingTextActionEntityWriter.get_TextFormat() */
 HRESULT waiac_streaming_text_action_entity_writer_get__text_format(WAIAC_StreamingTextActionEntityWriter *self, WAIAC_ActionEntityTextFormat *value);
 
-/* Windows.AI.Actions.StreamingTextActionEntityWriter.SetText(text) */
 HRESULT waiac_streaming_text_action_entity_writer_set_text(WAIAC_StreamingTextActionEntityWriter *self, cwinrt_hstring text);
 
-/* Windows.AI.Actions.StreamingTextActionEntityWriter.Close() */
 HRESULT waiac_streaming_text_action_entity_writer_close(WAIAC_StreamingTextActionEntityWriter *self);
 
-/* activate Windows.AI.Actions.StreamingTextActionEntityTextChangedArgs */
 HRESULT waiac_streaming_text_action_entity_text_changed_args_new(WAIAC_StreamingTextActionEntityTextChangedArgs **out);
 
-/* Windows.AI.Actions.StreamingTextActionEntityTextChangedArgs */
-/* Windows.AI.Actions.StreamingTextActionEntityTextChangedArgs.get_Text() */
 HRESULT waiac_streaming_text_action_entity_text_changed_args_get__text(WAIAC_StreamingTextActionEntityTextChangedArgs *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.StreamingTextActionEntityTextChangedArgs.get_IsComplete() */
 HRESULT waiac_streaming_text_action_entity_text_changed_args_get__is_complete(WAIAC_StreamingTextActionEntityTextChangedArgs *self, BOOL *value);
 
-/* activate Windows.AI.Actions.StreamingTextActionEntity */
 HRESULT waiac_streaming_text_action_entity_new(WAIAC_StreamingTextActionEntity **out);
 
-/* Windows.AI.Actions.StreamingTextActionEntity */
-/* Windows.AI.Actions.StreamingTextActionEntity.get_IsComplete() */
 HRESULT waiac_streaming_text_action_entity_get__is_complete(WAIAC_StreamingTextActionEntity *self, BOOL *value);
 
-/* Windows.AI.Actions.StreamingTextActionEntity.GetText() */
 HRESULT waiac_streaming_text_action_entity_get_text(WAIAC_StreamingTextActionEntity *self, cwinrt_hstring *out);
 
-/* Windows.AI.Actions.StreamingTextActionEntity.get_TextFormat() */
 HRESULT waiac_streaming_text_action_entity_get__text_format(WAIAC_StreamingTextActionEntity *self, WAIAC_ActionEntityTextFormat *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token waiac_streaming_text_action_entity_on_text_changed(WAIAC_StreamingTextActionEntity *self, cwinrt_event_fn fn, void *ctx);
 void waiac_streaming_text_action_entity_off_text_changed(WAIAC_StreamingTextActionEntity *self, cwinrt_token token);
 
-/* activate Windows.AI.Actions.RemoteFileActionEntity */
 HRESULT waiac_remote_file_action_entity_new(WAIAC_RemoteFileActionEntity **out);
 
-/* Windows.AI.Actions.RemoteFileActionEntity */
-/* Windows.AI.Actions.RemoteFileActionEntity.get_SourceId() */
 HRESULT waiac_remote_file_action_entity_get__source_id(WAIAC_RemoteFileActionEntity *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.RemoteFileActionEntity.get_FileKind() */
 HRESULT waiac_remote_file_action_entity_get__file_kind(WAIAC_RemoteFileActionEntity *self, WAIAC_RemoteFileKind *value);
 
-/* Windows.AI.Actions.RemoteFileActionEntity.get_SourceUri() */
 HRESULT waiac_remote_file_action_entity_get__source_uri(WAIAC_RemoteFileActionEntity *self, WF_Uri** value);
 
-/* Windows.AI.Actions.RemoteFileActionEntity.get_FileId() */
 HRESULT waiac_remote_file_action_entity_get__file_id(WAIAC_RemoteFileActionEntity *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.RemoteFileActionEntity.get_ContentType() */
 HRESULT waiac_remote_file_action_entity_get__content_type(WAIAC_RemoteFileActionEntity *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.RemoteFileActionEntity.get_DriveId() */
 HRESULT waiac_remote_file_action_entity_get__drive_id(WAIAC_RemoteFileActionEntity *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.RemoteFileActionEntity.get_AccountId() */
 HRESULT waiac_remote_file_action_entity_get__account_id(WAIAC_RemoteFileActionEntity *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.RemoteFileActionEntity.get_Extension() */
 HRESULT waiac_remote_file_action_entity_get__extension(WAIAC_RemoteFileActionEntity *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.RemoteFileActionEntity.get_Filename() */
 HRESULT waiac_remote_file_action_entity_get__filename(WAIAC_RemoteFileActionEntity *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.RemoteFileActionEntity.put_Filename() */
 HRESULT waiac_remote_file_action_entity_put__filename(WAIAC_RemoteFileActionEntity *self, cwinrt_hstring value);
 
-/* Windows.AI.Actions.RemoteFileActionEntity.get_Creator() */
 HRESULT waiac_remote_file_action_entity_get__creator(WAIAC_RemoteFileActionEntity *self, WAIAC_ContactActionEntity** value);
 
-/* Windows.AI.Actions.RemoteFileActionEntity.put_Creator() */
 HRESULT waiac_remote_file_action_entity_put__creator(WAIAC_RemoteFileActionEntity *self, WAIAC_ContactActionEntity* value);
 
-/* Windows.AI.Actions.RemoteFileActionEntity.get_LastUpdatedTime() */
 HRESULT waiac_remote_file_action_entity_get__last_updated_time(WAIAC_RemoteFileActionEntity *self, WF_DateTime** value);
 
-/* Windows.AI.Actions.RemoteFileActionEntity.put_LastUpdatedTime() */
 HRESULT waiac_remote_file_action_entity_put__last_updated_time(WAIAC_RemoteFileActionEntity *self, WF_DateTime* value);
 
-/* Windows.AI.Actions.RemoteFileActionEntity.SetContributors(contributors) */
 HRESULT waiac_remote_file_action_entity_set_contributors(WAIAC_RemoteFileActionEntity *self, WAIAC_ContactActionEntity *contributors, uint32_t contributors_len);
 
-/* Windows.AI.Actions.RemoteFileActionEntity.GetContributors() */
 HRESULT waiac_remote_file_action_entity_get_contributors(WAIAC_RemoteFileActionEntity *self, WAIAC_ContactActionEntity **out, uint32_t *out_len);
 
-/* activate Windows.AI.Actions.PhotoActionEntity */
 HRESULT waiac_photo_action_entity_new(WAIAC_PhotoActionEntity **out);
 
-/* Windows.AI.Actions.PhotoActionEntity */
-/* Windows.AI.Actions.PhotoActionEntity.get_FullPath() */
 HRESULT waiac_photo_action_entity_get__full_path(WAIAC_PhotoActionEntity *self, cwinrt_hstring *value);
 
-/* activate Windows.AI.Actions.NamedActionEntity */
 HRESULT waiac_named_action_entity_new(WAIAC_NamedActionEntity **out);
 
-/* Windows.AI.Actions.NamedActionEntity */
-/* Windows.AI.Actions.NamedActionEntity.get_Name() */
 HRESULT waiac_named_action_entity_get__name(WAIAC_NamedActionEntity *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.NamedActionEntity.put_Name() */
 HRESULT waiac_named_action_entity_put__name(WAIAC_NamedActionEntity *self, cwinrt_hstring value);
 
-/* Windows.AI.Actions.NamedActionEntity.get_Entity() */
 HRESULT waiac_named_action_entity_get__entity(WAIAC_NamedActionEntity *self, WAIAC_ActionEntity** value);
 
-/* Windows.AI.Actions.NamedActionEntity.put_Entity() */
 HRESULT waiac_named_action_entity_put__entity(WAIAC_NamedActionEntity *self, WAIAC_ActionEntity* value);
 
-/* Windows.AI.Actions.NamedActionEntity.Close() */
 HRESULT waiac_named_action_entity_close(WAIAC_NamedActionEntity *self);
 
-/* Windows.AI.Actions.IActionRuntimeStatics */
-/* Windows.AI.Actions.IActionRuntimeStatics.GetDefault() */
 HRESULT waiac_action_runtime_statics_get_default(WAIAC_IActionRuntimeStatics *self, WAIAC_ActionRuntime** out);
 
-/* Windows.AI.Actions.IActionEntity */
-/* Windows.AI.Actions.IActionEntity2 */
-/* Windows.AI.Actions.IActionEntity2.get_Id() */
 HRESULT waiac_action_entity_2_get__id(WAIAC_IActionEntity_2 *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.IActionEntityDisplayInfo */
-/* Windows.AI.Actions.IActionEntityFactory2 */
-/* Windows.AI.Actions.IActionEntityFactory2.CreateFileEntity(path) */
 HRESULT waiac_action_entity_factory_2_create_file_entity(WAIAC_IActionEntityFactory_2 *self, cwinrt_hstring path, WAIAC_FileActionEntity** out);
 
-/* Windows.AI.Actions.IActionEntityFactory2.CreateDocumentEntity(path) */
 HRESULT waiac_action_entity_factory_2_create_document_entity(WAIAC_IActionEntityFactory_2 *self, cwinrt_hstring path, WAIAC_DocumentActionEntity** out);
 
-/* Windows.AI.Actions.IActionEntityFactory2.CreatePhotoEntity(path) */
 HRESULT waiac_action_entity_factory_2_create_photo_entity(WAIAC_IActionEntityFactory_2 *self, cwinrt_hstring path, WAIAC_PhotoActionEntity** out);
 
-/* Windows.AI.Actions.IActionEntityFactory2.CreateTextEntity(text) */
 HRESULT waiac_action_entity_factory_2_create_text_entity(WAIAC_IActionEntityFactory_2 *self, cwinrt_hstring text, WAIAC_TextActionEntity** out);
 
-/* Windows.AI.Actions.IActionEntityFactory3 */
-/* Windows.AI.Actions.IActionEntityFactory3.CreateRemoteFileEntity(sourceId, fileKind, sourceUri, fileId, contentType, driveId, accountId, extension) */
 HRESULT waiac_action_entity_factory_3_create_remote_file_entity(WAIAC_IActionEntityFactory_3 *self, cwinrt_hstring sourceId, WAIAC_RemoteFileKind fileKind, WF_Uri* sourceUri, cwinrt_hstring fileId, cwinrt_hstring contentType, cwinrt_hstring driveId, cwinrt_hstring accountId, cwinrt_hstring extension, WAIAC_RemoteFileActionEntity** out);
 
-/* Windows.AI.Actions.IActionEntityFactory3.CreateTextEntity(text, textFormat) */
 HRESULT waiac_action_entity_factory_3_create_text_entity(WAIAC_IActionEntityFactory_3 *self, cwinrt_hstring text, WAIAC_ActionEntityTextFormat textFormat, WAIAC_TextActionEntity** out);
 
-/* Windows.AI.Actions.IActionEntityFactory3.CreateStreamingTextActionEntityWriter(textFormat) */
 HRESULT waiac_action_entity_factory_3_create_streaming_text_action_entity_writer(WAIAC_IActionEntityFactory_3 *self, WAIAC_ActionEntityTextFormat textFormat, WAIAC_StreamingTextActionEntityWriter** out);
 
-/* Windows.AI.Actions.IActionEntityFactory4 */
-/* Windows.AI.Actions.IActionEntityFactory4.CreateTableEntity(data, columnCount) */
 HRESULT waiac_action_entity_factory_4_create_table_entity(WAIAC_IActionEntityFactory_4 *self, cwinrt_hstring *data, uint32_t data_len, uint32_t columnCount, WAIAC_TableActionEntity** out);
 
-/* Windows.AI.Actions.IActionEntityFactory4.CreateContactEntity(contact) */
 HRESULT waiac_action_entity_factory_4_create_contact_entity(WAIAC_IActionEntityFactory_4 *self, WAPCO_Contact* contact, WAIAC_ContactActionEntity** out);
 
-/* Windows.AI.Actions.IActionEntityFactory5 */
-/* Windows.AI.Actions.IActionEntityFactory5.CreateUriEntity(Uri) */
 HRESULT waiac_action_entity_factory_5_create_uri_entity(WAIAC_IActionEntityFactory_5 *self, WF_Uri* Uri, WAIAC_UriActionEntity** out);
 
-/* Windows.AI.Actions.IActionEntityFactory5.CreateArrayEntity(kind, entities) */
 HRESULT waiac_action_entity_factory_5_create_array_entity(WAIAC_IActionEntityFactory_5 *self, WAIAC_ActionEntityKind kind, WAIAC_ActionEntity *entities, uint32_t entities_len, WAIAC_ArrayActionEntity** out);
 
-/* Windows.AI.Actions.IActionEntityFactory6 */
-/* Windows.AI.Actions.IActionEntityFactory6.CreateDateTimeEntity(dateTime) */
 HRESULT waiac_action_entity_factory_6_create_date_time_entity(WAIAC_IActionEntityFactory_6 *self, WF_DateTime dateTime, WAIAC_DateTimeActionEntity** out);
 
-/* Windows.AI.Actions.IActionEntityFactory6.CreateAppointmentEntity(sourceId, appointment, attendees) */
 HRESULT waiac_action_entity_factory_6_create_appointment_entity(WAIAC_IActionEntityFactory_6 *self, cwinrt_hstring sourceId, WAPAP_Appointment* appointment, WAIAC_ContactActionEntity *attendees, uint32_t attendees_len, WAIAC_AppointmentActionEntity** out);
 
-/* Windows.AI.Actions.IActionEntityFactory7 */
-/* Windows.AI.Actions.IActionEntityFactory7.CreateCustomTextEntity(kind, keyPhrase, props) */
 HRESULT waiac_action_entity_factory_7_create_custom_text_entity(WAIAC_IActionEntityFactory_7 *self, cwinrt_hstring kind, cwinrt_hstring keyPhrase, WFOCO_IMapView_HSTRING_Object* props, WAIAC_CustomTextActionEntity** out);
 
-/* Windows.AI.Actions.IActionEntityFactory7.CreateArrayEntityWithCustomKind(elementKind, customKind, entities) */
 HRESULT waiac_action_entity_factory_7_create_array_entity_with_custom_kind(WAIAC_IActionEntityFactory_7 *self, WAIAC_ActionEntityKind elementKind, cwinrt_hstring customKind, WAIAC_ActionEntity *entities, uint32_t entities_len, WAIAC_ArrayActionEntity** out);
 
-/* Windows.AI.Actions.IActionFeedback */
-/* Windows.AI.Actions.IActionInvocationContext */
-/* Windows.AI.Actions.IActionInvocationContext2 */
-/* Windows.AI.Actions.IActionInvocationContext2.get_InvokerWindowId() */
 HRESULT waiac_action_invocation_context_2_get__invoker_window_id(WAIAC_IActionInvocationContext_2 *self, WUI_WindowId *value);
 
-/* Windows.AI.Actions.IActionInvocationContext2.get_HelpDetails() */
 HRESULT waiac_action_invocation_context_2_get__help_details(WAIAC_IActionInvocationContext_2 *self, WAIAC_ActionInvocationHelpDetails** value);
 
-/* Windows.AI.Actions.IActionInvocationContext2.get_ActionId() */
 HRESULT waiac_action_invocation_context_2_get__action_id(WAIAC_IActionInvocationContext_2 *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.IActionInvocationContext2.get_InvokerAppUserModelId() */
 HRESULT waiac_action_invocation_context_2_get__invoker_app_user_model_id(WAIAC_IActionInvocationContext_2 *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.IActionInvocationHelpDetails */
-/* Windows.AI.Actions.IActionInvocationHelpDetails2 */
-/* Windows.AI.Actions.IActionRuntime */
-/* Windows.AI.Actions.IActionRuntime2 */
-/* Windows.AI.Actions.IActionRuntime2.CreateActionFeedback(feedbackKind) */
 HRESULT waiac_action_runtime_2_create_action_feedback(WAIAC_IActionRuntime_2 *self, WAIAC_ActionFeedbackKind feedbackKind, WAIAC_ActionFeedback** out);
 
-/* Windows.AI.Actions.IActionRuntime2.SetActionAvailability(actionId, isAvailable) */
 HRESULT waiac_action_runtime_2_set_action_availability(WAIAC_IActionRuntime_2 *self, cwinrt_hstring actionId, BOOL isAvailable);
 
-/* Windows.AI.Actions.IActionRuntime2.GetActionAvailability(actionId) */
 HRESULT waiac_action_runtime_2_get_action_availability(WAIAC_IActionRuntime_2 *self, cwinrt_hstring actionId, BOOL *out);
 
-/* Windows.AI.Actions.IActionRuntime3 */
-/* Windows.AI.Actions.IActionRuntime3.CreateInvocationContextWithWindowId(actionId, invokerWindowId) */
 HRESULT waiac_action_runtime_3_create_invocation_context_with_window_id(WAIAC_IActionRuntime_3 *self, cwinrt_hstring actionId, WUI_WindowId invokerWindowId, WAIAC_ActionInvocationContext** out);
 
-/* Windows.AI.Actions.IActionRuntime3.GetActionEntityById(entityId) */
 HRESULT waiac_action_runtime_3_get_action_entity_by_id(WAIAC_IActionRuntime_3 *self, cwinrt_hstring entityId, WAIAC_ActionEntity** out);
 
-/* Windows.AI.Actions.IActionRuntime3.get_LatestSupportedSchemaVersion() */
 HRESULT waiac_action_runtime_3_get__latest_supported_schema_version(WAIAC_IActionRuntime_3 *self, uint32_t *value);
 
-/* Windows.AI.Actions.IActionRuntime4 */
-/* Windows.AI.Actions.IActionRuntime4.GetActionInvocationContextFromToken(token) */
 HRESULT waiac_action_runtime_4_get_action_invocation_context_from_token(WAIAC_IActionRuntime_4 *self, cwinrt_hstring token, WAIAC_ActionInvocationContext** out);
 
-/* Windows.AI.Actions.IActionRuntime5 */
-/* Windows.AI.Actions.IActionRuntime5.get_CustomEntityStore() */
 HRESULT waiac_action_runtime_5_get__custom_entity_store(WAIAC_IActionRuntime_5 *self, WAIAC_CustomActionEntityStore** value);
 
-/* Windows.AI.Actions.IAppointmentActionEntity */
-/* Windows.AI.Actions.IArrayActionEntity */
-/* Windows.AI.Actions.IArrayActionEntity2 */
-/* Windows.AI.Actions.IArrayActionEntity2.get_CustomElementKind() */
 HRESULT waiac_array_action_entity_2_get__custom_element_kind(WAIAC_IArrayActionEntity_2 *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.IContactActionEntity */
-/* Windows.AI.Actions.ICustomActionEntityStore */
-/* Windows.AI.Actions.ICustomTextActionEntity */
-/* Windows.AI.Actions.IDateTimeActionEntity */
-/* Windows.AI.Actions.IDocumentActionEntity */
-/* Windows.AI.Actions.IFileActionEntity */
-/* Windows.AI.Actions.IUriActionEntity */
-/* Windows.AI.Actions.ITextActionEntity */
-/* Windows.AI.Actions.ITextActionEntity2 */
-/* Windows.AI.Actions.ITextActionEntity2.get_TextFormat() */
 HRESULT waiac_text_action_entity_2_get__text_format(WAIAC_ITextActionEntity_2 *self, WAIAC_ActionEntityTextFormat *value);
 
-/* Windows.AI.Actions.ITableActionEntity */
-/* Windows.AI.Actions.IStreamingTextActionEntityWriter */
-/* Windows.AI.Actions.IStreamingTextActionEntityTextChangedArgs */
-/* Windows.AI.Actions.IStreamingTextActionEntity */
-/* Windows.AI.Actions.IRemoteFileActionEntity */
-/* Windows.AI.Actions.IRemoteFileActionEntity2 */
-/* Windows.AI.Actions.IRemoteFileActionEntity2.get_Filename() */
 HRESULT waiac_remote_file_action_entity_2_get__filename(WAIAC_IRemoteFileActionEntity_2 *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.IRemoteFileActionEntity2.put_Filename() */
 HRESULT waiac_remote_file_action_entity_2_put__filename(WAIAC_IRemoteFileActionEntity_2 *self, cwinrt_hstring value);
 
-/* Windows.AI.Actions.IRemoteFileActionEntity2.get_Creator() */
 HRESULT waiac_remote_file_action_entity_2_get__creator(WAIAC_IRemoteFileActionEntity_2 *self, WAIAC_ContactActionEntity** value);
 
-/* Windows.AI.Actions.IRemoteFileActionEntity2.put_Creator() */
 HRESULT waiac_remote_file_action_entity_2_put__creator(WAIAC_IRemoteFileActionEntity_2 *self, WAIAC_ContactActionEntity* value);
 
-/* Windows.AI.Actions.IRemoteFileActionEntity2.get_LastUpdatedTime() */
 HRESULT waiac_remote_file_action_entity_2_get__last_updated_time(WAIAC_IRemoteFileActionEntity_2 *self, WF_DateTime** value);
 
-/* Windows.AI.Actions.IRemoteFileActionEntity2.put_LastUpdatedTime() */
 HRESULT waiac_remote_file_action_entity_2_put__last_updated_time(WAIAC_IRemoteFileActionEntity_2 *self, WF_DateTime* value);
 
-/* Windows.AI.Actions.IRemoteFileActionEntity2.SetContributors(contributors) */
 HRESULT waiac_remote_file_action_entity_2_set_contributors(WAIAC_IRemoteFileActionEntity_2 *self, WAIAC_ContactActionEntity *contributors, uint32_t contributors_len);
 
-/* Windows.AI.Actions.IRemoteFileActionEntity2.GetContributors() */
 HRESULT waiac_remote_file_action_entity_2_get_contributors(WAIAC_IRemoteFileActionEntity_2 *self, WAIAC_ContactActionEntity **out, uint32_t *out_len);
 
-/* Windows.AI.Actions.IPhotoActionEntity */
-/* Windows.AI.Actions.INamedActionEntity */
 #endif /* CWINRT_WINDOWS_AI_ACTIONS_H */

@@ -12,20 +12,17 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WSEAUID_IEnterpriseKeyCredentialRegistrationManagerStatics WSEAUID_IEnterpriseKeyCredentialRegistrationManagerStatics;
 typedef struct WSEAUID_EnterpriseKeyCredentialRegistrationManager WSEAUID_EnterpriseKeyCredentialRegistrationManager;
 typedef struct WSEAUID_EnterpriseKeyCredentialRegistrationInfo WSEAUID_EnterpriseKeyCredentialRegistrationInfo;
 typedef struct WSEAUID_IEnterpriseKeyCredentialRegistrationManager WSEAUID_IEnterpriseKeyCredentialRegistrationManager;
 typedef struct WSEAUID_IEnterpriseKeyCredentialRegistrationInfo WSEAUID_IEnterpriseKeyCredentialRegistrationInfo;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WFOCO_IVectorView_WSEAUID_EnterpriseKeyCredentialRegistrationInfo
 #define CWINRT_FWD_WF_IAsyncOperation_WFOCO_IVectorView_WSEAUID_EnterpriseKeyCredentialRegistrationInfo
 typedef struct WF_IAsyncOperation_WFOCO_IVectorView_WSEAUID_EnterpriseKeyCredentialRegistrationInfo WF_IAsyncOperation_WFOCO_IVectorView_WSEAUID_EnterpriseKeyCredentialRegistrationInfo;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -42,41 +39,24 @@ static const IID CWINRT_IID_WSEAUID_IEnterpriseKeyCredentialRegistrationManager 
 static const IID CWINRT_IID_WSEAUID_IEnterpriseKeyCredentialRegistrationInfo CWINRT_MAYBE_UNUSED = { 0x38321ACC, 0x672B, 0x4823, { 0xB6, 0x03, 0x6B, 0x3C, 0x75, 0x3D, 0xAF, 0x97 } };
 #endif
 
-/* Methods */
-
-/* Windows.Security.Authentication.Identity.IEnterpriseKeyCredentialRegistrationManagerStatics */
-/* Windows.Security.Authentication.Identity.IEnterpriseKeyCredentialRegistrationManagerStatics.get_Current() */
 HRESULT wseauid_enterprise_key_credential_registration_manager_statics_get__current(WSEAUID_IEnterpriseKeyCredentialRegistrationManagerStatics *self, WSEAUID_EnterpriseKeyCredentialRegistrationManager** value);
 
-/* activate Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationManager */
 HRESULT wseauid_enterprise_key_credential_registration_manager_new(WSEAUID_EnterpriseKeyCredentialRegistrationManager **out);
 
-/* Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationManager */
-/* Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationManager.GetRegistrationsAsync() */
 HRESULT wseauid_enterprise_key_credential_registration_manager_get_registrations_async(WSEAUID_EnterpriseKeyCredentialRegistrationManager *self, WF_IAsyncOperation_WFOCO_IVectorView_WSEAUID_EnterpriseKeyCredentialRegistrationInfo** out);
 
-/* Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationManager.get_Current() */
 HRESULT wseauid_enterprise_key_credential_registration_manager_get__current(WSEAUID_EnterpriseKeyCredentialRegistrationManager** value);
 
-/* activate Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo */
 HRESULT wseauid_enterprise_key_credential_registration_info_new(WSEAUID_EnterpriseKeyCredentialRegistrationInfo **out);
 
-/* Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo */
-/* Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo.get_TenantId() */
 HRESULT wseauid_enterprise_key_credential_registration_info_get__tenant_id(WSEAUID_EnterpriseKeyCredentialRegistrationInfo *self, cwinrt_hstring *value);
 
-/* Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo.get_TenantName() */
 HRESULT wseauid_enterprise_key_credential_registration_info_get__tenant_name(WSEAUID_EnterpriseKeyCredentialRegistrationInfo *self, cwinrt_hstring *value);
 
-/* Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo.get_Subject() */
 HRESULT wseauid_enterprise_key_credential_registration_info_get__subject(WSEAUID_EnterpriseKeyCredentialRegistrationInfo *self, cwinrt_hstring *value);
 
-/* Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo.get_KeyId() */
 HRESULT wseauid_enterprise_key_credential_registration_info_get__key_id(WSEAUID_EnterpriseKeyCredentialRegistrationInfo *self, cwinrt_hstring *value);
 
-/* Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo.get_KeyName() */
 HRESULT wseauid_enterprise_key_credential_registration_info_get__key_name(WSEAUID_EnterpriseKeyCredentialRegistrationInfo *self, cwinrt_hstring *value);
 
-/* Windows.Security.Authentication.Identity.IEnterpriseKeyCredentialRegistrationManager */
-/* Windows.Security.Authentication.Identity.IEnterpriseKeyCredentialRegistrationInfo */
 #endif /* CWINRT_WINDOWS_SECURITY_AUTHENTICATION_IDENTITY_H */

@@ -15,13 +15,11 @@
 #include <cwinrt/Windows.Graphics.Imaging.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WME_VideoFrame
 #define CWINRT_FWD_WME_VideoFrame
 typedef struct WME_VideoFrame WME_VideoFrame;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDEPEPR_IKnownPerceptionFrameKindStatics WDEPEPR_IKnownPerceptionFrameKindStatics;
 typedef struct WDEPEPR_IPerceptionControlGroupFactory WDEPEPR_IPerceptionControlGroupFactory;
 typedef struct WDEPEPR_IPerceptionCorrelationFactory WDEPEPR_IPerceptionCorrelationFactory;
@@ -52,7 +50,6 @@ typedef struct WDEPEPR_IPerceptionFrameProviderInfo WDEPEPR_IPerceptionFrameProv
 typedef struct WDEPEPR_IPerceptionPropertyChangeRequest WDEPEPR_IPerceptionPropertyChangeRequest;
 typedef struct WDEPEPR_IPerceptionVideoFrameAllocator WDEPEPR_IPerceptionVideoFrameAllocator;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IIterable_HSTRING
 #define CWINRT_FWD_WFOCO_IIterable_HSTRING
 typedef struct WFOCO_IIterable_HSTRING WFOCO_IIterable_HSTRING;
@@ -138,7 +135,6 @@ typedef struct WF_Deferral WF_Deferral;
 typedef struct WME_VideoFrame WME_VideoFrame;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -219,269 +215,160 @@ static const IID CWINRT_IID_WDEPEPR_IPerceptionPropertyChangeRequest CWINRT_MAYB
 static const IID CWINRT_IID_WDEPEPR_IPerceptionVideoFrameAllocator CWINRT_MAYBE_UNUSED = { 0x4C38A7DA, 0xFDD8, 0x4ED4, { 0xA0, 0x39, 0x2A, 0x6F, 0x9B, 0x23, 0x50, 0x38 } };
 #endif
 
-/* Methods */
-
-/* Windows.Devices.Perception.Provider.IKnownPerceptionFrameKindStatics */
-/* Windows.Devices.Perception.Provider.IKnownPerceptionFrameKindStatics.get_Color() */
 HRESULT wdepepr_known_perception_frame_kind_statics_get__color(WDEPEPR_IKnownPerceptionFrameKindStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.Provider.IKnownPerceptionFrameKindStatics.get_Depth() */
 HRESULT wdepepr_known_perception_frame_kind_statics_get__depth(WDEPEPR_IKnownPerceptionFrameKindStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.Provider.IKnownPerceptionFrameKindStatics.get_Infrared() */
 HRESULT wdepepr_known_perception_frame_kind_statics_get__infrared(WDEPEPR_IKnownPerceptionFrameKindStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.Provider.IPerceptionControlGroupFactory */
-/* Windows.Devices.Perception.Provider.IPerceptionControlGroupFactory.Create(ids) */
 HRESULT wdepepr_perception_control_group_factory_create(WDEPEPR_IPerceptionControlGroupFactory *self, WFOCO_IIterable_HSTRING* ids, WDEPEPR_PerceptionControlGroup** out);
 
-/* Windows.Devices.Perception.Provider.IPerceptionCorrelationFactory */
-/* Windows.Devices.Perception.Provider.IPerceptionCorrelationFactory.Create(targetId, position, orientation) */
 HRESULT wdepepr_perception_correlation_factory_create(WDEPEPR_IPerceptionCorrelationFactory *self, cwinrt_hstring targetId, WFN_Vector_3 position, WFN_Quaternion orientation, WDEPEPR_PerceptionCorrelation** out);
 
-/* Windows.Devices.Perception.Provider.IPerceptionCorrelationGroupFactory */
-/* Windows.Devices.Perception.Provider.IPerceptionCorrelationGroupFactory.Create(relativeLocations) */
 HRESULT wdepepr_perception_correlation_group_factory_create(WDEPEPR_IPerceptionCorrelationGroupFactory *self, WFOCO_IIterable_WDEPEPR_PerceptionCorrelation* relativeLocations, WDEPEPR_PerceptionCorrelationGroup** out);
 
-/* Windows.Devices.Perception.Provider.IPerceptionFaceAuthenticationGroupFactory */
-/* Windows.Devices.Perception.Provider.IPerceptionFaceAuthenticationGroupFactory.Create(ids, startHandler, stopHandler) */
 HRESULT wdepepr_perception_face_authentication_group_factory_create(WDEPEPR_IPerceptionFaceAuthenticationGroupFactory *self, WFOCO_IIterable_HSTRING* ids, WDEPEPR_PerceptionStartFaceAuthenticationHandler* startHandler, WDEPEPR_PerceptionStopFaceAuthenticationHandler* stopHandler, WDEPEPR_PerceptionFaceAuthenticationGroup** out);
 
-/* Windows.Devices.Perception.Provider.IPerceptionFrameProvider */
-/* Windows.Devices.Perception.Provider.IPerceptionFrameProvider.get_FrameProviderInfo() */
 HRESULT wdepepr_perception_frame_provider_get__frame_provider_info(WDEPEPR_IPerceptionFrameProvider *self, WDEPEPR_PerceptionFrameProviderInfo** value);
 
-/* Windows.Devices.Perception.Provider.IPerceptionFrameProvider.get_Available() */
 HRESULT wdepepr_perception_frame_provider_get__available(WDEPEPR_IPerceptionFrameProvider *self, BOOL *value);
 
-/* Windows.Devices.Perception.Provider.IPerceptionFrameProvider.get_Properties() */
 HRESULT wdepepr_perception_frame_provider_get__properties(WDEPEPR_IPerceptionFrameProvider *self, WFOCO_IPropertySet** value);
 
-/* Windows.Devices.Perception.Provider.IPerceptionFrameProvider.Start() */
 HRESULT wdepepr_perception_frame_provider_start(WDEPEPR_IPerceptionFrameProvider *self);
 
-/* Windows.Devices.Perception.Provider.IPerceptionFrameProvider.Stop() */
 HRESULT wdepepr_perception_frame_provider_stop(WDEPEPR_IPerceptionFrameProvider *self);
 
-/* Windows.Devices.Perception.Provider.IPerceptionFrameProvider.SetProperty() */
 HRESULT wdepepr_perception_frame_provider_set_property(WDEPEPR_IPerceptionFrameProvider *self, WDEPEPR_PerceptionPropertyChangeRequest* value);
 
-/* Windows.Devices.Perception.Provider.IPerceptionFrameProviderManager */
-/* Windows.Devices.Perception.Provider.IPerceptionFrameProviderManager.GetFrameProvider(frameProviderInfo) */
 HRESULT wdepepr_perception_frame_provider_manager_get_frame_provider(WDEPEPR_IPerceptionFrameProviderManager *self, WDEPEPR_PerceptionFrameProviderInfo* frameProviderInfo, WDEPEPR_IPerceptionFrameProvider** out);
 
-/* Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics */
-/* Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics.RegisterFrameProviderInfo(manager, frameProviderInfo) */
 HRESULT wdepepr_perception_frame_provider_manager_service_statics_register_frame_provider_info(WDEPEPR_IPerceptionFrameProviderManagerServiceStatics *self, WDEPEPR_IPerceptionFrameProviderManager* manager, WDEPEPR_PerceptionFrameProviderInfo* frameProviderInfo);
 
-/* Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics.UnregisterFrameProviderInfo(manager, frameProviderInfo) */
 HRESULT wdepepr_perception_frame_provider_manager_service_statics_unregister_frame_provider_info(WDEPEPR_IPerceptionFrameProviderManagerServiceStatics *self, WDEPEPR_IPerceptionFrameProviderManager* manager, WDEPEPR_PerceptionFrameProviderInfo* frameProviderInfo);
 
-/* Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics.RegisterFaceAuthenticationGroup(manager, faceAuthenticationGroup) */
 HRESULT wdepepr_perception_frame_provider_manager_service_statics_register_face_authentication_group(WDEPEPR_IPerceptionFrameProviderManagerServiceStatics *self, WDEPEPR_IPerceptionFrameProviderManager* manager, WDEPEPR_PerceptionFaceAuthenticationGroup* faceAuthenticationGroup);
 
-/* Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics.UnregisterFaceAuthenticationGroup(manager, faceAuthenticationGroup) */
 HRESULT wdepepr_perception_frame_provider_manager_service_statics_unregister_face_authentication_group(WDEPEPR_IPerceptionFrameProviderManagerServiceStatics *self, WDEPEPR_IPerceptionFrameProviderManager* manager, WDEPEPR_PerceptionFaceAuthenticationGroup* faceAuthenticationGroup);
 
-/* Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics.RegisterControlGroup(manager, controlGroup) */
 HRESULT wdepepr_perception_frame_provider_manager_service_statics_register_control_group(WDEPEPR_IPerceptionFrameProviderManagerServiceStatics *self, WDEPEPR_IPerceptionFrameProviderManager* manager, WDEPEPR_PerceptionControlGroup* controlGroup);
 
-/* Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics.UnregisterControlGroup(manager, controlGroup) */
 HRESULT wdepepr_perception_frame_provider_manager_service_statics_unregister_control_group(WDEPEPR_IPerceptionFrameProviderManagerServiceStatics *self, WDEPEPR_IPerceptionFrameProviderManager* manager, WDEPEPR_PerceptionControlGroup* controlGroup);
 
-/* Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics.RegisterCorrelationGroup(manager, correlationGroup) */
 HRESULT wdepepr_perception_frame_provider_manager_service_statics_register_correlation_group(WDEPEPR_IPerceptionFrameProviderManagerServiceStatics *self, WDEPEPR_IPerceptionFrameProviderManager* manager, WDEPEPR_PerceptionCorrelationGroup* correlationGroup);
 
-/* Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics.UnregisterCorrelationGroup(manager, correlationGroup) */
 HRESULT wdepepr_perception_frame_provider_manager_service_statics_unregister_correlation_group(WDEPEPR_IPerceptionFrameProviderManagerServiceStatics *self, WDEPEPR_IPerceptionFrameProviderManager* manager, WDEPEPR_PerceptionCorrelationGroup* correlationGroup);
 
-/* Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics.UpdateAvailabilityForProvider(provider, available) */
 HRESULT wdepepr_perception_frame_provider_manager_service_statics_update_availability_for_provider(WDEPEPR_IPerceptionFrameProviderManagerServiceStatics *self, WDEPEPR_IPerceptionFrameProvider* provider, BOOL available);
 
-/* Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics.PublishFrameForProvider(provider, frame) */
 HRESULT wdepepr_perception_frame_provider_manager_service_statics_publish_frame_for_provider(WDEPEPR_IPerceptionFrameProviderManagerServiceStatics *self, WDEPEPR_IPerceptionFrameProvider* provider, WDEPEPR_PerceptionFrame* frame);
 
-/* Windows.Devices.Perception.Provider.IPerceptionVideoFrameAllocatorFactory */
-/* Windows.Devices.Perception.Provider.IPerceptionVideoFrameAllocatorFactory.Create(maxOutstandingFrameCountForWrite, format, resolution, alpha) */
 HRESULT wdepepr_perception_video_frame_allocator_factory_create(WDEPEPR_IPerceptionVideoFrameAllocatorFactory *self, uint32_t maxOutstandingFrameCountForWrite, WGRIM_BitmapPixelFormat format, WF_Size resolution, WGRIM_BitmapAlphaMode alpha, WDEPEPR_PerceptionVideoFrameAllocator** out);
 
-/* activate Windows.Devices.Perception.Provider.KnownPerceptionFrameKind */
 HRESULT wdepepr_known_perception_frame_kind_new(WDEPEPR_KnownPerceptionFrameKind **out);
 
-/* Windows.Devices.Perception.Provider.KnownPerceptionFrameKind */
-/* Windows.Devices.Perception.Provider.KnownPerceptionFrameKind.get_Color() */
 HRESULT wdepepr_known_perception_frame_kind_get__color(cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.Provider.KnownPerceptionFrameKind.get_Depth() */
 HRESULT wdepepr_known_perception_frame_kind_get__depth(cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.Provider.KnownPerceptionFrameKind.get_Infrared() */
 HRESULT wdepepr_known_perception_frame_kind_get__infrared(cwinrt_hstring *value);
 
-/* activate Windows.Devices.Perception.Provider.PerceptionControlGroup */
 HRESULT wdepepr_perception_control_group_new(WDEPEPR_PerceptionControlGroup **out);
 
-/* Windows.Devices.Perception.Provider.PerceptionControlGroup */
-/* Windows.Devices.Perception.Provider.PerceptionControlGroup.get_FrameProviderIds() */
 HRESULT wdepepr_perception_control_group_get__frame_provider_ids(WDEPEPR_PerceptionControlGroup *self, WFOCO_IVectorView_HSTRING** value);
 
-/* activate Windows.Devices.Perception.Provider.PerceptionCorrelation */
 HRESULT wdepepr_perception_correlation_new(WDEPEPR_PerceptionCorrelation **out);
 
-/* Windows.Devices.Perception.Provider.PerceptionCorrelation */
-/* Windows.Devices.Perception.Provider.PerceptionCorrelation.get_TargetId() */
 HRESULT wdepepr_perception_correlation_get__target_id(WDEPEPR_PerceptionCorrelation *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.Provider.PerceptionCorrelation.get_Position() */
 HRESULT wdepepr_perception_correlation_get__position(WDEPEPR_PerceptionCorrelation *self, WFN_Vector_3 *value);
 
-/* Windows.Devices.Perception.Provider.PerceptionCorrelation.get_Orientation() */
 HRESULT wdepepr_perception_correlation_get__orientation(WDEPEPR_PerceptionCorrelation *self, WFN_Quaternion *value);
 
-/* activate Windows.Devices.Perception.Provider.PerceptionCorrelationGroup */
 HRESULT wdepepr_perception_correlation_group_new(WDEPEPR_PerceptionCorrelationGroup **out);
 
-/* Windows.Devices.Perception.Provider.PerceptionCorrelationGroup */
-/* Windows.Devices.Perception.Provider.PerceptionCorrelationGroup.get_RelativeLocations() */
 HRESULT wdepepr_perception_correlation_group_get__relative_locations(WDEPEPR_PerceptionCorrelationGroup *self, WFOCO_IVectorView_WDEPEPR_PerceptionCorrelation** value);
 
-/* activate Windows.Devices.Perception.Provider.PerceptionFaceAuthenticationGroup */
 HRESULT wdepepr_perception_face_authentication_group_new(WDEPEPR_PerceptionFaceAuthenticationGroup **out);
 
-/* Windows.Devices.Perception.Provider.PerceptionFaceAuthenticationGroup */
-/* Windows.Devices.Perception.Provider.PerceptionFaceAuthenticationGroup.get_FrameProviderIds() */
 HRESULT wdepepr_perception_face_authentication_group_get__frame_provider_ids(WDEPEPR_PerceptionFaceAuthenticationGroup *self, WFOCO_IVectorView_HSTRING** value);
 
-/* activate Windows.Devices.Perception.Provider.PerceptionFrame */
 HRESULT wdepepr_perception_frame_new(WDEPEPR_PerceptionFrame **out);
 
-/* Windows.Devices.Perception.Provider.PerceptionFrame */
-/* Windows.Devices.Perception.Provider.PerceptionFrame.get_RelativeTime() */
 HRESULT wdepepr_perception_frame_get__relative_time(WDEPEPR_PerceptionFrame *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Perception.Provider.PerceptionFrame.put_RelativeTime() */
 HRESULT wdepepr_perception_frame_put__relative_time(WDEPEPR_PerceptionFrame *self, WF_TimeSpan value);
 
-/* Windows.Devices.Perception.Provider.PerceptionFrame.get_Properties() */
 HRESULT wdepepr_perception_frame_get__properties(WDEPEPR_PerceptionFrame *self, WFOCO_ValueSet** value);
 
-/* Windows.Devices.Perception.Provider.PerceptionFrame.get_FrameData() */
 HRESULT wdepepr_perception_frame_get__frame_data(WDEPEPR_PerceptionFrame *self, WF_IMemoryBuffer** value);
 
-/* activate Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo */
 HRESULT wdepepr_perception_frame_provider_info_new(WDEPEPR_PerceptionFrameProviderInfo **out);
 
-/* Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo */
-/* Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo.get_Id() */
 HRESULT wdepepr_perception_frame_provider_info_get__id(WDEPEPR_PerceptionFrameProviderInfo *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo.put_Id() */
 HRESULT wdepepr_perception_frame_provider_info_put__id(WDEPEPR_PerceptionFrameProviderInfo *self, cwinrt_hstring value);
 
-/* Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo.get_DisplayName() */
 HRESULT wdepepr_perception_frame_provider_info_get__display_name(WDEPEPR_PerceptionFrameProviderInfo *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo.put_DisplayName() */
 HRESULT wdepepr_perception_frame_provider_info_put__display_name(WDEPEPR_PerceptionFrameProviderInfo *self, cwinrt_hstring value);
 
-/* Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo.get_DeviceKind() */
 HRESULT wdepepr_perception_frame_provider_info_get__device_kind(WDEPEPR_PerceptionFrameProviderInfo *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo.put_DeviceKind() */
 HRESULT wdepepr_perception_frame_provider_info_put__device_kind(WDEPEPR_PerceptionFrameProviderInfo *self, cwinrt_hstring value);
 
-/* Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo.get_FrameKind() */
 HRESULT wdepepr_perception_frame_provider_info_get__frame_kind(WDEPEPR_PerceptionFrameProviderInfo *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo.put_FrameKind() */
 HRESULT wdepepr_perception_frame_provider_info_put__frame_kind(WDEPEPR_PerceptionFrameProviderInfo *self, cwinrt_hstring value);
 
-/* Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo.get_Hidden() */
 HRESULT wdepepr_perception_frame_provider_info_get__hidden(WDEPEPR_PerceptionFrameProviderInfo *self, BOOL *value);
 
-/* Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo.put_Hidden() */
 HRESULT wdepepr_perception_frame_provider_info_put__hidden(WDEPEPR_PerceptionFrameProviderInfo *self, BOOL value);
 
-/* activate Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService */
 HRESULT wdepepr_perception_frame_provider_manager_service_new(WDEPEPR_PerceptionFrameProviderManagerService **out);
 
-/* Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService */
-/* Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService.RegisterFrameProviderInfo(manager, frameProviderInfo) */
 HRESULT wdepepr_perception_frame_provider_manager_service_register_frame_provider_info(WDEPEPR_IPerceptionFrameProviderManager* manager, WDEPEPR_PerceptionFrameProviderInfo* frameProviderInfo);
 
-/* Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService.UnregisterFrameProviderInfo(manager, frameProviderInfo) */
 HRESULT wdepepr_perception_frame_provider_manager_service_unregister_frame_provider_info(WDEPEPR_IPerceptionFrameProviderManager* manager, WDEPEPR_PerceptionFrameProviderInfo* frameProviderInfo);
 
-/* Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService.RegisterFaceAuthenticationGroup(manager, faceAuthenticationGroup) */
 HRESULT wdepepr_perception_frame_provider_manager_service_register_face_authentication_group(WDEPEPR_IPerceptionFrameProviderManager* manager, WDEPEPR_PerceptionFaceAuthenticationGroup* faceAuthenticationGroup);
 
-/* Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService.UnregisterFaceAuthenticationGroup(manager, faceAuthenticationGroup) */
 HRESULT wdepepr_perception_frame_provider_manager_service_unregister_face_authentication_group(WDEPEPR_IPerceptionFrameProviderManager* manager, WDEPEPR_PerceptionFaceAuthenticationGroup* faceAuthenticationGroup);
 
-/* Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService.RegisterControlGroup(manager, controlGroup) */
 HRESULT wdepepr_perception_frame_provider_manager_service_register_control_group(WDEPEPR_IPerceptionFrameProviderManager* manager, WDEPEPR_PerceptionControlGroup* controlGroup);
 
-/* Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService.UnregisterControlGroup(manager, controlGroup) */
 HRESULT wdepepr_perception_frame_provider_manager_service_unregister_control_group(WDEPEPR_IPerceptionFrameProviderManager* manager, WDEPEPR_PerceptionControlGroup* controlGroup);
 
-/* Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService.RegisterCorrelationGroup(manager, correlationGroup) */
 HRESULT wdepepr_perception_frame_provider_manager_service_register_correlation_group(WDEPEPR_IPerceptionFrameProviderManager* manager, WDEPEPR_PerceptionCorrelationGroup* correlationGroup);
 
-/* Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService.UnregisterCorrelationGroup(manager, correlationGroup) */
 HRESULT wdepepr_perception_frame_provider_manager_service_unregister_correlation_group(WDEPEPR_IPerceptionFrameProviderManager* manager, WDEPEPR_PerceptionCorrelationGroup* correlationGroup);
 
-/* Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService.UpdateAvailabilityForProvider(provider, available) */
 HRESULT wdepepr_perception_frame_provider_manager_service_update_availability_for_provider(WDEPEPR_IPerceptionFrameProvider* provider, BOOL available);
 
-/* Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService.PublishFrameForProvider(provider, frame) */
 HRESULT wdepepr_perception_frame_provider_manager_service_publish_frame_for_provider(WDEPEPR_IPerceptionFrameProvider* provider, WDEPEPR_PerceptionFrame* frame);
 
-/* activate Windows.Devices.Perception.Provider.PerceptionPropertyChangeRequest */
 HRESULT wdepepr_perception_property_change_request_new(WDEPEPR_PerceptionPropertyChangeRequest **out);
 
-/* Windows.Devices.Perception.Provider.PerceptionPropertyChangeRequest */
-/* Windows.Devices.Perception.Provider.PerceptionPropertyChangeRequest.get_Name() */
 HRESULT wdepepr_perception_property_change_request_get__name(WDEPEPR_PerceptionPropertyChangeRequest *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.Provider.PerceptionPropertyChangeRequest.get_Value() */
 HRESULT wdepepr_perception_property_change_request_get__value(WDEPEPR_PerceptionPropertyChangeRequest *self, IInspectable** value);
 
-/* Windows.Devices.Perception.Provider.PerceptionPropertyChangeRequest.get_Status() */
 HRESULT wdepepr_perception_property_change_request_get__status(WDEPEPR_PerceptionPropertyChangeRequest *self, WDEPE_PerceptionFrameSourcePropertyChangeStatus *value);
 
-/* Windows.Devices.Perception.Provider.PerceptionPropertyChangeRequest.put_Status() */
 HRESULT wdepepr_perception_property_change_request_put__status(WDEPEPR_PerceptionPropertyChangeRequest *self, WDEPE_PerceptionFrameSourcePropertyChangeStatus value);
 
-/* Windows.Devices.Perception.Provider.PerceptionPropertyChangeRequest.GetDeferral() */
 HRESULT wdepepr_perception_property_change_request_get_deferral(WDEPEPR_PerceptionPropertyChangeRequest *self, WF_Deferral** out);
 
-/* Windows.Devices.Perception.Provider.PerceptionStartFaceAuthenticationHandler */
-/* Windows.Devices.Perception.Provider.PerceptionStartFaceAuthenticationHandler.Invoke(sender) */
 HRESULT wdepepr_perception_start_face_authentication_handler_invoke(WDEPEPR_PerceptionStartFaceAuthenticationHandler *self, WDEPEPR_PerceptionFaceAuthenticationGroup* sender, BOOL *out);
 
-/* Windows.Devices.Perception.Provider.PerceptionStopFaceAuthenticationHandler */
-/* Windows.Devices.Perception.Provider.PerceptionStopFaceAuthenticationHandler.Invoke(sender) */
 HRESULT wdepepr_perception_stop_face_authentication_handler_invoke(WDEPEPR_PerceptionStopFaceAuthenticationHandler *self, WDEPEPR_PerceptionFaceAuthenticationGroup* sender);
 
-/* activate Windows.Devices.Perception.Provider.PerceptionVideoFrameAllocator */
 HRESULT wdepepr_perception_video_frame_allocator_new(WDEPEPR_PerceptionVideoFrameAllocator **out);
 
-/* Windows.Devices.Perception.Provider.PerceptionVideoFrameAllocator */
-/* Windows.Devices.Perception.Provider.PerceptionVideoFrameAllocator.AllocateFrame() */
 HRESULT wdepepr_perception_video_frame_allocator_allocate_frame(WDEPEPR_PerceptionVideoFrameAllocator *self, WDEPEPR_PerceptionFrame** out);
 
-/* Windows.Devices.Perception.Provider.PerceptionVideoFrameAllocator.CopyFromVideoFrame(frame) */
 HRESULT wdepepr_perception_video_frame_allocator_copy_from_video_frame(WDEPEPR_PerceptionVideoFrameAllocator *self, WME_VideoFrame* frame, WDEPEPR_PerceptionFrame** out);
 
-/* Windows.Devices.Perception.Provider.PerceptionVideoFrameAllocator.Close() */
 HRESULT wdepepr_perception_video_frame_allocator_close(WDEPEPR_PerceptionVideoFrameAllocator *self);
 
-/* Windows.Devices.Perception.Provider.IPerceptionControlGroup */
-/* Windows.Devices.Perception.Provider.IPerceptionCorrelation */
-/* Windows.Devices.Perception.Provider.IPerceptionCorrelationGroup */
-/* Windows.Devices.Perception.Provider.IPerceptionFaceAuthenticationGroup */
-/* Windows.Devices.Perception.Provider.IPerceptionFrame */
-/* Windows.Devices.Perception.Provider.IPerceptionFrameProviderInfo */
-/* Windows.Devices.Perception.Provider.IPerceptionPropertyChangeRequest */
-/* Windows.Devices.Perception.Provider.IPerceptionVideoFrameAllocator */
 #endif /* CWINRT_WINDOWS_DEVICES_PERCEPTION_PROVIDER_H */

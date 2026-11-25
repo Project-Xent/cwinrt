@@ -13,13 +13,11 @@
 #include <cwinrt/Windows.Devices.Bluetooth.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDBA_IBluetoothLEAdvertisementWatcherFactory WDBA_IBluetoothLEAdvertisementWatcherFactory;
 typedef struct WDBA_IBluetoothLEAdvertisementScanParametersStatics WDBA_IBluetoothLEAdvertisementScanParametersStatics;
 typedef struct WDBA_IBluetoothLEAdvertisementPublisherFactory WDBA_IBluetoothLEAdvertisementPublisherFactory;
@@ -58,7 +56,6 @@ typedef struct WDBA_IBluetoothLEAdvertisementWatcher_3 WDBA_IBluetoothLEAdvertis
 typedef struct WDBA_IBluetoothLEAdvertisementWatcherStoppedEventArgs WDBA_IBluetoothLEAdvertisementWatcherStoppedEventArgs;
 typedef struct WDBA_IBluetoothLEManufacturerData WDBA_IBluetoothLEManufacturerData;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
@@ -203,7 +200,6 @@ typedef enum WDBA_BluetoothLEScanningMode {
 } WDBA_BluetoothLEScanningMode;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -308,461 +304,297 @@ static const IID CWINRT_IID_WDBA_IBluetoothLEAdvertisementWatcherStoppedEventArg
 static const IID CWINRT_IID_WDBA_IBluetoothLEManufacturerData CWINRT_MAYBE_UNUSED = { 0x912DBA18, 0x6963, 0x4533, { 0xB0, 0x61, 0x46, 0x94, 0xDA, 0xFB, 0x34, 0xE5 } };
 #endif
 
-/* Methods */
-
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcherFactory */
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcherFactory.Create(advertisementFilter) */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_factory_create(WDBA_IBluetoothLEAdvertisementWatcherFactory *self, WDBA_BluetoothLEAdvertisementFilter* advertisementFilter, WDBA_BluetoothLEAdvertisementWatcher** out);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementScanParametersStatics */
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementScanParametersStatics.CoexistenceOptimized() */
 HRESULT wdba_bluetooth_l_e_advertisement_scan_parameters_statics_coexistence_optimized(WDBA_IBluetoothLEAdvertisementScanParametersStatics *self, WDBA_BluetoothLEAdvertisementScanParameters** out);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementScanParametersStatics.LowLatency() */
 HRESULT wdba_bluetooth_l_e_advertisement_scan_parameters_statics_low_latency(WDBA_IBluetoothLEAdvertisementScanParametersStatics *self, WDBA_BluetoothLEAdvertisementScanParameters** out);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisherFactory */
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisherFactory.Create(advertisement) */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_factory_create(WDBA_IBluetoothLEAdvertisementPublisherFactory *self, WDBA_BluetoothLEAdvertisement* advertisement, WDBA_BluetoothLEAdvertisementPublisher** out);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics */
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics.get_Flags() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_statics_get__flags(WDBA_IBluetoothLEAdvertisementDataTypesStatics *self, uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics.get_IncompleteService16BitUuids() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_statics_get__incomplete_service16_bit_uuids(WDBA_IBluetoothLEAdvertisementDataTypesStatics *self, uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics.get_CompleteService16BitUuids() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_statics_get__complete_service16_bit_uuids(WDBA_IBluetoothLEAdvertisementDataTypesStatics *self, uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics.get_IncompleteService32BitUuids() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_statics_get__incomplete_service32_bit_uuids(WDBA_IBluetoothLEAdvertisementDataTypesStatics *self, uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics.get_CompleteService32BitUuids() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_statics_get__complete_service32_bit_uuids(WDBA_IBluetoothLEAdvertisementDataTypesStatics *self, uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics.get_IncompleteService128BitUuids() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_statics_get__incomplete_service128_bit_uuids(WDBA_IBluetoothLEAdvertisementDataTypesStatics *self, uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics.get_CompleteService128BitUuids() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_statics_get__complete_service128_bit_uuids(WDBA_IBluetoothLEAdvertisementDataTypesStatics *self, uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics.get_ShortenedLocalName() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_statics_get__shortened_local_name(WDBA_IBluetoothLEAdvertisementDataTypesStatics *self, uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics.get_CompleteLocalName() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_statics_get__complete_local_name(WDBA_IBluetoothLEAdvertisementDataTypesStatics *self, uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics.get_TxPowerLevel() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_statics_get__tx_power_level(WDBA_IBluetoothLEAdvertisementDataTypesStatics *self, uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics.get_PeripheralConnectionIntervalRange() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_statics_get__peripheral_connection_interval_range(WDBA_IBluetoothLEAdvertisementDataTypesStatics *self, uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics.get_ServiceSolicitation16BitUuids() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_statics_get__service_solicitation16_bit_uuids(WDBA_IBluetoothLEAdvertisementDataTypesStatics *self, uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics.get_ServiceSolicitation32BitUuids() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_statics_get__service_solicitation32_bit_uuids(WDBA_IBluetoothLEAdvertisementDataTypesStatics *self, uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics.get_ServiceSolicitation128BitUuids() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_statics_get__service_solicitation128_bit_uuids(WDBA_IBluetoothLEAdvertisementDataTypesStatics *self, uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics.get_ServiceData16BitUuids() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_statics_get__service_data16_bit_uuids(WDBA_IBluetoothLEAdvertisementDataTypesStatics *self, uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics.get_ServiceData32BitUuids() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_statics_get__service_data32_bit_uuids(WDBA_IBluetoothLEAdvertisementDataTypesStatics *self, uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics.get_ServiceData128BitUuids() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_statics_get__service_data128_bit_uuids(WDBA_IBluetoothLEAdvertisementDataTypesStatics *self, uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics.get_PublicTargetAddress() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_statics_get__public_target_address(WDBA_IBluetoothLEAdvertisementDataTypesStatics *self, uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics.get_RandomTargetAddress() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_statics_get__random_target_address(WDBA_IBluetoothLEAdvertisementDataTypesStatics *self, uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics.get_Appearance() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_statics_get__appearance(WDBA_IBluetoothLEAdvertisementDataTypesStatics *self, uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics.get_AdvertisingInterval() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_statics_get__advertising_interval(WDBA_IBluetoothLEAdvertisementDataTypesStatics *self, uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics.get_ManufacturerSpecificData() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_statics_get__manufacturer_specific_data(WDBA_IBluetoothLEAdvertisementDataTypesStatics *self, uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataSectionFactory */
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataSectionFactory.Create(dataType, data) */
 HRESULT wdba_bluetooth_l_e_advertisement_data_section_factory_create(WDBA_IBluetoothLEAdvertisementDataSectionFactory *self, uint8_t dataType, WSTST_IBuffer* data, WDBA_BluetoothLEAdvertisementDataSection** out);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEManufacturerDataFactory */
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEManufacturerDataFactory.Create(companyId, data) */
 HRESULT wdba_bluetooth_l_e_manufacturer_data_factory_create(WDBA_IBluetoothLEManufacturerDataFactory *self, uint16_t companyId, WSTST_IBuffer* data, WDBA_BluetoothLEManufacturerData** out);
 
-/* activate Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement */
 HRESULT wdba_bluetooth_l_e_advertisement_new(WDBA_BluetoothLEAdvertisement **out);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement */
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement.get_Flags() */
 HRESULT wdba_bluetooth_l_e_advertisement_get__flags(WDBA_BluetoothLEAdvertisement *self, WDBA_BluetoothLEAdvertisementFlags** value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement.put_Flags() */
 HRESULT wdba_bluetooth_l_e_advertisement_put__flags(WDBA_BluetoothLEAdvertisement *self, WDBA_BluetoothLEAdvertisementFlags* value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement.get_LocalName() */
 HRESULT wdba_bluetooth_l_e_advertisement_get__local_name(WDBA_BluetoothLEAdvertisement *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement.put_LocalName() */
 HRESULT wdba_bluetooth_l_e_advertisement_put__local_name(WDBA_BluetoothLEAdvertisement *self, cwinrt_hstring value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement.get_ServiceUuids() */
 HRESULT wdba_bluetooth_l_e_advertisement_get__service_uuids(WDBA_BluetoothLEAdvertisement *self, WFOCO_IVector_Guid** value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement.get_ManufacturerData() */
 HRESULT wdba_bluetooth_l_e_advertisement_get__manufacturer_data(WDBA_BluetoothLEAdvertisement *self, WFOCO_IVector_WDBA_BluetoothLEManufacturerData** value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement.get_DataSections() */
 HRESULT wdba_bluetooth_l_e_advertisement_get__data_sections(WDBA_BluetoothLEAdvertisement *self, WFOCO_IVector_WDBA_BluetoothLEAdvertisementDataSection** value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement.GetManufacturerDataByCompanyId(companyId) */
 HRESULT wdba_bluetooth_l_e_advertisement_get_manufacturer_data_by_company_id(WDBA_BluetoothLEAdvertisement *self, uint16_t companyId, WFOCO_IVectorView_WDBA_BluetoothLEManufacturerData** out);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement.GetSectionsByType() */
 HRESULT wdba_bluetooth_l_e_advertisement_get_sections_by_type(WDBA_BluetoothLEAdvertisement *self, uint8_t type_, WFOCO_IVectorView_WDBA_BluetoothLEAdvertisementDataSection** out);
 
-/* activate Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern */
 HRESULT wdba_bluetooth_l_e_advertisement_byte_pattern_new(WDBA_BluetoothLEAdvertisementBytePattern **out);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern */
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern.get_DataType() */
 HRESULT wdba_bluetooth_l_e_advertisement_byte_pattern_get__data_type(WDBA_BluetoothLEAdvertisementBytePattern *self, uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern.put_DataType() */
 HRESULT wdba_bluetooth_l_e_advertisement_byte_pattern_put__data_type(WDBA_BluetoothLEAdvertisementBytePattern *self, uint8_t value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern.get_Offset() */
 HRESULT wdba_bluetooth_l_e_advertisement_byte_pattern_get__offset(WDBA_BluetoothLEAdvertisementBytePattern *self, int16_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern.put_Offset() */
 HRESULT wdba_bluetooth_l_e_advertisement_byte_pattern_put__offset(WDBA_BluetoothLEAdvertisementBytePattern *self, int16_t value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern.get_Data() */
 HRESULT wdba_bluetooth_l_e_advertisement_byte_pattern_get__data(WDBA_BluetoothLEAdvertisementBytePattern *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern.put_Data() */
 HRESULT wdba_bluetooth_l_e_advertisement_byte_pattern_put__data(WDBA_BluetoothLEAdvertisementBytePattern *self, WSTST_IBuffer* value);
 
-/* activate Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection */
 HRESULT wdba_bluetooth_l_e_advertisement_data_section_new(WDBA_BluetoothLEAdvertisementDataSection **out);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection */
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection.get_DataType() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_section_get__data_type(WDBA_BluetoothLEAdvertisementDataSection *self, uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection.put_DataType() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_section_put__data_type(WDBA_BluetoothLEAdvertisementDataSection *self, uint8_t value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection.get_Data() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_section_get__data(WDBA_BluetoothLEAdvertisementDataSection *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection.put_Data() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_section_put__data(WDBA_BluetoothLEAdvertisementDataSection *self, WSTST_IBuffer* value);
 
-/* activate Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_new(WDBA_BluetoothLEAdvertisementDataTypes **out);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes */
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes.get_Flags() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_get__flags(uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes.get_IncompleteService16BitUuids() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_get__incomplete_service16_bit_uuids(uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes.get_CompleteService16BitUuids() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_get__complete_service16_bit_uuids(uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes.get_IncompleteService32BitUuids() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_get__incomplete_service32_bit_uuids(uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes.get_CompleteService32BitUuids() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_get__complete_service32_bit_uuids(uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes.get_IncompleteService128BitUuids() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_get__incomplete_service128_bit_uuids(uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes.get_CompleteService128BitUuids() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_get__complete_service128_bit_uuids(uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes.get_ShortenedLocalName() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_get__shortened_local_name(uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes.get_CompleteLocalName() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_get__complete_local_name(uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes.get_TxPowerLevel() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_get__tx_power_level(uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes.get_PeripheralConnectionIntervalRange() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_get__peripheral_connection_interval_range(uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes.get_ServiceSolicitation16BitUuids() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_get__service_solicitation16_bit_uuids(uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes.get_ServiceSolicitation32BitUuids() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_get__service_solicitation32_bit_uuids(uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes.get_ServiceSolicitation128BitUuids() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_get__service_solicitation128_bit_uuids(uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes.get_ServiceData16BitUuids() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_get__service_data16_bit_uuids(uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes.get_ServiceData32BitUuids() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_get__service_data32_bit_uuids(uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes.get_ServiceData128BitUuids() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_get__service_data128_bit_uuids(uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes.get_PublicTargetAddress() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_get__public_target_address(uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes.get_RandomTargetAddress() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_get__random_target_address(uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes.get_Appearance() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_get__appearance(uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes.get_AdvertisingInterval() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_get__advertising_interval(uint8_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes.get_ManufacturerSpecificData() */
 HRESULT wdba_bluetooth_l_e_advertisement_data_types_get__manufacturer_specific_data(uint8_t *value);
 
-/* activate Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFilter */
 HRESULT wdba_bluetooth_l_e_advertisement_filter_new(WDBA_BluetoothLEAdvertisementFilter **out);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFilter */
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFilter.get_Advertisement() */
 HRESULT wdba_bluetooth_l_e_advertisement_filter_get__advertisement(WDBA_BluetoothLEAdvertisementFilter *self, WDBA_BluetoothLEAdvertisement** value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFilter.put_Advertisement() */
 HRESULT wdba_bluetooth_l_e_advertisement_filter_put__advertisement(WDBA_BluetoothLEAdvertisementFilter *self, WDBA_BluetoothLEAdvertisement* value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFilter.get_BytePatterns() */
 HRESULT wdba_bluetooth_l_e_advertisement_filter_get__byte_patterns(WDBA_BluetoothLEAdvertisementFilter *self, WFOCO_IVector_WDBA_BluetoothLEAdvertisementBytePattern** value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementBytePatternFactory */
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementBytePatternFactory.Create(dataType, offset, data) */
 HRESULT wdba_bluetooth_l_e_advertisement_byte_pattern_factory_create(WDBA_IBluetoothLEAdvertisementBytePatternFactory *self, uint8_t dataType, int16_t offset, WSTST_IBuffer* data, WDBA_BluetoothLEAdvertisementBytePattern** out);
 
-/* activate Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_new(WDBA_BluetoothLEAdvertisementPublisher **out);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher */
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher.get_Status() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_get__status(WDBA_BluetoothLEAdvertisementPublisher *self, WDBA_BluetoothLEAdvertisementPublisherStatus *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher.get_Advertisement() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_get__advertisement(WDBA_BluetoothLEAdvertisementPublisher *self, WDBA_BluetoothLEAdvertisement** value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher.Start() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_start(WDBA_BluetoothLEAdvertisementPublisher *self);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher.Stop() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_stop(WDBA_BluetoothLEAdvertisementPublisher *self);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher.get_PreferredTransmitPowerLevelInDBm() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_get__preferred_transmit_power_level_in_d_bm(WDBA_BluetoothLEAdvertisementPublisher *self, int16_t** value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher.put_PreferredTransmitPowerLevelInDBm() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_put__preferred_transmit_power_level_in_d_bm(WDBA_BluetoothLEAdvertisementPublisher *self, int16_t* value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher.get_UseExtendedAdvertisement() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_get__use_extended_advertisement(WDBA_BluetoothLEAdvertisementPublisher *self, BOOL *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher.put_UseExtendedAdvertisement() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_put__use_extended_advertisement(WDBA_BluetoothLEAdvertisementPublisher *self, BOOL value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher.get_IsAnonymous() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_get__is_anonymous(WDBA_BluetoothLEAdvertisementPublisher *self, BOOL *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher.put_IsAnonymous() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_put__is_anonymous(WDBA_BluetoothLEAdvertisementPublisher *self, BOOL value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher.get_IncludeTransmitPowerLevel() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_get__include_transmit_power_level(WDBA_BluetoothLEAdvertisementPublisher *self, BOOL *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher.put_IncludeTransmitPowerLevel() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_put__include_transmit_power_level(WDBA_BluetoothLEAdvertisementPublisher *self, BOOL value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher.get_PrimaryPhy() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_get__primary_phy(WDBA_BluetoothLEAdvertisementPublisher *self, WDBA_BluetoothLEAdvertisementPhyType *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher.put_PrimaryPhy() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_put__primary_phy(WDBA_BluetoothLEAdvertisementPublisher *self, WDBA_BluetoothLEAdvertisementPhyType value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher.get_SecondaryPhy() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_get__secondary_phy(WDBA_BluetoothLEAdvertisementPublisher *self, WDBA_BluetoothLEAdvertisementPhyType *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher.put_SecondaryPhy() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_put__secondary_phy(WDBA_BluetoothLEAdvertisementPublisher *self, WDBA_BluetoothLEAdvertisementPhyType value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdba_bluetooth_l_e_advertisement_publisher_on_status_changed(WDBA_BluetoothLEAdvertisementPublisher *self, cwinrt_event_fn fn, void *ctx);
 void wdba_bluetooth_l_e_advertisement_publisher_off_status_changed(WDBA_BluetoothLEAdvertisementPublisher *self, cwinrt_token token);
 
-/* activate Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisherStatusChangedEventArgs */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_status_changed_event_args_new(WDBA_BluetoothLEAdvertisementPublisherStatusChangedEventArgs **out);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisherStatusChangedEventArgs */
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisherStatusChangedEventArgs.get_Status() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_status_changed_event_args_get__status(WDBA_BluetoothLEAdvertisementPublisherStatusChangedEventArgs *self, WDBA_BluetoothLEAdvertisementPublisherStatus *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisherStatusChangedEventArgs.get_Error() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_status_changed_event_args_get__error(WDBA_BluetoothLEAdvertisementPublisherStatusChangedEventArgs *self, WDEBL_BluetoothError *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisherStatusChangedEventArgs.get_SelectedTransmitPowerLevelInDBm() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_status_changed_event_args_get__selected_transmit_power_level_in_d_bm(WDBA_BluetoothLEAdvertisementPublisherStatusChangedEventArgs *self, int16_t** value);
 
-/* activate Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs */
 HRESULT wdba_bluetooth_l_e_advertisement_received_event_args_new(WDBA_BluetoothLEAdvertisementReceivedEventArgs **out);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs */
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs.get_RawSignalStrengthInDBm() */
 HRESULT wdba_bluetooth_l_e_advertisement_received_event_args_get__raw_signal_strength_in_d_bm(WDBA_BluetoothLEAdvertisementReceivedEventArgs *self, int16_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs.get_BluetoothAddress() */
 HRESULT wdba_bluetooth_l_e_advertisement_received_event_args_get__bluetooth_address(WDBA_BluetoothLEAdvertisementReceivedEventArgs *self, uint64_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs.get_AdvertisementType() */
 HRESULT wdba_bluetooth_l_e_advertisement_received_event_args_get__advertisement_type(WDBA_BluetoothLEAdvertisementReceivedEventArgs *self, WDBA_BluetoothLEAdvertisementType *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs.get_Timestamp() */
 HRESULT wdba_bluetooth_l_e_advertisement_received_event_args_get__timestamp(WDBA_BluetoothLEAdvertisementReceivedEventArgs *self, WF_DateTime *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs.get_Advertisement() */
 HRESULT wdba_bluetooth_l_e_advertisement_received_event_args_get__advertisement(WDBA_BluetoothLEAdvertisementReceivedEventArgs *self, WDBA_BluetoothLEAdvertisement** value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs.get_BluetoothAddressType() */
 HRESULT wdba_bluetooth_l_e_advertisement_received_event_args_get__bluetooth_address_type(WDBA_BluetoothLEAdvertisementReceivedEventArgs *self, WDEBL_BluetoothAddressType *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs.get_TransmitPowerLevelInDBm() */
 HRESULT wdba_bluetooth_l_e_advertisement_received_event_args_get__transmit_power_level_in_d_bm(WDBA_BluetoothLEAdvertisementReceivedEventArgs *self, int16_t** value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs.get_IsAnonymous() */
 HRESULT wdba_bluetooth_l_e_advertisement_received_event_args_get__is_anonymous(WDBA_BluetoothLEAdvertisementReceivedEventArgs *self, BOOL *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs.get_IsConnectable() */
 HRESULT wdba_bluetooth_l_e_advertisement_received_event_args_get__is_connectable(WDBA_BluetoothLEAdvertisementReceivedEventArgs *self, BOOL *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs.get_IsScannable() */
 HRESULT wdba_bluetooth_l_e_advertisement_received_event_args_get__is_scannable(WDBA_BluetoothLEAdvertisementReceivedEventArgs *self, BOOL *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs.get_IsDirected() */
 HRESULT wdba_bluetooth_l_e_advertisement_received_event_args_get__is_directed(WDBA_BluetoothLEAdvertisementReceivedEventArgs *self, BOOL *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs.get_IsScanResponse() */
 HRESULT wdba_bluetooth_l_e_advertisement_received_event_args_get__is_scan_response(WDBA_BluetoothLEAdvertisementReceivedEventArgs *self, BOOL *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs.get_PrimaryPhy() */
 HRESULT wdba_bluetooth_l_e_advertisement_received_event_args_get__primary_phy(WDBA_BluetoothLEAdvertisementReceivedEventArgs *self, WDBA_BluetoothLEAdvertisementPhyType *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs.get_SecondaryPhy() */
 HRESULT wdba_bluetooth_l_e_advertisement_received_event_args_get__secondary_phy(WDBA_BluetoothLEAdvertisementReceivedEventArgs *self, WDBA_BluetoothLEAdvertisementPhyType *value);
 
-/* activate Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters */
 HRESULT wdba_bluetooth_l_e_advertisement_scan_parameters_new(WDBA_BluetoothLEAdvertisementScanParameters **out);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters */
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters.get_ScanWindow() */
 HRESULT wdba_bluetooth_l_e_advertisement_scan_parameters_get__scan_window(WDBA_BluetoothLEAdvertisementScanParameters *self, uint16_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters.get_ScanInterval() */
 HRESULT wdba_bluetooth_l_e_advertisement_scan_parameters_get__scan_interval(WDBA_BluetoothLEAdvertisementScanParameters *self, uint16_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters.CoexistenceOptimized() */
 HRESULT wdba_bluetooth_l_e_advertisement_scan_parameters_coexistence_optimized(WDBA_BluetoothLEAdvertisementScanParameters** out);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters.LowLatency() */
 HRESULT wdba_bluetooth_l_e_advertisement_scan_parameters_low_latency(WDBA_BluetoothLEAdvertisementScanParameters** out);
 
-/* activate Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_new(WDBA_BluetoothLEAdvertisementWatcher **out);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher */
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher.get_MinSamplingInterval() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_get__min_sampling_interval(WDBA_BluetoothLEAdvertisementWatcher *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher.get_MaxSamplingInterval() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_get__max_sampling_interval(WDBA_BluetoothLEAdvertisementWatcher *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher.get_MinOutOfRangeTimeout() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_get__min_out_of_range_timeout(WDBA_BluetoothLEAdvertisementWatcher *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher.get_MaxOutOfRangeTimeout() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_get__max_out_of_range_timeout(WDBA_BluetoothLEAdvertisementWatcher *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher.get_Status() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_get__status(WDBA_BluetoothLEAdvertisementWatcher *self, WDBA_BluetoothLEAdvertisementWatcherStatus *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher.get_ScanningMode() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_get__scanning_mode(WDBA_BluetoothLEAdvertisementWatcher *self, WDBA_BluetoothLEScanningMode *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher.put_ScanningMode() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_put__scanning_mode(WDBA_BluetoothLEAdvertisementWatcher *self, WDBA_BluetoothLEScanningMode value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher.get_SignalStrengthFilter() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_get__signal_strength_filter(WDBA_BluetoothLEAdvertisementWatcher *self, WDEBL_BluetoothSignalStrengthFilter** value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher.put_SignalStrengthFilter() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_put__signal_strength_filter(WDBA_BluetoothLEAdvertisementWatcher *self, WDEBL_BluetoothSignalStrengthFilter* value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher.get_AdvertisementFilter() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_get__advertisement_filter(WDBA_BluetoothLEAdvertisementWatcher *self, WDBA_BluetoothLEAdvertisementFilter** value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher.put_AdvertisementFilter() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_put__advertisement_filter(WDBA_BluetoothLEAdvertisementWatcher *self, WDBA_BluetoothLEAdvertisementFilter* value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher.Start() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_start(WDBA_BluetoothLEAdvertisementWatcher *self);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher.Stop() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_stop(WDBA_BluetoothLEAdvertisementWatcher *self);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher.get_AllowExtendedAdvertisements() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_get__allow_extended_advertisements(WDBA_BluetoothLEAdvertisementWatcher *self, BOOL *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher.put_AllowExtendedAdvertisements() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_put__allow_extended_advertisements(WDBA_BluetoothLEAdvertisementWatcher *self, BOOL value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher.get_UseUncoded1MPhy() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_get__use_uncoded1_m_phy(WDBA_BluetoothLEAdvertisementWatcher *self, BOOL *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher.put_UseUncoded1MPhy() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_put__use_uncoded1_m_phy(WDBA_BluetoothLEAdvertisementWatcher *self, BOOL value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher.get_UseCodedPhy() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_get__use_coded_phy(WDBA_BluetoothLEAdvertisementWatcher *self, BOOL *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher.put_UseCodedPhy() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_put__use_coded_phy(WDBA_BluetoothLEAdvertisementWatcher *self, BOOL value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher.get_ScanParameters() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_get__scan_parameters(WDBA_BluetoothLEAdvertisementWatcher *self, WDBA_BluetoothLEAdvertisementScanParameters** value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher.put_ScanParameters() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_put__scan_parameters(WDBA_BluetoothLEAdvertisementWatcher *self, WDBA_BluetoothLEAdvertisementScanParameters* value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher.get_UseHardwareFilter() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_get__use_hardware_filter(WDBA_BluetoothLEAdvertisementWatcher *self, BOOL *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher.put_UseHardwareFilter() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_put__use_hardware_filter(WDBA_BluetoothLEAdvertisementWatcher *self, BOOL value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdba_bluetooth_l_e_advertisement_watcher_on_received(WDBA_BluetoothLEAdvertisementWatcher *self, cwinrt_event_fn fn, void *ctx);
@@ -771,138 +603,80 @@ void wdba_bluetooth_l_e_advertisement_watcher_off_received(WDBA_BluetoothLEAdver
 cwinrt_token wdba_bluetooth_l_e_advertisement_watcher_on_stopped(WDBA_BluetoothLEAdvertisementWatcher *self, cwinrt_event_fn fn, void *ctx);
 void wdba_bluetooth_l_e_advertisement_watcher_off_stopped(WDBA_BluetoothLEAdvertisementWatcher *self, cwinrt_token token);
 
-/* activate Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcherStoppedEventArgs */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_stopped_event_args_new(WDBA_BluetoothLEAdvertisementWatcherStoppedEventArgs **out);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcherStoppedEventArgs */
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcherStoppedEventArgs.get_Error() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_stopped_event_args_get__error(WDBA_BluetoothLEAdvertisementWatcherStoppedEventArgs *self, WDEBL_BluetoothError *value);
 
-/* activate Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData */
 HRESULT wdba_bluetooth_l_e_manufacturer_data_new(WDBA_BluetoothLEManufacturerData **out);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData */
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData.get_CompanyId() */
 HRESULT wdba_bluetooth_l_e_manufacturer_data_get__company_id(WDBA_BluetoothLEManufacturerData *self, uint16_t *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData.put_CompanyId() */
 HRESULT wdba_bluetooth_l_e_manufacturer_data_put__company_id(WDBA_BluetoothLEManufacturerData *self, uint16_t value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData.get_Data() */
 HRESULT wdba_bluetooth_l_e_manufacturer_data_get__data(WDBA_BluetoothLEManufacturerData *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData.put_Data() */
 HRESULT wdba_bluetooth_l_e_manufacturer_data_put__data(WDBA_BluetoothLEManufacturerData *self, WSTST_IBuffer* value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisement */
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementBytePattern */
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataSection */
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementFilter */
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher */
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2 */
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2.get_PreferredTransmitPowerLevelInDBm() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_2_get__preferred_transmit_power_level_in_d_bm(WDBA_IBluetoothLEAdvertisementPublisher_2 *self, int16_t** value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2.put_PreferredTransmitPowerLevelInDBm() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_2_put__preferred_transmit_power_level_in_d_bm(WDBA_IBluetoothLEAdvertisementPublisher_2 *self, int16_t* value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2.get_UseExtendedAdvertisement() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_2_get__use_extended_advertisement(WDBA_IBluetoothLEAdvertisementPublisher_2 *self, BOOL *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2.put_UseExtendedAdvertisement() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_2_put__use_extended_advertisement(WDBA_IBluetoothLEAdvertisementPublisher_2 *self, BOOL value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2.get_IsAnonymous() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_2_get__is_anonymous(WDBA_IBluetoothLEAdvertisementPublisher_2 *self, BOOL *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2.put_IsAnonymous() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_2_put__is_anonymous(WDBA_IBluetoothLEAdvertisementPublisher_2 *self, BOOL value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2.get_IncludeTransmitPowerLevel() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_2_get__include_transmit_power_level(WDBA_IBluetoothLEAdvertisementPublisher_2 *self, BOOL *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2.put_IncludeTransmitPowerLevel() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_2_put__include_transmit_power_level(WDBA_IBluetoothLEAdvertisementPublisher_2 *self, BOOL value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher3 */
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher3.get_PrimaryPhy() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_3_get__primary_phy(WDBA_IBluetoothLEAdvertisementPublisher_3 *self, WDBA_BluetoothLEAdvertisementPhyType *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher3.put_PrimaryPhy() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_3_put__primary_phy(WDBA_IBluetoothLEAdvertisementPublisher_3 *self, WDBA_BluetoothLEAdvertisementPhyType value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher3.get_SecondaryPhy() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_3_get__secondary_phy(WDBA_IBluetoothLEAdvertisementPublisher_3 *self, WDBA_BluetoothLEAdvertisementPhyType *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher3.put_SecondaryPhy() */
 HRESULT wdba_bluetooth_l_e_advertisement_publisher_3_put__secondary_phy(WDBA_IBluetoothLEAdvertisementPublisher_3 *self, WDBA_BluetoothLEAdvertisementPhyType value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisherStatusChangedEventArgs */
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisherStatusChangedEventArgs2 */
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs */
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2 */
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2.get_BluetoothAddressType() */
 HRESULT wdba_bluetooth_l_e_advertisement_received_event_args_2_get__bluetooth_address_type(WDBA_IBluetoothLEAdvertisementReceivedEventArgs_2 *self, WDEBL_BluetoothAddressType *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2.get_TransmitPowerLevelInDBm() */
 HRESULT wdba_bluetooth_l_e_advertisement_received_event_args_2_get__transmit_power_level_in_d_bm(WDBA_IBluetoothLEAdvertisementReceivedEventArgs_2 *self, int16_t** value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2.get_IsAnonymous() */
 HRESULT wdba_bluetooth_l_e_advertisement_received_event_args_2_get__is_anonymous(WDBA_IBluetoothLEAdvertisementReceivedEventArgs_2 *self, BOOL *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2.get_IsConnectable() */
 HRESULT wdba_bluetooth_l_e_advertisement_received_event_args_2_get__is_connectable(WDBA_IBluetoothLEAdvertisementReceivedEventArgs_2 *self, BOOL *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2.get_IsScannable() */
 HRESULT wdba_bluetooth_l_e_advertisement_received_event_args_2_get__is_scannable(WDBA_IBluetoothLEAdvertisementReceivedEventArgs_2 *self, BOOL *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2.get_IsDirected() */
 HRESULT wdba_bluetooth_l_e_advertisement_received_event_args_2_get__is_directed(WDBA_IBluetoothLEAdvertisementReceivedEventArgs_2 *self, BOOL *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2.get_IsScanResponse() */
 HRESULT wdba_bluetooth_l_e_advertisement_received_event_args_2_get__is_scan_response(WDBA_IBluetoothLEAdvertisementReceivedEventArgs_2 *self, BOOL *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs3 */
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs3.get_PrimaryPhy() */
 HRESULT wdba_bluetooth_l_e_advertisement_received_event_args_3_get__primary_phy(WDBA_IBluetoothLEAdvertisementReceivedEventArgs_3 *self, WDBA_BluetoothLEAdvertisementPhyType *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs3.get_SecondaryPhy() */
 HRESULT wdba_bluetooth_l_e_advertisement_received_event_args_3_get__secondary_phy(WDBA_IBluetoothLEAdvertisementReceivedEventArgs_3 *self, WDBA_BluetoothLEAdvertisementPhyType *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementScanParameters */
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher */
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher2 */
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher2.get_AllowExtendedAdvertisements() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_2_get__allow_extended_advertisements(WDBA_IBluetoothLEAdvertisementWatcher_2 *self, BOOL *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher2.put_AllowExtendedAdvertisements() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_2_put__allow_extended_advertisements(WDBA_IBluetoothLEAdvertisementWatcher_2 *self, BOOL value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3 */
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3.get_UseUncoded1MPhy() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_3_get__use_uncoded1_m_phy(WDBA_IBluetoothLEAdvertisementWatcher_3 *self, BOOL *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3.put_UseUncoded1MPhy() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_3_put__use_uncoded1_m_phy(WDBA_IBluetoothLEAdvertisementWatcher_3 *self, BOOL value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3.get_UseCodedPhy() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_3_get__use_coded_phy(WDBA_IBluetoothLEAdvertisementWatcher_3 *self, BOOL *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3.put_UseCodedPhy() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_3_put__use_coded_phy(WDBA_IBluetoothLEAdvertisementWatcher_3 *self, BOOL value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3.get_ScanParameters() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_3_get__scan_parameters(WDBA_IBluetoothLEAdvertisementWatcher_3 *self, WDBA_BluetoothLEAdvertisementScanParameters** value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3.put_ScanParameters() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_3_put__scan_parameters(WDBA_IBluetoothLEAdvertisementWatcher_3 *self, WDBA_BluetoothLEAdvertisementScanParameters* value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3.get_UseHardwareFilter() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_3_get__use_hardware_filter(WDBA_IBluetoothLEAdvertisementWatcher_3 *self, BOOL *value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3.put_UseHardwareFilter() */
 HRESULT wdba_bluetooth_l_e_advertisement_watcher_3_put__use_hardware_filter(WDBA_IBluetoothLEAdvertisementWatcher_3 *self, BOOL value);
 
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcherStoppedEventArgs */
-/* Windows.Devices.Bluetooth.Advertisement.IBluetoothLEManufacturerData */
 #endif /* CWINRT_WINDOWS_DEVICES_BLUETOOTH_ADVERTISEMENT_H */

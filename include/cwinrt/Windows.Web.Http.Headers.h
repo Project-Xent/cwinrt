@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Web.Http.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
@@ -27,7 +26,6 @@ typedef struct WGL_Language WGL_Language;
 typedef struct WNE_HostName WNE_HostName;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WWEHTHE_IHttpCookiePairHeaderValueFactory WWEHTHE_IHttpCookiePairHeaderValueFactory;
 typedef struct WWEHTHE_IHttpCookiePairHeaderValueStatics WWEHTHE_IHttpCookiePairHeaderValueStatics;
 typedef struct WWEHTHE_IHttpCredentialsHeaderValueFactory WWEHTHE_IHttpCredentialsHeaderValueFactory;
@@ -128,7 +126,6 @@ typedef struct WWEHTHE_IHttpRequestHeaderCollection WWEHTHE_IHttpRequestHeaderCo
 typedef struct WWEHTHE_IHttpProductInfoHeaderValueCollection WWEHTHE_IHttpProductInfoHeaderValueCollection;
 typedef struct WWEHTHE_IHttpProductInfoHeaderValue WWEHTHE_IHttpProductInfoHeaderValue;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WWEHT_HttpMethod
 #define CWINRT_FWD_WWEHT_HttpMethod
 typedef struct WWEHT_HttpMethod WWEHT_HttpMethod;
@@ -274,7 +271,6 @@ typedef struct WFOCO_IVectorView_WWEHTHE_HttpProductInfoHeaderValue WFOCO_IVecto
 typedef struct WFOCO_IIterator_WWEHTHE_HttpProductInfoHeaderValue WFOCO_IIterator_WWEHTHE_HttpProductInfoHeaderValue;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -543,1641 +539,1028 @@ static const IID CWINRT_IID_WWEHTHE_IHttpProductInfoHeaderValueCollection CWINRT
 static const IID CWINRT_IID_WWEHTHE_IHttpProductInfoHeaderValue CWINRT_MAYBE_UNUSED = { 0x1B1A8732, 0x4C35, 0x486A, { 0x96, 0x6F, 0x64, 0x64, 0x89, 0x19, 0x8E, 0x4D } };
 #endif
 
-/* Methods */
-
-/* Windows.Web.Http.Headers.IHttpCookiePairHeaderValueFactory */
-/* Windows.Web.Http.Headers.IHttpCookiePairHeaderValueFactory.CreateFromName(name) */
 HRESULT wwehthe_http_cookie_pair_header_value_factory_create_from_name(WWEHTHE_IHttpCookiePairHeaderValueFactory *self, cwinrt_hstring name, WWEHTHE_HttpCookiePairHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpCookiePairHeaderValueFactory.CreateFromNameWithValue(name) */
 HRESULT wwehthe_http_cookie_pair_header_value_factory_create_from_name_with_value(WWEHTHE_IHttpCookiePairHeaderValueFactory *self, cwinrt_hstring name, cwinrt_hstring value, WWEHTHE_HttpCookiePairHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpCookiePairHeaderValueStatics */
-/* Windows.Web.Http.Headers.IHttpCookiePairHeaderValueStatics.Parse(input) */
 HRESULT wwehthe_http_cookie_pair_header_value_statics_parse(WWEHTHE_IHttpCookiePairHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpCookiePairHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpCookiePairHeaderValueStatics.TryParse(input, cookiePairHeaderValue) */
 HRESULT wwehthe_http_cookie_pair_header_value_statics_try_parse(WWEHTHE_IHttpCookiePairHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpCookiePairHeaderValue* cookiePairHeaderValue, BOOL *out);
 
-/* Windows.Web.Http.Headers.IHttpCredentialsHeaderValueFactory */
-/* Windows.Web.Http.Headers.IHttpCredentialsHeaderValueFactory.CreateFromScheme(scheme) */
 HRESULT wwehthe_http_credentials_header_value_factory_create_from_scheme(WWEHTHE_IHttpCredentialsHeaderValueFactory *self, cwinrt_hstring scheme, WWEHTHE_HttpCredentialsHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpCredentialsHeaderValueFactory.CreateFromSchemeWithToken(scheme, token) */
 HRESULT wwehthe_http_credentials_header_value_factory_create_from_scheme_with_token(WWEHTHE_IHttpCredentialsHeaderValueFactory *self, cwinrt_hstring scheme, cwinrt_hstring token, WWEHTHE_HttpCredentialsHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpCredentialsHeaderValueStatics */
-/* Windows.Web.Http.Headers.IHttpCredentialsHeaderValueStatics.Parse(input) */
 HRESULT wwehthe_http_credentials_header_value_statics_parse(WWEHTHE_IHttpCredentialsHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpCredentialsHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpCredentialsHeaderValueStatics.TryParse(input, credentialsHeaderValue) */
 HRESULT wwehthe_http_credentials_header_value_statics_try_parse(WWEHTHE_IHttpCredentialsHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpCredentialsHeaderValue* credentialsHeaderValue, BOOL *out);
 
-/* Windows.Web.Http.Headers.IHttpDateOrDeltaHeaderValueStatics */
-/* Windows.Web.Http.Headers.IHttpDateOrDeltaHeaderValueStatics.Parse(input) */
 HRESULT wwehthe_http_date_or_delta_header_value_statics_parse(WWEHTHE_IHttpDateOrDeltaHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpDateOrDeltaHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpDateOrDeltaHeaderValueStatics.TryParse(input, dateOrDeltaHeaderValue) */
 HRESULT wwehthe_http_date_or_delta_header_value_statics_try_parse(WWEHTHE_IHttpDateOrDeltaHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpDateOrDeltaHeaderValue* dateOrDeltaHeaderValue, BOOL *out);
 
-/* Windows.Web.Http.Headers.IHttpExpectationHeaderValueFactory */
-/* Windows.Web.Http.Headers.IHttpExpectationHeaderValueFactory.CreateFromName(name) */
 HRESULT wwehthe_http_expectation_header_value_factory_create_from_name(WWEHTHE_IHttpExpectationHeaderValueFactory *self, cwinrt_hstring name, WWEHTHE_HttpExpectationHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpExpectationHeaderValueFactory.CreateFromNameWithValue(name) */
 HRESULT wwehthe_http_expectation_header_value_factory_create_from_name_with_value(WWEHTHE_IHttpExpectationHeaderValueFactory *self, cwinrt_hstring name, cwinrt_hstring value, WWEHTHE_HttpExpectationHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpExpectationHeaderValueStatics */
-/* Windows.Web.Http.Headers.IHttpExpectationHeaderValueStatics.Parse(input) */
 HRESULT wwehthe_http_expectation_header_value_statics_parse(WWEHTHE_IHttpExpectationHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpExpectationHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpExpectationHeaderValueStatics.TryParse(input, expectationHeaderValue) */
 HRESULT wwehthe_http_expectation_header_value_statics_try_parse(WWEHTHE_IHttpExpectationHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpExpectationHeaderValue* expectationHeaderValue, BOOL *out);
 
-/* Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueFactory */
-/* Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueFactory.CreateFromLanguageRange(languageRange) */
 HRESULT wwehthe_http_language_range_with_quality_header_value_factory_create_from_language_range(WWEHTHE_IHttpLanguageRangeWithQualityHeaderValueFactory *self, cwinrt_hstring languageRange, WWEHTHE_HttpLanguageRangeWithQualityHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueFactory.CreateFromLanguageRangeWithQuality(languageRange, quality) */
 HRESULT wwehthe_http_language_range_with_quality_header_value_factory_create_from_language_range_with_quality(WWEHTHE_IHttpLanguageRangeWithQualityHeaderValueFactory *self, cwinrt_hstring languageRange, double quality, WWEHTHE_HttpLanguageRangeWithQualityHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueStatics */
-/* Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueStatics.Parse(input) */
 HRESULT wwehthe_http_language_range_with_quality_header_value_statics_parse(WWEHTHE_IHttpLanguageRangeWithQualityHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpLanguageRangeWithQualityHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueStatics.TryParse(input, languageRangeWithQualityHeaderValue) */
 HRESULT wwehthe_http_language_range_with_quality_header_value_statics_try_parse(WWEHTHE_IHttpLanguageRangeWithQualityHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpLanguageRangeWithQualityHeaderValue* languageRangeWithQualityHeaderValue, BOOL *out);
 
-/* Windows.Web.Http.Headers.IHttpMediaTypeHeaderValueFactory */
-/* Windows.Web.Http.Headers.IHttpMediaTypeHeaderValueFactory.Create(mediaType) */
 HRESULT wwehthe_http_media_type_header_value_factory_create(WWEHTHE_IHttpMediaTypeHeaderValueFactory *self, cwinrt_hstring mediaType, WWEHTHE_HttpMediaTypeHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpMediaTypeHeaderValueStatics */
-/* Windows.Web.Http.Headers.IHttpMediaTypeHeaderValueStatics.Parse(input) */
 HRESULT wwehthe_http_media_type_header_value_statics_parse(WWEHTHE_IHttpMediaTypeHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpMediaTypeHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpMediaTypeHeaderValueStatics.TryParse(input, mediaTypeHeaderValue) */
 HRESULT wwehthe_http_media_type_header_value_statics_try_parse(WWEHTHE_IHttpMediaTypeHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpMediaTypeHeaderValue* mediaTypeHeaderValue, BOOL *out);
 
-/* Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueFactory */
-/* Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueFactory.CreateFromMediaType(mediaType) */
 HRESULT wwehthe_http_media_type_with_quality_header_value_factory_create_from_media_type(WWEHTHE_IHttpMediaTypeWithQualityHeaderValueFactory *self, cwinrt_hstring mediaType, WWEHTHE_HttpMediaTypeWithQualityHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueFactory.CreateFromMediaTypeWithQuality(mediaType, quality) */
 HRESULT wwehthe_http_media_type_with_quality_header_value_factory_create_from_media_type_with_quality(WWEHTHE_IHttpMediaTypeWithQualityHeaderValueFactory *self, cwinrt_hstring mediaType, double quality, WWEHTHE_HttpMediaTypeWithQualityHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueStatics */
-/* Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueStatics.Parse(input) */
 HRESULT wwehthe_http_media_type_with_quality_header_value_statics_parse(WWEHTHE_IHttpMediaTypeWithQualityHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpMediaTypeWithQualityHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueStatics.TryParse(input, mediaTypeWithQualityHeaderValue) */
 HRESULT wwehthe_http_media_type_with_quality_header_value_statics_try_parse(WWEHTHE_IHttpMediaTypeWithQualityHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpMediaTypeWithQualityHeaderValue* mediaTypeWithQualityHeaderValue, BOOL *out);
 
-/* Windows.Web.Http.Headers.IHttpNameValueHeaderValueFactory */
-/* Windows.Web.Http.Headers.IHttpNameValueHeaderValueFactory.CreateFromName(name) */
 HRESULT wwehthe_http_name_value_header_value_factory_create_from_name(WWEHTHE_IHttpNameValueHeaderValueFactory *self, cwinrt_hstring name, WWEHTHE_HttpNameValueHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpNameValueHeaderValueFactory.CreateFromNameWithValue(name) */
 HRESULT wwehthe_http_name_value_header_value_factory_create_from_name_with_value(WWEHTHE_IHttpNameValueHeaderValueFactory *self, cwinrt_hstring name, cwinrt_hstring value, WWEHTHE_HttpNameValueHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpNameValueHeaderValueStatics */
-/* Windows.Web.Http.Headers.IHttpNameValueHeaderValueStatics.Parse(input) */
 HRESULT wwehthe_http_name_value_header_value_statics_parse(WWEHTHE_IHttpNameValueHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpNameValueHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpNameValueHeaderValueStatics.TryParse(input, nameValueHeaderValue) */
 HRESULT wwehthe_http_name_value_header_value_statics_try_parse(WWEHTHE_IHttpNameValueHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpNameValueHeaderValue* nameValueHeaderValue, BOOL *out);
 
-/* Windows.Web.Http.Headers.IHttpProductHeaderValueFactory */
-/* Windows.Web.Http.Headers.IHttpProductHeaderValueFactory.CreateFromName(productName) */
 HRESULT wwehthe_http_product_header_value_factory_create_from_name(WWEHTHE_IHttpProductHeaderValueFactory *self, cwinrt_hstring productName, WWEHTHE_HttpProductHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpProductHeaderValueFactory.CreateFromNameWithVersion(productName, productVersion) */
 HRESULT wwehthe_http_product_header_value_factory_create_from_name_with_version(WWEHTHE_IHttpProductHeaderValueFactory *self, cwinrt_hstring productName, cwinrt_hstring productVersion, WWEHTHE_HttpProductHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpProductHeaderValueStatics */
-/* Windows.Web.Http.Headers.IHttpProductHeaderValueStatics.Parse(input) */
 HRESULT wwehthe_http_product_header_value_statics_parse(WWEHTHE_IHttpProductHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpProductHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpProductHeaderValueStatics.TryParse(input, productHeaderValue) */
 HRESULT wwehthe_http_product_header_value_statics_try_parse(WWEHTHE_IHttpProductHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpProductHeaderValue* productHeaderValue, BOOL *out);
 
-/* Windows.Web.Http.Headers.IHttpProductInfoHeaderValueFactory */
-/* Windows.Web.Http.Headers.IHttpProductInfoHeaderValueFactory.CreateFromComment(productComment) */
 HRESULT wwehthe_http_product_info_header_value_factory_create_from_comment(WWEHTHE_IHttpProductInfoHeaderValueFactory *self, cwinrt_hstring productComment, WWEHTHE_HttpProductInfoHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpProductInfoHeaderValueFactory.CreateFromNameWithVersion(productName, productVersion) */
 HRESULT wwehthe_http_product_info_header_value_factory_create_from_name_with_version(WWEHTHE_IHttpProductInfoHeaderValueFactory *self, cwinrt_hstring productName, cwinrt_hstring productVersion, WWEHTHE_HttpProductInfoHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpProductInfoHeaderValueStatics */
-/* Windows.Web.Http.Headers.IHttpProductInfoHeaderValueStatics.Parse(input) */
 HRESULT wwehthe_http_product_info_header_value_statics_parse(WWEHTHE_IHttpProductInfoHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpProductInfoHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpProductInfoHeaderValueStatics.TryParse(input, productInfoHeaderValue) */
 HRESULT wwehthe_http_product_info_header_value_statics_try_parse(WWEHTHE_IHttpProductInfoHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpProductInfoHeaderValue* productInfoHeaderValue, BOOL *out);
 
-/* Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueFactory */
-/* Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueFactory.Create(input) */
 HRESULT wwehthe_http_transfer_coding_header_value_factory_create(WWEHTHE_IHttpTransferCodingHeaderValueFactory *self, cwinrt_hstring input, WWEHTHE_HttpTransferCodingHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueStatics */
-/* Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueStatics.Parse(input) */
 HRESULT wwehthe_http_transfer_coding_header_value_statics_parse(WWEHTHE_IHttpTransferCodingHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpTransferCodingHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueStatics.TryParse(input, transferCodingHeaderValue) */
 HRESULT wwehthe_http_transfer_coding_header_value_statics_try_parse(WWEHTHE_IHttpTransferCodingHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpTransferCodingHeaderValue* transferCodingHeaderValue, BOOL *out);
 
-/* activate Windows.Web.Http.Headers.HttpProductHeaderValue */
 HRESULT wwehthe_http_product_header_value_new(WWEHTHE_HttpProductHeaderValue **out);
 
-/* Windows.Web.Http.Headers.HttpProductHeaderValue */
-/* Windows.Web.Http.Headers.HttpProductHeaderValue.get_Name() */
 HRESULT wwehthe_http_product_header_value_get__name(WWEHTHE_HttpProductHeaderValue *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.Headers.HttpProductHeaderValue.get_Version() */
 HRESULT wwehthe_http_product_header_value_get__version(WWEHTHE_HttpProductHeaderValue *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.Headers.HttpProductHeaderValue.ToString() */
 HRESULT wwehthe_http_product_header_value_to_string(WWEHTHE_HttpProductHeaderValue *self, cwinrt_hstring *out);
 
-/* Windows.Web.Http.Headers.HttpProductHeaderValue.Parse(input) */
 HRESULT wwehthe_http_product_header_value_parse(cwinrt_hstring input, WWEHTHE_HttpProductHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpProductHeaderValue.TryParse(input, productHeaderValue) */
 HRESULT wwehthe_http_product_header_value_try_parse(cwinrt_hstring input, WWEHTHE_HttpProductHeaderValue* productHeaderValue, BOOL *out);
 
-/* activate Windows.Web.Http.Headers.HttpNameValueHeaderValue */
 HRESULT wwehthe_http_name_value_header_value_new(WWEHTHE_HttpNameValueHeaderValue **out);
 
-/* Windows.Web.Http.Headers.HttpNameValueHeaderValue */
-/* Windows.Web.Http.Headers.HttpNameValueHeaderValue.get_Name() */
 HRESULT wwehthe_http_name_value_header_value_get__name(WWEHTHE_HttpNameValueHeaderValue *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.Headers.HttpNameValueHeaderValue.get_Value() */
 HRESULT wwehthe_http_name_value_header_value_get__value(WWEHTHE_HttpNameValueHeaderValue *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.Headers.HttpNameValueHeaderValue.put_Value() */
 HRESULT wwehthe_http_name_value_header_value_put__value(WWEHTHE_HttpNameValueHeaderValue *self, cwinrt_hstring value);
 
-/* Windows.Web.Http.Headers.HttpNameValueHeaderValue.ToString() */
 HRESULT wwehthe_http_name_value_header_value_to_string(WWEHTHE_HttpNameValueHeaderValue *self, cwinrt_hstring *out);
 
-/* Windows.Web.Http.Headers.HttpNameValueHeaderValue.Parse(input) */
 HRESULT wwehthe_http_name_value_header_value_parse(cwinrt_hstring input, WWEHTHE_HttpNameValueHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpNameValueHeaderValue.TryParse(input, nameValueHeaderValue) */
 HRESULT wwehthe_http_name_value_header_value_try_parse(cwinrt_hstring input, WWEHTHE_HttpNameValueHeaderValue* nameValueHeaderValue, BOOL *out);
 
-/* activate Windows.Web.Http.Headers.HttpMethodHeaderValueCollection */
 HRESULT wwehthe_http_method_header_value_collection_new(WWEHTHE_HttpMethodHeaderValueCollection **out);
 
-/* Windows.Web.Http.Headers.HttpMethodHeaderValueCollection */
-/* Windows.Web.Http.Headers.HttpMethodHeaderValueCollection.ParseAdd(input) */
 HRESULT wwehthe_http_method_header_value_collection_parse_add(WWEHTHE_HttpMethodHeaderValueCollection *self, cwinrt_hstring input);
 
-/* Windows.Web.Http.Headers.HttpMethodHeaderValueCollection.TryParseAdd(input) */
 HRESULT wwehthe_http_method_header_value_collection_try_parse_add(WWEHTHE_HttpMethodHeaderValueCollection *self, cwinrt_hstring input, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpMethodHeaderValueCollection.GetAt(index) */
 HRESULT wwehthe_http_method_header_value_collection_get_at(WWEHTHE_HttpMethodHeaderValueCollection *self, uint32_t index, WWEHT_HttpMethod** out);
 
-/* Windows.Web.Http.Headers.HttpMethodHeaderValueCollection.get_Size() */
 HRESULT wwehthe_http_method_header_value_collection_get__size(WWEHTHE_HttpMethodHeaderValueCollection *self, uint32_t *value);
 
-/* Windows.Web.Http.Headers.HttpMethodHeaderValueCollection.GetView() */
 HRESULT wwehthe_http_method_header_value_collection_get_view(WWEHTHE_HttpMethodHeaderValueCollection *self, WFOCO_IVectorView_WWEHT_HttpMethod** out);
 
-/* Windows.Web.Http.Headers.HttpMethodHeaderValueCollection.IndexOf(index) */
 HRESULT wwehthe_http_method_header_value_collection_index_of(WWEHTHE_HttpMethodHeaderValueCollection *self, WWEHT_HttpMethod* value, uint32_t index, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpMethodHeaderValueCollection.SetAt(index) */
 HRESULT wwehthe_http_method_header_value_collection_set_at(WWEHTHE_HttpMethodHeaderValueCollection *self, uint32_t index, WWEHT_HttpMethod* value);
 
-/* Windows.Web.Http.Headers.HttpMethodHeaderValueCollection.InsertAt(index) */
 HRESULT wwehthe_http_method_header_value_collection_insert_at(WWEHTHE_HttpMethodHeaderValueCollection *self, uint32_t index, WWEHT_HttpMethod* value);
 
-/* Windows.Web.Http.Headers.HttpMethodHeaderValueCollection.RemoveAt(index) */
 HRESULT wwehthe_http_method_header_value_collection_remove_at(WWEHTHE_HttpMethodHeaderValueCollection *self, uint32_t index);
 
-/* Windows.Web.Http.Headers.HttpMethodHeaderValueCollection.Append() */
 HRESULT wwehthe_http_method_header_value_collection_append(WWEHTHE_HttpMethodHeaderValueCollection *self, WWEHT_HttpMethod* value);
 
-/* Windows.Web.Http.Headers.HttpMethodHeaderValueCollection.RemoveAtEnd() */
 HRESULT wwehthe_http_method_header_value_collection_remove_at_end(WWEHTHE_HttpMethodHeaderValueCollection *self);
 
-/* Windows.Web.Http.Headers.HttpMethodHeaderValueCollection.Clear() */
 HRESULT wwehthe_http_method_header_value_collection_clear(WWEHTHE_HttpMethodHeaderValueCollection *self);
 
-/* Windows.Web.Http.Headers.HttpMethodHeaderValueCollection.GetMany(startIndex, items) */
 HRESULT wwehthe_http_method_header_value_collection_get_many(WWEHTHE_HttpMethodHeaderValueCollection *self, uint32_t startIndex, WWEHT_HttpMethod *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Web.Http.Headers.HttpMethodHeaderValueCollection.ReplaceAll(items) */
 HRESULT wwehthe_http_method_header_value_collection_replace_all(WWEHTHE_HttpMethodHeaderValueCollection *self, WWEHT_HttpMethod *items, uint32_t items_len);
 
-/* Windows.Web.Http.Headers.HttpMethodHeaderValueCollection.First() */
 HRESULT wwehthe_http_method_header_value_collection_first(WWEHTHE_HttpMethodHeaderValueCollection *self, WFOCO_IIterator_WWEHT_HttpMethod** out);
 
-/* Windows.Web.Http.Headers.HttpMethodHeaderValueCollection.ToString() */
 HRESULT wwehthe_http_method_header_value_collection_to_string(WWEHTHE_HttpMethodHeaderValueCollection *self, cwinrt_hstring *out);
 
-/* Windows.Web.Http.Headers.IHttpContentRangeHeaderValueStatics */
-/* Windows.Web.Http.Headers.IHttpContentRangeHeaderValueStatics.Parse(input) */
 HRESULT wwehthe_http_content_range_header_value_statics_parse(WWEHTHE_IHttpContentRangeHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpContentRangeHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpContentRangeHeaderValueStatics.TryParse(input, contentRangeHeaderValue) */
 HRESULT wwehthe_http_content_range_header_value_statics_try_parse(WWEHTHE_IHttpContentRangeHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpContentRangeHeaderValue* contentRangeHeaderValue, BOOL *out);
 
-/* activate Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection */
 HRESULT wwehthe_http_media_type_with_quality_header_value_collection_new(WWEHTHE_HttpMediaTypeWithQualityHeaderValueCollection **out);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection */
-/* Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection.ParseAdd(input) */
 HRESULT wwehthe_http_media_type_with_quality_header_value_collection_parse_add(WWEHTHE_HttpMediaTypeWithQualityHeaderValueCollection *self, cwinrt_hstring input);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection.TryParseAdd(input) */
 HRESULT wwehthe_http_media_type_with_quality_header_value_collection_try_parse_add(WWEHTHE_HttpMediaTypeWithQualityHeaderValueCollection *self, cwinrt_hstring input, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection.GetAt(index) */
 HRESULT wwehthe_http_media_type_with_quality_header_value_collection_get_at(WWEHTHE_HttpMediaTypeWithQualityHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpMediaTypeWithQualityHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection.get_Size() */
 HRESULT wwehthe_http_media_type_with_quality_header_value_collection_get__size(WWEHTHE_HttpMediaTypeWithQualityHeaderValueCollection *self, uint32_t *value);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection.GetView() */
 HRESULT wwehthe_http_media_type_with_quality_header_value_collection_get_view(WWEHTHE_HttpMediaTypeWithQualityHeaderValueCollection *self, WFOCO_IVectorView_WWEHTHE_HttpMediaTypeWithQualityHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection.IndexOf(index) */
 HRESULT wwehthe_http_media_type_with_quality_header_value_collection_index_of(WWEHTHE_HttpMediaTypeWithQualityHeaderValueCollection *self, WWEHTHE_HttpMediaTypeWithQualityHeaderValue* value, uint32_t index, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection.SetAt(index) */
 HRESULT wwehthe_http_media_type_with_quality_header_value_collection_set_at(WWEHTHE_HttpMediaTypeWithQualityHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpMediaTypeWithQualityHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection.InsertAt(index) */
 HRESULT wwehthe_http_media_type_with_quality_header_value_collection_insert_at(WWEHTHE_HttpMediaTypeWithQualityHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpMediaTypeWithQualityHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection.RemoveAt(index) */
 HRESULT wwehthe_http_media_type_with_quality_header_value_collection_remove_at(WWEHTHE_HttpMediaTypeWithQualityHeaderValueCollection *self, uint32_t index);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection.Append() */
 HRESULT wwehthe_http_media_type_with_quality_header_value_collection_append(WWEHTHE_HttpMediaTypeWithQualityHeaderValueCollection *self, WWEHTHE_HttpMediaTypeWithQualityHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection.RemoveAtEnd() */
 HRESULT wwehthe_http_media_type_with_quality_header_value_collection_remove_at_end(WWEHTHE_HttpMediaTypeWithQualityHeaderValueCollection *self);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection.Clear() */
 HRESULT wwehthe_http_media_type_with_quality_header_value_collection_clear(WWEHTHE_HttpMediaTypeWithQualityHeaderValueCollection *self);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection.GetMany(startIndex, items) */
 HRESULT wwehthe_http_media_type_with_quality_header_value_collection_get_many(WWEHTHE_HttpMediaTypeWithQualityHeaderValueCollection *self, uint32_t startIndex, WWEHTHE_HttpMediaTypeWithQualityHeaderValue *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection.ReplaceAll(items) */
 HRESULT wwehthe_http_media_type_with_quality_header_value_collection_replace_all(WWEHTHE_HttpMediaTypeWithQualityHeaderValueCollection *self, WWEHTHE_HttpMediaTypeWithQualityHeaderValue *items, uint32_t items_len);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection.First() */
 HRESULT wwehthe_http_media_type_with_quality_header_value_collection_first(WWEHTHE_HttpMediaTypeWithQualityHeaderValueCollection *self, WFOCO_IIterator_WWEHTHE_HttpMediaTypeWithQualityHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection.ToString() */
 HRESULT wwehthe_http_media_type_with_quality_header_value_collection_to_string(WWEHTHE_HttpMediaTypeWithQualityHeaderValueCollection *self, cwinrt_hstring *out);
 
-/* activate Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue */
 HRESULT wwehthe_http_media_type_with_quality_header_value_new(WWEHTHE_HttpMediaTypeWithQualityHeaderValue **out);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue */
-/* Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue.get_CharSet() */
 HRESULT wwehthe_http_media_type_with_quality_header_value_get__char_set(WWEHTHE_HttpMediaTypeWithQualityHeaderValue *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue.put_CharSet() */
 HRESULT wwehthe_http_media_type_with_quality_header_value_put__char_set(WWEHTHE_HttpMediaTypeWithQualityHeaderValue *self, cwinrt_hstring value);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue.get_MediaType() */
 HRESULT wwehthe_http_media_type_with_quality_header_value_get__media_type(WWEHTHE_HttpMediaTypeWithQualityHeaderValue *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue.put_MediaType() */
 HRESULT wwehthe_http_media_type_with_quality_header_value_put__media_type(WWEHTHE_HttpMediaTypeWithQualityHeaderValue *self, cwinrt_hstring value);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue.get_Parameters() */
 HRESULT wwehthe_http_media_type_with_quality_header_value_get__parameters(WWEHTHE_HttpMediaTypeWithQualityHeaderValue *self, WFOCO_IVector_WWEHTHE_HttpNameValueHeaderValue** value);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue.get_Quality() */
 HRESULT wwehthe_http_media_type_with_quality_header_value_get__quality(WWEHTHE_HttpMediaTypeWithQualityHeaderValue *self, double** value);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue.put_Quality() */
 HRESULT wwehthe_http_media_type_with_quality_header_value_put__quality(WWEHTHE_HttpMediaTypeWithQualityHeaderValue *self, double* value);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue.ToString() */
 HRESULT wwehthe_http_media_type_with_quality_header_value_to_string(WWEHTHE_HttpMediaTypeWithQualityHeaderValue *self, cwinrt_hstring *out);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue.Parse(input) */
 HRESULT wwehthe_http_media_type_with_quality_header_value_parse(cwinrt_hstring input, WWEHTHE_HttpMediaTypeWithQualityHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue.TryParse(input, mediaTypeWithQualityHeaderValue) */
 HRESULT wwehthe_http_media_type_with_quality_header_value_try_parse(cwinrt_hstring input, WWEHTHE_HttpMediaTypeWithQualityHeaderValue* mediaTypeWithQualityHeaderValue, BOOL *out);
 
-/* activate Windows.Web.Http.Headers.HttpMediaTypeHeaderValue */
 HRESULT wwehthe_http_media_type_header_value_new(WWEHTHE_HttpMediaTypeHeaderValue **out);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeHeaderValue */
-/* Windows.Web.Http.Headers.HttpMediaTypeHeaderValue.get_CharSet() */
 HRESULT wwehthe_http_media_type_header_value_get__char_set(WWEHTHE_HttpMediaTypeHeaderValue *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeHeaderValue.put_CharSet() */
 HRESULT wwehthe_http_media_type_header_value_put__char_set(WWEHTHE_HttpMediaTypeHeaderValue *self, cwinrt_hstring value);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeHeaderValue.get_MediaType() */
 HRESULT wwehthe_http_media_type_header_value_get__media_type(WWEHTHE_HttpMediaTypeHeaderValue *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeHeaderValue.put_MediaType() */
 HRESULT wwehthe_http_media_type_header_value_put__media_type(WWEHTHE_HttpMediaTypeHeaderValue *self, cwinrt_hstring value);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeHeaderValue.get_Parameters() */
 HRESULT wwehthe_http_media_type_header_value_get__parameters(WWEHTHE_HttpMediaTypeHeaderValue *self, WFOCO_IVector_WWEHTHE_HttpNameValueHeaderValue** value);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeHeaderValue.ToString() */
 HRESULT wwehthe_http_media_type_header_value_to_string(WWEHTHE_HttpMediaTypeHeaderValue *self, cwinrt_hstring *out);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeHeaderValue.Parse(input) */
 HRESULT wwehthe_http_media_type_header_value_parse(cwinrt_hstring input, WWEHTHE_HttpMediaTypeHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpMediaTypeHeaderValue.TryParse(input, mediaTypeHeaderValue) */
 HRESULT wwehthe_http_media_type_header_value_try_parse(cwinrt_hstring input, WWEHTHE_HttpMediaTypeHeaderValue* mediaTypeHeaderValue, BOOL *out);
 
-/* activate Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection */
 HRESULT wwehthe_http_language_range_with_quality_header_value_collection_new(WWEHTHE_HttpLanguageRangeWithQualityHeaderValueCollection **out);
 
-/* Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection */
-/* Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection.ParseAdd(input) */
 HRESULT wwehthe_http_language_range_with_quality_header_value_collection_parse_add(WWEHTHE_HttpLanguageRangeWithQualityHeaderValueCollection *self, cwinrt_hstring input);
 
-/* Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection.TryParseAdd(input) */
 HRESULT wwehthe_http_language_range_with_quality_header_value_collection_try_parse_add(WWEHTHE_HttpLanguageRangeWithQualityHeaderValueCollection *self, cwinrt_hstring input, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection.GetAt(index) */
 HRESULT wwehthe_http_language_range_with_quality_header_value_collection_get_at(WWEHTHE_HttpLanguageRangeWithQualityHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpLanguageRangeWithQualityHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection.get_Size() */
 HRESULT wwehthe_http_language_range_with_quality_header_value_collection_get__size(WWEHTHE_HttpLanguageRangeWithQualityHeaderValueCollection *self, uint32_t *value);
 
-/* Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection.GetView() */
 HRESULT wwehthe_http_language_range_with_quality_header_value_collection_get_view(WWEHTHE_HttpLanguageRangeWithQualityHeaderValueCollection *self, WFOCO_IVectorView_WWEHTHE_HttpLanguageRangeWithQualityHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection.IndexOf(index) */
 HRESULT wwehthe_http_language_range_with_quality_header_value_collection_index_of(WWEHTHE_HttpLanguageRangeWithQualityHeaderValueCollection *self, WWEHTHE_HttpLanguageRangeWithQualityHeaderValue* value, uint32_t index, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection.SetAt(index) */
 HRESULT wwehthe_http_language_range_with_quality_header_value_collection_set_at(WWEHTHE_HttpLanguageRangeWithQualityHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpLanguageRangeWithQualityHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection.InsertAt(index) */
 HRESULT wwehthe_http_language_range_with_quality_header_value_collection_insert_at(WWEHTHE_HttpLanguageRangeWithQualityHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpLanguageRangeWithQualityHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection.RemoveAt(index) */
 HRESULT wwehthe_http_language_range_with_quality_header_value_collection_remove_at(WWEHTHE_HttpLanguageRangeWithQualityHeaderValueCollection *self, uint32_t index);
 
-/* Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection.Append() */
 HRESULT wwehthe_http_language_range_with_quality_header_value_collection_append(WWEHTHE_HttpLanguageRangeWithQualityHeaderValueCollection *self, WWEHTHE_HttpLanguageRangeWithQualityHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection.RemoveAtEnd() */
 HRESULT wwehthe_http_language_range_with_quality_header_value_collection_remove_at_end(WWEHTHE_HttpLanguageRangeWithQualityHeaderValueCollection *self);
 
-/* Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection.Clear() */
 HRESULT wwehthe_http_language_range_with_quality_header_value_collection_clear(WWEHTHE_HttpLanguageRangeWithQualityHeaderValueCollection *self);
 
-/* Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection.GetMany(startIndex, items) */
 HRESULT wwehthe_http_language_range_with_quality_header_value_collection_get_many(WWEHTHE_HttpLanguageRangeWithQualityHeaderValueCollection *self, uint32_t startIndex, WWEHTHE_HttpLanguageRangeWithQualityHeaderValue *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection.ReplaceAll(items) */
 HRESULT wwehthe_http_language_range_with_quality_header_value_collection_replace_all(WWEHTHE_HttpLanguageRangeWithQualityHeaderValueCollection *self, WWEHTHE_HttpLanguageRangeWithQualityHeaderValue *items, uint32_t items_len);
 
-/* Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection.First() */
 HRESULT wwehthe_http_language_range_with_quality_header_value_collection_first(WWEHTHE_HttpLanguageRangeWithQualityHeaderValueCollection *self, WFOCO_IIterator_WWEHTHE_HttpLanguageRangeWithQualityHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection.ToString() */
 HRESULT wwehthe_http_language_range_with_quality_header_value_collection_to_string(WWEHTHE_HttpLanguageRangeWithQualityHeaderValueCollection *self, cwinrt_hstring *out);
 
-/* activate Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue */
 HRESULT wwehthe_http_language_range_with_quality_header_value_new(WWEHTHE_HttpLanguageRangeWithQualityHeaderValue **out);
 
-/* Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue */
-/* Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue.get_LanguageRange() */
 HRESULT wwehthe_http_language_range_with_quality_header_value_get__language_range(WWEHTHE_HttpLanguageRangeWithQualityHeaderValue *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue.get_Quality() */
 HRESULT wwehthe_http_language_range_with_quality_header_value_get__quality(WWEHTHE_HttpLanguageRangeWithQualityHeaderValue *self, double** value);
 
-/* Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue.ToString() */
 HRESULT wwehthe_http_language_range_with_quality_header_value_to_string(WWEHTHE_HttpLanguageRangeWithQualityHeaderValue *self, cwinrt_hstring *out);
 
-/* Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue.Parse(input) */
 HRESULT wwehthe_http_language_range_with_quality_header_value_parse(cwinrt_hstring input, WWEHTHE_HttpLanguageRangeWithQualityHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue.TryParse(input, languageRangeWithQualityHeaderValue) */
 HRESULT wwehthe_http_language_range_with_quality_header_value_try_parse(cwinrt_hstring input, WWEHTHE_HttpLanguageRangeWithQualityHeaderValue* languageRangeWithQualityHeaderValue, BOOL *out);
 
-/* activate Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection */
 HRESULT wwehthe_http_language_header_value_collection_new(WWEHTHE_HttpLanguageHeaderValueCollection **out);
 
-/* Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection */
-/* Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection.ParseAdd(input) */
 HRESULT wwehthe_http_language_header_value_collection_parse_add(WWEHTHE_HttpLanguageHeaderValueCollection *self, cwinrt_hstring input);
 
-/* Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection.TryParseAdd(input) */
 HRESULT wwehthe_http_language_header_value_collection_try_parse_add(WWEHTHE_HttpLanguageHeaderValueCollection *self, cwinrt_hstring input, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection.GetAt(index) */
 HRESULT wwehthe_http_language_header_value_collection_get_at(WWEHTHE_HttpLanguageHeaderValueCollection *self, uint32_t index, WGL_Language** out);
 
-/* Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection.get_Size() */
 HRESULT wwehthe_http_language_header_value_collection_get__size(WWEHTHE_HttpLanguageHeaderValueCollection *self, uint32_t *value);
 
-/* Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection.GetView() */
 HRESULT wwehthe_http_language_header_value_collection_get_view(WWEHTHE_HttpLanguageHeaderValueCollection *self, WFOCO_IVectorView_WGL_Language** out);
 
-/* Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection.IndexOf(index) */
 HRESULT wwehthe_http_language_header_value_collection_index_of(WWEHTHE_HttpLanguageHeaderValueCollection *self, WGL_Language* value, uint32_t index, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection.SetAt(index) */
 HRESULT wwehthe_http_language_header_value_collection_set_at(WWEHTHE_HttpLanguageHeaderValueCollection *self, uint32_t index, WGL_Language* value);
 
-/* Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection.InsertAt(index) */
 HRESULT wwehthe_http_language_header_value_collection_insert_at(WWEHTHE_HttpLanguageHeaderValueCollection *self, uint32_t index, WGL_Language* value);
 
-/* Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection.RemoveAt(index) */
 HRESULT wwehthe_http_language_header_value_collection_remove_at(WWEHTHE_HttpLanguageHeaderValueCollection *self, uint32_t index);
 
-/* Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection.Append() */
 HRESULT wwehthe_http_language_header_value_collection_append(WWEHTHE_HttpLanguageHeaderValueCollection *self, WGL_Language* value);
 
-/* Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection.RemoveAtEnd() */
 HRESULT wwehthe_http_language_header_value_collection_remove_at_end(WWEHTHE_HttpLanguageHeaderValueCollection *self);
 
-/* Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection.Clear() */
 HRESULT wwehthe_http_language_header_value_collection_clear(WWEHTHE_HttpLanguageHeaderValueCollection *self);
 
-/* Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection.GetMany(startIndex, items) */
 HRESULT wwehthe_http_language_header_value_collection_get_many(WWEHTHE_HttpLanguageHeaderValueCollection *self, uint32_t startIndex, WGL_Language *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection.ReplaceAll(items) */
 HRESULT wwehthe_http_language_header_value_collection_replace_all(WWEHTHE_HttpLanguageHeaderValueCollection *self, WGL_Language *items, uint32_t items_len);
 
-/* Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection.First() */
 HRESULT wwehthe_http_language_header_value_collection_first(WWEHTHE_HttpLanguageHeaderValueCollection *self, WFOCO_IIterator_WGL_Language** out);
 
-/* Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection.ToString() */
 HRESULT wwehthe_http_language_header_value_collection_to_string(WWEHTHE_HttpLanguageHeaderValueCollection *self, cwinrt_hstring *out);
 
-/* activate Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection */
 HRESULT wwehthe_http_expectation_header_value_collection_new(WWEHTHE_HttpExpectationHeaderValueCollection **out);
 
-/* Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection */
-/* Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection.ParseAdd(input) */
 HRESULT wwehthe_http_expectation_header_value_collection_parse_add(WWEHTHE_HttpExpectationHeaderValueCollection *self, cwinrt_hstring input);
 
-/* Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection.TryParseAdd(input) */
 HRESULT wwehthe_http_expectation_header_value_collection_try_parse_add(WWEHTHE_HttpExpectationHeaderValueCollection *self, cwinrt_hstring input, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection.GetAt(index) */
 HRESULT wwehthe_http_expectation_header_value_collection_get_at(WWEHTHE_HttpExpectationHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpExpectationHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection.get_Size() */
 HRESULT wwehthe_http_expectation_header_value_collection_get__size(WWEHTHE_HttpExpectationHeaderValueCollection *self, uint32_t *value);
 
-/* Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection.GetView() */
 HRESULT wwehthe_http_expectation_header_value_collection_get_view(WWEHTHE_HttpExpectationHeaderValueCollection *self, WFOCO_IVectorView_WWEHTHE_HttpExpectationHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection.IndexOf(index) */
 HRESULT wwehthe_http_expectation_header_value_collection_index_of(WWEHTHE_HttpExpectationHeaderValueCollection *self, WWEHTHE_HttpExpectationHeaderValue* value, uint32_t index, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection.SetAt(index) */
 HRESULT wwehthe_http_expectation_header_value_collection_set_at(WWEHTHE_HttpExpectationHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpExpectationHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection.InsertAt(index) */
 HRESULT wwehthe_http_expectation_header_value_collection_insert_at(WWEHTHE_HttpExpectationHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpExpectationHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection.RemoveAt(index) */
 HRESULT wwehthe_http_expectation_header_value_collection_remove_at(WWEHTHE_HttpExpectationHeaderValueCollection *self, uint32_t index);
 
-/* Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection.Append() */
 HRESULT wwehthe_http_expectation_header_value_collection_append(WWEHTHE_HttpExpectationHeaderValueCollection *self, WWEHTHE_HttpExpectationHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection.RemoveAtEnd() */
 HRESULT wwehthe_http_expectation_header_value_collection_remove_at_end(WWEHTHE_HttpExpectationHeaderValueCollection *self);
 
-/* Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection.Clear() */
 HRESULT wwehthe_http_expectation_header_value_collection_clear(WWEHTHE_HttpExpectationHeaderValueCollection *self);
 
-/* Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection.GetMany(startIndex, items) */
 HRESULT wwehthe_http_expectation_header_value_collection_get_many(WWEHTHE_HttpExpectationHeaderValueCollection *self, uint32_t startIndex, WWEHTHE_HttpExpectationHeaderValue *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection.ReplaceAll(items) */
 HRESULT wwehthe_http_expectation_header_value_collection_replace_all(WWEHTHE_HttpExpectationHeaderValueCollection *self, WWEHTHE_HttpExpectationHeaderValue *items, uint32_t items_len);
 
-/* Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection.First() */
 HRESULT wwehthe_http_expectation_header_value_collection_first(WWEHTHE_HttpExpectationHeaderValueCollection *self, WFOCO_IIterator_WWEHTHE_HttpExpectationHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection.ToString() */
 HRESULT wwehthe_http_expectation_header_value_collection_to_string(WWEHTHE_HttpExpectationHeaderValueCollection *self, cwinrt_hstring *out);
 
-/* activate Windows.Web.Http.Headers.HttpExpectationHeaderValue */
 HRESULT wwehthe_http_expectation_header_value_new(WWEHTHE_HttpExpectationHeaderValue **out);
 
-/* Windows.Web.Http.Headers.HttpExpectationHeaderValue */
-/* Windows.Web.Http.Headers.HttpExpectationHeaderValue.get_Name() */
 HRESULT wwehthe_http_expectation_header_value_get__name(WWEHTHE_HttpExpectationHeaderValue *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.Headers.HttpExpectationHeaderValue.get_Value() */
 HRESULT wwehthe_http_expectation_header_value_get__value(WWEHTHE_HttpExpectationHeaderValue *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.Headers.HttpExpectationHeaderValue.put_Value() */
 HRESULT wwehthe_http_expectation_header_value_put__value(WWEHTHE_HttpExpectationHeaderValue *self, cwinrt_hstring value);
 
-/* Windows.Web.Http.Headers.HttpExpectationHeaderValue.get_Parameters() */
 HRESULT wwehthe_http_expectation_header_value_get__parameters(WWEHTHE_HttpExpectationHeaderValue *self, WFOCO_IVector_WWEHTHE_HttpNameValueHeaderValue** value);
 
-/* Windows.Web.Http.Headers.HttpExpectationHeaderValue.ToString() */
 HRESULT wwehthe_http_expectation_header_value_to_string(WWEHTHE_HttpExpectationHeaderValue *self, cwinrt_hstring *out);
 
-/* Windows.Web.Http.Headers.HttpExpectationHeaderValue.Parse(input) */
 HRESULT wwehthe_http_expectation_header_value_parse(cwinrt_hstring input, WWEHTHE_HttpExpectationHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpExpectationHeaderValue.TryParse(input, expectationHeaderValue) */
 HRESULT wwehthe_http_expectation_header_value_try_parse(cwinrt_hstring input, WWEHTHE_HttpExpectationHeaderValue* expectationHeaderValue, BOOL *out);
 
-/* activate Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue */
 HRESULT wwehthe_http_date_or_delta_header_value_new(WWEHTHE_HttpDateOrDeltaHeaderValue **out);
 
-/* Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue */
-/* Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue.get_Date() */
 HRESULT wwehthe_http_date_or_delta_header_value_get__date(WWEHTHE_HttpDateOrDeltaHeaderValue *self, WF_DateTime** value);
 
-/* Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue.get_Delta() */
 HRESULT wwehthe_http_date_or_delta_header_value_get__delta(WWEHTHE_HttpDateOrDeltaHeaderValue *self, WF_TimeSpan** value);
 
-/* Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue.ToString() */
 HRESULT wwehthe_http_date_or_delta_header_value_to_string(WWEHTHE_HttpDateOrDeltaHeaderValue *self, cwinrt_hstring *out);
 
-/* Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue.Parse(input) */
 HRESULT wwehthe_http_date_or_delta_header_value_parse(cwinrt_hstring input, WWEHTHE_HttpDateOrDeltaHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue.TryParse(input, dateOrDeltaHeaderValue) */
 HRESULT wwehthe_http_date_or_delta_header_value_try_parse(cwinrt_hstring input, WWEHTHE_HttpDateOrDeltaHeaderValue* dateOrDeltaHeaderValue, BOOL *out);
 
-/* activate Windows.Web.Http.Headers.HttpCredentialsHeaderValue */
 HRESULT wwehthe_http_credentials_header_value_new(WWEHTHE_HttpCredentialsHeaderValue **out);
 
-/* Windows.Web.Http.Headers.HttpCredentialsHeaderValue */
-/* Windows.Web.Http.Headers.HttpCredentialsHeaderValue.get_Parameters() */
 HRESULT wwehthe_http_credentials_header_value_get__parameters(WWEHTHE_HttpCredentialsHeaderValue *self, WFOCO_IVector_WWEHTHE_HttpNameValueHeaderValue** value);
 
-/* Windows.Web.Http.Headers.HttpCredentialsHeaderValue.get_Scheme() */
 HRESULT wwehthe_http_credentials_header_value_get__scheme(WWEHTHE_HttpCredentialsHeaderValue *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.Headers.HttpCredentialsHeaderValue.get_Token() */
 HRESULT wwehthe_http_credentials_header_value_get__token(WWEHTHE_HttpCredentialsHeaderValue *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.Headers.HttpCredentialsHeaderValue.ToString() */
 HRESULT wwehthe_http_credentials_header_value_to_string(WWEHTHE_HttpCredentialsHeaderValue *self, cwinrt_hstring *out);
 
-/* Windows.Web.Http.Headers.HttpCredentialsHeaderValue.Parse(input) */
 HRESULT wwehthe_http_credentials_header_value_parse(cwinrt_hstring input, WWEHTHE_HttpCredentialsHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpCredentialsHeaderValue.TryParse(input, credentialsHeaderValue) */
 HRESULT wwehthe_http_credentials_header_value_try_parse(cwinrt_hstring input, WWEHTHE_HttpCredentialsHeaderValue* credentialsHeaderValue, BOOL *out);
 
-/* activate Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection */
 HRESULT wwehthe_http_cookie_pair_header_value_collection_new(WWEHTHE_HttpCookiePairHeaderValueCollection **out);
 
-/* Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection */
-/* Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection.ParseAdd(input) */
 HRESULT wwehthe_http_cookie_pair_header_value_collection_parse_add(WWEHTHE_HttpCookiePairHeaderValueCollection *self, cwinrt_hstring input);
 
-/* Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection.TryParseAdd(input) */
 HRESULT wwehthe_http_cookie_pair_header_value_collection_try_parse_add(WWEHTHE_HttpCookiePairHeaderValueCollection *self, cwinrt_hstring input, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection.GetAt(index) */
 HRESULT wwehthe_http_cookie_pair_header_value_collection_get_at(WWEHTHE_HttpCookiePairHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpCookiePairHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection.get_Size() */
 HRESULT wwehthe_http_cookie_pair_header_value_collection_get__size(WWEHTHE_HttpCookiePairHeaderValueCollection *self, uint32_t *value);
 
-/* Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection.GetView() */
 HRESULT wwehthe_http_cookie_pair_header_value_collection_get_view(WWEHTHE_HttpCookiePairHeaderValueCollection *self, WFOCO_IVectorView_WWEHTHE_HttpCookiePairHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection.IndexOf(index) */
 HRESULT wwehthe_http_cookie_pair_header_value_collection_index_of(WWEHTHE_HttpCookiePairHeaderValueCollection *self, WWEHTHE_HttpCookiePairHeaderValue* value, uint32_t index, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection.SetAt(index) */
 HRESULT wwehthe_http_cookie_pair_header_value_collection_set_at(WWEHTHE_HttpCookiePairHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpCookiePairHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection.InsertAt(index) */
 HRESULT wwehthe_http_cookie_pair_header_value_collection_insert_at(WWEHTHE_HttpCookiePairHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpCookiePairHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection.RemoveAt(index) */
 HRESULT wwehthe_http_cookie_pair_header_value_collection_remove_at(WWEHTHE_HttpCookiePairHeaderValueCollection *self, uint32_t index);
 
-/* Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection.Append() */
 HRESULT wwehthe_http_cookie_pair_header_value_collection_append(WWEHTHE_HttpCookiePairHeaderValueCollection *self, WWEHTHE_HttpCookiePairHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection.RemoveAtEnd() */
 HRESULT wwehthe_http_cookie_pair_header_value_collection_remove_at_end(WWEHTHE_HttpCookiePairHeaderValueCollection *self);
 
-/* Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection.Clear() */
 HRESULT wwehthe_http_cookie_pair_header_value_collection_clear(WWEHTHE_HttpCookiePairHeaderValueCollection *self);
 
-/* Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection.GetMany(startIndex, items) */
 HRESULT wwehthe_http_cookie_pair_header_value_collection_get_many(WWEHTHE_HttpCookiePairHeaderValueCollection *self, uint32_t startIndex, WWEHTHE_HttpCookiePairHeaderValue *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection.ReplaceAll(items) */
 HRESULT wwehthe_http_cookie_pair_header_value_collection_replace_all(WWEHTHE_HttpCookiePairHeaderValueCollection *self, WWEHTHE_HttpCookiePairHeaderValue *items, uint32_t items_len);
 
-/* Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection.First() */
 HRESULT wwehthe_http_cookie_pair_header_value_collection_first(WWEHTHE_HttpCookiePairHeaderValueCollection *self, WFOCO_IIterator_WWEHTHE_HttpCookiePairHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection.ToString() */
 HRESULT wwehthe_http_cookie_pair_header_value_collection_to_string(WWEHTHE_HttpCookiePairHeaderValueCollection *self, cwinrt_hstring *out);
 
-/* activate Windows.Web.Http.Headers.HttpCookiePairHeaderValue */
 HRESULT wwehthe_http_cookie_pair_header_value_new(WWEHTHE_HttpCookiePairHeaderValue **out);
 
-/* Windows.Web.Http.Headers.HttpCookiePairHeaderValue */
-/* Windows.Web.Http.Headers.HttpCookiePairHeaderValue.get_Name() */
 HRESULT wwehthe_http_cookie_pair_header_value_get__name(WWEHTHE_HttpCookiePairHeaderValue *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.Headers.HttpCookiePairHeaderValue.get_Value() */
 HRESULT wwehthe_http_cookie_pair_header_value_get__value(WWEHTHE_HttpCookiePairHeaderValue *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.Headers.HttpCookiePairHeaderValue.put_Value() */
 HRESULT wwehthe_http_cookie_pair_header_value_put__value(WWEHTHE_HttpCookiePairHeaderValue *self, cwinrt_hstring value);
 
-/* Windows.Web.Http.Headers.HttpCookiePairHeaderValue.ToString() */
 HRESULT wwehthe_http_cookie_pair_header_value_to_string(WWEHTHE_HttpCookiePairHeaderValue *self, cwinrt_hstring *out);
 
-/* Windows.Web.Http.Headers.HttpCookiePairHeaderValue.Parse(input) */
 HRESULT wwehthe_http_cookie_pair_header_value_parse(cwinrt_hstring input, WWEHTHE_HttpCookiePairHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpCookiePairHeaderValue.TryParse(input, cookiePairHeaderValue) */
 HRESULT wwehthe_http_cookie_pair_header_value_try_parse(cwinrt_hstring input, WWEHTHE_HttpCookiePairHeaderValue* cookiePairHeaderValue, BOOL *out);
 
-/* activate Windows.Web.Http.Headers.HttpContentRangeHeaderValue */
 HRESULT wwehthe_http_content_range_header_value_new(WWEHTHE_HttpContentRangeHeaderValue **out);
 
-/* Windows.Web.Http.Headers.HttpContentRangeHeaderValue */
-/* Windows.Web.Http.Headers.HttpContentRangeHeaderValue.get_FirstBytePosition() */
 HRESULT wwehthe_http_content_range_header_value_get__first_byte_position(WWEHTHE_HttpContentRangeHeaderValue *self, uint64_t** value);
 
-/* Windows.Web.Http.Headers.HttpContentRangeHeaderValue.get_LastBytePosition() */
 HRESULT wwehthe_http_content_range_header_value_get__last_byte_position(WWEHTHE_HttpContentRangeHeaderValue *self, uint64_t** value);
 
-/* Windows.Web.Http.Headers.HttpContentRangeHeaderValue.get_Length() */
 HRESULT wwehthe_http_content_range_header_value_get__length(WWEHTHE_HttpContentRangeHeaderValue *self, uint64_t** value);
 
-/* Windows.Web.Http.Headers.HttpContentRangeHeaderValue.get_Unit() */
 HRESULT wwehthe_http_content_range_header_value_get__unit(WWEHTHE_HttpContentRangeHeaderValue *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.Headers.HttpContentRangeHeaderValue.put_Unit() */
 HRESULT wwehthe_http_content_range_header_value_put__unit(WWEHTHE_HttpContentRangeHeaderValue *self, cwinrt_hstring value);
 
-/* Windows.Web.Http.Headers.HttpContentRangeHeaderValue.ToString() */
 HRESULT wwehthe_http_content_range_header_value_to_string(WWEHTHE_HttpContentRangeHeaderValue *self, cwinrt_hstring *out);
 
-/* Windows.Web.Http.Headers.HttpContentRangeHeaderValue.Parse(input) */
 HRESULT wwehthe_http_content_range_header_value_parse(cwinrt_hstring input, WWEHTHE_HttpContentRangeHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpContentRangeHeaderValue.TryParse(input, contentRangeHeaderValue) */
 HRESULT wwehthe_http_content_range_header_value_try_parse(cwinrt_hstring input, WWEHTHE_HttpContentRangeHeaderValue* contentRangeHeaderValue, BOOL *out);
 
-/* activate Windows.Web.Http.Headers.HttpContentHeaderCollection */
 HRESULT wwehthe_http_content_header_collection_new(WWEHTHE_HttpContentHeaderCollection **out);
 
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection */
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection.get_ContentDisposition() */
 HRESULT wwehthe_http_content_header_collection_get__content_disposition(WWEHTHE_HttpContentHeaderCollection *self, WWEHTHE_HttpContentDispositionHeaderValue** value);
 
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection.put_ContentDisposition() */
 HRESULT wwehthe_http_content_header_collection_put__content_disposition(WWEHTHE_HttpContentHeaderCollection *self, WWEHTHE_HttpContentDispositionHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection.get_ContentEncoding() */
 HRESULT wwehthe_http_content_header_collection_get__content_encoding(WWEHTHE_HttpContentHeaderCollection *self, WWEHTHE_HttpContentCodingHeaderValueCollection** value);
 
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection.get_ContentLanguage() */
 HRESULT wwehthe_http_content_header_collection_get__content_language(WWEHTHE_HttpContentHeaderCollection *self, WWEHTHE_HttpLanguageHeaderValueCollection** value);
 
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection.get_ContentLength() */
 HRESULT wwehthe_http_content_header_collection_get__content_length(WWEHTHE_HttpContentHeaderCollection *self, uint64_t** value);
 
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection.put_ContentLength() */
 HRESULT wwehthe_http_content_header_collection_put__content_length(WWEHTHE_HttpContentHeaderCollection *self, uint64_t* value);
 
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection.get_ContentLocation() */
 HRESULT wwehthe_http_content_header_collection_get__content_location(WWEHTHE_HttpContentHeaderCollection *self, WF_Uri** value);
 
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection.put_ContentLocation() */
 HRESULT wwehthe_http_content_header_collection_put__content_location(WWEHTHE_HttpContentHeaderCollection *self, WF_Uri* value);
 
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection.get_ContentMD5() */
 HRESULT wwehthe_http_content_header_collection_get__content_m_d5(WWEHTHE_HttpContentHeaderCollection *self, WSTST_IBuffer** value);
 
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection.put_ContentMD5() */
 HRESULT wwehthe_http_content_header_collection_put__content_m_d5(WWEHTHE_HttpContentHeaderCollection *self, WSTST_IBuffer* value);
 
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection.get_ContentRange() */
 HRESULT wwehthe_http_content_header_collection_get__content_range(WWEHTHE_HttpContentHeaderCollection *self, WWEHTHE_HttpContentRangeHeaderValue** value);
 
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection.put_ContentRange() */
 HRESULT wwehthe_http_content_header_collection_put__content_range(WWEHTHE_HttpContentHeaderCollection *self, WWEHTHE_HttpContentRangeHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection.get_ContentType() */
 HRESULT wwehthe_http_content_header_collection_get__content_type(WWEHTHE_HttpContentHeaderCollection *self, WWEHTHE_HttpMediaTypeHeaderValue** value);
 
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection.put_ContentType() */
 HRESULT wwehthe_http_content_header_collection_put__content_type(WWEHTHE_HttpContentHeaderCollection *self, WWEHTHE_HttpMediaTypeHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection.get_Expires() */
 HRESULT wwehthe_http_content_header_collection_get__expires(WWEHTHE_HttpContentHeaderCollection *self, WF_DateTime** value);
 
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection.put_Expires() */
 HRESULT wwehthe_http_content_header_collection_put__expires(WWEHTHE_HttpContentHeaderCollection *self, WF_DateTime* value);
 
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection.get_LastModified() */
 HRESULT wwehthe_http_content_header_collection_get__last_modified(WWEHTHE_HttpContentHeaderCollection *self, WF_DateTime** value);
 
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection.put_LastModified() */
 HRESULT wwehthe_http_content_header_collection_put__last_modified(WWEHTHE_HttpContentHeaderCollection *self, WF_DateTime* value);
 
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection.Append(name) */
 HRESULT wwehthe_http_content_header_collection_append(WWEHTHE_HttpContentHeaderCollection *self, cwinrt_hstring name, cwinrt_hstring value);
 
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection.TryAppendWithoutValidation(name) */
 HRESULT wwehthe_http_content_header_collection_try_append_without_validation(WWEHTHE_HttpContentHeaderCollection *self, cwinrt_hstring name, cwinrt_hstring value, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection.Lookup(key) */
 HRESULT wwehthe_http_content_header_collection_lookup(WWEHTHE_HttpContentHeaderCollection *self, cwinrt_hstring key, cwinrt_hstring *out);
 
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection.get_Size() */
 HRESULT wwehthe_http_content_header_collection_get__size(WWEHTHE_HttpContentHeaderCollection *self, uint32_t *value);
 
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection.HasKey(key) */
 HRESULT wwehthe_http_content_header_collection_has_key(WWEHTHE_HttpContentHeaderCollection *self, cwinrt_hstring key, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection.GetView() */
 HRESULT wwehthe_http_content_header_collection_get_view(WWEHTHE_HttpContentHeaderCollection *self, WFOCO_IMapView_HSTRING_HSTRING** out);
 
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection.Insert(key) */
 HRESULT wwehthe_http_content_header_collection_insert(WWEHTHE_HttpContentHeaderCollection *self, cwinrt_hstring key, cwinrt_hstring value, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection.Remove(key) */
 HRESULT wwehthe_http_content_header_collection_remove(WWEHTHE_HttpContentHeaderCollection *self, cwinrt_hstring key);
 
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection.Clear() */
 HRESULT wwehthe_http_content_header_collection_clear(WWEHTHE_HttpContentHeaderCollection *self);
 
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection.First() */
 HRESULT wwehthe_http_content_header_collection_first(WWEHTHE_HttpContentHeaderCollection *self, WFOCO_IIterator_WFOCO_IKeyValuePair_HSTRING_HSTRING** out);
 
-/* Windows.Web.Http.Headers.HttpContentHeaderCollection.ToString() */
 HRESULT wwehthe_http_content_header_collection_to_string(WWEHTHE_HttpContentHeaderCollection *self, cwinrt_hstring *out);
 
-/* activate Windows.Web.Http.Headers.HttpContentDispositionHeaderValue */
 HRESULT wwehthe_http_content_disposition_header_value_new(WWEHTHE_HttpContentDispositionHeaderValue **out);
 
-/* Windows.Web.Http.Headers.HttpContentDispositionHeaderValue */
-/* Windows.Web.Http.Headers.HttpContentDispositionHeaderValue.get_DispositionType() */
 HRESULT wwehthe_http_content_disposition_header_value_get__disposition_type(WWEHTHE_HttpContentDispositionHeaderValue *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.Headers.HttpContentDispositionHeaderValue.put_DispositionType() */
 HRESULT wwehthe_http_content_disposition_header_value_put__disposition_type(WWEHTHE_HttpContentDispositionHeaderValue *self, cwinrt_hstring value);
 
-/* Windows.Web.Http.Headers.HttpContentDispositionHeaderValue.get_FileName() */
 HRESULT wwehthe_http_content_disposition_header_value_get__file_name(WWEHTHE_HttpContentDispositionHeaderValue *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.Headers.HttpContentDispositionHeaderValue.put_FileName() */
 HRESULT wwehthe_http_content_disposition_header_value_put__file_name(WWEHTHE_HttpContentDispositionHeaderValue *self, cwinrt_hstring value);
 
-/* Windows.Web.Http.Headers.HttpContentDispositionHeaderValue.get_FileNameStar() */
 HRESULT wwehthe_http_content_disposition_header_value_get__file_name_star(WWEHTHE_HttpContentDispositionHeaderValue *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.Headers.HttpContentDispositionHeaderValue.put_FileNameStar() */
 HRESULT wwehthe_http_content_disposition_header_value_put__file_name_star(WWEHTHE_HttpContentDispositionHeaderValue *self, cwinrt_hstring value);
 
-/* Windows.Web.Http.Headers.HttpContentDispositionHeaderValue.get_Name() */
 HRESULT wwehthe_http_content_disposition_header_value_get__name(WWEHTHE_HttpContentDispositionHeaderValue *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.Headers.HttpContentDispositionHeaderValue.put_Name() */
 HRESULT wwehthe_http_content_disposition_header_value_put__name(WWEHTHE_HttpContentDispositionHeaderValue *self, cwinrt_hstring value);
 
-/* Windows.Web.Http.Headers.HttpContentDispositionHeaderValue.get_Parameters() */
 HRESULT wwehthe_http_content_disposition_header_value_get__parameters(WWEHTHE_HttpContentDispositionHeaderValue *self, WFOCO_IVector_WWEHTHE_HttpNameValueHeaderValue** value);
 
-/* Windows.Web.Http.Headers.HttpContentDispositionHeaderValue.get_Size() */
 HRESULT wwehthe_http_content_disposition_header_value_get__size(WWEHTHE_HttpContentDispositionHeaderValue *self, uint64_t** value);
 
-/* Windows.Web.Http.Headers.HttpContentDispositionHeaderValue.put_Size() */
 HRESULT wwehthe_http_content_disposition_header_value_put__size(WWEHTHE_HttpContentDispositionHeaderValue *self, uint64_t* value);
 
-/* Windows.Web.Http.Headers.HttpContentDispositionHeaderValue.ToString() */
 HRESULT wwehthe_http_content_disposition_header_value_to_string(WWEHTHE_HttpContentDispositionHeaderValue *self, cwinrt_hstring *out);
 
-/* Windows.Web.Http.Headers.HttpContentDispositionHeaderValue.Parse(input) */
 HRESULT wwehthe_http_content_disposition_header_value_parse(cwinrt_hstring input, WWEHTHE_HttpContentDispositionHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpContentDispositionHeaderValue.TryParse(input, contentDispositionHeaderValue) */
 HRESULT wwehthe_http_content_disposition_header_value_try_parse(cwinrt_hstring input, WWEHTHE_HttpContentDispositionHeaderValue* contentDispositionHeaderValue, BOOL *out);
 
-/* activate Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection */
 HRESULT wwehthe_http_content_coding_with_quality_header_value_collection_new(WWEHTHE_HttpContentCodingWithQualityHeaderValueCollection **out);
 
-/* Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection */
-/* Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection.ParseAdd(input) */
 HRESULT wwehthe_http_content_coding_with_quality_header_value_collection_parse_add(WWEHTHE_HttpContentCodingWithQualityHeaderValueCollection *self, cwinrt_hstring input);
 
-/* Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection.TryParseAdd(input) */
 HRESULT wwehthe_http_content_coding_with_quality_header_value_collection_try_parse_add(WWEHTHE_HttpContentCodingWithQualityHeaderValueCollection *self, cwinrt_hstring input, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection.GetAt(index) */
 HRESULT wwehthe_http_content_coding_with_quality_header_value_collection_get_at(WWEHTHE_HttpContentCodingWithQualityHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpContentCodingWithQualityHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection.get_Size() */
 HRESULT wwehthe_http_content_coding_with_quality_header_value_collection_get__size(WWEHTHE_HttpContentCodingWithQualityHeaderValueCollection *self, uint32_t *value);
 
-/* Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection.GetView() */
 HRESULT wwehthe_http_content_coding_with_quality_header_value_collection_get_view(WWEHTHE_HttpContentCodingWithQualityHeaderValueCollection *self, WFOCO_IVectorView_WWEHTHE_HttpContentCodingWithQualityHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection.IndexOf(index) */
 HRESULT wwehthe_http_content_coding_with_quality_header_value_collection_index_of(WWEHTHE_HttpContentCodingWithQualityHeaderValueCollection *self, WWEHTHE_HttpContentCodingWithQualityHeaderValue* value, uint32_t index, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection.SetAt(index) */
 HRESULT wwehthe_http_content_coding_with_quality_header_value_collection_set_at(WWEHTHE_HttpContentCodingWithQualityHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpContentCodingWithQualityHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection.InsertAt(index) */
 HRESULT wwehthe_http_content_coding_with_quality_header_value_collection_insert_at(WWEHTHE_HttpContentCodingWithQualityHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpContentCodingWithQualityHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection.RemoveAt(index) */
 HRESULT wwehthe_http_content_coding_with_quality_header_value_collection_remove_at(WWEHTHE_HttpContentCodingWithQualityHeaderValueCollection *self, uint32_t index);
 
-/* Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection.Append() */
 HRESULT wwehthe_http_content_coding_with_quality_header_value_collection_append(WWEHTHE_HttpContentCodingWithQualityHeaderValueCollection *self, WWEHTHE_HttpContentCodingWithQualityHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection.RemoveAtEnd() */
 HRESULT wwehthe_http_content_coding_with_quality_header_value_collection_remove_at_end(WWEHTHE_HttpContentCodingWithQualityHeaderValueCollection *self);
 
-/* Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection.Clear() */
 HRESULT wwehthe_http_content_coding_with_quality_header_value_collection_clear(WWEHTHE_HttpContentCodingWithQualityHeaderValueCollection *self);
 
-/* Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection.GetMany(startIndex, items) */
 HRESULT wwehthe_http_content_coding_with_quality_header_value_collection_get_many(WWEHTHE_HttpContentCodingWithQualityHeaderValueCollection *self, uint32_t startIndex, WWEHTHE_HttpContentCodingWithQualityHeaderValue *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection.ReplaceAll(items) */
 HRESULT wwehthe_http_content_coding_with_quality_header_value_collection_replace_all(WWEHTHE_HttpContentCodingWithQualityHeaderValueCollection *self, WWEHTHE_HttpContentCodingWithQualityHeaderValue *items, uint32_t items_len);
 
-/* Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection.First() */
 HRESULT wwehthe_http_content_coding_with_quality_header_value_collection_first(WWEHTHE_HttpContentCodingWithQualityHeaderValueCollection *self, WFOCO_IIterator_WWEHTHE_HttpContentCodingWithQualityHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection.ToString() */
 HRESULT wwehthe_http_content_coding_with_quality_header_value_collection_to_string(WWEHTHE_HttpContentCodingWithQualityHeaderValueCollection *self, cwinrt_hstring *out);
 
-/* activate Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue */
 HRESULT wwehthe_http_content_coding_with_quality_header_value_new(WWEHTHE_HttpContentCodingWithQualityHeaderValue **out);
 
-/* Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue */
-/* Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue.get_ContentCoding() */
 HRESULT wwehthe_http_content_coding_with_quality_header_value_get__content_coding(WWEHTHE_HttpContentCodingWithQualityHeaderValue *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue.get_Quality() */
 HRESULT wwehthe_http_content_coding_with_quality_header_value_get__quality(WWEHTHE_HttpContentCodingWithQualityHeaderValue *self, double** value);
 
-/* Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue.ToString() */
 HRESULT wwehthe_http_content_coding_with_quality_header_value_to_string(WWEHTHE_HttpContentCodingWithQualityHeaderValue *self, cwinrt_hstring *out);
 
-/* Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue.Parse(input) */
 HRESULT wwehthe_http_content_coding_with_quality_header_value_parse(cwinrt_hstring input, WWEHTHE_HttpContentCodingWithQualityHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue.TryParse(input, contentCodingWithQualityHeaderValue) */
 HRESULT wwehthe_http_content_coding_with_quality_header_value_try_parse(cwinrt_hstring input, WWEHTHE_HttpContentCodingWithQualityHeaderValue* contentCodingWithQualityHeaderValue, BOOL *out);
 
-/* activate Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection */
 HRESULT wwehthe_http_content_coding_header_value_collection_new(WWEHTHE_HttpContentCodingHeaderValueCollection **out);
 
-/* Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection */
-/* Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection.ParseAdd(input) */
 HRESULT wwehthe_http_content_coding_header_value_collection_parse_add(WWEHTHE_HttpContentCodingHeaderValueCollection *self, cwinrt_hstring input);
 
-/* Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection.TryParseAdd(input) */
 HRESULT wwehthe_http_content_coding_header_value_collection_try_parse_add(WWEHTHE_HttpContentCodingHeaderValueCollection *self, cwinrt_hstring input, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection.GetAt(index) */
 HRESULT wwehthe_http_content_coding_header_value_collection_get_at(WWEHTHE_HttpContentCodingHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpContentCodingHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection.get_Size() */
 HRESULT wwehthe_http_content_coding_header_value_collection_get__size(WWEHTHE_HttpContentCodingHeaderValueCollection *self, uint32_t *value);
 
-/* Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection.GetView() */
 HRESULT wwehthe_http_content_coding_header_value_collection_get_view(WWEHTHE_HttpContentCodingHeaderValueCollection *self, WFOCO_IVectorView_WWEHTHE_HttpContentCodingHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection.IndexOf(index) */
 HRESULT wwehthe_http_content_coding_header_value_collection_index_of(WWEHTHE_HttpContentCodingHeaderValueCollection *self, WWEHTHE_HttpContentCodingHeaderValue* value, uint32_t index, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection.SetAt(index) */
 HRESULT wwehthe_http_content_coding_header_value_collection_set_at(WWEHTHE_HttpContentCodingHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpContentCodingHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection.InsertAt(index) */
 HRESULT wwehthe_http_content_coding_header_value_collection_insert_at(WWEHTHE_HttpContentCodingHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpContentCodingHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection.RemoveAt(index) */
 HRESULT wwehthe_http_content_coding_header_value_collection_remove_at(WWEHTHE_HttpContentCodingHeaderValueCollection *self, uint32_t index);
 
-/* Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection.Append() */
 HRESULT wwehthe_http_content_coding_header_value_collection_append(WWEHTHE_HttpContentCodingHeaderValueCollection *self, WWEHTHE_HttpContentCodingHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection.RemoveAtEnd() */
 HRESULT wwehthe_http_content_coding_header_value_collection_remove_at_end(WWEHTHE_HttpContentCodingHeaderValueCollection *self);
 
-/* Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection.Clear() */
 HRESULT wwehthe_http_content_coding_header_value_collection_clear(WWEHTHE_HttpContentCodingHeaderValueCollection *self);
 
-/* Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection.GetMany(startIndex, items) */
 HRESULT wwehthe_http_content_coding_header_value_collection_get_many(WWEHTHE_HttpContentCodingHeaderValueCollection *self, uint32_t startIndex, WWEHTHE_HttpContentCodingHeaderValue *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection.ReplaceAll(items) */
 HRESULT wwehthe_http_content_coding_header_value_collection_replace_all(WWEHTHE_HttpContentCodingHeaderValueCollection *self, WWEHTHE_HttpContentCodingHeaderValue *items, uint32_t items_len);
 
-/* Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection.First() */
 HRESULT wwehthe_http_content_coding_header_value_collection_first(WWEHTHE_HttpContentCodingHeaderValueCollection *self, WFOCO_IIterator_WWEHTHE_HttpContentCodingHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection.ToString() */
 HRESULT wwehthe_http_content_coding_header_value_collection_to_string(WWEHTHE_HttpContentCodingHeaderValueCollection *self, cwinrt_hstring *out);
 
-/* activate Windows.Web.Http.Headers.HttpContentCodingHeaderValue */
 HRESULT wwehthe_http_content_coding_header_value_new(WWEHTHE_HttpContentCodingHeaderValue **out);
 
-/* Windows.Web.Http.Headers.HttpContentCodingHeaderValue */
-/* Windows.Web.Http.Headers.HttpContentCodingHeaderValue.get_ContentCoding() */
 HRESULT wwehthe_http_content_coding_header_value_get__content_coding(WWEHTHE_HttpContentCodingHeaderValue *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.Headers.HttpContentCodingHeaderValue.ToString() */
 HRESULT wwehthe_http_content_coding_header_value_to_string(WWEHTHE_HttpContentCodingHeaderValue *self, cwinrt_hstring *out);
 
-/* Windows.Web.Http.Headers.HttpContentCodingHeaderValue.Parse(input) */
 HRESULT wwehthe_http_content_coding_header_value_parse(cwinrt_hstring input, WWEHTHE_HttpContentCodingHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpContentCodingHeaderValue.TryParse(input, contentCodingHeaderValue) */
 HRESULT wwehthe_http_content_coding_header_value_try_parse(cwinrt_hstring input, WWEHTHE_HttpContentCodingHeaderValue* contentCodingHeaderValue, BOOL *out);
 
-/* activate Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection */
 HRESULT wwehthe_http_connection_option_header_value_collection_new(WWEHTHE_HttpConnectionOptionHeaderValueCollection **out);
 
-/* Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection */
-/* Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection.ParseAdd(input) */
 HRESULT wwehthe_http_connection_option_header_value_collection_parse_add(WWEHTHE_HttpConnectionOptionHeaderValueCollection *self, cwinrt_hstring input);
 
-/* Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection.TryParseAdd(input) */
 HRESULT wwehthe_http_connection_option_header_value_collection_try_parse_add(WWEHTHE_HttpConnectionOptionHeaderValueCollection *self, cwinrt_hstring input, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection.GetAt(index) */
 HRESULT wwehthe_http_connection_option_header_value_collection_get_at(WWEHTHE_HttpConnectionOptionHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpConnectionOptionHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection.get_Size() */
 HRESULT wwehthe_http_connection_option_header_value_collection_get__size(WWEHTHE_HttpConnectionOptionHeaderValueCollection *self, uint32_t *value);
 
-/* Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection.GetView() */
 HRESULT wwehthe_http_connection_option_header_value_collection_get_view(WWEHTHE_HttpConnectionOptionHeaderValueCollection *self, WFOCO_IVectorView_WWEHTHE_HttpConnectionOptionHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection.IndexOf(index) */
 HRESULT wwehthe_http_connection_option_header_value_collection_index_of(WWEHTHE_HttpConnectionOptionHeaderValueCollection *self, WWEHTHE_HttpConnectionOptionHeaderValue* value, uint32_t index, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection.SetAt(index) */
 HRESULT wwehthe_http_connection_option_header_value_collection_set_at(WWEHTHE_HttpConnectionOptionHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpConnectionOptionHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection.InsertAt(index) */
 HRESULT wwehthe_http_connection_option_header_value_collection_insert_at(WWEHTHE_HttpConnectionOptionHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpConnectionOptionHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection.RemoveAt(index) */
 HRESULT wwehthe_http_connection_option_header_value_collection_remove_at(WWEHTHE_HttpConnectionOptionHeaderValueCollection *self, uint32_t index);
 
-/* Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection.Append() */
 HRESULT wwehthe_http_connection_option_header_value_collection_append(WWEHTHE_HttpConnectionOptionHeaderValueCollection *self, WWEHTHE_HttpConnectionOptionHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection.RemoveAtEnd() */
 HRESULT wwehthe_http_connection_option_header_value_collection_remove_at_end(WWEHTHE_HttpConnectionOptionHeaderValueCollection *self);
 
-/* Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection.Clear() */
 HRESULT wwehthe_http_connection_option_header_value_collection_clear(WWEHTHE_HttpConnectionOptionHeaderValueCollection *self);
 
-/* Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection.GetMany(startIndex, items) */
 HRESULT wwehthe_http_connection_option_header_value_collection_get_many(WWEHTHE_HttpConnectionOptionHeaderValueCollection *self, uint32_t startIndex, WWEHTHE_HttpConnectionOptionHeaderValue *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection.ReplaceAll(items) */
 HRESULT wwehthe_http_connection_option_header_value_collection_replace_all(WWEHTHE_HttpConnectionOptionHeaderValueCollection *self, WWEHTHE_HttpConnectionOptionHeaderValue *items, uint32_t items_len);
 
-/* Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection.First() */
 HRESULT wwehthe_http_connection_option_header_value_collection_first(WWEHTHE_HttpConnectionOptionHeaderValueCollection *self, WFOCO_IIterator_WWEHTHE_HttpConnectionOptionHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection.ToString() */
 HRESULT wwehthe_http_connection_option_header_value_collection_to_string(WWEHTHE_HttpConnectionOptionHeaderValueCollection *self, cwinrt_hstring *out);
 
-/* activate Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue */
 HRESULT wwehthe_http_connection_option_header_value_new(WWEHTHE_HttpConnectionOptionHeaderValue **out);
 
-/* Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue */
-/* Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue.get_Token() */
 HRESULT wwehthe_http_connection_option_header_value_get__token(WWEHTHE_HttpConnectionOptionHeaderValue *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue.ToString() */
 HRESULT wwehthe_http_connection_option_header_value_to_string(WWEHTHE_HttpConnectionOptionHeaderValue *self, cwinrt_hstring *out);
 
-/* Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue.Parse(input) */
 HRESULT wwehthe_http_connection_option_header_value_parse(cwinrt_hstring input, WWEHTHE_HttpConnectionOptionHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue.TryParse(input, connectionOptionHeaderValue) */
 HRESULT wwehthe_http_connection_option_header_value_try_parse(cwinrt_hstring input, WWEHTHE_HttpConnectionOptionHeaderValue* connectionOptionHeaderValue, BOOL *out);
 
-/* activate Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection */
 HRESULT wwehthe_http_challenge_header_value_collection_new(WWEHTHE_HttpChallengeHeaderValueCollection **out);
 
-/* Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection */
-/* Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection.ParseAdd(input) */
 HRESULT wwehthe_http_challenge_header_value_collection_parse_add(WWEHTHE_HttpChallengeHeaderValueCollection *self, cwinrt_hstring input);
 
-/* Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection.TryParseAdd(input) */
 HRESULT wwehthe_http_challenge_header_value_collection_try_parse_add(WWEHTHE_HttpChallengeHeaderValueCollection *self, cwinrt_hstring input, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection.GetAt(index) */
 HRESULT wwehthe_http_challenge_header_value_collection_get_at(WWEHTHE_HttpChallengeHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpChallengeHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection.get_Size() */
 HRESULT wwehthe_http_challenge_header_value_collection_get__size(WWEHTHE_HttpChallengeHeaderValueCollection *self, uint32_t *value);
 
-/* Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection.GetView() */
 HRESULT wwehthe_http_challenge_header_value_collection_get_view(WWEHTHE_HttpChallengeHeaderValueCollection *self, WFOCO_IVectorView_WWEHTHE_HttpChallengeHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection.IndexOf(index) */
 HRESULT wwehthe_http_challenge_header_value_collection_index_of(WWEHTHE_HttpChallengeHeaderValueCollection *self, WWEHTHE_HttpChallengeHeaderValue* value, uint32_t index, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection.SetAt(index) */
 HRESULT wwehthe_http_challenge_header_value_collection_set_at(WWEHTHE_HttpChallengeHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpChallengeHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection.InsertAt(index) */
 HRESULT wwehthe_http_challenge_header_value_collection_insert_at(WWEHTHE_HttpChallengeHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpChallengeHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection.RemoveAt(index) */
 HRESULT wwehthe_http_challenge_header_value_collection_remove_at(WWEHTHE_HttpChallengeHeaderValueCollection *self, uint32_t index);
 
-/* Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection.Append() */
 HRESULT wwehthe_http_challenge_header_value_collection_append(WWEHTHE_HttpChallengeHeaderValueCollection *self, WWEHTHE_HttpChallengeHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection.RemoveAtEnd() */
 HRESULT wwehthe_http_challenge_header_value_collection_remove_at_end(WWEHTHE_HttpChallengeHeaderValueCollection *self);
 
-/* Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection.Clear() */
 HRESULT wwehthe_http_challenge_header_value_collection_clear(WWEHTHE_HttpChallengeHeaderValueCollection *self);
 
-/* Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection.GetMany(startIndex, items) */
 HRESULT wwehthe_http_challenge_header_value_collection_get_many(WWEHTHE_HttpChallengeHeaderValueCollection *self, uint32_t startIndex, WWEHTHE_HttpChallengeHeaderValue *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection.ReplaceAll(items) */
 HRESULT wwehthe_http_challenge_header_value_collection_replace_all(WWEHTHE_HttpChallengeHeaderValueCollection *self, WWEHTHE_HttpChallengeHeaderValue *items, uint32_t items_len);
 
-/* Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection.First() */
 HRESULT wwehthe_http_challenge_header_value_collection_first(WWEHTHE_HttpChallengeHeaderValueCollection *self, WFOCO_IIterator_WWEHTHE_HttpChallengeHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection.ToString() */
 HRESULT wwehthe_http_challenge_header_value_collection_to_string(WWEHTHE_HttpChallengeHeaderValueCollection *self, cwinrt_hstring *out);
 
-/* activate Windows.Web.Http.Headers.HttpChallengeHeaderValue */
 HRESULT wwehthe_http_challenge_header_value_new(WWEHTHE_HttpChallengeHeaderValue **out);
 
-/* Windows.Web.Http.Headers.HttpChallengeHeaderValue */
-/* Windows.Web.Http.Headers.HttpChallengeHeaderValue.get_Parameters() */
 HRESULT wwehthe_http_challenge_header_value_get__parameters(WWEHTHE_HttpChallengeHeaderValue *self, WFOCO_IVector_WWEHTHE_HttpNameValueHeaderValue** value);
 
-/* Windows.Web.Http.Headers.HttpChallengeHeaderValue.get_Scheme() */
 HRESULT wwehthe_http_challenge_header_value_get__scheme(WWEHTHE_HttpChallengeHeaderValue *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.Headers.HttpChallengeHeaderValue.get_Token() */
 HRESULT wwehthe_http_challenge_header_value_get__token(WWEHTHE_HttpChallengeHeaderValue *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.Headers.HttpChallengeHeaderValue.ToString() */
 HRESULT wwehthe_http_challenge_header_value_to_string(WWEHTHE_HttpChallengeHeaderValue *self, cwinrt_hstring *out);
 
-/* Windows.Web.Http.Headers.HttpChallengeHeaderValue.Parse(input) */
 HRESULT wwehthe_http_challenge_header_value_parse(cwinrt_hstring input, WWEHTHE_HttpChallengeHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpChallengeHeaderValue.TryParse(input, challengeHeaderValue) */
 HRESULT wwehthe_http_challenge_header_value_try_parse(cwinrt_hstring input, WWEHTHE_HttpChallengeHeaderValue* challengeHeaderValue, BOOL *out);
 
-/* activate Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection */
 HRESULT wwehthe_http_cache_directive_header_value_collection_new(WWEHTHE_HttpCacheDirectiveHeaderValueCollection **out);
 
-/* Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection */
-/* Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection.get_MaxAge() */
 HRESULT wwehthe_http_cache_directive_header_value_collection_get__max_age(WWEHTHE_HttpCacheDirectiveHeaderValueCollection *self, WF_TimeSpan** value);
 
-/* Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection.put_MaxAge() */
 HRESULT wwehthe_http_cache_directive_header_value_collection_put__max_age(WWEHTHE_HttpCacheDirectiveHeaderValueCollection *self, WF_TimeSpan* value);
 
-/* Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection.get_MaxStale() */
 HRESULT wwehthe_http_cache_directive_header_value_collection_get__max_stale(WWEHTHE_HttpCacheDirectiveHeaderValueCollection *self, WF_TimeSpan** value);
 
-/* Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection.put_MaxStale() */
 HRESULT wwehthe_http_cache_directive_header_value_collection_put__max_stale(WWEHTHE_HttpCacheDirectiveHeaderValueCollection *self, WF_TimeSpan* value);
 
-/* Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection.get_MinFresh() */
 HRESULT wwehthe_http_cache_directive_header_value_collection_get__min_fresh(WWEHTHE_HttpCacheDirectiveHeaderValueCollection *self, WF_TimeSpan** value);
 
-/* Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection.put_MinFresh() */
 HRESULT wwehthe_http_cache_directive_header_value_collection_put__min_fresh(WWEHTHE_HttpCacheDirectiveHeaderValueCollection *self, WF_TimeSpan* value);
 
-/* Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection.get_SharedMaxAge() */
 HRESULT wwehthe_http_cache_directive_header_value_collection_get__shared_max_age(WWEHTHE_HttpCacheDirectiveHeaderValueCollection *self, WF_TimeSpan** value);
 
-/* Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection.put_SharedMaxAge() */
 HRESULT wwehthe_http_cache_directive_header_value_collection_put__shared_max_age(WWEHTHE_HttpCacheDirectiveHeaderValueCollection *self, WF_TimeSpan* value);
 
-/* Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection.ParseAdd(input) */
 HRESULT wwehthe_http_cache_directive_header_value_collection_parse_add(WWEHTHE_HttpCacheDirectiveHeaderValueCollection *self, cwinrt_hstring input);
 
-/* Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection.TryParseAdd(input) */
 HRESULT wwehthe_http_cache_directive_header_value_collection_try_parse_add(WWEHTHE_HttpCacheDirectiveHeaderValueCollection *self, cwinrt_hstring input, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection.GetAt(index) */
 HRESULT wwehthe_http_cache_directive_header_value_collection_get_at(WWEHTHE_HttpCacheDirectiveHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpNameValueHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection.get_Size() */
 HRESULT wwehthe_http_cache_directive_header_value_collection_get__size(WWEHTHE_HttpCacheDirectiveHeaderValueCollection *self, uint32_t *value);
 
-/* Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection.GetView() */
 HRESULT wwehthe_http_cache_directive_header_value_collection_get_view(WWEHTHE_HttpCacheDirectiveHeaderValueCollection *self, WFOCO_IVectorView_WWEHTHE_HttpNameValueHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection.IndexOf(index) */
 HRESULT wwehthe_http_cache_directive_header_value_collection_index_of(WWEHTHE_HttpCacheDirectiveHeaderValueCollection *self, WWEHTHE_HttpNameValueHeaderValue* value, uint32_t index, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection.SetAt(index) */
 HRESULT wwehthe_http_cache_directive_header_value_collection_set_at(WWEHTHE_HttpCacheDirectiveHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpNameValueHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection.InsertAt(index) */
 HRESULT wwehthe_http_cache_directive_header_value_collection_insert_at(WWEHTHE_HttpCacheDirectiveHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpNameValueHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection.RemoveAt(index) */
 HRESULT wwehthe_http_cache_directive_header_value_collection_remove_at(WWEHTHE_HttpCacheDirectiveHeaderValueCollection *self, uint32_t index);
 
-/* Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection.Append() */
 HRESULT wwehthe_http_cache_directive_header_value_collection_append(WWEHTHE_HttpCacheDirectiveHeaderValueCollection *self, WWEHTHE_HttpNameValueHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection.RemoveAtEnd() */
 HRESULT wwehthe_http_cache_directive_header_value_collection_remove_at_end(WWEHTHE_HttpCacheDirectiveHeaderValueCollection *self);
 
-/* Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection.Clear() */
 HRESULT wwehthe_http_cache_directive_header_value_collection_clear(WWEHTHE_HttpCacheDirectiveHeaderValueCollection *self);
 
-/* Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection.GetMany(startIndex, items) */
 HRESULT wwehthe_http_cache_directive_header_value_collection_get_many(WWEHTHE_HttpCacheDirectiveHeaderValueCollection *self, uint32_t startIndex, WWEHTHE_HttpNameValueHeaderValue *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection.ReplaceAll(items) */
 HRESULT wwehthe_http_cache_directive_header_value_collection_replace_all(WWEHTHE_HttpCacheDirectiveHeaderValueCollection *self, WWEHTHE_HttpNameValueHeaderValue *items, uint32_t items_len);
 
-/* Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection.First() */
 HRESULT wwehthe_http_cache_directive_header_value_collection_first(WWEHTHE_HttpCacheDirectiveHeaderValueCollection *self, WFOCO_IIterator_WWEHTHE_HttpNameValueHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection.ToString() */
 HRESULT wwehthe_http_cache_directive_header_value_collection_to_string(WWEHTHE_HttpCacheDirectiveHeaderValueCollection *self, cwinrt_hstring *out);
 
-/* Windows.Web.Http.Headers.IHttpContentRangeHeaderValueFactory */
-/* Windows.Web.Http.Headers.IHttpContentRangeHeaderValueFactory.CreateFromLength(length) */
 HRESULT wwehthe_http_content_range_header_value_factory_create_from_length(WWEHTHE_IHttpContentRangeHeaderValueFactory *self, uint64_t length, WWEHTHE_HttpContentRangeHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpContentRangeHeaderValueFactory.CreateFromRange(from, to) */
 HRESULT wwehthe_http_content_range_header_value_factory_create_from_range(WWEHTHE_IHttpContentRangeHeaderValueFactory *self, uint64_t from, uint64_t to, WWEHTHE_HttpContentRangeHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpContentRangeHeaderValueFactory.CreateFromRangeWithLength(from, to, length) */
 HRESULT wwehthe_http_content_range_header_value_factory_create_from_range_with_length(WWEHTHE_IHttpContentRangeHeaderValueFactory *self, uint64_t from, uint64_t to, uint64_t length, WWEHTHE_HttpContentRangeHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpContentDispositionHeaderValueStatics */
-/* Windows.Web.Http.Headers.IHttpContentDispositionHeaderValueStatics.Parse(input) */
 HRESULT wwehthe_http_content_disposition_header_value_statics_parse(WWEHTHE_IHttpContentDispositionHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpContentDispositionHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpContentDispositionHeaderValueStatics.TryParse(input, contentDispositionHeaderValue) */
 HRESULT wwehthe_http_content_disposition_header_value_statics_try_parse(WWEHTHE_IHttpContentDispositionHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpContentDispositionHeaderValue* contentDispositionHeaderValue, BOOL *out);
 
-/* Windows.Web.Http.Headers.IHttpContentDispositionHeaderValueFactory */
-/* Windows.Web.Http.Headers.IHttpContentDispositionHeaderValueFactory.Create(dispositionType) */
 HRESULT wwehthe_http_content_disposition_header_value_factory_create(WWEHTHE_IHttpContentDispositionHeaderValueFactory *self, cwinrt_hstring dispositionType, WWEHTHE_HttpContentDispositionHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueStatics */
-/* Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueStatics.Parse(input) */
 HRESULT wwehthe_http_content_coding_with_quality_header_value_statics_parse(WWEHTHE_IHttpContentCodingWithQualityHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpContentCodingWithQualityHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueStatics.TryParse(input, contentCodingWithQualityHeaderValue) */
 HRESULT wwehthe_http_content_coding_with_quality_header_value_statics_try_parse(WWEHTHE_IHttpContentCodingWithQualityHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpContentCodingWithQualityHeaderValue* contentCodingWithQualityHeaderValue, BOOL *out);
 
-/* Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueFactory */
-/* Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueFactory.CreateFromValue(contentCoding) */
 HRESULT wwehthe_http_content_coding_with_quality_header_value_factory_create_from_value(WWEHTHE_IHttpContentCodingWithQualityHeaderValueFactory *self, cwinrt_hstring contentCoding, WWEHTHE_HttpContentCodingWithQualityHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueFactory.CreateFromValueWithQuality(contentCoding, quality) */
 HRESULT wwehthe_http_content_coding_with_quality_header_value_factory_create_from_value_with_quality(WWEHTHE_IHttpContentCodingWithQualityHeaderValueFactory *self, cwinrt_hstring contentCoding, double quality, WWEHTHE_HttpContentCodingWithQualityHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpContentCodingHeaderValueStatics */
-/* Windows.Web.Http.Headers.IHttpContentCodingHeaderValueStatics.Parse(input) */
 HRESULT wwehthe_http_content_coding_header_value_statics_parse(WWEHTHE_IHttpContentCodingHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpContentCodingHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpContentCodingHeaderValueStatics.TryParse(input, contentCodingHeaderValue) */
 HRESULT wwehthe_http_content_coding_header_value_statics_try_parse(WWEHTHE_IHttpContentCodingHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpContentCodingHeaderValue* contentCodingHeaderValue, BOOL *out);
 
-/* Windows.Web.Http.Headers.IHttpContentCodingHeaderValueFactory */
-/* Windows.Web.Http.Headers.IHttpContentCodingHeaderValueFactory.Create(contentCoding) */
 HRESULT wwehthe_http_content_coding_header_value_factory_create(WWEHTHE_IHttpContentCodingHeaderValueFactory *self, cwinrt_hstring contentCoding, WWEHTHE_HttpContentCodingHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueStatics */
-/* Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueStatics.Parse(input) */
 HRESULT wwehthe_http_connection_option_header_value_statics_parse(WWEHTHE_IHttpConnectionOptionHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpConnectionOptionHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueStatics.TryParse(input, connectionOptionHeaderValue) */
 HRESULT wwehthe_http_connection_option_header_value_statics_try_parse(WWEHTHE_IHttpConnectionOptionHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpConnectionOptionHeaderValue* connectionOptionHeaderValue, BOOL *out);
 
-/* Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueFactory */
-/* Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueFactory.Create(token) */
 HRESULT wwehthe_http_connection_option_header_value_factory_create(WWEHTHE_IHttpConnectionOptionHeaderValueFactory *self, cwinrt_hstring token, WWEHTHE_HttpConnectionOptionHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpChallengeHeaderValueStatics */
-/* Windows.Web.Http.Headers.IHttpChallengeHeaderValueStatics.Parse(input) */
 HRESULT wwehthe_http_challenge_header_value_statics_parse(WWEHTHE_IHttpChallengeHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpChallengeHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpChallengeHeaderValueStatics.TryParse(input, challengeHeaderValue) */
 HRESULT wwehthe_http_challenge_header_value_statics_try_parse(WWEHTHE_IHttpChallengeHeaderValueStatics *self, cwinrt_hstring input, WWEHTHE_HttpChallengeHeaderValue* challengeHeaderValue, BOOL *out);
 
-/* Windows.Web.Http.Headers.IHttpChallengeHeaderValueFactory */
-/* Windows.Web.Http.Headers.IHttpChallengeHeaderValueFactory.CreateFromScheme(scheme) */
 HRESULT wwehthe_http_challenge_header_value_factory_create_from_scheme(WWEHTHE_IHttpChallengeHeaderValueFactory *self, cwinrt_hstring scheme, WWEHTHE_HttpChallengeHeaderValue** out);
 
-/* Windows.Web.Http.Headers.IHttpChallengeHeaderValueFactory.CreateFromSchemeWithToken(scheme, token) */
 HRESULT wwehthe_http_challenge_header_value_factory_create_from_scheme_with_token(WWEHTHE_IHttpChallengeHeaderValueFactory *self, cwinrt_hstring scheme, cwinrt_hstring token, WWEHTHE_HttpChallengeHeaderValue** out);
 
-/* activate Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection */
 HRESULT wwehthe_http_transfer_coding_header_value_collection_new(WWEHTHE_HttpTransferCodingHeaderValueCollection **out);
 
-/* Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection */
-/* Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection.ParseAdd(input) */
 HRESULT wwehthe_http_transfer_coding_header_value_collection_parse_add(WWEHTHE_HttpTransferCodingHeaderValueCollection *self, cwinrt_hstring input);
 
-/* Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection.TryParseAdd(input) */
 HRESULT wwehthe_http_transfer_coding_header_value_collection_try_parse_add(WWEHTHE_HttpTransferCodingHeaderValueCollection *self, cwinrt_hstring input, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection.GetAt(index) */
 HRESULT wwehthe_http_transfer_coding_header_value_collection_get_at(WWEHTHE_HttpTransferCodingHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpTransferCodingHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection.get_Size() */
 HRESULT wwehthe_http_transfer_coding_header_value_collection_get__size(WWEHTHE_HttpTransferCodingHeaderValueCollection *self, uint32_t *value);
 
-/* Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection.GetView() */
 HRESULT wwehthe_http_transfer_coding_header_value_collection_get_view(WWEHTHE_HttpTransferCodingHeaderValueCollection *self, WFOCO_IVectorView_WWEHTHE_HttpTransferCodingHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection.IndexOf(index) */
 HRESULT wwehthe_http_transfer_coding_header_value_collection_index_of(WWEHTHE_HttpTransferCodingHeaderValueCollection *self, WWEHTHE_HttpTransferCodingHeaderValue* value, uint32_t index, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection.SetAt(index) */
 HRESULT wwehthe_http_transfer_coding_header_value_collection_set_at(WWEHTHE_HttpTransferCodingHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpTransferCodingHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection.InsertAt(index) */
 HRESULT wwehthe_http_transfer_coding_header_value_collection_insert_at(WWEHTHE_HttpTransferCodingHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpTransferCodingHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection.RemoveAt(index) */
 HRESULT wwehthe_http_transfer_coding_header_value_collection_remove_at(WWEHTHE_HttpTransferCodingHeaderValueCollection *self, uint32_t index);
 
-/* Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection.Append() */
 HRESULT wwehthe_http_transfer_coding_header_value_collection_append(WWEHTHE_HttpTransferCodingHeaderValueCollection *self, WWEHTHE_HttpTransferCodingHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection.RemoveAtEnd() */
 HRESULT wwehthe_http_transfer_coding_header_value_collection_remove_at_end(WWEHTHE_HttpTransferCodingHeaderValueCollection *self);
 
-/* Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection.Clear() */
 HRESULT wwehthe_http_transfer_coding_header_value_collection_clear(WWEHTHE_HttpTransferCodingHeaderValueCollection *self);
 
-/* Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection.GetMany(startIndex, items) */
 HRESULT wwehthe_http_transfer_coding_header_value_collection_get_many(WWEHTHE_HttpTransferCodingHeaderValueCollection *self, uint32_t startIndex, WWEHTHE_HttpTransferCodingHeaderValue *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection.ReplaceAll(items) */
 HRESULT wwehthe_http_transfer_coding_header_value_collection_replace_all(WWEHTHE_HttpTransferCodingHeaderValueCollection *self, WWEHTHE_HttpTransferCodingHeaderValue *items, uint32_t items_len);
 
-/* Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection.First() */
 HRESULT wwehthe_http_transfer_coding_header_value_collection_first(WWEHTHE_HttpTransferCodingHeaderValueCollection *self, WFOCO_IIterator_WWEHTHE_HttpTransferCodingHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection.ToString() */
 HRESULT wwehthe_http_transfer_coding_header_value_collection_to_string(WWEHTHE_HttpTransferCodingHeaderValueCollection *self, cwinrt_hstring *out);
 
-/* activate Windows.Web.Http.Headers.HttpTransferCodingHeaderValue */
 HRESULT wwehthe_http_transfer_coding_header_value_new(WWEHTHE_HttpTransferCodingHeaderValue **out);
 
-/* Windows.Web.Http.Headers.HttpTransferCodingHeaderValue */
-/* Windows.Web.Http.Headers.HttpTransferCodingHeaderValue.get_Parameters() */
 HRESULT wwehthe_http_transfer_coding_header_value_get__parameters(WWEHTHE_HttpTransferCodingHeaderValue *self, WFOCO_IVector_WWEHTHE_HttpNameValueHeaderValue** value);
 
-/* Windows.Web.Http.Headers.HttpTransferCodingHeaderValue.get_Value() */
 HRESULT wwehthe_http_transfer_coding_header_value_get__value(WWEHTHE_HttpTransferCodingHeaderValue *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.Headers.HttpTransferCodingHeaderValue.ToString() */
 HRESULT wwehthe_http_transfer_coding_header_value_to_string(WWEHTHE_HttpTransferCodingHeaderValue *self, cwinrt_hstring *out);
 
-/* Windows.Web.Http.Headers.HttpTransferCodingHeaderValue.Parse(input) */
 HRESULT wwehthe_http_transfer_coding_header_value_parse(cwinrt_hstring input, WWEHTHE_HttpTransferCodingHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpTransferCodingHeaderValue.TryParse(input, transferCodingHeaderValue) */
 HRESULT wwehthe_http_transfer_coding_header_value_try_parse(cwinrt_hstring input, WWEHTHE_HttpTransferCodingHeaderValue* transferCodingHeaderValue, BOOL *out);
 
-/* activate Windows.Web.Http.Headers.HttpResponseHeaderCollection */
 HRESULT wwehthe_http_response_header_collection_new(WWEHTHE_HttpResponseHeaderCollection **out);
 
-/* Windows.Web.Http.Headers.HttpResponseHeaderCollection */
-/* Windows.Web.Http.Headers.HttpResponseHeaderCollection.get_Age() */
 HRESULT wwehthe_http_response_header_collection_get__age(WWEHTHE_HttpResponseHeaderCollection *self, WF_TimeSpan** value);
 
-/* Windows.Web.Http.Headers.HttpResponseHeaderCollection.put_Age() */
 HRESULT wwehthe_http_response_header_collection_put__age(WWEHTHE_HttpResponseHeaderCollection *self, WF_TimeSpan* value);
 
-/* Windows.Web.Http.Headers.HttpResponseHeaderCollection.get_Allow() */
 HRESULT wwehthe_http_response_header_collection_get__allow(WWEHTHE_HttpResponseHeaderCollection *self, WWEHTHE_HttpMethodHeaderValueCollection** value);
 
-/* Windows.Web.Http.Headers.HttpResponseHeaderCollection.get_CacheControl() */
 HRESULT wwehthe_http_response_header_collection_get__cache_control(WWEHTHE_HttpResponseHeaderCollection *self, WWEHTHE_HttpCacheDirectiveHeaderValueCollection** value);
 
-/* Windows.Web.Http.Headers.HttpResponseHeaderCollection.get_Connection() */
 HRESULT wwehthe_http_response_header_collection_get__connection(WWEHTHE_HttpResponseHeaderCollection *self, WWEHTHE_HttpConnectionOptionHeaderValueCollection** value);
 
-/* Windows.Web.Http.Headers.HttpResponseHeaderCollection.get_Date() */
 HRESULT wwehthe_http_response_header_collection_get__date(WWEHTHE_HttpResponseHeaderCollection *self, WF_DateTime** value);
 
-/* Windows.Web.Http.Headers.HttpResponseHeaderCollection.put_Date() */
 HRESULT wwehthe_http_response_header_collection_put__date(WWEHTHE_HttpResponseHeaderCollection *self, WF_DateTime* value);
 
-/* Windows.Web.Http.Headers.HttpResponseHeaderCollection.get_Location() */
 HRESULT wwehthe_http_response_header_collection_get__location(WWEHTHE_HttpResponseHeaderCollection *self, WF_Uri** value);
 
-/* Windows.Web.Http.Headers.HttpResponseHeaderCollection.put_Location() */
 HRESULT wwehthe_http_response_header_collection_put__location(WWEHTHE_HttpResponseHeaderCollection *self, WF_Uri* value);
 
-/* Windows.Web.Http.Headers.HttpResponseHeaderCollection.get_ProxyAuthenticate() */
 HRESULT wwehthe_http_response_header_collection_get__proxy_authenticate(WWEHTHE_HttpResponseHeaderCollection *self, WWEHTHE_HttpChallengeHeaderValueCollection** value);
 
-/* Windows.Web.Http.Headers.HttpResponseHeaderCollection.get_RetryAfter() */
 HRESULT wwehthe_http_response_header_collection_get__retry_after(WWEHTHE_HttpResponseHeaderCollection *self, WWEHTHE_HttpDateOrDeltaHeaderValue** value);
 
-/* Windows.Web.Http.Headers.HttpResponseHeaderCollection.put_RetryAfter() */
 HRESULT wwehthe_http_response_header_collection_put__retry_after(WWEHTHE_HttpResponseHeaderCollection *self, WWEHTHE_HttpDateOrDeltaHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpResponseHeaderCollection.get_TransferEncoding() */
 HRESULT wwehthe_http_response_header_collection_get__transfer_encoding(WWEHTHE_HttpResponseHeaderCollection *self, WWEHTHE_HttpTransferCodingHeaderValueCollection** value);
 
-/* Windows.Web.Http.Headers.HttpResponseHeaderCollection.get_WwwAuthenticate() */
 HRESULT wwehthe_http_response_header_collection_get__www_authenticate(WWEHTHE_HttpResponseHeaderCollection *self, WWEHTHE_HttpChallengeHeaderValueCollection** value);
 
-/* Windows.Web.Http.Headers.HttpResponseHeaderCollection.Append(name) */
 HRESULT wwehthe_http_response_header_collection_append(WWEHTHE_HttpResponseHeaderCollection *self, cwinrt_hstring name, cwinrt_hstring value);
 
-/* Windows.Web.Http.Headers.HttpResponseHeaderCollection.TryAppendWithoutValidation(name) */
 HRESULT wwehthe_http_response_header_collection_try_append_without_validation(WWEHTHE_HttpResponseHeaderCollection *self, cwinrt_hstring name, cwinrt_hstring value, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpResponseHeaderCollection.Lookup(key) */
 HRESULT wwehthe_http_response_header_collection_lookup(WWEHTHE_HttpResponseHeaderCollection *self, cwinrt_hstring key, cwinrt_hstring *out);
 
-/* Windows.Web.Http.Headers.HttpResponseHeaderCollection.get_Size() */
 HRESULT wwehthe_http_response_header_collection_get__size(WWEHTHE_HttpResponseHeaderCollection *self, uint32_t *value);
 
-/* Windows.Web.Http.Headers.HttpResponseHeaderCollection.HasKey(key) */
 HRESULT wwehthe_http_response_header_collection_has_key(WWEHTHE_HttpResponseHeaderCollection *self, cwinrt_hstring key, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpResponseHeaderCollection.GetView() */
 HRESULT wwehthe_http_response_header_collection_get_view(WWEHTHE_HttpResponseHeaderCollection *self, WFOCO_IMapView_HSTRING_HSTRING** out);
 
-/* Windows.Web.Http.Headers.HttpResponseHeaderCollection.Insert(key) */
 HRESULT wwehthe_http_response_header_collection_insert(WWEHTHE_HttpResponseHeaderCollection *self, cwinrt_hstring key, cwinrt_hstring value, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpResponseHeaderCollection.Remove(key) */
 HRESULT wwehthe_http_response_header_collection_remove(WWEHTHE_HttpResponseHeaderCollection *self, cwinrt_hstring key);
 
-/* Windows.Web.Http.Headers.HttpResponseHeaderCollection.Clear() */
 HRESULT wwehthe_http_response_header_collection_clear(WWEHTHE_HttpResponseHeaderCollection *self);
 
-/* Windows.Web.Http.Headers.HttpResponseHeaderCollection.First() */
 HRESULT wwehthe_http_response_header_collection_first(WWEHTHE_HttpResponseHeaderCollection *self, WFOCO_IIterator_WFOCO_IKeyValuePair_HSTRING_HSTRING** out);
 
-/* Windows.Web.Http.Headers.HttpResponseHeaderCollection.ToString() */
 HRESULT wwehthe_http_response_header_collection_to_string(WWEHTHE_HttpResponseHeaderCollection *self, cwinrt_hstring *out);
 
-/* activate Windows.Web.Http.Headers.HttpRequestHeaderCollection */
 HRESULT wwehthe_http_request_header_collection_new(WWEHTHE_HttpRequestHeaderCollection **out);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection */
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.get_Accept() */
 HRESULT wwehthe_http_request_header_collection_get__accept(WWEHTHE_HttpRequestHeaderCollection *self, WWEHTHE_HttpMediaTypeWithQualityHeaderValueCollection** value);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.get_AcceptEncoding() */
 HRESULT wwehthe_http_request_header_collection_get__accept_encoding(WWEHTHE_HttpRequestHeaderCollection *self, WWEHTHE_HttpContentCodingWithQualityHeaderValueCollection** value);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.get_AcceptLanguage() */
 HRESULT wwehthe_http_request_header_collection_get__accept_language(WWEHTHE_HttpRequestHeaderCollection *self, WWEHTHE_HttpLanguageRangeWithQualityHeaderValueCollection** value);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.get_Authorization() */
 HRESULT wwehthe_http_request_header_collection_get__authorization(WWEHTHE_HttpRequestHeaderCollection *self, WWEHTHE_HttpCredentialsHeaderValue** value);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.put_Authorization() */
 HRESULT wwehthe_http_request_header_collection_put__authorization(WWEHTHE_HttpRequestHeaderCollection *self, WWEHTHE_HttpCredentialsHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.get_CacheControl() */
 HRESULT wwehthe_http_request_header_collection_get__cache_control(WWEHTHE_HttpRequestHeaderCollection *self, WWEHTHE_HttpCacheDirectiveHeaderValueCollection** value);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.get_Connection() */
 HRESULT wwehthe_http_request_header_collection_get__connection(WWEHTHE_HttpRequestHeaderCollection *self, WWEHTHE_HttpConnectionOptionHeaderValueCollection** value);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.get_Cookie() */
 HRESULT wwehthe_http_request_header_collection_get__cookie(WWEHTHE_HttpRequestHeaderCollection *self, WWEHTHE_HttpCookiePairHeaderValueCollection** value);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.get_Date() */
 HRESULT wwehthe_http_request_header_collection_get__date(WWEHTHE_HttpRequestHeaderCollection *self, WF_DateTime** value);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.put_Date() */
 HRESULT wwehthe_http_request_header_collection_put__date(WWEHTHE_HttpRequestHeaderCollection *self, WF_DateTime* value);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.get_Expect() */
 HRESULT wwehthe_http_request_header_collection_get__expect(WWEHTHE_HttpRequestHeaderCollection *self, WWEHTHE_HttpExpectationHeaderValueCollection** value);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.get_From() */
 HRESULT wwehthe_http_request_header_collection_get__from(WWEHTHE_HttpRequestHeaderCollection *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.put_From() */
 HRESULT wwehthe_http_request_header_collection_put__from(WWEHTHE_HttpRequestHeaderCollection *self, cwinrt_hstring value);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.get_Host() */
 HRESULT wwehthe_http_request_header_collection_get__host(WWEHTHE_HttpRequestHeaderCollection *self, WNE_HostName** value);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.put_Host() */
 HRESULT wwehthe_http_request_header_collection_put__host(WWEHTHE_HttpRequestHeaderCollection *self, WNE_HostName* value);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.get_IfModifiedSince() */
 HRESULT wwehthe_http_request_header_collection_get__if_modified_since(WWEHTHE_HttpRequestHeaderCollection *self, WF_DateTime** value);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.put_IfModifiedSince() */
 HRESULT wwehthe_http_request_header_collection_put__if_modified_since(WWEHTHE_HttpRequestHeaderCollection *self, WF_DateTime* value);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.get_IfUnmodifiedSince() */
 HRESULT wwehthe_http_request_header_collection_get__if_unmodified_since(WWEHTHE_HttpRequestHeaderCollection *self, WF_DateTime** value);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.put_IfUnmodifiedSince() */
 HRESULT wwehthe_http_request_header_collection_put__if_unmodified_since(WWEHTHE_HttpRequestHeaderCollection *self, WF_DateTime* value);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.get_MaxForwards() */
 HRESULT wwehthe_http_request_header_collection_get__max_forwards(WWEHTHE_HttpRequestHeaderCollection *self, uint32_t** value);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.put_MaxForwards() */
 HRESULT wwehthe_http_request_header_collection_put__max_forwards(WWEHTHE_HttpRequestHeaderCollection *self, uint32_t* value);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.get_ProxyAuthorization() */
 HRESULT wwehthe_http_request_header_collection_get__proxy_authorization(WWEHTHE_HttpRequestHeaderCollection *self, WWEHTHE_HttpCredentialsHeaderValue** value);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.put_ProxyAuthorization() */
 HRESULT wwehthe_http_request_header_collection_put__proxy_authorization(WWEHTHE_HttpRequestHeaderCollection *self, WWEHTHE_HttpCredentialsHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.get_Referer() */
 HRESULT wwehthe_http_request_header_collection_get__referer(WWEHTHE_HttpRequestHeaderCollection *self, WF_Uri** value);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.put_Referer() */
 HRESULT wwehthe_http_request_header_collection_put__referer(WWEHTHE_HttpRequestHeaderCollection *self, WF_Uri* value);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.get_TransferEncoding() */
 HRESULT wwehthe_http_request_header_collection_get__transfer_encoding(WWEHTHE_HttpRequestHeaderCollection *self, WWEHTHE_HttpTransferCodingHeaderValueCollection** value);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.get_UserAgent() */
 HRESULT wwehthe_http_request_header_collection_get__user_agent(WWEHTHE_HttpRequestHeaderCollection *self, WWEHTHE_HttpProductInfoHeaderValueCollection** value);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.Append(name) */
 HRESULT wwehthe_http_request_header_collection_append(WWEHTHE_HttpRequestHeaderCollection *self, cwinrt_hstring name, cwinrt_hstring value);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.TryAppendWithoutValidation(name) */
 HRESULT wwehthe_http_request_header_collection_try_append_without_validation(WWEHTHE_HttpRequestHeaderCollection *self, cwinrt_hstring name, cwinrt_hstring value, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.Lookup(key) */
 HRESULT wwehthe_http_request_header_collection_lookup(WWEHTHE_HttpRequestHeaderCollection *self, cwinrt_hstring key, cwinrt_hstring *out);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.get_Size() */
 HRESULT wwehthe_http_request_header_collection_get__size(WWEHTHE_HttpRequestHeaderCollection *self, uint32_t *value);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.HasKey(key) */
 HRESULT wwehthe_http_request_header_collection_has_key(WWEHTHE_HttpRequestHeaderCollection *self, cwinrt_hstring key, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.GetView() */
 HRESULT wwehthe_http_request_header_collection_get_view(WWEHTHE_HttpRequestHeaderCollection *self, WFOCO_IMapView_HSTRING_HSTRING** out);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.Insert(key) */
 HRESULT wwehthe_http_request_header_collection_insert(WWEHTHE_HttpRequestHeaderCollection *self, cwinrt_hstring key, cwinrt_hstring value, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.Remove(key) */
 HRESULT wwehthe_http_request_header_collection_remove(WWEHTHE_HttpRequestHeaderCollection *self, cwinrt_hstring key);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.Clear() */
 HRESULT wwehthe_http_request_header_collection_clear(WWEHTHE_HttpRequestHeaderCollection *self);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.First() */
 HRESULT wwehthe_http_request_header_collection_first(WWEHTHE_HttpRequestHeaderCollection *self, WFOCO_IIterator_WFOCO_IKeyValuePair_HSTRING_HSTRING** out);
 
-/* Windows.Web.Http.Headers.HttpRequestHeaderCollection.ToString() */
 HRESULT wwehthe_http_request_header_collection_to_string(WWEHTHE_HttpRequestHeaderCollection *self, cwinrt_hstring *out);
 
-/* activate Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection */
 HRESULT wwehthe_http_product_info_header_value_collection_new(WWEHTHE_HttpProductInfoHeaderValueCollection **out);
 
-/* Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection */
-/* Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection.ParseAdd(input) */
 HRESULT wwehthe_http_product_info_header_value_collection_parse_add(WWEHTHE_HttpProductInfoHeaderValueCollection *self, cwinrt_hstring input);
 
-/* Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection.TryParseAdd(input) */
 HRESULT wwehthe_http_product_info_header_value_collection_try_parse_add(WWEHTHE_HttpProductInfoHeaderValueCollection *self, cwinrt_hstring input, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection.GetAt(index) */
 HRESULT wwehthe_http_product_info_header_value_collection_get_at(WWEHTHE_HttpProductInfoHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpProductInfoHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection.get_Size() */
 HRESULT wwehthe_http_product_info_header_value_collection_get__size(WWEHTHE_HttpProductInfoHeaderValueCollection *self, uint32_t *value);
 
-/* Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection.GetView() */
 HRESULT wwehthe_http_product_info_header_value_collection_get_view(WWEHTHE_HttpProductInfoHeaderValueCollection *self, WFOCO_IVectorView_WWEHTHE_HttpProductInfoHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection.IndexOf(index) */
 HRESULT wwehthe_http_product_info_header_value_collection_index_of(WWEHTHE_HttpProductInfoHeaderValueCollection *self, WWEHTHE_HttpProductInfoHeaderValue* value, uint32_t index, BOOL *out);
 
-/* Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection.SetAt(index) */
 HRESULT wwehthe_http_product_info_header_value_collection_set_at(WWEHTHE_HttpProductInfoHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpProductInfoHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection.InsertAt(index) */
 HRESULT wwehthe_http_product_info_header_value_collection_insert_at(WWEHTHE_HttpProductInfoHeaderValueCollection *self, uint32_t index, WWEHTHE_HttpProductInfoHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection.RemoveAt(index) */
 HRESULT wwehthe_http_product_info_header_value_collection_remove_at(WWEHTHE_HttpProductInfoHeaderValueCollection *self, uint32_t index);
 
-/* Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection.Append() */
 HRESULT wwehthe_http_product_info_header_value_collection_append(WWEHTHE_HttpProductInfoHeaderValueCollection *self, WWEHTHE_HttpProductInfoHeaderValue* value);
 
-/* Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection.RemoveAtEnd() */
 HRESULT wwehthe_http_product_info_header_value_collection_remove_at_end(WWEHTHE_HttpProductInfoHeaderValueCollection *self);
 
-/* Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection.Clear() */
 HRESULT wwehthe_http_product_info_header_value_collection_clear(WWEHTHE_HttpProductInfoHeaderValueCollection *self);
 
-/* Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection.GetMany(startIndex, items) */
 HRESULT wwehthe_http_product_info_header_value_collection_get_many(WWEHTHE_HttpProductInfoHeaderValueCollection *self, uint32_t startIndex, WWEHTHE_HttpProductInfoHeaderValue *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection.ReplaceAll(items) */
 HRESULT wwehthe_http_product_info_header_value_collection_replace_all(WWEHTHE_HttpProductInfoHeaderValueCollection *self, WWEHTHE_HttpProductInfoHeaderValue *items, uint32_t items_len);
 
-/* Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection.First() */
 HRESULT wwehthe_http_product_info_header_value_collection_first(WWEHTHE_HttpProductInfoHeaderValueCollection *self, WFOCO_IIterator_WWEHTHE_HttpProductInfoHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection.ToString() */
 HRESULT wwehthe_http_product_info_header_value_collection_to_string(WWEHTHE_HttpProductInfoHeaderValueCollection *self, cwinrt_hstring *out);
 
-/* activate Windows.Web.Http.Headers.HttpProductInfoHeaderValue */
 HRESULT wwehthe_http_product_info_header_value_new(WWEHTHE_HttpProductInfoHeaderValue **out);
 
-/* Windows.Web.Http.Headers.HttpProductInfoHeaderValue */
-/* Windows.Web.Http.Headers.HttpProductInfoHeaderValue.get_Product() */
 HRESULT wwehthe_http_product_info_header_value_get__product(WWEHTHE_HttpProductInfoHeaderValue *self, WWEHTHE_HttpProductHeaderValue** value);
 
-/* Windows.Web.Http.Headers.HttpProductInfoHeaderValue.get_Comment() */
 HRESULT wwehthe_http_product_info_header_value_get__comment(WWEHTHE_HttpProductInfoHeaderValue *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.Headers.HttpProductInfoHeaderValue.ToString() */
 HRESULT wwehthe_http_product_info_header_value_to_string(WWEHTHE_HttpProductInfoHeaderValue *self, cwinrt_hstring *out);
 
-/* Windows.Web.Http.Headers.HttpProductInfoHeaderValue.Parse(input) */
 HRESULT wwehthe_http_product_info_header_value_parse(cwinrt_hstring input, WWEHTHE_HttpProductInfoHeaderValue** out);
 
-/* Windows.Web.Http.Headers.HttpProductInfoHeaderValue.TryParse(input, productInfoHeaderValue) */
 HRESULT wwehthe_http_product_info_header_value_try_parse(cwinrt_hstring input, WWEHTHE_HttpProductInfoHeaderValue* productInfoHeaderValue, BOOL *out);
 
-/* Windows.Web.Http.Headers.IHttpProductHeaderValue */
-/* Windows.Web.Http.Headers.IHttpNameValueHeaderValue */
-/* Windows.Web.Http.Headers.IHttpMethodHeaderValueCollection */
-/* Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueCollection */
-/* Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue */
-/* Windows.Web.Http.Headers.IHttpMediaTypeHeaderValue */
-/* Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueCollection */
-/* Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValue */
-/* Windows.Web.Http.Headers.IHttpLanguageHeaderValueCollection */
-/* Windows.Web.Http.Headers.IHttpExpectationHeaderValueCollection */
-/* Windows.Web.Http.Headers.IHttpExpectationHeaderValue */
-/* Windows.Web.Http.Headers.IHttpDateOrDeltaHeaderValue */
-/* Windows.Web.Http.Headers.IHttpCredentialsHeaderValue */
-/* Windows.Web.Http.Headers.IHttpCookiePairHeaderValueCollection */
-/* Windows.Web.Http.Headers.IHttpCookiePairHeaderValue */
-/* Windows.Web.Http.Headers.IHttpContentRangeHeaderValue */
-/* Windows.Web.Http.Headers.IHttpContentHeaderCollection */
-/* Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue */
-/* Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueCollection */
-/* Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValue */
-/* Windows.Web.Http.Headers.IHttpContentCodingHeaderValueCollection */
-/* Windows.Web.Http.Headers.IHttpContentCodingHeaderValue */
-/* Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueCollection */
-/* Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValue */
-/* Windows.Web.Http.Headers.IHttpChallengeHeaderValueCollection */
-/* Windows.Web.Http.Headers.IHttpChallengeHeaderValue */
-/* Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection */
-/* Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueCollection */
-/* Windows.Web.Http.Headers.IHttpTransferCodingHeaderValue */
-/* Windows.Web.Http.Headers.IHttpResponseHeaderCollection */
-/* Windows.Web.Http.Headers.IHttpRequestHeaderCollection */
-/* Windows.Web.Http.Headers.IHttpProductInfoHeaderValueCollection */
-/* Windows.Web.Http.Headers.IHttpProductInfoHeaderValue */
 #endif /* CWINRT_WINDOWS_WEB_HTTP_HEADERS_H */

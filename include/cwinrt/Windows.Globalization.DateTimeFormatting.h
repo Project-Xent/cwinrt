@@ -12,14 +12,12 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WGLDA_IDateTimeFormatterStatics WGLDA_IDateTimeFormatterStatics;
 typedef struct WGLDA_DateTimeFormatter WGLDA_DateTimeFormatter;
 typedef struct WGLDA_IDateTimeFormatterFactory WGLDA_IDateTimeFormatterFactory;
 typedef struct WGLDA_IDateTimeFormatter WGLDA_IDateTimeFormatter;
 typedef struct WGLDA_IDateTimeFormatter_2 WGLDA_IDateTimeFormatter_2;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IVectorView_HSTRING
 #define CWINRT_FWD_WFOCO_IVectorView_HSTRING
 typedef struct WFOCO_IVectorView_HSTRING WFOCO_IVectorView_HSTRING;
@@ -96,7 +94,6 @@ typedef enum WGLDA_DayFormat {
 } WGLDA_DayFormat;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -117,119 +114,76 @@ static const IID CWINRT_IID_WGLDA_IDateTimeFormatter CWINRT_MAYBE_UNUSED = { 0x9
 static const IID CWINRT_IID_WGLDA_IDateTimeFormatter_2 CWINRT_MAYBE_UNUSED = { 0x27C91A86, 0xBDAA, 0x4FD0, { 0x9E, 0x36, 0x67, 0x1D, 0x5A, 0xA5, 0xEE, 0x03 } };
 #endif
 
-/* Methods */
-
-/* Windows.Globalization.DateTimeFormatting.IDateTimeFormatterStatics */
-/* Windows.Globalization.DateTimeFormatting.IDateTimeFormatterStatics.get_LongDate() */
 HRESULT wglda_date_time_formatter_statics_get__long_date(WGLDA_IDateTimeFormatterStatics *self, WGLDA_DateTimeFormatter** value);
 
-/* Windows.Globalization.DateTimeFormatting.IDateTimeFormatterStatics.get_LongTime() */
 HRESULT wglda_date_time_formatter_statics_get__long_time(WGLDA_IDateTimeFormatterStatics *self, WGLDA_DateTimeFormatter** value);
 
-/* Windows.Globalization.DateTimeFormatting.IDateTimeFormatterStatics.get_ShortDate() */
 HRESULT wglda_date_time_formatter_statics_get__short_date(WGLDA_IDateTimeFormatterStatics *self, WGLDA_DateTimeFormatter** value);
 
-/* Windows.Globalization.DateTimeFormatting.IDateTimeFormatterStatics.get_ShortTime() */
 HRESULT wglda_date_time_formatter_statics_get__short_time(WGLDA_IDateTimeFormatterStatics *self, WGLDA_DateTimeFormatter** value);
 
-/* activate Windows.Globalization.DateTimeFormatting.DateTimeFormatter */
 HRESULT wglda_date_time_formatter_new(WGLDA_DateTimeFormatter **out);
 
-/* Windows.Globalization.DateTimeFormatting.DateTimeFormatter */
-/* Windows.Globalization.DateTimeFormatting.DateTimeFormatter.get_Languages() */
 HRESULT wglda_date_time_formatter_get__languages(WGLDA_DateTimeFormatter *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Globalization.DateTimeFormatting.DateTimeFormatter.get_GeographicRegion() */
 HRESULT wglda_date_time_formatter_get__geographic_region(WGLDA_DateTimeFormatter *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.DateTimeFormatting.DateTimeFormatter.get_Calendar() */
 HRESULT wglda_date_time_formatter_get__calendar(WGLDA_DateTimeFormatter *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.DateTimeFormatting.DateTimeFormatter.get_Clock() */
 HRESULT wglda_date_time_formatter_get__clock(WGLDA_DateTimeFormatter *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.DateTimeFormatting.DateTimeFormatter.get_NumeralSystem() */
 HRESULT wglda_date_time_formatter_get__numeral_system(WGLDA_DateTimeFormatter *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.DateTimeFormatting.DateTimeFormatter.put_NumeralSystem() */
 HRESULT wglda_date_time_formatter_put__numeral_system(WGLDA_DateTimeFormatter *self, cwinrt_hstring value);
 
-/* Windows.Globalization.DateTimeFormatting.DateTimeFormatter.get_Patterns() */
 HRESULT wglda_date_time_formatter_get__patterns(WGLDA_DateTimeFormatter *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Globalization.DateTimeFormatting.DateTimeFormatter.get_Template() */
 HRESULT wglda_date_time_formatter_get__template(WGLDA_DateTimeFormatter *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.DateTimeFormatting.DateTimeFormatter.Format() */
 HRESULT wglda_date_time_formatter_format(WGLDA_DateTimeFormatter *self, WF_DateTime value, cwinrt_hstring *out);
 
-/* Windows.Globalization.DateTimeFormatting.DateTimeFormatter.get_IncludeYear() */
 HRESULT wglda_date_time_formatter_get__include_year(WGLDA_DateTimeFormatter *self, WGLDA_YearFormat *value);
 
-/* Windows.Globalization.DateTimeFormatting.DateTimeFormatter.get_IncludeMonth() */
 HRESULT wglda_date_time_formatter_get__include_month(WGLDA_DateTimeFormatter *self, WGLDA_MonthFormat *value);
 
-/* Windows.Globalization.DateTimeFormatting.DateTimeFormatter.get_IncludeDayOfWeek() */
 HRESULT wglda_date_time_formatter_get__include_day_of_week(WGLDA_DateTimeFormatter *self, WGLDA_DayOfWeekFormat *value);
 
-/* Windows.Globalization.DateTimeFormatting.DateTimeFormatter.get_IncludeDay() */
 HRESULT wglda_date_time_formatter_get__include_day(WGLDA_DateTimeFormatter *self, WGLDA_DayFormat *value);
 
-/* Windows.Globalization.DateTimeFormatting.DateTimeFormatter.get_IncludeHour() */
 HRESULT wglda_date_time_formatter_get__include_hour(WGLDA_DateTimeFormatter *self, WGLDA_HourFormat *value);
 
-/* Windows.Globalization.DateTimeFormatting.DateTimeFormatter.get_IncludeMinute() */
 HRESULT wglda_date_time_formatter_get__include_minute(WGLDA_DateTimeFormatter *self, WGLDA_MinuteFormat *value);
 
-/* Windows.Globalization.DateTimeFormatting.DateTimeFormatter.get_IncludeSecond() */
 HRESULT wglda_date_time_formatter_get__include_second(WGLDA_DateTimeFormatter *self, WGLDA_SecondFormat *value);
 
-/* Windows.Globalization.DateTimeFormatting.DateTimeFormatter.get_ResolvedLanguage() */
 HRESULT wglda_date_time_formatter_get__resolved_language(WGLDA_DateTimeFormatter *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.DateTimeFormatting.DateTimeFormatter.get_ResolvedGeographicRegion() */
 HRESULT wglda_date_time_formatter_get__resolved_geographic_region(WGLDA_DateTimeFormatter *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.DateTimeFormatting.DateTimeFormatter.Format(datetime, timeZoneId) */
 HRESULT wglda_date_time_formatter_format_date_time_str_str(WGLDA_DateTimeFormatter *self, WF_DateTime datetime, cwinrt_hstring timeZoneId, cwinrt_hstring *out);
 
-/* Windows.Globalization.DateTimeFormatting.DateTimeFormatter.get_LongDate() */
 HRESULT wglda_date_time_formatter_get__long_date(WGLDA_DateTimeFormatter** value);
 
-/* Windows.Globalization.DateTimeFormatting.DateTimeFormatter.get_LongTime() */
 HRESULT wglda_date_time_formatter_get__long_time(WGLDA_DateTimeFormatter** value);
 
-/* Windows.Globalization.DateTimeFormatting.DateTimeFormatter.get_ShortDate() */
 HRESULT wglda_date_time_formatter_get__short_date(WGLDA_DateTimeFormatter** value);
 
-/* Windows.Globalization.DateTimeFormatting.DateTimeFormatter.get_ShortTime() */
 HRESULT wglda_date_time_formatter_get__short_time(WGLDA_DateTimeFormatter** value);
 
-/* Windows.Globalization.DateTimeFormatting.IDateTimeFormatterFactory */
-/* Windows.Globalization.DateTimeFormatting.IDateTimeFormatterFactory.CreateDateTimeFormatter(formatTemplate) */
 HRESULT wglda_date_time_formatter_factory_create_date_time_formatter(WGLDA_IDateTimeFormatterFactory *self, cwinrt_hstring formatTemplate, WGLDA_DateTimeFormatter** out);
 
-/* Windows.Globalization.DateTimeFormatting.IDateTimeFormatterFactory.CreateDateTimeFormatterLanguages(formatTemplate, languages) */
 HRESULT wglda_date_time_formatter_factory_create_date_time_formatter_languages(WGLDA_IDateTimeFormatterFactory *self, cwinrt_hstring formatTemplate, WFOCO_IIterable_HSTRING* languages, WGLDA_DateTimeFormatter** out);
 
-/* Windows.Globalization.DateTimeFormatting.IDateTimeFormatterFactory.CreateDateTimeFormatterContext(formatTemplate, languages, geographicRegion, calendar, clock) */
 HRESULT wglda_date_time_formatter_factory_create_date_time_formatter_context(WGLDA_IDateTimeFormatterFactory *self, cwinrt_hstring formatTemplate, WFOCO_IIterable_HSTRING* languages, cwinrt_hstring geographicRegion, cwinrt_hstring calendar, cwinrt_hstring clock, WGLDA_DateTimeFormatter** out);
 
-/* Windows.Globalization.DateTimeFormatting.IDateTimeFormatterFactory.CreateDateTimeFormatterDate(yearFormat, monthFormat, dayFormat, dayOfWeekFormat) */
 HRESULT wglda_date_time_formatter_factory_create_date_time_formatter_date(WGLDA_IDateTimeFormatterFactory *self, WGLDA_YearFormat yearFormat, WGLDA_MonthFormat monthFormat, WGLDA_DayFormat dayFormat, WGLDA_DayOfWeekFormat dayOfWeekFormat, WGLDA_DateTimeFormatter** out);
 
-/* Windows.Globalization.DateTimeFormatting.IDateTimeFormatterFactory.CreateDateTimeFormatterTime(hourFormat, minuteFormat, secondFormat) */
 HRESULT wglda_date_time_formatter_factory_create_date_time_formatter_time(WGLDA_IDateTimeFormatterFactory *self, WGLDA_HourFormat hourFormat, WGLDA_MinuteFormat minuteFormat, WGLDA_SecondFormat secondFormat, WGLDA_DateTimeFormatter** out);
 
-/* Windows.Globalization.DateTimeFormatting.IDateTimeFormatterFactory.CreateDateTimeFormatterDateTimeLanguages(yearFormat, monthFormat, dayFormat, dayOfWeekFormat, hourFormat, minuteFormat, secondFormat, languages) */
 HRESULT wglda_date_time_formatter_factory_create_date_time_formatter_date_time_languages(WGLDA_IDateTimeFormatterFactory *self, WGLDA_YearFormat yearFormat, WGLDA_MonthFormat monthFormat, WGLDA_DayFormat dayFormat, WGLDA_DayOfWeekFormat dayOfWeekFormat, WGLDA_HourFormat hourFormat, WGLDA_MinuteFormat minuteFormat, WGLDA_SecondFormat secondFormat, WFOCO_IIterable_HSTRING* languages, WGLDA_DateTimeFormatter** out);
 
-/* Windows.Globalization.DateTimeFormatting.IDateTimeFormatterFactory.CreateDateTimeFormatterDateTimeContext(yearFormat, monthFormat, dayFormat, dayOfWeekFormat, hourFormat, minuteFormat, secondFormat, languages, geographicRegion, calendar, clock) */
 HRESULT wglda_date_time_formatter_factory_create_date_time_formatter_date_time_context(WGLDA_IDateTimeFormatterFactory *self, WGLDA_YearFormat yearFormat, WGLDA_MonthFormat monthFormat, WGLDA_DayFormat dayFormat, WGLDA_DayOfWeekFormat dayOfWeekFormat, WGLDA_HourFormat hourFormat, WGLDA_MinuteFormat minuteFormat, WGLDA_SecondFormat secondFormat, WFOCO_IIterable_HSTRING* languages, cwinrt_hstring geographicRegion, cwinrt_hstring calendar, cwinrt_hstring clock, WGLDA_DateTimeFormatter** out);
 
-/* Windows.Globalization.DateTimeFormatting.IDateTimeFormatter */
-/* Windows.Globalization.DateTimeFormatting.IDateTimeFormatter2 */
-/* Windows.Globalization.DateTimeFormatting.IDateTimeFormatter2.Format(datetime, timeZoneId) */
 HRESULT wglda_date_time_formatter_2_format(WGLDA_IDateTimeFormatter_2 *self, WF_DateTime datetime, cwinrt_hstring timeZoneId, cwinrt_hstring *out);
 
 #endif /* CWINRT_WINDOWS_GLOBALIZATION_DATETIMEFORMATTING_H */

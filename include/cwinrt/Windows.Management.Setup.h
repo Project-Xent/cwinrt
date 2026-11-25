@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WMASE_AgentProvisioningProgressReport WMASE_AgentProvisioningProgressReport;
 typedef struct WMASE_DeploymentSessionConnectionChangedEventArgs WMASE_DeploymentSessionConnectionChangedEventArgs;
 typedef struct WMASE_DeploymentSessionHeartbeatRequested WMASE_DeploymentSessionHeartbeatRequested;
@@ -34,7 +33,6 @@ typedef struct WMASE_IDeploymentWorkloadBatch WMASE_IDeploymentWorkloadBatch;
 typedef struct WMASE_IDevicePreparationExecutionContext WMASE_IDevicePreparationExecutionContext;
 typedef struct WMASE_IMachineProvisioningProgressReporter WMASE_IMachineProvisioningProgressReporter;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_TimeSpan
 #define CWINRT_FWD_WF_TimeSpan
 typedef struct WF_TimeSpan WF_TimeSpan;
@@ -117,7 +115,6 @@ typedef enum WMASE_DeploymentWorkloadState {
 } WMASE_DeploymentWorkloadState;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -170,204 +167,128 @@ static const IID CWINRT_IID_WMASE_IDevicePreparationExecutionContext CWINRT_MAYB
 static const IID CWINRT_IID_WMASE_IMachineProvisioningProgressReporter CWINRT_MAYBE_UNUSED = { 0xEBD8677F, 0xDFD2, 0x59DA, { 0xAC, 0x3D, 0x75, 0x3E, 0xE1, 0x66, 0x7C, 0xBB } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Management.Setup.AgentProvisioningProgressReport */
 HRESULT wmase_agent_provisioning_progress_report_new(WMASE_AgentProvisioningProgressReport **out);
 
-/* Windows.Management.Setup.AgentProvisioningProgressReport */
-/* Windows.Management.Setup.AgentProvisioningProgressReport.get_State() */
 HRESULT wmase_agent_provisioning_progress_report_get__state(WMASE_AgentProvisioningProgressReport *self, WMASE_DeploymentAgentProgressState *value);
 
-/* Windows.Management.Setup.AgentProvisioningProgressReport.put_State() */
 HRESULT wmase_agent_provisioning_progress_report_put__state(WMASE_AgentProvisioningProgressReport *self, WMASE_DeploymentAgentProgressState value);
 
-/* Windows.Management.Setup.AgentProvisioningProgressReport.get_ProgressPercentage() */
 HRESULT wmase_agent_provisioning_progress_report_get__progress_percentage(WMASE_AgentProvisioningProgressReport *self, double *value);
 
-/* Windows.Management.Setup.AgentProvisioningProgressReport.put_ProgressPercentage() */
 HRESULT wmase_agent_provisioning_progress_report_put__progress_percentage(WMASE_AgentProvisioningProgressReport *self, double value);
 
-/* Windows.Management.Setup.AgentProvisioningProgressReport.get_EstimatedTimeRemaining() */
 HRESULT wmase_agent_provisioning_progress_report_get__estimated_time_remaining(WMASE_AgentProvisioningProgressReport *self, WF_TimeSpan *value);
 
-/* Windows.Management.Setup.AgentProvisioningProgressReport.put_EstimatedTimeRemaining() */
 HRESULT wmase_agent_provisioning_progress_report_put__estimated_time_remaining(WMASE_AgentProvisioningProgressReport *self, WF_TimeSpan value);
 
-/* Windows.Management.Setup.AgentProvisioningProgressReport.get_DisplayProgress() */
 HRESULT wmase_agent_provisioning_progress_report_get__display_progress(WMASE_AgentProvisioningProgressReport *self, cwinrt_hstring *value);
 
-/* Windows.Management.Setup.AgentProvisioningProgressReport.put_DisplayProgress() */
 HRESULT wmase_agent_provisioning_progress_report_put__display_progress(WMASE_AgentProvisioningProgressReport *self, cwinrt_hstring value);
 
-/* Windows.Management.Setup.AgentProvisioningProgressReport.get_DisplayProgressSecondary() */
 HRESULT wmase_agent_provisioning_progress_report_get__display_progress_secondary(WMASE_AgentProvisioningProgressReport *self, cwinrt_hstring *value);
 
-/* Windows.Management.Setup.AgentProvisioningProgressReport.put_DisplayProgressSecondary() */
 HRESULT wmase_agent_provisioning_progress_report_put__display_progress_secondary(WMASE_AgentProvisioningProgressReport *self, cwinrt_hstring value);
 
-/* Windows.Management.Setup.AgentProvisioningProgressReport.get_Batches() */
 HRESULT wmase_agent_provisioning_progress_report_get__batches(WMASE_AgentProvisioningProgressReport *self, WFOCO_IVector_WMASE_DeploymentWorkloadBatch** value);
 
-/* Windows.Management.Setup.AgentProvisioningProgressReport.get_CurrentBatchIndex() */
 HRESULT wmase_agent_provisioning_progress_report_get__current_batch_index(WMASE_AgentProvisioningProgressReport *self, uint32_t *value);
 
-/* Windows.Management.Setup.AgentProvisioningProgressReport.put_CurrentBatchIndex() */
 HRESULT wmase_agent_provisioning_progress_report_put__current_batch_index(WMASE_AgentProvisioningProgressReport *self, uint32_t value);
 
-/* activate Windows.Management.Setup.DeploymentSessionConnectionChangedEventArgs */
 HRESULT wmase_deployment_session_connection_changed_event_args_new(WMASE_DeploymentSessionConnectionChangedEventArgs **out);
 
-/* Windows.Management.Setup.DeploymentSessionConnectionChangedEventArgs */
-/* Windows.Management.Setup.DeploymentSessionConnectionChangedEventArgs.get_SessionId() */
 HRESULT wmase_deployment_session_connection_changed_event_args_get__session_id(WMASE_DeploymentSessionConnectionChangedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Management.Setup.DeploymentSessionConnectionChangedEventArgs.get_Change() */
 HRESULT wmase_deployment_session_connection_changed_event_args_get__change(WMASE_DeploymentSessionConnectionChangedEventArgs *self, WMASE_DeploymentSessionConnectionChange *value);
 
-/* Windows.Management.Setup.DeploymentSessionHeartbeatRequested */
-/* Windows.Management.Setup.DeploymentSessionHeartbeatRequested.Invoke(eventArgs) */
 HRESULT wmase_deployment_session_heartbeat_requested_invoke(WMASE_DeploymentSessionHeartbeatRequested *self, WMASE_DeploymentSessionHeartbeatRequestedEventArgs* eventArgs);
 
-/* activate Windows.Management.Setup.DeploymentSessionHeartbeatRequestedEventArgs */
 HRESULT wmase_deployment_session_heartbeat_requested_event_args_new(WMASE_DeploymentSessionHeartbeatRequestedEventArgs **out);
 
-/* Windows.Management.Setup.DeploymentSessionHeartbeatRequestedEventArgs */
-/* Windows.Management.Setup.DeploymentSessionHeartbeatRequestedEventArgs.get_Handled() */
 HRESULT wmase_deployment_session_heartbeat_requested_event_args_get__handled(WMASE_DeploymentSessionHeartbeatRequestedEventArgs *self, BOOL *value);
 
-/* Windows.Management.Setup.DeploymentSessionHeartbeatRequestedEventArgs.put_Handled() */
 HRESULT wmase_deployment_session_heartbeat_requested_event_args_put__handled(WMASE_DeploymentSessionHeartbeatRequestedEventArgs *self, BOOL value);
 
-/* activate Windows.Management.Setup.DeploymentSessionStateChangedEventArgs */
 HRESULT wmase_deployment_session_state_changed_event_args_new(WMASE_DeploymentSessionStateChangedEventArgs **out);
 
-/* Windows.Management.Setup.DeploymentSessionStateChangedEventArgs */
-/* Windows.Management.Setup.DeploymentSessionStateChangedEventArgs.get_SessionId() */
 HRESULT wmase_deployment_session_state_changed_event_args_get__session_id(WMASE_DeploymentSessionStateChangedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Management.Setup.DeploymentSessionStateChangedEventArgs.get_Change() */
 HRESULT wmase_deployment_session_state_changed_event_args_get__change(WMASE_DeploymentSessionStateChangedEventArgs *self, WMASE_DeploymentSessionStateChange *value);
 
-/* activate Windows.Management.Setup.DeploymentWorkload */
 HRESULT wmase_deployment_workload_new(WMASE_DeploymentWorkload **out);
 
-/* Windows.Management.Setup.DeploymentWorkload */
-/* Windows.Management.Setup.DeploymentWorkload.get_Id() */
 HRESULT wmase_deployment_workload_get__id(WMASE_DeploymentWorkload *self, cwinrt_hstring *value);
 
-/* Windows.Management.Setup.DeploymentWorkload.get_DisplayFriendlyName() */
 HRESULT wmase_deployment_workload_get__display_friendly_name(WMASE_DeploymentWorkload *self, cwinrt_hstring *value);
 
-/* Windows.Management.Setup.DeploymentWorkload.put_DisplayFriendlyName() */
 HRESULT wmase_deployment_workload_put__display_friendly_name(WMASE_DeploymentWorkload *self, cwinrt_hstring value);
 
-/* Windows.Management.Setup.DeploymentWorkload.get_StartTime() */
 HRESULT wmase_deployment_workload_get__start_time(WMASE_DeploymentWorkload *self, WF_DateTime** value);
 
-/* Windows.Management.Setup.DeploymentWorkload.put_StartTime() */
 HRESULT wmase_deployment_workload_put__start_time(WMASE_DeploymentWorkload *self, WF_DateTime* value);
 
-/* Windows.Management.Setup.DeploymentWorkload.get_EndTime() */
 HRESULT wmase_deployment_workload_get__end_time(WMASE_DeploymentWorkload *self, WF_DateTime** value);
 
-/* Windows.Management.Setup.DeploymentWorkload.put_EndTime() */
 HRESULT wmase_deployment_workload_put__end_time(WMASE_DeploymentWorkload *self, WF_DateTime* value);
 
-/* Windows.Management.Setup.DeploymentWorkload.get_ErrorCode() */
 HRESULT wmase_deployment_workload_get__error_code(WMASE_DeploymentWorkload *self, uint32_t *value);
 
-/* Windows.Management.Setup.DeploymentWorkload.put_ErrorCode() */
 HRESULT wmase_deployment_workload_put__error_code(WMASE_DeploymentWorkload *self, uint32_t value);
 
-/* Windows.Management.Setup.DeploymentWorkload.get_ErrorMessage() */
 HRESULT wmase_deployment_workload_get__error_message(WMASE_DeploymentWorkload *self, cwinrt_hstring *value);
 
-/* Windows.Management.Setup.DeploymentWorkload.put_ErrorMessage() */
 HRESULT wmase_deployment_workload_put__error_message(WMASE_DeploymentWorkload *self, cwinrt_hstring value);
 
-/* Windows.Management.Setup.DeploymentWorkload.get_PossibleCause() */
 HRESULT wmase_deployment_workload_get__possible_cause(WMASE_DeploymentWorkload *self, cwinrt_hstring *value);
 
-/* Windows.Management.Setup.DeploymentWorkload.put_PossibleCause() */
 HRESULT wmase_deployment_workload_put__possible_cause(WMASE_DeploymentWorkload *self, cwinrt_hstring value);
 
-/* Windows.Management.Setup.DeploymentWorkload.get_PossibleResolution() */
 HRESULT wmase_deployment_workload_get__possible_resolution(WMASE_DeploymentWorkload *self, cwinrt_hstring *value);
 
-/* Windows.Management.Setup.DeploymentWorkload.put_PossibleResolution() */
 HRESULT wmase_deployment_workload_put__possible_resolution(WMASE_DeploymentWorkload *self, cwinrt_hstring value);
 
-/* Windows.Management.Setup.DeploymentWorkload.get_State() */
 HRESULT wmase_deployment_workload_get__state(WMASE_DeploymentWorkload *self, WMASE_DeploymentWorkloadState *value);
 
-/* Windows.Management.Setup.DeploymentWorkload.put_State() */
 HRESULT wmase_deployment_workload_put__state(WMASE_DeploymentWorkload *self, WMASE_DeploymentWorkloadState value);
 
-/* Windows.Management.Setup.DeploymentWorkload.get_StateDetails() */
 HRESULT wmase_deployment_workload_get__state_details(WMASE_DeploymentWorkload *self, cwinrt_hstring *value);
 
-/* Windows.Management.Setup.DeploymentWorkload.put_StateDetails() */
 HRESULT wmase_deployment_workload_put__state_details(WMASE_DeploymentWorkload *self, cwinrt_hstring value);
 
-/* activate Windows.Management.Setup.DeploymentWorkloadBatch */
 HRESULT wmase_deployment_workload_batch_new(WMASE_DeploymentWorkloadBatch **out);
 
-/* Windows.Management.Setup.DeploymentWorkloadBatch */
-/* Windows.Management.Setup.DeploymentWorkloadBatch.get_Id() */
 HRESULT wmase_deployment_workload_batch_get__id(WMASE_DeploymentWorkloadBatch *self, uint32_t *value);
 
-/* Windows.Management.Setup.DeploymentWorkloadBatch.get_DisplayCategoryTitle() */
 HRESULT wmase_deployment_workload_batch_get__display_category_title(WMASE_DeploymentWorkloadBatch *self, cwinrt_hstring *value);
 
-/* Windows.Management.Setup.DeploymentWorkloadBatch.put_DisplayCategoryTitle() */
 HRESULT wmase_deployment_workload_batch_put__display_category_title(WMASE_DeploymentWorkloadBatch *self, cwinrt_hstring value);
 
-/* Windows.Management.Setup.DeploymentWorkloadBatch.get_BatchWorkloads() */
 HRESULT wmase_deployment_workload_batch_get__batch_workloads(WMASE_DeploymentWorkloadBatch *self, WFOCO_IVector_WMASE_DeploymentWorkload** value);
 
-/* activate Windows.Management.Setup.DevicePreparationExecutionContext */
 HRESULT wmase_device_preparation_execution_context_new(WMASE_DevicePreparationExecutionContext **out);
 
-/* Windows.Management.Setup.DevicePreparationExecutionContext */
-/* Windows.Management.Setup.DevicePreparationExecutionContext.get_Context() */
 HRESULT wmase_device_preparation_execution_context_get__context(WMASE_DevicePreparationExecutionContext *self, cwinrt_hstring *value);
 
-/* Windows.Management.Setup.IDeploymentWorkloadBatchFactory */
-/* Windows.Management.Setup.IDeploymentWorkloadBatchFactory.CreateInstance(id) */
 HRESULT wmase_deployment_workload_batch_factory_create_instance(WMASE_IDeploymentWorkloadBatchFactory *self, uint32_t id, WMASE_DeploymentWorkloadBatch** out);
 
-/* Windows.Management.Setup.IDeploymentWorkloadFactory */
-/* Windows.Management.Setup.IDeploymentWorkloadFactory.CreateInstance(id) */
 HRESULT wmase_deployment_workload_factory_create_instance(WMASE_IDeploymentWorkloadFactory *self, cwinrt_hstring id, WMASE_DeploymentWorkload** out);
 
-/* Windows.Management.Setup.IMachineProvisioningProgressReporterStatics */
-/* Windows.Management.Setup.IMachineProvisioningProgressReporterStatics.GetForLaunchUri(launchUri, heartbeatHandler) */
 HRESULT wmase_machine_provisioning_progress_reporter_statics_get_for_launch_uri(WMASE_IMachineProvisioningProgressReporterStatics *self, WF_Uri* launchUri, WMASE_DeploymentSessionHeartbeatRequested* heartbeatHandler, WMASE_MachineProvisioningProgressReporter** out);
 
-/* activate Windows.Management.Setup.MachineProvisioningProgressReporter */
 HRESULT wmase_machine_provisioning_progress_reporter_new(WMASE_MachineProvisioningProgressReporter **out);
 
-/* Windows.Management.Setup.MachineProvisioningProgressReporter */
-/* Windows.Management.Setup.MachineProvisioningProgressReporter.get_SessionId() */
 HRESULT wmase_machine_provisioning_progress_reporter_get__session_id(WMASE_MachineProvisioningProgressReporter *self, GUID *value);
 
-/* Windows.Management.Setup.MachineProvisioningProgressReporter.get_SessionConnection() */
 HRESULT wmase_machine_provisioning_progress_reporter_get__session_connection(WMASE_MachineProvisioningProgressReporter *self, WMASE_DeploymentSessionConnectionChange *value);
 
-/* Windows.Management.Setup.MachineProvisioningProgressReporter.get_SessionState() */
 HRESULT wmase_machine_provisioning_progress_reporter_get__session_state(WMASE_MachineProvisioningProgressReporter *self, WMASE_DeploymentSessionStateChange *value);
 
-/* Windows.Management.Setup.MachineProvisioningProgressReporter.ReportProgress(updateReport) */
 HRESULT wmase_machine_provisioning_progress_reporter_report_progress(WMASE_MachineProvisioningProgressReporter *self, WMASE_AgentProvisioningProgressReport* updateReport);
 
-/* Windows.Management.Setup.MachineProvisioningProgressReporter.GetDevicePreparationExecutionContextAsync() */
 HRESULT wmase_machine_provisioning_progress_reporter_get_device_preparation_execution_context_async(WMASE_MachineProvisioningProgressReporter *self, WF_IAsyncOperation_WMASE_DevicePreparationExecutionContext** out);
 
-/* Windows.Management.Setup.MachineProvisioningProgressReporter.GetForLaunchUri(launchUri, heartbeatHandler) */
 HRESULT wmase_machine_provisioning_progress_reporter_get_for_launch_uri(WF_Uri* launchUri, WMASE_DeploymentSessionHeartbeatRequested* heartbeatHandler, WMASE_MachineProvisioningProgressReporter** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmase_machine_provisioning_progress_reporter_on_session_state_changed(WMASE_MachineProvisioningProgressReporter *self, cwinrt_event_fn fn, void *ctx);
@@ -376,12 +297,4 @@ void wmase_machine_provisioning_progress_reporter_off_session_state_changed(WMAS
 cwinrt_token wmase_machine_provisioning_progress_reporter_on_session_connection_changed(WMASE_MachineProvisioningProgressReporter *self, cwinrt_event_fn fn, void *ctx);
 void wmase_machine_provisioning_progress_reporter_off_session_connection_changed(WMASE_MachineProvisioningProgressReporter *self, cwinrt_token token);
 
-/* Windows.Management.Setup.IAgentProvisioningProgressReport */
-/* Windows.Management.Setup.IDeploymentSessionConnectionChangedEventArgs */
-/* Windows.Management.Setup.IDeploymentSessionHeartbeatRequestedEventArgs */
-/* Windows.Management.Setup.IDeploymentSessionStateChangedEventArgs */
-/* Windows.Management.Setup.IDeploymentWorkload */
-/* Windows.Management.Setup.IDeploymentWorkloadBatch */
-/* Windows.Management.Setup.IDevicePreparationExecutionContext */
-/* Windows.Management.Setup.IMachineProvisioningProgressReporter */
 #endif /* CWINRT_WINDOWS_MANAGEMENT_SETUP_H */

@@ -15,7 +15,6 @@
 #include <cwinrt/Windows.Graphics.Imaging.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WMEME_AudioEncodingProperties
 #define CWINRT_FWD_WMEME_AudioEncodingProperties
 typedef struct WMEME_AudioEncodingProperties WMEME_AudioEncodingProperties;
@@ -63,7 +62,6 @@ typedef struct WS_StorageFile WS_StorageFile;
 typedef struct WMEEF_IVideoCompositorDefinition WMEEF_IVideoCompositorDefinition;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMEED_IMediaClipStatics WMEED_IMediaClipStatics;
 typedef struct WMEED_IMediaClipStatics_2 WMEED_IMediaClipStatics_2;
 typedef struct WMEED_IBackgroundAudioTrackStatics WMEED_IBackgroundAudioTrackStatics;
@@ -84,7 +82,6 @@ typedef struct WMEED_IMediaComposition_2 WMEED_IMediaComposition_2;
 typedef struct WMEED_IMediaOverlay WMEED_IMediaOverlay;
 typedef struct WMEED_IMediaOverlayLayer WMEED_IMediaOverlayLayer;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WUI_Color
 #define CWINRT_FWD_WUI_Color
 typedef struct WUI_Color WUI_Color;
@@ -206,7 +203,6 @@ typedef enum WMEED_VideoFramePrecision {
 } WMEED_VideoFramePrecision;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -263,283 +259,176 @@ static const IID CWINRT_IID_WMEED_IMediaOverlay CWINRT_MAYBE_UNUSED = { 0xA902AE
 static const IID CWINRT_IID_WMEED_IMediaOverlayLayer CWINRT_MAYBE_UNUSED = { 0xA6D9BA57, 0xEEDA, 0x46C6, { 0xBB, 0xE5, 0xE3, 0x98, 0xC8, 0x41, 0x68, 0xAC } };
 #endif
 
-/* Methods */
-
-/* Windows.Media.Editing.IMediaClipStatics */
-/* Windows.Media.Editing.IMediaClipStatics.CreateFromColor(color, originalDuration) */
 HRESULT wmeed_media_clip_statics_create_from_color(WMEED_IMediaClipStatics *self, WUI_Color color, WF_TimeSpan originalDuration, WMEED_MediaClip** out);
 
-/* Windows.Media.Editing.IMediaClipStatics.CreateFromFileAsync(file) */
 HRESULT wmeed_media_clip_statics_create_from_file_async(WMEED_IMediaClipStatics *self, WS_IStorageFile* file, WF_IAsyncOperation_WMEED_MediaClip** out);
 
-/* Windows.Media.Editing.IMediaClipStatics.CreateFromImageFileAsync(file, originalDuration) */
 HRESULT wmeed_media_clip_statics_create_from_image_file_async(WMEED_IMediaClipStatics *self, WS_IStorageFile* file, WF_TimeSpan originalDuration, WF_IAsyncOperation_WMEED_MediaClip** out);
 
-/* Windows.Media.Editing.IMediaClipStatics2 */
-/* Windows.Media.Editing.IMediaClipStatics2.CreateFromSurface(surface, originalDuration) */
 HRESULT wmeed_media_clip_statics_2_create_from_surface(WMEED_IMediaClipStatics_2 *self, WGRDIDI_IDirect3DSurface* surface, WF_TimeSpan originalDuration, WMEED_MediaClip** out);
 
-/* Windows.Media.Editing.IBackgroundAudioTrackStatics */
-/* Windows.Media.Editing.IBackgroundAudioTrackStatics.CreateFromEmbeddedAudioTrack(embeddedAudioTrack) */
 HRESULT wmeed_background_audio_track_statics_create_from_embedded_audio_track(WMEED_IBackgroundAudioTrackStatics *self, WMEED_EmbeddedAudioTrack* embeddedAudioTrack, WMEED_BackgroundAudioTrack** out);
 
-/* Windows.Media.Editing.IBackgroundAudioTrackStatics.CreateFromFileAsync(file) */
 HRESULT wmeed_background_audio_track_statics_create_from_file_async(WMEED_IBackgroundAudioTrackStatics *self, WS_IStorageFile* file, WF_IAsyncOperation_WMEED_BackgroundAudioTrack** out);
 
-/* activate Windows.Media.Editing.EmbeddedAudioTrack */
 HRESULT wmeed_embedded_audio_track_new(WMEED_EmbeddedAudioTrack **out);
 
-/* Windows.Media.Editing.EmbeddedAudioTrack */
-/* Windows.Media.Editing.EmbeddedAudioTrack.GetAudioEncodingProperties() */
 HRESULT wmeed_embedded_audio_track_get_audio_encoding_properties(WMEED_EmbeddedAudioTrack *self, WMEME_AudioEncodingProperties** out);
 
-/* activate Windows.Media.Editing.BackgroundAudioTrack */
 HRESULT wmeed_background_audio_track_new(WMEED_BackgroundAudioTrack **out);
 
-/* Windows.Media.Editing.BackgroundAudioTrack */
-/* Windows.Media.Editing.BackgroundAudioTrack.get_TrimTimeFromStart() */
 HRESULT wmeed_background_audio_track_get__trim_time_from_start(WMEED_BackgroundAudioTrack *self, WF_TimeSpan *value);
 
-/* Windows.Media.Editing.BackgroundAudioTrack.put_TrimTimeFromStart() */
 HRESULT wmeed_background_audio_track_put__trim_time_from_start(WMEED_BackgroundAudioTrack *self, WF_TimeSpan value);
 
-/* Windows.Media.Editing.BackgroundAudioTrack.get_TrimTimeFromEnd() */
 HRESULT wmeed_background_audio_track_get__trim_time_from_end(WMEED_BackgroundAudioTrack *self, WF_TimeSpan *value);
 
-/* Windows.Media.Editing.BackgroundAudioTrack.put_TrimTimeFromEnd() */
 HRESULT wmeed_background_audio_track_put__trim_time_from_end(WMEED_BackgroundAudioTrack *self, WF_TimeSpan value);
 
-/* Windows.Media.Editing.BackgroundAudioTrack.get_OriginalDuration() */
 HRESULT wmeed_background_audio_track_get__original_duration(WMEED_BackgroundAudioTrack *self, WF_TimeSpan *value);
 
-/* Windows.Media.Editing.BackgroundAudioTrack.get_TrimmedDuration() */
 HRESULT wmeed_background_audio_track_get__trimmed_duration(WMEED_BackgroundAudioTrack *self, WF_TimeSpan *value);
 
-/* Windows.Media.Editing.BackgroundAudioTrack.get_UserData() */
 HRESULT wmeed_background_audio_track_get__user_data(WMEED_BackgroundAudioTrack *self, WFOCO_IMap_HSTRING_HSTRING** value);
 
-/* Windows.Media.Editing.BackgroundAudioTrack.put_Delay() */
 HRESULT wmeed_background_audio_track_put__delay(WMEED_BackgroundAudioTrack *self, WF_TimeSpan value);
 
-/* Windows.Media.Editing.BackgroundAudioTrack.get_Delay() */
 HRESULT wmeed_background_audio_track_get__delay(WMEED_BackgroundAudioTrack *self, WF_TimeSpan *value);
 
-/* Windows.Media.Editing.BackgroundAudioTrack.put_Volume() */
 HRESULT wmeed_background_audio_track_put__volume(WMEED_BackgroundAudioTrack *self, double value);
 
-/* Windows.Media.Editing.BackgroundAudioTrack.get_Volume() */
 HRESULT wmeed_background_audio_track_get__volume(WMEED_BackgroundAudioTrack *self, double *value);
 
-/* Windows.Media.Editing.BackgroundAudioTrack.Clone() */
 HRESULT wmeed_background_audio_track_clone(WMEED_BackgroundAudioTrack *self, WMEED_BackgroundAudioTrack** out);
 
-/* Windows.Media.Editing.BackgroundAudioTrack.GetAudioEncodingProperties() */
 HRESULT wmeed_background_audio_track_get_audio_encoding_properties(WMEED_BackgroundAudioTrack *self, WMEME_AudioEncodingProperties** out);
 
-/* Windows.Media.Editing.BackgroundAudioTrack.get_AudioEffectDefinitions() */
 HRESULT wmeed_background_audio_track_get__audio_effect_definitions(WMEED_BackgroundAudioTrack *self, WFOCO_IVector_WMEEF_IAudioEffectDefinition** value);
 
-/* Windows.Media.Editing.BackgroundAudioTrack.CreateFromEmbeddedAudioTrack(embeddedAudioTrack) */
 HRESULT wmeed_background_audio_track_create_from_embedded_audio_track(WMEED_EmbeddedAudioTrack* embeddedAudioTrack, WMEED_BackgroundAudioTrack** out);
 
-/* Windows.Media.Editing.BackgroundAudioTrack.CreateFromFileAsync(file) */
 HRESULT wmeed_background_audio_track_create_from_file_async(WS_IStorageFile* file, WF_IAsyncOperation_WMEED_BackgroundAudioTrack** out);
 
-/* Windows.Media.Editing.IMediaCompositionStatics */
-/* Windows.Media.Editing.IMediaCompositionStatics.LoadAsync(file) */
 HRESULT wmeed_media_composition_statics_load_async(WMEED_IMediaCompositionStatics *self, WS_StorageFile* file, WF_IAsyncOperation_WMEED_MediaComposition** out);
 
-/* Windows.Media.Editing.IMediaOverlayFactory */
-/* Windows.Media.Editing.IMediaOverlayFactory.Create(clip) */
 HRESULT wmeed_media_overlay_factory_create(WMEED_IMediaOverlayFactory *self, WMEED_MediaClip* clip, WMEED_MediaOverlay** out);
 
-/* Windows.Media.Editing.IMediaOverlayFactory.CreateWithPositionAndOpacity(clip, position, opacity) */
 HRESULT wmeed_media_overlay_factory_create_with_position_and_opacity(WMEED_IMediaOverlayFactory *self, WMEED_MediaClip* clip, WF_Rect position, double opacity, WMEED_MediaOverlay** out);
 
-/* Windows.Media.Editing.IMediaOverlayLayerFactory */
-/* Windows.Media.Editing.IMediaOverlayLayerFactory.CreateWithCompositorDefinition(compositorDefinition) */
 HRESULT wmeed_media_overlay_layer_factory_create_with_compositor_definition(WMEED_IMediaOverlayLayerFactory *self, WMEEF_IVideoCompositorDefinition* compositorDefinition, WMEED_MediaOverlayLayer** out);
 
-/* activate Windows.Media.Editing.MediaClip */
 HRESULT wmeed_media_clip_new(WMEED_MediaClip **out);
 
-/* Windows.Media.Editing.MediaClip */
-/* Windows.Media.Editing.MediaClip.get_TrimTimeFromStart() */
 HRESULT wmeed_media_clip_get__trim_time_from_start(WMEED_MediaClip *self, WF_TimeSpan *value);
 
-/* Windows.Media.Editing.MediaClip.put_TrimTimeFromStart() */
 HRESULT wmeed_media_clip_put__trim_time_from_start(WMEED_MediaClip *self, WF_TimeSpan value);
 
-/* Windows.Media.Editing.MediaClip.get_TrimTimeFromEnd() */
 HRESULT wmeed_media_clip_get__trim_time_from_end(WMEED_MediaClip *self, WF_TimeSpan *value);
 
-/* Windows.Media.Editing.MediaClip.put_TrimTimeFromEnd() */
 HRESULT wmeed_media_clip_put__trim_time_from_end(WMEED_MediaClip *self, WF_TimeSpan value);
 
-/* Windows.Media.Editing.MediaClip.get_OriginalDuration() */
 HRESULT wmeed_media_clip_get__original_duration(WMEED_MediaClip *self, WF_TimeSpan *value);
 
-/* Windows.Media.Editing.MediaClip.get_TrimmedDuration() */
 HRESULT wmeed_media_clip_get__trimmed_duration(WMEED_MediaClip *self, WF_TimeSpan *value);
 
-/* Windows.Media.Editing.MediaClip.get_UserData() */
 HRESULT wmeed_media_clip_get__user_data(WMEED_MediaClip *self, WFOCO_IMap_HSTRING_HSTRING** value);
 
-/* Windows.Media.Editing.MediaClip.Clone() */
 HRESULT wmeed_media_clip_clone(WMEED_MediaClip *self, WMEED_MediaClip** out);
 
-/* Windows.Media.Editing.MediaClip.get_StartTimeInComposition() */
 HRESULT wmeed_media_clip_get__start_time_in_composition(WMEED_MediaClip *self, WF_TimeSpan *value);
 
-/* Windows.Media.Editing.MediaClip.get_EndTimeInComposition() */
 HRESULT wmeed_media_clip_get__end_time_in_composition(WMEED_MediaClip *self, WF_TimeSpan *value);
 
-/* Windows.Media.Editing.MediaClip.get_EmbeddedAudioTracks() */
 HRESULT wmeed_media_clip_get__embedded_audio_tracks(WMEED_MediaClip *self, WFOCO_IVectorView_WMEED_EmbeddedAudioTrack** value);
 
-/* Windows.Media.Editing.MediaClip.get_SelectedEmbeddedAudioTrackIndex() */
 HRESULT wmeed_media_clip_get__selected_embedded_audio_track_index(WMEED_MediaClip *self, uint32_t *value);
 
-/* Windows.Media.Editing.MediaClip.put_SelectedEmbeddedAudioTrackIndex() */
 HRESULT wmeed_media_clip_put__selected_embedded_audio_track_index(WMEED_MediaClip *self, uint32_t value);
 
-/* Windows.Media.Editing.MediaClip.put_Volume() */
 HRESULT wmeed_media_clip_put__volume(WMEED_MediaClip *self, double value);
 
-/* Windows.Media.Editing.MediaClip.get_Volume() */
 HRESULT wmeed_media_clip_get__volume(WMEED_MediaClip *self, double *value);
 
-/* Windows.Media.Editing.MediaClip.GetVideoEncodingProperties() */
 HRESULT wmeed_media_clip_get_video_encoding_properties(WMEED_MediaClip *self, WMEME_VideoEncodingProperties** out);
 
-/* Windows.Media.Editing.MediaClip.get_AudioEffectDefinitions() */
 HRESULT wmeed_media_clip_get__audio_effect_definitions(WMEED_MediaClip *self, WFOCO_IVector_WMEEF_IAudioEffectDefinition** value);
 
-/* Windows.Media.Editing.MediaClip.get_VideoEffectDefinitions() */
 HRESULT wmeed_media_clip_get__video_effect_definitions(WMEED_MediaClip *self, WFOCO_IVector_WMEEF_IVideoEffectDefinition** value);
 
-/* Windows.Media.Editing.MediaClip.CreateFromSurface(surface, originalDuration) */
 HRESULT wmeed_media_clip_create_from_surface(WGRDIDI_IDirect3DSurface* surface, WF_TimeSpan originalDuration, WMEED_MediaClip** out);
 
-/* Windows.Media.Editing.MediaClip.CreateFromColor(color, originalDuration) */
 HRESULT wmeed_media_clip_create_from_color(WUI_Color color, WF_TimeSpan originalDuration, WMEED_MediaClip** out);
 
-/* Windows.Media.Editing.MediaClip.CreateFromFileAsync(file) */
 HRESULT wmeed_media_clip_create_from_file_async(WS_IStorageFile* file, WF_IAsyncOperation_WMEED_MediaClip** out);
 
-/* Windows.Media.Editing.MediaClip.CreateFromImageFileAsync(file, originalDuration) */
 HRESULT wmeed_media_clip_create_from_image_file_async(WS_IStorageFile* file, WF_TimeSpan originalDuration, WF_IAsyncOperation_WMEED_MediaClip** out);
 
-/* activate Windows.Media.Editing.MediaComposition */
 HRESULT wmeed_media_composition_new(WMEED_MediaComposition **out);
 
-/* Windows.Media.Editing.MediaComposition */
-/* Windows.Media.Editing.MediaComposition.get_Duration() */
 HRESULT wmeed_media_composition_get__duration(WMEED_MediaComposition *self, WF_TimeSpan *value);
 
-/* Windows.Media.Editing.MediaComposition.get_Clips() */
 HRESULT wmeed_media_composition_get__clips(WMEED_MediaComposition *self, WFOCO_IVector_WMEED_MediaClip** value);
 
-/* Windows.Media.Editing.MediaComposition.get_BackgroundAudioTracks() */
 HRESULT wmeed_media_composition_get__background_audio_tracks(WMEED_MediaComposition *self, WFOCO_IVector_WMEED_BackgroundAudioTrack** value);
 
-/* Windows.Media.Editing.MediaComposition.get_UserData() */
 HRESULT wmeed_media_composition_get__user_data(WMEED_MediaComposition *self, WFOCO_IMap_HSTRING_HSTRING** value);
 
-/* Windows.Media.Editing.MediaComposition.Clone() */
 HRESULT wmeed_media_composition_clone(WMEED_MediaComposition *self, WMEED_MediaComposition** out);
 
-/* Windows.Media.Editing.MediaComposition.SaveAsync(file) */
 HRESULT wmeed_media_composition_save_async(WMEED_MediaComposition *self, WS_IStorageFile* file, WF_IAsyncAction** out);
 
-/* Windows.Media.Editing.MediaComposition.GetThumbnailAsync(timeFromStart, scaledWidth, scaledHeight, framePrecision) */
 HRESULT wmeed_media_composition_get_thumbnail_async(WMEED_MediaComposition *self, WF_TimeSpan timeFromStart, int32_t scaledWidth, int32_t scaledHeight, WMEED_VideoFramePrecision framePrecision, WF_IAsyncOperation_WGRIM_ImageStream** out);
 
-/* Windows.Media.Editing.MediaComposition.GetThumbnailsAsync(timesFromStart, scaledWidth, scaledHeight, framePrecision) */
 HRESULT wmeed_media_composition_get_thumbnails_async(WMEED_MediaComposition *self, WFOCO_IIterable_WF_TimeSpan* timesFromStart, int32_t scaledWidth, int32_t scaledHeight, WMEED_VideoFramePrecision framePrecision, WF_IAsyncOperation_WFOCO_IVectorView_WGRIM_ImageStream** out);
 
-/* Windows.Media.Editing.MediaComposition.RenderToFileAsync(destination) */
 HRESULT wmeed_media_composition_render_to_file_async(WMEED_MediaComposition *self, WS_IStorageFile* destination, WF_IAsyncOperationWithProgress_WMETR_TranscodeFailureReason_F64** out);
 
-/* Windows.Media.Editing.MediaComposition.RenderToFileAsync(destination, trimmingPreference) */
 HRESULT wmeed_media_composition_render_to_file_async_p_media_trimming_preference_p(WMEED_MediaComposition *self, WS_IStorageFile* destination, WMEED_MediaTrimmingPreference trimmingPreference, WF_IAsyncOperationWithProgress_WMETR_TranscodeFailureReason_F64** out);
 
-/* Windows.Media.Editing.MediaComposition.RenderToFileAsync(destination, trimmingPreference, encodingProfile) */
 HRESULT wmeed_media_composition_render_to_file_async_p_media_trimming_preference_p_p(WMEED_MediaComposition *self, WS_IStorageFile* destination, WMEED_MediaTrimmingPreference trimmingPreference, WMEME_MediaEncodingProfile* encodingProfile, WF_IAsyncOperationWithProgress_WMETR_TranscodeFailureReason_F64** out);
 
-/* Windows.Media.Editing.MediaComposition.CreateDefaultEncodingProfile() */
 HRESULT wmeed_media_composition_create_default_encoding_profile(WMEED_MediaComposition *self, WMEME_MediaEncodingProfile** out);
 
-/* Windows.Media.Editing.MediaComposition.GenerateMediaStreamSource() */
 HRESULT wmeed_media_composition_generate_media_stream_source(WMEED_MediaComposition *self, WMECO_MediaStreamSource** out);
 
-/* Windows.Media.Editing.MediaComposition.GenerateMediaStreamSource(encodingProfile) */
 HRESULT wmeed_media_composition_generate_media_stream_source_p_p(WMEED_MediaComposition *self, WMEME_MediaEncodingProfile* encodingProfile, WMECO_MediaStreamSource** out);
 
-/* Windows.Media.Editing.MediaComposition.GeneratePreviewMediaStreamSource(scaledWidth, scaledHeight) */
 HRESULT wmeed_media_composition_generate_preview_media_stream_source(WMEED_MediaComposition *self, int32_t scaledWidth, int32_t scaledHeight, WMECO_MediaStreamSource** out);
 
-/* Windows.Media.Editing.MediaComposition.get_OverlayLayers() */
 HRESULT wmeed_media_composition_get__overlay_layers(WMEED_MediaComposition *self, WFOCO_IVector_WMEED_MediaOverlayLayer** value);
 
-/* Windows.Media.Editing.MediaComposition.LoadAsync(file) */
 HRESULT wmeed_media_composition_load_async(WS_StorageFile* file, WF_IAsyncOperation_WMEED_MediaComposition** out);
 
-/* activate Windows.Media.Editing.MediaOverlay */
 HRESULT wmeed_media_overlay_new(WMEED_MediaOverlay **out);
 
-/* Windows.Media.Editing.MediaOverlay */
-/* Windows.Media.Editing.MediaOverlay.get_Position() */
 HRESULT wmeed_media_overlay_get__position(WMEED_MediaOverlay *self, WF_Rect *value);
 
-/* Windows.Media.Editing.MediaOverlay.put_Position() */
 HRESULT wmeed_media_overlay_put__position(WMEED_MediaOverlay *self, WF_Rect value);
 
-/* Windows.Media.Editing.MediaOverlay.put_Delay() */
 HRESULT wmeed_media_overlay_put__delay(WMEED_MediaOverlay *self, WF_TimeSpan value);
 
-/* Windows.Media.Editing.MediaOverlay.get_Delay() */
 HRESULT wmeed_media_overlay_get__delay(WMEED_MediaOverlay *self, WF_TimeSpan *value);
 
-/* Windows.Media.Editing.MediaOverlay.get_Opacity() */
 HRESULT wmeed_media_overlay_get__opacity(WMEED_MediaOverlay *self, double *value);
 
-/* Windows.Media.Editing.MediaOverlay.put_Opacity() */
 HRESULT wmeed_media_overlay_put__opacity(WMEED_MediaOverlay *self, double value);
 
-/* Windows.Media.Editing.MediaOverlay.Clone() */
 HRESULT wmeed_media_overlay_clone(WMEED_MediaOverlay *self, WMEED_MediaOverlay** out);
 
-/* Windows.Media.Editing.MediaOverlay.get_Clip() */
 HRESULT wmeed_media_overlay_get__clip(WMEED_MediaOverlay *self, WMEED_MediaClip** value);
 
-/* Windows.Media.Editing.MediaOverlay.get_AudioEnabled() */
 HRESULT wmeed_media_overlay_get__audio_enabled(WMEED_MediaOverlay *self, BOOL *value);
 
-/* Windows.Media.Editing.MediaOverlay.put_AudioEnabled() */
 HRESULT wmeed_media_overlay_put__audio_enabled(WMEED_MediaOverlay *self, BOOL value);
 
-/* activate Windows.Media.Editing.MediaOverlayLayer */
 HRESULT wmeed_media_overlay_layer_new(WMEED_MediaOverlayLayer **out);
 
-/* Windows.Media.Editing.MediaOverlayLayer */
-/* Windows.Media.Editing.MediaOverlayLayer.Clone() */
 HRESULT wmeed_media_overlay_layer_clone(WMEED_MediaOverlayLayer *self, WMEED_MediaOverlayLayer** out);
 
-/* Windows.Media.Editing.MediaOverlayLayer.get_Overlays() */
 HRESULT wmeed_media_overlay_layer_get__overlays(WMEED_MediaOverlayLayer *self, WFOCO_IVector_WMEED_MediaOverlay** value);
 
-/* Windows.Media.Editing.MediaOverlayLayer.get_CustomCompositorDefinition() */
 HRESULT wmeed_media_overlay_layer_get__custom_compositor_definition(WMEED_MediaOverlayLayer *self, WMEEF_IVideoCompositorDefinition** value);
 
-/* Windows.Media.Editing.IEmbeddedAudioTrack */
-/* Windows.Media.Editing.IBackgroundAudioTrack */
-/* Windows.Media.Editing.IMediaClip */
-/* Windows.Media.Editing.IMediaComposition */
-/* Windows.Media.Editing.IMediaComposition2 */
-/* Windows.Media.Editing.IMediaComposition2.get_OverlayLayers() */
 HRESULT wmeed_media_composition_2_get__overlay_layers(WMEED_IMediaComposition_2 *self, WFOCO_IVector_WMEED_MediaOverlayLayer** value);
 
-/* Windows.Media.Editing.IMediaOverlay */
-/* Windows.Media.Editing.IMediaOverlayLayer */
 #endif /* CWINRT_WINDOWS_MEDIA_EDITING_H */

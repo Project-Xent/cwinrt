@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.UI.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSY_DispatcherQueue
 #define CWINRT_FWD_WSY_DispatcherQueue
 typedef struct WSY_DispatcherQueue WSY_DispatcherQueue;
@@ -23,7 +22,6 @@ typedef struct WSY_DispatcherQueue WSY_DispatcherQueue;
 typedef struct WUC_IVisualElement WUC_IVisualElement;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUIWI_AppWindow WUIWI_AppWindow;
 typedef struct WUIWI_AppWindowChangedEventArgs WUIWI_AppWindowChangedEventArgs;
 typedef struct WUIWI_AppWindowCloseRequestedEventArgs WUIWI_AppWindowCloseRequestedEventArgs;
@@ -68,7 +66,6 @@ typedef struct WUIWI_IWindowingEnvironmentChangedEventArgs WUIWI_IWindowingEnvir
 typedef struct WUIWI_IWindowingEnvironment WUIWI_IWindowingEnvironment;
 typedef struct WUIWI_IWindowingEnvironmentAddedEventArgs WUIWI_IWindowingEnvironmentAddedEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WUI_UIContentRoot
 #define CWINRT_FWD_WUI_UIContentRoot
 typedef struct WUI_UIContentRoot WUI_UIContentRoot;
@@ -189,7 +186,6 @@ typedef enum WUIWI_WindowingEnvironmentKind {
 } WUIWI_WindowingEnvironmentKind;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -290,91 +286,60 @@ static const IID CWINRT_IID_WUIWI_IWindowingEnvironment CWINRT_MAYBE_UNUSED = { 
 static const IID CWINRT_IID_WUIWI_IWindowingEnvironmentAddedEventArgs CWINRT_MAYBE_UNUSED = { 0xFF2A5B7F, 0xF183, 0x5C66, { 0x99, 0xB2, 0x42, 0x90, 0x82, 0x06, 0x92, 0x99 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.UI.WindowManagement.AppWindow */
 HRESULT wuiwi_app_window_new(WUIWI_AppWindow **out);
 
-/* Windows.UI.WindowManagement.AppWindow */
-/* Windows.UI.WindowManagement.AppWindow.get_Content() */
 HRESULT wuiwi_app_window_get__content(WUIWI_AppWindow *self, WUI_UIContentRoot** value);
 
-/* Windows.UI.WindowManagement.AppWindow.get_DispatcherQueue() */
 HRESULT wuiwi_app_window_get__dispatcher_queue(WUIWI_AppWindow *self, WSY_DispatcherQueue** value);
 
-/* Windows.UI.WindowManagement.AppWindow.get_Frame() */
 HRESULT wuiwi_app_window_get__frame(WUIWI_AppWindow *self, WUIWI_AppWindowFrame** value);
 
-/* Windows.UI.WindowManagement.AppWindow.get_IsVisible() */
 HRESULT wuiwi_app_window_get__is_visible(WUIWI_AppWindow *self, BOOL *value);
 
-/* Windows.UI.WindowManagement.AppWindow.get_PersistedStateId() */
 HRESULT wuiwi_app_window_get__persisted_state_id(WUIWI_AppWindow *self, cwinrt_hstring *value);
 
-/* Windows.UI.WindowManagement.AppWindow.put_PersistedStateId() */
 HRESULT wuiwi_app_window_put__persisted_state_id(WUIWI_AppWindow *self, cwinrt_hstring value);
 
-/* Windows.UI.WindowManagement.AppWindow.get_Presenter() */
 HRESULT wuiwi_app_window_get__presenter(WUIWI_AppWindow *self, WUIWI_AppWindowPresenter** value);
 
-/* Windows.UI.WindowManagement.AppWindow.get_Title() */
 HRESULT wuiwi_app_window_get__title(WUIWI_AppWindow *self, cwinrt_hstring *value);
 
-/* Windows.UI.WindowManagement.AppWindow.put_Title() */
 HRESULT wuiwi_app_window_put__title(WUIWI_AppWindow *self, cwinrt_hstring value);
 
-/* Windows.UI.WindowManagement.AppWindow.get_TitleBar() */
 HRESULT wuiwi_app_window_get__title_bar(WUIWI_AppWindow *self, WUIWI_AppWindowTitleBar** value);
 
-/* Windows.UI.WindowManagement.AppWindow.get_UIContext() */
 HRESULT wuiwi_app_window_get__u_i_context(WUIWI_AppWindow *self, WUI_UIContext** value);
 
-/* Windows.UI.WindowManagement.AppWindow.get_WindowingEnvironment() */
 HRESULT wuiwi_app_window_get__windowing_environment(WUIWI_AppWindow *self, WUIWI_WindowingEnvironment** value);
 
-/* Windows.UI.WindowManagement.AppWindow.CloseAsync() */
 HRESULT wuiwi_app_window_close_async(WUIWI_AppWindow *self, WF_IAsyncAction** out);
 
-/* Windows.UI.WindowManagement.AppWindow.GetPlacement() */
 HRESULT wuiwi_app_window_get_placement(WUIWI_AppWindow *self, WUIWI_AppWindowPlacement** out);
 
-/* Windows.UI.WindowManagement.AppWindow.GetDisplayRegions() */
 HRESULT wuiwi_app_window_get_display_regions(WUIWI_AppWindow *self, WFOCO_IVectorView_WUIWI_DisplayRegion** out);
 
-/* Windows.UI.WindowManagement.AppWindow.RequestMoveToDisplayRegion(displayRegion) */
 HRESULT wuiwi_app_window_request_move_to_display_region(WUIWI_AppWindow *self, WUIWI_DisplayRegion* displayRegion);
 
-/* Windows.UI.WindowManagement.AppWindow.RequestMoveAdjacentToCurrentView() */
 HRESULT wuiwi_app_window_request_move_adjacent_to_current_view(WUIWI_AppWindow *self);
 
-/* Windows.UI.WindowManagement.AppWindow.RequestMoveAdjacentToWindow(anchorWindow) */
 HRESULT wuiwi_app_window_request_move_adjacent_to_window(WUIWI_AppWindow *self, WUIWI_AppWindow* anchorWindow);
 
-/* Windows.UI.WindowManagement.AppWindow.RequestMoveRelativeToWindowContent(anchorWindow, contentOffset) */
 HRESULT wuiwi_app_window_request_move_relative_to_window_content(WUIWI_AppWindow *self, WUIWI_AppWindow* anchorWindow, WF_Point contentOffset);
 
-/* Windows.UI.WindowManagement.AppWindow.RequestMoveRelativeToCurrentViewContent(contentOffset) */
 HRESULT wuiwi_app_window_request_move_relative_to_current_view_content(WUIWI_AppWindow *self, WF_Point contentOffset);
 
-/* Windows.UI.WindowManagement.AppWindow.RequestMoveRelativeToDisplayRegion(displayRegion, displayRegionOffset) */
 HRESULT wuiwi_app_window_request_move_relative_to_display_region(WUIWI_AppWindow *self, WUIWI_DisplayRegion* displayRegion, WF_Point displayRegionOffset);
 
-/* Windows.UI.WindowManagement.AppWindow.RequestSize(frameSize) */
 HRESULT wuiwi_app_window_request_size(WUIWI_AppWindow *self, WF_Size frameSize);
 
-/* Windows.UI.WindowManagement.AppWindow.TryShowAsync() */
 HRESULT wuiwi_app_window_try_show_async(WUIWI_AppWindow *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.WindowManagement.AppWindow.TryCreateAsync() */
 HRESULT wuiwi_app_window_try_create_async(WF_IAsyncOperation_WUIWI_AppWindow** out);
 
-/* Windows.UI.WindowManagement.AppWindow.ClearAllPersistedState() */
 HRESULT wuiwi_app_window_clear_all_persisted_state(void);
 
-/* Windows.UI.WindowManagement.AppWindow.ClearPersistedState(key) */
 HRESULT wuiwi_app_window_clear_persisted_state(cwinrt_hstring key);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiwi_app_window_on_changed(WUIWI_AppWindow *self, cwinrt_event_fn fn, void *ctx);
@@ -386,330 +351,200 @@ void wuiwi_app_window_off_closed(WUIWI_AppWindow *self, cwinrt_token token);
 cwinrt_token wuiwi_app_window_on_close_requested(WUIWI_AppWindow *self, cwinrt_event_fn fn, void *ctx);
 void wuiwi_app_window_off_close_requested(WUIWI_AppWindow *self, cwinrt_token token);
 
-/* activate Windows.UI.WindowManagement.AppWindowChangedEventArgs */
 HRESULT wuiwi_app_window_changed_event_args_new(WUIWI_AppWindowChangedEventArgs **out);
 
-/* Windows.UI.WindowManagement.AppWindowChangedEventArgs */
-/* Windows.UI.WindowManagement.AppWindowChangedEventArgs.get_DidAvailableWindowPresentationsChange() */
 HRESULT wuiwi_app_window_changed_event_args_get__did_available_window_presentations_change(WUIWI_AppWindowChangedEventArgs *self, BOOL *value);
 
-/* Windows.UI.WindowManagement.AppWindowChangedEventArgs.get_DidDisplayRegionsChange() */
 HRESULT wuiwi_app_window_changed_event_args_get__did_display_regions_change(WUIWI_AppWindowChangedEventArgs *self, BOOL *value);
 
-/* Windows.UI.WindowManagement.AppWindowChangedEventArgs.get_DidFrameChange() */
 HRESULT wuiwi_app_window_changed_event_args_get__did_frame_change(WUIWI_AppWindowChangedEventArgs *self, BOOL *value);
 
-/* Windows.UI.WindowManagement.AppWindowChangedEventArgs.get_DidSizeChange() */
 HRESULT wuiwi_app_window_changed_event_args_get__did_size_change(WUIWI_AppWindowChangedEventArgs *self, BOOL *value);
 
-/* Windows.UI.WindowManagement.AppWindowChangedEventArgs.get_DidTitleBarChange() */
 HRESULT wuiwi_app_window_changed_event_args_get__did_title_bar_change(WUIWI_AppWindowChangedEventArgs *self, BOOL *value);
 
-/* Windows.UI.WindowManagement.AppWindowChangedEventArgs.get_DidVisibilityChange() */
 HRESULT wuiwi_app_window_changed_event_args_get__did_visibility_change(WUIWI_AppWindowChangedEventArgs *self, BOOL *value);
 
-/* Windows.UI.WindowManagement.AppWindowChangedEventArgs.get_DidWindowingEnvironmentChange() */
 HRESULT wuiwi_app_window_changed_event_args_get__did_windowing_environment_change(WUIWI_AppWindowChangedEventArgs *self, BOOL *value);
 
-/* Windows.UI.WindowManagement.AppWindowChangedEventArgs.get_DidWindowPresentationChange() */
 HRESULT wuiwi_app_window_changed_event_args_get__did_window_presentation_change(WUIWI_AppWindowChangedEventArgs *self, BOOL *value);
 
-/* activate Windows.UI.WindowManagement.AppWindowCloseRequestedEventArgs */
 HRESULT wuiwi_app_window_close_requested_event_args_new(WUIWI_AppWindowCloseRequestedEventArgs **out);
 
-/* Windows.UI.WindowManagement.AppWindowCloseRequestedEventArgs */
-/* Windows.UI.WindowManagement.AppWindowCloseRequestedEventArgs.get_Cancel() */
 HRESULT wuiwi_app_window_close_requested_event_args_get__cancel(WUIWI_AppWindowCloseRequestedEventArgs *self, BOOL *value);
 
-/* Windows.UI.WindowManagement.AppWindowCloseRequestedEventArgs.put_Cancel() */
 HRESULT wuiwi_app_window_close_requested_event_args_put__cancel(WUIWI_AppWindowCloseRequestedEventArgs *self, BOOL value);
 
-/* Windows.UI.WindowManagement.AppWindowCloseRequestedEventArgs.GetDeferral() */
 HRESULT wuiwi_app_window_close_requested_event_args_get_deferral(WUIWI_AppWindowCloseRequestedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.UI.WindowManagement.AppWindowClosedEventArgs */
 HRESULT wuiwi_app_window_closed_event_args_new(WUIWI_AppWindowClosedEventArgs **out);
 
-/* Windows.UI.WindowManagement.AppWindowClosedEventArgs */
-/* Windows.UI.WindowManagement.AppWindowClosedEventArgs.get_Reason() */
 HRESULT wuiwi_app_window_closed_event_args_get__reason(WUIWI_AppWindowClosedEventArgs *self, WUIWI_AppWindowClosedReason *value);
 
-/* activate Windows.UI.WindowManagement.AppWindowFrame */
 HRESULT wuiwi_app_window_frame_new(WUIWI_AppWindowFrame **out);
 
-/* Windows.UI.WindowManagement.AppWindowFrame */
-/* Windows.UI.WindowManagement.AppWindowFrame.GetFrameStyle() */
 HRESULT wuiwi_app_window_frame_get_frame_style(WUIWI_AppWindowFrame *self, WUIWI_AppWindowFrameStyle *out);
 
-/* Windows.UI.WindowManagement.AppWindowFrame.SetFrameStyle(frameStyle) */
 HRESULT wuiwi_app_window_frame_set_frame_style(WUIWI_AppWindowFrame *self, WUIWI_AppWindowFrameStyle frameStyle);
 
-/* Windows.UI.WindowManagement.AppWindowFrame.get_DragRegionVisuals() */
 HRESULT wuiwi_app_window_frame_get__drag_region_visuals(WUIWI_AppWindowFrame *self, WFOCO_IVector_WUC_IVisualElement** value);
 
-/* activate Windows.UI.WindowManagement.AppWindowPlacement */
 HRESULT wuiwi_app_window_placement_new(WUIWI_AppWindowPlacement **out);
 
-/* Windows.UI.WindowManagement.AppWindowPlacement */
-/* Windows.UI.WindowManagement.AppWindowPlacement.get_DisplayRegion() */
 HRESULT wuiwi_app_window_placement_get__display_region(WUIWI_AppWindowPlacement *self, WUIWI_DisplayRegion** value);
 
-/* Windows.UI.WindowManagement.AppWindowPlacement.get_Offset() */
 HRESULT wuiwi_app_window_placement_get__offset(WUIWI_AppWindowPlacement *self, WF_Point *value);
 
-/* Windows.UI.WindowManagement.AppWindowPlacement.get_Size() */
 HRESULT wuiwi_app_window_placement_get__size(WUIWI_AppWindowPlacement *self, WF_Size *value);
 
-/* Windows.UI.WindowManagement.AppWindowPresentationConfiguration */
-/* Windows.UI.WindowManagement.AppWindowPresentationConfiguration.get_Kind() */
 HRESULT wuiwi_app_window_presentation_configuration_get__kind(WUIWI_AppWindowPresentationConfiguration *self, WUIWI_AppWindowPresentationKind *value);
 
-/* activate Windows.UI.WindowManagement.AppWindowPresenter */
 HRESULT wuiwi_app_window_presenter_new(WUIWI_AppWindowPresenter **out);
 
-/* Windows.UI.WindowManagement.AppWindowPresenter */
-/* Windows.UI.WindowManagement.AppWindowPresenter.GetConfiguration() */
 HRESULT wuiwi_app_window_presenter_get_configuration(WUIWI_AppWindowPresenter *self, WUIWI_AppWindowPresentationConfiguration** out);
 
-/* Windows.UI.WindowManagement.AppWindowPresenter.IsPresentationSupported(presentationKind) */
 HRESULT wuiwi_app_window_presenter_is_presentation_supported(WUIWI_AppWindowPresenter *self, WUIWI_AppWindowPresentationKind presentationKind, BOOL *out);
 
-/* Windows.UI.WindowManagement.AppWindowPresenter.RequestPresentation(configuration) */
 HRESULT wuiwi_app_window_presenter_request_presentation_p_b(WUIWI_AppWindowPresenter *self, WUIWI_AppWindowPresentationConfiguration* configuration, BOOL *out);
 
-/* Windows.UI.WindowManagement.AppWindowPresenter.RequestPresentation(presentationKind) */
 HRESULT wuiwi_app_window_presenter_request_presentation(WUIWI_AppWindowPresenter *self, WUIWI_AppWindowPresentationKind presentationKind, BOOL *out);
 
-/* activate Windows.UI.WindowManagement.AppWindowTitleBar */
 HRESULT wuiwi_app_window_title_bar_new(WUIWI_AppWindowTitleBar **out);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar */
-/* Windows.UI.WindowManagement.AppWindowTitleBar.GetPreferredVisibility() */
 HRESULT wuiwi_app_window_title_bar_get_preferred_visibility(WUIWI_AppWindowTitleBar *self, WUIWI_AppWindowTitleBarVisibility *out);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar.SetPreferredVisibility(visibilityMode) */
 HRESULT wuiwi_app_window_title_bar_set_preferred_visibility(WUIWI_AppWindowTitleBar *self, WUIWI_AppWindowTitleBarVisibility visibilityMode);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar.get_BackgroundColor() */
 HRESULT wuiwi_app_window_title_bar_get__background_color(WUIWI_AppWindowTitleBar *self, WUI_Color** value);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar.put_BackgroundColor() */
 HRESULT wuiwi_app_window_title_bar_put__background_color(WUIWI_AppWindowTitleBar *self, WUI_Color* value);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar.get_ButtonBackgroundColor() */
 HRESULT wuiwi_app_window_title_bar_get__button_background_color(WUIWI_AppWindowTitleBar *self, WUI_Color** value);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar.put_ButtonBackgroundColor() */
 HRESULT wuiwi_app_window_title_bar_put__button_background_color(WUIWI_AppWindowTitleBar *self, WUI_Color* value);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar.get_ButtonForegroundColor() */
 HRESULT wuiwi_app_window_title_bar_get__button_foreground_color(WUIWI_AppWindowTitleBar *self, WUI_Color** value);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar.put_ButtonForegroundColor() */
 HRESULT wuiwi_app_window_title_bar_put__button_foreground_color(WUIWI_AppWindowTitleBar *self, WUI_Color* value);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar.get_ButtonHoverBackgroundColor() */
 HRESULT wuiwi_app_window_title_bar_get__button_hover_background_color(WUIWI_AppWindowTitleBar *self, WUI_Color** value);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar.put_ButtonHoverBackgroundColor() */
 HRESULT wuiwi_app_window_title_bar_put__button_hover_background_color(WUIWI_AppWindowTitleBar *self, WUI_Color* value);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar.get_ButtonHoverForegroundColor() */
 HRESULT wuiwi_app_window_title_bar_get__button_hover_foreground_color(WUIWI_AppWindowTitleBar *self, WUI_Color** value);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar.put_ButtonHoverForegroundColor() */
 HRESULT wuiwi_app_window_title_bar_put__button_hover_foreground_color(WUIWI_AppWindowTitleBar *self, WUI_Color* value);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar.get_ButtonInactiveBackgroundColor() */
 HRESULT wuiwi_app_window_title_bar_get__button_inactive_background_color(WUIWI_AppWindowTitleBar *self, WUI_Color** value);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar.put_ButtonInactiveBackgroundColor() */
 HRESULT wuiwi_app_window_title_bar_put__button_inactive_background_color(WUIWI_AppWindowTitleBar *self, WUI_Color* value);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar.get_ButtonInactiveForegroundColor() */
 HRESULT wuiwi_app_window_title_bar_get__button_inactive_foreground_color(WUIWI_AppWindowTitleBar *self, WUI_Color** value);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar.put_ButtonInactiveForegroundColor() */
 HRESULT wuiwi_app_window_title_bar_put__button_inactive_foreground_color(WUIWI_AppWindowTitleBar *self, WUI_Color* value);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar.get_ButtonPressedBackgroundColor() */
 HRESULT wuiwi_app_window_title_bar_get__button_pressed_background_color(WUIWI_AppWindowTitleBar *self, WUI_Color** value);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar.put_ButtonPressedBackgroundColor() */
 HRESULT wuiwi_app_window_title_bar_put__button_pressed_background_color(WUIWI_AppWindowTitleBar *self, WUI_Color* value);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar.get_ButtonPressedForegroundColor() */
 HRESULT wuiwi_app_window_title_bar_get__button_pressed_foreground_color(WUIWI_AppWindowTitleBar *self, WUI_Color** value);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar.put_ButtonPressedForegroundColor() */
 HRESULT wuiwi_app_window_title_bar_put__button_pressed_foreground_color(WUIWI_AppWindowTitleBar *self, WUI_Color* value);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar.get_ExtendsContentIntoTitleBar() */
 HRESULT wuiwi_app_window_title_bar_get__extends_content_into_title_bar(WUIWI_AppWindowTitleBar *self, BOOL *value);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar.put_ExtendsContentIntoTitleBar() */
 HRESULT wuiwi_app_window_title_bar_put__extends_content_into_title_bar(WUIWI_AppWindowTitleBar *self, BOOL value);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar.get_ForegroundColor() */
 HRESULT wuiwi_app_window_title_bar_get__foreground_color(WUIWI_AppWindowTitleBar *self, WUI_Color** value);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar.put_ForegroundColor() */
 HRESULT wuiwi_app_window_title_bar_put__foreground_color(WUIWI_AppWindowTitleBar *self, WUI_Color* value);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar.get_InactiveBackgroundColor() */
 HRESULT wuiwi_app_window_title_bar_get__inactive_background_color(WUIWI_AppWindowTitleBar *self, WUI_Color** value);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar.put_InactiveBackgroundColor() */
 HRESULT wuiwi_app_window_title_bar_put__inactive_background_color(WUIWI_AppWindowTitleBar *self, WUI_Color* value);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar.get_InactiveForegroundColor() */
 HRESULT wuiwi_app_window_title_bar_get__inactive_foreground_color(WUIWI_AppWindowTitleBar *self, WUI_Color** value);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar.put_InactiveForegroundColor() */
 HRESULT wuiwi_app_window_title_bar_put__inactive_foreground_color(WUIWI_AppWindowTitleBar *self, WUI_Color* value);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar.get_IsVisible() */
 HRESULT wuiwi_app_window_title_bar_get__is_visible(WUIWI_AppWindowTitleBar *self, BOOL *value);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBar.GetTitleBarOcclusions() */
 HRESULT wuiwi_app_window_title_bar_get_title_bar_occlusions(WUIWI_AppWindowTitleBar *self, WFOCO_IVectorView_WUIWI_AppWindowTitleBarOcclusion** out);
 
-/* activate Windows.UI.WindowManagement.AppWindowTitleBarOcclusion */
 HRESULT wuiwi_app_window_title_bar_occlusion_new(WUIWI_AppWindowTitleBarOcclusion **out);
 
-/* Windows.UI.WindowManagement.AppWindowTitleBarOcclusion */
-/* Windows.UI.WindowManagement.AppWindowTitleBarOcclusion.get_OccludingRect() */
 HRESULT wuiwi_app_window_title_bar_occlusion_get__occluding_rect(WUIWI_AppWindowTitleBarOcclusion *self, WF_Rect *value);
 
-/* activate Windows.UI.WindowManagement.DisplayRegion */
 HRESULT wuiwi_display_region_new(WUIWI_DisplayRegion **out);
 
-/* Windows.UI.WindowManagement.DisplayRegion */
-/* Windows.UI.WindowManagement.DisplayRegion.get_DisplayMonitorDeviceId() */
 HRESULT wuiwi_display_region_get__display_monitor_device_id(WUIWI_DisplayRegion *self, cwinrt_hstring *value);
 
-/* Windows.UI.WindowManagement.DisplayRegion.get_IsVisible() */
 HRESULT wuiwi_display_region_get__is_visible(WUIWI_DisplayRegion *self, BOOL *value);
 
-/* Windows.UI.WindowManagement.DisplayRegion.get_WorkAreaOffset() */
 HRESULT wuiwi_display_region_get__work_area_offset(WUIWI_DisplayRegion *self, WF_Point *value);
 
-/* Windows.UI.WindowManagement.DisplayRegion.get_WorkAreaSize() */
 HRESULT wuiwi_display_region_get__work_area_size(WUIWI_DisplayRegion *self, WF_Size *value);
 
-/* Windows.UI.WindowManagement.DisplayRegion.get_WindowingEnvironment() */
 HRESULT wuiwi_display_region_get__windowing_environment(WUIWI_DisplayRegion *self, WUIWI_WindowingEnvironment** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiwi_display_region_on_changed(WUIWI_DisplayRegion *self, cwinrt_event_fn fn, void *ctx);
 void wuiwi_display_region_off_changed(WUIWI_DisplayRegion *self, cwinrt_token token);
 
-/* activate Windows.UI.WindowManagement.FullScreenPresentationConfiguration */
 HRESULT wuiwi_full_screen_presentation_configuration_new(WUIWI_FullScreenPresentationConfiguration **out);
 
-/* Windows.UI.WindowManagement.FullScreenPresentationConfiguration */
-/* Windows.UI.WindowManagement.FullScreenPresentationConfiguration.get_IsExclusive() */
 HRESULT wuiwi_full_screen_presentation_configuration_get__is_exclusive(WUIWI_FullScreenPresentationConfiguration *self, BOOL *value);
 
-/* Windows.UI.WindowManagement.FullScreenPresentationConfiguration.put_IsExclusive() */
 HRESULT wuiwi_full_screen_presentation_configuration_put__is_exclusive(WUIWI_FullScreenPresentationConfiguration *self, BOOL value);
 
-/* Windows.UI.WindowManagement.IAppWindowStatics */
-/* Windows.UI.WindowManagement.IAppWindowStatics.TryCreateAsync() */
 HRESULT wuiwi_app_window_statics_try_create_async(WUIWI_IAppWindowStatics *self, WF_IAsyncOperation_WUIWI_AppWindow** out);
 
-/* Windows.UI.WindowManagement.IAppWindowStatics.ClearAllPersistedState() */
 HRESULT wuiwi_app_window_statics_clear_all_persisted_state(WUIWI_IAppWindowStatics *self);
 
-/* Windows.UI.WindowManagement.IAppWindowStatics.ClearPersistedState(key) */
 HRESULT wuiwi_app_window_statics_clear_persisted_state(WUIWI_IAppWindowStatics *self, cwinrt_hstring key);
 
-/* Windows.UI.WindowManagement.IWindowServicesStatics */
-/* Windows.UI.WindowManagement.IWindowServicesStatics.FindAllTopLevelWindowIds() */
 HRESULT wuiwi_window_services_statics_find_all_top_level_window_ids(WUIWI_IWindowServicesStatics *self, WFOCO_IVectorView_WUI_WindowId** out);
 
-/* Windows.UI.WindowManagement.IWindowingEnvironmentStatics */
-/* Windows.UI.WindowManagement.IWindowingEnvironmentStatics.FindAll() */
 HRESULT wuiwi_windowing_environment_statics_find_all(WUIWI_IWindowingEnvironmentStatics *self, WFOCO_IVectorView_WUIWI_WindowingEnvironment** out);
 
-/* Windows.UI.WindowManagement.IWindowingEnvironmentStatics.FindAll(kind) */
 HRESULT wuiwi_windowing_environment_statics_find_all_windowing_environment_kind_p(WUIWI_IWindowingEnvironmentStatics *self, WUIWI_WindowingEnvironmentKind kind, WFOCO_IVectorView_WUIWI_WindowingEnvironment** out);
 
-/* activate Windows.UI.WindowManagement.WindowingEnvironmentRemovedEventArgs */
 HRESULT wuiwi_windowing_environment_removed_event_args_new(WUIWI_WindowingEnvironmentRemovedEventArgs **out);
 
-/* Windows.UI.WindowManagement.WindowingEnvironmentRemovedEventArgs */
-/* Windows.UI.WindowManagement.WindowingEnvironmentRemovedEventArgs.get_WindowingEnvironment() */
 HRESULT wuiwi_windowing_environment_removed_event_args_get__windowing_environment(WUIWI_WindowingEnvironmentRemovedEventArgs *self, WUIWI_WindowingEnvironment** value);
 
-/* activate Windows.UI.WindowManagement.WindowServices */
 HRESULT wuiwi_window_services_new(WUIWI_WindowServices **out);
 
-/* Windows.UI.WindowManagement.WindowServices */
-/* Windows.UI.WindowManagement.WindowServices.FindAllTopLevelWindowIds() */
 HRESULT wuiwi_window_services_find_all_top_level_window_ids(WFOCO_IVectorView_WUI_WindowId** out);
 
-/* activate Windows.UI.WindowManagement.WindowingEnvironment */
 HRESULT wuiwi_windowing_environment_new(WUIWI_WindowingEnvironment **out);
 
-/* Windows.UI.WindowManagement.WindowingEnvironment */
-/* Windows.UI.WindowManagement.WindowingEnvironment.get_IsEnabled() */
 HRESULT wuiwi_windowing_environment_get__is_enabled(WUIWI_WindowingEnvironment *self, BOOL *value);
 
-/* Windows.UI.WindowManagement.WindowingEnvironment.get_Kind() */
 HRESULT wuiwi_windowing_environment_get__kind(WUIWI_WindowingEnvironment *self, WUIWI_WindowingEnvironmentKind *value);
 
-/* Windows.UI.WindowManagement.WindowingEnvironment.GetDisplayRegions() */
 HRESULT wuiwi_windowing_environment_get_display_regions(WUIWI_WindowingEnvironment *self, WFOCO_IVectorView_WUIWI_DisplayRegion** out);
 
-/* Windows.UI.WindowManagement.WindowingEnvironment.FindAll() */
 HRESULT wuiwi_windowing_environment_find_all(WFOCO_IVectorView_WUIWI_WindowingEnvironment** out);
 
-/* Windows.UI.WindowManagement.WindowingEnvironment.FindAll(kind) */
 HRESULT wuiwi_windowing_environment_find_all_windowing_environment_kind_p(WUIWI_WindowingEnvironmentKind kind, WFOCO_IVectorView_WUIWI_WindowingEnvironment** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiwi_windowing_environment_on_changed(WUIWI_WindowingEnvironment *self, cwinrt_event_fn fn, void *ctx);
 void wuiwi_windowing_environment_off_changed(WUIWI_WindowingEnvironment *self, cwinrt_token token);
 
-/* activate Windows.UI.WindowManagement.WindowingEnvironmentAddedEventArgs */
 HRESULT wuiwi_windowing_environment_added_event_args_new(WUIWI_WindowingEnvironmentAddedEventArgs **out);
 
-/* Windows.UI.WindowManagement.WindowingEnvironmentAddedEventArgs */
-/* Windows.UI.WindowManagement.WindowingEnvironmentAddedEventArgs.get_WindowingEnvironment() */
 HRESULT wuiwi_windowing_environment_added_event_args_get__windowing_environment(WUIWI_WindowingEnvironmentAddedEventArgs *self, WUIWI_WindowingEnvironment** value);
 
-/* Windows.UI.WindowManagement.IAppWindow */
-/* Windows.UI.WindowManagement.IAppWindowChangedEventArgs */
-/* Windows.UI.WindowManagement.IAppWindowCloseRequestedEventArgs */
-/* Windows.UI.WindowManagement.IAppWindowClosedEventArgs */
-/* Windows.UI.WindowManagement.IAppWindowFrameStyle */
-/* Windows.UI.WindowManagement.IAppWindowFrameStyle.GetFrameStyle() */
 HRESULT wuiwi_app_window_frame_style_get_frame_style(WUIWI_IAppWindowFrameStyle *self, WUIWI_AppWindowFrameStyle *out);
 
-/* Windows.UI.WindowManagement.IAppWindowFrameStyle.SetFrameStyle(frameStyle) */
 HRESULT wuiwi_app_window_frame_style_set_frame_style(WUIWI_IAppWindowFrameStyle *self, WUIWI_AppWindowFrameStyle frameStyle);
 
-/* Windows.UI.WindowManagement.IAppWindowFrame */
-/* Windows.UI.WindowManagement.IAppWindowPlacement */
-/* Windows.UI.WindowManagement.IAppWindowPresentationConfiguration */
-/* Windows.UI.WindowManagement.IAppWindowPresenter */
-/* Windows.UI.WindowManagement.IAppWindowTitleBarVisibility */
-/* Windows.UI.WindowManagement.IAppWindowTitleBarVisibility.GetPreferredVisibility() */
 HRESULT wuiwi_app_window_title_bar_visibility_get_preferred_visibility(WUIWI_IAppWindowTitleBarVisibility *self, WUIWI_AppWindowTitleBarVisibility *out);
 
-/* Windows.UI.WindowManagement.IAppWindowTitleBarVisibility.SetPreferredVisibility(visibilityMode) */
 HRESULT wuiwi_app_window_title_bar_visibility_set_preferred_visibility(WUIWI_IAppWindowTitleBarVisibility *self, WUIWI_AppWindowTitleBarVisibility visibilityMode);
 
-/* Windows.UI.WindowManagement.IAppWindowTitleBar */
-/* Windows.UI.WindowManagement.IAppWindowTitleBarOcclusion */
-/* Windows.UI.WindowManagement.IDisplayRegion */
-/* Windows.UI.WindowManagement.IFullScreenPresentationConfiguration */
-/* Windows.UI.WindowManagement.IWindowingEnvironmentRemovedEventArgs */
-/* Windows.UI.WindowManagement.IWindowingEnvironment */
-/* Windows.UI.WindowManagement.IWindowingEnvironmentAddedEventArgs */
 #endif /* CWINRT_WINDOWS_UI_WINDOWMANAGEMENT_H */

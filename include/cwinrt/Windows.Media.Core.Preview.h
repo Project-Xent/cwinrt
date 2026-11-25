@@ -13,11 +13,9 @@
 #include <cwinrt/Windows.Media.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WMECOPR_ISoundLevelBrokerStatics WMECOPR_ISoundLevelBrokerStatics;
 typedef struct WMECOPR_SoundLevelBroker WMECOPR_SoundLevelBroker;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WME_SoundLevel
 #define CWINRT_FWD_WME_SoundLevel
 typedef enum WME_SoundLevel {
@@ -32,7 +30,6 @@ typedef enum WME_SoundLevel {
 typedef struct WF_EventHandler_Object WF_EventHandler_Object;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -41,20 +38,12 @@ typedef struct WF_EventHandler_Object WF_EventHandler_Object;
 static const IID CWINRT_IID_WMECOPR_ISoundLevelBrokerStatics CWINRT_MAYBE_UNUSED = { 0x6A633961, 0xDBED, 0x464C, { 0xA0, 0x9A, 0x33, 0x41, 0x2F, 0x5C, 0xAA, 0x3F } };
 #endif
 
-/* Methods */
-
-/* Windows.Media.Core.Preview.ISoundLevelBrokerStatics */
-/* Windows.Media.Core.Preview.ISoundLevelBrokerStatics.get_SoundLevel() */
 HRESULT wmecopr_sound_level_broker_statics_get__sound_level(WMECOPR_ISoundLevelBrokerStatics *self, WME_SoundLevel *value);
 
-/* activate Windows.Media.Core.Preview.SoundLevelBroker */
 HRESULT wmecopr_sound_level_broker_new(WMECOPR_SoundLevelBroker **out);
 
-/* Windows.Media.Core.Preview.SoundLevelBroker */
-/* Windows.Media.Core.Preview.SoundLevelBroker.get_SoundLevel() */
 HRESULT wmecopr_sound_level_broker_get__sound_level(WME_SoundLevel *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmecopr_sound_level_broker_on_sound_level_changed(WMECOPR_SoundLevelBroker *self, cwinrt_event_fn fn, void *ctx);

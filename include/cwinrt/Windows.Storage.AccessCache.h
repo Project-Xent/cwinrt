@@ -13,13 +13,11 @@
 #include <cwinrt/Windows.Storage.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSTAC_StorageItemMostRecentlyUsedList WSTAC_StorageItemMostRecentlyUsedList;
 typedef struct WSTAC_StorageItemAccessList WSTAC_StorageItemAccessList;
 typedef struct WSTAC_StorageApplicationPermissions WSTAC_StorageApplicationPermissions;
@@ -32,7 +30,6 @@ typedef struct WSTAC_IItemRemovedEventArgs WSTAC_IItemRemovedEventArgs;
 typedef struct WSTAC_IStorageItemMostRecentlyUsedList WSTAC_IStorageItemMostRecentlyUsedList;
 typedef struct WSTAC_IStorageItemAccessList WSTAC_IStorageItemAccessList;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_TypedEventHandler_WSTAC_StorageItemMostRecentlyUsedList_WSTAC_ItemRemovedEventArgs
 #define CWINRT_FWD_WF_TypedEventHandler_WSTAC_StorageItemMostRecentlyUsedList_WSTAC_ItemRemovedEventArgs
 typedef struct WF_TypedEventHandler_WSTAC_StorageItemMostRecentlyUsedList_WSTAC_ItemRemovedEventArgs WF_TypedEventHandler_WSTAC_StorageItemMostRecentlyUsedList_WSTAC_ItemRemovedEventArgs;
@@ -93,7 +90,6 @@ struct WSTAC_AccessListEntry {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -122,188 +118,119 @@ static const IID CWINRT_IID_WSTAC_IStorageItemMostRecentlyUsedList CWINRT_MAYBE_
 static const IID CWINRT_IID_WSTAC_IStorageItemAccessList CWINRT_MAYBE_UNUSED = { 0x2CAFF6AD, 0xDE90, 0x47F5, { 0xB2, 0xC3, 0xDD, 0x36, 0xC9, 0xFD, 0xD4, 0x53 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList */
 HRESULT wstac_storage_item_most_recently_used_list_new(WSTAC_StorageItemMostRecentlyUsedList **out);
 
-/* Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList */
-/* Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList.Add(file) */
 HRESULT wstac_storage_item_most_recently_used_list_add(WSTAC_StorageItemMostRecentlyUsedList *self, WS_IStorageItem* file, cwinrt_hstring *out);
 
-/* Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList.Add(file, metadata) */
 HRESULT wstac_storage_item_most_recently_used_list_add_p_str_str(WSTAC_StorageItemMostRecentlyUsedList *self, WS_IStorageItem* file, cwinrt_hstring metadata, cwinrt_hstring *out);
 
-/* Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList.AddOrReplace(token, file) */
 HRESULT wstac_storage_item_most_recently_used_list_add_or_replace(WSTAC_StorageItemMostRecentlyUsedList *self, cwinrt_hstring token, WS_IStorageItem* file);
 
-/* Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList.AddOrReplace(token, file, metadata) */
 HRESULT wstac_storage_item_most_recently_used_list_add_or_replace_str_p_str(WSTAC_StorageItemMostRecentlyUsedList *self, cwinrt_hstring token, WS_IStorageItem* file, cwinrt_hstring metadata);
 
-/* Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList.GetItemAsync(token) */
 HRESULT wstac_storage_item_most_recently_used_list_get_item_async(WSTAC_StorageItemMostRecentlyUsedList *self, cwinrt_hstring token, WF_IAsyncOperation_WS_IStorageItem** out);
 
-/* Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList.GetFileAsync(token) */
 HRESULT wstac_storage_item_most_recently_used_list_get_file_async(WSTAC_StorageItemMostRecentlyUsedList *self, cwinrt_hstring token, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList.GetFolderAsync(token) */
 HRESULT wstac_storage_item_most_recently_used_list_get_folder_async(WSTAC_StorageItemMostRecentlyUsedList *self, cwinrt_hstring token, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList.GetItemAsync(token, options) */
 HRESULT wstac_storage_item_most_recently_used_list_get_item_async_str_access_cache_options_p(WSTAC_StorageItemMostRecentlyUsedList *self, cwinrt_hstring token, WSTAC_AccessCacheOptions options, WF_IAsyncOperation_WS_IStorageItem** out);
 
-/* Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList.GetFileAsync(token, options) */
 HRESULT wstac_storage_item_most_recently_used_list_get_file_async_str_access_cache_options_p(WSTAC_StorageItemMostRecentlyUsedList *self, cwinrt_hstring token, WSTAC_AccessCacheOptions options, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList.GetFolderAsync(token, options) */
 HRESULT wstac_storage_item_most_recently_used_list_get_folder_async_str_access_cache_options_p(WSTAC_StorageItemMostRecentlyUsedList *self, cwinrt_hstring token, WSTAC_AccessCacheOptions options, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList.Remove(token) */
 HRESULT wstac_storage_item_most_recently_used_list_remove(WSTAC_StorageItemMostRecentlyUsedList *self, cwinrt_hstring token);
 
-/* Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList.ContainsItem(token) */
 HRESULT wstac_storage_item_most_recently_used_list_contains_item(WSTAC_StorageItemMostRecentlyUsedList *self, cwinrt_hstring token, BOOL *out);
 
-/* Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList.Clear() */
 HRESULT wstac_storage_item_most_recently_used_list_clear(WSTAC_StorageItemMostRecentlyUsedList *self);
 
-/* Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList.CheckAccess(file) */
 HRESULT wstac_storage_item_most_recently_used_list_check_access(WSTAC_StorageItemMostRecentlyUsedList *self, WS_IStorageItem* file, BOOL *out);
 
-/* Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList.get_Entries() */
 HRESULT wstac_storage_item_most_recently_used_list_get__entries(WSTAC_StorageItemMostRecentlyUsedList *self, WSTAC_AccessListEntryView** value);
 
-/* Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList.get_MaximumItemsAllowed() */
 HRESULT wstac_storage_item_most_recently_used_list_get__maximum_items_allowed(WSTAC_StorageItemMostRecentlyUsedList *self, uint32_t *value);
 
-/* Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList.Add(file, metadata, visibility) */
 HRESULT wstac_storage_item_most_recently_used_list_add_p_str_recent_storage_item_visibility_str(WSTAC_StorageItemMostRecentlyUsedList *self, WS_IStorageItem* file, cwinrt_hstring metadata, WSTAC_RecentStorageItemVisibility visibility, cwinrt_hstring *out);
 
-/* Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList.AddOrReplace(token, file, metadata, visibility) */
 HRESULT wstac_storage_item_most_recently_used_list_add_or_replace_str_p_str_recent_storage_item_visibility(WSTAC_StorageItemMostRecentlyUsedList *self, cwinrt_hstring token, WS_IStorageItem* file, cwinrt_hstring metadata, WSTAC_RecentStorageItemVisibility visibility);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wstac_storage_item_most_recently_used_list_on_item_removed(WSTAC_StorageItemMostRecentlyUsedList *self, cwinrt_event_fn fn, void *ctx);
 void wstac_storage_item_most_recently_used_list_off_item_removed(WSTAC_StorageItemMostRecentlyUsedList *self, cwinrt_token token);
 
-/* activate Windows.Storage.AccessCache.StorageItemAccessList */
 HRESULT wstac_storage_item_access_list_new(WSTAC_StorageItemAccessList **out);
 
-/* Windows.Storage.AccessCache.StorageItemAccessList */
-/* Windows.Storage.AccessCache.StorageItemAccessList.Add(file) */
 HRESULT wstac_storage_item_access_list_add(WSTAC_StorageItemAccessList *self, WS_IStorageItem* file, cwinrt_hstring *out);
 
-/* Windows.Storage.AccessCache.StorageItemAccessList.Add(file, metadata) */
 HRESULT wstac_storage_item_access_list_add_p_str_str(WSTAC_StorageItemAccessList *self, WS_IStorageItem* file, cwinrt_hstring metadata, cwinrt_hstring *out);
 
-/* Windows.Storage.AccessCache.StorageItemAccessList.AddOrReplace(token, file) */
 HRESULT wstac_storage_item_access_list_add_or_replace(WSTAC_StorageItemAccessList *self, cwinrt_hstring token, WS_IStorageItem* file);
 
-/* Windows.Storage.AccessCache.StorageItemAccessList.AddOrReplace(token, file, metadata) */
 HRESULT wstac_storage_item_access_list_add_or_replace_str_p_str(WSTAC_StorageItemAccessList *self, cwinrt_hstring token, WS_IStorageItem* file, cwinrt_hstring metadata);
 
-/* Windows.Storage.AccessCache.StorageItemAccessList.GetItemAsync(token) */
 HRESULT wstac_storage_item_access_list_get_item_async(WSTAC_StorageItemAccessList *self, cwinrt_hstring token, WF_IAsyncOperation_WS_IStorageItem** out);
 
-/* Windows.Storage.AccessCache.StorageItemAccessList.GetFileAsync(token) */
 HRESULT wstac_storage_item_access_list_get_file_async(WSTAC_StorageItemAccessList *self, cwinrt_hstring token, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.AccessCache.StorageItemAccessList.GetFolderAsync(token) */
 HRESULT wstac_storage_item_access_list_get_folder_async(WSTAC_StorageItemAccessList *self, cwinrt_hstring token, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.AccessCache.StorageItemAccessList.GetItemAsync(token, options) */
 HRESULT wstac_storage_item_access_list_get_item_async_str_access_cache_options_p(WSTAC_StorageItemAccessList *self, cwinrt_hstring token, WSTAC_AccessCacheOptions options, WF_IAsyncOperation_WS_IStorageItem** out);
 
-/* Windows.Storage.AccessCache.StorageItemAccessList.GetFileAsync(token, options) */
 HRESULT wstac_storage_item_access_list_get_file_async_str_access_cache_options_p(WSTAC_StorageItemAccessList *self, cwinrt_hstring token, WSTAC_AccessCacheOptions options, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.AccessCache.StorageItemAccessList.GetFolderAsync(token, options) */
 HRESULT wstac_storage_item_access_list_get_folder_async_str_access_cache_options_p(WSTAC_StorageItemAccessList *self, cwinrt_hstring token, WSTAC_AccessCacheOptions options, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.AccessCache.StorageItemAccessList.Remove(token) */
 HRESULT wstac_storage_item_access_list_remove(WSTAC_StorageItemAccessList *self, cwinrt_hstring token);
 
-/* Windows.Storage.AccessCache.StorageItemAccessList.ContainsItem(token) */
 HRESULT wstac_storage_item_access_list_contains_item(WSTAC_StorageItemAccessList *self, cwinrt_hstring token, BOOL *out);
 
-/* Windows.Storage.AccessCache.StorageItemAccessList.Clear() */
 HRESULT wstac_storage_item_access_list_clear(WSTAC_StorageItemAccessList *self);
 
-/* Windows.Storage.AccessCache.StorageItemAccessList.CheckAccess(file) */
 HRESULT wstac_storage_item_access_list_check_access(WSTAC_StorageItemAccessList *self, WS_IStorageItem* file, BOOL *out);
 
-/* Windows.Storage.AccessCache.StorageItemAccessList.get_Entries() */
 HRESULT wstac_storage_item_access_list_get__entries(WSTAC_StorageItemAccessList *self, WSTAC_AccessListEntryView** value);
 
-/* Windows.Storage.AccessCache.StorageItemAccessList.get_MaximumItemsAllowed() */
 HRESULT wstac_storage_item_access_list_get__maximum_items_allowed(WSTAC_StorageItemAccessList *self, uint32_t *value);
 
-/* activate Windows.Storage.AccessCache.StorageApplicationPermissions */
 HRESULT wstac_storage_application_permissions_new(WSTAC_StorageApplicationPermissions **out);
 
-/* Windows.Storage.AccessCache.StorageApplicationPermissions */
-/* Windows.Storage.AccessCache.StorageApplicationPermissions.GetFutureAccessListForUser(user) */
 HRESULT wstac_storage_application_permissions_get_future_access_list_for_user(WSY_User* user, WSTAC_StorageItemAccessList** out);
 
-/* Windows.Storage.AccessCache.StorageApplicationPermissions.GetMostRecentlyUsedListForUser(user) */
 HRESULT wstac_storage_application_permissions_get_most_recently_used_list_for_user(WSY_User* user, WSTAC_StorageItemMostRecentlyUsedList** out);
 
-/* Windows.Storage.AccessCache.StorageApplicationPermissions.get_FutureAccessList() */
 HRESULT wstac_storage_application_permissions_get__future_access_list(WSTAC_StorageItemAccessList** value);
 
-/* Windows.Storage.AccessCache.StorageApplicationPermissions.get_MostRecentlyUsedList() */
 HRESULT wstac_storage_application_permissions_get__most_recently_used_list(WSTAC_StorageItemMostRecentlyUsedList** value);
 
-/* activate Windows.Storage.AccessCache.ItemRemovedEventArgs */
 HRESULT wstac_item_removed_event_args_new(WSTAC_ItemRemovedEventArgs **out);
 
-/* Windows.Storage.AccessCache.ItemRemovedEventArgs */
-/* Windows.Storage.AccessCache.ItemRemovedEventArgs.get_RemovedEntry() */
 HRESULT wstac_item_removed_event_args_get__removed_entry(WSTAC_ItemRemovedEventArgs *self, WSTAC_AccessListEntry *value);
 
-/* Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics2 */
-/* Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics2.GetFutureAccessListForUser(user) */
 HRESULT wstac_storage_application_permissions_statics_2_get_future_access_list_for_user(WSTAC_IStorageApplicationPermissionsStatics_2 *self, WSY_User* user, WSTAC_StorageItemAccessList** out);
 
-/* Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics2.GetMostRecentlyUsedListForUser(user) */
 HRESULT wstac_storage_application_permissions_statics_2_get_most_recently_used_list_for_user(WSTAC_IStorageApplicationPermissionsStatics_2 *self, WSY_User* user, WSTAC_StorageItemMostRecentlyUsedList** out);
 
-/* Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics */
-/* Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics.get_FutureAccessList() */
 HRESULT wstac_storage_application_permissions_statics_get__future_access_list(WSTAC_IStorageApplicationPermissionsStatics *self, WSTAC_StorageItemAccessList** value);
 
-/* Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics.get_MostRecentlyUsedList() */
 HRESULT wstac_storage_application_permissions_statics_get__most_recently_used_list(WSTAC_IStorageApplicationPermissionsStatics *self, WSTAC_StorageItemMostRecentlyUsedList** value);
 
-/* activate Windows.Storage.AccessCache.AccessListEntryView */
 HRESULT wstac_access_list_entry_view_new(WSTAC_AccessListEntryView **out);
 
-/* Windows.Storage.AccessCache.AccessListEntryView */
-/* Windows.Storage.AccessCache.AccessListEntryView.GetAt(index) */
 HRESULT wstac_access_list_entry_view_get_at(WSTAC_AccessListEntryView *self, uint32_t index, WSTAC_AccessListEntry *out);
 
-/* Windows.Storage.AccessCache.AccessListEntryView.get_Size() */
 HRESULT wstac_access_list_entry_view_get__size(WSTAC_AccessListEntryView *self, uint32_t *value);
 
-/* Windows.Storage.AccessCache.AccessListEntryView.IndexOf(index) */
 HRESULT wstac_access_list_entry_view_index_of(WSTAC_AccessListEntryView *self, WSTAC_AccessListEntry value, uint32_t index, BOOL *out);
 
-/* Windows.Storage.AccessCache.AccessListEntryView.GetMany(startIndex, items) */
 HRESULT wstac_access_list_entry_view_get_many(WSTAC_AccessListEntryView *self, uint32_t startIndex, WSTAC_AccessListEntry *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Storage.AccessCache.AccessListEntryView.First() */
 HRESULT wstac_access_list_entry_view_first(WSTAC_AccessListEntryView *self, WFOCO_IIterator_WSTAC_AccessListEntry** out);
 
-/* Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList2 */
-/* Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList2.Add(file, metadata, visibility) */
 HRESULT wstac_storage_item_most_recently_used_list_2_add(WSTAC_IStorageItemMostRecentlyUsedList_2 *self, WS_IStorageItem* file, cwinrt_hstring metadata, WSTAC_RecentStorageItemVisibility visibility, cwinrt_hstring *out);
 
-/* Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList2.AddOrReplace(token, file, metadata, visibility) */
 HRESULT wstac_storage_item_most_recently_used_list_2_add_or_replace(WSTAC_IStorageItemMostRecentlyUsedList_2 *self, cwinrt_hstring token, WS_IStorageItem* file, cwinrt_hstring metadata, WSTAC_RecentStorageItemVisibility visibility);
 
-/* Windows.Storage.AccessCache.IItemRemovedEventArgs */
-/* Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList */
-/* Windows.Storage.AccessCache.IStorageItemAccessList */
 #endif /* CWINRT_WINDOWS_STORAGE_ACCESSCACHE_H */

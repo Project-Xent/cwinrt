@@ -226,8 +226,6 @@ typedef struct ca_target {
 	char const *want;
 } ca_target;
 
-/* True if CustomAttribute `row` targets tgt->(tag,row1) and its constructor
-   resolves to suffix tgt->want. */
 static int ca_row_matches(winmd_meta const *m, ca_layout const *lay, uint8_t const *row, ca_target const *tgt) {
 	uint32_t parent;
 	char     attr [96];
@@ -240,7 +238,6 @@ static int ca_row_matches(winmd_meta const *m, ca_layout const *lay, uint8_t con
 	return strcmp(attr, tgt->want) == 0;
 }
 
-/* True if parent (tag,row1) carries a CustomAttribute with suffix `want`. */
 static bool ca_scan_has(winmd_meta const *m, uint32_t parent_tag, uint32_t parent_row1, char const *want) {
 	winmd_tables const *t;
 	ca_layout           lay;

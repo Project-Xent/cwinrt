@@ -15,7 +15,6 @@
 #include <cwinrt/Windows.Storage.Search.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IOutputStream
 #define CWINRT_FWD_WSTST_IOutputStream
 typedef struct WSTST_IOutputStream WSTST_IOutputStream;
@@ -103,7 +102,6 @@ typedef struct WSTSE_StorageFolderQueryResult WSTSE_StorageFolderQueryResult;
 typedef struct WSTSE_StorageItemQueryResult WSTSE_StorageItemQueryResult;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WS_SystemDataPaths WS_SystemDataPaths;
 typedef struct WS_SystemGPSProperties WS_SystemGPSProperties;
 typedef struct WS_SystemImageProperties WS_SystemImageProperties;
@@ -206,7 +204,6 @@ typedef struct WS_IStorageProvider WS_IStorageProvider;
 typedef struct WS_IStorageItem WS_IStorageItem;
 typedef struct WS_IStorageItemProperties WS_IStorageItemProperties;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
@@ -600,7 +597,6 @@ typedef enum WS_KnownFolderId {
 } WS_KnownFolderId;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -877,1561 +873,978 @@ static const IID CWINRT_IID_WS_IStorageItem CWINRT_MAYBE_UNUSED = { 0x4207A996, 
 static const IID CWINRT_IID_WS_IStorageItemProperties CWINRT_MAYBE_UNUSED = { 0x86664478, 0x8029, 0x46FE, { 0xA7, 0x89, 0x1C, 0x2F, 0x3E, 0x2F, 0xFB, 0x5C } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Storage.SystemDataPaths */
 HRESULT ws_system_data_paths_new(WS_SystemDataPaths **out);
 
-/* Windows.Storage.SystemDataPaths */
-/* Windows.Storage.SystemDataPaths.get_Fonts() */
 HRESULT ws_system_data_paths_get__fonts(WS_SystemDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemDataPaths.get_ProgramData() */
 HRESULT ws_system_data_paths_get__program_data(WS_SystemDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemDataPaths.get_Public() */
 HRESULT ws_system_data_paths_get__public(WS_SystemDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemDataPaths.get_PublicDesktop() */
 HRESULT ws_system_data_paths_get__public_desktop(WS_SystemDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemDataPaths.get_PublicDocuments() */
 HRESULT ws_system_data_paths_get__public_documents(WS_SystemDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemDataPaths.get_PublicDownloads() */
 HRESULT ws_system_data_paths_get__public_downloads(WS_SystemDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemDataPaths.get_PublicMusic() */
 HRESULT ws_system_data_paths_get__public_music(WS_SystemDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemDataPaths.get_PublicPictures() */
 HRESULT ws_system_data_paths_get__public_pictures(WS_SystemDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemDataPaths.get_PublicVideos() */
 HRESULT ws_system_data_paths_get__public_videos(WS_SystemDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemDataPaths.get_System() */
 HRESULT ws_system_data_paths_get__system(WS_SystemDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemDataPaths.get_SystemHost() */
 HRESULT ws_system_data_paths_get__system_host(WS_SystemDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemDataPaths.get_SystemX86() */
 HRESULT ws_system_data_paths_get__system_x86(WS_SystemDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemDataPaths.get_SystemX64() */
 HRESULT ws_system_data_paths_get__system_x64(WS_SystemDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemDataPaths.get_SystemArm() */
 HRESULT ws_system_data_paths_get__system_arm(WS_SystemDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemDataPaths.get_UserProfiles() */
 HRESULT ws_system_data_paths_get__user_profiles(WS_SystemDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemDataPaths.get_Windows() */
 HRESULT ws_system_data_paths_get__windows(WS_SystemDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemDataPaths.GetDefault() */
 HRESULT ws_system_data_paths_get_default(WS_SystemDataPaths** out);
 
-/* activate Windows.Storage.SystemGPSProperties */
 HRESULT ws_system_g_p_s_properties_new(WS_SystemGPSProperties **out);
 
-/* Windows.Storage.SystemGPSProperties */
-/* Windows.Storage.SystemGPSProperties.get_LatitudeDecimal() */
 HRESULT ws_system_g_p_s_properties_get__latitude_decimal(WS_SystemGPSProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemGPSProperties.get_LongitudeDecimal() */
 HRESULT ws_system_g_p_s_properties_get__longitude_decimal(WS_SystemGPSProperties *self, cwinrt_hstring *value);
 
-/* activate Windows.Storage.SystemImageProperties */
 HRESULT ws_system_image_properties_new(WS_SystemImageProperties **out);
 
-/* Windows.Storage.SystemImageProperties */
-/* Windows.Storage.SystemImageProperties.get_HorizontalSize() */
 HRESULT ws_system_image_properties_get__horizontal_size(WS_SystemImageProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemImageProperties.get_VerticalSize() */
 HRESULT ws_system_image_properties_get__vertical_size(WS_SystemImageProperties *self, cwinrt_hstring *value);
 
-/* activate Windows.Storage.SystemMediaProperties */
 HRESULT ws_system_media_properties_new(WS_SystemMediaProperties **out);
 
-/* Windows.Storage.SystemMediaProperties */
-/* Windows.Storage.SystemMediaProperties.get_Duration() */
 HRESULT ws_system_media_properties_get__duration(WS_SystemMediaProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemMediaProperties.get_Producer() */
 HRESULT ws_system_media_properties_get__producer(WS_SystemMediaProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemMediaProperties.get_Publisher() */
 HRESULT ws_system_media_properties_get__publisher(WS_SystemMediaProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemMediaProperties.get_SubTitle() */
 HRESULT ws_system_media_properties_get__sub_title(WS_SystemMediaProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemMediaProperties.get_Writer() */
 HRESULT ws_system_media_properties_get__writer(WS_SystemMediaProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemMediaProperties.get_Year() */
 HRESULT ws_system_media_properties_get__year(WS_SystemMediaProperties *self, cwinrt_hstring *value);
 
-/* activate Windows.Storage.SystemMusicProperties */
 HRESULT ws_system_music_properties_new(WS_SystemMusicProperties **out);
 
-/* Windows.Storage.SystemMusicProperties */
-/* Windows.Storage.SystemMusicProperties.get_AlbumArtist() */
 HRESULT ws_system_music_properties_get__album_artist(WS_SystemMusicProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemMusicProperties.get_AlbumTitle() */
 HRESULT ws_system_music_properties_get__album_title(WS_SystemMusicProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemMusicProperties.get_Artist() */
 HRESULT ws_system_music_properties_get__artist(WS_SystemMusicProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemMusicProperties.get_Composer() */
 HRESULT ws_system_music_properties_get__composer(WS_SystemMusicProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemMusicProperties.get_Conductor() */
 HRESULT ws_system_music_properties_get__conductor(WS_SystemMusicProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemMusicProperties.get_DisplayArtist() */
 HRESULT ws_system_music_properties_get__display_artist(WS_SystemMusicProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemMusicProperties.get_Genre() */
 HRESULT ws_system_music_properties_get__genre(WS_SystemMusicProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemMusicProperties.get_TrackNumber() */
 HRESULT ws_system_music_properties_get__track_number(WS_SystemMusicProperties *self, cwinrt_hstring *value);
 
-/* activate Windows.Storage.SystemPhotoProperties */
 HRESULT ws_system_photo_properties_new(WS_SystemPhotoProperties **out);
 
-/* Windows.Storage.SystemPhotoProperties */
-/* Windows.Storage.SystemPhotoProperties.get_CameraManufacturer() */
 HRESULT ws_system_photo_properties_get__camera_manufacturer(WS_SystemPhotoProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemPhotoProperties.get_CameraModel() */
 HRESULT ws_system_photo_properties_get__camera_model(WS_SystemPhotoProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemPhotoProperties.get_DateTaken() */
 HRESULT ws_system_photo_properties_get__date_taken(WS_SystemPhotoProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemPhotoProperties.get_Orientation() */
 HRESULT ws_system_photo_properties_get__orientation(WS_SystemPhotoProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemPhotoProperties.get_PeopleNames() */
 HRESULT ws_system_photo_properties_get__people_names(WS_SystemPhotoProperties *self, cwinrt_hstring *value);
 
-/* activate Windows.Storage.SystemProperties */
 HRESULT ws_system_properties_new(WS_SystemProperties **out);
 
-/* Windows.Storage.SystemProperties */
-/* Windows.Storage.SystemProperties.get_Author() */
 HRESULT ws_system_properties_get__author(cwinrt_hstring *value);
 
-/* Windows.Storage.SystemProperties.get_Comment() */
 HRESULT ws_system_properties_get__comment(cwinrt_hstring *value);
 
-/* Windows.Storage.SystemProperties.get_ItemNameDisplay() */
 HRESULT ws_system_properties_get__item_name_display(cwinrt_hstring *value);
 
-/* Windows.Storage.SystemProperties.get_Keywords() */
 HRESULT ws_system_properties_get__keywords(cwinrt_hstring *value);
 
-/* Windows.Storage.SystemProperties.get_Rating() */
 HRESULT ws_system_properties_get__rating(cwinrt_hstring *value);
 
-/* Windows.Storage.SystemProperties.get_Title() */
 HRESULT ws_system_properties_get__title(cwinrt_hstring *value);
 
-/* Windows.Storage.SystemProperties.get_Audio() */
 HRESULT ws_system_properties_get__audio(WS_SystemAudioProperties** value);
 
-/* Windows.Storage.SystemProperties.get_GPS() */
 HRESULT ws_system_properties_get__g_p_s(WS_SystemGPSProperties** value);
 
-/* Windows.Storage.SystemProperties.get_Media() */
 HRESULT ws_system_properties_get__media(WS_SystemMediaProperties** value);
 
-/* Windows.Storage.SystemProperties.get_Music() */
 HRESULT ws_system_properties_get__music(WS_SystemMusicProperties** value);
 
-/* Windows.Storage.SystemProperties.get_Photo() */
 HRESULT ws_system_properties_get__photo(WS_SystemPhotoProperties** value);
 
-/* Windows.Storage.SystemProperties.get_Video() */
 HRESULT ws_system_properties_get__video(WS_SystemVideoProperties** value);
 
-/* Windows.Storage.SystemProperties.get_Image() */
 HRESULT ws_system_properties_get__image(WS_SystemImageProperties** value);
 
-/* activate Windows.Storage.SystemVideoProperties */
 HRESULT ws_system_video_properties_new(WS_SystemVideoProperties **out);
 
-/* Windows.Storage.SystemVideoProperties */
-/* Windows.Storage.SystemVideoProperties.get_Director() */
 HRESULT ws_system_video_properties_get__director(WS_SystemVideoProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemVideoProperties.get_FrameHeight() */
 HRESULT ws_system_video_properties_get__frame_height(WS_SystemVideoProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemVideoProperties.get_FrameWidth() */
 HRESULT ws_system_video_properties_get__frame_width(WS_SystemVideoProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemVideoProperties.get_Orientation() */
 HRESULT ws_system_video_properties_get__orientation(WS_SystemVideoProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.SystemVideoProperties.get_TotalBitrate() */
 HRESULT ws_system_video_properties_get__total_bitrate(WS_SystemVideoProperties *self, cwinrt_hstring *value);
 
-/* activate Windows.Storage.UserDataPaths */
 HRESULT ws_user_data_paths_new(WS_UserDataPaths **out);
 
-/* Windows.Storage.UserDataPaths */
-/* Windows.Storage.UserDataPaths.get_CameraRoll() */
 HRESULT ws_user_data_paths_get__camera_roll(WS_UserDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.UserDataPaths.get_Cookies() */
 HRESULT ws_user_data_paths_get__cookies(WS_UserDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.UserDataPaths.get_Desktop() */
 HRESULT ws_user_data_paths_get__desktop(WS_UserDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.UserDataPaths.get_Documents() */
 HRESULT ws_user_data_paths_get__documents(WS_UserDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.UserDataPaths.get_Downloads() */
 HRESULT ws_user_data_paths_get__downloads(WS_UserDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.UserDataPaths.get_Favorites() */
 HRESULT ws_user_data_paths_get__favorites(WS_UserDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.UserDataPaths.get_History() */
 HRESULT ws_user_data_paths_get__history(WS_UserDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.UserDataPaths.get_InternetCache() */
 HRESULT ws_user_data_paths_get__internet_cache(WS_UserDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.UserDataPaths.get_LocalAppData() */
 HRESULT ws_user_data_paths_get__local_app_data(WS_UserDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.UserDataPaths.get_LocalAppDataLow() */
 HRESULT ws_user_data_paths_get__local_app_data_low(WS_UserDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.UserDataPaths.get_Music() */
 HRESULT ws_user_data_paths_get__music(WS_UserDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.UserDataPaths.get_Pictures() */
 HRESULT ws_user_data_paths_get__pictures(WS_UserDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.UserDataPaths.get_Profile() */
 HRESULT ws_user_data_paths_get__profile(WS_UserDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.UserDataPaths.get_Recent() */
 HRESULT ws_user_data_paths_get__recent(WS_UserDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.UserDataPaths.get_RoamingAppData() */
 HRESULT ws_user_data_paths_get__roaming_app_data(WS_UserDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.UserDataPaths.get_SavedPictures() */
 HRESULT ws_user_data_paths_get__saved_pictures(WS_UserDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.UserDataPaths.get_Screenshots() */
 HRESULT ws_user_data_paths_get__screenshots(WS_UserDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.UserDataPaths.get_Templates() */
 HRESULT ws_user_data_paths_get__templates(WS_UserDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.UserDataPaths.get_Videos() */
 HRESULT ws_user_data_paths_get__videos(WS_UserDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.UserDataPaths.GetForUser(user) */
 HRESULT ws_user_data_paths_get_for_user(WSY_User* user, WS_UserDataPaths** out);
 
-/* Windows.Storage.UserDataPaths.GetDefault() */
 HRESULT ws_user_data_paths_get_default(WS_UserDataPaths** out);
 
-/* Windows.Storage.StreamedFileDataRequestedHandler */
-/* Windows.Storage.StreamedFileDataRequestedHandler.Invoke(stream) */
 HRESULT ws_streamed_file_data_requested_handler_invoke(WS_StreamedFileDataRequestedHandler *self, WS_StreamedFileDataRequest* stream);
 
-/* activate Windows.Storage.StreamedFileDataRequest */
 HRESULT ws_streamed_file_data_request_new(WS_StreamedFileDataRequest **out);
 
-/* Windows.Storage.StreamedFileDataRequest */
-/* Windows.Storage.StreamedFileDataRequest.WriteAsync(buffer) */
 HRESULT ws_streamed_file_data_request_write_async(WS_StreamedFileDataRequest *self, WSTST_IBuffer* buffer, WF_IAsyncOperationWithProgress_uint32_t_uint32_t** out);
 
-/* Windows.Storage.StreamedFileDataRequest.FlushAsync() */
 HRESULT ws_streamed_file_data_request_flush_async(WS_StreamedFileDataRequest *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Storage.StreamedFileDataRequest.Close() */
 HRESULT ws_streamed_file_data_request_close(WS_StreamedFileDataRequest *self);
 
-/* Windows.Storage.StreamedFileDataRequest.FailAndClose(failureMode) */
 HRESULT ws_streamed_file_data_request_fail_and_close(WS_StreamedFileDataRequest *self, WS_StreamedFileFailureMode failureMode);
 
-/* activate Windows.Storage.StorageStreamTransaction */
 HRESULT ws_storage_stream_transaction_new(WS_StorageStreamTransaction **out);
 
-/* Windows.Storage.StorageStreamTransaction */
-/* Windows.Storage.StorageStreamTransaction.get_Stream() */
 HRESULT ws_storage_stream_transaction_get__stream(WS_StorageStreamTransaction *self, WSTST_IRandomAccessStream** value);
 
-/* Windows.Storage.StorageStreamTransaction.CommitAsync() */
 HRESULT ws_storage_stream_transaction_commit_async(WS_StorageStreamTransaction *self, WF_IAsyncAction** out);
 
-/* Windows.Storage.StorageStreamTransaction.Close() */
 HRESULT ws_storage_stream_transaction_close(WS_StorageStreamTransaction *self);
 
-/* activate Windows.Storage.StorageProvider */
 HRESULT ws_storage_provider_new(WS_StorageProvider **out);
 
-/* Windows.Storage.StorageProvider */
-/* Windows.Storage.StorageProvider.get_Id() */
 HRESULT ws_storage_provider_get__id(WS_StorageProvider *self, cwinrt_hstring *value);
 
-/* Windows.Storage.StorageProvider.get_DisplayName() */
 HRESULT ws_storage_provider_get__display_name(WS_StorageProvider *self, cwinrt_hstring *value);
 
-/* Windows.Storage.StorageProvider.IsPropertySupportedForPartialFileAsync(propertyCanonicalName) */
 HRESULT ws_storage_provider_is_property_supported_for_partial_file_async(WS_StorageProvider *self, cwinrt_hstring propertyCanonicalName, WF_IAsyncOperation_Bool** out);
 
-/* activate Windows.Storage.AppDataPaths */
 HRESULT ws_app_data_paths_new(WS_AppDataPaths **out);
 
-/* Windows.Storage.AppDataPaths */
-/* Windows.Storage.AppDataPaths.get_Cookies() */
 HRESULT ws_app_data_paths_get__cookies(WS_AppDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.AppDataPaths.get_Desktop() */
 HRESULT ws_app_data_paths_get__desktop(WS_AppDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.AppDataPaths.get_Documents() */
 HRESULT ws_app_data_paths_get__documents(WS_AppDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.AppDataPaths.get_Favorites() */
 HRESULT ws_app_data_paths_get__favorites(WS_AppDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.AppDataPaths.get_History() */
 HRESULT ws_app_data_paths_get__history(WS_AppDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.AppDataPaths.get_InternetCache() */
 HRESULT ws_app_data_paths_get__internet_cache(WS_AppDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.AppDataPaths.get_LocalAppData() */
 HRESULT ws_app_data_paths_get__local_app_data(WS_AppDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.AppDataPaths.get_ProgramData() */
 HRESULT ws_app_data_paths_get__program_data(WS_AppDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.AppDataPaths.get_RoamingAppData() */
 HRESULT ws_app_data_paths_get__roaming_app_data(WS_AppDataPaths *self, cwinrt_hstring *value);
 
-/* Windows.Storage.AppDataPaths.GetForUser(user) */
 HRESULT ws_app_data_paths_get_for_user(WSY_User* user, WS_AppDataPaths** out);
 
-/* Windows.Storage.AppDataPaths.GetDefault() */
 HRESULT ws_app_data_paths_get_default(WS_AppDataPaths** out);
 
-/* activate Windows.Storage.ApplicationData */
 HRESULT ws_application_data_new(WS_ApplicationData **out);
 
-/* Windows.Storage.ApplicationData */
-/* Windows.Storage.ApplicationData.get_Version() */
 HRESULT ws_application_data_get__version(WS_ApplicationData *self, uint32_t *value);
 
-/* Windows.Storage.ApplicationData.SetVersionAsync(desiredVersion, handler) */
 HRESULT ws_application_data_set_version_async(WS_ApplicationData *self, uint32_t desiredVersion, WS_ApplicationDataSetVersionHandler* handler, WF_IAsyncAction** out);
 
-/* Windows.Storage.ApplicationData.ClearAsync() */
 HRESULT ws_application_data_clear_async(WS_ApplicationData *self, WF_IAsyncAction** out);
 
-/* Windows.Storage.ApplicationData.ClearAsync(locality) */
 HRESULT ws_application_data_clear_async_application_data_locality_p(WS_ApplicationData *self, WS_ApplicationDataLocality locality, WF_IAsyncAction** out);
 
-/* Windows.Storage.ApplicationData.get_LocalSettings() */
 HRESULT ws_application_data_get__local_settings(WS_ApplicationData *self, WS_ApplicationDataContainer** value);
 
-/* Windows.Storage.ApplicationData.get_RoamingSettings() */
 HRESULT ws_application_data_get__roaming_settings(WS_ApplicationData *self, WS_ApplicationDataContainer** value);
 
-/* Windows.Storage.ApplicationData.get_LocalFolder() */
 HRESULT ws_application_data_get__local_folder(WS_ApplicationData *self, WS_StorageFolder** value);
 
-/* Windows.Storage.ApplicationData.get_RoamingFolder() */
 HRESULT ws_application_data_get__roaming_folder(WS_ApplicationData *self, WS_StorageFolder** value);
 
-/* Windows.Storage.ApplicationData.get_TemporaryFolder() */
 HRESULT ws_application_data_get__temporary_folder(WS_ApplicationData *self, WS_StorageFolder** value);
 
-/* Windows.Storage.ApplicationData.SignalDataChanged() */
 HRESULT ws_application_data_signal_data_changed(WS_ApplicationData *self);
 
-/* Windows.Storage.ApplicationData.get_RoamingStorageQuota() */
 HRESULT ws_application_data_get__roaming_storage_quota(WS_ApplicationData *self, uint64_t *value);
 
-/* Windows.Storage.ApplicationData.get_LocalCacheFolder() */
 HRESULT ws_application_data_get__local_cache_folder(WS_ApplicationData *self, WS_StorageFolder** value);
 
-/* Windows.Storage.ApplicationData.GetPublisherCacheFolder(folderName) */
 HRESULT ws_application_data_get_publisher_cache_folder(WS_ApplicationData *self, cwinrt_hstring folderName, WS_StorageFolder** out);
 
-/* Windows.Storage.ApplicationData.ClearPublisherCacheFolderAsync(folderName) */
 HRESULT ws_application_data_clear_publisher_cache_folder_async(WS_ApplicationData *self, cwinrt_hstring folderName, WF_IAsyncAction** out);
 
-/* Windows.Storage.ApplicationData.get_SharedLocalFolder() */
 HRESULT ws_application_data_get__shared_local_folder(WS_ApplicationData *self, WS_StorageFolder** value);
 
-/* Windows.Storage.ApplicationData.Close() */
 HRESULT ws_application_data_close(WS_ApplicationData *self);
 
-/* Windows.Storage.ApplicationData.GetForUserAsync(user) */
 HRESULT ws_application_data_get_for_user_async(WSY_User* user, WF_IAsyncOperation_WS_ApplicationData** out);
 
-/* Windows.Storage.ApplicationData.get_Current() */
 HRESULT ws_application_data_get__current(WS_ApplicationData** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token ws_application_data_on_data_changed(WS_ApplicationData *self, cwinrt_event_fn fn, void *ctx);
 void ws_application_data_off_data_changed(WS_ApplicationData *self, cwinrt_token token);
 
-/* activate Windows.Storage.ApplicationDataCompositeValue */
 HRESULT ws_application_data_composite_value_new(WS_ApplicationDataCompositeValue **out);
 
-/* Windows.Storage.ApplicationDataCompositeValue */
-/* Windows.Storage.ApplicationDataCompositeValue.Lookup(key) */
 HRESULT ws_application_data_composite_value_lookup(WS_ApplicationDataCompositeValue *self, cwinrt_hstring key, IInspectable** out);
 
-/* Windows.Storage.ApplicationDataCompositeValue.get_Size() */
 HRESULT ws_application_data_composite_value_get__size(WS_ApplicationDataCompositeValue *self, uint32_t *value);
 
-/* Windows.Storage.ApplicationDataCompositeValue.HasKey(key) */
 HRESULT ws_application_data_composite_value_has_key(WS_ApplicationDataCompositeValue *self, cwinrt_hstring key, BOOL *out);
 
-/* Windows.Storage.ApplicationDataCompositeValue.GetView() */
 HRESULT ws_application_data_composite_value_get_view(WS_ApplicationDataCompositeValue *self, WFOCO_IMapView_HSTRING_Object** out);
 
-/* Windows.Storage.ApplicationDataCompositeValue.Insert(key) */
 HRESULT ws_application_data_composite_value_insert(WS_ApplicationDataCompositeValue *self, cwinrt_hstring key, IInspectable* value, BOOL *out);
 
-/* Windows.Storage.ApplicationDataCompositeValue.Remove(key) */
 HRESULT ws_application_data_composite_value_remove(WS_ApplicationDataCompositeValue *self, cwinrt_hstring key);
 
-/* Windows.Storage.ApplicationDataCompositeValue.Clear() */
 HRESULT ws_application_data_composite_value_clear(WS_ApplicationDataCompositeValue *self);
 
-/* Windows.Storage.ApplicationDataCompositeValue.First() */
 HRESULT ws_application_data_composite_value_first(WS_ApplicationDataCompositeValue *self, WFOCO_IIterator_WFOCO_IKeyValuePair_HSTRING_Object** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token ws_application_data_composite_value_on_map_changed(WS_ApplicationDataCompositeValue *self, cwinrt_event_fn fn, void *ctx);
 void ws_application_data_composite_value_off_map_changed(WS_ApplicationDataCompositeValue *self, cwinrt_token token);
 
-/* activate Windows.Storage.ApplicationDataContainer */
 HRESULT ws_application_data_container_new(WS_ApplicationDataContainer **out);
 
-/* Windows.Storage.ApplicationDataContainer */
-/* Windows.Storage.ApplicationDataContainer.get_Name() */
 HRESULT ws_application_data_container_get__name(WS_ApplicationDataContainer *self, cwinrt_hstring *value);
 
-/* Windows.Storage.ApplicationDataContainer.get_Locality() */
 HRESULT ws_application_data_container_get__locality(WS_ApplicationDataContainer *self, WS_ApplicationDataLocality *value);
 
-/* Windows.Storage.ApplicationDataContainer.get_Values() */
 HRESULT ws_application_data_container_get__values(WS_ApplicationDataContainer *self, WFOCO_IPropertySet** value);
 
-/* Windows.Storage.ApplicationDataContainer.get_Containers() */
 HRESULT ws_application_data_container_get__containers(WS_ApplicationDataContainer *self, WFOCO_IMapView_HSTRING_WS_ApplicationDataContainer** value);
 
-/* Windows.Storage.ApplicationDataContainer.CreateContainer(name, disposition) */
 HRESULT ws_application_data_container_create_container(WS_ApplicationDataContainer *self, cwinrt_hstring name, WS_ApplicationDataCreateDisposition disposition, WS_ApplicationDataContainer** out);
 
-/* Windows.Storage.ApplicationDataContainer.DeleteContainer(name) */
 HRESULT ws_application_data_container_delete_container(WS_ApplicationDataContainer *self, cwinrt_hstring name);
 
-/* Windows.Storage.ApplicationDataContainer.Close() */
 HRESULT ws_application_data_container_close(WS_ApplicationDataContainer *self);
 
-/* activate Windows.Storage.ApplicationDataContainerSettings */
 HRESULT ws_application_data_container_settings_new(WS_ApplicationDataContainerSettings **out);
 
-/* Windows.Storage.ApplicationDataContainerSettings */
-/* Windows.Storage.ApplicationDataContainerSettings.Lookup(key) */
 HRESULT ws_application_data_container_settings_lookup(WS_ApplicationDataContainerSettings *self, cwinrt_hstring key, IInspectable** out);
 
-/* Windows.Storage.ApplicationDataContainerSettings.get_Size() */
 HRESULT ws_application_data_container_settings_get__size(WS_ApplicationDataContainerSettings *self, uint32_t *value);
 
-/* Windows.Storage.ApplicationDataContainerSettings.HasKey(key) */
 HRESULT ws_application_data_container_settings_has_key(WS_ApplicationDataContainerSettings *self, cwinrt_hstring key, BOOL *out);
 
-/* Windows.Storage.ApplicationDataContainerSettings.GetView() */
 HRESULT ws_application_data_container_settings_get_view(WS_ApplicationDataContainerSettings *self, WFOCO_IMapView_HSTRING_Object** out);
 
-/* Windows.Storage.ApplicationDataContainerSettings.Insert(key) */
 HRESULT ws_application_data_container_settings_insert(WS_ApplicationDataContainerSettings *self, cwinrt_hstring key, IInspectable* value, BOOL *out);
 
-/* Windows.Storage.ApplicationDataContainerSettings.Remove(key) */
 HRESULT ws_application_data_container_settings_remove(WS_ApplicationDataContainerSettings *self, cwinrt_hstring key);
 
-/* Windows.Storage.ApplicationDataContainerSettings.Clear() */
 HRESULT ws_application_data_container_settings_clear(WS_ApplicationDataContainerSettings *self);
 
-/* Windows.Storage.ApplicationDataContainerSettings.First() */
 HRESULT ws_application_data_container_settings_first(WS_ApplicationDataContainerSettings *self, WFOCO_IIterator_WFOCO_IKeyValuePair_HSTRING_Object** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token ws_application_data_container_settings_on_map_changed(WS_ApplicationDataContainerSettings *self, cwinrt_event_fn fn, void *ctx);
 void ws_application_data_container_settings_off_map_changed(WS_ApplicationDataContainerSettings *self, cwinrt_token token);
 
-/* Windows.Storage.ApplicationDataSetVersionHandler */
-/* Windows.Storage.ApplicationDataSetVersionHandler.Invoke(setVersionRequest) */
 HRESULT ws_application_data_set_version_handler_invoke(WS_ApplicationDataSetVersionHandler *self, WS_SetVersionRequest* setVersionRequest);
 
-/* activate Windows.Storage.StorageLibraryLastChangeId */
 HRESULT ws_storage_library_last_change_id_new(WS_StorageLibraryLastChangeId **out);
 
-/* Windows.Storage.StorageLibraryLastChangeId */
-/* Windows.Storage.StorageLibraryLastChangeId.get_Unknown() */
 HRESULT ws_storage_library_last_change_id_get__unknown(uint64_t *value);
 
-/* activate Windows.Storage.StorageLibraryChangeTrackerOptions */
 HRESULT ws_storage_library_change_tracker_options_new(WS_StorageLibraryChangeTrackerOptions **out);
 
-/* Windows.Storage.StorageLibraryChangeTrackerOptions */
-/* Windows.Storage.StorageLibraryChangeTrackerOptions.get_TrackChangeDetails() */
 HRESULT ws_storage_library_change_tracker_options_get__track_change_details(WS_StorageLibraryChangeTrackerOptions *self, BOOL *value);
 
-/* Windows.Storage.StorageLibraryChangeTrackerOptions.put_TrackChangeDetails() */
 HRESULT ws_storage_library_change_tracker_options_put__track_change_details(WS_StorageLibraryChangeTrackerOptions *self, BOOL value);
 
-/* activate Windows.Storage.StorageLibraryChangeTracker */
 HRESULT ws_storage_library_change_tracker_new(WS_StorageLibraryChangeTracker **out);
 
-/* Windows.Storage.StorageLibraryChangeTracker */
-/* Windows.Storage.StorageLibraryChangeTracker.GetChangeReader() */
 HRESULT ws_storage_library_change_tracker_get_change_reader(WS_StorageLibraryChangeTracker *self, WS_StorageLibraryChangeReader** out);
 
-/* Windows.Storage.StorageLibraryChangeTracker.Enable() */
 HRESULT ws_storage_library_change_tracker_enable(WS_StorageLibraryChangeTracker *self);
 
-/* Windows.Storage.StorageLibraryChangeTracker.Reset() */
 HRESULT ws_storage_library_change_tracker_reset(WS_StorageLibraryChangeTracker *self);
 
-/* Windows.Storage.StorageLibraryChangeTracker.Enable(options) */
 HRESULT ws_storage_library_change_tracker_enable_p(WS_StorageLibraryChangeTracker *self, WS_StorageLibraryChangeTrackerOptions* options);
 
-/* Windows.Storage.StorageLibraryChangeTracker.Disable() */
 HRESULT ws_storage_library_change_tracker_disable(WS_StorageLibraryChangeTracker *self);
 
-/* activate Windows.Storage.StorageLibraryChangeReader */
 HRESULT ws_storage_library_change_reader_new(WS_StorageLibraryChangeReader **out);
 
-/* Windows.Storage.StorageLibraryChangeReader */
-/* Windows.Storage.StorageLibraryChangeReader.ReadBatchAsync() */
 HRESULT ws_storage_library_change_reader_read_batch_async(WS_StorageLibraryChangeReader *self, WF_IAsyncOperation_WFOCO_IVectorView_WS_StorageLibraryChange** out);
 
-/* Windows.Storage.StorageLibraryChangeReader.AcceptChangesAsync() */
 HRESULT ws_storage_library_change_reader_accept_changes_async(WS_StorageLibraryChangeReader *self, WF_IAsyncAction** out);
 
-/* Windows.Storage.StorageLibraryChangeReader.GetLastChangeId() */
 HRESULT ws_storage_library_change_reader_get_last_change_id(WS_StorageLibraryChangeReader *self, uint64_t *out);
 
-/* activate Windows.Storage.CachedFileManager */
 HRESULT ws_cached_file_manager_new(WS_CachedFileManager **out);
 
-/* Windows.Storage.CachedFileManager */
-/* Windows.Storage.CachedFileManager.DeferUpdates(file) */
 HRESULT ws_cached_file_manager_defer_updates(WS_IStorageFile* file);
 
-/* Windows.Storage.CachedFileManager.CompleteUpdatesAsync(file) */
 HRESULT ws_cached_file_manager_complete_updates_async(WS_IStorageFile* file, WF_IAsyncOperation_WSTPR_FileUpdateStatus** out);
 
-/* activate Windows.Storage.StorageLibraryChange */
 HRESULT ws_storage_library_change_new(WS_StorageLibraryChange **out);
 
-/* Windows.Storage.StorageLibraryChange */
-/* Windows.Storage.StorageLibraryChange.get_ChangeType() */
 HRESULT ws_storage_library_change_get__change_type(WS_StorageLibraryChange *self, WS_StorageLibraryChangeType *value);
 
-/* Windows.Storage.StorageLibraryChange.get_Path() */
 HRESULT ws_storage_library_change_get__path(WS_StorageLibraryChange *self, cwinrt_hstring *value);
 
-/* Windows.Storage.StorageLibraryChange.get_PreviousPath() */
 HRESULT ws_storage_library_change_get__previous_path(WS_StorageLibraryChange *self, cwinrt_hstring *value);
 
-/* Windows.Storage.StorageLibraryChange.IsOfType() */
 HRESULT ws_storage_library_change_is_of_type(WS_StorageLibraryChange *self, WS_StorageItemTypes type_, BOOL *out);
 
-/* Windows.Storage.StorageLibraryChange.GetStorageItemAsync() */
 HRESULT ws_storage_library_change_get_storage_item_async(WS_StorageLibraryChange *self, WF_IAsyncOperation_WS_IStorageItem** out);
 
-/* activate Windows.Storage.StorageLibrary */
 HRESULT ws_storage_library_new(WS_StorageLibrary **out);
 
-/* Windows.Storage.StorageLibrary */
-/* Windows.Storage.StorageLibrary.RequestAddFolderAsync() */
 HRESULT ws_storage_library_request_add_folder_async(WS_StorageLibrary *self, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.StorageLibrary.RequestRemoveFolderAsync(folder) */
 HRESULT ws_storage_library_request_remove_folder_async(WS_StorageLibrary *self, WS_StorageFolder* folder, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Storage.StorageLibrary.get_Folders() */
 HRESULT ws_storage_library_get__folders(WS_StorageLibrary *self, WFOCO_IObservableVector_WS_StorageFolder** value);
 
-/* Windows.Storage.StorageLibrary.get_SaveFolder() */
 HRESULT ws_storage_library_get__save_folder(WS_StorageLibrary *self, WS_StorageFolder** value);
 
-/* Windows.Storage.StorageLibrary.get_ChangeTracker() */
 HRESULT ws_storage_library_get__change_tracker(WS_StorageLibrary *self, WS_StorageLibraryChangeTracker** value);
 
-/* Windows.Storage.StorageLibrary.AreFolderSuggestionsAvailableAsync() */
 HRESULT ws_storage_library_are_folder_suggestions_available_async(WS_StorageLibrary *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Storage.StorageLibrary.GetLibraryForUserAsync(user, libraryId) */
 HRESULT ws_storage_library_get_library_for_user_async(WSY_User* user, WS_KnownLibraryId libraryId, WF_IAsyncOperation_WS_StorageLibrary** out);
 
-/* Windows.Storage.StorageLibrary.GetLibraryAsync(libraryId) */
 HRESULT ws_storage_library_get_library_async(WS_KnownLibraryId libraryId, WF_IAsyncOperation_WS_StorageLibrary** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token ws_storage_library_on_definition_changed(WS_StorageLibrary *self, cwinrt_event_fn fn, void *ctx);
 void ws_storage_library_off_definition_changed(WS_StorageLibrary *self, cwinrt_token token);
 
-/* activate Windows.Storage.StorageFolder */
 HRESULT ws_storage_folder_new(WS_StorageFolder **out);
 
-/* Windows.Storage.StorageFolder */
-/* Windows.Storage.StorageFolder.CreateFileAsync(desiredName) */
 HRESULT ws_storage_folder_create_file_async(WS_StorageFolder *self, cwinrt_hstring desiredName, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.StorageFolder.CreateFileAsync(desiredName, options) */
 HRESULT ws_storage_folder_create_file_async_str_creation_collision_option_p(WS_StorageFolder *self, cwinrt_hstring desiredName, WS_CreationCollisionOption options, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.StorageFolder.CreateFolderAsync(desiredName) */
 HRESULT ws_storage_folder_create_folder_async(WS_StorageFolder *self, cwinrt_hstring desiredName, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.StorageFolder.CreateFolderAsync(desiredName, options) */
 HRESULT ws_storage_folder_create_folder_async_str_creation_collision_option_p(WS_StorageFolder *self, cwinrt_hstring desiredName, WS_CreationCollisionOption options, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.StorageFolder.GetFileAsync(name) */
 HRESULT ws_storage_folder_get_file_async(WS_StorageFolder *self, cwinrt_hstring name, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.StorageFolder.GetFolderAsync(name) */
 HRESULT ws_storage_folder_get_folder_async(WS_StorageFolder *self, cwinrt_hstring name, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.StorageFolder.GetItemAsync(name) */
 HRESULT ws_storage_folder_get_item_async(WS_StorageFolder *self, cwinrt_hstring name, WF_IAsyncOperation_WS_IStorageItem** out);
 
-/* Windows.Storage.StorageFolder.GetFilesAsync() */
 HRESULT ws_storage_folder_get_files_async(WS_StorageFolder *self, WF_IAsyncOperation_WFOCO_IVectorView_WS_StorageFile** out);
 
-/* Windows.Storage.StorageFolder.GetFoldersAsync() */
 HRESULT ws_storage_folder_get_folders_async(WS_StorageFolder *self, WF_IAsyncOperation_WFOCO_IVectorView_WS_StorageFolder** out);
 
-/* Windows.Storage.StorageFolder.GetItemsAsync() */
 HRESULT ws_storage_folder_get_items_async(WS_StorageFolder *self, WF_IAsyncOperation_WFOCO_IVectorView_WS_IStorageItem** out);
 
-/* Windows.Storage.StorageFolder.RenameAsync(desiredName) */
 HRESULT ws_storage_folder_rename_async(WS_StorageFolder *self, cwinrt_hstring desiredName, WF_IAsyncAction** out);
 
-/* Windows.Storage.StorageFolder.RenameAsync(desiredName, option) */
 HRESULT ws_storage_folder_rename_async_str_name_collision_option_p(WS_StorageFolder *self, cwinrt_hstring desiredName, WS_NameCollisionOption option, WF_IAsyncAction** out);
 
-/* Windows.Storage.StorageFolder.DeleteAsync() */
 HRESULT ws_storage_folder_delete_async(WS_StorageFolder *self, WF_IAsyncAction** out);
 
-/* Windows.Storage.StorageFolder.DeleteAsync(option) */
 HRESULT ws_storage_folder_delete_async_storage_delete_option_p(WS_StorageFolder *self, WS_StorageDeleteOption option, WF_IAsyncAction** out);
 
-/* Windows.Storage.StorageFolder.GetBasicPropertiesAsync() */
 HRESULT ws_storage_folder_get_basic_properties_async(WS_StorageFolder *self, WF_IAsyncOperation_WSTFI_BasicProperties** out);
 
-/* Windows.Storage.StorageFolder.get_Name() */
 HRESULT ws_storage_folder_get__name(WS_StorageFolder *self, cwinrt_hstring *value);
 
-/* Windows.Storage.StorageFolder.get_Path() */
 HRESULT ws_storage_folder_get__path(WS_StorageFolder *self, cwinrt_hstring *value);
 
-/* Windows.Storage.StorageFolder.get_Attributes() */
 HRESULT ws_storage_folder_get__attributes(WS_StorageFolder *self, WS_FileAttributes *value);
 
-/* Windows.Storage.StorageFolder.get_DateCreated() */
 HRESULT ws_storage_folder_get__date_created(WS_StorageFolder *self, WF_DateTime *value);
 
-/* Windows.Storage.StorageFolder.IsOfType() */
 HRESULT ws_storage_folder_is_of_type(WS_StorageFolder *self, WS_StorageItemTypes type_, BOOL *out);
 
-/* Windows.Storage.StorageFolder.GetIndexedStateAsync() */
 HRESULT ws_storage_folder_get_indexed_state_async(WS_StorageFolder *self, WF_IAsyncOperation_WSTSE_IndexedState** out);
 
-/* Windows.Storage.StorageFolder.CreateFileQuery() */
 HRESULT ws_storage_folder_create_file_query(WS_StorageFolder *self, WSTSE_StorageFileQueryResult** out);
 
-/* Windows.Storage.StorageFolder.CreateFileQuery(query) */
 HRESULT ws_storage_folder_create_file_query_common_file_query_p(WS_StorageFolder *self, WSTSE_CommonFileQuery query, WSTSE_StorageFileQueryResult** out);
 
-/* Windows.Storage.StorageFolder.CreateFileQueryWithOptions(queryOptions) */
 HRESULT ws_storage_folder_create_file_query_with_options(WS_StorageFolder *self, WSTSE_QueryOptions* queryOptions, WSTSE_StorageFileQueryResult** out);
 
-/* Windows.Storage.StorageFolder.CreateFolderQuery() */
 HRESULT ws_storage_folder_create_folder_query(WS_StorageFolder *self, WSTSE_StorageFolderQueryResult** out);
 
-/* Windows.Storage.StorageFolder.CreateFolderQuery(query) */
 HRESULT ws_storage_folder_create_folder_query_common_folder_query_p(WS_StorageFolder *self, WSTSE_CommonFolderQuery query, WSTSE_StorageFolderQueryResult** out);
 
-/* Windows.Storage.StorageFolder.CreateFolderQueryWithOptions(queryOptions) */
 HRESULT ws_storage_folder_create_folder_query_with_options(WS_StorageFolder *self, WSTSE_QueryOptions* queryOptions, WSTSE_StorageFolderQueryResult** out);
 
-/* Windows.Storage.StorageFolder.CreateItemQuery() */
 HRESULT ws_storage_folder_create_item_query(WS_StorageFolder *self, WSTSE_StorageItemQueryResult** out);
 
-/* Windows.Storage.StorageFolder.CreateItemQueryWithOptions(queryOptions) */
 HRESULT ws_storage_folder_create_item_query_with_options(WS_StorageFolder *self, WSTSE_QueryOptions* queryOptions, WSTSE_StorageItemQueryResult** out);
 
-/* Windows.Storage.StorageFolder.GetFilesAsync(query, startIndex, maxItemsToRetrieve) */
 HRESULT ws_storage_folder_get_files_async_common_file_query_u32_u32_p(WS_StorageFolder *self, WSTSE_CommonFileQuery query, uint32_t startIndex, uint32_t maxItemsToRetrieve, WF_IAsyncOperation_WFOCO_IVectorView_WS_StorageFile** out);
 
-/* Windows.Storage.StorageFolder.GetFilesAsync(query) */
 HRESULT ws_storage_folder_get_files_async_common_file_query_p(WS_StorageFolder *self, WSTSE_CommonFileQuery query, WF_IAsyncOperation_WFOCO_IVectorView_WS_StorageFile** out);
 
-/* Windows.Storage.StorageFolder.GetFoldersAsync(query, startIndex, maxItemsToRetrieve) */
 HRESULT ws_storage_folder_get_folders_async_common_folder_query_u32_u32_p(WS_StorageFolder *self, WSTSE_CommonFolderQuery query, uint32_t startIndex, uint32_t maxItemsToRetrieve, WF_IAsyncOperation_WFOCO_IVectorView_WS_StorageFolder** out);
 
-/* Windows.Storage.StorageFolder.GetFoldersAsync(query) */
 HRESULT ws_storage_folder_get_folders_async_common_folder_query_p(WS_StorageFolder *self, WSTSE_CommonFolderQuery query, WF_IAsyncOperation_WFOCO_IVectorView_WS_StorageFolder** out);
 
-/* Windows.Storage.StorageFolder.GetItemsAsync(startIndex, maxItemsToRetrieve) */
 HRESULT ws_storage_folder_get_items_async_u32_u32_p(WS_StorageFolder *self, uint32_t startIndex, uint32_t maxItemsToRetrieve, WF_IAsyncOperation_WFOCO_IVectorView_WS_IStorageItem** out);
 
-/* Windows.Storage.StorageFolder.AreQueryOptionsSupported(queryOptions) */
 HRESULT ws_storage_folder_are_query_options_supported(WS_StorageFolder *self, WSTSE_QueryOptions* queryOptions, BOOL *out);
 
-/* Windows.Storage.StorageFolder.IsCommonFolderQuerySupported(query) */
 HRESULT ws_storage_folder_is_common_folder_query_supported(WS_StorageFolder *self, WSTSE_CommonFolderQuery query, BOOL *out);
 
-/* Windows.Storage.StorageFolder.IsCommonFileQuerySupported(query) */
 HRESULT ws_storage_folder_is_common_file_query_supported(WS_StorageFolder *self, WSTSE_CommonFileQuery query, BOOL *out);
 
-/* Windows.Storage.StorageFolder.GetThumbnailAsync(mode) */
 HRESULT ws_storage_folder_get_thumbnail_async(WS_StorageFolder *self, WSTFI_ThumbnailMode mode, WF_IAsyncOperation_WSTFI_StorageItemThumbnail** out);
 
-/* Windows.Storage.StorageFolder.GetThumbnailAsync(mode, requestedSize) */
 HRESULT ws_storage_folder_get_thumbnail_async_thumbnail_mode_u32_p(WS_StorageFolder *self, WSTFI_ThumbnailMode mode, uint32_t requestedSize, WF_IAsyncOperation_WSTFI_StorageItemThumbnail** out);
 
-/* Windows.Storage.StorageFolder.GetThumbnailAsync(mode, requestedSize, options) */
 HRESULT ws_storage_folder_get_thumbnail_async_thumbnail_mode_u32_thumbnail_options_p(WS_StorageFolder *self, WSTFI_ThumbnailMode mode, uint32_t requestedSize, WSTFI_ThumbnailOptions options, WF_IAsyncOperation_WSTFI_StorageItemThumbnail** out);
 
-/* Windows.Storage.StorageFolder.get_DisplayName() */
 HRESULT ws_storage_folder_get__display_name(WS_StorageFolder *self, cwinrt_hstring *value);
 
-/* Windows.Storage.StorageFolder.get_DisplayType() */
 HRESULT ws_storage_folder_get__display_type(WS_StorageFolder *self, cwinrt_hstring *value);
 
-/* Windows.Storage.StorageFolder.get_FolderRelativeId() */
 HRESULT ws_storage_folder_get__folder_relative_id(WS_StorageFolder *self, cwinrt_hstring *value);
 
-/* Windows.Storage.StorageFolder.get_Properties() */
 HRESULT ws_storage_folder_get__properties(WS_StorageFolder *self, WSTFI_StorageItemContentProperties** value);
 
-/* Windows.Storage.StorageFolder.GetScaledImageAsThumbnailAsync(mode) */
 HRESULT ws_storage_folder_get_scaled_image_as_thumbnail_async(WS_StorageFolder *self, WSTFI_ThumbnailMode mode, WF_IAsyncOperation_WSTFI_StorageItemThumbnail** out);
 
-/* Windows.Storage.StorageFolder.GetScaledImageAsThumbnailAsync(mode, requestedSize) */
 HRESULT ws_storage_folder_get_scaled_image_as_thumbnail_async_thumbnail_mode_u32_p(WS_StorageFolder *self, WSTFI_ThumbnailMode mode, uint32_t requestedSize, WF_IAsyncOperation_WSTFI_StorageItemThumbnail** out);
 
-/* Windows.Storage.StorageFolder.GetScaledImageAsThumbnailAsync(mode, requestedSize, options) */
 HRESULT ws_storage_folder_get_scaled_image_as_thumbnail_async_thumbnail_mode_u32_thumbnail_options_p(WS_StorageFolder *self, WSTFI_ThumbnailMode mode, uint32_t requestedSize, WSTFI_ThumbnailOptions options, WF_IAsyncOperation_WSTFI_StorageItemThumbnail** out);
 
-/* Windows.Storage.StorageFolder.GetParentAsync() */
 HRESULT ws_storage_folder_get_parent_async(WS_StorageFolder *self, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.StorageFolder.IsEqual(item) */
 HRESULT ws_storage_folder_is_equal(WS_StorageFolder *self, WS_IStorageItem* item, BOOL *out);
 
-/* Windows.Storage.StorageFolder.TryGetItemAsync(name) */
 HRESULT ws_storage_folder_try_get_item_async(WS_StorageFolder *self, cwinrt_hstring name, WF_IAsyncOperation_WS_IStorageItem** out);
 
-/* Windows.Storage.StorageFolder.get_Provider() */
 HRESULT ws_storage_folder_get__provider(WS_StorageFolder *self, WS_StorageProvider** value);
 
-/* Windows.Storage.StorageFolder.TryGetChangeTracker() */
 HRESULT ws_storage_folder_try_get_change_tracker(WS_StorageFolder *self, WS_StorageLibraryChangeTracker** out);
 
-/* Windows.Storage.StorageFolder.GetFolderFromPathForUserAsync(user, path) */
 HRESULT ws_storage_folder_get_folder_from_path_for_user_async(WSY_User* user, cwinrt_hstring path, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.StorageFolder.GetFolderFromPathAsync(path) */
 HRESULT ws_storage_folder_get_folder_from_path_async(cwinrt_hstring path, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* activate Windows.Storage.StorageFile */
 HRESULT ws_storage_file_new(WS_StorageFile **out);
 
-/* Windows.Storage.StorageFile */
-/* Windows.Storage.StorageFile.get_FileType() */
 HRESULT ws_storage_file_get__file_type(WS_StorageFile *self, cwinrt_hstring *value);
 
-/* Windows.Storage.StorageFile.get_ContentType() */
 HRESULT ws_storage_file_get__content_type(WS_StorageFile *self, cwinrt_hstring *value);
 
-/* Windows.Storage.StorageFile.OpenAsync(accessMode) */
 HRESULT ws_storage_file_open_async(WS_StorageFile *self, WS_FileAccessMode accessMode, WF_IAsyncOperation_WSTST_IRandomAccessStream** out);
 
-/* Windows.Storage.StorageFile.OpenTransactedWriteAsync() */
 HRESULT ws_storage_file_open_transacted_write_async(WS_StorageFile *self, WF_IAsyncOperation_WS_StorageStreamTransaction** out);
 
-/* Windows.Storage.StorageFile.CopyAsync(destinationFolder) */
 HRESULT ws_storage_file_copy_async(WS_StorageFile *self, WS_IStorageFolder* destinationFolder, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.StorageFile.CopyAsync(destinationFolder, desiredNewName) */
 HRESULT ws_storage_file_copy_async_p_str_p(WS_StorageFile *self, WS_IStorageFolder* destinationFolder, cwinrt_hstring desiredNewName, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.StorageFile.CopyAsync(destinationFolder, desiredNewName, option) */
 HRESULT ws_storage_file_copy_async_p_str_name_collision_option_p(WS_StorageFile *self, WS_IStorageFolder* destinationFolder, cwinrt_hstring desiredNewName, WS_NameCollisionOption option, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.StorageFile.CopyAndReplaceAsync(fileToReplace) */
 HRESULT ws_storage_file_copy_and_replace_async(WS_StorageFile *self, WS_IStorageFile* fileToReplace, WF_IAsyncAction** out);
 
-/* Windows.Storage.StorageFile.MoveAsync(destinationFolder) */
 HRESULT ws_storage_file_move_async(WS_StorageFile *self, WS_IStorageFolder* destinationFolder, WF_IAsyncAction** out);
 
-/* Windows.Storage.StorageFile.MoveAsync(destinationFolder, desiredNewName) */
 HRESULT ws_storage_file_move_async_p_str_p(WS_StorageFile *self, WS_IStorageFolder* destinationFolder, cwinrt_hstring desiredNewName, WF_IAsyncAction** out);
 
-/* Windows.Storage.StorageFile.MoveAsync(destinationFolder, desiredNewName, option) */
 HRESULT ws_storage_file_move_async_p_str_name_collision_option_p(WS_StorageFile *self, WS_IStorageFolder* destinationFolder, cwinrt_hstring desiredNewName, WS_NameCollisionOption option, WF_IAsyncAction** out);
 
-/* Windows.Storage.StorageFile.MoveAndReplaceAsync(fileToReplace) */
 HRESULT ws_storage_file_move_and_replace_async(WS_StorageFile *self, WS_IStorageFile* fileToReplace, WF_IAsyncAction** out);
 
-/* Windows.Storage.StorageFile.RenameAsync(desiredName) */
 HRESULT ws_storage_file_rename_async(WS_StorageFile *self, cwinrt_hstring desiredName, WF_IAsyncAction** out);
 
-/* Windows.Storage.StorageFile.RenameAsync(desiredName, option) */
 HRESULT ws_storage_file_rename_async_str_name_collision_option_p(WS_StorageFile *self, cwinrt_hstring desiredName, WS_NameCollisionOption option, WF_IAsyncAction** out);
 
-/* Windows.Storage.StorageFile.DeleteAsync() */
 HRESULT ws_storage_file_delete_async(WS_StorageFile *self, WF_IAsyncAction** out);
 
-/* Windows.Storage.StorageFile.DeleteAsync(option) */
 HRESULT ws_storage_file_delete_async_storage_delete_option_p(WS_StorageFile *self, WS_StorageDeleteOption option, WF_IAsyncAction** out);
 
-/* Windows.Storage.StorageFile.GetBasicPropertiesAsync() */
 HRESULT ws_storage_file_get_basic_properties_async(WS_StorageFile *self, WF_IAsyncOperation_WSTFI_BasicProperties** out);
 
-/* Windows.Storage.StorageFile.get_Name() */
 HRESULT ws_storage_file_get__name(WS_StorageFile *self, cwinrt_hstring *value);
 
-/* Windows.Storage.StorageFile.get_Path() */
 HRESULT ws_storage_file_get__path(WS_StorageFile *self, cwinrt_hstring *value);
 
-/* Windows.Storage.StorageFile.get_Attributes() */
 HRESULT ws_storage_file_get__attributes(WS_StorageFile *self, WS_FileAttributes *value);
 
-/* Windows.Storage.StorageFile.get_DateCreated() */
 HRESULT ws_storage_file_get__date_created(WS_StorageFile *self, WF_DateTime *value);
 
-/* Windows.Storage.StorageFile.IsOfType() */
 HRESULT ws_storage_file_is_of_type(WS_StorageFile *self, WS_StorageItemTypes type_, BOOL *out);
 
-/* Windows.Storage.StorageFile.OpenReadAsync() */
 HRESULT ws_storage_file_open_read_async(WS_StorageFile *self, WF_IAsyncOperation_WSTST_IRandomAccessStreamWithContentType** out);
 
-/* Windows.Storage.StorageFile.OpenSequentialReadAsync() */
 HRESULT ws_storage_file_open_sequential_read_async(WS_StorageFile *self, WF_IAsyncOperation_WSTST_IInputStream** out);
 
-/* Windows.Storage.StorageFile.GetThumbnailAsync(mode) */
 HRESULT ws_storage_file_get_thumbnail_async(WS_StorageFile *self, WSTFI_ThumbnailMode mode, WF_IAsyncOperation_WSTFI_StorageItemThumbnail** out);
 
-/* Windows.Storage.StorageFile.GetThumbnailAsync(mode, requestedSize) */
 HRESULT ws_storage_file_get_thumbnail_async_thumbnail_mode_u32_p(WS_StorageFile *self, WSTFI_ThumbnailMode mode, uint32_t requestedSize, WF_IAsyncOperation_WSTFI_StorageItemThumbnail** out);
 
-/* Windows.Storage.StorageFile.GetThumbnailAsync(mode, requestedSize, options) */
 HRESULT ws_storage_file_get_thumbnail_async_thumbnail_mode_u32_thumbnail_options_p(WS_StorageFile *self, WSTFI_ThumbnailMode mode, uint32_t requestedSize, WSTFI_ThumbnailOptions options, WF_IAsyncOperation_WSTFI_StorageItemThumbnail** out);
 
-/* Windows.Storage.StorageFile.get_DisplayName() */
 HRESULT ws_storage_file_get__display_name(WS_StorageFile *self, cwinrt_hstring *value);
 
-/* Windows.Storage.StorageFile.get_DisplayType() */
 HRESULT ws_storage_file_get__display_type(WS_StorageFile *self, cwinrt_hstring *value);
 
-/* Windows.Storage.StorageFile.get_FolderRelativeId() */
 HRESULT ws_storage_file_get__folder_relative_id(WS_StorageFile *self, cwinrt_hstring *value);
 
-/* Windows.Storage.StorageFile.get_Properties() */
 HRESULT ws_storage_file_get__properties(WS_StorageFile *self, WSTFI_StorageItemContentProperties** value);
 
-/* Windows.Storage.StorageFile.GetScaledImageAsThumbnailAsync(mode) */
 HRESULT ws_storage_file_get_scaled_image_as_thumbnail_async(WS_StorageFile *self, WSTFI_ThumbnailMode mode, WF_IAsyncOperation_WSTFI_StorageItemThumbnail** out);
 
-/* Windows.Storage.StorageFile.GetScaledImageAsThumbnailAsync(mode, requestedSize) */
 HRESULT ws_storage_file_get_scaled_image_as_thumbnail_async_thumbnail_mode_u32_p(WS_StorageFile *self, WSTFI_ThumbnailMode mode, uint32_t requestedSize, WF_IAsyncOperation_WSTFI_StorageItemThumbnail** out);
 
-/* Windows.Storage.StorageFile.GetScaledImageAsThumbnailAsync(mode, requestedSize, options) */
 HRESULT ws_storage_file_get_scaled_image_as_thumbnail_async_thumbnail_mode_u32_thumbnail_options_p(WS_StorageFile *self, WSTFI_ThumbnailMode mode, uint32_t requestedSize, WSTFI_ThumbnailOptions options, WF_IAsyncOperation_WSTFI_StorageItemThumbnail** out);
 
-/* Windows.Storage.StorageFile.GetParentAsync() */
 HRESULT ws_storage_file_get_parent_async(WS_StorageFile *self, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.StorageFile.IsEqual(item) */
 HRESULT ws_storage_file_is_equal(WS_StorageFile *self, WS_IStorageItem* item, BOOL *out);
 
-/* Windows.Storage.StorageFile.get_Provider() */
 HRESULT ws_storage_file_get__provider(WS_StorageFile *self, WS_StorageProvider** value);
 
-/* Windows.Storage.StorageFile.get_IsAvailable() */
 HRESULT ws_storage_file_get__is_available(WS_StorageFile *self, BOOL *value);
 
-/* Windows.Storage.StorageFile.OpenAsync(accessMode, options) */
 HRESULT ws_storage_file_open_async_file_access_mode_storage_open_options_p(WS_StorageFile *self, WS_FileAccessMode accessMode, WS_StorageOpenOptions options, WF_IAsyncOperation_WSTST_IRandomAccessStream** out);
 
-/* Windows.Storage.StorageFile.OpenTransactedWriteAsync(options) */
 HRESULT ws_storage_file_open_transacted_write_async_storage_open_options_p(WS_StorageFile *self, WS_StorageOpenOptions options, WF_IAsyncOperation_WS_StorageStreamTransaction** out);
 
-/* Windows.Storage.StorageFile.GetFileFromPathForUserAsync(user, path) */
 HRESULT ws_storage_file_get_file_from_path_for_user_async(WSY_User* user, cwinrt_hstring path, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.StorageFile.GetFileFromPathAsync(path) */
 HRESULT ws_storage_file_get_file_from_path_async(cwinrt_hstring path, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.StorageFile.GetFileFromApplicationUriAsync(uri) */
 HRESULT ws_storage_file_get_file_from_application_uri_async(WF_Uri* uri, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.StorageFile.CreateStreamedFileAsync(displayNameWithExtension, dataRequested, thumbnail) */
 HRESULT ws_storage_file_create_streamed_file_async(cwinrt_hstring displayNameWithExtension, WS_StreamedFileDataRequestedHandler* dataRequested, WSTST_IRandomAccessStreamReference* thumbnail, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.StorageFile.ReplaceWithStreamedFileAsync(fileToReplace, dataRequested, thumbnail) */
 HRESULT ws_storage_file_replace_with_streamed_file_async(WS_IStorageFile* fileToReplace, WS_StreamedFileDataRequestedHandler* dataRequested, WSTST_IRandomAccessStreamReference* thumbnail, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.StorageFile.CreateStreamedFileFromUriAsync(displayNameWithExtension, uri, thumbnail) */
 HRESULT ws_storage_file_create_streamed_file_from_uri_async(cwinrt_hstring displayNameWithExtension, WF_Uri* uri, WSTST_IRandomAccessStreamReference* thumbnail, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.StorageFile.ReplaceWithStreamedFileFromUriAsync(fileToReplace, uri, thumbnail) */
 HRESULT ws_storage_file_replace_with_streamed_file_from_uri_async(WS_IStorageFile* fileToReplace, WF_Uri* uri, WSTST_IRandomAccessStreamReference* thumbnail, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* activate Windows.Storage.SetVersionRequest */
 HRESULT ws_set_version_request_new(WS_SetVersionRequest **out);
 
-/* Windows.Storage.SetVersionRequest */
-/* Windows.Storage.SetVersionRequest.get_CurrentVersion() */
 HRESULT ws_set_version_request_get__current_version(WS_SetVersionRequest *self, uint32_t *value);
 
-/* Windows.Storage.SetVersionRequest.get_DesiredVersion() */
 HRESULT ws_set_version_request_get__desired_version(WS_SetVersionRequest *self, uint32_t *value);
 
-/* Windows.Storage.SetVersionRequest.GetDeferral() */
 HRESULT ws_set_version_request_get_deferral(WS_SetVersionRequest *self, WS_SetVersionDeferral** out);
 
-/* activate Windows.Storage.DownloadsFolder */
 HRESULT ws_downloads_folder_new(WS_DownloadsFolder **out);
 
-/* Windows.Storage.DownloadsFolder */
-/* Windows.Storage.DownloadsFolder.CreateFileForUserAsync(user, desiredName) */
 HRESULT ws_downloads_folder_create_file_for_user_async(WSY_User* user, cwinrt_hstring desiredName, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.DownloadsFolder.CreateFolderForUserAsync(user, desiredName) */
 HRESULT ws_downloads_folder_create_folder_for_user_async(WSY_User* user, cwinrt_hstring desiredName, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.DownloadsFolder.CreateFileForUserAsync(user, desiredName, option) */
 HRESULT ws_downloads_folder_create_file_for_user_async_p_str_creation_collision_option_p(WSY_User* user, cwinrt_hstring desiredName, WS_CreationCollisionOption option, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.DownloadsFolder.CreateFolderForUserAsync(user, desiredName, option) */
 HRESULT ws_downloads_folder_create_folder_for_user_async_p_str_creation_collision_option_p(WSY_User* user, cwinrt_hstring desiredName, WS_CreationCollisionOption option, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.DownloadsFolder.CreateFileAsync(desiredName) */
 HRESULT ws_downloads_folder_create_file_async(cwinrt_hstring desiredName, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.DownloadsFolder.CreateFolderAsync(desiredName) */
 HRESULT ws_downloads_folder_create_folder_async(cwinrt_hstring desiredName, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.DownloadsFolder.CreateFileAsync(desiredName, option) */
 HRESULT ws_downloads_folder_create_file_async_str_creation_collision_option_p(cwinrt_hstring desiredName, WS_CreationCollisionOption option, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.DownloadsFolder.CreateFolderAsync(desiredName, option) */
 HRESULT ws_downloads_folder_create_folder_async_str_creation_collision_option_p(cwinrt_hstring desiredName, WS_CreationCollisionOption option, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* activate Windows.Storage.FileIO */
 HRESULT ws_file_i_o_new(WS_FileIO **out);
 
-/* Windows.Storage.FileIO */
-/* Windows.Storage.FileIO.ReadTextAsync(file) */
 HRESULT ws_file_i_o_read_text_async(WS_IStorageFile* file, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Storage.FileIO.ReadTextAsync(file, encoding) */
 HRESULT ws_file_i_o_read_text_async_p_unicode_encoding_p(WS_IStorageFile* file, WSTST_UnicodeEncoding encoding, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Storage.FileIO.WriteTextAsync(file, contents) */
 HRESULT ws_file_i_o_write_text_async(WS_IStorageFile* file, cwinrt_hstring contents, WF_IAsyncAction** out);
 
-/* Windows.Storage.FileIO.WriteTextAsync(file, contents, encoding) */
 HRESULT ws_file_i_o_write_text_async_p_str_unicode_encoding_p(WS_IStorageFile* file, cwinrt_hstring contents, WSTST_UnicodeEncoding encoding, WF_IAsyncAction** out);
 
-/* Windows.Storage.FileIO.AppendTextAsync(file, contents) */
 HRESULT ws_file_i_o_append_text_async(WS_IStorageFile* file, cwinrt_hstring contents, WF_IAsyncAction** out);
 
-/* Windows.Storage.FileIO.AppendTextAsync(file, contents, encoding) */
 HRESULT ws_file_i_o_append_text_async_p_str_unicode_encoding_p(WS_IStorageFile* file, cwinrt_hstring contents, WSTST_UnicodeEncoding encoding, WF_IAsyncAction** out);
 
-/* Windows.Storage.FileIO.ReadLinesAsync(file) */
 HRESULT ws_file_i_o_read_lines_async(WS_IStorageFile* file, WF_IAsyncOperation_WFOCO_IVector_HSTRING** out);
 
-/* Windows.Storage.FileIO.ReadLinesAsync(file, encoding) */
 HRESULT ws_file_i_o_read_lines_async_p_unicode_encoding_p(WS_IStorageFile* file, WSTST_UnicodeEncoding encoding, WF_IAsyncOperation_WFOCO_IVector_HSTRING** out);
 
-/* Windows.Storage.FileIO.WriteLinesAsync(file, lines) */
 HRESULT ws_file_i_o_write_lines_async(WS_IStorageFile* file, WFOCO_IIterable_HSTRING* lines, WF_IAsyncAction** out);
 
-/* Windows.Storage.FileIO.WriteLinesAsync(file, lines, encoding) */
 HRESULT ws_file_i_o_write_lines_async_p_p_unicode_encoding_p(WS_IStorageFile* file, WFOCO_IIterable_HSTRING* lines, WSTST_UnicodeEncoding encoding, WF_IAsyncAction** out);
 
-/* Windows.Storage.FileIO.AppendLinesAsync(file, lines) */
 HRESULT ws_file_i_o_append_lines_async(WS_IStorageFile* file, WFOCO_IIterable_HSTRING* lines, WF_IAsyncAction** out);
 
-/* Windows.Storage.FileIO.AppendLinesAsync(file, lines, encoding) */
 HRESULT ws_file_i_o_append_lines_async_p_p_unicode_encoding_p(WS_IStorageFile* file, WFOCO_IIterable_HSTRING* lines, WSTST_UnicodeEncoding encoding, WF_IAsyncAction** out);
 
-/* Windows.Storage.FileIO.ReadBufferAsync(file) */
 HRESULT ws_file_i_o_read_buffer_async(WS_IStorageFile* file, WF_IAsyncOperation_WSTST_IBuffer** out);
 
-/* Windows.Storage.FileIO.WriteBufferAsync(file, buffer) */
 HRESULT ws_file_i_o_write_buffer_async(WS_IStorageFile* file, WSTST_IBuffer* buffer, WF_IAsyncAction** out);
 
-/* Windows.Storage.FileIO.WriteBytesAsync(file, buffer) */
 HRESULT ws_file_i_o_write_bytes_async(WS_IStorageFile* file, uint8_t *buffer, uint32_t buffer_len, WF_IAsyncAction** out);
 
-/* activate Windows.Storage.SetVersionDeferral */
 HRESULT ws_set_version_deferral_new(WS_SetVersionDeferral **out);
 
-/* Windows.Storage.SetVersionDeferral */
-/* Windows.Storage.SetVersionDeferral.Complete() */
 HRESULT ws_set_version_deferral_complete(WS_SetVersionDeferral *self);
 
-/* activate Windows.Storage.PathIO */
 HRESULT ws_path_i_o_new(WS_PathIO **out);
 
-/* Windows.Storage.PathIO */
-/* Windows.Storage.PathIO.ReadTextAsync(absolutePath) */
 HRESULT ws_path_i_o_read_text_async(cwinrt_hstring absolutePath, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Storage.PathIO.ReadTextAsync(absolutePath, encoding) */
 HRESULT ws_path_i_o_read_text_async_str_unicode_encoding_p(cwinrt_hstring absolutePath, WSTST_UnicodeEncoding encoding, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Storage.PathIO.WriteTextAsync(absolutePath, contents) */
 HRESULT ws_path_i_o_write_text_async(cwinrt_hstring absolutePath, cwinrt_hstring contents, WF_IAsyncAction** out);
 
-/* Windows.Storage.PathIO.WriteTextAsync(absolutePath, contents, encoding) */
 HRESULT ws_path_i_o_write_text_async_str_str_unicode_encoding_p(cwinrt_hstring absolutePath, cwinrt_hstring contents, WSTST_UnicodeEncoding encoding, WF_IAsyncAction** out);
 
-/* Windows.Storage.PathIO.AppendTextAsync(absolutePath, contents) */
 HRESULT ws_path_i_o_append_text_async(cwinrt_hstring absolutePath, cwinrt_hstring contents, WF_IAsyncAction** out);
 
-/* Windows.Storage.PathIO.AppendTextAsync(absolutePath, contents, encoding) */
 HRESULT ws_path_i_o_append_text_async_str_str_unicode_encoding_p(cwinrt_hstring absolutePath, cwinrt_hstring contents, WSTST_UnicodeEncoding encoding, WF_IAsyncAction** out);
 
-/* Windows.Storage.PathIO.ReadLinesAsync(absolutePath) */
 HRESULT ws_path_i_o_read_lines_async(cwinrt_hstring absolutePath, WF_IAsyncOperation_WFOCO_IVector_HSTRING** out);
 
-/* Windows.Storage.PathIO.ReadLinesAsync(absolutePath, encoding) */
 HRESULT ws_path_i_o_read_lines_async_str_unicode_encoding_p(cwinrt_hstring absolutePath, WSTST_UnicodeEncoding encoding, WF_IAsyncOperation_WFOCO_IVector_HSTRING** out);
 
-/* Windows.Storage.PathIO.WriteLinesAsync(absolutePath, lines) */
 HRESULT ws_path_i_o_write_lines_async(cwinrt_hstring absolutePath, WFOCO_IIterable_HSTRING* lines, WF_IAsyncAction** out);
 
-/* Windows.Storage.PathIO.WriteLinesAsync(absolutePath, lines, encoding) */
 HRESULT ws_path_i_o_write_lines_async_str_p_unicode_encoding_p(cwinrt_hstring absolutePath, WFOCO_IIterable_HSTRING* lines, WSTST_UnicodeEncoding encoding, WF_IAsyncAction** out);
 
-/* Windows.Storage.PathIO.AppendLinesAsync(absolutePath, lines) */
 HRESULT ws_path_i_o_append_lines_async(cwinrt_hstring absolutePath, WFOCO_IIterable_HSTRING* lines, WF_IAsyncAction** out);
 
-/* Windows.Storage.PathIO.AppendLinesAsync(absolutePath, lines, encoding) */
 HRESULT ws_path_i_o_append_lines_async_str_p_unicode_encoding_p(cwinrt_hstring absolutePath, WFOCO_IIterable_HSTRING* lines, WSTST_UnicodeEncoding encoding, WF_IAsyncAction** out);
 
-/* Windows.Storage.PathIO.ReadBufferAsync(absolutePath) */
 HRESULT ws_path_i_o_read_buffer_async(cwinrt_hstring absolutePath, WF_IAsyncOperation_WSTST_IBuffer** out);
 
-/* Windows.Storage.PathIO.WriteBufferAsync(absolutePath, buffer) */
 HRESULT ws_path_i_o_write_buffer_async(cwinrt_hstring absolutePath, WSTST_IBuffer* buffer, WF_IAsyncAction** out);
 
-/* Windows.Storage.PathIO.WriteBytesAsync(absolutePath, buffer) */
 HRESULT ws_path_i_o_write_bytes_async(cwinrt_hstring absolutePath, uint8_t *buffer, uint32_t buffer_len, WF_IAsyncAction** out);
 
-/* activate Windows.Storage.KnownFolders */
 HRESULT ws_known_folders_new(WS_KnownFolders **out);
 
-/* Windows.Storage.KnownFolders */
-/* Windows.Storage.KnownFolders.RequestAccessAsync(folderId) */
 HRESULT ws_known_folders_request_access_async(WS_KnownFolderId folderId, WF_IAsyncOperation_WS_KnownFoldersAccessStatus** out);
 
-/* Windows.Storage.KnownFolders.RequestAccessForUserAsync(user, folderId) */
 HRESULT ws_known_folders_request_access_for_user_async(WSY_User* user, WS_KnownFolderId folderId, WF_IAsyncOperation_WS_KnownFoldersAccessStatus** out);
 
-/* Windows.Storage.KnownFolders.GetFolderAsync(folderId) */
 HRESULT ws_known_folders_get_folder_async(WS_KnownFolderId folderId, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.KnownFolders.GetFolderForUserAsync(user, folderId) */
 HRESULT ws_known_folders_get_folder_for_user_async(WSY_User* user, WS_KnownFolderId folderId, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.KnownFolders.get_Objects3D() */
 HRESULT ws_known_folders_get__objects3_d(WS_StorageFolder** value);
 
-/* Windows.Storage.KnownFolders.get_AppCaptures() */
 HRESULT ws_known_folders_get__app_captures(WS_StorageFolder** value);
 
-/* Windows.Storage.KnownFolders.get_RecordedCalls() */
 HRESULT ws_known_folders_get__recorded_calls(WS_StorageFolder** value);
 
-/* Windows.Storage.KnownFolders.get_SavedPictures() */
 HRESULT ws_known_folders_get__saved_pictures(WS_StorageFolder** value);
 
-/* Windows.Storage.KnownFolders.get_CameraRoll() */
 HRESULT ws_known_folders_get__camera_roll(WS_StorageFolder** value);
 
-/* Windows.Storage.KnownFolders.get_Playlists() */
 HRESULT ws_known_folders_get__playlists(WS_StorageFolder** value);
 
-/* Windows.Storage.KnownFolders.get_MusicLibrary() */
 HRESULT ws_known_folders_get__music_library(WS_StorageFolder** value);
 
-/* Windows.Storage.KnownFolders.get_PicturesLibrary() */
 HRESULT ws_known_folders_get__pictures_library(WS_StorageFolder** value);
 
-/* Windows.Storage.KnownFolders.get_VideosLibrary() */
 HRESULT ws_known_folders_get__videos_library(WS_StorageFolder** value);
 
-/* Windows.Storage.KnownFolders.get_DocumentsLibrary() */
 HRESULT ws_known_folders_get__documents_library(WS_StorageFolder** value);
 
-/* Windows.Storage.KnownFolders.get_HomeGroup() */
 HRESULT ws_known_folders_get__home_group(WS_StorageFolder** value);
 
-/* Windows.Storage.KnownFolders.get_RemovableDevices() */
 HRESULT ws_known_folders_get__removable_devices(WS_StorageFolder** value);
 
-/* Windows.Storage.KnownFolders.get_MediaServerDevices() */
 HRESULT ws_known_folders_get__media_server_devices(WS_StorageFolder** value);
 
-/* Windows.Storage.IUserDataPathsStatics */
-/* Windows.Storage.IUserDataPathsStatics.GetForUser(user) */
 HRESULT ws_user_data_paths_statics_get_for_user(WS_IUserDataPathsStatics *self, WSY_User* user, WS_UserDataPaths** out);
 
-/* Windows.Storage.IUserDataPathsStatics.GetDefault() */
 HRESULT ws_user_data_paths_statics_get_default(WS_IUserDataPathsStatics *self, WS_UserDataPaths** out);
 
-/* Windows.Storage.ISystemProperties */
-/* Windows.Storage.ISystemDataPathsStatics */
-/* Windows.Storage.ISystemDataPathsStatics.GetDefault() */
 HRESULT ws_system_data_paths_statics_get_default(WS_ISystemDataPathsStatics *self, WS_SystemDataPaths** out);
 
-/* Windows.Storage.IAppDataPathsStatics */
-/* Windows.Storage.IAppDataPathsStatics.GetForUser(user) */
 HRESULT ws_app_data_paths_statics_get_for_user(WS_IAppDataPathsStatics *self, WSY_User* user, WS_AppDataPaths** out);
 
-/* Windows.Storage.IAppDataPathsStatics.GetDefault() */
 HRESULT ws_app_data_paths_statics_get_default(WS_IAppDataPathsStatics *self, WS_AppDataPaths** out);
 
-/* Windows.Storage.IApplicationDataStatics */
-/* Windows.Storage.IApplicationDataStatics.get_Current() */
 HRESULT ws_application_data_statics_get__current(WS_IApplicationDataStatics *self, WS_ApplicationData** value);
 
-/* Windows.Storage.IApplicationDataStatics2 */
-/* Windows.Storage.IApplicationDataStatics2.GetForUserAsync(user) */
 HRESULT ws_application_data_statics_2_get_for_user_async(WS_IApplicationDataStatics_2 *self, WSY_User* user, WF_IAsyncOperation_WS_ApplicationData** out);
 
-/* Windows.Storage.ICachedFileManagerStatics */
-/* Windows.Storage.ICachedFileManagerStatics.DeferUpdates(file) */
 HRESULT ws_cached_file_manager_statics_defer_updates(WS_ICachedFileManagerStatics *self, WS_IStorageFile* file);
 
-/* Windows.Storage.ICachedFileManagerStatics.CompleteUpdatesAsync(file) */
 HRESULT ws_cached_file_manager_statics_complete_updates_async(WS_ICachedFileManagerStatics *self, WS_IStorageFile* file, WF_IAsyncOperation_WSTPR_FileUpdateStatus** out);
 
-/* Windows.Storage.IDownloadsFolderStatics */
-/* Windows.Storage.IDownloadsFolderStatics.CreateFileAsync(desiredName) */
 HRESULT ws_downloads_folder_statics_create_file_async(WS_IDownloadsFolderStatics *self, cwinrt_hstring desiredName, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.IDownloadsFolderStatics.CreateFolderAsync(desiredName) */
 HRESULT ws_downloads_folder_statics_create_folder_async(WS_IDownloadsFolderStatics *self, cwinrt_hstring desiredName, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.IDownloadsFolderStatics.CreateFileAsync(desiredName, option) */
 HRESULT ws_downloads_folder_statics_create_file_async_str_creation_collision_option_p(WS_IDownloadsFolderStatics *self, cwinrt_hstring desiredName, WS_CreationCollisionOption option, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.IDownloadsFolderStatics.CreateFolderAsync(desiredName, option) */
 HRESULT ws_downloads_folder_statics_create_folder_async_str_creation_collision_option_p(WS_IDownloadsFolderStatics *self, cwinrt_hstring desiredName, WS_CreationCollisionOption option, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.IDownloadsFolderStatics2 */
-/* Windows.Storage.IDownloadsFolderStatics2.CreateFileForUserAsync(user, desiredName) */
 HRESULT ws_downloads_folder_statics_2_create_file_for_user_async(WS_IDownloadsFolderStatics_2 *self, WSY_User* user, cwinrt_hstring desiredName, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.IDownloadsFolderStatics2.CreateFolderForUserAsync(user, desiredName) */
 HRESULT ws_downloads_folder_statics_2_create_folder_for_user_async(WS_IDownloadsFolderStatics_2 *self, WSY_User* user, cwinrt_hstring desiredName, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.IDownloadsFolderStatics2.CreateFileForUserAsync(user, desiredName, option) */
 HRESULT ws_downloads_folder_statics_2_create_file_for_user_async_p_str_creation_collision_option_p(WS_IDownloadsFolderStatics_2 *self, WSY_User* user, cwinrt_hstring desiredName, WS_CreationCollisionOption option, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.IDownloadsFolderStatics2.CreateFolderForUserAsync(user, desiredName, option) */
 HRESULT ws_downloads_folder_statics_2_create_folder_for_user_async_p_str_creation_collision_option_p(WS_IDownloadsFolderStatics_2 *self, WSY_User* user, cwinrt_hstring desiredName, WS_CreationCollisionOption option, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.IFileIOStatics */
-/* Windows.Storage.IFileIOStatics.ReadTextAsync(file) */
 HRESULT ws_file_i_o_statics_read_text_async(WS_IFileIOStatics *self, WS_IStorageFile* file, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Storage.IFileIOStatics.ReadTextAsync(file, encoding) */
 HRESULT ws_file_i_o_statics_read_text_async_p_unicode_encoding_p(WS_IFileIOStatics *self, WS_IStorageFile* file, WSTST_UnicodeEncoding encoding, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Storage.IFileIOStatics.WriteTextAsync(file, contents) */
 HRESULT ws_file_i_o_statics_write_text_async(WS_IFileIOStatics *self, WS_IStorageFile* file, cwinrt_hstring contents, WF_IAsyncAction** out);
 
-/* Windows.Storage.IFileIOStatics.WriteTextAsync(file, contents, encoding) */
 HRESULT ws_file_i_o_statics_write_text_async_p_str_unicode_encoding_p(WS_IFileIOStatics *self, WS_IStorageFile* file, cwinrt_hstring contents, WSTST_UnicodeEncoding encoding, WF_IAsyncAction** out);
 
-/* Windows.Storage.IFileIOStatics.AppendTextAsync(file, contents) */
 HRESULT ws_file_i_o_statics_append_text_async(WS_IFileIOStatics *self, WS_IStorageFile* file, cwinrt_hstring contents, WF_IAsyncAction** out);
 
-/* Windows.Storage.IFileIOStatics.AppendTextAsync(file, contents, encoding) */
 HRESULT ws_file_i_o_statics_append_text_async_p_str_unicode_encoding_p(WS_IFileIOStatics *self, WS_IStorageFile* file, cwinrt_hstring contents, WSTST_UnicodeEncoding encoding, WF_IAsyncAction** out);
 
-/* Windows.Storage.IFileIOStatics.ReadLinesAsync(file) */
 HRESULT ws_file_i_o_statics_read_lines_async(WS_IFileIOStatics *self, WS_IStorageFile* file, WF_IAsyncOperation_WFOCO_IVector_HSTRING** out);
 
-/* Windows.Storage.IFileIOStatics.ReadLinesAsync(file, encoding) */
 HRESULT ws_file_i_o_statics_read_lines_async_p_unicode_encoding_p(WS_IFileIOStatics *self, WS_IStorageFile* file, WSTST_UnicodeEncoding encoding, WF_IAsyncOperation_WFOCO_IVector_HSTRING** out);
 
-/* Windows.Storage.IFileIOStatics.WriteLinesAsync(file, lines) */
 HRESULT ws_file_i_o_statics_write_lines_async(WS_IFileIOStatics *self, WS_IStorageFile* file, WFOCO_IIterable_HSTRING* lines, WF_IAsyncAction** out);
 
-/* Windows.Storage.IFileIOStatics.WriteLinesAsync(file, lines, encoding) */
 HRESULT ws_file_i_o_statics_write_lines_async_p_p_unicode_encoding_p(WS_IFileIOStatics *self, WS_IStorageFile* file, WFOCO_IIterable_HSTRING* lines, WSTST_UnicodeEncoding encoding, WF_IAsyncAction** out);
 
-/* Windows.Storage.IFileIOStatics.AppendLinesAsync(file, lines) */
 HRESULT ws_file_i_o_statics_append_lines_async(WS_IFileIOStatics *self, WS_IStorageFile* file, WFOCO_IIterable_HSTRING* lines, WF_IAsyncAction** out);
 
-/* Windows.Storage.IFileIOStatics.AppendLinesAsync(file, lines, encoding) */
 HRESULT ws_file_i_o_statics_append_lines_async_p_p_unicode_encoding_p(WS_IFileIOStatics *self, WS_IStorageFile* file, WFOCO_IIterable_HSTRING* lines, WSTST_UnicodeEncoding encoding, WF_IAsyncAction** out);
 
-/* Windows.Storage.IFileIOStatics.ReadBufferAsync(file) */
 HRESULT ws_file_i_o_statics_read_buffer_async(WS_IFileIOStatics *self, WS_IStorageFile* file, WF_IAsyncOperation_WSTST_IBuffer** out);
 
-/* Windows.Storage.IFileIOStatics.WriteBufferAsync(file, buffer) */
 HRESULT ws_file_i_o_statics_write_buffer_async(WS_IFileIOStatics *self, WS_IStorageFile* file, WSTST_IBuffer* buffer, WF_IAsyncAction** out);
 
-/* Windows.Storage.IFileIOStatics.WriteBytesAsync(file, buffer) */
 HRESULT ws_file_i_o_statics_write_bytes_async(WS_IFileIOStatics *self, WS_IStorageFile* file, uint8_t *buffer, uint32_t buffer_len, WF_IAsyncAction** out);
 
-/* Windows.Storage.IKnownFoldersCameraRollStatics */
-/* Windows.Storage.IKnownFoldersCameraRollStatics.get_CameraRoll() */
 HRESULT ws_known_folders_camera_roll_statics_get__camera_roll(WS_IKnownFoldersCameraRollStatics *self, WS_StorageFolder** value);
 
-/* Windows.Storage.IKnownFoldersPlaylistsStatics */
-/* Windows.Storage.IKnownFoldersPlaylistsStatics.get_Playlists() */
 HRESULT ws_known_folders_playlists_statics_get__playlists(WS_IKnownFoldersPlaylistsStatics *self, WS_StorageFolder** value);
 
-/* Windows.Storage.IKnownFoldersSavedPicturesStatics */
-/* Windows.Storage.IKnownFoldersSavedPicturesStatics.get_SavedPictures() */
 HRESULT ws_known_folders_saved_pictures_statics_get__saved_pictures(WS_IKnownFoldersSavedPicturesStatics *self, WS_StorageFolder** value);
 
-/* Windows.Storage.IKnownFoldersStatics */
-/* Windows.Storage.IKnownFoldersStatics.get_MusicLibrary() */
 HRESULT ws_known_folders_statics_get__music_library(WS_IKnownFoldersStatics *self, WS_StorageFolder** value);
 
-/* Windows.Storage.IKnownFoldersStatics.get_PicturesLibrary() */
 HRESULT ws_known_folders_statics_get__pictures_library(WS_IKnownFoldersStatics *self, WS_StorageFolder** value);
 
-/* Windows.Storage.IKnownFoldersStatics.get_VideosLibrary() */
 HRESULT ws_known_folders_statics_get__videos_library(WS_IKnownFoldersStatics *self, WS_StorageFolder** value);
 
-/* Windows.Storage.IKnownFoldersStatics.get_DocumentsLibrary() */
 HRESULT ws_known_folders_statics_get__documents_library(WS_IKnownFoldersStatics *self, WS_StorageFolder** value);
 
-/* Windows.Storage.IKnownFoldersStatics.get_HomeGroup() */
 HRESULT ws_known_folders_statics_get__home_group(WS_IKnownFoldersStatics *self, WS_StorageFolder** value);
 
-/* Windows.Storage.IKnownFoldersStatics.get_RemovableDevices() */
 HRESULT ws_known_folders_statics_get__removable_devices(WS_IKnownFoldersStatics *self, WS_StorageFolder** value);
 
-/* Windows.Storage.IKnownFoldersStatics.get_MediaServerDevices() */
 HRESULT ws_known_folders_statics_get__media_server_devices(WS_IKnownFoldersStatics *self, WS_StorageFolder** value);
 
-/* Windows.Storage.IKnownFoldersStatics2 */
-/* Windows.Storage.IKnownFoldersStatics2.get_Objects3D() */
 HRESULT ws_known_folders_statics_2_get__objects3_d(WS_IKnownFoldersStatics_2 *self, WS_StorageFolder** value);
 
-/* Windows.Storage.IKnownFoldersStatics2.get_AppCaptures() */
 HRESULT ws_known_folders_statics_2_get__app_captures(WS_IKnownFoldersStatics_2 *self, WS_StorageFolder** value);
 
-/* Windows.Storage.IKnownFoldersStatics2.get_RecordedCalls() */
 HRESULT ws_known_folders_statics_2_get__recorded_calls(WS_IKnownFoldersStatics_2 *self, WS_StorageFolder** value);
 
-/* Windows.Storage.IKnownFoldersStatics3 */
-/* Windows.Storage.IKnownFoldersStatics3.GetFolderForUserAsync(user, folderId) */
 HRESULT ws_known_folders_statics_3_get_folder_for_user_async(WS_IKnownFoldersStatics_3 *self, WSY_User* user, WS_KnownFolderId folderId, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.IKnownFoldersStatics4 */
-/* Windows.Storage.IKnownFoldersStatics4.RequestAccessAsync(folderId) */
 HRESULT ws_known_folders_statics_4_request_access_async(WS_IKnownFoldersStatics_4 *self, WS_KnownFolderId folderId, WF_IAsyncOperation_WS_KnownFoldersAccessStatus** out);
 
-/* Windows.Storage.IKnownFoldersStatics4.RequestAccessForUserAsync(user, folderId) */
 HRESULT ws_known_folders_statics_4_request_access_for_user_async(WS_IKnownFoldersStatics_4 *self, WSY_User* user, WS_KnownFolderId folderId, WF_IAsyncOperation_WS_KnownFoldersAccessStatus** out);
 
-/* Windows.Storage.IKnownFoldersStatics4.GetFolderAsync(folderId) */
 HRESULT ws_known_folders_statics_4_get_folder_async(WS_IKnownFoldersStatics_4 *self, WS_KnownFolderId folderId, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.IPathIOStatics */
-/* Windows.Storage.IPathIOStatics.ReadTextAsync(absolutePath) */
 HRESULT ws_path_i_o_statics_read_text_async(WS_IPathIOStatics *self, cwinrt_hstring absolutePath, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Storage.IPathIOStatics.ReadTextAsync(absolutePath, encoding) */
 HRESULT ws_path_i_o_statics_read_text_async_str_unicode_encoding_p(WS_IPathIOStatics *self, cwinrt_hstring absolutePath, WSTST_UnicodeEncoding encoding, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Storage.IPathIOStatics.WriteTextAsync(absolutePath, contents) */
 HRESULT ws_path_i_o_statics_write_text_async(WS_IPathIOStatics *self, cwinrt_hstring absolutePath, cwinrt_hstring contents, WF_IAsyncAction** out);
 
-/* Windows.Storage.IPathIOStatics.WriteTextAsync(absolutePath, contents, encoding) */
 HRESULT ws_path_i_o_statics_write_text_async_str_str_unicode_encoding_p(WS_IPathIOStatics *self, cwinrt_hstring absolutePath, cwinrt_hstring contents, WSTST_UnicodeEncoding encoding, WF_IAsyncAction** out);
 
-/* Windows.Storage.IPathIOStatics.AppendTextAsync(absolutePath, contents) */
 HRESULT ws_path_i_o_statics_append_text_async(WS_IPathIOStatics *self, cwinrt_hstring absolutePath, cwinrt_hstring contents, WF_IAsyncAction** out);
 
-/* Windows.Storage.IPathIOStatics.AppendTextAsync(absolutePath, contents, encoding) */
 HRESULT ws_path_i_o_statics_append_text_async_str_str_unicode_encoding_p(WS_IPathIOStatics *self, cwinrt_hstring absolutePath, cwinrt_hstring contents, WSTST_UnicodeEncoding encoding, WF_IAsyncAction** out);
 
-/* Windows.Storage.IPathIOStatics.ReadLinesAsync(absolutePath) */
 HRESULT ws_path_i_o_statics_read_lines_async(WS_IPathIOStatics *self, cwinrt_hstring absolutePath, WF_IAsyncOperation_WFOCO_IVector_HSTRING** out);
 
-/* Windows.Storage.IPathIOStatics.ReadLinesAsync(absolutePath, encoding) */
 HRESULT ws_path_i_o_statics_read_lines_async_str_unicode_encoding_p(WS_IPathIOStatics *self, cwinrt_hstring absolutePath, WSTST_UnicodeEncoding encoding, WF_IAsyncOperation_WFOCO_IVector_HSTRING** out);
 
-/* Windows.Storage.IPathIOStatics.WriteLinesAsync(absolutePath, lines) */
 HRESULT ws_path_i_o_statics_write_lines_async(WS_IPathIOStatics *self, cwinrt_hstring absolutePath, WFOCO_IIterable_HSTRING* lines, WF_IAsyncAction** out);
 
-/* Windows.Storage.IPathIOStatics.WriteLinesAsync(absolutePath, lines, encoding) */
 HRESULT ws_path_i_o_statics_write_lines_async_str_p_unicode_encoding_p(WS_IPathIOStatics *self, cwinrt_hstring absolutePath, WFOCO_IIterable_HSTRING* lines, WSTST_UnicodeEncoding encoding, WF_IAsyncAction** out);
 
-/* Windows.Storage.IPathIOStatics.AppendLinesAsync(absolutePath, lines) */
 HRESULT ws_path_i_o_statics_append_lines_async(WS_IPathIOStatics *self, cwinrt_hstring absolutePath, WFOCO_IIterable_HSTRING* lines, WF_IAsyncAction** out);
 
-/* Windows.Storage.IPathIOStatics.AppendLinesAsync(absolutePath, lines, encoding) */
 HRESULT ws_path_i_o_statics_append_lines_async_str_p_unicode_encoding_p(WS_IPathIOStatics *self, cwinrt_hstring absolutePath, WFOCO_IIterable_HSTRING* lines, WSTST_UnicodeEncoding encoding, WF_IAsyncAction** out);
 
-/* Windows.Storage.IPathIOStatics.ReadBufferAsync(absolutePath) */
 HRESULT ws_path_i_o_statics_read_buffer_async(WS_IPathIOStatics *self, cwinrt_hstring absolutePath, WF_IAsyncOperation_WSTST_IBuffer** out);
 
-/* Windows.Storage.IPathIOStatics.WriteBufferAsync(absolutePath, buffer) */
 HRESULT ws_path_i_o_statics_write_buffer_async(WS_IPathIOStatics *self, cwinrt_hstring absolutePath, WSTST_IBuffer* buffer, WF_IAsyncAction** out);
 
-/* Windows.Storage.IPathIOStatics.WriteBytesAsync(absolutePath, buffer) */
 HRESULT ws_path_i_o_statics_write_bytes_async(WS_IPathIOStatics *self, cwinrt_hstring absolutePath, uint8_t *buffer, uint32_t buffer_len, WF_IAsyncAction** out);
 
-/* Windows.Storage.IStorageFileStatics */
-/* Windows.Storage.IStorageFileStatics.GetFileFromPathAsync(path) */
 HRESULT ws_storage_file_statics_get_file_from_path_async(WS_IStorageFileStatics *self, cwinrt_hstring path, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.IStorageFileStatics.GetFileFromApplicationUriAsync(uri) */
 HRESULT ws_storage_file_statics_get_file_from_application_uri_async(WS_IStorageFileStatics *self, WF_Uri* uri, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.IStorageFileStatics.CreateStreamedFileAsync(displayNameWithExtension, dataRequested, thumbnail) */
 HRESULT ws_storage_file_statics_create_streamed_file_async(WS_IStorageFileStatics *self, cwinrt_hstring displayNameWithExtension, WS_StreamedFileDataRequestedHandler* dataRequested, WSTST_IRandomAccessStreamReference* thumbnail, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.IStorageFileStatics.ReplaceWithStreamedFileAsync(fileToReplace, dataRequested, thumbnail) */
 HRESULT ws_storage_file_statics_replace_with_streamed_file_async(WS_IStorageFileStatics *self, WS_IStorageFile* fileToReplace, WS_StreamedFileDataRequestedHandler* dataRequested, WSTST_IRandomAccessStreamReference* thumbnail, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.IStorageFileStatics.CreateStreamedFileFromUriAsync(displayNameWithExtension, uri, thumbnail) */
 HRESULT ws_storage_file_statics_create_streamed_file_from_uri_async(WS_IStorageFileStatics *self, cwinrt_hstring displayNameWithExtension, WF_Uri* uri, WSTST_IRandomAccessStreamReference* thumbnail, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.IStorageFileStatics.ReplaceWithStreamedFileFromUriAsync(fileToReplace, uri, thumbnail) */
 HRESULT ws_storage_file_statics_replace_with_streamed_file_from_uri_async(WS_IStorageFileStatics *self, WS_IStorageFile* fileToReplace, WF_Uri* uri, WSTST_IRandomAccessStreamReference* thumbnail, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.IStorageFileStatics2 */
-/* Windows.Storage.IStorageFileStatics2.GetFileFromPathForUserAsync(user, path) */
 HRESULT ws_storage_file_statics_2_get_file_from_path_for_user_async(WS_IStorageFileStatics_2 *self, WSY_User* user, cwinrt_hstring path, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.IStorageFolderStatics */
-/* Windows.Storage.IStorageFolderStatics.GetFolderFromPathAsync(path) */
 HRESULT ws_storage_folder_statics_get_folder_from_path_async(WS_IStorageFolderStatics *self, cwinrt_hstring path, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.IStorageFolderStatics2 */
-/* Windows.Storage.IStorageFolderStatics2.GetFolderFromPathForUserAsync(user, path) */
 HRESULT ws_storage_folder_statics_2_get_folder_from_path_for_user_async(WS_IStorageFolderStatics_2 *self, WSY_User* user, cwinrt_hstring path, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.IStorageLibraryLastChangeIdStatics */
-/* Windows.Storage.IStorageLibraryLastChangeIdStatics.get_Unknown() */
 HRESULT ws_storage_library_last_change_id_statics_get__unknown(WS_IStorageLibraryLastChangeIdStatics *self, uint64_t *value);
 
-/* Windows.Storage.IStorageLibraryStatics */
-/* Windows.Storage.IStorageLibraryStatics.GetLibraryAsync(libraryId) */
 HRESULT ws_storage_library_statics_get_library_async(WS_IStorageLibraryStatics *self, WS_KnownLibraryId libraryId, WF_IAsyncOperation_WS_StorageLibrary** out);
 
-/* Windows.Storage.IStorageLibraryStatics2 */
-/* Windows.Storage.IStorageLibraryStatics2.GetLibraryForUserAsync(user, libraryId) */
 HRESULT ws_storage_library_statics_2_get_library_for_user_async(WS_IStorageLibraryStatics_2 *self, WSY_User* user, WS_KnownLibraryId libraryId, WF_IAsyncOperation_WS_StorageLibrary** out);
 
-/* activate Windows.Storage.SystemAudioProperties */
 HRESULT ws_system_audio_properties_new(WS_SystemAudioProperties **out);
 
-/* Windows.Storage.SystemAudioProperties */
-/* Windows.Storage.SystemAudioProperties.get_EncodingBitrate() */
 HRESULT ws_system_audio_properties_get__encoding_bitrate(WS_SystemAudioProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.ISystemDataPaths */
-/* Windows.Storage.ISystemGPSProperties */
-/* Windows.Storage.ISystemImageProperties */
-/* Windows.Storage.ISystemMediaProperties */
-/* Windows.Storage.ISystemMusicProperties */
-/* Windows.Storage.ISystemPhotoProperties */
-/* Windows.Storage.ISystemVideoProperties */
-/* Windows.Storage.IUserDataPaths */
-/* Windows.Storage.IStreamedFileDataRequest */
-/* Windows.Storage.IStorageStreamTransaction */
-/* Windows.Storage.IStorageProvider2 */
-/* Windows.Storage.IStorageProvider2.IsPropertySupportedForPartialFileAsync(propertyCanonicalName) */
 HRESULT ws_storage_provider_2_is_property_supported_for_partial_file_async(WS_IStorageProvider_2 *self, cwinrt_hstring propertyCanonicalName, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Storage.IAppDataPaths */
-/* Windows.Storage.IApplicationData */
-/* Windows.Storage.IApplicationData2 */
-/* Windows.Storage.IApplicationData2.get_LocalCacheFolder() */
 HRESULT ws_application_data_2_get__local_cache_folder(WS_IApplicationData_2 *self, WS_StorageFolder** value);
 
-/* Windows.Storage.IApplicationData3 */
-/* Windows.Storage.IApplicationData3.GetPublisherCacheFolder(folderName) */
 HRESULT ws_application_data_3_get_publisher_cache_folder(WS_IApplicationData_3 *self, cwinrt_hstring folderName, WS_StorageFolder** out);
 
-/* Windows.Storage.IApplicationData3.ClearPublisherCacheFolderAsync(folderName) */
 HRESULT ws_application_data_3_clear_publisher_cache_folder_async(WS_IApplicationData_3 *self, cwinrt_hstring folderName, WF_IAsyncAction** out);
 
-/* Windows.Storage.IApplicationData3.get_SharedLocalFolder() */
 HRESULT ws_application_data_3_get__shared_local_folder(WS_IApplicationData_3 *self, WS_StorageFolder** value);
 
-/* Windows.Storage.IApplicationDataContainer */
-/* Windows.Storage.IStorageLibraryChangeTrackerOptions */
-/* Windows.Storage.IStorageLibraryChangeTracker */
-/* Windows.Storage.IStorageLibraryChangeTracker2 */
-/* Windows.Storage.IStorageLibraryChangeTracker2.Enable(options) */
 HRESULT ws_storage_library_change_tracker_2_enable(WS_IStorageLibraryChangeTracker_2 *self, WS_StorageLibraryChangeTrackerOptions* options);
 
-/* Windows.Storage.IStorageLibraryChangeTracker2.Disable() */
 HRESULT ws_storage_library_change_tracker_2_disable(WS_IStorageLibraryChangeTracker_2 *self);
 
-/* Windows.Storage.IStorageLibraryChangeReader */
-/* Windows.Storage.IStorageLibraryChangeReader2 */
-/* Windows.Storage.IStorageLibraryChangeReader2.GetLastChangeId() */
 HRESULT ws_storage_library_change_reader_2_get_last_change_id(WS_IStorageLibraryChangeReader_2 *self, uint64_t *out);
 
-/* Windows.Storage.IStorageLibraryChange */
-/* Windows.Storage.IStorageLibrary */
-/* Windows.Storage.IStorageLibrary2 */
-/* Windows.Storage.IStorageLibrary2.get_ChangeTracker() */
 HRESULT ws_storage_library_2_get__change_tracker(WS_IStorageLibrary_2 *self, WS_StorageLibraryChangeTracker** value);
 
-/* Windows.Storage.IStorageLibrary3 */
-/* Windows.Storage.IStorageLibrary3.AreFolderSuggestionsAvailableAsync() */
 HRESULT ws_storage_library_3_are_folder_suggestions_available_async(WS_IStorageLibrary_3 *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Storage.IStorageFolder */
-/* Windows.Storage.IStorageFolder2 */
-/* Windows.Storage.IStorageFolder2.TryGetItemAsync(name) */
 HRESULT ws_storage_folder_2_try_get_item_async(WS_IStorageFolder_2 *self, cwinrt_hstring name, WF_IAsyncOperation_WS_IStorageItem** out);
 
-/* Windows.Storage.IStorageFolder3 */
-/* Windows.Storage.IStorageFolder3.TryGetChangeTracker() */
 HRESULT ws_storage_folder_3_try_get_change_tracker(WS_IStorageFolder_3 *self, WS_StorageLibraryChangeTracker** out);
 
-/* Windows.Storage.IStorageFile */
-/* Windows.Storage.IStorageItemProperties2 */
-/* Windows.Storage.IStorageItemProperties2.GetScaledImageAsThumbnailAsync(mode) */
 HRESULT ws_storage_item_properties_2_get_scaled_image_as_thumbnail_async(WS_IStorageItemProperties_2 *self, WSTFI_ThumbnailMode mode, WF_IAsyncOperation_WSTFI_StorageItemThumbnail** out);
 
-/* Windows.Storage.IStorageItemProperties2.GetScaledImageAsThumbnailAsync(mode, requestedSize) */
 HRESULT ws_storage_item_properties_2_get_scaled_image_as_thumbnail_async_thumbnail_mode_u32_p(WS_IStorageItemProperties_2 *self, WSTFI_ThumbnailMode mode, uint32_t requestedSize, WF_IAsyncOperation_WSTFI_StorageItemThumbnail** out);
 
-/* Windows.Storage.IStorageItemProperties2.GetScaledImageAsThumbnailAsync(mode, requestedSize, options) */
 HRESULT ws_storage_item_properties_2_get_scaled_image_as_thumbnail_async_thumbnail_mode_u32_thumbnail_options_p(WS_IStorageItemProperties_2 *self, WSTFI_ThumbnailMode mode, uint32_t requestedSize, WSTFI_ThumbnailOptions options, WF_IAsyncOperation_WSTFI_StorageItemThumbnail** out);
 
-/* Windows.Storage.IStorageItem2 */
-/* Windows.Storage.IStorageItem2.GetParentAsync() */
 HRESULT ws_storage_item_2_get_parent_async(WS_IStorageItem_2 *self, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.IStorageItem2.IsEqual(item) */
 HRESULT ws_storage_item_2_is_equal(WS_IStorageItem_2 *self, WS_IStorageItem* item, BOOL *out);
 
-/* Windows.Storage.IStorageItemPropertiesWithProvider */
-/* Windows.Storage.IStorageItemPropertiesWithProvider.get_Provider() */
 HRESULT ws_storage_item_properties_with_provider_get__provider(WS_IStorageItemPropertiesWithProvider *self, WS_StorageProvider** value);
 
-/* Windows.Storage.IStorageFilePropertiesWithAvailability */
-/* Windows.Storage.IStorageFilePropertiesWithAvailability.get_IsAvailable() */
 HRESULT ws_storage_file_properties_with_availability_get__is_available(WS_IStorageFilePropertiesWithAvailability *self, BOOL *value);
 
-/* Windows.Storage.IStorageFile2 */
-/* Windows.Storage.IStorageFile2.OpenAsync(accessMode, options) */
 HRESULT ws_storage_file_2_open_async(WS_IStorageFile_2 *self, WS_FileAccessMode accessMode, WS_StorageOpenOptions options, WF_IAsyncOperation_WSTST_IRandomAccessStream** out);
 
-/* Windows.Storage.IStorageFile2.OpenTransactedWriteAsync(options) */
 HRESULT ws_storage_file_2_open_transacted_write_async(WS_IStorageFile_2 *self, WS_StorageOpenOptions options, WF_IAsyncOperation_WS_StorageStreamTransaction** out);
 
-/* Windows.Storage.ISetVersionRequest */
-/* Windows.Storage.ISetVersionDeferral */
-/* Windows.Storage.ISystemAudioProperties */
-/* Windows.Storage.IStorageProvider */
-/* Windows.Storage.IStorageItem */
-/* Windows.Storage.IStorageItem.RenameAsync(desiredName) */
 HRESULT ws_storage_item_rename_async(WS_IStorageItem *self, cwinrt_hstring desiredName, WF_IAsyncAction** out);
 
-/* Windows.Storage.IStorageItem.RenameAsync(desiredName, option) */
 HRESULT ws_storage_item_rename_async_str_name_collision_option_p(WS_IStorageItem *self, cwinrt_hstring desiredName, WS_NameCollisionOption option, WF_IAsyncAction** out);
 
-/* Windows.Storage.IStorageItem.DeleteAsync() */
 HRESULT ws_storage_item_delete_async(WS_IStorageItem *self, WF_IAsyncAction** out);
 
-/* Windows.Storage.IStorageItem.DeleteAsync(option) */
 HRESULT ws_storage_item_delete_async_storage_delete_option_p(WS_IStorageItem *self, WS_StorageDeleteOption option, WF_IAsyncAction** out);
 
-/* Windows.Storage.IStorageItem.GetBasicPropertiesAsync() */
 HRESULT ws_storage_item_get_basic_properties_async(WS_IStorageItem *self, WF_IAsyncOperation_WSTFI_BasicProperties** out);
 
-/* Windows.Storage.IStorageItem.get_Name() */
 HRESULT ws_storage_item_get__name(WS_IStorageItem *self, cwinrt_hstring *value);
 
-/* Windows.Storage.IStorageItem.get_Path() */
 HRESULT ws_storage_item_get__path(WS_IStorageItem *self, cwinrt_hstring *value);
 
-/* Windows.Storage.IStorageItem.get_Attributes() */
 HRESULT ws_storage_item_get__attributes(WS_IStorageItem *self, WS_FileAttributes *value);
 
-/* Windows.Storage.IStorageItem.get_DateCreated() */
 HRESULT ws_storage_item_get__date_created(WS_IStorageItem *self, WF_DateTime *value);
 
-/* Windows.Storage.IStorageItem.IsOfType() */
 HRESULT ws_storage_item_is_of_type(WS_IStorageItem *self, WS_StorageItemTypes type_, BOOL *out);
 
-/* Windows.Storage.IStorageItemProperties */
-/* Windows.Storage.IStorageItemProperties.GetThumbnailAsync(mode) */
 HRESULT ws_storage_item_properties_get_thumbnail_async(WS_IStorageItemProperties *self, WSTFI_ThumbnailMode mode, WF_IAsyncOperation_WSTFI_StorageItemThumbnail** out);
 
-/* Windows.Storage.IStorageItemProperties.GetThumbnailAsync(mode, requestedSize) */
 HRESULT ws_storage_item_properties_get_thumbnail_async_thumbnail_mode_u32_p(WS_IStorageItemProperties *self, WSTFI_ThumbnailMode mode, uint32_t requestedSize, WF_IAsyncOperation_WSTFI_StorageItemThumbnail** out);
 
-/* Windows.Storage.IStorageItemProperties.GetThumbnailAsync(mode, requestedSize, options) */
 HRESULT ws_storage_item_properties_get_thumbnail_async_thumbnail_mode_u32_thumbnail_options_p(WS_IStorageItemProperties *self, WSTFI_ThumbnailMode mode, uint32_t requestedSize, WSTFI_ThumbnailOptions options, WF_IAsyncOperation_WSTFI_StorageItemThumbnail** out);
 
-/* Windows.Storage.IStorageItemProperties.get_DisplayName() */
 HRESULT ws_storage_item_properties_get__display_name(WS_IStorageItemProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.IStorageItemProperties.get_DisplayType() */
 HRESULT ws_storage_item_properties_get__display_type(WS_IStorageItemProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.IStorageItemProperties.get_FolderRelativeId() */
 HRESULT ws_storage_item_properties_get__folder_relative_id(WS_IStorageItemProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.IStorageItemProperties.get_Properties() */
 HRESULT ws_storage_item_properties_get__properties(WS_IStorageItemProperties *self, WSTFI_StorageItemContentProperties** value);
 
 #endif /* CWINRT_WINDOWS_STORAGE_H */

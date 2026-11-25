@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Services.Maps.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WDEGE_Geopoint
 #define CWINRT_FWD_WDEGE_Geopoint
 typedef struct WDEGE_Geopoint WDEGE_Geopoint;
@@ -36,7 +35,6 @@ typedef enum WGL_DayOfWeek {
 } WGL_DayOfWeek;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSEMALO_PlaceInfoHelper WSEMALO_PlaceInfoHelper;
 typedef struct WSEMALO_LocalLocationRatingInfo WSEMALO_LocalLocationRatingInfo;
 typedef struct WSEMALO_LocalLocationHoursOfOperationItem WSEMALO_LocalLocationHoursOfOperationItem;
@@ -53,7 +51,6 @@ typedef struct WSEMALO_ILocalLocationFinderResult WSEMALO_ILocalLocationFinderRe
 typedef struct WSEMALO_ILocalLocation WSEMALO_ILocalLocation;
 typedef struct WSEMALO_ILocalLocation_2 WSEMALO_ILocalLocation_2;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSEMA_PlaceInfo
 #define CWINRT_FWD_WSEMA_PlaceInfo
 typedef struct WSEMA_PlaceInfo WSEMA_PlaceInfo;
@@ -114,7 +111,6 @@ typedef enum WSEMALO_LocalLocationFinderStatus {
 } WSEMALO_LocalLocationFinderStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -151,165 +147,100 @@ static const IID CWINRT_IID_WSEMALO_ILocalLocation CWINRT_MAYBE_UNUSED = { 0xBB0
 static const IID CWINRT_IID_WSEMALO_ILocalLocation_2 CWINRT_MAYBE_UNUSED = { 0x6E9E307C, 0xECB5, 0x4FFC, { 0xBB, 0x8C, 0xBA, 0x50, 0xBA, 0x8C, 0x2D, 0xC6 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Services.Maps.LocalSearch.PlaceInfoHelper */
 HRESULT wsemalo_place_info_helper_new(WSEMALO_PlaceInfoHelper **out);
 
-/* Windows.Services.Maps.LocalSearch.PlaceInfoHelper */
-/* Windows.Services.Maps.LocalSearch.PlaceInfoHelper.CreateFromLocalLocation(location) */
 HRESULT wsemalo_place_info_helper_create_from_local_location(WSEMALO_LocalLocation* location, WSEMA_PlaceInfo** out);
 
-/* activate Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo */
 HRESULT wsemalo_local_location_rating_info_new(WSEMALO_LocalLocationRatingInfo **out);
 
-/* Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo */
-/* Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo.get_AggregateRating() */
 HRESULT wsemalo_local_location_rating_info_get__aggregate_rating(WSEMALO_LocalLocationRatingInfo *self, double** value);
 
-/* Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo.get_RatingCount() */
 HRESULT wsemalo_local_location_rating_info_get__rating_count(WSEMALO_LocalLocationRatingInfo *self, int32_t** value);
 
-/* Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo.get_ProviderIdentifier() */
 HRESULT wsemalo_local_location_rating_info_get__provider_identifier(WSEMALO_LocalLocationRatingInfo *self, cwinrt_hstring *value);
 
-/* activate Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem */
 HRESULT wsemalo_local_location_hours_of_operation_item_new(WSEMALO_LocalLocationHoursOfOperationItem **out);
 
-/* Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem */
-/* Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem.get_Day() */
 HRESULT wsemalo_local_location_hours_of_operation_item_get__day(WSEMALO_LocalLocationHoursOfOperationItem *self, WGL_DayOfWeek *value);
 
-/* Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem.get_Start() */
 HRESULT wsemalo_local_location_hours_of_operation_item_get__start(WSEMALO_LocalLocationHoursOfOperationItem *self, WF_TimeSpan *value);
 
-/* Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem.get_Span() */
 HRESULT wsemalo_local_location_hours_of_operation_item_get__span(WSEMALO_LocalLocationHoursOfOperationItem *self, WF_TimeSpan *value);
 
-/* activate Windows.Services.Maps.LocalSearch.LocalLocationFinderResult */
 HRESULT wsemalo_local_location_finder_result_new(WSEMALO_LocalLocationFinderResult **out);
 
-/* Windows.Services.Maps.LocalSearch.LocalLocationFinderResult */
-/* Windows.Services.Maps.LocalSearch.LocalLocationFinderResult.get_LocalLocations() */
 HRESULT wsemalo_local_location_finder_result_get__local_locations(WSEMALO_LocalLocationFinderResult *self, WFOCO_IVectorView_WSEMALO_LocalLocation** value);
 
-/* Windows.Services.Maps.LocalSearch.LocalLocationFinderResult.get_Status() */
 HRESULT wsemalo_local_location_finder_result_get__status(WSEMALO_LocalLocationFinderResult *self, WSEMALO_LocalLocationFinderStatus *value);
 
-/* activate Windows.Services.Maps.LocalSearch.LocalLocationFinder */
 HRESULT wsemalo_local_location_finder_new(WSEMALO_LocalLocationFinder **out);
 
-/* Windows.Services.Maps.LocalSearch.LocalLocationFinder */
-/* Windows.Services.Maps.LocalSearch.LocalLocationFinder.FindLocalLocationsAsync(searchTerm, searchArea, localCategory, maxResults) */
 HRESULT wsemalo_local_location_finder_find_local_locations_async(cwinrt_hstring searchTerm, WDEGE_Geocircle* searchArea, cwinrt_hstring localCategory, uint32_t maxResults, WF_IAsyncOperation_WSEMALO_LocalLocationFinderResult** out);
 
-/* activate Windows.Services.Maps.LocalSearch.LocalLocation */
 HRESULT wsemalo_local_location_new(WSEMALO_LocalLocation **out);
 
-/* Windows.Services.Maps.LocalSearch.LocalLocation */
-/* Windows.Services.Maps.LocalSearch.LocalLocation.get_Address() */
 HRESULT wsemalo_local_location_get__address(WSEMALO_LocalLocation *self, WSEMA_MapAddress** value);
 
-/* Windows.Services.Maps.LocalSearch.LocalLocation.get_Identifier() */
 HRESULT wsemalo_local_location_get__identifier(WSEMALO_LocalLocation *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.LocalSearch.LocalLocation.get_Description() */
 HRESULT wsemalo_local_location_get__description(WSEMALO_LocalLocation *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.LocalSearch.LocalLocation.get_DisplayName() */
 HRESULT wsemalo_local_location_get__display_name(WSEMALO_LocalLocation *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.LocalSearch.LocalLocation.get_Point() */
 HRESULT wsemalo_local_location_get__point(WSEMALO_LocalLocation *self, WDEGE_Geopoint** value);
 
-/* Windows.Services.Maps.LocalSearch.LocalLocation.get_PhoneNumber() */
 HRESULT wsemalo_local_location_get__phone_number(WSEMALO_LocalLocation *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.LocalSearch.LocalLocation.get_DataAttribution() */
 HRESULT wsemalo_local_location_get__data_attribution(WSEMALO_LocalLocation *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.LocalSearch.LocalLocation.get_Category() */
 HRESULT wsemalo_local_location_get__category(WSEMALO_LocalLocation *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.LocalSearch.LocalLocation.get_RatingInfo() */
 HRESULT wsemalo_local_location_get__rating_info(WSEMALO_LocalLocation *self, WSEMALO_LocalLocationRatingInfo** value);
 
-/* Windows.Services.Maps.LocalSearch.LocalLocation.get_HoursOfOperation() */
 HRESULT wsemalo_local_location_get__hours_of_operation(WSEMALO_LocalLocation *self, WFOCO_IVectorView_WSEMALO_LocalLocationHoursOfOperationItem** value);
 
-/* activate Windows.Services.Maps.LocalSearch.LocalCategories */
 HRESULT wsemalo_local_categories_new(WSEMALO_LocalCategories **out);
 
-/* Windows.Services.Maps.LocalSearch.LocalCategories */
-/* Windows.Services.Maps.LocalSearch.LocalCategories.get_BankAndCreditUnions() */
 HRESULT wsemalo_local_categories_get__bank_and_credit_unions(cwinrt_hstring *value);
 
-/* Windows.Services.Maps.LocalSearch.LocalCategories.get_EatDrink() */
 HRESULT wsemalo_local_categories_get__eat_drink(cwinrt_hstring *value);
 
-/* Windows.Services.Maps.LocalSearch.LocalCategories.get_Hospitals() */
 HRESULT wsemalo_local_categories_get__hospitals(cwinrt_hstring *value);
 
-/* Windows.Services.Maps.LocalSearch.LocalCategories.get_HotelsAndMotels() */
 HRESULT wsemalo_local_categories_get__hotels_and_motels(cwinrt_hstring *value);
 
-/* Windows.Services.Maps.LocalSearch.LocalCategories.get_All() */
 HRESULT wsemalo_local_categories_get__all(cwinrt_hstring *value);
 
-/* Windows.Services.Maps.LocalSearch.LocalCategories.get_Parking() */
 HRESULT wsemalo_local_categories_get__parking(cwinrt_hstring *value);
 
-/* Windows.Services.Maps.LocalSearch.LocalCategories.get_SeeDo() */
 HRESULT wsemalo_local_categories_get__see_do(cwinrt_hstring *value);
 
-/* Windows.Services.Maps.LocalSearch.LocalCategories.get_Shop() */
 HRESULT wsemalo_local_categories_get__shop(cwinrt_hstring *value);
 
-/* Windows.Services.Maps.LocalSearch.IPlaceInfoHelperStatics */
-/* Windows.Services.Maps.LocalSearch.IPlaceInfoHelperStatics.CreateFromLocalLocation(location) */
 HRESULT wsemalo_place_info_helper_statics_create_from_local_location(WSEMALO_IPlaceInfoHelperStatics *self, WSEMALO_LocalLocation* location, WSEMA_PlaceInfo** out);
 
-/* Windows.Services.Maps.LocalSearch.ILocalLocationFinderStatics */
-/* Windows.Services.Maps.LocalSearch.ILocalLocationFinderStatics.FindLocalLocationsAsync(searchTerm, searchArea, localCategory, maxResults) */
 HRESULT wsemalo_local_location_finder_statics_find_local_locations_async(WSEMALO_ILocalLocationFinderStatics *self, cwinrt_hstring searchTerm, WDEGE_Geocircle* searchArea, cwinrt_hstring localCategory, uint32_t maxResults, WF_IAsyncOperation_WSEMALO_LocalLocationFinderResult** out);
 
-/* Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics */
-/* Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics.get_BankAndCreditUnions() */
 HRESULT wsemalo_local_categories_statics_get__bank_and_credit_unions(WSEMALO_ILocalCategoriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics.get_EatDrink() */
 HRESULT wsemalo_local_categories_statics_get__eat_drink(WSEMALO_ILocalCategoriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics.get_Hospitals() */
 HRESULT wsemalo_local_categories_statics_get__hospitals(WSEMALO_ILocalCategoriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics.get_HotelsAndMotels() */
 HRESULT wsemalo_local_categories_statics_get__hotels_and_motels(WSEMALO_ILocalCategoriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics.get_All() */
 HRESULT wsemalo_local_categories_statics_get__all(WSEMALO_ILocalCategoriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics.get_Parking() */
 HRESULT wsemalo_local_categories_statics_get__parking(WSEMALO_ILocalCategoriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics.get_SeeDo() */
 HRESULT wsemalo_local_categories_statics_get__see_do(WSEMALO_ILocalCategoriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics.get_Shop() */
 HRESULT wsemalo_local_categories_statics_get__shop(WSEMALO_ILocalCategoriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.LocalSearch.ILocalLocationRatingInfo */
-/* Windows.Services.Maps.LocalSearch.ILocalLocationHoursOfOperationItem */
-/* Windows.Services.Maps.LocalSearch.ILocalLocationFinderResult */
-/* Windows.Services.Maps.LocalSearch.ILocalLocation */
-/* Windows.Services.Maps.LocalSearch.ILocalLocation2 */
-/* Windows.Services.Maps.LocalSearch.ILocalLocation2.get_Category() */
 HRESULT wsemalo_local_location_2_get__category(WSEMALO_ILocalLocation_2 *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.LocalSearch.ILocalLocation2.get_RatingInfo() */
 HRESULT wsemalo_local_location_2_get__rating_info(WSEMALO_ILocalLocation_2 *self, WSEMALO_LocalLocationRatingInfo** value);
 
-/* Windows.Services.Maps.LocalSearch.ILocalLocation2.get_HoursOfOperation() */
 HRESULT wsemalo_local_location_2_get__hours_of_operation(WSEMALO_ILocalLocation_2 *self, WFOCO_IVectorView_WSEMALO_LocalLocationHoursOfOperationItem** value);
 
 #endif /* CWINRT_WINDOWS_SERVICES_MAPS_LOCALSEARCH_H */

@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WDEEN_IDevicePairingSettings
 #define CWINRT_FWD_WDEEN_IDevicePairingSettings
 typedef struct WDEEN_IDevicePairingSettings WDEEN_IDevicePairingSettings;
@@ -47,7 +46,6 @@ typedef struct WSTST_IBuffer WSTST_IBuffer;
 typedef struct WSECR_PasswordCredential WSECR_PasswordCredential;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDEWI_IWiFiDirectConnectionParametersStatics WDEWI_IWiFiDirectConnectionParametersStatics;
 typedef struct WDEWI_IWiFiDirectDeviceStatics WDEWI_IWiFiDirectDeviceStatics;
 typedef struct WDEWI_IWiFiDirectDeviceStatics_2 WDEWI_IWiFiDirectDeviceStatics_2;
@@ -75,7 +73,6 @@ typedef struct WDEWI_IWiFiDirectAdvertisementPublisher WDEWI_IWiFiDirectAdvertis
 typedef struct WDEWI_IWiFiDirectAdvertisement WDEWI_IWiFiDirectAdvertisement;
 typedef struct WDEWI_IWiFiDirectAdvertisement_2 WDEWI_IWiFiDirectAdvertisement_2;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WDEEN_DevicePairingKinds
 #define CWINRT_FWD_WDEEN_DevicePairingKinds
 typedef enum WDEEN_DevicePairingKinds {
@@ -191,7 +188,6 @@ typedef enum WDEWI_WiFiDirectPairingProcedure {
 } WDEWI_WiFiDirectPairingProcedure;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -260,248 +256,151 @@ static const IID CWINRT_IID_WDEWI_IWiFiDirectAdvertisement CWINRT_MAYBE_UNUSED =
 static const IID CWINRT_IID_WDEWI_IWiFiDirectAdvertisement_2 CWINRT_MAYBE_UNUSED = { 0xB759AA46, 0xD816, 0x491B, { 0x91, 0x7A, 0xB4, 0x0D, 0x7D, 0xC4, 0x03, 0xA2 } };
 #endif
 
-/* Methods */
-
-/* Windows.Devices.WiFiDirect.IWiFiDirectConnectionParametersStatics */
-/* Windows.Devices.WiFiDirect.IWiFiDirectConnectionParametersStatics.GetDevicePairingKinds(configurationMethod) */
 HRESULT wdewi_wi_fi_direct_connection_parameters_statics_get_device_pairing_kinds(WDEWI_IWiFiDirectConnectionParametersStatics *self, WDEWI_WiFiDirectConfigurationMethod configurationMethod, WDEEN_DevicePairingKinds *out);
 
-/* Windows.Devices.WiFiDirect.IWiFiDirectDeviceStatics */
-/* Windows.Devices.WiFiDirect.IWiFiDirectDeviceStatics.GetDeviceSelector() */
 HRESULT wdewi_wi_fi_direct_device_statics_get_device_selector(WDEWI_IWiFiDirectDeviceStatics *self, cwinrt_hstring *out);
 
-/* Windows.Devices.WiFiDirect.IWiFiDirectDeviceStatics.FromIdAsync(deviceId) */
 HRESULT wdewi_wi_fi_direct_device_statics_from_id_async(WDEWI_IWiFiDirectDeviceStatics *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDEWI_WiFiDirectDevice** out);
 
-/* Windows.Devices.WiFiDirect.IWiFiDirectDeviceStatics2 */
-/* Windows.Devices.WiFiDirect.IWiFiDirectDeviceStatics2.GetDeviceSelector() */
 HRESULT wdewi_wi_fi_direct_device_statics_2_get_device_selector(WDEWI_IWiFiDirectDeviceStatics_2 *self, WDEWI_WiFiDirectDeviceSelectorType type_, cwinrt_hstring *out);
 
-/* Windows.Devices.WiFiDirect.IWiFiDirectDeviceStatics2.FromIdAsync(deviceId, connectionParameters) */
 HRESULT wdewi_wi_fi_direct_device_statics_2_from_id_async(WDEWI_IWiFiDirectDeviceStatics_2 *self, cwinrt_hstring deviceId, WDEWI_WiFiDirectConnectionParameters* connectionParameters, WF_IAsyncOperation_WDEWI_WiFiDirectDevice** out);
 
-/* Windows.Devices.WiFiDirect.IWiFiDirectInformationElementStatics */
-/* Windows.Devices.WiFiDirect.IWiFiDirectInformationElementStatics.CreateFromBuffer(buffer) */
 HRESULT wdewi_wi_fi_direct_information_element_statics_create_from_buffer(WDEWI_IWiFiDirectInformationElementStatics *self, WSTST_IBuffer* buffer, WFOCO_IVector_WDEWI_WiFiDirectInformationElement** out);
 
-/* Windows.Devices.WiFiDirect.IWiFiDirectInformationElementStatics.CreateFromDeviceInformation(deviceInformation) */
 HRESULT wdewi_wi_fi_direct_information_element_statics_create_from_device_information(WDEWI_IWiFiDirectInformationElementStatics *self, WDEEN_DeviceInformation* deviceInformation, WFOCO_IVector_WDEWI_WiFiDirectInformationElement** out);
 
-/* activate Windows.Devices.WiFiDirect.WiFiDirectLegacySettings */
 HRESULT wdewi_wi_fi_direct_legacy_settings_new(WDEWI_WiFiDirectLegacySettings **out);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectLegacySettings */
-/* Windows.Devices.WiFiDirect.WiFiDirectLegacySettings.get_IsEnabled() */
 HRESULT wdewi_wi_fi_direct_legacy_settings_get__is_enabled(WDEWI_WiFiDirectLegacySettings *self, BOOL *value);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectLegacySettings.put_IsEnabled() */
 HRESULT wdewi_wi_fi_direct_legacy_settings_put__is_enabled(WDEWI_WiFiDirectLegacySettings *self, BOOL value);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectLegacySettings.get_Ssid() */
 HRESULT wdewi_wi_fi_direct_legacy_settings_get__ssid(WDEWI_WiFiDirectLegacySettings *self, cwinrt_hstring *value);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectLegacySettings.put_Ssid() */
 HRESULT wdewi_wi_fi_direct_legacy_settings_put__ssid(WDEWI_WiFiDirectLegacySettings *self, cwinrt_hstring value);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectLegacySettings.get_Passphrase() */
 HRESULT wdewi_wi_fi_direct_legacy_settings_get__passphrase(WDEWI_WiFiDirectLegacySettings *self, WSECR_PasswordCredential** value);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectLegacySettings.put_Passphrase() */
 HRESULT wdewi_wi_fi_direct_legacy_settings_put__passphrase(WDEWI_WiFiDirectLegacySettings *self, WSECR_PasswordCredential* value);
 
-/* activate Windows.Devices.WiFiDirect.WiFiDirectInformationElement */
 HRESULT wdewi_wi_fi_direct_information_element_new(WDEWI_WiFiDirectInformationElement **out);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectInformationElement */
-/* Windows.Devices.WiFiDirect.WiFiDirectInformationElement.get_Oui() */
 HRESULT wdewi_wi_fi_direct_information_element_get__oui(WDEWI_WiFiDirectInformationElement *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectInformationElement.put_Oui() */
 HRESULT wdewi_wi_fi_direct_information_element_put__oui(WDEWI_WiFiDirectInformationElement *self, WSTST_IBuffer* value);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectInformationElement.get_OuiType() */
 HRESULT wdewi_wi_fi_direct_information_element_get__oui_type(WDEWI_WiFiDirectInformationElement *self, uint8_t *value);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectInformationElement.put_OuiType() */
 HRESULT wdewi_wi_fi_direct_information_element_put__oui_type(WDEWI_WiFiDirectInformationElement *self, uint8_t value);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectInformationElement.get_Value() */
 HRESULT wdewi_wi_fi_direct_information_element_get__value(WDEWI_WiFiDirectInformationElement *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectInformationElement.put_Value() */
 HRESULT wdewi_wi_fi_direct_information_element_put__value(WDEWI_WiFiDirectInformationElement *self, WSTST_IBuffer* value);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectInformationElement.CreateFromBuffer(buffer) */
 HRESULT wdewi_wi_fi_direct_information_element_create_from_buffer(WSTST_IBuffer* buffer, WFOCO_IVector_WDEWI_WiFiDirectInformationElement** out);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectInformationElement.CreateFromDeviceInformation(deviceInformation) */
 HRESULT wdewi_wi_fi_direct_information_element_create_from_device_information(WDEEN_DeviceInformation* deviceInformation, WFOCO_IVector_WDEWI_WiFiDirectInformationElement** out);
 
-/* activate Windows.Devices.WiFiDirect.WiFiDirectDevice */
 HRESULT wdewi_wi_fi_direct_device_new(WDEWI_WiFiDirectDevice **out);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectDevice */
-/* Windows.Devices.WiFiDirect.WiFiDirectDevice.get_ConnectionStatus() */
 HRESULT wdewi_wi_fi_direct_device_get__connection_status(WDEWI_WiFiDirectDevice *self, WDEWI_WiFiDirectConnectionStatus *value);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectDevice.get_DeviceId() */
 HRESULT wdewi_wi_fi_direct_device_get__device_id(WDEWI_WiFiDirectDevice *self, cwinrt_hstring *value);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectDevice.GetConnectionEndpointPairs() */
 HRESULT wdewi_wi_fi_direct_device_get_connection_endpoint_pairs(WDEWI_WiFiDirectDevice *self, WFOCO_IVectorView_WNE_EndpointPair** out);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectDevice.Close() */
 HRESULT wdewi_wi_fi_direct_device_close(WDEWI_WiFiDirectDevice *self);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectDevice.GetDeviceSelector() */
 HRESULT wdewi_wi_fi_direct_device_get_device_selector_wi_fi_direct_device_selector_type_str(WDEWI_WiFiDirectDeviceSelectorType type_, cwinrt_hstring *out);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectDevice.FromIdAsync(deviceId, connectionParameters) */
 HRESULT wdewi_wi_fi_direct_device_from_id_async_str_p_p(cwinrt_hstring deviceId, WDEWI_WiFiDirectConnectionParameters* connectionParameters, WF_IAsyncOperation_WDEWI_WiFiDirectDevice** out);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectDevice.GetDeviceSelector() */
 HRESULT wdewi_wi_fi_direct_device_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectDevice.FromIdAsync(deviceId) */
 HRESULT wdewi_wi_fi_direct_device_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDEWI_WiFiDirectDevice** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdewi_wi_fi_direct_device_on_connection_status_changed(WDEWI_WiFiDirectDevice *self, cwinrt_event_fn fn, void *ctx);
 void wdewi_wi_fi_direct_device_off_connection_status_changed(WDEWI_WiFiDirectDevice *self, cwinrt_token token);
 
-/* activate Windows.Devices.WiFiDirect.WiFiDirectConnectionRequestedEventArgs */
 HRESULT wdewi_wi_fi_direct_connection_requested_event_args_new(WDEWI_WiFiDirectConnectionRequestedEventArgs **out);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectConnectionRequestedEventArgs */
-/* Windows.Devices.WiFiDirect.WiFiDirectConnectionRequestedEventArgs.GetConnectionRequest() */
 HRESULT wdewi_wi_fi_direct_connection_requested_event_args_get_connection_request(WDEWI_WiFiDirectConnectionRequestedEventArgs *self, WDEWI_WiFiDirectConnectionRequest** out);
 
-/* activate Windows.Devices.WiFiDirect.WiFiDirectConnectionRequest */
 HRESULT wdewi_wi_fi_direct_connection_request_new(WDEWI_WiFiDirectConnectionRequest **out);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectConnectionRequest */
-/* Windows.Devices.WiFiDirect.WiFiDirectConnectionRequest.get_DeviceInformation() */
 HRESULT wdewi_wi_fi_direct_connection_request_get__device_information(WDEWI_WiFiDirectConnectionRequest *self, WDEEN_DeviceInformation** value);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectConnectionRequest.Close() */
 HRESULT wdewi_wi_fi_direct_connection_request_close(WDEWI_WiFiDirectConnectionRequest *self);
 
-/* activate Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters */
 HRESULT wdewi_wi_fi_direct_connection_parameters_new(WDEWI_WiFiDirectConnectionParameters **out);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters */
-/* Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters.get_GroupOwnerIntent() */
 HRESULT wdewi_wi_fi_direct_connection_parameters_get__group_owner_intent(WDEWI_WiFiDirectConnectionParameters *self, int16_t *value);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters.put_GroupOwnerIntent() */
 HRESULT wdewi_wi_fi_direct_connection_parameters_put__group_owner_intent(WDEWI_WiFiDirectConnectionParameters *self, int16_t value);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters.get_PreferenceOrderedConfigurationMethods() */
 HRESULT wdewi_wi_fi_direct_connection_parameters_get__preference_ordered_configuration_methods(WDEWI_WiFiDirectConnectionParameters *self, WFOCO_IVector_WDEWI_WiFiDirectConfigurationMethod** value);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters.get_PreferredPairingProcedure() */
 HRESULT wdewi_wi_fi_direct_connection_parameters_get__preferred_pairing_procedure(WDEWI_WiFiDirectConnectionParameters *self, WDEWI_WiFiDirectPairingProcedure *value);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters.put_PreferredPairingProcedure() */
 HRESULT wdewi_wi_fi_direct_connection_parameters_put__preferred_pairing_procedure(WDEWI_WiFiDirectConnectionParameters *self, WDEWI_WiFiDirectPairingProcedure value);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters.GetDevicePairingKinds(configurationMethod) */
 HRESULT wdewi_wi_fi_direct_connection_parameters_get_device_pairing_kinds(WDEWI_WiFiDirectConfigurationMethod configurationMethod, WDEEN_DevicePairingKinds *out);
 
-/* activate Windows.Devices.WiFiDirect.WiFiDirectConnectionListener */
 HRESULT wdewi_wi_fi_direct_connection_listener_new(WDEWI_WiFiDirectConnectionListener **out);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectConnectionListener */
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdewi_wi_fi_direct_connection_listener_on_connection_requested(WDEWI_WiFiDirectConnectionListener *self, cwinrt_event_fn fn, void *ctx);
 void wdewi_wi_fi_direct_connection_listener_off_connection_requested(WDEWI_WiFiDirectConnectionListener *self, cwinrt_token token);
 
-/* activate Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatusChangedEventArgs */
 HRESULT wdewi_wi_fi_direct_advertisement_publisher_status_changed_event_args_new(WDEWI_WiFiDirectAdvertisementPublisherStatusChangedEventArgs **out);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatusChangedEventArgs */
-/* Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatusChangedEventArgs.get_Status() */
 HRESULT wdewi_wi_fi_direct_advertisement_publisher_status_changed_event_args_get__status(WDEWI_WiFiDirectAdvertisementPublisherStatusChangedEventArgs *self, WDEWI_WiFiDirectAdvertisementPublisherStatus *value);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatusChangedEventArgs.get_Error() */
 HRESULT wdewi_wi_fi_direct_advertisement_publisher_status_changed_event_args_get__error(WDEWI_WiFiDirectAdvertisementPublisherStatusChangedEventArgs *self, WDEWI_WiFiDirectError *value);
 
-/* activate Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher */
 HRESULT wdewi_wi_fi_direct_advertisement_publisher_new(WDEWI_WiFiDirectAdvertisementPublisher **out);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher */
-/* Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher.get_Advertisement() */
 HRESULT wdewi_wi_fi_direct_advertisement_publisher_get__advertisement(WDEWI_WiFiDirectAdvertisementPublisher *self, WDEWI_WiFiDirectAdvertisement** value);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher.get_Status() */
 HRESULT wdewi_wi_fi_direct_advertisement_publisher_get__status(WDEWI_WiFiDirectAdvertisementPublisher *self, WDEWI_WiFiDirectAdvertisementPublisherStatus *value);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher.Start() */
 HRESULT wdewi_wi_fi_direct_advertisement_publisher_start(WDEWI_WiFiDirectAdvertisementPublisher *self);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher.Stop() */
 HRESULT wdewi_wi_fi_direct_advertisement_publisher_stop(WDEWI_WiFiDirectAdvertisementPublisher *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdewi_wi_fi_direct_advertisement_publisher_on_status_changed(WDEWI_WiFiDirectAdvertisementPublisher *self, cwinrt_event_fn fn, void *ctx);
 void wdewi_wi_fi_direct_advertisement_publisher_off_status_changed(WDEWI_WiFiDirectAdvertisementPublisher *self, cwinrt_token token);
 
-/* activate Windows.Devices.WiFiDirect.WiFiDirectAdvertisement */
 HRESULT wdewi_wi_fi_direct_advertisement_new(WDEWI_WiFiDirectAdvertisement **out);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectAdvertisement */
-/* Windows.Devices.WiFiDirect.WiFiDirectAdvertisement.get_InformationElements() */
 HRESULT wdewi_wi_fi_direct_advertisement_get__information_elements(WDEWI_WiFiDirectAdvertisement *self, WFOCO_IVector_WDEWI_WiFiDirectInformationElement** value);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectAdvertisement.put_InformationElements() */
 HRESULT wdewi_wi_fi_direct_advertisement_put__information_elements(WDEWI_WiFiDirectAdvertisement *self, WFOCO_IVector_WDEWI_WiFiDirectInformationElement* value);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectAdvertisement.get_ListenStateDiscoverability() */
 HRESULT wdewi_wi_fi_direct_advertisement_get__listen_state_discoverability(WDEWI_WiFiDirectAdvertisement *self, WDEWI_WiFiDirectAdvertisementListenStateDiscoverability *value);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectAdvertisement.put_ListenStateDiscoverability() */
 HRESULT wdewi_wi_fi_direct_advertisement_put__listen_state_discoverability(WDEWI_WiFiDirectAdvertisement *self, WDEWI_WiFiDirectAdvertisementListenStateDiscoverability value);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectAdvertisement.get_IsAutonomousGroupOwnerEnabled() */
 HRESULT wdewi_wi_fi_direct_advertisement_get__is_autonomous_group_owner_enabled(WDEWI_WiFiDirectAdvertisement *self, BOOL *value);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectAdvertisement.put_IsAutonomousGroupOwnerEnabled() */
 HRESULT wdewi_wi_fi_direct_advertisement_put__is_autonomous_group_owner_enabled(WDEWI_WiFiDirectAdvertisement *self, BOOL value);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectAdvertisement.get_LegacySettings() */
 HRESULT wdewi_wi_fi_direct_advertisement_get__legacy_settings(WDEWI_WiFiDirectAdvertisement *self, WDEWI_WiFiDirectLegacySettings** value);
 
-/* Windows.Devices.WiFiDirect.WiFiDirectAdvertisement.get_SupportedConfigurationMethods() */
 HRESULT wdewi_wi_fi_direct_advertisement_get__supported_configuration_methods(WDEWI_WiFiDirectAdvertisement *self, WFOCO_IVector_WDEWI_WiFiDirectConfigurationMethod** value);
 
-/* Windows.Devices.WiFiDirect.IWiFiDirectLegacySettings */
-/* Windows.Devices.WiFiDirect.IWiFiDirectInformationElement */
-/* Windows.Devices.WiFiDirect.IWiFiDirectDevice */
-/* Windows.Devices.WiFiDirect.IWiFiDirectConnectionRequestedEventArgs */
-/* Windows.Devices.WiFiDirect.IWiFiDirectConnectionRequest */
-/* Windows.Devices.WiFiDirect.IWiFiDirectConnectionParameters */
-/* Windows.Devices.WiFiDirect.IWiFiDirectConnectionParameters2 */
-/* Windows.Devices.WiFiDirect.IWiFiDirectConnectionParameters2.get_PreferenceOrderedConfigurationMethods() */
 HRESULT wdewi_wi_fi_direct_connection_parameters_2_get__preference_ordered_configuration_methods(WDEWI_IWiFiDirectConnectionParameters_2 *self, WFOCO_IVector_WDEWI_WiFiDirectConfigurationMethod** value);
 
-/* Windows.Devices.WiFiDirect.IWiFiDirectConnectionParameters2.get_PreferredPairingProcedure() */
 HRESULT wdewi_wi_fi_direct_connection_parameters_2_get__preferred_pairing_procedure(WDEWI_IWiFiDirectConnectionParameters_2 *self, WDEWI_WiFiDirectPairingProcedure *value);
 
-/* Windows.Devices.WiFiDirect.IWiFiDirectConnectionParameters2.put_PreferredPairingProcedure() */
 HRESULT wdewi_wi_fi_direct_connection_parameters_2_put__preferred_pairing_procedure(WDEWI_IWiFiDirectConnectionParameters_2 *self, WDEWI_WiFiDirectPairingProcedure value);
 
-/* Windows.Devices.WiFiDirect.IWiFiDirectConnectionListener */
-/* Windows.Devices.WiFiDirect.IWiFiDirectAdvertisementPublisherStatusChangedEventArgs */
-/* Windows.Devices.WiFiDirect.IWiFiDirectAdvertisementPublisher */
-/* Windows.Devices.WiFiDirect.IWiFiDirectAdvertisement */
-/* Windows.Devices.WiFiDirect.IWiFiDirectAdvertisement2 */
-/* Windows.Devices.WiFiDirect.IWiFiDirectAdvertisement2.get_SupportedConfigurationMethods() */
 HRESULT wdewi_wi_fi_direct_advertisement_2_get__supported_configuration_methods(WDEWI_IWiFiDirectAdvertisement_2 *self, WFOCO_IVector_WDEWI_WiFiDirectConfigurationMethod** value);
 
 #endif /* CWINRT_WINDOWS_DEVICES_WIFIDIRECT_H */

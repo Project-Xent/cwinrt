@@ -15,13 +15,11 @@
 #include <cwinrt/Windows.Graphics.DirectX.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WPESPSU_ISpatialSurfaceMeshOptionsStatics WPESPSU_ISpatialSurfaceMeshOptionsStatics;
 typedef struct WPESPSU_ISpatialSurfaceObserverStatics_2 WPESPSU_ISpatialSurfaceObserverStatics_2;
 typedef struct WPESPSU_SpatialSurfaceInfo WPESPSU_SpatialSurfaceInfo;
@@ -36,7 +34,6 @@ typedef struct WPESPSU_ISpatialSurfaceMeshBuffer WPESPSU_ISpatialSurfaceMeshBuff
 typedef struct WPESPSU_ISpatialSurfaceMeshOptions WPESPSU_ISpatialSurfaceMeshOptions;
 typedef struct WPESPSU_ISpatialSurfaceObserver WPESPSU_ISpatialSurfaceObserver;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IVectorView_WGRDI_DirectXPixelFormat
 #define CWINRT_FWD_WFOCO_IVectorView_WGRDI_DirectXPixelFormat
 typedef struct WFOCO_IVectorView_WGRDI_DirectXPixelFormat WFOCO_IVectorView_WGRDI_DirectXPixelFormat;
@@ -214,7 +211,6 @@ typedef struct WF_TypedEventHandler_WPESPSU_SpatialSurfaceObserver_Object WF_Typ
 typedef struct WF_IAsyncOperation_WPESP_SpatialPerceptionAccessStatus WF_IAsyncOperation_WPESP_SpatialPerceptionAccessStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -251,148 +247,91 @@ static const IID CWINRT_IID_WPESPSU_ISpatialSurfaceMeshOptions CWINRT_MAYBE_UNUS
 static const IID CWINRT_IID_WPESPSU_ISpatialSurfaceObserver CWINRT_MAYBE_UNUSED = { 0x10B69819, 0xDDCA, 0x3483, { 0xAC, 0x3A, 0x74, 0x8F, 0xE8, 0xC8, 0x6D, 0xF5 } };
 #endif
 
-/* Methods */
-
-/* Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMeshOptionsStatics */
-/* Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMeshOptionsStatics.get_SupportedVertexPositionFormats() */
 HRESULT wpespsu_spatial_surface_mesh_options_statics_get__supported_vertex_position_formats(WPESPSU_ISpatialSurfaceMeshOptionsStatics *self, WFOCO_IVectorView_WGRDI_DirectXPixelFormat** value);
 
-/* Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMeshOptionsStatics.get_SupportedTriangleIndexFormats() */
 HRESULT wpespsu_spatial_surface_mesh_options_statics_get__supported_triangle_index_formats(WPESPSU_ISpatialSurfaceMeshOptionsStatics *self, WFOCO_IVectorView_WGRDI_DirectXPixelFormat** value);
 
-/* Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMeshOptionsStatics.get_SupportedVertexNormalFormats() */
 HRESULT wpespsu_spatial_surface_mesh_options_statics_get__supported_vertex_normal_formats(WPESPSU_ISpatialSurfaceMeshOptionsStatics *self, WFOCO_IVectorView_WGRDI_DirectXPixelFormat** value);
 
-/* Windows.Perception.Spatial.Surfaces.ISpatialSurfaceObserverStatics2 */
-/* Windows.Perception.Spatial.Surfaces.ISpatialSurfaceObserverStatics2.IsSupported() */
 HRESULT wpespsu_spatial_surface_observer_statics_2_is_supported(WPESPSU_ISpatialSurfaceObserverStatics_2 *self, BOOL *out);
 
-/* activate Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo */
 HRESULT wpespsu_spatial_surface_info_new(WPESPSU_SpatialSurfaceInfo **out);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo */
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo.get_Id() */
 HRESULT wpespsu_spatial_surface_info_get__id(WPESPSU_SpatialSurfaceInfo *self, GUID *value);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo.get_UpdateTime() */
 HRESULT wpespsu_spatial_surface_info_get__update_time(WPESPSU_SpatialSurfaceInfo *self, WF_DateTime *value);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo.TryGetBounds(coordinateSystem) */
 HRESULT wpespsu_spatial_surface_info_try_get_bounds(WPESPSU_SpatialSurfaceInfo *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WPESP_SpatialBoundingOrientedBox** out);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo.TryComputeLatestMeshAsync(maxTrianglesPerCubicMeter) */
 HRESULT wpespsu_spatial_surface_info_try_compute_latest_mesh_async(WPESPSU_SpatialSurfaceInfo *self, double maxTrianglesPerCubicMeter, WF_IAsyncOperation_WPESPSU_SpatialSurfaceMesh** out);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo.TryComputeLatestMeshAsync(maxTrianglesPerCubicMeter, options) */
 HRESULT wpespsu_spatial_surface_info_try_compute_latest_mesh_async_f64_p_p(WPESPSU_SpatialSurfaceInfo *self, double maxTrianglesPerCubicMeter, WPESPSU_SpatialSurfaceMeshOptions* options, WF_IAsyncOperation_WPESPSU_SpatialSurfaceMesh** out);
 
-/* activate Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh */
 HRESULT wpespsu_spatial_surface_mesh_new(WPESPSU_SpatialSurfaceMesh **out);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh */
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh.get_SurfaceInfo() */
 HRESULT wpespsu_spatial_surface_mesh_get__surface_info(WPESPSU_SpatialSurfaceMesh *self, WPESPSU_SpatialSurfaceInfo** value);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh.get_CoordinateSystem() */
 HRESULT wpespsu_spatial_surface_mesh_get__coordinate_system(WPESPSU_SpatialSurfaceMesh *self, WPESP_SpatialCoordinateSystem** value);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh.get_TriangleIndices() */
 HRESULT wpespsu_spatial_surface_mesh_get__triangle_indices(WPESPSU_SpatialSurfaceMesh *self, WPESPSU_SpatialSurfaceMeshBuffer** value);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh.get_VertexPositions() */
 HRESULT wpespsu_spatial_surface_mesh_get__vertex_positions(WPESPSU_SpatialSurfaceMesh *self, WPESPSU_SpatialSurfaceMeshBuffer** value);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh.get_VertexPositionScale() */
 HRESULT wpespsu_spatial_surface_mesh_get__vertex_position_scale(WPESPSU_SpatialSurfaceMesh *self, WFN_Vector_3 *value);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh.get_VertexNormals() */
 HRESULT wpespsu_spatial_surface_mesh_get__vertex_normals(WPESPSU_SpatialSurfaceMesh *self, WPESPSU_SpatialSurfaceMeshBuffer** value);
 
-/* activate Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshBuffer */
 HRESULT wpespsu_spatial_surface_mesh_buffer_new(WPESPSU_SpatialSurfaceMeshBuffer **out);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshBuffer */
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshBuffer.get_Format() */
 HRESULT wpespsu_spatial_surface_mesh_buffer_get__format(WPESPSU_SpatialSurfaceMeshBuffer *self, WGRDI_DirectXPixelFormat *value);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshBuffer.get_Stride() */
 HRESULT wpespsu_spatial_surface_mesh_buffer_get__stride(WPESPSU_SpatialSurfaceMeshBuffer *self, uint32_t *value);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshBuffer.get_ElementCount() */
 HRESULT wpespsu_spatial_surface_mesh_buffer_get__element_count(WPESPSU_SpatialSurfaceMeshBuffer *self, uint32_t *value);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshBuffer.get_Data() */
 HRESULT wpespsu_spatial_surface_mesh_buffer_get__data(WPESPSU_SpatialSurfaceMeshBuffer *self, WSTST_IBuffer** value);
 
-/* activate Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions */
 HRESULT wpespsu_spatial_surface_mesh_options_new(WPESPSU_SpatialSurfaceMeshOptions **out);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions */
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions.get_VertexPositionFormat() */
 HRESULT wpespsu_spatial_surface_mesh_options_get__vertex_position_format(WPESPSU_SpatialSurfaceMeshOptions *self, WGRDI_DirectXPixelFormat *value);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions.put_VertexPositionFormat() */
 HRESULT wpespsu_spatial_surface_mesh_options_put__vertex_position_format(WPESPSU_SpatialSurfaceMeshOptions *self, WGRDI_DirectXPixelFormat value);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions.get_TriangleIndexFormat() */
 HRESULT wpespsu_spatial_surface_mesh_options_get__triangle_index_format(WPESPSU_SpatialSurfaceMeshOptions *self, WGRDI_DirectXPixelFormat *value);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions.put_TriangleIndexFormat() */
 HRESULT wpespsu_spatial_surface_mesh_options_put__triangle_index_format(WPESPSU_SpatialSurfaceMeshOptions *self, WGRDI_DirectXPixelFormat value);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions.get_VertexNormalFormat() */
 HRESULT wpespsu_spatial_surface_mesh_options_get__vertex_normal_format(WPESPSU_SpatialSurfaceMeshOptions *self, WGRDI_DirectXPixelFormat *value);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions.put_VertexNormalFormat() */
 HRESULT wpespsu_spatial_surface_mesh_options_put__vertex_normal_format(WPESPSU_SpatialSurfaceMeshOptions *self, WGRDI_DirectXPixelFormat value);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions.get_IncludeVertexNormals() */
 HRESULT wpespsu_spatial_surface_mesh_options_get__include_vertex_normals(WPESPSU_SpatialSurfaceMeshOptions *self, BOOL *value);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions.put_IncludeVertexNormals() */
 HRESULT wpespsu_spatial_surface_mesh_options_put__include_vertex_normals(WPESPSU_SpatialSurfaceMeshOptions *self, BOOL value);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions.get_SupportedVertexPositionFormats() */
 HRESULT wpespsu_spatial_surface_mesh_options_get__supported_vertex_position_formats(WFOCO_IVectorView_WGRDI_DirectXPixelFormat** value);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions.get_SupportedTriangleIndexFormats() */
 HRESULT wpespsu_spatial_surface_mesh_options_get__supported_triangle_index_formats(WFOCO_IVectorView_WGRDI_DirectXPixelFormat** value);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions.get_SupportedVertexNormalFormats() */
 HRESULT wpespsu_spatial_surface_mesh_options_get__supported_vertex_normal_formats(WFOCO_IVectorView_WGRDI_DirectXPixelFormat** value);
 
-/* activate Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver */
 HRESULT wpespsu_spatial_surface_observer_new(WPESPSU_SpatialSurfaceObserver **out);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver */
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver.GetObservedSurfaces() */
 HRESULT wpespsu_spatial_surface_observer_get_observed_surfaces(WPESPSU_SpatialSurfaceObserver *self, WFOCO_IMapView_Guid_WPESPSU_SpatialSurfaceInfo** out);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver.SetBoundingVolume(bounds) */
 HRESULT wpespsu_spatial_surface_observer_set_bounding_volume(WPESPSU_SpatialSurfaceObserver *self, WPESP_SpatialBoundingVolume* bounds);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver.SetBoundingVolumes(bounds) */
 HRESULT wpespsu_spatial_surface_observer_set_bounding_volumes(WPESPSU_SpatialSurfaceObserver *self, WFOCO_IIterable_WPESP_SpatialBoundingVolume* bounds);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver.IsSupported() */
 HRESULT wpespsu_spatial_surface_observer_is_supported(BOOL *out);
 
-/* Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver.RequestAccessAsync() */
 HRESULT wpespsu_spatial_surface_observer_request_access_async(WF_IAsyncOperation_WPESP_SpatialPerceptionAccessStatus** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wpespsu_spatial_surface_observer_on_observed_surfaces_changed(WPESPSU_SpatialSurfaceObserver *self, cwinrt_event_fn fn, void *ctx);
 void wpespsu_spatial_surface_observer_off_observed_surfaces_changed(WPESPSU_SpatialSurfaceObserver *self, cwinrt_token token);
 
-/* Windows.Perception.Spatial.Surfaces.ISpatialSurfaceObserverStatics */
-/* Windows.Perception.Spatial.Surfaces.ISpatialSurfaceObserverStatics.RequestAccessAsync() */
 HRESULT wpespsu_spatial_surface_observer_statics_request_access_async(WPESPSU_ISpatialSurfaceObserverStatics *self, WF_IAsyncOperation_WPESP_SpatialPerceptionAccessStatus** out);
 
-/* Windows.Perception.Spatial.Surfaces.ISpatialSurfaceInfo */
-/* Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMesh */
-/* Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMeshBuffer */
-/* Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMeshOptions */
-/* Windows.Perception.Spatial.Surfaces.ISpatialSurfaceObserver */
 #endif /* CWINRT_WINDOWS_PERCEPTION_SPATIAL_SURFACES_H */

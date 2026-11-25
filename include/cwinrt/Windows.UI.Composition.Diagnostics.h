@@ -13,14 +13,12 @@
 #include <cwinrt/Windows.UI.Composition.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WUICODI_CompositionDebugHeatMaps WUICODI_CompositionDebugHeatMaps;
 typedef struct WUICODI_CompositionDebugSettings WUICODI_CompositionDebugSettings;
 typedef struct WUICODI_ICompositionDebugSettingsStatics WUICODI_ICompositionDebugSettingsStatics;
 typedef struct WUICODI_ICompositionDebugHeatMaps WUICODI_ICompositionDebugHeatMaps;
 typedef struct WUICODI_ICompositionDebugSettings WUICODI_ICompositionDebugSettings;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WUC_Visual
 #define CWINRT_FWD_WUC_Visual
 typedef struct WUC_Visual WUC_Visual;
@@ -45,7 +43,6 @@ typedef enum WUICODI_CompositionDebugOverdrawContentKinds {
 } WUICODI_CompositionDebugOverdrawContentKinds;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -62,38 +59,22 @@ static const IID CWINRT_IID_WUICODI_ICompositionDebugHeatMaps CWINRT_MAYBE_UNUSE
 static const IID CWINRT_IID_WUICODI_ICompositionDebugSettings CWINRT_MAYBE_UNUSED = { 0x2831987E, 0x1D82, 0x4D38, { 0xB7, 0xB7, 0xEF, 0xD1, 0x1C, 0x7B, 0xC3, 0xD1 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.UI.Composition.Diagnostics.CompositionDebugHeatMaps */
 HRESULT wuicodi_composition_debug_heat_maps_new(WUICODI_CompositionDebugHeatMaps **out);
 
-/* Windows.UI.Composition.Diagnostics.CompositionDebugHeatMaps */
-/* Windows.UI.Composition.Diagnostics.CompositionDebugHeatMaps.Hide(subtree) */
 HRESULT wuicodi_composition_debug_heat_maps_hide(WUICODI_CompositionDebugHeatMaps *self, WUC_Visual* subtree);
 
-/* Windows.UI.Composition.Diagnostics.CompositionDebugHeatMaps.ShowMemoryUsage(subtree) */
 HRESULT wuicodi_composition_debug_heat_maps_show_memory_usage(WUICODI_CompositionDebugHeatMaps *self, WUC_Visual* subtree);
 
-/* Windows.UI.Composition.Diagnostics.CompositionDebugHeatMaps.ShowOverdraw(subtree, contentKinds) */
 HRESULT wuicodi_composition_debug_heat_maps_show_overdraw(WUICODI_CompositionDebugHeatMaps *self, WUC_Visual* subtree, WUICODI_CompositionDebugOverdrawContentKinds contentKinds);
 
-/* Windows.UI.Composition.Diagnostics.CompositionDebugHeatMaps.ShowRedraw(subtree) */
 HRESULT wuicodi_composition_debug_heat_maps_show_redraw(WUICODI_CompositionDebugHeatMaps *self, WUC_Visual* subtree);
 
-/* activate Windows.UI.Composition.Diagnostics.CompositionDebugSettings */
 HRESULT wuicodi_composition_debug_settings_new(WUICODI_CompositionDebugSettings **out);
 
-/* Windows.UI.Composition.Diagnostics.CompositionDebugSettings */
-/* Windows.UI.Composition.Diagnostics.CompositionDebugSettings.get_HeatMaps() */
 HRESULT wuicodi_composition_debug_settings_get__heat_maps(WUICODI_CompositionDebugSettings *self, WUICODI_CompositionDebugHeatMaps** value);
 
-/* Windows.UI.Composition.Diagnostics.CompositionDebugSettings.TryGetSettings(compositor) */
 HRESULT wuicodi_composition_debug_settings_try_get_settings(WUC_Comp* compositor, WUICODI_CompositionDebugSettings** out);
 
-/* Windows.UI.Composition.Diagnostics.ICompositionDebugSettingsStatics */
-/* Windows.UI.Composition.Diagnostics.ICompositionDebugSettingsStatics.TryGetSettings(compositor) */
 HRESULT wuicodi_composition_debug_settings_statics_try_get_settings(WUICODI_ICompositionDebugSettingsStatics *self, WUC_Comp* compositor, WUICODI_CompositionDebugSettings** out);
 
-/* Windows.UI.Composition.Diagnostics.ICompositionDebugHeatMaps */
-/* Windows.UI.Composition.Diagnostics.ICompositionDebugSettings */
 #endif /* CWINRT_WINDOWS_UI_COMPOSITION_DIAGNOSTICS_H */

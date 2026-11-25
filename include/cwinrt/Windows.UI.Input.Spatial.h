@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Foundation.Numerics.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WPESP_SpatialCoordinateSystem
 #define CWINRT_FWD_WPESP_SpatialCoordinateSystem
 typedef struct WPESP_SpatialCoordinateSystem WPESP_SpatialCoordinateSystem;
@@ -51,7 +50,6 @@ typedef struct WPEPE_HeadPose WPEPE_HeadPose;
 typedef struct WPEPE_EyesPose WPEPE_EyesPose;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUIINSP_ISpatialInteractionManagerStatics WUIINSP_ISpatialInteractionManagerStatics;
 typedef struct WUIINSP_ISpatialInteractionManagerStatics_2 WUIINSP_ISpatialInteractionManagerStatics_2;
 typedef struct WUIINSP_ISpatialPointerPoseStatics WUIINSP_ISpatialPointerPoseStatics;
@@ -127,7 +125,6 @@ typedef struct WUIINSP_ISpatialInteractionSource WUIINSP_ISpatialInteractionSour
 typedef struct WUIINSP_ISpatialInteractionSourceState WUIINSP_ISpatialInteractionSourceState;
 typedef struct WUIINSP_ISpatialInteractionController WUIINSP_ISpatialInteractionController;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WPESP_SpatialCoordinateSystem
 #define CWINRT_FWD_WPESP_SpatialCoordinateSystem
 typedef struct WPESP_SpatialCoordinateSystem WPESP_SpatialCoordinateSystem;
@@ -301,7 +298,6 @@ typedef enum WUIINSP_SpatialInteractionSourcePositionAccuracy {
 } WUIINSP_SpatialInteractionSourcePositionAccuracy;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -490,37 +486,22 @@ static const IID CWINRT_IID_WUIINSP_ISpatialInteractionSourceState CWINRT_MAYBE_
 static const IID CWINRT_IID_WUIINSP_ISpatialInteractionController CWINRT_MAYBE_UNUSED = { 0x5F0E5BA3, 0x0954, 0x4E97, { 0x86, 0xC5, 0xE7, 0xF3, 0x0B, 0x11, 0x4D, 0xFD } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.Input.Spatial.ISpatialInteractionManagerStatics */
-/* Windows.UI.Input.Spatial.ISpatialInteractionManagerStatics.GetForCurrentView() */
 HRESULT wuiinsp_spatial_interaction_manager_statics_get_for_current_view(WUIINSP_ISpatialInteractionManagerStatics *self, WUIINSP_SpatialInteractionManager** out);
 
-/* Windows.UI.Input.Spatial.ISpatialInteractionManagerStatics2 */
-/* Windows.UI.Input.Spatial.ISpatialInteractionManagerStatics2.IsSourceKindSupported(kind) */
 HRESULT wuiinsp_spatial_interaction_manager_statics_2_is_source_kind_supported(WUIINSP_ISpatialInteractionManagerStatics_2 *self, WUIINSP_SpatialInteractionSourceKind kind, BOOL *out);
 
-/* Windows.UI.Input.Spatial.ISpatialPointerPoseStatics */
-/* Windows.UI.Input.Spatial.ISpatialPointerPoseStatics.TryGetAtTimestamp(coordinateSystem, timestamp) */
 HRESULT wuiinsp_spatial_pointer_pose_statics_try_get_at_timestamp(WUIINSP_ISpatialPointerPoseStatics *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WPE_PerceptionTimestamp* timestamp, WUIINSP_SpatialPointerPose** out);
 
-/* activate Windows.UI.Input.Spatial.SpatialGestureRecognizer */
 HRESULT wuiinsp_spatial_gesture_recognizer_new(WUIINSP_SpatialGestureRecognizer **out);
 
-/* Windows.UI.Input.Spatial.SpatialGestureRecognizer */
-/* Windows.UI.Input.Spatial.SpatialGestureRecognizer.CaptureInteraction(interaction) */
 HRESULT wuiinsp_spatial_gesture_recognizer_capture_interaction(WUIINSP_SpatialGestureRecognizer *self, WUIINSP_SpatialInteraction* interaction);
 
-/* Windows.UI.Input.Spatial.SpatialGestureRecognizer.CancelPendingGestures() */
 HRESULT wuiinsp_spatial_gesture_recognizer_cancel_pending_gestures(WUIINSP_SpatialGestureRecognizer *self);
 
-/* Windows.UI.Input.Spatial.SpatialGestureRecognizer.TrySetGestureSettings(settings) */
 HRESULT wuiinsp_spatial_gesture_recognizer_try_set_gesture_settings(WUIINSP_SpatialGestureRecognizer *self, WUIINSP_SpatialGestureSettings settings, BOOL *out);
 
-/* Windows.UI.Input.Spatial.SpatialGestureRecognizer.get_GestureSettings() */
 HRESULT wuiinsp_spatial_gesture_recognizer_get__gesture_settings(WUIINSP_SpatialGestureRecognizer *self, WUIINSP_SpatialGestureSettings *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiinsp_spatial_gesture_recognizer_on_recognition_started(WUIINSP_SpatialGestureRecognizer *self, cwinrt_event_fn fn, void *ctx);
@@ -565,92 +546,58 @@ void wuiinsp_spatial_gesture_recognizer_off_navigation_completed(WUIINSP_Spatial
 cwinrt_token wuiinsp_spatial_gesture_recognizer_on_navigation_canceled(WUIINSP_SpatialGestureRecognizer *self, cwinrt_event_fn fn, void *ctx);
 void wuiinsp_spatial_gesture_recognizer_off_navigation_canceled(WUIINSP_SpatialGestureRecognizer *self, cwinrt_token token);
 
-/* activate Windows.UI.Input.Spatial.SpatialHoldCanceledEventArgs */
 HRESULT wuiinsp_spatial_hold_canceled_event_args_new(WUIINSP_SpatialHoldCanceledEventArgs **out);
 
-/* Windows.UI.Input.Spatial.SpatialHoldCanceledEventArgs */
-/* Windows.UI.Input.Spatial.SpatialHoldCanceledEventArgs.get_InteractionSourceKind() */
 HRESULT wuiinsp_spatial_hold_canceled_event_args_get__interaction_source_kind(WUIINSP_SpatialHoldCanceledEventArgs *self, WUIINSP_SpatialInteractionSourceKind *value);
 
-/* activate Windows.UI.Input.Spatial.SpatialHoldCompletedEventArgs */
 HRESULT wuiinsp_spatial_hold_completed_event_args_new(WUIINSP_SpatialHoldCompletedEventArgs **out);
 
-/* Windows.UI.Input.Spatial.SpatialHoldCompletedEventArgs */
-/* Windows.UI.Input.Spatial.SpatialHoldCompletedEventArgs.get_InteractionSourceKind() */
 HRESULT wuiinsp_spatial_hold_completed_event_args_get__interaction_source_kind(WUIINSP_SpatialHoldCompletedEventArgs *self, WUIINSP_SpatialInteractionSourceKind *value);
 
-/* activate Windows.UI.Input.Spatial.SpatialHoldStartedEventArgs */
 HRESULT wuiinsp_spatial_hold_started_event_args_new(WUIINSP_SpatialHoldStartedEventArgs **out);
 
-/* Windows.UI.Input.Spatial.SpatialHoldStartedEventArgs */
-/* Windows.UI.Input.Spatial.SpatialHoldStartedEventArgs.get_InteractionSourceKind() */
 HRESULT wuiinsp_spatial_hold_started_event_args_get__interaction_source_kind(WUIINSP_SpatialHoldStartedEventArgs *self, WUIINSP_SpatialInteractionSourceKind *value);
 
-/* Windows.UI.Input.Spatial.SpatialHoldStartedEventArgs.TryGetPointerPose(coordinateSystem) */
 HRESULT wuiinsp_spatial_hold_started_event_args_try_get_pointer_pose(WUIINSP_SpatialHoldStartedEventArgs *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WUIINSP_SpatialPointerPose** out);
 
-/* activate Windows.UI.Input.Spatial.SpatialInteraction */
 HRESULT wuiinsp_spatial_interaction_new(WUIINSP_SpatialInteraction **out);
 
-/* Windows.UI.Input.Spatial.SpatialInteraction */
-/* Windows.UI.Input.Spatial.SpatialInteraction.get_SourceState() */
 HRESULT wuiinsp_spatial_interaction_get__source_state(WUIINSP_SpatialInteraction *self, WUIINSP_SpatialInteractionSourceState** value);
 
-/* activate Windows.UI.Input.Spatial.SpatialInteractionControllerProperties */
 HRESULT wuiinsp_spatial_interaction_controller_properties_new(WUIINSP_SpatialInteractionControllerProperties **out);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionControllerProperties */
-/* Windows.UI.Input.Spatial.SpatialInteractionControllerProperties.get_IsTouchpadTouched() */
 HRESULT wuiinsp_spatial_interaction_controller_properties_get__is_touchpad_touched(WUIINSP_SpatialInteractionControllerProperties *self, BOOL *value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionControllerProperties.get_IsTouchpadPressed() */
 HRESULT wuiinsp_spatial_interaction_controller_properties_get__is_touchpad_pressed(WUIINSP_SpatialInteractionControllerProperties *self, BOOL *value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionControllerProperties.get_IsThumbstickPressed() */
 HRESULT wuiinsp_spatial_interaction_controller_properties_get__is_thumbstick_pressed(WUIINSP_SpatialInteractionControllerProperties *self, BOOL *value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionControllerProperties.get_ThumbstickX() */
 HRESULT wuiinsp_spatial_interaction_controller_properties_get__thumbstick_x(WUIINSP_SpatialInteractionControllerProperties *self, double *value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionControllerProperties.get_ThumbstickY() */
 HRESULT wuiinsp_spatial_interaction_controller_properties_get__thumbstick_y(WUIINSP_SpatialInteractionControllerProperties *self, double *value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionControllerProperties.get_TouchpadX() */
 HRESULT wuiinsp_spatial_interaction_controller_properties_get__touchpad_x(WUIINSP_SpatialInteractionControllerProperties *self, double *value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionControllerProperties.get_TouchpadY() */
 HRESULT wuiinsp_spatial_interaction_controller_properties_get__touchpad_y(WUIINSP_SpatialInteractionControllerProperties *self, double *value);
 
-/* activate Windows.UI.Input.Spatial.SpatialInteractionDetectedEventArgs */
 HRESULT wuiinsp_spatial_interaction_detected_event_args_new(WUIINSP_SpatialInteractionDetectedEventArgs **out);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionDetectedEventArgs */
-/* Windows.UI.Input.Spatial.SpatialInteractionDetectedEventArgs.get_InteractionSourceKind() */
 HRESULT wuiinsp_spatial_interaction_detected_event_args_get__interaction_source_kind(WUIINSP_SpatialInteractionDetectedEventArgs *self, WUIINSP_SpatialInteractionSourceKind *value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionDetectedEventArgs.TryGetPointerPose(coordinateSystem) */
 HRESULT wuiinsp_spatial_interaction_detected_event_args_try_get_pointer_pose(WUIINSP_SpatialInteractionDetectedEventArgs *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WUIINSP_SpatialPointerPose** out);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionDetectedEventArgs.get_Interaction() */
 HRESULT wuiinsp_spatial_interaction_detected_event_args_get__interaction(WUIINSP_SpatialInteractionDetectedEventArgs *self, WUIINSP_SpatialInteraction** value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionDetectedEventArgs.get_InteractionSource() */
 HRESULT wuiinsp_spatial_interaction_detected_event_args_get__interaction_source(WUIINSP_SpatialInteractionDetectedEventArgs *self, WUIINSP_SpatialInteractionSource** value);
 
-/* activate Windows.UI.Input.Spatial.SpatialInteractionManager */
 HRESULT wuiinsp_spatial_interaction_manager_new(WUIINSP_SpatialInteractionManager **out);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionManager */
-/* Windows.UI.Input.Spatial.SpatialInteractionManager.GetDetectedSourcesAtTimestamp(timeStamp) */
 HRESULT wuiinsp_spatial_interaction_manager_get_detected_sources_at_timestamp(WUIINSP_SpatialInteractionManager *self, WPE_PerceptionTimestamp* timeStamp, WFOCO_IVectorView_WUIINSP_SpatialInteractionSourceState** out);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionManager.IsSourceKindSupported(kind) */
 HRESULT wuiinsp_spatial_interaction_manager_is_source_kind_supported(WUIINSP_SpatialInteractionSourceKind kind, BOOL *out);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionManager.GetForCurrentView() */
 HRESULT wuiinsp_spatial_interaction_manager_get_for_current_view(WUIINSP_SpatialInteractionManager** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiinsp_spatial_interaction_manager_on_source_detected(WUIINSP_SpatialInteractionManager *self, cwinrt_event_fn fn, void *ctx);
@@ -671,439 +618,252 @@ void wuiinsp_spatial_interaction_manager_off_source_released(WUIINSP_SpatialInte
 cwinrt_token wuiinsp_spatial_interaction_manager_on_interaction_detected(WUIINSP_SpatialInteractionManager *self, cwinrt_event_fn fn, void *ctx);
 void wuiinsp_spatial_interaction_manager_off_interaction_detected(WUIINSP_SpatialInteractionManager *self, cwinrt_token token);
 
-/* activate Windows.UI.Input.Spatial.SpatialInteractionSource */
 HRESULT wuiinsp_spatial_interaction_source_new(WUIINSP_SpatialInteractionSource **out);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSource */
-/* Windows.UI.Input.Spatial.SpatialInteractionSource.get_Id() */
 HRESULT wuiinsp_spatial_interaction_source_get__id(WUIINSP_SpatialInteractionSource *self, uint32_t *value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSource.get_Kind() */
 HRESULT wuiinsp_spatial_interaction_source_get__kind(WUIINSP_SpatialInteractionSource *self, WUIINSP_SpatialInteractionSourceKind *value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSource.get_IsPointingSupported() */
 HRESULT wuiinsp_spatial_interaction_source_get__is_pointing_supported(WUIINSP_SpatialInteractionSource *self, BOOL *value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSource.get_IsMenuSupported() */
 HRESULT wuiinsp_spatial_interaction_source_get__is_menu_supported(WUIINSP_SpatialInteractionSource *self, BOOL *value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSource.get_IsGraspSupported() */
 HRESULT wuiinsp_spatial_interaction_source_get__is_grasp_supported(WUIINSP_SpatialInteractionSource *self, BOOL *value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSource.get_Controller() */
 HRESULT wuiinsp_spatial_interaction_source_get__controller(WUIINSP_SpatialInteractionSource *self, WUIINSP_SpatialInteractionController** value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSource.TryGetStateAtTimestamp(timestamp) */
 HRESULT wuiinsp_spatial_interaction_source_try_get_state_at_timestamp(WUIINSP_SpatialInteractionSource *self, WPE_PerceptionTimestamp* timestamp, WUIINSP_SpatialInteractionSourceState** out);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSource.get_Handedness() */
 HRESULT wuiinsp_spatial_interaction_source_get__handedness(WUIINSP_SpatialInteractionSource *self, WUIINSP_SpatialInteractionSourceHandedness *value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSource.TryCreateHandMeshObserver() */
 HRESULT wuiinsp_spatial_interaction_source_try_create_hand_mesh_observer(WUIINSP_SpatialInteractionSource *self, WPEPE_HandMeshObserver** out);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSource.TryCreateHandMeshObserverAsync() */
 HRESULT wuiinsp_spatial_interaction_source_try_create_hand_mesh_observer_async(WUIINSP_SpatialInteractionSource *self, WF_IAsyncOperation_WPEPE_HandMeshObserver** out);
 
-/* activate Windows.UI.Input.Spatial.SpatialInteractionSourceEventArgs */
 HRESULT wuiinsp_spatial_interaction_source_event_args_new(WUIINSP_SpatialInteractionSourceEventArgs **out);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSourceEventArgs */
-/* Windows.UI.Input.Spatial.SpatialInteractionSourceEventArgs.get_State() */
 HRESULT wuiinsp_spatial_interaction_source_event_args_get__state(WUIINSP_SpatialInteractionSourceEventArgs *self, WUIINSP_SpatialInteractionSourceState** value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSourceEventArgs.get_PressKind() */
 HRESULT wuiinsp_spatial_interaction_source_event_args_get__press_kind(WUIINSP_SpatialInteractionSourceEventArgs *self, WUIINSP_SpatialInteractionPressKind *value);
 
-/* activate Windows.UI.Input.Spatial.SpatialInteractionSourceLocation */
 HRESULT wuiinsp_spatial_interaction_source_location_new(WUIINSP_SpatialInteractionSourceLocation **out);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSourceLocation */
-/* Windows.UI.Input.Spatial.SpatialInteractionSourceLocation.get_Position() */
 HRESULT wuiinsp_spatial_interaction_source_location_get__position(WUIINSP_SpatialInteractionSourceLocation *self, WFN_Vector_3** value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSourceLocation.get_Velocity() */
 HRESULT wuiinsp_spatial_interaction_source_location_get__velocity(WUIINSP_SpatialInteractionSourceLocation *self, WFN_Vector_3** value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSourceLocation.get_Orientation() */
 HRESULT wuiinsp_spatial_interaction_source_location_get__orientation(WUIINSP_SpatialInteractionSourceLocation *self, WFN_Quaternion** value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSourceLocation.get_PositionAccuracy() */
 HRESULT wuiinsp_spatial_interaction_source_location_get__position_accuracy(WUIINSP_SpatialInteractionSourceLocation *self, WUIINSP_SpatialInteractionSourcePositionAccuracy *value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSourceLocation.get_AngularVelocity() */
 HRESULT wuiinsp_spatial_interaction_source_location_get__angular_velocity(WUIINSP_SpatialInteractionSourceLocation *self, WFN_Vector_3** value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSourceLocation.get_SourcePointerPose() */
 HRESULT wuiinsp_spatial_interaction_source_location_get__source_pointer_pose(WUIINSP_SpatialInteractionSourceLocation *self, WUIINSP_SpatialPointerInteractionSourcePose** value);
 
-/* activate Windows.UI.Input.Spatial.SpatialInteractionSourceProperties */
 HRESULT wuiinsp_spatial_interaction_source_properties_new(WUIINSP_SpatialInteractionSourceProperties **out);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSourceProperties */
-/* Windows.UI.Input.Spatial.SpatialInteractionSourceProperties.TryGetSourceLossMitigationDirection(coordinateSystem) */
 HRESULT wuiinsp_spatial_interaction_source_properties_try_get_source_loss_mitigation_direction(WUIINSP_SpatialInteractionSourceProperties *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WFN_Vector_3** out);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSourceProperties.get_SourceLossRisk() */
 HRESULT wuiinsp_spatial_interaction_source_properties_get__source_loss_risk(WUIINSP_SpatialInteractionSourceProperties *self, double *value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSourceProperties.TryGetLocation(coordinateSystem) */
 HRESULT wuiinsp_spatial_interaction_source_properties_try_get_location(WUIINSP_SpatialInteractionSourceProperties *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WUIINSP_SpatialInteractionSourceLocation** out);
 
-/* activate Windows.UI.Input.Spatial.SpatialInteractionSourceState */
 HRESULT wuiinsp_spatial_interaction_source_state_new(WUIINSP_SpatialInteractionSourceState **out);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSourceState */
-/* Windows.UI.Input.Spatial.SpatialInteractionSourceState.get_Source() */
 HRESULT wuiinsp_spatial_interaction_source_state_get__source(WUIINSP_SpatialInteractionSourceState *self, WUIINSP_SpatialInteractionSource** value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSourceState.get_Properties() */
 HRESULT wuiinsp_spatial_interaction_source_state_get__properties(WUIINSP_SpatialInteractionSourceState *self, WUIINSP_SpatialInteractionSourceProperties** value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSourceState.get_IsPressed() */
 HRESULT wuiinsp_spatial_interaction_source_state_get__is_pressed(WUIINSP_SpatialInteractionSourceState *self, BOOL *value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSourceState.get_Timestamp() */
 HRESULT wuiinsp_spatial_interaction_source_state_get__timestamp(WUIINSP_SpatialInteractionSourceState *self, WPE_PerceptionTimestamp** value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSourceState.TryGetPointerPose(coordinateSystem) */
 HRESULT wuiinsp_spatial_interaction_source_state_try_get_pointer_pose(WUIINSP_SpatialInteractionSourceState *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WUIINSP_SpatialPointerPose** out);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSourceState.get_IsSelectPressed() */
 HRESULT wuiinsp_spatial_interaction_source_state_get__is_select_pressed(WUIINSP_SpatialInteractionSourceState *self, BOOL *value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSourceState.get_IsMenuPressed() */
 HRESULT wuiinsp_spatial_interaction_source_state_get__is_menu_pressed(WUIINSP_SpatialInteractionSourceState *self, BOOL *value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSourceState.get_IsGrasped() */
 HRESULT wuiinsp_spatial_interaction_source_state_get__is_grasped(WUIINSP_SpatialInteractionSourceState *self, BOOL *value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSourceState.get_SelectPressedValue() */
 HRESULT wuiinsp_spatial_interaction_source_state_get__select_pressed_value(WUIINSP_SpatialInteractionSourceState *self, double *value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSourceState.get_ControllerProperties() */
 HRESULT wuiinsp_spatial_interaction_source_state_get__controller_properties(WUIINSP_SpatialInteractionSourceState *self, WUIINSP_SpatialInteractionControllerProperties** value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionSourceState.TryGetHandPose() */
 HRESULT wuiinsp_spatial_interaction_source_state_try_get_hand_pose(WUIINSP_SpatialInteractionSourceState *self, WPEPE_HandPose** out);
 
-/* activate Windows.UI.Input.Spatial.SpatialManipulationCanceledEventArgs */
 HRESULT wuiinsp_spatial_manipulation_canceled_event_args_new(WUIINSP_SpatialManipulationCanceledEventArgs **out);
 
-/* Windows.UI.Input.Spatial.SpatialManipulationCanceledEventArgs */
-/* Windows.UI.Input.Spatial.SpatialManipulationCanceledEventArgs.get_InteractionSourceKind() */
 HRESULT wuiinsp_spatial_manipulation_canceled_event_args_get__interaction_source_kind(WUIINSP_SpatialManipulationCanceledEventArgs *self, WUIINSP_SpatialInteractionSourceKind *value);
 
-/* activate Windows.UI.Input.Spatial.SpatialManipulationCompletedEventArgs */
 HRESULT wuiinsp_spatial_manipulation_completed_event_args_new(WUIINSP_SpatialManipulationCompletedEventArgs **out);
 
-/* Windows.UI.Input.Spatial.SpatialManipulationCompletedEventArgs */
-/* Windows.UI.Input.Spatial.SpatialManipulationCompletedEventArgs.get_InteractionSourceKind() */
 HRESULT wuiinsp_spatial_manipulation_completed_event_args_get__interaction_source_kind(WUIINSP_SpatialManipulationCompletedEventArgs *self, WUIINSP_SpatialInteractionSourceKind *value);
 
-/* Windows.UI.Input.Spatial.SpatialManipulationCompletedEventArgs.TryGetCumulativeDelta(coordinateSystem) */
 HRESULT wuiinsp_spatial_manipulation_completed_event_args_try_get_cumulative_delta(WUIINSP_SpatialManipulationCompletedEventArgs *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WUIINSP_SpatialManipulationDelta** out);
 
-/* activate Windows.UI.Input.Spatial.SpatialManipulationDelta */
 HRESULT wuiinsp_spatial_manipulation_delta_new(WUIINSP_SpatialManipulationDelta **out);
 
-/* Windows.UI.Input.Spatial.SpatialManipulationDelta */
-/* Windows.UI.Input.Spatial.SpatialManipulationDelta.get_Translation() */
 HRESULT wuiinsp_spatial_manipulation_delta_get__translation(WUIINSP_SpatialManipulationDelta *self, WFN_Vector_3 *value);
 
-/* activate Windows.UI.Input.Spatial.SpatialManipulationStartedEventArgs */
 HRESULT wuiinsp_spatial_manipulation_started_event_args_new(WUIINSP_SpatialManipulationStartedEventArgs **out);
 
-/* Windows.UI.Input.Spatial.SpatialManipulationStartedEventArgs */
-/* Windows.UI.Input.Spatial.SpatialManipulationStartedEventArgs.get_InteractionSourceKind() */
 HRESULT wuiinsp_spatial_manipulation_started_event_args_get__interaction_source_kind(WUIINSP_SpatialManipulationStartedEventArgs *self, WUIINSP_SpatialInteractionSourceKind *value);
 
-/* Windows.UI.Input.Spatial.SpatialManipulationStartedEventArgs.TryGetPointerPose(coordinateSystem) */
 HRESULT wuiinsp_spatial_manipulation_started_event_args_try_get_pointer_pose(WUIINSP_SpatialManipulationStartedEventArgs *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WUIINSP_SpatialPointerPose** out);
 
-/* activate Windows.UI.Input.Spatial.SpatialManipulationUpdatedEventArgs */
 HRESULT wuiinsp_spatial_manipulation_updated_event_args_new(WUIINSP_SpatialManipulationUpdatedEventArgs **out);
 
-/* Windows.UI.Input.Spatial.SpatialManipulationUpdatedEventArgs */
-/* Windows.UI.Input.Spatial.SpatialManipulationUpdatedEventArgs.get_InteractionSourceKind() */
 HRESULT wuiinsp_spatial_manipulation_updated_event_args_get__interaction_source_kind(WUIINSP_SpatialManipulationUpdatedEventArgs *self, WUIINSP_SpatialInteractionSourceKind *value);
 
-/* Windows.UI.Input.Spatial.SpatialManipulationUpdatedEventArgs.TryGetCumulativeDelta(coordinateSystem) */
 HRESULT wuiinsp_spatial_manipulation_updated_event_args_try_get_cumulative_delta(WUIINSP_SpatialManipulationUpdatedEventArgs *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WUIINSP_SpatialManipulationDelta** out);
 
-/* activate Windows.UI.Input.Spatial.SpatialNavigationCanceledEventArgs */
 HRESULT wuiinsp_spatial_navigation_canceled_event_args_new(WUIINSP_SpatialNavigationCanceledEventArgs **out);
 
-/* Windows.UI.Input.Spatial.SpatialNavigationCanceledEventArgs */
-/* Windows.UI.Input.Spatial.SpatialNavigationCanceledEventArgs.get_InteractionSourceKind() */
 HRESULT wuiinsp_spatial_navigation_canceled_event_args_get__interaction_source_kind(WUIINSP_SpatialNavigationCanceledEventArgs *self, WUIINSP_SpatialInteractionSourceKind *value);
 
-/* activate Windows.UI.Input.Spatial.SpatialNavigationCompletedEventArgs */
 HRESULT wuiinsp_spatial_navigation_completed_event_args_new(WUIINSP_SpatialNavigationCompletedEventArgs **out);
 
-/* Windows.UI.Input.Spatial.SpatialNavigationCompletedEventArgs */
-/* Windows.UI.Input.Spatial.SpatialNavigationCompletedEventArgs.get_InteractionSourceKind() */
 HRESULT wuiinsp_spatial_navigation_completed_event_args_get__interaction_source_kind(WUIINSP_SpatialNavigationCompletedEventArgs *self, WUIINSP_SpatialInteractionSourceKind *value);
 
-/* Windows.UI.Input.Spatial.SpatialNavigationCompletedEventArgs.get_NormalizedOffset() */
 HRESULT wuiinsp_spatial_navigation_completed_event_args_get__normalized_offset(WUIINSP_SpatialNavigationCompletedEventArgs *self, WFN_Vector_3 *value);
 
-/* activate Windows.UI.Input.Spatial.SpatialNavigationStartedEventArgs */
 HRESULT wuiinsp_spatial_navigation_started_event_args_new(WUIINSP_SpatialNavigationStartedEventArgs **out);
 
-/* Windows.UI.Input.Spatial.SpatialNavigationStartedEventArgs */
-/* Windows.UI.Input.Spatial.SpatialNavigationStartedEventArgs.get_InteractionSourceKind() */
 HRESULT wuiinsp_spatial_navigation_started_event_args_get__interaction_source_kind(WUIINSP_SpatialNavigationStartedEventArgs *self, WUIINSP_SpatialInteractionSourceKind *value);
 
-/* Windows.UI.Input.Spatial.SpatialNavigationStartedEventArgs.TryGetPointerPose(coordinateSystem) */
 HRESULT wuiinsp_spatial_navigation_started_event_args_try_get_pointer_pose(WUIINSP_SpatialNavigationStartedEventArgs *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WUIINSP_SpatialPointerPose** out);
 
-/* Windows.UI.Input.Spatial.SpatialNavigationStartedEventArgs.get_IsNavigatingX() */
 HRESULT wuiinsp_spatial_navigation_started_event_args_get__is_navigating_x(WUIINSP_SpatialNavigationStartedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Input.Spatial.SpatialNavigationStartedEventArgs.get_IsNavigatingY() */
 HRESULT wuiinsp_spatial_navigation_started_event_args_get__is_navigating_y(WUIINSP_SpatialNavigationStartedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Input.Spatial.SpatialNavigationStartedEventArgs.get_IsNavigatingZ() */
 HRESULT wuiinsp_spatial_navigation_started_event_args_get__is_navigating_z(WUIINSP_SpatialNavigationStartedEventArgs *self, BOOL *value);
 
-/* activate Windows.UI.Input.Spatial.SpatialNavigationUpdatedEventArgs */
 HRESULT wuiinsp_spatial_navigation_updated_event_args_new(WUIINSP_SpatialNavigationUpdatedEventArgs **out);
 
-/* Windows.UI.Input.Spatial.SpatialNavigationUpdatedEventArgs */
-/* Windows.UI.Input.Spatial.SpatialNavigationUpdatedEventArgs.get_InteractionSourceKind() */
 HRESULT wuiinsp_spatial_navigation_updated_event_args_get__interaction_source_kind(WUIINSP_SpatialNavigationUpdatedEventArgs *self, WUIINSP_SpatialInteractionSourceKind *value);
 
-/* Windows.UI.Input.Spatial.SpatialNavigationUpdatedEventArgs.get_NormalizedOffset() */
 HRESULT wuiinsp_spatial_navigation_updated_event_args_get__normalized_offset(WUIINSP_SpatialNavigationUpdatedEventArgs *self, WFN_Vector_3 *value);
 
-/* activate Windows.UI.Input.Spatial.SpatialPointerInteractionSourcePose */
 HRESULT wuiinsp_spatial_pointer_interaction_source_pose_new(WUIINSP_SpatialPointerInteractionSourcePose **out);
 
-/* Windows.UI.Input.Spatial.SpatialPointerInteractionSourcePose */
-/* Windows.UI.Input.Spatial.SpatialPointerInteractionSourcePose.get_Position() */
 HRESULT wuiinsp_spatial_pointer_interaction_source_pose_get__position(WUIINSP_SpatialPointerInteractionSourcePose *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Input.Spatial.SpatialPointerInteractionSourcePose.get_ForwardDirection() */
 HRESULT wuiinsp_spatial_pointer_interaction_source_pose_get__forward_direction(WUIINSP_SpatialPointerInteractionSourcePose *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Input.Spatial.SpatialPointerInteractionSourcePose.get_UpDirection() */
 HRESULT wuiinsp_spatial_pointer_interaction_source_pose_get__up_direction(WUIINSP_SpatialPointerInteractionSourcePose *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Input.Spatial.SpatialPointerInteractionSourcePose.get_Orientation() */
 HRESULT wuiinsp_spatial_pointer_interaction_source_pose_get__orientation(WUIINSP_SpatialPointerInteractionSourcePose *self, WFN_Quaternion *value);
 
-/* Windows.UI.Input.Spatial.SpatialPointerInteractionSourcePose.get_PositionAccuracy() */
 HRESULT wuiinsp_spatial_pointer_interaction_source_pose_get__position_accuracy(WUIINSP_SpatialPointerInteractionSourcePose *self, WUIINSP_SpatialInteractionSourcePositionAccuracy *value);
 
-/* activate Windows.UI.Input.Spatial.SpatialPointerPose */
 HRESULT wuiinsp_spatial_pointer_pose_new(WUIINSP_SpatialPointerPose **out);
 
-/* Windows.UI.Input.Spatial.SpatialPointerPose */
-/* Windows.UI.Input.Spatial.SpatialPointerPose.get_Timestamp() */
 HRESULT wuiinsp_spatial_pointer_pose_get__timestamp(WUIINSP_SpatialPointerPose *self, WPE_PerceptionTimestamp** value);
 
-/* Windows.UI.Input.Spatial.SpatialPointerPose.get_Head() */
 HRESULT wuiinsp_spatial_pointer_pose_get__head(WUIINSP_SpatialPointerPose *self, WPEPE_HeadPose** value);
 
-/* Windows.UI.Input.Spatial.SpatialPointerPose.TryGetInteractionSourcePose(source) */
 HRESULT wuiinsp_spatial_pointer_pose_try_get_interaction_source_pose(WUIINSP_SpatialPointerPose *self, WUIINSP_SpatialInteractionSource* source, WUIINSP_SpatialPointerInteractionSourcePose** out);
 
-/* Windows.UI.Input.Spatial.SpatialPointerPose.get_Eyes() */
 HRESULT wuiinsp_spatial_pointer_pose_get__eyes(WUIINSP_SpatialPointerPose *self, WPEPE_EyesPose** value);
 
-/* Windows.UI.Input.Spatial.SpatialPointerPose.get_IsHeadCapturedBySystem() */
 HRESULT wuiinsp_spatial_pointer_pose_get__is_head_captured_by_system(WUIINSP_SpatialPointerPose *self, BOOL *value);
 
-/* Windows.UI.Input.Spatial.SpatialPointerPose.TryGetAtTimestamp(coordinateSystem, timestamp) */
 HRESULT wuiinsp_spatial_pointer_pose_try_get_at_timestamp(WPESP_SpatialCoordinateSystem* coordinateSystem, WPE_PerceptionTimestamp* timestamp, WUIINSP_SpatialPointerPose** out);
 
-/* activate Windows.UI.Input.Spatial.SpatialRecognitionEndedEventArgs */
 HRESULT wuiinsp_spatial_recognition_ended_event_args_new(WUIINSP_SpatialRecognitionEndedEventArgs **out);
 
-/* Windows.UI.Input.Spatial.SpatialRecognitionEndedEventArgs */
-/* Windows.UI.Input.Spatial.SpatialRecognitionEndedEventArgs.get_InteractionSourceKind() */
 HRESULT wuiinsp_spatial_recognition_ended_event_args_get__interaction_source_kind(WUIINSP_SpatialRecognitionEndedEventArgs *self, WUIINSP_SpatialInteractionSourceKind *value);
 
-/* activate Windows.UI.Input.Spatial.SpatialRecognitionStartedEventArgs */
 HRESULT wuiinsp_spatial_recognition_started_event_args_new(WUIINSP_SpatialRecognitionStartedEventArgs **out);
 
-/* Windows.UI.Input.Spatial.SpatialRecognitionStartedEventArgs */
-/* Windows.UI.Input.Spatial.SpatialRecognitionStartedEventArgs.get_InteractionSourceKind() */
 HRESULT wuiinsp_spatial_recognition_started_event_args_get__interaction_source_kind(WUIINSP_SpatialRecognitionStartedEventArgs *self, WUIINSP_SpatialInteractionSourceKind *value);
 
-/* Windows.UI.Input.Spatial.SpatialRecognitionStartedEventArgs.TryGetPointerPose(coordinateSystem) */
 HRESULT wuiinsp_spatial_recognition_started_event_args_try_get_pointer_pose(WUIINSP_SpatialRecognitionStartedEventArgs *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WUIINSP_SpatialPointerPose** out);
 
-/* Windows.UI.Input.Spatial.SpatialRecognitionStartedEventArgs.IsGesturePossible(gesture) */
 HRESULT wuiinsp_spatial_recognition_started_event_args_is_gesture_possible(WUIINSP_SpatialRecognitionStartedEventArgs *self, WUIINSP_SpatialGestureSettings gesture, BOOL *out);
 
-/* activate Windows.UI.Input.Spatial.SpatialTappedEventArgs */
 HRESULT wuiinsp_spatial_tapped_event_args_new(WUIINSP_SpatialTappedEventArgs **out);
 
-/* Windows.UI.Input.Spatial.SpatialTappedEventArgs */
-/* Windows.UI.Input.Spatial.SpatialTappedEventArgs.get_InteractionSourceKind() */
 HRESULT wuiinsp_spatial_tapped_event_args_get__interaction_source_kind(WUIINSP_SpatialTappedEventArgs *self, WUIINSP_SpatialInteractionSourceKind *value);
 
-/* Windows.UI.Input.Spatial.SpatialTappedEventArgs.TryGetPointerPose(coordinateSystem) */
 HRESULT wuiinsp_spatial_tapped_event_args_try_get_pointer_pose(WUIINSP_SpatialTappedEventArgs *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WUIINSP_SpatialPointerPose** out);
 
-/* Windows.UI.Input.Spatial.SpatialTappedEventArgs.get_TapCount() */
 HRESULT wuiinsp_spatial_tapped_event_args_get__tap_count(WUIINSP_SpatialTappedEventArgs *self, uint32_t *value);
 
-/* Windows.UI.Input.Spatial.ISpatialGestureRecognizerFactory */
-/* Windows.UI.Input.Spatial.ISpatialGestureRecognizerFactory.Create(settings) */
 HRESULT wuiinsp_spatial_gesture_recognizer_factory_create(WUIINSP_ISpatialGestureRecognizerFactory *self, WUIINSP_SpatialGestureSettings settings, WUIINSP_SpatialGestureRecognizer** out);
 
-/* activate Windows.UI.Input.Spatial.SpatialInteractionController */
 HRESULT wuiinsp_spatial_interaction_controller_new(WUIINSP_SpatialInteractionController **out);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionController */
-/* Windows.UI.Input.Spatial.SpatialInteractionController.get_HasTouchpad() */
 HRESULT wuiinsp_spatial_interaction_controller_get__has_touchpad(WUIINSP_SpatialInteractionController *self, BOOL *value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionController.get_HasThumbstick() */
 HRESULT wuiinsp_spatial_interaction_controller_get__has_thumbstick(WUIINSP_SpatialInteractionController *self, BOOL *value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionController.get_SimpleHapticsController() */
 HRESULT wuiinsp_spatial_interaction_controller_get__simple_haptics_controller(WUIINSP_SpatialInteractionController *self, WDEHA_SimpleHapticsController** value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionController.get_VendorId() */
 HRESULT wuiinsp_spatial_interaction_controller_get__vendor_id(WUIINSP_SpatialInteractionController *self, uint16_t *value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionController.get_ProductId() */
 HRESULT wuiinsp_spatial_interaction_controller_get__product_id(WUIINSP_SpatialInteractionController *self, uint16_t *value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionController.get_Version() */
 HRESULT wuiinsp_spatial_interaction_controller_get__version(WUIINSP_SpatialInteractionController *self, uint16_t *value);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionController.TryGetRenderableModelAsync() */
 HRESULT wuiinsp_spatial_interaction_controller_try_get_renderable_model_async(WUIINSP_SpatialInteractionController *self, WF_IAsyncOperation_WSTST_IRandomAccessStreamWithContentType** out);
 
-/* Windows.UI.Input.Spatial.SpatialInteractionController.TryGetBatteryReport() */
 HRESULT wuiinsp_spatial_interaction_controller_try_get_battery_report(WUIINSP_SpatialInteractionController *self, WDEPO_BatteryReport** out);
 
-/* Windows.UI.Input.Spatial.ISpatialGestureRecognizer */
-/* Windows.UI.Input.Spatial.ISpatialHoldCanceledEventArgs */
-/* Windows.UI.Input.Spatial.ISpatialHoldCompletedEventArgs */
-/* Windows.UI.Input.Spatial.ISpatialHoldStartedEventArgs */
-/* Windows.UI.Input.Spatial.ISpatialInteraction */
-/* Windows.UI.Input.Spatial.ISpatialInteractionControllerProperties */
-/* Windows.UI.Input.Spatial.ISpatialInteractionDetectedEventArgs2 */
-/* Windows.UI.Input.Spatial.ISpatialInteractionDetectedEventArgs2.get_InteractionSource() */
 HRESULT wuiinsp_spatial_interaction_detected_event_args_2_get__interaction_source(WUIINSP_ISpatialInteractionDetectedEventArgs_2 *self, WUIINSP_SpatialInteractionSource** value);
 
-/* Windows.UI.Input.Spatial.ISpatialInteractionManager */
-/* Windows.UI.Input.Spatial.ISpatialInteractionSource3 */
-/* Windows.UI.Input.Spatial.ISpatialInteractionSource3.get_Handedness() */
 HRESULT wuiinsp_spatial_interaction_source_3_get__handedness(WUIINSP_ISpatialInteractionSource_3 *self, WUIINSP_SpatialInteractionSourceHandedness *value);
 
-/* Windows.UI.Input.Spatial.ISpatialInteractionSource4 */
-/* Windows.UI.Input.Spatial.ISpatialInteractionSource4.TryCreateHandMeshObserver() */
 HRESULT wuiinsp_spatial_interaction_source_4_try_create_hand_mesh_observer(WUIINSP_ISpatialInteractionSource_4 *self, WPEPE_HandMeshObserver** out);
 
-/* Windows.UI.Input.Spatial.ISpatialInteractionSource4.TryCreateHandMeshObserverAsync() */
 HRESULT wuiinsp_spatial_interaction_source_4_try_create_hand_mesh_observer_async(WUIINSP_ISpatialInteractionSource_4 *self, WF_IAsyncOperation_WPEPE_HandMeshObserver** out);
 
-/* Windows.UI.Input.Spatial.ISpatialInteractionSourceEventArgs2 */
-/* Windows.UI.Input.Spatial.ISpatialInteractionSourceEventArgs2.get_PressKind() */
 HRESULT wuiinsp_spatial_interaction_source_event_args_2_get__press_kind(WUIINSP_ISpatialInteractionSourceEventArgs_2 *self, WUIINSP_SpatialInteractionPressKind *value);
 
-/* Windows.UI.Input.Spatial.ISpatialInteractionSourceLocation */
-/* Windows.UI.Input.Spatial.ISpatialInteractionSourceLocation3 */
-/* Windows.UI.Input.Spatial.ISpatialInteractionSourceLocation3.get_PositionAccuracy() */
 HRESULT wuiinsp_spatial_interaction_source_location_3_get__position_accuracy(WUIINSP_ISpatialInteractionSourceLocation_3 *self, WUIINSP_SpatialInteractionSourcePositionAccuracy *value);
 
-/* Windows.UI.Input.Spatial.ISpatialInteractionSourceLocation3.get_AngularVelocity() */
 HRESULT wuiinsp_spatial_interaction_source_location_3_get__angular_velocity(WUIINSP_ISpatialInteractionSourceLocation_3 *self, WFN_Vector_3** value);
 
-/* Windows.UI.Input.Spatial.ISpatialInteractionSourceLocation3.get_SourcePointerPose() */
 HRESULT wuiinsp_spatial_interaction_source_location_3_get__source_pointer_pose(WUIINSP_ISpatialInteractionSourceLocation_3 *self, WUIINSP_SpatialPointerInteractionSourcePose** value);
 
-/* Windows.UI.Input.Spatial.ISpatialInteractionSourceProperties */
-/* Windows.UI.Input.Spatial.ISpatialInteractionSourceState3 */
-/* Windows.UI.Input.Spatial.ISpatialInteractionSourceState3.TryGetHandPose() */
 HRESULT wuiinsp_spatial_interaction_source_state_3_try_get_hand_pose(WUIINSP_ISpatialInteractionSourceState_3 *self, WPEPE_HandPose** out);
 
-/* Windows.UI.Input.Spatial.ISpatialManipulationCanceledEventArgs */
-/* Windows.UI.Input.Spatial.ISpatialManipulationCompletedEventArgs */
-/* Windows.UI.Input.Spatial.ISpatialManipulationDelta */
-/* Windows.UI.Input.Spatial.ISpatialManipulationStartedEventArgs */
-/* Windows.UI.Input.Spatial.ISpatialManipulationUpdatedEventArgs */
-/* Windows.UI.Input.Spatial.ISpatialNavigationCanceledEventArgs */
-/* Windows.UI.Input.Spatial.ISpatialNavigationCompletedEventArgs */
-/* Windows.UI.Input.Spatial.ISpatialNavigationStartedEventArgs */
-/* Windows.UI.Input.Spatial.ISpatialNavigationUpdatedEventArgs */
-/* Windows.UI.Input.Spatial.ISpatialPointerInteractionSourcePose2 */
-/* Windows.UI.Input.Spatial.ISpatialPointerInteractionSourcePose2.get_Orientation() */
 HRESULT wuiinsp_spatial_pointer_interaction_source_pose_2_get__orientation(WUIINSP_ISpatialPointerInteractionSourcePose_2 *self, WFN_Quaternion *value);
 
-/* Windows.UI.Input.Spatial.ISpatialPointerInteractionSourcePose2.get_PositionAccuracy() */
 HRESULT wuiinsp_spatial_pointer_interaction_source_pose_2_get__position_accuracy(WUIINSP_ISpatialPointerInteractionSourcePose_2 *self, WUIINSP_SpatialInteractionSourcePositionAccuracy *value);
 
-/* Windows.UI.Input.Spatial.ISpatialPointerPose2 */
-/* Windows.UI.Input.Spatial.ISpatialPointerPose2.TryGetInteractionSourcePose(source) */
 HRESULT wuiinsp_spatial_pointer_pose_2_try_get_interaction_source_pose(WUIINSP_ISpatialPointerPose_2 *self, WUIINSP_SpatialInteractionSource* source, WUIINSP_SpatialPointerInteractionSourcePose** out);
 
-/* Windows.UI.Input.Spatial.ISpatialPointerPose3 */
-/* Windows.UI.Input.Spatial.ISpatialPointerPose3.get_Eyes() */
 HRESULT wuiinsp_spatial_pointer_pose_3_get__eyes(WUIINSP_ISpatialPointerPose_3 *self, WPEPE_EyesPose** value);
 
-/* Windows.UI.Input.Spatial.ISpatialPointerPose3.get_IsHeadCapturedBySystem() */
 HRESULT wuiinsp_spatial_pointer_pose_3_get__is_head_captured_by_system(WUIINSP_ISpatialPointerPose_3 *self, BOOL *value);
 
-/* Windows.UI.Input.Spatial.ISpatialRecognitionEndedEventArgs */
-/* Windows.UI.Input.Spatial.ISpatialRecognitionStartedEventArgs */
-/* Windows.UI.Input.Spatial.ISpatialTappedEventArgs */
-/* Windows.UI.Input.Spatial.ISpatialInteractionController3 */
-/* Windows.UI.Input.Spatial.ISpatialInteractionController3.TryGetBatteryReport() */
 HRESULT wuiinsp_spatial_interaction_controller_3_try_get_battery_report(WUIINSP_ISpatialInteractionController_3 *self, WDEPO_BatteryReport** out);
 
-/* Windows.UI.Input.Spatial.ISpatialInteractionDetectedEventArgs */
-/* Windows.UI.Input.Spatial.ISpatialInteractionSource2 */
-/* Windows.UI.Input.Spatial.ISpatialInteractionSource2.get_IsPointingSupported() */
 HRESULT wuiinsp_spatial_interaction_source_2_get__is_pointing_supported(WUIINSP_ISpatialInteractionSource_2 *self, BOOL *value);
 
-/* Windows.UI.Input.Spatial.ISpatialInteractionSource2.get_IsMenuSupported() */
 HRESULT wuiinsp_spatial_interaction_source_2_get__is_menu_supported(WUIINSP_ISpatialInteractionSource_2 *self, BOOL *value);
 
-/* Windows.UI.Input.Spatial.ISpatialInteractionSource2.get_IsGraspSupported() */
 HRESULT wuiinsp_spatial_interaction_source_2_get__is_grasp_supported(WUIINSP_ISpatialInteractionSource_2 *self, BOOL *value);
 
-/* Windows.UI.Input.Spatial.ISpatialInteractionSource2.get_Controller() */
 HRESULT wuiinsp_spatial_interaction_source_2_get__controller(WUIINSP_ISpatialInteractionSource_2 *self, WUIINSP_SpatialInteractionController** value);
 
-/* Windows.UI.Input.Spatial.ISpatialInteractionSource2.TryGetStateAtTimestamp(timestamp) */
 HRESULT wuiinsp_spatial_interaction_source_2_try_get_state_at_timestamp(WUIINSP_ISpatialInteractionSource_2 *self, WPE_PerceptionTimestamp* timestamp, WUIINSP_SpatialInteractionSourceState** out);
 
-/* Windows.UI.Input.Spatial.ISpatialInteractionSourceEventArgs */
-/* Windows.UI.Input.Spatial.ISpatialInteractionSourceLocation2 */
-/* Windows.UI.Input.Spatial.ISpatialInteractionSourceLocation2.get_Orientation() */
 HRESULT wuiinsp_spatial_interaction_source_location_2_get__orientation(WUIINSP_ISpatialInteractionSourceLocation_2 *self, WFN_Quaternion** value);
 
-/* Windows.UI.Input.Spatial.ISpatialInteractionSourceState2 */
-/* Windows.UI.Input.Spatial.ISpatialInteractionSourceState2.get_IsSelectPressed() */
 HRESULT wuiinsp_spatial_interaction_source_state_2_get__is_select_pressed(WUIINSP_ISpatialInteractionSourceState_2 *self, BOOL *value);
 
-/* Windows.UI.Input.Spatial.ISpatialInteractionSourceState2.get_IsMenuPressed() */
 HRESULT wuiinsp_spatial_interaction_source_state_2_get__is_menu_pressed(WUIINSP_ISpatialInteractionSourceState_2 *self, BOOL *value);
 
-/* Windows.UI.Input.Spatial.ISpatialInteractionSourceState2.get_IsGrasped() */
 HRESULT wuiinsp_spatial_interaction_source_state_2_get__is_grasped(WUIINSP_ISpatialInteractionSourceState_2 *self, BOOL *value);
 
-/* Windows.UI.Input.Spatial.ISpatialInteractionSourceState2.get_SelectPressedValue() */
 HRESULT wuiinsp_spatial_interaction_source_state_2_get__select_pressed_value(WUIINSP_ISpatialInteractionSourceState_2 *self, double *value);
 
-/* Windows.UI.Input.Spatial.ISpatialInteractionSourceState2.get_ControllerProperties() */
 HRESULT wuiinsp_spatial_interaction_source_state_2_get__controller_properties(WUIINSP_ISpatialInteractionSourceState_2 *self, WUIINSP_SpatialInteractionControllerProperties** value);
 
-/* Windows.UI.Input.Spatial.ISpatialPointerInteractionSourcePose */
-/* Windows.UI.Input.Spatial.ISpatialPointerPose */
-/* Windows.UI.Input.Spatial.ISpatialInteractionController2 */
-/* Windows.UI.Input.Spatial.ISpatialInteractionController2.TryGetRenderableModelAsync() */
 HRESULT wuiinsp_spatial_interaction_controller_2_try_get_renderable_model_async(WUIINSP_ISpatialInteractionController_2 *self, WF_IAsyncOperation_WSTST_IRandomAccessStreamWithContentType** out);
 
-/* Windows.UI.Input.Spatial.ISpatialInteractionSource */
-/* Windows.UI.Input.Spatial.ISpatialInteractionSourceState */
-/* Windows.UI.Input.Spatial.ISpatialInteractionController */
 #endif /* CWINRT_WINDOWS_UI_INPUT_SPATIAL_H */

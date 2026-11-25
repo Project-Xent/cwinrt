@@ -14,7 +14,6 @@
 #include <cwinrt/Windows.Graphics.Printing.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WUIXAPR_AddPagesEventHandler WUIXAPR_AddPagesEventHandler;
 typedef struct WUIXAPR_IPrintDocumentFactory WUIXAPR_IPrintDocumentFactory;
 typedef struct WUIXAPR_GetPreviewPageEventArgs WUIXAPR_GetPreviewPageEventArgs;
@@ -29,7 +28,6 @@ typedef struct WUIXAPR_IPrintDocument WUIXAPR_IPrintDocument;
 typedef struct WUIXAPR_IPaginateEventArgs WUIXAPR_IPaginateEventArgs;
 typedef struct WUIXAPR_IAddPagesEventArgs WUIXAPR_IAddPagesEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WGRPR_IPrintDocumentSource
 #define CWINRT_FWD_WGRPR_IPrintDocumentSource
 typedef struct WGRPR_IPrintDocumentSource WGRPR_IPrintDocumentSource;
@@ -55,7 +53,6 @@ typedef enum WUIXAPR_PreviewPageCountType {
 } WUIXAPR_PreviewPageCountType;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -96,50 +93,30 @@ static const IID CWINRT_IID_WUIXAPR_IPaginateEventArgs CWINRT_MAYBE_UNUSED = { 0
 static const IID CWINRT_IID_WUIXAPR_IAddPagesEventArgs CWINRT_MAYBE_UNUSED = { 0xE2E52BE5, 0x056C, 0x4420, { 0x97, 0x95, 0xCB, 0x35, 0x26, 0xCE, 0x0C, 0x20 } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.Xaml.Printing.AddPagesEventHandler */
-/* Windows.UI.Xaml.Printing.AddPagesEventHandler.Invoke(sender, e) */
 HRESULT wuixapr_add_pages_event_handler_invoke(WUIXAPR_AddPagesEventHandler *self, IInspectable* sender, WUIXAPR_AddPagesEventArgs* e);
 
-/* Windows.UI.Xaml.Printing.IPrintDocumentFactory */
-/* Windows.UI.Xaml.Printing.IPrintDocumentFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixapr_print_document_factory_create_instance(WUIXAPR_IPrintDocumentFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAPR_PrintDocument** out);
 
-/* activate Windows.UI.Xaml.Printing.GetPreviewPageEventArgs */
 HRESULT wuixapr_get_preview_page_event_args_new(WUIXAPR_GetPreviewPageEventArgs **out);
 
-/* Windows.UI.Xaml.Printing.GetPreviewPageEventArgs */
-/* Windows.UI.Xaml.Printing.GetPreviewPageEventArgs.get_PageNumber() */
 HRESULT wuixapr_get_preview_page_event_args_get__page_number(WUIXAPR_GetPreviewPageEventArgs *self, int32_t *value);
 
-/* Windows.UI.Xaml.Printing.GetPreviewPageEventHandler */
-/* Windows.UI.Xaml.Printing.GetPreviewPageEventHandler.Invoke(sender, e) */
 HRESULT wuixapr_get_preview_page_event_handler_invoke(WUIXAPR_GetPreviewPageEventHandler *self, IInspectable* sender, WUIXAPR_GetPreviewPageEventArgs* e);
 
-/* Windows.UI.Xaml.Printing.PrintDocument */
-/* Windows.UI.Xaml.Printing.PrintDocument.get_DocumentSource() */
 HRESULT wuixapr_print_document_get__document_source(WUIXAPR_PrintDocument *self, WGRPR_IPrintDocumentSource** value);
 
-/* Windows.UI.Xaml.Printing.PrintDocument.AddPage(pageVisual) */
 HRESULT wuixapr_print_document_add_page(WUIXAPR_PrintDocument *self, WUIXA_UIElement* pageVisual);
 
-/* Windows.UI.Xaml.Printing.PrintDocument.AddPagesComplete() */
 HRESULT wuixapr_print_document_add_pages_complete(WUIXAPR_PrintDocument *self);
 
-/* Windows.UI.Xaml.Printing.PrintDocument.SetPreviewPageCount(count) */
 HRESULT wuixapr_print_document_set_preview_page_count(WUIXAPR_PrintDocument *self, int32_t count, WUIXAPR_PreviewPageCountType type_);
 
-/* Windows.UI.Xaml.Printing.PrintDocument.SetPreviewPage(pageNumber, pageVisual) */
 HRESULT wuixapr_print_document_set_preview_page(WUIXAPR_PrintDocument *self, int32_t pageNumber, WUIXA_UIElement* pageVisual);
 
-/* Windows.UI.Xaml.Printing.PrintDocument.InvalidatePreview() */
 HRESULT wuixapr_print_document_invalidate_preview(WUIXAPR_PrintDocument *self);
 
-/* Windows.UI.Xaml.Printing.PrintDocument.get_DocumentSourceProperty() */
 HRESULT wuixapr_print_document_get__document_source_property(WUIXA_DependencyProperty** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixapr_print_document_on_paginate(WUIXAPR_PrintDocument *self, cwinrt_event_fn fn, void *ctx);
@@ -151,33 +128,18 @@ void wuixapr_print_document_off_get_preview_page(WUIXAPR_PrintDocument *self, cw
 cwinrt_token wuixapr_print_document_on_add_pages(WUIXAPR_PrintDocument *self, cwinrt_event_fn fn, void *ctx);
 void wuixapr_print_document_off_add_pages(WUIXAPR_PrintDocument *self, cwinrt_token token);
 
-/* Windows.UI.Xaml.Printing.PaginateEventHandler */
-/* Windows.UI.Xaml.Printing.PaginateEventHandler.Invoke(sender, e) */
 HRESULT wuixapr_paginate_event_handler_invoke(WUIXAPR_PaginateEventHandler *self, IInspectable* sender, WUIXAPR_PaginateEventArgs* e);
 
-/* activate Windows.UI.Xaml.Printing.PaginateEventArgs */
 HRESULT wuixapr_paginate_event_args_new(WUIXAPR_PaginateEventArgs **out);
 
-/* Windows.UI.Xaml.Printing.PaginateEventArgs */
-/* Windows.UI.Xaml.Printing.PaginateEventArgs.get_PrintTaskOptions() */
 HRESULT wuixapr_paginate_event_args_get__print_task_options(WUIXAPR_PaginateEventArgs *self, WGRPR_PrintTaskOptions** value);
 
-/* Windows.UI.Xaml.Printing.PaginateEventArgs.get_CurrentPreviewPageNumber() */
 HRESULT wuixapr_paginate_event_args_get__current_preview_page_number(WUIXAPR_PaginateEventArgs *self, int32_t *value);
 
-/* Windows.UI.Xaml.Printing.IPrintDocumentStatics */
-/* Windows.UI.Xaml.Printing.IPrintDocumentStatics.get_DocumentSourceProperty() */
 HRESULT wuixapr_print_document_statics_get__document_source_property(WUIXAPR_IPrintDocumentStatics *self, WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Printing.AddPagesEventArgs */
 HRESULT wuixapr_add_pages_event_args_new(WUIXAPR_AddPagesEventArgs **out);
 
-/* Windows.UI.Xaml.Printing.AddPagesEventArgs */
-/* Windows.UI.Xaml.Printing.AddPagesEventArgs.get_PrintTaskOptions() */
 HRESULT wuixapr_add_pages_event_args_get__print_task_options(WUIXAPR_AddPagesEventArgs *self, WGRPR_PrintTaskOptions** value);
 
-/* Windows.UI.Xaml.Printing.IGetPreviewPageEventArgs */
-/* Windows.UI.Xaml.Printing.IPrintDocument */
-/* Windows.UI.Xaml.Printing.IPaginateEventArgs */
-/* Windows.UI.Xaml.Printing.IAddPagesEventArgs */
 #endif /* CWINRT_WINDOWS_UI_XAML_PRINTING_H */

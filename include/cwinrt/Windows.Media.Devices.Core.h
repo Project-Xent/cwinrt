@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Foundation.Numerics.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WPESP_SpatialCoordinateSystem
 #define CWINRT_FWD_WPESP_SpatialCoordinateSystem
 typedef struct WPESP_SpatialCoordinateSystem WPESP_SpatialCoordinateSystem;
@@ -27,7 +26,6 @@ typedef struct WMEME_MediaRatio WMEME_MediaRatio;
 typedef struct WMEME_IMediaEncodingProperties WMEME_IMediaEncodingProperties;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMEDECO_VariablePhotoSequenceController WMEDECO_VariablePhotoSequenceController;
 typedef struct WMEDECO_CameraIntrinsics WMEDECO_CameraIntrinsics;
 typedef struct WMEDECO_DepthCorrelatedCoordinateMapper WMEDECO_DepthCorrelatedCoordinateMapper;
@@ -63,7 +61,6 @@ typedef struct WMEDECO_IFrameFocusControl WMEDECO_IFrameFocusControl;
 typedef struct WMEDECO_IFrameIsoSpeedCapabilities WMEDECO_IFrameIsoSpeedCapabilities;
 typedef struct WMEDECO_IFrameIsoSpeedControl WMEDECO_IFrameIsoSpeedControl;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WMEME_IMediaEncodingProperties
 #define CWINRT_FWD_WMEME_IMediaEncodingProperties
 typedef struct WMEME_IMediaEncodingProperties WMEME_IMediaEncodingProperties;
@@ -106,7 +103,6 @@ typedef enum WMEDECO_FrameFlashMode {
 } WMEDECO_FrameFlashMode;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -187,349 +183,210 @@ static const IID CWINRT_IID_WMEDECO_IFrameIsoSpeedCapabilities CWINRT_MAYBE_UNUS
 static const IID CWINRT_IID_WMEDECO_IFrameIsoSpeedControl CWINRT_MAYBE_UNUSED = { 0x1A03EFED, 0x786A, 0x4C75, { 0xA5, 0x57, 0x7A, 0xB9, 0xA8, 0x5F, 0x58, 0x8C } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Media.Devices.Core.VariablePhotoSequenceController */
 HRESULT wmedeco_variable_photo_sequence_controller_new(WMEDECO_VariablePhotoSequenceController **out);
 
-/* Windows.Media.Devices.Core.VariablePhotoSequenceController */
-/* Windows.Media.Devices.Core.VariablePhotoSequenceController.get_Supported() */
 HRESULT wmedeco_variable_photo_sequence_controller_get__supported(WMEDECO_VariablePhotoSequenceController *self, BOOL *value);
 
-/* Windows.Media.Devices.Core.VariablePhotoSequenceController.get_MaxPhotosPerSecond() */
 HRESULT wmedeco_variable_photo_sequence_controller_get__max_photos_per_second(WMEDECO_VariablePhotoSequenceController *self, float *value);
 
-/* Windows.Media.Devices.Core.VariablePhotoSequenceController.get_PhotosPerSecondLimit() */
 HRESULT wmedeco_variable_photo_sequence_controller_get__photos_per_second_limit(WMEDECO_VariablePhotoSequenceController *self, float *value);
 
-/* Windows.Media.Devices.Core.VariablePhotoSequenceController.put_PhotosPerSecondLimit() */
 HRESULT wmedeco_variable_photo_sequence_controller_put__photos_per_second_limit(WMEDECO_VariablePhotoSequenceController *self, float value);
 
-/* Windows.Media.Devices.Core.VariablePhotoSequenceController.GetHighestConcurrentFrameRate(captureProperties) */
 HRESULT wmedeco_variable_photo_sequence_controller_get_highest_concurrent_frame_rate(WMEDECO_VariablePhotoSequenceController *self, WMEME_IMediaEncodingProperties* captureProperties, WMEME_MediaRatio** out);
 
-/* Windows.Media.Devices.Core.VariablePhotoSequenceController.GetCurrentFrameRate() */
 HRESULT wmedeco_variable_photo_sequence_controller_get_current_frame_rate(WMEDECO_VariablePhotoSequenceController *self, WMEME_MediaRatio** out);
 
-/* Windows.Media.Devices.Core.VariablePhotoSequenceController.get_FrameCapabilities() */
 HRESULT wmedeco_variable_photo_sequence_controller_get__frame_capabilities(WMEDECO_VariablePhotoSequenceController *self, WMEDECO_FrameControlCapabilities** value);
 
-/* Windows.Media.Devices.Core.VariablePhotoSequenceController.get_DesiredFrameControllers() */
 HRESULT wmedeco_variable_photo_sequence_controller_get__desired_frame_controllers(WMEDECO_VariablePhotoSequenceController *self, WFOCO_IVector_WMEDECO_FrameController** value);
 
-/* activate Windows.Media.Devices.Core.CameraIntrinsics */
 HRESULT wmedeco_camera_intrinsics_new(WMEDECO_CameraIntrinsics **out);
 
-/* Windows.Media.Devices.Core.CameraIntrinsics */
-/* Windows.Media.Devices.Core.CameraIntrinsics.get_FocalLength() */
 HRESULT wmedeco_camera_intrinsics_get__focal_length(WMEDECO_CameraIntrinsics *self, WFN_Vector_2 *value);
 
-/* Windows.Media.Devices.Core.CameraIntrinsics.get_PrincipalPoint() */
 HRESULT wmedeco_camera_intrinsics_get__principal_point(WMEDECO_CameraIntrinsics *self, WFN_Vector_2 *value);
 
-/* Windows.Media.Devices.Core.CameraIntrinsics.get_RadialDistortion() */
 HRESULT wmedeco_camera_intrinsics_get__radial_distortion(WMEDECO_CameraIntrinsics *self, WFN_Vector_3 *value);
 
-/* Windows.Media.Devices.Core.CameraIntrinsics.get_TangentialDistortion() */
 HRESULT wmedeco_camera_intrinsics_get__tangential_distortion(WMEDECO_CameraIntrinsics *self, WFN_Vector_2 *value);
 
-/* Windows.Media.Devices.Core.CameraIntrinsics.get_ImageWidth() */
 HRESULT wmedeco_camera_intrinsics_get__image_width(WMEDECO_CameraIntrinsics *self, uint32_t *value);
 
-/* Windows.Media.Devices.Core.CameraIntrinsics.get_ImageHeight() */
 HRESULT wmedeco_camera_intrinsics_get__image_height(WMEDECO_CameraIntrinsics *self, uint32_t *value);
 
-/* Windows.Media.Devices.Core.CameraIntrinsics.ProjectOntoFrame(coordinate) */
 HRESULT wmedeco_camera_intrinsics_project_onto_frame(WMEDECO_CameraIntrinsics *self, WFN_Vector_3 coordinate, WF_Point *out);
 
-/* Windows.Media.Devices.Core.CameraIntrinsics.UnprojectAtUnitDepth(pixelCoordinate) */
 HRESULT wmedeco_camera_intrinsics_unproject_at_unit_depth(WMEDECO_CameraIntrinsics *self, WF_Point pixelCoordinate, WFN_Vector_2 *out);
 
-/* Windows.Media.Devices.Core.CameraIntrinsics.ProjectManyOntoFrame(coordinates, results) */
 HRESULT wmedeco_camera_intrinsics_project_many_onto_frame(WMEDECO_CameraIntrinsics *self, WFN_Vector_3 *coordinates, uint32_t coordinates_len, WF_Point *results, uint32_t results_len);
 
-/* Windows.Media.Devices.Core.CameraIntrinsics.UnprojectPixelsAtUnitDepth(pixelCoordinates, results) */
 HRESULT wmedeco_camera_intrinsics_unproject_pixels_at_unit_depth(WMEDECO_CameraIntrinsics *self, WF_Point *pixelCoordinates, uint32_t pixelCoordinates_len, WFN_Vector_2 *results, uint32_t results_len);
 
-/* Windows.Media.Devices.Core.CameraIntrinsics.get_UndistortedProjectionTransform() */
 HRESULT wmedeco_camera_intrinsics_get__undistorted_projection_transform(WMEDECO_CameraIntrinsics *self, WFN_Matrix4x_4 *value);
 
-/* Windows.Media.Devices.Core.CameraIntrinsics.DistortPoint(input) */
 HRESULT wmedeco_camera_intrinsics_distort_point(WMEDECO_CameraIntrinsics *self, WF_Point input, WF_Point *out);
 
-/* Windows.Media.Devices.Core.CameraIntrinsics.DistortPoints(inputs, results) */
 HRESULT wmedeco_camera_intrinsics_distort_points(WMEDECO_CameraIntrinsics *self, WF_Point *inputs, uint32_t inputs_len, WF_Point *results, uint32_t results_len);
 
-/* Windows.Media.Devices.Core.CameraIntrinsics.UndistortPoint(input) */
 HRESULT wmedeco_camera_intrinsics_undistort_point(WMEDECO_CameraIntrinsics *self, WF_Point input, WF_Point *out);
 
-/* Windows.Media.Devices.Core.CameraIntrinsics.UndistortPoints(inputs, results) */
 HRESULT wmedeco_camera_intrinsics_undistort_points(WMEDECO_CameraIntrinsics *self, WF_Point *inputs, uint32_t inputs_len, WF_Point *results, uint32_t results_len);
 
-/* activate Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper */
 HRESULT wmedeco_depth_correlated_coordinate_mapper_new(WMEDECO_DepthCorrelatedCoordinateMapper **out);
 
-/* Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper */
-/* Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper.UnprojectPoint(sourcePoint, targetCoordinateSystem) */
 HRESULT wmedeco_depth_correlated_coordinate_mapper_unproject_point(WMEDECO_DepthCorrelatedCoordinateMapper *self, WF_Point sourcePoint, WPESP_SpatialCoordinateSystem* targetCoordinateSystem, WFN_Vector_3 *out);
 
-/* Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper.UnprojectPoints(sourcePoints, targetCoordinateSystem, results) */
 HRESULT wmedeco_depth_correlated_coordinate_mapper_unproject_points(WMEDECO_DepthCorrelatedCoordinateMapper *self, WF_Point *sourcePoints, uint32_t sourcePoints_len, WPESP_SpatialCoordinateSystem* targetCoordinateSystem, WFN_Vector_3 *results, uint32_t results_len);
 
-/* Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper.MapPoint(sourcePoint, targetCoordinateSystem, targetCameraIntrinsics) */
 HRESULT wmedeco_depth_correlated_coordinate_mapper_map_point(WMEDECO_DepthCorrelatedCoordinateMapper *self, WF_Point sourcePoint, WPESP_SpatialCoordinateSystem* targetCoordinateSystem, WMEDECO_CameraIntrinsics* targetCameraIntrinsics, WF_Point *out);
 
-/* Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper.MapPoints(sourcePoints, targetCoordinateSystem, targetCameraIntrinsics, results) */
 HRESULT wmedeco_depth_correlated_coordinate_mapper_map_points(WMEDECO_DepthCorrelatedCoordinateMapper *self, WF_Point *sourcePoints, uint32_t sourcePoints_len, WPESP_SpatialCoordinateSystem* targetCoordinateSystem, WMEDECO_CameraIntrinsics* targetCameraIntrinsics, WF_Point *results, uint32_t results_len);
 
-/* Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper.Close() */
 HRESULT wmedeco_depth_correlated_coordinate_mapper_close(WMEDECO_DepthCorrelatedCoordinateMapper *self);
 
-/* activate Windows.Media.Devices.Core.FrameControlCapabilities */
 HRESULT wmedeco_frame_control_capabilities_new(WMEDECO_FrameControlCapabilities **out);
 
-/* Windows.Media.Devices.Core.FrameControlCapabilities */
-/* Windows.Media.Devices.Core.FrameControlCapabilities.get_Exposure() */
 HRESULT wmedeco_frame_control_capabilities_get__exposure(WMEDECO_FrameControlCapabilities *self, WMEDECO_FrameExposureCapabilities** value);
 
-/* Windows.Media.Devices.Core.FrameControlCapabilities.get_ExposureCompensation() */
 HRESULT wmedeco_frame_control_capabilities_get__exposure_compensation(WMEDECO_FrameControlCapabilities *self, WMEDECO_FrameExposureCompensationCapabilities** value);
 
-/* Windows.Media.Devices.Core.FrameControlCapabilities.get_IsoSpeed() */
 HRESULT wmedeco_frame_control_capabilities_get__iso_speed(WMEDECO_FrameControlCapabilities *self, WMEDECO_FrameIsoSpeedCapabilities** value);
 
-/* Windows.Media.Devices.Core.FrameControlCapabilities.get_Focus() */
 HRESULT wmedeco_frame_control_capabilities_get__focus(WMEDECO_FrameControlCapabilities *self, WMEDECO_FrameFocusCapabilities** value);
 
-/* Windows.Media.Devices.Core.FrameControlCapabilities.get_PhotoConfirmationSupported() */
 HRESULT wmedeco_frame_control_capabilities_get__photo_confirmation_supported(WMEDECO_FrameControlCapabilities *self, BOOL *value);
 
-/* Windows.Media.Devices.Core.FrameControlCapabilities.get_Flash() */
 HRESULT wmedeco_frame_control_capabilities_get__flash(WMEDECO_FrameControlCapabilities *self, WMEDECO_FrameFlashCapabilities** value);
 
-/* activate Windows.Media.Devices.Core.FrameController */
 HRESULT wmedeco_frame_controller_new(WMEDECO_FrameController **out);
 
-/* Windows.Media.Devices.Core.FrameController */
-/* Windows.Media.Devices.Core.FrameController.get_ExposureControl() */
 HRESULT wmedeco_frame_controller_get__exposure_control(WMEDECO_FrameController *self, WMEDECO_FrameExposureControl** value);
 
-/* Windows.Media.Devices.Core.FrameController.get_ExposureCompensationControl() */
 HRESULT wmedeco_frame_controller_get__exposure_compensation_control(WMEDECO_FrameController *self, WMEDECO_FrameExposureCompensationControl** value);
 
-/* Windows.Media.Devices.Core.FrameController.get_IsoSpeedControl() */
 HRESULT wmedeco_frame_controller_get__iso_speed_control(WMEDECO_FrameController *self, WMEDECO_FrameIsoSpeedControl** value);
 
-/* Windows.Media.Devices.Core.FrameController.get_FocusControl() */
 HRESULT wmedeco_frame_controller_get__focus_control(WMEDECO_FrameController *self, WMEDECO_FrameFocusControl** value);
 
-/* Windows.Media.Devices.Core.FrameController.get_PhotoConfirmationEnabled() */
 HRESULT wmedeco_frame_controller_get__photo_confirmation_enabled(WMEDECO_FrameController *self, BOOL** value);
 
-/* Windows.Media.Devices.Core.FrameController.put_PhotoConfirmationEnabled() */
 HRESULT wmedeco_frame_controller_put__photo_confirmation_enabled(WMEDECO_FrameController *self, BOOL* value);
 
-/* Windows.Media.Devices.Core.FrameController.get_FlashControl() */
 HRESULT wmedeco_frame_controller_get__flash_control(WMEDECO_FrameController *self, WMEDECO_FrameFlashControl** value);
 
-/* activate Windows.Media.Devices.Core.FrameExposureCapabilities */
 HRESULT wmedeco_frame_exposure_capabilities_new(WMEDECO_FrameExposureCapabilities **out);
 
-/* Windows.Media.Devices.Core.FrameExposureCapabilities */
-/* Windows.Media.Devices.Core.FrameExposureCapabilities.get_Supported() */
 HRESULT wmedeco_frame_exposure_capabilities_get__supported(WMEDECO_FrameExposureCapabilities *self, BOOL *value);
 
-/* Windows.Media.Devices.Core.FrameExposureCapabilities.get_Min() */
 HRESULT wmedeco_frame_exposure_capabilities_get__min(WMEDECO_FrameExposureCapabilities *self, WF_TimeSpan *value);
 
-/* Windows.Media.Devices.Core.FrameExposureCapabilities.get_Max() */
 HRESULT wmedeco_frame_exposure_capabilities_get__max(WMEDECO_FrameExposureCapabilities *self, WF_TimeSpan *value);
 
-/* Windows.Media.Devices.Core.FrameExposureCapabilities.get_Step() */
 HRESULT wmedeco_frame_exposure_capabilities_get__step(WMEDECO_FrameExposureCapabilities *self, WF_TimeSpan *value);
 
-/* activate Windows.Media.Devices.Core.FrameExposureCompensationCapabilities */
 HRESULT wmedeco_frame_exposure_compensation_capabilities_new(WMEDECO_FrameExposureCompensationCapabilities **out);
 
-/* Windows.Media.Devices.Core.FrameExposureCompensationCapabilities */
-/* Windows.Media.Devices.Core.FrameExposureCompensationCapabilities.get_Supported() */
 HRESULT wmedeco_frame_exposure_compensation_capabilities_get__supported(WMEDECO_FrameExposureCompensationCapabilities *self, BOOL *value);
 
-/* Windows.Media.Devices.Core.FrameExposureCompensationCapabilities.get_Min() */
 HRESULT wmedeco_frame_exposure_compensation_capabilities_get__min(WMEDECO_FrameExposureCompensationCapabilities *self, float *value);
 
-/* Windows.Media.Devices.Core.FrameExposureCompensationCapabilities.get_Max() */
 HRESULT wmedeco_frame_exposure_compensation_capabilities_get__max(WMEDECO_FrameExposureCompensationCapabilities *self, float *value);
 
-/* Windows.Media.Devices.Core.FrameExposureCompensationCapabilities.get_Step() */
 HRESULT wmedeco_frame_exposure_compensation_capabilities_get__step(WMEDECO_FrameExposureCompensationCapabilities *self, float *value);
 
-/* activate Windows.Media.Devices.Core.FrameExposureCompensationControl */
 HRESULT wmedeco_frame_exposure_compensation_control_new(WMEDECO_FrameExposureCompensationControl **out);
 
-/* Windows.Media.Devices.Core.FrameExposureCompensationControl */
-/* Windows.Media.Devices.Core.FrameExposureCompensationControl.get_Value() */
 HRESULT wmedeco_frame_exposure_compensation_control_get__value(WMEDECO_FrameExposureCompensationControl *self, float** value);
 
-/* Windows.Media.Devices.Core.FrameExposureCompensationControl.put_Value() */
 HRESULT wmedeco_frame_exposure_compensation_control_put__value(WMEDECO_FrameExposureCompensationControl *self, float* value);
 
-/* activate Windows.Media.Devices.Core.FrameExposureControl */
 HRESULT wmedeco_frame_exposure_control_new(WMEDECO_FrameExposureControl **out);
 
-/* Windows.Media.Devices.Core.FrameExposureControl */
-/* Windows.Media.Devices.Core.FrameExposureControl.get_Auto() */
 HRESULT wmedeco_frame_exposure_control_get__auto(WMEDECO_FrameExposureControl *self, BOOL *value);
 
-/* Windows.Media.Devices.Core.FrameExposureControl.put_Auto() */
 HRESULT wmedeco_frame_exposure_control_put__auto(WMEDECO_FrameExposureControl *self, BOOL value);
 
-/* Windows.Media.Devices.Core.FrameExposureControl.get_Value() */
 HRESULT wmedeco_frame_exposure_control_get__value(WMEDECO_FrameExposureControl *self, WF_TimeSpan** value);
 
-/* Windows.Media.Devices.Core.FrameExposureControl.put_Value() */
 HRESULT wmedeco_frame_exposure_control_put__value(WMEDECO_FrameExposureControl *self, WF_TimeSpan* value);
 
-/* activate Windows.Media.Devices.Core.FrameFlashCapabilities */
 HRESULT wmedeco_frame_flash_capabilities_new(WMEDECO_FrameFlashCapabilities **out);
 
-/* Windows.Media.Devices.Core.FrameFlashCapabilities */
-/* Windows.Media.Devices.Core.FrameFlashCapabilities.get_Supported() */
 HRESULT wmedeco_frame_flash_capabilities_get__supported(WMEDECO_FrameFlashCapabilities *self, BOOL *value);
 
-/* Windows.Media.Devices.Core.FrameFlashCapabilities.get_RedEyeReductionSupported() */
 HRESULT wmedeco_frame_flash_capabilities_get__red_eye_reduction_supported(WMEDECO_FrameFlashCapabilities *self, BOOL *value);
 
-/* Windows.Media.Devices.Core.FrameFlashCapabilities.get_PowerSupported() */
 HRESULT wmedeco_frame_flash_capabilities_get__power_supported(WMEDECO_FrameFlashCapabilities *self, BOOL *value);
 
-/* activate Windows.Media.Devices.Core.FrameFlashControl */
 HRESULT wmedeco_frame_flash_control_new(WMEDECO_FrameFlashControl **out);
 
-/* Windows.Media.Devices.Core.FrameFlashControl */
-/* Windows.Media.Devices.Core.FrameFlashControl.get_Mode() */
 HRESULT wmedeco_frame_flash_control_get__mode(WMEDECO_FrameFlashControl *self, WMEDECO_FrameFlashMode *value);
 
-/* Windows.Media.Devices.Core.FrameFlashControl.put_Mode() */
 HRESULT wmedeco_frame_flash_control_put__mode(WMEDECO_FrameFlashControl *self, WMEDECO_FrameFlashMode value);
 
-/* Windows.Media.Devices.Core.FrameFlashControl.get_Auto() */
 HRESULT wmedeco_frame_flash_control_get__auto(WMEDECO_FrameFlashControl *self, BOOL *value);
 
-/* Windows.Media.Devices.Core.FrameFlashControl.put_Auto() */
 HRESULT wmedeco_frame_flash_control_put__auto(WMEDECO_FrameFlashControl *self, BOOL value);
 
-/* Windows.Media.Devices.Core.FrameFlashControl.get_RedEyeReduction() */
 HRESULT wmedeco_frame_flash_control_get__red_eye_reduction(WMEDECO_FrameFlashControl *self, BOOL *value);
 
-/* Windows.Media.Devices.Core.FrameFlashControl.put_RedEyeReduction() */
 HRESULT wmedeco_frame_flash_control_put__red_eye_reduction(WMEDECO_FrameFlashControl *self, BOOL value);
 
-/* Windows.Media.Devices.Core.FrameFlashControl.get_PowerPercent() */
 HRESULT wmedeco_frame_flash_control_get__power_percent(WMEDECO_FrameFlashControl *self, float *value);
 
-/* Windows.Media.Devices.Core.FrameFlashControl.put_PowerPercent() */
 HRESULT wmedeco_frame_flash_control_put__power_percent(WMEDECO_FrameFlashControl *self, float value);
 
-/* activate Windows.Media.Devices.Core.FrameFocusCapabilities */
 HRESULT wmedeco_frame_focus_capabilities_new(WMEDECO_FrameFocusCapabilities **out);
 
-/* Windows.Media.Devices.Core.FrameFocusCapabilities */
-/* Windows.Media.Devices.Core.FrameFocusCapabilities.get_Supported() */
 HRESULT wmedeco_frame_focus_capabilities_get__supported(WMEDECO_FrameFocusCapabilities *self, BOOL *value);
 
-/* Windows.Media.Devices.Core.FrameFocusCapabilities.get_Min() */
 HRESULT wmedeco_frame_focus_capabilities_get__min(WMEDECO_FrameFocusCapabilities *self, uint32_t *value);
 
-/* Windows.Media.Devices.Core.FrameFocusCapabilities.get_Max() */
 HRESULT wmedeco_frame_focus_capabilities_get__max(WMEDECO_FrameFocusCapabilities *self, uint32_t *value);
 
-/* Windows.Media.Devices.Core.FrameFocusCapabilities.get_Step() */
 HRESULT wmedeco_frame_focus_capabilities_get__step(WMEDECO_FrameFocusCapabilities *self, uint32_t *value);
 
-/* activate Windows.Media.Devices.Core.FrameFocusControl */
 HRESULT wmedeco_frame_focus_control_new(WMEDECO_FrameFocusControl **out);
 
-/* Windows.Media.Devices.Core.FrameFocusControl */
-/* Windows.Media.Devices.Core.FrameFocusControl.get_Value() */
 HRESULT wmedeco_frame_focus_control_get__value(WMEDECO_FrameFocusControl *self, uint32_t** value);
 
-/* Windows.Media.Devices.Core.FrameFocusControl.put_Value() */
 HRESULT wmedeco_frame_focus_control_put__value(WMEDECO_FrameFocusControl *self, uint32_t* value);
 
-/* activate Windows.Media.Devices.Core.FrameIsoSpeedCapabilities */
 HRESULT wmedeco_frame_iso_speed_capabilities_new(WMEDECO_FrameIsoSpeedCapabilities **out);
 
-/* Windows.Media.Devices.Core.FrameIsoSpeedCapabilities */
-/* Windows.Media.Devices.Core.FrameIsoSpeedCapabilities.get_Supported() */
 HRESULT wmedeco_frame_iso_speed_capabilities_get__supported(WMEDECO_FrameIsoSpeedCapabilities *self, BOOL *value);
 
-/* Windows.Media.Devices.Core.FrameIsoSpeedCapabilities.get_Min() */
 HRESULT wmedeco_frame_iso_speed_capabilities_get__min(WMEDECO_FrameIsoSpeedCapabilities *self, uint32_t *value);
 
-/* Windows.Media.Devices.Core.FrameIsoSpeedCapabilities.get_Max() */
 HRESULT wmedeco_frame_iso_speed_capabilities_get__max(WMEDECO_FrameIsoSpeedCapabilities *self, uint32_t *value);
 
-/* Windows.Media.Devices.Core.FrameIsoSpeedCapabilities.get_Step() */
 HRESULT wmedeco_frame_iso_speed_capabilities_get__step(WMEDECO_FrameIsoSpeedCapabilities *self, uint32_t *value);
 
-/* activate Windows.Media.Devices.Core.FrameIsoSpeedControl */
 HRESULT wmedeco_frame_iso_speed_control_new(WMEDECO_FrameIsoSpeedControl **out);
 
-/* Windows.Media.Devices.Core.FrameIsoSpeedControl */
-/* Windows.Media.Devices.Core.FrameIsoSpeedControl.get_Auto() */
 HRESULT wmedeco_frame_iso_speed_control_get__auto(WMEDECO_FrameIsoSpeedControl *self, BOOL *value);
 
-/* Windows.Media.Devices.Core.FrameIsoSpeedControl.put_Auto() */
 HRESULT wmedeco_frame_iso_speed_control_put__auto(WMEDECO_FrameIsoSpeedControl *self, BOOL value);
 
-/* Windows.Media.Devices.Core.FrameIsoSpeedControl.get_Value() */
 HRESULT wmedeco_frame_iso_speed_control_get__value(WMEDECO_FrameIsoSpeedControl *self, uint32_t** value);
 
-/* Windows.Media.Devices.Core.FrameIsoSpeedControl.put_Value() */
 HRESULT wmedeco_frame_iso_speed_control_put__value(WMEDECO_FrameIsoSpeedControl *self, uint32_t* value);
 
-/* Windows.Media.Devices.Core.ICameraIntrinsicsFactory */
-/* Windows.Media.Devices.Core.ICameraIntrinsicsFactory.Create(focalLength, principalPoint, radialDistortion, tangentialDistortion, imageWidth, imageHeight) */
 HRESULT wmedeco_camera_intrinsics_factory_create(WMEDECO_ICameraIntrinsicsFactory *self, WFN_Vector_2 focalLength, WFN_Vector_2 principalPoint, WFN_Vector_3 radialDistortion, WFN_Vector_2 tangentialDistortion, uint32_t imageWidth, uint32_t imageHeight, WMEDECO_CameraIntrinsics** out);
 
-/* Windows.Media.Devices.Core.IVariablePhotoSequenceController */
-/* Windows.Media.Devices.Core.ICameraIntrinsics */
-/* Windows.Media.Devices.Core.ICameraIntrinsics2 */
-/* Windows.Media.Devices.Core.ICameraIntrinsics2.get_UndistortedProjectionTransform() */
 HRESULT wmedeco_camera_intrinsics_2_get__undistorted_projection_transform(WMEDECO_ICameraIntrinsics_2 *self, WFN_Matrix4x_4 *value);
 
-/* Windows.Media.Devices.Core.ICameraIntrinsics2.DistortPoint(input) */
 HRESULT wmedeco_camera_intrinsics_2_distort_point(WMEDECO_ICameraIntrinsics_2 *self, WF_Point input, WF_Point *out);
 
-/* Windows.Media.Devices.Core.ICameraIntrinsics2.DistortPoints(inputs, results) */
 HRESULT wmedeco_camera_intrinsics_2_distort_points(WMEDECO_ICameraIntrinsics_2 *self, WF_Point *inputs, uint32_t inputs_len, WF_Point *results, uint32_t results_len);
 
-/* Windows.Media.Devices.Core.ICameraIntrinsics2.UndistortPoint(input) */
 HRESULT wmedeco_camera_intrinsics_2_undistort_point(WMEDECO_ICameraIntrinsics_2 *self, WF_Point input, WF_Point *out);
 
-/* Windows.Media.Devices.Core.ICameraIntrinsics2.UndistortPoints(inputs, results) */
 HRESULT wmedeco_camera_intrinsics_2_undistort_points(WMEDECO_ICameraIntrinsics_2 *self, WF_Point *inputs, uint32_t inputs_len, WF_Point *results, uint32_t results_len);
 
-/* Windows.Media.Devices.Core.IDepthCorrelatedCoordinateMapper */
-/* Windows.Media.Devices.Core.IFrameControlCapabilities */
-/* Windows.Media.Devices.Core.IFrameControlCapabilities2 */
-/* Windows.Media.Devices.Core.IFrameControlCapabilities2.get_Flash() */
 HRESULT wmedeco_frame_control_capabilities_2_get__flash(WMEDECO_IFrameControlCapabilities_2 *self, WMEDECO_FrameFlashCapabilities** value);
 
-/* Windows.Media.Devices.Core.IFrameController */
-/* Windows.Media.Devices.Core.IFrameController2 */
-/* Windows.Media.Devices.Core.IFrameController2.get_FlashControl() */
 HRESULT wmedeco_frame_controller_2_get__flash_control(WMEDECO_IFrameController_2 *self, WMEDECO_FrameFlashControl** value);
 
-/* Windows.Media.Devices.Core.IFrameExposureCapabilities */
-/* Windows.Media.Devices.Core.IFrameExposureCompensationCapabilities */
-/* Windows.Media.Devices.Core.IFrameExposureCompensationControl */
-/* Windows.Media.Devices.Core.IFrameExposureControl */
-/* Windows.Media.Devices.Core.IFrameFlashCapabilities */
-/* Windows.Media.Devices.Core.IFrameFlashControl */
-/* Windows.Media.Devices.Core.IFrameFocusCapabilities */
-/* Windows.Media.Devices.Core.IFrameFocusControl */
-/* Windows.Media.Devices.Core.IFrameIsoSpeedCapabilities */
-/* Windows.Media.Devices.Core.IFrameIsoSpeedControl */
 #endif /* CWINRT_WINDOWS_MEDIA_DEVICES_CORE_H */

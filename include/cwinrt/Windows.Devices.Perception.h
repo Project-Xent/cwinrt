@@ -14,7 +14,6 @@
 #include <cwinrt/Windows.Graphics.Imaging.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WME_VideoFrame
 #define CWINRT_FWD_WME_VideoFrame
 typedef struct WME_VideoFrame WME_VideoFrame;
@@ -36,7 +35,6 @@ typedef enum WDEEN_DeviceWatcherStatus {
 } WDEEN_DeviceWatcherStatus;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDEPE_IKnownCameraIntrinsicsPropertiesStatics WDEPE_IKnownCameraIntrinsicsPropertiesStatics;
 typedef struct WDEPE_IKnownPerceptionColorFrameSourcePropertiesStatics WDEPE_IKnownPerceptionColorFrameSourcePropertiesStatics;
 typedef struct WDEPE_IKnownPerceptionDepthFrameSourcePropertiesStatics WDEPE_IKnownPerceptionDepthFrameSourcePropertiesStatics;
@@ -113,7 +111,6 @@ typedef struct WDEPE_IPerceptionInfraredFrameSourceRemovedEventArgs WDEPE_IPerce
 typedef struct WDEPE_IPerceptionInfraredFrameSourceWatcher WDEPE_IPerceptionInfraredFrameSourceWatcher;
 typedef struct WDEPE_IPerceptionVideoProfile WDEPE_IPerceptionVideoProfile;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WFOCO_IVectorView_WDEPE_PerceptionColorFrameSource
 #define CWINRT_FWD_WF_IAsyncOperation_WFOCO_IVectorView_WDEPE_PerceptionColorFrameSource
 typedef struct WF_IAsyncOperation_WFOCO_IVectorView_WDEPE_PerceptionColorFrameSource WF_IAsyncOperation_WFOCO_IVectorView_WDEPE_PerceptionColorFrameSource;
@@ -335,7 +332,6 @@ typedef enum WDEPE_PerceptionFrameSourcePropertyChangeStatus {
 } WDEPE_PerceptionFrameSourcePropertyChangeStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -504,397 +500,251 @@ static const IID CWINRT_IID_WDEPE_IPerceptionInfraredFrameSourceWatcher CWINRT_M
 static const IID CWINRT_IID_WDEPE_IPerceptionVideoProfile CWINRT_MAYBE_UNUSED = { 0x75763EA3, 0x011A, 0x470E, { 0x82, 0x25, 0x6F, 0x05, 0xAD, 0xE2, 0x56, 0x48 } };
 #endif
 
-/* Methods */
-
-/* Windows.Devices.Perception.IKnownCameraIntrinsicsPropertiesStatics */
-/* Windows.Devices.Perception.IKnownCameraIntrinsicsPropertiesStatics.get_FocalLength() */
 HRESULT wdepe_known_camera_intrinsics_properties_statics_get__focal_length(WDEPE_IKnownCameraIntrinsicsPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownCameraIntrinsicsPropertiesStatics.get_PrincipalPoint() */
 HRESULT wdepe_known_camera_intrinsics_properties_statics_get__principal_point(WDEPE_IKnownCameraIntrinsicsPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownCameraIntrinsicsPropertiesStatics.get_RadialDistortion() */
 HRESULT wdepe_known_camera_intrinsics_properties_statics_get__radial_distortion(WDEPE_IKnownCameraIntrinsicsPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownCameraIntrinsicsPropertiesStatics.get_TangentialDistortion() */
 HRESULT wdepe_known_camera_intrinsics_properties_statics_get__tangential_distortion(WDEPE_IKnownCameraIntrinsicsPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownPerceptionColorFrameSourcePropertiesStatics */
-/* Windows.Devices.Perception.IKnownPerceptionColorFrameSourcePropertiesStatics.get_Exposure() */
 HRESULT wdepe_known_perception_color_frame_source_properties_statics_get__exposure(WDEPE_IKnownPerceptionColorFrameSourcePropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownPerceptionColorFrameSourcePropertiesStatics.get_AutoExposureEnabled() */
 HRESULT wdepe_known_perception_color_frame_source_properties_statics_get__auto_exposure_enabled(WDEPE_IKnownPerceptionColorFrameSourcePropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownPerceptionColorFrameSourcePropertiesStatics.get_ExposureCompensation() */
 HRESULT wdepe_known_perception_color_frame_source_properties_statics_get__exposure_compensation(WDEPE_IKnownPerceptionColorFrameSourcePropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownPerceptionDepthFrameSourcePropertiesStatics */
-/* Windows.Devices.Perception.IKnownPerceptionDepthFrameSourcePropertiesStatics.get_MinDepth() */
 HRESULT wdepe_known_perception_depth_frame_source_properties_statics_get__min_depth(WDEPE_IKnownPerceptionDepthFrameSourcePropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownPerceptionDepthFrameSourcePropertiesStatics.get_MaxDepth() */
 HRESULT wdepe_known_perception_depth_frame_source_properties_statics_get__max_depth(WDEPE_IKnownPerceptionDepthFrameSourcePropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownPerceptionFrameSourcePropertiesStatics */
-/* Windows.Devices.Perception.IKnownPerceptionFrameSourcePropertiesStatics.get_Id() */
 HRESULT wdepe_known_perception_frame_source_properties_statics_get__id(WDEPE_IKnownPerceptionFrameSourcePropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownPerceptionFrameSourcePropertiesStatics.get_PhysicalDeviceIds() */
 HRESULT wdepe_known_perception_frame_source_properties_statics_get__physical_device_ids(WDEPE_IKnownPerceptionFrameSourcePropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownPerceptionFrameSourcePropertiesStatics.get_FrameKind() */
 HRESULT wdepe_known_perception_frame_source_properties_statics_get__frame_kind(WDEPE_IKnownPerceptionFrameSourcePropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownPerceptionFrameSourcePropertiesStatics.get_DeviceModelVersion() */
 HRESULT wdepe_known_perception_frame_source_properties_statics_get__device_model_version(WDEPE_IKnownPerceptionFrameSourcePropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownPerceptionFrameSourcePropertiesStatics.get_EnclosureLocation() */
 HRESULT wdepe_known_perception_frame_source_properties_statics_get__enclosure_location(WDEPE_IKnownPerceptionFrameSourcePropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownPerceptionFrameSourcePropertiesStatics2 */
-/* Windows.Devices.Perception.IKnownPerceptionFrameSourcePropertiesStatics2.get_DeviceId() */
 HRESULT wdepe_known_perception_frame_source_properties_statics_2_get__device_id(WDEPE_IKnownPerceptionFrameSourcePropertiesStatics_2 *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownPerceptionInfraredFrameSourcePropertiesStatics */
-/* Windows.Devices.Perception.IKnownPerceptionInfraredFrameSourcePropertiesStatics.get_Exposure() */
 HRESULT wdepe_known_perception_infrared_frame_source_properties_statics_get__exposure(WDEPE_IKnownPerceptionInfraredFrameSourcePropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownPerceptionInfraredFrameSourcePropertiesStatics.get_AutoExposureEnabled() */
 HRESULT wdepe_known_perception_infrared_frame_source_properties_statics_get__auto_exposure_enabled(WDEPE_IKnownPerceptionInfraredFrameSourcePropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownPerceptionInfraredFrameSourcePropertiesStatics.get_ExposureCompensation() */
 HRESULT wdepe_known_perception_infrared_frame_source_properties_statics_get__exposure_compensation(WDEPE_IKnownPerceptionInfraredFrameSourcePropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownPerceptionInfraredFrameSourcePropertiesStatics.get_ActiveIlluminationEnabled() */
 HRESULT wdepe_known_perception_infrared_frame_source_properties_statics_get__active_illumination_enabled(WDEPE_IKnownPerceptionInfraredFrameSourcePropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownPerceptionInfraredFrameSourcePropertiesStatics.get_AmbientSubtractionEnabled() */
 HRESULT wdepe_known_perception_infrared_frame_source_properties_statics_get__ambient_subtraction_enabled(WDEPE_IKnownPerceptionInfraredFrameSourcePropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownPerceptionInfraredFrameSourcePropertiesStatics.get_StructureLightPatternEnabled() */
 HRESULT wdepe_known_perception_infrared_frame_source_properties_statics_get__structure_light_pattern_enabled(WDEPE_IKnownPerceptionInfraredFrameSourcePropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownPerceptionInfraredFrameSourcePropertiesStatics.get_InterleavedIlluminationEnabled() */
 HRESULT wdepe_known_perception_infrared_frame_source_properties_statics_get__interleaved_illumination_enabled(WDEPE_IKnownPerceptionInfraredFrameSourcePropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownPerceptionVideoFrameSourcePropertiesStatics */
-/* Windows.Devices.Perception.IKnownPerceptionVideoFrameSourcePropertiesStatics.get_VideoProfile() */
 HRESULT wdepe_known_perception_video_frame_source_properties_statics_get__video_profile(WDEPE_IKnownPerceptionVideoFrameSourcePropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownPerceptionVideoFrameSourcePropertiesStatics.get_SupportedVideoProfiles() */
 HRESULT wdepe_known_perception_video_frame_source_properties_statics_get__supported_video_profiles(WDEPE_IKnownPerceptionVideoFrameSourcePropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownPerceptionVideoFrameSourcePropertiesStatics.get_AvailableVideoProfiles() */
 HRESULT wdepe_known_perception_video_frame_source_properties_statics_get__available_video_profiles(WDEPE_IKnownPerceptionVideoFrameSourcePropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownPerceptionVideoFrameSourcePropertiesStatics.get_IsMirrored() */
 HRESULT wdepe_known_perception_video_frame_source_properties_statics_get__is_mirrored(WDEPE_IKnownPerceptionVideoFrameSourcePropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownPerceptionVideoFrameSourcePropertiesStatics.get_CameraIntrinsics() */
 HRESULT wdepe_known_perception_video_frame_source_properties_statics_get__camera_intrinsics(WDEPE_IKnownPerceptionVideoFrameSourcePropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownPerceptionVideoProfilePropertiesStatics */
-/* Windows.Devices.Perception.IKnownPerceptionVideoProfilePropertiesStatics.get_BitmapPixelFormat() */
 HRESULT wdepe_known_perception_video_profile_properties_statics_get__bitmap_pixel_format(WDEPE_IKnownPerceptionVideoProfilePropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownPerceptionVideoProfilePropertiesStatics.get_BitmapAlphaMode() */
 HRESULT wdepe_known_perception_video_profile_properties_statics_get__bitmap_alpha_mode(WDEPE_IKnownPerceptionVideoProfilePropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownPerceptionVideoProfilePropertiesStatics.get_Width() */
 HRESULT wdepe_known_perception_video_profile_properties_statics_get__width(WDEPE_IKnownPerceptionVideoProfilePropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownPerceptionVideoProfilePropertiesStatics.get_Height() */
 HRESULT wdepe_known_perception_video_profile_properties_statics_get__height(WDEPE_IKnownPerceptionVideoProfilePropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IKnownPerceptionVideoProfilePropertiesStatics.get_FrameDuration() */
 HRESULT wdepe_known_perception_video_profile_properties_statics_get__frame_duration(WDEPE_IKnownPerceptionVideoProfilePropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IPerceptionColorFrameSourceStatics */
-/* Windows.Devices.Perception.IPerceptionColorFrameSourceStatics.CreateWatcher() */
 HRESULT wdepe_perception_color_frame_source_statics_create_watcher(WDEPE_IPerceptionColorFrameSourceStatics *self, WDEPE_PerceptionColorFrameSourceWatcher** out);
 
-/* Windows.Devices.Perception.IPerceptionColorFrameSourceStatics.FindAllAsync() */
 HRESULT wdepe_perception_color_frame_source_statics_find_all_async(WDEPE_IPerceptionColorFrameSourceStatics *self, WF_IAsyncOperation_WFOCO_IVectorView_WDEPE_PerceptionColorFrameSource** out);
 
-/* Windows.Devices.Perception.IPerceptionColorFrameSourceStatics.FromIdAsync(id) */
 HRESULT wdepe_perception_color_frame_source_statics_from_id_async(WDEPE_IPerceptionColorFrameSourceStatics *self, cwinrt_hstring id, WF_IAsyncOperation_WDEPE_PerceptionColorFrameSource** out);
 
-/* Windows.Devices.Perception.IPerceptionColorFrameSourceStatics.RequestAccessAsync() */
 HRESULT wdepe_perception_color_frame_source_statics_request_access_async(WDEPE_IPerceptionColorFrameSourceStatics *self, WF_IAsyncOperation_WDEPE_PerceptionFrameSourceAccessStatus** out);
 
-/* Windows.Devices.Perception.IPerceptionDepthFrameSourceStatics */
-/* Windows.Devices.Perception.IPerceptionDepthFrameSourceStatics.CreateWatcher() */
 HRESULT wdepe_perception_depth_frame_source_statics_create_watcher(WDEPE_IPerceptionDepthFrameSourceStatics *self, WDEPE_PerceptionDepthFrameSourceWatcher** out);
 
-/* Windows.Devices.Perception.IPerceptionDepthFrameSourceStatics.FindAllAsync() */
 HRESULT wdepe_perception_depth_frame_source_statics_find_all_async(WDEPE_IPerceptionDepthFrameSourceStatics *self, WF_IAsyncOperation_WFOCO_IVectorView_WDEPE_PerceptionDepthFrameSource** out);
 
-/* Windows.Devices.Perception.IPerceptionDepthFrameSourceStatics.FromIdAsync(id) */
 HRESULT wdepe_perception_depth_frame_source_statics_from_id_async(WDEPE_IPerceptionDepthFrameSourceStatics *self, cwinrt_hstring id, WF_IAsyncOperation_WDEPE_PerceptionDepthFrameSource** out);
 
-/* Windows.Devices.Perception.IPerceptionDepthFrameSourceStatics.RequestAccessAsync() */
 HRESULT wdepe_perception_depth_frame_source_statics_request_access_async(WDEPE_IPerceptionDepthFrameSourceStatics *self, WF_IAsyncOperation_WDEPE_PerceptionFrameSourceAccessStatus** out);
 
-/* Windows.Devices.Perception.IPerceptionInfraredFrameSourceStatics */
-/* Windows.Devices.Perception.IPerceptionInfraredFrameSourceStatics.CreateWatcher() */
 HRESULT wdepe_perception_infrared_frame_source_statics_create_watcher(WDEPE_IPerceptionInfraredFrameSourceStatics *self, WDEPE_PerceptionInfraredFrameSourceWatcher** out);
 
-/* Windows.Devices.Perception.IPerceptionInfraredFrameSourceStatics.FindAllAsync() */
 HRESULT wdepe_perception_infrared_frame_source_statics_find_all_async(WDEPE_IPerceptionInfraredFrameSourceStatics *self, WF_IAsyncOperation_WFOCO_IVectorView_WDEPE_PerceptionInfraredFrameSource** out);
 
-/* Windows.Devices.Perception.IPerceptionInfraredFrameSourceStatics.FromIdAsync(id) */
 HRESULT wdepe_perception_infrared_frame_source_statics_from_id_async(WDEPE_IPerceptionInfraredFrameSourceStatics *self, cwinrt_hstring id, WF_IAsyncOperation_WDEPE_PerceptionInfraredFrameSource** out);
 
-/* Windows.Devices.Perception.IPerceptionInfraredFrameSourceStatics.RequestAccessAsync() */
 HRESULT wdepe_perception_infrared_frame_source_statics_request_access_async(WDEPE_IPerceptionInfraredFrameSourceStatics *self, WF_IAsyncOperation_WDEPE_PerceptionFrameSourceAccessStatus** out);
 
-/* activate Windows.Devices.Perception.KnownCameraIntrinsicsProperties */
 HRESULT wdepe_known_camera_intrinsics_properties_new(WDEPE_KnownCameraIntrinsicsProperties **out);
 
-/* Windows.Devices.Perception.KnownCameraIntrinsicsProperties */
-/* Windows.Devices.Perception.KnownCameraIntrinsicsProperties.get_FocalLength() */
 HRESULT wdepe_known_camera_intrinsics_properties_get__focal_length(cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.KnownCameraIntrinsicsProperties.get_PrincipalPoint() */
 HRESULT wdepe_known_camera_intrinsics_properties_get__principal_point(cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.KnownCameraIntrinsicsProperties.get_RadialDistortion() */
 HRESULT wdepe_known_camera_intrinsics_properties_get__radial_distortion(cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.KnownCameraIntrinsicsProperties.get_TangentialDistortion() */
 HRESULT wdepe_known_camera_intrinsics_properties_get__tangential_distortion(cwinrt_hstring *value);
 
-/* activate Windows.Devices.Perception.KnownPerceptionColorFrameSourceProperties */
 HRESULT wdepe_known_perception_color_frame_source_properties_new(WDEPE_KnownPerceptionColorFrameSourceProperties **out);
 
-/* Windows.Devices.Perception.KnownPerceptionColorFrameSourceProperties */
-/* Windows.Devices.Perception.KnownPerceptionColorFrameSourceProperties.get_Exposure() */
 HRESULT wdepe_known_perception_color_frame_source_properties_get__exposure(cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.KnownPerceptionColorFrameSourceProperties.get_AutoExposureEnabled() */
 HRESULT wdepe_known_perception_color_frame_source_properties_get__auto_exposure_enabled(cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.KnownPerceptionColorFrameSourceProperties.get_ExposureCompensation() */
 HRESULT wdepe_known_perception_color_frame_source_properties_get__exposure_compensation(cwinrt_hstring *value);
 
-/* activate Windows.Devices.Perception.KnownPerceptionDepthFrameSourceProperties */
 HRESULT wdepe_known_perception_depth_frame_source_properties_new(WDEPE_KnownPerceptionDepthFrameSourceProperties **out);
 
-/* Windows.Devices.Perception.KnownPerceptionDepthFrameSourceProperties */
-/* Windows.Devices.Perception.KnownPerceptionDepthFrameSourceProperties.get_MinDepth() */
 HRESULT wdepe_known_perception_depth_frame_source_properties_get__min_depth(cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.KnownPerceptionDepthFrameSourceProperties.get_MaxDepth() */
 HRESULT wdepe_known_perception_depth_frame_source_properties_get__max_depth(cwinrt_hstring *value);
 
-/* activate Windows.Devices.Perception.KnownPerceptionFrameSourceProperties */
 HRESULT wdepe_known_perception_frame_source_properties_new(WDEPE_KnownPerceptionFrameSourceProperties **out);
 
-/* Windows.Devices.Perception.KnownPerceptionFrameSourceProperties */
-/* Windows.Devices.Perception.KnownPerceptionFrameSourceProperties.get_DeviceId() */
 HRESULT wdepe_known_perception_frame_source_properties_get__device_id(cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.KnownPerceptionFrameSourceProperties.get_Id() */
 HRESULT wdepe_known_perception_frame_source_properties_get__id(cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.KnownPerceptionFrameSourceProperties.get_PhysicalDeviceIds() */
 HRESULT wdepe_known_perception_frame_source_properties_get__physical_device_ids(cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.KnownPerceptionFrameSourceProperties.get_FrameKind() */
 HRESULT wdepe_known_perception_frame_source_properties_get__frame_kind(cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.KnownPerceptionFrameSourceProperties.get_DeviceModelVersion() */
 HRESULT wdepe_known_perception_frame_source_properties_get__device_model_version(cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.KnownPerceptionFrameSourceProperties.get_EnclosureLocation() */
 HRESULT wdepe_known_perception_frame_source_properties_get__enclosure_location(cwinrt_hstring *value);
 
-/* activate Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties */
 HRESULT wdepe_known_perception_infrared_frame_source_properties_new(WDEPE_KnownPerceptionInfraredFrameSourceProperties **out);
 
-/* Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties */
-/* Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties.get_Exposure() */
 HRESULT wdepe_known_perception_infrared_frame_source_properties_get__exposure(cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties.get_AutoExposureEnabled() */
 HRESULT wdepe_known_perception_infrared_frame_source_properties_get__auto_exposure_enabled(cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties.get_ExposureCompensation() */
 HRESULT wdepe_known_perception_infrared_frame_source_properties_get__exposure_compensation(cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties.get_ActiveIlluminationEnabled() */
 HRESULT wdepe_known_perception_infrared_frame_source_properties_get__active_illumination_enabled(cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties.get_AmbientSubtractionEnabled() */
 HRESULT wdepe_known_perception_infrared_frame_source_properties_get__ambient_subtraction_enabled(cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties.get_StructureLightPatternEnabled() */
 HRESULT wdepe_known_perception_infrared_frame_source_properties_get__structure_light_pattern_enabled(cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties.get_InterleavedIlluminationEnabled() */
 HRESULT wdepe_known_perception_infrared_frame_source_properties_get__interleaved_illumination_enabled(cwinrt_hstring *value);
 
-/* activate Windows.Devices.Perception.KnownPerceptionVideoFrameSourceProperties */
 HRESULT wdepe_known_perception_video_frame_source_properties_new(WDEPE_KnownPerceptionVideoFrameSourceProperties **out);
 
-/* Windows.Devices.Perception.KnownPerceptionVideoFrameSourceProperties */
-/* Windows.Devices.Perception.KnownPerceptionVideoFrameSourceProperties.get_VideoProfile() */
 HRESULT wdepe_known_perception_video_frame_source_properties_get__video_profile(cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.KnownPerceptionVideoFrameSourceProperties.get_SupportedVideoProfiles() */
 HRESULT wdepe_known_perception_video_frame_source_properties_get__supported_video_profiles(cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.KnownPerceptionVideoFrameSourceProperties.get_AvailableVideoProfiles() */
 HRESULT wdepe_known_perception_video_frame_source_properties_get__available_video_profiles(cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.KnownPerceptionVideoFrameSourceProperties.get_IsMirrored() */
 HRESULT wdepe_known_perception_video_frame_source_properties_get__is_mirrored(cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.KnownPerceptionVideoFrameSourceProperties.get_CameraIntrinsics() */
 HRESULT wdepe_known_perception_video_frame_source_properties_get__camera_intrinsics(cwinrt_hstring *value);
 
-/* activate Windows.Devices.Perception.KnownPerceptionVideoProfileProperties */
 HRESULT wdepe_known_perception_video_profile_properties_new(WDEPE_KnownPerceptionVideoProfileProperties **out);
 
-/* Windows.Devices.Perception.KnownPerceptionVideoProfileProperties */
-/* Windows.Devices.Perception.KnownPerceptionVideoProfileProperties.get_BitmapPixelFormat() */
 HRESULT wdepe_known_perception_video_profile_properties_get__bitmap_pixel_format(cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.KnownPerceptionVideoProfileProperties.get_BitmapAlphaMode() */
 HRESULT wdepe_known_perception_video_profile_properties_get__bitmap_alpha_mode(cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.KnownPerceptionVideoProfileProperties.get_Width() */
 HRESULT wdepe_known_perception_video_profile_properties_get__width(cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.KnownPerceptionVideoProfileProperties.get_Height() */
 HRESULT wdepe_known_perception_video_profile_properties_get__height(cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.KnownPerceptionVideoProfileProperties.get_FrameDuration() */
 HRESULT wdepe_known_perception_video_profile_properties_get__frame_duration(cwinrt_hstring *value);
 
-/* activate Windows.Devices.Perception.PerceptionColorFrame */
 HRESULT wdepe_perception_color_frame_new(WDEPE_PerceptionColorFrame **out);
 
-/* Windows.Devices.Perception.PerceptionColorFrame */
-/* Windows.Devices.Perception.PerceptionColorFrame.get_VideoFrame() */
 HRESULT wdepe_perception_color_frame_get__video_frame(WDEPE_PerceptionColorFrame *self, WME_VideoFrame** value);
 
-/* Windows.Devices.Perception.PerceptionColorFrame.Close() */
 HRESULT wdepe_perception_color_frame_close(WDEPE_PerceptionColorFrame *self);
 
-/* activate Windows.Devices.Perception.PerceptionColorFrameArrivedEventArgs */
 HRESULT wdepe_perception_color_frame_arrived_event_args_new(WDEPE_PerceptionColorFrameArrivedEventArgs **out);
 
-/* Windows.Devices.Perception.PerceptionColorFrameArrivedEventArgs */
-/* Windows.Devices.Perception.PerceptionColorFrameArrivedEventArgs.get_RelativeTime() */
 HRESULT wdepe_perception_color_frame_arrived_event_args_get__relative_time(WDEPE_PerceptionColorFrameArrivedEventArgs *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Perception.PerceptionColorFrameArrivedEventArgs.TryOpenFrame() */
 HRESULT wdepe_perception_color_frame_arrived_event_args_try_open_frame(WDEPE_PerceptionColorFrameArrivedEventArgs *self, WDEPE_PerceptionColorFrame** out);
 
-/* activate Windows.Devices.Perception.PerceptionColorFrameReader */
 HRESULT wdepe_perception_color_frame_reader_new(WDEPE_PerceptionColorFrameReader **out);
 
-/* Windows.Devices.Perception.PerceptionColorFrameReader */
-/* Windows.Devices.Perception.PerceptionColorFrameReader.get_Source() */
 HRESULT wdepe_perception_color_frame_reader_get__source(WDEPE_PerceptionColorFrameReader *self, WDEPE_PerceptionColorFrameSource** value);
 
-/* Windows.Devices.Perception.PerceptionColorFrameReader.get_IsPaused() */
 HRESULT wdepe_perception_color_frame_reader_get__is_paused(WDEPE_PerceptionColorFrameReader *self, BOOL *value);
 
-/* Windows.Devices.Perception.PerceptionColorFrameReader.put_IsPaused() */
 HRESULT wdepe_perception_color_frame_reader_put__is_paused(WDEPE_PerceptionColorFrameReader *self, BOOL value);
 
-/* Windows.Devices.Perception.PerceptionColorFrameReader.TryReadLatestFrame() */
 HRESULT wdepe_perception_color_frame_reader_try_read_latest_frame(WDEPE_PerceptionColorFrameReader *self, WDEPE_PerceptionColorFrame** out);
 
-/* Windows.Devices.Perception.PerceptionColorFrameReader.Close() */
 HRESULT wdepe_perception_color_frame_reader_close(WDEPE_PerceptionColorFrameReader *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdepe_perception_color_frame_reader_on_frame_arrived(WDEPE_PerceptionColorFrameReader *self, cwinrt_event_fn fn, void *ctx);
 void wdepe_perception_color_frame_reader_off_frame_arrived(WDEPE_PerceptionColorFrameReader *self, cwinrt_token token);
 
-/* activate Windows.Devices.Perception.PerceptionColorFrameSource */
 HRESULT wdepe_perception_color_frame_source_new(WDEPE_PerceptionColorFrameSource **out);
 
-/* Windows.Devices.Perception.PerceptionColorFrameSource */
-/* Windows.Devices.Perception.PerceptionColorFrameSource.get_Id() */
 HRESULT wdepe_perception_color_frame_source_get__id(WDEPE_PerceptionColorFrameSource *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.PerceptionColorFrameSource.get_DisplayName() */
 HRESULT wdepe_perception_color_frame_source_get__display_name(WDEPE_PerceptionColorFrameSource *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.PerceptionColorFrameSource.get_DeviceKind() */
 HRESULT wdepe_perception_color_frame_source_get__device_kind(WDEPE_PerceptionColorFrameSource *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.PerceptionColorFrameSource.get_Available() */
 HRESULT wdepe_perception_color_frame_source_get__available(WDEPE_PerceptionColorFrameSource *self, BOOL *value);
 
-/* Windows.Devices.Perception.PerceptionColorFrameSource.get_Active() */
 HRESULT wdepe_perception_color_frame_source_get__active(WDEPE_PerceptionColorFrameSource *self, BOOL *value);
 
-/* Windows.Devices.Perception.PerceptionColorFrameSource.get_IsControlled() */
 HRESULT wdepe_perception_color_frame_source_get__is_controlled(WDEPE_PerceptionColorFrameSource *self, BOOL *value);
 
-/* Windows.Devices.Perception.PerceptionColorFrameSource.get_Properties() */
 HRESULT wdepe_perception_color_frame_source_get__properties(WDEPE_PerceptionColorFrameSource *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* Windows.Devices.Perception.PerceptionColorFrameSource.get_SupportedVideoProfiles() */
 HRESULT wdepe_perception_color_frame_source_get__supported_video_profiles(WDEPE_PerceptionColorFrameSource *self, WFOCO_IVectorView_WDEPE_PerceptionVideoProfile** value);
 
-/* Windows.Devices.Perception.PerceptionColorFrameSource.get_AvailableVideoProfiles() */
 HRESULT wdepe_perception_color_frame_source_get__available_video_profiles(WDEPE_PerceptionColorFrameSource *self, WFOCO_IVectorView_WDEPE_PerceptionVideoProfile** value);
 
-/* Windows.Devices.Perception.PerceptionColorFrameSource.get_VideoProfile() */
 HRESULT wdepe_perception_color_frame_source_get__video_profile(WDEPE_PerceptionColorFrameSource *self, WDEPE_PerceptionVideoProfile** value);
 
-/* Windows.Devices.Perception.PerceptionColorFrameSource.get_CameraIntrinsics() */
 HRESULT wdepe_perception_color_frame_source_get__camera_intrinsics(WDEPE_PerceptionColorFrameSource *self, WMEDECO_CameraIntrinsics** value);
 
-/* Windows.Devices.Perception.PerceptionColorFrameSource.AcquireControlSession() */
 HRESULT wdepe_perception_color_frame_source_acquire_control_session(WDEPE_PerceptionColorFrameSource *self, WDEPE_PerceptionControlSession** out);
 
-/* Windows.Devices.Perception.PerceptionColorFrameSource.CanControlIndependentlyFrom(targetId) */
 HRESULT wdepe_perception_color_frame_source_can_control_independently_from(WDEPE_PerceptionColorFrameSource *self, cwinrt_hstring targetId, BOOL *out);
 
-/* Windows.Devices.Perception.PerceptionColorFrameSource.IsCorrelatedWith(targetId) */
 HRESULT wdepe_perception_color_frame_source_is_correlated_with(WDEPE_PerceptionColorFrameSource *self, cwinrt_hstring targetId, BOOL *out);
 
-/* Windows.Devices.Perception.PerceptionColorFrameSource.TryGetTransformTo(targetId, result) */
 HRESULT wdepe_perception_color_frame_source_try_get_transform_to(WDEPE_PerceptionColorFrameSource *self, cwinrt_hstring targetId, WFN_Matrix4x_4 result, BOOL *out);
 
-/* Windows.Devices.Perception.PerceptionColorFrameSource.TryGetDepthCorrelatedCameraIntrinsicsAsync(correlatedDepthFrameSource) */
 HRESULT wdepe_perception_color_frame_source_try_get_depth_correlated_camera_intrinsics_async(WDEPE_PerceptionColorFrameSource *self, WDEPE_PerceptionDepthFrameSource* correlatedDepthFrameSource, WF_IAsyncOperation_WDEPE_PerceptionDepthCorrelatedCameraIntrinsics** out);
 
-/* Windows.Devices.Perception.PerceptionColorFrameSource.TryGetDepthCorrelatedCoordinateMapperAsync(targetSourceId, correlatedDepthFrameSource) */
 HRESULT wdepe_perception_color_frame_source_try_get_depth_correlated_coordinate_mapper_async(WDEPE_PerceptionColorFrameSource *self, cwinrt_hstring targetSourceId, WDEPE_PerceptionDepthFrameSource* correlatedDepthFrameSource, WF_IAsyncOperation_WDEPE_PerceptionDepthCorrelatedCoordinateMapper** out);
 
-/* Windows.Devices.Perception.PerceptionColorFrameSource.TrySetVideoProfileAsync(controlSession, profile) */
 HRESULT wdepe_perception_color_frame_source_try_set_video_profile_async(WDEPE_PerceptionColorFrameSource *self, WDEPE_PerceptionControlSession* controlSession, WDEPE_PerceptionVideoProfile* profile, WF_IAsyncOperation_WDEPE_PerceptionFrameSourcePropertyChangeResult** out);
 
-/* Windows.Devices.Perception.PerceptionColorFrameSource.OpenReader() */
 HRESULT wdepe_perception_color_frame_source_open_reader(WDEPE_PerceptionColorFrameSource *self, WDEPE_PerceptionColorFrameReader** out);
 
-/* Windows.Devices.Perception.PerceptionColorFrameSource.get_DeviceId() */
 HRESULT wdepe_perception_color_frame_source_get__device_id(WDEPE_PerceptionColorFrameSource *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.PerceptionColorFrameSource.CreateWatcher() */
 HRESULT wdepe_perception_color_frame_source_create_watcher(WDEPE_PerceptionColorFrameSourceWatcher** out);
 
-/* Windows.Devices.Perception.PerceptionColorFrameSource.FindAllAsync() */
 HRESULT wdepe_perception_color_frame_source_find_all_async(WF_IAsyncOperation_WFOCO_IVectorView_WDEPE_PerceptionColorFrameSource** out);
 
-/* Windows.Devices.Perception.PerceptionColorFrameSource.FromIdAsync(id) */
 HRESULT wdepe_perception_color_frame_source_from_id_async(cwinrt_hstring id, WF_IAsyncOperation_WDEPE_PerceptionColorFrameSource** out);
 
-/* Windows.Devices.Perception.PerceptionColorFrameSource.RequestAccessAsync() */
 HRESULT wdepe_perception_color_frame_source_request_access_async(WF_IAsyncOperation_WDEPE_PerceptionFrameSourceAccessStatus** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdepe_perception_color_frame_source_on_available_changed(WDEPE_PerceptionColorFrameSource *self, cwinrt_event_fn fn, void *ctx);
@@ -912,34 +762,22 @@ void wdepe_perception_color_frame_source_off_video_profile_changed(WDEPE_Percept
 cwinrt_token wdepe_perception_color_frame_source_on_camera_intrinsics_changed(WDEPE_PerceptionColorFrameSource *self, cwinrt_event_fn fn, void *ctx);
 void wdepe_perception_color_frame_source_off_camera_intrinsics_changed(WDEPE_PerceptionColorFrameSource *self, cwinrt_token token);
 
-/* activate Windows.Devices.Perception.PerceptionColorFrameSourceAddedEventArgs */
 HRESULT wdepe_perception_color_frame_source_added_event_args_new(WDEPE_PerceptionColorFrameSourceAddedEventArgs **out);
 
-/* Windows.Devices.Perception.PerceptionColorFrameSourceAddedEventArgs */
-/* Windows.Devices.Perception.PerceptionColorFrameSourceAddedEventArgs.get_FrameSource() */
 HRESULT wdepe_perception_color_frame_source_added_event_args_get__frame_source(WDEPE_PerceptionColorFrameSourceAddedEventArgs *self, WDEPE_PerceptionColorFrameSource** value);
 
-/* activate Windows.Devices.Perception.PerceptionColorFrameSourceRemovedEventArgs */
 HRESULT wdepe_perception_color_frame_source_removed_event_args_new(WDEPE_PerceptionColorFrameSourceRemovedEventArgs **out);
 
-/* Windows.Devices.Perception.PerceptionColorFrameSourceRemovedEventArgs */
-/* Windows.Devices.Perception.PerceptionColorFrameSourceRemovedEventArgs.get_FrameSource() */
 HRESULT wdepe_perception_color_frame_source_removed_event_args_get__frame_source(WDEPE_PerceptionColorFrameSourceRemovedEventArgs *self, WDEPE_PerceptionColorFrameSource** value);
 
-/* activate Windows.Devices.Perception.PerceptionColorFrameSourceWatcher */
 HRESULT wdepe_perception_color_frame_source_watcher_new(WDEPE_PerceptionColorFrameSourceWatcher **out);
 
-/* Windows.Devices.Perception.PerceptionColorFrameSourceWatcher */
-/* Windows.Devices.Perception.PerceptionColorFrameSourceWatcher.get_Status() */
 HRESULT wdepe_perception_color_frame_source_watcher_get__status(WDEPE_PerceptionColorFrameSourceWatcher *self, WDEEN_DeviceWatcherStatus *value);
 
-/* Windows.Devices.Perception.PerceptionColorFrameSourceWatcher.Start() */
 HRESULT wdepe_perception_color_frame_source_watcher_start(WDEPE_PerceptionColorFrameSourceWatcher *self);
 
-/* Windows.Devices.Perception.PerceptionColorFrameSourceWatcher.Stop() */
 HRESULT wdepe_perception_color_frame_source_watcher_stop(WDEPE_PerceptionColorFrameSourceWatcher *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdepe_perception_color_frame_source_watcher_on_source_added(WDEPE_PerceptionColorFrameSourceWatcher *self, cwinrt_event_fn fn, void *ctx);
@@ -954,176 +792,116 @@ void wdepe_perception_color_frame_source_watcher_off_stopped(WDEPE_PerceptionCol
 cwinrt_token wdepe_perception_color_frame_source_watcher_on_enumeration_completed(WDEPE_PerceptionColorFrameSourceWatcher *self, cwinrt_event_fn fn, void *ctx);
 void wdepe_perception_color_frame_source_watcher_off_enumeration_completed(WDEPE_PerceptionColorFrameSourceWatcher *self, cwinrt_token token);
 
-/* activate Windows.Devices.Perception.PerceptionControlSession */
 HRESULT wdepe_perception_control_session_new(WDEPE_PerceptionControlSession **out);
 
-/* Windows.Devices.Perception.PerceptionControlSession */
-/* Windows.Devices.Perception.PerceptionControlSession.TrySetPropertyAsync(name) */
 HRESULT wdepe_perception_control_session_try_set_property_async(WDEPE_PerceptionControlSession *self, cwinrt_hstring name, IInspectable* value, WF_IAsyncOperation_WDEPE_PerceptionFrameSourcePropertyChangeResult** out);
 
-/* Windows.Devices.Perception.PerceptionControlSession.Close() */
 HRESULT wdepe_perception_control_session_close(WDEPE_PerceptionControlSession *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdepe_perception_control_session_on_control_lost(WDEPE_PerceptionControlSession *self, cwinrt_event_fn fn, void *ctx);
 void wdepe_perception_control_session_off_control_lost(WDEPE_PerceptionControlSession *self, cwinrt_token token);
 
-/* activate Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics */
 HRESULT wdepe_perception_depth_correlated_camera_intrinsics_new(WDEPE_PerceptionDepthCorrelatedCameraIntrinsics **out);
 
-/* Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics */
-/* Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics.UnprojectPixelAtCorrelatedDepth(pixelCoordinate, depthFrame) */
 HRESULT wdepe_perception_depth_correlated_camera_intrinsics_unproject_pixel_at_correlated_depth(WDEPE_PerceptionDepthCorrelatedCameraIntrinsics *self, WF_Point pixelCoordinate, WDEPE_PerceptionDepthFrame* depthFrame, WFN_Vector_3 *out);
 
-/* Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics.UnprojectPixelsAtCorrelatedDepth(sourceCoordinates, depthFrame, results) */
 HRESULT wdepe_perception_depth_correlated_camera_intrinsics_unproject_pixels_at_correlated_depth(WDEPE_PerceptionDepthCorrelatedCameraIntrinsics *self, WF_Point *sourceCoordinates, uint32_t sourceCoordinates_len, WDEPE_PerceptionDepthFrame* depthFrame, WFN_Vector_3 *results, uint32_t results_len);
 
-/* Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics.UnprojectRegionPixelsAtCorrelatedDepthAsync(region, depthFrame, results) */
 HRESULT wdepe_perception_depth_correlated_camera_intrinsics_unproject_region_pixels_at_correlated_depth_async(WDEPE_PerceptionDepthCorrelatedCameraIntrinsics *self, WF_Rect region, WDEPE_PerceptionDepthFrame* depthFrame, WFN_Vector_3 *results, uint32_t results_len, WF_IAsyncAction** out);
 
-/* Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics.UnprojectAllPixelsAtCorrelatedDepthAsync(depthFrame, results) */
 HRESULT wdepe_perception_depth_correlated_camera_intrinsics_unproject_all_pixels_at_correlated_depth_async(WDEPE_PerceptionDepthCorrelatedCameraIntrinsics *self, WDEPE_PerceptionDepthFrame* depthFrame, WFN_Vector_3 *results, uint32_t results_len, WF_IAsyncAction** out);
 
-/* activate Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper */
 HRESULT wdepe_perception_depth_correlated_coordinate_mapper_new(WDEPE_PerceptionDepthCorrelatedCoordinateMapper **out);
 
-/* Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper */
-/* Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper.MapPixelToTarget(sourcePixelCoordinate, depthFrame) */
 HRESULT wdepe_perception_depth_correlated_coordinate_mapper_map_pixel_to_target(WDEPE_PerceptionDepthCorrelatedCoordinateMapper *self, WF_Point sourcePixelCoordinate, WDEPE_PerceptionDepthFrame* depthFrame, WF_Point *out);
 
-/* Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper.MapPixelsToTarget(sourceCoordinates, depthFrame, results) */
 HRESULT wdepe_perception_depth_correlated_coordinate_mapper_map_pixels_to_target(WDEPE_PerceptionDepthCorrelatedCoordinateMapper *self, WF_Point *sourceCoordinates, uint32_t sourceCoordinates_len, WDEPE_PerceptionDepthFrame* depthFrame, WF_Point *results, uint32_t results_len);
 
-/* Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper.MapRegionOfPixelsToTargetAsync(region, depthFrame, targetCoordinates) */
 HRESULT wdepe_perception_depth_correlated_coordinate_mapper_map_region_of_pixels_to_target_async(WDEPE_PerceptionDepthCorrelatedCoordinateMapper *self, WF_Rect region, WDEPE_PerceptionDepthFrame* depthFrame, WF_Point *targetCoordinates, uint32_t targetCoordinates_len, WF_IAsyncAction** out);
 
-/* Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper.MapAllPixelsToTargetAsync(depthFrame, targetCoordinates) */
 HRESULT wdepe_perception_depth_correlated_coordinate_mapper_map_all_pixels_to_target_async(WDEPE_PerceptionDepthCorrelatedCoordinateMapper *self, WDEPE_PerceptionDepthFrame* depthFrame, WF_Point *targetCoordinates, uint32_t targetCoordinates_len, WF_IAsyncAction** out);
 
-/* activate Windows.Devices.Perception.PerceptionDepthFrame */
 HRESULT wdepe_perception_depth_frame_new(WDEPE_PerceptionDepthFrame **out);
 
-/* Windows.Devices.Perception.PerceptionDepthFrame */
-/* Windows.Devices.Perception.PerceptionDepthFrame.get_VideoFrame() */
 HRESULT wdepe_perception_depth_frame_get__video_frame(WDEPE_PerceptionDepthFrame *self, WME_VideoFrame** value);
 
-/* Windows.Devices.Perception.PerceptionDepthFrame.Close() */
 HRESULT wdepe_perception_depth_frame_close(WDEPE_PerceptionDepthFrame *self);
 
-/* activate Windows.Devices.Perception.PerceptionDepthFrameArrivedEventArgs */
 HRESULT wdepe_perception_depth_frame_arrived_event_args_new(WDEPE_PerceptionDepthFrameArrivedEventArgs **out);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameArrivedEventArgs */
-/* Windows.Devices.Perception.PerceptionDepthFrameArrivedEventArgs.get_RelativeTime() */
 HRESULT wdepe_perception_depth_frame_arrived_event_args_get__relative_time(WDEPE_PerceptionDepthFrameArrivedEventArgs *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameArrivedEventArgs.TryOpenFrame() */
 HRESULT wdepe_perception_depth_frame_arrived_event_args_try_open_frame(WDEPE_PerceptionDepthFrameArrivedEventArgs *self, WDEPE_PerceptionDepthFrame** out);
 
-/* activate Windows.Devices.Perception.PerceptionDepthFrameReader */
 HRESULT wdepe_perception_depth_frame_reader_new(WDEPE_PerceptionDepthFrameReader **out);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameReader */
-/* Windows.Devices.Perception.PerceptionDepthFrameReader.get_Source() */
 HRESULT wdepe_perception_depth_frame_reader_get__source(WDEPE_PerceptionDepthFrameReader *self, WDEPE_PerceptionDepthFrameSource** value);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameReader.get_IsPaused() */
 HRESULT wdepe_perception_depth_frame_reader_get__is_paused(WDEPE_PerceptionDepthFrameReader *self, BOOL *value);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameReader.put_IsPaused() */
 HRESULT wdepe_perception_depth_frame_reader_put__is_paused(WDEPE_PerceptionDepthFrameReader *self, BOOL value);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameReader.TryReadLatestFrame() */
 HRESULT wdepe_perception_depth_frame_reader_try_read_latest_frame(WDEPE_PerceptionDepthFrameReader *self, WDEPE_PerceptionDepthFrame** out);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameReader.Close() */
 HRESULT wdepe_perception_depth_frame_reader_close(WDEPE_PerceptionDepthFrameReader *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdepe_perception_depth_frame_reader_on_frame_arrived(WDEPE_PerceptionDepthFrameReader *self, cwinrt_event_fn fn, void *ctx);
 void wdepe_perception_depth_frame_reader_off_frame_arrived(WDEPE_PerceptionDepthFrameReader *self, cwinrt_token token);
 
-/* activate Windows.Devices.Perception.PerceptionDepthFrameSource */
 HRESULT wdepe_perception_depth_frame_source_new(WDEPE_PerceptionDepthFrameSource **out);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameSource */
-/* Windows.Devices.Perception.PerceptionDepthFrameSource.get_Id() */
 HRESULT wdepe_perception_depth_frame_source_get__id(WDEPE_PerceptionDepthFrameSource *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameSource.get_DisplayName() */
 HRESULT wdepe_perception_depth_frame_source_get__display_name(WDEPE_PerceptionDepthFrameSource *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameSource.get_DeviceKind() */
 HRESULT wdepe_perception_depth_frame_source_get__device_kind(WDEPE_PerceptionDepthFrameSource *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameSource.get_Available() */
 HRESULT wdepe_perception_depth_frame_source_get__available(WDEPE_PerceptionDepthFrameSource *self, BOOL *value);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameSource.get_Active() */
 HRESULT wdepe_perception_depth_frame_source_get__active(WDEPE_PerceptionDepthFrameSource *self, BOOL *value);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameSource.get_IsControlled() */
 HRESULT wdepe_perception_depth_frame_source_get__is_controlled(WDEPE_PerceptionDepthFrameSource *self, BOOL *value);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameSource.get_Properties() */
 HRESULT wdepe_perception_depth_frame_source_get__properties(WDEPE_PerceptionDepthFrameSource *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameSource.get_SupportedVideoProfiles() */
 HRESULT wdepe_perception_depth_frame_source_get__supported_video_profiles(WDEPE_PerceptionDepthFrameSource *self, WFOCO_IVectorView_WDEPE_PerceptionVideoProfile** value);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameSource.get_AvailableVideoProfiles() */
 HRESULT wdepe_perception_depth_frame_source_get__available_video_profiles(WDEPE_PerceptionDepthFrameSource *self, WFOCO_IVectorView_WDEPE_PerceptionVideoProfile** value);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameSource.get_VideoProfile() */
 HRESULT wdepe_perception_depth_frame_source_get__video_profile(WDEPE_PerceptionDepthFrameSource *self, WDEPE_PerceptionVideoProfile** value);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameSource.get_CameraIntrinsics() */
 HRESULT wdepe_perception_depth_frame_source_get__camera_intrinsics(WDEPE_PerceptionDepthFrameSource *self, WMEDECO_CameraIntrinsics** value);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameSource.AcquireControlSession() */
 HRESULT wdepe_perception_depth_frame_source_acquire_control_session(WDEPE_PerceptionDepthFrameSource *self, WDEPE_PerceptionControlSession** out);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameSource.CanControlIndependentlyFrom(targetId) */
 HRESULT wdepe_perception_depth_frame_source_can_control_independently_from(WDEPE_PerceptionDepthFrameSource *self, cwinrt_hstring targetId, BOOL *out);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameSource.IsCorrelatedWith(targetId) */
 HRESULT wdepe_perception_depth_frame_source_is_correlated_with(WDEPE_PerceptionDepthFrameSource *self, cwinrt_hstring targetId, BOOL *out);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameSource.TryGetTransformTo(targetId, result) */
 HRESULT wdepe_perception_depth_frame_source_try_get_transform_to(WDEPE_PerceptionDepthFrameSource *self, cwinrt_hstring targetId, WFN_Matrix4x_4 result, BOOL *out);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameSource.TryGetDepthCorrelatedCameraIntrinsicsAsync(target) */
 HRESULT wdepe_perception_depth_frame_source_try_get_depth_correlated_camera_intrinsics_async(WDEPE_PerceptionDepthFrameSource *self, WDEPE_PerceptionDepthFrameSource* target, WF_IAsyncOperation_WDEPE_PerceptionDepthCorrelatedCameraIntrinsics** out);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameSource.TryGetDepthCorrelatedCoordinateMapperAsync(targetId, depthFrameSourceToMapWith) */
 HRESULT wdepe_perception_depth_frame_source_try_get_depth_correlated_coordinate_mapper_async(WDEPE_PerceptionDepthFrameSource *self, cwinrt_hstring targetId, WDEPE_PerceptionDepthFrameSource* depthFrameSourceToMapWith, WF_IAsyncOperation_WDEPE_PerceptionDepthCorrelatedCoordinateMapper** out);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameSource.TrySetVideoProfileAsync(controlSession, profile) */
 HRESULT wdepe_perception_depth_frame_source_try_set_video_profile_async(WDEPE_PerceptionDepthFrameSource *self, WDEPE_PerceptionControlSession* controlSession, WDEPE_PerceptionVideoProfile* profile, WF_IAsyncOperation_WDEPE_PerceptionFrameSourcePropertyChangeResult** out);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameSource.OpenReader() */
 HRESULT wdepe_perception_depth_frame_source_open_reader(WDEPE_PerceptionDepthFrameSource *self, WDEPE_PerceptionDepthFrameReader** out);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameSource.get_DeviceId() */
 HRESULT wdepe_perception_depth_frame_source_get__device_id(WDEPE_PerceptionDepthFrameSource *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameSource.CreateWatcher() */
 HRESULT wdepe_perception_depth_frame_source_create_watcher(WDEPE_PerceptionDepthFrameSourceWatcher** out);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameSource.FindAllAsync() */
 HRESULT wdepe_perception_depth_frame_source_find_all_async(WF_IAsyncOperation_WFOCO_IVectorView_WDEPE_PerceptionDepthFrameSource** out);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameSource.FromIdAsync(id) */
 HRESULT wdepe_perception_depth_frame_source_from_id_async(cwinrt_hstring id, WF_IAsyncOperation_WDEPE_PerceptionDepthFrameSource** out);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameSource.RequestAccessAsync() */
 HRESULT wdepe_perception_depth_frame_source_request_access_async(WF_IAsyncOperation_WDEPE_PerceptionFrameSourceAccessStatus** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdepe_perception_depth_frame_source_on_available_changed(WDEPE_PerceptionDepthFrameSource *self, cwinrt_event_fn fn, void *ctx);
@@ -1141,34 +919,22 @@ void wdepe_perception_depth_frame_source_off_video_profile_changed(WDEPE_Percept
 cwinrt_token wdepe_perception_depth_frame_source_on_camera_intrinsics_changed(WDEPE_PerceptionDepthFrameSource *self, cwinrt_event_fn fn, void *ctx);
 void wdepe_perception_depth_frame_source_off_camera_intrinsics_changed(WDEPE_PerceptionDepthFrameSource *self, cwinrt_token token);
 
-/* activate Windows.Devices.Perception.PerceptionDepthFrameSourceAddedEventArgs */
 HRESULT wdepe_perception_depth_frame_source_added_event_args_new(WDEPE_PerceptionDepthFrameSourceAddedEventArgs **out);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameSourceAddedEventArgs */
-/* Windows.Devices.Perception.PerceptionDepthFrameSourceAddedEventArgs.get_FrameSource() */
 HRESULT wdepe_perception_depth_frame_source_added_event_args_get__frame_source(WDEPE_PerceptionDepthFrameSourceAddedEventArgs *self, WDEPE_PerceptionDepthFrameSource** value);
 
-/* activate Windows.Devices.Perception.PerceptionDepthFrameSourceRemovedEventArgs */
 HRESULT wdepe_perception_depth_frame_source_removed_event_args_new(WDEPE_PerceptionDepthFrameSourceRemovedEventArgs **out);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameSourceRemovedEventArgs */
-/* Windows.Devices.Perception.PerceptionDepthFrameSourceRemovedEventArgs.get_FrameSource() */
 HRESULT wdepe_perception_depth_frame_source_removed_event_args_get__frame_source(WDEPE_PerceptionDepthFrameSourceRemovedEventArgs *self, WDEPE_PerceptionDepthFrameSource** value);
 
-/* activate Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher */
 HRESULT wdepe_perception_depth_frame_source_watcher_new(WDEPE_PerceptionDepthFrameSourceWatcher **out);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher */
-/* Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher.get_Status() */
 HRESULT wdepe_perception_depth_frame_source_watcher_get__status(WDEPE_PerceptionDepthFrameSourceWatcher *self, WDEEN_DeviceWatcherStatus *value);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher.Start() */
 HRESULT wdepe_perception_depth_frame_source_watcher_start(WDEPE_PerceptionDepthFrameSourceWatcher *self);
 
-/* Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher.Stop() */
 HRESULT wdepe_perception_depth_frame_source_watcher_stop(WDEPE_PerceptionDepthFrameSourceWatcher *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdepe_perception_depth_frame_source_watcher_on_source_added(WDEPE_PerceptionDepthFrameSourceWatcher *self, cwinrt_event_fn fn, void *ctx);
@@ -1183,148 +949,97 @@ void wdepe_perception_depth_frame_source_watcher_off_stopped(WDEPE_PerceptionDep
 cwinrt_token wdepe_perception_depth_frame_source_watcher_on_enumeration_completed(WDEPE_PerceptionDepthFrameSourceWatcher *self, cwinrt_event_fn fn, void *ctx);
 void wdepe_perception_depth_frame_source_watcher_off_enumeration_completed(WDEPE_PerceptionDepthFrameSourceWatcher *self, cwinrt_token token);
 
-/* activate Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs */
 HRESULT wdepe_perception_frame_source_properties_changed_event_args_new(WDEPE_PerceptionFrameSourcePropertiesChangedEventArgs **out);
 
-/* Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs */
-/* Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs.get_CollectionChange() */
 HRESULT wdepe_perception_frame_source_properties_changed_event_args_get__collection_change(WDEPE_PerceptionFrameSourcePropertiesChangedEventArgs *self, WFOCO_CollectionChange *value);
 
-/* Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs.get_Key() */
 HRESULT wdepe_perception_frame_source_properties_changed_event_args_get__key(WDEPE_PerceptionFrameSourcePropertiesChangedEventArgs *self, cwinrt_hstring *value);
 
-/* activate Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult */
 HRESULT wdepe_perception_frame_source_property_change_result_new(WDEPE_PerceptionFrameSourcePropertyChangeResult **out);
 
-/* Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult */
-/* Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult.get_Status() */
 HRESULT wdepe_perception_frame_source_property_change_result_get__status(WDEPE_PerceptionFrameSourcePropertyChangeResult *self, WDEPE_PerceptionFrameSourcePropertyChangeStatus *value);
 
-/* Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult.get_NewValue() */
 HRESULT wdepe_perception_frame_source_property_change_result_get__new_value(WDEPE_PerceptionFrameSourcePropertyChangeResult *self, IInspectable** value);
 
-/* activate Windows.Devices.Perception.PerceptionInfraredFrame */
 HRESULT wdepe_perception_infrared_frame_new(WDEPE_PerceptionInfraredFrame **out);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrame */
-/* Windows.Devices.Perception.PerceptionInfraredFrame.get_VideoFrame() */
 HRESULT wdepe_perception_infrared_frame_get__video_frame(WDEPE_PerceptionInfraredFrame *self, WME_VideoFrame** value);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrame.Close() */
 HRESULT wdepe_perception_infrared_frame_close(WDEPE_PerceptionInfraredFrame *self);
 
-/* activate Windows.Devices.Perception.PerceptionInfraredFrameArrivedEventArgs */
 HRESULT wdepe_perception_infrared_frame_arrived_event_args_new(WDEPE_PerceptionInfraredFrameArrivedEventArgs **out);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameArrivedEventArgs */
-/* Windows.Devices.Perception.PerceptionInfraredFrameArrivedEventArgs.get_RelativeTime() */
 HRESULT wdepe_perception_infrared_frame_arrived_event_args_get__relative_time(WDEPE_PerceptionInfraredFrameArrivedEventArgs *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameArrivedEventArgs.TryOpenFrame() */
 HRESULT wdepe_perception_infrared_frame_arrived_event_args_try_open_frame(WDEPE_PerceptionInfraredFrameArrivedEventArgs *self, WDEPE_PerceptionInfraredFrame** out);
 
-/* activate Windows.Devices.Perception.PerceptionInfraredFrameReader */
 HRESULT wdepe_perception_infrared_frame_reader_new(WDEPE_PerceptionInfraredFrameReader **out);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameReader */
-/* Windows.Devices.Perception.PerceptionInfraredFrameReader.get_Source() */
 HRESULT wdepe_perception_infrared_frame_reader_get__source(WDEPE_PerceptionInfraredFrameReader *self, WDEPE_PerceptionInfraredFrameSource** value);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameReader.get_IsPaused() */
 HRESULT wdepe_perception_infrared_frame_reader_get__is_paused(WDEPE_PerceptionInfraredFrameReader *self, BOOL *value);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameReader.put_IsPaused() */
 HRESULT wdepe_perception_infrared_frame_reader_put__is_paused(WDEPE_PerceptionInfraredFrameReader *self, BOOL value);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameReader.TryReadLatestFrame() */
 HRESULT wdepe_perception_infrared_frame_reader_try_read_latest_frame(WDEPE_PerceptionInfraredFrameReader *self, WDEPE_PerceptionInfraredFrame** out);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameReader.Close() */
 HRESULT wdepe_perception_infrared_frame_reader_close(WDEPE_PerceptionInfraredFrameReader *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdepe_perception_infrared_frame_reader_on_frame_arrived(WDEPE_PerceptionInfraredFrameReader *self, cwinrt_event_fn fn, void *ctx);
 void wdepe_perception_infrared_frame_reader_off_frame_arrived(WDEPE_PerceptionInfraredFrameReader *self, cwinrt_token token);
 
-/* activate Windows.Devices.Perception.PerceptionInfraredFrameSource */
 HRESULT wdepe_perception_infrared_frame_source_new(WDEPE_PerceptionInfraredFrameSource **out);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameSource */
-/* Windows.Devices.Perception.PerceptionInfraredFrameSource.get_Id() */
 HRESULT wdepe_perception_infrared_frame_source_get__id(WDEPE_PerceptionInfraredFrameSource *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameSource.get_DisplayName() */
 HRESULT wdepe_perception_infrared_frame_source_get__display_name(WDEPE_PerceptionInfraredFrameSource *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameSource.get_DeviceKind() */
 HRESULT wdepe_perception_infrared_frame_source_get__device_kind(WDEPE_PerceptionInfraredFrameSource *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameSource.get_Available() */
 HRESULT wdepe_perception_infrared_frame_source_get__available(WDEPE_PerceptionInfraredFrameSource *self, BOOL *value);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameSource.get_Active() */
 HRESULT wdepe_perception_infrared_frame_source_get__active(WDEPE_PerceptionInfraredFrameSource *self, BOOL *value);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameSource.get_IsControlled() */
 HRESULT wdepe_perception_infrared_frame_source_get__is_controlled(WDEPE_PerceptionInfraredFrameSource *self, BOOL *value);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameSource.get_Properties() */
 HRESULT wdepe_perception_infrared_frame_source_get__properties(WDEPE_PerceptionInfraredFrameSource *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameSource.get_SupportedVideoProfiles() */
 HRESULT wdepe_perception_infrared_frame_source_get__supported_video_profiles(WDEPE_PerceptionInfraredFrameSource *self, WFOCO_IVectorView_WDEPE_PerceptionVideoProfile** value);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameSource.get_AvailableVideoProfiles() */
 HRESULT wdepe_perception_infrared_frame_source_get__available_video_profiles(WDEPE_PerceptionInfraredFrameSource *self, WFOCO_IVectorView_WDEPE_PerceptionVideoProfile** value);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameSource.get_VideoProfile() */
 HRESULT wdepe_perception_infrared_frame_source_get__video_profile(WDEPE_PerceptionInfraredFrameSource *self, WDEPE_PerceptionVideoProfile** value);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameSource.get_CameraIntrinsics() */
 HRESULT wdepe_perception_infrared_frame_source_get__camera_intrinsics(WDEPE_PerceptionInfraredFrameSource *self, WMEDECO_CameraIntrinsics** value);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameSource.AcquireControlSession() */
 HRESULT wdepe_perception_infrared_frame_source_acquire_control_session(WDEPE_PerceptionInfraredFrameSource *self, WDEPE_PerceptionControlSession** out);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameSource.CanControlIndependentlyFrom(targetId) */
 HRESULT wdepe_perception_infrared_frame_source_can_control_independently_from(WDEPE_PerceptionInfraredFrameSource *self, cwinrt_hstring targetId, BOOL *out);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameSource.IsCorrelatedWith(targetId) */
 HRESULT wdepe_perception_infrared_frame_source_is_correlated_with(WDEPE_PerceptionInfraredFrameSource *self, cwinrt_hstring targetId, BOOL *out);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameSource.TryGetTransformTo(targetId, result) */
 HRESULT wdepe_perception_infrared_frame_source_try_get_transform_to(WDEPE_PerceptionInfraredFrameSource *self, cwinrt_hstring targetId, WFN_Matrix4x_4 result, BOOL *out);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameSource.TryGetDepthCorrelatedCameraIntrinsicsAsync(target) */
 HRESULT wdepe_perception_infrared_frame_source_try_get_depth_correlated_camera_intrinsics_async(WDEPE_PerceptionInfraredFrameSource *self, WDEPE_PerceptionDepthFrameSource* target, WF_IAsyncOperation_WDEPE_PerceptionDepthCorrelatedCameraIntrinsics** out);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameSource.TryGetDepthCorrelatedCoordinateMapperAsync(targetId, depthFrameSourceToMapWith) */
 HRESULT wdepe_perception_infrared_frame_source_try_get_depth_correlated_coordinate_mapper_async(WDEPE_PerceptionInfraredFrameSource *self, cwinrt_hstring targetId, WDEPE_PerceptionDepthFrameSource* depthFrameSourceToMapWith, WF_IAsyncOperation_WDEPE_PerceptionDepthCorrelatedCoordinateMapper** out);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameSource.TrySetVideoProfileAsync(controlSession, profile) */
 HRESULT wdepe_perception_infrared_frame_source_try_set_video_profile_async(WDEPE_PerceptionInfraredFrameSource *self, WDEPE_PerceptionControlSession* controlSession, WDEPE_PerceptionVideoProfile* profile, WF_IAsyncOperation_WDEPE_PerceptionFrameSourcePropertyChangeResult** out);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameSource.OpenReader() */
 HRESULT wdepe_perception_infrared_frame_source_open_reader(WDEPE_PerceptionInfraredFrameSource *self, WDEPE_PerceptionInfraredFrameReader** out);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameSource.get_DeviceId() */
 HRESULT wdepe_perception_infrared_frame_source_get__device_id(WDEPE_PerceptionInfraredFrameSource *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameSource.CreateWatcher() */
 HRESULT wdepe_perception_infrared_frame_source_create_watcher(WDEPE_PerceptionInfraredFrameSourceWatcher** out);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameSource.FindAllAsync() */
 HRESULT wdepe_perception_infrared_frame_source_find_all_async(WF_IAsyncOperation_WFOCO_IVectorView_WDEPE_PerceptionInfraredFrameSource** out);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameSource.FromIdAsync(id) */
 HRESULT wdepe_perception_infrared_frame_source_from_id_async(cwinrt_hstring id, WF_IAsyncOperation_WDEPE_PerceptionInfraredFrameSource** out);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameSource.RequestAccessAsync() */
 HRESULT wdepe_perception_infrared_frame_source_request_access_async(WF_IAsyncOperation_WDEPE_PerceptionFrameSourceAccessStatus** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdepe_perception_infrared_frame_source_on_available_changed(WDEPE_PerceptionInfraredFrameSource *self, cwinrt_event_fn fn, void *ctx);
@@ -1342,34 +1057,22 @@ void wdepe_perception_infrared_frame_source_off_video_profile_changed(WDEPE_Perc
 cwinrt_token wdepe_perception_infrared_frame_source_on_camera_intrinsics_changed(WDEPE_PerceptionInfraredFrameSource *self, cwinrt_event_fn fn, void *ctx);
 void wdepe_perception_infrared_frame_source_off_camera_intrinsics_changed(WDEPE_PerceptionInfraredFrameSource *self, cwinrt_token token);
 
-/* activate Windows.Devices.Perception.PerceptionInfraredFrameSourceAddedEventArgs */
 HRESULT wdepe_perception_infrared_frame_source_added_event_args_new(WDEPE_PerceptionInfraredFrameSourceAddedEventArgs **out);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameSourceAddedEventArgs */
-/* Windows.Devices.Perception.PerceptionInfraredFrameSourceAddedEventArgs.get_FrameSource() */
 HRESULT wdepe_perception_infrared_frame_source_added_event_args_get__frame_source(WDEPE_PerceptionInfraredFrameSourceAddedEventArgs *self, WDEPE_PerceptionInfraredFrameSource** value);
 
-/* activate Windows.Devices.Perception.PerceptionInfraredFrameSourceRemovedEventArgs */
 HRESULT wdepe_perception_infrared_frame_source_removed_event_args_new(WDEPE_PerceptionInfraredFrameSourceRemovedEventArgs **out);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameSourceRemovedEventArgs */
-/* Windows.Devices.Perception.PerceptionInfraredFrameSourceRemovedEventArgs.get_FrameSource() */
 HRESULT wdepe_perception_infrared_frame_source_removed_event_args_get__frame_source(WDEPE_PerceptionInfraredFrameSourceRemovedEventArgs *self, WDEPE_PerceptionInfraredFrameSource** value);
 
-/* activate Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher */
 HRESULT wdepe_perception_infrared_frame_source_watcher_new(WDEPE_PerceptionInfraredFrameSourceWatcher **out);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher */
-/* Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher.get_Status() */
 HRESULT wdepe_perception_infrared_frame_source_watcher_get__status(WDEPE_PerceptionInfraredFrameSourceWatcher *self, WDEEN_DeviceWatcherStatus *value);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher.Start() */
 HRESULT wdepe_perception_infrared_frame_source_watcher_start(WDEPE_PerceptionInfraredFrameSourceWatcher *self);
 
-/* Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher.Stop() */
 HRESULT wdepe_perception_infrared_frame_source_watcher_stop(WDEPE_PerceptionInfraredFrameSourceWatcher *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdepe_perception_infrared_frame_source_watcher_on_source_added(WDEPE_PerceptionInfraredFrameSourceWatcher *self, cwinrt_event_fn fn, void *ctx);
@@ -1384,65 +1087,24 @@ void wdepe_perception_infrared_frame_source_watcher_off_stopped(WDEPE_Perception
 cwinrt_token wdepe_perception_infrared_frame_source_watcher_on_enumeration_completed(WDEPE_PerceptionInfraredFrameSourceWatcher *self, cwinrt_event_fn fn, void *ctx);
 void wdepe_perception_infrared_frame_source_watcher_off_enumeration_completed(WDEPE_PerceptionInfraredFrameSourceWatcher *self, cwinrt_token token);
 
-/* activate Windows.Devices.Perception.PerceptionVideoProfile */
 HRESULT wdepe_perception_video_profile_new(WDEPE_PerceptionVideoProfile **out);
 
-/* Windows.Devices.Perception.PerceptionVideoProfile */
-/* Windows.Devices.Perception.PerceptionVideoProfile.get_BitmapPixelFormat() */
 HRESULT wdepe_perception_video_profile_get__bitmap_pixel_format(WDEPE_PerceptionVideoProfile *self, WGRIM_BitmapPixelFormat *value);
 
-/* Windows.Devices.Perception.PerceptionVideoProfile.get_BitmapAlphaMode() */
 HRESULT wdepe_perception_video_profile_get__bitmap_alpha_mode(WDEPE_PerceptionVideoProfile *self, WGRIM_BitmapAlphaMode *value);
 
-/* Windows.Devices.Perception.PerceptionVideoProfile.get_Width() */
 HRESULT wdepe_perception_video_profile_get__width(WDEPE_PerceptionVideoProfile *self, int32_t *value);
 
-/* Windows.Devices.Perception.PerceptionVideoProfile.get_Height() */
 HRESULT wdepe_perception_video_profile_get__height(WDEPE_PerceptionVideoProfile *self, int32_t *value);
 
-/* Windows.Devices.Perception.PerceptionVideoProfile.get_FrameDuration() */
 HRESULT wdepe_perception_video_profile_get__frame_duration(WDEPE_PerceptionVideoProfile *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Perception.PerceptionVideoProfile.IsEqual(other) */
 HRESULT wdepe_perception_video_profile_is_equal(WDEPE_PerceptionVideoProfile *self, WDEPE_PerceptionVideoProfile* other, BOOL *out);
 
-/* Windows.Devices.Perception.IPerceptionColorFrame */
-/* Windows.Devices.Perception.IPerceptionColorFrameArrivedEventArgs */
-/* Windows.Devices.Perception.IPerceptionColorFrameReader */
-/* Windows.Devices.Perception.IPerceptionColorFrameSource */
-/* Windows.Devices.Perception.IPerceptionColorFrameSource2 */
-/* Windows.Devices.Perception.IPerceptionColorFrameSource2.get_DeviceId() */
 HRESULT wdepe_perception_color_frame_source_2_get__device_id(WDEPE_IPerceptionColorFrameSource_2 *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IPerceptionColorFrameSourceAddedEventArgs */
-/* Windows.Devices.Perception.IPerceptionColorFrameSourceRemovedEventArgs */
-/* Windows.Devices.Perception.IPerceptionColorFrameSourceWatcher */
-/* Windows.Devices.Perception.IPerceptionControlSession */
-/* Windows.Devices.Perception.IPerceptionDepthCorrelatedCameraIntrinsics */
-/* Windows.Devices.Perception.IPerceptionDepthCorrelatedCoordinateMapper */
-/* Windows.Devices.Perception.IPerceptionDepthFrame */
-/* Windows.Devices.Perception.IPerceptionDepthFrameArrivedEventArgs */
-/* Windows.Devices.Perception.IPerceptionDepthFrameReader */
-/* Windows.Devices.Perception.IPerceptionDepthFrameSource */
-/* Windows.Devices.Perception.IPerceptionDepthFrameSource2 */
-/* Windows.Devices.Perception.IPerceptionDepthFrameSource2.get_DeviceId() */
 HRESULT wdepe_perception_depth_frame_source_2_get__device_id(WDEPE_IPerceptionDepthFrameSource_2 *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IPerceptionDepthFrameSourceAddedEventArgs */
-/* Windows.Devices.Perception.IPerceptionDepthFrameSourceRemovedEventArgs */
-/* Windows.Devices.Perception.IPerceptionDepthFrameSourceWatcher */
-/* Windows.Devices.Perception.IPerceptionFrameSourcePropertiesChangedEventArgs */
-/* Windows.Devices.Perception.IPerceptionFrameSourcePropertyChangeResult */
-/* Windows.Devices.Perception.IPerceptionInfraredFrame */
-/* Windows.Devices.Perception.IPerceptionInfraredFrameArrivedEventArgs */
-/* Windows.Devices.Perception.IPerceptionInfraredFrameReader */
-/* Windows.Devices.Perception.IPerceptionInfraredFrameSource */
-/* Windows.Devices.Perception.IPerceptionInfraredFrameSource2 */
-/* Windows.Devices.Perception.IPerceptionInfraredFrameSource2.get_DeviceId() */
 HRESULT wdepe_perception_infrared_frame_source_2_get__device_id(WDEPE_IPerceptionInfraredFrameSource_2 *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Perception.IPerceptionInfraredFrameSourceAddedEventArgs */
-/* Windows.Devices.Perception.IPerceptionInfraredFrameSourceRemovedEventArgs */
-/* Windows.Devices.Perception.IPerceptionInfraredFrameSourceWatcher */
-/* Windows.Devices.Perception.IPerceptionVideoProfile */
 #endif /* CWINRT_WINDOWS_DEVICES_PERCEPTION_H */

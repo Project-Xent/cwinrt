@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WAPAC_IActivatedEventArgs
 #define CWINRT_FWD_WAPAC_IActivatedEventArgs
 typedef struct WAPAC_IActivatedEventArgs WAPAC_IActivatedEventArgs;
@@ -84,7 +83,6 @@ typedef enum WAPAC_ApplicationExecutionState {
 typedef struct WAPAC_SplashScreen WAPAC_SplashScreen;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WGAUI_GameBar WGAUI_GameBar;
 typedef struct WGAUI_GameChatMessageReceivedEventArgs WGAUI_GameChatMessageReceivedEventArgs;
 typedef struct WGAUI_GameChatOverlay WGAUI_GameChatOverlay;
@@ -97,7 +95,6 @@ typedef struct WGAUI_IGameChatOverlay WGAUI_IGameChatOverlay;
 typedef struct WGAUI_IGameChatOverlayMessageSource WGAUI_IGameChatOverlayMessageSource;
 typedef struct WGAUI_IGameUIProviderActivatedEventArgs WGAUI_IGameUIProviderActivatedEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_EventHandler_Object
 #define CWINRT_FWD_WF_EventHandler_Object
 typedef struct WF_EventHandler_Object WF_EventHandler_Object;
@@ -203,7 +200,6 @@ typedef enum WGAUI_GameChatOverlayPosition {
 } WGAUI_GameChatOverlayPosition;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -232,19 +228,12 @@ static const IID CWINRT_IID_WGAUI_IGameChatOverlayMessageSource CWINRT_MAYBE_UNU
 static const IID CWINRT_IID_WGAUI_IGameUIProviderActivatedEventArgs CWINRT_MAYBE_UNUSED = { 0xA7B3203E, 0xCAF7, 0x4DED, { 0xBB, 0xD2, 0x47, 0xDE, 0x43, 0xBB, 0x6D, 0xD5 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Gaming.UI.GameBar */
 HRESULT wgaui_game_bar_new(WGAUI_GameBar **out);
 
-/* Windows.Gaming.UI.GameBar */
-/* Windows.Gaming.UI.GameBar.get_Visible() */
 HRESULT wgaui_game_bar_get__visible(BOOL *value);
 
-/* Windows.Gaming.UI.GameBar.get_IsInputRedirected() */
 HRESULT wgaui_game_bar_get__is_input_redirected(BOOL *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wgaui_game_bar_on_visibility_changed(WGAUI_GameBar *self, cwinrt_event_fn fn, void *ctx);
@@ -253,86 +242,53 @@ void wgaui_game_bar_off_visibility_changed(WGAUI_GameBar *self, cwinrt_token tok
 cwinrt_token wgaui_game_bar_on_is_input_redirected_changed(WGAUI_GameBar *self, cwinrt_event_fn fn, void *ctx);
 void wgaui_game_bar_off_is_input_redirected_changed(WGAUI_GameBar *self, cwinrt_token token);
 
-/* activate Windows.Gaming.UI.GameChatMessageReceivedEventArgs */
 HRESULT wgaui_game_chat_message_received_event_args_new(WGAUI_GameChatMessageReceivedEventArgs **out);
 
-/* Windows.Gaming.UI.GameChatMessageReceivedEventArgs */
-/* Windows.Gaming.UI.GameChatMessageReceivedEventArgs.get_AppId() */
 HRESULT wgaui_game_chat_message_received_event_args_get__app_id(WGAUI_GameChatMessageReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Gaming.UI.GameChatMessageReceivedEventArgs.get_AppDisplayName() */
 HRESULT wgaui_game_chat_message_received_event_args_get__app_display_name(WGAUI_GameChatMessageReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Gaming.UI.GameChatMessageReceivedEventArgs.get_SenderName() */
 HRESULT wgaui_game_chat_message_received_event_args_get__sender_name(WGAUI_GameChatMessageReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Gaming.UI.GameChatMessageReceivedEventArgs.get_Message() */
 HRESULT wgaui_game_chat_message_received_event_args_get__message(WGAUI_GameChatMessageReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Gaming.UI.GameChatMessageReceivedEventArgs.get_Origin() */
 HRESULT wgaui_game_chat_message_received_event_args_get__origin(WGAUI_GameChatMessageReceivedEventArgs *self, WGAUI_GameChatMessageOrigin *value);
 
-/* activate Windows.Gaming.UI.GameChatOverlay */
 HRESULT wgaui_game_chat_overlay_new(WGAUI_GameChatOverlay **out);
 
-/* Windows.Gaming.UI.GameChatOverlay */
-/* Windows.Gaming.UI.GameChatOverlay.get_DesiredPosition() */
 HRESULT wgaui_game_chat_overlay_get__desired_position(WGAUI_GameChatOverlay *self, WGAUI_GameChatOverlayPosition *value);
 
-/* Windows.Gaming.UI.GameChatOverlay.put_DesiredPosition() */
 HRESULT wgaui_game_chat_overlay_put__desired_position(WGAUI_GameChatOverlay *self, WGAUI_GameChatOverlayPosition value);
 
-/* Windows.Gaming.UI.GameChatOverlay.AddMessage(sender, message, origin) */
 HRESULT wgaui_game_chat_overlay_add_message(WGAUI_GameChatOverlay *self, cwinrt_hstring sender, cwinrt_hstring message, WGAUI_GameChatMessageOrigin origin);
 
-/* Windows.Gaming.UI.GameChatOverlay.GetDefault() */
 HRESULT wgaui_game_chat_overlay_get_default(WGAUI_GameChatOverlay** out);
 
-/* activate Windows.Gaming.UI.GameChatOverlayMessageSource */
 HRESULT wgaui_game_chat_overlay_message_source_new(WGAUI_GameChatOverlayMessageSource **out);
 
-/* Windows.Gaming.UI.GameChatOverlayMessageSource */
-/* Windows.Gaming.UI.GameChatOverlayMessageSource.SetDelayBeforeClosingAfterMessageReceived() */
 HRESULT wgaui_game_chat_overlay_message_source_set_delay_before_closing_after_message_received(WGAUI_GameChatOverlayMessageSource *self, WF_TimeSpan value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wgaui_game_chat_overlay_message_source_on_message_received(WGAUI_GameChatOverlayMessageSource *self, cwinrt_event_fn fn, void *ctx);
 void wgaui_game_chat_overlay_message_source_off_message_received(WGAUI_GameChatOverlayMessageSource *self, cwinrt_token token);
 
-/* activate Windows.Gaming.UI.GameUIProviderActivatedEventArgs */
 HRESULT wgaui_game_u_i_provider_activated_event_args_new(WGAUI_GameUIProviderActivatedEventArgs **out);
 
-/* Windows.Gaming.UI.GameUIProviderActivatedEventArgs */
-/* Windows.Gaming.UI.GameUIProviderActivatedEventArgs.get_GameUIArgs() */
 HRESULT wgaui_game_u_i_provider_activated_event_args_get__game_u_i_args(WGAUI_GameUIProviderActivatedEventArgs *self, WFOCO_ValueSet** value);
 
-/* Windows.Gaming.UI.GameUIProviderActivatedEventArgs.ReportCompleted(results) */
 HRESULT wgaui_game_u_i_provider_activated_event_args_report_completed(WGAUI_GameUIProviderActivatedEventArgs *self, WFOCO_ValueSet* results);
 
-/* Windows.Gaming.UI.GameUIProviderActivatedEventArgs.get_Kind() */
 HRESULT wgaui_game_u_i_provider_activated_event_args_get__kind(WGAUI_GameUIProviderActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.Gaming.UI.GameUIProviderActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wgaui_game_u_i_provider_activated_event_args_get__previous_execution_state(WGAUI_GameUIProviderActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.Gaming.UI.GameUIProviderActivatedEventArgs.get_SplashScreen() */
 HRESULT wgaui_game_u_i_provider_activated_event_args_get__splash_screen(WGAUI_GameUIProviderActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.Gaming.UI.IGameBarStatics */
-/* Windows.Gaming.UI.IGameBarStatics.get_Visible() */
 HRESULT wgaui_game_bar_statics_get__visible(WGAUI_IGameBarStatics *self, BOOL *value);
 
-/* Windows.Gaming.UI.IGameBarStatics.get_IsInputRedirected() */
 HRESULT wgaui_game_bar_statics_get__is_input_redirected(WGAUI_IGameBarStatics *self, BOOL *value);
 
-/* Windows.Gaming.UI.IGameChatOverlayStatics */
-/* Windows.Gaming.UI.IGameChatOverlayStatics.GetDefault() */
 HRESULT wgaui_game_chat_overlay_statics_get_default(WGAUI_IGameChatOverlayStatics *self, WGAUI_GameChatOverlay** out);
 
-/* Windows.Gaming.UI.IGameChatMessageReceivedEventArgs */
-/* Windows.Gaming.UI.IGameChatOverlay */
-/* Windows.Gaming.UI.IGameChatOverlayMessageSource */
-/* Windows.Gaming.UI.IGameUIProviderActivatedEventArgs */
 #endif /* CWINRT_WINDOWS_GAMING_UI_H */

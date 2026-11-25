@@ -12,18 +12,15 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IInputStream
 #define CWINRT_FWD_WSTST_IInputStream
 typedef struct WSTST_IInputStream WSTST_IInputStream;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WWE_IWebErrorStatics WWE_IWebErrorStatics;
 typedef struct WWE_WebError WWE_WebError;
 typedef struct WWE_IUriToStreamResolver WWE_IUriToStreamResolver;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_Uri
 #define CWINRT_FWD_WF_Uri
 typedef struct WF_Uri WF_Uri;
@@ -94,7 +91,6 @@ typedef enum WWE_WebErrorStatus {
 } WWE_WebErrorStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -107,21 +103,12 @@ static const IID CWINRT_IID_WWE_IWebErrorStatics CWINRT_MAYBE_UNUSED = { 0xFE616
 static const IID CWINRT_IID_WWE_IUriToStreamResolver CWINRT_MAYBE_UNUSED = { 0xB0ABA86A, 0x9AEB, 0x4D3A, { 0x95, 0x90, 0x00, 0x3E, 0x3C, 0xA7, 0xE2, 0x90 } };
 #endif
 
-/* Methods */
-
-/* Windows.Web.IWebErrorStatics */
-/* Windows.Web.IWebErrorStatics.GetStatus(hresult) */
 HRESULT wwe_web_error_statics_get_status(WWE_IWebErrorStatics *self, int32_t hresult, WWE_WebErrorStatus *out);
 
-/* activate Windows.Web.WebError */
 HRESULT wwe_web_error_new(WWE_WebError **out);
 
-/* Windows.Web.WebError */
-/* Windows.Web.WebError.GetStatus(hresult) */
 HRESULT wwe_web_error_get_status(int32_t hresult, WWE_WebErrorStatus *out);
 
-/* Windows.Web.IUriToStreamResolver */
-/* Windows.Web.IUriToStreamResolver.UriToStreamAsync(uri) */
 HRESULT wwe_uri_to_stream_resolver_uri_to_stream_async(WWE_IUriToStreamResolver *self, WF_Uri* uri, WF_IAsyncOperation_WSTST_IInputStream** out);
 
 #endif /* CWINRT_WINDOWS_WEB_H */

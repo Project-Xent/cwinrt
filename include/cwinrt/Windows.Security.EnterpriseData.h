@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Storage.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
@@ -51,7 +50,6 @@ typedef struct WSTST_IRandomAccessStream WSTST_IRandomAccessStream;
 typedef struct WNE_HostName WNE_HostName;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSEEN_BufferProtectUnprotectResult WSEEN_BufferProtectUnprotectResult;
 typedef struct WSEEN_DataProtectionInfo WSEEN_DataProtectionInfo;
 typedef struct WSEEN_DataProtectionManager WSEEN_DataProtectionManager;
@@ -95,7 +93,6 @@ typedef struct WSEEN_IProtectionPolicyManager WSEEN_IProtectionPolicyManager;
 typedef struct WSEEN_IProtectionPolicyManager_2 WSEEN_IProtectionPolicyManager_2;
 typedef struct WSEEN_IThreadNetworkContext WSEEN_IThreadNetworkContext;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
@@ -309,7 +306,6 @@ typedef enum WSEEN_ProtectionPolicyRequestAccessBehavior {
 } WSEEN_ProtectionPolicyRequestAccessBehavior;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -418,515 +414,326 @@ static const IID CWINRT_IID_WSEEN_IProtectionPolicyManager_2 CWINRT_MAYBE_UNUSED
 static const IID CWINRT_IID_WSEEN_IThreadNetworkContext CWINRT_MAYBE_UNUSED = { 0xFA4EA8E9, 0xEF13, 0x405A, { 0xB1, 0x2C, 0xD7, 0x34, 0x8C, 0x6F, 0x41, 0xFC } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Security.EnterpriseData.BufferProtectUnprotectResult */
 HRESULT wseen_buffer_protect_unprotect_result_new(WSEEN_BufferProtectUnprotectResult **out);
 
-/* Windows.Security.EnterpriseData.BufferProtectUnprotectResult */
-/* Windows.Security.EnterpriseData.BufferProtectUnprotectResult.get_Buffer() */
 HRESULT wseen_buffer_protect_unprotect_result_get__buffer(WSEEN_BufferProtectUnprotectResult *self, WSTST_IBuffer** value);
 
-/* Windows.Security.EnterpriseData.BufferProtectUnprotectResult.get_ProtectionInfo() */
 HRESULT wseen_buffer_protect_unprotect_result_get__protection_info(WSEEN_BufferProtectUnprotectResult *self, WSEEN_DataProtectionInfo** value);
 
-/* activate Windows.Security.EnterpriseData.DataProtectionInfo */
 HRESULT wseen_data_protection_info_new(WSEEN_DataProtectionInfo **out);
 
-/* Windows.Security.EnterpriseData.DataProtectionInfo */
-/* Windows.Security.EnterpriseData.DataProtectionInfo.get_Status() */
 HRESULT wseen_data_protection_info_get__status(WSEEN_DataProtectionInfo *self, WSEEN_DataProtectionStatus *value);
 
-/* Windows.Security.EnterpriseData.DataProtectionInfo.get_Identity() */
 HRESULT wseen_data_protection_info_get__identity(WSEEN_DataProtectionInfo *self, cwinrt_hstring *value);
 
-/* activate Windows.Security.EnterpriseData.DataProtectionManager */
 HRESULT wseen_data_protection_manager_new(WSEEN_DataProtectionManager **out);
 
-/* Windows.Security.EnterpriseData.DataProtectionManager */
-/* Windows.Security.EnterpriseData.DataProtectionManager.ProtectAsync(data, identity) */
 HRESULT wseen_data_protection_manager_protect_async(WSTST_IBuffer* data, cwinrt_hstring identity, WF_IAsyncOperation_WSEEN_BufferProtectUnprotectResult** out);
 
-/* Windows.Security.EnterpriseData.DataProtectionManager.UnprotectAsync(data) */
 HRESULT wseen_data_protection_manager_unprotect_async(WSTST_IBuffer* data, WF_IAsyncOperation_WSEEN_BufferProtectUnprotectResult** out);
 
-/* Windows.Security.EnterpriseData.DataProtectionManager.ProtectStreamAsync(unprotectedStream, identity, protectedStream) */
 HRESULT wseen_data_protection_manager_protect_stream_async(WSTST_IInputStream* unprotectedStream, cwinrt_hstring identity, WSTST_IOutputStream* protectedStream, WF_IAsyncOperation_WSEEN_DataProtectionInfo** out);
 
-/* Windows.Security.EnterpriseData.DataProtectionManager.UnprotectStreamAsync(protectedStream, unprotectedStream) */
 HRESULT wseen_data_protection_manager_unprotect_stream_async(WSTST_IInputStream* protectedStream, WSTST_IOutputStream* unprotectedStream, WF_IAsyncOperation_WSEEN_DataProtectionInfo** out);
 
-/* Windows.Security.EnterpriseData.DataProtectionManager.GetProtectionInfoAsync(protectedData) */
 HRESULT wseen_data_protection_manager_get_protection_info_async(WSTST_IBuffer* protectedData, WF_IAsyncOperation_WSEEN_DataProtectionInfo** out);
 
-/* Windows.Security.EnterpriseData.DataProtectionManager.GetStreamProtectionInfoAsync(protectedStream) */
 HRESULT wseen_data_protection_manager_get_stream_protection_info_async(WSTST_IInputStream* protectedStream, WF_IAsyncOperation_WSEEN_DataProtectionInfo** out);
 
-/* activate Windows.Security.EnterpriseData.FileProtectionInfo */
 HRESULT wseen_file_protection_info_new(WSEEN_FileProtectionInfo **out);
 
-/* Windows.Security.EnterpriseData.FileProtectionInfo */
-/* Windows.Security.EnterpriseData.FileProtectionInfo.get_Status() */
 HRESULT wseen_file_protection_info_get__status(WSEEN_FileProtectionInfo *self, WSEEN_FileProtectionStatus *value);
 
-/* Windows.Security.EnterpriseData.FileProtectionInfo.get_IsRoamable() */
 HRESULT wseen_file_protection_info_get__is_roamable(WSEEN_FileProtectionInfo *self, BOOL *value);
 
-/* Windows.Security.EnterpriseData.FileProtectionInfo.get_Identity() */
 HRESULT wseen_file_protection_info_get__identity(WSEEN_FileProtectionInfo *self, cwinrt_hstring *value);
 
-/* Windows.Security.EnterpriseData.FileProtectionInfo.get_IsProtectWhileOpenSupported() */
 HRESULT wseen_file_protection_info_get__is_protect_while_open_supported(WSEEN_FileProtectionInfo *self, BOOL *value);
 
-/* activate Windows.Security.EnterpriseData.FileProtectionManager */
 HRESULT wseen_file_protection_manager_new(WSEEN_FileProtectionManager **out);
 
-/* Windows.Security.EnterpriseData.FileProtectionManager */
-/* Windows.Security.EnterpriseData.FileProtectionManager.UnprotectAsync(target) */
 HRESULT wseen_file_protection_manager_unprotect_async(WS_IStorageItem* target, WF_IAsyncOperation_WSEEN_FileProtectionInfo** out);
 
-/* Windows.Security.EnterpriseData.FileProtectionManager.UnprotectAsync(target, options) */
 HRESULT wseen_file_protection_manager_unprotect_async_p_p_p(WS_IStorageItem* target, WSEEN_FileUnprotectOptions* options, WF_IAsyncOperation_WSEEN_FileProtectionInfo** out);
 
-/* Windows.Security.EnterpriseData.FileProtectionManager.IsContainerAsync(file) */
 HRESULT wseen_file_protection_manager_is_container_async(WS_IStorageFile* file, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Security.EnterpriseData.FileProtectionManager.LoadFileFromContainerAsync(containerFile, target, collisionOption) */
 HRESULT wseen_file_protection_manager_load_file_from_container_async(WS_IStorageFile* containerFile, WS_IStorageItem* target, WS_NameCollisionOption collisionOption, WF_IAsyncOperation_WSEEN_ProtectedContainerImportResult** out);
 
-/* Windows.Security.EnterpriseData.FileProtectionManager.SaveFileAsContainerAsync(protectedFile, sharedWithIdentities) */
 HRESULT wseen_file_protection_manager_save_file_as_container_async(WS_IStorageFile* protectedFile, WFOCO_IIterable_HSTRING* sharedWithIdentities, WF_IAsyncOperation_WSEEN_ProtectedContainerExportResult** out);
 
-/* Windows.Security.EnterpriseData.FileProtectionManager.ProtectAsync(target, identity) */
 HRESULT wseen_file_protection_manager_protect_async(WS_IStorageItem* target, cwinrt_hstring identity, WF_IAsyncOperation_WSEEN_FileProtectionInfo** out);
 
-/* Windows.Security.EnterpriseData.FileProtectionManager.CopyProtectionAsync(source, target) */
 HRESULT wseen_file_protection_manager_copy_protection_async(WS_IStorageItem* source, WS_IStorageItem* target, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Security.EnterpriseData.FileProtectionManager.GetProtectionInfoAsync(source) */
 HRESULT wseen_file_protection_manager_get_protection_info_async(WS_IStorageItem* source, WF_IAsyncOperation_WSEEN_FileProtectionInfo** out);
 
-/* Windows.Security.EnterpriseData.FileProtectionManager.SaveFileAsContainerAsync(protectedFile) */
 HRESULT wseen_file_protection_manager_save_file_as_container_async_p_p(WS_IStorageFile* protectedFile, WF_IAsyncOperation_WSEEN_ProtectedContainerExportResult** out);
 
-/* Windows.Security.EnterpriseData.FileProtectionManager.LoadFileFromContainerAsync(containerFile) */
 HRESULT wseen_file_protection_manager_load_file_from_container_async_p_p(WS_IStorageFile* containerFile, WF_IAsyncOperation_WSEEN_ProtectedContainerImportResult** out);
 
-/* Windows.Security.EnterpriseData.FileProtectionManager.LoadFileFromContainerAsync(containerFile, target) */
 HRESULT wseen_file_protection_manager_load_file_from_container_async_p_p_p(WS_IStorageFile* containerFile, WS_IStorageItem* target, WF_IAsyncOperation_WSEEN_ProtectedContainerImportResult** out);
 
-/* Windows.Security.EnterpriseData.FileProtectionManager.CreateProtectedAndOpenAsync(parentFolder, desiredName, identity, collisionOption) */
 HRESULT wseen_file_protection_manager_create_protected_and_open_async(WS_IStorageFolder* parentFolder, cwinrt_hstring desiredName, cwinrt_hstring identity, WS_CreationCollisionOption collisionOption, WF_IAsyncOperation_WSEEN_ProtectedFileCreateResult** out);
 
-/* activate Windows.Security.EnterpriseData.FileRevocationManager */
 HRESULT wseen_file_revocation_manager_new(WSEEN_FileRevocationManager **out);
 
-/* Windows.Security.EnterpriseData.FileRevocationManager */
-/* Windows.Security.EnterpriseData.FileRevocationManager.ProtectAsync(storageItem, enterpriseIdentity) */
 HRESULT wseen_file_revocation_manager_protect_async(WS_IStorageItem* storageItem, cwinrt_hstring enterpriseIdentity, WF_IAsyncOperation_WSEEN_FileProtectionStatus** out);
 
-/* Windows.Security.EnterpriseData.FileRevocationManager.CopyProtectionAsync(sourceStorageItem, targetStorageItem) */
 HRESULT wseen_file_revocation_manager_copy_protection_async(WS_IStorageItem* sourceStorageItem, WS_IStorageItem* targetStorageItem, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Security.EnterpriseData.FileRevocationManager.Revoke(enterpriseIdentity) */
 HRESULT wseen_file_revocation_manager_revoke(cwinrt_hstring enterpriseIdentity);
 
-/* Windows.Security.EnterpriseData.FileRevocationManager.GetStatusAsync(storageItem) */
 HRESULT wseen_file_revocation_manager_get_status_async(WS_IStorageItem* storageItem, WF_IAsyncOperation_WSEEN_FileProtectionStatus** out);
 
-/* activate Windows.Security.EnterpriseData.FileUnprotectOptions */
 HRESULT wseen_file_unprotect_options_new(WSEEN_FileUnprotectOptions **out);
 
-/* Windows.Security.EnterpriseData.FileUnprotectOptions */
-/* Windows.Security.EnterpriseData.FileUnprotectOptions.put_Audit() */
 HRESULT wseen_file_unprotect_options_put__audit(WSEEN_FileUnprotectOptions *self, BOOL value);
 
-/* Windows.Security.EnterpriseData.FileUnprotectOptions.get_Audit() */
 HRESULT wseen_file_unprotect_options_get__audit(WSEEN_FileUnprotectOptions *self, BOOL *value);
 
-/* Windows.Security.EnterpriseData.IDataProtectionManagerStatics */
-/* Windows.Security.EnterpriseData.IDataProtectionManagerStatics.ProtectAsync(data, identity) */
 HRESULT wseen_data_protection_manager_statics_protect_async(WSEEN_IDataProtectionManagerStatics *self, WSTST_IBuffer* data, cwinrt_hstring identity, WF_IAsyncOperation_WSEEN_BufferProtectUnprotectResult** out);
 
-/* Windows.Security.EnterpriseData.IDataProtectionManagerStatics.UnprotectAsync(data) */
 HRESULT wseen_data_protection_manager_statics_unprotect_async(WSEEN_IDataProtectionManagerStatics *self, WSTST_IBuffer* data, WF_IAsyncOperation_WSEEN_BufferProtectUnprotectResult** out);
 
-/* Windows.Security.EnterpriseData.IDataProtectionManagerStatics.ProtectStreamAsync(unprotectedStream, identity, protectedStream) */
 HRESULT wseen_data_protection_manager_statics_protect_stream_async(WSEEN_IDataProtectionManagerStatics *self, WSTST_IInputStream* unprotectedStream, cwinrt_hstring identity, WSTST_IOutputStream* protectedStream, WF_IAsyncOperation_WSEEN_DataProtectionInfo** out);
 
-/* Windows.Security.EnterpriseData.IDataProtectionManagerStatics.UnprotectStreamAsync(protectedStream, unprotectedStream) */
 HRESULT wseen_data_protection_manager_statics_unprotect_stream_async(WSEEN_IDataProtectionManagerStatics *self, WSTST_IInputStream* protectedStream, WSTST_IOutputStream* unprotectedStream, WF_IAsyncOperation_WSEEN_DataProtectionInfo** out);
 
-/* Windows.Security.EnterpriseData.IDataProtectionManagerStatics.GetProtectionInfoAsync(protectedData) */
 HRESULT wseen_data_protection_manager_statics_get_protection_info_async(WSEEN_IDataProtectionManagerStatics *self, WSTST_IBuffer* protectedData, WF_IAsyncOperation_WSEEN_DataProtectionInfo** out);
 
-/* Windows.Security.EnterpriseData.IDataProtectionManagerStatics.GetStreamProtectionInfoAsync(protectedStream) */
 HRESULT wseen_data_protection_manager_statics_get_stream_protection_info_async(WSEEN_IDataProtectionManagerStatics *self, WSTST_IInputStream* protectedStream, WF_IAsyncOperation_WSEEN_DataProtectionInfo** out);
 
-/* Windows.Security.EnterpriseData.IFileProtectionManagerStatics */
-/* Windows.Security.EnterpriseData.IFileProtectionManagerStatics.ProtectAsync(target, identity) */
 HRESULT wseen_file_protection_manager_statics_protect_async(WSEEN_IFileProtectionManagerStatics *self, WS_IStorageItem* target, cwinrt_hstring identity, WF_IAsyncOperation_WSEEN_FileProtectionInfo** out);
 
-/* Windows.Security.EnterpriseData.IFileProtectionManagerStatics.CopyProtectionAsync(source, target) */
 HRESULT wseen_file_protection_manager_statics_copy_protection_async(WSEEN_IFileProtectionManagerStatics *self, WS_IStorageItem* source, WS_IStorageItem* target, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Security.EnterpriseData.IFileProtectionManagerStatics.GetProtectionInfoAsync(source) */
 HRESULT wseen_file_protection_manager_statics_get_protection_info_async(WSEEN_IFileProtectionManagerStatics *self, WS_IStorageItem* source, WF_IAsyncOperation_WSEEN_FileProtectionInfo** out);
 
-/* Windows.Security.EnterpriseData.IFileProtectionManagerStatics.SaveFileAsContainerAsync(protectedFile) */
 HRESULT wseen_file_protection_manager_statics_save_file_as_container_async(WSEEN_IFileProtectionManagerStatics *self, WS_IStorageFile* protectedFile, WF_IAsyncOperation_WSEEN_ProtectedContainerExportResult** out);
 
-/* Windows.Security.EnterpriseData.IFileProtectionManagerStatics.LoadFileFromContainerAsync(containerFile) */
 HRESULT wseen_file_protection_manager_statics_load_file_from_container_async(WSEEN_IFileProtectionManagerStatics *self, WS_IStorageFile* containerFile, WF_IAsyncOperation_WSEEN_ProtectedContainerImportResult** out);
 
-/* Windows.Security.EnterpriseData.IFileProtectionManagerStatics.LoadFileFromContainerAsync(containerFile, target) */
 HRESULT wseen_file_protection_manager_statics_load_file_from_container_async_p_p_p(WSEEN_IFileProtectionManagerStatics *self, WS_IStorageFile* containerFile, WS_IStorageItem* target, WF_IAsyncOperation_WSEEN_ProtectedContainerImportResult** out);
 
-/* Windows.Security.EnterpriseData.IFileProtectionManagerStatics.CreateProtectedAndOpenAsync(parentFolder, desiredName, identity, collisionOption) */
 HRESULT wseen_file_protection_manager_statics_create_protected_and_open_async(WSEEN_IFileProtectionManagerStatics *self, WS_IStorageFolder* parentFolder, cwinrt_hstring desiredName, cwinrt_hstring identity, WS_CreationCollisionOption collisionOption, WF_IAsyncOperation_WSEEN_ProtectedFileCreateResult** out);
 
-/* Windows.Security.EnterpriseData.IFileProtectionManagerStatics2 */
-/* Windows.Security.EnterpriseData.IFileProtectionManagerStatics2.IsContainerAsync(file) */
 HRESULT wseen_file_protection_manager_statics_2_is_container_async(WSEEN_IFileProtectionManagerStatics_2 *self, WS_IStorageFile* file, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Security.EnterpriseData.IFileProtectionManagerStatics2.LoadFileFromContainerAsync(containerFile, target, collisionOption) */
 HRESULT wseen_file_protection_manager_statics_2_load_file_from_container_async(WSEEN_IFileProtectionManagerStatics_2 *self, WS_IStorageFile* containerFile, WS_IStorageItem* target, WS_NameCollisionOption collisionOption, WF_IAsyncOperation_WSEEN_ProtectedContainerImportResult** out);
 
-/* Windows.Security.EnterpriseData.IFileProtectionManagerStatics2.SaveFileAsContainerAsync(protectedFile, sharedWithIdentities) */
 HRESULT wseen_file_protection_manager_statics_2_save_file_as_container_async(WSEEN_IFileProtectionManagerStatics_2 *self, WS_IStorageFile* protectedFile, WFOCO_IIterable_HSTRING* sharedWithIdentities, WF_IAsyncOperation_WSEEN_ProtectedContainerExportResult** out);
 
-/* Windows.Security.EnterpriseData.IFileProtectionManagerStatics3 */
-/* Windows.Security.EnterpriseData.IFileProtectionManagerStatics3.UnprotectAsync(target) */
 HRESULT wseen_file_protection_manager_statics_3_unprotect_async(WSEEN_IFileProtectionManagerStatics_3 *self, WS_IStorageItem* target, WF_IAsyncOperation_WSEEN_FileProtectionInfo** out);
 
-/* Windows.Security.EnterpriseData.IFileProtectionManagerStatics3.UnprotectAsync(target, options) */
 HRESULT wseen_file_protection_manager_statics_3_unprotect_async_p_p_p(WSEEN_IFileProtectionManagerStatics_3 *self, WS_IStorageItem* target, WSEEN_FileUnprotectOptions* options, WF_IAsyncOperation_WSEEN_FileProtectionInfo** out);
 
-/* Windows.Security.EnterpriseData.IFileRevocationManagerStatics */
-/* Windows.Security.EnterpriseData.IFileRevocationManagerStatics.ProtectAsync(storageItem, enterpriseIdentity) */
 HRESULT wseen_file_revocation_manager_statics_protect_async(WSEEN_IFileRevocationManagerStatics *self, WS_IStorageItem* storageItem, cwinrt_hstring enterpriseIdentity, WF_IAsyncOperation_WSEEN_FileProtectionStatus** out);
 
-/* Windows.Security.EnterpriseData.IFileRevocationManagerStatics.CopyProtectionAsync(sourceStorageItem, targetStorageItem) */
 HRESULT wseen_file_revocation_manager_statics_copy_protection_async(WSEEN_IFileRevocationManagerStatics *self, WS_IStorageItem* sourceStorageItem, WS_IStorageItem* targetStorageItem, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Security.EnterpriseData.IFileRevocationManagerStatics.Revoke(enterpriseIdentity) */
 HRESULT wseen_file_revocation_manager_statics_revoke(WSEEN_IFileRevocationManagerStatics *self, cwinrt_hstring enterpriseIdentity);
 
-/* Windows.Security.EnterpriseData.IFileRevocationManagerStatics.GetStatusAsync(storageItem) */
 HRESULT wseen_file_revocation_manager_statics_get_status_async(WSEEN_IFileRevocationManagerStatics *self, WS_IStorageItem* storageItem, WF_IAsyncOperation_WSEEN_FileProtectionStatus** out);
 
-/* Windows.Security.EnterpriseData.IFileUnprotectOptionsFactory */
-/* Windows.Security.EnterpriseData.IFileUnprotectOptionsFactory.Create(audit) */
 HRESULT wseen_file_unprotect_options_factory_create(WSEEN_IFileUnprotectOptionsFactory *self, BOOL audit, WSEEN_FileUnprotectOptions** out);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyAuditInfoFactory */
-/* Windows.Security.EnterpriseData.IProtectionPolicyAuditInfoFactory.Create(action, dataDescription, sourceDescription, targetDescription) */
 HRESULT wseen_protection_policy_audit_info_factory_create(WSEEN_IProtectionPolicyAuditInfoFactory *self, WSEEN_ProtectionPolicyAuditAction action, cwinrt_hstring dataDescription, cwinrt_hstring sourceDescription, cwinrt_hstring targetDescription, WSEEN_ProtectionPolicyAuditInfo** out);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyAuditInfoFactory.CreateWithActionAndDataDescription(action, dataDescription) */
 HRESULT wseen_protection_policy_audit_info_factory_create_with_action_and_data_description(WSEEN_IProtectionPolicyAuditInfoFactory *self, WSEEN_ProtectionPolicyAuditAction action, cwinrt_hstring dataDescription, WSEEN_ProtectionPolicyAuditInfo** out);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics */
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics.IsIdentityManaged(identity) */
 HRESULT wseen_protection_policy_manager_statics_is_identity_managed(WSEEN_IProtectionPolicyManagerStatics *self, cwinrt_hstring identity, BOOL *out);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics.TryApplyProcessUIPolicy(identity) */
 HRESULT wseen_protection_policy_manager_statics_try_apply_process_u_i_policy(WSEEN_IProtectionPolicyManagerStatics *self, cwinrt_hstring identity, BOOL *out);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics.ClearProcessUIPolicy() */
 HRESULT wseen_protection_policy_manager_statics_clear_process_u_i_policy(WSEEN_IProtectionPolicyManagerStatics *self);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics.CreateCurrentThreadNetworkContext(identity) */
 HRESULT wseen_protection_policy_manager_statics_create_current_thread_network_context(WSEEN_IProtectionPolicyManagerStatics *self, cwinrt_hstring identity, WSEEN_ThreadNetworkContext** out);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics.GetPrimaryManagedIdentityForNetworkEndpointAsync(endpointHost) */
 HRESULT wseen_protection_policy_manager_statics_get_primary_managed_identity_for_network_endpoint_async(WSEEN_IProtectionPolicyManagerStatics *self, WNE_HostName* endpointHost, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics.RevokeContent(identity) */
 HRESULT wseen_protection_policy_manager_statics_revoke_content(WSEEN_IProtectionPolicyManagerStatics *self, cwinrt_hstring identity);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics.GetForCurrentView() */
 HRESULT wseen_protection_policy_manager_statics_get_for_current_view(WSEEN_IProtectionPolicyManagerStatics *self, WSEEN_ProtectionPolicyManager** out);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics.CheckAccess(sourceIdentity, targetIdentity) */
 HRESULT wseen_protection_policy_manager_statics_check_access(WSEEN_IProtectionPolicyManagerStatics *self, cwinrt_hstring sourceIdentity, cwinrt_hstring targetIdentity, WSEEN_ProtectionPolicyEvaluationResult *out);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics.RequestAccessAsync(sourceIdentity, targetIdentity) */
 HRESULT wseen_protection_policy_manager_statics_request_access_async(WSEEN_IProtectionPolicyManagerStatics *self, cwinrt_hstring sourceIdentity, cwinrt_hstring targetIdentity, WF_IAsyncOperation_WSEEN_ProtectionPolicyEvaluationResult** out);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics2 */
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics2.HasContentBeenRevokedSince(identity, since) */
 HRESULT wseen_protection_policy_manager_statics_2_has_content_been_revoked_since(WSEEN_IProtectionPolicyManagerStatics_2 *self, cwinrt_hstring identity, WF_DateTime since, BOOL *out);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics2.CheckAccessForApp(sourceIdentity, appPackageFamilyName) */
 HRESULT wseen_protection_policy_manager_statics_2_check_access_for_app(WSEEN_IProtectionPolicyManagerStatics_2 *self, cwinrt_hstring sourceIdentity, cwinrt_hstring appPackageFamilyName, WSEEN_ProtectionPolicyEvaluationResult *out);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics2.RequestAccessForAppAsync(sourceIdentity, appPackageFamilyName) */
 HRESULT wseen_protection_policy_manager_statics_2_request_access_for_app_async(WSEEN_IProtectionPolicyManagerStatics_2 *self, cwinrt_hstring sourceIdentity, cwinrt_hstring appPackageFamilyName, WF_IAsyncOperation_WSEEN_ProtectionPolicyEvaluationResult** out);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics2.GetEnforcementLevel(identity) */
 HRESULT wseen_protection_policy_manager_statics_2_get_enforcement_level(WSEEN_IProtectionPolicyManagerStatics_2 *self, cwinrt_hstring identity, WSEEN_EnforcementLevel *out);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics2.IsUserDecryptionAllowed(identity) */
 HRESULT wseen_protection_policy_manager_statics_2_is_user_decryption_allowed(WSEEN_IProtectionPolicyManagerStatics_2 *self, cwinrt_hstring identity, BOOL *out);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics2.IsProtectionUnderLockRequired(identity) */
 HRESULT wseen_protection_policy_manager_statics_2_is_protection_under_lock_required(WSEEN_IProtectionPolicyManagerStatics_2 *self, cwinrt_hstring identity, BOOL *out);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics2.get_IsProtectionEnabled() */
 HRESULT wseen_protection_policy_manager_statics_2_get__is_protection_enabled(WSEEN_IProtectionPolicyManagerStatics_2 *self, BOOL *value);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics3 */
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics3.RequestAccessAsync(sourceIdentity, targetIdentity, auditInfo) */
 HRESULT wseen_protection_policy_manager_statics_3_request_access_async(WSEEN_IProtectionPolicyManagerStatics_3 *self, cwinrt_hstring sourceIdentity, cwinrt_hstring targetIdentity, WSEEN_ProtectionPolicyAuditInfo* auditInfo, WF_IAsyncOperation_WSEEN_ProtectionPolicyEvaluationResult** out);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics3.RequestAccessAsync(sourceIdentity, targetIdentity, auditInfo, messageFromApp) */
 HRESULT wseen_protection_policy_manager_statics_3_request_access_async_str_str_p_str_p(WSEEN_IProtectionPolicyManagerStatics_3 *self, cwinrt_hstring sourceIdentity, cwinrt_hstring targetIdentity, WSEEN_ProtectionPolicyAuditInfo* auditInfo, cwinrt_hstring messageFromApp, WF_IAsyncOperation_WSEEN_ProtectionPolicyEvaluationResult** out);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics3.RequestAccessForAppAsync(sourceIdentity, appPackageFamilyName, auditInfo) */
 HRESULT wseen_protection_policy_manager_statics_3_request_access_for_app_async(WSEEN_IProtectionPolicyManagerStatics_3 *self, cwinrt_hstring sourceIdentity, cwinrt_hstring appPackageFamilyName, WSEEN_ProtectionPolicyAuditInfo* auditInfo, WF_IAsyncOperation_WSEEN_ProtectionPolicyEvaluationResult** out);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics3.RequestAccessForAppAsync(sourceIdentity, appPackageFamilyName, auditInfo, messageFromApp) */
 HRESULT wseen_protection_policy_manager_statics_3_request_access_for_app_async_str_str_p_str_p(WSEEN_IProtectionPolicyManagerStatics_3 *self, cwinrt_hstring sourceIdentity, cwinrt_hstring appPackageFamilyName, WSEEN_ProtectionPolicyAuditInfo* auditInfo, cwinrt_hstring messageFromApp, WF_IAsyncOperation_WSEEN_ProtectionPolicyEvaluationResult** out);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics3.LogAuditEvent(sourceIdentity, targetIdentity, auditInfo) */
 HRESULT wseen_protection_policy_manager_statics_3_log_audit_event(WSEEN_IProtectionPolicyManagerStatics_3 *self, cwinrt_hstring sourceIdentity, cwinrt_hstring targetIdentity, WSEEN_ProtectionPolicyAuditInfo* auditInfo);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4 */
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4.IsRoamableProtectionEnabled(identity) */
 HRESULT wseen_protection_policy_manager_statics_4_is_roamable_protection_enabled(WSEEN_IProtectionPolicyManagerStatics_4 *self, cwinrt_hstring identity, BOOL *out);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4.RequestAccessAsync(sourceIdentity, targetIdentity, auditInfo, messageFromApp, behavior) */
 HRESULT wseen_protection_policy_manager_statics_4_request_access_async(WSEEN_IProtectionPolicyManagerStatics_4 *self, cwinrt_hstring sourceIdentity, cwinrt_hstring targetIdentity, WSEEN_ProtectionPolicyAuditInfo* auditInfo, cwinrt_hstring messageFromApp, WSEEN_ProtectionPolicyRequestAccessBehavior behavior, WF_IAsyncOperation_WSEEN_ProtectionPolicyEvaluationResult** out);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4.RequestAccessForAppAsync(sourceIdentity, appPackageFamilyName, auditInfo, messageFromApp, behavior) */
 HRESULT wseen_protection_policy_manager_statics_4_request_access_for_app_async(WSEEN_IProtectionPolicyManagerStatics_4 *self, cwinrt_hstring sourceIdentity, cwinrt_hstring appPackageFamilyName, WSEEN_ProtectionPolicyAuditInfo* auditInfo, cwinrt_hstring messageFromApp, WSEEN_ProtectionPolicyRequestAccessBehavior behavior, WF_IAsyncOperation_WSEEN_ProtectionPolicyEvaluationResult** out);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4.RequestAccessToFilesForAppAsync(sourceItemList, appPackageFamilyName, auditInfo) */
 HRESULT wseen_protection_policy_manager_statics_4_request_access_to_files_for_app_async(WSEEN_IProtectionPolicyManagerStatics_4 *self, WFOCO_IIterable_WS_IStorageItem* sourceItemList, cwinrt_hstring appPackageFamilyName, WSEEN_ProtectionPolicyAuditInfo* auditInfo, WF_IAsyncOperation_WSEEN_ProtectionPolicyEvaluationResult** out);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4.RequestAccessToFilesForAppAsync(sourceItemList, appPackageFamilyName, auditInfo, messageFromApp, behavior) */
 HRESULT wseen_protection_policy_manager_statics_4_request_access_to_files_for_app_async_p_str_p_str_protection_policy_reques_18e03586(WSEEN_IProtectionPolicyManagerStatics_4 *self, WFOCO_IIterable_WS_IStorageItem* sourceItemList, cwinrt_hstring appPackageFamilyName, WSEEN_ProtectionPolicyAuditInfo* auditInfo, cwinrt_hstring messageFromApp, WSEEN_ProtectionPolicyRequestAccessBehavior behavior, WF_IAsyncOperation_WSEEN_ProtectionPolicyEvaluationResult** out);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4.RequestAccessToFilesForProcessAsync(sourceItemList, processId, auditInfo) */
 HRESULT wseen_protection_policy_manager_statics_4_request_access_to_files_for_process_async(WSEEN_IProtectionPolicyManagerStatics_4 *self, WFOCO_IIterable_WS_IStorageItem* sourceItemList, uint32_t processId, WSEEN_ProtectionPolicyAuditInfo* auditInfo, WF_IAsyncOperation_WSEEN_ProtectionPolicyEvaluationResult** out);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4.RequestAccessToFilesForProcessAsync(sourceItemList, processId, auditInfo, messageFromApp, behavior) */
 HRESULT wseen_protection_policy_manager_statics_4_request_access_to_files_for_process_async_p_u32_p_str_protection_policy_reques_c052358b(WSEEN_IProtectionPolicyManagerStatics_4 *self, WFOCO_IIterable_WS_IStorageItem* sourceItemList, uint32_t processId, WSEEN_ProtectionPolicyAuditInfo* auditInfo, cwinrt_hstring messageFromApp, WSEEN_ProtectionPolicyRequestAccessBehavior behavior, WF_IAsyncOperation_WSEEN_ProtectionPolicyEvaluationResult** out);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4.IsFileProtectionRequiredAsync(target, identity) */
 HRESULT wseen_protection_policy_manager_statics_4_is_file_protection_required_async(WSEEN_IProtectionPolicyManagerStatics_4 *self, WS_IStorageItem* target, cwinrt_hstring identity, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4.IsFileProtectionRequiredForNewFileAsync(parentFolder, identity, desiredName) */
 HRESULT wseen_protection_policy_manager_statics_4_is_file_protection_required_for_new_file_async(WSEEN_IProtectionPolicyManagerStatics_4 *self, WS_IStorageFolder* parentFolder, cwinrt_hstring identity, cwinrt_hstring desiredName, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4.get_PrimaryManagedIdentity() */
 HRESULT wseen_protection_policy_manager_statics_4_get__primary_managed_identity(WSEEN_IProtectionPolicyManagerStatics_4 *self, cwinrt_hstring *value);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4.GetPrimaryManagedIdentityForIdentity(identity) */
 HRESULT wseen_protection_policy_manager_statics_4_get_primary_managed_identity_for_identity(WSEEN_IProtectionPolicyManagerStatics_4 *self, cwinrt_hstring identity, cwinrt_hstring *out);
 
-/* activate Windows.Security.EnterpriseData.ProtectedAccessResumedEventArgs */
 HRESULT wseen_protected_access_resumed_event_args_new(WSEEN_ProtectedAccessResumedEventArgs **out);
 
-/* Windows.Security.EnterpriseData.ProtectedAccessResumedEventArgs */
-/* Windows.Security.EnterpriseData.ProtectedAccessResumedEventArgs.get_Identities() */
 HRESULT wseen_protected_access_resumed_event_args_get__identities(WSEEN_ProtectedAccessResumedEventArgs *self, WFOCO_IVectorView_HSTRING** value);
 
-/* activate Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs */
 HRESULT wseen_protected_access_suspending_event_args_new(WSEEN_ProtectedAccessSuspendingEventArgs **out);
 
-/* Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs */
-/* Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs.get_Identities() */
 HRESULT wseen_protected_access_suspending_event_args_get__identities(WSEEN_ProtectedAccessSuspendingEventArgs *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs.get_Deadline() */
 HRESULT wseen_protected_access_suspending_event_args_get__deadline(WSEEN_ProtectedAccessSuspendingEventArgs *self, WF_DateTime *value);
 
-/* Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs.GetDeferral() */
 HRESULT wseen_protected_access_suspending_event_args_get_deferral(WSEEN_ProtectedAccessSuspendingEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Security.EnterpriseData.ProtectedContainerExportResult */
 HRESULT wseen_protected_container_export_result_new(WSEEN_ProtectedContainerExportResult **out);
 
-/* Windows.Security.EnterpriseData.ProtectedContainerExportResult */
-/* Windows.Security.EnterpriseData.ProtectedContainerExportResult.get_Status() */
 HRESULT wseen_protected_container_export_result_get__status(WSEEN_ProtectedContainerExportResult *self, WSEEN_ProtectedImportExportStatus *value);
 
-/* Windows.Security.EnterpriseData.ProtectedContainerExportResult.get_File() */
 HRESULT wseen_protected_container_export_result_get__file(WSEEN_ProtectedContainerExportResult *self, WS_StorageFile** value);
 
-/* activate Windows.Security.EnterpriseData.ProtectedContainerImportResult */
 HRESULT wseen_protected_container_import_result_new(WSEEN_ProtectedContainerImportResult **out);
 
-/* Windows.Security.EnterpriseData.ProtectedContainerImportResult */
-/* Windows.Security.EnterpriseData.ProtectedContainerImportResult.get_Status() */
 HRESULT wseen_protected_container_import_result_get__status(WSEEN_ProtectedContainerImportResult *self, WSEEN_ProtectedImportExportStatus *value);
 
-/* Windows.Security.EnterpriseData.ProtectedContainerImportResult.get_File() */
 HRESULT wseen_protected_container_import_result_get__file(WSEEN_ProtectedContainerImportResult *self, WS_StorageFile** value);
 
-/* activate Windows.Security.EnterpriseData.ProtectedContentRevokedEventArgs */
 HRESULT wseen_protected_content_revoked_event_args_new(WSEEN_ProtectedContentRevokedEventArgs **out);
 
-/* Windows.Security.EnterpriseData.ProtectedContentRevokedEventArgs */
-/* Windows.Security.EnterpriseData.ProtectedContentRevokedEventArgs.get_Identities() */
 HRESULT wseen_protected_content_revoked_event_args_get__identities(WSEEN_ProtectedContentRevokedEventArgs *self, WFOCO_IVectorView_HSTRING** value);
 
-/* activate Windows.Security.EnterpriseData.ProtectedFileCreateResult */
 HRESULT wseen_protected_file_create_result_new(WSEEN_ProtectedFileCreateResult **out);
 
-/* Windows.Security.EnterpriseData.ProtectedFileCreateResult */
-/* Windows.Security.EnterpriseData.ProtectedFileCreateResult.get_File() */
 HRESULT wseen_protected_file_create_result_get__file(WSEEN_ProtectedFileCreateResult *self, WS_StorageFile** value);
 
-/* Windows.Security.EnterpriseData.ProtectedFileCreateResult.get_Stream() */
 HRESULT wseen_protected_file_create_result_get__stream(WSEEN_ProtectedFileCreateResult *self, WSTST_IRandomAccessStream** value);
 
-/* Windows.Security.EnterpriseData.ProtectedFileCreateResult.get_ProtectionInfo() */
 HRESULT wseen_protected_file_create_result_get__protection_info(WSEEN_ProtectedFileCreateResult *self, WSEEN_FileProtectionInfo** value);
 
-/* activate Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo */
 HRESULT wseen_protection_policy_audit_info_new(WSEEN_ProtectionPolicyAuditInfo **out);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo */
-/* Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.put_Action() */
 HRESULT wseen_protection_policy_audit_info_put__action(WSEEN_ProtectionPolicyAuditInfo *self, WSEEN_ProtectionPolicyAuditAction value);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.get_Action() */
 HRESULT wseen_protection_policy_audit_info_get__action(WSEEN_ProtectionPolicyAuditInfo *self, WSEEN_ProtectionPolicyAuditAction *value);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.put_DataDescription() */
 HRESULT wseen_protection_policy_audit_info_put__data_description(WSEEN_ProtectionPolicyAuditInfo *self, cwinrt_hstring value);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.get_DataDescription() */
 HRESULT wseen_protection_policy_audit_info_get__data_description(WSEEN_ProtectionPolicyAuditInfo *self, cwinrt_hstring *value);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.put_SourceDescription() */
 HRESULT wseen_protection_policy_audit_info_put__source_description(WSEEN_ProtectionPolicyAuditInfo *self, cwinrt_hstring value);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.get_SourceDescription() */
 HRESULT wseen_protection_policy_audit_info_get__source_description(WSEEN_ProtectionPolicyAuditInfo *self, cwinrt_hstring *value);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.put_TargetDescription() */
 HRESULT wseen_protection_policy_audit_info_put__target_description(WSEEN_ProtectionPolicyAuditInfo *self, cwinrt_hstring value);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo.get_TargetDescription() */
 HRESULT wseen_protection_policy_audit_info_get__target_description(WSEEN_ProtectionPolicyAuditInfo *self, cwinrt_hstring *value);
 
-/* activate Windows.Security.EnterpriseData.ProtectionPolicyManager */
 HRESULT wseen_protection_policy_manager_new(WSEEN_ProtectionPolicyManager **out);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager */
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.put_Identity() */
 HRESULT wseen_protection_policy_manager_put__identity(WSEEN_ProtectionPolicyManager *self, cwinrt_hstring value);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.get_Identity() */
 HRESULT wseen_protection_policy_manager_get__identity(WSEEN_ProtectionPolicyManager *self, cwinrt_hstring *value);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.put_ShowEnterpriseIndicator() */
 HRESULT wseen_protection_policy_manager_put__show_enterprise_indicator(WSEEN_ProtectionPolicyManager *self, BOOL value);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.get_ShowEnterpriseIndicator() */
 HRESULT wseen_protection_policy_manager_get__show_enterprise_indicator(WSEEN_ProtectionPolicyManager *self, BOOL *value);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.IsRoamableProtectionEnabled(identity) */
 HRESULT wseen_protection_policy_manager_is_roamable_protection_enabled(cwinrt_hstring identity, BOOL *out);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessAsync(sourceIdentity, targetIdentity, auditInfo, messageFromApp, behavior) */
 HRESULT wseen_protection_policy_manager_request_access_async_str_str_p_str_protection_policy_requ_3e27b50d(cwinrt_hstring sourceIdentity, cwinrt_hstring targetIdentity, WSEEN_ProtectionPolicyAuditInfo* auditInfo, cwinrt_hstring messageFromApp, WSEEN_ProtectionPolicyRequestAccessBehavior behavior, WF_IAsyncOperation_WSEEN_ProtectionPolicyEvaluationResult** out);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessForAppAsync(sourceIdentity, appPackageFamilyName, auditInfo, messageFromApp, behavior) */
 HRESULT wseen_protection_policy_manager_request_access_for_app_async_str_str_p_str_protection_policy_requ_3e27b50d(cwinrt_hstring sourceIdentity, cwinrt_hstring appPackageFamilyName, WSEEN_ProtectionPolicyAuditInfo* auditInfo, cwinrt_hstring messageFromApp, WSEEN_ProtectionPolicyRequestAccessBehavior behavior, WF_IAsyncOperation_WSEEN_ProtectionPolicyEvaluationResult** out);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessToFilesForAppAsync(sourceItemList, appPackageFamilyName, auditInfo) */
 HRESULT wseen_protection_policy_manager_request_access_to_files_for_app_async(WFOCO_IIterable_WS_IStorageItem* sourceItemList, cwinrt_hstring appPackageFamilyName, WSEEN_ProtectionPolicyAuditInfo* auditInfo, WF_IAsyncOperation_WSEEN_ProtectionPolicyEvaluationResult** out);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessToFilesForAppAsync(sourceItemList, appPackageFamilyName, auditInfo, messageFromApp, behavior) */
 HRESULT wseen_protection_policy_manager_request_access_to_files_for_app_async_p_str_p_str_protection_policy_reques_18e03586(WFOCO_IIterable_WS_IStorageItem* sourceItemList, cwinrt_hstring appPackageFamilyName, WSEEN_ProtectionPolicyAuditInfo* auditInfo, cwinrt_hstring messageFromApp, WSEEN_ProtectionPolicyRequestAccessBehavior behavior, WF_IAsyncOperation_WSEEN_ProtectionPolicyEvaluationResult** out);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessToFilesForProcessAsync(sourceItemList, processId, auditInfo) */
 HRESULT wseen_protection_policy_manager_request_access_to_files_for_process_async(WFOCO_IIterable_WS_IStorageItem* sourceItemList, uint32_t processId, WSEEN_ProtectionPolicyAuditInfo* auditInfo, WF_IAsyncOperation_WSEEN_ProtectionPolicyEvaluationResult** out);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessToFilesForProcessAsync(sourceItemList, processId, auditInfo, messageFromApp, behavior) */
 HRESULT wseen_protection_policy_manager_request_access_to_files_for_process_async_p_u32_p_str_protection_policy_reques_c052358b(WFOCO_IIterable_WS_IStorageItem* sourceItemList, uint32_t processId, WSEEN_ProtectionPolicyAuditInfo* auditInfo, cwinrt_hstring messageFromApp, WSEEN_ProtectionPolicyRequestAccessBehavior behavior, WF_IAsyncOperation_WSEEN_ProtectionPolicyEvaluationResult** out);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.IsFileProtectionRequiredAsync(target, identity) */
 HRESULT wseen_protection_policy_manager_is_file_protection_required_async(WS_IStorageItem* target, cwinrt_hstring identity, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.IsFileProtectionRequiredForNewFileAsync(parentFolder, identity, desiredName) */
 HRESULT wseen_protection_policy_manager_is_file_protection_required_for_new_file_async(WS_IStorageFolder* parentFolder, cwinrt_hstring identity, cwinrt_hstring desiredName, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.get_PrimaryManagedIdentity() */
 HRESULT wseen_protection_policy_manager_get__primary_managed_identity(cwinrt_hstring *value);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.GetPrimaryManagedIdentityForIdentity(identity) */
 HRESULT wseen_protection_policy_manager_get_primary_managed_identity_for_identity(cwinrt_hstring identity, cwinrt_hstring *out);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessAsync(sourceIdentity, targetIdentity, auditInfo) */
 HRESULT wseen_protection_policy_manager_request_access_async_str_str_p_p(cwinrt_hstring sourceIdentity, cwinrt_hstring targetIdentity, WSEEN_ProtectionPolicyAuditInfo* auditInfo, WF_IAsyncOperation_WSEEN_ProtectionPolicyEvaluationResult** out);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessAsync(sourceIdentity, targetIdentity, auditInfo, messageFromApp) */
 HRESULT wseen_protection_policy_manager_request_access_async_str_str_p_str_p(cwinrt_hstring sourceIdentity, cwinrt_hstring targetIdentity, WSEEN_ProtectionPolicyAuditInfo* auditInfo, cwinrt_hstring messageFromApp, WF_IAsyncOperation_WSEEN_ProtectionPolicyEvaluationResult** out);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessForAppAsync(sourceIdentity, appPackageFamilyName, auditInfo) */
 HRESULT wseen_protection_policy_manager_request_access_for_app_async_str_str_p_p(cwinrt_hstring sourceIdentity, cwinrt_hstring appPackageFamilyName, WSEEN_ProtectionPolicyAuditInfo* auditInfo, WF_IAsyncOperation_WSEEN_ProtectionPolicyEvaluationResult** out);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessForAppAsync(sourceIdentity, appPackageFamilyName, auditInfo, messageFromApp) */
 HRESULT wseen_protection_policy_manager_request_access_for_app_async_str_str_p_str_p(cwinrt_hstring sourceIdentity, cwinrt_hstring appPackageFamilyName, WSEEN_ProtectionPolicyAuditInfo* auditInfo, cwinrt_hstring messageFromApp, WF_IAsyncOperation_WSEEN_ProtectionPolicyEvaluationResult** out);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.LogAuditEvent(sourceIdentity, targetIdentity, auditInfo) */
 HRESULT wseen_protection_policy_manager_log_audit_event(cwinrt_hstring sourceIdentity, cwinrt_hstring targetIdentity, WSEEN_ProtectionPolicyAuditInfo* auditInfo);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.HasContentBeenRevokedSince(identity, since) */
 HRESULT wseen_protection_policy_manager_has_content_been_revoked_since(cwinrt_hstring identity, WF_DateTime since, BOOL *out);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.CheckAccessForApp(sourceIdentity, appPackageFamilyName) */
 HRESULT wseen_protection_policy_manager_check_access_for_app(cwinrt_hstring sourceIdentity, cwinrt_hstring appPackageFamilyName, WSEEN_ProtectionPolicyEvaluationResult *out);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessForAppAsync(sourceIdentity, appPackageFamilyName) */
 HRESULT wseen_protection_policy_manager_request_access_for_app_async(cwinrt_hstring sourceIdentity, cwinrt_hstring appPackageFamilyName, WF_IAsyncOperation_WSEEN_ProtectionPolicyEvaluationResult** out);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.GetEnforcementLevel(identity) */
 HRESULT wseen_protection_policy_manager_get_enforcement_level(cwinrt_hstring identity, WSEEN_EnforcementLevel *out);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.IsUserDecryptionAllowed(identity) */
 HRESULT wseen_protection_policy_manager_is_user_decryption_allowed(cwinrt_hstring identity, BOOL *out);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.IsProtectionUnderLockRequired(identity) */
 HRESULT wseen_protection_policy_manager_is_protection_under_lock_required(cwinrt_hstring identity, BOOL *out);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.get_IsProtectionEnabled() */
 HRESULT wseen_protection_policy_manager_get__is_protection_enabled(BOOL *value);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.IsIdentityManaged(identity) */
 HRESULT wseen_protection_policy_manager_is_identity_managed(cwinrt_hstring identity, BOOL *out);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.TryApplyProcessUIPolicy(identity) */
 HRESULT wseen_protection_policy_manager_try_apply_process_u_i_policy(cwinrt_hstring identity, BOOL *out);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.ClearProcessUIPolicy() */
 HRESULT wseen_protection_policy_manager_clear_process_u_i_policy(void);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.CreateCurrentThreadNetworkContext(identity) */
 HRESULT wseen_protection_policy_manager_create_current_thread_network_context(cwinrt_hstring identity, WSEEN_ThreadNetworkContext** out);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.GetPrimaryManagedIdentityForNetworkEndpointAsync(endpointHost) */
 HRESULT wseen_protection_policy_manager_get_primary_managed_identity_for_network_endpoint_async(WNE_HostName* endpointHost, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.RevokeContent(identity) */
 HRESULT wseen_protection_policy_manager_revoke_content(cwinrt_hstring identity);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.GetForCurrentView() */
 HRESULT wseen_protection_policy_manager_get_for_current_view(WSEEN_ProtectionPolicyManager** out);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.CheckAccess(sourceIdentity, targetIdentity) */
 HRESULT wseen_protection_policy_manager_check_access(cwinrt_hstring sourceIdentity, cwinrt_hstring targetIdentity, WSEEN_ProtectionPolicyEvaluationResult *out);
 
-/* Windows.Security.EnterpriseData.ProtectionPolicyManager.RequestAccessAsync(sourceIdentity, targetIdentity) */
 HRESULT wseen_protection_policy_manager_request_access_async(cwinrt_hstring sourceIdentity, cwinrt_hstring targetIdentity, WF_IAsyncOperation_WSEEN_ProtectionPolicyEvaluationResult** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wseen_protection_policy_manager_on_policy_changed(WSEEN_ProtectionPolicyManager *self, cwinrt_event_fn fn, void *ctx);
@@ -941,34 +748,14 @@ void wseen_protection_policy_manager_off_protected_access_resumed(WSEEN_Protecti
 cwinrt_token wseen_protection_policy_manager_on_protected_content_revoked(WSEEN_ProtectionPolicyManager *self, cwinrt_event_fn fn, void *ctx);
 void wseen_protection_policy_manager_off_protected_content_revoked(WSEEN_ProtectionPolicyManager *self, cwinrt_token token);
 
-/* activate Windows.Security.EnterpriseData.ThreadNetworkContext */
 HRESULT wseen_thread_network_context_new(WSEEN_ThreadNetworkContext **out);
 
-/* Windows.Security.EnterpriseData.ThreadNetworkContext */
-/* Windows.Security.EnterpriseData.ThreadNetworkContext.Close() */
 HRESULT wseen_thread_network_context_close(WSEEN_ThreadNetworkContext *self);
 
-/* Windows.Security.EnterpriseData.IBufferProtectUnprotectResult */
-/* Windows.Security.EnterpriseData.IDataProtectionInfo */
-/* Windows.Security.EnterpriseData.IFileProtectionInfo */
-/* Windows.Security.EnterpriseData.IFileProtectionInfo2 */
-/* Windows.Security.EnterpriseData.IFileProtectionInfo2.get_IsProtectWhileOpenSupported() */
 HRESULT wseen_file_protection_info_2_get__is_protect_while_open_supported(WSEEN_IFileProtectionInfo_2 *self, BOOL *value);
 
-/* Windows.Security.EnterpriseData.IFileUnprotectOptions */
-/* Windows.Security.EnterpriseData.IProtectedAccessResumedEventArgs */
-/* Windows.Security.EnterpriseData.IProtectedAccessSuspendingEventArgs */
-/* Windows.Security.EnterpriseData.IProtectedContainerExportResult */
-/* Windows.Security.EnterpriseData.IProtectedContainerImportResult */
-/* Windows.Security.EnterpriseData.IProtectedContentRevokedEventArgs */
-/* Windows.Security.EnterpriseData.IProtectedFileCreateResult */
-/* Windows.Security.EnterpriseData.IProtectionPolicyAuditInfo */
-/* Windows.Security.EnterpriseData.IProtectionPolicyManager */
-/* Windows.Security.EnterpriseData.IProtectionPolicyManager2 */
-/* Windows.Security.EnterpriseData.IProtectionPolicyManager2.put_ShowEnterpriseIndicator() */
 HRESULT wseen_protection_policy_manager_2_put__show_enterprise_indicator(WSEEN_IProtectionPolicyManager_2 *self, BOOL value);
 
-/* Windows.Security.EnterpriseData.IProtectionPolicyManager2.get_ShowEnterpriseIndicator() */
 HRESULT wseen_protection_policy_manager_2_get__show_enterprise_indicator(WSEEN_IProtectionPolicyManager_2 *self, BOOL *value);
 
 #endif /* CWINRT_WINDOWS_SECURITY_ENTERPRISEDATA_H */

@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WAIAGMC_IMcpMessageFilterExperimental WAIAGMC_IMcpMessageFilterExperimental;
 typedef struct WAIAGMC_IMcpMessageFilterExperimental_2 WAIAGMC_IMcpMessageFilterExperimental_2;
 typedef struct WAIAGMC_IMcpMessageFilterResponseExperimental WAIAGMC_IMcpMessageFilterResponseExperimental;
@@ -28,7 +27,6 @@ typedef enum WAIAGMC_McpMessageDirection {
 } WAIAGMC_McpMessageDirection;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -53,40 +51,24 @@ static const IID CWINRT_IID_WAIAGMC_IMcpMessageFilterResponseExperimental_2 CWIN
 static const IID CWINRT_IID_WAIAGMC_IMcpMessageFilterResponse CWINRT_MAYBE_UNUSED = { 0x363CE02C, 0x7098, 0x5E13, { 0xA4, 0x08, 0x7B, 0x43, 0xE1, 0xF4, 0x52, 0xAC } };
 #endif
 
-/* Methods */
-
-/* Windows.AI.Agents.Mcp.IMcpMessageFilterExperimental */
-/* Windows.AI.Agents.Mcp.IMcpMessageFilterExperimental.Initialize(clientAppUserModelId, clientProcessId, serverIdentity, serverName, serverProcessId) */
 HRESULT waiagmc_mcp_message_filter_experimental_initialize(WAIAGMC_IMcpMessageFilterExperimental *self, cwinrt_hstring clientAppUserModelId, uint32_t clientProcessId, cwinrt_hstring serverIdentity, cwinrt_hstring serverName, uint32_t serverProcessId);
 
-/* Windows.AI.Agents.Mcp.IMcpMessageFilterExperimental.OnMessage(message, direction, filterResponse) */
 HRESULT waiagmc_mcp_message_filter_experimental_handle_message(WAIAGMC_IMcpMessageFilterExperimental *self, cwinrt_hstring message, WAIAGMC_McpMessageDirection direction, WAIAGMC_McpMessageFilterResponse* filterResponse);
 
-/* Windows.AI.Agents.Mcp.IMcpMessageFilterExperimental2 */
-/* Windows.AI.Agents.Mcp.IMcpMessageFilterExperimental2.Initialize(clientProcessIdentifier, clientProcessId, serverProcessIdentifier, serverProcessId, serverId) */
 HRESULT waiagmc_mcp_message_filter_experimental_2_initialize(WAIAGMC_IMcpMessageFilterExperimental_2 *self, cwinrt_hstring clientProcessIdentifier, uint32_t clientProcessId, cwinrt_hstring serverProcessIdentifier, uint32_t serverProcessId, cwinrt_hstring serverId, BOOL *out);
 
-/* Windows.AI.Agents.Mcp.IMcpMessageFilterExperimental2.OnMessage(message, direction, filterResponse) */
 HRESULT waiagmc_mcp_message_filter_experimental_2_handle_message(WAIAGMC_IMcpMessageFilterExperimental_2 *self, cwinrt_hstring message, WAIAGMC_McpMessageDirection direction, WAIAGMC_McpMessageFilterResponse* filterResponse);
 
-/* Windows.AI.Agents.Mcp.IMcpMessageFilterResponseExperimental */
-/* Windows.AI.Agents.Mcp.IMcpMessageFilterResponseExperimental.get_IsAllowed() */
 HRESULT waiagmc_mcp_message_filter_response_experimental_get__is_allowed(WAIAGMC_IMcpMessageFilterResponseExperimental *self, BOOL *value);
 
-/* Windows.AI.Agents.Mcp.IMcpMessageFilterResponseExperimental.put_IsAllowed() */
 HRESULT waiagmc_mcp_message_filter_response_experimental_put__is_allowed(WAIAGMC_IMcpMessageFilterResponseExperimental *self, BOOL value);
 
-/* Windows.AI.Agents.Mcp.IMcpMessageFilterResponseExperimental.get_MessageIfNotAllowed() */
 HRESULT waiagmc_mcp_message_filter_response_experimental_get__message_if_not_allowed(WAIAGMC_IMcpMessageFilterResponseExperimental *self, cwinrt_hstring *value);
 
-/* Windows.AI.Agents.Mcp.IMcpMessageFilterResponseExperimental.put_MessageIfNotAllowed() */
 HRESULT waiagmc_mcp_message_filter_response_experimental_put__message_if_not_allowed(WAIAGMC_IMcpMessageFilterResponseExperimental *self, cwinrt_hstring value);
 
-/* Windows.AI.Agents.Mcp.IMcpMessageFilterResponseExperimental2 */
-/* Windows.AI.Agents.Mcp.IMcpMessageFilterResponseExperimental2.Allow() */
 HRESULT waiagmc_mcp_message_filter_response_experimental_2_allow(WAIAGMC_IMcpMessageFilterResponseExperimental_2 *self);
 
-/* Windows.AI.Agents.Mcp.IMcpMessageFilterResponseExperimental2.Reject(reason) */
 HRESULT waiagmc_mcp_message_filter_response_experimental_2_reject(WAIAGMC_IMcpMessageFilterResponseExperimental_2 *self, cwinrt_hstring reason);
 
 #endif /* CWINRT_WINDOWS_AI_AGENTS_MCP_H */

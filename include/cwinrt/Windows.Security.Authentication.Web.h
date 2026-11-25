@@ -12,14 +12,12 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WSEAUWE_WebAuthenticationResult WSEAUWE_WebAuthenticationResult;
 typedef struct WSEAUWE_IWebAuthenticationBrokerStatics_2 WSEAUWE_IWebAuthenticationBrokerStatics_2;
 typedef struct WSEAUWE_IWebAuthenticationBrokerStatics WSEAUWE_IWebAuthenticationBrokerStatics;
 typedef struct WSEAUWE_WebAuthenticationBroker WSEAUWE_WebAuthenticationBroker;
 typedef struct WSEAUWE_IWebAuthenticationResult WSEAUWE_IWebAuthenticationResult;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_Uri
 #define CWINRT_FWD_WF_Uri
 typedef struct WF_Uri WF_Uri;
@@ -62,7 +60,6 @@ typedef enum WSEAUWE_WebAuthenticationStatus {
 } WSEAUWE_WebAuthenticationStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -79,74 +76,46 @@ static const IID CWINRT_IID_WSEAUWE_IWebAuthenticationBrokerStatics CWINRT_MAYBE
 static const IID CWINRT_IID_WSEAUWE_IWebAuthenticationResult CWINRT_MAYBE_UNUSED = { 0x64002B4B, 0xEDE9, 0x470A, { 0xA5, 0xCD, 0x03, 0x23, 0xFA, 0xF6, 0xE2, 0x62 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Security.Authentication.Web.WebAuthenticationResult */
 HRESULT wseauwe_web_authentication_result_new(WSEAUWE_WebAuthenticationResult **out);
 
-/* Windows.Security.Authentication.Web.WebAuthenticationResult */
-/* Windows.Security.Authentication.Web.WebAuthenticationResult.get_ResponseData() */
 HRESULT wseauwe_web_authentication_result_get__response_data(WSEAUWE_WebAuthenticationResult *self, cwinrt_hstring *value);
 
-/* Windows.Security.Authentication.Web.WebAuthenticationResult.get_ResponseStatus() */
 HRESULT wseauwe_web_authentication_result_get__response_status(WSEAUWE_WebAuthenticationResult *self, WSEAUWE_WebAuthenticationStatus *value);
 
-/* Windows.Security.Authentication.Web.WebAuthenticationResult.get_ResponseErrorDetail() */
 HRESULT wseauwe_web_authentication_result_get__response_error_detail(WSEAUWE_WebAuthenticationResult *self, uint32_t *value);
 
-/* Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics2 */
-/* Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics2.AuthenticateAndContinue(requestUri) */
 HRESULT wseauwe_web_authentication_broker_statics_2_authenticate_and_continue(WSEAUWE_IWebAuthenticationBrokerStatics_2 *self, WF_Uri* requestUri);
 
-/* Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics2.AuthenticateAndContinue(requestUri, callbackUri) */
 HRESULT wseauwe_web_authentication_broker_statics_2_authenticate_and_continue_p_p(WSEAUWE_IWebAuthenticationBrokerStatics_2 *self, WF_Uri* requestUri, WF_Uri* callbackUri);
 
-/* Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics2.AuthenticateAndContinue(requestUri, callbackUri, continuationData, options) */
 HRESULT wseauwe_web_authentication_broker_statics_2_authenticate_and_continue_p_p_p_web_authentication_options(WSEAUWE_IWebAuthenticationBrokerStatics_2 *self, WF_Uri* requestUri, WF_Uri* callbackUri, WFOCO_ValueSet* continuationData, WSEAUWE_WebAuthenticationOptions options);
 
-/* Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics2.AuthenticateSilentlyAsync(requestUri) */
 HRESULT wseauwe_web_authentication_broker_statics_2_authenticate_silently_async(WSEAUWE_IWebAuthenticationBrokerStatics_2 *self, WF_Uri* requestUri, WF_IAsyncOperation_WSEAUWE_WebAuthenticationResult** out);
 
-/* Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics2.AuthenticateSilentlyAsync(requestUri, options) */
 HRESULT wseauwe_web_authentication_broker_statics_2_authenticate_silently_async_p_web_authentication_options_p(WSEAUWE_IWebAuthenticationBrokerStatics_2 *self, WF_Uri* requestUri, WSEAUWE_WebAuthenticationOptions options, WF_IAsyncOperation_WSEAUWE_WebAuthenticationResult** out);
 
-/* Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics */
-/* Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics.AuthenticateAsync(options, requestUri, callbackUri) */
 HRESULT wseauwe_web_authentication_broker_statics_authenticate_async_web_authentication_options_p_p_p(WSEAUWE_IWebAuthenticationBrokerStatics *self, WSEAUWE_WebAuthenticationOptions options, WF_Uri* requestUri, WF_Uri* callbackUri, WF_IAsyncOperation_WSEAUWE_WebAuthenticationResult** out);
 
-/* Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics.AuthenticateAsync(options, requestUri) */
 HRESULT wseauwe_web_authentication_broker_statics_authenticate_async(WSEAUWE_IWebAuthenticationBrokerStatics *self, WSEAUWE_WebAuthenticationOptions options, WF_Uri* requestUri, WF_IAsyncOperation_WSEAUWE_WebAuthenticationResult** out);
 
-/* Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics.GetCurrentApplicationCallbackUri() */
 HRESULT wseauwe_web_authentication_broker_statics_get_current_application_callback_uri(WSEAUWE_IWebAuthenticationBrokerStatics *self, WF_Uri** out);
 
-/* activate Windows.Security.Authentication.Web.WebAuthenticationBroker */
 HRESULT wseauwe_web_authentication_broker_new(WSEAUWE_WebAuthenticationBroker **out);
 
-/* Windows.Security.Authentication.Web.WebAuthenticationBroker */
-/* Windows.Security.Authentication.Web.WebAuthenticationBroker.AuthenticateAndContinue(requestUri) */
 HRESULT wseauwe_web_authentication_broker_authenticate_and_continue(WF_Uri* requestUri);
 
-/* Windows.Security.Authentication.Web.WebAuthenticationBroker.AuthenticateAndContinue(requestUri, callbackUri) */
 HRESULT wseauwe_web_authentication_broker_authenticate_and_continue_p_p(WF_Uri* requestUri, WF_Uri* callbackUri);
 
-/* Windows.Security.Authentication.Web.WebAuthenticationBroker.AuthenticateAndContinue(requestUri, callbackUri, continuationData, options) */
 HRESULT wseauwe_web_authentication_broker_authenticate_and_continue_p_p_p_web_authentication_options(WF_Uri* requestUri, WF_Uri* callbackUri, WFOCO_ValueSet* continuationData, WSEAUWE_WebAuthenticationOptions options);
 
-/* Windows.Security.Authentication.Web.WebAuthenticationBroker.AuthenticateSilentlyAsync(requestUri) */
 HRESULT wseauwe_web_authentication_broker_authenticate_silently_async(WF_Uri* requestUri, WF_IAsyncOperation_WSEAUWE_WebAuthenticationResult** out);
 
-/* Windows.Security.Authentication.Web.WebAuthenticationBroker.AuthenticateSilentlyAsync(requestUri, options) */
 HRESULT wseauwe_web_authentication_broker_authenticate_silently_async_p_web_authentication_options_p(WF_Uri* requestUri, WSEAUWE_WebAuthenticationOptions options, WF_IAsyncOperation_WSEAUWE_WebAuthenticationResult** out);
 
-/* Windows.Security.Authentication.Web.WebAuthenticationBroker.AuthenticateAsync(options, requestUri, callbackUri) */
 HRESULT wseauwe_web_authentication_broker_authenticate_async_web_authentication_options_p_p_p(WSEAUWE_WebAuthenticationOptions options, WF_Uri* requestUri, WF_Uri* callbackUri, WF_IAsyncOperation_WSEAUWE_WebAuthenticationResult** out);
 
-/* Windows.Security.Authentication.Web.WebAuthenticationBroker.AuthenticateAsync(options, requestUri) */
 HRESULT wseauwe_web_authentication_broker_authenticate_async(WSEAUWE_WebAuthenticationOptions options, WF_Uri* requestUri, WF_IAsyncOperation_WSEAUWE_WebAuthenticationResult** out);
 
-/* Windows.Security.Authentication.Web.WebAuthenticationBroker.GetCurrentApplicationCallbackUri() */
 HRESULT wseauwe_web_authentication_broker_get_current_application_callback_uri(WF_Uri** out);
 
-/* Windows.Security.Authentication.Web.IWebAuthenticationResult */
 #endif /* CWINRT_WINDOWS_SECURITY_AUTHENTICATION_WEB_H */

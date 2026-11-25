@@ -48,7 +48,6 @@ typedef struct gen_batch_ctx {
 	volatile long                  failures;
 } gen_batch_ctx;
 
-/* Arena-allocated copy of s (NUL included). */
 static char *batch_strdup(int arena, char const *s) {
 	size_t n = strlen(s) + 1;
 	char  *p = ( char * ) aden(arena, n);
@@ -56,7 +55,6 @@ static char *batch_strdup(int arena, char const *s) {
 	return p;
 }
 
-/* qsort comparator ordering enum defs by mangled C name. */
 static int cmp_enum_def(void const *a, void const *b) {
 	return strcmp((( cwinrt_enum_def const * ) a)->cname, (( cwinrt_enum_def const * ) b)->cname);
 }
@@ -75,7 +73,6 @@ build_enum_members(int arena, winmd_field_info const *wf, uint32_t fn) {
 	return mem;
 }
 
-/* True if typedef row i+1 is a Windows.* enum (extends System.Enum). */
 static int is_windows_enum(winmd_db const *wm, uint32_t i) {
 	winmd_row_typedef const *td = &wm->typedefs [i];
 	char                     base [256];
@@ -87,8 +84,6 @@ static int is_windows_enum(winmd_db const *wm, uint32_t i) {
 	return strcmp(base, "System.Enum") == 0;
 }
 
-/* Build one enum def for typedef row i+1, or skip. Returns 1 if *def filled, 0 to
-   skip, -1 on OOM. */
 static int build_enum_def(winmd_db const *wm, int arena, uint32_t i, cwinrt_enum_def *def) {
 	winmd_row_typedef const *td = &wm->typedefs [i];
 	uint32_t                 fn = 0;
@@ -112,9 +107,6 @@ static int build_enum_def(winmd_db const *wm, int arena, uint32_t i, cwinrt_enum
 	return def->cname ? 1 : -1;
 }
 
-/* Collect every enum (extends System.Enum) in the union winmd, with its members,
-   so consumers can inline the full definition (cross-ns enums cannot be opaque
-   forward-declared and the include chain is cycle-fragile). */
 static int build_value_type_set(winmd_db const *wm, int arena, cwinrt_value_type_set *out) {
 	uint32_t         i, n = 0;
 	cwinrt_enum_def *defs;
@@ -133,7 +125,6 @@ static int build_value_type_set(winmd_db const *wm, int arena, cwinrt_value_type
 	return 0;
 }
 
-/* Derive the .impl.c basename from a header basename ("Foo.h" -> "Foo.impl.c"). */
 static void impl_basename_from_header(char const *header, char *impl, size_t impl_sz) {
 	size_t n = strlen(header);
 	if (n + 8 >= impl_sz || n < 2) {
@@ -146,7 +137,6 @@ static void impl_basename_from_header(char const *header, char *impl, size_t imp
 
 typedef void (*argset_fn)(gen_args *a, char const *val);
 
-/* One setter per CLI flag; bodies record the flag into gen_args. */
 static void as_winmd(gen_args *a, char const *v) { a->winmd = v; }
 static void as_out(gen_args *a, char const *v) { a->out_dir = v; }
 static void as_impl_dir(gen_args *a, char const *v) { a->impl_dir = v; }
@@ -172,13 +162,11 @@ static struct argflag {
   {"--list-ns", 0, as_list_ns},
 };
 
-/* Apply flag f at argv[*i], advancing *i past a consumed value. */
 static void args_apply_flag(gen_args *a, struct argflag const *f, int argc, char **argv, int *i) {
 	if (!f->takes_val) f->fn(a, NULL);
 	else if (*i + 1 < argc) f->fn(a, argv [++*i]);
 }
 
-/* Match argv[*i] against the flag table and apply it, advancing *i past a value. */
 static void args_apply_one(gen_args *a, int argc, char **argv, int *i) {
 	size_t k;
 	for (k = 0; k < sizeof(k_argflags) / sizeof(k_argflags [0]); k++) {
@@ -201,7 +189,6 @@ static void args_default_header(gen_args *a) {
 	a->header = hdr;
 }
 
-/* Print the usage banner; always returns -1 for the caller to propagate. */
 static int args_usage(void) {
 	fprintf(stderr,
 	        "usage: cwinrt-gen --winmd <path> [-o outdir] [--ns filter] [--header name]\n"
@@ -212,7 +199,6 @@ static int args_usage(void) {
 	return -1;
 }
 
-/* Fill *a from argv with defaults applied; returns 0 or -1 (usage shown). */
 static int args_parse(int argc, char **argv, gen_args *a) {
 	int i;
 	memset(a, 0, sizeof(*a));
@@ -238,7 +224,6 @@ typedef struct gen_input {
 	char const                    *winmd_path;
 } gen_input;
 
-/* Write header (+ impl) for an already-mapped unit. */
 static int gen_emit_one(gen_args const *a, char const *filter_ns, cwinrt_mapped_unit const *mapped) {
 	cwinrt_emit_opts emit;
 	char             hdr [128];
@@ -274,7 +259,7 @@ static int gen_run_one(gen_args const *a, char const *filter_ns, gen_input const
 
 	memset(&raw, 0, sizeof(raw)), memset(&topo, 0, sizeof(topo)), memset(&mapped, 0, sizeof(mapped));
 
-	/* Parse from a preloaded db (batch) or a standalone path. */
+
 	if (in->wm) rc = cwinrt_parse_winmd_db(in->wm, in->td_ix, filter_ns, &raw);
 	else if (in->winmd_path) rc = cwinrt_parse_winmd(in->winmd_path, filter_ns, &raw);
 	else rc = -1;
@@ -299,14 +284,12 @@ static int gen_run_one(gen_args const *a, char const *filter_ns, gen_input const
 	return rc;
 }
 
-/* Print a UUID in winmd byte order as a GUID-struct initializer. */
 static void print_uuid(char const *label, uint8_t const u [16]) {
 	printf("%s {0x%02X%02X%02X%02X,0x%02X%02X,0x%02X%02X," "{0x%02X,0x%02X,0x%02X,0x%02X,0x%02X,0x%02X,0x%02X,0x%02X}}\n",
 	       label, u [3], u [2], u [1], u [0], u [5], u [4], u [7], u [6], u [8], u [9], u [10], u [11], u [12], u [13],
 	       u [14], u [15]);
 }
 
-/* Parse and print one method's signature line (and its param names). */
 static void dump_method_sig_one(winmd_db const *wm, winmd_row_method const *md, char **pnames, uint32_t pname_n) {
 	uint32_t         row = md->token & 0x00ffffffu;
 	winmd_method_sig sig;
@@ -334,7 +317,6 @@ static void dump_method_sig_one(winmd_db const *wm, winmd_row_method const *md, 
 	winmd_sig_free(&sig);
 }
 
-/* Dump signatures of methods whose name contains `needle` (or a single `row_want`). */
 static int dump_method_sig(char const *winmd_path, char const *needle, uint32_t row_want) {
 	winmd_db wm;
 	uint32_t i;
@@ -356,7 +338,6 @@ static int dump_method_sig(char const *winmd_path, char const *needle, uint32_t 
 	return 0;
 }
 
-/* Dump the overload name of methods whose name contains `needle`. */
 static int dump_method_overloads(char const *winmd_path, char const *needle) {
 	winmd_db wm;
 	uint32_t i;
@@ -375,7 +356,6 @@ static int dump_method_overloads(char const *winmd_path, char const *needle) {
 	return 0;
 }
 
-/* Dump TypeDef flags + activatable bit for types matching `needle`. */
 static int dump_type_flags(char const *winmd_path, char const *needle) {
 	winmd_db wm;
 	uint32_t i;
@@ -395,7 +375,6 @@ static int dump_type_flags(char const *winmd_path, char const *needle) {
 	return 0;
 }
 
-/* Dump the [Guid] of types matching `needle` in GUID-struct form. */
 static int dump_guids(char const *winmd_path, char const *needle) {
 	winmd_db wm;
 	uint32_t i;
@@ -415,7 +394,6 @@ static int dump_guids(char const *winmd_path, char const *needle) {
 	return 0;
 }
 
-/* Print every Windows.* namespace in the winmd, one per line. */
 static int gen_list_namespaces(char const *winmd_path) {
 	winmd_db wm;
 	char   **nss = NULL;
@@ -431,7 +409,7 @@ static int gen_list_namespaces(char const *winmd_path) {
 }
 
 #ifdef _WIN32
-/* Emit one namespace for a worker; returns 1 to keep going, 0 to stop the worker. */
+
 static int gen_batch_worker_step(gen_batch_ctx *ctx, uint32_t i) {
 	gen_input in = {ctx->wm, ctx->td_ix, ctx->vts, NULL};
 	if (gen_run_one(ctx->a, ctx->nss [i], &in) == 0) return 1;
@@ -452,7 +430,6 @@ static unsigned __stdcall gen_batch_worker(void *arg) {
 }
 #endif
 
-/* Shared resources of a batch run; freed once via batch_res_free. */
 typedef struct gen_batch_res {
 	winmd_db                wm;
 	cwinrt_typedef_ns_index td_ix;
@@ -468,8 +445,6 @@ static void batch_res_free(gen_batch_res *r) {
 	winmd_close(&r->wm);
 }
 
-/* Open the winmd, collect namespaces, and build the shared index/value-type set
-   into an arena. Returns 0 with *r owning everything, or -1 (nothing to free). */
 static int batch_res_open(gen_args const *a, gen_batch_res *r) {
 	memset(r, 0, sizeof(*r));
 	r->arena = -1;
@@ -486,7 +461,7 @@ static int batch_res_open(gen_args const *a, gen_batch_res *r) {
 }
 
 #ifdef _WIN32
-/* Spawn `jobs` workers over a shared ctx; return failure count (-1 = spawn failed). */
+
 static int batch_run_threads(gen_batch_ctx *ctx, uint32_t jobs) {
 	HANDLE  *threads = ( HANDLE * ) calloc(jobs, sizeof(HANDLE));
 	int      failures = 0;
@@ -532,7 +507,6 @@ static int gen_batch_threaded(gen_args const *a, gen_batch_res *r, uint32_t jobs
 }
 #endif
 
-/* Sequential emit over every namespace. Returns 0 / -1 like the threaded path. */
 static int gen_batch_sequential(gen_args const *a, gen_batch_res *r) {
 	gen_input in = {&r->wm, &r->td_ix, &r->vts, NULL};
 	uint32_t  i;
@@ -571,7 +545,6 @@ static int gen_batch_union(gen_args const *a) {
 	return rc;
 }
 
-/* Parse each Windows namespace once (indexed) and invoke `visit(raw, ctx)`. */
 typedef void (*ns_raw_fn)(cwinrt_raw_db const *raw, void *ctx);
 static int foreach_ns_rawdb(char const *winmd_path, ns_raw_fn visit, void *ctx) {
 	winmd_db                wm;
@@ -605,8 +578,6 @@ static void check_slots_ns(cwinrt_raw_db const *raw, void *ctx) {
 	cwinrt_slot_check(raw, &t->ok, &t->bad);
 }
 
-/* Validate vtable slot assignment across every namespace's interfaces against the
-   WinRT ABI rule (see cwinrt_slot_check). */
 static int gen_check_slots(char const *winmd_path) {
 	slot_tally t = {0, 0};
 	int        n = foreach_ns_rawdb(winmd_path, check_slots_ns, &t);
@@ -620,7 +591,6 @@ static void print_iid(char const *name, uint8_t const g [16]) {
 	       g [0], g [5], g [4], g [7], g [6], g [8], g [9], g [10], g [11], g [12], g [13], g [14], g [15]);
 }
 
-/* Emit a canonical GUID per [Guid] interface for SDK differential checks. */
 static int gen_dump_iids(char const *winmd_path) {
 	winmd_db wm;
 	uint32_t i;
@@ -640,12 +610,10 @@ static int gen_dump_iids(char const *winmd_path) {
 	return 0;
 }
 
-
 /* A one-shot subcommand: argv[i] is the matched flag; a1/a2 are the following
    args (NULL if absent). Returns the process exit code. */
 typedef int (*subcmd_fn)(char const *a1, char const *a2, char const *a3);
 
-/* Thin adapters mapping subcommand args to a diagnostic; result is an exit code. */
 static int cmd_dump_guid(char const *a, char const *b, char const *c) { ( void ) c; return dump_guids(a, b) != 0; }
 static int cmd_dump_type(char const *a, char const *b, char const *c) { ( void ) c; return dump_type_flags(a, b) != 0; }
 static int cmd_dump_overload(char const *a, char const *b, char const *c) { ( void ) c; return dump_method_overloads(a, b) != 0; }
@@ -660,8 +628,6 @@ static int cmd_emit_piids(char const *a, char const *b, char const *c) { return 
 static int cmd_dump_sig(char const *a, char const *b, char const *c) { ( void ) c; return gen_dump_sig(a, b) != 0; }
 static int cmd_selftest_rfc(char const *a, char const *b, char const *c) { ( void ) a; ( void ) b; ( void ) c; return gen_selftest_piid_rfc(); }
 
-/* Diagnostic subcommands, dispatched before normal generation. `need` is the
-   count of required following arguments. */
 static struct subcmd {
 	char const *name;
 	int         need;
@@ -675,7 +641,6 @@ static struct subcmd {
   {"--selftest-piid", 0, cmd_selftest_rfc},
 };
 
-/* The subcmd whose name == argv[i] and whose required args fit, else NULL. */
 static struct subcmd const *subcmd_match(char const *arg, int avail) {
 	size_t k;
 	for (k = 0; k < sizeof(k_subcmds) / sizeof(k_subcmds [0]); k++) {
@@ -685,8 +650,6 @@ static struct subcmd const *subcmd_match(char const *arg, int avail) {
 	return NULL;
 }
 
-/* Run a matching diagnostic subcommand. Returns its exit code, or -1 if argv
-   contains no subcommand (caller proceeds to normal generation). */
 static int run_subcommand(int argc, char **argv) {
 	int i;
 	for (i = 1; i < argc; i++) {

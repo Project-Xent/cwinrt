@@ -15,7 +15,6 @@
 #include <cwinrt/Windows.Graphics.DirectX.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WPESP_SpatialCoordinateSystem
 #define CWINRT_FWD_WPESP_SpatialCoordinateSystem
 typedef struct WPESP_SpatialCoordinateSystem WPESP_SpatialCoordinateSystem;
@@ -37,7 +36,6 @@ typedef struct WPE_PerceptionTimestamp WPE_PerceptionTimestamp;
 typedef struct WUICO_CoreWindow WUICO_CoreWindow;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WGRHO_HolographicCameraViewportParameters WGRHO_HolographicCameraViewportParameters;
 typedef struct WGRHO_HolographicDisplay WGRHO_HolographicDisplay;
 typedef struct WGRHO_HolographicFrame WGRHO_HolographicFrame;
@@ -97,7 +95,6 @@ typedef struct WGRHO_IHolographicCameraRenderingParameters_2 WGRHO_IHolographicC
 typedef struct WGRHO_IHolographicCamera WGRHO_IHolographicCamera;
 typedef struct WGRHO_IHolographicCameraRenderingParameters WGRHO_IHolographicCameraRenderingParameters;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFN_Vector_2
 #define CWINRT_FWD_WFN_Vector_2
 typedef struct WFN_Vector_2 WFN_Vector_2;
@@ -404,7 +401,6 @@ struct WGRHO_HolographicAdapterId {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -569,255 +565,162 @@ static const IID CWINRT_IID_WGRHO_IHolographicCamera CWINRT_MAYBE_UNUSED = { 0xE
 static const IID CWINRT_IID_WGRHO_IHolographicCameraRenderingParameters CWINRT_MAYBE_UNUSED = { 0x8EAC2ED1, 0x5BF4, 0x4E16, { 0x82, 0x36, 0xAE, 0x08, 0x00, 0xC1, 0x1D, 0x0D } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Graphics.Holographic.HolographicCameraViewportParameters */
 HRESULT wgrho_holographic_camera_viewport_parameters_new(WGRHO_HolographicCameraViewportParameters **out);
 
-/* Windows.Graphics.Holographic.HolographicCameraViewportParameters */
-/* Windows.Graphics.Holographic.HolographicCameraViewportParameters.get_HiddenAreaMesh() */
 HRESULT wgrho_holographic_camera_viewport_parameters_get__hidden_area_mesh(WGRHO_HolographicCameraViewportParameters *self, WFN_Vector_2 **value, uint32_t *value_len);
 
-/* Windows.Graphics.Holographic.HolographicCameraViewportParameters.get_VisibleAreaMesh() */
 HRESULT wgrho_holographic_camera_viewport_parameters_get__visible_area_mesh(WGRHO_HolographicCameraViewportParameters *self, WFN_Vector_2 **value, uint32_t *value_len);
 
-/* activate Windows.Graphics.Holographic.HolographicDisplay */
 HRESULT wgrho_holographic_display_new(WGRHO_HolographicDisplay **out);
 
-/* Windows.Graphics.Holographic.HolographicDisplay */
-/* Windows.Graphics.Holographic.HolographicDisplay.get_DisplayName() */
 HRESULT wgrho_holographic_display_get__display_name(WGRHO_HolographicDisplay *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Holographic.HolographicDisplay.get_MaxViewportSize() */
 HRESULT wgrho_holographic_display_get__max_viewport_size(WGRHO_HolographicDisplay *self, WF_Size *value);
 
-/* Windows.Graphics.Holographic.HolographicDisplay.get_IsStereo() */
 HRESULT wgrho_holographic_display_get__is_stereo(WGRHO_HolographicDisplay *self, BOOL *value);
 
-/* Windows.Graphics.Holographic.HolographicDisplay.get_IsOpaque() */
 HRESULT wgrho_holographic_display_get__is_opaque(WGRHO_HolographicDisplay *self, BOOL *value);
 
-/* Windows.Graphics.Holographic.HolographicDisplay.get_AdapterId() */
 HRESULT wgrho_holographic_display_get__adapter_id(WGRHO_HolographicDisplay *self, WGRHO_HolographicAdapterId *value);
 
-/* Windows.Graphics.Holographic.HolographicDisplay.get_SpatialLocator() */
 HRESULT wgrho_holographic_display_get__spatial_locator(WGRHO_HolographicDisplay *self, WPESP_SpatialLocator** value);
 
-/* Windows.Graphics.Holographic.HolographicDisplay.get_RefreshRate() */
 HRESULT wgrho_holographic_display_get__refresh_rate(WGRHO_HolographicDisplay *self, double *value);
 
-/* Windows.Graphics.Holographic.HolographicDisplay.TryGetViewConfiguration(kind) */
 HRESULT wgrho_holographic_display_try_get_view_configuration(WGRHO_HolographicDisplay *self, WGRHO_HolographicViewConfigurationKind kind, WGRHO_HolographicViewConfiguration** out);
 
-/* Windows.Graphics.Holographic.HolographicDisplay.GetDefault() */
 HRESULT wgrho_holographic_display_get_default(WGRHO_HolographicDisplay** out);
 
-/* activate Windows.Graphics.Holographic.HolographicFrame */
 HRESULT wgrho_holographic_frame_new(WGRHO_HolographicFrame **out);
 
-/* Windows.Graphics.Holographic.HolographicFrame */
-/* Windows.Graphics.Holographic.HolographicFrame.get_AddedCameras() */
 HRESULT wgrho_holographic_frame_get__added_cameras(WGRHO_HolographicFrame *self, WFOCO_IVectorView_WGRHO_HolographicCamera** value);
 
-/* Windows.Graphics.Holographic.HolographicFrame.get_RemovedCameras() */
 HRESULT wgrho_holographic_frame_get__removed_cameras(WGRHO_HolographicFrame *self, WFOCO_IVectorView_WGRHO_HolographicCamera** value);
 
-/* Windows.Graphics.Holographic.HolographicFrame.GetRenderingParameters(cameraPose) */
 HRESULT wgrho_holographic_frame_get_rendering_parameters(WGRHO_HolographicFrame *self, WGRHO_HolographicCameraPose* cameraPose, WGRHO_HolographicCameraRenderingParameters** out);
 
-/* Windows.Graphics.Holographic.HolographicFrame.get_Duration() */
 HRESULT wgrho_holographic_frame_get__duration(WGRHO_HolographicFrame *self, WF_TimeSpan *value);
 
-/* Windows.Graphics.Holographic.HolographicFrame.get_CurrentPrediction() */
 HRESULT wgrho_holographic_frame_get__current_prediction(WGRHO_HolographicFrame *self, WGRHO_HolographicFramePrediction** value);
 
-/* Windows.Graphics.Holographic.HolographicFrame.UpdateCurrentPrediction() */
 HRESULT wgrho_holographic_frame_update_current_prediction(WGRHO_HolographicFrame *self);
 
-/* Windows.Graphics.Holographic.HolographicFrame.PresentUsingCurrentPrediction() */
 HRESULT wgrho_holographic_frame_present_using_current_prediction(WGRHO_HolographicFrame *self, WGRHO_HolographicFramePresentResult *out);
 
-/* Windows.Graphics.Holographic.HolographicFrame.PresentUsingCurrentPrediction(waitBehavior) */
 HRESULT wgrho_holographic_frame_present_using_current_prediction_holographic_frame_present_wait_behav_8884afb9(WGRHO_HolographicFrame *self, WGRHO_HolographicFramePresentWaitBehavior waitBehavior, WGRHO_HolographicFramePresentResult *out);
 
-/* Windows.Graphics.Holographic.HolographicFrame.WaitForFrameToFinish() */
 HRESULT wgrho_holographic_frame_wait_for_frame_to_finish(WGRHO_HolographicFrame *self);
 
-/* Windows.Graphics.Holographic.HolographicFrame.GetQuadLayerUpdateParameters(layer) */
 HRESULT wgrho_holographic_frame_get_quad_layer_update_parameters(WGRHO_HolographicFrame *self, WGRHO_HolographicQuadLayer* layer, WGRHO_HolographicQuadLayerUpdateParameters** out);
 
-/* Windows.Graphics.Holographic.HolographicFrame.get_Id() */
 HRESULT wgrho_holographic_frame_get__id(WGRHO_HolographicFrame *self, WGRHO_HolographicFrameId *value);
 
-/* activate Windows.Graphics.Holographic.HolographicFramePrediction */
 HRESULT wgrho_holographic_frame_prediction_new(WGRHO_HolographicFramePrediction **out);
 
-/* Windows.Graphics.Holographic.HolographicFramePrediction */
-/* Windows.Graphics.Holographic.HolographicFramePrediction.get_CameraPoses() */
 HRESULT wgrho_holographic_frame_prediction_get__camera_poses(WGRHO_HolographicFramePrediction *self, WFOCO_IVectorView_WGRHO_HolographicCameraPose** value);
 
-/* Windows.Graphics.Holographic.HolographicFramePrediction.get_Timestamp() */
 HRESULT wgrho_holographic_frame_prediction_get__timestamp(WGRHO_HolographicFramePrediction *self, WPE_PerceptionTimestamp** value);
 
-/* activate Windows.Graphics.Holographic.HolographicFramePresentationMonitor */
 HRESULT wgrho_holographic_frame_presentation_monitor_new(WGRHO_HolographicFramePresentationMonitor **out);
 
-/* Windows.Graphics.Holographic.HolographicFramePresentationMonitor */
-/* Windows.Graphics.Holographic.HolographicFramePresentationMonitor.ReadReports() */
 HRESULT wgrho_holographic_frame_presentation_monitor_read_reports(WGRHO_HolographicFramePresentationMonitor *self, WFOCO_IVectorView_WGRHO_HolographicFramePresentationReport** out);
 
-/* Windows.Graphics.Holographic.HolographicFramePresentationMonitor.Close() */
 HRESULT wgrho_holographic_frame_presentation_monitor_close(WGRHO_HolographicFramePresentationMonitor *self);
 
-/* activate Windows.Graphics.Holographic.HolographicFramePresentationReport */
 HRESULT wgrho_holographic_frame_presentation_report_new(WGRHO_HolographicFramePresentationReport **out);
 
-/* Windows.Graphics.Holographic.HolographicFramePresentationReport */
-/* Windows.Graphics.Holographic.HolographicFramePresentationReport.get_CompositorGpuDuration() */
 HRESULT wgrho_holographic_frame_presentation_report_get__compositor_gpu_duration(WGRHO_HolographicFramePresentationReport *self, WF_TimeSpan *value);
 
-/* Windows.Graphics.Holographic.HolographicFramePresentationReport.get_AppGpuDuration() */
 HRESULT wgrho_holographic_frame_presentation_report_get__app_gpu_duration(WGRHO_HolographicFramePresentationReport *self, WF_TimeSpan *value);
 
-/* Windows.Graphics.Holographic.HolographicFramePresentationReport.get_AppGpuOverrun() */
 HRESULT wgrho_holographic_frame_presentation_report_get__app_gpu_overrun(WGRHO_HolographicFramePresentationReport *self, WF_TimeSpan *value);
 
-/* Windows.Graphics.Holographic.HolographicFramePresentationReport.get_MissedPresentationOpportunityCount() */
 HRESULT wgrho_holographic_frame_presentation_report_get__missed_presentation_opportunity_count(WGRHO_HolographicFramePresentationReport *self, uint32_t *value);
 
-/* Windows.Graphics.Holographic.HolographicFramePresentationReport.get_PresentationCount() */
 HRESULT wgrho_holographic_frame_presentation_report_get__presentation_count(WGRHO_HolographicFramePresentationReport *self, uint32_t *value);
 
-/* activate Windows.Graphics.Holographic.HolographicFrameRenderingReport */
 HRESULT wgrho_holographic_frame_rendering_report_new(WGRHO_HolographicFrameRenderingReport **out);
 
-/* Windows.Graphics.Holographic.HolographicFrameRenderingReport */
-/* Windows.Graphics.Holographic.HolographicFrameRenderingReport.get_FrameId() */
 HRESULT wgrho_holographic_frame_rendering_report_get__frame_id(WGRHO_HolographicFrameRenderingReport *self, WGRHO_HolographicFrameId *value);
 
-/* Windows.Graphics.Holographic.HolographicFrameRenderingReport.get_MissedLatchCount() */
 HRESULT wgrho_holographic_frame_rendering_report_get__missed_latch_count(WGRHO_HolographicFrameRenderingReport *self, uint32_t *value);
 
-/* Windows.Graphics.Holographic.HolographicFrameRenderingReport.get_SystemRelativeFrameReadyTime() */
 HRESULT wgrho_holographic_frame_rendering_report_get__system_relative_frame_ready_time(WGRHO_HolographicFrameRenderingReport *self, WF_TimeSpan *value);
 
-/* Windows.Graphics.Holographic.HolographicFrameRenderingReport.get_SystemRelativeActualGpuFinishTime() */
 HRESULT wgrho_holographic_frame_rendering_report_get__system_relative_actual_gpu_finish_time(WGRHO_HolographicFrameRenderingReport *self, WF_TimeSpan *value);
 
-/* Windows.Graphics.Holographic.HolographicFrameRenderingReport.get_SystemRelativeTargetLatchTime() */
 HRESULT wgrho_holographic_frame_rendering_report_get__system_relative_target_latch_time(WGRHO_HolographicFrameRenderingReport *self, WF_TimeSpan *value);
 
-/* activate Windows.Graphics.Holographic.HolographicFrameScanoutMonitor */
 HRESULT wgrho_holographic_frame_scanout_monitor_new(WGRHO_HolographicFrameScanoutMonitor **out);
 
-/* Windows.Graphics.Holographic.HolographicFrameScanoutMonitor */
-/* Windows.Graphics.Holographic.HolographicFrameScanoutMonitor.ReadReports() */
 HRESULT wgrho_holographic_frame_scanout_monitor_read_reports(WGRHO_HolographicFrameScanoutMonitor *self, WFOCO_IVector_WGRHO_HolographicFrameScanoutReport** out);
 
-/* Windows.Graphics.Holographic.HolographicFrameScanoutMonitor.Close() */
 HRESULT wgrho_holographic_frame_scanout_monitor_close(WGRHO_HolographicFrameScanoutMonitor *self);
 
-/* activate Windows.Graphics.Holographic.HolographicFrameScanoutReport */
 HRESULT wgrho_holographic_frame_scanout_report_new(WGRHO_HolographicFrameScanoutReport **out);
 
-/* Windows.Graphics.Holographic.HolographicFrameScanoutReport */
-/* Windows.Graphics.Holographic.HolographicFrameScanoutReport.get_RenderingReport() */
 HRESULT wgrho_holographic_frame_scanout_report_get__rendering_report(WGRHO_HolographicFrameScanoutReport *self, WGRHO_HolographicFrameRenderingReport** value);
 
-/* Windows.Graphics.Holographic.HolographicFrameScanoutReport.get_MissedScanoutCount() */
 HRESULT wgrho_holographic_frame_scanout_report_get__missed_scanout_count(WGRHO_HolographicFrameScanoutReport *self, uint32_t *value);
 
-/* Windows.Graphics.Holographic.HolographicFrameScanoutReport.get_SystemRelativeLatchTime() */
 HRESULT wgrho_holographic_frame_scanout_report_get__system_relative_latch_time(WGRHO_HolographicFrameScanoutReport *self, WF_TimeSpan *value);
 
-/* Windows.Graphics.Holographic.HolographicFrameScanoutReport.get_SystemRelativeScanoutStartTime() */
 HRESULT wgrho_holographic_frame_scanout_report_get__system_relative_scanout_start_time(WGRHO_HolographicFrameScanoutReport *self, WF_TimeSpan *value);
 
-/* Windows.Graphics.Holographic.HolographicFrameScanoutReport.get_SystemRelativePhotonTime() */
 HRESULT wgrho_holographic_frame_scanout_report_get__system_relative_photon_time(WGRHO_HolographicFrameScanoutReport *self, WF_TimeSpan *value);
 
-/* activate Windows.Graphics.Holographic.HolographicQuadLayer */
 HRESULT wgrho_holographic_quad_layer_new(WGRHO_HolographicQuadLayer **out);
 
-/* Windows.Graphics.Holographic.HolographicQuadLayer */
-/* Windows.Graphics.Holographic.HolographicQuadLayer.Close() */
 HRESULT wgrho_holographic_quad_layer_close(WGRHO_HolographicQuadLayer *self);
 
-/* Windows.Graphics.Holographic.HolographicQuadLayer.get_PixelFormat() */
 HRESULT wgrho_holographic_quad_layer_get__pixel_format(WGRHO_HolographicQuadLayer *self, WGRDI_DirectXPixelFormat *value);
 
-/* Windows.Graphics.Holographic.HolographicQuadLayer.get_Size() */
 HRESULT wgrho_holographic_quad_layer_get__size(WGRHO_HolographicQuadLayer *self, WF_Size *value);
 
-/* activate Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters */
 HRESULT wgrho_holographic_quad_layer_update_parameters_new(WGRHO_HolographicQuadLayerUpdateParameters **out);
 
-/* Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters */
-/* Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters.AcquireBufferToUpdateContent() */
 HRESULT wgrho_holographic_quad_layer_update_parameters_acquire_buffer_to_update_content(WGRHO_HolographicQuadLayerUpdateParameters *self, WGRDIDI_IDirect3DSurface** out);
 
-/* Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters.UpdateViewport() */
 HRESULT wgrho_holographic_quad_layer_update_parameters_update_viewport(WGRHO_HolographicQuadLayerUpdateParameters *self, WF_Rect value);
 
-/* Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters.UpdateContentProtectionEnabled() */
 HRESULT wgrho_holographic_quad_layer_update_parameters_update_content_protection_enabled(WGRHO_HolographicQuadLayerUpdateParameters *self, BOOL value);
 
-/* Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters.UpdateExtents() */
 HRESULT wgrho_holographic_quad_layer_update_parameters_update_extents(WGRHO_HolographicQuadLayerUpdateParameters *self, WFN_Vector_2 value);
 
-/* Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters.UpdateLocationWithStationaryMode(coordinateSystem, position, orientation) */
 HRESULT wgrho_holographic_quad_layer_update_parameters_update_location_with_stationary_mode(WGRHO_HolographicQuadLayerUpdateParameters *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WFN_Vector_3 position, WFN_Quaternion orientation);
 
-/* Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters.UpdateLocationWithDisplayRelativeMode(position, orientation) */
 HRESULT wgrho_holographic_quad_layer_update_parameters_update_location_with_display_relative_mode(WGRHO_HolographicQuadLayerUpdateParameters *self, WFN_Vector_3 position, WFN_Quaternion orientation);
 
-/* Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters.get_CanAcquireWithHardwareProtection() */
 HRESULT wgrho_holographic_quad_layer_update_parameters_get__can_acquire_with_hardware_protection(WGRHO_HolographicQuadLayerUpdateParameters *self, BOOL *value);
 
-/* Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters.AcquireBufferToUpdateContentWithHardwareProtection() */
 HRESULT wgrho_holographic_quad_layer_update_parameters_acquire_buffer_to_update_content_with_hardware_protection(WGRHO_HolographicQuadLayerUpdateParameters *self, WGRDIDI_IDirect3DSurface** out);
 
-/* activate Windows.Graphics.Holographic.HolographicSpace */
 HRESULT wgrho_holographic_space_new(WGRHO_HolographicSpace **out);
 
-/* Windows.Graphics.Holographic.HolographicSpace */
-/* Windows.Graphics.Holographic.HolographicSpace.get_PrimaryAdapterId() */
 HRESULT wgrho_holographic_space_get__primary_adapter_id(WGRHO_HolographicSpace *self, WGRHO_HolographicAdapterId *value);
 
-/* Windows.Graphics.Holographic.HolographicSpace.SetDirect3D11Device() */
 HRESULT wgrho_holographic_space_set_direct3_d11_device(WGRHO_HolographicSpace *self, WGRDIDI_IDirect3DDevice* value);
 
-/* Windows.Graphics.Holographic.HolographicSpace.CreateNextFrame() */
 HRESULT wgrho_holographic_space_create_next_frame(WGRHO_HolographicSpace *self, WGRHO_HolographicFrame** out);
 
-/* Windows.Graphics.Holographic.HolographicSpace.get_UserPresence() */
 HRESULT wgrho_holographic_space_get__user_presence(WGRHO_HolographicSpace *self, WGRHO_HolographicSpaceUserPresence *value);
 
-/* Windows.Graphics.Holographic.HolographicSpace.WaitForNextFrameReady() */
 HRESULT wgrho_holographic_space_wait_for_next_frame_ready(WGRHO_HolographicSpace *self);
 
-/* Windows.Graphics.Holographic.HolographicSpace.WaitForNextFrameReadyWithHeadStart(requestedHeadStartDuration) */
 HRESULT wgrho_holographic_space_wait_for_next_frame_ready_with_head_start(WGRHO_HolographicSpace *self, WF_TimeSpan requestedHeadStartDuration);
 
-/* Windows.Graphics.Holographic.HolographicSpace.CreateFramePresentationMonitor(maxQueuedReports) */
 HRESULT wgrho_holographic_space_create_frame_presentation_monitor(WGRHO_HolographicSpace *self, uint32_t maxQueuedReports, WGRHO_HolographicFramePresentationMonitor** out);
 
-/* Windows.Graphics.Holographic.HolographicSpace.CreateFrameScanoutMonitor(maxQueuedReports) */
 HRESULT wgrho_holographic_space_create_frame_scanout_monitor(WGRHO_HolographicSpace *self, uint32_t maxQueuedReports, WGRHO_HolographicFrameScanoutMonitor** out);
 
-/* Windows.Graphics.Holographic.HolographicSpace.get_IsConfigured() */
 HRESULT wgrho_holographic_space_get__is_configured(BOOL *value);
 
-/* Windows.Graphics.Holographic.HolographicSpace.get_IsSupported() */
 HRESULT wgrho_holographic_space_get__is_supported(BOOL *value);
 
-/* Windows.Graphics.Holographic.HolographicSpace.get_IsAvailable() */
 HRESULT wgrho_holographic_space_get__is_available(BOOL *value);
 
-/* Windows.Graphics.Holographic.HolographicSpace.CreateForCoreWindow(window) */
 HRESULT wgrho_holographic_space_create_for_core_window(WUICO_CoreWindow* window, WGRHO_HolographicSpace** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wgrho_holographic_space_on_camera_added(WGRHO_HolographicSpace *self, cwinrt_event_fn fn, void *ctx);
@@ -832,365 +735,214 @@ void wgrho_holographic_space_off_user_presence_changed(WGRHO_HolographicSpace *s
 cwinrt_token wgrho_holographic_space_on_is_available_changed(WGRHO_HolographicSpace *self, cwinrt_event_fn fn, void *ctx);
 void wgrho_holographic_space_off_is_available_changed(WGRHO_HolographicSpace *self, cwinrt_token token);
 
-/* activate Windows.Graphics.Holographic.HolographicSpaceCameraAddedEventArgs */
 HRESULT wgrho_holographic_space_camera_added_event_args_new(WGRHO_HolographicSpaceCameraAddedEventArgs **out);
 
-/* Windows.Graphics.Holographic.HolographicSpaceCameraAddedEventArgs */
-/* Windows.Graphics.Holographic.HolographicSpaceCameraAddedEventArgs.get_Camera() */
 HRESULT wgrho_holographic_space_camera_added_event_args_get__camera(WGRHO_HolographicSpaceCameraAddedEventArgs *self, WGRHO_HolographicCamera** value);
 
-/* Windows.Graphics.Holographic.HolographicSpaceCameraAddedEventArgs.GetDeferral() */
 HRESULT wgrho_holographic_space_camera_added_event_args_get_deferral(WGRHO_HolographicSpaceCameraAddedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Graphics.Holographic.HolographicSpaceCameraRemovedEventArgs */
 HRESULT wgrho_holographic_space_camera_removed_event_args_new(WGRHO_HolographicSpaceCameraRemovedEventArgs **out);
 
-/* Windows.Graphics.Holographic.HolographicSpaceCameraRemovedEventArgs */
-/* Windows.Graphics.Holographic.HolographicSpaceCameraRemovedEventArgs.get_Camera() */
 HRESULT wgrho_holographic_space_camera_removed_event_args_get__camera(WGRHO_HolographicSpaceCameraRemovedEventArgs *self, WGRHO_HolographicCamera** value);
 
-/* activate Windows.Graphics.Holographic.HolographicViewConfiguration */
 HRESULT wgrho_holographic_view_configuration_new(WGRHO_HolographicViewConfiguration **out);
 
-/* Windows.Graphics.Holographic.HolographicViewConfiguration */
-/* Windows.Graphics.Holographic.HolographicViewConfiguration.get_NativeRenderTargetSize() */
 HRESULT wgrho_holographic_view_configuration_get__native_render_target_size(WGRHO_HolographicViewConfiguration *self, WF_Size *value);
 
-/* Windows.Graphics.Holographic.HolographicViewConfiguration.get_RenderTargetSize() */
 HRESULT wgrho_holographic_view_configuration_get__render_target_size(WGRHO_HolographicViewConfiguration *self, WF_Size *value);
 
-/* Windows.Graphics.Holographic.HolographicViewConfiguration.RequestRenderTargetSize(size) */
 HRESULT wgrho_holographic_view_configuration_request_render_target_size(WGRHO_HolographicViewConfiguration *self, WF_Size size, WF_Size *out);
 
-/* Windows.Graphics.Holographic.HolographicViewConfiguration.get_SupportedPixelFormats() */
 HRESULT wgrho_holographic_view_configuration_get__supported_pixel_formats(WGRHO_HolographicViewConfiguration *self, WFOCO_IVectorView_WGRDI_DirectXPixelFormat** value);
 
-/* Windows.Graphics.Holographic.HolographicViewConfiguration.get_PixelFormat() */
 HRESULT wgrho_holographic_view_configuration_get__pixel_format(WGRHO_HolographicViewConfiguration *self, WGRDI_DirectXPixelFormat *value);
 
-/* Windows.Graphics.Holographic.HolographicViewConfiguration.put_PixelFormat() */
 HRESULT wgrho_holographic_view_configuration_put__pixel_format(WGRHO_HolographicViewConfiguration *self, WGRDI_DirectXPixelFormat value);
 
-/* Windows.Graphics.Holographic.HolographicViewConfiguration.get_IsStereo() */
 HRESULT wgrho_holographic_view_configuration_get__is_stereo(WGRHO_HolographicViewConfiguration *self, BOOL *value);
 
-/* Windows.Graphics.Holographic.HolographicViewConfiguration.get_RefreshRate() */
 HRESULT wgrho_holographic_view_configuration_get__refresh_rate(WGRHO_HolographicViewConfiguration *self, double *value);
 
-/* Windows.Graphics.Holographic.HolographicViewConfiguration.get_Kind() */
 HRESULT wgrho_holographic_view_configuration_get__kind(WGRHO_HolographicViewConfiguration *self, WGRHO_HolographicViewConfigurationKind *value);
 
-/* Windows.Graphics.Holographic.HolographicViewConfiguration.get_Display() */
 HRESULT wgrho_holographic_view_configuration_get__display(WGRHO_HolographicViewConfiguration *self, WGRHO_HolographicDisplay** value);
 
-/* Windows.Graphics.Holographic.HolographicViewConfiguration.get_IsEnabled() */
 HRESULT wgrho_holographic_view_configuration_get__is_enabled(WGRHO_HolographicViewConfiguration *self, BOOL *value);
 
-/* Windows.Graphics.Holographic.HolographicViewConfiguration.put_IsEnabled() */
 HRESULT wgrho_holographic_view_configuration_put__is_enabled(WGRHO_HolographicViewConfiguration *self, BOOL value);
 
-/* Windows.Graphics.Holographic.HolographicViewConfiguration.get_SupportedDepthReprojectionMethods() */
 HRESULT wgrho_holographic_view_configuration_get__supported_depth_reprojection_methods(WGRHO_HolographicViewConfiguration *self, WFOCO_IVectorView_WGRHO_HolographicDepthReprojectionMethod** value);
 
-/* activate Windows.Graphics.Holographic.HolographicCamera */
 HRESULT wgrho_holographic_camera_new(WGRHO_HolographicCamera **out);
 
-/* Windows.Graphics.Holographic.HolographicCamera */
-/* Windows.Graphics.Holographic.HolographicCamera.get_RenderTargetSize() */
 HRESULT wgrho_holographic_camera_get__render_target_size(WGRHO_HolographicCamera *self, WF_Size *value);
 
-/* Windows.Graphics.Holographic.HolographicCamera.get_ViewportScaleFactor() */
 HRESULT wgrho_holographic_camera_get__viewport_scale_factor(WGRHO_HolographicCamera *self, double *value);
 
-/* Windows.Graphics.Holographic.HolographicCamera.put_ViewportScaleFactor() */
 HRESULT wgrho_holographic_camera_put__viewport_scale_factor(WGRHO_HolographicCamera *self, double value);
 
-/* Windows.Graphics.Holographic.HolographicCamera.get_IsStereo() */
 HRESULT wgrho_holographic_camera_get__is_stereo(WGRHO_HolographicCamera *self, BOOL *value);
 
-/* Windows.Graphics.Holographic.HolographicCamera.get_Id() */
 HRESULT wgrho_holographic_camera_get__id(WGRHO_HolographicCamera *self, uint32_t *value);
 
-/* Windows.Graphics.Holographic.HolographicCamera.SetNearPlaneDistance() */
 HRESULT wgrho_holographic_camera_set_near_plane_distance(WGRHO_HolographicCamera *self, double value);
 
-/* Windows.Graphics.Holographic.HolographicCamera.SetFarPlaneDistance() */
 HRESULT wgrho_holographic_camera_set_far_plane_distance(WGRHO_HolographicCamera *self, double value);
 
-/* Windows.Graphics.Holographic.HolographicCamera.get_LeftViewportParameters() */
 HRESULT wgrho_holographic_camera_get__left_viewport_parameters(WGRHO_HolographicCamera *self, WGRHO_HolographicCameraViewportParameters** value);
 
-/* Windows.Graphics.Holographic.HolographicCamera.get_RightViewportParameters() */
 HRESULT wgrho_holographic_camera_get__right_viewport_parameters(WGRHO_HolographicCamera *self, WGRHO_HolographicCameraViewportParameters** value);
 
-/* Windows.Graphics.Holographic.HolographicCamera.get_Display() */
 HRESULT wgrho_holographic_camera_get__display(WGRHO_HolographicCamera *self, WGRHO_HolographicDisplay** value);
 
-/* Windows.Graphics.Holographic.HolographicCamera.get_IsPrimaryLayerEnabled() */
 HRESULT wgrho_holographic_camera_get__is_primary_layer_enabled(WGRHO_HolographicCamera *self, BOOL *value);
 
-/* Windows.Graphics.Holographic.HolographicCamera.put_IsPrimaryLayerEnabled() */
 HRESULT wgrho_holographic_camera_put__is_primary_layer_enabled(WGRHO_HolographicCamera *self, BOOL value);
 
-/* Windows.Graphics.Holographic.HolographicCamera.get_MaxQuadLayerCount() */
 HRESULT wgrho_holographic_camera_get__max_quad_layer_count(WGRHO_HolographicCamera *self, uint32_t *value);
 
-/* Windows.Graphics.Holographic.HolographicCamera.get_QuadLayers() */
 HRESULT wgrho_holographic_camera_get__quad_layers(WGRHO_HolographicCamera *self, WFOCO_IVector_WGRHO_HolographicQuadLayer** value);
 
-/* Windows.Graphics.Holographic.HolographicCamera.get_CanOverrideViewport() */
 HRESULT wgrho_holographic_camera_get__can_override_viewport(WGRHO_HolographicCamera *self, BOOL *value);
 
-/* Windows.Graphics.Holographic.HolographicCamera.get_IsHardwareContentProtectionSupported() */
 HRESULT wgrho_holographic_camera_get__is_hardware_content_protection_supported(WGRHO_HolographicCamera *self, BOOL *value);
 
-/* Windows.Graphics.Holographic.HolographicCamera.get_IsHardwareContentProtectionEnabled() */
 HRESULT wgrho_holographic_camera_get__is_hardware_content_protection_enabled(WGRHO_HolographicCamera *self, BOOL *value);
 
-/* Windows.Graphics.Holographic.HolographicCamera.put_IsHardwareContentProtectionEnabled() */
 HRESULT wgrho_holographic_camera_put__is_hardware_content_protection_enabled(WGRHO_HolographicCamera *self, BOOL value);
 
-/* Windows.Graphics.Holographic.HolographicCamera.get_ViewConfiguration() */
 HRESULT wgrho_holographic_camera_get__view_configuration(WGRHO_HolographicCamera *self, WGRHO_HolographicViewConfiguration** value);
 
-/* activate Windows.Graphics.Holographic.HolographicCameraRenderingParameters */
 HRESULT wgrho_holographic_camera_rendering_parameters_new(WGRHO_HolographicCameraRenderingParameters **out);
 
-/* Windows.Graphics.Holographic.HolographicCameraRenderingParameters */
-/* Windows.Graphics.Holographic.HolographicCameraRenderingParameters.SetFocusPoint(coordinateSystem, position) */
 HRESULT wgrho_holographic_camera_rendering_parameters_set_focus_point(WGRHO_HolographicCameraRenderingParameters *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WFN_Vector_3 position);
 
-/* Windows.Graphics.Holographic.HolographicCameraRenderingParameters.SetFocusPoint(coordinateSystem, position, normal) */
 HRESULT wgrho_holographic_camera_rendering_parameters_set_focus_point_p_3_3(WGRHO_HolographicCameraRenderingParameters *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WFN_Vector_3 position, WFN_Vector_3 normal);
 
-/* Windows.Graphics.Holographic.HolographicCameraRenderingParameters.SetFocusPoint(coordinateSystem, position, normal, linearVelocity) */
 HRESULT wgrho_holographic_camera_rendering_parameters_set_focus_point_p_3_3_3(WGRHO_HolographicCameraRenderingParameters *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WFN_Vector_3 position, WFN_Vector_3 normal, WFN_Vector_3 linearVelocity);
 
-/* Windows.Graphics.Holographic.HolographicCameraRenderingParameters.get_Direct3D11Device() */
 HRESULT wgrho_holographic_camera_rendering_parameters_get__direct3_d11_device(WGRHO_HolographicCameraRenderingParameters *self, WGRDIDI_IDirect3DDevice** value);
 
-/* Windows.Graphics.Holographic.HolographicCameraRenderingParameters.get_Direct3D11BackBuffer() */
 HRESULT wgrho_holographic_camera_rendering_parameters_get__direct3_d11_back_buffer(WGRHO_HolographicCameraRenderingParameters *self, WGRDIDI_IDirect3DSurface** value);
 
-/* Windows.Graphics.Holographic.HolographicCameraRenderingParameters.get_ReprojectionMode() */
 HRESULT wgrho_holographic_camera_rendering_parameters_get__reprojection_mode(WGRHO_HolographicCameraRenderingParameters *self, WGRHO_HolographicReprojectionMode *value);
 
-/* Windows.Graphics.Holographic.HolographicCameraRenderingParameters.put_ReprojectionMode() */
 HRESULT wgrho_holographic_camera_rendering_parameters_put__reprojection_mode(WGRHO_HolographicCameraRenderingParameters *self, WGRHO_HolographicReprojectionMode value);
 
-/* Windows.Graphics.Holographic.HolographicCameraRenderingParameters.CommitDirect3D11DepthBuffer() */
 HRESULT wgrho_holographic_camera_rendering_parameters_commit_direct3_d11_depth_buffer(WGRHO_HolographicCameraRenderingParameters *self, WGRDIDI_IDirect3DSurface* value);
 
-/* Windows.Graphics.Holographic.HolographicCameraRenderingParameters.get_IsContentProtectionEnabled() */
 HRESULT wgrho_holographic_camera_rendering_parameters_get__is_content_protection_enabled(WGRHO_HolographicCameraRenderingParameters *self, BOOL *value);
 
-/* Windows.Graphics.Holographic.HolographicCameraRenderingParameters.put_IsContentProtectionEnabled() */
 HRESULT wgrho_holographic_camera_rendering_parameters_put__is_content_protection_enabled(WGRHO_HolographicCameraRenderingParameters *self, BOOL value);
 
-/* Windows.Graphics.Holographic.HolographicCameraRenderingParameters.get_DepthReprojectionMethod() */
 HRESULT wgrho_holographic_camera_rendering_parameters_get__depth_reprojection_method(WGRHO_HolographicCameraRenderingParameters *self, WGRHO_HolographicDepthReprojectionMethod *value);
 
-/* Windows.Graphics.Holographic.HolographicCameraRenderingParameters.put_DepthReprojectionMethod() */
 HRESULT wgrho_holographic_camera_rendering_parameters_put__depth_reprojection_method(WGRHO_HolographicCameraRenderingParameters *self, WGRHO_HolographicDepthReprojectionMethod value);
 
-/* Windows.Graphics.Holographic.IHolographicDisplayStatics */
-/* Windows.Graphics.Holographic.IHolographicDisplayStatics.GetDefault() */
 HRESULT wgrho_holographic_display_statics_get_default(WGRHO_IHolographicDisplayStatics *self, WGRHO_HolographicDisplay** out);
 
-/* Windows.Graphics.Holographic.IHolographicQuadLayerFactory */
-/* Windows.Graphics.Holographic.IHolographicQuadLayerFactory.Create(size) */
 HRESULT wgrho_holographic_quad_layer_factory_create(WGRHO_IHolographicQuadLayerFactory *self, WF_Size size, WGRHO_HolographicQuadLayer** out);
 
-/* Windows.Graphics.Holographic.IHolographicQuadLayerFactory.CreateWithPixelFormat(size, pixelFormat) */
 HRESULT wgrho_holographic_quad_layer_factory_create_with_pixel_format(WGRHO_IHolographicQuadLayerFactory *self, WF_Size size, WGRDI_DirectXPixelFormat pixelFormat, WGRHO_HolographicQuadLayer** out);
 
-/* Windows.Graphics.Holographic.IHolographicSpaceStatics */
-/* Windows.Graphics.Holographic.IHolographicSpaceStatics.CreateForCoreWindow(window) */
 HRESULT wgrho_holographic_space_statics_create_for_core_window(WGRHO_IHolographicSpaceStatics *self, WUICO_CoreWindow* window, WGRHO_HolographicSpace** out);
 
-/* Windows.Graphics.Holographic.IHolographicSpaceStatics2 */
-/* Windows.Graphics.Holographic.IHolographicSpaceStatics2.get_IsSupported() */
 HRESULT wgrho_holographic_space_statics_2_get__is_supported(WGRHO_IHolographicSpaceStatics_2 *self, BOOL *value);
 
-/* Windows.Graphics.Holographic.IHolographicSpaceStatics2.get_IsAvailable() */
 HRESULT wgrho_holographic_space_statics_2_get__is_available(WGRHO_IHolographicSpaceStatics_2 *self, BOOL *value);
 
-/* Windows.Graphics.Holographic.IHolographicSpaceStatics3 */
-/* Windows.Graphics.Holographic.IHolographicSpaceStatics3.get_IsConfigured() */
 HRESULT wgrho_holographic_space_statics_3_get__is_configured(WGRHO_IHolographicSpaceStatics_3 *self, BOOL *value);
 
-/* activate Windows.Graphics.Holographic.HolographicCameraPose */
 HRESULT wgrho_holographic_camera_pose_new(WGRHO_HolographicCameraPose **out);
 
-/* Windows.Graphics.Holographic.HolographicCameraPose */
-/* Windows.Graphics.Holographic.HolographicCameraPose.get_HolographicCamera() */
 HRESULT wgrho_holographic_camera_pose_get__holographic_camera(WGRHO_HolographicCameraPose *self, WGRHO_HolographicCamera** value);
 
-/* Windows.Graphics.Holographic.HolographicCameraPose.get_Viewport() */
 HRESULT wgrho_holographic_camera_pose_get__viewport(WGRHO_HolographicCameraPose *self, WF_Rect *value);
 
-/* Windows.Graphics.Holographic.HolographicCameraPose.TryGetViewTransform(coordinateSystem) */
 HRESULT wgrho_holographic_camera_pose_try_get_view_transform(WGRHO_HolographicCameraPose *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WGRHO_HolographicStereoTransform** out);
 
-/* Windows.Graphics.Holographic.HolographicCameraPose.get_ProjectionTransform() */
 HRESULT wgrho_holographic_camera_pose_get__projection_transform(WGRHO_HolographicCameraPose *self, WGRHO_HolographicStereoTransform *value);
 
-/* Windows.Graphics.Holographic.HolographicCameraPose.TryGetCullingFrustum(coordinateSystem) */
 HRESULT wgrho_holographic_camera_pose_try_get_culling_frustum(WGRHO_HolographicCameraPose *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WPESP_SpatialBoundingFrustum** out);
 
-/* Windows.Graphics.Holographic.HolographicCameraPose.TryGetVisibleFrustum(coordinateSystem) */
 HRESULT wgrho_holographic_camera_pose_try_get_visible_frustum(WGRHO_HolographicCameraPose *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WPESP_SpatialBoundingFrustum** out);
 
-/* Windows.Graphics.Holographic.HolographicCameraPose.get_NearPlaneDistance() */
 HRESULT wgrho_holographic_camera_pose_get__near_plane_distance(WGRHO_HolographicCameraPose *self, double *value);
 
-/* Windows.Graphics.Holographic.HolographicCameraPose.get_FarPlaneDistance() */
 HRESULT wgrho_holographic_camera_pose_get__far_plane_distance(WGRHO_HolographicCameraPose *self, double *value);
 
-/* Windows.Graphics.Holographic.HolographicCameraPose.OverrideViewTransform(coordinateSystem, coordinateSystemToViewTransform) */
 HRESULT wgrho_holographic_camera_pose_override_view_transform(WGRHO_HolographicCameraPose *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WGRHO_HolographicStereoTransform coordinateSystemToViewTransform);
 
-/* Windows.Graphics.Holographic.HolographicCameraPose.OverrideProjectionTransform(projectionTransform) */
 HRESULT wgrho_holographic_camera_pose_override_projection_transform(WGRHO_HolographicCameraPose *self, WGRHO_HolographicStereoTransform projectionTransform);
 
-/* Windows.Graphics.Holographic.HolographicCameraPose.OverrideViewport(leftViewport, rightViewport) */
 HRESULT wgrho_holographic_camera_pose_override_viewport(WGRHO_HolographicCameraPose *self, WF_Rect leftViewport, WF_Rect rightViewport);
 
-/* Windows.Graphics.Holographic.IHolographicCameraViewportParameters */
-/* Windows.Graphics.Holographic.IHolographicDisplay */
-/* Windows.Graphics.Holographic.IHolographicDisplay2 */
-/* Windows.Graphics.Holographic.IHolographicDisplay2.get_RefreshRate() */
 HRESULT wgrho_holographic_display_2_get__refresh_rate(WGRHO_IHolographicDisplay_2 *self, double *value);
 
-/* Windows.Graphics.Holographic.IHolographicDisplay3 */
-/* Windows.Graphics.Holographic.IHolographicDisplay3.TryGetViewConfiguration(kind) */
 HRESULT wgrho_holographic_display_3_try_get_view_configuration(WGRHO_IHolographicDisplay_3 *self, WGRHO_HolographicViewConfigurationKind kind, WGRHO_HolographicViewConfiguration** out);
 
-/* Windows.Graphics.Holographic.IHolographicFrame2 */
-/* Windows.Graphics.Holographic.IHolographicFrame2.GetQuadLayerUpdateParameters(layer) */
 HRESULT wgrho_holographic_frame_2_get_quad_layer_update_parameters(WGRHO_IHolographicFrame_2 *self, WGRHO_HolographicQuadLayer* layer, WGRHO_HolographicQuadLayerUpdateParameters** out);
 
-/* Windows.Graphics.Holographic.IHolographicFrame3 */
-/* Windows.Graphics.Holographic.IHolographicFrame3.get_Id() */
 HRESULT wgrho_holographic_frame_3_get__id(WGRHO_IHolographicFrame_3 *self, WGRHO_HolographicFrameId *value);
 
-/* Windows.Graphics.Holographic.IHolographicFramePrediction */
-/* Windows.Graphics.Holographic.IHolographicFramePresentationMonitor */
-/* Windows.Graphics.Holographic.IHolographicFramePresentationReport */
-/* Windows.Graphics.Holographic.IHolographicFrameRenderingReport */
-/* Windows.Graphics.Holographic.IHolographicFrameScanoutMonitor */
-/* Windows.Graphics.Holographic.IHolographicFrameScanoutReport */
-/* Windows.Graphics.Holographic.IHolographicQuadLayer */
-/* Windows.Graphics.Holographic.IHolographicQuadLayerUpdateParameters */
-/* Windows.Graphics.Holographic.IHolographicQuadLayerUpdateParameters2 */
-/* Windows.Graphics.Holographic.IHolographicQuadLayerUpdateParameters2.get_CanAcquireWithHardwareProtection() */
 HRESULT wgrho_holographic_quad_layer_update_parameters_2_get__can_acquire_with_hardware_protection(WGRHO_IHolographicQuadLayerUpdateParameters_2 *self, BOOL *value);
 
-/* Windows.Graphics.Holographic.IHolographicQuadLayerUpdateParameters2.AcquireBufferToUpdateContentWithHardwareProtection() */
 HRESULT wgrho_holographic_quad_layer_update_parameters_2_acquire_buffer_to_update_content_with_hardware_protection(WGRHO_IHolographicQuadLayerUpdateParameters_2 *self, WGRDIDI_IDirect3DSurface** out);
 
-/* Windows.Graphics.Holographic.IHolographicSpace */
-/* Windows.Graphics.Holographic.IHolographicSpace2 */
-/* Windows.Graphics.Holographic.IHolographicSpace2.get_UserPresence() */
 HRESULT wgrho_holographic_space_2_get__user_presence(WGRHO_IHolographicSpace_2 *self, WGRHO_HolographicSpaceUserPresence *value);
 
-/* Windows.Graphics.Holographic.IHolographicSpace2.WaitForNextFrameReady() */
 HRESULT wgrho_holographic_space_2_wait_for_next_frame_ready(WGRHO_IHolographicSpace_2 *self);
 
-/* Windows.Graphics.Holographic.IHolographicSpace2.WaitForNextFrameReadyWithHeadStart(requestedHeadStartDuration) */
 HRESULT wgrho_holographic_space_2_wait_for_next_frame_ready_with_head_start(WGRHO_IHolographicSpace_2 *self, WF_TimeSpan requestedHeadStartDuration);
 
-/* Windows.Graphics.Holographic.IHolographicSpace2.CreateFramePresentationMonitor(maxQueuedReports) */
 HRESULT wgrho_holographic_space_2_create_frame_presentation_monitor(WGRHO_IHolographicSpace_2 *self, uint32_t maxQueuedReports, WGRHO_HolographicFramePresentationMonitor** out);
 
-/* Windows.Graphics.Holographic.IHolographicSpace3 */
-/* Windows.Graphics.Holographic.IHolographicSpace3.CreateFrameScanoutMonitor(maxQueuedReports) */
 HRESULT wgrho_holographic_space_3_create_frame_scanout_monitor(WGRHO_IHolographicSpace_3 *self, uint32_t maxQueuedReports, WGRHO_HolographicFrameScanoutMonitor** out);
 
-/* Windows.Graphics.Holographic.IHolographicSpaceCameraAddedEventArgs */
-/* Windows.Graphics.Holographic.IHolographicSpaceCameraRemovedEventArgs */
-/* Windows.Graphics.Holographic.IHolographicViewConfiguration */
-/* Windows.Graphics.Holographic.IHolographicViewConfiguration2 */
-/* Windows.Graphics.Holographic.IHolographicViewConfiguration2.get_SupportedDepthReprojectionMethods() */
 HRESULT wgrho_holographic_view_configuration_2_get__supported_depth_reprojection_methods(WGRHO_IHolographicViewConfiguration_2 *self, WFOCO_IVectorView_WGRHO_HolographicDepthReprojectionMethod** value);
 
-/* Windows.Graphics.Holographic.IHolographicCamera3 */
-/* Windows.Graphics.Holographic.IHolographicCamera3.get_IsPrimaryLayerEnabled() */
 HRESULT wgrho_holographic_camera_3_get__is_primary_layer_enabled(WGRHO_IHolographicCamera_3 *self, BOOL *value);
 
-/* Windows.Graphics.Holographic.IHolographicCamera3.put_IsPrimaryLayerEnabled() */
 HRESULT wgrho_holographic_camera_3_put__is_primary_layer_enabled(WGRHO_IHolographicCamera_3 *self, BOOL value);
 
-/* Windows.Graphics.Holographic.IHolographicCamera3.get_MaxQuadLayerCount() */
 HRESULT wgrho_holographic_camera_3_get__max_quad_layer_count(WGRHO_IHolographicCamera_3 *self, uint32_t *value);
 
-/* Windows.Graphics.Holographic.IHolographicCamera3.get_QuadLayers() */
 HRESULT wgrho_holographic_camera_3_get__quad_layers(WGRHO_IHolographicCamera_3 *self, WFOCO_IVector_WGRHO_HolographicQuadLayer** value);
 
-/* Windows.Graphics.Holographic.IHolographicCamera4 */
-/* Windows.Graphics.Holographic.IHolographicCamera4.get_CanOverrideViewport() */
 HRESULT wgrho_holographic_camera_4_get__can_override_viewport(WGRHO_IHolographicCamera_4 *self, BOOL *value);
 
-/* Windows.Graphics.Holographic.IHolographicCamera5 */
-/* Windows.Graphics.Holographic.IHolographicCamera5.get_IsHardwareContentProtectionSupported() */
 HRESULT wgrho_holographic_camera_5_get__is_hardware_content_protection_supported(WGRHO_IHolographicCamera_5 *self, BOOL *value);
 
-/* Windows.Graphics.Holographic.IHolographicCamera5.get_IsHardwareContentProtectionEnabled() */
 HRESULT wgrho_holographic_camera_5_get__is_hardware_content_protection_enabled(WGRHO_IHolographicCamera_5 *self, BOOL *value);
 
-/* Windows.Graphics.Holographic.IHolographicCamera5.put_IsHardwareContentProtectionEnabled() */
 HRESULT wgrho_holographic_camera_5_put__is_hardware_content_protection_enabled(WGRHO_IHolographicCamera_5 *self, BOOL value);
 
-/* Windows.Graphics.Holographic.IHolographicCamera6 */
-/* Windows.Graphics.Holographic.IHolographicCamera6.get_ViewConfiguration() */
 HRESULT wgrho_holographic_camera_6_get__view_configuration(WGRHO_IHolographicCamera_6 *self, WGRHO_HolographicViewConfiguration** value);
 
-/* Windows.Graphics.Holographic.IHolographicCameraRenderingParameters3 */
-/* Windows.Graphics.Holographic.IHolographicCameraRenderingParameters3.get_IsContentProtectionEnabled() */
 HRESULT wgrho_holographic_camera_rendering_parameters_3_get__is_content_protection_enabled(WGRHO_IHolographicCameraRenderingParameters_3 *self, BOOL *value);
 
-/* Windows.Graphics.Holographic.IHolographicCameraRenderingParameters3.put_IsContentProtectionEnabled() */
 HRESULT wgrho_holographic_camera_rendering_parameters_3_put__is_content_protection_enabled(WGRHO_IHolographicCameraRenderingParameters_3 *self, BOOL value);
 
-/* Windows.Graphics.Holographic.IHolographicCameraRenderingParameters4 */
-/* Windows.Graphics.Holographic.IHolographicCameraRenderingParameters4.get_DepthReprojectionMethod() */
 HRESULT wgrho_holographic_camera_rendering_parameters_4_get__depth_reprojection_method(WGRHO_IHolographicCameraRenderingParameters_4 *self, WGRHO_HolographicDepthReprojectionMethod *value);
 
-/* Windows.Graphics.Holographic.IHolographicCameraRenderingParameters4.put_DepthReprojectionMethod() */
 HRESULT wgrho_holographic_camera_rendering_parameters_4_put__depth_reprojection_method(WGRHO_IHolographicCameraRenderingParameters_4 *self, WGRHO_HolographicDepthReprojectionMethod value);
 
-/* Windows.Graphics.Holographic.IHolographicCameraPose */
-/* Windows.Graphics.Holographic.IHolographicCameraPose2 */
-/* Windows.Graphics.Holographic.IHolographicCameraPose2.OverrideViewTransform(coordinateSystem, coordinateSystemToViewTransform) */
 HRESULT wgrho_holographic_camera_pose_2_override_view_transform(WGRHO_IHolographicCameraPose_2 *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WGRHO_HolographicStereoTransform coordinateSystemToViewTransform);
 
-/* Windows.Graphics.Holographic.IHolographicCameraPose2.OverrideProjectionTransform(projectionTransform) */
 HRESULT wgrho_holographic_camera_pose_2_override_projection_transform(WGRHO_IHolographicCameraPose_2 *self, WGRHO_HolographicStereoTransform projectionTransform);
 
-/* Windows.Graphics.Holographic.IHolographicCameraPose2.OverrideViewport(leftViewport, rightViewport) */
 HRESULT wgrho_holographic_camera_pose_2_override_viewport(WGRHO_IHolographicCameraPose_2 *self, WF_Rect leftViewport, WF_Rect rightViewport);
 
-/* Windows.Graphics.Holographic.IHolographicFrame */
-/* Windows.Graphics.Holographic.IHolographicCamera2 */
-/* Windows.Graphics.Holographic.IHolographicCamera2.get_LeftViewportParameters() */
 HRESULT wgrho_holographic_camera_2_get__left_viewport_parameters(WGRHO_IHolographicCamera_2 *self, WGRHO_HolographicCameraViewportParameters** value);
 
-/* Windows.Graphics.Holographic.IHolographicCamera2.get_RightViewportParameters() */
 HRESULT wgrho_holographic_camera_2_get__right_viewport_parameters(WGRHO_IHolographicCamera_2 *self, WGRHO_HolographicCameraViewportParameters** value);
 
-/* Windows.Graphics.Holographic.IHolographicCamera2.get_Display() */
 HRESULT wgrho_holographic_camera_2_get__display(WGRHO_IHolographicCamera_2 *self, WGRHO_HolographicDisplay** value);
 
-/* Windows.Graphics.Holographic.IHolographicCameraRenderingParameters2 */
-/* Windows.Graphics.Holographic.IHolographicCameraRenderingParameters2.get_ReprojectionMode() */
 HRESULT wgrho_holographic_camera_rendering_parameters_2_get__reprojection_mode(WGRHO_IHolographicCameraRenderingParameters_2 *self, WGRHO_HolographicReprojectionMode *value);
 
-/* Windows.Graphics.Holographic.IHolographicCameraRenderingParameters2.put_ReprojectionMode() */
 HRESULT wgrho_holographic_camera_rendering_parameters_2_put__reprojection_mode(WGRHO_IHolographicCameraRenderingParameters_2 *self, WGRHO_HolographicReprojectionMode value);
 
-/* Windows.Graphics.Holographic.IHolographicCameraRenderingParameters2.CommitDirect3D11DepthBuffer() */
 HRESULT wgrho_holographic_camera_rendering_parameters_2_commit_direct3_d11_depth_buffer(WGRHO_IHolographicCameraRenderingParameters_2 *self, WGRDIDI_IDirect3DSurface* value);
 
-/* Windows.Graphics.Holographic.IHolographicCamera */
-/* Windows.Graphics.Holographic.IHolographicCameraRenderingParameters */
 #endif /* CWINRT_WINDOWS_GRAPHICS_HOLOGRAPHIC_H */

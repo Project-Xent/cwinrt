@@ -15,8 +15,6 @@
   #define IO_TLS __thread
 #endif
 
-/* ── Arena ─────────────────────────────────────────────────────────── */
-
 typedef struct arena {
     void  **ptrs; /* owner-thread-only: the individual allocations */
     size_t  n, cap;
@@ -74,8 +72,6 @@ void rmarena(int a) {
     g_arenas[a] = NULL;
 }
 
-/* ── Buffered file writer ──────────────────────────────────────────── */
-
 #define IO_MAX_STREAMS 1024
 static FILE *g_streams[IO_MAX_STREAMS]; /* slot 0 reserved/unused */
 
@@ -129,13 +125,11 @@ int rmbio(int bd) {
     return fclose(fp);
 }
 
-/* ── Thread-local error latch ──────────────────────────────────────── */
-
 static IO_TLS char *g_err;
 
 char *errmsg(char *setmsg) {
     char *old = g_err;
-    g_err = setmsg; /* setmsg==NULL clears; a non-NULL message is latched */
+    g_err = setmsg;
     return old;
 }
 

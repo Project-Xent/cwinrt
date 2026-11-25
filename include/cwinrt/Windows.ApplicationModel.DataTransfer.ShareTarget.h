@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.ApplicationModel.DataTransfer.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_RandomAccessStreamReference
 #define CWINRT_FWD_WSTST_RandomAccessStreamReference
 typedef struct WSTST_RandomAccessStreamReference WSTST_RandomAccessStreamReference;
@@ -23,7 +22,6 @@ typedef struct WSTST_RandomAccessStreamReference WSTST_RandomAccessStreamReferen
 typedef struct WAPCO_Contact WAPCO_Contact;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPDASH_QuickLink WAPDASH_QuickLink;
 typedef struct WAPDASH_ShareOperation WAPDASH_ShareOperation;
 typedef struct WAPDASH_IQuickLink WAPDASH_IQuickLink;
@@ -31,7 +29,6 @@ typedef struct WAPDASH_IShareOperation WAPDASH_IShareOperation;
 typedef struct WAPDASH_IShareOperation_2 WAPDASH_IShareOperation_2;
 typedef struct WAPDASH_IShareOperation_3 WAPDASH_IShareOperation_3;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSTST_RandomAccessStreamReference
 #define CWINRT_FWD_WSTST_RandomAccessStreamReference
 typedef struct WSTST_RandomAccessStreamReference WSTST_RandomAccessStreamReference;
@@ -49,7 +46,6 @@ typedef struct WAPDA_DataPackageView WAPDA_DataPackageView;
 typedef struct WFOCO_IVectorView_WAPCO_Contact WFOCO_IVectorView_WAPCO_Contact;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -70,81 +66,50 @@ static const IID CWINRT_IID_WAPDASH_IShareOperation_2 CWINRT_MAYBE_UNUSED = { 0x
 static const IID CWINRT_IID_WAPDASH_IShareOperation_3 CWINRT_MAYBE_UNUSED = { 0x5EF6B382, 0xB7A7, 0x4571, { 0xA2, 0xA6, 0x99, 0x4A, 0x03, 0x49, 0x88, 0xB2 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink */
 HRESULT wapdash_quick_link_new(WAPDASH_QuickLink **out);
 
-/* Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink */
-/* Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink.get_Title() */
 HRESULT wapdash_quick_link_get__title(WAPDASH_QuickLink *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink.put_Title() */
 HRESULT wapdash_quick_link_put__title(WAPDASH_QuickLink *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink.get_Thumbnail() */
 HRESULT wapdash_quick_link_get__thumbnail(WAPDASH_QuickLink *self, WSTST_RandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink.put_Thumbnail() */
 HRESULT wapdash_quick_link_put__thumbnail(WAPDASH_QuickLink *self, WSTST_RandomAccessStreamReference* value);
 
-/* Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink.get_Id() */
 HRESULT wapdash_quick_link_get__id(WAPDASH_QuickLink *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink.put_Id() */
 HRESULT wapdash_quick_link_put__id(WAPDASH_QuickLink *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink.get_SupportedDataFormats() */
 HRESULT wapdash_quick_link_get__supported_data_formats(WAPDASH_QuickLink *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink.get_SupportedFileTypes() */
 HRESULT wapdash_quick_link_get__supported_file_types(WAPDASH_QuickLink *self, WFOCO_IVector_HSTRING** value);
 
-/* activate Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation */
 HRESULT wapdash_share_operation_new(WAPDASH_ShareOperation **out);
 
-/* Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation */
-/* Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.get_Data() */
 HRESULT wapdash_share_operation_get__data(WAPDASH_ShareOperation *self, WAPDA_DataPackageView** value);
 
-/* Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.get_QuickLinkId() */
 HRESULT wapdash_share_operation_get__quick_link_id(WAPDASH_ShareOperation *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.RemoveThisQuickLink() */
 HRESULT wapdash_share_operation_remove_this_quick_link(WAPDASH_ShareOperation *self);
 
-/* Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportStarted() */
 HRESULT wapdash_share_operation_report_started(WAPDASH_ShareOperation *self);
 
-/* Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportDataRetrieved() */
 HRESULT wapdash_share_operation_report_data_retrieved(WAPDASH_ShareOperation *self);
 
-/* Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportSubmittedBackgroundTask() */
 HRESULT wapdash_share_operation_report_submitted_background_task(WAPDASH_ShareOperation *self);
 
-/* Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportCompleted(quicklink) */
 HRESULT wapdash_share_operation_report_completed_p(WAPDASH_ShareOperation *self, WAPDASH_QuickLink* quicklink);
 
-/* Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportCompleted() */
 HRESULT wapdash_share_operation_report_completed(WAPDASH_ShareOperation *self);
 
-/* Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportError() */
 HRESULT wapdash_share_operation_report_error(WAPDASH_ShareOperation *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.DismissUI() */
 HRESULT wapdash_share_operation_dismiss_u_i(WAPDASH_ShareOperation *self);
 
-/* Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.get_Contacts() */
 HRESULT wapdash_share_operation_get__contacts(WAPDASH_ShareOperation *self, WFOCO_IVectorView_WAPCO_Contact** value);
 
-/* Windows.ApplicationModel.DataTransfer.ShareTarget.IQuickLink */
-/* Windows.ApplicationModel.DataTransfer.ShareTarget.IShareOperation */
-/* Windows.ApplicationModel.DataTransfer.ShareTarget.IShareOperation2 */
-/* Windows.ApplicationModel.DataTransfer.ShareTarget.IShareOperation2.DismissUI() */
 HRESULT wapdash_share_operation_2_dismiss_u_i(WAPDASH_IShareOperation_2 *self);
 
-/* Windows.ApplicationModel.DataTransfer.ShareTarget.IShareOperation3 */
-/* Windows.ApplicationModel.DataTransfer.ShareTarget.IShareOperation3.get_Contacts() */
 HRESULT wapdash_share_operation_3_get__contacts(WAPDASH_IShareOperation_3 *self, WFOCO_IVectorView_WAPCO_Contact** value);
 
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_DATATRANSFER_SHARETARGET_H */

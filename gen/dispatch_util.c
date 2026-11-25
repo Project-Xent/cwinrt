@@ -15,7 +15,6 @@ static char const *iface_params_after_self(char const *iface_params) {
 	return p;
 }
 
-/* Drop the trailing parameter identifier; keep generic/type tokens only. */
 static size_t param_piece_type_len(char const *piece, size_t len) {
 	size_t end     = len;
 	size_t last_sp = ( size_t ) -1;
@@ -27,7 +26,6 @@ static size_t param_piece_type_len(char const *piece, size_t len) {
 	return last_sp;
 }
 
-/* Locate the next top-level (generic-depth 0) comma at/after p, else NULL. */
 static char const *param_next_comma(char const *p) {
 	int depth = 0;
 	for (; *p; p++) {
@@ -112,7 +110,6 @@ bool cwinrt_params_match_instance(char const *class_params, char const *iface_pa
 
 bool cwinrt_params_has_self(char const *params_c) { return params_c && strstr(params_c, " *self"); }
 
-/* Find the bare argument identifier within [p,end): last whitespace-token, minus leading '*'. */
 static char const *param_arg_name_start(char const *p, char const *end) {
 	char const *q = end;
 	while (q > p && (*q == ' ' || *q == '\t')) q--;

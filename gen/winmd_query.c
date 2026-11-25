@@ -39,7 +39,6 @@ uint32_t winmd_typedef_extends_coded(winmd_meta const *m, uint32_t typedef_row1)
 	return winmd_read_idx(p + typedef_extends_off(&m->tabs), ( uint8_t ) cd_sz);
 }
 
-/* Read the Name then Namespace string columns starting at offset pos in row p, and format "<ns>.<name>". */
 static void format_type_full_name(winmd_meta const *m, uint8_t const *p, uint32_t pos, char *buf, size_t bufsz) {
 	char const *name = winmd_str_at(&m->strings, winmd_read_idx(p + pos, m->tabs.string_ix));
 	char const *ns   = winmd_str_at(&m->strings, winmd_read_idx(p + pos + m->tabs.string_ix, m->tabs.string_ix));
@@ -274,7 +273,6 @@ static uint32_t param_max_seq(winmd_meta const *m, uint32_t start, uint32_t end)
 	return max_seq;
 }
 
-/* Fill arr[seq-1] with duped param names from rows [start,end); -1 on OOM (arr freed), 0 ok. */
 static int param_fill_names(winmd_meta const *m, uint32_t start, uint32_t end, char **arr, uint32_t max_seq) {
 	uint32_t row;
 	for (row = start; row < end; row++) {
@@ -344,7 +342,6 @@ static int ns_cmp(void const *a, void const *b) {
 	return strcmp(*( char const *const * ) a, *( char const *const * ) b);
 }
 
-/* Append a copy of ns to the growable string list; -1 on OOM (list freed via *list), 0 ok. */
 static int ns_list_append(char ***list, uint32_t *cap, uint32_t *n, char const *ns) {
 	char *copy;
 	if (*n >= *cap) {
@@ -361,7 +358,6 @@ static int ns_list_append(char ***list, uint32_t *cap, uint32_t *n, char const *
 	return 0;
 }
 
-/* True if ns passes the prefix filter, is non-empty, and is not already in list. */
 static int ns_should_add(char **list, uint32_t n, char const *ns, char const *prefix) {
 	if (!ns_prefix_ok(ns, prefix)) return 0;
 	if (!ns || !*ns) return 0;

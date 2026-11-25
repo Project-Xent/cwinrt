@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.UI.Popups.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStreamWithContentType
 #define CWINRT_FWD_WSTST_IRandomAccessStreamWithContentType
 typedef struct WSTST_IRandomAccessStreamWithContentType WSTST_IRandomAccessStreamWithContentType;
@@ -27,7 +26,6 @@ typedef struct WDEEN_DeviceInformation WDEEN_DeviceInformation;
 typedef struct WDEEN_DevicePickerAppearance WDEEN_DevicePickerAppearance;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMECA_ICastingDeviceStatics WMECA_ICastingDeviceStatics;
 typedef struct WMECA_CastingSource WMECA_CastingSource;
 typedef struct WMECA_CastingDeviceSelectedEventArgs WMECA_CastingDeviceSelectedEventArgs;
@@ -44,7 +42,6 @@ typedef struct WMECA_ICastingConnectionErrorOccurredEventArgs WMECA_ICastingConn
 typedef struct WMECA_ICastingDevice WMECA_ICastingDevice;
 typedef struct WMECA_ICastingDevicePicker WMECA_ICastingDevicePicker;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_HSTRING
 #define CWINRT_FWD_WF_IAsyncOperation_HSTRING
 typedef struct WF_IAsyncOperation_HSTRING WF_IAsyncOperation_HSTRING;
@@ -147,7 +144,6 @@ typedef enum WMECA_CastingConnectionState {
 } WMECA_CastingConnectionState;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -184,89 +180,56 @@ static const IID CWINRT_IID_WMECA_ICastingDevice CWINRT_MAYBE_UNUSED = { 0xDE721
 static const IID CWINRT_IID_WMECA_ICastingDevicePicker CWINRT_MAYBE_UNUSED = { 0xDCD39924, 0x0591, 0x49BE, { 0xAA, 0xCB, 0x4B, 0x82, 0xEE, 0x75, 0x6A, 0x95 } };
 #endif
 
-/* Methods */
-
-/* Windows.Media.Casting.ICastingDeviceStatics */
-/* Windows.Media.Casting.ICastingDeviceStatics.GetDeviceSelector() */
 HRESULT wmeca_casting_device_statics_get_device_selector(WMECA_ICastingDeviceStatics *self, WMECA_CastingPlaybackTypes type_, cwinrt_hstring *out);
 
-/* Windows.Media.Casting.ICastingDeviceStatics.GetDeviceSelectorFromCastingSourceAsync(castingSource) */
 HRESULT wmeca_casting_device_statics_get_device_selector_from_casting_source_async(WMECA_ICastingDeviceStatics *self, WMECA_CastingSource* castingSource, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Media.Casting.ICastingDeviceStatics.FromIdAsync() */
 HRESULT wmeca_casting_device_statics_from_id_async(WMECA_ICastingDeviceStatics *self, cwinrt_hstring value, WF_IAsyncOperation_WMECA_CastingDevice** out);
 
-/* Windows.Media.Casting.ICastingDeviceStatics.DeviceInfoSupportsCastingAsync(device) */
 HRESULT wmeca_casting_device_statics_device_info_supports_casting_async(WMECA_ICastingDeviceStatics *self, WDEEN_DeviceInformation* device, WF_IAsyncOperation_Bool** out);
 
-/* activate Windows.Media.Casting.CastingSource */
 HRESULT wmeca_casting_source_new(WMECA_CastingSource **out);
 
-/* Windows.Media.Casting.CastingSource */
-/* Windows.Media.Casting.CastingSource.get_PreferredSourceUri() */
 HRESULT wmeca_casting_source_get__preferred_source_uri(WMECA_CastingSource *self, WF_Uri** value);
 
-/* Windows.Media.Casting.CastingSource.put_PreferredSourceUri() */
 HRESULT wmeca_casting_source_put__preferred_source_uri(WMECA_CastingSource *self, WF_Uri* value);
 
-/* activate Windows.Media.Casting.CastingDeviceSelectedEventArgs */
 HRESULT wmeca_casting_device_selected_event_args_new(WMECA_CastingDeviceSelectedEventArgs **out);
 
-/* Windows.Media.Casting.CastingDeviceSelectedEventArgs */
-/* Windows.Media.Casting.CastingDeviceSelectedEventArgs.get_SelectedCastingDevice() */
 HRESULT wmeca_casting_device_selected_event_args_get__selected_casting_device(WMECA_CastingDeviceSelectedEventArgs *self, WMECA_CastingDevice** value);
 
-/* activate Windows.Media.Casting.CastingDevicePickerFilter */
 HRESULT wmeca_casting_device_picker_filter_new(WMECA_CastingDevicePickerFilter **out);
 
-/* Windows.Media.Casting.CastingDevicePickerFilter */
-/* Windows.Media.Casting.CastingDevicePickerFilter.get_SupportsAudio() */
 HRESULT wmeca_casting_device_picker_filter_get__supports_audio(WMECA_CastingDevicePickerFilter *self, BOOL *value);
 
-/* Windows.Media.Casting.CastingDevicePickerFilter.put_SupportsAudio() */
 HRESULT wmeca_casting_device_picker_filter_put__supports_audio(WMECA_CastingDevicePickerFilter *self, BOOL value);
 
-/* Windows.Media.Casting.CastingDevicePickerFilter.get_SupportsVideo() */
 HRESULT wmeca_casting_device_picker_filter_get__supports_video(WMECA_CastingDevicePickerFilter *self, BOOL *value);
 
-/* Windows.Media.Casting.CastingDevicePickerFilter.put_SupportsVideo() */
 HRESULT wmeca_casting_device_picker_filter_put__supports_video(WMECA_CastingDevicePickerFilter *self, BOOL value);
 
-/* Windows.Media.Casting.CastingDevicePickerFilter.get_SupportsPictures() */
 HRESULT wmeca_casting_device_picker_filter_get__supports_pictures(WMECA_CastingDevicePickerFilter *self, BOOL *value);
 
-/* Windows.Media.Casting.CastingDevicePickerFilter.put_SupportsPictures() */
 HRESULT wmeca_casting_device_picker_filter_put__supports_pictures(WMECA_CastingDevicePickerFilter *self, BOOL value);
 
-/* Windows.Media.Casting.CastingDevicePickerFilter.get_SupportedCastingSources() */
 HRESULT wmeca_casting_device_picker_filter_get__supported_casting_sources(WMECA_CastingDevicePickerFilter *self, WFOCO_IVector_WMECA_CastingSource** value);
 
-/* activate Windows.Media.Casting.CastingConnection */
 HRESULT wmeca_casting_connection_new(WMECA_CastingConnection **out);
 
-/* Windows.Media.Casting.CastingConnection */
-/* Windows.Media.Casting.CastingConnection.get_State() */
 HRESULT wmeca_casting_connection_get__state(WMECA_CastingConnection *self, WMECA_CastingConnectionState *value);
 
-/* Windows.Media.Casting.CastingConnection.get_Device() */
 HRESULT wmeca_casting_connection_get__device(WMECA_CastingConnection *self, WMECA_CastingDevice** value);
 
-/* Windows.Media.Casting.CastingConnection.get_Source() */
 HRESULT wmeca_casting_connection_get__source(WMECA_CastingConnection *self, WMECA_CastingSource** value);
 
-/* Windows.Media.Casting.CastingConnection.put_Source() */
 HRESULT wmeca_casting_connection_put__source(WMECA_CastingConnection *self, WMECA_CastingSource* value);
 
-/* Windows.Media.Casting.CastingConnection.RequestStartCastingAsync() */
 HRESULT wmeca_casting_connection_request_start_casting_async(WMECA_CastingConnection *self, WMECA_CastingSource* value, WF_IAsyncOperation_WMECA_CastingConnectionErrorStatus** out);
 
-/* Windows.Media.Casting.CastingConnection.DisconnectAsync() */
 HRESULT wmeca_casting_connection_disconnect_async(WMECA_CastingConnection *self, WF_IAsyncOperation_WMECA_CastingConnectionErrorStatus** out);
 
-/* Windows.Media.Casting.CastingConnection.Close() */
 HRESULT wmeca_casting_connection_close(WMECA_CastingConnection *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeca_casting_connection_on_state_changed(WMECA_CastingConnection *self, cwinrt_event_fn fn, void *ctx);
@@ -275,67 +238,44 @@ void wmeca_casting_connection_off_state_changed(WMECA_CastingConnection *self, c
 cwinrt_token wmeca_casting_connection_on_error_occurred(WMECA_CastingConnection *self, cwinrt_event_fn fn, void *ctx);
 void wmeca_casting_connection_off_error_occurred(WMECA_CastingConnection *self, cwinrt_token token);
 
-/* activate Windows.Media.Casting.CastingConnectionErrorOccurredEventArgs */
 HRESULT wmeca_casting_connection_error_occurred_event_args_new(WMECA_CastingConnectionErrorOccurredEventArgs **out);
 
-/* Windows.Media.Casting.CastingConnectionErrorOccurredEventArgs */
-/* Windows.Media.Casting.CastingConnectionErrorOccurredEventArgs.get_ErrorStatus() */
 HRESULT wmeca_casting_connection_error_occurred_event_args_get__error_status(WMECA_CastingConnectionErrorOccurredEventArgs *self, WMECA_CastingConnectionErrorStatus *value);
 
-/* Windows.Media.Casting.CastingConnectionErrorOccurredEventArgs.get_Message() */
 HRESULT wmeca_casting_connection_error_occurred_event_args_get__message(WMECA_CastingConnectionErrorOccurredEventArgs *self, cwinrt_hstring *value);
 
-/* activate Windows.Media.Casting.CastingDevice */
 HRESULT wmeca_casting_device_new(WMECA_CastingDevice **out);
 
-/* Windows.Media.Casting.CastingDevice */
-/* Windows.Media.Casting.CastingDevice.get_Id() */
 HRESULT wmeca_casting_device_get__id(WMECA_CastingDevice *self, cwinrt_hstring *value);
 
-/* Windows.Media.Casting.CastingDevice.get_FriendlyName() */
 HRESULT wmeca_casting_device_get__friendly_name(WMECA_CastingDevice *self, cwinrt_hstring *value);
 
-/* Windows.Media.Casting.CastingDevice.get_Icon() */
 HRESULT wmeca_casting_device_get__icon(WMECA_CastingDevice *self, WSTST_IRandomAccessStreamWithContentType** value);
 
-/* Windows.Media.Casting.CastingDevice.GetSupportedCastingPlaybackTypesAsync() */
 HRESULT wmeca_casting_device_get_supported_casting_playback_types_async(WMECA_CastingDevice *self, WF_IAsyncOperation_WMECA_CastingPlaybackTypes** out);
 
-/* Windows.Media.Casting.CastingDevice.CreateCastingConnection() */
 HRESULT wmeca_casting_device_create_casting_connection(WMECA_CastingDevice *self, WMECA_CastingConnection** out);
 
-/* Windows.Media.Casting.CastingDevice.GetDeviceSelector() */
 HRESULT wmeca_casting_device_get_device_selector(WMECA_CastingPlaybackTypes type_, cwinrt_hstring *out);
 
-/* Windows.Media.Casting.CastingDevice.GetDeviceSelectorFromCastingSourceAsync(castingSource) */
 HRESULT wmeca_casting_device_get_device_selector_from_casting_source_async(WMECA_CastingSource* castingSource, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Media.Casting.CastingDevice.FromIdAsync() */
 HRESULT wmeca_casting_device_from_id_async(cwinrt_hstring value, WF_IAsyncOperation_WMECA_CastingDevice** out);
 
-/* Windows.Media.Casting.CastingDevice.DeviceInfoSupportsCastingAsync(device) */
 HRESULT wmeca_casting_device_device_info_supports_casting_async(WDEEN_DeviceInformation* device, WF_IAsyncOperation_Bool** out);
 
-/* activate Windows.Media.Casting.CastingDevicePicker */
 HRESULT wmeca_casting_device_picker_new(WMECA_CastingDevicePicker **out);
 
-/* Windows.Media.Casting.CastingDevicePicker */
-/* Windows.Media.Casting.CastingDevicePicker.get_Filter() */
 HRESULT wmeca_casting_device_picker_get__filter(WMECA_CastingDevicePicker *self, WMECA_CastingDevicePickerFilter** value);
 
-/* Windows.Media.Casting.CastingDevicePicker.get_Appearance() */
 HRESULT wmeca_casting_device_picker_get__appearance(WMECA_CastingDevicePicker *self, WDEEN_DevicePickerAppearance** value);
 
-/* Windows.Media.Casting.CastingDevicePicker.Show(selection) */
 HRESULT wmeca_casting_device_picker_show(WMECA_CastingDevicePicker *self, WF_Rect selection);
 
-/* Windows.Media.Casting.CastingDevicePicker.Show(selection, preferredPlacement) */
 HRESULT wmeca_casting_device_picker_show_rect_placement(WMECA_CastingDevicePicker *self, WF_Rect selection, WUIPO_Placement preferredPlacement);
 
-/* Windows.Media.Casting.CastingDevicePicker.Hide() */
 HRESULT wmeca_casting_device_picker_hide(WMECA_CastingDevicePicker *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeca_casting_device_picker_on_casting_device_selected(WMECA_CastingDevicePicker *self, cwinrt_event_fn fn, void *ctx);
@@ -344,11 +284,4 @@ void wmeca_casting_device_picker_off_casting_device_selected(WMECA_CastingDevice
 cwinrt_token wmeca_casting_device_picker_on_casting_device_picker_dismissed(WMECA_CastingDevicePicker *self, cwinrt_event_fn fn, void *ctx);
 void wmeca_casting_device_picker_off_casting_device_picker_dismissed(WMECA_CastingDevicePicker *self, cwinrt_token token);
 
-/* Windows.Media.Casting.ICastingSource */
-/* Windows.Media.Casting.ICastingDeviceSelectedEventArgs */
-/* Windows.Media.Casting.ICastingDevicePickerFilter */
-/* Windows.Media.Casting.ICastingConnection */
-/* Windows.Media.Casting.ICastingConnectionErrorOccurredEventArgs */
-/* Windows.Media.Casting.ICastingDevice */
-/* Windows.Media.Casting.ICastingDevicePicker */
 #endif /* CWINRT_WINDOWS_MEDIA_CASTING_H */

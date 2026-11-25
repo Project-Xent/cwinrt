@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.ApplicationModel.Contacts.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WAPCODA_ContactListSyncManagerSyncRequest WAPCODA_ContactListSyncManagerSyncRequest;
 typedef struct WAPCODA_ContactListSyncManagerSyncRequestEventArgs WAPCODA_ContactListSyncManagerSyncRequestEventArgs;
 typedef struct WAPCODA_ContactListServerSearchReadBatchRequestEventArgs WAPCODA_ContactListServerSearchReadBatchRequestEventArgs;
@@ -36,7 +35,6 @@ typedef struct WAPCODA_IContactDataProviderTriggerDetails WAPCODA_IContactDataPr
 typedef struct WAPCODA_IContactDataProviderConnection WAPCODA_IContactDataProviderConnection;
 typedef struct WAPCODA_IContactDataProviderConnection_2 WAPCODA_IContactDataProviderConnection_2;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncAction
 #define CWINRT_FWD_WF_IAsyncAction
 typedef struct WF_IAsyncAction WF_IAsyncAction;
@@ -79,7 +77,6 @@ typedef struct WF_TypedEventHandler_WAPCODA_ContactDataProviderConnection_WAPCOD
 typedef struct WF_TypedEventHandler_WAPCODA_ContactDataProviderConnection_WAPCODA_ContactListDeleteContactRequestEventArgs WF_TypedEventHandler_WAPCODA_ContactDataProviderConnection_WAPCODA_ContactListDeleteContactRequestEventArgs;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -128,133 +125,82 @@ static const IID CWINRT_IID_WAPCODA_IContactDataProviderConnection CWINRT_MAYBE_
 static const IID CWINRT_IID_WAPCODA_IContactDataProviderConnection_2 CWINRT_MAYBE_UNUSED = { 0xA1D327B0, 0x196C, 0x4BFD, { 0x8F, 0x0F, 0xC6, 0x8D, 0x67, 0xF2, 0x49, 0xD3 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequest */
 HRESULT wapcoda_contact_list_sync_manager_sync_request_new(WAPCODA_ContactListSyncManagerSyncRequest **out);
 
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequest */
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequest.get_ContactListId() */
 HRESULT wapcoda_contact_list_sync_manager_sync_request_get__contact_list_id(WAPCODA_ContactListSyncManagerSyncRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequest.ReportCompletedAsync() */
 HRESULT wapcoda_contact_list_sync_manager_sync_request_report_completed_async(WAPCODA_ContactListSyncManagerSyncRequest *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequest.ReportFailedAsync() */
 HRESULT wapcoda_contact_list_sync_manager_sync_request_report_failed_async(WAPCODA_ContactListSyncManagerSyncRequest *self, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequestEventArgs */
 HRESULT wapcoda_contact_list_sync_manager_sync_request_event_args_new(WAPCODA_ContactListSyncManagerSyncRequestEventArgs **out);
 
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequestEventArgs */
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequestEventArgs.get_Request() */
 HRESULT wapcoda_contact_list_sync_manager_sync_request_event_args_get__request(WAPCODA_ContactListSyncManagerSyncRequestEventArgs *self, WAPCODA_ContactListSyncManagerSyncRequest** value);
 
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequestEventArgs.GetDeferral() */
 HRESULT wapcoda_contact_list_sync_manager_sync_request_event_args_get_deferral(WAPCODA_ContactListSyncManagerSyncRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequestEventArgs */
 HRESULT wapcoda_contact_list_server_search_read_batch_request_event_args_new(WAPCODA_ContactListServerSearchReadBatchRequestEventArgs **out);
 
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequestEventArgs */
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequestEventArgs.get_Request() */
 HRESULT wapcoda_contact_list_server_search_read_batch_request_event_args_get__request(WAPCODA_ContactListServerSearchReadBatchRequestEventArgs *self, WAPCODA_ContactListServerSearchReadBatchRequest** value);
 
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequestEventArgs.GetDeferral() */
 HRESULT wapcoda_contact_list_server_search_read_batch_request_event_args_get_deferral(WAPCODA_ContactListServerSearchReadBatchRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest */
 HRESULT wapcoda_contact_list_server_search_read_batch_request_new(WAPCODA_ContactListServerSearchReadBatchRequest **out);
 
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest */
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest.get_SessionId() */
 HRESULT wapcoda_contact_list_server_search_read_batch_request_get__session_id(WAPCODA_ContactListServerSearchReadBatchRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest.get_ContactListId() */
 HRESULT wapcoda_contact_list_server_search_read_batch_request_get__contact_list_id(WAPCODA_ContactListServerSearchReadBatchRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest.get_Options() */
 HRESULT wapcoda_contact_list_server_search_read_batch_request_get__options(WAPCODA_ContactListServerSearchReadBatchRequest *self, WAPCO_ContactQueryOptions** value);
 
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest.get_SuggestedBatchSize() */
 HRESULT wapcoda_contact_list_server_search_read_batch_request_get__suggested_batch_size(WAPCODA_ContactListServerSearchReadBatchRequest *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest.SaveContactAsync(contact) */
 HRESULT wapcoda_contact_list_server_search_read_batch_request_save_contact_async(WAPCODA_ContactListServerSearchReadBatchRequest *self, WAPCO_Contact* contact, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest.ReportCompletedAsync() */
 HRESULT wapcoda_contact_list_server_search_read_batch_request_report_completed_async(WAPCODA_ContactListServerSearchReadBatchRequest *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest.ReportFailedAsync(batchStatus) */
 HRESULT wapcoda_contact_list_server_search_read_batch_request_report_failed_async(WAPCODA_ContactListServerSearchReadBatchRequest *self, WAPCO_ContactBatchStatus batchStatus, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequestEventArgs */
 HRESULT wapcoda_contact_list_delete_contact_request_event_args_new(WAPCODA_ContactListDeleteContactRequestEventArgs **out);
 
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequestEventArgs */
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequestEventArgs.get_Request() */
 HRESULT wapcoda_contact_list_delete_contact_request_event_args_get__request(WAPCODA_ContactListDeleteContactRequestEventArgs *self, WAPCODA_ContactListDeleteContactRequest** value);
 
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequestEventArgs.GetDeferral() */
 HRESULT wapcoda_contact_list_delete_contact_request_event_args_get_deferral(WAPCODA_ContactListDeleteContactRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequest */
 HRESULT wapcoda_contact_list_delete_contact_request_new(WAPCODA_ContactListDeleteContactRequest **out);
 
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequest */
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequest.get_ContactListId() */
 HRESULT wapcoda_contact_list_delete_contact_request_get__contact_list_id(WAPCODA_ContactListDeleteContactRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequest.get_ContactId() */
 HRESULT wapcoda_contact_list_delete_contact_request_get__contact_id(WAPCODA_ContactListDeleteContactRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequest.ReportCompletedAsync() */
 HRESULT wapcoda_contact_list_delete_contact_request_report_completed_async(WAPCODA_ContactListDeleteContactRequest *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequest.ReportFailedAsync() */
 HRESULT wapcoda_contact_list_delete_contact_request_report_failed_async(WAPCODA_ContactListDeleteContactRequest *self, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequestEventArgs */
 HRESULT wapcoda_contact_list_create_or_update_contact_request_event_args_new(WAPCODA_ContactListCreateOrUpdateContactRequestEventArgs **out);
 
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequestEventArgs */
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequestEventArgs.get_Request() */
 HRESULT wapcoda_contact_list_create_or_update_contact_request_event_args_get__request(WAPCODA_ContactListCreateOrUpdateContactRequestEventArgs *self, WAPCODA_ContactListCreateOrUpdateContactRequest** value);
 
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequestEventArgs.GetDeferral() */
 HRESULT wapcoda_contact_list_create_or_update_contact_request_event_args_get_deferral(WAPCODA_ContactListCreateOrUpdateContactRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequest */
 HRESULT wapcoda_contact_list_create_or_update_contact_request_new(WAPCODA_ContactListCreateOrUpdateContactRequest **out);
 
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequest */
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequest.get_ContactListId() */
 HRESULT wapcoda_contact_list_create_or_update_contact_request_get__contact_list_id(WAPCODA_ContactListCreateOrUpdateContactRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequest.get_Contact() */
 HRESULT wapcoda_contact_list_create_or_update_contact_request_get__contact(WAPCODA_ContactListCreateOrUpdateContactRequest *self, WAPCO_Contact** value);
 
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequest.ReportCompletedAsync(createdOrUpdatedContact) */
 HRESULT wapcoda_contact_list_create_or_update_contact_request_report_completed_async(WAPCODA_ContactListCreateOrUpdateContactRequest *self, WAPCO_Contact* createdOrUpdatedContact, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequest.ReportFailedAsync() */
 HRESULT wapcoda_contact_list_create_or_update_contact_request_report_failed_async(WAPCODA_ContactListCreateOrUpdateContactRequest *self, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderTriggerDetails */
 HRESULT wapcoda_contact_data_provider_trigger_details_new(WAPCODA_ContactDataProviderTriggerDetails **out);
 
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderTriggerDetails */
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderTriggerDetails.get_Connection() */
 HRESULT wapcoda_contact_data_provider_trigger_details_get__connection(WAPCODA_ContactDataProviderTriggerDetails *self, WAPCODA_ContactDataProviderConnection** value);
 
-/* activate Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection */
 HRESULT wapcoda_contact_data_provider_connection_new(WAPCODA_ContactDataProviderConnection **out);
 
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection */
-/* Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection.Start() */
 HRESULT wapcoda_contact_data_provider_connection_start(WAPCODA_ContactDataProviderConnection *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapcoda_contact_data_provider_connection_on_sync_requested(WAPCODA_ContactDataProviderConnection *self, cwinrt_event_fn fn, void *ctx);
@@ -269,15 +215,4 @@ void wapcoda_contact_data_provider_connection_off_create_or_update_contact_reque
 cwinrt_token wapcoda_contact_data_provider_connection_on_delete_contact_requested(WAPCODA_ContactDataProviderConnection *self, cwinrt_event_fn fn, void *ctx);
 void wapcoda_contact_data_provider_connection_off_delete_contact_requested(WAPCODA_ContactDataProviderConnection *self, cwinrt_token token);
 
-/* Windows.ApplicationModel.Contacts.DataProvider.IContactListSyncManagerSyncRequest */
-/* Windows.ApplicationModel.Contacts.DataProvider.IContactListSyncManagerSyncRequestEventArgs */
-/* Windows.ApplicationModel.Contacts.DataProvider.IContactListServerSearchReadBatchRequestEventArgs */
-/* Windows.ApplicationModel.Contacts.DataProvider.IContactListServerSearchReadBatchRequest */
-/* Windows.ApplicationModel.Contacts.DataProvider.IContactListDeleteContactRequestEventArgs */
-/* Windows.ApplicationModel.Contacts.DataProvider.IContactListDeleteContactRequest */
-/* Windows.ApplicationModel.Contacts.DataProvider.IContactListCreateOrUpdateContactRequestEventArgs */
-/* Windows.ApplicationModel.Contacts.DataProvider.IContactListCreateOrUpdateContactRequest */
-/* Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderTriggerDetails */
-/* Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderConnection */
-/* Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderConnection2 */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_CONTACTS_DATAPROVIDER_H */

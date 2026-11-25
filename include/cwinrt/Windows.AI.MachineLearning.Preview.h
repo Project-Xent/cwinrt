@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Graphics.Imaging.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WS_IStorageFile
 #define CWINRT_FWD_WS_IStorageFile
 typedef struct WS_IStorageFile WS_IStorageFile;
@@ -23,7 +22,6 @@ typedef struct WS_IStorageFile WS_IStorageFile;
 typedef struct WSTST_IRandomAccessStreamReference WSTST_IRandomAccessStreamReference;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAIMAPR_LearningModelDescriptionPreview WAIMAPR_LearningModelDescriptionPreview;
 typedef struct WAIMAPR_LearningModelEvaluationResultPreview WAIMAPR_LearningModelEvaluationResultPreview;
 typedef struct WAIMAPR_LearningModelPreview WAIMAPR_LearningModelPreview;
@@ -47,7 +45,6 @@ typedef struct WAIMAPR_IImageVariableDescriptorPreview WAIMAPR_IImageVariableDes
 typedef struct WAIMAPR_ILearningModelBindingPreview WAIMAPR_ILearningModelBindingPreview;
 typedef struct WAIMAPR_ILearningModelVariableDescriptorPreview WAIMAPR_ILearningModelVariableDescriptorPreview;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IMapView_HSTRING_HSTRING
 #define CWINRT_FWD_WFOCO_IMapView_HSTRING_HSTRING
 typedef struct WFOCO_IMapView_HSTRING_HSTRING WFOCO_IMapView_HSTRING_HSTRING;
@@ -157,7 +154,6 @@ typedef enum WAIMAPR_FeatureElementKindPreview {
 } WAIMAPR_FeatureElementKindPreview;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -210,262 +206,160 @@ static const IID CWINRT_IID_WAIMAPR_ILearningModelBindingPreview CWINRT_MAYBE_UN
 static const IID CWINRT_IID_WAIMAPR_ILearningModelVariableDescriptorPreview CWINRT_MAYBE_UNUSED = { 0xB13DF682, 0xFC30, 0x492B, { 0x8E, 0xA0, 0xED, 0x1F, 0x53, 0xC0, 0xB0, 0x38 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview */
 HRESULT waimapr_learning_model_description_preview_new(WAIMAPR_LearningModelDescriptionPreview **out);
 
-/* Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview */
-/* Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview.get_Author() */
 HRESULT waimapr_learning_model_description_preview_get__author(WAIMAPR_LearningModelDescriptionPreview *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview.get_Name() */
 HRESULT waimapr_learning_model_description_preview_get__name(WAIMAPR_LearningModelDescriptionPreview *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview.get_Domain() */
 HRESULT waimapr_learning_model_description_preview_get__domain(WAIMAPR_LearningModelDescriptionPreview *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview.get_Description() */
 HRESULT waimapr_learning_model_description_preview_get__description(WAIMAPR_LearningModelDescriptionPreview *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview.get_Version() */
 HRESULT waimapr_learning_model_description_preview_get__version(WAIMAPR_LearningModelDescriptionPreview *self, int64_t *value);
 
-/* Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview.get_Metadata() */
 HRESULT waimapr_learning_model_description_preview_get__metadata(WAIMAPR_LearningModelDescriptionPreview *self, WFOCO_IMapView_HSTRING_HSTRING** value);
 
-/* Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview.get_InputFeatures() */
 HRESULT waimapr_learning_model_description_preview_get__input_features(WAIMAPR_LearningModelDescriptionPreview *self, WFOCO_IIterable_WAIMAPR_ILearningModelVariableDescriptorPreview** value);
 
-/* Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview.get_OutputFeatures() */
 HRESULT waimapr_learning_model_description_preview_get__output_features(WAIMAPR_LearningModelDescriptionPreview *self, WFOCO_IIterable_WAIMAPR_ILearningModelVariableDescriptorPreview** value);
 
-/* activate Windows.AI.MachineLearning.Preview.LearningModelEvaluationResultPreview */
 HRESULT waimapr_learning_model_evaluation_result_preview_new(WAIMAPR_LearningModelEvaluationResultPreview **out);
 
-/* Windows.AI.MachineLearning.Preview.LearningModelEvaluationResultPreview */
-/* Windows.AI.MachineLearning.Preview.LearningModelEvaluationResultPreview.get_CorrelationId() */
 HRESULT waimapr_learning_model_evaluation_result_preview_get__correlation_id(WAIMAPR_LearningModelEvaluationResultPreview *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.Preview.LearningModelEvaluationResultPreview.get_Outputs() */
 HRESULT waimapr_learning_model_evaluation_result_preview_get__outputs(WAIMAPR_LearningModelEvaluationResultPreview *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* activate Windows.AI.MachineLearning.Preview.LearningModelPreview */
 HRESULT waimapr_learning_model_preview_new(WAIMAPR_LearningModelPreview **out);
 
-/* Windows.AI.MachineLearning.Preview.LearningModelPreview */
-/* Windows.AI.MachineLearning.Preview.LearningModelPreview.EvaluateAsync(binding, correlationId) */
 HRESULT waimapr_learning_model_preview_evaluate_async(WAIMAPR_LearningModelPreview *self, WAIMAPR_LearningModelBindingPreview* binding, cwinrt_hstring correlationId, WF_IAsyncOperation_WAIMAPR_LearningModelEvaluationResultPreview** out);
 
-/* Windows.AI.MachineLearning.Preview.LearningModelPreview.EvaluateFeaturesAsync(features, correlationId) */
 HRESULT waimapr_learning_model_preview_evaluate_features_async(WAIMAPR_LearningModelPreview *self, WFOCO_IMap_HSTRING_Object* features, cwinrt_hstring correlationId, WF_IAsyncOperation_WAIMAPR_LearningModelEvaluationResultPreview** out);
 
-/* Windows.AI.MachineLearning.Preview.LearningModelPreview.get_Description() */
 HRESULT waimapr_learning_model_preview_get__description(WAIMAPR_LearningModelPreview *self, WAIMAPR_LearningModelDescriptionPreview** value);
 
-/* Windows.AI.MachineLearning.Preview.LearningModelPreview.get_InferencingOptions() */
 HRESULT waimapr_learning_model_preview_get__inferencing_options(WAIMAPR_LearningModelPreview *self, WAIMAPR_InferencingOptionsPreview** value);
 
-/* Windows.AI.MachineLearning.Preview.LearningModelPreview.put_InferencingOptions() */
 HRESULT waimapr_learning_model_preview_put__inferencing_options(WAIMAPR_LearningModelPreview *self, WAIMAPR_InferencingOptionsPreview* value);
 
-/* Windows.AI.MachineLearning.Preview.LearningModelPreview.LoadModelFromStorageFileAsync(modelFile) */
 HRESULT waimapr_learning_model_preview_load_model_from_storage_file_async(WS_IStorageFile* modelFile, WF_IAsyncOperation_WAIMAPR_LearningModelPreview** out);
 
-/* Windows.AI.MachineLearning.Preview.LearningModelPreview.LoadModelFromStreamAsync(modelStream) */
 HRESULT waimapr_learning_model_preview_load_model_from_stream_async(WSTST_IRandomAccessStreamReference* modelStream, WF_IAsyncOperation_WAIMAPR_LearningModelPreview** out);
 
-/* activate Windows.AI.MachineLearning.Preview.LearningModelVariableDescriptorPreview */
 HRESULT waimapr_learning_model_variable_descriptor_preview_new(WAIMAPR_LearningModelVariableDescriptorPreview **out);
 
-/* Windows.AI.MachineLearning.Preview.LearningModelVariableDescriptorPreview */
-/* Windows.AI.MachineLearning.Preview.LearningModelVariableDescriptorPreview.get_Name() */
 HRESULT waimapr_learning_model_variable_descriptor_preview_get__name(WAIMAPR_LearningModelVariableDescriptorPreview *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.Preview.LearningModelVariableDescriptorPreview.get_Description() */
 HRESULT waimapr_learning_model_variable_descriptor_preview_get__description(WAIMAPR_LearningModelVariableDescriptorPreview *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.Preview.LearningModelVariableDescriptorPreview.get_ModelFeatureKind() */
 HRESULT waimapr_learning_model_variable_descriptor_preview_get__model_feature_kind(WAIMAPR_LearningModelVariableDescriptorPreview *self, WAIMAPR_LearningModelFeatureKindPreview *value);
 
-/* Windows.AI.MachineLearning.Preview.LearningModelVariableDescriptorPreview.get_IsRequired() */
 HRESULT waimapr_learning_model_variable_descriptor_preview_get__is_required(WAIMAPR_LearningModelVariableDescriptorPreview *self, BOOL *value);
 
-/* activate Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview */
 HRESULT waimapr_map_variable_descriptor_preview_new(WAIMAPR_MapVariableDescriptorPreview **out);
 
-/* Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview */
-/* Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview.get_KeyKind() */
 HRESULT waimapr_map_variable_descriptor_preview_get__key_kind(WAIMAPR_MapVariableDescriptorPreview *self, WAIMAPR_FeatureElementKindPreview *value);
 
-/* Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview.get_ValidStringKeys() */
 HRESULT waimapr_map_variable_descriptor_preview_get__valid_string_keys(WAIMAPR_MapVariableDescriptorPreview *self, WFOCO_IIterable_HSTRING** value);
 
-/* Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview.get_ValidIntegerKeys() */
 HRESULT waimapr_map_variable_descriptor_preview_get__valid_integer_keys(WAIMAPR_MapVariableDescriptorPreview *self, WFOCO_IIterable_int64_t** value);
 
-/* Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview.get_Fields() */
 HRESULT waimapr_map_variable_descriptor_preview_get__fields(WAIMAPR_MapVariableDescriptorPreview *self, WAIMAPR_ILearningModelVariableDescriptorPreview** value);
 
-/* Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview.get_Name() */
 HRESULT waimapr_map_variable_descriptor_preview_get__name(WAIMAPR_MapVariableDescriptorPreview *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview.get_Description() */
 HRESULT waimapr_map_variable_descriptor_preview_get__description(WAIMAPR_MapVariableDescriptorPreview *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview.get_ModelFeatureKind() */
 HRESULT waimapr_map_variable_descriptor_preview_get__model_feature_kind(WAIMAPR_MapVariableDescriptorPreview *self, WAIMAPR_LearningModelFeatureKindPreview *value);
 
-/* Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview.get_IsRequired() */
 HRESULT waimapr_map_variable_descriptor_preview_get__is_required(WAIMAPR_MapVariableDescriptorPreview *self, BOOL *value);
 
-/* activate Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview */
 HRESULT waimapr_sequence_variable_descriptor_preview_new(WAIMAPR_SequenceVariableDescriptorPreview **out);
 
-/* Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview */
-/* Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview.get_ElementType() */
 HRESULT waimapr_sequence_variable_descriptor_preview_get__element_type(WAIMAPR_SequenceVariableDescriptorPreview *self, WAIMAPR_ILearningModelVariableDescriptorPreview** value);
 
-/* Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview.get_Name() */
 HRESULT waimapr_sequence_variable_descriptor_preview_get__name(WAIMAPR_SequenceVariableDescriptorPreview *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview.get_Description() */
 HRESULT waimapr_sequence_variable_descriptor_preview_get__description(WAIMAPR_SequenceVariableDescriptorPreview *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview.get_ModelFeatureKind() */
 HRESULT waimapr_sequence_variable_descriptor_preview_get__model_feature_kind(WAIMAPR_SequenceVariableDescriptorPreview *self, WAIMAPR_LearningModelFeatureKindPreview *value);
 
-/* Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview.get_IsRequired() */
 HRESULT waimapr_sequence_variable_descriptor_preview_get__is_required(WAIMAPR_SequenceVariableDescriptorPreview *self, BOOL *value);
 
-/* activate Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview */
 HRESULT waimapr_tensor_variable_descriptor_preview_new(WAIMAPR_TensorVariableDescriptorPreview **out);
 
-/* Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview */
-/* Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview.get_DataType() */
 HRESULT waimapr_tensor_variable_descriptor_preview_get__data_type(WAIMAPR_TensorVariableDescriptorPreview *self, WAIMAPR_FeatureElementKindPreview *value);
 
-/* Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview.get_Shape() */
 HRESULT waimapr_tensor_variable_descriptor_preview_get__shape(WAIMAPR_TensorVariableDescriptorPreview *self, WFOCO_IIterable_int64_t** value);
 
-/* Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview.get_Name() */
 HRESULT waimapr_tensor_variable_descriptor_preview_get__name(WAIMAPR_TensorVariableDescriptorPreview *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview.get_Description() */
 HRESULT waimapr_tensor_variable_descriptor_preview_get__description(WAIMAPR_TensorVariableDescriptorPreview *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview.get_ModelFeatureKind() */
 HRESULT waimapr_tensor_variable_descriptor_preview_get__model_feature_kind(WAIMAPR_TensorVariableDescriptorPreview *self, WAIMAPR_LearningModelFeatureKindPreview *value);
 
-/* Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview.get_IsRequired() */
 HRESULT waimapr_tensor_variable_descriptor_preview_get__is_required(WAIMAPR_TensorVariableDescriptorPreview *self, BOOL *value);
 
-/* activate Windows.AI.MachineLearning.Preview.InferencingOptionsPreview */
 HRESULT waimapr_inferencing_options_preview_new(WAIMAPR_InferencingOptionsPreview **out);
 
-/* Windows.AI.MachineLearning.Preview.InferencingOptionsPreview */
-/* Windows.AI.MachineLearning.Preview.InferencingOptionsPreview.get_PreferredDeviceKind() */
 HRESULT waimapr_inferencing_options_preview_get__preferred_device_kind(WAIMAPR_InferencingOptionsPreview *self, WAIMAPR_LearningModelDeviceKindPreview *value);
 
-/* Windows.AI.MachineLearning.Preview.InferencingOptionsPreview.put_PreferredDeviceKind() */
 HRESULT waimapr_inferencing_options_preview_put__preferred_device_kind(WAIMAPR_InferencingOptionsPreview *self, WAIMAPR_LearningModelDeviceKindPreview value);
 
-/* Windows.AI.MachineLearning.Preview.InferencingOptionsPreview.get_IsTracingEnabled() */
 HRESULT waimapr_inferencing_options_preview_get__is_tracing_enabled(WAIMAPR_InferencingOptionsPreview *self, BOOL *value);
 
-/* Windows.AI.MachineLearning.Preview.InferencingOptionsPreview.put_IsTracingEnabled() */
 HRESULT waimapr_inferencing_options_preview_put__is_tracing_enabled(WAIMAPR_InferencingOptionsPreview *self, BOOL value);
 
-/* Windows.AI.MachineLearning.Preview.InferencingOptionsPreview.get_MaxBatchSize() */
 HRESULT waimapr_inferencing_options_preview_get__max_batch_size(WAIMAPR_InferencingOptionsPreview *self, int32_t *value);
 
-/* Windows.AI.MachineLearning.Preview.InferencingOptionsPreview.put_MaxBatchSize() */
 HRESULT waimapr_inferencing_options_preview_put__max_batch_size(WAIMAPR_InferencingOptionsPreview *self, int32_t value);
 
-/* Windows.AI.MachineLearning.Preview.InferencingOptionsPreview.get_MinimizeMemoryAllocation() */
 HRESULT waimapr_inferencing_options_preview_get__minimize_memory_allocation(WAIMAPR_InferencingOptionsPreview *self, BOOL *value);
 
-/* Windows.AI.MachineLearning.Preview.InferencingOptionsPreview.put_MinimizeMemoryAllocation() */
 HRESULT waimapr_inferencing_options_preview_put__minimize_memory_allocation(WAIMAPR_InferencingOptionsPreview *self, BOOL value);
 
-/* Windows.AI.MachineLearning.Preview.InferencingOptionsPreview.get_ReclaimMemoryAfterEvaluation() */
 HRESULT waimapr_inferencing_options_preview_get__reclaim_memory_after_evaluation(WAIMAPR_InferencingOptionsPreview *self, BOOL *value);
 
-/* Windows.AI.MachineLearning.Preview.InferencingOptionsPreview.put_ReclaimMemoryAfterEvaluation() */
 HRESULT waimapr_inferencing_options_preview_put__reclaim_memory_after_evaluation(WAIMAPR_InferencingOptionsPreview *self, BOOL value);
 
-/* activate Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview */
 HRESULT waimapr_image_variable_descriptor_preview_new(WAIMAPR_ImageVariableDescriptorPreview **out);
 
-/* Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview */
-/* Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview.get_BitmapPixelFormat() */
 HRESULT waimapr_image_variable_descriptor_preview_get__bitmap_pixel_format(WAIMAPR_ImageVariableDescriptorPreview *self, WGRIM_BitmapPixelFormat *value);
 
-/* Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview.get_Width() */
 HRESULT waimapr_image_variable_descriptor_preview_get__width(WAIMAPR_ImageVariableDescriptorPreview *self, uint32_t *value);
 
-/* Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview.get_Height() */
 HRESULT waimapr_image_variable_descriptor_preview_get__height(WAIMAPR_ImageVariableDescriptorPreview *self, uint32_t *value);
 
-/* Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview.get_Name() */
 HRESULT waimapr_image_variable_descriptor_preview_get__name(WAIMAPR_ImageVariableDescriptorPreview *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview.get_Description() */
 HRESULT waimapr_image_variable_descriptor_preview_get__description(WAIMAPR_ImageVariableDescriptorPreview *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview.get_ModelFeatureKind() */
 HRESULT waimapr_image_variable_descriptor_preview_get__model_feature_kind(WAIMAPR_ImageVariableDescriptorPreview *self, WAIMAPR_LearningModelFeatureKindPreview *value);
 
-/* Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview.get_IsRequired() */
 HRESULT waimapr_image_variable_descriptor_preview_get__is_required(WAIMAPR_ImageVariableDescriptorPreview *self, BOOL *value);
 
-/* Windows.AI.MachineLearning.Preview.ILearningModelPreviewStatics */
-/* Windows.AI.MachineLearning.Preview.ILearningModelPreviewStatics.LoadModelFromStorageFileAsync(modelFile) */
 HRESULT waimapr_learning_model_preview_statics_load_model_from_storage_file_async(WAIMAPR_ILearningModelPreviewStatics *self, WS_IStorageFile* modelFile, WF_IAsyncOperation_WAIMAPR_LearningModelPreview** out);
 
-/* Windows.AI.MachineLearning.Preview.ILearningModelPreviewStatics.LoadModelFromStreamAsync(modelStream) */
 HRESULT waimapr_learning_model_preview_statics_load_model_from_stream_async(WAIMAPR_ILearningModelPreviewStatics *self, WSTST_IRandomAccessStreamReference* modelStream, WF_IAsyncOperation_WAIMAPR_LearningModelPreview** out);
 
-/* Windows.AI.MachineLearning.Preview.ILearningModelBindingPreviewFactory */
-/* Windows.AI.MachineLearning.Preview.ILearningModelBindingPreviewFactory.CreateFromModel(model) */
 HRESULT waimapr_learning_model_binding_preview_factory_create_from_model(WAIMAPR_ILearningModelBindingPreviewFactory *self, WAIMAPR_LearningModelPreview* model, WAIMAPR_LearningModelBindingPreview** out);
 
-/* activate Windows.AI.MachineLearning.Preview.LearningModelBindingPreview */
 HRESULT waimapr_learning_model_binding_preview_new(WAIMAPR_LearningModelBindingPreview **out);
 
-/* Windows.AI.MachineLearning.Preview.LearningModelBindingPreview */
-/* Windows.AI.MachineLearning.Preview.LearningModelBindingPreview.Bind(name) */
 HRESULT waimapr_learning_model_binding_preview_bind(WAIMAPR_LearningModelBindingPreview *self, cwinrt_hstring name, IInspectable* value);
 
-/* Windows.AI.MachineLearning.Preview.LearningModelBindingPreview.Bind(name, metadata) */
 HRESULT waimapr_learning_model_binding_preview_bind_str_p_p(WAIMAPR_LearningModelBindingPreview *self, cwinrt_hstring name, IInspectable* value, WFOCO_IPropertySet* metadata);
 
-/* Windows.AI.MachineLearning.Preview.LearningModelBindingPreview.Clear() */
 HRESULT waimapr_learning_model_binding_preview_clear(WAIMAPR_LearningModelBindingPreview *self);
 
-/* Windows.AI.MachineLearning.Preview.LearningModelBindingPreview.Lookup(key) */
 HRESULT waimapr_learning_model_binding_preview_lookup(WAIMAPR_LearningModelBindingPreview *self, cwinrt_hstring key, IInspectable** out);
 
-/* Windows.AI.MachineLearning.Preview.LearningModelBindingPreview.get_Size() */
 HRESULT waimapr_learning_model_binding_preview_get__size(WAIMAPR_LearningModelBindingPreview *self, uint32_t *value);
 
-/* Windows.AI.MachineLearning.Preview.LearningModelBindingPreview.HasKey(key) */
 HRESULT waimapr_learning_model_binding_preview_has_key(WAIMAPR_LearningModelBindingPreview *self, cwinrt_hstring key, BOOL *out);
 
-/* Windows.AI.MachineLearning.Preview.LearningModelBindingPreview.Split(first, second) */
 HRESULT waimapr_learning_model_binding_preview_split(WAIMAPR_LearningModelBindingPreview *self, WFOCO_IMapView_HSTRING_Object* first, WFOCO_IMapView_HSTRING_Object* second);
 
-/* Windows.AI.MachineLearning.Preview.LearningModelBindingPreview.First() */
 HRESULT waimapr_learning_model_binding_preview_first(WAIMAPR_LearningModelBindingPreview *self, WFOCO_IIterator_WFOCO_IKeyValuePair_HSTRING_Object** out);
 
-/* Windows.AI.MachineLearning.Preview.ILearningModelDescriptionPreview */
-/* Windows.AI.MachineLearning.Preview.ILearningModelEvaluationResultPreview */
-/* Windows.AI.MachineLearning.Preview.ILearningModelPreview */
-/* Windows.AI.MachineLearning.Preview.IMapVariableDescriptorPreview */
-/* Windows.AI.MachineLearning.Preview.ISequenceVariableDescriptorPreview */
-/* Windows.AI.MachineLearning.Preview.ITensorVariableDescriptorPreview */
-/* Windows.AI.MachineLearning.Preview.IInferencingOptionsPreview */
-/* Windows.AI.MachineLearning.Preview.IImageVariableDescriptorPreview */
-/* Windows.AI.MachineLearning.Preview.ILearningModelBindingPreview */
-/* Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview */
 #endif /* CWINRT_WINDOWS_AI_MACHINELEARNING_PREVIEW_H */

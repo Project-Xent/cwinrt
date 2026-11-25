@@ -6,14 +6,11 @@
 /* Class static params vs iface method params (iface includes *self). */
 bool cwinrt_params_match_iface_static(char const *class_params, char const *iface_params);
 
-/* Match a class instance wrapper's params against an interface method's params,
-   skipping the leading `*self` on both sides. Distinguishes overloads. */
 bool cwinrt_params_match_instance(char const *class_params, char const *iface_params);
 
 /* Split param list at top-level commas; writes arg names into out (comma-separated). */
 int  cwinrt_params_to_call_args(char const *params_c, char *out, size_t outsz);
 
-/* True if signature has an instance pointer parameter. */
 bool cwinrt_params_has_self(char const *params_c);
 
 /* IClassShort + I*Statics* / I*Factory* / I*Static* naming convention. */

@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
@@ -26,7 +25,6 @@ typedef struct WS_IStorageItem WS_IStorageItem;
 typedef struct WSY_User WSY_User;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSEDA_IUserDataProtectionManagerStatics WSEDA_IUserDataProtectionManagerStatics;
 typedef struct WSEDA_UserDataAvailabilityStateChangedEventArgs WSEDA_UserDataAvailabilityStateChangedEventArgs;
 typedef struct WSEDA_UserDataBufferUnprotectResult WSEDA_UserDataBufferUnprotectResult;
@@ -37,7 +35,6 @@ typedef struct WSEDA_IUserDataBufferUnprotectResult WSEDA_IUserDataBufferUnprote
 typedef struct WSEDA_IUserDataProtectionManager WSEDA_IUserDataProtectionManager;
 typedef struct WSEDA_IUserDataStorageItemProtectionInfo WSEDA_IUserDataStorageItemProtectionInfo;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
@@ -101,7 +98,6 @@ typedef enum WSEDA_UserDataStorageItemProtectionStatus {
 } WSEDA_UserDataStorageItemProtectionStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -126,72 +122,43 @@ static const IID CWINRT_IID_WSEDA_IUserDataProtectionManager CWINRT_MAYBE_UNUSED
 static const IID CWINRT_IID_WSEDA_IUserDataStorageItemProtectionInfo CWINRT_MAYBE_UNUSED = { 0x5B6680F6, 0xE87F, 0x40A1, { 0xB1, 0x9D, 0xA6, 0x18, 0x7A, 0x0C, 0x66, 0x2F } };
 #endif
 
-/* Methods */
-
-/* Windows.Security.DataProtection.IUserDataProtectionManagerStatics */
-/* Windows.Security.DataProtection.IUserDataProtectionManagerStatics.TryGetDefault() */
 HRESULT wseda_user_data_protection_manager_statics_try_get_default(WSEDA_IUserDataProtectionManagerStatics *self, WSEDA_UserDataProtectionManager** out);
 
-/* Windows.Security.DataProtection.IUserDataProtectionManagerStatics.TryGetForUser(user) */
 HRESULT wseda_user_data_protection_manager_statics_try_get_for_user(WSEDA_IUserDataProtectionManagerStatics *self, WSY_User* user, WSEDA_UserDataProtectionManager** out);
 
-/* activate Windows.Security.DataProtection.UserDataAvailabilityStateChangedEventArgs */
 HRESULT wseda_user_data_availability_state_changed_event_args_new(WSEDA_UserDataAvailabilityStateChangedEventArgs **out);
 
-/* Windows.Security.DataProtection.UserDataAvailabilityStateChangedEventArgs */
-/* Windows.Security.DataProtection.UserDataAvailabilityStateChangedEventArgs.GetDeferral() */
 HRESULT wseda_user_data_availability_state_changed_event_args_get_deferral(WSEDA_UserDataAvailabilityStateChangedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Security.DataProtection.UserDataBufferUnprotectResult */
 HRESULT wseda_user_data_buffer_unprotect_result_new(WSEDA_UserDataBufferUnprotectResult **out);
 
-/* Windows.Security.DataProtection.UserDataBufferUnprotectResult */
-/* Windows.Security.DataProtection.UserDataBufferUnprotectResult.get_Status() */
 HRESULT wseda_user_data_buffer_unprotect_result_get__status(WSEDA_UserDataBufferUnprotectResult *self, WSEDA_UserDataBufferUnprotectStatus *value);
 
-/* Windows.Security.DataProtection.UserDataBufferUnprotectResult.get_UnprotectedBuffer() */
 HRESULT wseda_user_data_buffer_unprotect_result_get__unprotected_buffer(WSEDA_UserDataBufferUnprotectResult *self, WSTST_IBuffer** value);
 
-/* activate Windows.Security.DataProtection.UserDataProtectionManager */
 HRESULT wseda_user_data_protection_manager_new(WSEDA_UserDataProtectionManager **out);
 
-/* Windows.Security.DataProtection.UserDataProtectionManager */
-/* Windows.Security.DataProtection.UserDataProtectionManager.ProtectStorageItemAsync(storageItem, availability) */
 HRESULT wseda_user_data_protection_manager_protect_storage_item_async(WSEDA_UserDataProtectionManager *self, WS_IStorageItem* storageItem, WSEDA_UserDataAvailability availability, WF_IAsyncOperation_WSEDA_UserDataStorageItemProtectionStatus** out);
 
-/* Windows.Security.DataProtection.UserDataProtectionManager.GetStorageItemProtectionInfoAsync(storageItem) */
 HRESULT wseda_user_data_protection_manager_get_storage_item_protection_info_async(WSEDA_UserDataProtectionManager *self, WS_IStorageItem* storageItem, WF_IAsyncOperation_WSEDA_UserDataStorageItemProtectionInfo** out);
 
-/* Windows.Security.DataProtection.UserDataProtectionManager.ProtectBufferAsync(unprotectedBuffer, availability) */
 HRESULT wseda_user_data_protection_manager_protect_buffer_async(WSEDA_UserDataProtectionManager *self, WSTST_IBuffer* unprotectedBuffer, WSEDA_UserDataAvailability availability, WF_IAsyncOperation_WSTST_IBuffer** out);
 
-/* Windows.Security.DataProtection.UserDataProtectionManager.UnprotectBufferAsync(protectedBuffer) */
 HRESULT wseda_user_data_protection_manager_unprotect_buffer_async(WSEDA_UserDataProtectionManager *self, WSTST_IBuffer* protectedBuffer, WF_IAsyncOperation_WSEDA_UserDataBufferUnprotectResult** out);
 
-/* Windows.Security.DataProtection.UserDataProtectionManager.IsContinuedDataAvailabilityExpected(availability) */
 HRESULT wseda_user_data_protection_manager_is_continued_data_availability_expected(WSEDA_UserDataProtectionManager *self, WSEDA_UserDataAvailability availability, BOOL *out);
 
-/* Windows.Security.DataProtection.UserDataProtectionManager.TryGetDefault() */
 HRESULT wseda_user_data_protection_manager_try_get_default(WSEDA_UserDataProtectionManager** out);
 
-/* Windows.Security.DataProtection.UserDataProtectionManager.TryGetForUser(user) */
 HRESULT wseda_user_data_protection_manager_try_get_for_user(WSY_User* user, WSEDA_UserDataProtectionManager** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wseda_user_data_protection_manager_on_data_availability_state_changed(WSEDA_UserDataProtectionManager *self, cwinrt_event_fn fn, void *ctx);
 void wseda_user_data_protection_manager_off_data_availability_state_changed(WSEDA_UserDataProtectionManager *self, cwinrt_token token);
 
-/* activate Windows.Security.DataProtection.UserDataStorageItemProtectionInfo */
 HRESULT wseda_user_data_storage_item_protection_info_new(WSEDA_UserDataStorageItemProtectionInfo **out);
 
-/* Windows.Security.DataProtection.UserDataStorageItemProtectionInfo */
-/* Windows.Security.DataProtection.UserDataStorageItemProtectionInfo.get_Availability() */
 HRESULT wseda_user_data_storage_item_protection_info_get__availability(WSEDA_UserDataStorageItemProtectionInfo *self, WSEDA_UserDataAvailability *value);
 
-/* Windows.Security.DataProtection.IUserDataAvailabilityStateChangedEventArgs */
-/* Windows.Security.DataProtection.IUserDataBufferUnprotectResult */
-/* Windows.Security.DataProtection.IUserDataProtectionManager */
-/* Windows.Security.DataProtection.IUserDataStorageItemProtectionInfo */
 #endif /* CWINRT_WINDOWS_SECURITY_DATAPROTECTION_H */

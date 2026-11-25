@@ -252,7 +252,6 @@ static void safe_to_typedef_part(char const *safe, char *dst, size_t cap) {
 	dst [di] = '\0';
 }
 
-/* True if `safe` has an explicit abbreviation entry for namespace `winrt_ns`. */
 static bool type_has_abbrev(char const *winrt_ns, char const *safe) {
 	int i;
 	for (i = 0; g_type_abbrevs [i].short_name; i++) {

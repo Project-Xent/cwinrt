@@ -14,7 +14,6 @@
 #include <cwinrt/Windows.Media.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WMEFA_FaceDetector WMEFA_FaceDetector;
 typedef struct WMEFA_FaceTracker WMEFA_FaceTracker;
 typedef struct WMEFA_IFaceDetectorStatics WMEFA_IFaceDetectorStatics;
@@ -24,7 +23,6 @@ typedef struct WMEFA_IFaceDetector WMEFA_IFaceDetector;
 typedef struct WMEFA_IFaceTracker WMEFA_IFaceTracker;
 typedef struct WMEFA_IDetectedFace WMEFA_IDetectedFace;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WGRIM_SoftwareBitmap
 #define CWINRT_FWD_WGRIM_SoftwareBitmap
 typedef struct WGRIM_SoftwareBitmap WGRIM_SoftwareBitmap;
@@ -73,7 +71,6 @@ typedef struct WME_VideoFrame WME_VideoFrame;
 typedef struct WF_IAsyncOperation_WMEFA_FaceTracker WF_IAsyncOperation_WMEFA_FaceTracker;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -98,107 +95,66 @@ static const IID CWINRT_IID_WMEFA_IFaceTracker CWINRT_MAYBE_UNUSED = { 0x6BA67D8
 static const IID CWINRT_IID_WMEFA_IDetectedFace CWINRT_MAYBE_UNUSED = { 0x8200D454, 0x66BC, 0x34DF, { 0x94, 0x10, 0xE8, 0x94, 0x00, 0x19, 0x54, 0x14 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Media.FaceAnalysis.FaceDetector */
 HRESULT wmefa_face_detector_new(WMEFA_FaceDetector **out);
 
-/* Windows.Media.FaceAnalysis.FaceDetector */
-/* Windows.Media.FaceAnalysis.FaceDetector.DetectFacesAsync(image) */
 HRESULT wmefa_face_detector_detect_faces_async(WMEFA_FaceDetector *self, WGRIM_SoftwareBitmap* image, WF_IAsyncOperation_WFOCO_IVector_WMEFA_DetectedFace** out);
 
-/* Windows.Media.FaceAnalysis.FaceDetector.DetectFacesAsync(image, searchArea) */
 HRESULT wmefa_face_detector_detect_faces_async_p_bitmap_bounds_p(WMEFA_FaceDetector *self, WGRIM_SoftwareBitmap* image, WGRIM_BitmapBounds searchArea, WF_IAsyncOperation_WFOCO_IVector_WMEFA_DetectedFace** out);
 
-/* Windows.Media.FaceAnalysis.FaceDetector.get_MinDetectableFaceSize() */
 HRESULT wmefa_face_detector_get__min_detectable_face_size(WMEFA_FaceDetector *self, WGRIM_BitmapSize *value);
 
-/* Windows.Media.FaceAnalysis.FaceDetector.put_MinDetectableFaceSize() */
 HRESULT wmefa_face_detector_put__min_detectable_face_size(WMEFA_FaceDetector *self, WGRIM_BitmapSize value);
 
-/* Windows.Media.FaceAnalysis.FaceDetector.get_MaxDetectableFaceSize() */
 HRESULT wmefa_face_detector_get__max_detectable_face_size(WMEFA_FaceDetector *self, WGRIM_BitmapSize *value);
 
-/* Windows.Media.FaceAnalysis.FaceDetector.put_MaxDetectableFaceSize() */
 HRESULT wmefa_face_detector_put__max_detectable_face_size(WMEFA_FaceDetector *self, WGRIM_BitmapSize value);
 
-/* Windows.Media.FaceAnalysis.FaceDetector.CreateAsync() */
 HRESULT wmefa_face_detector_create_async(WF_IAsyncOperation_WMEFA_FaceDetector** out);
 
-/* Windows.Media.FaceAnalysis.FaceDetector.GetSupportedBitmapPixelFormats() */
 HRESULT wmefa_face_detector_get_supported_bitmap_pixel_formats(WFOCO_IVectorView_WGRIM_BitmapPixelFormat** out);
 
-/* Windows.Media.FaceAnalysis.FaceDetector.IsBitmapPixelFormatSupported(bitmapPixelFormat) */
 HRESULT wmefa_face_detector_is_bitmap_pixel_format_supported(WGRIM_BitmapPixelFormat bitmapPixelFormat, BOOL *out);
 
-/* Windows.Media.FaceAnalysis.FaceDetector.get_IsSupported() */
 HRESULT wmefa_face_detector_get__is_supported(BOOL *value);
 
-/* activate Windows.Media.FaceAnalysis.FaceTracker */
 HRESULT wmefa_face_tracker_new(WMEFA_FaceTracker **out);
 
-/* Windows.Media.FaceAnalysis.FaceTracker */
-/* Windows.Media.FaceAnalysis.FaceTracker.ProcessNextFrameAsync(videoFrame) */
 HRESULT wmefa_face_tracker_process_next_frame_async(WMEFA_FaceTracker *self, WME_VideoFrame* videoFrame, WF_IAsyncOperation_WFOCO_IVector_WMEFA_DetectedFace** out);
 
-/* Windows.Media.FaceAnalysis.FaceTracker.get_MinDetectableFaceSize() */
 HRESULT wmefa_face_tracker_get__min_detectable_face_size(WMEFA_FaceTracker *self, WGRIM_BitmapSize *value);
 
-/* Windows.Media.FaceAnalysis.FaceTracker.put_MinDetectableFaceSize() */
 HRESULT wmefa_face_tracker_put__min_detectable_face_size(WMEFA_FaceTracker *self, WGRIM_BitmapSize value);
 
-/* Windows.Media.FaceAnalysis.FaceTracker.get_MaxDetectableFaceSize() */
 HRESULT wmefa_face_tracker_get__max_detectable_face_size(WMEFA_FaceTracker *self, WGRIM_BitmapSize *value);
 
-/* Windows.Media.FaceAnalysis.FaceTracker.put_MaxDetectableFaceSize() */
 HRESULT wmefa_face_tracker_put__max_detectable_face_size(WMEFA_FaceTracker *self, WGRIM_BitmapSize value);
 
-/* Windows.Media.FaceAnalysis.FaceTracker.CreateAsync() */
 HRESULT wmefa_face_tracker_create_async(WF_IAsyncOperation_WMEFA_FaceTracker** out);
 
-/* Windows.Media.FaceAnalysis.FaceTracker.GetSupportedBitmapPixelFormats() */
 HRESULT wmefa_face_tracker_get_supported_bitmap_pixel_formats(WFOCO_IVectorView_WGRIM_BitmapPixelFormat** out);
 
-/* Windows.Media.FaceAnalysis.FaceTracker.IsBitmapPixelFormatSupported(bitmapPixelFormat) */
 HRESULT wmefa_face_tracker_is_bitmap_pixel_format_supported(WGRIM_BitmapPixelFormat bitmapPixelFormat, BOOL *out);
 
-/* Windows.Media.FaceAnalysis.FaceTracker.get_IsSupported() */
 HRESULT wmefa_face_tracker_get__is_supported(BOOL *value);
 
-/* Windows.Media.FaceAnalysis.IFaceDetectorStatics */
-/* Windows.Media.FaceAnalysis.IFaceDetectorStatics.CreateAsync() */
 HRESULT wmefa_face_detector_statics_create_async(WMEFA_IFaceDetectorStatics *self, WF_IAsyncOperation_WMEFA_FaceDetector** out);
 
-/* Windows.Media.FaceAnalysis.IFaceDetectorStatics.GetSupportedBitmapPixelFormats() */
 HRESULT wmefa_face_detector_statics_get_supported_bitmap_pixel_formats(WMEFA_IFaceDetectorStatics *self, WFOCO_IVectorView_WGRIM_BitmapPixelFormat** out);
 
-/* Windows.Media.FaceAnalysis.IFaceDetectorStatics.IsBitmapPixelFormatSupported(bitmapPixelFormat) */
 HRESULT wmefa_face_detector_statics_is_bitmap_pixel_format_supported(WMEFA_IFaceDetectorStatics *self, WGRIM_BitmapPixelFormat bitmapPixelFormat, BOOL *out);
 
-/* Windows.Media.FaceAnalysis.IFaceDetectorStatics.get_IsSupported() */
 HRESULT wmefa_face_detector_statics_get__is_supported(WMEFA_IFaceDetectorStatics *self, BOOL *value);
 
-/* Windows.Media.FaceAnalysis.IFaceTrackerStatics */
-/* Windows.Media.FaceAnalysis.IFaceTrackerStatics.CreateAsync() */
 HRESULT wmefa_face_tracker_statics_create_async(WMEFA_IFaceTrackerStatics *self, WF_IAsyncOperation_WMEFA_FaceTracker** out);
 
-/* Windows.Media.FaceAnalysis.IFaceTrackerStatics.GetSupportedBitmapPixelFormats() */
 HRESULT wmefa_face_tracker_statics_get_supported_bitmap_pixel_formats(WMEFA_IFaceTrackerStatics *self, WFOCO_IVectorView_WGRIM_BitmapPixelFormat** out);
 
-/* Windows.Media.FaceAnalysis.IFaceTrackerStatics.IsBitmapPixelFormatSupported(bitmapPixelFormat) */
 HRESULT wmefa_face_tracker_statics_is_bitmap_pixel_format_supported(WMEFA_IFaceTrackerStatics *self, WGRIM_BitmapPixelFormat bitmapPixelFormat, BOOL *out);
 
-/* Windows.Media.FaceAnalysis.IFaceTrackerStatics.get_IsSupported() */
 HRESULT wmefa_face_tracker_statics_get__is_supported(WMEFA_IFaceTrackerStatics *self, BOOL *value);
 
-/* activate Windows.Media.FaceAnalysis.DetectedFace */
 HRESULT wmefa_detected_face_new(WMEFA_DetectedFace **out);
 
-/* Windows.Media.FaceAnalysis.DetectedFace */
-/* Windows.Media.FaceAnalysis.DetectedFace.get_FaceBox() */
 HRESULT wmefa_detected_face_get__face_box(WMEFA_DetectedFace *self, WGRIM_BitmapBounds *value);
 
-/* Windows.Media.FaceAnalysis.IFaceDetector */
-/* Windows.Media.FaceAnalysis.IFaceTracker */
-/* Windows.Media.FaceAnalysis.IDetectedFace */
 #endif /* CWINRT_WINDOWS_MEDIA_FACEANALYSIS_H */

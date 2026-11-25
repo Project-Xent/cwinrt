@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Graphics.Imaging.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
@@ -27,7 +26,6 @@ typedef struct WSTST_IRandomAccessStreamWithContentType WSTST_IRandomAccessStrea
 typedef struct WS_StorageFile WS_StorageFile;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDEPO_BarcodeScanner WDEPO_BarcodeScanner;
 typedef struct WDEPO_BarcodeScannerCapabilities WDEPO_BarcodeScannerCapabilities;
 typedef struct WDEPO_BarcodeScannerDataReceivedEventArgs WDEPO_BarcodeScannerDataReceivedEventArgs;
@@ -200,7 +198,6 @@ typedef struct WDEPO_IReceiptOrSlipJob WDEPO_IReceiptOrSlipJob;
 typedef struct WDEPO_ICommonPosPrintStationCapabilities WDEPO_ICommonPosPrintStationCapabilities;
 typedef struct WDEPO_IPosPrinterJob WDEPO_IPosPrinterJob;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WDEPO_ClaimedBarcodeScanner
 #define CWINRT_FWD_WF_IAsyncOperation_WDEPO_ClaimedBarcodeScanner
 typedef struct WF_IAsyncOperation_WDEPO_ClaimedBarcodeScanner WF_IAsyncOperation_WDEPO_ClaimedBarcodeScanner;
@@ -840,7 +837,6 @@ struct WDEPO_SizeUInt_32 {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -1261,587 +1257,385 @@ static const IID CWINRT_IID_WDEPO_ICommonPosPrintStationCapabilities CWINRT_MAYB
 static const IID CWINRT_IID_WDEPO_IPosPrinterJob CWINRT_MAYBE_UNUSED = { 0x9A94005C, 0x0615, 0x4591, { 0xA5, 0x8F, 0x30, 0xF8, 0x7E, 0xDF, 0xE2, 0xE4 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Devices.PointOfService.BarcodeScanner */
 HRESULT wdepo_barcode_scanner_new(WDEPO_BarcodeScanner **out);
 
-/* Windows.Devices.PointOfService.BarcodeScanner */
-/* Windows.Devices.PointOfService.BarcodeScanner.get_DeviceId() */
 HRESULT wdepo_barcode_scanner_get__device_id(WDEPO_BarcodeScanner *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.BarcodeScanner.get_Capabilities() */
 HRESULT wdepo_barcode_scanner_get__capabilities(WDEPO_BarcodeScanner *self, WDEPO_BarcodeScannerCapabilities** value);
 
-/* Windows.Devices.PointOfService.BarcodeScanner.ClaimScannerAsync() */
 HRESULT wdepo_barcode_scanner_claim_scanner_async(WDEPO_BarcodeScanner *self, WF_IAsyncOperation_WDEPO_ClaimedBarcodeScanner** out);
 
-/* Windows.Devices.PointOfService.BarcodeScanner.CheckHealthAsync(level) */
 HRESULT wdepo_barcode_scanner_check_health_async(WDEPO_BarcodeScanner *self, WDEPO_UnifiedPosHealthCheckLevel level, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Devices.PointOfService.BarcodeScanner.GetSupportedSymbologiesAsync() */
 HRESULT wdepo_barcode_scanner_get_supported_symbologies_async(WDEPO_BarcodeScanner *self, WF_IAsyncOperation_WFOCO_IVectorView_uint32_t** out);
 
-/* Windows.Devices.PointOfService.BarcodeScanner.IsSymbologySupportedAsync(barcodeSymbology) */
 HRESULT wdepo_barcode_scanner_is_symbology_supported_async(WDEPO_BarcodeScanner *self, uint32_t barcodeSymbology, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.BarcodeScanner.RetrieveStatisticsAsync(statisticsCategories) */
 HRESULT wdepo_barcode_scanner_retrieve_statistics_async(WDEPO_BarcodeScanner *self, WFOCO_IIterable_HSTRING* statisticsCategories, WF_IAsyncOperation_WSTST_IBuffer** out);
 
-/* Windows.Devices.PointOfService.BarcodeScanner.GetSupportedProfiles() */
 HRESULT wdepo_barcode_scanner_get_supported_profiles(WDEPO_BarcodeScanner *self, WFOCO_IVectorView_HSTRING** out);
 
-/* Windows.Devices.PointOfService.BarcodeScanner.IsProfileSupported(profile) */
 HRESULT wdepo_barcode_scanner_is_profile_supported(WDEPO_BarcodeScanner *self, cwinrt_hstring profile, BOOL *out);
 
-/* Windows.Devices.PointOfService.BarcodeScanner.get_VideoDeviceId() */
 HRESULT wdepo_barcode_scanner_get__video_device_id(WDEPO_BarcodeScanner *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.BarcodeScanner.Close() */
 HRESULT wdepo_barcode_scanner_close(WDEPO_BarcodeScanner *self);
 
-/* Windows.Devices.PointOfService.BarcodeScanner.GetDeviceSelector(connectionTypes) */
 HRESULT wdepo_barcode_scanner_get_device_selector_pos_connection_types_str(WDEPO_PosConnectionTypes connectionTypes, cwinrt_hstring *out);
 
-/* Windows.Devices.PointOfService.BarcodeScanner.GetDefaultAsync() */
 HRESULT wdepo_barcode_scanner_get_default_async(WF_IAsyncOperation_WDEPO_BarcodeScanner** out);
 
-/* Windows.Devices.PointOfService.BarcodeScanner.FromIdAsync(deviceId) */
 HRESULT wdepo_barcode_scanner_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDEPO_BarcodeScanner** out);
 
-/* Windows.Devices.PointOfService.BarcodeScanner.GetDeviceSelector() */
 HRESULT wdepo_barcode_scanner_get_device_selector(cwinrt_hstring *out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdepo_barcode_scanner_on_status_updated(WDEPO_BarcodeScanner *self, cwinrt_event_fn fn, void *ctx);
 void wdepo_barcode_scanner_off_status_updated(WDEPO_BarcodeScanner *self, cwinrt_token token);
 
-/* activate Windows.Devices.PointOfService.BarcodeScannerCapabilities */
 HRESULT wdepo_barcode_scanner_capabilities_new(WDEPO_BarcodeScannerCapabilities **out);
 
-/* Windows.Devices.PointOfService.BarcodeScannerCapabilities */
-/* Windows.Devices.PointOfService.BarcodeScannerCapabilities.get_PowerReportingType() */
 HRESULT wdepo_barcode_scanner_capabilities_get__power_reporting_type(WDEPO_BarcodeScannerCapabilities *self, WDEPO_UnifiedPosPowerReportingType *value);
 
-/* Windows.Devices.PointOfService.BarcodeScannerCapabilities.get_IsStatisticsReportingSupported() */
 HRESULT wdepo_barcode_scanner_capabilities_get__is_statistics_reporting_supported(WDEPO_BarcodeScannerCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.BarcodeScannerCapabilities.get_IsStatisticsUpdatingSupported() */
 HRESULT wdepo_barcode_scanner_capabilities_get__is_statistics_updating_supported(WDEPO_BarcodeScannerCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.BarcodeScannerCapabilities.get_IsImagePreviewSupported() */
 HRESULT wdepo_barcode_scanner_capabilities_get__is_image_preview_supported(WDEPO_BarcodeScannerCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.BarcodeScannerCapabilities.get_IsSoftwareTriggerSupported() */
 HRESULT wdepo_barcode_scanner_capabilities_get__is_software_trigger_supported(WDEPO_BarcodeScannerCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.BarcodeScannerCapabilities.get_IsVideoPreviewSupported() */
 HRESULT wdepo_barcode_scanner_capabilities_get__is_video_preview_supported(WDEPO_BarcodeScannerCapabilities *self, BOOL *value);
 
-/* activate Windows.Devices.PointOfService.BarcodeScannerDataReceivedEventArgs */
 HRESULT wdepo_barcode_scanner_data_received_event_args_new(WDEPO_BarcodeScannerDataReceivedEventArgs **out);
 
-/* Windows.Devices.PointOfService.BarcodeScannerDataReceivedEventArgs */
-/* Windows.Devices.PointOfService.BarcodeScannerDataReceivedEventArgs.get_Report() */
 HRESULT wdepo_barcode_scanner_data_received_event_args_get__report(WDEPO_BarcodeScannerDataReceivedEventArgs *self, WDEPO_BarcodeScannerReport** value);
 
-/* activate Windows.Devices.PointOfService.BarcodeScannerErrorOccurredEventArgs */
 HRESULT wdepo_barcode_scanner_error_occurred_event_args_new(WDEPO_BarcodeScannerErrorOccurredEventArgs **out);
 
-/* Windows.Devices.PointOfService.BarcodeScannerErrorOccurredEventArgs */
-/* Windows.Devices.PointOfService.BarcodeScannerErrorOccurredEventArgs.get_PartialInputData() */
 HRESULT wdepo_barcode_scanner_error_occurred_event_args_get__partial_input_data(WDEPO_BarcodeScannerErrorOccurredEventArgs *self, WDEPO_BarcodeScannerReport** value);
 
-/* Windows.Devices.PointOfService.BarcodeScannerErrorOccurredEventArgs.get_IsRetriable() */
 HRESULT wdepo_barcode_scanner_error_occurred_event_args_get__is_retriable(WDEPO_BarcodeScannerErrorOccurredEventArgs *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.BarcodeScannerErrorOccurredEventArgs.get_ErrorData() */
 HRESULT wdepo_barcode_scanner_error_occurred_event_args_get__error_data(WDEPO_BarcodeScannerErrorOccurredEventArgs *self, WDEPO_UnifiedPosErrorData** value);
 
-/* activate Windows.Devices.PointOfService.BarcodeScannerImagePreviewReceivedEventArgs */
 HRESULT wdepo_barcode_scanner_image_preview_received_event_args_new(WDEPO_BarcodeScannerImagePreviewReceivedEventArgs **out);
 
-/* Windows.Devices.PointOfService.BarcodeScannerImagePreviewReceivedEventArgs */
-/* Windows.Devices.PointOfService.BarcodeScannerImagePreviewReceivedEventArgs.get_Preview() */
 HRESULT wdepo_barcode_scanner_image_preview_received_event_args_get__preview(WDEPO_BarcodeScannerImagePreviewReceivedEventArgs *self, WSTST_IRandomAccessStreamWithContentType** value);
 
-/* activate Windows.Devices.PointOfService.BarcodeScannerReport */
 HRESULT wdepo_barcode_scanner_report_new(WDEPO_BarcodeScannerReport **out);
 
-/* Windows.Devices.PointOfService.BarcodeScannerReport */
-/* Windows.Devices.PointOfService.BarcodeScannerReport.get_ScanDataType() */
 HRESULT wdepo_barcode_scanner_report_get__scan_data_type(WDEPO_BarcodeScannerReport *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeScannerReport.get_ScanData() */
 HRESULT wdepo_barcode_scanner_report_get__scan_data(WDEPO_BarcodeScannerReport *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.PointOfService.BarcodeScannerReport.get_ScanDataLabel() */
 HRESULT wdepo_barcode_scanner_report_get__scan_data_label(WDEPO_BarcodeScannerReport *self, WSTST_IBuffer** value);
 
-/* activate Windows.Devices.PointOfService.BarcodeScannerStatusUpdatedEventArgs */
 HRESULT wdepo_barcode_scanner_status_updated_event_args_new(WDEPO_BarcodeScannerStatusUpdatedEventArgs **out);
 
-/* Windows.Devices.PointOfService.BarcodeScannerStatusUpdatedEventArgs */
-/* Windows.Devices.PointOfService.BarcodeScannerStatusUpdatedEventArgs.get_Status() */
 HRESULT wdepo_barcode_scanner_status_updated_event_args_get__status(WDEPO_BarcodeScannerStatusUpdatedEventArgs *self, WDEPO_BarcodeScannerStatus *value);
 
-/* Windows.Devices.PointOfService.BarcodeScannerStatusUpdatedEventArgs.get_ExtendedStatus() */
 HRESULT wdepo_barcode_scanner_status_updated_event_args_get__extended_status(WDEPO_BarcodeScannerStatusUpdatedEventArgs *self, uint32_t *value);
 
-/* activate Windows.Devices.PointOfService.BarcodeSymbologies */
 HRESULT wdepo_barcode_symbologies_new(WDEPO_BarcodeSymbologies **out);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies */
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Gs1DWCode() */
 HRESULT wdepo_barcode_symbologies_get__gs1_d_w_code(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Unknown() */
 HRESULT wdepo_barcode_symbologies_get__unknown(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Ean8() */
 HRESULT wdepo_barcode_symbologies_get__ean8(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Ean8Add2() */
 HRESULT wdepo_barcode_symbologies_get__ean8_add2(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Ean8Add5() */
 HRESULT wdepo_barcode_symbologies_get__ean8_add5(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Eanv() */
 HRESULT wdepo_barcode_symbologies_get__eanv(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_EanvAdd2() */
 HRESULT wdepo_barcode_symbologies_get__eanv_add2(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_EanvAdd5() */
 HRESULT wdepo_barcode_symbologies_get__eanv_add5(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Ean13() */
 HRESULT wdepo_barcode_symbologies_get__ean13(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Ean13Add2() */
 HRESULT wdepo_barcode_symbologies_get__ean13_add2(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Ean13Add5() */
 HRESULT wdepo_barcode_symbologies_get__ean13_add5(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Isbn() */
 HRESULT wdepo_barcode_symbologies_get__isbn(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_IsbnAdd5() */
 HRESULT wdepo_barcode_symbologies_get__isbn_add5(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Ismn() */
 HRESULT wdepo_barcode_symbologies_get__ismn(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_IsmnAdd2() */
 HRESULT wdepo_barcode_symbologies_get__ismn_add2(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_IsmnAdd5() */
 HRESULT wdepo_barcode_symbologies_get__ismn_add5(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Issn() */
 HRESULT wdepo_barcode_symbologies_get__issn(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_IssnAdd2() */
 HRESULT wdepo_barcode_symbologies_get__issn_add2(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_IssnAdd5() */
 HRESULT wdepo_barcode_symbologies_get__issn_add5(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Ean99() */
 HRESULT wdepo_barcode_symbologies_get__ean99(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Ean99Add2() */
 HRESULT wdepo_barcode_symbologies_get__ean99_add2(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Ean99Add5() */
 HRESULT wdepo_barcode_symbologies_get__ean99_add5(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Upca() */
 HRESULT wdepo_barcode_symbologies_get__upca(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_UpcaAdd2() */
 HRESULT wdepo_barcode_symbologies_get__upca_add2(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_UpcaAdd5() */
 HRESULT wdepo_barcode_symbologies_get__upca_add5(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Upce() */
 HRESULT wdepo_barcode_symbologies_get__upce(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_UpceAdd2() */
 HRESULT wdepo_barcode_symbologies_get__upce_add2(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_UpceAdd5() */
 HRESULT wdepo_barcode_symbologies_get__upce_add5(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_UpcCoupon() */
 HRESULT wdepo_barcode_symbologies_get__upc_coupon(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_TfStd() */
 HRESULT wdepo_barcode_symbologies_get__tf_std(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_TfDis() */
 HRESULT wdepo_barcode_symbologies_get__tf_dis(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_TfInt() */
 HRESULT wdepo_barcode_symbologies_get__tf_int(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_TfInd() */
 HRESULT wdepo_barcode_symbologies_get__tf_ind(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_TfMat() */
 HRESULT wdepo_barcode_symbologies_get__tf_mat(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_TfIata() */
 HRESULT wdepo_barcode_symbologies_get__tf_iata(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Gs1DatabarType1() */
 HRESULT wdepo_barcode_symbologies_get__gs1_databar_type1(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Gs1DatabarType2() */
 HRESULT wdepo_barcode_symbologies_get__gs1_databar_type2(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Gs1DatabarType3() */
 HRESULT wdepo_barcode_symbologies_get__gs1_databar_type3(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Code39() */
 HRESULT wdepo_barcode_symbologies_get__code39(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Code39Ex() */
 HRESULT wdepo_barcode_symbologies_get__code39_ex(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Trioptic39() */
 HRESULT wdepo_barcode_symbologies_get__trioptic39(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Code32() */
 HRESULT wdepo_barcode_symbologies_get__code32(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Pzn() */
 HRESULT wdepo_barcode_symbologies_get__pzn(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Code93() */
 HRESULT wdepo_barcode_symbologies_get__code93(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Code93Ex() */
 HRESULT wdepo_barcode_symbologies_get__code93_ex(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Code128() */
 HRESULT wdepo_barcode_symbologies_get__code128(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Gs1128() */
 HRESULT wdepo_barcode_symbologies_get__gs1128(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Gs1128Coupon() */
 HRESULT wdepo_barcode_symbologies_get__gs1128_coupon(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_UccEan128() */
 HRESULT wdepo_barcode_symbologies_get__ucc_ean128(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Sisac() */
 HRESULT wdepo_barcode_symbologies_get__sisac(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Isbt() */
 HRESULT wdepo_barcode_symbologies_get__isbt(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Codabar() */
 HRESULT wdepo_barcode_symbologies_get__codabar(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Code11() */
 HRESULT wdepo_barcode_symbologies_get__code11(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Msi() */
 HRESULT wdepo_barcode_symbologies_get__msi(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Plessey() */
 HRESULT wdepo_barcode_symbologies_get__plessey(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Telepen() */
 HRESULT wdepo_barcode_symbologies_get__telepen(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Code16k() */
 HRESULT wdepo_barcode_symbologies_get__code16k(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_CodablockA() */
 HRESULT wdepo_barcode_symbologies_get__codablock_a(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_CodablockF() */
 HRESULT wdepo_barcode_symbologies_get__codablock_f(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Codablock128() */
 HRESULT wdepo_barcode_symbologies_get__codablock128(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Code49() */
 HRESULT wdepo_barcode_symbologies_get__code49(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Aztec() */
 HRESULT wdepo_barcode_symbologies_get__aztec(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_DataCode() */
 HRESULT wdepo_barcode_symbologies_get__data_code(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_DataMatrix() */
 HRESULT wdepo_barcode_symbologies_get__data_matrix(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_HanXin() */
 HRESULT wdepo_barcode_symbologies_get__han_xin(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Maxicode() */
 HRESULT wdepo_barcode_symbologies_get__maxicode(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_MicroPdf417() */
 HRESULT wdepo_barcode_symbologies_get__micro_pdf417(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_MicroQr() */
 HRESULT wdepo_barcode_symbologies_get__micro_qr(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Pdf417() */
 HRESULT wdepo_barcode_symbologies_get__pdf417(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Qr() */
 HRESULT wdepo_barcode_symbologies_get__qr(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_MsTag() */
 HRESULT wdepo_barcode_symbologies_get__ms_tag(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Ccab() */
 HRESULT wdepo_barcode_symbologies_get__ccab(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Ccc() */
 HRESULT wdepo_barcode_symbologies_get__ccc(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Tlc39() */
 HRESULT wdepo_barcode_symbologies_get__tlc39(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_AusPost() */
 HRESULT wdepo_barcode_symbologies_get__aus_post(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_CanPost() */
 HRESULT wdepo_barcode_symbologies_get__can_post(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_ChinaPost() */
 HRESULT wdepo_barcode_symbologies_get__china_post(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_DutchKix() */
 HRESULT wdepo_barcode_symbologies_get__dutch_kix(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_InfoMail() */
 HRESULT wdepo_barcode_symbologies_get__info_mail(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_ItalianPost25() */
 HRESULT wdepo_barcode_symbologies_get__italian_post25(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_ItalianPost39() */
 HRESULT wdepo_barcode_symbologies_get__italian_post39(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_JapanPost() */
 HRESULT wdepo_barcode_symbologies_get__japan_post(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_KoreanPost() */
 HRESULT wdepo_barcode_symbologies_get__korean_post(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_SwedenPost() */
 HRESULT wdepo_barcode_symbologies_get__sweden_post(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_UkPost() */
 HRESULT wdepo_barcode_symbologies_get__uk_post(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_UsIntelligent() */
 HRESULT wdepo_barcode_symbologies_get__us_intelligent(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_UsIntelligentPkg() */
 HRESULT wdepo_barcode_symbologies_get__us_intelligent_pkg(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_UsPlanet() */
 HRESULT wdepo_barcode_symbologies_get__us_planet(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_UsPostNet() */
 HRESULT wdepo_barcode_symbologies_get__us_post_net(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Us4StateFics() */
 HRESULT wdepo_barcode_symbologies_get__us4_state_fics(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_OcrA() */
 HRESULT wdepo_barcode_symbologies_get__ocr_a(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_OcrB() */
 HRESULT wdepo_barcode_symbologies_get__ocr_b(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_Micr() */
 HRESULT wdepo_barcode_symbologies_get__micr(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.get_ExtendedBase() */
 HRESULT wdepo_barcode_symbologies_get__extended_base(uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologies.GetName(scanDataType) */
 HRESULT wdepo_barcode_symbologies_get_name(uint32_t scanDataType, cwinrt_hstring *out);
 
-/* activate Windows.Devices.PointOfService.BarcodeSymbologyAttributes */
 HRESULT wdepo_barcode_symbology_attributes_new(WDEPO_BarcodeSymbologyAttributes **out);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologyAttributes */
-/* Windows.Devices.PointOfService.BarcodeSymbologyAttributes.get_IsCheckDigitValidationEnabled() */
 HRESULT wdepo_barcode_symbology_attributes_get__is_check_digit_validation_enabled(WDEPO_BarcodeSymbologyAttributes *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologyAttributes.put_IsCheckDigitValidationEnabled() */
 HRESULT wdepo_barcode_symbology_attributes_put__is_check_digit_validation_enabled(WDEPO_BarcodeSymbologyAttributes *self, BOOL value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologyAttributes.get_IsCheckDigitValidationSupported() */
 HRESULT wdepo_barcode_symbology_attributes_get__is_check_digit_validation_supported(WDEPO_BarcodeSymbologyAttributes *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologyAttributes.get_IsCheckDigitTransmissionEnabled() */
 HRESULT wdepo_barcode_symbology_attributes_get__is_check_digit_transmission_enabled(WDEPO_BarcodeSymbologyAttributes *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologyAttributes.put_IsCheckDigitTransmissionEnabled() */
 HRESULT wdepo_barcode_symbology_attributes_put__is_check_digit_transmission_enabled(WDEPO_BarcodeSymbologyAttributes *self, BOOL value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologyAttributes.get_IsCheckDigitTransmissionSupported() */
 HRESULT wdepo_barcode_symbology_attributes_get__is_check_digit_transmission_supported(WDEPO_BarcodeSymbologyAttributes *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologyAttributes.get_DecodeLength1() */
 HRESULT wdepo_barcode_symbology_attributes_get__decode_length1(WDEPO_BarcodeSymbologyAttributes *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologyAttributes.put_DecodeLength1() */
 HRESULT wdepo_barcode_symbology_attributes_put__decode_length1(WDEPO_BarcodeSymbologyAttributes *self, uint32_t value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologyAttributes.get_DecodeLength2() */
 HRESULT wdepo_barcode_symbology_attributes_get__decode_length2(WDEPO_BarcodeSymbologyAttributes *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologyAttributes.put_DecodeLength2() */
 HRESULT wdepo_barcode_symbology_attributes_put__decode_length2(WDEPO_BarcodeSymbologyAttributes *self, uint32_t value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologyAttributes.get_DecodeLengthKind() */
 HRESULT wdepo_barcode_symbology_attributes_get__decode_length_kind(WDEPO_BarcodeSymbologyAttributes *self, WDEPO_BarcodeSymbologyDecodeLengthKind *value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologyAttributes.put_DecodeLengthKind() */
 HRESULT wdepo_barcode_symbology_attributes_put__decode_length_kind(WDEPO_BarcodeSymbologyAttributes *self, WDEPO_BarcodeSymbologyDecodeLengthKind value);
 
-/* Windows.Devices.PointOfService.BarcodeSymbologyAttributes.get_IsDecodeLengthSupported() */
 HRESULT wdepo_barcode_symbology_attributes_get__is_decode_length_supported(WDEPO_BarcodeSymbologyAttributes *self, BOOL *value);
 
-/* activate Windows.Devices.PointOfService.CashDrawer */
 HRESULT wdepo_cash_drawer_new(WDEPO_CashDrawer **out);
 
-/* Windows.Devices.PointOfService.CashDrawer */
-/* Windows.Devices.PointOfService.CashDrawer.get_DeviceId() */
 HRESULT wdepo_cash_drawer_get__device_id(WDEPO_CashDrawer *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.CashDrawer.get_Capabilities() */
 HRESULT wdepo_cash_drawer_get__capabilities(WDEPO_CashDrawer *self, WDEPO_CashDrawerCapabilities** value);
 
-/* Windows.Devices.PointOfService.CashDrawer.get_Status() */
 HRESULT wdepo_cash_drawer_get__status(WDEPO_CashDrawer *self, WDEPO_CashDrawerStatus** value);
 
-/* Windows.Devices.PointOfService.CashDrawer.get_IsDrawerOpen() */
 HRESULT wdepo_cash_drawer_get__is_drawer_open(WDEPO_CashDrawer *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.CashDrawer.get_DrawerEventSource() */
 HRESULT wdepo_cash_drawer_get__drawer_event_source(WDEPO_CashDrawer *self, WDEPO_CashDrawerEventSource** value);
 
-/* Windows.Devices.PointOfService.CashDrawer.ClaimDrawerAsync() */
 HRESULT wdepo_cash_drawer_claim_drawer_async(WDEPO_CashDrawer *self, WF_IAsyncOperation_WDEPO_ClaimedCashDrawer** out);
 
-/* Windows.Devices.PointOfService.CashDrawer.CheckHealthAsync(level) */
 HRESULT wdepo_cash_drawer_check_health_async(WDEPO_CashDrawer *self, WDEPO_UnifiedPosHealthCheckLevel level, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Devices.PointOfService.CashDrawer.GetStatisticsAsync(statisticsCategories) */
 HRESULT wdepo_cash_drawer_get_statistics_async(WDEPO_CashDrawer *self, WFOCO_IIterable_HSTRING* statisticsCategories, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Devices.PointOfService.CashDrawer.Close() */
 HRESULT wdepo_cash_drawer_close(WDEPO_CashDrawer *self);
 
-/* Windows.Devices.PointOfService.CashDrawer.GetDeviceSelector(connectionTypes) */
 HRESULT wdepo_cash_drawer_get_device_selector_pos_connection_types_str(WDEPO_PosConnectionTypes connectionTypes, cwinrt_hstring *out);
 
-/* Windows.Devices.PointOfService.CashDrawer.GetDefaultAsync() */
 HRESULT wdepo_cash_drawer_get_default_async(WF_IAsyncOperation_WDEPO_CashDrawer** out);
 
-/* Windows.Devices.PointOfService.CashDrawer.FromIdAsync(deviceId) */
 HRESULT wdepo_cash_drawer_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDEPO_CashDrawer** out);
 
-/* Windows.Devices.PointOfService.CashDrawer.GetDeviceSelector() */
 HRESULT wdepo_cash_drawer_get_device_selector(cwinrt_hstring *out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdepo_cash_drawer_on_status_updated(WDEPO_CashDrawer *self, cwinrt_event_fn fn, void *ctx);
 void wdepo_cash_drawer_off_status_updated(WDEPO_CashDrawer *self, cwinrt_token token);
 
-/* activate Windows.Devices.PointOfService.CashDrawerCapabilities */
 HRESULT wdepo_cash_drawer_capabilities_new(WDEPO_CashDrawerCapabilities **out);
 
-/* Windows.Devices.PointOfService.CashDrawerCapabilities */
-/* Windows.Devices.PointOfService.CashDrawerCapabilities.get_PowerReportingType() */
 HRESULT wdepo_cash_drawer_capabilities_get__power_reporting_type(WDEPO_CashDrawerCapabilities *self, WDEPO_UnifiedPosPowerReportingType *value);
 
-/* Windows.Devices.PointOfService.CashDrawerCapabilities.get_IsStatisticsReportingSupported() */
 HRESULT wdepo_cash_drawer_capabilities_get__is_statistics_reporting_supported(WDEPO_CashDrawerCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.CashDrawerCapabilities.get_IsStatisticsUpdatingSupported() */
 HRESULT wdepo_cash_drawer_capabilities_get__is_statistics_updating_supported(WDEPO_CashDrawerCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.CashDrawerCapabilities.get_IsStatusReportingSupported() */
 HRESULT wdepo_cash_drawer_capabilities_get__is_status_reporting_supported(WDEPO_CashDrawerCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.CashDrawerCapabilities.get_IsStatusMultiDrawerDetectSupported() */
 HRESULT wdepo_cash_drawer_capabilities_get__is_status_multi_drawer_detect_supported(WDEPO_CashDrawerCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.CashDrawerCapabilities.get_IsDrawerOpenSensorAvailable() */
 HRESULT wdepo_cash_drawer_capabilities_get__is_drawer_open_sensor_available(WDEPO_CashDrawerCapabilities *self, BOOL *value);
 
-/* activate Windows.Devices.PointOfService.CashDrawerCloseAlarm */
 HRESULT wdepo_cash_drawer_close_alarm_new(WDEPO_CashDrawerCloseAlarm **out);
 
-/* Windows.Devices.PointOfService.CashDrawerCloseAlarm */
-/* Windows.Devices.PointOfService.CashDrawerCloseAlarm.put_AlarmTimeout() */
 HRESULT wdepo_cash_drawer_close_alarm_put__alarm_timeout(WDEPO_CashDrawerCloseAlarm *self, WF_TimeSpan value);
 
-/* Windows.Devices.PointOfService.CashDrawerCloseAlarm.get_AlarmTimeout() */
 HRESULT wdepo_cash_drawer_close_alarm_get__alarm_timeout(WDEPO_CashDrawerCloseAlarm *self, WF_TimeSpan *value);
 
-/* Windows.Devices.PointOfService.CashDrawerCloseAlarm.put_BeepFrequency() */
 HRESULT wdepo_cash_drawer_close_alarm_put__beep_frequency(WDEPO_CashDrawerCloseAlarm *self, uint32_t value);
 
-/* Windows.Devices.PointOfService.CashDrawerCloseAlarm.get_BeepFrequency() */
 HRESULT wdepo_cash_drawer_close_alarm_get__beep_frequency(WDEPO_CashDrawerCloseAlarm *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.CashDrawerCloseAlarm.put_BeepDuration() */
 HRESULT wdepo_cash_drawer_close_alarm_put__beep_duration(WDEPO_CashDrawerCloseAlarm *self, WF_TimeSpan value);
 
-/* Windows.Devices.PointOfService.CashDrawerCloseAlarm.get_BeepDuration() */
 HRESULT wdepo_cash_drawer_close_alarm_get__beep_duration(WDEPO_CashDrawerCloseAlarm *self, WF_TimeSpan *value);
 
-/* Windows.Devices.PointOfService.CashDrawerCloseAlarm.put_BeepDelay() */
 HRESULT wdepo_cash_drawer_close_alarm_put__beep_delay(WDEPO_CashDrawerCloseAlarm *self, WF_TimeSpan value);
 
-/* Windows.Devices.PointOfService.CashDrawerCloseAlarm.get_BeepDelay() */
 HRESULT wdepo_cash_drawer_close_alarm_get__beep_delay(WDEPO_CashDrawerCloseAlarm *self, WF_TimeSpan *value);
 
-/* Windows.Devices.PointOfService.CashDrawerCloseAlarm.StartAsync() */
 HRESULT wdepo_cash_drawer_close_alarm_start_async(WDEPO_CashDrawerCloseAlarm *self, WF_IAsyncOperation_Bool** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdepo_cash_drawer_close_alarm_on_alarm_timeout_expired(WDEPO_CashDrawerCloseAlarm *self, cwinrt_event_fn fn, void *ctx);
 void wdepo_cash_drawer_close_alarm_off_alarm_timeout_expired(WDEPO_CashDrawerCloseAlarm *self, cwinrt_token token);
 
-/* activate Windows.Devices.PointOfService.CashDrawerClosedEventArgs */
 HRESULT wdepo_cash_drawer_closed_event_args_new(WDEPO_CashDrawerClosedEventArgs **out);
 
-/* Windows.Devices.PointOfService.CashDrawerClosedEventArgs */
-/* Windows.Devices.PointOfService.CashDrawerClosedEventArgs.get_CashDrawer() */
 HRESULT wdepo_cash_drawer_closed_event_args_get__cash_drawer(WDEPO_CashDrawerClosedEventArgs *self, WDEPO_CashDrawer** value);
 
-/* activate Windows.Devices.PointOfService.CashDrawerEventSource */
 HRESULT wdepo_cash_drawer_event_source_new(WDEPO_CashDrawerEventSource **out);
 
-/* Windows.Devices.PointOfService.CashDrawerEventSource */
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdepo_cash_drawer_event_source_on_drawer_closed(WDEPO_CashDrawerEventSource *self, cwinrt_event_fn fn, void *ctx);
@@ -1850,101 +1644,66 @@ void wdepo_cash_drawer_event_source_off_drawer_closed(WDEPO_CashDrawerEventSourc
 cwinrt_token wdepo_cash_drawer_event_source_on_drawer_opened(WDEPO_CashDrawerEventSource *self, cwinrt_event_fn fn, void *ctx);
 void wdepo_cash_drawer_event_source_off_drawer_opened(WDEPO_CashDrawerEventSource *self, cwinrt_token token);
 
-/* activate Windows.Devices.PointOfService.CashDrawerOpenedEventArgs */
 HRESULT wdepo_cash_drawer_opened_event_args_new(WDEPO_CashDrawerOpenedEventArgs **out);
 
-/* Windows.Devices.PointOfService.CashDrawerOpenedEventArgs */
-/* Windows.Devices.PointOfService.CashDrawerOpenedEventArgs.get_CashDrawer() */
 HRESULT wdepo_cash_drawer_opened_event_args_get__cash_drawer(WDEPO_CashDrawerOpenedEventArgs *self, WDEPO_CashDrawer** value);
 
-/* activate Windows.Devices.PointOfService.CashDrawerStatus */
 HRESULT wdepo_cash_drawer_status_new(WDEPO_CashDrawerStatus **out);
 
-/* Windows.Devices.PointOfService.CashDrawerStatus */
-/* Windows.Devices.PointOfService.CashDrawerStatus.get_StatusKind() */
 HRESULT wdepo_cash_drawer_status_get__status_kind(WDEPO_CashDrawerStatus *self, WDEPO_CashDrawerStatusKind *value);
 
-/* Windows.Devices.PointOfService.CashDrawerStatus.get_ExtendedStatus() */
 HRESULT wdepo_cash_drawer_status_get__extended_status(WDEPO_CashDrawerStatus *self, uint32_t *value);
 
-/* activate Windows.Devices.PointOfService.CashDrawerStatusUpdatedEventArgs */
 HRESULT wdepo_cash_drawer_status_updated_event_args_new(WDEPO_CashDrawerStatusUpdatedEventArgs **out);
 
-/* Windows.Devices.PointOfService.CashDrawerStatusUpdatedEventArgs */
-/* Windows.Devices.PointOfService.CashDrawerStatusUpdatedEventArgs.get_Status() */
 HRESULT wdepo_cash_drawer_status_updated_event_args_get__status(WDEPO_CashDrawerStatusUpdatedEventArgs *self, WDEPO_CashDrawerStatus** value);
 
-/* activate Windows.Devices.PointOfService.ClaimedBarcodeScanner */
 HRESULT wdepo_claimed_barcode_scanner_new(WDEPO_ClaimedBarcodeScanner **out);
 
-/* Windows.Devices.PointOfService.ClaimedBarcodeScanner */
-/* Windows.Devices.PointOfService.ClaimedBarcodeScanner.get_DeviceId() */
 HRESULT wdepo_claimed_barcode_scanner_get__device_id(WDEPO_ClaimedBarcodeScanner *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.ClaimedBarcodeScanner.get_IsEnabled() */
 HRESULT wdepo_claimed_barcode_scanner_get__is_enabled(WDEPO_ClaimedBarcodeScanner *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedBarcodeScanner.put_IsDisabledOnDataReceived() */
 HRESULT wdepo_claimed_barcode_scanner_put__is_disabled_on_data_received(WDEPO_ClaimedBarcodeScanner *self, BOOL value);
 
-/* Windows.Devices.PointOfService.ClaimedBarcodeScanner.get_IsDisabledOnDataReceived() */
 HRESULT wdepo_claimed_barcode_scanner_get__is_disabled_on_data_received(WDEPO_ClaimedBarcodeScanner *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedBarcodeScanner.put_IsDecodeDataEnabled() */
 HRESULT wdepo_claimed_barcode_scanner_put__is_decode_data_enabled(WDEPO_ClaimedBarcodeScanner *self, BOOL value);
 
-/* Windows.Devices.PointOfService.ClaimedBarcodeScanner.get_IsDecodeDataEnabled() */
 HRESULT wdepo_claimed_barcode_scanner_get__is_decode_data_enabled(WDEPO_ClaimedBarcodeScanner *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedBarcodeScanner.EnableAsync() */
 HRESULT wdepo_claimed_barcode_scanner_enable_async(WDEPO_ClaimedBarcodeScanner *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.ClaimedBarcodeScanner.DisableAsync() */
 HRESULT wdepo_claimed_barcode_scanner_disable_async(WDEPO_ClaimedBarcodeScanner *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.ClaimedBarcodeScanner.RetainDevice() */
 HRESULT wdepo_claimed_barcode_scanner_retain_device(WDEPO_ClaimedBarcodeScanner *self);
 
-/* Windows.Devices.PointOfService.ClaimedBarcodeScanner.SetActiveSymbologiesAsync(symbologies) */
 HRESULT wdepo_claimed_barcode_scanner_set_active_symbologies_async(WDEPO_ClaimedBarcodeScanner *self, WFOCO_IIterable_uint32_t* symbologies, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.ClaimedBarcodeScanner.ResetStatisticsAsync(statisticsCategories) */
 HRESULT wdepo_claimed_barcode_scanner_reset_statistics_async(WDEPO_ClaimedBarcodeScanner *self, WFOCO_IIterable_HSTRING* statisticsCategories, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.ClaimedBarcodeScanner.UpdateStatisticsAsync(statistics) */
 HRESULT wdepo_claimed_barcode_scanner_update_statistics_async(WDEPO_ClaimedBarcodeScanner *self, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_HSTRING* statistics, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.ClaimedBarcodeScanner.SetActiveProfileAsync(profile) */
 HRESULT wdepo_claimed_barcode_scanner_set_active_profile_async(WDEPO_ClaimedBarcodeScanner *self, cwinrt_hstring profile, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.ClaimedBarcodeScanner.StartSoftwareTriggerAsync() */
 HRESULT wdepo_claimed_barcode_scanner_start_software_trigger_async(WDEPO_ClaimedBarcodeScanner *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.ClaimedBarcodeScanner.StopSoftwareTriggerAsync() */
 HRESULT wdepo_claimed_barcode_scanner_stop_software_trigger_async(WDEPO_ClaimedBarcodeScanner *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.ClaimedBarcodeScanner.GetSymbologyAttributesAsync(barcodeSymbology) */
 HRESULT wdepo_claimed_barcode_scanner_get_symbology_attributes_async(WDEPO_ClaimedBarcodeScanner *self, uint32_t barcodeSymbology, WF_IAsyncOperation_WDEPO_BarcodeSymbologyAttributes** out);
 
-/* Windows.Devices.PointOfService.ClaimedBarcodeScanner.SetSymbologyAttributesAsync(barcodeSymbology, attributes) */
 HRESULT wdepo_claimed_barcode_scanner_set_symbology_attributes_async(WDEPO_ClaimedBarcodeScanner *self, uint32_t barcodeSymbology, WDEPO_BarcodeSymbologyAttributes* attributes, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.ClaimedBarcodeScanner.ShowVideoPreviewAsync() */
 HRESULT wdepo_claimed_barcode_scanner_show_video_preview_async(WDEPO_ClaimedBarcodeScanner *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.ClaimedBarcodeScanner.HideVideoPreview() */
 HRESULT wdepo_claimed_barcode_scanner_hide_video_preview(WDEPO_ClaimedBarcodeScanner *self);
 
-/* Windows.Devices.PointOfService.ClaimedBarcodeScanner.put_IsVideoPreviewShownOnEnable() */
 HRESULT wdepo_claimed_barcode_scanner_put__is_video_preview_shown_on_enable(WDEPO_ClaimedBarcodeScanner *self, BOOL value);
 
-/* Windows.Devices.PointOfService.ClaimedBarcodeScanner.get_IsVideoPreviewShownOnEnable() */
 HRESULT wdepo_claimed_barcode_scanner_get__is_video_preview_shown_on_enable(WDEPO_ClaimedBarcodeScanner *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedBarcodeScanner.Close() */
 HRESULT wdepo_claimed_barcode_scanner_close(WDEPO_ClaimedBarcodeScanner *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdepo_claimed_barcode_scanner_on_data_received(WDEPO_ClaimedBarcodeScanner *self, cwinrt_event_fn fn, void *ctx);
@@ -1968,44 +1727,30 @@ void wdepo_claimed_barcode_scanner_off_error_occurred(WDEPO_ClaimedBarcodeScanne
 cwinrt_token wdepo_claimed_barcode_scanner_on_closed(WDEPO_ClaimedBarcodeScanner *self, cwinrt_event_fn fn, void *ctx);
 void wdepo_claimed_barcode_scanner_off_closed(WDEPO_ClaimedBarcodeScanner *self, cwinrt_token token);
 
-/* activate Windows.Devices.PointOfService.ClaimedCashDrawer */
 HRESULT wdepo_claimed_cash_drawer_new(WDEPO_ClaimedCashDrawer **out);
 
-/* Windows.Devices.PointOfService.ClaimedCashDrawer */
-/* Windows.Devices.PointOfService.ClaimedCashDrawer.get_DeviceId() */
 HRESULT wdepo_claimed_cash_drawer_get__device_id(WDEPO_ClaimedCashDrawer *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.ClaimedCashDrawer.get_IsEnabled() */
 HRESULT wdepo_claimed_cash_drawer_get__is_enabled(WDEPO_ClaimedCashDrawer *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedCashDrawer.get_IsDrawerOpen() */
 HRESULT wdepo_claimed_cash_drawer_get__is_drawer_open(WDEPO_ClaimedCashDrawer *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedCashDrawer.get_CloseAlarm() */
 HRESULT wdepo_claimed_cash_drawer_get__close_alarm(WDEPO_ClaimedCashDrawer *self, WDEPO_CashDrawerCloseAlarm** value);
 
-/* Windows.Devices.PointOfService.ClaimedCashDrawer.OpenDrawerAsync() */
 HRESULT wdepo_claimed_cash_drawer_open_drawer_async(WDEPO_ClaimedCashDrawer *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.ClaimedCashDrawer.EnableAsync() */
 HRESULT wdepo_claimed_cash_drawer_enable_async(WDEPO_ClaimedCashDrawer *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.ClaimedCashDrawer.DisableAsync() */
 HRESULT wdepo_claimed_cash_drawer_disable_async(WDEPO_ClaimedCashDrawer *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.ClaimedCashDrawer.RetainDeviceAsync() */
 HRESULT wdepo_claimed_cash_drawer_retain_device_async(WDEPO_ClaimedCashDrawer *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.ClaimedCashDrawer.ResetStatisticsAsync(statisticsCategories) */
 HRESULT wdepo_claimed_cash_drawer_reset_statistics_async(WDEPO_ClaimedCashDrawer *self, WFOCO_IIterable_HSTRING* statisticsCategories, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.ClaimedCashDrawer.UpdateStatisticsAsync(statistics) */
 HRESULT wdepo_claimed_cash_drawer_update_statistics_async(WDEPO_ClaimedCashDrawer *self, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_HSTRING* statistics, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.ClaimedCashDrawer.Close() */
 HRESULT wdepo_claimed_cash_drawer_close(WDEPO_ClaimedCashDrawer *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdepo_claimed_cash_drawer_on_release_device_requested(WDEPO_ClaimedCashDrawer *self, cwinrt_event_fn fn, void *ctx);
@@ -2014,159 +1759,106 @@ void wdepo_claimed_cash_drawer_off_release_device_requested(WDEPO_ClaimedCashDra
 cwinrt_token wdepo_claimed_cash_drawer_on_closed(WDEPO_ClaimedCashDrawer *self, cwinrt_event_fn fn, void *ctx);
 void wdepo_claimed_cash_drawer_off_closed(WDEPO_ClaimedCashDrawer *self, cwinrt_token token);
 
-/* activate Windows.Devices.PointOfService.ClaimedJournalPrinter */
 HRESULT wdepo_claimed_journal_printer_new(WDEPO_ClaimedJournalPrinter **out);
 
-/* Windows.Devices.PointOfService.ClaimedJournalPrinter */
-/* Windows.Devices.PointOfService.ClaimedJournalPrinter.CreateJob() */
 HRESULT wdepo_claimed_journal_printer_create_job(WDEPO_ClaimedJournalPrinter *self, WDEPO_JournalPrintJob** out);
 
-/* Windows.Devices.PointOfService.ClaimedJournalPrinter.put_CharactersPerLine() */
 HRESULT wdepo_claimed_journal_printer_put__characters_per_line(WDEPO_ClaimedJournalPrinter *self, uint32_t value);
 
-/* Windows.Devices.PointOfService.ClaimedJournalPrinter.get_CharactersPerLine() */
 HRESULT wdepo_claimed_journal_printer_get__characters_per_line(WDEPO_ClaimedJournalPrinter *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.ClaimedJournalPrinter.put_LineHeight() */
 HRESULT wdepo_claimed_journal_printer_put__line_height(WDEPO_ClaimedJournalPrinter *self, uint32_t value);
 
-/* Windows.Devices.PointOfService.ClaimedJournalPrinter.get_LineHeight() */
 HRESULT wdepo_claimed_journal_printer_get__line_height(WDEPO_ClaimedJournalPrinter *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.ClaimedJournalPrinter.put_LineSpacing() */
 HRESULT wdepo_claimed_journal_printer_put__line_spacing(WDEPO_ClaimedJournalPrinter *self, uint32_t value);
 
-/* Windows.Devices.PointOfService.ClaimedJournalPrinter.get_LineSpacing() */
 HRESULT wdepo_claimed_journal_printer_get__line_spacing(WDEPO_ClaimedJournalPrinter *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.ClaimedJournalPrinter.get_LineWidth() */
 HRESULT wdepo_claimed_journal_printer_get__line_width(WDEPO_ClaimedJournalPrinter *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.ClaimedJournalPrinter.put_IsLetterQuality() */
 HRESULT wdepo_claimed_journal_printer_put__is_letter_quality(WDEPO_ClaimedJournalPrinter *self, BOOL value);
 
-/* Windows.Devices.PointOfService.ClaimedJournalPrinter.get_IsLetterQuality() */
 HRESULT wdepo_claimed_journal_printer_get__is_letter_quality(WDEPO_ClaimedJournalPrinter *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedJournalPrinter.get_IsPaperNearEnd() */
 HRESULT wdepo_claimed_journal_printer_get__is_paper_near_end(WDEPO_ClaimedJournalPrinter *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedJournalPrinter.put_ColorCartridge() */
 HRESULT wdepo_claimed_journal_printer_put__color_cartridge(WDEPO_ClaimedJournalPrinter *self, WDEPO_PosPrinterColorCartridge value);
 
-/* Windows.Devices.PointOfService.ClaimedJournalPrinter.get_ColorCartridge() */
 HRESULT wdepo_claimed_journal_printer_get__color_cartridge(WDEPO_ClaimedJournalPrinter *self, WDEPO_PosPrinterColorCartridge *value);
 
-/* Windows.Devices.PointOfService.ClaimedJournalPrinter.get_IsCoverOpen() */
 HRESULT wdepo_claimed_journal_printer_get__is_cover_open(WDEPO_ClaimedJournalPrinter *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedJournalPrinter.get_IsCartridgeRemoved() */
 HRESULT wdepo_claimed_journal_printer_get__is_cartridge_removed(WDEPO_ClaimedJournalPrinter *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedJournalPrinter.get_IsCartridgeEmpty() */
 HRESULT wdepo_claimed_journal_printer_get__is_cartridge_empty(WDEPO_ClaimedJournalPrinter *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedJournalPrinter.get_IsHeadCleaning() */
 HRESULT wdepo_claimed_journal_printer_get__is_head_cleaning(WDEPO_ClaimedJournalPrinter *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedJournalPrinter.get_IsPaperEmpty() */
 HRESULT wdepo_claimed_journal_printer_get__is_paper_empty(WDEPO_ClaimedJournalPrinter *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedJournalPrinter.get_IsReadyToPrint() */
 HRESULT wdepo_claimed_journal_printer_get__is_ready_to_print(WDEPO_ClaimedJournalPrinter *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedJournalPrinter.ValidateData(data) */
 HRESULT wdepo_claimed_journal_printer_validate_data(WDEPO_ClaimedJournalPrinter *self, cwinrt_hstring data, BOOL *out);
 
-/* activate Windows.Devices.PointOfService.ClaimedLineDisplay */
 HRESULT wdepo_claimed_line_display_new(WDEPO_ClaimedLineDisplay **out);
 
-/* Windows.Devices.PointOfService.ClaimedLineDisplay */
-/* Windows.Devices.PointOfService.ClaimedLineDisplay.get_DeviceId() */
 HRESULT wdepo_claimed_line_display_get__device_id(WDEPO_ClaimedLineDisplay *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.ClaimedLineDisplay.get_Capabilities() */
 HRESULT wdepo_claimed_line_display_get__capabilities(WDEPO_ClaimedLineDisplay *self, WDEPO_LineDisplayCapabilities** value);
 
-/* Windows.Devices.PointOfService.ClaimedLineDisplay.get_PhysicalDeviceName() */
 HRESULT wdepo_claimed_line_display_get__physical_device_name(WDEPO_ClaimedLineDisplay *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.ClaimedLineDisplay.get_PhysicalDeviceDescription() */
 HRESULT wdepo_claimed_line_display_get__physical_device_description(WDEPO_ClaimedLineDisplay *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.ClaimedLineDisplay.get_DeviceControlDescription() */
 HRESULT wdepo_claimed_line_display_get__device_control_description(WDEPO_ClaimedLineDisplay *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.ClaimedLineDisplay.get_DeviceControlVersion() */
 HRESULT wdepo_claimed_line_display_get__device_control_version(WDEPO_ClaimedLineDisplay *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.ClaimedLineDisplay.get_DeviceServiceVersion() */
 HRESULT wdepo_claimed_line_display_get__device_service_version(WDEPO_ClaimedLineDisplay *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.ClaimedLineDisplay.get_DefaultWindow() */
 HRESULT wdepo_claimed_line_display_get__default_window(WDEPO_ClaimedLineDisplay *self, WDEPO_LineDisplayWindow** value);
 
-/* Windows.Devices.PointOfService.ClaimedLineDisplay.RetainDevice() */
 HRESULT wdepo_claimed_line_display_retain_device(WDEPO_ClaimedLineDisplay *self);
 
-/* Windows.Devices.PointOfService.ClaimedLineDisplay.GetStatisticsAsync(statisticsCategories) */
 HRESULT wdepo_claimed_line_display_get_statistics_async(WDEPO_ClaimedLineDisplay *self, WFOCO_IIterable_HSTRING* statisticsCategories, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Devices.PointOfService.ClaimedLineDisplay.CheckHealthAsync(level) */
 HRESULT wdepo_claimed_line_display_check_health_async(WDEPO_ClaimedLineDisplay *self, WDEPO_UnifiedPosHealthCheckLevel level, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Devices.PointOfService.ClaimedLineDisplay.CheckPowerStatusAsync() */
 HRESULT wdepo_claimed_line_display_check_power_status_async(WDEPO_ClaimedLineDisplay *self, WF_IAsyncOperation_WDEPO_LineDisplayPowerStatus** out);
 
-/* Windows.Devices.PointOfService.ClaimedLineDisplay.get_SupportedScreenSizesInCharacters() */
 HRESULT wdepo_claimed_line_display_get__supported_screen_sizes_in_characters(WDEPO_ClaimedLineDisplay *self, WFOCO_IVectorView_WF_Size** value);
 
-/* Windows.Devices.PointOfService.ClaimedLineDisplay.get_MaxBitmapSizeInPixels() */
 HRESULT wdepo_claimed_line_display_get__max_bitmap_size_in_pixels(WDEPO_ClaimedLineDisplay *self, WF_Size *value);
 
-/* Windows.Devices.PointOfService.ClaimedLineDisplay.get_SupportedCharacterSets() */
 HRESULT wdepo_claimed_line_display_get__supported_character_sets(WDEPO_ClaimedLineDisplay *self, WFOCO_IVectorView_int32_t** value);
 
-/* Windows.Devices.PointOfService.ClaimedLineDisplay.get_CustomGlyphs() */
 HRESULT wdepo_claimed_line_display_get__custom_glyphs(WDEPO_ClaimedLineDisplay *self, WDEPO_LineDisplayCustomGlyphs** value);
 
-/* Windows.Devices.PointOfService.ClaimedLineDisplay.GetAttributes() */
 HRESULT wdepo_claimed_line_display_get_attributes(WDEPO_ClaimedLineDisplay *self, WDEPO_LineDisplayAttributes** out);
 
-/* Windows.Devices.PointOfService.ClaimedLineDisplay.TryUpdateAttributesAsync(attributes) */
 HRESULT wdepo_claimed_line_display_try_update_attributes_async(WDEPO_ClaimedLineDisplay *self, WDEPO_LineDisplayAttributes* attributes, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.ClaimedLineDisplay.TrySetDescriptorAsync(descriptor, descriptorState) */
 HRESULT wdepo_claimed_line_display_try_set_descriptor_async(WDEPO_ClaimedLineDisplay *self, uint32_t descriptor, WDEPO_LineDisplayDescriptorState descriptorState, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.ClaimedLineDisplay.TryClearDescriptorsAsync() */
 HRESULT wdepo_claimed_line_display_try_clear_descriptors_async(WDEPO_ClaimedLineDisplay *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.ClaimedLineDisplay.TryCreateWindowAsync(viewport, windowSize) */
 HRESULT wdepo_claimed_line_display_try_create_window_async(WDEPO_ClaimedLineDisplay *self, WF_Rect viewport, WF_Size windowSize, WF_IAsyncOperation_WDEPO_LineDisplayWindow** out);
 
-/* Windows.Devices.PointOfService.ClaimedLineDisplay.TryStoreStorageFileBitmapAsync(bitmap) */
 HRESULT wdepo_claimed_line_display_try_store_storage_file_bitmap_async(WDEPO_ClaimedLineDisplay *self, WS_StorageFile* bitmap, WF_IAsyncOperation_WDEPO_LineDisplayStoredBitmap** out);
 
-/* Windows.Devices.PointOfService.ClaimedLineDisplay.TryStoreStorageFileBitmapAsync(bitmap, horizontalAlignment, verticalAlignment) */
 HRESULT wdepo_claimed_line_display_try_store_storage_file_bitmap_async_p_line_display_horizontal_alignment__7deb8d6e(WDEPO_ClaimedLineDisplay *self, WS_StorageFile* bitmap, WDEPO_LineDisplayHorizontalAlignment horizontalAlignment, WDEPO_LineDisplayVerticalAlignment verticalAlignment, WF_IAsyncOperation_WDEPO_LineDisplayStoredBitmap** out);
 
-/* Windows.Devices.PointOfService.ClaimedLineDisplay.TryStoreStorageFileBitmapAsync(bitmap, horizontalAlignment, verticalAlignment, widthInPixels) */
 HRESULT wdepo_claimed_line_display_try_store_storage_file_bitmap_async_p_line_display_horizontal_alignment__42be5243(WDEPO_ClaimedLineDisplay *self, WS_StorageFile* bitmap, WDEPO_LineDisplayHorizontalAlignment horizontalAlignment, WDEPO_LineDisplayVerticalAlignment verticalAlignment, int32_t widthInPixels, WF_IAsyncOperation_WDEPO_LineDisplayStoredBitmap** out);
 
-/* Windows.Devices.PointOfService.ClaimedLineDisplay.Close() */
 HRESULT wdepo_claimed_line_display_close(WDEPO_ClaimedLineDisplay *self);
 
-/* Windows.Devices.PointOfService.ClaimedLineDisplay.FromIdAsync(deviceId) */
 HRESULT wdepo_claimed_line_display_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDEPO_ClaimedLineDisplay** out);
 
-/* Windows.Devices.PointOfService.ClaimedLineDisplay.GetDeviceSelector() */
 HRESULT wdepo_claimed_line_display_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Devices.PointOfService.ClaimedLineDisplay.GetDeviceSelector(connectionTypes) */
 HRESULT wdepo_claimed_line_display_get_device_selector_pos_connection_types_str(WDEPO_PosConnectionTypes connectionTypes, cwinrt_hstring *out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdepo_claimed_line_display_on_release_device_requested(WDEPO_ClaimedLineDisplay *self, cwinrt_event_fn fn, void *ctx);
@@ -2178,83 +1870,56 @@ void wdepo_claimed_line_display_off_status_updated(WDEPO_ClaimedLineDisplay *sel
 cwinrt_token wdepo_claimed_line_display_on_closed(WDEPO_ClaimedLineDisplay *self, cwinrt_event_fn fn, void *ctx);
 void wdepo_claimed_line_display_off_closed(WDEPO_ClaimedLineDisplay *self, cwinrt_token token);
 
-/* activate Windows.Devices.PointOfService.ClaimedMagneticStripeReader */
 HRESULT wdepo_claimed_magnetic_stripe_reader_new(WDEPO_ClaimedMagneticStripeReader **out);
 
-/* Windows.Devices.PointOfService.ClaimedMagneticStripeReader */
-/* Windows.Devices.PointOfService.ClaimedMagneticStripeReader.get_DeviceId() */
 HRESULT wdepo_claimed_magnetic_stripe_reader_get__device_id(WDEPO_ClaimedMagneticStripeReader *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.ClaimedMagneticStripeReader.get_IsEnabled() */
 HRESULT wdepo_claimed_magnetic_stripe_reader_get__is_enabled(WDEPO_ClaimedMagneticStripeReader *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedMagneticStripeReader.put_IsDisabledOnDataReceived() */
 HRESULT wdepo_claimed_magnetic_stripe_reader_put__is_disabled_on_data_received(WDEPO_ClaimedMagneticStripeReader *self, BOOL value);
 
-/* Windows.Devices.PointOfService.ClaimedMagneticStripeReader.get_IsDisabledOnDataReceived() */
 HRESULT wdepo_claimed_magnetic_stripe_reader_get__is_disabled_on_data_received(WDEPO_ClaimedMagneticStripeReader *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedMagneticStripeReader.put_IsDecodeDataEnabled() */
 HRESULT wdepo_claimed_magnetic_stripe_reader_put__is_decode_data_enabled(WDEPO_ClaimedMagneticStripeReader *self, BOOL value);
 
-/* Windows.Devices.PointOfService.ClaimedMagneticStripeReader.get_IsDecodeDataEnabled() */
 HRESULT wdepo_claimed_magnetic_stripe_reader_get__is_decode_data_enabled(WDEPO_ClaimedMagneticStripeReader *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedMagneticStripeReader.get_IsDeviceAuthenticated() */
 HRESULT wdepo_claimed_magnetic_stripe_reader_get__is_device_authenticated(WDEPO_ClaimedMagneticStripeReader *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedMagneticStripeReader.put_DataEncryptionAlgorithm() */
 HRESULT wdepo_claimed_magnetic_stripe_reader_put__data_encryption_algorithm(WDEPO_ClaimedMagneticStripeReader *self, uint32_t value);
 
-/* Windows.Devices.PointOfService.ClaimedMagneticStripeReader.get_DataEncryptionAlgorithm() */
 HRESULT wdepo_claimed_magnetic_stripe_reader_get__data_encryption_algorithm(WDEPO_ClaimedMagneticStripeReader *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.ClaimedMagneticStripeReader.put_TracksToRead() */
 HRESULT wdepo_claimed_magnetic_stripe_reader_put__tracks_to_read(WDEPO_ClaimedMagneticStripeReader *self, WDEPO_MagneticStripeReaderTrackIds value);
 
-/* Windows.Devices.PointOfService.ClaimedMagneticStripeReader.get_TracksToRead() */
 HRESULT wdepo_claimed_magnetic_stripe_reader_get__tracks_to_read(WDEPO_ClaimedMagneticStripeReader *self, WDEPO_MagneticStripeReaderTrackIds *value);
 
-/* Windows.Devices.PointOfService.ClaimedMagneticStripeReader.put_IsTransmitSentinelsEnabled() */
 HRESULT wdepo_claimed_magnetic_stripe_reader_put__is_transmit_sentinels_enabled(WDEPO_ClaimedMagneticStripeReader *self, BOOL value);
 
-/* Windows.Devices.PointOfService.ClaimedMagneticStripeReader.get_IsTransmitSentinelsEnabled() */
 HRESULT wdepo_claimed_magnetic_stripe_reader_get__is_transmit_sentinels_enabled(WDEPO_ClaimedMagneticStripeReader *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedMagneticStripeReader.EnableAsync() */
 HRESULT wdepo_claimed_magnetic_stripe_reader_enable_async(WDEPO_ClaimedMagneticStripeReader *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.ClaimedMagneticStripeReader.DisableAsync() */
 HRESULT wdepo_claimed_magnetic_stripe_reader_disable_async(WDEPO_ClaimedMagneticStripeReader *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.ClaimedMagneticStripeReader.RetainDevice() */
 HRESULT wdepo_claimed_magnetic_stripe_reader_retain_device(WDEPO_ClaimedMagneticStripeReader *self);
 
-/* Windows.Devices.PointOfService.ClaimedMagneticStripeReader.SetErrorReportingType() */
 HRESULT wdepo_claimed_magnetic_stripe_reader_set_error_reporting_type(WDEPO_ClaimedMagneticStripeReader *self, WDEPO_MagneticStripeReaderErrorReportingType value);
 
-/* Windows.Devices.PointOfService.ClaimedMagneticStripeReader.RetrieveDeviceAuthenticationDataAsync() */
 HRESULT wdepo_claimed_magnetic_stripe_reader_retrieve_device_authentication_data_async(WDEPO_ClaimedMagneticStripeReader *self, WF_IAsyncOperation_WSTST_IBuffer** out);
 
-/* Windows.Devices.PointOfService.ClaimedMagneticStripeReader.AuthenticateDeviceAsync(responseToken) */
 HRESULT wdepo_claimed_magnetic_stripe_reader_authenticate_device_async(WDEPO_ClaimedMagneticStripeReader *self, uint8_t *responseToken, uint32_t responseToken_len, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.ClaimedMagneticStripeReader.DeAuthenticateDeviceAsync(responseToken) */
 HRESULT wdepo_claimed_magnetic_stripe_reader_de_authenticate_device_async(WDEPO_ClaimedMagneticStripeReader *self, uint8_t *responseToken, uint32_t responseToken_len, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.ClaimedMagneticStripeReader.UpdateKeyAsync(key, keyName) */
 HRESULT wdepo_claimed_magnetic_stripe_reader_update_key_async(WDEPO_ClaimedMagneticStripeReader *self, cwinrt_hstring key, cwinrt_hstring keyName, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.ClaimedMagneticStripeReader.ResetStatisticsAsync(statisticsCategories) */
 HRESULT wdepo_claimed_magnetic_stripe_reader_reset_statistics_async(WDEPO_ClaimedMagneticStripeReader *self, WFOCO_IIterable_HSTRING* statisticsCategories, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.ClaimedMagneticStripeReader.UpdateStatisticsAsync(statistics) */
 HRESULT wdepo_claimed_magnetic_stripe_reader_update_statistics_async(WDEPO_ClaimedMagneticStripeReader *self, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_HSTRING* statistics, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.ClaimedMagneticStripeReader.Close() */
 HRESULT wdepo_claimed_magnetic_stripe_reader_close(WDEPO_ClaimedMagneticStripeReader *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdepo_claimed_magnetic_stripe_reader_on_bank_card_data_received(WDEPO_ClaimedMagneticStripeReader *self, cwinrt_event_fn fn, void *ctx);
@@ -2275,65 +1940,44 @@ void wdepo_claimed_magnetic_stripe_reader_off_error_occurred(WDEPO_ClaimedMagnet
 cwinrt_token wdepo_claimed_magnetic_stripe_reader_on_closed(WDEPO_ClaimedMagneticStripeReader *self, cwinrt_event_fn fn, void *ctx);
 void wdepo_claimed_magnetic_stripe_reader_off_closed(WDEPO_ClaimedMagneticStripeReader *self, cwinrt_token token);
 
-/* activate Windows.Devices.PointOfService.ClaimedPosPrinter */
 HRESULT wdepo_claimed_pos_printer_new(WDEPO_ClaimedPosPrinter **out);
 
-/* Windows.Devices.PointOfService.ClaimedPosPrinter */
-/* Windows.Devices.PointOfService.ClaimedPosPrinter.get_DeviceId() */
 HRESULT wdepo_claimed_pos_printer_get__device_id(WDEPO_ClaimedPosPrinter *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.ClaimedPosPrinter.get_IsEnabled() */
 HRESULT wdepo_claimed_pos_printer_get__is_enabled(WDEPO_ClaimedPosPrinter *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedPosPrinter.put_CharacterSet() */
 HRESULT wdepo_claimed_pos_printer_put__character_set(WDEPO_ClaimedPosPrinter *self, uint32_t value);
 
-/* Windows.Devices.PointOfService.ClaimedPosPrinter.get_CharacterSet() */
 HRESULT wdepo_claimed_pos_printer_get__character_set(WDEPO_ClaimedPosPrinter *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.ClaimedPosPrinter.get_IsCoverOpen() */
 HRESULT wdepo_claimed_pos_printer_get__is_cover_open(WDEPO_ClaimedPosPrinter *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedPosPrinter.put_IsCharacterSetMappingEnabled() */
 HRESULT wdepo_claimed_pos_printer_put__is_character_set_mapping_enabled(WDEPO_ClaimedPosPrinter *self, BOOL value);
 
-/* Windows.Devices.PointOfService.ClaimedPosPrinter.get_IsCharacterSetMappingEnabled() */
 HRESULT wdepo_claimed_pos_printer_get__is_character_set_mapping_enabled(WDEPO_ClaimedPosPrinter *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedPosPrinter.put_MapMode() */
 HRESULT wdepo_claimed_pos_printer_put__map_mode(WDEPO_ClaimedPosPrinter *self, WDEPO_PosPrinterMapMode value);
 
-/* Windows.Devices.PointOfService.ClaimedPosPrinter.get_MapMode() */
 HRESULT wdepo_claimed_pos_printer_get__map_mode(WDEPO_ClaimedPosPrinter *self, WDEPO_PosPrinterMapMode *value);
 
-/* Windows.Devices.PointOfService.ClaimedPosPrinter.get_Receipt() */
 HRESULT wdepo_claimed_pos_printer_get__receipt(WDEPO_ClaimedPosPrinter *self, WDEPO_ClaimedReceiptPrinter** value);
 
-/* Windows.Devices.PointOfService.ClaimedPosPrinter.get_Slip() */
 HRESULT wdepo_claimed_pos_printer_get__slip(WDEPO_ClaimedPosPrinter *self, WDEPO_ClaimedSlipPrinter** value);
 
-/* Windows.Devices.PointOfService.ClaimedPosPrinter.get_Journal() */
 HRESULT wdepo_claimed_pos_printer_get__journal(WDEPO_ClaimedPosPrinter *self, WDEPO_ClaimedJournalPrinter** value);
 
-/* Windows.Devices.PointOfService.ClaimedPosPrinter.EnableAsync() */
 HRESULT wdepo_claimed_pos_printer_enable_async(WDEPO_ClaimedPosPrinter *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.ClaimedPosPrinter.DisableAsync() */
 HRESULT wdepo_claimed_pos_printer_disable_async(WDEPO_ClaimedPosPrinter *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.ClaimedPosPrinter.RetainDeviceAsync() */
 HRESULT wdepo_claimed_pos_printer_retain_device_async(WDEPO_ClaimedPosPrinter *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.ClaimedPosPrinter.ResetStatisticsAsync(statisticsCategories) */
 HRESULT wdepo_claimed_pos_printer_reset_statistics_async(WDEPO_ClaimedPosPrinter *self, WFOCO_IIterable_HSTRING* statisticsCategories, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.ClaimedPosPrinter.UpdateStatisticsAsync(statistics) */
 HRESULT wdepo_claimed_pos_printer_update_statistics_async(WDEPO_ClaimedPosPrinter *self, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_HSTRING* statistics, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.ClaimedPosPrinter.Close() */
 HRESULT wdepo_claimed_pos_printer_close(WDEPO_ClaimedPosPrinter *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdepo_claimed_pos_printer_on_release_device_requested(WDEPO_ClaimedPosPrinter *self, cwinrt_event_fn fn, void *ctx);
@@ -2342,2329 +1986,1466 @@ void wdepo_claimed_pos_printer_off_release_device_requested(WDEPO_ClaimedPosPrin
 cwinrt_token wdepo_claimed_pos_printer_on_closed(WDEPO_ClaimedPosPrinter *self, cwinrt_event_fn fn, void *ctx);
 void wdepo_claimed_pos_printer_off_closed(WDEPO_ClaimedPosPrinter *self, cwinrt_token token);
 
-/* activate Windows.Devices.PointOfService.ClaimedReceiptPrinter */
 HRESULT wdepo_claimed_receipt_printer_new(WDEPO_ClaimedReceiptPrinter **out);
 
-/* Windows.Devices.PointOfService.ClaimedReceiptPrinter */
-/* Windows.Devices.PointOfService.ClaimedReceiptPrinter.get_SidewaysMaxLines() */
 HRESULT wdepo_claimed_receipt_printer_get__sideways_max_lines(WDEPO_ClaimedReceiptPrinter *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.ClaimedReceiptPrinter.get_SidewaysMaxChars() */
 HRESULT wdepo_claimed_receipt_printer_get__sideways_max_chars(WDEPO_ClaimedReceiptPrinter *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.ClaimedReceiptPrinter.get_LinesToPaperCut() */
 HRESULT wdepo_claimed_receipt_printer_get__lines_to_paper_cut(WDEPO_ClaimedReceiptPrinter *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.ClaimedReceiptPrinter.get_PageSize() */
 HRESULT wdepo_claimed_receipt_printer_get__page_size(WDEPO_ClaimedReceiptPrinter *self, WF_Size *value);
 
-/* Windows.Devices.PointOfService.ClaimedReceiptPrinter.get_PrintArea() */
 HRESULT wdepo_claimed_receipt_printer_get__print_area(WDEPO_ClaimedReceiptPrinter *self, WF_Rect *value);
 
-/* Windows.Devices.PointOfService.ClaimedReceiptPrinter.CreateJob() */
 HRESULT wdepo_claimed_receipt_printer_create_job(WDEPO_ClaimedReceiptPrinter *self, WDEPO_ReceiptPrintJob** out);
 
-/* Windows.Devices.PointOfService.ClaimedReceiptPrinter.put_CharactersPerLine() */
 HRESULT wdepo_claimed_receipt_printer_put__characters_per_line(WDEPO_ClaimedReceiptPrinter *self, uint32_t value);
 
-/* Windows.Devices.PointOfService.ClaimedReceiptPrinter.get_CharactersPerLine() */
 HRESULT wdepo_claimed_receipt_printer_get__characters_per_line(WDEPO_ClaimedReceiptPrinter *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.ClaimedReceiptPrinter.put_LineHeight() */
 HRESULT wdepo_claimed_receipt_printer_put__line_height(WDEPO_ClaimedReceiptPrinter *self, uint32_t value);
 
-/* Windows.Devices.PointOfService.ClaimedReceiptPrinter.get_LineHeight() */
 HRESULT wdepo_claimed_receipt_printer_get__line_height(WDEPO_ClaimedReceiptPrinter *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.ClaimedReceiptPrinter.put_LineSpacing() */
 HRESULT wdepo_claimed_receipt_printer_put__line_spacing(WDEPO_ClaimedReceiptPrinter *self, uint32_t value);
 
-/* Windows.Devices.PointOfService.ClaimedReceiptPrinter.get_LineSpacing() */
 HRESULT wdepo_claimed_receipt_printer_get__line_spacing(WDEPO_ClaimedReceiptPrinter *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.ClaimedReceiptPrinter.get_LineWidth() */
 HRESULT wdepo_claimed_receipt_printer_get__line_width(WDEPO_ClaimedReceiptPrinter *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.ClaimedReceiptPrinter.put_IsLetterQuality() */
 HRESULT wdepo_claimed_receipt_printer_put__is_letter_quality(WDEPO_ClaimedReceiptPrinter *self, BOOL value);
 
-/* Windows.Devices.PointOfService.ClaimedReceiptPrinter.get_IsLetterQuality() */
 HRESULT wdepo_claimed_receipt_printer_get__is_letter_quality(WDEPO_ClaimedReceiptPrinter *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedReceiptPrinter.get_IsPaperNearEnd() */
 HRESULT wdepo_claimed_receipt_printer_get__is_paper_near_end(WDEPO_ClaimedReceiptPrinter *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedReceiptPrinter.put_ColorCartridge() */
 HRESULT wdepo_claimed_receipt_printer_put__color_cartridge(WDEPO_ClaimedReceiptPrinter *self, WDEPO_PosPrinterColorCartridge value);
 
-/* Windows.Devices.PointOfService.ClaimedReceiptPrinter.get_ColorCartridge() */
 HRESULT wdepo_claimed_receipt_printer_get__color_cartridge(WDEPO_ClaimedReceiptPrinter *self, WDEPO_PosPrinterColorCartridge *value);
 
-/* Windows.Devices.PointOfService.ClaimedReceiptPrinter.get_IsCoverOpen() */
 HRESULT wdepo_claimed_receipt_printer_get__is_cover_open(WDEPO_ClaimedReceiptPrinter *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedReceiptPrinter.get_IsCartridgeRemoved() */
 HRESULT wdepo_claimed_receipt_printer_get__is_cartridge_removed(WDEPO_ClaimedReceiptPrinter *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedReceiptPrinter.get_IsCartridgeEmpty() */
 HRESULT wdepo_claimed_receipt_printer_get__is_cartridge_empty(WDEPO_ClaimedReceiptPrinter *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedReceiptPrinter.get_IsHeadCleaning() */
 HRESULT wdepo_claimed_receipt_printer_get__is_head_cleaning(WDEPO_ClaimedReceiptPrinter *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedReceiptPrinter.get_IsPaperEmpty() */
 HRESULT wdepo_claimed_receipt_printer_get__is_paper_empty(WDEPO_ClaimedReceiptPrinter *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedReceiptPrinter.get_IsReadyToPrint() */
 HRESULT wdepo_claimed_receipt_printer_get__is_ready_to_print(WDEPO_ClaimedReceiptPrinter *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedReceiptPrinter.ValidateData(data) */
 HRESULT wdepo_claimed_receipt_printer_validate_data(WDEPO_ClaimedReceiptPrinter *self, cwinrt_hstring data, BOOL *out);
 
-/* activate Windows.Devices.PointOfService.ClaimedSlipPrinter */
 HRESULT wdepo_claimed_slip_printer_new(WDEPO_ClaimedSlipPrinter **out);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter */
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.get_SidewaysMaxLines() */
 HRESULT wdepo_claimed_slip_printer_get__sideways_max_lines(WDEPO_ClaimedSlipPrinter *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.get_SidewaysMaxChars() */
 HRESULT wdepo_claimed_slip_printer_get__sideways_max_chars(WDEPO_ClaimedSlipPrinter *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.get_MaxLines() */
 HRESULT wdepo_claimed_slip_printer_get__max_lines(WDEPO_ClaimedSlipPrinter *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.get_LinesNearEndToEnd() */
 HRESULT wdepo_claimed_slip_printer_get__lines_near_end_to_end(WDEPO_ClaimedSlipPrinter *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.get_PrintSide() */
 HRESULT wdepo_claimed_slip_printer_get__print_side(WDEPO_ClaimedSlipPrinter *self, WDEPO_PosPrinterPrintSide *value);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.get_PageSize() */
 HRESULT wdepo_claimed_slip_printer_get__page_size(WDEPO_ClaimedSlipPrinter *self, WF_Size *value);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.get_PrintArea() */
 HRESULT wdepo_claimed_slip_printer_get__print_area(WDEPO_ClaimedSlipPrinter *self, WF_Rect *value);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.OpenJaws() */
 HRESULT wdepo_claimed_slip_printer_open_jaws(WDEPO_ClaimedSlipPrinter *self);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.CloseJaws() */
 HRESULT wdepo_claimed_slip_printer_close_jaws(WDEPO_ClaimedSlipPrinter *self);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.InsertSlipAsync(timeout) */
 HRESULT wdepo_claimed_slip_printer_insert_slip_async(WDEPO_ClaimedSlipPrinter *self, WF_TimeSpan timeout, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.RemoveSlipAsync(timeout) */
 HRESULT wdepo_claimed_slip_printer_remove_slip_async(WDEPO_ClaimedSlipPrinter *self, WF_TimeSpan timeout, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.ChangePrintSide(printSide) */
 HRESULT wdepo_claimed_slip_printer_change_print_side(WDEPO_ClaimedSlipPrinter *self, WDEPO_PosPrinterPrintSide printSide);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.CreateJob() */
 HRESULT wdepo_claimed_slip_printer_create_job(WDEPO_ClaimedSlipPrinter *self, WDEPO_SlipPrintJob** out);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.put_CharactersPerLine() */
 HRESULT wdepo_claimed_slip_printer_put__characters_per_line(WDEPO_ClaimedSlipPrinter *self, uint32_t value);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.get_CharactersPerLine() */
 HRESULT wdepo_claimed_slip_printer_get__characters_per_line(WDEPO_ClaimedSlipPrinter *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.put_LineHeight() */
 HRESULT wdepo_claimed_slip_printer_put__line_height(WDEPO_ClaimedSlipPrinter *self, uint32_t value);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.get_LineHeight() */
 HRESULT wdepo_claimed_slip_printer_get__line_height(WDEPO_ClaimedSlipPrinter *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.put_LineSpacing() */
 HRESULT wdepo_claimed_slip_printer_put__line_spacing(WDEPO_ClaimedSlipPrinter *self, uint32_t value);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.get_LineSpacing() */
 HRESULT wdepo_claimed_slip_printer_get__line_spacing(WDEPO_ClaimedSlipPrinter *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.get_LineWidth() */
 HRESULT wdepo_claimed_slip_printer_get__line_width(WDEPO_ClaimedSlipPrinter *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.put_IsLetterQuality() */
 HRESULT wdepo_claimed_slip_printer_put__is_letter_quality(WDEPO_ClaimedSlipPrinter *self, BOOL value);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.get_IsLetterQuality() */
 HRESULT wdepo_claimed_slip_printer_get__is_letter_quality(WDEPO_ClaimedSlipPrinter *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.get_IsPaperNearEnd() */
 HRESULT wdepo_claimed_slip_printer_get__is_paper_near_end(WDEPO_ClaimedSlipPrinter *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.put_ColorCartridge() */
 HRESULT wdepo_claimed_slip_printer_put__color_cartridge(WDEPO_ClaimedSlipPrinter *self, WDEPO_PosPrinterColorCartridge value);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.get_ColorCartridge() */
 HRESULT wdepo_claimed_slip_printer_get__color_cartridge(WDEPO_ClaimedSlipPrinter *self, WDEPO_PosPrinterColorCartridge *value);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.get_IsCoverOpen() */
 HRESULT wdepo_claimed_slip_printer_get__is_cover_open(WDEPO_ClaimedSlipPrinter *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.get_IsCartridgeRemoved() */
 HRESULT wdepo_claimed_slip_printer_get__is_cartridge_removed(WDEPO_ClaimedSlipPrinter *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.get_IsCartridgeEmpty() */
 HRESULT wdepo_claimed_slip_printer_get__is_cartridge_empty(WDEPO_ClaimedSlipPrinter *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.get_IsHeadCleaning() */
 HRESULT wdepo_claimed_slip_printer_get__is_head_cleaning(WDEPO_ClaimedSlipPrinter *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.get_IsPaperEmpty() */
 HRESULT wdepo_claimed_slip_printer_get__is_paper_empty(WDEPO_ClaimedSlipPrinter *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.get_IsReadyToPrint() */
 HRESULT wdepo_claimed_slip_printer_get__is_ready_to_print(WDEPO_ClaimedSlipPrinter *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ClaimedSlipPrinter.ValidateData(data) */
 HRESULT wdepo_claimed_slip_printer_validate_data(WDEPO_ClaimedSlipPrinter *self, cwinrt_hstring data, BOOL *out);
 
-/* Windows.Devices.PointOfService.IBarcodeScannerReportFactory */
-/* Windows.Devices.PointOfService.IBarcodeScannerReportFactory.CreateInstance(scanDataType, scanData, scanDataLabel) */
 HRESULT wdepo_barcode_scanner_report_factory_create_instance(WDEPO_IBarcodeScannerReportFactory *self, uint32_t scanDataType, WSTST_IBuffer* scanData, WSTST_IBuffer* scanDataLabel, WDEPO_BarcodeScannerReport** out);
 
-/* Windows.Devices.PointOfService.IBarcodeScannerStatics */
-/* Windows.Devices.PointOfService.IBarcodeScannerStatics.GetDefaultAsync() */
 HRESULT wdepo_barcode_scanner_statics_get_default_async(WDEPO_IBarcodeScannerStatics *self, WF_IAsyncOperation_WDEPO_BarcodeScanner** out);
 
-/* Windows.Devices.PointOfService.IBarcodeScannerStatics.FromIdAsync(deviceId) */
 HRESULT wdepo_barcode_scanner_statics_from_id_async(WDEPO_IBarcodeScannerStatics *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDEPO_BarcodeScanner** out);
 
-/* Windows.Devices.PointOfService.IBarcodeScannerStatics.GetDeviceSelector() */
 HRESULT wdepo_barcode_scanner_statics_get_device_selector(WDEPO_IBarcodeScannerStatics *self, cwinrt_hstring *out);
 
-/* Windows.Devices.PointOfService.IBarcodeScannerStatics2 */
-/* Windows.Devices.PointOfService.IBarcodeScannerStatics2.GetDeviceSelector(connectionTypes) */
 HRESULT wdepo_barcode_scanner_statics_2_get_device_selector(WDEPO_IBarcodeScannerStatics_2 *self, WDEPO_PosConnectionTypes connectionTypes, cwinrt_hstring *out);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics */
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Unknown() */
 HRESULT wdepo_barcode_symbologies_statics_get__unknown(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Ean8() */
 HRESULT wdepo_barcode_symbologies_statics_get__ean8(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Ean8Add2() */
 HRESULT wdepo_barcode_symbologies_statics_get__ean8_add2(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Ean8Add5() */
 HRESULT wdepo_barcode_symbologies_statics_get__ean8_add5(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Eanv() */
 HRESULT wdepo_barcode_symbologies_statics_get__eanv(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_EanvAdd2() */
 HRESULT wdepo_barcode_symbologies_statics_get__eanv_add2(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_EanvAdd5() */
 HRESULT wdepo_barcode_symbologies_statics_get__eanv_add5(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Ean13() */
 HRESULT wdepo_barcode_symbologies_statics_get__ean13(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Ean13Add2() */
 HRESULT wdepo_barcode_symbologies_statics_get__ean13_add2(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Ean13Add5() */
 HRESULT wdepo_barcode_symbologies_statics_get__ean13_add5(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Isbn() */
 HRESULT wdepo_barcode_symbologies_statics_get__isbn(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_IsbnAdd5() */
 HRESULT wdepo_barcode_symbologies_statics_get__isbn_add5(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Ismn() */
 HRESULT wdepo_barcode_symbologies_statics_get__ismn(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_IsmnAdd2() */
 HRESULT wdepo_barcode_symbologies_statics_get__ismn_add2(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_IsmnAdd5() */
 HRESULT wdepo_barcode_symbologies_statics_get__ismn_add5(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Issn() */
 HRESULT wdepo_barcode_symbologies_statics_get__issn(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_IssnAdd2() */
 HRESULT wdepo_barcode_symbologies_statics_get__issn_add2(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_IssnAdd5() */
 HRESULT wdepo_barcode_symbologies_statics_get__issn_add5(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Ean99() */
 HRESULT wdepo_barcode_symbologies_statics_get__ean99(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Ean99Add2() */
 HRESULT wdepo_barcode_symbologies_statics_get__ean99_add2(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Ean99Add5() */
 HRESULT wdepo_barcode_symbologies_statics_get__ean99_add5(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Upca() */
 HRESULT wdepo_barcode_symbologies_statics_get__upca(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_UpcaAdd2() */
 HRESULT wdepo_barcode_symbologies_statics_get__upca_add2(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_UpcaAdd5() */
 HRESULT wdepo_barcode_symbologies_statics_get__upca_add5(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Upce() */
 HRESULT wdepo_barcode_symbologies_statics_get__upce(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_UpceAdd2() */
 HRESULT wdepo_barcode_symbologies_statics_get__upce_add2(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_UpceAdd5() */
 HRESULT wdepo_barcode_symbologies_statics_get__upce_add5(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_UpcCoupon() */
 HRESULT wdepo_barcode_symbologies_statics_get__upc_coupon(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_TfStd() */
 HRESULT wdepo_barcode_symbologies_statics_get__tf_std(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_TfDis() */
 HRESULT wdepo_barcode_symbologies_statics_get__tf_dis(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_TfInt() */
 HRESULT wdepo_barcode_symbologies_statics_get__tf_int(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_TfInd() */
 HRESULT wdepo_barcode_symbologies_statics_get__tf_ind(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_TfMat() */
 HRESULT wdepo_barcode_symbologies_statics_get__tf_mat(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_TfIata() */
 HRESULT wdepo_barcode_symbologies_statics_get__tf_iata(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Gs1DatabarType1() */
 HRESULT wdepo_barcode_symbologies_statics_get__gs1_databar_type1(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Gs1DatabarType2() */
 HRESULT wdepo_barcode_symbologies_statics_get__gs1_databar_type2(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Gs1DatabarType3() */
 HRESULT wdepo_barcode_symbologies_statics_get__gs1_databar_type3(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Code39() */
 HRESULT wdepo_barcode_symbologies_statics_get__code39(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Code39Ex() */
 HRESULT wdepo_barcode_symbologies_statics_get__code39_ex(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Trioptic39() */
 HRESULT wdepo_barcode_symbologies_statics_get__trioptic39(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Code32() */
 HRESULT wdepo_barcode_symbologies_statics_get__code32(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Pzn() */
 HRESULT wdepo_barcode_symbologies_statics_get__pzn(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Code93() */
 HRESULT wdepo_barcode_symbologies_statics_get__code93(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Code93Ex() */
 HRESULT wdepo_barcode_symbologies_statics_get__code93_ex(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Code128() */
 HRESULT wdepo_barcode_symbologies_statics_get__code128(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Gs1128() */
 HRESULT wdepo_barcode_symbologies_statics_get__gs1128(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Gs1128Coupon() */
 HRESULT wdepo_barcode_symbologies_statics_get__gs1128_coupon(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_UccEan128() */
 HRESULT wdepo_barcode_symbologies_statics_get__ucc_ean128(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Sisac() */
 HRESULT wdepo_barcode_symbologies_statics_get__sisac(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Isbt() */
 HRESULT wdepo_barcode_symbologies_statics_get__isbt(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Codabar() */
 HRESULT wdepo_barcode_symbologies_statics_get__codabar(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Code11() */
 HRESULT wdepo_barcode_symbologies_statics_get__code11(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Msi() */
 HRESULT wdepo_barcode_symbologies_statics_get__msi(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Plessey() */
 HRESULT wdepo_barcode_symbologies_statics_get__plessey(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Telepen() */
 HRESULT wdepo_barcode_symbologies_statics_get__telepen(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Code16k() */
 HRESULT wdepo_barcode_symbologies_statics_get__code16k(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_CodablockA() */
 HRESULT wdepo_barcode_symbologies_statics_get__codablock_a(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_CodablockF() */
 HRESULT wdepo_barcode_symbologies_statics_get__codablock_f(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Codablock128() */
 HRESULT wdepo_barcode_symbologies_statics_get__codablock128(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Code49() */
 HRESULT wdepo_barcode_symbologies_statics_get__code49(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Aztec() */
 HRESULT wdepo_barcode_symbologies_statics_get__aztec(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_DataCode() */
 HRESULT wdepo_barcode_symbologies_statics_get__data_code(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_DataMatrix() */
 HRESULT wdepo_barcode_symbologies_statics_get__data_matrix(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_HanXin() */
 HRESULT wdepo_barcode_symbologies_statics_get__han_xin(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Maxicode() */
 HRESULT wdepo_barcode_symbologies_statics_get__maxicode(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_MicroPdf417() */
 HRESULT wdepo_barcode_symbologies_statics_get__micro_pdf417(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_MicroQr() */
 HRESULT wdepo_barcode_symbologies_statics_get__micro_qr(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Pdf417() */
 HRESULT wdepo_barcode_symbologies_statics_get__pdf417(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Qr() */
 HRESULT wdepo_barcode_symbologies_statics_get__qr(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_MsTag() */
 HRESULT wdepo_barcode_symbologies_statics_get__ms_tag(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Ccab() */
 HRESULT wdepo_barcode_symbologies_statics_get__ccab(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Ccc() */
 HRESULT wdepo_barcode_symbologies_statics_get__ccc(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Tlc39() */
 HRESULT wdepo_barcode_symbologies_statics_get__tlc39(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_AusPost() */
 HRESULT wdepo_barcode_symbologies_statics_get__aus_post(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_CanPost() */
 HRESULT wdepo_barcode_symbologies_statics_get__can_post(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_ChinaPost() */
 HRESULT wdepo_barcode_symbologies_statics_get__china_post(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_DutchKix() */
 HRESULT wdepo_barcode_symbologies_statics_get__dutch_kix(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_InfoMail() */
 HRESULT wdepo_barcode_symbologies_statics_get__info_mail(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_ItalianPost25() */
 HRESULT wdepo_barcode_symbologies_statics_get__italian_post25(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_ItalianPost39() */
 HRESULT wdepo_barcode_symbologies_statics_get__italian_post39(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_JapanPost() */
 HRESULT wdepo_barcode_symbologies_statics_get__japan_post(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_KoreanPost() */
 HRESULT wdepo_barcode_symbologies_statics_get__korean_post(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_SwedenPost() */
 HRESULT wdepo_barcode_symbologies_statics_get__sweden_post(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_UkPost() */
 HRESULT wdepo_barcode_symbologies_statics_get__uk_post(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_UsIntelligent() */
 HRESULT wdepo_barcode_symbologies_statics_get__us_intelligent(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_UsIntelligentPkg() */
 HRESULT wdepo_barcode_symbologies_statics_get__us_intelligent_pkg(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_UsPlanet() */
 HRESULT wdepo_barcode_symbologies_statics_get__us_planet(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_UsPostNet() */
 HRESULT wdepo_barcode_symbologies_statics_get__us_post_net(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Us4StateFics() */
 HRESULT wdepo_barcode_symbologies_statics_get__us4_state_fics(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_OcrA() */
 HRESULT wdepo_barcode_symbologies_statics_get__ocr_a(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_OcrB() */
 HRESULT wdepo_barcode_symbologies_statics_get__ocr_b(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_Micr() */
 HRESULT wdepo_barcode_symbologies_statics_get__micr(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.get_ExtendedBase() */
 HRESULT wdepo_barcode_symbologies_statics_get__extended_base(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics.GetName(scanDataType) */
 HRESULT wdepo_barcode_symbologies_statics_get_name(WDEPO_IBarcodeSymbologiesStatics *self, uint32_t scanDataType, cwinrt_hstring *out);
 
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics2 */
-/* Windows.Devices.PointOfService.IBarcodeSymbologiesStatics2.get_Gs1DWCode() */
 HRESULT wdepo_barcode_symbologies_statics_2_get__gs1_d_w_code(WDEPO_IBarcodeSymbologiesStatics_2 *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.ICashDrawerStatics */
-/* Windows.Devices.PointOfService.ICashDrawerStatics.GetDefaultAsync() */
 HRESULT wdepo_cash_drawer_statics_get_default_async(WDEPO_ICashDrawerStatics *self, WF_IAsyncOperation_WDEPO_CashDrawer** out);
 
-/* Windows.Devices.PointOfService.ICashDrawerStatics.FromIdAsync(deviceId) */
 HRESULT wdepo_cash_drawer_statics_from_id_async(WDEPO_ICashDrawerStatics *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDEPO_CashDrawer** out);
 
-/* Windows.Devices.PointOfService.ICashDrawerStatics.GetDeviceSelector() */
 HRESULT wdepo_cash_drawer_statics_get_device_selector(WDEPO_ICashDrawerStatics *self, cwinrt_hstring *out);
 
-/* Windows.Devices.PointOfService.ICashDrawerStatics2 */
-/* Windows.Devices.PointOfService.ICashDrawerStatics2.GetDeviceSelector(connectionTypes) */
 HRESULT wdepo_cash_drawer_statics_2_get_device_selector(WDEPO_ICashDrawerStatics_2 *self, WDEPO_PosConnectionTypes connectionTypes, cwinrt_hstring *out);
 
-/* Windows.Devices.PointOfService.IClaimedLineDisplayStatics */
-/* Windows.Devices.PointOfService.IClaimedLineDisplayStatics.FromIdAsync(deviceId) */
 HRESULT wdepo_claimed_line_display_statics_from_id_async(WDEPO_IClaimedLineDisplayStatics *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDEPO_ClaimedLineDisplay** out);
 
-/* Windows.Devices.PointOfService.IClaimedLineDisplayStatics.GetDeviceSelector() */
 HRESULT wdepo_claimed_line_display_statics_get_device_selector(WDEPO_IClaimedLineDisplayStatics *self, cwinrt_hstring *out);
 
-/* Windows.Devices.PointOfService.IClaimedLineDisplayStatics.GetDeviceSelector(connectionTypes) */
 HRESULT wdepo_claimed_line_display_statics_get_device_selector_pos_connection_types_str(WDEPO_IClaimedLineDisplayStatics *self, WDEPO_PosConnectionTypes connectionTypes, cwinrt_hstring *out);
 
-/* Windows.Devices.PointOfService.ILineDisplayStatics */
-/* Windows.Devices.PointOfService.ILineDisplayStatics.FromIdAsync(deviceId) */
 HRESULT wdepo_line_display_statics_from_id_async(WDEPO_ILineDisplayStatics *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDEPO_LineDisplay** out);
 
-/* Windows.Devices.PointOfService.ILineDisplayStatics.GetDefaultAsync() */
 HRESULT wdepo_line_display_statics_get_default_async(WDEPO_ILineDisplayStatics *self, WF_IAsyncOperation_WDEPO_LineDisplay** out);
 
-/* Windows.Devices.PointOfService.ILineDisplayStatics.GetDeviceSelector() */
 HRESULT wdepo_line_display_statics_get_device_selector(WDEPO_ILineDisplayStatics *self, cwinrt_hstring *out);
 
-/* Windows.Devices.PointOfService.ILineDisplayStatics.GetDeviceSelector(connectionTypes) */
 HRESULT wdepo_line_display_statics_get_device_selector_pos_connection_types_str(WDEPO_ILineDisplayStatics *self, WDEPO_PosConnectionTypes connectionTypes, cwinrt_hstring *out);
 
-/* Windows.Devices.PointOfService.ILineDisplayStatics2 */
-/* Windows.Devices.PointOfService.ILineDisplayStatics2.get_StatisticsCategorySelector() */
 HRESULT wdepo_line_display_statics_2_get__statistics_category_selector(WDEPO_ILineDisplayStatics_2 *self, WDEPO_LineDisplayStatisticsCategorySelector** value);
 
-/* Windows.Devices.PointOfService.IMagneticStripeReaderCardTypesStatics */
-/* Windows.Devices.PointOfService.IMagneticStripeReaderCardTypesStatics.get_Unknown() */
 HRESULT wdepo_magnetic_stripe_reader_card_types_statics_get__unknown(WDEPO_IMagneticStripeReaderCardTypesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IMagneticStripeReaderCardTypesStatics.get_Bank() */
 HRESULT wdepo_magnetic_stripe_reader_card_types_statics_get__bank(WDEPO_IMagneticStripeReaderCardTypesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IMagneticStripeReaderCardTypesStatics.get_Aamva() */
 HRESULT wdepo_magnetic_stripe_reader_card_types_statics_get__aamva(WDEPO_IMagneticStripeReaderCardTypesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IMagneticStripeReaderCardTypesStatics.get_ExtendedBase() */
 HRESULT wdepo_magnetic_stripe_reader_card_types_statics_get__extended_base(WDEPO_IMagneticStripeReaderCardTypesStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IMagneticStripeReaderEncryptionAlgorithmsStatics */
-/* Windows.Devices.PointOfService.IMagneticStripeReaderEncryptionAlgorithmsStatics.get_None() */
 HRESULT wdepo_magnetic_stripe_reader_encryption_algorithms_statics_get__none(WDEPO_IMagneticStripeReaderEncryptionAlgorithmsStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IMagneticStripeReaderEncryptionAlgorithmsStatics.get_TripleDesDukpt() */
 HRESULT wdepo_magnetic_stripe_reader_encryption_algorithms_statics_get__triple_des_dukpt(WDEPO_IMagneticStripeReaderEncryptionAlgorithmsStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IMagneticStripeReaderEncryptionAlgorithmsStatics.get_ExtendedBase() */
 HRESULT wdepo_magnetic_stripe_reader_encryption_algorithms_statics_get__extended_base(WDEPO_IMagneticStripeReaderEncryptionAlgorithmsStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IMagneticStripeReaderStatics */
-/* Windows.Devices.PointOfService.IMagneticStripeReaderStatics.GetDefaultAsync() */
 HRESULT wdepo_magnetic_stripe_reader_statics_get_default_async(WDEPO_IMagneticStripeReaderStatics *self, WF_IAsyncOperation_WDEPO_MagneticStripeReader** out);
 
-/* Windows.Devices.PointOfService.IMagneticStripeReaderStatics.FromIdAsync(deviceId) */
 HRESULT wdepo_magnetic_stripe_reader_statics_from_id_async(WDEPO_IMagneticStripeReaderStatics *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDEPO_MagneticStripeReader** out);
 
-/* Windows.Devices.PointOfService.IMagneticStripeReaderStatics.GetDeviceSelector() */
 HRESULT wdepo_magnetic_stripe_reader_statics_get_device_selector(WDEPO_IMagneticStripeReaderStatics *self, cwinrt_hstring *out);
 
-/* Windows.Devices.PointOfService.IMagneticStripeReaderStatics2 */
-/* Windows.Devices.PointOfService.IMagneticStripeReaderStatics2.GetDeviceSelector(connectionTypes) */
 HRESULT wdepo_magnetic_stripe_reader_statics_2_get_device_selector(WDEPO_IMagneticStripeReaderStatics_2 *self, WDEPO_PosConnectionTypes connectionTypes, cwinrt_hstring *out);
 
-/* Windows.Devices.PointOfService.IPosPrinterCharacterSetIdsStatics */
-/* Windows.Devices.PointOfService.IPosPrinterCharacterSetIdsStatics.get_Utf16LE() */
 HRESULT wdepo_pos_printer_character_set_ids_statics_get__utf16_l_e(WDEPO_IPosPrinterCharacterSetIdsStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IPosPrinterCharacterSetIdsStatics.get_Ascii() */
 HRESULT wdepo_pos_printer_character_set_ids_statics_get__ascii(WDEPO_IPosPrinterCharacterSetIdsStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IPosPrinterCharacterSetIdsStatics.get_Ansi() */
 HRESULT wdepo_pos_printer_character_set_ids_statics_get__ansi(WDEPO_IPosPrinterCharacterSetIdsStatics *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.IPosPrinterStatics */
-/* Windows.Devices.PointOfService.IPosPrinterStatics.GetDefaultAsync() */
 HRESULT wdepo_pos_printer_statics_get_default_async(WDEPO_IPosPrinterStatics *self, WF_IAsyncOperation_WDEPO_PosPrinter** out);
 
-/* Windows.Devices.PointOfService.IPosPrinterStatics.FromIdAsync(deviceId) */
 HRESULT wdepo_pos_printer_statics_from_id_async(WDEPO_IPosPrinterStatics *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDEPO_PosPrinter** out);
 
-/* Windows.Devices.PointOfService.IPosPrinterStatics.GetDeviceSelector() */
 HRESULT wdepo_pos_printer_statics_get_device_selector(WDEPO_IPosPrinterStatics *self, cwinrt_hstring *out);
 
-/* Windows.Devices.PointOfService.IPosPrinterStatics2 */
-/* Windows.Devices.PointOfService.IPosPrinterStatics2.GetDeviceSelector(connectionTypes) */
 HRESULT wdepo_pos_printer_statics_2_get_device_selector(WDEPO_IPosPrinterStatics_2 *self, WDEPO_PosConnectionTypes connectionTypes, cwinrt_hstring *out);
 
-/* Windows.Devices.PointOfService.IUnifiedPosErrorDataFactory */
-/* Windows.Devices.PointOfService.IUnifiedPosErrorDataFactory.CreateInstance(message, severity, reason, extendedReason) */
 HRESULT wdepo_unified_pos_error_data_factory_create_instance(WDEPO_IUnifiedPosErrorDataFactory *self, cwinrt_hstring message, WDEPO_UnifiedPosErrorSeverity severity, WDEPO_UnifiedPosErrorReason reason, uint32_t extendedReason, WDEPO_UnifiedPosErrorData** out);
 
-/* activate Windows.Devices.PointOfService.JournalPrintJob */
 HRESULT wdepo_journal_print_job_new(WDEPO_JournalPrintJob **out);
 
-/* Windows.Devices.PointOfService.JournalPrintJob */
-/* Windows.Devices.PointOfService.JournalPrintJob.Print(data, printOptions) */
 HRESULT wdepo_journal_print_job_print_str_p(WDEPO_JournalPrintJob *self, cwinrt_hstring data, WDEPO_PosPrinterPrintOptions* printOptions);
 
-/* Windows.Devices.PointOfService.JournalPrintJob.FeedPaperByLine(lineCount) */
 HRESULT wdepo_journal_print_job_feed_paper_by_line(WDEPO_JournalPrintJob *self, int32_t lineCount);
 
-/* Windows.Devices.PointOfService.JournalPrintJob.FeedPaperByMapModeUnit(distance) */
 HRESULT wdepo_journal_print_job_feed_paper_by_map_mode_unit(WDEPO_JournalPrintJob *self, int32_t distance);
 
-/* Windows.Devices.PointOfService.JournalPrintJob.Print(data) */
 HRESULT wdepo_journal_print_job_print(WDEPO_JournalPrintJob *self, cwinrt_hstring data);
 
-/* Windows.Devices.PointOfService.JournalPrintJob.PrintLine(data) */
 HRESULT wdepo_journal_print_job_print_line_str(WDEPO_JournalPrintJob *self, cwinrt_hstring data);
 
-/* Windows.Devices.PointOfService.JournalPrintJob.PrintLine() */
 HRESULT wdepo_journal_print_job_print_line(WDEPO_JournalPrintJob *self);
 
-/* Windows.Devices.PointOfService.JournalPrintJob.ExecuteAsync() */
 HRESULT wdepo_journal_print_job_execute_async(WDEPO_JournalPrintJob *self, WF_IAsyncOperation_Bool** out);
 
-/* activate Windows.Devices.PointOfService.JournalPrinterCapabilities */
 HRESULT wdepo_journal_printer_capabilities_new(WDEPO_JournalPrinterCapabilities **out);
 
-/* Windows.Devices.PointOfService.JournalPrinterCapabilities */
-/* Windows.Devices.PointOfService.JournalPrinterCapabilities.get_IsReverseVideoSupported() */
 HRESULT wdepo_journal_printer_capabilities_get__is_reverse_video_supported(WDEPO_JournalPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.JournalPrinterCapabilities.get_IsStrikethroughSupported() */
 HRESULT wdepo_journal_printer_capabilities_get__is_strikethrough_supported(WDEPO_JournalPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.JournalPrinterCapabilities.get_IsSuperscriptSupported() */
 HRESULT wdepo_journal_printer_capabilities_get__is_superscript_supported(WDEPO_JournalPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.JournalPrinterCapabilities.get_IsSubscriptSupported() */
 HRESULT wdepo_journal_printer_capabilities_get__is_subscript_supported(WDEPO_JournalPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.JournalPrinterCapabilities.get_IsReversePaperFeedByLineSupported() */
 HRESULT wdepo_journal_printer_capabilities_get__is_reverse_paper_feed_by_line_supported(WDEPO_JournalPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.JournalPrinterCapabilities.get_IsReversePaperFeedByMapModeUnitSupported() */
 HRESULT wdepo_journal_printer_capabilities_get__is_reverse_paper_feed_by_map_mode_unit_supported(WDEPO_JournalPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.JournalPrinterCapabilities.get_IsPrinterPresent() */
 HRESULT wdepo_journal_printer_capabilities_get__is_printer_present(WDEPO_JournalPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.JournalPrinterCapabilities.get_IsDualColorSupported() */
 HRESULT wdepo_journal_printer_capabilities_get__is_dual_color_supported(WDEPO_JournalPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.JournalPrinterCapabilities.get_ColorCartridgeCapabilities() */
 HRESULT wdepo_journal_printer_capabilities_get__color_cartridge_capabilities(WDEPO_JournalPrinterCapabilities *self, WDEPO_PosPrinterColorCapabilities *value);
 
-/* Windows.Devices.PointOfService.JournalPrinterCapabilities.get_CartridgeSensors() */
 HRESULT wdepo_journal_printer_capabilities_get__cartridge_sensors(WDEPO_JournalPrinterCapabilities *self, WDEPO_PosPrinterCartridgeSensors *value);
 
-/* Windows.Devices.PointOfService.JournalPrinterCapabilities.get_IsBoldSupported() */
 HRESULT wdepo_journal_printer_capabilities_get__is_bold_supported(WDEPO_JournalPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.JournalPrinterCapabilities.get_IsItalicSupported() */
 HRESULT wdepo_journal_printer_capabilities_get__is_italic_supported(WDEPO_JournalPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.JournalPrinterCapabilities.get_IsUnderlineSupported() */
 HRESULT wdepo_journal_printer_capabilities_get__is_underline_supported(WDEPO_JournalPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.JournalPrinterCapabilities.get_IsDoubleHighPrintSupported() */
 HRESULT wdepo_journal_printer_capabilities_get__is_double_high_print_supported(WDEPO_JournalPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.JournalPrinterCapabilities.get_IsDoubleWidePrintSupported() */
 HRESULT wdepo_journal_printer_capabilities_get__is_double_wide_print_supported(WDEPO_JournalPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.JournalPrinterCapabilities.get_IsDoubleHighDoubleWidePrintSupported() */
 HRESULT wdepo_journal_printer_capabilities_get__is_double_high_double_wide_print_supported(WDEPO_JournalPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.JournalPrinterCapabilities.get_IsPaperEmptySensorSupported() */
 HRESULT wdepo_journal_printer_capabilities_get__is_paper_empty_sensor_supported(WDEPO_JournalPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.JournalPrinterCapabilities.get_IsPaperNearEndSensorSupported() */
 HRESULT wdepo_journal_printer_capabilities_get__is_paper_near_end_sensor_supported(WDEPO_JournalPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.JournalPrinterCapabilities.get_SupportedCharactersPerLine() */
 HRESULT wdepo_journal_printer_capabilities_get__supported_characters_per_line(WDEPO_JournalPrinterCapabilities *self, WFOCO_IVectorView_uint32_t** value);
 
-/* activate Windows.Devices.PointOfService.LineDisplay */
 HRESULT wdepo_line_display_new(WDEPO_LineDisplay **out);
 
-/* Windows.Devices.PointOfService.LineDisplay */
-/* Windows.Devices.PointOfService.LineDisplay.get_DeviceId() */
 HRESULT wdepo_line_display_get__device_id(WDEPO_LineDisplay *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.LineDisplay.get_Capabilities() */
 HRESULT wdepo_line_display_get__capabilities(WDEPO_LineDisplay *self, WDEPO_LineDisplayCapabilities** value);
 
-/* Windows.Devices.PointOfService.LineDisplay.get_PhysicalDeviceName() */
 HRESULT wdepo_line_display_get__physical_device_name(WDEPO_LineDisplay *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.LineDisplay.get_PhysicalDeviceDescription() */
 HRESULT wdepo_line_display_get__physical_device_description(WDEPO_LineDisplay *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.LineDisplay.get_DeviceControlDescription() */
 HRESULT wdepo_line_display_get__device_control_description(WDEPO_LineDisplay *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.LineDisplay.get_DeviceControlVersion() */
 HRESULT wdepo_line_display_get__device_control_version(WDEPO_LineDisplay *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.LineDisplay.get_DeviceServiceVersion() */
 HRESULT wdepo_line_display_get__device_service_version(WDEPO_LineDisplay *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.LineDisplay.ClaimAsync() */
 HRESULT wdepo_line_display_claim_async(WDEPO_LineDisplay *self, WF_IAsyncOperation_WDEPO_ClaimedLineDisplay** out);
 
-/* Windows.Devices.PointOfService.LineDisplay.CheckPowerStatusAsync() */
 HRESULT wdepo_line_display_check_power_status_async(WDEPO_LineDisplay *self, WF_IAsyncOperation_WDEPO_LineDisplayPowerStatus** out);
 
-/* Windows.Devices.PointOfService.LineDisplay.Close() */
 HRESULT wdepo_line_display_close(WDEPO_LineDisplay *self);
 
-/* Windows.Devices.PointOfService.LineDisplay.get_StatisticsCategorySelector() */
 HRESULT wdepo_line_display_get__statistics_category_selector(WDEPO_LineDisplayStatisticsCategorySelector** value);
 
-/* Windows.Devices.PointOfService.LineDisplay.FromIdAsync(deviceId) */
 HRESULT wdepo_line_display_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDEPO_LineDisplay** out);
 
-/* Windows.Devices.PointOfService.LineDisplay.GetDefaultAsync() */
 HRESULT wdepo_line_display_get_default_async(WF_IAsyncOperation_WDEPO_LineDisplay** out);
 
-/* Windows.Devices.PointOfService.LineDisplay.GetDeviceSelector() */
 HRESULT wdepo_line_display_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Devices.PointOfService.LineDisplay.GetDeviceSelector(connectionTypes) */
 HRESULT wdepo_line_display_get_device_selector_pos_connection_types_str(WDEPO_PosConnectionTypes connectionTypes, cwinrt_hstring *out);
 
-/* activate Windows.Devices.PointOfService.LineDisplayAttributes */
 HRESULT wdepo_line_display_attributes_new(WDEPO_LineDisplayAttributes **out);
 
-/* Windows.Devices.PointOfService.LineDisplayAttributes */
-/* Windows.Devices.PointOfService.LineDisplayAttributes.get_IsPowerNotifyEnabled() */
 HRESULT wdepo_line_display_attributes_get__is_power_notify_enabled(WDEPO_LineDisplayAttributes *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.LineDisplayAttributes.put_IsPowerNotifyEnabled() */
 HRESULT wdepo_line_display_attributes_put__is_power_notify_enabled(WDEPO_LineDisplayAttributes *self, BOOL value);
 
-/* Windows.Devices.PointOfService.LineDisplayAttributes.get_Brightness() */
 HRESULT wdepo_line_display_attributes_get__brightness(WDEPO_LineDisplayAttributes *self, int32_t *value);
 
-/* Windows.Devices.PointOfService.LineDisplayAttributes.put_Brightness() */
 HRESULT wdepo_line_display_attributes_put__brightness(WDEPO_LineDisplayAttributes *self, int32_t value);
 
-/* Windows.Devices.PointOfService.LineDisplayAttributes.get_BlinkRate() */
 HRESULT wdepo_line_display_attributes_get__blink_rate(WDEPO_LineDisplayAttributes *self, WF_TimeSpan *value);
 
-/* Windows.Devices.PointOfService.LineDisplayAttributes.put_BlinkRate() */
 HRESULT wdepo_line_display_attributes_put__blink_rate(WDEPO_LineDisplayAttributes *self, WF_TimeSpan value);
 
-/* Windows.Devices.PointOfService.LineDisplayAttributes.get_ScreenSizeInCharacters() */
 HRESULT wdepo_line_display_attributes_get__screen_size_in_characters(WDEPO_LineDisplayAttributes *self, WF_Size *value);
 
-/* Windows.Devices.PointOfService.LineDisplayAttributes.put_ScreenSizeInCharacters() */
 HRESULT wdepo_line_display_attributes_put__screen_size_in_characters(WDEPO_LineDisplayAttributes *self, WF_Size value);
 
-/* Windows.Devices.PointOfService.LineDisplayAttributes.get_CharacterSet() */
 HRESULT wdepo_line_display_attributes_get__character_set(WDEPO_LineDisplayAttributes *self, int32_t *value);
 
-/* Windows.Devices.PointOfService.LineDisplayAttributes.put_CharacterSet() */
 HRESULT wdepo_line_display_attributes_put__character_set(WDEPO_LineDisplayAttributes *self, int32_t value);
 
-/* Windows.Devices.PointOfService.LineDisplayAttributes.get_IsCharacterSetMappingEnabled() */
 HRESULT wdepo_line_display_attributes_get__is_character_set_mapping_enabled(WDEPO_LineDisplayAttributes *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.LineDisplayAttributes.put_IsCharacterSetMappingEnabled() */
 HRESULT wdepo_line_display_attributes_put__is_character_set_mapping_enabled(WDEPO_LineDisplayAttributes *self, BOOL value);
 
-/* Windows.Devices.PointOfService.LineDisplayAttributes.get_CurrentWindow() */
 HRESULT wdepo_line_display_attributes_get__current_window(WDEPO_LineDisplayAttributes *self, WDEPO_LineDisplayWindow** value);
 
-/* Windows.Devices.PointOfService.LineDisplayAttributes.put_CurrentWindow() */
 HRESULT wdepo_line_display_attributes_put__current_window(WDEPO_LineDisplayAttributes *self, WDEPO_LineDisplayWindow* value);
 
-/* activate Windows.Devices.PointOfService.LineDisplayCapabilities */
 HRESULT wdepo_line_display_capabilities_new(WDEPO_LineDisplayCapabilities **out);
 
-/* Windows.Devices.PointOfService.LineDisplayCapabilities */
-/* Windows.Devices.PointOfService.LineDisplayCapabilities.get_IsStatisticsReportingSupported() */
 HRESULT wdepo_line_display_capabilities_get__is_statistics_reporting_supported(WDEPO_LineDisplayCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.LineDisplayCapabilities.get_IsStatisticsUpdatingSupported() */
 HRESULT wdepo_line_display_capabilities_get__is_statistics_updating_supported(WDEPO_LineDisplayCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.LineDisplayCapabilities.get_PowerReportingType() */
 HRESULT wdepo_line_display_capabilities_get__power_reporting_type(WDEPO_LineDisplayCapabilities *self, WDEPO_UnifiedPosPowerReportingType *value);
 
-/* Windows.Devices.PointOfService.LineDisplayCapabilities.get_CanChangeScreenSize() */
 HRESULT wdepo_line_display_capabilities_get__can_change_screen_size(WDEPO_LineDisplayCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.LineDisplayCapabilities.get_CanDisplayBitmaps() */
 HRESULT wdepo_line_display_capabilities_get__can_display_bitmaps(WDEPO_LineDisplayCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.LineDisplayCapabilities.get_CanReadCharacterAtCursor() */
 HRESULT wdepo_line_display_capabilities_get__can_read_character_at_cursor(WDEPO_LineDisplayCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.LineDisplayCapabilities.get_CanMapCharacterSets() */
 HRESULT wdepo_line_display_capabilities_get__can_map_character_sets(WDEPO_LineDisplayCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.LineDisplayCapabilities.get_CanDisplayCustomGlyphs() */
 HRESULT wdepo_line_display_capabilities_get__can_display_custom_glyphs(WDEPO_LineDisplayCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.LineDisplayCapabilities.get_CanReverse() */
 HRESULT wdepo_line_display_capabilities_get__can_reverse(WDEPO_LineDisplayCapabilities *self, WDEPO_LineDisplayTextAttributeGranularity *value);
 
-/* Windows.Devices.PointOfService.LineDisplayCapabilities.get_CanBlink() */
 HRESULT wdepo_line_display_capabilities_get__can_blink(WDEPO_LineDisplayCapabilities *self, WDEPO_LineDisplayTextAttributeGranularity *value);
 
-/* Windows.Devices.PointOfService.LineDisplayCapabilities.get_CanChangeBlinkRate() */
 HRESULT wdepo_line_display_capabilities_get__can_change_blink_rate(WDEPO_LineDisplayCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.LineDisplayCapabilities.get_IsBrightnessSupported() */
 HRESULT wdepo_line_display_capabilities_get__is_brightness_supported(WDEPO_LineDisplayCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.LineDisplayCapabilities.get_IsCursorSupported() */
 HRESULT wdepo_line_display_capabilities_get__is_cursor_supported(WDEPO_LineDisplayCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.LineDisplayCapabilities.get_IsHorizontalMarqueeSupported() */
 HRESULT wdepo_line_display_capabilities_get__is_horizontal_marquee_supported(WDEPO_LineDisplayCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.LineDisplayCapabilities.get_IsVerticalMarqueeSupported() */
 HRESULT wdepo_line_display_capabilities_get__is_vertical_marquee_supported(WDEPO_LineDisplayCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.LineDisplayCapabilities.get_IsInterCharacterWaitSupported() */
 HRESULT wdepo_line_display_capabilities_get__is_inter_character_wait_supported(WDEPO_LineDisplayCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.LineDisplayCapabilities.get_SupportedDescriptors() */
 HRESULT wdepo_line_display_capabilities_get__supported_descriptors(WDEPO_LineDisplayCapabilities *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.LineDisplayCapabilities.get_SupportedWindows() */
 HRESULT wdepo_line_display_capabilities_get__supported_windows(WDEPO_LineDisplayCapabilities *self, uint32_t *value);
 
-/* activate Windows.Devices.PointOfService.LineDisplayCursor */
 HRESULT wdepo_line_display_cursor_new(WDEPO_LineDisplayCursor **out);
 
-/* Windows.Devices.PointOfService.LineDisplayCursor */
-/* Windows.Devices.PointOfService.LineDisplayCursor.get_CanCustomize() */
 HRESULT wdepo_line_display_cursor_get__can_customize(WDEPO_LineDisplayCursor *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.LineDisplayCursor.get_IsBlinkSupported() */
 HRESULT wdepo_line_display_cursor_get__is_blink_supported(WDEPO_LineDisplayCursor *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.LineDisplayCursor.get_IsBlockSupported() */
 HRESULT wdepo_line_display_cursor_get__is_block_supported(WDEPO_LineDisplayCursor *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.LineDisplayCursor.get_IsHalfBlockSupported() */
 HRESULT wdepo_line_display_cursor_get__is_half_block_supported(WDEPO_LineDisplayCursor *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.LineDisplayCursor.get_IsUnderlineSupported() */
 HRESULT wdepo_line_display_cursor_get__is_underline_supported(WDEPO_LineDisplayCursor *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.LineDisplayCursor.get_IsReverseSupported() */
 HRESULT wdepo_line_display_cursor_get__is_reverse_supported(WDEPO_LineDisplayCursor *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.LineDisplayCursor.get_IsOtherSupported() */
 HRESULT wdepo_line_display_cursor_get__is_other_supported(WDEPO_LineDisplayCursor *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.LineDisplayCursor.GetAttributes() */
 HRESULT wdepo_line_display_cursor_get_attributes(WDEPO_LineDisplayCursor *self, WDEPO_LineDisplayCursorAttributes** out);
 
-/* Windows.Devices.PointOfService.LineDisplayCursor.TryUpdateAttributesAsync(attributes) */
 HRESULT wdepo_line_display_cursor_try_update_attributes_async(WDEPO_LineDisplayCursor *self, WDEPO_LineDisplayCursorAttributes* attributes, WF_IAsyncOperation_Bool** out);
 
-/* activate Windows.Devices.PointOfService.LineDisplayCursorAttributes */
 HRESULT wdepo_line_display_cursor_attributes_new(WDEPO_LineDisplayCursorAttributes **out);
 
-/* Windows.Devices.PointOfService.LineDisplayCursorAttributes */
-/* Windows.Devices.PointOfService.LineDisplayCursorAttributes.get_IsBlinkEnabled() */
 HRESULT wdepo_line_display_cursor_attributes_get__is_blink_enabled(WDEPO_LineDisplayCursorAttributes *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.LineDisplayCursorAttributes.put_IsBlinkEnabled() */
 HRESULT wdepo_line_display_cursor_attributes_put__is_blink_enabled(WDEPO_LineDisplayCursorAttributes *self, BOOL value);
 
-/* Windows.Devices.PointOfService.LineDisplayCursorAttributes.get_CursorType() */
 HRESULT wdepo_line_display_cursor_attributes_get__cursor_type(WDEPO_LineDisplayCursorAttributes *self, WDEPO_LineDisplayCursorType *value);
 
-/* Windows.Devices.PointOfService.LineDisplayCursorAttributes.put_CursorType() */
 HRESULT wdepo_line_display_cursor_attributes_put__cursor_type(WDEPO_LineDisplayCursorAttributes *self, WDEPO_LineDisplayCursorType value);
 
-/* Windows.Devices.PointOfService.LineDisplayCursorAttributes.get_IsAutoAdvanceEnabled() */
 HRESULT wdepo_line_display_cursor_attributes_get__is_auto_advance_enabled(WDEPO_LineDisplayCursorAttributes *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.LineDisplayCursorAttributes.put_IsAutoAdvanceEnabled() */
 HRESULT wdepo_line_display_cursor_attributes_put__is_auto_advance_enabled(WDEPO_LineDisplayCursorAttributes *self, BOOL value);
 
-/* Windows.Devices.PointOfService.LineDisplayCursorAttributes.get_Position() */
 HRESULT wdepo_line_display_cursor_attributes_get__position(WDEPO_LineDisplayCursorAttributes *self, WF_Point *value);
 
-/* Windows.Devices.PointOfService.LineDisplayCursorAttributes.put_Position() */
 HRESULT wdepo_line_display_cursor_attributes_put__position(WDEPO_LineDisplayCursorAttributes *self, WF_Point value);
 
-/* activate Windows.Devices.PointOfService.LineDisplayCustomGlyphs */
 HRESULT wdepo_line_display_custom_glyphs_new(WDEPO_LineDisplayCustomGlyphs **out);
 
-/* Windows.Devices.PointOfService.LineDisplayCustomGlyphs */
-/* Windows.Devices.PointOfService.LineDisplayCustomGlyphs.get_SizeInPixels() */
 HRESULT wdepo_line_display_custom_glyphs_get__size_in_pixels(WDEPO_LineDisplayCustomGlyphs *self, WF_Size *value);
 
-/* Windows.Devices.PointOfService.LineDisplayCustomGlyphs.get_SupportedGlyphCodes() */
 HRESULT wdepo_line_display_custom_glyphs_get__supported_glyph_codes(WDEPO_LineDisplayCustomGlyphs *self, WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Devices.PointOfService.LineDisplayCustomGlyphs.TryRedefineAsync(glyphCode, glyphData) */
 HRESULT wdepo_line_display_custom_glyphs_try_redefine_async(WDEPO_LineDisplayCustomGlyphs *self, uint32_t glyphCode, WSTST_IBuffer* glyphData, WF_IAsyncOperation_Bool** out);
 
-/* activate Windows.Devices.PointOfService.LineDisplayMarquee */
 HRESULT wdepo_line_display_marquee_new(WDEPO_LineDisplayMarquee **out);
 
-/* Windows.Devices.PointOfService.LineDisplayMarquee */
-/* Windows.Devices.PointOfService.LineDisplayMarquee.get_Format() */
 HRESULT wdepo_line_display_marquee_get__format(WDEPO_LineDisplayMarquee *self, WDEPO_LineDisplayMarqueeFormat *value);
 
-/* Windows.Devices.PointOfService.LineDisplayMarquee.put_Format() */
 HRESULT wdepo_line_display_marquee_put__format(WDEPO_LineDisplayMarquee *self, WDEPO_LineDisplayMarqueeFormat value);
 
-/* Windows.Devices.PointOfService.LineDisplayMarquee.get_RepeatWaitInterval() */
 HRESULT wdepo_line_display_marquee_get__repeat_wait_interval(WDEPO_LineDisplayMarquee *self, WF_TimeSpan *value);
 
-/* Windows.Devices.PointOfService.LineDisplayMarquee.put_RepeatWaitInterval() */
 HRESULT wdepo_line_display_marquee_put__repeat_wait_interval(WDEPO_LineDisplayMarquee *self, WF_TimeSpan value);
 
-/* Windows.Devices.PointOfService.LineDisplayMarquee.get_ScrollWaitInterval() */
 HRESULT wdepo_line_display_marquee_get__scroll_wait_interval(WDEPO_LineDisplayMarquee *self, WF_TimeSpan *value);
 
-/* Windows.Devices.PointOfService.LineDisplayMarquee.put_ScrollWaitInterval() */
 HRESULT wdepo_line_display_marquee_put__scroll_wait_interval(WDEPO_LineDisplayMarquee *self, WF_TimeSpan value);
 
-/* Windows.Devices.PointOfService.LineDisplayMarquee.TryStartScrollingAsync(direction) */
 HRESULT wdepo_line_display_marquee_try_start_scrolling_async(WDEPO_LineDisplayMarquee *self, WDEPO_LineDisplayScrollDirection direction, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.LineDisplayMarquee.TryStopScrollingAsync() */
 HRESULT wdepo_line_display_marquee_try_stop_scrolling_async(WDEPO_LineDisplayMarquee *self, WF_IAsyncOperation_Bool** out);
 
-/* activate Windows.Devices.PointOfService.LineDisplayStatisticsCategorySelector */
 HRESULT wdepo_line_display_statistics_category_selector_new(WDEPO_LineDisplayStatisticsCategorySelector **out);
 
-/* Windows.Devices.PointOfService.LineDisplayStatisticsCategorySelector */
-/* Windows.Devices.PointOfService.LineDisplayStatisticsCategorySelector.get_AllStatistics() */
 HRESULT wdepo_line_display_statistics_category_selector_get__all_statistics(WDEPO_LineDisplayStatisticsCategorySelector *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.LineDisplayStatisticsCategorySelector.get_UnifiedPosStatistics() */
 HRESULT wdepo_line_display_statistics_category_selector_get__unified_pos_statistics(WDEPO_LineDisplayStatisticsCategorySelector *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.LineDisplayStatisticsCategorySelector.get_ManufacturerStatistics() */
 HRESULT wdepo_line_display_statistics_category_selector_get__manufacturer_statistics(WDEPO_LineDisplayStatisticsCategorySelector *self, cwinrt_hstring *value);
 
-/* activate Windows.Devices.PointOfService.LineDisplayStatusUpdatedEventArgs */
 HRESULT wdepo_line_display_status_updated_event_args_new(WDEPO_LineDisplayStatusUpdatedEventArgs **out);
 
-/* Windows.Devices.PointOfService.LineDisplayStatusUpdatedEventArgs */
-/* Windows.Devices.PointOfService.LineDisplayStatusUpdatedEventArgs.get_Status() */
 HRESULT wdepo_line_display_status_updated_event_args_get__status(WDEPO_LineDisplayStatusUpdatedEventArgs *self, WDEPO_LineDisplayPowerStatus *value);
 
-/* activate Windows.Devices.PointOfService.LineDisplayStoredBitmap */
 HRESULT wdepo_line_display_stored_bitmap_new(WDEPO_LineDisplayStoredBitmap **out);
 
-/* Windows.Devices.PointOfService.LineDisplayStoredBitmap */
-/* Windows.Devices.PointOfService.LineDisplayStoredBitmap.get_EscapeSequence() */
 HRESULT wdepo_line_display_stored_bitmap_get__escape_sequence(WDEPO_LineDisplayStoredBitmap *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.LineDisplayStoredBitmap.TryDeleteAsync() */
 HRESULT wdepo_line_display_stored_bitmap_try_delete_async(WDEPO_LineDisplayStoredBitmap *self, WF_IAsyncOperation_Bool** out);
 
-/* activate Windows.Devices.PointOfService.LineDisplayWindow */
 HRESULT wdepo_line_display_window_new(WDEPO_LineDisplayWindow **out);
 
-/* Windows.Devices.PointOfService.LineDisplayWindow */
-/* Windows.Devices.PointOfService.LineDisplayWindow.get_SizeInCharacters() */
 HRESULT wdepo_line_display_window_get__size_in_characters(WDEPO_LineDisplayWindow *self, WF_Size *value);
 
-/* Windows.Devices.PointOfService.LineDisplayWindow.get_InterCharacterWaitInterval() */
 HRESULT wdepo_line_display_window_get__inter_character_wait_interval(WDEPO_LineDisplayWindow *self, WF_TimeSpan *value);
 
-/* Windows.Devices.PointOfService.LineDisplayWindow.put_InterCharacterWaitInterval() */
 HRESULT wdepo_line_display_window_put__inter_character_wait_interval(WDEPO_LineDisplayWindow *self, WF_TimeSpan value);
 
-/* Windows.Devices.PointOfService.LineDisplayWindow.TryRefreshAsync() */
 HRESULT wdepo_line_display_window_try_refresh_async(WDEPO_LineDisplayWindow *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.LineDisplayWindow.TryDisplayTextAsync(text, displayAttribute) */
 HRESULT wdepo_line_display_window_try_display_text_async_str_line_display_text_attribute_p(WDEPO_LineDisplayWindow *self, cwinrt_hstring text, WDEPO_LineDisplayTextAttribute displayAttribute, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.LineDisplayWindow.TryDisplayTextAsync(text, displayAttribute, startPosition) */
 HRESULT wdepo_line_display_window_try_display_text_async_str_line_display_text_attribute_point_p(WDEPO_LineDisplayWindow *self, cwinrt_hstring text, WDEPO_LineDisplayTextAttribute displayAttribute, WF_Point startPosition, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.LineDisplayWindow.TryDisplayTextAsync(text) */
 HRESULT wdepo_line_display_window_try_display_text_async(WDEPO_LineDisplayWindow *self, cwinrt_hstring text, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.LineDisplayWindow.TryScrollTextAsync(direction, numberOfColumnsOrRows) */
 HRESULT wdepo_line_display_window_try_scroll_text_async(WDEPO_LineDisplayWindow *self, WDEPO_LineDisplayScrollDirection direction, uint32_t numberOfColumnsOrRows, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.LineDisplayWindow.TryClearTextAsync() */
 HRESULT wdepo_line_display_window_try_clear_text_async(WDEPO_LineDisplayWindow *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.LineDisplayWindow.get_Cursor() */
 HRESULT wdepo_line_display_window_get__cursor(WDEPO_LineDisplayWindow *self, WDEPO_LineDisplayCursor** value);
 
-/* Windows.Devices.PointOfService.LineDisplayWindow.get_Marquee() */
 HRESULT wdepo_line_display_window_get__marquee(WDEPO_LineDisplayWindow *self, WDEPO_LineDisplayMarquee** value);
 
-/* Windows.Devices.PointOfService.LineDisplayWindow.ReadCharacterAtCursorAsync() */
 HRESULT wdepo_line_display_window_read_character_at_cursor_async(WDEPO_LineDisplayWindow *self, WF_IAsyncOperation_uint32_t** out);
 
-/* Windows.Devices.PointOfService.LineDisplayWindow.TryDisplayStoredBitmapAtCursorAsync(bitmap) */
 HRESULT wdepo_line_display_window_try_display_stored_bitmap_at_cursor_async(WDEPO_LineDisplayWindow *self, WDEPO_LineDisplayStoredBitmap* bitmap, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.LineDisplayWindow.TryDisplayStorageFileBitmapAtCursorAsync(bitmap) */
 HRESULT wdepo_line_display_window_try_display_storage_file_bitmap_at_cursor_async(WDEPO_LineDisplayWindow *self, WS_StorageFile* bitmap, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.LineDisplayWindow.TryDisplayStorageFileBitmapAtCursorAsync(bitmap, horizontalAlignment, verticalAlignment) */
 HRESULT wdepo_line_display_window_try_display_storage_file_bitmap_at_cursor_async_p_line_display_horizontal_alignment__7deb8d6e(WDEPO_LineDisplayWindow *self, WS_StorageFile* bitmap, WDEPO_LineDisplayHorizontalAlignment horizontalAlignment, WDEPO_LineDisplayVerticalAlignment verticalAlignment, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.LineDisplayWindow.TryDisplayStorageFileBitmapAtCursorAsync(bitmap, horizontalAlignment, verticalAlignment, widthInPixels) */
 HRESULT wdepo_line_display_window_try_display_storage_file_bitmap_at_cursor_async_p_line_display_horizontal_alignment__42be5243(WDEPO_LineDisplayWindow *self, WS_StorageFile* bitmap, WDEPO_LineDisplayHorizontalAlignment horizontalAlignment, WDEPO_LineDisplayVerticalAlignment verticalAlignment, int32_t widthInPixels, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.LineDisplayWindow.TryDisplayStorageFileBitmapAtPointAsync(bitmap, offsetInPixels) */
 HRESULT wdepo_line_display_window_try_display_storage_file_bitmap_at_point_async(WDEPO_LineDisplayWindow *self, WS_StorageFile* bitmap, WF_Point offsetInPixels, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.LineDisplayWindow.TryDisplayStorageFileBitmapAtPointAsync(bitmap, offsetInPixels, widthInPixels) */
 HRESULT wdepo_line_display_window_try_display_storage_file_bitmap_at_point_async_p_point_i32_p(WDEPO_LineDisplayWindow *self, WS_StorageFile* bitmap, WF_Point offsetInPixels, int32_t widthInPixels, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.LineDisplayWindow.Close() */
 HRESULT wdepo_line_display_window_close(WDEPO_LineDisplayWindow *self);
 
-/* activate Windows.Devices.PointOfService.MagneticStripeReader */
 HRESULT wdepo_magnetic_stripe_reader_new(WDEPO_MagneticStripeReader **out);
 
-/* Windows.Devices.PointOfService.MagneticStripeReader */
-/* Windows.Devices.PointOfService.MagneticStripeReader.get_DeviceId() */
 HRESULT wdepo_magnetic_stripe_reader_get__device_id(WDEPO_MagneticStripeReader *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReader.get_Capabilities() */
 HRESULT wdepo_magnetic_stripe_reader_get__capabilities(WDEPO_MagneticStripeReader *self, WDEPO_MagneticStripeReaderCapabilities** value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReader.get_SupportedCardTypes() */
 HRESULT wdepo_magnetic_stripe_reader_get__supported_card_types(WDEPO_MagneticStripeReader *self, uint32_t **value, uint32_t *value_len);
 
-/* Windows.Devices.PointOfService.MagneticStripeReader.get_DeviceAuthenticationProtocol() */
 HRESULT wdepo_magnetic_stripe_reader_get__device_authentication_protocol(WDEPO_MagneticStripeReader *self, WDEPO_MagneticStripeReaderAuthenticationProtocol *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReader.CheckHealthAsync(level) */
 HRESULT wdepo_magnetic_stripe_reader_check_health_async(WDEPO_MagneticStripeReader *self, WDEPO_UnifiedPosHealthCheckLevel level, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Devices.PointOfService.MagneticStripeReader.ClaimReaderAsync() */
 HRESULT wdepo_magnetic_stripe_reader_claim_reader_async(WDEPO_MagneticStripeReader *self, WF_IAsyncOperation_WDEPO_ClaimedMagneticStripeReader** out);
 
-/* Windows.Devices.PointOfService.MagneticStripeReader.RetrieveStatisticsAsync(statisticsCategories) */
 HRESULT wdepo_magnetic_stripe_reader_retrieve_statistics_async(WDEPO_MagneticStripeReader *self, WFOCO_IIterable_HSTRING* statisticsCategories, WF_IAsyncOperation_WSTST_IBuffer** out);
 
-/* Windows.Devices.PointOfService.MagneticStripeReader.GetErrorReportingType() */
 HRESULT wdepo_magnetic_stripe_reader_get_error_reporting_type(WDEPO_MagneticStripeReader *self, WDEPO_MagneticStripeReaderErrorReportingType *out);
 
-/* Windows.Devices.PointOfService.MagneticStripeReader.Close() */
 HRESULT wdepo_magnetic_stripe_reader_close(WDEPO_MagneticStripeReader *self);
 
-/* Windows.Devices.PointOfService.MagneticStripeReader.GetDeviceSelector(connectionTypes) */
 HRESULT wdepo_magnetic_stripe_reader_get_device_selector_pos_connection_types_str(WDEPO_PosConnectionTypes connectionTypes, cwinrt_hstring *out);
 
-/* Windows.Devices.PointOfService.MagneticStripeReader.GetDefaultAsync() */
 HRESULT wdepo_magnetic_stripe_reader_get_default_async(WF_IAsyncOperation_WDEPO_MagneticStripeReader** out);
 
-/* Windows.Devices.PointOfService.MagneticStripeReader.FromIdAsync(deviceId) */
 HRESULT wdepo_magnetic_stripe_reader_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDEPO_MagneticStripeReader** out);
 
-/* Windows.Devices.PointOfService.MagneticStripeReader.GetDeviceSelector() */
 HRESULT wdepo_magnetic_stripe_reader_get_device_selector(cwinrt_hstring *out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdepo_magnetic_stripe_reader_on_status_updated(WDEPO_MagneticStripeReader *self, cwinrt_event_fn fn, void *ctx);
 void wdepo_magnetic_stripe_reader_off_status_updated(WDEPO_MagneticStripeReader *self, cwinrt_token token);
 
-/* activate Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs */
 HRESULT wdepo_magnetic_stripe_reader_aamva_card_data_received_event_args_new(WDEPO_MagneticStripeReaderAamvaCardDataReceivedEventArgs **out);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs */
-/* Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs.get_Report() */
 HRESULT wdepo_magnetic_stripe_reader_aamva_card_data_received_event_args_get__report(WDEPO_MagneticStripeReaderAamvaCardDataReceivedEventArgs *self, WDEPO_MagneticStripeReaderReport** value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs.get_LicenseNumber() */
 HRESULT wdepo_magnetic_stripe_reader_aamva_card_data_received_event_args_get__license_number(WDEPO_MagneticStripeReaderAamvaCardDataReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs.get_ExpirationDate() */
 HRESULT wdepo_magnetic_stripe_reader_aamva_card_data_received_event_args_get__expiration_date(WDEPO_MagneticStripeReaderAamvaCardDataReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs.get_Restrictions() */
 HRESULT wdepo_magnetic_stripe_reader_aamva_card_data_received_event_args_get__restrictions(WDEPO_MagneticStripeReaderAamvaCardDataReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs.get_Class() */
 HRESULT wdepo_magnetic_stripe_reader_aamva_card_data_received_event_args_get__class(WDEPO_MagneticStripeReaderAamvaCardDataReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs.get_Endorsements() */
 HRESULT wdepo_magnetic_stripe_reader_aamva_card_data_received_event_args_get__endorsements(WDEPO_MagneticStripeReaderAamvaCardDataReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs.get_BirthDate() */
 HRESULT wdepo_magnetic_stripe_reader_aamva_card_data_received_event_args_get__birth_date(WDEPO_MagneticStripeReaderAamvaCardDataReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs.get_FirstName() */
 HRESULT wdepo_magnetic_stripe_reader_aamva_card_data_received_event_args_get__first_name(WDEPO_MagneticStripeReaderAamvaCardDataReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs.get_Surname() */
 HRESULT wdepo_magnetic_stripe_reader_aamva_card_data_received_event_args_get__surname(WDEPO_MagneticStripeReaderAamvaCardDataReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs.get_Suffix() */
 HRESULT wdepo_magnetic_stripe_reader_aamva_card_data_received_event_args_get__suffix(WDEPO_MagneticStripeReaderAamvaCardDataReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs.get_Gender() */
 HRESULT wdepo_magnetic_stripe_reader_aamva_card_data_received_event_args_get__gender(WDEPO_MagneticStripeReaderAamvaCardDataReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs.get_HairColor() */
 HRESULT wdepo_magnetic_stripe_reader_aamva_card_data_received_event_args_get__hair_color(WDEPO_MagneticStripeReaderAamvaCardDataReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs.get_EyeColor() */
 HRESULT wdepo_magnetic_stripe_reader_aamva_card_data_received_event_args_get__eye_color(WDEPO_MagneticStripeReaderAamvaCardDataReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs.get_Height() */
 HRESULT wdepo_magnetic_stripe_reader_aamva_card_data_received_event_args_get__height(WDEPO_MagneticStripeReaderAamvaCardDataReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs.get_Weight() */
 HRESULT wdepo_magnetic_stripe_reader_aamva_card_data_received_event_args_get__weight(WDEPO_MagneticStripeReaderAamvaCardDataReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs.get_Address() */
 HRESULT wdepo_magnetic_stripe_reader_aamva_card_data_received_event_args_get__address(WDEPO_MagneticStripeReaderAamvaCardDataReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs.get_City() */
 HRESULT wdepo_magnetic_stripe_reader_aamva_card_data_received_event_args_get__city(WDEPO_MagneticStripeReaderAamvaCardDataReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs.get_State() */
 HRESULT wdepo_magnetic_stripe_reader_aamva_card_data_received_event_args_get__state(WDEPO_MagneticStripeReaderAamvaCardDataReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs.get_PostalCode() */
 HRESULT wdepo_magnetic_stripe_reader_aamva_card_data_received_event_args_get__postal_code(WDEPO_MagneticStripeReaderAamvaCardDataReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* activate Windows.Devices.PointOfService.MagneticStripeReaderBankCardDataReceivedEventArgs */
 HRESULT wdepo_magnetic_stripe_reader_bank_card_data_received_event_args_new(WDEPO_MagneticStripeReaderBankCardDataReceivedEventArgs **out);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderBankCardDataReceivedEventArgs */
-/* Windows.Devices.PointOfService.MagneticStripeReaderBankCardDataReceivedEventArgs.get_Report() */
 HRESULT wdepo_magnetic_stripe_reader_bank_card_data_received_event_args_get__report(WDEPO_MagneticStripeReaderBankCardDataReceivedEventArgs *self, WDEPO_MagneticStripeReaderReport** value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderBankCardDataReceivedEventArgs.get_AccountNumber() */
 HRESULT wdepo_magnetic_stripe_reader_bank_card_data_received_event_args_get__account_number(WDEPO_MagneticStripeReaderBankCardDataReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderBankCardDataReceivedEventArgs.get_ExpirationDate() */
 HRESULT wdepo_magnetic_stripe_reader_bank_card_data_received_event_args_get__expiration_date(WDEPO_MagneticStripeReaderBankCardDataReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderBankCardDataReceivedEventArgs.get_ServiceCode() */
 HRESULT wdepo_magnetic_stripe_reader_bank_card_data_received_event_args_get__service_code(WDEPO_MagneticStripeReaderBankCardDataReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderBankCardDataReceivedEventArgs.get_Title() */
 HRESULT wdepo_magnetic_stripe_reader_bank_card_data_received_event_args_get__title(WDEPO_MagneticStripeReaderBankCardDataReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderBankCardDataReceivedEventArgs.get_FirstName() */
 HRESULT wdepo_magnetic_stripe_reader_bank_card_data_received_event_args_get__first_name(WDEPO_MagneticStripeReaderBankCardDataReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderBankCardDataReceivedEventArgs.get_MiddleInitial() */
 HRESULT wdepo_magnetic_stripe_reader_bank_card_data_received_event_args_get__middle_initial(WDEPO_MagneticStripeReaderBankCardDataReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderBankCardDataReceivedEventArgs.get_Surname() */
 HRESULT wdepo_magnetic_stripe_reader_bank_card_data_received_event_args_get__surname(WDEPO_MagneticStripeReaderBankCardDataReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderBankCardDataReceivedEventArgs.get_Suffix() */
 HRESULT wdepo_magnetic_stripe_reader_bank_card_data_received_event_args_get__suffix(WDEPO_MagneticStripeReaderBankCardDataReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* activate Windows.Devices.PointOfService.MagneticStripeReaderCapabilities */
 HRESULT wdepo_magnetic_stripe_reader_capabilities_new(WDEPO_MagneticStripeReaderCapabilities **out);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderCapabilities */
-/* Windows.Devices.PointOfService.MagneticStripeReaderCapabilities.get_CardAuthentication() */
 HRESULT wdepo_magnetic_stripe_reader_capabilities_get__card_authentication(WDEPO_MagneticStripeReaderCapabilities *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderCapabilities.get_SupportedEncryptionAlgorithms() */
 HRESULT wdepo_magnetic_stripe_reader_capabilities_get__supported_encryption_algorithms(WDEPO_MagneticStripeReaderCapabilities *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderCapabilities.get_AuthenticationLevel() */
 HRESULT wdepo_magnetic_stripe_reader_capabilities_get__authentication_level(WDEPO_MagneticStripeReaderCapabilities *self, WDEPO_MagneticStripeReaderAuthenticationLevel *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderCapabilities.get_IsIsoSupported() */
 HRESULT wdepo_magnetic_stripe_reader_capabilities_get__is_iso_supported(WDEPO_MagneticStripeReaderCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderCapabilities.get_IsJisOneSupported() */
 HRESULT wdepo_magnetic_stripe_reader_capabilities_get__is_jis_one_supported(WDEPO_MagneticStripeReaderCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderCapabilities.get_IsJisTwoSupported() */
 HRESULT wdepo_magnetic_stripe_reader_capabilities_get__is_jis_two_supported(WDEPO_MagneticStripeReaderCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderCapabilities.get_PowerReportingType() */
 HRESULT wdepo_magnetic_stripe_reader_capabilities_get__power_reporting_type(WDEPO_MagneticStripeReaderCapabilities *self, WDEPO_UnifiedPosPowerReportingType *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderCapabilities.get_IsStatisticsReportingSupported() */
 HRESULT wdepo_magnetic_stripe_reader_capabilities_get__is_statistics_reporting_supported(WDEPO_MagneticStripeReaderCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderCapabilities.get_IsStatisticsUpdatingSupported() */
 HRESULT wdepo_magnetic_stripe_reader_capabilities_get__is_statistics_updating_supported(WDEPO_MagneticStripeReaderCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderCapabilities.get_IsTrackDataMaskingSupported() */
 HRESULT wdepo_magnetic_stripe_reader_capabilities_get__is_track_data_masking_supported(WDEPO_MagneticStripeReaderCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderCapabilities.get_IsTransmitSentinelsSupported() */
 HRESULT wdepo_magnetic_stripe_reader_capabilities_get__is_transmit_sentinels_supported(WDEPO_MagneticStripeReaderCapabilities *self, BOOL *value);
 
-/* activate Windows.Devices.PointOfService.MagneticStripeReaderCardTypes */
 HRESULT wdepo_magnetic_stripe_reader_card_types_new(WDEPO_MagneticStripeReaderCardTypes **out);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderCardTypes */
-/* Windows.Devices.PointOfService.MagneticStripeReaderCardTypes.get_Unknown() */
 HRESULT wdepo_magnetic_stripe_reader_card_types_get__unknown(uint32_t *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderCardTypes.get_Bank() */
 HRESULT wdepo_magnetic_stripe_reader_card_types_get__bank(uint32_t *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderCardTypes.get_Aamva() */
 HRESULT wdepo_magnetic_stripe_reader_card_types_get__aamva(uint32_t *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderCardTypes.get_ExtendedBase() */
 HRESULT wdepo_magnetic_stripe_reader_card_types_get__extended_base(uint32_t *value);
 
-/* activate Windows.Devices.PointOfService.MagneticStripeReaderEncryptionAlgorithms */
 HRESULT wdepo_magnetic_stripe_reader_encryption_algorithms_new(WDEPO_MagneticStripeReaderEncryptionAlgorithms **out);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderEncryptionAlgorithms */
-/* Windows.Devices.PointOfService.MagneticStripeReaderEncryptionAlgorithms.get_None() */
 HRESULT wdepo_magnetic_stripe_reader_encryption_algorithms_get__none(uint32_t *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderEncryptionAlgorithms.get_TripleDesDukpt() */
 HRESULT wdepo_magnetic_stripe_reader_encryption_algorithms_get__triple_des_dukpt(uint32_t *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderEncryptionAlgorithms.get_ExtendedBase() */
 HRESULT wdepo_magnetic_stripe_reader_encryption_algorithms_get__extended_base(uint32_t *value);
 
-/* activate Windows.Devices.PointOfService.MagneticStripeReaderErrorOccurredEventArgs */
 HRESULT wdepo_magnetic_stripe_reader_error_occurred_event_args_new(WDEPO_MagneticStripeReaderErrorOccurredEventArgs **out);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderErrorOccurredEventArgs */
-/* Windows.Devices.PointOfService.MagneticStripeReaderErrorOccurredEventArgs.get_Track1Status() */
 HRESULT wdepo_magnetic_stripe_reader_error_occurred_event_args_get__track1_status(WDEPO_MagneticStripeReaderErrorOccurredEventArgs *self, WDEPO_MagneticStripeReaderTrackErrorType *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderErrorOccurredEventArgs.get_Track2Status() */
 HRESULT wdepo_magnetic_stripe_reader_error_occurred_event_args_get__track2_status(WDEPO_MagneticStripeReaderErrorOccurredEventArgs *self, WDEPO_MagneticStripeReaderTrackErrorType *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderErrorOccurredEventArgs.get_Track3Status() */
 HRESULT wdepo_magnetic_stripe_reader_error_occurred_event_args_get__track3_status(WDEPO_MagneticStripeReaderErrorOccurredEventArgs *self, WDEPO_MagneticStripeReaderTrackErrorType *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderErrorOccurredEventArgs.get_Track4Status() */
 HRESULT wdepo_magnetic_stripe_reader_error_occurred_event_args_get__track4_status(WDEPO_MagneticStripeReaderErrorOccurredEventArgs *self, WDEPO_MagneticStripeReaderTrackErrorType *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderErrorOccurredEventArgs.get_ErrorData() */
 HRESULT wdepo_magnetic_stripe_reader_error_occurred_event_args_get__error_data(WDEPO_MagneticStripeReaderErrorOccurredEventArgs *self, WDEPO_UnifiedPosErrorData** value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderErrorOccurredEventArgs.get_PartialInputData() */
 HRESULT wdepo_magnetic_stripe_reader_error_occurred_event_args_get__partial_input_data(WDEPO_MagneticStripeReaderErrorOccurredEventArgs *self, WDEPO_MagneticStripeReaderReport** value);
 
-/* activate Windows.Devices.PointOfService.MagneticStripeReaderReport */
 HRESULT wdepo_magnetic_stripe_reader_report_new(WDEPO_MagneticStripeReaderReport **out);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderReport */
-/* Windows.Devices.PointOfService.MagneticStripeReaderReport.get_CardType() */
 HRESULT wdepo_magnetic_stripe_reader_report_get__card_type(WDEPO_MagneticStripeReaderReport *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderReport.get_Track1() */
 HRESULT wdepo_magnetic_stripe_reader_report_get__track1(WDEPO_MagneticStripeReaderReport *self, WDEPO_MagneticStripeReaderTrackData** value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderReport.get_Track2() */
 HRESULT wdepo_magnetic_stripe_reader_report_get__track2(WDEPO_MagneticStripeReaderReport *self, WDEPO_MagneticStripeReaderTrackData** value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderReport.get_Track3() */
 HRESULT wdepo_magnetic_stripe_reader_report_get__track3(WDEPO_MagneticStripeReaderReport *self, WDEPO_MagneticStripeReaderTrackData** value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderReport.get_Track4() */
 HRESULT wdepo_magnetic_stripe_reader_report_get__track4(WDEPO_MagneticStripeReaderReport *self, WDEPO_MagneticStripeReaderTrackData** value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderReport.get_Properties() */
 HRESULT wdepo_magnetic_stripe_reader_report_get__properties(WDEPO_MagneticStripeReaderReport *self, WFOCO_IMapView_HSTRING_HSTRING** value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderReport.get_CardAuthenticationData() */
 HRESULT wdepo_magnetic_stripe_reader_report_get__card_authentication_data(WDEPO_MagneticStripeReaderReport *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderReport.get_CardAuthenticationDataLength() */
 HRESULT wdepo_magnetic_stripe_reader_report_get__card_authentication_data_length(WDEPO_MagneticStripeReaderReport *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderReport.get_AdditionalSecurityInformation() */
 HRESULT wdepo_magnetic_stripe_reader_report_get__additional_security_information(WDEPO_MagneticStripeReaderReport *self, WSTST_IBuffer** value);
 
-/* activate Windows.Devices.PointOfService.MagneticStripeReaderStatusUpdatedEventArgs */
 HRESULT wdepo_magnetic_stripe_reader_status_updated_event_args_new(WDEPO_MagneticStripeReaderStatusUpdatedEventArgs **out);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderStatusUpdatedEventArgs */
-/* Windows.Devices.PointOfService.MagneticStripeReaderStatusUpdatedEventArgs.get_Status() */
 HRESULT wdepo_magnetic_stripe_reader_status_updated_event_args_get__status(WDEPO_MagneticStripeReaderStatusUpdatedEventArgs *self, WDEPO_MagneticStripeReaderStatus *value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderStatusUpdatedEventArgs.get_ExtendedStatus() */
 HRESULT wdepo_magnetic_stripe_reader_status_updated_event_args_get__extended_status(WDEPO_MagneticStripeReaderStatusUpdatedEventArgs *self, uint32_t *value);
 
-/* activate Windows.Devices.PointOfService.MagneticStripeReaderTrackData */
 HRESULT wdepo_magnetic_stripe_reader_track_data_new(WDEPO_MagneticStripeReaderTrackData **out);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderTrackData */
-/* Windows.Devices.PointOfService.MagneticStripeReaderTrackData.get_Data() */
 HRESULT wdepo_magnetic_stripe_reader_track_data_get__data(WDEPO_MagneticStripeReaderTrackData *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderTrackData.get_DiscretionaryData() */
 HRESULT wdepo_magnetic_stripe_reader_track_data_get__discretionary_data(WDEPO_MagneticStripeReaderTrackData *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderTrackData.get_EncryptedData() */
 HRESULT wdepo_magnetic_stripe_reader_track_data_get__encrypted_data(WDEPO_MagneticStripeReaderTrackData *self, WSTST_IBuffer** value);
 
-/* activate Windows.Devices.PointOfService.MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs */
 HRESULT wdepo_magnetic_stripe_reader_vendor_specific_card_data_received_event_new(WDEPO_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs **out);
 
-/* Windows.Devices.PointOfService.MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs */
-/* Windows.Devices.PointOfService.MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs.get_Report() */
 HRESULT wdepo_magnetic_stripe_reader_vendor_specific_card_data_received_event_get__report(WDEPO_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs *self, WDEPO_MagneticStripeReaderReport** value);
 
-/* activate Windows.Devices.PointOfService.PosPrinter */
 HRESULT wdepo_pos_printer_new(WDEPO_PosPrinter **out);
 
-/* Windows.Devices.PointOfService.PosPrinter */
-/* Windows.Devices.PointOfService.PosPrinter.get_DeviceId() */
 HRESULT wdepo_pos_printer_get__device_id(WDEPO_PosPrinter *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.PosPrinter.get_Capabilities() */
 HRESULT wdepo_pos_printer_get__capabilities(WDEPO_PosPrinter *self, WDEPO_PosPrinterCapabilities** value);
 
-/* Windows.Devices.PointOfService.PosPrinter.get_SupportedCharacterSets() */
 HRESULT wdepo_pos_printer_get__supported_character_sets(WDEPO_PosPrinter *self, WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Devices.PointOfService.PosPrinter.get_SupportedTypeFaces() */
 HRESULT wdepo_pos_printer_get__supported_type_faces(WDEPO_PosPrinter *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Devices.PointOfService.PosPrinter.get_Status() */
 HRESULT wdepo_pos_printer_get__status(WDEPO_PosPrinter *self, WDEPO_PosPrinterStatus** value);
 
-/* Windows.Devices.PointOfService.PosPrinter.ClaimPrinterAsync() */
 HRESULT wdepo_pos_printer_claim_printer_async(WDEPO_PosPrinter *self, WF_IAsyncOperation_WDEPO_ClaimedPosPrinter** out);
 
-/* Windows.Devices.PointOfService.PosPrinter.CheckHealthAsync(level) */
 HRESULT wdepo_pos_printer_check_health_async(WDEPO_PosPrinter *self, WDEPO_UnifiedPosHealthCheckLevel level, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Devices.PointOfService.PosPrinter.GetStatisticsAsync(statisticsCategories) */
 HRESULT wdepo_pos_printer_get_statistics_async(WDEPO_PosPrinter *self, WFOCO_IIterable_HSTRING* statisticsCategories, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Devices.PointOfService.PosPrinter.get_SupportedBarcodeSymbologies() */
 HRESULT wdepo_pos_printer_get__supported_barcode_symbologies(WDEPO_PosPrinter *self, WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Devices.PointOfService.PosPrinter.GetFontProperty(typeface) */
 HRESULT wdepo_pos_printer_get_font_property(WDEPO_PosPrinter *self, cwinrt_hstring typeface, WDEPO_PosPrinterFontProperty** out);
 
-/* Windows.Devices.PointOfService.PosPrinter.Close() */
 HRESULT wdepo_pos_printer_close(WDEPO_PosPrinter *self);
 
-/* Windows.Devices.PointOfService.PosPrinter.GetDeviceSelector(connectionTypes) */
 HRESULT wdepo_pos_printer_get_device_selector_pos_connection_types_str(WDEPO_PosConnectionTypes connectionTypes, cwinrt_hstring *out);
 
-/* Windows.Devices.PointOfService.PosPrinter.GetDefaultAsync() */
 HRESULT wdepo_pos_printer_get_default_async(WF_IAsyncOperation_WDEPO_PosPrinter** out);
 
-/* Windows.Devices.PointOfService.PosPrinter.FromIdAsync(deviceId) */
 HRESULT wdepo_pos_printer_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDEPO_PosPrinter** out);
 
-/* Windows.Devices.PointOfService.PosPrinter.GetDeviceSelector() */
 HRESULT wdepo_pos_printer_get_device_selector(cwinrt_hstring *out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdepo_pos_printer_on_status_updated(WDEPO_PosPrinter *self, cwinrt_event_fn fn, void *ctx);
 void wdepo_pos_printer_off_status_updated(WDEPO_PosPrinter *self, cwinrt_token token);
 
-/* activate Windows.Devices.PointOfService.PosPrinterCapabilities */
 HRESULT wdepo_pos_printer_capabilities_new(WDEPO_PosPrinterCapabilities **out);
 
-/* Windows.Devices.PointOfService.PosPrinterCapabilities */
-/* Windows.Devices.PointOfService.PosPrinterCapabilities.get_PowerReportingType() */
 HRESULT wdepo_pos_printer_capabilities_get__power_reporting_type(WDEPO_PosPrinterCapabilities *self, WDEPO_UnifiedPosPowerReportingType *value);
 
-/* Windows.Devices.PointOfService.PosPrinterCapabilities.get_IsStatisticsReportingSupported() */
 HRESULT wdepo_pos_printer_capabilities_get__is_statistics_reporting_supported(WDEPO_PosPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.PosPrinterCapabilities.get_IsStatisticsUpdatingSupported() */
 HRESULT wdepo_pos_printer_capabilities_get__is_statistics_updating_supported(WDEPO_PosPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.PosPrinterCapabilities.get_DefaultCharacterSet() */
 HRESULT wdepo_pos_printer_capabilities_get__default_character_set(WDEPO_PosPrinterCapabilities *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.PosPrinterCapabilities.get_HasCoverSensor() */
 HRESULT wdepo_pos_printer_capabilities_get__has_cover_sensor(WDEPO_PosPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.PosPrinterCapabilities.get_CanMapCharacterSet() */
 HRESULT wdepo_pos_printer_capabilities_get__can_map_character_set(WDEPO_PosPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.PosPrinterCapabilities.get_IsTransactionSupported() */
 HRESULT wdepo_pos_printer_capabilities_get__is_transaction_supported(WDEPO_PosPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.PosPrinterCapabilities.get_Receipt() */
 HRESULT wdepo_pos_printer_capabilities_get__receipt(WDEPO_PosPrinterCapabilities *self, WDEPO_ReceiptPrinterCapabilities** value);
 
-/* Windows.Devices.PointOfService.PosPrinterCapabilities.get_Slip() */
 HRESULT wdepo_pos_printer_capabilities_get__slip(WDEPO_PosPrinterCapabilities *self, WDEPO_SlipPrinterCapabilities** value);
 
-/* Windows.Devices.PointOfService.PosPrinterCapabilities.get_Journal() */
 HRESULT wdepo_pos_printer_capabilities_get__journal(WDEPO_PosPrinterCapabilities *self, WDEPO_JournalPrinterCapabilities** value);
 
-/* activate Windows.Devices.PointOfService.PosPrinterCharacterSetIds */
 HRESULT wdepo_pos_printer_character_set_ids_new(WDEPO_PosPrinterCharacterSetIds **out);
 
-/* Windows.Devices.PointOfService.PosPrinterCharacterSetIds */
-/* Windows.Devices.PointOfService.PosPrinterCharacterSetIds.get_Utf16LE() */
 HRESULT wdepo_pos_printer_character_set_ids_get__utf16_l_e(uint32_t *value);
 
-/* Windows.Devices.PointOfService.PosPrinterCharacterSetIds.get_Ascii() */
 HRESULT wdepo_pos_printer_character_set_ids_get__ascii(uint32_t *value);
 
-/* Windows.Devices.PointOfService.PosPrinterCharacterSetIds.get_Ansi() */
 HRESULT wdepo_pos_printer_character_set_ids_get__ansi(uint32_t *value);
 
-/* activate Windows.Devices.PointOfService.PosPrinterFontProperty */
 HRESULT wdepo_pos_printer_font_property_new(WDEPO_PosPrinterFontProperty **out);
 
-/* Windows.Devices.PointOfService.PosPrinterFontProperty */
-/* Windows.Devices.PointOfService.PosPrinterFontProperty.get_TypeFace() */
 HRESULT wdepo_pos_printer_font_property_get__type_face(WDEPO_PosPrinterFontProperty *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.PosPrinterFontProperty.get_IsScalableToAnySize() */
 HRESULT wdepo_pos_printer_font_property_get__is_scalable_to_any_size(WDEPO_PosPrinterFontProperty *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.PosPrinterFontProperty.get_CharacterSizes() */
 HRESULT wdepo_pos_printer_font_property_get__character_sizes(WDEPO_PosPrinterFontProperty *self, WFOCO_IVectorView_WDEPO_SizeUInt_32** value);
 
-/* activate Windows.Devices.PointOfService.PosPrinterPrintOptions */
 HRESULT wdepo_pos_printer_print_options_new(WDEPO_PosPrinterPrintOptions **out);
 
-/* Windows.Devices.PointOfService.PosPrinterPrintOptions */
-/* Windows.Devices.PointOfService.PosPrinterPrintOptions.get_TypeFace() */
 HRESULT wdepo_pos_printer_print_options_get__type_face(WDEPO_PosPrinterPrintOptions *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.PosPrinterPrintOptions.put_TypeFace() */
 HRESULT wdepo_pos_printer_print_options_put__type_face(WDEPO_PosPrinterPrintOptions *self, cwinrt_hstring value);
 
-/* Windows.Devices.PointOfService.PosPrinterPrintOptions.get_CharacterHeight() */
 HRESULT wdepo_pos_printer_print_options_get__character_height(WDEPO_PosPrinterPrintOptions *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.PosPrinterPrintOptions.put_CharacterHeight() */
 HRESULT wdepo_pos_printer_print_options_put__character_height(WDEPO_PosPrinterPrintOptions *self, uint32_t value);
 
-/* Windows.Devices.PointOfService.PosPrinterPrintOptions.get_Bold() */
 HRESULT wdepo_pos_printer_print_options_get__bold(WDEPO_PosPrinterPrintOptions *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.PosPrinterPrintOptions.put_Bold() */
 HRESULT wdepo_pos_printer_print_options_put__bold(WDEPO_PosPrinterPrintOptions *self, BOOL value);
 
-/* Windows.Devices.PointOfService.PosPrinterPrintOptions.get_Italic() */
 HRESULT wdepo_pos_printer_print_options_get__italic(WDEPO_PosPrinterPrintOptions *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.PosPrinterPrintOptions.put_Italic() */
 HRESULT wdepo_pos_printer_print_options_put__italic(WDEPO_PosPrinterPrintOptions *self, BOOL value);
 
-/* Windows.Devices.PointOfService.PosPrinterPrintOptions.get_Underline() */
 HRESULT wdepo_pos_printer_print_options_get__underline(WDEPO_PosPrinterPrintOptions *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.PosPrinterPrintOptions.put_Underline() */
 HRESULT wdepo_pos_printer_print_options_put__underline(WDEPO_PosPrinterPrintOptions *self, BOOL value);
 
-/* Windows.Devices.PointOfService.PosPrinterPrintOptions.get_ReverseVideo() */
 HRESULT wdepo_pos_printer_print_options_get__reverse_video(WDEPO_PosPrinterPrintOptions *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.PosPrinterPrintOptions.put_ReverseVideo() */
 HRESULT wdepo_pos_printer_print_options_put__reverse_video(WDEPO_PosPrinterPrintOptions *self, BOOL value);
 
-/* Windows.Devices.PointOfService.PosPrinterPrintOptions.get_Strikethrough() */
 HRESULT wdepo_pos_printer_print_options_get__strikethrough(WDEPO_PosPrinterPrintOptions *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.PosPrinterPrintOptions.put_Strikethrough() */
 HRESULT wdepo_pos_printer_print_options_put__strikethrough(WDEPO_PosPrinterPrintOptions *self, BOOL value);
 
-/* Windows.Devices.PointOfService.PosPrinterPrintOptions.get_Superscript() */
 HRESULT wdepo_pos_printer_print_options_get__superscript(WDEPO_PosPrinterPrintOptions *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.PosPrinterPrintOptions.put_Superscript() */
 HRESULT wdepo_pos_printer_print_options_put__superscript(WDEPO_PosPrinterPrintOptions *self, BOOL value);
 
-/* Windows.Devices.PointOfService.PosPrinterPrintOptions.get_Subscript() */
 HRESULT wdepo_pos_printer_print_options_get__subscript(WDEPO_PosPrinterPrintOptions *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.PosPrinterPrintOptions.put_Subscript() */
 HRESULT wdepo_pos_printer_print_options_put__subscript(WDEPO_PosPrinterPrintOptions *self, BOOL value);
 
-/* Windows.Devices.PointOfService.PosPrinterPrintOptions.get_DoubleWide() */
 HRESULT wdepo_pos_printer_print_options_get__double_wide(WDEPO_PosPrinterPrintOptions *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.PosPrinterPrintOptions.put_DoubleWide() */
 HRESULT wdepo_pos_printer_print_options_put__double_wide(WDEPO_PosPrinterPrintOptions *self, BOOL value);
 
-/* Windows.Devices.PointOfService.PosPrinterPrintOptions.get_DoubleHigh() */
 HRESULT wdepo_pos_printer_print_options_get__double_high(WDEPO_PosPrinterPrintOptions *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.PosPrinterPrintOptions.put_DoubleHigh() */
 HRESULT wdepo_pos_printer_print_options_put__double_high(WDEPO_PosPrinterPrintOptions *self, BOOL value);
 
-/* Windows.Devices.PointOfService.PosPrinterPrintOptions.get_Alignment() */
 HRESULT wdepo_pos_printer_print_options_get__alignment(WDEPO_PosPrinterPrintOptions *self, WDEPO_PosPrinterAlignment *value);
 
-/* Windows.Devices.PointOfService.PosPrinterPrintOptions.put_Alignment() */
 HRESULT wdepo_pos_printer_print_options_put__alignment(WDEPO_PosPrinterPrintOptions *self, WDEPO_PosPrinterAlignment value);
 
-/* Windows.Devices.PointOfService.PosPrinterPrintOptions.get_CharacterSet() */
 HRESULT wdepo_pos_printer_print_options_get__character_set(WDEPO_PosPrinterPrintOptions *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.PosPrinterPrintOptions.put_CharacterSet() */
 HRESULT wdepo_pos_printer_print_options_put__character_set(WDEPO_PosPrinterPrintOptions *self, uint32_t value);
 
-/* activate Windows.Devices.PointOfService.PosPrinterStatus */
 HRESULT wdepo_pos_printer_status_new(WDEPO_PosPrinterStatus **out);
 
-/* Windows.Devices.PointOfService.PosPrinterStatus */
-/* Windows.Devices.PointOfService.PosPrinterStatus.get_StatusKind() */
 HRESULT wdepo_pos_printer_status_get__status_kind(WDEPO_PosPrinterStatus *self, WDEPO_PosPrinterStatusKind *value);
 
-/* Windows.Devices.PointOfService.PosPrinterStatus.get_ExtendedStatus() */
 HRESULT wdepo_pos_printer_status_get__extended_status(WDEPO_PosPrinterStatus *self, uint32_t *value);
 
-/* activate Windows.Devices.PointOfService.PosPrinterStatusUpdatedEventArgs */
 HRESULT wdepo_pos_printer_status_updated_event_args_new(WDEPO_PosPrinterStatusUpdatedEventArgs **out);
 
-/* Windows.Devices.PointOfService.PosPrinterStatusUpdatedEventArgs */
-/* Windows.Devices.PointOfService.PosPrinterStatusUpdatedEventArgs.get_Status() */
 HRESULT wdepo_pos_printer_status_updated_event_args_get__status(WDEPO_PosPrinterStatusUpdatedEventArgs *self, WDEPO_PosPrinterStatus** value);
 
-/* activate Windows.Devices.PointOfService.UnifiedPosErrorData */
 HRESULT wdepo_unified_pos_error_data_new(WDEPO_UnifiedPosErrorData **out);
 
-/* Windows.Devices.PointOfService.UnifiedPosErrorData */
-/* Windows.Devices.PointOfService.UnifiedPosErrorData.get_Message() */
 HRESULT wdepo_unified_pos_error_data_get__message(WDEPO_UnifiedPosErrorData *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.UnifiedPosErrorData.get_Severity() */
 HRESULT wdepo_unified_pos_error_data_get__severity(WDEPO_UnifiedPosErrorData *self, WDEPO_UnifiedPosErrorSeverity *value);
 
-/* Windows.Devices.PointOfService.UnifiedPosErrorData.get_Reason() */
 HRESULT wdepo_unified_pos_error_data_get__reason(WDEPO_UnifiedPosErrorData *self, WDEPO_UnifiedPosErrorReason *value);
 
-/* Windows.Devices.PointOfService.UnifiedPosErrorData.get_ExtendedReason() */
 HRESULT wdepo_unified_pos_error_data_get__extended_reason(WDEPO_UnifiedPosErrorData *self, uint32_t *value);
 
-/* activate Windows.Devices.PointOfService.SlipPrinterCapabilities */
 HRESULT wdepo_slip_printer_capabilities_new(WDEPO_SlipPrinterCapabilities **out);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities */
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_IsFullLengthSupported() */
 HRESULT wdepo_slip_printer_capabilities_get__is_full_length_supported(WDEPO_SlipPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_IsBothSidesPrintingSupported() */
 HRESULT wdepo_slip_printer_capabilities_get__is_both_sides_printing_supported(WDEPO_SlipPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_IsReverseVideoSupported() */
 HRESULT wdepo_slip_printer_capabilities_get__is_reverse_video_supported(WDEPO_SlipPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_IsStrikethroughSupported() */
 HRESULT wdepo_slip_printer_capabilities_get__is_strikethrough_supported(WDEPO_SlipPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_IsSuperscriptSupported() */
 HRESULT wdepo_slip_printer_capabilities_get__is_superscript_supported(WDEPO_SlipPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_IsSubscriptSupported() */
 HRESULT wdepo_slip_printer_capabilities_get__is_subscript_supported(WDEPO_SlipPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_IsReversePaperFeedByLineSupported() */
 HRESULT wdepo_slip_printer_capabilities_get__is_reverse_paper_feed_by_line_supported(WDEPO_SlipPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_IsReversePaperFeedByMapModeUnitSupported() */
 HRESULT wdepo_slip_printer_capabilities_get__is_reverse_paper_feed_by_map_mode_unit_supported(WDEPO_SlipPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_IsBarcodeSupported() */
 HRESULT wdepo_slip_printer_capabilities_get__is_barcode_supported(WDEPO_SlipPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_IsBitmapSupported() */
 HRESULT wdepo_slip_printer_capabilities_get__is_bitmap_supported(WDEPO_SlipPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_IsLeft90RotationSupported() */
 HRESULT wdepo_slip_printer_capabilities_get__is_left90_rotation_supported(WDEPO_SlipPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_IsRight90RotationSupported() */
 HRESULT wdepo_slip_printer_capabilities_get__is_right90_rotation_supported(WDEPO_SlipPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_Is180RotationSupported() */
 HRESULT wdepo_slip_printer_capabilities_get__is180_rotation_supported(WDEPO_SlipPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_IsPrintAreaSupported() */
 HRESULT wdepo_slip_printer_capabilities_get__is_print_area_supported(WDEPO_SlipPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_RuledLineCapabilities() */
 HRESULT wdepo_slip_printer_capabilities_get__ruled_line_capabilities(WDEPO_SlipPrinterCapabilities *self, WDEPO_PosPrinterRuledLineCapabilities *value);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_SupportedBarcodeRotations() */
 HRESULT wdepo_slip_printer_capabilities_get__supported_barcode_rotations(WDEPO_SlipPrinterCapabilities *self, WFOCO_IVectorView_WDEPO_PosPrinterRotation** value);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_SupportedBitmapRotations() */
 HRESULT wdepo_slip_printer_capabilities_get__supported_bitmap_rotations(WDEPO_SlipPrinterCapabilities *self, WFOCO_IVectorView_WDEPO_PosPrinterRotation** value);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_IsPrinterPresent() */
 HRESULT wdepo_slip_printer_capabilities_get__is_printer_present(WDEPO_SlipPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_IsDualColorSupported() */
 HRESULT wdepo_slip_printer_capabilities_get__is_dual_color_supported(WDEPO_SlipPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_ColorCartridgeCapabilities() */
 HRESULT wdepo_slip_printer_capabilities_get__color_cartridge_capabilities(WDEPO_SlipPrinterCapabilities *self, WDEPO_PosPrinterColorCapabilities *value);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_CartridgeSensors() */
 HRESULT wdepo_slip_printer_capabilities_get__cartridge_sensors(WDEPO_SlipPrinterCapabilities *self, WDEPO_PosPrinterCartridgeSensors *value);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_IsBoldSupported() */
 HRESULT wdepo_slip_printer_capabilities_get__is_bold_supported(WDEPO_SlipPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_IsItalicSupported() */
 HRESULT wdepo_slip_printer_capabilities_get__is_italic_supported(WDEPO_SlipPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_IsUnderlineSupported() */
 HRESULT wdepo_slip_printer_capabilities_get__is_underline_supported(WDEPO_SlipPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_IsDoubleHighPrintSupported() */
 HRESULT wdepo_slip_printer_capabilities_get__is_double_high_print_supported(WDEPO_SlipPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_IsDoubleWidePrintSupported() */
 HRESULT wdepo_slip_printer_capabilities_get__is_double_wide_print_supported(WDEPO_SlipPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_IsDoubleHighDoubleWidePrintSupported() */
 HRESULT wdepo_slip_printer_capabilities_get__is_double_high_double_wide_print_supported(WDEPO_SlipPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_IsPaperEmptySensorSupported() */
 HRESULT wdepo_slip_printer_capabilities_get__is_paper_empty_sensor_supported(WDEPO_SlipPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_IsPaperNearEndSensorSupported() */
 HRESULT wdepo_slip_printer_capabilities_get__is_paper_near_end_sensor_supported(WDEPO_SlipPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.SlipPrinterCapabilities.get_SupportedCharactersPerLine() */
 HRESULT wdepo_slip_printer_capabilities_get__supported_characters_per_line(WDEPO_SlipPrinterCapabilities *self, WFOCO_IVectorView_uint32_t** value);
 
-/* activate Windows.Devices.PointOfService.SlipPrintJob */
 HRESULT wdepo_slip_print_job_new(WDEPO_SlipPrintJob **out);
 
-/* Windows.Devices.PointOfService.SlipPrintJob */
-/* Windows.Devices.PointOfService.SlipPrintJob.Print(data, printOptions) */
 HRESULT wdepo_slip_print_job_print_str_p(WDEPO_SlipPrintJob *self, cwinrt_hstring data, WDEPO_PosPrinterPrintOptions* printOptions);
 
-/* Windows.Devices.PointOfService.SlipPrintJob.FeedPaperByLine(lineCount) */
 HRESULT wdepo_slip_print_job_feed_paper_by_line(WDEPO_SlipPrintJob *self, int32_t lineCount);
 
-/* Windows.Devices.PointOfService.SlipPrintJob.FeedPaperByMapModeUnit(distance) */
 HRESULT wdepo_slip_print_job_feed_paper_by_map_mode_unit(WDEPO_SlipPrintJob *self, int32_t distance);
 
-/* Windows.Devices.PointOfService.SlipPrintJob.SetBarcodeRotation() */
 HRESULT wdepo_slip_print_job_set_barcode_rotation(WDEPO_SlipPrintJob *self, WDEPO_PosPrinterRotation value);
 
-/* Windows.Devices.PointOfService.SlipPrintJob.SetPrintRotation(includeBitmaps) */
 HRESULT wdepo_slip_print_job_set_print_rotation(WDEPO_SlipPrintJob *self, WDEPO_PosPrinterRotation value, BOOL includeBitmaps);
 
-/* Windows.Devices.PointOfService.SlipPrintJob.SetPrintArea() */
 HRESULT wdepo_slip_print_job_set_print_area(WDEPO_SlipPrintJob *self, WF_Rect value);
 
-/* Windows.Devices.PointOfService.SlipPrintJob.SetBitmap(bitmapNumber, bitmap, alignment) */
 HRESULT wdepo_slip_print_job_set_bitmap(WDEPO_SlipPrintJob *self, uint32_t bitmapNumber, WGRIM_BitmapFrame* bitmap, WDEPO_PosPrinterAlignment alignment);
 
-/* Windows.Devices.PointOfService.SlipPrintJob.SetBitmap(bitmapNumber, bitmap, alignment, width) */
 HRESULT wdepo_slip_print_job_set_bitmap_u32_p_pos_printer_alignment_u32(WDEPO_SlipPrintJob *self, uint32_t bitmapNumber, WGRIM_BitmapFrame* bitmap, WDEPO_PosPrinterAlignment alignment, uint32_t width);
 
-/* Windows.Devices.PointOfService.SlipPrintJob.SetCustomAlignedBitmap(bitmapNumber, bitmap, alignmentDistance) */
 HRESULT wdepo_slip_print_job_set_custom_aligned_bitmap(WDEPO_SlipPrintJob *self, uint32_t bitmapNumber, WGRIM_BitmapFrame* bitmap, uint32_t alignmentDistance);
 
-/* Windows.Devices.PointOfService.SlipPrintJob.SetCustomAlignedBitmap(bitmapNumber, bitmap, alignmentDistance, width) */
 HRESULT wdepo_slip_print_job_set_custom_aligned_bitmap_u32_p_u32_u32(WDEPO_SlipPrintJob *self, uint32_t bitmapNumber, WGRIM_BitmapFrame* bitmap, uint32_t alignmentDistance, uint32_t width);
 
-/* Windows.Devices.PointOfService.SlipPrintJob.PrintSavedBitmap(bitmapNumber) */
 HRESULT wdepo_slip_print_job_print_saved_bitmap(WDEPO_SlipPrintJob *self, uint32_t bitmapNumber);
 
-/* Windows.Devices.PointOfService.SlipPrintJob.DrawRuledLine(positionList, lineDirection, lineWidth, lineStyle, lineColor) */
 HRESULT wdepo_slip_print_job_draw_ruled_line(WDEPO_SlipPrintJob *self, cwinrt_hstring positionList, WDEPO_PosPrinterLineDirection lineDirection, uint32_t lineWidth, WDEPO_PosPrinterLineStyle lineStyle, uint32_t lineColor);
 
-/* Windows.Devices.PointOfService.SlipPrintJob.PrintBarcode(data, symbology, height, width, textPosition, alignment) */
 HRESULT wdepo_slip_print_job_print_barcode(WDEPO_SlipPrintJob *self, cwinrt_hstring data, uint32_t symbology, uint32_t height, uint32_t width, WDEPO_PosPrinterBarcodeTextPosition textPosition, WDEPO_PosPrinterAlignment alignment);
 
-/* Windows.Devices.PointOfService.SlipPrintJob.PrintBarcodeCustomAlign(data, symbology, height, width, textPosition, alignmentDistance) */
 HRESULT wdepo_slip_print_job_print_barcode_custom_align(WDEPO_SlipPrintJob *self, cwinrt_hstring data, uint32_t symbology, uint32_t height, uint32_t width, WDEPO_PosPrinterBarcodeTextPosition textPosition, uint32_t alignmentDistance);
 
-/* Windows.Devices.PointOfService.SlipPrintJob.PrintBitmap(bitmap, alignment) */
 HRESULT wdepo_slip_print_job_print_bitmap(WDEPO_SlipPrintJob *self, WGRIM_BitmapFrame* bitmap, WDEPO_PosPrinterAlignment alignment);
 
-/* Windows.Devices.PointOfService.SlipPrintJob.PrintBitmap(bitmap, alignment, width) */
 HRESULT wdepo_slip_print_job_print_bitmap_p_pos_printer_alignment_u32(WDEPO_SlipPrintJob *self, WGRIM_BitmapFrame* bitmap, WDEPO_PosPrinterAlignment alignment, uint32_t width);
 
-/* Windows.Devices.PointOfService.SlipPrintJob.PrintCustomAlignedBitmap(bitmap, alignmentDistance) */
 HRESULT wdepo_slip_print_job_print_custom_aligned_bitmap(WDEPO_SlipPrintJob *self, WGRIM_BitmapFrame* bitmap, uint32_t alignmentDistance);
 
-/* Windows.Devices.PointOfService.SlipPrintJob.PrintCustomAlignedBitmap(bitmap, alignmentDistance, width) */
 HRESULT wdepo_slip_print_job_print_custom_aligned_bitmap_p_u32_u32(WDEPO_SlipPrintJob *self, WGRIM_BitmapFrame* bitmap, uint32_t alignmentDistance, uint32_t width);
 
-/* Windows.Devices.PointOfService.SlipPrintJob.Print(data) */
 HRESULT wdepo_slip_print_job_print(WDEPO_SlipPrintJob *self, cwinrt_hstring data);
 
-/* Windows.Devices.PointOfService.SlipPrintJob.PrintLine(data) */
 HRESULT wdepo_slip_print_job_print_line_str(WDEPO_SlipPrintJob *self, cwinrt_hstring data);
 
-/* Windows.Devices.PointOfService.SlipPrintJob.PrintLine() */
 HRESULT wdepo_slip_print_job_print_line(WDEPO_SlipPrintJob *self);
 
-/* Windows.Devices.PointOfService.SlipPrintJob.ExecuteAsync() */
 HRESULT wdepo_slip_print_job_execute_async(WDEPO_SlipPrintJob *self, WF_IAsyncOperation_Bool** out);
 
-/* activate Windows.Devices.PointOfService.ReceiptPrinterCapabilities */
 HRESULT wdepo_receipt_printer_capabilities_new(WDEPO_ReceiptPrinterCapabilities **out);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities */
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_CanCutPaper() */
 HRESULT wdepo_receipt_printer_capabilities_get__can_cut_paper(WDEPO_ReceiptPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_IsStampSupported() */
 HRESULT wdepo_receipt_printer_capabilities_get__is_stamp_supported(WDEPO_ReceiptPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_MarkFeedCapabilities() */
 HRESULT wdepo_receipt_printer_capabilities_get__mark_feed_capabilities(WDEPO_ReceiptPrinterCapabilities *self, WDEPO_PosPrinterMarkFeedCapabilities *value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_IsReverseVideoSupported() */
 HRESULT wdepo_receipt_printer_capabilities_get__is_reverse_video_supported(WDEPO_ReceiptPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_IsStrikethroughSupported() */
 HRESULT wdepo_receipt_printer_capabilities_get__is_strikethrough_supported(WDEPO_ReceiptPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_IsSuperscriptSupported() */
 HRESULT wdepo_receipt_printer_capabilities_get__is_superscript_supported(WDEPO_ReceiptPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_IsSubscriptSupported() */
 HRESULT wdepo_receipt_printer_capabilities_get__is_subscript_supported(WDEPO_ReceiptPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_IsReversePaperFeedByLineSupported() */
 HRESULT wdepo_receipt_printer_capabilities_get__is_reverse_paper_feed_by_line_supported(WDEPO_ReceiptPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_IsReversePaperFeedByMapModeUnitSupported() */
 HRESULT wdepo_receipt_printer_capabilities_get__is_reverse_paper_feed_by_map_mode_unit_supported(WDEPO_ReceiptPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_IsBarcodeSupported() */
 HRESULT wdepo_receipt_printer_capabilities_get__is_barcode_supported(WDEPO_ReceiptPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_IsBitmapSupported() */
 HRESULT wdepo_receipt_printer_capabilities_get__is_bitmap_supported(WDEPO_ReceiptPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_IsLeft90RotationSupported() */
 HRESULT wdepo_receipt_printer_capabilities_get__is_left90_rotation_supported(WDEPO_ReceiptPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_IsRight90RotationSupported() */
 HRESULT wdepo_receipt_printer_capabilities_get__is_right90_rotation_supported(WDEPO_ReceiptPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_Is180RotationSupported() */
 HRESULT wdepo_receipt_printer_capabilities_get__is180_rotation_supported(WDEPO_ReceiptPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_IsPrintAreaSupported() */
 HRESULT wdepo_receipt_printer_capabilities_get__is_print_area_supported(WDEPO_ReceiptPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_RuledLineCapabilities() */
 HRESULT wdepo_receipt_printer_capabilities_get__ruled_line_capabilities(WDEPO_ReceiptPrinterCapabilities *self, WDEPO_PosPrinterRuledLineCapabilities *value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_SupportedBarcodeRotations() */
 HRESULT wdepo_receipt_printer_capabilities_get__supported_barcode_rotations(WDEPO_ReceiptPrinterCapabilities *self, WFOCO_IVectorView_WDEPO_PosPrinterRotation** value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_SupportedBitmapRotations() */
 HRESULT wdepo_receipt_printer_capabilities_get__supported_bitmap_rotations(WDEPO_ReceiptPrinterCapabilities *self, WFOCO_IVectorView_WDEPO_PosPrinterRotation** value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_IsPrinterPresent() */
 HRESULT wdepo_receipt_printer_capabilities_get__is_printer_present(WDEPO_ReceiptPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_IsDualColorSupported() */
 HRESULT wdepo_receipt_printer_capabilities_get__is_dual_color_supported(WDEPO_ReceiptPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_ColorCartridgeCapabilities() */
 HRESULT wdepo_receipt_printer_capabilities_get__color_cartridge_capabilities(WDEPO_ReceiptPrinterCapabilities *self, WDEPO_PosPrinterColorCapabilities *value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_CartridgeSensors() */
 HRESULT wdepo_receipt_printer_capabilities_get__cartridge_sensors(WDEPO_ReceiptPrinterCapabilities *self, WDEPO_PosPrinterCartridgeSensors *value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_IsBoldSupported() */
 HRESULT wdepo_receipt_printer_capabilities_get__is_bold_supported(WDEPO_ReceiptPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_IsItalicSupported() */
 HRESULT wdepo_receipt_printer_capabilities_get__is_italic_supported(WDEPO_ReceiptPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_IsUnderlineSupported() */
 HRESULT wdepo_receipt_printer_capabilities_get__is_underline_supported(WDEPO_ReceiptPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_IsDoubleHighPrintSupported() */
 HRESULT wdepo_receipt_printer_capabilities_get__is_double_high_print_supported(WDEPO_ReceiptPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_IsDoubleWidePrintSupported() */
 HRESULT wdepo_receipt_printer_capabilities_get__is_double_wide_print_supported(WDEPO_ReceiptPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_IsDoubleHighDoubleWidePrintSupported() */
 HRESULT wdepo_receipt_printer_capabilities_get__is_double_high_double_wide_print_supported(WDEPO_ReceiptPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_IsPaperEmptySensorSupported() */
 HRESULT wdepo_receipt_printer_capabilities_get__is_paper_empty_sensor_supported(WDEPO_ReceiptPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_IsPaperNearEndSensorSupported() */
 HRESULT wdepo_receipt_printer_capabilities_get__is_paper_near_end_sensor_supported(WDEPO_ReceiptPrinterCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ReceiptPrinterCapabilities.get_SupportedCharactersPerLine() */
 HRESULT wdepo_receipt_printer_capabilities_get__supported_characters_per_line(WDEPO_ReceiptPrinterCapabilities *self, WFOCO_IVectorView_uint32_t** value);
 
-/* activate Windows.Devices.PointOfService.ReceiptPrintJob */
 HRESULT wdepo_receipt_print_job_new(WDEPO_ReceiptPrintJob **out);
 
-/* Windows.Devices.PointOfService.ReceiptPrintJob */
-/* Windows.Devices.PointOfService.ReceiptPrintJob.MarkFeed(kind) */
 HRESULT wdepo_receipt_print_job_mark_feed(WDEPO_ReceiptPrintJob *self, WDEPO_PosPrinterMarkFeedKind kind);
 
-/* Windows.Devices.PointOfService.ReceiptPrintJob.CutPaper(percentage) */
 HRESULT wdepo_receipt_print_job_cut_paper_f64(WDEPO_ReceiptPrintJob *self, double percentage);
 
-/* Windows.Devices.PointOfService.ReceiptPrintJob.CutPaper() */
 HRESULT wdepo_receipt_print_job_cut_paper(WDEPO_ReceiptPrintJob *self);
 
-/* Windows.Devices.PointOfService.ReceiptPrintJob.StampPaper() */
 HRESULT wdepo_receipt_print_job_stamp_paper(WDEPO_ReceiptPrintJob *self);
 
-/* Windows.Devices.PointOfService.ReceiptPrintJob.Print(data, printOptions) */
 HRESULT wdepo_receipt_print_job_print_str_p(WDEPO_ReceiptPrintJob *self, cwinrt_hstring data, WDEPO_PosPrinterPrintOptions* printOptions);
 
-/* Windows.Devices.PointOfService.ReceiptPrintJob.FeedPaperByLine(lineCount) */
 HRESULT wdepo_receipt_print_job_feed_paper_by_line(WDEPO_ReceiptPrintJob *self, int32_t lineCount);
 
-/* Windows.Devices.PointOfService.ReceiptPrintJob.FeedPaperByMapModeUnit(distance) */
 HRESULT wdepo_receipt_print_job_feed_paper_by_map_mode_unit(WDEPO_ReceiptPrintJob *self, int32_t distance);
 
-/* Windows.Devices.PointOfService.ReceiptPrintJob.SetBarcodeRotation() */
 HRESULT wdepo_receipt_print_job_set_barcode_rotation(WDEPO_ReceiptPrintJob *self, WDEPO_PosPrinterRotation value);
 
-/* Windows.Devices.PointOfService.ReceiptPrintJob.SetPrintRotation(includeBitmaps) */
 HRESULT wdepo_receipt_print_job_set_print_rotation(WDEPO_ReceiptPrintJob *self, WDEPO_PosPrinterRotation value, BOOL includeBitmaps);
 
-/* Windows.Devices.PointOfService.ReceiptPrintJob.SetPrintArea() */
 HRESULT wdepo_receipt_print_job_set_print_area(WDEPO_ReceiptPrintJob *self, WF_Rect value);
 
-/* Windows.Devices.PointOfService.ReceiptPrintJob.SetBitmap(bitmapNumber, bitmap, alignment) */
 HRESULT wdepo_receipt_print_job_set_bitmap(WDEPO_ReceiptPrintJob *self, uint32_t bitmapNumber, WGRIM_BitmapFrame* bitmap, WDEPO_PosPrinterAlignment alignment);
 
-/* Windows.Devices.PointOfService.ReceiptPrintJob.SetBitmap(bitmapNumber, bitmap, alignment, width) */
 HRESULT wdepo_receipt_print_job_set_bitmap_u32_p_pos_printer_alignment_u32(WDEPO_ReceiptPrintJob *self, uint32_t bitmapNumber, WGRIM_BitmapFrame* bitmap, WDEPO_PosPrinterAlignment alignment, uint32_t width);
 
-/* Windows.Devices.PointOfService.ReceiptPrintJob.SetCustomAlignedBitmap(bitmapNumber, bitmap, alignmentDistance) */
 HRESULT wdepo_receipt_print_job_set_custom_aligned_bitmap(WDEPO_ReceiptPrintJob *self, uint32_t bitmapNumber, WGRIM_BitmapFrame* bitmap, uint32_t alignmentDistance);
 
-/* Windows.Devices.PointOfService.ReceiptPrintJob.SetCustomAlignedBitmap(bitmapNumber, bitmap, alignmentDistance, width) */
 HRESULT wdepo_receipt_print_job_set_custom_aligned_bitmap_u32_p_u32_u32(WDEPO_ReceiptPrintJob *self, uint32_t bitmapNumber, WGRIM_BitmapFrame* bitmap, uint32_t alignmentDistance, uint32_t width);
 
-/* Windows.Devices.PointOfService.ReceiptPrintJob.PrintSavedBitmap(bitmapNumber) */
 HRESULT wdepo_receipt_print_job_print_saved_bitmap(WDEPO_ReceiptPrintJob *self, uint32_t bitmapNumber);
 
-/* Windows.Devices.PointOfService.ReceiptPrintJob.DrawRuledLine(positionList, lineDirection, lineWidth, lineStyle, lineColor) */
 HRESULT wdepo_receipt_print_job_draw_ruled_line(WDEPO_ReceiptPrintJob *self, cwinrt_hstring positionList, WDEPO_PosPrinterLineDirection lineDirection, uint32_t lineWidth, WDEPO_PosPrinterLineStyle lineStyle, uint32_t lineColor);
 
-/* Windows.Devices.PointOfService.ReceiptPrintJob.PrintBarcode(data, symbology, height, width, textPosition, alignment) */
 HRESULT wdepo_receipt_print_job_print_barcode(WDEPO_ReceiptPrintJob *self, cwinrt_hstring data, uint32_t symbology, uint32_t height, uint32_t width, WDEPO_PosPrinterBarcodeTextPosition textPosition, WDEPO_PosPrinterAlignment alignment);
 
-/* Windows.Devices.PointOfService.ReceiptPrintJob.PrintBarcodeCustomAlign(data, symbology, height, width, textPosition, alignmentDistance) */
 HRESULT wdepo_receipt_print_job_print_barcode_custom_align(WDEPO_ReceiptPrintJob *self, cwinrt_hstring data, uint32_t symbology, uint32_t height, uint32_t width, WDEPO_PosPrinterBarcodeTextPosition textPosition, uint32_t alignmentDistance);
 
-/* Windows.Devices.PointOfService.ReceiptPrintJob.PrintBitmap(bitmap, alignment) */
 HRESULT wdepo_receipt_print_job_print_bitmap(WDEPO_ReceiptPrintJob *self, WGRIM_BitmapFrame* bitmap, WDEPO_PosPrinterAlignment alignment);
 
-/* Windows.Devices.PointOfService.ReceiptPrintJob.PrintBitmap(bitmap, alignment, width) */
 HRESULT wdepo_receipt_print_job_print_bitmap_p_pos_printer_alignment_u32(WDEPO_ReceiptPrintJob *self, WGRIM_BitmapFrame* bitmap, WDEPO_PosPrinterAlignment alignment, uint32_t width);
 
-/* Windows.Devices.PointOfService.ReceiptPrintJob.PrintCustomAlignedBitmap(bitmap, alignmentDistance) */
 HRESULT wdepo_receipt_print_job_print_custom_aligned_bitmap(WDEPO_ReceiptPrintJob *self, WGRIM_BitmapFrame* bitmap, uint32_t alignmentDistance);
 
-/* Windows.Devices.PointOfService.ReceiptPrintJob.PrintCustomAlignedBitmap(bitmap, alignmentDistance, width) */
 HRESULT wdepo_receipt_print_job_print_custom_aligned_bitmap_p_u32_u32(WDEPO_ReceiptPrintJob *self, WGRIM_BitmapFrame* bitmap, uint32_t alignmentDistance, uint32_t width);
 
-/* Windows.Devices.PointOfService.ReceiptPrintJob.Print(data) */
 HRESULT wdepo_receipt_print_job_print(WDEPO_ReceiptPrintJob *self, cwinrt_hstring data);
 
-/* Windows.Devices.PointOfService.ReceiptPrintJob.PrintLine(data) */
 HRESULT wdepo_receipt_print_job_print_line_str(WDEPO_ReceiptPrintJob *self, cwinrt_hstring data);
 
-/* Windows.Devices.PointOfService.ReceiptPrintJob.PrintLine() */
 HRESULT wdepo_receipt_print_job_print_line(WDEPO_ReceiptPrintJob *self);
 
-/* Windows.Devices.PointOfService.ReceiptPrintJob.ExecuteAsync() */
 HRESULT wdepo_receipt_print_job_execute_async(WDEPO_ReceiptPrintJob *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.IBarcodeScanner */
-/* Windows.Devices.PointOfService.IBarcodeScanner2 */
-/* Windows.Devices.PointOfService.IBarcodeScanner2.get_VideoDeviceId() */
 HRESULT wdepo_barcode_scanner_2_get__video_device_id(WDEPO_IBarcodeScanner_2 *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.IBarcodeScannerCapabilities */
-/* Windows.Devices.PointOfService.IBarcodeScannerCapabilities1 */
-/* Windows.Devices.PointOfService.IBarcodeScannerCapabilities1.get_IsSoftwareTriggerSupported() */
 HRESULT wdepo_barcode_scanner_capabilities_1_get__is_software_trigger_supported(WDEPO_IBarcodeScannerCapabilities_1 *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.IBarcodeScannerCapabilities2 */
-/* Windows.Devices.PointOfService.IBarcodeScannerCapabilities2.get_IsVideoPreviewSupported() */
 HRESULT wdepo_barcode_scanner_capabilities_2_get__is_video_preview_supported(WDEPO_IBarcodeScannerCapabilities_2 *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.IBarcodeScannerDataReceivedEventArgs */
-/* Windows.Devices.PointOfService.IBarcodeScannerErrorOccurredEventArgs */
-/* Windows.Devices.PointOfService.IBarcodeScannerImagePreviewReceivedEventArgs */
-/* Windows.Devices.PointOfService.IBarcodeScannerReport */
-/* Windows.Devices.PointOfService.IBarcodeScannerStatusUpdatedEventArgs */
-/* Windows.Devices.PointOfService.IBarcodeSymbologyAttributes */
-/* Windows.Devices.PointOfService.ICashDrawer */
-/* Windows.Devices.PointOfService.ICashDrawerCapabilities */
-/* Windows.Devices.PointOfService.ICashDrawerCloseAlarm */
-/* Windows.Devices.PointOfService.ICashDrawerEventSource */
-/* Windows.Devices.PointOfService.ICashDrawerEventSourceEventArgs */
-/* Windows.Devices.PointOfService.ICashDrawerEventSourceEventArgs.get_CashDrawer() */
 HRESULT wdepo_cash_drawer_event_source_event_args_get__cash_drawer(WDEPO_ICashDrawerEventSourceEventArgs *self, WDEPO_CashDrawer** value);
 
-/* Windows.Devices.PointOfService.ICashDrawerStatus */
-/* Windows.Devices.PointOfService.ICashDrawerStatusUpdatedEventArgs */
-/* Windows.Devices.PointOfService.IClaimedBarcodeScanner */
-/* Windows.Devices.PointOfService.IClaimedBarcodeScanner1 */
-/* Windows.Devices.PointOfService.IClaimedBarcodeScanner1.StartSoftwareTriggerAsync() */
 HRESULT wdepo_claimed_barcode_scanner_1_start_software_trigger_async(WDEPO_IClaimedBarcodeScanner_1 *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.IClaimedBarcodeScanner1.StopSoftwareTriggerAsync() */
 HRESULT wdepo_claimed_barcode_scanner_1_stop_software_trigger_async(WDEPO_IClaimedBarcodeScanner_1 *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.IClaimedBarcodeScanner2 */
-/* Windows.Devices.PointOfService.IClaimedBarcodeScanner2.GetSymbologyAttributesAsync(barcodeSymbology) */
 HRESULT wdepo_claimed_barcode_scanner_2_get_symbology_attributes_async(WDEPO_IClaimedBarcodeScanner_2 *self, uint32_t barcodeSymbology, WF_IAsyncOperation_WDEPO_BarcodeSymbologyAttributes** out);
 
-/* Windows.Devices.PointOfService.IClaimedBarcodeScanner2.SetSymbologyAttributesAsync(barcodeSymbology, attributes) */
 HRESULT wdepo_claimed_barcode_scanner_2_set_symbology_attributes_async(WDEPO_IClaimedBarcodeScanner_2 *self, uint32_t barcodeSymbology, WDEPO_BarcodeSymbologyAttributes* attributes, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.IClaimedBarcodeScanner3 */
-/* Windows.Devices.PointOfService.IClaimedBarcodeScanner3.ShowVideoPreviewAsync() */
 HRESULT wdepo_claimed_barcode_scanner_3_show_video_preview_async(WDEPO_IClaimedBarcodeScanner_3 *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.IClaimedBarcodeScanner3.HideVideoPreview() */
 HRESULT wdepo_claimed_barcode_scanner_3_hide_video_preview(WDEPO_IClaimedBarcodeScanner_3 *self);
 
-/* Windows.Devices.PointOfService.IClaimedBarcodeScanner3.put_IsVideoPreviewShownOnEnable() */
 HRESULT wdepo_claimed_barcode_scanner_3_put__is_video_preview_shown_on_enable(WDEPO_IClaimedBarcodeScanner_3 *self, BOOL value);
 
-/* Windows.Devices.PointOfService.IClaimedBarcodeScanner3.get_IsVideoPreviewShownOnEnable() */
 HRESULT wdepo_claimed_barcode_scanner_3_get__is_video_preview_shown_on_enable(WDEPO_IClaimedBarcodeScanner_3 *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.IClaimedBarcodeScanner4 */
-/* Windows.Devices.PointOfService.IClaimedCashDrawer */
-/* Windows.Devices.PointOfService.IClaimedCashDrawer2 */
-/* Windows.Devices.PointOfService.IClaimedJournalPrinter */
-/* Windows.Devices.PointOfService.IClaimedLineDisplay */
-/* Windows.Devices.PointOfService.IClaimedLineDisplay2 */
-/* Windows.Devices.PointOfService.IClaimedLineDisplay2.GetStatisticsAsync(statisticsCategories) */
 HRESULT wdepo_claimed_line_display_2_get_statistics_async(WDEPO_IClaimedLineDisplay_2 *self, WFOCO_IIterable_HSTRING* statisticsCategories, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Devices.PointOfService.IClaimedLineDisplay2.CheckHealthAsync(level) */
 HRESULT wdepo_claimed_line_display_2_check_health_async(WDEPO_IClaimedLineDisplay_2 *self, WDEPO_UnifiedPosHealthCheckLevel level, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Devices.PointOfService.IClaimedLineDisplay2.CheckPowerStatusAsync() */
 HRESULT wdepo_claimed_line_display_2_check_power_status_async(WDEPO_IClaimedLineDisplay_2 *self, WF_IAsyncOperation_WDEPO_LineDisplayPowerStatus** out);
 
-/* Windows.Devices.PointOfService.IClaimedLineDisplay2.get_SupportedScreenSizesInCharacters() */
 HRESULT wdepo_claimed_line_display_2_get__supported_screen_sizes_in_characters(WDEPO_IClaimedLineDisplay_2 *self, WFOCO_IVectorView_WF_Size** value);
 
-/* Windows.Devices.PointOfService.IClaimedLineDisplay2.get_MaxBitmapSizeInPixels() */
 HRESULT wdepo_claimed_line_display_2_get__max_bitmap_size_in_pixels(WDEPO_IClaimedLineDisplay_2 *self, WF_Size *value);
 
-/* Windows.Devices.PointOfService.IClaimedLineDisplay2.get_SupportedCharacterSets() */
 HRESULT wdepo_claimed_line_display_2_get__supported_character_sets(WDEPO_IClaimedLineDisplay_2 *self, WFOCO_IVectorView_int32_t** value);
 
-/* Windows.Devices.PointOfService.IClaimedLineDisplay2.get_CustomGlyphs() */
 HRESULT wdepo_claimed_line_display_2_get__custom_glyphs(WDEPO_IClaimedLineDisplay_2 *self, WDEPO_LineDisplayCustomGlyphs** value);
 
-/* Windows.Devices.PointOfService.IClaimedLineDisplay2.GetAttributes() */
 HRESULT wdepo_claimed_line_display_2_get_attributes(WDEPO_IClaimedLineDisplay_2 *self, WDEPO_LineDisplayAttributes** out);
 
-/* Windows.Devices.PointOfService.IClaimedLineDisplay2.TryUpdateAttributesAsync(attributes) */
 HRESULT wdepo_claimed_line_display_2_try_update_attributes_async(WDEPO_IClaimedLineDisplay_2 *self, WDEPO_LineDisplayAttributes* attributes, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.IClaimedLineDisplay2.TrySetDescriptorAsync(descriptor, descriptorState) */
 HRESULT wdepo_claimed_line_display_2_try_set_descriptor_async(WDEPO_IClaimedLineDisplay_2 *self, uint32_t descriptor, WDEPO_LineDisplayDescriptorState descriptorState, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.IClaimedLineDisplay2.TryClearDescriptorsAsync() */
 HRESULT wdepo_claimed_line_display_2_try_clear_descriptors_async(WDEPO_IClaimedLineDisplay_2 *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.IClaimedLineDisplay2.TryCreateWindowAsync(viewport, windowSize) */
 HRESULT wdepo_claimed_line_display_2_try_create_window_async(WDEPO_IClaimedLineDisplay_2 *self, WF_Rect viewport, WF_Size windowSize, WF_IAsyncOperation_WDEPO_LineDisplayWindow** out);
 
-/* Windows.Devices.PointOfService.IClaimedLineDisplay2.TryStoreStorageFileBitmapAsync(bitmap) */
 HRESULT wdepo_claimed_line_display_2_try_store_storage_file_bitmap_async(WDEPO_IClaimedLineDisplay_2 *self, WS_StorageFile* bitmap, WF_IAsyncOperation_WDEPO_LineDisplayStoredBitmap** out);
 
-/* Windows.Devices.PointOfService.IClaimedLineDisplay2.TryStoreStorageFileBitmapAsync(bitmap, horizontalAlignment, verticalAlignment) */
 HRESULT wdepo_claimed_line_display_2_try_store_storage_file_bitmap_async_p_line_display_horizontal_alignment__7deb8d6e(WDEPO_IClaimedLineDisplay_2 *self, WS_StorageFile* bitmap, WDEPO_LineDisplayHorizontalAlignment horizontalAlignment, WDEPO_LineDisplayVerticalAlignment verticalAlignment, WF_IAsyncOperation_WDEPO_LineDisplayStoredBitmap** out);
 
-/* Windows.Devices.PointOfService.IClaimedLineDisplay2.TryStoreStorageFileBitmapAsync(bitmap, horizontalAlignment, verticalAlignment, widthInPixels) */
 HRESULT wdepo_claimed_line_display_2_try_store_storage_file_bitmap_async_p_line_display_horizontal_alignment__42be5243(WDEPO_IClaimedLineDisplay_2 *self, WS_StorageFile* bitmap, WDEPO_LineDisplayHorizontalAlignment horizontalAlignment, WDEPO_LineDisplayVerticalAlignment verticalAlignment, int32_t widthInPixels, WF_IAsyncOperation_WDEPO_LineDisplayStoredBitmap** out);
 
-/* Windows.Devices.PointOfService.IClaimedLineDisplay3 */
-/* Windows.Devices.PointOfService.IClaimedMagneticStripeReader */
-/* Windows.Devices.PointOfService.IClaimedMagneticStripeReader2 */
-/* Windows.Devices.PointOfService.IClaimedPosPrinter */
-/* Windows.Devices.PointOfService.IClaimedPosPrinter2 */
-/* Windows.Devices.PointOfService.IClaimedReceiptPrinter */
-/* Windows.Devices.PointOfService.IClaimedSlipPrinter */
-/* Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation */
-/* Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation.put_CharactersPerLine() */
 HRESULT wdepo_common_claimed_pos_printer_station_put__characters_per_line(WDEPO_ICommonClaimedPosPrinterStation *self, uint32_t value);
 
-/* Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation.get_CharactersPerLine() */
 HRESULT wdepo_common_claimed_pos_printer_station_get__characters_per_line(WDEPO_ICommonClaimedPosPrinterStation *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation.put_LineHeight() */
 HRESULT wdepo_common_claimed_pos_printer_station_put__line_height(WDEPO_ICommonClaimedPosPrinterStation *self, uint32_t value);
 
-/* Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation.get_LineHeight() */
 HRESULT wdepo_common_claimed_pos_printer_station_get__line_height(WDEPO_ICommonClaimedPosPrinterStation *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation.put_LineSpacing() */
 HRESULT wdepo_common_claimed_pos_printer_station_put__line_spacing(WDEPO_ICommonClaimedPosPrinterStation *self, uint32_t value);
 
-/* Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation.get_LineSpacing() */
 HRESULT wdepo_common_claimed_pos_printer_station_get__line_spacing(WDEPO_ICommonClaimedPosPrinterStation *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation.get_LineWidth() */
 HRESULT wdepo_common_claimed_pos_printer_station_get__line_width(WDEPO_ICommonClaimedPosPrinterStation *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation.put_IsLetterQuality() */
 HRESULT wdepo_common_claimed_pos_printer_station_put__is_letter_quality(WDEPO_ICommonClaimedPosPrinterStation *self, BOOL value);
 
-/* Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation.get_IsLetterQuality() */
 HRESULT wdepo_common_claimed_pos_printer_station_get__is_letter_quality(WDEPO_ICommonClaimedPosPrinterStation *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation.get_IsPaperNearEnd() */
 HRESULT wdepo_common_claimed_pos_printer_station_get__is_paper_near_end(WDEPO_ICommonClaimedPosPrinterStation *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation.put_ColorCartridge() */
 HRESULT wdepo_common_claimed_pos_printer_station_put__color_cartridge(WDEPO_ICommonClaimedPosPrinterStation *self, WDEPO_PosPrinterColorCartridge value);
 
-/* Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation.get_ColorCartridge() */
 HRESULT wdepo_common_claimed_pos_printer_station_get__color_cartridge(WDEPO_ICommonClaimedPosPrinterStation *self, WDEPO_PosPrinterColorCartridge *value);
 
-/* Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation.get_IsCoverOpen() */
 HRESULT wdepo_common_claimed_pos_printer_station_get__is_cover_open(WDEPO_ICommonClaimedPosPrinterStation *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation.get_IsCartridgeRemoved() */
 HRESULT wdepo_common_claimed_pos_printer_station_get__is_cartridge_removed(WDEPO_ICommonClaimedPosPrinterStation *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation.get_IsCartridgeEmpty() */
 HRESULT wdepo_common_claimed_pos_printer_station_get__is_cartridge_empty(WDEPO_ICommonClaimedPosPrinterStation *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation.get_IsHeadCleaning() */
 HRESULT wdepo_common_claimed_pos_printer_station_get__is_head_cleaning(WDEPO_ICommonClaimedPosPrinterStation *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation.get_IsPaperEmpty() */
 HRESULT wdepo_common_claimed_pos_printer_station_get__is_paper_empty(WDEPO_ICommonClaimedPosPrinterStation *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation.get_IsReadyToPrint() */
 HRESULT wdepo_common_claimed_pos_printer_station_get__is_ready_to_print(WDEPO_ICommonClaimedPosPrinterStation *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation.ValidateData(data) */
 HRESULT wdepo_common_claimed_pos_printer_station_validate_data(WDEPO_ICommonClaimedPosPrinterStation *self, cwinrt_hstring data, BOOL *out);
 
-/* Windows.Devices.PointOfService.IJournalPrintJob */
-/* Windows.Devices.PointOfService.IJournalPrinterCapabilities2 */
-/* Windows.Devices.PointOfService.IJournalPrinterCapabilities2.get_IsReverseVideoSupported() */
 HRESULT wdepo_journal_printer_capabilities_2_get__is_reverse_video_supported(WDEPO_IJournalPrinterCapabilities_2 *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.IJournalPrinterCapabilities2.get_IsStrikethroughSupported() */
 HRESULT wdepo_journal_printer_capabilities_2_get__is_strikethrough_supported(WDEPO_IJournalPrinterCapabilities_2 *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.IJournalPrinterCapabilities2.get_IsSuperscriptSupported() */
 HRESULT wdepo_journal_printer_capabilities_2_get__is_superscript_supported(WDEPO_IJournalPrinterCapabilities_2 *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.IJournalPrinterCapabilities2.get_IsSubscriptSupported() */
 HRESULT wdepo_journal_printer_capabilities_2_get__is_subscript_supported(WDEPO_IJournalPrinterCapabilities_2 *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.IJournalPrinterCapabilities2.get_IsReversePaperFeedByLineSupported() */
 HRESULT wdepo_journal_printer_capabilities_2_get__is_reverse_paper_feed_by_line_supported(WDEPO_IJournalPrinterCapabilities_2 *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.IJournalPrinterCapabilities2.get_IsReversePaperFeedByMapModeUnitSupported() */
 HRESULT wdepo_journal_printer_capabilities_2_get__is_reverse_paper_feed_by_map_mode_unit_supported(WDEPO_IJournalPrinterCapabilities_2 *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ILineDisplay */
-/* Windows.Devices.PointOfService.ILineDisplay2 */
-/* Windows.Devices.PointOfService.ILineDisplay2.CheckPowerStatusAsync() */
 HRESULT wdepo_line_display_2_check_power_status_async(WDEPO_ILineDisplay_2 *self, WF_IAsyncOperation_WDEPO_LineDisplayPowerStatus** out);
 
-/* Windows.Devices.PointOfService.ILineDisplayAttributes */
-/* Windows.Devices.PointOfService.ILineDisplayCapabilities */
-/* Windows.Devices.PointOfService.ILineDisplayCursor */
-/* Windows.Devices.PointOfService.ILineDisplayCursorAttributes */
-/* Windows.Devices.PointOfService.ILineDisplayCustomGlyphs */
-/* Windows.Devices.PointOfService.ILineDisplayMarquee */
-/* Windows.Devices.PointOfService.ILineDisplayStatisticsCategorySelector */
-/* Windows.Devices.PointOfService.ILineDisplayStatusUpdatedEventArgs */
-/* Windows.Devices.PointOfService.ILineDisplayStoredBitmap */
-/* Windows.Devices.PointOfService.ILineDisplayWindow */
-/* Windows.Devices.PointOfService.ILineDisplayWindow2 */
-/* Windows.Devices.PointOfService.ILineDisplayWindow2.get_Cursor() */
 HRESULT wdepo_line_display_window_2_get__cursor(WDEPO_ILineDisplayWindow_2 *self, WDEPO_LineDisplayCursor** value);
 
-/* Windows.Devices.PointOfService.ILineDisplayWindow2.get_Marquee() */
 HRESULT wdepo_line_display_window_2_get__marquee(WDEPO_ILineDisplayWindow_2 *self, WDEPO_LineDisplayMarquee** value);
 
-/* Windows.Devices.PointOfService.ILineDisplayWindow2.ReadCharacterAtCursorAsync() */
 HRESULT wdepo_line_display_window_2_read_character_at_cursor_async(WDEPO_ILineDisplayWindow_2 *self, WF_IAsyncOperation_uint32_t** out);
 
-/* Windows.Devices.PointOfService.ILineDisplayWindow2.TryDisplayStoredBitmapAtCursorAsync(bitmap) */
 HRESULT wdepo_line_display_window_2_try_display_stored_bitmap_at_cursor_async(WDEPO_ILineDisplayWindow_2 *self, WDEPO_LineDisplayStoredBitmap* bitmap, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.ILineDisplayWindow2.TryDisplayStorageFileBitmapAtCursorAsync(bitmap) */
 HRESULT wdepo_line_display_window_2_try_display_storage_file_bitmap_at_cursor_async(WDEPO_ILineDisplayWindow_2 *self, WS_StorageFile* bitmap, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.ILineDisplayWindow2.TryDisplayStorageFileBitmapAtCursorAsync(bitmap, horizontalAlignment, verticalAlignment) */
 HRESULT wdepo_line_display_window_2_try_display_storage_file_bitmap_at_cursor_async_p_line_display_horizontal_alignment__7deb8d6e(WDEPO_ILineDisplayWindow_2 *self, WS_StorageFile* bitmap, WDEPO_LineDisplayHorizontalAlignment horizontalAlignment, WDEPO_LineDisplayVerticalAlignment verticalAlignment, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.ILineDisplayWindow2.TryDisplayStorageFileBitmapAtCursorAsync(bitmap, horizontalAlignment, verticalAlignment, widthInPixels) */
 HRESULT wdepo_line_display_window_2_try_display_storage_file_bitmap_at_cursor_async_p_line_display_horizontal_alignment__42be5243(WDEPO_ILineDisplayWindow_2 *self, WS_StorageFile* bitmap, WDEPO_LineDisplayHorizontalAlignment horizontalAlignment, WDEPO_LineDisplayVerticalAlignment verticalAlignment, int32_t widthInPixels, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.ILineDisplayWindow2.TryDisplayStorageFileBitmapAtPointAsync(bitmap, offsetInPixels) */
 HRESULT wdepo_line_display_window_2_try_display_storage_file_bitmap_at_point_async(WDEPO_ILineDisplayWindow_2 *self, WS_StorageFile* bitmap, WF_Point offsetInPixels, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.ILineDisplayWindow2.TryDisplayStorageFileBitmapAtPointAsync(bitmap, offsetInPixels, widthInPixels) */
 HRESULT wdepo_line_display_window_2_try_display_storage_file_bitmap_at_point_async_p_point_i32_p(WDEPO_ILineDisplayWindow_2 *self, WS_StorageFile* bitmap, WF_Point offsetInPixels, int32_t widthInPixels, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.IMagneticStripeReader */
-/* Windows.Devices.PointOfService.IMagneticStripeReaderAamvaCardDataReceivedEventArgs */
-/* Windows.Devices.PointOfService.IMagneticStripeReaderBankCardDataReceivedEventArgs */
-/* Windows.Devices.PointOfService.IMagneticStripeReaderCapabilities */
-/* Windows.Devices.PointOfService.IMagneticStripeReaderErrorOccurredEventArgs */
-/* Windows.Devices.PointOfService.IMagneticStripeReaderReport */
-/* Windows.Devices.PointOfService.IMagneticStripeReaderStatusUpdatedEventArgs */
-/* Windows.Devices.PointOfService.IMagneticStripeReaderTrackData */
-/* Windows.Devices.PointOfService.IMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs */
-/* Windows.Devices.PointOfService.IPosPrinter */
-/* Windows.Devices.PointOfService.IPosPrinter2 */
-/* Windows.Devices.PointOfService.IPosPrinter2.get_SupportedBarcodeSymbologies() */
 HRESULT wdepo_pos_printer_2_get__supported_barcode_symbologies(WDEPO_IPosPrinter_2 *self, WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Devices.PointOfService.IPosPrinter2.GetFontProperty(typeface) */
 HRESULT wdepo_pos_printer_2_get_font_property(WDEPO_IPosPrinter_2 *self, cwinrt_hstring typeface, WDEPO_PosPrinterFontProperty** out);
 
-/* Windows.Devices.PointOfService.IPosPrinterCapabilities */
-/* Windows.Devices.PointOfService.IPosPrinterFontProperty */
-/* Windows.Devices.PointOfService.IPosPrinterPrintOptions */
-/* Windows.Devices.PointOfService.IPosPrinterStatus */
-/* Windows.Devices.PointOfService.IPosPrinterStatusUpdatedEventArgs */
-/* Windows.Devices.PointOfService.IUnifiedPosErrorData */
-/* Windows.Devices.PointOfService.ISlipPrinterCapabilities */
-/* Windows.Devices.PointOfService.ISlipPrinterCapabilities2 */
-/* Windows.Devices.PointOfService.ISlipPrinterCapabilities2.get_IsReverseVideoSupported() */
 HRESULT wdepo_slip_printer_capabilities_2_get__is_reverse_video_supported(WDEPO_ISlipPrinterCapabilities_2 *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ISlipPrinterCapabilities2.get_IsStrikethroughSupported() */
 HRESULT wdepo_slip_printer_capabilities_2_get__is_strikethrough_supported(WDEPO_ISlipPrinterCapabilities_2 *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ISlipPrinterCapabilities2.get_IsSuperscriptSupported() */
 HRESULT wdepo_slip_printer_capabilities_2_get__is_superscript_supported(WDEPO_ISlipPrinterCapabilities_2 *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ISlipPrinterCapabilities2.get_IsSubscriptSupported() */
 HRESULT wdepo_slip_printer_capabilities_2_get__is_subscript_supported(WDEPO_ISlipPrinterCapabilities_2 *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ISlipPrinterCapabilities2.get_IsReversePaperFeedByLineSupported() */
 HRESULT wdepo_slip_printer_capabilities_2_get__is_reverse_paper_feed_by_line_supported(WDEPO_ISlipPrinterCapabilities_2 *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ISlipPrinterCapabilities2.get_IsReversePaperFeedByMapModeUnitSupported() */
 HRESULT wdepo_slip_printer_capabilities_2_get__is_reverse_paper_feed_by_map_mode_unit_supported(WDEPO_ISlipPrinterCapabilities_2 *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ISlipPrintJob */
-/* Windows.Devices.PointOfService.IReceiptPrinterCapabilities */
-/* Windows.Devices.PointOfService.IReceiptPrinterCapabilities2 */
-/* Windows.Devices.PointOfService.IReceiptPrinterCapabilities2.get_IsReverseVideoSupported() */
 HRESULT wdepo_receipt_printer_capabilities_2_get__is_reverse_video_supported(WDEPO_IReceiptPrinterCapabilities_2 *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.IReceiptPrinterCapabilities2.get_IsStrikethroughSupported() */
 HRESULT wdepo_receipt_printer_capabilities_2_get__is_strikethrough_supported(WDEPO_IReceiptPrinterCapabilities_2 *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.IReceiptPrinterCapabilities2.get_IsSuperscriptSupported() */
 HRESULT wdepo_receipt_printer_capabilities_2_get__is_superscript_supported(WDEPO_IReceiptPrinterCapabilities_2 *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.IReceiptPrinterCapabilities2.get_IsSubscriptSupported() */
 HRESULT wdepo_receipt_printer_capabilities_2_get__is_subscript_supported(WDEPO_IReceiptPrinterCapabilities_2 *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.IReceiptPrinterCapabilities2.get_IsReversePaperFeedByLineSupported() */
 HRESULT wdepo_receipt_printer_capabilities_2_get__is_reverse_paper_feed_by_line_supported(WDEPO_IReceiptPrinterCapabilities_2 *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.IReceiptPrinterCapabilities2.get_IsReversePaperFeedByMapModeUnitSupported() */
 HRESULT wdepo_receipt_printer_capabilities_2_get__is_reverse_paper_feed_by_map_mode_unit_supported(WDEPO_IReceiptPrinterCapabilities_2 *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities */
-/* Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities.get_IsBarcodeSupported() */
 HRESULT wdepo_common_receipt_slip_capabilities_get__is_barcode_supported(WDEPO_ICommonReceiptSlipCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities.get_IsBitmapSupported() */
 HRESULT wdepo_common_receipt_slip_capabilities_get__is_bitmap_supported(WDEPO_ICommonReceiptSlipCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities.get_IsLeft90RotationSupported() */
 HRESULT wdepo_common_receipt_slip_capabilities_get__is_left90_rotation_supported(WDEPO_ICommonReceiptSlipCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities.get_IsRight90RotationSupported() */
 HRESULT wdepo_common_receipt_slip_capabilities_get__is_right90_rotation_supported(WDEPO_ICommonReceiptSlipCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities.get_Is180RotationSupported() */
 HRESULT wdepo_common_receipt_slip_capabilities_get__is180_rotation_supported(WDEPO_ICommonReceiptSlipCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities.get_IsPrintAreaSupported() */
 HRESULT wdepo_common_receipt_slip_capabilities_get__is_print_area_supported(WDEPO_ICommonReceiptSlipCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities.get_RuledLineCapabilities() */
 HRESULT wdepo_common_receipt_slip_capabilities_get__ruled_line_capabilities(WDEPO_ICommonReceiptSlipCapabilities *self, WDEPO_PosPrinterRuledLineCapabilities *value);
 
-/* Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities.get_SupportedBarcodeRotations() */
 HRESULT wdepo_common_receipt_slip_capabilities_get__supported_barcode_rotations(WDEPO_ICommonReceiptSlipCapabilities *self, WFOCO_IVectorView_WDEPO_PosPrinterRotation** value);
 
-/* Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities.get_SupportedBitmapRotations() */
 HRESULT wdepo_common_receipt_slip_capabilities_get__supported_bitmap_rotations(WDEPO_ICommonReceiptSlipCapabilities *self, WFOCO_IVectorView_WDEPO_PosPrinterRotation** value);
 
-/* Windows.Devices.PointOfService.IReceiptPrintJob */
-/* Windows.Devices.PointOfService.IReceiptPrintJob2 */
-/* Windows.Devices.PointOfService.IReceiptPrintJob2.StampPaper() */
 HRESULT wdepo_receipt_print_job_2_stamp_paper(WDEPO_IReceiptPrintJob_2 *self);
 
-/* Windows.Devices.PointOfService.IReceiptPrintJob2.Print(data, printOptions) */
 HRESULT wdepo_receipt_print_job_2_print(WDEPO_IReceiptPrintJob_2 *self, cwinrt_hstring data, WDEPO_PosPrinterPrintOptions* printOptions);
 
-/* Windows.Devices.PointOfService.IReceiptPrintJob2.FeedPaperByLine(lineCount) */
 HRESULT wdepo_receipt_print_job_2_feed_paper_by_line(WDEPO_IReceiptPrintJob_2 *self, int32_t lineCount);
 
-/* Windows.Devices.PointOfService.IReceiptPrintJob2.FeedPaperByMapModeUnit(distance) */
 HRESULT wdepo_receipt_print_job_2_feed_paper_by_map_mode_unit(WDEPO_IReceiptPrintJob_2 *self, int32_t distance);
 
-/* Windows.Devices.PointOfService.IReceiptOrSlipJob */
-/* Windows.Devices.PointOfService.IReceiptOrSlipJob.SetBarcodeRotation() */
 HRESULT wdepo_receipt_or_slip_job_set_barcode_rotation(WDEPO_IReceiptOrSlipJob *self, WDEPO_PosPrinterRotation value);
 
-/* Windows.Devices.PointOfService.IReceiptOrSlipJob.SetPrintRotation(includeBitmaps) */
 HRESULT wdepo_receipt_or_slip_job_set_print_rotation(WDEPO_IReceiptOrSlipJob *self, WDEPO_PosPrinterRotation value, BOOL includeBitmaps);
 
-/* Windows.Devices.PointOfService.IReceiptOrSlipJob.SetPrintArea() */
 HRESULT wdepo_receipt_or_slip_job_set_print_area(WDEPO_IReceiptOrSlipJob *self, WF_Rect value);
 
-/* Windows.Devices.PointOfService.IReceiptOrSlipJob.SetBitmap(bitmapNumber, bitmap, alignment) */
 HRESULT wdepo_receipt_or_slip_job_set_bitmap(WDEPO_IReceiptOrSlipJob *self, uint32_t bitmapNumber, WGRIM_BitmapFrame* bitmap, WDEPO_PosPrinterAlignment alignment);
 
-/* Windows.Devices.PointOfService.IReceiptOrSlipJob.SetBitmap(bitmapNumber, bitmap, alignment, width) */
 HRESULT wdepo_receipt_or_slip_job_set_bitmap_u32_p_pos_printer_alignment_u32(WDEPO_IReceiptOrSlipJob *self, uint32_t bitmapNumber, WGRIM_BitmapFrame* bitmap, WDEPO_PosPrinterAlignment alignment, uint32_t width);
 
-/* Windows.Devices.PointOfService.IReceiptOrSlipJob.SetCustomAlignedBitmap(bitmapNumber, bitmap, alignmentDistance) */
 HRESULT wdepo_receipt_or_slip_job_set_custom_aligned_bitmap(WDEPO_IReceiptOrSlipJob *self, uint32_t bitmapNumber, WGRIM_BitmapFrame* bitmap, uint32_t alignmentDistance);
 
-/* Windows.Devices.PointOfService.IReceiptOrSlipJob.SetCustomAlignedBitmap(bitmapNumber, bitmap, alignmentDistance, width) */
 HRESULT wdepo_receipt_or_slip_job_set_custom_aligned_bitmap_u32_p_u32_u32(WDEPO_IReceiptOrSlipJob *self, uint32_t bitmapNumber, WGRIM_BitmapFrame* bitmap, uint32_t alignmentDistance, uint32_t width);
 
-/* Windows.Devices.PointOfService.IReceiptOrSlipJob.PrintSavedBitmap(bitmapNumber) */
 HRESULT wdepo_receipt_or_slip_job_print_saved_bitmap(WDEPO_IReceiptOrSlipJob *self, uint32_t bitmapNumber);
 
-/* Windows.Devices.PointOfService.IReceiptOrSlipJob.DrawRuledLine(positionList, lineDirection, lineWidth, lineStyle, lineColor) */
 HRESULT wdepo_receipt_or_slip_job_draw_ruled_line(WDEPO_IReceiptOrSlipJob *self, cwinrt_hstring positionList, WDEPO_PosPrinterLineDirection lineDirection, uint32_t lineWidth, WDEPO_PosPrinterLineStyle lineStyle, uint32_t lineColor);
 
-/* Windows.Devices.PointOfService.IReceiptOrSlipJob.PrintBarcode(data, symbology, height, width, textPosition, alignment) */
 HRESULT wdepo_receipt_or_slip_job_print_barcode(WDEPO_IReceiptOrSlipJob *self, cwinrt_hstring data, uint32_t symbology, uint32_t height, uint32_t width, WDEPO_PosPrinterBarcodeTextPosition textPosition, WDEPO_PosPrinterAlignment alignment);
 
-/* Windows.Devices.PointOfService.IReceiptOrSlipJob.PrintBarcodeCustomAlign(data, symbology, height, width, textPosition, alignmentDistance) */
 HRESULT wdepo_receipt_or_slip_job_print_barcode_custom_align(WDEPO_IReceiptOrSlipJob *self, cwinrt_hstring data, uint32_t symbology, uint32_t height, uint32_t width, WDEPO_PosPrinterBarcodeTextPosition textPosition, uint32_t alignmentDistance);
 
-/* Windows.Devices.PointOfService.IReceiptOrSlipJob.PrintBitmap(bitmap, alignment) */
 HRESULT wdepo_receipt_or_slip_job_print_bitmap(WDEPO_IReceiptOrSlipJob *self, WGRIM_BitmapFrame* bitmap, WDEPO_PosPrinterAlignment alignment);
 
-/* Windows.Devices.PointOfService.IReceiptOrSlipJob.PrintBitmap(bitmap, alignment, width) */
 HRESULT wdepo_receipt_or_slip_job_print_bitmap_p_pos_printer_alignment_u32(WDEPO_IReceiptOrSlipJob *self, WGRIM_BitmapFrame* bitmap, WDEPO_PosPrinterAlignment alignment, uint32_t width);
 
-/* Windows.Devices.PointOfService.IReceiptOrSlipJob.PrintCustomAlignedBitmap(bitmap, alignmentDistance) */
 HRESULT wdepo_receipt_or_slip_job_print_custom_aligned_bitmap(WDEPO_IReceiptOrSlipJob *self, WGRIM_BitmapFrame* bitmap, uint32_t alignmentDistance);
 
-/* Windows.Devices.PointOfService.IReceiptOrSlipJob.PrintCustomAlignedBitmap(bitmap, alignmentDistance, width) */
 HRESULT wdepo_receipt_or_slip_job_print_custom_aligned_bitmap_p_u32_u32(WDEPO_IReceiptOrSlipJob *self, WGRIM_BitmapFrame* bitmap, uint32_t alignmentDistance, uint32_t width);
 
-/* Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities */
-/* Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities.get_IsPrinterPresent() */
 HRESULT wdepo_common_pos_print_station_capabilities_get__is_printer_present(WDEPO_ICommonPosPrintStationCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities.get_IsDualColorSupported() */
 HRESULT wdepo_common_pos_print_station_capabilities_get__is_dual_color_supported(WDEPO_ICommonPosPrintStationCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities.get_ColorCartridgeCapabilities() */
 HRESULT wdepo_common_pos_print_station_capabilities_get__color_cartridge_capabilities(WDEPO_ICommonPosPrintStationCapabilities *self, WDEPO_PosPrinterColorCapabilities *value);
 
-/* Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities.get_CartridgeSensors() */
 HRESULT wdepo_common_pos_print_station_capabilities_get__cartridge_sensors(WDEPO_ICommonPosPrintStationCapabilities *self, WDEPO_PosPrinterCartridgeSensors *value);
 
-/* Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities.get_IsBoldSupported() */
 HRESULT wdepo_common_pos_print_station_capabilities_get__is_bold_supported(WDEPO_ICommonPosPrintStationCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities.get_IsItalicSupported() */
 HRESULT wdepo_common_pos_print_station_capabilities_get__is_italic_supported(WDEPO_ICommonPosPrintStationCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities.get_IsUnderlineSupported() */
 HRESULT wdepo_common_pos_print_station_capabilities_get__is_underline_supported(WDEPO_ICommonPosPrintStationCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities.get_IsDoubleHighPrintSupported() */
 HRESULT wdepo_common_pos_print_station_capabilities_get__is_double_high_print_supported(WDEPO_ICommonPosPrintStationCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities.get_IsDoubleWidePrintSupported() */
 HRESULT wdepo_common_pos_print_station_capabilities_get__is_double_wide_print_supported(WDEPO_ICommonPosPrintStationCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities.get_IsDoubleHighDoubleWidePrintSupported() */
 HRESULT wdepo_common_pos_print_station_capabilities_get__is_double_high_double_wide_print_supported(WDEPO_ICommonPosPrintStationCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities.get_IsPaperEmptySensorSupported() */
 HRESULT wdepo_common_pos_print_station_capabilities_get__is_paper_empty_sensor_supported(WDEPO_ICommonPosPrintStationCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities.get_IsPaperNearEndSensorSupported() */
 HRESULT wdepo_common_pos_print_station_capabilities_get__is_paper_near_end_sensor_supported(WDEPO_ICommonPosPrintStationCapabilities *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities.get_SupportedCharactersPerLine() */
 HRESULT wdepo_common_pos_print_station_capabilities_get__supported_characters_per_line(WDEPO_ICommonPosPrintStationCapabilities *self, WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Devices.PointOfService.IPosPrinterJob */
-/* Windows.Devices.PointOfService.IPosPrinterJob.Print(data) */
 HRESULT wdepo_pos_printer_job_print(WDEPO_IPosPrinterJob *self, cwinrt_hstring data);
 
-/* Windows.Devices.PointOfService.IPosPrinterJob.PrintLine(data) */
 HRESULT wdepo_pos_printer_job_print_line_str(WDEPO_IPosPrinterJob *self, cwinrt_hstring data);
 
-/* Windows.Devices.PointOfService.IPosPrinterJob.PrintLine() */
 HRESULT wdepo_pos_printer_job_print_line(WDEPO_IPosPrinterJob *self);
 
-/* Windows.Devices.PointOfService.IPosPrinterJob.ExecuteAsync() */
 HRESULT wdepo_pos_printer_job_execute_async(WDEPO_IPosPrinterJob *self, WF_IAsyncOperation_Bool** out);
 
 #endif /* CWINRT_WINDOWS_DEVICES_POINTOFSERVICE_H */

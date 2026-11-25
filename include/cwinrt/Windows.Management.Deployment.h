@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.ApplicationModel.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WAM_AppInstallerInfo
 #define CWINRT_FWD_WAM_AppInstallerInfo
 typedef struct WAM_AppInstallerInfo WAM_AppInstallerInfo;
@@ -23,7 +22,6 @@ typedef struct WAM_AppInstallerInfo WAM_AppInstallerInfo;
 typedef struct WAM_Package WAM_Package;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMADE_DeploymentResult WMADE_DeploymentResult;
 typedef struct WMADE_FindSharedPackageContainerOptions WMADE_FindSharedPackageContainerOptions;
 typedef struct WMADE_IAppInstallerManagerStatics WMADE_IAppInstallerManagerStatics;
@@ -93,7 +91,6 @@ typedef struct WMADE_IDeleteSharedPackageContainerResult WMADE_IDeleteSharedPack
 typedef struct WMADE_IDeleteSharedPackageContainerOptions WMADE_IDeleteSharedPackageContainerOptions;
 typedef struct WMADE_ICreateSharedPackageContainerResult WMADE_ICreateSharedPackageContainerResult;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WAM_AppInstallerInfo
 #define CWINRT_FWD_WAM_AppInstallerInfo
 typedef struct WAM_AppInstallerInfo WAM_AppInstallerInfo;
@@ -339,7 +336,6 @@ struct WMADE_DeploymentProgress {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -528,1142 +524,716 @@ static const IID CWINRT_IID_WMADE_IDeleteSharedPackageContainerOptions CWINRT_MA
 static const IID CWINRT_IID_WMADE_ICreateSharedPackageContainerResult CWINRT_MAYBE_UNUSED = { 0xCE8810BF, 0x151C, 0x5707, { 0xB9, 0x36, 0x49, 0x7E, 0x56, 0x4A, 0xFC, 0x7A } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Management.Deployment.DeploymentResult */
 HRESULT wmade_deployment_result_new(WMADE_DeploymentResult **out);
 
-/* Windows.Management.Deployment.DeploymentResult */
-/* Windows.Management.Deployment.DeploymentResult.get_ErrorText() */
 HRESULT wmade_deployment_result_get__error_text(WMADE_DeploymentResult *self, cwinrt_hstring *value);
 
-/* Windows.Management.Deployment.DeploymentResult.get_ActivityId() */
 HRESULT wmade_deployment_result_get__activity_id(WMADE_DeploymentResult *self, GUID *value);
 
-/* Windows.Management.Deployment.DeploymentResult.get_ExtendedErrorCode() */
 HRESULT wmade_deployment_result_get__extended_error_code(WMADE_DeploymentResult *self, HRESULT *value);
 
-/* Windows.Management.Deployment.DeploymentResult.get_IsRegistered() */
 HRESULT wmade_deployment_result_get__is_registered(WMADE_DeploymentResult *self, BOOL *value);
 
-/* activate Windows.Management.Deployment.FindSharedPackageContainerOptions */
 HRESULT wmade_find_shared_package_container_options_new(WMADE_FindSharedPackageContainerOptions **out);
 
-/* Windows.Management.Deployment.FindSharedPackageContainerOptions */
-/* Windows.Management.Deployment.FindSharedPackageContainerOptions.get_Name() */
 HRESULT wmade_find_shared_package_container_options_get__name(WMADE_FindSharedPackageContainerOptions *self, cwinrt_hstring *value);
 
-/* Windows.Management.Deployment.FindSharedPackageContainerOptions.put_Name() */
 HRESULT wmade_find_shared_package_container_options_put__name(WMADE_FindSharedPackageContainerOptions *self, cwinrt_hstring value);
 
-/* Windows.Management.Deployment.FindSharedPackageContainerOptions.get_PackageFamilyName() */
 HRESULT wmade_find_shared_package_container_options_get__package_family_name(WMADE_FindSharedPackageContainerOptions *self, cwinrt_hstring *value);
 
-/* Windows.Management.Deployment.FindSharedPackageContainerOptions.put_PackageFamilyName() */
 HRESULT wmade_find_shared_package_container_options_put__package_family_name(WMADE_FindSharedPackageContainerOptions *self, cwinrt_hstring value);
 
-/* Windows.Management.Deployment.IAppInstallerManagerStatics */
-/* Windows.Management.Deployment.IAppInstallerManagerStatics.GetDefault() */
 HRESULT wmade_app_installer_manager_statics_get_default(WMADE_IAppInstallerManagerStatics *self, WMADE_AppInstallerManager** out);
 
-/* Windows.Management.Deployment.IAppInstallerManagerStatics.GetForSystem() */
 HRESULT wmade_app_installer_manager_statics_get_for_system(WMADE_IAppInstallerManagerStatics *self, WMADE_AppInstallerManager** out);
 
-/* Windows.Management.Deployment.IAutoUpdateSettingsOptionsStatics */
-/* Windows.Management.Deployment.IAutoUpdateSettingsOptionsStatics.CreateFromAppInstallerInfo(appInstallerInfo) */
 HRESULT wmade_auto_update_settings_options_statics_create_from_app_installer_info(WMADE_IAutoUpdateSettingsOptionsStatics *self, WAM_AppInstallerInfo* appInstallerInfo, WMADE_AutoUpdateSettingsOptions** out);
 
-/* Windows.Management.Deployment.ISharedPackageContainerManagerStatics */
-/* Windows.Management.Deployment.ISharedPackageContainerManagerStatics.GetDefault() */
 HRESULT wmade_shared_package_container_manager_statics_get_default(WMADE_ISharedPackageContainerManagerStatics *self, WMADE_SharedPackageContainerManager** out);
 
-/* Windows.Management.Deployment.ISharedPackageContainerManagerStatics.GetForUser(userSid) */
 HRESULT wmade_shared_package_container_manager_statics_get_for_user(WMADE_ISharedPackageContainerManagerStatics *self, cwinrt_hstring userSid, WMADE_SharedPackageContainerManager** out);
 
-/* Windows.Management.Deployment.ISharedPackageContainerManagerStatics.GetForProvisioning() */
 HRESULT wmade_shared_package_container_manager_statics_get_for_provisioning(WMADE_ISharedPackageContainerManagerStatics *self, WMADE_SharedPackageContainerManager** out);
 
-/* Windows.Management.Deployment.ISharedPackageContainerMemberFactory */
-/* Windows.Management.Deployment.ISharedPackageContainerMemberFactory.CreateInstance(packageFamilyName) */
 HRESULT wmade_shared_package_container_member_factory_create_instance(WMADE_ISharedPackageContainerMemberFactory *self, cwinrt_hstring packageFamilyName, WMADE_SharedPackageContainerMember** out);
 
-/* activate Windows.Management.Deployment.PackageAllUserProvisioningOptions */
 HRESULT wmade_package_all_user_provisioning_options_new(WMADE_PackageAllUserProvisioningOptions **out);
 
-/* Windows.Management.Deployment.PackageAllUserProvisioningOptions */
-/* Windows.Management.Deployment.PackageAllUserProvisioningOptions.get_OptionalPackageFamilyNames() */
 HRESULT wmade_package_all_user_provisioning_options_get__optional_package_family_names(WMADE_PackageAllUserProvisioningOptions *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Management.Deployment.PackageAllUserProvisioningOptions.get_ProjectionOrderPackageFamilyNames() */
 HRESULT wmade_package_all_user_provisioning_options_get__projection_order_package_family_names(WMADE_PackageAllUserProvisioningOptions *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Management.Deployment.PackageAllUserProvisioningOptions.get_DeferAutomaticRegistration() */
 HRESULT wmade_package_all_user_provisioning_options_get__defer_automatic_registration(WMADE_PackageAllUserProvisioningOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.PackageAllUserProvisioningOptions.put_DeferAutomaticRegistration() */
 HRESULT wmade_package_all_user_provisioning_options_put__defer_automatic_registration(WMADE_PackageAllUserProvisioningOptions *self, BOOL value);
 
-/* activate Windows.Management.Deployment.PackageManager */
 HRESULT wmade_package_manager_new(WMADE_PackageManager **out);
 
-/* Windows.Management.Deployment.PackageManager */
-/* Windows.Management.Deployment.PackageManager.AddPackageAsync(packageUri, dependencyPackageUris, deploymentOptions) */
 HRESULT wmade_package_manager_add_package_async_p_p_deployment_options_p(WMADE_PackageManager *self, WF_Uri* packageUri, WFOCO_IIterable_WF_Uri* dependencyPackageUris, WMADE_DeploymentOptions deploymentOptions, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.UpdatePackageAsync(packageUri, dependencyPackageUris, deploymentOptions) */
 HRESULT wmade_package_manager_update_package_async(WMADE_PackageManager *self, WF_Uri* packageUri, WFOCO_IIterable_WF_Uri* dependencyPackageUris, WMADE_DeploymentOptions deploymentOptions, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.RemovePackageAsync(packageFullName) */
 HRESULT wmade_package_manager_remove_package_async(WMADE_PackageManager *self, cwinrt_hstring packageFullName, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.StagePackageAsync(packageUri, dependencyPackageUris) */
 HRESULT wmade_package_manager_stage_package_async_p_p_p(WMADE_PackageManager *self, WF_Uri* packageUri, WFOCO_IIterable_WF_Uri* dependencyPackageUris, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.RegisterPackageAsync(manifestUri, dependencyPackageUris, deploymentOptions) */
 HRESULT wmade_package_manager_register_package_async(WMADE_PackageManager *self, WF_Uri* manifestUri, WFOCO_IIterable_WF_Uri* dependencyPackageUris, WMADE_DeploymentOptions deploymentOptions, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.FindPackages() */
 HRESULT wmade_package_manager_find_packages(WMADE_PackageManager *self, WFOCO_IIterable_WAM_Package** out);
 
-/* Windows.Management.Deployment.PackageManager.FindPackagesForUser(userSecurityId) */
 HRESULT wmade_package_manager_find_packages_for_user(WMADE_PackageManager *self, cwinrt_hstring userSecurityId, WFOCO_IIterable_WAM_Package** out);
 
-/* Windows.Management.Deployment.PackageManager.FindPackages(packageName, packagePublisher) */
 HRESULT wmade_package_manager_find_packages_str_str_p(WMADE_PackageManager *self, cwinrt_hstring packageName, cwinrt_hstring packagePublisher, WFOCO_IIterable_WAM_Package** out);
 
-/* Windows.Management.Deployment.PackageManager.FindPackagesForUser(userSecurityId, packageName, packagePublisher) */
 HRESULT wmade_package_manager_find_packages_for_user_str_str_str_p(WMADE_PackageManager *self, cwinrt_hstring userSecurityId, cwinrt_hstring packageName, cwinrt_hstring packagePublisher, WFOCO_IIterable_WAM_Package** out);
 
-/* Windows.Management.Deployment.PackageManager.FindUsers(packageFullName) */
 HRESULT wmade_package_manager_find_users(WMADE_PackageManager *self, cwinrt_hstring packageFullName, WFOCO_IIterable_WMADE_PackageUserInformation** out);
 
-/* Windows.Management.Deployment.PackageManager.SetPackageState(packageFullName, packageState) */
 HRESULT wmade_package_manager_set_package_state(WMADE_PackageManager *self, cwinrt_hstring packageFullName, WMADE_PackageState packageState);
 
-/* Windows.Management.Deployment.PackageManager.FindPackage(packageFullName) */
 HRESULT wmade_package_manager_find_package(WMADE_PackageManager *self, cwinrt_hstring packageFullName, WAM_Package** out);
 
-/* Windows.Management.Deployment.PackageManager.CleanupPackageForUserAsync(packageName, userSecurityId) */
 HRESULT wmade_package_manager_cleanup_package_for_user_async(WMADE_PackageManager *self, cwinrt_hstring packageName, cwinrt_hstring userSecurityId, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.FindPackages(packageFamilyName) */
 HRESULT wmade_package_manager_find_packages_str_p(WMADE_PackageManager *self, cwinrt_hstring packageFamilyName, WFOCO_IIterable_WAM_Package** out);
 
-/* Windows.Management.Deployment.PackageManager.FindPackagesForUser(userSecurityId, packageFamilyName) */
 HRESULT wmade_package_manager_find_packages_for_user_str_str_p(WMADE_PackageManager *self, cwinrt_hstring userSecurityId, cwinrt_hstring packageFamilyName, WFOCO_IIterable_WAM_Package** out);
 
-/* Windows.Management.Deployment.PackageManager.FindPackageForUser(userSecurityId, packageFullName) */
 HRESULT wmade_package_manager_find_package_for_user(WMADE_PackageManager *self, cwinrt_hstring userSecurityId, cwinrt_hstring packageFullName, WAM_Package** out);
 
-/* Windows.Management.Deployment.PackageManager.RemovePackageAsync(packageFullName, removalOptions) */
 HRESULT wmade_package_manager_remove_package_async_str_removal_options_p(WMADE_PackageManager *self, cwinrt_hstring packageFullName, WMADE_RemovalOptions removalOptions, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.StagePackageAsync(packageUri, dependencyPackageUris, deploymentOptions) */
 HRESULT wmade_package_manager_stage_package_async_p_p_deployment_options_p(WMADE_PackageManager *self, WF_Uri* packageUri, WFOCO_IIterable_WF_Uri* dependencyPackageUris, WMADE_DeploymentOptions deploymentOptions, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.RegisterPackageByFullNameAsync(mainPackageFullName, dependencyPackageFullNames, deploymentOptions) */
 HRESULT wmade_package_manager_register_package_by_full_name_async(WMADE_PackageManager *self, cwinrt_hstring mainPackageFullName, WFOCO_IIterable_HSTRING* dependencyPackageFullNames, WMADE_DeploymentOptions deploymentOptions, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.FindPackagesWithPackageTypes(packageTypes) */
 HRESULT wmade_package_manager_find_packages_with_package_types(WMADE_PackageManager *self, WMADE_PackageTypes packageTypes, WFOCO_IIterable_WAM_Package** out);
 
-/* Windows.Management.Deployment.PackageManager.FindPackagesForUserWithPackageTypes(userSecurityId, packageTypes) */
 HRESULT wmade_package_manager_find_packages_for_user_with_package_types(WMADE_PackageManager *self, cwinrt_hstring userSecurityId, WMADE_PackageTypes packageTypes, WFOCO_IIterable_WAM_Package** out);
 
-/* Windows.Management.Deployment.PackageManager.FindPackagesWithPackageTypes(packageName, packagePublisher, packageTypes) */
 HRESULT wmade_package_manager_find_packages_with_package_types_str_str_package_types_p(WMADE_PackageManager *self, cwinrt_hstring packageName, cwinrt_hstring packagePublisher, WMADE_PackageTypes packageTypes, WFOCO_IIterable_WAM_Package** out);
 
-/* Windows.Management.Deployment.PackageManager.FindPackagesForUserWithPackageTypes(userSecurityId, packageName, packagePublisher, packageTypes) */
 HRESULT wmade_package_manager_find_packages_for_user_with_package_types_str_str_str_package_types_p(WMADE_PackageManager *self, cwinrt_hstring userSecurityId, cwinrt_hstring packageName, cwinrt_hstring packagePublisher, WMADE_PackageTypes packageTypes, WFOCO_IIterable_WAM_Package** out);
 
-/* Windows.Management.Deployment.PackageManager.FindPackagesWithPackageTypes(packageFamilyName, packageTypes) */
 HRESULT wmade_package_manager_find_packages_with_package_types_str_package_types_p(WMADE_PackageManager *self, cwinrt_hstring packageFamilyName, WMADE_PackageTypes packageTypes, WFOCO_IIterable_WAM_Package** out);
 
-/* Windows.Management.Deployment.PackageManager.FindPackagesForUserWithPackageTypes(userSecurityId, packageFamilyName, packageTypes) */
 HRESULT wmade_package_manager_find_packages_for_user_with_package_types_str_str_package_types_p(WMADE_PackageManager *self, cwinrt_hstring userSecurityId, cwinrt_hstring packageFamilyName, WMADE_PackageTypes packageTypes, WFOCO_IIterable_WAM_Package** out);
 
-/* Windows.Management.Deployment.PackageManager.StageUserDataAsync(packageFullName) */
 HRESULT wmade_package_manager_stage_user_data_async(WMADE_PackageManager *self, cwinrt_hstring packageFullName, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.AddPackageVolumeAsync(packageStorePath) */
 HRESULT wmade_package_manager_add_package_volume_async(WMADE_PackageManager *self, cwinrt_hstring packageStorePath, WF_IAsyncOperation_WMADE_PackageVolume** out);
 
-/* Windows.Management.Deployment.PackageManager.AddPackageAsync(packageUri, dependencyPackageUris, deploymentOptions, targetVolume) */
 HRESULT wmade_package_manager_add_package_async_p_p_deployment_options_p_p(WMADE_PackageManager *self, WF_Uri* packageUri, WFOCO_IIterable_WF_Uri* dependencyPackageUris, WMADE_DeploymentOptions deploymentOptions, WMADE_PackageVolume* targetVolume, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.ClearPackageStatus(packageFullName, status) */
 HRESULT wmade_package_manager_clear_package_status(WMADE_PackageManager *self, cwinrt_hstring packageFullName, WMADE_PackageStatus status);
 
-/* Windows.Management.Deployment.PackageManager.RegisterPackageAsync(manifestUri, dependencyPackageUris, deploymentOptions, appDataVolume) */
 HRESULT wmade_package_manager_register_package_async_p_p_deployment_options_p_p(WMADE_PackageManager *self, WF_Uri* manifestUri, WFOCO_IIterable_WF_Uri* dependencyPackageUris, WMADE_DeploymentOptions deploymentOptions, WMADE_PackageVolume* appDataVolume, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.FindPackageVolume(volumeName) */
 HRESULT wmade_package_manager_find_package_volume(WMADE_PackageManager *self, cwinrt_hstring volumeName, WMADE_PackageVolume** out);
 
-/* Windows.Management.Deployment.PackageManager.FindPackageVolumes() */
 HRESULT wmade_package_manager_find_package_volumes(WMADE_PackageManager *self, WFOCO_IIterable_WMADE_PackageVolume** out);
 
-/* Windows.Management.Deployment.PackageManager.GetDefaultPackageVolume() */
 HRESULT wmade_package_manager_get_default_package_volume(WMADE_PackageManager *self, WMADE_PackageVolume** out);
 
-/* Windows.Management.Deployment.PackageManager.MovePackageToVolumeAsync(packageFullName, deploymentOptions, targetVolume) */
 HRESULT wmade_package_manager_move_package_to_volume_async(WMADE_PackageManager *self, cwinrt_hstring packageFullName, WMADE_DeploymentOptions deploymentOptions, WMADE_PackageVolume* targetVolume, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.RemovePackageVolumeAsync(volume) */
 HRESULT wmade_package_manager_remove_package_volume_async(WMADE_PackageManager *self, WMADE_PackageVolume* volume, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.SetDefaultPackageVolume(volume) */
 HRESULT wmade_package_manager_set_default_package_volume(WMADE_PackageManager *self, WMADE_PackageVolume* volume);
 
-/* Windows.Management.Deployment.PackageManager.SetPackageStatus(packageFullName, status) */
 HRESULT wmade_package_manager_set_package_status(WMADE_PackageManager *self, cwinrt_hstring packageFullName, WMADE_PackageStatus status);
 
-/* Windows.Management.Deployment.PackageManager.SetPackageVolumeOfflineAsync(packageVolume) */
 HRESULT wmade_package_manager_set_package_volume_offline_async(WMADE_PackageManager *self, WMADE_PackageVolume* packageVolume, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.SetPackageVolumeOnlineAsync(packageVolume) */
 HRESULT wmade_package_manager_set_package_volume_online_async(WMADE_PackageManager *self, WMADE_PackageVolume* packageVolume, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.StagePackageAsync(packageUri, dependencyPackageUris, deploymentOptions, targetVolume) */
 HRESULT wmade_package_manager_stage_package_async_p_p_deployment_options_p_p(WMADE_PackageManager *self, WF_Uri* packageUri, WFOCO_IIterable_WF_Uri* dependencyPackageUris, WMADE_DeploymentOptions deploymentOptions, WMADE_PackageVolume* targetVolume, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.StageUserDataAsync(packageFullName, deploymentOptions) */
 HRESULT wmade_package_manager_stage_user_data_async_str_deployment_options_p(WMADE_PackageManager *self, cwinrt_hstring packageFullName, WMADE_DeploymentOptions deploymentOptions, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.GetPackageVolumesAsync() */
 HRESULT wmade_package_manager_get_package_volumes_async(WMADE_PackageManager *self, WF_IAsyncOperation_WFOCO_IVectorView_WMADE_PackageVolume** out);
 
-/* Windows.Management.Deployment.PackageManager.AddPackageAsync(packageUri, dependencyPackageUris, deploymentOptions, targetVolume, optionalPackageFamilyNames, externalPackageUris) */
 HRESULT wmade_package_manager_add_package_async(WMADE_PackageManager *self, WF_Uri* packageUri, WFOCO_IIterable_WF_Uri* dependencyPackageUris, WMADE_DeploymentOptions deploymentOptions, WMADE_PackageVolume* targetVolume, WFOCO_IIterable_HSTRING* optionalPackageFamilyNames, WFOCO_IIterable_WF_Uri* externalPackageUris, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.StagePackageAsync(packageUri, dependencyPackageUris, deploymentOptions, targetVolume, optionalPackageFamilyNames, externalPackageUris) */
 HRESULT wmade_package_manager_stage_package_async(WMADE_PackageManager *self, WF_Uri* packageUri, WFOCO_IIterable_WF_Uri* dependencyPackageUris, WMADE_DeploymentOptions deploymentOptions, WMADE_PackageVolume* targetVolume, WFOCO_IIterable_HSTRING* optionalPackageFamilyNames, WFOCO_IIterable_WF_Uri* externalPackageUris, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.RegisterPackageByFamilyNameAsync(mainPackageFamilyName, dependencyPackageFamilyNames, deploymentOptions, appDataVolume, optionalPackageFamilyNames) */
 HRESULT wmade_package_manager_register_package_by_family_name_async(WMADE_PackageManager *self, cwinrt_hstring mainPackageFamilyName, WFOCO_IIterable_HSTRING* dependencyPackageFamilyNames, WMADE_DeploymentOptions deploymentOptions, WMADE_PackageVolume* appDataVolume, WFOCO_IIterable_HSTRING* optionalPackageFamilyNames, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.get_DebugSettings() */
 HRESULT wmade_package_manager_get__debug_settings(WMADE_PackageManager *self, WMADE_PackageManagerDebugSettings** value);
 
-/* Windows.Management.Deployment.PackageManager.ProvisionPackageForAllUsersAsync(packageFamilyName) */
 HRESULT wmade_package_manager_provision_package_for_all_users_async(WMADE_PackageManager *self, cwinrt_hstring packageFamilyName, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.AddPackageByAppInstallerFileAsync(appInstallerFileUri, options, targetVolume) */
 HRESULT wmade_package_manager_add_package_by_app_installer_file_async(WMADE_PackageManager *self, WF_Uri* appInstallerFileUri, WMADE_AddPackageByAppInstallerOptions options, WMADE_PackageVolume* targetVolume, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.RequestAddPackageByAppInstallerFileAsync(appInstallerFileUri, options, targetVolume) */
 HRESULT wmade_package_manager_request_add_package_by_app_installer_file_async(WMADE_PackageManager *self, WF_Uri* appInstallerFileUri, WMADE_AddPackageByAppInstallerOptions options, WMADE_PackageVolume* targetVolume, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.AddPackageAsync(packageUri, dependencyPackageUris, options, targetVolume, optionalPackageFamilyNames, packageUrisToInstall, relatedPackageUris) */
 HRESULT wmade_package_manager_add_package_async_p_p_deployment_options_p_p_p_p_p(WMADE_PackageManager *self, WF_Uri* packageUri, WFOCO_IIterable_WF_Uri* dependencyPackageUris, WMADE_DeploymentOptions options, WMADE_PackageVolume* targetVolume, WFOCO_IIterable_HSTRING* optionalPackageFamilyNames, WFOCO_IIterable_WF_Uri* packageUrisToInstall, WFOCO_IIterable_WF_Uri* relatedPackageUris, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.StagePackageAsync(packageUri, dependencyPackageUris, options, targetVolume, optionalPackageFamilyNames, packageUrisToInstall, relatedPackageUris) */
 HRESULT wmade_package_manager_stage_package_async_p_p_deployment_options_p_p_p_p_p(WMADE_PackageManager *self, WF_Uri* packageUri, WFOCO_IIterable_WF_Uri* dependencyPackageUris, WMADE_DeploymentOptions options, WMADE_PackageVolume* targetVolume, WFOCO_IIterable_HSTRING* optionalPackageFamilyNames, WFOCO_IIterable_WF_Uri* packageUrisToInstall, WFOCO_IIterable_WF_Uri* relatedPackageUris, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.RequestAddPackageAsync(packageUri, dependencyPackageUris, deploymentOptions, targetVolume, optionalPackageFamilyNames, relatedPackageUris) */
 HRESULT wmade_package_manager_request_add_package_async(WMADE_PackageManager *self, WF_Uri* packageUri, WFOCO_IIterable_WF_Uri* dependencyPackageUris, WMADE_DeploymentOptions deploymentOptions, WMADE_PackageVolume* targetVolume, WFOCO_IIterable_HSTRING* optionalPackageFamilyNames, WFOCO_IIterable_WF_Uri* relatedPackageUris, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.RequestAddPackageAsync(packageUri, dependencyPackageUris, deploymentOptions, targetVolume, optionalPackageFamilyNames, relatedPackageUris, packageUrisToInstall) */
 HRESULT wmade_package_manager_request_add_package_async_p_p_deployment_options_p_p_p_p_p(WMADE_PackageManager *self, WF_Uri* packageUri, WFOCO_IIterable_WF_Uri* dependencyPackageUris, WMADE_DeploymentOptions deploymentOptions, WMADE_PackageVolume* targetVolume, WFOCO_IIterable_HSTRING* optionalPackageFamilyNames, WFOCO_IIterable_WF_Uri* relatedPackageUris, WFOCO_IIterable_WF_Uri* packageUrisToInstall, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.DeprovisionPackageForAllUsersAsync(packageFamilyName) */
 HRESULT wmade_package_manager_deprovision_package_for_all_users_async(WMADE_PackageManager *self, cwinrt_hstring packageFamilyName, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.FindProvisionedPackages() */
 HRESULT wmade_package_manager_find_provisioned_packages(WMADE_PackageManager *self, WFOCO_IVector_WAM_Package** out);
 
-/* Windows.Management.Deployment.PackageManager.AddPackageByUriAsync(packageUri, options) */
 HRESULT wmade_package_manager_add_package_by_uri_async(WMADE_PackageManager *self, WF_Uri* packageUri, WMADE_AddPackageOptions* options, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.StagePackageByUriAsync(packageUri, options) */
 HRESULT wmade_package_manager_stage_package_by_uri_async(WMADE_PackageManager *self, WF_Uri* packageUri, WMADE_StagePackageOptions* options, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.RegisterPackageByUriAsync(manifestUri, options) */
 HRESULT wmade_package_manager_register_package_by_uri_async(WMADE_PackageManager *self, WF_Uri* manifestUri, WMADE_RegisterPackageOptions* options, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.RegisterPackagesByFullNameAsync(packageFullNames, options) */
 HRESULT wmade_package_manager_register_packages_by_full_name_async(WMADE_PackageManager *self, WFOCO_IIterable_HSTRING* packageFullNames, WMADE_RegisterPackageOptions* options, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.SetPackageStubPreference(packageFamilyName, useStub) */
 HRESULT wmade_package_manager_set_package_stub_preference(WMADE_PackageManager *self, cwinrt_hstring packageFamilyName, WMADE_PackageStubPreference useStub);
 
-/* Windows.Management.Deployment.PackageManager.GetPackageStubPreference(packageFamilyName) */
 HRESULT wmade_package_manager_get_package_stub_preference(WMADE_PackageManager *self, cwinrt_hstring packageFamilyName, WMADE_PackageStubPreference *out);
 
-/* Windows.Management.Deployment.PackageManager.ProvisionPackageForAllUsersAsync(mainPackageFamilyName, options) */
 HRESULT wmade_package_manager_provision_package_for_all_users_async_str_p_p(WMADE_PackageManager *self, cwinrt_hstring mainPackageFamilyName, WMADE_PackageAllUserProvisioningOptions* options, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.RemovePackageByUriAsync(packageUri, options) */
 HRESULT wmade_package_manager_remove_package_by_uri_async(WMADE_PackageManager *self, WF_Uri* packageUri, WMADE_RemovePackageOptions* options, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.PackageManager.IsPackageRemovalPending(packageFullName) */
 HRESULT wmade_package_manager_is_package_removal_pending(WMADE_PackageManager *self, cwinrt_hstring packageFullName, BOOL *out);
 
-/* Windows.Management.Deployment.PackageManager.IsPackageRemovalPendingForUser(packageFullName, userSecurityId) */
 HRESULT wmade_package_manager_is_package_removal_pending_for_user(WMADE_PackageManager *self, cwinrt_hstring packageFullName, cwinrt_hstring userSecurityId, BOOL *out);
 
-/* Windows.Management.Deployment.PackageManager.IsPackageRemovalPendingByUri(packageUri) */
 HRESULT wmade_package_manager_is_package_removal_pending_by_uri(WMADE_PackageManager *self, WF_Uri* packageUri, BOOL *out);
 
-/* Windows.Management.Deployment.PackageManager.IsPackageRemovalPendingByUriForUser(packageUri, userSecurityId) */
 HRESULT wmade_package_manager_is_package_removal_pending_by_uri_for_user(WMADE_PackageManager *self, WF_Uri* packageUri, cwinrt_hstring userSecurityId, BOOL *out);
 
-/* activate Windows.Management.Deployment.PackageManagerDebugSettings */
 HRESULT wmade_package_manager_debug_settings_new(WMADE_PackageManagerDebugSettings **out);
 
-/* Windows.Management.Deployment.PackageManagerDebugSettings */
-/* Windows.Management.Deployment.PackageManagerDebugSettings.SetContentGroupStateAsync(package, contentGroupName, state) */
 HRESULT wmade_package_manager_debug_settings_set_content_group_state_async(WMADE_PackageManagerDebugSettings *self, WAM_Package* package, cwinrt_hstring contentGroupName, WAM_PackageContentGroupState state, WF_IAsyncAction** out);
 
-/* Windows.Management.Deployment.PackageManagerDebugSettings.SetContentGroupStateAsync(package, contentGroupName, state, completionPercentage) */
 HRESULT wmade_package_manager_debug_settings_set_content_group_state_async_p_str_package_content_group_state_f64_p(WMADE_PackageManagerDebugSettings *self, WAM_Package* package, cwinrt_hstring contentGroupName, WAM_PackageContentGroupState state, double completionPercentage, WF_IAsyncAction** out);
 
-/* activate Windows.Management.Deployment.PackageUserInformation */
 HRESULT wmade_package_user_information_new(WMADE_PackageUserInformation **out);
 
-/* Windows.Management.Deployment.PackageUserInformation */
-/* Windows.Management.Deployment.PackageUserInformation.get_UserSecurityId() */
 HRESULT wmade_package_user_information_get__user_security_id(WMADE_PackageUserInformation *self, cwinrt_hstring *value);
 
-/* Windows.Management.Deployment.PackageUserInformation.get_InstallState() */
 HRESULT wmade_package_user_information_get__install_state(WMADE_PackageUserInformation *self, WMADE_PackageInstallState *value);
 
-/* activate Windows.Management.Deployment.PackageVolume */
 HRESULT wmade_package_volume_new(WMADE_PackageVolume **out);
 
-/* Windows.Management.Deployment.PackageVolume */
-/* Windows.Management.Deployment.PackageVolume.get_IsOffline() */
 HRESULT wmade_package_volume_get__is_offline(WMADE_PackageVolume *self, BOOL *value);
 
-/* Windows.Management.Deployment.PackageVolume.get_IsSystemVolume() */
 HRESULT wmade_package_volume_get__is_system_volume(WMADE_PackageVolume *self, BOOL *value);
 
-/* Windows.Management.Deployment.PackageVolume.get_MountPoint() */
 HRESULT wmade_package_volume_get__mount_point(WMADE_PackageVolume *self, cwinrt_hstring *value);
 
-/* Windows.Management.Deployment.PackageVolume.get_Name() */
 HRESULT wmade_package_volume_get__name(WMADE_PackageVolume *self, cwinrt_hstring *value);
 
-/* Windows.Management.Deployment.PackageVolume.get_PackageStorePath() */
 HRESULT wmade_package_volume_get__package_store_path(WMADE_PackageVolume *self, cwinrt_hstring *value);
 
-/* Windows.Management.Deployment.PackageVolume.get_SupportsHardLinks() */
 HRESULT wmade_package_volume_get__supports_hard_links(WMADE_PackageVolume *self, BOOL *value);
 
-/* Windows.Management.Deployment.PackageVolume.FindPackages() */
 HRESULT wmade_package_volume_find_packages(WMADE_PackageVolume *self, WFOCO_IVector_WAM_Package** out);
 
-/* Windows.Management.Deployment.PackageVolume.FindPackages(packageName, packagePublisher) */
 HRESULT wmade_package_volume_find_packages_str_str_p(WMADE_PackageVolume *self, cwinrt_hstring packageName, cwinrt_hstring packagePublisher, WFOCO_IVector_WAM_Package** out);
 
-/* Windows.Management.Deployment.PackageVolume.FindPackages(packageFamilyName) */
 HRESULT wmade_package_volume_find_packages_str_p(WMADE_PackageVolume *self, cwinrt_hstring packageFamilyName, WFOCO_IVector_WAM_Package** out);
 
-/* Windows.Management.Deployment.PackageVolume.FindPackagesWithPackageTypes(packageTypes) */
 HRESULT wmade_package_volume_find_packages_with_package_types(WMADE_PackageVolume *self, WMADE_PackageTypes packageTypes, WFOCO_IVector_WAM_Package** out);
 
-/* Windows.Management.Deployment.PackageVolume.FindPackagesWithPackageTypes(packageTypes, packageName, packagePublisher) */
 HRESULT wmade_package_volume_find_packages_with_package_types_package_types_str_str_p(WMADE_PackageVolume *self, WMADE_PackageTypes packageTypes, cwinrt_hstring packageName, cwinrt_hstring packagePublisher, WFOCO_IVector_WAM_Package** out);
 
-/* Windows.Management.Deployment.PackageVolume.FindPackagesWithPackageTypes(packageTypes, packageFamilyName) */
 HRESULT wmade_package_volume_find_packages_with_package_types_package_types_str_p(WMADE_PackageVolume *self, WMADE_PackageTypes packageTypes, cwinrt_hstring packageFamilyName, WFOCO_IVector_WAM_Package** out);
 
-/* Windows.Management.Deployment.PackageVolume.FindPackage(packageFullName) */
 HRESULT wmade_package_volume_find_package(WMADE_PackageVolume *self, cwinrt_hstring packageFullName, WFOCO_IVector_WAM_Package** out);
 
-/* Windows.Management.Deployment.PackageVolume.FindPackagesForUser(userSecurityId) */
 HRESULT wmade_package_volume_find_packages_for_user(WMADE_PackageVolume *self, cwinrt_hstring userSecurityId, WFOCO_IVector_WAM_Package** out);
 
-/* Windows.Management.Deployment.PackageVolume.FindPackagesForUser(userSecurityId, packageName, packagePublisher) */
 HRESULT wmade_package_volume_find_packages_for_user_str_str_str_p(WMADE_PackageVolume *self, cwinrt_hstring userSecurityId, cwinrt_hstring packageName, cwinrt_hstring packagePublisher, WFOCO_IVector_WAM_Package** out);
 
-/* Windows.Management.Deployment.PackageVolume.FindPackagesForUser(userSecurityId, packageFamilyName) */
 HRESULT wmade_package_volume_find_packages_for_user_str_str_p(WMADE_PackageVolume *self, cwinrt_hstring userSecurityId, cwinrt_hstring packageFamilyName, WFOCO_IVector_WAM_Package** out);
 
-/* Windows.Management.Deployment.PackageVolume.FindPackagesForUserWithPackageTypes(userSecurityId, packageTypes) */
 HRESULT wmade_package_volume_find_packages_for_user_with_package_types(WMADE_PackageVolume *self, cwinrt_hstring userSecurityId, WMADE_PackageTypes packageTypes, WFOCO_IVector_WAM_Package** out);
 
-/* Windows.Management.Deployment.PackageVolume.FindPackagesForUserWithPackageTypes(userSecurityId, packageTypes, packageName, packagePublisher) */
 HRESULT wmade_package_volume_find_packages_for_user_with_package_types_str_package_types_str_str_p(WMADE_PackageVolume *self, cwinrt_hstring userSecurityId, WMADE_PackageTypes packageTypes, cwinrt_hstring packageName, cwinrt_hstring packagePublisher, WFOCO_IVector_WAM_Package** out);
 
-/* Windows.Management.Deployment.PackageVolume.FindPackagesForUserWithPackageTypes(userSecurityId, packageTypes, packageFamilyName) */
 HRESULT wmade_package_volume_find_packages_for_user_with_package_types_str_package_types_str_p(WMADE_PackageVolume *self, cwinrt_hstring userSecurityId, WMADE_PackageTypes packageTypes, cwinrt_hstring packageFamilyName, WFOCO_IVector_WAM_Package** out);
 
-/* Windows.Management.Deployment.PackageVolume.FindPackageForUser(userSecurityId, packageFullName) */
 HRESULT wmade_package_volume_find_package_for_user(WMADE_PackageVolume *self, cwinrt_hstring userSecurityId, cwinrt_hstring packageFullName, WFOCO_IVector_WAM_Package** out);
 
-/* Windows.Management.Deployment.PackageVolume.get_IsFullTrustPackageSupported() */
 HRESULT wmade_package_volume_get__is_full_trust_package_supported(WMADE_PackageVolume *self, BOOL *value);
 
-/* Windows.Management.Deployment.PackageVolume.get_IsAppxInstallSupported() */
 HRESULT wmade_package_volume_get__is_appx_install_supported(WMADE_PackageVolume *self, BOOL *value);
 
-/* Windows.Management.Deployment.PackageVolume.GetAvailableSpaceAsync() */
 HRESULT wmade_package_volume_get_available_space_async(WMADE_PackageVolume *self, WF_IAsyncOperation_uint64_t** out);
 
-/* activate Windows.Management.Deployment.CreateSharedPackageContainerOptions */
 HRESULT wmade_create_shared_package_container_options_new(WMADE_CreateSharedPackageContainerOptions **out);
 
-/* Windows.Management.Deployment.CreateSharedPackageContainerOptions */
-/* Windows.Management.Deployment.CreateSharedPackageContainerOptions.get_Members() */
 HRESULT wmade_create_shared_package_container_options_get__members(WMADE_CreateSharedPackageContainerOptions *self, WFOCO_IVector_WMADE_SharedPackageContainerMember** value);
 
-/* Windows.Management.Deployment.CreateSharedPackageContainerOptions.get_ForceAppShutdown() */
 HRESULT wmade_create_shared_package_container_options_get__force_app_shutdown(WMADE_CreateSharedPackageContainerOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.CreateSharedPackageContainerOptions.put_ForceAppShutdown() */
 HRESULT wmade_create_shared_package_container_options_put__force_app_shutdown(WMADE_CreateSharedPackageContainerOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.CreateSharedPackageContainerOptions.get_CreateCollisionOption() */
 HRESULT wmade_create_shared_package_container_options_get__create_collision_option(WMADE_CreateSharedPackageContainerOptions *self, WMADE_SharedPackageContainerCreationCollisionOptions *value);
 
-/* Windows.Management.Deployment.CreateSharedPackageContainerOptions.put_CreateCollisionOption() */
 HRESULT wmade_create_shared_package_container_options_put__create_collision_option(WMADE_CreateSharedPackageContainerOptions *self, WMADE_SharedPackageContainerCreationCollisionOptions value);
 
-/* activate Windows.Management.Deployment.AutoUpdateSettingsOptions */
 HRESULT wmade_auto_update_settings_options_new(WMADE_AutoUpdateSettingsOptions **out);
 
-/* Windows.Management.Deployment.AutoUpdateSettingsOptions */
-/* Windows.Management.Deployment.AutoUpdateSettingsOptions.get_Version() */
 HRESULT wmade_auto_update_settings_options_get__version(WMADE_AutoUpdateSettingsOptions *self, WAM_PackageVersion *value);
 
-/* Windows.Management.Deployment.AutoUpdateSettingsOptions.put_Version() */
 HRESULT wmade_auto_update_settings_options_put__version(WMADE_AutoUpdateSettingsOptions *self, WAM_PackageVersion value);
 
-/* Windows.Management.Deployment.AutoUpdateSettingsOptions.get_AppInstallerUri() */
 HRESULT wmade_auto_update_settings_options_get__app_installer_uri(WMADE_AutoUpdateSettingsOptions *self, WF_Uri** value);
 
-/* Windows.Management.Deployment.AutoUpdateSettingsOptions.put_AppInstallerUri() */
 HRESULT wmade_auto_update_settings_options_put__app_installer_uri(WMADE_AutoUpdateSettingsOptions *self, WF_Uri* value);
 
-/* Windows.Management.Deployment.AutoUpdateSettingsOptions.get_OnLaunch() */
 HRESULT wmade_auto_update_settings_options_get__on_launch(WMADE_AutoUpdateSettingsOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.AutoUpdateSettingsOptions.put_OnLaunch() */
 HRESULT wmade_auto_update_settings_options_put__on_launch(WMADE_AutoUpdateSettingsOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.AutoUpdateSettingsOptions.get_HoursBetweenUpdateChecks() */
 HRESULT wmade_auto_update_settings_options_get__hours_between_update_checks(WMADE_AutoUpdateSettingsOptions *self, uint32_t *value);
 
-/* Windows.Management.Deployment.AutoUpdateSettingsOptions.put_HoursBetweenUpdateChecks() */
 HRESULT wmade_auto_update_settings_options_put__hours_between_update_checks(WMADE_AutoUpdateSettingsOptions *self, uint32_t value);
 
-/* Windows.Management.Deployment.AutoUpdateSettingsOptions.get_ShowPrompt() */
 HRESULT wmade_auto_update_settings_options_get__show_prompt(WMADE_AutoUpdateSettingsOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.AutoUpdateSettingsOptions.put_ShowPrompt() */
 HRESULT wmade_auto_update_settings_options_put__show_prompt(WMADE_AutoUpdateSettingsOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.AutoUpdateSettingsOptions.get_UpdateBlocksActivation() */
 HRESULT wmade_auto_update_settings_options_get__update_blocks_activation(WMADE_AutoUpdateSettingsOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.AutoUpdateSettingsOptions.put_UpdateBlocksActivation() */
 HRESULT wmade_auto_update_settings_options_put__update_blocks_activation(WMADE_AutoUpdateSettingsOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.AutoUpdateSettingsOptions.get_AutomaticBackgroundTask() */
 HRESULT wmade_auto_update_settings_options_get__automatic_background_task(WMADE_AutoUpdateSettingsOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.AutoUpdateSettingsOptions.put_AutomaticBackgroundTask() */
 HRESULT wmade_auto_update_settings_options_put__automatic_background_task(WMADE_AutoUpdateSettingsOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.AutoUpdateSettingsOptions.get_ForceUpdateFromAnyVersion() */
 HRESULT wmade_auto_update_settings_options_get__force_update_from_any_version(WMADE_AutoUpdateSettingsOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.AutoUpdateSettingsOptions.put_ForceUpdateFromAnyVersion() */
 HRESULT wmade_auto_update_settings_options_put__force_update_from_any_version(WMADE_AutoUpdateSettingsOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.AutoUpdateSettingsOptions.get_IsAutoRepairEnabled() */
 HRESULT wmade_auto_update_settings_options_get__is_auto_repair_enabled(WMADE_AutoUpdateSettingsOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.AutoUpdateSettingsOptions.put_IsAutoRepairEnabled() */
 HRESULT wmade_auto_update_settings_options_put__is_auto_repair_enabled(WMADE_AutoUpdateSettingsOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.AutoUpdateSettingsOptions.get_UpdateUris() */
 HRESULT wmade_auto_update_settings_options_get__update_uris(WMADE_AutoUpdateSettingsOptions *self, WFOCO_IVector_WF_Uri** value);
 
-/* Windows.Management.Deployment.AutoUpdateSettingsOptions.get_RepairUris() */
 HRESULT wmade_auto_update_settings_options_get__repair_uris(WMADE_AutoUpdateSettingsOptions *self, WFOCO_IVector_WF_Uri** value);
 
-/* Windows.Management.Deployment.AutoUpdateSettingsOptions.get_DependencyPackageUris() */
 HRESULT wmade_auto_update_settings_options_get__dependency_package_uris(WMADE_AutoUpdateSettingsOptions *self, WFOCO_IVector_WF_Uri** value);
 
-/* Windows.Management.Deployment.AutoUpdateSettingsOptions.get_OptionalPackageUris() */
 HRESULT wmade_auto_update_settings_options_get__optional_package_uris(WMADE_AutoUpdateSettingsOptions *self, WFOCO_IVector_WF_Uri** value);
 
-/* Windows.Management.Deployment.AutoUpdateSettingsOptions.CreateFromAppInstallerInfo(appInstallerInfo) */
 HRESULT wmade_auto_update_settings_options_create_from_app_installer_info(WAM_AppInstallerInfo* appInstallerInfo, WMADE_AutoUpdateSettingsOptions** out);
 
-/* activate Windows.Management.Deployment.AppInstallerManager */
 HRESULT wmade_app_installer_manager_new(WMADE_AppInstallerManager **out);
 
-/* Windows.Management.Deployment.AppInstallerManager */
-/* Windows.Management.Deployment.AppInstallerManager.SetAutoUpdateSettings(packageFamilyName, appInstallerInfo) */
 HRESULT wmade_app_installer_manager_set_auto_update_settings(WMADE_AppInstallerManager *self, cwinrt_hstring packageFamilyName, WMADE_AutoUpdateSettingsOptions* appInstallerInfo);
 
-/* Windows.Management.Deployment.AppInstallerManager.ClearAutoUpdateSettings(packageFamilyName) */
 HRESULT wmade_app_installer_manager_clear_auto_update_settings(WMADE_AppInstallerManager *self, cwinrt_hstring packageFamilyName);
 
-/* Windows.Management.Deployment.AppInstallerManager.PauseAutoUpdatesUntil(packageFamilyName, dateTime) */
 HRESULT wmade_app_installer_manager_pause_auto_updates_until(WMADE_AppInstallerManager *self, cwinrt_hstring packageFamilyName, WF_DateTime dateTime);
 
-/* Windows.Management.Deployment.AppInstallerManager.GetDefault() */
 HRESULT wmade_app_installer_manager_get_default(WMADE_AppInstallerManager** out);
 
-/* Windows.Management.Deployment.AppInstallerManager.GetForSystem() */
 HRESULT wmade_app_installer_manager_get_for_system(WMADE_AppInstallerManager** out);
 
-/* activate Windows.Management.Deployment.AddPackageOptions */
 HRESULT wmade_add_package_options_new(WMADE_AddPackageOptions **out);
 
-/* Windows.Management.Deployment.AddPackageOptions */
-/* Windows.Management.Deployment.AddPackageOptions.get_DependencyPackageUris() */
 HRESULT wmade_add_package_options_get__dependency_package_uris(WMADE_AddPackageOptions *self, WFOCO_IVector_WF_Uri** value);
 
-/* Windows.Management.Deployment.AddPackageOptions.get_TargetVolume() */
 HRESULT wmade_add_package_options_get__target_volume(WMADE_AddPackageOptions *self, WMADE_PackageVolume** value);
 
-/* Windows.Management.Deployment.AddPackageOptions.put_TargetVolume() */
 HRESULT wmade_add_package_options_put__target_volume(WMADE_AddPackageOptions *self, WMADE_PackageVolume* value);
 
-/* Windows.Management.Deployment.AddPackageOptions.get_OptionalPackageFamilyNames() */
 HRESULT wmade_add_package_options_get__optional_package_family_names(WMADE_AddPackageOptions *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Management.Deployment.AddPackageOptions.get_OptionalPackageUris() */
 HRESULT wmade_add_package_options_get__optional_package_uris(WMADE_AddPackageOptions *self, WFOCO_IVector_WF_Uri** value);
 
-/* Windows.Management.Deployment.AddPackageOptions.get_RelatedPackageUris() */
 HRESULT wmade_add_package_options_get__related_package_uris(WMADE_AddPackageOptions *self, WFOCO_IVector_WF_Uri** value);
 
-/* Windows.Management.Deployment.AddPackageOptions.get_ExternalLocationUri() */
 HRESULT wmade_add_package_options_get__external_location_uri(WMADE_AddPackageOptions *self, WF_Uri** value);
 
-/* Windows.Management.Deployment.AddPackageOptions.put_ExternalLocationUri() */
 HRESULT wmade_add_package_options_put__external_location_uri(WMADE_AddPackageOptions *self, WF_Uri* value);
 
-/* Windows.Management.Deployment.AddPackageOptions.get_StubPackageOption() */
 HRESULT wmade_add_package_options_get__stub_package_option(WMADE_AddPackageOptions *self, WMADE_StubPackageOption *value);
 
-/* Windows.Management.Deployment.AddPackageOptions.put_StubPackageOption() */
 HRESULT wmade_add_package_options_put__stub_package_option(WMADE_AddPackageOptions *self, WMADE_StubPackageOption value);
 
-/* Windows.Management.Deployment.AddPackageOptions.get_DeveloperMode() */
 HRESULT wmade_add_package_options_get__developer_mode(WMADE_AddPackageOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.AddPackageOptions.put_DeveloperMode() */
 HRESULT wmade_add_package_options_put__developer_mode(WMADE_AddPackageOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.AddPackageOptions.get_ForceAppShutdown() */
 HRESULT wmade_add_package_options_get__force_app_shutdown(WMADE_AddPackageOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.AddPackageOptions.put_ForceAppShutdown() */
 HRESULT wmade_add_package_options_put__force_app_shutdown(WMADE_AddPackageOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.AddPackageOptions.get_ForceTargetAppShutdown() */
 HRESULT wmade_add_package_options_get__force_target_app_shutdown(WMADE_AddPackageOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.AddPackageOptions.put_ForceTargetAppShutdown() */
 HRESULT wmade_add_package_options_put__force_target_app_shutdown(WMADE_AddPackageOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.AddPackageOptions.get_ForceUpdateFromAnyVersion() */
 HRESULT wmade_add_package_options_get__force_update_from_any_version(WMADE_AddPackageOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.AddPackageOptions.put_ForceUpdateFromAnyVersion() */
 HRESULT wmade_add_package_options_put__force_update_from_any_version(WMADE_AddPackageOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.AddPackageOptions.get_InstallAllResources() */
 HRESULT wmade_add_package_options_get__install_all_resources(WMADE_AddPackageOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.AddPackageOptions.put_InstallAllResources() */
 HRESULT wmade_add_package_options_put__install_all_resources(WMADE_AddPackageOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.AddPackageOptions.get_RequiredContentGroupOnly() */
 HRESULT wmade_add_package_options_get__required_content_group_only(WMADE_AddPackageOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.AddPackageOptions.put_RequiredContentGroupOnly() */
 HRESULT wmade_add_package_options_put__required_content_group_only(WMADE_AddPackageOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.AddPackageOptions.get_RetainFilesOnFailure() */
 HRESULT wmade_add_package_options_get__retain_files_on_failure(WMADE_AddPackageOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.AddPackageOptions.put_RetainFilesOnFailure() */
 HRESULT wmade_add_package_options_put__retain_files_on_failure(WMADE_AddPackageOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.AddPackageOptions.get_StageInPlace() */
 HRESULT wmade_add_package_options_get__stage_in_place(WMADE_AddPackageOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.AddPackageOptions.put_StageInPlace() */
 HRESULT wmade_add_package_options_put__stage_in_place(WMADE_AddPackageOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.AddPackageOptions.get_AllowUnsigned() */
 HRESULT wmade_add_package_options_get__allow_unsigned(WMADE_AddPackageOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.AddPackageOptions.put_AllowUnsigned() */
 HRESULT wmade_add_package_options_put__allow_unsigned(WMADE_AddPackageOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.AddPackageOptions.get_DeferRegistrationWhenPackagesAreInUse() */
 HRESULT wmade_add_package_options_get__defer_registration_when_packages_are_in_use(WMADE_AddPackageOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.AddPackageOptions.put_DeferRegistrationWhenPackagesAreInUse() */
 HRESULT wmade_add_package_options_put__defer_registration_when_packages_are_in_use(WMADE_AddPackageOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.AddPackageOptions.get_ExpectedDigests() */
 HRESULT wmade_add_package_options_get__expected_digests(WMADE_AddPackageOptions *self, WFOCO_IMap_WF_Uri_HSTRING** value);
 
-/* Windows.Management.Deployment.AddPackageOptions.get_LimitToExistingPackages() */
 HRESULT wmade_add_package_options_get__limit_to_existing_packages(WMADE_AddPackageOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.AddPackageOptions.put_LimitToExistingPackages() */
 HRESULT wmade_add_package_options_put__limit_to_existing_packages(WMADE_AddPackageOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.AddPackageOptions.get_PackageOperationPriority() */
 HRESULT wmade_add_package_options_get__package_operation_priority(WMADE_AddPackageOptions *self, WMADE_PackageOperationPriority *value);
 
-/* Windows.Management.Deployment.AddPackageOptions.put_PackageOperationPriority() */
 HRESULT wmade_add_package_options_put__package_operation_priority(WMADE_AddPackageOptions *self, WMADE_PackageOperationPriority value);
 
-/* activate Windows.Management.Deployment.RegisterPackageOptions */
 HRESULT wmade_register_package_options_new(WMADE_RegisterPackageOptions **out);
 
-/* Windows.Management.Deployment.RegisterPackageOptions */
-/* Windows.Management.Deployment.RegisterPackageOptions.get_DependencyPackageUris() */
 HRESULT wmade_register_package_options_get__dependency_package_uris(WMADE_RegisterPackageOptions *self, WFOCO_IVector_WF_Uri** value);
 
-/* Windows.Management.Deployment.RegisterPackageOptions.get_AppDataVolume() */
 HRESULT wmade_register_package_options_get__app_data_volume(WMADE_RegisterPackageOptions *self, WMADE_PackageVolume** value);
 
-/* Windows.Management.Deployment.RegisterPackageOptions.put_AppDataVolume() */
 HRESULT wmade_register_package_options_put__app_data_volume(WMADE_RegisterPackageOptions *self, WMADE_PackageVolume* value);
 
-/* Windows.Management.Deployment.RegisterPackageOptions.get_OptionalPackageFamilyNames() */
 HRESULT wmade_register_package_options_get__optional_package_family_names(WMADE_RegisterPackageOptions *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Management.Deployment.RegisterPackageOptions.get_ExternalLocationUri() */
 HRESULT wmade_register_package_options_get__external_location_uri(WMADE_RegisterPackageOptions *self, WF_Uri** value);
 
-/* Windows.Management.Deployment.RegisterPackageOptions.put_ExternalLocationUri() */
 HRESULT wmade_register_package_options_put__external_location_uri(WMADE_RegisterPackageOptions *self, WF_Uri* value);
 
-/* Windows.Management.Deployment.RegisterPackageOptions.get_DeveloperMode() */
 HRESULT wmade_register_package_options_get__developer_mode(WMADE_RegisterPackageOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.RegisterPackageOptions.put_DeveloperMode() */
 HRESULT wmade_register_package_options_put__developer_mode(WMADE_RegisterPackageOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.RegisterPackageOptions.get_ForceAppShutdown() */
 HRESULT wmade_register_package_options_get__force_app_shutdown(WMADE_RegisterPackageOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.RegisterPackageOptions.put_ForceAppShutdown() */
 HRESULT wmade_register_package_options_put__force_app_shutdown(WMADE_RegisterPackageOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.RegisterPackageOptions.get_ForceTargetAppShutdown() */
 HRESULT wmade_register_package_options_get__force_target_app_shutdown(WMADE_RegisterPackageOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.RegisterPackageOptions.put_ForceTargetAppShutdown() */
 HRESULT wmade_register_package_options_put__force_target_app_shutdown(WMADE_RegisterPackageOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.RegisterPackageOptions.get_ForceUpdateFromAnyVersion() */
 HRESULT wmade_register_package_options_get__force_update_from_any_version(WMADE_RegisterPackageOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.RegisterPackageOptions.put_ForceUpdateFromAnyVersion() */
 HRESULT wmade_register_package_options_put__force_update_from_any_version(WMADE_RegisterPackageOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.RegisterPackageOptions.get_InstallAllResources() */
 HRESULT wmade_register_package_options_get__install_all_resources(WMADE_RegisterPackageOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.RegisterPackageOptions.put_InstallAllResources() */
 HRESULT wmade_register_package_options_put__install_all_resources(WMADE_RegisterPackageOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.RegisterPackageOptions.get_StageInPlace() */
 HRESULT wmade_register_package_options_get__stage_in_place(WMADE_RegisterPackageOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.RegisterPackageOptions.put_StageInPlace() */
 HRESULT wmade_register_package_options_put__stage_in_place(WMADE_RegisterPackageOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.RegisterPackageOptions.get_AllowUnsigned() */
 HRESULT wmade_register_package_options_get__allow_unsigned(WMADE_RegisterPackageOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.RegisterPackageOptions.put_AllowUnsigned() */
 HRESULT wmade_register_package_options_put__allow_unsigned(WMADE_RegisterPackageOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.RegisterPackageOptions.get_DeferRegistrationWhenPackagesAreInUse() */
 HRESULT wmade_register_package_options_get__defer_registration_when_packages_are_in_use(WMADE_RegisterPackageOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.RegisterPackageOptions.put_DeferRegistrationWhenPackagesAreInUse() */
 HRESULT wmade_register_package_options_put__defer_registration_when_packages_are_in_use(WMADE_RegisterPackageOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.RegisterPackageOptions.get_ExpectedDigests() */
 HRESULT wmade_register_package_options_get__expected_digests(WMADE_RegisterPackageOptions *self, WFOCO_IMap_WF_Uri_HSTRING** value);
 
-/* activate Windows.Management.Deployment.RemovePackageOptions */
 HRESULT wmade_remove_package_options_new(WMADE_RemovePackageOptions **out);
 
-/* Windows.Management.Deployment.RemovePackageOptions */
-/* Windows.Management.Deployment.RemovePackageOptions.get_PreserveApplicationData() */
 HRESULT wmade_remove_package_options_get__preserve_application_data(WMADE_RemovePackageOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.RemovePackageOptions.put_PreserveApplicationData() */
 HRESULT wmade_remove_package_options_put__preserve_application_data(WMADE_RemovePackageOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.RemovePackageOptions.get_PreserveRoamableApplicationData() */
 HRESULT wmade_remove_package_options_get__preserve_roamable_application_data(WMADE_RemovePackageOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.RemovePackageOptions.put_PreserveRoamableApplicationData() */
 HRESULT wmade_remove_package_options_put__preserve_roamable_application_data(WMADE_RemovePackageOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.RemovePackageOptions.get_RemoveForAllUsers() */
 HRESULT wmade_remove_package_options_get__remove_for_all_users(WMADE_RemovePackageOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.RemovePackageOptions.put_RemoveForAllUsers() */
 HRESULT wmade_remove_package_options_put__remove_for_all_users(WMADE_RemovePackageOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.RemovePackageOptions.get_DeferRemovalWhenPackagesAreInUse() */
 HRESULT wmade_remove_package_options_get__defer_removal_when_packages_are_in_use(WMADE_RemovePackageOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.RemovePackageOptions.put_DeferRemovalWhenPackagesAreInUse() */
 HRESULT wmade_remove_package_options_put__defer_removal_when_packages_are_in_use(WMADE_RemovePackageOptions *self, BOOL value);
 
-/* activate Windows.Management.Deployment.SharedPackageContainer */
 HRESULT wmade_shared_package_container_new(WMADE_SharedPackageContainer **out);
 
-/* Windows.Management.Deployment.SharedPackageContainer */
-/* Windows.Management.Deployment.SharedPackageContainer.get_Name() */
 HRESULT wmade_shared_package_container_get__name(WMADE_SharedPackageContainer *self, cwinrt_hstring *value);
 
-/* Windows.Management.Deployment.SharedPackageContainer.get_Id() */
 HRESULT wmade_shared_package_container_get__id(WMADE_SharedPackageContainer *self, cwinrt_hstring *value);
 
-/* Windows.Management.Deployment.SharedPackageContainer.GetMembers() */
 HRESULT wmade_shared_package_container_get_members(WMADE_SharedPackageContainer *self, WFOCO_IVector_WMADE_SharedPackageContainerMember** out);
 
-/* Windows.Management.Deployment.SharedPackageContainer.RemovePackageFamily(packageFamilyName, options) */
 HRESULT wmade_shared_package_container_remove_package_family(WMADE_SharedPackageContainer *self, cwinrt_hstring packageFamilyName, WMADE_UpdateSharedPackageContainerOptions* options, WMADE_UpdateSharedPackageContainerResult** out);
 
-/* Windows.Management.Deployment.SharedPackageContainer.ResetData() */
 HRESULT wmade_shared_package_container_reset_data(WMADE_SharedPackageContainer *self, WMADE_UpdateSharedPackageContainerResult** out);
 
-/* activate Windows.Management.Deployment.SharedPackageContainerManager */
 HRESULT wmade_shared_package_container_manager_new(WMADE_SharedPackageContainerManager **out);
 
-/* Windows.Management.Deployment.SharedPackageContainerManager */
-/* Windows.Management.Deployment.SharedPackageContainerManager.CreateContainer(name, options) */
 HRESULT wmade_shared_package_container_manager_create_container(WMADE_SharedPackageContainerManager *self, cwinrt_hstring name, WMADE_CreateSharedPackageContainerOptions* options, WMADE_CreateSharedPackageContainerResult** out);
 
-/* Windows.Management.Deployment.SharedPackageContainerManager.DeleteContainer(id, options) */
 HRESULT wmade_shared_package_container_manager_delete_container(WMADE_SharedPackageContainerManager *self, cwinrt_hstring id, WMADE_DeleteSharedPackageContainerOptions* options, WMADE_DeleteSharedPackageContainerResult** out);
 
-/* Windows.Management.Deployment.SharedPackageContainerManager.GetContainer(id) */
 HRESULT wmade_shared_package_container_manager_get_container(WMADE_SharedPackageContainerManager *self, cwinrt_hstring id, WMADE_SharedPackageContainer** out);
 
-/* Windows.Management.Deployment.SharedPackageContainerManager.FindContainers() */
 HRESULT wmade_shared_package_container_manager_find_containers(WMADE_SharedPackageContainerManager *self, WFOCO_IVector_WMADE_SharedPackageContainer** out);
 
-/* Windows.Management.Deployment.SharedPackageContainerManager.FindContainers(options) */
 HRESULT wmade_shared_package_container_manager_find_containers_p_p(WMADE_SharedPackageContainerManager *self, WMADE_FindSharedPackageContainerOptions* options, WFOCO_IVector_WMADE_SharedPackageContainer** out);
 
-/* Windows.Management.Deployment.SharedPackageContainerManager.GetDefault() */
 HRESULT wmade_shared_package_container_manager_get_default(WMADE_SharedPackageContainerManager** out);
 
-/* Windows.Management.Deployment.SharedPackageContainerManager.GetForUser(userSid) */
 HRESULT wmade_shared_package_container_manager_get_for_user(cwinrt_hstring userSid, WMADE_SharedPackageContainerManager** out);
 
-/* Windows.Management.Deployment.SharedPackageContainerManager.GetForProvisioning() */
 HRESULT wmade_shared_package_container_manager_get_for_provisioning(WMADE_SharedPackageContainerManager** out);
 
-/* activate Windows.Management.Deployment.SharedPackageContainerMember */
 HRESULT wmade_shared_package_container_member_new(WMADE_SharedPackageContainerMember **out);
 
-/* Windows.Management.Deployment.SharedPackageContainerMember */
-/* Windows.Management.Deployment.SharedPackageContainerMember.get_PackageFamilyName() */
 HRESULT wmade_shared_package_container_member_get__package_family_name(WMADE_SharedPackageContainerMember *self, cwinrt_hstring *value);
 
-/* activate Windows.Management.Deployment.StagePackageOptions */
 HRESULT wmade_stage_package_options_new(WMADE_StagePackageOptions **out);
 
-/* Windows.Management.Deployment.StagePackageOptions */
-/* Windows.Management.Deployment.StagePackageOptions.get_DependencyPackageUris() */
 HRESULT wmade_stage_package_options_get__dependency_package_uris(WMADE_StagePackageOptions *self, WFOCO_IVector_WF_Uri** value);
 
-/* Windows.Management.Deployment.StagePackageOptions.get_TargetVolume() */
 HRESULT wmade_stage_package_options_get__target_volume(WMADE_StagePackageOptions *self, WMADE_PackageVolume** value);
 
-/* Windows.Management.Deployment.StagePackageOptions.put_TargetVolume() */
 HRESULT wmade_stage_package_options_put__target_volume(WMADE_StagePackageOptions *self, WMADE_PackageVolume* value);
 
-/* Windows.Management.Deployment.StagePackageOptions.get_OptionalPackageFamilyNames() */
 HRESULT wmade_stage_package_options_get__optional_package_family_names(WMADE_StagePackageOptions *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Management.Deployment.StagePackageOptions.get_OptionalPackageUris() */
 HRESULT wmade_stage_package_options_get__optional_package_uris(WMADE_StagePackageOptions *self, WFOCO_IVector_WF_Uri** value);
 
-/* Windows.Management.Deployment.StagePackageOptions.get_RelatedPackageUris() */
 HRESULT wmade_stage_package_options_get__related_package_uris(WMADE_StagePackageOptions *self, WFOCO_IVector_WF_Uri** value);
 
-/* Windows.Management.Deployment.StagePackageOptions.get_ExternalLocationUri() */
 HRESULT wmade_stage_package_options_get__external_location_uri(WMADE_StagePackageOptions *self, WF_Uri** value);
 
-/* Windows.Management.Deployment.StagePackageOptions.put_ExternalLocationUri() */
 HRESULT wmade_stage_package_options_put__external_location_uri(WMADE_StagePackageOptions *self, WF_Uri* value);
 
-/* Windows.Management.Deployment.StagePackageOptions.get_StubPackageOption() */
 HRESULT wmade_stage_package_options_get__stub_package_option(WMADE_StagePackageOptions *self, WMADE_StubPackageOption *value);
 
-/* Windows.Management.Deployment.StagePackageOptions.put_StubPackageOption() */
 HRESULT wmade_stage_package_options_put__stub_package_option(WMADE_StagePackageOptions *self, WMADE_StubPackageOption value);
 
-/* Windows.Management.Deployment.StagePackageOptions.get_DeveloperMode() */
 HRESULT wmade_stage_package_options_get__developer_mode(WMADE_StagePackageOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.StagePackageOptions.put_DeveloperMode() */
 HRESULT wmade_stage_package_options_put__developer_mode(WMADE_StagePackageOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.StagePackageOptions.get_ForceUpdateFromAnyVersion() */
 HRESULT wmade_stage_package_options_get__force_update_from_any_version(WMADE_StagePackageOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.StagePackageOptions.put_ForceUpdateFromAnyVersion() */
 HRESULT wmade_stage_package_options_put__force_update_from_any_version(WMADE_StagePackageOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.StagePackageOptions.get_InstallAllResources() */
 HRESULT wmade_stage_package_options_get__install_all_resources(WMADE_StagePackageOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.StagePackageOptions.put_InstallAllResources() */
 HRESULT wmade_stage_package_options_put__install_all_resources(WMADE_StagePackageOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.StagePackageOptions.get_RequiredContentGroupOnly() */
 HRESULT wmade_stage_package_options_get__required_content_group_only(WMADE_StagePackageOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.StagePackageOptions.put_RequiredContentGroupOnly() */
 HRESULT wmade_stage_package_options_put__required_content_group_only(WMADE_StagePackageOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.StagePackageOptions.get_StageInPlace() */
 HRESULT wmade_stage_package_options_get__stage_in_place(WMADE_StagePackageOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.StagePackageOptions.put_StageInPlace() */
 HRESULT wmade_stage_package_options_put__stage_in_place(WMADE_StagePackageOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.StagePackageOptions.get_AllowUnsigned() */
 HRESULT wmade_stage_package_options_get__allow_unsigned(WMADE_StagePackageOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.StagePackageOptions.put_AllowUnsigned() */
 HRESULT wmade_stage_package_options_put__allow_unsigned(WMADE_StagePackageOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.StagePackageOptions.get_ExpectedDigests() */
 HRESULT wmade_stage_package_options_get__expected_digests(WMADE_StagePackageOptions *self, WFOCO_IMap_WF_Uri_HSTRING** value);
 
-/* Windows.Management.Deployment.StagePackageOptions.get_PackageOperationPriority() */
 HRESULT wmade_stage_package_options_get__package_operation_priority(WMADE_StagePackageOptions *self, WMADE_PackageOperationPriority *value);
 
-/* Windows.Management.Deployment.StagePackageOptions.put_PackageOperationPriority() */
 HRESULT wmade_stage_package_options_put__package_operation_priority(WMADE_StagePackageOptions *self, WMADE_PackageOperationPriority value);
 
-/* activate Windows.Management.Deployment.UpdateSharedPackageContainerOptions */
 HRESULT wmade_update_shared_package_container_options_new(WMADE_UpdateSharedPackageContainerOptions **out);
 
-/* Windows.Management.Deployment.UpdateSharedPackageContainerOptions */
-/* Windows.Management.Deployment.UpdateSharedPackageContainerOptions.get_ForceAppShutdown() */
 HRESULT wmade_update_shared_package_container_options_get__force_app_shutdown(WMADE_UpdateSharedPackageContainerOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.UpdateSharedPackageContainerOptions.put_ForceAppShutdown() */
 HRESULT wmade_update_shared_package_container_options_put__force_app_shutdown(WMADE_UpdateSharedPackageContainerOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.UpdateSharedPackageContainerOptions.get_RequirePackagesPresent() */
 HRESULT wmade_update_shared_package_container_options_get__require_packages_present(WMADE_UpdateSharedPackageContainerOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.UpdateSharedPackageContainerOptions.put_RequirePackagesPresent() */
 HRESULT wmade_update_shared_package_container_options_put__require_packages_present(WMADE_UpdateSharedPackageContainerOptions *self, BOOL value);
 
-/* activate Windows.Management.Deployment.UpdateSharedPackageContainerResult */
 HRESULT wmade_update_shared_package_container_result_new(WMADE_UpdateSharedPackageContainerResult **out);
 
-/* Windows.Management.Deployment.UpdateSharedPackageContainerResult */
-/* Windows.Management.Deployment.UpdateSharedPackageContainerResult.get_Status() */
 HRESULT wmade_update_shared_package_container_result_get__status(WMADE_UpdateSharedPackageContainerResult *self, WMADE_SharedPackageContainerOperationStatus *value);
 
-/* Windows.Management.Deployment.UpdateSharedPackageContainerResult.get_ExtendedError() */
 HRESULT wmade_update_shared_package_container_result_get__extended_error(WMADE_UpdateSharedPackageContainerResult *self, HRESULT *value);
 
-/* activate Windows.Management.Deployment.DeleteSharedPackageContainerResult */
 HRESULT wmade_delete_shared_package_container_result_new(WMADE_DeleteSharedPackageContainerResult **out);
 
-/* Windows.Management.Deployment.DeleteSharedPackageContainerResult */
-/* Windows.Management.Deployment.DeleteSharedPackageContainerResult.get_Status() */
 HRESULT wmade_delete_shared_package_container_result_get__status(WMADE_DeleteSharedPackageContainerResult *self, WMADE_SharedPackageContainerOperationStatus *value);
 
-/* Windows.Management.Deployment.DeleteSharedPackageContainerResult.get_ExtendedError() */
 HRESULT wmade_delete_shared_package_container_result_get__extended_error(WMADE_DeleteSharedPackageContainerResult *self, HRESULT *value);
 
-/* activate Windows.Management.Deployment.DeleteSharedPackageContainerOptions */
 HRESULT wmade_delete_shared_package_container_options_new(WMADE_DeleteSharedPackageContainerOptions **out);
 
-/* Windows.Management.Deployment.DeleteSharedPackageContainerOptions */
-/* Windows.Management.Deployment.DeleteSharedPackageContainerOptions.get_ForceAppShutdown() */
 HRESULT wmade_delete_shared_package_container_options_get__force_app_shutdown(WMADE_DeleteSharedPackageContainerOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.DeleteSharedPackageContainerOptions.put_ForceAppShutdown() */
 HRESULT wmade_delete_shared_package_container_options_put__force_app_shutdown(WMADE_DeleteSharedPackageContainerOptions *self, BOOL value);
 
-/* Windows.Management.Deployment.DeleteSharedPackageContainerOptions.get_AllUsers() */
 HRESULT wmade_delete_shared_package_container_options_get__all_users(WMADE_DeleteSharedPackageContainerOptions *self, BOOL *value);
 
-/* Windows.Management.Deployment.DeleteSharedPackageContainerOptions.put_AllUsers() */
 HRESULT wmade_delete_shared_package_container_options_put__all_users(WMADE_DeleteSharedPackageContainerOptions *self, BOOL value);
 
-/* activate Windows.Management.Deployment.CreateSharedPackageContainerResult */
 HRESULT wmade_create_shared_package_container_result_new(WMADE_CreateSharedPackageContainerResult **out);
 
-/* Windows.Management.Deployment.CreateSharedPackageContainerResult */
-/* Windows.Management.Deployment.CreateSharedPackageContainerResult.get_Container() */
 HRESULT wmade_create_shared_package_container_result_get__container(WMADE_CreateSharedPackageContainerResult *self, WMADE_SharedPackageContainer** value);
 
-/* Windows.Management.Deployment.CreateSharedPackageContainerResult.get_Status() */
 HRESULT wmade_create_shared_package_container_result_get__status(WMADE_CreateSharedPackageContainerResult *self, WMADE_SharedPackageContainerOperationStatus *value);
 
-/* Windows.Management.Deployment.CreateSharedPackageContainerResult.get_ExtendedError() */
 HRESULT wmade_create_shared_package_container_result_get__extended_error(WMADE_CreateSharedPackageContainerResult *self, HRESULT *value);
 
-/* Windows.Management.Deployment.IDeploymentResult */
-/* Windows.Management.Deployment.IDeploymentResult2 */
-/* Windows.Management.Deployment.IDeploymentResult2.get_IsRegistered() */
 HRESULT wmade_deployment_result_2_get__is_registered(WMADE_IDeploymentResult_2 *self, BOOL *value);
 
-/* Windows.Management.Deployment.IFindSharedPackageContainerOptions */
-/* Windows.Management.Deployment.IPackageAllUserProvisioningOptions */
-/* Windows.Management.Deployment.IPackageAllUserProvisioningOptions2 */
-/* Windows.Management.Deployment.IPackageAllUserProvisioningOptions2.get_DeferAutomaticRegistration() */
 HRESULT wmade_package_all_user_provisioning_options_2_get__defer_automatic_registration(WMADE_IPackageAllUserProvisioningOptions_2 *self, BOOL *value);
 
-/* Windows.Management.Deployment.IPackageAllUserProvisioningOptions2.put_DeferAutomaticRegistration() */
 HRESULT wmade_package_all_user_provisioning_options_2_put__defer_automatic_registration(WMADE_IPackageAllUserProvisioningOptions_2 *self, BOOL value);
 
-/* Windows.Management.Deployment.IPackageManager */
-/* Windows.Management.Deployment.IPackageManager2 */
-/* Windows.Management.Deployment.IPackageManager2.RemovePackageAsync(packageFullName, removalOptions) */
 HRESULT wmade_package_manager_2_remove_package_async(WMADE_IPackageManager_2 *self, cwinrt_hstring packageFullName, WMADE_RemovalOptions removalOptions, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.IPackageManager2.StagePackageAsync(packageUri, dependencyPackageUris, deploymentOptions) */
 HRESULT wmade_package_manager_2_stage_package_async(WMADE_IPackageManager_2 *self, WF_Uri* packageUri, WFOCO_IIterable_WF_Uri* dependencyPackageUris, WMADE_DeploymentOptions deploymentOptions, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.IPackageManager2.RegisterPackageByFullNameAsync(mainPackageFullName, dependencyPackageFullNames, deploymentOptions) */
 HRESULT wmade_package_manager_2_register_package_by_full_name_async(WMADE_IPackageManager_2 *self, cwinrt_hstring mainPackageFullName, WFOCO_IIterable_HSTRING* dependencyPackageFullNames, WMADE_DeploymentOptions deploymentOptions, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.IPackageManager2.FindPackagesWithPackageTypes(packageTypes) */
 HRESULT wmade_package_manager_2_find_packages_with_package_types(WMADE_IPackageManager_2 *self, WMADE_PackageTypes packageTypes, WFOCO_IIterable_WAM_Package** out);
 
-/* Windows.Management.Deployment.IPackageManager2.FindPackagesForUserWithPackageTypes(userSecurityId, packageTypes) */
 HRESULT wmade_package_manager_2_find_packages_for_user_with_package_types(WMADE_IPackageManager_2 *self, cwinrt_hstring userSecurityId, WMADE_PackageTypes packageTypes, WFOCO_IIterable_WAM_Package** out);
 
-/* Windows.Management.Deployment.IPackageManager2.FindPackagesWithPackageTypes(packageName, packagePublisher, packageTypes) */
 HRESULT wmade_package_manager_2_find_packages_with_package_types_str_str_package_types_p(WMADE_IPackageManager_2 *self, cwinrt_hstring packageName, cwinrt_hstring packagePublisher, WMADE_PackageTypes packageTypes, WFOCO_IIterable_WAM_Package** out);
 
-/* Windows.Management.Deployment.IPackageManager2.FindPackagesForUserWithPackageTypes(userSecurityId, packageName, packagePublisher, packageTypes) */
 HRESULT wmade_package_manager_2_find_packages_for_user_with_package_types_str_str_str_package_types_p(WMADE_IPackageManager_2 *self, cwinrt_hstring userSecurityId, cwinrt_hstring packageName, cwinrt_hstring packagePublisher, WMADE_PackageTypes packageTypes, WFOCO_IIterable_WAM_Package** out);
 
-/* Windows.Management.Deployment.IPackageManager2.FindPackagesWithPackageTypes(packageFamilyName, packageTypes) */
 HRESULT wmade_package_manager_2_find_packages_with_package_types_str_package_types_p(WMADE_IPackageManager_2 *self, cwinrt_hstring packageFamilyName, WMADE_PackageTypes packageTypes, WFOCO_IIterable_WAM_Package** out);
 
-/* Windows.Management.Deployment.IPackageManager2.FindPackagesForUserWithPackageTypes(userSecurityId, packageFamilyName, packageTypes) */
 HRESULT wmade_package_manager_2_find_packages_for_user_with_package_types_str_str_package_types_p(WMADE_IPackageManager_2 *self, cwinrt_hstring userSecurityId, cwinrt_hstring packageFamilyName, WMADE_PackageTypes packageTypes, WFOCO_IIterable_WAM_Package** out);
 
-/* Windows.Management.Deployment.IPackageManager2.StageUserDataAsync(packageFullName) */
 HRESULT wmade_package_manager_2_stage_user_data_async(WMADE_IPackageManager_2 *self, cwinrt_hstring packageFullName, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.IPackageManager3 */
-/* Windows.Management.Deployment.IPackageManager3.AddPackageVolumeAsync(packageStorePath) */
 HRESULT wmade_package_manager_3_add_package_volume_async(WMADE_IPackageManager_3 *self, cwinrt_hstring packageStorePath, WF_IAsyncOperation_WMADE_PackageVolume** out);
 
-/* Windows.Management.Deployment.IPackageManager3.AddPackageAsync(packageUri, dependencyPackageUris, deploymentOptions, targetVolume) */
 HRESULT wmade_package_manager_3_add_package_async(WMADE_IPackageManager_3 *self, WF_Uri* packageUri, WFOCO_IIterable_WF_Uri* dependencyPackageUris, WMADE_DeploymentOptions deploymentOptions, WMADE_PackageVolume* targetVolume, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.IPackageManager3.ClearPackageStatus(packageFullName, status) */
 HRESULT wmade_package_manager_3_clear_package_status(WMADE_IPackageManager_3 *self, cwinrt_hstring packageFullName, WMADE_PackageStatus status);
 
-/* Windows.Management.Deployment.IPackageManager3.RegisterPackageAsync(manifestUri, dependencyPackageUris, deploymentOptions, appDataVolume) */
 HRESULT wmade_package_manager_3_register_package_async(WMADE_IPackageManager_3 *self, WF_Uri* manifestUri, WFOCO_IIterable_WF_Uri* dependencyPackageUris, WMADE_DeploymentOptions deploymentOptions, WMADE_PackageVolume* appDataVolume, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.IPackageManager3.FindPackageVolume(volumeName) */
 HRESULT wmade_package_manager_3_find_package_volume(WMADE_IPackageManager_3 *self, cwinrt_hstring volumeName, WMADE_PackageVolume** out);
 
-/* Windows.Management.Deployment.IPackageManager3.FindPackageVolumes() */
 HRESULT wmade_package_manager_3_find_package_volumes(WMADE_IPackageManager_3 *self, WFOCO_IIterable_WMADE_PackageVolume** out);
 
-/* Windows.Management.Deployment.IPackageManager3.GetDefaultPackageVolume() */
 HRESULT wmade_package_manager_3_get_default_package_volume(WMADE_IPackageManager_3 *self, WMADE_PackageVolume** out);
 
-/* Windows.Management.Deployment.IPackageManager3.MovePackageToVolumeAsync(packageFullName, deploymentOptions, targetVolume) */
 HRESULT wmade_package_manager_3_move_package_to_volume_async(WMADE_IPackageManager_3 *self, cwinrt_hstring packageFullName, WMADE_DeploymentOptions deploymentOptions, WMADE_PackageVolume* targetVolume, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.IPackageManager3.RemovePackageVolumeAsync(volume) */
 HRESULT wmade_package_manager_3_remove_package_volume_async(WMADE_IPackageManager_3 *self, WMADE_PackageVolume* volume, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.IPackageManager3.SetDefaultPackageVolume(volume) */
 HRESULT wmade_package_manager_3_set_default_package_volume(WMADE_IPackageManager_3 *self, WMADE_PackageVolume* volume);
 
-/* Windows.Management.Deployment.IPackageManager3.SetPackageStatus(packageFullName, status) */
 HRESULT wmade_package_manager_3_set_package_status(WMADE_IPackageManager_3 *self, cwinrt_hstring packageFullName, WMADE_PackageStatus status);
 
-/* Windows.Management.Deployment.IPackageManager3.SetPackageVolumeOfflineAsync(packageVolume) */
 HRESULT wmade_package_manager_3_set_package_volume_offline_async(WMADE_IPackageManager_3 *self, WMADE_PackageVolume* packageVolume, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.IPackageManager3.SetPackageVolumeOnlineAsync(packageVolume) */
 HRESULT wmade_package_manager_3_set_package_volume_online_async(WMADE_IPackageManager_3 *self, WMADE_PackageVolume* packageVolume, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.IPackageManager3.StagePackageAsync(packageUri, dependencyPackageUris, deploymentOptions, targetVolume) */
 HRESULT wmade_package_manager_3_stage_package_async(WMADE_IPackageManager_3 *self, WF_Uri* packageUri, WFOCO_IIterable_WF_Uri* dependencyPackageUris, WMADE_DeploymentOptions deploymentOptions, WMADE_PackageVolume* targetVolume, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.IPackageManager3.StageUserDataAsync(packageFullName, deploymentOptions) */
 HRESULT wmade_package_manager_3_stage_user_data_async(WMADE_IPackageManager_3 *self, cwinrt_hstring packageFullName, WMADE_DeploymentOptions deploymentOptions, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.IPackageManager4 */
-/* Windows.Management.Deployment.IPackageManager4.GetPackageVolumesAsync() */
 HRESULT wmade_package_manager_4_get_package_volumes_async(WMADE_IPackageManager_4 *self, WF_IAsyncOperation_WFOCO_IVectorView_WMADE_PackageVolume** out);
 
-/* Windows.Management.Deployment.IPackageManager5 */
-/* Windows.Management.Deployment.IPackageManager5.AddPackageAsync(packageUri, dependencyPackageUris, deploymentOptions, targetVolume, optionalPackageFamilyNames, externalPackageUris) */
 HRESULT wmade_package_manager_5_add_package_async(WMADE_IPackageManager_5 *self, WF_Uri* packageUri, WFOCO_IIterable_WF_Uri* dependencyPackageUris, WMADE_DeploymentOptions deploymentOptions, WMADE_PackageVolume* targetVolume, WFOCO_IIterable_HSTRING* optionalPackageFamilyNames, WFOCO_IIterable_WF_Uri* externalPackageUris, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.IPackageManager5.StagePackageAsync(packageUri, dependencyPackageUris, deploymentOptions, targetVolume, optionalPackageFamilyNames, externalPackageUris) */
 HRESULT wmade_package_manager_5_stage_package_async(WMADE_IPackageManager_5 *self, WF_Uri* packageUri, WFOCO_IIterable_WF_Uri* dependencyPackageUris, WMADE_DeploymentOptions deploymentOptions, WMADE_PackageVolume* targetVolume, WFOCO_IIterable_HSTRING* optionalPackageFamilyNames, WFOCO_IIterable_WF_Uri* externalPackageUris, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.IPackageManager5.RegisterPackageByFamilyNameAsync(mainPackageFamilyName, dependencyPackageFamilyNames, deploymentOptions, appDataVolume, optionalPackageFamilyNames) */
 HRESULT wmade_package_manager_5_register_package_by_family_name_async(WMADE_IPackageManager_5 *self, cwinrt_hstring mainPackageFamilyName, WFOCO_IIterable_HSTRING* dependencyPackageFamilyNames, WMADE_DeploymentOptions deploymentOptions, WMADE_PackageVolume* appDataVolume, WFOCO_IIterable_HSTRING* optionalPackageFamilyNames, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.IPackageManager5.get_DebugSettings() */
 HRESULT wmade_package_manager_5_get__debug_settings(WMADE_IPackageManager_5 *self, WMADE_PackageManagerDebugSettings** value);
 
-/* Windows.Management.Deployment.IPackageManager6 */
-/* Windows.Management.Deployment.IPackageManager6.ProvisionPackageForAllUsersAsync(packageFamilyName) */
 HRESULT wmade_package_manager_6_provision_package_for_all_users_async(WMADE_IPackageManager_6 *self, cwinrt_hstring packageFamilyName, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.IPackageManager6.AddPackageByAppInstallerFileAsync(appInstallerFileUri, options, targetVolume) */
 HRESULT wmade_package_manager_6_add_package_by_app_installer_file_async(WMADE_IPackageManager_6 *self, WF_Uri* appInstallerFileUri, WMADE_AddPackageByAppInstallerOptions options, WMADE_PackageVolume* targetVolume, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.IPackageManager6.RequestAddPackageByAppInstallerFileAsync(appInstallerFileUri, options, targetVolume) */
 HRESULT wmade_package_manager_6_request_add_package_by_app_installer_file_async(WMADE_IPackageManager_6 *self, WF_Uri* appInstallerFileUri, WMADE_AddPackageByAppInstallerOptions options, WMADE_PackageVolume* targetVolume, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.IPackageManager6.AddPackageAsync(packageUri, dependencyPackageUris, options, targetVolume, optionalPackageFamilyNames, packageUrisToInstall, relatedPackageUris) */
 HRESULT wmade_package_manager_6_add_package_async(WMADE_IPackageManager_6 *self, WF_Uri* packageUri, WFOCO_IIterable_WF_Uri* dependencyPackageUris, WMADE_DeploymentOptions options, WMADE_PackageVolume* targetVolume, WFOCO_IIterable_HSTRING* optionalPackageFamilyNames, WFOCO_IIterable_WF_Uri* packageUrisToInstall, WFOCO_IIterable_WF_Uri* relatedPackageUris, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.IPackageManager6.StagePackageAsync(packageUri, dependencyPackageUris, options, targetVolume, optionalPackageFamilyNames, packageUrisToInstall, relatedPackageUris) */
 HRESULT wmade_package_manager_6_stage_package_async(WMADE_IPackageManager_6 *self, WF_Uri* packageUri, WFOCO_IIterable_WF_Uri* dependencyPackageUris, WMADE_DeploymentOptions options, WMADE_PackageVolume* targetVolume, WFOCO_IIterable_HSTRING* optionalPackageFamilyNames, WFOCO_IIterable_WF_Uri* packageUrisToInstall, WFOCO_IIterable_WF_Uri* relatedPackageUris, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.IPackageManager6.RequestAddPackageAsync(packageUri, dependencyPackageUris, deploymentOptions, targetVolume, optionalPackageFamilyNames, relatedPackageUris) */
 HRESULT wmade_package_manager_6_request_add_package_async(WMADE_IPackageManager_6 *self, WF_Uri* packageUri, WFOCO_IIterable_WF_Uri* dependencyPackageUris, WMADE_DeploymentOptions deploymentOptions, WMADE_PackageVolume* targetVolume, WFOCO_IIterable_HSTRING* optionalPackageFamilyNames, WFOCO_IIterable_WF_Uri* relatedPackageUris, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.IPackageManager7 */
-/* Windows.Management.Deployment.IPackageManager7.RequestAddPackageAsync(packageUri, dependencyPackageUris, deploymentOptions, targetVolume, optionalPackageFamilyNames, relatedPackageUris, packageUrisToInstall) */
 HRESULT wmade_package_manager_7_request_add_package_async(WMADE_IPackageManager_7 *self, WF_Uri* packageUri, WFOCO_IIterable_WF_Uri* dependencyPackageUris, WMADE_DeploymentOptions deploymentOptions, WMADE_PackageVolume* targetVolume, WFOCO_IIterable_HSTRING* optionalPackageFamilyNames, WFOCO_IIterable_WF_Uri* relatedPackageUris, WFOCO_IIterable_WF_Uri* packageUrisToInstall, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.IPackageManager8 */
-/* Windows.Management.Deployment.IPackageManager8.DeprovisionPackageForAllUsersAsync(packageFamilyName) */
 HRESULT wmade_package_manager_8_deprovision_package_for_all_users_async(WMADE_IPackageManager_8 *self, cwinrt_hstring packageFamilyName, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.IPackageManager9 */
-/* Windows.Management.Deployment.IPackageManager9.FindProvisionedPackages() */
 HRESULT wmade_package_manager_9_find_provisioned_packages(WMADE_IPackageManager_9 *self, WFOCO_IVector_WAM_Package** out);
 
-/* Windows.Management.Deployment.IPackageManager9.AddPackageByUriAsync(packageUri, options) */
 HRESULT wmade_package_manager_9_add_package_by_uri_async(WMADE_IPackageManager_9 *self, WF_Uri* packageUri, WMADE_AddPackageOptions* options, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.IPackageManager9.StagePackageByUriAsync(packageUri, options) */
 HRESULT wmade_package_manager_9_stage_package_by_uri_async(WMADE_IPackageManager_9 *self, WF_Uri* packageUri, WMADE_StagePackageOptions* options, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.IPackageManager9.RegisterPackageByUriAsync(manifestUri, options) */
 HRESULT wmade_package_manager_9_register_package_by_uri_async(WMADE_IPackageManager_9 *self, WF_Uri* manifestUri, WMADE_RegisterPackageOptions* options, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.IPackageManager9.RegisterPackagesByFullNameAsync(packageFullNames, options) */
 HRESULT wmade_package_manager_9_register_packages_by_full_name_async(WMADE_IPackageManager_9 *self, WFOCO_IIterable_HSTRING* packageFullNames, WMADE_RegisterPackageOptions* options, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.IPackageManager9.SetPackageStubPreference(packageFamilyName, useStub) */
 HRESULT wmade_package_manager_9_set_package_stub_preference(WMADE_IPackageManager_9 *self, cwinrt_hstring packageFamilyName, WMADE_PackageStubPreference useStub);
 
-/* Windows.Management.Deployment.IPackageManager9.GetPackageStubPreference(packageFamilyName) */
 HRESULT wmade_package_manager_9_get_package_stub_preference(WMADE_IPackageManager_9 *self, cwinrt_hstring packageFamilyName, WMADE_PackageStubPreference *out);
 
-/* Windows.Management.Deployment.IPackageManager10 */
-/* Windows.Management.Deployment.IPackageManager10.ProvisionPackageForAllUsersAsync(mainPackageFamilyName, options) */
 HRESULT wmade_package_manager_10_provision_package_for_all_users_async(WMADE_IPackageManager_10 *self, cwinrt_hstring mainPackageFamilyName, WMADE_PackageAllUserProvisioningOptions* options, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.IPackageManager11 */
-/* Windows.Management.Deployment.IPackageManager11.RemovePackageByUriAsync(packageUri, options) */
 HRESULT wmade_package_manager_11_remove_package_by_uri_async(WMADE_IPackageManager_11 *self, WF_Uri* packageUri, WMADE_RemovePackageOptions* options, WF_IAsyncOperationWithProgress_WMADE_DeploymentResult_WMADE_DeploymentProgress** out);
 
-/* Windows.Management.Deployment.IPackageManager12 */
-/* Windows.Management.Deployment.IPackageManager12.IsPackageRemovalPending(packageFullName) */
 HRESULT wmade_package_manager_12_is_package_removal_pending(WMADE_IPackageManager_12 *self, cwinrt_hstring packageFullName, BOOL *out);
 
-/* Windows.Management.Deployment.IPackageManager12.IsPackageRemovalPendingForUser(packageFullName, userSecurityId) */
 HRESULT wmade_package_manager_12_is_package_removal_pending_for_user(WMADE_IPackageManager_12 *self, cwinrt_hstring packageFullName, cwinrt_hstring userSecurityId, BOOL *out);
 
-/* Windows.Management.Deployment.IPackageManager12.IsPackageRemovalPendingByUri(packageUri) */
 HRESULT wmade_package_manager_12_is_package_removal_pending_by_uri(WMADE_IPackageManager_12 *self, WF_Uri* packageUri, BOOL *out);
 
-/* Windows.Management.Deployment.IPackageManager12.IsPackageRemovalPendingByUriForUser(packageUri, userSecurityId) */
 HRESULT wmade_package_manager_12_is_package_removal_pending_by_uri_for_user(WMADE_IPackageManager_12 *self, WF_Uri* packageUri, cwinrt_hstring userSecurityId, BOOL *out);
 
-/* Windows.Management.Deployment.IPackageManagerDebugSettings */
-/* Windows.Management.Deployment.IPackageUserInformation */
-/* Windows.Management.Deployment.IPackageVolume */
-/* Windows.Management.Deployment.IPackageVolume2 */
-/* Windows.Management.Deployment.IPackageVolume2.get_IsFullTrustPackageSupported() */
 HRESULT wmade_package_volume_2_get__is_full_trust_package_supported(WMADE_IPackageVolume_2 *self, BOOL *value);
 
-/* Windows.Management.Deployment.IPackageVolume2.get_IsAppxInstallSupported() */
 HRESULT wmade_package_volume_2_get__is_appx_install_supported(WMADE_IPackageVolume_2 *self, BOOL *value);
 
-/* Windows.Management.Deployment.IPackageVolume2.GetAvailableSpaceAsync() */
 HRESULT wmade_package_volume_2_get_available_space_async(WMADE_IPackageVolume_2 *self, WF_IAsyncOperation_uint64_t** out);
 
-/* Windows.Management.Deployment.ICreateSharedPackageContainerOptions */
-/* Windows.Management.Deployment.IAutoUpdateSettingsOptions */
-/* Windows.Management.Deployment.IAppInstallerManager */
-/* Windows.Management.Deployment.IAddPackageOptions */
-/* Windows.Management.Deployment.IAddPackageOptions2 */
-/* Windows.Management.Deployment.IAddPackageOptions2.get_ExpectedDigests() */
 HRESULT wmade_add_package_options_2_get__expected_digests(WMADE_IAddPackageOptions_2 *self, WFOCO_IMap_WF_Uri_HSTRING** value);
 
-/* Windows.Management.Deployment.IAddPackageOptions2.get_LimitToExistingPackages() */
 HRESULT wmade_add_package_options_2_get__limit_to_existing_packages(WMADE_IAddPackageOptions_2 *self, BOOL *value);
 
-/* Windows.Management.Deployment.IAddPackageOptions2.put_LimitToExistingPackages() */
 HRESULT wmade_add_package_options_2_put__limit_to_existing_packages(WMADE_IAddPackageOptions_2 *self, BOOL value);
 
-/* Windows.Management.Deployment.IAddPackageOptions3 */
-/* Windows.Management.Deployment.IAddPackageOptions3.get_PackageOperationPriority() */
 HRESULT wmade_add_package_options_3_get__package_operation_priority(WMADE_IAddPackageOptions_3 *self, WMADE_PackageOperationPriority *value);
 
-/* Windows.Management.Deployment.IAddPackageOptions3.put_PackageOperationPriority() */
 HRESULT wmade_add_package_options_3_put__package_operation_priority(WMADE_IAddPackageOptions_3 *self, WMADE_PackageOperationPriority value);
 
-/* Windows.Management.Deployment.IRegisterPackageOptions */
-/* Windows.Management.Deployment.IRegisterPackageOptions2 */
-/* Windows.Management.Deployment.IRegisterPackageOptions2.get_ExpectedDigests() */
 HRESULT wmade_register_package_options_2_get__expected_digests(WMADE_IRegisterPackageOptions_2 *self, WFOCO_IMap_WF_Uri_HSTRING** value);
 
-/* Windows.Management.Deployment.IRemovePackageOptions */
-/* Windows.Management.Deployment.IRemovePackageOptions2 */
-/* Windows.Management.Deployment.IRemovePackageOptions2.get_DeferRemovalWhenPackagesAreInUse() */
 HRESULT wmade_remove_package_options_2_get__defer_removal_when_packages_are_in_use(WMADE_IRemovePackageOptions_2 *self, BOOL *value);
 
-/* Windows.Management.Deployment.IRemovePackageOptions2.put_DeferRemovalWhenPackagesAreInUse() */
 HRESULT wmade_remove_package_options_2_put__defer_removal_when_packages_are_in_use(WMADE_IRemovePackageOptions_2 *self, BOOL value);
 
-/* Windows.Management.Deployment.ISharedPackageContainer */
-/* Windows.Management.Deployment.ISharedPackageContainerManager */
-/* Windows.Management.Deployment.ISharedPackageContainerMember */
-/* Windows.Management.Deployment.IStagePackageOptions */
-/* Windows.Management.Deployment.IStagePackageOptions2 */
-/* Windows.Management.Deployment.IStagePackageOptions2.get_ExpectedDigests() */
 HRESULT wmade_stage_package_options_2_get__expected_digests(WMADE_IStagePackageOptions_2 *self, WFOCO_IMap_WF_Uri_HSTRING** value);
 
-/* Windows.Management.Deployment.IStagePackageOptions3 */
-/* Windows.Management.Deployment.IStagePackageOptions3.get_PackageOperationPriority() */
 HRESULT wmade_stage_package_options_3_get__package_operation_priority(WMADE_IStagePackageOptions_3 *self, WMADE_PackageOperationPriority *value);
 
-/* Windows.Management.Deployment.IStagePackageOptions3.put_PackageOperationPriority() */
 HRESULT wmade_stage_package_options_3_put__package_operation_priority(WMADE_IStagePackageOptions_3 *self, WMADE_PackageOperationPriority value);
 
-/* Windows.Management.Deployment.IUpdateSharedPackageContainerOptions */
-/* Windows.Management.Deployment.IUpdateSharedPackageContainerResult */
-/* Windows.Management.Deployment.IDeleteSharedPackageContainerResult */
-/* Windows.Management.Deployment.IDeleteSharedPackageContainerOptions */
-/* Windows.Management.Deployment.ICreateSharedPackageContainerResult */
 #endif /* CWINRT_WINDOWS_MANAGEMENT_DEPLOYMENT_H */

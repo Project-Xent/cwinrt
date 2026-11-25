@@ -12,13 +12,11 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPSTLI_ILicenseManagerStatics_2 WAPSTLI_ILicenseManagerStatics_2;
 typedef struct WAPSTLI_LicenseManager WAPSTLI_LicenseManager;
 typedef struct WAPSTLI_LicenseSatisfactionInfo WAPSTLI_LicenseSatisfactionInfo;
@@ -27,7 +25,6 @@ typedef struct WAPSTLI_ILicenseManagerStatics WAPSTLI_ILicenseManagerStatics;
 typedef struct WAPSTLI_ILicenseSatisfactionInfo WAPSTLI_ILicenseSatisfactionInfo;
 typedef struct WAPSTLI_ILicenseSatisfactionResult WAPSTLI_ILicenseSatisfactionResult;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncAction
 #define CWINRT_FWD_WF_IAsyncAction
 typedef struct WF_IAsyncAction WF_IAsyncAction;
@@ -57,7 +54,6 @@ typedef enum WAPSTLI_LicenseRefreshOption {
 } WAPSTLI_LicenseRefreshOption;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -78,67 +74,40 @@ static const IID CWINRT_IID_WAPSTLI_ILicenseSatisfactionInfo CWINRT_MAYBE_UNUSED
 static const IID CWINRT_IID_WAPSTLI_ILicenseSatisfactionResult CWINRT_MAYBE_UNUSED = { 0x3C674F73, 0x3C87, 0x4EE1, { 0x82, 0x01, 0xF4, 0x28, 0x35, 0x9B, 0xD3, 0xAF } };
 #endif
 
-/* Methods */
-
-/* Windows.ApplicationModel.Store.LicenseManagement.ILicenseManagerStatics2 */
-/* Windows.ApplicationModel.Store.LicenseManagement.ILicenseManagerStatics2.RefreshLicensesAsync(refreshOption) */
 HRESULT wapstli_license_manager_statics_2_refresh_licenses_async(WAPSTLI_ILicenseManagerStatics_2 *self, WAPSTLI_LicenseRefreshOption refreshOption, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Store.LicenseManagement.LicenseManager */
 HRESULT wapstli_license_manager_new(WAPSTLI_LicenseManager **out);
 
-/* Windows.ApplicationModel.Store.LicenseManagement.LicenseManager */
-/* Windows.ApplicationModel.Store.LicenseManagement.LicenseManager.RefreshLicensesAsync(refreshOption) */
 HRESULT wapstli_license_manager_refresh_licenses_async(WAPSTLI_LicenseRefreshOption refreshOption, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Store.LicenseManagement.LicenseManager.AddLicenseAsync(license) */
 HRESULT wapstli_license_manager_add_license_async(WSTST_IBuffer* license, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Store.LicenseManagement.LicenseManager.GetSatisfactionInfosAsync(contentIds, keyIds) */
 HRESULT wapstli_license_manager_get_satisfaction_infos_async(WFOCO_IIterable_HSTRING* contentIds, WFOCO_IIterable_HSTRING* keyIds, WF_IAsyncOperation_WAPSTLI_LicenseSatisfactionResult** out);
 
-/* activate Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo */
 HRESULT wapstli_license_satisfaction_info_new(WAPSTLI_LicenseSatisfactionInfo **out);
 
-/* Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo */
-/* Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo.get_SatisfiedByDevice() */
 HRESULT wapstli_license_satisfaction_info_get__satisfied_by_device(WAPSTLI_LicenseSatisfactionInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo.get_SatisfiedByOpenLicense() */
 HRESULT wapstli_license_satisfaction_info_get__satisfied_by_open_license(WAPSTLI_LicenseSatisfactionInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo.get_SatisfiedByTrial() */
 HRESULT wapstli_license_satisfaction_info_get__satisfied_by_trial(WAPSTLI_LicenseSatisfactionInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo.get_SatisfiedByPass() */
 HRESULT wapstli_license_satisfaction_info_get__satisfied_by_pass(WAPSTLI_LicenseSatisfactionInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo.get_SatisfiedByInstallMedia() */
 HRESULT wapstli_license_satisfaction_info_get__satisfied_by_install_media(WAPSTLI_LicenseSatisfactionInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo.get_SatisfiedBySignedInUser() */
 HRESULT wapstli_license_satisfaction_info_get__satisfied_by_signed_in_user(WAPSTLI_LicenseSatisfactionInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo.get_IsSatisfied() */
 HRESULT wapstli_license_satisfaction_info_get__is_satisfied(WAPSTLI_LicenseSatisfactionInfo *self, BOOL *value);
 
-/* activate Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionResult */
 HRESULT wapstli_license_satisfaction_result_new(WAPSTLI_LicenseSatisfactionResult **out);
 
-/* Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionResult */
-/* Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionResult.get_LicenseSatisfactionInfos() */
 HRESULT wapstli_license_satisfaction_result_get__license_satisfaction_infos(WAPSTLI_LicenseSatisfactionResult *self, WFOCO_IMapView_HSTRING_WAPSTLI_LicenseSatisfactionInfo** value);
 
-/* Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionResult.get_ExtendedError() */
 HRESULT wapstli_license_satisfaction_result_get__extended_error(WAPSTLI_LicenseSatisfactionResult *self, HRESULT *value);
 
-/* Windows.ApplicationModel.Store.LicenseManagement.ILicenseManagerStatics */
-/* Windows.ApplicationModel.Store.LicenseManagement.ILicenseManagerStatics.AddLicenseAsync(license) */
 HRESULT wapstli_license_manager_statics_add_license_async(WAPSTLI_ILicenseManagerStatics *self, WSTST_IBuffer* license, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Store.LicenseManagement.ILicenseManagerStatics.GetSatisfactionInfosAsync(contentIds, keyIds) */
 HRESULT wapstli_license_manager_statics_get_satisfaction_infos_async(WAPSTLI_ILicenseManagerStatics *self, WFOCO_IIterable_HSTRING* contentIds, WFOCO_IIterable_HSTRING* keyIds, WF_IAsyncOperation_WAPSTLI_LicenseSatisfactionResult** out);
 
-/* Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionInfo */
-/* Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionResult */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_STORE_LICENSEMANAGEMENT_H */

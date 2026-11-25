@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WSEIS_HostMessageReceivedCallback WSEIS_HostMessageReceivedCallback;
 typedef struct WSEIS_IIsolatedWindowsEnvironmentFactory WSEIS_IIsolatedWindowsEnvironmentFactory;
 typedef struct WSEIS_IIsolatedWindowsEnvironmentHostStatics WSEIS_IIsolatedWindowsEnvironmentHostStatics;
@@ -64,7 +63,6 @@ typedef struct WSEIS_IIsolatedWindowsEnvironmentTelemetryParameters WSEIS_IIsola
 typedef struct WSEIS_IIsolatedWindowsEnvironmentUserInfo WSEIS_IIsolatedWindowsEnvironmentUserInfo;
 typedef struct WSEIS_IIsolatedWindowsEnvironmentUserInfo_2 WSEIS_IIsolatedWindowsEnvironmentUserInfo_2;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IVectorView_Object
 #define CWINRT_FWD_WFOCO_IVectorView_Object
 typedef struct WFOCO_IVectorView_Object WFOCO_IVectorView_Object;
@@ -300,7 +298,6 @@ struct WSEIS_IsolatedWindowsEnvironmentCreateProgress {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -429,500 +426,300 @@ static const IID CWINRT_IID_WSEIS_IIsolatedWindowsEnvironmentUserInfo CWINRT_MAY
 static const IID CWINRT_IID_WSEIS_IIsolatedWindowsEnvironmentUserInfo_2 CWINRT_MAYBE_UNUSED = { 0xB0BDD5DD, 0x91D7, 0x481E, { 0x94, 0xF2, 0x2A, 0x5A, 0x6B, 0xDF, 0x93, 0x83 } };
 #endif
 
-/* Methods */
-
-/* Windows.Security.Isolation.HostMessageReceivedCallback */
-/* Windows.Security.Isolation.HostMessageReceivedCallback.Invoke(receiverId, message) */
 HRESULT wseis_host_message_received_callback_invoke(WSEIS_HostMessageReceivedCallback *self, GUID receiverId, WFOCO_IVectorView_Object* message);
 
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentFactory */
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentFactory.CreateAsync(options) */
 HRESULT wseis_isolated_windows_environment_factory_create_async(WSEIS_IIsolatedWindowsEnvironmentFactory *self, WSEIS_IsolatedWindowsEnvironmentOptions* options, WF_IAsyncOperationWithProgress_WSEIS_IsolatedWindowsEnvironmentCreateResult_WSEIS_IsolatedWindowsEnvironmentCreateProgress** out);
 
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentFactory.CreateAsync(options, telemetryParameters) */
 HRESULT wseis_isolated_windows_environment_factory_create_async_p_p_p(WSEIS_IIsolatedWindowsEnvironmentFactory *self, WSEIS_IsolatedWindowsEnvironmentOptions* options, WSEIS_IsolatedWindowsEnvironmentTelemetryParameters* telemetryParameters, WF_IAsyncOperationWithProgress_WSEIS_IsolatedWindowsEnvironmentCreateResult_WSEIS_IsolatedWindowsEnvironmentCreateProgress** out);
 
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentFactory.GetById(environmentId) */
 HRESULT wseis_isolated_windows_environment_factory_get_by_id(WSEIS_IIsolatedWindowsEnvironmentFactory *self, cwinrt_hstring environmentId, WSEIS_IsolatedWindowsEnvironment** out);
 
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentFactory.FindByOwnerId(environmentOwnerId) */
 HRESULT wseis_isolated_windows_environment_factory_find_by_owner_id(WSEIS_IIsolatedWindowsEnvironmentFactory *self, cwinrt_hstring environmentOwnerId, WFOCO_IVectorView_WSEIS_IsolatedWindowsEnvironment** out);
 
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentHostStatics */
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentHostStatics.get_IsReady() */
 HRESULT wseis_isolated_windows_environment_host_statics_get__is_ready(WSEIS_IIsolatedWindowsEnvironmentHostStatics *self, BOOL *value);
 
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentHostStatics.get_HostErrors() */
 HRESULT wseis_isolated_windows_environment_host_statics_get__host_errors(WSEIS_IIsolatedWindowsEnvironmentHostStatics *self, WFOCO_IVectorView_WSEIS_IsolatedWindowsEnvironmentHostError** value);
 
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationStatics */
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationStatics.Register(ownerName, ownerRegistrationData) */
 HRESULT wseis_isolated_windows_environment_owner_registration_statics_register(WSEIS_IIsolatedWindowsEnvironmentOwnerRegistrationStatics *self, cwinrt_hstring ownerName, WSEIS_IsolatedWindowsEnvironmentOwnerRegistrationData* ownerRegistrationData, WSEIS_IsolatedWindowsEnvironmentOwnerRegistrationResult** out);
 
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationStatics.Unregister(ownerName) */
 HRESULT wseis_isolated_windows_environment_owner_registration_statics_unregister(WSEIS_IIsolatedWindowsEnvironmentOwnerRegistrationStatics *self, cwinrt_hstring ownerName);
 
-/* Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics */
-/* Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics.PostMessageToReceiver(receiverId, message) */
 HRESULT wseis_isolated_windows_host_messenger_statics_post_message_to_receiver(WSEIS_IIsolatedWindowsHostMessengerStatics *self, GUID receiverId, WFOCO_IVectorView_Object* message);
 
-/* Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics.GetFileId(filePath) */
 HRESULT wseis_isolated_windows_host_messenger_statics_get_file_id(WSEIS_IIsolatedWindowsHostMessengerStatics *self, cwinrt_hstring filePath, GUID *out);
 
-/* Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics2 */
-/* Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics2.RegisterHostMessageReceiver(receiverId, hostMessageReceivedCallback) */
 HRESULT wseis_isolated_windows_host_messenger_statics_2_register_host_message_receiver(WSEIS_IIsolatedWindowsHostMessengerStatics_2 *self, GUID receiverId, WSEIS_HostMessageReceivedCallback* hostMessageReceivedCallback);
 
-/* Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics2.UnregisterHostMessageReceiver(receiverId) */
 HRESULT wseis_isolated_windows_host_messenger_statics_2_unregister_host_message_receiver(WSEIS_IIsolatedWindowsHostMessengerStatics_2 *self, GUID receiverId);
 
-/* activate Windows.Security.Isolation.IsolatedWindowsEnvironment */
 HRESULT wseis_isolated_windows_environment_new(WSEIS_IsolatedWindowsEnvironment **out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironment */
-/* Windows.Security.Isolation.IsolatedWindowsEnvironment.get_Id() */
 HRESULT wseis_isolated_windows_environment_get__id(WSEIS_IsolatedWindowsEnvironment *self, cwinrt_hstring *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironment.StartProcessSilentlyAsync(hostExePath, arguments, activator) */
 HRESULT wseis_isolated_windows_environment_start_process_silently_async(WSEIS_IsolatedWindowsEnvironment *self, cwinrt_hstring hostExePath, cwinrt_hstring arguments, WSEIS_IsolatedWindowsEnvironmentActivator activator, WF_IAsyncOperation_WSEIS_IsolatedWindowsEnvironmentStartProcessResult** out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironment.StartProcessSilentlyAsync(hostExePath, arguments, activator, telemetryParameters) */
 HRESULT wseis_isolated_windows_environment_start_process_silently_async_str_str_isolated_windows_environment_2d1acfae(WSEIS_IsolatedWindowsEnvironment *self, cwinrt_hstring hostExePath, cwinrt_hstring arguments, WSEIS_IsolatedWindowsEnvironmentActivator activator, WSEIS_IsolatedWindowsEnvironmentTelemetryParameters* telemetryParameters, WF_IAsyncOperation_WSEIS_IsolatedWindowsEnvironmentStartProcessResult** out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironment.ShareFolderAsync(hostFolder, requestOptions) */
 HRESULT wseis_isolated_windows_environment_share_folder_async(WSEIS_IsolatedWindowsEnvironment *self, cwinrt_hstring hostFolder, WSEIS_IsolatedWindowsEnvironmentShareFolderRequestOptions* requestOptions, WF_IAsyncOperation_WSEIS_IsolatedWindowsEnvironmentShareFolderResult** out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironment.ShareFolderAsync(hostFolder, requestOptions, telemetryParameters) */
 HRESULT wseis_isolated_windows_environment_share_folder_async_str_p_p_p(WSEIS_IsolatedWindowsEnvironment *self, cwinrt_hstring hostFolder, WSEIS_IsolatedWindowsEnvironmentShareFolderRequestOptions* requestOptions, WSEIS_IsolatedWindowsEnvironmentTelemetryParameters* telemetryParameters, WF_IAsyncOperation_WSEIS_IsolatedWindowsEnvironmentShareFolderResult** out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironment.LaunchFileWithUIAsync(appExePath, argumentsTemplate, filePath) */
 HRESULT wseis_isolated_windows_environment_launch_file_with_u_i_async(WSEIS_IsolatedWindowsEnvironment *self, cwinrt_hstring appExePath, cwinrt_hstring argumentsTemplate, cwinrt_hstring filePath, WF_IAsyncOperation_WSEIS_IsolatedWindowsEnvironmentLaunchFileResult** out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironment.LaunchFileWithUIAsync(appExePath, argumentsTemplate, filePath, telemetryParameters) */
 HRESULT wseis_isolated_windows_environment_launch_file_with_u_i_async_str_str_str_p_p(WSEIS_IsolatedWindowsEnvironment *self, cwinrt_hstring appExePath, cwinrt_hstring argumentsTemplate, cwinrt_hstring filePath, WSEIS_IsolatedWindowsEnvironmentTelemetryParameters* telemetryParameters, WF_IAsyncOperation_WSEIS_IsolatedWindowsEnvironmentLaunchFileResult** out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironment.TerminateAsync() */
 HRESULT wseis_isolated_windows_environment_terminate_async(WSEIS_IsolatedWindowsEnvironment *self, WF_IAsyncAction** out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironment.TerminateAsync(telemetryParameters) */
 HRESULT wseis_isolated_windows_environment_terminate_async_p_p(WSEIS_IsolatedWindowsEnvironment *self, WSEIS_IsolatedWindowsEnvironmentTelemetryParameters* telemetryParameters, WF_IAsyncAction** out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironment.RegisterMessageReceiver(receiverId, messageReceivedCallback) */
 HRESULT wseis_isolated_windows_environment_register_message_receiver(WSEIS_IsolatedWindowsEnvironment *self, GUID receiverId, WSEIS_MessageReceivedCallback* messageReceivedCallback);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironment.UnregisterMessageReceiver(receiverId) */
 HRESULT wseis_isolated_windows_environment_unregister_message_receiver(WSEIS_IsolatedWindowsEnvironment *self, GUID receiverId);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironment.PostMessageToReceiverAsync(receiverId, message) */
 HRESULT wseis_isolated_windows_environment_post_message_to_receiver_async(WSEIS_IsolatedWindowsEnvironment *self, GUID receiverId, WFOCO_IIterable_Object* message, WF_IAsyncOperation_WSEIS_IsolatedWindowsEnvironmentPostMessageResult** out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironment.PostMessageToReceiverAsync(receiverId, message, telemetryParameters) */
 HRESULT wseis_isolated_windows_environment_post_message_to_receiver_async_g_u_i_d_p_p_p(WSEIS_IsolatedWindowsEnvironment *self, GUID receiverId, WFOCO_IIterable_Object* message, WSEIS_IsolatedWindowsEnvironmentTelemetryParameters* telemetryParameters, WF_IAsyncOperation_WSEIS_IsolatedWindowsEnvironmentPostMessageResult** out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironment.GetUserInfo() */
 HRESULT wseis_isolated_windows_environment_get_user_info(WSEIS_IsolatedWindowsEnvironment *self, WSEIS_IsolatedWindowsEnvironmentUserInfo** out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironment.ShareFileAsync(filePath, options) */
 HRESULT wseis_isolated_windows_environment_share_file_async(WSEIS_IsolatedWindowsEnvironment *self, cwinrt_hstring filePath, WSEIS_IsolatedWindowsEnvironmentShareFileRequestOptions* options, WF_IAsyncOperation_WSEIS_IsolatedWindowsEnvironmentShareFileResult** out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironment.ShareFileAsync(filePath, options, telemetryParameters) */
 HRESULT wseis_isolated_windows_environment_share_file_async_str_p_p_p(WSEIS_IsolatedWindowsEnvironment *self, cwinrt_hstring filePath, WSEIS_IsolatedWindowsEnvironmentShareFileRequestOptions* options, WSEIS_IsolatedWindowsEnvironmentTelemetryParameters* telemetryParameters, WF_IAsyncOperation_WSEIS_IsolatedWindowsEnvironmentShareFileResult** out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironment.ChangePriority(Priority) */
 HRESULT wseis_isolated_windows_environment_change_priority(WSEIS_IsolatedWindowsEnvironment *self, WSEIS_IsolatedWindowsEnvironmentCreationPriority Priority);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironment.CreateAsync(options) */
 HRESULT wseis_isolated_windows_environment_create_async(WSEIS_IsolatedWindowsEnvironmentOptions* options, WF_IAsyncOperationWithProgress_WSEIS_IsolatedWindowsEnvironmentCreateResult_WSEIS_IsolatedWindowsEnvironmentCreateProgress** out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironment.CreateAsync(options, telemetryParameters) */
 HRESULT wseis_isolated_windows_environment_create_async_p_p_p(WSEIS_IsolatedWindowsEnvironmentOptions* options, WSEIS_IsolatedWindowsEnvironmentTelemetryParameters* telemetryParameters, WF_IAsyncOperationWithProgress_WSEIS_IsolatedWindowsEnvironmentCreateResult_WSEIS_IsolatedWindowsEnvironmentCreateProgress** out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironment.GetById(environmentId) */
 HRESULT wseis_isolated_windows_environment_get_by_id(cwinrt_hstring environmentId, WSEIS_IsolatedWindowsEnvironment** out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironment.FindByOwnerId(environmentOwnerId) */
 HRESULT wseis_isolated_windows_environment_find_by_owner_id(cwinrt_hstring environmentOwnerId, WFOCO_IVectorView_WSEIS_IsolatedWindowsEnvironment** out);
 
-/* activate Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult */
 HRESULT wseis_isolated_windows_environment_create_result_new(WSEIS_IsolatedWindowsEnvironmentCreateResult **out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult */
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult.get_Status() */
 HRESULT wseis_isolated_windows_environment_create_result_get__status(WSEIS_IsolatedWindowsEnvironmentCreateResult *self, WSEIS_IsolatedWindowsEnvironmentCreateStatus *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult.get_ExtendedError() */
 HRESULT wseis_isolated_windows_environment_create_result_get__extended_error(WSEIS_IsolatedWindowsEnvironmentCreateResult *self, HRESULT *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult.get_Environment() */
 HRESULT wseis_isolated_windows_environment_create_result_get__environment(WSEIS_IsolatedWindowsEnvironmentCreateResult *self, WSEIS_IsolatedWindowsEnvironment** value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult.ChangeCreationPriority(priority) */
 HRESULT wseis_isolated_windows_environment_create_result_change_creation_priority(WSEIS_IsolatedWindowsEnvironmentCreateResult *self, WSEIS_IsolatedWindowsEnvironmentCreationPriority priority);
 
-/* activate Windows.Security.Isolation.IsolatedWindowsEnvironmentFile */
 HRESULT wseis_isolated_windows_environment_file_new(WSEIS_IsolatedWindowsEnvironmentFile **out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentFile */
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentFile.get_Id() */
 HRESULT wseis_isolated_windows_environment_file_get__id(WSEIS_IsolatedWindowsEnvironmentFile *self, GUID *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentFile.get_HostPath() */
 HRESULT wseis_isolated_windows_environment_file_get__host_path(WSEIS_IsolatedWindowsEnvironmentFile *self, cwinrt_hstring *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentFile.Close() */
 HRESULT wseis_isolated_windows_environment_file_close(WSEIS_IsolatedWindowsEnvironmentFile *self);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentFile.get_GuestPath() */
 HRESULT wseis_isolated_windows_environment_file_get__guest_path(WSEIS_IsolatedWindowsEnvironmentFile *self, cwinrt_hstring *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentFile.get_IsReadOnly() */
 HRESULT wseis_isolated_windows_environment_file_get__is_read_only(WSEIS_IsolatedWindowsEnvironmentFile *self, BOOL *value);
 
-/* activate Windows.Security.Isolation.IsolatedWindowsEnvironmentHost */
 HRESULT wseis_isolated_windows_environment_host_new(WSEIS_IsolatedWindowsEnvironmentHost **out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentHost */
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentHost.get_IsReady() */
 HRESULT wseis_isolated_windows_environment_host_get__is_ready(BOOL *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentHost.get_HostErrors() */
 HRESULT wseis_isolated_windows_environment_host_get__host_errors(WFOCO_IVectorView_WSEIS_IsolatedWindowsEnvironmentHostError** value);
 
-/* activate Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult */
 HRESULT wseis_isolated_windows_environment_launch_file_result_new(WSEIS_IsolatedWindowsEnvironmentLaunchFileResult **out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult */
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult.get_Status() */
 HRESULT wseis_isolated_windows_environment_launch_file_result_get__status(WSEIS_IsolatedWindowsEnvironmentLaunchFileResult *self, WSEIS_IsolatedWindowsEnvironmentLaunchFileStatus *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult.get_ExtendedError() */
 HRESULT wseis_isolated_windows_environment_launch_file_result_get__extended_error(WSEIS_IsolatedWindowsEnvironmentLaunchFileResult *self, HRESULT *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult.get_File() */
 HRESULT wseis_isolated_windows_environment_launch_file_result_get__file(WSEIS_IsolatedWindowsEnvironmentLaunchFileResult *self, WSEIS_IsolatedWindowsEnvironmentFile** value);
 
-/* activate Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions */
 HRESULT wseis_isolated_windows_environment_options_new(WSEIS_IsolatedWindowsEnvironmentOptions **out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions */
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions.get_EnvironmentOwnerId() */
 HRESULT wseis_isolated_windows_environment_options_get__environment_owner_id(WSEIS_IsolatedWindowsEnvironmentOptions *self, cwinrt_hstring *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions.put_EnvironmentOwnerId() */
 HRESULT wseis_isolated_windows_environment_options_put__environment_owner_id(WSEIS_IsolatedWindowsEnvironmentOptions *self, cwinrt_hstring value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions.get_AllowedClipboardFormats() */
 HRESULT wseis_isolated_windows_environment_options_get__allowed_clipboard_formats(WSEIS_IsolatedWindowsEnvironmentOptions *self, WSEIS_IsolatedWindowsEnvironmentAllowedClipboardFormats *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions.put_AllowedClipboardFormats() */
 HRESULT wseis_isolated_windows_environment_options_put__allowed_clipboard_formats(WSEIS_IsolatedWindowsEnvironmentOptions *self, WSEIS_IsolatedWindowsEnvironmentAllowedClipboardFormats value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions.get_ClipboardCopyPasteDirections() */
 HRESULT wseis_isolated_windows_environment_options_get__clipboard_copy_paste_directions(WSEIS_IsolatedWindowsEnvironmentOptions *self, WSEIS_IsolatedWindowsEnvironmentClipboardCopyPasteDirections *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions.put_ClipboardCopyPasteDirections() */
 HRESULT wseis_isolated_windows_environment_options_put__clipboard_copy_paste_directions(WSEIS_IsolatedWindowsEnvironmentOptions *self, WSEIS_IsolatedWindowsEnvironmentClipboardCopyPasteDirections value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions.get_AvailablePrinters() */
 HRESULT wseis_isolated_windows_environment_options_get__available_printers(WSEIS_IsolatedWindowsEnvironmentOptions *self, WSEIS_IsolatedWindowsEnvironmentAvailablePrinters *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions.put_AvailablePrinters() */
 HRESULT wseis_isolated_windows_environment_options_put__available_printers(WSEIS_IsolatedWindowsEnvironmentOptions *self, WSEIS_IsolatedWindowsEnvironmentAvailablePrinters value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions.get_SharedHostFolderPath() */
 HRESULT wseis_isolated_windows_environment_options_get__shared_host_folder_path(WSEIS_IsolatedWindowsEnvironmentOptions *self, cwinrt_hstring *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions.get_SharedFolderNameInEnvironment() */
 HRESULT wseis_isolated_windows_environment_options_get__shared_folder_name_in_environment(WSEIS_IsolatedWindowsEnvironmentOptions *self, cwinrt_hstring *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions.ShareHostFolderForUntrustedItems(SharedHostFolderPath, ShareFolderNameInEnvironment) */
 HRESULT wseis_isolated_windows_environment_options_share_host_folder_for_untrusted_items(WSEIS_IsolatedWindowsEnvironmentOptions *self, cwinrt_hstring SharedHostFolderPath, cwinrt_hstring ShareFolderNameInEnvironment);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions.get_PersistUserProfile() */
 HRESULT wseis_isolated_windows_environment_options_get__persist_user_profile(WSEIS_IsolatedWindowsEnvironmentOptions *self, BOOL *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions.put_PersistUserProfile() */
 HRESULT wseis_isolated_windows_environment_options_put__persist_user_profile(WSEIS_IsolatedWindowsEnvironmentOptions *self, BOOL value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions.get_AllowGraphicsHardwareAcceleration() */
 HRESULT wseis_isolated_windows_environment_options_get__allow_graphics_hardware_acceleration(WSEIS_IsolatedWindowsEnvironmentOptions *self, BOOL *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions.put_AllowGraphicsHardwareAcceleration() */
 HRESULT wseis_isolated_windows_environment_options_put__allow_graphics_hardware_acceleration(WSEIS_IsolatedWindowsEnvironmentOptions *self, BOOL value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions.get_AllowCameraAndMicrophoneAccess() */
 HRESULT wseis_isolated_windows_environment_options_get__allow_camera_and_microphone_access(WSEIS_IsolatedWindowsEnvironmentOptions *self, BOOL *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions.put_AllowCameraAndMicrophoneAccess() */
 HRESULT wseis_isolated_windows_environment_options_put__allow_camera_and_microphone_access(WSEIS_IsolatedWindowsEnvironmentOptions *self, BOOL value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions.get_WindowAnnotationOverride() */
 HRESULT wseis_isolated_windows_environment_options_get__window_annotation_override(WSEIS_IsolatedWindowsEnvironmentOptions *self, cwinrt_hstring *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions.put_WindowAnnotationOverride() */
 HRESULT wseis_isolated_windows_environment_options_put__window_annotation_override(WSEIS_IsolatedWindowsEnvironmentOptions *self, cwinrt_hstring value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions.get_AllowedClipboardFormatsToEnvironment() */
 HRESULT wseis_isolated_windows_environment_options_get__allowed_clipboard_formats_to_environment(WSEIS_IsolatedWindowsEnvironmentOptions *self, WSEIS_IsolatedWindowsEnvironmentAllowedClipboardFormats *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions.put_AllowedClipboardFormatsToEnvironment() */
 HRESULT wseis_isolated_windows_environment_options_put__allowed_clipboard_formats_to_environment(WSEIS_IsolatedWindowsEnvironmentOptions *self, WSEIS_IsolatedWindowsEnvironmentAllowedClipboardFormats value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions.get_AllowedClipboardFormatsToHost() */
 HRESULT wseis_isolated_windows_environment_options_get__allowed_clipboard_formats_to_host(WSEIS_IsolatedWindowsEnvironmentOptions *self, WSEIS_IsolatedWindowsEnvironmentAllowedClipboardFormats *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions.put_AllowedClipboardFormatsToHost() */
 HRESULT wseis_isolated_windows_environment_options_put__allowed_clipboard_formats_to_host(WSEIS_IsolatedWindowsEnvironmentOptions *self, WSEIS_IsolatedWindowsEnvironmentAllowedClipboardFormats value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions.get_CreationPriority() */
 HRESULT wseis_isolated_windows_environment_options_get__creation_priority(WSEIS_IsolatedWindowsEnvironmentOptions *self, WSEIS_IsolatedWindowsEnvironmentCreationPriority *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions.put_CreationPriority() */
 HRESULT wseis_isolated_windows_environment_options_put__creation_priority(WSEIS_IsolatedWindowsEnvironmentOptions *self, WSEIS_IsolatedWindowsEnvironmentCreationPriority value);
 
-/* activate Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistration */
 HRESULT wseis_isolated_windows_environment_owner_registration_new(WSEIS_IsolatedWindowsEnvironmentOwnerRegistration **out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistration */
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistration.Register(ownerName, ownerRegistrationData) */
 HRESULT wseis_isolated_windows_environment_owner_registration_register(cwinrt_hstring ownerName, WSEIS_IsolatedWindowsEnvironmentOwnerRegistrationData* ownerRegistrationData, WSEIS_IsolatedWindowsEnvironmentOwnerRegistrationResult** out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistration.Unregister(ownerName) */
 HRESULT wseis_isolated_windows_environment_owner_registration_unregister(cwinrt_hstring ownerName);
 
-/* activate Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData */
 HRESULT wseis_isolated_windows_environment_owner_registration_data_new(WSEIS_IsolatedWindowsEnvironmentOwnerRegistrationData **out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData */
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData.get_ShareableFolders() */
 HRESULT wseis_isolated_windows_environment_owner_registration_data_get__shareable_folders(WSEIS_IsolatedWindowsEnvironmentOwnerRegistrationData *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData.get_ProcessesRunnableAsSystem() */
 HRESULT wseis_isolated_windows_environment_owner_registration_data_get__processes_runnable_as_system(WSEIS_IsolatedWindowsEnvironmentOwnerRegistrationData *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData.get_ProcessesRunnableAsUser() */
 HRESULT wseis_isolated_windows_environment_owner_registration_data_get__processes_runnable_as_user(WSEIS_IsolatedWindowsEnvironmentOwnerRegistrationData *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData.get_ActivationFileExtensions() */
 HRESULT wseis_isolated_windows_environment_owner_registration_data_get__activation_file_extensions(WSEIS_IsolatedWindowsEnvironmentOwnerRegistrationData *self, WFOCO_IVector_HSTRING** value);
 
-/* activate Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult */
 HRESULT wseis_isolated_windows_environment_owner_registration_result_new(WSEIS_IsolatedWindowsEnvironmentOwnerRegistrationResult **out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult */
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult.get_Status() */
 HRESULT wseis_isolated_windows_environment_owner_registration_result_get__status(WSEIS_IsolatedWindowsEnvironmentOwnerRegistrationResult *self, WSEIS_IsolatedWindowsEnvironmentOwnerRegistrationStatus *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult.get_ExtendedError() */
 HRESULT wseis_isolated_windows_environment_owner_registration_result_get__extended_error(WSEIS_IsolatedWindowsEnvironmentOwnerRegistrationResult *self, HRESULT *value);
 
-/* activate Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult */
 HRESULT wseis_isolated_windows_environment_post_message_result_new(WSEIS_IsolatedWindowsEnvironmentPostMessageResult **out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult */
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult.get_Status() */
 HRESULT wseis_isolated_windows_environment_post_message_result_get__status(WSEIS_IsolatedWindowsEnvironmentPostMessageResult *self, WSEIS_IsolatedWindowsEnvironmentPostMessageStatus *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult.get_ExtendedError() */
 HRESULT wseis_isolated_windows_environment_post_message_result_get__extended_error(WSEIS_IsolatedWindowsEnvironmentPostMessageResult *self, HRESULT *value);
 
-/* activate Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess */
 HRESULT wseis_isolated_windows_environment_process_new(WSEIS_IsolatedWindowsEnvironmentProcess **out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess */
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess.get_State() */
 HRESULT wseis_isolated_windows_environment_process_get__state(WSEIS_IsolatedWindowsEnvironmentProcess *self, WSEIS_IsolatedWindowsEnvironmentProcessState *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess.get_ExitCode() */
 HRESULT wseis_isolated_windows_environment_process_get__exit_code(WSEIS_IsolatedWindowsEnvironmentProcess *self, uint32_t *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess.WaitForExit() */
 HRESULT wseis_isolated_windows_environment_process_wait_for_exit(WSEIS_IsolatedWindowsEnvironmentProcess *self);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess.WaitForExitWithTimeout(timeoutMilliseconds) */
 HRESULT wseis_isolated_windows_environment_process_wait_for_exit_with_timeout(WSEIS_IsolatedWindowsEnvironmentProcess *self, uint32_t timeoutMilliseconds);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess.WaitForExitAsync() */
 HRESULT wseis_isolated_windows_environment_process_wait_for_exit_async(WSEIS_IsolatedWindowsEnvironmentProcess *self, WF_IAsyncAction** out);
 
-/* activate Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileRequestOptions */
 HRESULT wseis_isolated_windows_environment_share_file_request_options_new(WSEIS_IsolatedWindowsEnvironmentShareFileRequestOptions **out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileRequestOptions */
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileRequestOptions.get_AllowWrite() */
 HRESULT wseis_isolated_windows_environment_share_file_request_options_get__allow_write(WSEIS_IsolatedWindowsEnvironmentShareFileRequestOptions *self, BOOL *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileRequestOptions.put_AllowWrite() */
 HRESULT wseis_isolated_windows_environment_share_file_request_options_put__allow_write(WSEIS_IsolatedWindowsEnvironmentShareFileRequestOptions *self, BOOL value);
 
-/* activate Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult */
 HRESULT wseis_isolated_windows_environment_share_file_result_new(WSEIS_IsolatedWindowsEnvironmentShareFileResult **out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult */
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult.get_Status() */
 HRESULT wseis_isolated_windows_environment_share_file_result_get__status(WSEIS_IsolatedWindowsEnvironmentShareFileResult *self, WSEIS_IsolatedWindowsEnvironmentShareFileStatus *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult.get_ExtendedError() */
 HRESULT wseis_isolated_windows_environment_share_file_result_get__extended_error(WSEIS_IsolatedWindowsEnvironmentShareFileResult *self, HRESULT *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult.get_File() */
 HRESULT wseis_isolated_windows_environment_share_file_result_get__file(WSEIS_IsolatedWindowsEnvironmentShareFileResult *self, WSEIS_IsolatedWindowsEnvironmentFile** value);
 
-/* activate Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions */
 HRESULT wseis_isolated_windows_environment_share_folder_request_options_new(WSEIS_IsolatedWindowsEnvironmentShareFolderRequestOptions **out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions */
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions.get_AllowWrite() */
 HRESULT wseis_isolated_windows_environment_share_folder_request_options_get__allow_write(WSEIS_IsolatedWindowsEnvironmentShareFolderRequestOptions *self, BOOL *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions.put_AllowWrite() */
 HRESULT wseis_isolated_windows_environment_share_folder_request_options_put__allow_write(WSEIS_IsolatedWindowsEnvironmentShareFolderRequestOptions *self, BOOL value);
 
-/* activate Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult */
 HRESULT wseis_isolated_windows_environment_share_folder_result_new(WSEIS_IsolatedWindowsEnvironmentShareFolderResult **out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult */
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult.get_Status() */
 HRESULT wseis_isolated_windows_environment_share_folder_result_get__status(WSEIS_IsolatedWindowsEnvironmentShareFolderResult *self, WSEIS_IsolatedWindowsEnvironmentShareFolderStatus *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult.get_ExtendedError() */
 HRESULT wseis_isolated_windows_environment_share_folder_result_get__extended_error(WSEIS_IsolatedWindowsEnvironmentShareFolderResult *self, HRESULT *value);
 
-/* activate Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult */
 HRESULT wseis_isolated_windows_environment_start_process_result_new(WSEIS_IsolatedWindowsEnvironmentStartProcessResult **out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult */
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult.get_Status() */
 HRESULT wseis_isolated_windows_environment_start_process_result_get__status(WSEIS_IsolatedWindowsEnvironmentStartProcessResult *self, WSEIS_IsolatedWindowsEnvironmentStartProcessStatus *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult.get_ExtendedError() */
 HRESULT wseis_isolated_windows_environment_start_process_result_get__extended_error(WSEIS_IsolatedWindowsEnvironmentStartProcessResult *self, HRESULT *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult.get_Process() */
 HRESULT wseis_isolated_windows_environment_start_process_result_get__process(WSEIS_IsolatedWindowsEnvironmentStartProcessResult *self, WSEIS_IsolatedWindowsEnvironmentProcess** value);
 
-/* activate Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters */
 HRESULT wseis_isolated_windows_environment_telemetry_parameters_new(WSEIS_IsolatedWindowsEnvironmentTelemetryParameters **out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters */
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters.get_CorrelationId() */
 HRESULT wseis_isolated_windows_environment_telemetry_parameters_get__correlation_id(WSEIS_IsolatedWindowsEnvironmentTelemetryParameters *self, GUID *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters.put_CorrelationId() */
 HRESULT wseis_isolated_windows_environment_telemetry_parameters_put__correlation_id(WSEIS_IsolatedWindowsEnvironmentTelemetryParameters *self, GUID value);
 
-/* activate Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo */
 HRESULT wseis_isolated_windows_environment_user_info_new(WSEIS_IsolatedWindowsEnvironmentUserInfo **out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo */
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo.get_EnvironmentUserSid() */
 HRESULT wseis_isolated_windows_environment_user_info_get__environment_user_sid(WSEIS_IsolatedWindowsEnvironmentUserInfo *self, cwinrt_hstring *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo.get_EnvironmentUserName() */
 HRESULT wseis_isolated_windows_environment_user_info_get__environment_user_name(WSEIS_IsolatedWindowsEnvironmentUserInfo *self, cwinrt_hstring *value);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo.TryWaitForSignInAsync() */
 HRESULT wseis_isolated_windows_environment_user_info_try_wait_for_sign_in_async(WSEIS_IsolatedWindowsEnvironmentUserInfo *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo.TryWaitForSignInWithProgressAsync() */
 HRESULT wseis_isolated_windows_environment_user_info_try_wait_for_sign_in_with_progress_async(WSEIS_IsolatedWindowsEnvironmentUserInfo *self, WF_IAsyncOperationWithProgress_Bool_WSEIS_IsolatedWindowsEnvironmentSignInProgress** out);
 
-/* activate Windows.Security.Isolation.IsolatedWindowsHostMessenger */
 HRESULT wseis_isolated_windows_host_messenger_new(WSEIS_IsolatedWindowsHostMessenger **out);
 
-/* Windows.Security.Isolation.IsolatedWindowsHostMessenger */
-/* Windows.Security.Isolation.IsolatedWindowsHostMessenger.RegisterHostMessageReceiver(receiverId, hostMessageReceivedCallback) */
 HRESULT wseis_isolated_windows_host_messenger_register_host_message_receiver(GUID receiverId, WSEIS_HostMessageReceivedCallback* hostMessageReceivedCallback);
 
-/* Windows.Security.Isolation.IsolatedWindowsHostMessenger.UnregisterHostMessageReceiver(receiverId) */
 HRESULT wseis_isolated_windows_host_messenger_unregister_host_message_receiver(GUID receiverId);
 
-/* Windows.Security.Isolation.IsolatedWindowsHostMessenger.PostMessageToReceiver(receiverId, message) */
 HRESULT wseis_isolated_windows_host_messenger_post_message_to_receiver(GUID receiverId, WFOCO_IVectorView_Object* message);
 
-/* Windows.Security.Isolation.IsolatedWindowsHostMessenger.GetFileId(filePath) */
 HRESULT wseis_isolated_windows_host_messenger_get_file_id(cwinrt_hstring filePath, GUID *out);
 
-/* Windows.Security.Isolation.MessageReceivedCallback */
-/* Windows.Security.Isolation.MessageReceivedCallback.Invoke(receiverId, message) */
 HRESULT wseis_message_received_callback_invoke(WSEIS_MessageReceivedCallback *self, GUID receiverId, WFOCO_IVectorView_Object* message);
 
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironment */
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironment2 */
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironment2.PostMessageToReceiverAsync(receiverId, message) */
 HRESULT wseis_isolated_windows_environment_2_post_message_to_receiver_async(WSEIS_IIsolatedWindowsEnvironment_2 *self, GUID receiverId, WFOCO_IIterable_Object* message, WF_IAsyncOperation_WSEIS_IsolatedWindowsEnvironmentPostMessageResult** out);
 
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironment2.PostMessageToReceiverAsync(receiverId, message, telemetryParameters) */
 HRESULT wseis_isolated_windows_environment_2_post_message_to_receiver_async_g_u_i_d_p_p_p(WSEIS_IIsolatedWindowsEnvironment_2 *self, GUID receiverId, WFOCO_IIterable_Object* message, WSEIS_IsolatedWindowsEnvironmentTelemetryParameters* telemetryParameters, WF_IAsyncOperation_WSEIS_IsolatedWindowsEnvironmentPostMessageResult** out);
 
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironment3 */
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironment3.GetUserInfo() */
 HRESULT wseis_isolated_windows_environment_3_get_user_info(WSEIS_IIsolatedWindowsEnvironment_3 *self, WSEIS_IsolatedWindowsEnvironmentUserInfo** out);
 
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironment3.ShareFileAsync(filePath, options) */
 HRESULT wseis_isolated_windows_environment_3_share_file_async(WSEIS_IIsolatedWindowsEnvironment_3 *self, cwinrt_hstring filePath, WSEIS_IsolatedWindowsEnvironmentShareFileRequestOptions* options, WF_IAsyncOperation_WSEIS_IsolatedWindowsEnvironmentShareFileResult** out);
 
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironment3.ShareFileAsync(filePath, options, telemetryParameters) */
 HRESULT wseis_isolated_windows_environment_3_share_file_async_str_p_p_p(WSEIS_IIsolatedWindowsEnvironment_3 *self, cwinrt_hstring filePath, WSEIS_IsolatedWindowsEnvironmentShareFileRequestOptions* options, WSEIS_IsolatedWindowsEnvironmentTelemetryParameters* telemetryParameters, WF_IAsyncOperation_WSEIS_IsolatedWindowsEnvironmentShareFileResult** out);
 
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironment4 */
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironment4.ChangePriority(Priority) */
 HRESULT wseis_isolated_windows_environment_4_change_priority(WSEIS_IIsolatedWindowsEnvironment_4 *self, WSEIS_IsolatedWindowsEnvironmentCreationPriority Priority);
 
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentCreateResult */
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentCreateResult2 */
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentCreateResult2.ChangeCreationPriority(priority) */
 HRESULT wseis_isolated_windows_environment_create_result_2_change_creation_priority(WSEIS_IIsolatedWindowsEnvironmentCreateResult_2 *self, WSEIS_IsolatedWindowsEnvironmentCreationPriority priority);
 
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentFile */
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentFile2 */
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentFile2.get_GuestPath() */
 HRESULT wseis_isolated_windows_environment_file_2_get__guest_path(WSEIS_IIsolatedWindowsEnvironmentFile_2 *self, cwinrt_hstring *value);
 
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentFile2.get_IsReadOnly() */
 HRESULT wseis_isolated_windows_environment_file_2_get__is_read_only(WSEIS_IIsolatedWindowsEnvironmentFile_2 *self, BOOL *value);
 
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentLaunchFileResult */
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions */
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions2 */
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions2.get_WindowAnnotationOverride() */
 HRESULT wseis_isolated_windows_environment_options_2_get__window_annotation_override(WSEIS_IIsolatedWindowsEnvironmentOptions_2 *self, cwinrt_hstring *value);
 
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions2.put_WindowAnnotationOverride() */
 HRESULT wseis_isolated_windows_environment_options_2_put__window_annotation_override(WSEIS_IIsolatedWindowsEnvironmentOptions_2 *self, cwinrt_hstring value);
 
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions3 */
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions3.get_AllowedClipboardFormatsToEnvironment() */
 HRESULT wseis_isolated_windows_environment_options_3_get__allowed_clipboard_formats_to_environment(WSEIS_IIsolatedWindowsEnvironmentOptions_3 *self, WSEIS_IsolatedWindowsEnvironmentAllowedClipboardFormats *value);
 
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions3.put_AllowedClipboardFormatsToEnvironment() */
 HRESULT wseis_isolated_windows_environment_options_3_put__allowed_clipboard_formats_to_environment(WSEIS_IIsolatedWindowsEnvironmentOptions_3 *self, WSEIS_IsolatedWindowsEnvironmentAllowedClipboardFormats value);
 
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions3.get_AllowedClipboardFormatsToHost() */
 HRESULT wseis_isolated_windows_environment_options_3_get__allowed_clipboard_formats_to_host(WSEIS_IIsolatedWindowsEnvironmentOptions_3 *self, WSEIS_IsolatedWindowsEnvironmentAllowedClipboardFormats *value);
 
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions3.put_AllowedClipboardFormatsToHost() */
 HRESULT wseis_isolated_windows_environment_options_3_put__allowed_clipboard_formats_to_host(WSEIS_IIsolatedWindowsEnvironmentOptions_3 *self, WSEIS_IsolatedWindowsEnvironmentAllowedClipboardFormats value);
 
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions3.get_CreationPriority() */
 HRESULT wseis_isolated_windows_environment_options_3_get__creation_priority(WSEIS_IIsolatedWindowsEnvironmentOptions_3 *self, WSEIS_IsolatedWindowsEnvironmentCreationPriority *value);
 
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions3.put_CreationPriority() */
 HRESULT wseis_isolated_windows_environment_options_3_put__creation_priority(WSEIS_IIsolatedWindowsEnvironmentOptions_3 *self, WSEIS_IsolatedWindowsEnvironmentCreationPriority value);
 
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationData */
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationResult */
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentPostMessageResult */
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentProcess */
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFileRequestOptions */
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFileResult */
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFolderRequestOptions */
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFolderResult */
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentStartProcessResult */
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentTelemetryParameters */
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentUserInfo */
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentUserInfo2 */
-/* Windows.Security.Isolation.IIsolatedWindowsEnvironmentUserInfo2.TryWaitForSignInWithProgressAsync() */
 HRESULT wseis_isolated_windows_environment_user_info_2_try_wait_for_sign_in_with_progress_async(WSEIS_IIsolatedWindowsEnvironmentUserInfo_2 *self, WF_IAsyncOperationWithProgress_Bool_WSEIS_IsolatedWindowsEnvironmentSignInProgress** out);
 
 #endif /* CWINRT_WINDOWS_SECURITY_ISOLATION_H */

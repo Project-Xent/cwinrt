@@ -13,13 +13,11 @@
 #include <cwinrt/Windows.ApplicationModel.Email.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSECRCE_Certificate
 #define CWINRT_FWD_WSECRCE_Certificate
 typedef struct WSECRCE_Certificate WSECRCE_Certificate;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPEMDA_EmailMailboxMoveFolderRequest WAPEMDA_EmailMailboxMoveFolderRequest;
 typedef struct WAPEMDA_EmailMailboxGetAutoReplySettingsRequestEventArgs WAPEMDA_EmailMailboxGetAutoReplySettingsRequestEventArgs;
 typedef struct WAPEMDA_EmailMailboxGetAutoReplySettingsRequest WAPEMDA_EmailMailboxGetAutoReplySettingsRequest;
@@ -85,7 +83,6 @@ typedef struct WAPEMDA_IEmailMailboxDownloadAttachmentRequestEventArgs WAPEMDA_I
 typedef struct WAPEMDA_IEmailMailboxDownloadMessageRequest WAPEMDA_IEmailMailboxDownloadMessageRequest;
 typedef struct WAPEMDA_IEmailMailboxMoveFolderRequestEventArgs WAPEMDA_IEmailMailboxMoveFolderRequestEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncAction
 #define CWINRT_FWD_WF_IAsyncAction
 typedef struct WF_IAsyncAction WF_IAsyncAction;
@@ -270,7 +267,6 @@ typedef enum WAPEM_EmailMailboxDeleteFolderStatus {
 } WAPEM_EmailMailboxDeleteFolderStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -403,346 +399,216 @@ static const IID CWINRT_IID_WAPEMDA_IEmailMailboxDownloadMessageRequest CWINRT_M
 static const IID CWINRT_IID_WAPEMDA_IEmailMailboxMoveFolderRequestEventArgs CWINRT_MAYBE_UNUSED = { 0x38623020, 0x14BA, 0x4C88, { 0x86, 0x98, 0x72, 0x39, 0xE3, 0xC8, 0xAA, 0xA7 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequest */
 HRESULT wapemda_email_mailbox_move_folder_request_new(WAPEMDA_EmailMailboxMoveFolderRequest **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequest */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequest.get_EmailMailboxId() */
 HRESULT wapemda_email_mailbox_move_folder_request_get__email_mailbox_id(WAPEMDA_EmailMailboxMoveFolderRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequest.get_EmailFolderId() */
 HRESULT wapemda_email_mailbox_move_folder_request_get__email_folder_id(WAPEMDA_EmailMailboxMoveFolderRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequest.get_NewParentFolderId() */
 HRESULT wapemda_email_mailbox_move_folder_request_get__new_parent_folder_id(WAPEMDA_EmailMailboxMoveFolderRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequest.get_NewFolderName() */
 HRESULT wapemda_email_mailbox_move_folder_request_get__new_folder_name(WAPEMDA_EmailMailboxMoveFolderRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequest.ReportCompletedAsync() */
 HRESULT wapemda_email_mailbox_move_folder_request_report_completed_async(WAPEMDA_EmailMailboxMoveFolderRequest *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequest.ReportFailedAsync() */
 HRESULT wapemda_email_mailbox_move_folder_request_report_failed_async(WAPEMDA_EmailMailboxMoveFolderRequest *self, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequestEventArgs */
 HRESULT wapemda_email_mailbox_get_auto_reply_settings_request_event_args_new(WAPEMDA_EmailMailboxGetAutoReplySettingsRequestEventArgs **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequestEventArgs */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequestEventArgs.get_Request() */
 HRESULT wapemda_email_mailbox_get_auto_reply_settings_request_event_args_get__request(WAPEMDA_EmailMailboxGetAutoReplySettingsRequestEventArgs *self, WAPEMDA_EmailMailboxGetAutoReplySettingsRequest** value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequestEventArgs.GetDeferral() */
 HRESULT wapemda_email_mailbox_get_auto_reply_settings_request_event_args_get_deferral(WAPEMDA_EmailMailboxGetAutoReplySettingsRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequest */
 HRESULT wapemda_email_mailbox_get_auto_reply_settings_request_new(WAPEMDA_EmailMailboxGetAutoReplySettingsRequest **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequest */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequest.get_EmailMailboxId() */
 HRESULT wapemda_email_mailbox_get_auto_reply_settings_request_get__email_mailbox_id(WAPEMDA_EmailMailboxGetAutoReplySettingsRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequest.get_RequestedFormat() */
 HRESULT wapemda_email_mailbox_get_auto_reply_settings_request_get__requested_format(WAPEMDA_EmailMailboxGetAutoReplySettingsRequest *self, WAPEM_EmailMailboxAutoReplyMessageResponseKind *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequest.ReportCompletedAsync(autoReplySettings) */
 HRESULT wapemda_email_mailbox_get_auto_reply_settings_request_report_completed_async(WAPEMDA_EmailMailboxGetAutoReplySettingsRequest *self, WAPEM_EmailMailboxAutoReplySettings* autoReplySettings, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequest.ReportFailedAsync() */
 HRESULT wapemda_email_mailbox_get_auto_reply_settings_request_report_failed_async(WAPEMDA_EmailMailboxGetAutoReplySettingsRequest *self, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequestEventArgs */
 HRESULT wapemda_email_mailbox_forward_meeting_request_event_args_new(WAPEMDA_EmailMailboxForwardMeetingRequestEventArgs **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequestEventArgs */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequestEventArgs.get_Request() */
 HRESULT wapemda_email_mailbox_forward_meeting_request_event_args_get__request(WAPEMDA_EmailMailboxForwardMeetingRequestEventArgs *self, WAPEMDA_EmailMailboxForwardMeetingRequest** value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequestEventArgs.GetDeferral() */
 HRESULT wapemda_email_mailbox_forward_meeting_request_event_args_get_deferral(WAPEMDA_EmailMailboxForwardMeetingRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest */
 HRESULT wapemda_email_mailbox_forward_meeting_request_new(WAPEMDA_EmailMailboxForwardMeetingRequest **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest.get_EmailMailboxId() */
 HRESULT wapemda_email_mailbox_forward_meeting_request_get__email_mailbox_id(WAPEMDA_EmailMailboxForwardMeetingRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest.get_EmailMessageId() */
 HRESULT wapemda_email_mailbox_forward_meeting_request_get__email_message_id(WAPEMDA_EmailMailboxForwardMeetingRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest.get_Recipients() */
 HRESULT wapemda_email_mailbox_forward_meeting_request_get__recipients(WAPEMDA_EmailMailboxForwardMeetingRequest *self, WFOCO_IVectorView_WAPEM_EmailRecipient** value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest.get_Subject() */
 HRESULT wapemda_email_mailbox_forward_meeting_request_get__subject(WAPEMDA_EmailMailboxForwardMeetingRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest.get_ForwardHeaderType() */
 HRESULT wapemda_email_mailbox_forward_meeting_request_get__forward_header_type(WAPEMDA_EmailMailboxForwardMeetingRequest *self, WAPEM_EmailMessageBodyKind *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest.get_ForwardHeader() */
 HRESULT wapemda_email_mailbox_forward_meeting_request_get__forward_header(WAPEMDA_EmailMailboxForwardMeetingRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest.get_Comment() */
 HRESULT wapemda_email_mailbox_forward_meeting_request_get__comment(WAPEMDA_EmailMailboxForwardMeetingRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest.ReportCompletedAsync() */
 HRESULT wapemda_email_mailbox_forward_meeting_request_report_completed_async(WAPEMDA_EmailMailboxForwardMeetingRequest *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest.ReportFailedAsync() */
 HRESULT wapemda_email_mailbox_forward_meeting_request_report_failed_async(WAPEMDA_EmailMailboxForwardMeetingRequest *self, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequestEventArgs */
 HRESULT wapemda_email_mailbox_empty_folder_request_event_args_new(WAPEMDA_EmailMailboxEmptyFolderRequestEventArgs **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequestEventArgs */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequestEventArgs.get_Request() */
 HRESULT wapemda_email_mailbox_empty_folder_request_event_args_get__request(WAPEMDA_EmailMailboxEmptyFolderRequestEventArgs *self, WAPEMDA_EmailMailboxEmptyFolderRequest** value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequestEventArgs.GetDeferral() */
 HRESULT wapemda_email_mailbox_empty_folder_request_event_args_get_deferral(WAPEMDA_EmailMailboxEmptyFolderRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequest */
 HRESULT wapemda_email_mailbox_empty_folder_request_new(WAPEMDA_EmailMailboxEmptyFolderRequest **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequest */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequest.get_EmailMailboxId() */
 HRESULT wapemda_email_mailbox_empty_folder_request_get__email_mailbox_id(WAPEMDA_EmailMailboxEmptyFolderRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequest.get_EmailFolderId() */
 HRESULT wapemda_email_mailbox_empty_folder_request_get__email_folder_id(WAPEMDA_EmailMailboxEmptyFolderRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequest.ReportCompletedAsync() */
 HRESULT wapemda_email_mailbox_empty_folder_request_report_completed_async(WAPEMDA_EmailMailboxEmptyFolderRequest *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequest.ReportFailedAsync(status) */
 HRESULT wapemda_email_mailbox_empty_folder_request_report_failed_async(WAPEMDA_EmailMailboxEmptyFolderRequest *self, WAPEM_EmailMailboxEmptyFolderStatus status, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest */
 HRESULT wapemda_email_mailbox_propose_new_time_for_meeting_request_new(WAPEMDA_EmailMailboxProposeNewTimeForMeetingRequest **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest.get_EmailMailboxId() */
 HRESULT wapemda_email_mailbox_propose_new_time_for_meeting_request_get__email_mailbox_id(WAPEMDA_EmailMailboxProposeNewTimeForMeetingRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest.get_EmailMessageId() */
 HRESULT wapemda_email_mailbox_propose_new_time_for_meeting_request_get__email_message_id(WAPEMDA_EmailMailboxProposeNewTimeForMeetingRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest.get_NewStartTime() */
 HRESULT wapemda_email_mailbox_propose_new_time_for_meeting_request_get__new_start_time(WAPEMDA_EmailMailboxProposeNewTimeForMeetingRequest *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest.get_NewDuration() */
 HRESULT wapemda_email_mailbox_propose_new_time_for_meeting_request_get__new_duration(WAPEMDA_EmailMailboxProposeNewTimeForMeetingRequest *self, WF_TimeSpan *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest.get_Subject() */
 HRESULT wapemda_email_mailbox_propose_new_time_for_meeting_request_get__subject(WAPEMDA_EmailMailboxProposeNewTimeForMeetingRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest.get_Comment() */
 HRESULT wapemda_email_mailbox_propose_new_time_for_meeting_request_get__comment(WAPEMDA_EmailMailboxProposeNewTimeForMeetingRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest.ReportCompletedAsync() */
 HRESULT wapemda_email_mailbox_propose_new_time_for_meeting_request_report_completed_async(WAPEMDA_EmailMailboxProposeNewTimeForMeetingRequest *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest.ReportFailedAsync() */
 HRESULT wapemda_email_mailbox_propose_new_time_for_meeting_request_report_failed_async(WAPEMDA_EmailMailboxProposeNewTimeForMeetingRequest *self, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequestEventArgs */
 HRESULT wapemda_email_mailbox_propose_new_time_for_meeting_request_event_args_new(WAPEMDA_EmailMailboxProposeNewTimeForMeetingRequestEventArgs **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequestEventArgs */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequestEventArgs.get_Request() */
 HRESULT wapemda_email_mailbox_propose_new_time_for_meeting_request_event_args_get__request(WAPEMDA_EmailMailboxProposeNewTimeForMeetingRequestEventArgs *self, WAPEMDA_EmailMailboxProposeNewTimeForMeetingRequest** value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequestEventArgs.GetDeferral() */
 HRESULT wapemda_email_mailbox_propose_new_time_for_meeting_request_event_args_get_deferral(WAPEMDA_EmailMailboxProposeNewTimeForMeetingRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequest */
 HRESULT wapemda_email_mailbox_resolve_recipients_request_new(WAPEMDA_EmailMailboxResolveRecipientsRequest **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequest */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequest.get_EmailMailboxId() */
 HRESULT wapemda_email_mailbox_resolve_recipients_request_get__email_mailbox_id(WAPEMDA_EmailMailboxResolveRecipientsRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequest.get_Recipients() */
 HRESULT wapemda_email_mailbox_resolve_recipients_request_get__recipients(WAPEMDA_EmailMailboxResolveRecipientsRequest *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequest.ReportCompletedAsync(resolutionResults) */
 HRESULT wapemda_email_mailbox_resolve_recipients_request_report_completed_async(WAPEMDA_EmailMailboxResolveRecipientsRequest *self, WFOCO_IIterable_WAPEM_EmailRecipientResolutionResult* resolutionResults, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequest.ReportFailedAsync() */
 HRESULT wapemda_email_mailbox_resolve_recipients_request_report_failed_async(WAPEMDA_EmailMailboxResolveRecipientsRequest *self, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequestEventArgs */
 HRESULT wapemda_email_mailbox_resolve_recipients_request_event_args_new(WAPEMDA_EmailMailboxResolveRecipientsRequestEventArgs **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequestEventArgs */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequestEventArgs.get_Request() */
 HRESULT wapemda_email_mailbox_resolve_recipients_request_event_args_get__request(WAPEMDA_EmailMailboxResolveRecipientsRequestEventArgs *self, WAPEMDA_EmailMailboxResolveRecipientsRequest** value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequestEventArgs.GetDeferral() */
 HRESULT wapemda_email_mailbox_resolve_recipients_request_event_args_get_deferral(WAPEMDA_EmailMailboxResolveRecipientsRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest */
 HRESULT wapemda_email_mailbox_server_search_read_batch_request_new(WAPEMDA_EmailMailboxServerSearchReadBatchRequest **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest.get_SessionId() */
 HRESULT wapemda_email_mailbox_server_search_read_batch_request_get__session_id(WAPEMDA_EmailMailboxServerSearchReadBatchRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest.get_EmailMailboxId() */
 HRESULT wapemda_email_mailbox_server_search_read_batch_request_get__email_mailbox_id(WAPEMDA_EmailMailboxServerSearchReadBatchRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest.get_EmailFolderId() */
 HRESULT wapemda_email_mailbox_server_search_read_batch_request_get__email_folder_id(WAPEMDA_EmailMailboxServerSearchReadBatchRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest.get_Options() */
 HRESULT wapemda_email_mailbox_server_search_read_batch_request_get__options(WAPEMDA_EmailMailboxServerSearchReadBatchRequest *self, WAPEM_EmailQueryOptions** value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest.get_SuggestedBatchSize() */
 HRESULT wapemda_email_mailbox_server_search_read_batch_request_get__suggested_batch_size(WAPEMDA_EmailMailboxServerSearchReadBatchRequest *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest.SaveMessageAsync(message) */
 HRESULT wapemda_email_mailbox_server_search_read_batch_request_save_message_async(WAPEMDA_EmailMailboxServerSearchReadBatchRequest *self, WAPEM_EmailMessage* message, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest.ReportCompletedAsync() */
 HRESULT wapemda_email_mailbox_server_search_read_batch_request_report_completed_async(WAPEMDA_EmailMailboxServerSearchReadBatchRequest *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest.ReportFailedAsync(batchStatus) */
 HRESULT wapemda_email_mailbox_server_search_read_batch_request_report_failed_async(WAPEMDA_EmailMailboxServerSearchReadBatchRequest *self, WAPEM_EmailBatchStatus batchStatus, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequestEventArgs */
 HRESULT wapemda_email_mailbox_server_search_read_batch_request_event_args_new(WAPEMDA_EmailMailboxServerSearchReadBatchRequestEventArgs **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequestEventArgs */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequestEventArgs.get_Request() */
 HRESULT wapemda_email_mailbox_server_search_read_batch_request_event_args_get__request(WAPEMDA_EmailMailboxServerSearchReadBatchRequestEventArgs *self, WAPEMDA_EmailMailboxServerSearchReadBatchRequest** value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequestEventArgs.GetDeferral() */
 HRESULT wapemda_email_mailbox_server_search_read_batch_request_event_args_get_deferral(WAPEMDA_EmailMailboxServerSearchReadBatchRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequest */
 HRESULT wapemda_email_mailbox_set_auto_reply_settings_request_new(WAPEMDA_EmailMailboxSetAutoReplySettingsRequest **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequest */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequest.get_EmailMailboxId() */
 HRESULT wapemda_email_mailbox_set_auto_reply_settings_request_get__email_mailbox_id(WAPEMDA_EmailMailboxSetAutoReplySettingsRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequest.get_AutoReplySettings() */
 HRESULT wapemda_email_mailbox_set_auto_reply_settings_request_get__auto_reply_settings(WAPEMDA_EmailMailboxSetAutoReplySettingsRequest *self, WAPEM_EmailMailboxAutoReplySettings** value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequest.ReportCompletedAsync() */
 HRESULT wapemda_email_mailbox_set_auto_reply_settings_request_report_completed_async(WAPEMDA_EmailMailboxSetAutoReplySettingsRequest *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequest.ReportFailedAsync() */
 HRESULT wapemda_email_mailbox_set_auto_reply_settings_request_report_failed_async(WAPEMDA_EmailMailboxSetAutoReplySettingsRequest *self, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequestEventArgs */
 HRESULT wapemda_email_mailbox_set_auto_reply_settings_request_event_args_new(WAPEMDA_EmailMailboxSetAutoReplySettingsRequestEventArgs **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequestEventArgs */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequestEventArgs.get_Request() */
 HRESULT wapemda_email_mailbox_set_auto_reply_settings_request_event_args_get__request(WAPEMDA_EmailMailboxSetAutoReplySettingsRequestEventArgs *self, WAPEMDA_EmailMailboxSetAutoReplySettingsRequest** value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequestEventArgs.GetDeferral() */
 HRESULT wapemda_email_mailbox_set_auto_reply_settings_request_event_args_get_deferral(WAPEMDA_EmailMailboxSetAutoReplySettingsRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequest */
 HRESULT wapemda_email_mailbox_sync_manager_sync_request_new(WAPEMDA_EmailMailboxSyncManagerSyncRequest **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequest */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequest.get_EmailMailboxId() */
 HRESULT wapemda_email_mailbox_sync_manager_sync_request_get__email_mailbox_id(WAPEMDA_EmailMailboxSyncManagerSyncRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequest.ReportCompletedAsync() */
 HRESULT wapemda_email_mailbox_sync_manager_sync_request_report_completed_async(WAPEMDA_EmailMailboxSyncManagerSyncRequest *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequest.ReportFailedAsync() */
 HRESULT wapemda_email_mailbox_sync_manager_sync_request_report_failed_async(WAPEMDA_EmailMailboxSyncManagerSyncRequest *self, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequestEventArgs */
 HRESULT wapemda_email_mailbox_validate_certificates_request_event_args_new(WAPEMDA_EmailMailboxValidateCertificatesRequestEventArgs **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequestEventArgs */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequestEventArgs.get_Request() */
 HRESULT wapemda_email_mailbox_validate_certificates_request_event_args_get__request(WAPEMDA_EmailMailboxValidateCertificatesRequestEventArgs *self, WAPEMDA_EmailMailboxValidateCertificatesRequest** value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequestEventArgs.GetDeferral() */
 HRESULT wapemda_email_mailbox_validate_certificates_request_event_args_get_deferral(WAPEMDA_EmailMailboxValidateCertificatesRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequest */
 HRESULT wapemda_email_mailbox_validate_certificates_request_new(WAPEMDA_EmailMailboxValidateCertificatesRequest **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequest */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequest.get_EmailMailboxId() */
 HRESULT wapemda_email_mailbox_validate_certificates_request_get__email_mailbox_id(WAPEMDA_EmailMailboxValidateCertificatesRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequest.get_Certificates() */
 HRESULT wapemda_email_mailbox_validate_certificates_request_get__certificates(WAPEMDA_EmailMailboxValidateCertificatesRequest *self, WFOCO_IVectorView_WSECRCE_Certificate** value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequest.ReportCompletedAsync(validationStatuses) */
 HRESULT wapemda_email_mailbox_validate_certificates_request_report_completed_async(WAPEMDA_EmailMailboxValidateCertificatesRequest *self, WFOCO_IIterable_WAPEM_EmailCertificateValidationStatus* validationStatuses, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequest.ReportFailedAsync() */
 HRESULT wapemda_email_mailbox_validate_certificates_request_report_failed_async(WAPEMDA_EmailMailboxValidateCertificatesRequest *self, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequestEventArgs */
 HRESULT wapemda_email_mailbox_update_meeting_response_request_event_args_new(WAPEMDA_EmailMailboxUpdateMeetingResponseRequestEventArgs **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequestEventArgs */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequestEventArgs.get_Request() */
 HRESULT wapemda_email_mailbox_update_meeting_response_request_event_args_get__request(WAPEMDA_EmailMailboxUpdateMeetingResponseRequestEventArgs *self, WAPEMDA_EmailMailboxUpdateMeetingResponseRequest** value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequestEventArgs.GetDeferral() */
 HRESULT wapemda_email_mailbox_update_meeting_response_request_event_args_get_deferral(WAPEMDA_EmailMailboxUpdateMeetingResponseRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest */
 HRESULT wapemda_email_mailbox_update_meeting_response_request_new(WAPEMDA_EmailMailboxUpdateMeetingResponseRequest **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest.get_EmailMailboxId() */
 HRESULT wapemda_email_mailbox_update_meeting_response_request_get__email_mailbox_id(WAPEMDA_EmailMailboxUpdateMeetingResponseRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest.get_EmailMessageId() */
 HRESULT wapemda_email_mailbox_update_meeting_response_request_get__email_message_id(WAPEMDA_EmailMailboxUpdateMeetingResponseRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest.get_Response() */
 HRESULT wapemda_email_mailbox_update_meeting_response_request_get__response(WAPEMDA_EmailMailboxUpdateMeetingResponseRequest *self, WAPEM_EmailMeetingResponseType *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest.get_Subject() */
 HRESULT wapemda_email_mailbox_update_meeting_response_request_get__subject(WAPEMDA_EmailMailboxUpdateMeetingResponseRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest.get_Comment() */
 HRESULT wapemda_email_mailbox_update_meeting_response_request_get__comment(WAPEMDA_EmailMailboxUpdateMeetingResponseRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest.get_SendUpdate() */
 HRESULT wapemda_email_mailbox_update_meeting_response_request_get__send_update(WAPEMDA_EmailMailboxUpdateMeetingResponseRequest *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest.ReportCompletedAsync() */
 HRESULT wapemda_email_mailbox_update_meeting_response_request_report_completed_async(WAPEMDA_EmailMailboxUpdateMeetingResponseRequest *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest.ReportFailedAsync() */
 HRESULT wapemda_email_mailbox_update_meeting_response_request_report_failed_async(WAPEMDA_EmailMailboxUpdateMeetingResponseRequest *self, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequestEventArgs */
 HRESULT wapemda_email_mailbox_sync_manager_sync_request_event_args_new(WAPEMDA_EmailMailboxSyncManagerSyncRequestEventArgs **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequestEventArgs */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequestEventArgs.get_Request() */
 HRESULT wapemda_email_mailbox_sync_manager_sync_request_event_args_get__request(WAPEMDA_EmailMailboxSyncManagerSyncRequestEventArgs *self, WAPEMDA_EmailMailboxSyncManagerSyncRequest** value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequestEventArgs.GetDeferral() */
 HRESULT wapemda_email_mailbox_sync_manager_sync_request_event_args_get_deferral(WAPEMDA_EmailMailboxSyncManagerSyncRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection */
 HRESULT wapemda_email_data_provider_connection_new(WAPEMDA_EmailDataProviderConnection **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection */
-/* Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection.Start() */
 HRESULT wapemda_email_data_provider_connection_start(WAPEMDA_EmailDataProviderConnection *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapemda_email_data_provider_connection_on_mailbox_sync_requested(WAPEMDA_EmailDataProviderConnection *self, cwinrt_event_fn fn, void *ctx);
@@ -790,163 +656,82 @@ void wapemda_email_data_provider_connection_off_validate_certificates_requested(
 cwinrt_token wapemda_email_data_provider_connection_on_server_search_read_batch_requested(WAPEMDA_EmailDataProviderConnection *self, cwinrt_event_fn fn, void *ctx);
 void wapemda_email_data_provider_connection_off_server_search_read_batch_requested(WAPEMDA_EmailDataProviderConnection *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailDataProviderTriggerDetails */
 HRESULT wapemda_email_data_provider_trigger_details_new(WAPEMDA_EmailDataProviderTriggerDetails **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailDataProviderTriggerDetails */
-/* Windows.ApplicationModel.Email.DataProvider.EmailDataProviderTriggerDetails.get_Connection() */
 HRESULT wapemda_email_data_provider_trigger_details_get__connection(WAPEMDA_EmailDataProviderTriggerDetails *self, WAPEMDA_EmailDataProviderConnection** value);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequest */
 HRESULT wapemda_email_mailbox_create_folder_request_new(WAPEMDA_EmailMailboxCreateFolderRequest **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequest */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequest.get_EmailMailboxId() */
 HRESULT wapemda_email_mailbox_create_folder_request_get__email_mailbox_id(WAPEMDA_EmailMailboxCreateFolderRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequest.get_ParentFolderId() */
 HRESULT wapemda_email_mailbox_create_folder_request_get__parent_folder_id(WAPEMDA_EmailMailboxCreateFolderRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequest.get_Name() */
 HRESULT wapemda_email_mailbox_create_folder_request_get__name(WAPEMDA_EmailMailboxCreateFolderRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequest.ReportCompletedAsync(folder) */
 HRESULT wapemda_email_mailbox_create_folder_request_report_completed_async(WAPEMDA_EmailMailboxCreateFolderRequest *self, WAPEM_EmailFolder* folder, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequest.ReportFailedAsync(status) */
 HRESULT wapemda_email_mailbox_create_folder_request_report_failed_async(WAPEMDA_EmailMailboxCreateFolderRequest *self, WAPEM_EmailMailboxCreateFolderStatus status, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequestEventArgs */
 HRESULT wapemda_email_mailbox_create_folder_request_event_args_new(WAPEMDA_EmailMailboxCreateFolderRequestEventArgs **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequestEventArgs */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequestEventArgs.get_Request() */
 HRESULT wapemda_email_mailbox_create_folder_request_event_args_get__request(WAPEMDA_EmailMailboxCreateFolderRequestEventArgs *self, WAPEMDA_EmailMailboxCreateFolderRequest** value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequestEventArgs.GetDeferral() */
 HRESULT wapemda_email_mailbox_create_folder_request_event_args_get_deferral(WAPEMDA_EmailMailboxCreateFolderRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequest */
 HRESULT wapemda_email_mailbox_delete_folder_request_new(WAPEMDA_EmailMailboxDeleteFolderRequest **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequest */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequest.get_EmailMailboxId() */
 HRESULT wapemda_email_mailbox_delete_folder_request_get__email_mailbox_id(WAPEMDA_EmailMailboxDeleteFolderRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequest.get_EmailFolderId() */
 HRESULT wapemda_email_mailbox_delete_folder_request_get__email_folder_id(WAPEMDA_EmailMailboxDeleteFolderRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequest.ReportCompletedAsync() */
 HRESULT wapemda_email_mailbox_delete_folder_request_report_completed_async(WAPEMDA_EmailMailboxDeleteFolderRequest *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequest.ReportFailedAsync(status) */
 HRESULT wapemda_email_mailbox_delete_folder_request_report_failed_async(WAPEMDA_EmailMailboxDeleteFolderRequest *self, WAPEM_EmailMailboxDeleteFolderStatus status, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequestEventArgs */
 HRESULT wapemda_email_mailbox_download_message_request_event_args_new(WAPEMDA_EmailMailboxDownloadMessageRequestEventArgs **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequestEventArgs */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequestEventArgs.get_Request() */
 HRESULT wapemda_email_mailbox_download_message_request_event_args_get__request(WAPEMDA_EmailMailboxDownloadMessageRequestEventArgs *self, WAPEMDA_EmailMailboxDownloadMessageRequest** value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequestEventArgs.GetDeferral() */
 HRESULT wapemda_email_mailbox_download_message_request_event_args_get_deferral(WAPEMDA_EmailMailboxDownloadMessageRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequestEventArgs */
 HRESULT wapemda_email_mailbox_delete_folder_request_event_args_new(WAPEMDA_EmailMailboxDeleteFolderRequestEventArgs **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequestEventArgs */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequestEventArgs.get_Request() */
 HRESULT wapemda_email_mailbox_delete_folder_request_event_args_get__request(WAPEMDA_EmailMailboxDeleteFolderRequestEventArgs *self, WAPEMDA_EmailMailboxDeleteFolderRequest** value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequestEventArgs.GetDeferral() */
 HRESULT wapemda_email_mailbox_delete_folder_request_event_args_get_deferral(WAPEMDA_EmailMailboxDeleteFolderRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequest */
 HRESULT wapemda_email_mailbox_download_attachment_request_new(WAPEMDA_EmailMailboxDownloadAttachmentRequest **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequest */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequest.get_EmailMailboxId() */
 HRESULT wapemda_email_mailbox_download_attachment_request_get__email_mailbox_id(WAPEMDA_EmailMailboxDownloadAttachmentRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequest.get_EmailMessageId() */
 HRESULT wapemda_email_mailbox_download_attachment_request_get__email_message_id(WAPEMDA_EmailMailboxDownloadAttachmentRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequest.get_EmailAttachmentId() */
 HRESULT wapemda_email_mailbox_download_attachment_request_get__email_attachment_id(WAPEMDA_EmailMailboxDownloadAttachmentRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequest.ReportCompletedAsync() */
 HRESULT wapemda_email_mailbox_download_attachment_request_report_completed_async(WAPEMDA_EmailMailboxDownloadAttachmentRequest *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequest.ReportFailedAsync() */
 HRESULT wapemda_email_mailbox_download_attachment_request_report_failed_async(WAPEMDA_EmailMailboxDownloadAttachmentRequest *self, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequestEventArgs */
 HRESULT wapemda_email_mailbox_download_attachment_request_event_args_new(WAPEMDA_EmailMailboxDownloadAttachmentRequestEventArgs **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequestEventArgs */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequestEventArgs.get_Request() */
 HRESULT wapemda_email_mailbox_download_attachment_request_event_args_get__request(WAPEMDA_EmailMailboxDownloadAttachmentRequestEventArgs *self, WAPEMDA_EmailMailboxDownloadAttachmentRequest** value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequestEventArgs.GetDeferral() */
 HRESULT wapemda_email_mailbox_download_attachment_request_event_args_get_deferral(WAPEMDA_EmailMailboxDownloadAttachmentRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequest */
 HRESULT wapemda_email_mailbox_download_message_request_new(WAPEMDA_EmailMailboxDownloadMessageRequest **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequest */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequest.get_EmailMailboxId() */
 HRESULT wapemda_email_mailbox_download_message_request_get__email_mailbox_id(WAPEMDA_EmailMailboxDownloadMessageRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequest.get_EmailMessageId() */
 HRESULT wapemda_email_mailbox_download_message_request_get__email_message_id(WAPEMDA_EmailMailboxDownloadMessageRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequest.ReportCompletedAsync() */
 HRESULT wapemda_email_mailbox_download_message_request_report_completed_async(WAPEMDA_EmailMailboxDownloadMessageRequest *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequest.ReportFailedAsync() */
 HRESULT wapemda_email_mailbox_download_message_request_report_failed_async(WAPEMDA_EmailMailboxDownloadMessageRequest *self, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequestEventArgs */
 HRESULT wapemda_email_mailbox_move_folder_request_event_args_new(WAPEMDA_EmailMailboxMoveFolderRequestEventArgs **out);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequestEventArgs */
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequestEventArgs.get_Request() */
 HRESULT wapemda_email_mailbox_move_folder_request_event_args_get__request(WAPEMDA_EmailMailboxMoveFolderRequestEventArgs *self, WAPEMDA_EmailMailboxMoveFolderRequest** value);
 
-/* Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequestEventArgs.GetDeferral() */
 HRESULT wapemda_email_mailbox_move_folder_request_event_args_get_deferral(WAPEMDA_EmailMailboxMoveFolderRequestEventArgs *self, WF_Deferral** out);
 
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxMoveFolderRequest */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxGetAutoReplySettingsRequestEventArgs */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxGetAutoReplySettingsRequest */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxForwardMeetingRequestEventArgs */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxForwardMeetingRequest */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxEmptyFolderRequestEventArgs */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxEmptyFolderRequest */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxProposeNewTimeForMeetingRequest */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxProposeNewTimeForMeetingRequestEventArgs */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxResolveRecipientsRequest */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxResolveRecipientsRequestEventArgs */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxServerSearchReadBatchRequest */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxServerSearchReadBatchRequestEventArgs */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSetAutoReplySettingsRequest */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSetAutoReplySettingsRequestEventArgs */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSyncManagerSyncRequest */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxValidateCertificatesRequestEventArgs */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxValidateCertificatesRequest */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxUpdateMeetingResponseRequestEventArgs */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxUpdateMeetingResponseRequest */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSyncManagerSyncRequestEventArgs */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderTriggerDetails */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxCreateFolderRequest */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxCreateFolderRequestEventArgs */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDeleteFolderRequest */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadMessageRequestEventArgs */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDeleteFolderRequestEventArgs */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadAttachmentRequest */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadAttachmentRequestEventArgs */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadMessageRequest */
-/* Windows.ApplicationModel.Email.DataProvider.IEmailMailboxMoveFolderRequestEventArgs */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_EMAIL_DATAPROVIDER_H */

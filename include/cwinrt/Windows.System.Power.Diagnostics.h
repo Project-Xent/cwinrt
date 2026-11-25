@@ -12,13 +12,11 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WSYPODI_IForegroundEnergyDiagnosticsStatics WSYPODI_IForegroundEnergyDiagnosticsStatics;
 typedef struct WSYPODI_ForegroundEnergyDiagnostics WSYPODI_ForegroundEnergyDiagnostics;
 typedef struct WSYPODI_BackgroundEnergyDiagnostics WSYPODI_BackgroundEnergyDiagnostics;
 typedef struct WSYPODI_IBackgroundEnergyDiagnosticsStatics WSYPODI_IBackgroundEnergyDiagnosticsStatics;
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -31,52 +29,32 @@ static const IID CWINRT_IID_WSYPODI_IForegroundEnergyDiagnosticsStatics CWINRT_M
 static const IID CWINRT_IID_WSYPODI_IBackgroundEnergyDiagnosticsStatics CWINRT_MAYBE_UNUSED = { 0xD7663702, 0xD3A6, 0x46E0, { 0x8F, 0x9B, 0x50, 0xB9, 0x5B, 0xB4, 0xF9, 0xC5 } };
 #endif
 
-/* Methods */
-
-/* Windows.System.Power.Diagnostics.IForegroundEnergyDiagnosticsStatics */
-/* Windows.System.Power.Diagnostics.IForegroundEnergyDiagnosticsStatics.get_DeviceSpecificConversionFactor() */
 HRESULT wsypodi_foreground_energy_diagnostics_statics_get__device_specific_conversion_factor(WSYPODI_IForegroundEnergyDiagnosticsStatics *self, double *value);
 
-/* Windows.System.Power.Diagnostics.IForegroundEnergyDiagnosticsStatics.ComputeTotalEnergyUsage() */
 HRESULT wsypodi_foreground_energy_diagnostics_statics_compute_total_energy_usage(WSYPODI_IForegroundEnergyDiagnosticsStatics *self, uint64_t *out);
 
-/* Windows.System.Power.Diagnostics.IForegroundEnergyDiagnosticsStatics.ResetTotalEnergyUsage() */
 HRESULT wsypodi_foreground_energy_diagnostics_statics_reset_total_energy_usage(WSYPODI_IForegroundEnergyDiagnosticsStatics *self);
 
-/* activate Windows.System.Power.Diagnostics.ForegroundEnergyDiagnostics */
 HRESULT wsypodi_foreground_energy_diagnostics_new(WSYPODI_ForegroundEnergyDiagnostics **out);
 
-/* Windows.System.Power.Diagnostics.ForegroundEnergyDiagnostics */
-/* Windows.System.Power.Diagnostics.ForegroundEnergyDiagnostics.get_DeviceSpecificConversionFactor() */
 HRESULT wsypodi_foreground_energy_diagnostics_get__device_specific_conversion_factor(double *value);
 
-/* Windows.System.Power.Diagnostics.ForegroundEnergyDiagnostics.ComputeTotalEnergyUsage() */
 HRESULT wsypodi_foreground_energy_diagnostics_compute_total_energy_usage(uint64_t *out);
 
-/* Windows.System.Power.Diagnostics.ForegroundEnergyDiagnostics.ResetTotalEnergyUsage() */
 HRESULT wsypodi_foreground_energy_diagnostics_reset_total_energy_usage(void);
 
-/* activate Windows.System.Power.Diagnostics.BackgroundEnergyDiagnostics */
 HRESULT wsypodi_background_energy_diagnostics_new(WSYPODI_BackgroundEnergyDiagnostics **out);
 
-/* Windows.System.Power.Diagnostics.BackgroundEnergyDiagnostics */
-/* Windows.System.Power.Diagnostics.BackgroundEnergyDiagnostics.get_DeviceSpecificConversionFactor() */
 HRESULT wsypodi_background_energy_diagnostics_get__device_specific_conversion_factor(double *value);
 
-/* Windows.System.Power.Diagnostics.BackgroundEnergyDiagnostics.ComputeTotalEnergyUsage() */
 HRESULT wsypodi_background_energy_diagnostics_compute_total_energy_usage(uint64_t *out);
 
-/* Windows.System.Power.Diagnostics.BackgroundEnergyDiagnostics.ResetTotalEnergyUsage() */
 HRESULT wsypodi_background_energy_diagnostics_reset_total_energy_usage(void);
 
-/* Windows.System.Power.Diagnostics.IBackgroundEnergyDiagnosticsStatics */
-/* Windows.System.Power.Diagnostics.IBackgroundEnergyDiagnosticsStatics.get_DeviceSpecificConversionFactor() */
 HRESULT wsypodi_background_energy_diagnostics_statics_get__device_specific_conversion_factor(WSYPODI_IBackgroundEnergyDiagnosticsStatics *self, double *value);
 
-/* Windows.System.Power.Diagnostics.IBackgroundEnergyDiagnosticsStatics.ComputeTotalEnergyUsage() */
 HRESULT wsypodi_background_energy_diagnostics_statics_compute_total_energy_usage(WSYPODI_IBackgroundEnergyDiagnosticsStatics *self, uint64_t *out);
 
-/* Windows.System.Power.Diagnostics.IBackgroundEnergyDiagnosticsStatics.ResetTotalEnergyUsage() */
 HRESULT wsypodi_background_energy_diagnostics_statics_reset_total_energy_usage(WSYPODI_IBackgroundEnergyDiagnosticsStatics *self);
 
 #endif /* CWINRT_WINDOWS_SYSTEM_POWER_DIAGNOSTICS_H */

@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WSYDITE_PlatformTelemetryClient WSYDITE_PlatformTelemetryClient;
 typedef struct WSYDITE_PlatformTelemetryRegistrationResult WSYDITE_PlatformTelemetryRegistrationResult;
 typedef struct WSYDITE_PlatformTelemetryRegistrationSettings WSYDITE_PlatformTelemetryRegistrationSettings;
@@ -29,7 +28,6 @@ typedef enum WSYDITE_PlatformTelemetryRegistrationStatus {
 } WSYDITE_PlatformTelemetryRegistrationStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -46,48 +44,28 @@ static const IID CWINRT_IID_WSYDITE_IPlatformTelemetryRegistrationResult CWINRT_
 static const IID CWINRT_IID_WSYDITE_IPlatformTelemetryRegistrationSettings CWINRT_MAYBE_UNUSED = { 0x819A8582, 0xCA19, 0x415E, { 0xBB, 0x79, 0x9C, 0x22, 0x4B, 0xFA, 0x3A, 0x73 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.System.Diagnostics.Telemetry.PlatformTelemetryClient */
 HRESULT wsydite_platform_telemetry_client_new(WSYDITE_PlatformTelemetryClient **out);
 
-/* Windows.System.Diagnostics.Telemetry.PlatformTelemetryClient */
-/* Windows.System.Diagnostics.Telemetry.PlatformTelemetryClient.Register(id) */
 HRESULT wsydite_platform_telemetry_client_register(cwinrt_hstring id, WSYDITE_PlatformTelemetryRegistrationResult** out);
 
-/* Windows.System.Diagnostics.Telemetry.PlatformTelemetryClient.Register(id, settings) */
 HRESULT wsydite_platform_telemetry_client_register_str_p_p(cwinrt_hstring id, WSYDITE_PlatformTelemetryRegistrationSettings* settings, WSYDITE_PlatformTelemetryRegistrationResult** out);
 
-/* activate Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationResult */
 HRESULT wsydite_platform_telemetry_registration_result_new(WSYDITE_PlatformTelemetryRegistrationResult **out);
 
-/* Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationResult */
-/* Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationResult.get_Status() */
 HRESULT wsydite_platform_telemetry_registration_result_get__status(WSYDITE_PlatformTelemetryRegistrationResult *self, WSYDITE_PlatformTelemetryRegistrationStatus *value);
 
-/* activate Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationSettings */
 HRESULT wsydite_platform_telemetry_registration_settings_new(WSYDITE_PlatformTelemetryRegistrationSettings **out);
 
-/* Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationSettings */
-/* Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationSettings.get_StorageSize() */
 HRESULT wsydite_platform_telemetry_registration_settings_get__storage_size(WSYDITE_PlatformTelemetryRegistrationSettings *self, uint32_t *value);
 
-/* Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationSettings.put_StorageSize() */
 HRESULT wsydite_platform_telemetry_registration_settings_put__storage_size(WSYDITE_PlatformTelemetryRegistrationSettings *self, uint32_t value);
 
-/* Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationSettings.get_UploadQuotaSize() */
 HRESULT wsydite_platform_telemetry_registration_settings_get__upload_quota_size(WSYDITE_PlatformTelemetryRegistrationSettings *self, uint32_t *value);
 
-/* Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationSettings.put_UploadQuotaSize() */
 HRESULT wsydite_platform_telemetry_registration_settings_put__upload_quota_size(WSYDITE_PlatformTelemetryRegistrationSettings *self, uint32_t value);
 
-/* Windows.System.Diagnostics.Telemetry.IPlatformTelemetryClientStatics */
-/* Windows.System.Diagnostics.Telemetry.IPlatformTelemetryClientStatics.Register(id) */
 HRESULT wsydite_platform_telemetry_client_statics_register(WSYDITE_IPlatformTelemetryClientStatics *self, cwinrt_hstring id, WSYDITE_PlatformTelemetryRegistrationResult** out);
 
-/* Windows.System.Diagnostics.Telemetry.IPlatformTelemetryClientStatics.Register(id, settings) */
 HRESULT wsydite_platform_telemetry_client_statics_register_str_p_p(WSYDITE_IPlatformTelemetryClientStatics *self, cwinrt_hstring id, WSYDITE_PlatformTelemetryRegistrationSettings* settings, WSYDITE_PlatformTelemetryRegistrationResult** out);
 
-/* Windows.System.Diagnostics.Telemetry.IPlatformTelemetryRegistrationResult */
-/* Windows.System.Diagnostics.Telemetry.IPlatformTelemetryRegistrationSettings */
 #endif /* CWINRT_WINDOWS_SYSTEM_DIAGNOSTICS_TELEMETRY_H */

@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.System.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WGL_DayOfWeek
 #define CWINRT_FWD_WGL_DayOfWeek
 typedef enum WGL_DayOfWeek {
@@ -40,7 +39,6 @@ typedef struct WS_IStorageFile WS_IStorageFile;
 typedef struct WS_StorageFile WS_StorageFile;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSYUS_GlobalizationPreferences WSYUS_GlobalizationPreferences;
 typedef struct WSYUS_GlobalizationPreferencesForUser WSYUS_GlobalizationPreferencesForUser;
 typedef struct WSYUS_FirstSignInSettings WSYUS_FirstSignInSettings;
@@ -70,7 +68,6 @@ typedef struct WSYUS_IUserProfilePersonalizationSettings WSYUS_IUserProfilePerso
 typedef struct WSYUS_IAssignedAccessSettings WSYUS_IAssignedAccessSettings;
 typedef struct WSYUS_IAdvertisingManagerForUser WSYUS_IAdvertisingManagerForUser;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
@@ -179,7 +176,6 @@ typedef enum WSYUS_AccountPictureKind {
 } WSYUS_AccountPictureKind;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -256,354 +252,219 @@ static const IID CWINRT_IID_WSYUS_IAssignedAccessSettings CWINRT_MAYBE_UNUSED = 
 static const IID CWINRT_IID_WSYUS_IAdvertisingManagerForUser CWINRT_MAYBE_UNUSED = { 0x928BF3D0, 0xCF7C, 0x4AB0, { 0xA7, 0xDC, 0x6D, 0xC5, 0xBC, 0xD4, 0x42, 0x52 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.System.UserProfile.GlobalizationPreferences */
 HRESULT wsyus_globalization_preferences_new(WSYUS_GlobalizationPreferences **out);
 
-/* Windows.System.UserProfile.GlobalizationPreferences */
-/* Windows.System.UserProfile.GlobalizationPreferences.GetForUser(user) */
 HRESULT wsyus_globalization_preferences_get_for_user(WSY_User* user, WSYUS_GlobalizationPreferencesForUser** out);
 
-/* Windows.System.UserProfile.GlobalizationPreferences.TrySetHomeGeographicRegion(region) */
 HRESULT wsyus_globalization_preferences_try_set_home_geographic_region(cwinrt_hstring region, BOOL *out);
 
-/* Windows.System.UserProfile.GlobalizationPreferences.TrySetLanguages(languageTags) */
 HRESULT wsyus_globalization_preferences_try_set_languages(WFOCO_IIterable_HSTRING* languageTags, BOOL *out);
 
-/* Windows.System.UserProfile.GlobalizationPreferences.get_Calendars() */
 HRESULT wsyus_globalization_preferences_get__calendars(WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.System.UserProfile.GlobalizationPreferences.get_Clocks() */
 HRESULT wsyus_globalization_preferences_get__clocks(WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.System.UserProfile.GlobalizationPreferences.get_Currencies() */
 HRESULT wsyus_globalization_preferences_get__currencies(WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.System.UserProfile.GlobalizationPreferences.get_Languages() */
 HRESULT wsyus_globalization_preferences_get__languages(WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.System.UserProfile.GlobalizationPreferences.get_HomeGeographicRegion() */
 HRESULT wsyus_globalization_preferences_get__home_geographic_region(cwinrt_hstring *value);
 
-/* Windows.System.UserProfile.GlobalizationPreferences.get_WeekStartsOn() */
 HRESULT wsyus_globalization_preferences_get__week_starts_on(WGL_DayOfWeek *value);
 
-/* activate Windows.System.UserProfile.GlobalizationPreferencesForUser */
 HRESULT wsyus_globalization_preferences_for_user_new(WSYUS_GlobalizationPreferencesForUser **out);
 
-/* Windows.System.UserProfile.GlobalizationPreferencesForUser */
-/* Windows.System.UserProfile.GlobalizationPreferencesForUser.get_User() */
 HRESULT wsyus_globalization_preferences_for_user_get__user(WSYUS_GlobalizationPreferencesForUser *self, WSY_User** value);
 
-/* Windows.System.UserProfile.GlobalizationPreferencesForUser.get_Calendars() */
 HRESULT wsyus_globalization_preferences_for_user_get__calendars(WSYUS_GlobalizationPreferencesForUser *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.System.UserProfile.GlobalizationPreferencesForUser.get_Clocks() */
 HRESULT wsyus_globalization_preferences_for_user_get__clocks(WSYUS_GlobalizationPreferencesForUser *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.System.UserProfile.GlobalizationPreferencesForUser.get_Currencies() */
 HRESULT wsyus_globalization_preferences_for_user_get__currencies(WSYUS_GlobalizationPreferencesForUser *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.System.UserProfile.GlobalizationPreferencesForUser.get_Languages() */
 HRESULT wsyus_globalization_preferences_for_user_get__languages(WSYUS_GlobalizationPreferencesForUser *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.System.UserProfile.GlobalizationPreferencesForUser.get_HomeGeographicRegion() */
 HRESULT wsyus_globalization_preferences_for_user_get__home_geographic_region(WSYUS_GlobalizationPreferencesForUser *self, cwinrt_hstring *value);
 
-/* Windows.System.UserProfile.GlobalizationPreferencesForUser.get_WeekStartsOn() */
 HRESULT wsyus_globalization_preferences_for_user_get__week_starts_on(WSYUS_GlobalizationPreferencesForUser *self, WGL_DayOfWeek *value);
 
-/* activate Windows.System.UserProfile.FirstSignInSettings */
 HRESULT wsyus_first_sign_in_settings_new(WSYUS_FirstSignInSettings **out);
 
-/* Windows.System.UserProfile.FirstSignInSettings */
-/* Windows.System.UserProfile.FirstSignInSettings.Lookup(key) */
 HRESULT wsyus_first_sign_in_settings_lookup(WSYUS_FirstSignInSettings *self, cwinrt_hstring key, IInspectable** out);
 
-/* Windows.System.UserProfile.FirstSignInSettings.get_Size() */
 HRESULT wsyus_first_sign_in_settings_get__size(WSYUS_FirstSignInSettings *self, uint32_t *value);
 
-/* Windows.System.UserProfile.FirstSignInSettings.HasKey(key) */
 HRESULT wsyus_first_sign_in_settings_has_key(WSYUS_FirstSignInSettings *self, cwinrt_hstring key, BOOL *out);
 
-/* Windows.System.UserProfile.FirstSignInSettings.Split(first, second) */
 HRESULT wsyus_first_sign_in_settings_split(WSYUS_FirstSignInSettings *self, WFOCO_IMapView_HSTRING_Object* first, WFOCO_IMapView_HSTRING_Object* second);
 
-/* Windows.System.UserProfile.FirstSignInSettings.First() */
 HRESULT wsyus_first_sign_in_settings_first(WSYUS_FirstSignInSettings *self, WFOCO_IIterator_WFOCO_IKeyValuePair_HSTRING_Object** out);
 
-/* Windows.System.UserProfile.FirstSignInSettings.GetDefault() */
 HRESULT wsyus_first_sign_in_settings_get_default(WSYUS_FirstSignInSettings** out);
 
-/* Windows.System.UserProfile.IAdvertisingManagerStatics */
-/* Windows.System.UserProfile.IAdvertisingManagerStatics.get_AdvertisingId() */
 HRESULT wsyus_advertising_manager_statics_get__advertising_id(WSYUS_IAdvertisingManagerStatics *self, cwinrt_hstring *value);
 
-/* Windows.System.UserProfile.IAdvertisingManagerStatics2 */
-/* Windows.System.UserProfile.IAdvertisingManagerStatics2.GetForUser(user) */
 HRESULT wsyus_advertising_manager_statics_2_get_for_user(WSYUS_IAdvertisingManagerStatics_2 *self, WSY_User* user, WSYUS_AdvertisingManagerForUser** out);
 
-/* Windows.System.UserProfile.IAssignedAccessSettingsStatics */
-/* Windows.System.UserProfile.IAssignedAccessSettingsStatics.GetDefault() */
 HRESULT wsyus_assigned_access_settings_statics_get_default(WSYUS_IAssignedAccessSettingsStatics *self, WSYUS_AssignedAccessSettings** out);
 
-/* Windows.System.UserProfile.IAssignedAccessSettingsStatics.GetForUser(user) */
 HRESULT wsyus_assigned_access_settings_statics_get_for_user(WSYUS_IAssignedAccessSettingsStatics *self, WSY_User* user, WSYUS_AssignedAccessSettings** out);
 
-/* activate Windows.System.UserProfile.DiagnosticsSettings */
 HRESULT wsyus_diagnostics_settings_new(WSYUS_DiagnosticsSettings **out);
 
-/* Windows.System.UserProfile.DiagnosticsSettings */
-/* Windows.System.UserProfile.DiagnosticsSettings.get_CanUseDiagnosticsToTailorExperiences() */
 HRESULT wsyus_diagnostics_settings_get__can_use_diagnostics_to_tailor_experiences(WSYUS_DiagnosticsSettings *self, BOOL *value);
 
-/* Windows.System.UserProfile.DiagnosticsSettings.get_User() */
 HRESULT wsyus_diagnostics_settings_get__user(WSYUS_DiagnosticsSettings *self, WSY_User** value);
 
-/* Windows.System.UserProfile.DiagnosticsSettings.GetDefault() */
 HRESULT wsyus_diagnostics_settings_get_default(WSYUS_DiagnosticsSettings** out);
 
-/* Windows.System.UserProfile.DiagnosticsSettings.GetForUser(user) */
 HRESULT wsyus_diagnostics_settings_get_for_user(WSY_User* user, WSYUS_DiagnosticsSettings** out);
 
-/* Windows.System.UserProfile.IDiagnosticsSettingsStatics */
-/* Windows.System.UserProfile.IDiagnosticsSettingsStatics.GetDefault() */
 HRESULT wsyus_diagnostics_settings_statics_get_default(WSYUS_IDiagnosticsSettingsStatics *self, WSYUS_DiagnosticsSettings** out);
 
-/* Windows.System.UserProfile.IDiagnosticsSettingsStatics.GetForUser(user) */
 HRESULT wsyus_diagnostics_settings_statics_get_for_user(WSYUS_IDiagnosticsSettingsStatics *self, WSY_User* user, WSYUS_DiagnosticsSettings** out);
 
-/* Windows.System.UserProfile.IFirstSignInSettingsStatics */
-/* Windows.System.UserProfile.IFirstSignInSettingsStatics.GetDefault() */
 HRESULT wsyus_first_sign_in_settings_statics_get_default(WSYUS_IFirstSignInSettingsStatics *self, WSYUS_FirstSignInSettings** out);
 
-/* Windows.System.UserProfile.IGlobalizationPreferencesStatics */
-/* Windows.System.UserProfile.IGlobalizationPreferencesStatics.get_Calendars() */
 HRESULT wsyus_globalization_preferences_statics_get__calendars(WSYUS_IGlobalizationPreferencesStatics *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.System.UserProfile.IGlobalizationPreferencesStatics.get_Clocks() */
 HRESULT wsyus_globalization_preferences_statics_get__clocks(WSYUS_IGlobalizationPreferencesStatics *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.System.UserProfile.IGlobalizationPreferencesStatics.get_Currencies() */
 HRESULT wsyus_globalization_preferences_statics_get__currencies(WSYUS_IGlobalizationPreferencesStatics *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.System.UserProfile.IGlobalizationPreferencesStatics.get_Languages() */
 HRESULT wsyus_globalization_preferences_statics_get__languages(WSYUS_IGlobalizationPreferencesStatics *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.System.UserProfile.IGlobalizationPreferencesStatics.get_HomeGeographicRegion() */
 HRESULT wsyus_globalization_preferences_statics_get__home_geographic_region(WSYUS_IGlobalizationPreferencesStatics *self, cwinrt_hstring *value);
 
-/* Windows.System.UserProfile.IGlobalizationPreferencesStatics.get_WeekStartsOn() */
 HRESULT wsyus_globalization_preferences_statics_get__week_starts_on(WSYUS_IGlobalizationPreferencesStatics *self, WGL_DayOfWeek *value);
 
-/* Windows.System.UserProfile.IGlobalizationPreferencesStatics2 */
-/* Windows.System.UserProfile.IGlobalizationPreferencesStatics2.TrySetHomeGeographicRegion(region) */
 HRESULT wsyus_globalization_preferences_statics_2_try_set_home_geographic_region(WSYUS_IGlobalizationPreferencesStatics_2 *self, cwinrt_hstring region, BOOL *out);
 
-/* Windows.System.UserProfile.IGlobalizationPreferencesStatics2.TrySetLanguages(languageTags) */
 HRESULT wsyus_globalization_preferences_statics_2_try_set_languages(WSYUS_IGlobalizationPreferencesStatics_2 *self, WFOCO_IIterable_HSTRING* languageTags, BOOL *out);
 
-/* Windows.System.UserProfile.IGlobalizationPreferencesStatics3 */
-/* Windows.System.UserProfile.IGlobalizationPreferencesStatics3.GetForUser(user) */
 HRESULT wsyus_globalization_preferences_statics_3_get_for_user(WSYUS_IGlobalizationPreferencesStatics_3 *self, WSY_User* user, WSYUS_GlobalizationPreferencesForUser** out);
 
-/* Windows.System.UserProfile.ILockScreenImageFeedStatics */
-/* Windows.System.UserProfile.ILockScreenImageFeedStatics.RequestSetImageFeedAsync(syndicationFeedUri) */
 HRESULT wsyus_lock_screen_image_feed_statics_request_set_image_feed_async(WSYUS_ILockScreenImageFeedStatics *self, WF_Uri* syndicationFeedUri, WF_IAsyncOperation_WSYUS_SetImageFeedResult** out);
 
-/* Windows.System.UserProfile.ILockScreenImageFeedStatics.TryRemoveImageFeed() */
 HRESULT wsyus_lock_screen_image_feed_statics_try_remove_image_feed(WSYUS_ILockScreenImageFeedStatics *self, BOOL *out);
 
-/* Windows.System.UserProfile.ILockScreenStatics */
-/* Windows.System.UserProfile.ILockScreenStatics.get_OriginalImageFile() */
 HRESULT wsyus_lock_screen_statics_get__original_image_file(WSYUS_ILockScreenStatics *self, WF_Uri** value);
 
-/* Windows.System.UserProfile.ILockScreenStatics.GetImageStream() */
 HRESULT wsyus_lock_screen_statics_get_image_stream(WSYUS_ILockScreenStatics *self, WSTST_IRandomAccessStream** out);
 
-/* Windows.System.UserProfile.ILockScreenStatics.SetImageFileAsync() */
 HRESULT wsyus_lock_screen_statics_set_image_file_async(WSYUS_ILockScreenStatics *self, WS_IStorageFile* value, WF_IAsyncAction** out);
 
-/* Windows.System.UserProfile.ILockScreenStatics.SetImageStreamAsync() */
 HRESULT wsyus_lock_screen_statics_set_image_stream_async(WSYUS_ILockScreenStatics *self, WSTST_IRandomAccessStream* value, WF_IAsyncAction** out);
 
-/* Windows.System.UserProfile.IUserInformationStatics */
-/* Windows.System.UserProfile.IUserInformationStatics.get_AccountPictureChangeEnabled() */
 HRESULT wsyus_user_information_statics_get__account_picture_change_enabled(WSYUS_IUserInformationStatics *self, BOOL *value);
 
-/* Windows.System.UserProfile.IUserInformationStatics.get_NameAccessAllowed() */
 HRESULT wsyus_user_information_statics_get__name_access_allowed(WSYUS_IUserInformationStatics *self, BOOL *value);
 
-/* Windows.System.UserProfile.IUserInformationStatics.GetAccountPicture(kind) */
 HRESULT wsyus_user_information_statics_get_account_picture(WSYUS_IUserInformationStatics *self, WSYUS_AccountPictureKind kind, WS_IStorageFile** out);
 
-/* Windows.System.UserProfile.IUserInformationStatics.SetAccountPictureAsync(image) */
 HRESULT wsyus_user_information_statics_set_account_picture_async(WSYUS_IUserInformationStatics *self, WS_IStorageFile* image, WF_IAsyncOperation_WSYUS_SetAccountPictureResult** out);
 
-/* Windows.System.UserProfile.IUserInformationStatics.SetAccountPicturesAsync(smallImage, largeImage, video) */
 HRESULT wsyus_user_information_statics_set_account_pictures_async(WSYUS_IUserInformationStatics *self, WS_IStorageFile* smallImage, WS_IStorageFile* largeImage, WS_IStorageFile* video, WF_IAsyncOperation_WSYUS_SetAccountPictureResult** out);
 
-/* Windows.System.UserProfile.IUserInformationStatics.SetAccountPictureFromStreamAsync(image) */
 HRESULT wsyus_user_information_statics_set_account_picture_from_stream_async(WSYUS_IUserInformationStatics *self, WSTST_IRandomAccessStream* image, WF_IAsyncOperation_WSYUS_SetAccountPictureResult** out);
 
-/* Windows.System.UserProfile.IUserInformationStatics.SetAccountPicturesFromStreamsAsync(smallImage, largeImage, video) */
 HRESULT wsyus_user_information_statics_set_account_pictures_from_streams_async(WSYUS_IUserInformationStatics *self, WSTST_IRandomAccessStream* smallImage, WSTST_IRandomAccessStream* largeImage, WSTST_IRandomAccessStream* video, WF_IAsyncOperation_WSYUS_SetAccountPictureResult** out);
 
-/* Windows.System.UserProfile.IUserInformationStatics.GetDisplayNameAsync() */
 HRESULT wsyus_user_information_statics_get_display_name_async(WSYUS_IUserInformationStatics *self, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.System.UserProfile.IUserInformationStatics.GetFirstNameAsync() */
 HRESULT wsyus_user_information_statics_get_first_name_async(WSYUS_IUserInformationStatics *self, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.System.UserProfile.IUserInformationStatics.GetLastNameAsync() */
 HRESULT wsyus_user_information_statics_get_last_name_async(WSYUS_IUserInformationStatics *self, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.System.UserProfile.IUserInformationStatics.GetPrincipalNameAsync() */
 HRESULT wsyus_user_information_statics_get_principal_name_async(WSYUS_IUserInformationStatics *self, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.System.UserProfile.IUserInformationStatics.GetSessionInitiationProtocolUriAsync() */
 HRESULT wsyus_user_information_statics_get_session_initiation_protocol_uri_async(WSYUS_IUserInformationStatics *self, WF_IAsyncOperation_WF_Uri** out);
 
-/* Windows.System.UserProfile.IUserInformationStatics.GetDomainNameAsync() */
 HRESULT wsyus_user_information_statics_get_domain_name_async(WSYUS_IUserInformationStatics *self, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.System.UserProfile.IUserProfilePersonalizationSettingsStatics */
-/* Windows.System.UserProfile.IUserProfilePersonalizationSettingsStatics.get_Current() */
 HRESULT wsyus_user_profile_personalization_settings_statics_get__current(WSYUS_IUserProfilePersonalizationSettingsStatics *self, WSYUS_UserProfilePersonalizationSettings** value);
 
-/* Windows.System.UserProfile.IUserProfilePersonalizationSettingsStatics.IsSupported() */
 HRESULT wsyus_user_profile_personalization_settings_statics_is_supported(WSYUS_IUserProfilePersonalizationSettingsStatics *self, BOOL *out);
 
-/* activate Windows.System.UserProfile.LockScreen */
 HRESULT wsyus_lock_screen_new(WSYUS_LockScreen **out);
 
-/* Windows.System.UserProfile.LockScreen */
-/* Windows.System.UserProfile.LockScreen.RequestSetImageFeedAsync(syndicationFeedUri) */
 HRESULT wsyus_lock_screen_request_set_image_feed_async(WF_Uri* syndicationFeedUri, WF_IAsyncOperation_WSYUS_SetImageFeedResult** out);
 
-/* Windows.System.UserProfile.LockScreen.TryRemoveImageFeed() */
 HRESULT wsyus_lock_screen_try_remove_image_feed(BOOL *out);
 
-/* Windows.System.UserProfile.LockScreen.get_OriginalImageFile() */
 HRESULT wsyus_lock_screen_get__original_image_file(WF_Uri** value);
 
-/* Windows.System.UserProfile.LockScreen.GetImageStream() */
 HRESULT wsyus_lock_screen_get_image_stream(WSTST_IRandomAccessStream** out);
 
-/* Windows.System.UserProfile.LockScreen.SetImageFileAsync() */
 HRESULT wsyus_lock_screen_set_image_file_async(WS_IStorageFile* value, WF_IAsyncAction** out);
 
-/* Windows.System.UserProfile.LockScreen.SetImageStreamAsync() */
 HRESULT wsyus_lock_screen_set_image_stream_async(WSTST_IRandomAccessStream* value, WF_IAsyncAction** out);
 
-/* activate Windows.System.UserProfile.UserInformation */
 HRESULT wsyus_user_information_new(WSYUS_UserInformation **out);
 
-/* Windows.System.UserProfile.UserInformation */
-/* Windows.System.UserProfile.UserInformation.get_AccountPictureChangeEnabled() */
 HRESULT wsyus_user_information_get__account_picture_change_enabled(BOOL *value);
 
-/* Windows.System.UserProfile.UserInformation.get_NameAccessAllowed() */
 HRESULT wsyus_user_information_get__name_access_allowed(BOOL *value);
 
-/* Windows.System.UserProfile.UserInformation.GetAccountPicture(kind) */
 HRESULT wsyus_user_information_get_account_picture(WSYUS_AccountPictureKind kind, WS_IStorageFile** out);
 
-/* Windows.System.UserProfile.UserInformation.SetAccountPictureAsync(image) */
 HRESULT wsyus_user_information_set_account_picture_async(WS_IStorageFile* image, WF_IAsyncOperation_WSYUS_SetAccountPictureResult** out);
 
-/* Windows.System.UserProfile.UserInformation.SetAccountPicturesAsync(smallImage, largeImage, video) */
 HRESULT wsyus_user_information_set_account_pictures_async(WS_IStorageFile* smallImage, WS_IStorageFile* largeImage, WS_IStorageFile* video, WF_IAsyncOperation_WSYUS_SetAccountPictureResult** out);
 
-/* Windows.System.UserProfile.UserInformation.SetAccountPictureFromStreamAsync(image) */
 HRESULT wsyus_user_information_set_account_picture_from_stream_async(WSTST_IRandomAccessStream* image, WF_IAsyncOperation_WSYUS_SetAccountPictureResult** out);
 
-/* Windows.System.UserProfile.UserInformation.SetAccountPicturesFromStreamsAsync(smallImage, largeImage, video) */
 HRESULT wsyus_user_information_set_account_pictures_from_streams_async(WSTST_IRandomAccessStream* smallImage, WSTST_IRandomAccessStream* largeImage, WSTST_IRandomAccessStream* video, WF_IAsyncOperation_WSYUS_SetAccountPictureResult** out);
 
-/* Windows.System.UserProfile.UserInformation.GetDisplayNameAsync() */
 HRESULT wsyus_user_information_get_display_name_async(WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.System.UserProfile.UserInformation.GetFirstNameAsync() */
 HRESULT wsyus_user_information_get_first_name_async(WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.System.UserProfile.UserInformation.GetLastNameAsync() */
 HRESULT wsyus_user_information_get_last_name_async(WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.System.UserProfile.UserInformation.GetPrincipalNameAsync() */
 HRESULT wsyus_user_information_get_principal_name_async(WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.System.UserProfile.UserInformation.GetSessionInitiationProtocolUriAsync() */
 HRESULT wsyus_user_information_get_session_initiation_protocol_uri_async(WF_IAsyncOperation_WF_Uri** out);
 
-/* Windows.System.UserProfile.UserInformation.GetDomainNameAsync() */
 HRESULT wsyus_user_information_get_domain_name_async(WF_IAsyncOperation_HSTRING** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsyus_user_information_on_account_picture_changed(WSYUS_UserInformation *self, cwinrt_event_fn fn, void *ctx);
 void wsyus_user_information_off_account_picture_changed(WSYUS_UserInformation *self, cwinrt_token token);
 
-/* activate Windows.System.UserProfile.UserProfilePersonalizationSettings */
 HRESULT wsyus_user_profile_personalization_settings_new(WSYUS_UserProfilePersonalizationSettings **out);
 
-/* Windows.System.UserProfile.UserProfilePersonalizationSettings */
-/* Windows.System.UserProfile.UserProfilePersonalizationSettings.TrySetLockScreenImageAsync(imageFile) */
 HRESULT wsyus_user_profile_personalization_settings_try_set_lock_screen_image_async(WSYUS_UserProfilePersonalizationSettings *self, WS_StorageFile* imageFile, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.UserProfile.UserProfilePersonalizationSettings.TrySetWallpaperImageAsync(imageFile) */
 HRESULT wsyus_user_profile_personalization_settings_try_set_wallpaper_image_async(WSYUS_UserProfilePersonalizationSettings *self, WS_StorageFile* imageFile, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.UserProfile.UserProfilePersonalizationSettings.get_Current() */
 HRESULT wsyus_user_profile_personalization_settings_get__current(WSYUS_UserProfilePersonalizationSettings** value);
 
-/* Windows.System.UserProfile.UserProfilePersonalizationSettings.IsSupported() */
 HRESULT wsyus_user_profile_personalization_settings_is_supported(BOOL *out);
 
-/* activate Windows.System.UserProfile.AssignedAccessSettings */
 HRESULT wsyus_assigned_access_settings_new(WSYUS_AssignedAccessSettings **out);
 
-/* Windows.System.UserProfile.AssignedAccessSettings */
-/* Windows.System.UserProfile.AssignedAccessSettings.get_IsEnabled() */
 HRESULT wsyus_assigned_access_settings_get__is_enabled(WSYUS_AssignedAccessSettings *self, BOOL *value);
 
-/* Windows.System.UserProfile.AssignedAccessSettings.get_IsSingleAppKioskMode() */
 HRESULT wsyus_assigned_access_settings_get__is_single_app_kiosk_mode(WSYUS_AssignedAccessSettings *self, BOOL *value);
 
-/* Windows.System.UserProfile.AssignedAccessSettings.get_User() */
 HRESULT wsyus_assigned_access_settings_get__user(WSYUS_AssignedAccessSettings *self, WSY_User** value);
 
-/* Windows.System.UserProfile.AssignedAccessSettings.GetDefault() */
 HRESULT wsyus_assigned_access_settings_get_default(WSYUS_AssignedAccessSettings** out);
 
-/* Windows.System.UserProfile.AssignedAccessSettings.GetForUser(user) */
 HRESULT wsyus_assigned_access_settings_get_for_user(WSY_User* user, WSYUS_AssignedAccessSettings** out);
 
-/* activate Windows.System.UserProfile.AdvertisingManagerForUser */
 HRESULT wsyus_advertising_manager_for_user_new(WSYUS_AdvertisingManagerForUser **out);
 
-/* Windows.System.UserProfile.AdvertisingManagerForUser */
-/* Windows.System.UserProfile.AdvertisingManagerForUser.get_AdvertisingId() */
 HRESULT wsyus_advertising_manager_for_user_get__advertising_id(WSYUS_AdvertisingManagerForUser *self, cwinrt_hstring *value);
 
-/* Windows.System.UserProfile.AdvertisingManagerForUser.get_User() */
 HRESULT wsyus_advertising_manager_for_user_get__user(WSYUS_AdvertisingManagerForUser *self, WSY_User** value);
 
-/* activate Windows.System.UserProfile.AdvertisingManager */
 HRESULT wsyus_advertising_manager_new(WSYUS_AdvertisingManager **out);
 
-/* Windows.System.UserProfile.AdvertisingManager */
-/* Windows.System.UserProfile.AdvertisingManager.GetForUser(user) */
 HRESULT wsyus_advertising_manager_get_for_user(WSY_User* user, WSYUS_AdvertisingManagerForUser** out);
 
-/* Windows.System.UserProfile.AdvertisingManager.get_AdvertisingId() */
 HRESULT wsyus_advertising_manager_get__advertising_id(cwinrt_hstring *value);
 
-/* Windows.System.UserProfile.IGlobalizationPreferencesForUser */
-/* Windows.System.UserProfile.IDiagnosticsSettings */
-/* Windows.System.UserProfile.IUserProfilePersonalizationSettings */
-/* Windows.System.UserProfile.IAssignedAccessSettings */
-/* Windows.System.UserProfile.IAdvertisingManagerForUser */
 #endif /* CWINRT_WINDOWS_SYSTEM_USERPROFILE_H */

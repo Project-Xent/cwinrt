@@ -15,7 +15,6 @@
 #include <cwinrt/Windows.UI.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WDELIEF_LampArrayBitmapEffect WDELIEF_LampArrayBitmapEffect;
 typedef struct WDELIEF_LampArrayBitmapRequestedEventArgs WDELIEF_LampArrayBitmapRequestedEventArgs;
 typedef struct WDELIEF_LampArrayBlinkEffect WDELIEF_LampArrayBlinkEffect;
@@ -40,7 +39,6 @@ typedef struct WDELIEF_ILampArraySolidEffect WDELIEF_ILampArraySolidEffect;
 typedef struct WDELIEF_ILampArrayEffect WDELIEF_ILampArrayEffect;
 typedef struct WDELIEF_ILampArrayUpdateRequestedEventArgs WDELIEF_ILampArrayUpdateRequestedEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_TimeSpan
 #define CWINRT_FWD_WF_TimeSpan
 typedef struct WF_TimeSpan WF_TimeSpan;
@@ -98,7 +96,6 @@ typedef enum WDELIEF_LampArrayEffectCompletionBehavior {
 } WDELIEF_LampArrayEffectCompletionBehavior;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -163,332 +160,208 @@ static const IID CWINRT_IID_WDELIEF_ILampArrayEffect CWINRT_MAYBE_UNUSED = { 0x1
 static const IID CWINRT_IID_WDELIEF_ILampArrayUpdateRequestedEventArgs CWINRT_MAYBE_UNUSED = { 0x73560D6A, 0x576A, 0x48AF, { 0x85, 0x39, 0x67, 0xFF, 0xA0, 0xAB, 0x35, 0x16 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Devices.Lights.Effects.LampArrayBitmapEffect */
 HRESULT wdelief_lamp_array_bitmap_effect_new(WDELIEF_LampArrayBitmapEffect **out);
 
-/* Windows.Devices.Lights.Effects.LampArrayBitmapEffect */
-/* Windows.Devices.Lights.Effects.LampArrayBitmapEffect.get_Duration() */
 HRESULT wdelief_lamp_array_bitmap_effect_get__duration(WDELIEF_LampArrayBitmapEffect *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Lights.Effects.LampArrayBitmapEffect.put_Duration() */
 HRESULT wdelief_lamp_array_bitmap_effect_put__duration(WDELIEF_LampArrayBitmapEffect *self, WF_TimeSpan value);
 
-/* Windows.Devices.Lights.Effects.LampArrayBitmapEffect.get_StartDelay() */
 HRESULT wdelief_lamp_array_bitmap_effect_get__start_delay(WDELIEF_LampArrayBitmapEffect *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Lights.Effects.LampArrayBitmapEffect.put_StartDelay() */
 HRESULT wdelief_lamp_array_bitmap_effect_put__start_delay(WDELIEF_LampArrayBitmapEffect *self, WF_TimeSpan value);
 
-/* Windows.Devices.Lights.Effects.LampArrayBitmapEffect.get_UpdateInterval() */
 HRESULT wdelief_lamp_array_bitmap_effect_get__update_interval(WDELIEF_LampArrayBitmapEffect *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Lights.Effects.LampArrayBitmapEffect.put_UpdateInterval() */
 HRESULT wdelief_lamp_array_bitmap_effect_put__update_interval(WDELIEF_LampArrayBitmapEffect *self, WF_TimeSpan value);
 
-/* Windows.Devices.Lights.Effects.LampArrayBitmapEffect.get_SuggestedBitmapSize() */
 HRESULT wdelief_lamp_array_bitmap_effect_get__suggested_bitmap_size(WDELIEF_LampArrayBitmapEffect *self, WF_Size *value);
 
-/* Windows.Devices.Lights.Effects.LampArrayBitmapEffect.get_ZIndex() */
 HRESULT wdelief_lamp_array_bitmap_effect_get__z_index(WDELIEF_LampArrayBitmapEffect *self, int32_t *value);
 
-/* Windows.Devices.Lights.Effects.LampArrayBitmapEffect.put_ZIndex() */
 HRESULT wdelief_lamp_array_bitmap_effect_put__z_index(WDELIEF_LampArrayBitmapEffect *self, int32_t value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdelief_lamp_array_bitmap_effect_on_bitmap_requested(WDELIEF_LampArrayBitmapEffect *self, cwinrt_event_fn fn, void *ctx);
 void wdelief_lamp_array_bitmap_effect_off_bitmap_requested(WDELIEF_LampArrayBitmapEffect *self, cwinrt_token token);
 
-/* activate Windows.Devices.Lights.Effects.LampArrayBitmapRequestedEventArgs */
 HRESULT wdelief_lamp_array_bitmap_requested_event_args_new(WDELIEF_LampArrayBitmapRequestedEventArgs **out);
 
-/* Windows.Devices.Lights.Effects.LampArrayBitmapRequestedEventArgs */
-/* Windows.Devices.Lights.Effects.LampArrayBitmapRequestedEventArgs.get_SinceStarted() */
 HRESULT wdelief_lamp_array_bitmap_requested_event_args_get__since_started(WDELIEF_LampArrayBitmapRequestedEventArgs *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Lights.Effects.LampArrayBitmapRequestedEventArgs.UpdateBitmap(bitmap) */
 HRESULT wdelief_lamp_array_bitmap_requested_event_args_update_bitmap(WDELIEF_LampArrayBitmapRequestedEventArgs *self, WGRIM_SoftwareBitmap* bitmap);
 
-/* activate Windows.Devices.Lights.Effects.LampArrayBlinkEffect */
 HRESULT wdelief_lamp_array_blink_effect_new(WDELIEF_LampArrayBlinkEffect **out);
 
-/* Windows.Devices.Lights.Effects.LampArrayBlinkEffect */
-/* Windows.Devices.Lights.Effects.LampArrayBlinkEffect.get_Color() */
 HRESULT wdelief_lamp_array_blink_effect_get__color(WDELIEF_LampArrayBlinkEffect *self, WUI_Color *value);
 
-/* Windows.Devices.Lights.Effects.LampArrayBlinkEffect.put_Color() */
 HRESULT wdelief_lamp_array_blink_effect_put__color(WDELIEF_LampArrayBlinkEffect *self, WUI_Color value);
 
-/* Windows.Devices.Lights.Effects.LampArrayBlinkEffect.get_AttackDuration() */
 HRESULT wdelief_lamp_array_blink_effect_get__attack_duration(WDELIEF_LampArrayBlinkEffect *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Lights.Effects.LampArrayBlinkEffect.put_AttackDuration() */
 HRESULT wdelief_lamp_array_blink_effect_put__attack_duration(WDELIEF_LampArrayBlinkEffect *self, WF_TimeSpan value);
 
-/* Windows.Devices.Lights.Effects.LampArrayBlinkEffect.get_SustainDuration() */
 HRESULT wdelief_lamp_array_blink_effect_get__sustain_duration(WDELIEF_LampArrayBlinkEffect *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Lights.Effects.LampArrayBlinkEffect.put_SustainDuration() */
 HRESULT wdelief_lamp_array_blink_effect_put__sustain_duration(WDELIEF_LampArrayBlinkEffect *self, WF_TimeSpan value);
 
-/* Windows.Devices.Lights.Effects.LampArrayBlinkEffect.get_DecayDuration() */
 HRESULT wdelief_lamp_array_blink_effect_get__decay_duration(WDELIEF_LampArrayBlinkEffect *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Lights.Effects.LampArrayBlinkEffect.put_DecayDuration() */
 HRESULT wdelief_lamp_array_blink_effect_put__decay_duration(WDELIEF_LampArrayBlinkEffect *self, WF_TimeSpan value);
 
-/* Windows.Devices.Lights.Effects.LampArrayBlinkEffect.get_RepetitionDelay() */
 HRESULT wdelief_lamp_array_blink_effect_get__repetition_delay(WDELIEF_LampArrayBlinkEffect *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Lights.Effects.LampArrayBlinkEffect.put_RepetitionDelay() */
 HRESULT wdelief_lamp_array_blink_effect_put__repetition_delay(WDELIEF_LampArrayBlinkEffect *self, WF_TimeSpan value);
 
-/* Windows.Devices.Lights.Effects.LampArrayBlinkEffect.get_StartDelay() */
 HRESULT wdelief_lamp_array_blink_effect_get__start_delay(WDELIEF_LampArrayBlinkEffect *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Lights.Effects.LampArrayBlinkEffect.put_StartDelay() */
 HRESULT wdelief_lamp_array_blink_effect_put__start_delay(WDELIEF_LampArrayBlinkEffect *self, WF_TimeSpan value);
 
-/* Windows.Devices.Lights.Effects.LampArrayBlinkEffect.get_Occurrences() */
 HRESULT wdelief_lamp_array_blink_effect_get__occurrences(WDELIEF_LampArrayBlinkEffect *self, int32_t *value);
 
-/* Windows.Devices.Lights.Effects.LampArrayBlinkEffect.put_Occurrences() */
 HRESULT wdelief_lamp_array_blink_effect_put__occurrences(WDELIEF_LampArrayBlinkEffect *self, int32_t value);
 
-/* Windows.Devices.Lights.Effects.LampArrayBlinkEffect.get_RepetitionMode() */
 HRESULT wdelief_lamp_array_blink_effect_get__repetition_mode(WDELIEF_LampArrayBlinkEffect *self, WDELIEF_LampArrayRepetitionMode *value);
 
-/* Windows.Devices.Lights.Effects.LampArrayBlinkEffect.put_RepetitionMode() */
 HRESULT wdelief_lamp_array_blink_effect_put__repetition_mode(WDELIEF_LampArrayBlinkEffect *self, WDELIEF_LampArrayRepetitionMode value);
 
-/* Windows.Devices.Lights.Effects.LampArrayBlinkEffect.get_ZIndex() */
 HRESULT wdelief_lamp_array_blink_effect_get__z_index(WDELIEF_LampArrayBlinkEffect *self, int32_t *value);
 
-/* Windows.Devices.Lights.Effects.LampArrayBlinkEffect.put_ZIndex() */
 HRESULT wdelief_lamp_array_blink_effect_put__z_index(WDELIEF_LampArrayBlinkEffect *self, int32_t value);
 
-/* activate Windows.Devices.Lights.Effects.LampArrayColorRampEffect */
 HRESULT wdelief_lamp_array_color_ramp_effect_new(WDELIEF_LampArrayColorRampEffect **out);
 
-/* Windows.Devices.Lights.Effects.LampArrayColorRampEffect */
-/* Windows.Devices.Lights.Effects.LampArrayColorRampEffect.get_Color() */
 HRESULT wdelief_lamp_array_color_ramp_effect_get__color(WDELIEF_LampArrayColorRampEffect *self, WUI_Color *value);
 
-/* Windows.Devices.Lights.Effects.LampArrayColorRampEffect.put_Color() */
 HRESULT wdelief_lamp_array_color_ramp_effect_put__color(WDELIEF_LampArrayColorRampEffect *self, WUI_Color value);
 
-/* Windows.Devices.Lights.Effects.LampArrayColorRampEffect.get_RampDuration() */
 HRESULT wdelief_lamp_array_color_ramp_effect_get__ramp_duration(WDELIEF_LampArrayColorRampEffect *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Lights.Effects.LampArrayColorRampEffect.put_RampDuration() */
 HRESULT wdelief_lamp_array_color_ramp_effect_put__ramp_duration(WDELIEF_LampArrayColorRampEffect *self, WF_TimeSpan value);
 
-/* Windows.Devices.Lights.Effects.LampArrayColorRampEffect.get_StartDelay() */
 HRESULT wdelief_lamp_array_color_ramp_effect_get__start_delay(WDELIEF_LampArrayColorRampEffect *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Lights.Effects.LampArrayColorRampEffect.put_StartDelay() */
 HRESULT wdelief_lamp_array_color_ramp_effect_put__start_delay(WDELIEF_LampArrayColorRampEffect *self, WF_TimeSpan value);
 
-/* Windows.Devices.Lights.Effects.LampArrayColorRampEffect.get_CompletionBehavior() */
 HRESULT wdelief_lamp_array_color_ramp_effect_get__completion_behavior(WDELIEF_LampArrayColorRampEffect *self, WDELIEF_LampArrayEffectCompletionBehavior *value);
 
-/* Windows.Devices.Lights.Effects.LampArrayColorRampEffect.put_CompletionBehavior() */
 HRESULT wdelief_lamp_array_color_ramp_effect_put__completion_behavior(WDELIEF_LampArrayColorRampEffect *self, WDELIEF_LampArrayEffectCompletionBehavior value);
 
-/* Windows.Devices.Lights.Effects.LampArrayColorRampEffect.get_ZIndex() */
 HRESULT wdelief_lamp_array_color_ramp_effect_get__z_index(WDELIEF_LampArrayColorRampEffect *self, int32_t *value);
 
-/* Windows.Devices.Lights.Effects.LampArrayColorRampEffect.put_ZIndex() */
 HRESULT wdelief_lamp_array_color_ramp_effect_put__z_index(WDELIEF_LampArrayColorRampEffect *self, int32_t value);
 
-/* activate Windows.Devices.Lights.Effects.LampArrayCustomEffect */
 HRESULT wdelief_lamp_array_custom_effect_new(WDELIEF_LampArrayCustomEffect **out);
 
-/* Windows.Devices.Lights.Effects.LampArrayCustomEffect */
-/* Windows.Devices.Lights.Effects.LampArrayCustomEffect.get_Duration() */
 HRESULT wdelief_lamp_array_custom_effect_get__duration(WDELIEF_LampArrayCustomEffect *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Lights.Effects.LampArrayCustomEffect.put_Duration() */
 HRESULT wdelief_lamp_array_custom_effect_put__duration(WDELIEF_LampArrayCustomEffect *self, WF_TimeSpan value);
 
-/* Windows.Devices.Lights.Effects.LampArrayCustomEffect.get_UpdateInterval() */
 HRESULT wdelief_lamp_array_custom_effect_get__update_interval(WDELIEF_LampArrayCustomEffect *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Lights.Effects.LampArrayCustomEffect.put_UpdateInterval() */
 HRESULT wdelief_lamp_array_custom_effect_put__update_interval(WDELIEF_LampArrayCustomEffect *self, WF_TimeSpan value);
 
-/* Windows.Devices.Lights.Effects.LampArrayCustomEffect.get_ZIndex() */
 HRESULT wdelief_lamp_array_custom_effect_get__z_index(WDELIEF_LampArrayCustomEffect *self, int32_t *value);
 
-/* Windows.Devices.Lights.Effects.LampArrayCustomEffect.put_ZIndex() */
 HRESULT wdelief_lamp_array_custom_effect_put__z_index(WDELIEF_LampArrayCustomEffect *self, int32_t value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdelief_lamp_array_custom_effect_on_update_requested(WDELIEF_LampArrayCustomEffect *self, cwinrt_event_fn fn, void *ctx);
 void wdelief_lamp_array_custom_effect_off_update_requested(WDELIEF_LampArrayCustomEffect *self, cwinrt_token token);
 
-/* activate Windows.Devices.Lights.Effects.LampArrayEffectPlaylist */
 HRESULT wdelief_lamp_array_effect_playlist_new(WDELIEF_LampArrayEffectPlaylist **out);
 
-/* Windows.Devices.Lights.Effects.LampArrayEffectPlaylist */
-/* Windows.Devices.Lights.Effects.LampArrayEffectPlaylist.Append(effect) */
 HRESULT wdelief_lamp_array_effect_playlist_append(WDELIEF_LampArrayEffectPlaylist *self, WDELIEF_ILampArrayEffect* effect);
 
-/* Windows.Devices.Lights.Effects.LampArrayEffectPlaylist.OverrideZIndex(zIndex) */
 HRESULT wdelief_lamp_array_effect_playlist_override_z_index(WDELIEF_LampArrayEffectPlaylist *self, int32_t zIndex);
 
-/* Windows.Devices.Lights.Effects.LampArrayEffectPlaylist.Start() */
 HRESULT wdelief_lamp_array_effect_playlist_start(WDELIEF_LampArrayEffectPlaylist *self);
 
-/* Windows.Devices.Lights.Effects.LampArrayEffectPlaylist.Stop() */
 HRESULT wdelief_lamp_array_effect_playlist_stop(WDELIEF_LampArrayEffectPlaylist *self);
 
-/* Windows.Devices.Lights.Effects.LampArrayEffectPlaylist.Pause() */
 HRESULT wdelief_lamp_array_effect_playlist_pause(WDELIEF_LampArrayEffectPlaylist *self);
 
-/* Windows.Devices.Lights.Effects.LampArrayEffectPlaylist.get_EffectStartMode() */
 HRESULT wdelief_lamp_array_effect_playlist_get__effect_start_mode(WDELIEF_LampArrayEffectPlaylist *self, WDELIEF_LampArrayEffectStartMode *value);
 
-/* Windows.Devices.Lights.Effects.LampArrayEffectPlaylist.put_EffectStartMode() */
 HRESULT wdelief_lamp_array_effect_playlist_put__effect_start_mode(WDELIEF_LampArrayEffectPlaylist *self, WDELIEF_LampArrayEffectStartMode value);
 
-/* Windows.Devices.Lights.Effects.LampArrayEffectPlaylist.get_Occurrences() */
 HRESULT wdelief_lamp_array_effect_playlist_get__occurrences(WDELIEF_LampArrayEffectPlaylist *self, int32_t *value);
 
-/* Windows.Devices.Lights.Effects.LampArrayEffectPlaylist.put_Occurrences() */
 HRESULT wdelief_lamp_array_effect_playlist_put__occurrences(WDELIEF_LampArrayEffectPlaylist *self, int32_t value);
 
-/* Windows.Devices.Lights.Effects.LampArrayEffectPlaylist.get_RepetitionMode() */
 HRESULT wdelief_lamp_array_effect_playlist_get__repetition_mode(WDELIEF_LampArrayEffectPlaylist *self, WDELIEF_LampArrayRepetitionMode *value);
 
-/* Windows.Devices.Lights.Effects.LampArrayEffectPlaylist.put_RepetitionMode() */
 HRESULT wdelief_lamp_array_effect_playlist_put__repetition_mode(WDELIEF_LampArrayEffectPlaylist *self, WDELIEF_LampArrayRepetitionMode value);
 
-/* Windows.Devices.Lights.Effects.LampArrayEffectPlaylist.GetAt(index) */
 HRESULT wdelief_lamp_array_effect_playlist_get_at(WDELIEF_LampArrayEffectPlaylist *self, uint32_t index, WDELIEF_ILampArrayEffect** out);
 
-/* Windows.Devices.Lights.Effects.LampArrayEffectPlaylist.get_Size() */
 HRESULT wdelief_lamp_array_effect_playlist_get__size(WDELIEF_LampArrayEffectPlaylist *self, uint32_t *value);
 
-/* Windows.Devices.Lights.Effects.LampArrayEffectPlaylist.IndexOf(index) */
 HRESULT wdelief_lamp_array_effect_playlist_index_of(WDELIEF_LampArrayEffectPlaylist *self, WDELIEF_ILampArrayEffect* value, uint32_t index, BOOL *out);
 
-/* Windows.Devices.Lights.Effects.LampArrayEffectPlaylist.GetMany(startIndex, items) */
 HRESULT wdelief_lamp_array_effect_playlist_get_many(WDELIEF_LampArrayEffectPlaylist *self, uint32_t startIndex, WDELIEF_ILampArrayEffect *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Devices.Lights.Effects.LampArrayEffectPlaylist.First() */
 HRESULT wdelief_lamp_array_effect_playlist_first(WDELIEF_LampArrayEffectPlaylist *self, WFOCO_IIterator_WDELIEF_ILampArrayEffect** out);
 
-/* Windows.Devices.Lights.Effects.LampArrayEffectPlaylist.StartAll() */
 HRESULT wdelief_lamp_array_effect_playlist_start_all(WFOCO_IIterable_WDELIEF_LampArrayEffectPlaylist* value);
 
-/* Windows.Devices.Lights.Effects.LampArrayEffectPlaylist.StopAll() */
 HRESULT wdelief_lamp_array_effect_playlist_stop_all(WFOCO_IIterable_WDELIEF_LampArrayEffectPlaylist* value);
 
-/* Windows.Devices.Lights.Effects.LampArrayEffectPlaylist.PauseAll() */
 HRESULT wdelief_lamp_array_effect_playlist_pause_all(WFOCO_IIterable_WDELIEF_LampArrayEffectPlaylist* value);
 
-/* activate Windows.Devices.Lights.Effects.LampArraySolidEffect */
 HRESULT wdelief_lamp_array_solid_effect_new(WDELIEF_LampArraySolidEffect **out);
 
-/* Windows.Devices.Lights.Effects.LampArraySolidEffect */
-/* Windows.Devices.Lights.Effects.LampArraySolidEffect.get_Color() */
 HRESULT wdelief_lamp_array_solid_effect_get__color(WDELIEF_LampArraySolidEffect *self, WUI_Color *value);
 
-/* Windows.Devices.Lights.Effects.LampArraySolidEffect.put_Color() */
 HRESULT wdelief_lamp_array_solid_effect_put__color(WDELIEF_LampArraySolidEffect *self, WUI_Color value);
 
-/* Windows.Devices.Lights.Effects.LampArraySolidEffect.get_Duration() */
 HRESULT wdelief_lamp_array_solid_effect_get__duration(WDELIEF_LampArraySolidEffect *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Lights.Effects.LampArraySolidEffect.put_Duration() */
 HRESULT wdelief_lamp_array_solid_effect_put__duration(WDELIEF_LampArraySolidEffect *self, WF_TimeSpan value);
 
-/* Windows.Devices.Lights.Effects.LampArraySolidEffect.get_StartDelay() */
 HRESULT wdelief_lamp_array_solid_effect_get__start_delay(WDELIEF_LampArraySolidEffect *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Lights.Effects.LampArraySolidEffect.put_StartDelay() */
 HRESULT wdelief_lamp_array_solid_effect_put__start_delay(WDELIEF_LampArraySolidEffect *self, WF_TimeSpan value);
 
-/* Windows.Devices.Lights.Effects.LampArraySolidEffect.get_CompletionBehavior() */
 HRESULT wdelief_lamp_array_solid_effect_get__completion_behavior(WDELIEF_LampArraySolidEffect *self, WDELIEF_LampArrayEffectCompletionBehavior *value);
 
-/* Windows.Devices.Lights.Effects.LampArraySolidEffect.put_CompletionBehavior() */
 HRESULT wdelief_lamp_array_solid_effect_put__completion_behavior(WDELIEF_LampArraySolidEffect *self, WDELIEF_LampArrayEffectCompletionBehavior value);
 
-/* Windows.Devices.Lights.Effects.LampArraySolidEffect.get_ZIndex() */
 HRESULT wdelief_lamp_array_solid_effect_get__z_index(WDELIEF_LampArraySolidEffect *self, int32_t *value);
 
-/* Windows.Devices.Lights.Effects.LampArraySolidEffect.put_ZIndex() */
 HRESULT wdelief_lamp_array_solid_effect_put__z_index(WDELIEF_LampArraySolidEffect *self, int32_t value);
 
-/* activate Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs */
 HRESULT wdelief_lamp_array_update_requested_event_args_new(WDELIEF_LampArrayUpdateRequestedEventArgs **out);
 
-/* Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs */
-/* Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs.get_SinceStarted() */
 HRESULT wdelief_lamp_array_update_requested_event_args_get__since_started(WDELIEF_LampArrayUpdateRequestedEventArgs *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs.SetColor(desiredColor) */
 HRESULT wdelief_lamp_array_update_requested_event_args_set_color(WDELIEF_LampArrayUpdateRequestedEventArgs *self, WUI_Color desiredColor);
 
-/* Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs.SetColorForIndex(lampIndex, desiredColor) */
 HRESULT wdelief_lamp_array_update_requested_event_args_set_color_for_index(WDELIEF_LampArrayUpdateRequestedEventArgs *self, int32_t lampIndex, WUI_Color desiredColor);
 
-/* Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs.SetSingleColorForIndices(desiredColor, lampIndexes) */
 HRESULT wdelief_lamp_array_update_requested_event_args_set_single_color_for_indices(WDELIEF_LampArrayUpdateRequestedEventArgs *self, WUI_Color desiredColor, int32_t *lampIndexes, uint32_t lampIndexes_len);
 
-/* Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs.SetColorsForIndices(desiredColors, lampIndexes) */
 HRESULT wdelief_lamp_array_update_requested_event_args_set_colors_for_indices(WDELIEF_LampArrayUpdateRequestedEventArgs *self, WUI_Color *desiredColors, uint32_t desiredColors_len, int32_t *lampIndexes, uint32_t lampIndexes_len);
 
-/* Windows.Devices.Lights.Effects.ILampArraySolidEffectFactory */
-/* Windows.Devices.Lights.Effects.ILampArraySolidEffectFactory.CreateInstance(lampArray, lampIndexes) */
 HRESULT wdelief_lamp_array_solid_effect_factory_create_instance(WDELIEF_ILampArraySolidEffectFactory *self, WDELI_LampArray* lampArray, int32_t *lampIndexes, uint32_t lampIndexes_len, WDELIEF_LampArraySolidEffect** out);
 
-/* Windows.Devices.Lights.Effects.ILampArrayEffectPlaylistStatics */
-/* Windows.Devices.Lights.Effects.ILampArrayEffectPlaylistStatics.StartAll() */
 HRESULT wdelief_lamp_array_effect_playlist_statics_start_all(WDELIEF_ILampArrayEffectPlaylistStatics *self, WFOCO_IIterable_WDELIEF_LampArrayEffectPlaylist* value);
 
-/* Windows.Devices.Lights.Effects.ILampArrayEffectPlaylistStatics.StopAll() */
 HRESULT wdelief_lamp_array_effect_playlist_statics_stop_all(WDELIEF_ILampArrayEffectPlaylistStatics *self, WFOCO_IIterable_WDELIEF_LampArrayEffectPlaylist* value);
 
-/* Windows.Devices.Lights.Effects.ILampArrayEffectPlaylistStatics.PauseAll() */
 HRESULT wdelief_lamp_array_effect_playlist_statics_pause_all(WDELIEF_ILampArrayEffectPlaylistStatics *self, WFOCO_IIterable_WDELIEF_LampArrayEffectPlaylist* value);
 
-/* Windows.Devices.Lights.Effects.ILampArrayBitmapEffectFactory */
-/* Windows.Devices.Lights.Effects.ILampArrayBitmapEffectFactory.CreateInstance(lampArray, lampIndexes) */
 HRESULT wdelief_lamp_array_bitmap_effect_factory_create_instance(WDELIEF_ILampArrayBitmapEffectFactory *self, WDELI_LampArray* lampArray, int32_t *lampIndexes, uint32_t lampIndexes_len, WDELIEF_LampArrayBitmapEffect** out);
 
-/* Windows.Devices.Lights.Effects.ILampArrayCustomEffectFactory */
-/* Windows.Devices.Lights.Effects.ILampArrayCustomEffectFactory.CreateInstance(lampArray, lampIndexes) */
 HRESULT wdelief_lamp_array_custom_effect_factory_create_instance(WDELIEF_ILampArrayCustomEffectFactory *self, WDELI_LampArray* lampArray, int32_t *lampIndexes, uint32_t lampIndexes_len, WDELIEF_LampArrayCustomEffect** out);
 
-/* Windows.Devices.Lights.Effects.ILampArrayColorRampEffectFactory */
-/* Windows.Devices.Lights.Effects.ILampArrayColorRampEffectFactory.CreateInstance(lampArray, lampIndexes) */
 HRESULT wdelief_lamp_array_color_ramp_effect_factory_create_instance(WDELIEF_ILampArrayColorRampEffectFactory *self, WDELI_LampArray* lampArray, int32_t *lampIndexes, uint32_t lampIndexes_len, WDELIEF_LampArrayColorRampEffect** out);
 
-/* Windows.Devices.Lights.Effects.ILampArrayBlinkEffectFactory */
-/* Windows.Devices.Lights.Effects.ILampArrayBlinkEffectFactory.CreateInstance(lampArray, lampIndexes) */
 HRESULT wdelief_lamp_array_blink_effect_factory_create_instance(WDELIEF_ILampArrayBlinkEffectFactory *self, WDELI_LampArray* lampArray, int32_t *lampIndexes, uint32_t lampIndexes_len, WDELIEF_LampArrayBlinkEffect** out);
 
-/* Windows.Devices.Lights.Effects.ILampArrayBitmapEffect */
-/* Windows.Devices.Lights.Effects.ILampArrayBitmapRequestedEventArgs */
-/* Windows.Devices.Lights.Effects.ILampArrayBlinkEffect */
-/* Windows.Devices.Lights.Effects.ILampArrayColorRampEffect */
-/* Windows.Devices.Lights.Effects.ILampArrayCustomEffect */
-/* Windows.Devices.Lights.Effects.ILampArrayEffectPlaylist */
-/* Windows.Devices.Lights.Effects.ILampArraySolidEffect */
-/* Windows.Devices.Lights.Effects.ILampArrayEffect */
-/* Windows.Devices.Lights.Effects.ILampArrayEffect.get_ZIndex() */
 HRESULT wdelief_lamp_array_effect_get__z_index(WDELIEF_ILampArrayEffect *self, int32_t *value);
 
-/* Windows.Devices.Lights.Effects.ILampArrayEffect.put_ZIndex() */
 HRESULT wdelief_lamp_array_effect_put__z_index(WDELIEF_ILampArrayEffect *self, int32_t value);
 
-/* Windows.Devices.Lights.Effects.ILampArrayUpdateRequestedEventArgs */
 #endif /* CWINRT_WINDOWS_DEVICES_LIGHTS_EFFECTS_H */

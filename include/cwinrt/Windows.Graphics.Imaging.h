@@ -14,7 +14,6 @@
 #include <cwinrt/Windows.Storage.Streams.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStreamWithContentType
 #define CWINRT_FWD_WSTST_IRandomAccessStreamWithContentType
 typedef struct WSTST_IRandomAccessStreamWithContentType WSTST_IRandomAccessStreamWithContentType;
@@ -40,7 +39,6 @@ typedef struct WSTST_IInputStream WSTST_IInputStream;
 typedef struct WSTST_IBuffer WSTST_IBuffer;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WGRIM_BitmapCodecInformation WGRIM_BitmapCodecInformation;
 typedef struct WGRIM_BitmapDecoder WGRIM_BitmapDecoder;
 typedef struct WGRIM_BitmapEncoder WGRIM_BitmapEncoder;
@@ -75,7 +73,6 @@ typedef struct WGRIM_IBitmapBuffer WGRIM_IBitmapBuffer;
 typedef struct WGRIM_IBitmapFrame WGRIM_IBitmapFrame;
 typedef struct WGRIM_IBitmapPropertiesView WGRIM_IBitmapPropertiesView;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IVectorView_HSTRING
 #define CWINRT_FWD_WFOCO_IVectorView_HSTRING
 typedef struct WFOCO_IVectorView_HSTRING WFOCO_IVectorView_HSTRING;
@@ -380,7 +377,6 @@ struct WGRIM_BitmapBounds {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -465,624 +461,394 @@ static const IID CWINRT_IID_WGRIM_IBitmapFrame CWINRT_MAYBE_UNUSED = { 0x72A49A1
 static const IID CWINRT_IID_WGRIM_IBitmapPropertiesView CWINRT_MAYBE_UNUSED = { 0x7E0FE87A, 0x3A70, 0x48F8, { 0x9C, 0x55, 0x19, 0x6C, 0xF5, 0xA5, 0x45, 0xF5 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Graphics.Imaging.BitmapCodecInformation */
 HRESULT wgrim_bitmap_codec_information_new(WGRIM_BitmapCodecInformation **out);
 
-/* Windows.Graphics.Imaging.BitmapCodecInformation */
-/* Windows.Graphics.Imaging.BitmapCodecInformation.get_CodecId() */
 HRESULT wgrim_bitmap_codec_information_get__codec_id(WGRIM_BitmapCodecInformation *self, GUID *value);
 
-/* Windows.Graphics.Imaging.BitmapCodecInformation.get_FileExtensions() */
 HRESULT wgrim_bitmap_codec_information_get__file_extensions(WGRIM_BitmapCodecInformation *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Graphics.Imaging.BitmapCodecInformation.get_FriendlyName() */
 HRESULT wgrim_bitmap_codec_information_get__friendly_name(WGRIM_BitmapCodecInformation *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Imaging.BitmapCodecInformation.get_MimeTypes() */
 HRESULT wgrim_bitmap_codec_information_get__mime_types(WGRIM_BitmapCodecInformation *self, WFOCO_IVectorView_HSTRING** value);
 
-/* activate Windows.Graphics.Imaging.BitmapDecoder */
 HRESULT wgrim_bitmap_decoder_new(WGRIM_BitmapDecoder **out);
 
-/* Windows.Graphics.Imaging.BitmapDecoder */
-/* Windows.Graphics.Imaging.BitmapDecoder.get_BitmapContainerProperties() */
 HRESULT wgrim_bitmap_decoder_get__bitmap_container_properties(WGRIM_BitmapDecoder *self, WGRIM_BitmapPropertiesView** value);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.get_DecoderInformation() */
 HRESULT wgrim_bitmap_decoder_get__decoder_information(WGRIM_BitmapDecoder *self, WGRIM_BitmapCodecInformation** value);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.get_FrameCount() */
 HRESULT wgrim_bitmap_decoder_get__frame_count(WGRIM_BitmapDecoder *self, uint32_t *value);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.GetPreviewAsync() */
 HRESULT wgrim_bitmap_decoder_get_preview_async(WGRIM_BitmapDecoder *self, WF_IAsyncOperation_WGRIM_ImageStream** out);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.GetFrameAsync(frameIndex) */
 HRESULT wgrim_bitmap_decoder_get_frame_async(WGRIM_BitmapDecoder *self, uint32_t frameIndex, WF_IAsyncOperation_WGRIM_BitmapFrame** out);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.GetThumbnailAsync() */
 HRESULT wgrim_bitmap_decoder_get_thumbnail_async(WGRIM_BitmapDecoder *self, WF_IAsyncOperation_WGRIM_ImageStream** out);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.get_BitmapProperties() */
 HRESULT wgrim_bitmap_decoder_get__bitmap_properties(WGRIM_BitmapDecoder *self, WGRIM_BitmapPropertiesView** value);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.get_BitmapPixelFormat() */
 HRESULT wgrim_bitmap_decoder_get__bitmap_pixel_format(WGRIM_BitmapDecoder *self, WGRIM_BitmapPixelFormat *value);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.get_BitmapAlphaMode() */
 HRESULT wgrim_bitmap_decoder_get__bitmap_alpha_mode(WGRIM_BitmapDecoder *self, WGRIM_BitmapAlphaMode *value);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.get_DpiX() */
 HRESULT wgrim_bitmap_decoder_get__dpi_x(WGRIM_BitmapDecoder *self, double *value);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.get_DpiY() */
 HRESULT wgrim_bitmap_decoder_get__dpi_y(WGRIM_BitmapDecoder *self, double *value);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.get_PixelWidth() */
 HRESULT wgrim_bitmap_decoder_get__pixel_width(WGRIM_BitmapDecoder *self, uint32_t *value);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.get_PixelHeight() */
 HRESULT wgrim_bitmap_decoder_get__pixel_height(WGRIM_BitmapDecoder *self, uint32_t *value);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.get_OrientedPixelWidth() */
 HRESULT wgrim_bitmap_decoder_get__oriented_pixel_width(WGRIM_BitmapDecoder *self, uint32_t *value);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.get_OrientedPixelHeight() */
 HRESULT wgrim_bitmap_decoder_get__oriented_pixel_height(WGRIM_BitmapDecoder *self, uint32_t *value);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.GetPixelDataAsync() */
 HRESULT wgrim_bitmap_decoder_get_pixel_data_async(WGRIM_BitmapDecoder *self, WF_IAsyncOperation_WGRIM_PixelDataProvider** out);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.GetPixelDataAsync(pixelFormat, alphaMode, transform, exifOrientationMode, colorManagementMode) */
 HRESULT wgrim_bitmap_decoder_get_pixel_data_async_bitmap_pixel_format_bitmap_alpha_mod_92d4409c(WGRIM_BitmapDecoder *self, WGRIM_BitmapPixelFormat pixelFormat, WGRIM_BitmapAlphaMode alphaMode, WGRIM_BitmapTransform* transform, WGRIM_ExifOrientationMode exifOrientationMode, WGRIM_ColorManagementMode colorManagementMode, WF_IAsyncOperation_WGRIM_PixelDataProvider** out);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.GetSoftwareBitmapAsync() */
 HRESULT wgrim_bitmap_decoder_get_software_bitmap_async(WGRIM_BitmapDecoder *self, WF_IAsyncOperation_WGRIM_SoftwareBitmap** out);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.GetSoftwareBitmapAsync(pixelFormat, alphaMode) */
 HRESULT wgrim_bitmap_decoder_get_software_bitmap_async_bitmap_pixel_format_bitmap_alpha_mode_p(WGRIM_BitmapDecoder *self, WGRIM_BitmapPixelFormat pixelFormat, WGRIM_BitmapAlphaMode alphaMode, WF_IAsyncOperation_WGRIM_SoftwareBitmap** out);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.GetSoftwareBitmapAsync(pixelFormat, alphaMode, transform, exifOrientationMode, colorManagementMode) */
 HRESULT wgrim_bitmap_decoder_get_software_bitmap_async_bitmap_pixel_format_bitmap_alpha_mod_92d4409c(WGRIM_BitmapDecoder *self, WGRIM_BitmapPixelFormat pixelFormat, WGRIM_BitmapAlphaMode alphaMode, WGRIM_BitmapTransform* transform, WGRIM_ExifOrientationMode exifOrientationMode, WGRIM_ColorManagementMode colorManagementMode, WF_IAsyncOperation_WGRIM_SoftwareBitmap** out);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.get_HeifDecoderId() */
 HRESULT wgrim_bitmap_decoder_get__heif_decoder_id(GUID *value);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.get_WebpDecoderId() */
 HRESULT wgrim_bitmap_decoder_get__webp_decoder_id(GUID *value);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.get_BmpDecoderId() */
 HRESULT wgrim_bitmap_decoder_get__bmp_decoder_id(GUID *value);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.get_JpegDecoderId() */
 HRESULT wgrim_bitmap_decoder_get__jpeg_decoder_id(GUID *value);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.get_PngDecoderId() */
 HRESULT wgrim_bitmap_decoder_get__png_decoder_id(GUID *value);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.get_TiffDecoderId() */
 HRESULT wgrim_bitmap_decoder_get__tiff_decoder_id(GUID *value);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.get_GifDecoderId() */
 HRESULT wgrim_bitmap_decoder_get__gif_decoder_id(GUID *value);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.get_JpegXRDecoderId() */
 HRESULT wgrim_bitmap_decoder_get__jpeg_x_r_decoder_id(GUID *value);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.get_IcoDecoderId() */
 HRESULT wgrim_bitmap_decoder_get__ico_decoder_id(GUID *value);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.GetDecoderInformationEnumerator() */
 HRESULT wgrim_bitmap_decoder_get_decoder_information_enumerator(WFOCO_IVectorView_WGRIM_BitmapCodecInformation** out);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.CreateAsync(stream) */
 HRESULT wgrim_bitmap_decoder_create_async(WSTST_IRandomAccessStream* stream, WF_IAsyncOperation_WGRIM_BitmapDecoder** out);
 
-/* Windows.Graphics.Imaging.BitmapDecoder.CreateAsync(decoderId, stream) */
 HRESULT wgrim_bitmap_decoder_create_async_g_u_i_d_p_p(GUID decoderId, WSTST_IRandomAccessStream* stream, WF_IAsyncOperation_WGRIM_BitmapDecoder** out);
 
-/* activate Windows.Graphics.Imaging.BitmapEncoder */
 HRESULT wgrim_bitmap_encoder_new(WGRIM_BitmapEncoder **out);
 
-/* Windows.Graphics.Imaging.BitmapEncoder */
-/* Windows.Graphics.Imaging.BitmapEncoder.get_EncoderInformation() */
 HRESULT wgrim_bitmap_encoder_get__encoder_information(WGRIM_BitmapEncoder *self, WGRIM_BitmapCodecInformation** value);
 
-/* Windows.Graphics.Imaging.BitmapEncoder.get_BitmapProperties() */
 HRESULT wgrim_bitmap_encoder_get__bitmap_properties(WGRIM_BitmapEncoder *self, WGRIM_BitmapProperties** value);
 
-/* Windows.Graphics.Imaging.BitmapEncoder.get_BitmapContainerProperties() */
 HRESULT wgrim_bitmap_encoder_get__bitmap_container_properties(WGRIM_BitmapEncoder *self, WGRIM_BitmapProperties** value);
 
-/* Windows.Graphics.Imaging.BitmapEncoder.get_IsThumbnailGenerated() */
 HRESULT wgrim_bitmap_encoder_get__is_thumbnail_generated(WGRIM_BitmapEncoder *self, BOOL *value);
 
-/* Windows.Graphics.Imaging.BitmapEncoder.put_IsThumbnailGenerated() */
 HRESULT wgrim_bitmap_encoder_put__is_thumbnail_generated(WGRIM_BitmapEncoder *self, BOOL value);
 
-/* Windows.Graphics.Imaging.BitmapEncoder.get_GeneratedThumbnailWidth() */
 HRESULT wgrim_bitmap_encoder_get__generated_thumbnail_width(WGRIM_BitmapEncoder *self, uint32_t *value);
 
-/* Windows.Graphics.Imaging.BitmapEncoder.put_GeneratedThumbnailWidth() */
 HRESULT wgrim_bitmap_encoder_put__generated_thumbnail_width(WGRIM_BitmapEncoder *self, uint32_t value);
 
-/* Windows.Graphics.Imaging.BitmapEncoder.get_GeneratedThumbnailHeight() */
 HRESULT wgrim_bitmap_encoder_get__generated_thumbnail_height(WGRIM_BitmapEncoder *self, uint32_t *value);
 
-/* Windows.Graphics.Imaging.BitmapEncoder.put_GeneratedThumbnailHeight() */
 HRESULT wgrim_bitmap_encoder_put__generated_thumbnail_height(WGRIM_BitmapEncoder *self, uint32_t value);
 
-/* Windows.Graphics.Imaging.BitmapEncoder.get_BitmapTransform() */
 HRESULT wgrim_bitmap_encoder_get__bitmap_transform(WGRIM_BitmapEncoder *self, WGRIM_BitmapTransform** value);
 
-/* Windows.Graphics.Imaging.BitmapEncoder.SetPixelData(pixelFormat, alphaMode, width, height, dpiX, dpiY, pixels) */
 HRESULT wgrim_bitmap_encoder_set_pixel_data(WGRIM_BitmapEncoder *self, WGRIM_BitmapPixelFormat pixelFormat, WGRIM_BitmapAlphaMode alphaMode, uint32_t width, uint32_t height, double dpiX, double dpiY, uint8_t *pixels, uint32_t pixels_len);
 
-/* Windows.Graphics.Imaging.BitmapEncoder.GoToNextFrameAsync() */
 HRESULT wgrim_bitmap_encoder_go_to_next_frame_async(WGRIM_BitmapEncoder *self, WF_IAsyncAction** out);
 
-/* Windows.Graphics.Imaging.BitmapEncoder.GoToNextFrameAsync(encodingOptions) */
 HRESULT wgrim_bitmap_encoder_go_to_next_frame_async_p_p(WGRIM_BitmapEncoder *self, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_WGRIM_BitmapTypedValue* encodingOptions, WF_IAsyncAction** out);
 
-/* Windows.Graphics.Imaging.BitmapEncoder.FlushAsync() */
 HRESULT wgrim_bitmap_encoder_flush_async(WGRIM_BitmapEncoder *self, WF_IAsyncAction** out);
 
-/* Windows.Graphics.Imaging.BitmapEncoder.SetSoftwareBitmap(bitmap) */
 HRESULT wgrim_bitmap_encoder_set_software_bitmap(WGRIM_BitmapEncoder *self, WGRIM_SoftwareBitmap* bitmap);
 
-/* Windows.Graphics.Imaging.BitmapEncoder.get_HeifEncoderId() */
 HRESULT wgrim_bitmap_encoder_get__heif_encoder_id(GUID *value);
 
-/* Windows.Graphics.Imaging.BitmapEncoder.get_BmpEncoderId() */
 HRESULT wgrim_bitmap_encoder_get__bmp_encoder_id(GUID *value);
 
-/* Windows.Graphics.Imaging.BitmapEncoder.get_JpegEncoderId() */
 HRESULT wgrim_bitmap_encoder_get__jpeg_encoder_id(GUID *value);
 
-/* Windows.Graphics.Imaging.BitmapEncoder.get_PngEncoderId() */
 HRESULT wgrim_bitmap_encoder_get__png_encoder_id(GUID *value);
 
-/* Windows.Graphics.Imaging.BitmapEncoder.get_TiffEncoderId() */
 HRESULT wgrim_bitmap_encoder_get__tiff_encoder_id(GUID *value);
 
-/* Windows.Graphics.Imaging.BitmapEncoder.get_GifEncoderId() */
 HRESULT wgrim_bitmap_encoder_get__gif_encoder_id(GUID *value);
 
-/* Windows.Graphics.Imaging.BitmapEncoder.get_JpegXREncoderId() */
 HRESULT wgrim_bitmap_encoder_get__jpeg_x_r_encoder_id(GUID *value);
 
-/* Windows.Graphics.Imaging.BitmapEncoder.GetEncoderInformationEnumerator() */
 HRESULT wgrim_bitmap_encoder_get_encoder_information_enumerator(WFOCO_IVectorView_WGRIM_BitmapCodecInformation** out);
 
-/* Windows.Graphics.Imaging.BitmapEncoder.CreateAsync(encoderId, stream) */
 HRESULT wgrim_bitmap_encoder_create_async(GUID encoderId, WSTST_IRandomAccessStream* stream, WF_IAsyncOperation_WGRIM_BitmapEncoder** out);
 
-/* Windows.Graphics.Imaging.BitmapEncoder.CreateAsync(encoderId, stream, encodingOptions) */
 HRESULT wgrim_bitmap_encoder_create_async_g_u_i_d_p_p_p(GUID encoderId, WSTST_IRandomAccessStream* stream, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_WGRIM_BitmapTypedValue* encodingOptions, WF_IAsyncOperation_WGRIM_BitmapEncoder** out);
 
-/* Windows.Graphics.Imaging.BitmapEncoder.CreateForTranscodingAsync(stream, bitmapDecoder) */
 HRESULT wgrim_bitmap_encoder_create_for_transcoding_async(WSTST_IRandomAccessStream* stream, WGRIM_BitmapDecoder* bitmapDecoder, WF_IAsyncOperation_WGRIM_BitmapEncoder** out);
 
-/* Windows.Graphics.Imaging.BitmapEncoder.CreateForInPlacePropertyEncodingAsync(bitmapDecoder) */
 HRESULT wgrim_bitmap_encoder_create_for_in_place_property_encoding_async(WGRIM_BitmapDecoder* bitmapDecoder, WF_IAsyncOperation_WGRIM_BitmapEncoder** out);
 
-/* activate Windows.Graphics.Imaging.BitmapFrame */
 HRESULT wgrim_bitmap_frame_new(WGRIM_BitmapFrame **out);
 
-/* Windows.Graphics.Imaging.BitmapFrame */
-/* Windows.Graphics.Imaging.BitmapFrame.GetThumbnailAsync() */
 HRESULT wgrim_bitmap_frame_get_thumbnail_async(WGRIM_BitmapFrame *self, WF_IAsyncOperation_WGRIM_ImageStream** out);
 
-/* Windows.Graphics.Imaging.BitmapFrame.get_BitmapProperties() */
 HRESULT wgrim_bitmap_frame_get__bitmap_properties(WGRIM_BitmapFrame *self, WGRIM_BitmapPropertiesView** value);
 
-/* Windows.Graphics.Imaging.BitmapFrame.get_BitmapPixelFormat() */
 HRESULT wgrim_bitmap_frame_get__bitmap_pixel_format(WGRIM_BitmapFrame *self, WGRIM_BitmapPixelFormat *value);
 
-/* Windows.Graphics.Imaging.BitmapFrame.get_BitmapAlphaMode() */
 HRESULT wgrim_bitmap_frame_get__bitmap_alpha_mode(WGRIM_BitmapFrame *self, WGRIM_BitmapAlphaMode *value);
 
-/* Windows.Graphics.Imaging.BitmapFrame.get_DpiX() */
 HRESULT wgrim_bitmap_frame_get__dpi_x(WGRIM_BitmapFrame *self, double *value);
 
-/* Windows.Graphics.Imaging.BitmapFrame.get_DpiY() */
 HRESULT wgrim_bitmap_frame_get__dpi_y(WGRIM_BitmapFrame *self, double *value);
 
-/* Windows.Graphics.Imaging.BitmapFrame.get_PixelWidth() */
 HRESULT wgrim_bitmap_frame_get__pixel_width(WGRIM_BitmapFrame *self, uint32_t *value);
 
-/* Windows.Graphics.Imaging.BitmapFrame.get_PixelHeight() */
 HRESULT wgrim_bitmap_frame_get__pixel_height(WGRIM_BitmapFrame *self, uint32_t *value);
 
-/* Windows.Graphics.Imaging.BitmapFrame.get_OrientedPixelWidth() */
 HRESULT wgrim_bitmap_frame_get__oriented_pixel_width(WGRIM_BitmapFrame *self, uint32_t *value);
 
-/* Windows.Graphics.Imaging.BitmapFrame.get_OrientedPixelHeight() */
 HRESULT wgrim_bitmap_frame_get__oriented_pixel_height(WGRIM_BitmapFrame *self, uint32_t *value);
 
-/* Windows.Graphics.Imaging.BitmapFrame.GetPixelDataAsync() */
 HRESULT wgrim_bitmap_frame_get_pixel_data_async(WGRIM_BitmapFrame *self, WF_IAsyncOperation_WGRIM_PixelDataProvider** out);
 
-/* Windows.Graphics.Imaging.BitmapFrame.GetPixelDataAsync(pixelFormat, alphaMode, transform, exifOrientationMode, colorManagementMode) */
 HRESULT wgrim_bitmap_frame_get_pixel_data_async_bitmap_pixel_format_bitmap_alpha_mod_92d4409c(WGRIM_BitmapFrame *self, WGRIM_BitmapPixelFormat pixelFormat, WGRIM_BitmapAlphaMode alphaMode, WGRIM_BitmapTransform* transform, WGRIM_ExifOrientationMode exifOrientationMode, WGRIM_ColorManagementMode colorManagementMode, WF_IAsyncOperation_WGRIM_PixelDataProvider** out);
 
-/* Windows.Graphics.Imaging.BitmapFrame.GetSoftwareBitmapAsync() */
 HRESULT wgrim_bitmap_frame_get_software_bitmap_async(WGRIM_BitmapFrame *self, WF_IAsyncOperation_WGRIM_SoftwareBitmap** out);
 
-/* Windows.Graphics.Imaging.BitmapFrame.GetSoftwareBitmapAsync(pixelFormat, alphaMode) */
 HRESULT wgrim_bitmap_frame_get_software_bitmap_async_bitmap_pixel_format_bitmap_alpha_mode_p(WGRIM_BitmapFrame *self, WGRIM_BitmapPixelFormat pixelFormat, WGRIM_BitmapAlphaMode alphaMode, WF_IAsyncOperation_WGRIM_SoftwareBitmap** out);
 
-/* Windows.Graphics.Imaging.BitmapFrame.GetSoftwareBitmapAsync(pixelFormat, alphaMode, transform, exifOrientationMode, colorManagementMode) */
 HRESULT wgrim_bitmap_frame_get_software_bitmap_async_bitmap_pixel_format_bitmap_alpha_mod_92d4409c(WGRIM_BitmapFrame *self, WGRIM_BitmapPixelFormat pixelFormat, WGRIM_BitmapAlphaMode alphaMode, WGRIM_BitmapTransform* transform, WGRIM_ExifOrientationMode exifOrientationMode, WGRIM_ColorManagementMode colorManagementMode, WF_IAsyncOperation_WGRIM_SoftwareBitmap** out);
 
-/* activate Windows.Graphics.Imaging.BitmapProperties */
 HRESULT wgrim_bitmap_properties_new(WGRIM_BitmapProperties **out);
 
-/* Windows.Graphics.Imaging.BitmapProperties */
-/* Windows.Graphics.Imaging.BitmapProperties.SetPropertiesAsync(propertiesToSet) */
 HRESULT wgrim_bitmap_properties_set_properties_async(WGRIM_BitmapProperties *self, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_WGRIM_BitmapTypedValue* propertiesToSet, WF_IAsyncAction** out);
 
-/* Windows.Graphics.Imaging.BitmapProperties.GetPropertiesAsync(propertiesToRetrieve) */
 HRESULT wgrim_bitmap_properties_get_properties_async(WGRIM_BitmapProperties *self, WFOCO_IIterable_HSTRING* propertiesToRetrieve, WF_IAsyncOperation_WGRIM_BitmapPropertySet** out);
 
-/* activate Windows.Graphics.Imaging.BitmapPropertiesView */
 HRESULT wgrim_bitmap_properties_view_new(WGRIM_BitmapPropertiesView **out);
 
-/* Windows.Graphics.Imaging.BitmapPropertiesView */
-/* Windows.Graphics.Imaging.BitmapPropertiesView.GetPropertiesAsync(propertiesToRetrieve) */
 HRESULT wgrim_bitmap_properties_view_get_properties_async(WGRIM_BitmapPropertiesView *self, WFOCO_IIterable_HSTRING* propertiesToRetrieve, WF_IAsyncOperation_WGRIM_BitmapPropertySet** out);
 
-/* activate Windows.Graphics.Imaging.BitmapPropertySet */
 HRESULT wgrim_bitmap_property_set_new(WGRIM_BitmapPropertySet **out);
 
-/* Windows.Graphics.Imaging.BitmapPropertySet */
-/* Windows.Graphics.Imaging.BitmapPropertySet.Lookup(key) */
 HRESULT wgrim_bitmap_property_set_lookup(WGRIM_BitmapPropertySet *self, cwinrt_hstring key, WGRIM_BitmapTypedValue** out);
 
-/* Windows.Graphics.Imaging.BitmapPropertySet.get_Size() */
 HRESULT wgrim_bitmap_property_set_get__size(WGRIM_BitmapPropertySet *self, uint32_t *value);
 
-/* Windows.Graphics.Imaging.BitmapPropertySet.HasKey(key) */
 HRESULT wgrim_bitmap_property_set_has_key(WGRIM_BitmapPropertySet *self, cwinrt_hstring key, BOOL *out);
 
-/* Windows.Graphics.Imaging.BitmapPropertySet.GetView() */
 HRESULT wgrim_bitmap_property_set_get_view(WGRIM_BitmapPropertySet *self, WFOCO_IMapView_HSTRING_WGRIM_BitmapTypedValue** out);
 
-/* Windows.Graphics.Imaging.BitmapPropertySet.Insert(key) */
 HRESULT wgrim_bitmap_property_set_insert(WGRIM_BitmapPropertySet *self, cwinrt_hstring key, WGRIM_BitmapTypedValue* value, BOOL *out);
 
-/* Windows.Graphics.Imaging.BitmapPropertySet.Remove(key) */
 HRESULT wgrim_bitmap_property_set_remove(WGRIM_BitmapPropertySet *self, cwinrt_hstring key);
 
-/* Windows.Graphics.Imaging.BitmapPropertySet.Clear() */
 HRESULT wgrim_bitmap_property_set_clear(WGRIM_BitmapPropertySet *self);
 
-/* Windows.Graphics.Imaging.BitmapPropertySet.First() */
 HRESULT wgrim_bitmap_property_set_first(WGRIM_BitmapPropertySet *self, WFOCO_IIterator_WFOCO_IKeyValuePair_HSTRING_WGRIM_BitmapTypedValue** out);
 
-/* activate Windows.Graphics.Imaging.BitmapTransform */
 HRESULT wgrim_bitmap_transform_new(WGRIM_BitmapTransform **out);
 
-/* Windows.Graphics.Imaging.BitmapTransform */
-/* Windows.Graphics.Imaging.BitmapTransform.get_ScaledWidth() */
 HRESULT wgrim_bitmap_transform_get__scaled_width(WGRIM_BitmapTransform *self, uint32_t *value);
 
-/* Windows.Graphics.Imaging.BitmapTransform.put_ScaledWidth() */
 HRESULT wgrim_bitmap_transform_put__scaled_width(WGRIM_BitmapTransform *self, uint32_t value);
 
-/* Windows.Graphics.Imaging.BitmapTransform.get_ScaledHeight() */
 HRESULT wgrim_bitmap_transform_get__scaled_height(WGRIM_BitmapTransform *self, uint32_t *value);
 
-/* Windows.Graphics.Imaging.BitmapTransform.put_ScaledHeight() */
 HRESULT wgrim_bitmap_transform_put__scaled_height(WGRIM_BitmapTransform *self, uint32_t value);
 
-/* Windows.Graphics.Imaging.BitmapTransform.get_InterpolationMode() */
 HRESULT wgrim_bitmap_transform_get__interpolation_mode(WGRIM_BitmapTransform *self, WGRIM_BitmapInterpolationMode *value);
 
-/* Windows.Graphics.Imaging.BitmapTransform.put_InterpolationMode() */
 HRESULT wgrim_bitmap_transform_put__interpolation_mode(WGRIM_BitmapTransform *self, WGRIM_BitmapInterpolationMode value);
 
-/* Windows.Graphics.Imaging.BitmapTransform.get_Flip() */
 HRESULT wgrim_bitmap_transform_get__flip(WGRIM_BitmapTransform *self, WGRIM_BitmapFlip *value);
 
-/* Windows.Graphics.Imaging.BitmapTransform.put_Flip() */
 HRESULT wgrim_bitmap_transform_put__flip(WGRIM_BitmapTransform *self, WGRIM_BitmapFlip value);
 
-/* Windows.Graphics.Imaging.BitmapTransform.get_Rotation() */
 HRESULT wgrim_bitmap_transform_get__rotation(WGRIM_BitmapTransform *self, WGRIM_BitmapRotation *value);
 
-/* Windows.Graphics.Imaging.BitmapTransform.put_Rotation() */
 HRESULT wgrim_bitmap_transform_put__rotation(WGRIM_BitmapTransform *self, WGRIM_BitmapRotation value);
 
-/* Windows.Graphics.Imaging.BitmapTransform.get_Bounds() */
 HRESULT wgrim_bitmap_transform_get__bounds(WGRIM_BitmapTransform *self, WGRIM_BitmapBounds *value);
 
-/* Windows.Graphics.Imaging.BitmapTransform.put_Bounds() */
 HRESULT wgrim_bitmap_transform_put__bounds(WGRIM_BitmapTransform *self, WGRIM_BitmapBounds value);
 
-/* activate Windows.Graphics.Imaging.BitmapTypedValue */
 HRESULT wgrim_bitmap_typed_value_new(WGRIM_BitmapTypedValue **out);
 
-/* Windows.Graphics.Imaging.BitmapTypedValue */
-/* Windows.Graphics.Imaging.BitmapTypedValue.get_Value() */
 HRESULT wgrim_bitmap_typed_value_get__value(WGRIM_BitmapTypedValue *self, IInspectable** value);
 
-/* Windows.Graphics.Imaging.BitmapTypedValue.get_Type() */
 HRESULT wgrim_bitmap_typed_value_get__type(WGRIM_BitmapTypedValue *self, WF_PropertyType *value);
 
-/* Windows.Graphics.Imaging.IBitmapDecoderStatics */
-/* Windows.Graphics.Imaging.IBitmapDecoderStatics.get_BmpDecoderId() */
 HRESULT wgrim_bitmap_decoder_statics_get__bmp_decoder_id(WGRIM_IBitmapDecoderStatics *self, GUID *value);
 
-/* Windows.Graphics.Imaging.IBitmapDecoderStatics.get_JpegDecoderId() */
 HRESULT wgrim_bitmap_decoder_statics_get__jpeg_decoder_id(WGRIM_IBitmapDecoderStatics *self, GUID *value);
 
-/* Windows.Graphics.Imaging.IBitmapDecoderStatics.get_PngDecoderId() */
 HRESULT wgrim_bitmap_decoder_statics_get__png_decoder_id(WGRIM_IBitmapDecoderStatics *self, GUID *value);
 
-/* Windows.Graphics.Imaging.IBitmapDecoderStatics.get_TiffDecoderId() */
 HRESULT wgrim_bitmap_decoder_statics_get__tiff_decoder_id(WGRIM_IBitmapDecoderStatics *self, GUID *value);
 
-/* Windows.Graphics.Imaging.IBitmapDecoderStatics.get_GifDecoderId() */
 HRESULT wgrim_bitmap_decoder_statics_get__gif_decoder_id(WGRIM_IBitmapDecoderStatics *self, GUID *value);
 
-/* Windows.Graphics.Imaging.IBitmapDecoderStatics.get_JpegXRDecoderId() */
 HRESULT wgrim_bitmap_decoder_statics_get__jpeg_x_r_decoder_id(WGRIM_IBitmapDecoderStatics *self, GUID *value);
 
-/* Windows.Graphics.Imaging.IBitmapDecoderStatics.get_IcoDecoderId() */
 HRESULT wgrim_bitmap_decoder_statics_get__ico_decoder_id(WGRIM_IBitmapDecoderStatics *self, GUID *value);
 
-/* Windows.Graphics.Imaging.IBitmapDecoderStatics.GetDecoderInformationEnumerator() */
 HRESULT wgrim_bitmap_decoder_statics_get_decoder_information_enumerator(WGRIM_IBitmapDecoderStatics *self, WFOCO_IVectorView_WGRIM_BitmapCodecInformation** out);
 
-/* Windows.Graphics.Imaging.IBitmapDecoderStatics.CreateAsync(stream) */
 HRESULT wgrim_bitmap_decoder_statics_create_async(WGRIM_IBitmapDecoderStatics *self, WSTST_IRandomAccessStream* stream, WF_IAsyncOperation_WGRIM_BitmapDecoder** out);
 
-/* Windows.Graphics.Imaging.IBitmapDecoderStatics.CreateAsync(decoderId, stream) */
 HRESULT wgrim_bitmap_decoder_statics_create_async_g_u_i_d_p_p(WGRIM_IBitmapDecoderStatics *self, GUID decoderId, WSTST_IRandomAccessStream* stream, WF_IAsyncOperation_WGRIM_BitmapDecoder** out);
 
-/* Windows.Graphics.Imaging.IBitmapDecoderStatics2 */
-/* Windows.Graphics.Imaging.IBitmapDecoderStatics2.get_HeifDecoderId() */
 HRESULT wgrim_bitmap_decoder_statics_2_get__heif_decoder_id(WGRIM_IBitmapDecoderStatics_2 *self, GUID *value);
 
-/* Windows.Graphics.Imaging.IBitmapDecoderStatics2.get_WebpDecoderId() */
 HRESULT wgrim_bitmap_decoder_statics_2_get__webp_decoder_id(WGRIM_IBitmapDecoderStatics_2 *self, GUID *value);
 
-/* Windows.Graphics.Imaging.IBitmapEncoderStatics */
-/* Windows.Graphics.Imaging.IBitmapEncoderStatics.get_BmpEncoderId() */
 HRESULT wgrim_bitmap_encoder_statics_get__bmp_encoder_id(WGRIM_IBitmapEncoderStatics *self, GUID *value);
 
-/* Windows.Graphics.Imaging.IBitmapEncoderStatics.get_JpegEncoderId() */
 HRESULT wgrim_bitmap_encoder_statics_get__jpeg_encoder_id(WGRIM_IBitmapEncoderStatics *self, GUID *value);
 
-/* Windows.Graphics.Imaging.IBitmapEncoderStatics.get_PngEncoderId() */
 HRESULT wgrim_bitmap_encoder_statics_get__png_encoder_id(WGRIM_IBitmapEncoderStatics *self, GUID *value);
 
-/* Windows.Graphics.Imaging.IBitmapEncoderStatics.get_TiffEncoderId() */
 HRESULT wgrim_bitmap_encoder_statics_get__tiff_encoder_id(WGRIM_IBitmapEncoderStatics *self, GUID *value);
 
-/* Windows.Graphics.Imaging.IBitmapEncoderStatics.get_GifEncoderId() */
 HRESULT wgrim_bitmap_encoder_statics_get__gif_encoder_id(WGRIM_IBitmapEncoderStatics *self, GUID *value);
 
-/* Windows.Graphics.Imaging.IBitmapEncoderStatics.get_JpegXREncoderId() */
 HRESULT wgrim_bitmap_encoder_statics_get__jpeg_x_r_encoder_id(WGRIM_IBitmapEncoderStatics *self, GUID *value);
 
-/* Windows.Graphics.Imaging.IBitmapEncoderStatics.GetEncoderInformationEnumerator() */
 HRESULT wgrim_bitmap_encoder_statics_get_encoder_information_enumerator(WGRIM_IBitmapEncoderStatics *self, WFOCO_IVectorView_WGRIM_BitmapCodecInformation** out);
 
-/* Windows.Graphics.Imaging.IBitmapEncoderStatics.CreateAsync(encoderId, stream) */
 HRESULT wgrim_bitmap_encoder_statics_create_async(WGRIM_IBitmapEncoderStatics *self, GUID encoderId, WSTST_IRandomAccessStream* stream, WF_IAsyncOperation_WGRIM_BitmapEncoder** out);
 
-/* Windows.Graphics.Imaging.IBitmapEncoderStatics.CreateAsync(encoderId, stream, encodingOptions) */
 HRESULT wgrim_bitmap_encoder_statics_create_async_g_u_i_d_p_p_p(WGRIM_IBitmapEncoderStatics *self, GUID encoderId, WSTST_IRandomAccessStream* stream, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_WGRIM_BitmapTypedValue* encodingOptions, WF_IAsyncOperation_WGRIM_BitmapEncoder** out);
 
-/* Windows.Graphics.Imaging.IBitmapEncoderStatics.CreateForTranscodingAsync(stream, bitmapDecoder) */
 HRESULT wgrim_bitmap_encoder_statics_create_for_transcoding_async(WGRIM_IBitmapEncoderStatics *self, WSTST_IRandomAccessStream* stream, WGRIM_BitmapDecoder* bitmapDecoder, WF_IAsyncOperation_WGRIM_BitmapEncoder** out);
 
-/* Windows.Graphics.Imaging.IBitmapEncoderStatics.CreateForInPlacePropertyEncodingAsync(bitmapDecoder) */
 HRESULT wgrim_bitmap_encoder_statics_create_for_in_place_property_encoding_async(WGRIM_IBitmapEncoderStatics *self, WGRIM_BitmapDecoder* bitmapDecoder, WF_IAsyncOperation_WGRIM_BitmapEncoder** out);
 
-/* Windows.Graphics.Imaging.IBitmapEncoderStatics2 */
-/* Windows.Graphics.Imaging.IBitmapEncoderStatics2.get_HeifEncoderId() */
 HRESULT wgrim_bitmap_encoder_statics_2_get__heif_encoder_id(WGRIM_IBitmapEncoderStatics_2 *self, GUID *value);
 
-/* Windows.Graphics.Imaging.IBitmapTypedValueFactory */
-/* Windows.Graphics.Imaging.IBitmapTypedValueFactory.Create() */
 HRESULT wgrim_bitmap_typed_value_factory_create(WGRIM_IBitmapTypedValueFactory *self, IInspectable* value, WF_PropertyType type_, WGRIM_BitmapTypedValue** out);
 
-/* Windows.Graphics.Imaging.ISoftwareBitmapFactory */
-/* Windows.Graphics.Imaging.ISoftwareBitmapFactory.Create(format, width, height) */
 HRESULT wgrim_software_bitmap_factory_create(WGRIM_ISoftwareBitmapFactory *self, WGRIM_BitmapPixelFormat format, int32_t width, int32_t height, WGRIM_SoftwareBitmap** out);
 
-/* Windows.Graphics.Imaging.ISoftwareBitmapFactory.CreateWithAlpha(format, width, height, alpha) */
 HRESULT wgrim_software_bitmap_factory_create_with_alpha(WGRIM_ISoftwareBitmapFactory *self, WGRIM_BitmapPixelFormat format, int32_t width, int32_t height, WGRIM_BitmapAlphaMode alpha, WGRIM_SoftwareBitmap** out);
 
-/* Windows.Graphics.Imaging.ISoftwareBitmapStatics */
-/* Windows.Graphics.Imaging.ISoftwareBitmapStatics.Copy(source) */
 HRESULT wgrim_software_bitmap_statics_copy(WGRIM_ISoftwareBitmapStatics *self, WGRIM_SoftwareBitmap* source, WGRIM_SoftwareBitmap** out);
 
-/* Windows.Graphics.Imaging.ISoftwareBitmapStatics.Convert(source, format) */
 HRESULT wgrim_software_bitmap_statics_convert(WGRIM_ISoftwareBitmapStatics *self, WGRIM_SoftwareBitmap* source, WGRIM_BitmapPixelFormat format, WGRIM_SoftwareBitmap** out);
 
-/* Windows.Graphics.Imaging.ISoftwareBitmapStatics.Convert(source, format, alpha) */
 HRESULT wgrim_software_bitmap_statics_convert_p_bitmap_pixel_format_bitmap_alpha_mode_p(WGRIM_ISoftwareBitmapStatics *self, WGRIM_SoftwareBitmap* source, WGRIM_BitmapPixelFormat format, WGRIM_BitmapAlphaMode alpha, WGRIM_SoftwareBitmap** out);
 
-/* Windows.Graphics.Imaging.ISoftwareBitmapStatics.CreateCopyFromBuffer(source, format, width, height) */
 HRESULT wgrim_software_bitmap_statics_create_copy_from_buffer(WGRIM_ISoftwareBitmapStatics *self, WSTST_IBuffer* source, WGRIM_BitmapPixelFormat format, int32_t width, int32_t height, WGRIM_SoftwareBitmap** out);
 
-/* Windows.Graphics.Imaging.ISoftwareBitmapStatics.CreateCopyFromBuffer(source, format, width, height, alpha) */
 HRESULT wgrim_software_bitmap_statics_create_copy_from_buffer_p_bitmap_pixel_format_i32_i32_bitmap_2d7f7198(WGRIM_ISoftwareBitmapStatics *self, WSTST_IBuffer* source, WGRIM_BitmapPixelFormat format, int32_t width, int32_t height, WGRIM_BitmapAlphaMode alpha, WGRIM_SoftwareBitmap** out);
 
-/* Windows.Graphics.Imaging.ISoftwareBitmapStatics.CreateCopyFromSurfaceAsync(surface) */
 HRESULT wgrim_software_bitmap_statics_create_copy_from_surface_async(WGRIM_ISoftwareBitmapStatics *self, WGRDIDI_IDirect3DSurface* surface, WF_IAsyncOperation_WGRIM_SoftwareBitmap** out);
 
-/* Windows.Graphics.Imaging.ISoftwareBitmapStatics.CreateCopyFromSurfaceAsync(surface, alpha) */
 HRESULT wgrim_software_bitmap_statics_create_copy_from_surface_async_p_bitmap_alpha_mode_p(WGRIM_ISoftwareBitmapStatics *self, WGRDIDI_IDirect3DSurface* surface, WGRIM_BitmapAlphaMode alpha, WF_IAsyncOperation_WGRIM_SoftwareBitmap** out);
 
-/* activate Windows.Graphics.Imaging.ImageStream */
 HRESULT wgrim_image_stream_new(WGRIM_ImageStream **out);
 
-/* Windows.Graphics.Imaging.ImageStream */
-/* Windows.Graphics.Imaging.ImageStream.get_Size() */
 HRESULT wgrim_image_stream_get__size(WGRIM_ImageStream *self, uint64_t *value);
 
-/* Windows.Graphics.Imaging.ImageStream.put_Size() */
 HRESULT wgrim_image_stream_put__size(WGRIM_ImageStream *self, uint64_t value);
 
-/* Windows.Graphics.Imaging.ImageStream.GetInputStreamAt(position) */
 HRESULT wgrim_image_stream_get_input_stream_at(WGRIM_ImageStream *self, uint64_t position, WSTST_IInputStream** out);
 
-/* Windows.Graphics.Imaging.ImageStream.GetOutputStreamAt(position) */
 HRESULT wgrim_image_stream_get_output_stream_at(WGRIM_ImageStream *self, uint64_t position, WSTST_IOutputStream** out);
 
-/* Windows.Graphics.Imaging.ImageStream.get_Position() */
 HRESULT wgrim_image_stream_get__position(WGRIM_ImageStream *self, uint64_t *value);
 
-/* Windows.Graphics.Imaging.ImageStream.Seek(position) */
 HRESULT wgrim_image_stream_seek(WGRIM_ImageStream *self, uint64_t position);
 
-/* Windows.Graphics.Imaging.ImageStream.CloneStream() */
 HRESULT wgrim_image_stream_clone_stream(WGRIM_ImageStream *self, WSTST_IRandomAccessStream** out);
 
-/* Windows.Graphics.Imaging.ImageStream.get_CanRead() */
 HRESULT wgrim_image_stream_get__can_read(WGRIM_ImageStream *self, BOOL *value);
 
-/* Windows.Graphics.Imaging.ImageStream.get_CanWrite() */
 HRESULT wgrim_image_stream_get__can_write(WGRIM_ImageStream *self, BOOL *value);
 
-/* Windows.Graphics.Imaging.ImageStream.Close() */
 HRESULT wgrim_image_stream_close(WGRIM_ImageStream *self);
 
-/* Windows.Graphics.Imaging.ImageStream.ReadAsync(buffer, count, options) */
 HRESULT wgrim_image_stream_read_async(WGRIM_ImageStream *self, WSTST_IBuffer* buffer, uint32_t count, WSTST_InputStreamOptions options, WF_IAsyncOperationWithProgress_WSTST_IBuffer_uint32_t** out);
 
-/* Windows.Graphics.Imaging.ImageStream.WriteAsync(buffer) */
 HRESULT wgrim_image_stream_write_async(WGRIM_ImageStream *self, WSTST_IBuffer* buffer, WF_IAsyncOperationWithProgress_uint32_t_uint32_t** out);
 
-/* Windows.Graphics.Imaging.ImageStream.FlushAsync() */
 HRESULT wgrim_image_stream_flush_async(WGRIM_ImageStream *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Graphics.Imaging.ImageStream.get_ContentType() */
 HRESULT wgrim_image_stream_get__content_type(WGRIM_ImageStream *self, cwinrt_hstring *value);
 
-/* activate Windows.Graphics.Imaging.PixelDataProvider */
 HRESULT wgrim_pixel_data_provider_new(WGRIM_PixelDataProvider **out);
 
-/* Windows.Graphics.Imaging.PixelDataProvider */
-/* Windows.Graphics.Imaging.PixelDataProvider.DetachPixelData() */
 HRESULT wgrim_pixel_data_provider_detach_pixel_data(WGRIM_PixelDataProvider *self, uint8_t **out, uint32_t *out_len);
 
-/* activate Windows.Graphics.Imaging.SoftwareBitmap */
 HRESULT wgrim_software_bitmap_new(WGRIM_SoftwareBitmap **out);
 
-/* Windows.Graphics.Imaging.SoftwareBitmap */
-/* Windows.Graphics.Imaging.SoftwareBitmap.get_BitmapPixelFormat() */
 HRESULT wgrim_software_bitmap_get__bitmap_pixel_format(WGRIM_SoftwareBitmap *self, WGRIM_BitmapPixelFormat *value);
 
-/* Windows.Graphics.Imaging.SoftwareBitmap.get_BitmapAlphaMode() */
 HRESULT wgrim_software_bitmap_get__bitmap_alpha_mode(WGRIM_SoftwareBitmap *self, WGRIM_BitmapAlphaMode *value);
 
-/* Windows.Graphics.Imaging.SoftwareBitmap.get_PixelWidth() */
 HRESULT wgrim_software_bitmap_get__pixel_width(WGRIM_SoftwareBitmap *self, int32_t *value);
 
-/* Windows.Graphics.Imaging.SoftwareBitmap.get_PixelHeight() */
 HRESULT wgrim_software_bitmap_get__pixel_height(WGRIM_SoftwareBitmap *self, int32_t *value);
 
-/* Windows.Graphics.Imaging.SoftwareBitmap.get_IsReadOnly() */
 HRESULT wgrim_software_bitmap_get__is_read_only(WGRIM_SoftwareBitmap *self, BOOL *value);
 
-/* Windows.Graphics.Imaging.SoftwareBitmap.put_DpiX() */
 HRESULT wgrim_software_bitmap_put__dpi_x(WGRIM_SoftwareBitmap *self, double value);
 
-/* Windows.Graphics.Imaging.SoftwareBitmap.get_DpiX() */
 HRESULT wgrim_software_bitmap_get__dpi_x(WGRIM_SoftwareBitmap *self, double *value);
 
-/* Windows.Graphics.Imaging.SoftwareBitmap.put_DpiY() */
 HRESULT wgrim_software_bitmap_put__dpi_y(WGRIM_SoftwareBitmap *self, double value);
 
-/* Windows.Graphics.Imaging.SoftwareBitmap.get_DpiY() */
 HRESULT wgrim_software_bitmap_get__dpi_y(WGRIM_SoftwareBitmap *self, double *value);
 
-/* Windows.Graphics.Imaging.SoftwareBitmap.LockBuffer(mode) */
 HRESULT wgrim_software_bitmap_lock_buffer(WGRIM_SoftwareBitmap *self, WGRIM_BitmapBufferAccessMode mode, WGRIM_BitmapBuffer** out);
 
-/* Windows.Graphics.Imaging.SoftwareBitmap.CopyTo(bitmap) */
 HRESULT wgrim_software_bitmap_copy_to(WGRIM_SoftwareBitmap *self, WGRIM_SoftwareBitmap* bitmap);
 
-/* Windows.Graphics.Imaging.SoftwareBitmap.CopyFromBuffer(buffer) */
 HRESULT wgrim_software_bitmap_copy_from_buffer(WGRIM_SoftwareBitmap *self, WSTST_IBuffer* buffer);
 
-/* Windows.Graphics.Imaging.SoftwareBitmap.CopyToBuffer(buffer) */
 HRESULT wgrim_software_bitmap_copy_to_buffer(WGRIM_SoftwareBitmap *self, WSTST_IBuffer* buffer);
 
-/* Windows.Graphics.Imaging.SoftwareBitmap.GetReadOnlyView() */
 HRESULT wgrim_software_bitmap_get_read_only_view(WGRIM_SoftwareBitmap *self, WGRIM_SoftwareBitmap** out);
 
-/* Windows.Graphics.Imaging.SoftwareBitmap.Close() */
 HRESULT wgrim_software_bitmap_close(WGRIM_SoftwareBitmap *self);
 
-/* Windows.Graphics.Imaging.SoftwareBitmap.Copy(source) */
 HRESULT wgrim_software_bitmap_copy(WGRIM_SoftwareBitmap* source, WGRIM_SoftwareBitmap** out);
 
-/* Windows.Graphics.Imaging.SoftwareBitmap.Convert(source, format) */
 HRESULT wgrim_software_bitmap_convert(WGRIM_SoftwareBitmap* source, WGRIM_BitmapPixelFormat format, WGRIM_SoftwareBitmap** out);
 
-/* Windows.Graphics.Imaging.SoftwareBitmap.Convert(source, format, alpha) */
 HRESULT wgrim_software_bitmap_convert_p_bitmap_pixel_format_bitmap_alpha_mode_p(WGRIM_SoftwareBitmap* source, WGRIM_BitmapPixelFormat format, WGRIM_BitmapAlphaMode alpha, WGRIM_SoftwareBitmap** out);
 
-/* Windows.Graphics.Imaging.SoftwareBitmap.CreateCopyFromBuffer(source, format, width, height) */
 HRESULT wgrim_software_bitmap_create_copy_from_buffer(WSTST_IBuffer* source, WGRIM_BitmapPixelFormat format, int32_t width, int32_t height, WGRIM_SoftwareBitmap** out);
 
-/* Windows.Graphics.Imaging.SoftwareBitmap.CreateCopyFromBuffer(source, format, width, height, alpha) */
 HRESULT wgrim_software_bitmap_create_copy_from_buffer_p_bitmap_pixel_format_i32_i32_bitmap_2d7f7198(WSTST_IBuffer* source, WGRIM_BitmapPixelFormat format, int32_t width, int32_t height, WGRIM_BitmapAlphaMode alpha, WGRIM_SoftwareBitmap** out);
 
-/* Windows.Graphics.Imaging.SoftwareBitmap.CreateCopyFromSurfaceAsync(surface) */
 HRESULT wgrim_software_bitmap_create_copy_from_surface_async(WGRDIDI_IDirect3DSurface* surface, WF_IAsyncOperation_WGRIM_SoftwareBitmap** out);
 
-/* Windows.Graphics.Imaging.SoftwareBitmap.CreateCopyFromSurfaceAsync(surface, alpha) */
 HRESULT wgrim_software_bitmap_create_copy_from_surface_async_p_bitmap_alpha_mode_p(WGRDIDI_IDirect3DSurface* surface, WGRIM_BitmapAlphaMode alpha, WF_IAsyncOperation_WGRIM_SoftwareBitmap** out);
 
-/* activate Windows.Graphics.Imaging.BitmapBuffer */
 HRESULT wgrim_bitmap_buffer_new(WGRIM_BitmapBuffer **out);
 
-/* Windows.Graphics.Imaging.BitmapBuffer */
-/* Windows.Graphics.Imaging.BitmapBuffer.GetPlaneCount() */
 HRESULT wgrim_bitmap_buffer_get_plane_count(WGRIM_BitmapBuffer *self, int32_t *out);
 
-/* Windows.Graphics.Imaging.BitmapBuffer.GetPlaneDescription(index) */
 HRESULT wgrim_bitmap_buffer_get_plane_description(WGRIM_BitmapBuffer *self, int32_t index, WGRIM_BitmapPlaneDescription *out);
 
-/* Windows.Graphics.Imaging.BitmapBuffer.CreateReference() */
 HRESULT wgrim_bitmap_buffer_create_reference(WGRIM_BitmapBuffer *self, WF_IMemoryBufferReference** out);
 
-/* Windows.Graphics.Imaging.BitmapBuffer.Close() */
 HRESULT wgrim_bitmap_buffer_close(WGRIM_BitmapBuffer *self);
 
-/* Windows.Graphics.Imaging.IBitmapCodecInformation */
-/* Windows.Graphics.Imaging.IBitmapDecoder */
-/* Windows.Graphics.Imaging.IBitmapEncoder */
-/* Windows.Graphics.Imaging.IBitmapEncoderWithSoftwareBitmap */
-/* Windows.Graphics.Imaging.IBitmapEncoderWithSoftwareBitmap.SetSoftwareBitmap(bitmap) */
 HRESULT wgrim_bitmap_encoder_with_software_bitmap_set_software_bitmap(WGRIM_IBitmapEncoderWithSoftwareBitmap *self, WGRIM_SoftwareBitmap* bitmap);
 
-/* Windows.Graphics.Imaging.IBitmapFrameWithSoftwareBitmap */
-/* Windows.Graphics.Imaging.IBitmapFrameWithSoftwareBitmap.GetSoftwareBitmapAsync() */
 HRESULT wgrim_bitmap_frame_with_software_bitmap_get_software_bitmap_async(WGRIM_IBitmapFrameWithSoftwareBitmap *self, WF_IAsyncOperation_WGRIM_SoftwareBitmap** out);
 
-/* Windows.Graphics.Imaging.IBitmapFrameWithSoftwareBitmap.GetSoftwareBitmapAsync(pixelFormat, alphaMode) */
 HRESULT wgrim_bitmap_frame_with_software_bitmap_get_software_bitmap_async_bitmap_pixel_format_bitmap_alpha_mode_p(WGRIM_IBitmapFrameWithSoftwareBitmap *self, WGRIM_BitmapPixelFormat pixelFormat, WGRIM_BitmapAlphaMode alphaMode, WF_IAsyncOperation_WGRIM_SoftwareBitmap** out);
 
-/* Windows.Graphics.Imaging.IBitmapFrameWithSoftwareBitmap.GetSoftwareBitmapAsync(pixelFormat, alphaMode, transform, exifOrientationMode, colorManagementMode) */
 HRESULT wgrim_bitmap_frame_with_software_bitmap_get_software_bitmap_async_bitmap_pixel_format_bitmap_alpha_mod_92d4409c(WGRIM_IBitmapFrameWithSoftwareBitmap *self, WGRIM_BitmapPixelFormat pixelFormat, WGRIM_BitmapAlphaMode alphaMode, WGRIM_BitmapTransform* transform, WGRIM_ExifOrientationMode exifOrientationMode, WGRIM_ColorManagementMode colorManagementMode, WF_IAsyncOperation_WGRIM_SoftwareBitmap** out);
 
-/* Windows.Graphics.Imaging.IBitmapProperties */
-/* Windows.Graphics.Imaging.IBitmapTransform */
-/* Windows.Graphics.Imaging.IBitmapTypedValue */
-/* Windows.Graphics.Imaging.IPixelDataProvider */
-/* Windows.Graphics.Imaging.ISoftwareBitmap */
-/* Windows.Graphics.Imaging.IBitmapBuffer */
-/* Windows.Graphics.Imaging.IBitmapFrame */
-/* Windows.Graphics.Imaging.IBitmapPropertiesView */
 #endif /* CWINRT_WINDOWS_GRAPHICS_IMAGING_H */

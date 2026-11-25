@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Storage.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WSTPIPR_FileOpenPickerUI WSTPIPR_FileOpenPickerUI;
 typedef struct WSTPIPR_FileRemovedEventArgs WSTPIPR_FileRemovedEventArgs;
 typedef struct WSTPIPR_FileSavePickerUI WSTPIPR_FileSavePickerUI;
@@ -33,7 +32,6 @@ typedef struct WSTPIPR_IPickerClosingOperation WSTPIPR_IPickerClosingOperation;
 typedef struct WSTPIPR_IPickerClosingEventArgs WSTPIPR_IPickerClosingEventArgs;
 typedef struct WSTPIPR_IPickerClosingDeferral WSTPIPR_IPickerClosingDeferral;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WS_IStorageFile
 #define CWINRT_FWD_WS_IStorageFile
 typedef struct WS_IStorageFile WS_IStorageFile;
@@ -90,7 +88,6 @@ typedef enum WSTPIPR_FileSelectionMode {
 } WSTPIPR_FileSelectionMode;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -131,40 +128,26 @@ static const IID CWINRT_IID_WSTPIPR_IPickerClosingEventArgs CWINRT_MAYBE_UNUSED 
 static const IID CWINRT_IID_WSTPIPR_IPickerClosingDeferral CWINRT_MAYBE_UNUSED = { 0x7AF7F71E, 0x1A67, 0x4A31, { 0xAE, 0x80, 0xE9, 0x07, 0x70, 0x8A, 0x61, 0x9B } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Storage.Pickers.Provider.FileOpenPickerUI */
 HRESULT wstpipr_file_open_picker_u_i_new(WSTPIPR_FileOpenPickerUI **out);
 
-/* Windows.Storage.Pickers.Provider.FileOpenPickerUI */
-/* Windows.Storage.Pickers.Provider.FileOpenPickerUI.AddFile(id, file) */
 HRESULT wstpipr_file_open_picker_u_i_add_file(WSTPIPR_FileOpenPickerUI *self, cwinrt_hstring id, WS_IStorageFile* file, WSTPIPR_AddFileResult *out);
 
-/* Windows.Storage.Pickers.Provider.FileOpenPickerUI.RemoveFile(id) */
 HRESULT wstpipr_file_open_picker_u_i_remove_file(WSTPIPR_FileOpenPickerUI *self, cwinrt_hstring id);
 
-/* Windows.Storage.Pickers.Provider.FileOpenPickerUI.ContainsFile(id) */
 HRESULT wstpipr_file_open_picker_u_i_contains_file(WSTPIPR_FileOpenPickerUI *self, cwinrt_hstring id, BOOL *out);
 
-/* Windows.Storage.Pickers.Provider.FileOpenPickerUI.CanAddFile(file) */
 HRESULT wstpipr_file_open_picker_u_i_can_add_file(WSTPIPR_FileOpenPickerUI *self, WS_IStorageFile* file, BOOL *out);
 
-/* Windows.Storage.Pickers.Provider.FileOpenPickerUI.get_AllowedFileTypes() */
 HRESULT wstpipr_file_open_picker_u_i_get__allowed_file_types(WSTPIPR_FileOpenPickerUI *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Storage.Pickers.Provider.FileOpenPickerUI.get_SelectionMode() */
 HRESULT wstpipr_file_open_picker_u_i_get__selection_mode(WSTPIPR_FileOpenPickerUI *self, WSTPIPR_FileSelectionMode *value);
 
-/* Windows.Storage.Pickers.Provider.FileOpenPickerUI.get_SettingsIdentifier() */
 HRESULT wstpipr_file_open_picker_u_i_get__settings_identifier(WSTPIPR_FileOpenPickerUI *self, cwinrt_hstring *value);
 
-/* Windows.Storage.Pickers.Provider.FileOpenPickerUI.get_Title() */
 HRESULT wstpipr_file_open_picker_u_i_get__title(WSTPIPR_FileOpenPickerUI *self, cwinrt_hstring *value);
 
-/* Windows.Storage.Pickers.Provider.FileOpenPickerUI.put_Title() */
 HRESULT wstpipr_file_open_picker_u_i_put__title(WSTPIPR_FileOpenPickerUI *self, cwinrt_hstring value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wstpipr_file_open_picker_u_i_on_file_removed(WSTPIPR_FileOpenPickerUI *self, cwinrt_event_fn fn, void *ctx);
@@ -173,36 +156,24 @@ void wstpipr_file_open_picker_u_i_off_file_removed(WSTPIPR_FileOpenPickerUI *sel
 cwinrt_token wstpipr_file_open_picker_u_i_on_closing(WSTPIPR_FileOpenPickerUI *self, cwinrt_event_fn fn, void *ctx);
 void wstpipr_file_open_picker_u_i_off_closing(WSTPIPR_FileOpenPickerUI *self, cwinrt_token token);
 
-/* activate Windows.Storage.Pickers.Provider.FileRemovedEventArgs */
 HRESULT wstpipr_file_removed_event_args_new(WSTPIPR_FileRemovedEventArgs **out);
 
-/* Windows.Storage.Pickers.Provider.FileRemovedEventArgs */
-/* Windows.Storage.Pickers.Provider.FileRemovedEventArgs.get_Id() */
 HRESULT wstpipr_file_removed_event_args_get__id(WSTPIPR_FileRemovedEventArgs *self, cwinrt_hstring *value);
 
-/* activate Windows.Storage.Pickers.Provider.FileSavePickerUI */
 HRESULT wstpipr_file_save_picker_u_i_new(WSTPIPR_FileSavePickerUI **out);
 
-/* Windows.Storage.Pickers.Provider.FileSavePickerUI */
-/* Windows.Storage.Pickers.Provider.FileSavePickerUI.get_Title() */
 HRESULT wstpipr_file_save_picker_u_i_get__title(WSTPIPR_FileSavePickerUI *self, cwinrt_hstring *value);
 
-/* Windows.Storage.Pickers.Provider.FileSavePickerUI.put_Title() */
 HRESULT wstpipr_file_save_picker_u_i_put__title(WSTPIPR_FileSavePickerUI *self, cwinrt_hstring value);
 
-/* Windows.Storage.Pickers.Provider.FileSavePickerUI.get_AllowedFileTypes() */
 HRESULT wstpipr_file_save_picker_u_i_get__allowed_file_types(WSTPIPR_FileSavePickerUI *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Storage.Pickers.Provider.FileSavePickerUI.get_SettingsIdentifier() */
 HRESULT wstpipr_file_save_picker_u_i_get__settings_identifier(WSTPIPR_FileSavePickerUI *self, cwinrt_hstring *value);
 
-/* Windows.Storage.Pickers.Provider.FileSavePickerUI.get_FileName() */
 HRESULT wstpipr_file_save_picker_u_i_get__file_name(WSTPIPR_FileSavePickerUI *self, cwinrt_hstring *value);
 
-/* Windows.Storage.Pickers.Provider.FileSavePickerUI.TrySetFileName() */
 HRESULT wstpipr_file_save_picker_u_i_try_set_file_name(WSTPIPR_FileSavePickerUI *self, cwinrt_hstring value, WSTPIPR_SetFileNameResult *out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wstpipr_file_save_picker_u_i_on_file_name_changed(WSTPIPR_FileSavePickerUI *self, cwinrt_event_fn fn, void *ctx);
@@ -211,67 +182,36 @@ void wstpipr_file_save_picker_u_i_off_file_name_changed(WSTPIPR_FileSavePickerUI
 cwinrt_token wstpipr_file_save_picker_u_i_on_target_file_requested(WSTPIPR_FileSavePickerUI *self, cwinrt_event_fn fn, void *ctx);
 void wstpipr_file_save_picker_u_i_off_target_file_requested(WSTPIPR_FileSavePickerUI *self, cwinrt_token token);
 
-/* activate Windows.Storage.Pickers.Provider.TargetFileRequestedEventArgs */
 HRESULT wstpipr_target_file_requested_event_args_new(WSTPIPR_TargetFileRequestedEventArgs **out);
 
-/* Windows.Storage.Pickers.Provider.TargetFileRequestedEventArgs */
-/* Windows.Storage.Pickers.Provider.TargetFileRequestedEventArgs.get_Request() */
 HRESULT wstpipr_target_file_requested_event_args_get__request(WSTPIPR_TargetFileRequestedEventArgs *self, WSTPIPR_TargetFileRequest** value);
 
-/* activate Windows.Storage.Pickers.Provider.TargetFileRequestDeferral */
 HRESULT wstpipr_target_file_request_deferral_new(WSTPIPR_TargetFileRequestDeferral **out);
 
-/* Windows.Storage.Pickers.Provider.TargetFileRequestDeferral */
-/* Windows.Storage.Pickers.Provider.TargetFileRequestDeferral.Complete() */
 HRESULT wstpipr_target_file_request_deferral_complete(WSTPIPR_TargetFileRequestDeferral *self);
 
-/* activate Windows.Storage.Pickers.Provider.TargetFileRequest */
 HRESULT wstpipr_target_file_request_new(WSTPIPR_TargetFileRequest **out);
 
-/* Windows.Storage.Pickers.Provider.TargetFileRequest */
-/* Windows.Storage.Pickers.Provider.TargetFileRequest.get_TargetFile() */
 HRESULT wstpipr_target_file_request_get__target_file(WSTPIPR_TargetFileRequest *self, WS_IStorageFile** value);
 
-/* Windows.Storage.Pickers.Provider.TargetFileRequest.put_TargetFile() */
 HRESULT wstpipr_target_file_request_put__target_file(WSTPIPR_TargetFileRequest *self, WS_IStorageFile* value);
 
-/* Windows.Storage.Pickers.Provider.TargetFileRequest.GetDeferral() */
 HRESULT wstpipr_target_file_request_get_deferral(WSTPIPR_TargetFileRequest *self, WSTPIPR_TargetFileRequestDeferral** out);
 
-/* activate Windows.Storage.Pickers.Provider.PickerClosingOperation */
 HRESULT wstpipr_picker_closing_operation_new(WSTPIPR_PickerClosingOperation **out);
 
-/* Windows.Storage.Pickers.Provider.PickerClosingOperation */
-/* Windows.Storage.Pickers.Provider.PickerClosingOperation.GetDeferral() */
 HRESULT wstpipr_picker_closing_operation_get_deferral(WSTPIPR_PickerClosingOperation *self, WSTPIPR_PickerClosingDeferral** out);
 
-/* Windows.Storage.Pickers.Provider.PickerClosingOperation.get_Deadline() */
 HRESULT wstpipr_picker_closing_operation_get__deadline(WSTPIPR_PickerClosingOperation *self, WF_DateTime *value);
 
-/* activate Windows.Storage.Pickers.Provider.PickerClosingEventArgs */
 HRESULT wstpipr_picker_closing_event_args_new(WSTPIPR_PickerClosingEventArgs **out);
 
-/* Windows.Storage.Pickers.Provider.PickerClosingEventArgs */
-/* Windows.Storage.Pickers.Provider.PickerClosingEventArgs.get_ClosingOperation() */
 HRESULT wstpipr_picker_closing_event_args_get__closing_operation(WSTPIPR_PickerClosingEventArgs *self, WSTPIPR_PickerClosingOperation** value);
 
-/* Windows.Storage.Pickers.Provider.PickerClosingEventArgs.get_IsCanceled() */
 HRESULT wstpipr_picker_closing_event_args_get__is_canceled(WSTPIPR_PickerClosingEventArgs *self, BOOL *value);
 
-/* activate Windows.Storage.Pickers.Provider.PickerClosingDeferral */
 HRESULT wstpipr_picker_closing_deferral_new(WSTPIPR_PickerClosingDeferral **out);
 
-/* Windows.Storage.Pickers.Provider.PickerClosingDeferral */
-/* Windows.Storage.Pickers.Provider.PickerClosingDeferral.Complete() */
 HRESULT wstpipr_picker_closing_deferral_complete(WSTPIPR_PickerClosingDeferral *self);
 
-/* Windows.Storage.Pickers.Provider.IFileOpenPickerUI */
-/* Windows.Storage.Pickers.Provider.IFileRemovedEventArgs */
-/* Windows.Storage.Pickers.Provider.IFileSavePickerUI */
-/* Windows.Storage.Pickers.Provider.ITargetFileRequestedEventArgs */
-/* Windows.Storage.Pickers.Provider.ITargetFileRequestDeferral */
-/* Windows.Storage.Pickers.Provider.ITargetFileRequest */
-/* Windows.Storage.Pickers.Provider.IPickerClosingOperation */
-/* Windows.Storage.Pickers.Provider.IPickerClosingEventArgs */
-/* Windows.Storage.Pickers.Provider.IPickerClosingDeferral */
 #endif /* CWINRT_WINDOWS_STORAGE_PICKERS_PROVIDER_H */

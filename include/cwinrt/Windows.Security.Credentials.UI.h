@@ -12,13 +12,11 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSECRUI_ICredentialPickerStatics WSECRUI_ICredentialPickerStatics;
 typedef struct WSECRUI_IUserConsentVerifierStatics WSECRUI_IUserConsentVerifierStatics;
 typedef struct WSECRUI_UserConsentVerifier WSECRUI_UserConsentVerifier;
@@ -28,7 +26,6 @@ typedef struct WSECRUI_CredentialPickerResults WSECRUI_CredentialPickerResults;
 typedef struct WSECRUI_ICredentialPickerOptions WSECRUI_ICredentialPickerOptions;
 typedef struct WSECRUI_ICredentialPickerResults WSECRUI_ICredentialPickerResults;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WSECRUI_CredentialPickerResults
 #define CWINRT_FWD_WF_IAsyncOperation_WSECRUI_CredentialPickerResults
 typedef struct WF_IAsyncOperation_WSECRUI_CredentialPickerResults WF_IAsyncOperation_WSECRUI_CredentialPickerResults;
@@ -92,7 +89,6 @@ typedef enum WSECRUI_AuthenticationProtocol {
 } WSECRUI_AuthenticationProtocol;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -113,137 +109,86 @@ static const IID CWINRT_IID_WSECRUI_ICredentialPickerOptions CWINRT_MAYBE_UNUSED
 static const IID CWINRT_IID_WSECRUI_ICredentialPickerResults CWINRT_MAYBE_UNUSED = { 0x1948F99A, 0xCC30, 0x410C, { 0x9C, 0x38, 0xCC, 0x08, 0x84, 0xC5, 0xB3, 0xD7 } };
 #endif
 
-/* Methods */
-
-/* Windows.Security.Credentials.UI.ICredentialPickerStatics */
-/* Windows.Security.Credentials.UI.ICredentialPickerStatics.PickAsync(options) */
 HRESULT wsecrui_credential_picker_statics_pick_async(WSECRUI_ICredentialPickerStatics *self, WSECRUI_CredentialPickerOptions* options, WF_IAsyncOperation_WSECRUI_CredentialPickerResults** out);
 
-/* Windows.Security.Credentials.UI.ICredentialPickerStatics.PickAsync(targetName, message) */
 HRESULT wsecrui_credential_picker_statics_pick_async_str_str_p(WSECRUI_ICredentialPickerStatics *self, cwinrt_hstring targetName, cwinrt_hstring message, WF_IAsyncOperation_WSECRUI_CredentialPickerResults** out);
 
-/* Windows.Security.Credentials.UI.ICredentialPickerStatics.PickAsync(targetName, message, caption) */
 HRESULT wsecrui_credential_picker_statics_pick_async_str_str_str_p(WSECRUI_ICredentialPickerStatics *self, cwinrt_hstring targetName, cwinrt_hstring message, cwinrt_hstring caption, WF_IAsyncOperation_WSECRUI_CredentialPickerResults** out);
 
-/* Windows.Security.Credentials.UI.IUserConsentVerifierStatics */
-/* Windows.Security.Credentials.UI.IUserConsentVerifierStatics.CheckAvailabilityAsync() */
 HRESULT wsecrui_user_consent_verifier_statics_check_availability_async(WSECRUI_IUserConsentVerifierStatics *self, WF_IAsyncOperation_WSECRUI_UserConsentVerifierAvailability** out);
 
-/* Windows.Security.Credentials.UI.IUserConsentVerifierStatics.RequestVerificationAsync(message) */
 HRESULT wsecrui_user_consent_verifier_statics_request_verification_async(WSECRUI_IUserConsentVerifierStatics *self, cwinrt_hstring message, WF_IAsyncOperation_WSECRUI_UserConsentVerificationResult** out);
 
-/* activate Windows.Security.Credentials.UI.UserConsentVerifier */
 HRESULT wsecrui_user_consent_verifier_new(WSECRUI_UserConsentVerifier **out);
 
-/* Windows.Security.Credentials.UI.UserConsentVerifier */
-/* Windows.Security.Credentials.UI.UserConsentVerifier.CheckAvailabilityAsync() */
 HRESULT wsecrui_user_consent_verifier_check_availability_async(WF_IAsyncOperation_WSECRUI_UserConsentVerifierAvailability** out);
 
-/* Windows.Security.Credentials.UI.UserConsentVerifier.RequestVerificationAsync(message) */
 HRESULT wsecrui_user_consent_verifier_request_verification_async(cwinrt_hstring message, WF_IAsyncOperation_WSECRUI_UserConsentVerificationResult** out);
 
-/* activate Windows.Security.Credentials.UI.CredentialPickerOptions */
 HRESULT wsecrui_credential_picker_options_new(WSECRUI_CredentialPickerOptions **out);
 
-/* Windows.Security.Credentials.UI.CredentialPickerOptions */
-/* Windows.Security.Credentials.UI.CredentialPickerOptions.put_Caption() */
 HRESULT wsecrui_credential_picker_options_put__caption(WSECRUI_CredentialPickerOptions *self, cwinrt_hstring value);
 
-/* Windows.Security.Credentials.UI.CredentialPickerOptions.get_Caption() */
 HRESULT wsecrui_credential_picker_options_get__caption(WSECRUI_CredentialPickerOptions *self, cwinrt_hstring *value);
 
-/* Windows.Security.Credentials.UI.CredentialPickerOptions.put_Message() */
 HRESULT wsecrui_credential_picker_options_put__message(WSECRUI_CredentialPickerOptions *self, cwinrt_hstring value);
 
-/* Windows.Security.Credentials.UI.CredentialPickerOptions.get_Message() */
 HRESULT wsecrui_credential_picker_options_get__message(WSECRUI_CredentialPickerOptions *self, cwinrt_hstring *value);
 
-/* Windows.Security.Credentials.UI.CredentialPickerOptions.put_ErrorCode() */
 HRESULT wsecrui_credential_picker_options_put__error_code(WSECRUI_CredentialPickerOptions *self, uint32_t value);
 
-/* Windows.Security.Credentials.UI.CredentialPickerOptions.get_ErrorCode() */
 HRESULT wsecrui_credential_picker_options_get__error_code(WSECRUI_CredentialPickerOptions *self, uint32_t *value);
 
-/* Windows.Security.Credentials.UI.CredentialPickerOptions.put_TargetName() */
 HRESULT wsecrui_credential_picker_options_put__target_name(WSECRUI_CredentialPickerOptions *self, cwinrt_hstring value);
 
-/* Windows.Security.Credentials.UI.CredentialPickerOptions.get_TargetName() */
 HRESULT wsecrui_credential_picker_options_get__target_name(WSECRUI_CredentialPickerOptions *self, cwinrt_hstring *value);
 
-/* Windows.Security.Credentials.UI.CredentialPickerOptions.put_AuthenticationProtocol() */
 HRESULT wsecrui_credential_picker_options_put__authentication_protocol(WSECRUI_CredentialPickerOptions *self, WSECRUI_AuthenticationProtocol value);
 
-/* Windows.Security.Credentials.UI.CredentialPickerOptions.get_AuthenticationProtocol() */
 HRESULT wsecrui_credential_picker_options_get__authentication_protocol(WSECRUI_CredentialPickerOptions *self, WSECRUI_AuthenticationProtocol *value);
 
-/* Windows.Security.Credentials.UI.CredentialPickerOptions.put_CustomAuthenticationProtocol() */
 HRESULT wsecrui_credential_picker_options_put__custom_authentication_protocol(WSECRUI_CredentialPickerOptions *self, cwinrt_hstring value);
 
-/* Windows.Security.Credentials.UI.CredentialPickerOptions.get_CustomAuthenticationProtocol() */
 HRESULT wsecrui_credential_picker_options_get__custom_authentication_protocol(WSECRUI_CredentialPickerOptions *self, cwinrt_hstring *value);
 
-/* Windows.Security.Credentials.UI.CredentialPickerOptions.put_PreviousCredential() */
 HRESULT wsecrui_credential_picker_options_put__previous_credential(WSECRUI_CredentialPickerOptions *self, WSTST_IBuffer* value);
 
-/* Windows.Security.Credentials.UI.CredentialPickerOptions.get_PreviousCredential() */
 HRESULT wsecrui_credential_picker_options_get__previous_credential(WSECRUI_CredentialPickerOptions *self, WSTST_IBuffer** value);
 
-/* Windows.Security.Credentials.UI.CredentialPickerOptions.put_AlwaysDisplayDialog() */
 HRESULT wsecrui_credential_picker_options_put__always_display_dialog(WSECRUI_CredentialPickerOptions *self, BOOL value);
 
-/* Windows.Security.Credentials.UI.CredentialPickerOptions.get_AlwaysDisplayDialog() */
 HRESULT wsecrui_credential_picker_options_get__always_display_dialog(WSECRUI_CredentialPickerOptions *self, BOOL *value);
 
-/* Windows.Security.Credentials.UI.CredentialPickerOptions.put_CallerSavesCredential() */
 HRESULT wsecrui_credential_picker_options_put__caller_saves_credential(WSECRUI_CredentialPickerOptions *self, BOOL value);
 
-/* Windows.Security.Credentials.UI.CredentialPickerOptions.get_CallerSavesCredential() */
 HRESULT wsecrui_credential_picker_options_get__caller_saves_credential(WSECRUI_CredentialPickerOptions *self, BOOL *value);
 
-/* Windows.Security.Credentials.UI.CredentialPickerOptions.put_CredentialSaveOption() */
 HRESULT wsecrui_credential_picker_options_put__credential_save_option(WSECRUI_CredentialPickerOptions *self, WSECRUI_CredentialSaveOption value);
 
-/* Windows.Security.Credentials.UI.CredentialPickerOptions.get_CredentialSaveOption() */
 HRESULT wsecrui_credential_picker_options_get__credential_save_option(WSECRUI_CredentialPickerOptions *self, WSECRUI_CredentialSaveOption *value);
 
-/* activate Windows.Security.Credentials.UI.CredentialPicker */
 HRESULT wsecrui_credential_picker_new(WSECRUI_CredentialPicker **out);
 
-/* Windows.Security.Credentials.UI.CredentialPicker */
-/* Windows.Security.Credentials.UI.CredentialPicker.PickAsync(options) */
 HRESULT wsecrui_credential_picker_pick_async(WSECRUI_CredentialPickerOptions* options, WF_IAsyncOperation_WSECRUI_CredentialPickerResults** out);
 
-/* Windows.Security.Credentials.UI.CredentialPicker.PickAsync(targetName, message) */
 HRESULT wsecrui_credential_picker_pick_async_str_str_p(cwinrt_hstring targetName, cwinrt_hstring message, WF_IAsyncOperation_WSECRUI_CredentialPickerResults** out);
 
-/* Windows.Security.Credentials.UI.CredentialPicker.PickAsync(targetName, message, caption) */
 HRESULT wsecrui_credential_picker_pick_async_str_str_str_p(cwinrt_hstring targetName, cwinrt_hstring message, cwinrt_hstring caption, WF_IAsyncOperation_WSECRUI_CredentialPickerResults** out);
 
-/* activate Windows.Security.Credentials.UI.CredentialPickerResults */
 HRESULT wsecrui_credential_picker_results_new(WSECRUI_CredentialPickerResults **out);
 
-/* Windows.Security.Credentials.UI.CredentialPickerResults */
-/* Windows.Security.Credentials.UI.CredentialPickerResults.get_ErrorCode() */
 HRESULT wsecrui_credential_picker_results_get__error_code(WSECRUI_CredentialPickerResults *self, uint32_t *value);
 
-/* Windows.Security.Credentials.UI.CredentialPickerResults.get_CredentialSaveOption() */
 HRESULT wsecrui_credential_picker_results_get__credential_save_option(WSECRUI_CredentialPickerResults *self, WSECRUI_CredentialSaveOption *value);
 
-/* Windows.Security.Credentials.UI.CredentialPickerResults.get_CredentialSaved() */
 HRESULT wsecrui_credential_picker_results_get__credential_saved(WSECRUI_CredentialPickerResults *self, BOOL *value);
 
-/* Windows.Security.Credentials.UI.CredentialPickerResults.get_Credential() */
 HRESULT wsecrui_credential_picker_results_get__credential(WSECRUI_CredentialPickerResults *self, WSTST_IBuffer** value);
 
-/* Windows.Security.Credentials.UI.CredentialPickerResults.get_CredentialDomainName() */
 HRESULT wsecrui_credential_picker_results_get__credential_domain_name(WSECRUI_CredentialPickerResults *self, cwinrt_hstring *value);
 
-/* Windows.Security.Credentials.UI.CredentialPickerResults.get_CredentialUserName() */
 HRESULT wsecrui_credential_picker_results_get__credential_user_name(WSECRUI_CredentialPickerResults *self, cwinrt_hstring *value);
 
-/* Windows.Security.Credentials.UI.CredentialPickerResults.get_CredentialPassword() */
 HRESULT wsecrui_credential_picker_results_get__credential_password(WSECRUI_CredentialPickerResults *self, cwinrt_hstring *value);
 
-/* Windows.Security.Credentials.UI.ICredentialPickerOptions */
-/* Windows.Security.Credentials.UI.ICredentialPickerResults */
 #endif /* CWINRT_WINDOWS_SECURITY_CREDENTIALS_UI_H */

@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WSYREIN_RemoteTextConnectionDataHandler WSYREIN_RemoteTextConnectionDataHandler;
 typedef struct WSYREIN_IRemoteTextConnectionFactory WSYREIN_IRemoteTextConnectionFactory;
 typedef struct WSYREIN_IRemoteTextConnectionFactory_2 WSYREIN_IRemoteTextConnectionFactory_2;
@@ -39,7 +38,6 @@ typedef enum WSYREIN_RemoteTextConnectionOptions {
 } WSYREIN_RemoteTextConnectionOptions;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -64,48 +62,28 @@ static const IID CWINRT_IID_WSYREIN_IRemoteTextConnection CWINRT_MAYBE_UNUSED = 
 static const IID CWINRT_IID_WSYREIN_IRemoteTextConnection_2 CWINRT_MAYBE_UNUSED = { 0x05F99345, 0x84C8, 0x56C5, { 0x93, 0x4F, 0x73, 0xEA, 0x00, 0xF8, 0xC2, 0xD5 } };
 #endif
 
-/* Methods */
-
-/* Windows.System.RemoteDesktop.Input.RemoteTextConnectionDataHandler */
-/* Windows.System.RemoteDesktop.Input.RemoteTextConnectionDataHandler.Invoke(pduData) */
 HRESULT wsyrein_remote_text_connection_data_handler_invoke(WSYREIN_RemoteTextConnectionDataHandler *self, uint8_t *pduData, uint32_t pduData_len, BOOL *out);
 
-/* Windows.System.RemoteDesktop.Input.IRemoteTextConnectionFactory */
-/* Windows.System.RemoteDesktop.Input.IRemoteTextConnectionFactory.CreateInstance(connectionId, pduForwarder) */
 HRESULT wsyrein_remote_text_connection_factory_create_instance(WSYREIN_IRemoteTextConnectionFactory *self, GUID connectionId, WSYREIN_RemoteTextConnectionDataHandler* pduForwarder, WSYREIN_RemoteTextConnection** out);
 
-/* Windows.System.RemoteDesktop.Input.IRemoteTextConnectionFactory2 */
-/* Windows.System.RemoteDesktop.Input.IRemoteTextConnectionFactory2.CreateInstance(connectionId, pduForwarder, options) */
 HRESULT wsyrein_remote_text_connection_factory_2_create_instance(WSYREIN_IRemoteTextConnectionFactory_2 *self, GUID connectionId, WSYREIN_RemoteTextConnectionDataHandler* pduForwarder, WSYREIN_RemoteTextConnectionOptions options, WSYREIN_RemoteTextConnection** out);
 
-/* activate Windows.System.RemoteDesktop.Input.RemoteTextConnection */
 HRESULT wsyrein_remote_text_connection_new(WSYREIN_RemoteTextConnection **out);
 
-/* Windows.System.RemoteDesktop.Input.RemoteTextConnection */
-/* Windows.System.RemoteDesktop.Input.RemoteTextConnection.get_IsEnabled() */
 HRESULT wsyrein_remote_text_connection_get__is_enabled(WSYREIN_RemoteTextConnection *self, BOOL *value);
 
-/* Windows.System.RemoteDesktop.Input.RemoteTextConnection.put_IsEnabled() */
 HRESULT wsyrein_remote_text_connection_put__is_enabled(WSYREIN_RemoteTextConnection *self, BOOL value);
 
-/* Windows.System.RemoteDesktop.Input.RemoteTextConnection.RegisterThread(threadId) */
 HRESULT wsyrein_remote_text_connection_register_thread(WSYREIN_RemoteTextConnection *self, uint32_t threadId);
 
-/* Windows.System.RemoteDesktop.Input.RemoteTextConnection.UnregisterThread(threadId) */
 HRESULT wsyrein_remote_text_connection_unregister_thread(WSYREIN_RemoteTextConnection *self, uint32_t threadId);
 
-/* Windows.System.RemoteDesktop.Input.RemoteTextConnection.ReportDataReceived(pduData) */
 HRESULT wsyrein_remote_text_connection_report_data_received(WSYREIN_RemoteTextConnection *self, uint8_t *pduData, uint32_t pduData_len);
 
-/* Windows.System.RemoteDesktop.Input.RemoteTextConnection.ReportPredictedKeyEvent(scanCode, attributes) */
 HRESULT wsyrein_remote_text_connection_report_predicted_key_event(WSYREIN_RemoteTextConnection *self, uint16_t scanCode, WSYREIN_RemoteKeyEventAttributes attributes);
 
-/* Windows.System.RemoteDesktop.Input.RemoteTextConnection.Close() */
 HRESULT wsyrein_remote_text_connection_close(WSYREIN_RemoteTextConnection *self);
 
-/* Windows.System.RemoteDesktop.Input.IRemoteTextConnection */
-/* Windows.System.RemoteDesktop.Input.IRemoteTextConnection2 */
-/* Windows.System.RemoteDesktop.Input.IRemoteTextConnection2.ReportPredictedKeyEvent(scanCode, attributes) */
 HRESULT wsyrein_remote_text_connection_2_report_predicted_key_event(WSYREIN_IRemoteTextConnection_2 *self, uint16_t scanCode, WSYREIN_RemoteKeyEventAttributes attributes);
 
 #endif /* CWINRT_WINDOWS_SYSTEM_REMOTEDESKTOP_INPUT_H */

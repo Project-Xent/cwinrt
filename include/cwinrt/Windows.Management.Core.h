@@ -12,24 +12,20 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WS_ApplicationData
 #define CWINRT_FWD_WS_ApplicationData
 typedef struct WS_ApplicationData WS_ApplicationData;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMACO_ApplicationDataManager WMACO_ApplicationDataManager;
 typedef struct WMACO_IApplicationDataManagerStatics WMACO_IApplicationDataManagerStatics;
 typedef struct WMACO_IApplicationDataManager WMACO_IApplicationDataManager;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WS_ApplicationData
 #define CWINRT_FWD_WS_ApplicationData
 typedef struct WS_ApplicationData WS_ApplicationData;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -42,17 +38,10 @@ static const IID CWINRT_IID_WMACO_IApplicationDataManagerStatics CWINRT_MAYBE_UN
 static const IID CWINRT_IID_WMACO_IApplicationDataManager CWINRT_MAYBE_UNUSED = { 0x74D10432, 0x2E99, 0x4000, { 0x9A, 0x3A, 0x64, 0x30, 0x7E, 0x85, 0x81, 0x29 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Management.Core.ApplicationDataManager */
 HRESULT wmaco_application_data_manager_new(WMACO_ApplicationDataManager **out);
 
-/* Windows.Management.Core.ApplicationDataManager */
-/* Windows.Management.Core.ApplicationDataManager.CreateForPackageFamily(packageFamilyName) */
 HRESULT wmaco_application_data_manager_create_for_package_family(cwinrt_hstring packageFamilyName, WS_ApplicationData** out);
 
-/* Windows.Management.Core.IApplicationDataManagerStatics */
-/* Windows.Management.Core.IApplicationDataManagerStatics.CreateForPackageFamily(packageFamilyName) */
 HRESULT wmaco_application_data_manager_statics_create_for_package_family(WMACO_IApplicationDataManagerStatics *self, cwinrt_hstring packageFamilyName, WS_ApplicationData** out);
 
 #endif /* CWINRT_WINDOWS_MANAGEMENT_CORE_H */

@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WDEPREX_PrintTaskConfigurationSaveRequestedEventArgs WDEPREX_PrintTaskConfigurationSaveRequestedEventArgs;
 typedef struct WDEPREX_PrintTaskConfigurationSaveRequestedDeferral WDEPREX_PrintTaskConfigurationSaveRequestedDeferral;
 typedef struct WDEPREX_PrintTaskConfigurationSaveRequest WDEPREX_PrintTaskConfigurationSaveRequest;
@@ -33,7 +32,6 @@ typedef struct WDEPREX_IPrint3DWorkflowPrintRequestedEventArgs WDEPREX_IPrint3DW
 typedef struct WDEPREX_IPrint3DWorkflow WDEPREX_IPrint3DWorkflow;
 typedef struct WDEPREX_IPrint3DWorkflow_2 WDEPREX_IPrint3DWorkflow_2;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_DateTime
 #define CWINRT_FWD_WF_DateTime
 typedef struct WF_DateTime WF_DateTime;
@@ -75,7 +73,6 @@ typedef enum WDEPREX_Print3DWorkflowDetail {
 } WDEPREX_Print3DWorkflowDetail;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -120,111 +117,69 @@ static const IID CWINRT_IID_WDEPREX_IPrint3DWorkflow CWINRT_MAYBE_UNUSED = { 0xC
 static const IID CWINRT_IID_WDEPREX_IPrint3DWorkflow_2 CWINRT_MAYBE_UNUSED = { 0xA2A6C54F, 0x8AC1, 0x4918, { 0x97, 0x41, 0xE3, 0x4F, 0x30, 0x04, 0x23, 0x9E } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs */
 HRESULT wdeprex_print_task_configuration_save_requested_event_args_new(WDEPREX_PrintTaskConfigurationSaveRequestedEventArgs **out);
 
-/* Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs */
-/* Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs.get_Request() */
 HRESULT wdeprex_print_task_configuration_save_requested_event_args_get__request(WDEPREX_PrintTaskConfigurationSaveRequestedEventArgs *self, WDEPREX_PrintTaskConfigurationSaveRequest** value);
 
-/* activate Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral */
 HRESULT wdeprex_print_task_configuration_save_requested_deferral_new(WDEPREX_PrintTaskConfigurationSaveRequestedDeferral **out);
 
-/* Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral */
-/* Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral.Complete() */
 HRESULT wdeprex_print_task_configuration_save_requested_deferral_complete(WDEPREX_PrintTaskConfigurationSaveRequestedDeferral *self);
 
-/* activate Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest */
 HRESULT wdeprex_print_task_configuration_save_request_new(WDEPREX_PrintTaskConfigurationSaveRequest **out);
 
-/* Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest */
-/* Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Cancel() */
 HRESULT wdeprex_print_task_configuration_save_request_cancel(WDEPREX_PrintTaskConfigurationSaveRequest *self);
 
-/* Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Save(printerExtensionContext) */
 HRESULT wdeprex_print_task_configuration_save_request_save(WDEPREX_PrintTaskConfigurationSaveRequest *self, IInspectable* printerExtensionContext);
 
-/* Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.GetDeferral() */
 HRESULT wdeprex_print_task_configuration_save_request_get_deferral(WDEPREX_PrintTaskConfigurationSaveRequest *self, WDEPREX_PrintTaskConfigurationSaveRequestedDeferral** out);
 
-/* Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.get_Deadline() */
 HRESULT wdeprex_print_task_configuration_save_request_get__deadline(WDEPREX_PrintTaskConfigurationSaveRequest *self, WF_DateTime *value);
 
-/* activate Windows.Devices.Printers.Extensions.PrintTaskConfiguration */
 HRESULT wdeprex_print_task_configuration_new(WDEPREX_PrintTaskConfiguration **out);
 
-/* Windows.Devices.Printers.Extensions.PrintTaskConfiguration */
-/* Windows.Devices.Printers.Extensions.PrintTaskConfiguration.get_PrinterExtensionContext() */
 HRESULT wdeprex_print_task_configuration_get__printer_extension_context(WDEPREX_PrintTaskConfiguration *self, IInspectable** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdeprex_print_task_configuration_on_save_requested(WDEPREX_PrintTaskConfiguration *self, cwinrt_event_fn fn, void *ctx);
 void wdeprex_print_task_configuration_off_save_requested(WDEPREX_PrintTaskConfiguration *self, cwinrt_token token);
 
-/* activate Windows.Devices.Printers.Extensions.PrintNotificationEventDetails */
 HRESULT wdeprex_print_notification_event_details_new(WDEPREX_PrintNotificationEventDetails **out);
 
-/* Windows.Devices.Printers.Extensions.PrintNotificationEventDetails */
-/* Windows.Devices.Printers.Extensions.PrintNotificationEventDetails.get_PrinterName() */
 HRESULT wdeprex_print_notification_event_details_get__printer_name(WDEPREX_PrintNotificationEventDetails *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Printers.Extensions.PrintNotificationEventDetails.get_EventData() */
 HRESULT wdeprex_print_notification_event_details_get__event_data(WDEPREX_PrintNotificationEventDetails *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Printers.Extensions.PrintNotificationEventDetails.put_EventData() */
 HRESULT wdeprex_print_notification_event_details_put__event_data(WDEPREX_PrintNotificationEventDetails *self, cwinrt_hstring value);
 
-/* activate Windows.Devices.Printers.Extensions.PrintExtensionContext */
 HRESULT wdeprex_print_extension_context_new(WDEPREX_PrintExtensionContext **out);
 
-/* Windows.Devices.Printers.Extensions.PrintExtensionContext */
-/* Windows.Devices.Printers.Extensions.PrintExtensionContext.FromDeviceId(deviceId) */
 HRESULT wdeprex_print_extension_context_from_device_id(cwinrt_hstring deviceId, IInspectable** out);
 
-/* activate Windows.Devices.Printers.Extensions.Print3DWorkflowPrinterChangedEventArgs */
 HRESULT wdeprex_print3_d_workflow_printer_changed_event_args_new(WDEPREX_Print3DWorkflowPrinterChangedEventArgs **out);
 
-/* Windows.Devices.Printers.Extensions.Print3DWorkflowPrinterChangedEventArgs */
-/* Windows.Devices.Printers.Extensions.Print3DWorkflowPrinterChangedEventArgs.get_NewDeviceId() */
 HRESULT wdeprex_print3_d_workflow_printer_changed_event_args_get__new_device_id(WDEPREX_Print3DWorkflowPrinterChangedEventArgs *self, cwinrt_hstring *value);
 
-/* activate Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs */
 HRESULT wdeprex_print3_d_workflow_print_requested_event_args_new(WDEPREX_Print3DWorkflowPrintRequestedEventArgs **out);
 
-/* Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs */
-/* Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs.get_Status() */
 HRESULT wdeprex_print3_d_workflow_print_requested_event_args_get__status(WDEPREX_Print3DWorkflowPrintRequestedEventArgs *self, WDEPREX_Print3DWorkflowStatus *value);
 
-/* Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs.SetExtendedStatus() */
 HRESULT wdeprex_print3_d_workflow_print_requested_event_args_set_extended_status(WDEPREX_Print3DWorkflowPrintRequestedEventArgs *self, WDEPREX_Print3DWorkflowDetail value);
 
-/* Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs.SetSource(source) */
 HRESULT wdeprex_print3_d_workflow_print_requested_event_args_set_source(WDEPREX_Print3DWorkflowPrintRequestedEventArgs *self, IInspectable* source);
 
-/* Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs.SetSourceChanged() */
 HRESULT wdeprex_print3_d_workflow_print_requested_event_args_set_source_changed(WDEPREX_Print3DWorkflowPrintRequestedEventArgs *self, BOOL value);
 
-/* activate Windows.Devices.Printers.Extensions.Print3DWorkflow */
 HRESULT wdeprex_print3_d_workflow_new(WDEPREX_Print3DWorkflow **out);
 
-/* Windows.Devices.Printers.Extensions.Print3DWorkflow */
-/* Windows.Devices.Printers.Extensions.Print3DWorkflow.get_DeviceID() */
 HRESULT wdeprex_print3_d_workflow_get__device_i_d(WDEPREX_Print3DWorkflow *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Printers.Extensions.Print3DWorkflow.GetPrintModelPackage() */
 HRESULT wdeprex_print3_d_workflow_get_print_model_package(WDEPREX_Print3DWorkflow *self, IInspectable** out);
 
-/* Windows.Devices.Printers.Extensions.Print3DWorkflow.get_IsPrintReady() */
 HRESULT wdeprex_print3_d_workflow_get__is_print_ready(WDEPREX_Print3DWorkflow *self, BOOL *value);
 
-/* Windows.Devices.Printers.Extensions.Print3DWorkflow.put_IsPrintReady() */
 HRESULT wdeprex_print3_d_workflow_put__is_print_ready(WDEPREX_Print3DWorkflow *self, BOOL value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdeprex_print3_d_workflow_on_print_requested(WDEPREX_Print3DWorkflow *self, cwinrt_event_fn fn, void *ctx);
@@ -233,17 +188,6 @@ void wdeprex_print3_d_workflow_off_print_requested(WDEPREX_Print3DWorkflow *self
 cwinrt_token wdeprex_print3_d_workflow_on_printer_changed(WDEPREX_Print3DWorkflow *self, cwinrt_event_fn fn, void *ctx);
 void wdeprex_print3_d_workflow_off_printer_changed(WDEPREX_Print3DWorkflow *self, cwinrt_token token);
 
-/* Windows.Devices.Printers.Extensions.IPrintExtensionContextStatic */
-/* Windows.Devices.Printers.Extensions.IPrintExtensionContextStatic.FromDeviceId(deviceId) */
 HRESULT wdeprex_print_extension_context_static_from_device_id(WDEPREX_IPrintExtensionContextStatic *self, cwinrt_hstring deviceId, IInspectable** out);
 
-/* Windows.Devices.Printers.Extensions.IPrintTaskConfigurationSaveRequestedEventArgs */
-/* Windows.Devices.Printers.Extensions.IPrintTaskConfigurationSaveRequestedDeferral */
-/* Windows.Devices.Printers.Extensions.IPrintTaskConfigurationSaveRequest */
-/* Windows.Devices.Printers.Extensions.IPrintTaskConfiguration */
-/* Windows.Devices.Printers.Extensions.IPrintNotificationEventDetails */
-/* Windows.Devices.Printers.Extensions.IPrint3DWorkflowPrinterChangedEventArgs */
-/* Windows.Devices.Printers.Extensions.IPrint3DWorkflowPrintRequestedEventArgs */
-/* Windows.Devices.Printers.Extensions.IPrint3DWorkflow */
-/* Windows.Devices.Printers.Extensions.IPrint3DWorkflow2 */
 #endif /* CWINRT_WINDOWS_DEVICES_PRINTERS_EXTENSIONS_H */

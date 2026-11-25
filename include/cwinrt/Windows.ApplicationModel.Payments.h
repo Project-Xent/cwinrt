@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WAPPA_IPaymentDetailsFactory WAPPA_IPaymentDetailsFactory;
 typedef struct WAPPA_IPaymentDetailsModifierFactory WAPPA_IPaymentDetailsModifierFactory;
 typedef struct WAPPA_IPaymentItemFactory WAPPA_IPaymentItemFactory;
@@ -63,7 +62,6 @@ typedef struct WAPPA_IPaymentResponse WAPPA_IPaymentResponse;
 typedef struct WAPPA_IPaymentShippingOption WAPPA_IPaymentShippingOption;
 typedef struct WAPPA_IPaymentToken WAPPA_IPaymentToken;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IIterable_WAPPA_PaymentItem
 #define CWINRT_FWD_WFOCO_IIterable_WAPPA_PaymentItem
 typedef struct WFOCO_IIterable_WAPPA_PaymentItem WFOCO_IIterable_WAPPA_PaymentItem;
@@ -178,7 +176,6 @@ typedef enum WAPPA_PaymentShippingType {
 } WAPPA_PaymentShippingType;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -311,484 +308,290 @@ static const IID CWINRT_IID_WAPPA_IPaymentShippingOption CWINRT_MAYBE_UNUSED = {
 static const IID CWINRT_IID_WAPPA_IPaymentToken CWINRT_MAYBE_UNUSED = { 0xBBCAC013, 0xCCD0, 0x41F2, { 0xB2, 0xA1, 0x0A, 0x2E, 0x4B, 0x5D, 0xCE, 0x25 } };
 #endif
 
-/* Methods */
-
-/* Windows.ApplicationModel.Payments.IPaymentDetailsFactory */
-/* Windows.ApplicationModel.Payments.IPaymentDetailsFactory.Create(total) */
 HRESULT wappa_payment_details_factory_create(WAPPA_IPaymentDetailsFactory *self, WAPPA_PaymentItem* total, WAPPA_PaymentDetails** out);
 
-/* Windows.ApplicationModel.Payments.IPaymentDetailsFactory.CreateWithDisplayItems(total, displayItems) */
 HRESULT wappa_payment_details_factory_create_with_display_items(WAPPA_IPaymentDetailsFactory *self, WAPPA_PaymentItem* total, WFOCO_IIterable_WAPPA_PaymentItem* displayItems, WAPPA_PaymentDetails** out);
 
-/* Windows.ApplicationModel.Payments.IPaymentDetailsModifierFactory */
-/* Windows.ApplicationModel.Payments.IPaymentDetailsModifierFactory.Create(supportedMethodIds, total) */
 HRESULT wappa_payment_details_modifier_factory_create(WAPPA_IPaymentDetailsModifierFactory *self, WFOCO_IIterable_HSTRING* supportedMethodIds, WAPPA_PaymentItem* total, WAPPA_PaymentDetailsModifier** out);
 
-/* Windows.ApplicationModel.Payments.IPaymentDetailsModifierFactory.CreateWithAdditionalDisplayItems(supportedMethodIds, total, additionalDisplayItems) */
 HRESULT wappa_payment_details_modifier_factory_create_with_additional_display_items(WAPPA_IPaymentDetailsModifierFactory *self, WFOCO_IIterable_HSTRING* supportedMethodIds, WAPPA_PaymentItem* total, WFOCO_IIterable_WAPPA_PaymentItem* additionalDisplayItems, WAPPA_PaymentDetailsModifier** out);
 
-/* Windows.ApplicationModel.Payments.IPaymentDetailsModifierFactory.CreateWithAdditionalDisplayItemsAndJsonData(supportedMethodIds, total, additionalDisplayItems, jsonData) */
 HRESULT wappa_payment_details_modifier_factory_create_with_additional_display_items_and_json_data(WAPPA_IPaymentDetailsModifierFactory *self, WFOCO_IIterable_HSTRING* supportedMethodIds, WAPPA_PaymentItem* total, WFOCO_IIterable_WAPPA_PaymentItem* additionalDisplayItems, cwinrt_hstring jsonData, WAPPA_PaymentDetailsModifier** out);
 
-/* Windows.ApplicationModel.Payments.IPaymentItemFactory */
-/* Windows.ApplicationModel.Payments.IPaymentItemFactory.Create(label, amount) */
 HRESULT wappa_payment_item_factory_create(WAPPA_IPaymentItemFactory *self, cwinrt_hstring label, WAPPA_PaymentCurrencyAmount* amount, WAPPA_PaymentItem** out);
 
-/* Windows.ApplicationModel.Payments.IPaymentMerchantInfoFactory */
-/* Windows.ApplicationModel.Payments.IPaymentMerchantInfoFactory.Create(uri) */
 HRESULT wappa_payment_merchant_info_factory_create(WAPPA_IPaymentMerchantInfoFactory *self, WF_Uri* uri, WAPPA_PaymentMerchantInfo** out);
 
-/* Windows.ApplicationModel.Payments.IPaymentMethodDataFactory */
-/* Windows.ApplicationModel.Payments.IPaymentMethodDataFactory.Create(supportedMethodIds) */
 HRESULT wappa_payment_method_data_factory_create(WAPPA_IPaymentMethodDataFactory *self, WFOCO_IIterable_HSTRING* supportedMethodIds, WAPPA_PaymentMethodData** out);
 
-/* Windows.ApplicationModel.Payments.IPaymentMethodDataFactory.CreateWithJsonData(supportedMethodIds, jsonData) */
 HRESULT wappa_payment_method_data_factory_create_with_json_data(WAPPA_IPaymentMethodDataFactory *self, WFOCO_IIterable_HSTRING* supportedMethodIds, cwinrt_hstring jsonData, WAPPA_PaymentMethodData** out);
 
-/* Windows.ApplicationModel.Payments.IPaymentCurrencyAmountFactory */
-/* Windows.ApplicationModel.Payments.IPaymentCurrencyAmountFactory.Create(currency) */
 HRESULT wappa_payment_currency_amount_factory_create(WAPPA_IPaymentCurrencyAmountFactory *self, cwinrt_hstring value, cwinrt_hstring currency, WAPPA_PaymentCurrencyAmount** out);
 
-/* Windows.ApplicationModel.Payments.IPaymentCurrencyAmountFactory.CreateWithCurrencySystem(currency, currencySystem) */
 HRESULT wappa_payment_currency_amount_factory_create_with_currency_system(WAPPA_IPaymentCurrencyAmountFactory *self, cwinrt_hstring value, cwinrt_hstring currency, cwinrt_hstring currencySystem, WAPPA_PaymentCurrencyAmount** out);
 
-/* Windows.ApplicationModel.Payments.IPaymentRequestFactory */
-/* Windows.ApplicationModel.Payments.IPaymentRequestFactory.Create(details, methodData) */
 HRESULT wappa_payment_request_factory_create(WAPPA_IPaymentRequestFactory *self, WAPPA_PaymentDetails* details, WFOCO_IIterable_WAPPA_PaymentMethodData* methodData, WAPPA_PaymentRequest** out);
 
-/* Windows.ApplicationModel.Payments.IPaymentRequestFactory.CreateWithMerchantInfo(details, methodData, merchantInfo) */
 HRESULT wappa_payment_request_factory_create_with_merchant_info(WAPPA_IPaymentRequestFactory *self, WAPPA_PaymentDetails* details, WFOCO_IIterable_WAPPA_PaymentMethodData* methodData, WAPPA_PaymentMerchantInfo* merchantInfo, WAPPA_PaymentRequest** out);
 
-/* Windows.ApplicationModel.Payments.IPaymentRequestFactory.CreateWithMerchantInfoAndOptions(details, methodData, merchantInfo, options) */
 HRESULT wappa_payment_request_factory_create_with_merchant_info_and_options(WAPPA_IPaymentRequestFactory *self, WAPPA_PaymentDetails* details, WFOCO_IIterable_WAPPA_PaymentMethodData* methodData, WAPPA_PaymentMerchantInfo* merchantInfo, WAPPA_PaymentOptions* options, WAPPA_PaymentRequest** out);
 
-/* Windows.ApplicationModel.Payments.IPaymentRequestFactory2 */
-/* Windows.ApplicationModel.Payments.IPaymentRequestFactory2.CreateWithMerchantInfoOptionsAndId(details, methodData, merchantInfo, options, id) */
 HRESULT wappa_payment_request_factory_2_create_with_merchant_info_options_and_id(WAPPA_IPaymentRequestFactory_2 *self, WAPPA_PaymentDetails* details, WFOCO_IIterable_WAPPA_PaymentMethodData* methodData, WAPPA_PaymentMerchantInfo* merchantInfo, WAPPA_PaymentOptions* options, cwinrt_hstring id, WAPPA_PaymentRequest** out);
 
-/* Windows.ApplicationModel.Payments.IPaymentShippingOptionFactory */
-/* Windows.ApplicationModel.Payments.IPaymentShippingOptionFactory.Create(label, amount) */
 HRESULT wappa_payment_shipping_option_factory_create(WAPPA_IPaymentShippingOptionFactory *self, cwinrt_hstring label, WAPPA_PaymentCurrencyAmount* amount, WAPPA_PaymentShippingOption** out);
 
-/* Windows.ApplicationModel.Payments.IPaymentShippingOptionFactory.CreateWithSelected(label, amount, selected) */
 HRESULT wappa_payment_shipping_option_factory_create_with_selected(WAPPA_IPaymentShippingOptionFactory *self, cwinrt_hstring label, WAPPA_PaymentCurrencyAmount* amount, BOOL selected, WAPPA_PaymentShippingOption** out);
 
-/* Windows.ApplicationModel.Payments.IPaymentShippingOptionFactory.CreateWithSelectedAndTag(label, amount, selected, tag) */
 HRESULT wappa_payment_shipping_option_factory_create_with_selected_and_tag(WAPPA_IPaymentShippingOptionFactory *self, cwinrt_hstring label, WAPPA_PaymentCurrencyAmount* amount, BOOL selected, cwinrt_hstring tag, WAPPA_PaymentShippingOption** out);
 
-/* Windows.ApplicationModel.Payments.IPaymentTokenFactory */
-/* Windows.ApplicationModel.Payments.IPaymentTokenFactory.Create(paymentMethodId) */
 HRESULT wappa_payment_token_factory_create(WAPPA_IPaymentTokenFactory *self, cwinrt_hstring paymentMethodId, WAPPA_PaymentToken** out);
 
-/* Windows.ApplicationModel.Payments.IPaymentTokenFactory.CreateWithJsonDetails(paymentMethodId, jsonDetails) */
 HRESULT wappa_payment_token_factory_create_with_json_details(WAPPA_IPaymentTokenFactory *self, cwinrt_hstring paymentMethodId, cwinrt_hstring jsonDetails, WAPPA_PaymentToken** out);
 
-/* activate Windows.ApplicationModel.Payments.PaymentAddress */
 HRESULT wappa_payment_address_new(WAPPA_PaymentAddress **out);
 
-/* Windows.ApplicationModel.Payments.PaymentAddress */
-/* Windows.ApplicationModel.Payments.PaymentAddress.get_Country() */
 HRESULT wappa_payment_address_get__country(WAPPA_PaymentAddress *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Payments.PaymentAddress.put_Country() */
 HRESULT wappa_payment_address_put__country(WAPPA_PaymentAddress *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Payments.PaymentAddress.get_AddressLines() */
 HRESULT wappa_payment_address_get__address_lines(WAPPA_PaymentAddress *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.ApplicationModel.Payments.PaymentAddress.put_AddressLines() */
 HRESULT wappa_payment_address_put__address_lines(WAPPA_PaymentAddress *self, WFOCO_IVectorView_HSTRING* value);
 
-/* Windows.ApplicationModel.Payments.PaymentAddress.get_Region() */
 HRESULT wappa_payment_address_get__region(WAPPA_PaymentAddress *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Payments.PaymentAddress.put_Region() */
 HRESULT wappa_payment_address_put__region(WAPPA_PaymentAddress *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Payments.PaymentAddress.get_City() */
 HRESULT wappa_payment_address_get__city(WAPPA_PaymentAddress *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Payments.PaymentAddress.put_City() */
 HRESULT wappa_payment_address_put__city(WAPPA_PaymentAddress *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Payments.PaymentAddress.get_DependentLocality() */
 HRESULT wappa_payment_address_get__dependent_locality(WAPPA_PaymentAddress *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Payments.PaymentAddress.put_DependentLocality() */
 HRESULT wappa_payment_address_put__dependent_locality(WAPPA_PaymentAddress *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Payments.PaymentAddress.get_PostalCode() */
 HRESULT wappa_payment_address_get__postal_code(WAPPA_PaymentAddress *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Payments.PaymentAddress.put_PostalCode() */
 HRESULT wappa_payment_address_put__postal_code(WAPPA_PaymentAddress *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Payments.PaymentAddress.get_SortingCode() */
 HRESULT wappa_payment_address_get__sorting_code(WAPPA_PaymentAddress *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Payments.PaymentAddress.put_SortingCode() */
 HRESULT wappa_payment_address_put__sorting_code(WAPPA_PaymentAddress *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Payments.PaymentAddress.get_LanguageCode() */
 HRESULT wappa_payment_address_get__language_code(WAPPA_PaymentAddress *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Payments.PaymentAddress.put_LanguageCode() */
 HRESULT wappa_payment_address_put__language_code(WAPPA_PaymentAddress *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Payments.PaymentAddress.get_Organization() */
 HRESULT wappa_payment_address_get__organization(WAPPA_PaymentAddress *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Payments.PaymentAddress.put_Organization() */
 HRESULT wappa_payment_address_put__organization(WAPPA_PaymentAddress *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Payments.PaymentAddress.get_Recipient() */
 HRESULT wappa_payment_address_get__recipient(WAPPA_PaymentAddress *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Payments.PaymentAddress.put_Recipient() */
 HRESULT wappa_payment_address_put__recipient(WAPPA_PaymentAddress *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Payments.PaymentAddress.get_PhoneNumber() */
 HRESULT wappa_payment_address_get__phone_number(WAPPA_PaymentAddress *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Payments.PaymentAddress.put_PhoneNumber() */
 HRESULT wappa_payment_address_put__phone_number(WAPPA_PaymentAddress *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Payments.PaymentAddress.get_Properties() */
 HRESULT wappa_payment_address_get__properties(WAPPA_PaymentAddress *self, WFOCO_ValueSet** value);
 
-/* activate Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult */
 HRESULT wappa_payment_can_make_payment_result_new(WAPPA_PaymentCanMakePaymentResult **out);
 
-/* Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult */
-/* Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult.get_Status() */
 HRESULT wappa_payment_can_make_payment_result_get__status(WAPPA_PaymentCanMakePaymentResult *self, WAPPA_PaymentCanMakePaymentResultStatus *value);
 
-/* activate Windows.ApplicationModel.Payments.PaymentCurrencyAmount */
 HRESULT wappa_payment_currency_amount_new(WAPPA_PaymentCurrencyAmount **out);
 
-/* Windows.ApplicationModel.Payments.PaymentCurrencyAmount */
-/* Windows.ApplicationModel.Payments.PaymentCurrencyAmount.get_Currency() */
 HRESULT wappa_payment_currency_amount_get__currency(WAPPA_PaymentCurrencyAmount *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Payments.PaymentCurrencyAmount.put_Currency() */
 HRESULT wappa_payment_currency_amount_put__currency(WAPPA_PaymentCurrencyAmount *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Payments.PaymentCurrencyAmount.get_CurrencySystem() */
 HRESULT wappa_payment_currency_amount_get__currency_system(WAPPA_PaymentCurrencyAmount *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Payments.PaymentCurrencyAmount.put_CurrencySystem() */
 HRESULT wappa_payment_currency_amount_put__currency_system(WAPPA_PaymentCurrencyAmount *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Payments.PaymentCurrencyAmount.get_Value() */
 HRESULT wappa_payment_currency_amount_get__value(WAPPA_PaymentCurrencyAmount *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Payments.PaymentCurrencyAmount.put_Value() */
 HRESULT wappa_payment_currency_amount_put__value(WAPPA_PaymentCurrencyAmount *self, cwinrt_hstring value);
 
-/* activate Windows.ApplicationModel.Payments.PaymentDetails */
 HRESULT wappa_payment_details_new(WAPPA_PaymentDetails **out);
 
-/* Windows.ApplicationModel.Payments.PaymentDetails */
-/* Windows.ApplicationModel.Payments.PaymentDetails.get_Total() */
 HRESULT wappa_payment_details_get__total(WAPPA_PaymentDetails *self, WAPPA_PaymentItem** value);
 
-/* Windows.ApplicationModel.Payments.PaymentDetails.put_Total() */
 HRESULT wappa_payment_details_put__total(WAPPA_PaymentDetails *self, WAPPA_PaymentItem* value);
 
-/* Windows.ApplicationModel.Payments.PaymentDetails.get_DisplayItems() */
 HRESULT wappa_payment_details_get__display_items(WAPPA_PaymentDetails *self, WFOCO_IVectorView_WAPPA_PaymentItem** value);
 
-/* Windows.ApplicationModel.Payments.PaymentDetails.put_DisplayItems() */
 HRESULT wappa_payment_details_put__display_items(WAPPA_PaymentDetails *self, WFOCO_IVectorView_WAPPA_PaymentItem* value);
 
-/* Windows.ApplicationModel.Payments.PaymentDetails.get_ShippingOptions() */
 HRESULT wappa_payment_details_get__shipping_options(WAPPA_PaymentDetails *self, WFOCO_IVectorView_WAPPA_PaymentShippingOption** value);
 
-/* Windows.ApplicationModel.Payments.PaymentDetails.put_ShippingOptions() */
 HRESULT wappa_payment_details_put__shipping_options(WAPPA_PaymentDetails *self, WFOCO_IVectorView_WAPPA_PaymentShippingOption* value);
 
-/* Windows.ApplicationModel.Payments.PaymentDetails.get_Modifiers() */
 HRESULT wappa_payment_details_get__modifiers(WAPPA_PaymentDetails *self, WFOCO_IVectorView_WAPPA_PaymentDetailsModifier** value);
 
-/* Windows.ApplicationModel.Payments.PaymentDetails.put_Modifiers() */
 HRESULT wappa_payment_details_put__modifiers(WAPPA_PaymentDetails *self, WFOCO_IVectorView_WAPPA_PaymentDetailsModifier* value);
 
-/* activate Windows.ApplicationModel.Payments.PaymentDetailsModifier */
 HRESULT wappa_payment_details_modifier_new(WAPPA_PaymentDetailsModifier **out);
 
-/* Windows.ApplicationModel.Payments.PaymentDetailsModifier */
-/* Windows.ApplicationModel.Payments.PaymentDetailsModifier.get_JsonData() */
 HRESULT wappa_payment_details_modifier_get__json_data(WAPPA_PaymentDetailsModifier *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Payments.PaymentDetailsModifier.get_SupportedMethodIds() */
 HRESULT wappa_payment_details_modifier_get__supported_method_ids(WAPPA_PaymentDetailsModifier *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.ApplicationModel.Payments.PaymentDetailsModifier.get_Total() */
 HRESULT wappa_payment_details_modifier_get__total(WAPPA_PaymentDetailsModifier *self, WAPPA_PaymentItem** value);
 
-/* Windows.ApplicationModel.Payments.PaymentDetailsModifier.get_AdditionalDisplayItems() */
 HRESULT wappa_payment_details_modifier_get__additional_display_items(WAPPA_PaymentDetailsModifier *self, WFOCO_IVectorView_WAPPA_PaymentItem** value);
 
-/* activate Windows.ApplicationModel.Payments.PaymentItem */
 HRESULT wappa_payment_item_new(WAPPA_PaymentItem **out);
 
-/* Windows.ApplicationModel.Payments.PaymentItem */
-/* Windows.ApplicationModel.Payments.PaymentItem.get_Label() */
 HRESULT wappa_payment_item_get__label(WAPPA_PaymentItem *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Payments.PaymentItem.put_Label() */
 HRESULT wappa_payment_item_put__label(WAPPA_PaymentItem *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Payments.PaymentItem.get_Amount() */
 HRESULT wappa_payment_item_get__amount(WAPPA_PaymentItem *self, WAPPA_PaymentCurrencyAmount** value);
 
-/* Windows.ApplicationModel.Payments.PaymentItem.put_Amount() */
 HRESULT wappa_payment_item_put__amount(WAPPA_PaymentItem *self, WAPPA_PaymentCurrencyAmount* value);
 
-/* Windows.ApplicationModel.Payments.PaymentItem.get_Pending() */
 HRESULT wappa_payment_item_get__pending(WAPPA_PaymentItem *self, BOOL *value);
 
-/* Windows.ApplicationModel.Payments.PaymentItem.put_Pending() */
 HRESULT wappa_payment_item_put__pending(WAPPA_PaymentItem *self, BOOL value);
 
-/* activate Windows.ApplicationModel.Payments.PaymentMediator */
 HRESULT wappa_payment_mediator_new(WAPPA_PaymentMediator **out);
 
-/* Windows.ApplicationModel.Payments.PaymentMediator */
-/* Windows.ApplicationModel.Payments.PaymentMediator.GetSupportedMethodIdsAsync() */
 HRESULT wappa_payment_mediator_get_supported_method_ids_async(WAPPA_PaymentMediator *self, WF_IAsyncOperation_WFOCO_IVectorView_HSTRING** out);
 
-/* Windows.ApplicationModel.Payments.PaymentMediator.SubmitPaymentRequestAsync(paymentRequest) */
 HRESULT wappa_payment_mediator_submit_payment_request_async(WAPPA_PaymentMediator *self, WAPPA_PaymentRequest* paymentRequest, WF_IAsyncOperation_WAPPA_PaymentRequestSubmitResult** out);
 
-/* Windows.ApplicationModel.Payments.PaymentMediator.SubmitPaymentRequestAsync(paymentRequest, changeHandler) */
 HRESULT wappa_payment_mediator_submit_payment_request_async_p_p_p(WAPPA_PaymentMediator *self, WAPPA_PaymentRequest* paymentRequest, WAPPA_PaymentRequestChangedHandler* changeHandler, WF_IAsyncOperation_WAPPA_PaymentRequestSubmitResult** out);
 
-/* Windows.ApplicationModel.Payments.PaymentMediator.CanMakePaymentAsync(paymentRequest) */
 HRESULT wappa_payment_mediator_can_make_payment_async(WAPPA_PaymentMediator *self, WAPPA_PaymentRequest* paymentRequest, WF_IAsyncOperation_WAPPA_PaymentCanMakePaymentResult** out);
 
-/* activate Windows.ApplicationModel.Payments.PaymentMerchantInfo */
 HRESULT wappa_payment_merchant_info_new(WAPPA_PaymentMerchantInfo **out);
 
-/* Windows.ApplicationModel.Payments.PaymentMerchantInfo */
-/* Windows.ApplicationModel.Payments.PaymentMerchantInfo.get_PackageFullName() */
 HRESULT wappa_payment_merchant_info_get__package_full_name(WAPPA_PaymentMerchantInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Payments.PaymentMerchantInfo.get_Uri() */
 HRESULT wappa_payment_merchant_info_get__uri(WAPPA_PaymentMerchantInfo *self, WF_Uri** value);
 
-/* activate Windows.ApplicationModel.Payments.PaymentMethodData */
 HRESULT wappa_payment_method_data_new(WAPPA_PaymentMethodData **out);
 
-/* Windows.ApplicationModel.Payments.PaymentMethodData */
-/* Windows.ApplicationModel.Payments.PaymentMethodData.get_SupportedMethodIds() */
 HRESULT wappa_payment_method_data_get__supported_method_ids(WAPPA_PaymentMethodData *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.ApplicationModel.Payments.PaymentMethodData.get_JsonData() */
 HRESULT wappa_payment_method_data_get__json_data(WAPPA_PaymentMethodData *self, cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.Payments.PaymentOptions */
 HRESULT wappa_payment_options_new(WAPPA_PaymentOptions **out);
 
-/* Windows.ApplicationModel.Payments.PaymentOptions */
-/* Windows.ApplicationModel.Payments.PaymentOptions.get_RequestPayerEmail() */
 HRESULT wappa_payment_options_get__request_payer_email(WAPPA_PaymentOptions *self, WAPPA_PaymentOptionPresence *value);
 
-/* Windows.ApplicationModel.Payments.PaymentOptions.put_RequestPayerEmail() */
 HRESULT wappa_payment_options_put__request_payer_email(WAPPA_PaymentOptions *self, WAPPA_PaymentOptionPresence value);
 
-/* Windows.ApplicationModel.Payments.PaymentOptions.get_RequestPayerName() */
 HRESULT wappa_payment_options_get__request_payer_name(WAPPA_PaymentOptions *self, WAPPA_PaymentOptionPresence *value);
 
-/* Windows.ApplicationModel.Payments.PaymentOptions.put_RequestPayerName() */
 HRESULT wappa_payment_options_put__request_payer_name(WAPPA_PaymentOptions *self, WAPPA_PaymentOptionPresence value);
 
-/* Windows.ApplicationModel.Payments.PaymentOptions.get_RequestPayerPhoneNumber() */
 HRESULT wappa_payment_options_get__request_payer_phone_number(WAPPA_PaymentOptions *self, WAPPA_PaymentOptionPresence *value);
 
-/* Windows.ApplicationModel.Payments.PaymentOptions.put_RequestPayerPhoneNumber() */
 HRESULT wappa_payment_options_put__request_payer_phone_number(WAPPA_PaymentOptions *self, WAPPA_PaymentOptionPresence value);
 
-/* Windows.ApplicationModel.Payments.PaymentOptions.get_RequestShipping() */
 HRESULT wappa_payment_options_get__request_shipping(WAPPA_PaymentOptions *self, BOOL *value);
 
-/* Windows.ApplicationModel.Payments.PaymentOptions.put_RequestShipping() */
 HRESULT wappa_payment_options_put__request_shipping(WAPPA_PaymentOptions *self, BOOL value);
 
-/* Windows.ApplicationModel.Payments.PaymentOptions.get_ShippingType() */
 HRESULT wappa_payment_options_get__shipping_type(WAPPA_PaymentOptions *self, WAPPA_PaymentShippingType *value);
 
-/* Windows.ApplicationModel.Payments.PaymentOptions.put_ShippingType() */
 HRESULT wappa_payment_options_put__shipping_type(WAPPA_PaymentOptions *self, WAPPA_PaymentShippingType value);
 
-/* activate Windows.ApplicationModel.Payments.PaymentRequest */
 HRESULT wappa_payment_request_new(WAPPA_PaymentRequest **out);
 
-/* Windows.ApplicationModel.Payments.PaymentRequest */
-/* Windows.ApplicationModel.Payments.PaymentRequest.get_MerchantInfo() */
 HRESULT wappa_payment_request_get__merchant_info(WAPPA_PaymentRequest *self, WAPPA_PaymentMerchantInfo** value);
 
-/* Windows.ApplicationModel.Payments.PaymentRequest.get_Details() */
 HRESULT wappa_payment_request_get__details(WAPPA_PaymentRequest *self, WAPPA_PaymentDetails** value);
 
-/* Windows.ApplicationModel.Payments.PaymentRequest.get_MethodData() */
 HRESULT wappa_payment_request_get__method_data(WAPPA_PaymentRequest *self, WFOCO_IVectorView_WAPPA_PaymentMethodData** value);
 
-/* Windows.ApplicationModel.Payments.PaymentRequest.get_Options() */
 HRESULT wappa_payment_request_get__options(WAPPA_PaymentRequest *self, WAPPA_PaymentOptions** value);
 
-/* Windows.ApplicationModel.Payments.PaymentRequest.get_Id() */
 HRESULT wappa_payment_request_get__id(WAPPA_PaymentRequest *self, cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.Payments.PaymentRequestChangedArgs */
 HRESULT wappa_payment_request_changed_args_new(WAPPA_PaymentRequestChangedArgs **out);
 
-/* Windows.ApplicationModel.Payments.PaymentRequestChangedArgs */
-/* Windows.ApplicationModel.Payments.PaymentRequestChangedArgs.get_ChangeKind() */
 HRESULT wappa_payment_request_changed_args_get__change_kind(WAPPA_PaymentRequestChangedArgs *self, WAPPA_PaymentRequestChangeKind *value);
 
-/* Windows.ApplicationModel.Payments.PaymentRequestChangedArgs.get_ShippingAddress() */
 HRESULT wappa_payment_request_changed_args_get__shipping_address(WAPPA_PaymentRequestChangedArgs *self, WAPPA_PaymentAddress** value);
 
-/* Windows.ApplicationModel.Payments.PaymentRequestChangedArgs.get_SelectedShippingOption() */
 HRESULT wappa_payment_request_changed_args_get__selected_shipping_option(WAPPA_PaymentRequestChangedArgs *self, WAPPA_PaymentShippingOption** value);
 
-/* Windows.ApplicationModel.Payments.PaymentRequestChangedArgs.Acknowledge(changeResult) */
 HRESULT wappa_payment_request_changed_args_acknowledge(WAPPA_PaymentRequestChangedArgs *self, WAPPA_PaymentRequestChangedResult* changeResult);
 
-/* Windows.ApplicationModel.Payments.PaymentRequestChangedHandler */
-/* Windows.ApplicationModel.Payments.PaymentRequestChangedHandler.Invoke(paymentRequest, args) */
 HRESULT wappa_payment_request_changed_handler_invoke(WAPPA_PaymentRequestChangedHandler *self, WAPPA_PaymentRequest* paymentRequest, WAPPA_PaymentRequestChangedArgs* args);
 
-/* activate Windows.ApplicationModel.Payments.PaymentRequestChangedResult */
 HRESULT wappa_payment_request_changed_result_new(WAPPA_PaymentRequestChangedResult **out);
 
-/* Windows.ApplicationModel.Payments.PaymentRequestChangedResult */
-/* Windows.ApplicationModel.Payments.PaymentRequestChangedResult.get_ChangeAcceptedByMerchant() */
 HRESULT wappa_payment_request_changed_result_get__change_accepted_by_merchant(WAPPA_PaymentRequestChangedResult *self, BOOL *value);
 
-/* Windows.ApplicationModel.Payments.PaymentRequestChangedResult.put_ChangeAcceptedByMerchant() */
 HRESULT wappa_payment_request_changed_result_put__change_accepted_by_merchant(WAPPA_PaymentRequestChangedResult *self, BOOL value);
 
-/* Windows.ApplicationModel.Payments.PaymentRequestChangedResult.get_Message() */
 HRESULT wappa_payment_request_changed_result_get__message(WAPPA_PaymentRequestChangedResult *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Payments.PaymentRequestChangedResult.put_Message() */
 HRESULT wappa_payment_request_changed_result_put__message(WAPPA_PaymentRequestChangedResult *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Payments.PaymentRequestChangedResult.get_UpdatedPaymentDetails() */
 HRESULT wappa_payment_request_changed_result_get__updated_payment_details(WAPPA_PaymentRequestChangedResult *self, WAPPA_PaymentDetails** value);
 
-/* Windows.ApplicationModel.Payments.PaymentRequestChangedResult.put_UpdatedPaymentDetails() */
 HRESULT wappa_payment_request_changed_result_put__updated_payment_details(WAPPA_PaymentRequestChangedResult *self, WAPPA_PaymentDetails* value);
 
-/* activate Windows.ApplicationModel.Payments.PaymentRequestSubmitResult */
 HRESULT wappa_payment_request_submit_result_new(WAPPA_PaymentRequestSubmitResult **out);
 
-/* Windows.ApplicationModel.Payments.PaymentRequestSubmitResult */
-/* Windows.ApplicationModel.Payments.PaymentRequestSubmitResult.get_Status() */
 HRESULT wappa_payment_request_submit_result_get__status(WAPPA_PaymentRequestSubmitResult *self, WAPPA_PaymentRequestStatus *value);
 
-/* Windows.ApplicationModel.Payments.PaymentRequestSubmitResult.get_Response() */
 HRESULT wappa_payment_request_submit_result_get__response(WAPPA_PaymentRequestSubmitResult *self, WAPPA_PaymentResponse** value);
 
-/* activate Windows.ApplicationModel.Payments.PaymentResponse */
 HRESULT wappa_payment_response_new(WAPPA_PaymentResponse **out);
 
-/* Windows.ApplicationModel.Payments.PaymentResponse */
-/* Windows.ApplicationModel.Payments.PaymentResponse.get_PaymentToken() */
 HRESULT wappa_payment_response_get__payment_token(WAPPA_PaymentResponse *self, WAPPA_PaymentToken** value);
 
-/* Windows.ApplicationModel.Payments.PaymentResponse.get_ShippingOption() */
 HRESULT wappa_payment_response_get__shipping_option(WAPPA_PaymentResponse *self, WAPPA_PaymentShippingOption** value);
 
-/* Windows.ApplicationModel.Payments.PaymentResponse.get_ShippingAddress() */
 HRESULT wappa_payment_response_get__shipping_address(WAPPA_PaymentResponse *self, WAPPA_PaymentAddress** value);
 
-/* Windows.ApplicationModel.Payments.PaymentResponse.get_PayerEmail() */
 HRESULT wappa_payment_response_get__payer_email(WAPPA_PaymentResponse *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Payments.PaymentResponse.get_PayerName() */
 HRESULT wappa_payment_response_get__payer_name(WAPPA_PaymentResponse *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Payments.PaymentResponse.get_PayerPhoneNumber() */
 HRESULT wappa_payment_response_get__payer_phone_number(WAPPA_PaymentResponse *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Payments.PaymentResponse.CompleteAsync(status) */
 HRESULT wappa_payment_response_complete_async(WAPPA_PaymentResponse *self, WAPPA_PaymentRequestCompletionStatus status, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Payments.PaymentShippingOption */
 HRESULT wappa_payment_shipping_option_new(WAPPA_PaymentShippingOption **out);
 
-/* Windows.ApplicationModel.Payments.PaymentShippingOption */
-/* Windows.ApplicationModel.Payments.PaymentShippingOption.get_Label() */
 HRESULT wappa_payment_shipping_option_get__label(WAPPA_PaymentShippingOption *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Payments.PaymentShippingOption.put_Label() */
 HRESULT wappa_payment_shipping_option_put__label(WAPPA_PaymentShippingOption *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Payments.PaymentShippingOption.get_Amount() */
 HRESULT wappa_payment_shipping_option_get__amount(WAPPA_PaymentShippingOption *self, WAPPA_PaymentCurrencyAmount** value);
 
-/* Windows.ApplicationModel.Payments.PaymentShippingOption.put_Amount() */
 HRESULT wappa_payment_shipping_option_put__amount(WAPPA_PaymentShippingOption *self, WAPPA_PaymentCurrencyAmount* value);
 
-/* Windows.ApplicationModel.Payments.PaymentShippingOption.get_Tag() */
 HRESULT wappa_payment_shipping_option_get__tag(WAPPA_PaymentShippingOption *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Payments.PaymentShippingOption.put_Tag() */
 HRESULT wappa_payment_shipping_option_put__tag(WAPPA_PaymentShippingOption *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Payments.PaymentShippingOption.get_IsSelected() */
 HRESULT wappa_payment_shipping_option_get__is_selected(WAPPA_PaymentShippingOption *self, BOOL *value);
 
-/* Windows.ApplicationModel.Payments.PaymentShippingOption.put_IsSelected() */
 HRESULT wappa_payment_shipping_option_put__is_selected(WAPPA_PaymentShippingOption *self, BOOL value);
 
-/* activate Windows.ApplicationModel.Payments.PaymentToken */
 HRESULT wappa_payment_token_new(WAPPA_PaymentToken **out);
 
-/* Windows.ApplicationModel.Payments.PaymentToken */
-/* Windows.ApplicationModel.Payments.PaymentToken.get_PaymentMethodId() */
 HRESULT wappa_payment_token_get__payment_method_id(WAPPA_PaymentToken *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Payments.PaymentToken.get_JsonDetails() */
 HRESULT wappa_payment_token_get__json_details(WAPPA_PaymentToken *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Payments.IPaymentCanMakePaymentResultFactory */
-/* Windows.ApplicationModel.Payments.IPaymentCanMakePaymentResultFactory.Create() */
 HRESULT wappa_payment_can_make_payment_result_factory_create(WAPPA_IPaymentCanMakePaymentResultFactory *self, WAPPA_PaymentCanMakePaymentResultStatus value, WAPPA_PaymentCanMakePaymentResult** out);
 
-/* Windows.ApplicationModel.Payments.IPaymentRequestChangedResultFactory */
-/* Windows.ApplicationModel.Payments.IPaymentRequestChangedResultFactory.Create(changeAcceptedByMerchant) */
 HRESULT wappa_payment_request_changed_result_factory_create(WAPPA_IPaymentRequestChangedResultFactory *self, BOOL changeAcceptedByMerchant, WAPPA_PaymentRequestChangedResult** out);
 
-/* Windows.ApplicationModel.Payments.IPaymentRequestChangedResultFactory.CreateWithPaymentDetails(changeAcceptedByMerchant, updatedPaymentDetails) */
 HRESULT wappa_payment_request_changed_result_factory_create_with_payment_details(WAPPA_IPaymentRequestChangedResultFactory *self, BOOL changeAcceptedByMerchant, WAPPA_PaymentDetails* updatedPaymentDetails, WAPPA_PaymentRequestChangedResult** out);
 
-/* Windows.ApplicationModel.Payments.IPaymentAddress */
-/* Windows.ApplicationModel.Payments.IPaymentCanMakePaymentResult */
-/* Windows.ApplicationModel.Payments.IPaymentCurrencyAmount */
-/* Windows.ApplicationModel.Payments.IPaymentDetails */
-/* Windows.ApplicationModel.Payments.IPaymentDetailsModifier */
-/* Windows.ApplicationModel.Payments.IPaymentItem */
-/* Windows.ApplicationModel.Payments.IPaymentMediator */
-/* Windows.ApplicationModel.Payments.IPaymentMediator2 */
-/* Windows.ApplicationModel.Payments.IPaymentMediator2.CanMakePaymentAsync(paymentRequest) */
 HRESULT wappa_payment_mediator_2_can_make_payment_async(WAPPA_IPaymentMediator_2 *self, WAPPA_PaymentRequest* paymentRequest, WF_IAsyncOperation_WAPPA_PaymentCanMakePaymentResult** out);
 
-/* Windows.ApplicationModel.Payments.IPaymentMerchantInfo */
-/* Windows.ApplicationModel.Payments.IPaymentMethodData */
-/* Windows.ApplicationModel.Payments.IPaymentOptions */
-/* Windows.ApplicationModel.Payments.IPaymentRequest */
-/* Windows.ApplicationModel.Payments.IPaymentRequest2 */
-/* Windows.ApplicationModel.Payments.IPaymentRequest2.get_Id() */
 HRESULT wappa_payment_request_2_get__id(WAPPA_IPaymentRequest_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Payments.IPaymentRequestChangedArgs */
-/* Windows.ApplicationModel.Payments.IPaymentRequestChangedResult */
-/* Windows.ApplicationModel.Payments.IPaymentRequestSubmitResult */
-/* Windows.ApplicationModel.Payments.IPaymentResponse */
-/* Windows.ApplicationModel.Payments.IPaymentShippingOption */
-/* Windows.ApplicationModel.Payments.IPaymentToken */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_PAYMENTS_H */

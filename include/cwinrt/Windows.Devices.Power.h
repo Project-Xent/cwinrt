@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSYPO_BatteryStatus
 #define CWINRT_FWD_WSYPO_BatteryStatus
 typedef enum WSYPO_BatteryStatus {
@@ -24,7 +23,6 @@ typedef enum WSYPO_BatteryStatus {
 } WSYPO_BatteryStatus;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDEPO_Battery WDEPO_Battery;
 typedef struct WDEPO_BatteryReport WDEPO_BatteryReport;
 typedef struct WDEPO_IBatteryStatics WDEPO_IBatteryStatics;
@@ -36,7 +34,6 @@ typedef struct WDEPO_IBatteryReport WDEPO_IBatteryReport;
 typedef struct WDEPO_IPowerGridData WDEPO_IPowerGridData;
 typedef struct WDEPO_IPowerGridForecast WDEPO_IPowerGridForecast;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_TypedEventHandler_WDEPO_Battery_Object
 #define CWINRT_FWD_WF_TypedEventHandler_WDEPO_Battery_Object
 typedef struct WF_TypedEventHandler_WDEPO_Battery_Object WF_TypedEventHandler_WDEPO_Battery_Object;
@@ -72,7 +69,6 @@ typedef struct WF_TimeSpan WF_TimeSpan;
 typedef struct WFOCO_IVectorView_WDEPO_PowerGridData WFOCO_IVectorView_WDEPO_PowerGridData;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -101,100 +97,62 @@ static const IID CWINRT_IID_WDEPO_IPowerGridData CWINRT_MAYBE_UNUSED = { 0xC360F
 static const IID CWINRT_IID_WDEPO_IPowerGridForecast CWINRT_MAYBE_UNUSED = { 0x077E4DE9, 0xED60, 0x58BB, { 0xA8, 0x50, 0x00, 0x3C, 0x6A, 0x13, 0x86, 0x85 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Devices.Power.Battery */
 HRESULT wdepo_battery_new(WDEPO_Battery **out);
 
-/* Windows.Devices.Power.Battery */
-/* Windows.Devices.Power.Battery.get_DeviceId() */
 HRESULT wdepo_battery_get__device_id(WDEPO_Battery *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Power.Battery.GetReport() */
 HRESULT wdepo_battery_get_report(WDEPO_Battery *self, WDEPO_BatteryReport** out);
 
-/* Windows.Devices.Power.Battery.get_AggregateBattery() */
 HRESULT wdepo_battery_get__aggregate_battery(WDEPO_Battery** value);
 
-/* Windows.Devices.Power.Battery.FromIdAsync(deviceId) */
 HRESULT wdepo_battery_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDEPO_Battery** out);
 
-/* Windows.Devices.Power.Battery.GetDeviceSelector() */
 HRESULT wdepo_battery_get_device_selector(cwinrt_hstring *out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdepo_battery_on_report_updated(WDEPO_Battery *self, cwinrt_event_fn fn, void *ctx);
 void wdepo_battery_off_report_updated(WDEPO_Battery *self, cwinrt_token token);
 
-/* activate Windows.Devices.Power.BatteryReport */
 HRESULT wdepo_battery_report_new(WDEPO_BatteryReport **out);
 
-/* Windows.Devices.Power.BatteryReport */
-/* Windows.Devices.Power.BatteryReport.get_ChargeRateInMilliwatts() */
 HRESULT wdepo_battery_report_get__charge_rate_in_milliwatts(WDEPO_BatteryReport *self, int32_t** value);
 
-/* Windows.Devices.Power.BatteryReport.get_DesignCapacityInMilliwattHours() */
 HRESULT wdepo_battery_report_get__design_capacity_in_milliwatt_hours(WDEPO_BatteryReport *self, int32_t** value);
 
-/* Windows.Devices.Power.BatteryReport.get_FullChargeCapacityInMilliwattHours() */
 HRESULT wdepo_battery_report_get__full_charge_capacity_in_milliwatt_hours(WDEPO_BatteryReport *self, int32_t** value);
 
-/* Windows.Devices.Power.BatteryReport.get_RemainingCapacityInMilliwattHours() */
 HRESULT wdepo_battery_report_get__remaining_capacity_in_milliwatt_hours(WDEPO_BatteryReport *self, int32_t** value);
 
-/* Windows.Devices.Power.BatteryReport.get_Status() */
 HRESULT wdepo_battery_report_get__status(WDEPO_BatteryReport *self, WSYPO_BatteryStatus *value);
 
-/* Windows.Devices.Power.IBatteryStatics */
-/* Windows.Devices.Power.IBatteryStatics.get_AggregateBattery() */
 HRESULT wdepo_battery_statics_get__aggregate_battery(WDEPO_IBatteryStatics *self, WDEPO_Battery** value);
 
-/* Windows.Devices.Power.IBatteryStatics.FromIdAsync(deviceId) */
 HRESULT wdepo_battery_statics_from_id_async(WDEPO_IBatteryStatics *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDEPO_Battery** out);
 
-/* Windows.Devices.Power.IBatteryStatics.GetDeviceSelector() */
 HRESULT wdepo_battery_statics_get_device_selector(WDEPO_IBatteryStatics *self, cwinrt_hstring *out);
 
-/* Windows.Devices.Power.IPowerGridForecastStatics */
-/* Windows.Devices.Power.IPowerGridForecastStatics.GetForecast() */
 HRESULT wdepo_power_grid_forecast_statics_get_forecast(WDEPO_IPowerGridForecastStatics *self, WDEPO_PowerGridForecast** out);
 
-/* activate Windows.Devices.Power.PowerGridData */
 HRESULT wdepo_power_grid_data_new(WDEPO_PowerGridData **out);
 
-/* Windows.Devices.Power.PowerGridData */
-/* Windows.Devices.Power.PowerGridData.get_Severity() */
 HRESULT wdepo_power_grid_data_get__severity(WDEPO_PowerGridData *self, double *value);
 
-/* Windows.Devices.Power.PowerGridData.get_IsLowUserExperienceImpact() */
 HRESULT wdepo_power_grid_data_get__is_low_user_experience_impact(WDEPO_PowerGridData *self, BOOL *value);
 
-/* activate Windows.Devices.Power.PowerGridForecast */
 HRESULT wdepo_power_grid_forecast_new(WDEPO_PowerGridForecast **out);
 
-/* Windows.Devices.Power.PowerGridForecast */
-/* Windows.Devices.Power.PowerGridForecast.get_StartTime() */
 HRESULT wdepo_power_grid_forecast_get__start_time(WDEPO_PowerGridForecast *self, WF_DateTime *value);
 
-/* Windows.Devices.Power.PowerGridForecast.get_BlockDuration() */
 HRESULT wdepo_power_grid_forecast_get__block_duration(WDEPO_PowerGridForecast *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Power.PowerGridForecast.get_Forecast() */
 HRESULT wdepo_power_grid_forecast_get__forecast(WDEPO_PowerGridForecast *self, WFOCO_IVectorView_WDEPO_PowerGridData** value);
 
-/* Windows.Devices.Power.PowerGridForecast.GetForecast() */
 HRESULT wdepo_power_grid_forecast_get_forecast(WDEPO_PowerGridForecast** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdepo_power_grid_forecast_on_forecast_updated(WDEPO_PowerGridForecast *self, cwinrt_event_fn fn, void *ctx);
 void wdepo_power_grid_forecast_off_forecast_updated(WDEPO_PowerGridForecast *self, cwinrt_token token);
 
-/* Windows.Devices.Power.IBattery */
-/* Windows.Devices.Power.IBatteryReport */
-/* Windows.Devices.Power.IPowerGridData */
-/* Windows.Devices.Power.IPowerGridForecast */
 #endif /* CWINRT_WINDOWS_DEVICES_POWER_H */

@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WSYPO_BackgroundEnergyManager WSYPO_BackgroundEnergyManager;
 typedef struct WSYPO_ForegroundEnergyManager WSYPO_ForegroundEnergyManager;
 typedef struct WSYPO_PowerManager WSYPO_PowerManager;
@@ -20,7 +19,6 @@ typedef struct WSYPO_IPowerManagerStatics WSYPO_IPowerManagerStatics;
 typedef struct WSYPO_IForegroundEnergyManagerStatics WSYPO_IForegroundEnergyManagerStatics;
 typedef struct WSYPO_IBackgroundEnergyManagerStatics WSYPO_IBackgroundEnergyManagerStatics;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_EventHandler_Object
 #define CWINRT_FWD_WF_EventHandler_Object
 typedef struct WF_EventHandler_Object WF_EventHandler_Object;
@@ -58,7 +56,6 @@ typedef enum WSYPO_PowerSupplyStatus {
 } WSYPO_PowerSupplyStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -75,37 +72,24 @@ static const IID CWINRT_IID_WSYPO_IForegroundEnergyManagerStatics CWINRT_MAYBE_U
 static const IID CWINRT_IID_WSYPO_IBackgroundEnergyManagerStatics CWINRT_MAYBE_UNUSED = { 0xB3161D95, 0x1180, 0x4376, { 0x96, 0xE1, 0x40, 0x95, 0x56, 0x81, 0x47, 0xCE } };
 #endif
 
-/* Methods */
-
-/* activate Windows.System.Power.BackgroundEnergyManager */
 HRESULT wsypo_background_energy_manager_new(WSYPO_BackgroundEnergyManager **out);
 
-/* Windows.System.Power.BackgroundEnergyManager */
-/* Windows.System.Power.BackgroundEnergyManager.get_LowUsageLevel() */
 HRESULT wsypo_background_energy_manager_get__low_usage_level(uint32_t *value);
 
-/* Windows.System.Power.BackgroundEnergyManager.get_NearMaxAcceptableUsageLevel() */
 HRESULT wsypo_background_energy_manager_get__near_max_acceptable_usage_level(uint32_t *value);
 
-/* Windows.System.Power.BackgroundEnergyManager.get_MaxAcceptableUsageLevel() */
 HRESULT wsypo_background_energy_manager_get__max_acceptable_usage_level(uint32_t *value);
 
-/* Windows.System.Power.BackgroundEnergyManager.get_ExcessiveUsageLevel() */
 HRESULT wsypo_background_energy_manager_get__excessive_usage_level(uint32_t *value);
 
-/* Windows.System.Power.BackgroundEnergyManager.get_NearTerminationUsageLevel() */
 HRESULT wsypo_background_energy_manager_get__near_termination_usage_level(uint32_t *value);
 
-/* Windows.System.Power.BackgroundEnergyManager.get_TerminationUsageLevel() */
 HRESULT wsypo_background_energy_manager_get__termination_usage_level(uint32_t *value);
 
-/* Windows.System.Power.BackgroundEnergyManager.get_RecentEnergyUsage() */
 HRESULT wsypo_background_energy_manager_get__recent_energy_usage(uint32_t *value);
 
-/* Windows.System.Power.BackgroundEnergyManager.get_RecentEnergyUsageLevel() */
 HRESULT wsypo_background_energy_manager_get__recent_energy_usage_level(uint32_t *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsypo_background_energy_manager_on_recent_energy_usage_increased(WSYPO_BackgroundEnergyManager *self, cwinrt_event_fn fn, void *ctx);
@@ -114,29 +98,20 @@ void wsypo_background_energy_manager_off_recent_energy_usage_increased(WSYPO_Bac
 cwinrt_token wsypo_background_energy_manager_on_recent_energy_usage_returned_to_low(WSYPO_BackgroundEnergyManager *self, cwinrt_event_fn fn, void *ctx);
 void wsypo_background_energy_manager_off_recent_energy_usage_returned_to_low(WSYPO_BackgroundEnergyManager *self, cwinrt_token token);
 
-/* activate Windows.System.Power.ForegroundEnergyManager */
 HRESULT wsypo_foreground_energy_manager_new(WSYPO_ForegroundEnergyManager **out);
 
-/* Windows.System.Power.ForegroundEnergyManager */
-/* Windows.System.Power.ForegroundEnergyManager.get_LowUsageLevel() */
 HRESULT wsypo_foreground_energy_manager_get__low_usage_level(uint32_t *value);
 
-/* Windows.System.Power.ForegroundEnergyManager.get_NearMaxAcceptableUsageLevel() */
 HRESULT wsypo_foreground_energy_manager_get__near_max_acceptable_usage_level(uint32_t *value);
 
-/* Windows.System.Power.ForegroundEnergyManager.get_MaxAcceptableUsageLevel() */
 HRESULT wsypo_foreground_energy_manager_get__max_acceptable_usage_level(uint32_t *value);
 
-/* Windows.System.Power.ForegroundEnergyManager.get_ExcessiveUsageLevel() */
 HRESULT wsypo_foreground_energy_manager_get__excessive_usage_level(uint32_t *value);
 
-/* Windows.System.Power.ForegroundEnergyManager.get_RecentEnergyUsage() */
 HRESULT wsypo_foreground_energy_manager_get__recent_energy_usage(uint32_t *value);
 
-/* Windows.System.Power.ForegroundEnergyManager.get_RecentEnergyUsageLevel() */
 HRESULT wsypo_foreground_energy_manager_get__recent_energy_usage_level(uint32_t *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsypo_foreground_energy_manager_on_recent_energy_usage_increased(WSYPO_ForegroundEnergyManager *self, cwinrt_event_fn fn, void *ctx);
@@ -145,26 +120,18 @@ void wsypo_foreground_energy_manager_off_recent_energy_usage_increased(WSYPO_For
 cwinrt_token wsypo_foreground_energy_manager_on_recent_energy_usage_returned_to_low(WSYPO_ForegroundEnergyManager *self, cwinrt_event_fn fn, void *ctx);
 void wsypo_foreground_energy_manager_off_recent_energy_usage_returned_to_low(WSYPO_ForegroundEnergyManager *self, cwinrt_token token);
 
-/* activate Windows.System.Power.PowerManager */
 HRESULT wsypo_power_manager_new(WSYPO_PowerManager **out);
 
-/* Windows.System.Power.PowerManager */
-/* Windows.System.Power.PowerManager.get_EnergySaverStatus() */
 HRESULT wsypo_power_manager_get__energy_saver_status(WSYPO_EnergySaverStatus *value);
 
-/* Windows.System.Power.PowerManager.get_BatteryStatus() */
 HRESULT wsypo_power_manager_get__battery_status(WSYPO_BatteryStatus *value);
 
-/* Windows.System.Power.PowerManager.get_PowerSupplyStatus() */
 HRESULT wsypo_power_manager_get__power_supply_status(WSYPO_PowerSupplyStatus *value);
 
-/* Windows.System.Power.PowerManager.get_RemainingChargePercent() */
 HRESULT wsypo_power_manager_get__remaining_charge_percent(int32_t *value);
 
-/* Windows.System.Power.PowerManager.get_RemainingDischargeTime() */
 HRESULT wsypo_power_manager_get__remaining_discharge_time(WF_TimeSpan *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsypo_power_manager_on_energy_saver_status_changed(WSYPO_PowerManager *self, cwinrt_event_fn fn, void *ctx);
@@ -182,64 +149,42 @@ void wsypo_power_manager_off_remaining_charge_percent_changed(WSYPO_PowerManager
 cwinrt_token wsypo_power_manager_on_remaining_discharge_time_changed(WSYPO_PowerManager *self, cwinrt_event_fn fn, void *ctx);
 void wsypo_power_manager_off_remaining_discharge_time_changed(WSYPO_PowerManager *self, cwinrt_token token);
 
-/* Windows.System.Power.IPowerManagerStatics */
-/* Windows.System.Power.IPowerManagerStatics.get_EnergySaverStatus() */
 HRESULT wsypo_power_manager_statics_get__energy_saver_status(WSYPO_IPowerManagerStatics *self, WSYPO_EnergySaverStatus *value);
 
-/* Windows.System.Power.IPowerManagerStatics.get_BatteryStatus() */
 HRESULT wsypo_power_manager_statics_get__battery_status(WSYPO_IPowerManagerStatics *self, WSYPO_BatteryStatus *value);
 
-/* Windows.System.Power.IPowerManagerStatics.get_PowerSupplyStatus() */
 HRESULT wsypo_power_manager_statics_get__power_supply_status(WSYPO_IPowerManagerStatics *self, WSYPO_PowerSupplyStatus *value);
 
-/* Windows.System.Power.IPowerManagerStatics.get_RemainingChargePercent() */
 HRESULT wsypo_power_manager_statics_get__remaining_charge_percent(WSYPO_IPowerManagerStatics *self, int32_t *value);
 
-/* Windows.System.Power.IPowerManagerStatics.get_RemainingDischargeTime() */
 HRESULT wsypo_power_manager_statics_get__remaining_discharge_time(WSYPO_IPowerManagerStatics *self, WF_TimeSpan *value);
 
-/* Windows.System.Power.IForegroundEnergyManagerStatics */
-/* Windows.System.Power.IForegroundEnergyManagerStatics.get_LowUsageLevel() */
 HRESULT wsypo_foreground_energy_manager_statics_get__low_usage_level(WSYPO_IForegroundEnergyManagerStatics *self, uint32_t *value);
 
-/* Windows.System.Power.IForegroundEnergyManagerStatics.get_NearMaxAcceptableUsageLevel() */
 HRESULT wsypo_foreground_energy_manager_statics_get__near_max_acceptable_usage_level(WSYPO_IForegroundEnergyManagerStatics *self, uint32_t *value);
 
-/* Windows.System.Power.IForegroundEnergyManagerStatics.get_MaxAcceptableUsageLevel() */
 HRESULT wsypo_foreground_energy_manager_statics_get__max_acceptable_usage_level(WSYPO_IForegroundEnergyManagerStatics *self, uint32_t *value);
 
-/* Windows.System.Power.IForegroundEnergyManagerStatics.get_ExcessiveUsageLevel() */
 HRESULT wsypo_foreground_energy_manager_statics_get__excessive_usage_level(WSYPO_IForegroundEnergyManagerStatics *self, uint32_t *value);
 
-/* Windows.System.Power.IForegroundEnergyManagerStatics.get_RecentEnergyUsage() */
 HRESULT wsypo_foreground_energy_manager_statics_get__recent_energy_usage(WSYPO_IForegroundEnergyManagerStatics *self, uint32_t *value);
 
-/* Windows.System.Power.IForegroundEnergyManagerStatics.get_RecentEnergyUsageLevel() */
 HRESULT wsypo_foreground_energy_manager_statics_get__recent_energy_usage_level(WSYPO_IForegroundEnergyManagerStatics *self, uint32_t *value);
 
-/* Windows.System.Power.IBackgroundEnergyManagerStatics */
-/* Windows.System.Power.IBackgroundEnergyManagerStatics.get_LowUsageLevel() */
 HRESULT wsypo_background_energy_manager_statics_get__low_usage_level(WSYPO_IBackgroundEnergyManagerStatics *self, uint32_t *value);
 
-/* Windows.System.Power.IBackgroundEnergyManagerStatics.get_NearMaxAcceptableUsageLevel() */
 HRESULT wsypo_background_energy_manager_statics_get__near_max_acceptable_usage_level(WSYPO_IBackgroundEnergyManagerStatics *self, uint32_t *value);
 
-/* Windows.System.Power.IBackgroundEnergyManagerStatics.get_MaxAcceptableUsageLevel() */
 HRESULT wsypo_background_energy_manager_statics_get__max_acceptable_usage_level(WSYPO_IBackgroundEnergyManagerStatics *self, uint32_t *value);
 
-/* Windows.System.Power.IBackgroundEnergyManagerStatics.get_ExcessiveUsageLevel() */
 HRESULT wsypo_background_energy_manager_statics_get__excessive_usage_level(WSYPO_IBackgroundEnergyManagerStatics *self, uint32_t *value);
 
-/* Windows.System.Power.IBackgroundEnergyManagerStatics.get_NearTerminationUsageLevel() */
 HRESULT wsypo_background_energy_manager_statics_get__near_termination_usage_level(WSYPO_IBackgroundEnergyManagerStatics *self, uint32_t *value);
 
-/* Windows.System.Power.IBackgroundEnergyManagerStatics.get_TerminationUsageLevel() */
 HRESULT wsypo_background_energy_manager_statics_get__termination_usage_level(WSYPO_IBackgroundEnergyManagerStatics *self, uint32_t *value);
 
-/* Windows.System.Power.IBackgroundEnergyManagerStatics.get_RecentEnergyUsage() */
 HRESULT wsypo_background_energy_manager_statics_get__recent_energy_usage(WSYPO_IBackgroundEnergyManagerStatics *self, uint32_t *value);
 
-/* Windows.System.Power.IBackgroundEnergyManagerStatics.get_RecentEnergyUsageLevel() */
 HRESULT wsypo_background_energy_manager_statics_get__recent_energy_usage_level(WSYPO_IBackgroundEnergyManagerStatics *self, uint32_t *value);
 
 #endif /* CWINRT_WINDOWS_SYSTEM_POWER_H */

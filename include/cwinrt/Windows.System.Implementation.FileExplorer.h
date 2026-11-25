@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WWEHT_HttpResponseMessage
 #define CWINRT_FWD_WWEHT_HttpResponseMessage
 typedef struct WWEHT_HttpResponseMessage WWEHT_HttpResponseMessage;
@@ -22,7 +21,6 @@ typedef struct WWEHT_HttpResponseMessage WWEHT_HttpResponseMessage;
 typedef struct WWEHT_HttpRequestMessage WWEHT_HttpRequestMessage;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSYIMFI_ISysStorageProviderEventSource WSYIMFI_ISysStorageProviderEventSource;
 typedef struct WSYIMFI_ISysStorageProviderHandlerFactory WSYIMFI_ISysStorageProviderHandlerFactory;
 typedef struct WSYIMFI_ISysStorageProviderHttpRequestProvider WSYIMFI_ISysStorageProviderHttpRequestProvider;
@@ -30,7 +28,6 @@ typedef struct WSYIMFI_SysStorageProviderEventReceivedEventArgs WSYIMFI_SysStora
 typedef struct WSYIMFI_ISysStorageProviderEventReceivedEventArgsFactory WSYIMFI_ISysStorageProviderEventReceivedEventArgsFactory;
 typedef struct WSYIMFI_ISysStorageProviderEventReceivedEventArgs WSYIMFI_ISysStorageProviderEventReceivedEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_TypedEventHandler_WSYIMFI_ISysStorageProviderEventSource_WSYIMFI_SysStorageProviderEventReceivedEventArgs
 #define CWINRT_FWD_WF_TypedEventHandler_WSYIMFI_ISysStorageProviderEventSource_WSYIMFI_SysStorageProviderEventReceivedEventArgs
 typedef struct WF_TypedEventHandler_WSYIMFI_ISysStorageProviderEventSource_WSYIMFI_SysStorageProviderEventReceivedEventArgs WF_TypedEventHandler_WSYIMFI_ISysStorageProviderEventSource_WSYIMFI_SysStorageProviderEventReceivedEventArgs;
@@ -44,7 +41,6 @@ typedef struct WWEHT_HttpRequestMessage WWEHT_HttpRequestMessage;
 typedef struct WF_IAsyncOperation_WWEHT_HttpResponseMessage WF_IAsyncOperation_WWEHT_HttpResponseMessage;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -69,30 +65,16 @@ static const IID CWINRT_IID_WSYIMFI_ISysStorageProviderEventReceivedEventArgsFac
 static const IID CWINRT_IID_WSYIMFI_ISysStorageProviderEventReceivedEventArgs CWINRT_MAYBE_UNUSED = { 0xE132D1B9, 0x7B9D, 0x5820, { 0x97, 0x28, 0x42, 0x62, 0xB5, 0x28, 0x91, 0x42 } };
 #endif
 
-/* Methods */
-
-/* Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource */
-/* Windows.System.Implementation.FileExplorer.ISysStorageProviderHandlerFactory */
-/* Windows.System.Implementation.FileExplorer.ISysStorageProviderHandlerFactory.GetHttpRequestProvider(syncRootId) */
 HRESULT wsyimfi_sys_storage_provider_handler_factory_get_http_request_provider(WSYIMFI_ISysStorageProviderHandlerFactory *self, cwinrt_hstring syncRootId, WSYIMFI_ISysStorageProviderHttpRequestProvider** out);
 
-/* Windows.System.Implementation.FileExplorer.ISysStorageProviderHandlerFactory.GetEventSource(syncRootId, eventName) */
 HRESULT wsyimfi_sys_storage_provider_handler_factory_get_event_source(WSYIMFI_ISysStorageProviderHandlerFactory *self, cwinrt_hstring syncRootId, cwinrt_hstring eventName, WSYIMFI_ISysStorageProviderEventSource** out);
 
-/* Windows.System.Implementation.FileExplorer.ISysStorageProviderHttpRequestProvider */
-/* Windows.System.Implementation.FileExplorer.ISysStorageProviderHttpRequestProvider.SendRequestAsync(request) */
 HRESULT wsyimfi_sys_storage_provider_http_request_provider_send_request_async(WSYIMFI_ISysStorageProviderHttpRequestProvider *self, WWEHT_HttpRequestMessage* request, WF_IAsyncOperation_WWEHT_HttpResponseMessage** out);
 
-/* activate Windows.System.Implementation.FileExplorer.SysStorageProviderEventReceivedEventArgs */
 HRESULT wsyimfi_sys_storage_provider_event_received_event_args_new(WSYIMFI_SysStorageProviderEventReceivedEventArgs **out);
 
-/* Windows.System.Implementation.FileExplorer.SysStorageProviderEventReceivedEventArgs */
-/* Windows.System.Implementation.FileExplorer.SysStorageProviderEventReceivedEventArgs.get_Json() */
 HRESULT wsyimfi_sys_storage_provider_event_received_event_args_get__json(WSYIMFI_SysStorageProviderEventReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.System.Implementation.FileExplorer.ISysStorageProviderEventReceivedEventArgsFactory */
-/* Windows.System.Implementation.FileExplorer.ISysStorageProviderEventReceivedEventArgsFactory.CreateInstance(json) */
 HRESULT wsyimfi_sys_storage_provider_event_received_event_args_factory_create_instance(WSYIMFI_ISysStorageProviderEventReceivedEventArgsFactory *self, cwinrt_hstring json, WSYIMFI_SysStorageProviderEventReceivedEventArgs** out);
 
-/* Windows.System.Implementation.FileExplorer.ISysStorageProviderEventReceivedEventArgs */
 #endif /* CWINRT_WINDOWS_SYSTEM_IMPLEMENTATION_FILEEXPLORER_H */

@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WS_IStorageFile
 #define CWINRT_FWD_WS_IStorageFile
 typedef struct WS_IStorageFile WS_IStorageFile;
@@ -103,7 +102,6 @@ typedef enum WWE_WebErrorStatus {
 typedef struct WSTST_IRandomAccessStreamReference WSTST_IRandomAccessStreamReference;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WNEBA_BackgroundTransferRangesDownloadedEventArgs WNEBA_BackgroundTransferRangesDownloadedEventArgs;
 typedef struct WNEBA_BackgroundTransferGroup WNEBA_BackgroundTransferGroup;
 typedef struct WNEBA_ContentPrefetcher WNEBA_ContentPrefetcher;
@@ -156,7 +154,6 @@ typedef struct WNEBA_IBackgroundUploader_3 WNEBA_IBackgroundUploader_3;
 typedef struct WNEBA_IBackgroundTransferOperation WNEBA_IBackgroundTransferOperation;
 typedef struct WNEBA_IBackgroundTransferBase WNEBA_IBackgroundTransferBase;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IVector_WNEBA_BackgroundTransferFileRange
 #define CWINRT_FWD_WFOCO_IVector_WNEBA_BackgroundTransferFileRange
 typedef struct WFOCO_IVector_WNEBA_BackgroundTransferFileRange WFOCO_IVector_WNEBA_BackgroundTransferFileRange;
@@ -413,7 +410,6 @@ struct WNEBA_BackgroundTransferFileRange {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -570,711 +566,441 @@ static const IID CWINRT_IID_WNEBA_IBackgroundTransferOperation CWINRT_MAYBE_UNUS
 static const IID CWINRT_IID_WNEBA_IBackgroundTransferBase CWINRT_MAYBE_UNUSED = { 0x2A9DA250, 0xC769, 0x458C, { 0xAF, 0xE8, 0xFE, 0xB8, 0xD4, 0xD3, 0xB2, 0xEF } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Networking.BackgroundTransfer.BackgroundTransferRangesDownloadedEventArgs */
 HRESULT wneba_background_transfer_ranges_downloaded_event_args_new(WNEBA_BackgroundTransferRangesDownloadedEventArgs **out);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundTransferRangesDownloadedEventArgs */
-/* Windows.Networking.BackgroundTransfer.BackgroundTransferRangesDownloadedEventArgs.get_WasDownloadRestarted() */
 HRESULT wneba_background_transfer_ranges_downloaded_event_args_get__was_download_restarted(WNEBA_BackgroundTransferRangesDownloadedEventArgs *self, BOOL *value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundTransferRangesDownloadedEventArgs.get_AddedRanges() */
 HRESULT wneba_background_transfer_ranges_downloaded_event_args_get__added_ranges(WNEBA_BackgroundTransferRangesDownloadedEventArgs *self, WFOCO_IVector_WNEBA_BackgroundTransferFileRange** value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundTransferRangesDownloadedEventArgs.GetDeferral() */
 HRESULT wneba_background_transfer_ranges_downloaded_event_args_get_deferral(WNEBA_BackgroundTransferRangesDownloadedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Networking.BackgroundTransfer.BackgroundTransferGroup */
 HRESULT wneba_background_transfer_group_new(WNEBA_BackgroundTransferGroup **out);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundTransferGroup */
-/* Windows.Networking.BackgroundTransfer.BackgroundTransferGroup.get_Name() */
 HRESULT wneba_background_transfer_group_get__name(WNEBA_BackgroundTransferGroup *self, cwinrt_hstring *value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundTransferGroup.get_TransferBehavior() */
 HRESULT wneba_background_transfer_group_get__transfer_behavior(WNEBA_BackgroundTransferGroup *self, WNEBA_BackgroundTransferBehavior *value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundTransferGroup.put_TransferBehavior() */
 HRESULT wneba_background_transfer_group_put__transfer_behavior(WNEBA_BackgroundTransferGroup *self, WNEBA_BackgroundTransferBehavior value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundTransferGroup.CreateGroup(name) */
 HRESULT wneba_background_transfer_group_create_group(cwinrt_hstring name, WNEBA_BackgroundTransferGroup** out);
 
-/* activate Windows.Networking.BackgroundTransfer.ContentPrefetcher */
 HRESULT wneba_content_prefetcher_new(WNEBA_ContentPrefetcher **out);
 
-/* Windows.Networking.BackgroundTransfer.ContentPrefetcher */
-/* Windows.Networking.BackgroundTransfer.ContentPrefetcher.get_LastSuccessfulPrefetchTime() */
 HRESULT wneba_content_prefetcher_get__last_successful_prefetch_time(WF_DateTime** value);
 
-/* Windows.Networking.BackgroundTransfer.ContentPrefetcher.get_ContentUris() */
 HRESULT wneba_content_prefetcher_get__content_uris(WFOCO_IVector_WF_Uri** value);
 
-/* Windows.Networking.BackgroundTransfer.ContentPrefetcher.put_IndirectContentUri() */
 HRESULT wneba_content_prefetcher_put__indirect_content_uri(WF_Uri* value);
 
-/* Windows.Networking.BackgroundTransfer.ContentPrefetcher.get_IndirectContentUri() */
 HRESULT wneba_content_prefetcher_get__indirect_content_uri(WF_Uri** value);
 
-/* activate Windows.Networking.BackgroundTransfer.DownloadOperation */
 HRESULT wneba_download_operation_new(WNEBA_DownloadOperation **out);
 
-/* Windows.Networking.BackgroundTransfer.DownloadOperation */
-/* Windows.Networking.BackgroundTransfer.DownloadOperation.get_ResultFile() */
 HRESULT wneba_download_operation_get__result_file(WNEBA_DownloadOperation *self, WS_IStorageFile** value);
 
-/* Windows.Networking.BackgroundTransfer.DownloadOperation.get_Progress() */
 HRESULT wneba_download_operation_get__progress(WNEBA_DownloadOperation *self, WNEBA_BackgroundDownloadProgress *value);
 
-/* Windows.Networking.BackgroundTransfer.DownloadOperation.StartAsync() */
 HRESULT wneba_download_operation_start_async(WNEBA_DownloadOperation *self, WF_IAsyncOperationWithProgress_WNEBA_DownloadOperation_WNEBA_DownloadOperation** out);
 
-/* Windows.Networking.BackgroundTransfer.DownloadOperation.AttachAsync() */
 HRESULT wneba_download_operation_attach_async(WNEBA_DownloadOperation *self, WF_IAsyncOperationWithProgress_WNEBA_DownloadOperation_WNEBA_DownloadOperation** out);
 
-/* Windows.Networking.BackgroundTransfer.DownloadOperation.Pause() */
 HRESULT wneba_download_operation_pause(WNEBA_DownloadOperation *self);
 
-/* Windows.Networking.BackgroundTransfer.DownloadOperation.Resume() */
 HRESULT wneba_download_operation_resume(WNEBA_DownloadOperation *self);
 
-/* Windows.Networking.BackgroundTransfer.DownloadOperation.get_Guid() */
 HRESULT wneba_download_operation_get__guid(WNEBA_DownloadOperation *self, GUID *value);
 
-/* Windows.Networking.BackgroundTransfer.DownloadOperation.get_RequestedUri() */
 HRESULT wneba_download_operation_get__requested_uri(WNEBA_DownloadOperation *self, WF_Uri** value);
 
-/* Windows.Networking.BackgroundTransfer.DownloadOperation.get_Method() */
 HRESULT wneba_download_operation_get__method(WNEBA_DownloadOperation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.BackgroundTransfer.DownloadOperation.get_Group() */
 HRESULT wneba_download_operation_get__group(WNEBA_DownloadOperation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.BackgroundTransfer.DownloadOperation.get_CostPolicy() */
 HRESULT wneba_download_operation_get__cost_policy(WNEBA_DownloadOperation *self, WNEBA_BackgroundTransferCostPolicy *value);
 
-/* Windows.Networking.BackgroundTransfer.DownloadOperation.put_CostPolicy() */
 HRESULT wneba_download_operation_put__cost_policy(WNEBA_DownloadOperation *self, WNEBA_BackgroundTransferCostPolicy value);
 
-/* Windows.Networking.BackgroundTransfer.DownloadOperation.GetResultStreamAt(position) */
 HRESULT wneba_download_operation_get_result_stream_at(WNEBA_DownloadOperation *self, uint64_t position, WSTST_IInputStream** out);
 
-/* Windows.Networking.BackgroundTransfer.DownloadOperation.GetResponseInformation() */
 HRESULT wneba_download_operation_get_response_information(WNEBA_DownloadOperation *self, WNEBA_ResponseInformation** out);
 
-/* Windows.Networking.BackgroundTransfer.DownloadOperation.get_Priority() */
 HRESULT wneba_download_operation_get__priority(WNEBA_DownloadOperation *self, WNEBA_BackgroundTransferPriority *value);
 
-/* Windows.Networking.BackgroundTransfer.DownloadOperation.put_Priority() */
 HRESULT wneba_download_operation_put__priority(WNEBA_DownloadOperation *self, WNEBA_BackgroundTransferPriority value);
 
-/* Windows.Networking.BackgroundTransfer.DownloadOperation.get_TransferGroup() */
 HRESULT wneba_download_operation_get__transfer_group(WNEBA_DownloadOperation *self, WNEBA_BackgroundTransferGroup** value);
 
-/* Windows.Networking.BackgroundTransfer.DownloadOperation.get_IsRandomAccessRequired() */
 HRESULT wneba_download_operation_get__is_random_access_required(WNEBA_DownloadOperation *self, BOOL *value);
 
-/* Windows.Networking.BackgroundTransfer.DownloadOperation.put_IsRandomAccessRequired() */
 HRESULT wneba_download_operation_put__is_random_access_required(WNEBA_DownloadOperation *self, BOOL value);
 
-/* Windows.Networking.BackgroundTransfer.DownloadOperation.GetResultRandomAccessStreamReference() */
 HRESULT wneba_download_operation_get_result_random_access_stream_reference(WNEBA_DownloadOperation *self, WSTST_IRandomAccessStreamReference** out);
 
-/* Windows.Networking.BackgroundTransfer.DownloadOperation.GetDownloadedRanges() */
 HRESULT wneba_download_operation_get_downloaded_ranges(WNEBA_DownloadOperation *self, WFOCO_IVector_WNEBA_BackgroundTransferFileRange** out);
 
-/* Windows.Networking.BackgroundTransfer.DownloadOperation.put_RequestedUri() */
 HRESULT wneba_download_operation_put__requested_uri(WNEBA_DownloadOperation *self, WF_Uri* value);
 
-/* Windows.Networking.BackgroundTransfer.DownloadOperation.get_RecoverableWebErrorStatuses() */
 HRESULT wneba_download_operation_get__recoverable_web_error_statuses(WNEBA_DownloadOperation *self, WFOCO_IVector_WWE_WebErrorStatus** value);
 
-/* Windows.Networking.BackgroundTransfer.DownloadOperation.get_CurrentWebErrorStatus() */
 HRESULT wneba_download_operation_get__current_web_error_status(WNEBA_DownloadOperation *self, WWE_WebErrorStatus** value);
 
-/* Windows.Networking.BackgroundTransfer.DownloadOperation.MakeCurrentInTransferGroup() */
 HRESULT wneba_download_operation_make_current_in_transfer_group(WNEBA_DownloadOperation *self);
 
-/* Windows.Networking.BackgroundTransfer.DownloadOperation.SetRequestHeader(headerName, headerValue) */
 HRESULT wneba_download_operation_set_request_header(WNEBA_DownloadOperation *self, cwinrt_hstring headerName, cwinrt_hstring headerValue);
 
-/* Windows.Networking.BackgroundTransfer.DownloadOperation.RemoveRequestHeader(headerName) */
 HRESULT wneba_download_operation_remove_request_header(WNEBA_DownloadOperation *self, cwinrt_hstring headerName);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wneba_download_operation_on_ranges_downloaded(WNEBA_DownloadOperation *self, cwinrt_event_fn fn, void *ctx);
 void wneba_download_operation_off_ranges_downloaded(WNEBA_DownloadOperation *self, cwinrt_token token);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundDownloaderFactory */
-/* Windows.Networking.BackgroundTransfer.IBackgroundDownloaderFactory.CreateWithCompletionGroup(completionGroup) */
 HRESULT wneba_background_downloader_factory_create_with_completion_group(WNEBA_IBackgroundDownloaderFactory *self, WNEBA_BackgroundTransferCompletionGroup* completionGroup, WNEBA_BackgroundDownloader** out);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundDownloaderStaticMethods */
-/* Windows.Networking.BackgroundTransfer.IBackgroundDownloaderStaticMethods.GetCurrentDownloadsAsync() */
 HRESULT wneba_background_downloader_static_methods_get_current_downloads_async(WNEBA_IBackgroundDownloaderStaticMethods *self, WF_IAsyncOperation_WFOCO_IVectorView_WNEBA_DownloadOperation** out);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundDownloaderStaticMethods.GetCurrentDownloadsAsync(group) */
 HRESULT wneba_background_downloader_static_methods_get_current_downloads_async_str_p(WNEBA_IBackgroundDownloaderStaticMethods *self, cwinrt_hstring group, WF_IAsyncOperation_WFOCO_IVectorView_WNEBA_DownloadOperation** out);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundDownloaderStaticMethods2 */
-/* Windows.Networking.BackgroundTransfer.IBackgroundDownloaderStaticMethods2.GetCurrentDownloadsForTransferGroupAsync(group) */
 HRESULT wneba_background_downloader_static_methods_2_get_current_downloads_for_transfer_group_async(WNEBA_IBackgroundDownloaderStaticMethods_2 *self, WNEBA_BackgroundTransferGroup* group, WF_IAsyncOperation_WFOCO_IVectorView_WNEBA_DownloadOperation** out);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundDownloaderUserConsent */
-/* Windows.Networking.BackgroundTransfer.IBackgroundDownloaderUserConsent.RequestUnconstrainedDownloadsAsync(operations) */
 HRESULT wneba_background_downloader_user_consent_request_unconstrained_downloads_async(WNEBA_IBackgroundDownloaderUserConsent *self, WFOCO_IIterable_WNEBA_DownloadOperation* operations, WF_IAsyncOperation_WNEBA_UnconstrainedTransferRequestResult** out);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPartFactory */
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPartFactory.CreateWithName(name) */
 HRESULT wneba_background_transfer_content_part_factory_create_with_name(WNEBA_IBackgroundTransferContentPartFactory *self, cwinrt_hstring name, WNEBA_BackgroundTransferContentPart** out);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPartFactory.CreateWithNameAndFileName(name, fileName) */
 HRESULT wneba_background_transfer_content_part_factory_create_with_name_and_file_name(WNEBA_IBackgroundTransferContentPartFactory *self, cwinrt_hstring name, cwinrt_hstring fileName, WNEBA_BackgroundTransferContentPart** out);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferErrorStaticMethods */
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferErrorStaticMethods.GetStatus(hresult) */
 HRESULT wneba_background_transfer_error_static_methods_get_status(WNEBA_IBackgroundTransferErrorStaticMethods *self, int32_t hresult, WWE_WebErrorStatus *out);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferGroupStatics */
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferGroupStatics.CreateGroup(name) */
 HRESULT wneba_background_transfer_group_statics_create_group(WNEBA_IBackgroundTransferGroupStatics *self, cwinrt_hstring name, WNEBA_BackgroundTransferGroup** out);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundUploaderFactory */
-/* Windows.Networking.BackgroundTransfer.IBackgroundUploaderFactory.CreateWithCompletionGroup(completionGroup) */
 HRESULT wneba_background_uploader_factory_create_with_completion_group(WNEBA_IBackgroundUploaderFactory *self, WNEBA_BackgroundTransferCompletionGroup* completionGroup, WNEBA_BackgroundUploader** out);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundUploaderStaticMethods */
-/* Windows.Networking.BackgroundTransfer.IBackgroundUploaderStaticMethods.GetCurrentUploadsAsync() */
 HRESULT wneba_background_uploader_static_methods_get_current_uploads_async(WNEBA_IBackgroundUploaderStaticMethods *self, WF_IAsyncOperation_WFOCO_IVectorView_WNEBA_UploadOperation** out);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundUploaderStaticMethods.GetCurrentUploadsAsync(group) */
 HRESULT wneba_background_uploader_static_methods_get_current_uploads_async_str_p(WNEBA_IBackgroundUploaderStaticMethods *self, cwinrt_hstring group, WF_IAsyncOperation_WFOCO_IVectorView_WNEBA_UploadOperation** out);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundUploaderStaticMethods2 */
-/* Windows.Networking.BackgroundTransfer.IBackgroundUploaderStaticMethods2.GetCurrentUploadsForTransferGroupAsync(group) */
 HRESULT wneba_background_uploader_static_methods_2_get_current_uploads_for_transfer_group_async(WNEBA_IBackgroundUploaderStaticMethods_2 *self, WNEBA_BackgroundTransferGroup* group, WF_IAsyncOperation_WFOCO_IVectorView_WNEBA_UploadOperation** out);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundUploaderUserConsent */
-/* Windows.Networking.BackgroundTransfer.IBackgroundUploaderUserConsent.RequestUnconstrainedUploadsAsync(operations) */
 HRESULT wneba_background_uploader_user_consent_request_unconstrained_uploads_async(WNEBA_IBackgroundUploaderUserConsent *self, WFOCO_IIterable_WNEBA_UploadOperation* operations, WF_IAsyncOperation_WNEBA_UnconstrainedTransferRequestResult** out);
 
-/* Windows.Networking.BackgroundTransfer.IContentPrefetcher */
-/* Windows.Networking.BackgroundTransfer.IContentPrefetcherTime */
-/* Windows.Networking.BackgroundTransfer.IContentPrefetcherTime.get_LastSuccessfulPrefetchTime() */
 HRESULT wneba_content_prefetcher_time_get__last_successful_prefetch_time(WNEBA_IContentPrefetcherTime *self, WF_DateTime** value);
 
-/* activate Windows.Networking.BackgroundTransfer.ResponseInformation */
 HRESULT wneba_response_information_new(WNEBA_ResponseInformation **out);
 
-/* Windows.Networking.BackgroundTransfer.ResponseInformation */
-/* Windows.Networking.BackgroundTransfer.ResponseInformation.get_IsResumable() */
 HRESULT wneba_response_information_get__is_resumable(WNEBA_ResponseInformation *self, BOOL *value);
 
-/* Windows.Networking.BackgroundTransfer.ResponseInformation.get_ActualUri() */
 HRESULT wneba_response_information_get__actual_uri(WNEBA_ResponseInformation *self, WF_Uri** value);
 
-/* Windows.Networking.BackgroundTransfer.ResponseInformation.get_StatusCode() */
 HRESULT wneba_response_information_get__status_code(WNEBA_ResponseInformation *self, uint32_t *value);
 
-/* Windows.Networking.BackgroundTransfer.ResponseInformation.get_Headers() */
 HRESULT wneba_response_information_get__headers(WNEBA_ResponseInformation *self, WFOCO_IMapView_HSTRING_HSTRING** value);
 
-/* activate Windows.Networking.BackgroundTransfer.UnconstrainedTransferRequestResult */
 HRESULT wneba_unconstrained_transfer_request_result_new(WNEBA_UnconstrainedTransferRequestResult **out);
 
-/* Windows.Networking.BackgroundTransfer.UnconstrainedTransferRequestResult */
-/* Windows.Networking.BackgroundTransfer.UnconstrainedTransferRequestResult.get_IsUnconstrained() */
 HRESULT wneba_unconstrained_transfer_request_result_get__is_unconstrained(WNEBA_UnconstrainedTransferRequestResult *self, BOOL *value);
 
-/* activate Windows.Networking.BackgroundTransfer.UploadOperation */
 HRESULT wneba_upload_operation_new(WNEBA_UploadOperation **out);
 
-/* Windows.Networking.BackgroundTransfer.UploadOperation */
-/* Windows.Networking.BackgroundTransfer.UploadOperation.get_SourceFile() */
 HRESULT wneba_upload_operation_get__source_file(WNEBA_UploadOperation *self, WS_IStorageFile** value);
 
-/* Windows.Networking.BackgroundTransfer.UploadOperation.get_Progress() */
 HRESULT wneba_upload_operation_get__progress(WNEBA_UploadOperation *self, WNEBA_BackgroundUploadProgress *value);
 
-/* Windows.Networking.BackgroundTransfer.UploadOperation.StartAsync() */
 HRESULT wneba_upload_operation_start_async(WNEBA_UploadOperation *self, WF_IAsyncOperationWithProgress_WNEBA_UploadOperation_WNEBA_UploadOperation** out);
 
-/* Windows.Networking.BackgroundTransfer.UploadOperation.AttachAsync() */
 HRESULT wneba_upload_operation_attach_async(WNEBA_UploadOperation *self, WF_IAsyncOperationWithProgress_WNEBA_UploadOperation_WNEBA_UploadOperation** out);
 
-/* Windows.Networking.BackgroundTransfer.UploadOperation.get_Guid() */
 HRESULT wneba_upload_operation_get__guid(WNEBA_UploadOperation *self, GUID *value);
 
-/* Windows.Networking.BackgroundTransfer.UploadOperation.get_RequestedUri() */
 HRESULT wneba_upload_operation_get__requested_uri(WNEBA_UploadOperation *self, WF_Uri** value);
 
-/* Windows.Networking.BackgroundTransfer.UploadOperation.get_Method() */
 HRESULT wneba_upload_operation_get__method(WNEBA_UploadOperation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.BackgroundTransfer.UploadOperation.get_Group() */
 HRESULT wneba_upload_operation_get__group(WNEBA_UploadOperation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.BackgroundTransfer.UploadOperation.get_CostPolicy() */
 HRESULT wneba_upload_operation_get__cost_policy(WNEBA_UploadOperation *self, WNEBA_BackgroundTransferCostPolicy *value);
 
-/* Windows.Networking.BackgroundTransfer.UploadOperation.put_CostPolicy() */
 HRESULT wneba_upload_operation_put__cost_policy(WNEBA_UploadOperation *self, WNEBA_BackgroundTransferCostPolicy value);
 
-/* Windows.Networking.BackgroundTransfer.UploadOperation.GetResultStreamAt(position) */
 HRESULT wneba_upload_operation_get_result_stream_at(WNEBA_UploadOperation *self, uint64_t position, WSTST_IInputStream** out);
 
-/* Windows.Networking.BackgroundTransfer.UploadOperation.GetResponseInformation() */
 HRESULT wneba_upload_operation_get_response_information(WNEBA_UploadOperation *self, WNEBA_ResponseInformation** out);
 
-/* Windows.Networking.BackgroundTransfer.UploadOperation.get_Priority() */
 HRESULT wneba_upload_operation_get__priority(WNEBA_UploadOperation *self, WNEBA_BackgroundTransferPriority *value);
 
-/* Windows.Networking.BackgroundTransfer.UploadOperation.put_Priority() */
 HRESULT wneba_upload_operation_put__priority(WNEBA_UploadOperation *self, WNEBA_BackgroundTransferPriority value);
 
-/* Windows.Networking.BackgroundTransfer.UploadOperation.get_TransferGroup() */
 HRESULT wneba_upload_operation_get__transfer_group(WNEBA_UploadOperation *self, WNEBA_BackgroundTransferGroup** value);
 
-/* Windows.Networking.BackgroundTransfer.UploadOperation.MakeCurrentInTransferGroup() */
 HRESULT wneba_upload_operation_make_current_in_transfer_group(WNEBA_UploadOperation *self);
 
-/* Windows.Networking.BackgroundTransfer.UploadOperation.SetRequestHeader(headerName, headerValue) */
 HRESULT wneba_upload_operation_set_request_header(WNEBA_UploadOperation *self, cwinrt_hstring headerName, cwinrt_hstring headerValue);
 
-/* Windows.Networking.BackgroundTransfer.UploadOperation.RemoveRequestHeader(headerName) */
 HRESULT wneba_upload_operation_remove_request_header(WNEBA_UploadOperation *self, cwinrt_hstring headerName);
 
-/* activate Windows.Networking.BackgroundTransfer.BackgroundDownloader */
 HRESULT wneba_background_downloader_new(WNEBA_BackgroundDownloader **out);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader */
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader.CreateDownload(uri, resultFile) */
 HRESULT wneba_background_downloader_create_download(WNEBA_BackgroundDownloader *self, WF_Uri* uri, WS_IStorageFile* resultFile, WNEBA_DownloadOperation** out);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader.CreateDownload(uri, resultFile, requestBodyFile) */
 HRESULT wneba_background_downloader_create_download_p_p_p_p(WNEBA_BackgroundDownloader *self, WF_Uri* uri, WS_IStorageFile* resultFile, WS_IStorageFile* requestBodyFile, WNEBA_DownloadOperation** out);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader.CreateDownloadAsync(uri, resultFile, requestBodyStream) */
 HRESULT wneba_background_downloader_create_download_async(WNEBA_BackgroundDownloader *self, WF_Uri* uri, WS_IStorageFile* resultFile, WSTST_IInputStream* requestBodyStream, WF_IAsyncOperation_WNEBA_DownloadOperation** out);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader.SetRequestHeader(headerName, headerValue) */
 HRESULT wneba_background_downloader_set_request_header(WNEBA_BackgroundDownloader *self, cwinrt_hstring headerName, cwinrt_hstring headerValue);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader.get_ServerCredential() */
 HRESULT wneba_background_downloader_get__server_credential(WNEBA_BackgroundDownloader *self, WSECR_PasswordCredential** value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader.put_ServerCredential(credential) */
 HRESULT wneba_background_downloader_put__server_credential(WNEBA_BackgroundDownloader *self, WSECR_PasswordCredential* credential);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader.get_ProxyCredential() */
 HRESULT wneba_background_downloader_get__proxy_credential(WNEBA_BackgroundDownloader *self, WSECR_PasswordCredential** value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader.put_ProxyCredential(credential) */
 HRESULT wneba_background_downloader_put__proxy_credential(WNEBA_BackgroundDownloader *self, WSECR_PasswordCredential* credential);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader.get_Method() */
 HRESULT wneba_background_downloader_get__method(WNEBA_BackgroundDownloader *self, cwinrt_hstring *value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader.put_Method() */
 HRESULT wneba_background_downloader_put__method(WNEBA_BackgroundDownloader *self, cwinrt_hstring value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader.get_Group() */
 HRESULT wneba_background_downloader_get__group(WNEBA_BackgroundDownloader *self, cwinrt_hstring *value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader.put_Group() */
 HRESULT wneba_background_downloader_put__group(WNEBA_BackgroundDownloader *self, cwinrt_hstring value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader.get_CostPolicy() */
 HRESULT wneba_background_downloader_get__cost_policy(WNEBA_BackgroundDownloader *self, WNEBA_BackgroundTransferCostPolicy *value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader.put_CostPolicy() */
 HRESULT wneba_background_downloader_put__cost_policy(WNEBA_BackgroundDownloader *self, WNEBA_BackgroundTransferCostPolicy value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader.get_TransferGroup() */
 HRESULT wneba_background_downloader_get__transfer_group(WNEBA_BackgroundDownloader *self, WNEBA_BackgroundTransferGroup** value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader.put_TransferGroup() */
 HRESULT wneba_background_downloader_put__transfer_group(WNEBA_BackgroundDownloader *self, WNEBA_BackgroundTransferGroup* value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader.get_SuccessToastNotification() */
 HRESULT wneba_background_downloader_get__success_toast_notification(WNEBA_BackgroundDownloader *self, WUINO_ToastNotification** value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader.put_SuccessToastNotification() */
 HRESULT wneba_background_downloader_put__success_toast_notification(WNEBA_BackgroundDownloader *self, WUINO_ToastNotification* value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader.get_FailureToastNotification() */
 HRESULT wneba_background_downloader_get__failure_toast_notification(WNEBA_BackgroundDownloader *self, WUINO_ToastNotification** value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader.put_FailureToastNotification() */
 HRESULT wneba_background_downloader_put__failure_toast_notification(WNEBA_BackgroundDownloader *self, WUINO_ToastNotification* value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader.get_SuccessTileNotification() */
 HRESULT wneba_background_downloader_get__success_tile_notification(WNEBA_BackgroundDownloader *self, WUINO_TileNotification** value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader.put_SuccessTileNotification() */
 HRESULT wneba_background_downloader_put__success_tile_notification(WNEBA_BackgroundDownloader *self, WUINO_TileNotification* value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader.get_FailureTileNotification() */
 HRESULT wneba_background_downloader_get__failure_tile_notification(WNEBA_BackgroundDownloader *self, WUINO_TileNotification** value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader.put_FailureTileNotification() */
 HRESULT wneba_background_downloader_put__failure_tile_notification(WNEBA_BackgroundDownloader *self, WUINO_TileNotification* value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader.get_CompletionGroup() */
 HRESULT wneba_background_downloader_get__completion_group(WNEBA_BackgroundDownloader *self, WNEBA_BackgroundTransferCompletionGroup** value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader.GetCurrentDownloadsForTransferGroupAsync(group) */
 HRESULT wneba_background_downloader_get_current_downloads_for_transfer_group_async(WNEBA_BackgroundTransferGroup* group, WF_IAsyncOperation_WFOCO_IVectorView_WNEBA_DownloadOperation** out);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader.RequestUnconstrainedDownloadsAsync(operations) */
 HRESULT wneba_background_downloader_request_unconstrained_downloads_async(WFOCO_IIterable_WNEBA_DownloadOperation* operations, WF_IAsyncOperation_WNEBA_UnconstrainedTransferRequestResult** out);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader.GetCurrentDownloadsAsync() */
 HRESULT wneba_background_downloader_get_current_downloads_async(WF_IAsyncOperation_WFOCO_IVectorView_WNEBA_DownloadOperation** out);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundDownloader.GetCurrentDownloadsAsync(group) */
 HRESULT wneba_background_downloader_get_current_downloads_async_str_p(cwinrt_hstring group, WF_IAsyncOperation_WFOCO_IVectorView_WNEBA_DownloadOperation** out);
 
-/* activate Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroup */
 HRESULT wneba_background_transfer_completion_group_new(WNEBA_BackgroundTransferCompletionGroup **out);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroup */
-/* Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroup.get_Trigger() */
 HRESULT wneba_background_transfer_completion_group_get__trigger(WNEBA_BackgroundTransferCompletionGroup *self, WAPBA_IBackgroundTrigger** value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroup.get_IsEnabled() */
 HRESULT wneba_background_transfer_completion_group_get__is_enabled(WNEBA_BackgroundTransferCompletionGroup *self, BOOL *value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroup.Enable() */
 HRESULT wneba_background_transfer_completion_group_enable(WNEBA_BackgroundTransferCompletionGroup *self);
 
-/* activate Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroupTriggerDetails */
 HRESULT wneba_background_transfer_completion_group_trigger_details_new(WNEBA_BackgroundTransferCompletionGroupTriggerDetails **out);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroupTriggerDetails */
-/* Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroupTriggerDetails.get_Downloads() */
 HRESULT wneba_background_transfer_completion_group_trigger_details_get__downloads(WNEBA_BackgroundTransferCompletionGroupTriggerDetails *self, WFOCO_IVectorView_WNEBA_DownloadOperation** value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroupTriggerDetails.get_Uploads() */
 HRESULT wneba_background_transfer_completion_group_trigger_details_get__uploads(WNEBA_BackgroundTransferCompletionGroupTriggerDetails *self, WFOCO_IVectorView_WNEBA_UploadOperation** value);
 
-/* activate Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart */
 HRESULT wneba_background_transfer_content_part_new(WNEBA_BackgroundTransferContentPart **out);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart */
-/* Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart.SetHeader(headerName, headerValue) */
 HRESULT wneba_background_transfer_content_part_set_header(WNEBA_BackgroundTransferContentPart *self, cwinrt_hstring headerName, cwinrt_hstring headerValue);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart.SetText() */
 HRESULT wneba_background_transfer_content_part_set_text(WNEBA_BackgroundTransferContentPart *self, cwinrt_hstring value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart.SetFile() */
 HRESULT wneba_background_transfer_content_part_set_file(WNEBA_BackgroundTransferContentPart *self, WS_IStorageFile* value);
 
-/* activate Windows.Networking.BackgroundTransfer.BackgroundTransferError */
 HRESULT wneba_background_transfer_error_new(WNEBA_BackgroundTransferError **out);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundTransferError */
-/* Windows.Networking.BackgroundTransfer.BackgroundTransferError.GetStatus(hresult) */
 HRESULT wneba_background_transfer_error_get_status(int32_t hresult, WWE_WebErrorStatus *out);
 
-/* activate Windows.Networking.BackgroundTransfer.BackgroundUploader */
 HRESULT wneba_background_uploader_new(WNEBA_BackgroundUploader **out);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader */
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.CreateUpload(uri, sourceFile) */
 HRESULT wneba_background_uploader_create_upload(WNEBA_BackgroundUploader *self, WF_Uri* uri, WS_IStorageFile* sourceFile, WNEBA_UploadOperation** out);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.CreateUploadFromStreamAsync(uri, sourceStream) */
 HRESULT wneba_background_uploader_create_upload_from_stream_async(WNEBA_BackgroundUploader *self, WF_Uri* uri, WSTST_IInputStream* sourceStream, WF_IAsyncOperation_WNEBA_UploadOperation** out);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.CreateUploadAsync(uri, parts) */
 HRESULT wneba_background_uploader_create_upload_async(WNEBA_BackgroundUploader *self, WF_Uri* uri, WFOCO_IIterable_WNEBA_BackgroundTransferContentPart* parts, WF_IAsyncOperation_WNEBA_UploadOperation** out);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.CreateUploadAsync(uri, parts, subType) */
 HRESULT wneba_background_uploader_create_upload_async_p_p_str_p(WNEBA_BackgroundUploader *self, WF_Uri* uri, WFOCO_IIterable_WNEBA_BackgroundTransferContentPart* parts, cwinrt_hstring subType, WF_IAsyncOperation_WNEBA_UploadOperation** out);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.CreateUploadAsync(uri, parts, subType, boundary) */
 HRESULT wneba_background_uploader_create_upload_async_p_p_str_str_p(WNEBA_BackgroundUploader *self, WF_Uri* uri, WFOCO_IIterable_WNEBA_BackgroundTransferContentPart* parts, cwinrt_hstring subType, cwinrt_hstring boundary, WF_IAsyncOperation_WNEBA_UploadOperation** out);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.SetRequestHeader(headerName, headerValue) */
 HRESULT wneba_background_uploader_set_request_header(WNEBA_BackgroundUploader *self, cwinrt_hstring headerName, cwinrt_hstring headerValue);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.get_ServerCredential() */
 HRESULT wneba_background_uploader_get__server_credential(WNEBA_BackgroundUploader *self, WSECR_PasswordCredential** value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.put_ServerCredential(credential) */
 HRESULT wneba_background_uploader_put__server_credential(WNEBA_BackgroundUploader *self, WSECR_PasswordCredential* credential);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.get_ProxyCredential() */
 HRESULT wneba_background_uploader_get__proxy_credential(WNEBA_BackgroundUploader *self, WSECR_PasswordCredential** value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.put_ProxyCredential(credential) */
 HRESULT wneba_background_uploader_put__proxy_credential(WNEBA_BackgroundUploader *self, WSECR_PasswordCredential* credential);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.get_Method() */
 HRESULT wneba_background_uploader_get__method(WNEBA_BackgroundUploader *self, cwinrt_hstring *value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.put_Method() */
 HRESULT wneba_background_uploader_put__method(WNEBA_BackgroundUploader *self, cwinrt_hstring value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.get_Group() */
 HRESULT wneba_background_uploader_get__group(WNEBA_BackgroundUploader *self, cwinrt_hstring *value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.put_Group() */
 HRESULT wneba_background_uploader_put__group(WNEBA_BackgroundUploader *self, cwinrt_hstring value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.get_CostPolicy() */
 HRESULT wneba_background_uploader_get__cost_policy(WNEBA_BackgroundUploader *self, WNEBA_BackgroundTransferCostPolicy *value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.put_CostPolicy() */
 HRESULT wneba_background_uploader_put__cost_policy(WNEBA_BackgroundUploader *self, WNEBA_BackgroundTransferCostPolicy value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.get_TransferGroup() */
 HRESULT wneba_background_uploader_get__transfer_group(WNEBA_BackgroundUploader *self, WNEBA_BackgroundTransferGroup** value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.put_TransferGroup() */
 HRESULT wneba_background_uploader_put__transfer_group(WNEBA_BackgroundUploader *self, WNEBA_BackgroundTransferGroup* value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.get_SuccessToastNotification() */
 HRESULT wneba_background_uploader_get__success_toast_notification(WNEBA_BackgroundUploader *self, WUINO_ToastNotification** value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.put_SuccessToastNotification() */
 HRESULT wneba_background_uploader_put__success_toast_notification(WNEBA_BackgroundUploader *self, WUINO_ToastNotification* value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.get_FailureToastNotification() */
 HRESULT wneba_background_uploader_get__failure_toast_notification(WNEBA_BackgroundUploader *self, WUINO_ToastNotification** value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.put_FailureToastNotification() */
 HRESULT wneba_background_uploader_put__failure_toast_notification(WNEBA_BackgroundUploader *self, WUINO_ToastNotification* value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.get_SuccessTileNotification() */
 HRESULT wneba_background_uploader_get__success_tile_notification(WNEBA_BackgroundUploader *self, WUINO_TileNotification** value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.put_SuccessTileNotification() */
 HRESULT wneba_background_uploader_put__success_tile_notification(WNEBA_BackgroundUploader *self, WUINO_TileNotification* value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.get_FailureTileNotification() */
 HRESULT wneba_background_uploader_get__failure_tile_notification(WNEBA_BackgroundUploader *self, WUINO_TileNotification** value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.put_FailureTileNotification() */
 HRESULT wneba_background_uploader_put__failure_tile_notification(WNEBA_BackgroundUploader *self, WUINO_TileNotification* value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.get_CompletionGroup() */
 HRESULT wneba_background_uploader_get__completion_group(WNEBA_BackgroundUploader *self, WNEBA_BackgroundTransferCompletionGroup** value);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.GetCurrentUploadsForTransferGroupAsync(group) */
 HRESULT wneba_background_uploader_get_current_uploads_for_transfer_group_async(WNEBA_BackgroundTransferGroup* group, WF_IAsyncOperation_WFOCO_IVectorView_WNEBA_UploadOperation** out);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.RequestUnconstrainedUploadsAsync(operations) */
 HRESULT wneba_background_uploader_request_unconstrained_uploads_async(WFOCO_IIterable_WNEBA_UploadOperation* operations, WF_IAsyncOperation_WNEBA_UnconstrainedTransferRequestResult** out);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.GetCurrentUploadsAsync() */
 HRESULT wneba_background_uploader_get_current_uploads_async(WF_IAsyncOperation_WFOCO_IVectorView_WNEBA_UploadOperation** out);
 
-/* Windows.Networking.BackgroundTransfer.BackgroundUploader.GetCurrentUploadsAsync(group) */
 HRESULT wneba_background_uploader_get_current_uploads_async_str_p(cwinrt_hstring group, WF_IAsyncOperation_WFOCO_IVectorView_WNEBA_UploadOperation** out);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferRangesDownloadedEventArgs */
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferGroup */
-/* Windows.Networking.BackgroundTransfer.IDownloadOperation */
-/* Windows.Networking.BackgroundTransfer.IDownloadOperation2 */
-/* Windows.Networking.BackgroundTransfer.IDownloadOperation2.get_TransferGroup() */
 HRESULT wneba_download_operation_2_get__transfer_group(WNEBA_IDownloadOperation_2 *self, WNEBA_BackgroundTransferGroup** value);
 
-/* Windows.Networking.BackgroundTransfer.IDownloadOperation3 */
-/* Windows.Networking.BackgroundTransfer.IDownloadOperation3.get_IsRandomAccessRequired() */
 HRESULT wneba_download_operation_3_get__is_random_access_required(WNEBA_IDownloadOperation_3 *self, BOOL *value);
 
-/* Windows.Networking.BackgroundTransfer.IDownloadOperation3.put_IsRandomAccessRequired() */
 HRESULT wneba_download_operation_3_put__is_random_access_required(WNEBA_IDownloadOperation_3 *self, BOOL value);
 
-/* Windows.Networking.BackgroundTransfer.IDownloadOperation3.GetResultRandomAccessStreamReference() */
 HRESULT wneba_download_operation_3_get_result_random_access_stream_reference(WNEBA_IDownloadOperation_3 *self, WSTST_IRandomAccessStreamReference** out);
 
-/* Windows.Networking.BackgroundTransfer.IDownloadOperation3.GetDownloadedRanges() */
 HRESULT wneba_download_operation_3_get_downloaded_ranges(WNEBA_IDownloadOperation_3 *self, WFOCO_IVector_WNEBA_BackgroundTransferFileRange** out);
 
-/* Windows.Networking.BackgroundTransfer.IDownloadOperation3.put_RequestedUri() */
 HRESULT wneba_download_operation_3_put__requested_uri(WNEBA_IDownloadOperation_3 *self, WF_Uri* value);
 
-/* Windows.Networking.BackgroundTransfer.IDownloadOperation3.get_RecoverableWebErrorStatuses() */
 HRESULT wneba_download_operation_3_get__recoverable_web_error_statuses(WNEBA_IDownloadOperation_3 *self, WFOCO_IVector_WWE_WebErrorStatus** value);
 
-/* Windows.Networking.BackgroundTransfer.IDownloadOperation3.get_CurrentWebErrorStatus() */
 HRESULT wneba_download_operation_3_get__current_web_error_status(WNEBA_IDownloadOperation_3 *self, WWE_WebErrorStatus** value);
 
-/* Windows.Networking.BackgroundTransfer.IDownloadOperation4 */
-/* Windows.Networking.BackgroundTransfer.IDownloadOperation4.MakeCurrentInTransferGroup() */
 HRESULT wneba_download_operation_4_make_current_in_transfer_group(WNEBA_IDownloadOperation_4 *self);
 
-/* Windows.Networking.BackgroundTransfer.IDownloadOperation5 */
-/* Windows.Networking.BackgroundTransfer.IDownloadOperation5.SetRequestHeader(headerName, headerValue) */
 HRESULT wneba_download_operation_5_set_request_header(WNEBA_IDownloadOperation_5 *self, cwinrt_hstring headerName, cwinrt_hstring headerValue);
 
-/* Windows.Networking.BackgroundTransfer.IDownloadOperation5.RemoveRequestHeader(headerName) */
 HRESULT wneba_download_operation_5_remove_request_header(WNEBA_IDownloadOperation_5 *self, cwinrt_hstring headerName);
 
-/* Windows.Networking.BackgroundTransfer.IResponseInformation */
-/* Windows.Networking.BackgroundTransfer.IUnconstrainedTransferRequestResult */
-/* Windows.Networking.BackgroundTransfer.IUploadOperation */
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferOperationPriority */
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferOperationPriority.get_Priority() */
 HRESULT wneba_background_transfer_operation_priority_get__priority(WNEBA_IBackgroundTransferOperationPriority *self, WNEBA_BackgroundTransferPriority *value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferOperationPriority.put_Priority() */
 HRESULT wneba_background_transfer_operation_priority_put__priority(WNEBA_IBackgroundTransferOperationPriority *self, WNEBA_BackgroundTransferPriority value);
 
-/* Windows.Networking.BackgroundTransfer.IUploadOperation2 */
-/* Windows.Networking.BackgroundTransfer.IUploadOperation2.get_TransferGroup() */
 HRESULT wneba_upload_operation_2_get__transfer_group(WNEBA_IUploadOperation_2 *self, WNEBA_BackgroundTransferGroup** value);
 
-/* Windows.Networking.BackgroundTransfer.IUploadOperation3 */
-/* Windows.Networking.BackgroundTransfer.IUploadOperation3.MakeCurrentInTransferGroup() */
 HRESULT wneba_upload_operation_3_make_current_in_transfer_group(WNEBA_IUploadOperation_3 *self);
 
-/* Windows.Networking.BackgroundTransfer.IUploadOperation4 */
-/* Windows.Networking.BackgroundTransfer.IUploadOperation4.SetRequestHeader(headerName, headerValue) */
 HRESULT wneba_upload_operation_4_set_request_header(WNEBA_IUploadOperation_4 *self, cwinrt_hstring headerName, cwinrt_hstring headerValue);
 
-/* Windows.Networking.BackgroundTransfer.IUploadOperation4.RemoveRequestHeader(headerName) */
 HRESULT wneba_upload_operation_4_remove_request_header(WNEBA_IUploadOperation_4 *self, cwinrt_hstring headerName);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundDownloader */
-/* Windows.Networking.BackgroundTransfer.IBackgroundDownloader2 */
-/* Windows.Networking.BackgroundTransfer.IBackgroundDownloader2.get_TransferGroup() */
 HRESULT wneba_background_downloader_2_get__transfer_group(WNEBA_IBackgroundDownloader_2 *self, WNEBA_BackgroundTransferGroup** value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundDownloader2.put_TransferGroup() */
 HRESULT wneba_background_downloader_2_put__transfer_group(WNEBA_IBackgroundDownloader_2 *self, WNEBA_BackgroundTransferGroup* value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundDownloader2.get_SuccessToastNotification() */
 HRESULT wneba_background_downloader_2_get__success_toast_notification(WNEBA_IBackgroundDownloader_2 *self, WUINO_ToastNotification** value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundDownloader2.put_SuccessToastNotification() */
 HRESULT wneba_background_downloader_2_put__success_toast_notification(WNEBA_IBackgroundDownloader_2 *self, WUINO_ToastNotification* value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundDownloader2.get_FailureToastNotification() */
 HRESULT wneba_background_downloader_2_get__failure_toast_notification(WNEBA_IBackgroundDownloader_2 *self, WUINO_ToastNotification** value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundDownloader2.put_FailureToastNotification() */
 HRESULT wneba_background_downloader_2_put__failure_toast_notification(WNEBA_IBackgroundDownloader_2 *self, WUINO_ToastNotification* value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundDownloader2.get_SuccessTileNotification() */
 HRESULT wneba_background_downloader_2_get__success_tile_notification(WNEBA_IBackgroundDownloader_2 *self, WUINO_TileNotification** value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundDownloader2.put_SuccessTileNotification() */
 HRESULT wneba_background_downloader_2_put__success_tile_notification(WNEBA_IBackgroundDownloader_2 *self, WUINO_TileNotification* value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundDownloader2.get_FailureTileNotification() */
 HRESULT wneba_background_downloader_2_get__failure_tile_notification(WNEBA_IBackgroundDownloader_2 *self, WUINO_TileNotification** value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundDownloader2.put_FailureTileNotification() */
 HRESULT wneba_background_downloader_2_put__failure_tile_notification(WNEBA_IBackgroundDownloader_2 *self, WUINO_TileNotification* value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundDownloader3 */
-/* Windows.Networking.BackgroundTransfer.IBackgroundDownloader3.get_CompletionGroup() */
 HRESULT wneba_background_downloader_3_get__completion_group(WNEBA_IBackgroundDownloader_3 *self, WNEBA_BackgroundTransferCompletionGroup** value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferCompletionGroup */
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferCompletionGroupTriggerDetails */
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPart */
-/* Windows.Networking.BackgroundTransfer.IBackgroundUploader */
-/* Windows.Networking.BackgroundTransfer.IBackgroundUploader2 */
-/* Windows.Networking.BackgroundTransfer.IBackgroundUploader2.get_TransferGroup() */
 HRESULT wneba_background_uploader_2_get__transfer_group(WNEBA_IBackgroundUploader_2 *self, WNEBA_BackgroundTransferGroup** value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundUploader2.put_TransferGroup() */
 HRESULT wneba_background_uploader_2_put__transfer_group(WNEBA_IBackgroundUploader_2 *self, WNEBA_BackgroundTransferGroup* value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundUploader2.get_SuccessToastNotification() */
 HRESULT wneba_background_uploader_2_get__success_toast_notification(WNEBA_IBackgroundUploader_2 *self, WUINO_ToastNotification** value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundUploader2.put_SuccessToastNotification() */
 HRESULT wneba_background_uploader_2_put__success_toast_notification(WNEBA_IBackgroundUploader_2 *self, WUINO_ToastNotification* value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundUploader2.get_FailureToastNotification() */
 HRESULT wneba_background_uploader_2_get__failure_toast_notification(WNEBA_IBackgroundUploader_2 *self, WUINO_ToastNotification** value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundUploader2.put_FailureToastNotification() */
 HRESULT wneba_background_uploader_2_put__failure_toast_notification(WNEBA_IBackgroundUploader_2 *self, WUINO_ToastNotification* value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundUploader2.get_SuccessTileNotification() */
 HRESULT wneba_background_uploader_2_get__success_tile_notification(WNEBA_IBackgroundUploader_2 *self, WUINO_TileNotification** value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundUploader2.put_SuccessTileNotification() */
 HRESULT wneba_background_uploader_2_put__success_tile_notification(WNEBA_IBackgroundUploader_2 *self, WUINO_TileNotification* value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundUploader2.get_FailureTileNotification() */
 HRESULT wneba_background_uploader_2_get__failure_tile_notification(WNEBA_IBackgroundUploader_2 *self, WUINO_TileNotification** value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundUploader2.put_FailureTileNotification() */
 HRESULT wneba_background_uploader_2_put__failure_tile_notification(WNEBA_IBackgroundUploader_2 *self, WUINO_TileNotification* value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundUploader3 */
-/* Windows.Networking.BackgroundTransfer.IBackgroundUploader3.get_CompletionGroup() */
 HRESULT wneba_background_uploader_3_get__completion_group(WNEBA_IBackgroundUploader_3 *self, WNEBA_BackgroundTransferCompletionGroup** value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation */
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation.get_Guid() */
 HRESULT wneba_background_transfer_operation_get__guid(WNEBA_IBackgroundTransferOperation *self, GUID *value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation.get_RequestedUri() */
 HRESULT wneba_background_transfer_operation_get__requested_uri(WNEBA_IBackgroundTransferOperation *self, WF_Uri** value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation.get_Method() */
 HRESULT wneba_background_transfer_operation_get__method(WNEBA_IBackgroundTransferOperation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation.get_Group() */
 HRESULT wneba_background_transfer_operation_get__group(WNEBA_IBackgroundTransferOperation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation.get_CostPolicy() */
 HRESULT wneba_background_transfer_operation_get__cost_policy(WNEBA_IBackgroundTransferOperation *self, WNEBA_BackgroundTransferCostPolicy *value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation.put_CostPolicy() */
 HRESULT wneba_background_transfer_operation_put__cost_policy(WNEBA_IBackgroundTransferOperation *self, WNEBA_BackgroundTransferCostPolicy value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation.GetResultStreamAt(position) */
 HRESULT wneba_background_transfer_operation_get_result_stream_at(WNEBA_IBackgroundTransferOperation *self, uint64_t position, WSTST_IInputStream** out);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation.GetResponseInformation() */
 HRESULT wneba_background_transfer_operation_get_response_information(WNEBA_IBackgroundTransferOperation *self, WNEBA_ResponseInformation** out);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferBase */
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferBase.SetRequestHeader(headerName, headerValue) */
 HRESULT wneba_background_transfer_base_set_request_header(WNEBA_IBackgroundTransferBase *self, cwinrt_hstring headerName, cwinrt_hstring headerValue);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferBase.get_ServerCredential() */
 HRESULT wneba_background_transfer_base_get__server_credential(WNEBA_IBackgroundTransferBase *self, WSECR_PasswordCredential** value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferBase.put_ServerCredential(credential) */
 HRESULT wneba_background_transfer_base_put__server_credential(WNEBA_IBackgroundTransferBase *self, WSECR_PasswordCredential* credential);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferBase.get_ProxyCredential() */
 HRESULT wneba_background_transfer_base_get__proxy_credential(WNEBA_IBackgroundTransferBase *self, WSECR_PasswordCredential** value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferBase.put_ProxyCredential(credential) */
 HRESULT wneba_background_transfer_base_put__proxy_credential(WNEBA_IBackgroundTransferBase *self, WSECR_PasswordCredential* credential);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferBase.get_Method() */
 HRESULT wneba_background_transfer_base_get__method(WNEBA_IBackgroundTransferBase *self, cwinrt_hstring *value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferBase.put_Method() */
 HRESULT wneba_background_transfer_base_put__method(WNEBA_IBackgroundTransferBase *self, cwinrt_hstring value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferBase.get_Group() */
 HRESULT wneba_background_transfer_base_get__group(WNEBA_IBackgroundTransferBase *self, cwinrt_hstring *value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferBase.put_Group() */
 HRESULT wneba_background_transfer_base_put__group(WNEBA_IBackgroundTransferBase *self, cwinrt_hstring value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferBase.get_CostPolicy() */
 HRESULT wneba_background_transfer_base_get__cost_policy(WNEBA_IBackgroundTransferBase *self, WNEBA_BackgroundTransferCostPolicy *value);
 
-/* Windows.Networking.BackgroundTransfer.IBackgroundTransferBase.put_CostPolicy() */
 HRESULT wneba_background_transfer_base_put__cost_policy(WNEBA_IBackgroundTransferBase *self, WNEBA_BackgroundTransferCostPolicy value);
 
 #endif /* CWINRT_WINDOWS_NETWORKING_BACKGROUNDTRANSFER_H */

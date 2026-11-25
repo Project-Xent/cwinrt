@@ -14,7 +14,6 @@
 #include <cwinrt/Windows.Perception.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WPESP_SpatialRay
 #define CWINRT_FWD_WPESP_SpatialRay
 typedef struct WPESP_SpatialRay WPESP_SpatialRay;
@@ -38,7 +37,6 @@ typedef struct WUIINSP_SpatialInteractionSource WUIINSP_SpatialInteractionSource
 typedef struct WPESP_SpatialCoordinateSystem WPESP_SpatialCoordinateSystem;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WPEPE_HandMeshObserver WPEPE_HandMeshObserver;
 typedef struct WPEPE_HandMeshVertexState WPEPE_HandMeshVertexState;
 typedef struct WPEPE_HeadPose WPEPE_HeadPose;
@@ -51,7 +49,6 @@ typedef struct WPEPE_IHeadPose WPEPE_IHeadPose;
 typedef struct WPEPE_IEyesPose WPEPE_IEyesPose;
 typedef struct WPEPE_IHandPose WPEPE_IHandPose;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WUIINSP_SpatialInteractionSource
 #define CWINRT_FWD_WUIINSP_SpatialInteractionSource
 typedef struct WUIINSP_SpatialInteractionSource WUIINSP_SpatialInteractionSource;
@@ -143,7 +140,6 @@ struct WPEPE_JointPose {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -172,107 +168,64 @@ static const IID CWINRT_IID_WPEPE_IEyesPose CWINRT_MAYBE_UNUSED = { 0x682A9B23, 
 static const IID CWINRT_IID_WPEPE_IHandPose CWINRT_MAYBE_UNUSED = { 0x4D98E79A, 0xBB08, 0x5D09, { 0x91, 0xDE, 0xDF, 0x0D, 0xD3, 0xFA, 0xE4, 0x6C } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Perception.People.HandMeshObserver */
 HRESULT wpepe_hand_mesh_observer_new(WPEPE_HandMeshObserver **out);
 
-/* Windows.Perception.People.HandMeshObserver */
-/* Windows.Perception.People.HandMeshObserver.get_Source() */
 HRESULT wpepe_hand_mesh_observer_get__source(WPEPE_HandMeshObserver *self, WUIINSP_SpatialInteractionSource** value);
 
-/* Windows.Perception.People.HandMeshObserver.get_TriangleIndexCount() */
 HRESULT wpepe_hand_mesh_observer_get__triangle_index_count(WPEPE_HandMeshObserver *self, uint32_t *value);
 
-/* Windows.Perception.People.HandMeshObserver.get_VertexCount() */
 HRESULT wpepe_hand_mesh_observer_get__vertex_count(WPEPE_HandMeshObserver *self, uint32_t *value);
 
-/* Windows.Perception.People.HandMeshObserver.GetTriangleIndices(indices) */
 HRESULT wpepe_hand_mesh_observer_get_triangle_indices(WPEPE_HandMeshObserver *self, uint16_t *indices, uint32_t indices_len);
 
-/* Windows.Perception.People.HandMeshObserver.GetVertexStateForPose(handPose) */
 HRESULT wpepe_hand_mesh_observer_get_vertex_state_for_pose(WPEPE_HandMeshObserver *self, WPEPE_HandPose* handPose, WPEPE_HandMeshVertexState** out);
 
-/* Windows.Perception.People.HandMeshObserver.get_NeutralPose() */
 HRESULT wpepe_hand_mesh_observer_get__neutral_pose(WPEPE_HandMeshObserver *self, WPEPE_HandPose** value);
 
-/* Windows.Perception.People.HandMeshObserver.get_NeutralPoseVersion() */
 HRESULT wpepe_hand_mesh_observer_get__neutral_pose_version(WPEPE_HandMeshObserver *self, int32_t *value);
 
-/* Windows.Perception.People.HandMeshObserver.get_ModelId() */
 HRESULT wpepe_hand_mesh_observer_get__model_id(WPEPE_HandMeshObserver *self, int32_t *value);
 
-/* activate Windows.Perception.People.HandMeshVertexState */
 HRESULT wpepe_hand_mesh_vertex_state_new(WPEPE_HandMeshVertexState **out);
 
-/* Windows.Perception.People.HandMeshVertexState */
-/* Windows.Perception.People.HandMeshVertexState.get_CoordinateSystem() */
 HRESULT wpepe_hand_mesh_vertex_state_get__coordinate_system(WPEPE_HandMeshVertexState *self, WPESP_SpatialCoordinateSystem** value);
 
-/* Windows.Perception.People.HandMeshVertexState.GetVertices(vertices) */
 HRESULT wpepe_hand_mesh_vertex_state_get_vertices(WPEPE_HandMeshVertexState *self, WPEPE_HandMeshVertex *vertices, uint32_t vertices_len);
 
-/* Windows.Perception.People.HandMeshVertexState.get_UpdateTimestamp() */
 HRESULT wpepe_hand_mesh_vertex_state_get__update_timestamp(WPEPE_HandMeshVertexState *self, WPE_PerceptionTimestamp** value);
 
-/* activate Windows.Perception.People.HeadPose */
 HRESULT wpepe_head_pose_new(WPEPE_HeadPose **out);
 
-/* Windows.Perception.People.HeadPose */
-/* Windows.Perception.People.HeadPose.get_Position() */
 HRESULT wpepe_head_pose_get__position(WPEPE_HeadPose *self, WFN_Vector_3 *value);
 
-/* Windows.Perception.People.HeadPose.get_ForwardDirection() */
 HRESULT wpepe_head_pose_get__forward_direction(WPEPE_HeadPose *self, WFN_Vector_3 *value);
 
-/* Windows.Perception.People.HeadPose.get_UpDirection() */
 HRESULT wpepe_head_pose_get__up_direction(WPEPE_HeadPose *self, WFN_Vector_3 *value);
 
-/* Windows.Perception.People.IEyesPoseStatics */
-/* Windows.Perception.People.IEyesPoseStatics.IsSupported() */
 HRESULT wpepe_eyes_pose_statics_is_supported(WPEPE_IEyesPoseStatics *self, BOOL *out);
 
-/* Windows.Perception.People.IEyesPoseStatics.RequestAccessAsync() */
 HRESULT wpepe_eyes_pose_statics_request_access_async(WPEPE_IEyesPoseStatics *self, WF_IAsyncOperation_WUIIN_GazeInputAccessStatus** out);
 
-/* activate Windows.Perception.People.EyesPose */
 HRESULT wpepe_eyes_pose_new(WPEPE_EyesPose **out);
 
-/* Windows.Perception.People.EyesPose */
-/* Windows.Perception.People.EyesPose.get_IsCalibrationValid() */
 HRESULT wpepe_eyes_pose_get__is_calibration_valid(WPEPE_EyesPose *self, BOOL *value);
 
-/* Windows.Perception.People.EyesPose.get_Gaze() */
 HRESULT wpepe_eyes_pose_get__gaze(WPEPE_EyesPose *self, WPESP_SpatialRay** value);
 
-/* Windows.Perception.People.EyesPose.get_UpdateTimestamp() */
 HRESULT wpepe_eyes_pose_get__update_timestamp(WPEPE_EyesPose *self, WPE_PerceptionTimestamp** value);
 
-/* Windows.Perception.People.EyesPose.IsSupported() */
 HRESULT wpepe_eyes_pose_is_supported(BOOL *out);
 
-/* Windows.Perception.People.EyesPose.RequestAccessAsync() */
 HRESULT wpepe_eyes_pose_request_access_async(WF_IAsyncOperation_WUIIN_GazeInputAccessStatus** out);
 
-/* activate Windows.Perception.People.HandPose */
 HRESULT wpepe_hand_pose_new(WPEPE_HandPose **out);
 
-/* Windows.Perception.People.HandPose */
-/* Windows.Perception.People.HandPose.TryGetJoint(coordinateSystem, joint, jointPose) */
 HRESULT wpepe_hand_pose_try_get_joint(WPEPE_HandPose *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WPEPE_HandJointKind joint, WPEPE_JointPose jointPose, BOOL *out);
 
-/* Windows.Perception.People.HandPose.TryGetJoints(coordinateSystem, joints, jointPoses) */
 HRESULT wpepe_hand_pose_try_get_joints(WPEPE_HandPose *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WPEPE_HandJointKind *joints, uint32_t joints_len, WPEPE_JointPose *jointPoses, uint32_t jointPoses_len, BOOL *out);
 
-/* Windows.Perception.People.HandPose.GetRelativeJoint(joint, referenceJoint) */
 HRESULT wpepe_hand_pose_get_relative_joint(WPEPE_HandPose *self, WPEPE_HandJointKind joint, WPEPE_HandJointKind referenceJoint, WPEPE_JointPose *out);
 
-/* Windows.Perception.People.HandPose.GetRelativeJoints(joints, referenceJoints, jointPoses) */
 HRESULT wpepe_hand_pose_get_relative_joints(WPEPE_HandPose *self, WPEPE_HandJointKind *joints, uint32_t joints_len, WPEPE_HandJointKind *referenceJoints, uint32_t referenceJoints_len, WPEPE_JointPose *jointPoses, uint32_t jointPoses_len);
 
-/* Windows.Perception.People.IHandMeshObserver */
-/* Windows.Perception.People.IHandMeshVertexState */
-/* Windows.Perception.People.IHeadPose */
-/* Windows.Perception.People.IEyesPose */
-/* Windows.Perception.People.IHandPose */
 #endif /* CWINRT_WINDOWS_PERCEPTION_PEOPLE_H */

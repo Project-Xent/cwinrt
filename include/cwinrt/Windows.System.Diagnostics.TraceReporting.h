@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WSYDITR_IPlatformDiagnosticActionsStatics WSYDITR_IPlatformDiagnosticActionsStatics;
 typedef struct WSYDITR_PlatformDiagnosticTraceInfo WSYDITR_PlatformDiagnosticTraceInfo;
 typedef struct WSYDITR_PlatformDiagnosticTraceRuntimeInfo WSYDITR_PlatformDiagnosticTraceRuntimeInfo;
@@ -20,7 +19,6 @@ typedef struct WSYDITR_PlatformDiagnosticActions WSYDITR_PlatformDiagnosticActio
 typedef struct WSYDITR_IPlatformDiagnosticTraceInfo WSYDITR_IPlatformDiagnosticTraceInfo;
 typedef struct WSYDITR_IPlatformDiagnosticTraceRuntimeInfo WSYDITR_IPlatformDiagnosticTraceRuntimeInfo;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IMapView_HSTRING_HSTRING
 #define CWINRT_FWD_WFOCO_IMapView_HSTRING_HSTRING
 typedef struct WFOCO_IMapView_HSTRING_HSTRING WFOCO_IMapView_HSTRING_HSTRING;
@@ -86,7 +84,6 @@ typedef enum WSYDITR_PlatformDiagnosticTraceSlotType {
 } WSYDITR_PlatformDiagnosticTraceSlotType;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -103,93 +100,58 @@ static const IID CWINRT_IID_WSYDITR_IPlatformDiagnosticTraceInfo CWINRT_MAYBE_UN
 static const IID CWINRT_IID_WSYDITR_IPlatformDiagnosticTraceRuntimeInfo CWINRT_MAYBE_UNUSED = { 0x3D4D5E2D, 0x01D8, 0x4768, { 0x85, 0x54, 0x1E, 0xB1, 0xCA, 0x61, 0x09, 0x86 } };
 #endif
 
-/* Methods */
-
-/* Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics */
-/* Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics.IsScenarioEnabled(scenarioId) */
 HRESULT wsyditr_platform_diagnostic_actions_statics_is_scenario_enabled(WSYDITR_IPlatformDiagnosticActionsStatics *self, GUID scenarioId, BOOL *out);
 
-/* Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics.TryEscalateScenario(scenarioId, escalationType, outputDirectory, timestampOutputDirectory, forceEscalationUpload, triggers) */
 HRESULT wsyditr_platform_diagnostic_actions_statics_try_escalate_scenario(WSYDITR_IPlatformDiagnosticActionsStatics *self, GUID scenarioId, WSYDITR_PlatformDiagnosticEscalationType escalationType, cwinrt_hstring outputDirectory, BOOL timestampOutputDirectory, BOOL forceEscalationUpload, WFOCO_IMapView_HSTRING_HSTRING* triggers, BOOL *out);
 
-/* Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics.DownloadLatestSettingsForNamespace(partner, feature, isScenarioNamespace, downloadOverCostedNetwork, downloadOverBattery) */
 HRESULT wsyditr_platform_diagnostic_actions_statics_download_latest_settings_for_namespace(WSYDITR_IPlatformDiagnosticActionsStatics *self, cwinrt_hstring partner, cwinrt_hstring feature, BOOL isScenarioNamespace, BOOL downloadOverCostedNetwork, BOOL downloadOverBattery, WSYDITR_PlatformDiagnosticActionState *out);
 
-/* Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics.GetActiveScenarioList() */
 HRESULT wsyditr_platform_diagnostic_actions_statics_get_active_scenario_list(WSYDITR_IPlatformDiagnosticActionsStatics *self, WFOCO_IVectorView_Guid** out);
 
-/* Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics.ForceUpload(latency, uploadOverCostedNetwork, uploadOverBattery) */
 HRESULT wsyditr_platform_diagnostic_actions_statics_force_upload(WSYDITR_IPlatformDiagnosticActionsStatics *self, WSYDITR_PlatformDiagnosticEventBufferLatencies latency, BOOL uploadOverCostedNetwork, BOOL uploadOverBattery, WSYDITR_PlatformDiagnosticActionState *out);
 
-/* Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics.IsTraceRunning(slotType, scenarioId, traceProfileHash) */
 HRESULT wsyditr_platform_diagnostic_actions_statics_is_trace_running(WSYDITR_IPlatformDiagnosticActionsStatics *self, WSYDITR_PlatformDiagnosticTraceSlotType slotType, GUID scenarioId, uint64_t traceProfileHash, WSYDITR_PlatformDiagnosticTraceSlotState *out);
 
-/* Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics.GetActiveTraceRuntime(slotType) */
 HRESULT wsyditr_platform_diagnostic_actions_statics_get_active_trace_runtime(WSYDITR_IPlatformDiagnosticActionsStatics *self, WSYDITR_PlatformDiagnosticTraceSlotType slotType, WSYDITR_PlatformDiagnosticTraceRuntimeInfo** out);
 
-/* Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics.GetKnownTraceList(slotType) */
 HRESULT wsyditr_platform_diagnostic_actions_statics_get_known_trace_list(WSYDITR_IPlatformDiagnosticActionsStatics *self, WSYDITR_PlatformDiagnosticTraceSlotType slotType, WFOCO_IVectorView_WSYDITR_PlatformDiagnosticTraceInfo** out);
 
-/* activate Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo */
 HRESULT wsyditr_platform_diagnostic_trace_info_new(WSYDITR_PlatformDiagnosticTraceInfo **out);
 
-/* Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo */
-/* Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo.get_ScenarioId() */
 HRESULT wsyditr_platform_diagnostic_trace_info_get__scenario_id(WSYDITR_PlatformDiagnosticTraceInfo *self, GUID *value);
 
-/* Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo.get_ProfileHash() */
 HRESULT wsyditr_platform_diagnostic_trace_info_get__profile_hash(WSYDITR_PlatformDiagnosticTraceInfo *self, uint64_t *value);
 
-/* Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo.get_IsExclusive() */
 HRESULT wsyditr_platform_diagnostic_trace_info_get__is_exclusive(WSYDITR_PlatformDiagnosticTraceInfo *self, BOOL *value);
 
-/* Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo.get_IsAutoLogger() */
 HRESULT wsyditr_platform_diagnostic_trace_info_get__is_auto_logger(WSYDITR_PlatformDiagnosticTraceInfo *self, BOOL *value);
 
-/* Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo.get_MaxTraceDurationFileTime() */
 HRESULT wsyditr_platform_diagnostic_trace_info_get__max_trace_duration_file_time(WSYDITR_PlatformDiagnosticTraceInfo *self, int64_t *value);
 
-/* Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo.get_Priority() */
 HRESULT wsyditr_platform_diagnostic_trace_info_get__priority(WSYDITR_PlatformDiagnosticTraceInfo *self, WSYDITR_PlatformDiagnosticTracePriority *value);
 
-/* activate Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceRuntimeInfo */
 HRESULT wsyditr_platform_diagnostic_trace_runtime_info_new(WSYDITR_PlatformDiagnosticTraceRuntimeInfo **out);
 
-/* Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceRuntimeInfo */
-/* Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceRuntimeInfo.get_RuntimeFileTime() */
 HRESULT wsyditr_platform_diagnostic_trace_runtime_info_get__runtime_file_time(WSYDITR_PlatformDiagnosticTraceRuntimeInfo *self, int64_t *value);
 
-/* Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceRuntimeInfo.get_EtwRuntimeFileTime() */
 HRESULT wsyditr_platform_diagnostic_trace_runtime_info_get__etw_runtime_file_time(WSYDITR_PlatformDiagnosticTraceRuntimeInfo *self, int64_t *value);
 
-/* activate Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions */
 HRESULT wsyditr_platform_diagnostic_actions_new(WSYDITR_PlatformDiagnosticActions **out);
 
-/* Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions */
-/* Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions.IsScenarioEnabled(scenarioId) */
 HRESULT wsyditr_platform_diagnostic_actions_is_scenario_enabled(GUID scenarioId, BOOL *out);
 
-/* Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions.TryEscalateScenario(scenarioId, escalationType, outputDirectory, timestampOutputDirectory, forceEscalationUpload, triggers) */
 HRESULT wsyditr_platform_diagnostic_actions_try_escalate_scenario(GUID scenarioId, WSYDITR_PlatformDiagnosticEscalationType escalationType, cwinrt_hstring outputDirectory, BOOL timestampOutputDirectory, BOOL forceEscalationUpload, WFOCO_IMapView_HSTRING_HSTRING* triggers, BOOL *out);
 
-/* Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions.DownloadLatestSettingsForNamespace(partner, feature, isScenarioNamespace, downloadOverCostedNetwork, downloadOverBattery) */
 HRESULT wsyditr_platform_diagnostic_actions_download_latest_settings_for_namespace(cwinrt_hstring partner, cwinrt_hstring feature, BOOL isScenarioNamespace, BOOL downloadOverCostedNetwork, BOOL downloadOverBattery, WSYDITR_PlatformDiagnosticActionState *out);
 
-/* Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions.GetActiveScenarioList() */
 HRESULT wsyditr_platform_diagnostic_actions_get_active_scenario_list(WFOCO_IVectorView_Guid** out);
 
-/* Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions.ForceUpload(latency, uploadOverCostedNetwork, uploadOverBattery) */
 HRESULT wsyditr_platform_diagnostic_actions_force_upload(WSYDITR_PlatformDiagnosticEventBufferLatencies latency, BOOL uploadOverCostedNetwork, BOOL uploadOverBattery, WSYDITR_PlatformDiagnosticActionState *out);
 
-/* Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions.IsTraceRunning(slotType, scenarioId, traceProfileHash) */
 HRESULT wsyditr_platform_diagnostic_actions_is_trace_running(WSYDITR_PlatformDiagnosticTraceSlotType slotType, GUID scenarioId, uint64_t traceProfileHash, WSYDITR_PlatformDiagnosticTraceSlotState *out);
 
-/* Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions.GetActiveTraceRuntime(slotType) */
 HRESULT wsyditr_platform_diagnostic_actions_get_active_trace_runtime(WSYDITR_PlatformDiagnosticTraceSlotType slotType, WSYDITR_PlatformDiagnosticTraceRuntimeInfo** out);
 
-/* Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions.GetKnownTraceList(slotType) */
 HRESULT wsyditr_platform_diagnostic_actions_get_known_trace_list(WSYDITR_PlatformDiagnosticTraceSlotType slotType, WFOCO_IVectorView_WSYDITR_PlatformDiagnosticTraceInfo** out);
 
-/* Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceInfo */
-/* Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceRuntimeInfo */
 #endif /* CWINRT_WINDOWS_SYSTEM_DIAGNOSTICS_TRACEREPORTING_H */

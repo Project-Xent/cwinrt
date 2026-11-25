@@ -16,7 +16,6 @@
 #include <cwinrt/Windows.UI.Core.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IInputStream
 #define CWINRT_FWD_WSTST_IInputStream
 typedef struct WSTST_IInputStream WSTST_IInputStream;
@@ -30,7 +29,6 @@ typedef struct WSTST_IOutputStream WSTST_IOutputStream;
 typedef struct WUICO_PointerEventArgs WUICO_PointerEventArgs;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUIININ_IInkDrawingAttributesStatics WUIININ_IInkDrawingAttributesStatics;
 typedef struct WUIININ_IInkPointFactory WUIININ_IInkPointFactory;
 typedef struct WUIININ_IInkPointFactory_2 WUIININ_IInkPointFactory_2;
@@ -103,7 +101,6 @@ typedef struct WUIININ_IInkRecognizerContainer WUIININ_IInkRecognizerContainer;
 typedef struct WUIININ_IInkPresenter WUIININ_IInkPresenter;
 typedef struct WUIININ_IInkPresenterStencil WUIININ_IInkPresenterStencil;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WUI_Color
 #define CWINRT_FWD_WUI_Color
 typedef struct WUI_Color WUI_Color;
@@ -309,7 +306,6 @@ typedef enum WUIININ_InkInputProcessingMode {
 } WUIININ_InkInputProcessingMode;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -506,314 +502,200 @@ static const IID CWINRT_IID_WUIININ_IInkPresenter CWINRT_MAYBE_UNUSED = { 0xA69B
 static const IID CWINRT_IID_WUIININ_IInkPresenterStencil CWINRT_MAYBE_UNUSED = { 0x30D12D6D, 0x3E06, 0x4D02, { 0xB1, 0x16, 0x27, 0x7F, 0xB5, 0xD8, 0xAD, 0xDC } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.Input.Inking.IInkDrawingAttributesStatics */
-/* Windows.UI.Input.Inking.IInkDrawingAttributesStatics.CreateForPencil() */
 HRESULT wuiinin_ink_drawing_attributes_statics_create_for_pencil(WUIININ_IInkDrawingAttributesStatics *self, WUIININ_InkDrawingAttributes** out);
 
-/* Windows.UI.Input.Inking.IInkPointFactory */
-/* Windows.UI.Input.Inking.IInkPointFactory.CreateInkPoint(position, pressure) */
 HRESULT wuiinin_ink_point_factory_create_ink_point(WUIININ_IInkPointFactory *self, WF_Point position, float pressure, WUIININ_InkPoint** out);
 
-/* Windows.UI.Input.Inking.IInkPointFactory2 */
-/* Windows.UI.Input.Inking.IInkPointFactory2.CreateInkPointWithTiltAndTimestamp(position, pressure, tiltX, tiltY, timestamp) */
 HRESULT wuiinin_ink_point_factory_2_create_ink_point_with_tilt_and_timestamp(WUIININ_IInkPointFactory_2 *self, WF_Point position, float pressure, float tiltX, float tiltY, uint64_t timestamp, WUIININ_InkPoint** out);
 
-/* Windows.UI.Input.Inking.IInkPresenterProtractorFactory */
-/* Windows.UI.Input.Inking.IInkPresenterProtractorFactory.Create(inkPresenter) */
 HRESULT wuiinin_ink_presenter_protractor_factory_create(WUIININ_IInkPresenterProtractorFactory *self, WUIININ_InkPresenter* inkPresenter, WUIININ_InkPresenterProtractor** out);
 
-/* Windows.UI.Input.Inking.IInkPresenterRulerFactory */
-/* Windows.UI.Input.Inking.IInkPresenterRulerFactory.Create(inkPresenter) */
 HRESULT wuiinin_ink_presenter_ruler_factory_create(WUIININ_IInkPresenterRulerFactory *self, WUIININ_InkPresenter* inkPresenter, WUIININ_InkPresenterRuler** out);
 
-/* Windows.UI.Input.Inking.IPenAndInkSettingsStatics */
-/* Windows.UI.Input.Inking.IPenAndInkSettingsStatics.GetDefault() */
 HRESULT wuiinin_pen_and_ink_settings_statics_get_default(WUIININ_IPenAndInkSettingsStatics *self, WUIININ_PenAndInkSettings** out);
 
-/* activate Windows.UI.Input.Inking.InkDrawingAttributes */
 HRESULT wuiinin_ink_drawing_attributes_new(WUIININ_InkDrawingAttributes **out);
 
-/* Windows.UI.Input.Inking.InkDrawingAttributes */
-/* Windows.UI.Input.Inking.InkDrawingAttributes.get_Color() */
 HRESULT wuiinin_ink_drawing_attributes_get__color(WUIININ_InkDrawingAttributes *self, WUI_Color *value);
 
-/* Windows.UI.Input.Inking.InkDrawingAttributes.put_Color() */
 HRESULT wuiinin_ink_drawing_attributes_put__color(WUIININ_InkDrawingAttributes *self, WUI_Color value);
 
-/* Windows.UI.Input.Inking.InkDrawingAttributes.get_PenTip() */
 HRESULT wuiinin_ink_drawing_attributes_get__pen_tip(WUIININ_InkDrawingAttributes *self, WUIININ_PenTipShape *value);
 
-/* Windows.UI.Input.Inking.InkDrawingAttributes.put_PenTip() */
 HRESULT wuiinin_ink_drawing_attributes_put__pen_tip(WUIININ_InkDrawingAttributes *self, WUIININ_PenTipShape value);
 
-/* Windows.UI.Input.Inking.InkDrawingAttributes.get_Size() */
 HRESULT wuiinin_ink_drawing_attributes_get__size(WUIININ_InkDrawingAttributes *self, WF_Size *value);
 
-/* Windows.UI.Input.Inking.InkDrawingAttributes.put_Size() */
 HRESULT wuiinin_ink_drawing_attributes_put__size(WUIININ_InkDrawingAttributes *self, WF_Size value);
 
-/* Windows.UI.Input.Inking.InkDrawingAttributes.get_IgnorePressure() */
 HRESULT wuiinin_ink_drawing_attributes_get__ignore_pressure(WUIININ_InkDrawingAttributes *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.InkDrawingAttributes.put_IgnorePressure() */
 HRESULT wuiinin_ink_drawing_attributes_put__ignore_pressure(WUIININ_InkDrawingAttributes *self, BOOL value);
 
-/* Windows.UI.Input.Inking.InkDrawingAttributes.get_FitToCurve() */
 HRESULT wuiinin_ink_drawing_attributes_get__fit_to_curve(WUIININ_InkDrawingAttributes *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.InkDrawingAttributes.put_FitToCurve() */
 HRESULT wuiinin_ink_drawing_attributes_put__fit_to_curve(WUIININ_InkDrawingAttributes *self, BOOL value);
 
-/* Windows.UI.Input.Inking.InkDrawingAttributes.get_PenTipTransform() */
 HRESULT wuiinin_ink_drawing_attributes_get__pen_tip_transform(WUIININ_InkDrawingAttributes *self, WFN_Matrix3x_2 *value);
 
-/* Windows.UI.Input.Inking.InkDrawingAttributes.put_PenTipTransform() */
 HRESULT wuiinin_ink_drawing_attributes_put__pen_tip_transform(WUIININ_InkDrawingAttributes *self, WFN_Matrix3x_2 value);
 
-/* Windows.UI.Input.Inking.InkDrawingAttributes.get_DrawAsHighlighter() */
 HRESULT wuiinin_ink_drawing_attributes_get__draw_as_highlighter(WUIININ_InkDrawingAttributes *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.InkDrawingAttributes.put_DrawAsHighlighter() */
 HRESULT wuiinin_ink_drawing_attributes_put__draw_as_highlighter(WUIININ_InkDrawingAttributes *self, BOOL value);
 
-/* Windows.UI.Input.Inking.InkDrawingAttributes.get_Kind() */
 HRESULT wuiinin_ink_drawing_attributes_get__kind(WUIININ_InkDrawingAttributes *self, WUIININ_InkDrawingAttributesKind *value);
 
-/* Windows.UI.Input.Inking.InkDrawingAttributes.get_PencilProperties() */
 HRESULT wuiinin_ink_drawing_attributes_get__pencil_properties(WUIININ_InkDrawingAttributes *self, WUIININ_InkDrawingAttributesPencilProperties** value);
 
-/* Windows.UI.Input.Inking.InkDrawingAttributes.get_IgnoreTilt() */
 HRESULT wuiinin_ink_drawing_attributes_get__ignore_tilt(WUIININ_InkDrawingAttributes *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.InkDrawingAttributes.put_IgnoreTilt() */
 HRESULT wuiinin_ink_drawing_attributes_put__ignore_tilt(WUIININ_InkDrawingAttributes *self, BOOL value);
 
-/* Windows.UI.Input.Inking.InkDrawingAttributes.get_ModelerAttributes() */
 HRESULT wuiinin_ink_drawing_attributes_get__modeler_attributes(WUIININ_InkDrawingAttributes *self, WUIININ_InkModelerAttributes** value);
 
-/* Windows.UI.Input.Inking.InkDrawingAttributes.CreateForPencil() */
 HRESULT wuiinin_ink_drawing_attributes_create_for_pencil(WUIININ_InkDrawingAttributes** out);
 
-/* activate Windows.UI.Input.Inking.InkDrawingAttributesPencilProperties */
 HRESULT wuiinin_ink_drawing_attributes_pencil_properties_new(WUIININ_InkDrawingAttributesPencilProperties **out);
 
-/* Windows.UI.Input.Inking.InkDrawingAttributesPencilProperties */
-/* Windows.UI.Input.Inking.InkDrawingAttributesPencilProperties.get_Opacity() */
 HRESULT wuiinin_ink_drawing_attributes_pencil_properties_get__opacity(WUIININ_InkDrawingAttributesPencilProperties *self, double *value);
 
-/* Windows.UI.Input.Inking.InkDrawingAttributesPencilProperties.put_Opacity() */
 HRESULT wuiinin_ink_drawing_attributes_pencil_properties_put__opacity(WUIININ_InkDrawingAttributesPencilProperties *self, double value);
 
-/* activate Windows.UI.Input.Inking.InkInputConfiguration */
 HRESULT wuiinin_ink_input_configuration_new(WUIININ_InkInputConfiguration **out);
 
-/* Windows.UI.Input.Inking.InkInputConfiguration */
-/* Windows.UI.Input.Inking.InkInputConfiguration.get_IsPrimaryBarrelButtonInputEnabled() */
 HRESULT wuiinin_ink_input_configuration_get__is_primary_barrel_button_input_enabled(WUIININ_InkInputConfiguration *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.InkInputConfiguration.put_IsPrimaryBarrelButtonInputEnabled() */
 HRESULT wuiinin_ink_input_configuration_put__is_primary_barrel_button_input_enabled(WUIININ_InkInputConfiguration *self, BOOL value);
 
-/* Windows.UI.Input.Inking.InkInputConfiguration.get_IsEraserInputEnabled() */
 HRESULT wuiinin_ink_input_configuration_get__is_eraser_input_enabled(WUIININ_InkInputConfiguration *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.InkInputConfiguration.put_IsEraserInputEnabled() */
 HRESULT wuiinin_ink_input_configuration_put__is_eraser_input_enabled(WUIININ_InkInputConfiguration *self, BOOL value);
 
-/* Windows.UI.Input.Inking.InkInputConfiguration.get_IsPenHapticFeedbackEnabled() */
 HRESULT wuiinin_ink_input_configuration_get__is_pen_haptic_feedback_enabled(WUIININ_InkInputConfiguration *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.InkInputConfiguration.put_IsPenHapticFeedbackEnabled() */
 HRESULT wuiinin_ink_input_configuration_put__is_pen_haptic_feedback_enabled(WUIININ_InkInputConfiguration *self, BOOL value);
 
-/* activate Windows.UI.Input.Inking.InkInputProcessingConfiguration */
 HRESULT wuiinin_ink_input_processing_configuration_new(WUIININ_InkInputProcessingConfiguration **out);
 
-/* Windows.UI.Input.Inking.InkInputProcessingConfiguration */
-/* Windows.UI.Input.Inking.InkInputProcessingConfiguration.get_Mode() */
 HRESULT wuiinin_ink_input_processing_configuration_get__mode(WUIININ_InkInputProcessingConfiguration *self, WUIININ_InkInputProcessingMode *value);
 
-/* Windows.UI.Input.Inking.InkInputProcessingConfiguration.put_Mode() */
 HRESULT wuiinin_ink_input_processing_configuration_put__mode(WUIININ_InkInputProcessingConfiguration *self, WUIININ_InkInputProcessingMode value);
 
-/* Windows.UI.Input.Inking.InkInputProcessingConfiguration.get_RightDragAction() */
 HRESULT wuiinin_ink_input_processing_configuration_get__right_drag_action(WUIININ_InkInputProcessingConfiguration *self, WUIININ_InkInputRightDragAction *value);
 
-/* Windows.UI.Input.Inking.InkInputProcessingConfiguration.put_RightDragAction() */
 HRESULT wuiinin_ink_input_processing_configuration_put__right_drag_action(WUIININ_InkInputProcessingConfiguration *self, WUIININ_InkInputRightDragAction value);
 
-/* activate Windows.UI.Input.Inking.InkManager */
 HRESULT wuiinin_ink_manager_new(WUIININ_InkManager **out);
 
-/* Windows.UI.Input.Inking.InkManager */
-/* Windows.UI.Input.Inking.InkManager.get_Mode() */
 HRESULT wuiinin_ink_manager_get__mode(WUIININ_InkManager *self, WUIININ_InkManipulationMode *value);
 
-/* Windows.UI.Input.Inking.InkManager.put_Mode() */
 HRESULT wuiinin_ink_manager_put__mode(WUIININ_InkManager *self, WUIININ_InkManipulationMode value);
 
-/* Windows.UI.Input.Inking.InkManager.ProcessPointerDown(pointerPoint) */
 HRESULT wuiinin_ink_manager_process_pointer_down(WUIININ_InkManager *self, WUIIN_PointerPoint* pointerPoint);
 
-/* Windows.UI.Input.Inking.InkManager.ProcessPointerUpdate(pointerPoint) */
 HRESULT wuiinin_ink_manager_process_pointer_update(WUIININ_InkManager *self, WUIIN_PointerPoint* pointerPoint, IInspectable** out);
 
-/* Windows.UI.Input.Inking.InkManager.ProcessPointerUp(pointerPoint) */
 HRESULT wuiinin_ink_manager_process_pointer_up(WUIININ_InkManager *self, WUIIN_PointerPoint* pointerPoint, WF_Rect *out);
 
-/* Windows.UI.Input.Inking.InkManager.SetDefaultDrawingAttributes(drawingAttributes) */
 HRESULT wuiinin_ink_manager_set_default_drawing_attributes(WUIININ_InkManager *self, WUIININ_InkDrawingAttributes* drawingAttributes);
 
-/* Windows.UI.Input.Inking.InkManager.RecognizeAsync(recognitionTarget) */
 HRESULT wuiinin_ink_manager_recognize_async(WUIININ_InkManager *self, WUIININ_InkRecognitionTarget recognitionTarget, WF_IAsyncOperation_WFOCO_IVectorView_WUIININ_InkRecognitionResult** out);
 
-/* Windows.UI.Input.Inking.InkManager.get_BoundingRect() */
 HRESULT wuiinin_ink_manager_get__bounding_rect(WUIININ_InkManager *self, WF_Rect *value);
 
-/* Windows.UI.Input.Inking.InkManager.AddStroke(stroke) */
 HRESULT wuiinin_ink_manager_add_stroke(WUIININ_InkManager *self, WUIININ_InkStroke* stroke);
 
-/* Windows.UI.Input.Inking.InkManager.DeleteSelected() */
 HRESULT wuiinin_ink_manager_delete_selected(WUIININ_InkManager *self, WF_Rect *out);
 
-/* Windows.UI.Input.Inking.InkManager.MoveSelected(translation) */
 HRESULT wuiinin_ink_manager_move_selected(WUIININ_InkManager *self, WF_Point translation, WF_Rect *out);
 
-/* Windows.UI.Input.Inking.InkManager.SelectWithPolyLine(polyline) */
 HRESULT wuiinin_ink_manager_select_with_poly_line(WUIININ_InkManager *self, WFOCO_IIterable_WF_Point* polyline, WF_Rect *out);
 
-/* Windows.UI.Input.Inking.InkManager.SelectWithLine(from, to) */
 HRESULT wuiinin_ink_manager_select_with_line(WUIININ_InkManager *self, WF_Point from, WF_Point to, WF_Rect *out);
 
-/* Windows.UI.Input.Inking.InkManager.CopySelectedToClipboard() */
 HRESULT wuiinin_ink_manager_copy_selected_to_clipboard(WUIININ_InkManager *self);
 
-/* Windows.UI.Input.Inking.InkManager.PasteFromClipboard(position) */
 HRESULT wuiinin_ink_manager_paste_from_clipboard(WUIININ_InkManager *self, WF_Point position, WF_Rect *out);
 
-/* Windows.UI.Input.Inking.InkManager.CanPasteFromClipboard() */
 HRESULT wuiinin_ink_manager_can_paste_from_clipboard(WUIININ_InkManager *self, BOOL *out);
 
-/* Windows.UI.Input.Inking.InkManager.LoadAsync(inputStream) */
 HRESULT wuiinin_ink_manager_load_async(WUIININ_InkManager *self, WSTST_IInputStream* inputStream, WF_IAsyncActionWithProgress_uint64_t** out);
 
-/* Windows.UI.Input.Inking.InkManager.SaveAsync(outputStream) */
 HRESULT wuiinin_ink_manager_save_async(WUIININ_InkManager *self, WSTST_IOutputStream* outputStream, WF_IAsyncOperationWithProgress_uint32_t_uint32_t** out);
 
-/* Windows.UI.Input.Inking.InkManager.UpdateRecognitionResults(recognitionResults) */
 HRESULT wuiinin_ink_manager_update_recognition_results(WUIININ_InkManager *self, WFOCO_IVectorView_WUIININ_InkRecognitionResult* recognitionResults);
 
-/* Windows.UI.Input.Inking.InkManager.GetStrokes() */
 HRESULT wuiinin_ink_manager_get_strokes(WUIININ_InkManager *self, WFOCO_IVectorView_WUIININ_InkStroke** out);
 
-/* Windows.UI.Input.Inking.InkManager.GetRecognitionResults() */
 HRESULT wuiinin_ink_manager_get_recognition_results(WUIININ_InkManager *self, WFOCO_IVectorView_WUIININ_InkRecognitionResult** out);
 
-/* Windows.UI.Input.Inking.InkManager.SetDefaultRecognizer(recognizer) */
 HRESULT wuiinin_ink_manager_set_default_recognizer(WUIININ_InkManager *self, WUIININ_InkRecognizer* recognizer);
 
-/* Windows.UI.Input.Inking.InkManager.RecognizeAsync(strokeCollection, recognitionTarget) */
 HRESULT wuiinin_ink_manager_recognize_async_p_ink_recognition_target_p(WUIININ_InkManager *self, WUIININ_InkStrokeContainer* strokeCollection, WUIININ_InkRecognitionTarget recognitionTarget, WF_IAsyncOperation_WFOCO_IVectorView_WUIININ_InkRecognitionResult** out);
 
-/* Windows.UI.Input.Inking.InkManager.GetRecognizers() */
 HRESULT wuiinin_ink_manager_get_recognizers(WUIININ_InkManager *self, WFOCO_IVectorView_WUIININ_InkRecognizer** out);
 
-/* activate Windows.UI.Input.Inking.InkModelerAttributes */
 HRESULT wuiinin_ink_modeler_attributes_new(WUIININ_InkModelerAttributes **out);
 
-/* Windows.UI.Input.Inking.InkModelerAttributes */
-/* Windows.UI.Input.Inking.InkModelerAttributes.get_PredictionTime() */
 HRESULT wuiinin_ink_modeler_attributes_get__prediction_time(WUIININ_InkModelerAttributes *self, WF_TimeSpan *value);
 
-/* Windows.UI.Input.Inking.InkModelerAttributes.put_PredictionTime() */
 HRESULT wuiinin_ink_modeler_attributes_put__prediction_time(WUIININ_InkModelerAttributes *self, WF_TimeSpan value);
 
-/* Windows.UI.Input.Inking.InkModelerAttributes.get_ScalingFactor() */
 HRESULT wuiinin_ink_modeler_attributes_get__scaling_factor(WUIININ_InkModelerAttributes *self, float *value);
 
-/* Windows.UI.Input.Inking.InkModelerAttributes.put_ScalingFactor() */
 HRESULT wuiinin_ink_modeler_attributes_put__scaling_factor(WUIININ_InkModelerAttributes *self, float value);
 
-/* Windows.UI.Input.Inking.InkModelerAttributes.get_UseVelocityBasedPressure() */
 HRESULT wuiinin_ink_modeler_attributes_get__use_velocity_based_pressure(WUIININ_InkModelerAttributes *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.InkModelerAttributes.put_UseVelocityBasedPressure() */
 HRESULT wuiinin_ink_modeler_attributes_put__use_velocity_based_pressure(WUIININ_InkModelerAttributes *self, BOOL value);
 
-/* activate Windows.UI.Input.Inking.InkPoint */
 HRESULT wuiinin_ink_point_new(WUIININ_InkPoint **out);
 
-/* Windows.UI.Input.Inking.InkPoint */
-/* Windows.UI.Input.Inking.InkPoint.get_Position() */
 HRESULT wuiinin_ink_point_get__position(WUIININ_InkPoint *self, WF_Point *value);
 
-/* Windows.UI.Input.Inking.InkPoint.get_Pressure() */
 HRESULT wuiinin_ink_point_get__pressure(WUIININ_InkPoint *self, float *value);
 
-/* Windows.UI.Input.Inking.InkPoint.get_TiltX() */
 HRESULT wuiinin_ink_point_get__tilt_x(WUIININ_InkPoint *self, float *value);
 
-/* Windows.UI.Input.Inking.InkPoint.get_TiltY() */
 HRESULT wuiinin_ink_point_get__tilt_y(WUIININ_InkPoint *self, float *value);
 
-/* Windows.UI.Input.Inking.InkPoint.get_Timestamp() */
 HRESULT wuiinin_ink_point_get__timestamp(WUIININ_InkPoint *self, uint64_t *value);
 
-/* activate Windows.UI.Input.Inking.InkPresenter */
 HRESULT wuiinin_ink_presenter_new(WUIININ_InkPresenter **out);
 
-/* Windows.UI.Input.Inking.InkPresenter */
-/* Windows.UI.Input.Inking.InkPresenter.get_IsInputEnabled() */
 HRESULT wuiinin_ink_presenter_get__is_input_enabled(WUIININ_InkPresenter *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.InkPresenter.put_IsInputEnabled() */
 HRESULT wuiinin_ink_presenter_put__is_input_enabled(WUIININ_InkPresenter *self, BOOL value);
 
-/* Windows.UI.Input.Inking.InkPresenter.get_InputDeviceTypes() */
 HRESULT wuiinin_ink_presenter_get__input_device_types(WUIININ_InkPresenter *self, WUICO_CoreInputDeviceTypes *value);
 
-/* Windows.UI.Input.Inking.InkPresenter.put_InputDeviceTypes() */
 HRESULT wuiinin_ink_presenter_put__input_device_types(WUIININ_InkPresenter *self, WUICO_CoreInputDeviceTypes value);
 
-/* Windows.UI.Input.Inking.InkPresenter.get_UnprocessedInput() */
 HRESULT wuiinin_ink_presenter_get__unprocessed_input(WUIININ_InkPresenter *self, WUIININ_InkUnprocessedInput** value);
 
-/* Windows.UI.Input.Inking.InkPresenter.get_StrokeInput() */
 HRESULT wuiinin_ink_presenter_get__stroke_input(WUIININ_InkPresenter *self, WUIININ_InkStrokeInput** value);
 
-/* Windows.UI.Input.Inking.InkPresenter.get_InputProcessingConfiguration() */
 HRESULT wuiinin_ink_presenter_get__input_processing_configuration(WUIININ_InkPresenter *self, WUIININ_InkInputProcessingConfiguration** value);
 
-/* Windows.UI.Input.Inking.InkPresenter.get_StrokeContainer() */
 HRESULT wuiinin_ink_presenter_get__stroke_container(WUIININ_InkPresenter *self, WUIININ_InkStrokeContainer** value);
 
-/* Windows.UI.Input.Inking.InkPresenter.put_StrokeContainer() */
 HRESULT wuiinin_ink_presenter_put__stroke_container(WUIININ_InkPresenter *self, WUIININ_InkStrokeContainer* value);
 
-/* Windows.UI.Input.Inking.InkPresenter.CopyDefaultDrawingAttributes() */
 HRESULT wuiinin_ink_presenter_copy_default_drawing_attributes(WUIININ_InkPresenter *self, WUIININ_InkDrawingAttributes** out);
 
-/* Windows.UI.Input.Inking.InkPresenter.UpdateDefaultDrawingAttributes() */
 HRESULT wuiinin_ink_presenter_update_default_drawing_attributes(WUIININ_InkPresenter *self, WUIININ_InkDrawingAttributes* value);
 
-/* Windows.UI.Input.Inking.InkPresenter.ActivateCustomDrying() */
 HRESULT wuiinin_ink_presenter_activate_custom_drying(WUIININ_InkPresenter *self, WUIININ_InkSynchronizer** out);
 
-/* Windows.UI.Input.Inking.InkPresenter.SetPredefinedConfiguration() */
 HRESULT wuiinin_ink_presenter_set_predefined_configuration(WUIININ_InkPresenter *self, WUIININ_InkPresenterPredefinedConfiguration value);
 
-/* Windows.UI.Input.Inking.InkPresenter.get_HighContrastAdjustment() */
 HRESULT wuiinin_ink_presenter_get__high_contrast_adjustment(WUIININ_InkPresenter *self, WUIININ_InkHighContrastAdjustment *value);
 
-/* Windows.UI.Input.Inking.InkPresenter.put_HighContrastAdjustment() */
 HRESULT wuiinin_ink_presenter_put__high_contrast_adjustment(WUIININ_InkPresenter *self, WUIININ_InkHighContrastAdjustment value);
 
-/* Windows.UI.Input.Inking.InkPresenter.get_InputConfiguration() */
 HRESULT wuiinin_ink_presenter_get__input_configuration(WUIININ_InkPresenter *self, WUIININ_InkInputConfiguration** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiinin_ink_presenter_on_strokes_collected(WUIININ_InkPresenter *self, cwinrt_event_fn fn, void *ctx);
@@ -822,313 +704,204 @@ void wuiinin_ink_presenter_off_strokes_collected(WUIININ_InkPresenter *self, cwi
 cwinrt_token wuiinin_ink_presenter_on_strokes_erased(WUIININ_InkPresenter *self, cwinrt_event_fn fn, void *ctx);
 void wuiinin_ink_presenter_off_strokes_erased(WUIININ_InkPresenter *self, cwinrt_token token);
 
-/* activate Windows.UI.Input.Inking.InkPresenterProtractor */
 HRESULT wuiinin_ink_presenter_protractor_new(WUIININ_InkPresenterProtractor **out);
 
-/* Windows.UI.Input.Inking.InkPresenterProtractor */
-/* Windows.UI.Input.Inking.InkPresenterProtractor.get_AreTickMarksVisible() */
 HRESULT wuiinin_ink_presenter_protractor_get__are_tick_marks_visible(WUIININ_InkPresenterProtractor *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.InkPresenterProtractor.put_AreTickMarksVisible() */
 HRESULT wuiinin_ink_presenter_protractor_put__are_tick_marks_visible(WUIININ_InkPresenterProtractor *self, BOOL value);
 
-/* Windows.UI.Input.Inking.InkPresenterProtractor.get_AreRaysVisible() */
 HRESULT wuiinin_ink_presenter_protractor_get__are_rays_visible(WUIININ_InkPresenterProtractor *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.InkPresenterProtractor.put_AreRaysVisible() */
 HRESULT wuiinin_ink_presenter_protractor_put__are_rays_visible(WUIININ_InkPresenterProtractor *self, BOOL value);
 
-/* Windows.UI.Input.Inking.InkPresenterProtractor.get_IsCenterMarkerVisible() */
 HRESULT wuiinin_ink_presenter_protractor_get__is_center_marker_visible(WUIININ_InkPresenterProtractor *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.InkPresenterProtractor.put_IsCenterMarkerVisible() */
 HRESULT wuiinin_ink_presenter_protractor_put__is_center_marker_visible(WUIININ_InkPresenterProtractor *self, BOOL value);
 
-/* Windows.UI.Input.Inking.InkPresenterProtractor.get_IsAngleReadoutVisible() */
 HRESULT wuiinin_ink_presenter_protractor_get__is_angle_readout_visible(WUIININ_InkPresenterProtractor *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.InkPresenterProtractor.put_IsAngleReadoutVisible() */
 HRESULT wuiinin_ink_presenter_protractor_put__is_angle_readout_visible(WUIININ_InkPresenterProtractor *self, BOOL value);
 
-/* Windows.UI.Input.Inking.InkPresenterProtractor.get_IsResizable() */
 HRESULT wuiinin_ink_presenter_protractor_get__is_resizable(WUIININ_InkPresenterProtractor *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.InkPresenterProtractor.put_IsResizable() */
 HRESULT wuiinin_ink_presenter_protractor_put__is_resizable(WUIININ_InkPresenterProtractor *self, BOOL value);
 
-/* Windows.UI.Input.Inking.InkPresenterProtractor.get_Radius() */
 HRESULT wuiinin_ink_presenter_protractor_get__radius(WUIININ_InkPresenterProtractor *self, double *value);
 
-/* Windows.UI.Input.Inking.InkPresenterProtractor.put_Radius() */
 HRESULT wuiinin_ink_presenter_protractor_put__radius(WUIININ_InkPresenterProtractor *self, double value);
 
-/* Windows.UI.Input.Inking.InkPresenterProtractor.get_AccentColor() */
 HRESULT wuiinin_ink_presenter_protractor_get__accent_color(WUIININ_InkPresenterProtractor *self, WUI_Color *value);
 
-/* Windows.UI.Input.Inking.InkPresenterProtractor.put_AccentColor() */
 HRESULT wuiinin_ink_presenter_protractor_put__accent_color(WUIININ_InkPresenterProtractor *self, WUI_Color value);
 
-/* Windows.UI.Input.Inking.InkPresenterProtractor.get_Kind() */
 HRESULT wuiinin_ink_presenter_protractor_get__kind(WUIININ_InkPresenterProtractor *self, WUIININ_InkPresenterStencilKind *value);
 
-/* Windows.UI.Input.Inking.InkPresenterProtractor.get_IsVisible() */
 HRESULT wuiinin_ink_presenter_protractor_get__is_visible(WUIININ_InkPresenterProtractor *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.InkPresenterProtractor.put_IsVisible() */
 HRESULT wuiinin_ink_presenter_protractor_put__is_visible(WUIININ_InkPresenterProtractor *self, BOOL value);
 
-/* Windows.UI.Input.Inking.InkPresenterProtractor.get_BackgroundColor() */
 HRESULT wuiinin_ink_presenter_protractor_get__background_color(WUIININ_InkPresenterProtractor *self, WUI_Color *value);
 
-/* Windows.UI.Input.Inking.InkPresenterProtractor.put_BackgroundColor() */
 HRESULT wuiinin_ink_presenter_protractor_put__background_color(WUIININ_InkPresenterProtractor *self, WUI_Color value);
 
-/* Windows.UI.Input.Inking.InkPresenterProtractor.get_ForegroundColor() */
 HRESULT wuiinin_ink_presenter_protractor_get__foreground_color(WUIININ_InkPresenterProtractor *self, WUI_Color *value);
 
-/* Windows.UI.Input.Inking.InkPresenterProtractor.put_ForegroundColor() */
 HRESULT wuiinin_ink_presenter_protractor_put__foreground_color(WUIININ_InkPresenterProtractor *self, WUI_Color value);
 
-/* Windows.UI.Input.Inking.InkPresenterProtractor.get_Transform() */
 HRESULT wuiinin_ink_presenter_protractor_get__transform(WUIININ_InkPresenterProtractor *self, WFN_Matrix3x_2 *value);
 
-/* Windows.UI.Input.Inking.InkPresenterProtractor.put_Transform() */
 HRESULT wuiinin_ink_presenter_protractor_put__transform(WUIININ_InkPresenterProtractor *self, WFN_Matrix3x_2 value);
 
-/* activate Windows.UI.Input.Inking.InkPresenterRuler */
 HRESULT wuiinin_ink_presenter_ruler_new(WUIININ_InkPresenterRuler **out);
 
-/* Windows.UI.Input.Inking.InkPresenterRuler */
-/* Windows.UI.Input.Inking.InkPresenterRuler.get_Length() */
 HRESULT wuiinin_ink_presenter_ruler_get__length(WUIININ_InkPresenterRuler *self, double *value);
 
-/* Windows.UI.Input.Inking.InkPresenterRuler.put_Length() */
 HRESULT wuiinin_ink_presenter_ruler_put__length(WUIININ_InkPresenterRuler *self, double value);
 
-/* Windows.UI.Input.Inking.InkPresenterRuler.get_Width() */
 HRESULT wuiinin_ink_presenter_ruler_get__width(WUIININ_InkPresenterRuler *self, double *value);
 
-/* Windows.UI.Input.Inking.InkPresenterRuler.put_Width() */
 HRESULT wuiinin_ink_presenter_ruler_put__width(WUIININ_InkPresenterRuler *self, double value);
 
-/* Windows.UI.Input.Inking.InkPresenterRuler.get_Kind() */
 HRESULT wuiinin_ink_presenter_ruler_get__kind(WUIININ_InkPresenterRuler *self, WUIININ_InkPresenterStencilKind *value);
 
-/* Windows.UI.Input.Inking.InkPresenterRuler.get_IsVisible() */
 HRESULT wuiinin_ink_presenter_ruler_get__is_visible(WUIININ_InkPresenterRuler *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.InkPresenterRuler.put_IsVisible() */
 HRESULT wuiinin_ink_presenter_ruler_put__is_visible(WUIININ_InkPresenterRuler *self, BOOL value);
 
-/* Windows.UI.Input.Inking.InkPresenterRuler.get_BackgroundColor() */
 HRESULT wuiinin_ink_presenter_ruler_get__background_color(WUIININ_InkPresenterRuler *self, WUI_Color *value);
 
-/* Windows.UI.Input.Inking.InkPresenterRuler.put_BackgroundColor() */
 HRESULT wuiinin_ink_presenter_ruler_put__background_color(WUIININ_InkPresenterRuler *self, WUI_Color value);
 
-/* Windows.UI.Input.Inking.InkPresenterRuler.get_ForegroundColor() */
 HRESULT wuiinin_ink_presenter_ruler_get__foreground_color(WUIININ_InkPresenterRuler *self, WUI_Color *value);
 
-/* Windows.UI.Input.Inking.InkPresenterRuler.put_ForegroundColor() */
 HRESULT wuiinin_ink_presenter_ruler_put__foreground_color(WUIININ_InkPresenterRuler *self, WUI_Color value);
 
-/* Windows.UI.Input.Inking.InkPresenterRuler.get_Transform() */
 HRESULT wuiinin_ink_presenter_ruler_get__transform(WUIININ_InkPresenterRuler *self, WFN_Matrix3x_2 *value);
 
-/* Windows.UI.Input.Inking.InkPresenterRuler.put_Transform() */
 HRESULT wuiinin_ink_presenter_ruler_put__transform(WUIININ_InkPresenterRuler *self, WFN_Matrix3x_2 value);
 
-/* Windows.UI.Input.Inking.InkPresenterRuler.get_AreTickMarksVisible() */
 HRESULT wuiinin_ink_presenter_ruler_get__are_tick_marks_visible(WUIININ_InkPresenterRuler *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.InkPresenterRuler.put_AreTickMarksVisible() */
 HRESULT wuiinin_ink_presenter_ruler_put__are_tick_marks_visible(WUIININ_InkPresenterRuler *self, BOOL value);
 
-/* Windows.UI.Input.Inking.InkPresenterRuler.get_IsCompassVisible() */
 HRESULT wuiinin_ink_presenter_ruler_get__is_compass_visible(WUIININ_InkPresenterRuler *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.InkPresenterRuler.put_IsCompassVisible() */
 HRESULT wuiinin_ink_presenter_ruler_put__is_compass_visible(WUIININ_InkPresenterRuler *self, BOOL value);
 
-/* activate Windows.UI.Input.Inking.InkRecognitionResult */
 HRESULT wuiinin_ink_recognition_result_new(WUIININ_InkRecognitionResult **out);
 
-/* Windows.UI.Input.Inking.InkRecognitionResult */
-/* Windows.UI.Input.Inking.InkRecognitionResult.get_BoundingRect() */
 HRESULT wuiinin_ink_recognition_result_get__bounding_rect(WUIININ_InkRecognitionResult *self, WF_Rect *value);
 
-/* Windows.UI.Input.Inking.InkRecognitionResult.GetTextCandidates() */
 HRESULT wuiinin_ink_recognition_result_get_text_candidates(WUIININ_InkRecognitionResult *self, WFOCO_IVectorView_HSTRING** out);
 
-/* Windows.UI.Input.Inking.InkRecognitionResult.GetStrokes() */
 HRESULT wuiinin_ink_recognition_result_get_strokes(WUIININ_InkRecognitionResult *self, WFOCO_IVectorView_WUIININ_InkStroke** out);
 
-/* activate Windows.UI.Input.Inking.InkRecognizer */
 HRESULT wuiinin_ink_recognizer_new(WUIININ_InkRecognizer **out);
 
-/* Windows.UI.Input.Inking.InkRecognizer */
-/* Windows.UI.Input.Inking.InkRecognizer.get_Name() */
 HRESULT wuiinin_ink_recognizer_get__name(WUIININ_InkRecognizer *self, cwinrt_hstring *value);
 
-/* activate Windows.UI.Input.Inking.InkRecognizerContainer */
 HRESULT wuiinin_ink_recognizer_container_new(WUIININ_InkRecognizerContainer **out);
 
-/* Windows.UI.Input.Inking.InkRecognizerContainer */
-/* Windows.UI.Input.Inking.InkRecognizerContainer.SetDefaultRecognizer(recognizer) */
 HRESULT wuiinin_ink_recognizer_container_set_default_recognizer(WUIININ_InkRecognizerContainer *self, WUIININ_InkRecognizer* recognizer);
 
-/* Windows.UI.Input.Inking.InkRecognizerContainer.RecognizeAsync(strokeCollection, recognitionTarget) */
 HRESULT wuiinin_ink_recognizer_container_recognize_async(WUIININ_InkRecognizerContainer *self, WUIININ_InkStrokeContainer* strokeCollection, WUIININ_InkRecognitionTarget recognitionTarget, WF_IAsyncOperation_WFOCO_IVectorView_WUIININ_InkRecognitionResult** out);
 
-/* Windows.UI.Input.Inking.InkRecognizerContainer.GetRecognizers() */
 HRESULT wuiinin_ink_recognizer_container_get_recognizers(WUIININ_InkRecognizerContainer *self, WFOCO_IVectorView_WUIININ_InkRecognizer** out);
 
-/* activate Windows.UI.Input.Inking.InkStroke */
 HRESULT wuiinin_ink_stroke_new(WUIININ_InkStroke **out);
 
-/* Windows.UI.Input.Inking.InkStroke */
-/* Windows.UI.Input.Inking.InkStroke.get_DrawingAttributes() */
 HRESULT wuiinin_ink_stroke_get__drawing_attributes(WUIININ_InkStroke *self, WUIININ_InkDrawingAttributes** value);
 
-/* Windows.UI.Input.Inking.InkStroke.put_DrawingAttributes() */
 HRESULT wuiinin_ink_stroke_put__drawing_attributes(WUIININ_InkStroke *self, WUIININ_InkDrawingAttributes* value);
 
-/* Windows.UI.Input.Inking.InkStroke.get_BoundingRect() */
 HRESULT wuiinin_ink_stroke_get__bounding_rect(WUIININ_InkStroke *self, WF_Rect *value);
 
-/* Windows.UI.Input.Inking.InkStroke.get_Selected() */
 HRESULT wuiinin_ink_stroke_get__selected(WUIININ_InkStroke *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.InkStroke.put_Selected() */
 HRESULT wuiinin_ink_stroke_put__selected(WUIININ_InkStroke *self, BOOL value);
 
-/* Windows.UI.Input.Inking.InkStroke.get_Recognized() */
 HRESULT wuiinin_ink_stroke_get__recognized(WUIININ_InkStroke *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.InkStroke.GetRenderingSegments() */
 HRESULT wuiinin_ink_stroke_get_rendering_segments(WUIININ_InkStroke *self, WFOCO_IVectorView_WUIININ_InkStrokeRenderingSegment** out);
 
-/* Windows.UI.Input.Inking.InkStroke.Clone() */
 HRESULT wuiinin_ink_stroke_clone(WUIININ_InkStroke *self, WUIININ_InkStroke** out);
 
-/* Windows.UI.Input.Inking.InkStroke.get_PointTransform() */
 HRESULT wuiinin_ink_stroke_get__point_transform(WUIININ_InkStroke *self, WFN_Matrix3x_2 *value);
 
-/* Windows.UI.Input.Inking.InkStroke.put_PointTransform() */
 HRESULT wuiinin_ink_stroke_put__point_transform(WUIININ_InkStroke *self, WFN_Matrix3x_2 value);
 
-/* Windows.UI.Input.Inking.InkStroke.GetInkPoints() */
 HRESULT wuiinin_ink_stroke_get_ink_points(WUIININ_InkStroke *self, WFOCO_IVectorView_WUIININ_InkPoint** out);
 
-/* Windows.UI.Input.Inking.InkStroke.get_Id() */
 HRESULT wuiinin_ink_stroke_get__id(WUIININ_InkStroke *self, uint32_t *value);
 
-/* Windows.UI.Input.Inking.InkStroke.get_StrokeStartedTime() */
 HRESULT wuiinin_ink_stroke_get__stroke_started_time(WUIININ_InkStroke *self, WF_DateTime** value);
 
-/* Windows.UI.Input.Inking.InkStroke.put_StrokeStartedTime() */
 HRESULT wuiinin_ink_stroke_put__stroke_started_time(WUIININ_InkStroke *self, WF_DateTime* value);
 
-/* Windows.UI.Input.Inking.InkStroke.get_StrokeDuration() */
 HRESULT wuiinin_ink_stroke_get__stroke_duration(WUIININ_InkStroke *self, WF_TimeSpan** value);
 
-/* Windows.UI.Input.Inking.InkStroke.put_StrokeDuration() */
 HRESULT wuiinin_ink_stroke_put__stroke_duration(WUIININ_InkStroke *self, WF_TimeSpan* value);
 
-/* Windows.UI.Input.Inking.InkStroke.get_PointerId() */
 HRESULT wuiinin_ink_stroke_get__pointer_id(WUIININ_InkStroke *self, uint32_t *value);
 
-/* activate Windows.UI.Input.Inking.InkStrokeBuilder */
 HRESULT wuiinin_ink_stroke_builder_new(WUIININ_InkStrokeBuilder **out);
 
-/* Windows.UI.Input.Inking.InkStrokeBuilder */
-/* Windows.UI.Input.Inking.InkStrokeBuilder.BeginStroke(pointerPoint) */
 HRESULT wuiinin_ink_stroke_builder_begin_stroke(WUIININ_InkStrokeBuilder *self, WUIIN_PointerPoint* pointerPoint);
 
-/* Windows.UI.Input.Inking.InkStrokeBuilder.AppendToStroke(pointerPoint) */
 HRESULT wuiinin_ink_stroke_builder_append_to_stroke(WUIININ_InkStrokeBuilder *self, WUIIN_PointerPoint* pointerPoint, WUIIN_PointerPoint** out);
 
-/* Windows.UI.Input.Inking.InkStrokeBuilder.EndStroke(pointerPoint) */
 HRESULT wuiinin_ink_stroke_builder_end_stroke(WUIININ_InkStrokeBuilder *self, WUIIN_PointerPoint* pointerPoint, WUIININ_InkStroke** out);
 
-/* Windows.UI.Input.Inking.InkStrokeBuilder.CreateStroke(points) */
 HRESULT wuiinin_ink_stroke_builder_create_stroke(WUIININ_InkStrokeBuilder *self, WFOCO_IIterable_WF_Point* points, WUIININ_InkStroke** out);
 
-/* Windows.UI.Input.Inking.InkStrokeBuilder.SetDefaultDrawingAttributes(drawingAttributes) */
 HRESULT wuiinin_ink_stroke_builder_set_default_drawing_attributes(WUIININ_InkStrokeBuilder *self, WUIININ_InkDrawingAttributes* drawingAttributes);
 
-/* Windows.UI.Input.Inking.InkStrokeBuilder.CreateStrokeFromInkPoints(inkPoints, transform) */
 HRESULT wuiinin_ink_stroke_builder_create_stroke_from_ink_points(WUIININ_InkStrokeBuilder *self, WFOCO_IIterable_WUIININ_InkPoint* inkPoints, WFN_Matrix3x_2 transform, WUIININ_InkStroke** out);
 
-/* Windows.UI.Input.Inking.InkStrokeBuilder.CreateStrokeFromInkPoints(inkPoints, transform, strokeStartedTime, strokeDuration) */
 HRESULT wuiinin_ink_stroke_builder_create_stroke_from_ink_points_p_2_p_p_p(WUIININ_InkStrokeBuilder *self, WFOCO_IIterable_WUIININ_InkPoint* inkPoints, WFN_Matrix3x_2 transform, WF_DateTime* strokeStartedTime, WF_TimeSpan* strokeDuration, WUIININ_InkStroke** out);
 
-/* activate Windows.UI.Input.Inking.InkStrokeContainer */
 HRESULT wuiinin_ink_stroke_container_new(WUIININ_InkStrokeContainer **out);
 
-/* Windows.UI.Input.Inking.InkStrokeContainer */
-/* Windows.UI.Input.Inking.InkStrokeContainer.get_BoundingRect() */
 HRESULT wuiinin_ink_stroke_container_get__bounding_rect(WUIININ_InkStrokeContainer *self, WF_Rect *value);
 
-/* Windows.UI.Input.Inking.InkStrokeContainer.AddStroke(stroke) */
 HRESULT wuiinin_ink_stroke_container_add_stroke(WUIININ_InkStrokeContainer *self, WUIININ_InkStroke* stroke);
 
-/* Windows.UI.Input.Inking.InkStrokeContainer.DeleteSelected() */
 HRESULT wuiinin_ink_stroke_container_delete_selected(WUIININ_InkStrokeContainer *self, WF_Rect *out);
 
-/* Windows.UI.Input.Inking.InkStrokeContainer.MoveSelected(translation) */
 HRESULT wuiinin_ink_stroke_container_move_selected(WUIININ_InkStrokeContainer *self, WF_Point translation, WF_Rect *out);
 
-/* Windows.UI.Input.Inking.InkStrokeContainer.SelectWithPolyLine(polyline) */
 HRESULT wuiinin_ink_stroke_container_select_with_poly_line(WUIININ_InkStrokeContainer *self, WFOCO_IIterable_WF_Point* polyline, WF_Rect *out);
 
-/* Windows.UI.Input.Inking.InkStrokeContainer.SelectWithLine(from, to) */
 HRESULT wuiinin_ink_stroke_container_select_with_line(WUIININ_InkStrokeContainer *self, WF_Point from, WF_Point to, WF_Rect *out);
 
-/* Windows.UI.Input.Inking.InkStrokeContainer.CopySelectedToClipboard() */
 HRESULT wuiinin_ink_stroke_container_copy_selected_to_clipboard(WUIININ_InkStrokeContainer *self);
 
-/* Windows.UI.Input.Inking.InkStrokeContainer.PasteFromClipboard(position) */
 HRESULT wuiinin_ink_stroke_container_paste_from_clipboard(WUIININ_InkStrokeContainer *self, WF_Point position, WF_Rect *out);
 
-/* Windows.UI.Input.Inking.InkStrokeContainer.CanPasteFromClipboard() */
 HRESULT wuiinin_ink_stroke_container_can_paste_from_clipboard(WUIININ_InkStrokeContainer *self, BOOL *out);
 
-/* Windows.UI.Input.Inking.InkStrokeContainer.LoadAsync(inputStream) */
 HRESULT wuiinin_ink_stroke_container_load_async(WUIININ_InkStrokeContainer *self, WSTST_IInputStream* inputStream, WF_IAsyncActionWithProgress_uint64_t** out);
 
-/* Windows.UI.Input.Inking.InkStrokeContainer.SaveAsync(outputStream) */
 HRESULT wuiinin_ink_stroke_container_save_async(WUIININ_InkStrokeContainer *self, WSTST_IOutputStream* outputStream, WF_IAsyncOperationWithProgress_uint32_t_uint32_t** out);
 
-/* Windows.UI.Input.Inking.InkStrokeContainer.UpdateRecognitionResults(recognitionResults) */
 HRESULT wuiinin_ink_stroke_container_update_recognition_results(WUIININ_InkStrokeContainer *self, WFOCO_IVectorView_WUIININ_InkRecognitionResult* recognitionResults);
 
-/* Windows.UI.Input.Inking.InkStrokeContainer.GetStrokes() */
 HRESULT wuiinin_ink_stroke_container_get_strokes(WUIININ_InkStrokeContainer *self, WFOCO_IVectorView_WUIININ_InkStroke** out);
 
-/* Windows.UI.Input.Inking.InkStrokeContainer.GetRecognitionResults() */
 HRESULT wuiinin_ink_stroke_container_get_recognition_results(WUIININ_InkStrokeContainer *self, WFOCO_IVectorView_WUIININ_InkRecognitionResult** out);
 
-/* Windows.UI.Input.Inking.InkStrokeContainer.AddStrokes(strokes) */
 HRESULT wuiinin_ink_stroke_container_add_strokes(WUIININ_InkStrokeContainer *self, WFOCO_IIterable_WUIININ_InkStroke* strokes);
 
-/* Windows.UI.Input.Inking.InkStrokeContainer.Clear() */
 HRESULT wuiinin_ink_stroke_container_clear(WUIININ_InkStrokeContainer *self);
 
-/* Windows.UI.Input.Inking.InkStrokeContainer.SaveAsync(outputStream, inkPersistenceFormat) */
 HRESULT wuiinin_ink_stroke_container_save_async_p_ink_persistence_format_p(WUIININ_InkStrokeContainer *self, WSTST_IOutputStream* outputStream, WUIININ_InkPersistenceFormat inkPersistenceFormat, WF_IAsyncOperationWithProgress_uint32_t_uint32_t** out);
 
-/* Windows.UI.Input.Inking.InkStrokeContainer.GetStrokeById(id) */
 HRESULT wuiinin_ink_stroke_container_get_stroke_by_id(WUIININ_InkStrokeContainer *self, uint32_t id, WUIININ_InkStroke** out);
 
-/* activate Windows.UI.Input.Inking.InkStrokeInput */
 HRESULT wuiinin_ink_stroke_input_new(WUIININ_InkStrokeInput **out);
 
-/* Windows.UI.Input.Inking.InkStrokeInput */
-/* Windows.UI.Input.Inking.InkStrokeInput.get_InkPresenter() */
 HRESULT wuiinin_ink_stroke_input_get__ink_presenter(WUIININ_InkStrokeInput *self, WUIININ_InkPresenter** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiinin_ink_stroke_input_on_stroke_started(WUIININ_InkStrokeInput *self, cwinrt_event_fn fn, void *ctx);
@@ -1143,63 +916,40 @@ void wuiinin_ink_stroke_input_off_stroke_ended(WUIININ_InkStrokeInput *self, cwi
 cwinrt_token wuiinin_ink_stroke_input_on_stroke_canceled(WUIININ_InkStrokeInput *self, cwinrt_event_fn fn, void *ctx);
 void wuiinin_ink_stroke_input_off_stroke_canceled(WUIININ_InkStrokeInput *self, cwinrt_token token);
 
-/* activate Windows.UI.Input.Inking.InkStrokeRenderingSegment */
 HRESULT wuiinin_ink_stroke_rendering_segment_new(WUIININ_InkStrokeRenderingSegment **out);
 
-/* Windows.UI.Input.Inking.InkStrokeRenderingSegment */
-/* Windows.UI.Input.Inking.InkStrokeRenderingSegment.get_Position() */
 HRESULT wuiinin_ink_stroke_rendering_segment_get__position(WUIININ_InkStrokeRenderingSegment *self, WF_Point *value);
 
-/* Windows.UI.Input.Inking.InkStrokeRenderingSegment.get_BezierControlPoint1() */
 HRESULT wuiinin_ink_stroke_rendering_segment_get__bezier_control_point1(WUIININ_InkStrokeRenderingSegment *self, WF_Point *value);
 
-/* Windows.UI.Input.Inking.InkStrokeRenderingSegment.get_BezierControlPoint2() */
 HRESULT wuiinin_ink_stroke_rendering_segment_get__bezier_control_point2(WUIININ_InkStrokeRenderingSegment *self, WF_Point *value);
 
-/* Windows.UI.Input.Inking.InkStrokeRenderingSegment.get_Pressure() */
 HRESULT wuiinin_ink_stroke_rendering_segment_get__pressure(WUIININ_InkStrokeRenderingSegment *self, float *value);
 
-/* Windows.UI.Input.Inking.InkStrokeRenderingSegment.get_TiltX() */
 HRESULT wuiinin_ink_stroke_rendering_segment_get__tilt_x(WUIININ_InkStrokeRenderingSegment *self, float *value);
 
-/* Windows.UI.Input.Inking.InkStrokeRenderingSegment.get_TiltY() */
 HRESULT wuiinin_ink_stroke_rendering_segment_get__tilt_y(WUIININ_InkStrokeRenderingSegment *self, float *value);
 
-/* Windows.UI.Input.Inking.InkStrokeRenderingSegment.get_Twist() */
 HRESULT wuiinin_ink_stroke_rendering_segment_get__twist(WUIININ_InkStrokeRenderingSegment *self, float *value);
 
-/* activate Windows.UI.Input.Inking.InkStrokesCollectedEventArgs */
 HRESULT wuiinin_ink_strokes_collected_event_args_new(WUIININ_InkStrokesCollectedEventArgs **out);
 
-/* Windows.UI.Input.Inking.InkStrokesCollectedEventArgs */
-/* Windows.UI.Input.Inking.InkStrokesCollectedEventArgs.get_Strokes() */
 HRESULT wuiinin_ink_strokes_collected_event_args_get__strokes(WUIININ_InkStrokesCollectedEventArgs *self, WFOCO_IVectorView_WUIININ_InkStroke** value);
 
-/* activate Windows.UI.Input.Inking.InkStrokesErasedEventArgs */
 HRESULT wuiinin_ink_strokes_erased_event_args_new(WUIININ_InkStrokesErasedEventArgs **out);
 
-/* Windows.UI.Input.Inking.InkStrokesErasedEventArgs */
-/* Windows.UI.Input.Inking.InkStrokesErasedEventArgs.get_Strokes() */
 HRESULT wuiinin_ink_strokes_erased_event_args_get__strokes(WUIININ_InkStrokesErasedEventArgs *self, WFOCO_IVectorView_WUIININ_InkStroke** value);
 
-/* activate Windows.UI.Input.Inking.InkSynchronizer */
 HRESULT wuiinin_ink_synchronizer_new(WUIININ_InkSynchronizer **out);
 
-/* Windows.UI.Input.Inking.InkSynchronizer */
-/* Windows.UI.Input.Inking.InkSynchronizer.BeginDry() */
 HRESULT wuiinin_ink_synchronizer_begin_dry(WUIININ_InkSynchronizer *self, WFOCO_IVectorView_WUIININ_InkStroke** out);
 
-/* Windows.UI.Input.Inking.InkSynchronizer.EndDry() */
 HRESULT wuiinin_ink_synchronizer_end_dry(WUIININ_InkSynchronizer *self);
 
-/* activate Windows.UI.Input.Inking.InkUnprocessedInput */
 HRESULT wuiinin_ink_unprocessed_input_new(WUIININ_InkUnprocessedInput **out);
 
-/* Windows.UI.Input.Inking.InkUnprocessedInput */
-/* Windows.UI.Input.Inking.InkUnprocessedInput.get_InkPresenter() */
 HRESULT wuiinin_ink_unprocessed_input_get__ink_presenter(WUIININ_InkUnprocessedInput *self, WUIININ_InkPresenter** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiinin_ink_unprocessed_input_on_pointer_entered(WUIININ_InkUnprocessedInput *self, cwinrt_event_fn fn, void *ctx);
@@ -1223,218 +973,118 @@ void wuiinin_ink_unprocessed_input_off_pointer_released(WUIININ_InkUnprocessedIn
 cwinrt_token wuiinin_ink_unprocessed_input_on_pointer_lost(WUIININ_InkUnprocessedInput *self, cwinrt_event_fn fn, void *ctx);
 void wuiinin_ink_unprocessed_input_off_pointer_lost(WUIININ_InkUnprocessedInput *self, cwinrt_token token);
 
-/* activate Windows.UI.Input.Inking.PenAndInkSettings */
 HRESULT wuiinin_pen_and_ink_settings_new(WUIININ_PenAndInkSettings **out);
 
-/* Windows.UI.Input.Inking.PenAndInkSettings */
-/* Windows.UI.Input.Inking.PenAndInkSettings.get_IsHandwritingDirectlyIntoTextFieldEnabled() */
 HRESULT wuiinin_pen_and_ink_settings_get__is_handwriting_directly_into_text_field_enabled(WUIININ_PenAndInkSettings *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.PenAndInkSettings.get_PenHandedness() */
 HRESULT wuiinin_pen_and_ink_settings_get__pen_handedness(WUIININ_PenAndInkSettings *self, WUIININ_PenHandedness *value);
 
-/* Windows.UI.Input.Inking.PenAndInkSettings.get_HandwritingLineHeight() */
 HRESULT wuiinin_pen_and_ink_settings_get__handwriting_line_height(WUIININ_PenAndInkSettings *self, WUIININ_HandwritingLineHeight *value);
 
-/* Windows.UI.Input.Inking.PenAndInkSettings.get_FontFamilyName() */
 HRESULT wuiinin_pen_and_ink_settings_get__font_family_name(WUIININ_PenAndInkSettings *self, cwinrt_hstring *value);
 
-/* Windows.UI.Input.Inking.PenAndInkSettings.get_UserConsentsToHandwritingTelemetryCollection() */
 HRESULT wuiinin_pen_and_ink_settings_get__user_consents_to_handwriting_telemetry_collection(WUIININ_PenAndInkSettings *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.PenAndInkSettings.get_IsTouchHandwritingEnabled() */
 HRESULT wuiinin_pen_and_ink_settings_get__is_touch_handwriting_enabled(WUIININ_PenAndInkSettings *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.PenAndInkSettings.SetPenHandedness() */
 HRESULT wuiinin_pen_and_ink_settings_set_pen_handedness(WUIININ_PenAndInkSettings *self, WUIININ_PenHandedness value);
 
-/* Windows.UI.Input.Inking.PenAndInkSettings.GetDefault() */
 HRESULT wuiinin_pen_and_ink_settings_get_default(WUIININ_PenAndInkSettings** out);
 
-/* Windows.UI.Input.Inking.IInkDrawingAttributes */
-/* Windows.UI.Input.Inking.IInkDrawingAttributes2 */
-/* Windows.UI.Input.Inking.IInkDrawingAttributes2.get_PenTipTransform() */
 HRESULT wuiinin_ink_drawing_attributes_2_get__pen_tip_transform(WUIININ_IInkDrawingAttributes_2 *self, WFN_Matrix3x_2 *value);
 
-/* Windows.UI.Input.Inking.IInkDrawingAttributes2.put_PenTipTransform() */
 HRESULT wuiinin_ink_drawing_attributes_2_put__pen_tip_transform(WUIININ_IInkDrawingAttributes_2 *self, WFN_Matrix3x_2 value);
 
-/* Windows.UI.Input.Inking.IInkDrawingAttributes2.get_DrawAsHighlighter() */
 HRESULT wuiinin_ink_drawing_attributes_2_get__draw_as_highlighter(WUIININ_IInkDrawingAttributes_2 *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.IInkDrawingAttributes2.put_DrawAsHighlighter() */
 HRESULT wuiinin_ink_drawing_attributes_2_put__draw_as_highlighter(WUIININ_IInkDrawingAttributes_2 *self, BOOL value);
 
-/* Windows.UI.Input.Inking.IInkDrawingAttributes3 */
-/* Windows.UI.Input.Inking.IInkDrawingAttributes3.get_Kind() */
 HRESULT wuiinin_ink_drawing_attributes_3_get__kind(WUIININ_IInkDrawingAttributes_3 *self, WUIININ_InkDrawingAttributesKind *value);
 
-/* Windows.UI.Input.Inking.IInkDrawingAttributes3.get_PencilProperties() */
 HRESULT wuiinin_ink_drawing_attributes_3_get__pencil_properties(WUIININ_IInkDrawingAttributes_3 *self, WUIININ_InkDrawingAttributesPencilProperties** value);
 
-/* Windows.UI.Input.Inking.IInkDrawingAttributes4 */
-/* Windows.UI.Input.Inking.IInkDrawingAttributes4.get_IgnoreTilt() */
 HRESULT wuiinin_ink_drawing_attributes_4_get__ignore_tilt(WUIININ_IInkDrawingAttributes_4 *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.IInkDrawingAttributes4.put_IgnoreTilt() */
 HRESULT wuiinin_ink_drawing_attributes_4_put__ignore_tilt(WUIININ_IInkDrawingAttributes_4 *self, BOOL value);
 
-/* Windows.UI.Input.Inking.IInkDrawingAttributes5 */
-/* Windows.UI.Input.Inking.IInkDrawingAttributes5.get_ModelerAttributes() */
 HRESULT wuiinin_ink_drawing_attributes_5_get__modeler_attributes(WUIININ_IInkDrawingAttributes_5 *self, WUIININ_InkModelerAttributes** value);
 
-/* Windows.UI.Input.Inking.IInkDrawingAttributesPencilProperties */
-/* Windows.UI.Input.Inking.IInkInputConfiguration */
-/* Windows.UI.Input.Inking.IInkInputConfiguration2 */
-/* Windows.UI.Input.Inking.IInkInputConfiguration2.get_IsPenHapticFeedbackEnabled() */
 HRESULT wuiinin_ink_input_configuration_2_get__is_pen_haptic_feedback_enabled(WUIININ_IInkInputConfiguration_2 *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.IInkInputConfiguration2.put_IsPenHapticFeedbackEnabled() */
 HRESULT wuiinin_ink_input_configuration_2_put__is_pen_haptic_feedback_enabled(WUIININ_IInkInputConfiguration_2 *self, BOOL value);
 
-/* Windows.UI.Input.Inking.IInkInputProcessingConfiguration */
-/* Windows.UI.Input.Inking.IInkManager */
-/* Windows.UI.Input.Inking.IInkModelerAttributes */
-/* Windows.UI.Input.Inking.IInkModelerAttributes2 */
-/* Windows.UI.Input.Inking.IInkModelerAttributes2.get_UseVelocityBasedPressure() */
 HRESULT wuiinin_ink_modeler_attributes_2_get__use_velocity_based_pressure(WUIININ_IInkModelerAttributes_2 *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.IInkModelerAttributes2.put_UseVelocityBasedPressure() */
 HRESULT wuiinin_ink_modeler_attributes_2_put__use_velocity_based_pressure(WUIININ_IInkModelerAttributes_2 *self, BOOL value);
 
-/* Windows.UI.Input.Inking.IInkPoint */
-/* Windows.UI.Input.Inking.IInkPoint2 */
-/* Windows.UI.Input.Inking.IInkPoint2.get_TiltX() */
 HRESULT wuiinin_ink_point_2_get__tilt_x(WUIININ_IInkPoint_2 *self, float *value);
 
-/* Windows.UI.Input.Inking.IInkPoint2.get_TiltY() */
 HRESULT wuiinin_ink_point_2_get__tilt_y(WUIININ_IInkPoint_2 *self, float *value);
 
-/* Windows.UI.Input.Inking.IInkPoint2.get_Timestamp() */
 HRESULT wuiinin_ink_point_2_get__timestamp(WUIININ_IInkPoint_2 *self, uint64_t *value);
 
-/* Windows.UI.Input.Inking.IInkPresenter2 */
-/* Windows.UI.Input.Inking.IInkPresenter2.get_HighContrastAdjustment() */
 HRESULT wuiinin_ink_presenter_2_get__high_contrast_adjustment(WUIININ_IInkPresenter_2 *self, WUIININ_InkHighContrastAdjustment *value);
 
-/* Windows.UI.Input.Inking.IInkPresenter2.put_HighContrastAdjustment() */
 HRESULT wuiinin_ink_presenter_2_put__high_contrast_adjustment(WUIININ_IInkPresenter_2 *self, WUIININ_InkHighContrastAdjustment value);
 
-/* Windows.UI.Input.Inking.IInkPresenter3 */
-/* Windows.UI.Input.Inking.IInkPresenter3.get_InputConfiguration() */
 HRESULT wuiinin_ink_presenter_3_get__input_configuration(WUIININ_IInkPresenter_3 *self, WUIININ_InkInputConfiguration** value);
 
-/* Windows.UI.Input.Inking.IInkPresenterProtractor */
-/* Windows.UI.Input.Inking.IInkPresenterRuler */
-/* Windows.UI.Input.Inking.IInkPresenterRuler2 */
-/* Windows.UI.Input.Inking.IInkPresenterRuler2.get_AreTickMarksVisible() */
 HRESULT wuiinin_ink_presenter_ruler_2_get__are_tick_marks_visible(WUIININ_IInkPresenterRuler_2 *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.IInkPresenterRuler2.put_AreTickMarksVisible() */
 HRESULT wuiinin_ink_presenter_ruler_2_put__are_tick_marks_visible(WUIININ_IInkPresenterRuler_2 *self, BOOL value);
 
-/* Windows.UI.Input.Inking.IInkPresenterRuler2.get_IsCompassVisible() */
 HRESULT wuiinin_ink_presenter_ruler_2_get__is_compass_visible(WUIININ_IInkPresenterRuler_2 *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.IInkPresenterRuler2.put_IsCompassVisible() */
 HRESULT wuiinin_ink_presenter_ruler_2_put__is_compass_visible(WUIININ_IInkPresenterRuler_2 *self, BOOL value);
 
-/* Windows.UI.Input.Inking.IInkRecognitionResult */
-/* Windows.UI.Input.Inking.IInkRecognizer */
-/* Windows.UI.Input.Inking.IInkStroke */
-/* Windows.UI.Input.Inking.IInkStroke2 */
-/* Windows.UI.Input.Inking.IInkStroke2.get_PointTransform() */
 HRESULT wuiinin_ink_stroke_2_get__point_transform(WUIININ_IInkStroke_2 *self, WFN_Matrix3x_2 *value);
 
-/* Windows.UI.Input.Inking.IInkStroke2.put_PointTransform() */
 HRESULT wuiinin_ink_stroke_2_put__point_transform(WUIININ_IInkStroke_2 *self, WFN_Matrix3x_2 value);
 
-/* Windows.UI.Input.Inking.IInkStroke2.GetInkPoints() */
 HRESULT wuiinin_ink_stroke_2_get_ink_points(WUIININ_IInkStroke_2 *self, WFOCO_IVectorView_WUIININ_InkPoint** out);
 
-/* Windows.UI.Input.Inking.IInkStroke3 */
-/* Windows.UI.Input.Inking.IInkStroke3.get_Id() */
 HRESULT wuiinin_ink_stroke_3_get__id(WUIININ_IInkStroke_3 *self, uint32_t *value);
 
-/* Windows.UI.Input.Inking.IInkStroke3.get_StrokeStartedTime() */
 HRESULT wuiinin_ink_stroke_3_get__stroke_started_time(WUIININ_IInkStroke_3 *self, WF_DateTime** value);
 
-/* Windows.UI.Input.Inking.IInkStroke3.put_StrokeStartedTime() */
 HRESULT wuiinin_ink_stroke_3_put__stroke_started_time(WUIININ_IInkStroke_3 *self, WF_DateTime* value);
 
-/* Windows.UI.Input.Inking.IInkStroke3.get_StrokeDuration() */
 HRESULT wuiinin_ink_stroke_3_get__stroke_duration(WUIININ_IInkStroke_3 *self, WF_TimeSpan** value);
 
-/* Windows.UI.Input.Inking.IInkStroke3.put_StrokeDuration() */
 HRESULT wuiinin_ink_stroke_3_put__stroke_duration(WUIININ_IInkStroke_3 *self, WF_TimeSpan* value);
 
-/* Windows.UI.Input.Inking.IInkStroke4 */
-/* Windows.UI.Input.Inking.IInkStroke4.get_PointerId() */
 HRESULT wuiinin_ink_stroke_4_get__pointer_id(WUIININ_IInkStroke_4 *self, uint32_t *value);
 
-/* Windows.UI.Input.Inking.IInkStrokeBuilder */
-/* Windows.UI.Input.Inking.IInkStrokeBuilder2 */
-/* Windows.UI.Input.Inking.IInkStrokeBuilder2.CreateStrokeFromInkPoints(inkPoints, transform) */
 HRESULT wuiinin_ink_stroke_builder_2_create_stroke_from_ink_points(WUIININ_IInkStrokeBuilder_2 *self, WFOCO_IIterable_WUIININ_InkPoint* inkPoints, WFN_Matrix3x_2 transform, WUIININ_InkStroke** out);
 
-/* Windows.UI.Input.Inking.IInkStrokeBuilder3 */
-/* Windows.UI.Input.Inking.IInkStrokeBuilder3.CreateStrokeFromInkPoints(inkPoints, transform, strokeStartedTime, strokeDuration) */
 HRESULT wuiinin_ink_stroke_builder_3_create_stroke_from_ink_points(WUIININ_IInkStrokeBuilder_3 *self, WFOCO_IIterable_WUIININ_InkPoint* inkPoints, WFN_Matrix3x_2 transform, WF_DateTime* strokeStartedTime, WF_TimeSpan* strokeDuration, WUIININ_InkStroke** out);
 
-/* Windows.UI.Input.Inking.IInkStrokeContainer2 */
-/* Windows.UI.Input.Inking.IInkStrokeContainer2.AddStrokes(strokes) */
 HRESULT wuiinin_ink_stroke_container_2_add_strokes(WUIININ_IInkStrokeContainer_2 *self, WFOCO_IIterable_WUIININ_InkStroke* strokes);
 
-/* Windows.UI.Input.Inking.IInkStrokeContainer2.Clear() */
 HRESULT wuiinin_ink_stroke_container_2_clear(WUIININ_IInkStrokeContainer_2 *self);
 
-/* Windows.UI.Input.Inking.IInkStrokeContainer3 */
-/* Windows.UI.Input.Inking.IInkStrokeContainer3.SaveAsync(outputStream, inkPersistenceFormat) */
 HRESULT wuiinin_ink_stroke_container_3_save_async(WUIININ_IInkStrokeContainer_3 *self, WSTST_IOutputStream* outputStream, WUIININ_InkPersistenceFormat inkPersistenceFormat, WF_IAsyncOperationWithProgress_uint32_t_uint32_t** out);
 
-/* Windows.UI.Input.Inking.IInkStrokeContainer3.GetStrokeById(id) */
 HRESULT wuiinin_ink_stroke_container_3_get_stroke_by_id(WUIININ_IInkStrokeContainer_3 *self, uint32_t id, WUIININ_InkStroke** out);
 
-/* Windows.UI.Input.Inking.IInkStrokeInput */
-/* Windows.UI.Input.Inking.IInkStrokeRenderingSegment */
-/* Windows.UI.Input.Inking.IInkStrokesCollectedEventArgs */
-/* Windows.UI.Input.Inking.IInkStrokesErasedEventArgs */
-/* Windows.UI.Input.Inking.IInkSynchronizer */
-/* Windows.UI.Input.Inking.IInkUnprocessedInput */
-/* Windows.UI.Input.Inking.IPenAndInkSettings */
-/* Windows.UI.Input.Inking.IPenAndInkSettings2 */
-/* Windows.UI.Input.Inking.IPenAndInkSettings2.SetPenHandedness() */
 HRESULT wuiinin_pen_and_ink_settings_2_set_pen_handedness(WUIININ_IPenAndInkSettings_2 *self, WUIININ_PenHandedness value);
 
-/* Windows.UI.Input.Inking.IInkStrokeContainer */
-/* Windows.UI.Input.Inking.IInkRecognizerContainer */
-/* Windows.UI.Input.Inking.IInkPresenter */
-/* Windows.UI.Input.Inking.IInkPresenterStencil */
-/* Windows.UI.Input.Inking.IInkPresenterStencil.get_Kind() */
 HRESULT wuiinin_ink_presenter_stencil_get__kind(WUIININ_IInkPresenterStencil *self, WUIININ_InkPresenterStencilKind *value);
 
-/* Windows.UI.Input.Inking.IInkPresenterStencil.get_IsVisible() */
 HRESULT wuiinin_ink_presenter_stencil_get__is_visible(WUIININ_IInkPresenterStencil *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.IInkPresenterStencil.put_IsVisible() */
 HRESULT wuiinin_ink_presenter_stencil_put__is_visible(WUIININ_IInkPresenterStencil *self, BOOL value);
 
-/* Windows.UI.Input.Inking.IInkPresenterStencil.get_BackgroundColor() */
 HRESULT wuiinin_ink_presenter_stencil_get__background_color(WUIININ_IInkPresenterStencil *self, WUI_Color *value);
 
-/* Windows.UI.Input.Inking.IInkPresenterStencil.put_BackgroundColor() */
 HRESULT wuiinin_ink_presenter_stencil_put__background_color(WUIININ_IInkPresenterStencil *self, WUI_Color value);
 
-/* Windows.UI.Input.Inking.IInkPresenterStencil.get_ForegroundColor() */
 HRESULT wuiinin_ink_presenter_stencil_get__foreground_color(WUIININ_IInkPresenterStencil *self, WUI_Color *value);
 
-/* Windows.UI.Input.Inking.IInkPresenterStencil.put_ForegroundColor() */
 HRESULT wuiinin_ink_presenter_stencil_put__foreground_color(WUIININ_IInkPresenterStencil *self, WUI_Color value);
 
-/* Windows.UI.Input.Inking.IInkPresenterStencil.get_Transform() */
 HRESULT wuiinin_ink_presenter_stencil_get__transform(WUIININ_IInkPresenterStencil *self, WFN_Matrix3x_2 *value);
 
-/* Windows.UI.Input.Inking.IInkPresenterStencil.put_Transform() */
 HRESULT wuiinin_ink_presenter_stencil_put__transform(WUIININ_IInkPresenterStencil *self, WFN_Matrix3x_2 value);
 
 #endif /* CWINRT_WINDOWS_UI_INPUT_INKING_H */

@@ -14,7 +14,6 @@
 #include <cwinrt/Windows.Storage.FileProperties.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStream
 #define CWINRT_FWD_WSTST_IRandomAccessStream
 typedef struct WSTST_IRandomAccessStream WSTST_IRandomAccessStream;
@@ -24,7 +23,6 @@ typedef struct WSTST_IRandomAccessStream WSTST_IRandomAccessStream;
 typedef struct WDATE_TextSegment WDATE_TextSegment;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSTSE_SortEntryVector WSTSE_SortEntryVector;
 typedef struct WSTSE_StorageFileQueryResult WSTSE_StorageFileQueryResult;
 typedef struct WSTSE_StorageFolderQueryResult WSTSE_StorageFolderQueryResult;
@@ -55,7 +53,6 @@ typedef struct WSTSE_IContentIndexer WSTSE_IContentIndexer;
 typedef struct WSTSE_IContentIndexerQueryOperations WSTSE_IContentIndexerQueryOperations;
 typedef struct WSTSE_IStorageQueryResultBase WSTSE_IStorageQueryResultBase;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IVectorView_WSTSE_SortEntry
 #define CWINRT_FWD_WFOCO_IVectorView_WSTSE_SortEntry
 typedef struct WFOCO_IVectorView_WSTSE_SortEntry WFOCO_IVectorView_WSTSE_SortEntry;
@@ -263,7 +260,6 @@ struct WSTSE_SortEntry {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -340,80 +336,52 @@ static const IID CWINRT_IID_WSTSE_IContentIndexerQueryOperations CWINRT_MAYBE_UN
 static const IID CWINRT_IID_WSTSE_IStorageQueryResultBase CWINRT_MAYBE_UNUSED = { 0xC297D70D, 0x7353, 0x47AB, { 0xBA, 0x58, 0x8C, 0x61, 0x42, 0x5D, 0xC5, 0x4B } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Storage.Search.SortEntryVector */
 HRESULT wstse_sort_entry_vector_new(WSTSE_SortEntryVector **out);
 
-/* Windows.Storage.Search.SortEntryVector */
-/* Windows.Storage.Search.SortEntryVector.GetAt(index) */
 HRESULT wstse_sort_entry_vector_get_at(WSTSE_SortEntryVector *self, uint32_t index, WSTSE_SortEntry *out);
 
-/* Windows.Storage.Search.SortEntryVector.get_Size() */
 HRESULT wstse_sort_entry_vector_get__size(WSTSE_SortEntryVector *self, uint32_t *value);
 
-/* Windows.Storage.Search.SortEntryVector.GetView() */
 HRESULT wstse_sort_entry_vector_get_view(WSTSE_SortEntryVector *self, WFOCO_IVectorView_WSTSE_SortEntry** out);
 
-/* Windows.Storage.Search.SortEntryVector.IndexOf(index) */
 HRESULT wstse_sort_entry_vector_index_of(WSTSE_SortEntryVector *self, WSTSE_SortEntry value, uint32_t index, BOOL *out);
 
-/* Windows.Storage.Search.SortEntryVector.SetAt(index) */
 HRESULT wstse_sort_entry_vector_set_at(WSTSE_SortEntryVector *self, uint32_t index, WSTSE_SortEntry value);
 
-/* Windows.Storage.Search.SortEntryVector.InsertAt(index) */
 HRESULT wstse_sort_entry_vector_insert_at(WSTSE_SortEntryVector *self, uint32_t index, WSTSE_SortEntry value);
 
-/* Windows.Storage.Search.SortEntryVector.RemoveAt(index) */
 HRESULT wstse_sort_entry_vector_remove_at(WSTSE_SortEntryVector *self, uint32_t index);
 
-/* Windows.Storage.Search.SortEntryVector.Append() */
 HRESULT wstse_sort_entry_vector_append(WSTSE_SortEntryVector *self, WSTSE_SortEntry value);
 
-/* Windows.Storage.Search.SortEntryVector.RemoveAtEnd() */
 HRESULT wstse_sort_entry_vector_remove_at_end(WSTSE_SortEntryVector *self);
 
-/* Windows.Storage.Search.SortEntryVector.Clear() */
 HRESULT wstse_sort_entry_vector_clear(WSTSE_SortEntryVector *self);
 
-/* Windows.Storage.Search.SortEntryVector.GetMany(startIndex, items) */
 HRESULT wstse_sort_entry_vector_get_many(WSTSE_SortEntryVector *self, uint32_t startIndex, WSTSE_SortEntry *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Storage.Search.SortEntryVector.ReplaceAll(items) */
 HRESULT wstse_sort_entry_vector_replace_all(WSTSE_SortEntryVector *self, WSTSE_SortEntry *items, uint32_t items_len);
 
-/* Windows.Storage.Search.SortEntryVector.First() */
 HRESULT wstse_sort_entry_vector_first(WSTSE_SortEntryVector *self, WFOCO_IIterator_WSTSE_SortEntry** out);
 
-/* activate Windows.Storage.Search.StorageFileQueryResult */
 HRESULT wstse_storage_file_query_result_new(WSTSE_StorageFileQueryResult **out);
 
-/* Windows.Storage.Search.StorageFileQueryResult */
-/* Windows.Storage.Search.StorageFileQueryResult.GetFilesAsync(startIndex, maxNumberOfItems) */
 HRESULT wstse_storage_file_query_result_get_files_async_u32_u32_p(WSTSE_StorageFileQueryResult *self, uint32_t startIndex, uint32_t maxNumberOfItems, WF_IAsyncOperation_WFOCO_IVectorView_WS_StorageFile** out);
 
-/* Windows.Storage.Search.StorageFileQueryResult.GetFilesAsync() */
 HRESULT wstse_storage_file_query_result_get_files_async(WSTSE_StorageFileQueryResult *self, WF_IAsyncOperation_WFOCO_IVectorView_WS_StorageFile** out);
 
-/* Windows.Storage.Search.StorageFileQueryResult.GetItemCountAsync() */
 HRESULT wstse_storage_file_query_result_get_item_count_async(WSTSE_StorageFileQueryResult *self, WF_IAsyncOperation_uint32_t** out);
 
-/* Windows.Storage.Search.StorageFileQueryResult.get_Folder() */
 HRESULT wstse_storage_file_query_result_get__folder(WSTSE_StorageFileQueryResult *self, WS_StorageFolder** value);
 
-/* Windows.Storage.Search.StorageFileQueryResult.FindStartIndexAsync() */
 HRESULT wstse_storage_file_query_result_find_start_index_async(WSTSE_StorageFileQueryResult *self, IInspectable* value, WF_IAsyncOperation_uint32_t** out);
 
-/* Windows.Storage.Search.StorageFileQueryResult.GetCurrentQueryOptions() */
 HRESULT wstse_storage_file_query_result_get_current_query_options(WSTSE_StorageFileQueryResult *self, WSTSE_QueryOptions** out);
 
-/* Windows.Storage.Search.StorageFileQueryResult.ApplyNewQueryOptions(newQueryOptions) */
 HRESULT wstse_storage_file_query_result_apply_new_query_options(WSTSE_StorageFileQueryResult *self, WSTSE_QueryOptions* newQueryOptions);
 
-/* Windows.Storage.Search.StorageFileQueryResult.GetMatchingPropertiesWithRanges(file) */
 HRESULT wstse_storage_file_query_result_get_matching_properties_with_ranges(WSTSE_StorageFileQueryResult *self, WS_StorageFile* file, WFOCO_IMap_HSTRING_WFOCO_IVectorView_WDATE_TextSegment** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wstse_storage_file_query_result_on_contents_changed(WSTSE_StorageFileQueryResult *self, cwinrt_event_fn fn, void *ctx);
@@ -422,32 +390,22 @@ void wstse_storage_file_query_result_off_contents_changed(WSTSE_StorageFileQuery
 cwinrt_token wstse_storage_file_query_result_on_options_changed(WSTSE_StorageFileQueryResult *self, cwinrt_event_fn fn, void *ctx);
 void wstse_storage_file_query_result_off_options_changed(WSTSE_StorageFileQueryResult *self, cwinrt_token token);
 
-/* activate Windows.Storage.Search.StorageFolderQueryResult */
 HRESULT wstse_storage_folder_query_result_new(WSTSE_StorageFolderQueryResult **out);
 
-/* Windows.Storage.Search.StorageFolderQueryResult */
-/* Windows.Storage.Search.StorageFolderQueryResult.GetFoldersAsync(startIndex, maxNumberOfItems) */
 HRESULT wstse_storage_folder_query_result_get_folders_async_u32_u32_p(WSTSE_StorageFolderQueryResult *self, uint32_t startIndex, uint32_t maxNumberOfItems, WF_IAsyncOperation_WFOCO_IVectorView_WS_StorageFolder** out);
 
-/* Windows.Storage.Search.StorageFolderQueryResult.GetFoldersAsync() */
 HRESULT wstse_storage_folder_query_result_get_folders_async(WSTSE_StorageFolderQueryResult *self, WF_IAsyncOperation_WFOCO_IVectorView_WS_StorageFolder** out);
 
-/* Windows.Storage.Search.StorageFolderQueryResult.GetItemCountAsync() */
 HRESULT wstse_storage_folder_query_result_get_item_count_async(WSTSE_StorageFolderQueryResult *self, WF_IAsyncOperation_uint32_t** out);
 
-/* Windows.Storage.Search.StorageFolderQueryResult.get_Folder() */
 HRESULT wstse_storage_folder_query_result_get__folder(WSTSE_StorageFolderQueryResult *self, WS_StorageFolder** value);
 
-/* Windows.Storage.Search.StorageFolderQueryResult.FindStartIndexAsync() */
 HRESULT wstse_storage_folder_query_result_find_start_index_async(WSTSE_StorageFolderQueryResult *self, IInspectable* value, WF_IAsyncOperation_uint32_t** out);
 
-/* Windows.Storage.Search.StorageFolderQueryResult.GetCurrentQueryOptions() */
 HRESULT wstse_storage_folder_query_result_get_current_query_options(WSTSE_StorageFolderQueryResult *self, WSTSE_QueryOptions** out);
 
-/* Windows.Storage.Search.StorageFolderQueryResult.ApplyNewQueryOptions(newQueryOptions) */
 HRESULT wstse_storage_folder_query_result_apply_new_query_options(WSTSE_StorageFolderQueryResult *self, WSTSE_QueryOptions* newQueryOptions);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wstse_storage_folder_query_result_on_contents_changed(WSTSE_StorageFolderQueryResult *self, cwinrt_event_fn fn, void *ctx);
@@ -456,32 +414,22 @@ void wstse_storage_folder_query_result_off_contents_changed(WSTSE_StorageFolderQ
 cwinrt_token wstse_storage_folder_query_result_on_options_changed(WSTSE_StorageFolderQueryResult *self, cwinrt_event_fn fn, void *ctx);
 void wstse_storage_folder_query_result_off_options_changed(WSTSE_StorageFolderQueryResult *self, cwinrt_token token);
 
-/* activate Windows.Storage.Search.StorageItemQueryResult */
 HRESULT wstse_storage_item_query_result_new(WSTSE_StorageItemQueryResult **out);
 
-/* Windows.Storage.Search.StorageItemQueryResult */
-/* Windows.Storage.Search.StorageItemQueryResult.GetItemsAsync(startIndex, maxNumberOfItems) */
 HRESULT wstse_storage_item_query_result_get_items_async_u32_u32_p(WSTSE_StorageItemQueryResult *self, uint32_t startIndex, uint32_t maxNumberOfItems, WF_IAsyncOperation_WFOCO_IVectorView_WS_IStorageItem** out);
 
-/* Windows.Storage.Search.StorageItemQueryResult.GetItemsAsync() */
 HRESULT wstse_storage_item_query_result_get_items_async(WSTSE_StorageItemQueryResult *self, WF_IAsyncOperation_WFOCO_IVectorView_WS_IStorageItem** out);
 
-/* Windows.Storage.Search.StorageItemQueryResult.GetItemCountAsync() */
 HRESULT wstse_storage_item_query_result_get_item_count_async(WSTSE_StorageItemQueryResult *self, WF_IAsyncOperation_uint32_t** out);
 
-/* Windows.Storage.Search.StorageItemQueryResult.get_Folder() */
 HRESULT wstse_storage_item_query_result_get__folder(WSTSE_StorageItemQueryResult *self, WS_StorageFolder** value);
 
-/* Windows.Storage.Search.StorageItemQueryResult.FindStartIndexAsync() */
 HRESULT wstse_storage_item_query_result_find_start_index_async(WSTSE_StorageItemQueryResult *self, IInspectable* value, WF_IAsyncOperation_uint32_t** out);
 
-/* Windows.Storage.Search.StorageItemQueryResult.GetCurrentQueryOptions() */
 HRESULT wstse_storage_item_query_result_get_current_query_options(WSTSE_StorageItemQueryResult *self, WSTSE_QueryOptions** out);
 
-/* Windows.Storage.Search.StorageItemQueryResult.ApplyNewQueryOptions(newQueryOptions) */
 HRESULT wstse_storage_item_query_result_apply_new_query_options(WSTSE_StorageItemQueryResult *self, WSTSE_QueryOptions* newQueryOptions);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wstse_storage_item_query_result_on_contents_changed(WSTSE_StorageItemQueryResult *self, cwinrt_event_fn fn, void *ctx);
@@ -490,323 +438,200 @@ void wstse_storage_item_query_result_off_contents_changed(WSTSE_StorageItemQuery
 cwinrt_token wstse_storage_item_query_result_on_options_changed(WSTSE_StorageItemQueryResult *self, cwinrt_event_fn fn, void *ctx);
 void wstse_storage_item_query_result_off_options_changed(WSTSE_StorageItemQueryResult *self, cwinrt_token token);
 
-/* activate Windows.Storage.Search.StorageLibraryChangeTrackerTriggerDetails */
 HRESULT wstse_storage_library_change_tracker_trigger_details_new(WSTSE_StorageLibraryChangeTrackerTriggerDetails **out);
 
-/* Windows.Storage.Search.StorageLibraryChangeTrackerTriggerDetails */
-/* Windows.Storage.Search.StorageLibraryChangeTrackerTriggerDetails.get_Folder() */
 HRESULT wstse_storage_library_change_tracker_trigger_details_get__folder(WSTSE_StorageLibraryChangeTrackerTriggerDetails *self, WS_StorageFolder** value);
 
-/* Windows.Storage.Search.StorageLibraryChangeTrackerTriggerDetails.get_ChangeTracker() */
 HRESULT wstse_storage_library_change_tracker_trigger_details_get__change_tracker(WSTSE_StorageLibraryChangeTrackerTriggerDetails *self, WS_StorageLibraryChangeTracker** value);
 
-/* activate Windows.Storage.Search.StorageLibraryContentChangedTriggerDetails */
 HRESULT wstse_storage_library_content_changed_trigger_details_new(WSTSE_StorageLibraryContentChangedTriggerDetails **out);
 
-/* Windows.Storage.Search.StorageLibraryContentChangedTriggerDetails */
-/* Windows.Storage.Search.StorageLibraryContentChangedTriggerDetails.get_Folder() */
 HRESULT wstse_storage_library_content_changed_trigger_details_get__folder(WSTSE_StorageLibraryContentChangedTriggerDetails *self, WS_StorageFolder** value);
 
-/* Windows.Storage.Search.StorageLibraryContentChangedTriggerDetails.CreateModifiedSinceQuery(lastQueryTime) */
 HRESULT wstse_storage_library_content_changed_trigger_details_create_modified_since_query(WSTSE_StorageLibraryContentChangedTriggerDetails *self, WF_DateTime lastQueryTime, WSTSE_StorageItemQueryResult** out);
 
-/* activate Windows.Storage.Search.ValueAndLanguage */
 HRESULT wstse_value_and_language_new(WSTSE_ValueAndLanguage **out);
 
-/* Windows.Storage.Search.ValueAndLanguage */
-/* Windows.Storage.Search.ValueAndLanguage.get_Language() */
 HRESULT wstse_value_and_language_get__language(WSTSE_ValueAndLanguage *self, cwinrt_hstring *value);
 
-/* Windows.Storage.Search.ValueAndLanguage.put_Language() */
 HRESULT wstse_value_and_language_put__language(WSTSE_ValueAndLanguage *self, cwinrt_hstring value);
 
-/* Windows.Storage.Search.ValueAndLanguage.get_Value() */
 HRESULT wstse_value_and_language_get__value(WSTSE_ValueAndLanguage *self, IInspectable** value);
 
-/* Windows.Storage.Search.ValueAndLanguage.put_Value() */
 HRESULT wstse_value_and_language_put__value(WSTSE_ValueAndLanguage *self, IInspectable* value);
 
-/* activate Windows.Storage.Search.QueryOptions */
 HRESULT wstse_query_options_new(WSTSE_QueryOptions **out);
 
-/* Windows.Storage.Search.QueryOptions */
-/* Windows.Storage.Search.QueryOptions.get_FileTypeFilter() */
 HRESULT wstse_query_options_get__file_type_filter(WSTSE_QueryOptions *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Storage.Search.QueryOptions.get_FolderDepth() */
 HRESULT wstse_query_options_get__folder_depth(WSTSE_QueryOptions *self, WSTSE_FolderDepth *value);
 
-/* Windows.Storage.Search.QueryOptions.put_FolderDepth() */
 HRESULT wstse_query_options_put__folder_depth(WSTSE_QueryOptions *self, WSTSE_FolderDepth value);
 
-/* Windows.Storage.Search.QueryOptions.get_ApplicationSearchFilter() */
 HRESULT wstse_query_options_get__application_search_filter(WSTSE_QueryOptions *self, cwinrt_hstring *value);
 
-/* Windows.Storage.Search.QueryOptions.put_ApplicationSearchFilter() */
 HRESULT wstse_query_options_put__application_search_filter(WSTSE_QueryOptions *self, cwinrt_hstring value);
 
-/* Windows.Storage.Search.QueryOptions.get_UserSearchFilter() */
 HRESULT wstse_query_options_get__user_search_filter(WSTSE_QueryOptions *self, cwinrt_hstring *value);
 
-/* Windows.Storage.Search.QueryOptions.put_UserSearchFilter() */
 HRESULT wstse_query_options_put__user_search_filter(WSTSE_QueryOptions *self, cwinrt_hstring value);
 
-/* Windows.Storage.Search.QueryOptions.get_Language() */
 HRESULT wstse_query_options_get__language(WSTSE_QueryOptions *self, cwinrt_hstring *value);
 
-/* Windows.Storage.Search.QueryOptions.put_Language() */
 HRESULT wstse_query_options_put__language(WSTSE_QueryOptions *self, cwinrt_hstring value);
 
-/* Windows.Storage.Search.QueryOptions.get_IndexerOption() */
 HRESULT wstse_query_options_get__indexer_option(WSTSE_QueryOptions *self, WSTSE_IndexerOption *value);
 
-/* Windows.Storage.Search.QueryOptions.put_IndexerOption() */
 HRESULT wstse_query_options_put__indexer_option(WSTSE_QueryOptions *self, WSTSE_IndexerOption value);
 
-/* Windows.Storage.Search.QueryOptions.get_SortOrder() */
 HRESULT wstse_query_options_get__sort_order(WSTSE_QueryOptions *self, WFOCO_IVector_WSTSE_SortEntry** value);
 
-/* Windows.Storage.Search.QueryOptions.get_GroupPropertyName() */
 HRESULT wstse_query_options_get__group_property_name(WSTSE_QueryOptions *self, cwinrt_hstring *value);
 
-/* Windows.Storage.Search.QueryOptions.get_DateStackOption() */
 HRESULT wstse_query_options_get__date_stack_option(WSTSE_QueryOptions *self, WSTSE_DateStackOption *value);
 
-/* Windows.Storage.Search.QueryOptions.SaveToString() */
 HRESULT wstse_query_options_save_to_string(WSTSE_QueryOptions *self, cwinrt_hstring *out);
 
-/* Windows.Storage.Search.QueryOptions.LoadFromString() */
 HRESULT wstse_query_options_load_from_string(WSTSE_QueryOptions *self, cwinrt_hstring value);
 
-/* Windows.Storage.Search.QueryOptions.SetThumbnailPrefetch(mode, requestedSize, options) */
 HRESULT wstse_query_options_set_thumbnail_prefetch(WSTSE_QueryOptions *self, WSTFI_ThumbnailMode mode, uint32_t requestedSize, WSTFI_ThumbnailOptions options);
 
-/* Windows.Storage.Search.QueryOptions.SetPropertyPrefetch(options, propertiesToRetrieve) */
 HRESULT wstse_query_options_set_property_prefetch(WSTSE_QueryOptions *self, WSTFI_PropertyPrefetchOptions options, WFOCO_IIterable_HSTRING* propertiesToRetrieve);
 
-/* Windows.Storage.Search.QueryOptions.get_StorageProviderIdFilter() */
 HRESULT wstse_query_options_get__storage_provider_id_filter(WSTSE_QueryOptions *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Storage.Search.QueryOptions.get_IncludeLocalSemanticIndex() */
 HRESULT wstse_query_options_get__include_local_semantic_index(WSTSE_QueryOptions *self, BOOL *value);
 
-/* Windows.Storage.Search.QueryOptions.put_IncludeLocalSemanticIndex() */
 HRESULT wstse_query_options_put__include_local_semantic_index(WSTSE_QueryOptions *self, BOOL value);
 
-/* Windows.Storage.Search.QueryOptions.get_IncludeCloudProviders() */
 HRESULT wstse_query_options_get__include_cloud_providers(WSTSE_QueryOptions *self, BOOL *value);
 
-/* Windows.Storage.Search.QueryOptions.put_IncludeCloudProviders() */
 HRESULT wstse_query_options_put__include_cloud_providers(WSTSE_QueryOptions *self, BOOL value);
 
-/* activate Windows.Storage.Search.IndexableContent */
 HRESULT wstse_indexable_content_new(WSTSE_IndexableContent **out);
 
-/* Windows.Storage.Search.IndexableContent */
-/* Windows.Storage.Search.IndexableContent.get_Id() */
 HRESULT wstse_indexable_content_get__id(WSTSE_IndexableContent *self, cwinrt_hstring *value);
 
-/* Windows.Storage.Search.IndexableContent.put_Id() */
 HRESULT wstse_indexable_content_put__id(WSTSE_IndexableContent *self, cwinrt_hstring value);
 
-/* Windows.Storage.Search.IndexableContent.get_Properties() */
 HRESULT wstse_indexable_content_get__properties(WSTSE_IndexableContent *self, WFOCO_IMap_HSTRING_Object** value);
 
-/* Windows.Storage.Search.IndexableContent.get_Stream() */
 HRESULT wstse_indexable_content_get__stream(WSTSE_IndexableContent *self, WSTST_IRandomAccessStream** value);
 
-/* Windows.Storage.Search.IndexableContent.put_Stream() */
 HRESULT wstse_indexable_content_put__stream(WSTSE_IndexableContent *self, WSTST_IRandomAccessStream* value);
 
-/* Windows.Storage.Search.IndexableContent.get_StreamContentType() */
 HRESULT wstse_indexable_content_get__stream_content_type(WSTSE_IndexableContent *self, cwinrt_hstring *value);
 
-/* Windows.Storage.Search.IndexableContent.put_StreamContentType() */
 HRESULT wstse_indexable_content_put__stream_content_type(WSTSE_IndexableContent *self, cwinrt_hstring value);
 
-/* Windows.Storage.Search.IStorageFolderQueryOperations */
-/* Windows.Storage.Search.IStorageFolderQueryOperations.GetIndexedStateAsync() */
 HRESULT wstse_storage_folder_query_operations_get_indexed_state_async(WSTSE_IStorageFolderQueryOperations *self, WF_IAsyncOperation_WSTSE_IndexedState** out);
 
-/* Windows.Storage.Search.IStorageFolderQueryOperations.CreateFileQuery() */
 HRESULT wstse_storage_folder_query_operations_create_file_query(WSTSE_IStorageFolderQueryOperations *self, WSTSE_StorageFileQueryResult** out);
 
-/* Windows.Storage.Search.IStorageFolderQueryOperations.CreateFileQuery(query) */
 HRESULT wstse_storage_folder_query_operations_create_file_query_common_file_query_p(WSTSE_IStorageFolderQueryOperations *self, WSTSE_CommonFileQuery query, WSTSE_StorageFileQueryResult** out);
 
-/* Windows.Storage.Search.IStorageFolderQueryOperations.CreateFileQueryWithOptions(queryOptions) */
 HRESULT wstse_storage_folder_query_operations_create_file_query_with_options(WSTSE_IStorageFolderQueryOperations *self, WSTSE_QueryOptions* queryOptions, WSTSE_StorageFileQueryResult** out);
 
-/* Windows.Storage.Search.IStorageFolderQueryOperations.CreateFolderQuery() */
 HRESULT wstse_storage_folder_query_operations_create_folder_query(WSTSE_IStorageFolderQueryOperations *self, WSTSE_StorageFolderQueryResult** out);
 
-/* Windows.Storage.Search.IStorageFolderQueryOperations.CreateFolderQuery(query) */
 HRESULT wstse_storage_folder_query_operations_create_folder_query_common_folder_query_p(WSTSE_IStorageFolderQueryOperations *self, WSTSE_CommonFolderQuery query, WSTSE_StorageFolderQueryResult** out);
 
-/* Windows.Storage.Search.IStorageFolderQueryOperations.CreateFolderQueryWithOptions(queryOptions) */
 HRESULT wstse_storage_folder_query_operations_create_folder_query_with_options(WSTSE_IStorageFolderQueryOperations *self, WSTSE_QueryOptions* queryOptions, WSTSE_StorageFolderQueryResult** out);
 
-/* Windows.Storage.Search.IStorageFolderQueryOperations.CreateItemQuery() */
 HRESULT wstse_storage_folder_query_operations_create_item_query(WSTSE_IStorageFolderQueryOperations *self, WSTSE_StorageItemQueryResult** out);
 
-/* Windows.Storage.Search.IStorageFolderQueryOperations.CreateItemQueryWithOptions(queryOptions) */
 HRESULT wstse_storage_folder_query_operations_create_item_query_with_options(WSTSE_IStorageFolderQueryOperations *self, WSTSE_QueryOptions* queryOptions, WSTSE_StorageItemQueryResult** out);
 
-/* Windows.Storage.Search.IStorageFolderQueryOperations.GetFilesAsync(query, startIndex, maxItemsToRetrieve) */
 HRESULT wstse_storage_folder_query_operations_get_files_async_common_file_query_u32_u32_p(WSTSE_IStorageFolderQueryOperations *self, WSTSE_CommonFileQuery query, uint32_t startIndex, uint32_t maxItemsToRetrieve, WF_IAsyncOperation_WFOCO_IVectorView_WS_StorageFile** out);
 
-/* Windows.Storage.Search.IStorageFolderQueryOperations.GetFilesAsync(query) */
 HRESULT wstse_storage_folder_query_operations_get_files_async(WSTSE_IStorageFolderQueryOperations *self, WSTSE_CommonFileQuery query, WF_IAsyncOperation_WFOCO_IVectorView_WS_StorageFile** out);
 
-/* Windows.Storage.Search.IStorageFolderQueryOperations.GetFoldersAsync(query, startIndex, maxItemsToRetrieve) */
 HRESULT wstse_storage_folder_query_operations_get_folders_async_common_folder_query_u32_u32_p(WSTSE_IStorageFolderQueryOperations *self, WSTSE_CommonFolderQuery query, uint32_t startIndex, uint32_t maxItemsToRetrieve, WF_IAsyncOperation_WFOCO_IVectorView_WS_StorageFolder** out);
 
-/* Windows.Storage.Search.IStorageFolderQueryOperations.GetFoldersAsync(query) */
 HRESULT wstse_storage_folder_query_operations_get_folders_async(WSTSE_IStorageFolderQueryOperations *self, WSTSE_CommonFolderQuery query, WF_IAsyncOperation_WFOCO_IVectorView_WS_StorageFolder** out);
 
-/* Windows.Storage.Search.IStorageFolderQueryOperations.GetItemsAsync(startIndex, maxItemsToRetrieve) */
 HRESULT wstse_storage_folder_query_operations_get_items_async(WSTSE_IStorageFolderQueryOperations *self, uint32_t startIndex, uint32_t maxItemsToRetrieve, WF_IAsyncOperation_WFOCO_IVectorView_WS_IStorageItem** out);
 
-/* Windows.Storage.Search.IStorageFolderQueryOperations.AreQueryOptionsSupported(queryOptions) */
 HRESULT wstse_storage_folder_query_operations_are_query_options_supported(WSTSE_IStorageFolderQueryOperations *self, WSTSE_QueryOptions* queryOptions, BOOL *out);
 
-/* Windows.Storage.Search.IStorageFolderQueryOperations.IsCommonFolderQuerySupported(query) */
 HRESULT wstse_storage_folder_query_operations_is_common_folder_query_supported(WSTSE_IStorageFolderQueryOperations *self, WSTSE_CommonFolderQuery query, BOOL *out);
 
-/* Windows.Storage.Search.IStorageFolderQueryOperations.IsCommonFileQuerySupported(query) */
 HRESULT wstse_storage_folder_query_operations_is_common_file_query_supported(WSTSE_IStorageFolderQueryOperations *self, WSTSE_CommonFileQuery query, BOOL *out);
 
-/* Windows.Storage.Search.IQueryOptionsFactory */
-/* Windows.Storage.Search.IQueryOptionsFactory.CreateCommonFileQuery(query, fileTypeFilter) */
 HRESULT wstse_query_options_factory_create_common_file_query(WSTSE_IQueryOptionsFactory *self, WSTSE_CommonFileQuery query, WFOCO_IIterable_HSTRING* fileTypeFilter, WSTSE_QueryOptions** out);
 
-/* Windows.Storage.Search.IQueryOptionsFactory.CreateCommonFolderQuery(query) */
 HRESULT wstse_query_options_factory_create_common_folder_query(WSTSE_IQueryOptionsFactory *self, WSTSE_CommonFolderQuery query, WSTSE_QueryOptions** out);
 
-/* Windows.Storage.Search.IContentIndexerStatics */
-/* Windows.Storage.Search.IContentIndexerStatics.GetIndexer(indexName) */
 HRESULT wstse_content_indexer_statics_get_indexer_str_p(WSTSE_IContentIndexerStatics *self, cwinrt_hstring indexName, WSTSE_ContentIndexer** out);
 
-/* Windows.Storage.Search.IContentIndexerStatics.GetIndexer() */
 HRESULT wstse_content_indexer_statics_get_indexer(WSTSE_IContentIndexerStatics *self, WSTSE_ContentIndexer** out);
 
-/* activate Windows.Storage.Search.ContentIndexerQuery */
 HRESULT wstse_content_indexer_query_new(WSTSE_ContentIndexerQuery **out);
 
-/* Windows.Storage.Search.ContentIndexerQuery */
-/* Windows.Storage.Search.ContentIndexerQuery.GetCountAsync() */
 HRESULT wstse_content_indexer_query_get_count_async(WSTSE_ContentIndexerQuery *self, WF_IAsyncOperation_uint32_t** out);
 
-/* Windows.Storage.Search.ContentIndexerQuery.GetPropertiesAsync() */
 HRESULT wstse_content_indexer_query_get_properties_async(WSTSE_ContentIndexerQuery *self, WF_IAsyncOperation_WFOCO_IVectorView_WFOCO_IMapView_HSTRING_Object** out);
 
-/* Windows.Storage.Search.ContentIndexerQuery.GetPropertiesAsync(startIndex, maxItems) */
 HRESULT wstse_content_indexer_query_get_properties_async_u32_u32_p(WSTSE_ContentIndexerQuery *self, uint32_t startIndex, uint32_t maxItems, WF_IAsyncOperation_WFOCO_IVectorView_WFOCO_IMapView_HSTRING_Object** out);
 
-/* Windows.Storage.Search.ContentIndexerQuery.GetAsync() */
 HRESULT wstse_content_indexer_query_get_async(WSTSE_ContentIndexerQuery *self, WF_IAsyncOperation_WFOCO_IVectorView_WSTSE_IIndexableContent** out);
 
-/* Windows.Storage.Search.ContentIndexerQuery.GetAsync(startIndex, maxItems) */
 HRESULT wstse_content_indexer_query_get_async_u32_u32_p(WSTSE_ContentIndexerQuery *self, uint32_t startIndex, uint32_t maxItems, WF_IAsyncOperation_WFOCO_IVectorView_WSTSE_IIndexableContent** out);
 
-/* Windows.Storage.Search.ContentIndexerQuery.get_QueryFolder() */
 HRESULT wstse_content_indexer_query_get__query_folder(WSTSE_ContentIndexerQuery *self, WS_StorageFolder** value);
 
-/* activate Windows.Storage.Search.ContentIndexer */
 HRESULT wstse_content_indexer_new(WSTSE_ContentIndexer **out);
 
-/* Windows.Storage.Search.ContentIndexer */
-/* Windows.Storage.Search.ContentIndexer.AddAsync(indexableContent) */
 HRESULT wstse_content_indexer_add_async(WSTSE_ContentIndexer *self, WSTSE_IIndexableContent* indexableContent, WF_IAsyncAction** out);
 
-/* Windows.Storage.Search.ContentIndexer.UpdateAsync(indexableContent) */
 HRESULT wstse_content_indexer_update_async(WSTSE_ContentIndexer *self, WSTSE_IIndexableContent* indexableContent, WF_IAsyncAction** out);
 
-/* Windows.Storage.Search.ContentIndexer.DeleteAsync(contentId) */
 HRESULT wstse_content_indexer_delete_async(WSTSE_ContentIndexer *self, cwinrt_hstring contentId, WF_IAsyncAction** out);
 
-/* Windows.Storage.Search.ContentIndexer.DeleteMultipleAsync(contentIds) */
 HRESULT wstse_content_indexer_delete_multiple_async(WSTSE_ContentIndexer *self, WFOCO_IIterable_HSTRING* contentIds, WF_IAsyncAction** out);
 
-/* Windows.Storage.Search.ContentIndexer.DeleteAllAsync() */
 HRESULT wstse_content_indexer_delete_all_async(WSTSE_ContentIndexer *self, WF_IAsyncAction** out);
 
-/* Windows.Storage.Search.ContentIndexer.RetrievePropertiesAsync(contentId, propertiesToRetrieve) */
 HRESULT wstse_content_indexer_retrieve_properties_async(WSTSE_ContentIndexer *self, cwinrt_hstring contentId, WFOCO_IIterable_HSTRING* propertiesToRetrieve, WF_IAsyncOperation_WFOCO_IMapView_HSTRING_Object** out);
 
-/* Windows.Storage.Search.ContentIndexer.get_Revision() */
 HRESULT wstse_content_indexer_get__revision(WSTSE_ContentIndexer *self, uint64_t *value);
 
-/* Windows.Storage.Search.ContentIndexer.CreateQuery(searchFilter, propertiesToRetrieve, sortOrder, searchFilterLanguage) */
 HRESULT wstse_content_indexer_create_query_str_p_p_str_p(WSTSE_ContentIndexer *self, cwinrt_hstring searchFilter, WFOCO_IIterable_HSTRING* propertiesToRetrieve, WFOCO_IIterable_WSTSE_SortEntry* sortOrder, cwinrt_hstring searchFilterLanguage, WSTSE_ContentIndexerQuery** out);
 
-/* Windows.Storage.Search.ContentIndexer.CreateQuery(searchFilter, propertiesToRetrieve, sortOrder) */
 HRESULT wstse_content_indexer_create_query_str_p_p_p(WSTSE_ContentIndexer *self, cwinrt_hstring searchFilter, WFOCO_IIterable_HSTRING* propertiesToRetrieve, WFOCO_IIterable_WSTSE_SortEntry* sortOrder, WSTSE_ContentIndexerQuery** out);
 
-/* Windows.Storage.Search.ContentIndexer.CreateQuery(searchFilter, propertiesToRetrieve) */
 HRESULT wstse_content_indexer_create_query(WSTSE_ContentIndexer *self, cwinrt_hstring searchFilter, WFOCO_IIterable_HSTRING* propertiesToRetrieve, WSTSE_ContentIndexerQuery** out);
 
-/* Windows.Storage.Search.ContentIndexer.GetIndexer(indexName) */
 HRESULT wstse_content_indexer_get_indexer_str_p(cwinrt_hstring indexName, WSTSE_ContentIndexer** out);
 
-/* Windows.Storage.Search.ContentIndexer.GetIndexer() */
 HRESULT wstse_content_indexer_get_indexer(WSTSE_ContentIndexer** out);
 
-/* Windows.Storage.Search.IStorageFileQueryResult */
-/* Windows.Storage.Search.IStorageFileQueryResult2 */
-/* Windows.Storage.Search.IStorageFileQueryResult2.GetMatchingPropertiesWithRanges(file) */
 HRESULT wstse_storage_file_query_result_2_get_matching_properties_with_ranges(WSTSE_IStorageFileQueryResult_2 *self, WS_StorageFile* file, WFOCO_IMap_HSTRING_WFOCO_IVectorView_WDATE_TextSegment** out);
 
-/* Windows.Storage.Search.IStorageFolderQueryResult */
-/* Windows.Storage.Search.IStorageItemQueryResult */
-/* Windows.Storage.Search.IStorageLibraryChangeTrackerTriggerDetails */
-/* Windows.Storage.Search.IStorageLibraryContentChangedTriggerDetails */
-/* Windows.Storage.Search.IValueAndLanguage */
-/* Windows.Storage.Search.IQueryOptions */
-/* Windows.Storage.Search.IQueryOptionsWithProviderFilter */
-/* Windows.Storage.Search.IQueryOptionsWithProviderFilter.get_StorageProviderIdFilter() */
 HRESULT wstse_query_options_with_provider_filter_get__storage_provider_id_filter(WSTSE_IQueryOptionsWithProviderFilter *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Storage.Search.IQueryOptionsAdditionalSearchSources */
-/* Windows.Storage.Search.IQueryOptionsAdditionalSearchSources.get_IncludeLocalSemanticIndex() */
 HRESULT wstse_query_options_additional_search_sources_get__include_local_semantic_index(WSTSE_IQueryOptionsAdditionalSearchSources *self, BOOL *value);
 
-/* Windows.Storage.Search.IQueryOptionsAdditionalSearchSources.put_IncludeLocalSemanticIndex() */
 HRESULT wstse_query_options_additional_search_sources_put__include_local_semantic_index(WSTSE_IQueryOptionsAdditionalSearchSources *self, BOOL value);
 
-/* Windows.Storage.Search.IQueryOptionsAdditionalSearchSources.get_IncludeCloudProviders() */
 HRESULT wstse_query_options_additional_search_sources_get__include_cloud_providers(WSTSE_IQueryOptionsAdditionalSearchSources *self, BOOL *value);
 
-/* Windows.Storage.Search.IQueryOptionsAdditionalSearchSources.put_IncludeCloudProviders() */
 HRESULT wstse_query_options_additional_search_sources_put__include_cloud_providers(WSTSE_IQueryOptionsAdditionalSearchSources *self, BOOL value);
 
-/* Windows.Storage.Search.IIndexableContent */
-/* Windows.Storage.Search.IContentIndexerQuery */
-/* Windows.Storage.Search.IContentIndexer */
-/* Windows.Storage.Search.IContentIndexerQueryOperations */
-/* Windows.Storage.Search.IContentIndexerQueryOperations.CreateQuery(searchFilter, propertiesToRetrieve, sortOrder, searchFilterLanguage) */
 HRESULT wstse_content_indexer_query_operations_create_query_str_p_p_str_p(WSTSE_IContentIndexerQueryOperations *self, cwinrt_hstring searchFilter, WFOCO_IIterable_HSTRING* propertiesToRetrieve, WFOCO_IIterable_WSTSE_SortEntry* sortOrder, cwinrt_hstring searchFilterLanguage, WSTSE_ContentIndexerQuery** out);
 
-/* Windows.Storage.Search.IContentIndexerQueryOperations.CreateQuery(searchFilter, propertiesToRetrieve, sortOrder) */
 HRESULT wstse_content_indexer_query_operations_create_query_str_p_p_p(WSTSE_IContentIndexerQueryOperations *self, cwinrt_hstring searchFilter, WFOCO_IIterable_HSTRING* propertiesToRetrieve, WFOCO_IIterable_WSTSE_SortEntry* sortOrder, WSTSE_ContentIndexerQuery** out);
 
-/* Windows.Storage.Search.IContentIndexerQueryOperations.CreateQuery(searchFilter, propertiesToRetrieve) */
 HRESULT wstse_content_indexer_query_operations_create_query(WSTSE_IContentIndexerQueryOperations *self, cwinrt_hstring searchFilter, WFOCO_IIterable_HSTRING* propertiesToRetrieve, WSTSE_ContentIndexerQuery** out);
 
-/* Windows.Storage.Search.IStorageQueryResultBase */
-/* Windows.Storage.Search.IStorageQueryResultBase.GetItemCountAsync() */
 HRESULT wstse_storage_query_result_base_get_item_count_async(WSTSE_IStorageQueryResultBase *self, WF_IAsyncOperation_uint32_t** out);
 
-/* Windows.Storage.Search.IStorageQueryResultBase.get_Folder() */
 HRESULT wstse_storage_query_result_base_get__folder(WSTSE_IStorageQueryResultBase *self, WS_StorageFolder** value);
 
-/* Windows.Storage.Search.IStorageQueryResultBase.FindStartIndexAsync() */
 HRESULT wstse_storage_query_result_base_find_start_index_async(WSTSE_IStorageQueryResultBase *self, IInspectable* value, WF_IAsyncOperation_uint32_t** out);
 
-/* Windows.Storage.Search.IStorageQueryResultBase.GetCurrentQueryOptions() */
 HRESULT wstse_storage_query_result_base_get_current_query_options(WSTSE_IStorageQueryResultBase *self, WSTSE_QueryOptions** out);
 
-/* Windows.Storage.Search.IStorageQueryResultBase.ApplyNewQueryOptions(newQueryOptions) */
 HRESULT wstse_storage_query_result_base_apply_new_query_options(WSTSE_IStorageQueryResultBase *self, WSTSE_QueryOptions* newQueryOptions);
 
 #endif /* CWINRT_WINDOWS_STORAGE_SEARCH_H */

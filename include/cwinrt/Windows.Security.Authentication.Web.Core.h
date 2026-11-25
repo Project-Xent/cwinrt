@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSECR_WebAccount
 #define CWINRT_FWD_WSECR_WebAccount
 typedef struct WSECR_WebAccount WSECR_WebAccount;
@@ -26,7 +25,6 @@ typedef struct WSECR_WebAccountProvider WSECR_WebAccountProvider;
 typedef struct WSY_User WSY_User;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSEAUWECO_IWebAuthenticationCoreManagerStatics_2 WSEAUWECO_IWebAuthenticationCoreManagerStatics_2;
 typedef struct WSEAUWECO_IWebAuthenticationCoreManagerStatics_3 WSEAUWECO_IWebAuthenticationCoreManagerStatics_3;
 typedef struct WSEAUWECO_IWebAuthenticationCoreManagerStatics_4 WSEAUWECO_IWebAuthenticationCoreManagerStatics_4;
@@ -62,7 +60,6 @@ typedef struct WSEAUWECO_IWebTokenRequestResult WSEAUWECO_IWebTokenRequestResult
 typedef struct WSEAUWECO_IWebTokenResponse WSEAUWECO_IWebTokenResponse;
 typedef struct WSEAUWECO_IFindAllAccountsResult WSEAUWECO_IFindAllAccountsResult;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
@@ -165,7 +162,6 @@ typedef enum WSEAUWECO_FindAllWebAccountsStatus {
 } WSEAUWECO_FindAllWebAccountsStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -262,86 +258,50 @@ static const IID CWINRT_IID_WSEAUWECO_IWebTokenResponse CWINRT_MAYBE_UNUSED = { 
 static const IID CWINRT_IID_WSEAUWECO_IFindAllAccountsResult CWINRT_MAYBE_UNUSED = { 0xA5812B5D, 0xB72E, 0x420C, { 0x86, 0xAB, 0xAA, 0xC0, 0xD7, 0xB7, 0x26, 0x1F } };
 #endif
 
-/* Methods */
-
-/* Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics2 */
-/* Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics2.FindAccountProviderAsync(webAccountProviderId, authority, user) */
 HRESULT wseauweco_web_authentication_core_manager_statics_2_find_account_provider_async(WSEAUWECO_IWebAuthenticationCoreManagerStatics_2 *self, cwinrt_hstring webAccountProviderId, cwinrt_hstring authority, WSY_User* user, WF_IAsyncOperation_WSECR_WebAccountProvider** out);
 
-/* Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics3 */
-/* Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics3.CreateWebAccountMonitor(webAccounts) */
 HRESULT wseauweco_web_authentication_core_manager_statics_3_create_web_account_monitor(WSEAUWECO_IWebAuthenticationCoreManagerStatics_3 *self, WFOCO_IIterable_WSECR_WebAccount* webAccounts, WSEAUWECO_WebAccountMonitor** out);
 
-/* Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics4 */
-/* Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics4.FindAllAccountsAsync(provider) */
 HRESULT wseauweco_web_authentication_core_manager_statics_4_find_all_accounts_async(WSEAUWECO_IWebAuthenticationCoreManagerStatics_4 *self, WSECR_WebAccountProvider* provider, WF_IAsyncOperation_WSEAUWECO_FindAllAccountsResult** out);
 
-/* Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics4.FindAllAccountsAsync(provider, clientId) */
 HRESULT wseauweco_web_authentication_core_manager_statics_4_find_all_accounts_async_p_str_p(WSEAUWECO_IWebAuthenticationCoreManagerStatics_4 *self, WSECR_WebAccountProvider* provider, cwinrt_hstring clientId, WF_IAsyncOperation_WSEAUWECO_FindAllAccountsResult** out);
 
-/* Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics4.FindSystemAccountProviderAsync(webAccountProviderId) */
 HRESULT wseauweco_web_authentication_core_manager_statics_4_find_system_account_provider_async(WSEAUWECO_IWebAuthenticationCoreManagerStatics_4 *self, cwinrt_hstring webAccountProviderId, WF_IAsyncOperation_WSECR_WebAccountProvider** out);
 
-/* Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics4.FindSystemAccountProviderAsync(webAccountProviderId, authority) */
 HRESULT wseauweco_web_authentication_core_manager_statics_4_find_system_account_provider_async_str_str_p(WSEAUWECO_IWebAuthenticationCoreManagerStatics_4 *self, cwinrt_hstring webAccountProviderId, cwinrt_hstring authority, WF_IAsyncOperation_WSECR_WebAccountProvider** out);
 
-/* Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics4.FindSystemAccountProviderAsync(webAccountProviderId, authority, user) */
 HRESULT wseauweco_web_authentication_core_manager_statics_4_find_system_account_provider_async_str_str_p_p(WSEAUWECO_IWebAuthenticationCoreManagerStatics_4 *self, cwinrt_hstring webAccountProviderId, cwinrt_hstring authority, WSY_User* user, WF_IAsyncOperation_WSECR_WebAccountProvider** out);
 
-/* Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics5 */
-/* Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics5.AddAccountWithTransferTokenAsync(request) */
 HRESULT wseauweco_web_authentication_core_manager_statics_5_add_account_with_transfer_token_async(WSEAUWECO_IWebAuthenticationCoreManagerStatics_5 *self, WSEAUWECO_WebAuthenticationTransferTokenRequest* request, WF_IAsyncOperation_WSEAUWECO_WebAuthenticationAddAccountResult** out);
 
-/* Windows.Security.Authentication.Web.Core.IWebAuthenticationTransferTokenRequestFactory */
-/* Windows.Security.Authentication.Web.Core.IWebAuthenticationTransferTokenRequestFactory.Create(provider, transferToken) */
 HRESULT wseauweco_web_authentication_transfer_token_request_factory_create(WSEAUWECO_IWebAuthenticationTransferTokenRequestFactory *self, WSECR_WebAccountProvider* provider, cwinrt_hstring transferToken, WSEAUWECO_WebAuthenticationTransferTokenRequest** out);
 
-/* Windows.Security.Authentication.Web.Core.IWebAuthenticationTransferTokenRequestFactory.CreateWithCorrelationId(provider, transferToken, correlationId) */
 HRESULT wseauweco_web_authentication_transfer_token_request_factory_create_with_correlation_id(WSEAUWECO_IWebAuthenticationTransferTokenRequestFactory *self, WSECR_WebAccountProvider* provider, cwinrt_hstring transferToken, cwinrt_hstring correlationId, WSEAUWECO_WebAuthenticationTransferTokenRequest** out);
 
-/* Windows.Security.Authentication.Web.Core.IWebProviderErrorFactory */
-/* Windows.Security.Authentication.Web.Core.IWebProviderErrorFactory.Create(errorCode, errorMessage) */
 HRESULT wseauweco_web_provider_error_factory_create(WSEAUWECO_IWebProviderErrorFactory *self, uint32_t errorCode, cwinrt_hstring errorMessage, WSEAUWECO_WebProviderError** out);
 
-/* Windows.Security.Authentication.Web.Core.IWebTokenRequestFactory */
-/* Windows.Security.Authentication.Web.Core.IWebTokenRequestFactory.Create(provider, scope, clientId) */
 HRESULT wseauweco_web_token_request_factory_create(WSEAUWECO_IWebTokenRequestFactory *self, WSECR_WebAccountProvider* provider, cwinrt_hstring scope, cwinrt_hstring clientId, WSEAUWECO_WebTokenRequest** out);
 
-/* Windows.Security.Authentication.Web.Core.IWebTokenRequestFactory.CreateWithPromptType(provider, scope, clientId, promptType) */
 HRESULT wseauweco_web_token_request_factory_create_with_prompt_type(WSEAUWECO_IWebTokenRequestFactory *self, WSECR_WebAccountProvider* provider, cwinrt_hstring scope, cwinrt_hstring clientId, WSEAUWECO_WebTokenRequestPromptType promptType, WSEAUWECO_WebTokenRequest** out);
 
-/* Windows.Security.Authentication.Web.Core.IWebTokenRequestFactory.CreateWithProvider(provider) */
 HRESULT wseauweco_web_token_request_factory_create_with_provider(WSEAUWECO_IWebTokenRequestFactory *self, WSECR_WebAccountProvider* provider, WSEAUWECO_WebTokenRequest** out);
 
-/* Windows.Security.Authentication.Web.Core.IWebTokenRequestFactory.CreateWithScope(provider, scope) */
 HRESULT wseauweco_web_token_request_factory_create_with_scope(WSEAUWECO_IWebTokenRequestFactory *self, WSECR_WebAccountProvider* provider, cwinrt_hstring scope, WSEAUWECO_WebTokenRequest** out);
 
-/* Windows.Security.Authentication.Web.Core.IWebAuthenticationAddAccountResponseFactory */
-/* Windows.Security.Authentication.Web.Core.IWebAuthenticationAddAccountResponseFactory.CreateWithAccount(webAccount) */
 HRESULT wseauweco_web_authentication_add_account_response_factory_create_with_account(WSEAUWECO_IWebAuthenticationAddAccountResponseFactory *self, WSECR_WebAccount* webAccount, WSEAUWECO_WebAuthenticationAddAccountResponse** out);
 
-/* Windows.Security.Authentication.Web.Core.IWebTokenResponseFactory */
-/* Windows.Security.Authentication.Web.Core.IWebTokenResponseFactory.CreateWithToken(token) */
 HRESULT wseauweco_web_token_response_factory_create_with_token(WSEAUWECO_IWebTokenResponseFactory *self, cwinrt_hstring token, WSEAUWECO_WebTokenResponse** out);
 
-/* Windows.Security.Authentication.Web.Core.IWebTokenResponseFactory.CreateWithTokenAndAccount(token, webAccount) */
 HRESULT wseauweco_web_token_response_factory_create_with_token_and_account(WSEAUWECO_IWebTokenResponseFactory *self, cwinrt_hstring token, WSECR_WebAccount* webAccount, WSEAUWECO_WebTokenResponse** out);
 
-/* Windows.Security.Authentication.Web.Core.IWebTokenResponseFactory.CreateWithTokenAccountAndError(token, webAccount, error) */
 HRESULT wseauweco_web_token_response_factory_create_with_token_account_and_error(WSEAUWECO_IWebTokenResponseFactory *self, cwinrt_hstring token, WSECR_WebAccount* webAccount, WSEAUWECO_WebProviderError* error, WSEAUWECO_WebTokenResponse** out);
 
-/* activate Windows.Security.Authentication.Web.Core.WebAccountEventArgs */
 HRESULT wseauweco_web_account_event_args_new(WSEAUWECO_WebAccountEventArgs **out);
 
-/* Windows.Security.Authentication.Web.Core.WebAccountEventArgs */
-/* Windows.Security.Authentication.Web.Core.WebAccountEventArgs.get_Account() */
 HRESULT wseauweco_web_account_event_args_get__account(WSEAUWECO_WebAccountEventArgs *self, WSECR_WebAccount** value);
 
-/* activate Windows.Security.Authentication.Web.Core.WebAccountMonitor */
 HRESULT wseauweco_web_account_monitor_new(WSEAUWECO_WebAccountMonitor **out);
 
-/* Windows.Security.Authentication.Web.Core.WebAccountMonitor */
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wseauweco_web_account_monitor_on_updated(WSEAUWECO_WebAccountMonitor *self, cwinrt_event_fn fn, void *ctx);
@@ -356,228 +316,138 @@ void wseauweco_web_account_monitor_off_default_sign_in_account_changed(WSEAUWECO
 cwinrt_token wseauweco_web_account_monitor_on_account_picture_updated(WSEAUWECO_WebAccountMonitor *self, cwinrt_event_fn fn, void *ctx);
 void wseauweco_web_account_monitor_off_account_picture_updated(WSEAUWECO_WebAccountMonitor *self, cwinrt_token token);
 
-/* activate Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResponse */
 HRESULT wseauweco_web_authentication_add_account_response_new(WSEAUWECO_WebAuthenticationAddAccountResponse **out);
 
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResponse */
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResponse.get_WebAccount() */
 HRESULT wseauweco_web_authentication_add_account_response_get__web_account(WSEAUWECO_WebAuthenticationAddAccountResponse *self, WSECR_WebAccount** value);
 
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResponse.get_Properties() */
 HRESULT wseauweco_web_authentication_add_account_response_get__properties(WSEAUWECO_WebAuthenticationAddAccountResponse *self, WFOCO_IMap_HSTRING_HSTRING** value);
 
-/* activate Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult */
 HRESULT wseauweco_web_authentication_add_account_result_new(WSEAUWECO_WebAuthenticationAddAccountResult **out);
 
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult */
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult.get_ResponseData() */
 HRESULT wseauweco_web_authentication_add_account_result_get__response_data(WSEAUWECO_WebAuthenticationAddAccountResult *self, WSEAUWECO_WebAuthenticationAddAccountResponse** value);
 
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult.get_ResponseStatus() */
 HRESULT wseauweco_web_authentication_add_account_result_get__response_status(WSEAUWECO_WebAuthenticationAddAccountResult *self, WSEAUWECO_WebAuthenticationAddAccountStatus *value);
 
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult.get_ResponseError() */
 HRESULT wseauweco_web_authentication_add_account_result_get__response_error(WSEAUWECO_WebAuthenticationAddAccountResult *self, WSEAUWECO_WebProviderError** value);
 
-/* activate Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager */
 HRESULT wseauweco_web_authentication_core_manager_new(WSEAUWECO_WebAuthenticationCoreManager **out);
 
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager */
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager.AddAccountWithTransferTokenAsync(request) */
 HRESULT wseauweco_web_authentication_core_manager_add_account_with_transfer_token_async(WSEAUWECO_WebAuthenticationTransferTokenRequest* request, WF_IAsyncOperation_WSEAUWECO_WebAuthenticationAddAccountResult** out);
 
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager.FindAllAccountsAsync(provider) */
 HRESULT wseauweco_web_authentication_core_manager_find_all_accounts_async(WSECR_WebAccountProvider* provider, WF_IAsyncOperation_WSEAUWECO_FindAllAccountsResult** out);
 
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager.FindAllAccountsAsync(provider, clientId) */
 HRESULT wseauweco_web_authentication_core_manager_find_all_accounts_async_p_str_p(WSECR_WebAccountProvider* provider, cwinrt_hstring clientId, WF_IAsyncOperation_WSEAUWECO_FindAllAccountsResult** out);
 
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager.FindSystemAccountProviderAsync(webAccountProviderId) */
 HRESULT wseauweco_web_authentication_core_manager_find_system_account_provider_async(cwinrt_hstring webAccountProviderId, WF_IAsyncOperation_WSECR_WebAccountProvider** out);
 
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager.FindSystemAccountProviderAsync(webAccountProviderId, authority) */
 HRESULT wseauweco_web_authentication_core_manager_find_system_account_provider_async_str_str_p(cwinrt_hstring webAccountProviderId, cwinrt_hstring authority, WF_IAsyncOperation_WSECR_WebAccountProvider** out);
 
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager.FindSystemAccountProviderAsync(webAccountProviderId, authority, user) */
 HRESULT wseauweco_web_authentication_core_manager_find_system_account_provider_async_str_str_p_p(cwinrt_hstring webAccountProviderId, cwinrt_hstring authority, WSY_User* user, WF_IAsyncOperation_WSECR_WebAccountProvider** out);
 
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager.CreateWebAccountMonitor(webAccounts) */
 HRESULT wseauweco_web_authentication_core_manager_create_web_account_monitor(WFOCO_IIterable_WSECR_WebAccount* webAccounts, WSEAUWECO_WebAccountMonitor** out);
 
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager.FindAccountProviderAsync(webAccountProviderId, authority, user) */
 HRESULT wseauweco_web_authentication_core_manager_find_account_provider_async_str_str_p_p(cwinrt_hstring webAccountProviderId, cwinrt_hstring authority, WSY_User* user, WF_IAsyncOperation_WSECR_WebAccountProvider** out);
 
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager.GetTokenSilentlyAsync(request) */
 HRESULT wseauweco_web_authentication_core_manager_get_token_silently_async(WSEAUWECO_WebTokenRequest* request, WF_IAsyncOperation_WSEAUWECO_WebTokenRequestResult** out);
 
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager.GetTokenSilentlyAsync(request, webAccount) */
 HRESULT wseauweco_web_authentication_core_manager_get_token_silently_async_p_p_p(WSEAUWECO_WebTokenRequest* request, WSECR_WebAccount* webAccount, WF_IAsyncOperation_WSEAUWECO_WebTokenRequestResult** out);
 
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager.RequestTokenAsync(request) */
 HRESULT wseauweco_web_authentication_core_manager_request_token_async(WSEAUWECO_WebTokenRequest* request, WF_IAsyncOperation_WSEAUWECO_WebTokenRequestResult** out);
 
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager.RequestTokenAsync(request, webAccount) */
 HRESULT wseauweco_web_authentication_core_manager_request_token_async_p_p_p(WSEAUWECO_WebTokenRequest* request, WSECR_WebAccount* webAccount, WF_IAsyncOperation_WSEAUWECO_WebTokenRequestResult** out);
 
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager.FindAccountAsync(provider, webAccountId) */
 HRESULT wseauweco_web_authentication_core_manager_find_account_async(WSECR_WebAccountProvider* provider, cwinrt_hstring webAccountId, WF_IAsyncOperation_WSECR_WebAccount** out);
 
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager.FindAccountProviderAsync(webAccountProviderId) */
 HRESULT wseauweco_web_authentication_core_manager_find_account_provider_async(cwinrt_hstring webAccountProviderId, WF_IAsyncOperation_WSECR_WebAccountProvider** out);
 
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager.FindAccountProviderAsync(webAccountProviderId, authority) */
 HRESULT wseauweco_web_authentication_core_manager_find_account_provider_async_str_str_p(cwinrt_hstring webAccountProviderId, cwinrt_hstring authority, WF_IAsyncOperation_WSECR_WebAccountProvider** out);
 
-/* activate Windows.Security.Authentication.Web.Core.WebAuthenticationTransferTokenRequest */
 HRESULT wseauweco_web_authentication_transfer_token_request_new(WSEAUWECO_WebAuthenticationTransferTokenRequest **out);
 
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationTransferTokenRequest */
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationTransferTokenRequest.get_WebAccountProvider() */
 HRESULT wseauweco_web_authentication_transfer_token_request_get__web_account_provider(WSEAUWECO_WebAuthenticationTransferTokenRequest *self, WSECR_WebAccountProvider** value);
 
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationTransferTokenRequest.get_TransferToken() */
 HRESULT wseauweco_web_authentication_transfer_token_request_get__transfer_token(WSEAUWECO_WebAuthenticationTransferTokenRequest *self, cwinrt_hstring *value);
 
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationTransferTokenRequest.put_TransferToken() */
 HRESULT wseauweco_web_authentication_transfer_token_request_put__transfer_token(WSEAUWECO_WebAuthenticationTransferTokenRequest *self, cwinrt_hstring value);
 
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationTransferTokenRequest.get_Properties() */
 HRESULT wseauweco_web_authentication_transfer_token_request_get__properties(WSEAUWECO_WebAuthenticationTransferTokenRequest *self, WFOCO_IMap_HSTRING_HSTRING** value);
 
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationTransferTokenRequest.get_CorrelationId() */
 HRESULT wseauweco_web_authentication_transfer_token_request_get__correlation_id(WSEAUWECO_WebAuthenticationTransferTokenRequest *self, cwinrt_hstring *value);
 
-/* Windows.Security.Authentication.Web.Core.WebAuthenticationTransferTokenRequest.put_CorrelationId() */
 HRESULT wseauweco_web_authentication_transfer_token_request_put__correlation_id(WSEAUWECO_WebAuthenticationTransferTokenRequest *self, cwinrt_hstring value);
 
-/* activate Windows.Security.Authentication.Web.Core.WebProviderError */
 HRESULT wseauweco_web_provider_error_new(WSEAUWECO_WebProviderError **out);
 
-/* Windows.Security.Authentication.Web.Core.WebProviderError */
-/* Windows.Security.Authentication.Web.Core.WebProviderError.get_ErrorCode() */
 HRESULT wseauweco_web_provider_error_get__error_code(WSEAUWECO_WebProviderError *self, uint32_t *value);
 
-/* Windows.Security.Authentication.Web.Core.WebProviderError.get_ErrorMessage() */
 HRESULT wseauweco_web_provider_error_get__error_message(WSEAUWECO_WebProviderError *self, cwinrt_hstring *value);
 
-/* Windows.Security.Authentication.Web.Core.WebProviderError.get_Properties() */
 HRESULT wseauweco_web_provider_error_get__properties(WSEAUWECO_WebProviderError *self, WFOCO_IMap_HSTRING_HSTRING** value);
 
-/* activate Windows.Security.Authentication.Web.Core.WebTokenRequest */
 HRESULT wseauweco_web_token_request_new(WSEAUWECO_WebTokenRequest **out);
 
-/* Windows.Security.Authentication.Web.Core.WebTokenRequest */
-/* Windows.Security.Authentication.Web.Core.WebTokenRequest.get_WebAccountProvider() */
 HRESULT wseauweco_web_token_request_get__web_account_provider(WSEAUWECO_WebTokenRequest *self, WSECR_WebAccountProvider** value);
 
-/* Windows.Security.Authentication.Web.Core.WebTokenRequest.get_Scope() */
 HRESULT wseauweco_web_token_request_get__scope(WSEAUWECO_WebTokenRequest *self, cwinrt_hstring *value);
 
-/* Windows.Security.Authentication.Web.Core.WebTokenRequest.get_ClientId() */
 HRESULT wseauweco_web_token_request_get__client_id(WSEAUWECO_WebTokenRequest *self, cwinrt_hstring *value);
 
-/* Windows.Security.Authentication.Web.Core.WebTokenRequest.get_PromptType() */
 HRESULT wseauweco_web_token_request_get__prompt_type(WSEAUWECO_WebTokenRequest *self, WSEAUWECO_WebTokenRequestPromptType *value);
 
-/* Windows.Security.Authentication.Web.Core.WebTokenRequest.get_Properties() */
 HRESULT wseauweco_web_token_request_get__properties(WSEAUWECO_WebTokenRequest *self, WFOCO_IMap_HSTRING_HSTRING** value);
 
-/* Windows.Security.Authentication.Web.Core.WebTokenRequest.get_AppProperties() */
 HRESULT wseauweco_web_token_request_get__app_properties(WSEAUWECO_WebTokenRequest *self, WFOCO_IMap_HSTRING_HSTRING** value);
 
-/* Windows.Security.Authentication.Web.Core.WebTokenRequest.get_CorrelationId() */
 HRESULT wseauweco_web_token_request_get__correlation_id(WSEAUWECO_WebTokenRequest *self, cwinrt_hstring *value);
 
-/* Windows.Security.Authentication.Web.Core.WebTokenRequest.put_CorrelationId() */
 HRESULT wseauweco_web_token_request_put__correlation_id(WSEAUWECO_WebTokenRequest *self, cwinrt_hstring value);
 
-/* activate Windows.Security.Authentication.Web.Core.WebTokenRequestResult */
 HRESULT wseauweco_web_token_request_result_new(WSEAUWECO_WebTokenRequestResult **out);
 
-/* Windows.Security.Authentication.Web.Core.WebTokenRequestResult */
-/* Windows.Security.Authentication.Web.Core.WebTokenRequestResult.get_ResponseData() */
 HRESULT wseauweco_web_token_request_result_get__response_data(WSEAUWECO_WebTokenRequestResult *self, WFOCO_IVectorView_WSEAUWECO_WebTokenResponse** value);
 
-/* Windows.Security.Authentication.Web.Core.WebTokenRequestResult.get_ResponseStatus() */
 HRESULT wseauweco_web_token_request_result_get__response_status(WSEAUWECO_WebTokenRequestResult *self, WSEAUWECO_WebTokenRequestStatus *value);
 
-/* Windows.Security.Authentication.Web.Core.WebTokenRequestResult.get_ResponseError() */
 HRESULT wseauweco_web_token_request_result_get__response_error(WSEAUWECO_WebTokenRequestResult *self, WSEAUWECO_WebProviderError** value);
 
-/* Windows.Security.Authentication.Web.Core.WebTokenRequestResult.InvalidateCacheAsync() */
 HRESULT wseauweco_web_token_request_result_invalidate_cache_async(WSEAUWECO_WebTokenRequestResult *self, WF_IAsyncAction** out);
 
-/* activate Windows.Security.Authentication.Web.Core.WebTokenResponse */
 HRESULT wseauweco_web_token_response_new(WSEAUWECO_WebTokenResponse **out);
 
-/* Windows.Security.Authentication.Web.Core.WebTokenResponse */
-/* Windows.Security.Authentication.Web.Core.WebTokenResponse.get_Token() */
 HRESULT wseauweco_web_token_response_get__token(WSEAUWECO_WebTokenResponse *self, cwinrt_hstring *value);
 
-/* Windows.Security.Authentication.Web.Core.WebTokenResponse.get_ProviderError() */
 HRESULT wseauweco_web_token_response_get__provider_error(WSEAUWECO_WebTokenResponse *self, WSEAUWECO_WebProviderError** value);
 
-/* Windows.Security.Authentication.Web.Core.WebTokenResponse.get_WebAccount() */
 HRESULT wseauweco_web_token_response_get__web_account(WSEAUWECO_WebTokenResponse *self, WSECR_WebAccount** value);
 
-/* Windows.Security.Authentication.Web.Core.WebTokenResponse.get_Properties() */
 HRESULT wseauweco_web_token_response_get__properties(WSEAUWECO_WebTokenResponse *self, WFOCO_IMap_HSTRING_HSTRING** value);
 
-/* activate Windows.Security.Authentication.Web.Core.FindAllAccountsResult */
 HRESULT wseauweco_find_all_accounts_result_new(WSEAUWECO_FindAllAccountsResult **out);
 
-/* Windows.Security.Authentication.Web.Core.FindAllAccountsResult */
-/* Windows.Security.Authentication.Web.Core.FindAllAccountsResult.get_Accounts() */
 HRESULT wseauweco_find_all_accounts_result_get__accounts(WSEAUWECO_FindAllAccountsResult *self, WFOCO_IVectorView_WSECR_WebAccount** value);
 
-/* Windows.Security.Authentication.Web.Core.FindAllAccountsResult.get_Status() */
 HRESULT wseauweco_find_all_accounts_result_get__status(WSEAUWECO_FindAllAccountsResult *self, WSEAUWECO_FindAllWebAccountsStatus *value);
 
-/* Windows.Security.Authentication.Web.Core.FindAllAccountsResult.get_ProviderError() */
 HRESULT wseauweco_find_all_accounts_result_get__provider_error(WSEAUWECO_FindAllAccountsResult *self, WSEAUWECO_WebProviderError** value);
 
-/* Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics */
-/* Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics.GetTokenSilentlyAsync(request) */
 HRESULT wseauweco_web_authentication_core_manager_statics_get_token_silently_async(WSEAUWECO_IWebAuthenticationCoreManagerStatics *self, WSEAUWECO_WebTokenRequest* request, WF_IAsyncOperation_WSEAUWECO_WebTokenRequestResult** out);
 
-/* Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics.GetTokenSilentlyAsync(request, webAccount) */
 HRESULT wseauweco_web_authentication_core_manager_statics_get_token_silently_async_p_p_p(WSEAUWECO_IWebAuthenticationCoreManagerStatics *self, WSEAUWECO_WebTokenRequest* request, WSECR_WebAccount* webAccount, WF_IAsyncOperation_WSEAUWECO_WebTokenRequestResult** out);
 
-/* Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics.RequestTokenAsync(request) */
 HRESULT wseauweco_web_authentication_core_manager_statics_request_token_async(WSEAUWECO_IWebAuthenticationCoreManagerStatics *self, WSEAUWECO_WebTokenRequest* request, WF_IAsyncOperation_WSEAUWECO_WebTokenRequestResult** out);
 
-/* Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics.RequestTokenAsync(request, webAccount) */
 HRESULT wseauweco_web_authentication_core_manager_statics_request_token_async_p_p_p(WSEAUWECO_IWebAuthenticationCoreManagerStatics *self, WSEAUWECO_WebTokenRequest* request, WSECR_WebAccount* webAccount, WF_IAsyncOperation_WSEAUWECO_WebTokenRequestResult** out);
 
-/* Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics.FindAccountAsync(provider, webAccountId) */
 HRESULT wseauweco_web_authentication_core_manager_statics_find_account_async(WSEAUWECO_IWebAuthenticationCoreManagerStatics *self, WSECR_WebAccountProvider* provider, cwinrt_hstring webAccountId, WF_IAsyncOperation_WSECR_WebAccount** out);
 
-/* Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics.FindAccountProviderAsync(webAccountProviderId) */
 HRESULT wseauweco_web_authentication_core_manager_statics_find_account_provider_async(WSEAUWECO_IWebAuthenticationCoreManagerStatics *self, cwinrt_hstring webAccountProviderId, WF_IAsyncOperation_WSECR_WebAccountProvider** out);
 
-/* Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics.FindAccountProviderAsync(webAccountProviderId, authority) */
 HRESULT wseauweco_web_authentication_core_manager_statics_find_account_provider_async_str_str_p(WSEAUWECO_IWebAuthenticationCoreManagerStatics *self, cwinrt_hstring webAccountProviderId, cwinrt_hstring authority, WF_IAsyncOperation_WSECR_WebAccountProvider** out);
 
-/* Windows.Security.Authentication.Web.Core.IWebAccountEventArgs */
-/* Windows.Security.Authentication.Web.Core.IWebAccountMonitor */
-/* Windows.Security.Authentication.Web.Core.IWebAccountMonitor2 */
-/* Windows.Security.Authentication.Web.Core.IWebAuthenticationAddAccountResponse */
-/* Windows.Security.Authentication.Web.Core.IWebAuthenticationAddAccountResult */
-/* Windows.Security.Authentication.Web.Core.IWebAuthenticationTransferTokenRequest */
-/* Windows.Security.Authentication.Web.Core.IWebProviderError */
-/* Windows.Security.Authentication.Web.Core.IWebTokenRequest */
-/* Windows.Security.Authentication.Web.Core.IWebTokenRequest2 */
-/* Windows.Security.Authentication.Web.Core.IWebTokenRequest2.get_AppProperties() */
 HRESULT wseauweco_web_token_request_2_get__app_properties(WSEAUWECO_IWebTokenRequest_2 *self, WFOCO_IMap_HSTRING_HSTRING** value);
 
-/* Windows.Security.Authentication.Web.Core.IWebTokenRequest3 */
-/* Windows.Security.Authentication.Web.Core.IWebTokenRequest3.get_CorrelationId() */
 HRESULT wseauweco_web_token_request_3_get__correlation_id(WSEAUWECO_IWebTokenRequest_3 *self, cwinrt_hstring *value);
 
-/* Windows.Security.Authentication.Web.Core.IWebTokenRequest3.put_CorrelationId() */
 HRESULT wseauweco_web_token_request_3_put__correlation_id(WSEAUWECO_IWebTokenRequest_3 *self, cwinrt_hstring value);
 
-/* Windows.Security.Authentication.Web.Core.IWebTokenRequestResult */
-/* Windows.Security.Authentication.Web.Core.IWebTokenResponse */
-/* Windows.Security.Authentication.Web.Core.IFindAllAccountsResult */
 #endif /* CWINRT_WINDOWS_SECURITY_AUTHENTICATION_WEB_CORE_H */

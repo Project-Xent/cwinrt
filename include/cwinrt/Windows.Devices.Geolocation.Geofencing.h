@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Devices.Geolocation.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WDEGEGE_IGeofenceMonitorStatics WDEGEGE_IGeofenceMonitorStatics;
 typedef struct WDEGEGE_Geofence WDEGEGE_Geofence;
 typedef struct WDEGEGE_GeofenceMonitor WDEGEGE_GeofenceMonitor;
@@ -23,7 +22,6 @@ typedef struct WDEGEGE_IGeofence WDEGEGE_IGeofence;
 typedef struct WDEGEGE_IGeofenceMonitor WDEGEGE_IGeofenceMonitor;
 typedef struct WDEGEGE_IGeofenceStateChangeReport WDEGEGE_IGeofenceStateChangeReport;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_DateTime
 #define CWINRT_FWD_WF_DateTime
 typedef struct WF_DateTime WF_DateTime;
@@ -93,7 +91,6 @@ typedef enum WDEGEGE_MonitoredGeofenceStates {
 } WDEGEGE_MonitoredGeofenceStates;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -118,57 +115,36 @@ static const IID CWINRT_IID_WDEGEGE_IGeofenceMonitor CWINRT_MAYBE_UNUSED = { 0x4
 static const IID CWINRT_IID_WDEGEGE_IGeofenceStateChangeReport CWINRT_MAYBE_UNUSED = { 0x9A243C18, 0x2464, 0x4C89, { 0xBE, 0x05, 0xB3, 0xFF, 0xFF, 0x5B, 0xAB, 0xC5 } };
 #endif
 
-/* Methods */
-
-/* Windows.Devices.Geolocation.Geofencing.IGeofenceMonitorStatics */
-/* Windows.Devices.Geolocation.Geofencing.IGeofenceMonitorStatics.get_Current() */
 HRESULT wdegege_geofence_monitor_statics_get__current(WDEGEGE_IGeofenceMonitorStatics *self, WDEGEGE_GeofenceMonitor** value);
 
-/* activate Windows.Devices.Geolocation.Geofencing.Geofence */
 HRESULT wdegege_geofence_new(WDEGEGE_Geofence **out);
 
-/* Windows.Devices.Geolocation.Geofencing.Geofence */
-/* Windows.Devices.Geolocation.Geofencing.Geofence.get_StartTime() */
 HRESULT wdegege_geofence_get__start_time(WDEGEGE_Geofence *self, WF_DateTime *value);
 
-/* Windows.Devices.Geolocation.Geofencing.Geofence.get_Duration() */
 HRESULT wdegege_geofence_get__duration(WDEGEGE_Geofence *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Geolocation.Geofencing.Geofence.get_DwellTime() */
 HRESULT wdegege_geofence_get__dwell_time(WDEGEGE_Geofence *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Geolocation.Geofencing.Geofence.get_Id() */
 HRESULT wdegege_geofence_get__id(WDEGEGE_Geofence *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Geolocation.Geofencing.Geofence.get_MonitoredStates() */
 HRESULT wdegege_geofence_get__monitored_states(WDEGEGE_Geofence *self, WDEGEGE_MonitoredGeofenceStates *value);
 
-/* Windows.Devices.Geolocation.Geofencing.Geofence.get_Geoshape() */
 HRESULT wdegege_geofence_get__geoshape(WDEGEGE_Geofence *self, WDEGE_IGeoshape** value);
 
-/* Windows.Devices.Geolocation.Geofencing.Geofence.get_SingleUse() */
 HRESULT wdegege_geofence_get__single_use(WDEGEGE_Geofence *self, BOOL *value);
 
-/* activate Windows.Devices.Geolocation.Geofencing.GeofenceMonitor */
 HRESULT wdegege_geofence_monitor_new(WDEGEGE_GeofenceMonitor **out);
 
-/* Windows.Devices.Geolocation.Geofencing.GeofenceMonitor */
-/* Windows.Devices.Geolocation.Geofencing.GeofenceMonitor.get_Status() */
 HRESULT wdegege_geofence_monitor_get__status(WDEGEGE_GeofenceMonitor *self, WDEGEGE_GeofenceMonitorStatus *value);
 
-/* Windows.Devices.Geolocation.Geofencing.GeofenceMonitor.get_Geofences() */
 HRESULT wdegege_geofence_monitor_get__geofences(WDEGEGE_GeofenceMonitor *self, WFOCO_IVector_WDEGEGE_Geofence** value);
 
-/* Windows.Devices.Geolocation.Geofencing.GeofenceMonitor.get_LastKnownGeoposition() */
 HRESULT wdegege_geofence_monitor_get__last_known_geoposition(WDEGEGE_GeofenceMonitor *self, WDEGE_Geoposition** value);
 
-/* Windows.Devices.Geolocation.Geofencing.GeofenceMonitor.ReadReports() */
 HRESULT wdegege_geofence_monitor_read_reports(WDEGEGE_GeofenceMonitor *self, WFOCO_IVectorView_WDEGEGE_GeofenceStateChangeReport** out);
 
-/* Windows.Devices.Geolocation.Geofencing.GeofenceMonitor.get_Current() */
 HRESULT wdegege_geofence_monitor_get__current(WDEGEGE_GeofenceMonitor** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdegege_geofence_monitor_on_geofence_state_changed(WDEGEGE_GeofenceMonitor *self, cwinrt_event_fn fn, void *ctx);
@@ -177,36 +153,22 @@ void wdegege_geofence_monitor_off_geofence_state_changed(WDEGEGE_GeofenceMonitor
 cwinrt_token wdegege_geofence_monitor_on_status_changed(WDEGEGE_GeofenceMonitor *self, cwinrt_event_fn fn, void *ctx);
 void wdegege_geofence_monitor_off_status_changed(WDEGEGE_GeofenceMonitor *self, cwinrt_token token);
 
-/* Windows.Devices.Geolocation.Geofencing.IGeofenceFactory */
-/* Windows.Devices.Geolocation.Geofencing.IGeofenceFactory.Create(id, geoshape) */
 HRESULT wdegege_geofence_factory_create(WDEGEGE_IGeofenceFactory *self, cwinrt_hstring id, WDEGE_IGeoshape* geoshape, WDEGEGE_Geofence** out);
 
-/* Windows.Devices.Geolocation.Geofencing.IGeofenceFactory.CreateWithMonitorStates(id, geoshape, monitoredStates, singleUse) */
 HRESULT wdegege_geofence_factory_create_with_monitor_states(WDEGEGE_IGeofenceFactory *self, cwinrt_hstring id, WDEGE_IGeoshape* geoshape, WDEGEGE_MonitoredGeofenceStates monitoredStates, BOOL singleUse, WDEGEGE_Geofence** out);
 
-/* Windows.Devices.Geolocation.Geofencing.IGeofenceFactory.CreateWithMonitorStatesAndDwellTime(id, geoshape, monitoredStates, singleUse, dwellTime) */
 HRESULT wdegege_geofence_factory_create_with_monitor_states_and_dwell_time(WDEGEGE_IGeofenceFactory *self, cwinrt_hstring id, WDEGE_IGeoshape* geoshape, WDEGEGE_MonitoredGeofenceStates monitoredStates, BOOL singleUse, WF_TimeSpan dwellTime, WDEGEGE_Geofence** out);
 
-/* Windows.Devices.Geolocation.Geofencing.IGeofenceFactory.CreateWithMonitorStatesDwellTimeStartTimeAndDuration(id, geoshape, monitoredStates, singleUse, dwellTime, startTime, duration) */
 HRESULT wdegege_geofence_factory_create_with_monitor_states_dwell_time_start_time_and_duration(WDEGEGE_IGeofenceFactory *self, cwinrt_hstring id, WDEGE_IGeoshape* geoshape, WDEGEGE_MonitoredGeofenceStates monitoredStates, BOOL singleUse, WF_TimeSpan dwellTime, WF_DateTime startTime, WF_TimeSpan duration, WDEGEGE_Geofence** out);
 
-/* activate Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport */
 HRESULT wdegege_geofence_state_change_report_new(WDEGEGE_GeofenceStateChangeReport **out);
 
-/* Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport */
-/* Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport.get_NewState() */
 HRESULT wdegege_geofence_state_change_report_get__new_state(WDEGEGE_GeofenceStateChangeReport *self, WDEGEGE_GeofenceState *value);
 
-/* Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport.get_Geofence() */
 HRESULT wdegege_geofence_state_change_report_get__geofence(WDEGEGE_GeofenceStateChangeReport *self, WDEGEGE_Geofence** value);
 
-/* Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport.get_Geoposition() */
 HRESULT wdegege_geofence_state_change_report_get__geoposition(WDEGEGE_GeofenceStateChangeReport *self, WDEGE_Geoposition** value);
 
-/* Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport.get_RemovalReason() */
 HRESULT wdegege_geofence_state_change_report_get__removal_reason(WDEGEGE_GeofenceStateChangeReport *self, WDEGEGE_GeofenceRemovalReason *value);
 
-/* Windows.Devices.Geolocation.Geofencing.IGeofence */
-/* Windows.Devices.Geolocation.Geofencing.IGeofenceMonitor */
-/* Windows.Devices.Geolocation.Geofencing.IGeofenceStateChangeReport */
 #endif /* CWINRT_WINDOWS_DEVICES_GEOLOCATION_GEOFENCING_H */

@@ -14,7 +14,6 @@
 #include <cwinrt/Windows.UI.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WAPAC_IActivatedEventArgs
 #define CWINRT_FWD_WAPAC_IActivatedEventArgs
 typedef struct WAPAC_IActivatedEventArgs WAPAC_IActivatedEventArgs;
@@ -110,7 +109,6 @@ typedef struct WAPAC_SplashScreen WAPAC_SplashScreen;
 typedef struct WSY_User WSY_User;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WGRPRPR_IPrintSupportPrintDeviceCapabilitiesUpdatePolicyStatics WGRPRPR_IPrintSupportPrintDeviceCapabilitiesUpdatePolicyStatics;
 typedef struct WGRPRPR_PrintSupportAppInfo WGRPRPR_PrintSupportAppInfo;
 typedef struct WGRPRPR_PrintSupportCommunicationErrorDetectedEventArgs WGRPRPR_PrintSupportCommunicationErrorDetectedEventArgs;
@@ -154,7 +152,6 @@ typedef struct WGRPRPR_IPrintSupportSettingsActivatedEventArgs WGRPRPR_IPrintSup
 typedef struct WGRPRPR_IPrintSupportSettingsActivatedEventArgs_2 WGRPRPR_IPrintSupportSettingsActivatedEventArgs_2;
 typedef struct WGRPRPR_IPrintSupportSettingsUISession WGRPRPR_IPrintSupportSettingsUISession;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_TimeSpan
 #define CWINRT_FWD_WF_TimeSpan
 typedef struct WF_TimeSpan WF_TimeSpan;
@@ -343,7 +340,6 @@ typedef enum WGRPRPR_XpsImageQuality {
 } WGRPRPR_XpsImageQuality;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -452,77 +448,48 @@ static const IID CWINRT_IID_WGRPRPR_IPrintSupportSettingsActivatedEventArgs_2 CW
 static const IID CWINRT_IID_WGRPRPR_IPrintSupportSettingsUISession CWINRT_MAYBE_UNUSED = { 0xC6DA2251, 0x83C3, 0x55E4, { 0xA0, 0xF8, 0x5D, 0xE8, 0xB0, 0x62, 0xAD, 0xBF } };
 #endif
 
-/* Methods */
-
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesUpdatePolicyStatics */
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesUpdatePolicyStatics.CreatePeriodicRefresh(updatePeriod) */
 HRESULT wgrprpr_print_support_print_device_capabilities_update_policy_statics_create_periodic_refresh(WGRPRPR_IPrintSupportPrintDeviceCapabilitiesUpdatePolicyStatics *self, WF_TimeSpan updatePeriod, WGRPRPR_PrintSupportPrintDeviceCapabilitiesUpdatePolicy** out);
 
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesUpdatePolicyStatics.CreatePrintJobRefresh(numberOfJobs) */
 HRESULT wgrprpr_print_support_print_device_capabilities_update_policy_statics_create_print_job_refresh(WGRPRPR_IPrintSupportPrintDeviceCapabilitiesUpdatePolicyStatics *self, uint32_t numberOfJobs, WGRPRPR_PrintSupportPrintDeviceCapabilitiesUpdatePolicy** out);
 
-/* activate Windows.Graphics.Printing.PrintSupport.PrintSupportAppInfo */
 HRESULT wgrprpr_print_support_app_info_new(WGRPRPR_PrintSupportAppInfo **out);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportAppInfo */
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportAppInfo.get_AppInfo() */
 HRESULT wgrprpr_print_support_app_info_get__app_info(WGRPRPR_PrintSupportAppInfo *self, WAM_AppInfo** value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportAppInfo.get_SupportedContracts() */
 HRESULT wgrprpr_print_support_app_info_get__supported_contracts(WGRPRPR_PrintSupportAppInfo *self, WGRPRPR_PrintSupportAppContracts *value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportAppInfo.GetPrintJobShowsUI(printerName, printTicket) */
 HRESULT wgrprpr_print_support_app_info_get_print_job_shows_u_i(cwinrt_hstring printerName, WGRPRPR_WorkflowPrintTicket* printTicket, BOOL** out);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportAppInfo.FromPrinterName(printerName) */
 HRESULT wgrprpr_print_support_app_info_from_printer_name(cwinrt_hstring printerName, WGRPRPR_PrintSupportAppInfo** out);
 
-/* activate Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs */
 HRESULT wgrprpr_print_support_communication_error_detected_event_args_new(WGRPRPR_PrintSupportCommunicationErrorDetectedEventArgs **out);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs */
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs.get_ErrorKind() */
 HRESULT wgrprpr_print_support_communication_error_detected_event_args_get__error_kind(WGRPRPR_PrintSupportCommunicationErrorDetectedEventArgs *self, WGRPRPR_IppCommunicationErrorKind *value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs.get_ExtendedError() */
 HRESULT wgrprpr_print_support_communication_error_detected_event_args_get__extended_error(WGRPRPR_PrintSupportCommunicationErrorDetectedEventArgs *self, HRESULT *value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs.get_CommunicationConfiguration() */
 HRESULT wgrprpr_print_support_communication_error_detected_event_args_get__communication_configuration(WGRPRPR_PrintSupportCommunicationErrorDetectedEventArgs *self, WGRPRPR_PrintSupportIppCommunicationConfiguration** value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs.GetDeferral() */
 HRESULT wgrprpr_print_support_communication_error_detected_event_args_get_deferral(WGRPRPR_PrintSupportCommunicationErrorDetectedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Graphics.Printing.PrintSupport.PrintSupportEnterpriseManagementUIEventArgs */
 HRESULT wgrprpr_print_support_enterprise_management_u_i_event_args_new(WGRPRPR_PrintSupportEnterpriseManagementUIEventArgs **out);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportEnterpriseManagementUIEventArgs */
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportEnterpriseManagementUIEventArgs.get_Printer() */
 HRESULT wgrprpr_print_support_enterprise_management_u_i_event_args_get__printer(WGRPRPR_PrintSupportEnterpriseManagementUIEventArgs *self, WDEPR_IppPrintDevice** value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportEnterpriseManagementUIEventArgs.get_Kind() */
 HRESULT wgrprpr_print_support_enterprise_management_u_i_event_args_get__kind(WGRPRPR_PrintSupportEnterpriseManagementUIEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportEnterpriseManagementUIEventArgs.get_PreviousExecutionState() */
 HRESULT wgrprpr_print_support_enterprise_management_u_i_event_args_get__previous_execution_state(WGRPRPR_PrintSupportEnterpriseManagementUIEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportEnterpriseManagementUIEventArgs.get_SplashScreen() */
 HRESULT wgrprpr_print_support_enterprise_management_u_i_event_args_get__splash_screen(WGRPRPR_PrintSupportEnterpriseManagementUIEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportEnterpriseManagementUIEventArgs.get_User() */
 HRESULT wgrprpr_print_support_enterprise_management_u_i_event_args_get__user(WGRPRPR_PrintSupportEnterpriseManagementUIEventArgs *self, WSY_User** value);
 
-/* activate Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession */
 HRESULT wgrprpr_print_support_extension_session_new(WGRPRPR_PrintSupportExtensionSession **out);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession */
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession.get_Printer() */
 HRESULT wgrprpr_print_support_extension_session_get__printer(WGRPRPR_PrintSupportExtensionSession *self, WDEPR_IppPrintDevice** value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession.Start() */
 HRESULT wgrprpr_print_support_extension_session_start(WGRPRPR_PrintSupportExtensionSession *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wgrprpr_print_support_extension_session_on_print_ticket_validation_requested(WGRPRPR_PrintSupportExtensionSession *self, cwinrt_event_fn fn, void *ctx);
@@ -537,316 +504,188 @@ void wgrprpr_print_support_extension_session_off_printer_selected(WGRPRPR_PrintS
 cwinrt_token wgrprpr_print_support_extension_session_on_communication_error_detected(WGRPRPR_PrintSupportExtensionSession *self, cwinrt_event_fn fn, void *ctx);
 void wgrprpr_print_support_extension_session_off_communication_error_detected(WGRPRPR_PrintSupportExtensionSession *self, cwinrt_token token);
 
-/* activate Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionTriggerDetails */
 HRESULT wgrprpr_print_support_extension_trigger_details_new(WGRPRPR_PrintSupportExtensionTriggerDetails **out);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionTriggerDetails */
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionTriggerDetails.get_Session() */
 HRESULT wgrprpr_print_support_extension_trigger_details_get__session(WGRPRPR_PrintSupportExtensionTriggerDetails *self, WGRPRPR_PrintSupportExtensionSession** value);
 
-/* activate Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationConfiguration */
 HRESULT wgrprpr_print_support_ipp_communication_configuration_new(WGRPRPR_PrintSupportIppCommunicationConfiguration **out);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationConfiguration */
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationConfiguration.get_CommunicationKind() */
 HRESULT wgrprpr_print_support_ipp_communication_configuration_get__communication_kind(WGRPRPR_PrintSupportIppCommunicationConfiguration *self, WGRPRPR_IppPrinterCommunicationKind *value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationConfiguration.get_CanModifyTimeouts() */
 HRESULT wgrprpr_print_support_ipp_communication_configuration_get__can_modify_timeouts(WGRPRPR_PrintSupportIppCommunicationConfiguration *self, BOOL *value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationConfiguration.get_IppAttributeTimeouts() */
 HRESULT wgrprpr_print_support_ipp_communication_configuration_get__ipp_attribute_timeouts(WGRPRPR_PrintSupportIppCommunicationConfiguration *self, WGRPRPR_PrintSupportIppCommunicationTimeouts** value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationConfiguration.get_IppJobTimeouts() */
 HRESULT wgrprpr_print_support_ipp_communication_configuration_get__ipp_job_timeouts(WGRPRPR_PrintSupportIppCommunicationConfiguration *self, WGRPRPR_PrintSupportIppCommunicationTimeouts** value);
 
-/* activate Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationTimeouts */
 HRESULT wgrprpr_print_support_ipp_communication_timeouts_new(WGRPRPR_PrintSupportIppCommunicationTimeouts **out);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationTimeouts */
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationTimeouts.get_ConnectTimeout() */
 HRESULT wgrprpr_print_support_ipp_communication_timeouts_get__connect_timeout(WGRPRPR_PrintSupportIppCommunicationTimeouts *self, WF_TimeSpan *value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationTimeouts.put_ConnectTimeout() */
 HRESULT wgrprpr_print_support_ipp_communication_timeouts_put__connect_timeout(WGRPRPR_PrintSupportIppCommunicationTimeouts *self, WF_TimeSpan value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationTimeouts.get_SendTimeout() */
 HRESULT wgrprpr_print_support_ipp_communication_timeouts_get__send_timeout(WGRPRPR_PrintSupportIppCommunicationTimeouts *self, WF_TimeSpan *value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationTimeouts.put_SendTimeout() */
 HRESULT wgrprpr_print_support_ipp_communication_timeouts_put__send_timeout(WGRPRPR_PrintSupportIppCommunicationTimeouts *self, WF_TimeSpan value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationTimeouts.get_ReceiveTimeout() */
 HRESULT wgrprpr_print_support_ipp_communication_timeouts_get__receive_timeout(WGRPRPR_PrintSupportIppCommunicationTimeouts *self, WF_TimeSpan *value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationTimeouts.put_ReceiveTimeout() */
 HRESULT wgrprpr_print_support_ipp_communication_timeouts_put__receive_timeout(WGRPRPR_PrintSupportIppCommunicationTimeouts *self, WF_TimeSpan value);
 
-/* activate Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration */
 HRESULT wgrprpr_print_support_mxdc_image_quality_configuration_new(WGRPRPR_PrintSupportMxdcImageQualityConfiguration **out);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration */
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration.get_NormalOutputQuality() */
 HRESULT wgrprpr_print_support_mxdc_image_quality_configuration_get__normal_output_quality(WGRPRPR_PrintSupportMxdcImageQualityConfiguration *self, WGRPRPR_XpsImageQuality *value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration.put_NormalOutputQuality() */
 HRESULT wgrprpr_print_support_mxdc_image_quality_configuration_put__normal_output_quality(WGRPRPR_PrintSupportMxdcImageQualityConfiguration *self, WGRPRPR_XpsImageQuality value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration.get_DraftOutputQuality() */
 HRESULT wgrprpr_print_support_mxdc_image_quality_configuration_get__draft_output_quality(WGRPRPR_PrintSupportMxdcImageQualityConfiguration *self, WGRPRPR_XpsImageQuality *value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration.put_DraftOutputQuality() */
 HRESULT wgrprpr_print_support_mxdc_image_quality_configuration_put__draft_output_quality(WGRPRPR_PrintSupportMxdcImageQualityConfiguration *self, WGRPRPR_XpsImageQuality value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration.get_HighOutputQuality() */
 HRESULT wgrprpr_print_support_mxdc_image_quality_configuration_get__high_output_quality(WGRPRPR_PrintSupportMxdcImageQualityConfiguration *self, WGRPRPR_XpsImageQuality *value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration.put_HighOutputQuality() */
 HRESULT wgrprpr_print_support_mxdc_image_quality_configuration_put__high_output_quality(WGRPRPR_PrintSupportMxdcImageQualityConfiguration *self, WGRPRPR_XpsImageQuality value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration.get_PhotographicOutputQuality() */
 HRESULT wgrprpr_print_support_mxdc_image_quality_configuration_get__photographic_output_quality(WGRPRPR_PrintSupportMxdcImageQualityConfiguration *self, WGRPRPR_XpsImageQuality *value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration.put_PhotographicOutputQuality() */
 HRESULT wgrprpr_print_support_mxdc_image_quality_configuration_put__photographic_output_quality(WGRPRPR_PrintSupportMxdcImageQualityConfiguration *self, WGRPRPR_XpsImageQuality value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration.get_TextOutputQuality() */
 HRESULT wgrprpr_print_support_mxdc_image_quality_configuration_get__text_output_quality(WGRPRPR_PrintSupportMxdcImageQualityConfiguration *self, WGRPRPR_XpsImageQuality *value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration.put_TextOutputQuality() */
 HRESULT wgrprpr_print_support_mxdc_image_quality_configuration_put__text_output_quality(WGRPRPR_PrintSupportMxdcImageQualityConfiguration *self, WGRPRPR_XpsImageQuality value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration.get_AutomaticOutputQuality() */
 HRESULT wgrprpr_print_support_mxdc_image_quality_configuration_get__automatic_output_quality(WGRPRPR_PrintSupportMxdcImageQualityConfiguration *self, WGRPRPR_XpsImageQuality *value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration.put_AutomaticOutputQuality() */
 HRESULT wgrprpr_print_support_mxdc_image_quality_configuration_put__automatic_output_quality(WGRPRPR_PrintSupportMxdcImageQualityConfiguration *self, WGRPRPR_XpsImageQuality value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration.get_FaxOutputQuality() */
 HRESULT wgrprpr_print_support_mxdc_image_quality_configuration_get__fax_output_quality(WGRPRPR_PrintSupportMxdcImageQualityConfiguration *self, WGRPRPR_XpsImageQuality *value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration.put_FaxOutputQuality() */
 HRESULT wgrprpr_print_support_mxdc_image_quality_configuration_put__fax_output_quality(WGRPRPR_PrintSupportMxdcImageQualityConfiguration *self, WGRPRPR_XpsImageQuality value);
 
-/* activate Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs */
 HRESULT wgrprpr_print_support_print_device_capabilities_changed_event_args_new(WGRPRPR_PrintSupportPrintDeviceCapabilitiesChangedEventArgs **out);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs */
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs.GetCurrentPrintDeviceCapabilities() */
 HRESULT wgrprpr_print_support_print_device_capabilities_changed_event_args_get_current_print_device_capabilities(WGRPRPR_PrintSupportPrintDeviceCapabilitiesChangedEventArgs *self, WDAXMDO_XmlDocument** out);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs.UpdatePrintDeviceCapabilities(updatedPdc) */
 HRESULT wgrprpr_print_support_print_device_capabilities_changed_event_args_update_print_device_capabilities(WGRPRPR_PrintSupportPrintDeviceCapabilitiesChangedEventArgs *self, WDAXMDO_XmlDocument* updatedPdc);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs.GetDeferral() */
 HRESULT wgrprpr_print_support_print_device_capabilities_changed_event_args_get_deferral(WGRPRPR_PrintSupportPrintDeviceCapabilitiesChangedEventArgs *self, WF_Deferral** out);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs.SetSupportedPdlPassthroughContentTypes(supportedPdlContentTypes) */
 HRESULT wgrprpr_print_support_print_device_capabilities_changed_event_args_set_supported_pdl_passthrough_content_types(WGRPRPR_PrintSupportPrintDeviceCapabilitiesChangedEventArgs *self, WFOCO_IIterable_HSTRING* supportedPdlContentTypes);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs.get_ResourceLanguage() */
 HRESULT wgrprpr_print_support_print_device_capabilities_changed_event_args_get__resource_language(WGRPRPR_PrintSupportPrintDeviceCapabilitiesChangedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs.GetCurrentPrintDeviceResources() */
 HRESULT wgrprpr_print_support_print_device_capabilities_changed_event_args_get_current_print_device_resources(WGRPRPR_PrintSupportPrintDeviceCapabilitiesChangedEventArgs *self, WDAXMDO_XmlDocument** out);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs.UpdatePrintDeviceResources(updatedPdr) */
 HRESULT wgrprpr_print_support_print_device_capabilities_changed_event_args_update_print_device_resources(WGRPRPR_PrintSupportPrintDeviceCapabilitiesChangedEventArgs *self, WDAXMDO_XmlDocument* updatedPdr);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs.SetPrintDeviceCapabilitiesUpdatePolicy(updatePolicy) */
 HRESULT wgrprpr_print_support_print_device_capabilities_changed_event_args_set_print_device_capabilities_update_policy(WGRPRPR_PrintSupportPrintDeviceCapabilitiesChangedEventArgs *self, WGRPRPR_PrintSupportPrintDeviceCapabilitiesUpdatePolicy* updatePolicy);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs.get_CommunicationConfiguration() */
 HRESULT wgrprpr_print_support_print_device_capabilities_changed_event_args_get__communication_configuration(WGRPRPR_PrintSupportPrintDeviceCapabilitiesChangedEventArgs *self, WGRPRPR_PrintSupportIppCommunicationConfiguration** value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs.get_MxdcImageQualityConfiguration() */
 HRESULT wgrprpr_print_support_print_device_capabilities_changed_event_args_get__mxdc_image_quality_configuration(WGRPRPR_PrintSupportPrintDeviceCapabilitiesChangedEventArgs *self, WGRPRPR_PrintSupportMxdcImageQualityConfiguration** value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs.SetPdlPassthroughWithJobAttributesSupported(supported) */
 HRESULT wgrprpr_print_support_print_device_capabilities_changed_event_args_set_pdl_passthrough_with_job_attributes_supported(WGRPRPR_PrintSupportPrintDeviceCapabilitiesChangedEventArgs *self, BOOL supported);
 
-/* activate Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy */
 HRESULT wgrprpr_print_support_print_device_capabilities_update_policy_new(WGRPRPR_PrintSupportPrintDeviceCapabilitiesUpdatePolicy **out);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy */
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy.CreatePeriodicRefresh(updatePeriod) */
 HRESULT wgrprpr_print_support_print_device_capabilities_update_policy_create_periodic_refresh(WF_TimeSpan updatePeriod, WGRPRPR_PrintSupportPrintDeviceCapabilitiesUpdatePolicy** out);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy.CreatePrintJobRefresh(numberOfJobs) */
 HRESULT wgrprpr_print_support_print_device_capabilities_update_policy_create_print_job_refresh(uint32_t numberOfJobs, WGRPRPR_PrintSupportPrintDeviceCapabilitiesUpdatePolicy** out);
 
-/* activate Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement */
 HRESULT wgrprpr_print_support_print_ticket_element_new(WGRPRPR_PrintSupportPrintTicketElement **out);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement */
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement.get_LocalName() */
 HRESULT wgrprpr_print_support_print_ticket_element_get__local_name(WGRPRPR_PrintSupportPrintTicketElement *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement.put_LocalName() */
 HRESULT wgrprpr_print_support_print_ticket_element_put__local_name(WGRPRPR_PrintSupportPrintTicketElement *self, cwinrt_hstring value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement.get_NamespaceUri() */
 HRESULT wgrprpr_print_support_print_ticket_element_get__namespace_uri(WGRPRPR_PrintSupportPrintTicketElement *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement.put_NamespaceUri() */
 HRESULT wgrprpr_print_support_print_ticket_element_put__namespace_uri(WGRPRPR_PrintSupportPrintTicketElement *self, cwinrt_hstring value);
 
-/* activate Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs */
 HRESULT wgrprpr_print_support_print_ticket_validation_requested_event_args_new(WGRPRPR_PrintSupportPrintTicketValidationRequestedEventArgs **out);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs */
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs.get_PrintTicket() */
 HRESULT wgrprpr_print_support_print_ticket_validation_requested_event_args_get__print_ticket(WGRPRPR_PrintSupportPrintTicketValidationRequestedEventArgs *self, WGRPRPR_WorkflowPrintTicket** value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs.SetPrintTicketValidationStatus(status) */
 HRESULT wgrprpr_print_support_print_ticket_validation_requested_event_args_set_print_ticket_validation_status(WGRPRPR_PrintSupportPrintTicketValidationRequestedEventArgs *self, WGRPRPR_WorkflowPrintTicketValidationStatus status);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs.GetDeferral() */
 HRESULT wgrprpr_print_support_print_ticket_validation_requested_event_args_get_deferral(WGRPRPR_PrintSupportPrintTicketValidationRequestedEventArgs *self, WF_Deferral** out);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs.SetPrintJobShowsUI(showsUI) */
 HRESULT wgrprpr_print_support_print_ticket_validation_requested_event_args_set_print_job_shows_u_i(WGRPRPR_PrintSupportPrintTicketValidationRequestedEventArgs *self, BOOL showsUI);
 
-/* activate Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs */
 HRESULT wgrprpr_print_support_printer_selected_event_args_new(WGRPRPR_PrintSupportPrinterSelectedEventArgs **out);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs */
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs.get_SourceAppInfo() */
 HRESULT wgrprpr_print_support_printer_selected_event_args_get__source_app_info(WGRPRPR_PrintSupportPrinterSelectedEventArgs *self, WAM_AppInfo** value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs.get_PrintTicket() */
 HRESULT wgrprpr_print_support_printer_selected_event_args_get__print_ticket(WGRPRPR_PrintSupportPrinterSelectedEventArgs *self, WGRPRPR_WorkflowPrintTicket** value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs.put_PrintTicket() */
 HRESULT wgrprpr_print_support_printer_selected_event_args_put__print_ticket(WGRPRPR_PrintSupportPrinterSelectedEventArgs *self, WGRPRPR_WorkflowPrintTicket* value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs.SetAdditionalFeatures(features) */
 HRESULT wgrprpr_print_support_printer_selected_event_args_set_additional_features(WGRPRPR_PrintSupportPrinterSelectedEventArgs *self, WFOCO_IIterable_WGRPRPR_PrintSupportPrintTicketElement* features);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs.SetAdditionalParameters(parameters) */
 HRESULT wgrprpr_print_support_printer_selected_event_args_set_additional_parameters(WGRPRPR_PrintSupportPrinterSelectedEventArgs *self, WFOCO_IIterable_WGRPRPR_PrintSupportPrintTicketElement* parameters);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs.get_AllowedAdditionalFeaturesAndParametersCount() */
 HRESULT wgrprpr_print_support_printer_selected_event_args_get__allowed_additional_features_and_parameters_count(WGRPRPR_PrintSupportPrinterSelectedEventArgs *self, uint32_t *value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs.SetAdaptiveCard(adaptiveCard) */
 HRESULT wgrprpr_print_support_printer_selected_event_args_set_adaptive_card(WGRPRPR_PrintSupportPrinterSelectedEventArgs *self, WUISH_IAdaptiveCard* adaptiveCard);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs.GetDeferral() */
 HRESULT wgrprpr_print_support_printer_selected_event_args_get_deferral(WGRPRPR_PrintSupportPrinterSelectedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Graphics.Printing.PrintSupport.PrintSupportSessionInfo */
 HRESULT wgrprpr_print_support_session_info_new(WGRPRPR_PrintSupportSessionInfo **out);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportSessionInfo */
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportSessionInfo.get_SourceAppInfo() */
 HRESULT wgrprpr_print_support_session_info_get__source_app_info(WGRPRPR_PrintSupportSessionInfo *self, WAM_AppInfo** value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportSessionInfo.get_Printer() */
 HRESULT wgrprpr_print_support_session_info_get__printer(WGRPRPR_PrintSupportSessionInfo *self, WDEPR_IppPrintDevice** value);
 
-/* activate Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsActivatedEventArgs */
 HRESULT wgrprpr_print_support_settings_activated_event_args_new(WGRPRPR_PrintSupportSettingsActivatedEventArgs **out);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsActivatedEventArgs */
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsActivatedEventArgs.get_Session() */
 HRESULT wgrprpr_print_support_settings_activated_event_args_get__session(WGRPRPR_PrintSupportSettingsActivatedEventArgs *self, WGRPRPR_PrintSupportSettingsUISession** value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsActivatedEventArgs.GetDeferral() */
 HRESULT wgrprpr_print_support_settings_activated_event_args_get_deferral(WGRPRPR_PrintSupportSettingsActivatedEventArgs *self, WF_Deferral** out);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsActivatedEventArgs.get_OwnerWindowId() */
 HRESULT wgrprpr_print_support_settings_activated_event_args_get__owner_window_id(WGRPRPR_PrintSupportSettingsActivatedEventArgs *self, WUI_WindowId *value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsActivatedEventArgs.get_Kind() */
 HRESULT wgrprpr_print_support_settings_activated_event_args_get__kind(WGRPRPR_PrintSupportSettingsActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wgrprpr_print_support_settings_activated_event_args_get__previous_execution_state(WGRPRPR_PrintSupportSettingsActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsActivatedEventArgs.get_SplashScreen() */
 HRESULT wgrprpr_print_support_settings_activated_event_args_get__splash_screen(WGRPRPR_PrintSupportSettingsActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsActivatedEventArgs.get_User() */
 HRESULT wgrprpr_print_support_settings_activated_event_args_get__user(WGRPRPR_PrintSupportSettingsActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsUISession */
 HRESULT wgrprpr_print_support_settings_u_i_session_new(WGRPRPR_PrintSupportSettingsUISession **out);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsUISession */
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsUISession.get_SessionPrintTicket() */
 HRESULT wgrprpr_print_support_settings_u_i_session_get__session_print_ticket(WGRPRPR_PrintSupportSettingsUISession *self, WGRPRPR_WorkflowPrintTicket** value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsUISession.get_DocumentTitle() */
 HRESULT wgrprpr_print_support_settings_u_i_session_get__document_title(WGRPRPR_PrintSupportSettingsUISession *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsUISession.get_LaunchKind() */
 HRESULT wgrprpr_print_support_settings_u_i_session_get__launch_kind(WGRPRPR_PrintSupportSettingsUISession *self, WGRPRPR_SettingsLaunchKind *value);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsUISession.UpdatePrintTicket(printTicket) */
 HRESULT wgrprpr_print_support_settings_u_i_session_update_print_ticket(WGRPRPR_PrintSupportSettingsUISession *self, WGRPRPR_WorkflowPrintTicket* printTicket);
 
-/* Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsUISession.get_SessionInfo() */
 HRESULT wgrprpr_print_support_settings_u_i_session_get__session_info(WGRPRPR_PrintSupportSettingsUISession *self, WGRPRPR_PrintSupportSessionInfo** value);
 
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportAppInfoStatics */
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportAppInfoStatics.GetPrintJobShowsUI(printerName, printTicket) */
 HRESULT wgrprpr_print_support_app_info_statics_get_print_job_shows_u_i(WGRPRPR_IPrintSupportAppInfoStatics *self, cwinrt_hstring printerName, WGRPRPR_WorkflowPrintTicket* printTicket, BOOL** out);
 
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportAppInfoStatics.FromPrinterName(printerName) */
 HRESULT wgrprpr_print_support_app_info_statics_from_printer_name(WGRPRPR_IPrintSupportAppInfoStatics *self, cwinrt_hstring printerName, WGRPRPR_PrintSupportAppInfo** out);
 
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportAppInfo */
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportCommunicationErrorDetectedEventArgs */
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportEnterpriseManagementUIEventArgs */
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession */
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession2 */
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession3 */
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionTriggerDetails */
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationConfiguration */
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationTimeouts */
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportMxdcImageQualityConfiguration */
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs */
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2 */
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2.SetSupportedPdlPassthroughContentTypes(supportedPdlContentTypes) */
 HRESULT wgrprpr_print_support_print_device_capabilities_changed_event_args_2_set_supported_pdl_passthrough_content_types(WGRPRPR_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs_2 *self, WFOCO_IIterable_HSTRING* supportedPdlContentTypes);
 
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2.get_ResourceLanguage() */
 HRESULT wgrprpr_print_support_print_device_capabilities_changed_event_args_2_get__resource_language(WGRPRPR_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs_2 *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2.GetCurrentPrintDeviceResources() */
 HRESULT wgrprpr_print_support_print_device_capabilities_changed_event_args_2_get_current_print_device_resources(WGRPRPR_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs_2 *self, WDAXMDO_XmlDocument** out);
 
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2.UpdatePrintDeviceResources(updatedPdr) */
 HRESULT wgrprpr_print_support_print_device_capabilities_changed_event_args_2_update_print_device_resources(WGRPRPR_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs_2 *self, WDAXMDO_XmlDocument* updatedPdr);
 
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2.SetPrintDeviceCapabilitiesUpdatePolicy(updatePolicy) */
 HRESULT wgrprpr_print_support_print_device_capabilities_changed_event_args_2_set_print_device_capabilities_update_policy(WGRPRPR_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs_2 *self, WGRPRPR_PrintSupportPrintDeviceCapabilitiesUpdatePolicy* updatePolicy);
 
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs3 */
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs3.get_CommunicationConfiguration() */
 HRESULT wgrprpr_print_support_print_device_capabilities_changed_event_args_3_get__communication_configuration(WGRPRPR_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs_3 *self, WGRPRPR_PrintSupportIppCommunicationConfiguration** value);
 
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs4 */
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs4.get_MxdcImageQualityConfiguration() */
 HRESULT wgrprpr_print_support_print_device_capabilities_changed_event_args_4_get__mxdc_image_quality_configuration(WGRPRPR_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs_4 *self, WGRPRPR_PrintSupportMxdcImageQualityConfiguration** value);
 
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs5 */
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs5.SetPdlPassthroughWithJobAttributesSupported(supported) */
 HRESULT wgrprpr_print_support_print_device_capabilities_changed_event_args_5_set_pdl_passthrough_with_job_attributes_supported(WGRPRPR_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs_5 *self, BOOL supported);
 
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintTicketElement */
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintTicketValidationRequestedEventArgs */
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintTicketValidationRequestedEventArgs2 */
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintTicketValidationRequestedEventArgs2.SetPrintJobShowsUI(showsUI) */
 HRESULT wgrprpr_print_support_print_ticket_validation_requested_event_args_2_set_print_job_shows_u_i(WGRPRPR_IPrintSupportPrintTicketValidationRequestedEventArgs_2 *self, BOOL showsUI);
 
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportPrinterSelectedEventArgs */
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportSessionInfo */
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportSettingsActivatedEventArgs */
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportSettingsActivatedEventArgs2 */
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportSettingsActivatedEventArgs2.get_OwnerWindowId() */
 HRESULT wgrprpr_print_support_settings_activated_event_args_2_get__owner_window_id(WGRPRPR_IPrintSupportSettingsActivatedEventArgs_2 *self, WUI_WindowId *value);
 
-/* Windows.Graphics.Printing.PrintSupport.IPrintSupportSettingsUISession */
 #endif /* CWINRT_WINDOWS_GRAPHICS_PRINTING_PRINTSUPPORT_H */

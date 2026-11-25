@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStreamReference
 #define CWINRT_FWD_WSTST_IRandomAccessStreamReference
 typedef struct WSTST_IRandomAccessStreamReference WSTST_IRandomAccessStreamReference;
@@ -22,7 +21,6 @@ typedef struct WSTST_IRandomAccessStreamReference WSTST_IRandomAccessStreamRefer
 typedef struct WSTST_IRandomAccessStreamWithContentType WSTST_IRandomAccessStreamWithContentType;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSETA_ITargetedContentContainerStatics WSETA_ITargetedContentContainerStatics;
 typedef struct WSETA_ITargetedContentSubscriptionStatics WSETA_ITargetedContentSubscriptionStatics;
 typedef struct WSETA_TargetedContentAction WSETA_TargetedContentAction;
@@ -53,7 +51,6 @@ typedef struct WSETA_ITargetedContentSubscription WSETA_ITargetedContentSubscrip
 typedef struct WSETA_ITargetedContentSubscriptionOptions WSETA_ITargetedContentSubscriptionOptions;
 typedef struct WSETA_ITargetedContentValue WSETA_ITargetedContentValue;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WSETA_TargetedContentContainer
 #define CWINRT_FWD_WF_IAsyncOperation_WSETA_TargetedContentContainer
 typedef struct WF_IAsyncOperation_WSETA_TargetedContentContainer WF_IAsyncOperation_WSETA_TargetedContentContainer;
@@ -209,7 +206,6 @@ typedef enum WSETA_TargetedContentValueKind {
 } WSETA_TargetedContentValueKind;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -274,182 +270,112 @@ static const IID CWINRT_IID_WSETA_ITargetedContentSubscriptionOptions CWINRT_MAY
 static const IID CWINRT_IID_WSETA_ITargetedContentValue CWINRT_MAYBE_UNUSED = { 0xAAFDE4B3, 0x4215, 0x4BF8, { 0x86, 0x7F, 0x43, 0xF0, 0x48, 0x65, 0xF9, 0xBF } };
 #endif
 
-/* Methods */
-
-/* Windows.Services.TargetedContent.ITargetedContentContainerStatics */
-/* Windows.Services.TargetedContent.ITargetedContentContainerStatics.GetAsync(contentId) */
 HRESULT wseta_targeted_content_container_statics_get_async(WSETA_ITargetedContentContainerStatics *self, cwinrt_hstring contentId, WF_IAsyncOperation_WSETA_TargetedContentContainer** out);
 
-/* Windows.Services.TargetedContent.ITargetedContentSubscriptionStatics */
-/* Windows.Services.TargetedContent.ITargetedContentSubscriptionStatics.GetAsync(subscriptionId) */
 HRESULT wseta_targeted_content_subscription_statics_get_async(WSETA_ITargetedContentSubscriptionStatics *self, cwinrt_hstring subscriptionId, WF_IAsyncOperation_WSETA_TargetedContentSubscription** out);
 
-/* Windows.Services.TargetedContent.ITargetedContentSubscriptionStatics.GetOptions(subscriptionId) */
 HRESULT wseta_targeted_content_subscription_statics_get_options(WSETA_ITargetedContentSubscriptionStatics *self, cwinrt_hstring subscriptionId, WSETA_TargetedContentSubscriptionOptions** out);
 
-/* activate Windows.Services.TargetedContent.TargetedContentAction */
 HRESULT wseta_targeted_content_action_new(WSETA_TargetedContentAction **out);
 
-/* Windows.Services.TargetedContent.TargetedContentAction */
-/* Windows.Services.TargetedContent.TargetedContentAction.InvokeAsync() */
 HRESULT wseta_targeted_content_action_invoke_async(WSETA_TargetedContentAction *self, WF_IAsyncAction** out);
 
-/* activate Windows.Services.TargetedContent.TargetedContentAvailabilityChangedEventArgs */
 HRESULT wseta_targeted_content_availability_changed_event_args_new(WSETA_TargetedContentAvailabilityChangedEventArgs **out);
 
-/* Windows.Services.TargetedContent.TargetedContentAvailabilityChangedEventArgs */
-/* Windows.Services.TargetedContent.TargetedContentAvailabilityChangedEventArgs.GetDeferral() */
 HRESULT wseta_targeted_content_availability_changed_event_args_get_deferral(WSETA_TargetedContentAvailabilityChangedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Services.TargetedContent.TargetedContentChangedEventArgs */
 HRESULT wseta_targeted_content_changed_event_args_new(WSETA_TargetedContentChangedEventArgs **out);
 
-/* Windows.Services.TargetedContent.TargetedContentChangedEventArgs */
-/* Windows.Services.TargetedContent.TargetedContentChangedEventArgs.GetDeferral() */
 HRESULT wseta_targeted_content_changed_event_args_get_deferral(WSETA_TargetedContentChangedEventArgs *self, WF_Deferral** out);
 
-/* Windows.Services.TargetedContent.TargetedContentChangedEventArgs.get_HasPreviousContentExpired() */
 HRESULT wseta_targeted_content_changed_event_args_get__has_previous_content_expired(WSETA_TargetedContentChangedEventArgs *self, BOOL *value);
 
-/* activate Windows.Services.TargetedContent.TargetedContentCollection */
 HRESULT wseta_targeted_content_collection_new(WSETA_TargetedContentCollection **out);
 
-/* Windows.Services.TargetedContent.TargetedContentCollection */
-/* Windows.Services.TargetedContent.TargetedContentCollection.get_Id() */
 HRESULT wseta_targeted_content_collection_get__id(WSETA_TargetedContentCollection *self, cwinrt_hstring *value);
 
-/* Windows.Services.TargetedContent.TargetedContentCollection.ReportInteraction(interaction) */
 HRESULT wseta_targeted_content_collection_report_interaction(WSETA_TargetedContentCollection *self, WSETA_TargetedContentInteraction interaction);
 
-/* Windows.Services.TargetedContent.TargetedContentCollection.ReportCustomInteraction(customInteractionName) */
 HRESULT wseta_targeted_content_collection_report_custom_interaction(WSETA_TargetedContentCollection *self, cwinrt_hstring customInteractionName);
 
-/* Windows.Services.TargetedContent.TargetedContentCollection.get_Path() */
 HRESULT wseta_targeted_content_collection_get__path(WSETA_TargetedContentCollection *self, cwinrt_hstring *value);
 
-/* Windows.Services.TargetedContent.TargetedContentCollection.get_Properties() */
 HRESULT wseta_targeted_content_collection_get__properties(WSETA_TargetedContentCollection *self, WFOCO_IMapView_HSTRING_WSETA_TargetedContentValue** value);
 
-/* Windows.Services.TargetedContent.TargetedContentCollection.get_Collections() */
 HRESULT wseta_targeted_content_collection_get__collections(WSETA_TargetedContentCollection *self, WFOCO_IVectorView_WSETA_TargetedContentCollection** value);
 
-/* Windows.Services.TargetedContent.TargetedContentCollection.get_Items() */
 HRESULT wseta_targeted_content_collection_get__items(WSETA_TargetedContentCollection *self, WFOCO_IVectorView_WSETA_TargetedContentItem** value);
 
-/* activate Windows.Services.TargetedContent.TargetedContentContainer */
 HRESULT wseta_targeted_content_container_new(WSETA_TargetedContentContainer **out);
 
-/* Windows.Services.TargetedContent.TargetedContentContainer */
-/* Windows.Services.TargetedContent.TargetedContentContainer.get_Id() */
 HRESULT wseta_targeted_content_container_get__id(WSETA_TargetedContentContainer *self, cwinrt_hstring *value);
 
-/* Windows.Services.TargetedContent.TargetedContentContainer.get_Timestamp() */
 HRESULT wseta_targeted_content_container_get__timestamp(WSETA_TargetedContentContainer *self, WF_DateTime *value);
 
-/* Windows.Services.TargetedContent.TargetedContentContainer.get_Availability() */
 HRESULT wseta_targeted_content_container_get__availability(WSETA_TargetedContentContainer *self, WSETA_TargetedContentAvailability *value);
 
-/* Windows.Services.TargetedContent.TargetedContentContainer.get_Content() */
 HRESULT wseta_targeted_content_container_get__content(WSETA_TargetedContentContainer *self, WSETA_TargetedContentCollection** value);
 
-/* Windows.Services.TargetedContent.TargetedContentContainer.SelectSingleObject(path) */
 HRESULT wseta_targeted_content_container_select_single_object(WSETA_TargetedContentContainer *self, cwinrt_hstring path, WSETA_TargetedContentObject** out);
 
-/* Windows.Services.TargetedContent.TargetedContentContainer.GetAsync(contentId) */
 HRESULT wseta_targeted_content_container_get_async(cwinrt_hstring contentId, WF_IAsyncOperation_WSETA_TargetedContentContainer** out);
 
-/* activate Windows.Services.TargetedContent.TargetedContentFile */
 HRESULT wseta_targeted_content_file_new(WSETA_TargetedContentFile **out);
 
-/* Windows.Services.TargetedContent.TargetedContentFile */
-/* Windows.Services.TargetedContent.TargetedContentFile.OpenReadAsync() */
 HRESULT wseta_targeted_content_file_open_read_async(WSETA_TargetedContentFile *self, WF_IAsyncOperation_WSTST_IRandomAccessStreamWithContentType** out);
 
-/* activate Windows.Services.TargetedContent.TargetedContentImage */
 HRESULT wseta_targeted_content_image_new(WSETA_TargetedContentImage **out);
 
-/* Windows.Services.TargetedContent.TargetedContentImage */
-/* Windows.Services.TargetedContent.TargetedContentImage.get_Height() */
 HRESULT wseta_targeted_content_image_get__height(WSETA_TargetedContentImage *self, uint32_t *value);
 
-/* Windows.Services.TargetedContent.TargetedContentImage.get_Width() */
 HRESULT wseta_targeted_content_image_get__width(WSETA_TargetedContentImage *self, uint32_t *value);
 
-/* Windows.Services.TargetedContent.TargetedContentImage.OpenReadAsync() */
 HRESULT wseta_targeted_content_image_open_read_async(WSETA_TargetedContentImage *self, WF_IAsyncOperation_WSTST_IRandomAccessStreamWithContentType** out);
 
-/* activate Windows.Services.TargetedContent.TargetedContentItem */
 HRESULT wseta_targeted_content_item_new(WSETA_TargetedContentItem **out);
 
-/* Windows.Services.TargetedContent.TargetedContentItem */
-/* Windows.Services.TargetedContent.TargetedContentItem.get_Path() */
 HRESULT wseta_targeted_content_item_get__path(WSETA_TargetedContentItem *self, cwinrt_hstring *value);
 
-/* Windows.Services.TargetedContent.TargetedContentItem.ReportInteraction(interaction) */
 HRESULT wseta_targeted_content_item_report_interaction(WSETA_TargetedContentItem *self, WSETA_TargetedContentInteraction interaction);
 
-/* Windows.Services.TargetedContent.TargetedContentItem.ReportCustomInteraction(customInteractionName) */
 HRESULT wseta_targeted_content_item_report_custom_interaction(WSETA_TargetedContentItem *self, cwinrt_hstring customInteractionName);
 
-/* Windows.Services.TargetedContent.TargetedContentItem.get_State() */
 HRESULT wseta_targeted_content_item_get__state(WSETA_TargetedContentItem *self, WSETA_TargetedContentItemState** value);
 
-/* Windows.Services.TargetedContent.TargetedContentItem.get_Properties() */
 HRESULT wseta_targeted_content_item_get__properties(WSETA_TargetedContentItem *self, WFOCO_IMapView_HSTRING_WSETA_TargetedContentValue** value);
 
-/* Windows.Services.TargetedContent.TargetedContentItem.get_Collections() */
 HRESULT wseta_targeted_content_item_get__collections(WSETA_TargetedContentItem *self, WFOCO_IVectorView_WSETA_TargetedContentCollection** value);
 
-/* activate Windows.Services.TargetedContent.TargetedContentItemState */
 HRESULT wseta_targeted_content_item_state_new(WSETA_TargetedContentItemState **out);
 
-/* Windows.Services.TargetedContent.TargetedContentItemState */
-/* Windows.Services.TargetedContent.TargetedContentItemState.get_ShouldDisplay() */
 HRESULT wseta_targeted_content_item_state_get__should_display(WSETA_TargetedContentItemState *self, BOOL *value);
 
-/* Windows.Services.TargetedContent.TargetedContentItemState.get_AppInstallationState() */
 HRESULT wseta_targeted_content_item_state_get__app_installation_state(WSETA_TargetedContentItemState *self, WSETA_TargetedContentAppInstallationState *value);
 
-/* activate Windows.Services.TargetedContent.TargetedContentObject */
 HRESULT wseta_targeted_content_object_new(WSETA_TargetedContentObject **out);
 
-/* Windows.Services.TargetedContent.TargetedContentObject */
-/* Windows.Services.TargetedContent.TargetedContentObject.get_ObjectKind() */
 HRESULT wseta_targeted_content_object_get__object_kind(WSETA_TargetedContentObject *self, WSETA_TargetedContentObjectKind *value);
 
-/* Windows.Services.TargetedContent.TargetedContentObject.get_Collection() */
 HRESULT wseta_targeted_content_object_get__collection(WSETA_TargetedContentObject *self, WSETA_TargetedContentCollection** value);
 
-/* Windows.Services.TargetedContent.TargetedContentObject.get_Item() */
 HRESULT wseta_targeted_content_object_get__item(WSETA_TargetedContentObject *self, WSETA_TargetedContentItem** value);
 
-/* Windows.Services.TargetedContent.TargetedContentObject.get_Value() */
 HRESULT wseta_targeted_content_object_get__value(WSETA_TargetedContentObject *self, WSETA_TargetedContentValue** value);
 
-/* activate Windows.Services.TargetedContent.TargetedContentStateChangedEventArgs */
 HRESULT wseta_targeted_content_state_changed_event_args_new(WSETA_TargetedContentStateChangedEventArgs **out);
 
-/* Windows.Services.TargetedContent.TargetedContentStateChangedEventArgs */
-/* Windows.Services.TargetedContent.TargetedContentStateChangedEventArgs.GetDeferral() */
 HRESULT wseta_targeted_content_state_changed_event_args_get_deferral(WSETA_TargetedContentStateChangedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Services.TargetedContent.TargetedContentSubscription */
 HRESULT wseta_targeted_content_subscription_new(WSETA_TargetedContentSubscription **out);
 
-/* Windows.Services.TargetedContent.TargetedContentSubscription */
-/* Windows.Services.TargetedContent.TargetedContentSubscription.get_Id() */
 HRESULT wseta_targeted_content_subscription_get__id(WSETA_TargetedContentSubscription *self, cwinrt_hstring *value);
 
-/* Windows.Services.TargetedContent.TargetedContentSubscription.GetContentContainerAsync() */
 HRESULT wseta_targeted_content_subscription_get_content_container_async(WSETA_TargetedContentSubscription *self, WF_IAsyncOperation_WSETA_TargetedContentContainer** out);
 
-/* Windows.Services.TargetedContent.TargetedContentSubscription.GetAsync(subscriptionId) */
 HRESULT wseta_targeted_content_subscription_get_async(cwinrt_hstring subscriptionId, WF_IAsyncOperation_WSETA_TargetedContentSubscription** out);
 
-/* Windows.Services.TargetedContent.TargetedContentSubscription.GetOptions(subscriptionId) */
 HRESULT wseta_targeted_content_subscription_get_options(cwinrt_hstring subscriptionId, WSETA_TargetedContentSubscriptionOptions** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wseta_targeted_content_subscription_on_content_changed(WSETA_TargetedContentSubscription *self, cwinrt_event_fn fn, void *ctx);
@@ -461,91 +387,52 @@ void wseta_targeted_content_subscription_off_availability_changed(WSETA_Targeted
 cwinrt_token wseta_targeted_content_subscription_on_state_changed(WSETA_TargetedContentSubscription *self, cwinrt_event_fn fn, void *ctx);
 void wseta_targeted_content_subscription_off_state_changed(WSETA_TargetedContentSubscription *self, cwinrt_token token);
 
-/* activate Windows.Services.TargetedContent.TargetedContentSubscriptionOptions */
 HRESULT wseta_targeted_content_subscription_options_new(WSETA_TargetedContentSubscriptionOptions **out);
 
-/* Windows.Services.TargetedContent.TargetedContentSubscriptionOptions */
-/* Windows.Services.TargetedContent.TargetedContentSubscriptionOptions.get_SubscriptionId() */
 HRESULT wseta_targeted_content_subscription_options_get__subscription_id(WSETA_TargetedContentSubscriptionOptions *self, cwinrt_hstring *value);
 
-/* Windows.Services.TargetedContent.TargetedContentSubscriptionOptions.get_AllowPartialContentAvailability() */
 HRESULT wseta_targeted_content_subscription_options_get__allow_partial_content_availability(WSETA_TargetedContentSubscriptionOptions *self, BOOL *value);
 
-/* Windows.Services.TargetedContent.TargetedContentSubscriptionOptions.put_AllowPartialContentAvailability() */
 HRESULT wseta_targeted_content_subscription_options_put__allow_partial_content_availability(WSETA_TargetedContentSubscriptionOptions *self, BOOL value);
 
-/* Windows.Services.TargetedContent.TargetedContentSubscriptionOptions.get_CloudQueryParameters() */
 HRESULT wseta_targeted_content_subscription_options_get__cloud_query_parameters(WSETA_TargetedContentSubscriptionOptions *self, WFOCO_IMap_HSTRING_HSTRING** value);
 
-/* Windows.Services.TargetedContent.TargetedContentSubscriptionOptions.get_LocalFilters() */
 HRESULT wseta_targeted_content_subscription_options_get__local_filters(WSETA_TargetedContentSubscriptionOptions *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Services.TargetedContent.TargetedContentSubscriptionOptions.Update() */
 HRESULT wseta_targeted_content_subscription_options_update(WSETA_TargetedContentSubscriptionOptions *self);
 
-/* activate Windows.Services.TargetedContent.TargetedContentValue */
 HRESULT wseta_targeted_content_value_new(WSETA_TargetedContentValue **out);
 
-/* Windows.Services.TargetedContent.TargetedContentValue */
-/* Windows.Services.TargetedContent.TargetedContentValue.get_ValueKind() */
 HRESULT wseta_targeted_content_value_get__value_kind(WSETA_TargetedContentValue *self, WSETA_TargetedContentValueKind *value);
 
-/* Windows.Services.TargetedContent.TargetedContentValue.get_Path() */
 HRESULT wseta_targeted_content_value_get__path(WSETA_TargetedContentValue *self, cwinrt_hstring *value);
 
-/* Windows.Services.TargetedContent.TargetedContentValue.get_String() */
 HRESULT wseta_targeted_content_value_get__string(WSETA_TargetedContentValue *self, cwinrt_hstring *value);
 
-/* Windows.Services.TargetedContent.TargetedContentValue.get_Uri() */
 HRESULT wseta_targeted_content_value_get__uri(WSETA_TargetedContentValue *self, WF_Uri** value);
 
-/* Windows.Services.TargetedContent.TargetedContentValue.get_Number() */
 HRESULT wseta_targeted_content_value_get__number(WSETA_TargetedContentValue *self, double *value);
 
-/* Windows.Services.TargetedContent.TargetedContentValue.get_Boolean() */
 HRESULT wseta_targeted_content_value_get__boolean(WSETA_TargetedContentValue *self, BOOL *value);
 
-/* Windows.Services.TargetedContent.TargetedContentValue.get_File() */
 HRESULT wseta_targeted_content_value_get__file(WSETA_TargetedContentValue *self, WSETA_TargetedContentFile** value);
 
-/* Windows.Services.TargetedContent.TargetedContentValue.get_ImageFile() */
 HRESULT wseta_targeted_content_value_get__image_file(WSETA_TargetedContentValue *self, WSETA_TargetedContentImage** value);
 
-/* Windows.Services.TargetedContent.TargetedContentValue.get_Action() */
 HRESULT wseta_targeted_content_value_get__action(WSETA_TargetedContentValue *self, WSETA_TargetedContentAction** value);
 
-/* Windows.Services.TargetedContent.TargetedContentValue.get_Strings() */
 HRESULT wseta_targeted_content_value_get__strings(WSETA_TargetedContentValue *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Services.TargetedContent.TargetedContentValue.get_Uris() */
 HRESULT wseta_targeted_content_value_get__uris(WSETA_TargetedContentValue *self, WFOCO_IVectorView_WF_Uri** value);
 
-/* Windows.Services.TargetedContent.TargetedContentValue.get_Numbers() */
 HRESULT wseta_targeted_content_value_get__numbers(WSETA_TargetedContentValue *self, WFOCO_IVectorView_F64** value);
 
-/* Windows.Services.TargetedContent.TargetedContentValue.get_Booleans() */
 HRESULT wseta_targeted_content_value_get__booleans(WSETA_TargetedContentValue *self, WFOCO_IVectorView_Bool** value);
 
-/* Windows.Services.TargetedContent.TargetedContentValue.get_Files() */
 HRESULT wseta_targeted_content_value_get__files(WSETA_TargetedContentValue *self, WFOCO_IVectorView_WSETA_TargetedContentFile** value);
 
-/* Windows.Services.TargetedContent.TargetedContentValue.get_ImageFiles() */
 HRESULT wseta_targeted_content_value_get__image_files(WSETA_TargetedContentValue *self, WFOCO_IVectorView_WSETA_TargetedContentImage** value);
 
-/* Windows.Services.TargetedContent.TargetedContentValue.get_Actions() */
 HRESULT wseta_targeted_content_value_get__actions(WSETA_TargetedContentValue *self, WFOCO_IVectorView_WSETA_TargetedContentAction** value);
 
-/* Windows.Services.TargetedContent.ITargetedContentAction */
-/* Windows.Services.TargetedContent.ITargetedContentAvailabilityChangedEventArgs */
-/* Windows.Services.TargetedContent.ITargetedContentChangedEventArgs */
-/* Windows.Services.TargetedContent.ITargetedContentCollection */
-/* Windows.Services.TargetedContent.ITargetedContentContainer */
-/* Windows.Services.TargetedContent.ITargetedContentImage */
-/* Windows.Services.TargetedContent.ITargetedContentItem */
-/* Windows.Services.TargetedContent.ITargetedContentItemState */
-/* Windows.Services.TargetedContent.ITargetedContentObject */
-/* Windows.Services.TargetedContent.ITargetedContentStateChangedEventArgs */
-/* Windows.Services.TargetedContent.ITargetedContentSubscription */
-/* Windows.Services.TargetedContent.ITargetedContentSubscriptionOptions */
-/* Windows.Services.TargetedContent.ITargetedContentValue */
 #endif /* CWINRT_WINDOWS_SERVICES_TARGETEDCONTENT_H */

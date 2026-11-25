@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WSYUP_SystemUpdateItem WSYUP_SystemUpdateItem;
 typedef struct WSYUP_SystemUpdateLastErrorInfo WSYUP_SystemUpdateLastErrorInfo;
 typedef struct WSYUP_SystemUpdateManager WSYUP_SystemUpdateManager;
@@ -20,7 +19,6 @@ typedef struct WSYUP_ISystemUpdateManagerStatics WSYUP_ISystemUpdateManagerStati
 typedef struct WSYUP_ISystemUpdateItem WSYUP_ISystemUpdateItem;
 typedef struct WSYUP_ISystemUpdateLastErrorInfo WSYUP_ISystemUpdateLastErrorInfo;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_EventHandler_Object
 #define CWINRT_FWD_WF_EventHandler_Object
 typedef struct WF_EventHandler_Object WF_EventHandler_Object;
@@ -98,7 +96,6 @@ typedef enum WSYUP_SystemUpdateStartInstallAction {
 } WSYUP_SystemUpdateStartInstallAction;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -115,192 +112,125 @@ static const IID CWINRT_IID_WSYUP_ISystemUpdateItem CWINRT_MAYBE_UNUSED = { 0x77
 static const IID CWINRT_IID_WSYUP_ISystemUpdateLastErrorInfo CWINRT_MAYBE_UNUSED = { 0x7EE887F7, 0x8A44, 0x5B6E, { 0xBD, 0x07, 0x7A, 0xEC, 0xE4, 0x11, 0x6E, 0xA9 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.System.Update.SystemUpdateItem */
 HRESULT wsyup_system_update_item_new(WSYUP_SystemUpdateItem **out);
 
-/* Windows.System.Update.SystemUpdateItem */
-/* Windows.System.Update.SystemUpdateItem.get_State() */
 HRESULT wsyup_system_update_item_get__state(WSYUP_SystemUpdateItem *self, WSYUP_SystemUpdateItemState *value);
 
-/* Windows.System.Update.SystemUpdateItem.get_Title() */
 HRESULT wsyup_system_update_item_get__title(WSYUP_SystemUpdateItem *self, cwinrt_hstring *value);
 
-/* Windows.System.Update.SystemUpdateItem.get_Description() */
 HRESULT wsyup_system_update_item_get__description(WSYUP_SystemUpdateItem *self, cwinrt_hstring *value);
 
-/* Windows.System.Update.SystemUpdateItem.get_Id() */
 HRESULT wsyup_system_update_item_get__id(WSYUP_SystemUpdateItem *self, cwinrt_hstring *value);
 
-/* Windows.System.Update.SystemUpdateItem.get_Revision() */
 HRESULT wsyup_system_update_item_get__revision(WSYUP_SystemUpdateItem *self, uint32_t *value);
 
-/* Windows.System.Update.SystemUpdateItem.get_DownloadProgress() */
 HRESULT wsyup_system_update_item_get__download_progress(WSYUP_SystemUpdateItem *self, double *value);
 
-/* Windows.System.Update.SystemUpdateItem.get_InstallProgress() */
 HRESULT wsyup_system_update_item_get__install_progress(WSYUP_SystemUpdateItem *self, double *value);
 
-/* Windows.System.Update.SystemUpdateItem.get_ExtendedError() */
 HRESULT wsyup_system_update_item_get__extended_error(WSYUP_SystemUpdateItem *self, HRESULT *value);
 
-/* activate Windows.System.Update.SystemUpdateLastErrorInfo */
 HRESULT wsyup_system_update_last_error_info_new(WSYUP_SystemUpdateLastErrorInfo **out);
 
-/* Windows.System.Update.SystemUpdateLastErrorInfo */
-/* Windows.System.Update.SystemUpdateLastErrorInfo.get_State() */
 HRESULT wsyup_system_update_last_error_info_get__state(WSYUP_SystemUpdateLastErrorInfo *self, WSYUP_SystemUpdateManagerState *value);
 
-/* Windows.System.Update.SystemUpdateLastErrorInfo.get_ExtendedError() */
 HRESULT wsyup_system_update_last_error_info_get__extended_error(WSYUP_SystemUpdateLastErrorInfo *self, HRESULT *value);
 
-/* Windows.System.Update.SystemUpdateLastErrorInfo.get_IsInteractive() */
 HRESULT wsyup_system_update_last_error_info_get__is_interactive(WSYUP_SystemUpdateLastErrorInfo *self, BOOL *value);
 
-/* activate Windows.System.Update.SystemUpdateManager */
 HRESULT wsyup_system_update_manager_new(WSYUP_SystemUpdateManager **out);
 
-/* Windows.System.Update.SystemUpdateManager */
-/* Windows.System.Update.SystemUpdateManager.IsSupported() */
 HRESULT wsyup_system_update_manager_is_supported(BOOL *out);
 
-/* Windows.System.Update.SystemUpdateManager.get_State() */
 HRESULT wsyup_system_update_manager_get__state(WSYUP_SystemUpdateManagerState *value);
 
-/* Windows.System.Update.SystemUpdateManager.get_DownloadProgress() */
 HRESULT wsyup_system_update_manager_get__download_progress(double *value);
 
-/* Windows.System.Update.SystemUpdateManager.get_InstallProgress() */
 HRESULT wsyup_system_update_manager_get__install_progress(double *value);
 
-/* Windows.System.Update.SystemUpdateManager.get_UserActiveHoursStart() */
 HRESULT wsyup_system_update_manager_get__user_active_hours_start(WF_TimeSpan *value);
 
-/* Windows.System.Update.SystemUpdateManager.get_UserActiveHoursEnd() */
 HRESULT wsyup_system_update_manager_get__user_active_hours_end(WF_TimeSpan *value);
 
-/* Windows.System.Update.SystemUpdateManager.get_UserActiveHoursMax() */
 HRESULT wsyup_system_update_manager_get__user_active_hours_max(int32_t *value);
 
-/* Windows.System.Update.SystemUpdateManager.TrySetUserActiveHours(start, end) */
 HRESULT wsyup_system_update_manager_try_set_user_active_hours(WF_TimeSpan start, WF_TimeSpan end, BOOL *out);
 
-/* Windows.System.Update.SystemUpdateManager.get_LastUpdateCheckTime() */
 HRESULT wsyup_system_update_manager_get__last_update_check_time(WF_DateTime *value);
 
-/* Windows.System.Update.SystemUpdateManager.get_LastUpdateInstallTime() */
 HRESULT wsyup_system_update_manager_get__last_update_install_time(WF_DateTime *value);
 
-/* Windows.System.Update.SystemUpdateManager.get_LastErrorInfo() */
 HRESULT wsyup_system_update_manager_get__last_error_info(WSYUP_SystemUpdateLastErrorInfo** value);
 
-/* Windows.System.Update.SystemUpdateManager.GetAutomaticRebootBlockIds() */
 HRESULT wsyup_system_update_manager_get_automatic_reboot_block_ids(WFOCO_IVectorView_HSTRING** out);
 
-/* Windows.System.Update.SystemUpdateManager.BlockAutomaticRebootAsync(lockId) */
 HRESULT wsyup_system_update_manager_block_automatic_reboot_async(cwinrt_hstring lockId, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.Update.SystemUpdateManager.UnblockAutomaticRebootAsync(lockId) */
 HRESULT wsyup_system_update_manager_unblock_automatic_reboot_async(cwinrt_hstring lockId, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.Update.SystemUpdateManager.get_ExtendedError() */
 HRESULT wsyup_system_update_manager_get__extended_error(HRESULT *value);
 
-/* Windows.System.Update.SystemUpdateManager.GetUpdateItems() */
 HRESULT wsyup_system_update_manager_get_update_items(WFOCO_IVectorView_WSYUP_SystemUpdateItem** out);
 
-/* Windows.System.Update.SystemUpdateManager.get_AttentionRequiredReason() */
 HRESULT wsyup_system_update_manager_get__attention_required_reason(WSYUP_SystemUpdateAttentionRequiredReason *value);
 
-/* Windows.System.Update.SystemUpdateManager.SetFlightRing(flightRing) */
 HRESULT wsyup_system_update_manager_set_flight_ring(cwinrt_hstring flightRing, BOOL *out);
 
-/* Windows.System.Update.SystemUpdateManager.GetFlightRing() */
 HRESULT wsyup_system_update_manager_get_flight_ring(cwinrt_hstring *out);
 
-/* Windows.System.Update.SystemUpdateManager.StartInstall(action) */
 HRESULT wsyup_system_update_manager_start_install(WSYUP_SystemUpdateStartInstallAction action);
 
-/* Windows.System.Update.SystemUpdateManager.RebootToCompleteInstall() */
 HRESULT wsyup_system_update_manager_reboot_to_complete_install(void);
 
-/* Windows.System.Update.SystemUpdateManager.StartCancelUpdates() */
 HRESULT wsyup_system_update_manager_start_cancel_updates(void);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsyup_system_update_manager_on_state_changed(WSYUP_SystemUpdateManager *self, cwinrt_event_fn fn, void *ctx);
 void wsyup_system_update_manager_off_state_changed(WSYUP_SystemUpdateManager *self, cwinrt_token token);
 
-/* Windows.System.Update.ISystemUpdateManagerStatics */
-/* Windows.System.Update.ISystemUpdateManagerStatics.IsSupported() */
 HRESULT wsyup_system_update_manager_statics_is_supported(WSYUP_ISystemUpdateManagerStatics *self, BOOL *out);
 
-/* Windows.System.Update.ISystemUpdateManagerStatics.get_State() */
 HRESULT wsyup_system_update_manager_statics_get__state(WSYUP_ISystemUpdateManagerStatics *self, WSYUP_SystemUpdateManagerState *value);
 
-/* Windows.System.Update.ISystemUpdateManagerStatics.get_DownloadProgress() */
 HRESULT wsyup_system_update_manager_statics_get__download_progress(WSYUP_ISystemUpdateManagerStatics *self, double *value);
 
-/* Windows.System.Update.ISystemUpdateManagerStatics.get_InstallProgress() */
 HRESULT wsyup_system_update_manager_statics_get__install_progress(WSYUP_ISystemUpdateManagerStatics *self, double *value);
 
-/* Windows.System.Update.ISystemUpdateManagerStatics.get_UserActiveHoursStart() */
 HRESULT wsyup_system_update_manager_statics_get__user_active_hours_start(WSYUP_ISystemUpdateManagerStatics *self, WF_TimeSpan *value);
 
-/* Windows.System.Update.ISystemUpdateManagerStatics.get_UserActiveHoursEnd() */
 HRESULT wsyup_system_update_manager_statics_get__user_active_hours_end(WSYUP_ISystemUpdateManagerStatics *self, WF_TimeSpan *value);
 
-/* Windows.System.Update.ISystemUpdateManagerStatics.get_UserActiveHoursMax() */
 HRESULT wsyup_system_update_manager_statics_get__user_active_hours_max(WSYUP_ISystemUpdateManagerStatics *self, int32_t *value);
 
-/* Windows.System.Update.ISystemUpdateManagerStatics.TrySetUserActiveHours(start, end) */
 HRESULT wsyup_system_update_manager_statics_try_set_user_active_hours(WSYUP_ISystemUpdateManagerStatics *self, WF_TimeSpan start, WF_TimeSpan end, BOOL *out);
 
-/* Windows.System.Update.ISystemUpdateManagerStatics.get_LastUpdateCheckTime() */
 HRESULT wsyup_system_update_manager_statics_get__last_update_check_time(WSYUP_ISystemUpdateManagerStatics *self, WF_DateTime *value);
 
-/* Windows.System.Update.ISystemUpdateManagerStatics.get_LastUpdateInstallTime() */
 HRESULT wsyup_system_update_manager_statics_get__last_update_install_time(WSYUP_ISystemUpdateManagerStatics *self, WF_DateTime *value);
 
-/* Windows.System.Update.ISystemUpdateManagerStatics.get_LastErrorInfo() */
 HRESULT wsyup_system_update_manager_statics_get__last_error_info(WSYUP_ISystemUpdateManagerStatics *self, WSYUP_SystemUpdateLastErrorInfo** value);
 
-/* Windows.System.Update.ISystemUpdateManagerStatics.GetAutomaticRebootBlockIds() */
 HRESULT wsyup_system_update_manager_statics_get_automatic_reboot_block_ids(WSYUP_ISystemUpdateManagerStatics *self, WFOCO_IVectorView_HSTRING** out);
 
-/* Windows.System.Update.ISystemUpdateManagerStatics.BlockAutomaticRebootAsync(lockId) */
 HRESULT wsyup_system_update_manager_statics_block_automatic_reboot_async(WSYUP_ISystemUpdateManagerStatics *self, cwinrt_hstring lockId, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.Update.ISystemUpdateManagerStatics.UnblockAutomaticRebootAsync(lockId) */
 HRESULT wsyup_system_update_manager_statics_unblock_automatic_reboot_async(WSYUP_ISystemUpdateManagerStatics *self, cwinrt_hstring lockId, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.Update.ISystemUpdateManagerStatics.get_ExtendedError() */
 HRESULT wsyup_system_update_manager_statics_get__extended_error(WSYUP_ISystemUpdateManagerStatics *self, HRESULT *value);
 
-/* Windows.System.Update.ISystemUpdateManagerStatics.GetUpdateItems() */
 HRESULT wsyup_system_update_manager_statics_get_update_items(WSYUP_ISystemUpdateManagerStatics *self, WFOCO_IVectorView_WSYUP_SystemUpdateItem** out);
 
-/* Windows.System.Update.ISystemUpdateManagerStatics.get_AttentionRequiredReason() */
 HRESULT wsyup_system_update_manager_statics_get__attention_required_reason(WSYUP_ISystemUpdateManagerStatics *self, WSYUP_SystemUpdateAttentionRequiredReason *value);
 
-/* Windows.System.Update.ISystemUpdateManagerStatics.SetFlightRing(flightRing) */
 HRESULT wsyup_system_update_manager_statics_set_flight_ring(WSYUP_ISystemUpdateManagerStatics *self, cwinrt_hstring flightRing, BOOL *out);
 
-/* Windows.System.Update.ISystemUpdateManagerStatics.GetFlightRing() */
 HRESULT wsyup_system_update_manager_statics_get_flight_ring(WSYUP_ISystemUpdateManagerStatics *self, cwinrt_hstring *out);
 
-/* Windows.System.Update.ISystemUpdateManagerStatics.StartInstall(action) */
 HRESULT wsyup_system_update_manager_statics_start_install(WSYUP_ISystemUpdateManagerStatics *self, WSYUP_SystemUpdateStartInstallAction action);
 
-/* Windows.System.Update.ISystemUpdateManagerStatics.RebootToCompleteInstall() */
 HRESULT wsyup_system_update_manager_statics_reboot_to_complete_install(WSYUP_ISystemUpdateManagerStatics *self);
 
-/* Windows.System.Update.ISystemUpdateManagerStatics.StartCancelUpdates() */
 HRESULT wsyup_system_update_manager_statics_start_cancel_updates(WSYUP_ISystemUpdateManagerStatics *self);
 
-/* Windows.System.Update.ISystemUpdateItem */
-/* Windows.System.Update.ISystemUpdateLastErrorInfo */
 #endif /* CWINRT_WINDOWS_SYSTEM_UPDATE_H */

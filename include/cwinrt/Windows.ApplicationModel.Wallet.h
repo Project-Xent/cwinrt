@@ -14,13 +14,11 @@
 #include <cwinrt/Windows.Devices.Geolocation.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStreamReference
 #define CWINRT_FWD_WSTST_IRandomAccessStreamReference
 typedef struct WSTST_IRandomAccessStreamReference WSTST_IRandomAccessStreamReference;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPWA_IWalletBarcodeFactory WAPWA_IWalletBarcodeFactory;
 typedef struct WAPWA_IWalletItemCustomPropertyFactory WAPWA_IWalletItemCustomPropertyFactory;
 typedef struct WAPWA_IWalletItemFactory WAPWA_IWalletItemFactory;
@@ -43,7 +41,6 @@ typedef struct WAPWA_IWalletBarcode WAPWA_IWalletBarcode;
 typedef struct WAPWA_IWalletItem WAPWA_IWalletItem;
 typedef struct WAPWA_IWalletItemCustomProperty WAPWA_IWalletItemCustomProperty;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStreamReference
 #define CWINRT_FWD_WSTST_IRandomAccessStreamReference
 typedef struct WSTST_IRandomAccessStreamReference WSTST_IRandomAccessStreamReference;
@@ -173,7 +170,6 @@ typedef enum WAPWA_WalletItemKind {
 } WAPWA_WalletItemKind;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -230,351 +226,220 @@ static const IID CWINRT_IID_WAPWA_IWalletItem CWINRT_MAYBE_UNUSED = { 0x20B54BE8
 static const IID CWINRT_IID_WAPWA_IWalletItemCustomProperty CWINRT_MAYBE_UNUSED = { 0xB94B40F3, 0xFA00, 0x40FD, { 0x98, 0xDC, 0x9D, 0xE4, 0x66, 0x97, 0xF1, 0xE7 } };
 #endif
 
-/* Methods */
-
-/* Windows.ApplicationModel.Wallet.IWalletBarcodeFactory */
-/* Windows.ApplicationModel.Wallet.IWalletBarcodeFactory.CreateWalletBarcode(symbology) */
 HRESULT wapwa_wallet_barcode_factory_create_wallet_barcode(WAPWA_IWalletBarcodeFactory *self, WAPWA_WalletBarcodeSymbology symbology, cwinrt_hstring value, WAPWA_WalletBarcode** out);
 
-/* Windows.ApplicationModel.Wallet.IWalletBarcodeFactory.CreateCustomWalletBarcode(streamToBarcodeImage) */
 HRESULT wapwa_wallet_barcode_factory_create_custom_wallet_barcode(WAPWA_IWalletBarcodeFactory *self, WSTST_IRandomAccessStreamReference* streamToBarcodeImage, WAPWA_WalletBarcode** out);
 
-/* Windows.ApplicationModel.Wallet.IWalletItemCustomPropertyFactory */
-/* Windows.ApplicationModel.Wallet.IWalletItemCustomPropertyFactory.CreateWalletItemCustomProperty(name) */
 HRESULT wapwa_wallet_item_custom_property_factory_create_wallet_item_custom_property(WAPWA_IWalletItemCustomPropertyFactory *self, cwinrt_hstring name, cwinrt_hstring value, WAPWA_WalletItemCustomProperty** out);
 
-/* Windows.ApplicationModel.Wallet.IWalletItemFactory */
-/* Windows.ApplicationModel.Wallet.IWalletItemFactory.CreateWalletItem(kind, displayName) */
 HRESULT wapwa_wallet_item_factory_create_wallet_item(WAPWA_IWalletItemFactory *self, WAPWA_WalletItemKind kind, cwinrt_hstring displayName, WAPWA_WalletItem** out);
 
-/* Windows.ApplicationModel.Wallet.IWalletItemStore2 */
-/* Windows.ApplicationModel.Wallet.IWalletManagerStatics */
-/* Windows.ApplicationModel.Wallet.IWalletManagerStatics.RequestStoreAsync() */
 HRESULT wapwa_wallet_manager_statics_request_store_async(WAPWA_IWalletManagerStatics *self, WF_IAsyncOperation_WAPWA_WalletItemStore** out);
 
-/* Windows.ApplicationModel.Wallet.IWalletVerbFactory */
-/* Windows.ApplicationModel.Wallet.IWalletVerbFactory.CreateWalletVerb(name) */
 HRESULT wapwa_wallet_verb_factory_create_wallet_verb(WAPWA_IWalletVerbFactory *self, cwinrt_hstring name, WAPWA_WalletVerb** out);
 
-/* activate Windows.ApplicationModel.Wallet.WalletTransaction */
 HRESULT wapwa_wallet_transaction_new(WAPWA_WalletTransaction **out);
 
-/* Windows.ApplicationModel.Wallet.WalletTransaction */
-/* Windows.ApplicationModel.Wallet.WalletTransaction.get_Description() */
 HRESULT wapwa_wallet_transaction_get__description(WAPWA_WalletTransaction *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Wallet.WalletTransaction.put_Description() */
 HRESULT wapwa_wallet_transaction_put__description(WAPWA_WalletTransaction *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Wallet.WalletTransaction.get_DisplayAmount() */
 HRESULT wapwa_wallet_transaction_get__display_amount(WAPWA_WalletTransaction *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Wallet.WalletTransaction.put_DisplayAmount() */
 HRESULT wapwa_wallet_transaction_put__display_amount(WAPWA_WalletTransaction *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Wallet.WalletTransaction.get_IgnoreTimeOfDay() */
 HRESULT wapwa_wallet_transaction_get__ignore_time_of_day(WAPWA_WalletTransaction *self, BOOL *value);
 
-/* Windows.ApplicationModel.Wallet.WalletTransaction.put_IgnoreTimeOfDay() */
 HRESULT wapwa_wallet_transaction_put__ignore_time_of_day(WAPWA_WalletTransaction *self, BOOL value);
 
-/* Windows.ApplicationModel.Wallet.WalletTransaction.get_DisplayLocation() */
 HRESULT wapwa_wallet_transaction_get__display_location(WAPWA_WalletTransaction *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Wallet.WalletTransaction.put_DisplayLocation() */
 HRESULT wapwa_wallet_transaction_put__display_location(WAPWA_WalletTransaction *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Wallet.WalletTransaction.get_TransactionDate() */
 HRESULT wapwa_wallet_transaction_get__transaction_date(WAPWA_WalletTransaction *self, WF_DateTime** value);
 
-/* Windows.ApplicationModel.Wallet.WalletTransaction.put_TransactionDate() */
 HRESULT wapwa_wallet_transaction_put__transaction_date(WAPWA_WalletTransaction *self, WF_DateTime* value);
 
-/* Windows.ApplicationModel.Wallet.WalletTransaction.get_IsLaunchable() */
 HRESULT wapwa_wallet_transaction_get__is_launchable(WAPWA_WalletTransaction *self, BOOL *value);
 
-/* Windows.ApplicationModel.Wallet.WalletTransaction.put_IsLaunchable() */
 HRESULT wapwa_wallet_transaction_put__is_launchable(WAPWA_WalletTransaction *self, BOOL value);
 
-/* activate Windows.ApplicationModel.Wallet.WalletRelevantLocation */
 HRESULT wapwa_wallet_relevant_location_new(WAPWA_WalletRelevantLocation **out);
 
-/* Windows.ApplicationModel.Wallet.WalletRelevantLocation */
-/* Windows.ApplicationModel.Wallet.WalletRelevantLocation.get_Position() */
 HRESULT wapwa_wallet_relevant_location_get__position(WAPWA_WalletRelevantLocation *self, WDEGE_BasicGeoposition *value);
 
-/* Windows.ApplicationModel.Wallet.WalletRelevantLocation.put_Position() */
 HRESULT wapwa_wallet_relevant_location_put__position(WAPWA_WalletRelevantLocation *self, WDEGE_BasicGeoposition value);
 
-/* Windows.ApplicationModel.Wallet.WalletRelevantLocation.get_DisplayMessage() */
 HRESULT wapwa_wallet_relevant_location_get__display_message(WAPWA_WalletRelevantLocation *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Wallet.WalletRelevantLocation.put_DisplayMessage() */
 HRESULT wapwa_wallet_relevant_location_put__display_message(WAPWA_WalletRelevantLocation *self, cwinrt_hstring value);
 
-/* activate Windows.ApplicationModel.Wallet.WalletVerb */
 HRESULT wapwa_wallet_verb_new(WAPWA_WalletVerb **out);
 
-/* Windows.ApplicationModel.Wallet.WalletVerb */
-/* Windows.ApplicationModel.Wallet.WalletVerb.get_Name() */
 HRESULT wapwa_wallet_verb_get__name(WAPWA_WalletVerb *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Wallet.WalletVerb.put_Name() */
 HRESULT wapwa_wallet_verb_put__name(WAPWA_WalletVerb *self, cwinrt_hstring value);
 
-/* activate Windows.ApplicationModel.Wallet.WalletManager */
 HRESULT wapwa_wallet_manager_new(WAPWA_WalletManager **out);
 
-/* Windows.ApplicationModel.Wallet.WalletManager */
-/* Windows.ApplicationModel.Wallet.WalletManager.RequestStoreAsync() */
 HRESULT wapwa_wallet_manager_request_store_async(WF_IAsyncOperation_WAPWA_WalletItemStore** out);
 
-/* activate Windows.ApplicationModel.Wallet.WalletItemStore */
 HRESULT wapwa_wallet_item_store_new(WAPWA_WalletItemStore **out);
 
-/* Windows.ApplicationModel.Wallet.WalletItemStore */
-/* Windows.ApplicationModel.Wallet.WalletItemStore.AddAsync(id, item) */
 HRESULT wapwa_wallet_item_store_add_async(WAPWA_WalletItemStore *self, cwinrt_hstring id, WAPWA_WalletItem* item, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Wallet.WalletItemStore.ClearAsync() */
 HRESULT wapwa_wallet_item_store_clear_async(WAPWA_WalletItemStore *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Wallet.WalletItemStore.GetWalletItemAsync(id) */
 HRESULT wapwa_wallet_item_store_get_wallet_item_async(WAPWA_WalletItemStore *self, cwinrt_hstring id, WF_IAsyncOperation_WAPWA_WalletItem** out);
 
-/* Windows.ApplicationModel.Wallet.WalletItemStore.GetItemsAsync() */
 HRESULT wapwa_wallet_item_store_get_items_async(WAPWA_WalletItemStore *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPWA_WalletItem** out);
 
-/* Windows.ApplicationModel.Wallet.WalletItemStore.GetItemsAsync(kind) */
 HRESULT wapwa_wallet_item_store_get_items_async_wallet_item_kind_p(WAPWA_WalletItemStore *self, WAPWA_WalletItemKind kind, WF_IAsyncOperation_WFOCO_IVectorView_WAPWA_WalletItem** out);
 
-/* Windows.ApplicationModel.Wallet.WalletItemStore.ImportItemAsync(stream) */
 HRESULT wapwa_wallet_item_store_import_item_async(WAPWA_WalletItemStore *self, WSTST_IRandomAccessStreamReference* stream, WF_IAsyncOperation_WAPWA_WalletItem** out);
 
-/* Windows.ApplicationModel.Wallet.WalletItemStore.DeleteAsync(id) */
 HRESULT wapwa_wallet_item_store_delete_async(WAPWA_WalletItemStore *self, cwinrt_hstring id, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Wallet.WalletItemStore.ShowAsync() */
 HRESULT wapwa_wallet_item_store_show_async(WAPWA_WalletItemStore *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Wallet.WalletItemStore.ShowAsync(id) */
 HRESULT wapwa_wallet_item_store_show_async_str_p(WAPWA_WalletItemStore *self, cwinrt_hstring id, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Wallet.WalletItemStore.UpdateAsync(item) */
 HRESULT wapwa_wallet_item_store_update_async(WAPWA_WalletItemStore *self, WAPWA_WalletItem* item, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Wallet.WalletBarcode */
 HRESULT wapwa_wallet_barcode_new(WAPWA_WalletBarcode **out);
 
-/* Windows.ApplicationModel.Wallet.WalletBarcode */
-/* Windows.ApplicationModel.Wallet.WalletBarcode.get_Symbology() */
 HRESULT wapwa_wallet_barcode_get__symbology(WAPWA_WalletBarcode *self, WAPWA_WalletBarcodeSymbology *value);
 
-/* Windows.ApplicationModel.Wallet.WalletBarcode.get_Value() */
 HRESULT wapwa_wallet_barcode_get__value(WAPWA_WalletBarcode *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Wallet.WalletBarcode.GetImageAsync() */
 HRESULT wapwa_wallet_barcode_get_image_async(WAPWA_WalletBarcode *self, WF_IAsyncOperation_WSTST_IRandomAccessStreamReference** out);
 
-/* activate Windows.ApplicationModel.Wallet.WalletItem */
 HRESULT wapwa_wallet_item_new(WAPWA_WalletItem **out);
 
-/* Windows.ApplicationModel.Wallet.WalletItem */
-/* Windows.ApplicationModel.Wallet.WalletItem.get_DisplayName() */
 HRESULT wapwa_wallet_item_get__display_name(WAPWA_WalletItem *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.put_DisplayName() */
 HRESULT wapwa_wallet_item_put__display_name(WAPWA_WalletItem *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.get_Id() */
 HRESULT wapwa_wallet_item_get__id(WAPWA_WalletItem *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.get_IsAcknowledged() */
 HRESULT wapwa_wallet_item_get__is_acknowledged(WAPWA_WalletItem *self, BOOL *value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.put_IsAcknowledged() */
 HRESULT wapwa_wallet_item_put__is_acknowledged(WAPWA_WalletItem *self, BOOL value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.get_IssuerDisplayName() */
 HRESULT wapwa_wallet_item_get__issuer_display_name(WAPWA_WalletItem *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.put_IssuerDisplayName() */
 HRESULT wapwa_wallet_item_put__issuer_display_name(WAPWA_WalletItem *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.get_LastUpdated() */
 HRESULT wapwa_wallet_item_get__last_updated(WAPWA_WalletItem *self, WF_DateTime** value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.put_LastUpdated() */
 HRESULT wapwa_wallet_item_put__last_updated(WAPWA_WalletItem *self, WF_DateTime* value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.get_Kind() */
 HRESULT wapwa_wallet_item_get__kind(WAPWA_WalletItem *self, WAPWA_WalletItemKind *value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.get_Barcode() */
 HRESULT wapwa_wallet_item_get__barcode(WAPWA_WalletItem *self, WAPWA_WalletBarcode** value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.put_Barcode() */
 HRESULT wapwa_wallet_item_put__barcode(WAPWA_WalletItem *self, WAPWA_WalletBarcode* value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.get_ExpirationDate() */
 HRESULT wapwa_wallet_item_get__expiration_date(WAPWA_WalletItem *self, WF_DateTime** value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.put_ExpirationDate() */
 HRESULT wapwa_wallet_item_put__expiration_date(WAPWA_WalletItem *self, WF_DateTime* value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.get_Logo159x159() */
 HRESULT wapwa_wallet_item_get__logo159x159(WAPWA_WalletItem *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.put_Logo159x159() */
 HRESULT wapwa_wallet_item_put__logo159x159(WAPWA_WalletItem *self, WSTST_IRandomAccessStreamReference* value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.get_Logo336x336() */
 HRESULT wapwa_wallet_item_get__logo336x336(WAPWA_WalletItem *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.put_Logo336x336() */
 HRESULT wapwa_wallet_item_put__logo336x336(WAPWA_WalletItem *self, WSTST_IRandomAccessStreamReference* value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.get_Logo99x99() */
 HRESULT wapwa_wallet_item_get__logo99x99(WAPWA_WalletItem *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.put_Logo99x99() */
 HRESULT wapwa_wallet_item_put__logo99x99(WAPWA_WalletItem *self, WSTST_IRandomAccessStreamReference* value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.get_DisplayMessage() */
 HRESULT wapwa_wallet_item_get__display_message(WAPWA_WalletItem *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.put_DisplayMessage() */
 HRESULT wapwa_wallet_item_put__display_message(WAPWA_WalletItem *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.get_IsDisplayMessageLaunchable() */
 HRESULT wapwa_wallet_item_get__is_display_message_launchable(WAPWA_WalletItem *self, BOOL *value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.put_IsDisplayMessageLaunchable() */
 HRESULT wapwa_wallet_item_put__is_display_message_launchable(WAPWA_WalletItem *self, BOOL value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.get_LogoText() */
 HRESULT wapwa_wallet_item_get__logo_text(WAPWA_WalletItem *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.put_LogoText() */
 HRESULT wapwa_wallet_item_put__logo_text(WAPWA_WalletItem *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.get_HeaderColor() */
 HRESULT wapwa_wallet_item_get__header_color(WAPWA_WalletItem *self, WUI_Color *value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.put_HeaderColor() */
 HRESULT wapwa_wallet_item_put__header_color(WAPWA_WalletItem *self, WUI_Color value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.get_BodyColor() */
 HRESULT wapwa_wallet_item_get__body_color(WAPWA_WalletItem *self, WUI_Color *value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.put_BodyColor() */
 HRESULT wapwa_wallet_item_put__body_color(WAPWA_WalletItem *self, WUI_Color value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.get_HeaderFontColor() */
 HRESULT wapwa_wallet_item_get__header_font_color(WAPWA_WalletItem *self, WUI_Color *value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.put_HeaderFontColor() */
 HRESULT wapwa_wallet_item_put__header_font_color(WAPWA_WalletItem *self, WUI_Color value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.get_BodyFontColor() */
 HRESULT wapwa_wallet_item_get__body_font_color(WAPWA_WalletItem *self, WUI_Color *value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.put_BodyFontColor() */
 HRESULT wapwa_wallet_item_put__body_font_color(WAPWA_WalletItem *self, WUI_Color value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.get_HeaderBackgroundImage() */
 HRESULT wapwa_wallet_item_get__header_background_image(WAPWA_WalletItem *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.put_HeaderBackgroundImage() */
 HRESULT wapwa_wallet_item_put__header_background_image(WAPWA_WalletItem *self, WSTST_IRandomAccessStreamReference* value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.get_BodyBackgroundImage() */
 HRESULT wapwa_wallet_item_get__body_background_image(WAPWA_WalletItem *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.put_BodyBackgroundImage() */
 HRESULT wapwa_wallet_item_put__body_background_image(WAPWA_WalletItem *self, WSTST_IRandomAccessStreamReference* value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.get_LogoImage() */
 HRESULT wapwa_wallet_item_get__logo_image(WAPWA_WalletItem *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.put_LogoImage() */
 HRESULT wapwa_wallet_item_put__logo_image(WAPWA_WalletItem *self, WSTST_IRandomAccessStreamReference* value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.get_PromotionalImage() */
 HRESULT wapwa_wallet_item_get__promotional_image(WAPWA_WalletItem *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.put_PromotionalImage() */
 HRESULT wapwa_wallet_item_put__promotional_image(WAPWA_WalletItem *self, WSTST_IRandomAccessStreamReference* value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.get_RelevantDate() */
 HRESULT wapwa_wallet_item_get__relevant_date(WAPWA_WalletItem *self, WF_DateTime** value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.put_RelevantDate() */
 HRESULT wapwa_wallet_item_put__relevant_date(WAPWA_WalletItem *self, WF_DateTime* value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.get_RelevantDateDisplayMessage() */
 HRESULT wapwa_wallet_item_get__relevant_date_display_message(WAPWA_WalletItem *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.put_RelevantDateDisplayMessage() */
 HRESULT wapwa_wallet_item_put__relevant_date_display_message(WAPWA_WalletItem *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.get_TransactionHistory() */
 HRESULT wapwa_wallet_item_get__transaction_history(WAPWA_WalletItem *self, WFOCO_IMap_HSTRING_WAPWA_WalletTransaction** value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.get_RelevantLocations() */
 HRESULT wapwa_wallet_item_get__relevant_locations(WAPWA_WalletItem *self, WFOCO_IMap_HSTRING_WAPWA_WalletRelevantLocation** value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.get_IsMoreTransactionHistoryLaunchable() */
 HRESULT wapwa_wallet_item_get__is_more_transaction_history_launchable(WAPWA_WalletItem *self, BOOL *value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.put_IsMoreTransactionHistoryLaunchable() */
 HRESULT wapwa_wallet_item_put__is_more_transaction_history_launchable(WAPWA_WalletItem *self, BOOL value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.get_DisplayProperties() */
 HRESULT wapwa_wallet_item_get__display_properties(WAPWA_WalletItem *self, WFOCO_IMap_HSTRING_WAPWA_WalletItemCustomProperty** value);
 
-/* Windows.ApplicationModel.Wallet.WalletItem.get_Verbs() */
 HRESULT wapwa_wallet_item_get__verbs(WAPWA_WalletItem *self, WFOCO_IMap_HSTRING_WAPWA_WalletVerb** value);
 
-/* activate Windows.ApplicationModel.Wallet.WalletItemCustomProperty */
 HRESULT wapwa_wallet_item_custom_property_new(WAPWA_WalletItemCustomProperty **out);
 
-/* Windows.ApplicationModel.Wallet.WalletItemCustomProperty */
-/* Windows.ApplicationModel.Wallet.WalletItemCustomProperty.get_Name() */
 HRESULT wapwa_wallet_item_custom_property_get__name(WAPWA_WalletItemCustomProperty *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Wallet.WalletItemCustomProperty.put_Name() */
 HRESULT wapwa_wallet_item_custom_property_put__name(WAPWA_WalletItemCustomProperty *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Wallet.WalletItemCustomProperty.get_Value() */
 HRESULT wapwa_wallet_item_custom_property_get__value(WAPWA_WalletItemCustomProperty *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Wallet.WalletItemCustomProperty.put_Value() */
 HRESULT wapwa_wallet_item_custom_property_put__value(WAPWA_WalletItemCustomProperty *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Wallet.WalletItemCustomProperty.get_AutoDetectLinks() */
 HRESULT wapwa_wallet_item_custom_property_get__auto_detect_links(WAPWA_WalletItemCustomProperty *self, BOOL *value);
 
-/* Windows.ApplicationModel.Wallet.WalletItemCustomProperty.put_AutoDetectLinks() */
 HRESULT wapwa_wallet_item_custom_property_put__auto_detect_links(WAPWA_WalletItemCustomProperty *self, BOOL value);
 
-/* Windows.ApplicationModel.Wallet.WalletItemCustomProperty.get_DetailViewPosition() */
 HRESULT wapwa_wallet_item_custom_property_get__detail_view_position(WAPWA_WalletItemCustomProperty *self, WAPWA_WalletDetailViewPosition *value);
 
-/* Windows.ApplicationModel.Wallet.WalletItemCustomProperty.put_DetailViewPosition() */
 HRESULT wapwa_wallet_item_custom_property_put__detail_view_position(WAPWA_WalletItemCustomProperty *self, WAPWA_WalletDetailViewPosition value);
 
-/* Windows.ApplicationModel.Wallet.WalletItemCustomProperty.get_SummaryViewPosition() */
 HRESULT wapwa_wallet_item_custom_property_get__summary_view_position(WAPWA_WalletItemCustomProperty *self, WAPWA_WalletSummaryViewPosition *value);
 
-/* Windows.ApplicationModel.Wallet.WalletItemCustomProperty.put_SummaryViewPosition() */
 HRESULT wapwa_wallet_item_custom_property_put__summary_view_position(WAPWA_WalletItemCustomProperty *self, WAPWA_WalletSummaryViewPosition value);
 
-/* Windows.ApplicationModel.Wallet.IWalletTransaction */
-/* Windows.ApplicationModel.Wallet.IWalletRelevantLocation */
-/* Windows.ApplicationModel.Wallet.IWalletVerb */
-/* Windows.ApplicationModel.Wallet.IWalletItemStore */
-/* Windows.ApplicationModel.Wallet.IWalletBarcode */
-/* Windows.ApplicationModel.Wallet.IWalletItem */
-/* Windows.ApplicationModel.Wallet.IWalletItemCustomProperty */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_WALLET_H */

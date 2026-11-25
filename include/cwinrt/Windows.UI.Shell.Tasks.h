@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WUISHTA_IAppTaskResultAssetFactory WUISHTA_IAppTaskResultAssetFactory;
 typedef struct WUISHTA_IAppTaskInfoStatics WUISHTA_IAppTaskInfoStatics;
 typedef struct WUISHTA_IAppTaskContentStatics WUISHTA_IAppTaskContentStatics;
@@ -24,7 +23,6 @@ typedef struct WUISHTA_IAppTaskContent WUISHTA_IAppTaskContent;
 typedef struct WUISHTA_IAppTaskInfo WUISHTA_IAppTaskInfo;
 typedef struct WUISHTA_IAppTaskInfo_2 WUISHTA_IAppTaskInfo_2;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_Uri
 #define CWINRT_FWD_WF_Uri
 typedef struct WF_Uri WF_Uri;
@@ -45,7 +43,6 @@ typedef enum WUISHTA_AppTaskState {
 } WUISHTA_AppTaskState;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -78,137 +75,86 @@ static const IID CWINRT_IID_WUISHTA_IAppTaskInfo CWINRT_MAYBE_UNUSED = { 0x6720E
 static const IID CWINRT_IID_WUISHTA_IAppTaskInfo_2 CWINRT_MAYBE_UNUSED = { 0xAD724D71, 0xF137, 0x51C0, { 0x81, 0x11, 0x35, 0x52, 0x43, 0x6B, 0xF4, 0x47 } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.Shell.Tasks.IAppTaskResultAssetFactory */
-/* Windows.UI.Shell.Tasks.IAppTaskResultAssetFactory.CreateInstance(name, context, iconUri, assetUri) */
 HRESULT wuishta_app_task_result_asset_factory_create_instance(WUISHTA_IAppTaskResultAssetFactory *self, cwinrt_hstring name, cwinrt_hstring context, WF_Uri* iconUri, WF_Uri* assetUri, WUISHTA_AppTaskResultAsset** out);
 
-/* Windows.UI.Shell.Tasks.IAppTaskInfoStatics */
-/* Windows.UI.Shell.Tasks.IAppTaskInfoStatics.IsSupported() */
 HRESULT wuishta_app_task_info_statics_is_supported(WUISHTA_IAppTaskInfoStatics *self, BOOL *out);
 
-/* Windows.UI.Shell.Tasks.IAppTaskInfoStatics.FindAll() */
 HRESULT wuishta_app_task_info_statics_find_all(WUISHTA_IAppTaskInfoStatics *self, WUISHTA_AppTaskInfo **out, uint32_t *out_len);
 
-/* Windows.UI.Shell.Tasks.IAppTaskInfoStatics.Create(title, subtitle, deepLink, iconUri, content) */
 HRESULT wuishta_app_task_info_statics_create(WUISHTA_IAppTaskInfoStatics *self, cwinrt_hstring title, cwinrt_hstring subtitle, WF_Uri* deepLink, WF_Uri* iconUri, WUISHTA_AppTaskContent* content, WUISHTA_AppTaskInfo** out);
 
-/* Windows.UI.Shell.Tasks.IAppTaskContentStatics */
-/* Windows.UI.Shell.Tasks.IAppTaskContentStatics.CreateSequenceOfSteps(completedSteps, executingStep) */
 HRESULT wuishta_app_task_content_statics_create_sequence_of_steps(WUISHTA_IAppTaskContentStatics *self, cwinrt_hstring *completedSteps, uint32_t completedSteps_len, cwinrt_hstring executingStep, WUISHTA_AppTaskContent** out);
 
-/* Windows.UI.Shell.Tasks.IAppTaskContentStatics.CreatePreviewThumbnail(imageUri, executingStep) */
 HRESULT wuishta_app_task_content_statics_create_preview_thumbnail(WUISHTA_IAppTaskContentStatics *self, WF_Uri* imageUri, cwinrt_hstring executingStep, WUISHTA_AppTaskContent** out);
 
-/* Windows.UI.Shell.Tasks.IAppTaskContentStatics.CreateTextSummaryResult(text) */
 HRESULT wuishta_app_task_content_statics_create_text_summary_result(WUISHTA_IAppTaskContentStatics *self, cwinrt_hstring text, WUISHTA_AppTaskContent** out);
 
-/* Windows.UI.Shell.Tasks.IAppTaskContentStatics.CreateGeneratedAssetsResult(assets) */
 HRESULT wuishta_app_task_content_statics_create_generated_assets_result(WUISHTA_IAppTaskContentStatics *self, WUISHTA_AppTaskResultAsset *assets, uint32_t assets_len, WUISHTA_AppTaskContent** out);
 
-/* Windows.UI.Shell.Tasks.IAppTaskContentStatics.get_MaxButtons() */
 HRESULT wuishta_app_task_content_statics_get__max_buttons(WUISHTA_IAppTaskContentStatics *self, uint32_t *value);
 
-/* activate Windows.UI.Shell.Tasks.AppTaskContent */
 HRESULT wuishta_app_task_content_new(WUISHTA_AppTaskContent **out);
 
-/* Windows.UI.Shell.Tasks.AppTaskContent */
-/* Windows.UI.Shell.Tasks.AppTaskContent.AddButton(text, actionUri) */
 HRESULT wuishta_app_task_content_add_button(WUISHTA_AppTaskContent *self, cwinrt_hstring text, WF_Uri* actionUri);
 
-/* Windows.UI.Shell.Tasks.AppTaskContent.SetTextInput(placeholderText, actionUriTemplate) */
 HRESULT wuishta_app_task_content_set_text_input(WUISHTA_AppTaskContent *self, cwinrt_hstring placeholderText, cwinrt_hstring actionUriTemplate);
 
-/* Windows.UI.Shell.Tasks.AppTaskContent.SetQuestion(question) */
 HRESULT wuishta_app_task_content_set_question(WUISHTA_AppTaskContent *self, cwinrt_hstring question);
 
-/* Windows.UI.Shell.Tasks.AppTaskContent.CreateSequenceOfSteps(completedSteps, executingStep) */
 HRESULT wuishta_app_task_content_create_sequence_of_steps(cwinrt_hstring *completedSteps, uint32_t completedSteps_len, cwinrt_hstring executingStep, WUISHTA_AppTaskContent** out);
 
-/* Windows.UI.Shell.Tasks.AppTaskContent.CreatePreviewThumbnail(imageUri, executingStep) */
 HRESULT wuishta_app_task_content_create_preview_thumbnail(WF_Uri* imageUri, cwinrt_hstring executingStep, WUISHTA_AppTaskContent** out);
 
-/* Windows.UI.Shell.Tasks.AppTaskContent.CreateTextSummaryResult(text) */
 HRESULT wuishta_app_task_content_create_text_summary_result(cwinrt_hstring text, WUISHTA_AppTaskContent** out);
 
-/* Windows.UI.Shell.Tasks.AppTaskContent.CreateGeneratedAssetsResult(assets) */
 HRESULT wuishta_app_task_content_create_generated_assets_result(WUISHTA_AppTaskResultAsset *assets, uint32_t assets_len, WUISHTA_AppTaskContent** out);
 
-/* Windows.UI.Shell.Tasks.AppTaskContent.get_MaxButtons() */
 HRESULT wuishta_app_task_content_get__max_buttons(uint32_t *value);
 
-/* activate Windows.UI.Shell.Tasks.AppTaskInfo */
 HRESULT wuishta_app_task_info_new(WUISHTA_AppTaskInfo **out);
 
-/* Windows.UI.Shell.Tasks.AppTaskInfo */
-/* Windows.UI.Shell.Tasks.AppTaskInfo.Remove() */
 HRESULT wuishta_app_task_info_remove(WUISHTA_AppTaskInfo *self);
 
-/* Windows.UI.Shell.Tasks.AppTaskInfo.Update(state, content) */
 HRESULT wuishta_app_task_info_update(WUISHTA_AppTaskInfo *self, WUISHTA_AppTaskState state, WUISHTA_AppTaskContent* content);
 
-/* Windows.UI.Shell.Tasks.AppTaskInfo.UpdateState(state) */
 HRESULT wuishta_app_task_info_update_state(WUISHTA_AppTaskInfo *self, WUISHTA_AppTaskState state);
 
-/* Windows.UI.Shell.Tasks.AppTaskInfo.UpdateTitles(title, subtitle) */
 HRESULT wuishta_app_task_info_update_titles(WUISHTA_AppTaskInfo *self, cwinrt_hstring title, cwinrt_hstring subtitle);
 
-/* Windows.UI.Shell.Tasks.AppTaskInfo.GetCompletedSteps() */
 HRESULT wuishta_app_task_info_get_completed_steps(WUISHTA_AppTaskInfo *self, cwinrt_hstring **out, uint32_t *out_len);
 
-/* Windows.UI.Shell.Tasks.AppTaskInfo.GetExecutingStep() */
 HRESULT wuishta_app_task_info_get_executing_step(WUISHTA_AppTaskInfo *self, cwinrt_hstring *out);
 
-/* Windows.UI.Shell.Tasks.AppTaskInfo.get_Title() */
 HRESULT wuishta_app_task_info_get__title(WUISHTA_AppTaskInfo *self, cwinrt_hstring *value);
 
-/* Windows.UI.Shell.Tasks.AppTaskInfo.get_Subtitle() */
 HRESULT wuishta_app_task_info_get__subtitle(WUISHTA_AppTaskInfo *self, cwinrt_hstring *value);
 
-/* Windows.UI.Shell.Tasks.AppTaskInfo.get_DeepLink() */
 HRESULT wuishta_app_task_info_get__deep_link(WUISHTA_AppTaskInfo *self, WF_Uri** value);
 
-/* Windows.UI.Shell.Tasks.AppTaskInfo.get_IconUri() */
 HRESULT wuishta_app_task_info_get__icon_uri(WUISHTA_AppTaskInfo *self, WF_Uri** value);
 
-/* Windows.UI.Shell.Tasks.AppTaskInfo.get_State() */
 HRESULT wuishta_app_task_info_get__state(WUISHTA_AppTaskInfo *self, WUISHTA_AppTaskState *value);
 
-/* Windows.UI.Shell.Tasks.AppTaskInfo.get_StartTime() */
 HRESULT wuishta_app_task_info_get__start_time(WUISHTA_AppTaskInfo *self, WF_DateTime *value);
 
-/* Windows.UI.Shell.Tasks.AppTaskInfo.get_EndTime() */
 HRESULT wuishta_app_task_info_get__end_time(WUISHTA_AppTaskInfo *self, WF_DateTime** value);
 
-/* Windows.UI.Shell.Tasks.AppTaskInfo.get_Id() */
 HRESULT wuishta_app_task_info_get__id(WUISHTA_AppTaskInfo *self, cwinrt_hstring *value);
 
-/* Windows.UI.Shell.Tasks.AppTaskInfo.get_HiddenByUser() */
 HRESULT wuishta_app_task_info_get__hidden_by_user(WUISHTA_AppTaskInfo *self, BOOL *value);
 
-/* Windows.UI.Shell.Tasks.AppTaskInfo.UpdateDeepLink(deepLink) */
 HRESULT wuishta_app_task_info_update_deep_link(WUISHTA_AppTaskInfo *self, WF_Uri* deepLink);
 
-/* Windows.UI.Shell.Tasks.AppTaskInfo.IsSupported() */
 HRESULT wuishta_app_task_info_is_supported(BOOL *out);
 
-/* Windows.UI.Shell.Tasks.AppTaskInfo.FindAll() */
 HRESULT wuishta_app_task_info_find_all(WUISHTA_AppTaskInfo **out, uint32_t *out_len);
 
-/* Windows.UI.Shell.Tasks.AppTaskInfo.Create(title, subtitle, deepLink, iconUri, content) */
 HRESULT wuishta_app_task_info_create(cwinrt_hstring title, cwinrt_hstring subtitle, WF_Uri* deepLink, WF_Uri* iconUri, WUISHTA_AppTaskContent* content, WUISHTA_AppTaskInfo** out);
 
-/* Windows.UI.Shell.Tasks.IAppTaskContent */
-/* Windows.UI.Shell.Tasks.IAppTaskInfo */
-/* Windows.UI.Shell.Tasks.IAppTaskInfo2 */
-/* Windows.UI.Shell.Tasks.IAppTaskInfo2.get_Id() */
 HRESULT wuishta_app_task_info_2_get__id(WUISHTA_IAppTaskInfo_2 *self, cwinrt_hstring *value);
 
-/* Windows.UI.Shell.Tasks.IAppTaskInfo2.get_HiddenByUser() */
 HRESULT wuishta_app_task_info_2_get__hidden_by_user(WUISHTA_IAppTaskInfo_2 *self, BOOL *value);
 
-/* Windows.UI.Shell.Tasks.IAppTaskInfo2.UpdateDeepLink(deepLink) */
 HRESULT wuishta_app_task_info_2_update_deep_link(WUISHTA_IAppTaskInfo_2 *self, WF_Uri* deepLink);
 
 #endif /* CWINRT_WINDOWS_UI_SHELL_TASKS_H */

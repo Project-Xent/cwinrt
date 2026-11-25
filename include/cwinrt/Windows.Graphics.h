@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WG_IGeometrySource2D WG_IGeometrySource2D;
 
 #ifndef CWINRT_FWD_WG_RectInt_32
@@ -76,7 +75,6 @@ struct WG_PointInt_32 {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -84,7 +82,5 @@ struct WG_PointInt_32 {
 #define CWINRT_IIDDEF_WG_IGeometrySource2D
 static const IID CWINRT_IID_WG_IGeometrySource2D CWINRT_MAYBE_UNUSED = { 0xCAFF7902, 0x670C, 0x4181, { 0xA6, 0x24, 0xDA, 0x97, 0x72, 0x03, 0xB8, 0x45 } };
 #endif
-
-/* Methods */
 
 #endif /* CWINRT_WINDOWS_GRAPHICS_H */

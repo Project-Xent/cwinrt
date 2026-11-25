@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Devices.Bluetooth.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WDBA_BluetoothLEAdvertisementPublisherStatus
 #define CWINRT_FWD_WDBA_BluetoothLEAdvertisementPublisherStatus
 typedef enum WDBA_BluetoothLEAdvertisementPublisherStatus {
@@ -59,7 +58,6 @@ typedef struct WNESO_StreamSocket WNESO_StreamSocket;
 typedef struct WDEBLRF_RfcommServiceId WDEBLRF_RfcommServiceId;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDEBLBA_BluetoothLEAdvertisementPublisherTriggerDetails WDEBLBA_BluetoothLEAdvertisementPublisherTriggerDetails;
 typedef struct WDEBLBA_BluetoothLEAdvertisementWatcherTriggerDetails WDEBLBA_BluetoothLEAdvertisementWatcherTriggerDetails;
 typedef struct WDEBLBA_GattCharacteristicNotificationTriggerDetails WDEBLBA_GattCharacteristicNotificationTriggerDetails;
@@ -81,7 +79,6 @@ typedef struct WDEBLBA_IRfcommConnectionTriggerDetails WDEBLBA_IRfcommConnection
 typedef struct WDEBLBA_IRfcommInboundConnectionInformation WDEBLBA_IRfcommInboundConnectionInformation;
 typedef struct WDEBLBA_IRfcommOutboundConnectionInformation WDEBLBA_IRfcommOutboundConnectionInformation;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WDBA_BluetoothLEAdvertisementPublisherStatus
 #define CWINRT_FWD_WDBA_BluetoothLEAdvertisementPublisherStatus
 typedef enum WDBA_BluetoothLEAdvertisementPublisherStatus {
@@ -180,7 +177,6 @@ typedef enum WDEBLBA_BluetoothEventTriggeringMode {
 } WDEBLBA_BluetoothEventTriggeringMode;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -233,152 +229,88 @@ static const IID CWINRT_IID_WDEBLBA_IRfcommInboundConnectionInformation CWINRT_M
 static const IID CWINRT_IID_WDEBLBA_IRfcommOutboundConnectionInformation CWINRT_MAYBE_UNUSED = { 0xB091227B, 0xF434, 0x4CB0, { 0x99, 0xB1, 0x4A, 0xB8, 0xCE, 0xDA, 0xED, 0xD7 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Devices.Bluetooth.Background.BluetoothLEAdvertisementPublisherTriggerDetails */
 HRESULT wdeblba_bluetooth_l_e_advertisement_publisher_trigger_details_new(WDEBLBA_BluetoothLEAdvertisementPublisherTriggerDetails **out);
 
-/* Windows.Devices.Bluetooth.Background.BluetoothLEAdvertisementPublisherTriggerDetails */
-/* Windows.Devices.Bluetooth.Background.BluetoothLEAdvertisementPublisherTriggerDetails.get_Status() */
 HRESULT wdeblba_bluetooth_l_e_advertisement_publisher_trigger_details_get__status(WDEBLBA_BluetoothLEAdvertisementPublisherTriggerDetails *self, WDBA_BluetoothLEAdvertisementPublisherStatus *value);
 
-/* Windows.Devices.Bluetooth.Background.BluetoothLEAdvertisementPublisherTriggerDetails.get_Error() */
 HRESULT wdeblba_bluetooth_l_e_advertisement_publisher_trigger_details_get__error(WDEBLBA_BluetoothLEAdvertisementPublisherTriggerDetails *self, WDEBL_BluetoothError *value);
 
-/* Windows.Devices.Bluetooth.Background.BluetoothLEAdvertisementPublisherTriggerDetails.get_SelectedTransmitPowerLevelInDBm() */
 HRESULT wdeblba_bluetooth_l_e_advertisement_publisher_trigger_details_get__selected_transmit_power_level_in_d_bm(WDEBLBA_BluetoothLEAdvertisementPublisherTriggerDetails *self, int16_t** value);
 
-/* activate Windows.Devices.Bluetooth.Background.BluetoothLEAdvertisementWatcherTriggerDetails */
 HRESULT wdeblba_bluetooth_l_e_advertisement_watcher_trigger_details_new(WDEBLBA_BluetoothLEAdvertisementWatcherTriggerDetails **out);
 
-/* Windows.Devices.Bluetooth.Background.BluetoothLEAdvertisementWatcherTriggerDetails */
-/* Windows.Devices.Bluetooth.Background.BluetoothLEAdvertisementWatcherTriggerDetails.get_Error() */
 HRESULT wdeblba_bluetooth_l_e_advertisement_watcher_trigger_details_get__error(WDEBLBA_BluetoothLEAdvertisementWatcherTriggerDetails *self, WDEBL_BluetoothError *value);
 
-/* Windows.Devices.Bluetooth.Background.BluetoothLEAdvertisementWatcherTriggerDetails.get_Advertisements() */
 HRESULT wdeblba_bluetooth_l_e_advertisement_watcher_trigger_details_get__advertisements(WDEBLBA_BluetoothLEAdvertisementWatcherTriggerDetails *self, WFOCO_IVectorView_WDBA_BluetoothLEAdvertisementReceivedEventArgs** value);
 
-/* Windows.Devices.Bluetooth.Background.BluetoothLEAdvertisementWatcherTriggerDetails.get_SignalStrengthFilter() */
 HRESULT wdeblba_bluetooth_l_e_advertisement_watcher_trigger_details_get__signal_strength_filter(WDEBLBA_BluetoothLEAdvertisementWatcherTriggerDetails *self, WDEBL_BluetoothSignalStrengthFilter** value);
 
-/* activate Windows.Devices.Bluetooth.Background.GattCharacteristicNotificationTriggerDetails */
 HRESULT wdeblba_gatt_characteristic_notification_trigger_details_new(WDEBLBA_GattCharacteristicNotificationTriggerDetails **out);
 
-/* Windows.Devices.Bluetooth.Background.GattCharacteristicNotificationTriggerDetails */
-/* Windows.Devices.Bluetooth.Background.GattCharacteristicNotificationTriggerDetails.get_Characteristic() */
 HRESULT wdeblba_gatt_characteristic_notification_trigger_details_get__characteristic(WDEBLBA_GattCharacteristicNotificationTriggerDetails *self, WDEBLGE_GattCharacteristic** value);
 
-/* Windows.Devices.Bluetooth.Background.GattCharacteristicNotificationTriggerDetails.get_Value() */
 HRESULT wdeblba_gatt_characteristic_notification_trigger_details_get__value(WDEBLBA_GattCharacteristicNotificationTriggerDetails *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.Bluetooth.Background.GattCharacteristicNotificationTriggerDetails.get_Error() */
 HRESULT wdeblba_gatt_characteristic_notification_trigger_details_get__error(WDEBLBA_GattCharacteristicNotificationTriggerDetails *self, WDEBL_BluetoothError *value);
 
-/* Windows.Devices.Bluetooth.Background.GattCharacteristicNotificationTriggerDetails.get_EventTriggeringMode() */
 HRESULT wdeblba_gatt_characteristic_notification_trigger_details_get__event_triggering_mode(WDEBLBA_GattCharacteristicNotificationTriggerDetails *self, WDEBLBA_BluetoothEventTriggeringMode *value);
 
-/* Windows.Devices.Bluetooth.Background.GattCharacteristicNotificationTriggerDetails.get_ValueChangedEvents() */
 HRESULT wdeblba_gatt_characteristic_notification_trigger_details_get__value_changed_events(WDEBLBA_GattCharacteristicNotificationTriggerDetails *self, WFOCO_IVectorView_WDEBLGE_GattValueChangedEventArgs** value);
 
-/* activate Windows.Devices.Bluetooth.Background.GattServiceProviderConnection */
 HRESULT wdeblba_gatt_service_provider_connection_new(WDEBLBA_GattServiceProviderConnection **out);
 
-/* Windows.Devices.Bluetooth.Background.GattServiceProviderConnection */
-/* Windows.Devices.Bluetooth.Background.GattServiceProviderConnection.get_TriggerId() */
 HRESULT wdeblba_gatt_service_provider_connection_get__trigger_id(WDEBLBA_GattServiceProviderConnection *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Bluetooth.Background.GattServiceProviderConnection.get_Service() */
 HRESULT wdeblba_gatt_service_provider_connection_get__service(WDEBLBA_GattServiceProviderConnection *self, WDEBLGE_GattLocalService** value);
 
-/* Windows.Devices.Bluetooth.Background.GattServiceProviderConnection.Start() */
 HRESULT wdeblba_gatt_service_provider_connection_start(WDEBLBA_GattServiceProviderConnection *self);
 
-/* Windows.Devices.Bluetooth.Background.GattServiceProviderConnection.UpdateAdvertisingParameters(parameters) */
 HRESULT wdeblba_gatt_service_provider_connection_update_advertising_parameters(WDEBLBA_GattServiceProviderConnection *self, WDEBLGE_GattServiceProviderAdvertisingParameters* parameters);
 
-/* Windows.Devices.Bluetooth.Background.GattServiceProviderConnection.get_AllServices() */
 HRESULT wdeblba_gatt_service_provider_connection_get__all_services(WFOCO_IMapView_HSTRING_WDEBLBA_GattServiceProviderConnection** value);
 
-/* activate Windows.Devices.Bluetooth.Background.GattServiceProviderTriggerDetails */
 HRESULT wdeblba_gatt_service_provider_trigger_details_new(WDEBLBA_GattServiceProviderTriggerDetails **out);
 
-/* Windows.Devices.Bluetooth.Background.GattServiceProviderTriggerDetails */
-/* Windows.Devices.Bluetooth.Background.GattServiceProviderTriggerDetails.get_Connection() */
 HRESULT wdeblba_gatt_service_provider_trigger_details_get__connection(WDEBLBA_GattServiceProviderTriggerDetails *self, WDEBLBA_GattServiceProviderConnection** value);
 
-/* Windows.Devices.Bluetooth.Background.IGattServiceProviderConnectionStatics */
-/* Windows.Devices.Bluetooth.Background.IGattServiceProviderConnectionStatics.get_AllServices() */
 HRESULT wdeblba_gatt_service_provider_connection_statics_get__all_services(WDEBLBA_IGattServiceProviderConnectionStatics *self, WFOCO_IMapView_HSTRING_WDEBLBA_GattServiceProviderConnection** value);
 
-/* activate Windows.Devices.Bluetooth.Background.RfcommConnectionTriggerDetails */
 HRESULT wdeblba_rfcomm_connection_trigger_details_new(WDEBLBA_RfcommConnectionTriggerDetails **out);
 
-/* Windows.Devices.Bluetooth.Background.RfcommConnectionTriggerDetails */
-/* Windows.Devices.Bluetooth.Background.RfcommConnectionTriggerDetails.get_Socket() */
 HRESULT wdeblba_rfcomm_connection_trigger_details_get__socket(WDEBLBA_RfcommConnectionTriggerDetails *self, WNESO_StreamSocket** value);
 
-/* Windows.Devices.Bluetooth.Background.RfcommConnectionTriggerDetails.get_Incoming() */
 HRESULT wdeblba_rfcomm_connection_trigger_details_get__incoming(WDEBLBA_RfcommConnectionTriggerDetails *self, BOOL *value);
 
-/* Windows.Devices.Bluetooth.Background.RfcommConnectionTriggerDetails.get_RemoteDevice() */
 HRESULT wdeblba_rfcomm_connection_trigger_details_get__remote_device(WDEBLBA_RfcommConnectionTriggerDetails *self, WDEBL_BluetoothDevice** value);
 
-/* activate Windows.Devices.Bluetooth.Background.RfcommInboundConnectionInformation */
 HRESULT wdeblba_rfcomm_inbound_connection_information_new(WDEBLBA_RfcommInboundConnectionInformation **out);
 
-/* Windows.Devices.Bluetooth.Background.RfcommInboundConnectionInformation */
-/* Windows.Devices.Bluetooth.Background.RfcommInboundConnectionInformation.get_SdpRecord() */
 HRESULT wdeblba_rfcomm_inbound_connection_information_get__sdp_record(WDEBLBA_RfcommInboundConnectionInformation *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.Bluetooth.Background.RfcommInboundConnectionInformation.put_SdpRecord() */
 HRESULT wdeblba_rfcomm_inbound_connection_information_put__sdp_record(WDEBLBA_RfcommInboundConnectionInformation *self, WSTST_IBuffer* value);
 
-/* Windows.Devices.Bluetooth.Background.RfcommInboundConnectionInformation.get_LocalServiceId() */
 HRESULT wdeblba_rfcomm_inbound_connection_information_get__local_service_id(WDEBLBA_RfcommInboundConnectionInformation *self, WDEBLRF_RfcommServiceId** value);
 
-/* Windows.Devices.Bluetooth.Background.RfcommInboundConnectionInformation.put_LocalServiceId() */
 HRESULT wdeblba_rfcomm_inbound_connection_information_put__local_service_id(WDEBLBA_RfcommInboundConnectionInformation *self, WDEBLRF_RfcommServiceId* value);
 
-/* Windows.Devices.Bluetooth.Background.RfcommInboundConnectionInformation.get_ServiceCapabilities() */
 HRESULT wdeblba_rfcomm_inbound_connection_information_get__service_capabilities(WDEBLBA_RfcommInboundConnectionInformation *self, WDEBL_BluetoothServiceCapabilities *value);
 
-/* Windows.Devices.Bluetooth.Background.RfcommInboundConnectionInformation.put_ServiceCapabilities() */
 HRESULT wdeblba_rfcomm_inbound_connection_information_put__service_capabilities(WDEBLBA_RfcommInboundConnectionInformation *self, WDEBL_BluetoothServiceCapabilities value);
 
-/* activate Windows.Devices.Bluetooth.Background.RfcommOutboundConnectionInformation */
 HRESULT wdeblba_rfcomm_outbound_connection_information_new(WDEBLBA_RfcommOutboundConnectionInformation **out);
 
-/* Windows.Devices.Bluetooth.Background.RfcommOutboundConnectionInformation */
-/* Windows.Devices.Bluetooth.Background.RfcommOutboundConnectionInformation.get_RemoteServiceId() */
 HRESULT wdeblba_rfcomm_outbound_connection_information_get__remote_service_id(WDEBLBA_RfcommOutboundConnectionInformation *self, WDEBLRF_RfcommServiceId** value);
 
-/* Windows.Devices.Bluetooth.Background.RfcommOutboundConnectionInformation.put_RemoteServiceId() */
 HRESULT wdeblba_rfcomm_outbound_connection_information_put__remote_service_id(WDEBLBA_RfcommOutboundConnectionInformation *self, WDEBLRF_RfcommServiceId* value);
 
-/* Windows.Devices.Bluetooth.Background.IBluetoothLEAdvertisementPublisherTriggerDetails */
-/* Windows.Devices.Bluetooth.Background.IBluetoothLEAdvertisementPublisherTriggerDetails2 */
-/* Windows.Devices.Bluetooth.Background.IBluetoothLEAdvertisementPublisherTriggerDetails2.get_SelectedTransmitPowerLevelInDBm() */
 HRESULT wdeblba_bluetooth_l_e_advertisement_publisher_trigger_details_2_get__selected_transmit_power_level_in_d_bm(WDEBLBA_IBluetoothLEAdvertisementPublisherTriggerDetails_2 *self, int16_t** value);
 
-/* Windows.Devices.Bluetooth.Background.IBluetoothLEAdvertisementWatcherTriggerDetails */
-/* Windows.Devices.Bluetooth.Background.IGattCharacteristicNotificationTriggerDetails */
-/* Windows.Devices.Bluetooth.Background.IGattCharacteristicNotificationTriggerDetails2 */
-/* Windows.Devices.Bluetooth.Background.IGattCharacteristicNotificationTriggerDetails2.get_Error() */
 HRESULT wdeblba_gatt_characteristic_notification_trigger_details_2_get__error(WDEBLBA_IGattCharacteristicNotificationTriggerDetails_2 *self, WDEBL_BluetoothError *value);
 
-/* Windows.Devices.Bluetooth.Background.IGattCharacteristicNotificationTriggerDetails2.get_EventTriggeringMode() */
 HRESULT wdeblba_gatt_characteristic_notification_trigger_details_2_get__event_triggering_mode(WDEBLBA_IGattCharacteristicNotificationTriggerDetails_2 *self, WDEBLBA_BluetoothEventTriggeringMode *value);
 
-/* Windows.Devices.Bluetooth.Background.IGattCharacteristicNotificationTriggerDetails2.get_ValueChangedEvents() */
 HRESULT wdeblba_gatt_characteristic_notification_trigger_details_2_get__value_changed_events(WDEBLBA_IGattCharacteristicNotificationTriggerDetails_2 *self, WFOCO_IVectorView_WDEBLGE_GattValueChangedEventArgs** value);
 
-/* Windows.Devices.Bluetooth.Background.IGattServiceProviderConnection */
-/* Windows.Devices.Bluetooth.Background.IGattServiceProviderConnection2 */
-/* Windows.Devices.Bluetooth.Background.IGattServiceProviderConnection2.UpdateAdvertisingParameters(parameters) */
 HRESULT wdeblba_gatt_service_provider_connection_2_update_advertising_parameters(WDEBLBA_IGattServiceProviderConnection_2 *self, WDEBLGE_GattServiceProviderAdvertisingParameters* parameters);
 
-/* Windows.Devices.Bluetooth.Background.IGattServiceProviderTriggerDetails */
-/* Windows.Devices.Bluetooth.Background.IRfcommConnectionTriggerDetails */
-/* Windows.Devices.Bluetooth.Background.IRfcommInboundConnectionInformation */
-/* Windows.Devices.Bluetooth.Background.IRfcommOutboundConnectionInformation */
 #endif /* CWINRT_WINDOWS_DEVICES_BLUETOOTH_BACKGROUND_H */

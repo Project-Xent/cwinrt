@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WDEIN_PointerDeviceType
 #define CWINRT_FWD_WDEIN_PointerDeviceType
 typedef enum WDEIN_PointerDeviceType {
@@ -48,7 +47,6 @@ typedef struct WSY_DispatcherQueue WSY_DispatcherQueue;
 typedef struct WUICO_PointerEventArgs WUICO_PointerEventArgs;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUIIN_TouchpadGlobalActionEventArgs WUIIN_TouchpadGlobalActionEventArgs;
 typedef struct WUIIN_CrossSlidingEventArgs WUIIN_CrossSlidingEventArgs;
 typedef struct WUIIN_DraggingEventArgs WUIIN_DraggingEventArgs;
@@ -164,7 +162,6 @@ typedef struct WUIIN_IKeyboardDeliveryInterceptor WUIIN_IKeyboardDeliveryInterce
 typedef struct WUIIN_IInputActivationListenerActivationChangedEventArgs WUIIN_IInputActivationListenerActivationChangedEventArgs;
 typedef struct WUIIN_IInputActivationListener WUIIN_IInputActivationListener;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WDEIN_PointerDevice
 #define CWINRT_FWD_WDEIN_PointerDevice
 typedef struct WDEIN_PointerDevice WDEIN_PointerDevice;
@@ -536,7 +533,6 @@ struct WUIIN_ManipulationDelta {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -833,58 +829,36 @@ static const IID CWINRT_IID_WUIIN_IInputActivationListenerActivationChangedEvent
 static const IID CWINRT_IID_WUIIN_IInputActivationListener CWINRT_MAYBE_UNUSED = { 0x5D6D4ED2, 0x28C7, 0x5AE3, { 0xAA, 0x74, 0xC9, 0x18, 0xA9, 0xF2, 0x43, 0xCA } };
 #endif
 
-/* Methods */
-
-/* activate Windows.UI.Input.TouchpadGlobalActionEventArgs */
 HRESULT wuiin_touchpad_global_action_event_args_new(WUIIN_TouchpadGlobalActionEventArgs **out);
 
-/* Windows.UI.Input.TouchpadGlobalActionEventArgs */
-/* Windows.UI.Input.TouchpadGlobalActionEventArgs.get_Action() */
 HRESULT wuiin_touchpad_global_action_event_args_get__action(WUIIN_TouchpadGlobalActionEventArgs *self, WUIIN_TouchpadGlobalAction *value);
 
-/* Windows.UI.Input.TouchpadGlobalActionEventArgs.get_PointerDevice() */
 HRESULT wuiin_touchpad_global_action_event_args_get__pointer_device(WUIIN_TouchpadGlobalActionEventArgs *self, WDEIN_PointerDevice** value);
 
-/* activate Windows.UI.Input.CrossSlidingEventArgs */
 HRESULT wuiin_cross_sliding_event_args_new(WUIIN_CrossSlidingEventArgs **out);
 
-/* Windows.UI.Input.CrossSlidingEventArgs */
-/* Windows.UI.Input.CrossSlidingEventArgs.get_PointerDeviceType() */
 HRESULT wuiin_cross_sliding_event_args_get__pointer_device_type(WUIIN_CrossSlidingEventArgs *self, WDEIN_PointerDeviceType *value);
 
-/* Windows.UI.Input.CrossSlidingEventArgs.get_Position() */
 HRESULT wuiin_cross_sliding_event_args_get__position(WUIIN_CrossSlidingEventArgs *self, WF_Point *value);
 
-/* Windows.UI.Input.CrossSlidingEventArgs.get_CrossSlidingState() */
 HRESULT wuiin_cross_sliding_event_args_get__cross_sliding_state(WUIIN_CrossSlidingEventArgs *self, WUIIN_CrossSlidingState *value);
 
-/* Windows.UI.Input.CrossSlidingEventArgs.get_ContactCount() */
 HRESULT wuiin_cross_sliding_event_args_get__contact_count(WUIIN_CrossSlidingEventArgs *self, uint32_t *value);
 
-/* activate Windows.UI.Input.DraggingEventArgs */
 HRESULT wuiin_dragging_event_args_new(WUIIN_DraggingEventArgs **out);
 
-/* Windows.UI.Input.DraggingEventArgs */
-/* Windows.UI.Input.DraggingEventArgs.get_PointerDeviceType() */
 HRESULT wuiin_dragging_event_args_get__pointer_device_type(WUIIN_DraggingEventArgs *self, WDEIN_PointerDeviceType *value);
 
-/* Windows.UI.Input.DraggingEventArgs.get_Position() */
 HRESULT wuiin_dragging_event_args_get__position(WUIIN_DraggingEventArgs *self, WF_Point *value);
 
-/* Windows.UI.Input.DraggingEventArgs.get_DraggingState() */
 HRESULT wuiin_dragging_event_args_get__dragging_state(WUIIN_DraggingEventArgs *self, WUIIN_DraggingState *value);
 
-/* Windows.UI.Input.DraggingEventArgs.get_ContactCount() */
 HRESULT wuiin_dragging_event_args_get__contact_count(WUIIN_DraggingEventArgs *self, uint32_t *value);
 
-/* activate Windows.UI.Input.EdgeGesture */
 HRESULT wuiin_edge_gesture_new(WUIIN_EdgeGesture **out);
 
-/* Windows.UI.Input.EdgeGesture */
-/* Windows.UI.Input.EdgeGesture.GetForCurrentView() */
 HRESULT wuiin_edge_gesture_get_for_current_view(WUIIN_EdgeGesture** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiin_edge_gesture_on_starting(WUIIN_EdgeGesture *self, cwinrt_event_fn fn, void *ctx);
@@ -896,186 +870,124 @@ void wuiin_edge_gesture_off_completed(WUIIN_EdgeGesture *self, cwinrt_token toke
 cwinrt_token wuiin_edge_gesture_on_canceled(WUIIN_EdgeGesture *self, cwinrt_event_fn fn, void *ctx);
 void wuiin_edge_gesture_off_canceled(WUIIN_EdgeGesture *self, cwinrt_token token);
 
-/* activate Windows.UI.Input.EdgeGestureEventArgs */
 HRESULT wuiin_edge_gesture_event_args_new(WUIIN_EdgeGestureEventArgs **out);
 
-/* Windows.UI.Input.EdgeGestureEventArgs */
-/* Windows.UI.Input.EdgeGestureEventArgs.get_Kind() */
 HRESULT wuiin_edge_gesture_event_args_get__kind(WUIIN_EdgeGestureEventArgs *self, WUIIN_EdgeGestureKind *value);
 
-/* activate Windows.UI.Input.GestureRecognizer */
 HRESULT wuiin_gesture_recognizer_new(WUIIN_GestureRecognizer **out);
 
-/* Windows.UI.Input.GestureRecognizer */
-/* Windows.UI.Input.GestureRecognizer.get_GestureSettings() */
 HRESULT wuiin_gesture_recognizer_get__gesture_settings(WUIIN_GestureRecognizer *self, WUIIN_GestureSettings *value);
 
-/* Windows.UI.Input.GestureRecognizer.put_GestureSettings() */
 HRESULT wuiin_gesture_recognizer_put__gesture_settings(WUIIN_GestureRecognizer *self, WUIIN_GestureSettings value);
 
-/* Windows.UI.Input.GestureRecognizer.get_IsInertial() */
 HRESULT wuiin_gesture_recognizer_get__is_inertial(WUIIN_GestureRecognizer *self, BOOL *value);
 
-/* Windows.UI.Input.GestureRecognizer.get_IsActive() */
 HRESULT wuiin_gesture_recognizer_get__is_active(WUIIN_GestureRecognizer *self, BOOL *value);
 
-/* Windows.UI.Input.GestureRecognizer.get_ShowGestureFeedback() */
 HRESULT wuiin_gesture_recognizer_get__show_gesture_feedback(WUIIN_GestureRecognizer *self, BOOL *value);
 
-/* Windows.UI.Input.GestureRecognizer.put_ShowGestureFeedback() */
 HRESULT wuiin_gesture_recognizer_put__show_gesture_feedback(WUIIN_GestureRecognizer *self, BOOL value);
 
-/* Windows.UI.Input.GestureRecognizer.get_PivotCenter() */
 HRESULT wuiin_gesture_recognizer_get__pivot_center(WUIIN_GestureRecognizer *self, WF_Point *value);
 
-/* Windows.UI.Input.GestureRecognizer.put_PivotCenter() */
 HRESULT wuiin_gesture_recognizer_put__pivot_center(WUIIN_GestureRecognizer *self, WF_Point value);
 
-/* Windows.UI.Input.GestureRecognizer.get_PivotRadius() */
 HRESULT wuiin_gesture_recognizer_get__pivot_radius(WUIIN_GestureRecognizer *self, float *value);
 
-/* Windows.UI.Input.GestureRecognizer.put_PivotRadius() */
 HRESULT wuiin_gesture_recognizer_put__pivot_radius(WUIIN_GestureRecognizer *self, float value);
 
-/* Windows.UI.Input.GestureRecognizer.get_InertiaTranslationDeceleration() */
 HRESULT wuiin_gesture_recognizer_get__inertia_translation_deceleration(WUIIN_GestureRecognizer *self, float *value);
 
-/* Windows.UI.Input.GestureRecognizer.put_InertiaTranslationDeceleration() */
 HRESULT wuiin_gesture_recognizer_put__inertia_translation_deceleration(WUIIN_GestureRecognizer *self, float value);
 
-/* Windows.UI.Input.GestureRecognizer.get_InertiaRotationDeceleration() */
 HRESULT wuiin_gesture_recognizer_get__inertia_rotation_deceleration(WUIIN_GestureRecognizer *self, float *value);
 
-/* Windows.UI.Input.GestureRecognizer.put_InertiaRotationDeceleration() */
 HRESULT wuiin_gesture_recognizer_put__inertia_rotation_deceleration(WUIIN_GestureRecognizer *self, float value);
 
-/* Windows.UI.Input.GestureRecognizer.get_InertiaExpansionDeceleration() */
 HRESULT wuiin_gesture_recognizer_get__inertia_expansion_deceleration(WUIIN_GestureRecognizer *self, float *value);
 
-/* Windows.UI.Input.GestureRecognizer.put_InertiaExpansionDeceleration() */
 HRESULT wuiin_gesture_recognizer_put__inertia_expansion_deceleration(WUIIN_GestureRecognizer *self, float value);
 
-/* Windows.UI.Input.GestureRecognizer.get_InertiaTranslationDisplacement() */
 HRESULT wuiin_gesture_recognizer_get__inertia_translation_displacement(WUIIN_GestureRecognizer *self, float *value);
 
-/* Windows.UI.Input.GestureRecognizer.put_InertiaTranslationDisplacement() */
 HRESULT wuiin_gesture_recognizer_put__inertia_translation_displacement(WUIIN_GestureRecognizer *self, float value);
 
-/* Windows.UI.Input.GestureRecognizer.get_InertiaRotationAngle() */
 HRESULT wuiin_gesture_recognizer_get__inertia_rotation_angle(WUIIN_GestureRecognizer *self, float *value);
 
-/* Windows.UI.Input.GestureRecognizer.put_InertiaRotationAngle() */
 HRESULT wuiin_gesture_recognizer_put__inertia_rotation_angle(WUIIN_GestureRecognizer *self, float value);
 
-/* Windows.UI.Input.GestureRecognizer.get_InertiaExpansion() */
 HRESULT wuiin_gesture_recognizer_get__inertia_expansion(WUIIN_GestureRecognizer *self, float *value);
 
-/* Windows.UI.Input.GestureRecognizer.put_InertiaExpansion() */
 HRESULT wuiin_gesture_recognizer_put__inertia_expansion(WUIIN_GestureRecognizer *self, float value);
 
-/* Windows.UI.Input.GestureRecognizer.get_ManipulationExact() */
 HRESULT wuiin_gesture_recognizer_get__manipulation_exact(WUIIN_GestureRecognizer *self, BOOL *value);
 
-/* Windows.UI.Input.GestureRecognizer.put_ManipulationExact() */
 HRESULT wuiin_gesture_recognizer_put__manipulation_exact(WUIIN_GestureRecognizer *self, BOOL value);
 
-/* Windows.UI.Input.GestureRecognizer.get_CrossSlideThresholds() */
 HRESULT wuiin_gesture_recognizer_get__cross_slide_thresholds(WUIIN_GestureRecognizer *self, WUIIN_CrossSlideThresholds *value);
 
-/* Windows.UI.Input.GestureRecognizer.put_CrossSlideThresholds() */
 HRESULT wuiin_gesture_recognizer_put__cross_slide_thresholds(WUIIN_GestureRecognizer *self, WUIIN_CrossSlideThresholds value);
 
-/* Windows.UI.Input.GestureRecognizer.get_CrossSlideHorizontally() */
 HRESULT wuiin_gesture_recognizer_get__cross_slide_horizontally(WUIIN_GestureRecognizer *self, BOOL *value);
 
-/* Windows.UI.Input.GestureRecognizer.put_CrossSlideHorizontally() */
 HRESULT wuiin_gesture_recognizer_put__cross_slide_horizontally(WUIIN_GestureRecognizer *self, BOOL value);
 
-/* Windows.UI.Input.GestureRecognizer.get_CrossSlideExact() */
 HRESULT wuiin_gesture_recognizer_get__cross_slide_exact(WUIIN_GestureRecognizer *self, BOOL *value);
 
-/* Windows.UI.Input.GestureRecognizer.put_CrossSlideExact() */
 HRESULT wuiin_gesture_recognizer_put__cross_slide_exact(WUIIN_GestureRecognizer *self, BOOL value);
 
-/* Windows.UI.Input.GestureRecognizer.get_AutoProcessInertia() */
 HRESULT wuiin_gesture_recognizer_get__auto_process_inertia(WUIIN_GestureRecognizer *self, BOOL *value);
 
-/* Windows.UI.Input.GestureRecognizer.put_AutoProcessInertia() */
 HRESULT wuiin_gesture_recognizer_put__auto_process_inertia(WUIIN_GestureRecognizer *self, BOOL value);
 
-/* Windows.UI.Input.GestureRecognizer.get_MouseWheelParameters() */
 HRESULT wuiin_gesture_recognizer_get__mouse_wheel_parameters(WUIIN_GestureRecognizer *self, WUIIN_MouseWheelParameters** value);
 
-/* Windows.UI.Input.GestureRecognizer.CanBeDoubleTap() */
 HRESULT wuiin_gesture_recognizer_can_be_double_tap(WUIIN_GestureRecognizer *self, WUIIN_PointerPoint* value, BOOL *out);
 
-/* Windows.UI.Input.GestureRecognizer.ProcessDownEvent() */
 HRESULT wuiin_gesture_recognizer_process_down_event(WUIIN_GestureRecognizer *self, WUIIN_PointerPoint* value);
 
-/* Windows.UI.Input.GestureRecognizer.ProcessMoveEvents() */
 HRESULT wuiin_gesture_recognizer_process_move_events(WUIIN_GestureRecognizer *self, WFOCO_IVector_WUIIN_PointerPoint* value);
 
-/* Windows.UI.Input.GestureRecognizer.ProcessUpEvent() */
 HRESULT wuiin_gesture_recognizer_process_up_event(WUIIN_GestureRecognizer *self, WUIIN_PointerPoint* value);
 
-/* Windows.UI.Input.GestureRecognizer.ProcessMouseWheelEvent(isShiftKeyDown, isControlKeyDown) */
 HRESULT wuiin_gesture_recognizer_process_mouse_wheel_event(WUIIN_GestureRecognizer *self, WUIIN_PointerPoint* value, BOOL isShiftKeyDown, BOOL isControlKeyDown);
 
-/* Windows.UI.Input.GestureRecognizer.ProcessInertia() */
 HRESULT wuiin_gesture_recognizer_process_inertia(WUIIN_GestureRecognizer *self);
 
-/* Windows.UI.Input.GestureRecognizer.CompleteGesture() */
 HRESULT wuiin_gesture_recognizer_complete_gesture(WUIIN_GestureRecognizer *self);
 
-/* Windows.UI.Input.GestureRecognizer.get_TapMinContactCount() */
 HRESULT wuiin_gesture_recognizer_get__tap_min_contact_count(WUIIN_GestureRecognizer *self, uint32_t *value);
 
-/* Windows.UI.Input.GestureRecognizer.put_TapMinContactCount() */
 HRESULT wuiin_gesture_recognizer_put__tap_min_contact_count(WUIIN_GestureRecognizer *self, uint32_t value);
 
-/* Windows.UI.Input.GestureRecognizer.get_TapMaxContactCount() */
 HRESULT wuiin_gesture_recognizer_get__tap_max_contact_count(WUIIN_GestureRecognizer *self, uint32_t *value);
 
-/* Windows.UI.Input.GestureRecognizer.put_TapMaxContactCount() */
 HRESULT wuiin_gesture_recognizer_put__tap_max_contact_count(WUIIN_GestureRecognizer *self, uint32_t value);
 
-/* Windows.UI.Input.GestureRecognizer.get_HoldMinContactCount() */
 HRESULT wuiin_gesture_recognizer_get__hold_min_contact_count(WUIIN_GestureRecognizer *self, uint32_t *value);
 
-/* Windows.UI.Input.GestureRecognizer.put_HoldMinContactCount() */
 HRESULT wuiin_gesture_recognizer_put__hold_min_contact_count(WUIIN_GestureRecognizer *self, uint32_t value);
 
-/* Windows.UI.Input.GestureRecognizer.get_HoldMaxContactCount() */
 HRESULT wuiin_gesture_recognizer_get__hold_max_contact_count(WUIIN_GestureRecognizer *self, uint32_t *value);
 
-/* Windows.UI.Input.GestureRecognizer.put_HoldMaxContactCount() */
 HRESULT wuiin_gesture_recognizer_put__hold_max_contact_count(WUIIN_GestureRecognizer *self, uint32_t value);
 
-/* Windows.UI.Input.GestureRecognizer.get_HoldRadius() */
 HRESULT wuiin_gesture_recognizer_get__hold_radius(WUIIN_GestureRecognizer *self, float *value);
 
-/* Windows.UI.Input.GestureRecognizer.put_HoldRadius() */
 HRESULT wuiin_gesture_recognizer_put__hold_radius(WUIIN_GestureRecognizer *self, float value);
 
-/* Windows.UI.Input.GestureRecognizer.get_HoldStartDelay() */
 HRESULT wuiin_gesture_recognizer_get__hold_start_delay(WUIIN_GestureRecognizer *self, WF_TimeSpan *value);
 
-/* Windows.UI.Input.GestureRecognizer.put_HoldStartDelay() */
 HRESULT wuiin_gesture_recognizer_put__hold_start_delay(WUIIN_GestureRecognizer *self, WF_TimeSpan value);
 
-/* Windows.UI.Input.GestureRecognizer.get_TranslationMinContactCount() */
 HRESULT wuiin_gesture_recognizer_get__translation_min_contact_count(WUIIN_GestureRecognizer *self, uint32_t *value);
 
-/* Windows.UI.Input.GestureRecognizer.put_TranslationMinContactCount() */
 HRESULT wuiin_gesture_recognizer_put__translation_min_contact_count(WUIIN_GestureRecognizer *self, uint32_t value);
 
-/* Windows.UI.Input.GestureRecognizer.get_TranslationMaxContactCount() */
 HRESULT wuiin_gesture_recognizer_get__translation_max_contact_count(WUIIN_GestureRecognizer *self, uint32_t *value);
 
-/* Windows.UI.Input.GestureRecognizer.put_TranslationMaxContactCount() */
 HRESULT wuiin_gesture_recognizer_put__translation_max_contact_count(WUIIN_GestureRecognizer *self, uint32_t value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiin_gesture_recognizer_on_tapped(WUIIN_GestureRecognizer *self, cwinrt_event_fn fn, void *ctx);
@@ -1105,136 +1017,82 @@ void wuiin_gesture_recognizer_off_manipulation_completed(WUIIN_GestureRecognizer
 cwinrt_token wuiin_gesture_recognizer_on_cross_sliding(WUIIN_GestureRecognizer *self, cwinrt_event_fn fn, void *ctx);
 void wuiin_gesture_recognizer_off_cross_sliding(WUIIN_GestureRecognizer *self, cwinrt_token token);
 
-/* activate Windows.UI.Input.HoldingEventArgs */
 HRESULT wuiin_holding_event_args_new(WUIIN_HoldingEventArgs **out);
 
-/* Windows.UI.Input.HoldingEventArgs */
-/* Windows.UI.Input.HoldingEventArgs.get_PointerDeviceType() */
 HRESULT wuiin_holding_event_args_get__pointer_device_type(WUIIN_HoldingEventArgs *self, WDEIN_PointerDeviceType *value);
 
-/* Windows.UI.Input.HoldingEventArgs.get_Position() */
 HRESULT wuiin_holding_event_args_get__position(WUIIN_HoldingEventArgs *self, WF_Point *value);
 
-/* Windows.UI.Input.HoldingEventArgs.get_HoldingState() */
 HRESULT wuiin_holding_event_args_get__holding_state(WUIIN_HoldingEventArgs *self, WUIIN_HoldingState *value);
 
-/* Windows.UI.Input.HoldingEventArgs.get_ContactCount() */
 HRESULT wuiin_holding_event_args_get__contact_count(WUIIN_HoldingEventArgs *self, uint32_t *value);
 
-/* Windows.UI.Input.HoldingEventArgs.get_CurrentContactCount() */
 HRESULT wuiin_holding_event_args_get__current_contact_count(WUIIN_HoldingEventArgs *self, uint32_t *value);
 
-/* Windows.UI.Input.IEdgeGestureStatics */
-/* Windows.UI.Input.IEdgeGestureStatics.GetForCurrentView() */
 HRESULT wuiin_edge_gesture_statics_get_for_current_view(WUIIN_IEdgeGestureStatics *self, WUIIN_EdgeGesture** out);
 
-/* Windows.UI.Input.AttachableInputObject */
-/* Windows.UI.Input.AttachableInputObject.Close() */
 HRESULT wuiin_attachable_input_object_close(WUIIN_AttachableInputObject *self);
 
-/* Windows.UI.Input.IPointerPointStatics */
-/* Windows.UI.Input.IPointerPointStatics.GetCurrentPoint(pointerId) */
 HRESULT wuiin_pointer_point_statics_get_current_point(WUIIN_IPointerPointStatics *self, uint32_t pointerId, WUIIN_PointerPoint** out);
 
-/* Windows.UI.Input.IPointerPointStatics.GetIntermediatePoints(pointerId) */
 HRESULT wuiin_pointer_point_statics_get_intermediate_points(WUIIN_IPointerPointStatics *self, uint32_t pointerId, WFOCO_IVector_WUIIN_PointerPoint** out);
 
-/* Windows.UI.Input.IPointerPointStatics.GetCurrentPoint(pointerId, transform) */
 HRESULT wuiin_pointer_point_statics_get_current_point_u32_p_p(WUIIN_IPointerPointStatics *self, uint32_t pointerId, WUIIN_IPointerPointTransform* transform, WUIIN_PointerPoint** out);
 
-/* Windows.UI.Input.IPointerPointStatics.GetIntermediatePoints(pointerId, transform) */
 HRESULT wuiin_pointer_point_statics_get_intermediate_points_u32_p_p(WUIIN_IPointerPointStatics *self, uint32_t pointerId, WUIIN_IPointerPointTransform* transform, WFOCO_IVector_WUIIN_PointerPoint** out);
 
-/* Windows.UI.Input.IPointerPointTransform */
-/* Windows.UI.Input.IPointerPointTransform.get_Inverse() */
 HRESULT wuiin_pointer_point_transform_get__inverse(WUIIN_IPointerPointTransform *self, WUIIN_IPointerPointTransform** value);
 
-/* Windows.UI.Input.IPointerPointTransform.TryTransform(inPoint, outPoint) */
 HRESULT wuiin_pointer_point_transform_try_transform(WUIIN_IPointerPointTransform *self, WF_Point inPoint, WF_Point outPoint, BOOL *out);
 
-/* Windows.UI.Input.IPointerPointTransform.TransformBounds(rect) */
 HRESULT wuiin_pointer_point_transform_transform_bounds(WUIIN_IPointerPointTransform *self, WF_Rect rect, WF_Rect *out);
 
-/* Windows.UI.Input.IPointerVisualizationSettingsStatics */
-/* Windows.UI.Input.IPointerVisualizationSettingsStatics.GetForCurrentView() */
 HRESULT wuiin_pointer_visualization_settings_statics_get_for_current_view(WUIIN_IPointerVisualizationSettingsStatics *self, WUIIN_PointerVisualizationSettings** out);
 
-/* Windows.UI.Input.IRadialControllerConfigurationStatics */
-/* Windows.UI.Input.IRadialControllerConfigurationStatics.GetForCurrentView() */
 HRESULT wuiin_radial_controller_configuration_statics_get_for_current_view(WUIIN_IRadialControllerConfigurationStatics *self, WUIIN_RadialControllerConfiguration** out);
 
-/* Windows.UI.Input.IRadialControllerConfigurationStatics2 */
-/* Windows.UI.Input.IRadialControllerConfigurationStatics2.put_AppController() */
 HRESULT wuiin_radial_controller_configuration_statics_2_put__app_controller(WUIIN_IRadialControllerConfigurationStatics_2 *self, WUIIN_RadialController* value);
 
-/* Windows.UI.Input.IRadialControllerConfigurationStatics2.get_AppController() */
 HRESULT wuiin_radial_controller_configuration_statics_2_get__app_controller(WUIIN_IRadialControllerConfigurationStatics_2 *self, WUIIN_RadialController** value);
 
-/* Windows.UI.Input.IRadialControllerConfigurationStatics2.put_IsAppControllerEnabled() */
 HRESULT wuiin_radial_controller_configuration_statics_2_put__is_app_controller_enabled(WUIIN_IRadialControllerConfigurationStatics_2 *self, BOOL value);
 
-/* Windows.UI.Input.IRadialControllerConfigurationStatics2.get_IsAppControllerEnabled() */
 HRESULT wuiin_radial_controller_configuration_statics_2_get__is_app_controller_enabled(WUIIN_IRadialControllerConfigurationStatics_2 *self, BOOL *value);
 
-/* Windows.UI.Input.IRadialControllerMenuItemStatics */
-/* Windows.UI.Input.IRadialControllerMenuItemStatics.CreateFromIcon(displayText, icon) */
 HRESULT wuiin_radial_controller_menu_item_statics_create_from_icon(WUIIN_IRadialControllerMenuItemStatics *self, cwinrt_hstring displayText, WSTST_RandomAccessStreamReference* icon, WUIIN_RadialControllerMenuItem** out);
 
-/* Windows.UI.Input.IRadialControllerMenuItemStatics.CreateFromKnownIcon(displayText) */
 HRESULT wuiin_radial_controller_menu_item_statics_create_from_known_icon(WUIIN_IRadialControllerMenuItemStatics *self, cwinrt_hstring displayText, WUIIN_RadialControllerMenuKnownIcon value, WUIIN_RadialControllerMenuItem** out);
 
-/* Windows.UI.Input.IRadialControllerMenuItemStatics2 */
-/* Windows.UI.Input.IRadialControllerMenuItemStatics2.CreateFromFontGlyph(displayText, glyph, fontFamily) */
 HRESULT wuiin_radial_controller_menu_item_statics_2_create_from_font_glyph(WUIIN_IRadialControllerMenuItemStatics_2 *self, cwinrt_hstring displayText, cwinrt_hstring glyph, cwinrt_hstring fontFamily, WUIIN_RadialControllerMenuItem** out);
 
-/* Windows.UI.Input.IRadialControllerMenuItemStatics2.CreateFromFontGlyph(displayText, glyph, fontFamily, fontUri) */
 HRESULT wuiin_radial_controller_menu_item_statics_2_create_from_font_glyph_str_str_str_p_p(WUIIN_IRadialControllerMenuItemStatics_2 *self, cwinrt_hstring displayText, cwinrt_hstring glyph, cwinrt_hstring fontFamily, WF_Uri* fontUri, WUIIN_RadialControllerMenuItem** out);
 
-/* Windows.UI.Input.IKeyboardDeliveryInterceptorStatics */
-/* Windows.UI.Input.IKeyboardDeliveryInterceptorStatics.GetForCurrentView() */
 HRESULT wuiin_keyboard_delivery_interceptor_statics_get_for_current_view(WUIIN_IKeyboardDeliveryInterceptorStatics *self, WUIIN_KeyboardDeliveryInterceptor** out);
 
-/* Windows.UI.Input.IRadialControllerStatics */
-/* Windows.UI.Input.IRadialControllerStatics.IsSupported() */
 HRESULT wuiin_radial_controller_statics_is_supported(WUIIN_IRadialControllerStatics *self, BOOL *out);
 
-/* Windows.UI.Input.IRadialControllerStatics.CreateForCurrentView() */
 HRESULT wuiin_radial_controller_statics_create_for_current_view(WUIIN_IRadialControllerStatics *self, WUIIN_RadialController** out);
 
-/* Windows.UI.Input.ISystemButtonEventControllerStatics */
-/* Windows.UI.Input.ISystemButtonEventControllerStatics.CreateForDispatcherQueue(queue) */
 HRESULT wuiin_system_button_event_controller_statics_create_for_dispatcher_queue(WUIIN_ISystemButtonEventControllerStatics *self, WSY_DispatcherQueue* queue, WUIIN_SystemButtonEventController** out);
 
-/* Windows.UI.Input.ITouchpadGesturesControllerStatics */
-/* Windows.UI.Input.ITouchpadGesturesControllerStatics.IsSupported() */
 HRESULT wuiin_touchpad_gestures_controller_statics_is_supported(WUIIN_ITouchpadGesturesControllerStatics *self, BOOL *out);
 
-/* Windows.UI.Input.ITouchpadGesturesControllerStatics.CreateForProcess() */
 HRESULT wuiin_touchpad_gestures_controller_statics_create_for_process(WUIIN_ITouchpadGesturesControllerStatics *self, WUIIN_TouchpadGesturesController** out);
 
-/* activate Windows.UI.Input.TouchpadGesturesController */
 HRESULT wuiin_touchpad_gestures_controller_new(WUIIN_TouchpadGesturesController **out);
 
-/* Windows.UI.Input.TouchpadGesturesController */
-/* Windows.UI.Input.TouchpadGesturesController.get_Enabled() */
 HRESULT wuiin_touchpad_gestures_controller_get__enabled(WUIIN_TouchpadGesturesController *self, BOOL *value);
 
-/* Windows.UI.Input.TouchpadGesturesController.put_Enabled() */
 HRESULT wuiin_touchpad_gestures_controller_put__enabled(WUIIN_TouchpadGesturesController *self, BOOL value);
 
-/* Windows.UI.Input.TouchpadGesturesController.get_SupportedGestures() */
 HRESULT wuiin_touchpad_gestures_controller_get__supported_gestures(WUIIN_TouchpadGesturesController *self, WUIIN_TouchpadGlobalGestureKinds *value);
 
-/* Windows.UI.Input.TouchpadGesturesController.put_SupportedGestures() */
 HRESULT wuiin_touchpad_gestures_controller_put__supported_gestures(WUIIN_TouchpadGesturesController *self, WUIIN_TouchpadGlobalGestureKinds value);
 
-/* Windows.UI.Input.TouchpadGesturesController.IsSupported() */
 HRESULT wuiin_touchpad_gestures_controller_is_supported(BOOL *out);
 
-/* Windows.UI.Input.TouchpadGesturesController.CreateForProcess() */
 HRESULT wuiin_touchpad_gestures_controller_create_for_process(WUIIN_TouchpadGesturesController** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiin_touchpad_gestures_controller_on_pointer_pressed(WUIIN_TouchpadGesturesController *self, cwinrt_event_fn fn, void *ctx);
@@ -1249,75 +1107,48 @@ void wuiin_touchpad_gestures_controller_off_pointer_released(WUIIN_TouchpadGestu
 cwinrt_token wuiin_touchpad_gestures_controller_on_global_action_performed(WUIIN_TouchpadGesturesController *self, cwinrt_event_fn fn, void *ctx);
 void wuiin_touchpad_gestures_controller_off_global_action_performed(WUIIN_TouchpadGesturesController *self, cwinrt_token token);
 
-/* activate Windows.UI.Input.TappedEventArgs */
 HRESULT wuiin_tapped_event_args_new(WUIIN_TappedEventArgs **out);
 
-/* Windows.UI.Input.TappedEventArgs */
-/* Windows.UI.Input.TappedEventArgs.get_PointerDeviceType() */
 HRESULT wuiin_tapped_event_args_get__pointer_device_type(WUIIN_TappedEventArgs *self, WDEIN_PointerDeviceType *value);
 
-/* Windows.UI.Input.TappedEventArgs.get_Position() */
 HRESULT wuiin_tapped_event_args_get__position(WUIIN_TappedEventArgs *self, WF_Point *value);
 
-/* Windows.UI.Input.TappedEventArgs.get_TapCount() */
 HRESULT wuiin_tapped_event_args_get__tap_count(WUIIN_TappedEventArgs *self, uint32_t *value);
 
-/* Windows.UI.Input.TappedEventArgs.get_ContactCount() */
 HRESULT wuiin_tapped_event_args_get__contact_count(WUIIN_TappedEventArgs *self, uint32_t *value);
 
-/* activate Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs */
 HRESULT wuiin_system_function_lock_indicator_changed_event_args_new(WUIIN_SystemFunctionLockIndicatorChangedEventArgs **out);
 
-/* Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs */
-/* Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs.get_Timestamp() */
 HRESULT wuiin_system_function_lock_indicator_changed_event_args_get__timestamp(WUIIN_SystemFunctionLockIndicatorChangedEventArgs *self, uint64_t *value);
 
-/* Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs.get_IsIndicatorOn() */
 HRESULT wuiin_system_function_lock_indicator_changed_event_args_get__is_indicator_on(WUIIN_SystemFunctionLockIndicatorChangedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs.get_Handled() */
 HRESULT wuiin_system_function_lock_indicator_changed_event_args_get__handled(WUIIN_SystemFunctionLockIndicatorChangedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs.put_Handled() */
 HRESULT wuiin_system_function_lock_indicator_changed_event_args_put__handled(WUIIN_SystemFunctionLockIndicatorChangedEventArgs *self, BOOL value);
 
-/* activate Windows.UI.Input.SystemFunctionLockChangedEventArgs */
 HRESULT wuiin_system_function_lock_changed_event_args_new(WUIIN_SystemFunctionLockChangedEventArgs **out);
 
-/* Windows.UI.Input.SystemFunctionLockChangedEventArgs */
-/* Windows.UI.Input.SystemFunctionLockChangedEventArgs.get_Timestamp() */
 HRESULT wuiin_system_function_lock_changed_event_args_get__timestamp(WUIIN_SystemFunctionLockChangedEventArgs *self, uint64_t *value);
 
-/* Windows.UI.Input.SystemFunctionLockChangedEventArgs.get_IsLocked() */
 HRESULT wuiin_system_function_lock_changed_event_args_get__is_locked(WUIIN_SystemFunctionLockChangedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Input.SystemFunctionLockChangedEventArgs.get_Handled() */
 HRESULT wuiin_system_function_lock_changed_event_args_get__handled(WUIIN_SystemFunctionLockChangedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Input.SystemFunctionLockChangedEventArgs.put_Handled() */
 HRESULT wuiin_system_function_lock_changed_event_args_put__handled(WUIIN_SystemFunctionLockChangedEventArgs *self, BOOL value);
 
-/* activate Windows.UI.Input.SystemFunctionButtonEventArgs */
 HRESULT wuiin_system_function_button_event_args_new(WUIIN_SystemFunctionButtonEventArgs **out);
 
-/* Windows.UI.Input.SystemFunctionButtonEventArgs */
-/* Windows.UI.Input.SystemFunctionButtonEventArgs.get_Timestamp() */
 HRESULT wuiin_system_function_button_event_args_get__timestamp(WUIIN_SystemFunctionButtonEventArgs *self, uint64_t *value);
 
-/* Windows.UI.Input.SystemFunctionButtonEventArgs.get_Handled() */
 HRESULT wuiin_system_function_button_event_args_get__handled(WUIIN_SystemFunctionButtonEventArgs *self, BOOL *value);
 
-/* Windows.UI.Input.SystemFunctionButtonEventArgs.put_Handled() */
 HRESULT wuiin_system_function_button_event_args_put__handled(WUIIN_SystemFunctionButtonEventArgs *self, BOOL value);
 
-/* activate Windows.UI.Input.SystemButtonEventController */
 HRESULT wuiin_system_button_event_controller_new(WUIIN_SystemButtonEventController **out);
 
-/* Windows.UI.Input.SystemButtonEventController */
-/* Windows.UI.Input.SystemButtonEventController.CreateForDispatcherQueue(queue) */
 HRESULT wuiin_system_button_event_controller_create_for_dispatcher_queue(WSY_DispatcherQueue* queue, WUIIN_SystemButtonEventController** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiin_system_button_event_controller_on_system_function_button_pressed(WUIIN_SystemButtonEventController *self, cwinrt_event_fn fn, void *ctx);
@@ -1332,253 +1163,161 @@ void wuiin_system_button_event_controller_off_system_function_lock_changed(WUIIN
 cwinrt_token wuiin_system_button_event_controller_on_system_function_lock_indicator_changed(WUIIN_SystemButtonEventController *self, cwinrt_event_fn fn, void *ctx);
 void wuiin_system_button_event_controller_off_system_function_lock_indicator_changed(WUIIN_SystemButtonEventController *self, cwinrt_token token);
 
-/* activate Windows.UI.Input.RightTappedEventArgs */
 HRESULT wuiin_right_tapped_event_args_new(WUIIN_RightTappedEventArgs **out);
 
-/* Windows.UI.Input.RightTappedEventArgs */
-/* Windows.UI.Input.RightTappedEventArgs.get_PointerDeviceType() */
 HRESULT wuiin_right_tapped_event_args_get__pointer_device_type(WUIIN_RightTappedEventArgs *self, WDEIN_PointerDeviceType *value);
 
-/* Windows.UI.Input.RightTappedEventArgs.get_Position() */
 HRESULT wuiin_right_tapped_event_args_get__position(WUIIN_RightTappedEventArgs *self, WF_Point *value);
 
-/* Windows.UI.Input.RightTappedEventArgs.get_ContactCount() */
 HRESULT wuiin_right_tapped_event_args_get__contact_count(WUIIN_RightTappedEventArgs *self, uint32_t *value);
 
-/* activate Windows.UI.Input.RadialControllerScreenContactStartedEventArgs */
 HRESULT wuiin_radial_controller_screen_contact_started_event_args_new(WUIIN_RadialControllerScreenContactStartedEventArgs **out);
 
-/* Windows.UI.Input.RadialControllerScreenContactStartedEventArgs */
-/* Windows.UI.Input.RadialControllerScreenContactStartedEventArgs.get_Contact() */
 HRESULT wuiin_radial_controller_screen_contact_started_event_args_get__contact(WUIIN_RadialControllerScreenContactStartedEventArgs *self, WUIIN_RadialControllerScreenContact** value);
 
-/* Windows.UI.Input.RadialControllerScreenContactStartedEventArgs.get_IsButtonPressed() */
 HRESULT wuiin_radial_controller_screen_contact_started_event_args_get__is_button_pressed(WUIIN_RadialControllerScreenContactStartedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Input.RadialControllerScreenContactStartedEventArgs.get_SimpleHapticsController() */
 HRESULT wuiin_radial_controller_screen_contact_started_event_args_get__simple_haptics_controller(WUIIN_RadialControllerScreenContactStartedEventArgs *self, WDEHA_SimpleHapticsController** value);
 
-/* activate Windows.UI.Input.RadialControllerScreenContactEndedEventArgs */
 HRESULT wuiin_radial_controller_screen_contact_ended_event_args_new(WUIIN_RadialControllerScreenContactEndedEventArgs **out);
 
-/* Windows.UI.Input.RadialControllerScreenContactEndedEventArgs */
-/* Windows.UI.Input.RadialControllerScreenContactEndedEventArgs.get_IsButtonPressed() */
 HRESULT wuiin_radial_controller_screen_contact_ended_event_args_get__is_button_pressed(WUIIN_RadialControllerScreenContactEndedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Input.RadialControllerScreenContactEndedEventArgs.get_SimpleHapticsController() */
 HRESULT wuiin_radial_controller_screen_contact_ended_event_args_get__simple_haptics_controller(WUIIN_RadialControllerScreenContactEndedEventArgs *self, WDEHA_SimpleHapticsController** value);
 
-/* activate Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs */
 HRESULT wuiin_radial_controller_screen_contact_continued_event_args_new(WUIIN_RadialControllerScreenContactContinuedEventArgs **out);
 
-/* Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs */
-/* Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs.get_Contact() */
 HRESULT wuiin_radial_controller_screen_contact_continued_event_args_get__contact(WUIIN_RadialControllerScreenContactContinuedEventArgs *self, WUIIN_RadialControllerScreenContact** value);
 
-/* Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs.get_IsButtonPressed() */
 HRESULT wuiin_radial_controller_screen_contact_continued_event_args_get__is_button_pressed(WUIIN_RadialControllerScreenContactContinuedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs.get_SimpleHapticsController() */
 HRESULT wuiin_radial_controller_screen_contact_continued_event_args_get__simple_haptics_controller(WUIIN_RadialControllerScreenContactContinuedEventArgs *self, WDEHA_SimpleHapticsController** value);
 
-/* activate Windows.UI.Input.RadialControllerScreenContact */
 HRESULT wuiin_radial_controller_screen_contact_new(WUIIN_RadialControllerScreenContact **out);
 
-/* Windows.UI.Input.RadialControllerScreenContact */
-/* Windows.UI.Input.RadialControllerScreenContact.get_Bounds() */
 HRESULT wuiin_radial_controller_screen_contact_get__bounds(WUIIN_RadialControllerScreenContact *self, WF_Rect *value);
 
-/* Windows.UI.Input.RadialControllerScreenContact.get_Position() */
 HRESULT wuiin_radial_controller_screen_contact_get__position(WUIIN_RadialControllerScreenContact *self, WF_Point *value);
 
-/* activate Windows.UI.Input.RadialControllerRotationChangedEventArgs */
 HRESULT wuiin_radial_controller_rotation_changed_event_args_new(WUIIN_RadialControllerRotationChangedEventArgs **out);
 
-/* Windows.UI.Input.RadialControllerRotationChangedEventArgs */
-/* Windows.UI.Input.RadialControllerRotationChangedEventArgs.get_RotationDeltaInDegrees() */
 HRESULT wuiin_radial_controller_rotation_changed_event_args_get__rotation_delta_in_degrees(WUIIN_RadialControllerRotationChangedEventArgs *self, double *value);
 
-/* Windows.UI.Input.RadialControllerRotationChangedEventArgs.get_Contact() */
 HRESULT wuiin_radial_controller_rotation_changed_event_args_get__contact(WUIIN_RadialControllerRotationChangedEventArgs *self, WUIIN_RadialControllerScreenContact** value);
 
-/* Windows.UI.Input.RadialControllerRotationChangedEventArgs.get_IsButtonPressed() */
 HRESULT wuiin_radial_controller_rotation_changed_event_args_get__is_button_pressed(WUIIN_RadialControllerRotationChangedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Input.RadialControllerRotationChangedEventArgs.get_SimpleHapticsController() */
 HRESULT wuiin_radial_controller_rotation_changed_event_args_get__simple_haptics_controller(WUIIN_RadialControllerRotationChangedEventArgs *self, WDEHA_SimpleHapticsController** value);
 
-/* activate Windows.UI.Input.RadialControllerMenuItem */
 HRESULT wuiin_radial_controller_menu_item_new(WUIIN_RadialControllerMenuItem **out);
 
-/* Windows.UI.Input.RadialControllerMenuItem */
-/* Windows.UI.Input.RadialControllerMenuItem.get_DisplayText() */
 HRESULT wuiin_radial_controller_menu_item_get__display_text(WUIIN_RadialControllerMenuItem *self, cwinrt_hstring *value);
 
-/* Windows.UI.Input.RadialControllerMenuItem.get_Tag() */
 HRESULT wuiin_radial_controller_menu_item_get__tag(WUIIN_RadialControllerMenuItem *self, IInspectable** value);
 
-/* Windows.UI.Input.RadialControllerMenuItem.put_Tag() */
 HRESULT wuiin_radial_controller_menu_item_put__tag(WUIIN_RadialControllerMenuItem *self, IInspectable* value);
 
-/* Windows.UI.Input.RadialControllerMenuItem.CreateFromFontGlyph(displayText, glyph, fontFamily) */
 HRESULT wuiin_radial_controller_menu_item_create_from_font_glyph(cwinrt_hstring displayText, cwinrt_hstring glyph, cwinrt_hstring fontFamily, WUIIN_RadialControllerMenuItem** out);
 
-/* Windows.UI.Input.RadialControllerMenuItem.CreateFromFontGlyph(displayText, glyph, fontFamily, fontUri) */
 HRESULT wuiin_radial_controller_menu_item_create_from_font_glyph_str_str_str_p_p(cwinrt_hstring displayText, cwinrt_hstring glyph, cwinrt_hstring fontFamily, WF_Uri* fontUri, WUIIN_RadialControllerMenuItem** out);
 
-/* Windows.UI.Input.RadialControllerMenuItem.CreateFromIcon(displayText, icon) */
 HRESULT wuiin_radial_controller_menu_item_create_from_icon(cwinrt_hstring displayText, WSTST_RandomAccessStreamReference* icon, WUIIN_RadialControllerMenuItem** out);
 
-/* Windows.UI.Input.RadialControllerMenuItem.CreateFromKnownIcon(displayText) */
 HRESULT wuiin_radial_controller_menu_item_create_from_known_icon(cwinrt_hstring displayText, WUIIN_RadialControllerMenuKnownIcon value, WUIIN_RadialControllerMenuItem** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiin_radial_controller_menu_item_on_invoked(WUIIN_RadialControllerMenuItem *self, cwinrt_event_fn fn, void *ctx);
 void wuiin_radial_controller_menu_item_off_invoked(WUIIN_RadialControllerMenuItem *self, cwinrt_token token);
 
-/* activate Windows.UI.Input.RadialControllerMenu */
 HRESULT wuiin_radial_controller_menu_new(WUIIN_RadialControllerMenu **out);
 
-/* Windows.UI.Input.RadialControllerMenu */
-/* Windows.UI.Input.RadialControllerMenu.get_Items() */
 HRESULT wuiin_radial_controller_menu_get__items(WUIIN_RadialControllerMenu *self, WFOCO_IVector_WUIIN_RadialControllerMenuItem** value);
 
-/* Windows.UI.Input.RadialControllerMenu.get_IsEnabled() */
 HRESULT wuiin_radial_controller_menu_get__is_enabled(WUIIN_RadialControllerMenu *self, BOOL *value);
 
-/* Windows.UI.Input.RadialControllerMenu.put_IsEnabled() */
 HRESULT wuiin_radial_controller_menu_put__is_enabled(WUIIN_RadialControllerMenu *self, BOOL value);
 
-/* Windows.UI.Input.RadialControllerMenu.GetSelectedMenuItem() */
 HRESULT wuiin_radial_controller_menu_get_selected_menu_item(WUIIN_RadialControllerMenu *self, WUIIN_RadialControllerMenuItem** out);
 
-/* Windows.UI.Input.RadialControllerMenu.SelectMenuItem(menuItem) */
 HRESULT wuiin_radial_controller_menu_select_menu_item(WUIIN_RadialControllerMenu *self, WUIIN_RadialControllerMenuItem* menuItem);
 
-/* Windows.UI.Input.RadialControllerMenu.TrySelectPreviouslySelectedMenuItem() */
 HRESULT wuiin_radial_controller_menu_try_select_previously_selected_menu_item(WUIIN_RadialControllerMenu *self, BOOL *out);
 
-/* activate Windows.UI.Input.RadialControllerControlAcquiredEventArgs */
 HRESULT wuiin_radial_controller_control_acquired_event_args_new(WUIIN_RadialControllerControlAcquiredEventArgs **out);
 
-/* Windows.UI.Input.RadialControllerControlAcquiredEventArgs */
-/* Windows.UI.Input.RadialControllerControlAcquiredEventArgs.get_Contact() */
 HRESULT wuiin_radial_controller_control_acquired_event_args_get__contact(WUIIN_RadialControllerControlAcquiredEventArgs *self, WUIIN_RadialControllerScreenContact** value);
 
-/* Windows.UI.Input.RadialControllerControlAcquiredEventArgs.get_IsButtonPressed() */
 HRESULT wuiin_radial_controller_control_acquired_event_args_get__is_button_pressed(WUIIN_RadialControllerControlAcquiredEventArgs *self, BOOL *value);
 
-/* Windows.UI.Input.RadialControllerControlAcquiredEventArgs.get_SimpleHapticsController() */
 HRESULT wuiin_radial_controller_control_acquired_event_args_get__simple_haptics_controller(WUIIN_RadialControllerControlAcquiredEventArgs *self, WDEHA_SimpleHapticsController** value);
 
-/* activate Windows.UI.Input.RadialControllerConfiguration */
 HRESULT wuiin_radial_controller_configuration_new(WUIIN_RadialControllerConfiguration **out);
 
-/* Windows.UI.Input.RadialControllerConfiguration */
-/* Windows.UI.Input.RadialControllerConfiguration.SetDefaultMenuItems(buttons) */
 HRESULT wuiin_radial_controller_configuration_set_default_menu_items(WUIIN_RadialControllerConfiguration *self, WFOCO_IIterable_WUIIN_RadialControllerSystemMenuItemKind* buttons);
 
-/* Windows.UI.Input.RadialControllerConfiguration.ResetToDefaultMenuItems() */
 HRESULT wuiin_radial_controller_configuration_reset_to_default_menu_items(WUIIN_RadialControllerConfiguration *self);
 
-/* Windows.UI.Input.RadialControllerConfiguration.TrySelectDefaultMenuItem() */
 HRESULT wuiin_radial_controller_configuration_try_select_default_menu_item(WUIIN_RadialControllerConfiguration *self, WUIIN_RadialControllerSystemMenuItemKind type_, BOOL *out);
 
-/* Windows.UI.Input.RadialControllerConfiguration.put_ActiveControllerWhenMenuIsSuppressed() */
 HRESULT wuiin_radial_controller_configuration_put__active_controller_when_menu_is_suppressed(WUIIN_RadialControllerConfiguration *self, WUIIN_RadialController* value);
 
-/* Windows.UI.Input.RadialControllerConfiguration.get_ActiveControllerWhenMenuIsSuppressed() */
 HRESULT wuiin_radial_controller_configuration_get__active_controller_when_menu_is_suppressed(WUIIN_RadialControllerConfiguration *self, WUIIN_RadialController** value);
 
-/* Windows.UI.Input.RadialControllerConfiguration.put_IsMenuSuppressed() */
 HRESULT wuiin_radial_controller_configuration_put__is_menu_suppressed(WUIIN_RadialControllerConfiguration *self, BOOL value);
 
-/* Windows.UI.Input.RadialControllerConfiguration.get_IsMenuSuppressed() */
 HRESULT wuiin_radial_controller_configuration_get__is_menu_suppressed(WUIIN_RadialControllerConfiguration *self, BOOL *value);
 
-/* Windows.UI.Input.RadialControllerConfiguration.put_AppController() */
 HRESULT wuiin_radial_controller_configuration_put__app_controller(WUIIN_RadialController* value);
 
-/* Windows.UI.Input.RadialControllerConfiguration.get_AppController() */
 HRESULT wuiin_radial_controller_configuration_get__app_controller(WUIIN_RadialController** value);
 
-/* Windows.UI.Input.RadialControllerConfiguration.put_IsAppControllerEnabled() */
 HRESULT wuiin_radial_controller_configuration_put__is_app_controller_enabled(BOOL value);
 
-/* Windows.UI.Input.RadialControllerConfiguration.get_IsAppControllerEnabled() */
 HRESULT wuiin_radial_controller_configuration_get__is_app_controller_enabled(BOOL *value);
 
-/* Windows.UI.Input.RadialControllerConfiguration.GetForCurrentView() */
 HRESULT wuiin_radial_controller_configuration_get_for_current_view(WUIIN_RadialControllerConfiguration** out);
 
-/* activate Windows.UI.Input.RadialControllerButtonReleasedEventArgs */
 HRESULT wuiin_radial_controller_button_released_event_args_new(WUIIN_RadialControllerButtonReleasedEventArgs **out);
 
-/* Windows.UI.Input.RadialControllerButtonReleasedEventArgs */
-/* Windows.UI.Input.RadialControllerButtonReleasedEventArgs.get_Contact() */
 HRESULT wuiin_radial_controller_button_released_event_args_get__contact(WUIIN_RadialControllerButtonReleasedEventArgs *self, WUIIN_RadialControllerScreenContact** value);
 
-/* Windows.UI.Input.RadialControllerButtonReleasedEventArgs.get_SimpleHapticsController() */
 HRESULT wuiin_radial_controller_button_released_event_args_get__simple_haptics_controller(WUIIN_RadialControllerButtonReleasedEventArgs *self, WDEHA_SimpleHapticsController** value);
 
-/* activate Windows.UI.Input.RadialControllerButtonPressedEventArgs */
 HRESULT wuiin_radial_controller_button_pressed_event_args_new(WUIIN_RadialControllerButtonPressedEventArgs **out);
 
-/* Windows.UI.Input.RadialControllerButtonPressedEventArgs */
-/* Windows.UI.Input.RadialControllerButtonPressedEventArgs.get_Contact() */
 HRESULT wuiin_radial_controller_button_pressed_event_args_get__contact(WUIIN_RadialControllerButtonPressedEventArgs *self, WUIIN_RadialControllerScreenContact** value);
 
-/* Windows.UI.Input.RadialControllerButtonPressedEventArgs.get_SimpleHapticsController() */
 HRESULT wuiin_radial_controller_button_pressed_event_args_get__simple_haptics_controller(WUIIN_RadialControllerButtonPressedEventArgs *self, WDEHA_SimpleHapticsController** value);
 
-/* activate Windows.UI.Input.RadialControllerButtonHoldingEventArgs */
 HRESULT wuiin_radial_controller_button_holding_event_args_new(WUIIN_RadialControllerButtonHoldingEventArgs **out);
 
-/* Windows.UI.Input.RadialControllerButtonHoldingEventArgs */
-/* Windows.UI.Input.RadialControllerButtonHoldingEventArgs.get_Contact() */
 HRESULT wuiin_radial_controller_button_holding_event_args_get__contact(WUIIN_RadialControllerButtonHoldingEventArgs *self, WUIIN_RadialControllerScreenContact** value);
 
-/* Windows.UI.Input.RadialControllerButtonHoldingEventArgs.get_SimpleHapticsController() */
 HRESULT wuiin_radial_controller_button_holding_event_args_get__simple_haptics_controller(WUIIN_RadialControllerButtonHoldingEventArgs *self, WDEHA_SimpleHapticsController** value);
 
-/* activate Windows.UI.Input.RadialControllerButtonClickedEventArgs */
 HRESULT wuiin_radial_controller_button_clicked_event_args_new(WUIIN_RadialControllerButtonClickedEventArgs **out);
 
-/* Windows.UI.Input.RadialControllerButtonClickedEventArgs */
-/* Windows.UI.Input.RadialControllerButtonClickedEventArgs.get_Contact() */
 HRESULT wuiin_radial_controller_button_clicked_event_args_get__contact(WUIIN_RadialControllerButtonClickedEventArgs *self, WUIIN_RadialControllerScreenContact** value);
 
-/* Windows.UI.Input.RadialControllerButtonClickedEventArgs.get_SimpleHapticsController() */
 HRESULT wuiin_radial_controller_button_clicked_event_args_get__simple_haptics_controller(WUIIN_RadialControllerButtonClickedEventArgs *self, WDEHA_SimpleHapticsController** value);
 
-/* activate Windows.UI.Input.RadialController */
 HRESULT wuiin_radial_controller_new(WUIIN_RadialController **out);
 
-/* Windows.UI.Input.RadialController */
-/* Windows.UI.Input.RadialController.get_Menu() */
 HRESULT wuiin_radial_controller_get__menu(WUIIN_RadialController *self, WUIIN_RadialControllerMenu** value);
 
-/* Windows.UI.Input.RadialController.get_RotationResolutionInDegrees() */
 HRESULT wuiin_radial_controller_get__rotation_resolution_in_degrees(WUIIN_RadialController *self, double *value);
 
-/* Windows.UI.Input.RadialController.put_RotationResolutionInDegrees() */
 HRESULT wuiin_radial_controller_put__rotation_resolution_in_degrees(WUIIN_RadialController *self, double value);
 
-/* Windows.UI.Input.RadialController.get_UseAutomaticHapticFeedback() */
 HRESULT wuiin_radial_controller_get__use_automatic_haptic_feedback(WUIIN_RadialController *self, BOOL *value);
 
-/* Windows.UI.Input.RadialController.put_UseAutomaticHapticFeedback() */
 HRESULT wuiin_radial_controller_put__use_automatic_haptic_feedback(WUIIN_RadialController *self, BOOL value);
 
-/* Windows.UI.Input.RadialController.IsSupported() */
 HRESULT wuiin_radial_controller_is_supported(BOOL *out);
 
-/* Windows.UI.Input.RadialController.CreateForCurrentView() */
 HRESULT wuiin_radial_controller_create_for_current_view(WUIIN_RadialController** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiin_radial_controller_on_screen_contact_started(WUIIN_RadialController *self, cwinrt_event_fn fn, void *ctx);
@@ -1611,224 +1350,148 @@ void wuiin_radial_controller_off_button_holding(WUIIN_RadialController *self, cw
 cwinrt_token wuiin_radial_controller_on_button_released(WUIIN_RadialController *self, cwinrt_event_fn fn, void *ctx);
 void wuiin_radial_controller_off_button_released(WUIIN_RadialController *self, cwinrt_token token);
 
-/* activate Windows.UI.Input.PointerVisualizationSettings */
 HRESULT wuiin_pointer_visualization_settings_new(WUIIN_PointerVisualizationSettings **out);
 
-/* Windows.UI.Input.PointerVisualizationSettings */
-/* Windows.UI.Input.PointerVisualizationSettings.put_IsContactFeedbackEnabled() */
 HRESULT wuiin_pointer_visualization_settings_put__is_contact_feedback_enabled(WUIIN_PointerVisualizationSettings *self, BOOL value);
 
-/* Windows.UI.Input.PointerVisualizationSettings.get_IsContactFeedbackEnabled() */
 HRESULT wuiin_pointer_visualization_settings_get__is_contact_feedback_enabled(WUIIN_PointerVisualizationSettings *self, BOOL *value);
 
-/* Windows.UI.Input.PointerVisualizationSettings.put_IsBarrelButtonFeedbackEnabled() */
 HRESULT wuiin_pointer_visualization_settings_put__is_barrel_button_feedback_enabled(WUIIN_PointerVisualizationSettings *self, BOOL value);
 
-/* Windows.UI.Input.PointerVisualizationSettings.get_IsBarrelButtonFeedbackEnabled() */
 HRESULT wuiin_pointer_visualization_settings_get__is_barrel_button_feedback_enabled(WUIIN_PointerVisualizationSettings *self, BOOL *value);
 
-/* Windows.UI.Input.PointerVisualizationSettings.GetForCurrentView() */
 HRESULT wuiin_pointer_visualization_settings_get_for_current_view(WUIIN_PointerVisualizationSettings** out);
 
-/* activate Windows.UI.Input.PointerPointProperties */
 HRESULT wuiin_pointer_point_properties_new(WUIIN_PointerPointProperties **out);
 
-/* Windows.UI.Input.PointerPointProperties */
-/* Windows.UI.Input.PointerPointProperties.get_Pressure() */
 HRESULT wuiin_pointer_point_properties_get__pressure(WUIIN_PointerPointProperties *self, float *value);
 
-/* Windows.UI.Input.PointerPointProperties.get_IsInverted() */
 HRESULT wuiin_pointer_point_properties_get__is_inverted(WUIIN_PointerPointProperties *self, BOOL *value);
 
-/* Windows.UI.Input.PointerPointProperties.get_IsEraser() */
 HRESULT wuiin_pointer_point_properties_get__is_eraser(WUIIN_PointerPointProperties *self, BOOL *value);
 
-/* Windows.UI.Input.PointerPointProperties.get_Orientation() */
 HRESULT wuiin_pointer_point_properties_get__orientation(WUIIN_PointerPointProperties *self, float *value);
 
-/* Windows.UI.Input.PointerPointProperties.get_XTilt() */
 HRESULT wuiin_pointer_point_properties_get__x_tilt(WUIIN_PointerPointProperties *self, float *value);
 
-/* Windows.UI.Input.PointerPointProperties.get_YTilt() */
 HRESULT wuiin_pointer_point_properties_get__y_tilt(WUIIN_PointerPointProperties *self, float *value);
 
-/* Windows.UI.Input.PointerPointProperties.get_Twist() */
 HRESULT wuiin_pointer_point_properties_get__twist(WUIIN_PointerPointProperties *self, float *value);
 
-/* Windows.UI.Input.PointerPointProperties.get_ContactRect() */
 HRESULT wuiin_pointer_point_properties_get__contact_rect(WUIIN_PointerPointProperties *self, WF_Rect *value);
 
-/* Windows.UI.Input.PointerPointProperties.get_ContactRectRaw() */
 HRESULT wuiin_pointer_point_properties_get__contact_rect_raw(WUIIN_PointerPointProperties *self, WF_Rect *value);
 
-/* Windows.UI.Input.PointerPointProperties.get_TouchConfidence() */
 HRESULT wuiin_pointer_point_properties_get__touch_confidence(WUIIN_PointerPointProperties *self, BOOL *value);
 
-/* Windows.UI.Input.PointerPointProperties.get_IsLeftButtonPressed() */
 HRESULT wuiin_pointer_point_properties_get__is_left_button_pressed(WUIIN_PointerPointProperties *self, BOOL *value);
 
-/* Windows.UI.Input.PointerPointProperties.get_IsRightButtonPressed() */
 HRESULT wuiin_pointer_point_properties_get__is_right_button_pressed(WUIIN_PointerPointProperties *self, BOOL *value);
 
-/* Windows.UI.Input.PointerPointProperties.get_IsMiddleButtonPressed() */
 HRESULT wuiin_pointer_point_properties_get__is_middle_button_pressed(WUIIN_PointerPointProperties *self, BOOL *value);
 
-/* Windows.UI.Input.PointerPointProperties.get_MouseWheelDelta() */
 HRESULT wuiin_pointer_point_properties_get__mouse_wheel_delta(WUIIN_PointerPointProperties *self, int32_t *value);
 
-/* Windows.UI.Input.PointerPointProperties.get_IsHorizontalMouseWheel() */
 HRESULT wuiin_pointer_point_properties_get__is_horizontal_mouse_wheel(WUIIN_PointerPointProperties *self, BOOL *value);
 
-/* Windows.UI.Input.PointerPointProperties.get_IsPrimary() */
 HRESULT wuiin_pointer_point_properties_get__is_primary(WUIIN_PointerPointProperties *self, BOOL *value);
 
-/* Windows.UI.Input.PointerPointProperties.get_IsInRange() */
 HRESULT wuiin_pointer_point_properties_get__is_in_range(WUIIN_PointerPointProperties *self, BOOL *value);
 
-/* Windows.UI.Input.PointerPointProperties.get_IsCanceled() */
 HRESULT wuiin_pointer_point_properties_get__is_canceled(WUIIN_PointerPointProperties *self, BOOL *value);
 
-/* Windows.UI.Input.PointerPointProperties.get_IsBarrelButtonPressed() */
 HRESULT wuiin_pointer_point_properties_get__is_barrel_button_pressed(WUIIN_PointerPointProperties *self, BOOL *value);
 
-/* Windows.UI.Input.PointerPointProperties.get_IsXButton1Pressed() */
 HRESULT wuiin_pointer_point_properties_get__is_x_button1_pressed(WUIIN_PointerPointProperties *self, BOOL *value);
 
-/* Windows.UI.Input.PointerPointProperties.get_IsXButton2Pressed() */
 HRESULT wuiin_pointer_point_properties_get__is_x_button2_pressed(WUIIN_PointerPointProperties *self, BOOL *value);
 
-/* Windows.UI.Input.PointerPointProperties.get_PointerUpdateKind() */
 HRESULT wuiin_pointer_point_properties_get__pointer_update_kind(WUIIN_PointerPointProperties *self, WUIIN_PointerUpdateKind *value);
 
-/* Windows.UI.Input.PointerPointProperties.HasUsage(usagePage, usageId) */
 HRESULT wuiin_pointer_point_properties_has_usage(WUIIN_PointerPointProperties *self, uint32_t usagePage, uint32_t usageId, BOOL *out);
 
-/* Windows.UI.Input.PointerPointProperties.GetUsageValue(usagePage, usageId) */
 HRESULT wuiin_pointer_point_properties_get_usage_value(WUIIN_PointerPointProperties *self, uint32_t usagePage, uint32_t usageId, int32_t *out);
 
-/* Windows.UI.Input.PointerPointProperties.get_ZDistance() */
 HRESULT wuiin_pointer_point_properties_get__z_distance(WUIIN_PointerPointProperties *self, float** value);
 
-/* activate Windows.UI.Input.PointerPoint */
 HRESULT wuiin_pointer_point_new(WUIIN_PointerPoint **out);
 
-/* Windows.UI.Input.PointerPoint */
-/* Windows.UI.Input.PointerPoint.get_PointerDevice() */
 HRESULT wuiin_pointer_point_get__pointer_device(WUIIN_PointerPoint *self, WDEIN_PointerDevice** value);
 
-/* Windows.UI.Input.PointerPoint.get_Position() */
 HRESULT wuiin_pointer_point_get__position(WUIIN_PointerPoint *self, WF_Point *value);
 
-/* Windows.UI.Input.PointerPoint.get_RawPosition() */
 HRESULT wuiin_pointer_point_get__raw_position(WUIIN_PointerPoint *self, WF_Point *value);
 
-/* Windows.UI.Input.PointerPoint.get_PointerId() */
 HRESULT wuiin_pointer_point_get__pointer_id(WUIIN_PointerPoint *self, uint32_t *value);
 
-/* Windows.UI.Input.PointerPoint.get_FrameId() */
 HRESULT wuiin_pointer_point_get__frame_id(WUIIN_PointerPoint *self, uint32_t *value);
 
-/* Windows.UI.Input.PointerPoint.get_Timestamp() */
 HRESULT wuiin_pointer_point_get__timestamp(WUIIN_PointerPoint *self, uint64_t *value);
 
-/* Windows.UI.Input.PointerPoint.get_IsInContact() */
 HRESULT wuiin_pointer_point_get__is_in_contact(WUIIN_PointerPoint *self, BOOL *value);
 
-/* Windows.UI.Input.PointerPoint.get_Properties() */
 HRESULT wuiin_pointer_point_get__properties(WUIIN_PointerPoint *self, WUIIN_PointerPointProperties** value);
 
-/* Windows.UI.Input.PointerPoint.get_IsPhysicalPositionSupported() */
 HRESULT wuiin_pointer_point_get__is_physical_position_supported(WUIIN_PointerPoint *self, BOOL *value);
 
-/* Windows.UI.Input.PointerPoint.get_PhysicalPosition() */
 HRESULT wuiin_pointer_point_get__physical_position(WUIIN_PointerPoint *self, WF_Point *value);
 
-/* Windows.UI.Input.PointerPoint.GetCurrentPoint(pointerId) */
 HRESULT wuiin_pointer_point_get_current_point(uint32_t pointerId, WUIIN_PointerPoint** out);
 
-/* Windows.UI.Input.PointerPoint.GetIntermediatePoints(pointerId) */
 HRESULT wuiin_pointer_point_get_intermediate_points(uint32_t pointerId, WFOCO_IVector_WUIIN_PointerPoint** out);
 
-/* Windows.UI.Input.PointerPoint.GetCurrentPoint(pointerId, transform) */
 HRESULT wuiin_pointer_point_get_current_point_u32_p_p(uint32_t pointerId, WUIIN_IPointerPointTransform* transform, WUIIN_PointerPoint** out);
 
-/* Windows.UI.Input.PointerPoint.GetIntermediatePoints(pointerId, transform) */
 HRESULT wuiin_pointer_point_get_intermediate_points_u32_p_p(uint32_t pointerId, WUIIN_IPointerPointTransform* transform, WFOCO_IVector_WUIIN_PointerPoint** out);
 
-/* activate Windows.UI.Input.PhysicalGestureRecognizer */
 HRESULT wuiin_physical_gesture_recognizer_new(WUIIN_PhysicalGestureRecognizer **out);
 
-/* Windows.UI.Input.PhysicalGestureRecognizer */
-/* Windows.UI.Input.PhysicalGestureRecognizer.get_IsActive() */
 HRESULT wuiin_physical_gesture_recognizer_get__is_active(WUIIN_PhysicalGestureRecognizer *self, BOOL *value);
 
-/* Windows.UI.Input.PhysicalGestureRecognizer.get_GestureSettings() */
 HRESULT wuiin_physical_gesture_recognizer_get__gesture_settings(WUIIN_PhysicalGestureRecognizer *self, WUIIN_GestureSettings *value);
 
-/* Windows.UI.Input.PhysicalGestureRecognizer.put_GestureSettings() */
 HRESULT wuiin_physical_gesture_recognizer_put__gesture_settings(WUIIN_PhysicalGestureRecognizer *self, WUIIN_GestureSettings value);
 
-/* Windows.UI.Input.PhysicalGestureRecognizer.get_TapMinContactCount() */
 HRESULT wuiin_physical_gesture_recognizer_get__tap_min_contact_count(WUIIN_PhysicalGestureRecognizer *self, uint32_t *value);
 
-/* Windows.UI.Input.PhysicalGestureRecognizer.put_TapMinContactCount() */
 HRESULT wuiin_physical_gesture_recognizer_put__tap_min_contact_count(WUIIN_PhysicalGestureRecognizer *self, uint32_t value);
 
-/* Windows.UI.Input.PhysicalGestureRecognizer.get_TapMaxContactCount() */
 HRESULT wuiin_physical_gesture_recognizer_get__tap_max_contact_count(WUIIN_PhysicalGestureRecognizer *self, uint32_t *value);
 
-/* Windows.UI.Input.PhysicalGestureRecognizer.put_TapMaxContactCount() */
 HRESULT wuiin_physical_gesture_recognizer_put__tap_max_contact_count(WUIIN_PhysicalGestureRecognizer *self, uint32_t value);
 
-/* Windows.UI.Input.PhysicalGestureRecognizer.get_HoldMinContactCount() */
 HRESULT wuiin_physical_gesture_recognizer_get__hold_min_contact_count(WUIIN_PhysicalGestureRecognizer *self, uint32_t *value);
 
-/* Windows.UI.Input.PhysicalGestureRecognizer.put_HoldMinContactCount() */
 HRESULT wuiin_physical_gesture_recognizer_put__hold_min_contact_count(WUIIN_PhysicalGestureRecognizer *self, uint32_t value);
 
-/* Windows.UI.Input.PhysicalGestureRecognizer.get_HoldMaxContactCount() */
 HRESULT wuiin_physical_gesture_recognizer_get__hold_max_contact_count(WUIIN_PhysicalGestureRecognizer *self, uint32_t *value);
 
-/* Windows.UI.Input.PhysicalGestureRecognizer.put_HoldMaxContactCount() */
 HRESULT wuiin_physical_gesture_recognizer_put__hold_max_contact_count(WUIIN_PhysicalGestureRecognizer *self, uint32_t value);
 
-/* Windows.UI.Input.PhysicalGestureRecognizer.get_HoldRadius() */
 HRESULT wuiin_physical_gesture_recognizer_get__hold_radius(WUIIN_PhysicalGestureRecognizer *self, float *value);
 
-/* Windows.UI.Input.PhysicalGestureRecognizer.put_HoldRadius() */
 HRESULT wuiin_physical_gesture_recognizer_put__hold_radius(WUIIN_PhysicalGestureRecognizer *self, float value);
 
-/* Windows.UI.Input.PhysicalGestureRecognizer.get_HoldStartDelay() */
 HRESULT wuiin_physical_gesture_recognizer_get__hold_start_delay(WUIIN_PhysicalGestureRecognizer *self, WF_TimeSpan *value);
 
-/* Windows.UI.Input.PhysicalGestureRecognizer.put_HoldStartDelay() */
 HRESULT wuiin_physical_gesture_recognizer_put__hold_start_delay(WUIIN_PhysicalGestureRecognizer *self, WF_TimeSpan value);
 
-/* Windows.UI.Input.PhysicalGestureRecognizer.get_TranslationMinContactCount() */
 HRESULT wuiin_physical_gesture_recognizer_get__translation_min_contact_count(WUIIN_PhysicalGestureRecognizer *self, uint32_t *value);
 
-/* Windows.UI.Input.PhysicalGestureRecognizer.put_TranslationMinContactCount() */
 HRESULT wuiin_physical_gesture_recognizer_put__translation_min_contact_count(WUIIN_PhysicalGestureRecognizer *self, uint32_t value);
 
-/* Windows.UI.Input.PhysicalGestureRecognizer.get_TranslationMaxContactCount() */
 HRESULT wuiin_physical_gesture_recognizer_get__translation_max_contact_count(WUIIN_PhysicalGestureRecognizer *self, uint32_t *value);
 
-/* Windows.UI.Input.PhysicalGestureRecognizer.put_TranslationMaxContactCount() */
 HRESULT wuiin_physical_gesture_recognizer_put__translation_max_contact_count(WUIIN_PhysicalGestureRecognizer *self, uint32_t value);
 
-/* Windows.UI.Input.PhysicalGestureRecognizer.ProcessDownEvent() */
 HRESULT wuiin_physical_gesture_recognizer_process_down_event(WUIIN_PhysicalGestureRecognizer *self, WUIIN_PointerPoint* value);
 
-/* Windows.UI.Input.PhysicalGestureRecognizer.ProcessMoveEvents() */
 HRESULT wuiin_physical_gesture_recognizer_process_move_events(WUIIN_PhysicalGestureRecognizer *self, WFOCO_IVector_WUIIN_PointerPoint* value);
 
-/* Windows.UI.Input.PhysicalGestureRecognizer.ProcessUpEvent() */
 HRESULT wuiin_physical_gesture_recognizer_process_up_event(WUIIN_PhysicalGestureRecognizer *self, WUIIN_PointerPoint* value);
 
-/* Windows.UI.Input.PhysicalGestureRecognizer.CompleteGesture() */
 HRESULT wuiin_physical_gesture_recognizer_complete_gesture(WUIIN_PhysicalGestureRecognizer *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiin_physical_gesture_recognizer_on_manipulation_started(WUIIN_PhysicalGestureRecognizer *self, cwinrt_event_fn fn, void *ctx);
@@ -1846,133 +1509,86 @@ void wuiin_physical_gesture_recognizer_off_tapped(WUIIN_PhysicalGestureRecognize
 cwinrt_token wuiin_physical_gesture_recognizer_on_holding(WUIIN_PhysicalGestureRecognizer *self, cwinrt_event_fn fn, void *ctx);
 void wuiin_physical_gesture_recognizer_off_holding(WUIIN_PhysicalGestureRecognizer *self, cwinrt_token token);
 
-/* activate Windows.UI.Input.MouseWheelParameters */
 HRESULT wuiin_mouse_wheel_parameters_new(WUIIN_MouseWheelParameters **out);
 
-/* Windows.UI.Input.MouseWheelParameters */
-/* Windows.UI.Input.MouseWheelParameters.get_CharTranslation() */
 HRESULT wuiin_mouse_wheel_parameters_get__char_translation(WUIIN_MouseWheelParameters *self, WF_Point *value);
 
-/* Windows.UI.Input.MouseWheelParameters.put_CharTranslation() */
 HRESULT wuiin_mouse_wheel_parameters_put__char_translation(WUIIN_MouseWheelParameters *self, WF_Point value);
 
-/* Windows.UI.Input.MouseWheelParameters.get_DeltaScale() */
 HRESULT wuiin_mouse_wheel_parameters_get__delta_scale(WUIIN_MouseWheelParameters *self, float *value);
 
-/* Windows.UI.Input.MouseWheelParameters.put_DeltaScale() */
 HRESULT wuiin_mouse_wheel_parameters_put__delta_scale(WUIIN_MouseWheelParameters *self, float value);
 
-/* Windows.UI.Input.MouseWheelParameters.get_DeltaRotationAngle() */
 HRESULT wuiin_mouse_wheel_parameters_get__delta_rotation_angle(WUIIN_MouseWheelParameters *self, float *value);
 
-/* Windows.UI.Input.MouseWheelParameters.put_DeltaRotationAngle() */
 HRESULT wuiin_mouse_wheel_parameters_put__delta_rotation_angle(WUIIN_MouseWheelParameters *self, float value);
 
-/* Windows.UI.Input.MouseWheelParameters.get_PageTranslation() */
 HRESULT wuiin_mouse_wheel_parameters_get__page_translation(WUIIN_MouseWheelParameters *self, WF_Point *value);
 
-/* Windows.UI.Input.MouseWheelParameters.put_PageTranslation() */
 HRESULT wuiin_mouse_wheel_parameters_put__page_translation(WUIIN_MouseWheelParameters *self, WF_Point value);
 
-/* activate Windows.UI.Input.ManipulationUpdatedEventArgs */
 HRESULT wuiin_manipulation_updated_event_args_new(WUIIN_ManipulationUpdatedEventArgs **out);
 
-/* Windows.UI.Input.ManipulationUpdatedEventArgs */
-/* Windows.UI.Input.ManipulationUpdatedEventArgs.get_PointerDeviceType() */
 HRESULT wuiin_manipulation_updated_event_args_get__pointer_device_type(WUIIN_ManipulationUpdatedEventArgs *self, WDEIN_PointerDeviceType *value);
 
-/* Windows.UI.Input.ManipulationUpdatedEventArgs.get_Position() */
 HRESULT wuiin_manipulation_updated_event_args_get__position(WUIIN_ManipulationUpdatedEventArgs *self, WF_Point *value);
 
-/* Windows.UI.Input.ManipulationUpdatedEventArgs.get_Delta() */
 HRESULT wuiin_manipulation_updated_event_args_get__delta(WUIIN_ManipulationUpdatedEventArgs *self, WUIIN_ManipulationDelta *value);
 
-/* Windows.UI.Input.ManipulationUpdatedEventArgs.get_Cumulative() */
 HRESULT wuiin_manipulation_updated_event_args_get__cumulative(WUIIN_ManipulationUpdatedEventArgs *self, WUIIN_ManipulationDelta *value);
 
-/* Windows.UI.Input.ManipulationUpdatedEventArgs.get_Velocities() */
 HRESULT wuiin_manipulation_updated_event_args_get__velocities(WUIIN_ManipulationUpdatedEventArgs *self, WUIIN_ManipulationVelocities *value);
 
-/* Windows.UI.Input.ManipulationUpdatedEventArgs.get_ContactCount() */
 HRESULT wuiin_manipulation_updated_event_args_get__contact_count(WUIIN_ManipulationUpdatedEventArgs *self, uint32_t *value);
 
-/* Windows.UI.Input.ManipulationUpdatedEventArgs.get_CurrentContactCount() */
 HRESULT wuiin_manipulation_updated_event_args_get__current_contact_count(WUIIN_ManipulationUpdatedEventArgs *self, uint32_t *value);
 
-/* activate Windows.UI.Input.ManipulationStartedEventArgs */
 HRESULT wuiin_manipulation_started_event_args_new(WUIIN_ManipulationStartedEventArgs **out);
 
-/* Windows.UI.Input.ManipulationStartedEventArgs */
-/* Windows.UI.Input.ManipulationStartedEventArgs.get_PointerDeviceType() */
 HRESULT wuiin_manipulation_started_event_args_get__pointer_device_type(WUIIN_ManipulationStartedEventArgs *self, WDEIN_PointerDeviceType *value);
 
-/* Windows.UI.Input.ManipulationStartedEventArgs.get_Position() */
 HRESULT wuiin_manipulation_started_event_args_get__position(WUIIN_ManipulationStartedEventArgs *self, WF_Point *value);
 
-/* Windows.UI.Input.ManipulationStartedEventArgs.get_Cumulative() */
 HRESULT wuiin_manipulation_started_event_args_get__cumulative(WUIIN_ManipulationStartedEventArgs *self, WUIIN_ManipulationDelta *value);
 
-/* Windows.UI.Input.ManipulationStartedEventArgs.get_ContactCount() */
 HRESULT wuiin_manipulation_started_event_args_get__contact_count(WUIIN_ManipulationStartedEventArgs *self, uint32_t *value);
 
-/* activate Windows.UI.Input.ManipulationInertiaStartingEventArgs */
 HRESULT wuiin_manipulation_inertia_starting_event_args_new(WUIIN_ManipulationInertiaStartingEventArgs **out);
 
-/* Windows.UI.Input.ManipulationInertiaStartingEventArgs */
-/* Windows.UI.Input.ManipulationInertiaStartingEventArgs.get_PointerDeviceType() */
 HRESULT wuiin_manipulation_inertia_starting_event_args_get__pointer_device_type(WUIIN_ManipulationInertiaStartingEventArgs *self, WDEIN_PointerDeviceType *value);
 
-/* Windows.UI.Input.ManipulationInertiaStartingEventArgs.get_Position() */
 HRESULT wuiin_manipulation_inertia_starting_event_args_get__position(WUIIN_ManipulationInertiaStartingEventArgs *self, WF_Point *value);
 
-/* Windows.UI.Input.ManipulationInertiaStartingEventArgs.get_Delta() */
 HRESULT wuiin_manipulation_inertia_starting_event_args_get__delta(WUIIN_ManipulationInertiaStartingEventArgs *self, WUIIN_ManipulationDelta *value);
 
-/* Windows.UI.Input.ManipulationInertiaStartingEventArgs.get_Cumulative() */
 HRESULT wuiin_manipulation_inertia_starting_event_args_get__cumulative(WUIIN_ManipulationInertiaStartingEventArgs *self, WUIIN_ManipulationDelta *value);
 
-/* Windows.UI.Input.ManipulationInertiaStartingEventArgs.get_Velocities() */
 HRESULT wuiin_manipulation_inertia_starting_event_args_get__velocities(WUIIN_ManipulationInertiaStartingEventArgs *self, WUIIN_ManipulationVelocities *value);
 
-/* Windows.UI.Input.ManipulationInertiaStartingEventArgs.get_ContactCount() */
 HRESULT wuiin_manipulation_inertia_starting_event_args_get__contact_count(WUIIN_ManipulationInertiaStartingEventArgs *self, uint32_t *value);
 
-/* activate Windows.UI.Input.ManipulationCompletedEventArgs */
 HRESULT wuiin_manipulation_completed_event_args_new(WUIIN_ManipulationCompletedEventArgs **out);
 
-/* Windows.UI.Input.ManipulationCompletedEventArgs */
-/* Windows.UI.Input.ManipulationCompletedEventArgs.get_PointerDeviceType() */
 HRESULT wuiin_manipulation_completed_event_args_get__pointer_device_type(WUIIN_ManipulationCompletedEventArgs *self, WDEIN_PointerDeviceType *value);
 
-/* Windows.UI.Input.ManipulationCompletedEventArgs.get_Position() */
 HRESULT wuiin_manipulation_completed_event_args_get__position(WUIIN_ManipulationCompletedEventArgs *self, WF_Point *value);
 
-/* Windows.UI.Input.ManipulationCompletedEventArgs.get_Cumulative() */
 HRESULT wuiin_manipulation_completed_event_args_get__cumulative(WUIIN_ManipulationCompletedEventArgs *self, WUIIN_ManipulationDelta *value);
 
-/* Windows.UI.Input.ManipulationCompletedEventArgs.get_Velocities() */
 HRESULT wuiin_manipulation_completed_event_args_get__velocities(WUIIN_ManipulationCompletedEventArgs *self, WUIIN_ManipulationVelocities *value);
 
-/* Windows.UI.Input.ManipulationCompletedEventArgs.get_ContactCount() */
 HRESULT wuiin_manipulation_completed_event_args_get__contact_count(WUIIN_ManipulationCompletedEventArgs *self, uint32_t *value);
 
-/* Windows.UI.Input.ManipulationCompletedEventArgs.get_CurrentContactCount() */
 HRESULT wuiin_manipulation_completed_event_args_get__current_contact_count(WUIIN_ManipulationCompletedEventArgs *self, uint32_t *value);
 
-/* activate Windows.UI.Input.KeyboardDeliveryInterceptor */
 HRESULT wuiin_keyboard_delivery_interceptor_new(WUIIN_KeyboardDeliveryInterceptor **out);
 
-/* Windows.UI.Input.KeyboardDeliveryInterceptor */
-/* Windows.UI.Input.KeyboardDeliveryInterceptor.get_IsInterceptionEnabledWhenInForeground() */
 HRESULT wuiin_keyboard_delivery_interceptor_get__is_interception_enabled_when_in_foreground(WUIIN_KeyboardDeliveryInterceptor *self, BOOL *value);
 
-/* Windows.UI.Input.KeyboardDeliveryInterceptor.put_IsInterceptionEnabledWhenInForeground() */
 HRESULT wuiin_keyboard_delivery_interceptor_put__is_interception_enabled_when_in_foreground(WUIIN_KeyboardDeliveryInterceptor *self, BOOL value);
 
-/* Windows.UI.Input.KeyboardDeliveryInterceptor.GetForCurrentView() */
 HRESULT wuiin_keyboard_delivery_interceptor_get_for_current_view(WUIIN_KeyboardDeliveryInterceptor** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiin_keyboard_delivery_interceptor_on_key_down(WUIIN_KeyboardDeliveryInterceptor *self, cwinrt_event_fn fn, void *ctx);
@@ -1981,215 +1597,105 @@ void wuiin_keyboard_delivery_interceptor_off_key_down(WUIIN_KeyboardDeliveryInte
 cwinrt_token wuiin_keyboard_delivery_interceptor_on_key_up(WUIIN_KeyboardDeliveryInterceptor *self, cwinrt_event_fn fn, void *ctx);
 void wuiin_keyboard_delivery_interceptor_off_key_up(WUIIN_KeyboardDeliveryInterceptor *self, cwinrt_token token);
 
-/* activate Windows.UI.Input.InputActivationListenerActivationChangedEventArgs */
 HRESULT wuiin_input_activation_listener_activation_changed_event_args_new(WUIIN_InputActivationListenerActivationChangedEventArgs **out);
 
-/* Windows.UI.Input.InputActivationListenerActivationChangedEventArgs */
-/* Windows.UI.Input.InputActivationListenerActivationChangedEventArgs.get_State() */
 HRESULT wuiin_input_activation_listener_activation_changed_event_args_get__state(WUIIN_InputActivationListenerActivationChangedEventArgs *self, WUIIN_InputActivationState *value);
 
-/* activate Windows.UI.Input.InputActivationListener */
 HRESULT wuiin_input_activation_listener_new(WUIIN_InputActivationListener **out);
 
-/* Windows.UI.Input.InputActivationListener */
-/* Windows.UI.Input.InputActivationListener.get_State() */
 HRESULT wuiin_input_activation_listener_get__state(WUIIN_InputActivationListener *self, WUIIN_InputActivationState *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiin_input_activation_listener_on_input_activation_changed(WUIIN_InputActivationListener *self, cwinrt_event_fn fn, void *ctx);
 void wuiin_input_activation_listener_off_input_activation_changed(WUIIN_InputActivationListener *self, cwinrt_token token);
 
-/* Windows.UI.Input.ITouchpadGlobalActionEventArgs */
-/* Windows.UI.Input.ICrossSlidingEventArgs */
-/* Windows.UI.Input.ICrossSlidingEventArgs2 */
-/* Windows.UI.Input.ICrossSlidingEventArgs2.get_ContactCount() */
 HRESULT wuiin_cross_sliding_event_args_2_get__contact_count(WUIIN_ICrossSlidingEventArgs_2 *self, uint32_t *value);
 
-/* Windows.UI.Input.IDraggingEventArgs */
-/* Windows.UI.Input.IDraggingEventArgs2 */
-/* Windows.UI.Input.IDraggingEventArgs2.get_ContactCount() */
 HRESULT wuiin_dragging_event_args_2_get__contact_count(WUIIN_IDraggingEventArgs_2 *self, uint32_t *value);
 
-/* Windows.UI.Input.IEdgeGesture */
-/* Windows.UI.Input.IEdgeGestureEventArgs */
-/* Windows.UI.Input.IGestureRecognizer */
-/* Windows.UI.Input.IGestureRecognizer2 */
-/* Windows.UI.Input.IGestureRecognizer2.get_TapMinContactCount() */
 HRESULT wuiin_gesture_recognizer_2_get__tap_min_contact_count(WUIIN_IGestureRecognizer_2 *self, uint32_t *value);
 
-/* Windows.UI.Input.IGestureRecognizer2.put_TapMinContactCount() */
 HRESULT wuiin_gesture_recognizer_2_put__tap_min_contact_count(WUIIN_IGestureRecognizer_2 *self, uint32_t value);
 
-/* Windows.UI.Input.IGestureRecognizer2.get_TapMaxContactCount() */
 HRESULT wuiin_gesture_recognizer_2_get__tap_max_contact_count(WUIIN_IGestureRecognizer_2 *self, uint32_t *value);
 
-/* Windows.UI.Input.IGestureRecognizer2.put_TapMaxContactCount() */
 HRESULT wuiin_gesture_recognizer_2_put__tap_max_contact_count(WUIIN_IGestureRecognizer_2 *self, uint32_t value);
 
-/* Windows.UI.Input.IGestureRecognizer2.get_HoldMinContactCount() */
 HRESULT wuiin_gesture_recognizer_2_get__hold_min_contact_count(WUIIN_IGestureRecognizer_2 *self, uint32_t *value);
 
-/* Windows.UI.Input.IGestureRecognizer2.put_HoldMinContactCount() */
 HRESULT wuiin_gesture_recognizer_2_put__hold_min_contact_count(WUIIN_IGestureRecognizer_2 *self, uint32_t value);
 
-/* Windows.UI.Input.IGestureRecognizer2.get_HoldMaxContactCount() */
 HRESULT wuiin_gesture_recognizer_2_get__hold_max_contact_count(WUIIN_IGestureRecognizer_2 *self, uint32_t *value);
 
-/* Windows.UI.Input.IGestureRecognizer2.put_HoldMaxContactCount() */
 HRESULT wuiin_gesture_recognizer_2_put__hold_max_contact_count(WUIIN_IGestureRecognizer_2 *self, uint32_t value);
 
-/* Windows.UI.Input.IGestureRecognizer2.get_HoldRadius() */
 HRESULT wuiin_gesture_recognizer_2_get__hold_radius(WUIIN_IGestureRecognizer_2 *self, float *value);
 
-/* Windows.UI.Input.IGestureRecognizer2.put_HoldRadius() */
 HRESULT wuiin_gesture_recognizer_2_put__hold_radius(WUIIN_IGestureRecognizer_2 *self, float value);
 
-/* Windows.UI.Input.IGestureRecognizer2.get_HoldStartDelay() */
 HRESULT wuiin_gesture_recognizer_2_get__hold_start_delay(WUIIN_IGestureRecognizer_2 *self, WF_TimeSpan *value);
 
-/* Windows.UI.Input.IGestureRecognizer2.put_HoldStartDelay() */
 HRESULT wuiin_gesture_recognizer_2_put__hold_start_delay(WUIIN_IGestureRecognizer_2 *self, WF_TimeSpan value);
 
-/* Windows.UI.Input.IGestureRecognizer2.get_TranslationMinContactCount() */
 HRESULT wuiin_gesture_recognizer_2_get__translation_min_contact_count(WUIIN_IGestureRecognizer_2 *self, uint32_t *value);
 
-/* Windows.UI.Input.IGestureRecognizer2.put_TranslationMinContactCount() */
 HRESULT wuiin_gesture_recognizer_2_put__translation_min_contact_count(WUIIN_IGestureRecognizer_2 *self, uint32_t value);
 
-/* Windows.UI.Input.IGestureRecognizer2.get_TranslationMaxContactCount() */
 HRESULT wuiin_gesture_recognizer_2_get__translation_max_contact_count(WUIIN_IGestureRecognizer_2 *self, uint32_t *value);
 
-/* Windows.UI.Input.IGestureRecognizer2.put_TranslationMaxContactCount() */
 HRESULT wuiin_gesture_recognizer_2_put__translation_max_contact_count(WUIIN_IGestureRecognizer_2 *self, uint32_t value);
 
-/* Windows.UI.Input.IHoldingEventArgs */
-/* Windows.UI.Input.IHoldingEventArgs2 */
-/* Windows.UI.Input.IHoldingEventArgs2.get_ContactCount() */
 HRESULT wuiin_holding_event_args_2_get__contact_count(WUIIN_IHoldingEventArgs_2 *self, uint32_t *value);
 
-/* Windows.UI.Input.IHoldingEventArgs2.get_CurrentContactCount() */
 HRESULT wuiin_holding_event_args_2_get__current_contact_count(WUIIN_IHoldingEventArgs_2 *self, uint32_t *value);
 
-/* Windows.UI.Input.ITouchpadGesturesController */
-/* Windows.UI.Input.ITappedEventArgs */
-/* Windows.UI.Input.ITappedEventArgs2 */
-/* Windows.UI.Input.ITappedEventArgs2.get_ContactCount() */
 HRESULT wuiin_tapped_event_args_2_get__contact_count(WUIIN_ITappedEventArgs_2 *self, uint32_t *value);
 
-/* Windows.UI.Input.ISystemFunctionLockIndicatorChangedEventArgs */
-/* Windows.UI.Input.ISystemFunctionLockChangedEventArgs */
-/* Windows.UI.Input.ISystemFunctionButtonEventArgs */
-/* Windows.UI.Input.ISystemButtonEventController */
-/* Windows.UI.Input.IRightTappedEventArgs */
-/* Windows.UI.Input.IRightTappedEventArgs2 */
-/* Windows.UI.Input.IRightTappedEventArgs2.get_ContactCount() */
 HRESULT wuiin_right_tapped_event_args_2_get__contact_count(WUIIN_IRightTappedEventArgs_2 *self, uint32_t *value);
 
-/* Windows.UI.Input.IRadialControllerScreenContactStartedEventArgs */
-/* Windows.UI.Input.IRadialControllerScreenContactStartedEventArgs2 */
-/* Windows.UI.Input.IRadialControllerScreenContactStartedEventArgs2.get_IsButtonPressed() */
 HRESULT wuiin_radial_controller_screen_contact_started_event_args_2_get__is_button_pressed(WUIIN_IRadialControllerScreenContactStartedEventArgs_2 *self, BOOL *value);
 
-/* Windows.UI.Input.IRadialControllerScreenContactStartedEventArgs2.get_SimpleHapticsController() */
 HRESULT wuiin_radial_controller_screen_contact_started_event_args_2_get__simple_haptics_controller(WUIIN_IRadialControllerScreenContactStartedEventArgs_2 *self, WDEHA_SimpleHapticsController** value);
 
-/* Windows.UI.Input.IRadialControllerScreenContactEndedEventArgs */
-/* Windows.UI.Input.IRadialControllerScreenContactContinuedEventArgs */
-/* Windows.UI.Input.IRadialControllerScreenContactContinuedEventArgs2 */
-/* Windows.UI.Input.IRadialControllerScreenContactContinuedEventArgs2.get_IsButtonPressed() */
 HRESULT wuiin_radial_controller_screen_contact_continued_event_args_2_get__is_button_pressed(WUIIN_IRadialControllerScreenContactContinuedEventArgs_2 *self, BOOL *value);
 
-/* Windows.UI.Input.IRadialControllerScreenContactContinuedEventArgs2.get_SimpleHapticsController() */
 HRESULT wuiin_radial_controller_screen_contact_continued_event_args_2_get__simple_haptics_controller(WUIIN_IRadialControllerScreenContactContinuedEventArgs_2 *self, WDEHA_SimpleHapticsController** value);
 
-/* Windows.UI.Input.IRadialControllerScreenContact */
-/* Windows.UI.Input.IRadialControllerRotationChangedEventArgs */
-/* Windows.UI.Input.IRadialControllerRotationChangedEventArgs2 */
-/* Windows.UI.Input.IRadialControllerRotationChangedEventArgs2.get_IsButtonPressed() */
 HRESULT wuiin_radial_controller_rotation_changed_event_args_2_get__is_button_pressed(WUIIN_IRadialControllerRotationChangedEventArgs_2 *self, BOOL *value);
 
-/* Windows.UI.Input.IRadialControllerRotationChangedEventArgs2.get_SimpleHapticsController() */
 HRESULT wuiin_radial_controller_rotation_changed_event_args_2_get__simple_haptics_controller(WUIIN_IRadialControllerRotationChangedEventArgs_2 *self, WDEHA_SimpleHapticsController** value);
 
-/* Windows.UI.Input.IRadialControllerMenuItem */
-/* Windows.UI.Input.IRadialControllerMenu */
-/* Windows.UI.Input.IRadialControllerControlAcquiredEventArgs */
-/* Windows.UI.Input.IRadialControllerControlAcquiredEventArgs2 */
-/* Windows.UI.Input.IRadialControllerControlAcquiredEventArgs2.get_IsButtonPressed() */
 HRESULT wuiin_radial_controller_control_acquired_event_args_2_get__is_button_pressed(WUIIN_IRadialControllerControlAcquiredEventArgs_2 *self, BOOL *value);
 
-/* Windows.UI.Input.IRadialControllerControlAcquiredEventArgs2.get_SimpleHapticsController() */
 HRESULT wuiin_radial_controller_control_acquired_event_args_2_get__simple_haptics_controller(WUIIN_IRadialControllerControlAcquiredEventArgs_2 *self, WDEHA_SimpleHapticsController** value);
 
-/* Windows.UI.Input.IRadialControllerConfiguration */
-/* Windows.UI.Input.IRadialControllerConfiguration2 */
-/* Windows.UI.Input.IRadialControllerConfiguration2.put_ActiveControllerWhenMenuIsSuppressed() */
 HRESULT wuiin_radial_controller_configuration_2_put__active_controller_when_menu_is_suppressed(WUIIN_IRadialControllerConfiguration_2 *self, WUIIN_RadialController* value);
 
-/* Windows.UI.Input.IRadialControllerConfiguration2.get_ActiveControllerWhenMenuIsSuppressed() */
 HRESULT wuiin_radial_controller_configuration_2_get__active_controller_when_menu_is_suppressed(WUIIN_IRadialControllerConfiguration_2 *self, WUIIN_RadialController** value);
 
-/* Windows.UI.Input.IRadialControllerConfiguration2.put_IsMenuSuppressed() */
 HRESULT wuiin_radial_controller_configuration_2_put__is_menu_suppressed(WUIIN_IRadialControllerConfiguration_2 *self, BOOL value);
 
-/* Windows.UI.Input.IRadialControllerConfiguration2.get_IsMenuSuppressed() */
 HRESULT wuiin_radial_controller_configuration_2_get__is_menu_suppressed(WUIIN_IRadialControllerConfiguration_2 *self, BOOL *value);
 
-/* Windows.UI.Input.IRadialControllerButtonReleasedEventArgs */
-/* Windows.UI.Input.IRadialControllerButtonPressedEventArgs */
-/* Windows.UI.Input.IRadialControllerButtonHoldingEventArgs */
-/* Windows.UI.Input.IRadialControllerButtonClickedEventArgs */
-/* Windows.UI.Input.IRadialControllerButtonClickedEventArgs2 */
-/* Windows.UI.Input.IRadialControllerButtonClickedEventArgs2.get_SimpleHapticsController() */
 HRESULT wuiin_radial_controller_button_clicked_event_args_2_get__simple_haptics_controller(WUIIN_IRadialControllerButtonClickedEventArgs_2 *self, WDEHA_SimpleHapticsController** value);
 
-/* Windows.UI.Input.IRadialController */
-/* Windows.UI.Input.IRadialController2 */
-/* Windows.UI.Input.IPointerVisualizationSettings */
-/* Windows.UI.Input.IPointerPointProperties */
-/* Windows.UI.Input.IPointerPointProperties2 */
-/* Windows.UI.Input.IPointerPointProperties2.get_ZDistance() */
 HRESULT wuiin_pointer_point_properties_2_get__z_distance(WUIIN_IPointerPointProperties_2 *self, float** value);
 
-/* Windows.UI.Input.IPointerPoint */
-/* Windows.UI.Input.IPointerPointPhysicalPosition */
-/* Windows.UI.Input.IPointerPointPhysicalPosition.get_IsPhysicalPositionSupported() */
 HRESULT wuiin_pointer_point_physical_position_get__is_physical_position_supported(WUIIN_IPointerPointPhysicalPosition *self, BOOL *value);
 
-/* Windows.UI.Input.IPointerPointPhysicalPosition.get_PhysicalPosition() */
 HRESULT wuiin_pointer_point_physical_position_get__physical_position(WUIIN_IPointerPointPhysicalPosition *self, WF_Point *value);
 
-/* Windows.UI.Input.IPhysicalGestureRecognizer */
-/* Windows.UI.Input.IMouseWheelParameters */
-/* Windows.UI.Input.IManipulationUpdatedEventArgs */
-/* Windows.UI.Input.IManipulationUpdatedEventArgs2 */
-/* Windows.UI.Input.IManipulationUpdatedEventArgs2.get_ContactCount() */
 HRESULT wuiin_manipulation_updated_event_args_2_get__contact_count(WUIIN_IManipulationUpdatedEventArgs_2 *self, uint32_t *value);
 
-/* Windows.UI.Input.IManipulationUpdatedEventArgs2.get_CurrentContactCount() */
 HRESULT wuiin_manipulation_updated_event_args_2_get__current_contact_count(WUIIN_IManipulationUpdatedEventArgs_2 *self, uint32_t *value);
 
-/* Windows.UI.Input.IManipulationStartedEventArgs */
-/* Windows.UI.Input.IManipulationStartedEventArgs2 */
-/* Windows.UI.Input.IManipulationStartedEventArgs2.get_ContactCount() */
 HRESULT wuiin_manipulation_started_event_args_2_get__contact_count(WUIIN_IManipulationStartedEventArgs_2 *self, uint32_t *value);
 
-/* Windows.UI.Input.IManipulationInertiaStartingEventArgs */
-/* Windows.UI.Input.IManipulationInertiaStartingEventArgs2 */
-/* Windows.UI.Input.IManipulationInertiaStartingEventArgs2.get_ContactCount() */
 HRESULT wuiin_manipulation_inertia_starting_event_args_2_get__contact_count(WUIIN_IManipulationInertiaStartingEventArgs_2 *self, uint32_t *value);
 
-/* Windows.UI.Input.IManipulationCompletedEventArgs */
-/* Windows.UI.Input.IManipulationCompletedEventArgs2 */
-/* Windows.UI.Input.IManipulationCompletedEventArgs2.get_ContactCount() */
 HRESULT wuiin_manipulation_completed_event_args_2_get__contact_count(WUIIN_IManipulationCompletedEventArgs_2 *self, uint32_t *value);
 
-/* Windows.UI.Input.IManipulationCompletedEventArgs2.get_CurrentContactCount() */
 HRESULT wuiin_manipulation_completed_event_args_2_get__current_contact_count(WUIIN_IManipulationCompletedEventArgs_2 *self, uint32_t *value);
 
-/* Windows.UI.Input.IKeyboardDeliveryInterceptor */
-/* Windows.UI.Input.IInputActivationListenerActivationChangedEventArgs */
-/* Windows.UI.Input.IInputActivationListener */
 #endif /* CWINRT_WINDOWS_UI_INPUT_H */

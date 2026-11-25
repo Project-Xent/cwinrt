@@ -17,7 +17,6 @@
 #include <cwinrt/Windows.UI.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WDEGE_Geopoint
 #define CWINRT_FWD_WDEGE_Geopoint
 typedef struct WDEGE_Geopoint WDEGE_Geopoint;
@@ -43,7 +42,6 @@ typedef struct WSEMALO_LocalLocation WSEMALO_LocalLocation;
 typedef struct WSEMA_MapRoute WSEMA_MapRoute;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUIXACOMA_CustomMapTileDataSource WUIXACOMA_CustomMapTileDataSource;
 typedef struct WUIXACOMA_HttpMapTileDataSource WUIXACOMA_HttpMapTileDataSource;
 typedef struct WUIXACOMA_ICustomMapTileDataSourceFactory WUIXACOMA_ICustomMapTileDataSourceFactory;
@@ -213,7 +211,6 @@ typedef struct WUIXACOMA_IStreetsideExperience WUIXACOMA_IStreetsideExperience;
 typedef struct WUIXACOMA_IStreetsidePanorama WUIXACOMA_IStreetsidePanorama;
 typedef struct WUIXACOMA_IMapTileDataSource WUIXACOMA_IMapTileDataSource;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_TypedEventHandler_WUIXACOMA_CustomMapTileDataSource_WUIXACOMA_MapTileBitmapRequestedEventArgs
 #define CWINRT_FWD_WF_TypedEventHandler_WUIXACOMA_CustomMapTileDataSource_WUIXACOMA_MapTileBitmapRequestedEventArgs
 typedef struct WF_TypedEventHandler_WUIXACOMA_CustomMapTileDataSource_WUIXACOMA_MapTileBitmapRequestedEventArgs WF_TypedEventHandler_WUIXACOMA_CustomMapTileDataSource_WUIXACOMA_MapTileBitmapRequestedEventArgs;
@@ -592,7 +589,6 @@ struct WUIXACOMA_MapZoomLevelRange {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -1053,1322 +1049,849 @@ static const IID CWINRT_IID_WUIXACOMA_IStreetsidePanorama CWINRT_MAYBE_UNUSED = 
 static const IID CWINRT_IID_WUIXACOMA_IMapTileDataSource CWINRT_MAYBE_UNUSED = { 0xC03D9F5E, 0xBE1F, 0x4C69, { 0x99, 0x69, 0x79, 0x46, 0x7A, 0x51, 0x3C, 0x38 } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.Xaml.Controls.Maps.CustomMapTileDataSource */
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixacoma_custom_map_tile_data_source_on_bitmap_requested(WUIXACOMA_CustomMapTileDataSource *self, cwinrt_event_fn fn, void *ctx);
 void wuixacoma_custom_map_tile_data_source_off_bitmap_requested(WUIXACOMA_CustomMapTileDataSource *self, cwinrt_token token);
 
-/* Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource */
-/* Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource.get_UriFormatString() */
 HRESULT wuixacoma_http_map_tile_data_source_get__uri_format_string(WUIXACOMA_HttpMapTileDataSource *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource.put_UriFormatString() */
 HRESULT wuixacoma_http_map_tile_data_source_put__uri_format_string(WUIXACOMA_HttpMapTileDataSource *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource.get_AdditionalRequestHeaders() */
 HRESULT wuixacoma_http_map_tile_data_source_get__additional_request_headers(WUIXACOMA_HttpMapTileDataSource *self, WFOCO_IMap_HSTRING_HSTRING** value);
 
-/* Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource.get_AllowCaching() */
 HRESULT wuixacoma_http_map_tile_data_source_get__allow_caching(WUIXACOMA_HttpMapTileDataSource *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource.put_AllowCaching() */
 HRESULT wuixacoma_http_map_tile_data_source_put__allow_caching(WUIXACOMA_HttpMapTileDataSource *self, BOOL value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixacoma_http_map_tile_data_source_on_uri_requested(WUIXACOMA_HttpMapTileDataSource *self, cwinrt_event_fn fn, void *ctx);
 void wuixacoma_http_map_tile_data_source_off_uri_requested(WUIXACOMA_HttpMapTileDataSource *self, cwinrt_token token);
 
-/* Windows.UI.Xaml.Controls.Maps.ICustomMapTileDataSourceFactory */
-/* Windows.UI.Xaml.Controls.Maps.ICustomMapTileDataSourceFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixacoma_custom_map_tile_data_source_factory_create_instance(WUIXACOMA_ICustomMapTileDataSourceFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXACOMA_CustomMapTileDataSource** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IHttpMapTileDataSourceFactory */
-/* Windows.UI.Xaml.Controls.Maps.IHttpMapTileDataSourceFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixacoma_http_map_tile_data_source_factory_create_instance(WUIXACOMA_IHttpMapTileDataSourceFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXACOMA_HttpMapTileDataSource** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IHttpMapTileDataSourceFactory.CreateInstanceWithUriFormatString(uriFormatString, baseInterface, innerInterface) */
 HRESULT wuixacoma_http_map_tile_data_source_factory_create_instance_with_uri_format_string(WUIXACOMA_IHttpMapTileDataSourceFactory *self, cwinrt_hstring uriFormatString, IInspectable* baseInterface, IInspectable* innerInterface, WUIXACOMA_HttpMapTileDataSource** out);
 
-/* Windows.UI.Xaml.Controls.Maps.ILocalMapTileDataSourceFactory */
-/* Windows.UI.Xaml.Controls.Maps.ILocalMapTileDataSourceFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixacoma_local_map_tile_data_source_factory_create_instance(WUIXACOMA_ILocalMapTileDataSourceFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXACOMA_LocalMapTileDataSource** out);
 
-/* Windows.UI.Xaml.Controls.Maps.ILocalMapTileDataSourceFactory.CreateInstanceWithUriFormatString(uriFormatString, baseInterface, innerInterface) */
 HRESULT wuixacoma_local_map_tile_data_source_factory_create_instance_with_uri_format_string(WUIXACOMA_ILocalMapTileDataSourceFactory *self, cwinrt_hstring uriFormatString, IInspectable* baseInterface, IInspectable* innerInterface, WUIXACOMA_LocalMapTileDataSource** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapBillboardFactory */
-/* Windows.UI.Xaml.Controls.Maps.IMapBillboardFactory.CreateInstanceFromCamera(camera) */
 HRESULT wuixacoma_map_billboard_factory_create_instance_from_camera(WUIXACOMA_IMapBillboardFactory *self, WUIXACOMA_MapCamera* camera, WUIXACOMA_MapBillboard** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapBillboardStatics */
-/* Windows.UI.Xaml.Controls.Maps.IMapBillboardStatics.get_LocationProperty() */
 HRESULT wuixacoma_map_billboard_statics_get__location_property(WUIXACOMA_IMapBillboardStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapBillboardStatics.get_NormalizedAnchorPointProperty() */
 HRESULT wuixacoma_map_billboard_statics_get__normalized_anchor_point_property(WUIXACOMA_IMapBillboardStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapBillboardStatics.get_CollisionBehaviorDesiredProperty() */
 HRESULT wuixacoma_map_billboard_statics_get__collision_behavior_desired_property(WUIXACOMA_IMapBillboardStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapCameraFactory */
-/* Windows.UI.Xaml.Controls.Maps.IMapCameraFactory.CreateInstanceWithLocation(location) */
 HRESULT wuixacoma_map_camera_factory_create_instance_with_location(WUIXACOMA_IMapCameraFactory *self, WDEGE_Geopoint* location, WUIXACOMA_MapCamera** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapCameraFactory.CreateInstanceWithLocationAndHeading(location, headingInDegrees) */
 HRESULT wuixacoma_map_camera_factory_create_instance_with_location_and_heading(WUIXACOMA_IMapCameraFactory *self, WDEGE_Geopoint* location, double headingInDegrees, WUIXACOMA_MapCamera** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapCameraFactory.CreateInstanceWithLocationHeadingAndPitch(location, headingInDegrees, pitchInDegrees) */
 HRESULT wuixacoma_map_camera_factory_create_instance_with_location_heading_and_pitch(WUIXACOMA_IMapCameraFactory *self, WDEGE_Geopoint* location, double headingInDegrees, double pitchInDegrees, WUIXACOMA_MapCamera** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapCameraFactory.CreateInstanceWithLocationHeadingPitchRollAndFieldOfView(location, headingInDegrees, pitchInDegrees, rollInDegrees, fieldOfViewInDegrees) */
 HRESULT wuixacoma_map_camera_factory_create_instance_with_location_heading_pitch_roll_and_field_of_view(WUIXACOMA_IMapCameraFactory *self, WDEGE_Geopoint* location, double headingInDegrees, double pitchInDegrees, double rollInDegrees, double fieldOfViewInDegrees, WUIXACOMA_MapCamera** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlDataHelperFactory */
-/* Windows.UI.Xaml.Controls.Maps.IMapControlDataHelperFactory.CreateInstance(map) */
 HRESULT wuixacoma_map_control_data_helper_factory_create_instance(WUIXACOMA_IMapControlDataHelperFactory *self, WUIXACOMA_MapControl* map, WUIXACOMA_MapControlDataHelper** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlDataHelperStatics */
-/* Windows.UI.Xaml.Controls.Maps.IMapControlDataHelperStatics.CreateMapControl(rasterRenderMode) */
 HRESULT wuixacoma_map_control_data_helper_statics_create_map_control(WUIXACOMA_IMapControlDataHelperStatics *self, BOOL rasterRenderMode, WUIXACOMA_MapControl** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics */
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics.get_CenterProperty() */
 HRESULT wuixacoma_map_control_statics_get__center_property(WUIXACOMA_IMapControlStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics.get_ChildrenProperty() */
 HRESULT wuixacoma_map_control_statics_get__children_property(WUIXACOMA_IMapControlStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics.get_ColorSchemeProperty() */
 HRESULT wuixacoma_map_control_statics_get__color_scheme_property(WUIXACOMA_IMapControlStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics.get_DesiredPitchProperty() */
 HRESULT wuixacoma_map_control_statics_get__desired_pitch_property(WUIXACOMA_IMapControlStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics.get_HeadingProperty() */
 HRESULT wuixacoma_map_control_statics_get__heading_property(WUIXACOMA_IMapControlStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics.get_LandmarksVisibleProperty() */
 HRESULT wuixacoma_map_control_statics_get__landmarks_visible_property(WUIXACOMA_IMapControlStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics.get_LoadingStatusProperty() */
 HRESULT wuixacoma_map_control_statics_get__loading_status_property(WUIXACOMA_IMapControlStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics.get_MapServiceTokenProperty() */
 HRESULT wuixacoma_map_control_statics_get__map_service_token_property(WUIXACOMA_IMapControlStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics.get_PedestrianFeaturesVisibleProperty() */
 HRESULT wuixacoma_map_control_statics_get__pedestrian_features_visible_property(WUIXACOMA_IMapControlStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics.get_PitchProperty() */
 HRESULT wuixacoma_map_control_statics_get__pitch_property(WUIXACOMA_IMapControlStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics.get_StyleProperty() */
 HRESULT wuixacoma_map_control_statics_get__style_property(WUIXACOMA_IMapControlStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics.get_TrafficFlowVisibleProperty() */
 HRESULT wuixacoma_map_control_statics_get__traffic_flow_visible_property(WUIXACOMA_IMapControlStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics.get_TransformOriginProperty() */
 HRESULT wuixacoma_map_control_statics_get__transform_origin_property(WUIXACOMA_IMapControlStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics.get_WatermarkModeProperty() */
 HRESULT wuixacoma_map_control_statics_get__watermark_mode_property(WUIXACOMA_IMapControlStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics.get_ZoomLevelProperty() */
 HRESULT wuixacoma_map_control_statics_get__zoom_level_property(WUIXACOMA_IMapControlStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics.get_MapElementsProperty() */
 HRESULT wuixacoma_map_control_statics_get__map_elements_property(WUIXACOMA_IMapControlStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics.get_RoutesProperty() */
 HRESULT wuixacoma_map_control_statics_get__routes_property(WUIXACOMA_IMapControlStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics.get_TileSourcesProperty() */
 HRESULT wuixacoma_map_control_statics_get__tile_sources_property(WUIXACOMA_IMapControlStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics.get_LocationProperty() */
 HRESULT wuixacoma_map_control_statics_get__location_property(WUIXACOMA_IMapControlStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics.GetLocation(element) */
 HRESULT wuixacoma_map_control_statics_get_location(WUIXACOMA_IMapControlStatics *self, WUIXA_DependencyObject* element, WDEGE_Geopoint** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics.SetLocation(element) */
 HRESULT wuixacoma_map_control_statics_set_location(WUIXACOMA_IMapControlStatics *self, WUIXA_DependencyObject* element, WDEGE_Geopoint* value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics.get_NormalizedAnchorPointProperty() */
 HRESULT wuixacoma_map_control_statics_get__normalized_anchor_point_property(WUIXACOMA_IMapControlStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics.GetNormalizedAnchorPoint(element) */
 HRESULT wuixacoma_map_control_statics_get_normalized_anchor_point(WUIXACOMA_IMapControlStatics *self, WUIXA_DependencyObject* element, WF_Point *out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics.SetNormalizedAnchorPoint(element) */
 HRESULT wuixacoma_map_control_statics_set_normalized_anchor_point(WUIXACOMA_IMapControlStatics *self, WUIXA_DependencyObject* element, WF_Point value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics2 */
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics2.get_BusinessLandmarksVisibleProperty() */
 HRESULT wuixacoma_map_control_statics_2_get__business_landmarks_visible_property(WUIXACOMA_IMapControlStatics_2 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics2.get_TransitFeaturesVisibleProperty() */
 HRESULT wuixacoma_map_control_statics_2_get__transit_features_visible_property(WUIXACOMA_IMapControlStatics_2 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics2.get_PanInteractionModeProperty() */
 HRESULT wuixacoma_map_control_statics_2_get__pan_interaction_mode_property(WUIXACOMA_IMapControlStatics_2 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics2.get_RotateInteractionModeProperty() */
 HRESULT wuixacoma_map_control_statics_2_get__rotate_interaction_mode_property(WUIXACOMA_IMapControlStatics_2 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics2.get_TiltInteractionModeProperty() */
 HRESULT wuixacoma_map_control_statics_2_get__tilt_interaction_mode_property(WUIXACOMA_IMapControlStatics_2 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics2.get_ZoomInteractionModeProperty() */
 HRESULT wuixacoma_map_control_statics_2_get__zoom_interaction_mode_property(WUIXACOMA_IMapControlStatics_2 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics2.get_Is3DSupportedProperty() */
 HRESULT wuixacoma_map_control_statics_2_get__is3_d_supported_property(WUIXACOMA_IMapControlStatics_2 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics2.get_IsStreetsideSupportedProperty() */
 HRESULT wuixacoma_map_control_statics_2_get__is_streetside_supported_property(WUIXACOMA_IMapControlStatics_2 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics2.get_SceneProperty() */
 HRESULT wuixacoma_map_control_statics_2_get__scene_property(WUIXACOMA_IMapControlStatics_2 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics4 */
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics4.get_BusinessLandmarksEnabledProperty() */
 HRESULT wuixacoma_map_control_statics_4_get__business_landmarks_enabled_property(WUIXACOMA_IMapControlStatics_4 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics4.get_TransitFeaturesEnabledProperty() */
 HRESULT wuixacoma_map_control_statics_4_get__transit_features_enabled_property(WUIXACOMA_IMapControlStatics_4 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics5 */
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics5.get_MapProjectionProperty() */
 HRESULT wuixacoma_map_control_statics_5_get__map_projection_property(WUIXACOMA_IMapControlStatics_5 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics5.get_StyleSheetProperty() */
 HRESULT wuixacoma_map_control_statics_5_get__style_sheet_property(WUIXACOMA_IMapControlStatics_5 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics5.get_ViewPaddingProperty() */
 HRESULT wuixacoma_map_control_statics_5_get__view_padding_property(WUIXACOMA_IMapControlStatics_5 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics6 */
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics6.get_LayersProperty() */
 HRESULT wuixacoma_map_control_statics_6_get__layers_property(WUIXACOMA_IMapControlStatics_6 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics7 */
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics7.get_RegionProperty() */
 HRESULT wuixacoma_map_control_statics_7_get__region_property(WUIXACOMA_IMapControlStatics_7 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics8 */
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics8.get_CanTiltDownProperty() */
 HRESULT wuixacoma_map_control_statics_8_get__can_tilt_down_property(WUIXACOMA_IMapControlStatics_8 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics8.get_CanTiltUpProperty() */
 HRESULT wuixacoma_map_control_statics_8_get__can_tilt_up_property(WUIXACOMA_IMapControlStatics_8 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics8.get_CanZoomInProperty() */
 HRESULT wuixacoma_map_control_statics_8_get__can_zoom_in_property(WUIXACOMA_IMapControlStatics_8 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlStatics8.get_CanZoomOutProperty() */
 HRESULT wuixacoma_map_control_statics_8_get__can_zoom_out_property(WUIXACOMA_IMapControlStatics_8 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapCustomExperienceFactory */
-/* Windows.UI.Xaml.Controls.Maps.IMapCustomExperienceFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixacoma_map_custom_experience_factory_create_instance(WUIXACOMA_IMapCustomExperienceFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXACOMA_MapCustomExperience** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapElement3DStatics */
-/* Windows.UI.Xaml.Controls.Maps.IMapElement3DStatics.get_LocationProperty() */
 HRESULT wuixacoma_map_element3_d_statics_get__location_property(WUIXACOMA_IMapElement3DStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapElement3DStatics.get_HeadingProperty() */
 HRESULT wuixacoma_map_element3_d_statics_get__heading_property(WUIXACOMA_IMapElement3DStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapElement3DStatics.get_PitchProperty() */
 HRESULT wuixacoma_map_element3_d_statics_get__pitch_property(WUIXACOMA_IMapElement3DStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapElement3DStatics.get_RollProperty() */
 HRESULT wuixacoma_map_element3_d_statics_get__roll_property(WUIXACOMA_IMapElement3DStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapElement3DStatics.get_ScaleProperty() */
 HRESULT wuixacoma_map_element3_d_statics_get__scale_property(WUIXACOMA_IMapElement3DStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapElementFactory */
-/* Windows.UI.Xaml.Controls.Maps.IMapElementFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixacoma_map_element_factory_create_instance(WUIXACOMA_IMapElementFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXACOMA_MapElement** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapElementStatics */
-/* Windows.UI.Xaml.Controls.Maps.IMapElementStatics.get_ZIndexProperty() */
 HRESULT wuixacoma_map_element_statics_get__z_index_property(WUIXACOMA_IMapElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapElementStatics.get_VisibleProperty() */
 HRESULT wuixacoma_map_element_statics_get__visible_property(WUIXACOMA_IMapElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapElementStatics2 */
-/* Windows.UI.Xaml.Controls.Maps.IMapElementStatics2.get_MapTabIndexProperty() */
 HRESULT wuixacoma_map_element_statics_2_get__map_tab_index_property(WUIXACOMA_IMapElementStatics_2 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapElementStatics3 */
-/* Windows.UI.Xaml.Controls.Maps.IMapElementStatics3.get_MapStyleSheetEntryProperty() */
 HRESULT wuixacoma_map_element_statics_3_get__map_style_sheet_entry_property(WUIXACOMA_IMapElementStatics_3 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapElementStatics3.get_MapStyleSheetEntryStateProperty() */
 HRESULT wuixacoma_map_element_statics_3_get__map_style_sheet_entry_state_property(WUIXACOMA_IMapElementStatics_3 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapElementStatics3.get_TagProperty() */
 HRESULT wuixacoma_map_element_statics_3_get__tag_property(WUIXACOMA_IMapElementStatics_3 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapElementStatics4 */
-/* Windows.UI.Xaml.Controls.Maps.IMapElementStatics4.get_IsEnabledProperty() */
 HRESULT wuixacoma_map_element_statics_4_get__is_enabled_property(WUIXACOMA_IMapElementStatics_4 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapElementsLayerStatics */
-/* Windows.UI.Xaml.Controls.Maps.IMapElementsLayerStatics.get_MapElementsProperty() */
 HRESULT wuixacoma_map_elements_layer_statics_get__map_elements_property(WUIXACOMA_IMapElementsLayerStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapIconStatics */
-/* Windows.UI.Xaml.Controls.Maps.IMapIconStatics.get_LocationProperty() */
 HRESULT wuixacoma_map_icon_statics_get__location_property(WUIXACOMA_IMapIconStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapIconStatics.get_TitleProperty() */
 HRESULT wuixacoma_map_icon_statics_get__title_property(WUIXACOMA_IMapIconStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapIconStatics.get_NormalizedAnchorPointProperty() */
 HRESULT wuixacoma_map_icon_statics_get__normalized_anchor_point_property(WUIXACOMA_IMapIconStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapIconStatics2 */
-/* Windows.UI.Xaml.Controls.Maps.IMapIconStatics2.get_CollisionBehaviorDesiredProperty() */
 HRESULT wuixacoma_map_icon_statics_2_get__collision_behavior_desired_property(WUIXACOMA_IMapIconStatics_2 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapItemsControlStatics */
-/* Windows.UI.Xaml.Controls.Maps.IMapItemsControlStatics.get_ItemsSourceProperty() */
 HRESULT wuixacoma_map_items_control_statics_get__items_source_property(WUIXACOMA_IMapItemsControlStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapItemsControlStatics.get_ItemsProperty() */
 HRESULT wuixacoma_map_items_control_statics_get__items_property(WUIXACOMA_IMapItemsControlStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapItemsControlStatics.get_ItemTemplateProperty() */
 HRESULT wuixacoma_map_items_control_statics_get__item_template_property(WUIXACOMA_IMapItemsControlStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapLayerFactory */
-/* Windows.UI.Xaml.Controls.Maps.IMapLayerFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixacoma_map_layer_factory_create_instance(WUIXACOMA_IMapLayerFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXACOMA_MapLayer** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapLayerStatics */
-/* Windows.UI.Xaml.Controls.Maps.IMapLayerStatics.get_MapTabIndexProperty() */
 HRESULT wuixacoma_map_layer_statics_get__map_tab_index_property(WUIXACOMA_IMapLayerStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapLayerStatics.get_VisibleProperty() */
 HRESULT wuixacoma_map_layer_statics_get__visible_property(WUIXACOMA_IMapLayerStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapLayerStatics.get_ZIndexProperty() */
 HRESULT wuixacoma_map_layer_statics_get__z_index_property(WUIXACOMA_IMapLayerStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapModel3DFactory */
-/* Windows.UI.Xaml.Controls.Maps.IMapModel3DFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixacoma_map_model3_d_factory_create_instance(WUIXACOMA_IMapModel3DFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXACOMA_MapModel3D** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapModel3DStatics */
-/* Windows.UI.Xaml.Controls.Maps.IMapModel3DStatics.CreateFrom3MFAsync(source) */
 HRESULT wuixacoma_map_model3_d_statics_create_from3_m_f_async(WUIXACOMA_IMapModel3DStatics *self, WSTST_IRandomAccessStreamReference* source, WF_IAsyncOperation_WUIXACOMA_MapModel3D** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapModel3DStatics.CreateFrom3MFAsync(source, shadingOption) */
 HRESULT wuixacoma_map_model3_d_statics_create_from3_m_f_async_p_map_model3_d_shading_option_p(WUIXACOMA_IMapModel3DStatics *self, WSTST_IRandomAccessStreamReference* source, WUIXACOMA_MapModel3DShadingOption shadingOption, WF_IAsyncOperation_WUIXACOMA_MapModel3D** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapPolygonStatics */
-/* Windows.UI.Xaml.Controls.Maps.IMapPolygonStatics.get_PathProperty() */
 HRESULT wuixacoma_map_polygon_statics_get__path_property(WUIXACOMA_IMapPolygonStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapPolygonStatics.get_StrokeThicknessProperty() */
 HRESULT wuixacoma_map_polygon_statics_get__stroke_thickness_property(WUIXACOMA_IMapPolygonStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapPolygonStatics.get_StrokeDashedProperty() */
 HRESULT wuixacoma_map_polygon_statics_get__stroke_dashed_property(WUIXACOMA_IMapPolygonStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapPolylineStatics */
-/* Windows.UI.Xaml.Controls.Maps.IMapPolylineStatics.get_PathProperty() */
 HRESULT wuixacoma_map_polyline_statics_get__path_property(WUIXACOMA_IMapPolylineStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapPolylineStatics.get_StrokeDashedProperty() */
 HRESULT wuixacoma_map_polyline_statics_get__stroke_dashed_property(WUIXACOMA_IMapPolylineStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapRouteViewFactory */
-/* Windows.UI.Xaml.Controls.Maps.IMapRouteViewFactory.CreateInstanceWithMapRoute(route, baseInterface, innerInterface) */
 HRESULT wuixacoma_map_route_view_factory_create_instance_with_map_route(WUIXACOMA_IMapRouteViewFactory *self, WSEMA_MapRoute* route, IInspectable* baseInterface, IInspectable* innerInterface, WUIXACOMA_MapRouteView** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapSceneStatics */
-/* Windows.UI.Xaml.Controls.Maps.IMapSceneStatics.CreateFromBoundingBox(bounds) */
 HRESULT wuixacoma_map_scene_statics_create_from_bounding_box(WUIXACOMA_IMapSceneStatics *self, WDEGE_GeoboundingBox* bounds, WUIXACOMA_MapScene** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapSceneStatics.CreateFromBoundingBox(bounds, headingInDegrees, pitchInDegrees) */
 HRESULT wuixacoma_map_scene_statics_create_from_bounding_box_p_f64_f64_p(WUIXACOMA_IMapSceneStatics *self, WDEGE_GeoboundingBox* bounds, double headingInDegrees, double pitchInDegrees, WUIXACOMA_MapScene** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapSceneStatics.CreateFromCamera(camera) */
 HRESULT wuixacoma_map_scene_statics_create_from_camera(WUIXACOMA_IMapSceneStatics *self, WUIXACOMA_MapCamera* camera, WUIXACOMA_MapScene** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapSceneStatics.CreateFromLocation(location) */
 HRESULT wuixacoma_map_scene_statics_create_from_location(WUIXACOMA_IMapSceneStatics *self, WDEGE_Geopoint* location, WUIXACOMA_MapScene** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapSceneStatics.CreateFromLocation(location, headingInDegrees, pitchInDegrees) */
 HRESULT wuixacoma_map_scene_statics_create_from_location_p_f64_f64_p(WUIXACOMA_IMapSceneStatics *self, WDEGE_Geopoint* location, double headingInDegrees, double pitchInDegrees, WUIXACOMA_MapScene** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapSceneStatics.CreateFromLocationAndRadius(location, radiusInMeters) */
 HRESULT wuixacoma_map_scene_statics_create_from_location_and_radius(WUIXACOMA_IMapSceneStatics *self, WDEGE_Geopoint* location, double radiusInMeters, WUIXACOMA_MapScene** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapSceneStatics.CreateFromLocationAndRadius(location, radiusInMeters, headingInDegrees, pitchInDegrees) */
 HRESULT wuixacoma_map_scene_statics_create_from_location_and_radius_p_f64_f64_f64_p(WUIXACOMA_IMapSceneStatics *self, WDEGE_Geopoint* location, double radiusInMeters, double headingInDegrees, double pitchInDegrees, WUIXACOMA_MapScene** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapSceneStatics.CreateFromLocations(locations) */
 HRESULT wuixacoma_map_scene_statics_create_from_locations(WUIXACOMA_IMapSceneStatics *self, WFOCO_IIterable_WDEGE_Geopoint* locations, WUIXACOMA_MapScene** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapSceneStatics.CreateFromLocations(locations, headingInDegrees, pitchInDegrees) */
 HRESULT wuixacoma_map_scene_statics_create_from_locations_p_f64_f64_p(WUIXACOMA_IMapSceneStatics *self, WFOCO_IIterable_WDEGE_Geopoint* locations, double headingInDegrees, double pitchInDegrees, WUIXACOMA_MapScene** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics */
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Area() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__area(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Airport() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__airport(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Cemetery() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__cemetery(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Continent() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__continent(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Education() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__education(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_IndigenousPeoplesReserve() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__indigenous_peoples_reserve(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Island() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__island(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Medical() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__medical(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Military() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__military(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Nautical() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__nautical(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Neighborhood() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__neighborhood(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Runway() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__runway(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Sand() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__sand(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_ShoppingCenter() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__shopping_center(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Stadium() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__stadium(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Vegetation() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__vegetation(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Forest() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__forest(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_GolfCourse() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__golf_course(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Park() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__park(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_PlayingField() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__playing_field(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Reserve() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__reserve(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Point() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__point(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_NaturalPoint() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__natural_point(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Peak() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__peak(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_VolcanicPeak() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__volcanic_peak(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_WaterPoint() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__water_point(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_PointOfInterest() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__point_of_interest(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Business() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__business(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_FoodPoint() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__food_point(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_PopulatedPlace() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__populated_place(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Capital() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__capital(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_AdminDistrictCapital() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__admin_district_capital(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_CountryRegionCapital() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__country_region_capital(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_RoadShield() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__road_shield(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_RoadExit() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__road_exit(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Transit() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__transit(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Political() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__political(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_CountryRegion() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__country_region(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_AdminDistrict() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__admin_district(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_District() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__district(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Structure() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__structure(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Building() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__building(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_EducationBuilding() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__education_building(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_MedicalBuilding() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__medical_building(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_TransitBuilding() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__transit_building(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Transportation() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__transportation(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Road() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__road(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_ControlledAccessHighway() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__controlled_access_highway(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_HighSpeedRamp() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__high_speed_ramp(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Highway() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__highway(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_MajorRoad() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__major_road(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_ArterialRoad() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__arterial_road(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Street() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__street(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Ramp() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__ramp(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_UnpavedStreet() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__unpaved_street(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_TollRoad() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__toll_road(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Railway() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__railway(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Trail() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__trail(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_WaterRoute() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__water_route(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_Water() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__water(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_River() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__river(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_RouteLine() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__route_line(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_WalkingRoute() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__walking_route(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntriesStatics.get_DrivingRoute() */
 HRESULT wuixacoma_map_style_sheet_entries_statics_get__driving_route(WUIXACOMA_IMapStyleSheetEntriesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntryStatesStatics */
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntryStatesStatics.get_Disabled() */
 HRESULT wuixacoma_map_style_sheet_entry_states_statics_get__disabled(WUIXACOMA_IMapStyleSheetEntryStatesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntryStatesStatics.get_Hover() */
 HRESULT wuixacoma_map_style_sheet_entry_states_statics_get__hover(WUIXACOMA_IMapStyleSheetEntryStatesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetEntryStatesStatics.get_Selected() */
 HRESULT wuixacoma_map_style_sheet_entry_states_statics_get__selected(WUIXACOMA_IMapStyleSheetEntryStatesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetStatics */
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetStatics.Aerial() */
 HRESULT wuixacoma_map_style_sheet_statics_aerial(WUIXACOMA_IMapStyleSheetStatics *self, WUIXACOMA_MapStyleSheet** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetStatics.AerialWithOverlay() */
 HRESULT wuixacoma_map_style_sheet_statics_aerial_with_overlay(WUIXACOMA_IMapStyleSheetStatics *self, WUIXACOMA_MapStyleSheet** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetStatics.RoadLight() */
 HRESULT wuixacoma_map_style_sheet_statics_road_light(WUIXACOMA_IMapStyleSheetStatics *self, WUIXACOMA_MapStyleSheet** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetStatics.RoadDark() */
 HRESULT wuixacoma_map_style_sheet_statics_road_dark(WUIXACOMA_IMapStyleSheetStatics *self, WUIXACOMA_MapStyleSheet** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetStatics.RoadHighContrastLight() */
 HRESULT wuixacoma_map_style_sheet_statics_road_high_contrast_light(WUIXACOMA_IMapStyleSheetStatics *self, WUIXACOMA_MapStyleSheet** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetStatics.RoadHighContrastDark() */
 HRESULT wuixacoma_map_style_sheet_statics_road_high_contrast_dark(WUIXACOMA_IMapStyleSheetStatics *self, WUIXACOMA_MapStyleSheet** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetStatics.Combine(styleSheets) */
 HRESULT wuixacoma_map_style_sheet_statics_combine(WUIXACOMA_IMapStyleSheetStatics *self, WFOCO_IIterable_WUIXACOMA_MapStyleSheet* styleSheets, WUIXACOMA_MapStyleSheet** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetStatics.ParseFromJson(styleAsJson) */
 HRESULT wuixacoma_map_style_sheet_statics_parse_from_json(WUIXACOMA_IMapStyleSheetStatics *self, cwinrt_hstring styleAsJson, WUIXACOMA_MapStyleSheet** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapStyleSheetStatics.TryParseFromJson(styleAsJson, styleSheet) */
 HRESULT wuixacoma_map_style_sheet_statics_try_parse_from_json(WUIXACOMA_IMapStyleSheetStatics *self, cwinrt_hstring styleAsJson, WUIXACOMA_MapStyleSheet* styleSheet, BOOL *out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileDataSourceFactory */
-/* Windows.UI.Xaml.Controls.Maps.IMapTileDataSourceFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixacoma_map_tile_data_source_factory_create_instance(WUIXACOMA_IMapTileDataSourceFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXACOMA_MapTileDataSource** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSourceFactory */
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSourceFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixacoma_map_tile_source_factory_create_instance(WUIXACOMA_IMapTileSourceFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXACOMA_MapTileSource** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSourceFactory.CreateInstanceWithDataSource(dataSource, baseInterface, innerInterface) */
 HRESULT wuixacoma_map_tile_source_factory_create_instance_with_data_source(WUIXACOMA_IMapTileSourceFactory *self, WUIXACOMA_MapTileDataSource* dataSource, IInspectable* baseInterface, IInspectable* innerInterface, WUIXACOMA_MapTileSource** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSourceFactory.CreateInstanceWithDataSourceAndZoomRange(dataSource, zoomLevelRange, baseInterface, innerInterface) */
 HRESULT wuixacoma_map_tile_source_factory_create_instance_with_data_source_and_zoom_range(WUIXACOMA_IMapTileSourceFactory *self, WUIXACOMA_MapTileDataSource* dataSource, WUIXACOMA_MapZoomLevelRange zoomLevelRange, IInspectable* baseInterface, IInspectable* innerInterface, WUIXACOMA_MapTileSource** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSourceFactory.CreateInstanceWithDataSourceZoomRangeAndBounds(dataSource, zoomLevelRange, bounds, baseInterface, innerInterface) */
 HRESULT wuixacoma_map_tile_source_factory_create_instance_with_data_source_zoom_range_and_bounds(WUIXACOMA_IMapTileSourceFactory *self, WUIXACOMA_MapTileDataSource* dataSource, WUIXACOMA_MapZoomLevelRange zoomLevelRange, WDEGE_GeoboundingBox* bounds, IInspectable* baseInterface, IInspectable* innerInterface, WUIXACOMA_MapTileSource** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSourceFactory.CreateInstanceWithDataSourceZoomRangeBoundsAndTileSize(dataSource, zoomLevelRange, bounds, tileSizeInPixels, baseInterface, innerInterface) */
 HRESULT wuixacoma_map_tile_source_factory_create_instance_with_data_source_zoom_range_bounds_and_tile_size(WUIXACOMA_IMapTileSourceFactory *self, WUIXACOMA_MapTileDataSource* dataSource, WUIXACOMA_MapZoomLevelRange zoomLevelRange, WDEGE_GeoboundingBox* bounds, int32_t tileSizeInPixels, IInspectable* baseInterface, IInspectable* innerInterface, WUIXACOMA_MapTileSource** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSourceStatics */
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSourceStatics.get_DataSourceProperty() */
 HRESULT wuixacoma_map_tile_source_statics_get__data_source_property(WUIXACOMA_IMapTileSourceStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSourceStatics.get_LayerProperty() */
 HRESULT wuixacoma_map_tile_source_statics_get__layer_property(WUIXACOMA_IMapTileSourceStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSourceStatics.get_ZoomLevelRangeProperty() */
 HRESULT wuixacoma_map_tile_source_statics_get__zoom_level_range_property(WUIXACOMA_IMapTileSourceStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSourceStatics.get_BoundsProperty() */
 HRESULT wuixacoma_map_tile_source_statics_get__bounds_property(WUIXACOMA_IMapTileSourceStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSourceStatics.get_AllowOverstretchProperty() */
 HRESULT wuixacoma_map_tile_source_statics_get__allow_overstretch_property(WUIXACOMA_IMapTileSourceStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSourceStatics.get_IsFadingEnabledProperty() */
 HRESULT wuixacoma_map_tile_source_statics_get__is_fading_enabled_property(WUIXACOMA_IMapTileSourceStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSourceStatics.get_IsTransparencyEnabledProperty() */
 HRESULT wuixacoma_map_tile_source_statics_get__is_transparency_enabled_property(WUIXACOMA_IMapTileSourceStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSourceStatics.get_IsRetryEnabledProperty() */
 HRESULT wuixacoma_map_tile_source_statics_get__is_retry_enabled_property(WUIXACOMA_IMapTileSourceStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSourceStatics.get_ZIndexProperty() */
 HRESULT wuixacoma_map_tile_source_statics_get__z_index_property(WUIXACOMA_IMapTileSourceStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSourceStatics.get_TilePixelSizeProperty() */
 HRESULT wuixacoma_map_tile_source_statics_get__tile_pixel_size_property(WUIXACOMA_IMapTileSourceStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSourceStatics.get_VisibleProperty() */
 HRESULT wuixacoma_map_tile_source_statics_get__visible_property(WUIXACOMA_IMapTileSourceStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSourceStatics2 */
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSourceStatics2.get_AnimationStateProperty() */
 HRESULT wuixacoma_map_tile_source_statics_2_get__animation_state_property(WUIXACOMA_IMapTileSourceStatics_2 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSourceStatics2.get_AutoPlayProperty() */
 HRESULT wuixacoma_map_tile_source_statics_2_get__auto_play_property(WUIXACOMA_IMapTileSourceStatics_2 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSourceStatics2.get_FrameCountProperty() */
 HRESULT wuixacoma_map_tile_source_statics_2_get__frame_count_property(WUIXACOMA_IMapTileSourceStatics_2 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSourceStatics2.get_FrameDurationProperty() */
 HRESULT wuixacoma_map_tile_source_statics_2_get__frame_duration_property(WUIXACOMA_IMapTileSourceStatics_2 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IStreetsideExperienceFactory */
-/* Windows.UI.Xaml.Controls.Maps.IStreetsideExperienceFactory.CreateInstanceWithPanorama(panorama) */
 HRESULT wuixacoma_streetside_experience_factory_create_instance_with_panorama(WUIXACOMA_IStreetsideExperienceFactory *self, WUIXACOMA_StreetsidePanorama* panorama, WUIXACOMA_StreetsideExperience** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IStreetsideExperienceFactory.CreateInstanceWithPanoramaHeadingPitchAndFieldOfView(panorama, headingInDegrees, pitchInDegrees, fieldOfViewInDegrees) */
 HRESULT wuixacoma_streetside_experience_factory_create_instance_with_panorama_heading_pitch_and_field_of_view(WUIXACOMA_IStreetsideExperienceFactory *self, WUIXACOMA_StreetsidePanorama* panorama, double headingInDegrees, double pitchInDegrees, double fieldOfViewInDegrees, WUIXACOMA_StreetsideExperience** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IStreetsidePanoramaStatics */
-/* Windows.UI.Xaml.Controls.Maps.IStreetsidePanoramaStatics.FindNearbyAsync(location) */
 HRESULT wuixacoma_streetside_panorama_statics_find_nearby_async(WUIXACOMA_IStreetsidePanoramaStatics *self, WDEGE_Geopoint* location, WF_IAsyncOperation_WUIXACOMA_StreetsidePanorama** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IStreetsidePanoramaStatics.FindNearbyAsync(location, radiusInMeters) */
 HRESULT wuixacoma_streetside_panorama_statics_find_nearby_async_p_f64_p(WUIXACOMA_IStreetsidePanoramaStatics *self, WDEGE_Geopoint* location, double radiusInMeters, WF_IAsyncOperation_WUIXACOMA_StreetsidePanorama** out);
 
-/* Windows.UI.Xaml.Controls.Maps.LocalMapTileDataSource */
-/* Windows.UI.Xaml.Controls.Maps.LocalMapTileDataSource.get_UriFormatString() */
 HRESULT wuixacoma_local_map_tile_data_source_get__uri_format_string(WUIXACOMA_LocalMapTileDataSource *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.LocalMapTileDataSource.put_UriFormatString() */
 HRESULT wuixacoma_local_map_tile_data_source_put__uri_format_string(WUIXACOMA_LocalMapTileDataSource *self, cwinrt_hstring value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixacoma_local_map_tile_data_source_on_uri_requested(WUIXACOMA_LocalMapTileDataSource *self, cwinrt_event_fn fn, void *ctx);
 void wuixacoma_local_map_tile_data_source_off_uri_requested(WUIXACOMA_LocalMapTileDataSource *self, cwinrt_token token);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapActualCameraChangedEventArgs */
 HRESULT wuixacoma_map_actual_camera_changed_event_args_new(WUIXACOMA_MapActualCameraChangedEventArgs **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapActualCameraChangedEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.MapActualCameraChangedEventArgs.get_Camera() */
 HRESULT wuixacoma_map_actual_camera_changed_event_args_get__camera(WUIXACOMA_MapActualCameraChangedEventArgs *self, WUIXACOMA_MapCamera** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapActualCameraChangedEventArgs.get_ChangeReason() */
 HRESULT wuixacoma_map_actual_camera_changed_event_args_get__change_reason(WUIXACOMA_MapActualCameraChangedEventArgs *self, WUIXACOMA_MapCameraChangeReason *value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapActualCameraChangingEventArgs */
 HRESULT wuixacoma_map_actual_camera_changing_event_args_new(WUIXACOMA_MapActualCameraChangingEventArgs **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapActualCameraChangingEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.MapActualCameraChangingEventArgs.get_Camera() */
 HRESULT wuixacoma_map_actual_camera_changing_event_args_get__camera(WUIXACOMA_MapActualCameraChangingEventArgs *self, WUIXACOMA_MapCamera** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapActualCameraChangingEventArgs.get_ChangeReason() */
 HRESULT wuixacoma_map_actual_camera_changing_event_args_get__change_reason(WUIXACOMA_MapActualCameraChangingEventArgs *self, WUIXACOMA_MapCameraChangeReason *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement */
-/* Windows.UI.Xaml.Controls.Maps.MapElement.get_ZIndex() */
 HRESULT wuixacoma_map_element_get__z_index(WUIXACOMA_MapElement *self, int32_t *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement.put_ZIndex() */
 HRESULT wuixacoma_map_element_put__z_index(WUIXACOMA_MapElement *self, int32_t value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement.get_Visible() */
 HRESULT wuixacoma_map_element_get__visible(WUIXACOMA_MapElement *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement.put_Visible() */
 HRESULT wuixacoma_map_element_put__visible(WUIXACOMA_MapElement *self, BOOL value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement.get_MapTabIndex() */
 HRESULT wuixacoma_map_element_get__map_tab_index(WUIXACOMA_MapElement *self, int32_t *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement.put_MapTabIndex() */
 HRESULT wuixacoma_map_element_put__map_tab_index(WUIXACOMA_MapElement *self, int32_t value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement.get_MapStyleSheetEntry() */
 HRESULT wuixacoma_map_element_get__map_style_sheet_entry(WUIXACOMA_MapElement *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement.put_MapStyleSheetEntry() */
 HRESULT wuixacoma_map_element_put__map_style_sheet_entry(WUIXACOMA_MapElement *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement.get_MapStyleSheetEntryState() */
 HRESULT wuixacoma_map_element_get__map_style_sheet_entry_state(WUIXACOMA_MapElement *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement.put_MapStyleSheetEntryState() */
 HRESULT wuixacoma_map_element_put__map_style_sheet_entry_state(WUIXACOMA_MapElement *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement.get_Tag() */
 HRESULT wuixacoma_map_element_get__tag(WUIXACOMA_MapElement *self, IInspectable** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement.put_Tag() */
 HRESULT wuixacoma_map_element_put__tag(WUIXACOMA_MapElement *self, IInspectable* value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement.get_IsEnabled() */
 HRESULT wuixacoma_map_element_get__is_enabled(WUIXACOMA_MapElement *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement.put_IsEnabled() */
 HRESULT wuixacoma_map_element_put__is_enabled(WUIXACOMA_MapElement *self, BOOL value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement.get_IsEnabledProperty() */
 HRESULT wuixacoma_map_element_get__is_enabled_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement.get_MapStyleSheetEntryProperty() */
 HRESULT wuixacoma_map_element_get__map_style_sheet_entry_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement.get_MapStyleSheetEntryStateProperty() */
 HRESULT wuixacoma_map_element_get__map_style_sheet_entry_state_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement.get_TagProperty() */
 HRESULT wuixacoma_map_element_get__tag_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement.get_MapTabIndexProperty() */
 HRESULT wuixacoma_map_element_get__map_tab_index_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement.get_ZIndexProperty() */
 HRESULT wuixacoma_map_element_get__z_index_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement.get_VisibleProperty() */
 HRESULT wuixacoma_map_element_get__visible_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapBillboard */
 HRESULT wuixacoma_map_billboard_new(WUIXACOMA_MapBillboard **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapBillboard */
-/* Windows.UI.Xaml.Controls.Maps.MapBillboard.get_Location() */
 HRESULT wuixacoma_map_billboard_get__location(WUIXACOMA_MapBillboard *self, WDEGE_Geopoint** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapBillboard.put_Location() */
 HRESULT wuixacoma_map_billboard_put__location(WUIXACOMA_MapBillboard *self, WDEGE_Geopoint* value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapBillboard.get_NormalizedAnchorPoint() */
 HRESULT wuixacoma_map_billboard_get__normalized_anchor_point(WUIXACOMA_MapBillboard *self, WF_Point *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapBillboard.put_NormalizedAnchorPoint() */
 HRESULT wuixacoma_map_billboard_put__normalized_anchor_point(WUIXACOMA_MapBillboard *self, WF_Point value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapBillboard.get_Image() */
 HRESULT wuixacoma_map_billboard_get__image(WUIXACOMA_MapBillboard *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapBillboard.put_Image() */
 HRESULT wuixacoma_map_billboard_put__image(WUIXACOMA_MapBillboard *self, WSTST_IRandomAccessStreamReference* value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapBillboard.get_CollisionBehaviorDesired() */
 HRESULT wuixacoma_map_billboard_get__collision_behavior_desired(WUIXACOMA_MapBillboard *self, WUIXACOMA_MapElementCollisionBehavior *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapBillboard.put_CollisionBehaviorDesired() */
 HRESULT wuixacoma_map_billboard_put__collision_behavior_desired(WUIXACOMA_MapBillboard *self, WUIXACOMA_MapElementCollisionBehavior value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapBillboard.get_ReferenceCamera() */
 HRESULT wuixacoma_map_billboard_get__reference_camera(WUIXACOMA_MapBillboard *self, WUIXACOMA_MapCamera** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapBillboard.get_LocationProperty() */
 HRESULT wuixacoma_map_billboard_get__location_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapBillboard.get_NormalizedAnchorPointProperty() */
 HRESULT wuixacoma_map_billboard_get__normalized_anchor_point_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapBillboard.get_CollisionBehaviorDesiredProperty() */
 HRESULT wuixacoma_map_billboard_get__collision_behavior_desired_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapCamera */
 HRESULT wuixacoma_map_camera_new(WUIXACOMA_MapCamera **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapCamera */
-/* Windows.UI.Xaml.Controls.Maps.MapCamera.get_Location() */
 HRESULT wuixacoma_map_camera_get__location(WUIXACOMA_MapCamera *self, WDEGE_Geopoint** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapCamera.put_Location() */
 HRESULT wuixacoma_map_camera_put__location(WUIXACOMA_MapCamera *self, WDEGE_Geopoint* value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapCamera.get_Heading() */
 HRESULT wuixacoma_map_camera_get__heading(WUIXACOMA_MapCamera *self, double *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapCamera.put_Heading() */
 HRESULT wuixacoma_map_camera_put__heading(WUIXACOMA_MapCamera *self, double value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapCamera.get_Pitch() */
 HRESULT wuixacoma_map_camera_get__pitch(WUIXACOMA_MapCamera *self, double *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapCamera.put_Pitch() */
 HRESULT wuixacoma_map_camera_put__pitch(WUIXACOMA_MapCamera *self, double value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapCamera.get_Roll() */
 HRESULT wuixacoma_map_camera_get__roll(WUIXACOMA_MapCamera *self, double *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapCamera.put_Roll() */
 HRESULT wuixacoma_map_camera_put__roll(WUIXACOMA_MapCamera *self, double value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapCamera.get_FieldOfView() */
 HRESULT wuixacoma_map_camera_get__field_of_view(WUIXACOMA_MapCamera *self, double *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapCamera.put_FieldOfView() */
 HRESULT wuixacoma_map_camera_put__field_of_view(WUIXACOMA_MapCamera *self, double value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapContextRequestedEventArgs */
 HRESULT wuixacoma_map_context_requested_event_args_new(WUIXACOMA_MapContextRequestedEventArgs **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapContextRequestedEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.MapContextRequestedEventArgs.get_Position() */
 HRESULT wuixacoma_map_context_requested_event_args_get__position(WUIXACOMA_MapContextRequestedEventArgs *self, WF_Point *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapContextRequestedEventArgs.get_Location() */
 HRESULT wuixacoma_map_context_requested_event_args_get__location(WUIXACOMA_MapContextRequestedEventArgs *self, WDEGE_Geopoint** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapContextRequestedEventArgs.get_MapElements() */
 HRESULT wuixacoma_map_context_requested_event_args_get__map_elements(WUIXACOMA_MapContextRequestedEventArgs *self, WFOCO_IVectorView_WUIXACOMA_MapElement** value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapControl */
 HRESULT wuixacoma_map_control_new(WUIXACOMA_MapControl **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl */
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_Center() */
 HRESULT wuixacoma_map_control_get__center(WUIXACOMA_MapControl *self, WDEGE_Geopoint** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.put_Center() */
 HRESULT wuixacoma_map_control_put__center(WUIXACOMA_MapControl *self, WDEGE_Geopoint* value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_Children() */
 HRESULT wuixacoma_map_control_get__children(WUIXACOMA_MapControl *self, WFOCO_IVector_WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_ColorScheme() */
 HRESULT wuixacoma_map_control_get__color_scheme(WUIXACOMA_MapControl *self, WUIXACOMA_MapColorScheme *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.put_ColorScheme() */
 HRESULT wuixacoma_map_control_put__color_scheme(WUIXACOMA_MapControl *self, WUIXACOMA_MapColorScheme value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_DesiredPitch() */
 HRESULT wuixacoma_map_control_get__desired_pitch(WUIXACOMA_MapControl *self, double *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.put_DesiredPitch() */
 HRESULT wuixacoma_map_control_put__desired_pitch(WUIXACOMA_MapControl *self, double value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_Heading() */
 HRESULT wuixacoma_map_control_get__heading(WUIXACOMA_MapControl *self, double *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.put_Heading() */
 HRESULT wuixacoma_map_control_put__heading(WUIXACOMA_MapControl *self, double value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_LandmarksVisible() */
 HRESULT wuixacoma_map_control_get__landmarks_visible(WUIXACOMA_MapControl *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.put_LandmarksVisible() */
 HRESULT wuixacoma_map_control_put__landmarks_visible(WUIXACOMA_MapControl *self, BOOL value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_LoadingStatus() */
 HRESULT wuixacoma_map_control_get__loading_status(WUIXACOMA_MapControl *self, WUIXACOMA_MapLoadingStatus *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_MapServiceToken() */
 HRESULT wuixacoma_map_control_get__map_service_token(WUIXACOMA_MapControl *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.put_MapServiceToken() */
 HRESULT wuixacoma_map_control_put__map_service_token(WUIXACOMA_MapControl *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_MaxZoomLevel() */
 HRESULT wuixacoma_map_control_get__max_zoom_level(WUIXACOMA_MapControl *self, double *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_MinZoomLevel() */
 HRESULT wuixacoma_map_control_get__min_zoom_level(WUIXACOMA_MapControl *self, double *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_PedestrianFeaturesVisible() */
 HRESULT wuixacoma_map_control_get__pedestrian_features_visible(WUIXACOMA_MapControl *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.put_PedestrianFeaturesVisible() */
 HRESULT wuixacoma_map_control_put__pedestrian_features_visible(WUIXACOMA_MapControl *self, BOOL value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_Pitch() */
 HRESULT wuixacoma_map_control_get__pitch(WUIXACOMA_MapControl *self, double *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_Style() */
 HRESULT wuixacoma_map_control_get__style(WUIXACOMA_MapControl *self, WUIXACOMA_MapStyle *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.put_Style() */
 HRESULT wuixacoma_map_control_put__style(WUIXACOMA_MapControl *self, WUIXACOMA_MapStyle value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_TrafficFlowVisible() */
 HRESULT wuixacoma_map_control_get__traffic_flow_visible(WUIXACOMA_MapControl *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.put_TrafficFlowVisible() */
 HRESULT wuixacoma_map_control_put__traffic_flow_visible(WUIXACOMA_MapControl *self, BOOL value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_TransformOrigin() */
 HRESULT wuixacoma_map_control_get__transform_origin(WUIXACOMA_MapControl *self, WF_Point *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.put_TransformOrigin() */
 HRESULT wuixacoma_map_control_put__transform_origin(WUIXACOMA_MapControl *self, WF_Point value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_WatermarkMode() */
 HRESULT wuixacoma_map_control_get__watermark_mode(WUIXACOMA_MapControl *self, WUIXACOMA_MapWatermarkMode *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.put_WatermarkMode() */
 HRESULT wuixacoma_map_control_put__watermark_mode(WUIXACOMA_MapControl *self, WUIXACOMA_MapWatermarkMode value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_ZoomLevel() */
 HRESULT wuixacoma_map_control_get__zoom_level(WUIXACOMA_MapControl *self, double *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.put_ZoomLevel() */
 HRESULT wuixacoma_map_control_put__zoom_level(WUIXACOMA_MapControl *self, double value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_MapElements() */
 HRESULT wuixacoma_map_control_get__map_elements(WUIXACOMA_MapControl *self, WFOCO_IVector_WUIXACOMA_MapElement** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_Routes() */
 HRESULT wuixacoma_map_control_get__routes(WUIXACOMA_MapControl *self, WFOCO_IVector_WUIXACOMA_MapRouteView** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_TileSources() */
 HRESULT wuixacoma_map_control_get__tile_sources(WUIXACOMA_MapControl *self, WFOCO_IVector_WUIXACOMA_MapTileSource** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.FindMapElementsAtOffset(offset) */
 HRESULT wuixacoma_map_control_find_map_elements_at_offset(WUIXACOMA_MapControl *self, WF_Point offset, WFOCO_IVectorView_WUIXACOMA_MapElement** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.GetLocationFromOffset(offset, location) */
 HRESULT wuixacoma_map_control_get_location_from_offset(WUIXACOMA_MapControl *self, WF_Point offset, WDEGE_Geopoint* location);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.GetOffsetFromLocation(location, offset) */
 HRESULT wuixacoma_map_control_get_offset_from_location(WUIXACOMA_MapControl *self, WDEGE_Geopoint* location, WF_Point offset);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.IsLocationInView(location, isInView) */
 HRESULT wuixacoma_map_control_is_location_in_view(WUIXACOMA_MapControl *self, WDEGE_Geopoint* location, BOOL isInView);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.TrySetViewBoundsAsync(bounds, margin, animation) */
 HRESULT wuixacoma_map_control_try_set_view_bounds_async(WUIXACOMA_MapControl *self, WDEGE_GeoboundingBox* bounds, WUIXA_Thickness* margin, WUIXACOMA_MapAnimationKind animation, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.TrySetViewAsync(center) */
 HRESULT wuixacoma_map_control_try_set_view_async(WUIXACOMA_MapControl *self, WDEGE_Geopoint* center, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.TrySetViewAsync(center, zoomLevel) */
 HRESULT wuixacoma_map_control_try_set_view_async_p_p_p(WUIXACOMA_MapControl *self, WDEGE_Geopoint* center, double* zoomLevel, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.TrySetViewAsync(center, zoomLevel, heading, desiredPitch) */
 HRESULT wuixacoma_map_control_try_set_view_async_p_p_p_p_p(WUIXACOMA_MapControl *self, WDEGE_Geopoint* center, double* zoomLevel, double* heading, double* desiredPitch, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.TrySetViewAsync(center, zoomLevel, heading, desiredPitch, animation) */
 HRESULT wuixacoma_map_control_try_set_view_async_p_p_p_p_map_animation_kind_p(WUIXACOMA_MapControl *self, WDEGE_Geopoint* center, double* zoomLevel, double* heading, double* desiredPitch, WUIXACOMA_MapAnimationKind animation, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_BusinessLandmarksVisible() */
 HRESULT wuixacoma_map_control_get__business_landmarks_visible(WUIXACOMA_MapControl *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.put_BusinessLandmarksVisible() */
 HRESULT wuixacoma_map_control_put__business_landmarks_visible(WUIXACOMA_MapControl *self, BOOL value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_TransitFeaturesVisible() */
 HRESULT wuixacoma_map_control_get__transit_features_visible(WUIXACOMA_MapControl *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.put_TransitFeaturesVisible() */
 HRESULT wuixacoma_map_control_put__transit_features_visible(WUIXACOMA_MapControl *self, BOOL value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_PanInteractionMode() */
 HRESULT wuixacoma_map_control_get__pan_interaction_mode(WUIXACOMA_MapControl *self, WUIXACOMA_MapPanInteractionMode *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.put_PanInteractionMode() */
 HRESULT wuixacoma_map_control_put__pan_interaction_mode(WUIXACOMA_MapControl *self, WUIXACOMA_MapPanInteractionMode value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_RotateInteractionMode() */
 HRESULT wuixacoma_map_control_get__rotate_interaction_mode(WUIXACOMA_MapControl *self, WUIXACOMA_MapInteractionMode *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.put_RotateInteractionMode() */
 HRESULT wuixacoma_map_control_put__rotate_interaction_mode(WUIXACOMA_MapControl *self, WUIXACOMA_MapInteractionMode value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_TiltInteractionMode() */
 HRESULT wuixacoma_map_control_get__tilt_interaction_mode(WUIXACOMA_MapControl *self, WUIXACOMA_MapInteractionMode *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.put_TiltInteractionMode() */
 HRESULT wuixacoma_map_control_put__tilt_interaction_mode(WUIXACOMA_MapControl *self, WUIXACOMA_MapInteractionMode value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_ZoomInteractionMode() */
 HRESULT wuixacoma_map_control_get__zoom_interaction_mode(WUIXACOMA_MapControl *self, WUIXACOMA_MapInteractionMode *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.put_ZoomInteractionMode() */
 HRESULT wuixacoma_map_control_put__zoom_interaction_mode(WUIXACOMA_MapControl *self, WUIXACOMA_MapInteractionMode value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_Is3DSupported() */
 HRESULT wuixacoma_map_control_get__is3_d_supported(WUIXACOMA_MapControl *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_IsStreetsideSupported() */
 HRESULT wuixacoma_map_control_get__is_streetside_supported(WUIXACOMA_MapControl *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_Scene() */
 HRESULT wuixacoma_map_control_get__scene(WUIXACOMA_MapControl *self, WUIXACOMA_MapScene** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.put_Scene() */
 HRESULT wuixacoma_map_control_put__scene(WUIXACOMA_MapControl *self, WUIXACOMA_MapScene* value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_ActualCamera() */
 HRESULT wuixacoma_map_control_get__actual_camera(WUIXACOMA_MapControl *self, WUIXACOMA_MapCamera** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_TargetCamera() */
 HRESULT wuixacoma_map_control_get__target_camera(WUIXACOMA_MapControl *self, WUIXACOMA_MapCamera** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_CustomExperience() */
 HRESULT wuixacoma_map_control_get__custom_experience(WUIXACOMA_MapControl *self, WUIXACOMA_MapCustomExperience** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.put_CustomExperience() */
 HRESULT wuixacoma_map_control_put__custom_experience(WUIXACOMA_MapControl *self, WUIXACOMA_MapCustomExperience* value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.StartContinuousRotate(rateInDegreesPerSecond) */
 HRESULT wuixacoma_map_control_start_continuous_rotate(WUIXACOMA_MapControl *self, double rateInDegreesPerSecond);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.StopContinuousRotate() */
 HRESULT wuixacoma_map_control_stop_continuous_rotate(WUIXACOMA_MapControl *self);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.StartContinuousTilt(rateInDegreesPerSecond) */
 HRESULT wuixacoma_map_control_start_continuous_tilt(WUIXACOMA_MapControl *self, double rateInDegreesPerSecond);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.StopContinuousTilt() */
 HRESULT wuixacoma_map_control_stop_continuous_tilt(WUIXACOMA_MapControl *self);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.StartContinuousZoom(rateOfChangePerSecond) */
 HRESULT wuixacoma_map_control_start_continuous_zoom(WUIXACOMA_MapControl *self, double rateOfChangePerSecond);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.StopContinuousZoom() */
 HRESULT wuixacoma_map_control_stop_continuous_zoom(WUIXACOMA_MapControl *self);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.TryRotateAsync(degrees) */
 HRESULT wuixacoma_map_control_try_rotate_async(WUIXACOMA_MapControl *self, double degrees, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.TryRotateToAsync(angleInDegrees) */
 HRESULT wuixacoma_map_control_try_rotate_to_async(WUIXACOMA_MapControl *self, double angleInDegrees, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.TryTiltAsync(degrees) */
 HRESULT wuixacoma_map_control_try_tilt_async(WUIXACOMA_MapControl *self, double degrees, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.TryTiltToAsync(angleInDegrees) */
 HRESULT wuixacoma_map_control_try_tilt_to_async(WUIXACOMA_MapControl *self, double angleInDegrees, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.TryZoomInAsync() */
 HRESULT wuixacoma_map_control_try_zoom_in_async(WUIXACOMA_MapControl *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.TryZoomOutAsync() */
 HRESULT wuixacoma_map_control_try_zoom_out_async(WUIXACOMA_MapControl *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.TryZoomToAsync(zoomLevel) */
 HRESULT wuixacoma_map_control_try_zoom_to_async(WUIXACOMA_MapControl *self, double zoomLevel, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.TrySetSceneAsync(scene) */
 HRESULT wuixacoma_map_control_try_set_scene_async(WUIXACOMA_MapControl *self, WUIXACOMA_MapScene* scene, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.TrySetSceneAsync(scene, animationKind) */
 HRESULT wuixacoma_map_control_try_set_scene_async_p_map_animation_kind_p(WUIXACOMA_MapControl *self, WUIXACOMA_MapScene* scene, WUIXACOMA_MapAnimationKind animationKind, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_BusinessLandmarksEnabled() */
 HRESULT wuixacoma_map_control_get__business_landmarks_enabled(WUIXACOMA_MapControl *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.put_BusinessLandmarksEnabled() */
 HRESULT wuixacoma_map_control_put__business_landmarks_enabled(WUIXACOMA_MapControl *self, BOOL value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_TransitFeaturesEnabled() */
 HRESULT wuixacoma_map_control_get__transit_features_enabled(WUIXACOMA_MapControl *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.put_TransitFeaturesEnabled() */
 HRESULT wuixacoma_map_control_put__transit_features_enabled(WUIXACOMA_MapControl *self, BOOL value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.GetVisibleRegion(region) */
 HRESULT wuixacoma_map_control_get_visible_region(WUIXACOMA_MapControl *self, WUIXACOMA_MapVisibleRegionKind region, WDEGE_Geopath** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_MapProjection() */
 HRESULT wuixacoma_map_control_get__map_projection(WUIXACOMA_MapControl *self, WUIXACOMA_MapProjection *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.put_MapProjection() */
 HRESULT wuixacoma_map_control_put__map_projection(WUIXACOMA_MapControl *self, WUIXACOMA_MapProjection value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_StyleSheet() */
 HRESULT wuixacoma_map_control_get__style_sheet(WUIXACOMA_MapControl *self, WUIXACOMA_MapStyleSheet** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.put_StyleSheet() */
 HRESULT wuixacoma_map_control_put__style_sheet(WUIXACOMA_MapControl *self, WUIXACOMA_MapStyleSheet* value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_ViewPadding() */
 HRESULT wuixacoma_map_control_get__view_padding(WUIXACOMA_MapControl *self, WUIXA_Thickness *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.put_ViewPadding() */
 HRESULT wuixacoma_map_control_put__view_padding(WUIXACOMA_MapControl *self, WUIXA_Thickness value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.FindMapElementsAtOffset(offset, radius) */
 HRESULT wuixacoma_map_control_find_map_elements_at_offset_point_f64_p(WUIXACOMA_MapControl *self, WF_Point offset, double radius, WFOCO_IVectorView_WUIXACOMA_MapElement** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.GetLocationFromOffset(offset, desiredReferenceSystem, location) */
 HRESULT wuixacoma_map_control_get_location_from_offset_point_altitude_reference_system_p(WUIXACOMA_MapControl *self, WF_Point offset, WDEGE_AltitudeReferenceSystem desiredReferenceSystem, WDEGE_Geopoint* location);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.StartContinuousPan(horizontalPixelsPerSecond, verticalPixelsPerSecond) */
 HRESULT wuixacoma_map_control_start_continuous_pan(WUIXACOMA_MapControl *self, double horizontalPixelsPerSecond, double verticalPixelsPerSecond);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.StopContinuousPan() */
 HRESULT wuixacoma_map_control_stop_continuous_pan(WUIXACOMA_MapControl *self);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.TryPanAsync(horizontalPixels, verticalPixels) */
 HRESULT wuixacoma_map_control_try_pan_async(WUIXACOMA_MapControl *self, double horizontalPixels, double verticalPixels, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.TryPanToAsync(location) */
 HRESULT wuixacoma_map_control_try_pan_to_async(WUIXACOMA_MapControl *self, WDEGE_Geopoint* location, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_Layers() */
 HRESULT wuixacoma_map_control_get__layers(WUIXACOMA_MapControl *self, WFOCO_IVector_WUIXACOMA_MapLayer** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.put_Layers() */
 HRESULT wuixacoma_map_control_put__layers(WUIXACOMA_MapControl *self, WFOCO_IVector_WUIXACOMA_MapLayer* value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.TryGetLocationFromOffset(offset, location) */
 HRESULT wuixacoma_map_control_try_get_location_from_offset(WUIXACOMA_MapControl *self, WF_Point offset, WDEGE_Geopoint* location, BOOL *out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.TryGetLocationFromOffset(offset, desiredReferenceSystem, location) */
 HRESULT wuixacoma_map_control_try_get_location_from_offset_point_altitude_reference_system_p_b(WUIXACOMA_MapControl *self, WF_Point offset, WDEGE_AltitudeReferenceSystem desiredReferenceSystem, WDEGE_Geopoint* location, BOOL *out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_Region() */
 HRESULT wuixacoma_map_control_get__region(WUIXACOMA_MapControl *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.put_Region() */
 HRESULT wuixacoma_map_control_put__region(WUIXACOMA_MapControl *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_CanTiltDown() */
 HRESULT wuixacoma_map_control_get__can_tilt_down(WUIXACOMA_MapControl *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_CanTiltUp() */
 HRESULT wuixacoma_map_control_get__can_tilt_up(WUIXACOMA_MapControl *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_CanZoomIn() */
 HRESULT wuixacoma_map_control_get__can_zoom_in(WUIXACOMA_MapControl *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_CanZoomOut() */
 HRESULT wuixacoma_map_control_get__can_zoom_out(WUIXACOMA_MapControl *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_CanTiltDownProperty() */
 HRESULT wuixacoma_map_control_get__can_tilt_down_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_CanTiltUpProperty() */
 HRESULT wuixacoma_map_control_get__can_tilt_up_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_CanZoomInProperty() */
 HRESULT wuixacoma_map_control_get__can_zoom_in_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_CanZoomOutProperty() */
 HRESULT wuixacoma_map_control_get__can_zoom_out_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_RegionProperty() */
 HRESULT wuixacoma_map_control_get__region_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_LayersProperty() */
 HRESULT wuixacoma_map_control_get__layers_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_MapProjectionProperty() */
 HRESULT wuixacoma_map_control_get__map_projection_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_StyleSheetProperty() */
 HRESULT wuixacoma_map_control_get__style_sheet_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_ViewPaddingProperty() */
 HRESULT wuixacoma_map_control_get__view_padding_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_BusinessLandmarksEnabledProperty() */
 HRESULT wuixacoma_map_control_get__business_landmarks_enabled_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_TransitFeaturesEnabledProperty() */
 HRESULT wuixacoma_map_control_get__transit_features_enabled_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_BusinessLandmarksVisibleProperty() */
 HRESULT wuixacoma_map_control_get__business_landmarks_visible_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_TransitFeaturesVisibleProperty() */
 HRESULT wuixacoma_map_control_get__transit_features_visible_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_PanInteractionModeProperty() */
 HRESULT wuixacoma_map_control_get__pan_interaction_mode_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_RotateInteractionModeProperty() */
 HRESULT wuixacoma_map_control_get__rotate_interaction_mode_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_TiltInteractionModeProperty() */
 HRESULT wuixacoma_map_control_get__tilt_interaction_mode_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_ZoomInteractionModeProperty() */
 HRESULT wuixacoma_map_control_get__zoom_interaction_mode_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_Is3DSupportedProperty() */
 HRESULT wuixacoma_map_control_get__is3_d_supported_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_IsStreetsideSupportedProperty() */
 HRESULT wuixacoma_map_control_get__is_streetside_supported_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_SceneProperty() */
 HRESULT wuixacoma_map_control_get__scene_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_CenterProperty() */
 HRESULT wuixacoma_map_control_get__center_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_ChildrenProperty() */
 HRESULT wuixacoma_map_control_get__children_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_ColorSchemeProperty() */
 HRESULT wuixacoma_map_control_get__color_scheme_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_DesiredPitchProperty() */
 HRESULT wuixacoma_map_control_get__desired_pitch_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_HeadingProperty() */
 HRESULT wuixacoma_map_control_get__heading_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_LandmarksVisibleProperty() */
 HRESULT wuixacoma_map_control_get__landmarks_visible_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_LoadingStatusProperty() */
 HRESULT wuixacoma_map_control_get__loading_status_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_MapServiceTokenProperty() */
 HRESULT wuixacoma_map_control_get__map_service_token_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_PedestrianFeaturesVisibleProperty() */
 HRESULT wuixacoma_map_control_get__pedestrian_features_visible_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_PitchProperty() */
 HRESULT wuixacoma_map_control_get__pitch_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_StyleProperty() */
 HRESULT wuixacoma_map_control_get__style_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_TrafficFlowVisibleProperty() */
 HRESULT wuixacoma_map_control_get__traffic_flow_visible_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_TransformOriginProperty() */
 HRESULT wuixacoma_map_control_get__transform_origin_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_WatermarkModeProperty() */
 HRESULT wuixacoma_map_control_get__watermark_mode_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_ZoomLevelProperty() */
 HRESULT wuixacoma_map_control_get__zoom_level_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_MapElementsProperty() */
 HRESULT wuixacoma_map_control_get__map_elements_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_RoutesProperty() */
 HRESULT wuixacoma_map_control_get__routes_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_TileSourcesProperty() */
 HRESULT wuixacoma_map_control_get__tile_sources_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_LocationProperty() */
 HRESULT wuixacoma_map_control_get__location_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.GetLocation(element) */
 HRESULT wuixacoma_map_control_get_location(WUIXA_DependencyObject* element, WDEGE_Geopoint** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.SetLocation(element) */
 HRESULT wuixacoma_map_control_set_location(WUIXA_DependencyObject* element, WDEGE_Geopoint* value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.get_NormalizedAnchorPointProperty() */
 HRESULT wuixacoma_map_control_get__normalized_anchor_point_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.GetNormalizedAnchorPoint(element) */
 HRESULT wuixacoma_map_control_get_normalized_anchor_point(WUIXA_DependencyObject* element, WF_Point *out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControl.SetNormalizedAnchorPoint(element) */
 HRESULT wuixacoma_map_control_set_normalized_anchor_point(WUIXA_DependencyObject* element, WF_Point value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixacoma_map_control_on_center_changed(WUIXACOMA_MapControl *self, cwinrt_event_fn fn, void *ctx);
@@ -2425,42 +1948,26 @@ void wuixacoma_map_control_off_map_right_tapped(WUIXACOMA_MapControl *self, cwin
 cwinrt_token wuixacoma_map_control_on_map_context_requested(WUIXACOMA_MapControl *self, cwinrt_event_fn fn, void *ctx);
 void wuixacoma_map_control_off_map_context_requested(WUIXACOMA_MapControl *self, cwinrt_token token);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkClickEventArgs */
 HRESULT wuixacoma_map_control_business_landmark_click_event_args_new(WUIXACOMA_MapControlBusinessLandmarkClickEventArgs **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkClickEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkClickEventArgs.get_LocalLocations() */
 HRESULT wuixacoma_map_control_business_landmark_click_event_args_get__local_locations(WUIXACOMA_MapControlBusinessLandmarkClickEventArgs *self, WFOCO_IVectorView_WSEMALO_LocalLocation** value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerEnteredEventArgs */
 HRESULT wuixacoma_map_control_business_landmark_pointer_entered_event_args_new(WUIXACOMA_MapControlBusinessLandmarkPointerEnteredEventArgs **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerEnteredEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerEnteredEventArgs.get_LocalLocations() */
 HRESULT wuixacoma_map_control_business_landmark_pointer_entered_event_args_get__local_locations(WUIXACOMA_MapControlBusinessLandmarkPointerEnteredEventArgs *self, WFOCO_IVectorView_WSEMALO_LocalLocation** value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerExitedEventArgs */
 HRESULT wuixacoma_map_control_business_landmark_pointer_exited_event_args_new(WUIXACOMA_MapControlBusinessLandmarkPointerExitedEventArgs **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerExitedEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerExitedEventArgs.get_LocalLocations() */
 HRESULT wuixacoma_map_control_business_landmark_pointer_exited_event_args_get__local_locations(WUIXACOMA_MapControlBusinessLandmarkPointerExitedEventArgs *self, WFOCO_IVectorView_WSEMALO_LocalLocation** value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkRightTappedEventArgs */
 HRESULT wuixacoma_map_control_business_landmark_right_tapped_event_args_new(WUIXACOMA_MapControlBusinessLandmarkRightTappedEventArgs **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkRightTappedEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkRightTappedEventArgs.get_LocalLocations() */
 HRESULT wuixacoma_map_control_business_landmark_right_tapped_event_args_get__local_locations(WUIXACOMA_MapControlBusinessLandmarkRightTappedEventArgs *self, WFOCO_IVectorView_WSEMALO_LocalLocation** value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapControlDataHelper */
 HRESULT wuixacoma_map_control_data_helper_new(WUIXACOMA_MapControlDataHelper **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControlDataHelper */
-/* Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.CreateMapControl(rasterRenderMode) */
 HRESULT wuixacoma_map_control_data_helper_create_map_control(BOOL rasterRenderMode, WUIXACOMA_MapControl** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixacoma_map_control_data_helper_on_business_landmark_click(WUIXACOMA_MapControlDataHelper *self, cwinrt_event_fn fn, void *ctx);
@@ -2487,194 +1994,124 @@ void wuixacoma_map_control_data_helper_off_business_landmark_pointer_exited(WUIX
 cwinrt_token wuixacoma_map_control_data_helper_on_transit_feature_pointer_exited(WUIXACOMA_MapControlDataHelper *self, cwinrt_event_fn fn, void *ctx);
 void wuixacoma_map_control_data_helper_off_transit_feature_pointer_exited(WUIXACOMA_MapControlDataHelper *self, cwinrt_token token);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs */
 HRESULT wuixacoma_map_control_transit_feature_click_event_args_new(WUIXACOMA_MapControlTransitFeatureClickEventArgs **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs.get_DisplayName() */
 HRESULT wuixacoma_map_control_transit_feature_click_event_args_get__display_name(WUIXACOMA_MapControlTransitFeatureClickEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs.get_Location() */
 HRESULT wuixacoma_map_control_transit_feature_click_event_args_get__location(WUIXACOMA_MapControlTransitFeatureClickEventArgs *self, WDEGE_Geopoint** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs.get_TransitProperties() */
 HRESULT wuixacoma_map_control_transit_feature_click_event_args_get__transit_properties(WUIXACOMA_MapControlTransitFeatureClickEventArgs *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs */
 HRESULT wuixacoma_map_control_transit_feature_pointer_entered_event_args_new(WUIXACOMA_MapControlTransitFeaturePointerEnteredEventArgs **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs.get_DisplayName() */
 HRESULT wuixacoma_map_control_transit_feature_pointer_entered_event_args_get__display_name(WUIXACOMA_MapControlTransitFeaturePointerEnteredEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs.get_Location() */
 HRESULT wuixacoma_map_control_transit_feature_pointer_entered_event_args_get__location(WUIXACOMA_MapControlTransitFeaturePointerEnteredEventArgs *self, WDEGE_Geopoint** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs.get_TransitProperties() */
 HRESULT wuixacoma_map_control_transit_feature_pointer_entered_event_args_get__transit_properties(WUIXACOMA_MapControlTransitFeaturePointerEnteredEventArgs *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs */
 HRESULT wuixacoma_map_control_transit_feature_pointer_exited_event_args_new(WUIXACOMA_MapControlTransitFeaturePointerExitedEventArgs **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs.get_DisplayName() */
 HRESULT wuixacoma_map_control_transit_feature_pointer_exited_event_args_get__display_name(WUIXACOMA_MapControlTransitFeaturePointerExitedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs.get_Location() */
 HRESULT wuixacoma_map_control_transit_feature_pointer_exited_event_args_get__location(WUIXACOMA_MapControlTransitFeaturePointerExitedEventArgs *self, WDEGE_Geopoint** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs.get_TransitProperties() */
 HRESULT wuixacoma_map_control_transit_feature_pointer_exited_event_args_get__transit_properties(WUIXACOMA_MapControlTransitFeaturePointerExitedEventArgs *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs */
 HRESULT wuixacoma_map_control_transit_feature_right_tapped_event_args_new(WUIXACOMA_MapControlTransitFeatureRightTappedEventArgs **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs.get_DisplayName() */
 HRESULT wuixacoma_map_control_transit_feature_right_tapped_event_args_get__display_name(WUIXACOMA_MapControlTransitFeatureRightTappedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs.get_Location() */
 HRESULT wuixacoma_map_control_transit_feature_right_tapped_event_args_get__location(WUIXACOMA_MapControlTransitFeatureRightTappedEventArgs *self, WDEGE_Geopoint** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs.get_TransitProperties() */
 HRESULT wuixacoma_map_control_transit_feature_right_tapped_event_args_get__transit_properties(WUIXACOMA_MapControlTransitFeatureRightTappedEventArgs *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapElement3D */
 HRESULT wuixacoma_map_element3_d_new(WUIXACOMA_MapElement3D **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement3D */
-/* Windows.UI.Xaml.Controls.Maps.MapElement3D.get_Location() */
 HRESULT wuixacoma_map_element3_d_get__location(WUIXACOMA_MapElement3D *self, WDEGE_Geopoint** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement3D.put_Location() */
 HRESULT wuixacoma_map_element3_d_put__location(WUIXACOMA_MapElement3D *self, WDEGE_Geopoint* value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement3D.get_Model() */
 HRESULT wuixacoma_map_element3_d_get__model(WUIXACOMA_MapElement3D *self, WUIXACOMA_MapModel3D** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement3D.put_Model() */
 HRESULT wuixacoma_map_element3_d_put__model(WUIXACOMA_MapElement3D *self, WUIXACOMA_MapModel3D* value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement3D.get_Heading() */
 HRESULT wuixacoma_map_element3_d_get__heading(WUIXACOMA_MapElement3D *self, double *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement3D.put_Heading() */
 HRESULT wuixacoma_map_element3_d_put__heading(WUIXACOMA_MapElement3D *self, double value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement3D.get_Pitch() */
 HRESULT wuixacoma_map_element3_d_get__pitch(WUIXACOMA_MapElement3D *self, double *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement3D.put_Pitch() */
 HRESULT wuixacoma_map_element3_d_put__pitch(WUIXACOMA_MapElement3D *self, double value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement3D.get_Roll() */
 HRESULT wuixacoma_map_element3_d_get__roll(WUIXACOMA_MapElement3D *self, double *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement3D.put_Roll() */
 HRESULT wuixacoma_map_element3_d_put__roll(WUIXACOMA_MapElement3D *self, double value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement3D.get_Scale() */
 HRESULT wuixacoma_map_element3_d_get__scale(WUIXACOMA_MapElement3D *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement3D.put_Scale() */
 HRESULT wuixacoma_map_element3_d_put__scale(WUIXACOMA_MapElement3D *self, WFN_Vector_3 value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement3D.get_LocationProperty() */
 HRESULT wuixacoma_map_element3_d_get__location_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement3D.get_HeadingProperty() */
 HRESULT wuixacoma_map_element3_d_get__heading_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement3D.get_PitchProperty() */
 HRESULT wuixacoma_map_element3_d_get__pitch_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement3D.get_RollProperty() */
 HRESULT wuixacoma_map_element3_d_get__roll_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElement3D.get_ScaleProperty() */
 HRESULT wuixacoma_map_element3_d_get__scale_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapElementClickEventArgs */
 HRESULT wuixacoma_map_element_click_event_args_new(WUIXACOMA_MapElementClickEventArgs **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElementClickEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.MapElementClickEventArgs.get_Position() */
 HRESULT wuixacoma_map_element_click_event_args_get__position(WUIXACOMA_MapElementClickEventArgs *self, WF_Point *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElementClickEventArgs.get_Location() */
 HRESULT wuixacoma_map_element_click_event_args_get__location(WUIXACOMA_MapElementClickEventArgs *self, WDEGE_Geopoint** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElementClickEventArgs.get_MapElements() */
 HRESULT wuixacoma_map_element_click_event_args_get__map_elements(WUIXACOMA_MapElementClickEventArgs *self, WFOCO_IVector_WUIXACOMA_MapElement** value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapElementPointerEnteredEventArgs */
 HRESULT wuixacoma_map_element_pointer_entered_event_args_new(WUIXACOMA_MapElementPointerEnteredEventArgs **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElementPointerEnteredEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.MapElementPointerEnteredEventArgs.get_Position() */
 HRESULT wuixacoma_map_element_pointer_entered_event_args_get__position(WUIXACOMA_MapElementPointerEnteredEventArgs *self, WF_Point *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElementPointerEnteredEventArgs.get_Location() */
 HRESULT wuixacoma_map_element_pointer_entered_event_args_get__location(WUIXACOMA_MapElementPointerEnteredEventArgs *self, WDEGE_Geopoint** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElementPointerEnteredEventArgs.get_MapElement() */
 HRESULT wuixacoma_map_element_pointer_entered_event_args_get__map_element(WUIXACOMA_MapElementPointerEnteredEventArgs *self, WUIXACOMA_MapElement** value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapElementPointerExitedEventArgs */
 HRESULT wuixacoma_map_element_pointer_exited_event_args_new(WUIXACOMA_MapElementPointerExitedEventArgs **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElementPointerExitedEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.MapElementPointerExitedEventArgs.get_Position() */
 HRESULT wuixacoma_map_element_pointer_exited_event_args_get__position(WUIXACOMA_MapElementPointerExitedEventArgs *self, WF_Point *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElementPointerExitedEventArgs.get_Location() */
 HRESULT wuixacoma_map_element_pointer_exited_event_args_get__location(WUIXACOMA_MapElementPointerExitedEventArgs *self, WDEGE_Geopoint** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElementPointerExitedEventArgs.get_MapElement() */
 HRESULT wuixacoma_map_element_pointer_exited_event_args_get__map_element(WUIXACOMA_MapElementPointerExitedEventArgs *self, WUIXACOMA_MapElement** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapLayer */
-/* Windows.UI.Xaml.Controls.Maps.MapLayer.get_MapTabIndex() */
 HRESULT wuixacoma_map_layer_get__map_tab_index(WUIXACOMA_MapLayer *self, int32_t *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapLayer.put_MapTabIndex() */
 HRESULT wuixacoma_map_layer_put__map_tab_index(WUIXACOMA_MapLayer *self, int32_t value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapLayer.get_Visible() */
 HRESULT wuixacoma_map_layer_get__visible(WUIXACOMA_MapLayer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapLayer.put_Visible() */
 HRESULT wuixacoma_map_layer_put__visible(WUIXACOMA_MapLayer *self, BOOL value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapLayer.get_ZIndex() */
 HRESULT wuixacoma_map_layer_get__z_index(WUIXACOMA_MapLayer *self, int32_t *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapLayer.put_ZIndex() */
 HRESULT wuixacoma_map_layer_put__z_index(WUIXACOMA_MapLayer *self, int32_t value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapLayer.get_MapTabIndexProperty() */
 HRESULT wuixacoma_map_layer_get__map_tab_index_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapLayer.get_VisibleProperty() */
 HRESULT wuixacoma_map_layer_get__visible_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapLayer.get_ZIndexProperty() */
 HRESULT wuixacoma_map_layer_get__z_index_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapElementsLayer */
 HRESULT wuixacoma_map_elements_layer_new(WUIXACOMA_MapElementsLayer **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElementsLayer */
-/* Windows.UI.Xaml.Controls.Maps.MapElementsLayer.get_MapElements() */
 HRESULT wuixacoma_map_elements_layer_get__map_elements(WUIXACOMA_MapElementsLayer *self, WFOCO_IVector_WUIXACOMA_MapElement** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElementsLayer.put_MapElements() */
 HRESULT wuixacoma_map_elements_layer_put__map_elements(WUIXACOMA_MapElementsLayer *self, WFOCO_IVector_WUIXACOMA_MapElement* value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElementsLayer.get_MapElementsProperty() */
 HRESULT wuixacoma_map_elements_layer_get__map_elements_property(WUIXA_DependencyProperty** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixacoma_map_elements_layer_on_map_element_click(WUIXACOMA_MapElementsLayer *self, cwinrt_event_fn fn, void *ctx);
@@ -2689,1152 +2126,709 @@ void wuixacoma_map_elements_layer_off_map_element_pointer_exited(WUIXACOMA_MapEl
 cwinrt_token wuixacoma_map_elements_layer_on_map_context_requested(WUIXACOMA_MapElementsLayer *self, cwinrt_event_fn fn, void *ctx);
 void wuixacoma_map_elements_layer_off_map_context_requested(WUIXACOMA_MapElementsLayer *self, cwinrt_token token);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapElementsLayerClickEventArgs */
 HRESULT wuixacoma_map_elements_layer_click_event_args_new(WUIXACOMA_MapElementsLayerClickEventArgs **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElementsLayerClickEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.MapElementsLayerClickEventArgs.get_Position() */
 HRESULT wuixacoma_map_elements_layer_click_event_args_get__position(WUIXACOMA_MapElementsLayerClickEventArgs *self, WF_Point *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElementsLayerClickEventArgs.get_Location() */
 HRESULT wuixacoma_map_elements_layer_click_event_args_get__location(WUIXACOMA_MapElementsLayerClickEventArgs *self, WDEGE_Geopoint** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElementsLayerClickEventArgs.get_MapElements() */
 HRESULT wuixacoma_map_elements_layer_click_event_args_get__map_elements(WUIXACOMA_MapElementsLayerClickEventArgs *self, WFOCO_IVector_WUIXACOMA_MapElement** value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapElementsLayerContextRequestedEventArgs */
 HRESULT wuixacoma_map_elements_layer_context_requested_event_args_new(WUIXACOMA_MapElementsLayerContextRequestedEventArgs **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElementsLayerContextRequestedEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.MapElementsLayerContextRequestedEventArgs.get_Position() */
 HRESULT wuixacoma_map_elements_layer_context_requested_event_args_get__position(WUIXACOMA_MapElementsLayerContextRequestedEventArgs *self, WF_Point *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElementsLayerContextRequestedEventArgs.get_Location() */
 HRESULT wuixacoma_map_elements_layer_context_requested_event_args_get__location(WUIXACOMA_MapElementsLayerContextRequestedEventArgs *self, WDEGE_Geopoint** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElementsLayerContextRequestedEventArgs.get_MapElements() */
 HRESULT wuixacoma_map_elements_layer_context_requested_event_args_get__map_elements(WUIXACOMA_MapElementsLayerContextRequestedEventArgs *self, WFOCO_IVectorView_WUIXACOMA_MapElement** value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapElementsLayerPointerEnteredEventArgs */
 HRESULT wuixacoma_map_elements_layer_pointer_entered_event_args_new(WUIXACOMA_MapElementsLayerPointerEnteredEventArgs **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElementsLayerPointerEnteredEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.MapElementsLayerPointerEnteredEventArgs.get_Position() */
 HRESULT wuixacoma_map_elements_layer_pointer_entered_event_args_get__position(WUIXACOMA_MapElementsLayerPointerEnteredEventArgs *self, WF_Point *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElementsLayerPointerEnteredEventArgs.get_Location() */
 HRESULT wuixacoma_map_elements_layer_pointer_entered_event_args_get__location(WUIXACOMA_MapElementsLayerPointerEnteredEventArgs *self, WDEGE_Geopoint** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElementsLayerPointerEnteredEventArgs.get_MapElement() */
 HRESULT wuixacoma_map_elements_layer_pointer_entered_event_args_get__map_element(WUIXACOMA_MapElementsLayerPointerEnteredEventArgs *self, WUIXACOMA_MapElement** value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapElementsLayerPointerExitedEventArgs */
 HRESULT wuixacoma_map_elements_layer_pointer_exited_event_args_new(WUIXACOMA_MapElementsLayerPointerExitedEventArgs **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElementsLayerPointerExitedEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.MapElementsLayerPointerExitedEventArgs.get_Position() */
 HRESULT wuixacoma_map_elements_layer_pointer_exited_event_args_get__position(WUIXACOMA_MapElementsLayerPointerExitedEventArgs *self, WF_Point *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElementsLayerPointerExitedEventArgs.get_Location() */
 HRESULT wuixacoma_map_elements_layer_pointer_exited_event_args_get__location(WUIXACOMA_MapElementsLayerPointerExitedEventArgs *self, WDEGE_Geopoint** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapElementsLayerPointerExitedEventArgs.get_MapElement() */
 HRESULT wuixacoma_map_elements_layer_pointer_exited_event_args_get__map_element(WUIXACOMA_MapElementsLayerPointerExitedEventArgs *self, WUIXACOMA_MapElement** value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapIcon */
 HRESULT wuixacoma_map_icon_new(WUIXACOMA_MapIcon **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapIcon */
-/* Windows.UI.Xaml.Controls.Maps.MapIcon.get_Location() */
 HRESULT wuixacoma_map_icon_get__location(WUIXACOMA_MapIcon *self, WDEGE_Geopoint** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapIcon.put_Location() */
 HRESULT wuixacoma_map_icon_put__location(WUIXACOMA_MapIcon *self, WDEGE_Geopoint* value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapIcon.get_Title() */
 HRESULT wuixacoma_map_icon_get__title(WUIXACOMA_MapIcon *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapIcon.put_Title() */
 HRESULT wuixacoma_map_icon_put__title(WUIXACOMA_MapIcon *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapIcon.get_NormalizedAnchorPoint() */
 HRESULT wuixacoma_map_icon_get__normalized_anchor_point(WUIXACOMA_MapIcon *self, WF_Point *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapIcon.put_NormalizedAnchorPoint() */
 HRESULT wuixacoma_map_icon_put__normalized_anchor_point(WUIXACOMA_MapIcon *self, WF_Point value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapIcon.get_Image() */
 HRESULT wuixacoma_map_icon_get__image(WUIXACOMA_MapIcon *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapIcon.put_Image() */
 HRESULT wuixacoma_map_icon_put__image(WUIXACOMA_MapIcon *self, WSTST_IRandomAccessStreamReference* value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapIcon.get_CollisionBehaviorDesired() */
 HRESULT wuixacoma_map_icon_get__collision_behavior_desired(WUIXACOMA_MapIcon *self, WUIXACOMA_MapElementCollisionBehavior *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapIcon.put_CollisionBehaviorDesired() */
 HRESULT wuixacoma_map_icon_put__collision_behavior_desired(WUIXACOMA_MapIcon *self, WUIXACOMA_MapElementCollisionBehavior value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapIcon.get_CollisionBehaviorDesiredProperty() */
 HRESULT wuixacoma_map_icon_get__collision_behavior_desired_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapIcon.get_LocationProperty() */
 HRESULT wuixacoma_map_icon_get__location_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapIcon.get_TitleProperty() */
 HRESULT wuixacoma_map_icon_get__title_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapIcon.get_NormalizedAnchorPointProperty() */
 HRESULT wuixacoma_map_icon_get__normalized_anchor_point_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapInputEventArgs */
 HRESULT wuixacoma_map_input_event_args_new(WUIXACOMA_MapInputEventArgs **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapInputEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.MapInputEventArgs.get_Position() */
 HRESULT wuixacoma_map_input_event_args_get__position(WUIXACOMA_MapInputEventArgs *self, WF_Point *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapInputEventArgs.get_Location() */
 HRESULT wuixacoma_map_input_event_args_get__location(WUIXACOMA_MapInputEventArgs *self, WDEGE_Geopoint** value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapItemsControl */
 HRESULT wuixacoma_map_items_control_new(WUIXACOMA_MapItemsControl **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapItemsControl */
-/* Windows.UI.Xaml.Controls.Maps.MapItemsControl.get_ItemsSource() */
 HRESULT wuixacoma_map_items_control_get__items_source(WUIXACOMA_MapItemsControl *self, IInspectable** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapItemsControl.put_ItemsSource() */
 HRESULT wuixacoma_map_items_control_put__items_source(WUIXACOMA_MapItemsControl *self, IInspectable* value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapItemsControl.get_Items() */
 HRESULT wuixacoma_map_items_control_get__items(WUIXACOMA_MapItemsControl *self, WFOCO_IVector_WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapItemsControl.get_ItemTemplate() */
 HRESULT wuixacoma_map_items_control_get__item_template(WUIXACOMA_MapItemsControl *self, WUIXA_DataTemplate** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapItemsControl.put_ItemTemplate() */
 HRESULT wuixacoma_map_items_control_put__item_template(WUIXACOMA_MapItemsControl *self, WUIXA_DataTemplate* value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapItemsControl.get_ItemsSourceProperty() */
 HRESULT wuixacoma_map_items_control_get__items_source_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapItemsControl.get_ItemsProperty() */
 HRESULT wuixacoma_map_items_control_get__items_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapItemsControl.get_ItemTemplateProperty() */
 HRESULT wuixacoma_map_items_control_get__item_template_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapModel3D */
-/* Windows.UI.Xaml.Controls.Maps.MapModel3D.CreateFrom3MFAsync(source) */
 HRESULT wuixacoma_map_model3_d_create_from3_m_f_async(WSTST_IRandomAccessStreamReference* source, WF_IAsyncOperation_WUIXACOMA_MapModel3D** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapModel3D.CreateFrom3MFAsync(source, shadingOption) */
 HRESULT wuixacoma_map_model3_d_create_from3_m_f_async_p_map_model3_d_shading_option_p(WSTST_IRandomAccessStreamReference* source, WUIXACOMA_MapModel3DShadingOption shadingOption, WF_IAsyncOperation_WUIXACOMA_MapModel3D** out);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapPolygon */
 HRESULT wuixacoma_map_polygon_new(WUIXACOMA_MapPolygon **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapPolygon */
-/* Windows.UI.Xaml.Controls.Maps.MapPolygon.get_Path() */
 HRESULT wuixacoma_map_polygon_get__path(WUIXACOMA_MapPolygon *self, WDEGE_Geopath** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapPolygon.put_Path() */
 HRESULT wuixacoma_map_polygon_put__path(WUIXACOMA_MapPolygon *self, WDEGE_Geopath* value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapPolygon.get_StrokeColor() */
 HRESULT wuixacoma_map_polygon_get__stroke_color(WUIXACOMA_MapPolygon *self, WUI_Color *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapPolygon.put_StrokeColor() */
 HRESULT wuixacoma_map_polygon_put__stroke_color(WUIXACOMA_MapPolygon *self, WUI_Color value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapPolygon.get_StrokeThickness() */
 HRESULT wuixacoma_map_polygon_get__stroke_thickness(WUIXACOMA_MapPolygon *self, double *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapPolygon.put_StrokeThickness() */
 HRESULT wuixacoma_map_polygon_put__stroke_thickness(WUIXACOMA_MapPolygon *self, double value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapPolygon.get_StrokeDashed() */
 HRESULT wuixacoma_map_polygon_get__stroke_dashed(WUIXACOMA_MapPolygon *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapPolygon.put_StrokeDashed() */
 HRESULT wuixacoma_map_polygon_put__stroke_dashed(WUIXACOMA_MapPolygon *self, BOOL value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapPolygon.get_FillColor() */
 HRESULT wuixacoma_map_polygon_get__fill_color(WUIXACOMA_MapPolygon *self, WUI_Color *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapPolygon.put_FillColor() */
 HRESULT wuixacoma_map_polygon_put__fill_color(WUIXACOMA_MapPolygon *self, WUI_Color value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapPolygon.get_Paths() */
 HRESULT wuixacoma_map_polygon_get__paths(WUIXACOMA_MapPolygon *self, WFOCO_IVector_WDEGE_Geopath** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapPolygon.get_PathProperty() */
 HRESULT wuixacoma_map_polygon_get__path_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapPolygon.get_StrokeThicknessProperty() */
 HRESULT wuixacoma_map_polygon_get__stroke_thickness_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapPolygon.get_StrokeDashedProperty() */
 HRESULT wuixacoma_map_polygon_get__stroke_dashed_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapPolyline */
 HRESULT wuixacoma_map_polyline_new(WUIXACOMA_MapPolyline **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapPolyline */
-/* Windows.UI.Xaml.Controls.Maps.MapPolyline.get_Path() */
 HRESULT wuixacoma_map_polyline_get__path(WUIXACOMA_MapPolyline *self, WDEGE_Geopath** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapPolyline.put_Path() */
 HRESULT wuixacoma_map_polyline_put__path(WUIXACOMA_MapPolyline *self, WDEGE_Geopath* value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapPolyline.get_StrokeColor() */
 HRESULT wuixacoma_map_polyline_get__stroke_color(WUIXACOMA_MapPolyline *self, WUI_Color *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapPolyline.put_StrokeColor() */
 HRESULT wuixacoma_map_polyline_put__stroke_color(WUIXACOMA_MapPolyline *self, WUI_Color value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapPolyline.get_StrokeThickness() */
 HRESULT wuixacoma_map_polyline_get__stroke_thickness(WUIXACOMA_MapPolyline *self, double *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapPolyline.put_StrokeThickness() */
 HRESULT wuixacoma_map_polyline_put__stroke_thickness(WUIXACOMA_MapPolyline *self, double value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapPolyline.get_StrokeDashed() */
 HRESULT wuixacoma_map_polyline_get__stroke_dashed(WUIXACOMA_MapPolyline *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapPolyline.put_StrokeDashed() */
 HRESULT wuixacoma_map_polyline_put__stroke_dashed(WUIXACOMA_MapPolyline *self, BOOL value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapPolyline.get_PathProperty() */
 HRESULT wuixacoma_map_polyline_get__path_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapPolyline.get_StrokeDashedProperty() */
 HRESULT wuixacoma_map_polyline_get__stroke_dashed_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapRightTappedEventArgs */
 HRESULT wuixacoma_map_right_tapped_event_args_new(WUIXACOMA_MapRightTappedEventArgs **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapRightTappedEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.MapRightTappedEventArgs.get_Position() */
 HRESULT wuixacoma_map_right_tapped_event_args_get__position(WUIXACOMA_MapRightTappedEventArgs *self, WF_Point *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapRightTappedEventArgs.get_Location() */
 HRESULT wuixacoma_map_right_tapped_event_args_get__location(WUIXACOMA_MapRightTappedEventArgs *self, WDEGE_Geopoint** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapRouteView */
-/* Windows.UI.Xaml.Controls.Maps.MapRouteView.get_RouteColor() */
 HRESULT wuixacoma_map_route_view_get__route_color(WUIXACOMA_MapRouteView *self, WUI_Color *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapRouteView.put_RouteColor() */
 HRESULT wuixacoma_map_route_view_put__route_color(WUIXACOMA_MapRouteView *self, WUI_Color value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapRouteView.get_OutlineColor() */
 HRESULT wuixacoma_map_route_view_get__outline_color(WUIXACOMA_MapRouteView *self, WUI_Color *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapRouteView.put_OutlineColor() */
 HRESULT wuixacoma_map_route_view_put__outline_color(WUIXACOMA_MapRouteView *self, WUI_Color value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapRouteView.get_Route() */
 HRESULT wuixacoma_map_route_view_get__route(WUIXACOMA_MapRouteView *self, WSEMA_MapRoute** value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapScene */
 HRESULT wuixacoma_map_scene_new(WUIXACOMA_MapScene **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapScene */
-/* Windows.UI.Xaml.Controls.Maps.MapScene.get_TargetCamera() */
 HRESULT wuixacoma_map_scene_get__target_camera(WUIXACOMA_MapScene *self, WUIXACOMA_MapCamera** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapScene.CreateFromBoundingBox(bounds) */
 HRESULT wuixacoma_map_scene_create_from_bounding_box(WDEGE_GeoboundingBox* bounds, WUIXACOMA_MapScene** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapScene.CreateFromBoundingBox(bounds, headingInDegrees, pitchInDegrees) */
 HRESULT wuixacoma_map_scene_create_from_bounding_box_p_f64_f64_p(WDEGE_GeoboundingBox* bounds, double headingInDegrees, double pitchInDegrees, WUIXACOMA_MapScene** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapScene.CreateFromCamera(camera) */
 HRESULT wuixacoma_map_scene_create_from_camera(WUIXACOMA_MapCamera* camera, WUIXACOMA_MapScene** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapScene.CreateFromLocation(location) */
 HRESULT wuixacoma_map_scene_create_from_location(WDEGE_Geopoint* location, WUIXACOMA_MapScene** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapScene.CreateFromLocation(location, headingInDegrees, pitchInDegrees) */
 HRESULT wuixacoma_map_scene_create_from_location_p_f64_f64_p(WDEGE_Geopoint* location, double headingInDegrees, double pitchInDegrees, WUIXACOMA_MapScene** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapScene.CreateFromLocationAndRadius(location, radiusInMeters) */
 HRESULT wuixacoma_map_scene_create_from_location_and_radius(WDEGE_Geopoint* location, double radiusInMeters, WUIXACOMA_MapScene** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapScene.CreateFromLocationAndRadius(location, radiusInMeters, headingInDegrees, pitchInDegrees) */
 HRESULT wuixacoma_map_scene_create_from_location_and_radius_p_f64_f64_f64_p(WDEGE_Geopoint* location, double radiusInMeters, double headingInDegrees, double pitchInDegrees, WUIXACOMA_MapScene** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapScene.CreateFromLocations(locations) */
 HRESULT wuixacoma_map_scene_create_from_locations(WFOCO_IIterable_WDEGE_Geopoint* locations, WUIXACOMA_MapScene** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapScene.CreateFromLocations(locations, headingInDegrees, pitchInDegrees) */
 HRESULT wuixacoma_map_scene_create_from_locations_p_f64_f64_p(WFOCO_IIterable_WDEGE_Geopoint* locations, double headingInDegrees, double pitchInDegrees, WUIXACOMA_MapScene** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixacoma_map_scene_on_target_camera_changed(WUIXACOMA_MapScene *self, cwinrt_event_fn fn, void *ctx);
 void wuixacoma_map_scene_off_target_camera_changed(WUIXACOMA_MapScene *self, cwinrt_token token);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapStyleSheet */
 HRESULT wuixacoma_map_style_sheet_new(WUIXACOMA_MapStyleSheet **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheet */
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheet.Aerial() */
 HRESULT wuixacoma_map_style_sheet_aerial(WUIXACOMA_MapStyleSheet** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheet.AerialWithOverlay() */
 HRESULT wuixacoma_map_style_sheet_aerial_with_overlay(WUIXACOMA_MapStyleSheet** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheet.RoadLight() */
 HRESULT wuixacoma_map_style_sheet_road_light(WUIXACOMA_MapStyleSheet** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheet.RoadDark() */
 HRESULT wuixacoma_map_style_sheet_road_dark(WUIXACOMA_MapStyleSheet** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheet.RoadHighContrastLight() */
 HRESULT wuixacoma_map_style_sheet_road_high_contrast_light(WUIXACOMA_MapStyleSheet** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheet.RoadHighContrastDark() */
 HRESULT wuixacoma_map_style_sheet_road_high_contrast_dark(WUIXACOMA_MapStyleSheet** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheet.Combine(styleSheets) */
 HRESULT wuixacoma_map_style_sheet_combine(WFOCO_IIterable_WUIXACOMA_MapStyleSheet* styleSheets, WUIXACOMA_MapStyleSheet** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheet.ParseFromJson(styleAsJson) */
 HRESULT wuixacoma_map_style_sheet_parse_from_json(cwinrt_hstring styleAsJson, WUIXACOMA_MapStyleSheet** out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheet.TryParseFromJson(styleAsJson, styleSheet) */
 HRESULT wuixacoma_map_style_sheet_try_parse_from_json(cwinrt_hstring styleAsJson, WUIXACOMA_MapStyleSheet* styleSheet, BOOL *out);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries */
 HRESULT wuixacoma_map_style_sheet_entries_new(WUIXACOMA_MapStyleSheetEntries **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries */
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Area() */
 HRESULT wuixacoma_map_style_sheet_entries_get__area(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Airport() */
 HRESULT wuixacoma_map_style_sheet_entries_get__airport(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Cemetery() */
 HRESULT wuixacoma_map_style_sheet_entries_get__cemetery(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Continent() */
 HRESULT wuixacoma_map_style_sheet_entries_get__continent(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Education() */
 HRESULT wuixacoma_map_style_sheet_entries_get__education(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_IndigenousPeoplesReserve() */
 HRESULT wuixacoma_map_style_sheet_entries_get__indigenous_peoples_reserve(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Island() */
 HRESULT wuixacoma_map_style_sheet_entries_get__island(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Medical() */
 HRESULT wuixacoma_map_style_sheet_entries_get__medical(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Military() */
 HRESULT wuixacoma_map_style_sheet_entries_get__military(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Nautical() */
 HRESULT wuixacoma_map_style_sheet_entries_get__nautical(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Neighborhood() */
 HRESULT wuixacoma_map_style_sheet_entries_get__neighborhood(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Runway() */
 HRESULT wuixacoma_map_style_sheet_entries_get__runway(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Sand() */
 HRESULT wuixacoma_map_style_sheet_entries_get__sand(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_ShoppingCenter() */
 HRESULT wuixacoma_map_style_sheet_entries_get__shopping_center(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Stadium() */
 HRESULT wuixacoma_map_style_sheet_entries_get__stadium(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Vegetation() */
 HRESULT wuixacoma_map_style_sheet_entries_get__vegetation(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Forest() */
 HRESULT wuixacoma_map_style_sheet_entries_get__forest(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_GolfCourse() */
 HRESULT wuixacoma_map_style_sheet_entries_get__golf_course(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Park() */
 HRESULT wuixacoma_map_style_sheet_entries_get__park(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_PlayingField() */
 HRESULT wuixacoma_map_style_sheet_entries_get__playing_field(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Reserve() */
 HRESULT wuixacoma_map_style_sheet_entries_get__reserve(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Point() */
 HRESULT wuixacoma_map_style_sheet_entries_get__point(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_NaturalPoint() */
 HRESULT wuixacoma_map_style_sheet_entries_get__natural_point(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Peak() */
 HRESULT wuixacoma_map_style_sheet_entries_get__peak(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_VolcanicPeak() */
 HRESULT wuixacoma_map_style_sheet_entries_get__volcanic_peak(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_WaterPoint() */
 HRESULT wuixacoma_map_style_sheet_entries_get__water_point(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_PointOfInterest() */
 HRESULT wuixacoma_map_style_sheet_entries_get__point_of_interest(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Business() */
 HRESULT wuixacoma_map_style_sheet_entries_get__business(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_FoodPoint() */
 HRESULT wuixacoma_map_style_sheet_entries_get__food_point(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_PopulatedPlace() */
 HRESULT wuixacoma_map_style_sheet_entries_get__populated_place(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Capital() */
 HRESULT wuixacoma_map_style_sheet_entries_get__capital(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_AdminDistrictCapital() */
 HRESULT wuixacoma_map_style_sheet_entries_get__admin_district_capital(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_CountryRegionCapital() */
 HRESULT wuixacoma_map_style_sheet_entries_get__country_region_capital(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_RoadShield() */
 HRESULT wuixacoma_map_style_sheet_entries_get__road_shield(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_RoadExit() */
 HRESULT wuixacoma_map_style_sheet_entries_get__road_exit(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Transit() */
 HRESULT wuixacoma_map_style_sheet_entries_get__transit(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Political() */
 HRESULT wuixacoma_map_style_sheet_entries_get__political(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_CountryRegion() */
 HRESULT wuixacoma_map_style_sheet_entries_get__country_region(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_AdminDistrict() */
 HRESULT wuixacoma_map_style_sheet_entries_get__admin_district(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_District() */
 HRESULT wuixacoma_map_style_sheet_entries_get__district(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Structure() */
 HRESULT wuixacoma_map_style_sheet_entries_get__structure(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Building() */
 HRESULT wuixacoma_map_style_sheet_entries_get__building(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_EducationBuilding() */
 HRESULT wuixacoma_map_style_sheet_entries_get__education_building(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_MedicalBuilding() */
 HRESULT wuixacoma_map_style_sheet_entries_get__medical_building(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_TransitBuilding() */
 HRESULT wuixacoma_map_style_sheet_entries_get__transit_building(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Transportation() */
 HRESULT wuixacoma_map_style_sheet_entries_get__transportation(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Road() */
 HRESULT wuixacoma_map_style_sheet_entries_get__road(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_ControlledAccessHighway() */
 HRESULT wuixacoma_map_style_sheet_entries_get__controlled_access_highway(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_HighSpeedRamp() */
 HRESULT wuixacoma_map_style_sheet_entries_get__high_speed_ramp(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Highway() */
 HRESULT wuixacoma_map_style_sheet_entries_get__highway(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_MajorRoad() */
 HRESULT wuixacoma_map_style_sheet_entries_get__major_road(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_ArterialRoad() */
 HRESULT wuixacoma_map_style_sheet_entries_get__arterial_road(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Street() */
 HRESULT wuixacoma_map_style_sheet_entries_get__street(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Ramp() */
 HRESULT wuixacoma_map_style_sheet_entries_get__ramp(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_UnpavedStreet() */
 HRESULT wuixacoma_map_style_sheet_entries_get__unpaved_street(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_TollRoad() */
 HRESULT wuixacoma_map_style_sheet_entries_get__toll_road(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Railway() */
 HRESULT wuixacoma_map_style_sheet_entries_get__railway(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Trail() */
 HRESULT wuixacoma_map_style_sheet_entries_get__trail(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_WaterRoute() */
 HRESULT wuixacoma_map_style_sheet_entries_get__water_route(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_Water() */
 HRESULT wuixacoma_map_style_sheet_entries_get__water(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_River() */
 HRESULT wuixacoma_map_style_sheet_entries_get__river(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_RouteLine() */
 HRESULT wuixacoma_map_style_sheet_entries_get__route_line(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_WalkingRoute() */
 HRESULT wuixacoma_map_style_sheet_entries_get__walking_route(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries.get_DrivingRoute() */
 HRESULT wuixacoma_map_style_sheet_entries_get__driving_route(cwinrt_hstring *value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntryStates */
 HRESULT wuixacoma_map_style_sheet_entry_states_new(WUIXACOMA_MapStyleSheetEntryStates **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntryStates */
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntryStates.get_Disabled() */
 HRESULT wuixacoma_map_style_sheet_entry_states_get__disabled(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntryStates.get_Hover() */
 HRESULT wuixacoma_map_style_sheet_entry_states_get__hover(cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntryStates.get_Selected() */
 HRESULT wuixacoma_map_style_sheet_entry_states_get__selected(cwinrt_hstring *value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapTargetCameraChangedEventArgs */
 HRESULT wuixacoma_map_target_camera_changed_event_args_new(WUIXACOMA_MapTargetCameraChangedEventArgs **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTargetCameraChangedEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.MapTargetCameraChangedEventArgs.get_Camera() */
 HRESULT wuixacoma_map_target_camera_changed_event_args_get__camera(WUIXACOMA_MapTargetCameraChangedEventArgs *self, WUIXACOMA_MapCamera** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTargetCameraChangedEventArgs.get_ChangeReason() */
 HRESULT wuixacoma_map_target_camera_changed_event_args_get__change_reason(WUIXACOMA_MapTargetCameraChangedEventArgs *self, WUIXACOMA_MapCameraChangeReason *value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequest */
 HRESULT wuixacoma_map_tile_bitmap_request_new(WUIXACOMA_MapTileBitmapRequest **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequest */
-/* Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequest.get_PixelData() */
 HRESULT wuixacoma_map_tile_bitmap_request_get__pixel_data(WUIXACOMA_MapTileBitmapRequest *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequest.put_PixelData() */
 HRESULT wuixacoma_map_tile_bitmap_request_put__pixel_data(WUIXACOMA_MapTileBitmapRequest *self, WSTST_IRandomAccessStreamReference* value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequest.GetDeferral() */
 HRESULT wuixacoma_map_tile_bitmap_request_get_deferral(WUIXACOMA_MapTileBitmapRequest *self, WUIXACOMA_MapTileBitmapRequestDeferral** out);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestDeferral */
 HRESULT wuixacoma_map_tile_bitmap_request_deferral_new(WUIXACOMA_MapTileBitmapRequestDeferral **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestDeferral */
-/* Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestDeferral.Complete() */
 HRESULT wuixacoma_map_tile_bitmap_request_deferral_complete(WUIXACOMA_MapTileBitmapRequestDeferral *self);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestedEventArgs */
 HRESULT wuixacoma_map_tile_bitmap_requested_event_args_new(WUIXACOMA_MapTileBitmapRequestedEventArgs **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestedEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestedEventArgs.get_X() */
 HRESULT wuixacoma_map_tile_bitmap_requested_event_args_get__x(WUIXACOMA_MapTileBitmapRequestedEventArgs *self, int32_t *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestedEventArgs.get_Y() */
 HRESULT wuixacoma_map_tile_bitmap_requested_event_args_get__y(WUIXACOMA_MapTileBitmapRequestedEventArgs *self, int32_t *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestedEventArgs.get_ZoomLevel() */
 HRESULT wuixacoma_map_tile_bitmap_requested_event_args_get__zoom_level(WUIXACOMA_MapTileBitmapRequestedEventArgs *self, int32_t *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestedEventArgs.get_Request() */
 HRESULT wuixacoma_map_tile_bitmap_requested_event_args_get__request(WUIXACOMA_MapTileBitmapRequestedEventArgs *self, WUIXACOMA_MapTileBitmapRequest** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestedEventArgs.get_FrameIndex() */
 HRESULT wuixacoma_map_tile_bitmap_requested_event_args_get__frame_index(WUIXACOMA_MapTileBitmapRequestedEventArgs *self, int32_t *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource */
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_DataSource() */
 HRESULT wuixacoma_map_tile_source_get__data_source(WUIXACOMA_MapTileSource *self, WUIXACOMA_MapTileDataSource** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.put_DataSource() */
 HRESULT wuixacoma_map_tile_source_put__data_source(WUIXACOMA_MapTileSource *self, WUIXACOMA_MapTileDataSource* value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_Layer() */
 HRESULT wuixacoma_map_tile_source_get__layer(WUIXACOMA_MapTileSource *self, WUIXACOMA_MapTileLayer *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.put_Layer() */
 HRESULT wuixacoma_map_tile_source_put__layer(WUIXACOMA_MapTileSource *self, WUIXACOMA_MapTileLayer value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_ZoomLevelRange() */
 HRESULT wuixacoma_map_tile_source_get__zoom_level_range(WUIXACOMA_MapTileSource *self, WUIXACOMA_MapZoomLevelRange *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.put_ZoomLevelRange() */
 HRESULT wuixacoma_map_tile_source_put__zoom_level_range(WUIXACOMA_MapTileSource *self, WUIXACOMA_MapZoomLevelRange value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_Bounds() */
 HRESULT wuixacoma_map_tile_source_get__bounds(WUIXACOMA_MapTileSource *self, WDEGE_GeoboundingBox** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.put_Bounds() */
 HRESULT wuixacoma_map_tile_source_put__bounds(WUIXACOMA_MapTileSource *self, WDEGE_GeoboundingBox* value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_AllowOverstretch() */
 HRESULT wuixacoma_map_tile_source_get__allow_overstretch(WUIXACOMA_MapTileSource *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.put_AllowOverstretch() */
 HRESULT wuixacoma_map_tile_source_put__allow_overstretch(WUIXACOMA_MapTileSource *self, BOOL value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_IsFadingEnabled() */
 HRESULT wuixacoma_map_tile_source_get__is_fading_enabled(WUIXACOMA_MapTileSource *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.put_IsFadingEnabled() */
 HRESULT wuixacoma_map_tile_source_put__is_fading_enabled(WUIXACOMA_MapTileSource *self, BOOL value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_IsTransparencyEnabled() */
 HRESULT wuixacoma_map_tile_source_get__is_transparency_enabled(WUIXACOMA_MapTileSource *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.put_IsTransparencyEnabled() */
 HRESULT wuixacoma_map_tile_source_put__is_transparency_enabled(WUIXACOMA_MapTileSource *self, BOOL value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_IsRetryEnabled() */
 HRESULT wuixacoma_map_tile_source_get__is_retry_enabled(WUIXACOMA_MapTileSource *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.put_IsRetryEnabled() */
 HRESULT wuixacoma_map_tile_source_put__is_retry_enabled(WUIXACOMA_MapTileSource *self, BOOL value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_ZIndex() */
 HRESULT wuixacoma_map_tile_source_get__z_index(WUIXACOMA_MapTileSource *self, int32_t *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.put_ZIndex() */
 HRESULT wuixacoma_map_tile_source_put__z_index(WUIXACOMA_MapTileSource *self, int32_t value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_TilePixelSize() */
 HRESULT wuixacoma_map_tile_source_get__tile_pixel_size(WUIXACOMA_MapTileSource *self, int32_t *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.put_TilePixelSize() */
 HRESULT wuixacoma_map_tile_source_put__tile_pixel_size(WUIXACOMA_MapTileSource *self, int32_t value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_Visible() */
 HRESULT wuixacoma_map_tile_source_get__visible(WUIXACOMA_MapTileSource *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.put_Visible() */
 HRESULT wuixacoma_map_tile_source_put__visible(WUIXACOMA_MapTileSource *self, BOOL value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_AnimationState() */
 HRESULT wuixacoma_map_tile_source_get__animation_state(WUIXACOMA_MapTileSource *self, WUIXACOMA_MapTileAnimationState *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_AutoPlay() */
 HRESULT wuixacoma_map_tile_source_get__auto_play(WUIXACOMA_MapTileSource *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.put_AutoPlay() */
 HRESULT wuixacoma_map_tile_source_put__auto_play(WUIXACOMA_MapTileSource *self, BOOL value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_FrameCount() */
 HRESULT wuixacoma_map_tile_source_get__frame_count(WUIXACOMA_MapTileSource *self, int32_t *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.put_FrameCount() */
 HRESULT wuixacoma_map_tile_source_put__frame_count(WUIXACOMA_MapTileSource *self, int32_t value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_FrameDuration() */
 HRESULT wuixacoma_map_tile_source_get__frame_duration(WUIXACOMA_MapTileSource *self, WF_TimeSpan *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.put_FrameDuration() */
 HRESULT wuixacoma_map_tile_source_put__frame_duration(WUIXACOMA_MapTileSource *self, WF_TimeSpan value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.Pause() */
 HRESULT wuixacoma_map_tile_source_pause(WUIXACOMA_MapTileSource *self);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.Play() */
 HRESULT wuixacoma_map_tile_source_play(WUIXACOMA_MapTileSource *self);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.Stop() */
 HRESULT wuixacoma_map_tile_source_stop(WUIXACOMA_MapTileSource *self);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_AnimationStateProperty() */
 HRESULT wuixacoma_map_tile_source_get__animation_state_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_AutoPlayProperty() */
 HRESULT wuixacoma_map_tile_source_get__auto_play_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_FrameCountProperty() */
 HRESULT wuixacoma_map_tile_source_get__frame_count_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_FrameDurationProperty() */
 HRESULT wuixacoma_map_tile_source_get__frame_duration_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_DataSourceProperty() */
 HRESULT wuixacoma_map_tile_source_get__data_source_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_LayerProperty() */
 HRESULT wuixacoma_map_tile_source_get__layer_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_ZoomLevelRangeProperty() */
 HRESULT wuixacoma_map_tile_source_get__zoom_level_range_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_BoundsProperty() */
 HRESULT wuixacoma_map_tile_source_get__bounds_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_AllowOverstretchProperty() */
 HRESULT wuixacoma_map_tile_source_get__allow_overstretch_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_IsFadingEnabledProperty() */
 HRESULT wuixacoma_map_tile_source_get__is_fading_enabled_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_IsTransparencyEnabledProperty() */
 HRESULT wuixacoma_map_tile_source_get__is_transparency_enabled_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_IsRetryEnabledProperty() */
 HRESULT wuixacoma_map_tile_source_get__is_retry_enabled_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_ZIndexProperty() */
 HRESULT wuixacoma_map_tile_source_get__z_index_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_TilePixelSizeProperty() */
 HRESULT wuixacoma_map_tile_source_get__tile_pixel_size_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileSource.get_VisibleProperty() */
 HRESULT wuixacoma_map_tile_source_get__visible_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapTileUriRequest */
 HRESULT wuixacoma_map_tile_uri_request_new(WUIXACOMA_MapTileUriRequest **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileUriRequest */
-/* Windows.UI.Xaml.Controls.Maps.MapTileUriRequest.get_Uri() */
 HRESULT wuixacoma_map_tile_uri_request_get__uri(WUIXACOMA_MapTileUriRequest *self, WF_Uri** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileUriRequest.put_Uri() */
 HRESULT wuixacoma_map_tile_uri_request_put__uri(WUIXACOMA_MapTileUriRequest *self, WF_Uri* value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileUriRequest.GetDeferral() */
 HRESULT wuixacoma_map_tile_uri_request_get_deferral(WUIXACOMA_MapTileUriRequest *self, WUIXACOMA_MapTileUriRequestDeferral** out);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapTileUriRequestDeferral */
 HRESULT wuixacoma_map_tile_uri_request_deferral_new(WUIXACOMA_MapTileUriRequestDeferral **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileUriRequestDeferral */
-/* Windows.UI.Xaml.Controls.Maps.MapTileUriRequestDeferral.Complete() */
 HRESULT wuixacoma_map_tile_uri_request_deferral_complete(WUIXACOMA_MapTileUriRequestDeferral *self);
 
-/* activate Windows.UI.Xaml.Controls.Maps.MapTileUriRequestedEventArgs */
 HRESULT wuixacoma_map_tile_uri_requested_event_args_new(WUIXACOMA_MapTileUriRequestedEventArgs **out);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileUriRequestedEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.MapTileUriRequestedEventArgs.get_X() */
 HRESULT wuixacoma_map_tile_uri_requested_event_args_get__x(WUIXACOMA_MapTileUriRequestedEventArgs *self, int32_t *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileUriRequestedEventArgs.get_Y() */
 HRESULT wuixacoma_map_tile_uri_requested_event_args_get__y(WUIXACOMA_MapTileUriRequestedEventArgs *self, int32_t *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileUriRequestedEventArgs.get_ZoomLevel() */
 HRESULT wuixacoma_map_tile_uri_requested_event_args_get__zoom_level(WUIXACOMA_MapTileUriRequestedEventArgs *self, int32_t *value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileUriRequestedEventArgs.get_Request() */
 HRESULT wuixacoma_map_tile_uri_requested_event_args_get__request(WUIXACOMA_MapTileUriRequestedEventArgs *self, WUIXACOMA_MapTileUriRequest** value);
 
-/* Windows.UI.Xaml.Controls.Maps.MapTileUriRequestedEventArgs.get_FrameIndex() */
 HRESULT wuixacoma_map_tile_uri_requested_event_args_get__frame_index(WUIXACOMA_MapTileUriRequestedEventArgs *self, int32_t *value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.StreetsideExperience */
 HRESULT wuixacoma_streetside_experience_new(WUIXACOMA_StreetsideExperience **out);
 
-/* Windows.UI.Xaml.Controls.Maps.StreetsideExperience */
-/* Windows.UI.Xaml.Controls.Maps.StreetsideExperience.get_AddressTextVisible() */
 HRESULT wuixacoma_streetside_experience_get__address_text_visible(WUIXACOMA_StreetsideExperience *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.StreetsideExperience.put_AddressTextVisible() */
 HRESULT wuixacoma_streetside_experience_put__address_text_visible(WUIXACOMA_StreetsideExperience *self, BOOL value);
 
-/* Windows.UI.Xaml.Controls.Maps.StreetsideExperience.get_CursorVisible() */
 HRESULT wuixacoma_streetside_experience_get__cursor_visible(WUIXACOMA_StreetsideExperience *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.StreetsideExperience.put_CursorVisible() */
 HRESULT wuixacoma_streetside_experience_put__cursor_visible(WUIXACOMA_StreetsideExperience *self, BOOL value);
 
-/* Windows.UI.Xaml.Controls.Maps.StreetsideExperience.get_OverviewMapVisible() */
 HRESULT wuixacoma_streetside_experience_get__overview_map_visible(WUIXACOMA_StreetsideExperience *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.StreetsideExperience.put_OverviewMapVisible() */
 HRESULT wuixacoma_streetside_experience_put__overview_map_visible(WUIXACOMA_StreetsideExperience *self, BOOL value);
 
-/* Windows.UI.Xaml.Controls.Maps.StreetsideExperience.get_StreetLabelsVisible() */
 HRESULT wuixacoma_streetside_experience_get__street_labels_visible(WUIXACOMA_StreetsideExperience *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.StreetsideExperience.put_StreetLabelsVisible() */
 HRESULT wuixacoma_streetside_experience_put__street_labels_visible(WUIXACOMA_StreetsideExperience *self, BOOL value);
 
-/* Windows.UI.Xaml.Controls.Maps.StreetsideExperience.get_ExitButtonVisible() */
 HRESULT wuixacoma_streetside_experience_get__exit_button_visible(WUIXACOMA_StreetsideExperience *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.StreetsideExperience.put_ExitButtonVisible() */
 HRESULT wuixacoma_streetside_experience_put__exit_button_visible(WUIXACOMA_StreetsideExperience *self, BOOL value);
 
-/* Windows.UI.Xaml.Controls.Maps.StreetsideExperience.get_ZoomButtonsVisible() */
 HRESULT wuixacoma_streetside_experience_get__zoom_buttons_visible(WUIXACOMA_StreetsideExperience *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.StreetsideExperience.put_ZoomButtonsVisible() */
 HRESULT wuixacoma_streetside_experience_put__zoom_buttons_visible(WUIXACOMA_StreetsideExperience *self, BOOL value);
 
-/* activate Windows.UI.Xaml.Controls.Maps.StreetsidePanorama */
 HRESULT wuixacoma_streetside_panorama_new(WUIXACOMA_StreetsidePanorama **out);
 
-/* Windows.UI.Xaml.Controls.Maps.StreetsidePanorama */
-/* Windows.UI.Xaml.Controls.Maps.StreetsidePanorama.get_Location() */
 HRESULT wuixacoma_streetside_panorama_get__location(WUIXACOMA_StreetsidePanorama *self, WDEGE_Geopoint** value);
 
-/* Windows.UI.Xaml.Controls.Maps.StreetsidePanorama.FindNearbyAsync(location) */
 HRESULT wuixacoma_streetside_panorama_find_nearby_async(WDEGE_Geopoint* location, WF_IAsyncOperation_WUIXACOMA_StreetsidePanorama** out);
 
-/* Windows.UI.Xaml.Controls.Maps.StreetsidePanorama.FindNearbyAsync(location, radiusInMeters) */
 HRESULT wuixacoma_streetside_panorama_find_nearby_async_p_f64_p(WDEGE_Geopoint* location, double radiusInMeters, WF_IAsyncOperation_WUIXACOMA_StreetsidePanorama** out);
 
-/* Windows.UI.Xaml.Controls.Maps.ICustomMapTileDataSource */
-/* Windows.UI.Xaml.Controls.Maps.IHttpMapTileDataSource */
-/* Windows.UI.Xaml.Controls.Maps.ILocalMapTileDataSource */
-/* Windows.UI.Xaml.Controls.Maps.IMapActualCameraChangedEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.IMapActualCameraChangedEventArgs2 */
-/* Windows.UI.Xaml.Controls.Maps.IMapActualCameraChangedEventArgs2.get_ChangeReason() */
 HRESULT wuixacoma_map_actual_camera_changed_event_args_2_get__change_reason(WUIXACOMA_IMapActualCameraChangedEventArgs_2 *self, WUIXACOMA_MapCameraChangeReason *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapActualCameraChangingEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.IMapActualCameraChangingEventArgs2 */
-/* Windows.UI.Xaml.Controls.Maps.IMapActualCameraChangingEventArgs2.get_ChangeReason() */
 HRESULT wuixacoma_map_actual_camera_changing_event_args_2_get__change_reason(WUIXACOMA_IMapActualCameraChangingEventArgs_2 *self, WUIXACOMA_MapCameraChangeReason *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapElement */
-/* Windows.UI.Xaml.Controls.Maps.IMapElement2 */
-/* Windows.UI.Xaml.Controls.Maps.IMapElement2.get_MapTabIndex() */
 HRESULT wuixacoma_map_element_2_get__map_tab_index(WUIXACOMA_IMapElement_2 *self, int32_t *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapElement2.put_MapTabIndex() */
 HRESULT wuixacoma_map_element_2_put__map_tab_index(WUIXACOMA_IMapElement_2 *self, int32_t value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapElement3 */
-/* Windows.UI.Xaml.Controls.Maps.IMapElement3.get_MapStyleSheetEntry() */
 HRESULT wuixacoma_map_element_3_get__map_style_sheet_entry(WUIXACOMA_IMapElement_3 *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapElement3.put_MapStyleSheetEntry() */
 HRESULT wuixacoma_map_element_3_put__map_style_sheet_entry(WUIXACOMA_IMapElement_3 *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapElement3.get_MapStyleSheetEntryState() */
 HRESULT wuixacoma_map_element_3_get__map_style_sheet_entry_state(WUIXACOMA_IMapElement_3 *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapElement3.put_MapStyleSheetEntryState() */
 HRESULT wuixacoma_map_element_3_put__map_style_sheet_entry_state(WUIXACOMA_IMapElement_3 *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapElement3.get_Tag() */
 HRESULT wuixacoma_map_element_3_get__tag(WUIXACOMA_IMapElement_3 *self, IInspectable** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapElement3.put_Tag() */
 HRESULT wuixacoma_map_element_3_put__tag(WUIXACOMA_IMapElement_3 *self, IInspectable* value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapElement4 */
-/* Windows.UI.Xaml.Controls.Maps.IMapElement4.get_IsEnabled() */
 HRESULT wuixacoma_map_element_4_get__is_enabled(WUIXACOMA_IMapElement_4 *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapElement4.put_IsEnabled() */
 HRESULT wuixacoma_map_element_4_put__is_enabled(WUIXACOMA_IMapElement_4 *self, BOOL value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapBillboard */
-/* Windows.UI.Xaml.Controls.Maps.IMapCamera */
-/* Windows.UI.Xaml.Controls.Maps.IMapContextRequestedEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.IMapControl */
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2 */
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.get_BusinessLandmarksVisible() */
 HRESULT wuixacoma_map_control_2_get__business_landmarks_visible(WUIXACOMA_IMapControl_2 *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.put_BusinessLandmarksVisible() */
 HRESULT wuixacoma_map_control_2_put__business_landmarks_visible(WUIXACOMA_IMapControl_2 *self, BOOL value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.get_TransitFeaturesVisible() */
 HRESULT wuixacoma_map_control_2_get__transit_features_visible(WUIXACOMA_IMapControl_2 *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.put_TransitFeaturesVisible() */
 HRESULT wuixacoma_map_control_2_put__transit_features_visible(WUIXACOMA_IMapControl_2 *self, BOOL value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.get_PanInteractionMode() */
 HRESULT wuixacoma_map_control_2_get__pan_interaction_mode(WUIXACOMA_IMapControl_2 *self, WUIXACOMA_MapPanInteractionMode *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.put_PanInteractionMode() */
 HRESULT wuixacoma_map_control_2_put__pan_interaction_mode(WUIXACOMA_IMapControl_2 *self, WUIXACOMA_MapPanInteractionMode value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.get_RotateInteractionMode() */
 HRESULT wuixacoma_map_control_2_get__rotate_interaction_mode(WUIXACOMA_IMapControl_2 *self, WUIXACOMA_MapInteractionMode *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.put_RotateInteractionMode() */
 HRESULT wuixacoma_map_control_2_put__rotate_interaction_mode(WUIXACOMA_IMapControl_2 *self, WUIXACOMA_MapInteractionMode value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.get_TiltInteractionMode() */
 HRESULT wuixacoma_map_control_2_get__tilt_interaction_mode(WUIXACOMA_IMapControl_2 *self, WUIXACOMA_MapInteractionMode *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.put_TiltInteractionMode() */
 HRESULT wuixacoma_map_control_2_put__tilt_interaction_mode(WUIXACOMA_IMapControl_2 *self, WUIXACOMA_MapInteractionMode value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.get_ZoomInteractionMode() */
 HRESULT wuixacoma_map_control_2_get__zoom_interaction_mode(WUIXACOMA_IMapControl_2 *self, WUIXACOMA_MapInteractionMode *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.put_ZoomInteractionMode() */
 HRESULT wuixacoma_map_control_2_put__zoom_interaction_mode(WUIXACOMA_IMapControl_2 *self, WUIXACOMA_MapInteractionMode value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.get_Is3DSupported() */
 HRESULT wuixacoma_map_control_2_get__is3_d_supported(WUIXACOMA_IMapControl_2 *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.get_IsStreetsideSupported() */
 HRESULT wuixacoma_map_control_2_get__is_streetside_supported(WUIXACOMA_IMapControl_2 *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.get_Scene() */
 HRESULT wuixacoma_map_control_2_get__scene(WUIXACOMA_IMapControl_2 *self, WUIXACOMA_MapScene** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.put_Scene() */
 HRESULT wuixacoma_map_control_2_put__scene(WUIXACOMA_IMapControl_2 *self, WUIXACOMA_MapScene* value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.get_ActualCamera() */
 HRESULT wuixacoma_map_control_2_get__actual_camera(WUIXACOMA_IMapControl_2 *self, WUIXACOMA_MapCamera** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.get_TargetCamera() */
 HRESULT wuixacoma_map_control_2_get__target_camera(WUIXACOMA_IMapControl_2 *self, WUIXACOMA_MapCamera** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.get_CustomExperience() */
 HRESULT wuixacoma_map_control_2_get__custom_experience(WUIXACOMA_IMapControl_2 *self, WUIXACOMA_MapCustomExperience** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.put_CustomExperience() */
 HRESULT wuixacoma_map_control_2_put__custom_experience(WUIXACOMA_IMapControl_2 *self, WUIXACOMA_MapCustomExperience* value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.StartContinuousRotate(rateInDegreesPerSecond) */
 HRESULT wuixacoma_map_control_2_start_continuous_rotate(WUIXACOMA_IMapControl_2 *self, double rateInDegreesPerSecond);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.StopContinuousRotate() */
 HRESULT wuixacoma_map_control_2_stop_continuous_rotate(WUIXACOMA_IMapControl_2 *self);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.StartContinuousTilt(rateInDegreesPerSecond) */
 HRESULT wuixacoma_map_control_2_start_continuous_tilt(WUIXACOMA_IMapControl_2 *self, double rateInDegreesPerSecond);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.StopContinuousTilt() */
 HRESULT wuixacoma_map_control_2_stop_continuous_tilt(WUIXACOMA_IMapControl_2 *self);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.StartContinuousZoom(rateOfChangePerSecond) */
 HRESULT wuixacoma_map_control_2_start_continuous_zoom(WUIXACOMA_IMapControl_2 *self, double rateOfChangePerSecond);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.StopContinuousZoom() */
 HRESULT wuixacoma_map_control_2_stop_continuous_zoom(WUIXACOMA_IMapControl_2 *self);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.TryRotateAsync(degrees) */
 HRESULT wuixacoma_map_control_2_try_rotate_async(WUIXACOMA_IMapControl_2 *self, double degrees, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.TryRotateToAsync(angleInDegrees) */
 HRESULT wuixacoma_map_control_2_try_rotate_to_async(WUIXACOMA_IMapControl_2 *self, double angleInDegrees, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.TryTiltAsync(degrees) */
 HRESULT wuixacoma_map_control_2_try_tilt_async(WUIXACOMA_IMapControl_2 *self, double degrees, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.TryTiltToAsync(angleInDegrees) */
 HRESULT wuixacoma_map_control_2_try_tilt_to_async(WUIXACOMA_IMapControl_2 *self, double angleInDegrees, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.TryZoomInAsync() */
 HRESULT wuixacoma_map_control_2_try_zoom_in_async(WUIXACOMA_IMapControl_2 *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.TryZoomOutAsync() */
 HRESULT wuixacoma_map_control_2_try_zoom_out_async(WUIXACOMA_IMapControl_2 *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.TryZoomToAsync(zoomLevel) */
 HRESULT wuixacoma_map_control_2_try_zoom_to_async(WUIXACOMA_IMapControl_2 *self, double zoomLevel, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.TrySetSceneAsync(scene) */
 HRESULT wuixacoma_map_control_2_try_set_scene_async(WUIXACOMA_IMapControl_2 *self, WUIXACOMA_MapScene* scene, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl2.TrySetSceneAsync(scene, animationKind) */
 HRESULT wuixacoma_map_control_2_try_set_scene_async_p_map_animation_kind_p(WUIXACOMA_IMapControl_2 *self, WUIXACOMA_MapScene* scene, WUIXACOMA_MapAnimationKind animationKind, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl3 */
-/* Windows.UI.Xaml.Controls.Maps.IMapControl4 */
-/* Windows.UI.Xaml.Controls.Maps.IMapControl4.get_BusinessLandmarksEnabled() */
 HRESULT wuixacoma_map_control_4_get__business_landmarks_enabled(WUIXACOMA_IMapControl_4 *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl4.put_BusinessLandmarksEnabled() */
 HRESULT wuixacoma_map_control_4_put__business_landmarks_enabled(WUIXACOMA_IMapControl_4 *self, BOOL value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl4.get_TransitFeaturesEnabled() */
 HRESULT wuixacoma_map_control_4_get__transit_features_enabled(WUIXACOMA_IMapControl_4 *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl4.put_TransitFeaturesEnabled() */
 HRESULT wuixacoma_map_control_4_put__transit_features_enabled(WUIXACOMA_IMapControl_4 *self, BOOL value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl4.GetVisibleRegion(region) */
 HRESULT wuixacoma_map_control_4_get_visible_region(WUIXACOMA_IMapControl_4 *self, WUIXACOMA_MapVisibleRegionKind region, WDEGE_Geopath** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl5 */
-/* Windows.UI.Xaml.Controls.Maps.IMapControl5.get_MapProjection() */
 HRESULT wuixacoma_map_control_5_get__map_projection(WUIXACOMA_IMapControl_5 *self, WUIXACOMA_MapProjection *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl5.put_MapProjection() */
 HRESULT wuixacoma_map_control_5_put__map_projection(WUIXACOMA_IMapControl_5 *self, WUIXACOMA_MapProjection value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl5.get_StyleSheet() */
 HRESULT wuixacoma_map_control_5_get__style_sheet(WUIXACOMA_IMapControl_5 *self, WUIXACOMA_MapStyleSheet** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl5.put_StyleSheet() */
 HRESULT wuixacoma_map_control_5_put__style_sheet(WUIXACOMA_IMapControl_5 *self, WUIXACOMA_MapStyleSheet* value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl5.get_ViewPadding() */
 HRESULT wuixacoma_map_control_5_get__view_padding(WUIXACOMA_IMapControl_5 *self, WUIXA_Thickness *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl5.put_ViewPadding() */
 HRESULT wuixacoma_map_control_5_put__view_padding(WUIXACOMA_IMapControl_5 *self, WUIXA_Thickness value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl5.FindMapElementsAtOffset(offset, radius) */
 HRESULT wuixacoma_map_control_5_find_map_elements_at_offset(WUIXACOMA_IMapControl_5 *self, WF_Point offset, double radius, WFOCO_IVectorView_WUIXACOMA_MapElement** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl5.GetLocationFromOffset(offset, desiredReferenceSystem, location) */
 HRESULT wuixacoma_map_control_5_get_location_from_offset(WUIXACOMA_IMapControl_5 *self, WF_Point offset, WDEGE_AltitudeReferenceSystem desiredReferenceSystem, WDEGE_Geopoint* location);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl5.StartContinuousPan(horizontalPixelsPerSecond, verticalPixelsPerSecond) */
 HRESULT wuixacoma_map_control_5_start_continuous_pan(WUIXACOMA_IMapControl_5 *self, double horizontalPixelsPerSecond, double verticalPixelsPerSecond);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl5.StopContinuousPan() */
 HRESULT wuixacoma_map_control_5_stop_continuous_pan(WUIXACOMA_IMapControl_5 *self);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl5.TryPanAsync(horizontalPixels, verticalPixels) */
 HRESULT wuixacoma_map_control_5_try_pan_async(WUIXACOMA_IMapControl_5 *self, double horizontalPixels, double verticalPixels, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl5.TryPanToAsync(location) */
 HRESULT wuixacoma_map_control_5_try_pan_to_async(WUIXACOMA_IMapControl_5 *self, WDEGE_Geopoint* location, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl6 */
-/* Windows.UI.Xaml.Controls.Maps.IMapControl6.get_Layers() */
 HRESULT wuixacoma_map_control_6_get__layers(WUIXACOMA_IMapControl_6 *self, WFOCO_IVector_WUIXACOMA_MapLayer** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl6.put_Layers() */
 HRESULT wuixacoma_map_control_6_put__layers(WUIXACOMA_IMapControl_6 *self, WFOCO_IVector_WUIXACOMA_MapLayer* value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl6.TryGetLocationFromOffset(offset, location) */
 HRESULT wuixacoma_map_control_6_try_get_location_from_offset(WUIXACOMA_IMapControl_6 *self, WF_Point offset, WDEGE_Geopoint* location, BOOL *out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl6.TryGetLocationFromOffset(offset, desiredReferenceSystem, location) */
 HRESULT wuixacoma_map_control_6_try_get_location_from_offset_point_altitude_reference_system_p_b(WUIXACOMA_IMapControl_6 *self, WF_Point offset, WDEGE_AltitudeReferenceSystem desiredReferenceSystem, WDEGE_Geopoint* location, BOOL *out);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl7 */
-/* Windows.UI.Xaml.Controls.Maps.IMapControl7.get_Region() */
 HRESULT wuixacoma_map_control_7_get__region(WUIXACOMA_IMapControl_7 *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl7.put_Region() */
 HRESULT wuixacoma_map_control_7_put__region(WUIXACOMA_IMapControl_7 *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl8 */
-/* Windows.UI.Xaml.Controls.Maps.IMapControl8.get_CanTiltDown() */
 HRESULT wuixacoma_map_control_8_get__can_tilt_down(WUIXACOMA_IMapControl_8 *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl8.get_CanTiltUp() */
 HRESULT wuixacoma_map_control_8_get__can_tilt_up(WUIXACOMA_IMapControl_8 *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl8.get_CanZoomIn() */
 HRESULT wuixacoma_map_control_8_get__can_zoom_in(WUIXACOMA_IMapControl_8 *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControl8.get_CanZoomOut() */
 HRESULT wuixacoma_map_control_8_get__can_zoom_out(WUIXACOMA_IMapControl_8 *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapControlBusinessLandmarkClickEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.IMapControlBusinessLandmarkPointerEnteredEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.IMapControlBusinessLandmarkPointerExitedEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.IMapControlBusinessLandmarkRightTappedEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.IMapControlDataHelper */
-/* Windows.UI.Xaml.Controls.Maps.IMapControlDataHelper2 */
-/* Windows.UI.Xaml.Controls.Maps.IMapControlTransitFeatureClickEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.IMapControlTransitFeaturePointerEnteredEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.IMapControlTransitFeaturePointerExitedEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.IMapControlTransitFeatureRightTappedEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.IMapElement3D */
-/* Windows.UI.Xaml.Controls.Maps.IMapElementClickEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.IMapElementPointerEnteredEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.IMapElementPointerExitedEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.IMapLayer */
-/* Windows.UI.Xaml.Controls.Maps.IMapElementsLayer */
-/* Windows.UI.Xaml.Controls.Maps.IMapElementsLayerClickEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.IMapElementsLayerContextRequestedEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.IMapElementsLayerPointerEnteredEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.IMapElementsLayerPointerExitedEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.IMapIcon */
-/* Windows.UI.Xaml.Controls.Maps.IMapIcon2 */
-/* Windows.UI.Xaml.Controls.Maps.IMapIcon2.get_CollisionBehaviorDesired() */
 HRESULT wuixacoma_map_icon_2_get__collision_behavior_desired(WUIXACOMA_IMapIcon_2 *self, WUIXACOMA_MapElementCollisionBehavior *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapIcon2.put_CollisionBehaviorDesired() */
 HRESULT wuixacoma_map_icon_2_put__collision_behavior_desired(WUIXACOMA_IMapIcon_2 *self, WUIXACOMA_MapElementCollisionBehavior value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapInputEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.IMapItemsControl */
-/* Windows.UI.Xaml.Controls.Maps.IMapPolygon */
-/* Windows.UI.Xaml.Controls.Maps.IMapPolygon2 */
-/* Windows.UI.Xaml.Controls.Maps.IMapPolygon2.get_Paths() */
 HRESULT wuixacoma_map_polygon_2_get__paths(WUIXACOMA_IMapPolygon_2 *self, WFOCO_IVector_WDEGE_Geopath** value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapPolyline */
-/* Windows.UI.Xaml.Controls.Maps.IMapRightTappedEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.IMapRouteView */
-/* Windows.UI.Xaml.Controls.Maps.IMapScene */
-/* Windows.UI.Xaml.Controls.Maps.IMapTargetCameraChangedEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.IMapTargetCameraChangedEventArgs2 */
-/* Windows.UI.Xaml.Controls.Maps.IMapTargetCameraChangedEventArgs2.get_ChangeReason() */
 HRESULT wuixacoma_map_target_camera_changed_event_args_2_get__change_reason(WUIXACOMA_IMapTargetCameraChangedEventArgs_2 *self, WUIXACOMA_MapCameraChangeReason *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileBitmapRequest */
-/* Windows.UI.Xaml.Controls.Maps.IMapTileBitmapRequestDeferral */
-/* Windows.UI.Xaml.Controls.Maps.IMapTileBitmapRequestedEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.IMapTileBitmapRequestedEventArgs2 */
-/* Windows.UI.Xaml.Controls.Maps.IMapTileBitmapRequestedEventArgs2.get_FrameIndex() */
 HRESULT wuixacoma_map_tile_bitmap_requested_event_args_2_get__frame_index(WUIXACOMA_IMapTileBitmapRequestedEventArgs_2 *self, int32_t *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSource */
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSource2 */
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSource2.get_AnimationState() */
 HRESULT wuixacoma_map_tile_source_2_get__animation_state(WUIXACOMA_IMapTileSource_2 *self, WUIXACOMA_MapTileAnimationState *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSource2.get_AutoPlay() */
 HRESULT wuixacoma_map_tile_source_2_get__auto_play(WUIXACOMA_IMapTileSource_2 *self, BOOL *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSource2.put_AutoPlay() */
 HRESULT wuixacoma_map_tile_source_2_put__auto_play(WUIXACOMA_IMapTileSource_2 *self, BOOL value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSource2.get_FrameCount() */
 HRESULT wuixacoma_map_tile_source_2_get__frame_count(WUIXACOMA_IMapTileSource_2 *self, int32_t *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSource2.put_FrameCount() */
 HRESULT wuixacoma_map_tile_source_2_put__frame_count(WUIXACOMA_IMapTileSource_2 *self, int32_t value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSource2.get_FrameDuration() */
 HRESULT wuixacoma_map_tile_source_2_get__frame_duration(WUIXACOMA_IMapTileSource_2 *self, WF_TimeSpan *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSource2.put_FrameDuration() */
 HRESULT wuixacoma_map_tile_source_2_put__frame_duration(WUIXACOMA_IMapTileSource_2 *self, WF_TimeSpan value);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSource2.Pause() */
 HRESULT wuixacoma_map_tile_source_2_pause(WUIXACOMA_IMapTileSource_2 *self);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSource2.Play() */
 HRESULT wuixacoma_map_tile_source_2_play(WUIXACOMA_IMapTileSource_2 *self);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileSource2.Stop() */
 HRESULT wuixacoma_map_tile_source_2_stop(WUIXACOMA_IMapTileSource_2 *self);
 
-/* Windows.UI.Xaml.Controls.Maps.IMapTileUriRequest */
-/* Windows.UI.Xaml.Controls.Maps.IMapTileUriRequestDeferral */
-/* Windows.UI.Xaml.Controls.Maps.IMapTileUriRequestedEventArgs */
-/* Windows.UI.Xaml.Controls.Maps.IMapTileUriRequestedEventArgs2 */
-/* Windows.UI.Xaml.Controls.Maps.IMapTileUriRequestedEventArgs2.get_FrameIndex() */
 HRESULT wuixacoma_map_tile_uri_requested_event_args_2_get__frame_index(WUIXACOMA_IMapTileUriRequestedEventArgs_2 *self, int32_t *value);
 
-/* Windows.UI.Xaml.Controls.Maps.IStreetsideExperience */
-/* Windows.UI.Xaml.Controls.Maps.IStreetsidePanorama */
 #endif /* CWINRT_WINDOWS_UI_XAML_CONTROLS_MAPS_H */

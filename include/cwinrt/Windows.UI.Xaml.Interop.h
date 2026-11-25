@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WUIXAIN_BindableVectorChangedEventHandler WUIXAIN_BindableVectorChangedEventHandler;
 typedef struct WUIXAIN_IBindableIterator WUIXAIN_IBindableIterator;
 typedef struct WUIXAIN_IBindableObservableVector WUIXAIN_IBindableObservableVector;
@@ -57,7 +56,6 @@ struct WUIXAIN_TypeName {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -102,92 +100,54 @@ static const IID CWINRT_IID_WUIXAIN_INotifyCollectionChangedEventArgs CWINRT_MAY
 static const IID CWINRT_IID_WUIXAIN_IBindableIterable CWINRT_MAYBE_UNUSED = { 0x036D2C08, 0xDF29, 0x41AF, { 0x8A, 0xA2, 0xD7, 0x74, 0xBE, 0x62, 0xBA, 0x6F } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.Xaml.Interop.BindableVectorChangedEventHandler */
-/* Windows.UI.Xaml.Interop.BindableVectorChangedEventHandler.Invoke(vector, e) */
 HRESULT wuixain_bindable_vector_changed_event_handler_invoke(WUIXAIN_BindableVectorChangedEventHandler *self, WUIXAIN_IBindableObservableVector* vector, IInspectable* e);
 
-/* Windows.UI.Xaml.Interop.IBindableIterator */
-/* Windows.UI.Xaml.Interop.IBindableIterator.get_Current() */
 HRESULT wuixain_bindable_iterator_get__current(WUIXAIN_IBindableIterator *self, IInspectable** value);
 
-/* Windows.UI.Xaml.Interop.IBindableIterator.get_HasCurrent() */
 HRESULT wuixain_bindable_iterator_get__has_current(WUIXAIN_IBindableIterator *self, BOOL *value);
 
-/* Windows.UI.Xaml.Interop.IBindableIterator.MoveNext() */
 HRESULT wuixain_bindable_iterator_move_next(WUIXAIN_IBindableIterator *self, BOOL *out);
 
-/* Windows.UI.Xaml.Interop.IBindableObservableVector */
-/* Windows.UI.Xaml.Interop.IBindableVectorView */
-/* Windows.UI.Xaml.Interop.IBindableVectorView.GetAt(index) */
 HRESULT wuixain_bindable_vector_view_get_at(WUIXAIN_IBindableVectorView *self, uint32_t index, IInspectable** out);
 
-/* Windows.UI.Xaml.Interop.IBindableVectorView.get_Size() */
 HRESULT wuixain_bindable_vector_view_get__size(WUIXAIN_IBindableVectorView *self, uint32_t *value);
 
-/* Windows.UI.Xaml.Interop.IBindableVectorView.IndexOf(index) */
 HRESULT wuixain_bindable_vector_view_index_of(WUIXAIN_IBindableVectorView *self, IInspectable* value, uint32_t index, BOOL *out);
 
-/* Windows.UI.Xaml.Interop.INotifyCollectionChangedEventArgsFactory */
-/* Windows.UI.Xaml.Interop.INotifyCollectionChangedEventArgsFactory.CreateInstanceWithAllParameters(action, newItems, oldItems, newIndex, oldIndex, baseInterface, innerInterface) */
 HRESULT wuixain_notify_collection_changed_event_args_factory_create_instance_with_all_parameters(WUIXAIN_INotifyCollectionChangedEventArgsFactory *self, WUIXAIN_NotifyCollectionChangedAction action, WUIXAIN_IBindableVector* newItems, WUIXAIN_IBindableVector* oldItems, int32_t newIndex, int32_t oldIndex, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAIN_NotifyCollectionChangedEventArgs** out);
 
-/* Windows.UI.Xaml.Interop.NotifyCollectionChangedEventArgs */
-/* Windows.UI.Xaml.Interop.NotifyCollectionChangedEventArgs.get_Action() */
 HRESULT wuixain_notify_collection_changed_event_args_get__action(WUIXAIN_NotifyCollectionChangedEventArgs *self, WUIXAIN_NotifyCollectionChangedAction *value);
 
-/* Windows.UI.Xaml.Interop.NotifyCollectionChangedEventArgs.get_NewItems() */
 HRESULT wuixain_notify_collection_changed_event_args_get__new_items(WUIXAIN_NotifyCollectionChangedEventArgs *self, WUIXAIN_IBindableVector** value);
 
-/* Windows.UI.Xaml.Interop.NotifyCollectionChangedEventArgs.get_OldItems() */
 HRESULT wuixain_notify_collection_changed_event_args_get__old_items(WUIXAIN_NotifyCollectionChangedEventArgs *self, WUIXAIN_IBindableVector** value);
 
-/* Windows.UI.Xaml.Interop.NotifyCollectionChangedEventArgs.get_NewStartingIndex() */
 HRESULT wuixain_notify_collection_changed_event_args_get__new_starting_index(WUIXAIN_NotifyCollectionChangedEventArgs *self, int32_t *value);
 
-/* Windows.UI.Xaml.Interop.NotifyCollectionChangedEventArgs.get_OldStartingIndex() */
 HRESULT wuixain_notify_collection_changed_event_args_get__old_starting_index(WUIXAIN_NotifyCollectionChangedEventArgs *self, int32_t *value);
 
-/* Windows.UI.Xaml.Interop.NotifyCollectionChangedEventHandler */
-/* Windows.UI.Xaml.Interop.NotifyCollectionChangedEventHandler.Invoke(sender, e) */
 HRESULT wuixain_notify_collection_changed_event_handler_invoke(WUIXAIN_NotifyCollectionChangedEventHandler *self, IInspectable* sender, WUIXAIN_NotifyCollectionChangedEventArgs* e);
 
-/* Windows.UI.Xaml.Interop.INotifyCollectionChanged */
-/* Windows.UI.Xaml.Interop.IBindableVector */
-/* Windows.UI.Xaml.Interop.IBindableVector.GetAt(index) */
 HRESULT wuixain_bindable_vector_get_at(WUIXAIN_IBindableVector *self, uint32_t index, IInspectable** out);
 
-/* Windows.UI.Xaml.Interop.IBindableVector.get_Size() */
 HRESULT wuixain_bindable_vector_get__size(WUIXAIN_IBindableVector *self, uint32_t *value);
 
-/* Windows.UI.Xaml.Interop.IBindableVector.GetView() */
 HRESULT wuixain_bindable_vector_get_view(WUIXAIN_IBindableVector *self, WUIXAIN_IBindableVectorView** out);
 
-/* Windows.UI.Xaml.Interop.IBindableVector.IndexOf(index) */
 HRESULT wuixain_bindable_vector_index_of(WUIXAIN_IBindableVector *self, IInspectable* value, uint32_t index, BOOL *out);
 
-/* Windows.UI.Xaml.Interop.IBindableVector.SetAt(index) */
 HRESULT wuixain_bindable_vector_set_at(WUIXAIN_IBindableVector *self, uint32_t index, IInspectable* value);
 
-/* Windows.UI.Xaml.Interop.IBindableVector.InsertAt(index) */
 HRESULT wuixain_bindable_vector_insert_at(WUIXAIN_IBindableVector *self, uint32_t index, IInspectable* value);
 
-/* Windows.UI.Xaml.Interop.IBindableVector.RemoveAt(index) */
 HRESULT wuixain_bindable_vector_remove_at(WUIXAIN_IBindableVector *self, uint32_t index);
 
-/* Windows.UI.Xaml.Interop.IBindableVector.Append() */
 HRESULT wuixain_bindable_vector_append(WUIXAIN_IBindableVector *self, IInspectable* value);
 
-/* Windows.UI.Xaml.Interop.IBindableVector.RemoveAtEnd() */
 HRESULT wuixain_bindable_vector_remove_at_end(WUIXAIN_IBindableVector *self);
 
-/* Windows.UI.Xaml.Interop.IBindableVector.Clear() */
 HRESULT wuixain_bindable_vector_clear(WUIXAIN_IBindableVector *self);
 
-/* Windows.UI.Xaml.Interop.INotifyCollectionChangedEventArgs */
-/* Windows.UI.Xaml.Interop.IBindableIterable */
-/* Windows.UI.Xaml.Interop.IBindableIterable.First() */
 HRESULT wuixain_bindable_iterable_first(WUIXAIN_IBindableIterable *self, WUIXAIN_IBindableIterator** out);
 
 #endif /* CWINRT_WINDOWS_UI_XAML_INTEROP_H */

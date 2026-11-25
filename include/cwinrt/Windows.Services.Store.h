@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
@@ -86,7 +85,6 @@ typedef enum WWEHT_HttpStatusCode {
 } WWEHT_HttpStatusCode;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSEST_IStoreContextStatics WSEST_IStoreContextStatics;
 typedef struct WSEST_IStorePurchasePropertiesFactory WSEST_IStorePurchasePropertiesFactory;
 typedef struct WSEST_IStoreRequestHelperStatics WSEST_IStoreRequestHelperStatics;
@@ -161,7 +159,6 @@ typedef struct WSEST_IStoreSubscriptionInfo WSEST_IStoreSubscriptionInfo;
 typedef struct WSEST_IStoreUninstallStorePackageResult WSEST_IStoreUninstallStorePackageResult;
 typedef struct WSEST_IStoreVideo WSEST_IStoreVideo;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
@@ -520,7 +517,6 @@ struct WSEST_StorePackageUpdateStatus {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -693,556 +689,356 @@ static const IID CWINRT_IID_WSEST_IStoreUninstallStorePackageResult CWINRT_MAYBE
 static const IID CWINRT_IID_WSEST_IStoreVideo CWINRT_MAYBE_UNUSED = { 0xF26CB184, 0x6F5E, 0x4DC2, { 0x88, 0x6C, 0x3C, 0x63, 0x08, 0x3C, 0x2F, 0x94 } };
 #endif
 
-/* Methods */
-
-/* Windows.Services.Store.IStoreContextStatics */
-/* Windows.Services.Store.IStoreContextStatics.GetDefault() */
 HRESULT wsest_store_context_statics_get_default(WSEST_IStoreContextStatics *self, WSEST_StoreContext** out);
 
-/* Windows.Services.Store.IStoreContextStatics.GetForUser(user) */
 HRESULT wsest_store_context_statics_get_for_user(WSEST_IStoreContextStatics *self, WSY_User* user, WSEST_StoreContext** out);
 
-/* Windows.Services.Store.IStorePurchasePropertiesFactory */
-/* Windows.Services.Store.IStorePurchasePropertiesFactory.Create(name) */
 HRESULT wsest_store_purchase_properties_factory_create(WSEST_IStorePurchasePropertiesFactory *self, cwinrt_hstring name, WSEST_StorePurchaseProperties** out);
 
-/* Windows.Services.Store.IStoreRequestHelperStatics */
-/* Windows.Services.Store.IStoreRequestHelperStatics.SendRequestAsync(context, requestKind, parametersAsJson) */
 HRESULT wsest_store_request_helper_statics_send_request_async(WSEST_IStoreRequestHelperStatics *self, WSEST_StoreContext* context, uint32_t requestKind, cwinrt_hstring parametersAsJson, WF_IAsyncOperation_WSEST_StoreSendRequestResult** out);
 
-/* activate Windows.Services.Store.StoreAcquireLicenseResult */
 HRESULT wsest_store_acquire_license_result_new(WSEST_StoreAcquireLicenseResult **out);
 
-/* Windows.Services.Store.StoreAcquireLicenseResult */
-/* Windows.Services.Store.StoreAcquireLicenseResult.get_StorePackageLicense() */
 HRESULT wsest_store_acquire_license_result_get__store_package_license(WSEST_StoreAcquireLicenseResult *self, WSEST_StorePackageLicense** value);
 
-/* Windows.Services.Store.StoreAcquireLicenseResult.get_ExtendedError() */
 HRESULT wsest_store_acquire_license_result_get__extended_error(WSEST_StoreAcquireLicenseResult *self, HRESULT *value);
 
-/* activate Windows.Services.Store.StoreAppLicense */
 HRESULT wsest_store_app_license_new(WSEST_StoreAppLicense **out);
 
-/* Windows.Services.Store.StoreAppLicense */
-/* Windows.Services.Store.StoreAppLicense.get_SkuStoreId() */
 HRESULT wsest_store_app_license_get__sku_store_id(WSEST_StoreAppLicense *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StoreAppLicense.get_IsActive() */
 HRESULT wsest_store_app_license_get__is_active(WSEST_StoreAppLicense *self, BOOL *value);
 
-/* Windows.Services.Store.StoreAppLicense.get_IsTrial() */
 HRESULT wsest_store_app_license_get__is_trial(WSEST_StoreAppLicense *self, BOOL *value);
 
-/* Windows.Services.Store.StoreAppLicense.get_ExpirationDate() */
 HRESULT wsest_store_app_license_get__expiration_date(WSEST_StoreAppLicense *self, WF_DateTime *value);
 
-/* Windows.Services.Store.StoreAppLicense.get_ExtendedJsonData() */
 HRESULT wsest_store_app_license_get__extended_json_data(WSEST_StoreAppLicense *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StoreAppLicense.get_AddOnLicenses() */
 HRESULT wsest_store_app_license_get__add_on_licenses(WSEST_StoreAppLicense *self, WFOCO_IMapView_HSTRING_WSEST_StoreLicense** value);
 
-/* Windows.Services.Store.StoreAppLicense.get_TrialTimeRemaining() */
 HRESULT wsest_store_app_license_get__trial_time_remaining(WSEST_StoreAppLicense *self, WF_TimeSpan *value);
 
-/* Windows.Services.Store.StoreAppLicense.get_IsTrialOwnedByThisUser() */
 HRESULT wsest_store_app_license_get__is_trial_owned_by_this_user(WSEST_StoreAppLicense *self, BOOL *value);
 
-/* Windows.Services.Store.StoreAppLicense.get_TrialUniqueId() */
 HRESULT wsest_store_app_license_get__trial_unique_id(WSEST_StoreAppLicense *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StoreAppLicense.get_IsDiscLicense() */
 HRESULT wsest_store_app_license_get__is_disc_license(WSEST_StoreAppLicense *self, BOOL *value);
 
-/* activate Windows.Services.Store.StoreAvailability */
 HRESULT wsest_store_availability_new(WSEST_StoreAvailability **out);
 
-/* Windows.Services.Store.StoreAvailability */
-/* Windows.Services.Store.StoreAvailability.get_StoreId() */
 HRESULT wsest_store_availability_get__store_id(WSEST_StoreAvailability *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StoreAvailability.get_EndDate() */
 HRESULT wsest_store_availability_get__end_date(WSEST_StoreAvailability *self, WF_DateTime *value);
 
-/* Windows.Services.Store.StoreAvailability.get_Price() */
 HRESULT wsest_store_availability_get__price(WSEST_StoreAvailability *self, WSEST_StorePrice** value);
 
-/* Windows.Services.Store.StoreAvailability.get_ExtendedJsonData() */
 HRESULT wsest_store_availability_get__extended_json_data(WSEST_StoreAvailability *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StoreAvailability.RequestPurchaseAsync() */
 HRESULT wsest_store_availability_request_purchase_async(WSEST_StoreAvailability *self, WF_IAsyncOperation_WSEST_StorePurchaseResult** out);
 
-/* Windows.Services.Store.StoreAvailability.RequestPurchaseAsync(storePurchaseProperties) */
 HRESULT wsest_store_availability_request_purchase_async_p_p(WSEST_StoreAvailability *self, WSEST_StorePurchaseProperties* storePurchaseProperties, WF_IAsyncOperation_WSEST_StorePurchaseResult** out);
 
-/* activate Windows.Services.Store.StoreCanAcquireLicenseResult */
 HRESULT wsest_store_can_acquire_license_result_new(WSEST_StoreCanAcquireLicenseResult **out);
 
-/* Windows.Services.Store.StoreCanAcquireLicenseResult */
-/* Windows.Services.Store.StoreCanAcquireLicenseResult.get_ExtendedError() */
 HRESULT wsest_store_can_acquire_license_result_get__extended_error(WSEST_StoreCanAcquireLicenseResult *self, HRESULT *value);
 
-/* Windows.Services.Store.StoreCanAcquireLicenseResult.get_LicensableSku() */
 HRESULT wsest_store_can_acquire_license_result_get__licensable_sku(WSEST_StoreCanAcquireLicenseResult *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StoreCanAcquireLicenseResult.get_Status() */
 HRESULT wsest_store_can_acquire_license_result_get__status(WSEST_StoreCanAcquireLicenseResult *self, WSEST_StoreCanLicenseStatus *value);
 
-/* activate Windows.Services.Store.StoreCollectionData */
 HRESULT wsest_store_collection_data_new(WSEST_StoreCollectionData **out);
 
-/* Windows.Services.Store.StoreCollectionData */
-/* Windows.Services.Store.StoreCollectionData.get_IsTrial() */
 HRESULT wsest_store_collection_data_get__is_trial(WSEST_StoreCollectionData *self, BOOL *value);
 
-/* Windows.Services.Store.StoreCollectionData.get_CampaignId() */
 HRESULT wsest_store_collection_data_get__campaign_id(WSEST_StoreCollectionData *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StoreCollectionData.get_DeveloperOfferId() */
 HRESULT wsest_store_collection_data_get__developer_offer_id(WSEST_StoreCollectionData *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StoreCollectionData.get_AcquiredDate() */
 HRESULT wsest_store_collection_data_get__acquired_date(WSEST_StoreCollectionData *self, WF_DateTime *value);
 
-/* Windows.Services.Store.StoreCollectionData.get_StartDate() */
 HRESULT wsest_store_collection_data_get__start_date(WSEST_StoreCollectionData *self, WF_DateTime *value);
 
-/* Windows.Services.Store.StoreCollectionData.get_EndDate() */
 HRESULT wsest_store_collection_data_get__end_date(WSEST_StoreCollectionData *self, WF_DateTime *value);
 
-/* Windows.Services.Store.StoreCollectionData.get_TrialTimeRemaining() */
 HRESULT wsest_store_collection_data_get__trial_time_remaining(WSEST_StoreCollectionData *self, WF_TimeSpan *value);
 
-/* Windows.Services.Store.StoreCollectionData.get_ExtendedJsonData() */
 HRESULT wsest_store_collection_data_get__extended_json_data(WSEST_StoreCollectionData *self, cwinrt_hstring *value);
 
-/* activate Windows.Services.Store.StoreConsumableResult */
 HRESULT wsest_store_consumable_result_new(WSEST_StoreConsumableResult **out);
 
-/* Windows.Services.Store.StoreConsumableResult */
-/* Windows.Services.Store.StoreConsumableResult.get_Status() */
 HRESULT wsest_store_consumable_result_get__status(WSEST_StoreConsumableResult *self, WSEST_StoreConsumableStatus *value);
 
-/* Windows.Services.Store.StoreConsumableResult.get_TrackingId() */
 HRESULT wsest_store_consumable_result_get__tracking_id(WSEST_StoreConsumableResult *self, GUID *value);
 
-/* Windows.Services.Store.StoreConsumableResult.get_BalanceRemaining() */
 HRESULT wsest_store_consumable_result_get__balance_remaining(WSEST_StoreConsumableResult *self, uint32_t *value);
 
-/* Windows.Services.Store.StoreConsumableResult.get_ExtendedError() */
 HRESULT wsest_store_consumable_result_get__extended_error(WSEST_StoreConsumableResult *self, HRESULT *value);
 
-/* activate Windows.Services.Store.StoreContext */
 HRESULT wsest_store_context_new(WSEST_StoreContext **out);
 
-/* Windows.Services.Store.StoreContext */
-/* Windows.Services.Store.StoreContext.get_User() */
 HRESULT wsest_store_context_get__user(WSEST_StoreContext *self, WSY_User** value);
 
-/* Windows.Services.Store.StoreContext.GetCustomerPurchaseIdAsync(serviceTicket, publisherUserId) */
 HRESULT wsest_store_context_get_customer_purchase_id_async(WSEST_StoreContext *self, cwinrt_hstring serviceTicket, cwinrt_hstring publisherUserId, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Services.Store.StoreContext.GetCustomerCollectionsIdAsync(serviceTicket, publisherUserId) */
 HRESULT wsest_store_context_get_customer_collections_id_async(WSEST_StoreContext *self, cwinrt_hstring serviceTicket, cwinrt_hstring publisherUserId, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Services.Store.StoreContext.GetAppLicenseAsync() */
 HRESULT wsest_store_context_get_app_license_async(WSEST_StoreContext *self, WF_IAsyncOperation_WSEST_StoreAppLicense** out);
 
-/* Windows.Services.Store.StoreContext.GetStoreProductForCurrentAppAsync() */
 HRESULT wsest_store_context_get_store_product_for_current_app_async(WSEST_StoreContext *self, WF_IAsyncOperation_WSEST_StoreProductResult** out);
 
-/* Windows.Services.Store.StoreContext.GetStoreProductsAsync(productKinds, storeIds) */
 HRESULT wsest_store_context_get_store_products_async(WSEST_StoreContext *self, WFOCO_IIterable_HSTRING* productKinds, WFOCO_IIterable_HSTRING* storeIds, WF_IAsyncOperation_WSEST_StoreProductQueryResult** out);
 
-/* Windows.Services.Store.StoreContext.GetAssociatedStoreProductsAsync(productKinds) */
 HRESULT wsest_store_context_get_associated_store_products_async(WSEST_StoreContext *self, WFOCO_IIterable_HSTRING* productKinds, WF_IAsyncOperation_WSEST_StoreProductQueryResult** out);
 
-/* Windows.Services.Store.StoreContext.GetAssociatedStoreProductsWithPagingAsync(productKinds, maxItemsToRetrievePerPage) */
 HRESULT wsest_store_context_get_associated_store_products_with_paging_async(WSEST_StoreContext *self, WFOCO_IIterable_HSTRING* productKinds, uint32_t maxItemsToRetrievePerPage, WF_IAsyncOperation_WSEST_StoreProductPagedQueryResult** out);
 
-/* Windows.Services.Store.StoreContext.GetUserCollectionAsync(productKinds) */
 HRESULT wsest_store_context_get_user_collection_async(WSEST_StoreContext *self, WFOCO_IIterable_HSTRING* productKinds, WF_IAsyncOperation_WSEST_StoreProductQueryResult** out);
 
-/* Windows.Services.Store.StoreContext.GetUserCollectionWithPagingAsync(productKinds, maxItemsToRetrievePerPage) */
 HRESULT wsest_store_context_get_user_collection_with_paging_async(WSEST_StoreContext *self, WFOCO_IIterable_HSTRING* productKinds, uint32_t maxItemsToRetrievePerPage, WF_IAsyncOperation_WSEST_StoreProductPagedQueryResult** out);
 
-/* Windows.Services.Store.StoreContext.ReportConsumableFulfillmentAsync(productStoreId, quantity, trackingId) */
 HRESULT wsest_store_context_report_consumable_fulfillment_async(WSEST_StoreContext *self, cwinrt_hstring productStoreId, uint32_t quantity, GUID trackingId, WF_IAsyncOperation_WSEST_StoreConsumableResult** out);
 
-/* Windows.Services.Store.StoreContext.GetConsumableBalanceRemainingAsync(productStoreId) */
 HRESULT wsest_store_context_get_consumable_balance_remaining_async(WSEST_StoreContext *self, cwinrt_hstring productStoreId, WF_IAsyncOperation_WSEST_StoreConsumableResult** out);
 
-/* Windows.Services.Store.StoreContext.AcquireStoreLicenseForOptionalPackageAsync(optionalPackage) */
 HRESULT wsest_store_context_acquire_store_license_for_optional_package_async(WSEST_StoreContext *self, WAM_Package* optionalPackage, WF_IAsyncOperation_WSEST_StoreAcquireLicenseResult** out);
 
-/* Windows.Services.Store.StoreContext.RequestPurchaseAsync(storeId) */
 HRESULT wsest_store_context_request_purchase_async(WSEST_StoreContext *self, cwinrt_hstring storeId, WF_IAsyncOperation_WSEST_StorePurchaseResult** out);
 
-/* Windows.Services.Store.StoreContext.RequestPurchaseAsync(storeId, storePurchaseProperties) */
 HRESULT wsest_store_context_request_purchase_async_str_p_p(WSEST_StoreContext *self, cwinrt_hstring storeId, WSEST_StorePurchaseProperties* storePurchaseProperties, WF_IAsyncOperation_WSEST_StorePurchaseResult** out);
 
-/* Windows.Services.Store.StoreContext.GetAppAndOptionalStorePackageUpdatesAsync() */
 HRESULT wsest_store_context_get_app_and_optional_store_package_updates_async(WSEST_StoreContext *self, WF_IAsyncOperation_WFOCO_IVectorView_WSEST_StorePackageUpdate** out);
 
-/* Windows.Services.Store.StoreContext.RequestDownloadStorePackageUpdatesAsync(storePackageUpdates) */
 HRESULT wsest_store_context_request_download_store_package_updates_async(WSEST_StoreContext *self, WFOCO_IIterable_WSEST_StorePackageUpdate* storePackageUpdates, WF_IAsyncOperationWithProgress_WSEST_StorePackageUpdateResult_WSEST_StorePackageUpdateStatus** out);
 
-/* Windows.Services.Store.StoreContext.RequestDownloadAndInstallStorePackageUpdatesAsync(storePackageUpdates) */
 HRESULT wsest_store_context_request_download_and_install_store_package_updates_async(WSEST_StoreContext *self, WFOCO_IIterable_WSEST_StorePackageUpdate* storePackageUpdates, WF_IAsyncOperationWithProgress_WSEST_StorePackageUpdateResult_WSEST_StorePackageUpdateStatus** out);
 
-/* Windows.Services.Store.StoreContext.RequestDownloadAndInstallStorePackagesAsync(storeIds) */
 HRESULT wsest_store_context_request_download_and_install_store_packages_async(WSEST_StoreContext *self, WFOCO_IIterable_HSTRING* storeIds, WF_IAsyncOperationWithProgress_WSEST_StorePackageUpdateResult_WSEST_StorePackageUpdateStatus** out);
 
-/* Windows.Services.Store.StoreContext.FindStoreProductForPackageAsync(productKinds, package) */
 HRESULT wsest_store_context_find_store_product_for_package_async(WSEST_StoreContext *self, WFOCO_IIterable_HSTRING* productKinds, WAM_Package* package, WF_IAsyncOperation_WSEST_StoreProductResult** out);
 
-/* Windows.Services.Store.StoreContext.get_CanSilentlyDownloadStorePackageUpdates() */
 HRESULT wsest_store_context_get__can_silently_download_store_package_updates(WSEST_StoreContext *self, BOOL *value);
 
-/* Windows.Services.Store.StoreContext.TrySilentDownloadStorePackageUpdatesAsync(storePackageUpdates) */
 HRESULT wsest_store_context_try_silent_download_store_package_updates_async(WSEST_StoreContext *self, WFOCO_IIterable_WSEST_StorePackageUpdate* storePackageUpdates, WF_IAsyncOperationWithProgress_WSEST_StorePackageUpdateResult_WSEST_StorePackageUpdateStatus** out);
 
-/* Windows.Services.Store.StoreContext.TrySilentDownloadAndInstallStorePackageUpdatesAsync(storePackageUpdates) */
 HRESULT wsest_store_context_try_silent_download_and_install_store_package_updates_async(WSEST_StoreContext *self, WFOCO_IIterable_WSEST_StorePackageUpdate* storePackageUpdates, WF_IAsyncOperationWithProgress_WSEST_StorePackageUpdateResult_WSEST_StorePackageUpdateStatus** out);
 
-/* Windows.Services.Store.StoreContext.CanAcquireStoreLicenseForOptionalPackageAsync(optionalPackage) */
 HRESULT wsest_store_context_can_acquire_store_license_for_optional_package_async(WSEST_StoreContext *self, WAM_Package* optionalPackage, WF_IAsyncOperation_WSEST_StoreCanAcquireLicenseResult** out);
 
-/* Windows.Services.Store.StoreContext.CanAcquireStoreLicenseAsync(productStoreId) */
 HRESULT wsest_store_context_can_acquire_store_license_async(WSEST_StoreContext *self, cwinrt_hstring productStoreId, WF_IAsyncOperation_WSEST_StoreCanAcquireLicenseResult** out);
 
-/* Windows.Services.Store.StoreContext.GetStoreProductsAsync(productKinds, storeIds, storeProductOptions) */
 HRESULT wsest_store_context_get_store_products_async_p_p_p_p(WSEST_StoreContext *self, WFOCO_IIterable_HSTRING* productKinds, WFOCO_IIterable_HSTRING* storeIds, WSEST_StoreProductOptions* storeProductOptions, WF_IAsyncOperation_WSEST_StoreProductQueryResult** out);
 
-/* Windows.Services.Store.StoreContext.GetAssociatedStoreQueueItemsAsync() */
 HRESULT wsest_store_context_get_associated_store_queue_items_async(WSEST_StoreContext *self, WF_IAsyncOperation_WFOCO_IVectorView_WSEST_StoreQueueItem** out);
 
-/* Windows.Services.Store.StoreContext.GetStoreQueueItemsAsync(storeIds) */
 HRESULT wsest_store_context_get_store_queue_items_async(WSEST_StoreContext *self, WFOCO_IIterable_HSTRING* storeIds, WF_IAsyncOperation_WFOCO_IVectorView_WSEST_StoreQueueItem** out);
 
-/* Windows.Services.Store.StoreContext.RequestDownloadAndInstallStorePackagesAsync(storeIds, storePackageInstallOptions) */
 HRESULT wsest_store_context_request_download_and_install_store_packages_async_p_p_p(WSEST_StoreContext *self, WFOCO_IIterable_HSTRING* storeIds, WSEST_StorePackageInstallOptions* storePackageInstallOptions, WF_IAsyncOperationWithProgress_WSEST_StorePackageUpdateResult_WSEST_StorePackageUpdateStatus** out);
 
-/* Windows.Services.Store.StoreContext.DownloadAndInstallStorePackagesAsync(storeIds) */
 HRESULT wsest_store_context_download_and_install_store_packages_async(WSEST_StoreContext *self, WFOCO_IIterable_HSTRING* storeIds, WF_IAsyncOperationWithProgress_WSEST_StorePackageUpdateResult_WSEST_StorePackageUpdateStatus** out);
 
-/* Windows.Services.Store.StoreContext.RequestUninstallStorePackageAsync(package) */
 HRESULT wsest_store_context_request_uninstall_store_package_async(WSEST_StoreContext *self, WAM_Package* package, WF_IAsyncOperation_WSEST_StoreUninstallStorePackageResult** out);
 
-/* Windows.Services.Store.StoreContext.RequestUninstallStorePackageByStoreIdAsync(storeId) */
 HRESULT wsest_store_context_request_uninstall_store_package_by_store_id_async(WSEST_StoreContext *self, cwinrt_hstring storeId, WF_IAsyncOperation_WSEST_StoreUninstallStorePackageResult** out);
 
-/* Windows.Services.Store.StoreContext.UninstallStorePackageAsync(package) */
 HRESULT wsest_store_context_uninstall_store_package_async(WSEST_StoreContext *self, WAM_Package* package, WF_IAsyncOperation_WSEST_StoreUninstallStorePackageResult** out);
 
-/* Windows.Services.Store.StoreContext.UninstallStorePackageByStoreIdAsync(storeId) */
 HRESULT wsest_store_context_uninstall_store_package_by_store_id_async(WSEST_StoreContext *self, cwinrt_hstring storeId, WF_IAsyncOperation_WSEST_StoreUninstallStorePackageResult** out);
 
-/* Windows.Services.Store.StoreContext.RequestRateAndReviewAppAsync() */
 HRESULT wsest_store_context_request_rate_and_review_app_async(WSEST_StoreContext *self, WF_IAsyncOperation_WSEST_StoreRateAndReviewResult** out);
 
-/* Windows.Services.Store.StoreContext.SetInstallOrderForAssociatedStoreQueueItemsAsync(items) */
 HRESULT wsest_store_context_set_install_order_for_associated_store_queue_items_async(WSEST_StoreContext *self, WFOCO_IIterable_WSEST_StoreQueueItem* items, WF_IAsyncOperation_WFOCO_IVectorView_WSEST_StoreQueueItem** out);
 
-/* Windows.Services.Store.StoreContext.GetUserPurchaseHistoryAsync(productKinds) */
 HRESULT wsest_store_context_get_user_purchase_history_async(WSEST_StoreContext *self, WFOCO_IIterable_HSTRING* productKinds, WF_IAsyncOperation_WSEST_StoreProductQueryResult** out);
 
-/* Windows.Services.Store.StoreContext.GetAssociatedStoreProductsByInAppOfferTokenAsync(inAppOfferTokens) */
 HRESULT wsest_store_context_get_associated_store_products_by_in_app_offer_token_async(WSEST_StoreContext *self, WFOCO_IIterable_HSTRING* inAppOfferTokens, WF_IAsyncOperation_WSEST_StoreProductQueryResult** out);
 
-/* Windows.Services.Store.StoreContext.RequestPurchaseByInAppOfferTokenAsync(inAppOfferToken) */
 HRESULT wsest_store_context_request_purchase_by_in_app_offer_token_async(WSEST_StoreContext *self, cwinrt_hstring inAppOfferToken, WF_IAsyncOperation_WSEST_StorePurchaseResult** out);
 
-/* Windows.Services.Store.StoreContext.GetDefault() */
 HRESULT wsest_store_context_get_default(WSEST_StoreContext** out);
 
-/* Windows.Services.Store.StoreContext.GetForUser(user) */
 HRESULT wsest_store_context_get_for_user(WSY_User* user, WSEST_StoreContext** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsest_store_context_on_offline_licenses_changed(WSEST_StoreContext *self, cwinrt_event_fn fn, void *ctx);
 void wsest_store_context_off_offline_licenses_changed(WSEST_StoreContext *self, cwinrt_token token);
 
-/* activate Windows.Services.Store.StoreImage */
 HRESULT wsest_store_image_new(WSEST_StoreImage **out);
 
-/* Windows.Services.Store.StoreImage */
-/* Windows.Services.Store.StoreImage.get_Uri() */
 HRESULT wsest_store_image_get__uri(WSEST_StoreImage *self, WF_Uri** value);
 
-/* Windows.Services.Store.StoreImage.get_ImagePurposeTag() */
 HRESULT wsest_store_image_get__image_purpose_tag(WSEST_StoreImage *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StoreImage.get_Width() */
 HRESULT wsest_store_image_get__width(WSEST_StoreImage *self, uint32_t *value);
 
-/* Windows.Services.Store.StoreImage.get_Height() */
 HRESULT wsest_store_image_get__height(WSEST_StoreImage *self, uint32_t *value);
 
-/* Windows.Services.Store.StoreImage.get_Caption() */
 HRESULT wsest_store_image_get__caption(WSEST_StoreImage *self, cwinrt_hstring *value);
 
-/* activate Windows.Services.Store.StoreLicense */
 HRESULT wsest_store_license_new(WSEST_StoreLicense **out);
 
-/* Windows.Services.Store.StoreLicense */
-/* Windows.Services.Store.StoreLicense.get_SkuStoreId() */
 HRESULT wsest_store_license_get__sku_store_id(WSEST_StoreLicense *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StoreLicense.get_IsActive() */
 HRESULT wsest_store_license_get__is_active(WSEST_StoreLicense *self, BOOL *value);
 
-/* Windows.Services.Store.StoreLicense.get_ExpirationDate() */
 HRESULT wsest_store_license_get__expiration_date(WSEST_StoreLicense *self, WF_DateTime *value);
 
-/* Windows.Services.Store.StoreLicense.get_ExtendedJsonData() */
 HRESULT wsest_store_license_get__extended_json_data(WSEST_StoreLicense *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StoreLicense.get_InAppOfferToken() */
 HRESULT wsest_store_license_get__in_app_offer_token(WSEST_StoreLicense *self, cwinrt_hstring *value);
 
-/* activate Windows.Services.Store.StorePackageInstallOptions */
 HRESULT wsest_store_package_install_options_new(WSEST_StorePackageInstallOptions **out);
 
-/* Windows.Services.Store.StorePackageInstallOptions */
-/* Windows.Services.Store.StorePackageInstallOptions.get_AllowForcedAppRestart() */
 HRESULT wsest_store_package_install_options_get__allow_forced_app_restart(WSEST_StorePackageInstallOptions *self, BOOL *value);
 
-/* Windows.Services.Store.StorePackageInstallOptions.put_AllowForcedAppRestart() */
 HRESULT wsest_store_package_install_options_put__allow_forced_app_restart(WSEST_StorePackageInstallOptions *self, BOOL value);
 
-/* activate Windows.Services.Store.StorePackageLicense */
 HRESULT wsest_store_package_license_new(WSEST_StorePackageLicense **out);
 
-/* Windows.Services.Store.StorePackageLicense */
-/* Windows.Services.Store.StorePackageLicense.get_Package() */
 HRESULT wsest_store_package_license_get__package(WSEST_StorePackageLicense *self, WAM_Package** value);
 
-/* Windows.Services.Store.StorePackageLicense.get_IsValid() */
 HRESULT wsest_store_package_license_get__is_valid(WSEST_StorePackageLicense *self, BOOL *value);
 
-/* Windows.Services.Store.StorePackageLicense.ReleaseLicense() */
 HRESULT wsest_store_package_license_release_license(WSEST_StorePackageLicense *self);
 
-/* Windows.Services.Store.StorePackageLicense.Close() */
 HRESULT wsest_store_package_license_close(WSEST_StorePackageLicense *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsest_store_package_license_on_license_lost(WSEST_StorePackageLicense *self, cwinrt_event_fn fn, void *ctx);
 void wsest_store_package_license_off_license_lost(WSEST_StorePackageLicense *self, cwinrt_token token);
 
-/* activate Windows.Services.Store.StorePackageUpdate */
 HRESULT wsest_store_package_update_new(WSEST_StorePackageUpdate **out);
 
-/* Windows.Services.Store.StorePackageUpdate */
-/* Windows.Services.Store.StorePackageUpdate.get_Package() */
 HRESULT wsest_store_package_update_get__package(WSEST_StorePackageUpdate *self, WAM_Package** value);
 
-/* Windows.Services.Store.StorePackageUpdate.get_Mandatory() */
 HRESULT wsest_store_package_update_get__mandatory(WSEST_StorePackageUpdate *self, BOOL *value);
 
-/* activate Windows.Services.Store.StorePackageUpdateResult */
 HRESULT wsest_store_package_update_result_new(WSEST_StorePackageUpdateResult **out);
 
-/* Windows.Services.Store.StorePackageUpdateResult */
-/* Windows.Services.Store.StorePackageUpdateResult.get_OverallState() */
 HRESULT wsest_store_package_update_result_get__overall_state(WSEST_StorePackageUpdateResult *self, WSEST_StorePackageUpdateState *value);
 
-/* Windows.Services.Store.StorePackageUpdateResult.get_StorePackageUpdateStatuses() */
 HRESULT wsest_store_package_update_result_get__store_package_update_statuses(WSEST_StorePackageUpdateResult *self, WFOCO_IVectorView_WSEST_StorePackageUpdateStatus** value);
 
-/* Windows.Services.Store.StorePackageUpdateResult.get_StoreQueueItems() */
 HRESULT wsest_store_package_update_result_get__store_queue_items(WSEST_StorePackageUpdateResult *self, WFOCO_IVectorView_WSEST_StoreQueueItem** value);
 
-/* activate Windows.Services.Store.StorePrice */
 HRESULT wsest_store_price_new(WSEST_StorePrice **out);
 
-/* Windows.Services.Store.StorePrice */
-/* Windows.Services.Store.StorePrice.get_FormattedBasePrice() */
 HRESULT wsest_store_price_get__formatted_base_price(WSEST_StorePrice *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StorePrice.get_FormattedPrice() */
 HRESULT wsest_store_price_get__formatted_price(WSEST_StorePrice *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StorePrice.get_IsOnSale() */
 HRESULT wsest_store_price_get__is_on_sale(WSEST_StorePrice *self, BOOL *value);
 
-/* Windows.Services.Store.StorePrice.get_SaleEndDate() */
 HRESULT wsest_store_price_get__sale_end_date(WSEST_StorePrice *self, WF_DateTime *value);
 
-/* Windows.Services.Store.StorePrice.get_CurrencyCode() */
 HRESULT wsest_store_price_get__currency_code(WSEST_StorePrice *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StorePrice.get_FormattedRecurrencePrice() */
 HRESULT wsest_store_price_get__formatted_recurrence_price(WSEST_StorePrice *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StorePrice.get_UnformattedBasePrice() */
 HRESULT wsest_store_price_get__unformatted_base_price(WSEST_StorePrice *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StorePrice.get_UnformattedPrice() */
 HRESULT wsest_store_price_get__unformatted_price(WSEST_StorePrice *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StorePrice.get_UnformattedRecurrencePrice() */
 HRESULT wsest_store_price_get__unformatted_recurrence_price(WSEST_StorePrice *self, cwinrt_hstring *value);
 
-/* activate Windows.Services.Store.StoreProduct */
 HRESULT wsest_store_product_new(WSEST_StoreProduct **out);
 
-/* Windows.Services.Store.StoreProduct */
-/* Windows.Services.Store.StoreProduct.get_StoreId() */
 HRESULT wsest_store_product_get__store_id(WSEST_StoreProduct *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StoreProduct.get_Language() */
 HRESULT wsest_store_product_get__language(WSEST_StoreProduct *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StoreProduct.get_Title() */
 HRESULT wsest_store_product_get__title(WSEST_StoreProduct *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StoreProduct.get_Description() */
 HRESULT wsest_store_product_get__description(WSEST_StoreProduct *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StoreProduct.get_ProductKind() */
 HRESULT wsest_store_product_get__product_kind(WSEST_StoreProduct *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StoreProduct.get_HasDigitalDownload() */
 HRESULT wsest_store_product_get__has_digital_download(WSEST_StoreProduct *self, BOOL *value);
 
-/* Windows.Services.Store.StoreProduct.get_Keywords() */
 HRESULT wsest_store_product_get__keywords(WSEST_StoreProduct *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Services.Store.StoreProduct.get_Images() */
 HRESULT wsest_store_product_get__images(WSEST_StoreProduct *self, WFOCO_IVectorView_WSEST_StoreImage** value);
 
-/* Windows.Services.Store.StoreProduct.get_Videos() */
 HRESULT wsest_store_product_get__videos(WSEST_StoreProduct *self, WFOCO_IVectorView_WSEST_StoreVideo** value);
 
-/* Windows.Services.Store.StoreProduct.get_Skus() */
 HRESULT wsest_store_product_get__skus(WSEST_StoreProduct *self, WFOCO_IVectorView_WSEST_StoreSku** value);
 
-/* Windows.Services.Store.StoreProduct.get_IsInUserCollection() */
 HRESULT wsest_store_product_get__is_in_user_collection(WSEST_StoreProduct *self, BOOL *value);
 
-/* Windows.Services.Store.StoreProduct.get_Price() */
 HRESULT wsest_store_product_get__price(WSEST_StoreProduct *self, WSEST_StorePrice** value);
 
-/* Windows.Services.Store.StoreProduct.get_ExtendedJsonData() */
 HRESULT wsest_store_product_get__extended_json_data(WSEST_StoreProduct *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StoreProduct.get_LinkUri() */
 HRESULT wsest_store_product_get__link_uri(WSEST_StoreProduct *self, WF_Uri** value);
 
-/* Windows.Services.Store.StoreProduct.GetIsAnySkuInstalledAsync() */
 HRESULT wsest_store_product_get_is_any_sku_installed_async(WSEST_StoreProduct *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Services.Store.StoreProduct.RequestPurchaseAsync() */
 HRESULT wsest_store_product_request_purchase_async(WSEST_StoreProduct *self, WF_IAsyncOperation_WSEST_StorePurchaseResult** out);
 
-/* Windows.Services.Store.StoreProduct.RequestPurchaseAsync(storePurchaseProperties) */
 HRESULT wsest_store_product_request_purchase_async_p_p(WSEST_StoreProduct *self, WSEST_StorePurchaseProperties* storePurchaseProperties, WF_IAsyncOperation_WSEST_StorePurchaseResult** out);
 
-/* Windows.Services.Store.StoreProduct.get_InAppOfferToken() */
 HRESULT wsest_store_product_get__in_app_offer_token(WSEST_StoreProduct *self, cwinrt_hstring *value);
 
-/* activate Windows.Services.Store.StoreProductOptions */
 HRESULT wsest_store_product_options_new(WSEST_StoreProductOptions **out);
 
-/* Windows.Services.Store.StoreProductOptions */
-/* Windows.Services.Store.StoreProductOptions.get_ActionFilters() */
 HRESULT wsest_store_product_options_get__action_filters(WSEST_StoreProductOptions *self, WFOCO_IVector_HSTRING** value);
 
-/* activate Windows.Services.Store.StoreProductPagedQueryResult */
 HRESULT wsest_store_product_paged_query_result_new(WSEST_StoreProductPagedQueryResult **out);
 
-/* Windows.Services.Store.StoreProductPagedQueryResult */
-/* Windows.Services.Store.StoreProductPagedQueryResult.get_Products() */
 HRESULT wsest_store_product_paged_query_result_get__products(WSEST_StoreProductPagedQueryResult *self, WFOCO_IMapView_HSTRING_WSEST_StoreProduct** value);
 
-/* Windows.Services.Store.StoreProductPagedQueryResult.get_HasMoreResults() */
 HRESULT wsest_store_product_paged_query_result_get__has_more_results(WSEST_StoreProductPagedQueryResult *self, BOOL *value);
 
-/* Windows.Services.Store.StoreProductPagedQueryResult.get_ExtendedError() */
 HRESULT wsest_store_product_paged_query_result_get__extended_error(WSEST_StoreProductPagedQueryResult *self, HRESULT *value);
 
-/* Windows.Services.Store.StoreProductPagedQueryResult.GetNextAsync() */
 HRESULT wsest_store_product_paged_query_result_get_next_async(WSEST_StoreProductPagedQueryResult *self, WF_IAsyncOperation_WSEST_StoreProductPagedQueryResult** out);
 
-/* activate Windows.Services.Store.StoreProductQueryResult */
 HRESULT wsest_store_product_query_result_new(WSEST_StoreProductQueryResult **out);
 
-/* Windows.Services.Store.StoreProductQueryResult */
-/* Windows.Services.Store.StoreProductQueryResult.get_Products() */
 HRESULT wsest_store_product_query_result_get__products(WSEST_StoreProductQueryResult *self, WFOCO_IMapView_HSTRING_WSEST_StoreProduct** value);
 
-/* Windows.Services.Store.StoreProductQueryResult.get_ExtendedError() */
 HRESULT wsest_store_product_query_result_get__extended_error(WSEST_StoreProductQueryResult *self, HRESULT *value);
 
-/* activate Windows.Services.Store.StoreProductResult */
 HRESULT wsest_store_product_result_new(WSEST_StoreProductResult **out);
 
-/* Windows.Services.Store.StoreProductResult */
-/* Windows.Services.Store.StoreProductResult.get_Product() */
 HRESULT wsest_store_product_result_get__product(WSEST_StoreProductResult *self, WSEST_StoreProduct** value);
 
-/* Windows.Services.Store.StoreProductResult.get_ExtendedError() */
 HRESULT wsest_store_product_result_get__extended_error(WSEST_StoreProductResult *self, HRESULT *value);
 
-/* activate Windows.Services.Store.StorePurchaseProperties */
 HRESULT wsest_store_purchase_properties_new(WSEST_StorePurchaseProperties **out);
 
-/* Windows.Services.Store.StorePurchaseProperties */
-/* Windows.Services.Store.StorePurchaseProperties.get_Name() */
 HRESULT wsest_store_purchase_properties_get__name(WSEST_StorePurchaseProperties *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StorePurchaseProperties.put_Name() */
 HRESULT wsest_store_purchase_properties_put__name(WSEST_StorePurchaseProperties *self, cwinrt_hstring value);
 
-/* Windows.Services.Store.StorePurchaseProperties.get_ExtendedJsonData() */
 HRESULT wsest_store_purchase_properties_get__extended_json_data(WSEST_StorePurchaseProperties *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StorePurchaseProperties.put_ExtendedJsonData() */
 HRESULT wsest_store_purchase_properties_put__extended_json_data(WSEST_StorePurchaseProperties *self, cwinrt_hstring value);
 
-/* activate Windows.Services.Store.StorePurchaseResult */
 HRESULT wsest_store_purchase_result_new(WSEST_StorePurchaseResult **out);
 
-/* Windows.Services.Store.StorePurchaseResult */
-/* Windows.Services.Store.StorePurchaseResult.get_Status() */
 HRESULT wsest_store_purchase_result_get__status(WSEST_StorePurchaseResult *self, WSEST_StorePurchaseStatus *value);
 
-/* Windows.Services.Store.StorePurchaseResult.get_ExtendedError() */
 HRESULT wsest_store_purchase_result_get__extended_error(WSEST_StorePurchaseResult *self, HRESULT *value);
 
-/* activate Windows.Services.Store.StoreQueueItem */
 HRESULT wsest_store_queue_item_new(WSEST_StoreQueueItem **out);
 
-/* Windows.Services.Store.StoreQueueItem */
-/* Windows.Services.Store.StoreQueueItem.get_ProductId() */
 HRESULT wsest_store_queue_item_get__product_id(WSEST_StoreQueueItem *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StoreQueueItem.get_PackageFamilyName() */
 HRESULT wsest_store_queue_item_get__package_family_name(WSEST_StoreQueueItem *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StoreQueueItem.get_InstallKind() */
 HRESULT wsest_store_queue_item_get__install_kind(WSEST_StoreQueueItem *self, WSEST_StoreQueueItemKind *value);
 
-/* Windows.Services.Store.StoreQueueItem.GetCurrentStatus() */
 HRESULT wsest_store_queue_item_get_current_status(WSEST_StoreQueueItem *self, WSEST_StoreQueueItemStatus** out);
 
-/* Windows.Services.Store.StoreQueueItem.CancelInstallAsync() */
 HRESULT wsest_store_queue_item_cancel_install_async(WSEST_StoreQueueItem *self, WF_IAsyncAction** out);
 
-/* Windows.Services.Store.StoreQueueItem.PauseInstallAsync() */
 HRESULT wsest_store_queue_item_pause_install_async(WSEST_StoreQueueItem *self, WF_IAsyncAction** out);
 
-/* Windows.Services.Store.StoreQueueItem.ResumeInstallAsync() */
 HRESULT wsest_store_queue_item_resume_install_async(WSEST_StoreQueueItem *self, WF_IAsyncAction** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsest_store_queue_item_on_completed(WSEST_StoreQueueItem *self, cwinrt_event_fn fn, void *ctx);
@@ -1251,301 +1047,170 @@ void wsest_store_queue_item_off_completed(WSEST_StoreQueueItem *self, cwinrt_tok
 cwinrt_token wsest_store_queue_item_on_status_changed(WSEST_StoreQueueItem *self, cwinrt_event_fn fn, void *ctx);
 void wsest_store_queue_item_off_status_changed(WSEST_StoreQueueItem *self, cwinrt_token token);
 
-/* activate Windows.Services.Store.StoreQueueItemCompletedEventArgs */
 HRESULT wsest_store_queue_item_completed_event_args_new(WSEST_StoreQueueItemCompletedEventArgs **out);
 
-/* Windows.Services.Store.StoreQueueItemCompletedEventArgs */
-/* Windows.Services.Store.StoreQueueItemCompletedEventArgs.get_Status() */
 HRESULT wsest_store_queue_item_completed_event_args_get__status(WSEST_StoreQueueItemCompletedEventArgs *self, WSEST_StoreQueueItemStatus** value);
 
-/* activate Windows.Services.Store.StoreQueueItemStatus */
 HRESULT wsest_store_queue_item_status_new(WSEST_StoreQueueItemStatus **out);
 
-/* Windows.Services.Store.StoreQueueItemStatus */
-/* Windows.Services.Store.StoreQueueItemStatus.get_PackageInstallState() */
 HRESULT wsest_store_queue_item_status_get__package_install_state(WSEST_StoreQueueItemStatus *self, WSEST_StoreQueueItemState *value);
 
-/* Windows.Services.Store.StoreQueueItemStatus.get_PackageInstallExtendedState() */
 HRESULT wsest_store_queue_item_status_get__package_install_extended_state(WSEST_StoreQueueItemStatus *self, WSEST_StoreQueueItemExtendedState *value);
 
-/* Windows.Services.Store.StoreQueueItemStatus.get_UpdateStatus() */
 HRESULT wsest_store_queue_item_status_get__update_status(WSEST_StoreQueueItemStatus *self, WSEST_StorePackageUpdateStatus *value);
 
-/* Windows.Services.Store.StoreQueueItemStatus.get_ExtendedError() */
 HRESULT wsest_store_queue_item_status_get__extended_error(WSEST_StoreQueueItemStatus *self, HRESULT *value);
 
-/* activate Windows.Services.Store.StoreRateAndReviewResult */
 HRESULT wsest_store_rate_and_review_result_new(WSEST_StoreRateAndReviewResult **out);
 
-/* Windows.Services.Store.StoreRateAndReviewResult */
-/* Windows.Services.Store.StoreRateAndReviewResult.get_ExtendedError() */
 HRESULT wsest_store_rate_and_review_result_get__extended_error(WSEST_StoreRateAndReviewResult *self, HRESULT *value);
 
-/* Windows.Services.Store.StoreRateAndReviewResult.get_ExtendedJsonData() */
 HRESULT wsest_store_rate_and_review_result_get__extended_json_data(WSEST_StoreRateAndReviewResult *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StoreRateAndReviewResult.get_WasUpdated() */
 HRESULT wsest_store_rate_and_review_result_get__was_updated(WSEST_StoreRateAndReviewResult *self, BOOL *value);
 
-/* Windows.Services.Store.StoreRateAndReviewResult.get_Status() */
 HRESULT wsest_store_rate_and_review_result_get__status(WSEST_StoreRateAndReviewResult *self, WSEST_StoreRateAndReviewStatus *value);
 
-/* activate Windows.Services.Store.StoreRequestHelper */
 HRESULT wsest_store_request_helper_new(WSEST_StoreRequestHelper **out);
 
-/* Windows.Services.Store.StoreRequestHelper */
-/* Windows.Services.Store.StoreRequestHelper.SendRequestAsync(context, requestKind, parametersAsJson) */
 HRESULT wsest_store_request_helper_send_request_async(WSEST_StoreContext* context, uint32_t requestKind, cwinrt_hstring parametersAsJson, WF_IAsyncOperation_WSEST_StoreSendRequestResult** out);
 
-/* activate Windows.Services.Store.StoreSendRequestResult */
 HRESULT wsest_store_send_request_result_new(WSEST_StoreSendRequestResult **out);
 
-/* Windows.Services.Store.StoreSendRequestResult */
-/* Windows.Services.Store.StoreSendRequestResult.get_Response() */
 HRESULT wsest_store_send_request_result_get__response(WSEST_StoreSendRequestResult *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StoreSendRequestResult.get_ExtendedError() */
 HRESULT wsest_store_send_request_result_get__extended_error(WSEST_StoreSendRequestResult *self, HRESULT *value);
 
-/* Windows.Services.Store.StoreSendRequestResult.get_HttpStatusCode() */
 HRESULT wsest_store_send_request_result_get__http_status_code(WSEST_StoreSendRequestResult *self, WWEHT_HttpStatusCode *value);
 
-/* activate Windows.Services.Store.StoreSku */
 HRESULT wsest_store_sku_new(WSEST_StoreSku **out);
 
-/* Windows.Services.Store.StoreSku */
-/* Windows.Services.Store.StoreSku.get_StoreId() */
 HRESULT wsest_store_sku_get__store_id(WSEST_StoreSku *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StoreSku.get_Language() */
 HRESULT wsest_store_sku_get__language(WSEST_StoreSku *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StoreSku.get_Title() */
 HRESULT wsest_store_sku_get__title(WSEST_StoreSku *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StoreSku.get_Description() */
 HRESULT wsest_store_sku_get__description(WSEST_StoreSku *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StoreSku.get_IsTrial() */
 HRESULT wsest_store_sku_get__is_trial(WSEST_StoreSku *self, BOOL *value);
 
-/* Windows.Services.Store.StoreSku.get_CustomDeveloperData() */
 HRESULT wsest_store_sku_get__custom_developer_data(WSEST_StoreSku *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StoreSku.get_Images() */
 HRESULT wsest_store_sku_get__images(WSEST_StoreSku *self, WFOCO_IVectorView_WSEST_StoreImage** value);
 
-/* Windows.Services.Store.StoreSku.get_Videos() */
 HRESULT wsest_store_sku_get__videos(WSEST_StoreSku *self, WFOCO_IVectorView_WSEST_StoreVideo** value);
 
-/* Windows.Services.Store.StoreSku.get_Availabilities() */
 HRESULT wsest_store_sku_get__availabilities(WSEST_StoreSku *self, WFOCO_IVectorView_WSEST_StoreAvailability** value);
 
-/* Windows.Services.Store.StoreSku.get_Price() */
 HRESULT wsest_store_sku_get__price(WSEST_StoreSku *self, WSEST_StorePrice** value);
 
-/* Windows.Services.Store.StoreSku.get_ExtendedJsonData() */
 HRESULT wsest_store_sku_get__extended_json_data(WSEST_StoreSku *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StoreSku.get_IsInUserCollection() */
 HRESULT wsest_store_sku_get__is_in_user_collection(WSEST_StoreSku *self, BOOL *value);
 
-/* Windows.Services.Store.StoreSku.get_BundledSkus() */
 HRESULT wsest_store_sku_get__bundled_skus(WSEST_StoreSku *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Services.Store.StoreSku.get_CollectionData() */
 HRESULT wsest_store_sku_get__collection_data(WSEST_StoreSku *self, WSEST_StoreCollectionData** value);
 
-/* Windows.Services.Store.StoreSku.GetIsInstalledAsync() */
 HRESULT wsest_store_sku_get_is_installed_async(WSEST_StoreSku *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Services.Store.StoreSku.RequestPurchaseAsync() */
 HRESULT wsest_store_sku_request_purchase_async(WSEST_StoreSku *self, WF_IAsyncOperation_WSEST_StorePurchaseResult** out);
 
-/* Windows.Services.Store.StoreSku.RequestPurchaseAsync(storePurchaseProperties) */
 HRESULT wsest_store_sku_request_purchase_async_p_p(WSEST_StoreSku *self, WSEST_StorePurchaseProperties* storePurchaseProperties, WF_IAsyncOperation_WSEST_StorePurchaseResult** out);
 
-/* Windows.Services.Store.StoreSku.get_IsSubscription() */
 HRESULT wsest_store_sku_get__is_subscription(WSEST_StoreSku *self, BOOL *value);
 
-/* Windows.Services.Store.StoreSku.get_SubscriptionInfo() */
 HRESULT wsest_store_sku_get__subscription_info(WSEST_StoreSku *self, WSEST_StoreSubscriptionInfo** value);
 
-/* activate Windows.Services.Store.StoreSubscriptionInfo */
 HRESULT wsest_store_subscription_info_new(WSEST_StoreSubscriptionInfo **out);
 
-/* Windows.Services.Store.StoreSubscriptionInfo */
-/* Windows.Services.Store.StoreSubscriptionInfo.get_BillingPeriod() */
 HRESULT wsest_store_subscription_info_get__billing_period(WSEST_StoreSubscriptionInfo *self, uint32_t *value);
 
-/* Windows.Services.Store.StoreSubscriptionInfo.get_BillingPeriodUnit() */
 HRESULT wsest_store_subscription_info_get__billing_period_unit(WSEST_StoreSubscriptionInfo *self, WSEST_StoreDurationUnit *value);
 
-/* Windows.Services.Store.StoreSubscriptionInfo.get_HasTrialPeriod() */
 HRESULT wsest_store_subscription_info_get__has_trial_period(WSEST_StoreSubscriptionInfo *self, BOOL *value);
 
-/* Windows.Services.Store.StoreSubscriptionInfo.get_TrialPeriod() */
 HRESULT wsest_store_subscription_info_get__trial_period(WSEST_StoreSubscriptionInfo *self, uint32_t *value);
 
-/* Windows.Services.Store.StoreSubscriptionInfo.get_TrialPeriodUnit() */
 HRESULT wsest_store_subscription_info_get__trial_period_unit(WSEST_StoreSubscriptionInfo *self, WSEST_StoreDurationUnit *value);
 
-/* activate Windows.Services.Store.StoreUninstallStorePackageResult */
 HRESULT wsest_store_uninstall_store_package_result_new(WSEST_StoreUninstallStorePackageResult **out);
 
-/* Windows.Services.Store.StoreUninstallStorePackageResult */
-/* Windows.Services.Store.StoreUninstallStorePackageResult.get_ExtendedError() */
 HRESULT wsest_store_uninstall_store_package_result_get__extended_error(WSEST_StoreUninstallStorePackageResult *self, HRESULT *value);
 
-/* Windows.Services.Store.StoreUninstallStorePackageResult.get_Status() */
 HRESULT wsest_store_uninstall_store_package_result_get__status(WSEST_StoreUninstallStorePackageResult *self, WSEST_StoreUninstallStorePackageStatus *value);
 
-/* activate Windows.Services.Store.StoreVideo */
 HRESULT wsest_store_video_new(WSEST_StoreVideo **out);
 
-/* Windows.Services.Store.StoreVideo */
-/* Windows.Services.Store.StoreVideo.get_Uri() */
 HRESULT wsest_store_video_get__uri(WSEST_StoreVideo *self, WF_Uri** value);
 
-/* Windows.Services.Store.StoreVideo.get_VideoPurposeTag() */
 HRESULT wsest_store_video_get__video_purpose_tag(WSEST_StoreVideo *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StoreVideo.get_Width() */
 HRESULT wsest_store_video_get__width(WSEST_StoreVideo *self, uint32_t *value);
 
-/* Windows.Services.Store.StoreVideo.get_Height() */
 HRESULT wsest_store_video_get__height(WSEST_StoreVideo *self, uint32_t *value);
 
-/* Windows.Services.Store.StoreVideo.get_Caption() */
 HRESULT wsest_store_video_get__caption(WSEST_StoreVideo *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.StoreVideo.get_PreviewImage() */
 HRESULT wsest_store_video_get__preview_image(WSEST_StoreVideo *self, WSEST_StoreImage** value);
 
-/* Windows.Services.Store.IStoreAcquireLicenseResult */
-/* Windows.Services.Store.IStoreAppLicense */
-/* Windows.Services.Store.IStoreAppLicense2 */
-/* Windows.Services.Store.IStoreAppLicense2.get_IsDiscLicense() */
 HRESULT wsest_store_app_license_2_get__is_disc_license(WSEST_IStoreAppLicense_2 *self, BOOL *value);
 
-/* Windows.Services.Store.IStoreAvailability */
-/* Windows.Services.Store.IStoreCanAcquireLicenseResult */
-/* Windows.Services.Store.IStoreCollectionData */
-/* Windows.Services.Store.IStoreConsumableResult */
-/* Windows.Services.Store.IStoreContext */
-/* Windows.Services.Store.IStoreContext2 */
-/* Windows.Services.Store.IStoreContext2.FindStoreProductForPackageAsync(productKinds, package) */
 HRESULT wsest_store_context_2_find_store_product_for_package_async(WSEST_IStoreContext_2 *self, WFOCO_IIterable_HSTRING* productKinds, WAM_Package* package, WF_IAsyncOperation_WSEST_StoreProductResult** out);
 
-/* Windows.Services.Store.IStoreContext3 */
-/* Windows.Services.Store.IStoreContext3.get_CanSilentlyDownloadStorePackageUpdates() */
 HRESULT wsest_store_context_3_get__can_silently_download_store_package_updates(WSEST_IStoreContext_3 *self, BOOL *value);
 
-/* Windows.Services.Store.IStoreContext3.TrySilentDownloadStorePackageUpdatesAsync(storePackageUpdates) */
 HRESULT wsest_store_context_3_try_silent_download_store_package_updates_async(WSEST_IStoreContext_3 *self, WFOCO_IIterable_WSEST_StorePackageUpdate* storePackageUpdates, WF_IAsyncOperationWithProgress_WSEST_StorePackageUpdateResult_WSEST_StorePackageUpdateStatus** out);
 
-/* Windows.Services.Store.IStoreContext3.TrySilentDownloadAndInstallStorePackageUpdatesAsync(storePackageUpdates) */
 HRESULT wsest_store_context_3_try_silent_download_and_install_store_package_updates_async(WSEST_IStoreContext_3 *self, WFOCO_IIterable_WSEST_StorePackageUpdate* storePackageUpdates, WF_IAsyncOperationWithProgress_WSEST_StorePackageUpdateResult_WSEST_StorePackageUpdateStatus** out);
 
-/* Windows.Services.Store.IStoreContext3.CanAcquireStoreLicenseForOptionalPackageAsync(optionalPackage) */
 HRESULT wsest_store_context_3_can_acquire_store_license_for_optional_package_async(WSEST_IStoreContext_3 *self, WAM_Package* optionalPackage, WF_IAsyncOperation_WSEST_StoreCanAcquireLicenseResult** out);
 
-/* Windows.Services.Store.IStoreContext3.CanAcquireStoreLicenseAsync(productStoreId) */
 HRESULT wsest_store_context_3_can_acquire_store_license_async(WSEST_IStoreContext_3 *self, cwinrt_hstring productStoreId, WF_IAsyncOperation_WSEST_StoreCanAcquireLicenseResult** out);
 
-/* Windows.Services.Store.IStoreContext3.GetStoreProductsAsync(productKinds, storeIds, storeProductOptions) */
 HRESULT wsest_store_context_3_get_store_products_async(WSEST_IStoreContext_3 *self, WFOCO_IIterable_HSTRING* productKinds, WFOCO_IIterable_HSTRING* storeIds, WSEST_StoreProductOptions* storeProductOptions, WF_IAsyncOperation_WSEST_StoreProductQueryResult** out);
 
-/* Windows.Services.Store.IStoreContext3.GetAssociatedStoreQueueItemsAsync() */
 HRESULT wsest_store_context_3_get_associated_store_queue_items_async(WSEST_IStoreContext_3 *self, WF_IAsyncOperation_WFOCO_IVectorView_WSEST_StoreQueueItem** out);
 
-/* Windows.Services.Store.IStoreContext3.GetStoreQueueItemsAsync(storeIds) */
 HRESULT wsest_store_context_3_get_store_queue_items_async(WSEST_IStoreContext_3 *self, WFOCO_IIterable_HSTRING* storeIds, WF_IAsyncOperation_WFOCO_IVectorView_WSEST_StoreQueueItem** out);
 
-/* Windows.Services.Store.IStoreContext3.RequestDownloadAndInstallStorePackagesAsync(storeIds, storePackageInstallOptions) */
 HRESULT wsest_store_context_3_request_download_and_install_store_packages_async(WSEST_IStoreContext_3 *self, WFOCO_IIterable_HSTRING* storeIds, WSEST_StorePackageInstallOptions* storePackageInstallOptions, WF_IAsyncOperationWithProgress_WSEST_StorePackageUpdateResult_WSEST_StorePackageUpdateStatus** out);
 
-/* Windows.Services.Store.IStoreContext3.DownloadAndInstallStorePackagesAsync(storeIds) */
 HRESULT wsest_store_context_3_download_and_install_store_packages_async(WSEST_IStoreContext_3 *self, WFOCO_IIterable_HSTRING* storeIds, WF_IAsyncOperationWithProgress_WSEST_StorePackageUpdateResult_WSEST_StorePackageUpdateStatus** out);
 
-/* Windows.Services.Store.IStoreContext3.RequestUninstallStorePackageAsync(package) */
 HRESULT wsest_store_context_3_request_uninstall_store_package_async(WSEST_IStoreContext_3 *self, WAM_Package* package, WF_IAsyncOperation_WSEST_StoreUninstallStorePackageResult** out);
 
-/* Windows.Services.Store.IStoreContext3.RequestUninstallStorePackageByStoreIdAsync(storeId) */
 HRESULT wsest_store_context_3_request_uninstall_store_package_by_store_id_async(WSEST_IStoreContext_3 *self, cwinrt_hstring storeId, WF_IAsyncOperation_WSEST_StoreUninstallStorePackageResult** out);
 
-/* Windows.Services.Store.IStoreContext3.UninstallStorePackageAsync(package) */
 HRESULT wsest_store_context_3_uninstall_store_package_async(WSEST_IStoreContext_3 *self, WAM_Package* package, WF_IAsyncOperation_WSEST_StoreUninstallStorePackageResult** out);
 
-/* Windows.Services.Store.IStoreContext3.UninstallStorePackageByStoreIdAsync(storeId) */
 HRESULT wsest_store_context_3_uninstall_store_package_by_store_id_async(WSEST_IStoreContext_3 *self, cwinrt_hstring storeId, WF_IAsyncOperation_WSEST_StoreUninstallStorePackageResult** out);
 
-/* Windows.Services.Store.IStoreContext4 */
-/* Windows.Services.Store.IStoreContext4.RequestRateAndReviewAppAsync() */
 HRESULT wsest_store_context_4_request_rate_and_review_app_async(WSEST_IStoreContext_4 *self, WF_IAsyncOperation_WSEST_StoreRateAndReviewResult** out);
 
-/* Windows.Services.Store.IStoreContext4.SetInstallOrderForAssociatedStoreQueueItemsAsync(items) */
 HRESULT wsest_store_context_4_set_install_order_for_associated_store_queue_items_async(WSEST_IStoreContext_4 *self, WFOCO_IIterable_WSEST_StoreQueueItem* items, WF_IAsyncOperation_WFOCO_IVectorView_WSEST_StoreQueueItem** out);
 
-/* Windows.Services.Store.IStoreContext5 */
-/* Windows.Services.Store.IStoreContext5.GetUserPurchaseHistoryAsync(productKinds) */
 HRESULT wsest_store_context_5_get_user_purchase_history_async(WSEST_IStoreContext_5 *self, WFOCO_IIterable_HSTRING* productKinds, WF_IAsyncOperation_WSEST_StoreProductQueryResult** out);
 
-/* Windows.Services.Store.IStoreContext5.GetAssociatedStoreProductsByInAppOfferTokenAsync(inAppOfferTokens) */
 HRESULT wsest_store_context_5_get_associated_store_products_by_in_app_offer_token_async(WSEST_IStoreContext_5 *self, WFOCO_IIterable_HSTRING* inAppOfferTokens, WF_IAsyncOperation_WSEST_StoreProductQueryResult** out);
 
-/* Windows.Services.Store.IStoreContext5.RequestPurchaseByInAppOfferTokenAsync(inAppOfferToken) */
 HRESULT wsest_store_context_5_request_purchase_by_in_app_offer_token_async(WSEST_IStoreContext_5 *self, cwinrt_hstring inAppOfferToken, WF_IAsyncOperation_WSEST_StorePurchaseResult** out);
 
-/* Windows.Services.Store.IStoreImage */
-/* Windows.Services.Store.IStoreLicense */
-/* Windows.Services.Store.IStorePackageInstallOptions */
-/* Windows.Services.Store.IStorePackageLicense */
-/* Windows.Services.Store.IStorePackageUpdate */
-/* Windows.Services.Store.IStorePackageUpdateResult */
-/* Windows.Services.Store.IStorePackageUpdateResult2 */
-/* Windows.Services.Store.IStorePackageUpdateResult2.get_StoreQueueItems() */
 HRESULT wsest_store_package_update_result_2_get__store_queue_items(WSEST_IStorePackageUpdateResult_2 *self, WFOCO_IVectorView_WSEST_StoreQueueItem** value);
 
-/* Windows.Services.Store.IStorePrice */
-/* Windows.Services.Store.IStorePrice2 */
-/* Windows.Services.Store.IStorePrice2.get_UnformattedBasePrice() */
 HRESULT wsest_store_price_2_get__unformatted_base_price(WSEST_IStorePrice_2 *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.IStorePrice2.get_UnformattedPrice() */
 HRESULT wsest_store_price_2_get__unformatted_price(WSEST_IStorePrice_2 *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.IStorePrice2.get_UnformattedRecurrencePrice() */
 HRESULT wsest_store_price_2_get__unformatted_recurrence_price(WSEST_IStorePrice_2 *self, cwinrt_hstring *value);
 
-/* Windows.Services.Store.IStoreProduct */
-/* Windows.Services.Store.IStoreProductOptions */
-/* Windows.Services.Store.IStoreProductPagedQueryResult */
-/* Windows.Services.Store.IStoreProductQueryResult */
-/* Windows.Services.Store.IStoreProductResult */
-/* Windows.Services.Store.IStorePurchaseProperties */
-/* Windows.Services.Store.IStorePurchaseResult */
-/* Windows.Services.Store.IStoreQueueItem */
-/* Windows.Services.Store.IStoreQueueItem2 */
-/* Windows.Services.Store.IStoreQueueItem2.CancelInstallAsync() */
 HRESULT wsest_store_queue_item_2_cancel_install_async(WSEST_IStoreQueueItem_2 *self, WF_IAsyncAction** out);
 
-/* Windows.Services.Store.IStoreQueueItem2.PauseInstallAsync() */
 HRESULT wsest_store_queue_item_2_pause_install_async(WSEST_IStoreQueueItem_2 *self, WF_IAsyncAction** out);
 
-/* Windows.Services.Store.IStoreQueueItem2.ResumeInstallAsync() */
 HRESULT wsest_store_queue_item_2_resume_install_async(WSEST_IStoreQueueItem_2 *self, WF_IAsyncAction** out);
 
-/* Windows.Services.Store.IStoreQueueItemCompletedEventArgs */
-/* Windows.Services.Store.IStoreQueueItemStatus */
-/* Windows.Services.Store.IStoreRateAndReviewResult */
-/* Windows.Services.Store.IStoreSendRequestResult */
-/* Windows.Services.Store.IStoreSendRequestResult2 */
-/* Windows.Services.Store.IStoreSendRequestResult2.get_HttpStatusCode() */
 HRESULT wsest_store_send_request_result_2_get__http_status_code(WSEST_IStoreSendRequestResult_2 *self, WWEHT_HttpStatusCode *value);
 
-/* Windows.Services.Store.IStoreSku */
-/* Windows.Services.Store.IStoreSubscriptionInfo */
-/* Windows.Services.Store.IStoreUninstallStorePackageResult */
-/* Windows.Services.Store.IStoreVideo */
 #endif /* CWINRT_WINDOWS_SERVICES_STORE_H */

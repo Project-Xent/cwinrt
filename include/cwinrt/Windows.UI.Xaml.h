@@ -20,7 +20,6 @@
 #include <cwinrt/Windows.Graphics.Imaging.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WAPCO_IFrameworkViewSource
 #define CWINRT_FWD_WAPCO_IFrameworkViewSource
 typedef struct WAPCO_IFrameworkViewSource WAPCO_IFrameworkViewSource;
@@ -319,7 +318,6 @@ typedef struct WUICO_WindowSizeChangedEventArgs WUICO_WindowSizeChangedEventArgs
 typedef struct WUICO_VisibilityChangedEventArgs WUICO_VisibilityChangedEventArgs;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUIXA_DependencyObject WUIXA_DependencyObject;
 typedef struct WUIXA_StateTriggerBase WUIXA_StateTriggerBase;
 typedef struct WUIXA_AdaptiveTrigger WUIXA_AdaptiveTrigger;
@@ -589,7 +587,6 @@ typedef struct WUIXA_IBringIntoViewOptions WUIXA_IBringIntoViewOptions;
 typedef struct WUIXA_IBringIntoViewOptions_2 WUIXA_IBringIntoViewOptions_2;
 typedef struct WUIXA_IBindingFailedEventArgs WUIXA_IBindingFailedEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WUICO_CoreDispatcher
 #define CWINRT_FWD_WUICO_CoreDispatcher
 typedef struct WUICO_CoreDispatcher WUICO_CoreDispatcher;
@@ -1548,7 +1545,6 @@ struct WUIXA_CornerRadius {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -2325,136 +2321,88 @@ static const IID CWINRT_IID_WUIXA_IBringIntoViewOptions_2 CWINRT_MAYBE_UNUSED = 
 static const IID CWINRT_IID_WUIXA_IBindingFailedEventArgs CWINRT_MAYBE_UNUSED = { 0x32C1D013, 0x4DBD, 0x446D, { 0xBB, 0xB8, 0x0D, 0xE3, 0x50, 0x48, 0xA4, 0x49 } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.Xaml.DependencyObject */
-/* Windows.UI.Xaml.DependencyObject.GetValue(dp) */
 HRESULT wuixa_dependency_object_get_value(WUIXA_DependencyObject *self, WUIXA_DependencyProperty* dp, IInspectable** out);
 
-/* Windows.UI.Xaml.DependencyObject.SetValue(dp) */
 HRESULT wuixa_dependency_object_set_value(WUIXA_DependencyObject *self, WUIXA_DependencyProperty* dp, IInspectable* value);
 
-/* Windows.UI.Xaml.DependencyObject.ClearValue(dp) */
 HRESULT wuixa_dependency_object_clear_value(WUIXA_DependencyObject *self, WUIXA_DependencyProperty* dp);
 
-/* Windows.UI.Xaml.DependencyObject.ReadLocalValue(dp) */
 HRESULT wuixa_dependency_object_read_local_value(WUIXA_DependencyObject *self, WUIXA_DependencyProperty* dp, IInspectable** out);
 
-/* Windows.UI.Xaml.DependencyObject.GetAnimationBaseValue(dp) */
 HRESULT wuixa_dependency_object_get_animation_base_value(WUIXA_DependencyObject *self, WUIXA_DependencyProperty* dp, IInspectable** out);
 
-/* Windows.UI.Xaml.DependencyObject.get_Dispatcher() */
 HRESULT wuixa_dependency_object_get__dispatcher(WUIXA_DependencyObject *self, WUICO_CoreDispatcher** value);
 
-/* Windows.UI.Xaml.DependencyObject.RegisterPropertyChangedCallback(dp, callback) */
 HRESULT wuixa_dependency_object_register_property_changed_callback(WUIXA_DependencyObject *self, WUIXA_DependencyProperty* dp, WUIXA_DependencyPropertyChangedCallback* callback, int64_t *out);
 
-/* Windows.UI.Xaml.DependencyObject.UnregisterPropertyChangedCallback(dp, token) */
 HRESULT wuixa_dependency_object_unregister_property_changed_callback(WUIXA_DependencyObject *self, WUIXA_DependencyProperty* dp, int64_t token);
 
-/* Windows.UI.Xaml.StateTriggerBase */
-/* Windows.UI.Xaml.StateTriggerBase.SetActive(IsActive) */
 HRESULT wuixa_state_trigger_base_set_active(WUIXA_StateTriggerBase *self, BOOL IsActive);
 
-/* Windows.UI.Xaml.AdaptiveTrigger */
-/* Windows.UI.Xaml.AdaptiveTrigger.get_MinWindowWidth() */
 HRESULT wuixa_adaptive_trigger_get__min_window_width(WUIXA_AdaptiveTrigger *self, double *value);
 
-/* Windows.UI.Xaml.AdaptiveTrigger.put_MinWindowWidth() */
 HRESULT wuixa_adaptive_trigger_put__min_window_width(WUIXA_AdaptiveTrigger *self, double value);
 
-/* Windows.UI.Xaml.AdaptiveTrigger.get_MinWindowHeight() */
 HRESULT wuixa_adaptive_trigger_get__min_window_height(WUIXA_AdaptiveTrigger *self, double *value);
 
-/* Windows.UI.Xaml.AdaptiveTrigger.put_MinWindowHeight() */
 HRESULT wuixa_adaptive_trigger_put__min_window_height(WUIXA_AdaptiveTrigger *self, double value);
 
-/* Windows.UI.Xaml.AdaptiveTrigger.get_MinWindowWidthProperty() */
 HRESULT wuixa_adaptive_trigger_get__min_window_width_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.AdaptiveTrigger.get_MinWindowHeightProperty() */
 HRESULT wuixa_adaptive_trigger_get__min_window_height_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Application */
-/* Windows.UI.Xaml.Application.get_Resources() */
 HRESULT wuixa_application_get__resources(WUIXA_Application *self, WUIXA_ResourceDictionary** value);
 
-/* Windows.UI.Xaml.Application.put_Resources() */
 HRESULT wuixa_application_put__resources(WUIXA_Application *self, WUIXA_ResourceDictionary* value);
 
-/* Windows.UI.Xaml.Application.get_DebugSettings() */
 HRESULT wuixa_application_get__debug_settings(WUIXA_Application *self, WUIXA_DebugSettings** value);
 
-/* Windows.UI.Xaml.Application.get_RequestedTheme() */
 HRESULT wuixa_application_get__requested_theme(WUIXA_Application *self, WUIXA_ApplicationTheme *value);
 
-/* Windows.UI.Xaml.Application.put_RequestedTheme() */
 HRESULT wuixa_application_put__requested_theme(WUIXA_Application *self, WUIXA_ApplicationTheme value);
 
-/* Windows.UI.Xaml.Application.Exit() */
 HRESULT wuixa_application_exit(WUIXA_Application *self);
 
-/* Windows.UI.Xaml.Application.get_FocusVisualKind() */
 HRESULT wuixa_application_get__focus_visual_kind(WUIXA_Application *self, WUIXA_FocusVisualKind *value);
 
-/* Windows.UI.Xaml.Application.put_FocusVisualKind() */
 HRESULT wuixa_application_put__focus_visual_kind(WUIXA_Application *self, WUIXA_FocusVisualKind value);
 
-/* Windows.UI.Xaml.Application.get_RequiresPointerMode() */
 HRESULT wuixa_application_get__requires_pointer_mode(WUIXA_Application *self, WUIXA_ApplicationRequiresPointerMode *value);
 
-/* Windows.UI.Xaml.Application.put_RequiresPointerMode() */
 HRESULT wuixa_application_put__requires_pointer_mode(WUIXA_Application *self, WUIXA_ApplicationRequiresPointerMode value);
 
-/* Windows.UI.Xaml.Application.get_HighContrastAdjustment() */
 HRESULT wuixa_application_get__high_contrast_adjustment(WUIXA_Application *self, WUIXA_ApplicationHighContrastAdjustment *value);
 
-/* Windows.UI.Xaml.Application.put_HighContrastAdjustment() */
 HRESULT wuixa_application_put__high_contrast_adjustment(WUIXA_Application *self, WUIXA_ApplicationHighContrastAdjustment value);
 
-/* Windows.UI.Xaml.Application.OnActivated(args) */
 HRESULT wuixa_application_handle_activated(WUIXA_Application *self, WAPAC_IActivatedEventArgs* args);
 
-/* Windows.UI.Xaml.Application.OnLaunched(args) */
 HRESULT wuixa_application_handle_launched(WUIXA_Application *self, WAPAC_LaunchActivatedEventArgs* args);
 
-/* Windows.UI.Xaml.Application.OnFileActivated(args) */
 HRESULT wuixa_application_handle_file_activated(WUIXA_Application *self, WAPAC_FileActivatedEventArgs* args);
 
-/* Windows.UI.Xaml.Application.OnSearchActivated(args) */
 HRESULT wuixa_application_handle_search_activated(WUIXA_Application *self, WAPAC_SearchActivatedEventArgs* args);
 
-/* Windows.UI.Xaml.Application.OnShareTargetActivated(args) */
 HRESULT wuixa_application_handle_share_target_activated(WUIXA_Application *self, WAPAC_ShareTargetActivatedEventArgs* args);
 
-/* Windows.UI.Xaml.Application.OnFileOpenPickerActivated(args) */
 HRESULT wuixa_application_handle_file_open_picker_activated(WUIXA_Application *self, WAPAC_FileOpenPickerActivatedEventArgs* args);
 
-/* Windows.UI.Xaml.Application.OnFileSavePickerActivated(args) */
 HRESULT wuixa_application_handle_file_save_picker_activated(WUIXA_Application *self, WAPAC_FileSavePickerActivatedEventArgs* args);
 
-/* Windows.UI.Xaml.Application.OnCachedFileUpdaterActivated(args) */
 HRESULT wuixa_application_handle_cached_file_updater_activated(WUIXA_Application *self, WAPAC_CachedFileUpdaterActivatedEventArgs* args);
 
-/* Windows.UI.Xaml.Application.OnWindowCreated(args) */
 HRESULT wuixa_application_handle_window_created(WUIXA_Application *self, WUIXA_WindowCreatedEventArgs* args);
 
-/* Windows.UI.Xaml.Application.OnBackgroundActivated(args) */
 HRESULT wuixa_application_handle_background_activated(WUIXA_Application *self, WAPAC_BackgroundActivatedEventArgs* args);
 
-/* Windows.UI.Xaml.Application.get_Current() */
 HRESULT wuixa_application_get__current(WUIXA_Application** value);
 
-/* Windows.UI.Xaml.Application.Start(callback) */
 HRESULT wuixa_application_start(WUIXA_ApplicationInitializationCallback* callback);
 
-/* Windows.UI.Xaml.Application.LoadComponent(component, resourceLocator) */
 HRESULT wuixa_application_load_component(IInspectable* component, WF_Uri* resourceLocator);
 
-/* Windows.UI.Xaml.Application.LoadComponent(component, resourceLocator, componentResourceLocation) */
 HRESULT wuixa_application_load_component_p_p_component_resource_location(IInspectable* component, WF_Uri* resourceLocator, WUIXACOPR_ComponentResourceLocation componentResourceLocation);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixa_application_on_unhandled_exception(WUIXA_Application *self, cwinrt_event_fn fn, void *ctx);
@@ -2472,1674 +2420,1041 @@ void wuixa_application_off_leaving_background(WUIXA_Application *self, cwinrt_to
 cwinrt_token wuixa_application_on_entered_background(WUIXA_Application *self, cwinrt_event_fn fn, void *ctx);
 void wuixa_application_off_entered_background(WUIXA_Application *self, cwinrt_token token);
 
-/* Windows.UI.Xaml.ApplicationInitializationCallback */
-/* Windows.UI.Xaml.ApplicationInitializationCallback.Invoke(p) */
 HRESULT wuixa_application_initialization_callback_invoke(WUIXA_ApplicationInitializationCallback *self, WUIXA_ApplicationInitializationCallbackParams* p);
 
-/* Windows.UI.Xaml.IDispatcherTimerFactory */
-/* Windows.UI.Xaml.IDispatcherTimerFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixa_dispatcher_timer_factory_create_instance(WUIXA_IDispatcherTimerFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXA_DispatcherTimer** out);
 
-/* Windows.UI.Xaml.IDependencyPropertyStatics */
-/* Windows.UI.Xaml.IDependencyPropertyStatics.get_UnsetValue() */
 HRESULT wuixa_dependency_property_statics_get__unset_value(WUIXA_IDependencyPropertyStatics *self, IInspectable** value);
 
-/* Windows.UI.Xaml.IDependencyPropertyStatics.Register(name, propertyType, ownerType, typeMetadata) */
 HRESULT wuixa_dependency_property_statics_register(WUIXA_IDependencyPropertyStatics *self, cwinrt_hstring name, WUIXAIN_TypeName propertyType, WUIXAIN_TypeName ownerType, WUIXA_PropertyMetadata* typeMetadata, WUIXA_DependencyProperty** out);
 
-/* Windows.UI.Xaml.IDependencyPropertyStatics.RegisterAttached(name, propertyType, ownerType, defaultMetadata) */
 HRESULT wuixa_dependency_property_statics_register_attached(WUIXA_IDependencyPropertyStatics *self, cwinrt_hstring name, WUIXAIN_TypeName propertyType, WUIXAIN_TypeName ownerType, WUIXA_PropertyMetadata* defaultMetadata, WUIXA_DependencyProperty** out);
 
-/* Windows.UI.Xaml.IDependencyObjectFactory */
-/* Windows.UI.Xaml.IDependencyObjectFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixa_dependency_object_factory_create_instance(WUIXA_IDependencyObjectFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXA_DependencyObject** out);
 
-/* Windows.UI.Xaml.IDependencyObjectCollectionFactory */
-/* Windows.UI.Xaml.IDependencyObjectCollectionFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixa_dependency_object_collection_factory_create_instance(WUIXA_IDependencyObjectCollectionFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXA_DependencyObjectCollection** out);
 
-/* Windows.UI.Xaml.IDataTemplateStatics2 */
-/* Windows.UI.Xaml.IDataTemplateStatics2.get_ExtensionInstanceProperty() */
 HRESULT wuixa_data_template_statics_2_get__extension_instance_property(WUIXA_IDataTemplateStatics_2 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IDataTemplateStatics2.GetExtensionInstance(element) */
 HRESULT wuixa_data_template_statics_2_get_extension_instance(WUIXA_IDataTemplateStatics_2 *self, WUIXA_FrameworkElement* element, WUIXA_IDataTemplateExtension** out);
 
-/* Windows.UI.Xaml.IDataTemplateStatics2.SetExtensionInstance(element) */
 HRESULT wuixa_data_template_statics_2_set_extension_instance(WUIXA_IDataTemplateStatics_2 *self, WUIXA_FrameworkElement* element, WUIXA_IDataTemplateExtension* value);
 
-/* Windows.UI.Xaml.IDataTemplateKeyFactory */
-/* Windows.UI.Xaml.IDataTemplateKeyFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixa_data_template_key_factory_create_instance(WUIXA_IDataTemplateKeyFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXA_DataTemplateKey** out);
 
-/* Windows.UI.Xaml.IDataTemplateKeyFactory.CreateInstanceWithType(dataType, baseInterface, innerInterface) */
 HRESULT wuixa_data_template_key_factory_create_instance_with_type(WUIXA_IDataTemplateKeyFactory *self, IInspectable* dataType, IInspectable* baseInterface, IInspectable* innerInterface, WUIXA_DataTemplateKey** out);
 
-/* Windows.UI.Xaml.IDataTemplateFactory */
-/* Windows.UI.Xaml.IDataTemplateFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixa_data_template_factory_create_instance(WUIXA_IDataTemplateFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXA_DataTemplate** out);
 
-/* Windows.UI.Xaml.IDataTemplateExtension */
-/* Windows.UI.Xaml.IDataTemplateExtension.ResetTemplate() */
 HRESULT wuixa_data_template_extension_reset_template(WUIXA_IDataTemplateExtension *self);
 
-/* Windows.UI.Xaml.IDataTemplateExtension.ProcessBinding(phase) */
 HRESULT wuixa_data_template_extension_process_binding(WUIXA_IDataTemplateExtension *self, uint32_t phase, BOOL *out);
 
-/* Windows.UI.Xaml.IDataTemplateExtension.ProcessBindings(arg) */
 HRESULT wuixa_data_template_extension_process_bindings(WUIXA_IDataTemplateExtension *self, WUIXACO_ContainerContentChangingEventArgs* arg, int32_t *out);
 
-/* Windows.UI.Xaml.ICornerRadiusHelperStatics */
-/* Windows.UI.Xaml.ICornerRadiusHelperStatics.FromRadii(topLeft, topRight, bottomRight, bottomLeft) */
 HRESULT wuixa_corner_radius_helper_statics_from_radii(WUIXA_ICornerRadiusHelperStatics *self, double topLeft, double topRight, double bottomRight, double bottomLeft, WUIXA_CornerRadius *out);
 
-/* Windows.UI.Xaml.ICornerRadiusHelperStatics.FromUniformRadius(uniformRadius) */
 HRESULT wuixa_corner_radius_helper_statics_from_uniform_radius(WUIXA_ICornerRadiusHelperStatics *self, double uniformRadius, WUIXA_CornerRadius *out);
 
-/* Windows.UI.Xaml.IColorPaletteResourcesFactory */
-/* Windows.UI.Xaml.IColorPaletteResourcesFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixa_color_palette_resources_factory_create_instance(WUIXA_IColorPaletteResourcesFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXA_ColorPaletteResources** out);
 
-/* Windows.UI.Xaml.IBrushTransitionFactory */
-/* Windows.UI.Xaml.IBrushTransitionFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixa_brush_transition_factory_create_instance(WUIXA_IBrushTransitionFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXA_BrushTransition** out);
 
-/* Windows.UI.Xaml.IApplicationStatics */
-/* Windows.UI.Xaml.IApplicationStatics.get_Current() */
 HRESULT wuixa_application_statics_get__current(WUIXA_IApplicationStatics *self, WUIXA_Application** value);
 
-/* Windows.UI.Xaml.IApplicationStatics.Start(callback) */
 HRESULT wuixa_application_statics_start(WUIXA_IApplicationStatics *self, WUIXA_ApplicationInitializationCallback* callback);
 
-/* Windows.UI.Xaml.IApplicationStatics.LoadComponent(component, resourceLocator) */
 HRESULT wuixa_application_statics_load_component(WUIXA_IApplicationStatics *self, IInspectable* component, WF_Uri* resourceLocator);
 
-/* Windows.UI.Xaml.IApplicationStatics.LoadComponent(component, resourceLocator, componentResourceLocation) */
 HRESULT wuixa_application_statics_load_component_p_p_component_resource_location(WUIXA_IApplicationStatics *self, IInspectable* component, WF_Uri* resourceLocator, WUIXACOPR_ComponentResourceLocation componentResourceLocation);
 
-/* Windows.UI.Xaml.IApplicationFactory */
-/* Windows.UI.Xaml.IApplicationFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixa_application_factory_create_instance(WUIXA_IApplicationFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXA_Application** out);
 
-/* Windows.UI.Xaml.IAdaptiveTriggerStatics */
-/* Windows.UI.Xaml.IAdaptiveTriggerStatics.get_MinWindowWidthProperty() */
 HRESULT wuixa_adaptive_trigger_statics_get__min_window_width_property(WUIXA_IAdaptiveTriggerStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IAdaptiveTriggerStatics.get_MinWindowHeightProperty() */
 HRESULT wuixa_adaptive_trigger_statics_get__min_window_height_property(WUIXA_IAdaptiveTriggerStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IAdaptiveTriggerFactory */
-/* Windows.UI.Xaml.IAdaptiveTriggerFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixa_adaptive_trigger_factory_create_instance(WUIXA_IAdaptiveTriggerFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXA_AdaptiveTrigger** out);
 
-/* Windows.UI.Xaml.IDurationHelperStatics */
-/* Windows.UI.Xaml.IDurationHelperStatics.get_Automatic() */
 HRESULT wuixa_duration_helper_statics_get__automatic(WUIXA_IDurationHelperStatics *self, WUIXA_Duration *value);
 
-/* Windows.UI.Xaml.IDurationHelperStatics.get_Forever() */
 HRESULT wuixa_duration_helper_statics_get__forever(WUIXA_IDurationHelperStatics *self, WUIXA_Duration *value);
 
-/* Windows.UI.Xaml.IDurationHelperStatics.Compare(duration1, duration2) */
 HRESULT wuixa_duration_helper_statics_compare(WUIXA_IDurationHelperStatics *self, WUIXA_Duration duration1, WUIXA_Duration duration2, int32_t *out);
 
-/* Windows.UI.Xaml.IDurationHelperStatics.FromTimeSpan(timeSpan) */
 HRESULT wuixa_duration_helper_statics_from_time_span(WUIXA_IDurationHelperStatics *self, WF_TimeSpan timeSpan, WUIXA_Duration *out);
 
-/* Windows.UI.Xaml.IDurationHelperStatics.GetHasTimeSpan(target) */
 HRESULT wuixa_duration_helper_statics_get_has_time_span(WUIXA_IDurationHelperStatics *self, WUIXA_Duration target, BOOL *out);
 
-/* Windows.UI.Xaml.IDurationHelperStatics.Add(target, duration) */
 HRESULT wuixa_duration_helper_statics_add(WUIXA_IDurationHelperStatics *self, WUIXA_Duration target, WUIXA_Duration duration, WUIXA_Duration *out);
 
-/* Windows.UI.Xaml.IDurationHelperStatics.Equals(target) */
 HRESULT wuixa_duration_helper_statics_equals(WUIXA_IDurationHelperStatics *self, WUIXA_Duration target, WUIXA_Duration value, BOOL *out);
 
-/* Windows.UI.Xaml.IDurationHelperStatics.Subtract(target, duration) */
 HRESULT wuixa_duration_helper_statics_subtract(WUIXA_IDurationHelperStatics *self, WUIXA_Duration target, WUIXA_Duration duration, WUIXA_Duration *out);
 
-/* Windows.UI.Xaml.IElementFactoryGetArgsFactory */
-/* Windows.UI.Xaml.IElementFactoryGetArgsFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixa_element_factory_get_args_factory_create_instance(WUIXA_IElementFactoryGetArgsFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXA_ElementFactoryGetArgs** out);
 
-/* Windows.UI.Xaml.IElementFactoryRecycleArgsFactory */
-/* Windows.UI.Xaml.IElementFactoryRecycleArgsFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixa_element_factory_recycle_args_factory_create_instance(WUIXA_IElementFactoryRecycleArgsFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXA_ElementFactoryRecycleArgs** out);
 
-/* Windows.UI.Xaml.IElementSoundPlayerStatics */
-/* Windows.UI.Xaml.IElementSoundPlayerStatics.get_Volume() */
 HRESULT wuixa_element_sound_player_statics_get__volume(WUIXA_IElementSoundPlayerStatics *self, double *value);
 
-/* Windows.UI.Xaml.IElementSoundPlayerStatics.put_Volume() */
 HRESULT wuixa_element_sound_player_statics_put__volume(WUIXA_IElementSoundPlayerStatics *self, double value);
 
-/* Windows.UI.Xaml.IElementSoundPlayerStatics.get_State() */
 HRESULT wuixa_element_sound_player_statics_get__state(WUIXA_IElementSoundPlayerStatics *self, WUIXA_ElementSoundPlayerState *value);
 
-/* Windows.UI.Xaml.IElementSoundPlayerStatics.put_State() */
 HRESULT wuixa_element_sound_player_statics_put__state(WUIXA_IElementSoundPlayerStatics *self, WUIXA_ElementSoundPlayerState value);
 
-/* Windows.UI.Xaml.IElementSoundPlayerStatics.Play(sound) */
 HRESULT wuixa_element_sound_player_statics_play(WUIXA_IElementSoundPlayerStatics *self, WUIXA_ElementSoundKind sound);
 
-/* Windows.UI.Xaml.IElementSoundPlayerStatics2 */
-/* Windows.UI.Xaml.IElementSoundPlayerStatics2.get_SpatialAudioMode() */
 HRESULT wuixa_element_sound_player_statics_2_get__spatial_audio_mode(WUIXA_IElementSoundPlayerStatics_2 *self, WUIXA_ElementSpatialAudioMode *value);
 
-/* Windows.UI.Xaml.IElementSoundPlayerStatics2.put_SpatialAudioMode() */
 HRESULT wuixa_element_sound_player_statics_2_put__spatial_audio_mode(WUIXA_IElementSoundPlayerStatics_2 *self, WUIXA_ElementSpatialAudioMode value);
 
-/* Windows.UI.Xaml.IFrameworkElementFactory */
-/* Windows.UI.Xaml.IFrameworkElementFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixa_framework_element_factory_create_instance(WUIXA_IFrameworkElementFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXA_FrameworkElement** out);
 
-/* Windows.UI.Xaml.IFrameworkElementStatics */
-/* Windows.UI.Xaml.IFrameworkElementStatics.get_TagProperty() */
 HRESULT wuixa_framework_element_statics_get__tag_property(WUIXA_IFrameworkElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IFrameworkElementStatics.get_LanguageProperty() */
 HRESULT wuixa_framework_element_statics_get__language_property(WUIXA_IFrameworkElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IFrameworkElementStatics.get_ActualWidthProperty() */
 HRESULT wuixa_framework_element_statics_get__actual_width_property(WUIXA_IFrameworkElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IFrameworkElementStatics.get_ActualHeightProperty() */
 HRESULT wuixa_framework_element_statics_get__actual_height_property(WUIXA_IFrameworkElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IFrameworkElementStatics.get_WidthProperty() */
 HRESULT wuixa_framework_element_statics_get__width_property(WUIXA_IFrameworkElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IFrameworkElementStatics.get_HeightProperty() */
 HRESULT wuixa_framework_element_statics_get__height_property(WUIXA_IFrameworkElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IFrameworkElementStatics.get_MinWidthProperty() */
 HRESULT wuixa_framework_element_statics_get__min_width_property(WUIXA_IFrameworkElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IFrameworkElementStatics.get_MaxWidthProperty() */
 HRESULT wuixa_framework_element_statics_get__max_width_property(WUIXA_IFrameworkElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IFrameworkElementStatics.get_MinHeightProperty() */
 HRESULT wuixa_framework_element_statics_get__min_height_property(WUIXA_IFrameworkElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IFrameworkElementStatics.get_MaxHeightProperty() */
 HRESULT wuixa_framework_element_statics_get__max_height_property(WUIXA_IFrameworkElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IFrameworkElementStatics.get_HorizontalAlignmentProperty() */
 HRESULT wuixa_framework_element_statics_get__horizontal_alignment_property(WUIXA_IFrameworkElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IFrameworkElementStatics.get_VerticalAlignmentProperty() */
 HRESULT wuixa_framework_element_statics_get__vertical_alignment_property(WUIXA_IFrameworkElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IFrameworkElementStatics.get_MarginProperty() */
 HRESULT wuixa_framework_element_statics_get__margin_property(WUIXA_IFrameworkElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IFrameworkElementStatics.get_NameProperty() */
 HRESULT wuixa_framework_element_statics_get__name_property(WUIXA_IFrameworkElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IFrameworkElementStatics.get_DataContextProperty() */
 HRESULT wuixa_framework_element_statics_get__data_context_property(WUIXA_IFrameworkElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IFrameworkElementStatics.get_StyleProperty() */
 HRESULT wuixa_framework_element_statics_get__style_property(WUIXA_IFrameworkElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IFrameworkElementStatics.get_FlowDirectionProperty() */
 HRESULT wuixa_framework_element_statics_get__flow_direction_property(WUIXA_IFrameworkElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IFrameworkElementStatics2 */
-/* Windows.UI.Xaml.IFrameworkElementStatics2.get_RequestedThemeProperty() */
 HRESULT wuixa_framework_element_statics_2_get__requested_theme_property(WUIXA_IFrameworkElementStatics_2 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IFrameworkElementStatics4 */
-/* Windows.UI.Xaml.IFrameworkElementStatics4.get_AllowFocusOnInteractionProperty() */
 HRESULT wuixa_framework_element_statics_4_get__allow_focus_on_interaction_property(WUIXA_IFrameworkElementStatics_4 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IFrameworkElementStatics4.get_FocusVisualMarginProperty() */
 HRESULT wuixa_framework_element_statics_4_get__focus_visual_margin_property(WUIXA_IFrameworkElementStatics_4 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IFrameworkElementStatics4.get_FocusVisualSecondaryThicknessProperty() */
 HRESULT wuixa_framework_element_statics_4_get__focus_visual_secondary_thickness_property(WUIXA_IFrameworkElementStatics_4 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IFrameworkElementStatics4.get_FocusVisualPrimaryThicknessProperty() */
 HRESULT wuixa_framework_element_statics_4_get__focus_visual_primary_thickness_property(WUIXA_IFrameworkElementStatics_4 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IFrameworkElementStatics4.get_FocusVisualSecondaryBrushProperty() */
 HRESULT wuixa_framework_element_statics_4_get__focus_visual_secondary_brush_property(WUIXA_IFrameworkElementStatics_4 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IFrameworkElementStatics4.get_FocusVisualPrimaryBrushProperty() */
 HRESULT wuixa_framework_element_statics_4_get__focus_visual_primary_brush_property(WUIXA_IFrameworkElementStatics_4 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IFrameworkElementStatics4.get_AllowFocusWhenDisabledProperty() */
 HRESULT wuixa_framework_element_statics_4_get__allow_focus_when_disabled_property(WUIXA_IFrameworkElementStatics_4 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IFrameworkElementStatics5 */
-/* Windows.UI.Xaml.IFrameworkElementStatics5.DeferTree(element) */
 HRESULT wuixa_framework_element_statics_5_defer_tree(WUIXA_IFrameworkElementStatics_5 *self, WUIXA_DependencyObject* element);
 
-/* Windows.UI.Xaml.IFrameworkElementStatics6 */
-/* Windows.UI.Xaml.IFrameworkElementStatics6.get_ActualThemeProperty() */
 HRESULT wuixa_framework_element_statics_6_get__actual_theme_property(WUIXA_IFrameworkElementStatics_6 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IFrameworkTemplateFactory */
-/* Windows.UI.Xaml.IFrameworkTemplateFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixa_framework_template_factory_create_instance(WUIXA_IFrameworkTemplateFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXA_FrameworkTemplate** out);
 
-/* activate Windows.UI.Xaml.GridLengthHelper */
 HRESULT wuixa_grid_length_helper_new(WUIXA_GridLengthHelper **out);
 
-/* Windows.UI.Xaml.GridLengthHelper */
-/* Windows.UI.Xaml.GridLengthHelper.get_Auto() */
 HRESULT wuixa_grid_length_helper_get__auto(WUIXA_GridLength *value);
 
-/* Windows.UI.Xaml.GridLengthHelper.FromPixels(pixels) */
 HRESULT wuixa_grid_length_helper_from_pixels(double pixels, WUIXA_GridLength *out);
 
-/* Windows.UI.Xaml.GridLengthHelper.FromValueAndType() */
 HRESULT wuixa_grid_length_helper_from_value_and_type(double value, WUIXA_GridUnitType type_, WUIXA_GridLength *out);
 
-/* Windows.UI.Xaml.GridLengthHelper.GetIsAbsolute(target) */
 HRESULT wuixa_grid_length_helper_get_is_absolute(WUIXA_GridLength target, BOOL *out);
 
-/* Windows.UI.Xaml.GridLengthHelper.GetIsAuto(target) */
 HRESULT wuixa_grid_length_helper_get_is_auto(WUIXA_GridLength target, BOOL *out);
 
-/* Windows.UI.Xaml.GridLengthHelper.GetIsStar(target) */
 HRESULT wuixa_grid_length_helper_get_is_star(WUIXA_GridLength target, BOOL *out);
 
-/* Windows.UI.Xaml.GridLengthHelper.Equals(target) */
 HRESULT wuixa_grid_length_helper_equals(WUIXA_GridLength target, WUIXA_GridLength value, BOOL *out);
 
-/* activate Windows.UI.Xaml.FrameworkViewSource */
 HRESULT wuixa_framework_view_source_new(WUIXA_FrameworkViewSource **out);
 
-/* Windows.UI.Xaml.FrameworkViewSource */
-/* Windows.UI.Xaml.FrameworkViewSource.CreateView() */
 HRESULT wuixa_framework_view_source_create_view(WUIXA_FrameworkViewSource *self, WAPCO_IFrameworkView** out);
 
-/* activate Windows.UI.Xaml.FrameworkView */
 HRESULT wuixa_framework_view_new(WUIXA_FrameworkView **out);
 
-/* Windows.UI.Xaml.FrameworkView */
-/* Windows.UI.Xaml.FrameworkView.Initialize(applicationView) */
 HRESULT wuixa_framework_view_initialize(WUIXA_FrameworkView *self, WAPCO_CoreApplicationView* applicationView);
 
-/* Windows.UI.Xaml.FrameworkView.SetWindow(window) */
 HRESULT wuixa_framework_view_set_window(WUIXA_FrameworkView *self, WUICO_CoreWindow* window);
 
-/* Windows.UI.Xaml.FrameworkView.Load(entryPoint) */
 HRESULT wuixa_framework_view_load(WUIXA_FrameworkView *self, cwinrt_hstring entryPoint);
 
-/* Windows.UI.Xaml.FrameworkView.Run() */
 HRESULT wuixa_framework_view_run(WUIXA_FrameworkView *self);
 
-/* Windows.UI.Xaml.FrameworkView.Uninitialize() */
 HRESULT wuixa_framework_view_uninitialize(WUIXA_FrameworkView *self);
 
-/* Windows.UI.Xaml.ExceptionRoutedEventHandler */
-/* Windows.UI.Xaml.ExceptionRoutedEventHandler.Invoke(sender, e) */
 HRESULT wuixa_exception_routed_event_handler_invoke(WUIXA_ExceptionRoutedEventHandler *self, IInspectable* sender, WUIXA_ExceptionRoutedEventArgs* e);
 
-/* Windows.UI.Xaml.ExceptionRoutedEventArgs */
-/* Windows.UI.Xaml.ExceptionRoutedEventArgs.get_ErrorMessage() */
 HRESULT wuixa_exception_routed_event_args_get__error_message(WUIXA_ExceptionRoutedEventArgs *self, cwinrt_hstring *value);
 
-/* activate Windows.UI.Xaml.EventTrigger */
 HRESULT wuixa_event_trigger_new(WUIXA_EventTrigger **out);
 
-/* Windows.UI.Xaml.EventTrigger */
-/* Windows.UI.Xaml.EventTrigger.get_RoutedEvent() */
 HRESULT wuixa_event_trigger_get__routed_event(WUIXA_EventTrigger *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.EventTrigger.put_RoutedEvent() */
 HRESULT wuixa_event_trigger_put__routed_event(WUIXA_EventTrigger *self, WUIXA_RoutedEvent* value);
 
-/* Windows.UI.Xaml.EventTrigger.get_Actions() */
 HRESULT wuixa_event_trigger_get__actions(WUIXA_EventTrigger *self, WUIXA_TriggerActionCollection** value);
 
-/* Windows.UI.Xaml.EnteredBackgroundEventHandler */
-/* Windows.UI.Xaml.EnteredBackgroundEventHandler.Invoke(sender, e) */
 HRESULT wuixa_entered_background_event_handler_invoke(WUIXA_EnteredBackgroundEventHandler *self, IInspectable* sender, WAM_EnteredBackgroundEventArgs* e);
 
-/* activate Windows.UI.Xaml.ElementSoundPlayer */
 HRESULT wuixa_element_sound_player_new(WUIXA_ElementSoundPlayer **out);
 
-/* Windows.UI.Xaml.ElementSoundPlayer */
-/* Windows.UI.Xaml.ElementSoundPlayer.get_SpatialAudioMode() */
 HRESULT wuixa_element_sound_player_get__spatial_audio_mode(WUIXA_ElementSpatialAudioMode *value);
 
-/* Windows.UI.Xaml.ElementSoundPlayer.put_SpatialAudioMode() */
 HRESULT wuixa_element_sound_player_put__spatial_audio_mode(WUIXA_ElementSpatialAudioMode value);
 
-/* Windows.UI.Xaml.ElementSoundPlayer.get_Volume() */
 HRESULT wuixa_element_sound_player_get__volume(double *value);
 
-/* Windows.UI.Xaml.ElementSoundPlayer.put_Volume() */
 HRESULT wuixa_element_sound_player_put__volume(double value);
 
-/* Windows.UI.Xaml.ElementSoundPlayer.get_State() */
 HRESULT wuixa_element_sound_player_get__state(WUIXA_ElementSoundPlayerState *value);
 
-/* Windows.UI.Xaml.ElementSoundPlayer.put_State() */
 HRESULT wuixa_element_sound_player_put__state(WUIXA_ElementSoundPlayerState value);
 
-/* Windows.UI.Xaml.ElementSoundPlayer.Play(sound) */
 HRESULT wuixa_element_sound_player_play(WUIXA_ElementSoundKind sound);
 
-/* Windows.UI.Xaml.ElementFactoryRecycleArgs */
-/* Windows.UI.Xaml.ElementFactoryRecycleArgs.get_Element() */
 HRESULT wuixa_element_factory_recycle_args_get__element(WUIXA_ElementFactoryRecycleArgs *self, WUIXA_UIElement** value);
 
-/* Windows.UI.Xaml.ElementFactoryRecycleArgs.put_Element() */
 HRESULT wuixa_element_factory_recycle_args_put__element(WUIXA_ElementFactoryRecycleArgs *self, WUIXA_UIElement* value);
 
-/* Windows.UI.Xaml.ElementFactoryRecycleArgs.get_Parent() */
 HRESULT wuixa_element_factory_recycle_args_get__parent(WUIXA_ElementFactoryRecycleArgs *self, WUIXA_UIElement** value);
 
-/* Windows.UI.Xaml.ElementFactoryRecycleArgs.put_Parent() */
 HRESULT wuixa_element_factory_recycle_args_put__parent(WUIXA_ElementFactoryRecycleArgs *self, WUIXA_UIElement* value);
 
-/* Windows.UI.Xaml.ElementFactoryGetArgs */
-/* Windows.UI.Xaml.ElementFactoryGetArgs.get_Data() */
 HRESULT wuixa_element_factory_get_args_get__data(WUIXA_ElementFactoryGetArgs *self, IInspectable** value);
 
-/* Windows.UI.Xaml.ElementFactoryGetArgs.put_Data() */
 HRESULT wuixa_element_factory_get_args_put__data(WUIXA_ElementFactoryGetArgs *self, IInspectable* value);
 
-/* Windows.UI.Xaml.ElementFactoryGetArgs.get_Parent() */
 HRESULT wuixa_element_factory_get_args_get__parent(WUIXA_ElementFactoryGetArgs *self, WUIXA_UIElement** value);
 
-/* Windows.UI.Xaml.ElementFactoryGetArgs.put_Parent() */
 HRESULT wuixa_element_factory_get_args_put__parent(WUIXA_ElementFactoryGetArgs *self, WUIXA_UIElement* value);
 
-/* activate Windows.UI.Xaml.EffectiveViewportChangedEventArgs */
 HRESULT wuixa_effective_viewport_changed_event_args_new(WUIXA_EffectiveViewportChangedEventArgs **out);
 
-/* Windows.UI.Xaml.EffectiveViewportChangedEventArgs */
-/* Windows.UI.Xaml.EffectiveViewportChangedEventArgs.get_EffectiveViewport() */
 HRESULT wuixa_effective_viewport_changed_event_args_get__effective_viewport(WUIXA_EffectiveViewportChangedEventArgs *self, WF_Rect *value);
 
-/* Windows.UI.Xaml.EffectiveViewportChangedEventArgs.get_MaxViewport() */
 HRESULT wuixa_effective_viewport_changed_event_args_get__max_viewport(WUIXA_EffectiveViewportChangedEventArgs *self, WF_Rect *value);
 
-/* Windows.UI.Xaml.EffectiveViewportChangedEventArgs.get_BringIntoViewDistanceX() */
 HRESULT wuixa_effective_viewport_changed_event_args_get__bring_into_view_distance_x(WUIXA_EffectiveViewportChangedEventArgs *self, double *value);
 
-/* Windows.UI.Xaml.EffectiveViewportChangedEventArgs.get_BringIntoViewDistanceY() */
 HRESULT wuixa_effective_viewport_changed_event_args_get__bring_into_view_distance_y(WUIXA_EffectiveViewportChangedEventArgs *self, double *value);
 
-/* activate Windows.UI.Xaml.DurationHelper */
 HRESULT wuixa_duration_helper_new(WUIXA_DurationHelper **out);
 
-/* Windows.UI.Xaml.DurationHelper */
-/* Windows.UI.Xaml.DurationHelper.get_Automatic() */
 HRESULT wuixa_duration_helper_get__automatic(WUIXA_Duration *value);
 
-/* Windows.UI.Xaml.DurationHelper.get_Forever() */
 HRESULT wuixa_duration_helper_get__forever(WUIXA_Duration *value);
 
-/* Windows.UI.Xaml.DurationHelper.Compare(duration1, duration2) */
 HRESULT wuixa_duration_helper_compare(WUIXA_Duration duration1, WUIXA_Duration duration2, int32_t *out);
 
-/* Windows.UI.Xaml.DurationHelper.FromTimeSpan(timeSpan) */
 HRESULT wuixa_duration_helper_from_time_span(WF_TimeSpan timeSpan, WUIXA_Duration *out);
 
-/* Windows.UI.Xaml.DurationHelper.GetHasTimeSpan(target) */
 HRESULT wuixa_duration_helper_get_has_time_span(WUIXA_Duration target, BOOL *out);
 
-/* Windows.UI.Xaml.DurationHelper.Add(target, duration) */
 HRESULT wuixa_duration_helper_add(WUIXA_Duration target, WUIXA_Duration duration, WUIXA_Duration *out);
 
-/* Windows.UI.Xaml.DurationHelper.Equals(target) */
 HRESULT wuixa_duration_helper_equals(WUIXA_Duration target, WUIXA_Duration value, BOOL *out);
 
-/* Windows.UI.Xaml.DurationHelper.Subtract(target, duration) */
 HRESULT wuixa_duration_helper_subtract(WUIXA_Duration target, WUIXA_Duration duration, WUIXA_Duration *out);
 
-/* activate Windows.UI.Xaml.DropCompletedEventArgs */
 HRESULT wuixa_drop_completed_event_args_new(WUIXA_DropCompletedEventArgs **out);
 
-/* Windows.UI.Xaml.DropCompletedEventArgs */
-/* Windows.UI.Xaml.DropCompletedEventArgs.get_DropResult() */
 HRESULT wuixa_drop_completed_event_args_get__drop_result(WUIXA_DropCompletedEventArgs *self, WAPDA_DataPackageOperation *value);
 
-/* activate Windows.UI.Xaml.DragUIOverride */
 HRESULT wuixa_drag_u_i_override_new(WUIXA_DragUIOverride **out);
 
-/* Windows.UI.Xaml.DragUIOverride */
-/* Windows.UI.Xaml.DragUIOverride.get_Caption() */
 HRESULT wuixa_drag_u_i_override_get__caption(WUIXA_DragUIOverride *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.DragUIOverride.put_Caption() */
 HRESULT wuixa_drag_u_i_override_put__caption(WUIXA_DragUIOverride *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.DragUIOverride.get_IsContentVisible() */
 HRESULT wuixa_drag_u_i_override_get__is_content_visible(WUIXA_DragUIOverride *self, BOOL *value);
 
-/* Windows.UI.Xaml.DragUIOverride.put_IsContentVisible() */
 HRESULT wuixa_drag_u_i_override_put__is_content_visible(WUIXA_DragUIOverride *self, BOOL value);
 
-/* Windows.UI.Xaml.DragUIOverride.get_IsCaptionVisible() */
 HRESULT wuixa_drag_u_i_override_get__is_caption_visible(WUIXA_DragUIOverride *self, BOOL *value);
 
-/* Windows.UI.Xaml.DragUIOverride.put_IsCaptionVisible() */
 HRESULT wuixa_drag_u_i_override_put__is_caption_visible(WUIXA_DragUIOverride *self, BOOL value);
 
-/* Windows.UI.Xaml.DragUIOverride.get_IsGlyphVisible() */
 HRESULT wuixa_drag_u_i_override_get__is_glyph_visible(WUIXA_DragUIOverride *self, BOOL *value);
 
-/* Windows.UI.Xaml.DragUIOverride.put_IsGlyphVisible() */
 HRESULT wuixa_drag_u_i_override_put__is_glyph_visible(WUIXA_DragUIOverride *self, BOOL value);
 
-/* Windows.UI.Xaml.DragUIOverride.Clear() */
 HRESULT wuixa_drag_u_i_override_clear(WUIXA_DragUIOverride *self);
 
-/* Windows.UI.Xaml.DragUIOverride.SetContentFromBitmapImage(bitmapImage) */
 HRESULT wuixa_drag_u_i_override_set_content_from_bitmap_image(WUIXA_DragUIOverride *self, WUIXAMEIM_BitmapImage* bitmapImage);
 
-/* Windows.UI.Xaml.DragUIOverride.SetContentFromBitmapImage(bitmapImage, anchorPoint) */
 HRESULT wuixa_drag_u_i_override_set_content_from_bitmap_image_p_point(WUIXA_DragUIOverride *self, WUIXAMEIM_BitmapImage* bitmapImage, WF_Point anchorPoint);
 
-/* Windows.UI.Xaml.DragUIOverride.SetContentFromSoftwareBitmap(softwareBitmap) */
 HRESULT wuixa_drag_u_i_override_set_content_from_software_bitmap(WUIXA_DragUIOverride *self, WGRIM_SoftwareBitmap* softwareBitmap);
 
-/* Windows.UI.Xaml.DragUIOverride.SetContentFromSoftwareBitmap(softwareBitmap, anchorPoint) */
 HRESULT wuixa_drag_u_i_override_set_content_from_software_bitmap_p_point(WUIXA_DragUIOverride *self, WGRIM_SoftwareBitmap* softwareBitmap, WF_Point anchorPoint);
 
-/* activate Windows.UI.Xaml.DragUI */
 HRESULT wuixa_drag_u_i_new(WUIXA_DragUI **out);
 
-/* Windows.UI.Xaml.DragUI */
-/* Windows.UI.Xaml.DragUI.SetContentFromBitmapImage(bitmapImage) */
 HRESULT wuixa_drag_u_i_set_content_from_bitmap_image(WUIXA_DragUI *self, WUIXAMEIM_BitmapImage* bitmapImage);
 
-/* Windows.UI.Xaml.DragUI.SetContentFromBitmapImage(bitmapImage, anchorPoint) */
 HRESULT wuixa_drag_u_i_set_content_from_bitmap_image_p_point(WUIXA_DragUI *self, WUIXAMEIM_BitmapImage* bitmapImage, WF_Point anchorPoint);
 
-/* Windows.UI.Xaml.DragUI.SetContentFromSoftwareBitmap(softwareBitmap) */
 HRESULT wuixa_drag_u_i_set_content_from_software_bitmap(WUIXA_DragUI *self, WGRIM_SoftwareBitmap* softwareBitmap);
 
-/* Windows.UI.Xaml.DragUI.SetContentFromSoftwareBitmap(softwareBitmap, anchorPoint) */
 HRESULT wuixa_drag_u_i_set_content_from_software_bitmap_p_point(WUIXA_DragUI *self, WGRIM_SoftwareBitmap* softwareBitmap, WF_Point anchorPoint);
 
-/* Windows.UI.Xaml.DragUI.SetContentFromDataPackage() */
 HRESULT wuixa_drag_u_i_set_content_from_data_package(WUIXA_DragUI *self);
 
-/* activate Windows.UI.Xaml.DragStartingEventArgs */
 HRESULT wuixa_drag_starting_event_args_new(WUIXA_DragStartingEventArgs **out);
 
-/* Windows.UI.Xaml.DragStartingEventArgs */
-/* Windows.UI.Xaml.DragStartingEventArgs.get_Cancel() */
 HRESULT wuixa_drag_starting_event_args_get__cancel(WUIXA_DragStartingEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.DragStartingEventArgs.put_Cancel() */
 HRESULT wuixa_drag_starting_event_args_put__cancel(WUIXA_DragStartingEventArgs *self, BOOL value);
 
-/* Windows.UI.Xaml.DragStartingEventArgs.get_Data() */
 HRESULT wuixa_drag_starting_event_args_get__data(WUIXA_DragStartingEventArgs *self, WAPDA_DataPackage** value);
 
-/* Windows.UI.Xaml.DragStartingEventArgs.get_DragUI() */
 HRESULT wuixa_drag_starting_event_args_get__drag_u_i(WUIXA_DragStartingEventArgs *self, WUIXA_DragUI** value);
 
-/* Windows.UI.Xaml.DragStartingEventArgs.GetDeferral() */
 HRESULT wuixa_drag_starting_event_args_get_deferral(WUIXA_DragStartingEventArgs *self, WUIXA_DragOperationDeferral** out);
 
-/* Windows.UI.Xaml.DragStartingEventArgs.GetPosition(relativeTo) */
 HRESULT wuixa_drag_starting_event_args_get_position(WUIXA_DragStartingEventArgs *self, WUIXA_UIElement* relativeTo, WF_Point *out);
 
-/* Windows.UI.Xaml.DragStartingEventArgs.get_AllowedOperations() */
 HRESULT wuixa_drag_starting_event_args_get__allowed_operations(WUIXA_DragStartingEventArgs *self, WAPDA_DataPackageOperation *value);
 
-/* Windows.UI.Xaml.DragStartingEventArgs.put_AllowedOperations() */
 HRESULT wuixa_drag_starting_event_args_put__allowed_operations(WUIXA_DragStartingEventArgs *self, WAPDA_DataPackageOperation value);
 
-/* activate Windows.UI.Xaml.DragOperationDeferral */
 HRESULT wuixa_drag_operation_deferral_new(WUIXA_DragOperationDeferral **out);
 
-/* Windows.UI.Xaml.DragOperationDeferral */
-/* Windows.UI.Xaml.DragOperationDeferral.Complete() */
 HRESULT wuixa_drag_operation_deferral_complete(WUIXA_DragOperationDeferral *self);
 
-/* Windows.UI.Xaml.DragEventHandler */
-/* Windows.UI.Xaml.DragEventHandler.Invoke(sender, e) */
 HRESULT wuixa_drag_event_handler_invoke(WUIXA_DragEventHandler *self, IInspectable* sender, WUIXA_DragEventArgs* e);
 
-/* activate Windows.UI.Xaml.DragEventArgs */
 HRESULT wuixa_drag_event_args_new(WUIXA_DragEventArgs **out);
 
-/* Windows.UI.Xaml.DragEventArgs */
-/* Windows.UI.Xaml.DragEventArgs.get_Handled() */
 HRESULT wuixa_drag_event_args_get__handled(WUIXA_DragEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.DragEventArgs.put_Handled() */
 HRESULT wuixa_drag_event_args_put__handled(WUIXA_DragEventArgs *self, BOOL value);
 
-/* Windows.UI.Xaml.DragEventArgs.get_Data() */
 HRESULT wuixa_drag_event_args_get__data(WUIXA_DragEventArgs *self, WAPDA_DataPackage** value);
 
-/* Windows.UI.Xaml.DragEventArgs.put_Data() */
 HRESULT wuixa_drag_event_args_put__data(WUIXA_DragEventArgs *self, WAPDA_DataPackage* value);
 
-/* Windows.UI.Xaml.DragEventArgs.GetPosition(relativeTo) */
 HRESULT wuixa_drag_event_args_get_position(WUIXA_DragEventArgs *self, WUIXA_UIElement* relativeTo, WF_Point *out);
 
-/* Windows.UI.Xaml.DragEventArgs.get_DataView() */
 HRESULT wuixa_drag_event_args_get__data_view(WUIXA_DragEventArgs *self, WAPDA_DataPackageView** value);
 
-/* Windows.UI.Xaml.DragEventArgs.get_DragUIOverride() */
 HRESULT wuixa_drag_event_args_get__drag_u_i_override(WUIXA_DragEventArgs *self, WUIXA_DragUIOverride** value);
 
-/* Windows.UI.Xaml.DragEventArgs.get_Modifiers() */
 HRESULT wuixa_drag_event_args_get__modifiers(WUIXA_DragEventArgs *self, WAPDADR_DragDropModifiers *value);
 
-/* Windows.UI.Xaml.DragEventArgs.get_AcceptedOperation() */
 HRESULT wuixa_drag_event_args_get__accepted_operation(WUIXA_DragEventArgs *self, WAPDA_DataPackageOperation *value);
 
-/* Windows.UI.Xaml.DragEventArgs.put_AcceptedOperation() */
 HRESULT wuixa_drag_event_args_put__accepted_operation(WUIXA_DragEventArgs *self, WAPDA_DataPackageOperation value);
 
-/* Windows.UI.Xaml.DragEventArgs.GetDeferral() */
 HRESULT wuixa_drag_event_args_get_deferral(WUIXA_DragEventArgs *self, WUIXA_DragOperationDeferral** out);
 
-/* Windows.UI.Xaml.DragEventArgs.get_AllowedOperations() */
 HRESULT wuixa_drag_event_args_get__allowed_operations(WUIXA_DragEventArgs *self, WAPDA_DataPackageOperation *value);
 
-/* Windows.UI.Xaml.IGridLengthHelperStatics */
-/* Windows.UI.Xaml.IGridLengthHelperStatics.get_Auto() */
 HRESULT wuixa_grid_length_helper_statics_get__auto(WUIXA_IGridLengthHelperStatics *self, WUIXA_GridLength *value);
 
-/* Windows.UI.Xaml.IGridLengthHelperStatics.FromPixels(pixels) */
 HRESULT wuixa_grid_length_helper_statics_from_pixels(WUIXA_IGridLengthHelperStatics *self, double pixels, WUIXA_GridLength *out);
 
-/* Windows.UI.Xaml.IGridLengthHelperStatics.FromValueAndType() */
 HRESULT wuixa_grid_length_helper_statics_from_value_and_type(WUIXA_IGridLengthHelperStatics *self, double value, WUIXA_GridUnitType type_, WUIXA_GridLength *out);
 
-/* Windows.UI.Xaml.IGridLengthHelperStatics.GetIsAbsolute(target) */
 HRESULT wuixa_grid_length_helper_statics_get_is_absolute(WUIXA_IGridLengthHelperStatics *self, WUIXA_GridLength target, BOOL *out);
 
-/* Windows.UI.Xaml.IGridLengthHelperStatics.GetIsAuto(target) */
 HRESULT wuixa_grid_length_helper_statics_get_is_auto(WUIXA_IGridLengthHelperStatics *self, WUIXA_GridLength target, BOOL *out);
 
-/* Windows.UI.Xaml.IGridLengthHelperStatics.GetIsStar(target) */
 HRESULT wuixa_grid_length_helper_statics_get_is_star(WUIXA_IGridLengthHelperStatics *self, WUIXA_GridLength target, BOOL *out);
 
-/* Windows.UI.Xaml.IGridLengthHelperStatics.Equals(target) */
 HRESULT wuixa_grid_length_helper_statics_equals(WUIXA_IGridLengthHelperStatics *self, WUIXA_GridLength target, WUIXA_GridLength value, BOOL *out);
 
-/* Windows.UI.Xaml.IPointHelperStatics */
-/* Windows.UI.Xaml.IPointHelperStatics.FromCoordinates(x, y) */
 HRESULT wuixa_point_helper_statics_from_coordinates(WUIXA_IPointHelperStatics *self, float x, float y, WF_Point *out);
 
-/* Windows.UI.Xaml.IPropertyMetadataFactory */
-/* Windows.UI.Xaml.IPropertyMetadataFactory.CreateInstanceWithDefaultValue(defaultValue, baseInterface, innerInterface) */
 HRESULT wuixa_property_metadata_factory_create_instance_with_default_value(WUIXA_IPropertyMetadataFactory *self, IInspectable* defaultValue, IInspectable* baseInterface, IInspectable* innerInterface, WUIXA_PropertyMetadata** out);
 
-/* Windows.UI.Xaml.IPropertyMetadataFactory.CreateInstanceWithDefaultValueAndCallback(defaultValue, propertyChangedCallback, baseInterface, innerInterface) */
 HRESULT wuixa_property_metadata_factory_create_instance_with_default_value_and_callback(WUIXA_IPropertyMetadataFactory *self, IInspectable* defaultValue, WUIXA_PropertyChangedCallback* propertyChangedCallback, IInspectable* baseInterface, IInspectable* innerInterface, WUIXA_PropertyMetadata** out);
 
-/* Windows.UI.Xaml.IPropertyMetadataStatics */
-/* Windows.UI.Xaml.IPropertyMetadataStatics.Create(defaultValue) */
 HRESULT wuixa_property_metadata_statics_create(WUIXA_IPropertyMetadataStatics *self, IInspectable* defaultValue, WUIXA_PropertyMetadata** out);
 
-/* Windows.UI.Xaml.IPropertyMetadataStatics.Create(defaultValue, propertyChangedCallback) */
 HRESULT wuixa_property_metadata_statics_create_p_p_p(WUIXA_IPropertyMetadataStatics *self, IInspectable* defaultValue, WUIXA_PropertyChangedCallback* propertyChangedCallback, WUIXA_PropertyMetadata** out);
 
-/* Windows.UI.Xaml.IPropertyMetadataStatics.Create(createDefaultValueCallback) */
 HRESULT wuixa_property_metadata_statics_create_p_p(WUIXA_IPropertyMetadataStatics *self, WUIXA_CreateDefaultValueCallback* createDefaultValueCallback, WUIXA_PropertyMetadata** out);
 
-/* Windows.UI.Xaml.IPropertyMetadataStatics.Create(createDefaultValueCallback, propertyChangedCallback) */
 HRESULT wuixa_property_metadata_statics_create_p_p_p_x(WUIXA_IPropertyMetadataStatics *self, WUIXA_CreateDefaultValueCallback* createDefaultValueCallback, WUIXA_PropertyChangedCallback* propertyChangedCallback, WUIXA_PropertyMetadata** out);
 
-/* Windows.UI.Xaml.IPropertyPathFactory */
-/* Windows.UI.Xaml.IPropertyPathFactory.CreateInstance(path) */
 HRESULT wuixa_property_path_factory_create_instance(WUIXA_IPropertyPathFactory *self, cwinrt_hstring path, WUIXA_PropertyPath** out);
 
-/* Windows.UI.Xaml.IRectHelperStatics */
-/* Windows.UI.Xaml.IRectHelperStatics.get_Empty() */
 HRESULT wuixa_rect_helper_statics_get__empty(WUIXA_IRectHelperStatics *self, WF_Rect *value);
 
-/* Windows.UI.Xaml.IRectHelperStatics.FromCoordinatesAndDimensions(x, y, width, height) */
 HRESULT wuixa_rect_helper_statics_from_coordinates_and_dimensions(WUIXA_IRectHelperStatics *self, float x, float y, float width, float height, WF_Rect *out);
 
-/* Windows.UI.Xaml.IRectHelperStatics.FromPoints(point1, point2) */
 HRESULT wuixa_rect_helper_statics_from_points(WUIXA_IRectHelperStatics *self, WF_Point point1, WF_Point point2, WF_Rect *out);
 
-/* Windows.UI.Xaml.IRectHelperStatics.FromLocationAndSize(location, size) */
 HRESULT wuixa_rect_helper_statics_from_location_and_size(WUIXA_IRectHelperStatics *self, WF_Point location, WF_Size size, WF_Rect *out);
 
-/* Windows.UI.Xaml.IRectHelperStatics.GetIsEmpty(target) */
 HRESULT wuixa_rect_helper_statics_get_is_empty(WUIXA_IRectHelperStatics *self, WF_Rect target, BOOL *out);
 
-/* Windows.UI.Xaml.IRectHelperStatics.GetBottom(target) */
 HRESULT wuixa_rect_helper_statics_get_bottom(WUIXA_IRectHelperStatics *self, WF_Rect target, float *out);
 
-/* Windows.UI.Xaml.IRectHelperStatics.GetLeft(target) */
 HRESULT wuixa_rect_helper_statics_get_left(WUIXA_IRectHelperStatics *self, WF_Rect target, float *out);
 
-/* Windows.UI.Xaml.IRectHelperStatics.GetRight(target) */
 HRESULT wuixa_rect_helper_statics_get_right(WUIXA_IRectHelperStatics *self, WF_Rect target, float *out);
 
-/* Windows.UI.Xaml.IRectHelperStatics.GetTop(target) */
 HRESULT wuixa_rect_helper_statics_get_top(WUIXA_IRectHelperStatics *self, WF_Rect target, float *out);
 
-/* Windows.UI.Xaml.IRectHelperStatics.Contains(target, point) */
 HRESULT wuixa_rect_helper_statics_contains(WUIXA_IRectHelperStatics *self, WF_Rect target, WF_Point point, BOOL *out);
 
-/* Windows.UI.Xaml.IRectHelperStatics.Equals(target) */
 HRESULT wuixa_rect_helper_statics_equals(WUIXA_IRectHelperStatics *self, WF_Rect target, WF_Rect value, BOOL *out);
 
-/* Windows.UI.Xaml.IRectHelperStatics.Intersect(target, rect) */
 HRESULT wuixa_rect_helper_statics_intersect(WUIXA_IRectHelperStatics *self, WF_Rect target, WF_Rect rect, WF_Rect *out);
 
-/* Windows.UI.Xaml.IRectHelperStatics.Union(target, point) */
 HRESULT wuixa_rect_helper_statics_union(WUIXA_IRectHelperStatics *self, WF_Rect target, WF_Point point, WF_Rect *out);
 
-/* Windows.UI.Xaml.IRectHelperStatics.Union(target, rect) */
 HRESULT wuixa_rect_helper_statics_union_rect_rect_rect(WUIXA_IRectHelperStatics *self, WF_Rect target, WF_Rect rect, WF_Rect *out);
 
-/* Windows.UI.Xaml.IResourceDictionaryFactory */
-/* Windows.UI.Xaml.IResourceDictionaryFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixa_resource_dictionary_factory_create_instance(WUIXA_IResourceDictionaryFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXA_ResourceDictionary** out);
 
-/* Windows.UI.Xaml.IRoutedEventArgsFactory */
-/* Windows.UI.Xaml.IRoutedEventArgsFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixa_routed_event_args_factory_create_instance(WUIXA_IRoutedEventArgsFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXA_RoutedEventArgs** out);
 
-/* Windows.UI.Xaml.IScalarTransitionFactory */
-/* Windows.UI.Xaml.IScalarTransitionFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixa_scalar_transition_factory_create_instance(WUIXA_IScalarTransitionFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXA_ScalarTransition** out);
 
-/* Windows.UI.Xaml.ISetterFactory */
-/* Windows.UI.Xaml.ISetterFactory.CreateInstance(targetProperty) */
 HRESULT wuixa_setter_factory_create_instance(WUIXA_ISetterFactory *self, WUIXA_DependencyProperty* targetProperty, IInspectable* value, WUIXA_Setter** out);
 
-/* Windows.UI.Xaml.ISizeHelperStatics */
-/* Windows.UI.Xaml.ISizeHelperStatics.get_Empty() */
 HRESULT wuixa_size_helper_statics_get__empty(WUIXA_ISizeHelperStatics *self, WF_Size *value);
 
-/* Windows.UI.Xaml.ISizeHelperStatics.FromDimensions(width, height) */
 HRESULT wuixa_size_helper_statics_from_dimensions(WUIXA_ISizeHelperStatics *self, float width, float height, WF_Size *out);
 
-/* Windows.UI.Xaml.ISizeHelperStatics.GetIsEmpty(target) */
 HRESULT wuixa_size_helper_statics_get_is_empty(WUIXA_ISizeHelperStatics *self, WF_Size target, BOOL *out);
 
-/* Windows.UI.Xaml.ISizeHelperStatics.Equals(target) */
 HRESULT wuixa_size_helper_statics_equals(WUIXA_ISizeHelperStatics *self, WF_Size target, WF_Size value, BOOL *out);
 
-/* Windows.UI.Xaml.IStateTriggerBaseFactory */
-/* Windows.UI.Xaml.IStateTriggerBaseFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixa_state_trigger_base_factory_create_instance(WUIXA_IStateTriggerBaseFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXA_StateTriggerBase** out);
 
-/* Windows.UI.Xaml.IStateTriggerStatics */
-/* Windows.UI.Xaml.IStateTriggerStatics.get_IsActiveProperty() */
 HRESULT wuixa_state_trigger_statics_get__is_active_property(WUIXA_IStateTriggerStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IStyleFactory */
-/* Windows.UI.Xaml.IStyleFactory.CreateInstance(targetType) */
 HRESULT wuixa_style_factory_create_instance(WUIXA_IStyleFactory *self, WUIXAIN_TypeName targetType, WUIXA_Style** out);
 
-/* Windows.UI.Xaml.ITargetPropertyPathFactory */
-/* Windows.UI.Xaml.ITargetPropertyPathFactory.CreateInstance(targetProperty) */
 HRESULT wuixa_target_property_path_factory_create_instance(WUIXA_ITargetPropertyPathFactory *self, WUIXA_DependencyProperty* targetProperty, WUIXA_TargetPropertyPath** out);
 
-/* Windows.UI.Xaml.IThicknessHelperStatics */
-/* Windows.UI.Xaml.IThicknessHelperStatics.FromLengths(left, top, right, bottom) */
 HRESULT wuixa_thickness_helper_statics_from_lengths(WUIXA_IThicknessHelperStatics *self, double left, double top, double right, double bottom, WUIXA_Thickness *out);
 
-/* Windows.UI.Xaml.IThicknessHelperStatics.FromUniformLength(uniformLength) */
 HRESULT wuixa_thickness_helper_statics_from_uniform_length(WUIXA_IThicknessHelperStatics *self, double uniformLength, WUIXA_Thickness *out);
 
-/* Windows.UI.Xaml.IUIElementStatics */
-/* Windows.UI.Xaml.IUIElementStatics.get_KeyDownEvent() */
 HRESULT wuixa_u_i_element_statics_get__key_down_event(WUIXA_IUIElementStatics *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_KeyUpEvent() */
 HRESULT wuixa_u_i_element_statics_get__key_up_event(WUIXA_IUIElementStatics *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_PointerEnteredEvent() */
 HRESULT wuixa_u_i_element_statics_get__pointer_entered_event(WUIXA_IUIElementStatics *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_PointerPressedEvent() */
 HRESULT wuixa_u_i_element_statics_get__pointer_pressed_event(WUIXA_IUIElementStatics *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_PointerMovedEvent() */
 HRESULT wuixa_u_i_element_statics_get__pointer_moved_event(WUIXA_IUIElementStatics *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_PointerReleasedEvent() */
 HRESULT wuixa_u_i_element_statics_get__pointer_released_event(WUIXA_IUIElementStatics *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_PointerExitedEvent() */
 HRESULT wuixa_u_i_element_statics_get__pointer_exited_event(WUIXA_IUIElementStatics *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_PointerCaptureLostEvent() */
 HRESULT wuixa_u_i_element_statics_get__pointer_capture_lost_event(WUIXA_IUIElementStatics *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_PointerCanceledEvent() */
 HRESULT wuixa_u_i_element_statics_get__pointer_canceled_event(WUIXA_IUIElementStatics *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_PointerWheelChangedEvent() */
 HRESULT wuixa_u_i_element_statics_get__pointer_wheel_changed_event(WUIXA_IUIElementStatics *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_TappedEvent() */
 HRESULT wuixa_u_i_element_statics_get__tapped_event(WUIXA_IUIElementStatics *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_DoubleTappedEvent() */
 HRESULT wuixa_u_i_element_statics_get__double_tapped_event(WUIXA_IUIElementStatics *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_HoldingEvent() */
 HRESULT wuixa_u_i_element_statics_get__holding_event(WUIXA_IUIElementStatics *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_RightTappedEvent() */
 HRESULT wuixa_u_i_element_statics_get__right_tapped_event(WUIXA_IUIElementStatics *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_ManipulationStartingEvent() */
 HRESULT wuixa_u_i_element_statics_get__manipulation_starting_event(WUIXA_IUIElementStatics *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_ManipulationInertiaStartingEvent() */
 HRESULT wuixa_u_i_element_statics_get__manipulation_inertia_starting_event(WUIXA_IUIElementStatics *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_ManipulationStartedEvent() */
 HRESULT wuixa_u_i_element_statics_get__manipulation_started_event(WUIXA_IUIElementStatics *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_ManipulationDeltaEvent() */
 HRESULT wuixa_u_i_element_statics_get__manipulation_delta_event(WUIXA_IUIElementStatics *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_ManipulationCompletedEvent() */
 HRESULT wuixa_u_i_element_statics_get__manipulation_completed_event(WUIXA_IUIElementStatics *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_DragEnterEvent() */
 HRESULT wuixa_u_i_element_statics_get__drag_enter_event(WUIXA_IUIElementStatics *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_DragLeaveEvent() */
 HRESULT wuixa_u_i_element_statics_get__drag_leave_event(WUIXA_IUIElementStatics *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_DragOverEvent() */
 HRESULT wuixa_u_i_element_statics_get__drag_over_event(WUIXA_IUIElementStatics *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_DropEvent() */
 HRESULT wuixa_u_i_element_statics_get__drop_event(WUIXA_IUIElementStatics *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_AllowDropProperty() */
 HRESULT wuixa_u_i_element_statics_get__allow_drop_property(WUIXA_IUIElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_OpacityProperty() */
 HRESULT wuixa_u_i_element_statics_get__opacity_property(WUIXA_IUIElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_ClipProperty() */
 HRESULT wuixa_u_i_element_statics_get__clip_property(WUIXA_IUIElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_RenderTransformProperty() */
 HRESULT wuixa_u_i_element_statics_get__render_transform_property(WUIXA_IUIElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_ProjectionProperty() */
 HRESULT wuixa_u_i_element_statics_get__projection_property(WUIXA_IUIElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_RenderTransformOriginProperty() */
 HRESULT wuixa_u_i_element_statics_get__render_transform_origin_property(WUIXA_IUIElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_IsHitTestVisibleProperty() */
 HRESULT wuixa_u_i_element_statics_get__is_hit_test_visible_property(WUIXA_IUIElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_VisibilityProperty() */
 HRESULT wuixa_u_i_element_statics_get__visibility_property(WUIXA_IUIElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_UseLayoutRoundingProperty() */
 HRESULT wuixa_u_i_element_statics_get__use_layout_rounding_property(WUIXA_IUIElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_TransitionsProperty() */
 HRESULT wuixa_u_i_element_statics_get__transitions_property(WUIXA_IUIElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_CacheModeProperty() */
 HRESULT wuixa_u_i_element_statics_get__cache_mode_property(WUIXA_IUIElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_IsTapEnabledProperty() */
 HRESULT wuixa_u_i_element_statics_get__is_tap_enabled_property(WUIXA_IUIElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_IsDoubleTapEnabledProperty() */
 HRESULT wuixa_u_i_element_statics_get__is_double_tap_enabled_property(WUIXA_IUIElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_IsRightTapEnabledProperty() */
 HRESULT wuixa_u_i_element_statics_get__is_right_tap_enabled_property(WUIXA_IUIElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_IsHoldingEnabledProperty() */
 HRESULT wuixa_u_i_element_statics_get__is_holding_enabled_property(WUIXA_IUIElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_ManipulationModeProperty() */
 HRESULT wuixa_u_i_element_statics_get__manipulation_mode_property(WUIXA_IUIElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics.get_PointerCapturesProperty() */
 HRESULT wuixa_u_i_element_statics_get__pointer_captures_property(WUIXA_IUIElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics10 */
-/* Windows.UI.Xaml.IUIElementStatics10.get_ShadowProperty() */
 HRESULT wuixa_u_i_element_statics_10_get__shadow_property(WUIXA_IUIElementStatics_10 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics2 */
-/* Windows.UI.Xaml.IUIElementStatics2.get_CompositeModeProperty() */
 HRESULT wuixa_u_i_element_statics_2_get__composite_mode_property(WUIXA_IUIElementStatics_2 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics3 */
-/* Windows.UI.Xaml.IUIElementStatics3.get_Transform3DProperty() */
 HRESULT wuixa_u_i_element_statics_3_get__transform3_d_property(WUIXA_IUIElementStatics_3 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics3.get_CanDragProperty() */
 HRESULT wuixa_u_i_element_statics_3_get__can_drag_property(WUIXA_IUIElementStatics_3 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics3.TryStartDirectManipulation() */
 HRESULT wuixa_u_i_element_statics_3_try_start_direct_manipulation(WUIXA_IUIElementStatics_3 *self, WUIXAIN_Pointer* value, BOOL *out);
 
-/* Windows.UI.Xaml.IUIElementStatics4 */
-/* Windows.UI.Xaml.IUIElementStatics4.get_ContextFlyoutProperty() */
 HRESULT wuixa_u_i_element_statics_4_get__context_flyout_property(WUIXA_IUIElementStatics_4 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics4.get_ExitDisplayModeOnAccessKeyInvokedProperty() */
 HRESULT wuixa_u_i_element_statics_4_get__exit_display_mode_on_access_key_invoked_property(WUIXA_IUIElementStatics_4 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics4.get_IsAccessKeyScopeProperty() */
 HRESULT wuixa_u_i_element_statics_4_get__is_access_key_scope_property(WUIXA_IUIElementStatics_4 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics4.get_AccessKeyScopeOwnerProperty() */
 HRESULT wuixa_u_i_element_statics_4_get__access_key_scope_owner_property(WUIXA_IUIElementStatics_4 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics4.get_AccessKeyProperty() */
 HRESULT wuixa_u_i_element_statics_4_get__access_key_property(WUIXA_IUIElementStatics_4 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics5 */
-/* Windows.UI.Xaml.IUIElementStatics5.get_LightsProperty() */
 HRESULT wuixa_u_i_element_statics_5_get__lights_property(WUIXA_IUIElementStatics_5 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics5.get_KeyTipPlacementModeProperty() */
 HRESULT wuixa_u_i_element_statics_5_get__key_tip_placement_mode_property(WUIXA_IUIElementStatics_5 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics5.get_KeyTipHorizontalOffsetProperty() */
 HRESULT wuixa_u_i_element_statics_5_get__key_tip_horizontal_offset_property(WUIXA_IUIElementStatics_5 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics5.get_KeyTipVerticalOffsetProperty() */
 HRESULT wuixa_u_i_element_statics_5_get__key_tip_vertical_offset_property(WUIXA_IUIElementStatics_5 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics5.get_XYFocusKeyboardNavigationProperty() */
 HRESULT wuixa_u_i_element_statics_5_get__x_y_focus_keyboard_navigation_property(WUIXA_IUIElementStatics_5 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics5.get_XYFocusUpNavigationStrategyProperty() */
 HRESULT wuixa_u_i_element_statics_5_get__x_y_focus_up_navigation_strategy_property(WUIXA_IUIElementStatics_5 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics5.get_XYFocusDownNavigationStrategyProperty() */
 HRESULT wuixa_u_i_element_statics_5_get__x_y_focus_down_navigation_strategy_property(WUIXA_IUIElementStatics_5 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics5.get_XYFocusLeftNavigationStrategyProperty() */
 HRESULT wuixa_u_i_element_statics_5_get__x_y_focus_left_navigation_strategy_property(WUIXA_IUIElementStatics_5 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics5.get_XYFocusRightNavigationStrategyProperty() */
 HRESULT wuixa_u_i_element_statics_5_get__x_y_focus_right_navigation_strategy_property(WUIXA_IUIElementStatics_5 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics5.get_HighContrastAdjustmentProperty() */
 HRESULT wuixa_u_i_element_statics_5_get__high_contrast_adjustment_property(WUIXA_IUIElementStatics_5 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics5.get_TabFocusNavigationProperty() */
 HRESULT wuixa_u_i_element_statics_5_get__tab_focus_navigation_property(WUIXA_IUIElementStatics_5 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics6 */
-/* Windows.UI.Xaml.IUIElementStatics6.get_GettingFocusEvent() */
 HRESULT wuixa_u_i_element_statics_6_get__getting_focus_event(WUIXA_IUIElementStatics_6 *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics6.get_LosingFocusEvent() */
 HRESULT wuixa_u_i_element_statics_6_get__losing_focus_event(WUIXA_IUIElementStatics_6 *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics6.get_NoFocusCandidateFoundEvent() */
 HRESULT wuixa_u_i_element_statics_6_get__no_focus_candidate_found_event(WUIXA_IUIElementStatics_6 *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics7 */
-/* Windows.UI.Xaml.IUIElementStatics7.get_PreviewKeyDownEvent() */
 HRESULT wuixa_u_i_element_statics_7_get__preview_key_down_event(WUIXA_IUIElementStatics_7 *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics7.get_CharacterReceivedEvent() */
 HRESULT wuixa_u_i_element_statics_7_get__character_received_event(WUIXA_IUIElementStatics_7 *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics7.get_PreviewKeyUpEvent() */
 HRESULT wuixa_u_i_element_statics_7_get__preview_key_up_event(WUIXA_IUIElementStatics_7 *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics8 */
-/* Windows.UI.Xaml.IUIElementStatics8.get_BringIntoViewRequestedEvent() */
 HRESULT wuixa_u_i_element_statics_8_get__bring_into_view_requested_event(WUIXA_IUIElementStatics_8 *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics8.get_ContextRequestedEvent() */
 HRESULT wuixa_u_i_element_statics_8_get__context_requested_event(WUIXA_IUIElementStatics_8 *self, WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.IUIElementStatics8.get_KeyTipTargetProperty() */
 HRESULT wuixa_u_i_element_statics_8_get__key_tip_target_property(WUIXA_IUIElementStatics_8 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics8.get_KeyboardAcceleratorPlacementTargetProperty() */
 HRESULT wuixa_u_i_element_statics_8_get__keyboard_accelerator_placement_target_property(WUIXA_IUIElementStatics_8 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics8.get_KeyboardAcceleratorPlacementModeProperty() */
 HRESULT wuixa_u_i_element_statics_8_get__keyboard_accelerator_placement_mode_property(WUIXA_IUIElementStatics_8 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementStatics8.RegisterAsScrollPort(element) */
 HRESULT wuixa_u_i_element_statics_8_register_as_scroll_port(WUIXA_IUIElementStatics_8 *self, WUIXA_UIElement* element);
 
-/* Windows.UI.Xaml.IUIElementStatics9 */
-/* Windows.UI.Xaml.IUIElementStatics9.get_CanBeScrollAnchorProperty() */
 HRESULT wuixa_u_i_element_statics_9_get__can_be_scroll_anchor_property(WUIXA_IUIElementStatics_9 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IUIElementWeakCollectionFactory */
-/* Windows.UI.Xaml.IUIElementWeakCollectionFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixa_u_i_element_weak_collection_factory_create_instance(WUIXA_IUIElementWeakCollectionFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXA_UIElementWeakCollection** out);
 
-/* Windows.UI.Xaml.IVector3TransitionFactory */
-/* Windows.UI.Xaml.IVector3TransitionFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixa_vector3_transition_factory_create_instance(WUIXA_IVector3TransitionFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXA_Vector3Transition** out);
 
-/* Windows.UI.Xaml.IVisualStateManagerFactory */
-/* Windows.UI.Xaml.IVisualStateManagerFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixa_visual_state_manager_factory_create_instance(WUIXA_IVisualStateManagerFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXA_VisualStateManager** out);
 
-/* Windows.UI.Xaml.IVisualStateManagerStatics */
-/* Windows.UI.Xaml.IVisualStateManagerStatics.GetVisualStateGroups(obj) */
 HRESULT wuixa_visual_state_manager_statics_get_visual_state_groups(WUIXA_IVisualStateManagerStatics *self, WUIXA_FrameworkElement* obj, WFOCO_IVector_WUIXA_VisualStateGroup** out);
 
-/* Windows.UI.Xaml.IVisualStateManagerStatics.get_CustomVisualStateManagerProperty() */
 HRESULT wuixa_visual_state_manager_statics_get__custom_visual_state_manager_property(WUIXA_IVisualStateManagerStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.IVisualStateManagerStatics.GetCustomVisualStateManager(obj) */
 HRESULT wuixa_visual_state_manager_statics_get_custom_visual_state_manager(WUIXA_IVisualStateManagerStatics *self, WUIXA_FrameworkElement* obj, WUIXA_VisualStateManager** out);
 
-/* Windows.UI.Xaml.IVisualStateManagerStatics.SetCustomVisualStateManager(obj) */
 HRESULT wuixa_visual_state_manager_statics_set_custom_visual_state_manager(WUIXA_IVisualStateManagerStatics *self, WUIXA_FrameworkElement* obj, WUIXA_VisualStateManager* value);
 
-/* Windows.UI.Xaml.IVisualStateManagerStatics.GoToState(control, stateName, useTransitions) */
 HRESULT wuixa_visual_state_manager_statics_go_to_state(WUIXA_IVisualStateManagerStatics *self, WUIXACO_Control* control, cwinrt_hstring stateName, BOOL useTransitions, BOOL *out);
 
-/* Windows.UI.Xaml.IVisualTransitionFactory */
-/* Windows.UI.Xaml.IVisualTransitionFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixa_visual_transition_factory_create_instance(WUIXA_IVisualTransitionFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXA_VisualTransition** out);
 
-/* Windows.UI.Xaml.IWindowStatics */
-/* Windows.UI.Xaml.IWindowStatics.get_Current() */
 HRESULT wuixa_window_statics_get__current(WUIXA_IWindowStatics *self, WUIXA_Window** value);
 
-/* Windows.UI.Xaml.DispatcherTimer */
-/* Windows.UI.Xaml.DispatcherTimer.get_Interval() */
 HRESULT wuixa_dispatcher_timer_get__interval(WUIXA_DispatcherTimer *self, WF_TimeSpan *value);
 
-/* Windows.UI.Xaml.DispatcherTimer.put_Interval() */
 HRESULT wuixa_dispatcher_timer_put__interval(WUIXA_DispatcherTimer *self, WF_TimeSpan value);
 
-/* Windows.UI.Xaml.DispatcherTimer.get_IsEnabled() */
 HRESULT wuixa_dispatcher_timer_get__is_enabled(WUIXA_DispatcherTimer *self, BOOL *value);
 
-/* Windows.UI.Xaml.DispatcherTimer.Start() */
 HRESULT wuixa_dispatcher_timer_start(WUIXA_DispatcherTimer *self);
 
-/* Windows.UI.Xaml.DispatcherTimer.Stop() */
 HRESULT wuixa_dispatcher_timer_stop(WUIXA_DispatcherTimer *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixa_dispatcher_timer_on_tick(WUIXA_DispatcherTimer *self, cwinrt_event_fn fn, void *ctx);
 void wuixa_dispatcher_timer_off_tick(WUIXA_DispatcherTimer *self, cwinrt_token token);
 
-/* Windows.UI.Xaml.DependencyPropertyChangedEventHandler */
-/* Windows.UI.Xaml.DependencyPropertyChangedEventHandler.Invoke(sender, e) */
 HRESULT wuixa_dependency_property_changed_event_handler_invoke(WUIXA_DependencyPropertyChangedEventHandler *self, IInspectable* sender, WUIXA_DependencyPropertyChangedEventArgs* e);
 
-/* activate Windows.UI.Xaml.DependencyPropertyChangedEventArgs */
 HRESULT wuixa_dependency_property_changed_event_args_new(WUIXA_DependencyPropertyChangedEventArgs **out);
 
-/* Windows.UI.Xaml.DependencyPropertyChangedEventArgs */
-/* Windows.UI.Xaml.DependencyPropertyChangedEventArgs.get_Property() */
 HRESULT wuixa_dependency_property_changed_event_args_get__property(WUIXA_DependencyPropertyChangedEventArgs *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.DependencyPropertyChangedEventArgs.get_OldValue() */
 HRESULT wuixa_dependency_property_changed_event_args_get__old_value(WUIXA_DependencyPropertyChangedEventArgs *self, IInspectable** value);
 
-/* Windows.UI.Xaml.DependencyPropertyChangedEventArgs.get_NewValue() */
 HRESULT wuixa_dependency_property_changed_event_args_get__new_value(WUIXA_DependencyPropertyChangedEventArgs *self, IInspectable** value);
 
-/* Windows.UI.Xaml.DependencyPropertyChangedCallback */
-/* Windows.UI.Xaml.DependencyPropertyChangedCallback.Invoke(sender, dp) */
 HRESULT wuixa_dependency_property_changed_callback_invoke(WUIXA_DependencyPropertyChangedCallback *self, WUIXA_DependencyObject* sender, WUIXA_DependencyProperty* dp);
 
-/* activate Windows.UI.Xaml.DependencyProperty */
 HRESULT wuixa_dependency_property_new(WUIXA_DependencyProperty **out);
 
-/* Windows.UI.Xaml.DependencyProperty */
-/* Windows.UI.Xaml.DependencyProperty.GetMetadata(forType) */
 HRESULT wuixa_dependency_property_get_metadata(WUIXA_DependencyProperty *self, WUIXAIN_TypeName forType, WUIXA_PropertyMetadata** out);
 
-/* Windows.UI.Xaml.DependencyProperty.get_UnsetValue() */
 HRESULT wuixa_dependency_property_get__unset_value(IInspectable** value);
 
-/* Windows.UI.Xaml.DependencyProperty.Register(name, propertyType, ownerType, typeMetadata) */
 HRESULT wuixa_dependency_property_register(cwinrt_hstring name, WUIXAIN_TypeName propertyType, WUIXAIN_TypeName ownerType, WUIXA_PropertyMetadata* typeMetadata, WUIXA_DependencyProperty** out);
 
-/* Windows.UI.Xaml.DependencyProperty.RegisterAttached(name, propertyType, ownerType, defaultMetadata) */
 HRESULT wuixa_dependency_property_register_attached(cwinrt_hstring name, WUIXAIN_TypeName propertyType, WUIXAIN_TypeName ownerType, WUIXA_PropertyMetadata* defaultMetadata, WUIXA_DependencyProperty** out);
 
-/* Windows.UI.Xaml.DependencyObjectCollection */
-/* Windows.UI.Xaml.DependencyObjectCollection.GetAt(index) */
 HRESULT wuixa_dependency_object_collection_get_at(WUIXA_DependencyObjectCollection *self, uint32_t index, WUIXA_DependencyObject** out);
 
-/* Windows.UI.Xaml.DependencyObjectCollection.get_Size() */
 HRESULT wuixa_dependency_object_collection_get__size(WUIXA_DependencyObjectCollection *self, uint32_t *value);
 
-/* Windows.UI.Xaml.DependencyObjectCollection.GetView() */
 HRESULT wuixa_dependency_object_collection_get_view(WUIXA_DependencyObjectCollection *self, WFOCO_IVectorView_WUIXA_DependencyObject** out);
 
-/* Windows.UI.Xaml.DependencyObjectCollection.IndexOf(index) */
 HRESULT wuixa_dependency_object_collection_index_of(WUIXA_DependencyObjectCollection *self, WUIXA_DependencyObject* value, uint32_t index, BOOL *out);
 
-/* Windows.UI.Xaml.DependencyObjectCollection.SetAt(index) */
 HRESULT wuixa_dependency_object_collection_set_at(WUIXA_DependencyObjectCollection *self, uint32_t index, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.DependencyObjectCollection.InsertAt(index) */
 HRESULT wuixa_dependency_object_collection_insert_at(WUIXA_DependencyObjectCollection *self, uint32_t index, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.DependencyObjectCollection.RemoveAt(index) */
 HRESULT wuixa_dependency_object_collection_remove_at(WUIXA_DependencyObjectCollection *self, uint32_t index);
 
-/* Windows.UI.Xaml.DependencyObjectCollection.Append() */
 HRESULT wuixa_dependency_object_collection_append(WUIXA_DependencyObjectCollection *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.DependencyObjectCollection.RemoveAtEnd() */
 HRESULT wuixa_dependency_object_collection_remove_at_end(WUIXA_DependencyObjectCollection *self);
 
-/* Windows.UI.Xaml.DependencyObjectCollection.Clear() */
 HRESULT wuixa_dependency_object_collection_clear(WUIXA_DependencyObjectCollection *self);
 
-/* Windows.UI.Xaml.DependencyObjectCollection.GetMany(startIndex, items) */
 HRESULT wuixa_dependency_object_collection_get_many(WUIXA_DependencyObjectCollection *self, uint32_t startIndex, WUIXA_DependencyObject *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.UI.Xaml.DependencyObjectCollection.ReplaceAll(items) */
 HRESULT wuixa_dependency_object_collection_replace_all(WUIXA_DependencyObjectCollection *self, WUIXA_DependencyObject *items, uint32_t items_len);
 
-/* Windows.UI.Xaml.DependencyObjectCollection.First() */
 HRESULT wuixa_dependency_object_collection_first(WUIXA_DependencyObjectCollection *self, WFOCO_IIterator_WUIXA_DependencyObject** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixa_dependency_object_collection_on_vector_changed(WUIXA_DependencyObjectCollection *self, cwinrt_event_fn fn, void *ctx);
 void wuixa_dependency_object_collection_off_vector_changed(WUIXA_DependencyObjectCollection *self, cwinrt_token token);
 
-/* activate Windows.UI.Xaml.DebugSettings */
 HRESULT wuixa_debug_settings_new(WUIXA_DebugSettings **out);
 
-/* Windows.UI.Xaml.DebugSettings */
-/* Windows.UI.Xaml.DebugSettings.get_EnableFrameRateCounter() */
 HRESULT wuixa_debug_settings_get__enable_frame_rate_counter(WUIXA_DebugSettings *self, BOOL *value);
 
-/* Windows.UI.Xaml.DebugSettings.put_EnableFrameRateCounter() */
 HRESULT wuixa_debug_settings_put__enable_frame_rate_counter(WUIXA_DebugSettings *self, BOOL value);
 
-/* Windows.UI.Xaml.DebugSettings.get_IsBindingTracingEnabled() */
 HRESULT wuixa_debug_settings_get__is_binding_tracing_enabled(WUIXA_DebugSettings *self, BOOL *value);
 
-/* Windows.UI.Xaml.DebugSettings.put_IsBindingTracingEnabled() */
 HRESULT wuixa_debug_settings_put__is_binding_tracing_enabled(WUIXA_DebugSettings *self, BOOL value);
 
-/* Windows.UI.Xaml.DebugSettings.get_IsOverdrawHeatMapEnabled() */
 HRESULT wuixa_debug_settings_get__is_overdraw_heat_map_enabled(WUIXA_DebugSettings *self, BOOL *value);
 
-/* Windows.UI.Xaml.DebugSettings.put_IsOverdrawHeatMapEnabled() */
 HRESULT wuixa_debug_settings_put__is_overdraw_heat_map_enabled(WUIXA_DebugSettings *self, BOOL value);
 
-/* Windows.UI.Xaml.DebugSettings.get_EnableRedrawRegions() */
 HRESULT wuixa_debug_settings_get__enable_redraw_regions(WUIXA_DebugSettings *self, BOOL *value);
 
-/* Windows.UI.Xaml.DebugSettings.put_EnableRedrawRegions() */
 HRESULT wuixa_debug_settings_put__enable_redraw_regions(WUIXA_DebugSettings *self, BOOL value);
 
-/* Windows.UI.Xaml.DebugSettings.get_IsTextPerformanceVisualizationEnabled() */
 HRESULT wuixa_debug_settings_get__is_text_performance_visualization_enabled(WUIXA_DebugSettings *self, BOOL *value);
 
-/* Windows.UI.Xaml.DebugSettings.put_IsTextPerformanceVisualizationEnabled() */
 HRESULT wuixa_debug_settings_put__is_text_performance_visualization_enabled(WUIXA_DebugSettings *self, BOOL value);
 
-/* Windows.UI.Xaml.DebugSettings.get_FailFastOnErrors() */
 HRESULT wuixa_debug_settings_get__fail_fast_on_errors(WUIXA_DebugSettings *self, BOOL *value);
 
-/* Windows.UI.Xaml.DebugSettings.put_FailFastOnErrors() */
 HRESULT wuixa_debug_settings_put__fail_fast_on_errors(WUIXA_DebugSettings *self, BOOL value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixa_debug_settings_on_binding_failed(WUIXA_DebugSettings *self, cwinrt_event_fn fn, void *ctx);
 void wuixa_debug_settings_off_binding_failed(WUIXA_DebugSettings *self, cwinrt_token token);
 
-/* Windows.UI.Xaml.DataTemplateKey */
-/* Windows.UI.Xaml.DataTemplateKey.get_DataType() */
 HRESULT wuixa_data_template_key_get__data_type(WUIXA_DataTemplateKey *self, IInspectable** value);
 
-/* Windows.UI.Xaml.DataTemplateKey.put_DataType() */
 HRESULT wuixa_data_template_key_put__data_type(WUIXA_DataTemplateKey *self, IInspectable* value);
 
-/* Windows.UI.Xaml.DataTemplate */
-/* Windows.UI.Xaml.DataTemplate.LoadContent() */
 HRESULT wuixa_data_template_load_content(WUIXA_DataTemplate *self, WUIXA_DependencyObject** out);
 
-/* Windows.UI.Xaml.DataTemplate.GetElement(args) */
 HRESULT wuixa_data_template_get_element(WUIXA_DataTemplate *self, WUIXA_ElementFactoryGetArgs* args, WUIXA_UIElement** out);
 
-/* Windows.UI.Xaml.DataTemplate.RecycleElement(args) */
 HRESULT wuixa_data_template_recycle_element(WUIXA_DataTemplate *self, WUIXA_ElementFactoryRecycleArgs* args);
 
-/* Windows.UI.Xaml.DataTemplate.get_ExtensionInstanceProperty() */
 HRESULT wuixa_data_template_get__extension_instance_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.DataTemplate.GetExtensionInstance(element) */
 HRESULT wuixa_data_template_get_extension_instance(WUIXA_FrameworkElement* element, WUIXA_IDataTemplateExtension** out);
 
-/* Windows.UI.Xaml.DataTemplate.SetExtensionInstance(element) */
 HRESULT wuixa_data_template_set_extension_instance(WUIXA_FrameworkElement* element, WUIXA_IDataTemplateExtension* value);
 
-/* activate Windows.UI.Xaml.DataContextChangedEventArgs */
 HRESULT wuixa_data_context_changed_event_args_new(WUIXA_DataContextChangedEventArgs **out);
 
-/* Windows.UI.Xaml.DataContextChangedEventArgs */
-/* Windows.UI.Xaml.DataContextChangedEventArgs.get_NewValue() */
 HRESULT wuixa_data_context_changed_event_args_get__new_value(WUIXA_DataContextChangedEventArgs *self, IInspectable** value);
 
-/* Windows.UI.Xaml.DataContextChangedEventArgs.get_Handled() */
 HRESULT wuixa_data_context_changed_event_args_get__handled(WUIXA_DataContextChangedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.DataContextChangedEventArgs.put_Handled() */
 HRESULT wuixa_data_context_changed_event_args_put__handled(WUIXA_DataContextChangedEventArgs *self, BOOL value);
 
-/* Windows.UI.Xaml.LeavingBackgroundEventHandler */
-/* Windows.UI.Xaml.LeavingBackgroundEventHandler.Invoke(sender, e) */
 HRESULT wuixa_leaving_background_event_handler_invoke(WUIXA_LeavingBackgroundEventHandler *self, IInspectable* sender, WAM_LeavingBackgroundEventArgs* e);
 
-/* activate Windows.UI.Xaml.MediaFailedRoutedEventArgs */
 HRESULT wuixa_media_failed_routed_event_args_new(WUIXA_MediaFailedRoutedEventArgs **out);
 
-/* Windows.UI.Xaml.MediaFailedRoutedEventArgs */
-/* Windows.UI.Xaml.MediaFailedRoutedEventArgs.get_ErrorTrace() */
 HRESULT wuixa_media_failed_routed_event_args_get__error_trace(WUIXA_MediaFailedRoutedEventArgs *self, cwinrt_hstring *value);
 
-/* activate Windows.UI.Xaml.PointHelper */
 HRESULT wuixa_point_helper_new(WUIXA_PointHelper **out);
 
-/* Windows.UI.Xaml.PointHelper */
-/* Windows.UI.Xaml.PointHelper.FromCoordinates(x, y) */
 HRESULT wuixa_point_helper_from_coordinates(float x, float y, WF_Point *out);
 
-/* Windows.UI.Xaml.PropertyChangedCallback */
-/* Windows.UI.Xaml.PropertyChangedCallback.Invoke(d, e) */
 HRESULT wuixa_property_changed_callback_invoke(WUIXA_PropertyChangedCallback *self, WUIXA_DependencyObject* d, WUIXA_DependencyPropertyChangedEventArgs* e);
 
-/* Windows.UI.Xaml.PropertyMetadata */
-/* Windows.UI.Xaml.PropertyMetadata.get_DefaultValue() */
 HRESULT wuixa_property_metadata_get__default_value(WUIXA_PropertyMetadata *self, IInspectable** value);
 
-/* Windows.UI.Xaml.PropertyMetadata.get_CreateDefaultValueCallback() */
 HRESULT wuixa_property_metadata_get__create_default_value_callback(WUIXA_PropertyMetadata *self, WUIXA_CreateDefaultValueCallback** value);
 
-/* Windows.UI.Xaml.PropertyMetadata.Create(defaultValue) */
 HRESULT wuixa_property_metadata_create(IInspectable* defaultValue, WUIXA_PropertyMetadata** out);
 
-/* Windows.UI.Xaml.PropertyMetadata.Create(defaultValue, propertyChangedCallback) */
 HRESULT wuixa_property_metadata_create_p_p_p(IInspectable* defaultValue, WUIXA_PropertyChangedCallback* propertyChangedCallback, WUIXA_PropertyMetadata** out);
 
-/* Windows.UI.Xaml.PropertyMetadata.Create(createDefaultValueCallback) */
 HRESULT wuixa_property_metadata_create_p_p(WUIXA_CreateDefaultValueCallback* createDefaultValueCallback, WUIXA_PropertyMetadata** out);
 
-/* Windows.UI.Xaml.PropertyMetadata.Create(createDefaultValueCallback, propertyChangedCallback) */
 HRESULT wuixa_property_metadata_create_p_p_p_x(WUIXA_CreateDefaultValueCallback* createDefaultValueCallback, WUIXA_PropertyChangedCallback* propertyChangedCallback, WUIXA_PropertyMetadata** out);
 
-/* activate Windows.UI.Xaml.PropertyPath */
 HRESULT wuixa_property_path_new(WUIXA_PropertyPath **out);
 
-/* Windows.UI.Xaml.PropertyPath */
-/* Windows.UI.Xaml.PropertyPath.get_Path() */
 HRESULT wuixa_property_path_get__path(WUIXA_PropertyPath *self, cwinrt_hstring *value);
 
-/* activate Windows.UI.Xaml.RectHelper */
 HRESULT wuixa_rect_helper_new(WUIXA_RectHelper **out);
 
-/* Windows.UI.Xaml.RectHelper */
-/* Windows.UI.Xaml.RectHelper.get_Empty() */
 HRESULT wuixa_rect_helper_get__empty(WF_Rect *value);
 
-/* Windows.UI.Xaml.RectHelper.FromCoordinatesAndDimensions(x, y, width, height) */
 HRESULT wuixa_rect_helper_from_coordinates_and_dimensions(float x, float y, float width, float height, WF_Rect *out);
 
-/* Windows.UI.Xaml.RectHelper.FromPoints(point1, point2) */
 HRESULT wuixa_rect_helper_from_points(WF_Point point1, WF_Point point2, WF_Rect *out);
 
-/* Windows.UI.Xaml.RectHelper.FromLocationAndSize(location, size) */
 HRESULT wuixa_rect_helper_from_location_and_size(WF_Point location, WF_Size size, WF_Rect *out);
 
-/* Windows.UI.Xaml.RectHelper.GetIsEmpty(target) */
 HRESULT wuixa_rect_helper_get_is_empty(WF_Rect target, BOOL *out);
 
-/* Windows.UI.Xaml.RectHelper.GetBottom(target) */
 HRESULT wuixa_rect_helper_get_bottom(WF_Rect target, float *out);
 
-/* Windows.UI.Xaml.RectHelper.GetLeft(target) */
 HRESULT wuixa_rect_helper_get_left(WF_Rect target, float *out);
 
-/* Windows.UI.Xaml.RectHelper.GetRight(target) */
 HRESULT wuixa_rect_helper_get_right(WF_Rect target, float *out);
 
-/* Windows.UI.Xaml.RectHelper.GetTop(target) */
 HRESULT wuixa_rect_helper_get_top(WF_Rect target, float *out);
 
-/* Windows.UI.Xaml.RectHelper.Contains(target, point) */
 HRESULT wuixa_rect_helper_contains(WF_Rect target, WF_Point point, BOOL *out);
 
-/* Windows.UI.Xaml.RectHelper.Equals(target) */
 HRESULT wuixa_rect_helper_equals(WF_Rect target, WF_Rect value, BOOL *out);
 
-/* Windows.UI.Xaml.RectHelper.Intersect(target, rect) */
 HRESULT wuixa_rect_helper_intersect(WF_Rect target, WF_Rect rect, WF_Rect *out);
 
-/* Windows.UI.Xaml.RectHelper.Union(target, point) */
 HRESULT wuixa_rect_helper_union(WF_Rect target, WF_Point point, WF_Rect *out);
 
-/* Windows.UI.Xaml.RectHelper.Union(target, rect) */
 HRESULT wuixa_rect_helper_union_rect_rect_rect(WF_Rect target, WF_Rect rect, WF_Rect *out);
 
-/* Windows.UI.Xaml.RoutedEventHandler */
-/* Windows.UI.Xaml.RoutedEventHandler.Invoke(sender, e) */
 HRESULT wuixa_routed_event_handler_invoke(WUIXA_RoutedEventHandler *self, IInspectable* sender, WUIXA_RoutedEventArgs* e);
 
-/* Windows.UI.Xaml.ScalarTransition */
-/* Windows.UI.Xaml.ScalarTransition.get_Duration() */
 HRESULT wuixa_scalar_transition_get__duration(WUIXA_ScalarTransition *self, WF_TimeSpan *value);
 
-/* Windows.UI.Xaml.ScalarTransition.put_Duration() */
 HRESULT wuixa_scalar_transition_put__duration(WUIXA_ScalarTransition *self, WF_TimeSpan value);
 
-/* Windows.UI.Xaml.SetterBase */
-/* Windows.UI.Xaml.SetterBase.get_IsSealed() */
 HRESULT wuixa_setter_base_get__is_sealed(WUIXA_SetterBase *self, BOOL *value);
 
-/* activate Windows.UI.Xaml.Setter */
 HRESULT wuixa_setter_new(WUIXA_Setter **out);
 
-/* Windows.UI.Xaml.Setter */
-/* Windows.UI.Xaml.Setter.get_Property() */
 HRESULT wuixa_setter_get__property(WUIXA_Setter *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Setter.put_Property() */
 HRESULT wuixa_setter_put__property(WUIXA_Setter *self, WUIXA_DependencyProperty* value);
 
-/* Windows.UI.Xaml.Setter.get_Value() */
 HRESULT wuixa_setter_get__value(WUIXA_Setter *self, IInspectable** value);
 
-/* Windows.UI.Xaml.Setter.put_Value() */
 HRESULT wuixa_setter_put__value(WUIXA_Setter *self, IInspectable* value);
 
-/* Windows.UI.Xaml.Setter.get_Target() */
 HRESULT wuixa_setter_get__target(WUIXA_Setter *self, WUIXA_TargetPropertyPath** value);
 
-/* Windows.UI.Xaml.Setter.put_Target() */
 HRESULT wuixa_setter_put__target(WUIXA_Setter *self, WUIXA_TargetPropertyPath* value);
 
-/* activate Windows.UI.Xaml.SetterBaseCollection */
 HRESULT wuixa_setter_base_collection_new(WUIXA_SetterBaseCollection **out);
 
-/* Windows.UI.Xaml.SetterBaseCollection */
-/* Windows.UI.Xaml.SetterBaseCollection.get_IsSealed() */
 HRESULT wuixa_setter_base_collection_get__is_sealed(WUIXA_SetterBaseCollection *self, BOOL *value);
 
-/* Windows.UI.Xaml.SetterBaseCollection.GetAt(index) */
 HRESULT wuixa_setter_base_collection_get_at(WUIXA_SetterBaseCollection *self, uint32_t index, WUIXA_SetterBase** out);
 
-/* Windows.UI.Xaml.SetterBaseCollection.get_Size() */
 HRESULT wuixa_setter_base_collection_get__size(WUIXA_SetterBaseCollection *self, uint32_t *value);
 
-/* Windows.UI.Xaml.SetterBaseCollection.GetView() */
 HRESULT wuixa_setter_base_collection_get_view(WUIXA_SetterBaseCollection *self, WFOCO_IVectorView_WUIXA_SetterBase** out);
 
-/* Windows.UI.Xaml.SetterBaseCollection.IndexOf(index) */
 HRESULT wuixa_setter_base_collection_index_of(WUIXA_SetterBaseCollection *self, WUIXA_SetterBase* value, uint32_t index, BOOL *out);
 
-/* Windows.UI.Xaml.SetterBaseCollection.SetAt(index) */
 HRESULT wuixa_setter_base_collection_set_at(WUIXA_SetterBaseCollection *self, uint32_t index, WUIXA_SetterBase* value);
 
-/* Windows.UI.Xaml.SetterBaseCollection.InsertAt(index) */
 HRESULT wuixa_setter_base_collection_insert_at(WUIXA_SetterBaseCollection *self, uint32_t index, WUIXA_SetterBase* value);
 
-/* Windows.UI.Xaml.SetterBaseCollection.RemoveAt(index) */
 HRESULT wuixa_setter_base_collection_remove_at(WUIXA_SetterBaseCollection *self, uint32_t index);
 
-/* Windows.UI.Xaml.SetterBaseCollection.Append() */
 HRESULT wuixa_setter_base_collection_append(WUIXA_SetterBaseCollection *self, WUIXA_SetterBase* value);
 
-/* Windows.UI.Xaml.SetterBaseCollection.RemoveAtEnd() */
 HRESULT wuixa_setter_base_collection_remove_at_end(WUIXA_SetterBaseCollection *self);
 
-/* Windows.UI.Xaml.SetterBaseCollection.Clear() */
 HRESULT wuixa_setter_base_collection_clear(WUIXA_SetterBaseCollection *self);
 
-/* Windows.UI.Xaml.SetterBaseCollection.GetMany(startIndex, items) */
 HRESULT wuixa_setter_base_collection_get_many(WUIXA_SetterBaseCollection *self, uint32_t startIndex, WUIXA_SetterBase *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.UI.Xaml.SetterBaseCollection.ReplaceAll(items) */
 HRESULT wuixa_setter_base_collection_replace_all(WUIXA_SetterBaseCollection *self, WUIXA_SetterBase *items, uint32_t items_len);
 
-/* Windows.UI.Xaml.SetterBaseCollection.First() */
 HRESULT wuixa_setter_base_collection_first(WUIXA_SetterBaseCollection *self, WFOCO_IIterator_WUIXA_SetterBase** out);
 
-/* activate Windows.UI.Xaml.SizeChangedEventArgs */
 HRESULT wuixa_size_changed_event_args_new(WUIXA_SizeChangedEventArgs **out);
 
-/* Windows.UI.Xaml.SizeChangedEventArgs */
-/* Windows.UI.Xaml.SizeChangedEventArgs.get_PreviousSize() */
 HRESULT wuixa_size_changed_event_args_get__previous_size(WUIXA_SizeChangedEventArgs *self, WF_Size *value);
 
-/* Windows.UI.Xaml.SizeChangedEventArgs.get_NewSize() */
 HRESULT wuixa_size_changed_event_args_get__new_size(WUIXA_SizeChangedEventArgs *self, WF_Size *value);
 
-/* Windows.UI.Xaml.SizeChangedEventHandler */
-/* Windows.UI.Xaml.SizeChangedEventHandler.Invoke(sender, e) */
 HRESULT wuixa_size_changed_event_handler_invoke(WUIXA_SizeChangedEventHandler *self, IInspectable* sender, WUIXA_SizeChangedEventArgs* e);
 
-/* activate Windows.UI.Xaml.SizeHelper */
 HRESULT wuixa_size_helper_new(WUIXA_SizeHelper **out);
 
-/* Windows.UI.Xaml.SizeHelper */
-/* Windows.UI.Xaml.SizeHelper.get_Empty() */
 HRESULT wuixa_size_helper_get__empty(WF_Size *value);
 
-/* Windows.UI.Xaml.SizeHelper.FromDimensions(width, height) */
 HRESULT wuixa_size_helper_from_dimensions(float width, float height, WF_Size *out);
 
-/* Windows.UI.Xaml.SizeHelper.GetIsEmpty(target) */
 HRESULT wuixa_size_helper_get_is_empty(WF_Size target, BOOL *out);
 
-/* Windows.UI.Xaml.SizeHelper.Equals(target) */
 HRESULT wuixa_size_helper_equals(WF_Size target, WF_Size value, BOOL *out);
 
-/* activate Windows.UI.Xaml.StateTrigger */
 HRESULT wuixa_state_trigger_new(WUIXA_StateTrigger **out);
 
-/* Windows.UI.Xaml.StateTrigger */
-/* Windows.UI.Xaml.StateTrigger.get_IsActive() */
 HRESULT wuixa_state_trigger_get__is_active(WUIXA_StateTrigger *self, BOOL *value);
 
-/* Windows.UI.Xaml.StateTrigger.put_IsActive() */
 HRESULT wuixa_state_trigger_put__is_active(WUIXA_StateTrigger *self, BOOL value);
 
-/* Windows.UI.Xaml.StateTrigger.get_IsActiveProperty() */
 HRESULT wuixa_state_trigger_get__is_active_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Style */
 HRESULT wuixa_style_new(WUIXA_Style **out);
 
-/* Windows.UI.Xaml.Style */
-/* Windows.UI.Xaml.Style.get_IsSealed() */
 HRESULT wuixa_style_get__is_sealed(WUIXA_Style *self, BOOL *value);
 
-/* Windows.UI.Xaml.Style.get_Setters() */
 HRESULT wuixa_style_get__setters(WUIXA_Style *self, WUIXA_SetterBaseCollection** value);
 
-/* Windows.UI.Xaml.Style.get_TargetType() */
 HRESULT wuixa_style_get__target_type(WUIXA_Style *self, WUIXAIN_TypeName *value);
 
-/* Windows.UI.Xaml.Style.put_TargetType() */
 HRESULT wuixa_style_put__target_type(WUIXA_Style *self, WUIXAIN_TypeName value);
 
-/* Windows.UI.Xaml.Style.get_BasedOn() */
 HRESULT wuixa_style_get__based_on(WUIXA_Style *self, WUIXA_Style** value);
 
-/* Windows.UI.Xaml.Style.put_BasedOn() */
 HRESULT wuixa_style_put__based_on(WUIXA_Style *self, WUIXA_Style* value);
 
-/* Windows.UI.Xaml.Style.Seal() */
 HRESULT wuixa_style_seal(WUIXA_Style *self);
 
-/* Windows.UI.Xaml.SuspendingEventHandler */
-/* Windows.UI.Xaml.SuspendingEventHandler.Invoke(sender, e) */
 HRESULT wuixa_suspending_event_handler_invoke(WUIXA_SuspendingEventHandler *self, IInspectable* sender, WAM_SuspendingEventArgs* e);
 
-/* activate Windows.UI.Xaml.TargetPropertyPath */
 HRESULT wuixa_target_property_path_new(WUIXA_TargetPropertyPath **out);
 
-/* Windows.UI.Xaml.TargetPropertyPath */
-/* Windows.UI.Xaml.TargetPropertyPath.get_Path() */
 HRESULT wuixa_target_property_path_get__path(WUIXA_TargetPropertyPath *self, WUIXA_PropertyPath** value);
 
-/* Windows.UI.Xaml.TargetPropertyPath.put_Path() */
 HRESULT wuixa_target_property_path_put__path(WUIXA_TargetPropertyPath *self, WUIXA_PropertyPath* value);
 
-/* Windows.UI.Xaml.TargetPropertyPath.get_Target() */
 HRESULT wuixa_target_property_path_get__target(WUIXA_TargetPropertyPath *self, IInspectable** value);
 
-/* Windows.UI.Xaml.TargetPropertyPath.put_Target() */
 HRESULT wuixa_target_property_path_put__target(WUIXA_TargetPropertyPath *self, IInspectable* value);
 
-/* activate Windows.UI.Xaml.ThicknessHelper */
 HRESULT wuixa_thickness_helper_new(WUIXA_ThicknessHelper **out);
 
-/* Windows.UI.Xaml.ThicknessHelper */
-/* Windows.UI.Xaml.ThicknessHelper.FromLengths(left, top, right, bottom) */
 HRESULT wuixa_thickness_helper_from_lengths(double left, double top, double right, double bottom, WUIXA_Thickness *out);
 
-/* Windows.UI.Xaml.ThicknessHelper.FromUniformLength(uniformLength) */
 HRESULT wuixa_thickness_helper_from_uniform_length(double uniformLength, WUIXA_Thickness *out);
 
-/* activate Windows.UI.Xaml.TriggerActionCollection */
 HRESULT wuixa_trigger_action_collection_new(WUIXA_TriggerActionCollection **out);
 
-/* Windows.UI.Xaml.TriggerActionCollection */
-/* Windows.UI.Xaml.TriggerActionCollection.GetAt(index) */
 HRESULT wuixa_trigger_action_collection_get_at(WUIXA_TriggerActionCollection *self, uint32_t index, WUIXA_TriggerAction** out);
 
-/* Windows.UI.Xaml.TriggerActionCollection.get_Size() */
 HRESULT wuixa_trigger_action_collection_get__size(WUIXA_TriggerActionCollection *self, uint32_t *value);
 
-/* Windows.UI.Xaml.TriggerActionCollection.GetView() */
 HRESULT wuixa_trigger_action_collection_get_view(WUIXA_TriggerActionCollection *self, WFOCO_IVectorView_WUIXA_TriggerAction** out);
 
-/* Windows.UI.Xaml.TriggerActionCollection.IndexOf(index) */
 HRESULT wuixa_trigger_action_collection_index_of(WUIXA_TriggerActionCollection *self, WUIXA_TriggerAction* value, uint32_t index, BOOL *out);
 
-/* Windows.UI.Xaml.TriggerActionCollection.SetAt(index) */
 HRESULT wuixa_trigger_action_collection_set_at(WUIXA_TriggerActionCollection *self, uint32_t index, WUIXA_TriggerAction* value);
 
-/* Windows.UI.Xaml.TriggerActionCollection.InsertAt(index) */
 HRESULT wuixa_trigger_action_collection_insert_at(WUIXA_TriggerActionCollection *self, uint32_t index, WUIXA_TriggerAction* value);
 
-/* Windows.UI.Xaml.TriggerActionCollection.RemoveAt(index) */
 HRESULT wuixa_trigger_action_collection_remove_at(WUIXA_TriggerActionCollection *self, uint32_t index);
 
-/* Windows.UI.Xaml.TriggerActionCollection.Append() */
 HRESULT wuixa_trigger_action_collection_append(WUIXA_TriggerActionCollection *self, WUIXA_TriggerAction* value);
 
-/* Windows.UI.Xaml.TriggerActionCollection.RemoveAtEnd() */
 HRESULT wuixa_trigger_action_collection_remove_at_end(WUIXA_TriggerActionCollection *self);
 
-/* Windows.UI.Xaml.TriggerActionCollection.Clear() */
 HRESULT wuixa_trigger_action_collection_clear(WUIXA_TriggerActionCollection *self);
 
-/* Windows.UI.Xaml.TriggerActionCollection.GetMany(startIndex, items) */
 HRESULT wuixa_trigger_action_collection_get_many(WUIXA_TriggerActionCollection *self, uint32_t startIndex, WUIXA_TriggerAction *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.UI.Xaml.TriggerActionCollection.ReplaceAll(items) */
 HRESULT wuixa_trigger_action_collection_replace_all(WUIXA_TriggerActionCollection *self, WUIXA_TriggerAction *items, uint32_t items_len);
 
-/* Windows.UI.Xaml.TriggerActionCollection.First() */
 HRESULT wuixa_trigger_action_collection_first(WUIXA_TriggerActionCollection *self, WFOCO_IIterator_WUIXA_TriggerAction** out);
 
-/* activate Windows.UI.Xaml.TriggerCollection */
 HRESULT wuixa_trigger_collection_new(WUIXA_TriggerCollection **out);
 
-/* Windows.UI.Xaml.TriggerCollection */
-/* Windows.UI.Xaml.TriggerCollection.GetAt(index) */
 HRESULT wuixa_trigger_collection_get_at(WUIXA_TriggerCollection *self, uint32_t index, WUIXA_TriggerBase** out);
 
-/* Windows.UI.Xaml.TriggerCollection.get_Size() */
 HRESULT wuixa_trigger_collection_get__size(WUIXA_TriggerCollection *self, uint32_t *value);
 
-/* Windows.UI.Xaml.TriggerCollection.GetView() */
 HRESULT wuixa_trigger_collection_get_view(WUIXA_TriggerCollection *self, WFOCO_IVectorView_WUIXA_TriggerBase** out);
 
-/* Windows.UI.Xaml.TriggerCollection.IndexOf(index) */
 HRESULT wuixa_trigger_collection_index_of(WUIXA_TriggerCollection *self, WUIXA_TriggerBase* value, uint32_t index, BOOL *out);
 
-/* Windows.UI.Xaml.TriggerCollection.SetAt(index) */
 HRESULT wuixa_trigger_collection_set_at(WUIXA_TriggerCollection *self, uint32_t index, WUIXA_TriggerBase* value);
 
-/* Windows.UI.Xaml.TriggerCollection.InsertAt(index) */
 HRESULT wuixa_trigger_collection_insert_at(WUIXA_TriggerCollection *self, uint32_t index, WUIXA_TriggerBase* value);
 
-/* Windows.UI.Xaml.TriggerCollection.RemoveAt(index) */
 HRESULT wuixa_trigger_collection_remove_at(WUIXA_TriggerCollection *self, uint32_t index);
 
-/* Windows.UI.Xaml.TriggerCollection.Append() */
 HRESULT wuixa_trigger_collection_append(WUIXA_TriggerCollection *self, WUIXA_TriggerBase* value);
 
-/* Windows.UI.Xaml.TriggerCollection.RemoveAtEnd() */
 HRESULT wuixa_trigger_collection_remove_at_end(WUIXA_TriggerCollection *self);
 
-/* Windows.UI.Xaml.TriggerCollection.Clear() */
 HRESULT wuixa_trigger_collection_clear(WUIXA_TriggerCollection *self);
 
-/* Windows.UI.Xaml.TriggerCollection.GetMany(startIndex, items) */
 HRESULT wuixa_trigger_collection_get_many(WUIXA_TriggerCollection *self, uint32_t startIndex, WUIXA_TriggerBase *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.UI.Xaml.TriggerCollection.ReplaceAll(items) */
 HRESULT wuixa_trigger_collection_replace_all(WUIXA_TriggerCollection *self, WUIXA_TriggerBase *items, uint32_t items_len);
 
-/* Windows.UI.Xaml.TriggerCollection.First() */
 HRESULT wuixa_trigger_collection_first(WUIXA_TriggerCollection *self, WFOCO_IIterator_WUIXA_TriggerBase** out);
 
-/* Windows.UI.Xaml.UIElementWeakCollection */
-/* Windows.UI.Xaml.UIElementWeakCollection.GetAt(index) */
 HRESULT wuixa_u_i_element_weak_collection_get_at(WUIXA_UIElementWeakCollection *self, uint32_t index, WUIXA_UIElement** out);
 
-/* Windows.UI.Xaml.UIElementWeakCollection.get_Size() */
 HRESULT wuixa_u_i_element_weak_collection_get__size(WUIXA_UIElementWeakCollection *self, uint32_t *value);
 
-/* Windows.UI.Xaml.UIElementWeakCollection.GetView() */
 HRESULT wuixa_u_i_element_weak_collection_get_view(WUIXA_UIElementWeakCollection *self, WFOCO_IVectorView_WUIXA_UIElement** out);
 
-/* Windows.UI.Xaml.UIElementWeakCollection.IndexOf(index) */
 HRESULT wuixa_u_i_element_weak_collection_index_of(WUIXA_UIElementWeakCollection *self, WUIXA_UIElement* value, uint32_t index, BOOL *out);
 
-/* Windows.UI.Xaml.UIElementWeakCollection.SetAt(index) */
 HRESULT wuixa_u_i_element_weak_collection_set_at(WUIXA_UIElementWeakCollection *self, uint32_t index, WUIXA_UIElement* value);
 
-/* Windows.UI.Xaml.UIElementWeakCollection.InsertAt(index) */
 HRESULT wuixa_u_i_element_weak_collection_insert_at(WUIXA_UIElementWeakCollection *self, uint32_t index, WUIXA_UIElement* value);
 
-/* Windows.UI.Xaml.UIElementWeakCollection.RemoveAt(index) */
 HRESULT wuixa_u_i_element_weak_collection_remove_at(WUIXA_UIElementWeakCollection *self, uint32_t index);
 
-/* Windows.UI.Xaml.UIElementWeakCollection.Append() */
 HRESULT wuixa_u_i_element_weak_collection_append(WUIXA_UIElementWeakCollection *self, WUIXA_UIElement* value);
 
-/* Windows.UI.Xaml.UIElementWeakCollection.RemoveAtEnd() */
 HRESULT wuixa_u_i_element_weak_collection_remove_at_end(WUIXA_UIElementWeakCollection *self);
 
-/* Windows.UI.Xaml.UIElementWeakCollection.Clear() */
 HRESULT wuixa_u_i_element_weak_collection_clear(WUIXA_UIElementWeakCollection *self);
 
-/* Windows.UI.Xaml.UIElementWeakCollection.GetMany(startIndex, items) */
 HRESULT wuixa_u_i_element_weak_collection_get_many(WUIXA_UIElementWeakCollection *self, uint32_t startIndex, WUIXA_UIElement *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.UI.Xaml.UIElementWeakCollection.ReplaceAll(items) */
 HRESULT wuixa_u_i_element_weak_collection_replace_all(WUIXA_UIElementWeakCollection *self, WUIXA_UIElement *items, uint32_t items_len);
 
-/* Windows.UI.Xaml.UIElementWeakCollection.First() */
 HRESULT wuixa_u_i_element_weak_collection_first(WUIXA_UIElementWeakCollection *self, WFOCO_IIterator_WUIXA_UIElement** out);
 
-/* activate Windows.UI.Xaml.UnhandledExceptionEventArgs */
 HRESULT wuixa_unhandled_exception_event_args_new(WUIXA_UnhandledExceptionEventArgs **out);
 
-/* Windows.UI.Xaml.UnhandledExceptionEventArgs */
-/* Windows.UI.Xaml.UnhandledExceptionEventArgs.get_Exception() */
 HRESULT wuixa_unhandled_exception_event_args_get__exception(WUIXA_UnhandledExceptionEventArgs *self, HRESULT *value);
 
-/* Windows.UI.Xaml.UnhandledExceptionEventArgs.get_Message() */
 HRESULT wuixa_unhandled_exception_event_args_get__message(WUIXA_UnhandledExceptionEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.UnhandledExceptionEventArgs.get_Handled() */
 HRESULT wuixa_unhandled_exception_event_args_get__handled(WUIXA_UnhandledExceptionEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.UnhandledExceptionEventArgs.put_Handled() */
 HRESULT wuixa_unhandled_exception_event_args_put__handled(WUIXA_UnhandledExceptionEventArgs *self, BOOL value);
 
-/* Windows.UI.Xaml.UnhandledExceptionEventHandler */
-/* Windows.UI.Xaml.UnhandledExceptionEventHandler.Invoke(sender, e) */
 HRESULT wuixa_unhandled_exception_event_handler_invoke(WUIXA_UnhandledExceptionEventHandler *self, IInspectable* sender, WUIXA_UnhandledExceptionEventArgs* e);
 
-/* Windows.UI.Xaml.Vector3Transition */
-/* Windows.UI.Xaml.Vector3Transition.get_Duration() */
 HRESULT wuixa_vector3_transition_get__duration(WUIXA_Vector3Transition *self, WF_TimeSpan *value);
 
-/* Windows.UI.Xaml.Vector3Transition.put_Duration() */
 HRESULT wuixa_vector3_transition_put__duration(WUIXA_Vector3Transition *self, WF_TimeSpan value);
 
-/* Windows.UI.Xaml.Vector3Transition.get_Components() */
 HRESULT wuixa_vector3_transition_get__components(WUIXA_Vector3Transition *self, WUIXA_Vector3TransitionComponents *value);
 
-/* Windows.UI.Xaml.Vector3Transition.put_Components() */
 HRESULT wuixa_vector3_transition_put__components(WUIXA_Vector3Transition *self, WUIXA_Vector3TransitionComponents value);
 
-/* activate Windows.UI.Xaml.VisualState */
 HRESULT wuixa_visual_state_new(WUIXA_VisualState **out);
 
-/* Windows.UI.Xaml.VisualState */
-/* Windows.UI.Xaml.VisualState.get_Name() */
 HRESULT wuixa_visual_state_get__name(WUIXA_VisualState *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.VisualState.get_Storyboard() */
 HRESULT wuixa_visual_state_get__storyboard(WUIXA_VisualState *self, WUIXAMEAN_Storyboard** value);
 
-/* Windows.UI.Xaml.VisualState.put_Storyboard() */
 HRESULT wuixa_visual_state_put__storyboard(WUIXA_VisualState *self, WUIXAMEAN_Storyboard* value);
 
-/* Windows.UI.Xaml.VisualState.get_Setters() */
 HRESULT wuixa_visual_state_get__setters(WUIXA_VisualState *self, WUIXA_SetterBaseCollection** value);
 
-/* Windows.UI.Xaml.VisualState.get_StateTriggers() */
 HRESULT wuixa_visual_state_get__state_triggers(WUIXA_VisualState *self, WFOCO_IVector_WUIXA_StateTriggerBase** value);
 
-/* activate Windows.UI.Xaml.VisualStateChangedEventArgs */
 HRESULT wuixa_visual_state_changed_event_args_new(WUIXA_VisualStateChangedEventArgs **out);
 
-/* Windows.UI.Xaml.VisualStateChangedEventArgs */
-/* Windows.UI.Xaml.VisualStateChangedEventArgs.get_OldState() */
 HRESULT wuixa_visual_state_changed_event_args_get__old_state(WUIXA_VisualStateChangedEventArgs *self, WUIXA_VisualState** value);
 
-/* Windows.UI.Xaml.VisualStateChangedEventArgs.put_OldState() */
 HRESULT wuixa_visual_state_changed_event_args_put__old_state(WUIXA_VisualStateChangedEventArgs *self, WUIXA_VisualState* value);
 
-/* Windows.UI.Xaml.VisualStateChangedEventArgs.get_NewState() */
 HRESULT wuixa_visual_state_changed_event_args_get__new_state(WUIXA_VisualStateChangedEventArgs *self, WUIXA_VisualState** value);
 
-/* Windows.UI.Xaml.VisualStateChangedEventArgs.put_NewState() */
 HRESULT wuixa_visual_state_changed_event_args_put__new_state(WUIXA_VisualStateChangedEventArgs *self, WUIXA_VisualState* value);
 
-/* Windows.UI.Xaml.VisualStateChangedEventArgs.get_Control() */
 HRESULT wuixa_visual_state_changed_event_args_get__control(WUIXA_VisualStateChangedEventArgs *self, WUIXACO_Control** value);
 
-/* Windows.UI.Xaml.VisualStateChangedEventArgs.put_Control() */
 HRESULT wuixa_visual_state_changed_event_args_put__control(WUIXA_VisualStateChangedEventArgs *self, WUIXACO_Control* value);
 
-/* Windows.UI.Xaml.VisualStateChangedEventHandler */
-/* Windows.UI.Xaml.VisualStateChangedEventHandler.Invoke(sender, e) */
 HRESULT wuixa_visual_state_changed_event_handler_invoke(WUIXA_VisualStateChangedEventHandler *self, IInspectable* sender, WUIXA_VisualStateChangedEventArgs* e);
 
-/* activate Windows.UI.Xaml.VisualStateGroup */
 HRESULT wuixa_visual_state_group_new(WUIXA_VisualStateGroup **out);
 
-/* Windows.UI.Xaml.VisualStateGroup */
-/* Windows.UI.Xaml.VisualStateGroup.get_Name() */
 HRESULT wuixa_visual_state_group_get__name(WUIXA_VisualStateGroup *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.VisualStateGroup.get_Transitions() */
 HRESULT wuixa_visual_state_group_get__transitions(WUIXA_VisualStateGroup *self, WFOCO_IVector_WUIXA_VisualTransition** value);
 
-/* Windows.UI.Xaml.VisualStateGroup.get_States() */
 HRESULT wuixa_visual_state_group_get__states(WUIXA_VisualStateGroup *self, WFOCO_IVector_WUIXA_VisualState** value);
 
-/* Windows.UI.Xaml.VisualStateGroup.get_CurrentState() */
 HRESULT wuixa_visual_state_group_get__current_state(WUIXA_VisualStateGroup *self, WUIXA_VisualState** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixa_visual_state_group_on_current_state_changed(WUIXA_VisualStateGroup *self, cwinrt_event_fn fn, void *ctx);
@@ -4148,117 +3463,76 @@ void wuixa_visual_state_group_off_current_state_changed(WUIXA_VisualStateGroup *
 cwinrt_token wuixa_visual_state_group_on_current_state_changing(WUIXA_VisualStateGroup *self, cwinrt_event_fn fn, void *ctx);
 void wuixa_visual_state_group_off_current_state_changing(WUIXA_VisualStateGroup *self, cwinrt_token token);
 
-/* Windows.UI.Xaml.CreateDefaultValueCallback */
-/* Windows.UI.Xaml.CreateDefaultValueCallback.Invoke() */
 HRESULT wuixa_create_default_value_callback_invoke(WUIXA_CreateDefaultValueCallback *self, IInspectable** out);
 
-/* activate Windows.UI.Xaml.CornerRadiusHelper */
 HRESULT wuixa_corner_radius_helper_new(WUIXA_CornerRadiusHelper **out);
 
-/* Windows.UI.Xaml.CornerRadiusHelper */
-/* Windows.UI.Xaml.CornerRadiusHelper.FromRadii(topLeft, topRight, bottomRight, bottomLeft) */
 HRESULT wuixa_corner_radius_helper_from_radii(double topLeft, double topRight, double bottomRight, double bottomLeft, WUIXA_CornerRadius *out);
 
-/* Windows.UI.Xaml.CornerRadiusHelper.FromUniformRadius(uniformRadius) */
 HRESULT wuixa_corner_radius_helper_from_uniform_radius(double uniformRadius, WUIXA_CornerRadius *out);
 
-/* Windows.UI.Xaml.VisualStateManager */
-/* Windows.UI.Xaml.VisualStateManager.RaiseCurrentStateChanging(stateGroup, oldState, newState, control) */
 HRESULT wuixa_visual_state_manager_raise_current_state_changing(WUIXA_VisualStateManager *self, WUIXA_VisualStateGroup* stateGroup, WUIXA_VisualState* oldState, WUIXA_VisualState* newState, WUIXACO_Control* control);
 
-/* Windows.UI.Xaml.VisualStateManager.RaiseCurrentStateChanged(stateGroup, oldState, newState, control) */
 HRESULT wuixa_visual_state_manager_raise_current_state_changed(WUIXA_VisualStateManager *self, WUIXA_VisualStateGroup* stateGroup, WUIXA_VisualState* oldState, WUIXA_VisualState* newState, WUIXACO_Control* control);
 
-/* Windows.UI.Xaml.VisualStateManager.GoToStateCore(control, templateRoot, stateName, group, state, useTransitions) */
 HRESULT wuixa_visual_state_manager_go_to_state_core(WUIXA_VisualStateManager *self, WUIXACO_Control* control, WUIXA_FrameworkElement* templateRoot, cwinrt_hstring stateName, WUIXA_VisualStateGroup* group, WUIXA_VisualState* state, BOOL useTransitions, BOOL *out);
 
-/* Windows.UI.Xaml.VisualStateManager.GetVisualStateGroups(obj) */
 HRESULT wuixa_visual_state_manager_get_visual_state_groups(WUIXA_FrameworkElement* obj, WFOCO_IVector_WUIXA_VisualStateGroup** out);
 
-/* Windows.UI.Xaml.VisualStateManager.get_CustomVisualStateManagerProperty() */
 HRESULT wuixa_visual_state_manager_get__custom_visual_state_manager_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.VisualStateManager.GetCustomVisualStateManager(obj) */
 HRESULT wuixa_visual_state_manager_get_custom_visual_state_manager(WUIXA_FrameworkElement* obj, WUIXA_VisualStateManager** out);
 
-/* Windows.UI.Xaml.VisualStateManager.SetCustomVisualStateManager(obj) */
 HRESULT wuixa_visual_state_manager_set_custom_visual_state_manager(WUIXA_FrameworkElement* obj, WUIXA_VisualStateManager* value);
 
-/* Windows.UI.Xaml.VisualStateManager.GoToState(control, stateName, useTransitions) */
 HRESULT wuixa_visual_state_manager_go_to_state(WUIXACO_Control* control, cwinrt_hstring stateName, BOOL useTransitions, BOOL *out);
 
-/* Windows.UI.Xaml.VisualTransition */
-/* Windows.UI.Xaml.VisualTransition.get_GeneratedDuration() */
 HRESULT wuixa_visual_transition_get__generated_duration(WUIXA_VisualTransition *self, WUIXA_Duration *value);
 
-/* Windows.UI.Xaml.VisualTransition.put_GeneratedDuration() */
 HRESULT wuixa_visual_transition_put__generated_duration(WUIXA_VisualTransition *self, WUIXA_Duration value);
 
-/* Windows.UI.Xaml.VisualTransition.get_GeneratedEasingFunction() */
 HRESULT wuixa_visual_transition_get__generated_easing_function(WUIXA_VisualTransition *self, WUIXAMEAN_EasingFunctionBase** value);
 
-/* Windows.UI.Xaml.VisualTransition.put_GeneratedEasingFunction() */
 HRESULT wuixa_visual_transition_put__generated_easing_function(WUIXA_VisualTransition *self, WUIXAMEAN_EasingFunctionBase* value);
 
-/* Windows.UI.Xaml.VisualTransition.get_To() */
 HRESULT wuixa_visual_transition_get__to(WUIXA_VisualTransition *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.VisualTransition.put_To() */
 HRESULT wuixa_visual_transition_put__to(WUIXA_VisualTransition *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.VisualTransition.get_From() */
 HRESULT wuixa_visual_transition_get__from(WUIXA_VisualTransition *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.VisualTransition.put_From() */
 HRESULT wuixa_visual_transition_put__from(WUIXA_VisualTransition *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.VisualTransition.get_Storyboard() */
 HRESULT wuixa_visual_transition_get__storyboard(WUIXA_VisualTransition *self, WUIXAMEAN_Storyboard** value);
 
-/* Windows.UI.Xaml.VisualTransition.put_Storyboard() */
 HRESULT wuixa_visual_transition_put__storyboard(WUIXA_VisualTransition *self, WUIXAMEAN_Storyboard* value);
 
-/* activate Windows.UI.Xaml.Window */
 HRESULT wuixa_window_new(WUIXA_Window **out);
 
-/* Windows.UI.Xaml.Window */
-/* Windows.UI.Xaml.Window.get_Bounds() */
 HRESULT wuixa_window_get__bounds(WUIXA_Window *self, WF_Rect *value);
 
-/* Windows.UI.Xaml.Window.get_Visible() */
 HRESULT wuixa_window_get__visible(WUIXA_Window *self, BOOL *value);
 
-/* Windows.UI.Xaml.Window.get_Content() */
 HRESULT wuixa_window_get__content(WUIXA_Window *self, WUIXA_UIElement** value);
 
-/* Windows.UI.Xaml.Window.put_Content() */
 HRESULT wuixa_window_put__content(WUIXA_Window *self, WUIXA_UIElement* value);
 
-/* Windows.UI.Xaml.Window.get_CoreWindow() */
 HRESULT wuixa_window_get__core_window(WUIXA_Window *self, WUICO_CoreWindow** value);
 
-/* Windows.UI.Xaml.Window.get_Dispatcher() */
 HRESULT wuixa_window_get__dispatcher(WUIXA_Window *self, WUICO_CoreDispatcher** value);
 
-/* Windows.UI.Xaml.Window.Activate() */
 HRESULT wuixa_window_activate(WUIXA_Window *self);
 
-/* Windows.UI.Xaml.Window.Close() */
 HRESULT wuixa_window_close(WUIXA_Window *self);
 
-/* Windows.UI.Xaml.Window.SetTitleBar() */
 HRESULT wuixa_window_set_title_bar(WUIXA_Window *self, WUIXA_UIElement* value);
 
-/* Windows.UI.Xaml.Window.get_Compositor() */
 HRESULT wuixa_window_get__compositor(WUIXA_Window *self, WUC_Comp** value);
 
-/* Windows.UI.Xaml.Window.get_UIContext() */
 HRESULT wuixa_window_get__u_i_context(WUIXA_Window *self, WUI_UIContext** value);
 
-/* Windows.UI.Xaml.Window.get_Current() */
 HRESULT wuixa_window_get__current(WUIXA_Window** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixa_window_on_activated(WUIXA_Window *self, cwinrt_event_fn fn, void *ctx);
@@ -4273,326 +3547,215 @@ void wuixa_window_off_size_changed(WUIXA_Window *self, cwinrt_token token);
 cwinrt_token wuixa_window_on_visibility_changed(WUIXA_Window *self, cwinrt_event_fn fn, void *ctx);
 void wuixa_window_off_visibility_changed(WUIXA_Window *self, cwinrt_token token);
 
-/* Windows.UI.Xaml.WindowActivatedEventHandler */
-/* Windows.UI.Xaml.WindowActivatedEventHandler.Invoke(sender, e) */
 HRESULT wuixa_window_activated_event_handler_invoke(WUIXA_WindowActivatedEventHandler *self, IInspectable* sender, WUICO_WindowActivatedEventArgs* e);
 
-/* Windows.UI.Xaml.WindowClosedEventHandler */
-/* Windows.UI.Xaml.WindowClosedEventHandler.Invoke(sender, e) */
 HRESULT wuixa_window_closed_event_handler_invoke(WUIXA_WindowClosedEventHandler *self, IInspectable* sender, WUICO_CoreWindowEventArgs* e);
 
-/* activate Windows.UI.Xaml.WindowCreatedEventArgs */
 HRESULT wuixa_window_created_event_args_new(WUIXA_WindowCreatedEventArgs **out);
 
-/* Windows.UI.Xaml.WindowCreatedEventArgs */
-/* Windows.UI.Xaml.WindowCreatedEventArgs.get_Window() */
 HRESULT wuixa_window_created_event_args_get__window(WUIXA_WindowCreatedEventArgs *self, WUIXA_Window** value);
 
-/* Windows.UI.Xaml.WindowSizeChangedEventHandler */
-/* Windows.UI.Xaml.WindowSizeChangedEventHandler.Invoke(sender, e) */
 HRESULT wuixa_window_size_changed_event_handler_invoke(WUIXA_WindowSizeChangedEventHandler *self, IInspectable* sender, WUICO_WindowSizeChangedEventArgs* e);
 
-/* Windows.UI.Xaml.WindowVisibilityChangedEventHandler */
-/* Windows.UI.Xaml.WindowVisibilityChangedEventHandler.Invoke(sender, e) */
 HRESULT wuixa_window_visibility_changed_event_handler_invoke(WUIXA_WindowVisibilityChangedEventHandler *self, IInspectable* sender, WUICO_VisibilityChangedEventArgs* e);
 
-/* activate Windows.UI.Xaml.XamlRoot */
 HRESULT wuixa_xaml_root_new(WUIXA_XamlRoot **out);
 
-/* Windows.UI.Xaml.XamlRoot */
-/* Windows.UI.Xaml.XamlRoot.get_Content() */
 HRESULT wuixa_xaml_root_get__content(WUIXA_XamlRoot *self, WUIXA_UIElement** value);
 
-/* Windows.UI.Xaml.XamlRoot.get_Size() */
 HRESULT wuixa_xaml_root_get__size(WUIXA_XamlRoot *self, WF_Size *value);
 
-/* Windows.UI.Xaml.XamlRoot.get_RasterizationScale() */
 HRESULT wuixa_xaml_root_get__rasterization_scale(WUIXA_XamlRoot *self, double *value);
 
-/* Windows.UI.Xaml.XamlRoot.get_IsHostVisible() */
 HRESULT wuixa_xaml_root_get__is_host_visible(WUIXA_XamlRoot *self, BOOL *value);
 
-/* Windows.UI.Xaml.XamlRoot.get_UIContext() */
 HRESULT wuixa_xaml_root_get__u_i_context(WUIXA_XamlRoot *self, WUI_UIContext** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixa_xaml_root_on_changed(WUIXA_XamlRoot *self, cwinrt_event_fn fn, void *ctx);
 void wuixa_xaml_root_off_changed(WUIXA_XamlRoot *self, cwinrt_token token);
 
-/* Windows.UI.Xaml.FrameworkElement */
-/* Windows.UI.Xaml.FrameworkElement.get_Triggers() */
 HRESULT wuixa_framework_element_get__triggers(WUIXA_FrameworkElement *self, WUIXA_TriggerCollection** value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_Resources() */
 HRESULT wuixa_framework_element_get__resources(WUIXA_FrameworkElement *self, WUIXA_ResourceDictionary** value);
 
-/* Windows.UI.Xaml.FrameworkElement.put_Resources() */
 HRESULT wuixa_framework_element_put__resources(WUIXA_FrameworkElement *self, WUIXA_ResourceDictionary* value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_Tag() */
 HRESULT wuixa_framework_element_get__tag(WUIXA_FrameworkElement *self, IInspectable** value);
 
-/* Windows.UI.Xaml.FrameworkElement.put_Tag() */
 HRESULT wuixa_framework_element_put__tag(WUIXA_FrameworkElement *self, IInspectable* value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_Language() */
 HRESULT wuixa_framework_element_get__language(WUIXA_FrameworkElement *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.FrameworkElement.put_Language() */
 HRESULT wuixa_framework_element_put__language(WUIXA_FrameworkElement *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_ActualWidth() */
 HRESULT wuixa_framework_element_get__actual_width(WUIXA_FrameworkElement *self, double *value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_ActualHeight() */
 HRESULT wuixa_framework_element_get__actual_height(WUIXA_FrameworkElement *self, double *value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_Width() */
 HRESULT wuixa_framework_element_get__width(WUIXA_FrameworkElement *self, double *value);
 
-/* Windows.UI.Xaml.FrameworkElement.put_Width() */
 HRESULT wuixa_framework_element_put__width(WUIXA_FrameworkElement *self, double value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_Height() */
 HRESULT wuixa_framework_element_get__height(WUIXA_FrameworkElement *self, double *value);
 
-/* Windows.UI.Xaml.FrameworkElement.put_Height() */
 HRESULT wuixa_framework_element_put__height(WUIXA_FrameworkElement *self, double value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_MinWidth() */
 HRESULT wuixa_framework_element_get__min_width(WUIXA_FrameworkElement *self, double *value);
 
-/* Windows.UI.Xaml.FrameworkElement.put_MinWidth() */
 HRESULT wuixa_framework_element_put__min_width(WUIXA_FrameworkElement *self, double value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_MaxWidth() */
 HRESULT wuixa_framework_element_get__max_width(WUIXA_FrameworkElement *self, double *value);
 
-/* Windows.UI.Xaml.FrameworkElement.put_MaxWidth() */
 HRESULT wuixa_framework_element_put__max_width(WUIXA_FrameworkElement *self, double value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_MinHeight() */
 HRESULT wuixa_framework_element_get__min_height(WUIXA_FrameworkElement *self, double *value);
 
-/* Windows.UI.Xaml.FrameworkElement.put_MinHeight() */
 HRESULT wuixa_framework_element_put__min_height(WUIXA_FrameworkElement *self, double value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_MaxHeight() */
 HRESULT wuixa_framework_element_get__max_height(WUIXA_FrameworkElement *self, double *value);
 
-/* Windows.UI.Xaml.FrameworkElement.put_MaxHeight() */
 HRESULT wuixa_framework_element_put__max_height(WUIXA_FrameworkElement *self, double value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_HorizontalAlignment() */
 HRESULT wuixa_framework_element_get__horizontal_alignment(WUIXA_FrameworkElement *self, WUIXA_HorizontalAlignment *value);
 
-/* Windows.UI.Xaml.FrameworkElement.put_HorizontalAlignment() */
 HRESULT wuixa_framework_element_put__horizontal_alignment(WUIXA_FrameworkElement *self, WUIXA_HorizontalAlignment value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_VerticalAlignment() */
 HRESULT wuixa_framework_element_get__vertical_alignment(WUIXA_FrameworkElement *self, WUIXA_VerticalAlignment *value);
 
-/* Windows.UI.Xaml.FrameworkElement.put_VerticalAlignment() */
 HRESULT wuixa_framework_element_put__vertical_alignment(WUIXA_FrameworkElement *self, WUIXA_VerticalAlignment value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_Margin() */
 HRESULT wuixa_framework_element_get__margin(WUIXA_FrameworkElement *self, WUIXA_Thickness *value);
 
-/* Windows.UI.Xaml.FrameworkElement.put_Margin() */
 HRESULT wuixa_framework_element_put__margin(WUIXA_FrameworkElement *self, WUIXA_Thickness value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_Name() */
 HRESULT wuixa_framework_element_get__name(WUIXA_FrameworkElement *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.FrameworkElement.put_Name() */
 HRESULT wuixa_framework_element_put__name(WUIXA_FrameworkElement *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_BaseUri() */
 HRESULT wuixa_framework_element_get__base_uri(WUIXA_FrameworkElement *self, WF_Uri** value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_DataContext() */
 HRESULT wuixa_framework_element_get__data_context(WUIXA_FrameworkElement *self, IInspectable** value);
 
-/* Windows.UI.Xaml.FrameworkElement.put_DataContext() */
 HRESULT wuixa_framework_element_put__data_context(WUIXA_FrameworkElement *self, IInspectable* value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_Style() */
 HRESULT wuixa_framework_element_get__style(WUIXA_FrameworkElement *self, WUIXA_Style** value);
 
-/* Windows.UI.Xaml.FrameworkElement.put_Style() */
 HRESULT wuixa_framework_element_put__style(WUIXA_FrameworkElement *self, WUIXA_Style* value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_Parent() */
 HRESULT wuixa_framework_element_get__parent(WUIXA_FrameworkElement *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_FlowDirection() */
 HRESULT wuixa_framework_element_get__flow_direction(WUIXA_FrameworkElement *self, WUIXA_FlowDirection *value);
 
-/* Windows.UI.Xaml.FrameworkElement.put_FlowDirection() */
 HRESULT wuixa_framework_element_put__flow_direction(WUIXA_FrameworkElement *self, WUIXA_FlowDirection value);
 
-/* Windows.UI.Xaml.FrameworkElement.FindName(name) */
 HRESULT wuixa_framework_element_find_name(WUIXA_FrameworkElement *self, cwinrt_hstring name, IInspectable** out);
 
-/* Windows.UI.Xaml.FrameworkElement.SetBinding(dp, binding) */
 HRESULT wuixa_framework_element_set_binding(WUIXA_FrameworkElement *self, WUIXA_DependencyProperty* dp, WUIXADA_BindingBase* binding);
 
-/* Windows.UI.Xaml.FrameworkElement.get_RequestedTheme() */
 HRESULT wuixa_framework_element_get__requested_theme(WUIXA_FrameworkElement *self, WUIXA_ElementTheme *value);
 
-/* Windows.UI.Xaml.FrameworkElement.put_RequestedTheme() */
 HRESULT wuixa_framework_element_put__requested_theme(WUIXA_FrameworkElement *self, WUIXA_ElementTheme value);
 
-/* Windows.UI.Xaml.FrameworkElement.GetBindingExpression(dp) */
 HRESULT wuixa_framework_element_get_binding_expression(WUIXA_FrameworkElement *self, WUIXA_DependencyProperty* dp, WUIXADA_BindingExpression** out);
 
-/* Windows.UI.Xaml.FrameworkElement.get_AllowFocusOnInteraction() */
 HRESULT wuixa_framework_element_get__allow_focus_on_interaction(WUIXA_FrameworkElement *self, BOOL *value);
 
-/* Windows.UI.Xaml.FrameworkElement.put_AllowFocusOnInteraction() */
 HRESULT wuixa_framework_element_put__allow_focus_on_interaction(WUIXA_FrameworkElement *self, BOOL value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_FocusVisualMargin() */
 HRESULT wuixa_framework_element_get__focus_visual_margin(WUIXA_FrameworkElement *self, WUIXA_Thickness *value);
 
-/* Windows.UI.Xaml.FrameworkElement.put_FocusVisualMargin() */
 HRESULT wuixa_framework_element_put__focus_visual_margin(WUIXA_FrameworkElement *self, WUIXA_Thickness value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_FocusVisualSecondaryThickness() */
 HRESULT wuixa_framework_element_get__focus_visual_secondary_thickness(WUIXA_FrameworkElement *self, WUIXA_Thickness *value);
 
-/* Windows.UI.Xaml.FrameworkElement.put_FocusVisualSecondaryThickness() */
 HRESULT wuixa_framework_element_put__focus_visual_secondary_thickness(WUIXA_FrameworkElement *self, WUIXA_Thickness value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_FocusVisualPrimaryThickness() */
 HRESULT wuixa_framework_element_get__focus_visual_primary_thickness(WUIXA_FrameworkElement *self, WUIXA_Thickness *value);
 
-/* Windows.UI.Xaml.FrameworkElement.put_FocusVisualPrimaryThickness() */
 HRESULT wuixa_framework_element_put__focus_visual_primary_thickness(WUIXA_FrameworkElement *self, WUIXA_Thickness value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_FocusVisualSecondaryBrush() */
 HRESULT wuixa_framework_element_get__focus_visual_secondary_brush(WUIXA_FrameworkElement *self, WUIXAME_Brush** value);
 
-/* Windows.UI.Xaml.FrameworkElement.put_FocusVisualSecondaryBrush() */
 HRESULT wuixa_framework_element_put__focus_visual_secondary_brush(WUIXA_FrameworkElement *self, WUIXAME_Brush* value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_FocusVisualPrimaryBrush() */
 HRESULT wuixa_framework_element_get__focus_visual_primary_brush(WUIXA_FrameworkElement *self, WUIXAME_Brush** value);
 
-/* Windows.UI.Xaml.FrameworkElement.put_FocusVisualPrimaryBrush() */
 HRESULT wuixa_framework_element_put__focus_visual_primary_brush(WUIXA_FrameworkElement *self, WUIXAME_Brush* value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_AllowFocusWhenDisabled() */
 HRESULT wuixa_framework_element_get__allow_focus_when_disabled(WUIXA_FrameworkElement *self, BOOL *value);
 
-/* Windows.UI.Xaml.FrameworkElement.put_AllowFocusWhenDisabled() */
 HRESULT wuixa_framework_element_put__allow_focus_when_disabled(WUIXA_FrameworkElement *self, BOOL value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_ActualTheme() */
 HRESULT wuixa_framework_element_get__actual_theme(WUIXA_FrameworkElement *self, WUIXA_ElementTheme *value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_IsLoaded() */
 HRESULT wuixa_framework_element_get__is_loaded(WUIXA_FrameworkElement *self, BOOL *value);
 
-/* Windows.UI.Xaml.FrameworkElement.InvalidateViewport() */
 HRESULT wuixa_framework_element_invalidate_viewport(WUIXA_FrameworkElement *self);
 
-/* Windows.UI.Xaml.FrameworkElement.MeasureOverride(availableSize) */
 HRESULT wuixa_framework_element_measure_override(WUIXA_FrameworkElement *self, WF_Size availableSize, WF_Size *out);
 
-/* Windows.UI.Xaml.FrameworkElement.ArrangeOverride(finalSize) */
 HRESULT wuixa_framework_element_arrange_override(WUIXA_FrameworkElement *self, WF_Size finalSize, WF_Size *out);
 
-/* Windows.UI.Xaml.FrameworkElement.OnApplyTemplate() */
 HRESULT wuixa_framework_element_handle_apply_template(WUIXA_FrameworkElement *self);
 
-/* Windows.UI.Xaml.FrameworkElement.GoToElementStateCore(stateName, useTransitions) */
 HRESULT wuixa_framework_element_go_to_element_state_core(WUIXA_FrameworkElement *self, cwinrt_hstring stateName, BOOL useTransitions, BOOL *out);
 
-/* Windows.UI.Xaml.FrameworkElement.get_ActualThemeProperty() */
 HRESULT wuixa_framework_element_get__actual_theme_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.FrameworkElement.DeferTree(element) */
 HRESULT wuixa_framework_element_defer_tree(WUIXA_DependencyObject* element);
 
-/* Windows.UI.Xaml.FrameworkElement.get_AllowFocusOnInteractionProperty() */
 HRESULT wuixa_framework_element_get__allow_focus_on_interaction_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_FocusVisualMarginProperty() */
 HRESULT wuixa_framework_element_get__focus_visual_margin_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_FocusVisualSecondaryThicknessProperty() */
 HRESULT wuixa_framework_element_get__focus_visual_secondary_thickness_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_FocusVisualPrimaryThicknessProperty() */
 HRESULT wuixa_framework_element_get__focus_visual_primary_thickness_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_FocusVisualSecondaryBrushProperty() */
 HRESULT wuixa_framework_element_get__focus_visual_secondary_brush_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_FocusVisualPrimaryBrushProperty() */
 HRESULT wuixa_framework_element_get__focus_visual_primary_brush_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_AllowFocusWhenDisabledProperty() */
 HRESULT wuixa_framework_element_get__allow_focus_when_disabled_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_RequestedThemeProperty() */
 HRESULT wuixa_framework_element_get__requested_theme_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_TagProperty() */
 HRESULT wuixa_framework_element_get__tag_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_LanguageProperty() */
 HRESULT wuixa_framework_element_get__language_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_ActualWidthProperty() */
 HRESULT wuixa_framework_element_get__actual_width_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_ActualHeightProperty() */
 HRESULT wuixa_framework_element_get__actual_height_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_WidthProperty() */
 HRESULT wuixa_framework_element_get__width_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_HeightProperty() */
 HRESULT wuixa_framework_element_get__height_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_MinWidthProperty() */
 HRESULT wuixa_framework_element_get__min_width_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_MaxWidthProperty() */
 HRESULT wuixa_framework_element_get__max_width_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_MinHeightProperty() */
 HRESULT wuixa_framework_element_get__min_height_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_MaxHeightProperty() */
 HRESULT wuixa_framework_element_get__max_height_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_HorizontalAlignmentProperty() */
 HRESULT wuixa_framework_element_get__horizontal_alignment_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_VerticalAlignmentProperty() */
 HRESULT wuixa_framework_element_get__vertical_alignment_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_MarginProperty() */
 HRESULT wuixa_framework_element_get__margin_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_NameProperty() */
 HRESULT wuixa_framework_element_get__name_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_DataContextProperty() */
 HRESULT wuixa_framework_element_get__data_context_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_StyleProperty() */
 HRESULT wuixa_framework_element_get__style_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.FrameworkElement.get_FlowDirectionProperty() */
 HRESULT wuixa_framework_element_get__flow_direction_property(WUIXA_DependencyProperty** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixa_framework_element_on_loaded(WUIXA_FrameworkElement *self, cwinrt_event_fn fn, void *ctx);
@@ -4619,635 +3782,424 @@ void wuixa_framework_element_off_actual_theme_changed(WUIXA_FrameworkElement *se
 cwinrt_token wuixa_framework_element_on_effective_viewport_changed(WUIXA_FrameworkElement *self, cwinrt_event_fn fn, void *ctx);
 void wuixa_framework_element_off_effective_viewport_changed(WUIXA_FrameworkElement *self, cwinrt_token token);
 
-/* Windows.UI.Xaml.UIElement */
-/* Windows.UI.Xaml.UIElement.get_DesiredSize() */
 HRESULT wuixa_u_i_element_get__desired_size(WUIXA_UIElement *self, WF_Size *value);
 
-/* Windows.UI.Xaml.UIElement.get_AllowDrop() */
 HRESULT wuixa_u_i_element_get__allow_drop(WUIXA_UIElement *self, BOOL *value);
 
-/* Windows.UI.Xaml.UIElement.put_AllowDrop() */
 HRESULT wuixa_u_i_element_put__allow_drop(WUIXA_UIElement *self, BOOL value);
 
-/* Windows.UI.Xaml.UIElement.get_Opacity() */
 HRESULT wuixa_u_i_element_get__opacity(WUIXA_UIElement *self, double *value);
 
-/* Windows.UI.Xaml.UIElement.put_Opacity() */
 HRESULT wuixa_u_i_element_put__opacity(WUIXA_UIElement *self, double value);
 
-/* Windows.UI.Xaml.UIElement.get_Clip() */
 HRESULT wuixa_u_i_element_get__clip(WUIXA_UIElement *self, WUIXAME_RectangleGeometry** value);
 
-/* Windows.UI.Xaml.UIElement.put_Clip() */
 HRESULT wuixa_u_i_element_put__clip(WUIXA_UIElement *self, WUIXAME_RectangleGeometry* value);
 
-/* Windows.UI.Xaml.UIElement.get_RenderTransform() */
 HRESULT wuixa_u_i_element_get__render_transform(WUIXA_UIElement *self, WUIXAME_Transform** value);
 
-/* Windows.UI.Xaml.UIElement.put_RenderTransform() */
 HRESULT wuixa_u_i_element_put__render_transform(WUIXA_UIElement *self, WUIXAME_Transform* value);
 
-/* Windows.UI.Xaml.UIElement.get_Projection() */
 HRESULT wuixa_u_i_element_get__projection(WUIXA_UIElement *self, WUIXAME_Projection** value);
 
-/* Windows.UI.Xaml.UIElement.put_Projection() */
 HRESULT wuixa_u_i_element_put__projection(WUIXA_UIElement *self, WUIXAME_Projection* value);
 
-/* Windows.UI.Xaml.UIElement.get_RenderTransformOrigin() */
 HRESULT wuixa_u_i_element_get__render_transform_origin(WUIXA_UIElement *self, WF_Point *value);
 
-/* Windows.UI.Xaml.UIElement.put_RenderTransformOrigin() */
 HRESULT wuixa_u_i_element_put__render_transform_origin(WUIXA_UIElement *self, WF_Point value);
 
-/* Windows.UI.Xaml.UIElement.get_IsHitTestVisible() */
 HRESULT wuixa_u_i_element_get__is_hit_test_visible(WUIXA_UIElement *self, BOOL *value);
 
-/* Windows.UI.Xaml.UIElement.put_IsHitTestVisible() */
 HRESULT wuixa_u_i_element_put__is_hit_test_visible(WUIXA_UIElement *self, BOOL value);
 
-/* Windows.UI.Xaml.UIElement.get_Visibility() */
 HRESULT wuixa_u_i_element_get__visibility(WUIXA_UIElement *self, WUIXA_Visibility *value);
 
-/* Windows.UI.Xaml.UIElement.put_Visibility() */
 HRESULT wuixa_u_i_element_put__visibility(WUIXA_UIElement *self, WUIXA_Visibility value);
 
-/* Windows.UI.Xaml.UIElement.get_RenderSize() */
 HRESULT wuixa_u_i_element_get__render_size(WUIXA_UIElement *self, WF_Size *value);
 
-/* Windows.UI.Xaml.UIElement.get_UseLayoutRounding() */
 HRESULT wuixa_u_i_element_get__use_layout_rounding(WUIXA_UIElement *self, BOOL *value);
 
-/* Windows.UI.Xaml.UIElement.put_UseLayoutRounding() */
 HRESULT wuixa_u_i_element_put__use_layout_rounding(WUIXA_UIElement *self, BOOL value);
 
-/* Windows.UI.Xaml.UIElement.get_Transitions() */
 HRESULT wuixa_u_i_element_get__transitions(WUIXA_UIElement *self, WUIXAMEAN_TransitionCollection** value);
 
-/* Windows.UI.Xaml.UIElement.put_Transitions() */
 HRESULT wuixa_u_i_element_put__transitions(WUIXA_UIElement *self, WUIXAMEAN_TransitionCollection* value);
 
-/* Windows.UI.Xaml.UIElement.get_CacheMode() */
 HRESULT wuixa_u_i_element_get__cache_mode(WUIXA_UIElement *self, WUIXAME_CacheMode** value);
 
-/* Windows.UI.Xaml.UIElement.put_CacheMode() */
 HRESULT wuixa_u_i_element_put__cache_mode(WUIXA_UIElement *self, WUIXAME_CacheMode* value);
 
-/* Windows.UI.Xaml.UIElement.get_IsTapEnabled() */
 HRESULT wuixa_u_i_element_get__is_tap_enabled(WUIXA_UIElement *self, BOOL *value);
 
-/* Windows.UI.Xaml.UIElement.put_IsTapEnabled() */
 HRESULT wuixa_u_i_element_put__is_tap_enabled(WUIXA_UIElement *self, BOOL value);
 
-/* Windows.UI.Xaml.UIElement.get_IsDoubleTapEnabled() */
 HRESULT wuixa_u_i_element_get__is_double_tap_enabled(WUIXA_UIElement *self, BOOL *value);
 
-/* Windows.UI.Xaml.UIElement.put_IsDoubleTapEnabled() */
 HRESULT wuixa_u_i_element_put__is_double_tap_enabled(WUIXA_UIElement *self, BOOL value);
 
-/* Windows.UI.Xaml.UIElement.get_IsRightTapEnabled() */
 HRESULT wuixa_u_i_element_get__is_right_tap_enabled(WUIXA_UIElement *self, BOOL *value);
 
-/* Windows.UI.Xaml.UIElement.put_IsRightTapEnabled() */
 HRESULT wuixa_u_i_element_put__is_right_tap_enabled(WUIXA_UIElement *self, BOOL value);
 
-/* Windows.UI.Xaml.UIElement.get_IsHoldingEnabled() */
 HRESULT wuixa_u_i_element_get__is_holding_enabled(WUIXA_UIElement *self, BOOL *value);
 
-/* Windows.UI.Xaml.UIElement.put_IsHoldingEnabled() */
 HRESULT wuixa_u_i_element_put__is_holding_enabled(WUIXA_UIElement *self, BOOL value);
 
-/* Windows.UI.Xaml.UIElement.get_ManipulationMode() */
 HRESULT wuixa_u_i_element_get__manipulation_mode(WUIXA_UIElement *self, WUIXAIN_ManipulationModes *value);
 
-/* Windows.UI.Xaml.UIElement.put_ManipulationMode() */
 HRESULT wuixa_u_i_element_put__manipulation_mode(WUIXA_UIElement *self, WUIXAIN_ManipulationModes value);
 
-/* Windows.UI.Xaml.UIElement.get_PointerCaptures() */
 HRESULT wuixa_u_i_element_get__pointer_captures(WUIXA_UIElement *self, WFOCO_IVectorView_WUIXAIN_Pointer** value);
 
-/* Windows.UI.Xaml.UIElement.Measure(availableSize) */
 HRESULT wuixa_u_i_element_measure(WUIXA_UIElement *self, WF_Size availableSize);
 
-/* Windows.UI.Xaml.UIElement.Arrange(finalRect) */
 HRESULT wuixa_u_i_element_arrange(WUIXA_UIElement *self, WF_Rect finalRect);
 
-/* Windows.UI.Xaml.UIElement.CapturePointer() */
 HRESULT wuixa_u_i_element_capture_pointer(WUIXA_UIElement *self, WUIXAIN_Pointer* value, BOOL *out);
 
-/* Windows.UI.Xaml.UIElement.ReleasePointerCapture() */
 HRESULT wuixa_u_i_element_release_pointer_capture(WUIXA_UIElement *self, WUIXAIN_Pointer* value);
 
-/* Windows.UI.Xaml.UIElement.ReleasePointerCaptures() */
 HRESULT wuixa_u_i_element_release_pointer_captures(WUIXA_UIElement *self);
 
-/* Windows.UI.Xaml.UIElement.AddHandler(routedEvent, handler, handledEventsToo) */
 HRESULT wuixa_u_i_element_add_handler(WUIXA_UIElement *self, WUIXA_RoutedEvent* routedEvent, IInspectable* handler, BOOL handledEventsToo);
 
-/* Windows.UI.Xaml.UIElement.RemoveHandler(routedEvent, handler) */
 HRESULT wuixa_u_i_element_remove_handler(WUIXA_UIElement *self, WUIXA_RoutedEvent* routedEvent, IInspectable* handler);
 
-/* Windows.UI.Xaml.UIElement.TransformToVisual(visual) */
 HRESULT wuixa_u_i_element_transform_to_visual(WUIXA_UIElement *self, WUIXA_UIElement* visual, WUIXAME_GeneralTransform** out);
 
-/* Windows.UI.Xaml.UIElement.InvalidateMeasure() */
 HRESULT wuixa_u_i_element_invalidate_measure(WUIXA_UIElement *self);
 
-/* Windows.UI.Xaml.UIElement.InvalidateArrange() */
 HRESULT wuixa_u_i_element_invalidate_arrange(WUIXA_UIElement *self);
 
-/* Windows.UI.Xaml.UIElement.UpdateLayout() */
 HRESULT wuixa_u_i_element_update_layout(WUIXA_UIElement *self);
 
-/* Windows.UI.Xaml.UIElement.get_CompositeMode() */
 HRESULT wuixa_u_i_element_get__composite_mode(WUIXA_UIElement *self, WUIXAME_ElementCompositeMode *value);
 
-/* Windows.UI.Xaml.UIElement.put_CompositeMode() */
 HRESULT wuixa_u_i_element_put__composite_mode(WUIXA_UIElement *self, WUIXAME_ElementCompositeMode value);
 
-/* Windows.UI.Xaml.UIElement.CancelDirectManipulations() */
 HRESULT wuixa_u_i_element_cancel_direct_manipulations(WUIXA_UIElement *self, BOOL *out);
 
-/* Windows.UI.Xaml.UIElement.get_Transform3D() */
 HRESULT wuixa_u_i_element_get__transform3_d(WUIXA_UIElement *self, WUIXAMEME_Transform3D** value);
 
-/* Windows.UI.Xaml.UIElement.put_Transform3D() */
 HRESULT wuixa_u_i_element_put__transform3_d(WUIXA_UIElement *self, WUIXAMEME_Transform3D* value);
 
-/* Windows.UI.Xaml.UIElement.get_CanDrag() */
 HRESULT wuixa_u_i_element_get__can_drag(WUIXA_UIElement *self, BOOL *value);
 
-/* Windows.UI.Xaml.UIElement.put_CanDrag() */
 HRESULT wuixa_u_i_element_put__can_drag(WUIXA_UIElement *self, BOOL value);
 
-/* Windows.UI.Xaml.UIElement.StartDragAsync(pointerPoint) */
 HRESULT wuixa_u_i_element_start_drag_async(WUIXA_UIElement *self, WUIIN_PointerPoint* pointerPoint, WF_IAsyncOperation_WAPDA_DataPackageOperation** out);
 
-/* Windows.UI.Xaml.UIElement.get_ContextFlyout() */
 HRESULT wuixa_u_i_element_get__context_flyout(WUIXA_UIElement *self, WUIXACOPR_FlyoutBase** value);
 
-/* Windows.UI.Xaml.UIElement.put_ContextFlyout() */
 HRESULT wuixa_u_i_element_put__context_flyout(WUIXA_UIElement *self, WUIXACOPR_FlyoutBase* value);
 
-/* Windows.UI.Xaml.UIElement.get_ExitDisplayModeOnAccessKeyInvoked() */
 HRESULT wuixa_u_i_element_get__exit_display_mode_on_access_key_invoked(WUIXA_UIElement *self, BOOL *value);
 
-/* Windows.UI.Xaml.UIElement.put_ExitDisplayModeOnAccessKeyInvoked() */
 HRESULT wuixa_u_i_element_put__exit_display_mode_on_access_key_invoked(WUIXA_UIElement *self, BOOL value);
 
-/* Windows.UI.Xaml.UIElement.get_IsAccessKeyScope() */
 HRESULT wuixa_u_i_element_get__is_access_key_scope(WUIXA_UIElement *self, BOOL *value);
 
-/* Windows.UI.Xaml.UIElement.put_IsAccessKeyScope() */
 HRESULT wuixa_u_i_element_put__is_access_key_scope(WUIXA_UIElement *self, BOOL value);
 
-/* Windows.UI.Xaml.UIElement.get_AccessKeyScopeOwner() */
 HRESULT wuixa_u_i_element_get__access_key_scope_owner(WUIXA_UIElement *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.UIElement.put_AccessKeyScopeOwner() */
 HRESULT wuixa_u_i_element_put__access_key_scope_owner(WUIXA_UIElement *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.UIElement.get_AccessKey() */
 HRESULT wuixa_u_i_element_get__access_key(WUIXA_UIElement *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.UIElement.put_AccessKey() */
 HRESULT wuixa_u_i_element_put__access_key(WUIXA_UIElement *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.UIElement.get_Lights() */
 HRESULT wuixa_u_i_element_get__lights(WUIXA_UIElement *self, WFOCO_IVector_WUIXAME_XamlLight** value);
 
-/* Windows.UI.Xaml.UIElement.get_KeyTipPlacementMode() */
 HRESULT wuixa_u_i_element_get__key_tip_placement_mode(WUIXA_UIElement *self, WUIXAIN_KeyTipPlacementMode *value);
 
-/* Windows.UI.Xaml.UIElement.put_KeyTipPlacementMode() */
 HRESULT wuixa_u_i_element_put__key_tip_placement_mode(WUIXA_UIElement *self, WUIXAIN_KeyTipPlacementMode value);
 
-/* Windows.UI.Xaml.UIElement.get_KeyTipHorizontalOffset() */
 HRESULT wuixa_u_i_element_get__key_tip_horizontal_offset(WUIXA_UIElement *self, double *value);
 
-/* Windows.UI.Xaml.UIElement.put_KeyTipHorizontalOffset() */
 HRESULT wuixa_u_i_element_put__key_tip_horizontal_offset(WUIXA_UIElement *self, double value);
 
-/* Windows.UI.Xaml.UIElement.get_KeyTipVerticalOffset() */
 HRESULT wuixa_u_i_element_get__key_tip_vertical_offset(WUIXA_UIElement *self, double *value);
 
-/* Windows.UI.Xaml.UIElement.put_KeyTipVerticalOffset() */
 HRESULT wuixa_u_i_element_put__key_tip_vertical_offset(WUIXA_UIElement *self, double value);
 
-/* Windows.UI.Xaml.UIElement.get_XYFocusKeyboardNavigation() */
 HRESULT wuixa_u_i_element_get__x_y_focus_keyboard_navigation(WUIXA_UIElement *self, WUIXAIN_XYFocusKeyboardNavigationMode *value);
 
-/* Windows.UI.Xaml.UIElement.put_XYFocusKeyboardNavigation() */
 HRESULT wuixa_u_i_element_put__x_y_focus_keyboard_navigation(WUIXA_UIElement *self, WUIXAIN_XYFocusKeyboardNavigationMode value);
 
-/* Windows.UI.Xaml.UIElement.get_XYFocusUpNavigationStrategy() */
 HRESULT wuixa_u_i_element_get__x_y_focus_up_navigation_strategy(WUIXA_UIElement *self, WUIXAIN_XYFocusNavigationStrategy *value);
 
-/* Windows.UI.Xaml.UIElement.put_XYFocusUpNavigationStrategy() */
 HRESULT wuixa_u_i_element_put__x_y_focus_up_navigation_strategy(WUIXA_UIElement *self, WUIXAIN_XYFocusNavigationStrategy value);
 
-/* Windows.UI.Xaml.UIElement.get_XYFocusDownNavigationStrategy() */
 HRESULT wuixa_u_i_element_get__x_y_focus_down_navigation_strategy(WUIXA_UIElement *self, WUIXAIN_XYFocusNavigationStrategy *value);
 
-/* Windows.UI.Xaml.UIElement.put_XYFocusDownNavigationStrategy() */
 HRESULT wuixa_u_i_element_put__x_y_focus_down_navigation_strategy(WUIXA_UIElement *self, WUIXAIN_XYFocusNavigationStrategy value);
 
-/* Windows.UI.Xaml.UIElement.get_XYFocusLeftNavigationStrategy() */
 HRESULT wuixa_u_i_element_get__x_y_focus_left_navigation_strategy(WUIXA_UIElement *self, WUIXAIN_XYFocusNavigationStrategy *value);
 
-/* Windows.UI.Xaml.UIElement.put_XYFocusLeftNavigationStrategy() */
 HRESULT wuixa_u_i_element_put__x_y_focus_left_navigation_strategy(WUIXA_UIElement *self, WUIXAIN_XYFocusNavigationStrategy value);
 
-/* Windows.UI.Xaml.UIElement.get_XYFocusRightNavigationStrategy() */
 HRESULT wuixa_u_i_element_get__x_y_focus_right_navigation_strategy(WUIXA_UIElement *self, WUIXAIN_XYFocusNavigationStrategy *value);
 
-/* Windows.UI.Xaml.UIElement.put_XYFocusRightNavigationStrategy() */
 HRESULT wuixa_u_i_element_put__x_y_focus_right_navigation_strategy(WUIXA_UIElement *self, WUIXAIN_XYFocusNavigationStrategy value);
 
-/* Windows.UI.Xaml.UIElement.get_HighContrastAdjustment() */
 HRESULT wuixa_u_i_element_get__high_contrast_adjustment(WUIXA_UIElement *self, WUIXA_ElementHighContrastAdjustment *value);
 
-/* Windows.UI.Xaml.UIElement.put_HighContrastAdjustment() */
 HRESULT wuixa_u_i_element_put__high_contrast_adjustment(WUIXA_UIElement *self, WUIXA_ElementHighContrastAdjustment value);
 
-/* Windows.UI.Xaml.UIElement.get_TabFocusNavigation() */
 HRESULT wuixa_u_i_element_get__tab_focus_navigation(WUIXA_UIElement *self, WUIXAIN_KeyboardNavigationMode *value);
 
-/* Windows.UI.Xaml.UIElement.put_TabFocusNavigation() */
 HRESULT wuixa_u_i_element_put__tab_focus_navigation(WUIXA_UIElement *self, WUIXAIN_KeyboardNavigationMode value);
 
-/* Windows.UI.Xaml.UIElement.StartBringIntoView() */
 HRESULT wuixa_u_i_element_start_bring_into_view(WUIXA_UIElement *self);
 
-/* Windows.UI.Xaml.UIElement.StartBringIntoView(options) */
 HRESULT wuixa_u_i_element_start_bring_into_view_p(WUIXA_UIElement *self, WUIXA_BringIntoViewOptions* options);
 
-/* Windows.UI.Xaml.UIElement.get_KeyboardAccelerators() */
 HRESULT wuixa_u_i_element_get__keyboard_accelerators(WUIXA_UIElement *self, WFOCO_IVector_WUIXAIN_KeyboardAccelerator** value);
 
-/* Windows.UI.Xaml.UIElement.TryInvokeKeyboardAccelerator(args) */
 HRESULT wuixa_u_i_element_try_invoke_keyboard_accelerator(WUIXA_UIElement *self, WUIXAIN_ProcessKeyboardAcceleratorEventArgs* args);
 
-/* Windows.UI.Xaml.UIElement.get_KeyTipTarget() */
 HRESULT wuixa_u_i_element_get__key_tip_target(WUIXA_UIElement *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.UIElement.put_KeyTipTarget() */
 HRESULT wuixa_u_i_element_put__key_tip_target(WUIXA_UIElement *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.UIElement.get_KeyboardAcceleratorPlacementTarget() */
 HRESULT wuixa_u_i_element_get__keyboard_accelerator_placement_target(WUIXA_UIElement *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.UIElement.put_KeyboardAcceleratorPlacementTarget() */
 HRESULT wuixa_u_i_element_put__keyboard_accelerator_placement_target(WUIXA_UIElement *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.UIElement.get_KeyboardAcceleratorPlacementMode() */
 HRESULT wuixa_u_i_element_get__keyboard_accelerator_placement_mode(WUIXA_UIElement *self, WUIXAIN_KeyboardAcceleratorPlacementMode *value);
 
-/* Windows.UI.Xaml.UIElement.put_KeyboardAcceleratorPlacementMode() */
 HRESULT wuixa_u_i_element_put__keyboard_accelerator_placement_mode(WUIXA_UIElement *self, WUIXAIN_KeyboardAcceleratorPlacementMode value);
 
-/* Windows.UI.Xaml.UIElement.get_CanBeScrollAnchor() */
 HRESULT wuixa_u_i_element_get__can_be_scroll_anchor(WUIXA_UIElement *self, BOOL *value);
 
-/* Windows.UI.Xaml.UIElement.put_CanBeScrollAnchor() */
 HRESULT wuixa_u_i_element_put__can_be_scroll_anchor(WUIXA_UIElement *self, BOOL value);
 
-/* Windows.UI.Xaml.UIElement.get_OpacityTransition() */
 HRESULT wuixa_u_i_element_get__opacity_transition(WUIXA_UIElement *self, WUIXA_ScalarTransition** value);
 
-/* Windows.UI.Xaml.UIElement.put_OpacityTransition() */
 HRESULT wuixa_u_i_element_put__opacity_transition(WUIXA_UIElement *self, WUIXA_ScalarTransition* value);
 
-/* Windows.UI.Xaml.UIElement.get_Translation() */
 HRESULT wuixa_u_i_element_get__translation(WUIXA_UIElement *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Xaml.UIElement.put_Translation() */
 HRESULT wuixa_u_i_element_put__translation(WUIXA_UIElement *self, WFN_Vector_3 value);
 
-/* Windows.UI.Xaml.UIElement.get_TranslationTransition() */
 HRESULT wuixa_u_i_element_get__translation_transition(WUIXA_UIElement *self, WUIXA_Vector3Transition** value);
 
-/* Windows.UI.Xaml.UIElement.put_TranslationTransition() */
 HRESULT wuixa_u_i_element_put__translation_transition(WUIXA_UIElement *self, WUIXA_Vector3Transition* value);
 
-/* Windows.UI.Xaml.UIElement.get_Rotation() */
 HRESULT wuixa_u_i_element_get__rotation(WUIXA_UIElement *self, float *value);
 
-/* Windows.UI.Xaml.UIElement.put_Rotation() */
 HRESULT wuixa_u_i_element_put__rotation(WUIXA_UIElement *self, float value);
 
-/* Windows.UI.Xaml.UIElement.get_RotationTransition() */
 HRESULT wuixa_u_i_element_get__rotation_transition(WUIXA_UIElement *self, WUIXA_ScalarTransition** value);
 
-/* Windows.UI.Xaml.UIElement.put_RotationTransition() */
 HRESULT wuixa_u_i_element_put__rotation_transition(WUIXA_UIElement *self, WUIXA_ScalarTransition* value);
 
-/* Windows.UI.Xaml.UIElement.get_Scale() */
 HRESULT wuixa_u_i_element_get__scale(WUIXA_UIElement *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Xaml.UIElement.put_Scale() */
 HRESULT wuixa_u_i_element_put__scale(WUIXA_UIElement *self, WFN_Vector_3 value);
 
-/* Windows.UI.Xaml.UIElement.get_ScaleTransition() */
 HRESULT wuixa_u_i_element_get__scale_transition(WUIXA_UIElement *self, WUIXA_Vector3Transition** value);
 
-/* Windows.UI.Xaml.UIElement.put_ScaleTransition() */
 HRESULT wuixa_u_i_element_put__scale_transition(WUIXA_UIElement *self, WUIXA_Vector3Transition* value);
 
-/* Windows.UI.Xaml.UIElement.get_TransformMatrix() */
 HRESULT wuixa_u_i_element_get__transform_matrix(WUIXA_UIElement *self, WFN_Matrix4x_4 *value);
 
-/* Windows.UI.Xaml.UIElement.put_TransformMatrix() */
 HRESULT wuixa_u_i_element_put__transform_matrix(WUIXA_UIElement *self, WFN_Matrix4x_4 value);
 
-/* Windows.UI.Xaml.UIElement.get_CenterPoint() */
 HRESULT wuixa_u_i_element_get__center_point(WUIXA_UIElement *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Xaml.UIElement.put_CenterPoint() */
 HRESULT wuixa_u_i_element_put__center_point(WUIXA_UIElement *self, WFN_Vector_3 value);
 
-/* Windows.UI.Xaml.UIElement.get_RotationAxis() */
 HRESULT wuixa_u_i_element_get__rotation_axis(WUIXA_UIElement *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Xaml.UIElement.put_RotationAxis() */
 HRESULT wuixa_u_i_element_put__rotation_axis(WUIXA_UIElement *self, WFN_Vector_3 value);
 
-/* Windows.UI.Xaml.UIElement.StartAnimation(animation) */
 HRESULT wuixa_u_i_element_start_animation(WUIXA_UIElement *self, WUC_ICompositionAnimationBase* animation);
 
-/* Windows.UI.Xaml.UIElement.StopAnimation(animation) */
 HRESULT wuixa_u_i_element_stop_animation(WUIXA_UIElement *self, WUC_ICompositionAnimationBase* animation);
 
-/* Windows.UI.Xaml.UIElement.get_ActualOffset() */
 HRESULT wuixa_u_i_element_get__actual_offset(WUIXA_UIElement *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Xaml.UIElement.get_ActualSize() */
 HRESULT wuixa_u_i_element_get__actual_size(WUIXA_UIElement *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Xaml.UIElement.get_XamlRoot() */
 HRESULT wuixa_u_i_element_get__xaml_root(WUIXA_UIElement *self, WUIXA_XamlRoot** value);
 
-/* Windows.UI.Xaml.UIElement.put_XamlRoot() */
 HRESULT wuixa_u_i_element_put__xaml_root(WUIXA_UIElement *self, WUIXA_XamlRoot* value);
 
-/* Windows.UI.Xaml.UIElement.get_UIContext() */
 HRESULT wuixa_u_i_element_get__u_i_context(WUIXA_UIElement *self, WUI_UIContext** value);
 
-/* Windows.UI.Xaml.UIElement.get_Shadow() */
 HRESULT wuixa_u_i_element_get__shadow(WUIXA_UIElement *self, WUIXAME_Shadow** value);
 
-/* Windows.UI.Xaml.UIElement.put_Shadow() */
 HRESULT wuixa_u_i_element_put__shadow(WUIXA_UIElement *self, WUIXAME_Shadow* value);
 
-/* Windows.UI.Xaml.UIElement.OnCreateAutomationPeer() */
 HRESULT wuixa_u_i_element_handle_create_automation_peer(WUIXA_UIElement *self, WUIXAAUPE_AutomationPeer** out);
 
-/* Windows.UI.Xaml.UIElement.OnDisconnectVisualChildren() */
 HRESULT wuixa_u_i_element_handle_disconnect_visual_children(WUIXA_UIElement *self);
 
-/* Windows.UI.Xaml.UIElement.FindSubElementsForTouchTargeting(point, boundingRect) */
 HRESULT wuixa_u_i_element_find_sub_elements_for_touch_targeting(WUIXA_UIElement *self, WF_Point point, WF_Rect boundingRect, WFOCO_IIterable_WFOCO_IIterable_WF_Point** out);
 
-/* Windows.UI.Xaml.UIElement.GetChildrenInTabFocusOrder() */
 HRESULT wuixa_u_i_element_get_children_in_tab_focus_order(WUIXA_UIElement *self, WFOCO_IIterable_WUIXA_DependencyObject** out);
 
-/* Windows.UI.Xaml.UIElement.OnProcessKeyboardAccelerators(args) */
 HRESULT wuixa_u_i_element_handle_process_keyboard_accelerators(WUIXA_UIElement *self, WUIXAIN_ProcessKeyboardAcceleratorEventArgs* args);
 
-/* Windows.UI.Xaml.UIElement.OnKeyboardAcceleratorInvoked(args) */
 HRESULT wuixa_u_i_element_handle_keyboard_accelerator_invoked(WUIXA_UIElement *self, WUIXAIN_KeyboardAcceleratorInvokedEventArgs* args);
 
-/* Windows.UI.Xaml.UIElement.OnBringIntoViewRequested(e) */
 HRESULT wuixa_u_i_element_handle_bring_into_view_requested(WUIXA_UIElement *self, WUIXA_BringIntoViewRequestedEventArgs* e);
 
-/* Windows.UI.Xaml.UIElement.PopulatePropertyInfoOverride(propertyName, animationPropertyInfo) */
 HRESULT wuixa_u_i_element_populate_property_info_override(WUIXA_UIElement *self, cwinrt_hstring propertyName, WUC_AnimationPropertyInfo* animationPropertyInfo);
 
-/* Windows.UI.Xaml.UIElement.PopulatePropertyInfo(propertyName, propertyInfo) */
 HRESULT wuixa_u_i_element_populate_property_info(WUIXA_UIElement *self, cwinrt_hstring propertyName, WUC_AnimationPropertyInfo* propertyInfo);
 
-/* Windows.UI.Xaml.UIElement.get_ShadowProperty() */
 HRESULT wuixa_u_i_element_get__shadow_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_CanBeScrollAnchorProperty() */
 HRESULT wuixa_u_i_element_get__can_be_scroll_anchor_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_BringIntoViewRequestedEvent() */
 HRESULT wuixa_u_i_element_get__bring_into_view_requested_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_ContextRequestedEvent() */
 HRESULT wuixa_u_i_element_get__context_requested_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_KeyTipTargetProperty() */
 HRESULT wuixa_u_i_element_get__key_tip_target_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_KeyboardAcceleratorPlacementTargetProperty() */
 HRESULT wuixa_u_i_element_get__keyboard_accelerator_placement_target_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_KeyboardAcceleratorPlacementModeProperty() */
 HRESULT wuixa_u_i_element_get__keyboard_accelerator_placement_mode_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.RegisterAsScrollPort(element) */
 HRESULT wuixa_u_i_element_register_as_scroll_port(WUIXA_UIElement* element);
 
-/* Windows.UI.Xaml.UIElement.get_PreviewKeyDownEvent() */
 HRESULT wuixa_u_i_element_get__preview_key_down_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_CharacterReceivedEvent() */
 HRESULT wuixa_u_i_element_get__character_received_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_PreviewKeyUpEvent() */
 HRESULT wuixa_u_i_element_get__preview_key_up_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_GettingFocusEvent() */
 HRESULT wuixa_u_i_element_get__getting_focus_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_LosingFocusEvent() */
 HRESULT wuixa_u_i_element_get__losing_focus_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_NoFocusCandidateFoundEvent() */
 HRESULT wuixa_u_i_element_get__no_focus_candidate_found_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_LightsProperty() */
 HRESULT wuixa_u_i_element_get__lights_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_KeyTipPlacementModeProperty() */
 HRESULT wuixa_u_i_element_get__key_tip_placement_mode_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_KeyTipHorizontalOffsetProperty() */
 HRESULT wuixa_u_i_element_get__key_tip_horizontal_offset_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_KeyTipVerticalOffsetProperty() */
 HRESULT wuixa_u_i_element_get__key_tip_vertical_offset_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_XYFocusKeyboardNavigationProperty() */
 HRESULT wuixa_u_i_element_get__x_y_focus_keyboard_navigation_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_XYFocusUpNavigationStrategyProperty() */
 HRESULT wuixa_u_i_element_get__x_y_focus_up_navigation_strategy_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_XYFocusDownNavigationStrategyProperty() */
 HRESULT wuixa_u_i_element_get__x_y_focus_down_navigation_strategy_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_XYFocusLeftNavigationStrategyProperty() */
 HRESULT wuixa_u_i_element_get__x_y_focus_left_navigation_strategy_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_XYFocusRightNavigationStrategyProperty() */
 HRESULT wuixa_u_i_element_get__x_y_focus_right_navigation_strategy_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_HighContrastAdjustmentProperty() */
 HRESULT wuixa_u_i_element_get__high_contrast_adjustment_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_TabFocusNavigationProperty() */
 HRESULT wuixa_u_i_element_get__tab_focus_navigation_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_ContextFlyoutProperty() */
 HRESULT wuixa_u_i_element_get__context_flyout_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_ExitDisplayModeOnAccessKeyInvokedProperty() */
 HRESULT wuixa_u_i_element_get__exit_display_mode_on_access_key_invoked_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_IsAccessKeyScopeProperty() */
 HRESULT wuixa_u_i_element_get__is_access_key_scope_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_AccessKeyScopeOwnerProperty() */
 HRESULT wuixa_u_i_element_get__access_key_scope_owner_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_AccessKeyProperty() */
 HRESULT wuixa_u_i_element_get__access_key_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_Transform3DProperty() */
 HRESULT wuixa_u_i_element_get__transform3_d_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_CanDragProperty() */
 HRESULT wuixa_u_i_element_get__can_drag_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.TryStartDirectManipulation() */
 HRESULT wuixa_u_i_element_try_start_direct_manipulation(WUIXAIN_Pointer* value, BOOL *out);
 
-/* Windows.UI.Xaml.UIElement.get_CompositeModeProperty() */
 HRESULT wuixa_u_i_element_get__composite_mode_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_KeyDownEvent() */
 HRESULT wuixa_u_i_element_get__key_down_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_KeyUpEvent() */
 HRESULT wuixa_u_i_element_get__key_up_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_PointerEnteredEvent() */
 HRESULT wuixa_u_i_element_get__pointer_entered_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_PointerPressedEvent() */
 HRESULT wuixa_u_i_element_get__pointer_pressed_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_PointerMovedEvent() */
 HRESULT wuixa_u_i_element_get__pointer_moved_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_PointerReleasedEvent() */
 HRESULT wuixa_u_i_element_get__pointer_released_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_PointerExitedEvent() */
 HRESULT wuixa_u_i_element_get__pointer_exited_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_PointerCaptureLostEvent() */
 HRESULT wuixa_u_i_element_get__pointer_capture_lost_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_PointerCanceledEvent() */
 HRESULT wuixa_u_i_element_get__pointer_canceled_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_PointerWheelChangedEvent() */
 HRESULT wuixa_u_i_element_get__pointer_wheel_changed_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_TappedEvent() */
 HRESULT wuixa_u_i_element_get__tapped_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_DoubleTappedEvent() */
 HRESULT wuixa_u_i_element_get__double_tapped_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_HoldingEvent() */
 HRESULT wuixa_u_i_element_get__holding_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_RightTappedEvent() */
 HRESULT wuixa_u_i_element_get__right_tapped_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_ManipulationStartingEvent() */
 HRESULT wuixa_u_i_element_get__manipulation_starting_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_ManipulationInertiaStartingEvent() */
 HRESULT wuixa_u_i_element_get__manipulation_inertia_starting_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_ManipulationStartedEvent() */
 HRESULT wuixa_u_i_element_get__manipulation_started_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_ManipulationDeltaEvent() */
 HRESULT wuixa_u_i_element_get__manipulation_delta_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_ManipulationCompletedEvent() */
 HRESULT wuixa_u_i_element_get__manipulation_completed_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_DragEnterEvent() */
 HRESULT wuixa_u_i_element_get__drag_enter_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_DragLeaveEvent() */
 HRESULT wuixa_u_i_element_get__drag_leave_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_DragOverEvent() */
 HRESULT wuixa_u_i_element_get__drag_over_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_DropEvent() */
 HRESULT wuixa_u_i_element_get__drop_event(WUIXA_RoutedEvent** value);
 
-/* Windows.UI.Xaml.UIElement.get_AllowDropProperty() */
 HRESULT wuixa_u_i_element_get__allow_drop_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_OpacityProperty() */
 HRESULT wuixa_u_i_element_get__opacity_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_ClipProperty() */
 HRESULT wuixa_u_i_element_get__clip_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_RenderTransformProperty() */
 HRESULT wuixa_u_i_element_get__render_transform_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_ProjectionProperty() */
 HRESULT wuixa_u_i_element_get__projection_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_RenderTransformOriginProperty() */
 HRESULT wuixa_u_i_element_get__render_transform_origin_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_IsHitTestVisibleProperty() */
 HRESULT wuixa_u_i_element_get__is_hit_test_visible_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_VisibilityProperty() */
 HRESULT wuixa_u_i_element_get__visibility_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_UseLayoutRoundingProperty() */
 HRESULT wuixa_u_i_element_get__use_layout_rounding_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_TransitionsProperty() */
 HRESULT wuixa_u_i_element_get__transitions_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_CacheModeProperty() */
 HRESULT wuixa_u_i_element_get__cache_mode_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_IsTapEnabledProperty() */
 HRESULT wuixa_u_i_element_get__is_tap_enabled_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_IsDoubleTapEnabledProperty() */
 HRESULT wuixa_u_i_element_get__is_double_tap_enabled_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_IsRightTapEnabledProperty() */
 HRESULT wuixa_u_i_element_get__is_right_tap_enabled_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_IsHoldingEnabledProperty() */
 HRESULT wuixa_u_i_element_get__is_holding_enabled_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_ManipulationModeProperty() */
 HRESULT wuixa_u_i_element_get__manipulation_mode_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.UIElement.get_PointerCapturesProperty() */
 HRESULT wuixa_u_i_element_get__pointer_captures_property(WUIXA_DependencyProperty** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixa_u_i_element_on_key_up(WUIXA_UIElement *self, cwinrt_event_fn fn, void *ctx);
@@ -5370,901 +4322,536 @@ void wuixa_u_i_element_off_preview_key_up(WUIXA_UIElement *self, cwinrt_token to
 cwinrt_token wuixa_u_i_element_on_bring_into_view_requested(WUIXA_UIElement *self, cwinrt_event_fn fn, void *ctx);
 void wuixa_u_i_element_off_bring_into_view_requested(WUIXA_UIElement *self, cwinrt_token token);
 
-/* Windows.UI.Xaml.ColorPaletteResources */
-/* Windows.UI.Xaml.ColorPaletteResources.get_AltHigh() */
 HRESULT wuixa_color_palette_resources_get__alt_high(WUIXA_ColorPaletteResources *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.put_AltHigh() */
 HRESULT wuixa_color_palette_resources_put__alt_high(WUIXA_ColorPaletteResources *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.get_AltLow() */
 HRESULT wuixa_color_palette_resources_get__alt_low(WUIXA_ColorPaletteResources *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.put_AltLow() */
 HRESULT wuixa_color_palette_resources_put__alt_low(WUIXA_ColorPaletteResources *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.get_AltMedium() */
 HRESULT wuixa_color_palette_resources_get__alt_medium(WUIXA_ColorPaletteResources *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.put_AltMedium() */
 HRESULT wuixa_color_palette_resources_put__alt_medium(WUIXA_ColorPaletteResources *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.get_AltMediumHigh() */
 HRESULT wuixa_color_palette_resources_get__alt_medium_high(WUIXA_ColorPaletteResources *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.put_AltMediumHigh() */
 HRESULT wuixa_color_palette_resources_put__alt_medium_high(WUIXA_ColorPaletteResources *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.get_AltMediumLow() */
 HRESULT wuixa_color_palette_resources_get__alt_medium_low(WUIXA_ColorPaletteResources *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.put_AltMediumLow() */
 HRESULT wuixa_color_palette_resources_put__alt_medium_low(WUIXA_ColorPaletteResources *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.get_BaseHigh() */
 HRESULT wuixa_color_palette_resources_get__base_high(WUIXA_ColorPaletteResources *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.put_BaseHigh() */
 HRESULT wuixa_color_palette_resources_put__base_high(WUIXA_ColorPaletteResources *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.get_BaseLow() */
 HRESULT wuixa_color_palette_resources_get__base_low(WUIXA_ColorPaletteResources *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.put_BaseLow() */
 HRESULT wuixa_color_palette_resources_put__base_low(WUIXA_ColorPaletteResources *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.get_BaseMedium() */
 HRESULT wuixa_color_palette_resources_get__base_medium(WUIXA_ColorPaletteResources *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.put_BaseMedium() */
 HRESULT wuixa_color_palette_resources_put__base_medium(WUIXA_ColorPaletteResources *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.get_BaseMediumHigh() */
 HRESULT wuixa_color_palette_resources_get__base_medium_high(WUIXA_ColorPaletteResources *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.put_BaseMediumHigh() */
 HRESULT wuixa_color_palette_resources_put__base_medium_high(WUIXA_ColorPaletteResources *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.get_BaseMediumLow() */
 HRESULT wuixa_color_palette_resources_get__base_medium_low(WUIXA_ColorPaletteResources *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.put_BaseMediumLow() */
 HRESULT wuixa_color_palette_resources_put__base_medium_low(WUIXA_ColorPaletteResources *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.get_ChromeAltLow() */
 HRESULT wuixa_color_palette_resources_get__chrome_alt_low(WUIXA_ColorPaletteResources *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.put_ChromeAltLow() */
 HRESULT wuixa_color_palette_resources_put__chrome_alt_low(WUIXA_ColorPaletteResources *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.get_ChromeBlackHigh() */
 HRESULT wuixa_color_palette_resources_get__chrome_black_high(WUIXA_ColorPaletteResources *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.put_ChromeBlackHigh() */
 HRESULT wuixa_color_palette_resources_put__chrome_black_high(WUIXA_ColorPaletteResources *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.get_ChromeBlackLow() */
 HRESULT wuixa_color_palette_resources_get__chrome_black_low(WUIXA_ColorPaletteResources *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.put_ChromeBlackLow() */
 HRESULT wuixa_color_palette_resources_put__chrome_black_low(WUIXA_ColorPaletteResources *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.get_ChromeBlackMediumLow() */
 HRESULT wuixa_color_palette_resources_get__chrome_black_medium_low(WUIXA_ColorPaletteResources *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.put_ChromeBlackMediumLow() */
 HRESULT wuixa_color_palette_resources_put__chrome_black_medium_low(WUIXA_ColorPaletteResources *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.get_ChromeBlackMedium() */
 HRESULT wuixa_color_palette_resources_get__chrome_black_medium(WUIXA_ColorPaletteResources *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.put_ChromeBlackMedium() */
 HRESULT wuixa_color_palette_resources_put__chrome_black_medium(WUIXA_ColorPaletteResources *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.get_ChromeDisabledHigh() */
 HRESULT wuixa_color_palette_resources_get__chrome_disabled_high(WUIXA_ColorPaletteResources *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.put_ChromeDisabledHigh() */
 HRESULT wuixa_color_palette_resources_put__chrome_disabled_high(WUIXA_ColorPaletteResources *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.get_ChromeDisabledLow() */
 HRESULT wuixa_color_palette_resources_get__chrome_disabled_low(WUIXA_ColorPaletteResources *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.put_ChromeDisabledLow() */
 HRESULT wuixa_color_palette_resources_put__chrome_disabled_low(WUIXA_ColorPaletteResources *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.get_ChromeHigh() */
 HRESULT wuixa_color_palette_resources_get__chrome_high(WUIXA_ColorPaletteResources *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.put_ChromeHigh() */
 HRESULT wuixa_color_palette_resources_put__chrome_high(WUIXA_ColorPaletteResources *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.get_ChromeLow() */
 HRESULT wuixa_color_palette_resources_get__chrome_low(WUIXA_ColorPaletteResources *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.put_ChromeLow() */
 HRESULT wuixa_color_palette_resources_put__chrome_low(WUIXA_ColorPaletteResources *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.get_ChromeMedium() */
 HRESULT wuixa_color_palette_resources_get__chrome_medium(WUIXA_ColorPaletteResources *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.put_ChromeMedium() */
 HRESULT wuixa_color_palette_resources_put__chrome_medium(WUIXA_ColorPaletteResources *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.get_ChromeMediumLow() */
 HRESULT wuixa_color_palette_resources_get__chrome_medium_low(WUIXA_ColorPaletteResources *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.put_ChromeMediumLow() */
 HRESULT wuixa_color_palette_resources_put__chrome_medium_low(WUIXA_ColorPaletteResources *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.get_ChromeWhite() */
 HRESULT wuixa_color_palette_resources_get__chrome_white(WUIXA_ColorPaletteResources *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.put_ChromeWhite() */
 HRESULT wuixa_color_palette_resources_put__chrome_white(WUIXA_ColorPaletteResources *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.get_ChromeGray() */
 HRESULT wuixa_color_palette_resources_get__chrome_gray(WUIXA_ColorPaletteResources *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.put_ChromeGray() */
 HRESULT wuixa_color_palette_resources_put__chrome_gray(WUIXA_ColorPaletteResources *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.get_ListLow() */
 HRESULT wuixa_color_palette_resources_get__list_low(WUIXA_ColorPaletteResources *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.put_ListLow() */
 HRESULT wuixa_color_palette_resources_put__list_low(WUIXA_ColorPaletteResources *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.get_ListMedium() */
 HRESULT wuixa_color_palette_resources_get__list_medium(WUIXA_ColorPaletteResources *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.put_ListMedium() */
 HRESULT wuixa_color_palette_resources_put__list_medium(WUIXA_ColorPaletteResources *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.get_ErrorText() */
 HRESULT wuixa_color_palette_resources_get__error_text(WUIXA_ColorPaletteResources *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.put_ErrorText() */
 HRESULT wuixa_color_palette_resources_put__error_text(WUIXA_ColorPaletteResources *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.get_Accent() */
 HRESULT wuixa_color_palette_resources_get__accent(WUIXA_ColorPaletteResources *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.ColorPaletteResources.put_Accent() */
 HRESULT wuixa_color_palette_resources_put__accent(WUIXA_ColorPaletteResources *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.ResourceDictionary */
-/* Windows.UI.Xaml.ResourceDictionary.get_Source() */
 HRESULT wuixa_resource_dictionary_get__source(WUIXA_ResourceDictionary *self, WF_Uri** value);
 
-/* Windows.UI.Xaml.ResourceDictionary.put_Source() */
 HRESULT wuixa_resource_dictionary_put__source(WUIXA_ResourceDictionary *self, WF_Uri* value);
 
-/* Windows.UI.Xaml.ResourceDictionary.get_MergedDictionaries() */
 HRESULT wuixa_resource_dictionary_get__merged_dictionaries(WUIXA_ResourceDictionary *self, WFOCO_IVector_WUIXA_ResourceDictionary** value);
 
-/* Windows.UI.Xaml.ResourceDictionary.get_ThemeDictionaries() */
 HRESULT wuixa_resource_dictionary_get__theme_dictionaries(WUIXA_ResourceDictionary *self, WFOCO_IMap_Object_Object** value);
 
-/* Windows.UI.Xaml.ResourceDictionary.Lookup(key) */
 HRESULT wuixa_resource_dictionary_lookup(WUIXA_ResourceDictionary *self, IInspectable* key, IInspectable** out);
 
-/* Windows.UI.Xaml.ResourceDictionary.get_Size() */
 HRESULT wuixa_resource_dictionary_get__size(WUIXA_ResourceDictionary *self, uint32_t *value);
 
-/* Windows.UI.Xaml.ResourceDictionary.HasKey(key) */
 HRESULT wuixa_resource_dictionary_has_key(WUIXA_ResourceDictionary *self, IInspectable* key, BOOL *out);
 
-/* Windows.UI.Xaml.ResourceDictionary.GetView() */
 HRESULT wuixa_resource_dictionary_get_view(WUIXA_ResourceDictionary *self, WFOCO_IMapView_Object_Object** out);
 
-/* Windows.UI.Xaml.ResourceDictionary.Insert(key) */
 HRESULT wuixa_resource_dictionary_insert(WUIXA_ResourceDictionary *self, IInspectable* key, IInspectable* value, BOOL *out);
 
-/* Windows.UI.Xaml.ResourceDictionary.Remove(key) */
 HRESULT wuixa_resource_dictionary_remove(WUIXA_ResourceDictionary *self, IInspectable* key);
 
-/* Windows.UI.Xaml.ResourceDictionary.Clear() */
 HRESULT wuixa_resource_dictionary_clear(WUIXA_ResourceDictionary *self);
 
-/* Windows.UI.Xaml.ResourceDictionary.First() */
 HRESULT wuixa_resource_dictionary_first(WUIXA_ResourceDictionary *self, WFOCO_IIterator_WFOCO_IKeyValuePair_Object_Object** out);
 
-/* Windows.UI.Xaml.BrushTransition */
-/* Windows.UI.Xaml.BrushTransition.get_Duration() */
 HRESULT wuixa_brush_transition_get__duration(WUIXA_BrushTransition *self, WF_TimeSpan *value);
 
-/* Windows.UI.Xaml.BrushTransition.put_Duration() */
 HRESULT wuixa_brush_transition_put__duration(WUIXA_BrushTransition *self, WF_TimeSpan value);
 
-/* activate Windows.UI.Xaml.BringIntoViewRequestedEventArgs */
 HRESULT wuixa_bring_into_view_requested_event_args_new(WUIXA_BringIntoViewRequestedEventArgs **out);
 
-/* Windows.UI.Xaml.BringIntoViewRequestedEventArgs */
-/* Windows.UI.Xaml.BringIntoViewRequestedEventArgs.get_TargetElement() */
 HRESULT wuixa_bring_into_view_requested_event_args_get__target_element(WUIXA_BringIntoViewRequestedEventArgs *self, WUIXA_UIElement** value);
 
-/* Windows.UI.Xaml.BringIntoViewRequestedEventArgs.put_TargetElement() */
 HRESULT wuixa_bring_into_view_requested_event_args_put__target_element(WUIXA_BringIntoViewRequestedEventArgs *self, WUIXA_UIElement* value);
 
-/* Windows.UI.Xaml.BringIntoViewRequestedEventArgs.get_AnimationDesired() */
 HRESULT wuixa_bring_into_view_requested_event_args_get__animation_desired(WUIXA_BringIntoViewRequestedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.BringIntoViewRequestedEventArgs.put_AnimationDesired() */
 HRESULT wuixa_bring_into_view_requested_event_args_put__animation_desired(WUIXA_BringIntoViewRequestedEventArgs *self, BOOL value);
 
-/* Windows.UI.Xaml.BringIntoViewRequestedEventArgs.get_TargetRect() */
 HRESULT wuixa_bring_into_view_requested_event_args_get__target_rect(WUIXA_BringIntoViewRequestedEventArgs *self, WF_Rect *value);
 
-/* Windows.UI.Xaml.BringIntoViewRequestedEventArgs.put_TargetRect() */
 HRESULT wuixa_bring_into_view_requested_event_args_put__target_rect(WUIXA_BringIntoViewRequestedEventArgs *self, WF_Rect value);
 
-/* Windows.UI.Xaml.BringIntoViewRequestedEventArgs.get_HorizontalAlignmentRatio() */
 HRESULT wuixa_bring_into_view_requested_event_args_get__horizontal_alignment_ratio(WUIXA_BringIntoViewRequestedEventArgs *self, double *value);
 
-/* Windows.UI.Xaml.BringIntoViewRequestedEventArgs.get_VerticalAlignmentRatio() */
 HRESULT wuixa_bring_into_view_requested_event_args_get__vertical_alignment_ratio(WUIXA_BringIntoViewRequestedEventArgs *self, double *value);
 
-/* Windows.UI.Xaml.BringIntoViewRequestedEventArgs.get_HorizontalOffset() */
 HRESULT wuixa_bring_into_view_requested_event_args_get__horizontal_offset(WUIXA_BringIntoViewRequestedEventArgs *self, double *value);
 
-/* Windows.UI.Xaml.BringIntoViewRequestedEventArgs.put_HorizontalOffset() */
 HRESULT wuixa_bring_into_view_requested_event_args_put__horizontal_offset(WUIXA_BringIntoViewRequestedEventArgs *self, double value);
 
-/* Windows.UI.Xaml.BringIntoViewRequestedEventArgs.get_VerticalOffset() */
 HRESULT wuixa_bring_into_view_requested_event_args_get__vertical_offset(WUIXA_BringIntoViewRequestedEventArgs *self, double *value);
 
-/* Windows.UI.Xaml.BringIntoViewRequestedEventArgs.put_VerticalOffset() */
 HRESULT wuixa_bring_into_view_requested_event_args_put__vertical_offset(WUIXA_BringIntoViewRequestedEventArgs *self, double value);
 
-/* Windows.UI.Xaml.BringIntoViewRequestedEventArgs.get_Handled() */
 HRESULT wuixa_bring_into_view_requested_event_args_get__handled(WUIXA_BringIntoViewRequestedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.BringIntoViewRequestedEventArgs.put_Handled() */
 HRESULT wuixa_bring_into_view_requested_event_args_put__handled(WUIXA_BringIntoViewRequestedEventArgs *self, BOOL value);
 
-/* Windows.UI.Xaml.RoutedEventArgs */
-/* Windows.UI.Xaml.RoutedEventArgs.get_OriginalSource() */
 HRESULT wuixa_routed_event_args_get__original_source(WUIXA_RoutedEventArgs *self, IInspectable** value);
 
-/* activate Windows.UI.Xaml.BringIntoViewOptions */
 HRESULT wuixa_bring_into_view_options_new(WUIXA_BringIntoViewOptions **out);
 
-/* Windows.UI.Xaml.BringIntoViewOptions */
-/* Windows.UI.Xaml.BringIntoViewOptions.get_AnimationDesired() */
 HRESULT wuixa_bring_into_view_options_get__animation_desired(WUIXA_BringIntoViewOptions *self, BOOL *value);
 
-/* Windows.UI.Xaml.BringIntoViewOptions.put_AnimationDesired() */
 HRESULT wuixa_bring_into_view_options_put__animation_desired(WUIXA_BringIntoViewOptions *self, BOOL value);
 
-/* Windows.UI.Xaml.BringIntoViewOptions.get_TargetRect() */
 HRESULT wuixa_bring_into_view_options_get__target_rect(WUIXA_BringIntoViewOptions *self, WF_Rect** value);
 
-/* Windows.UI.Xaml.BringIntoViewOptions.put_TargetRect() */
 HRESULT wuixa_bring_into_view_options_put__target_rect(WUIXA_BringIntoViewOptions *self, WF_Rect* value);
 
-/* Windows.UI.Xaml.BringIntoViewOptions.get_HorizontalAlignmentRatio() */
 HRESULT wuixa_bring_into_view_options_get__horizontal_alignment_ratio(WUIXA_BringIntoViewOptions *self, double *value);
 
-/* Windows.UI.Xaml.BringIntoViewOptions.put_HorizontalAlignmentRatio() */
 HRESULT wuixa_bring_into_view_options_put__horizontal_alignment_ratio(WUIXA_BringIntoViewOptions *self, double value);
 
-/* Windows.UI.Xaml.BringIntoViewOptions.get_VerticalAlignmentRatio() */
 HRESULT wuixa_bring_into_view_options_get__vertical_alignment_ratio(WUIXA_BringIntoViewOptions *self, double *value);
 
-/* Windows.UI.Xaml.BringIntoViewOptions.put_VerticalAlignmentRatio() */
 HRESULT wuixa_bring_into_view_options_put__vertical_alignment_ratio(WUIXA_BringIntoViewOptions *self, double value);
 
-/* Windows.UI.Xaml.BringIntoViewOptions.get_HorizontalOffset() */
 HRESULT wuixa_bring_into_view_options_get__horizontal_offset(WUIXA_BringIntoViewOptions *self, double *value);
 
-/* Windows.UI.Xaml.BringIntoViewOptions.put_HorizontalOffset() */
 HRESULT wuixa_bring_into_view_options_put__horizontal_offset(WUIXA_BringIntoViewOptions *self, double value);
 
-/* Windows.UI.Xaml.BringIntoViewOptions.get_VerticalOffset() */
 HRESULT wuixa_bring_into_view_options_get__vertical_offset(WUIXA_BringIntoViewOptions *self, double *value);
 
-/* Windows.UI.Xaml.BringIntoViewOptions.put_VerticalOffset() */
 HRESULT wuixa_bring_into_view_options_put__vertical_offset(WUIXA_BringIntoViewOptions *self, double value);
 
-/* Windows.UI.Xaml.BindingFailedEventHandler */
-/* Windows.UI.Xaml.BindingFailedEventHandler.Invoke(sender, e) */
 HRESULT wuixa_binding_failed_event_handler_invoke(WUIXA_BindingFailedEventHandler *self, IInspectable* sender, WUIXA_BindingFailedEventArgs* e);
 
-/* activate Windows.UI.Xaml.BindingFailedEventArgs */
 HRESULT wuixa_binding_failed_event_args_new(WUIXA_BindingFailedEventArgs **out);
 
-/* Windows.UI.Xaml.BindingFailedEventArgs */
-/* Windows.UI.Xaml.BindingFailedEventArgs.get_Message() */
 HRESULT wuixa_binding_failed_event_args_get__message(WUIXA_BindingFailedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.IDependencyObject */
-/* Windows.UI.Xaml.IDependencyObject2 */
-/* Windows.UI.Xaml.IDependencyObject2.RegisterPropertyChangedCallback(dp, callback) */
 HRESULT wuixa_dependency_object_2_register_property_changed_callback(WUIXA_IDependencyObject_2 *self, WUIXA_DependencyProperty* dp, WUIXA_DependencyPropertyChangedCallback* callback, int64_t *out);
 
-/* Windows.UI.Xaml.IDependencyObject2.UnregisterPropertyChangedCallback(dp, token) */
 HRESULT wuixa_dependency_object_2_unregister_property_changed_callback(WUIXA_IDependencyObject_2 *self, WUIXA_DependencyProperty* dp, int64_t token);
 
-/* Windows.UI.Xaml.IStateTriggerBaseProtected */
-/* Windows.UI.Xaml.IStateTriggerBaseProtected.SetActive(IsActive) */
 HRESULT wuixa_state_trigger_base_protected_set_active(WUIXA_IStateTriggerBaseProtected *self, BOOL IsActive);
 
-/* Windows.UI.Xaml.IAdaptiveTrigger */
-/* Windows.UI.Xaml.IApplication */
-/* Windows.UI.Xaml.IApplication2 */
-/* Windows.UI.Xaml.IApplication2.get_FocusVisualKind() */
 HRESULT wuixa_application_2_get__focus_visual_kind(WUIXA_IApplication_2 *self, WUIXA_FocusVisualKind *value);
 
-/* Windows.UI.Xaml.IApplication2.put_FocusVisualKind() */
 HRESULT wuixa_application_2_put__focus_visual_kind(WUIXA_IApplication_2 *self, WUIXA_FocusVisualKind value);
 
-/* Windows.UI.Xaml.IApplication2.get_RequiresPointerMode() */
 HRESULT wuixa_application_2_get__requires_pointer_mode(WUIXA_IApplication_2 *self, WUIXA_ApplicationRequiresPointerMode *value);
 
-/* Windows.UI.Xaml.IApplication2.put_RequiresPointerMode() */
 HRESULT wuixa_application_2_put__requires_pointer_mode(WUIXA_IApplication_2 *self, WUIXA_ApplicationRequiresPointerMode value);
 
-/* Windows.UI.Xaml.IApplication3 */
-/* Windows.UI.Xaml.IApplication3.get_HighContrastAdjustment() */
 HRESULT wuixa_application_3_get__high_contrast_adjustment(WUIXA_IApplication_3 *self, WUIXA_ApplicationHighContrastAdjustment *value);
 
-/* Windows.UI.Xaml.IApplication3.put_HighContrastAdjustment() */
 HRESULT wuixa_application_3_put__high_contrast_adjustment(WUIXA_IApplication_3 *self, WUIXA_ApplicationHighContrastAdjustment value);
 
-/* Windows.UI.Xaml.IApplicationOverrides */
-/* Windows.UI.Xaml.IApplicationOverrides.OnActivated(args) */
 HRESULT wuixa_application_overrides_handle_activated(WUIXA_IApplicationOverrides *self, WAPAC_IActivatedEventArgs* args);
 
-/* Windows.UI.Xaml.IApplicationOverrides.OnLaunched(args) */
 HRESULT wuixa_application_overrides_handle_launched(WUIXA_IApplicationOverrides *self, WAPAC_LaunchActivatedEventArgs* args);
 
-/* Windows.UI.Xaml.IApplicationOverrides.OnFileActivated(args) */
 HRESULT wuixa_application_overrides_handle_file_activated(WUIXA_IApplicationOverrides *self, WAPAC_FileActivatedEventArgs* args);
 
-/* Windows.UI.Xaml.IApplicationOverrides.OnSearchActivated(args) */
 HRESULT wuixa_application_overrides_handle_search_activated(WUIXA_IApplicationOverrides *self, WAPAC_SearchActivatedEventArgs* args);
 
-/* Windows.UI.Xaml.IApplicationOverrides.OnShareTargetActivated(args) */
 HRESULT wuixa_application_overrides_handle_share_target_activated(WUIXA_IApplicationOverrides *self, WAPAC_ShareTargetActivatedEventArgs* args);
 
-/* Windows.UI.Xaml.IApplicationOverrides.OnFileOpenPickerActivated(args) */
 HRESULT wuixa_application_overrides_handle_file_open_picker_activated(WUIXA_IApplicationOverrides *self, WAPAC_FileOpenPickerActivatedEventArgs* args);
 
-/* Windows.UI.Xaml.IApplicationOverrides.OnFileSavePickerActivated(args) */
 HRESULT wuixa_application_overrides_handle_file_save_picker_activated(WUIXA_IApplicationOverrides *self, WAPAC_FileSavePickerActivatedEventArgs* args);
 
-/* Windows.UI.Xaml.IApplicationOverrides.OnCachedFileUpdaterActivated(args) */
 HRESULT wuixa_application_overrides_handle_cached_file_updater_activated(WUIXA_IApplicationOverrides *self, WAPAC_CachedFileUpdaterActivatedEventArgs* args);
 
-/* Windows.UI.Xaml.IApplicationOverrides.OnWindowCreated(args) */
 HRESULT wuixa_application_overrides_handle_window_created(WUIXA_IApplicationOverrides *self, WUIXA_WindowCreatedEventArgs* args);
 
-/* Windows.UI.Xaml.IApplicationOverrides2 */
-/* Windows.UI.Xaml.IApplicationOverrides2.OnBackgroundActivated(args) */
 HRESULT wuixa_application_overrides_2_handle_background_activated(WUIXA_IApplicationOverrides_2 *self, WAPAC_BackgroundActivatedEventArgs* args);
 
-/* Windows.UI.Xaml.IExceptionRoutedEventArgs */
-/* Windows.UI.Xaml.IEventTrigger */
-/* Windows.UI.Xaml.IElementFactoryRecycleArgs */
-/* Windows.UI.Xaml.IElementFactoryGetArgs */
-/* Windows.UI.Xaml.IEffectiveViewportChangedEventArgs */
-/* Windows.UI.Xaml.IDropCompletedEventArgs */
-/* Windows.UI.Xaml.IDragUIOverride */
-/* Windows.UI.Xaml.IDragUI */
-/* Windows.UI.Xaml.IDragStartingEventArgs */
-/* Windows.UI.Xaml.IDragStartingEventArgs2 */
-/* Windows.UI.Xaml.IDragStartingEventArgs2.get_AllowedOperations() */
 HRESULT wuixa_drag_starting_event_args_2_get__allowed_operations(WUIXA_IDragStartingEventArgs_2 *self, WAPDA_DataPackageOperation *value);
 
-/* Windows.UI.Xaml.IDragStartingEventArgs2.put_AllowedOperations() */
 HRESULT wuixa_drag_starting_event_args_2_put__allowed_operations(WUIXA_IDragStartingEventArgs_2 *self, WAPDA_DataPackageOperation value);
 
-/* Windows.UI.Xaml.IDragOperationDeferral */
-/* Windows.UI.Xaml.IDragEventArgs */
-/* Windows.UI.Xaml.IDragEventArgs2 */
-/* Windows.UI.Xaml.IDragEventArgs2.get_DataView() */
 HRESULT wuixa_drag_event_args_2_get__data_view(WUIXA_IDragEventArgs_2 *self, WAPDA_DataPackageView** value);
 
-/* Windows.UI.Xaml.IDragEventArgs2.get_DragUIOverride() */
 HRESULT wuixa_drag_event_args_2_get__drag_u_i_override(WUIXA_IDragEventArgs_2 *self, WUIXA_DragUIOverride** value);
 
-/* Windows.UI.Xaml.IDragEventArgs2.get_Modifiers() */
 HRESULT wuixa_drag_event_args_2_get__modifiers(WUIXA_IDragEventArgs_2 *self, WAPDADR_DragDropModifiers *value);
 
-/* Windows.UI.Xaml.IDragEventArgs2.get_AcceptedOperation() */
 HRESULT wuixa_drag_event_args_2_get__accepted_operation(WUIXA_IDragEventArgs_2 *self, WAPDA_DataPackageOperation *value);
 
-/* Windows.UI.Xaml.IDragEventArgs2.put_AcceptedOperation() */
 HRESULT wuixa_drag_event_args_2_put__accepted_operation(WUIXA_IDragEventArgs_2 *self, WAPDA_DataPackageOperation value);
 
-/* Windows.UI.Xaml.IDragEventArgs2.GetDeferral() */
 HRESULT wuixa_drag_event_args_2_get_deferral(WUIXA_IDragEventArgs_2 *self, WUIXA_DragOperationDeferral** out);
 
-/* Windows.UI.Xaml.IDragEventArgs3 */
-/* Windows.UI.Xaml.IDragEventArgs3.get_AllowedOperations() */
 HRESULT wuixa_drag_event_args_3_get__allowed_operations(WUIXA_IDragEventArgs_3 *self, WAPDA_DataPackageOperation *value);
 
-/* Windows.UI.Xaml.IDispatcherTimer */
-/* Windows.UI.Xaml.IDependencyPropertyChangedEventArgs */
-/* Windows.UI.Xaml.IDependencyProperty */
-/* Windows.UI.Xaml.IDebugSettings */
-/* Windows.UI.Xaml.IDebugSettings2 */
-/* Windows.UI.Xaml.IDebugSettings2.get_EnableRedrawRegions() */
 HRESULT wuixa_debug_settings_2_get__enable_redraw_regions(WUIXA_IDebugSettings_2 *self, BOOL *value);
 
-/* Windows.UI.Xaml.IDebugSettings2.put_EnableRedrawRegions() */
 HRESULT wuixa_debug_settings_2_put__enable_redraw_regions(WUIXA_IDebugSettings_2 *self, BOOL value);
 
-/* Windows.UI.Xaml.IDebugSettings3 */
-/* Windows.UI.Xaml.IDebugSettings3.get_IsTextPerformanceVisualizationEnabled() */
 HRESULT wuixa_debug_settings_3_get__is_text_performance_visualization_enabled(WUIXA_IDebugSettings_3 *self, BOOL *value);
 
-/* Windows.UI.Xaml.IDebugSettings3.put_IsTextPerformanceVisualizationEnabled() */
 HRESULT wuixa_debug_settings_3_put__is_text_performance_visualization_enabled(WUIXA_IDebugSettings_3 *self, BOOL value);
 
-/* Windows.UI.Xaml.IDebugSettings4 */
-/* Windows.UI.Xaml.IDebugSettings4.get_FailFastOnErrors() */
 HRESULT wuixa_debug_settings_4_get__fail_fast_on_errors(WUIXA_IDebugSettings_4 *self, BOOL *value);
 
-/* Windows.UI.Xaml.IDebugSettings4.put_FailFastOnErrors() */
 HRESULT wuixa_debug_settings_4_put__fail_fast_on_errors(WUIXA_IDebugSettings_4 *self, BOOL value);
 
-/* Windows.UI.Xaml.IDataTemplateKey */
-/* Windows.UI.Xaml.IDataTemplate */
-/* Windows.UI.Xaml.IElementFactory */
-/* Windows.UI.Xaml.IElementFactory.GetElement(args) */
 HRESULT wuixa_element_factory_get_element(WUIXA_IElementFactory *self, WUIXA_ElementFactoryGetArgs* args, WUIXA_UIElement** out);
 
-/* Windows.UI.Xaml.IElementFactory.RecycleElement(args) */
 HRESULT wuixa_element_factory_recycle_element(WUIXA_IElementFactory *self, WUIXA_ElementFactoryRecycleArgs* args);
 
-/* Windows.UI.Xaml.IDataContextChangedEventArgs */
-/* Windows.UI.Xaml.IMediaFailedRoutedEventArgs */
-/* Windows.UI.Xaml.IPropertyMetadata */
-/* Windows.UI.Xaml.IPropertyPath */
-/* Windows.UI.Xaml.IScalarTransition */
-/* Windows.UI.Xaml.ISetterBase */
-/* Windows.UI.Xaml.ISetter */
-/* Windows.UI.Xaml.ISetter2 */
-/* Windows.UI.Xaml.ISetter2.get_Target() */
 HRESULT wuixa_setter_2_get__target(WUIXA_ISetter_2 *self, WUIXA_TargetPropertyPath** value);
 
-/* Windows.UI.Xaml.ISetter2.put_Target() */
 HRESULT wuixa_setter_2_put__target(WUIXA_ISetter_2 *self, WUIXA_TargetPropertyPath* value);
 
-/* Windows.UI.Xaml.ISetterBaseCollection */
-/* Windows.UI.Xaml.ISizeChangedEventArgs */
-/* Windows.UI.Xaml.IStateTrigger */
-/* Windows.UI.Xaml.IStyle */
-/* Windows.UI.Xaml.ITargetPropertyPath */
-/* Windows.UI.Xaml.IUnhandledExceptionEventArgs */
-/* Windows.UI.Xaml.IVector3Transition */
-/* Windows.UI.Xaml.IVisualState */
-/* Windows.UI.Xaml.IVisualState2 */
-/* Windows.UI.Xaml.IVisualState2.get_Setters() */
 HRESULT wuixa_visual_state_2_get__setters(WUIXA_IVisualState_2 *self, WUIXA_SetterBaseCollection** value);
 
-/* Windows.UI.Xaml.IVisualState2.get_StateTriggers() */
 HRESULT wuixa_visual_state_2_get__state_triggers(WUIXA_IVisualState_2 *self, WFOCO_IVector_WUIXA_StateTriggerBase** value);
 
-/* Windows.UI.Xaml.IVisualStateChangedEventArgs */
-/* Windows.UI.Xaml.IVisualStateGroup */
-/* Windows.UI.Xaml.IVisualStateManagerProtected */
-/* Windows.UI.Xaml.IVisualStateManagerProtected.RaiseCurrentStateChanging(stateGroup, oldState, newState, control) */
 HRESULT wuixa_visual_state_manager_protected_raise_current_state_changing(WUIXA_IVisualStateManagerProtected *self, WUIXA_VisualStateGroup* stateGroup, WUIXA_VisualState* oldState, WUIXA_VisualState* newState, WUIXACO_Control* control);
 
-/* Windows.UI.Xaml.IVisualStateManagerProtected.RaiseCurrentStateChanged(stateGroup, oldState, newState, control) */
 HRESULT wuixa_visual_state_manager_protected_raise_current_state_changed(WUIXA_IVisualStateManagerProtected *self, WUIXA_VisualStateGroup* stateGroup, WUIXA_VisualState* oldState, WUIXA_VisualState* newState, WUIXACO_Control* control);
 
-/* Windows.UI.Xaml.IVisualStateManagerOverrides */
-/* Windows.UI.Xaml.IVisualStateManagerOverrides.GoToStateCore(control, templateRoot, stateName, group, state, useTransitions) */
 HRESULT wuixa_visual_state_manager_overrides_go_to_state_core(WUIXA_IVisualStateManagerOverrides *self, WUIXACO_Control* control, WUIXA_FrameworkElement* templateRoot, cwinrt_hstring stateName, WUIXA_VisualStateGroup* group, WUIXA_VisualState* state, BOOL useTransitions, BOOL *out);
 
-/* Windows.UI.Xaml.IVisualTransition */
-/* Windows.UI.Xaml.IWindow */
-/* Windows.UI.Xaml.IWindow2 */
-/* Windows.UI.Xaml.IWindow2.SetTitleBar() */
 HRESULT wuixa_window_2_set_title_bar(WUIXA_IWindow_2 *self, WUIXA_UIElement* value);
 
-/* Windows.UI.Xaml.IWindow3 */
-/* Windows.UI.Xaml.IWindow3.get_Compositor() */
 HRESULT wuixa_window_3_get__compositor(WUIXA_IWindow_3 *self, WUC_Comp** value);
 
-/* Windows.UI.Xaml.IWindow4 */
-/* Windows.UI.Xaml.IWindow4.get_UIContext() */
 HRESULT wuixa_window_4_get__u_i_context(WUIXA_IWindow_4 *self, WUI_UIContext** value);
 
-/* Windows.UI.Xaml.IWindowCreatedEventArgs */
-/* Windows.UI.Xaml.IXamlRoot */
-/* Windows.UI.Xaml.IFrameworkElement */
-/* Windows.UI.Xaml.IFrameworkElement2 */
-/* Windows.UI.Xaml.IFrameworkElement2.get_RequestedTheme() */
 HRESULT wuixa_framework_element_2_get__requested_theme(WUIXA_IFrameworkElement_2 *self, WUIXA_ElementTheme *value);
 
-/* Windows.UI.Xaml.IFrameworkElement2.put_RequestedTheme() */
 HRESULT wuixa_framework_element_2_put__requested_theme(WUIXA_IFrameworkElement_2 *self, WUIXA_ElementTheme value);
 
-/* Windows.UI.Xaml.IFrameworkElement2.GetBindingExpression(dp) */
 HRESULT wuixa_framework_element_2_get_binding_expression(WUIXA_IFrameworkElement_2 *self, WUIXA_DependencyProperty* dp, WUIXADA_BindingExpression** out);
 
-/* Windows.UI.Xaml.IFrameworkElement3 */
-/* Windows.UI.Xaml.IFrameworkElement4 */
-/* Windows.UI.Xaml.IFrameworkElement4.get_AllowFocusOnInteraction() */
 HRESULT wuixa_framework_element_4_get__allow_focus_on_interaction(WUIXA_IFrameworkElement_4 *self, BOOL *value);
 
-/* Windows.UI.Xaml.IFrameworkElement4.put_AllowFocusOnInteraction() */
 HRESULT wuixa_framework_element_4_put__allow_focus_on_interaction(WUIXA_IFrameworkElement_4 *self, BOOL value);
 
-/* Windows.UI.Xaml.IFrameworkElement4.get_FocusVisualMargin() */
 HRESULT wuixa_framework_element_4_get__focus_visual_margin(WUIXA_IFrameworkElement_4 *self, WUIXA_Thickness *value);
 
-/* Windows.UI.Xaml.IFrameworkElement4.put_FocusVisualMargin() */
 HRESULT wuixa_framework_element_4_put__focus_visual_margin(WUIXA_IFrameworkElement_4 *self, WUIXA_Thickness value);
 
-/* Windows.UI.Xaml.IFrameworkElement4.get_FocusVisualSecondaryThickness() */
 HRESULT wuixa_framework_element_4_get__focus_visual_secondary_thickness(WUIXA_IFrameworkElement_4 *self, WUIXA_Thickness *value);
 
-/* Windows.UI.Xaml.IFrameworkElement4.put_FocusVisualSecondaryThickness() */
 HRESULT wuixa_framework_element_4_put__focus_visual_secondary_thickness(WUIXA_IFrameworkElement_4 *self, WUIXA_Thickness value);
 
-/* Windows.UI.Xaml.IFrameworkElement4.get_FocusVisualPrimaryThickness() */
 HRESULT wuixa_framework_element_4_get__focus_visual_primary_thickness(WUIXA_IFrameworkElement_4 *self, WUIXA_Thickness *value);
 
-/* Windows.UI.Xaml.IFrameworkElement4.put_FocusVisualPrimaryThickness() */
 HRESULT wuixa_framework_element_4_put__focus_visual_primary_thickness(WUIXA_IFrameworkElement_4 *self, WUIXA_Thickness value);
 
-/* Windows.UI.Xaml.IFrameworkElement4.get_FocusVisualSecondaryBrush() */
 HRESULT wuixa_framework_element_4_get__focus_visual_secondary_brush(WUIXA_IFrameworkElement_4 *self, WUIXAME_Brush** value);
 
-/* Windows.UI.Xaml.IFrameworkElement4.put_FocusVisualSecondaryBrush() */
 HRESULT wuixa_framework_element_4_put__focus_visual_secondary_brush(WUIXA_IFrameworkElement_4 *self, WUIXAME_Brush* value);
 
-/* Windows.UI.Xaml.IFrameworkElement4.get_FocusVisualPrimaryBrush() */
 HRESULT wuixa_framework_element_4_get__focus_visual_primary_brush(WUIXA_IFrameworkElement_4 *self, WUIXAME_Brush** value);
 
-/* Windows.UI.Xaml.IFrameworkElement4.put_FocusVisualPrimaryBrush() */
 HRESULT wuixa_framework_element_4_put__focus_visual_primary_brush(WUIXA_IFrameworkElement_4 *self, WUIXAME_Brush* value);
 
-/* Windows.UI.Xaml.IFrameworkElement4.get_AllowFocusWhenDisabled() */
 HRESULT wuixa_framework_element_4_get__allow_focus_when_disabled(WUIXA_IFrameworkElement_4 *self, BOOL *value);
 
-/* Windows.UI.Xaml.IFrameworkElement4.put_AllowFocusWhenDisabled() */
 HRESULT wuixa_framework_element_4_put__allow_focus_when_disabled(WUIXA_IFrameworkElement_4 *self, BOOL value);
 
-/* Windows.UI.Xaml.IFrameworkElement6 */
-/* Windows.UI.Xaml.IFrameworkElement6.get_ActualTheme() */
 HRESULT wuixa_framework_element_6_get__actual_theme(WUIXA_IFrameworkElement_6 *self, WUIXA_ElementTheme *value);
 
-/* Windows.UI.Xaml.IFrameworkElement7 */
-/* Windows.UI.Xaml.IFrameworkElement7.get_IsLoaded() */
 HRESULT wuixa_framework_element_7_get__is_loaded(WUIXA_IFrameworkElement_7 *self, BOOL *value);
 
-/* Windows.UI.Xaml.IFrameworkElementProtected7 */
-/* Windows.UI.Xaml.IFrameworkElementProtected7.InvalidateViewport() */
 HRESULT wuixa_framework_element_protected_7_invalidate_viewport(WUIXA_IFrameworkElementProtected_7 *self);
 
-/* Windows.UI.Xaml.IFrameworkElementOverrides */
-/* Windows.UI.Xaml.IFrameworkElementOverrides.MeasureOverride(availableSize) */
 HRESULT wuixa_framework_element_overrides_measure_override(WUIXA_IFrameworkElementOverrides *self, WF_Size availableSize, WF_Size *out);
 
-/* Windows.UI.Xaml.IFrameworkElementOverrides.ArrangeOverride(finalSize) */
 HRESULT wuixa_framework_element_overrides_arrange_override(WUIXA_IFrameworkElementOverrides *self, WF_Size finalSize, WF_Size *out);
 
-/* Windows.UI.Xaml.IFrameworkElementOverrides.OnApplyTemplate() */
 HRESULT wuixa_framework_element_overrides_handle_apply_template(WUIXA_IFrameworkElementOverrides *self);
 
-/* Windows.UI.Xaml.IFrameworkElementOverrides2 */
-/* Windows.UI.Xaml.IFrameworkElementOverrides2.GoToElementStateCore(stateName, useTransitions) */
 HRESULT wuixa_framework_element_overrides_2_go_to_element_state_core(WUIXA_IFrameworkElementOverrides_2 *self, cwinrt_hstring stateName, BOOL useTransitions, BOOL *out);
 
-/* Windows.UI.Xaml.IUIElement */
-/* Windows.UI.Xaml.IUIElement2 */
-/* Windows.UI.Xaml.IUIElement2.get_CompositeMode() */
 HRESULT wuixa_u_i_element_2_get__composite_mode(WUIXA_IUIElement_2 *self, WUIXAME_ElementCompositeMode *value);
 
-/* Windows.UI.Xaml.IUIElement2.put_CompositeMode() */
 HRESULT wuixa_u_i_element_2_put__composite_mode(WUIXA_IUIElement_2 *self, WUIXAME_ElementCompositeMode value);
 
-/* Windows.UI.Xaml.IUIElement2.CancelDirectManipulations() */
 HRESULT wuixa_u_i_element_2_cancel_direct_manipulations(WUIXA_IUIElement_2 *self, BOOL *out);
 
-/* Windows.UI.Xaml.IUIElement3 */
-/* Windows.UI.Xaml.IUIElement3.get_Transform3D() */
 HRESULT wuixa_u_i_element_3_get__transform3_d(WUIXA_IUIElement_3 *self, WUIXAMEME_Transform3D** value);
 
-/* Windows.UI.Xaml.IUIElement3.put_Transform3D() */
 HRESULT wuixa_u_i_element_3_put__transform3_d(WUIXA_IUIElement_3 *self, WUIXAMEME_Transform3D* value);
 
-/* Windows.UI.Xaml.IUIElement3.get_CanDrag() */
 HRESULT wuixa_u_i_element_3_get__can_drag(WUIXA_IUIElement_3 *self, BOOL *value);
 
-/* Windows.UI.Xaml.IUIElement3.put_CanDrag() */
 HRESULT wuixa_u_i_element_3_put__can_drag(WUIXA_IUIElement_3 *self, BOOL value);
 
-/* Windows.UI.Xaml.IUIElement3.StartDragAsync(pointerPoint) */
 HRESULT wuixa_u_i_element_3_start_drag_async(WUIXA_IUIElement_3 *self, WUIIN_PointerPoint* pointerPoint, WF_IAsyncOperation_WAPDA_DataPackageOperation** out);
 
-/* Windows.UI.Xaml.IUIElement4 */
-/* Windows.UI.Xaml.IUIElement4.get_ContextFlyout() */
 HRESULT wuixa_u_i_element_4_get__context_flyout(WUIXA_IUIElement_4 *self, WUIXACOPR_FlyoutBase** value);
 
-/* Windows.UI.Xaml.IUIElement4.put_ContextFlyout() */
 HRESULT wuixa_u_i_element_4_put__context_flyout(WUIXA_IUIElement_4 *self, WUIXACOPR_FlyoutBase* value);
 
-/* Windows.UI.Xaml.IUIElement4.get_ExitDisplayModeOnAccessKeyInvoked() */
 HRESULT wuixa_u_i_element_4_get__exit_display_mode_on_access_key_invoked(WUIXA_IUIElement_4 *self, BOOL *value);
 
-/* Windows.UI.Xaml.IUIElement4.put_ExitDisplayModeOnAccessKeyInvoked() */
 HRESULT wuixa_u_i_element_4_put__exit_display_mode_on_access_key_invoked(WUIXA_IUIElement_4 *self, BOOL value);
 
-/* Windows.UI.Xaml.IUIElement4.get_IsAccessKeyScope() */
 HRESULT wuixa_u_i_element_4_get__is_access_key_scope(WUIXA_IUIElement_4 *self, BOOL *value);
 
-/* Windows.UI.Xaml.IUIElement4.put_IsAccessKeyScope() */
 HRESULT wuixa_u_i_element_4_put__is_access_key_scope(WUIXA_IUIElement_4 *self, BOOL value);
 
-/* Windows.UI.Xaml.IUIElement4.get_AccessKeyScopeOwner() */
 HRESULT wuixa_u_i_element_4_get__access_key_scope_owner(WUIXA_IUIElement_4 *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.IUIElement4.put_AccessKeyScopeOwner() */
 HRESULT wuixa_u_i_element_4_put__access_key_scope_owner(WUIXA_IUIElement_4 *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.IUIElement4.get_AccessKey() */
 HRESULT wuixa_u_i_element_4_get__access_key(WUIXA_IUIElement_4 *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.IUIElement4.put_AccessKey() */
 HRESULT wuixa_u_i_element_4_put__access_key(WUIXA_IUIElement_4 *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.IUIElement5 */
-/* Windows.UI.Xaml.IUIElement5.get_Lights() */
 HRESULT wuixa_u_i_element_5_get__lights(WUIXA_IUIElement_5 *self, WFOCO_IVector_WUIXAME_XamlLight** value);
 
-/* Windows.UI.Xaml.IUIElement5.get_KeyTipPlacementMode() */
 HRESULT wuixa_u_i_element_5_get__key_tip_placement_mode(WUIXA_IUIElement_5 *self, WUIXAIN_KeyTipPlacementMode *value);
 
-/* Windows.UI.Xaml.IUIElement5.put_KeyTipPlacementMode() */
 HRESULT wuixa_u_i_element_5_put__key_tip_placement_mode(WUIXA_IUIElement_5 *self, WUIXAIN_KeyTipPlacementMode value);
 
-/* Windows.UI.Xaml.IUIElement5.get_KeyTipHorizontalOffset() */
 HRESULT wuixa_u_i_element_5_get__key_tip_horizontal_offset(WUIXA_IUIElement_5 *self, double *value);
 
-/* Windows.UI.Xaml.IUIElement5.put_KeyTipHorizontalOffset() */
 HRESULT wuixa_u_i_element_5_put__key_tip_horizontal_offset(WUIXA_IUIElement_5 *self, double value);
 
-/* Windows.UI.Xaml.IUIElement5.get_KeyTipVerticalOffset() */
 HRESULT wuixa_u_i_element_5_get__key_tip_vertical_offset(WUIXA_IUIElement_5 *self, double *value);
 
-/* Windows.UI.Xaml.IUIElement5.put_KeyTipVerticalOffset() */
 HRESULT wuixa_u_i_element_5_put__key_tip_vertical_offset(WUIXA_IUIElement_5 *self, double value);
 
-/* Windows.UI.Xaml.IUIElement5.get_XYFocusKeyboardNavigation() */
 HRESULT wuixa_u_i_element_5_get__x_y_focus_keyboard_navigation(WUIXA_IUIElement_5 *self, WUIXAIN_XYFocusKeyboardNavigationMode *value);
 
-/* Windows.UI.Xaml.IUIElement5.put_XYFocusKeyboardNavigation() */
 HRESULT wuixa_u_i_element_5_put__x_y_focus_keyboard_navigation(WUIXA_IUIElement_5 *self, WUIXAIN_XYFocusKeyboardNavigationMode value);
 
-/* Windows.UI.Xaml.IUIElement5.get_XYFocusUpNavigationStrategy() */
 HRESULT wuixa_u_i_element_5_get__x_y_focus_up_navigation_strategy(WUIXA_IUIElement_5 *self, WUIXAIN_XYFocusNavigationStrategy *value);
 
-/* Windows.UI.Xaml.IUIElement5.put_XYFocusUpNavigationStrategy() */
 HRESULT wuixa_u_i_element_5_put__x_y_focus_up_navigation_strategy(WUIXA_IUIElement_5 *self, WUIXAIN_XYFocusNavigationStrategy value);
 
-/* Windows.UI.Xaml.IUIElement5.get_XYFocusDownNavigationStrategy() */
 HRESULT wuixa_u_i_element_5_get__x_y_focus_down_navigation_strategy(WUIXA_IUIElement_5 *self, WUIXAIN_XYFocusNavigationStrategy *value);
 
-/* Windows.UI.Xaml.IUIElement5.put_XYFocusDownNavigationStrategy() */
 HRESULT wuixa_u_i_element_5_put__x_y_focus_down_navigation_strategy(WUIXA_IUIElement_5 *self, WUIXAIN_XYFocusNavigationStrategy value);
 
-/* Windows.UI.Xaml.IUIElement5.get_XYFocusLeftNavigationStrategy() */
 HRESULT wuixa_u_i_element_5_get__x_y_focus_left_navigation_strategy(WUIXA_IUIElement_5 *self, WUIXAIN_XYFocusNavigationStrategy *value);
 
-/* Windows.UI.Xaml.IUIElement5.put_XYFocusLeftNavigationStrategy() */
 HRESULT wuixa_u_i_element_5_put__x_y_focus_left_navigation_strategy(WUIXA_IUIElement_5 *self, WUIXAIN_XYFocusNavigationStrategy value);
 
-/* Windows.UI.Xaml.IUIElement5.get_XYFocusRightNavigationStrategy() */
 HRESULT wuixa_u_i_element_5_get__x_y_focus_right_navigation_strategy(WUIXA_IUIElement_5 *self, WUIXAIN_XYFocusNavigationStrategy *value);
 
-/* Windows.UI.Xaml.IUIElement5.put_XYFocusRightNavigationStrategy() */
 HRESULT wuixa_u_i_element_5_put__x_y_focus_right_navigation_strategy(WUIXA_IUIElement_5 *self, WUIXAIN_XYFocusNavigationStrategy value);
 
-/* Windows.UI.Xaml.IUIElement5.get_HighContrastAdjustment() */
 HRESULT wuixa_u_i_element_5_get__high_contrast_adjustment(WUIXA_IUIElement_5 *self, WUIXA_ElementHighContrastAdjustment *value);
 
-/* Windows.UI.Xaml.IUIElement5.put_HighContrastAdjustment() */
 HRESULT wuixa_u_i_element_5_put__high_contrast_adjustment(WUIXA_IUIElement_5 *self, WUIXA_ElementHighContrastAdjustment value);
 
-/* Windows.UI.Xaml.IUIElement5.get_TabFocusNavigation() */
 HRESULT wuixa_u_i_element_5_get__tab_focus_navigation(WUIXA_IUIElement_5 *self, WUIXAIN_KeyboardNavigationMode *value);
 
-/* Windows.UI.Xaml.IUIElement5.put_TabFocusNavigation() */
 HRESULT wuixa_u_i_element_5_put__tab_focus_navigation(WUIXA_IUIElement_5 *self, WUIXAIN_KeyboardNavigationMode value);
 
-/* Windows.UI.Xaml.IUIElement5.StartBringIntoView() */
 HRESULT wuixa_u_i_element_5_start_bring_into_view(WUIXA_IUIElement_5 *self);
 
-/* Windows.UI.Xaml.IUIElement5.StartBringIntoView(options) */
 HRESULT wuixa_u_i_element_5_start_bring_into_view_p(WUIXA_IUIElement_5 *self, WUIXA_BringIntoViewOptions* options);
 
-/* Windows.UI.Xaml.IUIElement7 */
-/* Windows.UI.Xaml.IUIElement7.get_KeyboardAccelerators() */
 HRESULT wuixa_u_i_element_7_get__keyboard_accelerators(WUIXA_IUIElement_7 *self, WFOCO_IVector_WUIXAIN_KeyboardAccelerator** value);
 
-/* Windows.UI.Xaml.IUIElement7.TryInvokeKeyboardAccelerator(args) */
 HRESULT wuixa_u_i_element_7_try_invoke_keyboard_accelerator(WUIXA_IUIElement_7 *self, WUIXAIN_ProcessKeyboardAcceleratorEventArgs* args);
 
-/* Windows.UI.Xaml.IUIElement8 */
-/* Windows.UI.Xaml.IUIElement8.get_KeyTipTarget() */
 HRESULT wuixa_u_i_element_8_get__key_tip_target(WUIXA_IUIElement_8 *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.IUIElement8.put_KeyTipTarget() */
 HRESULT wuixa_u_i_element_8_put__key_tip_target(WUIXA_IUIElement_8 *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.IUIElement8.get_KeyboardAcceleratorPlacementTarget() */
 HRESULT wuixa_u_i_element_8_get__keyboard_accelerator_placement_target(WUIXA_IUIElement_8 *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.IUIElement8.put_KeyboardAcceleratorPlacementTarget() */
 HRESULT wuixa_u_i_element_8_put__keyboard_accelerator_placement_target(WUIXA_IUIElement_8 *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.IUIElement8.get_KeyboardAcceleratorPlacementMode() */
 HRESULT wuixa_u_i_element_8_get__keyboard_accelerator_placement_mode(WUIXA_IUIElement_8 *self, WUIXAIN_KeyboardAcceleratorPlacementMode *value);
 
-/* Windows.UI.Xaml.IUIElement8.put_KeyboardAcceleratorPlacementMode() */
 HRESULT wuixa_u_i_element_8_put__keyboard_accelerator_placement_mode(WUIXA_IUIElement_8 *self, WUIXAIN_KeyboardAcceleratorPlacementMode value);
 
-/* Windows.UI.Xaml.IUIElement9 */
-/* Windows.UI.Xaml.IUIElement9.get_CanBeScrollAnchor() */
 HRESULT wuixa_u_i_element_9_get__can_be_scroll_anchor(WUIXA_IUIElement_9 *self, BOOL *value);
 
-/* Windows.UI.Xaml.IUIElement9.put_CanBeScrollAnchor() */
 HRESULT wuixa_u_i_element_9_put__can_be_scroll_anchor(WUIXA_IUIElement_9 *self, BOOL value);
 
-/* Windows.UI.Xaml.IUIElement9.get_OpacityTransition() */
 HRESULT wuixa_u_i_element_9_get__opacity_transition(WUIXA_IUIElement_9 *self, WUIXA_ScalarTransition** value);
 
-/* Windows.UI.Xaml.IUIElement9.put_OpacityTransition() */
 HRESULT wuixa_u_i_element_9_put__opacity_transition(WUIXA_IUIElement_9 *self, WUIXA_ScalarTransition* value);
 
-/* Windows.UI.Xaml.IUIElement9.get_Translation() */
 HRESULT wuixa_u_i_element_9_get__translation(WUIXA_IUIElement_9 *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Xaml.IUIElement9.put_Translation() */
 HRESULT wuixa_u_i_element_9_put__translation(WUIXA_IUIElement_9 *self, WFN_Vector_3 value);
 
-/* Windows.UI.Xaml.IUIElement9.get_TranslationTransition() */
 HRESULT wuixa_u_i_element_9_get__translation_transition(WUIXA_IUIElement_9 *self, WUIXA_Vector3Transition** value);
 
-/* Windows.UI.Xaml.IUIElement9.put_TranslationTransition() */
 HRESULT wuixa_u_i_element_9_put__translation_transition(WUIXA_IUIElement_9 *self, WUIXA_Vector3Transition* value);
 
-/* Windows.UI.Xaml.IUIElement9.get_Rotation() */
 HRESULT wuixa_u_i_element_9_get__rotation(WUIXA_IUIElement_9 *self, float *value);
 
-/* Windows.UI.Xaml.IUIElement9.put_Rotation() */
 HRESULT wuixa_u_i_element_9_put__rotation(WUIXA_IUIElement_9 *self, float value);
 
-/* Windows.UI.Xaml.IUIElement9.get_RotationTransition() */
 HRESULT wuixa_u_i_element_9_get__rotation_transition(WUIXA_IUIElement_9 *self, WUIXA_ScalarTransition** value);
 
-/* Windows.UI.Xaml.IUIElement9.put_RotationTransition() */
 HRESULT wuixa_u_i_element_9_put__rotation_transition(WUIXA_IUIElement_9 *self, WUIXA_ScalarTransition* value);
 
-/* Windows.UI.Xaml.IUIElement9.get_Scale() */
 HRESULT wuixa_u_i_element_9_get__scale(WUIXA_IUIElement_9 *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Xaml.IUIElement9.put_Scale() */
 HRESULT wuixa_u_i_element_9_put__scale(WUIXA_IUIElement_9 *self, WFN_Vector_3 value);
 
-/* Windows.UI.Xaml.IUIElement9.get_ScaleTransition() */
 HRESULT wuixa_u_i_element_9_get__scale_transition(WUIXA_IUIElement_9 *self, WUIXA_Vector3Transition** value);
 
-/* Windows.UI.Xaml.IUIElement9.put_ScaleTransition() */
 HRESULT wuixa_u_i_element_9_put__scale_transition(WUIXA_IUIElement_9 *self, WUIXA_Vector3Transition* value);
 
-/* Windows.UI.Xaml.IUIElement9.get_TransformMatrix() */
 HRESULT wuixa_u_i_element_9_get__transform_matrix(WUIXA_IUIElement_9 *self, WFN_Matrix4x_4 *value);
 
-/* Windows.UI.Xaml.IUIElement9.put_TransformMatrix() */
 HRESULT wuixa_u_i_element_9_put__transform_matrix(WUIXA_IUIElement_9 *self, WFN_Matrix4x_4 value);
 
-/* Windows.UI.Xaml.IUIElement9.get_CenterPoint() */
 HRESULT wuixa_u_i_element_9_get__center_point(WUIXA_IUIElement_9 *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Xaml.IUIElement9.put_CenterPoint() */
 HRESULT wuixa_u_i_element_9_put__center_point(WUIXA_IUIElement_9 *self, WFN_Vector_3 value);
 
-/* Windows.UI.Xaml.IUIElement9.get_RotationAxis() */
 HRESULT wuixa_u_i_element_9_get__rotation_axis(WUIXA_IUIElement_9 *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Xaml.IUIElement9.put_RotationAxis() */
 HRESULT wuixa_u_i_element_9_put__rotation_axis(WUIXA_IUIElement_9 *self, WFN_Vector_3 value);
 
-/* Windows.UI.Xaml.IUIElement9.StartAnimation(animation) */
 HRESULT wuixa_u_i_element_9_start_animation(WUIXA_IUIElement_9 *self, WUC_ICompositionAnimationBase* animation);
 
-/* Windows.UI.Xaml.IUIElement9.StopAnimation(animation) */
 HRESULT wuixa_u_i_element_9_stop_animation(WUIXA_IUIElement_9 *self, WUC_ICompositionAnimationBase* animation);
 
-/* Windows.UI.Xaml.IUIElement10 */
-/* Windows.UI.Xaml.IUIElement10.get_ActualOffset() */
 HRESULT wuixa_u_i_element_10_get__actual_offset(WUIXA_IUIElement_10 *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Xaml.IUIElement10.get_ActualSize() */
 HRESULT wuixa_u_i_element_10_get__actual_size(WUIXA_IUIElement_10 *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Xaml.IUIElement10.get_XamlRoot() */
 HRESULT wuixa_u_i_element_10_get__xaml_root(WUIXA_IUIElement_10 *self, WUIXA_XamlRoot** value);
 
-/* Windows.UI.Xaml.IUIElement10.put_XamlRoot() */
 HRESULT wuixa_u_i_element_10_put__xaml_root(WUIXA_IUIElement_10 *self, WUIXA_XamlRoot* value);
 
-/* Windows.UI.Xaml.IUIElement10.get_UIContext() */
 HRESULT wuixa_u_i_element_10_get__u_i_context(WUIXA_IUIElement_10 *self, WUI_UIContext** value);
 
-/* Windows.UI.Xaml.IUIElement10.get_Shadow() */
 HRESULT wuixa_u_i_element_10_get__shadow(WUIXA_IUIElement_10 *self, WUIXAME_Shadow** value);
 
-/* Windows.UI.Xaml.IUIElement10.put_Shadow() */
 HRESULT wuixa_u_i_element_10_put__shadow(WUIXA_IUIElement_10 *self, WUIXAME_Shadow* value);
 
-/* Windows.UI.Xaml.IUIElementOverrides */
-/* Windows.UI.Xaml.IUIElementOverrides.OnCreateAutomationPeer() */
 HRESULT wuixa_u_i_element_overrides_handle_create_automation_peer(WUIXA_IUIElementOverrides *self, WUIXAAUPE_AutomationPeer** out);
 
-/* Windows.UI.Xaml.IUIElementOverrides.OnDisconnectVisualChildren() */
 HRESULT wuixa_u_i_element_overrides_handle_disconnect_visual_children(WUIXA_IUIElementOverrides *self);
 
-/* Windows.UI.Xaml.IUIElementOverrides.FindSubElementsForTouchTargeting(point, boundingRect) */
 HRESULT wuixa_u_i_element_overrides_find_sub_elements_for_touch_targeting(WUIXA_IUIElementOverrides *self, WF_Point point, WF_Rect boundingRect, WFOCO_IIterable_WFOCO_IIterable_WF_Point** out);
 
-/* Windows.UI.Xaml.IUIElementOverrides7 */
-/* Windows.UI.Xaml.IUIElementOverrides7.GetChildrenInTabFocusOrder() */
 HRESULT wuixa_u_i_element_overrides_7_get_children_in_tab_focus_order(WUIXA_IUIElementOverrides_7 *self, WFOCO_IIterable_WUIXA_DependencyObject** out);
 
-/* Windows.UI.Xaml.IUIElementOverrides7.OnProcessKeyboardAccelerators(args) */
 HRESULT wuixa_u_i_element_overrides_7_handle_process_keyboard_accelerators(WUIXA_IUIElementOverrides_7 *self, WUIXAIN_ProcessKeyboardAcceleratorEventArgs* args);
 
-/* Windows.UI.Xaml.IUIElementOverrides8 */
-/* Windows.UI.Xaml.IUIElementOverrides8.OnKeyboardAcceleratorInvoked(args) */
 HRESULT wuixa_u_i_element_overrides_8_handle_keyboard_accelerator_invoked(WUIXA_IUIElementOverrides_8 *self, WUIXAIN_KeyboardAcceleratorInvokedEventArgs* args);
 
-/* Windows.UI.Xaml.IUIElementOverrides8.OnBringIntoViewRequested(e) */
 HRESULT wuixa_u_i_element_overrides_8_handle_bring_into_view_requested(WUIXA_IUIElementOverrides_8 *self, WUIXA_BringIntoViewRequestedEventArgs* e);
 
-/* Windows.UI.Xaml.IUIElementOverrides9 */
-/* Windows.UI.Xaml.IUIElementOverrides9.PopulatePropertyInfoOverride(propertyName, animationPropertyInfo) */
 HRESULT wuixa_u_i_element_overrides_9_populate_property_info_override(WUIXA_IUIElementOverrides_9 *self, cwinrt_hstring propertyName, WUC_AnimationPropertyInfo* animationPropertyInfo);
 
-/* Windows.UI.Xaml.IColorPaletteResources */
-/* Windows.UI.Xaml.IResourceDictionary */
-/* Windows.UI.Xaml.IBrushTransition */
-/* Windows.UI.Xaml.IBringIntoViewRequestedEventArgs */
-/* Windows.UI.Xaml.IRoutedEventArgs */
-/* Windows.UI.Xaml.IBringIntoViewOptions */
-/* Windows.UI.Xaml.IBringIntoViewOptions2 */
-/* Windows.UI.Xaml.IBringIntoViewOptions2.get_HorizontalAlignmentRatio() */
 HRESULT wuixa_bring_into_view_options_2_get__horizontal_alignment_ratio(WUIXA_IBringIntoViewOptions_2 *self, double *value);
 
-/* Windows.UI.Xaml.IBringIntoViewOptions2.put_HorizontalAlignmentRatio() */
 HRESULT wuixa_bring_into_view_options_2_put__horizontal_alignment_ratio(WUIXA_IBringIntoViewOptions_2 *self, double value);
 
-/* Windows.UI.Xaml.IBringIntoViewOptions2.get_VerticalAlignmentRatio() */
 HRESULT wuixa_bring_into_view_options_2_get__vertical_alignment_ratio(WUIXA_IBringIntoViewOptions_2 *self, double *value);
 
-/* Windows.UI.Xaml.IBringIntoViewOptions2.put_VerticalAlignmentRatio() */
 HRESULT wuixa_bring_into_view_options_2_put__vertical_alignment_ratio(WUIXA_IBringIntoViewOptions_2 *self, double value);
 
-/* Windows.UI.Xaml.IBringIntoViewOptions2.get_HorizontalOffset() */
 HRESULT wuixa_bring_into_view_options_2_get__horizontal_offset(WUIXA_IBringIntoViewOptions_2 *self, double *value);
 
-/* Windows.UI.Xaml.IBringIntoViewOptions2.put_HorizontalOffset() */
 HRESULT wuixa_bring_into_view_options_2_put__horizontal_offset(WUIXA_IBringIntoViewOptions_2 *self, double value);
 
-/* Windows.UI.Xaml.IBringIntoViewOptions2.get_VerticalOffset() */
 HRESULT wuixa_bring_into_view_options_2_get__vertical_offset(WUIXA_IBringIntoViewOptions_2 *self, double *value);
 
-/* Windows.UI.Xaml.IBringIntoViewOptions2.put_VerticalOffset() */
 HRESULT wuixa_bring_into_view_options_2_put__vertical_offset(WUIXA_IBringIntoViewOptions_2 *self, double value);
 
-/* Windows.UI.Xaml.IBindingFailedEventArgs */
 #endif /* CWINRT_WINDOWS_UI_XAML_H */

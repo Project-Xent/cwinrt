@@ -15,7 +15,6 @@
 #include <cwinrt/Windows.Devices.Enumeration.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WMEME_IMediaEncodingProperties
 #define CWINRT_FWD_WMEME_IMediaEncodingProperties
 typedef struct WMEME_IMediaEncodingProperties WMEME_IMediaEncodingProperties;
@@ -37,7 +36,6 @@ typedef struct WMEDECO_VariablePhotoSequenceController WMEDECO_VariablePhotoSequ
 typedef struct WMEME_MediaRatio WMEME_MediaRatio;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMEDE_ExposurePriorityVideoControl WMEDE_ExposurePriorityVideoControl;
 typedef struct WMEDE_FlashControl WMEDE_FlashControl;
 typedef struct WMEDE_FocusControl WMEDE_FocusControl;
@@ -154,7 +152,6 @@ typedef struct WMEDE_IAudioDeviceController WMEDE_IAudioDeviceController;
 typedef struct WMEDE_IAudioDeviceController_2 WMEDE_IAudioDeviceController_2;
 typedef struct WMEDE_IMediaDeviceController WMEDE_IMediaDeviceController;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IVectorView_WMEDE_FocusPreset
 #define CWINRT_FWD_WFOCO_IVectorView_WMEDE_FocusPreset
 typedef struct WFOCO_IVectorView_WMEDE_FocusPreset WFOCO_IVectorView_WMEDE_FocusPreset;
@@ -612,7 +609,6 @@ typedef enum WMEDE_AdvancedPhotoMode {
 } WMEDE_AdvancedPhotoMode;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -893,427 +889,274 @@ static const IID CWINRT_IID_WMEDE_IAudioDeviceController_2 CWINRT_MAYBE_UNUSED =
 static const IID CWINRT_IID_WMEDE_IMediaDeviceController CWINRT_MAYBE_UNUSED = { 0xF6F8F5CE, 0x209A, 0x48FB, { 0x86, 0xFC, 0xD4, 0x45, 0x78, 0xF3, 0x17, 0xE6 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Media.Devices.ExposurePriorityVideoControl */
 HRESULT wmede_exposure_priority_video_control_new(WMEDE_ExposurePriorityVideoControl **out);
 
-/* Windows.Media.Devices.ExposurePriorityVideoControl */
-/* Windows.Media.Devices.ExposurePriorityVideoControl.get_Supported() */
 HRESULT wmede_exposure_priority_video_control_get__supported(WMEDE_ExposurePriorityVideoControl *self, BOOL *value);
 
-/* Windows.Media.Devices.ExposurePriorityVideoControl.get_Enabled() */
 HRESULT wmede_exposure_priority_video_control_get__enabled(WMEDE_ExposurePriorityVideoControl *self, BOOL *value);
 
-/* Windows.Media.Devices.ExposurePriorityVideoControl.put_Enabled() */
 HRESULT wmede_exposure_priority_video_control_put__enabled(WMEDE_ExposurePriorityVideoControl *self, BOOL value);
 
-/* activate Windows.Media.Devices.FlashControl */
 HRESULT wmede_flash_control_new(WMEDE_FlashControl **out);
 
-/* Windows.Media.Devices.FlashControl */
-/* Windows.Media.Devices.FlashControl.get_Supported() */
 HRESULT wmede_flash_control_get__supported(WMEDE_FlashControl *self, BOOL *value);
 
-/* Windows.Media.Devices.FlashControl.get_PowerSupported() */
 HRESULT wmede_flash_control_get__power_supported(WMEDE_FlashControl *self, BOOL *value);
 
-/* Windows.Media.Devices.FlashControl.get_RedEyeReductionSupported() */
 HRESULT wmede_flash_control_get__red_eye_reduction_supported(WMEDE_FlashControl *self, BOOL *value);
 
-/* Windows.Media.Devices.FlashControl.get_Enabled() */
 HRESULT wmede_flash_control_get__enabled(WMEDE_FlashControl *self, BOOL *value);
 
-/* Windows.Media.Devices.FlashControl.put_Enabled() */
 HRESULT wmede_flash_control_put__enabled(WMEDE_FlashControl *self, BOOL value);
 
-/* Windows.Media.Devices.FlashControl.get_Auto() */
 HRESULT wmede_flash_control_get__auto(WMEDE_FlashControl *self, BOOL *value);
 
-/* Windows.Media.Devices.FlashControl.put_Auto() */
 HRESULT wmede_flash_control_put__auto(WMEDE_FlashControl *self, BOOL value);
 
-/* Windows.Media.Devices.FlashControl.get_RedEyeReduction() */
 HRESULT wmede_flash_control_get__red_eye_reduction(WMEDE_FlashControl *self, BOOL *value);
 
-/* Windows.Media.Devices.FlashControl.put_RedEyeReduction() */
 HRESULT wmede_flash_control_put__red_eye_reduction(WMEDE_FlashControl *self, BOOL value);
 
-/* Windows.Media.Devices.FlashControl.get_PowerPercent() */
 HRESULT wmede_flash_control_get__power_percent(WMEDE_FlashControl *self, float *value);
 
-/* Windows.Media.Devices.FlashControl.put_PowerPercent() */
 HRESULT wmede_flash_control_put__power_percent(WMEDE_FlashControl *self, float value);
 
-/* Windows.Media.Devices.FlashControl.get_AssistantLightSupported() */
 HRESULT wmede_flash_control_get__assistant_light_supported(WMEDE_FlashControl *self, BOOL *value);
 
-/* Windows.Media.Devices.FlashControl.get_AssistantLightEnabled() */
 HRESULT wmede_flash_control_get__assistant_light_enabled(WMEDE_FlashControl *self, BOOL *value);
 
-/* Windows.Media.Devices.FlashControl.put_AssistantLightEnabled() */
 HRESULT wmede_flash_control_put__assistant_light_enabled(WMEDE_FlashControl *self, BOOL value);
 
-/* activate Windows.Media.Devices.FocusControl */
 HRESULT wmede_focus_control_new(WMEDE_FocusControl **out);
 
-/* Windows.Media.Devices.FocusControl */
-/* Windows.Media.Devices.FocusControl.get_Supported() */
 HRESULT wmede_focus_control_get__supported(WMEDE_FocusControl *self, BOOL *value);
 
-/* Windows.Media.Devices.FocusControl.get_SupportedPresets() */
 HRESULT wmede_focus_control_get__supported_presets(WMEDE_FocusControl *self, WFOCO_IVectorView_WMEDE_FocusPreset** value);
 
-/* Windows.Media.Devices.FocusControl.get_Preset() */
 HRESULT wmede_focus_control_get__preset(WMEDE_FocusControl *self, WMEDE_FocusPreset *value);
 
-/* Windows.Media.Devices.FocusControl.SetPresetAsync(preset) */
 HRESULT wmede_focus_control_set_preset_async(WMEDE_FocusControl *self, WMEDE_FocusPreset preset, WF_IAsyncAction** out);
 
-/* Windows.Media.Devices.FocusControl.SetPresetAsync(preset, completeBeforeFocus) */
 HRESULT wmede_focus_control_set_preset_async_focus_preset_b_p(WMEDE_FocusControl *self, WMEDE_FocusPreset preset, BOOL completeBeforeFocus, WF_IAsyncAction** out);
 
-/* Windows.Media.Devices.FocusControl.get_Min() */
 HRESULT wmede_focus_control_get__min(WMEDE_FocusControl *self, uint32_t *value);
 
-/* Windows.Media.Devices.FocusControl.get_Max() */
 HRESULT wmede_focus_control_get__max(WMEDE_FocusControl *self, uint32_t *value);
 
-/* Windows.Media.Devices.FocusControl.get_Step() */
 HRESULT wmede_focus_control_get__step(WMEDE_FocusControl *self, uint32_t *value);
 
-/* Windows.Media.Devices.FocusControl.get_Value() */
 HRESULT wmede_focus_control_get__value(WMEDE_FocusControl *self, uint32_t *value);
 
-/* Windows.Media.Devices.FocusControl.SetValueAsync(focus) */
 HRESULT wmede_focus_control_set_value_async(WMEDE_FocusControl *self, uint32_t focus, WF_IAsyncAction** out);
 
-/* Windows.Media.Devices.FocusControl.FocusAsync() */
 HRESULT wmede_focus_control_focus_async(WMEDE_FocusControl *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Devices.FocusControl.get_FocusChangedSupported() */
 HRESULT wmede_focus_control_get__focus_changed_supported(WMEDE_FocusControl *self, BOOL *value);
 
-/* Windows.Media.Devices.FocusControl.get_WaitForFocusSupported() */
 HRESULT wmede_focus_control_get__wait_for_focus_supported(WMEDE_FocusControl *self, BOOL *value);
 
-/* Windows.Media.Devices.FocusControl.get_SupportedFocusModes() */
 HRESULT wmede_focus_control_get__supported_focus_modes(WMEDE_FocusControl *self, WFOCO_IVectorView_WMEDE_FocusMode** value);
 
-/* Windows.Media.Devices.FocusControl.get_SupportedFocusDistances() */
 HRESULT wmede_focus_control_get__supported_focus_distances(WMEDE_FocusControl *self, WFOCO_IVectorView_WMEDE_ManualFocusDistance** value);
 
-/* Windows.Media.Devices.FocusControl.get_SupportedFocusRanges() */
 HRESULT wmede_focus_control_get__supported_focus_ranges(WMEDE_FocusControl *self, WFOCO_IVectorView_WMEDE_AutoFocusRange** value);
 
-/* Windows.Media.Devices.FocusControl.get_Mode() */
 HRESULT wmede_focus_control_get__mode(WMEDE_FocusControl *self, WMEDE_FocusMode *value);
 
-/* Windows.Media.Devices.FocusControl.get_FocusState() */
 HRESULT wmede_focus_control_get__focus_state(WMEDE_FocusControl *self, WMEDE_MediaCaptureFocusState *value);
 
-/* Windows.Media.Devices.FocusControl.UnlockAsync() */
 HRESULT wmede_focus_control_unlock_async(WMEDE_FocusControl *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Devices.FocusControl.LockAsync() */
 HRESULT wmede_focus_control_lock_async(WMEDE_FocusControl *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Devices.FocusControl.Configure(settings) */
 HRESULT wmede_focus_control_configure(WMEDE_FocusControl *self, WMEDE_FocusSettings* settings);
 
-/* activate Windows.Media.Devices.FocusSettings */
 HRESULT wmede_focus_settings_new(WMEDE_FocusSettings **out);
 
-/* Windows.Media.Devices.FocusSettings */
-/* Windows.Media.Devices.FocusSettings.get_Mode() */
 HRESULT wmede_focus_settings_get__mode(WMEDE_FocusSettings *self, WMEDE_FocusMode *value);
 
-/* Windows.Media.Devices.FocusSettings.put_Mode() */
 HRESULT wmede_focus_settings_put__mode(WMEDE_FocusSettings *self, WMEDE_FocusMode value);
 
-/* Windows.Media.Devices.FocusSettings.get_AutoFocusRange() */
 HRESULT wmede_focus_settings_get__auto_focus_range(WMEDE_FocusSettings *self, WMEDE_AutoFocusRange *value);
 
-/* Windows.Media.Devices.FocusSettings.put_AutoFocusRange() */
 HRESULT wmede_focus_settings_put__auto_focus_range(WMEDE_FocusSettings *self, WMEDE_AutoFocusRange value);
 
-/* Windows.Media.Devices.FocusSettings.get_Value() */
 HRESULT wmede_focus_settings_get__value(WMEDE_FocusSettings *self, uint32_t** value);
 
-/* Windows.Media.Devices.FocusSettings.put_Value() */
 HRESULT wmede_focus_settings_put__value(WMEDE_FocusSettings *self, uint32_t* value);
 
-/* Windows.Media.Devices.FocusSettings.get_Distance() */
 HRESULT wmede_focus_settings_get__distance(WMEDE_FocusSettings *self, WMEDE_ManualFocusDistance** value);
 
-/* Windows.Media.Devices.FocusSettings.put_Distance() */
 HRESULT wmede_focus_settings_put__distance(WMEDE_FocusSettings *self, WMEDE_ManualFocusDistance* value);
 
-/* Windows.Media.Devices.FocusSettings.get_WaitForFocus() */
 HRESULT wmede_focus_settings_get__wait_for_focus(WMEDE_FocusSettings *self, BOOL *value);
 
-/* Windows.Media.Devices.FocusSettings.put_WaitForFocus() */
 HRESULT wmede_focus_settings_put__wait_for_focus(WMEDE_FocusSettings *self, BOOL value);
 
-/* Windows.Media.Devices.FocusSettings.get_DisableDriverFallback() */
 HRESULT wmede_focus_settings_get__disable_driver_fallback(WMEDE_FocusSettings *self, BOOL *value);
 
-/* Windows.Media.Devices.FocusSettings.put_DisableDriverFallback() */
 HRESULT wmede_focus_settings_put__disable_driver_fallback(WMEDE_FocusSettings *self, BOOL value);
 
-/* activate Windows.Media.Devices.HdrVideoControl */
 HRESULT wmede_hdr_video_control_new(WMEDE_HdrVideoControl **out);
 
-/* Windows.Media.Devices.HdrVideoControl */
-/* Windows.Media.Devices.HdrVideoControl.get_Supported() */
 HRESULT wmede_hdr_video_control_get__supported(WMEDE_HdrVideoControl *self, BOOL *value);
 
-/* Windows.Media.Devices.HdrVideoControl.get_SupportedModes() */
 HRESULT wmede_hdr_video_control_get__supported_modes(WMEDE_HdrVideoControl *self, WFOCO_IVectorView_WMEDE_HdrVideoMode** value);
 
-/* Windows.Media.Devices.HdrVideoControl.get_Mode() */
 HRESULT wmede_hdr_video_control_get__mode(WMEDE_HdrVideoControl *self, WMEDE_HdrVideoMode *value);
 
-/* Windows.Media.Devices.HdrVideoControl.put_Mode() */
 HRESULT wmede_hdr_video_control_put__mode(WMEDE_HdrVideoControl *self, WMEDE_HdrVideoMode value);
 
-/* Windows.Media.Devices.IAudioDeviceModulesManagerFactory */
-/* Windows.Media.Devices.IAudioDeviceModulesManagerFactory.Create(deviceId) */
 HRESULT wmede_audio_device_modules_manager_factory_create(WMEDE_IAudioDeviceModulesManagerFactory *self, cwinrt_hstring deviceId, WMEDE_AudioDeviceModulesManager** out);
 
-/* Windows.Media.Devices.ICallControlStatics */
-/* Windows.Media.Devices.ICallControlStatics.GetDefault() */
 HRESULT wmede_call_control_statics_get_default(WMEDE_ICallControlStatics *self, WMEDE_CallControl** out);
 
-/* Windows.Media.Devices.ICallControlStatics.FromId(deviceId) */
 HRESULT wmede_call_control_statics_from_id(WMEDE_ICallControlStatics *self, cwinrt_hstring deviceId, WMEDE_CallControl** out);
 
-/* Windows.Media.Devices.IMediaDeviceStatics */
-/* Windows.Media.Devices.IMediaDeviceStatics.GetAudioCaptureSelector() */
 HRESULT wmede_media_device_statics_get_audio_capture_selector(WMEDE_IMediaDeviceStatics *self, cwinrt_hstring *out);
 
-/* Windows.Media.Devices.IMediaDeviceStatics.GetAudioRenderSelector() */
 HRESULT wmede_media_device_statics_get_audio_render_selector(WMEDE_IMediaDeviceStatics *self, cwinrt_hstring *out);
 
-/* Windows.Media.Devices.IMediaDeviceStatics.GetVideoCaptureSelector() */
 HRESULT wmede_media_device_statics_get_video_capture_selector(WMEDE_IMediaDeviceStatics *self, cwinrt_hstring *out);
 
-/* Windows.Media.Devices.IMediaDeviceStatics.GetDefaultAudioCaptureId(role) */
 HRESULT wmede_media_device_statics_get_default_audio_capture_id(WMEDE_IMediaDeviceStatics *self, WMEDE_AudioDeviceRole role, cwinrt_hstring *out);
 
-/* Windows.Media.Devices.IMediaDeviceStatics.GetDefaultAudioRenderId(role) */
 HRESULT wmede_media_device_statics_get_default_audio_render_id(WMEDE_IMediaDeviceStatics *self, WMEDE_AudioDeviceRole role, cwinrt_hstring *out);
 
-/* activate Windows.Media.Devices.ExposureControl */
 HRESULT wmede_exposure_control_new(WMEDE_ExposureControl **out);
 
-/* Windows.Media.Devices.ExposureControl */
-/* Windows.Media.Devices.ExposureControl.get_Supported() */
 HRESULT wmede_exposure_control_get__supported(WMEDE_ExposureControl *self, BOOL *value);
 
-/* Windows.Media.Devices.ExposureControl.get_Auto() */
 HRESULT wmede_exposure_control_get__auto(WMEDE_ExposureControl *self, BOOL *value);
 
-/* Windows.Media.Devices.ExposureControl.SetAutoAsync() */
 HRESULT wmede_exposure_control_set_auto_async(WMEDE_ExposureControl *self, BOOL value, WF_IAsyncAction** out);
 
-/* Windows.Media.Devices.ExposureControl.get_Min() */
 HRESULT wmede_exposure_control_get__min(WMEDE_ExposureControl *self, WF_TimeSpan *value);
 
-/* Windows.Media.Devices.ExposureControl.get_Max() */
 HRESULT wmede_exposure_control_get__max(WMEDE_ExposureControl *self, WF_TimeSpan *value);
 
-/* Windows.Media.Devices.ExposureControl.get_Step() */
 HRESULT wmede_exposure_control_get__step(WMEDE_ExposureControl *self, WF_TimeSpan *value);
 
-/* Windows.Media.Devices.ExposureControl.get_Value() */
 HRESULT wmede_exposure_control_get__value(WMEDE_ExposureControl *self, WF_TimeSpan *value);
 
-/* Windows.Media.Devices.ExposureControl.SetValueAsync(shutterDuration) */
 HRESULT wmede_exposure_control_set_value_async(WMEDE_ExposureControl *self, WF_TimeSpan shutterDuration, WF_IAsyncAction** out);
 
-/* activate Windows.Media.Devices.InfraredTorchControl */
 HRESULT wmede_infrared_torch_control_new(WMEDE_InfraredTorchControl **out);
 
-/* Windows.Media.Devices.InfraredTorchControl */
-/* Windows.Media.Devices.InfraredTorchControl.get_IsSupported() */
 HRESULT wmede_infrared_torch_control_get__is_supported(WMEDE_InfraredTorchControl *self, BOOL *value);
 
-/* Windows.Media.Devices.InfraredTorchControl.get_SupportedModes() */
 HRESULT wmede_infrared_torch_control_get__supported_modes(WMEDE_InfraredTorchControl *self, WFOCO_IVectorView_WMEDE_InfraredTorchMode** value);
 
-/* Windows.Media.Devices.InfraredTorchControl.get_CurrentMode() */
 HRESULT wmede_infrared_torch_control_get__current_mode(WMEDE_InfraredTorchControl *self, WMEDE_InfraredTorchMode *value);
 
-/* Windows.Media.Devices.InfraredTorchControl.put_CurrentMode() */
 HRESULT wmede_infrared_torch_control_put__current_mode(WMEDE_InfraredTorchControl *self, WMEDE_InfraredTorchMode value);
 
-/* Windows.Media.Devices.InfraredTorchControl.get_MinPower() */
 HRESULT wmede_infrared_torch_control_get__min_power(WMEDE_InfraredTorchControl *self, int32_t *value);
 
-/* Windows.Media.Devices.InfraredTorchControl.get_MaxPower() */
 HRESULT wmede_infrared_torch_control_get__max_power(WMEDE_InfraredTorchControl *self, int32_t *value);
 
-/* Windows.Media.Devices.InfraredTorchControl.get_PowerStep() */
 HRESULT wmede_infrared_torch_control_get__power_step(WMEDE_InfraredTorchControl *self, int32_t *value);
 
-/* Windows.Media.Devices.InfraredTorchControl.get_Power() */
 HRESULT wmede_infrared_torch_control_get__power(WMEDE_InfraredTorchControl *self, int32_t *value);
 
-/* Windows.Media.Devices.InfraredTorchControl.put_Power() */
 HRESULT wmede_infrared_torch_control_put__power(WMEDE_InfraredTorchControl *self, int32_t value);
 
-/* activate Windows.Media.Devices.IsoSpeedControl */
 HRESULT wmede_iso_speed_control_new(WMEDE_IsoSpeedControl **out);
 
-/* Windows.Media.Devices.IsoSpeedControl */
-/* Windows.Media.Devices.IsoSpeedControl.get_Supported() */
 HRESULT wmede_iso_speed_control_get__supported(WMEDE_IsoSpeedControl *self, BOOL *value);
 
-/* Windows.Media.Devices.IsoSpeedControl.get_SupportedPresets() */
 HRESULT wmede_iso_speed_control_get__supported_presets(WMEDE_IsoSpeedControl *self, WFOCO_IVectorView_WMEDE_IsoSpeedPreset** value);
 
-/* Windows.Media.Devices.IsoSpeedControl.get_Preset() */
 HRESULT wmede_iso_speed_control_get__preset(WMEDE_IsoSpeedControl *self, WMEDE_IsoSpeedPreset *value);
 
-/* Windows.Media.Devices.IsoSpeedControl.SetPresetAsync(preset) */
 HRESULT wmede_iso_speed_control_set_preset_async(WMEDE_IsoSpeedControl *self, WMEDE_IsoSpeedPreset preset, WF_IAsyncAction** out);
 
-/* Windows.Media.Devices.IsoSpeedControl.get_Min() */
 HRESULT wmede_iso_speed_control_get__min(WMEDE_IsoSpeedControl *self, uint32_t *value);
 
-/* Windows.Media.Devices.IsoSpeedControl.get_Max() */
 HRESULT wmede_iso_speed_control_get__max(WMEDE_IsoSpeedControl *self, uint32_t *value);
 
-/* Windows.Media.Devices.IsoSpeedControl.get_Step() */
 HRESULT wmede_iso_speed_control_get__step(WMEDE_IsoSpeedControl *self, uint32_t *value);
 
-/* Windows.Media.Devices.IsoSpeedControl.get_Value() */
 HRESULT wmede_iso_speed_control_get__value(WMEDE_IsoSpeedControl *self, uint32_t *value);
 
-/* Windows.Media.Devices.IsoSpeedControl.SetValueAsync(isoSpeed) */
 HRESULT wmede_iso_speed_control_set_value_async(WMEDE_IsoSpeedControl *self, uint32_t isoSpeed, WF_IAsyncAction** out);
 
-/* Windows.Media.Devices.IsoSpeedControl.get_Auto() */
 HRESULT wmede_iso_speed_control_get__auto(WMEDE_IsoSpeedControl *self, BOOL *value);
 
-/* Windows.Media.Devices.IsoSpeedControl.SetAutoAsync() */
 HRESULT wmede_iso_speed_control_set_auto_async(WMEDE_IsoSpeedControl *self, WF_IAsyncAction** out);
 
-/* activate Windows.Media.Devices.KeypadPressedEventArgs */
 HRESULT wmede_keypad_pressed_event_args_new(WMEDE_KeypadPressedEventArgs **out);
 
-/* Windows.Media.Devices.KeypadPressedEventArgs */
-/* Windows.Media.Devices.KeypadPressedEventArgs.get_TelephonyKey() */
 HRESULT wmede_keypad_pressed_event_args_get__telephony_key(WMEDE_KeypadPressedEventArgs *self, WMEDE_TelephonyKey *value);
 
-/* Windows.Media.Devices.KeypadPressedEventHandler */
-/* Windows.Media.Devices.KeypadPressedEventHandler.Invoke(sender, e) */
 HRESULT wmede_keypad_pressed_event_handler_invoke(WMEDE_KeypadPressedEventHandler *self, WMEDE_CallControl* sender, WMEDE_KeypadPressedEventArgs* e);
 
-/* activate Windows.Media.Devices.LowLagPhotoControl */
 HRESULT wmede_low_lag_photo_control_new(WMEDE_LowLagPhotoControl **out);
 
-/* Windows.Media.Devices.LowLagPhotoControl */
-/* Windows.Media.Devices.LowLagPhotoControl.GetHighestConcurrentFrameRate(captureProperties) */
 HRESULT wmede_low_lag_photo_control_get_highest_concurrent_frame_rate(WMEDE_LowLagPhotoControl *self, WMEME_IMediaEncodingProperties* captureProperties, WMEME_MediaRatio** out);
 
-/* Windows.Media.Devices.LowLagPhotoControl.GetCurrentFrameRate() */
 HRESULT wmede_low_lag_photo_control_get_current_frame_rate(WMEDE_LowLagPhotoControl *self, WMEME_MediaRatio** out);
 
-/* Windows.Media.Devices.LowLagPhotoControl.get_ThumbnailEnabled() */
 HRESULT wmede_low_lag_photo_control_get__thumbnail_enabled(WMEDE_LowLagPhotoControl *self, BOOL *value);
 
-/* Windows.Media.Devices.LowLagPhotoControl.put_ThumbnailEnabled() */
 HRESULT wmede_low_lag_photo_control_put__thumbnail_enabled(WMEDE_LowLagPhotoControl *self, BOOL value);
 
-/* Windows.Media.Devices.LowLagPhotoControl.get_ThumbnailFormat() */
 HRESULT wmede_low_lag_photo_control_get__thumbnail_format(WMEDE_LowLagPhotoControl *self, WMEME_MediaThumbnailFormat *value);
 
-/* Windows.Media.Devices.LowLagPhotoControl.put_ThumbnailFormat() */
 HRESULT wmede_low_lag_photo_control_put__thumbnail_format(WMEDE_LowLagPhotoControl *self, WMEME_MediaThumbnailFormat value);
 
-/* Windows.Media.Devices.LowLagPhotoControl.get_DesiredThumbnailSize() */
 HRESULT wmede_low_lag_photo_control_get__desired_thumbnail_size(WMEDE_LowLagPhotoControl *self, uint32_t *value);
 
-/* Windows.Media.Devices.LowLagPhotoControl.put_DesiredThumbnailSize() */
 HRESULT wmede_low_lag_photo_control_put__desired_thumbnail_size(WMEDE_LowLagPhotoControl *self, uint32_t value);
 
-/* Windows.Media.Devices.LowLagPhotoControl.get_HardwareAcceleratedThumbnailSupported() */
 HRESULT wmede_low_lag_photo_control_get__hardware_accelerated_thumbnail_supported(WMEDE_LowLagPhotoControl *self, uint32_t *value);
 
-/* activate Windows.Media.Devices.LowLagPhotoSequenceControl */
 HRESULT wmede_low_lag_photo_sequence_control_new(WMEDE_LowLagPhotoSequenceControl **out);
 
-/* Windows.Media.Devices.LowLagPhotoSequenceControl */
-/* Windows.Media.Devices.LowLagPhotoSequenceControl.get_Supported() */
 HRESULT wmede_low_lag_photo_sequence_control_get__supported(WMEDE_LowLagPhotoSequenceControl *self, BOOL *value);
 
-/* Windows.Media.Devices.LowLagPhotoSequenceControl.get_MaxPastPhotos() */
 HRESULT wmede_low_lag_photo_sequence_control_get__max_past_photos(WMEDE_LowLagPhotoSequenceControl *self, uint32_t *value);
 
-/* Windows.Media.Devices.LowLagPhotoSequenceControl.get_MaxPhotosPerSecond() */
 HRESULT wmede_low_lag_photo_sequence_control_get__max_photos_per_second(WMEDE_LowLagPhotoSequenceControl *self, float *value);
 
-/* Windows.Media.Devices.LowLagPhotoSequenceControl.get_PastPhotoLimit() */
 HRESULT wmede_low_lag_photo_sequence_control_get__past_photo_limit(WMEDE_LowLagPhotoSequenceControl *self, uint32_t *value);
 
-/* Windows.Media.Devices.LowLagPhotoSequenceControl.put_PastPhotoLimit() */
 HRESULT wmede_low_lag_photo_sequence_control_put__past_photo_limit(WMEDE_LowLagPhotoSequenceControl *self, uint32_t value);
 
-/* Windows.Media.Devices.LowLagPhotoSequenceControl.get_PhotosPerSecondLimit() */
 HRESULT wmede_low_lag_photo_sequence_control_get__photos_per_second_limit(WMEDE_LowLagPhotoSequenceControl *self, float *value);
 
-/* Windows.Media.Devices.LowLagPhotoSequenceControl.put_PhotosPerSecondLimit() */
 HRESULT wmede_low_lag_photo_sequence_control_put__photos_per_second_limit(WMEDE_LowLagPhotoSequenceControl *self, float value);
 
-/* Windows.Media.Devices.LowLagPhotoSequenceControl.GetHighestConcurrentFrameRate(captureProperties) */
 HRESULT wmede_low_lag_photo_sequence_control_get_highest_concurrent_frame_rate(WMEDE_LowLagPhotoSequenceControl *self, WMEME_IMediaEncodingProperties* captureProperties, WMEME_MediaRatio** out);
 
-/* Windows.Media.Devices.LowLagPhotoSequenceControl.GetCurrentFrameRate() */
 HRESULT wmede_low_lag_photo_sequence_control_get_current_frame_rate(WMEDE_LowLagPhotoSequenceControl *self, WMEME_MediaRatio** out);
 
-/* Windows.Media.Devices.LowLagPhotoSequenceControl.get_ThumbnailEnabled() */
 HRESULT wmede_low_lag_photo_sequence_control_get__thumbnail_enabled(WMEDE_LowLagPhotoSequenceControl *self, BOOL *value);
 
-/* Windows.Media.Devices.LowLagPhotoSequenceControl.put_ThumbnailEnabled() */
 HRESULT wmede_low_lag_photo_sequence_control_put__thumbnail_enabled(WMEDE_LowLagPhotoSequenceControl *self, BOOL value);
 
-/* Windows.Media.Devices.LowLagPhotoSequenceControl.get_ThumbnailFormat() */
 HRESULT wmede_low_lag_photo_sequence_control_get__thumbnail_format(WMEDE_LowLagPhotoSequenceControl *self, WMEME_MediaThumbnailFormat *value);
 
-/* Windows.Media.Devices.LowLagPhotoSequenceControl.put_ThumbnailFormat() */
 HRESULT wmede_low_lag_photo_sequence_control_put__thumbnail_format(WMEDE_LowLagPhotoSequenceControl *self, WMEME_MediaThumbnailFormat value);
 
-/* Windows.Media.Devices.LowLagPhotoSequenceControl.get_DesiredThumbnailSize() */
 HRESULT wmede_low_lag_photo_sequence_control_get__desired_thumbnail_size(WMEDE_LowLagPhotoSequenceControl *self, uint32_t *value);
 
-/* Windows.Media.Devices.LowLagPhotoSequenceControl.put_DesiredThumbnailSize() */
 HRESULT wmede_low_lag_photo_sequence_control_put__desired_thumbnail_size(WMEDE_LowLagPhotoSequenceControl *self, uint32_t value);
 
-/* Windows.Media.Devices.LowLagPhotoSequenceControl.get_HardwareAcceleratedThumbnailSupported() */
 HRESULT wmede_low_lag_photo_sequence_control_get__hardware_accelerated_thumbnail_supported(WMEDE_LowLagPhotoSequenceControl *self, uint32_t *value);
 
-/* activate Windows.Media.Devices.MediaDevice */
 HRESULT wmede_media_device_new(WMEDE_MediaDevice **out);
 
-/* Windows.Media.Devices.MediaDevice */
-/* Windows.Media.Devices.MediaDevice.GetAudioCaptureSelector() */
 HRESULT wmede_media_device_get_audio_capture_selector(cwinrt_hstring *out);
 
-/* Windows.Media.Devices.MediaDevice.GetAudioRenderSelector() */
 HRESULT wmede_media_device_get_audio_render_selector(cwinrt_hstring *out);
 
-/* Windows.Media.Devices.MediaDevice.GetVideoCaptureSelector() */
 HRESULT wmede_media_device_get_video_capture_selector(cwinrt_hstring *out);
 
-/* Windows.Media.Devices.MediaDevice.GetDefaultAudioCaptureId(role) */
 HRESULT wmede_media_device_get_default_audio_capture_id(WMEDE_AudioDeviceRole role, cwinrt_hstring *out);
 
-/* Windows.Media.Devices.MediaDevice.GetDefaultAudioRenderId(role) */
 HRESULT wmede_media_device_get_default_audio_render_id(WMEDE_AudioDeviceRole role, cwinrt_hstring *out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmede_media_device_on_default_audio_capture_device_changed(WMEDE_MediaDevice *self, cwinrt_event_fn fn, void *ctx);
@@ -1322,649 +1165,415 @@ void wmede_media_device_off_default_audio_capture_device_changed(WMEDE_MediaDevi
 cwinrt_token wmede_media_device_on_default_audio_render_device_changed(WMEDE_MediaDevice *self, cwinrt_event_fn fn, void *ctx);
 void wmede_media_device_off_default_audio_render_device_changed(WMEDE_MediaDevice *self, cwinrt_token token);
 
-/* activate Windows.Media.Devices.MediaDeviceControl */
 HRESULT wmede_media_device_control_new(WMEDE_MediaDeviceControl **out);
 
-/* Windows.Media.Devices.MediaDeviceControl */
-/* Windows.Media.Devices.MediaDeviceControl.get_Capabilities() */
 HRESULT wmede_media_device_control_get__capabilities(WMEDE_MediaDeviceControl *self, WMEDE_MediaDeviceControlCapabilities** value);
 
-/* Windows.Media.Devices.MediaDeviceControl.TryGetValue() */
 HRESULT wmede_media_device_control_try_get_value(WMEDE_MediaDeviceControl *self, double value, BOOL *out);
 
-/* Windows.Media.Devices.MediaDeviceControl.TrySetValue() */
 HRESULT wmede_media_device_control_try_set_value(WMEDE_MediaDeviceControl *self, double value, BOOL *out);
 
-/* Windows.Media.Devices.MediaDeviceControl.TryGetAuto() */
 HRESULT wmede_media_device_control_try_get_auto(WMEDE_MediaDeviceControl *self, BOOL value, BOOL *out);
 
-/* Windows.Media.Devices.MediaDeviceControl.TrySetAuto() */
 HRESULT wmede_media_device_control_try_set_auto(WMEDE_MediaDeviceControl *self, BOOL value, BOOL *out);
 
-/* activate Windows.Media.Devices.MediaDeviceControlCapabilities */
 HRESULT wmede_media_device_control_capabilities_new(WMEDE_MediaDeviceControlCapabilities **out);
 
-/* Windows.Media.Devices.MediaDeviceControlCapabilities */
-/* Windows.Media.Devices.MediaDeviceControlCapabilities.get_Supported() */
 HRESULT wmede_media_device_control_capabilities_get__supported(WMEDE_MediaDeviceControlCapabilities *self, BOOL *value);
 
-/* Windows.Media.Devices.MediaDeviceControlCapabilities.get_Min() */
 HRESULT wmede_media_device_control_capabilities_get__min(WMEDE_MediaDeviceControlCapabilities *self, double *value);
 
-/* Windows.Media.Devices.MediaDeviceControlCapabilities.get_Max() */
 HRESULT wmede_media_device_control_capabilities_get__max(WMEDE_MediaDeviceControlCapabilities *self, double *value);
 
-/* Windows.Media.Devices.MediaDeviceControlCapabilities.get_Step() */
 HRESULT wmede_media_device_control_capabilities_get__step(WMEDE_MediaDeviceControlCapabilities *self, double *value);
 
-/* Windows.Media.Devices.MediaDeviceControlCapabilities.get_Default() */
 HRESULT wmede_media_device_control_capabilities_get__default(WMEDE_MediaDeviceControlCapabilities *self, double *value);
 
-/* Windows.Media.Devices.MediaDeviceControlCapabilities.get_AutoModeSupported() */
 HRESULT wmede_media_device_control_capabilities_get__auto_mode_supported(WMEDE_MediaDeviceControlCapabilities *self, BOOL *value);
 
-/* activate Windows.Media.Devices.ModuleCommandResult */
 HRESULT wmede_module_command_result_new(WMEDE_ModuleCommandResult **out);
 
-/* Windows.Media.Devices.ModuleCommandResult */
-/* Windows.Media.Devices.ModuleCommandResult.get_Status() */
 HRESULT wmede_module_command_result_get__status(WMEDE_ModuleCommandResult *self, WMEDE_SendCommandStatus *value);
 
-/* Windows.Media.Devices.ModuleCommandResult.get_Result() */
 HRESULT wmede_module_command_result_get__result(WMEDE_ModuleCommandResult *self, WSTST_IBuffer** value);
 
-/* activate Windows.Media.Devices.OpticalImageStabilizationControl */
 HRESULT wmede_optical_image_stabilization_control_new(WMEDE_OpticalImageStabilizationControl **out);
 
-/* Windows.Media.Devices.OpticalImageStabilizationControl */
-/* Windows.Media.Devices.OpticalImageStabilizationControl.get_Supported() */
 HRESULT wmede_optical_image_stabilization_control_get__supported(WMEDE_OpticalImageStabilizationControl *self, BOOL *value);
 
-/* Windows.Media.Devices.OpticalImageStabilizationControl.get_SupportedModes() */
 HRESULT wmede_optical_image_stabilization_control_get__supported_modes(WMEDE_OpticalImageStabilizationControl *self, WFOCO_IVectorView_WMEDE_OpticalImageStabilizationMode** value);
 
-/* Windows.Media.Devices.OpticalImageStabilizationControl.get_Mode() */
 HRESULT wmede_optical_image_stabilization_control_get__mode(WMEDE_OpticalImageStabilizationControl *self, WMEDE_OpticalImageStabilizationMode *value);
 
-/* Windows.Media.Devices.OpticalImageStabilizationControl.put_Mode() */
 HRESULT wmede_optical_image_stabilization_control_put__mode(WMEDE_OpticalImageStabilizationControl *self, WMEDE_OpticalImageStabilizationMode value);
 
-/* activate Windows.Media.Devices.PanelBasedOptimizationControl */
 HRESULT wmede_panel_based_optimization_control_new(WMEDE_PanelBasedOptimizationControl **out);
 
-/* Windows.Media.Devices.PanelBasedOptimizationControl */
-/* Windows.Media.Devices.PanelBasedOptimizationControl.get_IsSupported() */
 HRESULT wmede_panel_based_optimization_control_get__is_supported(WMEDE_PanelBasedOptimizationControl *self, BOOL *value);
 
-/* Windows.Media.Devices.PanelBasedOptimizationControl.get_Panel() */
 HRESULT wmede_panel_based_optimization_control_get__panel(WMEDE_PanelBasedOptimizationControl *self, WDEEN_Panel *value);
 
-/* Windows.Media.Devices.PanelBasedOptimizationControl.put_Panel() */
 HRESULT wmede_panel_based_optimization_control_put__panel(WMEDE_PanelBasedOptimizationControl *self, WDEEN_Panel value);
 
-/* activate Windows.Media.Devices.PhotoConfirmationControl */
 HRESULT wmede_photo_confirmation_control_new(WMEDE_PhotoConfirmationControl **out);
 
-/* Windows.Media.Devices.PhotoConfirmationControl */
-/* Windows.Media.Devices.PhotoConfirmationControl.get_Supported() */
 HRESULT wmede_photo_confirmation_control_get__supported(WMEDE_PhotoConfirmationControl *self, BOOL *value);
 
-/* Windows.Media.Devices.PhotoConfirmationControl.get_Enabled() */
 HRESULT wmede_photo_confirmation_control_get__enabled(WMEDE_PhotoConfirmationControl *self, BOOL *value);
 
-/* Windows.Media.Devices.PhotoConfirmationControl.put_Enabled() */
 HRESULT wmede_photo_confirmation_control_put__enabled(WMEDE_PhotoConfirmationControl *self, BOOL value);
 
-/* Windows.Media.Devices.PhotoConfirmationControl.get_PixelFormat() */
 HRESULT wmede_photo_confirmation_control_get__pixel_format(WMEDE_PhotoConfirmationControl *self, WMEME_MediaPixelFormat *value);
 
-/* Windows.Media.Devices.PhotoConfirmationControl.put_PixelFormat(format) */
 HRESULT wmede_photo_confirmation_control_put__pixel_format(WMEDE_PhotoConfirmationControl *self, WMEME_MediaPixelFormat format);
 
-/* activate Windows.Media.Devices.RedialRequestedEventArgs */
 HRESULT wmede_redial_requested_event_args_new(WMEDE_RedialRequestedEventArgs **out);
 
-/* Windows.Media.Devices.RedialRequestedEventArgs */
-/* Windows.Media.Devices.RedialRequestedEventArgs.Handled() */
 HRESULT wmede_redial_requested_event_args_handled(WMEDE_RedialRequestedEventArgs *self);
 
-/* Windows.Media.Devices.RedialRequestedEventHandler */
-/* Windows.Media.Devices.RedialRequestedEventHandler.Invoke(sender, e) */
 HRESULT wmede_redial_requested_event_handler_invoke(WMEDE_RedialRequestedEventHandler *self, WMEDE_CallControl* sender, WMEDE_RedialRequestedEventArgs* e);
 
-/* activate Windows.Media.Devices.RegionOfInterest */
 HRESULT wmede_region_of_interest_new(WMEDE_RegionOfInterest **out);
 
-/* Windows.Media.Devices.RegionOfInterest */
-/* Windows.Media.Devices.RegionOfInterest.get_AutoFocusEnabled() */
 HRESULT wmede_region_of_interest_get__auto_focus_enabled(WMEDE_RegionOfInterest *self, BOOL *value);
 
-/* Windows.Media.Devices.RegionOfInterest.put_AutoFocusEnabled() */
 HRESULT wmede_region_of_interest_put__auto_focus_enabled(WMEDE_RegionOfInterest *self, BOOL value);
 
-/* Windows.Media.Devices.RegionOfInterest.get_AutoWhiteBalanceEnabled() */
 HRESULT wmede_region_of_interest_get__auto_white_balance_enabled(WMEDE_RegionOfInterest *self, BOOL *value);
 
-/* Windows.Media.Devices.RegionOfInterest.put_AutoWhiteBalanceEnabled() */
 HRESULT wmede_region_of_interest_put__auto_white_balance_enabled(WMEDE_RegionOfInterest *self, BOOL value);
 
-/* Windows.Media.Devices.RegionOfInterest.get_AutoExposureEnabled() */
 HRESULT wmede_region_of_interest_get__auto_exposure_enabled(WMEDE_RegionOfInterest *self, BOOL *value);
 
-/* Windows.Media.Devices.RegionOfInterest.put_AutoExposureEnabled() */
 HRESULT wmede_region_of_interest_put__auto_exposure_enabled(WMEDE_RegionOfInterest *self, BOOL value);
 
-/* Windows.Media.Devices.RegionOfInterest.get_Bounds() */
 HRESULT wmede_region_of_interest_get__bounds(WMEDE_RegionOfInterest *self, WF_Rect *value);
 
-/* Windows.Media.Devices.RegionOfInterest.put_Bounds() */
 HRESULT wmede_region_of_interest_put__bounds(WMEDE_RegionOfInterest *self, WF_Rect value);
 
-/* Windows.Media.Devices.RegionOfInterest.get_Type() */
 HRESULT wmede_region_of_interest_get__type(WMEDE_RegionOfInterest *self, WMEDE_RegionOfInterestType *value);
 
-/* Windows.Media.Devices.RegionOfInterest.put_Type() */
 HRESULT wmede_region_of_interest_put__type(WMEDE_RegionOfInterest *self, WMEDE_RegionOfInterestType value);
 
-/* Windows.Media.Devices.RegionOfInterest.get_BoundsNormalized() */
 HRESULT wmede_region_of_interest_get__bounds_normalized(WMEDE_RegionOfInterest *self, BOOL *value);
 
-/* Windows.Media.Devices.RegionOfInterest.put_BoundsNormalized() */
 HRESULT wmede_region_of_interest_put__bounds_normalized(WMEDE_RegionOfInterest *self, BOOL value);
 
-/* Windows.Media.Devices.RegionOfInterest.get_Weight() */
 HRESULT wmede_region_of_interest_get__weight(WMEDE_RegionOfInterest *self, uint32_t *value);
 
-/* Windows.Media.Devices.RegionOfInterest.put_Weight() */
 HRESULT wmede_region_of_interest_put__weight(WMEDE_RegionOfInterest *self, uint32_t value);
 
-/* activate Windows.Media.Devices.RegionsOfInterestControl */
 HRESULT wmede_regions_of_interest_control_new(WMEDE_RegionsOfInterestControl **out);
 
-/* Windows.Media.Devices.RegionsOfInterestControl */
-/* Windows.Media.Devices.RegionsOfInterestControl.get_MaxRegions() */
 HRESULT wmede_regions_of_interest_control_get__max_regions(WMEDE_RegionsOfInterestControl *self, uint32_t *value);
 
-/* Windows.Media.Devices.RegionsOfInterestControl.SetRegionsAsync(regions) */
 HRESULT wmede_regions_of_interest_control_set_regions_async(WMEDE_RegionsOfInterestControl *self, WFOCO_IIterable_WMEDE_RegionOfInterest* regions, WF_IAsyncAction** out);
 
-/* Windows.Media.Devices.RegionsOfInterestControl.SetRegionsAsync(regions, lockValues) */
 HRESULT wmede_regions_of_interest_control_set_regions_async_p_b_p(WMEDE_RegionsOfInterestControl *self, WFOCO_IIterable_WMEDE_RegionOfInterest* regions, BOOL lockValues, WF_IAsyncAction** out);
 
-/* Windows.Media.Devices.RegionsOfInterestControl.ClearRegionsAsync() */
 HRESULT wmede_regions_of_interest_control_clear_regions_async(WMEDE_RegionsOfInterestControl *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Devices.RegionsOfInterestControl.get_AutoFocusSupported() */
 HRESULT wmede_regions_of_interest_control_get__auto_focus_supported(WMEDE_RegionsOfInterestControl *self, BOOL *value);
 
-/* Windows.Media.Devices.RegionsOfInterestControl.get_AutoWhiteBalanceSupported() */
 HRESULT wmede_regions_of_interest_control_get__auto_white_balance_supported(WMEDE_RegionsOfInterestControl *self, BOOL *value);
 
-/* Windows.Media.Devices.RegionsOfInterestControl.get_AutoExposureSupported() */
 HRESULT wmede_regions_of_interest_control_get__auto_exposure_supported(WMEDE_RegionsOfInterestControl *self, BOOL *value);
 
-/* activate Windows.Media.Devices.SceneModeControl */
 HRESULT wmede_scene_mode_control_new(WMEDE_SceneModeControl **out);
 
-/* Windows.Media.Devices.SceneModeControl */
-/* Windows.Media.Devices.SceneModeControl.get_SupportedModes() */
 HRESULT wmede_scene_mode_control_get__supported_modes(WMEDE_SceneModeControl *self, WFOCO_IVectorView_WMEDE_CaptureSceneMode** value);
 
-/* Windows.Media.Devices.SceneModeControl.get_Value() */
 HRESULT wmede_scene_mode_control_get__value(WMEDE_SceneModeControl *self, WMEDE_CaptureSceneMode *value);
 
-/* Windows.Media.Devices.SceneModeControl.SetValueAsync(sceneMode) */
 HRESULT wmede_scene_mode_control_set_value_async(WMEDE_SceneModeControl *self, WMEDE_CaptureSceneMode sceneMode, WF_IAsyncAction** out);
 
-/* activate Windows.Media.Devices.TorchControl */
 HRESULT wmede_torch_control_new(WMEDE_TorchControl **out);
 
-/* Windows.Media.Devices.TorchControl */
-/* Windows.Media.Devices.TorchControl.get_Supported() */
 HRESULT wmede_torch_control_get__supported(WMEDE_TorchControl *self, BOOL *value);
 
-/* Windows.Media.Devices.TorchControl.get_PowerSupported() */
 HRESULT wmede_torch_control_get__power_supported(WMEDE_TorchControl *self, BOOL *value);
 
-/* Windows.Media.Devices.TorchControl.get_Enabled() */
 HRESULT wmede_torch_control_get__enabled(WMEDE_TorchControl *self, BOOL *value);
 
-/* Windows.Media.Devices.TorchControl.put_Enabled() */
 HRESULT wmede_torch_control_put__enabled(WMEDE_TorchControl *self, BOOL value);
 
-/* Windows.Media.Devices.TorchControl.get_PowerPercent() */
 HRESULT wmede_torch_control_get__power_percent(WMEDE_TorchControl *self, float *value);
 
-/* Windows.Media.Devices.TorchControl.put_PowerPercent() */
 HRESULT wmede_torch_control_put__power_percent(WMEDE_TorchControl *self, float value);
 
-/* activate Windows.Media.Devices.VideoDeviceController */
 HRESULT wmede_video_device_controller_new(WMEDE_VideoDeviceController **out);
 
-/* Windows.Media.Devices.VideoDeviceController */
-/* Windows.Media.Devices.VideoDeviceController.get_Brightness() */
 HRESULT wmede_video_device_controller_get__brightness(WMEDE_VideoDeviceController *self, WMEDE_MediaDeviceControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_Contrast() */
 HRESULT wmede_video_device_controller_get__contrast(WMEDE_VideoDeviceController *self, WMEDE_MediaDeviceControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_Hue() */
 HRESULT wmede_video_device_controller_get__hue(WMEDE_VideoDeviceController *self, WMEDE_MediaDeviceControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_WhiteBalance() */
 HRESULT wmede_video_device_controller_get__white_balance(WMEDE_VideoDeviceController *self, WMEDE_MediaDeviceControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_BacklightCompensation() */
 HRESULT wmede_video_device_controller_get__backlight_compensation(WMEDE_VideoDeviceController *self, WMEDE_MediaDeviceControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_Pan() */
 HRESULT wmede_video_device_controller_get__pan(WMEDE_VideoDeviceController *self, WMEDE_MediaDeviceControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_Tilt() */
 HRESULT wmede_video_device_controller_get__tilt(WMEDE_VideoDeviceController *self, WMEDE_MediaDeviceControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_Zoom() */
 HRESULT wmede_video_device_controller_get__zoom(WMEDE_VideoDeviceController *self, WMEDE_MediaDeviceControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_Roll() */
 HRESULT wmede_video_device_controller_get__roll(WMEDE_VideoDeviceController *self, WMEDE_MediaDeviceControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_Exposure() */
 HRESULT wmede_video_device_controller_get__exposure(WMEDE_VideoDeviceController *self, WMEDE_MediaDeviceControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_Focus() */
 HRESULT wmede_video_device_controller_get__focus(WMEDE_VideoDeviceController *self, WMEDE_MediaDeviceControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.TrySetPowerlineFrequency() */
 HRESULT wmede_video_device_controller_try_set_powerline_frequency(WMEDE_VideoDeviceController *self, WMECA_PowerlineFrequency value, BOOL *out);
 
-/* Windows.Media.Devices.VideoDeviceController.TryGetPowerlineFrequency() */
 HRESULT wmede_video_device_controller_try_get_powerline_frequency(WMEDE_VideoDeviceController *self, WMECA_PowerlineFrequency value, BOOL *out);
 
-/* Windows.Media.Devices.VideoDeviceController.GetAvailableMediaStreamProperties(mediaStreamType) */
 HRESULT wmede_video_device_controller_get_available_media_stream_properties(WMEDE_VideoDeviceController *self, WMECA_MediaStreamType mediaStreamType, WFOCO_IVectorView_WMEME_IMediaEncodingProperties** out);
 
-/* Windows.Media.Devices.VideoDeviceController.GetMediaStreamProperties(mediaStreamType) */
 HRESULT wmede_video_device_controller_get_media_stream_properties(WMEDE_VideoDeviceController *self, WMECA_MediaStreamType mediaStreamType, WMEME_IMediaEncodingProperties** out);
 
-/* Windows.Media.Devices.VideoDeviceController.SetMediaStreamPropertiesAsync(mediaStreamType, mediaEncodingProperties) */
 HRESULT wmede_video_device_controller_set_media_stream_properties_async(WMEDE_VideoDeviceController *self, WMECA_MediaStreamType mediaStreamType, WMEME_IMediaEncodingProperties* mediaEncodingProperties, WF_IAsyncAction** out);
 
-/* Windows.Media.Devices.VideoDeviceController.SetDeviceProperty(propertyId, propertyValue) */
 HRESULT wmede_video_device_controller_set_device_property(WMEDE_VideoDeviceController *self, cwinrt_hstring propertyId, IInspectable* propertyValue);
 
-/* Windows.Media.Devices.VideoDeviceController.GetDeviceProperty(propertyId) */
 HRESULT wmede_video_device_controller_get_device_property(WMEDE_VideoDeviceController *self, cwinrt_hstring propertyId, IInspectable** out);
 
-/* Windows.Media.Devices.VideoDeviceController.get_LowLagPhotoSequence() */
 HRESULT wmede_video_device_controller_get__low_lag_photo_sequence(WMEDE_VideoDeviceController *self, WMEDE_LowLagPhotoSequenceControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_LowLagPhoto() */
 HRESULT wmede_video_device_controller_get__low_lag_photo(WMEDE_VideoDeviceController *self, WMEDE_LowLagPhotoControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_SceneModeControl() */
 HRESULT wmede_video_device_controller_get__scene_mode_control(WMEDE_VideoDeviceController *self, WMEDE_SceneModeControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_TorchControl() */
 HRESULT wmede_video_device_controller_get__torch_control(WMEDE_VideoDeviceController *self, WMEDE_TorchControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_FlashControl() */
 HRESULT wmede_video_device_controller_get__flash_control(WMEDE_VideoDeviceController *self, WMEDE_FlashControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_WhiteBalanceControl() */
 HRESULT wmede_video_device_controller_get__white_balance_control(WMEDE_VideoDeviceController *self, WMEDE_WhiteBalanceControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_ExposureControl() */
 HRESULT wmede_video_device_controller_get__exposure_control(WMEDE_VideoDeviceController *self, WMEDE_ExposureControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_FocusControl() */
 HRESULT wmede_video_device_controller_get__focus_control(WMEDE_VideoDeviceController *self, WMEDE_FocusControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_ExposureCompensationControl() */
 HRESULT wmede_video_device_controller_get__exposure_compensation_control(WMEDE_VideoDeviceController *self, WMEDE_ExposureCompensationControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_IsoSpeedControl() */
 HRESULT wmede_video_device_controller_get__iso_speed_control(WMEDE_VideoDeviceController *self, WMEDE_IsoSpeedControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_RegionsOfInterestControl() */
 HRESULT wmede_video_device_controller_get__regions_of_interest_control(WMEDE_VideoDeviceController *self, WMEDE_RegionsOfInterestControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_PrimaryUse() */
 HRESULT wmede_video_device_controller_get__primary_use(WMEDE_VideoDeviceController *self, WMEDE_CaptureUse *value);
 
-/* Windows.Media.Devices.VideoDeviceController.put_PrimaryUse() */
 HRESULT wmede_video_device_controller_put__primary_use(WMEDE_VideoDeviceController *self, WMEDE_CaptureUse value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_VariablePhotoSequenceController() */
 HRESULT wmede_video_device_controller_get__variable_photo_sequence_controller(WMEDE_VideoDeviceController *self, WMEDECO_VariablePhotoSequenceController** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_PhotoConfirmationControl() */
 HRESULT wmede_video_device_controller_get__photo_confirmation_control(WMEDE_VideoDeviceController *self, WMEDE_PhotoConfirmationControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_ZoomControl() */
 HRESULT wmede_video_device_controller_get__zoom_control(WMEDE_VideoDeviceController *self, WMEDE_ZoomControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_ExposurePriorityVideoControl() */
 HRESULT wmede_video_device_controller_get__exposure_priority_video_control(WMEDE_VideoDeviceController *self, WMEDE_ExposurePriorityVideoControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_DesiredOptimization() */
 HRESULT wmede_video_device_controller_get__desired_optimization(WMEDE_VideoDeviceController *self, WMEDE_MediaCaptureOptimization *value);
 
-/* Windows.Media.Devices.VideoDeviceController.put_DesiredOptimization() */
 HRESULT wmede_video_device_controller_put__desired_optimization(WMEDE_VideoDeviceController *self, WMEDE_MediaCaptureOptimization value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_HdrVideoControl() */
 HRESULT wmede_video_device_controller_get__hdr_video_control(WMEDE_VideoDeviceController *self, WMEDE_HdrVideoControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_OpticalImageStabilizationControl() */
 HRESULT wmede_video_device_controller_get__optical_image_stabilization_control(WMEDE_VideoDeviceController *self, WMEDE_OpticalImageStabilizationControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_AdvancedPhotoControl() */
 HRESULT wmede_video_device_controller_get__advanced_photo_control(WMEDE_VideoDeviceController *self, WMEDE_AdvancedPhotoControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_Id() */
 HRESULT wmede_video_device_controller_get__id(WMEDE_VideoDeviceController *self, cwinrt_hstring *value);
 
-/* Windows.Media.Devices.VideoDeviceController.GetDevicePropertyById(propertyId, maxPropertyValueSize) */
 HRESULT wmede_video_device_controller_get_device_property_by_id(WMEDE_VideoDeviceController *self, cwinrt_hstring propertyId, uint32_t* maxPropertyValueSize, WMEDE_VideoDeviceControllerGetDevicePropertyResult** out);
 
-/* Windows.Media.Devices.VideoDeviceController.SetDevicePropertyById(propertyId, propertyValue) */
 HRESULT wmede_video_device_controller_set_device_property_by_id(WMEDE_VideoDeviceController *self, cwinrt_hstring propertyId, IInspectable* propertyValue, WMEDE_VideoDeviceControllerSetDevicePropertyStatus *out);
 
-/* Windows.Media.Devices.VideoDeviceController.GetDevicePropertyByExtendedId(extendedPropertyId, maxPropertyValueSize) */
 HRESULT wmede_video_device_controller_get_device_property_by_extended_id(WMEDE_VideoDeviceController *self, uint8_t *extendedPropertyId, uint32_t extendedPropertyId_len, uint32_t* maxPropertyValueSize, WMEDE_VideoDeviceControllerGetDevicePropertyResult** out);
 
-/* Windows.Media.Devices.VideoDeviceController.SetDevicePropertyByExtendedId(extendedPropertyId, propertyValue) */
 HRESULT wmede_video_device_controller_set_device_property_by_extended_id(WMEDE_VideoDeviceController *self, uint8_t *extendedPropertyId, uint32_t extendedPropertyId_len, uint8_t *propertyValue, uint32_t propertyValue_len, WMEDE_VideoDeviceControllerSetDevicePropertyStatus *out);
 
-/* Windows.Media.Devices.VideoDeviceController.get_VideoTemporalDenoisingControl() */
 HRESULT wmede_video_device_controller_get__video_temporal_denoising_control(WMEDE_VideoDeviceController *self, WMEDE_VideoTemporalDenoisingControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_InfraredTorchControl() */
 HRESULT wmede_video_device_controller_get__infrared_torch_control(WMEDE_VideoDeviceController *self, WMEDE_InfraredTorchControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_PanelBasedOptimizationControl() */
 HRESULT wmede_video_device_controller_get__panel_based_optimization_control(WMEDE_VideoDeviceController *self, WMEDE_PanelBasedOptimizationControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_DigitalWindowControl() */
 HRESULT wmede_video_device_controller_get__digital_window_control(WMEDE_VideoDeviceController *self, WMEDE_DigitalWindowControl** value);
 
-/* Windows.Media.Devices.VideoDeviceController.get_CameraOcclusionInfo() */
 HRESULT wmede_video_device_controller_get__camera_occlusion_info(WMEDE_VideoDeviceController *self, WMEDE_CameraOcclusionInfo** value);
 
-/* Windows.Media.Devices.VideoDeviceController.TryAcquireExclusiveControl(deviceId, mode) */
 HRESULT wmede_video_device_controller_try_acquire_exclusive_control(WMEDE_VideoDeviceController *self, cwinrt_hstring deviceId, WMECA_MediaCaptureDeviceExclusiveControlReleaseMode mode, BOOL *out);
 
-/* activate Windows.Media.Devices.VideoDeviceControllerGetDevicePropertyResult */
 HRESULT wmede_video_device_controller_get_device_property_result_new(WMEDE_VideoDeviceControllerGetDevicePropertyResult **out);
 
-/* Windows.Media.Devices.VideoDeviceControllerGetDevicePropertyResult */
-/* Windows.Media.Devices.VideoDeviceControllerGetDevicePropertyResult.get_Status() */
 HRESULT wmede_video_device_controller_get_device_property_result_get__status(WMEDE_VideoDeviceControllerGetDevicePropertyResult *self, WMEDE_VideoDeviceControllerGetDevicePropertyStatus *value);
 
-/* Windows.Media.Devices.VideoDeviceControllerGetDevicePropertyResult.get_Value() */
 HRESULT wmede_video_device_controller_get_device_property_result_get__value(WMEDE_VideoDeviceControllerGetDevicePropertyResult *self, IInspectable** value);
 
-/* activate Windows.Media.Devices.VideoTemporalDenoisingControl */
 HRESULT wmede_video_temporal_denoising_control_new(WMEDE_VideoTemporalDenoisingControl **out);
 
-/* Windows.Media.Devices.VideoTemporalDenoisingControl */
-/* Windows.Media.Devices.VideoTemporalDenoisingControl.get_Supported() */
 HRESULT wmede_video_temporal_denoising_control_get__supported(WMEDE_VideoTemporalDenoisingControl *self, BOOL *value);
 
-/* Windows.Media.Devices.VideoTemporalDenoisingControl.get_SupportedModes() */
 HRESULT wmede_video_temporal_denoising_control_get__supported_modes(WMEDE_VideoTemporalDenoisingControl *self, WFOCO_IVectorView_WMEDE_VideoTemporalDenoisingMode** value);
 
-/* Windows.Media.Devices.VideoTemporalDenoisingControl.get_Mode() */
 HRESULT wmede_video_temporal_denoising_control_get__mode(WMEDE_VideoTemporalDenoisingControl *self, WMEDE_VideoTemporalDenoisingMode *value);
 
-/* Windows.Media.Devices.VideoTemporalDenoisingControl.put_Mode() */
 HRESULT wmede_video_temporal_denoising_control_put__mode(WMEDE_VideoTemporalDenoisingControl *self, WMEDE_VideoTemporalDenoisingMode value);
 
-/* activate Windows.Media.Devices.WhiteBalanceControl */
 HRESULT wmede_white_balance_control_new(WMEDE_WhiteBalanceControl **out);
 
-/* Windows.Media.Devices.WhiteBalanceControl */
-/* Windows.Media.Devices.WhiteBalanceControl.get_Supported() */
 HRESULT wmede_white_balance_control_get__supported(WMEDE_WhiteBalanceControl *self, BOOL *value);
 
-/* Windows.Media.Devices.WhiteBalanceControl.get_Preset() */
 HRESULT wmede_white_balance_control_get__preset(WMEDE_WhiteBalanceControl *self, WMEDE_ColorTemperaturePreset *value);
 
-/* Windows.Media.Devices.WhiteBalanceControl.SetPresetAsync(preset) */
 HRESULT wmede_white_balance_control_set_preset_async(WMEDE_WhiteBalanceControl *self, WMEDE_ColorTemperaturePreset preset, WF_IAsyncAction** out);
 
-/* Windows.Media.Devices.WhiteBalanceControl.get_Min() */
 HRESULT wmede_white_balance_control_get__min(WMEDE_WhiteBalanceControl *self, uint32_t *value);
 
-/* Windows.Media.Devices.WhiteBalanceControl.get_Max() */
 HRESULT wmede_white_balance_control_get__max(WMEDE_WhiteBalanceControl *self, uint32_t *value);
 
-/* Windows.Media.Devices.WhiteBalanceControl.get_Step() */
 HRESULT wmede_white_balance_control_get__step(WMEDE_WhiteBalanceControl *self, uint32_t *value);
 
-/* Windows.Media.Devices.WhiteBalanceControl.get_Value() */
 HRESULT wmede_white_balance_control_get__value(WMEDE_WhiteBalanceControl *self, uint32_t *value);
 
-/* Windows.Media.Devices.WhiteBalanceControl.SetValueAsync(temperature) */
 HRESULT wmede_white_balance_control_set_value_async(WMEDE_WhiteBalanceControl *self, uint32_t temperature, WF_IAsyncAction** out);
 
-/* activate Windows.Media.Devices.ZoomControl */
 HRESULT wmede_zoom_control_new(WMEDE_ZoomControl **out);
 
-/* Windows.Media.Devices.ZoomControl */
-/* Windows.Media.Devices.ZoomControl.get_Supported() */
 HRESULT wmede_zoom_control_get__supported(WMEDE_ZoomControl *self, BOOL *value);
 
-/* Windows.Media.Devices.ZoomControl.get_Min() */
 HRESULT wmede_zoom_control_get__min(WMEDE_ZoomControl *self, float *value);
 
-/* Windows.Media.Devices.ZoomControl.get_Max() */
 HRESULT wmede_zoom_control_get__max(WMEDE_ZoomControl *self, float *value);
 
-/* Windows.Media.Devices.ZoomControl.get_Step() */
 HRESULT wmede_zoom_control_get__step(WMEDE_ZoomControl *self, float *value);
 
-/* Windows.Media.Devices.ZoomControl.get_Value() */
 HRESULT wmede_zoom_control_get__value(WMEDE_ZoomControl *self, float *value);
 
-/* Windows.Media.Devices.ZoomControl.put_Value() */
 HRESULT wmede_zoom_control_put__value(WMEDE_ZoomControl *self, float value);
 
-/* Windows.Media.Devices.ZoomControl.get_SupportedModes() */
 HRESULT wmede_zoom_control_get__supported_modes(WMEDE_ZoomControl *self, WFOCO_IVectorView_WMEDE_ZoomTransitionMode** value);
 
-/* Windows.Media.Devices.ZoomControl.get_Mode() */
 HRESULT wmede_zoom_control_get__mode(WMEDE_ZoomControl *self, WMEDE_ZoomTransitionMode *value);
 
-/* Windows.Media.Devices.ZoomControl.Configure(settings) */
 HRESULT wmede_zoom_control_configure(WMEDE_ZoomControl *self, WMEDE_ZoomSettings* settings);
 
-/* activate Windows.Media.Devices.ZoomSettings */
 HRESULT wmede_zoom_settings_new(WMEDE_ZoomSettings **out);
 
-/* Windows.Media.Devices.ZoomSettings */
-/* Windows.Media.Devices.ZoomSettings.get_Mode() */
 HRESULT wmede_zoom_settings_get__mode(WMEDE_ZoomSettings *self, WMEDE_ZoomTransitionMode *value);
 
-/* Windows.Media.Devices.ZoomSettings.put_Mode() */
 HRESULT wmede_zoom_settings_put__mode(WMEDE_ZoomSettings *self, WMEDE_ZoomTransitionMode value);
 
-/* Windows.Media.Devices.ZoomSettings.get_Value() */
 HRESULT wmede_zoom_settings_get__value(WMEDE_ZoomSettings *self, float *value);
 
-/* Windows.Media.Devices.ZoomSettings.put_Value() */
 HRESULT wmede_zoom_settings_put__value(WMEDE_ZoomSettings *self, float value);
 
-/* activate Windows.Media.Devices.DigitalWindowControl */
 HRESULT wmede_digital_window_control_new(WMEDE_DigitalWindowControl **out);
 
-/* Windows.Media.Devices.DigitalWindowControl */
-/* Windows.Media.Devices.DigitalWindowControl.get_IsSupported() */
 HRESULT wmede_digital_window_control_get__is_supported(WMEDE_DigitalWindowControl *self, BOOL *value);
 
-/* Windows.Media.Devices.DigitalWindowControl.get_SupportedModes() */
 HRESULT wmede_digital_window_control_get__supported_modes(WMEDE_DigitalWindowControl *self, WMEDE_DigitalWindowMode **value, uint32_t *value_len);
 
-/* Windows.Media.Devices.DigitalWindowControl.get_CurrentMode() */
 HRESULT wmede_digital_window_control_get__current_mode(WMEDE_DigitalWindowControl *self, WMEDE_DigitalWindowMode *value);
 
-/* Windows.Media.Devices.DigitalWindowControl.GetBounds() */
 HRESULT wmede_digital_window_control_get_bounds(WMEDE_DigitalWindowControl *self, WMEDE_DigitalWindowBounds** out);
 
-/* Windows.Media.Devices.DigitalWindowControl.Configure(digitalWindowMode) */
 HRESULT wmede_digital_window_control_configure(WMEDE_DigitalWindowControl *self, WMEDE_DigitalWindowMode digitalWindowMode);
 
-/* Windows.Media.Devices.DigitalWindowControl.Configure(digitalWindowMode, digitalWindowBounds) */
 HRESULT wmede_digital_window_control_configure_digital_window_mode_p(WMEDE_DigitalWindowControl *self, WMEDE_DigitalWindowMode digitalWindowMode, WMEDE_DigitalWindowBounds* digitalWindowBounds);
 
-/* Windows.Media.Devices.DigitalWindowControl.get_SupportedCapabilities() */
 HRESULT wmede_digital_window_control_get__supported_capabilities(WMEDE_DigitalWindowControl *self, WFOCO_IVectorView_WMEDE_DigitalWindowCapability** value);
 
-/* Windows.Media.Devices.DigitalWindowControl.GetCapabilityForSize(width, height) */
 HRESULT wmede_digital_window_control_get_capability_for_size(WMEDE_DigitalWindowControl *self, int32_t width, int32_t height, WMEDE_DigitalWindowCapability** out);
 
-/* activate Windows.Media.Devices.DigitalWindowCapability */
 HRESULT wmede_digital_window_capability_new(WMEDE_DigitalWindowCapability **out);
 
-/* Windows.Media.Devices.DigitalWindowCapability */
-/* Windows.Media.Devices.DigitalWindowCapability.get_Width() */
 HRESULT wmede_digital_window_capability_get__width(WMEDE_DigitalWindowCapability *self, int32_t *value);
 
-/* Windows.Media.Devices.DigitalWindowCapability.get_Height() */
 HRESULT wmede_digital_window_capability_get__height(WMEDE_DigitalWindowCapability *self, int32_t *value);
 
-/* Windows.Media.Devices.DigitalWindowCapability.get_MinScaleValue() */
 HRESULT wmede_digital_window_capability_get__min_scale_value(WMEDE_DigitalWindowCapability *self, double *value);
 
-/* Windows.Media.Devices.DigitalWindowCapability.get_MaxScaleValue() */
 HRESULT wmede_digital_window_capability_get__max_scale_value(WMEDE_DigitalWindowCapability *self, double *value);
 
-/* Windows.Media.Devices.DigitalWindowCapability.get_MinScaleValueWithoutUpsampling() */
 HRESULT wmede_digital_window_capability_get__min_scale_value_without_upsampling(WMEDE_DigitalWindowCapability *self, double *value);
 
-/* Windows.Media.Devices.DigitalWindowCapability.get_NormalizedFieldOfViewLimit() */
 HRESULT wmede_digital_window_capability_get__normalized_field_of_view_limit(WMEDE_DigitalWindowCapability *self, WF_Rect *value);
 
-/* activate Windows.Media.Devices.DigitalWindowBounds */
 HRESULT wmede_digital_window_bounds_new(WMEDE_DigitalWindowBounds **out);
 
-/* Windows.Media.Devices.DigitalWindowBounds */
-/* Windows.Media.Devices.DigitalWindowBounds.get_NormalizedOriginTop() */
 HRESULT wmede_digital_window_bounds_get__normalized_origin_top(WMEDE_DigitalWindowBounds *self, double *value);
 
-/* Windows.Media.Devices.DigitalWindowBounds.put_NormalizedOriginTop() */
 HRESULT wmede_digital_window_bounds_put__normalized_origin_top(WMEDE_DigitalWindowBounds *self, double value);
 
-/* Windows.Media.Devices.DigitalWindowBounds.get_NormalizedOriginLeft() */
 HRESULT wmede_digital_window_bounds_get__normalized_origin_left(WMEDE_DigitalWindowBounds *self, double *value);
 
-/* Windows.Media.Devices.DigitalWindowBounds.put_NormalizedOriginLeft() */
 HRESULT wmede_digital_window_bounds_put__normalized_origin_left(WMEDE_DigitalWindowBounds *self, double value);
 
-/* Windows.Media.Devices.DigitalWindowBounds.get_Scale() */
 HRESULT wmede_digital_window_bounds_get__scale(WMEDE_DigitalWindowBounds *self, double *value);
 
-/* Windows.Media.Devices.DigitalWindowBounds.put_Scale() */
 HRESULT wmede_digital_window_bounds_put__scale(WMEDE_DigitalWindowBounds *self, double value);
 
-/* Windows.Media.Devices.DialRequestedEventHandler */
-/* Windows.Media.Devices.DialRequestedEventHandler.Invoke(sender, e) */
 HRESULT wmede_dial_requested_event_handler_invoke(WMEDE_DialRequestedEventHandler *self, WMEDE_CallControl* sender, WMEDE_DialRequestedEventArgs* e);
 
-/* activate Windows.Media.Devices.DialRequestedEventArgs */
 HRESULT wmede_dial_requested_event_args_new(WMEDE_DialRequestedEventArgs **out);
 
-/* Windows.Media.Devices.DialRequestedEventArgs */
-/* Windows.Media.Devices.DialRequestedEventArgs.Handled() */
 HRESULT wmede_dial_requested_event_args_handled(WMEDE_DialRequestedEventArgs *self);
 
-/* Windows.Media.Devices.DialRequestedEventArgs.get_Contact() */
 HRESULT wmede_dial_requested_event_args_get__contact(WMEDE_DialRequestedEventArgs *self, IInspectable** value);
 
-/* activate Windows.Media.Devices.DefaultAudioRenderDeviceChangedEventArgs */
 HRESULT wmede_default_audio_render_device_changed_event_args_new(WMEDE_DefaultAudioRenderDeviceChangedEventArgs **out);
 
-/* Windows.Media.Devices.DefaultAudioRenderDeviceChangedEventArgs */
-/* Windows.Media.Devices.DefaultAudioRenderDeviceChangedEventArgs.get_Id() */
 HRESULT wmede_default_audio_render_device_changed_event_args_get__id(WMEDE_DefaultAudioRenderDeviceChangedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Media.Devices.DefaultAudioRenderDeviceChangedEventArgs.get_Role() */
 HRESULT wmede_default_audio_render_device_changed_event_args_get__role(WMEDE_DefaultAudioRenderDeviceChangedEventArgs *self, WMEDE_AudioDeviceRole *value);
 
-/* activate Windows.Media.Devices.DefaultAudioCaptureDeviceChangedEventArgs */
 HRESULT wmede_default_audio_capture_device_changed_event_args_new(WMEDE_DefaultAudioCaptureDeviceChangedEventArgs **out);
 
-/* Windows.Media.Devices.DefaultAudioCaptureDeviceChangedEventArgs */
-/* Windows.Media.Devices.DefaultAudioCaptureDeviceChangedEventArgs.get_Id() */
 HRESULT wmede_default_audio_capture_device_changed_event_args_get__id(WMEDE_DefaultAudioCaptureDeviceChangedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Media.Devices.DefaultAudioCaptureDeviceChangedEventArgs.get_Role() */
 HRESULT wmede_default_audio_capture_device_changed_event_args_get__role(WMEDE_DefaultAudioCaptureDeviceChangedEventArgs *self, WMEDE_AudioDeviceRole *value);
 
-/* activate Windows.Media.Devices.CameraOcclusionStateChangedEventArgs */
 HRESULT wmede_camera_occlusion_state_changed_event_args_new(WMEDE_CameraOcclusionStateChangedEventArgs **out);
 
-/* Windows.Media.Devices.CameraOcclusionStateChangedEventArgs */
-/* Windows.Media.Devices.CameraOcclusionStateChangedEventArgs.get_State() */
 HRESULT wmede_camera_occlusion_state_changed_event_args_get__state(WMEDE_CameraOcclusionStateChangedEventArgs *self, WMEDE_CameraOcclusionState** value);
 
-/* activate Windows.Media.Devices.CameraOcclusionState */
 HRESULT wmede_camera_occlusion_state_new(WMEDE_CameraOcclusionState **out);
 
-/* Windows.Media.Devices.CameraOcclusionState */
-/* Windows.Media.Devices.CameraOcclusionState.get_IsOccluded() */
 HRESULT wmede_camera_occlusion_state_get__is_occluded(WMEDE_CameraOcclusionState *self, BOOL *value);
 
-/* Windows.Media.Devices.CameraOcclusionState.IsOcclusionKind(occlusionKind) */
 HRESULT wmede_camera_occlusion_state_is_occlusion_kind(WMEDE_CameraOcclusionState *self, WMEDE_CameraOcclusionKind occlusionKind, BOOL *out);
 
-/* activate Windows.Media.Devices.CameraOcclusionInfo */
 HRESULT wmede_camera_occlusion_info_new(WMEDE_CameraOcclusionInfo **out);
 
-/* Windows.Media.Devices.CameraOcclusionInfo */
-/* Windows.Media.Devices.CameraOcclusionInfo.GetState() */
 HRESULT wmede_camera_occlusion_info_get_state(WMEDE_CameraOcclusionInfo *self, WMEDE_CameraOcclusionState** out);
 
-/* Windows.Media.Devices.CameraOcclusionInfo.IsOcclusionKindSupported(occlusionKind) */
 HRESULT wmede_camera_occlusion_info_is_occlusion_kind_supported(WMEDE_CameraOcclusionInfo *self, WMEDE_CameraOcclusionKind occlusionKind, BOOL *out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmede_camera_occlusion_info_on_state_changed(WMEDE_CameraOcclusionInfo *self, cwinrt_event_fn fn, void *ctx);
 void wmede_camera_occlusion_info_off_state_changed(WMEDE_CameraOcclusionInfo *self, cwinrt_token token);
 
-/* Windows.Media.Devices.CallControlEventHandler */
-/* Windows.Media.Devices.CallControlEventHandler.Invoke(sender) */
 HRESULT wmede_call_control_event_handler_invoke(WMEDE_CallControlEventHandler *self, WMEDE_CallControl* sender);
 
-/* activate Windows.Media.Devices.CallControl */
 HRESULT wmede_call_control_new(WMEDE_CallControl **out);
 
-/* Windows.Media.Devices.CallControl */
-/* Windows.Media.Devices.CallControl.IndicateNewIncomingCall(enableRinger, callerId) */
 HRESULT wmede_call_control_indicate_new_incoming_call(WMEDE_CallControl *self, BOOL enableRinger, cwinrt_hstring callerId, uint64_t *out);
 
-/* Windows.Media.Devices.CallControl.IndicateNewOutgoingCall() */
 HRESULT wmede_call_control_indicate_new_outgoing_call(WMEDE_CallControl *self, uint64_t *out);
 
-/* Windows.Media.Devices.CallControl.IndicateActiveCall(callToken) */
 HRESULT wmede_call_control_indicate_active_call(WMEDE_CallControl *self, uint64_t callToken);
 
-/* Windows.Media.Devices.CallControl.EndCall(callToken) */
 HRESULT wmede_call_control_end_call(WMEDE_CallControl *self, uint64_t callToken);
 
-/* Windows.Media.Devices.CallControl.get_HasRinger() */
 HRESULT wmede_call_control_get__has_ringer(WMEDE_CallControl *self, BOOL *value);
 
-/* Windows.Media.Devices.CallControl.GetDefault() */
 HRESULT wmede_call_control_get_default(WMEDE_CallControl** out);
 
-/* Windows.Media.Devices.CallControl.FromId(deviceId) */
 HRESULT wmede_call_control_from_id(cwinrt_hstring deviceId, WMEDE_CallControl** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmede_call_control_on_answer_requested(WMEDE_CallControl *self, cwinrt_event_fn fn, void *ctx);
@@ -1985,400 +1594,223 @@ void wmede_call_control_off_keypad_pressed(WMEDE_CallControl *self, cwinrt_token
 cwinrt_token wmede_call_control_on_audio_transfer_requested(WMEDE_CallControl *self, cwinrt_event_fn fn, void *ctx);
 void wmede_call_control_off_audio_transfer_requested(WMEDE_CallControl *self, cwinrt_token token);
 
-/* activate Windows.Media.Devices.AudioDeviceModulesManager */
 HRESULT wmede_audio_device_modules_manager_new(WMEDE_AudioDeviceModulesManager **out);
 
-/* Windows.Media.Devices.AudioDeviceModulesManager */
-/* Windows.Media.Devices.AudioDeviceModulesManager.FindAllById(moduleId) */
 HRESULT wmede_audio_device_modules_manager_find_all_by_id(WMEDE_AudioDeviceModulesManager *self, cwinrt_hstring moduleId, WFOCO_IVectorView_WMEDE_AudioDeviceModule** out);
 
-/* Windows.Media.Devices.AudioDeviceModulesManager.FindAll() */
 HRESULT wmede_audio_device_modules_manager_find_all(WMEDE_AudioDeviceModulesManager *self, WFOCO_IVectorView_WMEDE_AudioDeviceModule** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmede_audio_device_modules_manager_on_module_notification_received(WMEDE_AudioDeviceModulesManager *self, cwinrt_event_fn fn, void *ctx);
 void wmede_audio_device_modules_manager_off_module_notification_received(WMEDE_AudioDeviceModulesManager *self, cwinrt_token token);
 
-/* activate Windows.Media.Devices.AudioDeviceModuleNotificationEventArgs */
 HRESULT wmede_audio_device_module_notification_event_args_new(WMEDE_AudioDeviceModuleNotificationEventArgs **out);
 
-/* Windows.Media.Devices.AudioDeviceModuleNotificationEventArgs */
-/* Windows.Media.Devices.AudioDeviceModuleNotificationEventArgs.get_Module() */
 HRESULT wmede_audio_device_module_notification_event_args_get__module(WMEDE_AudioDeviceModuleNotificationEventArgs *self, WMEDE_AudioDeviceModule** value);
 
-/* Windows.Media.Devices.AudioDeviceModuleNotificationEventArgs.get_NotificationData() */
 HRESULT wmede_audio_device_module_notification_event_args_get__notification_data(WMEDE_AudioDeviceModuleNotificationEventArgs *self, WSTST_IBuffer** value);
 
-/* activate Windows.Media.Devices.AudioDeviceModule */
 HRESULT wmede_audio_device_module_new(WMEDE_AudioDeviceModule **out);
 
-/* Windows.Media.Devices.AudioDeviceModule */
-/* Windows.Media.Devices.AudioDeviceModule.get_ClassId() */
 HRESULT wmede_audio_device_module_get__class_id(WMEDE_AudioDeviceModule *self, cwinrt_hstring *value);
 
-/* Windows.Media.Devices.AudioDeviceModule.get_DisplayName() */
 HRESULT wmede_audio_device_module_get__display_name(WMEDE_AudioDeviceModule *self, cwinrt_hstring *value);
 
-/* Windows.Media.Devices.AudioDeviceModule.get_InstanceId() */
 HRESULT wmede_audio_device_module_get__instance_id(WMEDE_AudioDeviceModule *self, uint32_t *value);
 
-/* Windows.Media.Devices.AudioDeviceModule.get_MajorVersion() */
 HRESULT wmede_audio_device_module_get__major_version(WMEDE_AudioDeviceModule *self, uint32_t *value);
 
-/* Windows.Media.Devices.AudioDeviceModule.get_MinorVersion() */
 HRESULT wmede_audio_device_module_get__minor_version(WMEDE_AudioDeviceModule *self, uint32_t *value);
 
-/* Windows.Media.Devices.AudioDeviceModule.SendCommandAsync(Command) */
 HRESULT wmede_audio_device_module_send_command_async(WMEDE_AudioDeviceModule *self, WSTST_IBuffer* Command, WF_IAsyncOperation_WMEDE_ModuleCommandResult** out);
 
-/* activate Windows.Media.Devices.AdvancedPhotoControl */
 HRESULT wmede_advanced_photo_control_new(WMEDE_AdvancedPhotoControl **out);
 
-/* Windows.Media.Devices.AdvancedPhotoControl */
-/* Windows.Media.Devices.AdvancedPhotoControl.get_Supported() */
 HRESULT wmede_advanced_photo_control_get__supported(WMEDE_AdvancedPhotoControl *self, BOOL *value);
 
-/* Windows.Media.Devices.AdvancedPhotoControl.get_SupportedModes() */
 HRESULT wmede_advanced_photo_control_get__supported_modes(WMEDE_AdvancedPhotoControl *self, WFOCO_IVectorView_WMEDE_AdvancedPhotoMode** value);
 
-/* Windows.Media.Devices.AdvancedPhotoControl.get_Mode() */
 HRESULT wmede_advanced_photo_control_get__mode(WMEDE_AdvancedPhotoControl *self, WMEDE_AdvancedPhotoMode *value);
 
-/* Windows.Media.Devices.AdvancedPhotoControl.Configure(settings) */
 HRESULT wmede_advanced_photo_control_configure(WMEDE_AdvancedPhotoControl *self, WMEDE_AdvancedPhotoCaptureSettings* settings);
 
-/* activate Windows.Media.Devices.AdvancedPhotoCaptureSettings */
 HRESULT wmede_advanced_photo_capture_settings_new(WMEDE_AdvancedPhotoCaptureSettings **out);
 
-/* Windows.Media.Devices.AdvancedPhotoCaptureSettings */
-/* Windows.Media.Devices.AdvancedPhotoCaptureSettings.get_Mode() */
 HRESULT wmede_advanced_photo_capture_settings_get__mode(WMEDE_AdvancedPhotoCaptureSettings *self, WMEDE_AdvancedPhotoMode *value);
 
-/* Windows.Media.Devices.AdvancedPhotoCaptureSettings.put_Mode() */
 HRESULT wmede_advanced_photo_capture_settings_put__mode(WMEDE_AdvancedPhotoCaptureSettings *self, WMEDE_AdvancedPhotoMode value);
 
-/* activate Windows.Media.Devices.ExposureCompensationControl */
 HRESULT wmede_exposure_compensation_control_new(WMEDE_ExposureCompensationControl **out);
 
-/* Windows.Media.Devices.ExposureCompensationControl */
-/* Windows.Media.Devices.ExposureCompensationControl.get_Supported() */
 HRESULT wmede_exposure_compensation_control_get__supported(WMEDE_ExposureCompensationControl *self, BOOL *value);
 
-/* Windows.Media.Devices.ExposureCompensationControl.get_Min() */
 HRESULT wmede_exposure_compensation_control_get__min(WMEDE_ExposureCompensationControl *self, float *value);
 
-/* Windows.Media.Devices.ExposureCompensationControl.get_Max() */
 HRESULT wmede_exposure_compensation_control_get__max(WMEDE_ExposureCompensationControl *self, float *value);
 
-/* Windows.Media.Devices.ExposureCompensationControl.get_Step() */
 HRESULT wmede_exposure_compensation_control_get__step(WMEDE_ExposureCompensationControl *self, float *value);
 
-/* Windows.Media.Devices.ExposureCompensationControl.get_Value() */
 HRESULT wmede_exposure_compensation_control_get__value(WMEDE_ExposureCompensationControl *self, float *value);
 
-/* Windows.Media.Devices.ExposureCompensationControl.SetValueAsync() */
 HRESULT wmede_exposure_compensation_control_set_value_async(WMEDE_ExposureCompensationControl *self, float value, WF_IAsyncAction** out);
 
-/* activate Windows.Media.Devices.AudioDeviceController */
 HRESULT wmede_audio_device_controller_new(WMEDE_AudioDeviceController **out);
 
-/* Windows.Media.Devices.AudioDeviceController */
-/* Windows.Media.Devices.AudioDeviceController.put_Muted() */
 HRESULT wmede_audio_device_controller_put__muted(WMEDE_AudioDeviceController *self, BOOL value);
 
-/* Windows.Media.Devices.AudioDeviceController.get_Muted() */
 HRESULT wmede_audio_device_controller_get__muted(WMEDE_AudioDeviceController *self, BOOL *value);
 
-/* Windows.Media.Devices.AudioDeviceController.put_VolumePercent() */
 HRESULT wmede_audio_device_controller_put__volume_percent(WMEDE_AudioDeviceController *self, float value);
 
-/* Windows.Media.Devices.AudioDeviceController.get_VolumePercent() */
 HRESULT wmede_audio_device_controller_get__volume_percent(WMEDE_AudioDeviceController *self, float *value);
 
-/* Windows.Media.Devices.AudioDeviceController.GetAvailableMediaStreamProperties(mediaStreamType) */
 HRESULT wmede_audio_device_controller_get_available_media_stream_properties(WMEDE_AudioDeviceController *self, WMECA_MediaStreamType mediaStreamType, WFOCO_IVectorView_WMEME_IMediaEncodingProperties** out);
 
-/* Windows.Media.Devices.AudioDeviceController.GetMediaStreamProperties(mediaStreamType) */
 HRESULT wmede_audio_device_controller_get_media_stream_properties(WMEDE_AudioDeviceController *self, WMECA_MediaStreamType mediaStreamType, WMEME_IMediaEncodingProperties** out);
 
-/* Windows.Media.Devices.AudioDeviceController.SetMediaStreamPropertiesAsync(mediaStreamType, mediaEncodingProperties) */
 HRESULT wmede_audio_device_controller_set_media_stream_properties_async(WMEDE_AudioDeviceController *self, WMECA_MediaStreamType mediaStreamType, WMEME_IMediaEncodingProperties* mediaEncodingProperties, WF_IAsyncAction** out);
 
-/* Windows.Media.Devices.AudioDeviceController.get_AudioCaptureEffectsManager() */
 HRESULT wmede_audio_device_controller_get__audio_capture_effects_manager(WMEDE_AudioDeviceController *self, WMEEF_AudioCaptureEffectsManager** value);
 
-/* Windows.Media.Devices.IExposurePriorityVideoControl */
-/* Windows.Media.Devices.IFlashControl */
-/* Windows.Media.Devices.IFlashControl2 */
-/* Windows.Media.Devices.IFlashControl2.get_AssistantLightSupported() */
 HRESULT wmede_flash_control_2_get__assistant_light_supported(WMEDE_IFlashControl_2 *self, BOOL *value);
 
-/* Windows.Media.Devices.IFlashControl2.get_AssistantLightEnabled() */
 HRESULT wmede_flash_control_2_get__assistant_light_enabled(WMEDE_IFlashControl_2 *self, BOOL *value);
 
-/* Windows.Media.Devices.IFlashControl2.put_AssistantLightEnabled() */
 HRESULT wmede_flash_control_2_put__assistant_light_enabled(WMEDE_IFlashControl_2 *self, BOOL value);
 
-/* Windows.Media.Devices.IFocusControl */
-/* Windows.Media.Devices.IFocusControl2 */
-/* Windows.Media.Devices.IFocusControl2.get_FocusChangedSupported() */
 HRESULT wmede_focus_control_2_get__focus_changed_supported(WMEDE_IFocusControl_2 *self, BOOL *value);
 
-/* Windows.Media.Devices.IFocusControl2.get_WaitForFocusSupported() */
 HRESULT wmede_focus_control_2_get__wait_for_focus_supported(WMEDE_IFocusControl_2 *self, BOOL *value);
 
-/* Windows.Media.Devices.IFocusControl2.get_SupportedFocusModes() */
 HRESULT wmede_focus_control_2_get__supported_focus_modes(WMEDE_IFocusControl_2 *self, WFOCO_IVectorView_WMEDE_FocusMode** value);
 
-/* Windows.Media.Devices.IFocusControl2.get_SupportedFocusDistances() */
 HRESULT wmede_focus_control_2_get__supported_focus_distances(WMEDE_IFocusControl_2 *self, WFOCO_IVectorView_WMEDE_ManualFocusDistance** value);
 
-/* Windows.Media.Devices.IFocusControl2.get_SupportedFocusRanges() */
 HRESULT wmede_focus_control_2_get__supported_focus_ranges(WMEDE_IFocusControl_2 *self, WFOCO_IVectorView_WMEDE_AutoFocusRange** value);
 
-/* Windows.Media.Devices.IFocusControl2.get_Mode() */
 HRESULT wmede_focus_control_2_get__mode(WMEDE_IFocusControl_2 *self, WMEDE_FocusMode *value);
 
-/* Windows.Media.Devices.IFocusControl2.get_FocusState() */
 HRESULT wmede_focus_control_2_get__focus_state(WMEDE_IFocusControl_2 *self, WMEDE_MediaCaptureFocusState *value);
 
-/* Windows.Media.Devices.IFocusControl2.UnlockAsync() */
 HRESULT wmede_focus_control_2_unlock_async(WMEDE_IFocusControl_2 *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Devices.IFocusControl2.LockAsync() */
 HRESULT wmede_focus_control_2_lock_async(WMEDE_IFocusControl_2 *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Devices.IFocusControl2.Configure(settings) */
 HRESULT wmede_focus_control_2_configure(WMEDE_IFocusControl_2 *self, WMEDE_FocusSettings* settings);
 
-/* Windows.Media.Devices.IFocusSettings */
-/* Windows.Media.Devices.IHdrVideoControl */
-/* Windows.Media.Devices.IExposureControl */
-/* Windows.Media.Devices.IInfraredTorchControl */
-/* Windows.Media.Devices.IIsoSpeedControl */
-/* Windows.Media.Devices.IIsoSpeedControl2 */
-/* Windows.Media.Devices.IIsoSpeedControl2.get_Min() */
 HRESULT wmede_iso_speed_control_2_get__min(WMEDE_IIsoSpeedControl_2 *self, uint32_t *value);
 
-/* Windows.Media.Devices.IIsoSpeedControl2.get_Max() */
 HRESULT wmede_iso_speed_control_2_get__max(WMEDE_IIsoSpeedControl_2 *self, uint32_t *value);
 
-/* Windows.Media.Devices.IIsoSpeedControl2.get_Step() */
 HRESULT wmede_iso_speed_control_2_get__step(WMEDE_IIsoSpeedControl_2 *self, uint32_t *value);
 
-/* Windows.Media.Devices.IIsoSpeedControl2.get_Value() */
 HRESULT wmede_iso_speed_control_2_get__value(WMEDE_IIsoSpeedControl_2 *self, uint32_t *value);
 
-/* Windows.Media.Devices.IIsoSpeedControl2.SetValueAsync(isoSpeed) */
 HRESULT wmede_iso_speed_control_2_set_value_async(WMEDE_IIsoSpeedControl_2 *self, uint32_t isoSpeed, WF_IAsyncAction** out);
 
-/* Windows.Media.Devices.IIsoSpeedControl2.get_Auto() */
 HRESULT wmede_iso_speed_control_2_get__auto(WMEDE_IIsoSpeedControl_2 *self, BOOL *value);
 
-/* Windows.Media.Devices.IIsoSpeedControl2.SetAutoAsync() */
 HRESULT wmede_iso_speed_control_2_set_auto_async(WMEDE_IIsoSpeedControl_2 *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Devices.IKeypadPressedEventArgs */
-/* Windows.Media.Devices.ILowLagPhotoControl */
-/* Windows.Media.Devices.ILowLagPhotoSequenceControl */
-/* Windows.Media.Devices.IMediaDeviceControl */
-/* Windows.Media.Devices.IMediaDeviceControlCapabilities */
-/* Windows.Media.Devices.IModuleCommandResult */
-/* Windows.Media.Devices.IOpticalImageStabilizationControl */
-/* Windows.Media.Devices.IPanelBasedOptimizationControl */
-/* Windows.Media.Devices.IPhotoConfirmationControl */
-/* Windows.Media.Devices.IRedialRequestedEventArgs */
-/* Windows.Media.Devices.IRegionOfInterest */
-/* Windows.Media.Devices.IRegionOfInterest2 */
-/* Windows.Media.Devices.IRegionOfInterest2.get_Type() */
 HRESULT wmede_region_of_interest_2_get__type(WMEDE_IRegionOfInterest_2 *self, WMEDE_RegionOfInterestType *value);
 
-/* Windows.Media.Devices.IRegionOfInterest2.put_Type() */
 HRESULT wmede_region_of_interest_2_put__type(WMEDE_IRegionOfInterest_2 *self, WMEDE_RegionOfInterestType value);
 
-/* Windows.Media.Devices.IRegionOfInterest2.get_BoundsNormalized() */
 HRESULT wmede_region_of_interest_2_get__bounds_normalized(WMEDE_IRegionOfInterest_2 *self, BOOL *value);
 
-/* Windows.Media.Devices.IRegionOfInterest2.put_BoundsNormalized() */
 HRESULT wmede_region_of_interest_2_put__bounds_normalized(WMEDE_IRegionOfInterest_2 *self, BOOL value);
 
-/* Windows.Media.Devices.IRegionOfInterest2.get_Weight() */
 HRESULT wmede_region_of_interest_2_get__weight(WMEDE_IRegionOfInterest_2 *self, uint32_t *value);
 
-/* Windows.Media.Devices.IRegionOfInterest2.put_Weight() */
 HRESULT wmede_region_of_interest_2_put__weight(WMEDE_IRegionOfInterest_2 *self, uint32_t value);
 
-/* Windows.Media.Devices.IRegionsOfInterestControl */
-/* Windows.Media.Devices.ISceneModeControl */
-/* Windows.Media.Devices.ITorchControl */
-/* Windows.Media.Devices.IVideoDeviceController */
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController */
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController.SetDeviceProperty(propertyId, propertyValue) */
 HRESULT wmede_advanced_video_capture_device_controller_set_device_property(WMEDE_IAdvancedVideoCaptureDeviceController *self, cwinrt_hstring propertyId, IInspectable* propertyValue);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController.GetDeviceProperty(propertyId) */
 HRESULT wmede_advanced_video_capture_device_controller_get_device_property(WMEDE_IAdvancedVideoCaptureDeviceController *self, cwinrt_hstring propertyId, IInspectable** out);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2 */
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2.get_LowLagPhotoSequence() */
 HRESULT wmede_advanced_video_capture_device_controller_2_get__low_lag_photo_sequence(WMEDE_IAdvancedVideoCaptureDeviceController_2 *self, WMEDE_LowLagPhotoSequenceControl** value);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2.get_LowLagPhoto() */
 HRESULT wmede_advanced_video_capture_device_controller_2_get__low_lag_photo(WMEDE_IAdvancedVideoCaptureDeviceController_2 *self, WMEDE_LowLagPhotoControl** value);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2.get_SceneModeControl() */
 HRESULT wmede_advanced_video_capture_device_controller_2_get__scene_mode_control(WMEDE_IAdvancedVideoCaptureDeviceController_2 *self, WMEDE_SceneModeControl** value);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2.get_TorchControl() */
 HRESULT wmede_advanced_video_capture_device_controller_2_get__torch_control(WMEDE_IAdvancedVideoCaptureDeviceController_2 *self, WMEDE_TorchControl** value);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2.get_FlashControl() */
 HRESULT wmede_advanced_video_capture_device_controller_2_get__flash_control(WMEDE_IAdvancedVideoCaptureDeviceController_2 *self, WMEDE_FlashControl** value);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2.get_WhiteBalanceControl() */
 HRESULT wmede_advanced_video_capture_device_controller_2_get__white_balance_control(WMEDE_IAdvancedVideoCaptureDeviceController_2 *self, WMEDE_WhiteBalanceControl** value);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2.get_ExposureControl() */
 HRESULT wmede_advanced_video_capture_device_controller_2_get__exposure_control(WMEDE_IAdvancedVideoCaptureDeviceController_2 *self, WMEDE_ExposureControl** value);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2.get_FocusControl() */
 HRESULT wmede_advanced_video_capture_device_controller_2_get__focus_control(WMEDE_IAdvancedVideoCaptureDeviceController_2 *self, WMEDE_FocusControl** value);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2.get_ExposureCompensationControl() */
 HRESULT wmede_advanced_video_capture_device_controller_2_get__exposure_compensation_control(WMEDE_IAdvancedVideoCaptureDeviceController_2 *self, WMEDE_ExposureCompensationControl** value);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2.get_IsoSpeedControl() */
 HRESULT wmede_advanced_video_capture_device_controller_2_get__iso_speed_control(WMEDE_IAdvancedVideoCaptureDeviceController_2 *self, WMEDE_IsoSpeedControl** value);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2.get_RegionsOfInterestControl() */
 HRESULT wmede_advanced_video_capture_device_controller_2_get__regions_of_interest_control(WMEDE_IAdvancedVideoCaptureDeviceController_2 *self, WMEDE_RegionsOfInterestControl** value);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2.get_PrimaryUse() */
 HRESULT wmede_advanced_video_capture_device_controller_2_get__primary_use(WMEDE_IAdvancedVideoCaptureDeviceController_2 *self, WMEDE_CaptureUse *value);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2.put_PrimaryUse() */
 HRESULT wmede_advanced_video_capture_device_controller_2_put__primary_use(WMEDE_IAdvancedVideoCaptureDeviceController_2 *self, WMEDE_CaptureUse value);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController3 */
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController3.get_VariablePhotoSequenceController() */
 HRESULT wmede_advanced_video_capture_device_controller_3_get__variable_photo_sequence_controller(WMEDE_IAdvancedVideoCaptureDeviceController_3 *self, WMEDECO_VariablePhotoSequenceController** value);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController3.get_PhotoConfirmationControl() */
 HRESULT wmede_advanced_video_capture_device_controller_3_get__photo_confirmation_control(WMEDE_IAdvancedVideoCaptureDeviceController_3 *self, WMEDE_PhotoConfirmationControl** value);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController3.get_ZoomControl() */
 HRESULT wmede_advanced_video_capture_device_controller_3_get__zoom_control(WMEDE_IAdvancedVideoCaptureDeviceController_3 *self, WMEDE_ZoomControl** value);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController4 */
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController4.get_ExposurePriorityVideoControl() */
 HRESULT wmede_advanced_video_capture_device_controller_4_get__exposure_priority_video_control(WMEDE_IAdvancedVideoCaptureDeviceController_4 *self, WMEDE_ExposurePriorityVideoControl** value);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController4.get_DesiredOptimization() */
 HRESULT wmede_advanced_video_capture_device_controller_4_get__desired_optimization(WMEDE_IAdvancedVideoCaptureDeviceController_4 *self, WMEDE_MediaCaptureOptimization *value);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController4.put_DesiredOptimization() */
 HRESULT wmede_advanced_video_capture_device_controller_4_put__desired_optimization(WMEDE_IAdvancedVideoCaptureDeviceController_4 *self, WMEDE_MediaCaptureOptimization value);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController4.get_HdrVideoControl() */
 HRESULT wmede_advanced_video_capture_device_controller_4_get__hdr_video_control(WMEDE_IAdvancedVideoCaptureDeviceController_4 *self, WMEDE_HdrVideoControl** value);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController4.get_OpticalImageStabilizationControl() */
 HRESULT wmede_advanced_video_capture_device_controller_4_get__optical_image_stabilization_control(WMEDE_IAdvancedVideoCaptureDeviceController_4 *self, WMEDE_OpticalImageStabilizationControl** value);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController4.get_AdvancedPhotoControl() */
 HRESULT wmede_advanced_video_capture_device_controller_4_get__advanced_photo_control(WMEDE_IAdvancedVideoCaptureDeviceController_4 *self, WMEDE_AdvancedPhotoControl** value);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController5 */
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController5.get_Id() */
 HRESULT wmede_advanced_video_capture_device_controller_5_get__id(WMEDE_IAdvancedVideoCaptureDeviceController_5 *self, cwinrt_hstring *value);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController5.GetDevicePropertyById(propertyId, maxPropertyValueSize) */
 HRESULT wmede_advanced_video_capture_device_controller_5_get_device_property_by_id(WMEDE_IAdvancedVideoCaptureDeviceController_5 *self, cwinrt_hstring propertyId, uint32_t* maxPropertyValueSize, WMEDE_VideoDeviceControllerGetDevicePropertyResult** out);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController5.SetDevicePropertyById(propertyId, propertyValue) */
 HRESULT wmede_advanced_video_capture_device_controller_5_set_device_property_by_id(WMEDE_IAdvancedVideoCaptureDeviceController_5 *self, cwinrt_hstring propertyId, IInspectable* propertyValue, WMEDE_VideoDeviceControllerSetDevicePropertyStatus *out);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController5.GetDevicePropertyByExtendedId(extendedPropertyId, maxPropertyValueSize) */
 HRESULT wmede_advanced_video_capture_device_controller_5_get_device_property_by_extended_id(WMEDE_IAdvancedVideoCaptureDeviceController_5 *self, uint8_t *extendedPropertyId, uint32_t extendedPropertyId_len, uint32_t* maxPropertyValueSize, WMEDE_VideoDeviceControllerGetDevicePropertyResult** out);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController5.SetDevicePropertyByExtendedId(extendedPropertyId, propertyValue) */
 HRESULT wmede_advanced_video_capture_device_controller_5_set_device_property_by_extended_id(WMEDE_IAdvancedVideoCaptureDeviceController_5 *self, uint8_t *extendedPropertyId, uint32_t extendedPropertyId_len, uint8_t *propertyValue, uint32_t propertyValue_len, WMEDE_VideoDeviceControllerSetDevicePropertyStatus *out);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController6 */
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController6.get_VideoTemporalDenoisingControl() */
 HRESULT wmede_advanced_video_capture_device_controller_6_get__video_temporal_denoising_control(WMEDE_IAdvancedVideoCaptureDeviceController_6 *self, WMEDE_VideoTemporalDenoisingControl** value);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController7 */
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController7.get_InfraredTorchControl() */
 HRESULT wmede_advanced_video_capture_device_controller_7_get__infrared_torch_control(WMEDE_IAdvancedVideoCaptureDeviceController_7 *self, WMEDE_InfraredTorchControl** value);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController8 */
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController8.get_PanelBasedOptimizationControl() */
 HRESULT wmede_advanced_video_capture_device_controller_8_get__panel_based_optimization_control(WMEDE_IAdvancedVideoCaptureDeviceController_8 *self, WMEDE_PanelBasedOptimizationControl** value);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController9 */
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController9.get_DigitalWindowControl() */
 HRESULT wmede_advanced_video_capture_device_controller_9_get__digital_window_control(WMEDE_IAdvancedVideoCaptureDeviceController_9 *self, WMEDE_DigitalWindowControl** value);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController10 */
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController10.get_CameraOcclusionInfo() */
 HRESULT wmede_advanced_video_capture_device_controller_10_get__camera_occlusion_info(WMEDE_IAdvancedVideoCaptureDeviceController_10 *self, WMEDE_CameraOcclusionInfo** value);
 
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController11 */
-/* Windows.Media.Devices.IAdvancedVideoCaptureDeviceController11.TryAcquireExclusiveControl(deviceId, mode) */
 HRESULT wmede_advanced_video_capture_device_controller_11_try_acquire_exclusive_control(WMEDE_IAdvancedVideoCaptureDeviceController_11 *self, cwinrt_hstring deviceId, WMECA_MediaCaptureDeviceExclusiveControlReleaseMode mode, BOOL *out);
 
-/* Windows.Media.Devices.IVideoDeviceControllerGetDevicePropertyResult */
-/* Windows.Media.Devices.IVideoTemporalDenoisingControl */
-/* Windows.Media.Devices.IWhiteBalanceControl */
-/* Windows.Media.Devices.IZoomControl */
-/* Windows.Media.Devices.IZoomControl2 */
-/* Windows.Media.Devices.IZoomControl2.get_SupportedModes() */
 HRESULT wmede_zoom_control_2_get__supported_modes(WMEDE_IZoomControl_2 *self, WFOCO_IVectorView_WMEDE_ZoomTransitionMode** value);
 
-/* Windows.Media.Devices.IZoomControl2.get_Mode() */
 HRESULT wmede_zoom_control_2_get__mode(WMEDE_IZoomControl_2 *self, WMEDE_ZoomTransitionMode *value);
 
-/* Windows.Media.Devices.IZoomControl2.Configure(settings) */
 HRESULT wmede_zoom_control_2_configure(WMEDE_IZoomControl_2 *self, WMEDE_ZoomSettings* settings);
 
-/* Windows.Media.Devices.IZoomSettings */
-/* Windows.Media.Devices.IDigitalWindowControl */
-/* Windows.Media.Devices.IDigitalWindowCapability */
-/* Windows.Media.Devices.IDigitalWindowBounds */
-/* Windows.Media.Devices.IDialRequestedEventArgs */
-/* Windows.Media.Devices.IDefaultAudioDeviceChangedEventArgs */
-/* Windows.Media.Devices.IDefaultAudioDeviceChangedEventArgs.get_Id() */
 HRESULT wmede_default_audio_device_changed_event_args_get__id(WMEDE_IDefaultAudioDeviceChangedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Media.Devices.IDefaultAudioDeviceChangedEventArgs.get_Role() */
 HRESULT wmede_default_audio_device_changed_event_args_get__role(WMEDE_IDefaultAudioDeviceChangedEventArgs *self, WMEDE_AudioDeviceRole *value);
 
-/* Windows.Media.Devices.ICameraOcclusionStateChangedEventArgs */
-/* Windows.Media.Devices.ICameraOcclusionState */
-/* Windows.Media.Devices.ICameraOcclusionInfo */
-/* Windows.Media.Devices.ICallControl */
-/* Windows.Media.Devices.IAudioDeviceModulesManager */
-/* Windows.Media.Devices.IAudioDeviceModuleNotificationEventArgs */
-/* Windows.Media.Devices.IAudioDeviceModule */
-/* Windows.Media.Devices.IAdvancedPhotoControl */
-/* Windows.Media.Devices.IAdvancedPhotoCaptureSettings */
-/* Windows.Media.Devices.IExposureCompensationControl */
-/* Windows.Media.Devices.IAudioDeviceController */
-/* Windows.Media.Devices.IAudioDeviceController2 */
-/* Windows.Media.Devices.IAudioDeviceController2.get_AudioCaptureEffectsManager() */
 HRESULT wmede_audio_device_controller_2_get__audio_capture_effects_manager(WMEDE_IAudioDeviceController_2 *self, WMEEF_AudioCaptureEffectsManager** value);
 
-/* Windows.Media.Devices.IMediaDeviceController */
-/* Windows.Media.Devices.IMediaDeviceController.GetAvailableMediaStreamProperties(mediaStreamType) */
 HRESULT wmede_media_device_controller_get_available_media_stream_properties(WMEDE_IMediaDeviceController *self, WMECA_MediaStreamType mediaStreamType, WFOCO_IVectorView_WMEME_IMediaEncodingProperties** out);
 
-/* Windows.Media.Devices.IMediaDeviceController.GetMediaStreamProperties(mediaStreamType) */
 HRESULT wmede_media_device_controller_get_media_stream_properties(WMEDE_IMediaDeviceController *self, WMECA_MediaStreamType mediaStreamType, WMEME_IMediaEncodingProperties** out);
 
-/* Windows.Media.Devices.IMediaDeviceController.SetMediaStreamPropertiesAsync(mediaStreamType, mediaEncodingProperties) */
 HRESULT wmede_media_device_controller_set_media_stream_properties_async(WMEDE_IMediaDeviceController *self, WMECA_MediaStreamType mediaStreamType, WMEME_IMediaEncodingProperties* mediaEncodingProperties, WF_IAsyncAction** out);
 
 #endif /* CWINRT_WINDOWS_MEDIA_DEVICES_H */

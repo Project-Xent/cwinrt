@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WFOME_CreateFromStringAttribute WFOME_CreateFromStringAttribute;
 typedef struct WFOME_DefaultAttribute WFOME_DefaultAttribute;
 typedef struct WFOME_DefaultOverloadAttribute WFOME_DefaultOverloadAttribute;
@@ -136,7 +135,6 @@ typedef enum WFOME_AttributeTargets {
 } WFOME_AttributeTargets;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -145,71 +143,46 @@ typedef enum WFOME_AttributeTargets {
 static const IID CWINRT_IID_WFOME_IApiInformationStatics CWINRT_MAYBE_UNUSED = { 0x997439FE, 0xF681, 0x4A11, { 0xB4, 0x16, 0xC1, 0x3A, 0x47, 0xE8, 0xBA, 0x36 } };
 #endif
 
-/* Methods */
-
-/* Windows.Foundation.Metadata.IApiInformationStatics */
-/* Windows.Foundation.Metadata.IApiInformationStatics.IsTypePresent(typeName) */
 HRESULT wfome_api_information_statics_is_type_present(WFOME_IApiInformationStatics *self, cwinrt_hstring typeName, BOOL *out);
 
-/* Windows.Foundation.Metadata.IApiInformationStatics.IsMethodPresent(typeName, methodName) */
 HRESULT wfome_api_information_statics_is_method_present(WFOME_IApiInformationStatics *self, cwinrt_hstring typeName, cwinrt_hstring methodName, BOOL *out);
 
-/* Windows.Foundation.Metadata.IApiInformationStatics.IsMethodPresent(typeName, methodName, inputParameterCount) */
 HRESULT wfome_api_information_statics_is_method_present_str_str_u32_b(WFOME_IApiInformationStatics *self, cwinrt_hstring typeName, cwinrt_hstring methodName, uint32_t inputParameterCount, BOOL *out);
 
-/* Windows.Foundation.Metadata.IApiInformationStatics.IsEventPresent(typeName, eventName) */
 HRESULT wfome_api_information_statics_is_event_present(WFOME_IApiInformationStatics *self, cwinrt_hstring typeName, cwinrt_hstring eventName, BOOL *out);
 
-/* Windows.Foundation.Metadata.IApiInformationStatics.IsPropertyPresent(typeName, propertyName) */
 HRESULT wfome_api_information_statics_is_property_present(WFOME_IApiInformationStatics *self, cwinrt_hstring typeName, cwinrt_hstring propertyName, BOOL *out);
 
-/* Windows.Foundation.Metadata.IApiInformationStatics.IsReadOnlyPropertyPresent(typeName, propertyName) */
 HRESULT wfome_api_information_statics_is_read_only_property_present(WFOME_IApiInformationStatics *self, cwinrt_hstring typeName, cwinrt_hstring propertyName, BOOL *out);
 
-/* Windows.Foundation.Metadata.IApiInformationStatics.IsWriteablePropertyPresent(typeName, propertyName) */
 HRESULT wfome_api_information_statics_is_writeable_property_present(WFOME_IApiInformationStatics *self, cwinrt_hstring typeName, cwinrt_hstring propertyName, BOOL *out);
 
-/* Windows.Foundation.Metadata.IApiInformationStatics.IsEnumNamedValuePresent(enumTypeName, valueName) */
 HRESULT wfome_api_information_statics_is_enum_named_value_present(WFOME_IApiInformationStatics *self, cwinrt_hstring enumTypeName, cwinrt_hstring valueName, BOOL *out);
 
-/* Windows.Foundation.Metadata.IApiInformationStatics.IsApiContractPresent(contractName, majorVersion) */
 HRESULT wfome_api_information_statics_is_api_contract_present(WFOME_IApiInformationStatics *self, cwinrt_hstring contractName, uint16_t majorVersion, BOOL *out);
 
-/* Windows.Foundation.Metadata.IApiInformationStatics.IsApiContractPresent(contractName, majorVersion, minorVersion) */
 HRESULT wfome_api_information_statics_is_api_contract_present_str_u16_u16_b(WFOME_IApiInformationStatics *self, cwinrt_hstring contractName, uint16_t majorVersion, uint16_t minorVersion, BOOL *out);
 
-/* activate Windows.Foundation.Metadata.ApiInformation */
 HRESULT wfome_api_information_new(WFOME_ApiInformation **out);
 
-/* Windows.Foundation.Metadata.ApiInformation */
-/* Windows.Foundation.Metadata.ApiInformation.IsTypePresent(typeName) */
 HRESULT wfome_api_information_is_type_present(cwinrt_hstring typeName, BOOL *out);
 
-/* Windows.Foundation.Metadata.ApiInformation.IsMethodPresent(typeName, methodName) */
 HRESULT wfome_api_information_is_method_present(cwinrt_hstring typeName, cwinrt_hstring methodName, BOOL *out);
 
-/* Windows.Foundation.Metadata.ApiInformation.IsMethodPresent(typeName, methodName, inputParameterCount) */
 HRESULT wfome_api_information_is_method_present_str_str_u32_b(cwinrt_hstring typeName, cwinrt_hstring methodName, uint32_t inputParameterCount, BOOL *out);
 
-/* Windows.Foundation.Metadata.ApiInformation.IsEventPresent(typeName, eventName) */
 HRESULT wfome_api_information_is_event_present(cwinrt_hstring typeName, cwinrt_hstring eventName, BOOL *out);
 
-/* Windows.Foundation.Metadata.ApiInformation.IsPropertyPresent(typeName, propertyName) */
 HRESULT wfome_api_information_is_property_present(cwinrt_hstring typeName, cwinrt_hstring propertyName, BOOL *out);
 
-/* Windows.Foundation.Metadata.ApiInformation.IsReadOnlyPropertyPresent(typeName, propertyName) */
 HRESULT wfome_api_information_is_read_only_property_present(cwinrt_hstring typeName, cwinrt_hstring propertyName, BOOL *out);
 
-/* Windows.Foundation.Metadata.ApiInformation.IsWriteablePropertyPresent(typeName, propertyName) */
 HRESULT wfome_api_information_is_writeable_property_present(cwinrt_hstring typeName, cwinrt_hstring propertyName, BOOL *out);
 
-/* Windows.Foundation.Metadata.ApiInformation.IsEnumNamedValuePresent(enumTypeName, valueName) */
 HRESULT wfome_api_information_is_enum_named_value_present(cwinrt_hstring enumTypeName, cwinrt_hstring valueName, BOOL *out);
 
-/* Windows.Foundation.Metadata.ApiInformation.IsApiContractPresent(contractName, majorVersion) */
 HRESULT wfome_api_information_is_api_contract_present(cwinrt_hstring contractName, uint16_t majorVersion, BOOL *out);
 
-/* Windows.Foundation.Metadata.ApiInformation.IsApiContractPresent(contractName, majorVersion, minorVersion) */
 HRESULT wfome_api_information_is_api_contract_present_str_u16_u16_b(cwinrt_hstring contractName, uint16_t majorVersion, uint16_t minorVersion, BOOL *out);
 
 #endif /* CWINRT_WINDOWS_FOUNDATION_METADATA_H */

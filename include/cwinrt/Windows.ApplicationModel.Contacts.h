@@ -15,7 +15,6 @@
 #include <cwinrt/Windows.UI.ViewManagement.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStreamReference
 #define CWINRT_FWD_WSTST_IRandomAccessStreamReference
 typedef struct WSTST_IRandomAccessStreamReference WSTST_IRandomAccessStreamReference;
@@ -37,7 +36,6 @@ typedef struct WSTST_RandomAccessStreamReference WSTST_RandomAccessStreamReferen
 typedef struct WDATE_TextSegment WDATE_TextSegment;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPCO_IContactLaunchActionVerbsStatics WAPCO_IContactLaunchActionVerbsStatics;
 typedef struct WAPCO_IContactManagerStatics_3 WAPCO_IContactManagerStatics_3;
 typedef struct WAPCO_IContactManagerStatics_4 WAPCO_IContactManagerStatics_4;
@@ -162,7 +160,6 @@ typedef struct WAPCO_IContactStore WAPCO_IContactStore;
 typedef struct WAPCO_IContactWebsite WAPCO_IContactWebsite;
 typedef struct WAPCO_IContact WAPCO_IContact;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WSTST_RandomAccessStreamReference
 #define CWINRT_FWD_WF_IAsyncOperation_WSTST_RandomAccessStreamReference
 typedef struct WF_IAsyncOperation_WSTST_RandomAccessStreamReference WF_IAsyncOperation_WSTST_RandomAccessStreamReference;
@@ -648,7 +645,6 @@ typedef enum WAPCO_ContactStoreAccessType {
 } WAPCO_ContactStoreAccessType;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -953,1348 +949,872 @@ static const IID CWINRT_IID_WAPCO_IContactWebsite CWINRT_MAYBE_UNUSED = { 0x9F13
 static const IID CWINRT_IID_WAPCO_IContact CWINRT_MAYBE_UNUSED = { 0xEC0072F3, 0x2118, 0x4049, { 0x9E, 0xBC, 0x17, 0xF0, 0xAB, 0x69, 0x2B, 0x64 } };
 #endif
 
-/* Methods */
-
-/* Windows.ApplicationModel.Contacts.IContactLaunchActionVerbsStatics */
-/* Windows.ApplicationModel.Contacts.IContactLaunchActionVerbsStatics.get_Call() */
 HRESULT wapco_contact_launch_action_verbs_statics_get__call(WAPCO_IContactLaunchActionVerbsStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IContactLaunchActionVerbsStatics.get_Message() */
 HRESULT wapco_contact_launch_action_verbs_statics_get__message(WAPCO_IContactLaunchActionVerbsStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IContactLaunchActionVerbsStatics.get_Map() */
 HRESULT wapco_contact_launch_action_verbs_statics_get__map(WAPCO_IContactLaunchActionVerbsStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IContactLaunchActionVerbsStatics.get_Post() */
 HRESULT wapco_contact_launch_action_verbs_statics_get__post(WAPCO_IContactLaunchActionVerbsStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IContactLaunchActionVerbsStatics.get_VideoCall() */
 HRESULT wapco_contact_launch_action_verbs_statics_get__video_call(WAPCO_IContactLaunchActionVerbsStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IContactManagerStatics3 */
-/* Windows.ApplicationModel.Contacts.IContactManagerStatics3.ConvertContactToVCardAsync(contact) */
 HRESULT wapco_contact_manager_statics_3_convert_contact_to_v_card_async(WAPCO_IContactManagerStatics_3 *self, WAPCO_Contact* contact, WF_IAsyncOperation_WSTST_RandomAccessStreamReference** out);
 
-/* Windows.ApplicationModel.Contacts.IContactManagerStatics3.ConvertContactToVCardAsync(contact, maxBytes) */
 HRESULT wapco_contact_manager_statics_3_convert_contact_to_v_card_async_p_u32_p(WAPCO_IContactManagerStatics_3 *self, WAPCO_Contact* contact, uint32_t maxBytes, WF_IAsyncOperation_WSTST_RandomAccessStreamReference** out);
 
-/* Windows.ApplicationModel.Contacts.IContactManagerStatics3.ConvertVCardToContactAsync(vCard) */
 HRESULT wapco_contact_manager_statics_3_convert_v_card_to_contact_async(WAPCO_IContactManagerStatics_3 *self, WSTST_IRandomAccessStreamReference* vCard, WF_IAsyncOperation_WAPCO_Contact** out);
 
-/* Windows.ApplicationModel.Contacts.IContactManagerStatics3.RequestStoreAsync(accessType) */
 HRESULT wapco_contact_manager_statics_3_request_store_async(WAPCO_IContactManagerStatics_3 *self, WAPCO_ContactStoreAccessType accessType, WF_IAsyncOperation_WAPCO_ContactStore** out);
 
-/* Windows.ApplicationModel.Contacts.IContactManagerStatics3.RequestAnnotationStoreAsync(accessType) */
 HRESULT wapco_contact_manager_statics_3_request_annotation_store_async(WAPCO_IContactManagerStatics_3 *self, WAPCO_ContactAnnotationStoreAccessType accessType, WF_IAsyncOperation_WAPCO_ContactAnnotationStore** out);
 
-/* Windows.ApplicationModel.Contacts.IContactManagerStatics3.IsShowContactCardSupported() */
 HRESULT wapco_contact_manager_statics_3_is_show_contact_card_supported(WAPCO_IContactManagerStatics_3 *self, BOOL *out);
 
-/* Windows.ApplicationModel.Contacts.IContactManagerStatics3.ShowContactCard(contact, selection, preferredPlacement, contactCardOptions) */
 HRESULT wapco_contact_manager_statics_3_show_contact_card(WAPCO_IContactManagerStatics_3 *self, WAPCO_Contact* contact, WF_Rect selection, WUIPO_Placement preferredPlacement, WAPCO_ContactCardOptions* contactCardOptions);
 
-/* Windows.ApplicationModel.Contacts.IContactManagerStatics3.IsShowDelayLoadedContactCardSupported() */
 HRESULT wapco_contact_manager_statics_3_is_show_delay_loaded_contact_card_supported(WAPCO_IContactManagerStatics_3 *self, BOOL *out);
 
-/* Windows.ApplicationModel.Contacts.IContactManagerStatics3.ShowDelayLoadedContactCard(contact, selection, preferredPlacement, contactCardOptions) */
 HRESULT wapco_contact_manager_statics_3_show_delay_loaded_contact_card(WAPCO_IContactManagerStatics_3 *self, WAPCO_Contact* contact, WF_Rect selection, WUIPO_Placement preferredPlacement, WAPCO_ContactCardOptions* contactCardOptions, WAPCO_ContactCardDelayedDataLoader** out);
 
-/* Windows.ApplicationModel.Contacts.IContactManagerStatics3.ShowFullContactCard(contact, fullContactCardOptions) */
 HRESULT wapco_contact_manager_statics_3_show_full_contact_card(WAPCO_IContactManagerStatics_3 *self, WAPCO_Contact* contact, WAPCO_FullContactCardOptions* fullContactCardOptions);
 
-/* Windows.ApplicationModel.Contacts.IContactManagerStatics3.get_SystemDisplayNameOrder() */
 HRESULT wapco_contact_manager_statics_3_get__system_display_name_order(WAPCO_IContactManagerStatics_3 *self, WAPCO_ContactNameOrder *value);
 
-/* Windows.ApplicationModel.Contacts.IContactManagerStatics3.put_SystemDisplayNameOrder() */
 HRESULT wapco_contact_manager_statics_3_put__system_display_name_order(WAPCO_IContactManagerStatics_3 *self, WAPCO_ContactNameOrder value);
 
-/* Windows.ApplicationModel.Contacts.IContactManagerStatics3.get_SystemSortOrder() */
 HRESULT wapco_contact_manager_statics_3_get__system_sort_order(WAPCO_IContactManagerStatics_3 *self, WAPCO_ContactNameOrder *value);
 
-/* Windows.ApplicationModel.Contacts.IContactManagerStatics3.put_SystemSortOrder() */
 HRESULT wapco_contact_manager_statics_3_put__system_sort_order(WAPCO_IContactManagerStatics_3 *self, WAPCO_ContactNameOrder value);
 
-/* Windows.ApplicationModel.Contacts.IContactManagerStatics4 */
-/* Windows.ApplicationModel.Contacts.IContactManagerStatics4.GetForUser(user) */
 HRESULT wapco_contact_manager_statics_4_get_for_user(WAPCO_IContactManagerStatics_4 *self, WSY_User* user, WAPCO_ContactManagerForUser** out);
 
-/* Windows.ApplicationModel.Contacts.IContactManagerStatics5 */
-/* Windows.ApplicationModel.Contacts.IContactManagerStatics5.IsShowFullContactCardSupportedAsync() */
 HRESULT wapco_contact_manager_statics_5_is_show_full_contact_card_supported_async(WAPCO_IContactManagerStatics_5 *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Contacts.IContactManagerStatics5.get_IncludeMiddleNameInSystemDisplayAndSort() */
 HRESULT wapco_contact_manager_statics_5_get__include_middle_name_in_system_display_and_sort(WAPCO_IContactManagerStatics_5 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Contacts.IContactManagerStatics5.put_IncludeMiddleNameInSystemDisplayAndSort() */
 HRESULT wapco_contact_manager_statics_5_put__include_middle_name_in_system_display_and_sort(WAPCO_IContactManagerStatics_5 *self, BOOL value);
 
-/* Windows.ApplicationModel.Contacts.IContactPickerStatics */
-/* Windows.ApplicationModel.Contacts.IContactPickerStatics.CreateForUser(user) */
 HRESULT wapco_contact_picker_statics_create_for_user(WAPCO_IContactPickerStatics *self, WSY_User* user, WAPCO_ContactPicker** out);
 
-/* Windows.ApplicationModel.Contacts.IContactPickerStatics.IsSupportedAsync() */
 HRESULT wapco_contact_picker_statics_is_supported_async(WAPCO_IContactPickerStatics *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Contacts.IContactQueryOptionsFactory */
-/* Windows.ApplicationModel.Contacts.IContactQueryOptionsFactory.CreateWithText(text) */
 HRESULT wapco_contact_query_options_factory_create_with_text(WAPCO_IContactQueryOptionsFactory *self, cwinrt_hstring text, WAPCO_ContactQueryOptions** out);
 
-/* Windows.ApplicationModel.Contacts.IContactQueryOptionsFactory.CreateWithTextAndFields(text, fields) */
 HRESULT wapco_contact_query_options_factory_create_with_text_and_fields(WAPCO_IContactQueryOptionsFactory *self, cwinrt_hstring text, WAPCO_ContactQuerySearchFields fields, WAPCO_ContactQueryOptions** out);
 
-/* Windows.ApplicationModel.Contacts.IKnownContactFieldStatics */
-/* Windows.ApplicationModel.Contacts.IKnownContactFieldStatics.get_Email() */
 HRESULT wapco_known_contact_field_statics_get__email(WAPCO_IKnownContactFieldStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IKnownContactFieldStatics.get_PhoneNumber() */
 HRESULT wapco_known_contact_field_statics_get__phone_number(WAPCO_IKnownContactFieldStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IKnownContactFieldStatics.get_Location() */
 HRESULT wapco_known_contact_field_statics_get__location(WAPCO_IKnownContactFieldStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IKnownContactFieldStatics.get_InstantMessage() */
 HRESULT wapco_known_contact_field_statics_get__instant_message(WAPCO_IKnownContactFieldStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IKnownContactFieldStatics.ConvertNameToType(name) */
 HRESULT wapco_known_contact_field_statics_convert_name_to_type(WAPCO_IKnownContactFieldStatics *self, cwinrt_hstring name, WAPCO_ContactFieldType *out);
 
-/* Windows.ApplicationModel.Contacts.IKnownContactFieldStatics.ConvertTypeToName() */
 HRESULT wapco_known_contact_field_statics_convert_type_to_name(WAPCO_IKnownContactFieldStatics *self, WAPCO_ContactFieldType type_, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.Contacts.IPinnedContactManagerStatics */
-/* Windows.ApplicationModel.Contacts.IPinnedContactManagerStatics.GetDefault() */
 HRESULT wapco_pinned_contact_manager_statics_get_default(WAPCO_IPinnedContactManagerStatics *self, WAPCO_PinnedContactManager** out);
 
-/* Windows.ApplicationModel.Contacts.IPinnedContactManagerStatics.GetForUser(user) */
 HRESULT wapco_pinned_contact_manager_statics_get_for_user(WAPCO_IPinnedContactManagerStatics *self, WSY_User* user, WAPCO_PinnedContactManager** out);
 
-/* Windows.ApplicationModel.Contacts.IPinnedContactManagerStatics.IsSupported() */
 HRESULT wapco_pinned_contact_manager_statics_is_supported(WAPCO_IPinnedContactManagerStatics *self, BOOL *out);
 
-/* activate Windows.ApplicationModel.Contacts.KnownContactField */
 HRESULT wapco_known_contact_field_new(WAPCO_KnownContactField **out);
 
-/* Windows.ApplicationModel.Contacts.KnownContactField */
-/* Windows.ApplicationModel.Contacts.KnownContactField.get_Email() */
 HRESULT wapco_known_contact_field_get__email(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.KnownContactField.get_PhoneNumber() */
 HRESULT wapco_known_contact_field_get__phone_number(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.KnownContactField.get_Location() */
 HRESULT wapco_known_contact_field_get__location(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.KnownContactField.get_InstantMessage() */
 HRESULT wapco_known_contact_field_get__instant_message(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.KnownContactField.ConvertNameToType(name) */
 HRESULT wapco_known_contact_field_convert_name_to_type(cwinrt_hstring name, WAPCO_ContactFieldType *out);
 
-/* Windows.ApplicationModel.Contacts.KnownContactField.ConvertTypeToName() */
 HRESULT wapco_known_contact_field_convert_type_to_name(WAPCO_ContactFieldType type_, cwinrt_hstring *out);
 
-/* activate Windows.ApplicationModel.Contacts.PinnedContactIdsQueryResult */
 HRESULT wapco_pinned_contact_ids_query_result_new(WAPCO_PinnedContactIdsQueryResult **out);
 
-/* Windows.ApplicationModel.Contacts.PinnedContactIdsQueryResult */
-/* Windows.ApplicationModel.Contacts.PinnedContactIdsQueryResult.get_ContactIds() */
 HRESULT wapco_pinned_contact_ids_query_result_get__contact_ids(WAPCO_PinnedContactIdsQueryResult *self, WFOCO_IVector_HSTRING** value);
 
-/* activate Windows.ApplicationModel.Contacts.PinnedContactManager */
 HRESULT wapco_pinned_contact_manager_new(WAPCO_PinnedContactManager **out);
 
-/* Windows.ApplicationModel.Contacts.PinnedContactManager */
-/* Windows.ApplicationModel.Contacts.PinnedContactManager.get_User() */
 HRESULT wapco_pinned_contact_manager_get__user(WAPCO_PinnedContactManager *self, WSY_User** value);
 
-/* Windows.ApplicationModel.Contacts.PinnedContactManager.IsPinSurfaceSupported(surface) */
 HRESULT wapco_pinned_contact_manager_is_pin_surface_supported(WAPCO_PinnedContactManager *self, WAPCO_PinnedContactSurface surface, BOOL *out);
 
-/* Windows.ApplicationModel.Contacts.PinnedContactManager.IsContactPinned(contact, surface) */
 HRESULT wapco_pinned_contact_manager_is_contact_pinned(WAPCO_PinnedContactManager *self, WAPCO_Contact* contact, WAPCO_PinnedContactSurface surface, BOOL *out);
 
-/* Windows.ApplicationModel.Contacts.PinnedContactManager.RequestPinContactAsync(contact, surface) */
 HRESULT wapco_pinned_contact_manager_request_pin_contact_async(WAPCO_PinnedContactManager *self, WAPCO_Contact* contact, WAPCO_PinnedContactSurface surface, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Contacts.PinnedContactManager.RequestPinContactsAsync(contacts, surface) */
 HRESULT wapco_pinned_contact_manager_request_pin_contacts_async(WAPCO_PinnedContactManager *self, WFOCO_IIterable_WAPCO_Contact* contacts, WAPCO_PinnedContactSurface surface, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Contacts.PinnedContactManager.RequestUnpinContactAsync(contact, surface) */
 HRESULT wapco_pinned_contact_manager_request_unpin_contact_async(WAPCO_PinnedContactManager *self, WAPCO_Contact* contact, WAPCO_PinnedContactSurface surface, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Contacts.PinnedContactManager.SignalContactActivity(contact) */
 HRESULT wapco_pinned_contact_manager_signal_contact_activity(WAPCO_PinnedContactManager *self, WAPCO_Contact* contact);
 
-/* Windows.ApplicationModel.Contacts.PinnedContactManager.GetPinnedContactIdsAsync() */
 HRESULT wapco_pinned_contact_manager_get_pinned_contact_ids_async(WAPCO_PinnedContactManager *self, WF_IAsyncOperation_WAPCO_PinnedContactIdsQueryResult** out);
 
-/* Windows.ApplicationModel.Contacts.PinnedContactManager.GetDefault() */
 HRESULT wapco_pinned_contact_manager_get_default(WAPCO_PinnedContactManager** out);
 
-/* Windows.ApplicationModel.Contacts.PinnedContactManager.GetForUser(user) */
 HRESULT wapco_pinned_contact_manager_get_for_user(WSY_User* user, WAPCO_PinnedContactManager** out);
 
-/* Windows.ApplicationModel.Contacts.PinnedContactManager.IsSupported() */
 HRESULT wapco_pinned_contact_manager_is_supported(BOOL *out);
 
-/* activate Windows.ApplicationModel.Contacts.AggregateContactManager */
 HRESULT wapco_aggregate_contact_manager_new(WAPCO_AggregateContactManager **out);
 
-/* Windows.ApplicationModel.Contacts.AggregateContactManager */
-/* Windows.ApplicationModel.Contacts.AggregateContactManager.FindRawContactsAsync(contact) */
 HRESULT wapco_aggregate_contact_manager_find_raw_contacts_async(WAPCO_AggregateContactManager *self, WAPCO_Contact* contact, WF_IAsyncOperation_WFOCO_IVectorView_WAPCO_Contact** out);
 
-/* Windows.ApplicationModel.Contacts.AggregateContactManager.TryLinkContactsAsync(primaryContact, secondaryContact) */
 HRESULT wapco_aggregate_contact_manager_try_link_contacts_async(WAPCO_AggregateContactManager *self, WAPCO_Contact* primaryContact, WAPCO_Contact* secondaryContact, WF_IAsyncOperation_WAPCO_Contact** out);
 
-/* Windows.ApplicationModel.Contacts.AggregateContactManager.UnlinkRawContactAsync(contact) */
 HRESULT wapco_aggregate_contact_manager_unlink_raw_contact_async(WAPCO_AggregateContactManager *self, WAPCO_Contact* contact, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Contacts.AggregateContactManager.TrySetPreferredSourceForPictureAsync(aggregateContact, rawContact) */
 HRESULT wapco_aggregate_contact_manager_try_set_preferred_source_for_picture_async(WAPCO_AggregateContactManager *self, WAPCO_Contact* aggregateContact, WAPCO_Contact* rawContact, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Contacts.AggregateContactManager.SetRemoteIdentificationInformationAsync(contactListId, remoteSourceId, accountId) */
 HRESULT wapco_aggregate_contact_manager_set_remote_identification_information_async(WAPCO_AggregateContactManager *self, cwinrt_hstring contactListId, cwinrt_hstring remoteSourceId, cwinrt_hstring accountId, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Contacts.Contact */
 HRESULT wapco_contact_new(WAPCO_Contact **out);
 
-/* Windows.ApplicationModel.Contacts.Contact */
-/* Windows.ApplicationModel.Contacts.Contact.get_Name() */
 HRESULT wapco_contact_get__name(WAPCO_Contact *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.Contact.put_Name() */
 HRESULT wapco_contact_put__name(WAPCO_Contact *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_Thumbnail() */
 HRESULT wapco_contact_get__thumbnail(WAPCO_Contact *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.Contacts.Contact.put_Thumbnail() */
 HRESULT wapco_contact_put__thumbnail(WAPCO_Contact *self, WSTST_IRandomAccessStreamReference* value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_Fields() */
 HRESULT wapco_contact_get__fields(WAPCO_Contact *self, WFOCO_IVector_WAPCO_IContactField** value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_Id() */
 HRESULT wapco_contact_get__id(WAPCO_Contact *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.Contact.put_Id() */
 HRESULT wapco_contact_put__id(WAPCO_Contact *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_Notes() */
 HRESULT wapco_contact_get__notes(WAPCO_Contact *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.Contact.put_Notes() */
 HRESULT wapco_contact_put__notes(WAPCO_Contact *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_Phones() */
 HRESULT wapco_contact_get__phones(WAPCO_Contact *self, WFOCO_IVector_WAPCO_ContactPhone** value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_Emails() */
 HRESULT wapco_contact_get__emails(WAPCO_Contact *self, WFOCO_IVector_WAPCO_ContactEmail** value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_Addresses() */
 HRESULT wapco_contact_get__addresses(WAPCO_Contact *self, WFOCO_IVector_WAPCO_ContactAddress** value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_ConnectedServiceAccounts() */
 HRESULT wapco_contact_get__connected_service_accounts(WAPCO_Contact *self, WFOCO_IVector_WAPCO_ContactConnectedServiceAccount** value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_ImportantDates() */
 HRESULT wapco_contact_get__important_dates(WAPCO_Contact *self, WFOCO_IVector_WAPCO_ContactDate** value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_DataSuppliers() */
 HRESULT wapco_contact_get__data_suppliers(WAPCO_Contact *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_JobInfo() */
 HRESULT wapco_contact_get__job_info(WAPCO_Contact *self, WFOCO_IVector_WAPCO_ContactJobInfo** value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_SignificantOthers() */
 HRESULT wapco_contact_get__significant_others(WAPCO_Contact *self, WFOCO_IVector_WAPCO_ContactSignificantOther** value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_Websites() */
 HRESULT wapco_contact_get__websites(WAPCO_Contact *self, WFOCO_IVector_WAPCO_ContactWebsite** value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_ProviderProperties() */
 HRESULT wapco_contact_get__provider_properties(WAPCO_Contact *self, WFOCO_IPropertySet** value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_FirstName() */
 HRESULT wapco_contact_get__first_name(WAPCO_Contact *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.Contact.put_FirstName() */
 HRESULT wapco_contact_put__first_name(WAPCO_Contact *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_LastName() */
 HRESULT wapco_contact_get__last_name(WAPCO_Contact *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.Contact.put_LastName() */
 HRESULT wapco_contact_put__last_name(WAPCO_Contact *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_MiddleName() */
 HRESULT wapco_contact_get__middle_name(WAPCO_Contact *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.Contact.put_MiddleName() */
 HRESULT wapco_contact_put__middle_name(WAPCO_Contact *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_YomiGivenName() */
 HRESULT wapco_contact_get__yomi_given_name(WAPCO_Contact *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.Contact.put_YomiGivenName() */
 HRESULT wapco_contact_put__yomi_given_name(WAPCO_Contact *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_YomiFamilyName() */
 HRESULT wapco_contact_get__yomi_family_name(WAPCO_Contact *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.Contact.put_YomiFamilyName() */
 HRESULT wapco_contact_put__yomi_family_name(WAPCO_Contact *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_HonorificNameSuffix() */
 HRESULT wapco_contact_get__honorific_name_suffix(WAPCO_Contact *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.Contact.put_HonorificNameSuffix() */
 HRESULT wapco_contact_put__honorific_name_suffix(WAPCO_Contact *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_HonorificNamePrefix() */
 HRESULT wapco_contact_get__honorific_name_prefix(WAPCO_Contact *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.Contact.put_HonorificNamePrefix() */
 HRESULT wapco_contact_put__honorific_name_prefix(WAPCO_Contact *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_DisplayName() */
 HRESULT wapco_contact_get__display_name(WAPCO_Contact *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_YomiDisplayName() */
 HRESULT wapco_contact_get__yomi_display_name(WAPCO_Contact *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_ContactListId() */
 HRESULT wapco_contact_get__contact_list_id(WAPCO_Contact *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_DisplayPictureUserUpdateTime() */
 HRESULT wapco_contact_get__display_picture_user_update_time(WAPCO_Contact *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Contacts.Contact.put_DisplayPictureUserUpdateTime() */
 HRESULT wapco_contact_put__display_picture_user_update_time(WAPCO_Contact *self, WF_DateTime value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_IsMe() */
 HRESULT wapco_contact_get__is_me(WAPCO_Contact *self, BOOL *value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_AggregateId() */
 HRESULT wapco_contact_get__aggregate_id(WAPCO_Contact *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_RemoteId() */
 HRESULT wapco_contact_get__remote_id(WAPCO_Contact *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.Contact.put_RemoteId() */
 HRESULT wapco_contact_put__remote_id(WAPCO_Contact *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_RingToneToken() */
 HRESULT wapco_contact_get__ring_tone_token(WAPCO_Contact *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.Contact.put_RingToneToken() */
 HRESULT wapco_contact_put__ring_tone_token(WAPCO_Contact *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_IsDisplayPictureManuallySet() */
 HRESULT wapco_contact_get__is_display_picture_manually_set(WAPCO_Contact *self, BOOL *value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_LargeDisplayPicture() */
 HRESULT wapco_contact_get__large_display_picture(WAPCO_Contact *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_SmallDisplayPicture() */
 HRESULT wapco_contact_get__small_display_picture(WAPCO_Contact *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_SourceDisplayPicture() */
 HRESULT wapco_contact_get__source_display_picture(WAPCO_Contact *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.Contacts.Contact.put_SourceDisplayPicture() */
 HRESULT wapco_contact_put__source_display_picture(WAPCO_Contact *self, WSTST_IRandomAccessStreamReference* value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_TextToneToken() */
 HRESULT wapco_contact_get__text_tone_token(WAPCO_Contact *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.Contact.put_TextToneToken() */
 HRESULT wapco_contact_put__text_tone_token(WAPCO_Contact *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_IsAggregate() */
 HRESULT wapco_contact_get__is_aggregate(WAPCO_Contact *self, BOOL *value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_FullName() */
 HRESULT wapco_contact_get__full_name(WAPCO_Contact *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_DisplayNameOverride() */
 HRESULT wapco_contact_get__display_name_override(WAPCO_Contact *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.Contact.put_DisplayNameOverride() */
 HRESULT wapco_contact_put__display_name_override(WAPCO_Contact *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_Nickname() */
 HRESULT wapco_contact_get__nickname(WAPCO_Contact *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.Contact.put_Nickname() */
 HRESULT wapco_contact_put__nickname(WAPCO_Contact *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.Contact.get_SortName() */
 HRESULT wapco_contact_get__sort_name(WAPCO_Contact *self, cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.Contacts.ContactAddress */
 HRESULT wapco_contact_address_new(WAPCO_ContactAddress **out);
 
-/* Windows.ApplicationModel.Contacts.ContactAddress */
-/* Windows.ApplicationModel.Contacts.ContactAddress.get_StreetAddress() */
 HRESULT wapco_contact_address_get__street_address(WAPCO_ContactAddress *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactAddress.put_StreetAddress() */
 HRESULT wapco_contact_address_put__street_address(WAPCO_ContactAddress *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.ContactAddress.get_Locality() */
 HRESULT wapco_contact_address_get__locality(WAPCO_ContactAddress *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactAddress.put_Locality() */
 HRESULT wapco_contact_address_put__locality(WAPCO_ContactAddress *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.ContactAddress.get_Region() */
 HRESULT wapco_contact_address_get__region(WAPCO_ContactAddress *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactAddress.put_Region() */
 HRESULT wapco_contact_address_put__region(WAPCO_ContactAddress *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.ContactAddress.get_Country() */
 HRESULT wapco_contact_address_get__country(WAPCO_ContactAddress *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactAddress.put_Country() */
 HRESULT wapco_contact_address_put__country(WAPCO_ContactAddress *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.ContactAddress.get_PostalCode() */
 HRESULT wapco_contact_address_get__postal_code(WAPCO_ContactAddress *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactAddress.put_PostalCode() */
 HRESULT wapco_contact_address_put__postal_code(WAPCO_ContactAddress *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.ContactAddress.get_Kind() */
 HRESULT wapco_contact_address_get__kind(WAPCO_ContactAddress *self, WAPCO_ContactAddressKind *value);
 
-/* Windows.ApplicationModel.Contacts.ContactAddress.put_Kind() */
 HRESULT wapco_contact_address_put__kind(WAPCO_ContactAddress *self, WAPCO_ContactAddressKind value);
 
-/* Windows.ApplicationModel.Contacts.ContactAddress.get_Description() */
 HRESULT wapco_contact_address_get__description(WAPCO_ContactAddress *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactAddress.put_Description() */
 HRESULT wapco_contact_address_put__description(WAPCO_ContactAddress *self, cwinrt_hstring value);
 
-/* activate Windows.ApplicationModel.Contacts.ContactAnnotation */
 HRESULT wapco_contact_annotation_new(WAPCO_ContactAnnotation **out);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotation */
-/* Windows.ApplicationModel.Contacts.ContactAnnotation.get_Id() */
 HRESULT wapco_contact_annotation_get__id(WAPCO_ContactAnnotation *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotation.get_AnnotationListId() */
 HRESULT wapco_contact_annotation_get__annotation_list_id(WAPCO_ContactAnnotation *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotation.get_ContactId() */
 HRESULT wapco_contact_annotation_get__contact_id(WAPCO_ContactAnnotation *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotation.put_ContactId() */
 HRESULT wapco_contact_annotation_put__contact_id(WAPCO_ContactAnnotation *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotation.get_RemoteId() */
 HRESULT wapco_contact_annotation_get__remote_id(WAPCO_ContactAnnotation *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotation.put_RemoteId() */
 HRESULT wapco_contact_annotation_put__remote_id(WAPCO_ContactAnnotation *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotation.get_SupportedOperations() */
 HRESULT wapco_contact_annotation_get__supported_operations(WAPCO_ContactAnnotation *self, WAPCO_ContactAnnotationOperations *value);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotation.put_SupportedOperations() */
 HRESULT wapco_contact_annotation_put__supported_operations(WAPCO_ContactAnnotation *self, WAPCO_ContactAnnotationOperations value);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotation.get_IsDisabled() */
 HRESULT wapco_contact_annotation_get__is_disabled(WAPCO_ContactAnnotation *self, BOOL *value);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotation.get_ProviderProperties() */
 HRESULT wapco_contact_annotation_get__provider_properties(WAPCO_ContactAnnotation *self, WFOCO_ValueSet** value);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotation.get_ContactListId() */
 HRESULT wapco_contact_annotation_get__contact_list_id(WAPCO_ContactAnnotation *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotation.put_ContactListId() */
 HRESULT wapco_contact_annotation_put__contact_list_id(WAPCO_ContactAnnotation *self, cwinrt_hstring value);
 
-/* activate Windows.ApplicationModel.Contacts.ContactAnnotationList */
 HRESULT wapco_contact_annotation_list_new(WAPCO_ContactAnnotationList **out);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotationList */
-/* Windows.ApplicationModel.Contacts.ContactAnnotationList.get_Id() */
 HRESULT wapco_contact_annotation_list_get__id(WAPCO_ContactAnnotationList *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotationList.get_ProviderPackageFamilyName() */
 HRESULT wapco_contact_annotation_list_get__provider_package_family_name(WAPCO_ContactAnnotationList *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotationList.get_UserDataAccountId() */
 HRESULT wapco_contact_annotation_list_get__user_data_account_id(WAPCO_ContactAnnotationList *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotationList.DeleteAsync() */
 HRESULT wapco_contact_annotation_list_delete_async(WAPCO_ContactAnnotationList *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotationList.TrySaveAnnotationAsync(annotation) */
 HRESULT wapco_contact_annotation_list_try_save_annotation_async(WAPCO_ContactAnnotationList *self, WAPCO_ContactAnnotation* annotation, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotationList.GetAnnotationAsync(annotationId) */
 HRESULT wapco_contact_annotation_list_get_annotation_async(WAPCO_ContactAnnotationList *self, cwinrt_hstring annotationId, WF_IAsyncOperation_WAPCO_ContactAnnotation** out);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotationList.FindAnnotationsByRemoteIdAsync(remoteId) */
 HRESULT wapco_contact_annotation_list_find_annotations_by_remote_id_async(WAPCO_ContactAnnotationList *self, cwinrt_hstring remoteId, WF_IAsyncOperation_WFOCO_IVectorView_WAPCO_ContactAnnotation** out);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotationList.FindAnnotationsAsync() */
 HRESULT wapco_contact_annotation_list_find_annotations_async(WAPCO_ContactAnnotationList *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPCO_ContactAnnotation** out);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotationList.DeleteAnnotationAsync(annotation) */
 HRESULT wapco_contact_annotation_list_delete_annotation_async(WAPCO_ContactAnnotationList *self, WAPCO_ContactAnnotation* annotation, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Contacts.ContactAnnotationStore */
 HRESULT wapco_contact_annotation_store_new(WAPCO_ContactAnnotationStore **out);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotationStore */
-/* Windows.ApplicationModel.Contacts.ContactAnnotationStore.FindContactIdsByEmailAsync(emailAddress) */
 HRESULT wapco_contact_annotation_store_find_contact_ids_by_email_async(WAPCO_ContactAnnotationStore *self, cwinrt_hstring emailAddress, WF_IAsyncOperation_WFOCO_IVectorView_HSTRING** out);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotationStore.FindContactIdsByPhoneNumberAsync(phoneNumber) */
 HRESULT wapco_contact_annotation_store_find_contact_ids_by_phone_number_async(WAPCO_ContactAnnotationStore *self, cwinrt_hstring phoneNumber, WF_IAsyncOperation_WFOCO_IVectorView_HSTRING** out);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotationStore.FindAnnotationsForContactAsync(contact) */
 HRESULT wapco_contact_annotation_store_find_annotations_for_contact_async(WAPCO_ContactAnnotationStore *self, WAPCO_Contact* contact, WF_IAsyncOperation_WFOCO_IVectorView_WAPCO_ContactAnnotation** out);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotationStore.DisableAnnotationAsync(annotation) */
 HRESULT wapco_contact_annotation_store_disable_annotation_async(WAPCO_ContactAnnotationStore *self, WAPCO_ContactAnnotation* annotation, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotationStore.CreateAnnotationListAsync() */
 HRESULT wapco_contact_annotation_store_create_annotation_list_async(WAPCO_ContactAnnotationStore *self, WF_IAsyncOperation_WAPCO_ContactAnnotationList** out);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotationStore.CreateAnnotationListAsync(userDataAccountId) */
 HRESULT wapco_contact_annotation_store_create_annotation_list_async_str_p(WAPCO_ContactAnnotationStore *self, cwinrt_hstring userDataAccountId, WF_IAsyncOperation_WAPCO_ContactAnnotationList** out);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotationStore.GetAnnotationListAsync(annotationListId) */
 HRESULT wapco_contact_annotation_store_get_annotation_list_async(WAPCO_ContactAnnotationStore *self, cwinrt_hstring annotationListId, WF_IAsyncOperation_WAPCO_ContactAnnotationList** out);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotationStore.FindAnnotationListsAsync() */
 HRESULT wapco_contact_annotation_store_find_annotation_lists_async(WAPCO_ContactAnnotationStore *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPCO_ContactAnnotationList** out);
 
-/* Windows.ApplicationModel.Contacts.ContactAnnotationStore.FindAnnotationsForContactListAsync(contactListId) */
 HRESULT wapco_contact_annotation_store_find_annotations_for_contact_list_async(WAPCO_ContactAnnotationStore *self, cwinrt_hstring contactListId, WF_IAsyncOperation_WFOCO_IVectorView_WAPCO_ContactAnnotation** out);
 
-/* activate Windows.ApplicationModel.Contacts.ContactBatch */
 HRESULT wapco_contact_batch_new(WAPCO_ContactBatch **out);
 
-/* Windows.ApplicationModel.Contacts.ContactBatch */
-/* Windows.ApplicationModel.Contacts.ContactBatch.get_Contacts() */
 HRESULT wapco_contact_batch_get__contacts(WAPCO_ContactBatch *self, WFOCO_IVectorView_WAPCO_Contact** value);
 
-/* Windows.ApplicationModel.Contacts.ContactBatch.get_Status() */
 HRESULT wapco_contact_batch_get__status(WAPCO_ContactBatch *self, WAPCO_ContactBatchStatus *value);
 
-/* activate Windows.ApplicationModel.Contacts.ContactCardDelayedDataLoader */
 HRESULT wapco_contact_card_delayed_data_loader_new(WAPCO_ContactCardDelayedDataLoader **out);
 
-/* Windows.ApplicationModel.Contacts.ContactCardDelayedDataLoader */
-/* Windows.ApplicationModel.Contacts.ContactCardDelayedDataLoader.SetData(contact) */
 HRESULT wapco_contact_card_delayed_data_loader_set_data(WAPCO_ContactCardDelayedDataLoader *self, WAPCO_Contact* contact);
 
-/* Windows.ApplicationModel.Contacts.ContactCardDelayedDataLoader.Close() */
 HRESULT wapco_contact_card_delayed_data_loader_close(WAPCO_ContactCardDelayedDataLoader *self);
 
-/* activate Windows.ApplicationModel.Contacts.ContactCardOptions */
 HRESULT wapco_contact_card_options_new(WAPCO_ContactCardOptions **out);
 
-/* Windows.ApplicationModel.Contacts.ContactCardOptions */
-/* Windows.ApplicationModel.Contacts.ContactCardOptions.get_HeaderKind() */
 HRESULT wapco_contact_card_options_get__header_kind(WAPCO_ContactCardOptions *self, WAPCO_ContactCardHeaderKind *value);
 
-/* Windows.ApplicationModel.Contacts.ContactCardOptions.put_HeaderKind() */
 HRESULT wapco_contact_card_options_put__header_kind(WAPCO_ContactCardOptions *self, WAPCO_ContactCardHeaderKind value);
 
-/* Windows.ApplicationModel.Contacts.ContactCardOptions.get_InitialTabKind() */
 HRESULT wapco_contact_card_options_get__initial_tab_kind(WAPCO_ContactCardOptions *self, WAPCO_ContactCardTabKind *value);
 
-/* Windows.ApplicationModel.Contacts.ContactCardOptions.put_InitialTabKind() */
 HRESULT wapco_contact_card_options_put__initial_tab_kind(WAPCO_ContactCardOptions *self, WAPCO_ContactCardTabKind value);
 
-/* Windows.ApplicationModel.Contacts.ContactCardOptions.get_ServerSearchContactListIds() */
 HRESULT wapco_contact_card_options_get__server_search_contact_list_ids(WAPCO_ContactCardOptions *self, WFOCO_IVector_HSTRING** value);
 
-/* activate Windows.ApplicationModel.Contacts.ContactChange */
 HRESULT wapco_contact_change_new(WAPCO_ContactChange **out);
 
-/* Windows.ApplicationModel.Contacts.ContactChange */
-/* Windows.ApplicationModel.Contacts.ContactChange.get_ChangeType() */
 HRESULT wapco_contact_change_get__change_type(WAPCO_ContactChange *self, WAPCO_ContactChangeType *value);
 
-/* Windows.ApplicationModel.Contacts.ContactChange.get_Contact() */
 HRESULT wapco_contact_change_get__contact(WAPCO_ContactChange *self, WAPCO_Contact** value);
 
-/* activate Windows.ApplicationModel.Contacts.ContactChangeReader */
 HRESULT wapco_contact_change_reader_new(WAPCO_ContactChangeReader **out);
 
-/* Windows.ApplicationModel.Contacts.ContactChangeReader */
-/* Windows.ApplicationModel.Contacts.ContactChangeReader.AcceptChanges() */
 HRESULT wapco_contact_change_reader_accept_changes(WAPCO_ContactChangeReader *self);
 
-/* Windows.ApplicationModel.Contacts.ContactChangeReader.AcceptChangesThrough(lastChangeToAccept) */
 HRESULT wapco_contact_change_reader_accept_changes_through(WAPCO_ContactChangeReader *self, WAPCO_ContactChange* lastChangeToAccept);
 
-/* Windows.ApplicationModel.Contacts.ContactChangeReader.ReadBatchAsync() */
 HRESULT wapco_contact_change_reader_read_batch_async(WAPCO_ContactChangeReader *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPCO_ContactChange** out);
 
-/* activate Windows.ApplicationModel.Contacts.ContactChangeTracker */
 HRESULT wapco_contact_change_tracker_new(WAPCO_ContactChangeTracker **out);
 
-/* Windows.ApplicationModel.Contacts.ContactChangeTracker */
-/* Windows.ApplicationModel.Contacts.ContactChangeTracker.Enable() */
 HRESULT wapco_contact_change_tracker_enable(WAPCO_ContactChangeTracker *self);
 
-/* Windows.ApplicationModel.Contacts.ContactChangeTracker.GetChangeReader() */
 HRESULT wapco_contact_change_tracker_get_change_reader(WAPCO_ContactChangeTracker *self, WAPCO_ContactChangeReader** out);
 
-/* Windows.ApplicationModel.Contacts.ContactChangeTracker.Reset() */
 HRESULT wapco_contact_change_tracker_reset(WAPCO_ContactChangeTracker *self);
 
-/* Windows.ApplicationModel.Contacts.ContactChangeTracker.get_IsTracking() */
 HRESULT wapco_contact_change_tracker_get__is_tracking(WAPCO_ContactChangeTracker *self, BOOL *value);
 
-/* activate Windows.ApplicationModel.Contacts.ContactChangedDeferral */
 HRESULT wapco_contact_changed_deferral_new(WAPCO_ContactChangedDeferral **out);
 
-/* Windows.ApplicationModel.Contacts.ContactChangedDeferral */
-/* Windows.ApplicationModel.Contacts.ContactChangedDeferral.Complete() */
 HRESULT wapco_contact_changed_deferral_complete(WAPCO_ContactChangedDeferral *self);
 
-/* activate Windows.ApplicationModel.Contacts.ContactChangedEventArgs */
 HRESULT wapco_contact_changed_event_args_new(WAPCO_ContactChangedEventArgs **out);
 
-/* Windows.ApplicationModel.Contacts.ContactChangedEventArgs */
-/* Windows.ApplicationModel.Contacts.ContactChangedEventArgs.GetDeferral() */
 HRESULT wapco_contact_changed_event_args_get_deferral(WAPCO_ContactChangedEventArgs *self, WAPCO_ContactChangedDeferral** out);
 
-/* activate Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount */
 HRESULT wapco_contact_connected_service_account_new(WAPCO_ContactConnectedServiceAccount **out);
 
-/* Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount */
-/* Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount.get_Id() */
 HRESULT wapco_contact_connected_service_account_get__id(WAPCO_ContactConnectedServiceAccount *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount.put_Id() */
 HRESULT wapco_contact_connected_service_account_put__id(WAPCO_ContactConnectedServiceAccount *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount.get_ServiceName() */
 HRESULT wapco_contact_connected_service_account_get__service_name(WAPCO_ContactConnectedServiceAccount *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount.put_ServiceName() */
 HRESULT wapco_contact_connected_service_account_put__service_name(WAPCO_ContactConnectedServiceAccount *self, cwinrt_hstring value);
 
-/* activate Windows.ApplicationModel.Contacts.ContactDate */
 HRESULT wapco_contact_date_new(WAPCO_ContactDate **out);
 
-/* Windows.ApplicationModel.Contacts.ContactDate */
-/* Windows.ApplicationModel.Contacts.ContactDate.get_Day() */
 HRESULT wapco_contact_date_get__day(WAPCO_ContactDate *self, uint32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactDate.put_Day() */
 HRESULT wapco_contact_date_put__day(WAPCO_ContactDate *self, uint32_t* value);
 
-/* Windows.ApplicationModel.Contacts.ContactDate.get_Month() */
 HRESULT wapco_contact_date_get__month(WAPCO_ContactDate *self, uint32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactDate.put_Month() */
 HRESULT wapco_contact_date_put__month(WAPCO_ContactDate *self, uint32_t* value);
 
-/* Windows.ApplicationModel.Contacts.ContactDate.get_Year() */
 HRESULT wapco_contact_date_get__year(WAPCO_ContactDate *self, int32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactDate.put_Year() */
 HRESULT wapco_contact_date_put__year(WAPCO_ContactDate *self, int32_t* value);
 
-/* Windows.ApplicationModel.Contacts.ContactDate.get_Kind() */
 HRESULT wapco_contact_date_get__kind(WAPCO_ContactDate *self, WAPCO_ContactDateKind *value);
 
-/* Windows.ApplicationModel.Contacts.ContactDate.put_Kind() */
 HRESULT wapco_contact_date_put__kind(WAPCO_ContactDate *self, WAPCO_ContactDateKind value);
 
-/* Windows.ApplicationModel.Contacts.ContactDate.get_Description() */
 HRESULT wapco_contact_date_get__description(WAPCO_ContactDate *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactDate.put_Description() */
 HRESULT wapco_contact_date_put__description(WAPCO_ContactDate *self, cwinrt_hstring value);
 
-/* activate Windows.ApplicationModel.Contacts.ContactEmail */
 HRESULT wapco_contact_email_new(WAPCO_ContactEmail **out);
 
-/* Windows.ApplicationModel.Contacts.ContactEmail */
-/* Windows.ApplicationModel.Contacts.ContactEmail.get_Address() */
 HRESULT wapco_contact_email_get__address(WAPCO_ContactEmail *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactEmail.put_Address() */
 HRESULT wapco_contact_email_put__address(WAPCO_ContactEmail *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.ContactEmail.get_Kind() */
 HRESULT wapco_contact_email_get__kind(WAPCO_ContactEmail *self, WAPCO_ContactEmailKind *value);
 
-/* Windows.ApplicationModel.Contacts.ContactEmail.put_Kind() */
 HRESULT wapco_contact_email_put__kind(WAPCO_ContactEmail *self, WAPCO_ContactEmailKind value);
 
-/* Windows.ApplicationModel.Contacts.ContactEmail.get_Description() */
 HRESULT wapco_contact_email_get__description(WAPCO_ContactEmail *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactEmail.put_Description() */
 HRESULT wapco_contact_email_put__description(WAPCO_ContactEmail *self, cwinrt_hstring value);
 
-/* activate Windows.ApplicationModel.Contacts.ContactField */
 HRESULT wapco_contact_field_new(WAPCO_ContactField **out);
 
-/* Windows.ApplicationModel.Contacts.ContactField */
-/* Windows.ApplicationModel.Contacts.ContactField.get_Type() */
 HRESULT wapco_contact_field_get__type(WAPCO_ContactField *self, WAPCO_ContactFieldType *value);
 
-/* Windows.ApplicationModel.Contacts.ContactField.get_Category() */
 HRESULT wapco_contact_field_get__category(WAPCO_ContactField *self, WAPCO_ContactFieldCategory *value);
 
-/* Windows.ApplicationModel.Contacts.ContactField.get_Name() */
 HRESULT wapco_contact_field_get__name(WAPCO_ContactField *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactField.get_Value() */
 HRESULT wapco_contact_field_get__value(WAPCO_ContactField *self, cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.Contacts.ContactFieldFactory */
 HRESULT wapco_contact_field_factory_new(WAPCO_ContactFieldFactory **out);
 
-/* Windows.ApplicationModel.Contacts.ContactFieldFactory */
-/* Windows.ApplicationModel.Contacts.ContactFieldFactory.CreateField() */
 HRESULT wapco_contact_field_factory_create_field(WAPCO_ContactFieldFactory *self, cwinrt_hstring value, WAPCO_ContactFieldType type_, WAPCO_ContactField** out);
 
-/* Windows.ApplicationModel.Contacts.ContactFieldFactory.CreateField(category) */
 HRESULT wapco_contact_field_factory_create_field_str_contact_field_type_contact_field_3472cea9(WAPCO_ContactFieldFactory *self, cwinrt_hstring value, WAPCO_ContactFieldType type_, WAPCO_ContactFieldCategory category, WAPCO_ContactField** out);
 
-/* Windows.ApplicationModel.Contacts.ContactFieldFactory.CreateField(name, category) */
 HRESULT wapco_contact_field_factory_create_field_str_str_contact_field_type_contact_f_fc211d11(WAPCO_ContactFieldFactory *self, cwinrt_hstring name, cwinrt_hstring value, WAPCO_ContactFieldType type_, WAPCO_ContactFieldCategory category, WAPCO_ContactField** out);
 
-/* Windows.ApplicationModel.Contacts.ContactFieldFactory.CreateLocation(unstructuredAddress) */
 HRESULT wapco_contact_field_factory_create_location(WAPCO_ContactFieldFactory *self, cwinrt_hstring unstructuredAddress, WAPCO_ContactLocationField** out);
 
-/* Windows.ApplicationModel.Contacts.ContactFieldFactory.CreateLocation(unstructuredAddress, category) */
 HRESULT wapco_contact_field_factory_create_location_str_contact_field_category_p(WAPCO_ContactFieldFactory *self, cwinrt_hstring unstructuredAddress, WAPCO_ContactFieldCategory category, WAPCO_ContactLocationField** out);
 
-/* Windows.ApplicationModel.Contacts.ContactFieldFactory.CreateLocation(unstructuredAddress, category, street, city, region, country, postalCode) */
 HRESULT wapco_contact_field_factory_create_location_str_contact_field_category_str_str_s_b673ce9a(WAPCO_ContactFieldFactory *self, cwinrt_hstring unstructuredAddress, WAPCO_ContactFieldCategory category, cwinrt_hstring street, cwinrt_hstring city, cwinrt_hstring region, cwinrt_hstring country, cwinrt_hstring postalCode, WAPCO_ContactLocationField** out);
 
-/* Windows.ApplicationModel.Contacts.ContactFieldFactory.CreateInstantMessage(userName) */
 HRESULT wapco_contact_field_factory_create_instant_message(WAPCO_ContactFieldFactory *self, cwinrt_hstring userName, WAPCO_ContactInstantMessageField** out);
 
-/* Windows.ApplicationModel.Contacts.ContactFieldFactory.CreateInstantMessage(userName, category) */
 HRESULT wapco_contact_field_factory_create_instant_message_str_contact_field_category_p(WAPCO_ContactFieldFactory *self, cwinrt_hstring userName, WAPCO_ContactFieldCategory category, WAPCO_ContactInstantMessageField** out);
 
-/* Windows.ApplicationModel.Contacts.ContactFieldFactory.CreateInstantMessage(userName, category, service, displayText, verb) */
 HRESULT wapco_contact_field_factory_create_instant_message_str_contact_field_category_str_str_p_p(WAPCO_ContactFieldFactory *self, cwinrt_hstring userName, WAPCO_ContactFieldCategory category, cwinrt_hstring service, cwinrt_hstring displayText, WF_Uri* verb, WAPCO_ContactInstantMessageField** out);
 
-/* activate Windows.ApplicationModel.Contacts.ContactInformation */
 HRESULT wapco_contact_information_new(WAPCO_ContactInformation **out);
 
-/* Windows.ApplicationModel.Contacts.ContactInformation */
-/* Windows.ApplicationModel.Contacts.ContactInformation.get_Name() */
 HRESULT wapco_contact_information_get__name(WAPCO_ContactInformation *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactInformation.GetThumbnailAsync() */
 HRESULT wapco_contact_information_get_thumbnail_async(WAPCO_ContactInformation *self, WF_IAsyncOperation_WSTST_IRandomAccessStreamWithContentType** out);
 
-/* Windows.ApplicationModel.Contacts.ContactInformation.get_Emails() */
 HRESULT wapco_contact_information_get__emails(WAPCO_ContactInformation *self, WFOCO_IVectorView_WAPCO_ContactField** value);
 
-/* Windows.ApplicationModel.Contacts.ContactInformation.get_PhoneNumbers() */
 HRESULT wapco_contact_information_get__phone_numbers(WAPCO_ContactInformation *self, WFOCO_IVectorView_WAPCO_ContactField** value);
 
-/* Windows.ApplicationModel.Contacts.ContactInformation.get_Locations() */
 HRESULT wapco_contact_information_get__locations(WAPCO_ContactInformation *self, WFOCO_IVectorView_WAPCO_ContactLocationField** value);
 
-/* Windows.ApplicationModel.Contacts.ContactInformation.get_InstantMessages() */
 HRESULT wapco_contact_information_get__instant_messages(WAPCO_ContactInformation *self, WFOCO_IVectorView_WAPCO_ContactInstantMessageField** value);
 
-/* Windows.ApplicationModel.Contacts.ContactInformation.get_CustomFields() */
 HRESULT wapco_contact_information_get__custom_fields(WAPCO_ContactInformation *self, WFOCO_IVectorView_WAPCO_ContactField** value);
 
-/* Windows.ApplicationModel.Contacts.ContactInformation.QueryCustomFields(customName) */
 HRESULT wapco_contact_information_query_custom_fields(WAPCO_ContactInformation *self, cwinrt_hstring customName, WFOCO_IVectorView_WAPCO_ContactField** out);
 
-/* activate Windows.ApplicationModel.Contacts.ContactInstantMessageField */
 HRESULT wapco_contact_instant_message_field_new(WAPCO_ContactInstantMessageField **out);
 
-/* Windows.ApplicationModel.Contacts.ContactInstantMessageField */
-/* Windows.ApplicationModel.Contacts.ContactInstantMessageField.get_UserName() */
 HRESULT wapco_contact_instant_message_field_get__user_name(WAPCO_ContactInstantMessageField *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactInstantMessageField.get_Service() */
 HRESULT wapco_contact_instant_message_field_get__service(WAPCO_ContactInstantMessageField *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactInstantMessageField.get_DisplayText() */
 HRESULT wapco_contact_instant_message_field_get__display_text(WAPCO_ContactInstantMessageField *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactInstantMessageField.get_LaunchUri() */
 HRESULT wapco_contact_instant_message_field_get__launch_uri(WAPCO_ContactInstantMessageField *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.Contacts.ContactInstantMessageField.get_Type() */
 HRESULT wapco_contact_instant_message_field_get__type(WAPCO_ContactInstantMessageField *self, WAPCO_ContactFieldType *value);
 
-/* Windows.ApplicationModel.Contacts.ContactInstantMessageField.get_Category() */
 HRESULT wapco_contact_instant_message_field_get__category(WAPCO_ContactInstantMessageField *self, WAPCO_ContactFieldCategory *value);
 
-/* Windows.ApplicationModel.Contacts.ContactInstantMessageField.get_Name() */
 HRESULT wapco_contact_instant_message_field_get__name(WAPCO_ContactInstantMessageField *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactInstantMessageField.get_Value() */
 HRESULT wapco_contact_instant_message_field_get__value(WAPCO_ContactInstantMessageField *self, cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.Contacts.ContactJobInfo */
 HRESULT wapco_contact_job_info_new(WAPCO_ContactJobInfo **out);
 
-/* Windows.ApplicationModel.Contacts.ContactJobInfo */
-/* Windows.ApplicationModel.Contacts.ContactJobInfo.get_CompanyName() */
 HRESULT wapco_contact_job_info_get__company_name(WAPCO_ContactJobInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactJobInfo.put_CompanyName() */
 HRESULT wapco_contact_job_info_put__company_name(WAPCO_ContactJobInfo *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.ContactJobInfo.get_CompanyYomiName() */
 HRESULT wapco_contact_job_info_get__company_yomi_name(WAPCO_ContactJobInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactJobInfo.put_CompanyYomiName() */
 HRESULT wapco_contact_job_info_put__company_yomi_name(WAPCO_ContactJobInfo *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.ContactJobInfo.get_Department() */
 HRESULT wapco_contact_job_info_get__department(WAPCO_ContactJobInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactJobInfo.put_Department() */
 HRESULT wapco_contact_job_info_put__department(WAPCO_ContactJobInfo *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.ContactJobInfo.get_Title() */
 HRESULT wapco_contact_job_info_get__title(WAPCO_ContactJobInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactJobInfo.put_Title() */
 HRESULT wapco_contact_job_info_put__title(WAPCO_ContactJobInfo *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.ContactJobInfo.get_Manager() */
 HRESULT wapco_contact_job_info_get__manager(WAPCO_ContactJobInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactJobInfo.put_Manager() */
 HRESULT wapco_contact_job_info_put__manager(WAPCO_ContactJobInfo *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.ContactJobInfo.get_Office() */
 HRESULT wapco_contact_job_info_get__office(WAPCO_ContactJobInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactJobInfo.put_Office() */
 HRESULT wapco_contact_job_info_put__office(WAPCO_ContactJobInfo *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.ContactJobInfo.get_CompanyAddress() */
 HRESULT wapco_contact_job_info_get__company_address(WAPCO_ContactJobInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactJobInfo.put_CompanyAddress() */
 HRESULT wapco_contact_job_info_put__company_address(WAPCO_ContactJobInfo *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.ContactJobInfo.get_Description() */
 HRESULT wapco_contact_job_info_get__description(WAPCO_ContactJobInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactJobInfo.put_Description() */
 HRESULT wapco_contact_job_info_put__description(WAPCO_ContactJobInfo *self, cwinrt_hstring value);
 
-/* activate Windows.ApplicationModel.Contacts.ContactLaunchActionVerbs */
 HRESULT wapco_contact_launch_action_verbs_new(WAPCO_ContactLaunchActionVerbs **out);
 
-/* Windows.ApplicationModel.Contacts.ContactLaunchActionVerbs */
-/* Windows.ApplicationModel.Contacts.ContactLaunchActionVerbs.get_Call() */
 HRESULT wapco_contact_launch_action_verbs_get__call(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactLaunchActionVerbs.get_Message() */
 HRESULT wapco_contact_launch_action_verbs_get__message(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactLaunchActionVerbs.get_Map() */
 HRESULT wapco_contact_launch_action_verbs_get__map(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactLaunchActionVerbs.get_Post() */
 HRESULT wapco_contact_launch_action_verbs_get__post(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactLaunchActionVerbs.get_VideoCall() */
 HRESULT wapco_contact_launch_action_verbs_get__video_call(cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.Contacts.ContactList */
 HRESULT wapco_contact_list_new(WAPCO_ContactList **out);
 
-/* Windows.ApplicationModel.Contacts.ContactList */
-/* Windows.ApplicationModel.Contacts.ContactList.get_Id() */
 HRESULT wapco_contact_list_get__id(WAPCO_ContactList *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactList.get_DisplayName() */
 HRESULT wapco_contact_list_get__display_name(WAPCO_ContactList *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactList.put_DisplayName() */
 HRESULT wapco_contact_list_put__display_name(WAPCO_ContactList *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.ContactList.get_SourceDisplayName() */
 HRESULT wapco_contact_list_get__source_display_name(WAPCO_ContactList *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactList.get_IsHidden() */
 HRESULT wapco_contact_list_get__is_hidden(WAPCO_ContactList *self, BOOL *value);
 
-/* Windows.ApplicationModel.Contacts.ContactList.put_IsHidden() */
 HRESULT wapco_contact_list_put__is_hidden(WAPCO_ContactList *self, BOOL value);
 
-/* Windows.ApplicationModel.Contacts.ContactList.get_OtherAppReadAccess() */
 HRESULT wapco_contact_list_get__other_app_read_access(WAPCO_ContactList *self, WAPCO_ContactListOtherAppReadAccess *value);
 
-/* Windows.ApplicationModel.Contacts.ContactList.put_OtherAppReadAccess() */
 HRESULT wapco_contact_list_put__other_app_read_access(WAPCO_ContactList *self, WAPCO_ContactListOtherAppReadAccess value);
 
-/* Windows.ApplicationModel.Contacts.ContactList.get_OtherAppWriteAccess() */
 HRESULT wapco_contact_list_get__other_app_write_access(WAPCO_ContactList *self, WAPCO_ContactListOtherAppWriteAccess *value);
 
-/* Windows.ApplicationModel.Contacts.ContactList.put_OtherAppWriteAccess() */
 HRESULT wapco_contact_list_put__other_app_write_access(WAPCO_ContactList *self, WAPCO_ContactListOtherAppWriteAccess value);
 
-/* Windows.ApplicationModel.Contacts.ContactList.get_ChangeTracker() */
 HRESULT wapco_contact_list_get__change_tracker(WAPCO_ContactList *self, WAPCO_ContactChangeTracker** value);
 
-/* Windows.ApplicationModel.Contacts.ContactList.get_SyncManager() */
 HRESULT wapco_contact_list_get__sync_manager(WAPCO_ContactList *self, WAPCO_ContactListSyncManager** value);
 
-/* Windows.ApplicationModel.Contacts.ContactList.get_SupportsServerSearch() */
 HRESULT wapco_contact_list_get__supports_server_search(WAPCO_ContactList *self, BOOL *value);
 
-/* Windows.ApplicationModel.Contacts.ContactList.get_UserDataAccountId() */
 HRESULT wapco_contact_list_get__user_data_account_id(WAPCO_ContactList *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactList.SaveAsync() */
 HRESULT wapco_contact_list_save_async(WAPCO_ContactList *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Contacts.ContactList.DeleteAsync() */
 HRESULT wapco_contact_list_delete_async(WAPCO_ContactList *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Contacts.ContactList.GetContactFromRemoteIdAsync(remoteId) */
 HRESULT wapco_contact_list_get_contact_from_remote_id_async(WAPCO_ContactList *self, cwinrt_hstring remoteId, WF_IAsyncOperation_WAPCO_Contact** out);
 
-/* Windows.ApplicationModel.Contacts.ContactList.GetMeContactAsync() */
 HRESULT wapco_contact_list_get_me_contact_async(WAPCO_ContactList *self, WF_IAsyncOperation_WAPCO_Contact** out);
 
-/* Windows.ApplicationModel.Contacts.ContactList.GetContactReader() */
 HRESULT wapco_contact_list_get_contact_reader(WAPCO_ContactList *self, WAPCO_ContactReader** out);
 
-/* Windows.ApplicationModel.Contacts.ContactList.GetContactReader(options) */
 HRESULT wapco_contact_list_get_contact_reader_p_p(WAPCO_ContactList *self, WAPCO_ContactQueryOptions* options, WAPCO_ContactReader** out);
 
-/* Windows.ApplicationModel.Contacts.ContactList.SaveContactAsync(contact) */
 HRESULT wapco_contact_list_save_contact_async(WAPCO_ContactList *self, WAPCO_Contact* contact, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Contacts.ContactList.DeleteContactAsync(contact) */
 HRESULT wapco_contact_list_delete_contact_async(WAPCO_ContactList *self, WAPCO_Contact* contact, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Contacts.ContactList.GetContactAsync(contactId) */
 HRESULT wapco_contact_list_get_contact_async(WAPCO_ContactList *self, cwinrt_hstring contactId, WF_IAsyncOperation_WAPCO_Contact** out);
 
-/* Windows.ApplicationModel.Contacts.ContactList.RegisterSyncManagerAsync() */
 HRESULT wapco_contact_list_register_sync_manager_async(WAPCO_ContactList *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Contacts.ContactList.put_SupportsServerSearch() */
 HRESULT wapco_contact_list_put__supports_server_search(WAPCO_ContactList *self, BOOL value);
 
-/* Windows.ApplicationModel.Contacts.ContactList.get_SyncConstraints() */
 HRESULT wapco_contact_list_get__sync_constraints(WAPCO_ContactList *self, WAPCO_ContactListSyncConstraints** value);
 
-/* Windows.ApplicationModel.Contacts.ContactList.get_LimitedWriteOperations() */
 HRESULT wapco_contact_list_get__limited_write_operations(WAPCO_ContactList *self, WAPCO_ContactListLimitedWriteOperations** value);
 
-/* Windows.ApplicationModel.Contacts.ContactList.GetChangeTracker(identity) */
 HRESULT wapco_contact_list_get_change_tracker(WAPCO_ContactList *self, cwinrt_hstring identity, WAPCO_ContactChangeTracker** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapco_contact_list_on_contact_changed(WAPCO_ContactList *self, cwinrt_event_fn fn, void *ctx);
 void wapco_contact_list_off_contact_changed(WAPCO_ContactList *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Contacts.ContactListLimitedWriteOperations */
 HRESULT wapco_contact_list_limited_write_operations_new(WAPCO_ContactListLimitedWriteOperations **out);
 
-/* Windows.ApplicationModel.Contacts.ContactListLimitedWriteOperations */
-/* Windows.ApplicationModel.Contacts.ContactListLimitedWriteOperations.TryCreateOrUpdateContactAsync(contact) */
 HRESULT wapco_contact_list_limited_write_operations_try_create_or_update_contact_async(WAPCO_ContactListLimitedWriteOperations *self, WAPCO_Contact* contact, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Contacts.ContactListLimitedWriteOperations.TryDeleteContactAsync(contactId) */
 HRESULT wapco_contact_list_limited_write_operations_try_delete_contact_async(WAPCO_ContactListLimitedWriteOperations *self, cwinrt_hstring contactId, WF_IAsyncOperation_Bool** out);
 
-/* activate Windows.ApplicationModel.Contacts.ContactListSyncConstraints */
 HRESULT wapco_contact_list_sync_constraints_new(WAPCO_ContactListSyncConstraints **out);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints */
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.get_CanSyncDescriptions() */
 HRESULT wapco_contact_list_sync_constraints_get__can_sync_descriptions(WAPCO_ContactListSyncConstraints *self, BOOL *value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.put_CanSyncDescriptions() */
 HRESULT wapco_contact_list_sync_constraints_put__can_sync_descriptions(WAPCO_ContactListSyncConstraints *self, BOOL value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.get_MaxHomePhoneNumbers() */
 HRESULT wapco_contact_list_sync_constraints_get__max_home_phone_numbers(WAPCO_ContactListSyncConstraints *self, int32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.put_MaxHomePhoneNumbers() */
 HRESULT wapco_contact_list_sync_constraints_put__max_home_phone_numbers(WAPCO_ContactListSyncConstraints *self, int32_t* value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.get_MaxMobilePhoneNumbers() */
 HRESULT wapco_contact_list_sync_constraints_get__max_mobile_phone_numbers(WAPCO_ContactListSyncConstraints *self, int32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.put_MaxMobilePhoneNumbers() */
 HRESULT wapco_contact_list_sync_constraints_put__max_mobile_phone_numbers(WAPCO_ContactListSyncConstraints *self, int32_t* value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.get_MaxWorkPhoneNumbers() */
 HRESULT wapco_contact_list_sync_constraints_get__max_work_phone_numbers(WAPCO_ContactListSyncConstraints *self, int32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.put_MaxWorkPhoneNumbers() */
 HRESULT wapco_contact_list_sync_constraints_put__max_work_phone_numbers(WAPCO_ContactListSyncConstraints *self, int32_t* value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.get_MaxOtherPhoneNumbers() */
 HRESULT wapco_contact_list_sync_constraints_get__max_other_phone_numbers(WAPCO_ContactListSyncConstraints *self, int32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.put_MaxOtherPhoneNumbers() */
 HRESULT wapco_contact_list_sync_constraints_put__max_other_phone_numbers(WAPCO_ContactListSyncConstraints *self, int32_t* value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.get_MaxPagerPhoneNumbers() */
 HRESULT wapco_contact_list_sync_constraints_get__max_pager_phone_numbers(WAPCO_ContactListSyncConstraints *self, int32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.put_MaxPagerPhoneNumbers() */
 HRESULT wapco_contact_list_sync_constraints_put__max_pager_phone_numbers(WAPCO_ContactListSyncConstraints *self, int32_t* value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.get_MaxBusinessFaxPhoneNumbers() */
 HRESULT wapco_contact_list_sync_constraints_get__max_business_fax_phone_numbers(WAPCO_ContactListSyncConstraints *self, int32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.put_MaxBusinessFaxPhoneNumbers() */
 HRESULT wapco_contact_list_sync_constraints_put__max_business_fax_phone_numbers(WAPCO_ContactListSyncConstraints *self, int32_t* value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.get_MaxHomeFaxPhoneNumbers() */
 HRESULT wapco_contact_list_sync_constraints_get__max_home_fax_phone_numbers(WAPCO_ContactListSyncConstraints *self, int32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.put_MaxHomeFaxPhoneNumbers() */
 HRESULT wapco_contact_list_sync_constraints_put__max_home_fax_phone_numbers(WAPCO_ContactListSyncConstraints *self, int32_t* value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.get_MaxCompanyPhoneNumbers() */
 HRESULT wapco_contact_list_sync_constraints_get__max_company_phone_numbers(WAPCO_ContactListSyncConstraints *self, int32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.put_MaxCompanyPhoneNumbers() */
 HRESULT wapco_contact_list_sync_constraints_put__max_company_phone_numbers(WAPCO_ContactListSyncConstraints *self, int32_t* value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.get_MaxAssistantPhoneNumbers() */
 HRESULT wapco_contact_list_sync_constraints_get__max_assistant_phone_numbers(WAPCO_ContactListSyncConstraints *self, int32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.put_MaxAssistantPhoneNumbers() */
 HRESULT wapco_contact_list_sync_constraints_put__max_assistant_phone_numbers(WAPCO_ContactListSyncConstraints *self, int32_t* value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.get_MaxRadioPhoneNumbers() */
 HRESULT wapco_contact_list_sync_constraints_get__max_radio_phone_numbers(WAPCO_ContactListSyncConstraints *self, int32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.put_MaxRadioPhoneNumbers() */
 HRESULT wapco_contact_list_sync_constraints_put__max_radio_phone_numbers(WAPCO_ContactListSyncConstraints *self, int32_t* value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.get_MaxPersonalEmailAddresses() */
 HRESULT wapco_contact_list_sync_constraints_get__max_personal_email_addresses(WAPCO_ContactListSyncConstraints *self, int32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.put_MaxPersonalEmailAddresses() */
 HRESULT wapco_contact_list_sync_constraints_put__max_personal_email_addresses(WAPCO_ContactListSyncConstraints *self, int32_t* value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.get_MaxWorkEmailAddresses() */
 HRESULT wapco_contact_list_sync_constraints_get__max_work_email_addresses(WAPCO_ContactListSyncConstraints *self, int32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.put_MaxWorkEmailAddresses() */
 HRESULT wapco_contact_list_sync_constraints_put__max_work_email_addresses(WAPCO_ContactListSyncConstraints *self, int32_t* value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.get_MaxOtherEmailAddresses() */
 HRESULT wapco_contact_list_sync_constraints_get__max_other_email_addresses(WAPCO_ContactListSyncConstraints *self, int32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.put_MaxOtherEmailAddresses() */
 HRESULT wapco_contact_list_sync_constraints_put__max_other_email_addresses(WAPCO_ContactListSyncConstraints *self, int32_t* value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.get_MaxHomeAddresses() */
 HRESULT wapco_contact_list_sync_constraints_get__max_home_addresses(WAPCO_ContactListSyncConstraints *self, int32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.put_MaxHomeAddresses() */
 HRESULT wapco_contact_list_sync_constraints_put__max_home_addresses(WAPCO_ContactListSyncConstraints *self, int32_t* value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.get_MaxWorkAddresses() */
 HRESULT wapco_contact_list_sync_constraints_get__max_work_addresses(WAPCO_ContactListSyncConstraints *self, int32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.put_MaxWorkAddresses() */
 HRESULT wapco_contact_list_sync_constraints_put__max_work_addresses(WAPCO_ContactListSyncConstraints *self, int32_t* value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.get_MaxOtherAddresses() */
 HRESULT wapco_contact_list_sync_constraints_get__max_other_addresses(WAPCO_ContactListSyncConstraints *self, int32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.put_MaxOtherAddresses() */
 HRESULT wapco_contact_list_sync_constraints_put__max_other_addresses(WAPCO_ContactListSyncConstraints *self, int32_t* value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.get_MaxBirthdayDates() */
 HRESULT wapco_contact_list_sync_constraints_get__max_birthday_dates(WAPCO_ContactListSyncConstraints *self, int32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.put_MaxBirthdayDates() */
 HRESULT wapco_contact_list_sync_constraints_put__max_birthday_dates(WAPCO_ContactListSyncConstraints *self, int32_t* value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.get_MaxAnniversaryDates() */
 HRESULT wapco_contact_list_sync_constraints_get__max_anniversary_dates(WAPCO_ContactListSyncConstraints *self, int32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.put_MaxAnniversaryDates() */
 HRESULT wapco_contact_list_sync_constraints_put__max_anniversary_dates(WAPCO_ContactListSyncConstraints *self, int32_t* value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.get_MaxOtherDates() */
 HRESULT wapco_contact_list_sync_constraints_get__max_other_dates(WAPCO_ContactListSyncConstraints *self, int32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.put_MaxOtherDates() */
 HRESULT wapco_contact_list_sync_constraints_put__max_other_dates(WAPCO_ContactListSyncConstraints *self, int32_t* value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.get_MaxOtherRelationships() */
 HRESULT wapco_contact_list_sync_constraints_get__max_other_relationships(WAPCO_ContactListSyncConstraints *self, int32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.put_MaxOtherRelationships() */
 HRESULT wapco_contact_list_sync_constraints_put__max_other_relationships(WAPCO_ContactListSyncConstraints *self, int32_t* value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.get_MaxSpouseRelationships() */
 HRESULT wapco_contact_list_sync_constraints_get__max_spouse_relationships(WAPCO_ContactListSyncConstraints *self, int32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.put_MaxSpouseRelationships() */
 HRESULT wapco_contact_list_sync_constraints_put__max_spouse_relationships(WAPCO_ContactListSyncConstraints *self, int32_t* value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.get_MaxPartnerRelationships() */
 HRESULT wapco_contact_list_sync_constraints_get__max_partner_relationships(WAPCO_ContactListSyncConstraints *self, int32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.put_MaxPartnerRelationships() */
 HRESULT wapco_contact_list_sync_constraints_put__max_partner_relationships(WAPCO_ContactListSyncConstraints *self, int32_t* value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.get_MaxSiblingRelationships() */
 HRESULT wapco_contact_list_sync_constraints_get__max_sibling_relationships(WAPCO_ContactListSyncConstraints *self, int32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.put_MaxSiblingRelationships() */
 HRESULT wapco_contact_list_sync_constraints_put__max_sibling_relationships(WAPCO_ContactListSyncConstraints *self, int32_t* value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.get_MaxParentRelationships() */
 HRESULT wapco_contact_list_sync_constraints_get__max_parent_relationships(WAPCO_ContactListSyncConstraints *self, int32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.put_MaxParentRelationships() */
 HRESULT wapco_contact_list_sync_constraints_put__max_parent_relationships(WAPCO_ContactListSyncConstraints *self, int32_t* value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.get_MaxChildRelationships() */
 HRESULT wapco_contact_list_sync_constraints_get__max_child_relationships(WAPCO_ContactListSyncConstraints *self, int32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.put_MaxChildRelationships() */
 HRESULT wapco_contact_list_sync_constraints_put__max_child_relationships(WAPCO_ContactListSyncConstraints *self, int32_t* value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.get_MaxJobInfo() */
 HRESULT wapco_contact_list_sync_constraints_get__max_job_info(WAPCO_ContactListSyncConstraints *self, int32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.put_MaxJobInfo() */
 HRESULT wapco_contact_list_sync_constraints_put__max_job_info(WAPCO_ContactListSyncConstraints *self, int32_t* value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.get_MaxWebsites() */
 HRESULT wapco_contact_list_sync_constraints_get__max_websites(WAPCO_ContactListSyncConstraints *self, int32_t** value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncConstraints.put_MaxWebsites() */
 HRESULT wapco_contact_list_sync_constraints_put__max_websites(WAPCO_ContactListSyncConstraints *self, int32_t* value);
 
-/* activate Windows.ApplicationModel.Contacts.ContactListSyncManager */
 HRESULT wapco_contact_list_sync_manager_new(WAPCO_ContactListSyncManager **out);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncManager */
-/* Windows.ApplicationModel.Contacts.ContactListSyncManager.get_Status() */
 HRESULT wapco_contact_list_sync_manager_get__status(WAPCO_ContactListSyncManager *self, WAPCO_ContactListSyncStatus *value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncManager.get_LastSuccessfulSyncTime() */
 HRESULT wapco_contact_list_sync_manager_get__last_successful_sync_time(WAPCO_ContactListSyncManager *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncManager.get_LastAttemptedSyncTime() */
 HRESULT wapco_contact_list_sync_manager_get__last_attempted_sync_time(WAPCO_ContactListSyncManager *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncManager.SyncAsync() */
 HRESULT wapco_contact_list_sync_manager_sync_async(WAPCO_ContactListSyncManager *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncManager.put_Status() */
 HRESULT wapco_contact_list_sync_manager_put__status(WAPCO_ContactListSyncManager *self, WAPCO_ContactListSyncStatus value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncManager.put_LastSuccessfulSyncTime() */
 HRESULT wapco_contact_list_sync_manager_put__last_successful_sync_time(WAPCO_ContactListSyncManager *self, WF_DateTime value);
 
-/* Windows.ApplicationModel.Contacts.ContactListSyncManager.put_LastAttemptedSyncTime() */
 HRESULT wapco_contact_list_sync_manager_put__last_attempted_sync_time(WAPCO_ContactListSyncManager *self, WF_DateTime value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapco_contact_list_sync_manager_on_sync_status_changed(WAPCO_ContactListSyncManager *self, cwinrt_event_fn fn, void *ctx);
 void wapco_contact_list_sync_manager_off_sync_status_changed(WAPCO_ContactListSyncManager *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Contacts.ContactLocationField */
 HRESULT wapco_contact_location_field_new(WAPCO_ContactLocationField **out);
 
-/* Windows.ApplicationModel.Contacts.ContactLocationField */
-/* Windows.ApplicationModel.Contacts.ContactLocationField.get_UnstructuredAddress() */
 HRESULT wapco_contact_location_field_get__unstructured_address(WAPCO_ContactLocationField *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactLocationField.get_Street() */
 HRESULT wapco_contact_location_field_get__street(WAPCO_ContactLocationField *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactLocationField.get_City() */
 HRESULT wapco_contact_location_field_get__city(WAPCO_ContactLocationField *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactLocationField.get_Region() */
 HRESULT wapco_contact_location_field_get__region(WAPCO_ContactLocationField *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactLocationField.get_Country() */
 HRESULT wapco_contact_location_field_get__country(WAPCO_ContactLocationField *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactLocationField.get_PostalCode() */
 HRESULT wapco_contact_location_field_get__postal_code(WAPCO_ContactLocationField *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactLocationField.get_Type() */
 HRESULT wapco_contact_location_field_get__type(WAPCO_ContactLocationField *self, WAPCO_ContactFieldType *value);
 
-/* Windows.ApplicationModel.Contacts.ContactLocationField.get_Category() */
 HRESULT wapco_contact_location_field_get__category(WAPCO_ContactLocationField *self, WAPCO_ContactFieldCategory *value);
 
-/* Windows.ApplicationModel.Contacts.ContactLocationField.get_Name() */
 HRESULT wapco_contact_location_field_get__name(WAPCO_ContactLocationField *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactLocationField.get_Value() */
 HRESULT wapco_contact_location_field_get__value(WAPCO_ContactLocationField *self, cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.Contacts.ContactManager */
 HRESULT wapco_contact_manager_new(WAPCO_ContactManager **out);
 
-/* Windows.ApplicationModel.Contacts.ContactManager */
-/* Windows.ApplicationModel.Contacts.ContactManager.IsShowFullContactCardSupportedAsync() */
 HRESULT wapco_contact_manager_is_show_full_contact_card_supported_async(WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Contacts.ContactManager.get_IncludeMiddleNameInSystemDisplayAndSort() */
 HRESULT wapco_contact_manager_get__include_middle_name_in_system_display_and_sort(BOOL *value);
 
-/* Windows.ApplicationModel.Contacts.ContactManager.put_IncludeMiddleNameInSystemDisplayAndSort() */
 HRESULT wapco_contact_manager_put__include_middle_name_in_system_display_and_sort(BOOL value);
 
-/* Windows.ApplicationModel.Contacts.ContactManager.GetForUser(user) */
 HRESULT wapco_contact_manager_get_for_user(WSY_User* user, WAPCO_ContactManagerForUser** out);
 
-/* Windows.ApplicationModel.Contacts.ContactManager.ConvertContactToVCardAsync(contact) */
 HRESULT wapco_contact_manager_convert_contact_to_v_card_async(WAPCO_Contact* contact, WF_IAsyncOperation_WSTST_RandomAccessStreamReference** out);
 
-/* Windows.ApplicationModel.Contacts.ContactManager.ConvertContactToVCardAsync(contact, maxBytes) */
 HRESULT wapco_contact_manager_convert_contact_to_v_card_async_p_u32_p(WAPCO_Contact* contact, uint32_t maxBytes, WF_IAsyncOperation_WSTST_RandomAccessStreamReference** out);
 
-/* Windows.ApplicationModel.Contacts.ContactManager.ConvertVCardToContactAsync(vCard) */
 HRESULT wapco_contact_manager_convert_v_card_to_contact_async(WSTST_IRandomAccessStreamReference* vCard, WF_IAsyncOperation_WAPCO_Contact** out);
 
-/* Windows.ApplicationModel.Contacts.ContactManager.RequestStoreAsync(accessType) */
 HRESULT wapco_contact_manager_request_store_async_contact_store_access_type_p(WAPCO_ContactStoreAccessType accessType, WF_IAsyncOperation_WAPCO_ContactStore** out);
 
-/* Windows.ApplicationModel.Contacts.ContactManager.RequestAnnotationStoreAsync(accessType) */
 HRESULT wapco_contact_manager_request_annotation_store_async(WAPCO_ContactAnnotationStoreAccessType accessType, WF_IAsyncOperation_WAPCO_ContactAnnotationStore** out);
 
-/* Windows.ApplicationModel.Contacts.ContactManager.IsShowContactCardSupported() */
 HRESULT wapco_contact_manager_is_show_contact_card_supported(BOOL *out);
 
-/* Windows.ApplicationModel.Contacts.ContactManager.ShowContactCard(contact, selection, preferredPlacement, contactCardOptions) */
 HRESULT wapco_contact_manager_show_contact_card_p_rect_placement_p(WAPCO_Contact* contact, WF_Rect selection, WUIPO_Placement preferredPlacement, WAPCO_ContactCardOptions* contactCardOptions);
 
-/* Windows.ApplicationModel.Contacts.ContactManager.IsShowDelayLoadedContactCardSupported() */
 HRESULT wapco_contact_manager_is_show_delay_loaded_contact_card_supported(BOOL *out);
 
-/* Windows.ApplicationModel.Contacts.ContactManager.ShowDelayLoadedContactCard(contact, selection, preferredPlacement, contactCardOptions) */
 HRESULT wapco_contact_manager_show_delay_loaded_contact_card_p_rect_placement_p_p(WAPCO_Contact* contact, WF_Rect selection, WUIPO_Placement preferredPlacement, WAPCO_ContactCardOptions* contactCardOptions, WAPCO_ContactCardDelayedDataLoader** out);
 
-/* Windows.ApplicationModel.Contacts.ContactManager.ShowFullContactCard(contact, fullContactCardOptions) */
 HRESULT wapco_contact_manager_show_full_contact_card(WAPCO_Contact* contact, WAPCO_FullContactCardOptions* fullContactCardOptions);
 
-/* Windows.ApplicationModel.Contacts.ContactManager.get_SystemDisplayNameOrder() */
 HRESULT wapco_contact_manager_get__system_display_name_order(WAPCO_ContactNameOrder *value);
 
-/* Windows.ApplicationModel.Contacts.ContactManager.put_SystemDisplayNameOrder() */
 HRESULT wapco_contact_manager_put__system_display_name_order(WAPCO_ContactNameOrder value);
 
-/* Windows.ApplicationModel.Contacts.ContactManager.get_SystemSortOrder() */
 HRESULT wapco_contact_manager_get__system_sort_order(WAPCO_ContactNameOrder *value);
 
-/* Windows.ApplicationModel.Contacts.ContactManager.put_SystemSortOrder() */
 HRESULT wapco_contact_manager_put__system_sort_order(WAPCO_ContactNameOrder value);
 
-/* Windows.ApplicationModel.Contacts.ContactManager.RequestStoreAsync() */
 HRESULT wapco_contact_manager_request_store_async(WF_IAsyncOperation_WAPCO_ContactStore** out);
 
-/* Windows.ApplicationModel.Contacts.ContactManager.ShowContactCard(contact, selection) */
 HRESULT wapco_contact_manager_show_contact_card(WAPCO_Contact* contact, WF_Rect selection);
 
-/* Windows.ApplicationModel.Contacts.ContactManager.ShowContactCard(contact, selection, preferredPlacement) */
 HRESULT wapco_contact_manager_show_contact_card_p_rect_placement(WAPCO_Contact* contact, WF_Rect selection, WUIPO_Placement preferredPlacement);
 
-/* Windows.ApplicationModel.Contacts.ContactManager.ShowDelayLoadedContactCard(contact, selection, preferredPlacement) */
 HRESULT wapco_contact_manager_show_delay_loaded_contact_card(WAPCO_Contact* contact, WF_Rect selection, WUIPO_Placement preferredPlacement, WAPCO_ContactCardDelayedDataLoader** out);
 
-/* activate Windows.ApplicationModel.Contacts.ContactManagerForUser */
 HRESULT wapco_contact_manager_for_user_new(WAPCO_ContactManagerForUser **out);
 
-/* Windows.ApplicationModel.Contacts.ContactManagerForUser */
-/* Windows.ApplicationModel.Contacts.ContactManagerForUser.ConvertContactToVCardAsync(contact) */
 HRESULT wapco_contact_manager_for_user_convert_contact_to_v_card_async(WAPCO_ContactManagerForUser *self, WAPCO_Contact* contact, WF_IAsyncOperation_WSTST_RandomAccessStreamReference** out);
 
-/* Windows.ApplicationModel.Contacts.ContactManagerForUser.ConvertContactToVCardAsync(contact, maxBytes) */
 HRESULT wapco_contact_manager_for_user_convert_contact_to_v_card_async_p_u32_p(WAPCO_ContactManagerForUser *self, WAPCO_Contact* contact, uint32_t maxBytes, WF_IAsyncOperation_WSTST_RandomAccessStreamReference** out);
 
-/* Windows.ApplicationModel.Contacts.ContactManagerForUser.ConvertVCardToContactAsync(vCard) */
 HRESULT wapco_contact_manager_for_user_convert_v_card_to_contact_async(WAPCO_ContactManagerForUser *self, WSTST_IRandomAccessStreamReference* vCard, WF_IAsyncOperation_WAPCO_Contact** out);
 
-/* Windows.ApplicationModel.Contacts.ContactManagerForUser.RequestStoreAsync(accessType) */
 HRESULT wapco_contact_manager_for_user_request_store_async(WAPCO_ContactManagerForUser *self, WAPCO_ContactStoreAccessType accessType, WF_IAsyncOperation_WAPCO_ContactStore** out);
 
-/* Windows.ApplicationModel.Contacts.ContactManagerForUser.RequestAnnotationStoreAsync(accessType) */
 HRESULT wapco_contact_manager_for_user_request_annotation_store_async(WAPCO_ContactManagerForUser *self, WAPCO_ContactAnnotationStoreAccessType accessType, WF_IAsyncOperation_WAPCO_ContactAnnotationStore** out);
 
-/* Windows.ApplicationModel.Contacts.ContactManagerForUser.get_SystemDisplayNameOrder() */
 HRESULT wapco_contact_manager_for_user_get__system_display_name_order(WAPCO_ContactManagerForUser *self, WAPCO_ContactNameOrder *value);
 
-/* Windows.ApplicationModel.Contacts.ContactManagerForUser.put_SystemDisplayNameOrder() */
 HRESULT wapco_contact_manager_for_user_put__system_display_name_order(WAPCO_ContactManagerForUser *self, WAPCO_ContactNameOrder value);
 
-/* Windows.ApplicationModel.Contacts.ContactManagerForUser.get_SystemSortOrder() */
 HRESULT wapco_contact_manager_for_user_get__system_sort_order(WAPCO_ContactManagerForUser *self, WAPCO_ContactNameOrder *value);
 
-/* Windows.ApplicationModel.Contacts.ContactManagerForUser.put_SystemSortOrder() */
 HRESULT wapco_contact_manager_for_user_put__system_sort_order(WAPCO_ContactManagerForUser *self, WAPCO_ContactNameOrder value);
 
-/* Windows.ApplicationModel.Contacts.ContactManagerForUser.get_User() */
 HRESULT wapco_contact_manager_for_user_get__user(WAPCO_ContactManagerForUser *self, WSY_User** value);
 
-/* Windows.ApplicationModel.Contacts.ContactManagerForUser.ShowFullContactCard(contact, fullContactCardOptions) */
 HRESULT wapco_contact_manager_for_user_show_full_contact_card(WAPCO_ContactManagerForUser *self, WAPCO_Contact* contact, WAPCO_FullContactCardOptions* fullContactCardOptions);
 
-/* activate Windows.ApplicationModel.Contacts.ContactMatchReason */
 HRESULT wapco_contact_match_reason_new(WAPCO_ContactMatchReason **out);
 
-/* Windows.ApplicationModel.Contacts.ContactMatchReason */
-/* Windows.ApplicationModel.Contacts.ContactMatchReason.get_Field() */
 HRESULT wapco_contact_match_reason_get__field(WAPCO_ContactMatchReason *self, WAPCO_ContactMatchReasonKind *value);
 
-/* Windows.ApplicationModel.Contacts.ContactMatchReason.get_Segments() */
 HRESULT wapco_contact_match_reason_get__segments(WAPCO_ContactMatchReason *self, WFOCO_IVectorView_WDATE_TextSegment** value);
 
-/* Windows.ApplicationModel.Contacts.ContactMatchReason.get_Text() */
 HRESULT wapco_contact_match_reason_get__text(WAPCO_ContactMatchReason *self, cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.Contacts.ContactPanel */
 HRESULT wapco_contact_panel_new(WAPCO_ContactPanel **out);
 
-/* Windows.ApplicationModel.Contacts.ContactPanel */
-/* Windows.ApplicationModel.Contacts.ContactPanel.ClosePanel() */
 HRESULT wapco_contact_panel_close_panel(WAPCO_ContactPanel *self);
 
-/* Windows.ApplicationModel.Contacts.ContactPanel.get_HeaderColor() */
 HRESULT wapco_contact_panel_get__header_color(WAPCO_ContactPanel *self, WUI_Color** value);
 
-/* Windows.ApplicationModel.Contacts.ContactPanel.put_HeaderColor() */
 HRESULT wapco_contact_panel_put__header_color(WAPCO_ContactPanel *self, WUI_Color* value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapco_contact_panel_on_launch_full_app_requested(WAPCO_ContactPanel *self, cwinrt_event_fn fn, void *ctx);
@@ -2303,605 +1823,355 @@ void wapco_contact_panel_off_launch_full_app_requested(WAPCO_ContactPanel *self,
 cwinrt_token wapco_contact_panel_on_closing(WAPCO_ContactPanel *self, cwinrt_event_fn fn, void *ctx);
 void wapco_contact_panel_off_closing(WAPCO_ContactPanel *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Contacts.ContactPanelClosingEventArgs */
 HRESULT wapco_contact_panel_closing_event_args_new(WAPCO_ContactPanelClosingEventArgs **out);
 
-/* Windows.ApplicationModel.Contacts.ContactPanelClosingEventArgs */
-/* Windows.ApplicationModel.Contacts.ContactPanelClosingEventArgs.GetDeferral() */
 HRESULT wapco_contact_panel_closing_event_args_get_deferral(WAPCO_ContactPanelClosingEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.Contacts.ContactPanelLaunchFullAppRequestedEventArgs */
 HRESULT wapco_contact_panel_launch_full_app_requested_event_args_new(WAPCO_ContactPanelLaunchFullAppRequestedEventArgs **out);
 
-/* Windows.ApplicationModel.Contacts.ContactPanelLaunchFullAppRequestedEventArgs */
-/* Windows.ApplicationModel.Contacts.ContactPanelLaunchFullAppRequestedEventArgs.get_Handled() */
 HRESULT wapco_contact_panel_launch_full_app_requested_event_args_get__handled(WAPCO_ContactPanelLaunchFullAppRequestedEventArgs *self, BOOL *value);
 
-/* Windows.ApplicationModel.Contacts.ContactPanelLaunchFullAppRequestedEventArgs.put_Handled() */
 HRESULT wapco_contact_panel_launch_full_app_requested_event_args_put__handled(WAPCO_ContactPanelLaunchFullAppRequestedEventArgs *self, BOOL value);
 
-/* activate Windows.ApplicationModel.Contacts.ContactPhone */
 HRESULT wapco_contact_phone_new(WAPCO_ContactPhone **out);
 
-/* Windows.ApplicationModel.Contacts.ContactPhone */
-/* Windows.ApplicationModel.Contacts.ContactPhone.get_Number() */
 HRESULT wapco_contact_phone_get__number(WAPCO_ContactPhone *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactPhone.put_Number() */
 HRESULT wapco_contact_phone_put__number(WAPCO_ContactPhone *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.ContactPhone.get_Kind() */
 HRESULT wapco_contact_phone_get__kind(WAPCO_ContactPhone *self, WAPCO_ContactPhoneKind *value);
 
-/* Windows.ApplicationModel.Contacts.ContactPhone.put_Kind() */
 HRESULT wapco_contact_phone_put__kind(WAPCO_ContactPhone *self, WAPCO_ContactPhoneKind value);
 
-/* Windows.ApplicationModel.Contacts.ContactPhone.get_Description() */
 HRESULT wapco_contact_phone_get__description(WAPCO_ContactPhone *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactPhone.put_Description() */
 HRESULT wapco_contact_phone_put__description(WAPCO_ContactPhone *self, cwinrt_hstring value);
 
-/* activate Windows.ApplicationModel.Contacts.ContactPicker */
 HRESULT wapco_contact_picker_new(WAPCO_ContactPicker **out);
 
-/* Windows.ApplicationModel.Contacts.ContactPicker */
-/* Windows.ApplicationModel.Contacts.ContactPicker.get_CommitButtonText() */
 HRESULT wapco_contact_picker_get__commit_button_text(WAPCO_ContactPicker *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactPicker.put_CommitButtonText() */
 HRESULT wapco_contact_picker_put__commit_button_text(WAPCO_ContactPicker *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.ContactPicker.get_SelectionMode() */
 HRESULT wapco_contact_picker_get__selection_mode(WAPCO_ContactPicker *self, WAPCO_ContactSelectionMode *value);
 
-/* Windows.ApplicationModel.Contacts.ContactPicker.put_SelectionMode() */
 HRESULT wapco_contact_picker_put__selection_mode(WAPCO_ContactPicker *self, WAPCO_ContactSelectionMode value);
 
-/* Windows.ApplicationModel.Contacts.ContactPicker.get_DesiredFields() */
 HRESULT wapco_contact_picker_get__desired_fields(WAPCO_ContactPicker *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.ApplicationModel.Contacts.ContactPicker.PickSingleContactAsync() */
 HRESULT wapco_contact_picker_pick_single_contact_async(WAPCO_ContactPicker *self, WF_IAsyncOperation_WAPCO_ContactInformation** out);
 
-/* Windows.ApplicationModel.Contacts.ContactPicker.PickMultipleContactsAsync() */
 HRESULT wapco_contact_picker_pick_multiple_contacts_async(WAPCO_ContactPicker *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPCO_ContactInformation** out);
 
-/* Windows.ApplicationModel.Contacts.ContactPicker.get_DesiredFieldsWithContactFieldType() */
 HRESULT wapco_contact_picker_get__desired_fields_with_contact_field_type(WAPCO_ContactPicker *self, WFOCO_IVector_WAPCO_ContactFieldType** value);
 
-/* Windows.ApplicationModel.Contacts.ContactPicker.PickContactAsync() */
 HRESULT wapco_contact_picker_pick_contact_async(WAPCO_ContactPicker *self, WF_IAsyncOperation_WAPCO_Contact** out);
 
-/* Windows.ApplicationModel.Contacts.ContactPicker.PickContactsAsync() */
 HRESULT wapco_contact_picker_pick_contacts_async(WAPCO_ContactPicker *self, WF_IAsyncOperation_WFOCO_IVector_WAPCO_Contact** out);
 
-/* Windows.ApplicationModel.Contacts.ContactPicker.get_User() */
 HRESULT wapco_contact_picker_get__user(WAPCO_ContactPicker *self, WSY_User** value);
 
-/* Windows.ApplicationModel.Contacts.ContactPicker.CreateForUser(user) */
 HRESULT wapco_contact_picker_create_for_user(WSY_User* user, WAPCO_ContactPicker** out);
 
-/* Windows.ApplicationModel.Contacts.ContactPicker.IsSupportedAsync() */
 HRESULT wapco_contact_picker_is_supported_async(WF_IAsyncOperation_Bool** out);
 
-/* activate Windows.ApplicationModel.Contacts.ContactQueryOptions */
 HRESULT wapco_contact_query_options_new(WAPCO_ContactQueryOptions **out);
 
-/* Windows.ApplicationModel.Contacts.ContactQueryOptions */
-/* Windows.ApplicationModel.Contacts.ContactQueryOptions.get_TextSearch() */
 HRESULT wapco_contact_query_options_get__text_search(WAPCO_ContactQueryOptions *self, WAPCO_ContactQueryTextSearch** value);
 
-/* Windows.ApplicationModel.Contacts.ContactQueryOptions.get_ContactListIds() */
 HRESULT wapco_contact_query_options_get__contact_list_ids(WAPCO_ContactQueryOptions *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.ApplicationModel.Contacts.ContactQueryOptions.get_IncludeContactsFromHiddenLists() */
 HRESULT wapco_contact_query_options_get__include_contacts_from_hidden_lists(WAPCO_ContactQueryOptions *self, BOOL *value);
 
-/* Windows.ApplicationModel.Contacts.ContactQueryOptions.put_IncludeContactsFromHiddenLists() */
 HRESULT wapco_contact_query_options_put__include_contacts_from_hidden_lists(WAPCO_ContactQueryOptions *self, BOOL value);
 
-/* Windows.ApplicationModel.Contacts.ContactQueryOptions.get_DesiredFields() */
 HRESULT wapco_contact_query_options_get__desired_fields(WAPCO_ContactQueryOptions *self, WAPCO_ContactQueryDesiredFields *value);
 
-/* Windows.ApplicationModel.Contacts.ContactQueryOptions.put_DesiredFields() */
 HRESULT wapco_contact_query_options_put__desired_fields(WAPCO_ContactQueryOptions *self, WAPCO_ContactQueryDesiredFields value);
 
-/* Windows.ApplicationModel.Contacts.ContactQueryOptions.get_DesiredOperations() */
 HRESULT wapco_contact_query_options_get__desired_operations(WAPCO_ContactQueryOptions *self, WAPCO_ContactAnnotationOperations *value);
 
-/* Windows.ApplicationModel.Contacts.ContactQueryOptions.put_DesiredOperations() */
 HRESULT wapco_contact_query_options_put__desired_operations(WAPCO_ContactQueryOptions *self, WAPCO_ContactAnnotationOperations value);
 
-/* Windows.ApplicationModel.Contacts.ContactQueryOptions.get_AnnotationListIds() */
 HRESULT wapco_contact_query_options_get__annotation_list_ids(WAPCO_ContactQueryOptions *self, WFOCO_IVector_HSTRING** value);
 
-/* activate Windows.ApplicationModel.Contacts.ContactQueryTextSearch */
 HRESULT wapco_contact_query_text_search_new(WAPCO_ContactQueryTextSearch **out);
 
-/* Windows.ApplicationModel.Contacts.ContactQueryTextSearch */
-/* Windows.ApplicationModel.Contacts.ContactQueryTextSearch.get_Fields() */
 HRESULT wapco_contact_query_text_search_get__fields(WAPCO_ContactQueryTextSearch *self, WAPCO_ContactQuerySearchFields *value);
 
-/* Windows.ApplicationModel.Contacts.ContactQueryTextSearch.put_Fields() */
 HRESULT wapco_contact_query_text_search_put__fields(WAPCO_ContactQueryTextSearch *self, WAPCO_ContactQuerySearchFields value);
 
-/* Windows.ApplicationModel.Contacts.ContactQueryTextSearch.get_Text() */
 HRESULT wapco_contact_query_text_search_get__text(WAPCO_ContactQueryTextSearch *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactQueryTextSearch.put_Text() */
 HRESULT wapco_contact_query_text_search_put__text(WAPCO_ContactQueryTextSearch *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.ContactQueryTextSearch.get_SearchScope() */
 HRESULT wapco_contact_query_text_search_get__search_scope(WAPCO_ContactQueryTextSearch *self, WAPCO_ContactQuerySearchScope *value);
 
-/* Windows.ApplicationModel.Contacts.ContactQueryTextSearch.put_SearchScope() */
 HRESULT wapco_contact_query_text_search_put__search_scope(WAPCO_ContactQueryTextSearch *self, WAPCO_ContactQuerySearchScope value);
 
-/* activate Windows.ApplicationModel.Contacts.ContactReader */
 HRESULT wapco_contact_reader_new(WAPCO_ContactReader **out);
 
-/* Windows.ApplicationModel.Contacts.ContactReader */
-/* Windows.ApplicationModel.Contacts.ContactReader.ReadBatchAsync() */
 HRESULT wapco_contact_reader_read_batch_async(WAPCO_ContactReader *self, WF_IAsyncOperation_WAPCO_ContactBatch** out);
 
-/* Windows.ApplicationModel.Contacts.ContactReader.GetMatchingPropertiesWithMatchReason(contact) */
 HRESULT wapco_contact_reader_get_matching_properties_with_match_reason(WAPCO_ContactReader *self, WAPCO_Contact* contact, WFOCO_IVectorView_WAPCO_ContactMatchReason** out);
 
-/* activate Windows.ApplicationModel.Contacts.ContactSignificantOther */
 HRESULT wapco_contact_significant_other_new(WAPCO_ContactSignificantOther **out);
 
-/* Windows.ApplicationModel.Contacts.ContactSignificantOther */
-/* Windows.ApplicationModel.Contacts.ContactSignificantOther.get_Name() */
 HRESULT wapco_contact_significant_other_get__name(WAPCO_ContactSignificantOther *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactSignificantOther.put_Name() */
 HRESULT wapco_contact_significant_other_put__name(WAPCO_ContactSignificantOther *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.ContactSignificantOther.get_Description() */
 HRESULT wapco_contact_significant_other_get__description(WAPCO_ContactSignificantOther *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactSignificantOther.put_Description() */
 HRESULT wapco_contact_significant_other_put__description(WAPCO_ContactSignificantOther *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.ContactSignificantOther.get_Relationship() */
 HRESULT wapco_contact_significant_other_get__relationship(WAPCO_ContactSignificantOther *self, WAPCO_ContactRelationship *value);
 
-/* Windows.ApplicationModel.Contacts.ContactSignificantOther.put_Relationship() */
 HRESULT wapco_contact_significant_other_put__relationship(WAPCO_ContactSignificantOther *self, WAPCO_ContactRelationship value);
 
-/* activate Windows.ApplicationModel.Contacts.ContactStore */
 HRESULT wapco_contact_store_new(WAPCO_ContactStore **out);
 
-/* Windows.ApplicationModel.Contacts.ContactStore */
-/* Windows.ApplicationModel.Contacts.ContactStore.FindContactsAsync() */
 HRESULT wapco_contact_store_find_contacts_async(WAPCO_ContactStore *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPCO_Contact** out);
 
-/* Windows.ApplicationModel.Contacts.ContactStore.FindContactsAsync(searchText) */
 HRESULT wapco_contact_store_find_contacts_async_str_p(WAPCO_ContactStore *self, cwinrt_hstring searchText, WF_IAsyncOperation_WFOCO_IVectorView_WAPCO_Contact** out);
 
-/* Windows.ApplicationModel.Contacts.ContactStore.GetContactAsync(contactId) */
 HRESULT wapco_contact_store_get_contact_async(WAPCO_ContactStore *self, cwinrt_hstring contactId, WF_IAsyncOperation_WAPCO_Contact** out);
 
-/* Windows.ApplicationModel.Contacts.ContactStore.get_ChangeTracker() */
 HRESULT wapco_contact_store_get__change_tracker(WAPCO_ContactStore *self, WAPCO_ContactChangeTracker** value);
 
-/* Windows.ApplicationModel.Contacts.ContactStore.get_AggregateContactManager() */
 HRESULT wapco_contact_store_get__aggregate_contact_manager(WAPCO_ContactStore *self, WAPCO_AggregateContactManager** value);
 
-/* Windows.ApplicationModel.Contacts.ContactStore.FindContactListsAsync() */
 HRESULT wapco_contact_store_find_contact_lists_async(WAPCO_ContactStore *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPCO_ContactList** out);
 
-/* Windows.ApplicationModel.Contacts.ContactStore.GetContactListAsync(contactListId) */
 HRESULT wapco_contact_store_get_contact_list_async(WAPCO_ContactStore *self, cwinrt_hstring contactListId, WF_IAsyncOperation_WAPCO_ContactList** out);
 
-/* Windows.ApplicationModel.Contacts.ContactStore.CreateContactListAsync(displayName) */
 HRESULT wapco_contact_store_create_contact_list_async(WAPCO_ContactStore *self, cwinrt_hstring displayName, WF_IAsyncOperation_WAPCO_ContactList** out);
 
-/* Windows.ApplicationModel.Contacts.ContactStore.GetMeContactAsync() */
 HRESULT wapco_contact_store_get_me_contact_async(WAPCO_ContactStore *self, WF_IAsyncOperation_WAPCO_Contact** out);
 
-/* Windows.ApplicationModel.Contacts.ContactStore.GetContactReader() */
 HRESULT wapco_contact_store_get_contact_reader(WAPCO_ContactStore *self, WAPCO_ContactReader** out);
 
-/* Windows.ApplicationModel.Contacts.ContactStore.GetContactReader(options) */
 HRESULT wapco_contact_store_get_contact_reader_p_p(WAPCO_ContactStore *self, WAPCO_ContactQueryOptions* options, WAPCO_ContactReader** out);
 
-/* Windows.ApplicationModel.Contacts.ContactStore.CreateContactListAsync(displayName, userDataAccountId) */
 HRESULT wapco_contact_store_create_contact_list_async_str_str_p(WAPCO_ContactStore *self, cwinrt_hstring displayName, cwinrt_hstring userDataAccountId, WF_IAsyncOperation_WAPCO_ContactList** out);
 
-/* Windows.ApplicationModel.Contacts.ContactStore.GetChangeTracker(identity) */
 HRESULT wapco_contact_store_get_change_tracker(WAPCO_ContactStore *self, cwinrt_hstring identity, WAPCO_ContactChangeTracker** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapco_contact_store_on_contact_changed(WAPCO_ContactStore *self, cwinrt_event_fn fn, void *ctx);
 void wapco_contact_store_off_contact_changed(WAPCO_ContactStore *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Contacts.ContactWebsite */
 HRESULT wapco_contact_website_new(WAPCO_ContactWebsite **out);
 
-/* Windows.ApplicationModel.Contacts.ContactWebsite */
-/* Windows.ApplicationModel.Contacts.ContactWebsite.get_Uri() */
 HRESULT wapco_contact_website_get__uri(WAPCO_ContactWebsite *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.Contacts.ContactWebsite.put_Uri() */
 HRESULT wapco_contact_website_put__uri(WAPCO_ContactWebsite *self, WF_Uri* value);
 
-/* Windows.ApplicationModel.Contacts.ContactWebsite.get_Description() */
 HRESULT wapco_contact_website_get__description(WAPCO_ContactWebsite *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactWebsite.put_Description() */
 HRESULT wapco_contact_website_put__description(WAPCO_ContactWebsite *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.ContactWebsite.get_RawValue() */
 HRESULT wapco_contact_website_get__raw_value(WAPCO_ContactWebsite *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.ContactWebsite.put_RawValue() */
 HRESULT wapco_contact_website_put__raw_value(WAPCO_ContactWebsite *self, cwinrt_hstring value);
 
-/* activate Windows.ApplicationModel.Contacts.FullContactCardOptions */
 HRESULT wapco_full_contact_card_options_new(WAPCO_FullContactCardOptions **out);
 
-/* Windows.ApplicationModel.Contacts.FullContactCardOptions */
-/* Windows.ApplicationModel.Contacts.FullContactCardOptions.get_DesiredRemainingView() */
 HRESULT wapco_full_contact_card_options_get__desired_remaining_view(WAPCO_FullContactCardOptions *self, WUIVI_ViewSizePreference *value);
 
-/* Windows.ApplicationModel.Contacts.FullContactCardOptions.put_DesiredRemainingView() */
 HRESULT wapco_full_contact_card_options_put__desired_remaining_view(WAPCO_FullContactCardOptions *self, WUIVI_ViewSizePreference value);
 
-/* Windows.ApplicationModel.Contacts.IContactManagerStatics2 */
-/* Windows.ApplicationModel.Contacts.IContactManagerStatics2.RequestStoreAsync() */
 HRESULT wapco_contact_manager_statics_2_request_store_async(WAPCO_IContactManagerStatics_2 *self, WF_IAsyncOperation_WAPCO_ContactStore** out);
 
-/* Windows.ApplicationModel.Contacts.IPinnedContactIdsQueryResult */
-/* Windows.ApplicationModel.Contacts.IPinnedContactManager */
-/* Windows.ApplicationModel.Contacts.IAggregateContactManager */
-/* Windows.ApplicationModel.Contacts.IAggregateContactManager2 */
-/* Windows.ApplicationModel.Contacts.IAggregateContactManager2.SetRemoteIdentificationInformationAsync(contactListId, remoteSourceId, accountId) */
 HRESULT wapco_aggregate_contact_manager_2_set_remote_identification_information_async(WAPCO_IAggregateContactManager_2 *self, cwinrt_hstring contactListId, cwinrt_hstring remoteSourceId, cwinrt_hstring accountId, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Contacts.IContactName */
-/* Windows.ApplicationModel.Contacts.IContactName.get_FirstName() */
 HRESULT wapco_contact_name_get__first_name(WAPCO_IContactName *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IContactName.put_FirstName() */
 HRESULT wapco_contact_name_put__first_name(WAPCO_IContactName *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.IContactName.get_LastName() */
 HRESULT wapco_contact_name_get__last_name(WAPCO_IContactName *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IContactName.put_LastName() */
 HRESULT wapco_contact_name_put__last_name(WAPCO_IContactName *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.IContactName.get_MiddleName() */
 HRESULT wapco_contact_name_get__middle_name(WAPCO_IContactName *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IContactName.put_MiddleName() */
 HRESULT wapco_contact_name_put__middle_name(WAPCO_IContactName *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.IContactName.get_YomiGivenName() */
 HRESULT wapco_contact_name_get__yomi_given_name(WAPCO_IContactName *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IContactName.put_YomiGivenName() */
 HRESULT wapco_contact_name_put__yomi_given_name(WAPCO_IContactName *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.IContactName.get_YomiFamilyName() */
 HRESULT wapco_contact_name_get__yomi_family_name(WAPCO_IContactName *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IContactName.put_YomiFamilyName() */
 HRESULT wapco_contact_name_put__yomi_family_name(WAPCO_IContactName *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.IContactName.get_HonorificNameSuffix() */
 HRESULT wapco_contact_name_get__honorific_name_suffix(WAPCO_IContactName *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IContactName.put_HonorificNameSuffix() */
 HRESULT wapco_contact_name_put__honorific_name_suffix(WAPCO_IContactName *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.IContactName.get_HonorificNamePrefix() */
 HRESULT wapco_contact_name_get__honorific_name_prefix(WAPCO_IContactName *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IContactName.put_HonorificNamePrefix() */
 HRESULT wapco_contact_name_put__honorific_name_prefix(WAPCO_IContactName *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.IContactName.get_DisplayName() */
 HRESULT wapco_contact_name_get__display_name(WAPCO_IContactName *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IContactName.get_YomiDisplayName() */
 HRESULT wapco_contact_name_get__yomi_display_name(WAPCO_IContactName *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IContact3 */
-/* Windows.ApplicationModel.Contacts.IContact3.get_ContactListId() */
 HRESULT wapco_contact_3_get__contact_list_id(WAPCO_IContact_3 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IContact3.get_DisplayPictureUserUpdateTime() */
 HRESULT wapco_contact_3_get__display_picture_user_update_time(WAPCO_IContact_3 *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Contacts.IContact3.put_DisplayPictureUserUpdateTime() */
 HRESULT wapco_contact_3_put__display_picture_user_update_time(WAPCO_IContact_3 *self, WF_DateTime value);
 
-/* Windows.ApplicationModel.Contacts.IContact3.get_IsMe() */
 HRESULT wapco_contact_3_get__is_me(WAPCO_IContact_3 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Contacts.IContact3.get_AggregateId() */
 HRESULT wapco_contact_3_get__aggregate_id(WAPCO_IContact_3 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IContact3.get_RemoteId() */
 HRESULT wapco_contact_3_get__remote_id(WAPCO_IContact_3 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IContact3.put_RemoteId() */
 HRESULT wapco_contact_3_put__remote_id(WAPCO_IContact_3 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.IContact3.get_RingToneToken() */
 HRESULT wapco_contact_3_get__ring_tone_token(WAPCO_IContact_3 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IContact3.put_RingToneToken() */
 HRESULT wapco_contact_3_put__ring_tone_token(WAPCO_IContact_3 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.IContact3.get_IsDisplayPictureManuallySet() */
 HRESULT wapco_contact_3_get__is_display_picture_manually_set(WAPCO_IContact_3 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Contacts.IContact3.get_LargeDisplayPicture() */
 HRESULT wapco_contact_3_get__large_display_picture(WAPCO_IContact_3 *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.Contacts.IContact3.get_SmallDisplayPicture() */
 HRESULT wapco_contact_3_get__small_display_picture(WAPCO_IContact_3 *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.Contacts.IContact3.get_SourceDisplayPicture() */
 HRESULT wapco_contact_3_get__source_display_picture(WAPCO_IContact_3 *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.Contacts.IContact3.put_SourceDisplayPicture() */
 HRESULT wapco_contact_3_put__source_display_picture(WAPCO_IContact_3 *self, WSTST_IRandomAccessStreamReference* value);
 
-/* Windows.ApplicationModel.Contacts.IContact3.get_TextToneToken() */
 HRESULT wapco_contact_3_get__text_tone_token(WAPCO_IContact_3 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IContact3.put_TextToneToken() */
 HRESULT wapco_contact_3_put__text_tone_token(WAPCO_IContact_3 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.IContact3.get_IsAggregate() */
 HRESULT wapco_contact_3_get__is_aggregate(WAPCO_IContact_3 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Contacts.IContact3.get_FullName() */
 HRESULT wapco_contact_3_get__full_name(WAPCO_IContact_3 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IContact3.get_DisplayNameOverride() */
 HRESULT wapco_contact_3_get__display_name_override(WAPCO_IContact_3 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IContact3.put_DisplayNameOverride() */
 HRESULT wapco_contact_3_put__display_name_override(WAPCO_IContact_3 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.IContact3.get_Nickname() */
 HRESULT wapco_contact_3_get__nickname(WAPCO_IContact_3 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IContact3.put_Nickname() */
 HRESULT wapco_contact_3_put__nickname(WAPCO_IContact_3 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.IContact3.get_SortName() */
 HRESULT wapco_contact_3_get__sort_name(WAPCO_IContact_3 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IContactAddress */
-/* Windows.ApplicationModel.Contacts.IContactAnnotation */
-/* Windows.ApplicationModel.Contacts.IContactAnnotation2 */
-/* Windows.ApplicationModel.Contacts.IContactAnnotation2.get_ContactListId() */
 HRESULT wapco_contact_annotation_2_get__contact_list_id(WAPCO_IContactAnnotation_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IContactAnnotation2.put_ContactListId() */
 HRESULT wapco_contact_annotation_2_put__contact_list_id(WAPCO_IContactAnnotation_2 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.IContactAnnotationList */
-/* Windows.ApplicationModel.Contacts.IContactAnnotationStore */
-/* Windows.ApplicationModel.Contacts.IContactAnnotationStore2 */
-/* Windows.ApplicationModel.Contacts.IContactAnnotationStore2.FindAnnotationsForContactListAsync(contactListId) */
 HRESULT wapco_contact_annotation_store_2_find_annotations_for_contact_list_async(WAPCO_IContactAnnotationStore_2 *self, cwinrt_hstring contactListId, WF_IAsyncOperation_WFOCO_IVectorView_WAPCO_ContactAnnotation** out);
 
-/* Windows.ApplicationModel.Contacts.IContactBatch */
-/* Windows.ApplicationModel.Contacts.IContactCardDelayedDataLoader */
-/* Windows.ApplicationModel.Contacts.IContactCardOptions2 */
-/* Windows.ApplicationModel.Contacts.IContactCardOptions2.get_ServerSearchContactListIds() */
 HRESULT wapco_contact_card_options_2_get__server_search_contact_list_ids(WAPCO_IContactCardOptions_2 *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.ApplicationModel.Contacts.IContactChange */
-/* Windows.ApplicationModel.Contacts.IContactChangeReader */
-/* Windows.ApplicationModel.Contacts.IContactChangeTracker */
-/* Windows.ApplicationModel.Contacts.IContactChangeTracker2 */
-/* Windows.ApplicationModel.Contacts.IContactChangeTracker2.get_IsTracking() */
 HRESULT wapco_contact_change_tracker_2_get__is_tracking(WAPCO_IContactChangeTracker_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Contacts.IContactChangedDeferral */
-/* Windows.ApplicationModel.Contacts.IContactChangedEventArgs */
-/* Windows.ApplicationModel.Contacts.IContactConnectedServiceAccount */
-/* Windows.ApplicationModel.Contacts.IContactDate */
-/* Windows.ApplicationModel.Contacts.IContactEmail */
-/* Windows.ApplicationModel.Contacts.IContactFieldFactory */
-/* Windows.ApplicationModel.Contacts.IContactLocationFieldFactory */
-/* Windows.ApplicationModel.Contacts.IContactLocationFieldFactory.CreateLocation(unstructuredAddress) */
 HRESULT wapco_contact_location_field_factory_create_location(WAPCO_IContactLocationFieldFactory *self, cwinrt_hstring unstructuredAddress, WAPCO_ContactLocationField** out);
 
-/* Windows.ApplicationModel.Contacts.IContactLocationFieldFactory.CreateLocation(unstructuredAddress, category) */
 HRESULT wapco_contact_location_field_factory_create_location_str_contact_field_category_p(WAPCO_IContactLocationFieldFactory *self, cwinrt_hstring unstructuredAddress, WAPCO_ContactFieldCategory category, WAPCO_ContactLocationField** out);
 
-/* Windows.ApplicationModel.Contacts.IContactLocationFieldFactory.CreateLocation(unstructuredAddress, category, street, city, region, country, postalCode) */
 HRESULT wapco_contact_location_field_factory_create_location_str_contact_field_category_str_str_s_b673ce9a(WAPCO_IContactLocationFieldFactory *self, cwinrt_hstring unstructuredAddress, WAPCO_ContactFieldCategory category, cwinrt_hstring street, cwinrt_hstring city, cwinrt_hstring region, cwinrt_hstring country, cwinrt_hstring postalCode, WAPCO_ContactLocationField** out);
 
-/* Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory */
-/* Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory.CreateInstantMessage(userName) */
 HRESULT wapco_contact_instant_message_field_factory_create_instant_message(WAPCO_IContactInstantMessageFieldFactory *self, cwinrt_hstring userName, WAPCO_ContactInstantMessageField** out);
 
-/* Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory.CreateInstantMessage(userName, category) */
 HRESULT wapco_contact_instant_message_field_factory_create_instant_message_str_contact_field_category_p(WAPCO_IContactInstantMessageFieldFactory *self, cwinrt_hstring userName, WAPCO_ContactFieldCategory category, WAPCO_ContactInstantMessageField** out);
 
-/* Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory.CreateInstantMessage(userName, category, service, displayText, verb) */
 HRESULT wapco_contact_instant_message_field_factory_create_instant_message_str_contact_field_category_str_str_p_p(WAPCO_IContactInstantMessageFieldFactory *self, cwinrt_hstring userName, WAPCO_ContactFieldCategory category, cwinrt_hstring service, cwinrt_hstring displayText, WF_Uri* verb, WAPCO_ContactInstantMessageField** out);
 
-/* Windows.ApplicationModel.Contacts.IContactInformation */
-/* Windows.ApplicationModel.Contacts.IContactInstantMessageField */
-/* Windows.ApplicationModel.Contacts.IContactJobInfo */
-/* Windows.ApplicationModel.Contacts.IContactList */
-/* Windows.ApplicationModel.Contacts.IContactList2 */
-/* Windows.ApplicationModel.Contacts.IContactList2.RegisterSyncManagerAsync() */
 HRESULT wapco_contact_list_2_register_sync_manager_async(WAPCO_IContactList_2 *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Contacts.IContactList2.put_SupportsServerSearch() */
 HRESULT wapco_contact_list_2_put__supports_server_search(WAPCO_IContactList_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Contacts.IContactList2.get_SyncConstraints() */
 HRESULT wapco_contact_list_2_get__sync_constraints(WAPCO_IContactList_2 *self, WAPCO_ContactListSyncConstraints** value);
 
-/* Windows.ApplicationModel.Contacts.IContactList3 */
-/* Windows.ApplicationModel.Contacts.IContactList3.get_LimitedWriteOperations() */
 HRESULT wapco_contact_list_3_get__limited_write_operations(WAPCO_IContactList_3 *self, WAPCO_ContactListLimitedWriteOperations** value);
 
-/* Windows.ApplicationModel.Contacts.IContactList3.GetChangeTracker(identity) */
 HRESULT wapco_contact_list_3_get_change_tracker(WAPCO_IContactList_3 *self, cwinrt_hstring identity, WAPCO_ContactChangeTracker** out);
 
-/* Windows.ApplicationModel.Contacts.IContactListLimitedWriteOperations */
-/* Windows.ApplicationModel.Contacts.IContactListSyncConstraints */
-/* Windows.ApplicationModel.Contacts.IContactListSyncManager */
-/* Windows.ApplicationModel.Contacts.IContactListSyncManager2 */
-/* Windows.ApplicationModel.Contacts.IContactListSyncManager2.put_Status() */
 HRESULT wapco_contact_list_sync_manager_2_put__status(WAPCO_IContactListSyncManager_2 *self, WAPCO_ContactListSyncStatus value);
 
-/* Windows.ApplicationModel.Contacts.IContactListSyncManager2.put_LastSuccessfulSyncTime() */
 HRESULT wapco_contact_list_sync_manager_2_put__last_successful_sync_time(WAPCO_IContactListSyncManager_2 *self, WF_DateTime value);
 
-/* Windows.ApplicationModel.Contacts.IContactListSyncManager2.put_LastAttemptedSyncTime() */
 HRESULT wapco_contact_list_sync_manager_2_put__last_attempted_sync_time(WAPCO_IContactListSyncManager_2 *self, WF_DateTime value);
 
-/* Windows.ApplicationModel.Contacts.IContactLocationField */
-/* Windows.ApplicationModel.Contacts.IContactManagerForUser */
-/* Windows.ApplicationModel.Contacts.IContactManagerForUser2 */
-/* Windows.ApplicationModel.Contacts.IContactManagerForUser2.ShowFullContactCard(contact, fullContactCardOptions) */
 HRESULT wapco_contact_manager_for_user_2_show_full_contact_card(WAPCO_IContactManagerForUser_2 *self, WAPCO_Contact* contact, WAPCO_FullContactCardOptions* fullContactCardOptions);
 
-/* Windows.ApplicationModel.Contacts.IContactMatchReason */
-/* Windows.ApplicationModel.Contacts.IContactPanel */
-/* Windows.ApplicationModel.Contacts.IContactPanelClosingEventArgs */
-/* Windows.ApplicationModel.Contacts.IContactPanelLaunchFullAppRequestedEventArgs */
-/* Windows.ApplicationModel.Contacts.IContactPhone */
-/* Windows.ApplicationModel.Contacts.IContactPicker */
-/* Windows.ApplicationModel.Contacts.IContactPicker2 */
-/* Windows.ApplicationModel.Contacts.IContactPicker2.get_DesiredFieldsWithContactFieldType() */
 HRESULT wapco_contact_picker_2_get__desired_fields_with_contact_field_type(WAPCO_IContactPicker_2 *self, WFOCO_IVector_WAPCO_ContactFieldType** value);
 
-/* Windows.ApplicationModel.Contacts.IContactPicker2.PickContactAsync() */
 HRESULT wapco_contact_picker_2_pick_contact_async(WAPCO_IContactPicker_2 *self, WF_IAsyncOperation_WAPCO_Contact** out);
 
-/* Windows.ApplicationModel.Contacts.IContactPicker2.PickContactsAsync() */
 HRESULT wapco_contact_picker_2_pick_contacts_async(WAPCO_IContactPicker_2 *self, WF_IAsyncOperation_WFOCO_IVector_WAPCO_Contact** out);
 
-/* Windows.ApplicationModel.Contacts.IContactPicker3 */
-/* Windows.ApplicationModel.Contacts.IContactPicker3.get_User() */
 HRESULT wapco_contact_picker_3_get__user(WAPCO_IContactPicker_3 *self, WSY_User** value);
 
-/* Windows.ApplicationModel.Contacts.IContactQueryOptions */
-/* Windows.ApplicationModel.Contacts.IContactQueryTextSearch */
-/* Windows.ApplicationModel.Contacts.IContactReader */
-/* Windows.ApplicationModel.Contacts.IContactSignificantOther2 */
-/* Windows.ApplicationModel.Contacts.IContactSignificantOther2.get_Relationship() */
 HRESULT wapco_contact_significant_other_2_get__relationship(WAPCO_IContactSignificantOther_2 *self, WAPCO_ContactRelationship *value);
 
-/* Windows.ApplicationModel.Contacts.IContactSignificantOther2.put_Relationship() */
 HRESULT wapco_contact_significant_other_2_put__relationship(WAPCO_IContactSignificantOther_2 *self, WAPCO_ContactRelationship value);
 
-/* Windows.ApplicationModel.Contacts.IContactStore2 */
-/* Windows.ApplicationModel.Contacts.IContactStore2.get_ChangeTracker() */
 HRESULT wapco_contact_store_2_get__change_tracker(WAPCO_IContactStore_2 *self, WAPCO_ContactChangeTracker** value);
 
-/* Windows.ApplicationModel.Contacts.IContactStore2.get_AggregateContactManager() */
 HRESULT wapco_contact_store_2_get__aggregate_contact_manager(WAPCO_IContactStore_2 *self, WAPCO_AggregateContactManager** value);
 
-/* Windows.ApplicationModel.Contacts.IContactStore2.FindContactListsAsync() */
 HRESULT wapco_contact_store_2_find_contact_lists_async(WAPCO_IContactStore_2 *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPCO_ContactList** out);
 
-/* Windows.ApplicationModel.Contacts.IContactStore2.GetContactListAsync(contactListId) */
 HRESULT wapco_contact_store_2_get_contact_list_async(WAPCO_IContactStore_2 *self, cwinrt_hstring contactListId, WF_IAsyncOperation_WAPCO_ContactList** out);
 
-/* Windows.ApplicationModel.Contacts.IContactStore2.CreateContactListAsync(displayName) */
 HRESULT wapco_contact_store_2_create_contact_list_async(WAPCO_IContactStore_2 *self, cwinrt_hstring displayName, WF_IAsyncOperation_WAPCO_ContactList** out);
 
-/* Windows.ApplicationModel.Contacts.IContactStore2.GetMeContactAsync() */
 HRESULT wapco_contact_store_2_get_me_contact_async(WAPCO_IContactStore_2 *self, WF_IAsyncOperation_WAPCO_Contact** out);
 
-/* Windows.ApplicationModel.Contacts.IContactStore2.GetContactReader() */
 HRESULT wapco_contact_store_2_get_contact_reader(WAPCO_IContactStore_2 *self, WAPCO_ContactReader** out);
 
-/* Windows.ApplicationModel.Contacts.IContactStore2.GetContactReader(options) */
 HRESULT wapco_contact_store_2_get_contact_reader_p_p(WAPCO_IContactStore_2 *self, WAPCO_ContactQueryOptions* options, WAPCO_ContactReader** out);
 
-/* Windows.ApplicationModel.Contacts.IContactStore2.CreateContactListAsync(displayName, userDataAccountId) */
 HRESULT wapco_contact_store_2_create_contact_list_async_str_str_p(WAPCO_IContactStore_2 *self, cwinrt_hstring displayName, cwinrt_hstring userDataAccountId, WF_IAsyncOperation_WAPCO_ContactList** out);
 
-/* Windows.ApplicationModel.Contacts.IContactStore3 */
-/* Windows.ApplicationModel.Contacts.IContactStore3.GetChangeTracker(identity) */
 HRESULT wapco_contact_store_3_get_change_tracker(WAPCO_IContactStore_3 *self, cwinrt_hstring identity, WAPCO_ContactChangeTracker** out);
 
-/* Windows.ApplicationModel.Contacts.IContactWebsite2 */
-/* Windows.ApplicationModel.Contacts.IContactWebsite2.get_RawValue() */
 HRESULT wapco_contact_website_2_get__raw_value(WAPCO_IContactWebsite_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IContactWebsite2.put_RawValue() */
 HRESULT wapco_contact_website_2_put__raw_value(WAPCO_IContactWebsite_2 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.IFullContactCardOptions */
-/* Windows.ApplicationModel.Contacts.IContactManagerStatics */
-/* Windows.ApplicationModel.Contacts.IContactManagerStatics.ShowContactCard(contact, selection) */
 HRESULT wapco_contact_manager_statics_show_contact_card(WAPCO_IContactManagerStatics *self, WAPCO_Contact* contact, WF_Rect selection);
 
-/* Windows.ApplicationModel.Contacts.IContactManagerStatics.ShowContactCard(contact, selection, preferredPlacement) */
 HRESULT wapco_contact_manager_statics_show_contact_card_p_rect_placement(WAPCO_IContactManagerStatics *self, WAPCO_Contact* contact, WF_Rect selection, WUIPO_Placement preferredPlacement);
 
-/* Windows.ApplicationModel.Contacts.IContactManagerStatics.ShowDelayLoadedContactCard(contact, selection, preferredPlacement) */
 HRESULT wapco_contact_manager_statics_show_delay_loaded_contact_card(WAPCO_IContactManagerStatics *self, WAPCO_Contact* contact, WF_Rect selection, WUIPO_Placement preferredPlacement, WAPCO_ContactCardDelayedDataLoader** out);
 
-/* Windows.ApplicationModel.Contacts.IContact2 */
-/* Windows.ApplicationModel.Contacts.IContact2.get_Id() */
 HRESULT wapco_contact_2_get__id(WAPCO_IContact_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IContact2.put_Id() */
 HRESULT wapco_contact_2_put__id(WAPCO_IContact_2 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.IContact2.get_Notes() */
 HRESULT wapco_contact_2_get__notes(WAPCO_IContact_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.IContact2.put_Notes() */
 HRESULT wapco_contact_2_put__notes(WAPCO_IContact_2 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Contacts.IContact2.get_Phones() */
 HRESULT wapco_contact_2_get__phones(WAPCO_IContact_2 *self, WFOCO_IVector_WAPCO_ContactPhone** value);
 
-/* Windows.ApplicationModel.Contacts.IContact2.get_Emails() */
 HRESULT wapco_contact_2_get__emails(WAPCO_IContact_2 *self, WFOCO_IVector_WAPCO_ContactEmail** value);
 
-/* Windows.ApplicationModel.Contacts.IContact2.get_Addresses() */
 HRESULT wapco_contact_2_get__addresses(WAPCO_IContact_2 *self, WFOCO_IVector_WAPCO_ContactAddress** value);
 
-/* Windows.ApplicationModel.Contacts.IContact2.get_ConnectedServiceAccounts() */
 HRESULT wapco_contact_2_get__connected_service_accounts(WAPCO_IContact_2 *self, WFOCO_IVector_WAPCO_ContactConnectedServiceAccount** value);
 
-/* Windows.ApplicationModel.Contacts.IContact2.get_ImportantDates() */
 HRESULT wapco_contact_2_get__important_dates(WAPCO_IContact_2 *self, WFOCO_IVector_WAPCO_ContactDate** value);
 
-/* Windows.ApplicationModel.Contacts.IContact2.get_DataSuppliers() */
 HRESULT wapco_contact_2_get__data_suppliers(WAPCO_IContact_2 *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.ApplicationModel.Contacts.IContact2.get_JobInfo() */
 HRESULT wapco_contact_2_get__job_info(WAPCO_IContact_2 *self, WFOCO_IVector_WAPCO_ContactJobInfo** value);
 
-/* Windows.ApplicationModel.Contacts.IContact2.get_SignificantOthers() */
 HRESULT wapco_contact_2_get__significant_others(WAPCO_IContact_2 *self, WFOCO_IVector_WAPCO_ContactSignificantOther** value);
 
-/* Windows.ApplicationModel.Contacts.IContact2.get_Websites() */
 HRESULT wapco_contact_2_get__websites(WAPCO_IContact_2 *self, WFOCO_IVector_WAPCO_ContactWebsite** value);
 
-/* Windows.ApplicationModel.Contacts.IContact2.get_ProviderProperties() */
 HRESULT wapco_contact_2_get__provider_properties(WAPCO_IContact_2 *self, WFOCO_IPropertySet** value);
 
-/* Windows.ApplicationModel.Contacts.IContactCardOptions */
-/* Windows.ApplicationModel.Contacts.IContactField */
-/* Windows.ApplicationModel.Contacts.IContactSignificantOther */
-/* Windows.ApplicationModel.Contacts.IContactStore */
-/* Windows.ApplicationModel.Contacts.IContactWebsite */
-/* Windows.ApplicationModel.Contacts.IContact */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_CONTACTS_H */

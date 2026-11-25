@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSECR_PasswordCredential
 #define CWINRT_FWD_WSECR_PasswordCredential
 typedef struct WSECR_PasswordCredential WSECR_PasswordCredential;
@@ -22,7 +21,6 @@ typedef struct WSECR_PasswordCredential WSECR_PasswordCredential;
 typedef struct WDAXMDO_XmlDocument WDAXMDO_XmlDocument;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WWESY_ISyndicationCategoryFactory WWESY_ISyndicationCategoryFactory;
 typedef struct WWESY_ISyndicationClientFactory WWESY_ISyndicationClientFactory;
 typedef struct WWESY_ISyndicationContentFactory WWESY_ISyndicationContentFactory;
@@ -59,7 +57,6 @@ typedef struct WWESY_ISyndicationPerson WWESY_ISyndicationPerson;
 typedef struct WWESY_ISyndicationText WWESY_ISyndicationText;
 typedef struct WWESY_ISyndicationNode WWESY_ISyndicationNode;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSECR_PasswordCredential
 #define CWINRT_FWD_WSECR_PasswordCredential
 typedef struct WSECR_PasswordCredential WSECR_PasswordCredential;
@@ -164,7 +161,6 @@ struct WWESY_TransferProgress {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -261,836 +257,534 @@ static const IID CWINRT_IID_WWESY_ISyndicationText CWINRT_MAYBE_UNUSED = { 0xB9C
 static const IID CWINRT_IID_WWESY_ISyndicationNode CWINRT_MAYBE_UNUSED = { 0x753CEF78, 0x51F8, 0x45C0, { 0xA9, 0xF5, 0xF1, 0x71, 0x9D, 0xEC, 0x3F, 0xB2 } };
 #endif
 
-/* Methods */
-
-/* Windows.Web.Syndication.ISyndicationCategoryFactory */
-/* Windows.Web.Syndication.ISyndicationCategoryFactory.CreateSyndicationCategory(term) */
 HRESULT wwesy_syndication_category_factory_create_syndication_category(WWESY_ISyndicationCategoryFactory *self, cwinrt_hstring term, WWESY_SyndicationCategory** out);
 
-/* Windows.Web.Syndication.ISyndicationCategoryFactory.CreateSyndicationCategoryEx(term, scheme, label) */
 HRESULT wwesy_syndication_category_factory_create_syndication_category_ex(WWESY_ISyndicationCategoryFactory *self, cwinrt_hstring term, cwinrt_hstring scheme, cwinrt_hstring label, WWESY_SyndicationCategory** out);
 
-/* Windows.Web.Syndication.ISyndicationClientFactory */
-/* Windows.Web.Syndication.ISyndicationClientFactory.CreateSyndicationClient(serverCredential) */
 HRESULT wwesy_syndication_client_factory_create_syndication_client(WWESY_ISyndicationClientFactory *self, WSECR_PasswordCredential* serverCredential, WWESY_SyndicationClient** out);
 
-/* Windows.Web.Syndication.ISyndicationContentFactory */
-/* Windows.Web.Syndication.ISyndicationContentFactory.CreateSyndicationContent(text) */
 HRESULT wwesy_syndication_content_factory_create_syndication_content(WWESY_ISyndicationContentFactory *self, cwinrt_hstring text, WWESY_SyndicationTextType type_, WWESY_SyndicationContent** out);
 
-/* Windows.Web.Syndication.ISyndicationContentFactory.CreateSyndicationContentWithSourceUri(sourceUri) */
 HRESULT wwesy_syndication_content_factory_create_syndication_content_with_source_uri(WWESY_ISyndicationContentFactory *self, WF_Uri* sourceUri, WWESY_SyndicationContent** out);
 
-/* Windows.Web.Syndication.ISyndicationErrorStatics */
-/* Windows.Web.Syndication.ISyndicationErrorStatics.GetStatus(hresult) */
 HRESULT wwesy_syndication_error_statics_get_status(WWESY_ISyndicationErrorStatics *self, int32_t hresult, WWESY_SyndicationErrorStatus *out);
 
-/* Windows.Web.Syndication.ISyndicationFeedFactory */
-/* Windows.Web.Syndication.ISyndicationFeedFactory.CreateSyndicationFeed(title, subtitle, uri) */
 HRESULT wwesy_syndication_feed_factory_create_syndication_feed(WWESY_ISyndicationFeedFactory *self, cwinrt_hstring title, cwinrt_hstring subtitle, WF_Uri* uri, WWESY_SyndicationFeed** out);
 
-/* Windows.Web.Syndication.ISyndicationGeneratorFactory */
-/* Windows.Web.Syndication.ISyndicationGeneratorFactory.CreateSyndicationGenerator(text) */
 HRESULT wwesy_syndication_generator_factory_create_syndication_generator(WWESY_ISyndicationGeneratorFactory *self, cwinrt_hstring text, WWESY_SyndicationGenerator** out);
 
-/* Windows.Web.Syndication.ISyndicationItemFactory */
-/* Windows.Web.Syndication.ISyndicationItemFactory.CreateSyndicationItem(title, content, uri) */
 HRESULT wwesy_syndication_item_factory_create_syndication_item(WWESY_ISyndicationItemFactory *self, cwinrt_hstring title, WWESY_SyndicationContent* content, WF_Uri* uri, WWESY_SyndicationItem** out);
 
-/* Windows.Web.Syndication.ISyndicationLinkFactory */
-/* Windows.Web.Syndication.ISyndicationLinkFactory.CreateSyndicationLink(uri) */
 HRESULT wwesy_syndication_link_factory_create_syndication_link(WWESY_ISyndicationLinkFactory *self, WF_Uri* uri, WWESY_SyndicationLink** out);
 
-/* Windows.Web.Syndication.ISyndicationLinkFactory.CreateSyndicationLinkEx(uri, relationship, title, mediaType, length) */
 HRESULT wwesy_syndication_link_factory_create_syndication_link_ex(WWESY_ISyndicationLinkFactory *self, WF_Uri* uri, cwinrt_hstring relationship, cwinrt_hstring title, cwinrt_hstring mediaType, uint32_t length, WWESY_SyndicationLink** out);
 
-/* Windows.Web.Syndication.ISyndicationNodeFactory */
-/* Windows.Web.Syndication.ISyndicationNodeFactory.CreateSyndicationNode(nodeName, nodeNamespace, nodeValue) */
 HRESULT wwesy_syndication_node_factory_create_syndication_node(WWESY_ISyndicationNodeFactory *self, cwinrt_hstring nodeName, cwinrt_hstring nodeNamespace, cwinrt_hstring nodeValue, WWESY_SyndicationNode** out);
 
-/* Windows.Web.Syndication.ISyndicationPersonFactory */
-/* Windows.Web.Syndication.ISyndicationPersonFactory.CreateSyndicationPerson(name) */
 HRESULT wwesy_syndication_person_factory_create_syndication_person(WWESY_ISyndicationPersonFactory *self, cwinrt_hstring name, WWESY_SyndicationPerson** out);
 
-/* Windows.Web.Syndication.ISyndicationPersonFactory.CreateSyndicationPersonEx(name, email, uri) */
 HRESULT wwesy_syndication_person_factory_create_syndication_person_ex(WWESY_ISyndicationPersonFactory *self, cwinrt_hstring name, cwinrt_hstring email, WF_Uri* uri, WWESY_SyndicationPerson** out);
 
-/* Windows.Web.Syndication.ISyndicationTextFactory */
-/* Windows.Web.Syndication.ISyndicationTextFactory.CreateSyndicationText(text) */
 HRESULT wwesy_syndication_text_factory_create_syndication_text(WWESY_ISyndicationTextFactory *self, cwinrt_hstring text, WWESY_SyndicationText** out);
 
-/* Windows.Web.Syndication.ISyndicationTextFactory.CreateSyndicationTextEx(text) */
 HRESULT wwesy_syndication_text_factory_create_syndication_text_ex(WWESY_ISyndicationTextFactory *self, cwinrt_hstring text, WWESY_SyndicationTextType type_, WWESY_SyndicationText** out);
 
-/* activate Windows.Web.Syndication.SyndicationAttribute */
 HRESULT wwesy_syndication_attribute_new(WWESY_SyndicationAttribute **out);
 
-/* Windows.Web.Syndication.SyndicationAttribute */
-/* Windows.Web.Syndication.SyndicationAttribute.get_Name() */
 HRESULT wwesy_syndication_attribute_get__name(WWESY_SyndicationAttribute *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationAttribute.put_Name() */
 HRESULT wwesy_syndication_attribute_put__name(WWESY_SyndicationAttribute *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationAttribute.get_Namespace() */
 HRESULT wwesy_syndication_attribute_get__namespace(WWESY_SyndicationAttribute *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationAttribute.put_Namespace() */
 HRESULT wwesy_syndication_attribute_put__namespace(WWESY_SyndicationAttribute *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationAttribute.get_Value() */
 HRESULT wwesy_syndication_attribute_get__value(WWESY_SyndicationAttribute *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationAttribute.put_Value() */
 HRESULT wwesy_syndication_attribute_put__value(WWESY_SyndicationAttribute *self, cwinrt_hstring value);
 
-/* activate Windows.Web.Syndication.SyndicationCategory */
 HRESULT wwesy_syndication_category_new(WWESY_SyndicationCategory **out);
 
-/* Windows.Web.Syndication.SyndicationCategory */
-/* Windows.Web.Syndication.SyndicationCategory.get_Label() */
 HRESULT wwesy_syndication_category_get__label(WWESY_SyndicationCategory *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationCategory.put_Label() */
 HRESULT wwesy_syndication_category_put__label(WWESY_SyndicationCategory *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationCategory.get_Scheme() */
 HRESULT wwesy_syndication_category_get__scheme(WWESY_SyndicationCategory *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationCategory.put_Scheme() */
 HRESULT wwesy_syndication_category_put__scheme(WWESY_SyndicationCategory *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationCategory.get_Term() */
 HRESULT wwesy_syndication_category_get__term(WWESY_SyndicationCategory *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationCategory.put_Term() */
 HRESULT wwesy_syndication_category_put__term(WWESY_SyndicationCategory *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationCategory.get_NodeName() */
 HRESULT wwesy_syndication_category_get__node_name(WWESY_SyndicationCategory *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationCategory.put_NodeName() */
 HRESULT wwesy_syndication_category_put__node_name(WWESY_SyndicationCategory *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationCategory.get_NodeNamespace() */
 HRESULT wwesy_syndication_category_get__node_namespace(WWESY_SyndicationCategory *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationCategory.put_NodeNamespace() */
 HRESULT wwesy_syndication_category_put__node_namespace(WWESY_SyndicationCategory *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationCategory.get_NodeValue() */
 HRESULT wwesy_syndication_category_get__node_value(WWESY_SyndicationCategory *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationCategory.put_NodeValue() */
 HRESULT wwesy_syndication_category_put__node_value(WWESY_SyndicationCategory *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationCategory.get_Language() */
 HRESULT wwesy_syndication_category_get__language(WWESY_SyndicationCategory *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationCategory.put_Language() */
 HRESULT wwesy_syndication_category_put__language(WWESY_SyndicationCategory *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationCategory.get_BaseUri() */
 HRESULT wwesy_syndication_category_get__base_uri(WWESY_SyndicationCategory *self, WF_Uri** value);
 
-/* Windows.Web.Syndication.SyndicationCategory.put_BaseUri() */
 HRESULT wwesy_syndication_category_put__base_uri(WWESY_SyndicationCategory *self, WF_Uri* value);
 
-/* Windows.Web.Syndication.SyndicationCategory.get_AttributeExtensions() */
 HRESULT wwesy_syndication_category_get__attribute_extensions(WWESY_SyndicationCategory *self, WFOCO_IVector_WWESY_SyndicationAttribute** value);
 
-/* Windows.Web.Syndication.SyndicationCategory.get_ElementExtensions() */
 HRESULT wwesy_syndication_category_get__element_extensions(WWESY_SyndicationCategory *self, WFOCO_IVector_WWESY_ISyndicationNode** value);
 
-/* Windows.Web.Syndication.SyndicationCategory.GetXmlDocument(format) */
 HRESULT wwesy_syndication_category_get_xml_document(WWESY_SyndicationCategory *self, WWESY_SyndicationFormat format, WDAXMDO_XmlDocument** out);
 
-/* activate Windows.Web.Syndication.SyndicationClient */
 HRESULT wwesy_syndication_client_new(WWESY_SyndicationClient **out);
 
-/* Windows.Web.Syndication.SyndicationClient */
-/* Windows.Web.Syndication.SyndicationClient.get_ServerCredential() */
 HRESULT wwesy_syndication_client_get__server_credential(WWESY_SyndicationClient *self, WSECR_PasswordCredential** value);
 
-/* Windows.Web.Syndication.SyndicationClient.put_ServerCredential() */
 HRESULT wwesy_syndication_client_put__server_credential(WWESY_SyndicationClient *self, WSECR_PasswordCredential* value);
 
-/* Windows.Web.Syndication.SyndicationClient.get_ProxyCredential() */
 HRESULT wwesy_syndication_client_get__proxy_credential(WWESY_SyndicationClient *self, WSECR_PasswordCredential** value);
 
-/* Windows.Web.Syndication.SyndicationClient.put_ProxyCredential() */
 HRESULT wwesy_syndication_client_put__proxy_credential(WWESY_SyndicationClient *self, WSECR_PasswordCredential* value);
 
-/* Windows.Web.Syndication.SyndicationClient.get_MaxResponseBufferSize() */
 HRESULT wwesy_syndication_client_get__max_response_buffer_size(WWESY_SyndicationClient *self, uint32_t *value);
 
-/* Windows.Web.Syndication.SyndicationClient.put_MaxResponseBufferSize() */
 HRESULT wwesy_syndication_client_put__max_response_buffer_size(WWESY_SyndicationClient *self, uint32_t value);
 
-/* Windows.Web.Syndication.SyndicationClient.get_Timeout() */
 HRESULT wwesy_syndication_client_get__timeout(WWESY_SyndicationClient *self, uint32_t *value);
 
-/* Windows.Web.Syndication.SyndicationClient.put_Timeout() */
 HRESULT wwesy_syndication_client_put__timeout(WWESY_SyndicationClient *self, uint32_t value);
 
-/* Windows.Web.Syndication.SyndicationClient.get_BypassCacheOnRetrieve() */
 HRESULT wwesy_syndication_client_get__bypass_cache_on_retrieve(WWESY_SyndicationClient *self, BOOL *value);
 
-/* Windows.Web.Syndication.SyndicationClient.put_BypassCacheOnRetrieve() */
 HRESULT wwesy_syndication_client_put__bypass_cache_on_retrieve(WWESY_SyndicationClient *self, BOOL value);
 
-/* Windows.Web.Syndication.SyndicationClient.SetRequestHeader(name) */
 HRESULT wwesy_syndication_client_set_request_header(WWESY_SyndicationClient *self, cwinrt_hstring name, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationClient.RetrieveFeedAsync(uri) */
 HRESULT wwesy_syndication_client_retrieve_feed_async(WWESY_SyndicationClient *self, WF_Uri* uri, WF_IAsyncOperationWithProgress_WWESY_SyndicationFeed_WWESY_RetrievalProgress** out);
 
-/* activate Windows.Web.Syndication.SyndicationContent */
 HRESULT wwesy_syndication_content_new(WWESY_SyndicationContent **out);
 
-/* Windows.Web.Syndication.SyndicationContent */
-/* Windows.Web.Syndication.SyndicationContent.get_Text() */
 HRESULT wwesy_syndication_content_get__text(WWESY_SyndicationContent *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationContent.put_Text() */
 HRESULT wwesy_syndication_content_put__text(WWESY_SyndicationContent *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationContent.get_Type() */
 HRESULT wwesy_syndication_content_get__type(WWESY_SyndicationContent *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationContent.put_Type() */
 HRESULT wwesy_syndication_content_put__type(WWESY_SyndicationContent *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationContent.get_Xml() */
 HRESULT wwesy_syndication_content_get__xml(WWESY_SyndicationContent *self, WDAXMDO_XmlDocument** value);
 
-/* Windows.Web.Syndication.SyndicationContent.put_Xml() */
 HRESULT wwesy_syndication_content_put__xml(WWESY_SyndicationContent *self, WDAXMDO_XmlDocument* value);
 
-/* Windows.Web.Syndication.SyndicationContent.get_NodeName() */
 HRESULT wwesy_syndication_content_get__node_name(WWESY_SyndicationContent *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationContent.put_NodeName() */
 HRESULT wwesy_syndication_content_put__node_name(WWESY_SyndicationContent *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationContent.get_NodeNamespace() */
 HRESULT wwesy_syndication_content_get__node_namespace(WWESY_SyndicationContent *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationContent.put_NodeNamespace() */
 HRESULT wwesy_syndication_content_put__node_namespace(WWESY_SyndicationContent *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationContent.get_NodeValue() */
 HRESULT wwesy_syndication_content_get__node_value(WWESY_SyndicationContent *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationContent.put_NodeValue() */
 HRESULT wwesy_syndication_content_put__node_value(WWESY_SyndicationContent *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationContent.get_Language() */
 HRESULT wwesy_syndication_content_get__language(WWESY_SyndicationContent *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationContent.put_Language() */
 HRESULT wwesy_syndication_content_put__language(WWESY_SyndicationContent *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationContent.get_BaseUri() */
 HRESULT wwesy_syndication_content_get__base_uri(WWESY_SyndicationContent *self, WF_Uri** value);
 
-/* Windows.Web.Syndication.SyndicationContent.put_BaseUri() */
 HRESULT wwesy_syndication_content_put__base_uri(WWESY_SyndicationContent *self, WF_Uri* value);
 
-/* Windows.Web.Syndication.SyndicationContent.get_AttributeExtensions() */
 HRESULT wwesy_syndication_content_get__attribute_extensions(WWESY_SyndicationContent *self, WFOCO_IVector_WWESY_SyndicationAttribute** value);
 
-/* Windows.Web.Syndication.SyndicationContent.get_ElementExtensions() */
 HRESULT wwesy_syndication_content_get__element_extensions(WWESY_SyndicationContent *self, WFOCO_IVector_WWESY_ISyndicationNode** value);
 
-/* Windows.Web.Syndication.SyndicationContent.GetXmlDocument(format) */
 HRESULT wwesy_syndication_content_get_xml_document(WWESY_SyndicationContent *self, WWESY_SyndicationFormat format, WDAXMDO_XmlDocument** out);
 
-/* Windows.Web.Syndication.SyndicationContent.get_SourceUri() */
 HRESULT wwesy_syndication_content_get__source_uri(WWESY_SyndicationContent *self, WF_Uri** value);
 
-/* Windows.Web.Syndication.SyndicationContent.put_SourceUri() */
 HRESULT wwesy_syndication_content_put__source_uri(WWESY_SyndicationContent *self, WF_Uri* value);
 
-/* activate Windows.Web.Syndication.SyndicationError */
 HRESULT wwesy_syndication_error_new(WWESY_SyndicationError **out);
 
-/* Windows.Web.Syndication.SyndicationError */
-/* Windows.Web.Syndication.SyndicationError.GetStatus(hresult) */
 HRESULT wwesy_syndication_error_get_status(int32_t hresult, WWESY_SyndicationErrorStatus *out);
 
-/* activate Windows.Web.Syndication.SyndicationFeed */
 HRESULT wwesy_syndication_feed_new(WWESY_SyndicationFeed **out);
 
-/* Windows.Web.Syndication.SyndicationFeed */
-/* Windows.Web.Syndication.SyndicationFeed.get_Authors() */
 HRESULT wwesy_syndication_feed_get__authors(WWESY_SyndicationFeed *self, WFOCO_IVector_WWESY_SyndicationPerson** value);
 
-/* Windows.Web.Syndication.SyndicationFeed.get_Categories() */
 HRESULT wwesy_syndication_feed_get__categories(WWESY_SyndicationFeed *self, WFOCO_IVector_WWESY_SyndicationCategory** value);
 
-/* Windows.Web.Syndication.SyndicationFeed.get_Contributors() */
 HRESULT wwesy_syndication_feed_get__contributors(WWESY_SyndicationFeed *self, WFOCO_IVector_WWESY_SyndicationPerson** value);
 
-/* Windows.Web.Syndication.SyndicationFeed.get_Generator() */
 HRESULT wwesy_syndication_feed_get__generator(WWESY_SyndicationFeed *self, WWESY_SyndicationGenerator** value);
 
-/* Windows.Web.Syndication.SyndicationFeed.put_Generator() */
 HRESULT wwesy_syndication_feed_put__generator(WWESY_SyndicationFeed *self, WWESY_SyndicationGenerator* value);
 
-/* Windows.Web.Syndication.SyndicationFeed.get_IconUri() */
 HRESULT wwesy_syndication_feed_get__icon_uri(WWESY_SyndicationFeed *self, WF_Uri** value);
 
-/* Windows.Web.Syndication.SyndicationFeed.put_IconUri() */
 HRESULT wwesy_syndication_feed_put__icon_uri(WWESY_SyndicationFeed *self, WF_Uri* value);
 
-/* Windows.Web.Syndication.SyndicationFeed.get_Id() */
 HRESULT wwesy_syndication_feed_get__id(WWESY_SyndicationFeed *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationFeed.put_Id() */
 HRESULT wwesy_syndication_feed_put__id(WWESY_SyndicationFeed *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationFeed.get_Items() */
 HRESULT wwesy_syndication_feed_get__items(WWESY_SyndicationFeed *self, WFOCO_IVector_WWESY_SyndicationItem** value);
 
-/* Windows.Web.Syndication.SyndicationFeed.get_LastUpdatedTime() */
 HRESULT wwesy_syndication_feed_get__last_updated_time(WWESY_SyndicationFeed *self, WF_DateTime *value);
 
-/* Windows.Web.Syndication.SyndicationFeed.put_LastUpdatedTime() */
 HRESULT wwesy_syndication_feed_put__last_updated_time(WWESY_SyndicationFeed *self, WF_DateTime value);
 
-/* Windows.Web.Syndication.SyndicationFeed.get_Links() */
 HRESULT wwesy_syndication_feed_get__links(WWESY_SyndicationFeed *self, WFOCO_IVector_WWESY_SyndicationLink** value);
 
-/* Windows.Web.Syndication.SyndicationFeed.get_ImageUri() */
 HRESULT wwesy_syndication_feed_get__image_uri(WWESY_SyndicationFeed *self, WF_Uri** value);
 
-/* Windows.Web.Syndication.SyndicationFeed.put_ImageUri() */
 HRESULT wwesy_syndication_feed_put__image_uri(WWESY_SyndicationFeed *self, WF_Uri* value);
 
-/* Windows.Web.Syndication.SyndicationFeed.get_Rights() */
 HRESULT wwesy_syndication_feed_get__rights(WWESY_SyndicationFeed *self, WWESY_ISyndicationText** value);
 
-/* Windows.Web.Syndication.SyndicationFeed.put_Rights() */
 HRESULT wwesy_syndication_feed_put__rights(WWESY_SyndicationFeed *self, WWESY_ISyndicationText* value);
 
-/* Windows.Web.Syndication.SyndicationFeed.get_Subtitle() */
 HRESULT wwesy_syndication_feed_get__subtitle(WWESY_SyndicationFeed *self, WWESY_ISyndicationText** value);
 
-/* Windows.Web.Syndication.SyndicationFeed.put_Subtitle() */
 HRESULT wwesy_syndication_feed_put__subtitle(WWESY_SyndicationFeed *self, WWESY_ISyndicationText* value);
 
-/* Windows.Web.Syndication.SyndicationFeed.get_Title() */
 HRESULT wwesy_syndication_feed_get__title(WWESY_SyndicationFeed *self, WWESY_ISyndicationText** value);
 
-/* Windows.Web.Syndication.SyndicationFeed.put_Title() */
 HRESULT wwesy_syndication_feed_put__title(WWESY_SyndicationFeed *self, WWESY_ISyndicationText* value);
 
-/* Windows.Web.Syndication.SyndicationFeed.get_FirstUri() */
 HRESULT wwesy_syndication_feed_get__first_uri(WWESY_SyndicationFeed *self, WF_Uri** value);
 
-/* Windows.Web.Syndication.SyndicationFeed.get_LastUri() */
 HRESULT wwesy_syndication_feed_get__last_uri(WWESY_SyndicationFeed *self, WF_Uri** value);
 
-/* Windows.Web.Syndication.SyndicationFeed.get_NextUri() */
 HRESULT wwesy_syndication_feed_get__next_uri(WWESY_SyndicationFeed *self, WF_Uri** value);
 
-/* Windows.Web.Syndication.SyndicationFeed.get_PreviousUri() */
 HRESULT wwesy_syndication_feed_get__previous_uri(WWESY_SyndicationFeed *self, WF_Uri** value);
 
-/* Windows.Web.Syndication.SyndicationFeed.get_SourceFormat() */
 HRESULT wwesy_syndication_feed_get__source_format(WWESY_SyndicationFeed *self, WWESY_SyndicationFormat *value);
 
-/* Windows.Web.Syndication.SyndicationFeed.Load(feed) */
 HRESULT wwesy_syndication_feed_load(WWESY_SyndicationFeed *self, cwinrt_hstring feed);
 
-/* Windows.Web.Syndication.SyndicationFeed.LoadFromXml(feedDocument) */
 HRESULT wwesy_syndication_feed_load_from_xml(WWESY_SyndicationFeed *self, WDAXMDO_XmlDocument* feedDocument);
 
-/* Windows.Web.Syndication.SyndicationFeed.get_NodeName() */
 HRESULT wwesy_syndication_feed_get__node_name(WWESY_SyndicationFeed *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationFeed.put_NodeName() */
 HRESULT wwesy_syndication_feed_put__node_name(WWESY_SyndicationFeed *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationFeed.get_NodeNamespace() */
 HRESULT wwesy_syndication_feed_get__node_namespace(WWESY_SyndicationFeed *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationFeed.put_NodeNamespace() */
 HRESULT wwesy_syndication_feed_put__node_namespace(WWESY_SyndicationFeed *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationFeed.get_NodeValue() */
 HRESULT wwesy_syndication_feed_get__node_value(WWESY_SyndicationFeed *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationFeed.put_NodeValue() */
 HRESULT wwesy_syndication_feed_put__node_value(WWESY_SyndicationFeed *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationFeed.get_Language() */
 HRESULT wwesy_syndication_feed_get__language(WWESY_SyndicationFeed *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationFeed.put_Language() */
 HRESULT wwesy_syndication_feed_put__language(WWESY_SyndicationFeed *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationFeed.get_BaseUri() */
 HRESULT wwesy_syndication_feed_get__base_uri(WWESY_SyndicationFeed *self, WF_Uri** value);
 
-/* Windows.Web.Syndication.SyndicationFeed.put_BaseUri() */
 HRESULT wwesy_syndication_feed_put__base_uri(WWESY_SyndicationFeed *self, WF_Uri* value);
 
-/* Windows.Web.Syndication.SyndicationFeed.get_AttributeExtensions() */
 HRESULT wwesy_syndication_feed_get__attribute_extensions(WWESY_SyndicationFeed *self, WFOCO_IVector_WWESY_SyndicationAttribute** value);
 
-/* Windows.Web.Syndication.SyndicationFeed.get_ElementExtensions() */
 HRESULT wwesy_syndication_feed_get__element_extensions(WWESY_SyndicationFeed *self, WFOCO_IVector_WWESY_ISyndicationNode** value);
 
-/* Windows.Web.Syndication.SyndicationFeed.GetXmlDocument(format) */
 HRESULT wwesy_syndication_feed_get_xml_document(WWESY_SyndicationFeed *self, WWESY_SyndicationFormat format, WDAXMDO_XmlDocument** out);
 
-/* activate Windows.Web.Syndication.SyndicationGenerator */
 HRESULT wwesy_syndication_generator_new(WWESY_SyndicationGenerator **out);
 
-/* Windows.Web.Syndication.SyndicationGenerator */
-/* Windows.Web.Syndication.SyndicationGenerator.get_Text() */
 HRESULT wwesy_syndication_generator_get__text(WWESY_SyndicationGenerator *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationGenerator.put_Text() */
 HRESULT wwesy_syndication_generator_put__text(WWESY_SyndicationGenerator *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationGenerator.get_Uri() */
 HRESULT wwesy_syndication_generator_get__uri(WWESY_SyndicationGenerator *self, WF_Uri** value);
 
-/* Windows.Web.Syndication.SyndicationGenerator.put_Uri() */
 HRESULT wwesy_syndication_generator_put__uri(WWESY_SyndicationGenerator *self, WF_Uri* value);
 
-/* Windows.Web.Syndication.SyndicationGenerator.get_Version() */
 HRESULT wwesy_syndication_generator_get__version(WWESY_SyndicationGenerator *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationGenerator.put_Version() */
 HRESULT wwesy_syndication_generator_put__version(WWESY_SyndicationGenerator *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationGenerator.get_NodeName() */
 HRESULT wwesy_syndication_generator_get__node_name(WWESY_SyndicationGenerator *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationGenerator.put_NodeName() */
 HRESULT wwesy_syndication_generator_put__node_name(WWESY_SyndicationGenerator *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationGenerator.get_NodeNamespace() */
 HRESULT wwesy_syndication_generator_get__node_namespace(WWESY_SyndicationGenerator *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationGenerator.put_NodeNamespace() */
 HRESULT wwesy_syndication_generator_put__node_namespace(WWESY_SyndicationGenerator *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationGenerator.get_NodeValue() */
 HRESULT wwesy_syndication_generator_get__node_value(WWESY_SyndicationGenerator *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationGenerator.put_NodeValue() */
 HRESULT wwesy_syndication_generator_put__node_value(WWESY_SyndicationGenerator *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationGenerator.get_Language() */
 HRESULT wwesy_syndication_generator_get__language(WWESY_SyndicationGenerator *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationGenerator.put_Language() */
 HRESULT wwesy_syndication_generator_put__language(WWESY_SyndicationGenerator *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationGenerator.get_BaseUri() */
 HRESULT wwesy_syndication_generator_get__base_uri(WWESY_SyndicationGenerator *self, WF_Uri** value);
 
-/* Windows.Web.Syndication.SyndicationGenerator.put_BaseUri() */
 HRESULT wwesy_syndication_generator_put__base_uri(WWESY_SyndicationGenerator *self, WF_Uri* value);
 
-/* Windows.Web.Syndication.SyndicationGenerator.get_AttributeExtensions() */
 HRESULT wwesy_syndication_generator_get__attribute_extensions(WWESY_SyndicationGenerator *self, WFOCO_IVector_WWESY_SyndicationAttribute** value);
 
-/* Windows.Web.Syndication.SyndicationGenerator.get_ElementExtensions() */
 HRESULT wwesy_syndication_generator_get__element_extensions(WWESY_SyndicationGenerator *self, WFOCO_IVector_WWESY_ISyndicationNode** value);
 
-/* Windows.Web.Syndication.SyndicationGenerator.GetXmlDocument(format) */
 HRESULT wwesy_syndication_generator_get_xml_document(WWESY_SyndicationGenerator *self, WWESY_SyndicationFormat format, WDAXMDO_XmlDocument** out);
 
-/* activate Windows.Web.Syndication.SyndicationItem */
 HRESULT wwesy_syndication_item_new(WWESY_SyndicationItem **out);
 
-/* Windows.Web.Syndication.SyndicationItem */
-/* Windows.Web.Syndication.SyndicationItem.get_Authors() */
 HRESULT wwesy_syndication_item_get__authors(WWESY_SyndicationItem *self, WFOCO_IVector_WWESY_SyndicationPerson** value);
 
-/* Windows.Web.Syndication.SyndicationItem.get_Categories() */
 HRESULT wwesy_syndication_item_get__categories(WWESY_SyndicationItem *self, WFOCO_IVector_WWESY_SyndicationCategory** value);
 
-/* Windows.Web.Syndication.SyndicationItem.get_Contributors() */
 HRESULT wwesy_syndication_item_get__contributors(WWESY_SyndicationItem *self, WFOCO_IVector_WWESY_SyndicationPerson** value);
 
-/* Windows.Web.Syndication.SyndicationItem.get_Content() */
 HRESULT wwesy_syndication_item_get__content(WWESY_SyndicationItem *self, WWESY_SyndicationContent** value);
 
-/* Windows.Web.Syndication.SyndicationItem.put_Content() */
 HRESULT wwesy_syndication_item_put__content(WWESY_SyndicationItem *self, WWESY_SyndicationContent* value);
 
-/* Windows.Web.Syndication.SyndicationItem.get_Id() */
 HRESULT wwesy_syndication_item_get__id(WWESY_SyndicationItem *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationItem.put_Id() */
 HRESULT wwesy_syndication_item_put__id(WWESY_SyndicationItem *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationItem.get_LastUpdatedTime() */
 HRESULT wwesy_syndication_item_get__last_updated_time(WWESY_SyndicationItem *self, WF_DateTime *value);
 
-/* Windows.Web.Syndication.SyndicationItem.put_LastUpdatedTime() */
 HRESULT wwesy_syndication_item_put__last_updated_time(WWESY_SyndicationItem *self, WF_DateTime value);
 
-/* Windows.Web.Syndication.SyndicationItem.get_Links() */
 HRESULT wwesy_syndication_item_get__links(WWESY_SyndicationItem *self, WFOCO_IVector_WWESY_SyndicationLink** value);
 
-/* Windows.Web.Syndication.SyndicationItem.get_PublishedDate() */
 HRESULT wwesy_syndication_item_get__published_date(WWESY_SyndicationItem *self, WF_DateTime *value);
 
-/* Windows.Web.Syndication.SyndicationItem.put_PublishedDate() */
 HRESULT wwesy_syndication_item_put__published_date(WWESY_SyndicationItem *self, WF_DateTime value);
 
-/* Windows.Web.Syndication.SyndicationItem.get_Rights() */
 HRESULT wwesy_syndication_item_get__rights(WWESY_SyndicationItem *self, WWESY_ISyndicationText** value);
 
-/* Windows.Web.Syndication.SyndicationItem.put_Rights() */
 HRESULT wwesy_syndication_item_put__rights(WWESY_SyndicationItem *self, WWESY_ISyndicationText* value);
 
-/* Windows.Web.Syndication.SyndicationItem.get_Source() */
 HRESULT wwesy_syndication_item_get__source(WWESY_SyndicationItem *self, WWESY_SyndicationFeed** value);
 
-/* Windows.Web.Syndication.SyndicationItem.put_Source() */
 HRESULT wwesy_syndication_item_put__source(WWESY_SyndicationItem *self, WWESY_SyndicationFeed* value);
 
-/* Windows.Web.Syndication.SyndicationItem.get_Summary() */
 HRESULT wwesy_syndication_item_get__summary(WWESY_SyndicationItem *self, WWESY_ISyndicationText** value);
 
-/* Windows.Web.Syndication.SyndicationItem.put_Summary() */
 HRESULT wwesy_syndication_item_put__summary(WWESY_SyndicationItem *self, WWESY_ISyndicationText* value);
 
-/* Windows.Web.Syndication.SyndicationItem.get_Title() */
 HRESULT wwesy_syndication_item_get__title(WWESY_SyndicationItem *self, WWESY_ISyndicationText** value);
 
-/* Windows.Web.Syndication.SyndicationItem.put_Title() */
 HRESULT wwesy_syndication_item_put__title(WWESY_SyndicationItem *self, WWESY_ISyndicationText* value);
 
-/* Windows.Web.Syndication.SyndicationItem.get_CommentsUri() */
 HRESULT wwesy_syndication_item_get__comments_uri(WWESY_SyndicationItem *self, WF_Uri** value);
 
-/* Windows.Web.Syndication.SyndicationItem.put_CommentsUri() */
 HRESULT wwesy_syndication_item_put__comments_uri(WWESY_SyndicationItem *self, WF_Uri* value);
 
-/* Windows.Web.Syndication.SyndicationItem.get_EditUri() */
 HRESULT wwesy_syndication_item_get__edit_uri(WWESY_SyndicationItem *self, WF_Uri** value);
 
-/* Windows.Web.Syndication.SyndicationItem.get_EditMediaUri() */
 HRESULT wwesy_syndication_item_get__edit_media_uri(WWESY_SyndicationItem *self, WF_Uri** value);
 
-/* Windows.Web.Syndication.SyndicationItem.get_ETag() */
 HRESULT wwesy_syndication_item_get__e_tag(WWESY_SyndicationItem *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationItem.get_ItemUri() */
 HRESULT wwesy_syndication_item_get__item_uri(WWESY_SyndicationItem *self, WF_Uri** value);
 
-/* Windows.Web.Syndication.SyndicationItem.Load(item) */
 HRESULT wwesy_syndication_item_load(WWESY_SyndicationItem *self, cwinrt_hstring item);
 
-/* Windows.Web.Syndication.SyndicationItem.LoadFromXml(itemDocument) */
 HRESULT wwesy_syndication_item_load_from_xml(WWESY_SyndicationItem *self, WDAXMDO_XmlDocument* itemDocument);
 
-/* Windows.Web.Syndication.SyndicationItem.get_NodeName() */
 HRESULT wwesy_syndication_item_get__node_name(WWESY_SyndicationItem *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationItem.put_NodeName() */
 HRESULT wwesy_syndication_item_put__node_name(WWESY_SyndicationItem *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationItem.get_NodeNamespace() */
 HRESULT wwesy_syndication_item_get__node_namespace(WWESY_SyndicationItem *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationItem.put_NodeNamespace() */
 HRESULT wwesy_syndication_item_put__node_namespace(WWESY_SyndicationItem *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationItem.get_NodeValue() */
 HRESULT wwesy_syndication_item_get__node_value(WWESY_SyndicationItem *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationItem.put_NodeValue() */
 HRESULT wwesy_syndication_item_put__node_value(WWESY_SyndicationItem *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationItem.get_Language() */
 HRESULT wwesy_syndication_item_get__language(WWESY_SyndicationItem *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationItem.put_Language() */
 HRESULT wwesy_syndication_item_put__language(WWESY_SyndicationItem *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationItem.get_BaseUri() */
 HRESULT wwesy_syndication_item_get__base_uri(WWESY_SyndicationItem *self, WF_Uri** value);
 
-/* Windows.Web.Syndication.SyndicationItem.put_BaseUri() */
 HRESULT wwesy_syndication_item_put__base_uri(WWESY_SyndicationItem *self, WF_Uri* value);
 
-/* Windows.Web.Syndication.SyndicationItem.get_AttributeExtensions() */
 HRESULT wwesy_syndication_item_get__attribute_extensions(WWESY_SyndicationItem *self, WFOCO_IVector_WWESY_SyndicationAttribute** value);
 
-/* Windows.Web.Syndication.SyndicationItem.get_ElementExtensions() */
 HRESULT wwesy_syndication_item_get__element_extensions(WWESY_SyndicationItem *self, WFOCO_IVector_WWESY_ISyndicationNode** value);
 
-/* Windows.Web.Syndication.SyndicationItem.GetXmlDocument(format) */
 HRESULT wwesy_syndication_item_get_xml_document(WWESY_SyndicationItem *self, WWESY_SyndicationFormat format, WDAXMDO_XmlDocument** out);
 
-/* activate Windows.Web.Syndication.SyndicationLink */
 HRESULT wwesy_syndication_link_new(WWESY_SyndicationLink **out);
 
-/* Windows.Web.Syndication.SyndicationLink */
-/* Windows.Web.Syndication.SyndicationLink.get_Length() */
 HRESULT wwesy_syndication_link_get__length(WWESY_SyndicationLink *self, uint32_t *value);
 
-/* Windows.Web.Syndication.SyndicationLink.put_Length() */
 HRESULT wwesy_syndication_link_put__length(WWESY_SyndicationLink *self, uint32_t value);
 
-/* Windows.Web.Syndication.SyndicationLink.get_MediaType() */
 HRESULT wwesy_syndication_link_get__media_type(WWESY_SyndicationLink *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationLink.put_MediaType() */
 HRESULT wwesy_syndication_link_put__media_type(WWESY_SyndicationLink *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationLink.get_Relationship() */
 HRESULT wwesy_syndication_link_get__relationship(WWESY_SyndicationLink *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationLink.put_Relationship() */
 HRESULT wwesy_syndication_link_put__relationship(WWESY_SyndicationLink *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationLink.get_Title() */
 HRESULT wwesy_syndication_link_get__title(WWESY_SyndicationLink *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationLink.put_Title() */
 HRESULT wwesy_syndication_link_put__title(WWESY_SyndicationLink *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationLink.get_Uri() */
 HRESULT wwesy_syndication_link_get__uri(WWESY_SyndicationLink *self, WF_Uri** value);
 
-/* Windows.Web.Syndication.SyndicationLink.put_Uri() */
 HRESULT wwesy_syndication_link_put__uri(WWESY_SyndicationLink *self, WF_Uri* value);
 
-/* Windows.Web.Syndication.SyndicationLink.get_ResourceLanguage() */
 HRESULT wwesy_syndication_link_get__resource_language(WWESY_SyndicationLink *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationLink.put_ResourceLanguage() */
 HRESULT wwesy_syndication_link_put__resource_language(WWESY_SyndicationLink *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationLink.get_NodeName() */
 HRESULT wwesy_syndication_link_get__node_name(WWESY_SyndicationLink *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationLink.put_NodeName() */
 HRESULT wwesy_syndication_link_put__node_name(WWESY_SyndicationLink *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationLink.get_NodeNamespace() */
 HRESULT wwesy_syndication_link_get__node_namespace(WWESY_SyndicationLink *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationLink.put_NodeNamespace() */
 HRESULT wwesy_syndication_link_put__node_namespace(WWESY_SyndicationLink *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationLink.get_NodeValue() */
 HRESULT wwesy_syndication_link_get__node_value(WWESY_SyndicationLink *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationLink.put_NodeValue() */
 HRESULT wwesy_syndication_link_put__node_value(WWESY_SyndicationLink *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationLink.get_Language() */
 HRESULT wwesy_syndication_link_get__language(WWESY_SyndicationLink *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationLink.put_Language() */
 HRESULT wwesy_syndication_link_put__language(WWESY_SyndicationLink *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationLink.get_BaseUri() */
 HRESULT wwesy_syndication_link_get__base_uri(WWESY_SyndicationLink *self, WF_Uri** value);
 
-/* Windows.Web.Syndication.SyndicationLink.put_BaseUri() */
 HRESULT wwesy_syndication_link_put__base_uri(WWESY_SyndicationLink *self, WF_Uri* value);
 
-/* Windows.Web.Syndication.SyndicationLink.get_AttributeExtensions() */
 HRESULT wwesy_syndication_link_get__attribute_extensions(WWESY_SyndicationLink *self, WFOCO_IVector_WWESY_SyndicationAttribute** value);
 
-/* Windows.Web.Syndication.SyndicationLink.get_ElementExtensions() */
 HRESULT wwesy_syndication_link_get__element_extensions(WWESY_SyndicationLink *self, WFOCO_IVector_WWESY_ISyndicationNode** value);
 
-/* Windows.Web.Syndication.SyndicationLink.GetXmlDocument(format) */
 HRESULT wwesy_syndication_link_get_xml_document(WWESY_SyndicationLink *self, WWESY_SyndicationFormat format, WDAXMDO_XmlDocument** out);
 
-/* activate Windows.Web.Syndication.SyndicationNode */
 HRESULT wwesy_syndication_node_new(WWESY_SyndicationNode **out);
 
-/* Windows.Web.Syndication.SyndicationNode */
-/* Windows.Web.Syndication.SyndicationNode.get_NodeName() */
 HRESULT wwesy_syndication_node_get__node_name(WWESY_SyndicationNode *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationNode.put_NodeName() */
 HRESULT wwesy_syndication_node_put__node_name(WWESY_SyndicationNode *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationNode.get_NodeNamespace() */
 HRESULT wwesy_syndication_node_get__node_namespace(WWESY_SyndicationNode *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationNode.put_NodeNamespace() */
 HRESULT wwesy_syndication_node_put__node_namespace(WWESY_SyndicationNode *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationNode.get_NodeValue() */
 HRESULT wwesy_syndication_node_get__node_value(WWESY_SyndicationNode *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationNode.put_NodeValue() */
 HRESULT wwesy_syndication_node_put__node_value(WWESY_SyndicationNode *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationNode.get_Language() */
 HRESULT wwesy_syndication_node_get__language(WWESY_SyndicationNode *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationNode.put_Language() */
 HRESULT wwesy_syndication_node_put__language(WWESY_SyndicationNode *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationNode.get_BaseUri() */
 HRESULT wwesy_syndication_node_get__base_uri(WWESY_SyndicationNode *self, WF_Uri** value);
 
-/* Windows.Web.Syndication.SyndicationNode.put_BaseUri() */
 HRESULT wwesy_syndication_node_put__base_uri(WWESY_SyndicationNode *self, WF_Uri* value);
 
-/* Windows.Web.Syndication.SyndicationNode.get_AttributeExtensions() */
 HRESULT wwesy_syndication_node_get__attribute_extensions(WWESY_SyndicationNode *self, WFOCO_IVector_WWESY_SyndicationAttribute** value);
 
-/* Windows.Web.Syndication.SyndicationNode.get_ElementExtensions() */
 HRESULT wwesy_syndication_node_get__element_extensions(WWESY_SyndicationNode *self, WFOCO_IVector_WWESY_ISyndicationNode** value);
 
-/* Windows.Web.Syndication.SyndicationNode.GetXmlDocument(format) */
 HRESULT wwesy_syndication_node_get_xml_document(WWESY_SyndicationNode *self, WWESY_SyndicationFormat format, WDAXMDO_XmlDocument** out);
 
-/* activate Windows.Web.Syndication.SyndicationPerson */
 HRESULT wwesy_syndication_person_new(WWESY_SyndicationPerson **out);
 
-/* Windows.Web.Syndication.SyndicationPerson */
-/* Windows.Web.Syndication.SyndicationPerson.get_Email() */
 HRESULT wwesy_syndication_person_get__email(WWESY_SyndicationPerson *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationPerson.put_Email() */
 HRESULT wwesy_syndication_person_put__email(WWESY_SyndicationPerson *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationPerson.get_Name() */
 HRESULT wwesy_syndication_person_get__name(WWESY_SyndicationPerson *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationPerson.put_Name() */
 HRESULT wwesy_syndication_person_put__name(WWESY_SyndicationPerson *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationPerson.get_Uri() */
 HRESULT wwesy_syndication_person_get__uri(WWESY_SyndicationPerson *self, WF_Uri** value);
 
-/* Windows.Web.Syndication.SyndicationPerson.put_Uri() */
 HRESULT wwesy_syndication_person_put__uri(WWESY_SyndicationPerson *self, WF_Uri* value);
 
-/* Windows.Web.Syndication.SyndicationPerson.get_NodeName() */
 HRESULT wwesy_syndication_person_get__node_name(WWESY_SyndicationPerson *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationPerson.put_NodeName() */
 HRESULT wwesy_syndication_person_put__node_name(WWESY_SyndicationPerson *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationPerson.get_NodeNamespace() */
 HRESULT wwesy_syndication_person_get__node_namespace(WWESY_SyndicationPerson *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationPerson.put_NodeNamespace() */
 HRESULT wwesy_syndication_person_put__node_namespace(WWESY_SyndicationPerson *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationPerson.get_NodeValue() */
 HRESULT wwesy_syndication_person_get__node_value(WWESY_SyndicationPerson *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationPerson.put_NodeValue() */
 HRESULT wwesy_syndication_person_put__node_value(WWESY_SyndicationPerson *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationPerson.get_Language() */
 HRESULT wwesy_syndication_person_get__language(WWESY_SyndicationPerson *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationPerson.put_Language() */
 HRESULT wwesy_syndication_person_put__language(WWESY_SyndicationPerson *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationPerson.get_BaseUri() */
 HRESULT wwesy_syndication_person_get__base_uri(WWESY_SyndicationPerson *self, WF_Uri** value);
 
-/* Windows.Web.Syndication.SyndicationPerson.put_BaseUri() */
 HRESULT wwesy_syndication_person_put__base_uri(WWESY_SyndicationPerson *self, WF_Uri* value);
 
-/* Windows.Web.Syndication.SyndicationPerson.get_AttributeExtensions() */
 HRESULT wwesy_syndication_person_get__attribute_extensions(WWESY_SyndicationPerson *self, WFOCO_IVector_WWESY_SyndicationAttribute** value);
 
-/* Windows.Web.Syndication.SyndicationPerson.get_ElementExtensions() */
 HRESULT wwesy_syndication_person_get__element_extensions(WWESY_SyndicationPerson *self, WFOCO_IVector_WWESY_ISyndicationNode** value);
 
-/* Windows.Web.Syndication.SyndicationPerson.GetXmlDocument(format) */
 HRESULT wwesy_syndication_person_get_xml_document(WWESY_SyndicationPerson *self, WWESY_SyndicationFormat format, WDAXMDO_XmlDocument** out);
 
-/* activate Windows.Web.Syndication.SyndicationText */
 HRESULT wwesy_syndication_text_new(WWESY_SyndicationText **out);
 
-/* Windows.Web.Syndication.SyndicationText */
-/* Windows.Web.Syndication.SyndicationText.get_Text() */
 HRESULT wwesy_syndication_text_get__text(WWESY_SyndicationText *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationText.put_Text() */
 HRESULT wwesy_syndication_text_put__text(WWESY_SyndicationText *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationText.get_Type() */
 HRESULT wwesy_syndication_text_get__type(WWESY_SyndicationText *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationText.put_Type() */
 HRESULT wwesy_syndication_text_put__type(WWESY_SyndicationText *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationText.get_Xml() */
 HRESULT wwesy_syndication_text_get__xml(WWESY_SyndicationText *self, WDAXMDO_XmlDocument** value);
 
-/* Windows.Web.Syndication.SyndicationText.put_Xml() */
 HRESULT wwesy_syndication_text_put__xml(WWESY_SyndicationText *self, WDAXMDO_XmlDocument* value);
 
-/* Windows.Web.Syndication.SyndicationText.get_NodeName() */
 HRESULT wwesy_syndication_text_get__node_name(WWESY_SyndicationText *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationText.put_NodeName() */
 HRESULT wwesy_syndication_text_put__node_name(WWESY_SyndicationText *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationText.get_NodeNamespace() */
 HRESULT wwesy_syndication_text_get__node_namespace(WWESY_SyndicationText *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationText.put_NodeNamespace() */
 HRESULT wwesy_syndication_text_put__node_namespace(WWESY_SyndicationText *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationText.get_NodeValue() */
 HRESULT wwesy_syndication_text_get__node_value(WWESY_SyndicationText *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationText.put_NodeValue() */
 HRESULT wwesy_syndication_text_put__node_value(WWESY_SyndicationText *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationText.get_Language() */
 HRESULT wwesy_syndication_text_get__language(WWESY_SyndicationText *self, cwinrt_hstring *value);
 
-/* Windows.Web.Syndication.SyndicationText.put_Language() */
 HRESULT wwesy_syndication_text_put__language(WWESY_SyndicationText *self, cwinrt_hstring value);
 
-/* Windows.Web.Syndication.SyndicationText.get_BaseUri() */
 HRESULT wwesy_syndication_text_get__base_uri(WWESY_SyndicationText *self, WF_Uri** value);
 
-/* Windows.Web.Syndication.SyndicationText.put_BaseUri() */
 HRESULT wwesy_syndication_text_put__base_uri(WWESY_SyndicationText *self, WF_Uri* value);
 
-/* Windows.Web.Syndication.SyndicationText.get_AttributeExtensions() */
 HRESULT wwesy_syndication_text_get__attribute_extensions(WWESY_SyndicationText *self, WFOCO_IVector_WWESY_SyndicationAttribute** value);
 
-/* Windows.Web.Syndication.SyndicationText.get_ElementExtensions() */
 HRESULT wwesy_syndication_text_get__element_extensions(WWESY_SyndicationText *self, WFOCO_IVector_WWESY_ISyndicationNode** value);
 
-/* Windows.Web.Syndication.SyndicationText.GetXmlDocument(format) */
 HRESULT wwesy_syndication_text_get_xml_document(WWESY_SyndicationText *self, WWESY_SyndicationFormat format, WDAXMDO_XmlDocument** out);
 
-/* Windows.Web.Syndication.ISyndicationAttributeFactory */
-/* Windows.Web.Syndication.ISyndicationAttributeFactory.CreateSyndicationAttribute(attributeName, attributeNamespace, attributeValue) */
 HRESULT wwesy_syndication_attribute_factory_create_syndication_attribute(WWESY_ISyndicationAttributeFactory *self, cwinrt_hstring attributeName, cwinrt_hstring attributeNamespace, cwinrt_hstring attributeValue, WWESY_SyndicationAttribute** out);
 
-/* Windows.Web.Syndication.ISyndicationAttribute */
-/* Windows.Web.Syndication.ISyndicationCategory */
-/* Windows.Web.Syndication.ISyndicationClient */
-/* Windows.Web.Syndication.ISyndicationContent */
-/* Windows.Web.Syndication.ISyndicationFeed */
-/* Windows.Web.Syndication.ISyndicationGenerator */
-/* Windows.Web.Syndication.ISyndicationItem */
-/* Windows.Web.Syndication.ISyndicationLink */
-/* Windows.Web.Syndication.ISyndicationPerson */
-/* Windows.Web.Syndication.ISyndicationText */
-/* Windows.Web.Syndication.ISyndicationNode */
 #endif /* CWINRT_WINDOWS_WEB_SYNDICATION_H */

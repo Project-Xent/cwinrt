@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.UI.Input.Inking.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WUIININAN_InkAnalysisRoot WUIININAN_InkAnalysisRoot;
 typedef struct WUIININAN_InkAnalysisResult WUIININAN_InkAnalysisResult;
 typedef struct WUIININAN_InkAnalysisParagraph WUIININAN_InkAnalysisParagraph;
@@ -38,7 +37,6 @@ typedef struct WUIININAN_IInkAnalyzer WUIININAN_IInkAnalyzer;
 typedef struct WUIININAN_IInkAnalysisWritingRegion WUIININAN_IInkAnalysisWritingRegion;
 typedef struct WUIININAN_IInkAnalysisNode WUIININAN_IInkAnalysisNode;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IVectorView_WUIININAN_IInkAnalysisNode
 #define CWINRT_FWD_WFOCO_IVectorView_WUIININAN_IInkAnalysisNode
 typedef struct WFOCO_IVectorView_WUIININAN_IInkAnalysisNode WFOCO_IVectorView_WUIININAN_IInkAnalysisNode;
@@ -125,7 +123,6 @@ typedef enum WUIININAN_InkAnalysisStatus {
 } WUIININAN_InkAnalysisStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -178,326 +175,202 @@ static const IID CWINRT_IID_WUIININAN_IInkAnalysisWritingRegion CWINRT_MAYBE_UNU
 static const IID CWINRT_IID_WUIININAN_IInkAnalysisNode CWINRT_MAYBE_UNUSED = { 0x30831F05, 0x5F64, 0x4A2C, { 0xBA, 0x37, 0x4F, 0x48, 0x87, 0x87, 0x95, 0x74 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.UI.Input.Inking.Analysis.InkAnalysisRoot */
 HRESULT wuiininan_ink_analysis_root_new(WUIININAN_InkAnalysisRoot **out);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisRoot */
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisRoot.get_RecognizedText() */
 HRESULT wuiininan_ink_analysis_root_get__recognized_text(WUIININAN_InkAnalysisRoot *self, cwinrt_hstring *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisRoot.FindNodes(nodeKind) */
 HRESULT wuiininan_ink_analysis_root_find_nodes(WUIININAN_InkAnalysisRoot *self, WUIININAN_InkAnalysisNodeKind nodeKind, WFOCO_IVectorView_WUIININAN_IInkAnalysisNode** out);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisRoot.get_Id() */
 HRESULT wuiininan_ink_analysis_root_get__id(WUIININAN_InkAnalysisRoot *self, uint32_t *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisRoot.get_Kind() */
 HRESULT wuiininan_ink_analysis_root_get__kind(WUIININAN_InkAnalysisRoot *self, WUIININAN_InkAnalysisNodeKind *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisRoot.get_BoundingRect() */
 HRESULT wuiininan_ink_analysis_root_get__bounding_rect(WUIININAN_InkAnalysisRoot *self, WF_Rect *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisRoot.get_RotatedBoundingRect() */
 HRESULT wuiininan_ink_analysis_root_get__rotated_bounding_rect(WUIININAN_InkAnalysisRoot *self, WFOCO_IVectorView_WF_Point** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisRoot.get_Children() */
 HRESULT wuiininan_ink_analysis_root_get__children(WUIININAN_InkAnalysisRoot *self, WFOCO_IVectorView_WUIININAN_IInkAnalysisNode** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisRoot.get_Parent() */
 HRESULT wuiininan_ink_analysis_root_get__parent(WUIININAN_InkAnalysisRoot *self, WUIININAN_IInkAnalysisNode** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisRoot.GetStrokeIds() */
 HRESULT wuiininan_ink_analysis_root_get_stroke_ids(WUIININAN_InkAnalysisRoot *self, WFOCO_IVectorView_uint32_t** out);
 
-/* activate Windows.UI.Input.Inking.Analysis.InkAnalysisResult */
 HRESULT wuiininan_ink_analysis_result_new(WUIININAN_InkAnalysisResult **out);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisResult */
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisResult.get_Status() */
 HRESULT wuiininan_ink_analysis_result_get__status(WUIININAN_InkAnalysisResult *self, WUIININAN_InkAnalysisStatus *value);
 
-/* activate Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph */
 HRESULT wuiininan_ink_analysis_paragraph_new(WUIININAN_InkAnalysisParagraph **out);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph */
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph.get_RecognizedText() */
 HRESULT wuiininan_ink_analysis_paragraph_get__recognized_text(WUIININAN_InkAnalysisParagraph *self, cwinrt_hstring *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph.get_Id() */
 HRESULT wuiininan_ink_analysis_paragraph_get__id(WUIININAN_InkAnalysisParagraph *self, uint32_t *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph.get_Kind() */
 HRESULT wuiininan_ink_analysis_paragraph_get__kind(WUIININAN_InkAnalysisParagraph *self, WUIININAN_InkAnalysisNodeKind *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph.get_BoundingRect() */
 HRESULT wuiininan_ink_analysis_paragraph_get__bounding_rect(WUIININAN_InkAnalysisParagraph *self, WF_Rect *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph.get_RotatedBoundingRect() */
 HRESULT wuiininan_ink_analysis_paragraph_get__rotated_bounding_rect(WUIININAN_InkAnalysisParagraph *self, WFOCO_IVectorView_WF_Point** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph.get_Children() */
 HRESULT wuiininan_ink_analysis_paragraph_get__children(WUIININAN_InkAnalysisParagraph *self, WFOCO_IVectorView_WUIININAN_IInkAnalysisNode** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph.get_Parent() */
 HRESULT wuiininan_ink_analysis_paragraph_get__parent(WUIININAN_InkAnalysisParagraph *self, WUIININAN_IInkAnalysisNode** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph.GetStrokeIds() */
 HRESULT wuiininan_ink_analysis_paragraph_get_stroke_ids(WUIININAN_InkAnalysisParagraph *self, WFOCO_IVectorView_uint32_t** out);
 
-/* activate Windows.UI.Input.Inking.Analysis.InkAnalysisNode */
 HRESULT wuiininan_ink_analysis_node_new(WUIININAN_InkAnalysisNode **out);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisNode */
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisNode.get_Id() */
 HRESULT wuiininan_ink_analysis_node_get__id(WUIININAN_InkAnalysisNode *self, uint32_t *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisNode.get_Kind() */
 HRESULT wuiininan_ink_analysis_node_get__kind(WUIININAN_InkAnalysisNode *self, WUIININAN_InkAnalysisNodeKind *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisNode.get_BoundingRect() */
 HRESULT wuiininan_ink_analysis_node_get__bounding_rect(WUIININAN_InkAnalysisNode *self, WF_Rect *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisNode.get_RotatedBoundingRect() */
 HRESULT wuiininan_ink_analysis_node_get__rotated_bounding_rect(WUIININAN_InkAnalysisNode *self, WFOCO_IVectorView_WF_Point** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisNode.get_Children() */
 HRESULT wuiininan_ink_analysis_node_get__children(WUIININAN_InkAnalysisNode *self, WFOCO_IVectorView_WUIININAN_IInkAnalysisNode** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisNode.get_Parent() */
 HRESULT wuiininan_ink_analysis_node_get__parent(WUIININAN_InkAnalysisNode *self, WUIININAN_IInkAnalysisNode** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisNode.GetStrokeIds() */
 HRESULT wuiininan_ink_analysis_node_get_stroke_ids(WUIININAN_InkAnalysisNode *self, WFOCO_IVectorView_uint32_t** out);
 
-/* activate Windows.UI.Input.Inking.Analysis.InkAnalysisListItem */
 HRESULT wuiininan_ink_analysis_list_item_new(WUIININAN_InkAnalysisListItem **out);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisListItem */
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisListItem.get_RecognizedText() */
 HRESULT wuiininan_ink_analysis_list_item_get__recognized_text(WUIININAN_InkAnalysisListItem *self, cwinrt_hstring *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisListItem.get_Id() */
 HRESULT wuiininan_ink_analysis_list_item_get__id(WUIININAN_InkAnalysisListItem *self, uint32_t *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisListItem.get_Kind() */
 HRESULT wuiininan_ink_analysis_list_item_get__kind(WUIININAN_InkAnalysisListItem *self, WUIININAN_InkAnalysisNodeKind *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisListItem.get_BoundingRect() */
 HRESULT wuiininan_ink_analysis_list_item_get__bounding_rect(WUIININAN_InkAnalysisListItem *self, WF_Rect *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisListItem.get_RotatedBoundingRect() */
 HRESULT wuiininan_ink_analysis_list_item_get__rotated_bounding_rect(WUIININAN_InkAnalysisListItem *self, WFOCO_IVectorView_WF_Point** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisListItem.get_Children() */
 HRESULT wuiininan_ink_analysis_list_item_get__children(WUIININAN_InkAnalysisListItem *self, WFOCO_IVectorView_WUIININAN_IInkAnalysisNode** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisListItem.get_Parent() */
 HRESULT wuiininan_ink_analysis_list_item_get__parent(WUIININAN_InkAnalysisListItem *self, WUIININAN_IInkAnalysisNode** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisListItem.GetStrokeIds() */
 HRESULT wuiininan_ink_analysis_list_item_get_stroke_ids(WUIININAN_InkAnalysisListItem *self, WFOCO_IVectorView_uint32_t** out);
 
-/* activate Windows.UI.Input.Inking.Analysis.InkAnalysisLine */
 HRESULT wuiininan_ink_analysis_line_new(WUIININAN_InkAnalysisLine **out);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisLine */
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisLine.get_RecognizedText() */
 HRESULT wuiininan_ink_analysis_line_get__recognized_text(WUIININAN_InkAnalysisLine *self, cwinrt_hstring *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisLine.get_IndentLevel() */
 HRESULT wuiininan_ink_analysis_line_get__indent_level(WUIININAN_InkAnalysisLine *self, int32_t *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisLine.get_Id() */
 HRESULT wuiininan_ink_analysis_line_get__id(WUIININAN_InkAnalysisLine *self, uint32_t *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisLine.get_Kind() */
 HRESULT wuiininan_ink_analysis_line_get__kind(WUIININAN_InkAnalysisLine *self, WUIININAN_InkAnalysisNodeKind *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisLine.get_BoundingRect() */
 HRESULT wuiininan_ink_analysis_line_get__bounding_rect(WUIININAN_InkAnalysisLine *self, WF_Rect *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisLine.get_RotatedBoundingRect() */
 HRESULT wuiininan_ink_analysis_line_get__rotated_bounding_rect(WUIININAN_InkAnalysisLine *self, WFOCO_IVectorView_WF_Point** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisLine.get_Children() */
 HRESULT wuiininan_ink_analysis_line_get__children(WUIININAN_InkAnalysisLine *self, WFOCO_IVectorView_WUIININAN_IInkAnalysisNode** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisLine.get_Parent() */
 HRESULT wuiininan_ink_analysis_line_get__parent(WUIININAN_InkAnalysisLine *self, WUIININAN_IInkAnalysisNode** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisLine.GetStrokeIds() */
 HRESULT wuiininan_ink_analysis_line_get_stroke_ids(WUIININAN_InkAnalysisLine *self, WFOCO_IVectorView_uint32_t** out);
 
-/* activate Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord */
 HRESULT wuiininan_ink_analysis_ink_word_new(WUIININAN_InkAnalysisInkWord **out);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord */
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord.get_RecognizedText() */
 HRESULT wuiininan_ink_analysis_ink_word_get__recognized_text(WUIININAN_InkAnalysisInkWord *self, cwinrt_hstring *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord.get_TextAlternates() */
 HRESULT wuiininan_ink_analysis_ink_word_get__text_alternates(WUIININAN_InkAnalysisInkWord *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord.get_Id() */
 HRESULT wuiininan_ink_analysis_ink_word_get__id(WUIININAN_InkAnalysisInkWord *self, uint32_t *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord.get_Kind() */
 HRESULT wuiininan_ink_analysis_ink_word_get__kind(WUIININAN_InkAnalysisInkWord *self, WUIININAN_InkAnalysisNodeKind *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord.get_BoundingRect() */
 HRESULT wuiininan_ink_analysis_ink_word_get__bounding_rect(WUIININAN_InkAnalysisInkWord *self, WF_Rect *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord.get_RotatedBoundingRect() */
 HRESULT wuiininan_ink_analysis_ink_word_get__rotated_bounding_rect(WUIININAN_InkAnalysisInkWord *self, WFOCO_IVectorView_WF_Point** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord.get_Children() */
 HRESULT wuiininan_ink_analysis_ink_word_get__children(WUIININAN_InkAnalysisInkWord *self, WFOCO_IVectorView_WUIININAN_IInkAnalysisNode** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord.get_Parent() */
 HRESULT wuiininan_ink_analysis_ink_word_get__parent(WUIININAN_InkAnalysisInkWord *self, WUIININAN_IInkAnalysisNode** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord.GetStrokeIds() */
 HRESULT wuiininan_ink_analysis_ink_word_get_stroke_ids(WUIININAN_InkAnalysisInkWord *self, WFOCO_IVectorView_uint32_t** out);
 
-/* activate Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing */
 HRESULT wuiininan_ink_analysis_ink_drawing_new(WUIININAN_InkAnalysisInkDrawing **out);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing */
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing.get_DrawingKind() */
 HRESULT wuiininan_ink_analysis_ink_drawing_get__drawing_kind(WUIININAN_InkAnalysisInkDrawing *self, WUIININAN_InkAnalysisDrawingKind *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing.get_Center() */
 HRESULT wuiininan_ink_analysis_ink_drawing_get__center(WUIININAN_InkAnalysisInkDrawing *self, WF_Point *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing.get_Points() */
 HRESULT wuiininan_ink_analysis_ink_drawing_get__points(WUIININAN_InkAnalysisInkDrawing *self, WFOCO_IVectorView_WF_Point** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing.get_Id() */
 HRESULT wuiininan_ink_analysis_ink_drawing_get__id(WUIININAN_InkAnalysisInkDrawing *self, uint32_t *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing.get_Kind() */
 HRESULT wuiininan_ink_analysis_ink_drawing_get__kind(WUIININAN_InkAnalysisInkDrawing *self, WUIININAN_InkAnalysisNodeKind *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing.get_BoundingRect() */
 HRESULT wuiininan_ink_analysis_ink_drawing_get__bounding_rect(WUIININAN_InkAnalysisInkDrawing *self, WF_Rect *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing.get_RotatedBoundingRect() */
 HRESULT wuiininan_ink_analysis_ink_drawing_get__rotated_bounding_rect(WUIININAN_InkAnalysisInkDrawing *self, WFOCO_IVectorView_WF_Point** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing.get_Children() */
 HRESULT wuiininan_ink_analysis_ink_drawing_get__children(WUIININAN_InkAnalysisInkDrawing *self, WFOCO_IVectorView_WUIININAN_IInkAnalysisNode** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing.get_Parent() */
 HRESULT wuiininan_ink_analysis_ink_drawing_get__parent(WUIININAN_InkAnalysisInkDrawing *self, WUIININAN_IInkAnalysisNode** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing.GetStrokeIds() */
 HRESULT wuiininan_ink_analysis_ink_drawing_get_stroke_ids(WUIININAN_InkAnalysisInkDrawing *self, WFOCO_IVectorView_uint32_t** out);
 
-/* activate Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet */
 HRESULT wuiininan_ink_analysis_ink_bullet_new(WUIININAN_InkAnalysisInkBullet **out);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet */
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet.get_RecognizedText() */
 HRESULT wuiininan_ink_analysis_ink_bullet_get__recognized_text(WUIININAN_InkAnalysisInkBullet *self, cwinrt_hstring *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet.get_Id() */
 HRESULT wuiininan_ink_analysis_ink_bullet_get__id(WUIININAN_InkAnalysisInkBullet *self, uint32_t *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet.get_Kind() */
 HRESULT wuiininan_ink_analysis_ink_bullet_get__kind(WUIININAN_InkAnalysisInkBullet *self, WUIININAN_InkAnalysisNodeKind *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet.get_BoundingRect() */
 HRESULT wuiininan_ink_analysis_ink_bullet_get__bounding_rect(WUIININAN_InkAnalysisInkBullet *self, WF_Rect *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet.get_RotatedBoundingRect() */
 HRESULT wuiininan_ink_analysis_ink_bullet_get__rotated_bounding_rect(WUIININAN_InkAnalysisInkBullet *self, WFOCO_IVectorView_WF_Point** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet.get_Children() */
 HRESULT wuiininan_ink_analysis_ink_bullet_get__children(WUIININAN_InkAnalysisInkBullet *self, WFOCO_IVectorView_WUIININAN_IInkAnalysisNode** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet.get_Parent() */
 HRESULT wuiininan_ink_analysis_ink_bullet_get__parent(WUIININAN_InkAnalysisInkBullet *self, WUIININAN_IInkAnalysisNode** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet.GetStrokeIds() */
 HRESULT wuiininan_ink_analysis_ink_bullet_get_stroke_ids(WUIININAN_InkAnalysisInkBullet *self, WFOCO_IVectorView_uint32_t** out);
 
-/* Windows.UI.Input.Inking.Analysis.IInkAnalyzerFactory */
-/* Windows.UI.Input.Inking.Analysis.IInkAnalyzerFactory.CreateAnalyzer() */
 HRESULT wuiininan_ink_analyzer_factory_create_analyzer(WUIININAN_IInkAnalyzerFactory *self, WUIININAN_InkAnalyzer** out);
 
-/* activate Windows.UI.Input.Inking.Analysis.InkAnalyzer */
 HRESULT wuiininan_ink_analyzer_new(WUIININAN_InkAnalyzer **out);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalyzer */
-/* Windows.UI.Input.Inking.Analysis.InkAnalyzer.get_AnalysisRoot() */
 HRESULT wuiininan_ink_analyzer_get__analysis_root(WUIININAN_InkAnalyzer *self, WUIININAN_InkAnalysisRoot** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalyzer.get_IsAnalyzing() */
 HRESULT wuiininan_ink_analyzer_get__is_analyzing(WUIININAN_InkAnalyzer *self, BOOL *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalyzer.AddDataForStroke(stroke) */
 HRESULT wuiininan_ink_analyzer_add_data_for_stroke(WUIININAN_InkAnalyzer *self, WUIININ_InkStroke* stroke);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalyzer.AddDataForStrokes(strokes) */
 HRESULT wuiininan_ink_analyzer_add_data_for_strokes(WUIININAN_InkAnalyzer *self, WFOCO_IIterable_WUIININ_InkStroke* strokes);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalyzer.ClearDataForAllStrokes() */
 HRESULT wuiininan_ink_analyzer_clear_data_for_all_strokes(WUIININAN_InkAnalyzer *self);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalyzer.RemoveDataForStroke(strokeId) */
 HRESULT wuiininan_ink_analyzer_remove_data_for_stroke(WUIININAN_InkAnalyzer *self, uint32_t strokeId);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalyzer.RemoveDataForStrokes(strokeIds) */
 HRESULT wuiininan_ink_analyzer_remove_data_for_strokes(WUIININAN_InkAnalyzer *self, WFOCO_IIterable_uint32_t* strokeIds);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalyzer.ReplaceDataForStroke(stroke) */
 HRESULT wuiininan_ink_analyzer_replace_data_for_stroke(WUIININAN_InkAnalyzer *self, WUIININ_InkStroke* stroke);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalyzer.SetStrokeDataKind(strokeId, strokeKind) */
 HRESULT wuiininan_ink_analyzer_set_stroke_data_kind(WUIININAN_InkAnalyzer *self, uint32_t strokeId, WUIININAN_InkAnalysisStrokeKind strokeKind);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalyzer.AnalyzeAsync() */
 HRESULT wuiininan_ink_analyzer_analyze_async(WUIININAN_InkAnalyzer *self, WF_IAsyncOperation_WUIININAN_InkAnalysisResult** out);
 
-/* activate Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion */
 HRESULT wuiininan_ink_analysis_writing_region_new(WUIININAN_InkAnalysisWritingRegion **out);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion */
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion.get_RecognizedText() */
 HRESULT wuiininan_ink_analysis_writing_region_get__recognized_text(WUIININAN_InkAnalysisWritingRegion *self, cwinrt_hstring *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion.get_Id() */
 HRESULT wuiininan_ink_analysis_writing_region_get__id(WUIININAN_InkAnalysisWritingRegion *self, uint32_t *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion.get_Kind() */
 HRESULT wuiininan_ink_analysis_writing_region_get__kind(WUIININAN_InkAnalysisWritingRegion *self, WUIININAN_InkAnalysisNodeKind *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion.get_BoundingRect() */
 HRESULT wuiininan_ink_analysis_writing_region_get__bounding_rect(WUIININAN_InkAnalysisWritingRegion *self, WF_Rect *value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion.get_RotatedBoundingRect() */
 HRESULT wuiininan_ink_analysis_writing_region_get__rotated_bounding_rect(WUIININAN_InkAnalysisWritingRegion *self, WFOCO_IVectorView_WF_Point** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion.get_Children() */
 HRESULT wuiininan_ink_analysis_writing_region_get__children(WUIININAN_InkAnalysisWritingRegion *self, WFOCO_IVectorView_WUIININAN_IInkAnalysisNode** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion.get_Parent() */
 HRESULT wuiininan_ink_analysis_writing_region_get__parent(WUIININAN_InkAnalysisWritingRegion *self, WUIININAN_IInkAnalysisNode** value);
 
-/* Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion.GetStrokeIds() */
 HRESULT wuiininan_ink_analysis_writing_region_get_stroke_ids(WUIININAN_InkAnalysisWritingRegion *self, WFOCO_IVectorView_uint32_t** out);
 
-/* Windows.UI.Input.Inking.Analysis.IInkAnalysisRoot */
-/* Windows.UI.Input.Inking.Analysis.IInkAnalysisResult */
-/* Windows.UI.Input.Inking.Analysis.IInkAnalysisParagraph */
-/* Windows.UI.Input.Inking.Analysis.IInkAnalysisListItem */
-/* Windows.UI.Input.Inking.Analysis.IInkAnalysisLine */
-/* Windows.UI.Input.Inking.Analysis.IInkAnalysisInkWord */
-/* Windows.UI.Input.Inking.Analysis.IInkAnalysisInkDrawing */
-/* Windows.UI.Input.Inking.Analysis.IInkAnalysisInkBullet */
-/* Windows.UI.Input.Inking.Analysis.IInkAnalyzer */
-/* Windows.UI.Input.Inking.Analysis.IInkAnalysisWritingRegion */
-/* Windows.UI.Input.Inking.Analysis.IInkAnalysisNode */
 #endif /* CWINRT_WINDOWS_UI_INPUT_INKING_ANALYSIS_H */

@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Graphics.DirectX.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WGRDIDI_IDirect3DDevice WGRDIDI_IDirect3DDevice;
 typedef struct WGRDIDI_IDirect3DSurface WGRDIDI_IDirect3DSurface;
 
@@ -69,7 +68,6 @@ struct WGRDIDI_Direct3DSurfaceDescription {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -82,14 +80,8 @@ static const IID CWINRT_IID_WGRDIDI_IDirect3DDevice CWINRT_MAYBE_UNUSED = { 0xA3
 static const IID CWINRT_IID_WGRDIDI_IDirect3DSurface CWINRT_MAYBE_UNUSED = { 0x0BF4A146, 0x13C1, 0x4694, { 0xBE, 0xE3, 0x7A, 0xBF, 0x15, 0xEA, 0xF5, 0x86 } };
 #endif
 
-/* Methods */
-
-/* Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice */
-/* Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice.Trim() */
 HRESULT wgrdidi_direct3_d_device_trim(WGRDIDI_IDirect3DDevice *self);
 
-/* Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface */
-/* Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface.get_Description() */
 HRESULT wgrdidi_direct3_d_surface_get__description(WGRDIDI_IDirect3DSurface *self, WGRDIDI_Direct3DSurfaceDescription *value);
 
 #endif /* CWINRT_WINDOWS_GRAPHICS_DIRECTX_DIRECT3D11_H */

@@ -14,13 +14,11 @@
 #include <cwinrt/Windows.UI.Xaml.Interop.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WUIXAMEAN_NavigationTransitionInfo
 #define CWINRT_FWD_WUIXAMEAN_NavigationTransitionInfo
 typedef struct WUIXAMEAN_NavigationTransitionInfo WUIXAMEAN_NavigationTransitionInfo;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUIXANA_NavigationFailedEventHandler WUIXANA_NavigationFailedEventHandler;
 typedef struct WUIXANA_FrameNavigationOptions WUIXANA_FrameNavigationOptions;
 typedef struct WUIXANA_NavigationStoppedEventHandler WUIXANA_NavigationStoppedEventHandler;
@@ -42,7 +40,6 @@ typedef struct WUIXANA_INavigationEventArgs_2 WUIXANA_INavigationEventArgs_2;
 typedef struct WUIXANA_INavigationFailedEventArgs WUIXANA_INavigationFailedEventArgs;
 typedef struct WUIXANA_IPageStackEntry WUIXANA_IPageStackEntry;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WUIXAMEAN_NavigationTransitionInfo
 #define CWINRT_FWD_WUIXAMEAN_NavigationTransitionInfo
 typedef struct WUIXAMEAN_NavigationTransitionInfo WUIXAMEAN_NavigationTransitionInfo;
@@ -79,7 +76,6 @@ typedef enum WUIXANA_NavigationMode {
 } WUIXANA_NavigationMode;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -144,146 +140,84 @@ static const IID CWINRT_IID_WUIXANA_INavigationFailedEventArgs CWINRT_MAYBE_UNUS
 static const IID CWINRT_IID_WUIXANA_IPageStackEntry CWINRT_MAYBE_UNUSED = { 0xEF8814A6, 0x9388, 0x4ACA, { 0x85, 0x72, 0x40, 0x51, 0x94, 0x06, 0x90, 0x80 } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.Xaml.Navigation.NavigationFailedEventHandler */
-/* Windows.UI.Xaml.Navigation.NavigationFailedEventHandler.Invoke(sender, e) */
 HRESULT wuixana_navigation_failed_event_handler_invoke(WUIXANA_NavigationFailedEventHandler *self, IInspectable* sender, WUIXANA_NavigationFailedEventArgs* e);
 
-/* Windows.UI.Xaml.Navigation.FrameNavigationOptions */
-/* Windows.UI.Xaml.Navigation.FrameNavigationOptions.get_IsNavigationStackEnabled() */
 HRESULT wuixana_frame_navigation_options_get__is_navigation_stack_enabled(WUIXANA_FrameNavigationOptions *self, BOOL *value);
 
-/* Windows.UI.Xaml.Navigation.FrameNavigationOptions.put_IsNavigationStackEnabled() */
 HRESULT wuixana_frame_navigation_options_put__is_navigation_stack_enabled(WUIXANA_FrameNavigationOptions *self, BOOL value);
 
-/* Windows.UI.Xaml.Navigation.FrameNavigationOptions.get_TransitionInfoOverride() */
 HRESULT wuixana_frame_navigation_options_get__transition_info_override(WUIXANA_FrameNavigationOptions *self, WUIXAMEAN_NavigationTransitionInfo** value);
 
-/* Windows.UI.Xaml.Navigation.FrameNavigationOptions.put_TransitionInfoOverride() */
 HRESULT wuixana_frame_navigation_options_put__transition_info_override(WUIXANA_FrameNavigationOptions *self, WUIXAMEAN_NavigationTransitionInfo* value);
 
-/* Windows.UI.Xaml.Navigation.NavigationStoppedEventHandler */
-/* Windows.UI.Xaml.Navigation.NavigationStoppedEventHandler.Invoke(sender, e) */
 HRESULT wuixana_navigation_stopped_event_handler_invoke(WUIXANA_NavigationStoppedEventHandler *self, IInspectable* sender, WUIXANA_NavigationEventArgs* e);
 
-/* Windows.UI.Xaml.Navigation.IFrameNavigationOptionsFactory */
-/* Windows.UI.Xaml.Navigation.IFrameNavigationOptionsFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixana_frame_navigation_options_factory_create_instance(WUIXANA_IFrameNavigationOptionsFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXANA_FrameNavigationOptions** out);
 
-/* Windows.UI.Xaml.Navigation.IPageStackEntryFactory */
-/* Windows.UI.Xaml.Navigation.IPageStackEntryFactory.CreateInstance(sourcePageType, parameter, navigationTransitionInfo) */
 HRESULT wuixana_page_stack_entry_factory_create_instance(WUIXANA_IPageStackEntryFactory *self, WUIXAIN_TypeName sourcePageType, IInspectable* parameter, WUIXAMEAN_NavigationTransitionInfo* navigationTransitionInfo, WUIXANA_PageStackEntry** out);
 
-/* Windows.UI.Xaml.Navigation.IPageStackEntryStatics */
-/* Windows.UI.Xaml.Navigation.IPageStackEntryStatics.get_SourcePageTypeProperty() */
 HRESULT wuixana_page_stack_entry_statics_get__source_page_type_property(WUIXANA_IPageStackEntryStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Navigation.LoadCompletedEventHandler */
-/* Windows.UI.Xaml.Navigation.LoadCompletedEventHandler.Invoke(sender, e) */
 HRESULT wuixana_load_completed_event_handler_invoke(WUIXANA_LoadCompletedEventHandler *self, IInspectable* sender, WUIXANA_NavigationEventArgs* e);
 
-/* Windows.UI.Xaml.Navigation.NavigatedEventHandler */
-/* Windows.UI.Xaml.Navigation.NavigatedEventHandler.Invoke(sender, e) */
 HRESULT wuixana_navigated_event_handler_invoke(WUIXANA_NavigatedEventHandler *self, IInspectable* sender, WUIXANA_NavigationEventArgs* e);
 
-/* activate Windows.UI.Xaml.Navigation.NavigatingCancelEventArgs */
 HRESULT wuixana_navigating_cancel_event_args_new(WUIXANA_NavigatingCancelEventArgs **out);
 
-/* Windows.UI.Xaml.Navigation.NavigatingCancelEventArgs */
-/* Windows.UI.Xaml.Navigation.NavigatingCancelEventArgs.get_Cancel() */
 HRESULT wuixana_navigating_cancel_event_args_get__cancel(WUIXANA_NavigatingCancelEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Navigation.NavigatingCancelEventArgs.put_Cancel() */
 HRESULT wuixana_navigating_cancel_event_args_put__cancel(WUIXANA_NavigatingCancelEventArgs *self, BOOL value);
 
-/* Windows.UI.Xaml.Navigation.NavigatingCancelEventArgs.get_NavigationMode() */
 HRESULT wuixana_navigating_cancel_event_args_get__navigation_mode(WUIXANA_NavigatingCancelEventArgs *self, WUIXANA_NavigationMode *value);
 
-/* Windows.UI.Xaml.Navigation.NavigatingCancelEventArgs.get_SourcePageType() */
 HRESULT wuixana_navigating_cancel_event_args_get__source_page_type(WUIXANA_NavigatingCancelEventArgs *self, WUIXAIN_TypeName *value);
 
-/* Windows.UI.Xaml.Navigation.NavigatingCancelEventArgs.get_Parameter() */
 HRESULT wuixana_navigating_cancel_event_args_get__parameter(WUIXANA_NavigatingCancelEventArgs *self, IInspectable** value);
 
-/* Windows.UI.Xaml.Navigation.NavigatingCancelEventArgs.get_NavigationTransitionInfo() */
 HRESULT wuixana_navigating_cancel_event_args_get__navigation_transition_info(WUIXANA_NavigatingCancelEventArgs *self, WUIXAMEAN_NavigationTransitionInfo** value);
 
-/* Windows.UI.Xaml.Navigation.NavigatingCancelEventHandler */
-/* Windows.UI.Xaml.Navigation.NavigatingCancelEventHandler.Invoke(sender, e) */
 HRESULT wuixana_navigating_cancel_event_handler_invoke(WUIXANA_NavigatingCancelEventHandler *self, IInspectable* sender, WUIXANA_NavigatingCancelEventArgs* e);
 
-/* activate Windows.UI.Xaml.Navigation.NavigationEventArgs */
 HRESULT wuixana_navigation_event_args_new(WUIXANA_NavigationEventArgs **out);
 
-/* Windows.UI.Xaml.Navigation.NavigationEventArgs */
-/* Windows.UI.Xaml.Navigation.NavigationEventArgs.get_Content() */
 HRESULT wuixana_navigation_event_args_get__content(WUIXANA_NavigationEventArgs *self, IInspectable** value);
 
-/* Windows.UI.Xaml.Navigation.NavigationEventArgs.get_Parameter() */
 HRESULT wuixana_navigation_event_args_get__parameter(WUIXANA_NavigationEventArgs *self, IInspectable** value);
 
-/* Windows.UI.Xaml.Navigation.NavigationEventArgs.get_SourcePageType() */
 HRESULT wuixana_navigation_event_args_get__source_page_type(WUIXANA_NavigationEventArgs *self, WUIXAIN_TypeName *value);
 
-/* Windows.UI.Xaml.Navigation.NavigationEventArgs.get_NavigationMode() */
 HRESULT wuixana_navigation_event_args_get__navigation_mode(WUIXANA_NavigationEventArgs *self, WUIXANA_NavigationMode *value);
 
-/* Windows.UI.Xaml.Navigation.NavigationEventArgs.get_Uri() */
 HRESULT wuixana_navigation_event_args_get__uri(WUIXANA_NavigationEventArgs *self, WF_Uri** value);
 
-/* Windows.UI.Xaml.Navigation.NavigationEventArgs.put_Uri() */
 HRESULT wuixana_navigation_event_args_put__uri(WUIXANA_NavigationEventArgs *self, WF_Uri* value);
 
-/* Windows.UI.Xaml.Navigation.NavigationEventArgs.get_NavigationTransitionInfo() */
 HRESULT wuixana_navigation_event_args_get__navigation_transition_info(WUIXANA_NavigationEventArgs *self, WUIXAMEAN_NavigationTransitionInfo** value);
 
-/* activate Windows.UI.Xaml.Navigation.NavigationFailedEventArgs */
 HRESULT wuixana_navigation_failed_event_args_new(WUIXANA_NavigationFailedEventArgs **out);
 
-/* Windows.UI.Xaml.Navigation.NavigationFailedEventArgs */
-/* Windows.UI.Xaml.Navigation.NavigationFailedEventArgs.get_Exception() */
 HRESULT wuixana_navigation_failed_event_args_get__exception(WUIXANA_NavigationFailedEventArgs *self, HRESULT *value);
 
-/* Windows.UI.Xaml.Navigation.NavigationFailedEventArgs.get_Handled() */
 HRESULT wuixana_navigation_failed_event_args_get__handled(WUIXANA_NavigationFailedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Navigation.NavigationFailedEventArgs.put_Handled() */
 HRESULT wuixana_navigation_failed_event_args_put__handled(WUIXANA_NavigationFailedEventArgs *self, BOOL value);
 
-/* Windows.UI.Xaml.Navigation.NavigationFailedEventArgs.get_SourcePageType() */
 HRESULT wuixana_navigation_failed_event_args_get__source_page_type(WUIXANA_NavigationFailedEventArgs *self, WUIXAIN_TypeName *value);
 
-/* activate Windows.UI.Xaml.Navigation.PageStackEntry */
 HRESULT wuixana_page_stack_entry_new(WUIXANA_PageStackEntry **out);
 
-/* Windows.UI.Xaml.Navigation.PageStackEntry */
-/* Windows.UI.Xaml.Navigation.PageStackEntry.get_SourcePageType() */
 HRESULT wuixana_page_stack_entry_get__source_page_type(WUIXANA_PageStackEntry *self, WUIXAIN_TypeName *value);
 
-/* Windows.UI.Xaml.Navigation.PageStackEntry.get_Parameter() */
 HRESULT wuixana_page_stack_entry_get__parameter(WUIXANA_PageStackEntry *self, IInspectable** value);
 
-/* Windows.UI.Xaml.Navigation.PageStackEntry.get_NavigationTransitionInfo() */
 HRESULT wuixana_page_stack_entry_get__navigation_transition_info(WUIXANA_PageStackEntry *self, WUIXAMEAN_NavigationTransitionInfo** value);
 
-/* Windows.UI.Xaml.Navigation.PageStackEntry.get_SourcePageTypeProperty() */
 HRESULT wuixana_page_stack_entry_get__source_page_type_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Navigation.IFrameNavigationOptions */
-/* Windows.UI.Xaml.Navigation.INavigatingCancelEventArgs */
-/* Windows.UI.Xaml.Navigation.INavigatingCancelEventArgs2 */
-/* Windows.UI.Xaml.Navigation.INavigatingCancelEventArgs2.get_Parameter() */
 HRESULT wuixana_navigating_cancel_event_args_2_get__parameter(WUIXANA_INavigatingCancelEventArgs_2 *self, IInspectable** value);
 
-/* Windows.UI.Xaml.Navigation.INavigatingCancelEventArgs2.get_NavigationTransitionInfo() */
 HRESULT wuixana_navigating_cancel_event_args_2_get__navigation_transition_info(WUIXANA_INavigatingCancelEventArgs_2 *self, WUIXAMEAN_NavigationTransitionInfo** value);
 
-/* Windows.UI.Xaml.Navigation.INavigationEventArgs */
-/* Windows.UI.Xaml.Navigation.INavigationEventArgs2 */
-/* Windows.UI.Xaml.Navigation.INavigationEventArgs2.get_NavigationTransitionInfo() */
 HRESULT wuixana_navigation_event_args_2_get__navigation_transition_info(WUIXANA_INavigationEventArgs_2 *self, WUIXAMEAN_NavigationTransitionInfo** value);
 
-/* Windows.UI.Xaml.Navigation.INavigationFailedEventArgs */
-/* Windows.UI.Xaml.Navigation.IPageStackEntry */
 #endif /* CWINRT_WINDOWS_UI_XAML_NAVIGATION_H */

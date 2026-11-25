@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WDEHU_HidNumericControlDescription
 #define CWINRT_FWD_WDEHU_HidNumericControlDescription
 typedef struct WDEHU_HidNumericControlDescription WDEHU_HidNumericControlDescription;
@@ -26,7 +25,6 @@ typedef struct WDEHU_HidBooleanControlDescription WDEHU_HidBooleanControlDescrip
 typedef struct WDEHU_HidInputReport WDEHU_HidInputReport;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDEINPR_GazeDeviceWatcherPreview WDEINPR_GazeDeviceWatcherPreview;
 typedef struct WDEINPR_GazeDeviceWatcherRemovedPreviewEventArgs WDEINPR_GazeDeviceWatcherRemovedPreviewEventArgs;
 typedef struct WDEINPR_GazeDeviceWatcherUpdatedPreviewEventArgs WDEINPR_GazeDeviceWatcherUpdatedPreviewEventArgs;
@@ -49,7 +47,6 @@ typedef struct WDEINPR_IGazePointPreview WDEINPR_IGazePointPreview;
 typedef struct WDEINPR_IGazeDeviceWatcherAddedPreviewEventArgs WDEINPR_IGazeDeviceWatcherAddedPreviewEventArgs;
 typedef struct WDEINPR_IGazeDevicePreview WDEINPR_IGazeDevicePreview;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_TypedEventHandler_WDEINPR_GazeDeviceWatcherPreview_WDEINPR_GazeDeviceWatcherAddedPreviewEventArgs
 #define CWINRT_FWD_WF_TypedEventHandler_WDEINPR_GazeDeviceWatcherPreview_WDEINPR_GazeDeviceWatcherAddedPreviewEventArgs
 typedef struct WF_TypedEventHandler_WDEINPR_GazeDeviceWatcherPreview_WDEINPR_GazeDeviceWatcherAddedPreviewEventArgs WF_TypedEventHandler_WDEINPR_GazeDeviceWatcherPreview_WDEINPR_GazeDeviceWatcherAddedPreviewEventArgs;
@@ -110,7 +107,6 @@ typedef enum WDEINPR_GazeDeviceConfigurationStatePreview {
 } WDEINPR_GazeDeviceConfigurationStatePreview;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -159,19 +155,12 @@ static const IID CWINRT_IID_WDEINPR_IGazeDeviceWatcherAddedPreviewEventArgs CWIN
 static const IID CWINRT_IID_WDEINPR_IGazeDevicePreview CWINRT_MAYBE_UNUSED = { 0xE79E7EE9, 0xB389, 0x11E7, { 0xB2, 0x01, 0xC8, 0xD3, 0xFF, 0xB7, 0x57, 0x21 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Devices.Input.Preview.GazeDeviceWatcherPreview */
 HRESULT wdeinpr_gaze_device_watcher_preview_new(WDEINPR_GazeDeviceWatcherPreview **out);
 
-/* Windows.Devices.Input.Preview.GazeDeviceWatcherPreview */
-/* Windows.Devices.Input.Preview.GazeDeviceWatcherPreview.Start() */
 HRESULT wdeinpr_gaze_device_watcher_preview_start(WDEINPR_GazeDeviceWatcherPreview *self);
 
-/* Windows.Devices.Input.Preview.GazeDeviceWatcherPreview.Stop() */
 HRESULT wdeinpr_gaze_device_watcher_preview_stop(WDEINPR_GazeDeviceWatcherPreview *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdeinpr_gaze_device_watcher_preview_on_added(WDEINPR_GazeDeviceWatcherPreview *self, cwinrt_event_fn fn, void *ctx);
@@ -186,57 +175,36 @@ void wdeinpr_gaze_device_watcher_preview_off_updated(WDEINPR_GazeDeviceWatcherPr
 cwinrt_token wdeinpr_gaze_device_watcher_preview_on_enumeration_completed(WDEINPR_GazeDeviceWatcherPreview *self, cwinrt_event_fn fn, void *ctx);
 void wdeinpr_gaze_device_watcher_preview_off_enumeration_completed(WDEINPR_GazeDeviceWatcherPreview *self, cwinrt_token token);
 
-/* activate Windows.Devices.Input.Preview.GazeDeviceWatcherRemovedPreviewEventArgs */
 HRESULT wdeinpr_gaze_device_watcher_removed_preview_event_args_new(WDEINPR_GazeDeviceWatcherRemovedPreviewEventArgs **out);
 
-/* Windows.Devices.Input.Preview.GazeDeviceWatcherRemovedPreviewEventArgs */
-/* Windows.Devices.Input.Preview.GazeDeviceWatcherRemovedPreviewEventArgs.get_Device() */
 HRESULT wdeinpr_gaze_device_watcher_removed_preview_event_args_get__device(WDEINPR_GazeDeviceWatcherRemovedPreviewEventArgs *self, WDEINPR_GazeDevicePreview** value);
 
-/* activate Windows.Devices.Input.Preview.GazeDeviceWatcherUpdatedPreviewEventArgs */
 HRESULT wdeinpr_gaze_device_watcher_updated_preview_event_args_new(WDEINPR_GazeDeviceWatcherUpdatedPreviewEventArgs **out);
 
-/* Windows.Devices.Input.Preview.GazeDeviceWatcherUpdatedPreviewEventArgs */
-/* Windows.Devices.Input.Preview.GazeDeviceWatcherUpdatedPreviewEventArgs.get_Device() */
 HRESULT wdeinpr_gaze_device_watcher_updated_preview_event_args_get__device(WDEINPR_GazeDeviceWatcherUpdatedPreviewEventArgs *self, WDEINPR_GazeDevicePreview** value);
 
-/* activate Windows.Devices.Input.Preview.GazeEnteredPreviewEventArgs */
 HRESULT wdeinpr_gaze_entered_preview_event_args_new(WDEINPR_GazeEnteredPreviewEventArgs **out);
 
-/* Windows.Devices.Input.Preview.GazeEnteredPreviewEventArgs */
-/* Windows.Devices.Input.Preview.GazeEnteredPreviewEventArgs.get_Handled() */
 HRESULT wdeinpr_gaze_entered_preview_event_args_get__handled(WDEINPR_GazeEnteredPreviewEventArgs *self, BOOL *value);
 
-/* Windows.Devices.Input.Preview.GazeEnteredPreviewEventArgs.put_Handled() */
 HRESULT wdeinpr_gaze_entered_preview_event_args_put__handled(WDEINPR_GazeEnteredPreviewEventArgs *self, BOOL value);
 
-/* Windows.Devices.Input.Preview.GazeEnteredPreviewEventArgs.get_CurrentPoint() */
 HRESULT wdeinpr_gaze_entered_preview_event_args_get__current_point(WDEINPR_GazeEnteredPreviewEventArgs *self, WDEINPR_GazePointPreview** value);
 
-/* activate Windows.Devices.Input.Preview.GazeExitedPreviewEventArgs */
 HRESULT wdeinpr_gaze_exited_preview_event_args_new(WDEINPR_GazeExitedPreviewEventArgs **out);
 
-/* Windows.Devices.Input.Preview.GazeExitedPreviewEventArgs */
-/* Windows.Devices.Input.Preview.GazeExitedPreviewEventArgs.get_Handled() */
 HRESULT wdeinpr_gaze_exited_preview_event_args_get__handled(WDEINPR_GazeExitedPreviewEventArgs *self, BOOL *value);
 
-/* Windows.Devices.Input.Preview.GazeExitedPreviewEventArgs.put_Handled() */
 HRESULT wdeinpr_gaze_exited_preview_event_args_put__handled(WDEINPR_GazeExitedPreviewEventArgs *self, BOOL value);
 
-/* Windows.Devices.Input.Preview.GazeExitedPreviewEventArgs.get_CurrentPoint() */
 HRESULT wdeinpr_gaze_exited_preview_event_args_get__current_point(WDEINPR_GazeExitedPreviewEventArgs *self, WDEINPR_GazePointPreview** value);
 
-/* activate Windows.Devices.Input.Preview.GazeInputSourcePreview */
 HRESULT wdeinpr_gaze_input_source_preview_new(WDEINPR_GazeInputSourcePreview **out);
 
-/* Windows.Devices.Input.Preview.GazeInputSourcePreview */
-/* Windows.Devices.Input.Preview.GazeInputSourcePreview.GetForCurrentView() */
 HRESULT wdeinpr_gaze_input_source_preview_get_for_current_view(WDEINPR_GazeInputSourcePreview** out);
 
-/* Windows.Devices.Input.Preview.GazeInputSourcePreview.CreateWatcher() */
 HRESULT wdeinpr_gaze_input_source_preview_create_watcher(WDEINPR_GazeDeviceWatcherPreview** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdeinpr_gaze_input_source_preview_on_gaze_moved(WDEINPR_GazeInputSourcePreview *self, cwinrt_event_fn fn, void *ctx);
@@ -248,88 +216,50 @@ void wdeinpr_gaze_input_source_preview_off_gaze_entered(WDEINPR_GazeInputSourceP
 cwinrt_token wdeinpr_gaze_input_source_preview_on_gaze_exited(WDEINPR_GazeInputSourcePreview *self, cwinrt_event_fn fn, void *ctx);
 void wdeinpr_gaze_input_source_preview_off_gaze_exited(WDEINPR_GazeInputSourcePreview *self, cwinrt_token token);
 
-/* activate Windows.Devices.Input.Preview.GazeMovedPreviewEventArgs */
 HRESULT wdeinpr_gaze_moved_preview_event_args_new(WDEINPR_GazeMovedPreviewEventArgs **out);
 
-/* Windows.Devices.Input.Preview.GazeMovedPreviewEventArgs */
-/* Windows.Devices.Input.Preview.GazeMovedPreviewEventArgs.get_Handled() */
 HRESULT wdeinpr_gaze_moved_preview_event_args_get__handled(WDEINPR_GazeMovedPreviewEventArgs *self, BOOL *value);
 
-/* Windows.Devices.Input.Preview.GazeMovedPreviewEventArgs.put_Handled() */
 HRESULT wdeinpr_gaze_moved_preview_event_args_put__handled(WDEINPR_GazeMovedPreviewEventArgs *self, BOOL value);
 
-/* Windows.Devices.Input.Preview.GazeMovedPreviewEventArgs.get_CurrentPoint() */
 HRESULT wdeinpr_gaze_moved_preview_event_args_get__current_point(WDEINPR_GazeMovedPreviewEventArgs *self, WDEINPR_GazePointPreview** value);
 
-/* Windows.Devices.Input.Preview.GazeMovedPreviewEventArgs.GetIntermediatePoints() */
 HRESULT wdeinpr_gaze_moved_preview_event_args_get_intermediate_points(WDEINPR_GazeMovedPreviewEventArgs *self, WFOCO_IVector_WDEINPR_GazePointPreview** out);
 
-/* activate Windows.Devices.Input.Preview.GazePointPreview */
 HRESULT wdeinpr_gaze_point_preview_new(WDEINPR_GazePointPreview **out);
 
-/* Windows.Devices.Input.Preview.GazePointPreview */
-/* Windows.Devices.Input.Preview.GazePointPreview.get_SourceDevice() */
 HRESULT wdeinpr_gaze_point_preview_get__source_device(WDEINPR_GazePointPreview *self, WDEINPR_GazeDevicePreview** value);
 
-/* Windows.Devices.Input.Preview.GazePointPreview.get_EyeGazePosition() */
 HRESULT wdeinpr_gaze_point_preview_get__eye_gaze_position(WDEINPR_GazePointPreview *self, WF_Point** value);
 
-/* Windows.Devices.Input.Preview.GazePointPreview.get_HeadGazePosition() */
 HRESULT wdeinpr_gaze_point_preview_get__head_gaze_position(WDEINPR_GazePointPreview *self, WF_Point** value);
 
-/* Windows.Devices.Input.Preview.GazePointPreview.get_Timestamp() */
 HRESULT wdeinpr_gaze_point_preview_get__timestamp(WDEINPR_GazePointPreview *self, uint64_t *value);
 
-/* Windows.Devices.Input.Preview.GazePointPreview.get_HidInputReport() */
 HRESULT wdeinpr_gaze_point_preview_get__hid_input_report(WDEINPR_GazePointPreview *self, WDEHU_HidInputReport** value);
 
-/* Windows.Devices.Input.Preview.IGazeInputSourcePreviewStatics */
-/* Windows.Devices.Input.Preview.IGazeInputSourcePreviewStatics.GetForCurrentView() */
 HRESULT wdeinpr_gaze_input_source_preview_statics_get_for_current_view(WDEINPR_IGazeInputSourcePreviewStatics *self, WDEINPR_GazeInputSourcePreview** out);
 
-/* Windows.Devices.Input.Preview.IGazeInputSourcePreviewStatics.CreateWatcher() */
 HRESULT wdeinpr_gaze_input_source_preview_statics_create_watcher(WDEINPR_IGazeInputSourcePreviewStatics *self, WDEINPR_GazeDeviceWatcherPreview** out);
 
-/* activate Windows.Devices.Input.Preview.GazeDeviceWatcherAddedPreviewEventArgs */
 HRESULT wdeinpr_gaze_device_watcher_added_preview_event_args_new(WDEINPR_GazeDeviceWatcherAddedPreviewEventArgs **out);
 
-/* Windows.Devices.Input.Preview.GazeDeviceWatcherAddedPreviewEventArgs */
-/* Windows.Devices.Input.Preview.GazeDeviceWatcherAddedPreviewEventArgs.get_Device() */
 HRESULT wdeinpr_gaze_device_watcher_added_preview_event_args_get__device(WDEINPR_GazeDeviceWatcherAddedPreviewEventArgs *self, WDEINPR_GazeDevicePreview** value);
 
-/* activate Windows.Devices.Input.Preview.GazeDevicePreview */
 HRESULT wdeinpr_gaze_device_preview_new(WDEINPR_GazeDevicePreview **out);
 
-/* Windows.Devices.Input.Preview.GazeDevicePreview */
-/* Windows.Devices.Input.Preview.GazeDevicePreview.get_Id() */
 HRESULT wdeinpr_gaze_device_preview_get__id(WDEINPR_GazeDevicePreview *self, uint32_t *value);
 
-/* Windows.Devices.Input.Preview.GazeDevicePreview.get_CanTrackEyes() */
 HRESULT wdeinpr_gaze_device_preview_get__can_track_eyes(WDEINPR_GazeDevicePreview *self, BOOL *value);
 
-/* Windows.Devices.Input.Preview.GazeDevicePreview.get_CanTrackHead() */
 HRESULT wdeinpr_gaze_device_preview_get__can_track_head(WDEINPR_GazeDevicePreview *self, BOOL *value);
 
-/* Windows.Devices.Input.Preview.GazeDevicePreview.get_ConfigurationState() */
 HRESULT wdeinpr_gaze_device_preview_get__configuration_state(WDEINPR_GazeDevicePreview *self, WDEINPR_GazeDeviceConfigurationStatePreview *value);
 
-/* Windows.Devices.Input.Preview.GazeDevicePreview.RequestCalibrationAsync() */
 HRESULT wdeinpr_gaze_device_preview_request_calibration_async(WDEINPR_GazeDevicePreview *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.Input.Preview.GazeDevicePreview.GetNumericControlDescriptions(usagePage, usageId) */
 HRESULT wdeinpr_gaze_device_preview_get_numeric_control_descriptions(WDEINPR_GazeDevicePreview *self, uint16_t usagePage, uint16_t usageId, WFOCO_IVectorView_WDEHU_HidNumericControlDescription** out);
 
-/* Windows.Devices.Input.Preview.GazeDevicePreview.GetBooleanControlDescriptions(usagePage, usageId) */
 HRESULT wdeinpr_gaze_device_preview_get_boolean_control_descriptions(WDEINPR_GazeDevicePreview *self, uint16_t usagePage, uint16_t usageId, WFOCO_IVectorView_WDEHU_HidBooleanControlDescription** out);
 
-/* Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview */
-/* Windows.Devices.Input.Preview.IGazeDeviceWatcherRemovedPreviewEventArgs */
-/* Windows.Devices.Input.Preview.IGazeDeviceWatcherUpdatedPreviewEventArgs */
-/* Windows.Devices.Input.Preview.IGazeEnteredPreviewEventArgs */
-/* Windows.Devices.Input.Preview.IGazeExitedPreviewEventArgs */
-/* Windows.Devices.Input.Preview.IGazeInputSourcePreview */
-/* Windows.Devices.Input.Preview.IGazeMovedPreviewEventArgs */
-/* Windows.Devices.Input.Preview.IGazePointPreview */
-/* Windows.Devices.Input.Preview.IGazeDeviceWatcherAddedPreviewEventArgs */
-/* Windows.Devices.Input.Preview.IGazeDevicePreview */
 #endif /* CWINRT_WINDOWS_DEVICES_INPUT_PREVIEW_H */

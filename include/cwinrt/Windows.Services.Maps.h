@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.UI.Popups.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WDEGE_Geopoint
 #define CWINRT_FWD_WDEGE_Geopoint
 typedef struct WDEGE_Geopoint WDEGE_Geopoint;
@@ -31,7 +30,6 @@ typedef struct WDEGE_Geopath WDEGE_Geopath;
 typedef struct WDEGE_IGeoshape WDEGE_IGeoshape;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSEMA_EnhancedWaypoint WSEMA_EnhancedWaypoint;
 typedef struct WSEMA_MapManager WSEMA_MapManager;
 typedef struct WSEMA_MapLocationFinderResult WSEMA_MapLocationFinderResult;
@@ -83,7 +81,6 @@ typedef struct WSEMA_IMapRouteManeuver_3 WSEMA_IMapRouteManeuver_3;
 typedef struct WSEMA_IPlaceInfo WSEMA_IPlaceInfo;
 typedef struct WSEMA_IPlaceInfoCreateOptions WSEMA_IPlaceInfoCreateOptions;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WDEGE_Geopoint
 #define CWINRT_FWD_WDEGE_Geopoint
 typedef struct WDEGE_Geopoint WDEGE_Geopoint;
@@ -336,7 +333,6 @@ typedef enum WSEMA_MapManeuverNotices {
 } WSEMA_MapManeuverNotices;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -477,581 +473,354 @@ static const IID CWINRT_IID_WSEMA_IPlaceInfo CWINRT_MAYBE_UNUSED = { 0x9A0810B6,
 static const IID CWINRT_IID_WSEMA_IPlaceInfoCreateOptions CWINRT_MAYBE_UNUSED = { 0xCD33C125, 0x67F1, 0x4BB3, { 0x99, 0x07, 0xEC, 0xCE, 0x93, 0x9B, 0x03, 0x99 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Services.Maps.EnhancedWaypoint */
 HRESULT wsema_enhanced_waypoint_new(WSEMA_EnhancedWaypoint **out);
 
-/* Windows.Services.Maps.EnhancedWaypoint */
-/* Windows.Services.Maps.EnhancedWaypoint.get_Point() */
 HRESULT wsema_enhanced_waypoint_get__point(WSEMA_EnhancedWaypoint *self, WDEGE_Geopoint** value);
 
-/* Windows.Services.Maps.EnhancedWaypoint.get_Kind() */
 HRESULT wsema_enhanced_waypoint_get__kind(WSEMA_EnhancedWaypoint *self, WSEMA_WaypointKind *value);
 
-/* activate Windows.Services.Maps.MapManager */
 HRESULT wsema_map_manager_new(WSEMA_MapManager **out);
 
-/* Windows.Services.Maps.MapManager */
-/* Windows.Services.Maps.MapManager.ShowDownloadedMapsUI() */
 HRESULT wsema_map_manager_show_downloaded_maps_u_i(void);
 
-/* Windows.Services.Maps.MapManager.ShowMapsUpdateUI() */
 HRESULT wsema_map_manager_show_maps_update_u_i(void);
 
-/* activate Windows.Services.Maps.MapLocationFinderResult */
 HRESULT wsema_map_location_finder_result_new(WSEMA_MapLocationFinderResult **out);
 
-/* Windows.Services.Maps.MapLocationFinderResult */
-/* Windows.Services.Maps.MapLocationFinderResult.get_Locations() */
 HRESULT wsema_map_location_finder_result_get__locations(WSEMA_MapLocationFinderResult *self, WFOCO_IVectorView_WSEMA_MapLocation** value);
 
-/* Windows.Services.Maps.MapLocationFinderResult.get_Status() */
 HRESULT wsema_map_location_finder_result_get__status(WSEMA_MapLocationFinderResult *self, WSEMA_MapLocationFinderStatus *value);
 
-/* activate Windows.Services.Maps.MapLocationFinder */
 HRESULT wsema_map_location_finder_new(WSEMA_MapLocationFinder **out);
 
-/* Windows.Services.Maps.MapLocationFinder */
-/* Windows.Services.Maps.MapLocationFinder.FindLocationsAtAsync(queryPoint, accuracy) */
 HRESULT wsema_map_location_finder_find_locations_at_async_p_map_location_desired_accuracy_p(WDEGE_Geopoint* queryPoint, WSEMA_MapLocationDesiredAccuracy accuracy, WF_IAsyncOperation_WSEMA_MapLocationFinderResult** out);
 
-/* Windows.Services.Maps.MapLocationFinder.FindLocationsAtAsync(queryPoint) */
 HRESULT wsema_map_location_finder_find_locations_at_async(WDEGE_Geopoint* queryPoint, WF_IAsyncOperation_WSEMA_MapLocationFinderResult** out);
 
-/* Windows.Services.Maps.MapLocationFinder.FindLocationsAsync(searchText, referencePoint) */
 HRESULT wsema_map_location_finder_find_locations_async(cwinrt_hstring searchText, WDEGE_Geopoint* referencePoint, WF_IAsyncOperation_WSEMA_MapLocationFinderResult** out);
 
-/* Windows.Services.Maps.MapLocationFinder.FindLocationsAsync(searchText, referencePoint, maxCount) */
 HRESULT wsema_map_location_finder_find_locations_async_str_p_u32_p(cwinrt_hstring searchText, WDEGE_Geopoint* referencePoint, uint32_t maxCount, WF_IAsyncOperation_WSEMA_MapLocationFinderResult** out);
 
-/* activate Windows.Services.Maps.MapLocation */
 HRESULT wsema_map_location_new(WSEMA_MapLocation **out);
 
-/* Windows.Services.Maps.MapLocation */
-/* Windows.Services.Maps.MapLocation.get_Point() */
 HRESULT wsema_map_location_get__point(WSEMA_MapLocation *self, WDEGE_Geopoint** value);
 
-/* Windows.Services.Maps.MapLocation.get_DisplayName() */
 HRESULT wsema_map_location_get__display_name(WSEMA_MapLocation *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.MapLocation.get_Description() */
 HRESULT wsema_map_location_get__description(WSEMA_MapLocation *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.MapLocation.get_Address() */
 HRESULT wsema_map_location_get__address(WSEMA_MapLocation *self, WSEMA_MapAddress** value);
 
-/* activate Windows.Services.Maps.MapAddress */
 HRESULT wsema_map_address_new(WSEMA_MapAddress **out);
 
-/* Windows.Services.Maps.MapAddress */
-/* Windows.Services.Maps.MapAddress.get_BuildingName() */
 HRESULT wsema_map_address_get__building_name(WSEMA_MapAddress *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.MapAddress.get_BuildingFloor() */
 HRESULT wsema_map_address_get__building_floor(WSEMA_MapAddress *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.MapAddress.get_BuildingRoom() */
 HRESULT wsema_map_address_get__building_room(WSEMA_MapAddress *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.MapAddress.get_BuildingWing() */
 HRESULT wsema_map_address_get__building_wing(WSEMA_MapAddress *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.MapAddress.get_StreetNumber() */
 HRESULT wsema_map_address_get__street_number(WSEMA_MapAddress *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.MapAddress.get_Street() */
 HRESULT wsema_map_address_get__street(WSEMA_MapAddress *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.MapAddress.get_Neighborhood() */
 HRESULT wsema_map_address_get__neighborhood(WSEMA_MapAddress *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.MapAddress.get_District() */
 HRESULT wsema_map_address_get__district(WSEMA_MapAddress *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.MapAddress.get_Town() */
 HRESULT wsema_map_address_get__town(WSEMA_MapAddress *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.MapAddress.get_Region() */
 HRESULT wsema_map_address_get__region(WSEMA_MapAddress *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.MapAddress.get_RegionCode() */
 HRESULT wsema_map_address_get__region_code(WSEMA_MapAddress *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.MapAddress.get_Country() */
 HRESULT wsema_map_address_get__country(WSEMA_MapAddress *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.MapAddress.get_CountryCode() */
 HRESULT wsema_map_address_get__country_code(WSEMA_MapAddress *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.MapAddress.get_PostCode() */
 HRESULT wsema_map_address_get__post_code(WSEMA_MapAddress *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.MapAddress.get_Continent() */
 HRESULT wsema_map_address_get__continent(WSEMA_MapAddress *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.MapAddress.get_FormattedAddress() */
 HRESULT wsema_map_address_get__formatted_address(WSEMA_MapAddress *self, cwinrt_hstring *value);
 
-/* activate Windows.Services.Maps.ManeuverWarning */
 HRESULT wsema_maneuver_warning_new(WSEMA_ManeuverWarning **out);
 
-/* Windows.Services.Maps.ManeuverWarning */
-/* Windows.Services.Maps.ManeuverWarning.get_Kind() */
 HRESULT wsema_maneuver_warning_get__kind(WSEMA_ManeuverWarning *self, WSEMA_ManeuverWarningKind *value);
 
-/* Windows.Services.Maps.ManeuverWarning.get_Severity() */
 HRESULT wsema_maneuver_warning_get__severity(WSEMA_ManeuverWarning *self, WSEMA_ManeuverWarningSeverity *value);
 
-/* activate Windows.Services.Maps.MapRoute */
 HRESULT wsema_map_route_new(WSEMA_MapRoute **out);
 
-/* Windows.Services.Maps.MapRoute */
-/* Windows.Services.Maps.MapRoute.get_BoundingBox() */
 HRESULT wsema_map_route_get__bounding_box(WSEMA_MapRoute *self, WDEGE_GeoboundingBox** value);
 
-/* Windows.Services.Maps.MapRoute.get_LengthInMeters() */
 HRESULT wsema_map_route_get__length_in_meters(WSEMA_MapRoute *self, double *value);
 
-/* Windows.Services.Maps.MapRoute.get_EstimatedDuration() */
 HRESULT wsema_map_route_get__estimated_duration(WSEMA_MapRoute *self, WF_TimeSpan *value);
 
-/* Windows.Services.Maps.MapRoute.get_Path() */
 HRESULT wsema_map_route_get__path(WSEMA_MapRoute *self, WDEGE_Geopath** value);
 
-/* Windows.Services.Maps.MapRoute.get_Legs() */
 HRESULT wsema_map_route_get__legs(WSEMA_MapRoute *self, WFOCO_IVectorView_WSEMA_MapRouteLeg** value);
 
-/* Windows.Services.Maps.MapRoute.get_IsTrafficBased() */
 HRESULT wsema_map_route_get__is_traffic_based(WSEMA_MapRoute *self, BOOL *value);
 
-/* Windows.Services.Maps.MapRoute.get_ViolatedRestrictions() */
 HRESULT wsema_map_route_get__violated_restrictions(WSEMA_MapRoute *self, WSEMA_MapRouteRestrictions *value);
 
-/* Windows.Services.Maps.MapRoute.get_HasBlockedRoads() */
 HRESULT wsema_map_route_get__has_blocked_roads(WSEMA_MapRoute *self, BOOL *value);
 
-/* Windows.Services.Maps.MapRoute.get_DurationWithoutTraffic() */
 HRESULT wsema_map_route_get__duration_without_traffic(WSEMA_MapRoute *self, WF_TimeSpan *value);
 
-/* Windows.Services.Maps.MapRoute.get_TrafficCongestion() */
 HRESULT wsema_map_route_get__traffic_congestion(WSEMA_MapRoute *self, WSEMA_TrafficCongestion *value);
 
-/* Windows.Services.Maps.MapRoute.get_IsScenic() */
 HRESULT wsema_map_route_get__is_scenic(WSEMA_MapRoute *self, BOOL *value);
 
-/* activate Windows.Services.Maps.MapRouteDrivingOptions */
 HRESULT wsema_map_route_driving_options_new(WSEMA_MapRouteDrivingOptions **out);
 
-/* Windows.Services.Maps.MapRouteDrivingOptions */
-/* Windows.Services.Maps.MapRouteDrivingOptions.get_MaxAlternateRouteCount() */
 HRESULT wsema_map_route_driving_options_get__max_alternate_route_count(WSEMA_MapRouteDrivingOptions *self, uint32_t *value);
 
-/* Windows.Services.Maps.MapRouteDrivingOptions.put_MaxAlternateRouteCount() */
 HRESULT wsema_map_route_driving_options_put__max_alternate_route_count(WSEMA_MapRouteDrivingOptions *self, uint32_t value);
 
-/* Windows.Services.Maps.MapRouteDrivingOptions.get_InitialHeading() */
 HRESULT wsema_map_route_driving_options_get__initial_heading(WSEMA_MapRouteDrivingOptions *self, double** value);
 
-/* Windows.Services.Maps.MapRouteDrivingOptions.put_InitialHeading() */
 HRESULT wsema_map_route_driving_options_put__initial_heading(WSEMA_MapRouteDrivingOptions *self, double* value);
 
-/* Windows.Services.Maps.MapRouteDrivingOptions.get_RouteOptimization() */
 HRESULT wsema_map_route_driving_options_get__route_optimization(WSEMA_MapRouteDrivingOptions *self, WSEMA_MapRouteOptimization *value);
 
-/* Windows.Services.Maps.MapRouteDrivingOptions.put_RouteOptimization() */
 HRESULT wsema_map_route_driving_options_put__route_optimization(WSEMA_MapRouteDrivingOptions *self, WSEMA_MapRouteOptimization value);
 
-/* Windows.Services.Maps.MapRouteDrivingOptions.get_RouteRestrictions() */
 HRESULT wsema_map_route_driving_options_get__route_restrictions(WSEMA_MapRouteDrivingOptions *self, WSEMA_MapRouteRestrictions *value);
 
-/* Windows.Services.Maps.MapRouteDrivingOptions.put_RouteRestrictions() */
 HRESULT wsema_map_route_driving_options_put__route_restrictions(WSEMA_MapRouteDrivingOptions *self, WSEMA_MapRouteRestrictions value);
 
-/* Windows.Services.Maps.MapRouteDrivingOptions.get_DepartureTime() */
 HRESULT wsema_map_route_driving_options_get__departure_time(WSEMA_MapRouteDrivingOptions *self, WF_DateTime** value);
 
-/* Windows.Services.Maps.MapRouteDrivingOptions.put_DepartureTime() */
 HRESULT wsema_map_route_driving_options_put__departure_time(WSEMA_MapRouteDrivingOptions *self, WF_DateTime* value);
 
-/* activate Windows.Services.Maps.MapRouteFinder */
 HRESULT wsema_map_route_finder_new(WSEMA_MapRouteFinder **out);
 
-/* Windows.Services.Maps.MapRouteFinder */
-/* Windows.Services.Maps.MapRouteFinder.GetDrivingRouteFromEnhancedWaypointsAsync(waypoints) */
 HRESULT wsema_map_route_finder_get_driving_route_from_enhanced_waypoints_async(WFOCO_IIterable_WSEMA_EnhancedWaypoint* waypoints, WF_IAsyncOperation_WSEMA_MapRouteFinderResult** out);
 
-/* Windows.Services.Maps.MapRouteFinder.GetDrivingRouteFromEnhancedWaypointsAsync(waypoints, options) */
 HRESULT wsema_map_route_finder_get_driving_route_from_enhanced_waypoints_async_p_p_p(WFOCO_IIterable_WSEMA_EnhancedWaypoint* waypoints, WSEMA_MapRouteDrivingOptions* options, WF_IAsyncOperation_WSEMA_MapRouteFinderResult** out);
 
-/* Windows.Services.Maps.MapRouteFinder.GetDrivingRouteAsync(startPoint, endPoint, options) */
 HRESULT wsema_map_route_finder_get_driving_route_async(WDEGE_Geopoint* startPoint, WDEGE_Geopoint* endPoint, WSEMA_MapRouteDrivingOptions* options, WF_IAsyncOperation_WSEMA_MapRouteFinderResult** out);
 
-/* Windows.Services.Maps.MapRouteFinder.GetDrivingRouteAsync(startPoint, endPoint) */
 HRESULT wsema_map_route_finder_get_driving_route_async_p_p_p(WDEGE_Geopoint* startPoint, WDEGE_Geopoint* endPoint, WF_IAsyncOperation_WSEMA_MapRouteFinderResult** out);
 
-/* Windows.Services.Maps.MapRouteFinder.GetDrivingRouteAsync(startPoint, endPoint, optimization) */
 HRESULT wsema_map_route_finder_get_driving_route_async_p_p_map_route_optimization_p(WDEGE_Geopoint* startPoint, WDEGE_Geopoint* endPoint, WSEMA_MapRouteOptimization optimization, WF_IAsyncOperation_WSEMA_MapRouteFinderResult** out);
 
-/* Windows.Services.Maps.MapRouteFinder.GetDrivingRouteAsync(startPoint, endPoint, optimization, restrictions) */
 HRESULT wsema_map_route_finder_get_driving_route_async_p_p_map_route_optimization_map_route_a54f453f(WDEGE_Geopoint* startPoint, WDEGE_Geopoint* endPoint, WSEMA_MapRouteOptimization optimization, WSEMA_MapRouteRestrictions restrictions, WF_IAsyncOperation_WSEMA_MapRouteFinderResult** out);
 
-/* Windows.Services.Maps.MapRouteFinder.GetDrivingRouteAsync(startPoint, endPoint, optimization, restrictions, headingInDegrees) */
 HRESULT wsema_map_route_finder_get_driving_route_async_p_p_map_route_optimization_map_route_75fd9db4(WDEGE_Geopoint* startPoint, WDEGE_Geopoint* endPoint, WSEMA_MapRouteOptimization optimization, WSEMA_MapRouteRestrictions restrictions, double headingInDegrees, WF_IAsyncOperation_WSEMA_MapRouteFinderResult** out);
 
-/* Windows.Services.Maps.MapRouteFinder.GetDrivingRouteFromWaypointsAsync(wayPoints) */
 HRESULT wsema_map_route_finder_get_driving_route_from_waypoints_async(WFOCO_IIterable_WDEGE_Geopoint* wayPoints, WF_IAsyncOperation_WSEMA_MapRouteFinderResult** out);
 
-/* Windows.Services.Maps.MapRouteFinder.GetDrivingRouteFromWaypointsAsync(wayPoints, optimization) */
 HRESULT wsema_map_route_finder_get_driving_route_from_waypoints_async_p_map_route_optimization_p(WFOCO_IIterable_WDEGE_Geopoint* wayPoints, WSEMA_MapRouteOptimization optimization, WF_IAsyncOperation_WSEMA_MapRouteFinderResult** out);
 
-/* Windows.Services.Maps.MapRouteFinder.GetDrivingRouteFromWaypointsAsync(wayPoints, optimization, restrictions) */
 HRESULT wsema_map_route_finder_get_driving_route_from_waypoints_async_p_map_route_optimization_map_route_r_7dc89078(WFOCO_IIterable_WDEGE_Geopoint* wayPoints, WSEMA_MapRouteOptimization optimization, WSEMA_MapRouteRestrictions restrictions, WF_IAsyncOperation_WSEMA_MapRouteFinderResult** out);
 
-/* Windows.Services.Maps.MapRouteFinder.GetDrivingRouteFromWaypointsAsync(wayPoints, optimization, restrictions, headingInDegrees) */
 HRESULT wsema_map_route_finder_get_driving_route_from_waypoints_async_p_map_route_optimization_map_route_r_3901f417(WFOCO_IIterable_WDEGE_Geopoint* wayPoints, WSEMA_MapRouteOptimization optimization, WSEMA_MapRouteRestrictions restrictions, double headingInDegrees, WF_IAsyncOperation_WSEMA_MapRouteFinderResult** out);
 
-/* Windows.Services.Maps.MapRouteFinder.GetWalkingRouteAsync(startPoint, endPoint) */
 HRESULT wsema_map_route_finder_get_walking_route_async(WDEGE_Geopoint* startPoint, WDEGE_Geopoint* endPoint, WF_IAsyncOperation_WSEMA_MapRouteFinderResult** out);
 
-/* Windows.Services.Maps.MapRouteFinder.GetWalkingRouteFromWaypointsAsync(wayPoints) */
 HRESULT wsema_map_route_finder_get_walking_route_from_waypoints_async(WFOCO_IIterable_WDEGE_Geopoint* wayPoints, WF_IAsyncOperation_WSEMA_MapRouteFinderResult** out);
 
-/* activate Windows.Services.Maps.MapRouteFinderResult */
 HRESULT wsema_map_route_finder_result_new(WSEMA_MapRouteFinderResult **out);
 
-/* Windows.Services.Maps.MapRouteFinderResult */
-/* Windows.Services.Maps.MapRouteFinderResult.get_Route() */
 HRESULT wsema_map_route_finder_result_get__route(WSEMA_MapRouteFinderResult *self, WSEMA_MapRoute** value);
 
-/* Windows.Services.Maps.MapRouteFinderResult.get_Status() */
 HRESULT wsema_map_route_finder_result_get__status(WSEMA_MapRouteFinderResult *self, WSEMA_MapRouteFinderStatus *value);
 
-/* Windows.Services.Maps.MapRouteFinderResult.get_AlternateRoutes() */
 HRESULT wsema_map_route_finder_result_get__alternate_routes(WSEMA_MapRouteFinderResult *self, WFOCO_IVectorView_WSEMA_MapRoute** value);
 
-/* activate Windows.Services.Maps.MapRouteLeg */
 HRESULT wsema_map_route_leg_new(WSEMA_MapRouteLeg **out);
 
-/* Windows.Services.Maps.MapRouteLeg */
-/* Windows.Services.Maps.MapRouteLeg.get_BoundingBox() */
 HRESULT wsema_map_route_leg_get__bounding_box(WSEMA_MapRouteLeg *self, WDEGE_GeoboundingBox** value);
 
-/* Windows.Services.Maps.MapRouteLeg.get_Path() */
 HRESULT wsema_map_route_leg_get__path(WSEMA_MapRouteLeg *self, WDEGE_Geopath** value);
 
-/* Windows.Services.Maps.MapRouteLeg.get_LengthInMeters() */
 HRESULT wsema_map_route_leg_get__length_in_meters(WSEMA_MapRouteLeg *self, double *value);
 
-/* Windows.Services.Maps.MapRouteLeg.get_EstimatedDuration() */
 HRESULT wsema_map_route_leg_get__estimated_duration(WSEMA_MapRouteLeg *self, WF_TimeSpan *value);
 
-/* Windows.Services.Maps.MapRouteLeg.get_Maneuvers() */
 HRESULT wsema_map_route_leg_get__maneuvers(WSEMA_MapRouteLeg *self, WFOCO_IVectorView_WSEMA_MapRouteManeuver** value);
 
-/* Windows.Services.Maps.MapRouteLeg.get_DurationWithoutTraffic() */
 HRESULT wsema_map_route_leg_get__duration_without_traffic(WSEMA_MapRouteLeg *self, WF_TimeSpan *value);
 
-/* Windows.Services.Maps.MapRouteLeg.get_TrafficCongestion() */
 HRESULT wsema_map_route_leg_get__traffic_congestion(WSEMA_MapRouteLeg *self, WSEMA_TrafficCongestion *value);
 
-/* activate Windows.Services.Maps.MapRouteManeuver */
 HRESULT wsema_map_route_maneuver_new(WSEMA_MapRouteManeuver **out);
 
-/* Windows.Services.Maps.MapRouteManeuver */
-/* Windows.Services.Maps.MapRouteManeuver.get_StartingPoint() */
 HRESULT wsema_map_route_maneuver_get__starting_point(WSEMA_MapRouteManeuver *self, WDEGE_Geopoint** value);
 
-/* Windows.Services.Maps.MapRouteManeuver.get_LengthInMeters() */
 HRESULT wsema_map_route_maneuver_get__length_in_meters(WSEMA_MapRouteManeuver *self, double *value);
 
-/* Windows.Services.Maps.MapRouteManeuver.get_InstructionText() */
 HRESULT wsema_map_route_maneuver_get__instruction_text(WSEMA_MapRouteManeuver *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.MapRouteManeuver.get_Kind() */
 HRESULT wsema_map_route_maneuver_get__kind(WSEMA_MapRouteManeuver *self, WSEMA_MapRouteManeuverKind *value);
 
-/* Windows.Services.Maps.MapRouteManeuver.get_ExitNumber() */
 HRESULT wsema_map_route_maneuver_get__exit_number(WSEMA_MapRouteManeuver *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.MapRouteManeuver.get_ManeuverNotices() */
 HRESULT wsema_map_route_maneuver_get__maneuver_notices(WSEMA_MapRouteManeuver *self, WSEMA_MapManeuverNotices *value);
 
-/* Windows.Services.Maps.MapRouteManeuver.get_StartHeading() */
 HRESULT wsema_map_route_maneuver_get__start_heading(WSEMA_MapRouteManeuver *self, double *value);
 
-/* Windows.Services.Maps.MapRouteManeuver.get_EndHeading() */
 HRESULT wsema_map_route_maneuver_get__end_heading(WSEMA_MapRouteManeuver *self, double *value);
 
-/* Windows.Services.Maps.MapRouteManeuver.get_StreetName() */
 HRESULT wsema_map_route_maneuver_get__street_name(WSEMA_MapRouteManeuver *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.MapRouteManeuver.get_Warnings() */
 HRESULT wsema_map_route_maneuver_get__warnings(WSEMA_MapRouteManeuver *self, WFOCO_IVectorView_WSEMA_ManeuverWarning** value);
 
-/* activate Windows.Services.Maps.MapService */
 HRESULT wsema_map_service_new(WSEMA_MapService **out);
 
-/* Windows.Services.Maps.MapService */
-/* Windows.Services.Maps.MapService.put_DataUsagePreference() */
 HRESULT wsema_map_service_put__data_usage_preference(WSEMA_MapServiceDataUsagePreference value);
 
-/* Windows.Services.Maps.MapService.get_DataUsagePreference() */
 HRESULT wsema_map_service_get__data_usage_preference(WSEMA_MapServiceDataUsagePreference *value);
 
-/* Windows.Services.Maps.MapService.get_DataAttributions() */
 HRESULT wsema_map_service_get__data_attributions(cwinrt_hstring *value);
 
-/* Windows.Services.Maps.MapService.get_WorldViewRegionCode() */
 HRESULT wsema_map_service_get__world_view_region_code(cwinrt_hstring *value);
 
-/* Windows.Services.Maps.MapService.put_ServiceToken() */
 HRESULT wsema_map_service_put__service_token(cwinrt_hstring value);
 
-/* Windows.Services.Maps.MapService.get_ServiceToken() */
 HRESULT wsema_map_service_get__service_token(cwinrt_hstring *value);
 
-/* activate Windows.Services.Maps.PlaceInfo */
 HRESULT wsema_place_info_new(WSEMA_PlaceInfo **out);
 
-/* Windows.Services.Maps.PlaceInfo */
-/* Windows.Services.Maps.PlaceInfo.Show(selection) */
 HRESULT wsema_place_info_show(WSEMA_PlaceInfo *self, WF_Rect selection);
 
-/* Windows.Services.Maps.PlaceInfo.Show(selection, preferredPlacement) */
 HRESULT wsema_place_info_show_rect_placement(WSEMA_PlaceInfo *self, WF_Rect selection, WUIPO_Placement preferredPlacement);
 
-/* Windows.Services.Maps.PlaceInfo.get_Identifier() */
 HRESULT wsema_place_info_get__identifier(WSEMA_PlaceInfo *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.PlaceInfo.get_DisplayName() */
 HRESULT wsema_place_info_get__display_name(WSEMA_PlaceInfo *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.PlaceInfo.get_DisplayAddress() */
 HRESULT wsema_place_info_get__display_address(WSEMA_PlaceInfo *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.PlaceInfo.get_Geoshape() */
 HRESULT wsema_place_info_get__geoshape(WSEMA_PlaceInfo *self, WDEGE_IGeoshape** value);
 
-/* Windows.Services.Maps.PlaceInfo.CreateFromAddress(displayAddress) */
 HRESULT wsema_place_info_create_from_address(cwinrt_hstring displayAddress, WSEMA_PlaceInfo** out);
 
-/* Windows.Services.Maps.PlaceInfo.CreateFromAddress(displayAddress, displayName) */
 HRESULT wsema_place_info_create_from_address_str_str_p(cwinrt_hstring displayAddress, cwinrt_hstring displayName, WSEMA_PlaceInfo** out);
 
-/* Windows.Services.Maps.PlaceInfo.Create(referencePoint) */
 HRESULT wsema_place_info_create(WDEGE_Geopoint* referencePoint, WSEMA_PlaceInfo** out);
 
-/* Windows.Services.Maps.PlaceInfo.Create(referencePoint, options) */
 HRESULT wsema_place_info_create_p_p_p(WDEGE_Geopoint* referencePoint, WSEMA_PlaceInfoCreateOptions* options, WSEMA_PlaceInfo** out);
 
-/* Windows.Services.Maps.PlaceInfo.CreateFromIdentifier(identifier) */
 HRESULT wsema_place_info_create_from_identifier(cwinrt_hstring identifier, WSEMA_PlaceInfo** out);
 
-/* Windows.Services.Maps.PlaceInfo.CreateFromIdentifier(identifier, defaultPoint, options) */
 HRESULT wsema_place_info_create_from_identifier_str_p_p_p(cwinrt_hstring identifier, WDEGE_Geopoint* defaultPoint, WSEMA_PlaceInfoCreateOptions* options, WSEMA_PlaceInfo** out);
 
-/* Windows.Services.Maps.PlaceInfo.CreateFromMapLocation(location) */
 HRESULT wsema_place_info_create_from_map_location(WSEMA_MapLocation* location, WSEMA_PlaceInfo** out);
 
-/* Windows.Services.Maps.PlaceInfo.get_IsShowSupported() */
 HRESULT wsema_place_info_get__is_show_supported(BOOL *value);
 
-/* activate Windows.Services.Maps.PlaceInfoCreateOptions */
 HRESULT wsema_place_info_create_options_new(WSEMA_PlaceInfoCreateOptions **out);
 
-/* Windows.Services.Maps.PlaceInfoCreateOptions */
-/* Windows.Services.Maps.PlaceInfoCreateOptions.put_DisplayName() */
 HRESULT wsema_place_info_create_options_put__display_name(WSEMA_PlaceInfoCreateOptions *self, cwinrt_hstring value);
 
-/* Windows.Services.Maps.PlaceInfoCreateOptions.get_DisplayName() */
 HRESULT wsema_place_info_create_options_get__display_name(WSEMA_PlaceInfoCreateOptions *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.PlaceInfoCreateOptions.put_DisplayAddress() */
 HRESULT wsema_place_info_create_options_put__display_address(WSEMA_PlaceInfoCreateOptions *self, cwinrt_hstring value);
 
-/* Windows.Services.Maps.PlaceInfoCreateOptions.get_DisplayAddress() */
 HRESULT wsema_place_info_create_options_get__display_address(WSEMA_PlaceInfoCreateOptions *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.IPlaceInfoStatics2 */
-/* Windows.Services.Maps.IPlaceInfoStatics2.CreateFromAddress(displayAddress) */
 HRESULT wsema_place_info_statics_2_create_from_address(WSEMA_IPlaceInfoStatics_2 *self, cwinrt_hstring displayAddress, WSEMA_PlaceInfo** out);
 
-/* Windows.Services.Maps.IPlaceInfoStatics2.CreateFromAddress(displayAddress, displayName) */
 HRESULT wsema_place_info_statics_2_create_from_address_str_str_p(WSEMA_IPlaceInfoStatics_2 *self, cwinrt_hstring displayAddress, cwinrt_hstring displayName, WSEMA_PlaceInfo** out);
 
-/* Windows.Services.Maps.IPlaceInfoStatics */
-/* Windows.Services.Maps.IPlaceInfoStatics.Create(referencePoint) */
 HRESULT wsema_place_info_statics_create(WSEMA_IPlaceInfoStatics *self, WDEGE_Geopoint* referencePoint, WSEMA_PlaceInfo** out);
 
-/* Windows.Services.Maps.IPlaceInfoStatics.Create(referencePoint, options) */
 HRESULT wsema_place_info_statics_create_p_p_p(WSEMA_IPlaceInfoStatics *self, WDEGE_Geopoint* referencePoint, WSEMA_PlaceInfoCreateOptions* options, WSEMA_PlaceInfo** out);
 
-/* Windows.Services.Maps.IPlaceInfoStatics.CreateFromIdentifier(identifier) */
 HRESULT wsema_place_info_statics_create_from_identifier(WSEMA_IPlaceInfoStatics *self, cwinrt_hstring identifier, WSEMA_PlaceInfo** out);
 
-/* Windows.Services.Maps.IPlaceInfoStatics.CreateFromIdentifier(identifier, defaultPoint, options) */
 HRESULT wsema_place_info_statics_create_from_identifier_str_p_p_p(WSEMA_IPlaceInfoStatics *self, cwinrt_hstring identifier, WDEGE_Geopoint* defaultPoint, WSEMA_PlaceInfoCreateOptions* options, WSEMA_PlaceInfo** out);
 
-/* Windows.Services.Maps.IPlaceInfoStatics.CreateFromMapLocation(location) */
 HRESULT wsema_place_info_statics_create_from_map_location(WSEMA_IPlaceInfoStatics *self, WSEMA_MapLocation* location, WSEMA_PlaceInfo** out);
 
-/* Windows.Services.Maps.IPlaceInfoStatics.get_IsShowSupported() */
 HRESULT wsema_place_info_statics_get__is_show_supported(WSEMA_IPlaceInfoStatics *self, BOOL *value);
 
-/* Windows.Services.Maps.IMapServiceStatics4 */
-/* Windows.Services.Maps.IMapServiceStatics4.put_DataUsagePreference() */
 HRESULT wsema_map_service_statics_4_put__data_usage_preference(WSEMA_IMapServiceStatics_4 *self, WSEMA_MapServiceDataUsagePreference value);
 
-/* Windows.Services.Maps.IMapServiceStatics4.get_DataUsagePreference() */
 HRESULT wsema_map_service_statics_4_get__data_usage_preference(WSEMA_IMapServiceStatics_4 *self, WSEMA_MapServiceDataUsagePreference *value);
 
-/* Windows.Services.Maps.IMapServiceStatics3 */
-/* Windows.Services.Maps.IMapServiceStatics3.get_DataAttributions() */
 HRESULT wsema_map_service_statics_3_get__data_attributions(WSEMA_IMapServiceStatics_3 *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.IMapServiceStatics2 */
-/* Windows.Services.Maps.IMapServiceStatics2.get_WorldViewRegionCode() */
 HRESULT wsema_map_service_statics_2_get__world_view_region_code(WSEMA_IMapServiceStatics_2 *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.IEnhancedWaypointFactory */
-/* Windows.Services.Maps.IEnhancedWaypointFactory.Create(point, kind) */
 HRESULT wsema_enhanced_waypoint_factory_create(WSEMA_IEnhancedWaypointFactory *self, WDEGE_Geopoint* point, WSEMA_WaypointKind kind, WSEMA_EnhancedWaypoint** out);
 
-/* Windows.Services.Maps.IMapLocationFinderStatics */
-/* Windows.Services.Maps.IMapLocationFinderStatics.FindLocationsAtAsync(queryPoint) */
 HRESULT wsema_map_location_finder_statics_find_locations_at_async(WSEMA_IMapLocationFinderStatics *self, WDEGE_Geopoint* queryPoint, WF_IAsyncOperation_WSEMA_MapLocationFinderResult** out);
 
-/* Windows.Services.Maps.IMapLocationFinderStatics.FindLocationsAsync(searchText, referencePoint) */
 HRESULT wsema_map_location_finder_statics_find_locations_async(WSEMA_IMapLocationFinderStatics *self, cwinrt_hstring searchText, WDEGE_Geopoint* referencePoint, WF_IAsyncOperation_WSEMA_MapLocationFinderResult** out);
 
-/* Windows.Services.Maps.IMapLocationFinderStatics.FindLocationsAsync(searchText, referencePoint, maxCount) */
 HRESULT wsema_map_location_finder_statics_find_locations_async_str_p_u32_p(WSEMA_IMapLocationFinderStatics *self, cwinrt_hstring searchText, WDEGE_Geopoint* referencePoint, uint32_t maxCount, WF_IAsyncOperation_WSEMA_MapLocationFinderResult** out);
 
-/* Windows.Services.Maps.IMapLocationFinderStatics2 */
-/* Windows.Services.Maps.IMapLocationFinderStatics2.FindLocationsAtAsync(queryPoint, accuracy) */
 HRESULT wsema_map_location_finder_statics_2_find_locations_at_async(WSEMA_IMapLocationFinderStatics_2 *self, WDEGE_Geopoint* queryPoint, WSEMA_MapLocationDesiredAccuracy accuracy, WF_IAsyncOperation_WSEMA_MapLocationFinderResult** out);
 
-/* Windows.Services.Maps.IMapManagerStatics */
-/* Windows.Services.Maps.IMapManagerStatics.ShowDownloadedMapsUI() */
 HRESULT wsema_map_manager_statics_show_downloaded_maps_u_i(WSEMA_IMapManagerStatics *self);
 
-/* Windows.Services.Maps.IMapManagerStatics.ShowMapsUpdateUI() */
 HRESULT wsema_map_manager_statics_show_maps_update_u_i(WSEMA_IMapManagerStatics *self);
 
-/* Windows.Services.Maps.IMapRouteFinderStatics */
-/* Windows.Services.Maps.IMapRouteFinderStatics.GetDrivingRouteAsync(startPoint, endPoint) */
 HRESULT wsema_map_route_finder_statics_get_driving_route_async(WSEMA_IMapRouteFinderStatics *self, WDEGE_Geopoint* startPoint, WDEGE_Geopoint* endPoint, WF_IAsyncOperation_WSEMA_MapRouteFinderResult** out);
 
-/* Windows.Services.Maps.IMapRouteFinderStatics.GetDrivingRouteAsync(startPoint, endPoint, optimization) */
 HRESULT wsema_map_route_finder_statics_get_driving_route_async_p_p_map_route_optimization_p(WSEMA_IMapRouteFinderStatics *self, WDEGE_Geopoint* startPoint, WDEGE_Geopoint* endPoint, WSEMA_MapRouteOptimization optimization, WF_IAsyncOperation_WSEMA_MapRouteFinderResult** out);
 
-/* Windows.Services.Maps.IMapRouteFinderStatics.GetDrivingRouteAsync(startPoint, endPoint, optimization, restrictions) */
 HRESULT wsema_map_route_finder_statics_get_driving_route_async_p_p_map_route_optimization_map_route_a54f453f(WSEMA_IMapRouteFinderStatics *self, WDEGE_Geopoint* startPoint, WDEGE_Geopoint* endPoint, WSEMA_MapRouteOptimization optimization, WSEMA_MapRouteRestrictions restrictions, WF_IAsyncOperation_WSEMA_MapRouteFinderResult** out);
 
-/* Windows.Services.Maps.IMapRouteFinderStatics.GetDrivingRouteAsync(startPoint, endPoint, optimization, restrictions, headingInDegrees) */
 HRESULT wsema_map_route_finder_statics_get_driving_route_async_p_p_map_route_optimization_map_route_75fd9db4(WSEMA_IMapRouteFinderStatics *self, WDEGE_Geopoint* startPoint, WDEGE_Geopoint* endPoint, WSEMA_MapRouteOptimization optimization, WSEMA_MapRouteRestrictions restrictions, double headingInDegrees, WF_IAsyncOperation_WSEMA_MapRouteFinderResult** out);
 
-/* Windows.Services.Maps.IMapRouteFinderStatics.GetDrivingRouteFromWaypointsAsync(wayPoints) */
 HRESULT wsema_map_route_finder_statics_get_driving_route_from_waypoints_async(WSEMA_IMapRouteFinderStatics *self, WFOCO_IIterable_WDEGE_Geopoint* wayPoints, WF_IAsyncOperation_WSEMA_MapRouteFinderResult** out);
 
-/* Windows.Services.Maps.IMapRouteFinderStatics.GetDrivingRouteFromWaypointsAsync(wayPoints, optimization) */
 HRESULT wsema_map_route_finder_statics_get_driving_route_from_waypoints_async_p_map_route_optimization_p(WSEMA_IMapRouteFinderStatics *self, WFOCO_IIterable_WDEGE_Geopoint* wayPoints, WSEMA_MapRouteOptimization optimization, WF_IAsyncOperation_WSEMA_MapRouteFinderResult** out);
 
-/* Windows.Services.Maps.IMapRouteFinderStatics.GetDrivingRouteFromWaypointsAsync(wayPoints, optimization, restrictions) */
 HRESULT wsema_map_route_finder_statics_get_driving_route_from_waypoints_async_p_map_route_optimization_map_route_r_7dc89078(WSEMA_IMapRouteFinderStatics *self, WFOCO_IIterable_WDEGE_Geopoint* wayPoints, WSEMA_MapRouteOptimization optimization, WSEMA_MapRouteRestrictions restrictions, WF_IAsyncOperation_WSEMA_MapRouteFinderResult** out);
 
-/* Windows.Services.Maps.IMapRouteFinderStatics.GetDrivingRouteFromWaypointsAsync(wayPoints, optimization, restrictions, headingInDegrees) */
 HRESULT wsema_map_route_finder_statics_get_driving_route_from_waypoints_async_p_map_route_optimization_map_route_r_3901f417(WSEMA_IMapRouteFinderStatics *self, WFOCO_IIterable_WDEGE_Geopoint* wayPoints, WSEMA_MapRouteOptimization optimization, WSEMA_MapRouteRestrictions restrictions, double headingInDegrees, WF_IAsyncOperation_WSEMA_MapRouteFinderResult** out);
 
-/* Windows.Services.Maps.IMapRouteFinderStatics.GetWalkingRouteAsync(startPoint, endPoint) */
 HRESULT wsema_map_route_finder_statics_get_walking_route_async(WSEMA_IMapRouteFinderStatics *self, WDEGE_Geopoint* startPoint, WDEGE_Geopoint* endPoint, WF_IAsyncOperation_WSEMA_MapRouteFinderResult** out);
 
-/* Windows.Services.Maps.IMapRouteFinderStatics.GetWalkingRouteFromWaypointsAsync(wayPoints) */
 HRESULT wsema_map_route_finder_statics_get_walking_route_from_waypoints_async(WSEMA_IMapRouteFinderStatics *self, WFOCO_IIterable_WDEGE_Geopoint* wayPoints, WF_IAsyncOperation_WSEMA_MapRouteFinderResult** out);
 
-/* Windows.Services.Maps.IMapRouteFinderStatics2 */
-/* Windows.Services.Maps.IMapRouteFinderStatics2.GetDrivingRouteAsync(startPoint, endPoint, options) */
 HRESULT wsema_map_route_finder_statics_2_get_driving_route_async(WSEMA_IMapRouteFinderStatics_2 *self, WDEGE_Geopoint* startPoint, WDEGE_Geopoint* endPoint, WSEMA_MapRouteDrivingOptions* options, WF_IAsyncOperation_WSEMA_MapRouteFinderResult** out);
 
-/* Windows.Services.Maps.IMapRouteFinderStatics3 */
-/* Windows.Services.Maps.IMapRouteFinderStatics3.GetDrivingRouteFromEnhancedWaypointsAsync(waypoints) */
 HRESULT wsema_map_route_finder_statics_3_get_driving_route_from_enhanced_waypoints_async(WSEMA_IMapRouteFinderStatics_3 *self, WFOCO_IIterable_WSEMA_EnhancedWaypoint* waypoints, WF_IAsyncOperation_WSEMA_MapRouteFinderResult** out);
 
-/* Windows.Services.Maps.IMapRouteFinderStatics3.GetDrivingRouteFromEnhancedWaypointsAsync(waypoints, options) */
 HRESULT wsema_map_route_finder_statics_3_get_driving_route_from_enhanced_waypoints_async_p_p_p(WSEMA_IMapRouteFinderStatics_3 *self, WFOCO_IIterable_WSEMA_EnhancedWaypoint* waypoints, WSEMA_MapRouteDrivingOptions* options, WF_IAsyncOperation_WSEMA_MapRouteFinderResult** out);
 
-/* Windows.Services.Maps.IMapServiceStatics */
-/* Windows.Services.Maps.IMapServiceStatics.put_ServiceToken() */
 HRESULT wsema_map_service_statics_put__service_token(WSEMA_IMapServiceStatics *self, cwinrt_hstring value);
 
-/* Windows.Services.Maps.IMapServiceStatics.get_ServiceToken() */
 HRESULT wsema_map_service_statics_get__service_token(WSEMA_IMapServiceStatics *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.IEnhancedWaypoint */
-/* Windows.Services.Maps.IMapLocationFinderResult */
-/* Windows.Services.Maps.IMapLocation */
-/* Windows.Services.Maps.IMapAddress */
-/* Windows.Services.Maps.IMapAddress2 */
-/* Windows.Services.Maps.IMapAddress2.get_FormattedAddress() */
 HRESULT wsema_map_address_2_get__formatted_address(WSEMA_IMapAddress_2 *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.IManeuverWarning */
-/* Windows.Services.Maps.IMapRoute */
-/* Windows.Services.Maps.IMapRoute2 */
-/* Windows.Services.Maps.IMapRoute2.get_ViolatedRestrictions() */
 HRESULT wsema_map_route_2_get__violated_restrictions(WSEMA_IMapRoute_2 *self, WSEMA_MapRouteRestrictions *value);
 
-/* Windows.Services.Maps.IMapRoute2.get_HasBlockedRoads() */
 HRESULT wsema_map_route_2_get__has_blocked_roads(WSEMA_IMapRoute_2 *self, BOOL *value);
 
-/* Windows.Services.Maps.IMapRoute3 */
-/* Windows.Services.Maps.IMapRoute3.get_DurationWithoutTraffic() */
 HRESULT wsema_map_route_3_get__duration_without_traffic(WSEMA_IMapRoute_3 *self, WF_TimeSpan *value);
 
-/* Windows.Services.Maps.IMapRoute3.get_TrafficCongestion() */
 HRESULT wsema_map_route_3_get__traffic_congestion(WSEMA_IMapRoute_3 *self, WSEMA_TrafficCongestion *value);
 
-/* Windows.Services.Maps.IMapRoute4 */
-/* Windows.Services.Maps.IMapRoute4.get_IsScenic() */
 HRESULT wsema_map_route_4_get__is_scenic(WSEMA_IMapRoute_4 *self, BOOL *value);
 
-/* Windows.Services.Maps.IMapRouteDrivingOptions */
-/* Windows.Services.Maps.IMapRouteDrivingOptions2 */
-/* Windows.Services.Maps.IMapRouteDrivingOptions2.get_DepartureTime() */
 HRESULT wsema_map_route_driving_options_2_get__departure_time(WSEMA_IMapRouteDrivingOptions_2 *self, WF_DateTime** value);
 
-/* Windows.Services.Maps.IMapRouteDrivingOptions2.put_DepartureTime() */
 HRESULT wsema_map_route_driving_options_2_put__departure_time(WSEMA_IMapRouteDrivingOptions_2 *self, WF_DateTime* value);
 
-/* Windows.Services.Maps.IMapRouteFinderResult */
-/* Windows.Services.Maps.IMapRouteFinderResult2 */
-/* Windows.Services.Maps.IMapRouteFinderResult2.get_AlternateRoutes() */
 HRESULT wsema_map_route_finder_result_2_get__alternate_routes(WSEMA_IMapRouteFinderResult_2 *self, WFOCO_IVectorView_WSEMA_MapRoute** value);
 
-/* Windows.Services.Maps.IMapRouteLeg */
-/* Windows.Services.Maps.IMapRouteLeg2 */
-/* Windows.Services.Maps.IMapRouteLeg2.get_DurationWithoutTraffic() */
 HRESULT wsema_map_route_leg_2_get__duration_without_traffic(WSEMA_IMapRouteLeg_2 *self, WF_TimeSpan *value);
 
-/* Windows.Services.Maps.IMapRouteLeg2.get_TrafficCongestion() */
 HRESULT wsema_map_route_leg_2_get__traffic_congestion(WSEMA_IMapRouteLeg_2 *self, WSEMA_TrafficCongestion *value);
 
-/* Windows.Services.Maps.IMapRouteManeuver */
-/* Windows.Services.Maps.IMapRouteManeuver2 */
-/* Windows.Services.Maps.IMapRouteManeuver2.get_StartHeading() */
 HRESULT wsema_map_route_maneuver_2_get__start_heading(WSEMA_IMapRouteManeuver_2 *self, double *value);
 
-/* Windows.Services.Maps.IMapRouteManeuver2.get_EndHeading() */
 HRESULT wsema_map_route_maneuver_2_get__end_heading(WSEMA_IMapRouteManeuver_2 *self, double *value);
 
-/* Windows.Services.Maps.IMapRouteManeuver2.get_StreetName() */
 HRESULT wsema_map_route_maneuver_2_get__street_name(WSEMA_IMapRouteManeuver_2 *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.IMapRouteManeuver3 */
-/* Windows.Services.Maps.IMapRouteManeuver3.get_Warnings() */
 HRESULT wsema_map_route_maneuver_3_get__warnings(WSEMA_IMapRouteManeuver_3 *self, WFOCO_IVectorView_WSEMA_ManeuverWarning** value);
 
-/* Windows.Services.Maps.IPlaceInfo */
-/* Windows.Services.Maps.IPlaceInfoCreateOptions */
 #endif /* CWINRT_WINDOWS_SERVICES_MAPS_H */

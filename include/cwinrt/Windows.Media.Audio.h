@@ -17,7 +17,6 @@
 #include <cwinrt/Windows.Media.Devices.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WMEEF_IAudioEffectDefinition
 #define CWINRT_FWD_WMEEF_IAudioEffectDefinition
 typedef struct WMEEF_IAudioEffectDefinition WMEEF_IAudioEffectDefinition;
@@ -57,7 +56,6 @@ typedef enum WMETR_TranscodeFailureReason {
 typedef struct WMECO_MediaSource WMECO_MediaSource;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMEAU_IAudioNodeEmitterShapeStatics WMEAU_IAudioNodeEmitterShapeStatics;
 typedef struct WMEAU_IAudioPlaybackConnectionStatics WMEAU_IAudioPlaybackConnectionStatics;
 typedef struct WMEAU_IAudioStateMonitorStatics WMEAU_IAudioStateMonitorStatics;
@@ -166,7 +164,6 @@ typedef struct WMEAU_IAudioGraph WMEAU_IAudioGraph;
 typedef struct WMEAU_IAudioInputNode WMEAU_IAudioInputNode;
 typedef struct WMEAU_IAudioNode WMEAU_IAudioNode;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WMERE_AudioRenderCategory
 #define CWINRT_FWD_WMERE_AudioRenderCategory
 typedef enum WMERE_AudioRenderCategory {
@@ -505,7 +502,6 @@ typedef enum WMEAU_SetDefaultSpatialAudioFormatStatus {
 } WMEAU_SetDefaultSpatialAudioFormatStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -778,1042 +774,670 @@ static const IID CWINRT_IID_WMEAU_IAudioInputNode CWINRT_MAYBE_UNUSED = { 0xD148
 static const IID CWINRT_IID_WMEAU_IAudioNode CWINRT_MAYBE_UNUSED = { 0x15389D7F, 0xDBD8, 0x4819, { 0xBF, 0x03, 0x66, 0x8E, 0x93, 0x57, 0xCD, 0x6D } };
 #endif
 
-/* Methods */
-
-/* Windows.Media.Audio.IAudioNodeEmitterShapeStatics */
-/* Windows.Media.Audio.IAudioNodeEmitterShapeStatics.CreateCone(innerAngle, outerAngle, outerAngleGain) */
 HRESULT wmeau_audio_node_emitter_shape_statics_create_cone(WMEAU_IAudioNodeEmitterShapeStatics *self, double innerAngle, double outerAngle, double outerAngleGain, WMEAU_AudioNodeEmitterShape** out);
 
-/* Windows.Media.Audio.IAudioNodeEmitterShapeStatics.CreateOmnidirectional() */
 HRESULT wmeau_audio_node_emitter_shape_statics_create_omnidirectional(WMEAU_IAudioNodeEmitterShapeStatics *self, WMEAU_AudioNodeEmitterShape** out);
 
-/* Windows.Media.Audio.IAudioPlaybackConnectionStatics */
-/* Windows.Media.Audio.IAudioPlaybackConnectionStatics.GetDeviceSelector() */
 HRESULT wmeau_audio_playback_connection_statics_get_device_selector(WMEAU_IAudioPlaybackConnectionStatics *self, cwinrt_hstring *out);
 
-/* Windows.Media.Audio.IAudioPlaybackConnectionStatics.TryCreateFromId(id) */
 HRESULT wmeau_audio_playback_connection_statics_try_create_from_id(WMEAU_IAudioPlaybackConnectionStatics *self, cwinrt_hstring id, WMEAU_AudioPlaybackConnection** out);
 
-/* Windows.Media.Audio.IAudioStateMonitorStatics */
-/* Windows.Media.Audio.IAudioStateMonitorStatics.CreateForRenderMonitoring() */
 HRESULT wmeau_audio_state_monitor_statics_create_for_render_monitoring(WMEAU_IAudioStateMonitorStatics *self, WMEAU_AudioStateMonitor** out);
 
-/* Windows.Media.Audio.IAudioStateMonitorStatics.CreateForRenderMonitoring(category) */
 HRESULT wmeau_audio_state_monitor_statics_create_for_render_monitoring_audio_render_category_p(WMEAU_IAudioStateMonitorStatics *self, WMERE_AudioRenderCategory category, WMEAU_AudioStateMonitor** out);
 
-/* Windows.Media.Audio.IAudioStateMonitorStatics.CreateForRenderMonitoring(category, role) */
 HRESULT wmeau_audio_state_monitor_statics_create_for_render_monitoring_audio_render_category_audio_device_role_p(WMEAU_IAudioStateMonitorStatics *self, WMERE_AudioRenderCategory category, WMEDE_AudioDeviceRole role, WMEAU_AudioStateMonitor** out);
 
-/* Windows.Media.Audio.IAudioStateMonitorStatics.CreateForRenderMonitoringWithCategoryAndDeviceId(category, deviceId) */
 HRESULT wmeau_audio_state_monitor_statics_create_for_render_monitoring_with_category_and_device_id(WMEAU_IAudioStateMonitorStatics *self, WMERE_AudioRenderCategory category, cwinrt_hstring deviceId, WMEAU_AudioStateMonitor** out);
 
-/* Windows.Media.Audio.IAudioStateMonitorStatics.CreateForCaptureMonitoring() */
 HRESULT wmeau_audio_state_monitor_statics_create_for_capture_monitoring(WMEAU_IAudioStateMonitorStatics *self, WMEAU_AudioStateMonitor** out);
 
-/* Windows.Media.Audio.IAudioStateMonitorStatics.CreateForCaptureMonitoring(category) */
 HRESULT wmeau_audio_state_monitor_statics_create_for_capture_monitoring_media_category_p(WMEAU_IAudioStateMonitorStatics *self, WMECA_MediaCategory category, WMEAU_AudioStateMonitor** out);
 
-/* Windows.Media.Audio.IAudioStateMonitorStatics.CreateForCaptureMonitoring(category, role) */
 HRESULT wmeau_audio_state_monitor_statics_create_for_capture_monitoring_media_category_audio_device_role_p(WMEAU_IAudioStateMonitorStatics *self, WMECA_MediaCategory category, WMEDE_AudioDeviceRole role, WMEAU_AudioStateMonitor** out);
 
-/* Windows.Media.Audio.IAudioStateMonitorStatics.CreateForCaptureMonitoringWithCategoryAndDeviceId(category, deviceId) */
 HRESULT wmeau_audio_state_monitor_statics_create_for_capture_monitoring_with_category_and_device_id(WMEAU_IAudioStateMonitorStatics *self, WMECA_MediaCategory category, cwinrt_hstring deviceId, WMEAU_AudioStateMonitor** out);
 
-/* Windows.Media.Audio.IEchoEffectDefinitionFactory */
-/* Windows.Media.Audio.IEchoEffectDefinitionFactory.Create(audioGraph) */
 HRESULT wmeau_echo_effect_definition_factory_create(WMEAU_IEchoEffectDefinitionFactory *self, WMEAU_AudioGraph* audioGraph, WMEAU_EchoEffectDefinition** out);
 
-/* Windows.Media.Audio.IEqualizerEffectDefinitionFactory */
-/* Windows.Media.Audio.IEqualizerEffectDefinitionFactory.Create(audioGraph) */
 HRESULT wmeau_equalizer_effect_definition_factory_create(WMEAU_IEqualizerEffectDefinitionFactory *self, WMEAU_AudioGraph* audioGraph, WMEAU_EqualizerEffectDefinition** out);
 
-/* Windows.Media.Audio.ILimiterEffectDefinitionFactory */
-/* Windows.Media.Audio.ILimiterEffectDefinitionFactory.Create(audioGraph) */
 HRESULT wmeau_limiter_effect_definition_factory_create(WMEAU_ILimiterEffectDefinitionFactory *self, WMEAU_AudioGraph* audioGraph, WMEAU_LimiterEffectDefinition** out);
 
-/* Windows.Media.Audio.IReverbEffectDefinitionFactory */
-/* Windows.Media.Audio.IReverbEffectDefinitionFactory.Create(audioGraph) */
 HRESULT wmeau_reverb_effect_definition_factory_create(WMEAU_IReverbEffectDefinitionFactory *self, WMEAU_AudioGraph* audioGraph, WMEAU_ReverbEffectDefinition** out);
 
-/* Windows.Media.Audio.ISpatialAudioDeviceConfigurationStatics */
-/* Windows.Media.Audio.ISpatialAudioDeviceConfigurationStatics.GetForDeviceId(deviceId) */
 HRESULT wmeau_spatial_audio_device_configuration_statics_get_for_device_id(WMEAU_ISpatialAudioDeviceConfigurationStatics *self, cwinrt_hstring deviceId, WMEAU_SpatialAudioDeviceConfiguration** out);
 
-/* Windows.Media.Audio.ISpatialAudioFormatConfigurationStatics */
-/* Windows.Media.Audio.ISpatialAudioFormatConfigurationStatics.GetDefault() */
 HRESULT wmeau_spatial_audio_format_configuration_statics_get_default(WMEAU_ISpatialAudioFormatConfigurationStatics *self, WMEAU_SpatialAudioFormatConfiguration** out);
 
-/* Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics */
-/* Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics.get_WindowsSonic() */
 HRESULT wmeau_spatial_audio_format_subtype_statics_get__windows_sonic(WMEAU_ISpatialAudioFormatSubtypeStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics.get_DolbyAtmosForHeadphones() */
 HRESULT wmeau_spatial_audio_format_subtype_statics_get__dolby_atmos_for_headphones(WMEAU_ISpatialAudioFormatSubtypeStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics.get_DolbyAtmosForHomeTheater() */
 HRESULT wmeau_spatial_audio_format_subtype_statics_get__dolby_atmos_for_home_theater(WMEAU_ISpatialAudioFormatSubtypeStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics.get_DolbyAtmosForSpeakers() */
 HRESULT wmeau_spatial_audio_format_subtype_statics_get__dolby_atmos_for_speakers(WMEAU_ISpatialAudioFormatSubtypeStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics.get_DTSHeadphoneX() */
 HRESULT wmeau_spatial_audio_format_subtype_statics_get__d_t_s_headphone_x(WMEAU_ISpatialAudioFormatSubtypeStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics.get_DTSXUltra() */
 HRESULT wmeau_spatial_audio_format_subtype_statics_get__d_t_s_x_ultra(WMEAU_ISpatialAudioFormatSubtypeStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics2 */
-/* Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics2.get_DTSXForHomeTheater() */
 HRESULT wmeau_spatial_audio_format_subtype_statics_2_get__d_t_s_x_for_home_theater(WMEAU_ISpatialAudioFormatSubtypeStatics_2 *self, cwinrt_hstring *value);
 
-/* activate Windows.Media.Audio.LimiterEffectDefinition */
 HRESULT wmeau_limiter_effect_definition_new(WMEAU_LimiterEffectDefinition **out);
 
-/* Windows.Media.Audio.LimiterEffectDefinition */
-/* Windows.Media.Audio.LimiterEffectDefinition.put_Release() */
 HRESULT wmeau_limiter_effect_definition_put__release(WMEAU_LimiterEffectDefinition *self, uint32_t value);
 
-/* Windows.Media.Audio.LimiterEffectDefinition.get_Release() */
 HRESULT wmeau_limiter_effect_definition_get__release(WMEAU_LimiterEffectDefinition *self, uint32_t *value);
 
-/* Windows.Media.Audio.LimiterEffectDefinition.put_Loudness() */
 HRESULT wmeau_limiter_effect_definition_put__loudness(WMEAU_LimiterEffectDefinition *self, uint32_t value);
 
-/* Windows.Media.Audio.LimiterEffectDefinition.get_Loudness() */
 HRESULT wmeau_limiter_effect_definition_get__loudness(WMEAU_LimiterEffectDefinition *self, uint32_t *value);
 
-/* Windows.Media.Audio.LimiterEffectDefinition.get_ActivatableClassId() */
 HRESULT wmeau_limiter_effect_definition_get__activatable_class_id(WMEAU_LimiterEffectDefinition *self, cwinrt_hstring *value);
 
-/* Windows.Media.Audio.LimiterEffectDefinition.get_Properties() */
 HRESULT wmeau_limiter_effect_definition_get__properties(WMEAU_LimiterEffectDefinition *self, WFOCO_IPropertySet** value);
 
-/* activate Windows.Media.Audio.MediaSourceAudioInputNode */
 HRESULT wmeau_media_source_audio_input_node_new(WMEAU_MediaSourceAudioInputNode **out);
 
-/* Windows.Media.Audio.MediaSourceAudioInputNode */
-/* Windows.Media.Audio.MediaSourceAudioInputNode.put_PlaybackSpeedFactor() */
 HRESULT wmeau_media_source_audio_input_node_put__playback_speed_factor(WMEAU_MediaSourceAudioInputNode *self, double value);
 
-/* Windows.Media.Audio.MediaSourceAudioInputNode.get_PlaybackSpeedFactor() */
 HRESULT wmeau_media_source_audio_input_node_get__playback_speed_factor(WMEAU_MediaSourceAudioInputNode *self, double *value);
 
-/* Windows.Media.Audio.MediaSourceAudioInputNode.get_Position() */
 HRESULT wmeau_media_source_audio_input_node_get__position(WMEAU_MediaSourceAudioInputNode *self, WF_TimeSpan *value);
 
-/* Windows.Media.Audio.MediaSourceAudioInputNode.Seek(position) */
 HRESULT wmeau_media_source_audio_input_node_seek(WMEAU_MediaSourceAudioInputNode *self, WF_TimeSpan position);
 
-/* Windows.Media.Audio.MediaSourceAudioInputNode.get_StartTime() */
 HRESULT wmeau_media_source_audio_input_node_get__start_time(WMEAU_MediaSourceAudioInputNode *self, WF_TimeSpan** value);
 
-/* Windows.Media.Audio.MediaSourceAudioInputNode.put_StartTime() */
 HRESULT wmeau_media_source_audio_input_node_put__start_time(WMEAU_MediaSourceAudioInputNode *self, WF_TimeSpan* value);
 
-/* Windows.Media.Audio.MediaSourceAudioInputNode.get_EndTime() */
 HRESULT wmeau_media_source_audio_input_node_get__end_time(WMEAU_MediaSourceAudioInputNode *self, WF_TimeSpan** value);
 
-/* Windows.Media.Audio.MediaSourceAudioInputNode.put_EndTime() */
 HRESULT wmeau_media_source_audio_input_node_put__end_time(WMEAU_MediaSourceAudioInputNode *self, WF_TimeSpan* value);
 
-/* Windows.Media.Audio.MediaSourceAudioInputNode.get_LoopCount() */
 HRESULT wmeau_media_source_audio_input_node_get__loop_count(WMEAU_MediaSourceAudioInputNode *self, int32_t** value);
 
-/* Windows.Media.Audio.MediaSourceAudioInputNode.put_LoopCount() */
 HRESULT wmeau_media_source_audio_input_node_put__loop_count(WMEAU_MediaSourceAudioInputNode *self, int32_t* value);
 
-/* Windows.Media.Audio.MediaSourceAudioInputNode.get_Duration() */
 HRESULT wmeau_media_source_audio_input_node_get__duration(WMEAU_MediaSourceAudioInputNode *self, WF_TimeSpan *value);
 
-/* Windows.Media.Audio.MediaSourceAudioInputNode.get_MediaSource() */
 HRESULT wmeau_media_source_audio_input_node_get__media_source(WMEAU_MediaSourceAudioInputNode *self, WMECO_MediaSource** value);
 
-/* Windows.Media.Audio.MediaSourceAudioInputNode.get_OutgoingConnections() */
 HRESULT wmeau_media_source_audio_input_node_get__outgoing_connections(WMEAU_MediaSourceAudioInputNode *self, WFOCO_IVectorView_WMEAU_AudioGraphConnection** value);
 
-/* Windows.Media.Audio.MediaSourceAudioInputNode.AddOutgoingConnection(destination) */
 HRESULT wmeau_media_source_audio_input_node_add_outgoing_connection(WMEAU_MediaSourceAudioInputNode *self, WMEAU_IAudioNode* destination);
 
-/* Windows.Media.Audio.MediaSourceAudioInputNode.AddOutgoingConnection(destination, gain) */
 HRESULT wmeau_media_source_audio_input_node_add_outgoing_connection_p_f64(WMEAU_MediaSourceAudioInputNode *self, WMEAU_IAudioNode* destination, double gain);
 
-/* Windows.Media.Audio.MediaSourceAudioInputNode.RemoveOutgoingConnection(destination) */
 HRESULT wmeau_media_source_audio_input_node_remove_outgoing_connection(WMEAU_MediaSourceAudioInputNode *self, WMEAU_IAudioNode* destination);
 
-/* Windows.Media.Audio.MediaSourceAudioInputNode.get_EffectDefinitions() */
 HRESULT wmeau_media_source_audio_input_node_get__effect_definitions(WMEAU_MediaSourceAudioInputNode *self, WFOCO_IVector_WMEEF_IAudioEffectDefinition** value);
 
-/* Windows.Media.Audio.MediaSourceAudioInputNode.put_OutgoingGain() */
 HRESULT wmeau_media_source_audio_input_node_put__outgoing_gain(WMEAU_MediaSourceAudioInputNode *self, double value);
 
-/* Windows.Media.Audio.MediaSourceAudioInputNode.get_OutgoingGain() */
 HRESULT wmeau_media_source_audio_input_node_get__outgoing_gain(WMEAU_MediaSourceAudioInputNode *self, double *value);
 
-/* Windows.Media.Audio.MediaSourceAudioInputNode.get_EncodingProperties() */
 HRESULT wmeau_media_source_audio_input_node_get__encoding_properties(WMEAU_MediaSourceAudioInputNode *self, WMEME_AudioEncodingProperties** value);
 
-/* Windows.Media.Audio.MediaSourceAudioInputNode.get_ConsumeInput() */
 HRESULT wmeau_media_source_audio_input_node_get__consume_input(WMEAU_MediaSourceAudioInputNode *self, BOOL *value);
 
-/* Windows.Media.Audio.MediaSourceAudioInputNode.put_ConsumeInput() */
 HRESULT wmeau_media_source_audio_input_node_put__consume_input(WMEAU_MediaSourceAudioInputNode *self, BOOL value);
 
-/* Windows.Media.Audio.MediaSourceAudioInputNode.Start() */
 HRESULT wmeau_media_source_audio_input_node_start(WMEAU_MediaSourceAudioInputNode *self);
 
-/* Windows.Media.Audio.MediaSourceAudioInputNode.Stop() */
 HRESULT wmeau_media_source_audio_input_node_stop(WMEAU_MediaSourceAudioInputNode *self);
 
-/* Windows.Media.Audio.MediaSourceAudioInputNode.Reset() */
 HRESULT wmeau_media_source_audio_input_node_reset(WMEAU_MediaSourceAudioInputNode *self);
 
-/* Windows.Media.Audio.MediaSourceAudioInputNode.DisableEffectsByDefinition(definition) */
 HRESULT wmeau_media_source_audio_input_node_disable_effects_by_definition(WMEAU_MediaSourceAudioInputNode *self, WMEEF_IAudioEffectDefinition* definition);
 
-/* Windows.Media.Audio.MediaSourceAudioInputNode.EnableEffectsByDefinition(definition) */
 HRESULT wmeau_media_source_audio_input_node_enable_effects_by_definition(WMEAU_MediaSourceAudioInputNode *self, WMEEF_IAudioEffectDefinition* definition);
 
-/* Windows.Media.Audio.MediaSourceAudioInputNode.Close() */
 HRESULT wmeau_media_source_audio_input_node_close(WMEAU_MediaSourceAudioInputNode *self);
 
-/* Windows.Media.Audio.MediaSourceAudioInputNode.get_Emitter() */
 HRESULT wmeau_media_source_audio_input_node_get__emitter(WMEAU_MediaSourceAudioInputNode *self, WMEAU_AudioNodeEmitter** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeau_media_source_audio_input_node_on_media_source_completed(WMEAU_MediaSourceAudioInputNode *self, cwinrt_event_fn fn, void *ctx);
 void wmeau_media_source_audio_input_node_off_media_source_completed(WMEAU_MediaSourceAudioInputNode *self, cwinrt_token token);
 
-/* activate Windows.Media.Audio.ReverbEffectDefinition */
 HRESULT wmeau_reverb_effect_definition_new(WMEAU_ReverbEffectDefinition **out);
 
-/* Windows.Media.Audio.ReverbEffectDefinition */
-/* Windows.Media.Audio.ReverbEffectDefinition.put_WetDryMix() */
 HRESULT wmeau_reverb_effect_definition_put__wet_dry_mix(WMEAU_ReverbEffectDefinition *self, double value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.get_WetDryMix() */
 HRESULT wmeau_reverb_effect_definition_get__wet_dry_mix(WMEAU_ReverbEffectDefinition *self, double *value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.put_ReflectionsDelay() */
 HRESULT wmeau_reverb_effect_definition_put__reflections_delay(WMEAU_ReverbEffectDefinition *self, uint32_t value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.get_ReflectionsDelay() */
 HRESULT wmeau_reverb_effect_definition_get__reflections_delay(WMEAU_ReverbEffectDefinition *self, uint32_t *value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.put_ReverbDelay() */
 HRESULT wmeau_reverb_effect_definition_put__reverb_delay(WMEAU_ReverbEffectDefinition *self, uint8_t value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.get_ReverbDelay() */
 HRESULT wmeau_reverb_effect_definition_get__reverb_delay(WMEAU_ReverbEffectDefinition *self, uint8_t *value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.put_RearDelay() */
 HRESULT wmeau_reverb_effect_definition_put__rear_delay(WMEAU_ReverbEffectDefinition *self, uint8_t value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.get_RearDelay() */
 HRESULT wmeau_reverb_effect_definition_get__rear_delay(WMEAU_ReverbEffectDefinition *self, uint8_t *value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.put_PositionLeft() */
 HRESULT wmeau_reverb_effect_definition_put__position_left(WMEAU_ReverbEffectDefinition *self, uint8_t value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.get_PositionLeft() */
 HRESULT wmeau_reverb_effect_definition_get__position_left(WMEAU_ReverbEffectDefinition *self, uint8_t *value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.put_PositionRight() */
 HRESULT wmeau_reverb_effect_definition_put__position_right(WMEAU_ReverbEffectDefinition *self, uint8_t value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.get_PositionRight() */
 HRESULT wmeau_reverb_effect_definition_get__position_right(WMEAU_ReverbEffectDefinition *self, uint8_t *value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.put_PositionMatrixLeft() */
 HRESULT wmeau_reverb_effect_definition_put__position_matrix_left(WMEAU_ReverbEffectDefinition *self, uint8_t value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.get_PositionMatrixLeft() */
 HRESULT wmeau_reverb_effect_definition_get__position_matrix_left(WMEAU_ReverbEffectDefinition *self, uint8_t *value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.put_PositionMatrixRight() */
 HRESULT wmeau_reverb_effect_definition_put__position_matrix_right(WMEAU_ReverbEffectDefinition *self, uint8_t value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.get_PositionMatrixRight() */
 HRESULT wmeau_reverb_effect_definition_get__position_matrix_right(WMEAU_ReverbEffectDefinition *self, uint8_t *value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.put_EarlyDiffusion() */
 HRESULT wmeau_reverb_effect_definition_put__early_diffusion(WMEAU_ReverbEffectDefinition *self, uint8_t value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.get_EarlyDiffusion() */
 HRESULT wmeau_reverb_effect_definition_get__early_diffusion(WMEAU_ReverbEffectDefinition *self, uint8_t *value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.put_LateDiffusion() */
 HRESULT wmeau_reverb_effect_definition_put__late_diffusion(WMEAU_ReverbEffectDefinition *self, uint8_t value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.get_LateDiffusion() */
 HRESULT wmeau_reverb_effect_definition_get__late_diffusion(WMEAU_ReverbEffectDefinition *self, uint8_t *value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.put_LowEQGain() */
 HRESULT wmeau_reverb_effect_definition_put__low_e_q_gain(WMEAU_ReverbEffectDefinition *self, uint8_t value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.get_LowEQGain() */
 HRESULT wmeau_reverb_effect_definition_get__low_e_q_gain(WMEAU_ReverbEffectDefinition *self, uint8_t *value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.put_LowEQCutoff() */
 HRESULT wmeau_reverb_effect_definition_put__low_e_q_cutoff(WMEAU_ReverbEffectDefinition *self, uint8_t value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.get_LowEQCutoff() */
 HRESULT wmeau_reverb_effect_definition_get__low_e_q_cutoff(WMEAU_ReverbEffectDefinition *self, uint8_t *value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.put_HighEQGain() */
 HRESULT wmeau_reverb_effect_definition_put__high_e_q_gain(WMEAU_ReverbEffectDefinition *self, uint8_t value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.get_HighEQGain() */
 HRESULT wmeau_reverb_effect_definition_get__high_e_q_gain(WMEAU_ReverbEffectDefinition *self, uint8_t *value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.put_HighEQCutoff() */
 HRESULT wmeau_reverb_effect_definition_put__high_e_q_cutoff(WMEAU_ReverbEffectDefinition *self, uint8_t value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.get_HighEQCutoff() */
 HRESULT wmeau_reverb_effect_definition_get__high_e_q_cutoff(WMEAU_ReverbEffectDefinition *self, uint8_t *value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.put_RoomFilterFreq() */
 HRESULT wmeau_reverb_effect_definition_put__room_filter_freq(WMEAU_ReverbEffectDefinition *self, double value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.get_RoomFilterFreq() */
 HRESULT wmeau_reverb_effect_definition_get__room_filter_freq(WMEAU_ReverbEffectDefinition *self, double *value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.put_RoomFilterMain() */
 HRESULT wmeau_reverb_effect_definition_put__room_filter_main(WMEAU_ReverbEffectDefinition *self, double value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.get_RoomFilterMain() */
 HRESULT wmeau_reverb_effect_definition_get__room_filter_main(WMEAU_ReverbEffectDefinition *self, double *value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.put_RoomFilterHF() */
 HRESULT wmeau_reverb_effect_definition_put__room_filter_h_f(WMEAU_ReverbEffectDefinition *self, double value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.get_RoomFilterHF() */
 HRESULT wmeau_reverb_effect_definition_get__room_filter_h_f(WMEAU_ReverbEffectDefinition *self, double *value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.put_ReflectionsGain() */
 HRESULT wmeau_reverb_effect_definition_put__reflections_gain(WMEAU_ReverbEffectDefinition *self, double value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.get_ReflectionsGain() */
 HRESULT wmeau_reverb_effect_definition_get__reflections_gain(WMEAU_ReverbEffectDefinition *self, double *value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.put_ReverbGain() */
 HRESULT wmeau_reverb_effect_definition_put__reverb_gain(WMEAU_ReverbEffectDefinition *self, double value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.get_ReverbGain() */
 HRESULT wmeau_reverb_effect_definition_get__reverb_gain(WMEAU_ReverbEffectDefinition *self, double *value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.put_DecayTime() */
 HRESULT wmeau_reverb_effect_definition_put__decay_time(WMEAU_ReverbEffectDefinition *self, double value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.get_DecayTime() */
 HRESULT wmeau_reverb_effect_definition_get__decay_time(WMEAU_ReverbEffectDefinition *self, double *value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.put_Density() */
 HRESULT wmeau_reverb_effect_definition_put__density(WMEAU_ReverbEffectDefinition *self, double value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.get_Density() */
 HRESULT wmeau_reverb_effect_definition_get__density(WMEAU_ReverbEffectDefinition *self, double *value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.put_RoomSize() */
 HRESULT wmeau_reverb_effect_definition_put__room_size(WMEAU_ReverbEffectDefinition *self, double value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.get_RoomSize() */
 HRESULT wmeau_reverb_effect_definition_get__room_size(WMEAU_ReverbEffectDefinition *self, double *value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.put_DisableLateField() */
 HRESULT wmeau_reverb_effect_definition_put__disable_late_field(WMEAU_ReverbEffectDefinition *self, BOOL value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.get_DisableLateField() */
 HRESULT wmeau_reverb_effect_definition_get__disable_late_field(WMEAU_ReverbEffectDefinition *self, BOOL *value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.get_ActivatableClassId() */
 HRESULT wmeau_reverb_effect_definition_get__activatable_class_id(WMEAU_ReverbEffectDefinition *self, cwinrt_hstring *value);
 
-/* Windows.Media.Audio.ReverbEffectDefinition.get_Properties() */
 HRESULT wmeau_reverb_effect_definition_get__properties(WMEAU_ReverbEffectDefinition *self, WFOCO_IPropertySet** value);
 
-/* activate Windows.Media.Audio.SetDefaultSpatialAudioFormatResult */
 HRESULT wmeau_set_default_spatial_audio_format_result_new(WMEAU_SetDefaultSpatialAudioFormatResult **out);
 
-/* Windows.Media.Audio.SetDefaultSpatialAudioFormatResult */
-/* Windows.Media.Audio.SetDefaultSpatialAudioFormatResult.get_Status() */
 HRESULT wmeau_set_default_spatial_audio_format_result_get__status(WMEAU_SetDefaultSpatialAudioFormatResult *self, WMEAU_SetDefaultSpatialAudioFormatStatus *value);
 
-/* Windows.Media.Audio.IAudioNodeEmitterFactory */
-/* Windows.Media.Audio.IAudioNodeEmitterFactory.CreateAudioNodeEmitter(shape, decayModel, settings) */
 HRESULT wmeau_audio_node_emitter_factory_create_audio_node_emitter(WMEAU_IAudioNodeEmitterFactory *self, WMEAU_AudioNodeEmitterShape* shape, WMEAU_AudioNodeEmitterDecayModel* decayModel, WMEAU_AudioNodeEmitterSettings settings, WMEAU_AudioNodeEmitter** out);
 
-/* activate Windows.Media.Audio.SpatialAudioDeviceConfiguration */
 HRESULT wmeau_spatial_audio_device_configuration_new(WMEAU_SpatialAudioDeviceConfiguration **out);
 
-/* Windows.Media.Audio.SpatialAudioDeviceConfiguration */
-/* Windows.Media.Audio.SpatialAudioDeviceConfiguration.get_DeviceId() */
 HRESULT wmeau_spatial_audio_device_configuration_get__device_id(WMEAU_SpatialAudioDeviceConfiguration *self, cwinrt_hstring *value);
 
-/* Windows.Media.Audio.SpatialAudioDeviceConfiguration.get_IsSpatialAudioSupported() */
 HRESULT wmeau_spatial_audio_device_configuration_get__is_spatial_audio_supported(WMEAU_SpatialAudioDeviceConfiguration *self, BOOL *value);
 
-/* Windows.Media.Audio.SpatialAudioDeviceConfiguration.IsSpatialAudioFormatSupported(subtype) */
 HRESULT wmeau_spatial_audio_device_configuration_is_spatial_audio_format_supported(WMEAU_SpatialAudioDeviceConfiguration *self, cwinrt_hstring subtype, BOOL *out);
 
-/* Windows.Media.Audio.SpatialAudioDeviceConfiguration.get_ActiveSpatialAudioFormat() */
 HRESULT wmeau_spatial_audio_device_configuration_get__active_spatial_audio_format(WMEAU_SpatialAudioDeviceConfiguration *self, cwinrt_hstring *value);
 
-/* Windows.Media.Audio.SpatialAudioDeviceConfiguration.get_DefaultSpatialAudioFormat() */
 HRESULT wmeau_spatial_audio_device_configuration_get__default_spatial_audio_format(WMEAU_SpatialAudioDeviceConfiguration *self, cwinrt_hstring *value);
 
-/* Windows.Media.Audio.SpatialAudioDeviceConfiguration.SetDefaultSpatialAudioFormatAsync(subtype) */
 HRESULT wmeau_spatial_audio_device_configuration_set_default_spatial_audio_format_async(WMEAU_SpatialAudioDeviceConfiguration *self, cwinrt_hstring subtype, WF_IAsyncOperation_WMEAU_SetDefaultSpatialAudioFormatResult** out);
 
-/* Windows.Media.Audio.SpatialAudioDeviceConfiguration.GetForDeviceId(deviceId) */
 HRESULT wmeau_spatial_audio_device_configuration_get_for_device_id(cwinrt_hstring deviceId, WMEAU_SpatialAudioDeviceConfiguration** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeau_spatial_audio_device_configuration_on_configuration_changed(WMEAU_SpatialAudioDeviceConfiguration *self, cwinrt_event_fn fn, void *ctx);
 void wmeau_spatial_audio_device_configuration_off_configuration_changed(WMEAU_SpatialAudioDeviceConfiguration *self, cwinrt_token token);
 
-/* activate Windows.Media.Audio.SpatialAudioFormatConfiguration */
 HRESULT wmeau_spatial_audio_format_configuration_new(WMEAU_SpatialAudioFormatConfiguration **out);
 
-/* Windows.Media.Audio.SpatialAudioFormatConfiguration */
-/* Windows.Media.Audio.SpatialAudioFormatConfiguration.ReportLicenseChangedAsync(subtype) */
 HRESULT wmeau_spatial_audio_format_configuration_report_license_changed_async(WMEAU_SpatialAudioFormatConfiguration *self, cwinrt_hstring subtype, WF_IAsyncAction** out);
 
-/* Windows.Media.Audio.SpatialAudioFormatConfiguration.ReportConfigurationChangedAsync(subtype) */
 HRESULT wmeau_spatial_audio_format_configuration_report_configuration_changed_async(WMEAU_SpatialAudioFormatConfiguration *self, cwinrt_hstring subtype, WF_IAsyncAction** out);
 
-/* Windows.Media.Audio.SpatialAudioFormatConfiguration.get_MixedRealityExclusiveModePolicy() */
 HRESULT wmeau_spatial_audio_format_configuration_get__mixed_reality_exclusive_mode_policy(WMEAU_SpatialAudioFormatConfiguration *self, WMEAU_MixedRealitySpatialAudioFormatPolicy *value);
 
-/* Windows.Media.Audio.SpatialAudioFormatConfiguration.put_MixedRealityExclusiveModePolicy() */
 HRESULT wmeau_spatial_audio_format_configuration_put__mixed_reality_exclusive_mode_policy(WMEAU_SpatialAudioFormatConfiguration *self, WMEAU_MixedRealitySpatialAudioFormatPolicy value);
 
-/* Windows.Media.Audio.SpatialAudioFormatConfiguration.GetDefault() */
 HRESULT wmeau_spatial_audio_format_configuration_get_default(WMEAU_SpatialAudioFormatConfiguration** out);
 
-/* activate Windows.Media.Audio.SpatialAudioFormatSubtype */
 HRESULT wmeau_spatial_audio_format_subtype_new(WMEAU_SpatialAudioFormatSubtype **out);
 
-/* Windows.Media.Audio.SpatialAudioFormatSubtype */
-/* Windows.Media.Audio.SpatialAudioFormatSubtype.get_DTSXForHomeTheater() */
 HRESULT wmeau_spatial_audio_format_subtype_get__d_t_s_x_for_home_theater(cwinrt_hstring *value);
 
-/* Windows.Media.Audio.SpatialAudioFormatSubtype.get_WindowsSonic() */
 HRESULT wmeau_spatial_audio_format_subtype_get__windows_sonic(cwinrt_hstring *value);
 
-/* Windows.Media.Audio.SpatialAudioFormatSubtype.get_DolbyAtmosForHeadphones() */
 HRESULT wmeau_spatial_audio_format_subtype_get__dolby_atmos_for_headphones(cwinrt_hstring *value);
 
-/* Windows.Media.Audio.SpatialAudioFormatSubtype.get_DolbyAtmosForHomeTheater() */
 HRESULT wmeau_spatial_audio_format_subtype_get__dolby_atmos_for_home_theater(cwinrt_hstring *value);
 
-/* Windows.Media.Audio.SpatialAudioFormatSubtype.get_DolbyAtmosForSpeakers() */
 HRESULT wmeau_spatial_audio_format_subtype_get__dolby_atmos_for_speakers(cwinrt_hstring *value);
 
-/* Windows.Media.Audio.SpatialAudioFormatSubtype.get_DTSHeadphoneX() */
 HRESULT wmeau_spatial_audio_format_subtype_get__d_t_s_headphone_x(cwinrt_hstring *value);
 
-/* Windows.Media.Audio.SpatialAudioFormatSubtype.get_DTSXUltra() */
 HRESULT wmeau_spatial_audio_format_subtype_get__d_t_s_x_ultra(cwinrt_hstring *value);
 
-/* activate Windows.Media.Audio.FrameInputNodeQuantumStartedEventArgs */
 HRESULT wmeau_frame_input_node_quantum_started_event_args_new(WMEAU_FrameInputNodeQuantumStartedEventArgs **out);
 
-/* Windows.Media.Audio.FrameInputNodeQuantumStartedEventArgs */
-/* Windows.Media.Audio.FrameInputNodeQuantumStartedEventArgs.get_RequiredSamples() */
 HRESULT wmeau_frame_input_node_quantum_started_event_args_get__required_samples(WMEAU_FrameInputNodeQuantumStartedEventArgs *self, int32_t *value);
 
-/* activate Windows.Media.Audio.EqualizerEffectDefinition */
 HRESULT wmeau_equalizer_effect_definition_new(WMEAU_EqualizerEffectDefinition **out);
 
-/* Windows.Media.Audio.EqualizerEffectDefinition */
-/* Windows.Media.Audio.EqualizerEffectDefinition.get_Bands() */
 HRESULT wmeau_equalizer_effect_definition_get__bands(WMEAU_EqualizerEffectDefinition *self, WFOCO_IVectorView_WMEAU_EqualizerBand** value);
 
-/* Windows.Media.Audio.EqualizerEffectDefinition.get_ActivatableClassId() */
 HRESULT wmeau_equalizer_effect_definition_get__activatable_class_id(WMEAU_EqualizerEffectDefinition *self, cwinrt_hstring *value);
 
-/* Windows.Media.Audio.EqualizerEffectDefinition.get_Properties() */
 HRESULT wmeau_equalizer_effect_definition_get__properties(WMEAU_EqualizerEffectDefinition *self, WFOCO_IPropertySet** value);
 
-/* activate Windows.Media.Audio.EqualizerBand */
 HRESULT wmeau_equalizer_band_new(WMEAU_EqualizerBand **out);
 
-/* Windows.Media.Audio.EqualizerBand */
-/* Windows.Media.Audio.EqualizerBand.get_Bandwidth() */
 HRESULT wmeau_equalizer_band_get__bandwidth(WMEAU_EqualizerBand *self, double *value);
 
-/* Windows.Media.Audio.EqualizerBand.put_Bandwidth() */
 HRESULT wmeau_equalizer_band_put__bandwidth(WMEAU_EqualizerBand *self, double value);
 
-/* Windows.Media.Audio.EqualizerBand.get_FrequencyCenter() */
 HRESULT wmeau_equalizer_band_get__frequency_center(WMEAU_EqualizerBand *self, double *value);
 
-/* Windows.Media.Audio.EqualizerBand.put_FrequencyCenter() */
 HRESULT wmeau_equalizer_band_put__frequency_center(WMEAU_EqualizerBand *self, double value);
 
-/* Windows.Media.Audio.EqualizerBand.get_Gain() */
 HRESULT wmeau_equalizer_band_get__gain(WMEAU_EqualizerBand *self, double *value);
 
-/* Windows.Media.Audio.EqualizerBand.put_Gain() */
 HRESULT wmeau_equalizer_band_put__gain(WMEAU_EqualizerBand *self, double value);
 
-/* activate Windows.Media.Audio.EchoEffectDefinition */
 HRESULT wmeau_echo_effect_definition_new(WMEAU_EchoEffectDefinition **out);
 
-/* Windows.Media.Audio.EchoEffectDefinition */
-/* Windows.Media.Audio.EchoEffectDefinition.put_WetDryMix() */
 HRESULT wmeau_echo_effect_definition_put__wet_dry_mix(WMEAU_EchoEffectDefinition *self, double value);
 
-/* Windows.Media.Audio.EchoEffectDefinition.get_WetDryMix() */
 HRESULT wmeau_echo_effect_definition_get__wet_dry_mix(WMEAU_EchoEffectDefinition *self, double *value);
 
-/* Windows.Media.Audio.EchoEffectDefinition.put_Feedback() */
 HRESULT wmeau_echo_effect_definition_put__feedback(WMEAU_EchoEffectDefinition *self, double value);
 
-/* Windows.Media.Audio.EchoEffectDefinition.get_Feedback() */
 HRESULT wmeau_echo_effect_definition_get__feedback(WMEAU_EchoEffectDefinition *self, double *value);
 
-/* Windows.Media.Audio.EchoEffectDefinition.put_Delay() */
 HRESULT wmeau_echo_effect_definition_put__delay(WMEAU_EchoEffectDefinition *self, double value);
 
-/* Windows.Media.Audio.EchoEffectDefinition.get_Delay() */
 HRESULT wmeau_echo_effect_definition_get__delay(WMEAU_EchoEffectDefinition *self, double *value);
 
-/* Windows.Media.Audio.EchoEffectDefinition.get_ActivatableClassId() */
 HRESULT wmeau_echo_effect_definition_get__activatable_class_id(WMEAU_EchoEffectDefinition *self, cwinrt_hstring *value);
 
-/* Windows.Media.Audio.EchoEffectDefinition.get_Properties() */
 HRESULT wmeau_echo_effect_definition_get__properties(WMEAU_EchoEffectDefinition *self, WFOCO_IPropertySet** value);
 
-/* activate Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult */
 HRESULT wmeau_create_media_source_audio_input_node_result_new(WMEAU_CreateMediaSourceAudioInputNodeResult **out);
 
-/* Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult */
-/* Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult.get_Status() */
 HRESULT wmeau_create_media_source_audio_input_node_result_get__status(WMEAU_CreateMediaSourceAudioInputNodeResult *self, WMEAU_MediaSourceAudioInputNodeCreationStatus *value);
 
-/* Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult.get_Node() */
 HRESULT wmeau_create_media_source_audio_input_node_result_get__node(WMEAU_CreateMediaSourceAudioInputNodeResult *self, WMEAU_MediaSourceAudioInputNode** value);
 
-/* Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult.get_ExtendedError() */
 HRESULT wmeau_create_media_source_audio_input_node_result_get__extended_error(WMEAU_CreateMediaSourceAudioInputNodeResult *self, HRESULT *value);
 
-/* activate Windows.Media.Audio.CreateAudioGraphResult */
 HRESULT wmeau_create_audio_graph_result_new(WMEAU_CreateAudioGraphResult **out);
 
-/* Windows.Media.Audio.CreateAudioGraphResult */
-/* Windows.Media.Audio.CreateAudioGraphResult.get_Status() */
 HRESULT wmeau_create_audio_graph_result_get__status(WMEAU_CreateAudioGraphResult *self, WMEAU_AudioGraphCreationStatus *value);
 
-/* Windows.Media.Audio.CreateAudioGraphResult.get_Graph() */
 HRESULT wmeau_create_audio_graph_result_get__graph(WMEAU_CreateAudioGraphResult *self, WMEAU_AudioGraph** value);
 
-/* Windows.Media.Audio.CreateAudioGraphResult.get_ExtendedError() */
 HRESULT wmeau_create_audio_graph_result_get__extended_error(WMEAU_CreateAudioGraphResult *self, HRESULT *value);
 
-/* activate Windows.Media.Audio.CreateAudioFileOutputNodeResult */
 HRESULT wmeau_create_audio_file_output_node_result_new(WMEAU_CreateAudioFileOutputNodeResult **out);
 
-/* Windows.Media.Audio.CreateAudioFileOutputNodeResult */
-/* Windows.Media.Audio.CreateAudioFileOutputNodeResult.get_Status() */
 HRESULT wmeau_create_audio_file_output_node_result_get__status(WMEAU_CreateAudioFileOutputNodeResult *self, WMEAU_AudioFileNodeCreationStatus *value);
 
-/* Windows.Media.Audio.CreateAudioFileOutputNodeResult.get_FileOutputNode() */
 HRESULT wmeau_create_audio_file_output_node_result_get__file_output_node(WMEAU_CreateAudioFileOutputNodeResult *self, WMEAU_AudioFileOutputNode** value);
 
-/* Windows.Media.Audio.CreateAudioFileOutputNodeResult.get_ExtendedError() */
 HRESULT wmeau_create_audio_file_output_node_result_get__extended_error(WMEAU_CreateAudioFileOutputNodeResult *self, HRESULT *value);
 
-/* activate Windows.Media.Audio.CreateAudioFileInputNodeResult */
 HRESULT wmeau_create_audio_file_input_node_result_new(WMEAU_CreateAudioFileInputNodeResult **out);
 
-/* Windows.Media.Audio.CreateAudioFileInputNodeResult */
-/* Windows.Media.Audio.CreateAudioFileInputNodeResult.get_Status() */
 HRESULT wmeau_create_audio_file_input_node_result_get__status(WMEAU_CreateAudioFileInputNodeResult *self, WMEAU_AudioFileNodeCreationStatus *value);
 
-/* Windows.Media.Audio.CreateAudioFileInputNodeResult.get_FileInputNode() */
 HRESULT wmeau_create_audio_file_input_node_result_get__file_input_node(WMEAU_CreateAudioFileInputNodeResult *self, WMEAU_AudioFileInputNode** value);
 
-/* Windows.Media.Audio.CreateAudioFileInputNodeResult.get_ExtendedError() */
 HRESULT wmeau_create_audio_file_input_node_result_get__extended_error(WMEAU_CreateAudioFileInputNodeResult *self, HRESULT *value);
 
-/* activate Windows.Media.Audio.CreateAudioDeviceOutputNodeResult */
 HRESULT wmeau_create_audio_device_output_node_result_new(WMEAU_CreateAudioDeviceOutputNodeResult **out);
 
-/* Windows.Media.Audio.CreateAudioDeviceOutputNodeResult */
-/* Windows.Media.Audio.CreateAudioDeviceOutputNodeResult.get_Status() */
 HRESULT wmeau_create_audio_device_output_node_result_get__status(WMEAU_CreateAudioDeviceOutputNodeResult *self, WMEAU_AudioDeviceNodeCreationStatus *value);
 
-/* Windows.Media.Audio.CreateAudioDeviceOutputNodeResult.get_DeviceOutputNode() */
 HRESULT wmeau_create_audio_device_output_node_result_get__device_output_node(WMEAU_CreateAudioDeviceOutputNodeResult *self, WMEAU_AudioDeviceOutputNode** value);
 
-/* Windows.Media.Audio.CreateAudioDeviceOutputNodeResult.get_ExtendedError() */
 HRESULT wmeau_create_audio_device_output_node_result_get__extended_error(WMEAU_CreateAudioDeviceOutputNodeResult *self, HRESULT *value);
 
-/* activate Windows.Media.Audio.CreateAudioDeviceInputNodeResult */
 HRESULT wmeau_create_audio_device_input_node_result_new(WMEAU_CreateAudioDeviceInputNodeResult **out);
 
-/* Windows.Media.Audio.CreateAudioDeviceInputNodeResult */
-/* Windows.Media.Audio.CreateAudioDeviceInputNodeResult.get_Status() */
 HRESULT wmeau_create_audio_device_input_node_result_get__status(WMEAU_CreateAudioDeviceInputNodeResult *self, WMEAU_AudioDeviceNodeCreationStatus *value);
 
-/* Windows.Media.Audio.CreateAudioDeviceInputNodeResult.get_DeviceInputNode() */
 HRESULT wmeau_create_audio_device_input_node_result_get__device_input_node(WMEAU_CreateAudioDeviceInputNodeResult *self, WMEAU_AudioDeviceInputNode** value);
 
-/* Windows.Media.Audio.CreateAudioDeviceInputNodeResult.get_ExtendedError() */
 HRESULT wmeau_create_audio_device_input_node_result_get__extended_error(WMEAU_CreateAudioDeviceInputNodeResult *self, HRESULT *value);
 
-/* activate Windows.Media.Audio.AudioSubmixNode */
 HRESULT wmeau_audio_submix_node_new(WMEAU_AudioSubmixNode **out);
 
-/* Windows.Media.Audio.AudioSubmixNode */
-/* Windows.Media.Audio.AudioSubmixNode.get_OutgoingConnections() */
 HRESULT wmeau_audio_submix_node_get__outgoing_connections(WMEAU_AudioSubmixNode *self, WFOCO_IVectorView_WMEAU_AudioGraphConnection** value);
 
-/* Windows.Media.Audio.AudioSubmixNode.AddOutgoingConnection(destination) */
 HRESULT wmeau_audio_submix_node_add_outgoing_connection(WMEAU_AudioSubmixNode *self, WMEAU_IAudioNode* destination);
 
-/* Windows.Media.Audio.AudioSubmixNode.AddOutgoingConnection(destination, gain) */
 HRESULT wmeau_audio_submix_node_add_outgoing_connection_p_f64(WMEAU_AudioSubmixNode *self, WMEAU_IAudioNode* destination, double gain);
 
-/* Windows.Media.Audio.AudioSubmixNode.RemoveOutgoingConnection(destination) */
 HRESULT wmeau_audio_submix_node_remove_outgoing_connection(WMEAU_AudioSubmixNode *self, WMEAU_IAudioNode* destination);
 
-/* Windows.Media.Audio.AudioSubmixNode.get_EffectDefinitions() */
 HRESULT wmeau_audio_submix_node_get__effect_definitions(WMEAU_AudioSubmixNode *self, WFOCO_IVector_WMEEF_IAudioEffectDefinition** value);
 
-/* Windows.Media.Audio.AudioSubmixNode.put_OutgoingGain() */
 HRESULT wmeau_audio_submix_node_put__outgoing_gain(WMEAU_AudioSubmixNode *self, double value);
 
-/* Windows.Media.Audio.AudioSubmixNode.get_OutgoingGain() */
 HRESULT wmeau_audio_submix_node_get__outgoing_gain(WMEAU_AudioSubmixNode *self, double *value);
 
-/* Windows.Media.Audio.AudioSubmixNode.get_EncodingProperties() */
 HRESULT wmeau_audio_submix_node_get__encoding_properties(WMEAU_AudioSubmixNode *self, WMEME_AudioEncodingProperties** value);
 
-/* Windows.Media.Audio.AudioSubmixNode.get_ConsumeInput() */
 HRESULT wmeau_audio_submix_node_get__consume_input(WMEAU_AudioSubmixNode *self, BOOL *value);
 
-/* Windows.Media.Audio.AudioSubmixNode.put_ConsumeInput() */
 HRESULT wmeau_audio_submix_node_put__consume_input(WMEAU_AudioSubmixNode *self, BOOL value);
 
-/* Windows.Media.Audio.AudioSubmixNode.Start() */
 HRESULT wmeau_audio_submix_node_start(WMEAU_AudioSubmixNode *self);
 
-/* Windows.Media.Audio.AudioSubmixNode.Stop() */
 HRESULT wmeau_audio_submix_node_stop(WMEAU_AudioSubmixNode *self);
 
-/* Windows.Media.Audio.AudioSubmixNode.Reset() */
 HRESULT wmeau_audio_submix_node_reset(WMEAU_AudioSubmixNode *self);
 
-/* Windows.Media.Audio.AudioSubmixNode.DisableEffectsByDefinition(definition) */
 HRESULT wmeau_audio_submix_node_disable_effects_by_definition(WMEAU_AudioSubmixNode *self, WMEEF_IAudioEffectDefinition* definition);
 
-/* Windows.Media.Audio.AudioSubmixNode.EnableEffectsByDefinition(definition) */
 HRESULT wmeau_audio_submix_node_enable_effects_by_definition(WMEAU_AudioSubmixNode *self, WMEEF_IAudioEffectDefinition* definition);
 
-/* Windows.Media.Audio.AudioSubmixNode.Close() */
 HRESULT wmeau_audio_submix_node_close(WMEAU_AudioSubmixNode *self);
 
-/* Windows.Media.Audio.AudioSubmixNode.get_Emitter() */
 HRESULT wmeau_audio_submix_node_get__emitter(WMEAU_AudioSubmixNode *self, WMEAU_AudioNodeEmitter** value);
 
-/* activate Windows.Media.Audio.AudioStateMonitor */
 HRESULT wmeau_audio_state_monitor_new(WMEAU_AudioStateMonitor **out);
 
-/* Windows.Media.Audio.AudioStateMonitor */
-/* Windows.Media.Audio.AudioStateMonitor.get_SoundLevel() */
 HRESULT wmeau_audio_state_monitor_get__sound_level(WMEAU_AudioStateMonitor *self, WME_SoundLevel *value);
 
-/* Windows.Media.Audio.AudioStateMonitor.CreateForRenderMonitoring() */
 HRESULT wmeau_audio_state_monitor_create_for_render_monitoring(WMEAU_AudioStateMonitor** out);
 
-/* Windows.Media.Audio.AudioStateMonitor.CreateForRenderMonitoring(category) */
 HRESULT wmeau_audio_state_monitor_create_for_render_monitoring_audio_render_category_p(WMERE_AudioRenderCategory category, WMEAU_AudioStateMonitor** out);
 
-/* Windows.Media.Audio.AudioStateMonitor.CreateForRenderMonitoring(category, role) */
 HRESULT wmeau_audio_state_monitor_create_for_render_monitoring_audio_render_category_audio_device_role_p(WMERE_AudioRenderCategory category, WMEDE_AudioDeviceRole role, WMEAU_AudioStateMonitor** out);
 
-/* Windows.Media.Audio.AudioStateMonitor.CreateForRenderMonitoringWithCategoryAndDeviceId(category, deviceId) */
 HRESULT wmeau_audio_state_monitor_create_for_render_monitoring_with_category_and_device_id(WMERE_AudioRenderCategory category, cwinrt_hstring deviceId, WMEAU_AudioStateMonitor** out);
 
-/* Windows.Media.Audio.AudioStateMonitor.CreateForCaptureMonitoring() */
 HRESULT wmeau_audio_state_monitor_create_for_capture_monitoring(WMEAU_AudioStateMonitor** out);
 
-/* Windows.Media.Audio.AudioStateMonitor.CreateForCaptureMonitoring(category) */
 HRESULT wmeau_audio_state_monitor_create_for_capture_monitoring_media_category_p(WMECA_MediaCategory category, WMEAU_AudioStateMonitor** out);
 
-/* Windows.Media.Audio.AudioStateMonitor.CreateForCaptureMonitoring(category, role) */
 HRESULT wmeau_audio_state_monitor_create_for_capture_monitoring_media_category_audio_device_role_p(WMECA_MediaCategory category, WMEDE_AudioDeviceRole role, WMEAU_AudioStateMonitor** out);
 
-/* Windows.Media.Audio.AudioStateMonitor.CreateForCaptureMonitoringWithCategoryAndDeviceId(category, deviceId) */
 HRESULT wmeau_audio_state_monitor_create_for_capture_monitoring_with_category_and_device_id(WMECA_MediaCategory category, cwinrt_hstring deviceId, WMEAU_AudioStateMonitor** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeau_audio_state_monitor_on_sound_level_changed(WMEAU_AudioStateMonitor *self, cwinrt_event_fn fn, void *ctx);
 void wmeau_audio_state_monitor_off_sound_level_changed(WMEAU_AudioStateMonitor *self, cwinrt_token token);
 
-/* activate Windows.Media.Audio.AudioPlaybackConnectionOpenResult */
 HRESULT wmeau_audio_playback_connection_open_result_new(WMEAU_AudioPlaybackConnectionOpenResult **out);
 
-/* Windows.Media.Audio.AudioPlaybackConnectionOpenResult */
-/* Windows.Media.Audio.AudioPlaybackConnectionOpenResult.get_Status() */
 HRESULT wmeau_audio_playback_connection_open_result_get__status(WMEAU_AudioPlaybackConnectionOpenResult *self, WMEAU_AudioPlaybackConnectionOpenResultStatus *value);
 
-/* Windows.Media.Audio.AudioPlaybackConnectionOpenResult.get_ExtendedError() */
 HRESULT wmeau_audio_playback_connection_open_result_get__extended_error(WMEAU_AudioPlaybackConnectionOpenResult *self, HRESULT *value);
 
-/* activate Windows.Media.Audio.AudioPlaybackConnection */
 HRESULT wmeau_audio_playback_connection_new(WMEAU_AudioPlaybackConnection **out);
 
-/* Windows.Media.Audio.AudioPlaybackConnection */
-/* Windows.Media.Audio.AudioPlaybackConnection.Start() */
 HRESULT wmeau_audio_playback_connection_start(WMEAU_AudioPlaybackConnection *self);
 
-/* Windows.Media.Audio.AudioPlaybackConnection.StartAsync() */
 HRESULT wmeau_audio_playback_connection_start_async(WMEAU_AudioPlaybackConnection *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Audio.AudioPlaybackConnection.get_DeviceId() */
 HRESULT wmeau_audio_playback_connection_get__device_id(WMEAU_AudioPlaybackConnection *self, cwinrt_hstring *value);
 
-/* Windows.Media.Audio.AudioPlaybackConnection.get_State() */
 HRESULT wmeau_audio_playback_connection_get__state(WMEAU_AudioPlaybackConnection *self, WMEAU_AudioPlaybackConnectionState *value);
 
-/* Windows.Media.Audio.AudioPlaybackConnection.Open() */
 HRESULT wmeau_audio_playback_connection_open(WMEAU_AudioPlaybackConnection *self, WMEAU_AudioPlaybackConnectionOpenResult** out);
 
-/* Windows.Media.Audio.AudioPlaybackConnection.OpenAsync() */
 HRESULT wmeau_audio_playback_connection_open_async(WMEAU_AudioPlaybackConnection *self, WF_IAsyncOperation_WMEAU_AudioPlaybackConnectionOpenResult** out);
 
-/* Windows.Media.Audio.AudioPlaybackConnection.Close() */
 HRESULT wmeau_audio_playback_connection_close(WMEAU_AudioPlaybackConnection *self);
 
-/* Windows.Media.Audio.AudioPlaybackConnection.GetDeviceSelector() */
 HRESULT wmeau_audio_playback_connection_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Media.Audio.AudioPlaybackConnection.TryCreateFromId(id) */
 HRESULT wmeau_audio_playback_connection_try_create_from_id(cwinrt_hstring id, WMEAU_AudioPlaybackConnection** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeau_audio_playback_connection_on_state_changed(WMEAU_AudioPlaybackConnection *self, cwinrt_event_fn fn, void *ctx);
 void wmeau_audio_playback_connection_off_state_changed(WMEAU_AudioPlaybackConnection *self, cwinrt_token token);
 
-/* activate Windows.Media.Audio.AudioNodeListener */
 HRESULT wmeau_audio_node_listener_new(WMEAU_AudioNodeListener **out);
 
-/* Windows.Media.Audio.AudioNodeListener */
-/* Windows.Media.Audio.AudioNodeListener.get_Position() */
 HRESULT wmeau_audio_node_listener_get__position(WMEAU_AudioNodeListener *self, WFN_Vector_3 *value);
 
-/* Windows.Media.Audio.AudioNodeListener.put_Position() */
 HRESULT wmeau_audio_node_listener_put__position(WMEAU_AudioNodeListener *self, WFN_Vector_3 value);
 
-/* Windows.Media.Audio.AudioNodeListener.get_Orientation() */
 HRESULT wmeau_audio_node_listener_get__orientation(WMEAU_AudioNodeListener *self, WFN_Quaternion *value);
 
-/* Windows.Media.Audio.AudioNodeListener.put_Orientation() */
 HRESULT wmeau_audio_node_listener_put__orientation(WMEAU_AudioNodeListener *self, WFN_Quaternion value);
 
-/* Windows.Media.Audio.AudioNodeListener.get_SpeedOfSound() */
 HRESULT wmeau_audio_node_listener_get__speed_of_sound(WMEAU_AudioNodeListener *self, double *value);
 
-/* Windows.Media.Audio.AudioNodeListener.put_SpeedOfSound() */
 HRESULT wmeau_audio_node_listener_put__speed_of_sound(WMEAU_AudioNodeListener *self, double value);
 
-/* Windows.Media.Audio.AudioNodeListener.get_DopplerVelocity() */
 HRESULT wmeau_audio_node_listener_get__doppler_velocity(WMEAU_AudioNodeListener *self, WFN_Vector_3 *value);
 
-/* Windows.Media.Audio.AudioNodeListener.put_DopplerVelocity() */
 HRESULT wmeau_audio_node_listener_put__doppler_velocity(WMEAU_AudioNodeListener *self, WFN_Vector_3 value);
 
-/* activate Windows.Media.Audio.AudioNodeEmitterShape */
 HRESULT wmeau_audio_node_emitter_shape_new(WMEAU_AudioNodeEmitterShape **out);
 
-/* Windows.Media.Audio.AudioNodeEmitterShape */
-/* Windows.Media.Audio.AudioNodeEmitterShape.get_Kind() */
 HRESULT wmeau_audio_node_emitter_shape_get__kind(WMEAU_AudioNodeEmitterShape *self, WMEAU_AudioNodeEmitterShapeKind *value);
 
-/* Windows.Media.Audio.AudioNodeEmitterShape.get_ConeProperties() */
 HRESULT wmeau_audio_node_emitter_shape_get__cone_properties(WMEAU_AudioNodeEmitterShape *self, WMEAU_AudioNodeEmitterConeProperties** value);
 
-/* Windows.Media.Audio.AudioNodeEmitterShape.CreateCone(innerAngle, outerAngle, outerAngleGain) */
 HRESULT wmeau_audio_node_emitter_shape_create_cone(double innerAngle, double outerAngle, double outerAngleGain, WMEAU_AudioNodeEmitterShape** out);
 
-/* Windows.Media.Audio.AudioNodeEmitterShape.CreateOmnidirectional() */
 HRESULT wmeau_audio_node_emitter_shape_create_omnidirectional(WMEAU_AudioNodeEmitterShape** out);
 
-/* activate Windows.Media.Audio.AudioNodeEmitterNaturalDecayModelProperties */
 HRESULT wmeau_audio_node_emitter_natural_decay_model_properties_new(WMEAU_AudioNodeEmitterNaturalDecayModelProperties **out);
 
-/* Windows.Media.Audio.AudioNodeEmitterNaturalDecayModelProperties */
-/* Windows.Media.Audio.AudioNodeEmitterNaturalDecayModelProperties.get_UnityGainDistance() */
 HRESULT wmeau_audio_node_emitter_natural_decay_model_properties_get__unity_gain_distance(WMEAU_AudioNodeEmitterNaturalDecayModelProperties *self, double *value);
 
-/* Windows.Media.Audio.AudioNodeEmitterNaturalDecayModelProperties.get_CutoffDistance() */
 HRESULT wmeau_audio_node_emitter_natural_decay_model_properties_get__cutoff_distance(WMEAU_AudioNodeEmitterNaturalDecayModelProperties *self, double *value);
 
-/* activate Windows.Media.Audio.AudioNodeEmitterDecayModel */
 HRESULT wmeau_audio_node_emitter_decay_model_new(WMEAU_AudioNodeEmitterDecayModel **out);
 
-/* Windows.Media.Audio.AudioNodeEmitterDecayModel */
-/* Windows.Media.Audio.AudioNodeEmitterDecayModel.get_Kind() */
 HRESULT wmeau_audio_node_emitter_decay_model_get__kind(WMEAU_AudioNodeEmitterDecayModel *self, WMEAU_AudioNodeEmitterDecayKind *value);
 
-/* Windows.Media.Audio.AudioNodeEmitterDecayModel.get_MinGain() */
 HRESULT wmeau_audio_node_emitter_decay_model_get__min_gain(WMEAU_AudioNodeEmitterDecayModel *self, double *value);
 
-/* Windows.Media.Audio.AudioNodeEmitterDecayModel.get_MaxGain() */
 HRESULT wmeau_audio_node_emitter_decay_model_get__max_gain(WMEAU_AudioNodeEmitterDecayModel *self, double *value);
 
-/* Windows.Media.Audio.AudioNodeEmitterDecayModel.get_NaturalProperties() */
 HRESULT wmeau_audio_node_emitter_decay_model_get__natural_properties(WMEAU_AudioNodeEmitterDecayModel *self, WMEAU_AudioNodeEmitterNaturalDecayModelProperties** value);
 
-/* Windows.Media.Audio.AudioNodeEmitterDecayModel.CreateNatural(minGain, maxGain, unityGainDistance, cutoffDistance) */
 HRESULT wmeau_audio_node_emitter_decay_model_create_natural(double minGain, double maxGain, double unityGainDistance, double cutoffDistance, WMEAU_AudioNodeEmitterDecayModel** out);
 
-/* Windows.Media.Audio.AudioNodeEmitterDecayModel.CreateCustom(minGain, maxGain) */
 HRESULT wmeau_audio_node_emitter_decay_model_create_custom(double minGain, double maxGain, WMEAU_AudioNodeEmitterDecayModel** out);
 
-/* activate Windows.Media.Audio.AudioNodeEmitterConeProperties */
 HRESULT wmeau_audio_node_emitter_cone_properties_new(WMEAU_AudioNodeEmitterConeProperties **out);
 
-/* Windows.Media.Audio.AudioNodeEmitterConeProperties */
-/* Windows.Media.Audio.AudioNodeEmitterConeProperties.get_InnerAngle() */
 HRESULT wmeau_audio_node_emitter_cone_properties_get__inner_angle(WMEAU_AudioNodeEmitterConeProperties *self, double *value);
 
-/* Windows.Media.Audio.AudioNodeEmitterConeProperties.get_OuterAngle() */
 HRESULT wmeau_audio_node_emitter_cone_properties_get__outer_angle(WMEAU_AudioNodeEmitterConeProperties *self, double *value);
 
-/* Windows.Media.Audio.AudioNodeEmitterConeProperties.get_OuterAngleGain() */
 HRESULT wmeau_audio_node_emitter_cone_properties_get__outer_angle_gain(WMEAU_AudioNodeEmitterConeProperties *self, double *value);
 
-/* activate Windows.Media.Audio.AudioNodeEmitter */
 HRESULT wmeau_audio_node_emitter_new(WMEAU_AudioNodeEmitter **out);
 
-/* Windows.Media.Audio.AudioNodeEmitter */
-/* Windows.Media.Audio.AudioNodeEmitter.get_Position() */
 HRESULT wmeau_audio_node_emitter_get__position(WMEAU_AudioNodeEmitter *self, WFN_Vector_3 *value);
 
-/* Windows.Media.Audio.AudioNodeEmitter.put_Position() */
 HRESULT wmeau_audio_node_emitter_put__position(WMEAU_AudioNodeEmitter *self, WFN_Vector_3 value);
 
-/* Windows.Media.Audio.AudioNodeEmitter.get_Direction() */
 HRESULT wmeau_audio_node_emitter_get__direction(WMEAU_AudioNodeEmitter *self, WFN_Vector_3 *value);
 
-/* Windows.Media.Audio.AudioNodeEmitter.put_Direction() */
 HRESULT wmeau_audio_node_emitter_put__direction(WMEAU_AudioNodeEmitter *self, WFN_Vector_3 value);
 
-/* Windows.Media.Audio.AudioNodeEmitter.get_Shape() */
 HRESULT wmeau_audio_node_emitter_get__shape(WMEAU_AudioNodeEmitter *self, WMEAU_AudioNodeEmitterShape** value);
 
-/* Windows.Media.Audio.AudioNodeEmitter.get_DecayModel() */
 HRESULT wmeau_audio_node_emitter_get__decay_model(WMEAU_AudioNodeEmitter *self, WMEAU_AudioNodeEmitterDecayModel** value);
 
-/* Windows.Media.Audio.AudioNodeEmitter.get_Gain() */
 HRESULT wmeau_audio_node_emitter_get__gain(WMEAU_AudioNodeEmitter *self, double *value);
 
-/* Windows.Media.Audio.AudioNodeEmitter.put_Gain() */
 HRESULT wmeau_audio_node_emitter_put__gain(WMEAU_AudioNodeEmitter *self, double value);
 
-/* Windows.Media.Audio.AudioNodeEmitter.get_DistanceScale() */
 HRESULT wmeau_audio_node_emitter_get__distance_scale(WMEAU_AudioNodeEmitter *self, double *value);
 
-/* Windows.Media.Audio.AudioNodeEmitter.put_DistanceScale() */
 HRESULT wmeau_audio_node_emitter_put__distance_scale(WMEAU_AudioNodeEmitter *self, double value);
 
-/* Windows.Media.Audio.AudioNodeEmitter.get_DopplerScale() */
 HRESULT wmeau_audio_node_emitter_get__doppler_scale(WMEAU_AudioNodeEmitter *self, double *value);
 
-/* Windows.Media.Audio.AudioNodeEmitter.put_DopplerScale() */
 HRESULT wmeau_audio_node_emitter_put__doppler_scale(WMEAU_AudioNodeEmitter *self, double value);
 
-/* Windows.Media.Audio.AudioNodeEmitter.get_DopplerVelocity() */
 HRESULT wmeau_audio_node_emitter_get__doppler_velocity(WMEAU_AudioNodeEmitter *self, WFN_Vector_3 *value);
 
-/* Windows.Media.Audio.AudioNodeEmitter.put_DopplerVelocity() */
 HRESULT wmeau_audio_node_emitter_put__doppler_velocity(WMEAU_AudioNodeEmitter *self, WFN_Vector_3 value);
 
-/* Windows.Media.Audio.AudioNodeEmitter.get_IsDopplerDisabled() */
 HRESULT wmeau_audio_node_emitter_get__is_doppler_disabled(WMEAU_AudioNodeEmitter *self, BOOL *value);
 
-/* Windows.Media.Audio.AudioNodeEmitter.get_SpatialAudioModel() */
 HRESULT wmeau_audio_node_emitter_get__spatial_audio_model(WMEAU_AudioNodeEmitter *self, WMEAU_SpatialAudioModel *value);
 
-/* Windows.Media.Audio.AudioNodeEmitter.put_SpatialAudioModel() */
 HRESULT wmeau_audio_node_emitter_put__spatial_audio_model(WMEAU_AudioNodeEmitter *self, WMEAU_SpatialAudioModel value);
 
-/* activate Windows.Media.Audio.AudioGraphUnrecoverableErrorOccurredEventArgs */
 HRESULT wmeau_audio_graph_unrecoverable_error_occurred_event_args_new(WMEAU_AudioGraphUnrecoverableErrorOccurredEventArgs **out);
 
-/* Windows.Media.Audio.AudioGraphUnrecoverableErrorOccurredEventArgs */
-/* Windows.Media.Audio.AudioGraphUnrecoverableErrorOccurredEventArgs.get_Error() */
 HRESULT wmeau_audio_graph_unrecoverable_error_occurred_event_args_get__error(WMEAU_AudioGraphUnrecoverableErrorOccurredEventArgs *self, WMEAU_AudioGraphUnrecoverableError *value);
 
-/* activate Windows.Media.Audio.AudioGraphSettings */
 HRESULT wmeau_audio_graph_settings_new(WMEAU_AudioGraphSettings **out);
 
-/* Windows.Media.Audio.AudioGraphSettings */
-/* Windows.Media.Audio.AudioGraphSettings.get_EncodingProperties() */
 HRESULT wmeau_audio_graph_settings_get__encoding_properties(WMEAU_AudioGraphSettings *self, WMEME_AudioEncodingProperties** value);
 
-/* Windows.Media.Audio.AudioGraphSettings.put_EncodingProperties() */
 HRESULT wmeau_audio_graph_settings_put__encoding_properties(WMEAU_AudioGraphSettings *self, WMEME_AudioEncodingProperties* value);
 
-/* Windows.Media.Audio.AudioGraphSettings.get_PrimaryRenderDevice() */
 HRESULT wmeau_audio_graph_settings_get__primary_render_device(WMEAU_AudioGraphSettings *self, WDEEN_DeviceInformation** value);
 
-/* Windows.Media.Audio.AudioGraphSettings.put_PrimaryRenderDevice() */
 HRESULT wmeau_audio_graph_settings_put__primary_render_device(WMEAU_AudioGraphSettings *self, WDEEN_DeviceInformation* value);
 
-/* Windows.Media.Audio.AudioGraphSettings.get_QuantumSizeSelectionMode() */
 HRESULT wmeau_audio_graph_settings_get__quantum_size_selection_mode(WMEAU_AudioGraphSettings *self, WMEAU_QuantumSizeSelectionMode *value);
 
-/* Windows.Media.Audio.AudioGraphSettings.put_QuantumSizeSelectionMode() */
 HRESULT wmeau_audio_graph_settings_put__quantum_size_selection_mode(WMEAU_AudioGraphSettings *self, WMEAU_QuantumSizeSelectionMode value);
 
-/* Windows.Media.Audio.AudioGraphSettings.get_DesiredSamplesPerQuantum() */
 HRESULT wmeau_audio_graph_settings_get__desired_samples_per_quantum(WMEAU_AudioGraphSettings *self, int32_t *value);
 
-/* Windows.Media.Audio.AudioGraphSettings.put_DesiredSamplesPerQuantum() */
 HRESULT wmeau_audio_graph_settings_put__desired_samples_per_quantum(WMEAU_AudioGraphSettings *self, int32_t value);
 
-/* Windows.Media.Audio.AudioGraphSettings.get_AudioRenderCategory() */
 HRESULT wmeau_audio_graph_settings_get__audio_render_category(WMEAU_AudioGraphSettings *self, WMERE_AudioRenderCategory *value);
 
-/* Windows.Media.Audio.AudioGraphSettings.put_AudioRenderCategory() */
 HRESULT wmeau_audio_graph_settings_put__audio_render_category(WMEAU_AudioGraphSettings *self, WMERE_AudioRenderCategory value);
 
-/* Windows.Media.Audio.AudioGraphSettings.get_DesiredRenderDeviceAudioProcessing() */
 HRESULT wmeau_audio_graph_settings_get__desired_render_device_audio_processing(WMEAU_AudioGraphSettings *self, WME_AudioProcessing *value);
 
-/* Windows.Media.Audio.AudioGraphSettings.put_DesiredRenderDeviceAudioProcessing() */
 HRESULT wmeau_audio_graph_settings_put__desired_render_device_audio_processing(WMEAU_AudioGraphSettings *self, WME_AudioProcessing value);
 
-/* Windows.Media.Audio.AudioGraphSettings.put_MaxPlaybackSpeedFactor() */
 HRESULT wmeau_audio_graph_settings_put__max_playback_speed_factor(WMEAU_AudioGraphSettings *self, double value);
 
-/* Windows.Media.Audio.AudioGraphSettings.get_MaxPlaybackSpeedFactor() */
 HRESULT wmeau_audio_graph_settings_get__max_playback_speed_factor(WMEAU_AudioGraphSettings *self, double *value);
 
-/* activate Windows.Media.Audio.AudioGraphConnection */
 HRESULT wmeau_audio_graph_connection_new(WMEAU_AudioGraphConnection **out);
 
-/* Windows.Media.Audio.AudioGraphConnection */
-/* Windows.Media.Audio.AudioGraphConnection.get_Destination() */
 HRESULT wmeau_audio_graph_connection_get__destination(WMEAU_AudioGraphConnection *self, WMEAU_IAudioNode** value);
 
-/* Windows.Media.Audio.AudioGraphConnection.put_Gain() */
 HRESULT wmeau_audio_graph_connection_put__gain(WMEAU_AudioGraphConnection *self, double value);
 
-/* Windows.Media.Audio.AudioGraphConnection.get_Gain() */
 HRESULT wmeau_audio_graph_connection_get__gain(WMEAU_AudioGraphConnection *self, double *value);
 
-/* activate Windows.Media.Audio.AudioGraph */
 HRESULT wmeau_audio_graph_new(WMEAU_AudioGraph **out);
 
-/* Windows.Media.Audio.AudioGraph */
-/* Windows.Media.Audio.AudioGraph.CreateFrameInputNode() */
 HRESULT wmeau_audio_graph_create_frame_input_node(WMEAU_AudioGraph *self, WMEAU_AudioFrameInputNode** out);
 
-/* Windows.Media.Audio.AudioGraph.CreateFrameInputNode(encodingProperties) */
 HRESULT wmeau_audio_graph_create_frame_input_node_p_p(WMEAU_AudioGraph *self, WMEME_AudioEncodingProperties* encodingProperties, WMEAU_AudioFrameInputNode** out);
 
-/* Windows.Media.Audio.AudioGraph.CreateDeviceInputNodeAsync(category) */
 HRESULT wmeau_audio_graph_create_device_input_node_async(WMEAU_AudioGraph *self, WMECA_MediaCategory category, WF_IAsyncOperation_WMEAU_CreateAudioDeviceInputNodeResult** out);
 
-/* Windows.Media.Audio.AudioGraph.CreateDeviceInputNodeAsync(category, encodingProperties) */
 HRESULT wmeau_audio_graph_create_device_input_node_async_media_category_p_p(WMEAU_AudioGraph *self, WMECA_MediaCategory category, WMEME_AudioEncodingProperties* encodingProperties, WF_IAsyncOperation_WMEAU_CreateAudioDeviceInputNodeResult** out);
 
-/* Windows.Media.Audio.AudioGraph.CreateDeviceInputNodeAsync(category, encodingProperties, device) */
 HRESULT wmeau_audio_graph_create_device_input_node_async_media_category_p_p_p(WMEAU_AudioGraph *self, WMECA_MediaCategory category, WMEME_AudioEncodingProperties* encodingProperties, WDEEN_DeviceInformation* device, WF_IAsyncOperation_WMEAU_CreateAudioDeviceInputNodeResult** out);
 
-/* Windows.Media.Audio.AudioGraph.CreateFrameOutputNode() */
 HRESULT wmeau_audio_graph_create_frame_output_node(WMEAU_AudioGraph *self, WMEAU_AudioFrameOutputNode** out);
 
-/* Windows.Media.Audio.AudioGraph.CreateFrameOutputNode(encodingProperties) */
 HRESULT wmeau_audio_graph_create_frame_output_node_p_p(WMEAU_AudioGraph *self, WMEME_AudioEncodingProperties* encodingProperties, WMEAU_AudioFrameOutputNode** out);
 
-/* Windows.Media.Audio.AudioGraph.CreateDeviceOutputNodeAsync() */
 HRESULT wmeau_audio_graph_create_device_output_node_async(WMEAU_AudioGraph *self, WF_IAsyncOperation_WMEAU_CreateAudioDeviceOutputNodeResult** out);
 
-/* Windows.Media.Audio.AudioGraph.CreateFileInputNodeAsync(file) */
 HRESULT wmeau_audio_graph_create_file_input_node_async(WMEAU_AudioGraph *self, WS_IStorageFile* file, WF_IAsyncOperation_WMEAU_CreateAudioFileInputNodeResult** out);
 
-/* Windows.Media.Audio.AudioGraph.CreateFileOutputNodeAsync(file) */
 HRESULT wmeau_audio_graph_create_file_output_node_async(WMEAU_AudioGraph *self, WS_IStorageFile* file, WF_IAsyncOperation_WMEAU_CreateAudioFileOutputNodeResult** out);
 
-/* Windows.Media.Audio.AudioGraph.CreateFileOutputNodeAsync(file, fileEncodingProfile) */
 HRESULT wmeau_audio_graph_create_file_output_node_async_p_p_p(WMEAU_AudioGraph *self, WS_IStorageFile* file, WMEME_MediaEncodingProfile* fileEncodingProfile, WF_IAsyncOperation_WMEAU_CreateAudioFileOutputNodeResult** out);
 
-/* Windows.Media.Audio.AudioGraph.CreateSubmixNode() */
 HRESULT wmeau_audio_graph_create_submix_node(WMEAU_AudioGraph *self, WMEAU_AudioSubmixNode** out);
 
-/* Windows.Media.Audio.AudioGraph.CreateSubmixNode(encodingProperties) */
 HRESULT wmeau_audio_graph_create_submix_node_p_p(WMEAU_AudioGraph *self, WMEME_AudioEncodingProperties* encodingProperties, WMEAU_AudioSubmixNode** out);
 
-/* Windows.Media.Audio.AudioGraph.Start() */
 HRESULT wmeau_audio_graph_start(WMEAU_AudioGraph *self);
 
-/* Windows.Media.Audio.AudioGraph.Stop() */
 HRESULT wmeau_audio_graph_stop(WMEAU_AudioGraph *self);
 
-/* Windows.Media.Audio.AudioGraph.ResetAllNodes() */
 HRESULT wmeau_audio_graph_reset_all_nodes(WMEAU_AudioGraph *self);
 
-/* Windows.Media.Audio.AudioGraph.get_CompletedQuantumCount() */
 HRESULT wmeau_audio_graph_get__completed_quantum_count(WMEAU_AudioGraph *self, uint64_t *value);
 
-/* Windows.Media.Audio.AudioGraph.get_EncodingProperties() */
 HRESULT wmeau_audio_graph_get__encoding_properties(WMEAU_AudioGraph *self, WMEME_AudioEncodingProperties** value);
 
-/* Windows.Media.Audio.AudioGraph.get_LatencyInSamples() */
 HRESULT wmeau_audio_graph_get__latency_in_samples(WMEAU_AudioGraph *self, int32_t *value);
 
-/* Windows.Media.Audio.AudioGraph.get_PrimaryRenderDevice() */
 HRESULT wmeau_audio_graph_get__primary_render_device(WMEAU_AudioGraph *self, WDEEN_DeviceInformation** value);
 
-/* Windows.Media.Audio.AudioGraph.get_RenderDeviceAudioProcessing() */
 HRESULT wmeau_audio_graph_get__render_device_audio_processing(WMEAU_AudioGraph *self, WME_AudioProcessing *value);
 
-/* Windows.Media.Audio.AudioGraph.get_SamplesPerQuantum() */
 HRESULT wmeau_audio_graph_get__samples_per_quantum(WMEAU_AudioGraph *self, int32_t *value);
 
-/* Windows.Media.Audio.AudioGraph.Close() */
 HRESULT wmeau_audio_graph_close(WMEAU_AudioGraph *self);
 
-/* Windows.Media.Audio.AudioGraph.CreateFrameInputNode(encodingProperties, emitter) */
 HRESULT wmeau_audio_graph_create_frame_input_node_p_p_p(WMEAU_AudioGraph *self, WMEME_AudioEncodingProperties* encodingProperties, WMEAU_AudioNodeEmitter* emitter, WMEAU_AudioFrameInputNode** out);
 
-/* Windows.Media.Audio.AudioGraph.CreateDeviceInputNodeAsync(category, encodingProperties, device, emitter) */
 HRESULT wmeau_audio_graph_create_device_input_node_async_media_category_p_p_p_p(WMEAU_AudioGraph *self, WMECA_MediaCategory category, WMEME_AudioEncodingProperties* encodingProperties, WDEEN_DeviceInformation* device, WMEAU_AudioNodeEmitter* emitter, WF_IAsyncOperation_WMEAU_CreateAudioDeviceInputNodeResult** out);
 
-/* Windows.Media.Audio.AudioGraph.CreateFileInputNodeAsync(file, emitter) */
 HRESULT wmeau_audio_graph_create_file_input_node_async_p_p_p(WMEAU_AudioGraph *self, WS_IStorageFile* file, WMEAU_AudioNodeEmitter* emitter, WF_IAsyncOperation_WMEAU_CreateAudioFileInputNodeResult** out);
 
-/* Windows.Media.Audio.AudioGraph.CreateSubmixNode(encodingProperties, emitter) */
 HRESULT wmeau_audio_graph_create_submix_node_p_p_p(WMEAU_AudioGraph *self, WMEME_AudioEncodingProperties* encodingProperties, WMEAU_AudioNodeEmitter* emitter, WMEAU_AudioSubmixNode** out);
 
-/* Windows.Media.Audio.AudioGraph.CreateBatchUpdater() */
 HRESULT wmeau_audio_graph_create_batch_updater(WMEAU_AudioGraph *self, WMEAU_AudioGraphBatchUpdater** out);
 
-/* Windows.Media.Audio.AudioGraph.CreateMediaSourceAudioInputNodeAsync(mediaSource) */
 HRESULT wmeau_audio_graph_create_media_source_audio_input_node_async(WMEAU_AudioGraph *self, WMECO_MediaSource* mediaSource, WF_IAsyncOperation_WMEAU_CreateMediaSourceAudioInputNodeResult** out);
 
-/* Windows.Media.Audio.AudioGraph.CreateMediaSourceAudioInputNodeAsync(mediaSource, emitter) */
 HRESULT wmeau_audio_graph_create_media_source_audio_input_node_async_p_p_p(WMEAU_AudioGraph *self, WMECO_MediaSource* mediaSource, WMEAU_AudioNodeEmitter* emitter, WF_IAsyncOperation_WMEAU_CreateMediaSourceAudioInputNodeResult** out);
 
-/* Windows.Media.Audio.AudioGraph.CreateAsync(settings) */
 HRESULT wmeau_audio_graph_create_async(WMEAU_AudioGraphSettings* settings, WF_IAsyncOperation_WMEAU_CreateAudioGraphResult** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeau_audio_graph_on_quantum_started(WMEAU_AudioGraph *self, cwinrt_event_fn fn, void *ctx);
@@ -1825,120 +1449,80 @@ void wmeau_audio_graph_off_quantum_processed(WMEAU_AudioGraph *self, cwinrt_toke
 cwinrt_token wmeau_audio_graph_on_unrecoverable_error_occurred(WMEAU_AudioGraph *self, cwinrt_event_fn fn, void *ctx);
 void wmeau_audio_graph_off_unrecoverable_error_occurred(WMEAU_AudioGraph *self, cwinrt_token token);
 
-/* activate Windows.Media.Audio.AudioFrameOutputNode */
 HRESULT wmeau_audio_frame_output_node_new(WMEAU_AudioFrameOutputNode **out);
 
-/* Windows.Media.Audio.AudioFrameOutputNode */
-/* Windows.Media.Audio.AudioFrameOutputNode.GetFrame() */
 HRESULT wmeau_audio_frame_output_node_get_frame(WMEAU_AudioFrameOutputNode *self, WME_AudioFrame** out);
 
-/* Windows.Media.Audio.AudioFrameOutputNode.get_EffectDefinitions() */
 HRESULT wmeau_audio_frame_output_node_get__effect_definitions(WMEAU_AudioFrameOutputNode *self, WFOCO_IVector_WMEEF_IAudioEffectDefinition** value);
 
-/* Windows.Media.Audio.AudioFrameOutputNode.put_OutgoingGain() */
 HRESULT wmeau_audio_frame_output_node_put__outgoing_gain(WMEAU_AudioFrameOutputNode *self, double value);
 
-/* Windows.Media.Audio.AudioFrameOutputNode.get_OutgoingGain() */
 HRESULT wmeau_audio_frame_output_node_get__outgoing_gain(WMEAU_AudioFrameOutputNode *self, double *value);
 
-/* Windows.Media.Audio.AudioFrameOutputNode.get_EncodingProperties() */
 HRESULT wmeau_audio_frame_output_node_get__encoding_properties(WMEAU_AudioFrameOutputNode *self, WMEME_AudioEncodingProperties** value);
 
-/* Windows.Media.Audio.AudioFrameOutputNode.get_ConsumeInput() */
 HRESULT wmeau_audio_frame_output_node_get__consume_input(WMEAU_AudioFrameOutputNode *self, BOOL *value);
 
-/* Windows.Media.Audio.AudioFrameOutputNode.put_ConsumeInput() */
 HRESULT wmeau_audio_frame_output_node_put__consume_input(WMEAU_AudioFrameOutputNode *self, BOOL value);
 
-/* Windows.Media.Audio.AudioFrameOutputNode.Start() */
 HRESULT wmeau_audio_frame_output_node_start(WMEAU_AudioFrameOutputNode *self);
 
-/* Windows.Media.Audio.AudioFrameOutputNode.Stop() */
 HRESULT wmeau_audio_frame_output_node_stop(WMEAU_AudioFrameOutputNode *self);
 
-/* Windows.Media.Audio.AudioFrameOutputNode.Reset() */
 HRESULT wmeau_audio_frame_output_node_reset(WMEAU_AudioFrameOutputNode *self);
 
-/* Windows.Media.Audio.AudioFrameOutputNode.DisableEffectsByDefinition(definition) */
 HRESULT wmeau_audio_frame_output_node_disable_effects_by_definition(WMEAU_AudioFrameOutputNode *self, WMEEF_IAudioEffectDefinition* definition);
 
-/* Windows.Media.Audio.AudioFrameOutputNode.EnableEffectsByDefinition(definition) */
 HRESULT wmeau_audio_frame_output_node_enable_effects_by_definition(WMEAU_AudioFrameOutputNode *self, WMEEF_IAudioEffectDefinition* definition);
 
-/* Windows.Media.Audio.AudioFrameOutputNode.Close() */
 HRESULT wmeau_audio_frame_output_node_close(WMEAU_AudioFrameOutputNode *self);
 
-/* activate Windows.Media.Audio.AudioFrameInputNode */
 HRESULT wmeau_audio_frame_input_node_new(WMEAU_AudioFrameInputNode **out);
 
-/* Windows.Media.Audio.AudioFrameInputNode */
-/* Windows.Media.Audio.AudioFrameInputNode.put_PlaybackSpeedFactor() */
 HRESULT wmeau_audio_frame_input_node_put__playback_speed_factor(WMEAU_AudioFrameInputNode *self, double value);
 
-/* Windows.Media.Audio.AudioFrameInputNode.get_PlaybackSpeedFactor() */
 HRESULT wmeau_audio_frame_input_node_get__playback_speed_factor(WMEAU_AudioFrameInputNode *self, double *value);
 
-/* Windows.Media.Audio.AudioFrameInputNode.AddFrame(frame) */
 HRESULT wmeau_audio_frame_input_node_add_frame(WMEAU_AudioFrameInputNode *self, WME_AudioFrame* frame);
 
-/* Windows.Media.Audio.AudioFrameInputNode.DiscardQueuedFrames() */
 HRESULT wmeau_audio_frame_input_node_discard_queued_frames(WMEAU_AudioFrameInputNode *self);
 
-/* Windows.Media.Audio.AudioFrameInputNode.get_QueuedSampleCount() */
 HRESULT wmeau_audio_frame_input_node_get__queued_sample_count(WMEAU_AudioFrameInputNode *self, uint64_t *value);
 
-/* Windows.Media.Audio.AudioFrameInputNode.get_OutgoingConnections() */
 HRESULT wmeau_audio_frame_input_node_get__outgoing_connections(WMEAU_AudioFrameInputNode *self, WFOCO_IVectorView_WMEAU_AudioGraphConnection** value);
 
-/* Windows.Media.Audio.AudioFrameInputNode.AddOutgoingConnection(destination) */
 HRESULT wmeau_audio_frame_input_node_add_outgoing_connection(WMEAU_AudioFrameInputNode *self, WMEAU_IAudioNode* destination);
 
-/* Windows.Media.Audio.AudioFrameInputNode.AddOutgoingConnection(destination, gain) */
 HRESULT wmeau_audio_frame_input_node_add_outgoing_connection_p_f64(WMEAU_AudioFrameInputNode *self, WMEAU_IAudioNode* destination, double gain);
 
-/* Windows.Media.Audio.AudioFrameInputNode.RemoveOutgoingConnection(destination) */
 HRESULT wmeau_audio_frame_input_node_remove_outgoing_connection(WMEAU_AudioFrameInputNode *self, WMEAU_IAudioNode* destination);
 
-/* Windows.Media.Audio.AudioFrameInputNode.get_EffectDefinitions() */
 HRESULT wmeau_audio_frame_input_node_get__effect_definitions(WMEAU_AudioFrameInputNode *self, WFOCO_IVector_WMEEF_IAudioEffectDefinition** value);
 
-/* Windows.Media.Audio.AudioFrameInputNode.put_OutgoingGain() */
 HRESULT wmeau_audio_frame_input_node_put__outgoing_gain(WMEAU_AudioFrameInputNode *self, double value);
 
-/* Windows.Media.Audio.AudioFrameInputNode.get_OutgoingGain() */
 HRESULT wmeau_audio_frame_input_node_get__outgoing_gain(WMEAU_AudioFrameInputNode *self, double *value);
 
-/* Windows.Media.Audio.AudioFrameInputNode.get_EncodingProperties() */
 HRESULT wmeau_audio_frame_input_node_get__encoding_properties(WMEAU_AudioFrameInputNode *self, WMEME_AudioEncodingProperties** value);
 
-/* Windows.Media.Audio.AudioFrameInputNode.get_ConsumeInput() */
 HRESULT wmeau_audio_frame_input_node_get__consume_input(WMEAU_AudioFrameInputNode *self, BOOL *value);
 
-/* Windows.Media.Audio.AudioFrameInputNode.put_ConsumeInput() */
 HRESULT wmeau_audio_frame_input_node_put__consume_input(WMEAU_AudioFrameInputNode *self, BOOL value);
 
-/* Windows.Media.Audio.AudioFrameInputNode.Start() */
 HRESULT wmeau_audio_frame_input_node_start(WMEAU_AudioFrameInputNode *self);
 
-/* Windows.Media.Audio.AudioFrameInputNode.Stop() */
 HRESULT wmeau_audio_frame_input_node_stop(WMEAU_AudioFrameInputNode *self);
 
-/* Windows.Media.Audio.AudioFrameInputNode.Reset() */
 HRESULT wmeau_audio_frame_input_node_reset(WMEAU_AudioFrameInputNode *self);
 
-/* Windows.Media.Audio.AudioFrameInputNode.DisableEffectsByDefinition(definition) */
 HRESULT wmeau_audio_frame_input_node_disable_effects_by_definition(WMEAU_AudioFrameInputNode *self, WMEEF_IAudioEffectDefinition* definition);
 
-/* Windows.Media.Audio.AudioFrameInputNode.EnableEffectsByDefinition(definition) */
 HRESULT wmeau_audio_frame_input_node_enable_effects_by_definition(WMEAU_AudioFrameInputNode *self, WMEEF_IAudioEffectDefinition* definition);
 
-/* Windows.Media.Audio.AudioFrameInputNode.Close() */
 HRESULT wmeau_audio_frame_input_node_close(WMEAU_AudioFrameInputNode *self);
 
-/* Windows.Media.Audio.AudioFrameInputNode.get_Emitter() */
 HRESULT wmeau_audio_frame_input_node_get__emitter(WMEAU_AudioFrameInputNode *self, WMEAU_AudioNodeEmitter** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeau_audio_frame_input_node_on_audio_frame_completed(WMEAU_AudioFrameInputNode *self, cwinrt_event_fn fn, void *ctx);
@@ -1947,474 +1531,278 @@ void wmeau_audio_frame_input_node_off_audio_frame_completed(WMEAU_AudioFrameInpu
 cwinrt_token wmeau_audio_frame_input_node_on_quantum_started(WMEAU_AudioFrameInputNode *self, cwinrt_event_fn fn, void *ctx);
 void wmeau_audio_frame_input_node_off_quantum_started(WMEAU_AudioFrameInputNode *self, cwinrt_token token);
 
-/* activate Windows.Media.Audio.AudioFrameCompletedEventArgs */
 HRESULT wmeau_audio_frame_completed_event_args_new(WMEAU_AudioFrameCompletedEventArgs **out);
 
-/* Windows.Media.Audio.AudioFrameCompletedEventArgs */
-/* Windows.Media.Audio.AudioFrameCompletedEventArgs.get_Frame() */
 HRESULT wmeau_audio_frame_completed_event_args_get__frame(WMEAU_AudioFrameCompletedEventArgs *self, WME_AudioFrame** value);
 
-/* activate Windows.Media.Audio.AudioFileOutputNode */
 HRESULT wmeau_audio_file_output_node_new(WMEAU_AudioFileOutputNode **out);
 
-/* Windows.Media.Audio.AudioFileOutputNode */
-/* Windows.Media.Audio.AudioFileOutputNode.get_File() */
 HRESULT wmeau_audio_file_output_node_get__file(WMEAU_AudioFileOutputNode *self, WS_IStorageFile** value);
 
-/* Windows.Media.Audio.AudioFileOutputNode.get_FileEncodingProfile() */
 HRESULT wmeau_audio_file_output_node_get__file_encoding_profile(WMEAU_AudioFileOutputNode *self, WMEME_MediaEncodingProfile** value);
 
-/* Windows.Media.Audio.AudioFileOutputNode.FinalizeAsync() */
 HRESULT wmeau_audio_file_output_node_finalize_async(WMEAU_AudioFileOutputNode *self, WF_IAsyncOperation_WMETR_TranscodeFailureReason** out);
 
-/* Windows.Media.Audio.AudioFileOutputNode.get_EffectDefinitions() */
 HRESULT wmeau_audio_file_output_node_get__effect_definitions(WMEAU_AudioFileOutputNode *self, WFOCO_IVector_WMEEF_IAudioEffectDefinition** value);
 
-/* Windows.Media.Audio.AudioFileOutputNode.put_OutgoingGain() */
 HRESULT wmeau_audio_file_output_node_put__outgoing_gain(WMEAU_AudioFileOutputNode *self, double value);
 
-/* Windows.Media.Audio.AudioFileOutputNode.get_OutgoingGain() */
 HRESULT wmeau_audio_file_output_node_get__outgoing_gain(WMEAU_AudioFileOutputNode *self, double *value);
 
-/* Windows.Media.Audio.AudioFileOutputNode.get_EncodingProperties() */
 HRESULT wmeau_audio_file_output_node_get__encoding_properties(WMEAU_AudioFileOutputNode *self, WMEME_AudioEncodingProperties** value);
 
-/* Windows.Media.Audio.AudioFileOutputNode.get_ConsumeInput() */
 HRESULT wmeau_audio_file_output_node_get__consume_input(WMEAU_AudioFileOutputNode *self, BOOL *value);
 
-/* Windows.Media.Audio.AudioFileOutputNode.put_ConsumeInput() */
 HRESULT wmeau_audio_file_output_node_put__consume_input(WMEAU_AudioFileOutputNode *self, BOOL value);
 
-/* Windows.Media.Audio.AudioFileOutputNode.Start() */
 HRESULT wmeau_audio_file_output_node_start(WMEAU_AudioFileOutputNode *self);
 
-/* Windows.Media.Audio.AudioFileOutputNode.Stop() */
 HRESULT wmeau_audio_file_output_node_stop(WMEAU_AudioFileOutputNode *self);
 
-/* Windows.Media.Audio.AudioFileOutputNode.Reset() */
 HRESULT wmeau_audio_file_output_node_reset(WMEAU_AudioFileOutputNode *self);
 
-/* Windows.Media.Audio.AudioFileOutputNode.DisableEffectsByDefinition(definition) */
 HRESULT wmeau_audio_file_output_node_disable_effects_by_definition(WMEAU_AudioFileOutputNode *self, WMEEF_IAudioEffectDefinition* definition);
 
-/* Windows.Media.Audio.AudioFileOutputNode.EnableEffectsByDefinition(definition) */
 HRESULT wmeau_audio_file_output_node_enable_effects_by_definition(WMEAU_AudioFileOutputNode *self, WMEEF_IAudioEffectDefinition* definition);
 
-/* Windows.Media.Audio.AudioFileOutputNode.Close() */
 HRESULT wmeau_audio_file_output_node_close(WMEAU_AudioFileOutputNode *self);
 
-/* activate Windows.Media.Audio.AudioFileInputNode */
 HRESULT wmeau_audio_file_input_node_new(WMEAU_AudioFileInputNode **out);
 
-/* Windows.Media.Audio.AudioFileInputNode */
-/* Windows.Media.Audio.AudioFileInputNode.put_PlaybackSpeedFactor() */
 HRESULT wmeau_audio_file_input_node_put__playback_speed_factor(WMEAU_AudioFileInputNode *self, double value);
 
-/* Windows.Media.Audio.AudioFileInputNode.get_PlaybackSpeedFactor() */
 HRESULT wmeau_audio_file_input_node_get__playback_speed_factor(WMEAU_AudioFileInputNode *self, double *value);
 
-/* Windows.Media.Audio.AudioFileInputNode.get_Position() */
 HRESULT wmeau_audio_file_input_node_get__position(WMEAU_AudioFileInputNode *self, WF_TimeSpan *value);
 
-/* Windows.Media.Audio.AudioFileInputNode.Seek(position) */
 HRESULT wmeau_audio_file_input_node_seek(WMEAU_AudioFileInputNode *self, WF_TimeSpan position);
 
-/* Windows.Media.Audio.AudioFileInputNode.get_StartTime() */
 HRESULT wmeau_audio_file_input_node_get__start_time(WMEAU_AudioFileInputNode *self, WF_TimeSpan** value);
 
-/* Windows.Media.Audio.AudioFileInputNode.put_StartTime() */
 HRESULT wmeau_audio_file_input_node_put__start_time(WMEAU_AudioFileInputNode *self, WF_TimeSpan* value);
 
-/* Windows.Media.Audio.AudioFileInputNode.get_EndTime() */
 HRESULT wmeau_audio_file_input_node_get__end_time(WMEAU_AudioFileInputNode *self, WF_TimeSpan** value);
 
-/* Windows.Media.Audio.AudioFileInputNode.put_EndTime() */
 HRESULT wmeau_audio_file_input_node_put__end_time(WMEAU_AudioFileInputNode *self, WF_TimeSpan* value);
 
-/* Windows.Media.Audio.AudioFileInputNode.get_LoopCount() */
 HRESULT wmeau_audio_file_input_node_get__loop_count(WMEAU_AudioFileInputNode *self, int32_t** value);
 
-/* Windows.Media.Audio.AudioFileInputNode.put_LoopCount() */
 HRESULT wmeau_audio_file_input_node_put__loop_count(WMEAU_AudioFileInputNode *self, int32_t* value);
 
-/* Windows.Media.Audio.AudioFileInputNode.get_Duration() */
 HRESULT wmeau_audio_file_input_node_get__duration(WMEAU_AudioFileInputNode *self, WF_TimeSpan *value);
 
-/* Windows.Media.Audio.AudioFileInputNode.get_SourceFile() */
 HRESULT wmeau_audio_file_input_node_get__source_file(WMEAU_AudioFileInputNode *self, WS_StorageFile** value);
 
-/* Windows.Media.Audio.AudioFileInputNode.get_OutgoingConnections() */
 HRESULT wmeau_audio_file_input_node_get__outgoing_connections(WMEAU_AudioFileInputNode *self, WFOCO_IVectorView_WMEAU_AudioGraphConnection** value);
 
-/* Windows.Media.Audio.AudioFileInputNode.AddOutgoingConnection(destination) */
 HRESULT wmeau_audio_file_input_node_add_outgoing_connection(WMEAU_AudioFileInputNode *self, WMEAU_IAudioNode* destination);
 
-/* Windows.Media.Audio.AudioFileInputNode.AddOutgoingConnection(destination, gain) */
 HRESULT wmeau_audio_file_input_node_add_outgoing_connection_p_f64(WMEAU_AudioFileInputNode *self, WMEAU_IAudioNode* destination, double gain);
 
-/* Windows.Media.Audio.AudioFileInputNode.RemoveOutgoingConnection(destination) */
 HRESULT wmeau_audio_file_input_node_remove_outgoing_connection(WMEAU_AudioFileInputNode *self, WMEAU_IAudioNode* destination);
 
-/* Windows.Media.Audio.AudioFileInputNode.get_EffectDefinitions() */
 HRESULT wmeau_audio_file_input_node_get__effect_definitions(WMEAU_AudioFileInputNode *self, WFOCO_IVector_WMEEF_IAudioEffectDefinition** value);
 
-/* Windows.Media.Audio.AudioFileInputNode.put_OutgoingGain() */
 HRESULT wmeau_audio_file_input_node_put__outgoing_gain(WMEAU_AudioFileInputNode *self, double value);
 
-/* Windows.Media.Audio.AudioFileInputNode.get_OutgoingGain() */
 HRESULT wmeau_audio_file_input_node_get__outgoing_gain(WMEAU_AudioFileInputNode *self, double *value);
 
-/* Windows.Media.Audio.AudioFileInputNode.get_EncodingProperties() */
 HRESULT wmeau_audio_file_input_node_get__encoding_properties(WMEAU_AudioFileInputNode *self, WMEME_AudioEncodingProperties** value);
 
-/* Windows.Media.Audio.AudioFileInputNode.get_ConsumeInput() */
 HRESULT wmeau_audio_file_input_node_get__consume_input(WMEAU_AudioFileInputNode *self, BOOL *value);
 
-/* Windows.Media.Audio.AudioFileInputNode.put_ConsumeInput() */
 HRESULT wmeau_audio_file_input_node_put__consume_input(WMEAU_AudioFileInputNode *self, BOOL value);
 
-/* Windows.Media.Audio.AudioFileInputNode.Start() */
 HRESULT wmeau_audio_file_input_node_start(WMEAU_AudioFileInputNode *self);
 
-/* Windows.Media.Audio.AudioFileInputNode.Stop() */
 HRESULT wmeau_audio_file_input_node_stop(WMEAU_AudioFileInputNode *self);
 
-/* Windows.Media.Audio.AudioFileInputNode.Reset() */
 HRESULT wmeau_audio_file_input_node_reset(WMEAU_AudioFileInputNode *self);
 
-/* Windows.Media.Audio.AudioFileInputNode.DisableEffectsByDefinition(definition) */
 HRESULT wmeau_audio_file_input_node_disable_effects_by_definition(WMEAU_AudioFileInputNode *self, WMEEF_IAudioEffectDefinition* definition);
 
-/* Windows.Media.Audio.AudioFileInputNode.EnableEffectsByDefinition(definition) */
 HRESULT wmeau_audio_file_input_node_enable_effects_by_definition(WMEAU_AudioFileInputNode *self, WMEEF_IAudioEffectDefinition* definition);
 
-/* Windows.Media.Audio.AudioFileInputNode.Close() */
 HRESULT wmeau_audio_file_input_node_close(WMEAU_AudioFileInputNode *self);
 
-/* Windows.Media.Audio.AudioFileInputNode.get_Emitter() */
 HRESULT wmeau_audio_file_input_node_get__emitter(WMEAU_AudioFileInputNode *self, WMEAU_AudioNodeEmitter** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeau_audio_file_input_node_on_file_completed(WMEAU_AudioFileInputNode *self, cwinrt_event_fn fn, void *ctx);
 void wmeau_audio_file_input_node_off_file_completed(WMEAU_AudioFileInputNode *self, cwinrt_token token);
 
-/* activate Windows.Media.Audio.AudioEffectsPackConfiguration */
 HRESULT wmeau_audio_effects_pack_configuration_new(WMEAU_AudioEffectsPackConfiguration **out);
 
-/* Windows.Media.Audio.AudioEffectsPackConfiguration */
-/* Windows.Media.Audio.AudioEffectsPackConfiguration.get_DeviceId() */
 HRESULT wmeau_audio_effects_pack_configuration_get__device_id(WMEAU_AudioEffectsPackConfiguration *self, cwinrt_hstring *value);
 
-/* Windows.Media.Audio.AudioEffectsPackConfiguration.get_EffectsPackId() */
 HRESULT wmeau_audio_effects_pack_configuration_get__effects_pack_id(WMEAU_AudioEffectsPackConfiguration *self, cwinrt_hstring *value);
 
-/* Windows.Media.Audio.AudioEffectsPackConfiguration.get_Status() */
 HRESULT wmeau_audio_effects_pack_configuration_get__status(WMEAU_AudioEffectsPackConfiguration *self, WMEAU_AudioEffectsPackStatus *value);
 
-/* Windows.Media.Audio.AudioEffectsPackConfiguration.GetForDeviceId(effectsPackId, deviceId) */
 HRESULT wmeau_audio_effects_pack_configuration_get_for_device_id(cwinrt_hstring effectsPackId, cwinrt_hstring deviceId, WMEAU_AudioEffectsPackConfiguration** out);
 
-/* Windows.Media.Audio.AudioEffectsPackConfiguration.IsDeviceIdSupported(effectsPackId, deviceId) */
 HRESULT wmeau_audio_effects_pack_configuration_is_device_id_supported(cwinrt_hstring effectsPackId, cwinrt_hstring deviceId, BOOL *out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeau_audio_effects_pack_configuration_on_status_changed(WMEAU_AudioEffectsPackConfiguration *self, cwinrt_event_fn fn, void *ctx);
 void wmeau_audio_effects_pack_configuration_off_status_changed(WMEAU_AudioEffectsPackConfiguration *self, cwinrt_token token);
 
-/* activate Windows.Media.Audio.AudioDeviceOutputNode */
 HRESULT wmeau_audio_device_output_node_new(WMEAU_AudioDeviceOutputNode **out);
 
-/* Windows.Media.Audio.AudioDeviceOutputNode */
-/* Windows.Media.Audio.AudioDeviceOutputNode.get_Device() */
 HRESULT wmeau_audio_device_output_node_get__device(WMEAU_AudioDeviceOutputNode *self, WDEEN_DeviceInformation** value);
 
-/* Windows.Media.Audio.AudioDeviceOutputNode.get_EffectDefinitions() */
 HRESULT wmeau_audio_device_output_node_get__effect_definitions(WMEAU_AudioDeviceOutputNode *self, WFOCO_IVector_WMEEF_IAudioEffectDefinition** value);
 
-/* Windows.Media.Audio.AudioDeviceOutputNode.put_OutgoingGain() */
 HRESULT wmeau_audio_device_output_node_put__outgoing_gain(WMEAU_AudioDeviceOutputNode *self, double value);
 
-/* Windows.Media.Audio.AudioDeviceOutputNode.get_OutgoingGain() */
 HRESULT wmeau_audio_device_output_node_get__outgoing_gain(WMEAU_AudioDeviceOutputNode *self, double *value);
 
-/* Windows.Media.Audio.AudioDeviceOutputNode.get_EncodingProperties() */
 HRESULT wmeau_audio_device_output_node_get__encoding_properties(WMEAU_AudioDeviceOutputNode *self, WMEME_AudioEncodingProperties** value);
 
-/* Windows.Media.Audio.AudioDeviceOutputNode.get_ConsumeInput() */
 HRESULT wmeau_audio_device_output_node_get__consume_input(WMEAU_AudioDeviceOutputNode *self, BOOL *value);
 
-/* Windows.Media.Audio.AudioDeviceOutputNode.put_ConsumeInput() */
 HRESULT wmeau_audio_device_output_node_put__consume_input(WMEAU_AudioDeviceOutputNode *self, BOOL value);
 
-/* Windows.Media.Audio.AudioDeviceOutputNode.Start() */
 HRESULT wmeau_audio_device_output_node_start(WMEAU_AudioDeviceOutputNode *self);
 
-/* Windows.Media.Audio.AudioDeviceOutputNode.Stop() */
 HRESULT wmeau_audio_device_output_node_stop(WMEAU_AudioDeviceOutputNode *self);
 
-/* Windows.Media.Audio.AudioDeviceOutputNode.Reset() */
 HRESULT wmeau_audio_device_output_node_reset(WMEAU_AudioDeviceOutputNode *self);
 
-/* Windows.Media.Audio.AudioDeviceOutputNode.DisableEffectsByDefinition(definition) */
 HRESULT wmeau_audio_device_output_node_disable_effects_by_definition(WMEAU_AudioDeviceOutputNode *self, WMEEF_IAudioEffectDefinition* definition);
 
-/* Windows.Media.Audio.AudioDeviceOutputNode.EnableEffectsByDefinition(definition) */
 HRESULT wmeau_audio_device_output_node_enable_effects_by_definition(WMEAU_AudioDeviceOutputNode *self, WMEEF_IAudioEffectDefinition* definition);
 
-/* Windows.Media.Audio.AudioDeviceOutputNode.Close() */
 HRESULT wmeau_audio_device_output_node_close(WMEAU_AudioDeviceOutputNode *self);
 
-/* Windows.Media.Audio.AudioDeviceOutputNode.put_Listener() */
 HRESULT wmeau_audio_device_output_node_put__listener(WMEAU_AudioDeviceOutputNode *self, WMEAU_AudioNodeListener* value);
 
-/* Windows.Media.Audio.AudioDeviceOutputNode.get_Listener() */
 HRESULT wmeau_audio_device_output_node_get__listener(WMEAU_AudioDeviceOutputNode *self, WMEAU_AudioNodeListener** value);
 
-/* activate Windows.Media.Audio.AudioDeviceInputNode */
 HRESULT wmeau_audio_device_input_node_new(WMEAU_AudioDeviceInputNode **out);
 
-/* Windows.Media.Audio.AudioDeviceInputNode */
-/* Windows.Media.Audio.AudioDeviceInputNode.get_Device() */
 HRESULT wmeau_audio_device_input_node_get__device(WMEAU_AudioDeviceInputNode *self, WDEEN_DeviceInformation** value);
 
-/* Windows.Media.Audio.AudioDeviceInputNode.get_OutgoingConnections() */
 HRESULT wmeau_audio_device_input_node_get__outgoing_connections(WMEAU_AudioDeviceInputNode *self, WFOCO_IVectorView_WMEAU_AudioGraphConnection** value);
 
-/* Windows.Media.Audio.AudioDeviceInputNode.AddOutgoingConnection(destination) */
 HRESULT wmeau_audio_device_input_node_add_outgoing_connection(WMEAU_AudioDeviceInputNode *self, WMEAU_IAudioNode* destination);
 
-/* Windows.Media.Audio.AudioDeviceInputNode.AddOutgoingConnection(destination, gain) */
 HRESULT wmeau_audio_device_input_node_add_outgoing_connection_p_f64(WMEAU_AudioDeviceInputNode *self, WMEAU_IAudioNode* destination, double gain);
 
-/* Windows.Media.Audio.AudioDeviceInputNode.RemoveOutgoingConnection(destination) */
 HRESULT wmeau_audio_device_input_node_remove_outgoing_connection(WMEAU_AudioDeviceInputNode *self, WMEAU_IAudioNode* destination);
 
-/* Windows.Media.Audio.AudioDeviceInputNode.get_EffectDefinitions() */
 HRESULT wmeau_audio_device_input_node_get__effect_definitions(WMEAU_AudioDeviceInputNode *self, WFOCO_IVector_WMEEF_IAudioEffectDefinition** value);
 
-/* Windows.Media.Audio.AudioDeviceInputNode.put_OutgoingGain() */
 HRESULT wmeau_audio_device_input_node_put__outgoing_gain(WMEAU_AudioDeviceInputNode *self, double value);
 
-/* Windows.Media.Audio.AudioDeviceInputNode.get_OutgoingGain() */
 HRESULT wmeau_audio_device_input_node_get__outgoing_gain(WMEAU_AudioDeviceInputNode *self, double *value);
 
-/* Windows.Media.Audio.AudioDeviceInputNode.get_EncodingProperties() */
 HRESULT wmeau_audio_device_input_node_get__encoding_properties(WMEAU_AudioDeviceInputNode *self, WMEME_AudioEncodingProperties** value);
 
-/* Windows.Media.Audio.AudioDeviceInputNode.get_ConsumeInput() */
 HRESULT wmeau_audio_device_input_node_get__consume_input(WMEAU_AudioDeviceInputNode *self, BOOL *value);
 
-/* Windows.Media.Audio.AudioDeviceInputNode.put_ConsumeInput() */
 HRESULT wmeau_audio_device_input_node_put__consume_input(WMEAU_AudioDeviceInputNode *self, BOOL value);
 
-/* Windows.Media.Audio.AudioDeviceInputNode.Start() */
 HRESULT wmeau_audio_device_input_node_start(WMEAU_AudioDeviceInputNode *self);
 
-/* Windows.Media.Audio.AudioDeviceInputNode.Stop() */
 HRESULT wmeau_audio_device_input_node_stop(WMEAU_AudioDeviceInputNode *self);
 
-/* Windows.Media.Audio.AudioDeviceInputNode.Reset() */
 HRESULT wmeau_audio_device_input_node_reset(WMEAU_AudioDeviceInputNode *self);
 
-/* Windows.Media.Audio.AudioDeviceInputNode.DisableEffectsByDefinition(definition) */
 HRESULT wmeau_audio_device_input_node_disable_effects_by_definition(WMEAU_AudioDeviceInputNode *self, WMEEF_IAudioEffectDefinition* definition);
 
-/* Windows.Media.Audio.AudioDeviceInputNode.EnableEffectsByDefinition(definition) */
 HRESULT wmeau_audio_device_input_node_enable_effects_by_definition(WMEAU_AudioDeviceInputNode *self, WMEEF_IAudioEffectDefinition* definition);
 
-/* Windows.Media.Audio.AudioDeviceInputNode.Close() */
 HRESULT wmeau_audio_device_input_node_close(WMEAU_AudioDeviceInputNode *self);
 
-/* Windows.Media.Audio.AudioDeviceInputNode.get_Emitter() */
 HRESULT wmeau_audio_device_input_node_get__emitter(WMEAU_AudioDeviceInputNode *self, WMEAU_AudioNodeEmitter** value);
 
-/* Windows.Media.Audio.IAudioNodeEmitterDecayModelStatics */
-/* Windows.Media.Audio.IAudioNodeEmitterDecayModelStatics.CreateNatural(minGain, maxGain, unityGainDistance, cutoffDistance) */
 HRESULT wmeau_audio_node_emitter_decay_model_statics_create_natural(WMEAU_IAudioNodeEmitterDecayModelStatics *self, double minGain, double maxGain, double unityGainDistance, double cutoffDistance, WMEAU_AudioNodeEmitterDecayModel** out);
 
-/* Windows.Media.Audio.IAudioNodeEmitterDecayModelStatics.CreateCustom(minGain, maxGain) */
 HRESULT wmeau_audio_node_emitter_decay_model_statics_create_custom(WMEAU_IAudioNodeEmitterDecayModelStatics *self, double minGain, double maxGain, WMEAU_AudioNodeEmitterDecayModel** out);
 
-/* Windows.Media.Audio.IAudioGraphStatics */
-/* Windows.Media.Audio.IAudioGraphStatics.CreateAsync(settings) */
 HRESULT wmeau_audio_graph_statics_create_async(WMEAU_IAudioGraphStatics *self, WMEAU_AudioGraphSettings* settings, WF_IAsyncOperation_WMEAU_CreateAudioGraphResult** out);
 
-/* Windows.Media.Audio.IAudioGraphSettingsFactory */
-/* Windows.Media.Audio.IAudioGraphSettingsFactory.Create(audioRenderCategory) */
 HRESULT wmeau_audio_graph_settings_factory_create(WMEAU_IAudioGraphSettingsFactory *self, WMERE_AudioRenderCategory audioRenderCategory, WMEAU_AudioGraphSettings** out);
 
-/* Windows.Media.Audio.IAudioEffectsPackConfigurationStatics */
-/* Windows.Media.Audio.IAudioEffectsPackConfigurationStatics.GetForDeviceId(effectsPackId, deviceId) */
 HRESULT wmeau_audio_effects_pack_configuration_statics_get_for_device_id(WMEAU_IAudioEffectsPackConfigurationStatics *self, cwinrt_hstring effectsPackId, cwinrt_hstring deviceId, WMEAU_AudioEffectsPackConfiguration** out);
 
-/* Windows.Media.Audio.IAudioEffectsPackConfigurationStatics.IsDeviceIdSupported(effectsPackId, deviceId) */
 HRESULT wmeau_audio_effects_pack_configuration_statics_is_device_id_supported(WMEAU_IAudioEffectsPackConfigurationStatics *self, cwinrt_hstring effectsPackId, cwinrt_hstring deviceId, BOOL *out);
 
-/* activate Windows.Media.Audio.AudioGraphBatchUpdater */
 HRESULT wmeau_audio_graph_batch_updater_new(WMEAU_AudioGraphBatchUpdater **out);
 
-/* Windows.Media.Audio.AudioGraphBatchUpdater */
-/* Windows.Media.Audio.AudioGraphBatchUpdater.Close() */
 HRESULT wmeau_audio_graph_batch_updater_close(WMEAU_AudioGraphBatchUpdater *self);
 
-/* Windows.Media.Audio.ILimiterEffectDefinition */
-/* Windows.Media.Audio.IMediaSourceAudioInputNode */
-/* Windows.Media.Audio.IReverbEffectDefinition */
-/* Windows.Media.Audio.ISetDefaultSpatialAudioFormatResult */
-/* Windows.Media.Audio.ISpatialAudioDeviceConfiguration */
-/* Windows.Media.Audio.ISpatialAudioFormatConfiguration */
-/* Windows.Media.Audio.IFrameInputNodeQuantumStartedEventArgs */
-/* Windows.Media.Audio.IEqualizerEffectDefinition */
-/* Windows.Media.Audio.IEqualizerBand */
-/* Windows.Media.Audio.IEchoEffectDefinition */
-/* Windows.Media.Audio.ICreateMediaSourceAudioInputNodeResult */
-/* Windows.Media.Audio.ICreateMediaSourceAudioInputNodeResult2 */
-/* Windows.Media.Audio.ICreateMediaSourceAudioInputNodeResult2.get_ExtendedError() */
 HRESULT wmeau_create_media_source_audio_input_node_result_2_get__extended_error(WMEAU_ICreateMediaSourceAudioInputNodeResult_2 *self, HRESULT *value);
 
-/* Windows.Media.Audio.ICreateAudioGraphResult */
-/* Windows.Media.Audio.ICreateAudioGraphResult2 */
-/* Windows.Media.Audio.ICreateAudioGraphResult2.get_ExtendedError() */
 HRESULT wmeau_create_audio_graph_result_2_get__extended_error(WMEAU_ICreateAudioGraphResult_2 *self, HRESULT *value);
 
-/* Windows.Media.Audio.ICreateAudioFileOutputNodeResult */
-/* Windows.Media.Audio.ICreateAudioFileOutputNodeResult2 */
-/* Windows.Media.Audio.ICreateAudioFileOutputNodeResult2.get_ExtendedError() */
 HRESULT wmeau_create_audio_file_output_node_result_2_get__extended_error(WMEAU_ICreateAudioFileOutputNodeResult_2 *self, HRESULT *value);
 
-/* Windows.Media.Audio.ICreateAudioFileInputNodeResult */
-/* Windows.Media.Audio.ICreateAudioFileInputNodeResult2 */
-/* Windows.Media.Audio.ICreateAudioFileInputNodeResult2.get_ExtendedError() */
 HRESULT wmeau_create_audio_file_input_node_result_2_get__extended_error(WMEAU_ICreateAudioFileInputNodeResult_2 *self, HRESULT *value);
 
-/* Windows.Media.Audio.ICreateAudioDeviceOutputNodeResult */
-/* Windows.Media.Audio.ICreateAudioDeviceOutputNodeResult2 */
-/* Windows.Media.Audio.ICreateAudioDeviceOutputNodeResult2.get_ExtendedError() */
 HRESULT wmeau_create_audio_device_output_node_result_2_get__extended_error(WMEAU_ICreateAudioDeviceOutputNodeResult_2 *self, HRESULT *value);
 
-/* Windows.Media.Audio.ICreateAudioDeviceInputNodeResult */
-/* Windows.Media.Audio.ICreateAudioDeviceInputNodeResult2 */
-/* Windows.Media.Audio.ICreateAudioDeviceInputNodeResult2.get_ExtendedError() */
 HRESULT wmeau_create_audio_device_input_node_result_2_get__extended_error(WMEAU_ICreateAudioDeviceInputNodeResult_2 *self, HRESULT *value);
 
-/* Windows.Media.Audio.IAudioStateMonitor */
-/* Windows.Media.Audio.IAudioPlaybackConnectionOpenResult */
-/* Windows.Media.Audio.IAudioPlaybackConnection */
-/* Windows.Media.Audio.IAudioNodeListener */
-/* Windows.Media.Audio.IAudioNodeEmitterShape */
-/* Windows.Media.Audio.IAudioNodeEmitterNaturalDecayModelProperties */
-/* Windows.Media.Audio.IAudioNodeEmitterDecayModel */
-/* Windows.Media.Audio.IAudioNodeEmitterConeProperties */
-/* Windows.Media.Audio.IAudioNodeEmitter */
-/* Windows.Media.Audio.IAudioNodeEmitter2 */
-/* Windows.Media.Audio.IAudioNodeEmitter2.get_SpatialAudioModel() */
 HRESULT wmeau_audio_node_emitter_2_get__spatial_audio_model(WMEAU_IAudioNodeEmitter_2 *self, WMEAU_SpatialAudioModel *value);
 
-/* Windows.Media.Audio.IAudioNodeEmitter2.put_SpatialAudioModel() */
 HRESULT wmeau_audio_node_emitter_2_put__spatial_audio_model(WMEAU_IAudioNodeEmitter_2 *self, WMEAU_SpatialAudioModel value);
 
-/* Windows.Media.Audio.IAudioGraphUnrecoverableErrorOccurredEventArgs */
-/* Windows.Media.Audio.IAudioGraphSettings */
-/* Windows.Media.Audio.IAudioGraphSettings2 */
-/* Windows.Media.Audio.IAudioGraphSettings2.put_MaxPlaybackSpeedFactor() */
 HRESULT wmeau_audio_graph_settings_2_put__max_playback_speed_factor(WMEAU_IAudioGraphSettings_2 *self, double value);
 
-/* Windows.Media.Audio.IAudioGraphSettings2.get_MaxPlaybackSpeedFactor() */
 HRESULT wmeau_audio_graph_settings_2_get__max_playback_speed_factor(WMEAU_IAudioGraphSettings_2 *self, double *value);
 
-/* Windows.Media.Audio.IAudioGraphConnection */
-/* Windows.Media.Audio.IAudioGraph2 */
-/* Windows.Media.Audio.IAudioGraph2.CreateFrameInputNode(encodingProperties, emitter) */
 HRESULT wmeau_audio_graph_2_create_frame_input_node(WMEAU_IAudioGraph_2 *self, WMEME_AudioEncodingProperties* encodingProperties, WMEAU_AudioNodeEmitter* emitter, WMEAU_AudioFrameInputNode** out);
 
-/* Windows.Media.Audio.IAudioGraph2.CreateDeviceInputNodeAsync(category, encodingProperties, device, emitter) */
 HRESULT wmeau_audio_graph_2_create_device_input_node_async(WMEAU_IAudioGraph_2 *self, WMECA_MediaCategory category, WMEME_AudioEncodingProperties* encodingProperties, WDEEN_DeviceInformation* device, WMEAU_AudioNodeEmitter* emitter, WF_IAsyncOperation_WMEAU_CreateAudioDeviceInputNodeResult** out);
 
-/* Windows.Media.Audio.IAudioGraph2.CreateFileInputNodeAsync(file, emitter) */
 HRESULT wmeau_audio_graph_2_create_file_input_node_async(WMEAU_IAudioGraph_2 *self, WS_IStorageFile* file, WMEAU_AudioNodeEmitter* emitter, WF_IAsyncOperation_WMEAU_CreateAudioFileInputNodeResult** out);
 
-/* Windows.Media.Audio.IAudioGraph2.CreateSubmixNode(encodingProperties, emitter) */
 HRESULT wmeau_audio_graph_2_create_submix_node(WMEAU_IAudioGraph_2 *self, WMEME_AudioEncodingProperties* encodingProperties, WMEAU_AudioNodeEmitter* emitter, WMEAU_AudioSubmixNode** out);
 
-/* Windows.Media.Audio.IAudioGraph2.CreateBatchUpdater() */
 HRESULT wmeau_audio_graph_2_create_batch_updater(WMEAU_IAudioGraph_2 *self, WMEAU_AudioGraphBatchUpdater** out);
 
-/* Windows.Media.Audio.IAudioGraph3 */
-/* Windows.Media.Audio.IAudioGraph3.CreateMediaSourceAudioInputNodeAsync(mediaSource) */
 HRESULT wmeau_audio_graph_3_create_media_source_audio_input_node_async(WMEAU_IAudioGraph_3 *self, WMECO_MediaSource* mediaSource, WF_IAsyncOperation_WMEAU_CreateMediaSourceAudioInputNodeResult** out);
 
-/* Windows.Media.Audio.IAudioGraph3.CreateMediaSourceAudioInputNodeAsync(mediaSource, emitter) */
 HRESULT wmeau_audio_graph_3_create_media_source_audio_input_node_async_p_p_p(WMEAU_IAudioGraph_3 *self, WMECO_MediaSource* mediaSource, WMEAU_AudioNodeEmitter* emitter, WF_IAsyncOperation_WMEAU_CreateMediaSourceAudioInputNodeResult** out);
 
-/* Windows.Media.Audio.IAudioFrameOutputNode */
-/* Windows.Media.Audio.IAudioFrameInputNode */
-/* Windows.Media.Audio.IAudioFrameCompletedEventArgs */
-/* Windows.Media.Audio.IAudioFileOutputNode */
-/* Windows.Media.Audio.IAudioFileInputNode */
-/* Windows.Media.Audio.IAudioEffectsPackConfiguration */
-/* Windows.Media.Audio.IAudioDeviceOutputNode */
-/* Windows.Media.Audio.IAudioNodeWithListener */
-/* Windows.Media.Audio.IAudioNodeWithListener.put_Listener() */
 HRESULT wmeau_audio_node_with_listener_put__listener(WMEAU_IAudioNodeWithListener *self, WMEAU_AudioNodeListener* value);
 
-/* Windows.Media.Audio.IAudioNodeWithListener.get_Listener() */
 HRESULT wmeau_audio_node_with_listener_get__listener(WMEAU_IAudioNodeWithListener *self, WMEAU_AudioNodeListener** value);
 
-/* Windows.Media.Audio.IAudioDeviceInputNode */
-/* Windows.Media.Audio.IAudioInputNode2 */
-/* Windows.Media.Audio.IAudioInputNode2.get_Emitter() */
 HRESULT wmeau_audio_input_node_2_get__emitter(WMEAU_IAudioInputNode_2 *self, WMEAU_AudioNodeEmitter** value);
 
-/* Windows.Media.Audio.IAudioGraph */
-/* Windows.Media.Audio.IAudioInputNode */
-/* Windows.Media.Audio.IAudioInputNode.get_OutgoingConnections() */
 HRESULT wmeau_audio_input_node_get__outgoing_connections(WMEAU_IAudioInputNode *self, WFOCO_IVectorView_WMEAU_AudioGraphConnection** value);
 
-/* Windows.Media.Audio.IAudioInputNode.AddOutgoingConnection(destination) */
 HRESULT wmeau_audio_input_node_add_outgoing_connection(WMEAU_IAudioInputNode *self, WMEAU_IAudioNode* destination);
 
-/* Windows.Media.Audio.IAudioInputNode.AddOutgoingConnection(destination, gain) */
 HRESULT wmeau_audio_input_node_add_outgoing_connection_p_f64(WMEAU_IAudioInputNode *self, WMEAU_IAudioNode* destination, double gain);
 
-/* Windows.Media.Audio.IAudioInputNode.RemoveOutgoingConnection(destination) */
 HRESULT wmeau_audio_input_node_remove_outgoing_connection(WMEAU_IAudioInputNode *self, WMEAU_IAudioNode* destination);
 
-/* Windows.Media.Audio.IAudioNode */
-/* Windows.Media.Audio.IAudioNode.get_EffectDefinitions() */
 HRESULT wmeau_audio_node_get__effect_definitions(WMEAU_IAudioNode *self, WFOCO_IVector_WMEEF_IAudioEffectDefinition** value);
 
-/* Windows.Media.Audio.IAudioNode.put_OutgoingGain() */
 HRESULT wmeau_audio_node_put__outgoing_gain(WMEAU_IAudioNode *self, double value);
 
-/* Windows.Media.Audio.IAudioNode.get_OutgoingGain() */
 HRESULT wmeau_audio_node_get__outgoing_gain(WMEAU_IAudioNode *self, double *value);
 
-/* Windows.Media.Audio.IAudioNode.get_EncodingProperties() */
 HRESULT wmeau_audio_node_get__encoding_properties(WMEAU_IAudioNode *self, WMEME_AudioEncodingProperties** value);
 
-/* Windows.Media.Audio.IAudioNode.get_ConsumeInput() */
 HRESULT wmeau_audio_node_get__consume_input(WMEAU_IAudioNode *self, BOOL *value);
 
-/* Windows.Media.Audio.IAudioNode.put_ConsumeInput() */
 HRESULT wmeau_audio_node_put__consume_input(WMEAU_IAudioNode *self, BOOL value);
 
-/* Windows.Media.Audio.IAudioNode.Start() */
 HRESULT wmeau_audio_node_start(WMEAU_IAudioNode *self);
 
-/* Windows.Media.Audio.IAudioNode.Stop() */
 HRESULT wmeau_audio_node_stop(WMEAU_IAudioNode *self);
 
-/* Windows.Media.Audio.IAudioNode.Reset() */
 HRESULT wmeau_audio_node_reset(WMEAU_IAudioNode *self);
 
-/* Windows.Media.Audio.IAudioNode.DisableEffectsByDefinition(definition) */
 HRESULT wmeau_audio_node_disable_effects_by_definition(WMEAU_IAudioNode *self, WMEEF_IAudioEffectDefinition* definition);
 
-/* Windows.Media.Audio.IAudioNode.EnableEffectsByDefinition(definition) */
 HRESULT wmeau_audio_node_enable_effects_by_definition(WMEAU_IAudioNode *self, WMEEF_IAudioEffectDefinition* definition);
 
 #endif /* CWINRT_WINDOWS_MEDIA_AUDIO_H */

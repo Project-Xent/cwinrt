@@ -12,20 +12,17 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WGLCO_CharacterGrouping WGLCO_CharacterGrouping;
 typedef struct WGLCO_ICharacterGroupingsFactory WGLCO_ICharacterGroupingsFactory;
 typedef struct WGLCO_CharacterGroupings WGLCO_CharacterGroupings;
 typedef struct WGLCO_ICharacterGrouping WGLCO_ICharacterGrouping;
 typedef struct WGLCO_ICharacterGroupings WGLCO_ICharacterGroupings;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IIterator_WGLCO_CharacterGrouping
 #define CWINRT_FWD_WFOCO_IIterator_WGLCO_CharacterGrouping
 typedef struct WFOCO_IIterator_WGLCO_CharacterGrouping WFOCO_IIterator_WGLCO_CharacterGrouping;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -42,44 +39,26 @@ static const IID CWINRT_IID_WGLCO_ICharacterGrouping CWINRT_MAYBE_UNUSED = { 0xF
 static const IID CWINRT_IID_WGLCO_ICharacterGroupings CWINRT_MAYBE_UNUSED = { 0xB8D20A75, 0xD4CF, 0x4055, { 0x80, 0xE5, 0xCE, 0x16, 0x9C, 0x22, 0x64, 0x96 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Globalization.Collation.CharacterGrouping */
 HRESULT wglco_character_grouping_new(WGLCO_CharacterGrouping **out);
 
-/* Windows.Globalization.Collation.CharacterGrouping */
-/* Windows.Globalization.Collation.CharacterGrouping.get_First() */
 HRESULT wglco_character_grouping_get__first(WGLCO_CharacterGrouping *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.Collation.CharacterGrouping.get_Label() */
 HRESULT wglco_character_grouping_get__label(WGLCO_CharacterGrouping *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.Collation.ICharacterGroupingsFactory */
-/* Windows.Globalization.Collation.ICharacterGroupingsFactory.Create(language) */
 HRESULT wglco_character_groupings_factory_create(WGLCO_ICharacterGroupingsFactory *self, cwinrt_hstring language, WGLCO_CharacterGroupings** out);
 
-/* activate Windows.Globalization.Collation.CharacterGroupings */
 HRESULT wglco_character_groupings_new(WGLCO_CharacterGroupings **out);
 
-/* Windows.Globalization.Collation.CharacterGroupings */
-/* Windows.Globalization.Collation.CharacterGroupings.Lookup(text) */
 HRESULT wglco_character_groupings_lookup(WGLCO_CharacterGroupings *self, cwinrt_hstring text, cwinrt_hstring *out);
 
-/* Windows.Globalization.Collation.CharacterGroupings.GetAt(index) */
 HRESULT wglco_character_groupings_get_at(WGLCO_CharacterGroupings *self, uint32_t index, WGLCO_CharacterGrouping** out);
 
-/* Windows.Globalization.Collation.CharacterGroupings.get_Size() */
 HRESULT wglco_character_groupings_get__size(WGLCO_CharacterGroupings *self, uint32_t *value);
 
-/* Windows.Globalization.Collation.CharacterGroupings.IndexOf(index) */
 HRESULT wglco_character_groupings_index_of(WGLCO_CharacterGroupings *self, WGLCO_CharacterGrouping* value, uint32_t index, BOOL *out);
 
-/* Windows.Globalization.Collation.CharacterGroupings.GetMany(startIndex, items) */
 HRESULT wglco_character_groupings_get_many(WGLCO_CharacterGroupings *self, uint32_t startIndex, WGLCO_CharacterGrouping *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Globalization.Collation.CharacterGroupings.First() */
 HRESULT wglco_character_groupings_first(WGLCO_CharacterGroupings *self, WFOCO_IIterator_WGLCO_CharacterGrouping** out);
 
-/* Windows.Globalization.Collation.ICharacterGrouping */
-/* Windows.Globalization.Collation.ICharacterGroupings */
 #endif /* CWINRT_WINDOWS_GLOBALIZATION_COLLATION_H */

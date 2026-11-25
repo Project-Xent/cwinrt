@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
@@ -22,7 +21,6 @@ typedef struct WSTST_IBuffer WSTST_IBuffer;
 typedef struct WSECRCE_Certificate WSECRCE_Certificate;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSECRCO_CryptographicEngine WSECRCO_CryptographicEngine;
 typedef struct WSECRCO_CryptographicHash WSECRCO_CryptographicHash;
 typedef struct WSECRCO_CryptographicKey WSECRCO_CryptographicKey;
@@ -71,7 +69,6 @@ typedef struct WSECRCO_ISymmetricKeyAlgorithmProvider WSECRCO_ISymmetricKeyAlgor
 typedef struct WSECRCO_IAsymmetricKeyAlgorithmProvider WSECRCO_IAsymmetricKeyAlgorithmProvider;
 typedef struct WSECRCO_IAsymmetricKeyAlgorithmProvider_2 WSECRCO_IAsymmetricKeyAlgorithmProvider_2;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
@@ -133,7 +130,6 @@ typedef enum WSECRCO_CryptographicPublicKeyBlobType {
 } WSECRCO_CryptographicPublicKeyBlobType;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -258,1070 +254,682 @@ static const IID CWINRT_IID_WSECRCO_IAsymmetricKeyAlgorithmProvider CWINRT_MAYBE
 static const IID CWINRT_IID_WSECRCO_IAsymmetricKeyAlgorithmProvider_2 CWINRT_MAYBE_UNUSED = { 0x4E322A7E, 0x7C4D, 0x4997, { 0xAC, 0x4F, 0x1B, 0x84, 0x8B, 0x36, 0x30, 0x6E } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Security.Cryptography.Core.CryptographicEngine */
 HRESULT wsecrco_cryptographic_engine_new(WSECRCO_CryptographicEngine **out);
 
-/* Windows.Security.Cryptography.Core.CryptographicEngine */
-/* Windows.Security.Cryptography.Core.CryptographicEngine.SignHashedData(key, data) */
 HRESULT wsecrco_cryptographic_engine_sign_hashed_data(WSECRCO_CryptographicKey* key, WSTST_IBuffer* data, WSTST_IBuffer** out);
 
-/* Windows.Security.Cryptography.Core.CryptographicEngine.VerifySignatureWithHashInput(key, data, signature) */
 HRESULT wsecrco_cryptographic_engine_verify_signature_with_hash_input(WSECRCO_CryptographicKey* key, WSTST_IBuffer* data, WSTST_IBuffer* signature, BOOL *out);
 
-/* Windows.Security.Cryptography.Core.CryptographicEngine.DecryptAsync(key, data, iv) */
 HRESULT wsecrco_cryptographic_engine_decrypt_async(WSECRCO_CryptographicKey* key, WSTST_IBuffer* data, WSTST_IBuffer* iv, WF_IAsyncOperation_WSTST_IBuffer** out);
 
-/* Windows.Security.Cryptography.Core.CryptographicEngine.SignAsync(key, data) */
 HRESULT wsecrco_cryptographic_engine_sign_async(WSECRCO_CryptographicKey* key, WSTST_IBuffer* data, WF_IAsyncOperation_WSTST_IBuffer** out);
 
-/* Windows.Security.Cryptography.Core.CryptographicEngine.SignHashedDataAsync(key, data) */
 HRESULT wsecrco_cryptographic_engine_sign_hashed_data_async(WSECRCO_CryptographicKey* key, WSTST_IBuffer* data, WF_IAsyncOperation_WSTST_IBuffer** out);
 
-/* Windows.Security.Cryptography.Core.CryptographicEngine.Encrypt(key, data, iv) */
 HRESULT wsecrco_cryptographic_engine_encrypt(WSECRCO_CryptographicKey* key, WSTST_IBuffer* data, WSTST_IBuffer* iv, WSTST_IBuffer** out);
 
-/* Windows.Security.Cryptography.Core.CryptographicEngine.Decrypt(key, data, iv) */
 HRESULT wsecrco_cryptographic_engine_decrypt(WSECRCO_CryptographicKey* key, WSTST_IBuffer* data, WSTST_IBuffer* iv, WSTST_IBuffer** out);
 
-/* Windows.Security.Cryptography.Core.CryptographicEngine.EncryptAndAuthenticate(key, data, nonce, authenticatedData) */
 HRESULT wsecrco_cryptographic_engine_encrypt_and_authenticate(WSECRCO_CryptographicKey* key, WSTST_IBuffer* data, WSTST_IBuffer* nonce, WSTST_IBuffer* authenticatedData, WSECRCO_EncryptedAndAuthenticatedData** out);
 
-/* Windows.Security.Cryptography.Core.CryptographicEngine.DecryptAndAuthenticate(key, data, nonce, authenticationTag, authenticatedData) */
 HRESULT wsecrco_cryptographic_engine_decrypt_and_authenticate(WSECRCO_CryptographicKey* key, WSTST_IBuffer* data, WSTST_IBuffer* nonce, WSTST_IBuffer* authenticationTag, WSTST_IBuffer* authenticatedData, WSTST_IBuffer** out);
 
-/* Windows.Security.Cryptography.Core.CryptographicEngine.Sign(key, data) */
 HRESULT wsecrco_cryptographic_engine_sign(WSECRCO_CryptographicKey* key, WSTST_IBuffer* data, WSTST_IBuffer** out);
 
-/* Windows.Security.Cryptography.Core.CryptographicEngine.VerifySignature(key, data, signature) */
 HRESULT wsecrco_cryptographic_engine_verify_signature(WSECRCO_CryptographicKey* key, WSTST_IBuffer* data, WSTST_IBuffer* signature, BOOL *out);
 
-/* Windows.Security.Cryptography.Core.CryptographicEngine.DeriveKeyMaterial(key, parameters, desiredKeySize) */
 HRESULT wsecrco_cryptographic_engine_derive_key_material(WSECRCO_CryptographicKey* key, WSECRCO_KeyDerivationParameters* parameters, uint32_t desiredKeySize, WSTST_IBuffer** out);
 
-/* activate Windows.Security.Cryptography.Core.CryptographicHash */
 HRESULT wsecrco_cryptographic_hash_new(WSECRCO_CryptographicHash **out);
 
-/* Windows.Security.Cryptography.Core.CryptographicHash */
-/* Windows.Security.Cryptography.Core.CryptographicHash.Append(data) */
 HRESULT wsecrco_cryptographic_hash_append(WSECRCO_CryptographicHash *self, WSTST_IBuffer* data);
 
-/* Windows.Security.Cryptography.Core.CryptographicHash.GetValueAndReset() */
 HRESULT wsecrco_cryptographic_hash_get_value_and_reset(WSECRCO_CryptographicHash *self, WSTST_IBuffer** out);
 
-/* activate Windows.Security.Cryptography.Core.CryptographicKey */
 HRESULT wsecrco_cryptographic_key_new(WSECRCO_CryptographicKey **out);
 
-/* Windows.Security.Cryptography.Core.CryptographicKey */
-/* Windows.Security.Cryptography.Core.CryptographicKey.get_KeySize() */
 HRESULT wsecrco_cryptographic_key_get__key_size(WSECRCO_CryptographicKey *self, uint32_t *value);
 
-/* Windows.Security.Cryptography.Core.CryptographicKey.Export() */
 HRESULT wsecrco_cryptographic_key_export(WSECRCO_CryptographicKey *self, WSTST_IBuffer** out);
 
-/* Windows.Security.Cryptography.Core.CryptographicKey.Export(BlobType) */
 HRESULT wsecrco_cryptographic_key_export_cryptographic_private_key_blob_type_p(WSECRCO_CryptographicKey *self, WSECRCO_CryptographicPrivateKeyBlobType BlobType, WSTST_IBuffer** out);
 
-/* Windows.Security.Cryptography.Core.CryptographicKey.ExportPublicKey() */
 HRESULT wsecrco_cryptographic_key_export_public_key(WSECRCO_CryptographicKey *self, WSTST_IBuffer** out);
 
-/* Windows.Security.Cryptography.Core.CryptographicKey.ExportPublicKey(BlobType) */
 HRESULT wsecrco_cryptographic_key_export_public_key_cryptographic_public_key_blob_type_p(WSECRCO_CryptographicKey *self, WSECRCO_CryptographicPublicKeyBlobType BlobType, WSTST_IBuffer** out);
 
-/* activate Windows.Security.Cryptography.Core.EccCurveNames */
 HRESULT wsecrco_ecc_curve_names_new(WSECRCO_EccCurveNames **out);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames */
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_BrainpoolP160r1() */
 HRESULT wsecrco_ecc_curve_names_get__brainpool_p160r1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_BrainpoolP160t1() */
 HRESULT wsecrco_ecc_curve_names_get__brainpool_p160t1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_BrainpoolP192r1() */
 HRESULT wsecrco_ecc_curve_names_get__brainpool_p192r1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_BrainpoolP192t1() */
 HRESULT wsecrco_ecc_curve_names_get__brainpool_p192t1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_BrainpoolP224r1() */
 HRESULT wsecrco_ecc_curve_names_get__brainpool_p224r1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_BrainpoolP224t1() */
 HRESULT wsecrco_ecc_curve_names_get__brainpool_p224t1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_BrainpoolP256r1() */
 HRESULT wsecrco_ecc_curve_names_get__brainpool_p256r1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_BrainpoolP256t1() */
 HRESULT wsecrco_ecc_curve_names_get__brainpool_p256t1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_BrainpoolP320r1() */
 HRESULT wsecrco_ecc_curve_names_get__brainpool_p320r1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_BrainpoolP320t1() */
 HRESULT wsecrco_ecc_curve_names_get__brainpool_p320t1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_BrainpoolP384r1() */
 HRESULT wsecrco_ecc_curve_names_get__brainpool_p384r1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_BrainpoolP384t1() */
 HRESULT wsecrco_ecc_curve_names_get__brainpool_p384t1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_BrainpoolP512r1() */
 HRESULT wsecrco_ecc_curve_names_get__brainpool_p512r1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_BrainpoolP512t1() */
 HRESULT wsecrco_ecc_curve_names_get__brainpool_p512t1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_Curve25519() */
 HRESULT wsecrco_ecc_curve_names_get__curve25519(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_Ec192wapi() */
 HRESULT wsecrco_ecc_curve_names_get__ec192wapi(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_NistP192() */
 HRESULT wsecrco_ecc_curve_names_get__nist_p192(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_NistP224() */
 HRESULT wsecrco_ecc_curve_names_get__nist_p224(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_NistP256() */
 HRESULT wsecrco_ecc_curve_names_get__nist_p256(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_NistP384() */
 HRESULT wsecrco_ecc_curve_names_get__nist_p384(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_NistP521() */
 HRESULT wsecrco_ecc_curve_names_get__nist_p521(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_NumsP256t1() */
 HRESULT wsecrco_ecc_curve_names_get__nums_p256t1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_NumsP384t1() */
 HRESULT wsecrco_ecc_curve_names_get__nums_p384t1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_NumsP512t1() */
 HRESULT wsecrco_ecc_curve_names_get__nums_p512t1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_SecP160k1() */
 HRESULT wsecrco_ecc_curve_names_get__sec_p160k1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_SecP160r1() */
 HRESULT wsecrco_ecc_curve_names_get__sec_p160r1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_SecP160r2() */
 HRESULT wsecrco_ecc_curve_names_get__sec_p160r2(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_SecP192k1() */
 HRESULT wsecrco_ecc_curve_names_get__sec_p192k1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_SecP192r1() */
 HRESULT wsecrco_ecc_curve_names_get__sec_p192r1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_SecP224k1() */
 HRESULT wsecrco_ecc_curve_names_get__sec_p224k1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_SecP224r1() */
 HRESULT wsecrco_ecc_curve_names_get__sec_p224r1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_SecP256k1() */
 HRESULT wsecrco_ecc_curve_names_get__sec_p256k1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_SecP256r1() */
 HRESULT wsecrco_ecc_curve_names_get__sec_p256r1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_SecP384r1() */
 HRESULT wsecrco_ecc_curve_names_get__sec_p384r1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_SecP521r1() */
 HRESULT wsecrco_ecc_curve_names_get__sec_p521r1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_Wtls7() */
 HRESULT wsecrco_ecc_curve_names_get__wtls7(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_Wtls9() */
 HRESULT wsecrco_ecc_curve_names_get__wtls9(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_Wtls12() */
 HRESULT wsecrco_ecc_curve_names_get__wtls12(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_X962P192v1() */
 HRESULT wsecrco_ecc_curve_names_get__x962_p192v1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_X962P192v2() */
 HRESULT wsecrco_ecc_curve_names_get__x962_p192v2(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_X962P192v3() */
 HRESULT wsecrco_ecc_curve_names_get__x962_p192v3(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_X962P239v1() */
 HRESULT wsecrco_ecc_curve_names_get__x962_p239v1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_X962P239v2() */
 HRESULT wsecrco_ecc_curve_names_get__x962_p239v2(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_X962P239v3() */
 HRESULT wsecrco_ecc_curve_names_get__x962_p239v3(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_X962P256v1() */
 HRESULT wsecrco_ecc_curve_names_get__x962_p256v1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.EccCurveNames.get_AllEccCurveNames() */
 HRESULT wsecrco_ecc_curve_names_get__all_ecc_curve_names(WFOCO_IVectorView_HSTRING** value);
 
-/* activate Windows.Security.Cryptography.Core.EncryptedAndAuthenticatedData */
 HRESULT wsecrco_encrypted_and_authenticated_data_new(WSECRCO_EncryptedAndAuthenticatedData **out);
 
-/* Windows.Security.Cryptography.Core.EncryptedAndAuthenticatedData */
-/* Windows.Security.Cryptography.Core.EncryptedAndAuthenticatedData.get_EncryptedData() */
 HRESULT wsecrco_encrypted_and_authenticated_data_get__encrypted_data(WSECRCO_EncryptedAndAuthenticatedData *self, WSTST_IBuffer** value);
 
-/* Windows.Security.Cryptography.Core.EncryptedAndAuthenticatedData.get_AuthenticationTag() */
 HRESULT wsecrco_encrypted_and_authenticated_data_get__authentication_tag(WSECRCO_EncryptedAndAuthenticatedData *self, WSTST_IBuffer** value);
 
-/* activate Windows.Security.Cryptography.Core.HashAlgorithmNames */
 HRESULT wsecrco_hash_algorithm_names_new(WSECRCO_HashAlgorithmNames **out);
 
-/* Windows.Security.Cryptography.Core.HashAlgorithmNames */
-/* Windows.Security.Cryptography.Core.HashAlgorithmNames.get_Md5() */
 HRESULT wsecrco_hash_algorithm_names_get__md5(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.HashAlgorithmNames.get_Sha1() */
 HRESULT wsecrco_hash_algorithm_names_get__sha1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.HashAlgorithmNames.get_Sha256() */
 HRESULT wsecrco_hash_algorithm_names_get__sha256(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.HashAlgorithmNames.get_Sha384() */
 HRESULT wsecrco_hash_algorithm_names_get__sha384(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.HashAlgorithmNames.get_Sha512() */
 HRESULT wsecrco_hash_algorithm_names_get__sha512(cwinrt_hstring *value);
 
-/* activate Windows.Security.Cryptography.Core.HashAlgorithmProvider */
 HRESULT wsecrco_hash_algorithm_provider_new(WSECRCO_HashAlgorithmProvider **out);
 
-/* Windows.Security.Cryptography.Core.HashAlgorithmProvider */
-/* Windows.Security.Cryptography.Core.HashAlgorithmProvider.get_AlgorithmName() */
 HRESULT wsecrco_hash_algorithm_provider_get__algorithm_name(WSECRCO_HashAlgorithmProvider *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.HashAlgorithmProvider.get_HashLength() */
 HRESULT wsecrco_hash_algorithm_provider_get__hash_length(WSECRCO_HashAlgorithmProvider *self, uint32_t *value);
 
-/* Windows.Security.Cryptography.Core.HashAlgorithmProvider.HashData(data) */
 HRESULT wsecrco_hash_algorithm_provider_hash_data(WSECRCO_HashAlgorithmProvider *self, WSTST_IBuffer* data, WSTST_IBuffer** out);
 
-/* Windows.Security.Cryptography.Core.HashAlgorithmProvider.CreateHash() */
 HRESULT wsecrco_hash_algorithm_provider_create_hash(WSECRCO_HashAlgorithmProvider *self, WSECRCO_CryptographicHash** out);
 
-/* Windows.Security.Cryptography.Core.HashAlgorithmProvider.OpenAlgorithm(algorithm) */
 HRESULT wsecrco_hash_algorithm_provider_open_algorithm(cwinrt_hstring algorithm, WSECRCO_HashAlgorithmProvider** out);
 
-/* Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics */
-/* Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics.get_RsaPkcs1() */
 HRESULT wsecrco_asymmetric_algorithm_names_statics_get__rsa_pkcs1(WSECRCO_IAsymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics.get_RsaOaepSha1() */
 HRESULT wsecrco_asymmetric_algorithm_names_statics_get__rsa_oaep_sha1(WSECRCO_IAsymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics.get_RsaOaepSha256() */
 HRESULT wsecrco_asymmetric_algorithm_names_statics_get__rsa_oaep_sha256(WSECRCO_IAsymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics.get_RsaOaepSha384() */
 HRESULT wsecrco_asymmetric_algorithm_names_statics_get__rsa_oaep_sha384(WSECRCO_IAsymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics.get_RsaOaepSha512() */
 HRESULT wsecrco_asymmetric_algorithm_names_statics_get__rsa_oaep_sha512(WSECRCO_IAsymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics.get_EcdsaP256Sha256() */
 HRESULT wsecrco_asymmetric_algorithm_names_statics_get__ecdsa_p256_sha256(WSECRCO_IAsymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics.get_EcdsaP384Sha384() */
 HRESULT wsecrco_asymmetric_algorithm_names_statics_get__ecdsa_p384_sha384(WSECRCO_IAsymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics.get_EcdsaP521Sha512() */
 HRESULT wsecrco_asymmetric_algorithm_names_statics_get__ecdsa_p521_sha512(WSECRCO_IAsymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics.get_DsaSha1() */
 HRESULT wsecrco_asymmetric_algorithm_names_statics_get__dsa_sha1(WSECRCO_IAsymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics.get_DsaSha256() */
 HRESULT wsecrco_asymmetric_algorithm_names_statics_get__dsa_sha256(WSECRCO_IAsymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics.get_RsaSignPkcs1Sha1() */
 HRESULT wsecrco_asymmetric_algorithm_names_statics_get__rsa_sign_pkcs1_sha1(WSECRCO_IAsymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics.get_RsaSignPkcs1Sha256() */
 HRESULT wsecrco_asymmetric_algorithm_names_statics_get__rsa_sign_pkcs1_sha256(WSECRCO_IAsymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics.get_RsaSignPkcs1Sha384() */
 HRESULT wsecrco_asymmetric_algorithm_names_statics_get__rsa_sign_pkcs1_sha384(WSECRCO_IAsymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics.get_RsaSignPkcs1Sha512() */
 HRESULT wsecrco_asymmetric_algorithm_names_statics_get__rsa_sign_pkcs1_sha512(WSECRCO_IAsymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics.get_RsaSignPssSha1() */
 HRESULT wsecrco_asymmetric_algorithm_names_statics_get__rsa_sign_pss_sha1(WSECRCO_IAsymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics.get_RsaSignPssSha256() */
 HRESULT wsecrco_asymmetric_algorithm_names_statics_get__rsa_sign_pss_sha256(WSECRCO_IAsymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics.get_RsaSignPssSha384() */
 HRESULT wsecrco_asymmetric_algorithm_names_statics_get__rsa_sign_pss_sha384(WSECRCO_IAsymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics.get_RsaSignPssSha512() */
 HRESULT wsecrco_asymmetric_algorithm_names_statics_get__rsa_sign_pss_sha512(WSECRCO_IAsymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics2 */
-/* Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics2.get_EcdsaSha256() */
 HRESULT wsecrco_asymmetric_algorithm_names_statics_2_get__ecdsa_sha256(WSECRCO_IAsymmetricAlgorithmNamesStatics_2 *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics2.get_EcdsaSha384() */
 HRESULT wsecrco_asymmetric_algorithm_names_statics_2_get__ecdsa_sha384(WSECRCO_IAsymmetricAlgorithmNamesStatics_2 *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics2.get_EcdsaSha512() */
 HRESULT wsecrco_asymmetric_algorithm_names_statics_2_get__ecdsa_sha512(WSECRCO_IAsymmetricAlgorithmNamesStatics_2 *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IAsymmetricKeyAlgorithmProviderStatics */
-/* Windows.Security.Cryptography.Core.IAsymmetricKeyAlgorithmProviderStatics.OpenAlgorithm(algorithm) */
 HRESULT wsecrco_asymmetric_key_algorithm_provider_statics_open_algorithm(WSECRCO_IAsymmetricKeyAlgorithmProviderStatics *self, cwinrt_hstring algorithm, WSECRCO_AsymmetricKeyAlgorithmProvider** out);
 
-/* Windows.Security.Cryptography.Core.ICryptographicEngineStatics */
-/* Windows.Security.Cryptography.Core.ICryptographicEngineStatics.Encrypt(key, data, iv) */
 HRESULT wsecrco_cryptographic_engine_statics_encrypt(WSECRCO_ICryptographicEngineStatics *self, WSECRCO_CryptographicKey* key, WSTST_IBuffer* data, WSTST_IBuffer* iv, WSTST_IBuffer** out);
 
-/* Windows.Security.Cryptography.Core.ICryptographicEngineStatics.Decrypt(key, data, iv) */
 HRESULT wsecrco_cryptographic_engine_statics_decrypt(WSECRCO_ICryptographicEngineStatics *self, WSECRCO_CryptographicKey* key, WSTST_IBuffer* data, WSTST_IBuffer* iv, WSTST_IBuffer** out);
 
-/* Windows.Security.Cryptography.Core.ICryptographicEngineStatics.EncryptAndAuthenticate(key, data, nonce, authenticatedData) */
 HRESULT wsecrco_cryptographic_engine_statics_encrypt_and_authenticate(WSECRCO_ICryptographicEngineStatics *self, WSECRCO_CryptographicKey* key, WSTST_IBuffer* data, WSTST_IBuffer* nonce, WSTST_IBuffer* authenticatedData, WSECRCO_EncryptedAndAuthenticatedData** out);
 
-/* Windows.Security.Cryptography.Core.ICryptographicEngineStatics.DecryptAndAuthenticate(key, data, nonce, authenticationTag, authenticatedData) */
 HRESULT wsecrco_cryptographic_engine_statics_decrypt_and_authenticate(WSECRCO_ICryptographicEngineStatics *self, WSECRCO_CryptographicKey* key, WSTST_IBuffer* data, WSTST_IBuffer* nonce, WSTST_IBuffer* authenticationTag, WSTST_IBuffer* authenticatedData, WSTST_IBuffer** out);
 
-/* Windows.Security.Cryptography.Core.ICryptographicEngineStatics.Sign(key, data) */
 HRESULT wsecrco_cryptographic_engine_statics_sign(WSECRCO_ICryptographicEngineStatics *self, WSECRCO_CryptographicKey* key, WSTST_IBuffer* data, WSTST_IBuffer** out);
 
-/* Windows.Security.Cryptography.Core.ICryptographicEngineStatics.VerifySignature(key, data, signature) */
 HRESULT wsecrco_cryptographic_engine_statics_verify_signature(WSECRCO_ICryptographicEngineStatics *self, WSECRCO_CryptographicKey* key, WSTST_IBuffer* data, WSTST_IBuffer* signature, BOOL *out);
 
-/* Windows.Security.Cryptography.Core.ICryptographicEngineStatics.DeriveKeyMaterial(key, parameters, desiredKeySize) */
 HRESULT wsecrco_cryptographic_engine_statics_derive_key_material(WSECRCO_ICryptographicEngineStatics *self, WSECRCO_CryptographicKey* key, WSECRCO_KeyDerivationParameters* parameters, uint32_t desiredKeySize, WSTST_IBuffer** out);
 
-/* Windows.Security.Cryptography.Core.ICryptographicEngineStatics2 */
-/* Windows.Security.Cryptography.Core.ICryptographicEngineStatics2.SignHashedData(key, data) */
 HRESULT wsecrco_cryptographic_engine_statics_2_sign_hashed_data(WSECRCO_ICryptographicEngineStatics_2 *self, WSECRCO_CryptographicKey* key, WSTST_IBuffer* data, WSTST_IBuffer** out);
 
-/* Windows.Security.Cryptography.Core.ICryptographicEngineStatics2.VerifySignatureWithHashInput(key, data, signature) */
 HRESULT wsecrco_cryptographic_engine_statics_2_verify_signature_with_hash_input(WSECRCO_ICryptographicEngineStatics_2 *self, WSECRCO_CryptographicKey* key, WSTST_IBuffer* data, WSTST_IBuffer* signature, BOOL *out);
 
-/* Windows.Security.Cryptography.Core.ICryptographicEngineStatics2.DecryptAsync(key, data, iv) */
 HRESULT wsecrco_cryptographic_engine_statics_2_decrypt_async(WSECRCO_ICryptographicEngineStatics_2 *self, WSECRCO_CryptographicKey* key, WSTST_IBuffer* data, WSTST_IBuffer* iv, WF_IAsyncOperation_WSTST_IBuffer** out);
 
-/* Windows.Security.Cryptography.Core.ICryptographicEngineStatics2.SignAsync(key, data) */
 HRESULT wsecrco_cryptographic_engine_statics_2_sign_async(WSECRCO_ICryptographicEngineStatics_2 *self, WSECRCO_CryptographicKey* key, WSTST_IBuffer* data, WF_IAsyncOperation_WSTST_IBuffer** out);
 
-/* Windows.Security.Cryptography.Core.ICryptographicEngineStatics2.SignHashedDataAsync(key, data) */
 HRESULT wsecrco_cryptographic_engine_statics_2_sign_hashed_data_async(WSECRCO_ICryptographicEngineStatics_2 *self, WSECRCO_CryptographicKey* key, WSTST_IBuffer* data, WF_IAsyncOperation_WSTST_IBuffer** out);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics */
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_BrainpoolP160r1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__brainpool_p160r1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_BrainpoolP160t1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__brainpool_p160t1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_BrainpoolP192r1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__brainpool_p192r1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_BrainpoolP192t1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__brainpool_p192t1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_BrainpoolP224r1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__brainpool_p224r1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_BrainpoolP224t1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__brainpool_p224t1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_BrainpoolP256r1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__brainpool_p256r1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_BrainpoolP256t1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__brainpool_p256t1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_BrainpoolP320r1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__brainpool_p320r1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_BrainpoolP320t1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__brainpool_p320t1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_BrainpoolP384r1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__brainpool_p384r1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_BrainpoolP384t1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__brainpool_p384t1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_BrainpoolP512r1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__brainpool_p512r1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_BrainpoolP512t1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__brainpool_p512t1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_Curve25519() */
 HRESULT wsecrco_ecc_curve_names_statics_get__curve25519(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_Ec192wapi() */
 HRESULT wsecrco_ecc_curve_names_statics_get__ec192wapi(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_NistP192() */
 HRESULT wsecrco_ecc_curve_names_statics_get__nist_p192(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_NistP224() */
 HRESULT wsecrco_ecc_curve_names_statics_get__nist_p224(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_NistP256() */
 HRESULT wsecrco_ecc_curve_names_statics_get__nist_p256(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_NistP384() */
 HRESULT wsecrco_ecc_curve_names_statics_get__nist_p384(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_NistP521() */
 HRESULT wsecrco_ecc_curve_names_statics_get__nist_p521(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_NumsP256t1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__nums_p256t1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_NumsP384t1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__nums_p384t1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_NumsP512t1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__nums_p512t1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_SecP160k1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__sec_p160k1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_SecP160r1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__sec_p160r1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_SecP160r2() */
 HRESULT wsecrco_ecc_curve_names_statics_get__sec_p160r2(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_SecP192k1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__sec_p192k1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_SecP192r1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__sec_p192r1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_SecP224k1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__sec_p224k1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_SecP224r1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__sec_p224r1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_SecP256k1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__sec_p256k1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_SecP256r1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__sec_p256r1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_SecP384r1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__sec_p384r1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_SecP521r1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__sec_p521r1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_Wtls7() */
 HRESULT wsecrco_ecc_curve_names_statics_get__wtls7(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_Wtls9() */
 HRESULT wsecrco_ecc_curve_names_statics_get__wtls9(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_Wtls12() */
 HRESULT wsecrco_ecc_curve_names_statics_get__wtls12(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_X962P192v1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__x962_p192v1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_X962P192v2() */
 HRESULT wsecrco_ecc_curve_names_statics_get__x962_p192v2(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_X962P192v3() */
 HRESULT wsecrco_ecc_curve_names_statics_get__x962_p192v3(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_X962P239v1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__x962_p239v1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_X962P239v2() */
 HRESULT wsecrco_ecc_curve_names_statics_get__x962_p239v2(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_X962P239v3() */
 HRESULT wsecrco_ecc_curve_names_statics_get__x962_p239v3(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_X962P256v1() */
 HRESULT wsecrco_ecc_curve_names_statics_get__x962_p256v1(WSECRCO_IEccCurveNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IEccCurveNamesStatics.get_AllEccCurveNames() */
 HRESULT wsecrco_ecc_curve_names_statics_get__all_ecc_curve_names(WSECRCO_IEccCurveNamesStatics *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Security.Cryptography.Core.IHashAlgorithmNamesStatics */
-/* Windows.Security.Cryptography.Core.IHashAlgorithmNamesStatics.get_Md5() */
 HRESULT wsecrco_hash_algorithm_names_statics_get__md5(WSECRCO_IHashAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IHashAlgorithmNamesStatics.get_Sha1() */
 HRESULT wsecrco_hash_algorithm_names_statics_get__sha1(WSECRCO_IHashAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IHashAlgorithmNamesStatics.get_Sha256() */
 HRESULT wsecrco_hash_algorithm_names_statics_get__sha256(WSECRCO_IHashAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IHashAlgorithmNamesStatics.get_Sha384() */
 HRESULT wsecrco_hash_algorithm_names_statics_get__sha384(WSECRCO_IHashAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IHashAlgorithmNamesStatics.get_Sha512() */
 HRESULT wsecrco_hash_algorithm_names_statics_get__sha512(WSECRCO_IHashAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IHashAlgorithmProviderStatics */
-/* Windows.Security.Cryptography.Core.IHashAlgorithmProviderStatics.OpenAlgorithm(algorithm) */
 HRESULT wsecrco_hash_algorithm_provider_statics_open_algorithm(WSECRCO_IHashAlgorithmProviderStatics *self, cwinrt_hstring algorithm, WSECRCO_HashAlgorithmProvider** out);
 
-/* Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics */
-/* Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics.get_Pbkdf2Md5() */
 HRESULT wsecrco_key_derivation_algorithm_names_statics_get__pbkdf2_md5(WSECRCO_IKeyDerivationAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics.get_Pbkdf2Sha1() */
 HRESULT wsecrco_key_derivation_algorithm_names_statics_get__pbkdf2_sha1(WSECRCO_IKeyDerivationAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics.get_Pbkdf2Sha256() */
 HRESULT wsecrco_key_derivation_algorithm_names_statics_get__pbkdf2_sha256(WSECRCO_IKeyDerivationAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics.get_Pbkdf2Sha384() */
 HRESULT wsecrco_key_derivation_algorithm_names_statics_get__pbkdf2_sha384(WSECRCO_IKeyDerivationAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics.get_Pbkdf2Sha512() */
 HRESULT wsecrco_key_derivation_algorithm_names_statics_get__pbkdf2_sha512(WSECRCO_IKeyDerivationAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics.get_Sp800108CtrHmacMd5() */
 HRESULT wsecrco_key_derivation_algorithm_names_statics_get__sp800108_ctr_hmac_md5(WSECRCO_IKeyDerivationAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics.get_Sp800108CtrHmacSha1() */
 HRESULT wsecrco_key_derivation_algorithm_names_statics_get__sp800108_ctr_hmac_sha1(WSECRCO_IKeyDerivationAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics.get_Sp800108CtrHmacSha256() */
 HRESULT wsecrco_key_derivation_algorithm_names_statics_get__sp800108_ctr_hmac_sha256(WSECRCO_IKeyDerivationAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics.get_Sp800108CtrHmacSha384() */
 HRESULT wsecrco_key_derivation_algorithm_names_statics_get__sp800108_ctr_hmac_sha384(WSECRCO_IKeyDerivationAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics.get_Sp800108CtrHmacSha512() */
 HRESULT wsecrco_key_derivation_algorithm_names_statics_get__sp800108_ctr_hmac_sha512(WSECRCO_IKeyDerivationAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics.get_Sp80056aConcatMd5() */
 HRESULT wsecrco_key_derivation_algorithm_names_statics_get__sp80056a_concat_md5(WSECRCO_IKeyDerivationAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics.get_Sp80056aConcatSha1() */
 HRESULT wsecrco_key_derivation_algorithm_names_statics_get__sp80056a_concat_sha1(WSECRCO_IKeyDerivationAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics.get_Sp80056aConcatSha256() */
 HRESULT wsecrco_key_derivation_algorithm_names_statics_get__sp80056a_concat_sha256(WSECRCO_IKeyDerivationAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics.get_Sp80056aConcatSha384() */
 HRESULT wsecrco_key_derivation_algorithm_names_statics_get__sp80056a_concat_sha384(WSECRCO_IKeyDerivationAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics.get_Sp80056aConcatSha512() */
 HRESULT wsecrco_key_derivation_algorithm_names_statics_get__sp80056a_concat_sha512(WSECRCO_IKeyDerivationAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics2 */
-/* Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics2.get_CapiKdfMd5() */
 HRESULT wsecrco_key_derivation_algorithm_names_statics_2_get__capi_kdf_md5(WSECRCO_IKeyDerivationAlgorithmNamesStatics_2 *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics2.get_CapiKdfSha1() */
 HRESULT wsecrco_key_derivation_algorithm_names_statics_2_get__capi_kdf_sha1(WSECRCO_IKeyDerivationAlgorithmNamesStatics_2 *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics2.get_CapiKdfSha256() */
 HRESULT wsecrco_key_derivation_algorithm_names_statics_2_get__capi_kdf_sha256(WSECRCO_IKeyDerivationAlgorithmNamesStatics_2 *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics2.get_CapiKdfSha384() */
 HRESULT wsecrco_key_derivation_algorithm_names_statics_2_get__capi_kdf_sha384(WSECRCO_IKeyDerivationAlgorithmNamesStatics_2 *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics2.get_CapiKdfSha512() */
 HRESULT wsecrco_key_derivation_algorithm_names_statics_2_get__capi_kdf_sha512(WSECRCO_IKeyDerivationAlgorithmNamesStatics_2 *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmProviderStatics */
-/* Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmProviderStatics.OpenAlgorithm(algorithm) */
 HRESULT wsecrco_key_derivation_algorithm_provider_statics_open_algorithm(WSECRCO_IKeyDerivationAlgorithmProviderStatics *self, cwinrt_hstring algorithm, WSECRCO_KeyDerivationAlgorithmProvider** out);
 
-/* Windows.Security.Cryptography.Core.IKeyDerivationParametersStatics */
-/* Windows.Security.Cryptography.Core.IKeyDerivationParametersStatics.BuildForPbkdf2(pbkdf2Salt, iterationCount) */
 HRESULT wsecrco_key_derivation_parameters_statics_build_for_pbkdf2(WSECRCO_IKeyDerivationParametersStatics *self, WSTST_IBuffer* pbkdf2Salt, uint32_t iterationCount, WSECRCO_KeyDerivationParameters** out);
 
-/* Windows.Security.Cryptography.Core.IKeyDerivationParametersStatics.BuildForSP800108(label, context) */
 HRESULT wsecrco_key_derivation_parameters_statics_build_for_s_p800108(WSECRCO_IKeyDerivationParametersStatics *self, WSTST_IBuffer* label, WSTST_IBuffer* context, WSECRCO_KeyDerivationParameters** out);
 
-/* Windows.Security.Cryptography.Core.IKeyDerivationParametersStatics.BuildForSP80056a(algorithmId, partyUInfo, partyVInfo, suppPubInfo, suppPrivInfo) */
 HRESULT wsecrco_key_derivation_parameters_statics_build_for_s_p80056a(WSECRCO_IKeyDerivationParametersStatics *self, WSTST_IBuffer* algorithmId, WSTST_IBuffer* partyUInfo, WSTST_IBuffer* partyVInfo, WSTST_IBuffer* suppPubInfo, WSTST_IBuffer* suppPrivInfo, WSECRCO_KeyDerivationParameters** out);
 
-/* Windows.Security.Cryptography.Core.IKeyDerivationParametersStatics2 */
-/* Windows.Security.Cryptography.Core.IKeyDerivationParametersStatics2.BuildForCapi1Kdf(capi1KdfTargetAlgorithm) */
 HRESULT wsecrco_key_derivation_parameters_statics_2_build_for_capi1_kdf(WSECRCO_IKeyDerivationParametersStatics_2 *self, WSECRCO_Capi1KdfTargetAlgorithm capi1KdfTargetAlgorithm, WSECRCO_KeyDerivationParameters** out);
 
-/* Windows.Security.Cryptography.Core.IMacAlgorithmNamesStatics */
-/* Windows.Security.Cryptography.Core.IMacAlgorithmNamesStatics.get_HmacMd5() */
 HRESULT wsecrco_mac_algorithm_names_statics_get__hmac_md5(WSECRCO_IMacAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IMacAlgorithmNamesStatics.get_HmacSha1() */
 HRESULT wsecrco_mac_algorithm_names_statics_get__hmac_sha1(WSECRCO_IMacAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IMacAlgorithmNamesStatics.get_HmacSha256() */
 HRESULT wsecrco_mac_algorithm_names_statics_get__hmac_sha256(WSECRCO_IMacAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IMacAlgorithmNamesStatics.get_HmacSha384() */
 HRESULT wsecrco_mac_algorithm_names_statics_get__hmac_sha384(WSECRCO_IMacAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IMacAlgorithmNamesStatics.get_HmacSha512() */
 HRESULT wsecrco_mac_algorithm_names_statics_get__hmac_sha512(WSECRCO_IMacAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IMacAlgorithmNamesStatics.get_AesCmac() */
 HRESULT wsecrco_mac_algorithm_names_statics_get__aes_cmac(WSECRCO_IMacAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IMacAlgorithmProviderStatics */
-/* Windows.Security.Cryptography.Core.IMacAlgorithmProviderStatics.OpenAlgorithm(algorithm) */
 HRESULT wsecrco_mac_algorithm_provider_statics_open_algorithm(WSECRCO_IMacAlgorithmProviderStatics *self, cwinrt_hstring algorithm, WSECRCO_MacAlgorithmProvider** out);
 
-/* Windows.Security.Cryptography.Core.IPersistedKeyProviderStatics */
-/* Windows.Security.Cryptography.Core.IPersistedKeyProviderStatics.OpenKeyPairFromCertificateAsync(certificate, hashAlgorithmName, padding) */
 HRESULT wsecrco_persisted_key_provider_statics_open_key_pair_from_certificate_async(WSECRCO_IPersistedKeyProviderStatics *self, WSECRCE_Certificate* certificate, cwinrt_hstring hashAlgorithmName, WSECRCO_CryptographicPadding padding, WF_IAsyncOperation_WSECRCO_CryptographicKey** out);
 
-/* Windows.Security.Cryptography.Core.IPersistedKeyProviderStatics.OpenPublicKeyFromCertificate(certificate, hashAlgorithmName, padding) */
 HRESULT wsecrco_persisted_key_provider_statics_open_public_key_from_certificate(WSECRCO_IPersistedKeyProviderStatics *self, WSECRCE_Certificate* certificate, cwinrt_hstring hashAlgorithmName, WSECRCO_CryptographicPadding padding, WSECRCO_CryptographicKey** out);
 
-/* Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics */
-/* Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics.get_DesCbc() */
 HRESULT wsecrco_symmetric_algorithm_names_statics_get__des_cbc(WSECRCO_ISymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics.get_DesEcb() */
 HRESULT wsecrco_symmetric_algorithm_names_statics_get__des_ecb(WSECRCO_ISymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics.get_TripleDesCbc() */
 HRESULT wsecrco_symmetric_algorithm_names_statics_get__triple_des_cbc(WSECRCO_ISymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics.get_TripleDesEcb() */
 HRESULT wsecrco_symmetric_algorithm_names_statics_get__triple_des_ecb(WSECRCO_ISymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics.get_Rc2Cbc() */
 HRESULT wsecrco_symmetric_algorithm_names_statics_get__rc2_cbc(WSECRCO_ISymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics.get_Rc2Ecb() */
 HRESULT wsecrco_symmetric_algorithm_names_statics_get__rc2_ecb(WSECRCO_ISymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics.get_AesCbc() */
 HRESULT wsecrco_symmetric_algorithm_names_statics_get__aes_cbc(WSECRCO_ISymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics.get_AesEcb() */
 HRESULT wsecrco_symmetric_algorithm_names_statics_get__aes_ecb(WSECRCO_ISymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics.get_AesGcm() */
 HRESULT wsecrco_symmetric_algorithm_names_statics_get__aes_gcm(WSECRCO_ISymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics.get_AesCcm() */
 HRESULT wsecrco_symmetric_algorithm_names_statics_get__aes_ccm(WSECRCO_ISymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics.get_AesCbcPkcs7() */
 HRESULT wsecrco_symmetric_algorithm_names_statics_get__aes_cbc_pkcs7(WSECRCO_ISymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics.get_AesEcbPkcs7() */
 HRESULT wsecrco_symmetric_algorithm_names_statics_get__aes_ecb_pkcs7(WSECRCO_ISymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics.get_DesCbcPkcs7() */
 HRESULT wsecrco_symmetric_algorithm_names_statics_get__des_cbc_pkcs7(WSECRCO_ISymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics.get_DesEcbPkcs7() */
 HRESULT wsecrco_symmetric_algorithm_names_statics_get__des_ecb_pkcs7(WSECRCO_ISymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics.get_TripleDesCbcPkcs7() */
 HRESULT wsecrco_symmetric_algorithm_names_statics_get__triple_des_cbc_pkcs7(WSECRCO_ISymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics.get_TripleDesEcbPkcs7() */
 HRESULT wsecrco_symmetric_algorithm_names_statics_get__triple_des_ecb_pkcs7(WSECRCO_ISymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics.get_Rc2CbcPkcs7() */
 HRESULT wsecrco_symmetric_algorithm_names_statics_get__rc2_cbc_pkcs7(WSECRCO_ISymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics.get_Rc2EcbPkcs7() */
 HRESULT wsecrco_symmetric_algorithm_names_statics_get__rc2_ecb_pkcs7(WSECRCO_ISymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics.get_Rc4() */
 HRESULT wsecrco_symmetric_algorithm_names_statics_get__rc4(WSECRCO_ISymmetricAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProviderStatics */
-/* Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProviderStatics.OpenAlgorithm(algorithm) */
 HRESULT wsecrco_symmetric_key_algorithm_provider_statics_open_algorithm(WSECRCO_ISymmetricKeyAlgorithmProviderStatics *self, cwinrt_hstring algorithm, WSECRCO_SymmetricKeyAlgorithmProvider** out);
 
-/* activate Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames */
 HRESULT wsecrco_key_derivation_algorithm_names_new(WSECRCO_KeyDerivationAlgorithmNames **out);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames */
-/* Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames.get_CapiKdfMd5() */
 HRESULT wsecrco_key_derivation_algorithm_names_get__capi_kdf_md5(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames.get_CapiKdfSha1() */
 HRESULT wsecrco_key_derivation_algorithm_names_get__capi_kdf_sha1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames.get_CapiKdfSha256() */
 HRESULT wsecrco_key_derivation_algorithm_names_get__capi_kdf_sha256(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames.get_CapiKdfSha384() */
 HRESULT wsecrco_key_derivation_algorithm_names_get__capi_kdf_sha384(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames.get_CapiKdfSha512() */
 HRESULT wsecrco_key_derivation_algorithm_names_get__capi_kdf_sha512(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames.get_Pbkdf2Md5() */
 HRESULT wsecrco_key_derivation_algorithm_names_get__pbkdf2_md5(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames.get_Pbkdf2Sha1() */
 HRESULT wsecrco_key_derivation_algorithm_names_get__pbkdf2_sha1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames.get_Pbkdf2Sha256() */
 HRESULT wsecrco_key_derivation_algorithm_names_get__pbkdf2_sha256(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames.get_Pbkdf2Sha384() */
 HRESULT wsecrco_key_derivation_algorithm_names_get__pbkdf2_sha384(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames.get_Pbkdf2Sha512() */
 HRESULT wsecrco_key_derivation_algorithm_names_get__pbkdf2_sha512(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames.get_Sp800108CtrHmacMd5() */
 HRESULT wsecrco_key_derivation_algorithm_names_get__sp800108_ctr_hmac_md5(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames.get_Sp800108CtrHmacSha1() */
 HRESULT wsecrco_key_derivation_algorithm_names_get__sp800108_ctr_hmac_sha1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames.get_Sp800108CtrHmacSha256() */
 HRESULT wsecrco_key_derivation_algorithm_names_get__sp800108_ctr_hmac_sha256(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames.get_Sp800108CtrHmacSha384() */
 HRESULT wsecrco_key_derivation_algorithm_names_get__sp800108_ctr_hmac_sha384(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames.get_Sp800108CtrHmacSha512() */
 HRESULT wsecrco_key_derivation_algorithm_names_get__sp800108_ctr_hmac_sha512(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames.get_Sp80056aConcatMd5() */
 HRESULT wsecrco_key_derivation_algorithm_names_get__sp80056a_concat_md5(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames.get_Sp80056aConcatSha1() */
 HRESULT wsecrco_key_derivation_algorithm_names_get__sp80056a_concat_sha1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames.get_Sp80056aConcatSha256() */
 HRESULT wsecrco_key_derivation_algorithm_names_get__sp80056a_concat_sha256(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames.get_Sp80056aConcatSha384() */
 HRESULT wsecrco_key_derivation_algorithm_names_get__sp80056a_concat_sha384(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames.get_Sp80056aConcatSha512() */
 HRESULT wsecrco_key_derivation_algorithm_names_get__sp80056a_concat_sha512(cwinrt_hstring *value);
 
-/* activate Windows.Security.Cryptography.Core.KeyDerivationAlgorithmProvider */
 HRESULT wsecrco_key_derivation_algorithm_provider_new(WSECRCO_KeyDerivationAlgorithmProvider **out);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationAlgorithmProvider */
-/* Windows.Security.Cryptography.Core.KeyDerivationAlgorithmProvider.get_AlgorithmName() */
 HRESULT wsecrco_key_derivation_algorithm_provider_get__algorithm_name(WSECRCO_KeyDerivationAlgorithmProvider *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationAlgorithmProvider.CreateKey(keyMaterial) */
 HRESULT wsecrco_key_derivation_algorithm_provider_create_key(WSECRCO_KeyDerivationAlgorithmProvider *self, WSTST_IBuffer* keyMaterial, WSECRCO_CryptographicKey** out);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationAlgorithmProvider.OpenAlgorithm(algorithm) */
 HRESULT wsecrco_key_derivation_algorithm_provider_open_algorithm(cwinrt_hstring algorithm, WSECRCO_KeyDerivationAlgorithmProvider** out);
 
-/* activate Windows.Security.Cryptography.Core.KeyDerivationParameters */
 HRESULT wsecrco_key_derivation_parameters_new(WSECRCO_KeyDerivationParameters **out);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationParameters */
-/* Windows.Security.Cryptography.Core.KeyDerivationParameters.get_KdfGenericBinary() */
 HRESULT wsecrco_key_derivation_parameters_get__kdf_generic_binary(WSECRCO_KeyDerivationParameters *self, WSTST_IBuffer** value);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationParameters.put_KdfGenericBinary() */
 HRESULT wsecrco_key_derivation_parameters_put__kdf_generic_binary(WSECRCO_KeyDerivationParameters *self, WSTST_IBuffer* value);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationParameters.get_IterationCount() */
 HRESULT wsecrco_key_derivation_parameters_get__iteration_count(WSECRCO_KeyDerivationParameters *self, uint32_t *value);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationParameters.get_Capi1KdfTargetAlgorithm() */
 HRESULT wsecrco_key_derivation_parameters_get__capi1_kdf_target_algorithm(WSECRCO_KeyDerivationParameters *self, WSECRCO_Capi1KdfTargetAlgorithm *value);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationParameters.put_Capi1KdfTargetAlgorithm() */
 HRESULT wsecrco_key_derivation_parameters_put__capi1_kdf_target_algorithm(WSECRCO_KeyDerivationParameters *self, WSECRCO_Capi1KdfTargetAlgorithm value);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationParameters.BuildForCapi1Kdf(capi1KdfTargetAlgorithm) */
 HRESULT wsecrco_key_derivation_parameters_build_for_capi1_kdf(WSECRCO_Capi1KdfTargetAlgorithm capi1KdfTargetAlgorithm, WSECRCO_KeyDerivationParameters** out);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationParameters.BuildForPbkdf2(pbkdf2Salt, iterationCount) */
 HRESULT wsecrco_key_derivation_parameters_build_for_pbkdf2(WSTST_IBuffer* pbkdf2Salt, uint32_t iterationCount, WSECRCO_KeyDerivationParameters** out);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationParameters.BuildForSP800108(label, context) */
 HRESULT wsecrco_key_derivation_parameters_build_for_s_p800108(WSTST_IBuffer* label, WSTST_IBuffer* context, WSECRCO_KeyDerivationParameters** out);
 
-/* Windows.Security.Cryptography.Core.KeyDerivationParameters.BuildForSP80056a(algorithmId, partyUInfo, partyVInfo, suppPubInfo, suppPrivInfo) */
 HRESULT wsecrco_key_derivation_parameters_build_for_s_p80056a(WSTST_IBuffer* algorithmId, WSTST_IBuffer* partyUInfo, WSTST_IBuffer* partyVInfo, WSTST_IBuffer* suppPubInfo, WSTST_IBuffer* suppPrivInfo, WSECRCO_KeyDerivationParameters** out);
 
-/* activate Windows.Security.Cryptography.Core.MacAlgorithmNames */
 HRESULT wsecrco_mac_algorithm_names_new(WSECRCO_MacAlgorithmNames **out);
 
-/* Windows.Security.Cryptography.Core.MacAlgorithmNames */
-/* Windows.Security.Cryptography.Core.MacAlgorithmNames.get_HmacMd5() */
 HRESULT wsecrco_mac_algorithm_names_get__hmac_md5(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.MacAlgorithmNames.get_HmacSha1() */
 HRESULT wsecrco_mac_algorithm_names_get__hmac_sha1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.MacAlgorithmNames.get_HmacSha256() */
 HRESULT wsecrco_mac_algorithm_names_get__hmac_sha256(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.MacAlgorithmNames.get_HmacSha384() */
 HRESULT wsecrco_mac_algorithm_names_get__hmac_sha384(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.MacAlgorithmNames.get_HmacSha512() */
 HRESULT wsecrco_mac_algorithm_names_get__hmac_sha512(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.MacAlgorithmNames.get_AesCmac() */
 HRESULT wsecrco_mac_algorithm_names_get__aes_cmac(cwinrt_hstring *value);
 
-/* activate Windows.Security.Cryptography.Core.MacAlgorithmProvider */
 HRESULT wsecrco_mac_algorithm_provider_new(WSECRCO_MacAlgorithmProvider **out);
 
-/* Windows.Security.Cryptography.Core.MacAlgorithmProvider */
-/* Windows.Security.Cryptography.Core.MacAlgorithmProvider.get_AlgorithmName() */
 HRESULT wsecrco_mac_algorithm_provider_get__algorithm_name(WSECRCO_MacAlgorithmProvider *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.MacAlgorithmProvider.get_MacLength() */
 HRESULT wsecrco_mac_algorithm_provider_get__mac_length(WSECRCO_MacAlgorithmProvider *self, uint32_t *value);
 
-/* Windows.Security.Cryptography.Core.MacAlgorithmProvider.CreateKey(keyMaterial) */
 HRESULT wsecrco_mac_algorithm_provider_create_key(WSECRCO_MacAlgorithmProvider *self, WSTST_IBuffer* keyMaterial, WSECRCO_CryptographicKey** out);
 
-/* Windows.Security.Cryptography.Core.MacAlgorithmProvider.CreateHash(keyMaterial) */
 HRESULT wsecrco_mac_algorithm_provider_create_hash(WSECRCO_MacAlgorithmProvider *self, WSTST_IBuffer* keyMaterial, WSECRCO_CryptographicHash** out);
 
-/* Windows.Security.Cryptography.Core.MacAlgorithmProvider.OpenAlgorithm(algorithm) */
 HRESULT wsecrco_mac_algorithm_provider_open_algorithm(cwinrt_hstring algorithm, WSECRCO_MacAlgorithmProvider** out);
 
-/* activate Windows.Security.Cryptography.Core.PersistedKeyProvider */
 HRESULT wsecrco_persisted_key_provider_new(WSECRCO_PersistedKeyProvider **out);
 
-/* Windows.Security.Cryptography.Core.PersistedKeyProvider */
-/* Windows.Security.Cryptography.Core.PersistedKeyProvider.OpenKeyPairFromCertificateAsync(certificate, hashAlgorithmName, padding) */
 HRESULT wsecrco_persisted_key_provider_open_key_pair_from_certificate_async(WSECRCE_Certificate* certificate, cwinrt_hstring hashAlgorithmName, WSECRCO_CryptographicPadding padding, WF_IAsyncOperation_WSECRCO_CryptographicKey** out);
 
-/* Windows.Security.Cryptography.Core.PersistedKeyProvider.OpenPublicKeyFromCertificate(certificate, hashAlgorithmName, padding) */
 HRESULT wsecrco_persisted_key_provider_open_public_key_from_certificate(WSECRCE_Certificate* certificate, cwinrt_hstring hashAlgorithmName, WSECRCO_CryptographicPadding padding, WSECRCO_CryptographicKey** out);
 
-/* activate Windows.Security.Cryptography.Core.SymmetricAlgorithmNames */
 HRESULT wsecrco_symmetric_algorithm_names_new(WSECRCO_SymmetricAlgorithmNames **out);
 
-/* Windows.Security.Cryptography.Core.SymmetricAlgorithmNames */
-/* Windows.Security.Cryptography.Core.SymmetricAlgorithmNames.get_DesCbc() */
 HRESULT wsecrco_symmetric_algorithm_names_get__des_cbc(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.SymmetricAlgorithmNames.get_DesEcb() */
 HRESULT wsecrco_symmetric_algorithm_names_get__des_ecb(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.SymmetricAlgorithmNames.get_TripleDesCbc() */
 HRESULT wsecrco_symmetric_algorithm_names_get__triple_des_cbc(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.SymmetricAlgorithmNames.get_TripleDesEcb() */
 HRESULT wsecrco_symmetric_algorithm_names_get__triple_des_ecb(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.SymmetricAlgorithmNames.get_Rc2Cbc() */
 HRESULT wsecrco_symmetric_algorithm_names_get__rc2_cbc(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.SymmetricAlgorithmNames.get_Rc2Ecb() */
 HRESULT wsecrco_symmetric_algorithm_names_get__rc2_ecb(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.SymmetricAlgorithmNames.get_AesCbc() */
 HRESULT wsecrco_symmetric_algorithm_names_get__aes_cbc(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.SymmetricAlgorithmNames.get_AesEcb() */
 HRESULT wsecrco_symmetric_algorithm_names_get__aes_ecb(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.SymmetricAlgorithmNames.get_AesGcm() */
 HRESULT wsecrco_symmetric_algorithm_names_get__aes_gcm(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.SymmetricAlgorithmNames.get_AesCcm() */
 HRESULT wsecrco_symmetric_algorithm_names_get__aes_ccm(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.SymmetricAlgorithmNames.get_AesCbcPkcs7() */
 HRESULT wsecrco_symmetric_algorithm_names_get__aes_cbc_pkcs7(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.SymmetricAlgorithmNames.get_AesEcbPkcs7() */
 HRESULT wsecrco_symmetric_algorithm_names_get__aes_ecb_pkcs7(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.SymmetricAlgorithmNames.get_DesCbcPkcs7() */
 HRESULT wsecrco_symmetric_algorithm_names_get__des_cbc_pkcs7(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.SymmetricAlgorithmNames.get_DesEcbPkcs7() */
 HRESULT wsecrco_symmetric_algorithm_names_get__des_ecb_pkcs7(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.SymmetricAlgorithmNames.get_TripleDesCbcPkcs7() */
 HRESULT wsecrco_symmetric_algorithm_names_get__triple_des_cbc_pkcs7(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.SymmetricAlgorithmNames.get_TripleDesEcbPkcs7() */
 HRESULT wsecrco_symmetric_algorithm_names_get__triple_des_ecb_pkcs7(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.SymmetricAlgorithmNames.get_Rc2CbcPkcs7() */
 HRESULT wsecrco_symmetric_algorithm_names_get__rc2_cbc_pkcs7(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.SymmetricAlgorithmNames.get_Rc2EcbPkcs7() */
 HRESULT wsecrco_symmetric_algorithm_names_get__rc2_ecb_pkcs7(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.SymmetricAlgorithmNames.get_Rc4() */
 HRESULT wsecrco_symmetric_algorithm_names_get__rc4(cwinrt_hstring *value);
 
-/* activate Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider */
 HRESULT wsecrco_symmetric_key_algorithm_provider_new(WSECRCO_SymmetricKeyAlgorithmProvider **out);
 
-/* Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider */
-/* Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider.get_AlgorithmName() */
 HRESULT wsecrco_symmetric_key_algorithm_provider_get__algorithm_name(WSECRCO_SymmetricKeyAlgorithmProvider *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider.get_BlockLength() */
 HRESULT wsecrco_symmetric_key_algorithm_provider_get__block_length(WSECRCO_SymmetricKeyAlgorithmProvider *self, uint32_t *value);
 
-/* Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider.CreateSymmetricKey(keyMaterial) */
 HRESULT wsecrco_symmetric_key_algorithm_provider_create_symmetric_key(WSECRCO_SymmetricKeyAlgorithmProvider *self, WSTST_IBuffer* keyMaterial, WSECRCO_CryptographicKey** out);
 
-/* Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider.OpenAlgorithm(algorithm) */
 HRESULT wsecrco_symmetric_key_algorithm_provider_open_algorithm(cwinrt_hstring algorithm, WSECRCO_SymmetricKeyAlgorithmProvider** out);
 
-/* activate Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider */
 HRESULT wsecrco_asymmetric_key_algorithm_provider_new(WSECRCO_AsymmetricKeyAlgorithmProvider **out);
 
-/* Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider */
-/* Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider.get_AlgorithmName() */
 HRESULT wsecrco_asymmetric_key_algorithm_provider_get__algorithm_name(WSECRCO_AsymmetricKeyAlgorithmProvider *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider.CreateKeyPair(keySize) */
 HRESULT wsecrco_asymmetric_key_algorithm_provider_create_key_pair(WSECRCO_AsymmetricKeyAlgorithmProvider *self, uint32_t keySize, WSECRCO_CryptographicKey** out);
 
-/* Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider.ImportKeyPair(keyBlob) */
 HRESULT wsecrco_asymmetric_key_algorithm_provider_import_key_pair(WSECRCO_AsymmetricKeyAlgorithmProvider *self, WSTST_IBuffer* keyBlob, WSECRCO_CryptographicKey** out);
 
-/* Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider.ImportKeyPair(keyBlob, BlobType) */
 HRESULT wsecrco_asymmetric_key_algorithm_provider_import_key_pair_p_cryptographic_private_key_blob_type_p(WSECRCO_AsymmetricKeyAlgorithmProvider *self, WSTST_IBuffer* keyBlob, WSECRCO_CryptographicPrivateKeyBlobType BlobType, WSECRCO_CryptographicKey** out);
 
-/* Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider.ImportPublicKey(keyBlob) */
 HRESULT wsecrco_asymmetric_key_algorithm_provider_import_public_key(WSECRCO_AsymmetricKeyAlgorithmProvider *self, WSTST_IBuffer* keyBlob, WSECRCO_CryptographicKey** out);
 
-/* Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider.ImportPublicKey(keyBlob, BlobType) */
 HRESULT wsecrco_asymmetric_key_algorithm_provider_import_public_key_p_cryptographic_public_key_blob_type_p(WSECRCO_AsymmetricKeyAlgorithmProvider *self, WSTST_IBuffer* keyBlob, WSECRCO_CryptographicPublicKeyBlobType BlobType, WSECRCO_CryptographicKey** out);
 
-/* Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider.CreateKeyPairWithCurveName(curveName) */
 HRESULT wsecrco_asymmetric_key_algorithm_provider_create_key_pair_with_curve_name(WSECRCO_AsymmetricKeyAlgorithmProvider *self, cwinrt_hstring curveName, WSECRCO_CryptographicKey** out);
 
-/* Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider.CreateKeyPairWithCurveParameters(parameters) */
 HRESULT wsecrco_asymmetric_key_algorithm_provider_create_key_pair_with_curve_parameters(WSECRCO_AsymmetricKeyAlgorithmProvider *self, uint8_t *parameters, uint32_t parameters_len, WSECRCO_CryptographicKey** out);
 
-/* Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider.OpenAlgorithm(algorithm) */
 HRESULT wsecrco_asymmetric_key_algorithm_provider_open_algorithm(cwinrt_hstring algorithm, WSECRCO_AsymmetricKeyAlgorithmProvider** out);
 
-/* activate Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames */
 HRESULT wsecrco_asymmetric_algorithm_names_new(WSECRCO_AsymmetricAlgorithmNames **out);
 
-/* Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames */
-/* Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames.get_EcdsaSha256() */
 HRESULT wsecrco_asymmetric_algorithm_names_get__ecdsa_sha256(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames.get_EcdsaSha384() */
 HRESULT wsecrco_asymmetric_algorithm_names_get__ecdsa_sha384(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames.get_EcdsaSha512() */
 HRESULT wsecrco_asymmetric_algorithm_names_get__ecdsa_sha512(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames.get_RsaPkcs1() */
 HRESULT wsecrco_asymmetric_algorithm_names_get__rsa_pkcs1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames.get_RsaOaepSha1() */
 HRESULT wsecrco_asymmetric_algorithm_names_get__rsa_oaep_sha1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames.get_RsaOaepSha256() */
 HRESULT wsecrco_asymmetric_algorithm_names_get__rsa_oaep_sha256(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames.get_RsaOaepSha384() */
 HRESULT wsecrco_asymmetric_algorithm_names_get__rsa_oaep_sha384(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames.get_RsaOaepSha512() */
 HRESULT wsecrco_asymmetric_algorithm_names_get__rsa_oaep_sha512(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames.get_EcdsaP256Sha256() */
 HRESULT wsecrco_asymmetric_algorithm_names_get__ecdsa_p256_sha256(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames.get_EcdsaP384Sha384() */
 HRESULT wsecrco_asymmetric_algorithm_names_get__ecdsa_p384_sha384(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames.get_EcdsaP521Sha512() */
 HRESULT wsecrco_asymmetric_algorithm_names_get__ecdsa_p521_sha512(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames.get_DsaSha1() */
 HRESULT wsecrco_asymmetric_algorithm_names_get__dsa_sha1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames.get_DsaSha256() */
 HRESULT wsecrco_asymmetric_algorithm_names_get__dsa_sha256(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames.get_RsaSignPkcs1Sha1() */
 HRESULT wsecrco_asymmetric_algorithm_names_get__rsa_sign_pkcs1_sha1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames.get_RsaSignPkcs1Sha256() */
 HRESULT wsecrco_asymmetric_algorithm_names_get__rsa_sign_pkcs1_sha256(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames.get_RsaSignPkcs1Sha384() */
 HRESULT wsecrco_asymmetric_algorithm_names_get__rsa_sign_pkcs1_sha384(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames.get_RsaSignPkcs1Sha512() */
 HRESULT wsecrco_asymmetric_algorithm_names_get__rsa_sign_pkcs1_sha512(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames.get_RsaSignPssSha1() */
 HRESULT wsecrco_asymmetric_algorithm_names_get__rsa_sign_pss_sha1(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames.get_RsaSignPssSha256() */
 HRESULT wsecrco_asymmetric_algorithm_names_get__rsa_sign_pss_sha256(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames.get_RsaSignPssSha384() */
 HRESULT wsecrco_asymmetric_algorithm_names_get__rsa_sign_pss_sha384(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames.get_RsaSignPssSha512() */
 HRESULT wsecrco_asymmetric_algorithm_names_get__rsa_sign_pss_sha512(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Core.IHashComputation */
-/* Windows.Security.Cryptography.Core.IHashComputation.Append(data) */
 HRESULT wsecrco_hash_computation_append(WSECRCO_IHashComputation *self, WSTST_IBuffer* data);
 
-/* Windows.Security.Cryptography.Core.IHashComputation.GetValueAndReset() */
 HRESULT wsecrco_hash_computation_get_value_and_reset(WSECRCO_IHashComputation *self, WSTST_IBuffer** out);
 
-/* Windows.Security.Cryptography.Core.ICryptographicKey */
-/* Windows.Security.Cryptography.Core.IEncryptedAndAuthenticatedData */
-/* Windows.Security.Cryptography.Core.IHashAlgorithmProvider */
-/* Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmProvider */
-/* Windows.Security.Cryptography.Core.IKeyDerivationParameters */
-/* Windows.Security.Cryptography.Core.IKeyDerivationParameters2 */
-/* Windows.Security.Cryptography.Core.IKeyDerivationParameters2.get_Capi1KdfTargetAlgorithm() */
 HRESULT wsecrco_key_derivation_parameters_2_get__capi1_kdf_target_algorithm(WSECRCO_IKeyDerivationParameters_2 *self, WSECRCO_Capi1KdfTargetAlgorithm *value);
 
-/* Windows.Security.Cryptography.Core.IKeyDerivationParameters2.put_Capi1KdfTargetAlgorithm() */
 HRESULT wsecrco_key_derivation_parameters_2_put__capi1_kdf_target_algorithm(WSECRCO_IKeyDerivationParameters_2 *self, WSECRCO_Capi1KdfTargetAlgorithm value);
 
-/* Windows.Security.Cryptography.Core.IMacAlgorithmProvider */
-/* Windows.Security.Cryptography.Core.IMacAlgorithmProvider2 */
-/* Windows.Security.Cryptography.Core.IMacAlgorithmProvider2.CreateHash(keyMaterial) */
 HRESULT wsecrco_mac_algorithm_provider_2_create_hash(WSECRCO_IMacAlgorithmProvider_2 *self, WSTST_IBuffer* keyMaterial, WSECRCO_CryptographicHash** out);
 
-/* Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProvider */
-/* Windows.Security.Cryptography.Core.IAsymmetricKeyAlgorithmProvider */
-/* Windows.Security.Cryptography.Core.IAsymmetricKeyAlgorithmProvider2 */
-/* Windows.Security.Cryptography.Core.IAsymmetricKeyAlgorithmProvider2.CreateKeyPairWithCurveName(curveName) */
 HRESULT wsecrco_asymmetric_key_algorithm_provider_2_create_key_pair_with_curve_name(WSECRCO_IAsymmetricKeyAlgorithmProvider_2 *self, cwinrt_hstring curveName, WSECRCO_CryptographicKey** out);
 
-/* Windows.Security.Cryptography.Core.IAsymmetricKeyAlgorithmProvider2.CreateKeyPairWithCurveParameters(parameters) */
 HRESULT wsecrco_asymmetric_key_algorithm_provider_2_create_key_pair_with_curve_parameters(WSECRCO_IAsymmetricKeyAlgorithmProvider_2 *self, uint8_t *parameters, uint32_t parameters_len, WSECRCO_CryptographicKey** out);
 
 #endif /* CWINRT_WINDOWS_SECURITY_CRYPTOGRAPHY_CORE_H */

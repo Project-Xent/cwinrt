@@ -13,13 +13,11 @@
 #include <cwinrt/Windows.ApplicationModel.Search.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStreamReference
 #define CWINRT_FWD_WSTST_IRandomAccessStreamReference
 typedef struct WSTST_IRandomAccessStreamReference WSTST_IRandomAccessStreamReference;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPSECO_SearchSuggestionManager WAPSECO_SearchSuggestionManager;
 typedef struct WAPSECO_SearchSuggestion WAPSECO_SearchSuggestion;
 typedef struct WAPSECO_SearchSuggestionsRequestedEventArgs WAPSECO_SearchSuggestionsRequestedEventArgs;
@@ -29,7 +27,6 @@ typedef struct WAPSECO_ISearchSuggestion WAPSECO_ISearchSuggestion;
 typedef struct WAPSECO_ISearchSuggestionsRequestedEventArgs WAPSECO_ISearchSuggestionsRequestedEventArgs;
 typedef struct WAPSECO_IRequestingFocusOnKeyboardInputEventArgs WAPSECO_IRequestingFocusOnKeyboardInputEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WAPSE_LocalContentSuggestionSettings
 #define CWINRT_FWD_WAPSE_LocalContentSuggestionSettings
 typedef struct WAPSE_LocalContentSuggestionSettings WAPSE_LocalContentSuggestionSettings;
@@ -68,7 +65,6 @@ typedef enum WAPSECO_SearchSuggestionKind {
 } WAPSECO_SearchSuggestionKind;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -89,49 +85,32 @@ static const IID CWINRT_IID_WAPSECO_ISearchSuggestionsRequestedEventArgs CWINRT_
 static const IID CWINRT_IID_WAPSECO_IRequestingFocusOnKeyboardInputEventArgs CWINRT_MAYBE_UNUSED = { 0xA1195F27, 0xB1A7, 0x41A2, { 0x87, 0x9D, 0x6A, 0x68, 0x68, 0x7E, 0x59, 0x85 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.Search.Core.SearchSuggestionManager */
 HRESULT wapseco_search_suggestion_manager_new(WAPSECO_SearchSuggestionManager **out);
 
-/* Windows.ApplicationModel.Search.Core.SearchSuggestionManager */
-/* Windows.ApplicationModel.Search.Core.SearchSuggestionManager.get_SearchHistoryEnabled() */
 HRESULT wapseco_search_suggestion_manager_get__search_history_enabled(WAPSECO_SearchSuggestionManager *self, BOOL *value);
 
-/* Windows.ApplicationModel.Search.Core.SearchSuggestionManager.put_SearchHistoryEnabled() */
 HRESULT wapseco_search_suggestion_manager_put__search_history_enabled(WAPSECO_SearchSuggestionManager *self, BOOL value);
 
-/* Windows.ApplicationModel.Search.Core.SearchSuggestionManager.get_SearchHistoryContext() */
 HRESULT wapseco_search_suggestion_manager_get__search_history_context(WAPSECO_SearchSuggestionManager *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Search.Core.SearchSuggestionManager.put_SearchHistoryContext() */
 HRESULT wapseco_search_suggestion_manager_put__search_history_context(WAPSECO_SearchSuggestionManager *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Search.Core.SearchSuggestionManager.SetLocalContentSuggestionSettings(settings) */
 HRESULT wapseco_search_suggestion_manager_set_local_content_suggestion_settings(WAPSECO_SearchSuggestionManager *self, WAPSE_LocalContentSuggestionSettings* settings);
 
-/* Windows.ApplicationModel.Search.Core.SearchSuggestionManager.SetQuery(queryText) */
 HRESULT wapseco_search_suggestion_manager_set_query(WAPSECO_SearchSuggestionManager *self, cwinrt_hstring queryText);
 
-/* Windows.ApplicationModel.Search.Core.SearchSuggestionManager.SetQuery(queryText, language) */
 HRESULT wapseco_search_suggestion_manager_set_query_str_str(WAPSECO_SearchSuggestionManager *self, cwinrt_hstring queryText, cwinrt_hstring language);
 
-/* Windows.ApplicationModel.Search.Core.SearchSuggestionManager.SetQuery(queryText, language, linguisticDetails) */
 HRESULT wapseco_search_suggestion_manager_set_query_str_str_p(WAPSECO_SearchSuggestionManager *self, cwinrt_hstring queryText, cwinrt_hstring language, WAPSE_SearchQueryLinguisticDetails* linguisticDetails);
 
-/* Windows.ApplicationModel.Search.Core.SearchSuggestionManager.get_Suggestions() */
 HRESULT wapseco_search_suggestion_manager_get__suggestions(WAPSECO_SearchSuggestionManager *self, WFOCO_IObservableVector_WAPSECO_SearchSuggestion** value);
 
-/* Windows.ApplicationModel.Search.Core.SearchSuggestionManager.AddToHistory(queryText) */
 HRESULT wapseco_search_suggestion_manager_add_to_history(WAPSECO_SearchSuggestionManager *self, cwinrt_hstring queryText);
 
-/* Windows.ApplicationModel.Search.Core.SearchSuggestionManager.AddToHistory(queryText, language) */
 HRESULT wapseco_search_suggestion_manager_add_to_history_str_str(WAPSECO_SearchSuggestionManager *self, cwinrt_hstring queryText, cwinrt_hstring language);
 
-/* Windows.ApplicationModel.Search.Core.SearchSuggestionManager.ClearHistory() */
 HRESULT wapseco_search_suggestion_manager_clear_history(WAPSECO_SearchSuggestionManager *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapseco_search_suggestion_manager_on_suggestions_requested(WAPSECO_SearchSuggestionManager *self, cwinrt_event_fn fn, void *ctx);
@@ -140,45 +119,28 @@ void wapseco_search_suggestion_manager_off_suggestions_requested(WAPSECO_SearchS
 cwinrt_token wapseco_search_suggestion_manager_on_requesting_focus_on_keyboard_input(WAPSECO_SearchSuggestionManager *self, cwinrt_event_fn fn, void *ctx);
 void wapseco_search_suggestion_manager_off_requesting_focus_on_keyboard_input(WAPSECO_SearchSuggestionManager *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Search.Core.SearchSuggestion */
 HRESULT wapseco_search_suggestion_new(WAPSECO_SearchSuggestion **out);
 
-/* Windows.ApplicationModel.Search.Core.SearchSuggestion */
-/* Windows.ApplicationModel.Search.Core.SearchSuggestion.get_Kind() */
 HRESULT wapseco_search_suggestion_get__kind(WAPSECO_SearchSuggestion *self, WAPSECO_SearchSuggestionKind *value);
 
-/* Windows.ApplicationModel.Search.Core.SearchSuggestion.get_Text() */
 HRESULT wapseco_search_suggestion_get__text(WAPSECO_SearchSuggestion *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Search.Core.SearchSuggestion.get_Tag() */
 HRESULT wapseco_search_suggestion_get__tag(WAPSECO_SearchSuggestion *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Search.Core.SearchSuggestion.get_DetailText() */
 HRESULT wapseco_search_suggestion_get__detail_text(WAPSECO_SearchSuggestion *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Search.Core.SearchSuggestion.get_Image() */
 HRESULT wapseco_search_suggestion_get__image(WAPSECO_SearchSuggestion *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.Search.Core.SearchSuggestion.get_ImageAlternateText() */
 HRESULT wapseco_search_suggestion_get__image_alternate_text(WAPSECO_SearchSuggestion *self, cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.Search.Core.SearchSuggestionsRequestedEventArgs */
 HRESULT wapseco_search_suggestions_requested_event_args_new(WAPSECO_SearchSuggestionsRequestedEventArgs **out);
 
-/* Windows.ApplicationModel.Search.Core.SearchSuggestionsRequestedEventArgs */
-/* Windows.ApplicationModel.Search.Core.SearchSuggestionsRequestedEventArgs.get_QueryText() */
 HRESULT wapseco_search_suggestions_requested_event_args_get__query_text(WAPSECO_SearchSuggestionsRequestedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Search.Core.SearchSuggestionsRequestedEventArgs.get_Language() */
 HRESULT wapseco_search_suggestions_requested_event_args_get__language(WAPSECO_SearchSuggestionsRequestedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Search.Core.SearchSuggestionsRequestedEventArgs.get_LinguisticDetails() */
 HRESULT wapseco_search_suggestions_requested_event_args_get__linguistic_details(WAPSECO_SearchSuggestionsRequestedEventArgs *self, WAPSE_SearchQueryLinguisticDetails** value);
 
-/* Windows.ApplicationModel.Search.Core.SearchSuggestionsRequestedEventArgs.get_Request() */
 HRESULT wapseco_search_suggestions_requested_event_args_get__request(WAPSECO_SearchSuggestionsRequestedEventArgs *self, WAPSE_SearchSuggestionsRequest** value);
 
-/* Windows.ApplicationModel.Search.Core.ISearchSuggestionManager */
-/* Windows.ApplicationModel.Search.Core.ISearchSuggestion */
-/* Windows.ApplicationModel.Search.Core.ISearchSuggestionsRequestedEventArgs */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_SEARCH_CORE_H */

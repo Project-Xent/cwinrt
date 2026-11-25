@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStreamReference
 #define CWINRT_FWD_WSTST_IRandomAccessStreamReference
 typedef struct WSTST_IRandomAccessStreamReference WSTST_IRandomAccessStreamReference;
@@ -26,7 +25,6 @@ typedef struct WMEME_MediaEncodingProfile WMEME_MediaEncodingProfile;
 typedef struct WSECR_WebAccount WSECR_WebAccount;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPCH_RcsTransportConfiguration WAPCH_RcsTransportConfiguration;
 typedef struct WAPCH_RemoteParticipantComposingChangedEventArgs WAPCH_RemoteParticipantComposingChangedEventArgs;
 typedef struct WAPCH_IChatMessageManagerStatics_3 WAPCH_IChatMessageManagerStatics_3;
@@ -116,7 +114,6 @@ typedef struct WAPCH_IChatMessageAttachment WAPCH_IChatMessageAttachment;
 typedef struct WAPCH_IChatMessage_3 WAPCH_IChatMessage_3;
 typedef struct WAPCH_IChatMessage WAPCH_IChatMessage;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WAPCH_ChatSyncManager
 #define CWINRT_FWD_WF_IAsyncOperation_WAPCH_ChatSyncManager
 typedef struct WF_IAsyncOperation_WAPCH_ChatSyncManager WF_IAsyncOperation_WAPCH_ChatSyncManager;
@@ -414,7 +411,6 @@ typedef enum WAPCH_ChatTransportErrorCodeCategory {
 } WAPCH_ChatTransportErrorCodeCategory;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -627,355 +623,225 @@ static const IID CWINRT_IID_WAPCH_IChatMessage_3 CWINRT_MAYBE_UNUSED = { 0x74EB2
 static const IID CWINRT_IID_WAPCH_IChatMessage CWINRT_MAYBE_UNUSED = { 0x4B39052A, 0x1142, 0x5089, { 0x76, 0xDA, 0xF2, 0xDB, 0x3D, 0x17, 0xCD, 0x05 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.Chat.RcsTransportConfiguration */
 HRESULT wapch_rcs_transport_configuration_new(WAPCH_RcsTransportConfiguration **out);
 
-/* Windows.ApplicationModel.Chat.RcsTransportConfiguration */
-/* Windows.ApplicationModel.Chat.RcsTransportConfiguration.get_MaxAttachmentCount() */
 HRESULT wapch_rcs_transport_configuration_get__max_attachment_count(WAPCH_RcsTransportConfiguration *self, int32_t *value);
 
-/* Windows.ApplicationModel.Chat.RcsTransportConfiguration.get_MaxMessageSizeInKilobytes() */
 HRESULT wapch_rcs_transport_configuration_get__max_message_size_in_kilobytes(WAPCH_RcsTransportConfiguration *self, int32_t *value);
 
-/* Windows.ApplicationModel.Chat.RcsTransportConfiguration.get_MaxGroupMessageSizeInKilobytes() */
 HRESULT wapch_rcs_transport_configuration_get__max_group_message_size_in_kilobytes(WAPCH_RcsTransportConfiguration *self, int32_t *value);
 
-/* Windows.ApplicationModel.Chat.RcsTransportConfiguration.get_MaxRecipientCount() */
 HRESULT wapch_rcs_transport_configuration_get__max_recipient_count(WAPCH_RcsTransportConfiguration *self, int32_t *value);
 
-/* Windows.ApplicationModel.Chat.RcsTransportConfiguration.get_MaxFileSizeInKilobytes() */
 HRESULT wapch_rcs_transport_configuration_get__max_file_size_in_kilobytes(WAPCH_RcsTransportConfiguration *self, int32_t *value);
 
-/* Windows.ApplicationModel.Chat.RcsTransportConfiguration.get_WarningFileSizeInKilobytes() */
 HRESULT wapch_rcs_transport_configuration_get__warning_file_size_in_kilobytes(WAPCH_RcsTransportConfiguration *self, int32_t *value);
 
-/* activate Windows.ApplicationModel.Chat.RemoteParticipantComposingChangedEventArgs */
 HRESULT wapch_remote_participant_composing_changed_event_args_new(WAPCH_RemoteParticipantComposingChangedEventArgs **out);
 
-/* Windows.ApplicationModel.Chat.RemoteParticipantComposingChangedEventArgs */
-/* Windows.ApplicationModel.Chat.RemoteParticipantComposingChangedEventArgs.get_TransportId() */
 HRESULT wapch_remote_participant_composing_changed_event_args_get__transport_id(WAPCH_RemoteParticipantComposingChangedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.RemoteParticipantComposingChangedEventArgs.get_ParticipantAddress() */
 HRESULT wapch_remote_participant_composing_changed_event_args_get__participant_address(WAPCH_RemoteParticipantComposingChangedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.RemoteParticipantComposingChangedEventArgs.get_IsComposing() */
 HRESULT wapch_remote_participant_composing_changed_event_args_get__is_composing(WAPCH_RemoteParticipantComposingChangedEventArgs *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.IChatMessageManagerStatics3 */
-/* Windows.ApplicationModel.Chat.IChatMessageManagerStatics3.RequestSyncManagerAsync() */
 HRESULT wapch_chat_message_manager_statics_3_request_sync_manager_async(WAPCH_IChatMessageManagerStatics_3 *self, WF_IAsyncOperation_WAPCH_ChatSyncManager** out);
 
-/* Windows.ApplicationModel.Chat.IChatMessageManager2Statics */
-/* Windows.ApplicationModel.Chat.IChatMessageManager2Statics.RegisterTransportAsync() */
 HRESULT wapch_chat_message_manager2_statics_register_transport_async(WAPCH_IChatMessageManager2Statics *self, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Chat.IChatMessageManager2Statics.GetTransportAsync(transportId) */
 HRESULT wapch_chat_message_manager2_statics_get_transport_async(WAPCH_IChatMessageManager2Statics *self, cwinrt_hstring transportId, WF_IAsyncOperation_WAPCH_ChatMessageTransport** out);
 
-/* Windows.ApplicationModel.Chat.IChatMessageBlockingStatic */
-/* Windows.ApplicationModel.Chat.IChatMessageBlockingStatic.MarkMessageAsBlockedAsync(localChatMessageId, blocked) */
 HRESULT wapch_chat_message_blocking_static_mark_message_as_blocked_async(WAPCH_IChatMessageBlockingStatic *self, cwinrt_hstring localChatMessageId, BOOL blocked, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Chat.IChatMessageAttachmentFactory */
-/* Windows.ApplicationModel.Chat.IChatMessageAttachmentFactory.CreateChatMessageAttachment(mimeType, dataStreamReference) */
 HRESULT wapch_chat_message_attachment_factory_create_chat_message_attachment(WAPCH_IChatMessageAttachmentFactory *self, cwinrt_hstring mimeType, WSTST_IRandomAccessStreamReference* dataStreamReference, WAPCH_ChatMessageAttachment** out);
 
-/* Windows.ApplicationModel.Chat.IChatCapabilitiesManagerStatics2 */
-/* Windows.ApplicationModel.Chat.IChatCapabilitiesManagerStatics2.GetCachedCapabilitiesAsync(address, transportId) */
 HRESULT wapch_chat_capabilities_manager_statics_2_get_cached_capabilities_async(WAPCH_IChatCapabilitiesManagerStatics_2 *self, cwinrt_hstring address, cwinrt_hstring transportId, WF_IAsyncOperation_WAPCH_ChatCapabilities** out);
 
-/* Windows.ApplicationModel.Chat.IChatCapabilitiesManagerStatics2.GetCapabilitiesFromNetworkAsync(address, transportId) */
 HRESULT wapch_chat_capabilities_manager_statics_2_get_capabilities_from_network_async(WAPCH_IChatCapabilitiesManagerStatics_2 *self, cwinrt_hstring address, cwinrt_hstring transportId, WF_IAsyncOperation_WAPCH_ChatCapabilities** out);
 
-/* Windows.ApplicationModel.Chat.IChatCapabilitiesManagerStatics */
-/* Windows.ApplicationModel.Chat.IChatCapabilitiesManagerStatics.GetCachedCapabilitiesAsync(address) */
 HRESULT wapch_chat_capabilities_manager_statics_get_cached_capabilities_async(WAPCH_IChatCapabilitiesManagerStatics *self, cwinrt_hstring address, WF_IAsyncOperation_WAPCH_ChatCapabilities** out);
 
-/* Windows.ApplicationModel.Chat.IChatCapabilitiesManagerStatics.GetCapabilitiesFromNetworkAsync(address) */
 HRESULT wapch_chat_capabilities_manager_statics_get_capabilities_from_network_async(WAPCH_IChatCapabilitiesManagerStatics *self, cwinrt_hstring address, WF_IAsyncOperation_WAPCH_ChatCapabilities** out);
 
-/* activate Windows.ApplicationModel.Chat.RcsTransport */
 HRESULT wapch_rcs_transport_new(WAPCH_RcsTransport **out);
 
-/* Windows.ApplicationModel.Chat.RcsTransport */
-/* Windows.ApplicationModel.Chat.RcsTransport.get_ExtendedProperties() */
 HRESULT wapch_rcs_transport_get__extended_properties(WAPCH_RcsTransport *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* Windows.ApplicationModel.Chat.RcsTransport.get_IsActive() */
 HRESULT wapch_rcs_transport_get__is_active(WAPCH_RcsTransport *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.RcsTransport.get_TransportFriendlyName() */
 HRESULT wapch_rcs_transport_get__transport_friendly_name(WAPCH_RcsTransport *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.RcsTransport.get_TransportId() */
 HRESULT wapch_rcs_transport_get__transport_id(WAPCH_RcsTransport *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.RcsTransport.get_Configuration() */
 HRESULT wapch_rcs_transport_get__configuration(WAPCH_RcsTransport *self, WAPCH_RcsTransportConfiguration** value);
 
-/* Windows.ApplicationModel.Chat.RcsTransport.IsStoreAndForwardEnabled(serviceKind) */
 HRESULT wapch_rcs_transport_is_store_and_forward_enabled(WAPCH_RcsTransport *self, WAPCH_RcsServiceKind serviceKind, BOOL *out);
 
-/* Windows.ApplicationModel.Chat.RcsTransport.IsServiceKindSupported(serviceKind) */
 HRESULT wapch_rcs_transport_is_service_kind_supported(WAPCH_RcsTransport *self, WAPCH_RcsServiceKind serviceKind, BOOL *out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapch_rcs_transport_on_service_kind_supported_changed(WAPCH_RcsTransport *self, cwinrt_event_fn fn, void *ctx);
 void wapch_rcs_transport_off_service_kind_supported_changed(WAPCH_RcsTransport *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Chat.ChatSyncManager */
 HRESULT wapch_chat_sync_manager_new(WAPCH_ChatSyncManager **out);
 
-/* Windows.ApplicationModel.Chat.ChatSyncManager */
-/* Windows.ApplicationModel.Chat.ChatSyncManager.get_Configuration() */
 HRESULT wapch_chat_sync_manager_get__configuration(WAPCH_ChatSyncManager *self, WAPCH_ChatSyncConfiguration** value);
 
-/* Windows.ApplicationModel.Chat.ChatSyncManager.AssociateAccountAsync(webAccount) */
 HRESULT wapch_chat_sync_manager_associate_account_async(WAPCH_ChatSyncManager *self, WSECR_WebAccount* webAccount, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Chat.ChatSyncManager.UnassociateAccountAsync() */
 HRESULT wapch_chat_sync_manager_unassociate_account_async(WAPCH_ChatSyncManager *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Chat.ChatSyncManager.IsAccountAssociated(webAccount) */
 HRESULT wapch_chat_sync_manager_is_account_associated(WAPCH_ChatSyncManager *self, WSECR_WebAccount* webAccount, BOOL *out);
 
-/* Windows.ApplicationModel.Chat.ChatSyncManager.StartSync() */
 HRESULT wapch_chat_sync_manager_start_sync(WAPCH_ChatSyncManager *self);
 
-/* Windows.ApplicationModel.Chat.ChatSyncManager.SetConfigurationAsync(configuration) */
 HRESULT wapch_chat_sync_manager_set_configuration_async(WAPCH_ChatSyncManager *self, WAPCH_ChatSyncConfiguration* configuration, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Chat.ChatSyncConfiguration */
 HRESULT wapch_chat_sync_configuration_new(WAPCH_ChatSyncConfiguration **out);
 
-/* Windows.ApplicationModel.Chat.ChatSyncConfiguration */
-/* Windows.ApplicationModel.Chat.ChatSyncConfiguration.get_IsSyncEnabled() */
 HRESULT wapch_chat_sync_configuration_get__is_sync_enabled(WAPCH_ChatSyncConfiguration *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.ChatSyncConfiguration.put_IsSyncEnabled() */
 HRESULT wapch_chat_sync_configuration_put__is_sync_enabled(WAPCH_ChatSyncConfiguration *self, BOOL value);
 
-/* Windows.ApplicationModel.Chat.ChatSyncConfiguration.get_RestoreHistorySpan() */
 HRESULT wapch_chat_sync_configuration_get__restore_history_span(WAPCH_ChatSyncConfiguration *self, WAPCH_ChatRestoreHistorySpan *value);
 
-/* Windows.ApplicationModel.Chat.ChatSyncConfiguration.put_RestoreHistorySpan() */
 HRESULT wapch_chat_sync_configuration_put__restore_history_span(WAPCH_ChatSyncConfiguration *self, WAPCH_ChatRestoreHistorySpan value);
 
-/* activate Windows.ApplicationModel.Chat.ChatSearchReader */
 HRESULT wapch_chat_search_reader_new(WAPCH_ChatSearchReader **out);
 
-/* Windows.ApplicationModel.Chat.ChatSearchReader */
-/* Windows.ApplicationModel.Chat.ChatSearchReader.ReadBatchAsync() */
 HRESULT wapch_chat_search_reader_read_batch_async(WAPCH_ChatSearchReader *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPCH_IChatItem** out);
 
-/* Windows.ApplicationModel.Chat.ChatSearchReader.ReadBatchAsync(count) */
 HRESULT wapch_chat_search_reader_read_batch_async_i32_p(WAPCH_ChatSearchReader *self, int32_t count, WF_IAsyncOperation_WFOCO_IVectorView_WAPCH_IChatItem** out);
 
-/* activate Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo */
 HRESULT wapch_chat_recipient_delivery_info_new(WAPCH_ChatRecipientDeliveryInfo **out);
 
-/* Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo */
-/* Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo.get_TransportAddress() */
 HRESULT wapch_chat_recipient_delivery_info_get__transport_address(WAPCH_ChatRecipientDeliveryInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo.put_TransportAddress() */
 HRESULT wapch_chat_recipient_delivery_info_put__transport_address(WAPCH_ChatRecipientDeliveryInfo *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo.get_DeliveryTime() */
 HRESULT wapch_chat_recipient_delivery_info_get__delivery_time(WAPCH_ChatRecipientDeliveryInfo *self, WF_DateTime** value);
 
-/* Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo.put_DeliveryTime() */
 HRESULT wapch_chat_recipient_delivery_info_put__delivery_time(WAPCH_ChatRecipientDeliveryInfo *self, WF_DateTime* value);
 
-/* Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo.get_ReadTime() */
 HRESULT wapch_chat_recipient_delivery_info_get__read_time(WAPCH_ChatRecipientDeliveryInfo *self, WF_DateTime** value);
 
-/* Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo.put_ReadTime() */
 HRESULT wapch_chat_recipient_delivery_info_put__read_time(WAPCH_ChatRecipientDeliveryInfo *self, WF_DateTime* value);
 
-/* Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo.get_TransportErrorCodeCategory() */
 HRESULT wapch_chat_recipient_delivery_info_get__transport_error_code_category(WAPCH_ChatRecipientDeliveryInfo *self, WAPCH_ChatTransportErrorCodeCategory *value);
 
-/* Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo.get_TransportInterpretedErrorCode() */
 HRESULT wapch_chat_recipient_delivery_info_get__transport_interpreted_error_code(WAPCH_ChatRecipientDeliveryInfo *self, WAPCH_ChatTransportInterpretedErrorCode *value);
 
-/* Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo.get_TransportErrorCode() */
 HRESULT wapch_chat_recipient_delivery_info_get__transport_error_code(WAPCH_ChatRecipientDeliveryInfo *self, int32_t *value);
 
-/* Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo.get_IsErrorPermanent() */
 HRESULT wapch_chat_recipient_delivery_info_get__is_error_permanent(WAPCH_ChatRecipientDeliveryInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo.get_Status() */
 HRESULT wapch_chat_recipient_delivery_info_get__status(WAPCH_ChatRecipientDeliveryInfo *self, WAPCH_ChatMessageStatus *value);
 
-/* activate Windows.ApplicationModel.Chat.ChatQueryOptions */
 HRESULT wapch_chat_query_options_new(WAPCH_ChatQueryOptions **out);
 
-/* Windows.ApplicationModel.Chat.ChatQueryOptions */
-/* Windows.ApplicationModel.Chat.ChatQueryOptions.get_SearchString() */
 HRESULT wapch_chat_query_options_get__search_string(WAPCH_ChatQueryOptions *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.ChatQueryOptions.put_SearchString() */
 HRESULT wapch_chat_query_options_put__search_string(WAPCH_ChatQueryOptions *self, cwinrt_hstring value);
 
-/* activate Windows.ApplicationModel.Chat.ChatMessageValidationResult */
 HRESULT wapch_chat_message_validation_result_new(WAPCH_ChatMessageValidationResult **out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageValidationResult */
-/* Windows.ApplicationModel.Chat.ChatMessageValidationResult.get_MaxPartCount() */
 HRESULT wapch_chat_message_validation_result_get__max_part_count(WAPCH_ChatMessageValidationResult *self, uint32_t** value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageValidationResult.get_PartCount() */
 HRESULT wapch_chat_message_validation_result_get__part_count(WAPCH_ChatMessageValidationResult *self, uint32_t** value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageValidationResult.get_RemainingCharacterCountInPart() */
 HRESULT wapch_chat_message_validation_result_get__remaining_character_count_in_part(WAPCH_ChatMessageValidationResult *self, uint32_t** value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageValidationResult.get_Status() */
 HRESULT wapch_chat_message_validation_result_get__status(WAPCH_ChatMessageValidationResult *self, WAPCH_ChatMessageValidationStatus *value);
 
-/* activate Windows.ApplicationModel.Chat.ChatMessageTransportConfiguration */
 HRESULT wapch_chat_message_transport_configuration_new(WAPCH_ChatMessageTransportConfiguration **out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageTransportConfiguration */
-/* Windows.ApplicationModel.Chat.ChatMessageTransportConfiguration.get_MaxAttachmentCount() */
 HRESULT wapch_chat_message_transport_configuration_get__max_attachment_count(WAPCH_ChatMessageTransportConfiguration *self, int32_t *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageTransportConfiguration.get_MaxMessageSizeInKilobytes() */
 HRESULT wapch_chat_message_transport_configuration_get__max_message_size_in_kilobytes(WAPCH_ChatMessageTransportConfiguration *self, int32_t *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageTransportConfiguration.get_MaxRecipientCount() */
 HRESULT wapch_chat_message_transport_configuration_get__max_recipient_count(WAPCH_ChatMessageTransportConfiguration *self, int32_t *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageTransportConfiguration.get_SupportedVideoFormat() */
 HRESULT wapch_chat_message_transport_configuration_get__supported_video_format(WAPCH_ChatMessageTransportConfiguration *self, WMEME_MediaEncodingProfile** value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageTransportConfiguration.get_ExtendedProperties() */
 HRESULT wapch_chat_message_transport_configuration_get__extended_properties(WAPCH_ChatMessageTransportConfiguration *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* activate Windows.ApplicationModel.Chat.ChatMessageTransport */
 HRESULT wapch_chat_message_transport_new(WAPCH_ChatMessageTransport **out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageTransport */
-/* Windows.ApplicationModel.Chat.ChatMessageTransport.get_IsAppSetAsNotificationProvider() */
 HRESULT wapch_chat_message_transport_get__is_app_set_as_notification_provider(WAPCH_ChatMessageTransport *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageTransport.get_IsActive() */
 HRESULT wapch_chat_message_transport_get__is_active(WAPCH_ChatMessageTransport *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageTransport.get_TransportFriendlyName() */
 HRESULT wapch_chat_message_transport_get__transport_friendly_name(WAPCH_ChatMessageTransport *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageTransport.get_TransportId() */
 HRESULT wapch_chat_message_transport_get__transport_id(WAPCH_ChatMessageTransport *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageTransport.RequestSetAsNotificationProviderAsync() */
 HRESULT wapch_chat_message_transport_request_set_as_notification_provider_async(WAPCH_ChatMessageTransport *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageTransport.get_Configuration() */
 HRESULT wapch_chat_message_transport_get__configuration(WAPCH_ChatMessageTransport *self, WAPCH_ChatMessageTransportConfiguration** value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageTransport.get_TransportKind() */
 HRESULT wapch_chat_message_transport_get__transport_kind(WAPCH_ChatMessageTransport *self, WAPCH_ChatMessageTransportKind *value);
 
-/* activate Windows.ApplicationModel.Chat.ChatMessageStoreChangedEventArgs */
 HRESULT wapch_chat_message_store_changed_event_args_new(WAPCH_ChatMessageStoreChangedEventArgs **out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageStoreChangedEventArgs */
-/* Windows.ApplicationModel.Chat.ChatMessageStoreChangedEventArgs.get_Id() */
 HRESULT wapch_chat_message_store_changed_event_args_get__id(WAPCH_ChatMessageStoreChangedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageStoreChangedEventArgs.get_Kind() */
 HRESULT wapch_chat_message_store_changed_event_args_get__kind(WAPCH_ChatMessageStoreChangedEventArgs *self, WAPCH_ChatStoreChangedEventKind *value);
 
-/* activate Windows.ApplicationModel.Chat.ChatMessageStore */
 HRESULT wapch_chat_message_store_new(WAPCH_ChatMessageStore **out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageStore */
-/* Windows.ApplicationModel.Chat.ChatMessageStore.get_ChangeTracker() */
 HRESULT wapch_chat_message_store_get__change_tracker(WAPCH_ChatMessageStore *self, WAPCH_ChatMessageChangeTracker** value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageStore.DeleteMessageAsync(localMessageId) */
 HRESULT wapch_chat_message_store_delete_message_async(WAPCH_ChatMessageStore *self, cwinrt_hstring localMessageId, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageStore.DownloadMessageAsync(localChatMessageId) */
 HRESULT wapch_chat_message_store_download_message_async(WAPCH_ChatMessageStore *self, cwinrt_hstring localChatMessageId, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageStore.GetMessageAsync(localChatMessageId) */
 HRESULT wapch_chat_message_store_get_message_async(WAPCH_ChatMessageStore *self, cwinrt_hstring localChatMessageId, WF_IAsyncOperation_WAPCH_ChatMessage** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageStore.GetMessageReader() */
 HRESULT wapch_chat_message_store_get_message_reader(WAPCH_ChatMessageStore *self, WAPCH_ChatMessageReader** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageStore.GetMessageReader(recentTimeLimit) */
 HRESULT wapch_chat_message_store_get_message_reader_time_span_p(WAPCH_ChatMessageStore *self, WF_TimeSpan recentTimeLimit, WAPCH_ChatMessageReader** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageStore.MarkMessageReadAsync(localChatMessageId) */
 HRESULT wapch_chat_message_store_mark_message_read_async(WAPCH_ChatMessageStore *self, cwinrt_hstring localChatMessageId, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageStore.RetrySendMessageAsync(localChatMessageId) */
 HRESULT wapch_chat_message_store_retry_send_message_async(WAPCH_ChatMessageStore *self, cwinrt_hstring localChatMessageId, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageStore.SendMessageAsync(chatMessage) */
 HRESULT wapch_chat_message_store_send_message_async(WAPCH_ChatMessageStore *self, WAPCH_ChatMessage* chatMessage, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageStore.ValidateMessage(chatMessage) */
 HRESULT wapch_chat_message_store_validate_message(WAPCH_ChatMessageStore *self, WAPCH_ChatMessage* chatMessage, WAPCH_ChatMessageValidationResult** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageStore.ForwardMessageAsync(localChatMessageId, addresses) */
 HRESULT wapch_chat_message_store_forward_message_async(WAPCH_ChatMessageStore *self, cwinrt_hstring localChatMessageId, WFOCO_IIterable_HSTRING* addresses, WF_IAsyncOperation_WAPCH_ChatMessage** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageStore.GetConversationAsync(conversationId) */
 HRESULT wapch_chat_message_store_get_conversation_async(WAPCH_ChatMessageStore *self, cwinrt_hstring conversationId, WF_IAsyncOperation_WAPCH_ChatConversation** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageStore.GetConversationAsync(conversationId, transportIds) */
 HRESULT wapch_chat_message_store_get_conversation_async_str_p_p(WAPCH_ChatMessageStore *self, cwinrt_hstring conversationId, WFOCO_IIterable_HSTRING* transportIds, WF_IAsyncOperation_WAPCH_ChatConversation** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageStore.GetConversationFromThreadingInfoAsync(threadingInfo) */
 HRESULT wapch_chat_message_store_get_conversation_from_threading_info_async(WAPCH_ChatMessageStore *self, WAPCH_ChatConversationThreadingInfo* threadingInfo, WF_IAsyncOperation_WAPCH_ChatConversation** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageStore.GetConversationReader() */
 HRESULT wapch_chat_message_store_get_conversation_reader(WAPCH_ChatMessageStore *self, WAPCH_ChatConversationReader** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageStore.GetConversationReader(transportIds) */
 HRESULT wapch_chat_message_store_get_conversation_reader_p_p(WAPCH_ChatMessageStore *self, WFOCO_IIterable_HSTRING* transportIds, WAPCH_ChatConversationReader** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageStore.GetMessageByRemoteIdAsync(transportId, remoteId) */
 HRESULT wapch_chat_message_store_get_message_by_remote_id_async(WAPCH_ChatMessageStore *self, cwinrt_hstring transportId, cwinrt_hstring remoteId, WF_IAsyncOperation_WAPCH_ChatMessage** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageStore.GetUnseenCountAsync() */
 HRESULT wapch_chat_message_store_get_unseen_count_async(WAPCH_ChatMessageStore *self, WF_IAsyncOperation_int32_t** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageStore.GetUnseenCountAsync(transportIds) */
 HRESULT wapch_chat_message_store_get_unseen_count_async_p_p(WAPCH_ChatMessageStore *self, WFOCO_IIterable_HSTRING* transportIds, WF_IAsyncOperation_int32_t** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageStore.MarkAsSeenAsync() */
 HRESULT wapch_chat_message_store_mark_as_seen_async(WAPCH_ChatMessageStore *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageStore.MarkAsSeenAsync(transportIds) */
 HRESULT wapch_chat_message_store_mark_as_seen_async_p_p(WAPCH_ChatMessageStore *self, WFOCO_IIterable_HSTRING* transportIds, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageStore.GetSearchReader() */
 HRESULT wapch_chat_message_store_get_search_reader(WAPCH_ChatMessageStore *self, WAPCH_ChatQueryOptions* value, WAPCH_ChatSearchReader** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageStore.SaveMessageAsync(chatMessage) */
 HRESULT wapch_chat_message_store_save_message_async(WAPCH_ChatMessageStore *self, WAPCH_ChatMessage* chatMessage, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageStore.TryCancelDownloadMessageAsync(localChatMessageId) */
 HRESULT wapch_chat_message_store_try_cancel_download_message_async(WAPCH_ChatMessageStore *self, cwinrt_hstring localChatMessageId, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageStore.TryCancelSendMessageAsync(localChatMessageId) */
 HRESULT wapch_chat_message_store_try_cancel_send_message_async(WAPCH_ChatMessageStore *self, cwinrt_hstring localChatMessageId, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageStore.GetMessageBySyncIdAsync(syncId) */
 HRESULT wapch_chat_message_store_get_message_by_sync_id_async(WAPCH_ChatMessageStore *self, cwinrt_hstring syncId, WF_IAsyncOperation_WAPCH_ChatMessage** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapch_chat_message_store_on_message_changed(WAPCH_ChatMessageStore *self, cwinrt_event_fn fn, void *ctx);
@@ -984,805 +850,495 @@ void wapch_chat_message_store_off_message_changed(WAPCH_ChatMessageStore *self, 
 cwinrt_token wapch_chat_message_store_on_store_changed(WAPCH_ChatMessageStore *self, cwinrt_event_fn fn, void *ctx);
 void wapch_chat_message_store_off_store_changed(WAPCH_ChatMessageStore *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Chat.ChatMessageReader */
 HRESULT wapch_chat_message_reader_new(WAPCH_ChatMessageReader **out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageReader */
-/* Windows.ApplicationModel.Chat.ChatMessageReader.ReadBatchAsync() */
 HRESULT wapch_chat_message_reader_read_batch_async(WAPCH_ChatMessageReader *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPCH_ChatMessage** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageReader.ReadBatchAsync(count) */
 HRESULT wapch_chat_message_reader_read_batch_async_i32_p(WAPCH_ChatMessageReader *self, int32_t count, WF_IAsyncOperation_WFOCO_IVectorView_WAPCH_ChatMessage** out);
 
-/* activate Windows.ApplicationModel.Chat.ChatMessageNotificationTriggerDetails */
 HRESULT wapch_chat_message_notification_trigger_details_new(WAPCH_ChatMessageNotificationTriggerDetails **out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageNotificationTriggerDetails */
-/* Windows.ApplicationModel.Chat.ChatMessageNotificationTriggerDetails.get_ChatMessage() */
 HRESULT wapch_chat_message_notification_trigger_details_get__chat_message(WAPCH_ChatMessageNotificationTriggerDetails *self, WAPCH_ChatMessage** value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageNotificationTriggerDetails.get_ShouldDisplayToast() */
 HRESULT wapch_chat_message_notification_trigger_details_get__should_display_toast(WAPCH_ChatMessageNotificationTriggerDetails *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageNotificationTriggerDetails.get_ShouldUpdateDetailText() */
 HRESULT wapch_chat_message_notification_trigger_details_get__should_update_detail_text(WAPCH_ChatMessageNotificationTriggerDetails *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageNotificationTriggerDetails.get_ShouldUpdateBadge() */
 HRESULT wapch_chat_message_notification_trigger_details_get__should_update_badge(WAPCH_ChatMessageNotificationTriggerDetails *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageNotificationTriggerDetails.get_ShouldUpdateActionCenter() */
 HRESULT wapch_chat_message_notification_trigger_details_get__should_update_action_center(WAPCH_ChatMessageNotificationTriggerDetails *self, BOOL *value);
 
-/* activate Windows.ApplicationModel.Chat.ChatMessageManager */
 HRESULT wapch_chat_message_manager_new(WAPCH_ChatMessageManager **out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageManager */
-/* Windows.ApplicationModel.Chat.ChatMessageManager.RequestSyncManagerAsync() */
 HRESULT wapch_chat_message_manager_request_sync_manager_async(WF_IAsyncOperation_WAPCH_ChatSyncManager** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageManager.RegisterTransportAsync() */
 HRESULT wapch_chat_message_manager_register_transport_async(WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageManager.GetTransportAsync(transportId) */
 HRESULT wapch_chat_message_manager_get_transport_async(cwinrt_hstring transportId, WF_IAsyncOperation_WAPCH_ChatMessageTransport** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageManager.GetTransportsAsync() */
 HRESULT wapch_chat_message_manager_get_transports_async(WF_IAsyncOperation_WFOCO_IVectorView_WAPCH_ChatMessageTransport** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageManager.RequestStoreAsync() */
 HRESULT wapch_chat_message_manager_request_store_async(WF_IAsyncOperation_WAPCH_ChatMessageStore** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageManager.ShowComposeSmsMessageAsync(message) */
 HRESULT wapch_chat_message_manager_show_compose_sms_message_async(WAPCH_ChatMessage* message, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageManager.ShowSmsSettings() */
 HRESULT wapch_chat_message_manager_show_sms_settings(void);
 
-/* activate Windows.ApplicationModel.Chat.ChatMessageChangedEventArgs */
 HRESULT wapch_chat_message_changed_event_args_new(WAPCH_ChatMessageChangedEventArgs **out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageChangedEventArgs */
-/* Windows.ApplicationModel.Chat.ChatMessageChangedEventArgs.GetDeferral() */
 HRESULT wapch_chat_message_changed_event_args_get_deferral(WAPCH_ChatMessageChangedEventArgs *self, WAPCH_ChatMessageChangedDeferral** out);
 
-/* activate Windows.ApplicationModel.Chat.ChatMessageChangedDeferral */
 HRESULT wapch_chat_message_changed_deferral_new(WAPCH_ChatMessageChangedDeferral **out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageChangedDeferral */
-/* Windows.ApplicationModel.Chat.ChatMessageChangedDeferral.Complete() */
 HRESULT wapch_chat_message_changed_deferral_complete(WAPCH_ChatMessageChangedDeferral *self);
 
-/* activate Windows.ApplicationModel.Chat.ChatMessageChangeTracker */
 HRESULT wapch_chat_message_change_tracker_new(WAPCH_ChatMessageChangeTracker **out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageChangeTracker */
-/* Windows.ApplicationModel.Chat.ChatMessageChangeTracker.Enable() */
 HRESULT wapch_chat_message_change_tracker_enable(WAPCH_ChatMessageChangeTracker *self);
 
-/* Windows.ApplicationModel.Chat.ChatMessageChangeTracker.GetChangeReader() */
 HRESULT wapch_chat_message_change_tracker_get_change_reader(WAPCH_ChatMessageChangeTracker *self, WAPCH_ChatMessageChangeReader** out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageChangeTracker.Reset() */
 HRESULT wapch_chat_message_change_tracker_reset(WAPCH_ChatMessageChangeTracker *self);
 
-/* activate Windows.ApplicationModel.Chat.ChatMessageChangeReader */
 HRESULT wapch_chat_message_change_reader_new(WAPCH_ChatMessageChangeReader **out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageChangeReader */
-/* Windows.ApplicationModel.Chat.ChatMessageChangeReader.AcceptChanges() */
 HRESULT wapch_chat_message_change_reader_accept_changes(WAPCH_ChatMessageChangeReader *self);
 
-/* Windows.ApplicationModel.Chat.ChatMessageChangeReader.AcceptChangesThrough(lastChangeToAcknowledge) */
 HRESULT wapch_chat_message_change_reader_accept_changes_through(WAPCH_ChatMessageChangeReader *self, WAPCH_ChatMessageChange* lastChangeToAcknowledge);
 
-/* Windows.ApplicationModel.Chat.ChatMessageChangeReader.ReadBatchAsync() */
 HRESULT wapch_chat_message_change_reader_read_batch_async(WAPCH_ChatMessageChangeReader *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPCH_ChatMessageChange** out);
 
-/* activate Windows.ApplicationModel.Chat.ChatMessageChange */
 HRESULT wapch_chat_message_change_new(WAPCH_ChatMessageChange **out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageChange */
-/* Windows.ApplicationModel.Chat.ChatMessageChange.get_ChangeType() */
 HRESULT wapch_chat_message_change_get__change_type(WAPCH_ChatMessageChange *self, WAPCH_ChatMessageChangeType *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageChange.get_Message() */
 HRESULT wapch_chat_message_change_get__message(WAPCH_ChatMessageChange *self, WAPCH_ChatMessage** value);
 
-/* activate Windows.ApplicationModel.Chat.ChatMessageBlocking */
 HRESULT wapch_chat_message_blocking_new(WAPCH_ChatMessageBlocking **out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageBlocking */
-/* Windows.ApplicationModel.Chat.ChatMessageBlocking.MarkMessageAsBlockedAsync(localChatMessageId, blocked) */
 HRESULT wapch_chat_message_blocking_mark_message_as_blocked_async(cwinrt_hstring localChatMessageId, BOOL blocked, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Chat.ChatMessageAttachment */
 HRESULT wapch_chat_message_attachment_new(WAPCH_ChatMessageAttachment **out);
 
-/* Windows.ApplicationModel.Chat.ChatMessageAttachment */
-/* Windows.ApplicationModel.Chat.ChatMessageAttachment.get_DataStreamReference() */
 HRESULT wapch_chat_message_attachment_get__data_stream_reference(WAPCH_ChatMessageAttachment *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageAttachment.put_DataStreamReference() */
 HRESULT wapch_chat_message_attachment_put__data_stream_reference(WAPCH_ChatMessageAttachment *self, WSTST_IRandomAccessStreamReference* value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageAttachment.get_GroupId() */
 HRESULT wapch_chat_message_attachment_get__group_id(WAPCH_ChatMessageAttachment *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageAttachment.put_GroupId() */
 HRESULT wapch_chat_message_attachment_put__group_id(WAPCH_ChatMessageAttachment *self, uint32_t value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageAttachment.get_MimeType() */
 HRESULT wapch_chat_message_attachment_get__mime_type(WAPCH_ChatMessageAttachment *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageAttachment.put_MimeType() */
 HRESULT wapch_chat_message_attachment_put__mime_type(WAPCH_ChatMessageAttachment *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageAttachment.get_Text() */
 HRESULT wapch_chat_message_attachment_get__text(WAPCH_ChatMessageAttachment *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageAttachment.put_Text() */
 HRESULT wapch_chat_message_attachment_put__text(WAPCH_ChatMessageAttachment *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageAttachment.get_Thumbnail() */
 HRESULT wapch_chat_message_attachment_get__thumbnail(WAPCH_ChatMessageAttachment *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageAttachment.put_Thumbnail() */
 HRESULT wapch_chat_message_attachment_put__thumbnail(WAPCH_ChatMessageAttachment *self, WSTST_IRandomAccessStreamReference* value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageAttachment.get_TransferProgress() */
 HRESULT wapch_chat_message_attachment_get__transfer_progress(WAPCH_ChatMessageAttachment *self, double *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageAttachment.put_TransferProgress() */
 HRESULT wapch_chat_message_attachment_put__transfer_progress(WAPCH_ChatMessageAttachment *self, double value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageAttachment.get_OriginalFileName() */
 HRESULT wapch_chat_message_attachment_get__original_file_name(WAPCH_ChatMessageAttachment *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessageAttachment.put_OriginalFileName() */
 HRESULT wapch_chat_message_attachment_put__original_file_name(WAPCH_ChatMessageAttachment *self, cwinrt_hstring value);
 
-/* activate Windows.ApplicationModel.Chat.ChatMessage */
 HRESULT wapch_chat_message_new(WAPCH_ChatMessage **out);
 
-/* Windows.ApplicationModel.Chat.ChatMessage */
-/* Windows.ApplicationModel.Chat.ChatMessage.get_Attachments() */
 HRESULT wapch_chat_message_get__attachments(WAPCH_ChatMessage *self, WFOCO_IVector_WAPCH_ChatMessageAttachment** value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.get_Body() */
 HRESULT wapch_chat_message_get__body(WAPCH_ChatMessage *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.put_Body() */
 HRESULT wapch_chat_message_put__body(WAPCH_ChatMessage *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.get_From() */
 HRESULT wapch_chat_message_get__from(WAPCH_ChatMessage *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.get_Id() */
 HRESULT wapch_chat_message_get__id(WAPCH_ChatMessage *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.get_IsForwardingDisabled() */
 HRESULT wapch_chat_message_get__is_forwarding_disabled(WAPCH_ChatMessage *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.get_IsIncoming() */
 HRESULT wapch_chat_message_get__is_incoming(WAPCH_ChatMessage *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.get_IsRead() */
 HRESULT wapch_chat_message_get__is_read(WAPCH_ChatMessage *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.get_LocalTimestamp() */
 HRESULT wapch_chat_message_get__local_timestamp(WAPCH_ChatMessage *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.get_NetworkTimestamp() */
 HRESULT wapch_chat_message_get__network_timestamp(WAPCH_ChatMessage *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.get_Recipients() */
 HRESULT wapch_chat_message_get__recipients(WAPCH_ChatMessage *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.get_RecipientSendStatuses() */
 HRESULT wapch_chat_message_get__recipient_send_statuses(WAPCH_ChatMessage *self, WFOCO_IMapView_HSTRING_WAPCH_ChatMessageStatus** value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.get_Status() */
 HRESULT wapch_chat_message_get__status(WAPCH_ChatMessage *self, WAPCH_ChatMessageStatus *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.get_Subject() */
 HRESULT wapch_chat_message_get__subject(WAPCH_ChatMessage *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.get_TransportFriendlyName() */
 HRESULT wapch_chat_message_get__transport_friendly_name(WAPCH_ChatMessage *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.get_TransportId() */
 HRESULT wapch_chat_message_get__transport_id(WAPCH_ChatMessage *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.put_TransportId() */
 HRESULT wapch_chat_message_put__transport_id(WAPCH_ChatMessage *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.get_EstimatedDownloadSize() */
 HRESULT wapch_chat_message_get__estimated_download_size(WAPCH_ChatMessage *self, uint64_t *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.put_EstimatedDownloadSize() */
 HRESULT wapch_chat_message_put__estimated_download_size(WAPCH_ChatMessage *self, uint64_t value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.put_From() */
 HRESULT wapch_chat_message_put__from(WAPCH_ChatMessage *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.get_IsAutoReply() */
 HRESULT wapch_chat_message_get__is_auto_reply(WAPCH_ChatMessage *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.put_IsAutoReply() */
 HRESULT wapch_chat_message_put__is_auto_reply(WAPCH_ChatMessage *self, BOOL value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.put_IsForwardingDisabled() */
 HRESULT wapch_chat_message_put__is_forwarding_disabled(WAPCH_ChatMessage *self, BOOL value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.get_IsReplyDisabled() */
 HRESULT wapch_chat_message_get__is_reply_disabled(WAPCH_ChatMessage *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.put_IsIncoming() */
 HRESULT wapch_chat_message_put__is_incoming(WAPCH_ChatMessage *self, BOOL value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.put_IsRead() */
 HRESULT wapch_chat_message_put__is_read(WAPCH_ChatMessage *self, BOOL value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.get_IsSeen() */
 HRESULT wapch_chat_message_get__is_seen(WAPCH_ChatMessage *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.put_IsSeen() */
 HRESULT wapch_chat_message_put__is_seen(WAPCH_ChatMessage *self, BOOL value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.get_IsSimMessage() */
 HRESULT wapch_chat_message_get__is_sim_message(WAPCH_ChatMessage *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.put_LocalTimestamp() */
 HRESULT wapch_chat_message_put__local_timestamp(WAPCH_ChatMessage *self, WF_DateTime value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.get_MessageKind() */
 HRESULT wapch_chat_message_get__message_kind(WAPCH_ChatMessage *self, WAPCH_ChatMessageKind *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.put_MessageKind() */
 HRESULT wapch_chat_message_put__message_kind(WAPCH_ChatMessage *self, WAPCH_ChatMessageKind value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.get_MessageOperatorKind() */
 HRESULT wapch_chat_message_get__message_operator_kind(WAPCH_ChatMessage *self, WAPCH_ChatMessageOperatorKind *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.put_MessageOperatorKind() */
 HRESULT wapch_chat_message_put__message_operator_kind(WAPCH_ChatMessage *self, WAPCH_ChatMessageOperatorKind value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.put_NetworkTimestamp() */
 HRESULT wapch_chat_message_put__network_timestamp(WAPCH_ChatMessage *self, WF_DateTime value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.get_IsReceivedDuringQuietHours() */
 HRESULT wapch_chat_message_get__is_received_during_quiet_hours(WAPCH_ChatMessage *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.put_IsReceivedDuringQuietHours() */
 HRESULT wapch_chat_message_put__is_received_during_quiet_hours(WAPCH_ChatMessage *self, BOOL value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.put_RemoteId() */
 HRESULT wapch_chat_message_put__remote_id(WAPCH_ChatMessage *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.put_Status() */
 HRESULT wapch_chat_message_put__status(WAPCH_ChatMessage *self, WAPCH_ChatMessageStatus value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.put_Subject() */
 HRESULT wapch_chat_message_put__subject(WAPCH_ChatMessage *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.get_ShouldSuppressNotification() */
 HRESULT wapch_chat_message_get__should_suppress_notification(WAPCH_ChatMessage *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.put_ShouldSuppressNotification() */
 HRESULT wapch_chat_message_put__should_suppress_notification(WAPCH_ChatMessage *self, BOOL value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.get_ThreadingInfo() */
 HRESULT wapch_chat_message_get__threading_info(WAPCH_ChatMessage *self, WAPCH_ChatConversationThreadingInfo** value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.put_ThreadingInfo() */
 HRESULT wapch_chat_message_put__threading_info(WAPCH_ChatMessage *self, WAPCH_ChatConversationThreadingInfo* value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.get_RecipientsDeliveryInfos() */
 HRESULT wapch_chat_message_get__recipients_delivery_infos(WAPCH_ChatMessage *self, WFOCO_IVector_WAPCH_ChatRecipientDeliveryInfo** value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.get_RemoteId() */
 HRESULT wapch_chat_message_get__remote_id(WAPCH_ChatMessage *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.get_SyncId() */
 HRESULT wapch_chat_message_get__sync_id(WAPCH_ChatMessage *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.put_SyncId() */
 HRESULT wapch_chat_message_put__sync_id(WAPCH_ChatMessage *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Chat.ChatMessage.get_ItemKind() */
 HRESULT wapch_chat_message_get__item_kind(WAPCH_ChatMessage *self, WAPCH_ChatItemKind *value);
 
-/* activate Windows.ApplicationModel.Chat.ChatConversationThreadingInfo */
 HRESULT wapch_chat_conversation_threading_info_new(WAPCH_ChatConversationThreadingInfo **out);
 
-/* Windows.ApplicationModel.Chat.ChatConversationThreadingInfo */
-/* Windows.ApplicationModel.Chat.ChatConversationThreadingInfo.get_ContactId() */
 HRESULT wapch_chat_conversation_threading_info_get__contact_id(WAPCH_ChatConversationThreadingInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.ChatConversationThreadingInfo.put_ContactId() */
 HRESULT wapch_chat_conversation_threading_info_put__contact_id(WAPCH_ChatConversationThreadingInfo *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Chat.ChatConversationThreadingInfo.get_Custom() */
 HRESULT wapch_chat_conversation_threading_info_get__custom(WAPCH_ChatConversationThreadingInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.ChatConversationThreadingInfo.put_Custom() */
 HRESULT wapch_chat_conversation_threading_info_put__custom(WAPCH_ChatConversationThreadingInfo *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Chat.ChatConversationThreadingInfo.get_ConversationId() */
 HRESULT wapch_chat_conversation_threading_info_get__conversation_id(WAPCH_ChatConversationThreadingInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.ChatConversationThreadingInfo.put_ConversationId() */
 HRESULT wapch_chat_conversation_threading_info_put__conversation_id(WAPCH_ChatConversationThreadingInfo *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Chat.ChatConversationThreadingInfo.get_Participants() */
 HRESULT wapch_chat_conversation_threading_info_get__participants(WAPCH_ChatConversationThreadingInfo *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.ApplicationModel.Chat.ChatConversationThreadingInfo.get_Kind() */
 HRESULT wapch_chat_conversation_threading_info_get__kind(WAPCH_ChatConversationThreadingInfo *self, WAPCH_ChatConversationThreadingKind *value);
 
-/* Windows.ApplicationModel.Chat.ChatConversationThreadingInfo.put_Kind() */
 HRESULT wapch_chat_conversation_threading_info_put__kind(WAPCH_ChatConversationThreadingInfo *self, WAPCH_ChatConversationThreadingKind value);
 
-/* activate Windows.ApplicationModel.Chat.ChatConversationReader */
 HRESULT wapch_chat_conversation_reader_new(WAPCH_ChatConversationReader **out);
 
-/* Windows.ApplicationModel.Chat.ChatConversationReader */
-/* Windows.ApplicationModel.Chat.ChatConversationReader.ReadBatchAsync() */
 HRESULT wapch_chat_conversation_reader_read_batch_async(WAPCH_ChatConversationReader *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPCH_ChatConversation** out);
 
-/* Windows.ApplicationModel.Chat.ChatConversationReader.ReadBatchAsync(count) */
 HRESULT wapch_chat_conversation_reader_read_batch_async_i32_p(WAPCH_ChatConversationReader *self, int32_t count, WF_IAsyncOperation_WFOCO_IVectorView_WAPCH_ChatConversation** out);
 
-/* activate Windows.ApplicationModel.Chat.ChatConversation */
 HRESULT wapch_chat_conversation_new(WAPCH_ChatConversation **out);
 
-/* Windows.ApplicationModel.Chat.ChatConversation */
-/* Windows.ApplicationModel.Chat.ChatConversation.get_HasUnreadMessages() */
 HRESULT wapch_chat_conversation_get__has_unread_messages(WAPCH_ChatConversation *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.ChatConversation.get_Id() */
 HRESULT wapch_chat_conversation_get__id(WAPCH_ChatConversation *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.ChatConversation.get_Subject() */
 HRESULT wapch_chat_conversation_get__subject(WAPCH_ChatConversation *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.ChatConversation.put_Subject() */
 HRESULT wapch_chat_conversation_put__subject(WAPCH_ChatConversation *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Chat.ChatConversation.get_IsConversationMuted() */
 HRESULT wapch_chat_conversation_get__is_conversation_muted(WAPCH_ChatConversation *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.ChatConversation.put_IsConversationMuted() */
 HRESULT wapch_chat_conversation_put__is_conversation_muted(WAPCH_ChatConversation *self, BOOL value);
 
-/* Windows.ApplicationModel.Chat.ChatConversation.get_MostRecentMessageId() */
 HRESULT wapch_chat_conversation_get__most_recent_message_id(WAPCH_ChatConversation *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.ChatConversation.get_Participants() */
 HRESULT wapch_chat_conversation_get__participants(WAPCH_ChatConversation *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.ApplicationModel.Chat.ChatConversation.get_ThreadingInfo() */
 HRESULT wapch_chat_conversation_get__threading_info(WAPCH_ChatConversation *self, WAPCH_ChatConversationThreadingInfo** value);
 
-/* Windows.ApplicationModel.Chat.ChatConversation.DeleteAsync() */
 HRESULT wapch_chat_conversation_delete_async(WAPCH_ChatConversation *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Chat.ChatConversation.GetMessageReader() */
 HRESULT wapch_chat_conversation_get_message_reader(WAPCH_ChatConversation *self, WAPCH_ChatMessageReader** out);
 
-/* Windows.ApplicationModel.Chat.ChatConversation.MarkMessagesAsReadAsync() */
 HRESULT wapch_chat_conversation_mark_messages_as_read_async(WAPCH_ChatConversation *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Chat.ChatConversation.MarkMessagesAsReadAsync() */
 HRESULT wapch_chat_conversation_mark_messages_as_read_async_date_time_p(WAPCH_ChatConversation *self, WF_DateTime value, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Chat.ChatConversation.SaveAsync() */
 HRESULT wapch_chat_conversation_save_async(WAPCH_ChatConversation *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Chat.ChatConversation.NotifyLocalParticipantComposing(transportId, participantAddress, isComposing) */
 HRESULT wapch_chat_conversation_notify_local_participant_composing(WAPCH_ChatConversation *self, cwinrt_hstring transportId, cwinrt_hstring participantAddress, BOOL isComposing);
 
-/* Windows.ApplicationModel.Chat.ChatConversation.NotifyRemoteParticipantComposing(transportId, participantAddress, isComposing) */
 HRESULT wapch_chat_conversation_notify_remote_participant_composing(WAPCH_ChatConversation *self, cwinrt_hstring transportId, cwinrt_hstring participantAddress, BOOL isComposing);
 
-/* Windows.ApplicationModel.Chat.ChatConversation.get_CanModifyParticipants() */
 HRESULT wapch_chat_conversation_get__can_modify_participants(WAPCH_ChatConversation *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.ChatConversation.put_CanModifyParticipants() */
 HRESULT wapch_chat_conversation_put__can_modify_participants(WAPCH_ChatConversation *self, BOOL value);
 
-/* Windows.ApplicationModel.Chat.ChatConversation.get_ItemKind() */
 HRESULT wapch_chat_conversation_get__item_kind(WAPCH_ChatConversation *self, WAPCH_ChatItemKind *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapch_chat_conversation_on_remote_participant_composing_changed(WAPCH_ChatConversation *self, cwinrt_event_fn fn, void *ctx);
 void wapch_chat_conversation_off_remote_participant_composing_changed(WAPCH_ChatConversation *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Chat.ChatCapabilitiesManager */
 HRESULT wapch_chat_capabilities_manager_new(WAPCH_ChatCapabilitiesManager **out);
 
-/* Windows.ApplicationModel.Chat.ChatCapabilitiesManager */
-/* Windows.ApplicationModel.Chat.ChatCapabilitiesManager.GetCachedCapabilitiesAsync(address, transportId) */
 HRESULT wapch_chat_capabilities_manager_get_cached_capabilities_async_str_str_p(cwinrt_hstring address, cwinrt_hstring transportId, WF_IAsyncOperation_WAPCH_ChatCapabilities** out);
 
-/* Windows.ApplicationModel.Chat.ChatCapabilitiesManager.GetCapabilitiesFromNetworkAsync(address, transportId) */
 HRESULT wapch_chat_capabilities_manager_get_capabilities_from_network_async_str_str_p(cwinrt_hstring address, cwinrt_hstring transportId, WF_IAsyncOperation_WAPCH_ChatCapabilities** out);
 
-/* Windows.ApplicationModel.Chat.ChatCapabilitiesManager.GetCachedCapabilitiesAsync(address) */
 HRESULT wapch_chat_capabilities_manager_get_cached_capabilities_async(cwinrt_hstring address, WF_IAsyncOperation_WAPCH_ChatCapabilities** out);
 
-/* Windows.ApplicationModel.Chat.ChatCapabilitiesManager.GetCapabilitiesFromNetworkAsync(address) */
 HRESULT wapch_chat_capabilities_manager_get_capabilities_from_network_async(cwinrt_hstring address, WF_IAsyncOperation_WAPCH_ChatCapabilities** out);
 
-/* activate Windows.ApplicationModel.Chat.ChatCapabilities */
 HRESULT wapch_chat_capabilities_new(WAPCH_ChatCapabilities **out);
 
-/* Windows.ApplicationModel.Chat.ChatCapabilities */
-/* Windows.ApplicationModel.Chat.ChatCapabilities.get_IsOnline() */
 HRESULT wapch_chat_capabilities_get__is_online(WAPCH_ChatCapabilities *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.ChatCapabilities.get_IsChatCapable() */
 HRESULT wapch_chat_capabilities_get__is_chat_capable(WAPCH_ChatCapabilities *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.ChatCapabilities.get_IsFileTransferCapable() */
 HRESULT wapch_chat_capabilities_get__is_file_transfer_capable(WAPCH_ChatCapabilities *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.ChatCapabilities.get_IsGeoLocationPushCapable() */
 HRESULT wapch_chat_capabilities_get__is_geo_location_push_capable(WAPCH_ChatCapabilities *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.ChatCapabilities.get_IsIntegratedMessagingCapable() */
 HRESULT wapch_chat_capabilities_get__is_integrated_messaging_capable(WAPCH_ChatCapabilities *self, BOOL *value);
 
-/* activate Windows.ApplicationModel.Chat.RcsServiceKindSupportedChangedEventArgs */
 HRESULT wapch_rcs_service_kind_supported_changed_event_args_new(WAPCH_RcsServiceKindSupportedChangedEventArgs **out);
 
-/* Windows.ApplicationModel.Chat.RcsServiceKindSupportedChangedEventArgs */
-/* Windows.ApplicationModel.Chat.RcsServiceKindSupportedChangedEventArgs.get_ServiceKind() */
 HRESULT wapch_rcs_service_kind_supported_changed_event_args_get__service_kind(WAPCH_RcsServiceKindSupportedChangedEventArgs *self, WAPCH_RcsServiceKind *value);
 
-/* activate Windows.ApplicationModel.Chat.RcsManager */
 HRESULT wapch_rcs_manager_new(WAPCH_RcsManager **out);
 
-/* Windows.ApplicationModel.Chat.RcsManager */
-/* Windows.ApplicationModel.Chat.RcsManager.GetEndUserMessageManager() */
 HRESULT wapch_rcs_manager_get_end_user_message_manager(WAPCH_RcsEndUserMessageManager** out);
 
-/* Windows.ApplicationModel.Chat.RcsManager.GetTransportsAsync() */
 HRESULT wapch_rcs_manager_get_transports_async(WF_IAsyncOperation_WFOCO_IVectorView_WAPCH_RcsTransport** out);
 
-/* Windows.ApplicationModel.Chat.RcsManager.GetTransportAsync(transportId) */
 HRESULT wapch_rcs_manager_get_transport_async(cwinrt_hstring transportId, WF_IAsyncOperation_WAPCH_RcsTransport** out);
 
-/* Windows.ApplicationModel.Chat.RcsManager.LeaveConversationAsync(conversation) */
 HRESULT wapch_rcs_manager_leave_conversation_async(WAPCH_ChatConversation* conversation, WF_IAsyncAction** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapch_rcs_manager_on_transport_list_changed(WAPCH_RcsManager *self, cwinrt_event_fn fn, void *ctx);
 void wapch_rcs_manager_off_transport_list_changed(WAPCH_RcsManager *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Chat.RcsEndUserMessageManager */
 HRESULT wapch_rcs_end_user_message_manager_new(WAPCH_RcsEndUserMessageManager **out);
 
-/* Windows.ApplicationModel.Chat.RcsEndUserMessageManager */
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapch_rcs_end_user_message_manager_on_message_available_changed(WAPCH_RcsEndUserMessageManager *self, cwinrt_event_fn fn, void *ctx);
 void wapch_rcs_end_user_message_manager_off_message_available_changed(WAPCH_RcsEndUserMessageManager *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Chat.RcsEndUserMessageAvailableTriggerDetails */
 HRESULT wapch_rcs_end_user_message_available_trigger_details_new(WAPCH_RcsEndUserMessageAvailableTriggerDetails **out);
 
-/* Windows.ApplicationModel.Chat.RcsEndUserMessageAvailableTriggerDetails */
-/* Windows.ApplicationModel.Chat.RcsEndUserMessageAvailableTriggerDetails.get_Title() */
 HRESULT wapch_rcs_end_user_message_available_trigger_details_get__title(WAPCH_RcsEndUserMessageAvailableTriggerDetails *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.RcsEndUserMessageAvailableTriggerDetails.get_Text() */
 HRESULT wapch_rcs_end_user_message_available_trigger_details_get__text(WAPCH_RcsEndUserMessageAvailableTriggerDetails *self, cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.Chat.RcsEndUserMessageAvailableEventArgs */
 HRESULT wapch_rcs_end_user_message_available_event_args_new(WAPCH_RcsEndUserMessageAvailableEventArgs **out);
 
-/* Windows.ApplicationModel.Chat.RcsEndUserMessageAvailableEventArgs */
-/* Windows.ApplicationModel.Chat.RcsEndUserMessageAvailableEventArgs.get_IsMessageAvailable() */
 HRESULT wapch_rcs_end_user_message_available_event_args_get__is_message_available(WAPCH_RcsEndUserMessageAvailableEventArgs *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.RcsEndUserMessageAvailableEventArgs.get_Message() */
 HRESULT wapch_rcs_end_user_message_available_event_args_get__message(WAPCH_RcsEndUserMessageAvailableEventArgs *self, WAPCH_RcsEndUserMessage** value);
 
-/* activate Windows.ApplicationModel.Chat.RcsEndUserMessageAction */
 HRESULT wapch_rcs_end_user_message_action_new(WAPCH_RcsEndUserMessageAction **out);
 
-/* Windows.ApplicationModel.Chat.RcsEndUserMessageAction */
-/* Windows.ApplicationModel.Chat.RcsEndUserMessageAction.get_Label() */
 HRESULT wapch_rcs_end_user_message_action_get__label(WAPCH_RcsEndUserMessageAction *self, cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.Chat.RcsEndUserMessage */
 HRESULT wapch_rcs_end_user_message_new(WAPCH_RcsEndUserMessage **out);
 
-/* Windows.ApplicationModel.Chat.RcsEndUserMessage */
-/* Windows.ApplicationModel.Chat.RcsEndUserMessage.get_TransportId() */
 HRESULT wapch_rcs_end_user_message_get__transport_id(WAPCH_RcsEndUserMessage *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.RcsEndUserMessage.get_Title() */
 HRESULT wapch_rcs_end_user_message_get__title(WAPCH_RcsEndUserMessage *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.RcsEndUserMessage.get_Text() */
 HRESULT wapch_rcs_end_user_message_get__text(WAPCH_RcsEndUserMessage *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.RcsEndUserMessage.get_IsPinRequired() */
 HRESULT wapch_rcs_end_user_message_get__is_pin_required(WAPCH_RcsEndUserMessage *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.RcsEndUserMessage.get_Actions() */
 HRESULT wapch_rcs_end_user_message_get__actions(WAPCH_RcsEndUserMessage *self, WFOCO_IVectorView_WAPCH_RcsEndUserMessageAction** value);
 
-/* Windows.ApplicationModel.Chat.RcsEndUserMessage.SendResponseAsync(action) */
 HRESULT wapch_rcs_end_user_message_send_response_async(WAPCH_RcsEndUserMessage *self, WAPCH_RcsEndUserMessageAction* action, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Chat.RcsEndUserMessage.SendResponseWithPinAsync(action, pin) */
 HRESULT wapch_rcs_end_user_message_send_response_with_pin_async(WAPCH_RcsEndUserMessage *self, WAPCH_RcsEndUserMessageAction* action, cwinrt_hstring pin, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Chat.IRcsManagerStatics2 */
-/* Windows.ApplicationModel.Chat.IRcsManagerStatics */
-/* Windows.ApplicationModel.Chat.IRcsManagerStatics.GetEndUserMessageManager() */
 HRESULT wapch_rcs_manager_statics_get_end_user_message_manager(WAPCH_IRcsManagerStatics *self, WAPCH_RcsEndUserMessageManager** out);
 
-/* Windows.ApplicationModel.Chat.IRcsManagerStatics.GetTransportsAsync() */
 HRESULT wapch_rcs_manager_statics_get_transports_async(WAPCH_IRcsManagerStatics *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPCH_RcsTransport** out);
 
-/* Windows.ApplicationModel.Chat.IRcsManagerStatics.GetTransportAsync(transportId) */
 HRESULT wapch_rcs_manager_statics_get_transport_async(WAPCH_IRcsManagerStatics *self, cwinrt_hstring transportId, WF_IAsyncOperation_WAPCH_RcsTransport** out);
 
-/* Windows.ApplicationModel.Chat.IRcsManagerStatics.LeaveConversationAsync(conversation) */
 HRESULT wapch_rcs_manager_statics_leave_conversation_async(WAPCH_IRcsManagerStatics *self, WAPCH_ChatConversation* conversation, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Chat.IRcsTransportConfiguration */
-/* Windows.ApplicationModel.Chat.IRemoteParticipantComposingChangedEventArgs */
-/* Windows.ApplicationModel.Chat.IChatMessageManagerStatic */
-/* Windows.ApplicationModel.Chat.IChatMessageManagerStatic.GetTransportsAsync() */
 HRESULT wapch_chat_message_manager_static_get_transports_async(WAPCH_IChatMessageManagerStatic *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPCH_ChatMessageTransport** out);
 
-/* Windows.ApplicationModel.Chat.IChatMessageManagerStatic.RequestStoreAsync() */
 HRESULT wapch_chat_message_manager_static_request_store_async(WAPCH_IChatMessageManagerStatic *self, WF_IAsyncOperation_WAPCH_ChatMessageStore** out);
 
-/* Windows.ApplicationModel.Chat.IChatMessageManagerStatic.ShowComposeSmsMessageAsync(message) */
 HRESULT wapch_chat_message_manager_static_show_compose_sms_message_async(WAPCH_IChatMessageManagerStatic *self, WAPCH_ChatMessage* message, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Chat.IChatMessageManagerStatic.ShowSmsSettings() */
 HRESULT wapch_chat_message_manager_static_show_sms_settings(WAPCH_IChatMessageManagerStatic *self);
 
-/* Windows.ApplicationModel.Chat.IRcsTransport */
-/* Windows.ApplicationModel.Chat.IChatSyncManager */
-/* Windows.ApplicationModel.Chat.IChatSyncConfiguration */
-/* Windows.ApplicationModel.Chat.IChatSearchReader */
-/* Windows.ApplicationModel.Chat.IChatRecipientDeliveryInfo */
-/* Windows.ApplicationModel.Chat.IChatQueryOptions */
-/* Windows.ApplicationModel.Chat.IChatMessageValidationResult */
-/* Windows.ApplicationModel.Chat.IChatMessageTransportConfiguration */
-/* Windows.ApplicationModel.Chat.IChatMessageTransport2 */
-/* Windows.ApplicationModel.Chat.IChatMessageTransport2.get_Configuration() */
 HRESULT wapch_chat_message_transport_2_get__configuration(WAPCH_IChatMessageTransport_2 *self, WAPCH_ChatMessageTransportConfiguration** value);
 
-/* Windows.ApplicationModel.Chat.IChatMessageTransport2.get_TransportKind() */
 HRESULT wapch_chat_message_transport_2_get__transport_kind(WAPCH_IChatMessageTransport_2 *self, WAPCH_ChatMessageTransportKind *value);
 
-/* Windows.ApplicationModel.Chat.IChatMessageStoreChangedEventArgs */
-/* Windows.ApplicationModel.Chat.IChatMessageStore2 */
-/* Windows.ApplicationModel.Chat.IChatMessageStore2.ForwardMessageAsync(localChatMessageId, addresses) */
 HRESULT wapch_chat_message_store_2_forward_message_async(WAPCH_IChatMessageStore_2 *self, cwinrt_hstring localChatMessageId, WFOCO_IIterable_HSTRING* addresses, WF_IAsyncOperation_WAPCH_ChatMessage** out);
 
-/* Windows.ApplicationModel.Chat.IChatMessageStore2.GetConversationAsync(conversationId) */
 HRESULT wapch_chat_message_store_2_get_conversation_async(WAPCH_IChatMessageStore_2 *self, cwinrt_hstring conversationId, WF_IAsyncOperation_WAPCH_ChatConversation** out);
 
-/* Windows.ApplicationModel.Chat.IChatMessageStore2.GetConversationAsync(conversationId, transportIds) */
 HRESULT wapch_chat_message_store_2_get_conversation_async_str_p_p(WAPCH_IChatMessageStore_2 *self, cwinrt_hstring conversationId, WFOCO_IIterable_HSTRING* transportIds, WF_IAsyncOperation_WAPCH_ChatConversation** out);
 
-/* Windows.ApplicationModel.Chat.IChatMessageStore2.GetConversationFromThreadingInfoAsync(threadingInfo) */
 HRESULT wapch_chat_message_store_2_get_conversation_from_threading_info_async(WAPCH_IChatMessageStore_2 *self, WAPCH_ChatConversationThreadingInfo* threadingInfo, WF_IAsyncOperation_WAPCH_ChatConversation** out);
 
-/* Windows.ApplicationModel.Chat.IChatMessageStore2.GetConversationReader() */
 HRESULT wapch_chat_message_store_2_get_conversation_reader(WAPCH_IChatMessageStore_2 *self, WAPCH_ChatConversationReader** out);
 
-/* Windows.ApplicationModel.Chat.IChatMessageStore2.GetConversationReader(transportIds) */
 HRESULT wapch_chat_message_store_2_get_conversation_reader_p_p(WAPCH_IChatMessageStore_2 *self, WFOCO_IIterable_HSTRING* transportIds, WAPCH_ChatConversationReader** out);
 
-/* Windows.ApplicationModel.Chat.IChatMessageStore2.GetMessageByRemoteIdAsync(transportId, remoteId) */
 HRESULT wapch_chat_message_store_2_get_message_by_remote_id_async(WAPCH_IChatMessageStore_2 *self, cwinrt_hstring transportId, cwinrt_hstring remoteId, WF_IAsyncOperation_WAPCH_ChatMessage** out);
 
-/* Windows.ApplicationModel.Chat.IChatMessageStore2.GetUnseenCountAsync() */
 HRESULT wapch_chat_message_store_2_get_unseen_count_async(WAPCH_IChatMessageStore_2 *self, WF_IAsyncOperation_int32_t** out);
 
-/* Windows.ApplicationModel.Chat.IChatMessageStore2.GetUnseenCountAsync(transportIds) */
 HRESULT wapch_chat_message_store_2_get_unseen_count_async_p_p(WAPCH_IChatMessageStore_2 *self, WFOCO_IIterable_HSTRING* transportIds, WF_IAsyncOperation_int32_t** out);
 
-/* Windows.ApplicationModel.Chat.IChatMessageStore2.MarkAsSeenAsync() */
 HRESULT wapch_chat_message_store_2_mark_as_seen_async(WAPCH_IChatMessageStore_2 *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Chat.IChatMessageStore2.MarkAsSeenAsync(transportIds) */
 HRESULT wapch_chat_message_store_2_mark_as_seen_async_p_p(WAPCH_IChatMessageStore_2 *self, WFOCO_IIterable_HSTRING* transportIds, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Chat.IChatMessageStore2.GetSearchReader() */
 HRESULT wapch_chat_message_store_2_get_search_reader(WAPCH_IChatMessageStore_2 *self, WAPCH_ChatQueryOptions* value, WAPCH_ChatSearchReader** out);
 
-/* Windows.ApplicationModel.Chat.IChatMessageStore2.SaveMessageAsync(chatMessage) */
 HRESULT wapch_chat_message_store_2_save_message_async(WAPCH_IChatMessageStore_2 *self, WAPCH_ChatMessage* chatMessage, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Chat.IChatMessageStore2.TryCancelDownloadMessageAsync(localChatMessageId) */
 HRESULT wapch_chat_message_store_2_try_cancel_download_message_async(WAPCH_IChatMessageStore_2 *self, cwinrt_hstring localChatMessageId, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Chat.IChatMessageStore2.TryCancelSendMessageAsync(localChatMessageId) */
 HRESULT wapch_chat_message_store_2_try_cancel_send_message_async(WAPCH_IChatMessageStore_2 *self, cwinrt_hstring localChatMessageId, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Chat.IChatMessageStore3 */
-/* Windows.ApplicationModel.Chat.IChatMessageStore3.GetMessageBySyncIdAsync(syncId) */
 HRESULT wapch_chat_message_store_3_get_message_by_sync_id_async(WAPCH_IChatMessageStore_3 *self, cwinrt_hstring syncId, WF_IAsyncOperation_WAPCH_ChatMessage** out);
 
-/* Windows.ApplicationModel.Chat.IChatMessageReader */
-/* Windows.ApplicationModel.Chat.IChatMessageReader2 */
-/* Windows.ApplicationModel.Chat.IChatMessageReader2.ReadBatchAsync(count) */
 HRESULT wapch_chat_message_reader_2_read_batch_async(WAPCH_IChatMessageReader_2 *self, int32_t count, WF_IAsyncOperation_WFOCO_IVectorView_WAPCH_ChatMessage** out);
 
-/* Windows.ApplicationModel.Chat.IChatMessageNotificationTriggerDetails2 */
-/* Windows.ApplicationModel.Chat.IChatMessageNotificationTriggerDetails2.get_ShouldDisplayToast() */
 HRESULT wapch_chat_message_notification_trigger_details_2_get__should_display_toast(WAPCH_IChatMessageNotificationTriggerDetails_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.IChatMessageNotificationTriggerDetails2.get_ShouldUpdateDetailText() */
 HRESULT wapch_chat_message_notification_trigger_details_2_get__should_update_detail_text(WAPCH_IChatMessageNotificationTriggerDetails_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.IChatMessageNotificationTriggerDetails2.get_ShouldUpdateBadge() */
 HRESULT wapch_chat_message_notification_trigger_details_2_get__should_update_badge(WAPCH_IChatMessageNotificationTriggerDetails_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.IChatMessageNotificationTriggerDetails2.get_ShouldUpdateActionCenter() */
 HRESULT wapch_chat_message_notification_trigger_details_2_get__should_update_action_center(WAPCH_IChatMessageNotificationTriggerDetails_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.IChatMessageChangedEventArgs */
-/* Windows.ApplicationModel.Chat.IChatMessageChangedDeferral */
-/* Windows.ApplicationModel.Chat.IChatMessageChangeTracker */
-/* Windows.ApplicationModel.Chat.IChatMessageChangeReader */
-/* Windows.ApplicationModel.Chat.IChatMessageChange */
-/* Windows.ApplicationModel.Chat.IChatMessageAttachment2 */
-/* Windows.ApplicationModel.Chat.IChatMessageAttachment2.get_Thumbnail() */
 HRESULT wapch_chat_message_attachment_2_get__thumbnail(WAPCH_IChatMessageAttachment_2 *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.Chat.IChatMessageAttachment2.put_Thumbnail() */
 HRESULT wapch_chat_message_attachment_2_put__thumbnail(WAPCH_IChatMessageAttachment_2 *self, WSTST_IRandomAccessStreamReference* value);
 
-/* Windows.ApplicationModel.Chat.IChatMessageAttachment2.get_TransferProgress() */
 HRESULT wapch_chat_message_attachment_2_get__transfer_progress(WAPCH_IChatMessageAttachment_2 *self, double *value);
 
-/* Windows.ApplicationModel.Chat.IChatMessageAttachment2.put_TransferProgress() */
 HRESULT wapch_chat_message_attachment_2_put__transfer_progress(WAPCH_IChatMessageAttachment_2 *self, double value);
 
-/* Windows.ApplicationModel.Chat.IChatMessageAttachment2.get_OriginalFileName() */
 HRESULT wapch_chat_message_attachment_2_get__original_file_name(WAPCH_IChatMessageAttachment_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.IChatMessageAttachment2.put_OriginalFileName() */
 HRESULT wapch_chat_message_attachment_2_put__original_file_name(WAPCH_IChatMessageAttachment_2 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage2 */
-/* Windows.ApplicationModel.Chat.IChatMessage2.get_EstimatedDownloadSize() */
 HRESULT wapch_chat_message_2_get__estimated_download_size(WAPCH_IChatMessage_2 *self, uint64_t *value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage2.put_EstimatedDownloadSize() */
 HRESULT wapch_chat_message_2_put__estimated_download_size(WAPCH_IChatMessage_2 *self, uint64_t value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage2.put_From() */
 HRESULT wapch_chat_message_2_put__from(WAPCH_IChatMessage_2 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage2.get_IsAutoReply() */
 HRESULT wapch_chat_message_2_get__is_auto_reply(WAPCH_IChatMessage_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage2.put_IsAutoReply() */
 HRESULT wapch_chat_message_2_put__is_auto_reply(WAPCH_IChatMessage_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage2.put_IsForwardingDisabled() */
 HRESULT wapch_chat_message_2_put__is_forwarding_disabled(WAPCH_IChatMessage_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage2.get_IsReplyDisabled() */
 HRESULT wapch_chat_message_2_get__is_reply_disabled(WAPCH_IChatMessage_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage2.put_IsIncoming() */
 HRESULT wapch_chat_message_2_put__is_incoming(WAPCH_IChatMessage_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage2.put_IsRead() */
 HRESULT wapch_chat_message_2_put__is_read(WAPCH_IChatMessage_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage2.get_IsSeen() */
 HRESULT wapch_chat_message_2_get__is_seen(WAPCH_IChatMessage_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage2.put_IsSeen() */
 HRESULT wapch_chat_message_2_put__is_seen(WAPCH_IChatMessage_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage2.get_IsSimMessage() */
 HRESULT wapch_chat_message_2_get__is_sim_message(WAPCH_IChatMessage_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage2.put_LocalTimestamp() */
 HRESULT wapch_chat_message_2_put__local_timestamp(WAPCH_IChatMessage_2 *self, WF_DateTime value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage2.get_MessageKind() */
 HRESULT wapch_chat_message_2_get__message_kind(WAPCH_IChatMessage_2 *self, WAPCH_ChatMessageKind *value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage2.put_MessageKind() */
 HRESULT wapch_chat_message_2_put__message_kind(WAPCH_IChatMessage_2 *self, WAPCH_ChatMessageKind value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage2.get_MessageOperatorKind() */
 HRESULT wapch_chat_message_2_get__message_operator_kind(WAPCH_IChatMessage_2 *self, WAPCH_ChatMessageOperatorKind *value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage2.put_MessageOperatorKind() */
 HRESULT wapch_chat_message_2_put__message_operator_kind(WAPCH_IChatMessage_2 *self, WAPCH_ChatMessageOperatorKind value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage2.put_NetworkTimestamp() */
 HRESULT wapch_chat_message_2_put__network_timestamp(WAPCH_IChatMessage_2 *self, WF_DateTime value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage2.get_IsReceivedDuringQuietHours() */
 HRESULT wapch_chat_message_2_get__is_received_during_quiet_hours(WAPCH_IChatMessage_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage2.put_IsReceivedDuringQuietHours() */
 HRESULT wapch_chat_message_2_put__is_received_during_quiet_hours(WAPCH_IChatMessage_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage2.put_RemoteId() */
 HRESULT wapch_chat_message_2_put__remote_id(WAPCH_IChatMessage_2 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage2.put_Status() */
 HRESULT wapch_chat_message_2_put__status(WAPCH_IChatMessage_2 *self, WAPCH_ChatMessageStatus value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage2.put_Subject() */
 HRESULT wapch_chat_message_2_put__subject(WAPCH_IChatMessage_2 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage2.get_ShouldSuppressNotification() */
 HRESULT wapch_chat_message_2_get__should_suppress_notification(WAPCH_IChatMessage_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage2.put_ShouldSuppressNotification() */
 HRESULT wapch_chat_message_2_put__should_suppress_notification(WAPCH_IChatMessage_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage2.get_ThreadingInfo() */
 HRESULT wapch_chat_message_2_get__threading_info(WAPCH_IChatMessage_2 *self, WAPCH_ChatConversationThreadingInfo** value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage2.put_ThreadingInfo() */
 HRESULT wapch_chat_message_2_put__threading_info(WAPCH_IChatMessage_2 *self, WAPCH_ChatConversationThreadingInfo* value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage2.get_RecipientsDeliveryInfos() */
 HRESULT wapch_chat_message_2_get__recipients_delivery_infos(WAPCH_IChatMessage_2 *self, WFOCO_IVector_WAPCH_ChatRecipientDeliveryInfo** value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage4 */
-/* Windows.ApplicationModel.Chat.IChatMessage4.get_SyncId() */
 HRESULT wapch_chat_message_4_get__sync_id(WAPCH_IChatMessage_4 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage4.put_SyncId() */
 HRESULT wapch_chat_message_4_put__sync_id(WAPCH_IChatMessage_4 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Chat.IChatConversationThreadingInfo */
-/* Windows.ApplicationModel.Chat.IChatConversationReader */
-/* Windows.ApplicationModel.Chat.IChatConversation */
-/* Windows.ApplicationModel.Chat.IChatConversation2 */
-/* Windows.ApplicationModel.Chat.IChatConversation2.get_CanModifyParticipants() */
 HRESULT wapch_chat_conversation_2_get__can_modify_participants(WAPCH_IChatConversation_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Chat.IChatConversation2.put_CanModifyParticipants() */
 HRESULT wapch_chat_conversation_2_put__can_modify_participants(WAPCH_IChatConversation_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Chat.IChatItem */
-/* Windows.ApplicationModel.Chat.IChatItem.get_ItemKind() */
 HRESULT wapch_chat_item_get__item_kind(WAPCH_IChatItem *self, WAPCH_ChatItemKind *value);
 
-/* Windows.ApplicationModel.Chat.IChatCapabilities */
-/* Windows.ApplicationModel.Chat.IRcsServiceKindSupportedChangedEventArgs */
-/* Windows.ApplicationModel.Chat.IRcsEndUserMessageManager */
-/* Windows.ApplicationModel.Chat.IRcsEndUserMessageAvailableTriggerDetails */
-/* Windows.ApplicationModel.Chat.IRcsEndUserMessageAvailableEventArgs */
-/* Windows.ApplicationModel.Chat.IRcsEndUserMessageAction */
-/* Windows.ApplicationModel.Chat.IRcsEndUserMessage */
-/* Windows.ApplicationModel.Chat.IChatMessageTransport */
-/* Windows.ApplicationModel.Chat.IChatMessageStore */
-/* Windows.ApplicationModel.Chat.IChatMessageNotificationTriggerDetails */
-/* Windows.ApplicationModel.Chat.IChatMessageAttachment */
-/* Windows.ApplicationModel.Chat.IChatMessage3 */
-/* Windows.ApplicationModel.Chat.IChatMessage3.get_RemoteId() */
 HRESULT wapch_chat_message_3_get__remote_id(WAPCH_IChatMessage_3 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Chat.IChatMessage */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_CHAT_H */

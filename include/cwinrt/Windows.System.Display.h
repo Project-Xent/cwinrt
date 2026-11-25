@@ -12,11 +12,9 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WSYDI_DisplayRequest WSYDI_DisplayRequest;
 typedef struct WSYDI_IDisplayRequest WSYDI_IDisplayRequest;
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -25,17 +23,10 @@ typedef struct WSYDI_IDisplayRequest WSYDI_IDisplayRequest;
 static const IID CWINRT_IID_WSYDI_IDisplayRequest CWINRT_MAYBE_UNUSED = { 0xE5732044, 0xF49F, 0x4B60, { 0x8D, 0xD4, 0x5E, 0x7E, 0x3A, 0x63, 0x2A, 0xC0 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.System.Display.DisplayRequest */
 HRESULT wsydi_display_request_new(WSYDI_DisplayRequest **out);
 
-/* Windows.System.Display.DisplayRequest */
-/* Windows.System.Display.DisplayRequest.RequestActive() */
 HRESULT wsydi_display_request_request_active(WSYDI_DisplayRequest *self);
 
-/* Windows.System.Display.DisplayRequest.RequestRelease() */
 HRESULT wsydi_display_request_request_release(WSYDI_DisplayRequest *self);
 
-/* Windows.System.Display.IDisplayRequest */
 #endif /* CWINRT_WINDOWS_SYSTEM_DISPLAY_H */

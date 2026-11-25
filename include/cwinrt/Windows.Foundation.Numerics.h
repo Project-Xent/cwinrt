@@ -12,8 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
-
 #ifndef CWINRT_FWD_WFN_Vector_3
 #define CWINRT_FWD_WFN_Vector_3
 typedef struct WFN_Vector_3 WFN_Vector_3;
@@ -132,7 +130,5 @@ struct WFN_Vector_4 {
     float W;
 };
 #endif
-
-/* Methods */
 
 #endif /* CWINRT_WINDOWS_FOUNDATION_NUMERICS_H */

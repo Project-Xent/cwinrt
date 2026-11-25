@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WSYTH_IThreadPoolStatics WSYTH_IThreadPoolStatics;
 typedef struct WSYTH_IThreadPoolTimerStatics WSYTH_IThreadPoolTimerStatics;
 typedef struct WSYTH_ThreadPool WSYTH_ThreadPool;
@@ -22,7 +21,6 @@ typedef struct WSYTH_TimerElapsedHandler WSYTH_TimerElapsedHandler;
 typedef struct WSYTH_WorkItemHandler WSYTH_WorkItemHandler;
 typedef struct WSYTH_IThreadPoolTimer WSYTH_IThreadPoolTimer;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncAction
 #define CWINRT_FWD_WF_IAsyncAction
 typedef struct WF_IAsyncAction WF_IAsyncAction;
@@ -49,7 +47,6 @@ typedef enum WSYTH_WorkItemOptions {
 } WSYTH_WorkItemOptions;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -78,80 +75,48 @@ static const IID CWINRT_IID_WSYTH_WorkItemHandler CWINRT_MAYBE_UNUSED = { 0x1D1A
 static const IID CWINRT_IID_WSYTH_IThreadPoolTimer CWINRT_MAYBE_UNUSED = { 0x594EBE78, 0x55EA, 0x4A88, { 0xA5, 0x0D, 0x34, 0x02, 0xAE, 0x1F, 0x9C, 0xF2 } };
 #endif
 
-/* Methods */
-
-/* Windows.System.Threading.IThreadPoolStatics */
-/* Windows.System.Threading.IThreadPoolStatics.RunAsync(handler) */
 HRESULT wsyth_thread_pool_statics_run_async(WSYTH_IThreadPoolStatics *self, WSYTH_WorkItemHandler* handler, WF_IAsyncAction** out);
 
-/* Windows.System.Threading.IThreadPoolStatics.RunAsync(handler, priority) */
 HRESULT wsyth_thread_pool_statics_run_async_p_work_item_priority_p(WSYTH_IThreadPoolStatics *self, WSYTH_WorkItemHandler* handler, WSYTH_WorkItemPriority priority, WF_IAsyncAction** out);
 
-/* Windows.System.Threading.IThreadPoolStatics.RunAsync(handler, priority, options) */
 HRESULT wsyth_thread_pool_statics_run_async_p_work_item_priority_work_item_options_p(WSYTH_IThreadPoolStatics *self, WSYTH_WorkItemHandler* handler, WSYTH_WorkItemPriority priority, WSYTH_WorkItemOptions options, WF_IAsyncAction** out);
 
-/* Windows.System.Threading.IThreadPoolTimerStatics */
-/* Windows.System.Threading.IThreadPoolTimerStatics.CreatePeriodicTimer(handler, period) */
 HRESULT wsyth_thread_pool_timer_statics_create_periodic_timer(WSYTH_IThreadPoolTimerStatics *self, WSYTH_TimerElapsedHandler* handler, WF_TimeSpan period, WSYTH_ThreadPoolTimer** out);
 
-/* Windows.System.Threading.IThreadPoolTimerStatics.CreateTimer(handler, delay) */
 HRESULT wsyth_thread_pool_timer_statics_create_timer(WSYTH_IThreadPoolTimerStatics *self, WSYTH_TimerElapsedHandler* handler, WF_TimeSpan delay, WSYTH_ThreadPoolTimer** out);
 
-/* Windows.System.Threading.IThreadPoolTimerStatics.CreatePeriodicTimer(handler, period, destroyed) */
 HRESULT wsyth_thread_pool_timer_statics_create_periodic_timer_p_time_span_p_p(WSYTH_IThreadPoolTimerStatics *self, WSYTH_TimerElapsedHandler* handler, WF_TimeSpan period, WSYTH_TimerDestroyedHandler* destroyed, WSYTH_ThreadPoolTimer** out);
 
-/* Windows.System.Threading.IThreadPoolTimerStatics.CreateTimer(handler, delay, destroyed) */
 HRESULT wsyth_thread_pool_timer_statics_create_timer_p_time_span_p_p(WSYTH_IThreadPoolTimerStatics *self, WSYTH_TimerElapsedHandler* handler, WF_TimeSpan delay, WSYTH_TimerDestroyedHandler* destroyed, WSYTH_ThreadPoolTimer** out);
 
-/* activate Windows.System.Threading.ThreadPool */
 HRESULT wsyth_thread_pool_new(WSYTH_ThreadPool **out);
 
-/* Windows.System.Threading.ThreadPool */
-/* Windows.System.Threading.ThreadPool.RunAsync(handler) */
 HRESULT wsyth_thread_pool_run_async(WSYTH_WorkItemHandler* handler, WF_IAsyncAction** out);
 
-/* Windows.System.Threading.ThreadPool.RunAsync(handler, priority) */
 HRESULT wsyth_thread_pool_run_async_p_work_item_priority_p(WSYTH_WorkItemHandler* handler, WSYTH_WorkItemPriority priority, WF_IAsyncAction** out);
 
-/* Windows.System.Threading.ThreadPool.RunAsync(handler, priority, options) */
 HRESULT wsyth_thread_pool_run_async_p_work_item_priority_work_item_options_p(WSYTH_WorkItemHandler* handler, WSYTH_WorkItemPriority priority, WSYTH_WorkItemOptions options, WF_IAsyncAction** out);
 
-/* activate Windows.System.Threading.ThreadPoolTimer */
 HRESULT wsyth_thread_pool_timer_new(WSYTH_ThreadPoolTimer **out);
 
-/* Windows.System.Threading.ThreadPoolTimer */
-/* Windows.System.Threading.ThreadPoolTimer.get_Period() */
 HRESULT wsyth_thread_pool_timer_get__period(WSYTH_ThreadPoolTimer *self, WF_TimeSpan *value);
 
-/* Windows.System.Threading.ThreadPoolTimer.get_Delay() */
 HRESULT wsyth_thread_pool_timer_get__delay(WSYTH_ThreadPoolTimer *self, WF_TimeSpan *value);
 
-/* Windows.System.Threading.ThreadPoolTimer.Cancel() */
 HRESULT wsyth_thread_pool_timer_cancel(WSYTH_ThreadPoolTimer *self);
 
-/* Windows.System.Threading.ThreadPoolTimer.CreatePeriodicTimer(handler, period) */
 HRESULT wsyth_thread_pool_timer_create_periodic_timer(WSYTH_TimerElapsedHandler* handler, WF_TimeSpan period, WSYTH_ThreadPoolTimer** out);
 
-/* Windows.System.Threading.ThreadPoolTimer.CreateTimer(handler, delay) */
 HRESULT wsyth_thread_pool_timer_create_timer(WSYTH_TimerElapsedHandler* handler, WF_TimeSpan delay, WSYTH_ThreadPoolTimer** out);
 
-/* Windows.System.Threading.ThreadPoolTimer.CreatePeriodicTimer(handler, period, destroyed) */
 HRESULT wsyth_thread_pool_timer_create_periodic_timer_p_time_span_p_p(WSYTH_TimerElapsedHandler* handler, WF_TimeSpan period, WSYTH_TimerDestroyedHandler* destroyed, WSYTH_ThreadPoolTimer** out);
 
-/* Windows.System.Threading.ThreadPoolTimer.CreateTimer(handler, delay, destroyed) */
 HRESULT wsyth_thread_pool_timer_create_timer_p_time_span_p_p(WSYTH_TimerElapsedHandler* handler, WF_TimeSpan delay, WSYTH_TimerDestroyedHandler* destroyed, WSYTH_ThreadPoolTimer** out);
 
-/* Windows.System.Threading.TimerDestroyedHandler */
-/* Windows.System.Threading.TimerDestroyedHandler.Invoke(timer) */
 HRESULT wsyth_timer_destroyed_handler_invoke(WSYTH_TimerDestroyedHandler *self, WSYTH_ThreadPoolTimer* timer);
 
-/* Windows.System.Threading.TimerElapsedHandler */
-/* Windows.System.Threading.TimerElapsedHandler.Invoke(timer) */
 HRESULT wsyth_timer_elapsed_handler_invoke(WSYTH_TimerElapsedHandler *self, WSYTH_ThreadPoolTimer* timer);
 
-/* Windows.System.Threading.WorkItemHandler */
-/* Windows.System.Threading.WorkItemHandler.Invoke(operation) */
 HRESULT wsyth_work_item_handler_invoke(WSYTH_WorkItemHandler *self, WF_IAsyncAction* operation);
 
-/* Windows.System.Threading.IThreadPoolTimer */
 #endif /* CWINRT_WINDOWS_SYSTEM_THREADING_H */

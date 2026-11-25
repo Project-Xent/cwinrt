@@ -13,13 +13,11 @@
 #include <cwinrt/Windows.Graphics.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStream
 #define CWINRT_FWD_WSTST_IRandomAccessStream
 typedef struct WSTST_IRandomAccessStream WSTST_IRandomAccessStream;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WGRDI_BrightnessOverrideSettings WGRDI_BrightnessOverrideSettings;
 typedef struct WGRDI_BrightnessOverride WGRDI_BrightnessOverride;
 typedef struct WGRDI_AdvancedColorInfo WGRDI_AdvancedColorInfo;
@@ -52,7 +50,6 @@ typedef struct WGRDI_IDisplayInformation_5 WGRDI_IDisplayInformation_5;
 typedef struct WGRDI_IDisplayServices WGRDI_IDisplayServices;
 typedef struct WGRDI_IDisplayInformation WGRDI_IDisplayInformation;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_TypedEventHandler_WGRDI_BrightnessOverride_Object
 #define CWINRT_FWD_WF_TypedEventHandler_WGRDI_BrightnessOverride_Object
 typedef struct WF_TypedEventHandler_WGRDI_BrightnessOverride_Object WF_TypedEventHandler_WGRDI_BrightnessOverride_Object;
@@ -184,7 +181,6 @@ struct WGRDI_NitRange {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -273,65 +269,42 @@ static const IID CWINRT_IID_WGRDI_IDisplayServices CWINRT_MAYBE_UNUSED = { 0x1B5
 static const IID CWINRT_IID_WGRDI_IDisplayInformation CWINRT_MAYBE_UNUSED = { 0xBED112AE, 0xADC3, 0x4DC9, { 0xAE, 0x65, 0x85, 0x1F, 0x4D, 0x7D, 0x47, 0x99 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Graphics.Display.BrightnessOverrideSettings */
 HRESULT wgrdi_brightness_override_settings_new(WGRDI_BrightnessOverrideSettings **out);
 
-/* Windows.Graphics.Display.BrightnessOverrideSettings */
-/* Windows.Graphics.Display.BrightnessOverrideSettings.get_DesiredLevel() */
 HRESULT wgrdi_brightness_override_settings_get__desired_level(WGRDI_BrightnessOverrideSettings *self, double *value);
 
-/* Windows.Graphics.Display.BrightnessOverrideSettings.get_DesiredNits() */
 HRESULT wgrdi_brightness_override_settings_get__desired_nits(WGRDI_BrightnessOverrideSettings *self, float *value);
 
-/* Windows.Graphics.Display.BrightnessOverrideSettings.CreateFromLevel(level) */
 HRESULT wgrdi_brightness_override_settings_create_from_level(double level, WGRDI_BrightnessOverrideSettings** out);
 
-/* Windows.Graphics.Display.BrightnessOverrideSettings.CreateFromNits(nits) */
 HRESULT wgrdi_brightness_override_settings_create_from_nits(float nits, WGRDI_BrightnessOverrideSettings** out);
 
-/* Windows.Graphics.Display.BrightnessOverrideSettings.CreateFromDisplayBrightnessOverrideScenario(overrideScenario) */
 HRESULT wgrdi_brightness_override_settings_create_from_display_brightness_override_scenario(WGRDI_DisplayBrightnessOverrideScenario overrideScenario, WGRDI_BrightnessOverrideSettings** out);
 
-/* activate Windows.Graphics.Display.BrightnessOverride */
 HRESULT wgrdi_brightness_override_new(WGRDI_BrightnessOverride **out);
 
-/* Windows.Graphics.Display.BrightnessOverride */
-/* Windows.Graphics.Display.BrightnessOverride.get_IsSupported() */
 HRESULT wgrdi_brightness_override_get__is_supported(WGRDI_BrightnessOverride *self, BOOL *value);
 
-/* Windows.Graphics.Display.BrightnessOverride.get_IsOverrideActive() */
 HRESULT wgrdi_brightness_override_get__is_override_active(WGRDI_BrightnessOverride *self, BOOL *value);
 
-/* Windows.Graphics.Display.BrightnessOverride.get_BrightnessLevel() */
 HRESULT wgrdi_brightness_override_get__brightness_level(WGRDI_BrightnessOverride *self, double *value);
 
-/* Windows.Graphics.Display.BrightnessOverride.SetBrightnessLevel(brightnessLevel, options) */
 HRESULT wgrdi_brightness_override_set_brightness_level(WGRDI_BrightnessOverride *self, double brightnessLevel, WGRDI_DisplayBrightnessOverrideOptions options);
 
-/* Windows.Graphics.Display.BrightnessOverride.SetBrightnessScenario(scenario, options) */
 HRESULT wgrdi_brightness_override_set_brightness_scenario(WGRDI_BrightnessOverride *self, WGRDI_DisplayBrightnessScenario scenario, WGRDI_DisplayBrightnessOverrideOptions options);
 
-/* Windows.Graphics.Display.BrightnessOverride.GetLevelForScenario(scenario) */
 HRESULT wgrdi_brightness_override_get_level_for_scenario(WGRDI_BrightnessOverride *self, WGRDI_DisplayBrightnessScenario scenario, double *out);
 
-/* Windows.Graphics.Display.BrightnessOverride.StartOverride() */
 HRESULT wgrdi_brightness_override_start_override(WGRDI_BrightnessOverride *self);
 
-/* Windows.Graphics.Display.BrightnessOverride.StopOverride() */
 HRESULT wgrdi_brightness_override_stop_override(WGRDI_BrightnessOverride *self);
 
-/* Windows.Graphics.Display.BrightnessOverride.GetDefaultForSystem() */
 HRESULT wgrdi_brightness_override_get_default_for_system(WGRDI_BrightnessOverride** out);
 
-/* Windows.Graphics.Display.BrightnessOverride.GetForCurrentView() */
 HRESULT wgrdi_brightness_override_get_for_current_view(WGRDI_BrightnessOverride** out);
 
-/* Windows.Graphics.Display.BrightnessOverride.SaveForSystemAsync() */
 HRESULT wgrdi_brightness_override_save_for_system_async(WGRDI_BrightnessOverride* value, WF_IAsyncOperation_Bool** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wgrdi_brightness_override_on_is_supported_changed(WGRDI_BrightnessOverride *self, cwinrt_event_fn fn, void *ctx);
@@ -343,92 +316,60 @@ void wgrdi_brightness_override_off_is_override_active_changed(WGRDI_BrightnessOv
 cwinrt_token wgrdi_brightness_override_on_brightness_level_changed(WGRDI_BrightnessOverride *self, cwinrt_event_fn fn, void *ctx);
 void wgrdi_brightness_override_off_brightness_level_changed(WGRDI_BrightnessOverride *self, cwinrt_token token);
 
-/* activate Windows.Graphics.Display.AdvancedColorInfo */
 HRESULT wgrdi_advanced_color_info_new(WGRDI_AdvancedColorInfo **out);
 
-/* Windows.Graphics.Display.AdvancedColorInfo */
-/* Windows.Graphics.Display.AdvancedColorInfo.get_CurrentAdvancedColorKind() */
 HRESULT wgrdi_advanced_color_info_get__current_advanced_color_kind(WGRDI_AdvancedColorInfo *self, WGRDI_AdvancedColorKind *value);
 
-/* Windows.Graphics.Display.AdvancedColorInfo.get_RedPrimary() */
 HRESULT wgrdi_advanced_color_info_get__red_primary(WGRDI_AdvancedColorInfo *self, WF_Point *value);
 
-/* Windows.Graphics.Display.AdvancedColorInfo.get_GreenPrimary() */
 HRESULT wgrdi_advanced_color_info_get__green_primary(WGRDI_AdvancedColorInfo *self, WF_Point *value);
 
-/* Windows.Graphics.Display.AdvancedColorInfo.get_BluePrimary() */
 HRESULT wgrdi_advanced_color_info_get__blue_primary(WGRDI_AdvancedColorInfo *self, WF_Point *value);
 
-/* Windows.Graphics.Display.AdvancedColorInfo.get_WhitePoint() */
 HRESULT wgrdi_advanced_color_info_get__white_point(WGRDI_AdvancedColorInfo *self, WF_Point *value);
 
-/* Windows.Graphics.Display.AdvancedColorInfo.get_MaxLuminanceInNits() */
 HRESULT wgrdi_advanced_color_info_get__max_luminance_in_nits(WGRDI_AdvancedColorInfo *self, float *value);
 
-/* Windows.Graphics.Display.AdvancedColorInfo.get_MinLuminanceInNits() */
 HRESULT wgrdi_advanced_color_info_get__min_luminance_in_nits(WGRDI_AdvancedColorInfo *self, float *value);
 
-/* Windows.Graphics.Display.AdvancedColorInfo.get_MaxAverageFullFrameLuminanceInNits() */
 HRESULT wgrdi_advanced_color_info_get__max_average_full_frame_luminance_in_nits(WGRDI_AdvancedColorInfo *self, float *value);
 
-/* Windows.Graphics.Display.AdvancedColorInfo.get_SdrWhiteLevelInNits() */
 HRESULT wgrdi_advanced_color_info_get__sdr_white_level_in_nits(WGRDI_AdvancedColorInfo *self, float *value);
 
-/* Windows.Graphics.Display.AdvancedColorInfo.IsHdrMetadataFormatCurrentlySupported(format) */
 HRESULT wgrdi_advanced_color_info_is_hdr_metadata_format_currently_supported(WGRDI_AdvancedColorInfo *self, WGRDI_HdrMetadataFormat format, BOOL *out);
 
-/* Windows.Graphics.Display.AdvancedColorInfo.IsAdvancedColorKindAvailable(kind) */
 HRESULT wgrdi_advanced_color_info_is_advanced_color_kind_available(WGRDI_AdvancedColorInfo *self, WGRDI_AdvancedColorKind kind, BOOL *out);
 
-/* Windows.Graphics.Display.IDisplayServicesStatics */
-/* Windows.Graphics.Display.IDisplayServicesStatics.FindAll() */
 HRESULT wgrdi_display_services_statics_find_all(WGRDI_IDisplayServicesStatics *self, WG_DisplayId **out, uint32_t *out_len);
 
-/* activate Windows.Graphics.Display.ColorOverrideSettings */
 HRESULT wgrdi_color_override_settings_new(WGRDI_ColorOverrideSettings **out);
 
-/* Windows.Graphics.Display.ColorOverrideSettings */
-/* Windows.Graphics.Display.ColorOverrideSettings.get_DesiredDisplayColorOverrideScenario() */
 HRESULT wgrdi_color_override_settings_get__desired_display_color_override_scenario(WGRDI_ColorOverrideSettings *self, WGRDI_DisplayColorOverrideScenario *value);
 
-/* Windows.Graphics.Display.ColorOverrideSettings.CreateFromDisplayColorOverrideScenario(overrideScenario) */
 HRESULT wgrdi_color_override_settings_create_from_display_color_override_scenario(WGRDI_DisplayColorOverrideScenario overrideScenario, WGRDI_ColorOverrideSettings** out);
 
-/* activate Windows.Graphics.Display.DisplayEnhancementOverride */
 HRESULT wgrdi_display_enhancement_override_new(WGRDI_DisplayEnhancementOverride **out);
 
-/* Windows.Graphics.Display.DisplayEnhancementOverride */
-/* Windows.Graphics.Display.DisplayEnhancementOverride.get_ColorOverrideSettings() */
 HRESULT wgrdi_display_enhancement_override_get__color_override_settings(WGRDI_DisplayEnhancementOverride *self, WGRDI_ColorOverrideSettings** value);
 
-/* Windows.Graphics.Display.DisplayEnhancementOverride.put_ColorOverrideSettings() */
 HRESULT wgrdi_display_enhancement_override_put__color_override_settings(WGRDI_DisplayEnhancementOverride *self, WGRDI_ColorOverrideSettings* value);
 
-/* Windows.Graphics.Display.DisplayEnhancementOverride.get_BrightnessOverrideSettings() */
 HRESULT wgrdi_display_enhancement_override_get__brightness_override_settings(WGRDI_DisplayEnhancementOverride *self, WGRDI_BrightnessOverrideSettings** value);
 
-/* Windows.Graphics.Display.DisplayEnhancementOverride.put_BrightnessOverrideSettings() */
 HRESULT wgrdi_display_enhancement_override_put__brightness_override_settings(WGRDI_DisplayEnhancementOverride *self, WGRDI_BrightnessOverrideSettings* value);
 
-/* Windows.Graphics.Display.DisplayEnhancementOverride.get_CanOverride() */
 HRESULT wgrdi_display_enhancement_override_get__can_override(WGRDI_DisplayEnhancementOverride *self, BOOL *value);
 
-/* Windows.Graphics.Display.DisplayEnhancementOverride.get_IsOverrideActive() */
 HRESULT wgrdi_display_enhancement_override_get__is_override_active(WGRDI_DisplayEnhancementOverride *self, BOOL *value);
 
-/* Windows.Graphics.Display.DisplayEnhancementOverride.GetCurrentDisplayEnhancementOverrideCapabilities() */
 HRESULT wgrdi_display_enhancement_override_get_current_display_enhancement_override_capabilities(WGRDI_DisplayEnhancementOverride *self, WGRDI_DisplayEnhancementOverrideCapabilities** out);
 
-/* Windows.Graphics.Display.DisplayEnhancementOverride.RequestOverride() */
 HRESULT wgrdi_display_enhancement_override_request_override(WGRDI_DisplayEnhancementOverride *self);
 
-/* Windows.Graphics.Display.DisplayEnhancementOverride.StopOverride() */
 HRESULT wgrdi_display_enhancement_override_stop_override(WGRDI_DisplayEnhancementOverride *self);
 
-/* Windows.Graphics.Display.DisplayEnhancementOverride.GetForCurrentView() */
 HRESULT wgrdi_display_enhancement_override_get_for_current_view(WGRDI_DisplayEnhancementOverride** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wgrdi_display_enhancement_override_on_can_override_changed(WGRDI_DisplayEnhancementOverride *self, cwinrt_event_fn fn, void *ctx);
@@ -440,79 +381,52 @@ void wgrdi_display_enhancement_override_off_is_override_active_changed(WGRDI_Dis
 cwinrt_token wgrdi_display_enhancement_override_on_display_enhancement_override_capabilities_changed(WGRDI_DisplayEnhancementOverride *self, cwinrt_event_fn fn, void *ctx);
 void wgrdi_display_enhancement_override_off_display_enhancement_override_capabilities_changed(WGRDI_DisplayEnhancementOverride *self, cwinrt_token token);
 
-/* activate Windows.Graphics.Display.DisplayEnhancementOverrideCapabilities */
 HRESULT wgrdi_display_enhancement_override_capabilities_new(WGRDI_DisplayEnhancementOverrideCapabilities **out);
 
-/* Windows.Graphics.Display.DisplayEnhancementOverrideCapabilities */
-/* Windows.Graphics.Display.DisplayEnhancementOverrideCapabilities.get_IsBrightnessControlSupported() */
 HRESULT wgrdi_display_enhancement_override_capabilities_get__is_brightness_control_supported(WGRDI_DisplayEnhancementOverrideCapabilities *self, BOOL *value);
 
-/* Windows.Graphics.Display.DisplayEnhancementOverrideCapabilities.get_IsBrightnessNitsControlSupported() */
 HRESULT wgrdi_display_enhancement_override_capabilities_get__is_brightness_nits_control_supported(WGRDI_DisplayEnhancementOverrideCapabilities *self, BOOL *value);
 
-/* Windows.Graphics.Display.DisplayEnhancementOverrideCapabilities.GetSupportedNitRanges() */
 HRESULT wgrdi_display_enhancement_override_capabilities_get_supported_nit_ranges(WGRDI_DisplayEnhancementOverrideCapabilities *self, WFOCO_IVectorView_WGRDI_NitRange** out);
 
-/* activate Windows.Graphics.Display.DisplayEnhancementOverrideCapabilitiesChangedEventArgs */
 HRESULT wgrdi_display_enhancement_override_capabilities_changed_event_args_new(WGRDI_DisplayEnhancementOverrideCapabilitiesChangedEventArgs **out);
 
-/* Windows.Graphics.Display.DisplayEnhancementOverrideCapabilitiesChangedEventArgs */
-/* Windows.Graphics.Display.DisplayEnhancementOverrideCapabilitiesChangedEventArgs.get_Capabilities() */
 HRESULT wgrdi_display_enhancement_override_capabilities_changed_event_args_get__capabilities(WGRDI_DisplayEnhancementOverrideCapabilitiesChangedEventArgs *self, WGRDI_DisplayEnhancementOverrideCapabilities** value);
 
-/* activate Windows.Graphics.Display.DisplayInformation */
 HRESULT wgrdi_display_information_new(WGRDI_DisplayInformation **out);
 
-/* Windows.Graphics.Display.DisplayInformation */
-/* Windows.Graphics.Display.DisplayInformation.get_CurrentOrientation() */
 HRESULT wgrdi_display_information_get__current_orientation(WGRDI_DisplayInformation *self, WGRDI_DisplayOrientations *value);
 
-/* Windows.Graphics.Display.DisplayInformation.get_NativeOrientation() */
 HRESULT wgrdi_display_information_get__native_orientation(WGRDI_DisplayInformation *self, WGRDI_DisplayOrientations *value);
 
-/* Windows.Graphics.Display.DisplayInformation.get_ResolutionScale() */
 HRESULT wgrdi_display_information_get__resolution_scale(WGRDI_DisplayInformation *self, WGRDI_ResolutionScale *value);
 
-/* Windows.Graphics.Display.DisplayInformation.get_LogicalDpi() */
 HRESULT wgrdi_display_information_get__logical_dpi(WGRDI_DisplayInformation *self, float *value);
 
-/* Windows.Graphics.Display.DisplayInformation.get_RawDpiX() */
 HRESULT wgrdi_display_information_get__raw_dpi_x(WGRDI_DisplayInformation *self, float *value);
 
-/* Windows.Graphics.Display.DisplayInformation.get_RawDpiY() */
 HRESULT wgrdi_display_information_get__raw_dpi_y(WGRDI_DisplayInformation *self, float *value);
 
-/* Windows.Graphics.Display.DisplayInformation.get_StereoEnabled() */
 HRESULT wgrdi_display_information_get__stereo_enabled(WGRDI_DisplayInformation *self, BOOL *value);
 
-/* Windows.Graphics.Display.DisplayInformation.GetColorProfileAsync() */
 HRESULT wgrdi_display_information_get_color_profile_async(WGRDI_DisplayInformation *self, WF_IAsyncOperation_WSTST_IRandomAccessStream** out);
 
-/* Windows.Graphics.Display.DisplayInformation.get_RawPixelsPerViewPixel() */
 HRESULT wgrdi_display_information_get__raw_pixels_per_view_pixel(WGRDI_DisplayInformation *self, double *value);
 
-/* Windows.Graphics.Display.DisplayInformation.get_DiagonalSizeInInches() */
 HRESULT wgrdi_display_information_get__diagonal_size_in_inches(WGRDI_DisplayInformation *self, double** value);
 
-/* Windows.Graphics.Display.DisplayInformation.get_ScreenWidthInRawPixels() */
 HRESULT wgrdi_display_information_get__screen_width_in_raw_pixels(WGRDI_DisplayInformation *self, uint32_t *value);
 
-/* Windows.Graphics.Display.DisplayInformation.get_ScreenHeightInRawPixels() */
 HRESULT wgrdi_display_information_get__screen_height_in_raw_pixels(WGRDI_DisplayInformation *self, uint32_t *value);
 
-/* Windows.Graphics.Display.DisplayInformation.GetAdvancedColorInfo() */
 HRESULT wgrdi_display_information_get_advanced_color_info(WGRDI_DisplayInformation *self, WGRDI_AdvancedColorInfo** out);
 
-/* Windows.Graphics.Display.DisplayInformation.GetForCurrentView() */
 HRESULT wgrdi_display_information_get_for_current_view(WGRDI_DisplayInformation** out);
 
-/* Windows.Graphics.Display.DisplayInformation.get_AutoRotationPreferences() */
 HRESULT wgrdi_display_information_get__auto_rotation_preferences(WGRDI_DisplayOrientations *value);
 
-/* Windows.Graphics.Display.DisplayInformation.put_AutoRotationPreferences() */
 HRESULT wgrdi_display_information_put__auto_rotation_preferences(WGRDI_DisplayOrientations value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wgrdi_display_information_on_orientation_changed(WGRDI_DisplayInformation *self, cwinrt_event_fn fn, void *ctx);
@@ -533,35 +447,24 @@ void wgrdi_display_information_off_advanced_color_info_changed(WGRDI_DisplayInfo
 cwinrt_token wgrdi_display_information_on_display_contents_invalidated(WGRDI_DisplayInformation *self, cwinrt_event_fn fn, void *ctx);
 void wgrdi_display_information_off_display_contents_invalidated(WGRDI_DisplayInformation *self, cwinrt_token token);
 
-/* activate Windows.Graphics.Display.DisplayProperties */
 HRESULT wgrdi_display_properties_new(WGRDI_DisplayProperties **out);
 
-/* Windows.Graphics.Display.DisplayProperties */
-/* Windows.Graphics.Display.DisplayProperties.get_CurrentOrientation() */
 HRESULT wgrdi_display_properties_get__current_orientation(WGRDI_DisplayOrientations *value);
 
-/* Windows.Graphics.Display.DisplayProperties.get_NativeOrientation() */
 HRESULT wgrdi_display_properties_get__native_orientation(WGRDI_DisplayOrientations *value);
 
-/* Windows.Graphics.Display.DisplayProperties.get_AutoRotationPreferences() */
 HRESULT wgrdi_display_properties_get__auto_rotation_preferences(WGRDI_DisplayOrientations *value);
 
-/* Windows.Graphics.Display.DisplayProperties.put_AutoRotationPreferences() */
 HRESULT wgrdi_display_properties_put__auto_rotation_preferences(WGRDI_DisplayOrientations value);
 
-/* Windows.Graphics.Display.DisplayProperties.get_ResolutionScale() */
 HRESULT wgrdi_display_properties_get__resolution_scale(WGRDI_ResolutionScale *value);
 
-/* Windows.Graphics.Display.DisplayProperties.get_LogicalDpi() */
 HRESULT wgrdi_display_properties_get__logical_dpi(float *value);
 
-/* Windows.Graphics.Display.DisplayProperties.get_StereoEnabled() */
 HRESULT wgrdi_display_properties_get__stereo_enabled(BOOL *value);
 
-/* Windows.Graphics.Display.DisplayProperties.GetColorProfileAsync() */
 HRESULT wgrdi_display_properties_get_color_profile_async(WF_IAsyncOperation_WSTST_IRandomAccessStream** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wgrdi_display_properties_on_orientation_changed(WGRDI_DisplayProperties *self, cwinrt_event_fn fn, void *ctx);
@@ -579,105 +482,58 @@ void wgrdi_display_properties_off_color_profile_changed(WGRDI_DisplayProperties 
 cwinrt_token wgrdi_display_properties_on_display_contents_invalidated(WGRDI_DisplayProperties *self, cwinrt_event_fn fn, void *ctx);
 void wgrdi_display_properties_off_display_contents_invalidated(WGRDI_DisplayProperties *self, cwinrt_token token);
 
-/* Windows.Graphics.Display.DisplayPropertiesEventHandler */
-/* Windows.Graphics.Display.DisplayPropertiesEventHandler.Invoke(sender) */
 HRESULT wgrdi_display_properties_event_handler_invoke(WGRDI_DisplayPropertiesEventHandler *self, IInspectable* sender);
 
-/* activate Windows.Graphics.Display.DisplayServices */
 HRESULT wgrdi_display_services_new(WGRDI_DisplayServices **out);
 
-/* Windows.Graphics.Display.DisplayServices */
-/* Windows.Graphics.Display.DisplayServices.FindAll() */
 HRESULT wgrdi_display_services_find_all(WG_DisplayId **out, uint32_t *out_len);
 
-/* Windows.Graphics.Display.IBrightnessOverrideSettingsStatics */
-/* Windows.Graphics.Display.IBrightnessOverrideSettingsStatics.CreateFromLevel(level) */
 HRESULT wgrdi_brightness_override_settings_statics_create_from_level(WGRDI_IBrightnessOverrideSettingsStatics *self, double level, WGRDI_BrightnessOverrideSettings** out);
 
-/* Windows.Graphics.Display.IBrightnessOverrideSettingsStatics.CreateFromNits(nits) */
 HRESULT wgrdi_brightness_override_settings_statics_create_from_nits(WGRDI_IBrightnessOverrideSettingsStatics *self, float nits, WGRDI_BrightnessOverrideSettings** out);
 
-/* Windows.Graphics.Display.IBrightnessOverrideSettingsStatics.CreateFromDisplayBrightnessOverrideScenario(overrideScenario) */
 HRESULT wgrdi_brightness_override_settings_statics_create_from_display_brightness_override_scenario(WGRDI_IBrightnessOverrideSettingsStatics *self, WGRDI_DisplayBrightnessOverrideScenario overrideScenario, WGRDI_BrightnessOverrideSettings** out);
 
-/* Windows.Graphics.Display.IBrightnessOverrideStatics */
-/* Windows.Graphics.Display.IBrightnessOverrideStatics.GetDefaultForSystem() */
 HRESULT wgrdi_brightness_override_statics_get_default_for_system(WGRDI_IBrightnessOverrideStatics *self, WGRDI_BrightnessOverride** out);
 
-/* Windows.Graphics.Display.IBrightnessOverrideStatics.GetForCurrentView() */
 HRESULT wgrdi_brightness_override_statics_get_for_current_view(WGRDI_IBrightnessOverrideStatics *self, WGRDI_BrightnessOverride** out);
 
-/* Windows.Graphics.Display.IBrightnessOverrideStatics.SaveForSystemAsync() */
 HRESULT wgrdi_brightness_override_statics_save_for_system_async(WGRDI_IBrightnessOverrideStatics *self, WGRDI_BrightnessOverride* value, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Graphics.Display.IColorOverrideSettingsStatics */
-/* Windows.Graphics.Display.IColorOverrideSettingsStatics.CreateFromDisplayColorOverrideScenario(overrideScenario) */
 HRESULT wgrdi_color_override_settings_statics_create_from_display_color_override_scenario(WGRDI_IColorOverrideSettingsStatics *self, WGRDI_DisplayColorOverrideScenario overrideScenario, WGRDI_ColorOverrideSettings** out);
 
-/* Windows.Graphics.Display.IDisplayEnhancementOverrideStatics */
-/* Windows.Graphics.Display.IDisplayEnhancementOverrideStatics.GetForCurrentView() */
 HRESULT wgrdi_display_enhancement_override_statics_get_for_current_view(WGRDI_IDisplayEnhancementOverrideStatics *self, WGRDI_DisplayEnhancementOverride** out);
 
-/* Windows.Graphics.Display.IDisplayInformationStatics */
-/* Windows.Graphics.Display.IDisplayInformationStatics.GetForCurrentView() */
 HRESULT wgrdi_display_information_statics_get_for_current_view(WGRDI_IDisplayInformationStatics *self, WGRDI_DisplayInformation** out);
 
-/* Windows.Graphics.Display.IDisplayInformationStatics.get_AutoRotationPreferences() */
 HRESULT wgrdi_display_information_statics_get__auto_rotation_preferences(WGRDI_IDisplayInformationStatics *self, WGRDI_DisplayOrientations *value);
 
-/* Windows.Graphics.Display.IDisplayInformationStatics.put_AutoRotationPreferences() */
 HRESULT wgrdi_display_information_statics_put__auto_rotation_preferences(WGRDI_IDisplayInformationStatics *self, WGRDI_DisplayOrientations value);
 
-/* Windows.Graphics.Display.IDisplayPropertiesStatics */
-/* Windows.Graphics.Display.IDisplayPropertiesStatics.get_CurrentOrientation() */
 HRESULT wgrdi_display_properties_statics_get__current_orientation(WGRDI_IDisplayPropertiesStatics *self, WGRDI_DisplayOrientations *value);
 
-/* Windows.Graphics.Display.IDisplayPropertiesStatics.get_NativeOrientation() */
 HRESULT wgrdi_display_properties_statics_get__native_orientation(WGRDI_IDisplayPropertiesStatics *self, WGRDI_DisplayOrientations *value);
 
-/* Windows.Graphics.Display.IDisplayPropertiesStatics.get_AutoRotationPreferences() */
 HRESULT wgrdi_display_properties_statics_get__auto_rotation_preferences(WGRDI_IDisplayPropertiesStatics *self, WGRDI_DisplayOrientations *value);
 
-/* Windows.Graphics.Display.IDisplayPropertiesStatics.put_AutoRotationPreferences() */
 HRESULT wgrdi_display_properties_statics_put__auto_rotation_preferences(WGRDI_IDisplayPropertiesStatics *self, WGRDI_DisplayOrientations value);
 
-/* Windows.Graphics.Display.IDisplayPropertiesStatics.get_ResolutionScale() */
 HRESULT wgrdi_display_properties_statics_get__resolution_scale(WGRDI_IDisplayPropertiesStatics *self, WGRDI_ResolutionScale *value);
 
-/* Windows.Graphics.Display.IDisplayPropertiesStatics.get_LogicalDpi() */
 HRESULT wgrdi_display_properties_statics_get__logical_dpi(WGRDI_IDisplayPropertiesStatics *self, float *value);
 
-/* Windows.Graphics.Display.IDisplayPropertiesStatics.get_StereoEnabled() */
 HRESULT wgrdi_display_properties_statics_get__stereo_enabled(WGRDI_IDisplayPropertiesStatics *self, BOOL *value);
 
-/* Windows.Graphics.Display.IDisplayPropertiesStatics.GetColorProfileAsync() */
 HRESULT wgrdi_display_properties_statics_get_color_profile_async(WGRDI_IDisplayPropertiesStatics *self, WF_IAsyncOperation_WSTST_IRandomAccessStream** out);
 
-/* Windows.Graphics.Display.IBrightnessOverrideSettings */
-/* Windows.Graphics.Display.IBrightnessOverride */
-/* Windows.Graphics.Display.IAdvancedColorInfo */
-/* Windows.Graphics.Display.IColorOverrideSettings */
-/* Windows.Graphics.Display.IDisplayEnhancementOverride */
-/* Windows.Graphics.Display.IDisplayEnhancementOverrideCapabilities */
-/* Windows.Graphics.Display.IDisplayEnhancementOverrideCapabilitiesChangedEventArgs */
-/* Windows.Graphics.Display.IDisplayInformation2 */
-/* Windows.Graphics.Display.IDisplayInformation2.get_RawPixelsPerViewPixel() */
 HRESULT wgrdi_display_information_2_get__raw_pixels_per_view_pixel(WGRDI_IDisplayInformation_2 *self, double *value);
 
-/* Windows.Graphics.Display.IDisplayInformation3 */
-/* Windows.Graphics.Display.IDisplayInformation3.get_DiagonalSizeInInches() */
 HRESULT wgrdi_display_information_3_get__diagonal_size_in_inches(WGRDI_IDisplayInformation_3 *self, double** value);
 
-/* Windows.Graphics.Display.IDisplayInformation4 */
-/* Windows.Graphics.Display.IDisplayInformation4.get_ScreenWidthInRawPixels() */
 HRESULT wgrdi_display_information_4_get__screen_width_in_raw_pixels(WGRDI_IDisplayInformation_4 *self, uint32_t *value);
 
-/* Windows.Graphics.Display.IDisplayInformation4.get_ScreenHeightInRawPixels() */
 HRESULT wgrdi_display_information_4_get__screen_height_in_raw_pixels(WGRDI_IDisplayInformation_4 *self, uint32_t *value);
 
-/* Windows.Graphics.Display.IDisplayInformation5 */
-/* Windows.Graphics.Display.IDisplayInformation5.GetAdvancedColorInfo() */
 HRESULT wgrdi_display_information_5_get_advanced_color_info(WGRDI_IDisplayInformation_5 *self, WGRDI_AdvancedColorInfo** out);
 
-/* Windows.Graphics.Display.IDisplayInformation */
 #endif /* CWINRT_WINDOWS_GRAPHICS_DISPLAY_H */

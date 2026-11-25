@@ -14,7 +14,6 @@
 #include <cwinrt/Windows.System.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WUICO_CorePhysicalKeyStatus
 #define CWINRT_FWD_WUICO_CorePhysicalKeyStatus
 typedef struct WUICO_CorePhysicalKeyStatus WUICO_CorePhysicalKeyStatus;
@@ -55,7 +54,6 @@ typedef struct WUIIN_PointerPoint WUIIN_PointerPoint;
 typedef struct WUIXACO_IconSource WUIXACO_IconSource;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUIXAIN_IKeyboardAcceleratorFactory WUIXAIN_IKeyboardAcceleratorFactory;
 typedef struct WUIXAIN_IKeyboardAcceleratorStatics WUIXAIN_IKeyboardAcceleratorStatics;
 typedef struct WUIXAIN_IManipulationPivotFactory WUIXAIN_IManipulationPivotFactory;
@@ -174,7 +172,6 @@ typedef struct WUIXAIN_IGettingFocusEventArgs_2 WUIXAIN_IGettingFocusEventArgs_2
 typedef struct WUIXAIN_IGettingFocusEventArgs_3 WUIXAIN_IGettingFocusEventArgs_3;
 typedef struct WUIXAIN_IHoldingRoutedEventArgs WUIXAIN_IHoldingRoutedEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WUIXA_DependencyProperty
 #define CWINRT_FWD_WUIXA_DependencyProperty
 typedef struct WUIXA_DependencyProperty WUIXA_DependencyProperty;
@@ -658,7 +655,6 @@ typedef enum WUIXAIN_FocusNavigationDirection {
 } WUIXAIN_FocusNavigationDirection;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -975,610 +971,383 @@ static const IID CWINRT_IID_WUIXAIN_IGettingFocusEventArgs_3 CWINRT_MAYBE_UNUSED
 static const IID CWINRT_IID_WUIXAIN_IHoldingRoutedEventArgs CWINRT_MAYBE_UNUSED = { 0xC246FF23, 0xD80D, 0x44DE, { 0x8D, 0xB9, 0x0D, 0x81, 0x5E, 0x26, 0x9A, 0xC0 } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.Xaml.Input.IKeyboardAcceleratorFactory */
-/* Windows.UI.Xaml.Input.IKeyboardAcceleratorFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixain_keyboard_accelerator_factory_create_instance(WUIXAIN_IKeyboardAcceleratorFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAIN_KeyboardAccelerator** out);
 
-/* Windows.UI.Xaml.Input.IKeyboardAcceleratorStatics */
-/* Windows.UI.Xaml.Input.IKeyboardAcceleratorStatics.get_KeyProperty() */
 HRESULT wuixain_keyboard_accelerator_statics_get__key_property(WUIXAIN_IKeyboardAcceleratorStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Input.IKeyboardAcceleratorStatics.get_ModifiersProperty() */
 HRESULT wuixain_keyboard_accelerator_statics_get__modifiers_property(WUIXAIN_IKeyboardAcceleratorStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Input.IKeyboardAcceleratorStatics.get_IsEnabledProperty() */
 HRESULT wuixain_keyboard_accelerator_statics_get__is_enabled_property(WUIXAIN_IKeyboardAcceleratorStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Input.IKeyboardAcceleratorStatics.get_ScopeOwnerProperty() */
 HRESULT wuixain_keyboard_accelerator_statics_get__scope_owner_property(WUIXAIN_IKeyboardAcceleratorStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Input.IManipulationPivotFactory */
-/* Windows.UI.Xaml.Input.IManipulationPivotFactory.CreateInstanceWithCenterAndRadius(center, radius) */
 HRESULT wuixain_manipulation_pivot_factory_create_instance_with_center_and_radius(WUIXAIN_IManipulationPivotFactory *self, WF_Point center, double radius, WUIXAIN_ManipulationPivot** out);
 
-/* Windows.UI.Xaml.Input.IManipulationStartedRoutedEventArgsFactory */
-/* Windows.UI.Xaml.Input.IManipulationStartedRoutedEventArgsFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixain_manipulation_started_routed_event_args_factory_create_instance(WUIXAIN_IManipulationStartedRoutedEventArgsFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAIN_ManipulationStartedRoutedEventArgs** out);
 
-/* Windows.UI.Xaml.Input.IStandardUICommandFactory */
-/* Windows.UI.Xaml.Input.IStandardUICommandFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixain_standard_u_i_command_factory_create_instance(WUIXAIN_IStandardUICommandFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAIN_StandardUICommand** out);
 
-/* Windows.UI.Xaml.Input.IStandardUICommandFactory.CreateInstanceWithKind(kind, baseInterface, innerInterface) */
 HRESULT wuixain_standard_u_i_command_factory_create_instance_with_kind(WUIXAIN_IStandardUICommandFactory *self, WUIXAIN_StandardUICommandKind kind, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAIN_StandardUICommand** out);
 
-/* Windows.UI.Xaml.Input.IStandardUICommandStatics */
-/* Windows.UI.Xaml.Input.IStandardUICommandStatics.get_KindProperty() */
 HRESULT wuixain_standard_u_i_command_statics_get__kind_property(WUIXAIN_IStandardUICommandStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Input.IXamlUICommandFactory */
-/* Windows.UI.Xaml.Input.IXamlUICommandFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixain_xaml_u_i_command_factory_create_instance(WUIXAIN_IXamlUICommandFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAIN_XamlUICommand** out);
 
-/* Windows.UI.Xaml.Input.IXamlUICommandStatics */
-/* Windows.UI.Xaml.Input.IXamlUICommandStatics.get_LabelProperty() */
 HRESULT wuixain_xaml_u_i_command_statics_get__label_property(WUIXAIN_IXamlUICommandStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Input.IXamlUICommandStatics.get_IconSourceProperty() */
 HRESULT wuixain_xaml_u_i_command_statics_get__icon_source_property(WUIXAIN_IXamlUICommandStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Input.IXamlUICommandStatics.get_KeyboardAcceleratorsProperty() */
 HRESULT wuixain_xaml_u_i_command_statics_get__keyboard_accelerators_property(WUIXAIN_IXamlUICommandStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Input.IXamlUICommandStatics.get_AccessKeyProperty() */
 HRESULT wuixain_xaml_u_i_command_statics_get__access_key_property(WUIXAIN_IXamlUICommandStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Input.IXamlUICommandStatics.get_DescriptionProperty() */
 HRESULT wuixain_xaml_u_i_command_statics_get__description_property(WUIXAIN_IXamlUICommandStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Input.IXamlUICommandStatics.get_CommandProperty() */
 HRESULT wuixain_xaml_u_i_command_statics_get__command_property(WUIXAIN_IXamlUICommandStatics *self, WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Input.InertiaExpansionBehavior */
 HRESULT wuixain_inertia_expansion_behavior_new(WUIXAIN_InertiaExpansionBehavior **out);
 
-/* Windows.UI.Xaml.Input.InertiaExpansionBehavior */
-/* Windows.UI.Xaml.Input.InertiaExpansionBehavior.get_DesiredDeceleration() */
 HRESULT wuixain_inertia_expansion_behavior_get__desired_deceleration(WUIXAIN_InertiaExpansionBehavior *self, double *value);
 
-/* Windows.UI.Xaml.Input.InertiaExpansionBehavior.put_DesiredDeceleration() */
 HRESULT wuixain_inertia_expansion_behavior_put__desired_deceleration(WUIXAIN_InertiaExpansionBehavior *self, double value);
 
-/* Windows.UI.Xaml.Input.InertiaExpansionBehavior.get_DesiredExpansion() */
 HRESULT wuixain_inertia_expansion_behavior_get__desired_expansion(WUIXAIN_InertiaExpansionBehavior *self, double *value);
 
-/* Windows.UI.Xaml.Input.InertiaExpansionBehavior.put_DesiredExpansion() */
 HRESULT wuixain_inertia_expansion_behavior_put__desired_expansion(WUIXAIN_InertiaExpansionBehavior *self, double value);
 
-/* activate Windows.UI.Xaml.Input.InertiaRotationBehavior */
 HRESULT wuixain_inertia_rotation_behavior_new(WUIXAIN_InertiaRotationBehavior **out);
 
-/* Windows.UI.Xaml.Input.InertiaRotationBehavior */
-/* Windows.UI.Xaml.Input.InertiaRotationBehavior.get_DesiredDeceleration() */
 HRESULT wuixain_inertia_rotation_behavior_get__desired_deceleration(WUIXAIN_InertiaRotationBehavior *self, double *value);
 
-/* Windows.UI.Xaml.Input.InertiaRotationBehavior.put_DesiredDeceleration() */
 HRESULT wuixain_inertia_rotation_behavior_put__desired_deceleration(WUIXAIN_InertiaRotationBehavior *self, double value);
 
-/* Windows.UI.Xaml.Input.InertiaRotationBehavior.get_DesiredRotation() */
 HRESULT wuixain_inertia_rotation_behavior_get__desired_rotation(WUIXAIN_InertiaRotationBehavior *self, double *value);
 
-/* Windows.UI.Xaml.Input.InertiaRotationBehavior.put_DesiredRotation() */
 HRESULT wuixain_inertia_rotation_behavior_put__desired_rotation(WUIXAIN_InertiaRotationBehavior *self, double value);
 
-/* activate Windows.UI.Xaml.Input.InertiaTranslationBehavior */
 HRESULT wuixain_inertia_translation_behavior_new(WUIXAIN_InertiaTranslationBehavior **out);
 
-/* Windows.UI.Xaml.Input.InertiaTranslationBehavior */
-/* Windows.UI.Xaml.Input.InertiaTranslationBehavior.get_DesiredDeceleration() */
 HRESULT wuixain_inertia_translation_behavior_get__desired_deceleration(WUIXAIN_InertiaTranslationBehavior *self, double *value);
 
-/* Windows.UI.Xaml.Input.InertiaTranslationBehavior.put_DesiredDeceleration() */
 HRESULT wuixain_inertia_translation_behavior_put__desired_deceleration(WUIXAIN_InertiaTranslationBehavior *self, double value);
 
-/* Windows.UI.Xaml.Input.InertiaTranslationBehavior.get_DesiredDisplacement() */
 HRESULT wuixain_inertia_translation_behavior_get__desired_displacement(WUIXAIN_InertiaTranslationBehavior *self, double *value);
 
-/* Windows.UI.Xaml.Input.InertiaTranslationBehavior.put_DesiredDisplacement() */
 HRESULT wuixain_inertia_translation_behavior_put__desired_displacement(WUIXAIN_InertiaTranslationBehavior *self, double value);
 
-/* activate Windows.UI.Xaml.Input.InputScope */
 HRESULT wuixain_input_scope_new(WUIXAIN_InputScope **out);
 
-/* Windows.UI.Xaml.Input.InputScope */
-/* Windows.UI.Xaml.Input.InputScope.get_Names() */
 HRESULT wuixain_input_scope_get__names(WUIXAIN_InputScope *self, WFOCO_IVector_WUIXAIN_InputScopeName** value);
 
-/* activate Windows.UI.Xaml.Input.InputScopeName */
 HRESULT wuixain_input_scope_name_new(WUIXAIN_InputScopeName **out);
 
-/* Windows.UI.Xaml.Input.InputScopeName */
-/* Windows.UI.Xaml.Input.InputScopeName.get_NameValue() */
 HRESULT wuixain_input_scope_name_get__name_value(WUIXAIN_InputScopeName *self, WUIXAIN_InputScopeNameValue *value);
 
-/* Windows.UI.Xaml.Input.InputScopeName.put_NameValue() */
 HRESULT wuixain_input_scope_name_put__name_value(WUIXAIN_InputScopeName *self, WUIXAIN_InputScopeNameValue value);
 
-/* Windows.UI.Xaml.Input.KeyEventHandler */
-/* Windows.UI.Xaml.Input.KeyEventHandler.Invoke(sender, e) */
 HRESULT wuixain_key_event_handler_invoke(WUIXAIN_KeyEventHandler *self, IInspectable* sender, WUIXAIN_KeyRoutedEventArgs* e);
 
-/* activate Windows.UI.Xaml.Input.KeyRoutedEventArgs */
 HRESULT wuixain_key_routed_event_args_new(WUIXAIN_KeyRoutedEventArgs **out);
 
-/* Windows.UI.Xaml.Input.KeyRoutedEventArgs */
-/* Windows.UI.Xaml.Input.KeyRoutedEventArgs.get_Key() */
 HRESULT wuixain_key_routed_event_args_get__key(WUIXAIN_KeyRoutedEventArgs *self, WSY_VirtualKey *value);
 
-/* Windows.UI.Xaml.Input.KeyRoutedEventArgs.get_KeyStatus() */
 HRESULT wuixain_key_routed_event_args_get__key_status(WUIXAIN_KeyRoutedEventArgs *self, WUICO_CorePhysicalKeyStatus *value);
 
-/* Windows.UI.Xaml.Input.KeyRoutedEventArgs.get_Handled() */
 HRESULT wuixain_key_routed_event_args_get__handled(WUIXAIN_KeyRoutedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.KeyRoutedEventArgs.put_Handled() */
 HRESULT wuixain_key_routed_event_args_put__handled(WUIXAIN_KeyRoutedEventArgs *self, BOOL value);
 
-/* Windows.UI.Xaml.Input.KeyRoutedEventArgs.get_OriginalKey() */
 HRESULT wuixain_key_routed_event_args_get__original_key(WUIXAIN_KeyRoutedEventArgs *self, WSY_VirtualKey *value);
 
-/* Windows.UI.Xaml.Input.KeyRoutedEventArgs.get_DeviceId() */
 HRESULT wuixain_key_routed_event_args_get__device_id(WUIXAIN_KeyRoutedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Input.KeyboardAccelerator */
-/* Windows.UI.Xaml.Input.KeyboardAccelerator.get_Key() */
 HRESULT wuixain_keyboard_accelerator_get__key(WUIXAIN_KeyboardAccelerator *self, WSY_VirtualKey *value);
 
-/* Windows.UI.Xaml.Input.KeyboardAccelerator.put_Key() */
 HRESULT wuixain_keyboard_accelerator_put__key(WUIXAIN_KeyboardAccelerator *self, WSY_VirtualKey value);
 
-/* Windows.UI.Xaml.Input.KeyboardAccelerator.get_Modifiers() */
 HRESULT wuixain_keyboard_accelerator_get__modifiers(WUIXAIN_KeyboardAccelerator *self, WSY_VirtualKeyModifiers *value);
 
-/* Windows.UI.Xaml.Input.KeyboardAccelerator.put_Modifiers() */
 HRESULT wuixain_keyboard_accelerator_put__modifiers(WUIXAIN_KeyboardAccelerator *self, WSY_VirtualKeyModifiers value);
 
-/* Windows.UI.Xaml.Input.KeyboardAccelerator.get_IsEnabled() */
 HRESULT wuixain_keyboard_accelerator_get__is_enabled(WUIXAIN_KeyboardAccelerator *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.KeyboardAccelerator.put_IsEnabled() */
 HRESULT wuixain_keyboard_accelerator_put__is_enabled(WUIXAIN_KeyboardAccelerator *self, BOOL value);
 
-/* Windows.UI.Xaml.Input.KeyboardAccelerator.get_ScopeOwner() */
 HRESULT wuixain_keyboard_accelerator_get__scope_owner(WUIXAIN_KeyboardAccelerator *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Input.KeyboardAccelerator.put_ScopeOwner() */
 HRESULT wuixain_keyboard_accelerator_put__scope_owner(WUIXAIN_KeyboardAccelerator *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.Input.KeyboardAccelerator.get_KeyProperty() */
 HRESULT wuixain_keyboard_accelerator_get__key_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Input.KeyboardAccelerator.get_ModifiersProperty() */
 HRESULT wuixain_keyboard_accelerator_get__modifiers_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Input.KeyboardAccelerator.get_IsEnabledProperty() */
 HRESULT wuixain_keyboard_accelerator_get__is_enabled_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Input.KeyboardAccelerator.get_ScopeOwnerProperty() */
 HRESULT wuixain_keyboard_accelerator_get__scope_owner_property(WUIXA_DependencyProperty** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixain_keyboard_accelerator_on_invoked(WUIXAIN_KeyboardAccelerator *self, cwinrt_event_fn fn, void *ctx);
 void wuixain_keyboard_accelerator_off_invoked(WUIXAIN_KeyboardAccelerator *self, cwinrt_token token);
 
-/* activate Windows.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs */
 HRESULT wuixain_keyboard_accelerator_invoked_event_args_new(WUIXAIN_KeyboardAcceleratorInvokedEventArgs **out);
 
-/* Windows.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs */
-/* Windows.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs.get_Handled() */
 HRESULT wuixain_keyboard_accelerator_invoked_event_args_get__handled(WUIXAIN_KeyboardAcceleratorInvokedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs.put_Handled() */
 HRESULT wuixain_keyboard_accelerator_invoked_event_args_put__handled(WUIXAIN_KeyboardAcceleratorInvokedEventArgs *self, BOOL value);
 
-/* Windows.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs.get_Element() */
 HRESULT wuixain_keyboard_accelerator_invoked_event_args_get__element(WUIXAIN_KeyboardAcceleratorInvokedEventArgs *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs.get_KeyboardAccelerator() */
 HRESULT wuixain_keyboard_accelerator_invoked_event_args_get__keyboard_accelerator(WUIXAIN_KeyboardAcceleratorInvokedEventArgs *self, WUIXAIN_KeyboardAccelerator** value);
 
-/* activate Windows.UI.Xaml.Input.LosingFocusEventArgs */
 HRESULT wuixain_losing_focus_event_args_new(WUIXAIN_LosingFocusEventArgs **out);
 
-/* Windows.UI.Xaml.Input.LosingFocusEventArgs */
-/* Windows.UI.Xaml.Input.LosingFocusEventArgs.get_OldFocusedElement() */
 HRESULT wuixain_losing_focus_event_args_get__old_focused_element(WUIXAIN_LosingFocusEventArgs *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Input.LosingFocusEventArgs.get_NewFocusedElement() */
 HRESULT wuixain_losing_focus_event_args_get__new_focused_element(WUIXAIN_LosingFocusEventArgs *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Input.LosingFocusEventArgs.put_NewFocusedElement() */
 HRESULT wuixain_losing_focus_event_args_put__new_focused_element(WUIXAIN_LosingFocusEventArgs *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.Input.LosingFocusEventArgs.get_FocusState() */
 HRESULT wuixain_losing_focus_event_args_get__focus_state(WUIXAIN_LosingFocusEventArgs *self, WUIXA_FocusState *value);
 
-/* Windows.UI.Xaml.Input.LosingFocusEventArgs.get_Direction() */
 HRESULT wuixain_losing_focus_event_args_get__direction(WUIXAIN_LosingFocusEventArgs *self, WUIXAIN_FocusNavigationDirection *value);
 
-/* Windows.UI.Xaml.Input.LosingFocusEventArgs.get_Handled() */
 HRESULT wuixain_losing_focus_event_args_get__handled(WUIXAIN_LosingFocusEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.LosingFocusEventArgs.put_Handled() */
 HRESULT wuixain_losing_focus_event_args_put__handled(WUIXAIN_LosingFocusEventArgs *self, BOOL value);
 
-/* Windows.UI.Xaml.Input.LosingFocusEventArgs.get_InputDevice() */
 HRESULT wuixain_losing_focus_event_args_get__input_device(WUIXAIN_LosingFocusEventArgs *self, WUIXAIN_FocusInputDeviceKind *value);
 
-/* Windows.UI.Xaml.Input.LosingFocusEventArgs.get_Cancel() */
 HRESULT wuixain_losing_focus_event_args_get__cancel(WUIXAIN_LosingFocusEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.LosingFocusEventArgs.put_Cancel() */
 HRESULT wuixain_losing_focus_event_args_put__cancel(WUIXAIN_LosingFocusEventArgs *self, BOOL value);
 
-/* Windows.UI.Xaml.Input.LosingFocusEventArgs.TryCancel() */
 HRESULT wuixain_losing_focus_event_args_try_cancel(WUIXAIN_LosingFocusEventArgs *self, BOOL *out);
 
-/* Windows.UI.Xaml.Input.LosingFocusEventArgs.TrySetNewFocusedElement(element) */
 HRESULT wuixain_losing_focus_event_args_try_set_new_focused_element(WUIXAIN_LosingFocusEventArgs *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Input.LosingFocusEventArgs.get_CorrelationId() */
 HRESULT wuixain_losing_focus_event_args_get__correlation_id(WUIXAIN_LosingFocusEventArgs *self, GUID *value);
 
-/* Windows.UI.Xaml.Input.ManipulationCompletedEventHandler */
-/* Windows.UI.Xaml.Input.ManipulationCompletedEventHandler.Invoke(sender, e) */
 HRESULT wuixain_manipulation_completed_event_handler_invoke(WUIXAIN_ManipulationCompletedEventHandler *self, IInspectable* sender, WUIXAIN_ManipulationCompletedRoutedEventArgs* e);
 
-/* activate Windows.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs */
 HRESULT wuixain_manipulation_completed_routed_event_args_new(WUIXAIN_ManipulationCompletedRoutedEventArgs **out);
 
-/* Windows.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs */
-/* Windows.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs.get_Container() */
 HRESULT wuixain_manipulation_completed_routed_event_args_get__container(WUIXAIN_ManipulationCompletedRoutedEventArgs *self, WUIXA_UIElement** value);
 
-/* Windows.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs.get_Position() */
 HRESULT wuixain_manipulation_completed_routed_event_args_get__position(WUIXAIN_ManipulationCompletedRoutedEventArgs *self, WF_Point *value);
 
-/* Windows.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs.get_IsInertial() */
 HRESULT wuixain_manipulation_completed_routed_event_args_get__is_inertial(WUIXAIN_ManipulationCompletedRoutedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs.get_Cumulative() */
 HRESULT wuixain_manipulation_completed_routed_event_args_get__cumulative(WUIXAIN_ManipulationCompletedRoutedEventArgs *self, WUIIN_ManipulationDelta *value);
 
-/* Windows.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs.get_Velocities() */
 HRESULT wuixain_manipulation_completed_routed_event_args_get__velocities(WUIXAIN_ManipulationCompletedRoutedEventArgs *self, WUIIN_ManipulationVelocities *value);
 
-/* Windows.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs.get_Handled() */
 HRESULT wuixain_manipulation_completed_routed_event_args_get__handled(WUIXAIN_ManipulationCompletedRoutedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs.put_Handled() */
 HRESULT wuixain_manipulation_completed_routed_event_args_put__handled(WUIXAIN_ManipulationCompletedRoutedEventArgs *self, BOOL value);
 
-/* Windows.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs.get_PointerDeviceType() */
 HRESULT wuixain_manipulation_completed_routed_event_args_get__pointer_device_type(WUIXAIN_ManipulationCompletedRoutedEventArgs *self, WDEIN_PointerDeviceType *value);
 
-/* Windows.UI.Xaml.Input.ManipulationDeltaEventHandler */
-/* Windows.UI.Xaml.Input.ManipulationDeltaEventHandler.Invoke(sender, e) */
 HRESULT wuixain_manipulation_delta_event_handler_invoke(WUIXAIN_ManipulationDeltaEventHandler *self, IInspectable* sender, WUIXAIN_ManipulationDeltaRoutedEventArgs* e);
 
-/* activate Windows.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs */
 HRESULT wuixain_manipulation_delta_routed_event_args_new(WUIXAIN_ManipulationDeltaRoutedEventArgs **out);
 
-/* Windows.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs */
-/* Windows.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs.get_Container() */
 HRESULT wuixain_manipulation_delta_routed_event_args_get__container(WUIXAIN_ManipulationDeltaRoutedEventArgs *self, WUIXA_UIElement** value);
 
-/* Windows.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs.get_Position() */
 HRESULT wuixain_manipulation_delta_routed_event_args_get__position(WUIXAIN_ManipulationDeltaRoutedEventArgs *self, WF_Point *value);
 
-/* Windows.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs.get_IsInertial() */
 HRESULT wuixain_manipulation_delta_routed_event_args_get__is_inertial(WUIXAIN_ManipulationDeltaRoutedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs.get_Delta() */
 HRESULT wuixain_manipulation_delta_routed_event_args_get__delta(WUIXAIN_ManipulationDeltaRoutedEventArgs *self, WUIIN_ManipulationDelta *value);
 
-/* Windows.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs.get_Cumulative() */
 HRESULT wuixain_manipulation_delta_routed_event_args_get__cumulative(WUIXAIN_ManipulationDeltaRoutedEventArgs *self, WUIIN_ManipulationDelta *value);
 
-/* Windows.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs.get_Velocities() */
 HRESULT wuixain_manipulation_delta_routed_event_args_get__velocities(WUIXAIN_ManipulationDeltaRoutedEventArgs *self, WUIIN_ManipulationVelocities *value);
 
-/* Windows.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs.get_Handled() */
 HRESULT wuixain_manipulation_delta_routed_event_args_get__handled(WUIXAIN_ManipulationDeltaRoutedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs.put_Handled() */
 HRESULT wuixain_manipulation_delta_routed_event_args_put__handled(WUIXAIN_ManipulationDeltaRoutedEventArgs *self, BOOL value);
 
-/* Windows.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs.get_PointerDeviceType() */
 HRESULT wuixain_manipulation_delta_routed_event_args_get__pointer_device_type(WUIXAIN_ManipulationDeltaRoutedEventArgs *self, WDEIN_PointerDeviceType *value);
 
-/* Windows.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs.Complete() */
 HRESULT wuixain_manipulation_delta_routed_event_args_complete(WUIXAIN_ManipulationDeltaRoutedEventArgs *self);
 
-/* Windows.UI.Xaml.Input.ManipulationInertiaStartingEventHandler */
-/* Windows.UI.Xaml.Input.ManipulationInertiaStartingEventHandler.Invoke(sender, e) */
 HRESULT wuixain_manipulation_inertia_starting_event_handler_invoke(WUIXAIN_ManipulationInertiaStartingEventHandler *self, IInspectable* sender, WUIXAIN_ManipulationInertiaStartingRoutedEventArgs* e);
 
-/* activate Windows.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs */
 HRESULT wuixain_manipulation_inertia_starting_routed_event_args_new(WUIXAIN_ManipulationInertiaStartingRoutedEventArgs **out);
 
-/* Windows.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs */
-/* Windows.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs.get_Container() */
 HRESULT wuixain_manipulation_inertia_starting_routed_event_args_get__container(WUIXAIN_ManipulationInertiaStartingRoutedEventArgs *self, WUIXA_UIElement** value);
 
-/* Windows.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs.get_ExpansionBehavior() */
 HRESULT wuixain_manipulation_inertia_starting_routed_event_args_get__expansion_behavior(WUIXAIN_ManipulationInertiaStartingRoutedEventArgs *self, WUIXAIN_InertiaExpansionBehavior** value);
 
-/* Windows.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs.put_ExpansionBehavior() */
 HRESULT wuixain_manipulation_inertia_starting_routed_event_args_put__expansion_behavior(WUIXAIN_ManipulationInertiaStartingRoutedEventArgs *self, WUIXAIN_InertiaExpansionBehavior* value);
 
-/* Windows.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs.get_RotationBehavior() */
 HRESULT wuixain_manipulation_inertia_starting_routed_event_args_get__rotation_behavior(WUIXAIN_ManipulationInertiaStartingRoutedEventArgs *self, WUIXAIN_InertiaRotationBehavior** value);
 
-/* Windows.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs.put_RotationBehavior() */
 HRESULT wuixain_manipulation_inertia_starting_routed_event_args_put__rotation_behavior(WUIXAIN_ManipulationInertiaStartingRoutedEventArgs *self, WUIXAIN_InertiaRotationBehavior* value);
 
-/* Windows.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs.get_TranslationBehavior() */
 HRESULT wuixain_manipulation_inertia_starting_routed_event_args_get__translation_behavior(WUIXAIN_ManipulationInertiaStartingRoutedEventArgs *self, WUIXAIN_InertiaTranslationBehavior** value);
 
-/* Windows.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs.put_TranslationBehavior() */
 HRESULT wuixain_manipulation_inertia_starting_routed_event_args_put__translation_behavior(WUIXAIN_ManipulationInertiaStartingRoutedEventArgs *self, WUIXAIN_InertiaTranslationBehavior* value);
 
-/* Windows.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs.get_Handled() */
 HRESULT wuixain_manipulation_inertia_starting_routed_event_args_get__handled(WUIXAIN_ManipulationInertiaStartingRoutedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs.put_Handled() */
 HRESULT wuixain_manipulation_inertia_starting_routed_event_args_put__handled(WUIXAIN_ManipulationInertiaStartingRoutedEventArgs *self, BOOL value);
 
-/* Windows.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs.get_PointerDeviceType() */
 HRESULT wuixain_manipulation_inertia_starting_routed_event_args_get__pointer_device_type(WUIXAIN_ManipulationInertiaStartingRoutedEventArgs *self, WDEIN_PointerDeviceType *value);
 
-/* Windows.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs.get_Delta() */
 HRESULT wuixain_manipulation_inertia_starting_routed_event_args_get__delta(WUIXAIN_ManipulationInertiaStartingRoutedEventArgs *self, WUIIN_ManipulationDelta *value);
 
-/* Windows.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs.get_Cumulative() */
 HRESULT wuixain_manipulation_inertia_starting_routed_event_args_get__cumulative(WUIXAIN_ManipulationInertiaStartingRoutedEventArgs *self, WUIIN_ManipulationDelta *value);
 
-/* Windows.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs.get_Velocities() */
 HRESULT wuixain_manipulation_inertia_starting_routed_event_args_get__velocities(WUIXAIN_ManipulationInertiaStartingRoutedEventArgs *self, WUIIN_ManipulationVelocities *value);
 
-/* activate Windows.UI.Xaml.Input.ManipulationPivot */
 HRESULT wuixain_manipulation_pivot_new(WUIXAIN_ManipulationPivot **out);
 
-/* Windows.UI.Xaml.Input.ManipulationPivot */
-/* Windows.UI.Xaml.Input.ManipulationPivot.get_Center() */
 HRESULT wuixain_manipulation_pivot_get__center(WUIXAIN_ManipulationPivot *self, WF_Point *value);
 
-/* Windows.UI.Xaml.Input.ManipulationPivot.put_Center() */
 HRESULT wuixain_manipulation_pivot_put__center(WUIXAIN_ManipulationPivot *self, WF_Point value);
 
-/* Windows.UI.Xaml.Input.ManipulationPivot.get_Radius() */
 HRESULT wuixain_manipulation_pivot_get__radius(WUIXAIN_ManipulationPivot *self, double *value);
 
-/* Windows.UI.Xaml.Input.ManipulationPivot.put_Radius() */
 HRESULT wuixain_manipulation_pivot_put__radius(WUIXAIN_ManipulationPivot *self, double value);
 
-/* Windows.UI.Xaml.Input.ManipulationStartedEventHandler */
-/* Windows.UI.Xaml.Input.ManipulationStartedEventHandler.Invoke(sender, e) */
 HRESULT wuixain_manipulation_started_event_handler_invoke(WUIXAIN_ManipulationStartedEventHandler *self, IInspectable* sender, WUIXAIN_ManipulationStartedRoutedEventArgs* e);
 
-/* Windows.UI.Xaml.Input.ManipulationStartedRoutedEventArgs */
-/* Windows.UI.Xaml.Input.ManipulationStartedRoutedEventArgs.get_Container() */
 HRESULT wuixain_manipulation_started_routed_event_args_get__container(WUIXAIN_ManipulationStartedRoutedEventArgs *self, WUIXA_UIElement** value);
 
-/* Windows.UI.Xaml.Input.ManipulationStartedRoutedEventArgs.get_Position() */
 HRESULT wuixain_manipulation_started_routed_event_args_get__position(WUIXAIN_ManipulationStartedRoutedEventArgs *self, WF_Point *value);
 
-/* Windows.UI.Xaml.Input.ManipulationStartedRoutedEventArgs.get_Handled() */
 HRESULT wuixain_manipulation_started_routed_event_args_get__handled(WUIXAIN_ManipulationStartedRoutedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.ManipulationStartedRoutedEventArgs.put_Handled() */
 HRESULT wuixain_manipulation_started_routed_event_args_put__handled(WUIXAIN_ManipulationStartedRoutedEventArgs *self, BOOL value);
 
-/* Windows.UI.Xaml.Input.ManipulationStartedRoutedEventArgs.get_PointerDeviceType() */
 HRESULT wuixain_manipulation_started_routed_event_args_get__pointer_device_type(WUIXAIN_ManipulationStartedRoutedEventArgs *self, WDEIN_PointerDeviceType *value);
 
-/* Windows.UI.Xaml.Input.ManipulationStartedRoutedEventArgs.get_Cumulative() */
 HRESULT wuixain_manipulation_started_routed_event_args_get__cumulative(WUIXAIN_ManipulationStartedRoutedEventArgs *self, WUIIN_ManipulationDelta *value);
 
-/* Windows.UI.Xaml.Input.ManipulationStartedRoutedEventArgs.Complete() */
 HRESULT wuixain_manipulation_started_routed_event_args_complete(WUIXAIN_ManipulationStartedRoutedEventArgs *self);
 
-/* Windows.UI.Xaml.Input.ManipulationStartingEventHandler */
-/* Windows.UI.Xaml.Input.ManipulationStartingEventHandler.Invoke(sender, e) */
 HRESULT wuixain_manipulation_starting_event_handler_invoke(WUIXAIN_ManipulationStartingEventHandler *self, IInspectable* sender, WUIXAIN_ManipulationStartingRoutedEventArgs* e);
 
-/* activate Windows.UI.Xaml.Input.ManipulationStartingRoutedEventArgs */
 HRESULT wuixain_manipulation_starting_routed_event_args_new(WUIXAIN_ManipulationStartingRoutedEventArgs **out);
 
-/* Windows.UI.Xaml.Input.ManipulationStartingRoutedEventArgs */
-/* Windows.UI.Xaml.Input.ManipulationStartingRoutedEventArgs.get_Mode() */
 HRESULT wuixain_manipulation_starting_routed_event_args_get__mode(WUIXAIN_ManipulationStartingRoutedEventArgs *self, WUIXAIN_ManipulationModes *value);
 
-/* Windows.UI.Xaml.Input.ManipulationStartingRoutedEventArgs.put_Mode() */
 HRESULT wuixain_manipulation_starting_routed_event_args_put__mode(WUIXAIN_ManipulationStartingRoutedEventArgs *self, WUIXAIN_ManipulationModes value);
 
-/* Windows.UI.Xaml.Input.ManipulationStartingRoutedEventArgs.get_Container() */
 HRESULT wuixain_manipulation_starting_routed_event_args_get__container(WUIXAIN_ManipulationStartingRoutedEventArgs *self, WUIXA_UIElement** value);
 
-/* Windows.UI.Xaml.Input.ManipulationStartingRoutedEventArgs.put_Container() */
 HRESULT wuixain_manipulation_starting_routed_event_args_put__container(WUIXAIN_ManipulationStartingRoutedEventArgs *self, WUIXA_UIElement* value);
 
-/* Windows.UI.Xaml.Input.ManipulationStartingRoutedEventArgs.get_Pivot() */
 HRESULT wuixain_manipulation_starting_routed_event_args_get__pivot(WUIXAIN_ManipulationStartingRoutedEventArgs *self, WUIXAIN_ManipulationPivot** value);
 
-/* Windows.UI.Xaml.Input.ManipulationStartingRoutedEventArgs.put_Pivot() */
 HRESULT wuixain_manipulation_starting_routed_event_args_put__pivot(WUIXAIN_ManipulationStartingRoutedEventArgs *self, WUIXAIN_ManipulationPivot* value);
 
-/* Windows.UI.Xaml.Input.ManipulationStartingRoutedEventArgs.get_Handled() */
 HRESULT wuixain_manipulation_starting_routed_event_args_get__handled(WUIXAIN_ManipulationStartingRoutedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.ManipulationStartingRoutedEventArgs.put_Handled() */
 HRESULT wuixain_manipulation_starting_routed_event_args_put__handled(WUIXAIN_ManipulationStartingRoutedEventArgs *self, BOOL value);
 
-/* activate Windows.UI.Xaml.Input.NoFocusCandidateFoundEventArgs */
 HRESULT wuixain_no_focus_candidate_found_event_args_new(WUIXAIN_NoFocusCandidateFoundEventArgs **out);
 
-/* Windows.UI.Xaml.Input.NoFocusCandidateFoundEventArgs */
-/* Windows.UI.Xaml.Input.NoFocusCandidateFoundEventArgs.get_Direction() */
 HRESULT wuixain_no_focus_candidate_found_event_args_get__direction(WUIXAIN_NoFocusCandidateFoundEventArgs *self, WUIXAIN_FocusNavigationDirection *value);
 
-/* Windows.UI.Xaml.Input.NoFocusCandidateFoundEventArgs.get_Handled() */
 HRESULT wuixain_no_focus_candidate_found_event_args_get__handled(WUIXAIN_NoFocusCandidateFoundEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.NoFocusCandidateFoundEventArgs.put_Handled() */
 HRESULT wuixain_no_focus_candidate_found_event_args_put__handled(WUIXAIN_NoFocusCandidateFoundEventArgs *self, BOOL value);
 
-/* Windows.UI.Xaml.Input.NoFocusCandidateFoundEventArgs.get_InputDevice() */
 HRESULT wuixain_no_focus_candidate_found_event_args_get__input_device(WUIXAIN_NoFocusCandidateFoundEventArgs *self, WUIXAIN_FocusInputDeviceKind *value);
 
-/* activate Windows.UI.Xaml.Input.Pointer */
 HRESULT wuixain_pointer_new(WUIXAIN_Pointer **out);
 
-/* Windows.UI.Xaml.Input.Pointer */
-/* Windows.UI.Xaml.Input.Pointer.get_PointerId() */
 HRESULT wuixain_pointer_get__pointer_id(WUIXAIN_Pointer *self, uint32_t *value);
 
-/* Windows.UI.Xaml.Input.Pointer.get_PointerDeviceType() */
 HRESULT wuixain_pointer_get__pointer_device_type(WUIXAIN_Pointer *self, WDEIN_PointerDeviceType *value);
 
-/* Windows.UI.Xaml.Input.Pointer.get_IsInContact() */
 HRESULT wuixain_pointer_get__is_in_contact(WUIXAIN_Pointer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.Pointer.get_IsInRange() */
 HRESULT wuixain_pointer_get__is_in_range(WUIXAIN_Pointer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.PointerEventHandler */
-/* Windows.UI.Xaml.Input.PointerEventHandler.Invoke(sender, e) */
 HRESULT wuixain_pointer_event_handler_invoke(WUIXAIN_PointerEventHandler *self, IInspectable* sender, WUIXAIN_PointerRoutedEventArgs* e);
 
-/* activate Windows.UI.Xaml.Input.PointerRoutedEventArgs */
 HRESULT wuixain_pointer_routed_event_args_new(WUIXAIN_PointerRoutedEventArgs **out);
 
-/* Windows.UI.Xaml.Input.PointerRoutedEventArgs */
-/* Windows.UI.Xaml.Input.PointerRoutedEventArgs.get_Pointer() */
 HRESULT wuixain_pointer_routed_event_args_get__pointer(WUIXAIN_PointerRoutedEventArgs *self, WUIXAIN_Pointer** value);
 
-/* Windows.UI.Xaml.Input.PointerRoutedEventArgs.get_KeyModifiers() */
 HRESULT wuixain_pointer_routed_event_args_get__key_modifiers(WUIXAIN_PointerRoutedEventArgs *self, WSY_VirtualKeyModifiers *value);
 
-/* Windows.UI.Xaml.Input.PointerRoutedEventArgs.get_Handled() */
 HRESULT wuixain_pointer_routed_event_args_get__handled(WUIXAIN_PointerRoutedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.PointerRoutedEventArgs.put_Handled() */
 HRESULT wuixain_pointer_routed_event_args_put__handled(WUIXAIN_PointerRoutedEventArgs *self, BOOL value);
 
-/* Windows.UI.Xaml.Input.PointerRoutedEventArgs.GetCurrentPoint(relativeTo) */
 HRESULT wuixain_pointer_routed_event_args_get_current_point(WUIXAIN_PointerRoutedEventArgs *self, WUIXA_UIElement* relativeTo, WUIIN_PointerPoint** out);
 
-/* Windows.UI.Xaml.Input.PointerRoutedEventArgs.GetIntermediatePoints(relativeTo) */
 HRESULT wuixain_pointer_routed_event_args_get_intermediate_points(WUIXAIN_PointerRoutedEventArgs *self, WUIXA_UIElement* relativeTo, WFOCO_IVector_WUIIN_PointerPoint** out);
 
-/* Windows.UI.Xaml.Input.PointerRoutedEventArgs.get_IsGenerated() */
 HRESULT wuixain_pointer_routed_event_args_get__is_generated(WUIXAIN_PointerRoutedEventArgs *self, BOOL *value);
 
-/* activate Windows.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs */
 HRESULT wuixain_process_keyboard_accelerator_event_args_new(WUIXAIN_ProcessKeyboardAcceleratorEventArgs **out);
 
-/* Windows.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs */
-/* Windows.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs.get_Key() */
 HRESULT wuixain_process_keyboard_accelerator_event_args_get__key(WUIXAIN_ProcessKeyboardAcceleratorEventArgs *self, WSY_VirtualKey *value);
 
-/* Windows.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs.get_Modifiers() */
 HRESULT wuixain_process_keyboard_accelerator_event_args_get__modifiers(WUIXAIN_ProcessKeyboardAcceleratorEventArgs *self, WSY_VirtualKeyModifiers *value);
 
-/* Windows.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs.get_Handled() */
 HRESULT wuixain_process_keyboard_accelerator_event_args_get__handled(WUIXAIN_ProcessKeyboardAcceleratorEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs.put_Handled() */
 HRESULT wuixain_process_keyboard_accelerator_event_args_put__handled(WUIXAIN_ProcessKeyboardAcceleratorEventArgs *self, BOOL value);
 
-/* Windows.UI.Xaml.Input.RightTappedEventHandler */
-/* Windows.UI.Xaml.Input.RightTappedEventHandler.Invoke(sender, e) */
 HRESULT wuixain_right_tapped_event_handler_invoke(WUIXAIN_RightTappedEventHandler *self, IInspectable* sender, WUIXAIN_RightTappedRoutedEventArgs* e);
 
-/* activate Windows.UI.Xaml.Input.RightTappedRoutedEventArgs */
 HRESULT wuixain_right_tapped_routed_event_args_new(WUIXAIN_RightTappedRoutedEventArgs **out);
 
-/* Windows.UI.Xaml.Input.RightTappedRoutedEventArgs */
-/* Windows.UI.Xaml.Input.RightTappedRoutedEventArgs.get_PointerDeviceType() */
 HRESULT wuixain_right_tapped_routed_event_args_get__pointer_device_type(WUIXAIN_RightTappedRoutedEventArgs *self, WDEIN_PointerDeviceType *value);
 
-/* Windows.UI.Xaml.Input.RightTappedRoutedEventArgs.get_Handled() */
 HRESULT wuixain_right_tapped_routed_event_args_get__handled(WUIXAIN_RightTappedRoutedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.RightTappedRoutedEventArgs.put_Handled() */
 HRESULT wuixain_right_tapped_routed_event_args_put__handled(WUIXAIN_RightTappedRoutedEventArgs *self, BOOL value);
 
-/* Windows.UI.Xaml.Input.RightTappedRoutedEventArgs.GetPosition(relativeTo) */
 HRESULT wuixain_right_tapped_routed_event_args_get_position(WUIXAIN_RightTappedRoutedEventArgs *self, WUIXA_UIElement* relativeTo, WF_Point *out);
 
-/* Windows.UI.Xaml.Input.XamlUICommand */
-/* Windows.UI.Xaml.Input.XamlUICommand.get_Label() */
 HRESULT wuixain_xaml_u_i_command_get__label(WUIXAIN_XamlUICommand *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Input.XamlUICommand.put_Label() */
 HRESULT wuixain_xaml_u_i_command_put__label(WUIXAIN_XamlUICommand *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Input.XamlUICommand.get_IconSource() */
 HRESULT wuixain_xaml_u_i_command_get__icon_source(WUIXAIN_XamlUICommand *self, WUIXACO_IconSource** value);
 
-/* Windows.UI.Xaml.Input.XamlUICommand.put_IconSource() */
 HRESULT wuixain_xaml_u_i_command_put__icon_source(WUIXAIN_XamlUICommand *self, WUIXACO_IconSource* value);
 
-/* Windows.UI.Xaml.Input.XamlUICommand.get_KeyboardAccelerators() */
 HRESULT wuixain_xaml_u_i_command_get__keyboard_accelerators(WUIXAIN_XamlUICommand *self, WFOCO_IVector_WUIXAIN_KeyboardAccelerator** value);
 
-/* Windows.UI.Xaml.Input.XamlUICommand.get_AccessKey() */
 HRESULT wuixain_xaml_u_i_command_get__access_key(WUIXAIN_XamlUICommand *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Input.XamlUICommand.put_AccessKey() */
 HRESULT wuixain_xaml_u_i_command_put__access_key(WUIXAIN_XamlUICommand *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Input.XamlUICommand.get_Description() */
 HRESULT wuixain_xaml_u_i_command_get__description(WUIXAIN_XamlUICommand *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Input.XamlUICommand.put_Description() */
 HRESULT wuixain_xaml_u_i_command_put__description(WUIXAIN_XamlUICommand *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Input.XamlUICommand.get_Command() */
 HRESULT wuixain_xaml_u_i_command_get__command(WUIXAIN_XamlUICommand *self, WUIXAIN_ICommand** value);
 
-/* Windows.UI.Xaml.Input.XamlUICommand.put_Command() */
 HRESULT wuixain_xaml_u_i_command_put__command(WUIXAIN_XamlUICommand *self, WUIXAIN_ICommand* value);
 
-/* Windows.UI.Xaml.Input.XamlUICommand.NotifyCanExecuteChanged() */
 HRESULT wuixain_xaml_u_i_command_notify_can_execute_changed(WUIXAIN_XamlUICommand *self);
 
-/* Windows.UI.Xaml.Input.XamlUICommand.CanExecute(parameter) */
 HRESULT wuixain_xaml_u_i_command_can_execute(WUIXAIN_XamlUICommand *self, IInspectable* parameter, BOOL *out);
 
-/* Windows.UI.Xaml.Input.XamlUICommand.Execute(parameter) */
 HRESULT wuixain_xaml_u_i_command_execute(WUIXAIN_XamlUICommand *self, IInspectable* parameter);
 
-/* Windows.UI.Xaml.Input.XamlUICommand.get_LabelProperty() */
 HRESULT wuixain_xaml_u_i_command_get__label_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Input.XamlUICommand.get_IconSourceProperty() */
 HRESULT wuixain_xaml_u_i_command_get__icon_source_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Input.XamlUICommand.get_KeyboardAcceleratorsProperty() */
 HRESULT wuixain_xaml_u_i_command_get__keyboard_accelerators_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Input.XamlUICommand.get_AccessKeyProperty() */
 HRESULT wuixain_xaml_u_i_command_get__access_key_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Input.XamlUICommand.get_DescriptionProperty() */
 HRESULT wuixain_xaml_u_i_command_get__description_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Input.XamlUICommand.get_CommandProperty() */
 HRESULT wuixain_xaml_u_i_command_get__command_property(WUIXA_DependencyProperty** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixain_xaml_u_i_command_on_execute_requested(WUIXAIN_XamlUICommand *self, cwinrt_event_fn fn, void *ctx);
@@ -1590,216 +1359,137 @@ void wuixain_xaml_u_i_command_off_can_execute_requested(WUIXAIN_XamlUICommand *s
 cwinrt_token wuixain_xaml_u_i_command_on_can_execute_changed(WUIXAIN_XamlUICommand *self, cwinrt_event_fn fn, void *ctx);
 void wuixain_xaml_u_i_command_off_can_execute_changed(WUIXAIN_XamlUICommand *self, cwinrt_token token);
 
-/* Windows.UI.Xaml.Input.StandardUICommand */
-/* Windows.UI.Xaml.Input.StandardUICommand.get_Kind() */
 HRESULT wuixain_standard_u_i_command_get__kind(WUIXAIN_StandardUICommand *self, WUIXAIN_StandardUICommandKind *value);
 
-/* Windows.UI.Xaml.Input.StandardUICommand.put_Kind() */
 HRESULT wuixain_standard_u_i_command_put__kind(WUIXAIN_StandardUICommand *self, WUIXAIN_StandardUICommandKind value);
 
-/* Windows.UI.Xaml.Input.StandardUICommand.get_KindProperty() */
 HRESULT wuixain_standard_u_i_command_get__kind_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Input.TappedEventHandler */
-/* Windows.UI.Xaml.Input.TappedEventHandler.Invoke(sender, e) */
 HRESULT wuixain_tapped_event_handler_invoke(WUIXAIN_TappedEventHandler *self, IInspectable* sender, WUIXAIN_TappedRoutedEventArgs* e);
 
-/* activate Windows.UI.Xaml.Input.TappedRoutedEventArgs */
 HRESULT wuixain_tapped_routed_event_args_new(WUIXAIN_TappedRoutedEventArgs **out);
 
-/* Windows.UI.Xaml.Input.TappedRoutedEventArgs */
-/* Windows.UI.Xaml.Input.TappedRoutedEventArgs.get_PointerDeviceType() */
 HRESULT wuixain_tapped_routed_event_args_get__pointer_device_type(WUIXAIN_TappedRoutedEventArgs *self, WDEIN_PointerDeviceType *value);
 
-/* Windows.UI.Xaml.Input.TappedRoutedEventArgs.get_Handled() */
 HRESULT wuixain_tapped_routed_event_args_get__handled(WUIXAIN_TappedRoutedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.TappedRoutedEventArgs.put_Handled() */
 HRESULT wuixain_tapped_routed_event_args_put__handled(WUIXAIN_TappedRoutedEventArgs *self, BOOL value);
 
-/* Windows.UI.Xaml.Input.TappedRoutedEventArgs.GetPosition(relativeTo) */
 HRESULT wuixain_tapped_routed_event_args_get_position(WUIXAIN_TappedRoutedEventArgs *self, WUIXA_UIElement* relativeTo, WF_Point *out);
 
-/* activate Windows.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs */
 HRESULT wuixain_access_key_display_requested_event_args_new(WUIXAIN_AccessKeyDisplayRequestedEventArgs **out);
 
-/* Windows.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs */
-/* Windows.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs.get_PressedKeys() */
 HRESULT wuixain_access_key_display_requested_event_args_get__pressed_keys(WUIXAIN_AccessKeyDisplayRequestedEventArgs *self, cwinrt_hstring *value);
 
-/* activate Windows.UI.Xaml.Input.AccessKeyInvokedEventArgs */
 HRESULT wuixain_access_key_invoked_event_args_new(WUIXAIN_AccessKeyInvokedEventArgs **out);
 
-/* Windows.UI.Xaml.Input.AccessKeyInvokedEventArgs */
-/* Windows.UI.Xaml.Input.AccessKeyInvokedEventArgs.get_Handled() */
 HRESULT wuixain_access_key_invoked_event_args_get__handled(WUIXAIN_AccessKeyInvokedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.AccessKeyInvokedEventArgs.put_Handled() */
 HRESULT wuixain_access_key_invoked_event_args_put__handled(WUIXAIN_AccessKeyInvokedEventArgs *self, BOOL value);
 
-/* activate Windows.UI.Xaml.Input.AccessKeyManager */
 HRESULT wuixain_access_key_manager_new(WUIXAIN_AccessKeyManager **out);
 
-/* Windows.UI.Xaml.Input.AccessKeyManager */
-/* Windows.UI.Xaml.Input.AccessKeyManager.get_AreKeyTipsEnabled() */
 HRESULT wuixain_access_key_manager_get__are_key_tips_enabled(BOOL *value);
 
-/* Windows.UI.Xaml.Input.AccessKeyManager.put_AreKeyTipsEnabled() */
 HRESULT wuixain_access_key_manager_put__are_key_tips_enabled(BOOL value);
 
-/* Windows.UI.Xaml.Input.AccessKeyManager.get_IsDisplayModeEnabled() */
 HRESULT wuixain_access_key_manager_get__is_display_mode_enabled(BOOL *value);
 
-/* Windows.UI.Xaml.Input.AccessKeyManager.ExitDisplayMode() */
 HRESULT wuixain_access_key_manager_exit_display_mode(void);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixain_access_key_manager_on_is_display_mode_enabled_changed(WUIXAIN_AccessKeyManager *self, cwinrt_event_fn fn, void *ctx);
 void wuixain_access_key_manager_off_is_display_mode_enabled_changed(WUIXAIN_AccessKeyManager *self, cwinrt_token token);
 
-/* activate Windows.UI.Xaml.Input.CanExecuteRequestedEventArgs */
 HRESULT wuixain_can_execute_requested_event_args_new(WUIXAIN_CanExecuteRequestedEventArgs **out);
 
-/* Windows.UI.Xaml.Input.CanExecuteRequestedEventArgs */
-/* Windows.UI.Xaml.Input.CanExecuteRequestedEventArgs.get_Parameter() */
 HRESULT wuixain_can_execute_requested_event_args_get__parameter(WUIXAIN_CanExecuteRequestedEventArgs *self, IInspectable** value);
 
-/* Windows.UI.Xaml.Input.CanExecuteRequestedEventArgs.get_CanExecute() */
 HRESULT wuixain_can_execute_requested_event_args_get__can_execute(WUIXAIN_CanExecuteRequestedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.CanExecuteRequestedEventArgs.put_CanExecute() */
 HRESULT wuixain_can_execute_requested_event_args_put__can_execute(WUIXAIN_CanExecuteRequestedEventArgs *self, BOOL value);
 
-/* activate Windows.UI.Xaml.Input.CharacterReceivedRoutedEventArgs */
 HRESULT wuixain_character_received_routed_event_args_new(WUIXAIN_CharacterReceivedRoutedEventArgs **out);
 
-/* Windows.UI.Xaml.Input.CharacterReceivedRoutedEventArgs */
-/* Windows.UI.Xaml.Input.CharacterReceivedRoutedEventArgs.get_Character() */
 HRESULT wuixain_character_received_routed_event_args_get__character(WUIXAIN_CharacterReceivedRoutedEventArgs *self, WCHAR *value);
 
-/* Windows.UI.Xaml.Input.CharacterReceivedRoutedEventArgs.get_KeyStatus() */
 HRESULT wuixain_character_received_routed_event_args_get__key_status(WUIXAIN_CharacterReceivedRoutedEventArgs *self, WUICO_CorePhysicalKeyStatus *value);
 
-/* Windows.UI.Xaml.Input.CharacterReceivedRoutedEventArgs.get_Handled() */
 HRESULT wuixain_character_received_routed_event_args_get__handled(WUIXAIN_CharacterReceivedRoutedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.CharacterReceivedRoutedEventArgs.put_Handled() */
 HRESULT wuixain_character_received_routed_event_args_put__handled(WUIXAIN_CharacterReceivedRoutedEventArgs *self, BOOL value);
 
-/* activate Windows.UI.Xaml.Input.ContextRequestedEventArgs */
 HRESULT wuixain_context_requested_event_args_new(WUIXAIN_ContextRequestedEventArgs **out);
 
-/* Windows.UI.Xaml.Input.ContextRequestedEventArgs */
-/* Windows.UI.Xaml.Input.ContextRequestedEventArgs.get_Handled() */
 HRESULT wuixain_context_requested_event_args_get__handled(WUIXAIN_ContextRequestedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.ContextRequestedEventArgs.put_Handled() */
 HRESULT wuixain_context_requested_event_args_put__handled(WUIXAIN_ContextRequestedEventArgs *self, BOOL value);
 
-/* Windows.UI.Xaml.Input.ContextRequestedEventArgs.TryGetPosition(relativeTo, point) */
 HRESULT wuixain_context_requested_event_args_try_get_position(WUIXAIN_ContextRequestedEventArgs *self, WUIXA_UIElement* relativeTo, WF_Point point, BOOL *out);
 
-/* Windows.UI.Xaml.Input.DoubleTappedEventHandler */
-/* Windows.UI.Xaml.Input.DoubleTappedEventHandler.Invoke(sender, e) */
 HRESULT wuixain_double_tapped_event_handler_invoke(WUIXAIN_DoubleTappedEventHandler *self, IInspectable* sender, WUIXAIN_DoubleTappedRoutedEventArgs* e);
 
-/* activate Windows.UI.Xaml.Input.DoubleTappedRoutedEventArgs */
 HRESULT wuixain_double_tapped_routed_event_args_new(WUIXAIN_DoubleTappedRoutedEventArgs **out);
 
-/* Windows.UI.Xaml.Input.DoubleTappedRoutedEventArgs */
-/* Windows.UI.Xaml.Input.DoubleTappedRoutedEventArgs.get_PointerDeviceType() */
 HRESULT wuixain_double_tapped_routed_event_args_get__pointer_device_type(WUIXAIN_DoubleTappedRoutedEventArgs *self, WDEIN_PointerDeviceType *value);
 
-/* Windows.UI.Xaml.Input.DoubleTappedRoutedEventArgs.get_Handled() */
 HRESULT wuixain_double_tapped_routed_event_args_get__handled(WUIXAIN_DoubleTappedRoutedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.DoubleTappedRoutedEventArgs.put_Handled() */
 HRESULT wuixain_double_tapped_routed_event_args_put__handled(WUIXAIN_DoubleTappedRoutedEventArgs *self, BOOL value);
 
-/* Windows.UI.Xaml.Input.DoubleTappedRoutedEventArgs.GetPosition(relativeTo) */
 HRESULT wuixain_double_tapped_routed_event_args_get_position(WUIXAIN_DoubleTappedRoutedEventArgs *self, WUIXA_UIElement* relativeTo, WF_Point *out);
 
-/* activate Windows.UI.Xaml.Input.ExecuteRequestedEventArgs */
 HRESULT wuixain_execute_requested_event_args_new(WUIXAIN_ExecuteRequestedEventArgs **out);
 
-/* Windows.UI.Xaml.Input.ExecuteRequestedEventArgs */
-/* Windows.UI.Xaml.Input.ExecuteRequestedEventArgs.get_Parameter() */
 HRESULT wuixain_execute_requested_event_args_get__parameter(WUIXAIN_ExecuteRequestedEventArgs *self, IInspectable** value);
 
-/* activate Windows.UI.Xaml.Input.FindNextElementOptions */
 HRESULT wuixain_find_next_element_options_new(WUIXAIN_FindNextElementOptions **out);
 
-/* Windows.UI.Xaml.Input.FindNextElementOptions */
-/* Windows.UI.Xaml.Input.FindNextElementOptions.get_SearchRoot() */
 HRESULT wuixain_find_next_element_options_get__search_root(WUIXAIN_FindNextElementOptions *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Input.FindNextElementOptions.put_SearchRoot() */
 HRESULT wuixain_find_next_element_options_put__search_root(WUIXAIN_FindNextElementOptions *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.Input.FindNextElementOptions.get_ExclusionRect() */
 HRESULT wuixain_find_next_element_options_get__exclusion_rect(WUIXAIN_FindNextElementOptions *self, WF_Rect *value);
 
-/* Windows.UI.Xaml.Input.FindNextElementOptions.put_ExclusionRect() */
 HRESULT wuixain_find_next_element_options_put__exclusion_rect(WUIXAIN_FindNextElementOptions *self, WF_Rect value);
 
-/* Windows.UI.Xaml.Input.FindNextElementOptions.get_HintRect() */
 HRESULT wuixain_find_next_element_options_get__hint_rect(WUIXAIN_FindNextElementOptions *self, WF_Rect *value);
 
-/* Windows.UI.Xaml.Input.FindNextElementOptions.put_HintRect() */
 HRESULT wuixain_find_next_element_options_put__hint_rect(WUIXAIN_FindNextElementOptions *self, WF_Rect value);
 
-/* Windows.UI.Xaml.Input.FindNextElementOptions.get_XYFocusNavigationStrategyOverride() */
 HRESULT wuixain_find_next_element_options_get__x_y_focus_navigation_strategy_override(WUIXAIN_FindNextElementOptions *self, WUIXAIN_XYFocusNavigationStrategyOverride *value);
 
-/* Windows.UI.Xaml.Input.FindNextElementOptions.put_XYFocusNavigationStrategyOverride() */
 HRESULT wuixain_find_next_element_options_put__x_y_focus_navigation_strategy_override(WUIXAIN_FindNextElementOptions *self, WUIXAIN_XYFocusNavigationStrategyOverride value);
 
-/* activate Windows.UI.Xaml.Input.FocusManager */
 HRESULT wuixain_focus_manager_new(WUIXAIN_FocusManager **out);
 
-/* Windows.UI.Xaml.Input.FocusManager */
-/* Windows.UI.Xaml.Input.FocusManager.GetFocusedElement(xamlRoot) */
 HRESULT wuixain_focus_manager_get_focused_element_p_p(WUIXA_XamlRoot* xamlRoot, IInspectable** out);
 
-/* Windows.UI.Xaml.Input.FocusManager.TryFocusAsync(element) */
 HRESULT wuixain_focus_manager_try_focus_async(WUIXA_DependencyObject* element, WUIXA_FocusState value, WF_IAsyncOperation_WUIXAIN_FocusMovementResult** out);
 
-/* Windows.UI.Xaml.Input.FocusManager.TryMoveFocusAsync(focusNavigationDirection) */
 HRESULT wuixain_focus_manager_try_move_focus_async(WUIXAIN_FocusNavigationDirection focusNavigationDirection, WF_IAsyncOperation_WUIXAIN_FocusMovementResult** out);
 
-/* Windows.UI.Xaml.Input.FocusManager.TryMoveFocusAsync(focusNavigationDirection, focusNavigationOptions) */
 HRESULT wuixain_focus_manager_try_move_focus_async_focus_navigation_direction_p_p(WUIXAIN_FocusNavigationDirection focusNavigationDirection, WUIXAIN_FindNextElementOptions* focusNavigationOptions, WF_IAsyncOperation_WUIXAIN_FocusMovementResult** out);
 
-/* Windows.UI.Xaml.Input.FocusManager.TryMoveFocus(focusNavigationDirection, focusNavigationOptions) */
 HRESULT wuixain_focus_manager_try_move_focus_focus_navigation_direction_p_b(WUIXAIN_FocusNavigationDirection focusNavigationDirection, WUIXAIN_FindNextElementOptions* focusNavigationOptions, BOOL *out);
 
-/* Windows.UI.Xaml.Input.FocusManager.FindNextElement(focusNavigationDirection) */
 HRESULT wuixain_focus_manager_find_next_element(WUIXAIN_FocusNavigationDirection focusNavigationDirection, WUIXA_DependencyObject** out);
 
-/* Windows.UI.Xaml.Input.FocusManager.FindFirstFocusableElement(searchScope) */
 HRESULT wuixain_focus_manager_find_first_focusable_element(WUIXA_DependencyObject* searchScope, WUIXA_DependencyObject** out);
 
-/* Windows.UI.Xaml.Input.FocusManager.FindLastFocusableElement(searchScope) */
 HRESULT wuixain_focus_manager_find_last_focusable_element(WUIXA_DependencyObject* searchScope, WUIXA_DependencyObject** out);
 
-/* Windows.UI.Xaml.Input.FocusManager.FindNextElement(focusNavigationDirection, focusNavigationOptions) */
 HRESULT wuixain_focus_manager_find_next_element_focus_navigation_direction_p_p(WUIXAIN_FocusNavigationDirection focusNavigationDirection, WUIXAIN_FindNextElementOptions* focusNavigationOptions, WUIXA_DependencyObject** out);
 
-/* Windows.UI.Xaml.Input.FocusManager.FindNextFocusableElement(focusNavigationDirection) */
 HRESULT wuixain_focus_manager_find_next_focusable_element(WUIXAIN_FocusNavigationDirection focusNavigationDirection, WUIXA_UIElement** out);
 
-/* Windows.UI.Xaml.Input.FocusManager.FindNextFocusableElement(focusNavigationDirection, hintRect) */
 HRESULT wuixain_focus_manager_find_next_focusable_element_focus_navigation_direction_rect_p(WUIXAIN_FocusNavigationDirection focusNavigationDirection, WF_Rect hintRect, WUIXA_UIElement** out);
 
-/* Windows.UI.Xaml.Input.FocusManager.TryMoveFocus(focusNavigationDirection) */
 HRESULT wuixain_focus_manager_try_move_focus(WUIXAIN_FocusNavigationDirection focusNavigationDirection, BOOL *out);
 
-/* Windows.UI.Xaml.Input.FocusManager.GetFocusedElement() */
 HRESULT wuixain_focus_manager_get_focused_element(IInspectable** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixain_focus_manager_on_got_focus(WUIXAIN_FocusManager *self, cwinrt_event_fn fn, void *ctx);
@@ -1814,246 +1504,124 @@ void wuixain_focus_manager_off_getting_focus(WUIXAIN_FocusManager *self, cwinrt_
 cwinrt_token wuixain_focus_manager_on_losing_focus(WUIXAIN_FocusManager *self, cwinrt_event_fn fn, void *ctx);
 void wuixain_focus_manager_off_losing_focus(WUIXAIN_FocusManager *self, cwinrt_token token);
 
-/* activate Windows.UI.Xaml.Input.FocusManagerGotFocusEventArgs */
 HRESULT wuixain_focus_manager_got_focus_event_args_new(WUIXAIN_FocusManagerGotFocusEventArgs **out);
 
-/* Windows.UI.Xaml.Input.FocusManagerGotFocusEventArgs */
-/* Windows.UI.Xaml.Input.FocusManagerGotFocusEventArgs.get_NewFocusedElement() */
 HRESULT wuixain_focus_manager_got_focus_event_args_get__new_focused_element(WUIXAIN_FocusManagerGotFocusEventArgs *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Input.FocusManagerGotFocusEventArgs.get_CorrelationId() */
 HRESULT wuixain_focus_manager_got_focus_event_args_get__correlation_id(WUIXAIN_FocusManagerGotFocusEventArgs *self, GUID *value);
 
-/* Windows.UI.Xaml.Input.IInputScopeNameFactory */
-/* Windows.UI.Xaml.Input.IInputScopeNameFactory.CreateInstance(nameValue) */
 HRESULT wuixain_input_scope_name_factory_create_instance(WUIXAIN_IInputScopeNameFactory *self, WUIXAIN_InputScopeNameValue nameValue, WUIXAIN_InputScopeName** out);
 
-/* activate Windows.UI.Xaml.Input.FocusManagerLostFocusEventArgs */
 HRESULT wuixain_focus_manager_lost_focus_event_args_new(WUIXAIN_FocusManagerLostFocusEventArgs **out);
 
-/* Windows.UI.Xaml.Input.FocusManagerLostFocusEventArgs */
-/* Windows.UI.Xaml.Input.FocusManagerLostFocusEventArgs.get_OldFocusedElement() */
 HRESULT wuixain_focus_manager_lost_focus_event_args_get__old_focused_element(WUIXAIN_FocusManagerLostFocusEventArgs *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Input.FocusManagerLostFocusEventArgs.get_CorrelationId() */
 HRESULT wuixain_focus_manager_lost_focus_event_args_get__correlation_id(WUIXAIN_FocusManagerLostFocusEventArgs *self, GUID *value);
 
-/* activate Windows.UI.Xaml.Input.FocusMovementResult */
 HRESULT wuixain_focus_movement_result_new(WUIXAIN_FocusMovementResult **out);
 
-/* Windows.UI.Xaml.Input.FocusMovementResult */
-/* Windows.UI.Xaml.Input.FocusMovementResult.get_Succeeded() */
 HRESULT wuixain_focus_movement_result_get__succeeded(WUIXAIN_FocusMovementResult *self, BOOL *value);
 
-/* activate Windows.UI.Xaml.Input.GettingFocusEventArgs */
 HRESULT wuixain_getting_focus_event_args_new(WUIXAIN_GettingFocusEventArgs **out);
 
-/* Windows.UI.Xaml.Input.GettingFocusEventArgs */
-/* Windows.UI.Xaml.Input.GettingFocusEventArgs.get_OldFocusedElement() */
 HRESULT wuixain_getting_focus_event_args_get__old_focused_element(WUIXAIN_GettingFocusEventArgs *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Input.GettingFocusEventArgs.get_NewFocusedElement() */
 HRESULT wuixain_getting_focus_event_args_get__new_focused_element(WUIXAIN_GettingFocusEventArgs *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Input.GettingFocusEventArgs.put_NewFocusedElement() */
 HRESULT wuixain_getting_focus_event_args_put__new_focused_element(WUIXAIN_GettingFocusEventArgs *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.Input.GettingFocusEventArgs.get_FocusState() */
 HRESULT wuixain_getting_focus_event_args_get__focus_state(WUIXAIN_GettingFocusEventArgs *self, WUIXA_FocusState *value);
 
-/* Windows.UI.Xaml.Input.GettingFocusEventArgs.get_Direction() */
 HRESULT wuixain_getting_focus_event_args_get__direction(WUIXAIN_GettingFocusEventArgs *self, WUIXAIN_FocusNavigationDirection *value);
 
-/* Windows.UI.Xaml.Input.GettingFocusEventArgs.get_Handled() */
 HRESULT wuixain_getting_focus_event_args_get__handled(WUIXAIN_GettingFocusEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.GettingFocusEventArgs.put_Handled() */
 HRESULT wuixain_getting_focus_event_args_put__handled(WUIXAIN_GettingFocusEventArgs *self, BOOL value);
 
-/* Windows.UI.Xaml.Input.GettingFocusEventArgs.get_InputDevice() */
 HRESULT wuixain_getting_focus_event_args_get__input_device(WUIXAIN_GettingFocusEventArgs *self, WUIXAIN_FocusInputDeviceKind *value);
 
-/* Windows.UI.Xaml.Input.GettingFocusEventArgs.get_Cancel() */
 HRESULT wuixain_getting_focus_event_args_get__cancel(WUIXAIN_GettingFocusEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.GettingFocusEventArgs.put_Cancel() */
 HRESULT wuixain_getting_focus_event_args_put__cancel(WUIXAIN_GettingFocusEventArgs *self, BOOL value);
 
-/* Windows.UI.Xaml.Input.GettingFocusEventArgs.TryCancel() */
 HRESULT wuixain_getting_focus_event_args_try_cancel(WUIXAIN_GettingFocusEventArgs *self, BOOL *out);
 
-/* Windows.UI.Xaml.Input.GettingFocusEventArgs.TrySetNewFocusedElement(element) */
 HRESULT wuixain_getting_focus_event_args_try_set_new_focused_element(WUIXAIN_GettingFocusEventArgs *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Input.GettingFocusEventArgs.get_CorrelationId() */
 HRESULT wuixain_getting_focus_event_args_get__correlation_id(WUIXAIN_GettingFocusEventArgs *self, GUID *value);
 
-/* Windows.UI.Xaml.Input.HoldingEventHandler */
-/* Windows.UI.Xaml.Input.HoldingEventHandler.Invoke(sender, e) */
 HRESULT wuixain_holding_event_handler_invoke(WUIXAIN_HoldingEventHandler *self, IInspectable* sender, WUIXAIN_HoldingRoutedEventArgs* e);
 
-/* activate Windows.UI.Xaml.Input.HoldingRoutedEventArgs */
 HRESULT wuixain_holding_routed_event_args_new(WUIXAIN_HoldingRoutedEventArgs **out);
 
-/* Windows.UI.Xaml.Input.HoldingRoutedEventArgs */
-/* Windows.UI.Xaml.Input.HoldingRoutedEventArgs.get_PointerDeviceType() */
 HRESULT wuixain_holding_routed_event_args_get__pointer_device_type(WUIXAIN_HoldingRoutedEventArgs *self, WDEIN_PointerDeviceType *value);
 
-/* Windows.UI.Xaml.Input.HoldingRoutedEventArgs.get_HoldingState() */
 HRESULT wuixain_holding_routed_event_args_get__holding_state(WUIXAIN_HoldingRoutedEventArgs *self, WUIIN_HoldingState *value);
 
-/* Windows.UI.Xaml.Input.HoldingRoutedEventArgs.get_Handled() */
 HRESULT wuixain_holding_routed_event_args_get__handled(WUIXAIN_HoldingRoutedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.HoldingRoutedEventArgs.put_Handled() */
 HRESULT wuixain_holding_routed_event_args_put__handled(WUIXAIN_HoldingRoutedEventArgs *self, BOOL value);
 
-/* Windows.UI.Xaml.Input.HoldingRoutedEventArgs.GetPosition(relativeTo) */
 HRESULT wuixain_holding_routed_event_args_get_position(WUIXAIN_HoldingRoutedEventArgs *self, WUIXA_UIElement* relativeTo, WF_Point *out);
 
-/* Windows.UI.Xaml.Input.IAccessKeyManagerStatics */
-/* Windows.UI.Xaml.Input.IAccessKeyManagerStatics.get_IsDisplayModeEnabled() */
 HRESULT wuixain_access_key_manager_statics_get__is_display_mode_enabled(WUIXAIN_IAccessKeyManagerStatics *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.IAccessKeyManagerStatics.ExitDisplayMode() */
 HRESULT wuixain_access_key_manager_statics_exit_display_mode(WUIXAIN_IAccessKeyManagerStatics *self);
 
-/* Windows.UI.Xaml.Input.IAccessKeyManagerStatics2 */
-/* Windows.UI.Xaml.Input.IAccessKeyManagerStatics2.get_AreKeyTipsEnabled() */
 HRESULT wuixain_access_key_manager_statics_2_get__are_key_tips_enabled(WUIXAIN_IAccessKeyManagerStatics_2 *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.IAccessKeyManagerStatics2.put_AreKeyTipsEnabled() */
 HRESULT wuixain_access_key_manager_statics_2_put__are_key_tips_enabled(WUIXAIN_IAccessKeyManagerStatics_2 *self, BOOL value);
 
-/* Windows.UI.Xaml.Input.IFocusManagerStatics */
-/* Windows.UI.Xaml.Input.IFocusManagerStatics.GetFocusedElement() */
 HRESULT wuixain_focus_manager_statics_get_focused_element(WUIXAIN_IFocusManagerStatics *self, IInspectable** out);
 
-/* Windows.UI.Xaml.Input.IFocusManagerStatics2 */
-/* Windows.UI.Xaml.Input.IFocusManagerStatics2.TryMoveFocus(focusNavigationDirection) */
 HRESULT wuixain_focus_manager_statics_2_try_move_focus(WUIXAIN_IFocusManagerStatics_2 *self, WUIXAIN_FocusNavigationDirection focusNavigationDirection, BOOL *out);
 
-/* Windows.UI.Xaml.Input.IFocusManagerStatics3 */
-/* Windows.UI.Xaml.Input.IFocusManagerStatics3.FindNextFocusableElement(focusNavigationDirection) */
 HRESULT wuixain_focus_manager_statics_3_find_next_focusable_element(WUIXAIN_IFocusManagerStatics_3 *self, WUIXAIN_FocusNavigationDirection focusNavigationDirection, WUIXA_UIElement** out);
 
-/* Windows.UI.Xaml.Input.IFocusManagerStatics3.FindNextFocusableElement(focusNavigationDirection, hintRect) */
 HRESULT wuixain_focus_manager_statics_3_find_next_focusable_element_focus_navigation_direction_rect_p(WUIXAIN_IFocusManagerStatics_3 *self, WUIXAIN_FocusNavigationDirection focusNavigationDirection, WF_Rect hintRect, WUIXA_UIElement** out);
 
-/* Windows.UI.Xaml.Input.IFocusManagerStatics4 */
-/* Windows.UI.Xaml.Input.IFocusManagerStatics4.TryMoveFocus(focusNavigationDirection, focusNavigationOptions) */
 HRESULT wuixain_focus_manager_statics_4_try_move_focus(WUIXAIN_IFocusManagerStatics_4 *self, WUIXAIN_FocusNavigationDirection focusNavigationDirection, WUIXAIN_FindNextElementOptions* focusNavigationOptions, BOOL *out);
 
-/* Windows.UI.Xaml.Input.IFocusManagerStatics4.FindNextElement(focusNavigationDirection) */
 HRESULT wuixain_focus_manager_statics_4_find_next_element(WUIXAIN_IFocusManagerStatics_4 *self, WUIXAIN_FocusNavigationDirection focusNavigationDirection, WUIXA_DependencyObject** out);
 
-/* Windows.UI.Xaml.Input.IFocusManagerStatics4.FindFirstFocusableElement(searchScope) */
 HRESULT wuixain_focus_manager_statics_4_find_first_focusable_element(WUIXAIN_IFocusManagerStatics_4 *self, WUIXA_DependencyObject* searchScope, WUIXA_DependencyObject** out);
 
-/* Windows.UI.Xaml.Input.IFocusManagerStatics4.FindLastFocusableElement(searchScope) */
 HRESULT wuixain_focus_manager_statics_4_find_last_focusable_element(WUIXAIN_IFocusManagerStatics_4 *self, WUIXA_DependencyObject* searchScope, WUIXA_DependencyObject** out);
 
-/* Windows.UI.Xaml.Input.IFocusManagerStatics4.FindNextElement(focusNavigationDirection, focusNavigationOptions) */
 HRESULT wuixain_focus_manager_statics_4_find_next_element_focus_navigation_direction_p_p(WUIXAIN_IFocusManagerStatics_4 *self, WUIXAIN_FocusNavigationDirection focusNavigationDirection, WUIXAIN_FindNextElementOptions* focusNavigationOptions, WUIXA_DependencyObject** out);
 
-/* Windows.UI.Xaml.Input.IFocusManagerStatics5 */
-/* Windows.UI.Xaml.Input.IFocusManagerStatics5.TryFocusAsync(element) */
 HRESULT wuixain_focus_manager_statics_5_try_focus_async(WUIXAIN_IFocusManagerStatics_5 *self, WUIXA_DependencyObject* element, WUIXA_FocusState value, WF_IAsyncOperation_WUIXAIN_FocusMovementResult** out);
 
-/* Windows.UI.Xaml.Input.IFocusManagerStatics5.TryMoveFocusAsync(focusNavigationDirection) */
 HRESULT wuixain_focus_manager_statics_5_try_move_focus_async(WUIXAIN_IFocusManagerStatics_5 *self, WUIXAIN_FocusNavigationDirection focusNavigationDirection, WF_IAsyncOperation_WUIXAIN_FocusMovementResult** out);
 
-/* Windows.UI.Xaml.Input.IFocusManagerStatics5.TryMoveFocusAsync(focusNavigationDirection, focusNavigationOptions) */
 HRESULT wuixain_focus_manager_statics_5_try_move_focus_async_focus_navigation_direction_p_p(WUIXAIN_IFocusManagerStatics_5 *self, WUIXAIN_FocusNavigationDirection focusNavigationDirection, WUIXAIN_FindNextElementOptions* focusNavigationOptions, WF_IAsyncOperation_WUIXAIN_FocusMovementResult** out);
 
-/* Windows.UI.Xaml.Input.IFocusManagerStatics6 */
-/* Windows.UI.Xaml.Input.IFocusManagerStatics7 */
-/* Windows.UI.Xaml.Input.IFocusManagerStatics7.GetFocusedElement(xamlRoot) */
 HRESULT wuixain_focus_manager_statics_7_get_focused_element(WUIXAIN_IFocusManagerStatics_7 *self, WUIXA_XamlRoot* xamlRoot, IInspectable** out);
 
-/* Windows.UI.Xaml.Input.IInertiaExpansionBehavior */
-/* Windows.UI.Xaml.Input.IInertiaRotationBehavior */
-/* Windows.UI.Xaml.Input.IInertiaTranslationBehavior */
-/* Windows.UI.Xaml.Input.IInputScope */
-/* Windows.UI.Xaml.Input.IInputScopeName */
-/* Windows.UI.Xaml.Input.IKeyRoutedEventArgs */
-/* Windows.UI.Xaml.Input.IKeyRoutedEventArgs2 */
-/* Windows.UI.Xaml.Input.IKeyRoutedEventArgs2.get_OriginalKey() */
 HRESULT wuixain_key_routed_event_args_2_get__original_key(WUIXAIN_IKeyRoutedEventArgs_2 *self, WSY_VirtualKey *value);
 
-/* Windows.UI.Xaml.Input.IKeyRoutedEventArgs3 */
-/* Windows.UI.Xaml.Input.IKeyRoutedEventArgs3.get_DeviceId() */
 HRESULT wuixain_key_routed_event_args_3_get__device_id(WUIXAIN_IKeyRoutedEventArgs_3 *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Input.IKeyboardAccelerator */
-/* Windows.UI.Xaml.Input.IKeyboardAcceleratorInvokedEventArgs */
-/* Windows.UI.Xaml.Input.IKeyboardAcceleratorInvokedEventArgs2 */
-/* Windows.UI.Xaml.Input.IKeyboardAcceleratorInvokedEventArgs2.get_KeyboardAccelerator() */
 HRESULT wuixain_keyboard_accelerator_invoked_event_args_2_get__keyboard_accelerator(WUIXAIN_IKeyboardAcceleratorInvokedEventArgs_2 *self, WUIXAIN_KeyboardAccelerator** value);
 
-/* Windows.UI.Xaml.Input.ILosingFocusEventArgs */
-/* Windows.UI.Xaml.Input.ILosingFocusEventArgs2 */
-/* Windows.UI.Xaml.Input.ILosingFocusEventArgs2.TryCancel() */
 HRESULT wuixain_losing_focus_event_args_2_try_cancel(WUIXAIN_ILosingFocusEventArgs_2 *self, BOOL *out);
 
-/* Windows.UI.Xaml.Input.ILosingFocusEventArgs2.TrySetNewFocusedElement(element) */
 HRESULT wuixain_losing_focus_event_args_2_try_set_new_focused_element(WUIXAIN_ILosingFocusEventArgs_2 *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Input.ILosingFocusEventArgs3 */
-/* Windows.UI.Xaml.Input.ILosingFocusEventArgs3.get_CorrelationId() */
 HRESULT wuixain_losing_focus_event_args_3_get__correlation_id(WUIXAIN_ILosingFocusEventArgs_3 *self, GUID *value);
 
-/* Windows.UI.Xaml.Input.IManipulationCompletedRoutedEventArgs */
-/* Windows.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs */
-/* Windows.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs */
-/* Windows.UI.Xaml.Input.IManipulationPivot */
-/* Windows.UI.Xaml.Input.IManipulationStartedRoutedEventArgs */
-/* Windows.UI.Xaml.Input.IManipulationStartingRoutedEventArgs */
-/* Windows.UI.Xaml.Input.INoFocusCandidateFoundEventArgs */
-/* Windows.UI.Xaml.Input.IPointer */
-/* Windows.UI.Xaml.Input.IPointerRoutedEventArgs */
-/* Windows.UI.Xaml.Input.IPointerRoutedEventArgs2 */
-/* Windows.UI.Xaml.Input.IPointerRoutedEventArgs2.get_IsGenerated() */
 HRESULT wuixain_pointer_routed_event_args_2_get__is_generated(WUIXAIN_IPointerRoutedEventArgs_2 *self, BOOL *value);
 
-/* Windows.UI.Xaml.Input.IProcessKeyboardAcceleratorEventArgs */
-/* Windows.UI.Xaml.Input.IRightTappedRoutedEventArgs */
-/* Windows.UI.Xaml.Input.IXamlUICommand */
-/* Windows.UI.Xaml.Input.ICommand */
-/* Windows.UI.Xaml.Input.ICommand.CanExecute(parameter) */
 HRESULT wuixain_command_can_execute(WUIXAIN_ICommand *self, IInspectable* parameter, BOOL *out);
 
-/* Windows.UI.Xaml.Input.ICommand.Execute(parameter) */
 HRESULT wuixain_command_execute(WUIXAIN_ICommand *self, IInspectable* parameter);
 
-/* Windows.UI.Xaml.Input.IStandardUICommand */
-/* Windows.UI.Xaml.Input.IStandardUICommand2 */
-/* Windows.UI.Xaml.Input.IStandardUICommand2.put_Kind() */
 HRESULT wuixain_standard_u_i_command_2_put__kind(WUIXAIN_IStandardUICommand_2 *self, WUIXAIN_StandardUICommandKind value);
 
-/* Windows.UI.Xaml.Input.ITappedRoutedEventArgs */
-/* Windows.UI.Xaml.Input.IAccessKeyDisplayRequestedEventArgs */
-/* Windows.UI.Xaml.Input.IAccessKeyInvokedEventArgs */
-/* Windows.UI.Xaml.Input.ICanExecuteRequestedEventArgs */
-/* Windows.UI.Xaml.Input.ICharacterReceivedRoutedEventArgs */
-/* Windows.UI.Xaml.Input.IContextRequestedEventArgs */
-/* Windows.UI.Xaml.Input.IDoubleTappedRoutedEventArgs */
-/* Windows.UI.Xaml.Input.IExecuteRequestedEventArgs */
-/* Windows.UI.Xaml.Input.IFindNextElementOptions */
-/* Windows.UI.Xaml.Input.IFocusManagerGotFocusEventArgs */
-/* Windows.UI.Xaml.Input.IFocusManagerLostFocusEventArgs */
-/* Windows.UI.Xaml.Input.IFocusMovementResult */
-/* Windows.UI.Xaml.Input.IGettingFocusEventArgs */
-/* Windows.UI.Xaml.Input.IGettingFocusEventArgs2 */
-/* Windows.UI.Xaml.Input.IGettingFocusEventArgs2.TryCancel() */
 HRESULT wuixain_getting_focus_event_args_2_try_cancel(WUIXAIN_IGettingFocusEventArgs_2 *self, BOOL *out);
 
-/* Windows.UI.Xaml.Input.IGettingFocusEventArgs2.TrySetNewFocusedElement(element) */
 HRESULT wuixain_getting_focus_event_args_2_try_set_new_focused_element(WUIXAIN_IGettingFocusEventArgs_2 *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Input.IGettingFocusEventArgs3 */
-/* Windows.UI.Xaml.Input.IGettingFocusEventArgs3.get_CorrelationId() */
 HRESULT wuixain_getting_focus_event_args_3_get__correlation_id(WUIXAIN_IGettingFocusEventArgs_3 *self, GUID *value);
 
-/* Windows.UI.Xaml.Input.IHoldingRoutedEventArgs */
 #endif /* CWINRT_WINDOWS_UI_XAML_INPUT_H */

@@ -12,19 +12,16 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WUIAC_ScreenReaderPositionChangedEventArgs WUIAC_ScreenReaderPositionChangedEventArgs;
 typedef struct WUIAC_ScreenReaderService WUIAC_ScreenReaderService;
 typedef struct WUIAC_IScreenReaderPositionChangedEventArgs WUIAC_IScreenReaderPositionChangedEventArgs;
 typedef struct WUIAC_IScreenReaderService WUIAC_IScreenReaderService;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_TypedEventHandler_WUIAC_ScreenReaderService_WUIAC_ScreenReaderPositionChangedEventArgs
 #define CWINRT_FWD_WF_TypedEventHandler_WUIAC_ScreenReaderService_WUIAC_ScreenReaderPositionChangedEventArgs
 typedef struct WF_TypedEventHandler_WUIAC_ScreenReaderService_WUIAC_ScreenReaderPositionChangedEventArgs WF_TypedEventHandler_WUIAC_ScreenReaderService_WUIAC_ScreenReaderPositionChangedEventArgs;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -37,31 +34,19 @@ static const IID CWINRT_IID_WUIAC_IScreenReaderPositionChangedEventArgs CWINRT_M
 static const IID CWINRT_IID_WUIAC_IScreenReaderService CWINRT_MAYBE_UNUSED = { 0x19475427, 0xEAC0, 0x50D3, { 0xBD, 0xD9, 0x9B, 0x48, 0x7A, 0x22, 0x62, 0x56 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.UI.Accessibility.ScreenReaderPositionChangedEventArgs */
 HRESULT wuiac_screen_reader_position_changed_event_args_new(WUIAC_ScreenReaderPositionChangedEventArgs **out);
 
-/* Windows.UI.Accessibility.ScreenReaderPositionChangedEventArgs */
-/* Windows.UI.Accessibility.ScreenReaderPositionChangedEventArgs.get_ScreenPositionInRawPixels() */
 HRESULT wuiac_screen_reader_position_changed_event_args_get__screen_position_in_raw_pixels(WUIAC_ScreenReaderPositionChangedEventArgs *self, WF_Rect *value);
 
-/* Windows.UI.Accessibility.ScreenReaderPositionChangedEventArgs.get_IsReadingText() */
 HRESULT wuiac_screen_reader_position_changed_event_args_get__is_reading_text(WUIAC_ScreenReaderPositionChangedEventArgs *self, BOOL *value);
 
-/* activate Windows.UI.Accessibility.ScreenReaderService */
 HRESULT wuiac_screen_reader_service_new(WUIAC_ScreenReaderService **out);
 
-/* Windows.UI.Accessibility.ScreenReaderService */
-/* Windows.UI.Accessibility.ScreenReaderService.get_CurrentScreenReaderPosition() */
 HRESULT wuiac_screen_reader_service_get__current_screen_reader_position(WUIAC_ScreenReaderService *self, WUIAC_ScreenReaderPositionChangedEventArgs** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiac_screen_reader_service_on_screen_reader_position_changed(WUIAC_ScreenReaderService *self, cwinrt_event_fn fn, void *ctx);
 void wuiac_screen_reader_service_off_screen_reader_position_changed(WUIAC_ScreenReaderService *self, cwinrt_token token);
 
-/* Windows.UI.Accessibility.IScreenReaderPositionChangedEventArgs */
-/* Windows.UI.Accessibility.IScreenReaderService */
 #endif /* CWINRT_WINDOWS_UI_ACCESSIBILITY_H */

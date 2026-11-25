@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.UI.Text.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WUIVI_UIElementType
 #define CWINRT_FWD_WUIVI_UIElementType
 typedef enum WUIVI_UIElementType {
@@ -51,7 +50,6 @@ typedef enum WUIVI_UIElementType {
 typedef struct WGL_Language WGL_Language;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUITECO_ICoreTextServicesStatics WUITECO_ICoreTextServicesStatics;
 typedef struct WUITECO_ICoreTextServicesManagerStatics WUITECO_ICoreTextServicesManagerStatics;
 typedef struct WUITECO_CoreTextTextUpdatingEventArgs WUITECO_CoreTextTextUpdatingEventArgs;
@@ -88,7 +86,6 @@ typedef struct WUITECO_ICoreTextCompositionStartedEventArgs WUITECO_ICoreTextCom
 typedef struct WUITECO_ICoreTextCompositionSegment WUITECO_ICoreTextCompositionSegment;
 typedef struct WUITECO_ICoreTextCompositionCompletedEventArgs WUITECO_ICoreTextCompositionCompletedEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WGL_Language
 #define CWINRT_FWD_WGL_Language
 typedef struct WGL_Language WGL_Language;
@@ -328,7 +325,6 @@ struct WUITECO_CoreTextRange {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -409,258 +405,163 @@ static const IID CWINRT_IID_WUITECO_ICoreTextCompositionSegment CWINRT_MAYBE_UNU
 static const IID CWINRT_IID_WUITECO_ICoreTextCompositionCompletedEventArgs CWINRT_MAYBE_UNUSED = { 0x1F34EBB6, 0xB79F, 0x4121, { 0xA5, 0xE7, 0xFD, 0xA9, 0xB8, 0x61, 0x6E, 0x30 } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.Text.Core.ICoreTextServicesStatics */
-/* Windows.UI.Text.Core.ICoreTextServicesStatics.get_HiddenCharacter() */
 HRESULT wuiteco_core_text_services_statics_get__hidden_character(WUITECO_ICoreTextServicesStatics *self, WCHAR *value);
 
-/* Windows.UI.Text.Core.ICoreTextServicesManagerStatics */
-/* Windows.UI.Text.Core.ICoreTextServicesManagerStatics.GetForCurrentView() */
 HRESULT wuiteco_core_text_services_manager_statics_get_for_current_view(WUITECO_ICoreTextServicesManagerStatics *self, WUITECO_CoreTextServicesManager** out);
 
-/* activate Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs */
 HRESULT wuiteco_core_text_text_updating_event_args_new(WUITECO_CoreTextTextUpdatingEventArgs **out);
 
-/* Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs */
-/* Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs.get_Range() */
 HRESULT wuiteco_core_text_text_updating_event_args_get__range(WUITECO_CoreTextTextUpdatingEventArgs *self, WUITECO_CoreTextRange *value);
 
-/* Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs.get_Text() */
 HRESULT wuiteco_core_text_text_updating_event_args_get__text(WUITECO_CoreTextTextUpdatingEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs.get_NewSelection() */
 HRESULT wuiteco_core_text_text_updating_event_args_get__new_selection(WUITECO_CoreTextTextUpdatingEventArgs *self, WUITECO_CoreTextRange *value);
 
-/* Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs.get_InputLanguage() */
 HRESULT wuiteco_core_text_text_updating_event_args_get__input_language(WUITECO_CoreTextTextUpdatingEventArgs *self, WGL_Language** value);
 
-/* Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs.get_Result() */
 HRESULT wuiteco_core_text_text_updating_event_args_get__result(WUITECO_CoreTextTextUpdatingEventArgs *self, WUITECO_CoreTextTextUpdatingResult *value);
 
-/* Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs.put_Result() */
 HRESULT wuiteco_core_text_text_updating_event_args_put__result(WUITECO_CoreTextTextUpdatingEventArgs *self, WUITECO_CoreTextTextUpdatingResult value);
 
-/* Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs.get_IsCanceled() */
 HRESULT wuiteco_core_text_text_updating_event_args_get__is_canceled(WUITECO_CoreTextTextUpdatingEventArgs *self, BOOL *value);
 
-/* Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs.GetDeferral() */
 HRESULT wuiteco_core_text_text_updating_event_args_get_deferral(WUITECO_CoreTextTextUpdatingEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.UI.Text.Core.CoreTextTextRequestedEventArgs */
 HRESULT wuiteco_core_text_text_requested_event_args_new(WUITECO_CoreTextTextRequestedEventArgs **out);
 
-/* Windows.UI.Text.Core.CoreTextTextRequestedEventArgs */
-/* Windows.UI.Text.Core.CoreTextTextRequestedEventArgs.get_Request() */
 HRESULT wuiteco_core_text_text_requested_event_args_get__request(WUITECO_CoreTextTextRequestedEventArgs *self, WUITECO_CoreTextTextRequest** value);
 
-/* activate Windows.UI.Text.Core.CoreTextTextRequest */
 HRESULT wuiteco_core_text_text_request_new(WUITECO_CoreTextTextRequest **out);
 
-/* Windows.UI.Text.Core.CoreTextTextRequest */
-/* Windows.UI.Text.Core.CoreTextTextRequest.get_Range() */
 HRESULT wuiteco_core_text_text_request_get__range(WUITECO_CoreTextTextRequest *self, WUITECO_CoreTextRange *value);
 
-/* Windows.UI.Text.Core.CoreTextTextRequest.get_Text() */
 HRESULT wuiteco_core_text_text_request_get__text(WUITECO_CoreTextTextRequest *self, cwinrt_hstring *value);
 
-/* Windows.UI.Text.Core.CoreTextTextRequest.put_Text() */
 HRESULT wuiteco_core_text_text_request_put__text(WUITECO_CoreTextTextRequest *self, cwinrt_hstring value);
 
-/* Windows.UI.Text.Core.CoreTextTextRequest.get_IsCanceled() */
 HRESULT wuiteco_core_text_text_request_get__is_canceled(WUITECO_CoreTextTextRequest *self, BOOL *value);
 
-/* Windows.UI.Text.Core.CoreTextTextRequest.GetDeferral() */
 HRESULT wuiteco_core_text_text_request_get_deferral(WUITECO_CoreTextTextRequest *self, WF_Deferral** out);
 
-/* activate Windows.UI.Text.Core.CoreTextServicesManager */
 HRESULT wuiteco_core_text_services_manager_new(WUITECO_CoreTextServicesManager **out);
 
-/* Windows.UI.Text.Core.CoreTextServicesManager */
-/* Windows.UI.Text.Core.CoreTextServicesManager.get_InputLanguage() */
 HRESULT wuiteco_core_text_services_manager_get__input_language(WUITECO_CoreTextServicesManager *self, WGL_Language** value);
 
-/* Windows.UI.Text.Core.CoreTextServicesManager.CreateEditContext() */
 HRESULT wuiteco_core_text_services_manager_create_edit_context(WUITECO_CoreTextServicesManager *self, WUITECO_CoreTextEditContext** out);
 
-/* Windows.UI.Text.Core.CoreTextServicesManager.GetForCurrentView() */
 HRESULT wuiteco_core_text_services_manager_get_for_current_view(WUITECO_CoreTextServicesManager** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiteco_core_text_services_manager_on_input_language_changed(WUITECO_CoreTextServicesManager *self, cwinrt_event_fn fn, void *ctx);
 void wuiteco_core_text_services_manager_off_input_language_changed(WUITECO_CoreTextServicesManager *self, cwinrt_token token);
 
-/* activate Windows.UI.Text.Core.CoreTextServicesConstants */
 HRESULT wuiteco_core_text_services_constants_new(WUITECO_CoreTextServicesConstants **out);
 
-/* Windows.UI.Text.Core.CoreTextServicesConstants */
-/* Windows.UI.Text.Core.CoreTextServicesConstants.get_HiddenCharacter() */
 HRESULT wuiteco_core_text_services_constants_get__hidden_character(WCHAR *value);
 
-/* activate Windows.UI.Text.Core.CoreTextSelectionUpdatingEventArgs */
 HRESULT wuiteco_core_text_selection_updating_event_args_new(WUITECO_CoreTextSelectionUpdatingEventArgs **out);
 
-/* Windows.UI.Text.Core.CoreTextSelectionUpdatingEventArgs */
-/* Windows.UI.Text.Core.CoreTextSelectionUpdatingEventArgs.get_Selection() */
 HRESULT wuiteco_core_text_selection_updating_event_args_get__selection(WUITECO_CoreTextSelectionUpdatingEventArgs *self, WUITECO_CoreTextRange *value);
 
-/* Windows.UI.Text.Core.CoreTextSelectionUpdatingEventArgs.get_Result() */
 HRESULT wuiteco_core_text_selection_updating_event_args_get__result(WUITECO_CoreTextSelectionUpdatingEventArgs *self, WUITECO_CoreTextSelectionUpdatingResult *value);
 
-/* Windows.UI.Text.Core.CoreTextSelectionUpdatingEventArgs.put_Result() */
 HRESULT wuiteco_core_text_selection_updating_event_args_put__result(WUITECO_CoreTextSelectionUpdatingEventArgs *self, WUITECO_CoreTextSelectionUpdatingResult value);
 
-/* Windows.UI.Text.Core.CoreTextSelectionUpdatingEventArgs.get_IsCanceled() */
 HRESULT wuiteco_core_text_selection_updating_event_args_get__is_canceled(WUITECO_CoreTextSelectionUpdatingEventArgs *self, BOOL *value);
 
-/* Windows.UI.Text.Core.CoreTextSelectionUpdatingEventArgs.GetDeferral() */
 HRESULT wuiteco_core_text_selection_updating_event_args_get_deferral(WUITECO_CoreTextSelectionUpdatingEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.UI.Text.Core.CoreTextSelectionRequestedEventArgs */
 HRESULT wuiteco_core_text_selection_requested_event_args_new(WUITECO_CoreTextSelectionRequestedEventArgs **out);
 
-/* Windows.UI.Text.Core.CoreTextSelectionRequestedEventArgs */
-/* Windows.UI.Text.Core.CoreTextSelectionRequestedEventArgs.get_Request() */
 HRESULT wuiteco_core_text_selection_requested_event_args_get__request(WUITECO_CoreTextSelectionRequestedEventArgs *self, WUITECO_CoreTextSelectionRequest** value);
 
-/* activate Windows.UI.Text.Core.CoreTextSelectionRequest */
 HRESULT wuiteco_core_text_selection_request_new(WUITECO_CoreTextSelectionRequest **out);
 
-/* Windows.UI.Text.Core.CoreTextSelectionRequest */
-/* Windows.UI.Text.Core.CoreTextSelectionRequest.get_Selection() */
 HRESULT wuiteco_core_text_selection_request_get__selection(WUITECO_CoreTextSelectionRequest *self, WUITECO_CoreTextRange *value);
 
-/* Windows.UI.Text.Core.CoreTextSelectionRequest.put_Selection() */
 HRESULT wuiteco_core_text_selection_request_put__selection(WUITECO_CoreTextSelectionRequest *self, WUITECO_CoreTextRange value);
 
-/* Windows.UI.Text.Core.CoreTextSelectionRequest.get_IsCanceled() */
 HRESULT wuiteco_core_text_selection_request_get__is_canceled(WUITECO_CoreTextSelectionRequest *self, BOOL *value);
 
-/* Windows.UI.Text.Core.CoreTextSelectionRequest.GetDeferral() */
 HRESULT wuiteco_core_text_selection_request_get_deferral(WUITECO_CoreTextSelectionRequest *self, WF_Deferral** out);
 
-/* activate Windows.UI.Text.Core.CoreTextLayoutRequestedEventArgs */
 HRESULT wuiteco_core_text_layout_requested_event_args_new(WUITECO_CoreTextLayoutRequestedEventArgs **out);
 
-/* Windows.UI.Text.Core.CoreTextLayoutRequestedEventArgs */
-/* Windows.UI.Text.Core.CoreTextLayoutRequestedEventArgs.get_Request() */
 HRESULT wuiteco_core_text_layout_requested_event_args_get__request(WUITECO_CoreTextLayoutRequestedEventArgs *self, WUITECO_CoreTextLayoutRequest** value);
 
-/* activate Windows.UI.Text.Core.CoreTextLayoutRequest */
 HRESULT wuiteco_core_text_layout_request_new(WUITECO_CoreTextLayoutRequest **out);
 
-/* Windows.UI.Text.Core.CoreTextLayoutRequest */
-/* Windows.UI.Text.Core.CoreTextLayoutRequest.get_Range() */
 HRESULT wuiteco_core_text_layout_request_get__range(WUITECO_CoreTextLayoutRequest *self, WUITECO_CoreTextRange *value);
 
-/* Windows.UI.Text.Core.CoreTextLayoutRequest.get_LayoutBounds() */
 HRESULT wuiteco_core_text_layout_request_get__layout_bounds(WUITECO_CoreTextLayoutRequest *self, WUITECO_CoreTextLayoutBounds** value);
 
-/* Windows.UI.Text.Core.CoreTextLayoutRequest.get_IsCanceled() */
 HRESULT wuiteco_core_text_layout_request_get__is_canceled(WUITECO_CoreTextLayoutRequest *self, BOOL *value);
 
-/* Windows.UI.Text.Core.CoreTextLayoutRequest.GetDeferral() */
 HRESULT wuiteco_core_text_layout_request_get_deferral(WUITECO_CoreTextLayoutRequest *self, WF_Deferral** out);
 
-/* Windows.UI.Text.Core.CoreTextLayoutRequest.get_LayoutBoundsVisualPixels() */
 HRESULT wuiteco_core_text_layout_request_get__layout_bounds_visual_pixels(WUITECO_CoreTextLayoutRequest *self, WUITECO_CoreTextLayoutBounds** value);
 
-/* activate Windows.UI.Text.Core.CoreTextLayoutBounds */
 HRESULT wuiteco_core_text_layout_bounds_new(WUITECO_CoreTextLayoutBounds **out);
 
-/* Windows.UI.Text.Core.CoreTextLayoutBounds */
-/* Windows.UI.Text.Core.CoreTextLayoutBounds.get_TextBounds() */
 HRESULT wuiteco_core_text_layout_bounds_get__text_bounds(WUITECO_CoreTextLayoutBounds *self, WF_Rect *value);
 
-/* Windows.UI.Text.Core.CoreTextLayoutBounds.put_TextBounds() */
 HRESULT wuiteco_core_text_layout_bounds_put__text_bounds(WUITECO_CoreTextLayoutBounds *self, WF_Rect value);
 
-/* Windows.UI.Text.Core.CoreTextLayoutBounds.get_ControlBounds() */
 HRESULT wuiteco_core_text_layout_bounds_get__control_bounds(WUITECO_CoreTextLayoutBounds *self, WF_Rect *value);
 
-/* Windows.UI.Text.Core.CoreTextLayoutBounds.put_ControlBounds() */
 HRESULT wuiteco_core_text_layout_bounds_put__control_bounds(WUITECO_CoreTextLayoutBounds *self, WF_Rect value);
 
-/* activate Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs */
 HRESULT wuiteco_core_text_format_updating_event_args_new(WUITECO_CoreTextFormatUpdatingEventArgs **out);
 
-/* Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs */
-/* Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs.get_Range() */
 HRESULT wuiteco_core_text_format_updating_event_args_get__range(WUITECO_CoreTextFormatUpdatingEventArgs *self, WUITECO_CoreTextRange *value);
 
-/* Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs.get_TextColor() */
 HRESULT wuiteco_core_text_format_updating_event_args_get__text_color(WUITECO_CoreTextFormatUpdatingEventArgs *self, WUIVI_UIElementType** value);
 
-/* Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs.get_BackgroundColor() */
 HRESULT wuiteco_core_text_format_updating_event_args_get__background_color(WUITECO_CoreTextFormatUpdatingEventArgs *self, WUIVI_UIElementType** value);
 
-/* Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs.get_UnderlineColor() */
 HRESULT wuiteco_core_text_format_updating_event_args_get__underline_color(WUITECO_CoreTextFormatUpdatingEventArgs *self, WUIVI_UIElementType** value);
 
-/* Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs.get_UnderlineType() */
 HRESULT wuiteco_core_text_format_updating_event_args_get__underline_type(WUITECO_CoreTextFormatUpdatingEventArgs *self, WUITE_UnderlineType** value);
 
-/* Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs.get_Reason() */
 HRESULT wuiteco_core_text_format_updating_event_args_get__reason(WUITECO_CoreTextFormatUpdatingEventArgs *self, WUITECO_CoreTextFormatUpdatingReason *value);
 
-/* Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs.get_Result() */
 HRESULT wuiteco_core_text_format_updating_event_args_get__result(WUITECO_CoreTextFormatUpdatingEventArgs *self, WUITECO_CoreTextFormatUpdatingResult *value);
 
-/* Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs.put_Result() */
 HRESULT wuiteco_core_text_format_updating_event_args_put__result(WUITECO_CoreTextFormatUpdatingEventArgs *self, WUITECO_CoreTextFormatUpdatingResult value);
 
-/* Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs.get_IsCanceled() */
 HRESULT wuiteco_core_text_format_updating_event_args_get__is_canceled(WUITECO_CoreTextFormatUpdatingEventArgs *self, BOOL *value);
 
-/* Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs.GetDeferral() */
 HRESULT wuiteco_core_text_format_updating_event_args_get_deferral(WUITECO_CoreTextFormatUpdatingEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.UI.Text.Core.CoreTextEditContext */
 HRESULT wuiteco_core_text_edit_context_new(WUITECO_CoreTextEditContext **out);
 
-/* Windows.UI.Text.Core.CoreTextEditContext */
-/* Windows.UI.Text.Core.CoreTextEditContext.get_Name() */
 HRESULT wuiteco_core_text_edit_context_get__name(WUITECO_CoreTextEditContext *self, cwinrt_hstring *value);
 
-/* Windows.UI.Text.Core.CoreTextEditContext.put_Name() */
 HRESULT wuiteco_core_text_edit_context_put__name(WUITECO_CoreTextEditContext *self, cwinrt_hstring value);
 
-/* Windows.UI.Text.Core.CoreTextEditContext.get_InputScope() */
 HRESULT wuiteco_core_text_edit_context_get__input_scope(WUITECO_CoreTextEditContext *self, WUITECO_CoreTextInputScope *value);
 
-/* Windows.UI.Text.Core.CoreTextEditContext.put_InputScope() */
 HRESULT wuiteco_core_text_edit_context_put__input_scope(WUITECO_CoreTextEditContext *self, WUITECO_CoreTextInputScope value);
 
-/* Windows.UI.Text.Core.CoreTextEditContext.get_IsReadOnly() */
 HRESULT wuiteco_core_text_edit_context_get__is_read_only(WUITECO_CoreTextEditContext *self, BOOL *value);
 
-/* Windows.UI.Text.Core.CoreTextEditContext.put_IsReadOnly() */
 HRESULT wuiteco_core_text_edit_context_put__is_read_only(WUITECO_CoreTextEditContext *self, BOOL value);
 
-/* Windows.UI.Text.Core.CoreTextEditContext.get_InputPaneDisplayPolicy() */
 HRESULT wuiteco_core_text_edit_context_get__input_pane_display_policy(WUITECO_CoreTextEditContext *self, WUITECO_CoreTextInputPaneDisplayPolicy *value);
 
-/* Windows.UI.Text.Core.CoreTextEditContext.put_InputPaneDisplayPolicy() */
 HRESULT wuiteco_core_text_edit_context_put__input_pane_display_policy(WUITECO_CoreTextEditContext *self, WUITECO_CoreTextInputPaneDisplayPolicy value);
 
-/* Windows.UI.Text.Core.CoreTextEditContext.NotifyFocusEnter() */
 HRESULT wuiteco_core_text_edit_context_notify_focus_enter(WUITECO_CoreTextEditContext *self);
 
-/* Windows.UI.Text.Core.CoreTextEditContext.NotifyFocusLeave() */
 HRESULT wuiteco_core_text_edit_context_notify_focus_leave(WUITECO_CoreTextEditContext *self);
 
-/* Windows.UI.Text.Core.CoreTextEditContext.NotifyTextChanged(modifiedRange, newLength, newSelection) */
 HRESULT wuiteco_core_text_edit_context_notify_text_changed(WUITECO_CoreTextEditContext *self, WUITECO_CoreTextRange modifiedRange, int32_t newLength, WUITECO_CoreTextRange newSelection);
 
-/* Windows.UI.Text.Core.CoreTextEditContext.NotifySelectionChanged(selection) */
 HRESULT wuiteco_core_text_edit_context_notify_selection_changed(WUITECO_CoreTextEditContext *self, WUITECO_CoreTextRange selection);
 
-/* Windows.UI.Text.Core.CoreTextEditContext.NotifyLayoutChanged() */
 HRESULT wuiteco_core_text_edit_context_notify_layout_changed(WUITECO_CoreTextEditContext *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiteco_core_text_edit_context_on_text_requested(WUITECO_CoreTextEditContext *self, cwinrt_event_fn fn, void *ctx);
@@ -693,57 +594,26 @@ void wuiteco_core_text_edit_context_off_focus_removed(WUITECO_CoreTextEditContex
 cwinrt_token wuiteco_core_text_edit_context_on_notify_focus_leave_completed(WUITECO_CoreTextEditContext *self, cwinrt_event_fn fn, void *ctx);
 void wuiteco_core_text_edit_context_off_notify_focus_leave_completed(WUITECO_CoreTextEditContext *self, cwinrt_token token);
 
-/* activate Windows.UI.Text.Core.CoreTextCompositionStartedEventArgs */
 HRESULT wuiteco_core_text_composition_started_event_args_new(WUITECO_CoreTextCompositionStartedEventArgs **out);
 
-/* Windows.UI.Text.Core.CoreTextCompositionStartedEventArgs */
-/* Windows.UI.Text.Core.CoreTextCompositionStartedEventArgs.get_IsCanceled() */
 HRESULT wuiteco_core_text_composition_started_event_args_get__is_canceled(WUITECO_CoreTextCompositionStartedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Text.Core.CoreTextCompositionStartedEventArgs.GetDeferral() */
 HRESULT wuiteco_core_text_composition_started_event_args_get_deferral(WUITECO_CoreTextCompositionStartedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.UI.Text.Core.CoreTextCompositionSegment */
 HRESULT wuiteco_core_text_composition_segment_new(WUITECO_CoreTextCompositionSegment **out);
 
-/* Windows.UI.Text.Core.CoreTextCompositionSegment */
-/* Windows.UI.Text.Core.CoreTextCompositionSegment.get_PreconversionString() */
 HRESULT wuiteco_core_text_composition_segment_get__preconversion_string(WUITECO_CoreTextCompositionSegment *self, cwinrt_hstring *value);
 
-/* Windows.UI.Text.Core.CoreTextCompositionSegment.get_Range() */
 HRESULT wuiteco_core_text_composition_segment_get__range(WUITECO_CoreTextCompositionSegment *self, WUITECO_CoreTextRange *value);
 
-/* activate Windows.UI.Text.Core.CoreTextCompositionCompletedEventArgs */
 HRESULT wuiteco_core_text_composition_completed_event_args_new(WUITECO_CoreTextCompositionCompletedEventArgs **out);
 
-/* Windows.UI.Text.Core.CoreTextCompositionCompletedEventArgs */
-/* Windows.UI.Text.Core.CoreTextCompositionCompletedEventArgs.get_IsCanceled() */
 HRESULT wuiteco_core_text_composition_completed_event_args_get__is_canceled(WUITECO_CoreTextCompositionCompletedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Text.Core.CoreTextCompositionCompletedEventArgs.get_CompositionSegments() */
 HRESULT wuiteco_core_text_composition_completed_event_args_get__composition_segments(WUITECO_CoreTextCompositionCompletedEventArgs *self, WFOCO_IVectorView_WUITECO_CoreTextCompositionSegment** value);
 
-/* Windows.UI.Text.Core.CoreTextCompositionCompletedEventArgs.GetDeferral() */
 HRESULT wuiteco_core_text_composition_completed_event_args_get_deferral(WUITECO_CoreTextCompositionCompletedEventArgs *self, WF_Deferral** out);
 
-/* Windows.UI.Text.Core.ICoreTextTextUpdatingEventArgs */
-/* Windows.UI.Text.Core.ICoreTextTextRequestedEventArgs */
-/* Windows.UI.Text.Core.ICoreTextTextRequest */
-/* Windows.UI.Text.Core.ICoreTextServicesManager */
-/* Windows.UI.Text.Core.ICoreTextSelectionUpdatingEventArgs */
-/* Windows.UI.Text.Core.ICoreTextSelectionRequestedEventArgs */
-/* Windows.UI.Text.Core.ICoreTextSelectionRequest */
-/* Windows.UI.Text.Core.ICoreTextLayoutRequestedEventArgs */
-/* Windows.UI.Text.Core.ICoreTextLayoutRequest */
-/* Windows.UI.Text.Core.ICoreTextLayoutRequest2 */
-/* Windows.UI.Text.Core.ICoreTextLayoutRequest2.get_LayoutBoundsVisualPixels() */
 HRESULT wuiteco_core_text_layout_request_2_get__layout_bounds_visual_pixels(WUITECO_ICoreTextLayoutRequest_2 *self, WUITECO_CoreTextLayoutBounds** value);
 
-/* Windows.UI.Text.Core.ICoreTextLayoutBounds */
-/* Windows.UI.Text.Core.ICoreTextFormatUpdatingEventArgs */
-/* Windows.UI.Text.Core.ICoreTextEditContext */
-/* Windows.UI.Text.Core.ICoreTextEditContext2 */
-/* Windows.UI.Text.Core.ICoreTextCompositionStartedEventArgs */
-/* Windows.UI.Text.Core.ICoreTextCompositionSegment */
-/* Windows.UI.Text.Core.ICoreTextCompositionCompletedEventArgs */
 #endif /* CWINRT_WINDOWS_UI_TEXT_CORE_H */

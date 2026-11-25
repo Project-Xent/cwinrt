@@ -13,11 +13,9 @@
 #include <cwinrt/Windows.Devices.Geolocation.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WDEGEPR_GeolocationProvider WDEGEPR_GeolocationProvider;
 typedef struct WDEGEPR_IGeolocationProvider WDEGEPR_IGeolocationProvider;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WDEGE_BasicGeoposition
 #define CWINRT_FWD_WDEGE_BasicGeoposition
 typedef struct WDEGE_BasicGeoposition WDEGE_BasicGeoposition;
@@ -50,7 +48,6 @@ typedef enum WDEGEPR_LocationOverrideStatus {
 } WDEGEPR_LocationOverrideStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -59,26 +56,17 @@ typedef enum WDEGEPR_LocationOverrideStatus {
 static const IID CWINRT_IID_WDEGEPR_IGeolocationProvider CWINRT_MAYBE_UNUSED = { 0xE4CF071D, 0x3F64, 0x509F, { 0x8D, 0xC2, 0x0B, 0x74, 0xA0, 0x59, 0x82, 0x9D } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Devices.Geolocation.Provider.GeolocationProvider */
 HRESULT wdegepr_geolocation_provider_new(WDEGEPR_GeolocationProvider **out);
 
-/* Windows.Devices.Geolocation.Provider.GeolocationProvider */
-/* Windows.Devices.Geolocation.Provider.GeolocationProvider.get_IsOverridden() */
 HRESULT wdegepr_geolocation_provider_get__is_overridden(WDEGEPR_GeolocationProvider *self, BOOL *value);
 
-/* Windows.Devices.Geolocation.Provider.GeolocationProvider.SetOverridePosition(newPosition, positionSource, accuracyInMeters) */
 HRESULT wdegepr_geolocation_provider_set_override_position(WDEGEPR_GeolocationProvider *self, WDEGE_BasicGeoposition newPosition, WDEGE_PositionSource positionSource, double accuracyInMeters, WDEGEPR_LocationOverrideStatus *out);
 
-/* Windows.Devices.Geolocation.Provider.GeolocationProvider.ClearOverridePosition() */
 HRESULT wdegepr_geolocation_provider_clear_override_position(WDEGEPR_GeolocationProvider *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdegepr_geolocation_provider_on_is_overridden_changed(WDEGEPR_GeolocationProvider *self, cwinrt_event_fn fn, void *ctx);
 void wdegepr_geolocation_provider_off_is_overridden_changed(WDEGEPR_GeolocationProvider *self, cwinrt_token token);
 
-/* Windows.Devices.Geolocation.Provider.IGeolocationProvider */
 #endif /* CWINRT_WINDOWS_DEVICES_GEOLOCATION_PROVIDER_H */

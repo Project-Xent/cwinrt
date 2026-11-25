@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Networking.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WNESO_StreamSocketListener
 #define CWINRT_FWD_WNESO_StreamSocketListener
 typedef struct WNESO_StreamSocketListener WNESO_StreamSocketListener;
@@ -27,7 +26,6 @@ typedef struct WNECO_NetworkAdapter WNECO_NetworkAdapter;
 typedef struct WNESO_DatagramSocket WNESO_DatagramSocket;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WNESEDN_DnssdRegistrationResult WNESEDN_DnssdRegistrationResult;
 typedef struct WNESEDN_DnssdServiceInstance WNESEDN_DnssdServiceInstance;
 typedef struct WNESEDN_DnssdServiceInstanceCollection WNESEDN_DnssdServiceInstanceCollection;
@@ -37,7 +35,6 @@ typedef struct WNESEDN_IDnssdRegistrationResult WNESEDN_IDnssdRegistrationResult
 typedef struct WNESEDN_IDnssdServiceInstance WNESEDN_IDnssdServiceInstance;
 typedef struct WNESEDN_IDnssdServiceWatcher WNESEDN_IDnssdServiceWatcher;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WNE_HostName
 #define CWINRT_FWD_WNE_HostName
 typedef struct WNE_HostName WNE_HostName;
@@ -97,7 +94,6 @@ typedef enum WNESEDN_DnssdServiceWatcherStatus {
 } WNESEDN_DnssdServiceWatcherStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -118,109 +114,70 @@ static const IID CWINRT_IID_WNESEDN_IDnssdServiceInstance CWINRT_MAYBE_UNUSED = 
 static const IID CWINRT_IID_WNESEDN_IDnssdServiceWatcher CWINRT_MAYBE_UNUSED = { 0xCC34D9C1, 0xDB7D, 0x4B69, { 0x98, 0x3D, 0xC6, 0xF8, 0x3F, 0x20, 0x56, 0x82 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult */
 HRESULT wnesedn_dnssd_registration_result_new(WNESEDN_DnssdRegistrationResult **out);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult */
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult.get_Status() */
 HRESULT wnesedn_dnssd_registration_result_get__status(WNESEDN_DnssdRegistrationResult *self, WNESEDN_DnssdRegistrationStatus *value);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult.get_IPAddress() */
 HRESULT wnesedn_dnssd_registration_result_get__i_p_address(WNESEDN_DnssdRegistrationResult *self, WNE_HostName** value);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult.get_HasInstanceNameChanged() */
 HRESULT wnesedn_dnssd_registration_result_get__has_instance_name_changed(WNESEDN_DnssdRegistrationResult *self, BOOL *value);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult.ToString() */
 HRESULT wnesedn_dnssd_registration_result_to_string(WNESEDN_DnssdRegistrationResult *self, cwinrt_hstring *out);
 
-/* activate Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance */
 HRESULT wnesedn_dnssd_service_instance_new(WNESEDN_DnssdServiceInstance **out);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance */
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance.get_DnssdServiceInstanceName() */
 HRESULT wnesedn_dnssd_service_instance_get__dnssd_service_instance_name(WNESEDN_DnssdServiceInstance *self, cwinrt_hstring *value);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance.put_DnssdServiceInstanceName() */
 HRESULT wnesedn_dnssd_service_instance_put__dnssd_service_instance_name(WNESEDN_DnssdServiceInstance *self, cwinrt_hstring value);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance.get_HostName() */
 HRESULT wnesedn_dnssd_service_instance_get__host_name(WNESEDN_DnssdServiceInstance *self, WNE_HostName** value);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance.put_HostName() */
 HRESULT wnesedn_dnssd_service_instance_put__host_name(WNESEDN_DnssdServiceInstance *self, WNE_HostName* value);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance.get_Port() */
 HRESULT wnesedn_dnssd_service_instance_get__port(WNESEDN_DnssdServiceInstance *self, uint16_t *value);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance.put_Port() */
 HRESULT wnesedn_dnssd_service_instance_put__port(WNESEDN_DnssdServiceInstance *self, uint16_t value);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance.get_Priority() */
 HRESULT wnesedn_dnssd_service_instance_get__priority(WNESEDN_DnssdServiceInstance *self, uint16_t *value);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance.put_Priority() */
 HRESULT wnesedn_dnssd_service_instance_put__priority(WNESEDN_DnssdServiceInstance *self, uint16_t value);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance.get_Weight() */
 HRESULT wnesedn_dnssd_service_instance_get__weight(WNESEDN_DnssdServiceInstance *self, uint16_t *value);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance.put_Weight() */
 HRESULT wnesedn_dnssd_service_instance_put__weight(WNESEDN_DnssdServiceInstance *self, uint16_t value);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance.get_TextAttributes() */
 HRESULT wnesedn_dnssd_service_instance_get__text_attributes(WNESEDN_DnssdServiceInstance *self, WFOCO_IMap_HSTRING_HSTRING** value);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance.RegisterStreamSocketListenerAsync(socket) */
 HRESULT wnesedn_dnssd_service_instance_register_stream_socket_listener_async(WNESEDN_DnssdServiceInstance *self, WNESO_StreamSocketListener* socket, WF_IAsyncOperation_WNESEDN_DnssdRegistrationResult** out);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance.RegisterStreamSocketListenerAsync(socket, adapter) */
 HRESULT wnesedn_dnssd_service_instance_register_stream_socket_listener_async_p_p_p(WNESEDN_DnssdServiceInstance *self, WNESO_StreamSocketListener* socket, WNECO_NetworkAdapter* adapter, WF_IAsyncOperation_WNESEDN_DnssdRegistrationResult** out);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance.RegisterDatagramSocketAsync(socket) */
 HRESULT wnesedn_dnssd_service_instance_register_datagram_socket_async(WNESEDN_DnssdServiceInstance *self, WNESO_DatagramSocket* socket, WF_IAsyncOperation_WNESEDN_DnssdRegistrationResult** out);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance.RegisterDatagramSocketAsync(socket, adapter) */
 HRESULT wnesedn_dnssd_service_instance_register_datagram_socket_async_p_p_p(WNESEDN_DnssdServiceInstance *self, WNESO_DatagramSocket* socket, WNECO_NetworkAdapter* adapter, WF_IAsyncOperation_WNESEDN_DnssdRegistrationResult** out);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance.ToString() */
 HRESULT wnesedn_dnssd_service_instance_to_string(WNESEDN_DnssdServiceInstance *self, cwinrt_hstring *out);
 
-/* activate Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstanceCollection */
 HRESULT wnesedn_dnssd_service_instance_collection_new(WNESEDN_DnssdServiceInstanceCollection **out);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstanceCollection */
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstanceCollection.GetAt(index) */
 HRESULT wnesedn_dnssd_service_instance_collection_get_at(WNESEDN_DnssdServiceInstanceCollection *self, uint32_t index, WNESEDN_DnssdServiceInstance** out);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstanceCollection.get_Size() */
 HRESULT wnesedn_dnssd_service_instance_collection_get__size(WNESEDN_DnssdServiceInstanceCollection *self, uint32_t *value);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstanceCollection.IndexOf(index) */
 HRESULT wnesedn_dnssd_service_instance_collection_index_of(WNESEDN_DnssdServiceInstanceCollection *self, WNESEDN_DnssdServiceInstance* value, uint32_t index, BOOL *out);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstanceCollection.GetMany(startIndex, items) */
 HRESULT wnesedn_dnssd_service_instance_collection_get_many(WNESEDN_DnssdServiceInstanceCollection *self, uint32_t startIndex, WNESEDN_DnssdServiceInstance *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstanceCollection.First() */
 HRESULT wnesedn_dnssd_service_instance_collection_first(WNESEDN_DnssdServiceInstanceCollection *self, WFOCO_IIterator_WNESEDN_DnssdServiceInstance** out);
 
-/* activate Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher */
 HRESULT wnesedn_dnssd_service_watcher_new(WNESEDN_DnssdServiceWatcher **out);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher */
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher.get_Status() */
 HRESULT wnesedn_dnssd_service_watcher_get__status(WNESEDN_DnssdServiceWatcher *self, WNESEDN_DnssdServiceWatcherStatus *value);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher.Start() */
 HRESULT wnesedn_dnssd_service_watcher_start(WNESEDN_DnssdServiceWatcher *self);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher.Stop() */
 HRESULT wnesedn_dnssd_service_watcher_stop(WNESEDN_DnssdServiceWatcher *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wnesedn_dnssd_service_watcher_on_added(WNESEDN_DnssdServiceWatcher *self, cwinrt_event_fn fn, void *ctx);
@@ -232,11 +189,6 @@ void wnesedn_dnssd_service_watcher_off_enumeration_completed(WNESEDN_DnssdServic
 cwinrt_token wnesedn_dnssd_service_watcher_on_stopped(WNESEDN_DnssdServiceWatcher *self, cwinrt_event_fn fn, void *ctx);
 void wnesedn_dnssd_service_watcher_off_stopped(WNESEDN_DnssdServiceWatcher *self, cwinrt_token token);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstanceFactory */
-/* Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstanceFactory.Create(dnssdServiceInstanceName, hostName, port) */
 HRESULT wnesedn_dnssd_service_instance_factory_create(WNESEDN_IDnssdServiceInstanceFactory *self, cwinrt_hstring dnssdServiceInstanceName, WNE_HostName* hostName, uint16_t port, WNESEDN_DnssdServiceInstance** out);
 
-/* Windows.Networking.ServiceDiscovery.Dnssd.IDnssdRegistrationResult */
-/* Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance */
-/* Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher */
 #endif /* CWINRT_WINDOWS_NETWORKING_SERVICEDISCOVERY_DNSSD_H */

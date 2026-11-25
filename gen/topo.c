@@ -43,7 +43,6 @@ static int topo_add_edge(int arena, cwinrt_topo_graph *g, uint32_t from, uint32_
 	return 0;
 }
 
-/* Resolve a raw token and, if it maps to a node distinct from src, add the edge. */
 static int topo_edge_to_token(cwinrt_raw_db const *raw, cwinrt_topo_graph *g, uint32_t src, uint32_t token, uint8_t kind) {
 	int dst = topo_find_raw(raw, token);
 	if (dst < 0 || dst == ( int ) src) return 0;
@@ -86,8 +85,6 @@ static int topo_build_edges(cwinrt_raw_db const *raw, cwinrt_topo_graph *g) {
 	return 0;
 }
 
-/* Drop the indegree of n's successors; enqueue any that reach zero.
-   Returns the queue tail advanced past newly ready nodes. */
 static uint32_t topo_relax(cwinrt_topo_graph *g, uint32_t n, uint32_t *indeg, uint32_t *queue, uint32_t qtail) {
 	uint32_t e;
 	for (e = 0; e < g->edge_count; e++) {
@@ -97,7 +94,6 @@ static uint32_t topo_relax(cwinrt_topo_graph *g, uint32_t n, uint32_t *indeg, ui
 	return qtail;
 }
 
-/* Kahn's algorithm. Returns the number of nodes placed into g->order. */
 static uint32_t topo_kahn(cwinrt_topo_graph *g, uint32_t *indeg, uint32_t *queue) {
 	uint32_t qhead  = 0;
 	uint32_t qtail  = 0;

@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.UI.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSECR_WebAccount
 #define CWINRT_FWD_WSECR_WebAccount
 typedef struct WSECR_WebAccount WSECR_WebAccount;
@@ -27,7 +26,6 @@ typedef struct WSY_User WSY_User;
 typedef struct WUISH_IAdaptiveCard WUISH_IAdaptiveCard;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPUS_UserActivityVisualElements WAPUS_UserActivityVisualElements;
 typedef struct WAPUS_IUserActivityAttributionFactory WAPUS_IUserActivityAttributionFactory;
 typedef struct WAPUS_IUserActivityChannelStatics WAPUS_IUserActivityChannelStatics;
@@ -61,7 +59,6 @@ typedef struct WAPUS_IUserActivityRequestedEventArgs WAPUS_IUserActivityRequeste
 typedef struct WAPUS_IUserActivitySession WAPUS_IUserActivitySession;
 typedef struct WAPUS_IUserActivitySessionHistoryItem WAPUS_IUserActivitySessionHistoryItem;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WUI_Color
 #define CWINRT_FWD_WUI_Color
 typedef struct WUI_Color WUI_Color;
@@ -123,7 +120,6 @@ typedef enum WAPUS_UserActivityState {
 } WAPUS_UserActivityState;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -216,305 +212,183 @@ static const IID CWINRT_IID_WAPUS_IUserActivitySession CWINRT_MAYBE_UNUSED = { 0
 static const IID CWINRT_IID_WAPUS_IUserActivitySessionHistoryItem CWINRT_MAYBE_UNUSED = { 0xE8D59BD3, 0x3E5D, 0x49FD, { 0x98, 0xD7, 0x6D, 0xA9, 0x75, 0x21, 0xE2, 0x55 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.UserActivities.UserActivityVisualElements */
 HRESULT wapus_user_activity_visual_elements_new(WAPUS_UserActivityVisualElements **out);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityVisualElements */
-/* Windows.ApplicationModel.UserActivities.UserActivityVisualElements.get_DisplayText() */
 HRESULT wapus_user_activity_visual_elements_get__display_text(WAPUS_UserActivityVisualElements *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityVisualElements.put_DisplayText() */
 HRESULT wapus_user_activity_visual_elements_put__display_text(WAPUS_UserActivityVisualElements *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityVisualElements.get_Description() */
 HRESULT wapus_user_activity_visual_elements_get__description(WAPUS_UserActivityVisualElements *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityVisualElements.put_Description() */
 HRESULT wapus_user_activity_visual_elements_put__description(WAPUS_UserActivityVisualElements *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityVisualElements.get_BackgroundColor() */
 HRESULT wapus_user_activity_visual_elements_get__background_color(WAPUS_UserActivityVisualElements *self, WUI_Color *value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityVisualElements.put_BackgroundColor() */
 HRESULT wapus_user_activity_visual_elements_put__background_color(WAPUS_UserActivityVisualElements *self, WUI_Color value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityVisualElements.get_Attribution() */
 HRESULT wapus_user_activity_visual_elements_get__attribution(WAPUS_UserActivityVisualElements *self, WAPUS_UserActivityAttribution** value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityVisualElements.put_Attribution() */
 HRESULT wapus_user_activity_visual_elements_put__attribution(WAPUS_UserActivityVisualElements *self, WAPUS_UserActivityAttribution* value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityVisualElements.put_Content() */
 HRESULT wapus_user_activity_visual_elements_put__content(WAPUS_UserActivityVisualElements *self, WUISH_IAdaptiveCard* value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityVisualElements.get_Content() */
 HRESULT wapus_user_activity_visual_elements_get__content(WAPUS_UserActivityVisualElements *self, WUISH_IAdaptiveCard** value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityVisualElements.get_AttributionDisplayText() */
 HRESULT wapus_user_activity_visual_elements_get__attribution_display_text(WAPUS_UserActivityVisualElements *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityVisualElements.put_AttributionDisplayText() */
 HRESULT wapus_user_activity_visual_elements_put__attribution_display_text(WAPUS_UserActivityVisualElements *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.UserActivities.IUserActivityAttributionFactory */
-/* Windows.ApplicationModel.UserActivities.IUserActivityAttributionFactory.CreateWithUri(iconUri) */
 HRESULT wapus_user_activity_attribution_factory_create_with_uri(WAPUS_IUserActivityAttributionFactory *self, WF_Uri* iconUri, WAPUS_UserActivityAttribution** out);
 
-/* Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics */
-/* Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics.GetDefault() */
 HRESULT wapus_user_activity_channel_statics_get_default(WAPUS_IUserActivityChannelStatics *self, WAPUS_UserActivityChannel** out);
 
-/* Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics2 */
-/* Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics2.DisableAutoSessionCreation() */
 HRESULT wapus_user_activity_channel_statics_2_disable_auto_session_creation(WAPUS_IUserActivityChannelStatics_2 *self);
 
-/* Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics2.TryGetForWebAccount(account) */
 HRESULT wapus_user_activity_channel_statics_2_try_get_for_web_account(WAPUS_IUserActivityChannelStatics_2 *self, WSECR_WebAccount* account, WAPUS_UserActivityChannel** out);
 
-/* Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics3 */
-/* Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics3.GetForUser(user) */
 HRESULT wapus_user_activity_channel_statics_3_get_for_user(WAPUS_IUserActivityChannelStatics_3 *self, WSY_User* user, WAPUS_UserActivityChannel** out);
 
-/* Windows.ApplicationModel.UserActivities.IUserActivityContentInfoStatics */
-/* Windows.ApplicationModel.UserActivities.IUserActivityContentInfoStatics.FromJson() */
 HRESULT wapus_user_activity_content_info_statics_from_json(WAPUS_IUserActivityContentInfoStatics *self, cwinrt_hstring value, WAPUS_UserActivityContentInfo** out);
 
-/* Windows.ApplicationModel.UserActivities.IUserActivityFactory */
-/* Windows.ApplicationModel.UserActivities.IUserActivityFactory.CreateWithActivityId(activityId) */
 HRESULT wapus_user_activity_factory_create_with_activity_id(WAPUS_IUserActivityFactory *self, cwinrt_hstring activityId, WAPUS_UserActivity** out);
 
-/* Windows.ApplicationModel.UserActivities.IUserActivityRequestManagerStatics */
-/* Windows.ApplicationModel.UserActivities.IUserActivityRequestManagerStatics.GetForCurrentView() */
 HRESULT wapus_user_activity_request_manager_statics_get_for_current_view(WAPUS_IUserActivityRequestManagerStatics *self, WAPUS_UserActivityRequestManager** out);
 
-/* Windows.ApplicationModel.UserActivities.IUserActivityStatics */
-/* Windows.ApplicationModel.UserActivities.IUserActivityStatics.TryParseFromJson(json) */
 HRESULT wapus_user_activity_statics_try_parse_from_json(WAPUS_IUserActivityStatics *self, cwinrt_hstring json, WAPUS_UserActivity** out);
 
-/* Windows.ApplicationModel.UserActivities.IUserActivityStatics.TryParseFromJsonArray(json) */
 HRESULT wapus_user_activity_statics_try_parse_from_json_array(WAPUS_IUserActivityStatics *self, cwinrt_hstring json, WFOCO_IVector_WAPUS_UserActivity** out);
 
-/* Windows.ApplicationModel.UserActivities.IUserActivityStatics.ToJsonArray(activities) */
 HRESULT wapus_user_activity_statics_to_json_array(WAPUS_IUserActivityStatics *self, WFOCO_IIterable_WAPUS_UserActivity* activities, cwinrt_hstring *out);
 
-/* activate Windows.ApplicationModel.UserActivities.UserActivity */
 HRESULT wapus_user_activity_new(WAPUS_UserActivity **out);
 
-/* Windows.ApplicationModel.UserActivities.UserActivity */
-/* Windows.ApplicationModel.UserActivities.UserActivity.get_State() */
 HRESULT wapus_user_activity_get__state(WAPUS_UserActivity *self, WAPUS_UserActivityState *value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivity.get_ActivityId() */
 HRESULT wapus_user_activity_get__activity_id(WAPUS_UserActivity *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivity.get_VisualElements() */
 HRESULT wapus_user_activity_get__visual_elements(WAPUS_UserActivity *self, WAPUS_UserActivityVisualElements** value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivity.get_ContentUri() */
 HRESULT wapus_user_activity_get__content_uri(WAPUS_UserActivity *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivity.put_ContentUri() */
 HRESULT wapus_user_activity_put__content_uri(WAPUS_UserActivity *self, WF_Uri* value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivity.get_ContentType() */
 HRESULT wapus_user_activity_get__content_type(WAPUS_UserActivity *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivity.put_ContentType() */
 HRESULT wapus_user_activity_put__content_type(WAPUS_UserActivity *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivity.get_FallbackUri() */
 HRESULT wapus_user_activity_get__fallback_uri(WAPUS_UserActivity *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivity.put_FallbackUri() */
 HRESULT wapus_user_activity_put__fallback_uri(WAPUS_UserActivity *self, WF_Uri* value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivity.get_ActivationUri() */
 HRESULT wapus_user_activity_get__activation_uri(WAPUS_UserActivity *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivity.put_ActivationUri() */
 HRESULT wapus_user_activity_put__activation_uri(WAPUS_UserActivity *self, WF_Uri* value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivity.get_ContentInfo() */
 HRESULT wapus_user_activity_get__content_info(WAPUS_UserActivity *self, WAPUS_IUserActivityContentInfo** value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivity.put_ContentInfo() */
 HRESULT wapus_user_activity_put__content_info(WAPUS_UserActivity *self, WAPUS_IUserActivityContentInfo* value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivity.SaveAsync() */
 HRESULT wapus_user_activity_save_async(WAPUS_UserActivity *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.UserActivities.UserActivity.CreateSession() */
 HRESULT wapus_user_activity_create_session(WAPUS_UserActivity *self, WAPUS_UserActivitySession** out);
 
-/* Windows.ApplicationModel.UserActivities.UserActivity.ToJson() */
 HRESULT wapus_user_activity_to_json(WAPUS_UserActivity *self, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.UserActivities.UserActivity.get_IsRoamable() */
 HRESULT wapus_user_activity_get__is_roamable(WAPUS_UserActivity *self, BOOL *value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivity.put_IsRoamable() */
 HRESULT wapus_user_activity_put__is_roamable(WAPUS_UserActivity *self, BOOL value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivity.TryParseFromJson(json) */
 HRESULT wapus_user_activity_try_parse_from_json(cwinrt_hstring json, WAPUS_UserActivity** out);
 
-/* Windows.ApplicationModel.UserActivities.UserActivity.TryParseFromJsonArray(json) */
 HRESULT wapus_user_activity_try_parse_from_json_array(cwinrt_hstring json, WFOCO_IVector_WAPUS_UserActivity** out);
 
-/* Windows.ApplicationModel.UserActivities.UserActivity.ToJsonArray(activities) */
 HRESULT wapus_user_activity_to_json_array(WFOCO_IIterable_WAPUS_UserActivity* activities, cwinrt_hstring *out);
 
-/* activate Windows.ApplicationModel.UserActivities.UserActivityAttribution */
 HRESULT wapus_user_activity_attribution_new(WAPUS_UserActivityAttribution **out);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityAttribution */
-/* Windows.ApplicationModel.UserActivities.UserActivityAttribution.get_IconUri() */
 HRESULT wapus_user_activity_attribution_get__icon_uri(WAPUS_UserActivityAttribution *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityAttribution.put_IconUri() */
 HRESULT wapus_user_activity_attribution_put__icon_uri(WAPUS_UserActivityAttribution *self, WF_Uri* value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityAttribution.get_AlternateText() */
 HRESULT wapus_user_activity_attribution_get__alternate_text(WAPUS_UserActivityAttribution *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityAttribution.put_AlternateText() */
 HRESULT wapus_user_activity_attribution_put__alternate_text(WAPUS_UserActivityAttribution *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityAttribution.get_AddImageQuery() */
 HRESULT wapus_user_activity_attribution_get__add_image_query(WAPUS_UserActivityAttribution *self, BOOL *value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityAttribution.put_AddImageQuery() */
 HRESULT wapus_user_activity_attribution_put__add_image_query(WAPUS_UserActivityAttribution *self, BOOL value);
 
-/* activate Windows.ApplicationModel.UserActivities.UserActivityChannel */
 HRESULT wapus_user_activity_channel_new(WAPUS_UserActivityChannel **out);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityChannel */
-/* Windows.ApplicationModel.UserActivities.UserActivityChannel.GetOrCreateUserActivityAsync(activityId) */
 HRESULT wapus_user_activity_channel_get_or_create_user_activity_async(WAPUS_UserActivityChannel *self, cwinrt_hstring activityId, WF_IAsyncOperation_WAPUS_UserActivity** out);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityChannel.DeleteActivityAsync(activityId) */
 HRESULT wapus_user_activity_channel_delete_activity_async(WAPUS_UserActivityChannel *self, cwinrt_hstring activityId, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityChannel.DeleteAllActivitiesAsync() */
 HRESULT wapus_user_activity_channel_delete_all_activities_async(WAPUS_UserActivityChannel *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityChannel.GetRecentUserActivitiesAsync(maxUniqueActivities) */
 HRESULT wapus_user_activity_channel_get_recent_user_activities_async(WAPUS_UserActivityChannel *self, int32_t maxUniqueActivities, WF_IAsyncOperation_WFOCO_IVector_WAPUS_UserActivitySessionHistoryItem** out);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityChannel.GetSessionHistoryItemsForUserActivityAsync(activityId, startTime) */
 HRESULT wapus_user_activity_channel_get_session_history_items_for_user_activity_async(WAPUS_UserActivityChannel *self, cwinrt_hstring activityId, WF_DateTime startTime, WF_IAsyncOperation_WFOCO_IVector_WAPUS_UserActivitySessionHistoryItem** out);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityChannel.GetForUser(user) */
 HRESULT wapus_user_activity_channel_get_for_user(WSY_User* user, WAPUS_UserActivityChannel** out);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityChannel.DisableAutoSessionCreation() */
 HRESULT wapus_user_activity_channel_disable_auto_session_creation(void);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityChannel.TryGetForWebAccount(account) */
 HRESULT wapus_user_activity_channel_try_get_for_web_account(WSECR_WebAccount* account, WAPUS_UserActivityChannel** out);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityChannel.GetDefault() */
 HRESULT wapus_user_activity_channel_get_default(WAPUS_UserActivityChannel** out);
 
-/* activate Windows.ApplicationModel.UserActivities.UserActivityContentInfo */
 HRESULT wapus_user_activity_content_info_new(WAPUS_UserActivityContentInfo **out);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityContentInfo */
-/* Windows.ApplicationModel.UserActivities.UserActivityContentInfo.ToJson() */
 HRESULT wapus_user_activity_content_info_to_json(WAPUS_UserActivityContentInfo *self, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityContentInfo.FromJson() */
 HRESULT wapus_user_activity_content_info_from_json(cwinrt_hstring value, WAPUS_UserActivityContentInfo** out);
 
-/* activate Windows.ApplicationModel.UserActivities.UserActivityRequest */
 HRESULT wapus_user_activity_request_new(WAPUS_UserActivityRequest **out);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityRequest */
-/* Windows.ApplicationModel.UserActivities.UserActivityRequest.SetUserActivity(activity) */
 HRESULT wapus_user_activity_request_set_user_activity(WAPUS_UserActivityRequest *self, WAPUS_UserActivity* activity);
 
-/* activate Windows.ApplicationModel.UserActivities.UserActivityRequestManager */
 HRESULT wapus_user_activity_request_manager_new(WAPUS_UserActivityRequestManager **out);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityRequestManager */
-/* Windows.ApplicationModel.UserActivities.UserActivityRequestManager.GetForCurrentView() */
 HRESULT wapus_user_activity_request_manager_get_for_current_view(WAPUS_UserActivityRequestManager** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapus_user_activity_request_manager_on_user_activity_requested(WAPUS_UserActivityRequestManager *self, cwinrt_event_fn fn, void *ctx);
 void wapus_user_activity_request_manager_off_user_activity_requested(WAPUS_UserActivityRequestManager *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.UserActivities.UserActivityRequestedEventArgs */
 HRESULT wapus_user_activity_requested_event_args_new(WAPUS_UserActivityRequestedEventArgs **out);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityRequestedEventArgs */
-/* Windows.ApplicationModel.UserActivities.UserActivityRequestedEventArgs.get_Request() */
 HRESULT wapus_user_activity_requested_event_args_get__request(WAPUS_UserActivityRequestedEventArgs *self, WAPUS_UserActivityRequest** value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivityRequestedEventArgs.GetDeferral() */
 HRESULT wapus_user_activity_requested_event_args_get_deferral(WAPUS_UserActivityRequestedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.UserActivities.UserActivitySession */
 HRESULT wapus_user_activity_session_new(WAPUS_UserActivitySession **out);
 
-/* Windows.ApplicationModel.UserActivities.UserActivitySession */
-/* Windows.ApplicationModel.UserActivities.UserActivitySession.get_ActivityId() */
 HRESULT wapus_user_activity_session_get__activity_id(WAPUS_UserActivitySession *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivitySession.Close() */
 HRESULT wapus_user_activity_session_close(WAPUS_UserActivitySession *self);
 
-/* activate Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem */
 HRESULT wapus_user_activity_session_history_item_new(WAPUS_UserActivitySessionHistoryItem **out);
 
-/* Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem */
-/* Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem.get_UserActivity() */
 HRESULT wapus_user_activity_session_history_item_get__user_activity(WAPUS_UserActivitySessionHistoryItem *self, WAPUS_UserActivity** value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem.get_StartTime() */
 HRESULT wapus_user_activity_session_history_item_get__start_time(WAPUS_UserActivitySessionHistoryItem *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem.get_EndTime() */
 HRESULT wapus_user_activity_session_history_item_get__end_time(WAPUS_UserActivitySessionHistoryItem *self, WF_DateTime** value);
 
-/* Windows.ApplicationModel.UserActivities.IUserActivityVisualElements */
-/* Windows.ApplicationModel.UserActivities.IUserActivityVisualElements2 */
-/* Windows.ApplicationModel.UserActivities.IUserActivityVisualElements2.get_AttributionDisplayText() */
 HRESULT wapus_user_activity_visual_elements_2_get__attribution_display_text(WAPUS_IUserActivityVisualElements_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.UserActivities.IUserActivityVisualElements2.put_AttributionDisplayText() */
 HRESULT wapus_user_activity_visual_elements_2_put__attribution_display_text(WAPUS_IUserActivityVisualElements_2 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.UserActivities.IUserActivity */
-/* Windows.ApplicationModel.UserActivities.IUserActivity2 */
-/* Windows.ApplicationModel.UserActivities.IUserActivity2.ToJson() */
 HRESULT wapus_user_activity_2_to_json(WAPUS_IUserActivity_2 *self, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.UserActivities.IUserActivity3 */
-/* Windows.ApplicationModel.UserActivities.IUserActivity3.get_IsRoamable() */
 HRESULT wapus_user_activity_3_get__is_roamable(WAPUS_IUserActivity_3 *self, BOOL *value);
 
-/* Windows.ApplicationModel.UserActivities.IUserActivity3.put_IsRoamable() */
 HRESULT wapus_user_activity_3_put__is_roamable(WAPUS_IUserActivity_3 *self, BOOL value);
 
-/* Windows.ApplicationModel.UserActivities.IUserActivityAttribution */
-/* Windows.ApplicationModel.UserActivities.IUserActivityChannel */
-/* Windows.ApplicationModel.UserActivities.IUserActivityChannel2 */
-/* Windows.ApplicationModel.UserActivities.IUserActivityChannel2.GetRecentUserActivitiesAsync(maxUniqueActivities) */
 HRESULT wapus_user_activity_channel_2_get_recent_user_activities_async(WAPUS_IUserActivityChannel_2 *self, int32_t maxUniqueActivities, WF_IAsyncOperation_WFOCO_IVector_WAPUS_UserActivitySessionHistoryItem** out);
 
-/* Windows.ApplicationModel.UserActivities.IUserActivityChannel2.GetSessionHistoryItemsForUserActivityAsync(activityId, startTime) */
 HRESULT wapus_user_activity_channel_2_get_session_history_items_for_user_activity_async(WAPUS_IUserActivityChannel_2 *self, cwinrt_hstring activityId, WF_DateTime startTime, WF_IAsyncOperation_WFOCO_IVector_WAPUS_UserActivitySessionHistoryItem** out);
 
-/* Windows.ApplicationModel.UserActivities.IUserActivityContentInfo */
-/* Windows.ApplicationModel.UserActivities.IUserActivityRequest */
-/* Windows.ApplicationModel.UserActivities.IUserActivityRequestManager */
-/* Windows.ApplicationModel.UserActivities.IUserActivityRequestedEventArgs */
-/* Windows.ApplicationModel.UserActivities.IUserActivitySession */
-/* Windows.ApplicationModel.UserActivities.IUserActivitySessionHistoryItem */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_USERACTIVITIES_H */

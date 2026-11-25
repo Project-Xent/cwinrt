@@ -13,18 +13,15 @@
 #include <cwinrt/Windows.UI.WindowManagement.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WUIWIPR_IWindowManagementPreviewStatics WUIWIPR_IWindowManagementPreviewStatics;
 typedef struct WUIWIPR_WindowManagementPreview WUIWIPR_WindowManagementPreview;
 typedef struct WUIWIPR_IWindowManagementPreview WUIWIPR_IWindowManagementPreview;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WUIWI_AppWindow
 #define CWINRT_FWD_WUIWI_AppWindow
 typedef struct WUIWI_AppWindow WUIWI_AppWindow;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -37,17 +34,10 @@ static const IID CWINRT_IID_WUIWIPR_IWindowManagementPreviewStatics CWINRT_MAYBE
 static const IID CWINRT_IID_WUIWIPR_IWindowManagementPreview CWINRT_MAYBE_UNUSED = { 0x4EF55B0D, 0x561D, 0x513C, { 0xA6, 0x7C, 0x2C, 0x02, 0xB6, 0x9C, 0xEF, 0x41 } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.WindowManagement.Preview.IWindowManagementPreviewStatics */
-/* Windows.UI.WindowManagement.Preview.IWindowManagementPreviewStatics.SetPreferredMinSize(window, preferredFrameMinSize) */
 HRESULT wuiwipr_window_management_preview_statics_set_preferred_min_size(WUIWIPR_IWindowManagementPreviewStatics *self, WUIWI_AppWindow* window, WF_Size preferredFrameMinSize);
 
-/* activate Windows.UI.WindowManagement.Preview.WindowManagementPreview */
 HRESULT wuiwipr_window_management_preview_new(WUIWIPR_WindowManagementPreview **out);
 
-/* Windows.UI.WindowManagement.Preview.WindowManagementPreview */
-/* Windows.UI.WindowManagement.Preview.WindowManagementPreview.SetPreferredMinSize(window, preferredFrameMinSize) */
 HRESULT wuiwipr_window_management_preview_set_preferred_min_size(WUIWI_AppWindow* window, WF_Size preferredFrameMinSize);
 
 #endif /* CWINRT_WINDOWS_UI_WINDOWMANAGEMENT_PREVIEW_H */

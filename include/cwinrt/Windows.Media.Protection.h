@@ -12,13 +12,11 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WMEPL_MediaPlaybackItem
 #define CWINRT_FWD_WMEPL_MediaPlaybackItem
 typedef struct WMEPL_MediaPlaybackItem WMEPL_MediaPlaybackItem;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMEPR_IMediaProtectionPMPServerFactory WMEPR_IMediaProtectionPMPServerFactory;
 typedef struct WMEPR_IMediaProtectionServiceRequest WMEPR_IMediaProtectionServiceRequest;
 typedef struct WMEPR_MediaProtectionManager WMEPR_MediaProtectionManager;
@@ -46,7 +44,6 @@ typedef struct WMEPR_IRevocationAndRenewalItem WMEPR_IRevocationAndRenewalItem;
 typedef struct WMEPR_IRevocationAndRenewalInformation WMEPR_IRevocationAndRenewalInformation;
 typedef struct WMEPR_IProtectionCapabilities WMEPR_IProtectionCapabilities;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IPropertySet
 #define CWINRT_FWD_WFOCO_IPropertySet
 typedef struct WFOCO_IPropertySet WFOCO_IPropertySet;
@@ -144,7 +141,6 @@ typedef enum WMEPR_HdcpSetProtectionResult {
 } WMEPR_HdcpSetProtectionResult;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -213,27 +209,16 @@ static const IID CWINRT_IID_WMEPR_IRevocationAndRenewalInformation CWINRT_MAYBE_
 static const IID CWINRT_IID_WMEPR_IProtectionCapabilities CWINRT_MAYBE_UNUSED = { 0xC7AC5D7E, 0x7480, 0x4D29, { 0xA4, 0x64, 0x7B, 0xCD, 0x91, 0x3D, 0xD8, 0xE4 } };
 #endif
 
-/* Methods */
-
-/* Windows.Media.Protection.IMediaProtectionPMPServerFactory */
-/* Windows.Media.Protection.IMediaProtectionPMPServerFactory.CreatePMPServer(pProperties) */
 HRESULT wmepr_media_protection_p_m_p_server_factory_create_p_m_p_server(WMEPR_IMediaProtectionPMPServerFactory *self, WFOCO_IPropertySet* pProperties, WMEPR_MediaProtectionPMPServer** out);
 
-/* Windows.Media.Protection.IMediaProtectionServiceRequest */
-/* Windows.Media.Protection.IMediaProtectionServiceRequest.get_ProtectionSystem() */
 HRESULT wmepr_media_protection_service_request_get__protection_system(WMEPR_IMediaProtectionServiceRequest *self, GUID *value);
 
-/* Windows.Media.Protection.IMediaProtectionServiceRequest.get_Type() */
 HRESULT wmepr_media_protection_service_request_get__type(WMEPR_IMediaProtectionServiceRequest *self, GUID *value);
 
-/* activate Windows.Media.Protection.MediaProtectionManager */
 HRESULT wmepr_media_protection_manager_new(WMEPR_MediaProtectionManager **out);
 
-/* Windows.Media.Protection.MediaProtectionManager */
-/* Windows.Media.Protection.MediaProtectionManager.get_Properties() */
 HRESULT wmepr_media_protection_manager_get__properties(WMEPR_MediaProtectionManager *self, WFOCO_IPropertySet** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmepr_media_protection_manager_on_service_requested(WMEPR_MediaProtectionManager *self, cwinrt_event_fn fn, void *ctx);
@@ -245,132 +230,75 @@ void wmepr_media_protection_manager_off_reboot_needed(WMEPR_MediaProtectionManag
 cwinrt_token wmepr_media_protection_manager_on_component_load_failed(WMEPR_MediaProtectionManager *self, cwinrt_event_fn fn, void *ctx);
 void wmepr_media_protection_manager_off_component_load_failed(WMEPR_MediaProtectionManager *self, cwinrt_token token);
 
-/* activate Windows.Media.Protection.MediaProtectionPMPServer */
 HRESULT wmepr_media_protection_p_m_p_server_new(WMEPR_MediaProtectionPMPServer **out);
 
-/* Windows.Media.Protection.MediaProtectionPMPServer */
-/* Windows.Media.Protection.MediaProtectionPMPServer.get_Properties() */
 HRESULT wmepr_media_protection_p_m_p_server_get__properties(WMEPR_MediaProtectionPMPServer *self, WFOCO_IPropertySet** value);
 
-/* activate Windows.Media.Protection.MediaProtectionServiceCompletion */
 HRESULT wmepr_media_protection_service_completion_new(WMEPR_MediaProtectionServiceCompletion **out);
 
-/* Windows.Media.Protection.MediaProtectionServiceCompletion */
-/* Windows.Media.Protection.MediaProtectionServiceCompletion.Complete(success) */
 HRESULT wmepr_media_protection_service_completion_complete(WMEPR_MediaProtectionServiceCompletion *self, BOOL success);
 
-/* Windows.Media.Protection.IComponentRenewalStatics */
-/* Windows.Media.Protection.IComponentRenewalStatics.RenewSystemComponentsAsync(information) */
 HRESULT wmepr_component_renewal_statics_renew_system_components_async(WMEPR_IComponentRenewalStatics *self, WMEPR_RevocationAndRenewalInformation* information, WF_IAsyncOperationWithProgress_WMEPR_RenewalStatus_uint32_t** out);
 
-/* activate Windows.Media.Protection.ComponentLoadFailedEventArgs */
 HRESULT wmepr_component_load_failed_event_args_new(WMEPR_ComponentLoadFailedEventArgs **out);
 
-/* Windows.Media.Protection.ComponentLoadFailedEventArgs */
-/* Windows.Media.Protection.ComponentLoadFailedEventArgs.get_Information() */
 HRESULT wmepr_component_load_failed_event_args_get__information(WMEPR_ComponentLoadFailedEventArgs *self, WMEPR_RevocationAndRenewalInformation** value);
 
-/* Windows.Media.Protection.ComponentLoadFailedEventArgs.get_Completion() */
 HRESULT wmepr_component_load_failed_event_args_get__completion(WMEPR_ComponentLoadFailedEventArgs *self, WMEPR_MediaProtectionServiceCompletion** value);
 
-/* Windows.Media.Protection.ComponentLoadFailedEventHandler */
-/* Windows.Media.Protection.ComponentLoadFailedEventHandler.Invoke(sender, e) */
 HRESULT wmepr_component_load_failed_event_handler_invoke(WMEPR_ComponentLoadFailedEventHandler *self, WMEPR_MediaProtectionManager* sender, WMEPR_ComponentLoadFailedEventArgs* e);
 
-/* activate Windows.Media.Protection.ComponentRenewal */
 HRESULT wmepr_component_renewal_new(WMEPR_ComponentRenewal **out);
 
-/* Windows.Media.Protection.ComponentRenewal */
-/* Windows.Media.Protection.ComponentRenewal.RenewSystemComponentsAsync(information) */
 HRESULT wmepr_component_renewal_renew_system_components_async(WMEPR_RevocationAndRenewalInformation* information, WF_IAsyncOperationWithProgress_WMEPR_RenewalStatus_uint32_t** out);
 
-/* activate Windows.Media.Protection.HdcpSession */
 HRESULT wmepr_hdcp_session_new(WMEPR_HdcpSession **out);
 
-/* Windows.Media.Protection.HdcpSession */
-/* Windows.Media.Protection.HdcpSession.IsEffectiveProtectionAtLeast(protection) */
 HRESULT wmepr_hdcp_session_is_effective_protection_at_least(WMEPR_HdcpSession *self, WMEPR_HdcpProtection protection, BOOL *out);
 
-/* Windows.Media.Protection.HdcpSession.GetEffectiveProtection() */
 HRESULT wmepr_hdcp_session_get_effective_protection(WMEPR_HdcpSession *self, WMEPR_HdcpProtection** out);
 
-/* Windows.Media.Protection.HdcpSession.SetDesiredMinProtectionAsync(protection) */
 HRESULT wmepr_hdcp_session_set_desired_min_protection_async(WMEPR_HdcpSession *self, WMEPR_HdcpProtection protection, WF_IAsyncOperation_WMEPR_HdcpSetProtectionResult** out);
 
-/* Windows.Media.Protection.HdcpSession.Close() */
 HRESULT wmepr_hdcp_session_close(WMEPR_HdcpSession *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmepr_hdcp_session_on_protection_changed(WMEPR_HdcpSession *self, cwinrt_event_fn fn, void *ctx);
 void wmepr_hdcp_session_off_protection_changed(WMEPR_HdcpSession *self, cwinrt_token token);
 
-/* Windows.Media.Protection.ServiceRequestedEventHandler */
-/* Windows.Media.Protection.ServiceRequestedEventHandler.Invoke(sender, e) */
 HRESULT wmepr_service_requested_event_handler_invoke(WMEPR_ServiceRequestedEventHandler *self, WMEPR_MediaProtectionManager* sender, WMEPR_ServiceRequestedEventArgs* e);
 
-/* activate Windows.Media.Protection.ServiceRequestedEventArgs */
 HRESULT wmepr_service_requested_event_args_new(WMEPR_ServiceRequestedEventArgs **out);
 
-/* Windows.Media.Protection.ServiceRequestedEventArgs */
-/* Windows.Media.Protection.ServiceRequestedEventArgs.get_Request() */
 HRESULT wmepr_service_requested_event_args_get__request(WMEPR_ServiceRequestedEventArgs *self, WMEPR_IMediaProtectionServiceRequest** value);
 
-/* Windows.Media.Protection.ServiceRequestedEventArgs.get_Completion() */
 HRESULT wmepr_service_requested_event_args_get__completion(WMEPR_ServiceRequestedEventArgs *self, WMEPR_MediaProtectionServiceCompletion** value);
 
-/* Windows.Media.Protection.ServiceRequestedEventArgs.get_MediaPlaybackItem() */
 HRESULT wmepr_service_requested_event_args_get__media_playback_item(WMEPR_ServiceRequestedEventArgs *self, WMEPL_MediaPlaybackItem** value);
 
-/* activate Windows.Media.Protection.RevocationAndRenewalItem */
 HRESULT wmepr_revocation_and_renewal_item_new(WMEPR_RevocationAndRenewalItem **out);
 
-/* Windows.Media.Protection.RevocationAndRenewalItem */
-/* Windows.Media.Protection.RevocationAndRenewalItem.get_Reasons() */
 HRESULT wmepr_revocation_and_renewal_item_get__reasons(WMEPR_RevocationAndRenewalItem *self, WMEPR_RevocationAndRenewalReasons *value);
 
-/* Windows.Media.Protection.RevocationAndRenewalItem.get_HeaderHash() */
 HRESULT wmepr_revocation_and_renewal_item_get__header_hash(WMEPR_RevocationAndRenewalItem *self, cwinrt_hstring *value);
 
-/* Windows.Media.Protection.RevocationAndRenewalItem.get_PublicKeyHash() */
 HRESULT wmepr_revocation_and_renewal_item_get__public_key_hash(WMEPR_RevocationAndRenewalItem *self, cwinrt_hstring *value);
 
-/* Windows.Media.Protection.RevocationAndRenewalItem.get_Name() */
 HRESULT wmepr_revocation_and_renewal_item_get__name(WMEPR_RevocationAndRenewalItem *self, cwinrt_hstring *value);
 
-/* Windows.Media.Protection.RevocationAndRenewalItem.get_RenewalId() */
 HRESULT wmepr_revocation_and_renewal_item_get__renewal_id(WMEPR_RevocationAndRenewalItem *self, cwinrt_hstring *value);
 
-/* activate Windows.Media.Protection.RevocationAndRenewalInformation */
 HRESULT wmepr_revocation_and_renewal_information_new(WMEPR_RevocationAndRenewalInformation **out);
 
-/* Windows.Media.Protection.RevocationAndRenewalInformation */
-/* Windows.Media.Protection.RevocationAndRenewalInformation.get_Items() */
 HRESULT wmepr_revocation_and_renewal_information_get__items(WMEPR_RevocationAndRenewalInformation *self, WFOCO_IVector_WMEPR_RevocationAndRenewalItem** value);
 
-/* Windows.Media.Protection.RebootNeededEventHandler */
-/* Windows.Media.Protection.RebootNeededEventHandler.Invoke(sender) */
 HRESULT wmepr_reboot_needed_event_handler_invoke(WMEPR_RebootNeededEventHandler *self, WMEPR_MediaProtectionManager* sender);
 
-/* activate Windows.Media.Protection.ProtectionCapabilities */
 HRESULT wmepr_protection_capabilities_new(WMEPR_ProtectionCapabilities **out);
 
-/* Windows.Media.Protection.ProtectionCapabilities */
-/* Windows.Media.Protection.ProtectionCapabilities.IsTypeSupported(keySystem) */
 HRESULT wmepr_protection_capabilities_is_type_supported(WMEPR_ProtectionCapabilities *self, cwinrt_hstring type_, cwinrt_hstring keySystem, WMEPR_ProtectionCapabilityResult *out);
 
-/* Windows.Media.Protection.IMediaProtectionManager */
-/* Windows.Media.Protection.IMediaProtectionPMPServer */
-/* Windows.Media.Protection.IMediaProtectionServiceCompletion */
-/* Windows.Media.Protection.IComponentLoadFailedEventArgs */
-/* Windows.Media.Protection.IHdcpSession */
-/* Windows.Media.Protection.IServiceRequestedEventArgs */
-/* Windows.Media.Protection.IServiceRequestedEventArgs2 */
-/* Windows.Media.Protection.IServiceRequestedEventArgs2.get_MediaPlaybackItem() */
 HRESULT wmepr_service_requested_event_args_2_get__media_playback_item(WMEPR_IServiceRequestedEventArgs_2 *self, WMEPL_MediaPlaybackItem** value);
 
-/* Windows.Media.Protection.IRevocationAndRenewalItem */
-/* Windows.Media.Protection.IRevocationAndRenewalInformation */
-/* Windows.Media.Protection.IProtectionCapabilities */
 #endif /* CWINRT_WINDOWS_MEDIA_PROTECTION_H */

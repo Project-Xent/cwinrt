@@ -12,11 +12,9 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WSYRE_InteractiveSession WSYRE_InteractiveSession;
 typedef struct WSYRE_IInteractiveSessionStatics WSYRE_IInteractiveSessionStatics;
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -25,17 +23,10 @@ typedef struct WSYRE_IInteractiveSessionStatics WSYRE_IInteractiveSessionStatics
 static const IID CWINRT_IID_WSYRE_IInteractiveSessionStatics CWINRT_MAYBE_UNUSED = { 0x60884631, 0xDD3A, 0x4576, { 0x9C, 0x8D, 0xE8, 0x02, 0x76, 0x18, 0xBD, 0xCE } };
 #endif
 
-/* Methods */
-
-/* activate Windows.System.RemoteDesktop.InteractiveSession */
 HRESULT wsyre_interactive_session_new(WSYRE_InteractiveSession **out);
 
-/* Windows.System.RemoteDesktop.InteractiveSession */
-/* Windows.System.RemoteDesktop.InteractiveSession.get_IsRemote() */
 HRESULT wsyre_interactive_session_get__is_remote(BOOL *value);
 
-/* Windows.System.RemoteDesktop.IInteractiveSessionStatics */
-/* Windows.System.RemoteDesktop.IInteractiveSessionStatics.get_IsRemote() */
 HRESULT wsyre_interactive_session_statics_get__is_remote(WSYRE_IInteractiveSessionStatics *self, BOOL *value);
 
 #endif /* CWINRT_WINDOWS_SYSTEM_REMOTEDESKTOP_H */

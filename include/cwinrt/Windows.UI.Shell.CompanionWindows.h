@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.UI.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WUISHCO_ICompanionWindowRequestStatics WUISHCO_ICompanionWindowRequestStatics;
 typedef struct WUISHCO_ICompanionWindowCoordinatorStatics WUISHCO_ICompanionWindowCoordinatorStatics;
 typedef struct WUISHCO_CompanionWindowRequestResult WUISHCO_CompanionWindowRequestResult;
@@ -23,7 +22,6 @@ typedef struct WUISHCO_ICompanionWindowRequestResult WUISHCO_ICompanionWindowReq
 typedef struct WUISHCO_ICompanionWindowRequest WUISHCO_ICompanionWindowRequest;
 typedef struct WUISHCO_ICompanionWindowCoordinator WUISHCO_ICompanionWindowCoordinator;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_Uri
 #define CWINRT_FWD_WF_Uri
 typedef struct WF_Uri WF_Uri;
@@ -56,7 +54,6 @@ typedef enum WUISHCO_CompanionWindowRequestResultStatus {
 } WUISHCO_CompanionWindowRequestResultStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -81,74 +78,45 @@ static const IID CWINRT_IID_WUISHCO_ICompanionWindowRequest CWINRT_MAYBE_UNUSED 
 static const IID CWINRT_IID_WUISHCO_ICompanionWindowCoordinator CWINRT_MAYBE_UNUSED = { 0x05620E87, 0xB0F7, 0x59BA, { 0xB3, 0xA5, 0xD6, 0x14, 0xBD, 0xC1, 0xEB, 0xE3 } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.Shell.CompanionWindows.ICompanionWindowRequestStatics */
-/* Windows.UI.Shell.CompanionWindows.ICompanionWindowRequestStatics.GetFromLaunchUri(launchUri) */
 HRESULT wuishco_companion_window_request_statics_get_from_launch_uri(WUISHCO_ICompanionWindowRequestStatics *self, WF_Uri* launchUri, WUISHCO_CompanionWindowRequest** out);
 
-/* Windows.UI.Shell.CompanionWindows.ICompanionWindowCoordinatorStatics */
-/* Windows.UI.Shell.CompanionWindows.ICompanionWindowCoordinatorStatics.GetForWindow(windowId) */
 HRESULT wuishco_companion_window_coordinator_statics_get_for_window(WUISHCO_ICompanionWindowCoordinatorStatics *self, WUI_WindowId windowId, WUISHCO_CompanionWindowCoordinator** out);
 
-/* activate Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResult */
 HRESULT wuishco_companion_window_request_result_new(WUISHCO_CompanionWindowRequestResult **out);
 
-/* Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResult */
-/* Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResult.get_Succeeded() */
 HRESULT wuishco_companion_window_request_result_get__succeeded(WUISHCO_CompanionWindowRequestResult *self, BOOL *value);
 
-/* Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResult.get_Status() */
 HRESULT wuishco_companion_window_request_result_get__status(WUISHCO_CompanionWindowRequestResult *self, WUISHCO_CompanionWindowRequestResultStatus *value);
 
-/* Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResult.get_ExtendedError() */
 HRESULT wuishco_companion_window_request_result_get__extended_error(WUISHCO_CompanionWindowRequestResult *self, HRESULT *value);
 
-/* Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResult.get_CompanionWindowId() */
 HRESULT wuishco_companion_window_request_result_get__companion_window_id(WUISHCO_CompanionWindowRequestResult *self, WUI_WindowId *value);
 
-/* activate Windows.UI.Shell.CompanionWindows.CompanionWindowRequest */
 HRESULT wuishco_companion_window_request_new(WUISHCO_CompanionWindowRequest **out);
 
-/* Windows.UI.Shell.CompanionWindows.CompanionWindowRequest */
-/* Windows.UI.Shell.CompanionWindows.CompanionWindowRequest.Accept(windowId) */
 HRESULT wuishco_companion_window_request_accept(WUISHCO_CompanionWindowRequest *self, WUI_WindowId windowId, WUISHCO_CompanionWindowCoordinator** out);
 
-/* Windows.UI.Shell.CompanionWindows.CompanionWindowRequest.Reject() */
 HRESULT wuishco_companion_window_request_reject(WUISHCO_CompanionWindowRequest *self);
 
-/* Windows.UI.Shell.CompanionWindows.CompanionWindowRequest.GetDeferral() */
 HRESULT wuishco_companion_window_request_get_deferral(WUISHCO_CompanionWindowRequest *self, WF_Deferral** out);
 
-/* Windows.UI.Shell.CompanionWindows.CompanionWindowRequest.get_RequestingWindowId() */
 HRESULT wuishco_companion_window_request_get__requesting_window_id(WUISHCO_CompanionWindowRequest *self, WUI_WindowId *value);
 
-/* Windows.UI.Shell.CompanionWindows.CompanionWindowRequest.GetFromLaunchUri(launchUri) */
 HRESULT wuishco_companion_window_request_get_from_launch_uri(WF_Uri* launchUri, WUISHCO_CompanionWindowRequest** out);
 
-/* activate Windows.UI.Shell.CompanionWindows.CompanionWindowCoordinator */
 HRESULT wuishco_companion_window_coordinator_new(WUISHCO_CompanionWindowCoordinator **out);
 
-/* Windows.UI.Shell.CompanionWindows.CompanionWindowCoordinator */
-/* Windows.UI.Shell.CompanionWindows.CompanionWindowCoordinator.RequestWindowFromAppAsync(appId) */
 HRESULT wuishco_companion_window_coordinator_request_window_from_app_async(WUISHCO_CompanionWindowCoordinator *self, cwinrt_hstring appId, WF_IAsyncOperation_WUISHCO_CompanionWindowRequestResult** out);
 
-/* Windows.UI.Shell.CompanionWindows.CompanionWindowCoordinator.DetachCompanionWindow() */
 HRESULT wuishco_companion_window_coordinator_detach_companion_window(WUISHCO_CompanionWindowCoordinator *self);
 
-/* Windows.UI.Shell.CompanionWindows.CompanionWindowCoordinator.get_CompanionWindowId() */
 HRESULT wuishco_companion_window_coordinator_get__companion_window_id(WUISHCO_CompanionWindowCoordinator *self, WUI_WindowId *value);
 
-/* Windows.UI.Shell.CompanionWindows.CompanionWindowCoordinator.GetForWindow(windowId) */
 HRESULT wuishco_companion_window_coordinator_get_for_window(WUI_WindowId windowId, WUISHCO_CompanionWindowCoordinator** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuishco_companion_window_coordinator_on_changed(WUISHCO_CompanionWindowCoordinator *self, cwinrt_event_fn fn, void *ctx);
 void wuishco_companion_window_coordinator_off_changed(WUISHCO_CompanionWindowCoordinator *self, cwinrt_token token);
 
-/* Windows.UI.Shell.CompanionWindows.ICompanionWindowRequestResult */
-/* Windows.UI.Shell.CompanionWindows.ICompanionWindowRequest */
-/* Windows.UI.Shell.CompanionWindows.ICompanionWindowCoordinator */
 #endif /* CWINRT_WINDOWS_UI_SHELL_COMPANIONWINDOWS_H */

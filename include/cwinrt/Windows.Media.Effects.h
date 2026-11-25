@@ -21,7 +21,6 @@
 #include <cwinrt/Windows.Foundation.Numerics.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStreamWithContentType
 #define CWINRT_FWD_WSTST_IRandomAccessStreamWithContentType
 typedef struct WSTST_IRandomAccessStreamWithContentType WSTST_IRandomAccessStreamWithContentType;
@@ -39,7 +38,6 @@ typedef struct WMEME_AudioEncodingProperties WMEME_AudioEncodingProperties;
 typedef struct WMEME_VideoEncodingProperties WMEME_VideoEncodingProperties;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMEEF_IVideoCompositor WMEEF_IVideoCompositor;
 typedef struct WMEEF_IBasicVideoEffect WMEEF_IBasicVideoEffect;
 typedef struct WMEEF_IBasicAudioEffect WMEEF_IBasicAudioEffect;
@@ -76,7 +74,6 @@ typedef struct WMEEF_IAudioCaptureEffectsManager WMEEF_IAudioCaptureEffectsManag
 typedef struct WMEEF_IAcousticEchoCancellationConfiguration WMEEF_IAcousticEchoCancellationConfiguration;
 typedef struct WMEEF_IVideoEffectDefinition WMEEF_IVideoEffectDefinition;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WMEME_VideoEncodingProperties
 #define CWINRT_FWD_WMEME_VideoEncodingProperties
 typedef struct WMEME_VideoEncodingProperties WMEME_VideoEncodingProperties;
@@ -283,7 +280,6 @@ typedef enum WMEEF_AudioEffectState {
 } WMEEF_AudioEffectState;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -376,365 +372,222 @@ static const IID CWINRT_IID_WMEEF_IAcousticEchoCancellationConfiguration CWINRT_
 static const IID CWINRT_IID_WMEEF_IVideoEffectDefinition CWINRT_MAYBE_UNUSED = { 0x39F38CF0, 0x8D0F, 0x4F3E, { 0x84, 0xFC, 0x2D, 0x46, 0xA5, 0x29, 0x79, 0x43 } };
 #endif
 
-/* Methods */
-
-/* Windows.Media.Effects.IVideoCompositor */
-/* Windows.Media.Effects.IVideoCompositor.get_TimeIndependent() */
 HRESULT wmeef_video_compositor_get__time_independent(WMEEF_IVideoCompositor *self, BOOL *value);
 
-/* Windows.Media.Effects.IVideoCompositor.SetEncodingProperties(backgroundProperties, device) */
 HRESULT wmeef_video_compositor_set_encoding_properties(WMEEF_IVideoCompositor *self, WMEME_VideoEncodingProperties* backgroundProperties, WGRDIDI_IDirect3DDevice* device);
 
-/* Windows.Media.Effects.IVideoCompositor.CompositeFrame(context) */
 HRESULT wmeef_video_compositor_composite_frame(WMEEF_IVideoCompositor *self, WMEEF_CompositeVideoFrameContext* context);
 
-/* Windows.Media.Effects.IVideoCompositor.Close(reason) */
 HRESULT wmeef_video_compositor_close(WMEEF_IVideoCompositor *self, WMEEF_MediaEffectClosedReason reason);
 
-/* Windows.Media.Effects.IVideoCompositor.DiscardQueuedFrames() */
 HRESULT wmeef_video_compositor_discard_queued_frames(WMEEF_IVideoCompositor *self);
 
-/* Windows.Media.Effects.IBasicVideoEffect */
-/* Windows.Media.Effects.IBasicVideoEffect.get_IsReadOnly() */
 HRESULT wmeef_basic_video_effect_get__is_read_only(WMEEF_IBasicVideoEffect *self, BOOL *value);
 
-/* Windows.Media.Effects.IBasicVideoEffect.get_SupportedMemoryTypes() */
 HRESULT wmeef_basic_video_effect_get__supported_memory_types(WMEEF_IBasicVideoEffect *self, WMEEF_MediaMemoryTypes *value);
 
-/* Windows.Media.Effects.IBasicVideoEffect.get_TimeIndependent() */
 HRESULT wmeef_basic_video_effect_get__time_independent(WMEEF_IBasicVideoEffect *self, BOOL *value);
 
-/* Windows.Media.Effects.IBasicVideoEffect.get_SupportedEncodingProperties() */
 HRESULT wmeef_basic_video_effect_get__supported_encoding_properties(WMEEF_IBasicVideoEffect *self, WFOCO_IVectorView_WMEME_VideoEncodingProperties** value);
 
-/* Windows.Media.Effects.IBasicVideoEffect.SetEncodingProperties(encodingProperties, device) */
 HRESULT wmeef_basic_video_effect_set_encoding_properties(WMEEF_IBasicVideoEffect *self, WMEME_VideoEncodingProperties* encodingProperties, WGRDIDI_IDirect3DDevice* device);
 
-/* Windows.Media.Effects.IBasicVideoEffect.ProcessFrame(context) */
 HRESULT wmeef_basic_video_effect_process_frame(WMEEF_IBasicVideoEffect *self, WMEEF_ProcessVideoFrameContext* context);
 
-/* Windows.Media.Effects.IBasicVideoEffect.Close(reason) */
 HRESULT wmeef_basic_video_effect_close(WMEEF_IBasicVideoEffect *self, WMEEF_MediaEffectClosedReason reason);
 
-/* Windows.Media.Effects.IBasicVideoEffect.DiscardQueuedFrames() */
 HRESULT wmeef_basic_video_effect_discard_queued_frames(WMEEF_IBasicVideoEffect *self);
 
-/* Windows.Media.Effects.IBasicAudioEffect */
-/* Windows.Media.Effects.IBasicAudioEffect.get_UseInputFrameForOutput() */
 HRESULT wmeef_basic_audio_effect_get__use_input_frame_for_output(WMEEF_IBasicAudioEffect *self, BOOL *value);
 
-/* Windows.Media.Effects.IBasicAudioEffect.get_SupportedEncodingProperties() */
 HRESULT wmeef_basic_audio_effect_get__supported_encoding_properties(WMEEF_IBasicAudioEffect *self, WFOCO_IVectorView_WMEME_AudioEncodingProperties** value);
 
-/* Windows.Media.Effects.IBasicAudioEffect.SetEncodingProperties(encodingProperties) */
 HRESULT wmeef_basic_audio_effect_set_encoding_properties(WMEEF_IBasicAudioEffect *self, WMEME_AudioEncodingProperties* encodingProperties);
 
-/* Windows.Media.Effects.IBasicAudioEffect.ProcessFrame(context) */
 HRESULT wmeef_basic_audio_effect_process_frame(WMEEF_IBasicAudioEffect *self, WMEEF_ProcessAudioFrameContext* context);
 
-/* Windows.Media.Effects.IBasicAudioEffect.Close(reason) */
 HRESULT wmeef_basic_audio_effect_close(WMEEF_IBasicAudioEffect *self, WMEEF_MediaEffectClosedReason reason);
 
-/* Windows.Media.Effects.IBasicAudioEffect.DiscardQueuedFrames() */
 HRESULT wmeef_basic_audio_effect_discard_queued_frames(WMEEF_IBasicAudioEffect *self);
 
-/* activate Windows.Media.Effects.VideoTransformSphericalProjection */
 HRESULT wmeef_video_transform_spherical_projection_new(WMEEF_VideoTransformSphericalProjection **out);
 
-/* Windows.Media.Effects.VideoTransformSphericalProjection */
-/* Windows.Media.Effects.VideoTransformSphericalProjection.get_IsEnabled() */
 HRESULT wmeef_video_transform_spherical_projection_get__is_enabled(WMEEF_VideoTransformSphericalProjection *self, BOOL *value);
 
-/* Windows.Media.Effects.VideoTransformSphericalProjection.put_IsEnabled() */
 HRESULT wmeef_video_transform_spherical_projection_put__is_enabled(WMEEF_VideoTransformSphericalProjection *self, BOOL value);
 
-/* Windows.Media.Effects.VideoTransformSphericalProjection.get_FrameFormat() */
 HRESULT wmeef_video_transform_spherical_projection_get__frame_format(WMEEF_VideoTransformSphericalProjection *self, WMEME_SphericalVideoFrameFormat *value);
 
-/* Windows.Media.Effects.VideoTransformSphericalProjection.put_FrameFormat() */
 HRESULT wmeef_video_transform_spherical_projection_put__frame_format(WMEEF_VideoTransformSphericalProjection *self, WMEME_SphericalVideoFrameFormat value);
 
-/* Windows.Media.Effects.VideoTransformSphericalProjection.get_ProjectionMode() */
 HRESULT wmeef_video_transform_spherical_projection_get__projection_mode(WMEEF_VideoTransformSphericalProjection *self, WMEPL_SphericalVideoProjectionMode *value);
 
-/* Windows.Media.Effects.VideoTransformSphericalProjection.put_ProjectionMode() */
 HRESULT wmeef_video_transform_spherical_projection_put__projection_mode(WMEEF_VideoTransformSphericalProjection *self, WMEPL_SphericalVideoProjectionMode value);
 
-/* Windows.Media.Effects.VideoTransformSphericalProjection.get_HorizontalFieldOfViewInDegrees() */
 HRESULT wmeef_video_transform_spherical_projection_get__horizontal_field_of_view_in_degrees(WMEEF_VideoTransformSphericalProjection *self, double *value);
 
-/* Windows.Media.Effects.VideoTransformSphericalProjection.put_HorizontalFieldOfViewInDegrees() */
 HRESULT wmeef_video_transform_spherical_projection_put__horizontal_field_of_view_in_degrees(WMEEF_VideoTransformSphericalProjection *self, double value);
 
-/* Windows.Media.Effects.VideoTransformSphericalProjection.get_ViewOrientation() */
 HRESULT wmeef_video_transform_spherical_projection_get__view_orientation(WMEEF_VideoTransformSphericalProjection *self, WFN_Quaternion *value);
 
-/* Windows.Media.Effects.VideoTransformSphericalProjection.put_ViewOrientation() */
 HRESULT wmeef_video_transform_spherical_projection_put__view_orientation(WMEEF_VideoTransformSphericalProjection *self, WFN_Quaternion value);
 
-/* activate Windows.Media.Effects.VideoTransformEffectDefinition */
 HRESULT wmeef_video_transform_effect_definition_new(WMEEF_VideoTransformEffectDefinition **out);
 
-/* Windows.Media.Effects.VideoTransformEffectDefinition */
-/* Windows.Media.Effects.VideoTransformEffectDefinition.get_ActivatableClassId() */
 HRESULT wmeef_video_transform_effect_definition_get__activatable_class_id(WMEEF_VideoTransformEffectDefinition *self, cwinrt_hstring *value);
 
-/* Windows.Media.Effects.VideoTransformEffectDefinition.get_Properties() */
 HRESULT wmeef_video_transform_effect_definition_get__properties(WMEEF_VideoTransformEffectDefinition *self, WFOCO_IPropertySet** value);
 
-/* Windows.Media.Effects.VideoTransformEffectDefinition.get_PaddingColor() */
 HRESULT wmeef_video_transform_effect_definition_get__padding_color(WMEEF_VideoTransformEffectDefinition *self, WUI_Color *value);
 
-/* Windows.Media.Effects.VideoTransformEffectDefinition.put_PaddingColor() */
 HRESULT wmeef_video_transform_effect_definition_put__padding_color(WMEEF_VideoTransformEffectDefinition *self, WUI_Color value);
 
-/* Windows.Media.Effects.VideoTransformEffectDefinition.get_OutputSize() */
 HRESULT wmeef_video_transform_effect_definition_get__output_size(WMEEF_VideoTransformEffectDefinition *self, WF_Size *value);
 
-/* Windows.Media.Effects.VideoTransformEffectDefinition.put_OutputSize() */
 HRESULT wmeef_video_transform_effect_definition_put__output_size(WMEEF_VideoTransformEffectDefinition *self, WF_Size value);
 
-/* Windows.Media.Effects.VideoTransformEffectDefinition.get_CropRectangle() */
 HRESULT wmeef_video_transform_effect_definition_get__crop_rectangle(WMEEF_VideoTransformEffectDefinition *self, WF_Rect *value);
 
-/* Windows.Media.Effects.VideoTransformEffectDefinition.put_CropRectangle() */
 HRESULT wmeef_video_transform_effect_definition_put__crop_rectangle(WMEEF_VideoTransformEffectDefinition *self, WF_Rect value);
 
-/* Windows.Media.Effects.VideoTransformEffectDefinition.get_Rotation() */
 HRESULT wmeef_video_transform_effect_definition_get__rotation(WMEEF_VideoTransformEffectDefinition *self, WMEME_MediaRotation *value);
 
-/* Windows.Media.Effects.VideoTransformEffectDefinition.put_Rotation() */
 HRESULT wmeef_video_transform_effect_definition_put__rotation(WMEEF_VideoTransformEffectDefinition *self, WMEME_MediaRotation value);
 
-/* Windows.Media.Effects.VideoTransformEffectDefinition.get_Mirror() */
 HRESULT wmeef_video_transform_effect_definition_get__mirror(WMEEF_VideoTransformEffectDefinition *self, WMEME_MediaMirroringOptions *value);
 
-/* Windows.Media.Effects.VideoTransformEffectDefinition.put_Mirror() */
 HRESULT wmeef_video_transform_effect_definition_put__mirror(WMEEF_VideoTransformEffectDefinition *self, WMEME_MediaMirroringOptions value);
 
-/* Windows.Media.Effects.VideoTransformEffectDefinition.put_ProcessingAlgorithm() */
 HRESULT wmeef_video_transform_effect_definition_put__processing_algorithm(WMEEF_VideoTransformEffectDefinition *self, WMETR_MediaVideoProcessingAlgorithm value);
 
-/* Windows.Media.Effects.VideoTransformEffectDefinition.get_ProcessingAlgorithm() */
 HRESULT wmeef_video_transform_effect_definition_get__processing_algorithm(WMEEF_VideoTransformEffectDefinition *self, WMETR_MediaVideoProcessingAlgorithm *value);
 
-/* Windows.Media.Effects.VideoTransformEffectDefinition.get_SphericalProjection() */
 HRESULT wmeef_video_transform_effect_definition_get__spherical_projection(WMEEF_VideoTransformEffectDefinition *self, WMEEF_VideoTransformSphericalProjection** value);
 
-/* activate Windows.Media.Effects.VideoEffectDefinition */
 HRESULT wmeef_video_effect_definition_new(WMEEF_VideoEffectDefinition **out);
 
-/* Windows.Media.Effects.VideoEffectDefinition */
-/* Windows.Media.Effects.VideoEffectDefinition.get_ActivatableClassId() */
 HRESULT wmeef_video_effect_definition_get__activatable_class_id(WMEEF_VideoEffectDefinition *self, cwinrt_hstring *value);
 
-/* Windows.Media.Effects.VideoEffectDefinition.get_Properties() */
 HRESULT wmeef_video_effect_definition_get__properties(WMEEF_VideoEffectDefinition *self, WFOCO_IPropertySet** value);
 
-/* activate Windows.Media.Effects.VideoCompositorDefinition */
 HRESULT wmeef_video_compositor_definition_new(WMEEF_VideoCompositorDefinition **out);
 
-/* Windows.Media.Effects.VideoCompositorDefinition */
-/* Windows.Media.Effects.VideoCompositorDefinition.get_ActivatableClassId() */
 HRESULT wmeef_video_compositor_definition_get__activatable_class_id(WMEEF_VideoCompositorDefinition *self, cwinrt_hstring *value);
 
-/* Windows.Media.Effects.VideoCompositorDefinition.get_Properties() */
 HRESULT wmeef_video_compositor_definition_get__properties(WMEEF_VideoCompositorDefinition *self, WFOCO_IPropertySet** value);
 
-/* activate Windows.Media.Effects.ProcessVideoFrameContext */
 HRESULT wmeef_process_video_frame_context_new(WMEEF_ProcessVideoFrameContext **out);
 
-/* Windows.Media.Effects.ProcessVideoFrameContext */
-/* Windows.Media.Effects.ProcessVideoFrameContext.get_InputFrame() */
 HRESULT wmeef_process_video_frame_context_get__input_frame(WMEEF_ProcessVideoFrameContext *self, WME_VideoFrame** value);
 
-/* Windows.Media.Effects.ProcessVideoFrameContext.get_OutputFrame() */
 HRESULT wmeef_process_video_frame_context_get__output_frame(WMEEF_ProcessVideoFrameContext *self, WME_VideoFrame** value);
 
-/* activate Windows.Media.Effects.ProcessAudioFrameContext */
 HRESULT wmeef_process_audio_frame_context_new(WMEEF_ProcessAudioFrameContext **out);
 
-/* Windows.Media.Effects.ProcessAudioFrameContext */
-/* Windows.Media.Effects.ProcessAudioFrameContext.get_InputFrame() */
 HRESULT wmeef_process_audio_frame_context_get__input_frame(WMEEF_ProcessAudioFrameContext *self, WME_AudioFrame** value);
 
-/* Windows.Media.Effects.ProcessAudioFrameContext.get_OutputFrame() */
 HRESULT wmeef_process_audio_frame_context_get__output_frame(WMEEF_ProcessAudioFrameContext *self, WME_AudioFrame** value);
 
-/* Windows.Media.Effects.IVideoEffectDefinitionFactory */
-/* Windows.Media.Effects.IVideoEffectDefinitionFactory.Create(activatableClassId) */
 HRESULT wmeef_video_effect_definition_factory_create(WMEEF_IVideoEffectDefinitionFactory *self, cwinrt_hstring activatableClassId, WMEEF_VideoEffectDefinition** out);
 
-/* Windows.Media.Effects.IVideoEffectDefinitionFactory.CreateWithProperties(activatableClassId, props) */
 HRESULT wmeef_video_effect_definition_factory_create_with_properties(WMEEF_IVideoEffectDefinitionFactory *self, cwinrt_hstring activatableClassId, WFOCO_IPropertySet* props, WMEEF_VideoEffectDefinition** out);
 
-/* Windows.Media.Effects.IAudioEffectsManagerStatics */
-/* Windows.Media.Effects.IAudioEffectsManagerStatics.CreateAudioRenderEffectsManager(deviceId, category) */
 HRESULT wmeef_audio_effects_manager_statics_create_audio_render_effects_manager(WMEEF_IAudioEffectsManagerStatics *self, cwinrt_hstring deviceId, WMERE_AudioRenderCategory category, WMEEF_AudioRenderEffectsManager** out);
 
-/* Windows.Media.Effects.IAudioEffectsManagerStatics.CreateAudioRenderEffectsManager(deviceId, category, mode) */
 HRESULT wmeef_audio_effects_manager_statics_create_audio_render_effects_manager_str_audio_render_category_audio_processing_p(WMEEF_IAudioEffectsManagerStatics *self, cwinrt_hstring deviceId, WMERE_AudioRenderCategory category, WME_AudioProcessing mode, WMEEF_AudioRenderEffectsManager** out);
 
-/* Windows.Media.Effects.IAudioEffectsManagerStatics.CreateAudioCaptureEffectsManager(deviceId, category) */
 HRESULT wmeef_audio_effects_manager_statics_create_audio_capture_effects_manager(WMEEF_IAudioEffectsManagerStatics *self, cwinrt_hstring deviceId, WMECA_MediaCategory category, WMEEF_AudioCaptureEffectsManager** out);
 
-/* Windows.Media.Effects.IAudioEffectsManagerStatics.CreateAudioCaptureEffectsManager(deviceId, category, mode) */
 HRESULT wmeef_audio_effects_manager_statics_create_audio_capture_effects_manager_str_media_category_audio_processing_p(WMEEF_IAudioEffectsManagerStatics *self, cwinrt_hstring deviceId, WMECA_MediaCategory category, WME_AudioProcessing mode, WMEEF_AudioCaptureEffectsManager** out);
 
-/* Windows.Media.Effects.IAudioEffectDefinitionFactory */
-/* Windows.Media.Effects.IAudioEffectDefinitionFactory.Create(activatableClassId) */
 HRESULT wmeef_audio_effect_definition_factory_create(WMEEF_IAudioEffectDefinitionFactory *self, cwinrt_hstring activatableClassId, WMEEF_AudioEffectDefinition** out);
 
-/* Windows.Media.Effects.IAudioEffectDefinitionFactory.CreateWithProperties(activatableClassId, props) */
 HRESULT wmeef_audio_effect_definition_factory_create_with_properties(WMEEF_IAudioEffectDefinitionFactory *self, cwinrt_hstring activatableClassId, WFOCO_IPropertySet* props, WMEEF_AudioEffectDefinition** out);
 
-/* activate Windows.Media.Effects.CompositeVideoFrameContext */
 HRESULT wmeef_composite_video_frame_context_new(WMEEF_CompositeVideoFrameContext **out);
 
-/* Windows.Media.Effects.CompositeVideoFrameContext */
-/* Windows.Media.Effects.CompositeVideoFrameContext.get_SurfacesToOverlay() */
 HRESULT wmeef_composite_video_frame_context_get__surfaces_to_overlay(WMEEF_CompositeVideoFrameContext *self, WFOCO_IVectorView_WGRDIDI_IDirect3DSurface** value);
 
-/* Windows.Media.Effects.CompositeVideoFrameContext.get_BackgroundFrame() */
 HRESULT wmeef_composite_video_frame_context_get__background_frame(WMEEF_CompositeVideoFrameContext *self, WME_VideoFrame** value);
 
-/* Windows.Media.Effects.CompositeVideoFrameContext.get_OutputFrame() */
 HRESULT wmeef_composite_video_frame_context_get__output_frame(WMEEF_CompositeVideoFrameContext *self, WME_VideoFrame** value);
 
-/* Windows.Media.Effects.CompositeVideoFrameContext.GetOverlayForSurface(surfaceToOverlay) */
 HRESULT wmeef_composite_video_frame_context_get_overlay_for_surface(WMEEF_CompositeVideoFrameContext *self, WGRDIDI_IDirect3DSurface* surfaceToOverlay, WMEED_MediaOverlay** out);
 
-/* activate Windows.Media.Effects.AudioRenderEffectsManager */
 HRESULT wmeef_audio_render_effects_manager_new(WMEEF_AudioRenderEffectsManager **out);
 
-/* Windows.Media.Effects.AudioRenderEffectsManager */
-/* Windows.Media.Effects.AudioRenderEffectsManager.GetAudioRenderEffects() */
 HRESULT wmeef_audio_render_effects_manager_get_audio_render_effects(WMEEF_AudioRenderEffectsManager *self, WFOCO_IVectorView_WMEEF_AudioEffect** out);
 
-/* Windows.Media.Effects.AudioRenderEffectsManager.get_EffectsProviderThumbnail() */
 HRESULT wmeef_audio_render_effects_manager_get__effects_provider_thumbnail(WMEEF_AudioRenderEffectsManager *self, WSTST_IRandomAccessStreamWithContentType** value);
 
-/* Windows.Media.Effects.AudioRenderEffectsManager.get_EffectsProviderSettingsLabel() */
 HRESULT wmeef_audio_render_effects_manager_get__effects_provider_settings_label(WMEEF_AudioRenderEffectsManager *self, cwinrt_hstring *value);
 
-/* Windows.Media.Effects.AudioRenderEffectsManager.ShowSettingsUI() */
 HRESULT wmeef_audio_render_effects_manager_show_settings_u_i(WMEEF_AudioRenderEffectsManager *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeef_audio_render_effects_manager_on_audio_render_effects_changed(WMEEF_AudioRenderEffectsManager *self, cwinrt_event_fn fn, void *ctx);
 void wmeef_audio_render_effects_manager_off_audio_render_effects_changed(WMEEF_AudioRenderEffectsManager *self, cwinrt_token token);
 
-/* activate Windows.Media.Effects.AudioEffectsManager */
 HRESULT wmeef_audio_effects_manager_new(WMEEF_AudioEffectsManager **out);
 
-/* Windows.Media.Effects.AudioEffectsManager */
-/* Windows.Media.Effects.AudioEffectsManager.CreateAudioRenderEffectsManager(deviceId, category) */
 HRESULT wmeef_audio_effects_manager_create_audio_render_effects_manager(cwinrt_hstring deviceId, WMERE_AudioRenderCategory category, WMEEF_AudioRenderEffectsManager** out);
 
-/* Windows.Media.Effects.AudioEffectsManager.CreateAudioRenderEffectsManager(deviceId, category, mode) */
 HRESULT wmeef_audio_effects_manager_create_audio_render_effects_manager_str_audio_render_category_audio_processing_p(cwinrt_hstring deviceId, WMERE_AudioRenderCategory category, WME_AudioProcessing mode, WMEEF_AudioRenderEffectsManager** out);
 
-/* Windows.Media.Effects.AudioEffectsManager.CreateAudioCaptureEffectsManager(deviceId, category) */
 HRESULT wmeef_audio_effects_manager_create_audio_capture_effects_manager(cwinrt_hstring deviceId, WMECA_MediaCategory category, WMEEF_AudioCaptureEffectsManager** out);
 
-/* Windows.Media.Effects.AudioEffectsManager.CreateAudioCaptureEffectsManager(deviceId, category, mode) */
 HRESULT wmeef_audio_effects_manager_create_audio_capture_effects_manager_str_media_category_audio_processing_p(cwinrt_hstring deviceId, WMECA_MediaCategory category, WME_AudioProcessing mode, WMEEF_AudioCaptureEffectsManager** out);
 
-/* activate Windows.Media.Effects.AudioEffectDefinition */
 HRESULT wmeef_audio_effect_definition_new(WMEEF_AudioEffectDefinition **out);
 
-/* Windows.Media.Effects.AudioEffectDefinition */
-/* Windows.Media.Effects.AudioEffectDefinition.get_ActivatableClassId() */
 HRESULT wmeef_audio_effect_definition_get__activatable_class_id(WMEEF_AudioEffectDefinition *self, cwinrt_hstring *value);
 
-/* Windows.Media.Effects.AudioEffectDefinition.get_Properties() */
 HRESULT wmeef_audio_effect_definition_get__properties(WMEEF_AudioEffectDefinition *self, WFOCO_IPropertySet** value);
 
-/* activate Windows.Media.Effects.AudioEffect */
 HRESULT wmeef_audio_effect_new(WMEEF_AudioEffect **out);
 
-/* Windows.Media.Effects.AudioEffect */
-/* Windows.Media.Effects.AudioEffect.get_AudioEffectType() */
 HRESULT wmeef_audio_effect_get__audio_effect_type(WMEEF_AudioEffect *self, WMEEF_AudioEffectType *value);
 
-/* Windows.Media.Effects.AudioEffect.get_AcousticEchoCancellationConfiguration() */
 HRESULT wmeef_audio_effect_get__acoustic_echo_cancellation_configuration(WMEEF_AudioEffect *self, WMEEF_AcousticEchoCancellationConfiguration** value);
 
-/* Windows.Media.Effects.AudioEffect.get_CanSetState() */
 HRESULT wmeef_audio_effect_get__can_set_state(WMEEF_AudioEffect *self, BOOL *value);
 
-/* Windows.Media.Effects.AudioEffect.get_State() */
 HRESULT wmeef_audio_effect_get__state(WMEEF_AudioEffect *self, WMEEF_AudioEffectState *value);
 
-/* Windows.Media.Effects.AudioEffect.SetState(newState) */
 HRESULT wmeef_audio_effect_set_state(WMEEF_AudioEffect *self, WMEEF_AudioEffectState newState);
 
-/* activate Windows.Media.Effects.AudioCaptureEffectsManager */
 HRESULT wmeef_audio_capture_effects_manager_new(WMEEF_AudioCaptureEffectsManager **out);
 
-/* Windows.Media.Effects.AudioCaptureEffectsManager */
-/* Windows.Media.Effects.AudioCaptureEffectsManager.GetAudioCaptureEffects() */
 HRESULT wmeef_audio_capture_effects_manager_get_audio_capture_effects(WMEEF_AudioCaptureEffectsManager *self, WFOCO_IVectorView_WMEEF_AudioEffect** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeef_audio_capture_effects_manager_on_audio_capture_effects_changed(WMEEF_AudioCaptureEffectsManager *self, cwinrt_event_fn fn, void *ctx);
 void wmeef_audio_capture_effects_manager_off_audio_capture_effects_changed(WMEEF_AudioCaptureEffectsManager *self, cwinrt_token token);
 
-/* activate Windows.Media.Effects.AcousticEchoCancellationConfiguration */
 HRESULT wmeef_acoustic_echo_cancellation_configuration_new(WMEEF_AcousticEchoCancellationConfiguration **out);
 
-/* Windows.Media.Effects.AcousticEchoCancellationConfiguration */
-/* Windows.Media.Effects.AcousticEchoCancellationConfiguration.SetEchoCancellationRenderEndpoint(deviceId) */
 HRESULT wmeef_acoustic_echo_cancellation_configuration_set_echo_cancellation_render_endpoint(WMEEF_AcousticEchoCancellationConfiguration *self, cwinrt_hstring deviceId);
 
-/* Windows.Media.Effects.IVideoCompositorDefinitionFactory */
-/* Windows.Media.Effects.IVideoCompositorDefinitionFactory.Create(activatableClassId) */
 HRESULT wmeef_video_compositor_definition_factory_create(WMEEF_IVideoCompositorDefinitionFactory *self, cwinrt_hstring activatableClassId, WMEEF_VideoCompositorDefinition** out);
 
-/* Windows.Media.Effects.IVideoCompositorDefinitionFactory.CreateWithProperties(activatableClassId, props) */
 HRESULT wmeef_video_compositor_definition_factory_create_with_properties(WMEEF_IVideoCompositorDefinitionFactory *self, cwinrt_hstring activatableClassId, WFOCO_IPropertySet* props, WMEEF_VideoCompositorDefinition** out);
 
-/* Windows.Media.Effects.IVideoTransformSphericalProjection */
-/* Windows.Media.Effects.IVideoTransformEffectDefinition */
-/* Windows.Media.Effects.IVideoTransformEffectDefinition2 */
-/* Windows.Media.Effects.IVideoTransformEffectDefinition2.get_SphericalProjection() */
 HRESULT wmeef_video_transform_effect_definition_2_get__spherical_projection(WMEEF_IVideoTransformEffectDefinition_2 *self, WMEEF_VideoTransformSphericalProjection** value);
 
-/* Windows.Media.Effects.IVideoCompositorDefinition */
-/* Windows.Media.Effects.IProcessVideoFrameContext */
-/* Windows.Media.Effects.IProcessAudioFrameContext */
-/* Windows.Media.Effects.ICompositeVideoFrameContext */
-/* Windows.Media.Effects.IAudioRenderEffectsManager */
-/* Windows.Media.Effects.IAudioRenderEffectsManager2 */
-/* Windows.Media.Effects.IAudioRenderEffectsManager2.get_EffectsProviderThumbnail() */
 HRESULT wmeef_audio_render_effects_manager_2_get__effects_provider_thumbnail(WMEEF_IAudioRenderEffectsManager_2 *self, WSTST_IRandomAccessStreamWithContentType** value);
 
-/* Windows.Media.Effects.IAudioRenderEffectsManager2.get_EffectsProviderSettingsLabel() */
 HRESULT wmeef_audio_render_effects_manager_2_get__effects_provider_settings_label(WMEEF_IAudioRenderEffectsManager_2 *self, cwinrt_hstring *value);
 
-/* Windows.Media.Effects.IAudioRenderEffectsManager2.ShowSettingsUI() */
 HRESULT wmeef_audio_render_effects_manager_2_show_settings_u_i(WMEEF_IAudioRenderEffectsManager_2 *self);
 
-/* Windows.Media.Effects.IAudioEffectDefinition */
-/* Windows.Media.Effects.IAudioEffect */
-/* Windows.Media.Effects.IAudioEffect2 */
-/* Windows.Media.Effects.IAudioEffect2.get_AcousticEchoCancellationConfiguration() */
 HRESULT wmeef_audio_effect_2_get__acoustic_echo_cancellation_configuration(WMEEF_IAudioEffect_2 *self, WMEEF_AcousticEchoCancellationConfiguration** value);
 
-/* Windows.Media.Effects.IAudioEffect2.get_CanSetState() */
 HRESULT wmeef_audio_effect_2_get__can_set_state(WMEEF_IAudioEffect_2 *self, BOOL *value);
 
-/* Windows.Media.Effects.IAudioEffect2.get_State() */
 HRESULT wmeef_audio_effect_2_get__state(WMEEF_IAudioEffect_2 *self, WMEEF_AudioEffectState *value);
 
-/* Windows.Media.Effects.IAudioEffect2.SetState(newState) */
 HRESULT wmeef_audio_effect_2_set_state(WMEEF_IAudioEffect_2 *self, WMEEF_AudioEffectState newState);
 
-/* Windows.Media.Effects.IAudioCaptureEffectsManager */
-/* Windows.Media.Effects.IAcousticEchoCancellationConfiguration */
-/* Windows.Media.Effects.IVideoEffectDefinition */
 #endif /* CWINRT_WINDOWS_MEDIA_EFFECTS_H */

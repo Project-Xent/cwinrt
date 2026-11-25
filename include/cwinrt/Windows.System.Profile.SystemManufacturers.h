@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WSYPRSY_SystemSupportInfo WSYPRSY_SystemSupportInfo;
 typedef struct WSYPRSY_SystemSupportDeviceInfo WSYPRSY_SystemSupportDeviceInfo;
 typedef struct WSYPRSY_SmbiosInformation WSYPRSY_SmbiosInformation;
@@ -23,13 +22,11 @@ typedef struct WSYPRSY_ISmbiosInformationStatics WSYPRSY_ISmbiosInformationStati
 typedef struct WSYPRSY_ISystemSupportDeviceInfo WSYPRSY_ISystemSupportDeviceInfo;
 typedef struct WSYPRSY_IOemSupportInfo WSYPRSY_IOemSupportInfo;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_Uri
 #define CWINRT_FWD_WF_Uri
 typedef struct WF_Uri WF_Uri;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -54,81 +51,48 @@ static const IID CWINRT_IID_WSYPRSY_ISystemSupportDeviceInfo CWINRT_MAYBE_UNUSED
 static const IID CWINRT_IID_WSYPRSY_IOemSupportInfo CWINRT_MAYBE_UNUSED = { 0x8D2EAE55, 0x87EF, 0x4266, { 0x86, 0xD0, 0xC4, 0xAF, 0xBE, 0xB2, 0x9B, 0xB9 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.System.Profile.SystemManufacturers.SystemSupportInfo */
 HRESULT wsyprsy_system_support_info_new(WSYPRSY_SystemSupportInfo **out);
 
-/* Windows.System.Profile.SystemManufacturers.SystemSupportInfo */
-/* Windows.System.Profile.SystemManufacturers.SystemSupportInfo.get_LocalDeviceInfo() */
 HRESULT wsyprsy_system_support_info_get__local_device_info(WSYPRSY_SystemSupportDeviceInfo** value);
 
-/* Windows.System.Profile.SystemManufacturers.SystemSupportInfo.get_LocalSystemEdition() */
 HRESULT wsyprsy_system_support_info_get__local_system_edition(cwinrt_hstring *value);
 
-/* Windows.System.Profile.SystemManufacturers.SystemSupportInfo.get_OemSupportInfo() */
 HRESULT wsyprsy_system_support_info_get__oem_support_info(WSYPRSY_OemSupportInfo** value);
 
-/* activate Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo */
 HRESULT wsyprsy_system_support_device_info_new(WSYPRSY_SystemSupportDeviceInfo **out);
 
-/* Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo */
-/* Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo.get_OperatingSystem() */
 HRESULT wsyprsy_system_support_device_info_get__operating_system(WSYPRSY_SystemSupportDeviceInfo *self, cwinrt_hstring *value);
 
-/* Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo.get_FriendlyName() */
 HRESULT wsyprsy_system_support_device_info_get__friendly_name(WSYPRSY_SystemSupportDeviceInfo *self, cwinrt_hstring *value);
 
-/* Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo.get_SystemManufacturer() */
 HRESULT wsyprsy_system_support_device_info_get__system_manufacturer(WSYPRSY_SystemSupportDeviceInfo *self, cwinrt_hstring *value);
 
-/* Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo.get_SystemProductName() */
 HRESULT wsyprsy_system_support_device_info_get__system_product_name(WSYPRSY_SystemSupportDeviceInfo *self, cwinrt_hstring *value);
 
-/* Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo.get_SystemSku() */
 HRESULT wsyprsy_system_support_device_info_get__system_sku(WSYPRSY_SystemSupportDeviceInfo *self, cwinrt_hstring *value);
 
-/* Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo.get_SystemHardwareVersion() */
 HRESULT wsyprsy_system_support_device_info_get__system_hardware_version(WSYPRSY_SystemSupportDeviceInfo *self, cwinrt_hstring *value);
 
-/* Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo.get_SystemFirmwareVersion() */
 HRESULT wsyprsy_system_support_device_info_get__system_firmware_version(WSYPRSY_SystemSupportDeviceInfo *self, cwinrt_hstring *value);
 
-/* activate Windows.System.Profile.SystemManufacturers.SmbiosInformation */
 HRESULT wsyprsy_smbios_information_new(WSYPRSY_SmbiosInformation **out);
 
-/* Windows.System.Profile.SystemManufacturers.SmbiosInformation */
-/* Windows.System.Profile.SystemManufacturers.SmbiosInformation.get_SerialNumber() */
 HRESULT wsyprsy_smbios_information_get__serial_number(cwinrt_hstring *value);
 
-/* activate Windows.System.Profile.SystemManufacturers.OemSupportInfo */
 HRESULT wsyprsy_oem_support_info_new(WSYPRSY_OemSupportInfo **out);
 
-/* Windows.System.Profile.SystemManufacturers.OemSupportInfo */
-/* Windows.System.Profile.SystemManufacturers.OemSupportInfo.get_SupportLink() */
 HRESULT wsyprsy_oem_support_info_get__support_link(WSYPRSY_OemSupportInfo *self, WF_Uri** value);
 
-/* Windows.System.Profile.SystemManufacturers.OemSupportInfo.get_SupportAppLink() */
 HRESULT wsyprsy_oem_support_info_get__support_app_link(WSYPRSY_OemSupportInfo *self, WF_Uri** value);
 
-/* Windows.System.Profile.SystemManufacturers.OemSupportInfo.get_SupportProvider() */
 HRESULT wsyprsy_oem_support_info_get__support_provider(WSYPRSY_OemSupportInfo *self, cwinrt_hstring *value);
 
-/* Windows.System.Profile.SystemManufacturers.ISystemSupportInfoStatics2 */
-/* Windows.System.Profile.SystemManufacturers.ISystemSupportInfoStatics2.get_LocalDeviceInfo() */
 HRESULT wsyprsy_system_support_info_statics_2_get__local_device_info(WSYPRSY_ISystemSupportInfoStatics_2 *self, WSYPRSY_SystemSupportDeviceInfo** value);
 
-/* Windows.System.Profile.SystemManufacturers.ISystemSupportInfoStatics */
-/* Windows.System.Profile.SystemManufacturers.ISystemSupportInfoStatics.get_LocalSystemEdition() */
 HRESULT wsyprsy_system_support_info_statics_get__local_system_edition(WSYPRSY_ISystemSupportInfoStatics *self, cwinrt_hstring *value);
 
-/* Windows.System.Profile.SystemManufacturers.ISystemSupportInfoStatics.get_OemSupportInfo() */
 HRESULT wsyprsy_system_support_info_statics_get__oem_support_info(WSYPRSY_ISystemSupportInfoStatics *self, WSYPRSY_OemSupportInfo** value);
 
-/* Windows.System.Profile.SystemManufacturers.ISmbiosInformationStatics */
-/* Windows.System.Profile.SystemManufacturers.ISmbiosInformationStatics.get_SerialNumber() */
 HRESULT wsyprsy_smbios_information_statics_get__serial_number(WSYPRSY_ISmbiosInformationStatics *self, cwinrt_hstring *value);
 
-/* Windows.System.Profile.SystemManufacturers.ISystemSupportDeviceInfo */
-/* Windows.System.Profile.SystemManufacturers.IOemSupportInfo */
 #endif /* CWINRT_WINDOWS_SYSTEM_PROFILE_SYSTEMMANUFACTURERS_H */

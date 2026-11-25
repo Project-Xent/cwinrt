@@ -12,13 +12,11 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSEAUAP_AppCapabilityAccessChangedEventArgs WSEAUAP_AppCapabilityAccessChangedEventArgs;
 typedef struct WSEAUAP_IAppCapabilityStatics WSEAUAP_IAppCapabilityStatics;
 typedef struct WSEAUAP_AppCapability WSEAUAP_AppCapability;
@@ -26,7 +24,6 @@ typedef struct WSEAUAP_IAppCapabilityAccessChangedEventArgs WSEAUAP_IAppCapabili
 typedef struct WSEAUAP_IAppCapability WSEAUAP_IAppCapability;
 typedef struct WSEAUAP_IAppCapability_2 WSEAUAP_IAppCapability_2;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IIterable_HSTRING
 #define CWINRT_FWD_WFOCO_IIterable_HSTRING
 typedef struct WFOCO_IIterable_HSTRING WFOCO_IIterable_HSTRING;
@@ -59,7 +56,6 @@ typedef enum WSEAUAP_AppCapabilityAccessStatus {
 } WSEAUAP_AppCapabilityAccessStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -80,67 +76,43 @@ static const IID CWINRT_IID_WSEAUAP_IAppCapability CWINRT_MAYBE_UNUSED = { 0x4C4
 static const IID CWINRT_IID_WSEAUAP_IAppCapability_2 CWINRT_MAYBE_UNUSED = { 0x11C7CCB6, 0xC74F, 0x50A3, { 0xB9, 0x60, 0x88, 0x00, 0x87, 0x67, 0xD9, 0x39 } };
 #endif
 
-/* Methods */
-
-/* Windows.Security.Authorization.AppCapabilityAccess.IAppCapabilityStatics */
-/* Windows.Security.Authorization.AppCapabilityAccess.IAppCapabilityStatics.RequestAccessForCapabilitiesAsync(capabilityNames) */
 HRESULT wseauap_app_capability_statics_request_access_for_capabilities_async(WSEAUAP_IAppCapabilityStatics *self, WFOCO_IIterable_HSTRING* capabilityNames, WF_IAsyncOperation_WFOCO_IMapView_HSTRING_WSEAUAP_AppCapabilityAccessStatus** out);
 
-/* Windows.Security.Authorization.AppCapabilityAccess.IAppCapabilityStatics.RequestAccessForCapabilitiesForUserAsync(user, capabilityNames) */
 HRESULT wseauap_app_capability_statics_request_access_for_capabilities_for_user_async(WSEAUAP_IAppCapabilityStatics *self, WSY_User* user, WFOCO_IIterable_HSTRING* capabilityNames, WF_IAsyncOperation_WFOCO_IMapView_HSTRING_WSEAUAP_AppCapabilityAccessStatus** out);
 
-/* Windows.Security.Authorization.AppCapabilityAccess.IAppCapabilityStatics.Create(capabilityName) */
 HRESULT wseauap_app_capability_statics_create(WSEAUAP_IAppCapabilityStatics *self, cwinrt_hstring capabilityName, WSEAUAP_AppCapability** out);
 
-/* Windows.Security.Authorization.AppCapabilityAccess.IAppCapabilityStatics.CreateWithProcessIdForUser(user, capabilityName, pid) */
 HRESULT wseauap_app_capability_statics_create_with_process_id_for_user(WSEAUAP_IAppCapabilityStatics *self, WSY_User* user, cwinrt_hstring capabilityName, uint32_t pid, WSEAUAP_AppCapability** out);
 
-/* activate Windows.Security.Authorization.AppCapabilityAccess.AppCapability */
 HRESULT wseauap_app_capability_new(WSEAUAP_AppCapability **out);
 
-/* Windows.Security.Authorization.AppCapabilityAccess.AppCapability */
-/* Windows.Security.Authorization.AppCapabilityAccess.AppCapability.get_CapabilityName() */
 HRESULT wseauap_app_capability_get__capability_name(WSEAUAP_AppCapability *self, cwinrt_hstring *value);
 
-/* Windows.Security.Authorization.AppCapabilityAccess.AppCapability.get_User() */
 HRESULT wseauap_app_capability_get__user(WSEAUAP_AppCapability *self, WSY_User** value);
 
-/* Windows.Security.Authorization.AppCapabilityAccess.AppCapability.RequestAccessAsync() */
 HRESULT wseauap_app_capability_request_access_async(WSEAUAP_AppCapability *self, WF_IAsyncOperation_WSEAUAP_AppCapabilityAccessStatus** out);
 
-/* Windows.Security.Authorization.AppCapabilityAccess.AppCapability.CheckAccess() */
 HRESULT wseauap_app_capability_check_access(WSEAUAP_AppCapability *self, WSEAUAP_AppCapabilityAccessStatus *out);
 
-/* Windows.Security.Authorization.AppCapabilityAccess.AppCapability.get_DisplayMessage() */
 HRESULT wseauap_app_capability_get__display_message(WSEAUAP_AppCapability *self, cwinrt_hstring *value);
 
-/* Windows.Security.Authorization.AppCapabilityAccess.AppCapability.put_DisplayMessage() */
 HRESULT wseauap_app_capability_put__display_message(WSEAUAP_AppCapability *self, cwinrt_hstring value);
 
-/* Windows.Security.Authorization.AppCapabilityAccess.AppCapability.RequestAccessForCapabilitiesAsync(capabilityNames) */
 HRESULT wseauap_app_capability_request_access_for_capabilities_async(WFOCO_IIterable_HSTRING* capabilityNames, WF_IAsyncOperation_WFOCO_IMapView_HSTRING_WSEAUAP_AppCapabilityAccessStatus** out);
 
-/* Windows.Security.Authorization.AppCapabilityAccess.AppCapability.RequestAccessForCapabilitiesForUserAsync(user, capabilityNames) */
 HRESULT wseauap_app_capability_request_access_for_capabilities_for_user_async(WSY_User* user, WFOCO_IIterable_HSTRING* capabilityNames, WF_IAsyncOperation_WFOCO_IMapView_HSTRING_WSEAUAP_AppCapabilityAccessStatus** out);
 
-/* Windows.Security.Authorization.AppCapabilityAccess.AppCapability.Create(capabilityName) */
 HRESULT wseauap_app_capability_create(cwinrt_hstring capabilityName, WSEAUAP_AppCapability** out);
 
-/* Windows.Security.Authorization.AppCapabilityAccess.AppCapability.CreateWithProcessIdForUser(user, capabilityName, pid) */
 HRESULT wseauap_app_capability_create_with_process_id_for_user(WSY_User* user, cwinrt_hstring capabilityName, uint32_t pid, WSEAUAP_AppCapability** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wseauap_app_capability_on_access_changed(WSEAUAP_AppCapability *self, cwinrt_event_fn fn, void *ctx);
 void wseauap_app_capability_off_access_changed(WSEAUAP_AppCapability *self, cwinrt_token token);
 
-/* Windows.Security.Authorization.AppCapabilityAccess.IAppCapability */
-/* Windows.Security.Authorization.AppCapabilityAccess.IAppCapability2 */
-/* Windows.Security.Authorization.AppCapabilityAccess.IAppCapability2.get_DisplayMessage() */
 HRESULT wseauap_app_capability_2_get__display_message(WSEAUAP_IAppCapability_2 *self, cwinrt_hstring *value);
 
-/* Windows.Security.Authorization.AppCapabilityAccess.IAppCapability2.put_DisplayMessage() */
 HRESULT wseauap_app_capability_2_put__display_message(WSEAUAP_IAppCapability_2 *self, cwinrt_hstring value);
 
 #endif /* CWINRT_WINDOWS_SECURITY_AUTHORIZATION_APPCAPABILITYACCESS_H */

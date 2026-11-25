@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_RandomAccessStreamReference
 #define CWINRT_FWD_WSTST_RandomAccessStreamReference
 typedef struct WSTST_RandomAccessStreamReference WSTST_RandomAccessStreamReference;
@@ -47,7 +46,6 @@ typedef enum WSY_ProcessorArchitecture {
 } WSY_ProcessorArchitecture;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAM_SuspendingDeferral WAM_SuspendingDeferral;
 typedef struct WAM_SuspendingEventArgs WAM_SuspendingEventArgs;
 typedef struct WAM_SuspendingOperation WAM_SuspendingOperation;
@@ -141,7 +139,6 @@ typedef struct WAM_IAppInfo_3 WAM_IAppInfo_3;
 typedef struct WAM_IAppInfo_4 WAM_IAppInfo_4;
 typedef struct WAM_IAppDisplayInfo WAM_IAppDisplayInfo;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_DateTime
 #define CWINRT_FWD_WF_DateTime
 typedef struct WF_DateTime WF_DateTime;
@@ -415,7 +412,6 @@ struct WAM_PackageInstallProgress {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -660,318 +656,200 @@ static const IID CWINRT_IID_WAM_IAppInfo_4 CWINRT_MAYBE_UNUSED = { 0x2F34BDEB, 0
 static const IID CWINRT_IID_WAM_IAppDisplayInfo CWINRT_MAYBE_UNUSED = { 0x1AEB1103, 0xE4D4, 0x41AA, { 0xA4, 0xF6, 0xC4, 0xA2, 0x76, 0xE7, 0x9E, 0xAC } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.SuspendingDeferral */
 HRESULT wam_suspending_deferral_new(WAM_SuspendingDeferral **out);
 
-/* Windows.ApplicationModel.SuspendingDeferral */
-/* Windows.ApplicationModel.SuspendingDeferral.Complete() */
 HRESULT wam_suspending_deferral_complete(WAM_SuspendingDeferral *self);
 
-/* activate Windows.ApplicationModel.SuspendingEventArgs */
 HRESULT wam_suspending_event_args_new(WAM_SuspendingEventArgs **out);
 
-/* Windows.ApplicationModel.SuspendingEventArgs */
-/* Windows.ApplicationModel.SuspendingEventArgs.get_SuspendingOperation() */
 HRESULT wam_suspending_event_args_get__suspending_operation(WAM_SuspendingEventArgs *self, WAM_SuspendingOperation** value);
 
-/* activate Windows.ApplicationModel.SuspendingOperation */
 HRESULT wam_suspending_operation_new(WAM_SuspendingOperation **out);
 
-/* Windows.ApplicationModel.SuspendingOperation */
-/* Windows.ApplicationModel.SuspendingOperation.GetDeferral() */
 HRESULT wam_suspending_operation_get_deferral(WAM_SuspendingOperation *self, WAM_SuspendingDeferral** out);
 
-/* Windows.ApplicationModel.SuspendingOperation.get_Deadline() */
 HRESULT wam_suspending_operation_get__deadline(WAM_SuspendingOperation *self, WF_DateTime *value);
 
-/* activate Windows.ApplicationModel.PackageUpdatingEventArgs */
 HRESULT wam_package_updating_event_args_new(WAM_PackageUpdatingEventArgs **out);
 
-/* Windows.ApplicationModel.PackageUpdatingEventArgs */
-/* Windows.ApplicationModel.PackageUpdatingEventArgs.get_ActivityId() */
 HRESULT wam_package_updating_event_args_get__activity_id(WAM_PackageUpdatingEventArgs *self, GUID *value);
 
-/* Windows.ApplicationModel.PackageUpdatingEventArgs.get_SourcePackage() */
 HRESULT wam_package_updating_event_args_get__source_package(WAM_PackageUpdatingEventArgs *self, WAM_Package** value);
 
-/* Windows.ApplicationModel.PackageUpdatingEventArgs.get_TargetPackage() */
 HRESULT wam_package_updating_event_args_get__target_package(WAM_PackageUpdatingEventArgs *self, WAM_Package** value);
 
-/* Windows.ApplicationModel.PackageUpdatingEventArgs.get_Progress() */
 HRESULT wam_package_updating_event_args_get__progress(WAM_PackageUpdatingEventArgs *self, double *value);
 
-/* Windows.ApplicationModel.PackageUpdatingEventArgs.get_IsComplete() */
 HRESULT wam_package_updating_event_args_get__is_complete(WAM_PackageUpdatingEventArgs *self, BOOL *value);
 
-/* Windows.ApplicationModel.PackageUpdatingEventArgs.get_ErrorCode() */
 HRESULT wam_package_updating_event_args_get__error_code(WAM_PackageUpdatingEventArgs *self, HRESULT *value);
 
-/* activate Windows.ApplicationModel.PackageUpdateAvailabilityResult */
 HRESULT wam_package_update_availability_result_new(WAM_PackageUpdateAvailabilityResult **out);
 
-/* Windows.ApplicationModel.PackageUpdateAvailabilityResult */
-/* Windows.ApplicationModel.PackageUpdateAvailabilityResult.get_Availability() */
 HRESULT wam_package_update_availability_result_get__availability(WAM_PackageUpdateAvailabilityResult *self, WAM_PackageUpdateAvailability *value);
 
-/* Windows.ApplicationModel.PackageUpdateAvailabilityResult.get_ExtendedError() */
 HRESULT wam_package_update_availability_result_get__extended_error(WAM_PackageUpdateAvailabilityResult *self, HRESULT *value);
 
-/* activate Windows.ApplicationModel.PackageUninstallingEventArgs */
 HRESULT wam_package_uninstalling_event_args_new(WAM_PackageUninstallingEventArgs **out);
 
-/* Windows.ApplicationModel.PackageUninstallingEventArgs */
-/* Windows.ApplicationModel.PackageUninstallingEventArgs.get_ActivityId() */
 HRESULT wam_package_uninstalling_event_args_get__activity_id(WAM_PackageUninstallingEventArgs *self, GUID *value);
 
-/* Windows.ApplicationModel.PackageUninstallingEventArgs.get_Package() */
 HRESULT wam_package_uninstalling_event_args_get__package(WAM_PackageUninstallingEventArgs *self, WAM_Package** value);
 
-/* Windows.ApplicationModel.PackageUninstallingEventArgs.get_Progress() */
 HRESULT wam_package_uninstalling_event_args_get__progress(WAM_PackageUninstallingEventArgs *self, double *value);
 
-/* Windows.ApplicationModel.PackageUninstallingEventArgs.get_IsComplete() */
 HRESULT wam_package_uninstalling_event_args_get__is_complete(WAM_PackageUninstallingEventArgs *self, BOOL *value);
 
-/* Windows.ApplicationModel.PackageUninstallingEventArgs.get_ErrorCode() */
 HRESULT wam_package_uninstalling_event_args_get__error_code(WAM_PackageUninstallingEventArgs *self, HRESULT *value);
 
-/* activate Windows.ApplicationModel.PackageStatusChangedEventArgs */
 HRESULT wam_package_status_changed_event_args_new(WAM_PackageStatusChangedEventArgs **out);
 
-/* Windows.ApplicationModel.PackageStatusChangedEventArgs */
-/* Windows.ApplicationModel.PackageStatusChangedEventArgs.get_Package() */
 HRESULT wam_package_status_changed_event_args_get__package(WAM_PackageStatusChangedEventArgs *self, WAM_Package** value);
 
-/* activate Windows.ApplicationModel.PackageStatus */
 HRESULT wam_package_status_new(WAM_PackageStatus **out);
 
-/* Windows.ApplicationModel.PackageStatus */
-/* Windows.ApplicationModel.PackageStatus.VerifyIsOK() */
 HRESULT wam_package_status_verify_is_o_k(WAM_PackageStatus *self, BOOL *out);
 
-/* Windows.ApplicationModel.PackageStatus.get_NotAvailable() */
 HRESULT wam_package_status_get__not_available(WAM_PackageStatus *self, BOOL *value);
 
-/* Windows.ApplicationModel.PackageStatus.get_PackageOffline() */
 HRESULT wam_package_status_get__package_offline(WAM_PackageStatus *self, BOOL *value);
 
-/* Windows.ApplicationModel.PackageStatus.get_DataOffline() */
 HRESULT wam_package_status_get__data_offline(WAM_PackageStatus *self, BOOL *value);
 
-/* Windows.ApplicationModel.PackageStatus.get_Disabled() */
 HRESULT wam_package_status_get__disabled(WAM_PackageStatus *self, BOOL *value);
 
-/* Windows.ApplicationModel.PackageStatus.get_NeedsRemediation() */
 HRESULT wam_package_status_get__needs_remediation(WAM_PackageStatus *self, BOOL *value);
 
-/* Windows.ApplicationModel.PackageStatus.get_LicenseIssue() */
 HRESULT wam_package_status_get__license_issue(WAM_PackageStatus *self, BOOL *value);
 
-/* Windows.ApplicationModel.PackageStatus.get_Modified() */
 HRESULT wam_package_status_get__modified(WAM_PackageStatus *self, BOOL *value);
 
-/* Windows.ApplicationModel.PackageStatus.get_Tampered() */
 HRESULT wam_package_status_get__tampered(WAM_PackageStatus *self, BOOL *value);
 
-/* Windows.ApplicationModel.PackageStatus.get_DependencyIssue() */
 HRESULT wam_package_status_get__dependency_issue(WAM_PackageStatus *self, BOOL *value);
 
-/* Windows.ApplicationModel.PackageStatus.get_Servicing() */
 HRESULT wam_package_status_get__servicing(WAM_PackageStatus *self, BOOL *value);
 
-/* Windows.ApplicationModel.PackageStatus.get_DeploymentInProgress() */
 HRESULT wam_package_status_get__deployment_in_progress(WAM_PackageStatus *self, BOOL *value);
 
-/* Windows.ApplicationModel.PackageStatus.get_IsPartiallyStaged() */
 HRESULT wam_package_status_get__is_partially_staged(WAM_PackageStatus *self, BOOL *value);
 
-/* activate Windows.ApplicationModel.PackageStagingEventArgs */
 HRESULT wam_package_staging_event_args_new(WAM_PackageStagingEventArgs **out);
 
-/* Windows.ApplicationModel.PackageStagingEventArgs */
-/* Windows.ApplicationModel.PackageStagingEventArgs.get_ActivityId() */
 HRESULT wam_package_staging_event_args_get__activity_id(WAM_PackageStagingEventArgs *self, GUID *value);
 
-/* Windows.ApplicationModel.PackageStagingEventArgs.get_Package() */
 HRESULT wam_package_staging_event_args_get__package(WAM_PackageStagingEventArgs *self, WAM_Package** value);
 
-/* Windows.ApplicationModel.PackageStagingEventArgs.get_Progress() */
 HRESULT wam_package_staging_event_args_get__progress(WAM_PackageStagingEventArgs *self, double *value);
 
-/* Windows.ApplicationModel.PackageStagingEventArgs.get_IsComplete() */
 HRESULT wam_package_staging_event_args_get__is_complete(WAM_PackageStagingEventArgs *self, BOOL *value);
 
-/* Windows.ApplicationModel.PackageStagingEventArgs.get_ErrorCode() */
 HRESULT wam_package_staging_event_args_get__error_code(WAM_PackageStagingEventArgs *self, HRESULT *value);
 
-/* activate Windows.ApplicationModel.PackageInstallingEventArgs */
 HRESULT wam_package_installing_event_args_new(WAM_PackageInstallingEventArgs **out);
 
-/* Windows.ApplicationModel.PackageInstallingEventArgs */
-/* Windows.ApplicationModel.PackageInstallingEventArgs.get_ActivityId() */
 HRESULT wam_package_installing_event_args_get__activity_id(WAM_PackageInstallingEventArgs *self, GUID *value);
 
-/* Windows.ApplicationModel.PackageInstallingEventArgs.get_Package() */
 HRESULT wam_package_installing_event_args_get__package(WAM_PackageInstallingEventArgs *self, WAM_Package** value);
 
-/* Windows.ApplicationModel.PackageInstallingEventArgs.get_Progress() */
 HRESULT wam_package_installing_event_args_get__progress(WAM_PackageInstallingEventArgs *self, double *value);
 
-/* Windows.ApplicationModel.PackageInstallingEventArgs.get_IsComplete() */
 HRESULT wam_package_installing_event_args_get__is_complete(WAM_PackageInstallingEventArgs *self, BOOL *value);
 
-/* Windows.ApplicationModel.PackageInstallingEventArgs.get_ErrorCode() */
 HRESULT wam_package_installing_event_args_get__error_code(WAM_PackageInstallingEventArgs *self, HRESULT *value);
 
-/* activate Windows.ApplicationModel.PackageId */
 HRESULT wam_package_id_new(WAM_PackageId **out);
 
-/* Windows.ApplicationModel.PackageId */
-/* Windows.ApplicationModel.PackageId.get_Name() */
 HRESULT wam_package_id_get__name(WAM_PackageId *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.PackageId.get_Version() */
 HRESULT wam_package_id_get__version(WAM_PackageId *self, WAM_PackageVersion *value);
 
-/* Windows.ApplicationModel.PackageId.get_Architecture() */
 HRESULT wam_package_id_get__architecture(WAM_PackageId *self, WSY_ProcessorArchitecture *value);
 
-/* Windows.ApplicationModel.PackageId.get_ResourceId() */
 HRESULT wam_package_id_get__resource_id(WAM_PackageId *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.PackageId.get_Publisher() */
 HRESULT wam_package_id_get__publisher(WAM_PackageId *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.PackageId.get_PublisherId() */
 HRESULT wam_package_id_get__publisher_id(WAM_PackageId *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.PackageId.get_FullName() */
 HRESULT wam_package_id_get__full_name(WAM_PackageId *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.PackageId.get_FamilyName() */
 HRESULT wam_package_id_get__family_name(WAM_PackageId *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.PackageId.get_ProductId() */
 HRESULT wam_package_id_get__product_id(WAM_PackageId *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.PackageId.get_Author() */
 HRESULT wam_package_id_get__author(WAM_PackageId *self, cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.PackageContentGroupStagingEventArgs */
 HRESULT wam_package_content_group_staging_event_args_new(WAM_PackageContentGroupStagingEventArgs **out);
 
-/* Windows.ApplicationModel.PackageContentGroupStagingEventArgs */
-/* Windows.ApplicationModel.PackageContentGroupStagingEventArgs.get_ActivityId() */
 HRESULT wam_package_content_group_staging_event_args_get__activity_id(WAM_PackageContentGroupStagingEventArgs *self, GUID *value);
 
-/* Windows.ApplicationModel.PackageContentGroupStagingEventArgs.get_Package() */
 HRESULT wam_package_content_group_staging_event_args_get__package(WAM_PackageContentGroupStagingEventArgs *self, WAM_Package** value);
 
-/* Windows.ApplicationModel.PackageContentGroupStagingEventArgs.get_Progress() */
 HRESULT wam_package_content_group_staging_event_args_get__progress(WAM_PackageContentGroupStagingEventArgs *self, double *value);
 
-/* Windows.ApplicationModel.PackageContentGroupStagingEventArgs.get_IsComplete() */
 HRESULT wam_package_content_group_staging_event_args_get__is_complete(WAM_PackageContentGroupStagingEventArgs *self, BOOL *value);
 
-/* Windows.ApplicationModel.PackageContentGroupStagingEventArgs.get_ErrorCode() */
 HRESULT wam_package_content_group_staging_event_args_get__error_code(WAM_PackageContentGroupStagingEventArgs *self, HRESULT *value);
 
-/* Windows.ApplicationModel.PackageContentGroupStagingEventArgs.get_ContentGroupName() */
 HRESULT wam_package_content_group_staging_event_args_get__content_group_name(WAM_PackageContentGroupStagingEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.PackageContentGroupStagingEventArgs.get_IsContentGroupRequired() */
 HRESULT wam_package_content_group_staging_event_args_get__is_content_group_required(WAM_PackageContentGroupStagingEventArgs *self, BOOL *value);
 
-/* activate Windows.ApplicationModel.PackageContentGroup */
 HRESULT wam_package_content_group_new(WAM_PackageContentGroup **out);
 
-/* Windows.ApplicationModel.PackageContentGroup */
-/* Windows.ApplicationModel.PackageContentGroup.get_Package() */
 HRESULT wam_package_content_group_get__package(WAM_PackageContentGroup *self, WAM_Package** value);
 
-/* Windows.ApplicationModel.PackageContentGroup.get_Name() */
 HRESULT wam_package_content_group_get__name(WAM_PackageContentGroup *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.PackageContentGroup.get_State() */
 HRESULT wam_package_content_group_get__state(WAM_PackageContentGroup *self, WAM_PackageContentGroupState *value);
 
-/* Windows.ApplicationModel.PackageContentGroup.get_IsRequired() */
 HRESULT wam_package_content_group_get__is_required(WAM_PackageContentGroup *self, BOOL *value);
 
-/* Windows.ApplicationModel.PackageContentGroup.get_RequiredGroupName() */
 HRESULT wam_package_content_group_get__required_group_name(cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult */
 HRESULT wam_package_catalog_remove_resource_packages_result_new(WAM_PackageCatalogRemoveResourcePackagesResult **out);
 
-/* Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult */
-/* Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult.get_PackagesRemoved() */
 HRESULT wam_package_catalog_remove_resource_packages_result_get__packages_removed(WAM_PackageCatalogRemoveResourcePackagesResult *self, WFOCO_IVectorView_WAM_Package** value);
 
-/* Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult.get_ExtendedError() */
 HRESULT wam_package_catalog_remove_resource_packages_result_get__extended_error(WAM_PackageCatalogRemoveResourcePackagesResult *self, HRESULT *value);
 
-/* activate Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult */
 HRESULT wam_package_catalog_remove_optional_packages_result_new(WAM_PackageCatalogRemoveOptionalPackagesResult **out);
 
-/* Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult */
-/* Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult.get_PackagesRemoved() */
 HRESULT wam_package_catalog_remove_optional_packages_result_get__packages_removed(WAM_PackageCatalogRemoveOptionalPackagesResult *self, WFOCO_IVectorView_WAM_Package** value);
 
-/* Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult.get_ExtendedError() */
 HRESULT wam_package_catalog_remove_optional_packages_result_get__extended_error(WAM_PackageCatalogRemoveOptionalPackagesResult *self, HRESULT *value);
 
-/* activate Windows.ApplicationModel.PackageCatalogAddResourcePackageResult */
 HRESULT wam_package_catalog_add_resource_package_result_new(WAM_PackageCatalogAddResourcePackageResult **out);
 
-/* Windows.ApplicationModel.PackageCatalogAddResourcePackageResult */
-/* Windows.ApplicationModel.PackageCatalogAddResourcePackageResult.get_Package() */
 HRESULT wam_package_catalog_add_resource_package_result_get__package(WAM_PackageCatalogAddResourcePackageResult *self, WAM_Package** value);
 
-/* Windows.ApplicationModel.PackageCatalogAddResourcePackageResult.get_IsComplete() */
 HRESULT wam_package_catalog_add_resource_package_result_get__is_complete(WAM_PackageCatalogAddResourcePackageResult *self, BOOL *value);
 
-/* Windows.ApplicationModel.PackageCatalogAddResourcePackageResult.get_ExtendedError() */
 HRESULT wam_package_catalog_add_resource_package_result_get__extended_error(WAM_PackageCatalogAddResourcePackageResult *self, HRESULT *value);
 
-/* activate Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult */
 HRESULT wam_package_catalog_add_optional_package_result_new(WAM_PackageCatalogAddOptionalPackageResult **out);
 
-/* Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult */
-/* Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult.get_Package() */
 HRESULT wam_package_catalog_add_optional_package_result_get__package(WAM_PackageCatalogAddOptionalPackageResult *self, WAM_Package** value);
 
-/* Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult.get_ExtendedError() */
 HRESULT wam_package_catalog_add_optional_package_result_get__extended_error(WAM_PackageCatalogAddOptionalPackageResult *self, HRESULT *value);
 
-/* activate Windows.ApplicationModel.PackageCatalog */
 HRESULT wam_package_catalog_new(WAM_PackageCatalog **out);
 
-/* Windows.ApplicationModel.PackageCatalog */
-/* Windows.ApplicationModel.PackageCatalog.AddOptionalPackageAsync(optionalPackageFamilyName) */
 HRESULT wam_package_catalog_add_optional_package_async(WAM_PackageCatalog *self, cwinrt_hstring optionalPackageFamilyName, WF_IAsyncOperation_WAM_PackageCatalogAddOptionalPackageResult** out);
 
-/* Windows.ApplicationModel.PackageCatalog.RemoveOptionalPackagesAsync(optionalPackageFamilyNames) */
 HRESULT wam_package_catalog_remove_optional_packages_async(WAM_PackageCatalog *self, WFOCO_IIterable_HSTRING* optionalPackageFamilyNames, WF_IAsyncOperation_WAM_PackageCatalogRemoveOptionalPackagesResult** out);
 
-/* Windows.ApplicationModel.PackageCatalog.AddResourcePackageAsync(resourcePackageFamilyName, resourceID, options) */
 HRESULT wam_package_catalog_add_resource_package_async(WAM_PackageCatalog *self, cwinrt_hstring resourcePackageFamilyName, cwinrt_hstring resourceID, WAM_AddResourcePackageOptions options, WF_IAsyncOperationWithProgress_WAM_PackageCatalogAddResourcePackageResult_WAM_PackageInstallProgress** out);
 
-/* Windows.ApplicationModel.PackageCatalog.RemoveResourcePackagesAsync(resourcePackages) */
 HRESULT wam_package_catalog_remove_resource_packages_async(WAM_PackageCatalog *self, WFOCO_IIterable_WAM_Package* resourcePackages, WF_IAsyncOperation_WAM_PackageCatalogRemoveResourcePackagesResult** out);
 
-/* Windows.ApplicationModel.PackageCatalog.OpenForPackage(package) */
 HRESULT wam_package_catalog_open_for_package(WAM_Package* package, WAM_PackageCatalog** out);
 
-/* Windows.ApplicationModel.PackageCatalog.OpenForCurrentPackage() */
 HRESULT wam_package_catalog_open_for_current_package(WAM_PackageCatalog** out);
 
-/* Windows.ApplicationModel.PackageCatalog.OpenForCurrentUser() */
 HRESULT wam_package_catalog_open_for_current_user(WAM_PackageCatalog** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wam_package_catalog_on_package_staging(WAM_PackageCatalog *self, cwinrt_event_fn fn, void *ctx);
@@ -992,726 +870,436 @@ void wam_package_catalog_off_package_status_changed(WAM_PackageCatalog *self, cw
 cwinrt_token wam_package_catalog_on_package_content_group_staging(WAM_PackageCatalog *self, cwinrt_event_fn fn, void *ctx);
 void wam_package_catalog_off_package_content_group_staging(WAM_PackageCatalog *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Package */
 HRESULT wam_package_new(WAM_Package **out);
 
-/* Windows.ApplicationModel.Package */
-/* Windows.ApplicationModel.Package.get_Id() */
 HRESULT wam_package_get__id(WAM_Package *self, WAM_PackageId** value);
 
-/* Windows.ApplicationModel.Package.get_InstalledLocation() */
 HRESULT wam_package_get__installed_location(WAM_Package *self, WS_StorageFolder** value);
 
-/* Windows.ApplicationModel.Package.get_IsFramework() */
 HRESULT wam_package_get__is_framework(WAM_Package *self, BOOL *value);
 
-/* Windows.ApplicationModel.Package.get_Dependencies() */
 HRESULT wam_package_get__dependencies(WAM_Package *self, WFOCO_IVectorView_WAM_Package** value);
 
-/* Windows.ApplicationModel.Package.get_DisplayName() */
 HRESULT wam_package_get__display_name(WAM_Package *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Package.get_PublisherDisplayName() */
 HRESULT wam_package_get__publisher_display_name(WAM_Package *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Package.get_Description() */
 HRESULT wam_package_get__description(WAM_Package *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Package.get_Logo() */
 HRESULT wam_package_get__logo(WAM_Package *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.Package.get_IsResourcePackage() */
 HRESULT wam_package_get__is_resource_package(WAM_Package *self, BOOL *value);
 
-/* Windows.ApplicationModel.Package.get_IsBundle() */
 HRESULT wam_package_get__is_bundle(WAM_Package *self, BOOL *value);
 
-/* Windows.ApplicationModel.Package.get_IsDevelopmentMode() */
 HRESULT wam_package_get__is_development_mode(WAM_Package *self, BOOL *value);
 
-/* Windows.ApplicationModel.Package.get_Status() */
 HRESULT wam_package_get__status(WAM_Package *self, WAM_PackageStatus** value);
 
-/* Windows.ApplicationModel.Package.get_InstalledDate() */
 HRESULT wam_package_get__installed_date(WAM_Package *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Package.GetAppListEntriesAsync() */
 HRESULT wam_package_get_app_list_entries_async(WAM_Package *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPCO_AppListEntry** out);
 
-/* Windows.ApplicationModel.Package.get_InstallDate() */
 HRESULT wam_package_get__install_date(WAM_Package *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Package.GetThumbnailToken() */
 HRESULT wam_package_get_thumbnail_token(WAM_Package *self, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.Package.Launch(parameters) */
 HRESULT wam_package_launch(WAM_Package *self, cwinrt_hstring parameters);
 
-/* Windows.ApplicationModel.Package.get_SignatureKind() */
 HRESULT wam_package_get__signature_kind(WAM_Package *self, WAM_PackageSignatureKind *value);
 
-/* Windows.ApplicationModel.Package.get_IsOptional() */
 HRESULT wam_package_get__is_optional(WAM_Package *self, BOOL *value);
 
-/* Windows.ApplicationModel.Package.VerifyContentIntegrityAsync() */
 HRESULT wam_package_verify_content_integrity_async(WAM_Package *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Package.GetContentGroupsAsync() */
 HRESULT wam_package_get_content_groups_async(WAM_Package *self, WF_IAsyncOperation_WFOCO_IVector_WAM_PackageContentGroup** out);
 
-/* Windows.ApplicationModel.Package.GetContentGroupAsync(name) */
 HRESULT wam_package_get_content_group_async(WAM_Package *self, cwinrt_hstring name, WF_IAsyncOperation_WAM_PackageContentGroup** out);
 
-/* Windows.ApplicationModel.Package.StageContentGroupsAsync(names) */
 HRESULT wam_package_stage_content_groups_async(WAM_Package *self, WFOCO_IIterable_HSTRING* names, WF_IAsyncOperation_WFOCO_IVector_WAM_PackageContentGroup** out);
 
-/* Windows.ApplicationModel.Package.StageContentGroupsAsync(names, moveToHeadOfQueue) */
 HRESULT wam_package_stage_content_groups_async_p_b_p(WAM_Package *self, WFOCO_IIterable_HSTRING* names, BOOL moveToHeadOfQueue, WF_IAsyncOperation_WFOCO_IVector_WAM_PackageContentGroup** out);
 
-/* Windows.ApplicationModel.Package.SetInUseAsync(inUse) */
 HRESULT wam_package_set_in_use_async(WAM_Package *self, BOOL inUse, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Package.GetAppInstallerInfo() */
 HRESULT wam_package_get_app_installer_info(WAM_Package *self, WAM_AppInstallerInfo** out);
 
-/* Windows.ApplicationModel.Package.CheckUpdateAvailabilityAsync() */
 HRESULT wam_package_check_update_availability_async(WAM_Package *self, WF_IAsyncOperation_WAM_PackageUpdateAvailabilityResult** out);
 
-/* Windows.ApplicationModel.Package.get_MutableLocation() */
 HRESULT wam_package_get__mutable_location(WAM_Package *self, WS_StorageFolder** value);
 
-/* Windows.ApplicationModel.Package.get_EffectiveLocation() */
 HRESULT wam_package_get__effective_location(WAM_Package *self, WS_StorageFolder** value);
 
-/* Windows.ApplicationModel.Package.get_EffectiveExternalLocation() */
 HRESULT wam_package_get__effective_external_location(WAM_Package *self, WS_StorageFolder** value);
 
-/* Windows.ApplicationModel.Package.get_MachineExternalLocation() */
 HRESULT wam_package_get__machine_external_location(WAM_Package *self, WS_StorageFolder** value);
 
-/* Windows.ApplicationModel.Package.get_UserExternalLocation() */
 HRESULT wam_package_get__user_external_location(WAM_Package *self, WS_StorageFolder** value);
 
-/* Windows.ApplicationModel.Package.get_InstalledPath() */
 HRESULT wam_package_get__installed_path(WAM_Package *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Package.get_MutablePath() */
 HRESULT wam_package_get__mutable_path(WAM_Package *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Package.get_EffectivePath() */
 HRESULT wam_package_get__effective_path(WAM_Package *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Package.get_EffectiveExternalPath() */
 HRESULT wam_package_get__effective_external_path(WAM_Package *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Package.get_MachineExternalPath() */
 HRESULT wam_package_get__machine_external_path(WAM_Package *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Package.get_UserExternalPath() */
 HRESULT wam_package_get__user_external_path(WAM_Package *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Package.GetLogoAsRandomAccessStreamReference(size) */
 HRESULT wam_package_get_logo_as_random_access_stream_reference(WAM_Package *self, WF_Size size, WSTST_RandomAccessStreamReference** out);
 
-/* Windows.ApplicationModel.Package.GetAppListEntries() */
 HRESULT wam_package_get_app_list_entries(WAM_Package *self, WFOCO_IVectorView_WAPCO_AppListEntry** out);
 
-/* Windows.ApplicationModel.Package.get_IsStub() */
 HRESULT wam_package_get__is_stub(WAM_Package *self, BOOL *value);
 
-/* Windows.ApplicationModel.Package.FindRelatedPackages(options) */
 HRESULT wam_package_find_related_packages(WAM_Package *self, WAM_FindRelatedPackagesOptions* options, WFOCO_IVector_WAM_Package** out);
 
-/* Windows.ApplicationModel.Package.get_SourceUriSchemeName() */
 HRESULT wam_package_get__source_uri_scheme_name(WAM_Package *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Package.get_Current() */
 HRESULT wam_package_get__current(WAM_Package** value);
 
-/* activate Windows.ApplicationModel.LimitedAccessFeatures */
 HRESULT wam_limited_access_features_new(WAM_LimitedAccessFeatures **out);
 
-/* Windows.ApplicationModel.LimitedAccessFeatures */
-/* Windows.ApplicationModel.LimitedAccessFeatures.TryUnlockFeature(featureId, token, attestation) */
 HRESULT wam_limited_access_features_try_unlock_feature(cwinrt_hstring featureId, cwinrt_hstring token, cwinrt_hstring attestation, WAM_LimitedAccessFeatureRequestResult** out);
 
-/* activate Windows.ApplicationModel.LimitedAccessFeatureRequestResult */
 HRESULT wam_limited_access_feature_request_result_new(WAM_LimitedAccessFeatureRequestResult **out);
 
-/* Windows.ApplicationModel.LimitedAccessFeatureRequestResult */
-/* Windows.ApplicationModel.LimitedAccessFeatureRequestResult.get_FeatureId() */
 HRESULT wam_limited_access_feature_request_result_get__feature_id(WAM_LimitedAccessFeatureRequestResult *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.LimitedAccessFeatureRequestResult.get_Status() */
 HRESULT wam_limited_access_feature_request_result_get__status(WAM_LimitedAccessFeatureRequestResult *self, WAM_LimitedAccessFeatureStatus *value);
 
-/* Windows.ApplicationModel.LimitedAccessFeatureRequestResult.get_EstimatedRemovalDate() */
 HRESULT wam_limited_access_feature_request_result_get__estimated_removal_date(WAM_LimitedAccessFeatureRequestResult *self, WF_DateTime** value);
 
-/* activate Windows.ApplicationModel.LeavingBackgroundEventArgs */
 HRESULT wam_leaving_background_event_args_new(WAM_LeavingBackgroundEventArgs **out);
 
-/* Windows.ApplicationModel.LeavingBackgroundEventArgs */
-/* Windows.ApplicationModel.LeavingBackgroundEventArgs.GetDeferral() */
 HRESULT wam_leaving_background_event_args_get_deferral(WAM_LeavingBackgroundEventArgs *self, WF_Deferral** out);
 
-/* Windows.ApplicationModel.IStartupTaskStatics */
-/* Windows.ApplicationModel.IStartupTaskStatics.GetForCurrentPackageAsync() */
 HRESULT wam_startup_task_statics_get_for_current_package_async(WAM_IStartupTaskStatics *self, WF_IAsyncOperation_WFOCO_IVectorView_WAM_StartupTask** out);
 
-/* Windows.ApplicationModel.IStartupTaskStatics.GetAsync(taskId) */
 HRESULT wam_startup_task_statics_get_async(WAM_IStartupTaskStatics *self, cwinrt_hstring taskId, WF_IAsyncOperation_WAM_StartupTask** out);
 
-/* Windows.ApplicationModel.IPackageStatics */
-/* Windows.ApplicationModel.IPackageStatics.get_Current() */
 HRESULT wam_package_statics_get__current(WAM_IPackageStatics *self, WAM_Package** value);
 
-/* Windows.ApplicationModel.IPackageContentGroupStatics */
-/* Windows.ApplicationModel.IPackageContentGroupStatics.get_RequiredGroupName() */
 HRESULT wam_package_content_group_statics_get__required_group_name(WAM_IPackageContentGroupStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.IPackageCatalogStatics2 */
-/* Windows.ApplicationModel.IPackageCatalogStatics2.OpenForPackage(package) */
 HRESULT wam_package_catalog_statics_2_open_for_package(WAM_IPackageCatalogStatics_2 *self, WAM_Package* package, WAM_PackageCatalog** out);
 
-/* Windows.ApplicationModel.IPackageCatalogStatics */
-/* Windows.ApplicationModel.IPackageCatalogStatics.OpenForCurrentPackage() */
 HRESULT wam_package_catalog_statics_open_for_current_package(WAM_IPackageCatalogStatics *self, WAM_PackageCatalog** out);
 
-/* Windows.ApplicationModel.IPackageCatalogStatics.OpenForCurrentUser() */
 HRESULT wam_package_catalog_statics_open_for_current_user(WAM_IPackageCatalogStatics *self, WAM_PackageCatalog** out);
 
-/* Windows.ApplicationModel.ILimitedAccessFeaturesStatics */
-/* Windows.ApplicationModel.ILimitedAccessFeaturesStatics.TryUnlockFeature(featureId, token, attestation) */
 HRESULT wam_limited_access_features_statics_try_unlock_feature(WAM_ILimitedAccessFeaturesStatics *self, cwinrt_hstring featureId, cwinrt_hstring token, cwinrt_hstring attestation, WAM_LimitedAccessFeatureRequestResult** out);
 
-/* Windows.ApplicationModel.IFullTrustProcessLauncherStatics2 */
-/* Windows.ApplicationModel.IFullTrustProcessLauncherStatics2.LaunchFullTrustProcessForCurrentAppWithArgumentsAsync(commandLine) */
 HRESULT wam_full_trust_process_launcher_statics_2_launch_full_trust_process_for_current_app_with_arguments_async(WAM_IFullTrustProcessLauncherStatics_2 *self, cwinrt_hstring commandLine, WF_IAsyncOperation_WAM_FullTrustProcessLaunchResult** out);
 
-/* Windows.ApplicationModel.IFullTrustProcessLauncherStatics2.LaunchFullTrustProcessForAppWithArgumentsAsync(fullTrustPackageRelativeAppId, commandLine) */
 HRESULT wam_full_trust_process_launcher_statics_2_launch_full_trust_process_for_app_with_arguments_async(WAM_IFullTrustProcessLauncherStatics_2 *self, cwinrt_hstring fullTrustPackageRelativeAppId, cwinrt_hstring commandLine, WF_IAsyncOperation_WAM_FullTrustProcessLaunchResult** out);
 
-/* Windows.ApplicationModel.IFullTrustProcessLauncherStatics */
-/* Windows.ApplicationModel.IFullTrustProcessLauncherStatics.LaunchFullTrustProcessForCurrentAppAsync() */
 HRESULT wam_full_trust_process_launcher_statics_launch_full_trust_process_for_current_app_async(WAM_IFullTrustProcessLauncherStatics *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.IFullTrustProcessLauncherStatics.LaunchFullTrustProcessForCurrentAppAsync(parameterGroupId) */
 HRESULT wam_full_trust_process_launcher_statics_launch_full_trust_process_for_current_app_async_str_p(WAM_IFullTrustProcessLauncherStatics *self, cwinrt_hstring parameterGroupId, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.IFullTrustProcessLauncherStatics.LaunchFullTrustProcessForAppAsync(fullTrustPackageRelativeAppId) */
 HRESULT wam_full_trust_process_launcher_statics_launch_full_trust_process_for_app_async(WAM_IFullTrustProcessLauncherStatics *self, cwinrt_hstring fullTrustPackageRelativeAppId, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.IFullTrustProcessLauncherStatics.LaunchFullTrustProcessForAppAsync(fullTrustPackageRelativeAppId, parameterGroupId) */
 HRESULT wam_full_trust_process_launcher_statics_launch_full_trust_process_for_app_async_str_str_p(WAM_IFullTrustProcessLauncherStatics *self, cwinrt_hstring fullTrustPackageRelativeAppId, cwinrt_hstring parameterGroupId, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.IFindRelatedPackagesOptionsFactory */
-/* Windows.ApplicationModel.IFindRelatedPackagesOptionsFactory.CreateInstance(Relationship) */
 HRESULT wam_find_related_packages_options_factory_create_instance(WAM_IFindRelatedPackagesOptionsFactory *self, WAM_PackageRelationship Relationship, WAM_FindRelatedPackagesOptions** out);
 
-/* Windows.ApplicationModel.IDesignModeStatics2 */
-/* Windows.ApplicationModel.IDesignModeStatics2.get_DesignMode2Enabled() */
 HRESULT wam_design_mode_statics_2_get__design_mode2_enabled(WAM_IDesignModeStatics_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.IDesignModeStatics */
-/* Windows.ApplicationModel.IDesignModeStatics.get_DesignModeEnabled() */
 HRESULT wam_design_mode_statics_get__design_mode_enabled(WAM_IDesignModeStatics *self, BOOL *value);
 
-/* Windows.ApplicationModel.IAppInstanceStatics */
-/* Windows.ApplicationModel.IAppInstanceStatics.get_RecommendedInstance() */
 HRESULT wam_app_instance_statics_get__recommended_instance(WAM_IAppInstanceStatics *self, WAM_AppInstance** value);
 
-/* Windows.ApplicationModel.IAppInstanceStatics.GetActivatedEventArgs() */
 HRESULT wam_app_instance_statics_get_activated_event_args(WAM_IAppInstanceStatics *self, WAPAC_IActivatedEventArgs** out);
 
-/* Windows.ApplicationModel.IAppInstanceStatics.FindOrRegisterInstanceForKey(key) */
 HRESULT wam_app_instance_statics_find_or_register_instance_for_key(WAM_IAppInstanceStatics *self, cwinrt_hstring key, WAM_AppInstance** out);
 
-/* Windows.ApplicationModel.IAppInstanceStatics.Unregister() */
 HRESULT wam_app_instance_statics_unregister(WAM_IAppInstanceStatics *self);
 
-/* Windows.ApplicationModel.IAppInstanceStatics.GetInstances() */
 HRESULT wam_app_instance_statics_get_instances(WAM_IAppInstanceStatics *self, WFOCO_IVector_WAM_AppInstance** out);
 
-/* Windows.ApplicationModel.IAppInfoStatics */
-/* Windows.ApplicationModel.IAppInfoStatics.get_Current() */
 HRESULT wam_app_info_statics_get__current(WAM_IAppInfoStatics *self, WAM_AppInfo** value);
 
-/* Windows.ApplicationModel.IAppInfoStatics.GetFromAppUserModelId(appUserModelId) */
 HRESULT wam_app_info_statics_get_from_app_user_model_id(WAM_IAppInfoStatics *self, cwinrt_hstring appUserModelId, WAM_AppInfo** out);
 
-/* Windows.ApplicationModel.IAppInfoStatics.GetFromAppUserModelIdForUser(user, appUserModelId) */
 HRESULT wam_app_info_statics_get_from_app_user_model_id_for_user(WAM_IAppInfoStatics *self, WSY_User* user, cwinrt_hstring appUserModelId, WAM_AppInfo** out);
 
-/* activate Windows.ApplicationModel.FullTrustProcessLauncher */
 HRESULT wam_full_trust_process_launcher_new(WAM_FullTrustProcessLauncher **out);
 
-/* Windows.ApplicationModel.FullTrustProcessLauncher */
-/* Windows.ApplicationModel.FullTrustProcessLauncher.LaunchFullTrustProcessForCurrentAppWithArgumentsAsync(commandLine) */
 HRESULT wam_full_trust_process_launcher_launch_full_trust_process_for_current_app_with_arguments_async(cwinrt_hstring commandLine, WF_IAsyncOperation_WAM_FullTrustProcessLaunchResult** out);
 
-/* Windows.ApplicationModel.FullTrustProcessLauncher.LaunchFullTrustProcessForAppWithArgumentsAsync(fullTrustPackageRelativeAppId, commandLine) */
 HRESULT wam_full_trust_process_launcher_launch_full_trust_process_for_app_with_arguments_async(cwinrt_hstring fullTrustPackageRelativeAppId, cwinrt_hstring commandLine, WF_IAsyncOperation_WAM_FullTrustProcessLaunchResult** out);
 
-/* Windows.ApplicationModel.FullTrustProcessLauncher.LaunchFullTrustProcessForCurrentAppAsync() */
 HRESULT wam_full_trust_process_launcher_launch_full_trust_process_for_current_app_async(WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.FullTrustProcessLauncher.LaunchFullTrustProcessForCurrentAppAsync(parameterGroupId) */
 HRESULT wam_full_trust_process_launcher_launch_full_trust_process_for_current_app_async_str_p(cwinrt_hstring parameterGroupId, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.FullTrustProcessLauncher.LaunchFullTrustProcessForAppAsync(fullTrustPackageRelativeAppId) */
 HRESULT wam_full_trust_process_launcher_launch_full_trust_process_for_app_async(cwinrt_hstring fullTrustPackageRelativeAppId, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.FullTrustProcessLauncher.LaunchFullTrustProcessForAppAsync(fullTrustPackageRelativeAppId, parameterGroupId) */
 HRESULT wam_full_trust_process_launcher_launch_full_trust_process_for_app_async_str_str_p(cwinrt_hstring fullTrustPackageRelativeAppId, cwinrt_hstring parameterGroupId, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.FullTrustProcessLaunchResult */
 HRESULT wam_full_trust_process_launch_result_new(WAM_FullTrustProcessLaunchResult **out);
 
-/* Windows.ApplicationModel.FullTrustProcessLaunchResult */
-/* Windows.ApplicationModel.FullTrustProcessLaunchResult.get_LaunchResult() */
 HRESULT wam_full_trust_process_launch_result_get__launch_result(WAM_FullTrustProcessLaunchResult *self, WAM_FullTrustLaunchResult *value);
 
-/* Windows.ApplicationModel.FullTrustProcessLaunchResult.get_ExtendedError() */
 HRESULT wam_full_trust_process_launch_result_get__extended_error(WAM_FullTrustProcessLaunchResult *self, HRESULT *value);
 
-/* activate Windows.ApplicationModel.FindRelatedPackagesOptions */
 HRESULT wam_find_related_packages_options_new(WAM_FindRelatedPackagesOptions **out);
 
-/* Windows.ApplicationModel.FindRelatedPackagesOptions */
-/* Windows.ApplicationModel.FindRelatedPackagesOptions.get_Relationship() */
 HRESULT wam_find_related_packages_options_get__relationship(WAM_FindRelatedPackagesOptions *self, WAM_PackageRelationship *value);
 
-/* Windows.ApplicationModel.FindRelatedPackagesOptions.put_Relationship() */
 HRESULT wam_find_related_packages_options_put__relationship(WAM_FindRelatedPackagesOptions *self, WAM_PackageRelationship value);
 
-/* Windows.ApplicationModel.FindRelatedPackagesOptions.get_IncludeFrameworks() */
 HRESULT wam_find_related_packages_options_get__include_frameworks(WAM_FindRelatedPackagesOptions *self, BOOL *value);
 
-/* Windows.ApplicationModel.FindRelatedPackagesOptions.put_IncludeFrameworks() */
 HRESULT wam_find_related_packages_options_put__include_frameworks(WAM_FindRelatedPackagesOptions *self, BOOL value);
 
-/* Windows.ApplicationModel.FindRelatedPackagesOptions.get_IncludeHostRuntimes() */
 HRESULT wam_find_related_packages_options_get__include_host_runtimes(WAM_FindRelatedPackagesOptions *self, BOOL *value);
 
-/* Windows.ApplicationModel.FindRelatedPackagesOptions.put_IncludeHostRuntimes() */
 HRESULT wam_find_related_packages_options_put__include_host_runtimes(WAM_FindRelatedPackagesOptions *self, BOOL value);
 
-/* Windows.ApplicationModel.FindRelatedPackagesOptions.get_IncludeOptionals() */
 HRESULT wam_find_related_packages_options_get__include_optionals(WAM_FindRelatedPackagesOptions *self, BOOL *value);
 
-/* Windows.ApplicationModel.FindRelatedPackagesOptions.put_IncludeOptionals() */
 HRESULT wam_find_related_packages_options_put__include_optionals(WAM_FindRelatedPackagesOptions *self, BOOL value);
 
-/* Windows.ApplicationModel.FindRelatedPackagesOptions.get_IncludeResources() */
 HRESULT wam_find_related_packages_options_get__include_resources(WAM_FindRelatedPackagesOptions *self, BOOL *value);
 
-/* Windows.ApplicationModel.FindRelatedPackagesOptions.put_IncludeResources() */
 HRESULT wam_find_related_packages_options_put__include_resources(WAM_FindRelatedPackagesOptions *self, BOOL value);
 
-/* activate Windows.ApplicationModel.EnteredBackgroundEventArgs */
 HRESULT wam_entered_background_event_args_new(WAM_EnteredBackgroundEventArgs **out);
 
-/* Windows.ApplicationModel.EnteredBackgroundEventArgs */
-/* Windows.ApplicationModel.EnteredBackgroundEventArgs.GetDeferral() */
 HRESULT wam_entered_background_event_args_get_deferral(WAM_EnteredBackgroundEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.DesignMode */
 HRESULT wam_design_mode_new(WAM_DesignMode **out);
 
-/* Windows.ApplicationModel.DesignMode */
-/* Windows.ApplicationModel.DesignMode.get_DesignMode2Enabled() */
 HRESULT wam_design_mode_get__design_mode2_enabled(BOOL *value);
 
-/* Windows.ApplicationModel.DesignMode.get_DesignModeEnabled() */
 HRESULT wam_design_mode_get__design_mode_enabled(BOOL *value);
 
-/* activate Windows.ApplicationModel.StartupTask */
 HRESULT wam_startup_task_new(WAM_StartupTask **out);
 
-/* Windows.ApplicationModel.StartupTask */
-/* Windows.ApplicationModel.StartupTask.RequestEnableAsync() */
 HRESULT wam_startup_task_request_enable_async(WAM_StartupTask *self, WF_IAsyncOperation_WAM_StartupTaskState** out);
 
-/* Windows.ApplicationModel.StartupTask.Disable() */
 HRESULT wam_startup_task_disable(WAM_StartupTask *self);
 
-/* Windows.ApplicationModel.StartupTask.get_State() */
 HRESULT wam_startup_task_get__state(WAM_StartupTask *self, WAM_StartupTaskState *value);
 
-/* Windows.ApplicationModel.StartupTask.get_TaskId() */
 HRESULT wam_startup_task_get__task_id(WAM_StartupTask *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.StartupTask.GetForCurrentPackageAsync() */
 HRESULT wam_startup_task_get_for_current_package_async(WF_IAsyncOperation_WFOCO_IVectorView_WAM_StartupTask** out);
 
-/* Windows.ApplicationModel.StartupTask.GetAsync(taskId) */
 HRESULT wam_startup_task_get_async(cwinrt_hstring taskId, WF_IAsyncOperation_WAM_StartupTask** out);
 
-/* activate Windows.ApplicationModel.AppInstance */
 HRESULT wam_app_instance_new(WAM_AppInstance **out);
 
-/* Windows.ApplicationModel.AppInstance */
-/* Windows.ApplicationModel.AppInstance.get_Key() */
 HRESULT wam_app_instance_get__key(WAM_AppInstance *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.AppInstance.get_IsCurrentInstance() */
 HRESULT wam_app_instance_get__is_current_instance(WAM_AppInstance *self, BOOL *value);
 
-/* Windows.ApplicationModel.AppInstance.RedirectActivationTo() */
 HRESULT wam_app_instance_redirect_activation_to(WAM_AppInstance *self);
 
-/* Windows.ApplicationModel.AppInstance.get_RecommendedInstance() */
 HRESULT wam_app_instance_get__recommended_instance(WAM_AppInstance** value);
 
-/* Windows.ApplicationModel.AppInstance.GetActivatedEventArgs() */
 HRESULT wam_app_instance_get_activated_event_args(WAPAC_IActivatedEventArgs** out);
 
-/* Windows.ApplicationModel.AppInstance.FindOrRegisterInstanceForKey(key) */
 HRESULT wam_app_instance_find_or_register_instance_for_key(cwinrt_hstring key, WAM_AppInstance** out);
 
-/* Windows.ApplicationModel.AppInstance.Unregister() */
 HRESULT wam_app_instance_unregister(void);
 
-/* Windows.ApplicationModel.AppInstance.GetInstances() */
 HRESULT wam_app_instance_get_instances(WFOCO_IVector_WAM_AppInstance** out);
 
-/* activate Windows.ApplicationModel.AppInstallerInfo */
 HRESULT wam_app_installer_info_new(WAM_AppInstallerInfo **out);
 
-/* Windows.ApplicationModel.AppInstallerInfo */
-/* Windows.ApplicationModel.AppInstallerInfo.get_Uri() */
 HRESULT wam_app_installer_info_get__uri(WAM_AppInstallerInfo *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.AppInstallerInfo.get_OnLaunch() */
 HRESULT wam_app_installer_info_get__on_launch(WAM_AppInstallerInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.AppInstallerInfo.get_HoursBetweenUpdateChecks() */
 HRESULT wam_app_installer_info_get__hours_between_update_checks(WAM_AppInstallerInfo *self, uint32_t *value);
 
-/* Windows.ApplicationModel.AppInstallerInfo.get_ShowPrompt() */
 HRESULT wam_app_installer_info_get__show_prompt(WAM_AppInstallerInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.AppInstallerInfo.get_UpdateBlocksActivation() */
 HRESULT wam_app_installer_info_get__update_blocks_activation(WAM_AppInstallerInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.AppInstallerInfo.get_AutomaticBackgroundTask() */
 HRESULT wam_app_installer_info_get__automatic_background_task(WAM_AppInstallerInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.AppInstallerInfo.get_ForceUpdateFromAnyVersion() */
 HRESULT wam_app_installer_info_get__force_update_from_any_version(WAM_AppInstallerInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.AppInstallerInfo.get_IsAutoRepairEnabled() */
 HRESULT wam_app_installer_info_get__is_auto_repair_enabled(WAM_AppInstallerInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.AppInstallerInfo.get_Version() */
 HRESULT wam_app_installer_info_get__version(WAM_AppInstallerInfo *self, WAM_PackageVersion *value);
 
-/* Windows.ApplicationModel.AppInstallerInfo.get_LastChecked() */
 HRESULT wam_app_installer_info_get__last_checked(WAM_AppInstallerInfo *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.AppInstallerInfo.get_PausedUntil() */
 HRESULT wam_app_installer_info_get__paused_until(WAM_AppInstallerInfo *self, WF_DateTime** value);
 
-/* Windows.ApplicationModel.AppInstallerInfo.get_UpdateUris() */
 HRESULT wam_app_installer_info_get__update_uris(WAM_AppInstallerInfo *self, WFOCO_IVectorView_WF_Uri** value);
 
-/* Windows.ApplicationModel.AppInstallerInfo.get_RepairUris() */
 HRESULT wam_app_installer_info_get__repair_uris(WAM_AppInstallerInfo *self, WFOCO_IVectorView_WF_Uri** value);
 
-/* Windows.ApplicationModel.AppInstallerInfo.get_DependencyPackageUris() */
 HRESULT wam_app_installer_info_get__dependency_package_uris(WAM_AppInstallerInfo *self, WFOCO_IVectorView_WF_Uri** value);
 
-/* Windows.ApplicationModel.AppInstallerInfo.get_OptionalPackageUris() */
 HRESULT wam_app_installer_info_get__optional_package_uris(WAM_AppInstallerInfo *self, WFOCO_IVectorView_WF_Uri** value);
 
-/* Windows.ApplicationModel.AppInstallerInfo.get_PolicySource() */
 HRESULT wam_app_installer_info_get__policy_source(WAM_AppInstallerInfo *self, WAM_AppInstallerPolicySource *value);
 
-/* activate Windows.ApplicationModel.AppInfo */
 HRESULT wam_app_info_new(WAM_AppInfo **out);
 
-/* Windows.ApplicationModel.AppInfo */
-/* Windows.ApplicationModel.AppInfo.get_Id() */
 HRESULT wam_app_info_get__id(WAM_AppInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.AppInfo.get_AppUserModelId() */
 HRESULT wam_app_info_get__app_user_model_id(WAM_AppInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.AppInfo.get_DisplayInfo() */
 HRESULT wam_app_info_get__display_info(WAM_AppInfo *self, WAM_AppDisplayInfo** value);
 
-/* Windows.ApplicationModel.AppInfo.get_PackageFamilyName() */
 HRESULT wam_app_info_get__package_family_name(WAM_AppInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.AppInfo.get_Package() */
 HRESULT wam_app_info_get__package(WAM_AppInfo *self, WAM_Package** value);
 
-/* Windows.ApplicationModel.AppInfo.get_ExecutionContext() */
 HRESULT wam_app_info_get__execution_context(WAM_AppInfo *self, WAM_AppExecutionContext *value);
 
-/* Windows.ApplicationModel.AppInfo.get_SupportedFileExtensions() */
 HRESULT wam_app_info_get__supported_file_extensions(WAM_AppInfo *self, cwinrt_hstring **value, uint32_t *value_len);
 
-/* Windows.ApplicationModel.AppInfo.get_Current() */
 HRESULT wam_app_info_get__current(WAM_AppInfo** value);
 
-/* Windows.ApplicationModel.AppInfo.GetFromAppUserModelId(appUserModelId) */
 HRESULT wam_app_info_get_from_app_user_model_id(cwinrt_hstring appUserModelId, WAM_AppInfo** out);
 
-/* Windows.ApplicationModel.AppInfo.GetFromAppUserModelIdForUser(user, appUserModelId) */
 HRESULT wam_app_info_get_from_app_user_model_id_for_user(WSY_User* user, cwinrt_hstring appUserModelId, WAM_AppInfo** out);
 
-/* activate Windows.ApplicationModel.AppDisplayInfo */
 HRESULT wam_app_display_info_new(WAM_AppDisplayInfo **out);
 
-/* Windows.ApplicationModel.AppDisplayInfo */
-/* Windows.ApplicationModel.AppDisplayInfo.get_DisplayName() */
 HRESULT wam_app_display_info_get__display_name(WAM_AppDisplayInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.AppDisplayInfo.get_Description() */
 HRESULT wam_app_display_info_get__description(WAM_AppDisplayInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.AppDisplayInfo.GetLogo(size) */
 HRESULT wam_app_display_info_get_logo(WAM_AppDisplayInfo *self, WF_Size size, WSTST_RandomAccessStreamReference** out);
 
-/* Windows.ApplicationModel.ISuspendingDeferral */
-/* Windows.ApplicationModel.ISuspendingEventArgs */
-/* Windows.ApplicationModel.ISuspendingOperation */
-/* Windows.ApplicationModel.IPackageUpdatingEventArgs */
-/* Windows.ApplicationModel.IPackageUpdateAvailabilityResult */
-/* Windows.ApplicationModel.IPackageUninstallingEventArgs */
-/* Windows.ApplicationModel.IPackageStatusChangedEventArgs */
-/* Windows.ApplicationModel.IPackageStatus */
-/* Windows.ApplicationModel.IPackageStatus2 */
-/* Windows.ApplicationModel.IPackageStatus2.get_IsPartiallyStaged() */
 HRESULT wam_package_status_2_get__is_partially_staged(WAM_IPackageStatus_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.IPackageStagingEventArgs */
-/* Windows.ApplicationModel.IPackageInstallingEventArgs */
-/* Windows.ApplicationModel.IPackageId */
-/* Windows.ApplicationModel.IPackageIdWithMetadata */
-/* Windows.ApplicationModel.IPackageIdWithMetadata.get_ProductId() */
 HRESULT wam_package_id_with_metadata_get__product_id(WAM_IPackageIdWithMetadata *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.IPackageIdWithMetadata.get_Author() */
 HRESULT wam_package_id_with_metadata_get__author(WAM_IPackageIdWithMetadata *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.IPackageContentGroupStagingEventArgs */
-/* Windows.ApplicationModel.IPackageContentGroup */
-/* Windows.ApplicationModel.IPackageCatalogRemoveResourcePackagesResult */
-/* Windows.ApplicationModel.IPackageCatalogRemoveOptionalPackagesResult */
-/* Windows.ApplicationModel.IPackageCatalogAddResourcePackageResult */
-/* Windows.ApplicationModel.IPackageCatalogAddOptionalPackageResult */
-/* Windows.ApplicationModel.IPackageCatalog */
-/* Windows.ApplicationModel.IPackageCatalog2 */
-/* Windows.ApplicationModel.IPackageCatalog2.AddOptionalPackageAsync(optionalPackageFamilyName) */
 HRESULT wam_package_catalog_2_add_optional_package_async(WAM_IPackageCatalog_2 *self, cwinrt_hstring optionalPackageFamilyName, WF_IAsyncOperation_WAM_PackageCatalogAddOptionalPackageResult** out);
 
-/* Windows.ApplicationModel.IPackageCatalog3 */
-/* Windows.ApplicationModel.IPackageCatalog3.RemoveOptionalPackagesAsync(optionalPackageFamilyNames) */
 HRESULT wam_package_catalog_3_remove_optional_packages_async(WAM_IPackageCatalog_3 *self, WFOCO_IIterable_HSTRING* optionalPackageFamilyNames, WF_IAsyncOperation_WAM_PackageCatalogRemoveOptionalPackagesResult** out);
 
-/* Windows.ApplicationModel.IPackageCatalog4 */
-/* Windows.ApplicationModel.IPackageCatalog4.AddResourcePackageAsync(resourcePackageFamilyName, resourceID, options) */
 HRESULT wam_package_catalog_4_add_resource_package_async(WAM_IPackageCatalog_4 *self, cwinrt_hstring resourcePackageFamilyName, cwinrt_hstring resourceID, WAM_AddResourcePackageOptions options, WF_IAsyncOperationWithProgress_WAM_PackageCatalogAddResourcePackageResult_WAM_PackageInstallProgress** out);
 
-/* Windows.ApplicationModel.IPackageCatalog4.RemoveResourcePackagesAsync(resourcePackages) */
 HRESULT wam_package_catalog_4_remove_resource_packages_async(WAM_IPackageCatalog_4 *self, WFOCO_IIterable_WAM_Package* resourcePackages, WF_IAsyncOperation_WAM_PackageCatalogRemoveResourcePackagesResult** out);
 
-/* Windows.ApplicationModel.IPackage */
-/* Windows.ApplicationModel.IPackage2 */
-/* Windows.ApplicationModel.IPackage2.get_DisplayName() */
 HRESULT wam_package_2_get__display_name(WAM_IPackage_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.IPackage2.get_PublisherDisplayName() */
 HRESULT wam_package_2_get__publisher_display_name(WAM_IPackage_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.IPackage2.get_Description() */
 HRESULT wam_package_2_get__description(WAM_IPackage_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.IPackage2.get_Logo() */
 HRESULT wam_package_2_get__logo(WAM_IPackage_2 *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.IPackage2.get_IsResourcePackage() */
 HRESULT wam_package_2_get__is_resource_package(WAM_IPackage_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.IPackage2.get_IsBundle() */
 HRESULT wam_package_2_get__is_bundle(WAM_IPackage_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.IPackage2.get_IsDevelopmentMode() */
 HRESULT wam_package_2_get__is_development_mode(WAM_IPackage_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.IPackage3 */
-/* Windows.ApplicationModel.IPackage3.get_Status() */
 HRESULT wam_package_3_get__status(WAM_IPackage_3 *self, WAM_PackageStatus** value);
 
-/* Windows.ApplicationModel.IPackage3.get_InstalledDate() */
 HRESULT wam_package_3_get__installed_date(WAM_IPackage_3 *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.IPackage3.GetAppListEntriesAsync() */
 HRESULT wam_package_3_get_app_list_entries_async(WAM_IPackage_3 *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPCO_AppListEntry** out);
 
-/* Windows.ApplicationModel.IPackageWithMetadata */
-/* Windows.ApplicationModel.IPackageWithMetadata.get_InstallDate() */
 HRESULT wam_package_with_metadata_get__install_date(WAM_IPackageWithMetadata *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.IPackageWithMetadata.GetThumbnailToken() */
 HRESULT wam_package_with_metadata_get_thumbnail_token(WAM_IPackageWithMetadata *self, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.IPackageWithMetadata.Launch(parameters) */
 HRESULT wam_package_with_metadata_launch(WAM_IPackageWithMetadata *self, cwinrt_hstring parameters);
 
-/* Windows.ApplicationModel.IPackage4 */
-/* Windows.ApplicationModel.IPackage4.get_SignatureKind() */
 HRESULT wam_package_4_get__signature_kind(WAM_IPackage_4 *self, WAM_PackageSignatureKind *value);
 
-/* Windows.ApplicationModel.IPackage4.get_IsOptional() */
 HRESULT wam_package_4_get__is_optional(WAM_IPackage_4 *self, BOOL *value);
 
-/* Windows.ApplicationModel.IPackage4.VerifyContentIntegrityAsync() */
 HRESULT wam_package_4_verify_content_integrity_async(WAM_IPackage_4 *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.IPackage5 */
-/* Windows.ApplicationModel.IPackage5.GetContentGroupsAsync() */
 HRESULT wam_package_5_get_content_groups_async(WAM_IPackage_5 *self, WF_IAsyncOperation_WFOCO_IVector_WAM_PackageContentGroup** out);
 
-/* Windows.ApplicationModel.IPackage5.GetContentGroupAsync(name) */
 HRESULT wam_package_5_get_content_group_async(WAM_IPackage_5 *self, cwinrt_hstring name, WF_IAsyncOperation_WAM_PackageContentGroup** out);
 
-/* Windows.ApplicationModel.IPackage5.StageContentGroupsAsync(names) */
 HRESULT wam_package_5_stage_content_groups_async(WAM_IPackage_5 *self, WFOCO_IIterable_HSTRING* names, WF_IAsyncOperation_WFOCO_IVector_WAM_PackageContentGroup** out);
 
-/* Windows.ApplicationModel.IPackage5.StageContentGroupsAsync(names, moveToHeadOfQueue) */
 HRESULT wam_package_5_stage_content_groups_async_p_b_p(WAM_IPackage_5 *self, WFOCO_IIterable_HSTRING* names, BOOL moveToHeadOfQueue, WF_IAsyncOperation_WFOCO_IVector_WAM_PackageContentGroup** out);
 
-/* Windows.ApplicationModel.IPackage5.SetInUseAsync(inUse) */
 HRESULT wam_package_5_set_in_use_async(WAM_IPackage_5 *self, BOOL inUse, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.IPackage6 */
-/* Windows.ApplicationModel.IPackage6.GetAppInstallerInfo() */
 HRESULT wam_package_6_get_app_installer_info(WAM_IPackage_6 *self, WAM_AppInstallerInfo** out);
 
-/* Windows.ApplicationModel.IPackage6.CheckUpdateAvailabilityAsync() */
 HRESULT wam_package_6_check_update_availability_async(WAM_IPackage_6 *self, WF_IAsyncOperation_WAM_PackageUpdateAvailabilityResult** out);
 
-/* Windows.ApplicationModel.IPackage7 */
-/* Windows.ApplicationModel.IPackage7.get_MutableLocation() */
 HRESULT wam_package_7_get__mutable_location(WAM_IPackage_7 *self, WS_StorageFolder** value);
 
-/* Windows.ApplicationModel.IPackage7.get_EffectiveLocation() */
 HRESULT wam_package_7_get__effective_location(WAM_IPackage_7 *self, WS_StorageFolder** value);
 
-/* Windows.ApplicationModel.IPackage8 */
-/* Windows.ApplicationModel.IPackage8.get_EffectiveExternalLocation() */
 HRESULT wam_package_8_get__effective_external_location(WAM_IPackage_8 *self, WS_StorageFolder** value);
 
-/* Windows.ApplicationModel.IPackage8.get_MachineExternalLocation() */
 HRESULT wam_package_8_get__machine_external_location(WAM_IPackage_8 *self, WS_StorageFolder** value);
 
-/* Windows.ApplicationModel.IPackage8.get_UserExternalLocation() */
 HRESULT wam_package_8_get__user_external_location(WAM_IPackage_8 *self, WS_StorageFolder** value);
 
-/* Windows.ApplicationModel.IPackage8.get_InstalledPath() */
 HRESULT wam_package_8_get__installed_path(WAM_IPackage_8 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.IPackage8.get_MutablePath() */
 HRESULT wam_package_8_get__mutable_path(WAM_IPackage_8 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.IPackage8.get_EffectivePath() */
 HRESULT wam_package_8_get__effective_path(WAM_IPackage_8 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.IPackage8.get_EffectiveExternalPath() */
 HRESULT wam_package_8_get__effective_external_path(WAM_IPackage_8 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.IPackage8.get_MachineExternalPath() */
 HRESULT wam_package_8_get__machine_external_path(WAM_IPackage_8 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.IPackage8.get_UserExternalPath() */
 HRESULT wam_package_8_get__user_external_path(WAM_IPackage_8 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.IPackage8.GetLogoAsRandomAccessStreamReference(size) */
 HRESULT wam_package_8_get_logo_as_random_access_stream_reference(WAM_IPackage_8 *self, WF_Size size, WSTST_RandomAccessStreamReference** out);
 
-/* Windows.ApplicationModel.IPackage8.GetAppListEntries() */
 HRESULT wam_package_8_get_app_list_entries(WAM_IPackage_8 *self, WFOCO_IVectorView_WAPCO_AppListEntry** out);
 
-/* Windows.ApplicationModel.IPackage8.get_IsStub() */
 HRESULT wam_package_8_get__is_stub(WAM_IPackage_8 *self, BOOL *value);
 
-/* Windows.ApplicationModel.IPackage9 */
-/* Windows.ApplicationModel.IPackage9.FindRelatedPackages(options) */
 HRESULT wam_package_9_find_related_packages(WAM_IPackage_9 *self, WAM_FindRelatedPackagesOptions* options, WFOCO_IVector_WAM_Package** out);
 
-/* Windows.ApplicationModel.IPackage9.get_SourceUriSchemeName() */
 HRESULT wam_package_9_get__source_uri_scheme_name(WAM_IPackage_9 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.ILimitedAccessFeatureRequestResult */
-/* Windows.ApplicationModel.ILeavingBackgroundEventArgs */
-/* Windows.ApplicationModel.IFullTrustProcessLaunchResult */
-/* Windows.ApplicationModel.IFindRelatedPackagesOptions */
-/* Windows.ApplicationModel.IEnteredBackgroundEventArgs */
-/* Windows.ApplicationModel.IStartupTask */
-/* Windows.ApplicationModel.IAppInstance */
-/* Windows.ApplicationModel.IAppInstallerInfo */
-/* Windows.ApplicationModel.IAppInstallerInfo2 */
-/* Windows.ApplicationModel.IAppInstallerInfo2.get_OnLaunch() */
 HRESULT wam_app_installer_info_2_get__on_launch(WAM_IAppInstallerInfo_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.IAppInstallerInfo2.get_HoursBetweenUpdateChecks() */
 HRESULT wam_app_installer_info_2_get__hours_between_update_checks(WAM_IAppInstallerInfo_2 *self, uint32_t *value);
 
-/* Windows.ApplicationModel.IAppInstallerInfo2.get_ShowPrompt() */
 HRESULT wam_app_installer_info_2_get__show_prompt(WAM_IAppInstallerInfo_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.IAppInstallerInfo2.get_UpdateBlocksActivation() */
 HRESULT wam_app_installer_info_2_get__update_blocks_activation(WAM_IAppInstallerInfo_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.IAppInstallerInfo2.get_AutomaticBackgroundTask() */
 HRESULT wam_app_installer_info_2_get__automatic_background_task(WAM_IAppInstallerInfo_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.IAppInstallerInfo2.get_ForceUpdateFromAnyVersion() */
 HRESULT wam_app_installer_info_2_get__force_update_from_any_version(WAM_IAppInstallerInfo_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.IAppInstallerInfo2.get_IsAutoRepairEnabled() */
 HRESULT wam_app_installer_info_2_get__is_auto_repair_enabled(WAM_IAppInstallerInfo_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.IAppInstallerInfo2.get_Version() */
 HRESULT wam_app_installer_info_2_get__version(WAM_IAppInstallerInfo_2 *self, WAM_PackageVersion *value);
 
-/* Windows.ApplicationModel.IAppInstallerInfo2.get_LastChecked() */
 HRESULT wam_app_installer_info_2_get__last_checked(WAM_IAppInstallerInfo_2 *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.IAppInstallerInfo2.get_PausedUntil() */
 HRESULT wam_app_installer_info_2_get__paused_until(WAM_IAppInstallerInfo_2 *self, WF_DateTime** value);
 
-/* Windows.ApplicationModel.IAppInstallerInfo2.get_UpdateUris() */
 HRESULT wam_app_installer_info_2_get__update_uris(WAM_IAppInstallerInfo_2 *self, WFOCO_IVectorView_WF_Uri** value);
 
-/* Windows.ApplicationModel.IAppInstallerInfo2.get_RepairUris() */
 HRESULT wam_app_installer_info_2_get__repair_uris(WAM_IAppInstallerInfo_2 *self, WFOCO_IVectorView_WF_Uri** value);
 
-/* Windows.ApplicationModel.IAppInstallerInfo2.get_DependencyPackageUris() */
 HRESULT wam_app_installer_info_2_get__dependency_package_uris(WAM_IAppInstallerInfo_2 *self, WFOCO_IVectorView_WF_Uri** value);
 
-/* Windows.ApplicationModel.IAppInstallerInfo2.get_OptionalPackageUris() */
 HRESULT wam_app_installer_info_2_get__optional_package_uris(WAM_IAppInstallerInfo_2 *self, WFOCO_IVectorView_WF_Uri** value);
 
-/* Windows.ApplicationModel.IAppInstallerInfo2.get_PolicySource() */
 HRESULT wam_app_installer_info_2_get__policy_source(WAM_IAppInstallerInfo_2 *self, WAM_AppInstallerPolicySource *value);
 
-/* Windows.ApplicationModel.IAppInfo */
-/* Windows.ApplicationModel.IAppInfo2 */
-/* Windows.ApplicationModel.IAppInfo2.get_Package() */
 HRESULT wam_app_info_2_get__package(WAM_IAppInfo_2 *self, WAM_Package** value);
 
-/* Windows.ApplicationModel.IAppInfo3 */
-/* Windows.ApplicationModel.IAppInfo3.get_ExecutionContext() */
 HRESULT wam_app_info_3_get__execution_context(WAM_IAppInfo_3 *self, WAM_AppExecutionContext *value);
 
-/* Windows.ApplicationModel.IAppInfo4 */
-/* Windows.ApplicationModel.IAppInfo4.get_SupportedFileExtensions() */
 HRESULT wam_app_info_4_get__supported_file_extensions(WAM_IAppInfo_4 *self, cwinrt_hstring **value, uint32_t *value_len);
 
-/* Windows.ApplicationModel.IAppDisplayInfo */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_H */

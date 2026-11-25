@@ -16,7 +16,6 @@
 #include <cwinrt/Windows.UI.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WMEPL_IMediaPlaybackSource
 #define CWINRT_FWD_WMEPL_IMediaPlaybackSource
 typedef struct WMEPL_IMediaPlaybackSource WMEPL_IMediaPlaybackSource;
@@ -114,7 +113,6 @@ typedef struct WMEDE_VideoDeviceController WMEDE_VideoDeviceController;
 typedef struct WMEME_VideoEncodingProperties WMEME_VideoEncodingProperties;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMECO_IMediaStreamSampleStatics WMECO_IMediaStreamSampleStatics;
 typedef struct WMECO_IMediaStreamSampleStatics_2 WMECO_IMediaStreamSampleStatics_2;
 typedef struct WMECO_IMediaStreamSourceFactory WMECO_IMediaStreamSourceFactory;
@@ -296,7 +294,6 @@ typedef struct WMECO_IMediaSource WMECO_IMediaSource;
 typedef struct WMECO_IMediaTrack WMECO_IMediaTrack;
 typedef struct WMECO_IMediaCue WMECO_IMediaCue;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
@@ -964,7 +961,6 @@ struct WMECO_TimedTextSize {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -1405,295 +1401,186 @@ static const IID CWINRT_IID_WMECO_IMediaTrack CWINRT_MAYBE_UNUSED = { 0x03E1FAFC
 static const IID CWINRT_IID_WMECO_IMediaCue CWINRT_MAYBE_UNUSED = { 0xC7D15E5D, 0x59DC, 0x431F, { 0xA0, 0xEE, 0x27, 0x74, 0x43, 0x23, 0xB3, 0x6D } };
 #endif
 
-/* Methods */
-
-/* Windows.Media.Core.IMediaStreamSampleStatics */
-/* Windows.Media.Core.IMediaStreamSampleStatics.CreateFromBuffer(buffer, timestamp) */
 HRESULT wmeco_media_stream_sample_statics_create_from_buffer(WMECO_IMediaStreamSampleStatics *self, WSTST_IBuffer* buffer, WF_TimeSpan timestamp, WMECO_MediaStreamSample** out);
 
-/* Windows.Media.Core.IMediaStreamSampleStatics.CreateFromStreamAsync(stream, count, timestamp) */
 HRESULT wmeco_media_stream_sample_statics_create_from_stream_async(WMECO_IMediaStreamSampleStatics *self, WSTST_IInputStream* stream, uint32_t count, WF_TimeSpan timestamp, WF_IAsyncOperation_WMECO_MediaStreamSample** out);
 
-/* Windows.Media.Core.IMediaStreamSampleStatics2 */
-/* Windows.Media.Core.IMediaStreamSampleStatics2.CreateFromDirect3D11Surface(surface, timestamp) */
 HRESULT wmeco_media_stream_sample_statics_2_create_from_direct3_d11_surface(WMECO_IMediaStreamSampleStatics_2 *self, WGRDIDI_IDirect3DSurface* surface, WF_TimeSpan timestamp, WMECO_MediaStreamSample** out);
 
-/* Windows.Media.Core.IMediaStreamSourceFactory */
-/* Windows.Media.Core.IMediaStreamSourceFactory.CreateFromDescriptor(descriptor) */
 HRESULT wmeco_media_stream_source_factory_create_from_descriptor(WMECO_IMediaStreamSourceFactory *self, WMECO_IMediaStreamDescriptor* descriptor, WMECO_MediaStreamSource** out);
 
-/* Windows.Media.Core.IMediaStreamSourceFactory.CreateFromDescriptors(descriptor, descriptor2) */
 HRESULT wmeco_media_stream_source_factory_create_from_descriptors(WMECO_IMediaStreamSourceFactory *self, WMECO_IMediaStreamDescriptor* descriptor, WMECO_IMediaStreamDescriptor* descriptor2, WMECO_MediaStreamSource** out);
 
-/* Windows.Media.Core.IMseStreamSourceStatics */
-/* Windows.Media.Core.IMseStreamSourceStatics.IsContentTypeSupported(contentType) */
 HRESULT wmeco_mse_stream_source_statics_is_content_type_supported(WMECO_IMseStreamSourceStatics *self, cwinrt_hstring contentType, BOOL *out);
 
-/* Windows.Media.Core.ISingleSelectMediaTrackList */
-/* Windows.Media.Core.ISingleSelectMediaTrackList.put_SelectedIndex() */
 HRESULT wmeco_single_select_media_track_list_put__selected_index(WMECO_ISingleSelectMediaTrackList *self, int32_t value);
 
-/* Windows.Media.Core.ISingleSelectMediaTrackList.get_SelectedIndex() */
 HRESULT wmeco_single_select_media_track_list_get__selected_index(WMECO_ISingleSelectMediaTrackList *self, int32_t *value);
 
-/* Windows.Media.Core.ITimedMetadataStreamDescriptorFactory */
-/* Windows.Media.Core.ITimedMetadataStreamDescriptorFactory.Create(encodingProperties) */
 HRESULT wmeco_timed_metadata_stream_descriptor_factory_create(WMECO_ITimedMetadataStreamDescriptorFactory *self, WMEME_TimedMetadataEncodingProperties* encodingProperties, WMECO_TimedMetadataStreamDescriptor** out);
 
-/* Windows.Media.Core.ITimedMetadataTrackFactory */
-/* Windows.Media.Core.ITimedMetadataTrackFactory.Create(id, language, kind) */
 HRESULT wmeco_timed_metadata_track_factory_create(WMECO_ITimedMetadataTrackFactory *self, cwinrt_hstring id, cwinrt_hstring language, WMECO_TimedMetadataKind kind, WMECO_TimedMetadataTrack** out);
 
-/* Windows.Media.Core.ITimedMetadataTrackProvider */
-/* Windows.Media.Core.ITimedMetadataTrackProvider.get_TimedMetadataTracks() */
 HRESULT wmeco_timed_metadata_track_provider_get__timed_metadata_tracks(WMECO_ITimedMetadataTrackProvider *self, WFOCO_IVectorView_WMECO_TimedMetadataTrack** value);
 
-/* Windows.Media.Core.ITimedTextSourceStatics */
-/* Windows.Media.Core.ITimedTextSourceStatics.CreateFromStream(stream) */
 HRESULT wmeco_timed_text_source_statics_create_from_stream(WMECO_ITimedTextSourceStatics *self, WSTST_IRandomAccessStream* stream, WMECO_TimedTextSource** out);
 
-/* Windows.Media.Core.ITimedTextSourceStatics.CreateFromUri(uri) */
 HRESULT wmeco_timed_text_source_statics_create_from_uri(WMECO_ITimedTextSourceStatics *self, WF_Uri* uri, WMECO_TimedTextSource** out);
 
-/* Windows.Media.Core.ITimedTextSourceStatics.CreateFromStream(stream, defaultLanguage) */
 HRESULT wmeco_timed_text_source_statics_create_from_stream_p_str_p(WMECO_ITimedTextSourceStatics *self, WSTST_IRandomAccessStream* stream, cwinrt_hstring defaultLanguage, WMECO_TimedTextSource** out);
 
-/* Windows.Media.Core.ITimedTextSourceStatics.CreateFromUri(uri, defaultLanguage) */
 HRESULT wmeco_timed_text_source_statics_create_from_uri_p_str_p(WMECO_ITimedTextSourceStatics *self, WF_Uri* uri, cwinrt_hstring defaultLanguage, WMECO_TimedTextSource** out);
 
-/* Windows.Media.Core.ITimedTextSourceStatics2 */
-/* Windows.Media.Core.ITimedTextSourceStatics2.CreateFromStreamWithIndex(stream, indexStream) */
 HRESULT wmeco_timed_text_source_statics_2_create_from_stream_with_index(WMECO_ITimedTextSourceStatics_2 *self, WSTST_IRandomAccessStream* stream, WSTST_IRandomAccessStream* indexStream, WMECO_TimedTextSource** out);
 
-/* Windows.Media.Core.ITimedTextSourceStatics2.CreateFromUriWithIndex(uri, indexUri) */
 HRESULT wmeco_timed_text_source_statics_2_create_from_uri_with_index(WMECO_ITimedTextSourceStatics_2 *self, WF_Uri* uri, WF_Uri* indexUri, WMECO_TimedTextSource** out);
 
-/* Windows.Media.Core.ITimedTextSourceStatics2.CreateFromStreamWithIndex(stream, indexStream, defaultLanguage) */
 HRESULT wmeco_timed_text_source_statics_2_create_from_stream_with_index_p_p_str_p(WMECO_ITimedTextSourceStatics_2 *self, WSTST_IRandomAccessStream* stream, WSTST_IRandomAccessStream* indexStream, cwinrt_hstring defaultLanguage, WMECO_TimedTextSource** out);
 
-/* Windows.Media.Core.ITimedTextSourceStatics2.CreateFromUriWithIndex(uri, indexUri, defaultLanguage) */
 HRESULT wmeco_timed_text_source_statics_2_create_from_uri_with_index_p_p_str_p(WMECO_ITimedTextSourceStatics_2 *self, WF_Uri* uri, WF_Uri* indexUri, cwinrt_hstring defaultLanguage, WMECO_TimedTextSource** out);
 
-/* Windows.Media.Core.IVideoStreamDescriptorFactory */
-/* Windows.Media.Core.IVideoStreamDescriptorFactory.Create(encodingProperties) */
 HRESULT wmeco_video_stream_descriptor_factory_create(WMECO_IVideoStreamDescriptorFactory *self, WMEME_VideoEncodingProperties* encodingProperties, WMECO_VideoStreamDescriptor** out);
 
-/* activate Windows.Media.Core.ImageCue */
 HRESULT wmeco_image_cue_new(WMECO_ImageCue **out);
 
-/* Windows.Media.Core.ImageCue */
-/* Windows.Media.Core.ImageCue.get_Position() */
 HRESULT wmeco_image_cue_get__position(WMECO_ImageCue *self, WMECO_TimedTextPoint *value);
 
-/* Windows.Media.Core.ImageCue.put_Position() */
 HRESULT wmeco_image_cue_put__position(WMECO_ImageCue *self, WMECO_TimedTextPoint value);
 
-/* Windows.Media.Core.ImageCue.get_Extent() */
 HRESULT wmeco_image_cue_get__extent(WMECO_ImageCue *self, WMECO_TimedTextSize *value);
 
-/* Windows.Media.Core.ImageCue.put_Extent() */
 HRESULT wmeco_image_cue_put__extent(WMECO_ImageCue *self, WMECO_TimedTextSize value);
 
-/* Windows.Media.Core.ImageCue.put_SoftwareBitmap() */
 HRESULT wmeco_image_cue_put__software_bitmap(WMECO_ImageCue *self, WGRIM_SoftwareBitmap* value);
 
-/* Windows.Media.Core.ImageCue.get_SoftwareBitmap() */
 HRESULT wmeco_image_cue_get__software_bitmap(WMECO_ImageCue *self, WGRIM_SoftwareBitmap** value);
 
-/* Windows.Media.Core.ImageCue.put_StartTime() */
 HRESULT wmeco_image_cue_put__start_time(WMECO_ImageCue *self, WF_TimeSpan value);
 
-/* Windows.Media.Core.ImageCue.get_StartTime() */
 HRESULT wmeco_image_cue_get__start_time(WMECO_ImageCue *self, WF_TimeSpan *value);
 
-/* Windows.Media.Core.ImageCue.put_Duration() */
 HRESULT wmeco_image_cue_put__duration(WMECO_ImageCue *self, WF_TimeSpan value);
 
-/* Windows.Media.Core.ImageCue.get_Duration() */
 HRESULT wmeco_image_cue_get__duration(WMECO_ImageCue *self, WF_TimeSpan *value);
 
-/* Windows.Media.Core.ImageCue.put_Id() */
 HRESULT wmeco_image_cue_put__id(WMECO_ImageCue *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.ImageCue.get_Id() */
 HRESULT wmeco_image_cue_get__id(WMECO_ImageCue *self, cwinrt_hstring *value);
 
-/* activate Windows.Media.Core.InitializeMediaStreamSourceRequestedEventArgs */
 HRESULT wmeco_initialize_media_stream_source_requested_event_args_new(WMECO_InitializeMediaStreamSourceRequestedEventArgs **out);
 
-/* Windows.Media.Core.InitializeMediaStreamSourceRequestedEventArgs */
-/* Windows.Media.Core.InitializeMediaStreamSourceRequestedEventArgs.get_Source() */
 HRESULT wmeco_initialize_media_stream_source_requested_event_args_get__source(WMECO_InitializeMediaStreamSourceRequestedEventArgs *self, WMECO_MediaStreamSource** value);
 
-/* Windows.Media.Core.InitializeMediaStreamSourceRequestedEventArgs.get_RandomAccessStream() */
 HRESULT wmeco_initialize_media_stream_source_requested_event_args_get__random_access_stream(WMECO_InitializeMediaStreamSourceRequestedEventArgs *self, WSTST_IRandomAccessStream** value);
 
-/* Windows.Media.Core.InitializeMediaStreamSourceRequestedEventArgs.GetDeferral() */
 HRESULT wmeco_initialize_media_stream_source_requested_event_args_get_deferral(WMECO_InitializeMediaStreamSourceRequestedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Media.Core.LowLightFusion */
 HRESULT wmeco_low_light_fusion_new(WMECO_LowLightFusion **out);
 
-/* Windows.Media.Core.LowLightFusion */
-/* Windows.Media.Core.LowLightFusion.get_SupportedBitmapPixelFormats() */
 HRESULT wmeco_low_light_fusion_get__supported_bitmap_pixel_formats(WFOCO_IVectorView_WGRIM_BitmapPixelFormat** value);
 
-/* Windows.Media.Core.LowLightFusion.get_MaxSupportedFrameCount() */
 HRESULT wmeco_low_light_fusion_get__max_supported_frame_count(int32_t *value);
 
-/* Windows.Media.Core.LowLightFusion.FuseAsync(frameSet) */
 HRESULT wmeco_low_light_fusion_fuse_async(WFOCO_IIterable_WGRIM_SoftwareBitmap* frameSet, WF_IAsyncOperationWithProgress_WMECO_LowLightFusionResult_F64** out);
 
-/* activate Windows.Media.Core.LowLightFusionResult */
 HRESULT wmeco_low_light_fusion_result_new(WMECO_LowLightFusionResult **out);
 
-/* Windows.Media.Core.LowLightFusionResult */
-/* Windows.Media.Core.LowLightFusionResult.get_Frame() */
 HRESULT wmeco_low_light_fusion_result_get__frame(WMECO_LowLightFusionResult *self, WGRIM_SoftwareBitmap** value);
 
-/* Windows.Media.Core.LowLightFusionResult.Close() */
 HRESULT wmeco_low_light_fusion_result_close(WMECO_LowLightFusionResult *self);
 
-/* activate Windows.Media.Core.MediaBinder */
 HRESULT wmeco_media_binder_new(WMECO_MediaBinder **out);
 
-/* Windows.Media.Core.MediaBinder */
-/* Windows.Media.Core.MediaBinder.get_Token() */
 HRESULT wmeco_media_binder_get__token(WMECO_MediaBinder *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.MediaBinder.put_Token() */
 HRESULT wmeco_media_binder_put__token(WMECO_MediaBinder *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.MediaBinder.get_Source() */
 HRESULT wmeco_media_binder_get__source(WMECO_MediaBinder *self, WMECO_MediaSource** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeco_media_binder_on_binding(WMECO_MediaBinder *self, cwinrt_event_fn fn, void *ctx);
 void wmeco_media_binder_off_binding(WMECO_MediaBinder *self, cwinrt_token token);
 
-/* activate Windows.Media.Core.MediaBindingEventArgs */
 HRESULT wmeco_media_binding_event_args_new(WMECO_MediaBindingEventArgs **out);
 
-/* Windows.Media.Core.MediaBindingEventArgs */
-/* Windows.Media.Core.MediaBindingEventArgs.get_MediaBinder() */
 HRESULT wmeco_media_binding_event_args_get__media_binder(WMECO_MediaBindingEventArgs *self, WMECO_MediaBinder** value);
 
-/* Windows.Media.Core.MediaBindingEventArgs.GetDeferral() */
 HRESULT wmeco_media_binding_event_args_get_deferral(WMECO_MediaBindingEventArgs *self, WF_Deferral** out);
 
-/* Windows.Media.Core.MediaBindingEventArgs.SetUri(uri) */
 HRESULT wmeco_media_binding_event_args_set_uri(WMECO_MediaBindingEventArgs *self, WF_Uri* uri);
 
-/* Windows.Media.Core.MediaBindingEventArgs.SetStream(stream, contentType) */
 HRESULT wmeco_media_binding_event_args_set_stream(WMECO_MediaBindingEventArgs *self, WSTST_IRandomAccessStream* stream, cwinrt_hstring contentType);
 
-/* Windows.Media.Core.MediaBindingEventArgs.SetStreamReference(stream, contentType) */
 HRESULT wmeco_media_binding_event_args_set_stream_reference(WMECO_MediaBindingEventArgs *self, WSTST_IRandomAccessStreamReference* stream, cwinrt_hstring contentType);
 
-/* Windows.Media.Core.MediaBindingEventArgs.SetAdaptiveMediaSource(mediaSource) */
 HRESULT wmeco_media_binding_event_args_set_adaptive_media_source(WMECO_MediaBindingEventArgs *self, WMESTAD_AdaptiveMediaSource* mediaSource);
 
-/* Windows.Media.Core.MediaBindingEventArgs.SetStorageFile(file) */
 HRESULT wmeco_media_binding_event_args_set_storage_file(WMECO_MediaBindingEventArgs *self, WS_IStorageFile* file);
 
-/* Windows.Media.Core.MediaBindingEventArgs.SetDownloadOperation(downloadOperation) */
 HRESULT wmeco_media_binding_event_args_set_download_operation(WMECO_MediaBindingEventArgs *self, WNEBA_DownloadOperation* downloadOperation);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeco_media_binding_event_args_on_canceled(WMECO_MediaBindingEventArgs *self, cwinrt_event_fn fn, void *ctx);
 void wmeco_media_binding_event_args_off_canceled(WMECO_MediaBindingEventArgs *self, cwinrt_token token);
 
-/* activate Windows.Media.Core.MediaCueEventArgs */
 HRESULT wmeco_media_cue_event_args_new(WMECO_MediaCueEventArgs **out);
 
-/* Windows.Media.Core.MediaCueEventArgs */
-/* Windows.Media.Core.MediaCueEventArgs.get_Cue() */
 HRESULT wmeco_media_cue_event_args_get__cue(WMECO_MediaCueEventArgs *self, WMECO_IMediaCue** value);
 
-/* activate Windows.Media.Core.MediaSource */
 HRESULT wmeco_media_source_new(WMECO_MediaSource **out);
 
-/* Windows.Media.Core.MediaSource */
-/* Windows.Media.Core.MediaSource.get_CustomProperties() */
 HRESULT wmeco_media_source_get__custom_properties(WMECO_MediaSource *self, WFOCO_ValueSet** value);
 
-/* Windows.Media.Core.MediaSource.get_Duration() */
 HRESULT wmeco_media_source_get__duration(WMECO_MediaSource *self, WF_TimeSpan** value);
 
-/* Windows.Media.Core.MediaSource.get_IsOpen() */
 HRESULT wmeco_media_source_get__is_open(WMECO_MediaSource *self, BOOL *value);
 
-/* Windows.Media.Core.MediaSource.get_ExternalTimedTextSources() */
 HRESULT wmeco_media_source_get__external_timed_text_sources(WMECO_MediaSource *self, WFOCO_IObservableVector_WMECO_TimedTextSource** value);
 
-/* Windows.Media.Core.MediaSource.get_ExternalTimedMetadataTracks() */
 HRESULT wmeco_media_source_get__external_timed_metadata_tracks(WMECO_MediaSource *self, WFOCO_IObservableVector_WMECO_TimedMetadataTrack** value);
 
-/* Windows.Media.Core.MediaSource.Close() */
 HRESULT wmeco_media_source_close(WMECO_MediaSource *self);
 
-/* Windows.Media.Core.MediaSource.get_State() */
 HRESULT wmeco_media_source_get__state(WMECO_MediaSource *self, WMECO_MediaSourceState *value);
 
-/* Windows.Media.Core.MediaSource.Reset() */
 HRESULT wmeco_media_source_reset(WMECO_MediaSource *self);
 
-/* Windows.Media.Core.MediaSource.get_AdaptiveMediaSource() */
 HRESULT wmeco_media_source_get__adaptive_media_source(WMECO_MediaSource *self, WMESTAD_AdaptiveMediaSource** value);
 
-/* Windows.Media.Core.MediaSource.get_MediaStreamSource() */
 HRESULT wmeco_media_source_get__media_stream_source(WMECO_MediaSource *self, WMECO_MediaStreamSource** value);
 
-/* Windows.Media.Core.MediaSource.get_MseStreamSource() */
 HRESULT wmeco_media_source_get__mse_stream_source(WMECO_MediaSource *self, WMECO_MseStreamSource** value);
 
-/* Windows.Media.Core.MediaSource.get_Uri() */
 HRESULT wmeco_media_source_get__uri(WMECO_MediaSource *self, WF_Uri** value);
 
-/* Windows.Media.Core.MediaSource.OpenAsync() */
 HRESULT wmeco_media_source_open_async(WMECO_MediaSource *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Core.MediaSource.get_DownloadOperation() */
 HRESULT wmeco_media_source_get__download_operation(WMECO_MediaSource *self, WNEBA_DownloadOperation** value);
 
-/* Windows.Media.Core.MediaSource.CreateFromDownloadOperation(downloadOperation) */
 HRESULT wmeco_media_source_create_from_download_operation(WNEBA_DownloadOperation* downloadOperation, WMECO_MediaSource** out);
 
-/* Windows.Media.Core.MediaSource.CreateFromMediaFrameSource(frameSource) */
 HRESULT wmeco_media_source_create_from_media_frame_source(WMECAFR_MediaFrameSource* frameSource, WMECO_MediaSource** out);
 
-/* Windows.Media.Core.MediaSource.CreateFromMediaBinder(binder) */
 HRESULT wmeco_media_source_create_from_media_binder(WMECO_MediaBinder* binder, WMECO_MediaSource** out);
 
-/* Windows.Media.Core.MediaSource.CreateFromAdaptiveMediaSource(mediaSource) */
 HRESULT wmeco_media_source_create_from_adaptive_media_source(WMESTAD_AdaptiveMediaSource* mediaSource, WMECO_MediaSource** out);
 
-/* Windows.Media.Core.MediaSource.CreateFromMediaStreamSource(mediaSource) */
 HRESULT wmeco_media_source_create_from_media_stream_source(WMECO_MediaStreamSource* mediaSource, WMECO_MediaSource** out);
 
-/* Windows.Media.Core.MediaSource.CreateFromMseStreamSource(mediaSource) */
 HRESULT wmeco_media_source_create_from_mse_stream_source(WMECO_MseStreamSource* mediaSource, WMECO_MediaSource** out);
 
-/* Windows.Media.Core.MediaSource.CreateFromIMediaSource(mediaSource) */
 HRESULT wmeco_media_source_create_from_i_media_source(WMECO_IMediaSource* mediaSource, WMECO_MediaSource** out);
 
-/* Windows.Media.Core.MediaSource.CreateFromStorageFile(file) */
 HRESULT wmeco_media_source_create_from_storage_file(WS_IStorageFile* file, WMECO_MediaSource** out);
 
-/* Windows.Media.Core.MediaSource.CreateFromStream(stream, contentType) */
 HRESULT wmeco_media_source_create_from_stream(WSTST_IRandomAccessStream* stream, cwinrt_hstring contentType, WMECO_MediaSource** out);
 
-/* Windows.Media.Core.MediaSource.CreateFromStreamReference(stream, contentType) */
 HRESULT wmeco_media_source_create_from_stream_reference(WSTST_IRandomAccessStreamReference* stream, cwinrt_hstring contentType, WMECO_MediaSource** out);
 
-/* Windows.Media.Core.MediaSource.CreateFromUri(uri) */
 HRESULT wmeco_media_source_create_from_uri(WF_Uri* uri, WMECO_MediaSource** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeco_media_source_on_open_operation_completed(WMECO_MediaSource *self, cwinrt_event_fn fn, void *ctx);
@@ -1702,216 +1589,142 @@ void wmeco_media_source_off_open_operation_completed(WMECO_MediaSource *self, cw
 cwinrt_token wmeco_media_source_on_state_changed(WMECO_MediaSource *self, cwinrt_event_fn fn, void *ctx);
 void wmeco_media_source_off_state_changed(WMECO_MediaSource *self, cwinrt_token token);
 
-/* activate Windows.Media.Core.MediaSourceAppServiceConnection */
 HRESULT wmeco_media_source_app_service_connection_new(WMECO_MediaSourceAppServiceConnection **out);
 
-/* Windows.Media.Core.MediaSourceAppServiceConnection */
-/* Windows.Media.Core.MediaSourceAppServiceConnection.Start() */
 HRESULT wmeco_media_source_app_service_connection_start(WMECO_MediaSourceAppServiceConnection *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeco_media_source_app_service_connection_on_initialize_media_stream_source_requested(WMECO_MediaSourceAppServiceConnection *self, cwinrt_event_fn fn, void *ctx);
 void wmeco_media_source_app_service_connection_off_initialize_media_stream_source_requested(WMECO_MediaSourceAppServiceConnection *self, cwinrt_token token);
 
-/* activate Windows.Media.Core.MediaSourceError */
 HRESULT wmeco_media_source_error_new(WMECO_MediaSourceError **out);
 
-/* Windows.Media.Core.MediaSourceError */
-/* Windows.Media.Core.MediaSourceError.get_ExtendedError() */
 HRESULT wmeco_media_source_error_get__extended_error(WMECO_MediaSourceError *self, HRESULT *value);
 
-/* activate Windows.Media.Core.MediaSourceOpenOperationCompletedEventArgs */
 HRESULT wmeco_media_source_open_operation_completed_event_args_new(WMECO_MediaSourceOpenOperationCompletedEventArgs **out);
 
-/* Windows.Media.Core.MediaSourceOpenOperationCompletedEventArgs */
-/* Windows.Media.Core.MediaSourceOpenOperationCompletedEventArgs.get_Error() */
 HRESULT wmeco_media_source_open_operation_completed_event_args_get__error(WMECO_MediaSourceOpenOperationCompletedEventArgs *self, WMECO_MediaSourceError** value);
 
-/* activate Windows.Media.Core.MediaSourceStateChangedEventArgs */
 HRESULT wmeco_media_source_state_changed_event_args_new(WMECO_MediaSourceStateChangedEventArgs **out);
 
-/* Windows.Media.Core.MediaSourceStateChangedEventArgs */
-/* Windows.Media.Core.MediaSourceStateChangedEventArgs.get_OldState() */
 HRESULT wmeco_media_source_state_changed_event_args_get__old_state(WMECO_MediaSourceStateChangedEventArgs *self, WMECO_MediaSourceState *value);
 
-/* Windows.Media.Core.MediaSourceStateChangedEventArgs.get_NewState() */
 HRESULT wmeco_media_source_state_changed_event_args_get__new_state(WMECO_MediaSourceStateChangedEventArgs *self, WMECO_MediaSourceState *value);
 
-/* activate Windows.Media.Core.MediaStreamSample */
 HRESULT wmeco_media_stream_sample_new(WMECO_MediaStreamSample **out);
 
-/* Windows.Media.Core.MediaStreamSample */
-/* Windows.Media.Core.MediaStreamSample.get_Buffer() */
 HRESULT wmeco_media_stream_sample_get__buffer(WMECO_MediaStreamSample *self, WSTST_Buffer** value);
 
-/* Windows.Media.Core.MediaStreamSample.get_Timestamp() */
 HRESULT wmeco_media_stream_sample_get__timestamp(WMECO_MediaStreamSample *self, WF_TimeSpan *value);
 
-/* Windows.Media.Core.MediaStreamSample.get_ExtendedProperties() */
 HRESULT wmeco_media_stream_sample_get__extended_properties(WMECO_MediaStreamSample *self, WMECO_MediaStreamSamplePropertySet** value);
 
-/* Windows.Media.Core.MediaStreamSample.get_Protection() */
 HRESULT wmeco_media_stream_sample_get__protection(WMECO_MediaStreamSample *self, WMECO_MediaStreamSampleProtectionProperties** value);
 
-/* Windows.Media.Core.MediaStreamSample.put_DecodeTimestamp() */
 HRESULT wmeco_media_stream_sample_put__decode_timestamp(WMECO_MediaStreamSample *self, WF_TimeSpan value);
 
-/* Windows.Media.Core.MediaStreamSample.get_DecodeTimestamp() */
 HRESULT wmeco_media_stream_sample_get__decode_timestamp(WMECO_MediaStreamSample *self, WF_TimeSpan *value);
 
-/* Windows.Media.Core.MediaStreamSample.put_Duration() */
 HRESULT wmeco_media_stream_sample_put__duration(WMECO_MediaStreamSample *self, WF_TimeSpan value);
 
-/* Windows.Media.Core.MediaStreamSample.get_Duration() */
 HRESULT wmeco_media_stream_sample_get__duration(WMECO_MediaStreamSample *self, WF_TimeSpan *value);
 
-/* Windows.Media.Core.MediaStreamSample.put_KeyFrame() */
 HRESULT wmeco_media_stream_sample_put__key_frame(WMECO_MediaStreamSample *self, BOOL value);
 
-/* Windows.Media.Core.MediaStreamSample.get_KeyFrame() */
 HRESULT wmeco_media_stream_sample_get__key_frame(WMECO_MediaStreamSample *self, BOOL *value);
 
-/* Windows.Media.Core.MediaStreamSample.put_Discontinuous() */
 HRESULT wmeco_media_stream_sample_put__discontinuous(WMECO_MediaStreamSample *self, BOOL value);
 
-/* Windows.Media.Core.MediaStreamSample.get_Discontinuous() */
 HRESULT wmeco_media_stream_sample_get__discontinuous(WMECO_MediaStreamSample *self, BOOL *value);
 
-/* Windows.Media.Core.MediaStreamSample.get_Direct3D11Surface() */
 HRESULT wmeco_media_stream_sample_get__direct3_d11_surface(WMECO_MediaStreamSample *self, WGRDIDI_IDirect3DSurface** value);
 
-/* Windows.Media.Core.MediaStreamSample.CreateFromDirect3D11Surface(surface, timestamp) */
 HRESULT wmeco_media_stream_sample_create_from_direct3_d11_surface(WGRDIDI_IDirect3DSurface* surface, WF_TimeSpan timestamp, WMECO_MediaStreamSample** out);
 
-/* Windows.Media.Core.MediaStreamSample.CreateFromBuffer(buffer, timestamp) */
 HRESULT wmeco_media_stream_sample_create_from_buffer(WSTST_IBuffer* buffer, WF_TimeSpan timestamp, WMECO_MediaStreamSample** out);
 
-/* Windows.Media.Core.MediaStreamSample.CreateFromStreamAsync(stream, count, timestamp) */
 HRESULT wmeco_media_stream_sample_create_from_stream_async(WSTST_IInputStream* stream, uint32_t count, WF_TimeSpan timestamp, WF_IAsyncOperation_WMECO_MediaStreamSample** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeco_media_stream_sample_on_processed(WMECO_MediaStreamSample *self, cwinrt_event_fn fn, void *ctx);
 void wmeco_media_stream_sample_off_processed(WMECO_MediaStreamSample *self, cwinrt_token token);
 
-/* activate Windows.Media.Core.MediaStreamSamplePropertySet */
 HRESULT wmeco_media_stream_sample_property_set_new(WMECO_MediaStreamSamplePropertySet **out);
 
-/* Windows.Media.Core.MediaStreamSamplePropertySet */
-/* Windows.Media.Core.MediaStreamSamplePropertySet.Lookup(key) */
 HRESULT wmeco_media_stream_sample_property_set_lookup(WMECO_MediaStreamSamplePropertySet *self, GUID key, IInspectable** out);
 
-/* Windows.Media.Core.MediaStreamSamplePropertySet.get_Size() */
 HRESULT wmeco_media_stream_sample_property_set_get__size(WMECO_MediaStreamSamplePropertySet *self, uint32_t *value);
 
-/* Windows.Media.Core.MediaStreamSamplePropertySet.HasKey(key) */
 HRESULT wmeco_media_stream_sample_property_set_has_key(WMECO_MediaStreamSamplePropertySet *self, GUID key, BOOL *out);
 
-/* Windows.Media.Core.MediaStreamSamplePropertySet.GetView() */
 HRESULT wmeco_media_stream_sample_property_set_get_view(WMECO_MediaStreamSamplePropertySet *self, WFOCO_IMapView_Guid_Object** out);
 
-/* Windows.Media.Core.MediaStreamSamplePropertySet.Insert(key) */
 HRESULT wmeco_media_stream_sample_property_set_insert(WMECO_MediaStreamSamplePropertySet *self, GUID key, IInspectable* value, BOOL *out);
 
-/* Windows.Media.Core.MediaStreamSamplePropertySet.Remove(key) */
 HRESULT wmeco_media_stream_sample_property_set_remove(WMECO_MediaStreamSamplePropertySet *self, GUID key);
 
-/* Windows.Media.Core.MediaStreamSamplePropertySet.Clear() */
 HRESULT wmeco_media_stream_sample_property_set_clear(WMECO_MediaStreamSamplePropertySet *self);
 
-/* Windows.Media.Core.MediaStreamSamplePropertySet.First() */
 HRESULT wmeco_media_stream_sample_property_set_first(WMECO_MediaStreamSamplePropertySet *self, WFOCO_IIterator_WFOCO_IKeyValuePair_Guid_Object** out);
 
-/* activate Windows.Media.Core.MediaStreamSampleProtectionProperties */
 HRESULT wmeco_media_stream_sample_protection_properties_new(WMECO_MediaStreamSampleProtectionProperties **out);
 
-/* Windows.Media.Core.MediaStreamSampleProtectionProperties */
-/* Windows.Media.Core.MediaStreamSampleProtectionProperties.SetKeyIdentifier() */
 HRESULT wmeco_media_stream_sample_protection_properties_set_key_identifier(WMECO_MediaStreamSampleProtectionProperties *self, uint8_t *value, uint32_t value_len);
 
-/* Windows.Media.Core.MediaStreamSampleProtectionProperties.GetKeyIdentifier() */
 HRESULT wmeco_media_stream_sample_protection_properties_get_key_identifier(WMECO_MediaStreamSampleProtectionProperties *self, uint8_t *value, uint32_t value_len);
 
-/* Windows.Media.Core.MediaStreamSampleProtectionProperties.SetInitializationVector() */
 HRESULT wmeco_media_stream_sample_protection_properties_set_initialization_vector(WMECO_MediaStreamSampleProtectionProperties *self, uint8_t *value, uint32_t value_len);
 
-/* Windows.Media.Core.MediaStreamSampleProtectionProperties.GetInitializationVector() */
 HRESULT wmeco_media_stream_sample_protection_properties_get_initialization_vector(WMECO_MediaStreamSampleProtectionProperties *self, uint8_t *value, uint32_t value_len);
 
-/* Windows.Media.Core.MediaStreamSampleProtectionProperties.SetSubSampleMapping() */
 HRESULT wmeco_media_stream_sample_protection_properties_set_sub_sample_mapping(WMECO_MediaStreamSampleProtectionProperties *self, uint8_t *value, uint32_t value_len);
 
-/* Windows.Media.Core.MediaStreamSampleProtectionProperties.GetSubSampleMapping() */
 HRESULT wmeco_media_stream_sample_protection_properties_get_sub_sample_mapping(WMECO_MediaStreamSampleProtectionProperties *self, uint8_t *value, uint32_t value_len);
 
-/* activate Windows.Media.Core.MediaStreamSource */
 HRESULT wmeco_media_stream_source_new(WMECO_MediaStreamSource **out);
 
-/* Windows.Media.Core.MediaStreamSource */
-/* Windows.Media.Core.MediaStreamSource.NotifyError(errorStatus) */
 HRESULT wmeco_media_stream_source_notify_error(WMECO_MediaStreamSource *self, WMECO_MediaStreamSourceErrorStatus errorStatus);
 
-/* Windows.Media.Core.MediaStreamSource.AddStreamDescriptor(descriptor) */
 HRESULT wmeco_media_stream_source_add_stream_descriptor(WMECO_MediaStreamSource *self, WMECO_IMediaStreamDescriptor* descriptor);
 
-/* Windows.Media.Core.MediaStreamSource.put_MediaProtectionManager() */
 HRESULT wmeco_media_stream_source_put__media_protection_manager(WMECO_MediaStreamSource *self, WMEPR_MediaProtectionManager* value);
 
-/* Windows.Media.Core.MediaStreamSource.get_MediaProtectionManager() */
 HRESULT wmeco_media_stream_source_get__media_protection_manager(WMECO_MediaStreamSource *self, WMEPR_MediaProtectionManager** value);
 
-/* Windows.Media.Core.MediaStreamSource.put_Duration() */
 HRESULT wmeco_media_stream_source_put__duration(WMECO_MediaStreamSource *self, WF_TimeSpan value);
 
-/* Windows.Media.Core.MediaStreamSource.get_Duration() */
 HRESULT wmeco_media_stream_source_get__duration(WMECO_MediaStreamSource *self, WF_TimeSpan *value);
 
-/* Windows.Media.Core.MediaStreamSource.put_CanSeek() */
 HRESULT wmeco_media_stream_source_put__can_seek(WMECO_MediaStreamSource *self, BOOL value);
 
-/* Windows.Media.Core.MediaStreamSource.get_CanSeek() */
 HRESULT wmeco_media_stream_source_get__can_seek(WMECO_MediaStreamSource *self, BOOL *value);
 
-/* Windows.Media.Core.MediaStreamSource.put_BufferTime() */
 HRESULT wmeco_media_stream_source_put__buffer_time(WMECO_MediaStreamSource *self, WF_TimeSpan value);
 
-/* Windows.Media.Core.MediaStreamSource.get_BufferTime() */
 HRESULT wmeco_media_stream_source_get__buffer_time(WMECO_MediaStreamSource *self, WF_TimeSpan *value);
 
-/* Windows.Media.Core.MediaStreamSource.SetBufferedRange(startOffset, endOffset) */
 HRESULT wmeco_media_stream_source_set_buffered_range(WMECO_MediaStreamSource *self, WF_TimeSpan startOffset, WF_TimeSpan endOffset);
 
-/* Windows.Media.Core.MediaStreamSource.get_MusicProperties() */
 HRESULT wmeco_media_stream_source_get__music_properties(WMECO_MediaStreamSource *self, WSTFI_MusicProperties** value);
 
-/* Windows.Media.Core.MediaStreamSource.get_VideoProperties() */
 HRESULT wmeco_media_stream_source_get__video_properties(WMECO_MediaStreamSource *self, WSTFI_VideoProperties** value);
 
-/* Windows.Media.Core.MediaStreamSource.put_Thumbnail() */
 HRESULT wmeco_media_stream_source_put__thumbnail(WMECO_MediaStreamSource *self, WSTST_IRandomAccessStreamReference* value);
 
-/* Windows.Media.Core.MediaStreamSource.get_Thumbnail() */
 HRESULT wmeco_media_stream_source_get__thumbnail(WMECO_MediaStreamSource *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.Media.Core.MediaStreamSource.AddProtectionKey(streamDescriptor, keyIdentifier, licenseData) */
 HRESULT wmeco_media_stream_source_add_protection_key(WMECO_MediaStreamSource *self, WMECO_IMediaStreamDescriptor* streamDescriptor, uint8_t *keyIdentifier, uint32_t keyIdentifier_len, uint8_t *licenseData, uint32_t licenseData_len);
 
-/* Windows.Media.Core.MediaStreamSource.put_MaxSupportedPlaybackRate() */
 HRESULT wmeco_media_stream_source_put__max_supported_playback_rate(WMECO_MediaStreamSource *self, double* value);
 
-/* Windows.Media.Core.MediaStreamSource.get_MaxSupportedPlaybackRate() */
 HRESULT wmeco_media_stream_source_get__max_supported_playback_rate(WMECO_MediaStreamSource *self, double** value);
 
-/* Windows.Media.Core.MediaStreamSource.put_IsLive() */
 HRESULT wmeco_media_stream_source_put__is_live(WMECO_MediaStreamSource *self, BOOL value);
 
-/* Windows.Media.Core.MediaStreamSource.get_IsLive() */
 HRESULT wmeco_media_stream_source_get__is_live(WMECO_MediaStreamSource *self, BOOL *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeco_media_stream_source_on_closed(WMECO_MediaStreamSource *self, cwinrt_event_fn fn, void *ctx);
@@ -1932,157 +1745,98 @@ void wmeco_media_stream_source_off_switch_streams_requested(WMECO_MediaStreamSou
 cwinrt_token wmeco_media_stream_source_on_sample_rendered(WMECO_MediaStreamSource *self, cwinrt_event_fn fn, void *ctx);
 void wmeco_media_stream_source_off_sample_rendered(WMECO_MediaStreamSource *self, cwinrt_token token);
 
-/* activate Windows.Media.Core.MediaStreamSourceClosedEventArgs */
 HRESULT wmeco_media_stream_source_closed_event_args_new(WMECO_MediaStreamSourceClosedEventArgs **out);
 
-/* Windows.Media.Core.MediaStreamSourceClosedEventArgs */
-/* Windows.Media.Core.MediaStreamSourceClosedEventArgs.get_Request() */
 HRESULT wmeco_media_stream_source_closed_event_args_get__request(WMECO_MediaStreamSourceClosedEventArgs *self, WMECO_MediaStreamSourceClosedRequest** value);
 
-/* activate Windows.Media.Core.MediaStreamSourceSampleRenderedEventArgs */
 HRESULT wmeco_media_stream_source_sample_rendered_event_args_new(WMECO_MediaStreamSourceSampleRenderedEventArgs **out);
 
-/* Windows.Media.Core.MediaStreamSourceSampleRenderedEventArgs */
-/* Windows.Media.Core.MediaStreamSourceSampleRenderedEventArgs.get_SampleLag() */
 HRESULT wmeco_media_stream_source_sample_rendered_event_args_get__sample_lag(WMECO_MediaStreamSourceSampleRenderedEventArgs *self, WF_TimeSpan *value);
 
-/* activate Windows.Media.Core.MediaStreamSourceSampleRequest */
 HRESULT wmeco_media_stream_source_sample_request_new(WMECO_MediaStreamSourceSampleRequest **out);
 
-/* Windows.Media.Core.MediaStreamSourceSampleRequest */
-/* Windows.Media.Core.MediaStreamSourceSampleRequest.get_StreamDescriptor() */
 HRESULT wmeco_media_stream_source_sample_request_get__stream_descriptor(WMECO_MediaStreamSourceSampleRequest *self, WMECO_IMediaStreamDescriptor** value);
 
-/* Windows.Media.Core.MediaStreamSourceSampleRequest.GetDeferral() */
 HRESULT wmeco_media_stream_source_sample_request_get_deferral(WMECO_MediaStreamSourceSampleRequest *self, WMECO_MediaStreamSourceSampleRequestDeferral** out);
 
-/* Windows.Media.Core.MediaStreamSourceSampleRequest.put_Sample() */
 HRESULT wmeco_media_stream_source_sample_request_put__sample(WMECO_MediaStreamSourceSampleRequest *self, WMECO_MediaStreamSample* value);
 
-/* Windows.Media.Core.MediaStreamSourceSampleRequest.get_Sample() */
 HRESULT wmeco_media_stream_source_sample_request_get__sample(WMECO_MediaStreamSourceSampleRequest *self, WMECO_MediaStreamSample** value);
 
-/* Windows.Media.Core.MediaStreamSourceSampleRequest.ReportSampleProgress(progress) */
 HRESULT wmeco_media_stream_source_sample_request_report_sample_progress(WMECO_MediaStreamSourceSampleRequest *self, uint32_t progress);
 
-/* activate Windows.Media.Core.MediaStreamSourceSampleRequestDeferral */
 HRESULT wmeco_media_stream_source_sample_request_deferral_new(WMECO_MediaStreamSourceSampleRequestDeferral **out);
 
-/* Windows.Media.Core.MediaStreamSourceSampleRequestDeferral */
-/* Windows.Media.Core.MediaStreamSourceSampleRequestDeferral.Complete() */
 HRESULT wmeco_media_stream_source_sample_request_deferral_complete(WMECO_MediaStreamSourceSampleRequestDeferral *self);
 
-/* activate Windows.Media.Core.MediaStreamSourceSampleRequestedEventArgs */
 HRESULT wmeco_media_stream_source_sample_requested_event_args_new(WMECO_MediaStreamSourceSampleRequestedEventArgs **out);
 
-/* Windows.Media.Core.MediaStreamSourceSampleRequestedEventArgs */
-/* Windows.Media.Core.MediaStreamSourceSampleRequestedEventArgs.get_Request() */
 HRESULT wmeco_media_stream_source_sample_requested_event_args_get__request(WMECO_MediaStreamSourceSampleRequestedEventArgs *self, WMECO_MediaStreamSourceSampleRequest** value);
 
-/* activate Windows.Media.Core.MediaStreamSourceStartingEventArgs */
 HRESULT wmeco_media_stream_source_starting_event_args_new(WMECO_MediaStreamSourceStartingEventArgs **out);
 
-/* Windows.Media.Core.MediaStreamSourceStartingEventArgs */
-/* Windows.Media.Core.MediaStreamSourceStartingEventArgs.get_Request() */
 HRESULT wmeco_media_stream_source_starting_event_args_get__request(WMECO_MediaStreamSourceStartingEventArgs *self, WMECO_MediaStreamSourceStartingRequest** value);
 
-/* activate Windows.Media.Core.MediaStreamSourceStartingRequest */
 HRESULT wmeco_media_stream_source_starting_request_new(WMECO_MediaStreamSourceStartingRequest **out);
 
-/* Windows.Media.Core.MediaStreamSourceStartingRequest */
-/* Windows.Media.Core.MediaStreamSourceStartingRequest.get_StartPosition() */
 HRESULT wmeco_media_stream_source_starting_request_get__start_position(WMECO_MediaStreamSourceStartingRequest *self, WF_TimeSpan** value);
 
-/* Windows.Media.Core.MediaStreamSourceStartingRequest.GetDeferral() */
 HRESULT wmeco_media_stream_source_starting_request_get_deferral(WMECO_MediaStreamSourceStartingRequest *self, WMECO_MediaStreamSourceStartingRequestDeferral** out);
 
-/* Windows.Media.Core.MediaStreamSourceStartingRequest.SetActualStartPosition(position) */
 HRESULT wmeco_media_stream_source_starting_request_set_actual_start_position(WMECO_MediaStreamSourceStartingRequest *self, WF_TimeSpan position);
 
-/* activate Windows.Media.Core.MediaStreamSourceStartingRequestDeferral */
 HRESULT wmeco_media_stream_source_starting_request_deferral_new(WMECO_MediaStreamSourceStartingRequestDeferral **out);
 
-/* Windows.Media.Core.MediaStreamSourceStartingRequestDeferral */
-/* Windows.Media.Core.MediaStreamSourceStartingRequestDeferral.Complete() */
 HRESULT wmeco_media_stream_source_starting_request_deferral_complete(WMECO_MediaStreamSourceStartingRequestDeferral *self);
 
-/* activate Windows.Media.Core.MediaStreamSourceSwitchStreamsRequest */
 HRESULT wmeco_media_stream_source_switch_streams_request_new(WMECO_MediaStreamSourceSwitchStreamsRequest **out);
 
-/* Windows.Media.Core.MediaStreamSourceSwitchStreamsRequest */
-/* Windows.Media.Core.MediaStreamSourceSwitchStreamsRequest.get_OldStreamDescriptor() */
 HRESULT wmeco_media_stream_source_switch_streams_request_get__old_stream_descriptor(WMECO_MediaStreamSourceSwitchStreamsRequest *self, WMECO_IMediaStreamDescriptor** value);
 
-/* Windows.Media.Core.MediaStreamSourceSwitchStreamsRequest.get_NewStreamDescriptor() */
 HRESULT wmeco_media_stream_source_switch_streams_request_get__new_stream_descriptor(WMECO_MediaStreamSourceSwitchStreamsRequest *self, WMECO_IMediaStreamDescriptor** value);
 
-/* Windows.Media.Core.MediaStreamSourceSwitchStreamsRequest.GetDeferral() */
 HRESULT wmeco_media_stream_source_switch_streams_request_get_deferral(WMECO_MediaStreamSourceSwitchStreamsRequest *self, WMECO_MediaStreamSourceSwitchStreamsRequestDeferral** out);
 
-/* activate Windows.Media.Core.MediaStreamSourceSwitchStreamsRequestDeferral */
 HRESULT wmeco_media_stream_source_switch_streams_request_deferral_new(WMECO_MediaStreamSourceSwitchStreamsRequestDeferral **out);
 
-/* Windows.Media.Core.MediaStreamSourceSwitchStreamsRequestDeferral */
-/* Windows.Media.Core.MediaStreamSourceSwitchStreamsRequestDeferral.Complete() */
 HRESULT wmeco_media_stream_source_switch_streams_request_deferral_complete(WMECO_MediaStreamSourceSwitchStreamsRequestDeferral *self);
 
-/* activate Windows.Media.Core.MediaStreamSourceSwitchStreamsRequestedEventArgs */
 HRESULT wmeco_media_stream_source_switch_streams_requested_event_args_new(WMECO_MediaStreamSourceSwitchStreamsRequestedEventArgs **out);
 
-/* Windows.Media.Core.MediaStreamSourceSwitchStreamsRequestedEventArgs */
-/* Windows.Media.Core.MediaStreamSourceSwitchStreamsRequestedEventArgs.get_Request() */
 HRESULT wmeco_media_stream_source_switch_streams_requested_event_args_get__request(WMECO_MediaStreamSourceSwitchStreamsRequestedEventArgs *self, WMECO_MediaStreamSourceSwitchStreamsRequest** value);
 
-/* activate Windows.Media.Core.MseSourceBuffer */
 HRESULT wmeco_mse_source_buffer_new(WMECO_MseSourceBuffer **out);
 
-/* Windows.Media.Core.MseSourceBuffer */
-/* Windows.Media.Core.MseSourceBuffer.get_Mode() */
 HRESULT wmeco_mse_source_buffer_get__mode(WMECO_MseSourceBuffer *self, WMECO_MseAppendMode *value);
 
-/* Windows.Media.Core.MseSourceBuffer.put_Mode() */
 HRESULT wmeco_mse_source_buffer_put__mode(WMECO_MseSourceBuffer *self, WMECO_MseAppendMode value);
 
-/* Windows.Media.Core.MseSourceBuffer.get_IsUpdating() */
 HRESULT wmeco_mse_source_buffer_get__is_updating(WMECO_MseSourceBuffer *self, BOOL *value);
 
-/* Windows.Media.Core.MseSourceBuffer.get_Buffered() */
 HRESULT wmeco_mse_source_buffer_get__buffered(WMECO_MseSourceBuffer *self, WFOCO_IVectorView_WMECO_MseTimeRange** value);
 
-/* Windows.Media.Core.MseSourceBuffer.get_TimestampOffset() */
 HRESULT wmeco_mse_source_buffer_get__timestamp_offset(WMECO_MseSourceBuffer *self, WF_TimeSpan *value);
 
-/* Windows.Media.Core.MseSourceBuffer.put_TimestampOffset() */
 HRESULT wmeco_mse_source_buffer_put__timestamp_offset(WMECO_MseSourceBuffer *self, WF_TimeSpan value);
 
-/* Windows.Media.Core.MseSourceBuffer.get_AppendWindowStart() */
 HRESULT wmeco_mse_source_buffer_get__append_window_start(WMECO_MseSourceBuffer *self, WF_TimeSpan *value);
 
-/* Windows.Media.Core.MseSourceBuffer.put_AppendWindowStart() */
 HRESULT wmeco_mse_source_buffer_put__append_window_start(WMECO_MseSourceBuffer *self, WF_TimeSpan value);
 
-/* Windows.Media.Core.MseSourceBuffer.get_AppendWindowEnd() */
 HRESULT wmeco_mse_source_buffer_get__append_window_end(WMECO_MseSourceBuffer *self, WF_TimeSpan** value);
 
-/* Windows.Media.Core.MseSourceBuffer.put_AppendWindowEnd() */
 HRESULT wmeco_mse_source_buffer_put__append_window_end(WMECO_MseSourceBuffer *self, WF_TimeSpan* value);
 
-/* Windows.Media.Core.MseSourceBuffer.AppendBuffer(buffer) */
 HRESULT wmeco_mse_source_buffer_append_buffer(WMECO_MseSourceBuffer *self, WSTST_IBuffer* buffer);
 
-/* Windows.Media.Core.MseSourceBuffer.AppendStream(stream) */
 HRESULT wmeco_mse_source_buffer_append_stream(WMECO_MseSourceBuffer *self, WSTST_IInputStream* stream);
 
-/* Windows.Media.Core.MseSourceBuffer.AppendStream(stream, maxSize) */
 HRESULT wmeco_mse_source_buffer_append_stream_p_u64(WMECO_MseSourceBuffer *self, WSTST_IInputStream* stream, uint64_t maxSize);
 
-/* Windows.Media.Core.MseSourceBuffer.Abort() */
 HRESULT wmeco_mse_source_buffer_abort(WMECO_MseSourceBuffer *self);
 
-/* Windows.Media.Core.MseSourceBuffer.Remove(start, end) */
 HRESULT wmeco_mse_source_buffer_remove(WMECO_MseSourceBuffer *self, WF_TimeSpan start, WF_TimeSpan* end);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeco_mse_source_buffer_on_update_starting(WMECO_MseSourceBuffer *self, cwinrt_event_fn fn, void *ctx);
@@ -2100,14 +1854,10 @@ void wmeco_mse_source_buffer_off_error_occurred(WMECO_MseSourceBuffer *self, cwi
 cwinrt_token wmeco_mse_source_buffer_on_aborted(WMECO_MseSourceBuffer *self, cwinrt_event_fn fn, void *ctx);
 void wmeco_mse_source_buffer_off_aborted(WMECO_MseSourceBuffer *self, cwinrt_token token);
 
-/* activate Windows.Media.Core.MseSourceBufferList */
 HRESULT wmeco_mse_source_buffer_list_new(WMECO_MseSourceBufferList **out);
 
-/* Windows.Media.Core.MseSourceBufferList */
-/* Windows.Media.Core.MseSourceBufferList.get_Buffers() */
 HRESULT wmeco_mse_source_buffer_list_get__buffers(WMECO_MseSourceBufferList *self, WFOCO_IVectorView_WMECO_MseSourceBuffer** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeco_mse_source_buffer_list_on_source_buffer_added(WMECO_MseSourceBufferList *self, cwinrt_event_fn fn, void *ctx);
@@ -2116,44 +1866,30 @@ void wmeco_mse_source_buffer_list_off_source_buffer_added(WMECO_MseSourceBufferL
 cwinrt_token wmeco_mse_source_buffer_list_on_source_buffer_removed(WMECO_MseSourceBufferList *self, cwinrt_event_fn fn, void *ctx);
 void wmeco_mse_source_buffer_list_off_source_buffer_removed(WMECO_MseSourceBufferList *self, cwinrt_token token);
 
-/* activate Windows.Media.Core.MseStreamSource */
 HRESULT wmeco_mse_stream_source_new(WMECO_MseStreamSource **out);
 
-/* Windows.Media.Core.MseStreamSource */
-/* Windows.Media.Core.MseStreamSource.get_SourceBuffers() */
 HRESULT wmeco_mse_stream_source_get__source_buffers(WMECO_MseStreamSource *self, WMECO_MseSourceBufferList** value);
 
-/* Windows.Media.Core.MseStreamSource.get_ActiveSourceBuffers() */
 HRESULT wmeco_mse_stream_source_get__active_source_buffers(WMECO_MseStreamSource *self, WMECO_MseSourceBufferList** value);
 
-/* Windows.Media.Core.MseStreamSource.get_ReadyState() */
 HRESULT wmeco_mse_stream_source_get__ready_state(WMECO_MseStreamSource *self, WMECO_MseReadyState *value);
 
-/* Windows.Media.Core.MseStreamSource.get_Duration() */
 HRESULT wmeco_mse_stream_source_get__duration(WMECO_MseStreamSource *self, WF_TimeSpan** value);
 
-/* Windows.Media.Core.MseStreamSource.put_Duration() */
 HRESULT wmeco_mse_stream_source_put__duration(WMECO_MseStreamSource *self, WF_TimeSpan* value);
 
-/* Windows.Media.Core.MseStreamSource.AddSourceBuffer(mimeType) */
 HRESULT wmeco_mse_stream_source_add_source_buffer(WMECO_MseStreamSource *self, cwinrt_hstring mimeType, WMECO_MseSourceBuffer** out);
 
-/* Windows.Media.Core.MseStreamSource.RemoveSourceBuffer(buffer) */
 HRESULT wmeco_mse_stream_source_remove_source_buffer(WMECO_MseStreamSource *self, WMECO_MseSourceBuffer* buffer);
 
-/* Windows.Media.Core.MseStreamSource.EndOfStream(status) */
 HRESULT wmeco_mse_stream_source_end_of_stream(WMECO_MseStreamSource *self, WMECO_MseEndOfStreamStatus status);
 
-/* Windows.Media.Core.MseStreamSource.get_LiveSeekableRange() */
 HRESULT wmeco_mse_stream_source_get__live_seekable_range(WMECO_MseStreamSource *self, WMECO_MseTimeRange** value);
 
-/* Windows.Media.Core.MseStreamSource.put_LiveSeekableRange() */
 HRESULT wmeco_mse_stream_source_put__live_seekable_range(WMECO_MseStreamSource *self, WMECO_MseTimeRange* value);
 
-/* Windows.Media.Core.MseStreamSource.IsContentTypeSupported(contentType) */
 HRESULT wmeco_mse_stream_source_is_content_type_supported(cwinrt_hstring contentType, BOOL *out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeco_mse_stream_source_on_opened(WMECO_MseStreamSource *self, cwinrt_event_fn fn, void *ctx);
@@ -2165,252 +1901,165 @@ void wmeco_mse_stream_source_off_ended(WMECO_MseStreamSource *self, cwinrt_token
 cwinrt_token wmeco_mse_stream_source_on_closed(WMECO_MseStreamSource *self, cwinrt_event_fn fn, void *ctx);
 void wmeco_mse_stream_source_off_closed(WMECO_MseStreamSource *self, cwinrt_token token);
 
-/* activate Windows.Media.Core.FaceDetectionEffectFrame */
 HRESULT wmeco_face_detection_effect_frame_new(WMECO_FaceDetectionEffectFrame **out);
 
-/* Windows.Media.Core.FaceDetectionEffectFrame */
-/* Windows.Media.Core.FaceDetectionEffectFrame.get_DetectedFaces() */
 HRESULT wmeco_face_detection_effect_frame_get__detected_faces(WMECO_FaceDetectionEffectFrame *self, WFOCO_IVectorView_WMEFA_DetectedFace** value);
 
-/* Windows.Media.Core.FaceDetectionEffectFrame.get_Type() */
 HRESULT wmeco_face_detection_effect_frame_get__type(WMECO_FaceDetectionEffectFrame *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.FaceDetectionEffectFrame.get_IsReadOnly() */
 HRESULT wmeco_face_detection_effect_frame_get__is_read_only(WMECO_FaceDetectionEffectFrame *self, BOOL *value);
 
-/* Windows.Media.Core.FaceDetectionEffectFrame.put_RelativeTime() */
 HRESULT wmeco_face_detection_effect_frame_put__relative_time(WMECO_FaceDetectionEffectFrame *self, WF_TimeSpan* value);
 
-/* Windows.Media.Core.FaceDetectionEffectFrame.get_RelativeTime() */
 HRESULT wmeco_face_detection_effect_frame_get__relative_time(WMECO_FaceDetectionEffectFrame *self, WF_TimeSpan** value);
 
-/* Windows.Media.Core.FaceDetectionEffectFrame.put_SystemRelativeTime() */
 HRESULT wmeco_face_detection_effect_frame_put__system_relative_time(WMECO_FaceDetectionEffectFrame *self, WF_TimeSpan* value);
 
-/* Windows.Media.Core.FaceDetectionEffectFrame.get_SystemRelativeTime() */
 HRESULT wmeco_face_detection_effect_frame_get__system_relative_time(WMECO_FaceDetectionEffectFrame *self, WF_TimeSpan** value);
 
-/* Windows.Media.Core.FaceDetectionEffectFrame.put_Duration() */
 HRESULT wmeco_face_detection_effect_frame_put__duration(WMECO_FaceDetectionEffectFrame *self, WF_TimeSpan* value);
 
-/* Windows.Media.Core.FaceDetectionEffectFrame.get_Duration() */
 HRESULT wmeco_face_detection_effect_frame_get__duration(WMECO_FaceDetectionEffectFrame *self, WF_TimeSpan** value);
 
-/* Windows.Media.Core.FaceDetectionEffectFrame.put_IsDiscontinuous() */
 HRESULT wmeco_face_detection_effect_frame_put__is_discontinuous(WMECO_FaceDetectionEffectFrame *self, BOOL value);
 
-/* Windows.Media.Core.FaceDetectionEffectFrame.get_IsDiscontinuous() */
 HRESULT wmeco_face_detection_effect_frame_get__is_discontinuous(WMECO_FaceDetectionEffectFrame *self, BOOL *value);
 
-/* Windows.Media.Core.FaceDetectionEffectFrame.get_ExtendedProperties() */
 HRESULT wmeco_face_detection_effect_frame_get__extended_properties(WMECO_FaceDetectionEffectFrame *self, WFOCO_IPropertySet** value);
 
-/* Windows.Media.Core.FaceDetectionEffectFrame.Close() */
 HRESULT wmeco_face_detection_effect_frame_close(WMECO_FaceDetectionEffectFrame *self);
 
-/* activate Windows.Media.Core.SceneAnalysisEffect */
 HRESULT wmeco_scene_analysis_effect_new(WMECO_SceneAnalysisEffect **out);
 
-/* Windows.Media.Core.SceneAnalysisEffect */
-/* Windows.Media.Core.SceneAnalysisEffect.get_HighDynamicRangeAnalyzer() */
 HRESULT wmeco_scene_analysis_effect_get__high_dynamic_range_analyzer(WMECO_SceneAnalysisEffect *self, WMECO_HighDynamicRangeControl** value);
 
-/* Windows.Media.Core.SceneAnalysisEffect.put_DesiredAnalysisInterval() */
 HRESULT wmeco_scene_analysis_effect_put__desired_analysis_interval(WMECO_SceneAnalysisEffect *self, WF_TimeSpan value);
 
-/* Windows.Media.Core.SceneAnalysisEffect.get_DesiredAnalysisInterval() */
 HRESULT wmeco_scene_analysis_effect_get__desired_analysis_interval(WMECO_SceneAnalysisEffect *self, WF_TimeSpan *value);
 
-/* Windows.Media.Core.SceneAnalysisEffect.SetProperties(configuration) */
 HRESULT wmeco_scene_analysis_effect_set_properties(WMECO_SceneAnalysisEffect *self, WFOCO_IPropertySet* configuration);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeco_scene_analysis_effect_on_scene_analyzed(WMECO_SceneAnalysisEffect *self, cwinrt_event_fn fn, void *ctx);
 void wmeco_scene_analysis_effect_off_scene_analyzed(WMECO_SceneAnalysisEffect *self, cwinrt_token token);
 
-/* activate Windows.Media.Core.SceneAnalysisEffectDefinition */
 HRESULT wmeco_scene_analysis_effect_definition_new(WMECO_SceneAnalysisEffectDefinition **out);
 
-/* Windows.Media.Core.SceneAnalysisEffectDefinition */
-/* Windows.Media.Core.SceneAnalysisEffectDefinition.get_ActivatableClassId() */
 HRESULT wmeco_scene_analysis_effect_definition_get__activatable_class_id(WMECO_SceneAnalysisEffectDefinition *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.SceneAnalysisEffectDefinition.get_Properties() */
 HRESULT wmeco_scene_analysis_effect_definition_get__properties(WMECO_SceneAnalysisEffectDefinition *self, WFOCO_IPropertySet** value);
 
-/* activate Windows.Media.Core.SceneAnalysisEffectFrame */
 HRESULT wmeco_scene_analysis_effect_frame_new(WMECO_SceneAnalysisEffectFrame **out);
 
-/* Windows.Media.Core.SceneAnalysisEffectFrame */
-/* Windows.Media.Core.SceneAnalysisEffectFrame.get_FrameControlValues() */
 HRESULT wmeco_scene_analysis_effect_frame_get__frame_control_values(WMECO_SceneAnalysisEffectFrame *self, WMECA_CapturedFrameControlValues** value);
 
-/* Windows.Media.Core.SceneAnalysisEffectFrame.get_HighDynamicRange() */
 HRESULT wmeco_scene_analysis_effect_frame_get__high_dynamic_range(WMECO_SceneAnalysisEffectFrame *self, WMECO_HighDynamicRangeOutput** value);
 
-/* Windows.Media.Core.SceneAnalysisEffectFrame.get_Type() */
 HRESULT wmeco_scene_analysis_effect_frame_get__type(WMECO_SceneAnalysisEffectFrame *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.SceneAnalysisEffectFrame.get_IsReadOnly() */
 HRESULT wmeco_scene_analysis_effect_frame_get__is_read_only(WMECO_SceneAnalysisEffectFrame *self, BOOL *value);
 
-/* Windows.Media.Core.SceneAnalysisEffectFrame.put_RelativeTime() */
 HRESULT wmeco_scene_analysis_effect_frame_put__relative_time(WMECO_SceneAnalysisEffectFrame *self, WF_TimeSpan* value);
 
-/* Windows.Media.Core.SceneAnalysisEffectFrame.get_RelativeTime() */
 HRESULT wmeco_scene_analysis_effect_frame_get__relative_time(WMECO_SceneAnalysisEffectFrame *self, WF_TimeSpan** value);
 
-/* Windows.Media.Core.SceneAnalysisEffectFrame.put_SystemRelativeTime() */
 HRESULT wmeco_scene_analysis_effect_frame_put__system_relative_time(WMECO_SceneAnalysisEffectFrame *self, WF_TimeSpan* value);
 
-/* Windows.Media.Core.SceneAnalysisEffectFrame.get_SystemRelativeTime() */
 HRESULT wmeco_scene_analysis_effect_frame_get__system_relative_time(WMECO_SceneAnalysisEffectFrame *self, WF_TimeSpan** value);
 
-/* Windows.Media.Core.SceneAnalysisEffectFrame.put_Duration() */
 HRESULT wmeco_scene_analysis_effect_frame_put__duration(WMECO_SceneAnalysisEffectFrame *self, WF_TimeSpan* value);
 
-/* Windows.Media.Core.SceneAnalysisEffectFrame.get_Duration() */
 HRESULT wmeco_scene_analysis_effect_frame_get__duration(WMECO_SceneAnalysisEffectFrame *self, WF_TimeSpan** value);
 
-/* Windows.Media.Core.SceneAnalysisEffectFrame.put_IsDiscontinuous() */
 HRESULT wmeco_scene_analysis_effect_frame_put__is_discontinuous(WMECO_SceneAnalysisEffectFrame *self, BOOL value);
 
-/* Windows.Media.Core.SceneAnalysisEffectFrame.get_IsDiscontinuous() */
 HRESULT wmeco_scene_analysis_effect_frame_get__is_discontinuous(WMECO_SceneAnalysisEffectFrame *self, BOOL *value);
 
-/* Windows.Media.Core.SceneAnalysisEffectFrame.get_ExtendedProperties() */
 HRESULT wmeco_scene_analysis_effect_frame_get__extended_properties(WMECO_SceneAnalysisEffectFrame *self, WFOCO_IPropertySet** value);
 
-/* Windows.Media.Core.SceneAnalysisEffectFrame.Close() */
 HRESULT wmeco_scene_analysis_effect_frame_close(WMECO_SceneAnalysisEffectFrame *self);
 
-/* Windows.Media.Core.SceneAnalysisEffectFrame.get_AnalysisRecommendation() */
 HRESULT wmeco_scene_analysis_effect_frame_get__analysis_recommendation(WMECO_SceneAnalysisEffectFrame *self, WMECO_SceneAnalysisRecommendation *value);
 
-/* activate Windows.Media.Core.SceneAnalyzedEventArgs */
 HRESULT wmeco_scene_analyzed_event_args_new(WMECO_SceneAnalyzedEventArgs **out);
 
-/* Windows.Media.Core.SceneAnalyzedEventArgs */
-/* Windows.Media.Core.SceneAnalyzedEventArgs.get_ResultFrame() */
 HRESULT wmeco_scene_analyzed_event_args_get__result_frame(WMECO_SceneAnalyzedEventArgs *self, WMECO_SceneAnalysisEffectFrame** value);
 
-/* activate Windows.Media.Core.SpeechCue */
 HRESULT wmeco_speech_cue_new(WMECO_SpeechCue **out);
 
-/* Windows.Media.Core.SpeechCue */
-/* Windows.Media.Core.SpeechCue.get_Text() */
 HRESULT wmeco_speech_cue_get__text(WMECO_SpeechCue *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.SpeechCue.put_Text() */
 HRESULT wmeco_speech_cue_put__text(WMECO_SpeechCue *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.SpeechCue.get_StartPositionInInput() */
 HRESULT wmeco_speech_cue_get__start_position_in_input(WMECO_SpeechCue *self, int32_t** value);
 
-/* Windows.Media.Core.SpeechCue.put_StartPositionInInput() */
 HRESULT wmeco_speech_cue_put__start_position_in_input(WMECO_SpeechCue *self, int32_t* value);
 
-/* Windows.Media.Core.SpeechCue.get_EndPositionInInput() */
 HRESULT wmeco_speech_cue_get__end_position_in_input(WMECO_SpeechCue *self, int32_t** value);
 
-/* Windows.Media.Core.SpeechCue.put_EndPositionInInput() */
 HRESULT wmeco_speech_cue_put__end_position_in_input(WMECO_SpeechCue *self, int32_t* value);
 
-/* Windows.Media.Core.SpeechCue.put_StartTime() */
 HRESULT wmeco_speech_cue_put__start_time(WMECO_SpeechCue *self, WF_TimeSpan value);
 
-/* Windows.Media.Core.SpeechCue.get_StartTime() */
 HRESULT wmeco_speech_cue_get__start_time(WMECO_SpeechCue *self, WF_TimeSpan *value);
 
-/* Windows.Media.Core.SpeechCue.put_Duration() */
 HRESULT wmeco_speech_cue_put__duration(WMECO_SpeechCue *self, WF_TimeSpan value);
 
-/* Windows.Media.Core.SpeechCue.get_Duration() */
 HRESULT wmeco_speech_cue_get__duration(WMECO_SpeechCue *self, WF_TimeSpan *value);
 
-/* Windows.Media.Core.SpeechCue.put_Id() */
 HRESULT wmeco_speech_cue_put__id(WMECO_SpeechCue *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.SpeechCue.get_Id() */
 HRESULT wmeco_speech_cue_get__id(WMECO_SpeechCue *self, cwinrt_hstring *value);
 
-/* activate Windows.Media.Core.TimedMetadataStreamDescriptor */
 HRESULT wmeco_timed_metadata_stream_descriptor_new(WMECO_TimedMetadataStreamDescriptor **out);
 
-/* Windows.Media.Core.TimedMetadataStreamDescriptor */
-/* Windows.Media.Core.TimedMetadataStreamDescriptor.get_EncodingProperties() */
 HRESULT wmeco_timed_metadata_stream_descriptor_get__encoding_properties(WMECO_TimedMetadataStreamDescriptor *self, WMEME_TimedMetadataEncodingProperties** value);
 
-/* Windows.Media.Core.TimedMetadataStreamDescriptor.Copy() */
 HRESULT wmeco_timed_metadata_stream_descriptor_copy(WMECO_TimedMetadataStreamDescriptor *self, WMECO_TimedMetadataStreamDescriptor** out);
 
-/* Windows.Media.Core.TimedMetadataStreamDescriptor.put_Label() */
 HRESULT wmeco_timed_metadata_stream_descriptor_put__label(WMECO_TimedMetadataStreamDescriptor *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.TimedMetadataStreamDescriptor.get_Label() */
 HRESULT wmeco_timed_metadata_stream_descriptor_get__label(WMECO_TimedMetadataStreamDescriptor *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.TimedMetadataStreamDescriptor.get_IsSelected() */
 HRESULT wmeco_timed_metadata_stream_descriptor_get__is_selected(WMECO_TimedMetadataStreamDescriptor *self, BOOL *value);
 
-/* Windows.Media.Core.TimedMetadataStreamDescriptor.put_Name() */
 HRESULT wmeco_timed_metadata_stream_descriptor_put__name(WMECO_TimedMetadataStreamDescriptor *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.TimedMetadataStreamDescriptor.get_Name() */
 HRESULT wmeco_timed_metadata_stream_descriptor_get__name(WMECO_TimedMetadataStreamDescriptor *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.TimedMetadataStreamDescriptor.put_Language() */
 HRESULT wmeco_timed_metadata_stream_descriptor_put__language(WMECO_TimedMetadataStreamDescriptor *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.TimedMetadataStreamDescriptor.get_Language() */
 HRESULT wmeco_timed_metadata_stream_descriptor_get__language(WMECO_TimedMetadataStreamDescriptor *self, cwinrt_hstring *value);
 
-/* activate Windows.Media.Core.TimedMetadataTrack */
 HRESULT wmeco_timed_metadata_track_new(WMECO_TimedMetadataTrack **out);
 
-/* Windows.Media.Core.TimedMetadataTrack */
-/* Windows.Media.Core.TimedMetadataTrack.get_Cues() */
 HRESULT wmeco_timed_metadata_track_get__cues(WMECO_TimedMetadataTrack *self, WFOCO_IVectorView_WMECO_IMediaCue** value);
 
-/* Windows.Media.Core.TimedMetadataTrack.get_ActiveCues() */
 HRESULT wmeco_timed_metadata_track_get__active_cues(WMECO_TimedMetadataTrack *self, WFOCO_IVectorView_WMECO_IMediaCue** value);
 
-/* Windows.Media.Core.TimedMetadataTrack.get_TimedMetadataKind() */
 HRESULT wmeco_timed_metadata_track_get__timed_metadata_kind(WMECO_TimedMetadataTrack *self, WMECO_TimedMetadataKind *value);
 
-/* Windows.Media.Core.TimedMetadataTrack.get_DispatchType() */
 HRESULT wmeco_timed_metadata_track_get__dispatch_type(WMECO_TimedMetadataTrack *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.TimedMetadataTrack.AddCue(cue) */
 HRESULT wmeco_timed_metadata_track_add_cue(WMECO_TimedMetadataTrack *self, WMECO_IMediaCue* cue);
 
-/* Windows.Media.Core.TimedMetadataTrack.RemoveCue(cue) */
 HRESULT wmeco_timed_metadata_track_remove_cue(WMECO_TimedMetadataTrack *self, WMECO_IMediaCue* cue);
 
-/* Windows.Media.Core.TimedMetadataTrack.get_Id() */
 HRESULT wmeco_timed_metadata_track_get__id(WMECO_TimedMetadataTrack *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.TimedMetadataTrack.get_Language() */
 HRESULT wmeco_timed_metadata_track_get__language(WMECO_TimedMetadataTrack *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.TimedMetadataTrack.get_TrackKind() */
 HRESULT wmeco_timed_metadata_track_get__track_kind(WMECO_TimedMetadataTrack *self, WMECO_MediaTrackKind *value);
 
-/* Windows.Media.Core.TimedMetadataTrack.put_Label() */
 HRESULT wmeco_timed_metadata_track_put__label(WMECO_TimedMetadataTrack *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.TimedMetadataTrack.get_Label() */
 HRESULT wmeco_timed_metadata_track_get__label(WMECO_TimedMetadataTrack *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.TimedMetadataTrack.get_PlaybackItem() */
 HRESULT wmeco_timed_metadata_track_get__playback_item(WMECO_TimedMetadataTrack *self, WMEPL_MediaPlaybackItem** value);
 
-/* Windows.Media.Core.TimedMetadataTrack.get_Name() */
 HRESULT wmeco_timed_metadata_track_get__name(WMECO_TimedMetadataTrack *self, cwinrt_hstring *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeco_timed_metadata_track_on_cue_entered(WMECO_TimedMetadataTrack *self, cwinrt_event_fn fn, void *ctx);
@@ -2422,1430 +2071,873 @@ void wmeco_timed_metadata_track_off_cue_exited(WMECO_TimedMetadataTrack *self, c
 cwinrt_token wmeco_timed_metadata_track_on_track_failed(WMECO_TimedMetadataTrack *self, cwinrt_event_fn fn, void *ctx);
 void wmeco_timed_metadata_track_off_track_failed(WMECO_TimedMetadataTrack *self, cwinrt_token token);
 
-/* activate Windows.Media.Core.TimedMetadataTrackError */
 HRESULT wmeco_timed_metadata_track_error_new(WMECO_TimedMetadataTrackError **out);
 
-/* Windows.Media.Core.TimedMetadataTrackError */
-/* Windows.Media.Core.TimedMetadataTrackError.get_ErrorCode() */
 HRESULT wmeco_timed_metadata_track_error_get__error_code(WMECO_TimedMetadataTrackError *self, WMECO_TimedMetadataTrackErrorCode *value);
 
-/* Windows.Media.Core.TimedMetadataTrackError.get_ExtendedError() */
 HRESULT wmeco_timed_metadata_track_error_get__extended_error(WMECO_TimedMetadataTrackError *self, HRESULT *value);
 
-/* activate Windows.Media.Core.TimedMetadataTrackFailedEventArgs */
 HRESULT wmeco_timed_metadata_track_failed_event_args_new(WMECO_TimedMetadataTrackFailedEventArgs **out);
 
-/* Windows.Media.Core.TimedMetadataTrackFailedEventArgs */
-/* Windows.Media.Core.TimedMetadataTrackFailedEventArgs.get_Error() */
 HRESULT wmeco_timed_metadata_track_failed_event_args_get__error(WMECO_TimedMetadataTrackFailedEventArgs *self, WMECO_TimedMetadataTrackError** value);
 
-/* activate Windows.Media.Core.TimedTextBouten */
 HRESULT wmeco_timed_text_bouten_new(WMECO_TimedTextBouten **out);
 
-/* Windows.Media.Core.TimedTextBouten */
-/* Windows.Media.Core.TimedTextBouten.get_Type() */
 HRESULT wmeco_timed_text_bouten_get__type(WMECO_TimedTextBouten *self, WMECO_TimedTextBoutenType *value);
 
-/* Windows.Media.Core.TimedTextBouten.put_Type() */
 HRESULT wmeco_timed_text_bouten_put__type(WMECO_TimedTextBouten *self, WMECO_TimedTextBoutenType value);
 
-/* Windows.Media.Core.TimedTextBouten.get_Color() */
 HRESULT wmeco_timed_text_bouten_get__color(WMECO_TimedTextBouten *self, WUI_Color *value);
 
-/* Windows.Media.Core.TimedTextBouten.put_Color() */
 HRESULT wmeco_timed_text_bouten_put__color(WMECO_TimedTextBouten *self, WUI_Color value);
 
-/* Windows.Media.Core.TimedTextBouten.get_Position() */
 HRESULT wmeco_timed_text_bouten_get__position(WMECO_TimedTextBouten *self, WMECO_TimedTextBoutenPosition *value);
 
-/* Windows.Media.Core.TimedTextBouten.put_Position() */
 HRESULT wmeco_timed_text_bouten_put__position(WMECO_TimedTextBouten *self, WMECO_TimedTextBoutenPosition value);
 
-/* activate Windows.Media.Core.TimedTextCue */
 HRESULT wmeco_timed_text_cue_new(WMECO_TimedTextCue **out);
 
-/* Windows.Media.Core.TimedTextCue */
-/* Windows.Media.Core.TimedTextCue.get_CueRegion() */
 HRESULT wmeco_timed_text_cue_get__cue_region(WMECO_TimedTextCue *self, WMECO_TimedTextRegion** value);
 
-/* Windows.Media.Core.TimedTextCue.put_CueRegion() */
 HRESULT wmeco_timed_text_cue_put__cue_region(WMECO_TimedTextCue *self, WMECO_TimedTextRegion* value);
 
-/* Windows.Media.Core.TimedTextCue.get_CueStyle() */
 HRESULT wmeco_timed_text_cue_get__cue_style(WMECO_TimedTextCue *self, WMECO_TimedTextStyle** value);
 
-/* Windows.Media.Core.TimedTextCue.put_CueStyle() */
 HRESULT wmeco_timed_text_cue_put__cue_style(WMECO_TimedTextCue *self, WMECO_TimedTextStyle* value);
 
-/* Windows.Media.Core.TimedTextCue.get_Lines() */
 HRESULT wmeco_timed_text_cue_get__lines(WMECO_TimedTextCue *self, WFOCO_IVector_WMECO_TimedTextLine** value);
 
-/* Windows.Media.Core.TimedTextCue.put_StartTime() */
 HRESULT wmeco_timed_text_cue_put__start_time(WMECO_TimedTextCue *self, WF_TimeSpan value);
 
-/* Windows.Media.Core.TimedTextCue.get_StartTime() */
 HRESULT wmeco_timed_text_cue_get__start_time(WMECO_TimedTextCue *self, WF_TimeSpan *value);
 
-/* Windows.Media.Core.TimedTextCue.put_Duration() */
 HRESULT wmeco_timed_text_cue_put__duration(WMECO_TimedTextCue *self, WF_TimeSpan value);
 
-/* Windows.Media.Core.TimedTextCue.get_Duration() */
 HRESULT wmeco_timed_text_cue_get__duration(WMECO_TimedTextCue *self, WF_TimeSpan *value);
 
-/* Windows.Media.Core.TimedTextCue.put_Id() */
 HRESULT wmeco_timed_text_cue_put__id(WMECO_TimedTextCue *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.TimedTextCue.get_Id() */
 HRESULT wmeco_timed_text_cue_get__id(WMECO_TimedTextCue *self, cwinrt_hstring *value);
 
-/* activate Windows.Media.Core.TimedTextLine */
 HRESULT wmeco_timed_text_line_new(WMECO_TimedTextLine **out);
 
-/* Windows.Media.Core.TimedTextLine */
-/* Windows.Media.Core.TimedTextLine.get_Text() */
 HRESULT wmeco_timed_text_line_get__text(WMECO_TimedTextLine *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.TimedTextLine.put_Text() */
 HRESULT wmeco_timed_text_line_put__text(WMECO_TimedTextLine *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.TimedTextLine.get_Subformats() */
 HRESULT wmeco_timed_text_line_get__subformats(WMECO_TimedTextLine *self, WFOCO_IVector_WMECO_TimedTextSubformat** value);
 
-/* activate Windows.Media.Core.TimedTextRegion */
 HRESULT wmeco_timed_text_region_new(WMECO_TimedTextRegion **out);
 
-/* Windows.Media.Core.TimedTextRegion */
-/* Windows.Media.Core.TimedTextRegion.get_Name() */
 HRESULT wmeco_timed_text_region_get__name(WMECO_TimedTextRegion *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.TimedTextRegion.put_Name() */
 HRESULT wmeco_timed_text_region_put__name(WMECO_TimedTextRegion *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.TimedTextRegion.get_Position() */
 HRESULT wmeco_timed_text_region_get__position(WMECO_TimedTextRegion *self, WMECO_TimedTextPoint *value);
 
-/* Windows.Media.Core.TimedTextRegion.put_Position() */
 HRESULT wmeco_timed_text_region_put__position(WMECO_TimedTextRegion *self, WMECO_TimedTextPoint value);
 
-/* Windows.Media.Core.TimedTextRegion.get_Extent() */
 HRESULT wmeco_timed_text_region_get__extent(WMECO_TimedTextRegion *self, WMECO_TimedTextSize *value);
 
-/* Windows.Media.Core.TimedTextRegion.put_Extent() */
 HRESULT wmeco_timed_text_region_put__extent(WMECO_TimedTextRegion *self, WMECO_TimedTextSize value);
 
-/* Windows.Media.Core.TimedTextRegion.get_Background() */
 HRESULT wmeco_timed_text_region_get__background(WMECO_TimedTextRegion *self, WUI_Color *value);
 
-/* Windows.Media.Core.TimedTextRegion.put_Background() */
 HRESULT wmeco_timed_text_region_put__background(WMECO_TimedTextRegion *self, WUI_Color value);
 
-/* Windows.Media.Core.TimedTextRegion.get_WritingMode() */
 HRESULT wmeco_timed_text_region_get__writing_mode(WMECO_TimedTextRegion *self, WMECO_TimedTextWritingMode *value);
 
-/* Windows.Media.Core.TimedTextRegion.put_WritingMode() */
 HRESULT wmeco_timed_text_region_put__writing_mode(WMECO_TimedTextRegion *self, WMECO_TimedTextWritingMode value);
 
-/* Windows.Media.Core.TimedTextRegion.get_DisplayAlignment() */
 HRESULT wmeco_timed_text_region_get__display_alignment(WMECO_TimedTextRegion *self, WMECO_TimedTextDisplayAlignment *value);
 
-/* Windows.Media.Core.TimedTextRegion.put_DisplayAlignment() */
 HRESULT wmeco_timed_text_region_put__display_alignment(WMECO_TimedTextRegion *self, WMECO_TimedTextDisplayAlignment value);
 
-/* Windows.Media.Core.TimedTextRegion.get_LineHeight() */
 HRESULT wmeco_timed_text_region_get__line_height(WMECO_TimedTextRegion *self, WMECO_TimedTextDouble *value);
 
-/* Windows.Media.Core.TimedTextRegion.put_LineHeight() */
 HRESULT wmeco_timed_text_region_put__line_height(WMECO_TimedTextRegion *self, WMECO_TimedTextDouble value);
 
-/* Windows.Media.Core.TimedTextRegion.get_IsOverflowClipped() */
 HRESULT wmeco_timed_text_region_get__is_overflow_clipped(WMECO_TimedTextRegion *self, BOOL *value);
 
-/* Windows.Media.Core.TimedTextRegion.put_IsOverflowClipped() */
 HRESULT wmeco_timed_text_region_put__is_overflow_clipped(WMECO_TimedTextRegion *self, BOOL value);
 
-/* Windows.Media.Core.TimedTextRegion.get_Padding() */
 HRESULT wmeco_timed_text_region_get__padding(WMECO_TimedTextRegion *self, WMECO_TimedTextPadding *value);
 
-/* Windows.Media.Core.TimedTextRegion.put_Padding() */
 HRESULT wmeco_timed_text_region_put__padding(WMECO_TimedTextRegion *self, WMECO_TimedTextPadding value);
 
-/* Windows.Media.Core.TimedTextRegion.get_TextWrapping() */
 HRESULT wmeco_timed_text_region_get__text_wrapping(WMECO_TimedTextRegion *self, WMECO_TimedTextWrapping *value);
 
-/* Windows.Media.Core.TimedTextRegion.put_TextWrapping() */
 HRESULT wmeco_timed_text_region_put__text_wrapping(WMECO_TimedTextRegion *self, WMECO_TimedTextWrapping value);
 
-/* Windows.Media.Core.TimedTextRegion.get_ZIndex() */
 HRESULT wmeco_timed_text_region_get__z_index(WMECO_TimedTextRegion *self, int32_t *value);
 
-/* Windows.Media.Core.TimedTextRegion.put_ZIndex() */
 HRESULT wmeco_timed_text_region_put__z_index(WMECO_TimedTextRegion *self, int32_t value);
 
-/* Windows.Media.Core.TimedTextRegion.get_ScrollMode() */
 HRESULT wmeco_timed_text_region_get__scroll_mode(WMECO_TimedTextRegion *self, WMECO_TimedTextScrollMode *value);
 
-/* Windows.Media.Core.TimedTextRegion.put_ScrollMode() */
 HRESULT wmeco_timed_text_region_put__scroll_mode(WMECO_TimedTextRegion *self, WMECO_TimedTextScrollMode value);
 
-/* activate Windows.Media.Core.TimedTextRuby */
 HRESULT wmeco_timed_text_ruby_new(WMECO_TimedTextRuby **out);
 
-/* Windows.Media.Core.TimedTextRuby */
-/* Windows.Media.Core.TimedTextRuby.get_Text() */
 HRESULT wmeco_timed_text_ruby_get__text(WMECO_TimedTextRuby *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.TimedTextRuby.put_Text() */
 HRESULT wmeco_timed_text_ruby_put__text(WMECO_TimedTextRuby *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.TimedTextRuby.get_Position() */
 HRESULT wmeco_timed_text_ruby_get__position(WMECO_TimedTextRuby *self, WMECO_TimedTextRubyPosition *value);
 
-/* Windows.Media.Core.TimedTextRuby.put_Position() */
 HRESULT wmeco_timed_text_ruby_put__position(WMECO_TimedTextRuby *self, WMECO_TimedTextRubyPosition value);
 
-/* Windows.Media.Core.TimedTextRuby.get_Align() */
 HRESULT wmeco_timed_text_ruby_get__align(WMECO_TimedTextRuby *self, WMECO_TimedTextRubyAlign *value);
 
-/* Windows.Media.Core.TimedTextRuby.put_Align() */
 HRESULT wmeco_timed_text_ruby_put__align(WMECO_TimedTextRuby *self, WMECO_TimedTextRubyAlign value);
 
-/* Windows.Media.Core.TimedTextRuby.get_Reserve() */
 HRESULT wmeco_timed_text_ruby_get__reserve(WMECO_TimedTextRuby *self, WMECO_TimedTextRubyReserve *value);
 
-/* Windows.Media.Core.TimedTextRuby.put_Reserve() */
 HRESULT wmeco_timed_text_ruby_put__reserve(WMECO_TimedTextRuby *self, WMECO_TimedTextRubyReserve value);
 
-/* activate Windows.Media.Core.TimedTextSource */
 HRESULT wmeco_timed_text_source_new(WMECO_TimedTextSource **out);
 
-/* Windows.Media.Core.TimedTextSource */
-/* Windows.Media.Core.TimedTextSource.CreateFromStreamWithIndex(stream, indexStream) */
 HRESULT wmeco_timed_text_source_create_from_stream_with_index(WSTST_IRandomAccessStream* stream, WSTST_IRandomAccessStream* indexStream, WMECO_TimedTextSource** out);
 
-/* Windows.Media.Core.TimedTextSource.CreateFromUriWithIndex(uri, indexUri) */
 HRESULT wmeco_timed_text_source_create_from_uri_with_index(WF_Uri* uri, WF_Uri* indexUri, WMECO_TimedTextSource** out);
 
-/* Windows.Media.Core.TimedTextSource.CreateFromStreamWithIndex(stream, indexStream, defaultLanguage) */
 HRESULT wmeco_timed_text_source_create_from_stream_with_index_p_p_str_p(WSTST_IRandomAccessStream* stream, WSTST_IRandomAccessStream* indexStream, cwinrt_hstring defaultLanguage, WMECO_TimedTextSource** out);
 
-/* Windows.Media.Core.TimedTextSource.CreateFromUriWithIndex(uri, indexUri, defaultLanguage) */
 HRESULT wmeco_timed_text_source_create_from_uri_with_index_p_p_str_p(WF_Uri* uri, WF_Uri* indexUri, cwinrt_hstring defaultLanguage, WMECO_TimedTextSource** out);
 
-/* Windows.Media.Core.TimedTextSource.CreateFromStream(stream) */
 HRESULT wmeco_timed_text_source_create_from_stream(WSTST_IRandomAccessStream* stream, WMECO_TimedTextSource** out);
 
-/* Windows.Media.Core.TimedTextSource.CreateFromUri(uri) */
 HRESULT wmeco_timed_text_source_create_from_uri(WF_Uri* uri, WMECO_TimedTextSource** out);
 
-/* Windows.Media.Core.TimedTextSource.CreateFromStream(stream, defaultLanguage) */
 HRESULT wmeco_timed_text_source_create_from_stream_p_str_p(WSTST_IRandomAccessStream* stream, cwinrt_hstring defaultLanguage, WMECO_TimedTextSource** out);
 
-/* Windows.Media.Core.TimedTextSource.CreateFromUri(uri, defaultLanguage) */
 HRESULT wmeco_timed_text_source_create_from_uri_p_str_p(WF_Uri* uri, cwinrt_hstring defaultLanguage, WMECO_TimedTextSource** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeco_timed_text_source_on_resolved(WMECO_TimedTextSource *self, cwinrt_event_fn fn, void *ctx);
 void wmeco_timed_text_source_off_resolved(WMECO_TimedTextSource *self, cwinrt_token token);
 
-/* activate Windows.Media.Core.TimedTextSourceResolveResultEventArgs */
 HRESULT wmeco_timed_text_source_resolve_result_event_args_new(WMECO_TimedTextSourceResolveResultEventArgs **out);
 
-/* Windows.Media.Core.TimedTextSourceResolveResultEventArgs */
-/* Windows.Media.Core.TimedTextSourceResolveResultEventArgs.get_Error() */
 HRESULT wmeco_timed_text_source_resolve_result_event_args_get__error(WMECO_TimedTextSourceResolveResultEventArgs *self, WMECO_TimedMetadataTrackError** value);
 
-/* Windows.Media.Core.TimedTextSourceResolveResultEventArgs.get_Tracks() */
 HRESULT wmeco_timed_text_source_resolve_result_event_args_get__tracks(WMECO_TimedTextSourceResolveResultEventArgs *self, WFOCO_IVectorView_WMECO_TimedMetadataTrack** value);
 
-/* activate Windows.Media.Core.TimedTextStyle */
 HRESULT wmeco_timed_text_style_new(WMECO_TimedTextStyle **out);
 
-/* Windows.Media.Core.TimedTextStyle */
-/* Windows.Media.Core.TimedTextStyle.get_Name() */
 HRESULT wmeco_timed_text_style_get__name(WMECO_TimedTextStyle *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.TimedTextStyle.put_Name() */
 HRESULT wmeco_timed_text_style_put__name(WMECO_TimedTextStyle *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.TimedTextStyle.get_FontFamily() */
 HRESULT wmeco_timed_text_style_get__font_family(WMECO_TimedTextStyle *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.TimedTextStyle.put_FontFamily() */
 HRESULT wmeco_timed_text_style_put__font_family(WMECO_TimedTextStyle *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.TimedTextStyle.get_FontSize() */
 HRESULT wmeco_timed_text_style_get__font_size(WMECO_TimedTextStyle *self, WMECO_TimedTextDouble *value);
 
-/* Windows.Media.Core.TimedTextStyle.put_FontSize() */
 HRESULT wmeco_timed_text_style_put__font_size(WMECO_TimedTextStyle *self, WMECO_TimedTextDouble value);
 
-/* Windows.Media.Core.TimedTextStyle.get_FontWeight() */
 HRESULT wmeco_timed_text_style_get__font_weight(WMECO_TimedTextStyle *self, WMECO_TimedTextWeight *value);
 
-/* Windows.Media.Core.TimedTextStyle.put_FontWeight() */
 HRESULT wmeco_timed_text_style_put__font_weight(WMECO_TimedTextStyle *self, WMECO_TimedTextWeight value);
 
-/* Windows.Media.Core.TimedTextStyle.get_Foreground() */
 HRESULT wmeco_timed_text_style_get__foreground(WMECO_TimedTextStyle *self, WUI_Color *value);
 
-/* Windows.Media.Core.TimedTextStyle.put_Foreground() */
 HRESULT wmeco_timed_text_style_put__foreground(WMECO_TimedTextStyle *self, WUI_Color value);
 
-/* Windows.Media.Core.TimedTextStyle.get_Background() */
 HRESULT wmeco_timed_text_style_get__background(WMECO_TimedTextStyle *self, WUI_Color *value);
 
-/* Windows.Media.Core.TimedTextStyle.put_Background() */
 HRESULT wmeco_timed_text_style_put__background(WMECO_TimedTextStyle *self, WUI_Color value);
 
-/* Windows.Media.Core.TimedTextStyle.get_IsBackgroundAlwaysShown() */
 HRESULT wmeco_timed_text_style_get__is_background_always_shown(WMECO_TimedTextStyle *self, BOOL *value);
 
-/* Windows.Media.Core.TimedTextStyle.put_IsBackgroundAlwaysShown() */
 HRESULT wmeco_timed_text_style_put__is_background_always_shown(WMECO_TimedTextStyle *self, BOOL value);
 
-/* Windows.Media.Core.TimedTextStyle.get_FlowDirection() */
 HRESULT wmeco_timed_text_style_get__flow_direction(WMECO_TimedTextStyle *self, WMECO_TimedTextFlowDirection *value);
 
-/* Windows.Media.Core.TimedTextStyle.put_FlowDirection() */
 HRESULT wmeco_timed_text_style_put__flow_direction(WMECO_TimedTextStyle *self, WMECO_TimedTextFlowDirection value);
 
-/* Windows.Media.Core.TimedTextStyle.get_LineAlignment() */
 HRESULT wmeco_timed_text_style_get__line_alignment(WMECO_TimedTextStyle *self, WMECO_TimedTextLineAlignment *value);
 
-/* Windows.Media.Core.TimedTextStyle.put_LineAlignment() */
 HRESULT wmeco_timed_text_style_put__line_alignment(WMECO_TimedTextStyle *self, WMECO_TimedTextLineAlignment value);
 
-/* Windows.Media.Core.TimedTextStyle.get_OutlineColor() */
 HRESULT wmeco_timed_text_style_get__outline_color(WMECO_TimedTextStyle *self, WUI_Color *value);
 
-/* Windows.Media.Core.TimedTextStyle.put_OutlineColor() */
 HRESULT wmeco_timed_text_style_put__outline_color(WMECO_TimedTextStyle *self, WUI_Color value);
 
-/* Windows.Media.Core.TimedTextStyle.get_OutlineThickness() */
 HRESULT wmeco_timed_text_style_get__outline_thickness(WMECO_TimedTextStyle *self, WMECO_TimedTextDouble *value);
 
-/* Windows.Media.Core.TimedTextStyle.put_OutlineThickness() */
 HRESULT wmeco_timed_text_style_put__outline_thickness(WMECO_TimedTextStyle *self, WMECO_TimedTextDouble value);
 
-/* Windows.Media.Core.TimedTextStyle.get_OutlineRadius() */
 HRESULT wmeco_timed_text_style_get__outline_radius(WMECO_TimedTextStyle *self, WMECO_TimedTextDouble *value);
 
-/* Windows.Media.Core.TimedTextStyle.put_OutlineRadius() */
 HRESULT wmeco_timed_text_style_put__outline_radius(WMECO_TimedTextStyle *self, WMECO_TimedTextDouble value);
 
-/* Windows.Media.Core.TimedTextStyle.get_FontStyle() */
 HRESULT wmeco_timed_text_style_get__font_style(WMECO_TimedTextStyle *self, WMECO_TimedTextFontStyle *value);
 
-/* Windows.Media.Core.TimedTextStyle.put_FontStyle() */
 HRESULT wmeco_timed_text_style_put__font_style(WMECO_TimedTextStyle *self, WMECO_TimedTextFontStyle value);
 
-/* Windows.Media.Core.TimedTextStyle.get_IsUnderlineEnabled() */
 HRESULT wmeco_timed_text_style_get__is_underline_enabled(WMECO_TimedTextStyle *self, BOOL *value);
 
-/* Windows.Media.Core.TimedTextStyle.put_IsUnderlineEnabled() */
 HRESULT wmeco_timed_text_style_put__is_underline_enabled(WMECO_TimedTextStyle *self, BOOL value);
 
-/* Windows.Media.Core.TimedTextStyle.get_IsLineThroughEnabled() */
 HRESULT wmeco_timed_text_style_get__is_line_through_enabled(WMECO_TimedTextStyle *self, BOOL *value);
 
-/* Windows.Media.Core.TimedTextStyle.put_IsLineThroughEnabled() */
 HRESULT wmeco_timed_text_style_put__is_line_through_enabled(WMECO_TimedTextStyle *self, BOOL value);
 
-/* Windows.Media.Core.TimedTextStyle.get_IsOverlineEnabled() */
 HRESULT wmeco_timed_text_style_get__is_overline_enabled(WMECO_TimedTextStyle *self, BOOL *value);
 
-/* Windows.Media.Core.TimedTextStyle.put_IsOverlineEnabled() */
 HRESULT wmeco_timed_text_style_put__is_overline_enabled(WMECO_TimedTextStyle *self, BOOL value);
 
-/* Windows.Media.Core.TimedTextStyle.get_Ruby() */
 HRESULT wmeco_timed_text_style_get__ruby(WMECO_TimedTextStyle *self, WMECO_TimedTextRuby** value);
 
-/* Windows.Media.Core.TimedTextStyle.get_Bouten() */
 HRESULT wmeco_timed_text_style_get__bouten(WMECO_TimedTextStyle *self, WMECO_TimedTextBouten** value);
 
-/* Windows.Media.Core.TimedTextStyle.get_IsTextCombined() */
 HRESULT wmeco_timed_text_style_get__is_text_combined(WMECO_TimedTextStyle *self, BOOL *value);
 
-/* Windows.Media.Core.TimedTextStyle.put_IsTextCombined() */
 HRESULT wmeco_timed_text_style_put__is_text_combined(WMECO_TimedTextStyle *self, BOOL value);
 
-/* Windows.Media.Core.TimedTextStyle.get_FontAngleInDegrees() */
 HRESULT wmeco_timed_text_style_get__font_angle_in_degrees(WMECO_TimedTextStyle *self, double *value);
 
-/* Windows.Media.Core.TimedTextStyle.put_FontAngleInDegrees() */
 HRESULT wmeco_timed_text_style_put__font_angle_in_degrees(WMECO_TimedTextStyle *self, double value);
 
-/* activate Windows.Media.Core.TimedTextSubformat */
 HRESULT wmeco_timed_text_subformat_new(WMECO_TimedTextSubformat **out);
 
-/* Windows.Media.Core.TimedTextSubformat */
-/* Windows.Media.Core.TimedTextSubformat.get_StartIndex() */
 HRESULT wmeco_timed_text_subformat_get__start_index(WMECO_TimedTextSubformat *self, int32_t *value);
 
-/* Windows.Media.Core.TimedTextSubformat.put_StartIndex() */
 HRESULT wmeco_timed_text_subformat_put__start_index(WMECO_TimedTextSubformat *self, int32_t value);
 
-/* Windows.Media.Core.TimedTextSubformat.get_Length() */
 HRESULT wmeco_timed_text_subformat_get__length(WMECO_TimedTextSubformat *self, int32_t *value);
 
-/* Windows.Media.Core.TimedTextSubformat.put_Length() */
 HRESULT wmeco_timed_text_subformat_put__length(WMECO_TimedTextSubformat *self, int32_t value);
 
-/* Windows.Media.Core.TimedTextSubformat.get_SubformatStyle() */
 HRESULT wmeco_timed_text_subformat_get__subformat_style(WMECO_TimedTextSubformat *self, WMECO_TimedTextStyle** value);
 
-/* Windows.Media.Core.TimedTextSubformat.put_SubformatStyle() */
 HRESULT wmeco_timed_text_subformat_put__subformat_style(WMECO_TimedTextSubformat *self, WMECO_TimedTextStyle* value);
 
-/* activate Windows.Media.Core.VideoStabilizationEffect */
 HRESULT wmeco_video_stabilization_effect_new(WMECO_VideoStabilizationEffect **out);
 
-/* Windows.Media.Core.VideoStabilizationEffect */
-/* Windows.Media.Core.VideoStabilizationEffect.put_Enabled() */
 HRESULT wmeco_video_stabilization_effect_put__enabled(WMECO_VideoStabilizationEffect *self, BOOL value);
 
-/* Windows.Media.Core.VideoStabilizationEffect.get_Enabled() */
 HRESULT wmeco_video_stabilization_effect_get__enabled(WMECO_VideoStabilizationEffect *self, BOOL *value);
 
-/* Windows.Media.Core.VideoStabilizationEffect.GetRecommendedStreamConfiguration(controller, desiredProperties) */
 HRESULT wmeco_video_stabilization_effect_get_recommended_stream_configuration(WMECO_VideoStabilizationEffect *self, WMEDE_VideoDeviceController* controller, WMEME_VideoEncodingProperties* desiredProperties, WMECA_VideoStreamConfiguration** out);
 
-/* Windows.Media.Core.VideoStabilizationEffect.SetProperties(configuration) */
 HRESULT wmeco_video_stabilization_effect_set_properties(WMECO_VideoStabilizationEffect *self, WFOCO_IPropertySet* configuration);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeco_video_stabilization_effect_on_enabled_changed(WMECO_VideoStabilizationEffect *self, cwinrt_event_fn fn, void *ctx);
 void wmeco_video_stabilization_effect_off_enabled_changed(WMECO_VideoStabilizationEffect *self, cwinrt_token token);
 
-/* activate Windows.Media.Core.VideoStabilizationEffectDefinition */
 HRESULT wmeco_video_stabilization_effect_definition_new(WMECO_VideoStabilizationEffectDefinition **out);
 
-/* Windows.Media.Core.VideoStabilizationEffectDefinition */
-/* Windows.Media.Core.VideoStabilizationEffectDefinition.get_ActivatableClassId() */
 HRESULT wmeco_video_stabilization_effect_definition_get__activatable_class_id(WMECO_VideoStabilizationEffectDefinition *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.VideoStabilizationEffectDefinition.get_Properties() */
 HRESULT wmeco_video_stabilization_effect_definition_get__properties(WMECO_VideoStabilizationEffectDefinition *self, WFOCO_IPropertySet** value);
 
-/* activate Windows.Media.Core.VideoStabilizationEffectEnabledChangedEventArgs */
 HRESULT wmeco_video_stabilization_effect_enabled_changed_event_args_new(WMECO_VideoStabilizationEffectEnabledChangedEventArgs **out);
 
-/* Windows.Media.Core.VideoStabilizationEffectEnabledChangedEventArgs */
-/* Windows.Media.Core.VideoStabilizationEffectEnabledChangedEventArgs.get_Reason() */
 HRESULT wmeco_video_stabilization_effect_enabled_changed_event_args_get__reason(WMECO_VideoStabilizationEffectEnabledChangedEventArgs *self, WMECO_VideoStabilizationEffectEnabledChangedReason *value);
 
-/* activate Windows.Media.Core.VideoStreamDescriptor */
 HRESULT wmeco_video_stream_descriptor_new(WMECO_VideoStreamDescriptor **out);
 
-/* Windows.Media.Core.VideoStreamDescriptor */
-/* Windows.Media.Core.VideoStreamDescriptor.get_EncodingProperties() */
 HRESULT wmeco_video_stream_descriptor_get__encoding_properties(WMECO_VideoStreamDescriptor *self, WMEME_VideoEncodingProperties** value);
 
-/* Windows.Media.Core.VideoStreamDescriptor.get_IsSelected() */
 HRESULT wmeco_video_stream_descriptor_get__is_selected(WMECO_VideoStreamDescriptor *self, BOOL *value);
 
-/* Windows.Media.Core.VideoStreamDescriptor.put_Name() */
 HRESULT wmeco_video_stream_descriptor_put__name(WMECO_VideoStreamDescriptor *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.VideoStreamDescriptor.get_Name() */
 HRESULT wmeco_video_stream_descriptor_get__name(WMECO_VideoStreamDescriptor *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.VideoStreamDescriptor.put_Language() */
 HRESULT wmeco_video_stream_descriptor_put__language(WMECO_VideoStreamDescriptor *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.VideoStreamDescriptor.get_Language() */
 HRESULT wmeco_video_stream_descriptor_get__language(WMECO_VideoStreamDescriptor *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.VideoStreamDescriptor.put_Label() */
 HRESULT wmeco_video_stream_descriptor_put__label(WMECO_VideoStreamDescriptor *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.VideoStreamDescriptor.get_Label() */
 HRESULT wmeco_video_stream_descriptor_get__label(WMECO_VideoStreamDescriptor *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.VideoStreamDescriptor.Copy() */
 HRESULT wmeco_video_stream_descriptor_copy(WMECO_VideoStreamDescriptor *self, WMECO_VideoStreamDescriptor** out);
 
-/* activate Windows.Media.Core.VideoTrack */
 HRESULT wmeco_video_track_new(WMECO_VideoTrack **out);
 
-/* Windows.Media.Core.VideoTrack */
-/* Windows.Media.Core.VideoTrack.get_Id() */
 HRESULT wmeco_video_track_get__id(WMECO_VideoTrack *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.VideoTrack.get_Language() */
 HRESULT wmeco_video_track_get__language(WMECO_VideoTrack *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.VideoTrack.get_TrackKind() */
 HRESULT wmeco_video_track_get__track_kind(WMECO_VideoTrack *self, WMECO_MediaTrackKind *value);
 
-/* Windows.Media.Core.VideoTrack.put_Label() */
 HRESULT wmeco_video_track_put__label(WMECO_VideoTrack *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.VideoTrack.get_Label() */
 HRESULT wmeco_video_track_get__label(WMECO_VideoTrack *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.VideoTrack.GetEncodingProperties() */
 HRESULT wmeco_video_track_get_encoding_properties(WMECO_VideoTrack *self, WMEME_VideoEncodingProperties** out);
 
-/* Windows.Media.Core.VideoTrack.get_PlaybackItem() */
 HRESULT wmeco_video_track_get__playback_item(WMECO_VideoTrack *self, WMEPL_MediaPlaybackItem** value);
 
-/* Windows.Media.Core.VideoTrack.get_Name() */
 HRESULT wmeco_video_track_get__name(WMECO_VideoTrack *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.VideoTrack.get_SupportInfo() */
 HRESULT wmeco_video_track_get__support_info(WMECO_VideoTrack *self, WMECO_VideoTrackSupportInfo** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeco_video_track_on_open_failed(WMECO_VideoTrack *self, cwinrt_event_fn fn, void *ctx);
 void wmeco_video_track_off_open_failed(WMECO_VideoTrack *self, cwinrt_token token);
 
-/* activate Windows.Media.Core.VideoTrackOpenFailedEventArgs */
 HRESULT wmeco_video_track_open_failed_event_args_new(WMECO_VideoTrackOpenFailedEventArgs **out);
 
-/* Windows.Media.Core.VideoTrackOpenFailedEventArgs */
-/* Windows.Media.Core.VideoTrackOpenFailedEventArgs.get_ExtendedError() */
 HRESULT wmeco_video_track_open_failed_event_args_get__extended_error(WMECO_VideoTrackOpenFailedEventArgs *self, HRESULT *value);
 
-/* activate Windows.Media.Core.VideoTrackSupportInfo */
 HRESULT wmeco_video_track_support_info_new(WMECO_VideoTrackSupportInfo **out);
 
-/* Windows.Media.Core.VideoTrackSupportInfo */
-/* Windows.Media.Core.VideoTrackSupportInfo.get_DecoderStatus() */
 HRESULT wmeco_video_track_support_info_get__decoder_status(WMECO_VideoTrackSupportInfo *self, WMECO_MediaDecoderStatus *value);
 
-/* Windows.Media.Core.VideoTrackSupportInfo.get_MediaSourceStatus() */
 HRESULT wmeco_video_track_support_info_get__media_source_status(WMECO_VideoTrackSupportInfo *self, WMECO_MediaSourceStatus *value);
 
-/* activate Windows.Media.Core.FaceDetectionEffectDefinition */
 HRESULT wmeco_face_detection_effect_definition_new(WMECO_FaceDetectionEffectDefinition **out);
 
-/* Windows.Media.Core.FaceDetectionEffectDefinition */
-/* Windows.Media.Core.FaceDetectionEffectDefinition.get_ActivatableClassId() */
 HRESULT wmeco_face_detection_effect_definition_get__activatable_class_id(WMECO_FaceDetectionEffectDefinition *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.FaceDetectionEffectDefinition.get_Properties() */
 HRESULT wmeco_face_detection_effect_definition_get__properties(WMECO_FaceDetectionEffectDefinition *self, WFOCO_IPropertySet** value);
 
-/* Windows.Media.Core.FaceDetectionEffectDefinition.put_DetectionMode() */
 HRESULT wmeco_face_detection_effect_definition_put__detection_mode(WMECO_FaceDetectionEffectDefinition *self, WMECO_FaceDetectionMode value);
 
-/* Windows.Media.Core.FaceDetectionEffectDefinition.get_DetectionMode() */
 HRESULT wmeco_face_detection_effect_definition_get__detection_mode(WMECO_FaceDetectionEffectDefinition *self, WMECO_FaceDetectionMode *value);
 
-/* Windows.Media.Core.FaceDetectionEffectDefinition.put_SynchronousDetectionEnabled() */
 HRESULT wmeco_face_detection_effect_definition_put__synchronous_detection_enabled(WMECO_FaceDetectionEffectDefinition *self, BOOL value);
 
-/* Windows.Media.Core.FaceDetectionEffectDefinition.get_SynchronousDetectionEnabled() */
 HRESULT wmeco_face_detection_effect_definition_get__synchronous_detection_enabled(WMECO_FaceDetectionEffectDefinition *self, BOOL *value);
 
-/* activate Windows.Media.Core.FaceDetectionEffect */
 HRESULT wmeco_face_detection_effect_new(WMECO_FaceDetectionEffect **out);
 
-/* Windows.Media.Core.FaceDetectionEffect */
-/* Windows.Media.Core.FaceDetectionEffect.put_Enabled() */
 HRESULT wmeco_face_detection_effect_put__enabled(WMECO_FaceDetectionEffect *self, BOOL value);
 
-/* Windows.Media.Core.FaceDetectionEffect.get_Enabled() */
 HRESULT wmeco_face_detection_effect_get__enabled(WMECO_FaceDetectionEffect *self, BOOL *value);
 
-/* Windows.Media.Core.FaceDetectionEffect.put_DesiredDetectionInterval() */
 HRESULT wmeco_face_detection_effect_put__desired_detection_interval(WMECO_FaceDetectionEffect *self, WF_TimeSpan value);
 
-/* Windows.Media.Core.FaceDetectionEffect.get_DesiredDetectionInterval() */
 HRESULT wmeco_face_detection_effect_get__desired_detection_interval(WMECO_FaceDetectionEffect *self, WF_TimeSpan *value);
 
-/* Windows.Media.Core.FaceDetectionEffect.SetProperties(configuration) */
 HRESULT wmeco_face_detection_effect_set_properties(WMECO_FaceDetectionEffect *self, WFOCO_IPropertySet* configuration);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeco_face_detection_effect_on_face_detected(WMECO_FaceDetectionEffect *self, cwinrt_event_fn fn, void *ctx);
 void wmeco_face_detection_effect_off_face_detected(WMECO_FaceDetectionEffect *self, cwinrt_token token);
 
-/* activate Windows.Media.Core.FaceDetectedEventArgs */
 HRESULT wmeco_face_detected_event_args_new(WMECO_FaceDetectedEventArgs **out);
 
-/* Windows.Media.Core.FaceDetectedEventArgs */
-/* Windows.Media.Core.FaceDetectedEventArgs.get_ResultFrame() */
 HRESULT wmeco_face_detected_event_args_get__result_frame(WMECO_FaceDetectedEventArgs *self, WMECO_FaceDetectionEffectFrame** value);
 
-/* activate Windows.Media.Core.HighDynamicRangeControl */
 HRESULT wmeco_high_dynamic_range_control_new(WMECO_HighDynamicRangeControl **out);
 
-/* Windows.Media.Core.HighDynamicRangeControl */
-/* Windows.Media.Core.HighDynamicRangeControl.put_Enabled() */
 HRESULT wmeco_high_dynamic_range_control_put__enabled(WMECO_HighDynamicRangeControl *self, BOOL value);
 
-/* Windows.Media.Core.HighDynamicRangeControl.get_Enabled() */
 HRESULT wmeco_high_dynamic_range_control_get__enabled(WMECO_HighDynamicRangeControl *self, BOOL *value);
 
-/* activate Windows.Media.Core.DataCue */
 HRESULT wmeco_data_cue_new(WMECO_DataCue **out);
 
-/* Windows.Media.Core.DataCue */
-/* Windows.Media.Core.DataCue.put_Data() */
 HRESULT wmeco_data_cue_put__data(WMECO_DataCue *self, WSTST_IBuffer* value);
 
-/* Windows.Media.Core.DataCue.get_Data() */
 HRESULT wmeco_data_cue_get__data(WMECO_DataCue *self, WSTST_IBuffer** value);
 
-/* Windows.Media.Core.DataCue.put_StartTime() */
 HRESULT wmeco_data_cue_put__start_time(WMECO_DataCue *self, WF_TimeSpan value);
 
-/* Windows.Media.Core.DataCue.get_StartTime() */
 HRESULT wmeco_data_cue_get__start_time(WMECO_DataCue *self, WF_TimeSpan *value);
 
-/* Windows.Media.Core.DataCue.put_Duration() */
 HRESULT wmeco_data_cue_put__duration(WMECO_DataCue *self, WF_TimeSpan value);
 
-/* Windows.Media.Core.DataCue.get_Duration() */
 HRESULT wmeco_data_cue_get__duration(WMECO_DataCue *self, WF_TimeSpan *value);
 
-/* Windows.Media.Core.DataCue.put_Id() */
 HRESULT wmeco_data_cue_put__id(WMECO_DataCue *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.DataCue.get_Id() */
 HRESULT wmeco_data_cue_get__id(WMECO_DataCue *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.DataCue.get_Properties() */
 HRESULT wmeco_data_cue_get__properties(WMECO_DataCue *self, WFOCO_PropertySet** value);
 
-/* activate Windows.Media.Core.CodecSubtypes */
 HRESULT wmeco_codec_subtypes_new(WMECO_CodecSubtypes **out);
 
-/* Windows.Media.Core.CodecSubtypes */
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormatAv1() */
 HRESULT wmeco_codec_subtypes_get__video_format_av1(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormatDV25() */
 HRESULT wmeco_codec_subtypes_get__video_format_d_v25(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormatDV50() */
 HRESULT wmeco_codec_subtypes_get__video_format_d_v50(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormatDvc() */
 HRESULT wmeco_codec_subtypes_get__video_format_dvc(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormatDvh1() */
 HRESULT wmeco_codec_subtypes_get__video_format_dvh1(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormatDvhD() */
 HRESULT wmeco_codec_subtypes_get__video_format_dvh_d(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormatDvsd() */
 HRESULT wmeco_codec_subtypes_get__video_format_dvsd(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormatDvsl() */
 HRESULT wmeco_codec_subtypes_get__video_format_dvsl(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormatH263() */
 HRESULT wmeco_codec_subtypes_get__video_format_h263(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormatH264() */
 HRESULT wmeco_codec_subtypes_get__video_format_h264(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormatH265() */
 HRESULT wmeco_codec_subtypes_get__video_format_h265(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormatH264ES() */
 HRESULT wmeco_codec_subtypes_get__video_format_h264_e_s(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormatHevc() */
 HRESULT wmeco_codec_subtypes_get__video_format_hevc(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormatHevcES() */
 HRESULT wmeco_codec_subtypes_get__video_format_hevc_e_s(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormatM4S2() */
 HRESULT wmeco_codec_subtypes_get__video_format_m4_s2(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormatMjpg() */
 HRESULT wmeco_codec_subtypes_get__video_format_mjpg(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormatMP43() */
 HRESULT wmeco_codec_subtypes_get__video_format_m_p43(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormatMP4S() */
 HRESULT wmeco_codec_subtypes_get__video_format_m_p4_s(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormatMP4V() */
 HRESULT wmeco_codec_subtypes_get__video_format_m_p4_v(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormatMpeg2() */
 HRESULT wmeco_codec_subtypes_get__video_format_mpeg2(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormatVP80() */
 HRESULT wmeco_codec_subtypes_get__video_format_v_p80(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormatVP90() */
 HRESULT wmeco_codec_subtypes_get__video_format_v_p90(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormatMpg1() */
 HRESULT wmeco_codec_subtypes_get__video_format_mpg1(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormatMss1() */
 HRESULT wmeco_codec_subtypes_get__video_format_mss1(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormatMss2() */
 HRESULT wmeco_codec_subtypes_get__video_format_mss2(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormatWmv1() */
 HRESULT wmeco_codec_subtypes_get__video_format_wmv1(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormatWmv2() */
 HRESULT wmeco_codec_subtypes_get__video_format_wmv2(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormatWmv3() */
 HRESULT wmeco_codec_subtypes_get__video_format_wmv3(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormatWvc1() */
 HRESULT wmeco_codec_subtypes_get__video_format_wvc1(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_VideoFormat420O() */
 HRESULT wmeco_codec_subtypes_get__video_format420_o(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_AudioFormatAac() */
 HRESULT wmeco_codec_subtypes_get__audio_format_aac(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_AudioFormatAdts() */
 HRESULT wmeco_codec_subtypes_get__audio_format_adts(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_AudioFormatAlac() */
 HRESULT wmeco_codec_subtypes_get__audio_format_alac(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_AudioFormatAmrNB() */
 HRESULT wmeco_codec_subtypes_get__audio_format_amr_n_b(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_AudioFormatAmrWB() */
 HRESULT wmeco_codec_subtypes_get__audio_format_amr_w_b(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_AudioFormatAmrWP() */
 HRESULT wmeco_codec_subtypes_get__audio_format_amr_w_p(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_AudioFormatDolbyAC3() */
 HRESULT wmeco_codec_subtypes_get__audio_format_dolby_a_c3(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_AudioFormatDolbyAC3Spdif() */
 HRESULT wmeco_codec_subtypes_get__audio_format_dolby_a_c3_spdif(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_AudioFormatDolbyDDPlus() */
 HRESULT wmeco_codec_subtypes_get__audio_format_dolby_d_d_plus(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_AudioFormatDrm() */
 HRESULT wmeco_codec_subtypes_get__audio_format_drm(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_AudioFormatDts() */
 HRESULT wmeco_codec_subtypes_get__audio_format_dts(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_AudioFormatFlac() */
 HRESULT wmeco_codec_subtypes_get__audio_format_flac(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_AudioFormatFloat() */
 HRESULT wmeco_codec_subtypes_get__audio_format_float(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_AudioFormatMP3() */
 HRESULT wmeco_codec_subtypes_get__audio_format_m_p3(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_AudioFormatMPeg() */
 HRESULT wmeco_codec_subtypes_get__audio_format_m_peg(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_AudioFormatMsp1() */
 HRESULT wmeco_codec_subtypes_get__audio_format_msp1(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_AudioFormatOpus() */
 HRESULT wmeco_codec_subtypes_get__audio_format_opus(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_AudioFormatPcm() */
 HRESULT wmeco_codec_subtypes_get__audio_format_pcm(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_AudioFormatWmaSpdif() */
 HRESULT wmeco_codec_subtypes_get__audio_format_wma_spdif(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_AudioFormatWMAudioLossless() */
 HRESULT wmeco_codec_subtypes_get__audio_format_w_m_audio_lossless(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_AudioFormatWMAudioV8() */
 HRESULT wmeco_codec_subtypes_get__audio_format_w_m_audio_v8(cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecSubtypes.get_AudioFormatWMAudioV9() */
 HRESULT wmeco_codec_subtypes_get__audio_format_w_m_audio_v9(cwinrt_hstring *value);
 
-/* activate Windows.Media.Core.CodecQuery */
 HRESULT wmeco_codec_query_new(WMECO_CodecQuery **out);
 
-/* Windows.Media.Core.CodecQuery */
-/* Windows.Media.Core.CodecQuery.FindAllAsync(kind, category, subType) */
 HRESULT wmeco_codec_query_find_all_async(WMECO_CodecQuery *self, WMECO_CodecKind kind, WMECO_CodecCategory category, cwinrt_hstring subType, WF_IAsyncOperation_WFOCO_IVectorView_WMECO_CodecInfo** out);
 
-/* activate Windows.Media.Core.CodecInfo */
 HRESULT wmeco_codec_info_new(WMECO_CodecInfo **out);
 
-/* Windows.Media.Core.CodecInfo */
-/* Windows.Media.Core.CodecInfo.get_Kind() */
 HRESULT wmeco_codec_info_get__kind(WMECO_CodecInfo *self, WMECO_CodecKind *value);
 
-/* Windows.Media.Core.CodecInfo.get_Category() */
 HRESULT wmeco_codec_info_get__category(WMECO_CodecInfo *self, WMECO_CodecCategory *value);
 
-/* Windows.Media.Core.CodecInfo.get_Subtypes() */
 HRESULT wmeco_codec_info_get__subtypes(WMECO_CodecInfo *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Media.Core.CodecInfo.get_DisplayName() */
 HRESULT wmeco_codec_info_get__display_name(WMECO_CodecInfo *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.CodecInfo.get_IsTrusted() */
 HRESULT wmeco_codec_info_get__is_trusted(WMECO_CodecInfo *self, BOOL *value);
 
-/* activate Windows.Media.Core.ChapterCue */
 HRESULT wmeco_chapter_cue_new(WMECO_ChapterCue **out);
 
-/* Windows.Media.Core.ChapterCue */
-/* Windows.Media.Core.ChapterCue.put_Title() */
 HRESULT wmeco_chapter_cue_put__title(WMECO_ChapterCue *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.ChapterCue.get_Title() */
 HRESULT wmeco_chapter_cue_get__title(WMECO_ChapterCue *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ChapterCue.put_StartTime() */
 HRESULT wmeco_chapter_cue_put__start_time(WMECO_ChapterCue *self, WF_TimeSpan value);
 
-/* Windows.Media.Core.ChapterCue.get_StartTime() */
 HRESULT wmeco_chapter_cue_get__start_time(WMECO_ChapterCue *self, WF_TimeSpan *value);
 
-/* Windows.Media.Core.ChapterCue.put_Duration() */
 HRESULT wmeco_chapter_cue_put__duration(WMECO_ChapterCue *self, WF_TimeSpan value);
 
-/* Windows.Media.Core.ChapterCue.get_Duration() */
 HRESULT wmeco_chapter_cue_get__duration(WMECO_ChapterCue *self, WF_TimeSpan *value);
 
-/* Windows.Media.Core.ChapterCue.put_Id() */
 HRESULT wmeco_chapter_cue_put__id(WMECO_ChapterCue *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.ChapterCue.get_Id() */
 HRESULT wmeco_chapter_cue_get__id(WMECO_ChapterCue *self, cwinrt_hstring *value);
 
-/* activate Windows.Media.Core.AudioTrackSupportInfo */
 HRESULT wmeco_audio_track_support_info_new(WMECO_AudioTrackSupportInfo **out);
 
-/* Windows.Media.Core.AudioTrackSupportInfo */
-/* Windows.Media.Core.AudioTrackSupportInfo.get_DecoderStatus() */
 HRESULT wmeco_audio_track_support_info_get__decoder_status(WMECO_AudioTrackSupportInfo *self, WMECO_MediaDecoderStatus *value);
 
-/* Windows.Media.Core.AudioTrackSupportInfo.get_Degradation() */
 HRESULT wmeco_audio_track_support_info_get__degradation(WMECO_AudioTrackSupportInfo *self, WMECO_AudioDecoderDegradation *value);
 
-/* Windows.Media.Core.AudioTrackSupportInfo.get_DegradationReason() */
 HRESULT wmeco_audio_track_support_info_get__degradation_reason(WMECO_AudioTrackSupportInfo *self, WMECO_AudioDecoderDegradationReason *value);
 
-/* Windows.Media.Core.AudioTrackSupportInfo.get_MediaSourceStatus() */
 HRESULT wmeco_audio_track_support_info_get__media_source_status(WMECO_AudioTrackSupportInfo *self, WMECO_MediaSourceStatus *value);
 
-/* activate Windows.Media.Core.AudioTrackOpenFailedEventArgs */
 HRESULT wmeco_audio_track_open_failed_event_args_new(WMECO_AudioTrackOpenFailedEventArgs **out);
 
-/* Windows.Media.Core.AudioTrackOpenFailedEventArgs */
-/* Windows.Media.Core.AudioTrackOpenFailedEventArgs.get_ExtendedError() */
 HRESULT wmeco_audio_track_open_failed_event_args_get__extended_error(WMECO_AudioTrackOpenFailedEventArgs *self, HRESULT *value);
 
-/* activate Windows.Media.Core.AudioTrack */
 HRESULT wmeco_audio_track_new(WMECO_AudioTrack **out);
 
-/* Windows.Media.Core.AudioTrack */
-/* Windows.Media.Core.AudioTrack.get_Id() */
 HRESULT wmeco_audio_track_get__id(WMECO_AudioTrack *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.AudioTrack.get_Language() */
 HRESULT wmeco_audio_track_get__language(WMECO_AudioTrack *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.AudioTrack.get_TrackKind() */
 HRESULT wmeco_audio_track_get__track_kind(WMECO_AudioTrack *self, WMECO_MediaTrackKind *value);
 
-/* Windows.Media.Core.AudioTrack.put_Label() */
 HRESULT wmeco_audio_track_put__label(WMECO_AudioTrack *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.AudioTrack.get_Label() */
 HRESULT wmeco_audio_track_get__label(WMECO_AudioTrack *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.AudioTrack.GetEncodingProperties() */
 HRESULT wmeco_audio_track_get_encoding_properties(WMECO_AudioTrack *self, WMEME_AudioEncodingProperties** out);
 
-/* Windows.Media.Core.AudioTrack.get_PlaybackItem() */
 HRESULT wmeco_audio_track_get__playback_item(WMECO_AudioTrack *self, WMEPL_MediaPlaybackItem** value);
 
-/* Windows.Media.Core.AudioTrack.get_Name() */
 HRESULT wmeco_audio_track_get__name(WMECO_AudioTrack *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.AudioTrack.get_SupportInfo() */
 HRESULT wmeco_audio_track_get__support_info(WMECO_AudioTrack *self, WMECO_AudioTrackSupportInfo** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeco_audio_track_on_open_failed(WMECO_AudioTrack *self, cwinrt_event_fn fn, void *ctx);
 void wmeco_audio_track_off_open_failed(WMECO_AudioTrack *self, cwinrt_token token);
 
-/* activate Windows.Media.Core.AudioStreamDescriptor */
 HRESULT wmeco_audio_stream_descriptor_new(WMECO_AudioStreamDescriptor **out);
 
-/* Windows.Media.Core.AudioStreamDescriptor */
-/* Windows.Media.Core.AudioStreamDescriptor.get_EncodingProperties() */
 HRESULT wmeco_audio_stream_descriptor_get__encoding_properties(WMECO_AudioStreamDescriptor *self, WMEME_AudioEncodingProperties** value);
 
-/* Windows.Media.Core.AudioStreamDescriptor.get_IsSelected() */
 HRESULT wmeco_audio_stream_descriptor_get__is_selected(WMECO_AudioStreamDescriptor *self, BOOL *value);
 
-/* Windows.Media.Core.AudioStreamDescriptor.put_Name() */
 HRESULT wmeco_audio_stream_descriptor_put__name(WMECO_AudioStreamDescriptor *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.AudioStreamDescriptor.get_Name() */
 HRESULT wmeco_audio_stream_descriptor_get__name(WMECO_AudioStreamDescriptor *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.AudioStreamDescriptor.put_Language() */
 HRESULT wmeco_audio_stream_descriptor_put__language(WMECO_AudioStreamDescriptor *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.AudioStreamDescriptor.get_Language() */
 HRESULT wmeco_audio_stream_descriptor_get__language(WMECO_AudioStreamDescriptor *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.AudioStreamDescriptor.put_LeadingEncoderPadding() */
 HRESULT wmeco_audio_stream_descriptor_put__leading_encoder_padding(WMECO_AudioStreamDescriptor *self, uint32_t* value);
 
-/* Windows.Media.Core.AudioStreamDescriptor.get_LeadingEncoderPadding() */
 HRESULT wmeco_audio_stream_descriptor_get__leading_encoder_padding(WMECO_AudioStreamDescriptor *self, uint32_t** value);
 
-/* Windows.Media.Core.AudioStreamDescriptor.put_TrailingEncoderPadding() */
 HRESULT wmeco_audio_stream_descriptor_put__trailing_encoder_padding(WMECO_AudioStreamDescriptor *self, uint32_t* value);
 
-/* Windows.Media.Core.AudioStreamDescriptor.get_TrailingEncoderPadding() */
 HRESULT wmeco_audio_stream_descriptor_get__trailing_encoder_padding(WMECO_AudioStreamDescriptor *self, uint32_t** value);
 
-/* Windows.Media.Core.AudioStreamDescriptor.put_Label() */
 HRESULT wmeco_audio_stream_descriptor_put__label(WMECO_AudioStreamDescriptor *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.AudioStreamDescriptor.get_Label() */
 HRESULT wmeco_audio_stream_descriptor_get__label(WMECO_AudioStreamDescriptor *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.AudioStreamDescriptor.Copy() */
 HRESULT wmeco_audio_stream_descriptor_copy(WMECO_AudioStreamDescriptor *self, WMECO_AudioStreamDescriptor** out);
 
-/* Windows.Media.Core.IMediaSourceStatics4 */
-/* Windows.Media.Core.IMediaSourceStatics4.CreateFromDownloadOperation(downloadOperation) */
 HRESULT wmeco_media_source_statics_4_create_from_download_operation(WMECO_IMediaSourceStatics_4 *self, WNEBA_DownloadOperation* downloadOperation, WMECO_MediaSource** out);
 
-/* Windows.Media.Core.IMediaSourceStatics3 */
-/* Windows.Media.Core.IMediaSourceStatics3.CreateFromMediaFrameSource(frameSource) */
 HRESULT wmeco_media_source_statics_3_create_from_media_frame_source(WMECO_IMediaSourceStatics_3 *self, WMECAFR_MediaFrameSource* frameSource, WMECO_MediaSource** out);
 
-/* Windows.Media.Core.IMediaSourceStatics2 */
-/* Windows.Media.Core.IMediaSourceStatics2.CreateFromMediaBinder(binder) */
 HRESULT wmeco_media_source_statics_2_create_from_media_binder(WMECO_IMediaSourceStatics_2 *self, WMECO_MediaBinder* binder, WMECO_MediaSource** out);
 
-/* Windows.Media.Core.IMediaSourceStatics */
-/* Windows.Media.Core.IMediaSourceStatics.CreateFromAdaptiveMediaSource(mediaSource) */
 HRESULT wmeco_media_source_statics_create_from_adaptive_media_source(WMECO_IMediaSourceStatics *self, WMESTAD_AdaptiveMediaSource* mediaSource, WMECO_MediaSource** out);
 
-/* Windows.Media.Core.IMediaSourceStatics.CreateFromMediaStreamSource(mediaSource) */
 HRESULT wmeco_media_source_statics_create_from_media_stream_source(WMECO_IMediaSourceStatics *self, WMECO_MediaStreamSource* mediaSource, WMECO_MediaSource** out);
 
-/* Windows.Media.Core.IMediaSourceStatics.CreateFromMseStreamSource(mediaSource) */
 HRESULT wmeco_media_source_statics_create_from_mse_stream_source(WMECO_IMediaSourceStatics *self, WMECO_MseStreamSource* mediaSource, WMECO_MediaSource** out);
 
-/* Windows.Media.Core.IMediaSourceStatics.CreateFromIMediaSource(mediaSource) */
 HRESULT wmeco_media_source_statics_create_from_i_media_source(WMECO_IMediaSourceStatics *self, WMECO_IMediaSource* mediaSource, WMECO_MediaSource** out);
 
-/* Windows.Media.Core.IMediaSourceStatics.CreateFromStorageFile(file) */
 HRESULT wmeco_media_source_statics_create_from_storage_file(WMECO_IMediaSourceStatics *self, WS_IStorageFile* file, WMECO_MediaSource** out);
 
-/* Windows.Media.Core.IMediaSourceStatics.CreateFromStream(stream, contentType) */
 HRESULT wmeco_media_source_statics_create_from_stream(WMECO_IMediaSourceStatics *self, WSTST_IRandomAccessStream* stream, cwinrt_hstring contentType, WMECO_MediaSource** out);
 
-/* Windows.Media.Core.IMediaSourceStatics.CreateFromStreamReference(stream, contentType) */
 HRESULT wmeco_media_source_statics_create_from_stream_reference(WMECO_IMediaSourceStatics *self, WSTST_IRandomAccessStreamReference* stream, cwinrt_hstring contentType, WMECO_MediaSource** out);
 
-/* Windows.Media.Core.IMediaSourceStatics.CreateFromUri(uri) */
 HRESULT wmeco_media_source_statics_create_from_uri(WMECO_IMediaSourceStatics *self, WF_Uri* uri, WMECO_MediaSource** out);
 
-/* Windows.Media.Core.IMediaSourceAppServiceConnectionFactory */
-/* Windows.Media.Core.IMediaSourceAppServiceConnectionFactory.Create(appServiceConnection) */
 HRESULT wmeco_media_source_app_service_connection_factory_create(WMECO_IMediaSourceAppServiceConnectionFactory *self, WAPAP_AppServiceConnection* appServiceConnection, WMECO_MediaSourceAppServiceConnection** out);
 
-/* Windows.Media.Core.ILowLightFusionStatics */
-/* Windows.Media.Core.ILowLightFusionStatics.get_SupportedBitmapPixelFormats() */
 HRESULT wmeco_low_light_fusion_statics_get__supported_bitmap_pixel_formats(WMECO_ILowLightFusionStatics *self, WFOCO_IVectorView_WGRIM_BitmapPixelFormat** value);
 
-/* Windows.Media.Core.ILowLightFusionStatics.get_MaxSupportedFrameCount() */
 HRESULT wmeco_low_light_fusion_statics_get__max_supported_frame_count(WMECO_ILowLightFusionStatics *self, int32_t *value);
 
-/* Windows.Media.Core.ILowLightFusionStatics.FuseAsync(frameSet) */
 HRESULT wmeco_low_light_fusion_statics_fuse_async(WMECO_ILowLightFusionStatics *self, WFOCO_IIterable_WGRIM_SoftwareBitmap* frameSet, WF_IAsyncOperationWithProgress_WMECO_LowLightFusionResult_F64** out);
 
-/* Windows.Media.Core.ICodecSubtypesStatics2 */
-/* Windows.Media.Core.ICodecSubtypesStatics2.get_VideoFormatAv1() */
 HRESULT wmeco_codec_subtypes_statics_2_get__video_format_av1(WMECO_ICodecSubtypesStatics_2 *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics */
-/* Windows.Media.Core.ICodecSubtypesStatics.get_VideoFormatDV25() */
 HRESULT wmeco_codec_subtypes_statics_get__video_format_d_v25(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_VideoFormatDV50() */
 HRESULT wmeco_codec_subtypes_statics_get__video_format_d_v50(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_VideoFormatDvc() */
 HRESULT wmeco_codec_subtypes_statics_get__video_format_dvc(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_VideoFormatDvh1() */
 HRESULT wmeco_codec_subtypes_statics_get__video_format_dvh1(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_VideoFormatDvhD() */
 HRESULT wmeco_codec_subtypes_statics_get__video_format_dvh_d(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_VideoFormatDvsd() */
 HRESULT wmeco_codec_subtypes_statics_get__video_format_dvsd(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_VideoFormatDvsl() */
 HRESULT wmeco_codec_subtypes_statics_get__video_format_dvsl(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_VideoFormatH263() */
 HRESULT wmeco_codec_subtypes_statics_get__video_format_h263(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_VideoFormatH264() */
 HRESULT wmeco_codec_subtypes_statics_get__video_format_h264(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_VideoFormatH265() */
 HRESULT wmeco_codec_subtypes_statics_get__video_format_h265(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_VideoFormatH264ES() */
 HRESULT wmeco_codec_subtypes_statics_get__video_format_h264_e_s(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_VideoFormatHevc() */
 HRESULT wmeco_codec_subtypes_statics_get__video_format_hevc(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_VideoFormatHevcES() */
 HRESULT wmeco_codec_subtypes_statics_get__video_format_hevc_e_s(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_VideoFormatM4S2() */
 HRESULT wmeco_codec_subtypes_statics_get__video_format_m4_s2(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_VideoFormatMjpg() */
 HRESULT wmeco_codec_subtypes_statics_get__video_format_mjpg(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_VideoFormatMP43() */
 HRESULT wmeco_codec_subtypes_statics_get__video_format_m_p43(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_VideoFormatMP4S() */
 HRESULT wmeco_codec_subtypes_statics_get__video_format_m_p4_s(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_VideoFormatMP4V() */
 HRESULT wmeco_codec_subtypes_statics_get__video_format_m_p4_v(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_VideoFormatMpeg2() */
 HRESULT wmeco_codec_subtypes_statics_get__video_format_mpeg2(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_VideoFormatVP80() */
 HRESULT wmeco_codec_subtypes_statics_get__video_format_v_p80(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_VideoFormatVP90() */
 HRESULT wmeco_codec_subtypes_statics_get__video_format_v_p90(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_VideoFormatMpg1() */
 HRESULT wmeco_codec_subtypes_statics_get__video_format_mpg1(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_VideoFormatMss1() */
 HRESULT wmeco_codec_subtypes_statics_get__video_format_mss1(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_VideoFormatMss2() */
 HRESULT wmeco_codec_subtypes_statics_get__video_format_mss2(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_VideoFormatWmv1() */
 HRESULT wmeco_codec_subtypes_statics_get__video_format_wmv1(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_VideoFormatWmv2() */
 HRESULT wmeco_codec_subtypes_statics_get__video_format_wmv2(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_VideoFormatWmv3() */
 HRESULT wmeco_codec_subtypes_statics_get__video_format_wmv3(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_VideoFormatWvc1() */
 HRESULT wmeco_codec_subtypes_statics_get__video_format_wvc1(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_VideoFormat420O() */
 HRESULT wmeco_codec_subtypes_statics_get__video_format420_o(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_AudioFormatAac() */
 HRESULT wmeco_codec_subtypes_statics_get__audio_format_aac(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_AudioFormatAdts() */
 HRESULT wmeco_codec_subtypes_statics_get__audio_format_adts(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_AudioFormatAlac() */
 HRESULT wmeco_codec_subtypes_statics_get__audio_format_alac(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_AudioFormatAmrNB() */
 HRESULT wmeco_codec_subtypes_statics_get__audio_format_amr_n_b(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_AudioFormatAmrWB() */
 HRESULT wmeco_codec_subtypes_statics_get__audio_format_amr_w_b(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_AudioFormatAmrWP() */
 HRESULT wmeco_codec_subtypes_statics_get__audio_format_amr_w_p(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_AudioFormatDolbyAC3() */
 HRESULT wmeco_codec_subtypes_statics_get__audio_format_dolby_a_c3(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_AudioFormatDolbyAC3Spdif() */
 HRESULT wmeco_codec_subtypes_statics_get__audio_format_dolby_a_c3_spdif(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_AudioFormatDolbyDDPlus() */
 HRESULT wmeco_codec_subtypes_statics_get__audio_format_dolby_d_d_plus(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_AudioFormatDrm() */
 HRESULT wmeco_codec_subtypes_statics_get__audio_format_drm(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_AudioFormatDts() */
 HRESULT wmeco_codec_subtypes_statics_get__audio_format_dts(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_AudioFormatFlac() */
 HRESULT wmeco_codec_subtypes_statics_get__audio_format_flac(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_AudioFormatFloat() */
 HRESULT wmeco_codec_subtypes_statics_get__audio_format_float(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_AudioFormatMP3() */
 HRESULT wmeco_codec_subtypes_statics_get__audio_format_m_p3(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_AudioFormatMPeg() */
 HRESULT wmeco_codec_subtypes_statics_get__audio_format_m_peg(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_AudioFormatMsp1() */
 HRESULT wmeco_codec_subtypes_statics_get__audio_format_msp1(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_AudioFormatOpus() */
 HRESULT wmeco_codec_subtypes_statics_get__audio_format_opus(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_AudioFormatPcm() */
 HRESULT wmeco_codec_subtypes_statics_get__audio_format_pcm(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_AudioFormatWmaSpdif() */
 HRESULT wmeco_codec_subtypes_statics_get__audio_format_wma_spdif(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_AudioFormatWMAudioLossless() */
 HRESULT wmeco_codec_subtypes_statics_get__audio_format_w_m_audio_lossless(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_AudioFormatWMAudioV8() */
 HRESULT wmeco_codec_subtypes_statics_get__audio_format_w_m_audio_v8(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ICodecSubtypesStatics.get_AudioFormatWMAudioV9() */
 HRESULT wmeco_codec_subtypes_statics_get__audio_format_w_m_audio_v9(WMECO_ICodecSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.IAudioStreamDescriptorFactory */
-/* Windows.Media.Core.IAudioStreamDescriptorFactory.Create(encodingProperties) */
 HRESULT wmeco_audio_stream_descriptor_factory_create(WMECO_IAudioStreamDescriptorFactory *self, WMEME_AudioEncodingProperties* encodingProperties, WMECO_AudioStreamDescriptor** out);
 
-/* activate Windows.Media.Core.MediaStreamSourceClosedRequest */
 HRESULT wmeco_media_stream_source_closed_request_new(WMECO_MediaStreamSourceClosedRequest **out);
 
-/* Windows.Media.Core.MediaStreamSourceClosedRequest */
-/* Windows.Media.Core.MediaStreamSourceClosedRequest.get_Reason() */
 HRESULT wmeco_media_stream_source_closed_request_get__reason(WMECO_MediaStreamSourceClosedRequest *self, WMECO_MediaStreamSourceClosedReason *value);
 
-/* activate Windows.Media.Core.HighDynamicRangeOutput */
 HRESULT wmeco_high_dynamic_range_output_new(WMECO_HighDynamicRangeOutput **out);
 
-/* Windows.Media.Core.HighDynamicRangeOutput */
-/* Windows.Media.Core.HighDynamicRangeOutput.get_Certainty() */
 HRESULT wmeco_high_dynamic_range_output_get__certainty(WMECO_HighDynamicRangeOutput *self, double *value);
 
-/* Windows.Media.Core.HighDynamicRangeOutput.get_FrameControllers() */
 HRESULT wmeco_high_dynamic_range_output_get__frame_controllers(WMECO_HighDynamicRangeOutput *self, WFOCO_IVectorView_WMEDECO_FrameController** value);
 
-/* Windows.Media.Core.IImageCue */
-/* Windows.Media.Core.IInitializeMediaStreamSourceRequestedEventArgs */
-/* Windows.Media.Core.ILowLightFusionResult */
-/* Windows.Media.Core.IMediaBinder */
-/* Windows.Media.Core.IMediaBindingEventArgs */
-/* Windows.Media.Core.IMediaBindingEventArgs2 */
-/* Windows.Media.Core.IMediaBindingEventArgs2.SetAdaptiveMediaSource(mediaSource) */
 HRESULT wmeco_media_binding_event_args_2_set_adaptive_media_source(WMECO_IMediaBindingEventArgs_2 *self, WMESTAD_AdaptiveMediaSource* mediaSource);
 
-/* Windows.Media.Core.IMediaBindingEventArgs2.SetStorageFile(file) */
 HRESULT wmeco_media_binding_event_args_2_set_storage_file(WMECO_IMediaBindingEventArgs_2 *self, WS_IStorageFile* file);
 
-/* Windows.Media.Core.IMediaBindingEventArgs3 */
-/* Windows.Media.Core.IMediaBindingEventArgs3.SetDownloadOperation(downloadOperation) */
 HRESULT wmeco_media_binding_event_args_3_set_download_operation(WMECO_IMediaBindingEventArgs_3 *self, WNEBA_DownloadOperation* downloadOperation);
 
-/* Windows.Media.Core.IMediaCueEventArgs */
-/* Windows.Media.Core.IMediaSource4 */
-/* Windows.Media.Core.IMediaSource4.get_AdaptiveMediaSource() */
 HRESULT wmeco_media_source_4_get__adaptive_media_source(WMECO_IMediaSource_4 *self, WMESTAD_AdaptiveMediaSource** value);
 
-/* Windows.Media.Core.IMediaSource4.get_MediaStreamSource() */
 HRESULT wmeco_media_source_4_get__media_stream_source(WMECO_IMediaSource_4 *self, WMECO_MediaStreamSource** value);
 
-/* Windows.Media.Core.IMediaSource4.get_MseStreamSource() */
 HRESULT wmeco_media_source_4_get__mse_stream_source(WMECO_IMediaSource_4 *self, WMECO_MseStreamSource** value);
 
-/* Windows.Media.Core.IMediaSource4.get_Uri() */
 HRESULT wmeco_media_source_4_get__uri(WMECO_IMediaSource_4 *self, WF_Uri** value);
 
-/* Windows.Media.Core.IMediaSource4.OpenAsync() */
 HRESULT wmeco_media_source_4_open_async(WMECO_IMediaSource_4 *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Core.IMediaSource5 */
-/* Windows.Media.Core.IMediaSource5.get_DownloadOperation() */
 HRESULT wmeco_media_source_5_get__download_operation(WMECO_IMediaSource_5 *self, WNEBA_DownloadOperation** value);
 
-/* Windows.Media.Core.IMediaSourceAppServiceConnection */
-/* Windows.Media.Core.IMediaSourceError */
-/* Windows.Media.Core.IMediaSourceOpenOperationCompletedEventArgs */
-/* Windows.Media.Core.IMediaSourceStateChangedEventArgs */
-/* Windows.Media.Core.IMediaStreamSample */
-/* Windows.Media.Core.IMediaStreamSample2 */
-/* Windows.Media.Core.IMediaStreamSample2.get_Direct3D11Surface() */
 HRESULT wmeco_media_stream_sample_2_get__direct3_d11_surface(WMECO_IMediaStreamSample_2 *self, WGRDIDI_IDirect3DSurface** value);
 
-/* Windows.Media.Core.IMediaStreamSampleProtectionProperties */
-/* Windows.Media.Core.IMediaStreamSource2 */
-/* Windows.Media.Core.IMediaStreamSource3 */
-/* Windows.Media.Core.IMediaStreamSource3.put_MaxSupportedPlaybackRate() */
 HRESULT wmeco_media_stream_source_3_put__max_supported_playback_rate(WMECO_IMediaStreamSource_3 *self, double* value);
 
-/* Windows.Media.Core.IMediaStreamSource3.get_MaxSupportedPlaybackRate() */
 HRESULT wmeco_media_stream_source_3_get__max_supported_playback_rate(WMECO_IMediaStreamSource_3 *self, double** value);
 
-/* Windows.Media.Core.IMediaStreamSource4 */
-/* Windows.Media.Core.IMediaStreamSource4.put_IsLive() */
 HRESULT wmeco_media_stream_source_4_put__is_live(WMECO_IMediaStreamSource_4 *self, BOOL value);
 
-/* Windows.Media.Core.IMediaStreamSource4.get_IsLive() */
 HRESULT wmeco_media_stream_source_4_get__is_live(WMECO_IMediaStreamSource_4 *self, BOOL *value);
 
-/* Windows.Media.Core.IMediaStreamSourceClosedEventArgs */
-/* Windows.Media.Core.IMediaStreamSourceSampleRenderedEventArgs */
-/* Windows.Media.Core.IMediaStreamSourceSampleRequest */
-/* Windows.Media.Core.IMediaStreamSourceSampleRequestDeferral */
-/* Windows.Media.Core.IMediaStreamSourceSampleRequestedEventArgs */
-/* Windows.Media.Core.IMediaStreamSourceStartingEventArgs */
-/* Windows.Media.Core.IMediaStreamSourceStartingRequest */
-/* Windows.Media.Core.IMediaStreamSourceStartingRequestDeferral */
-/* Windows.Media.Core.IMediaStreamSourceSwitchStreamsRequest */
-/* Windows.Media.Core.IMediaStreamSourceSwitchStreamsRequestDeferral */
-/* Windows.Media.Core.IMediaStreamSourceSwitchStreamsRequestedEventArgs */
-/* Windows.Media.Core.IMseSourceBuffer */
-/* Windows.Media.Core.IMseSourceBufferList */
-/* Windows.Media.Core.IMseStreamSource */
-/* Windows.Media.Core.IMseStreamSource2 */
-/* Windows.Media.Core.IMseStreamSource2.get_LiveSeekableRange() */
 HRESULT wmeco_mse_stream_source_2_get__live_seekable_range(WMECO_IMseStreamSource_2 *self, WMECO_MseTimeRange** value);
 
-/* Windows.Media.Core.IMseStreamSource2.put_LiveSeekableRange() */
 HRESULT wmeco_mse_stream_source_2_put__live_seekable_range(WMECO_IMseStreamSource_2 *self, WMECO_MseTimeRange* value);
 
-/* Windows.Media.Core.IFaceDetectionEffectFrame */
-/* Windows.Media.Core.ISceneAnalysisEffect */
-/* Windows.Media.Core.ISceneAnalysisEffectFrame */
-/* Windows.Media.Core.ISceneAnalysisEffectFrame2 */
-/* Windows.Media.Core.ISceneAnalysisEffectFrame2.get_AnalysisRecommendation() */
 HRESULT wmeco_scene_analysis_effect_frame_2_get__analysis_recommendation(WMECO_ISceneAnalysisEffectFrame_2 *self, WMECO_SceneAnalysisRecommendation *value);
 
-/* Windows.Media.Core.ISceneAnalyzedEventArgs */
-/* Windows.Media.Core.ISpeechCue */
-/* Windows.Media.Core.ITimedMetadataStreamDescriptor */
-/* Windows.Media.Core.ITimedMetadataTrack2 */
-/* Windows.Media.Core.ITimedMetadataTrack2.get_PlaybackItem() */
 HRESULT wmeco_timed_metadata_track_2_get__playback_item(WMECO_ITimedMetadataTrack_2 *self, WMEPL_MediaPlaybackItem** value);
 
-/* Windows.Media.Core.ITimedMetadataTrack2.get_Name() */
 HRESULT wmeco_timed_metadata_track_2_get__name(WMECO_ITimedMetadataTrack_2 *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.ITimedMetadataTrackError */
-/* Windows.Media.Core.ITimedMetadataTrackFailedEventArgs */
-/* Windows.Media.Core.ITimedTextBouten */
-/* Windows.Media.Core.ITimedTextCue */
-/* Windows.Media.Core.ITimedTextLine */
-/* Windows.Media.Core.ITimedTextRegion */
-/* Windows.Media.Core.ITimedTextRuby */
-/* Windows.Media.Core.ITimedTextSource */
-/* Windows.Media.Core.ITimedTextSourceResolveResultEventArgs */
-/* Windows.Media.Core.ITimedTextStyle */
-/* Windows.Media.Core.ITimedTextStyle2 */
-/* Windows.Media.Core.ITimedTextStyle2.get_FontStyle() */
 HRESULT wmeco_timed_text_style_2_get__font_style(WMECO_ITimedTextStyle_2 *self, WMECO_TimedTextFontStyle *value);
 
-/* Windows.Media.Core.ITimedTextStyle2.put_FontStyle() */
 HRESULT wmeco_timed_text_style_2_put__font_style(WMECO_ITimedTextStyle_2 *self, WMECO_TimedTextFontStyle value);
 
-/* Windows.Media.Core.ITimedTextStyle2.get_IsUnderlineEnabled() */
 HRESULT wmeco_timed_text_style_2_get__is_underline_enabled(WMECO_ITimedTextStyle_2 *self, BOOL *value);
 
-/* Windows.Media.Core.ITimedTextStyle2.put_IsUnderlineEnabled() */
 HRESULT wmeco_timed_text_style_2_put__is_underline_enabled(WMECO_ITimedTextStyle_2 *self, BOOL value);
 
-/* Windows.Media.Core.ITimedTextStyle2.get_IsLineThroughEnabled() */
 HRESULT wmeco_timed_text_style_2_get__is_line_through_enabled(WMECO_ITimedTextStyle_2 *self, BOOL *value);
 
-/* Windows.Media.Core.ITimedTextStyle2.put_IsLineThroughEnabled() */
 HRESULT wmeco_timed_text_style_2_put__is_line_through_enabled(WMECO_ITimedTextStyle_2 *self, BOOL value);
 
-/* Windows.Media.Core.ITimedTextStyle2.get_IsOverlineEnabled() */
 HRESULT wmeco_timed_text_style_2_get__is_overline_enabled(WMECO_ITimedTextStyle_2 *self, BOOL *value);
 
-/* Windows.Media.Core.ITimedTextStyle2.put_IsOverlineEnabled() */
 HRESULT wmeco_timed_text_style_2_put__is_overline_enabled(WMECO_ITimedTextStyle_2 *self, BOOL value);
 
-/* Windows.Media.Core.ITimedTextStyle3 */
-/* Windows.Media.Core.ITimedTextStyle3.get_Ruby() */
 HRESULT wmeco_timed_text_style_3_get__ruby(WMECO_ITimedTextStyle_3 *self, WMECO_TimedTextRuby** value);
 
-/* Windows.Media.Core.ITimedTextStyle3.get_Bouten() */
 HRESULT wmeco_timed_text_style_3_get__bouten(WMECO_ITimedTextStyle_3 *self, WMECO_TimedTextBouten** value);
 
-/* Windows.Media.Core.ITimedTextStyle3.get_IsTextCombined() */
 HRESULT wmeco_timed_text_style_3_get__is_text_combined(WMECO_ITimedTextStyle_3 *self, BOOL *value);
 
-/* Windows.Media.Core.ITimedTextStyle3.put_IsTextCombined() */
 HRESULT wmeco_timed_text_style_3_put__is_text_combined(WMECO_ITimedTextStyle_3 *self, BOOL value);
 
-/* Windows.Media.Core.ITimedTextStyle3.get_FontAngleInDegrees() */
 HRESULT wmeco_timed_text_style_3_get__font_angle_in_degrees(WMECO_ITimedTextStyle_3 *self, double *value);
 
-/* Windows.Media.Core.ITimedTextStyle3.put_FontAngleInDegrees() */
 HRESULT wmeco_timed_text_style_3_put__font_angle_in_degrees(WMECO_ITimedTextStyle_3 *self, double value);
 
-/* Windows.Media.Core.ITimedTextSubformat */
-/* Windows.Media.Core.IVideoStabilizationEffect */
-/* Windows.Media.Core.IVideoStabilizationEffectEnabledChangedEventArgs */
-/* Windows.Media.Core.IVideoStreamDescriptor */
-/* Windows.Media.Core.IVideoStreamDescriptor2 */
-/* Windows.Media.Core.IVideoStreamDescriptor2.Copy() */
 HRESULT wmeco_video_stream_descriptor_2_copy(WMECO_IVideoStreamDescriptor_2 *self, WMECO_VideoStreamDescriptor** out);
 
-/* Windows.Media.Core.IVideoTrack */
-/* Windows.Media.Core.IVideoTrackOpenFailedEventArgs */
-/* Windows.Media.Core.IVideoTrackSupportInfo */
-/* Windows.Media.Core.IFaceDetectionEffectDefinition */
-/* Windows.Media.Core.IFaceDetectionEffect */
-/* Windows.Media.Core.IFaceDetectedEventArgs */
-/* Windows.Media.Core.IHighDynamicRangeControl */
-/* Windows.Media.Core.IDataCue2 */
-/* Windows.Media.Core.IDataCue2.get_Properties() */
 HRESULT wmeco_data_cue_2_get__properties(WMECO_IDataCue_2 *self, WFOCO_PropertySet** value);
 
-/* Windows.Media.Core.ICodecQuery */
-/* Windows.Media.Core.ICodecInfo */
-/* Windows.Media.Core.IChapterCue */
-/* Windows.Media.Core.IAudioTrackSupportInfo */
-/* Windows.Media.Core.IAudioTrackOpenFailedEventArgs */
-/* Windows.Media.Core.IAudioTrack */
-/* Windows.Media.Core.IAudioStreamDescriptor */
-/* Windows.Media.Core.IAudioStreamDescriptor2 */
-/* Windows.Media.Core.IAudioStreamDescriptor2.put_LeadingEncoderPadding() */
 HRESULT wmeco_audio_stream_descriptor_2_put__leading_encoder_padding(WMECO_IAudioStreamDescriptor_2 *self, uint32_t* value);
 
-/* Windows.Media.Core.IAudioStreamDescriptor2.get_LeadingEncoderPadding() */
 HRESULT wmeco_audio_stream_descriptor_2_get__leading_encoder_padding(WMECO_IAudioStreamDescriptor_2 *self, uint32_t** value);
 
-/* Windows.Media.Core.IAudioStreamDescriptor2.put_TrailingEncoderPadding() */
 HRESULT wmeco_audio_stream_descriptor_2_put__trailing_encoder_padding(WMECO_IAudioStreamDescriptor_2 *self, uint32_t* value);
 
-/* Windows.Media.Core.IAudioStreamDescriptor2.get_TrailingEncoderPadding() */
 HRESULT wmeco_audio_stream_descriptor_2_get__trailing_encoder_padding(WMECO_IAudioStreamDescriptor_2 *self, uint32_t** value);
 
-/* Windows.Media.Core.IMediaStreamDescriptor2 */
-/* Windows.Media.Core.IMediaStreamDescriptor2.put_Label() */
 HRESULT wmeco_media_stream_descriptor_2_put__label(WMECO_IMediaStreamDescriptor_2 *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.IMediaStreamDescriptor2.get_Label() */
 HRESULT wmeco_media_stream_descriptor_2_get__label(WMECO_IMediaStreamDescriptor_2 *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.IAudioStreamDescriptor3 */
-/* Windows.Media.Core.IAudioStreamDescriptor3.Copy() */
 HRESULT wmeco_audio_stream_descriptor_3_copy(WMECO_IAudioStreamDescriptor_3 *self, WMECO_AudioStreamDescriptor** out);
 
-/* Windows.Media.Core.IMediaStreamSourceClosedRequest */
-/* Windows.Media.Core.IHighDynamicRangeOutput */
-/* Windows.Media.Core.IMediaSource3 */
-/* Windows.Media.Core.IMediaSource3.get_State() */
 HRESULT wmeco_media_source_3_get__state(WMECO_IMediaSource_3 *self, WMECO_MediaSourceState *value);
 
-/* Windows.Media.Core.IMediaSource3.Reset() */
 HRESULT wmeco_media_source_3_reset(WMECO_IMediaSource_3 *self);
 
-/* Windows.Media.Core.IMediaStreamSource */
-/* Windows.Media.Core.ITimedMetadataTrack */
-/* Windows.Media.Core.IDataCue */
-/* Windows.Media.Core.IMediaStreamDescriptor */
-/* Windows.Media.Core.IMediaStreamDescriptor.get_IsSelected() */
 HRESULT wmeco_media_stream_descriptor_get__is_selected(WMECO_IMediaStreamDescriptor *self, BOOL *value);
 
-/* Windows.Media.Core.IMediaStreamDescriptor.put_Name() */
 HRESULT wmeco_media_stream_descriptor_put__name(WMECO_IMediaStreamDescriptor *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.IMediaStreamDescriptor.get_Name() */
 HRESULT wmeco_media_stream_descriptor_get__name(WMECO_IMediaStreamDescriptor *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.IMediaStreamDescriptor.put_Language() */
 HRESULT wmeco_media_stream_descriptor_put__language(WMECO_IMediaStreamDescriptor *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.IMediaStreamDescriptor.get_Language() */
 HRESULT wmeco_media_stream_descriptor_get__language(WMECO_IMediaStreamDescriptor *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.IMediaSource2 */
-/* Windows.Media.Core.IMediaSource2.get_CustomProperties() */
 HRESULT wmeco_media_source_2_get__custom_properties(WMECO_IMediaSource_2 *self, WFOCO_ValueSet** value);
 
-/* Windows.Media.Core.IMediaSource2.get_Duration() */
 HRESULT wmeco_media_source_2_get__duration(WMECO_IMediaSource_2 *self, WF_TimeSpan** value);
 
-/* Windows.Media.Core.IMediaSource2.get_IsOpen() */
 HRESULT wmeco_media_source_2_get__is_open(WMECO_IMediaSource_2 *self, BOOL *value);
 
-/* Windows.Media.Core.IMediaSource2.get_ExternalTimedTextSources() */
 HRESULT wmeco_media_source_2_get__external_timed_text_sources(WMECO_IMediaSource_2 *self, WFOCO_IObservableVector_WMECO_TimedTextSource** value);
 
-/* Windows.Media.Core.IMediaSource2.get_ExternalTimedMetadataTracks() */
 HRESULT wmeco_media_source_2_get__external_timed_metadata_tracks(WMECO_IMediaSource_2 *self, WFOCO_IObservableVector_WMECO_TimedMetadataTrack** value);
 
-/* Windows.Media.Core.IMediaTrack */
-/* Windows.Media.Core.IMediaTrack.get_Id() */
 HRESULT wmeco_media_track_get__id(WMECO_IMediaTrack *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.IMediaTrack.get_Language() */
 HRESULT wmeco_media_track_get__language(WMECO_IMediaTrack *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.IMediaTrack.get_TrackKind() */
 HRESULT wmeco_media_track_get__track_kind(WMECO_IMediaTrack *self, WMECO_MediaTrackKind *value);
 
-/* Windows.Media.Core.IMediaTrack.put_Label() */
 HRESULT wmeco_media_track_put__label(WMECO_IMediaTrack *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.IMediaTrack.get_Label() */
 HRESULT wmeco_media_track_get__label(WMECO_IMediaTrack *self, cwinrt_hstring *value);
 
-/* Windows.Media.Core.IMediaCue */
-/* Windows.Media.Core.IMediaCue.put_StartTime() */
 HRESULT wmeco_media_cue_put__start_time(WMECO_IMediaCue *self, WF_TimeSpan value);
 
-/* Windows.Media.Core.IMediaCue.get_StartTime() */
 HRESULT wmeco_media_cue_get__start_time(WMECO_IMediaCue *self, WF_TimeSpan *value);
 
-/* Windows.Media.Core.IMediaCue.put_Duration() */
 HRESULT wmeco_media_cue_put__duration(WMECO_IMediaCue *self, WF_TimeSpan value);
 
-/* Windows.Media.Core.IMediaCue.get_Duration() */
 HRESULT wmeco_media_cue_get__duration(WMECO_IMediaCue *self, WF_TimeSpan *value);
 
-/* Windows.Media.Core.IMediaCue.put_Id() */
 HRESULT wmeco_media_cue_put__id(WMECO_IMediaCue *self, cwinrt_hstring value);
 
-/* Windows.Media.Core.IMediaCue.get_Id() */
 HRESULT wmeco_media_cue_get__id(WMECO_IMediaCue *self, cwinrt_hstring *value);
 
 #endif /* CWINRT_WINDOWS_MEDIA_CORE_H */

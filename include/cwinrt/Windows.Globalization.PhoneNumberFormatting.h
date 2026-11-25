@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WGLPH_IPhoneNumberFormatterStatics WGLPH_IPhoneNumberFormatterStatics;
 typedef struct WGLPH_IPhoneNumberInfoFactory WGLPH_IPhoneNumberInfoFactory;
 typedef struct WGLPH_IPhoneNumberInfoStatics WGLPH_IPhoneNumberInfoStatics;
@@ -70,7 +69,6 @@ typedef enum WGLPH_PredictedPhoneNumberKind {
 } WGLPH_PredictedPhoneNumberKind;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -95,100 +93,62 @@ static const IID CWINRT_IID_WGLPH_IPhoneNumberFormatter CWINRT_MAYBE_UNUSED = { 
 static const IID CWINRT_IID_WGLPH_IPhoneNumberInfo CWINRT_MAYBE_UNUSED = { 0x1C7CE4DD, 0xC8B4, 0x4EA3, { 0x9A, 0xEF, 0xB3, 0x42, 0xE2, 0xC5, 0xB4, 0x17 } };
 #endif
 
-/* Methods */
-
-/* Windows.Globalization.PhoneNumberFormatting.IPhoneNumberFormatterStatics */
-/* Windows.Globalization.PhoneNumberFormatting.IPhoneNumberFormatterStatics.TryCreate(regionCode, phoneNumber) */
 HRESULT wglph_phone_number_formatter_statics_try_create(WGLPH_IPhoneNumberFormatterStatics *self, cwinrt_hstring regionCode, WGLPH_PhoneNumberFormatter* phoneNumber);
 
-/* Windows.Globalization.PhoneNumberFormatting.IPhoneNumberFormatterStatics.GetCountryCodeForRegion(regionCode) */
 HRESULT wglph_phone_number_formatter_statics_get_country_code_for_region(WGLPH_IPhoneNumberFormatterStatics *self, cwinrt_hstring regionCode, int32_t *out);
 
-/* Windows.Globalization.PhoneNumberFormatting.IPhoneNumberFormatterStatics.GetNationalDirectDialingPrefixForRegion(regionCode, stripNonDigit) */
 HRESULT wglph_phone_number_formatter_statics_get_national_direct_dialing_prefix_for_region(WGLPH_IPhoneNumberFormatterStatics *self, cwinrt_hstring regionCode, BOOL stripNonDigit, cwinrt_hstring *out);
 
-/* Windows.Globalization.PhoneNumberFormatting.IPhoneNumberFormatterStatics.WrapWithLeftToRightMarkers(number) */
 HRESULT wglph_phone_number_formatter_statics_wrap_with_left_to_right_markers(WGLPH_IPhoneNumberFormatterStatics *self, cwinrt_hstring number, cwinrt_hstring *out);
 
-/* Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfoFactory */
-/* Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfoFactory.Create(number) */
 HRESULT wglph_phone_number_info_factory_create(WGLPH_IPhoneNumberInfoFactory *self, cwinrt_hstring number, WGLPH_PhoneNumberInfo** out);
 
-/* Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfoStatics */
-/* Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfoStatics.TryParse(input, phoneNumber) */
 HRESULT wglph_phone_number_info_statics_try_parse(WGLPH_IPhoneNumberInfoStatics *self, cwinrt_hstring input, WGLPH_PhoneNumberInfo* phoneNumber, WGLPH_PhoneNumberParseResult *out);
 
-/* Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfoStatics.TryParse(input, regionCode, phoneNumber) */
 HRESULT wglph_phone_number_info_statics_try_parse_str_str_p_phone_number_parse_result(WGLPH_IPhoneNumberInfoStatics *self, cwinrt_hstring input, cwinrt_hstring regionCode, WGLPH_PhoneNumberInfo* phoneNumber, WGLPH_PhoneNumberParseResult *out);
 
-/* activate Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter */
 HRESULT wglph_phone_number_formatter_new(WGLPH_PhoneNumberFormatter **out);
 
-/* Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter */
-/* Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter.Format(number) */
 HRESULT wglph_phone_number_formatter_format(WGLPH_PhoneNumberFormatter *self, WGLPH_PhoneNumberInfo* number, cwinrt_hstring *out);
 
-/* Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter.Format(number, numberFormat) */
 HRESULT wglph_phone_number_formatter_format_p_phone_number_format_str(WGLPH_PhoneNumberFormatter *self, WGLPH_PhoneNumberInfo* number, WGLPH_PhoneNumberFormat numberFormat, cwinrt_hstring *out);
 
-/* Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter.FormatPartialString(number) */
 HRESULT wglph_phone_number_formatter_format_partial_string(WGLPH_PhoneNumberFormatter *self, cwinrt_hstring number, cwinrt_hstring *out);
 
-/* Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter.FormatString(number) */
 HRESULT wglph_phone_number_formatter_format_string(WGLPH_PhoneNumberFormatter *self, cwinrt_hstring number, cwinrt_hstring *out);
 
-/* Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter.FormatStringWithLeftToRightMarkers(number) */
 HRESULT wglph_phone_number_formatter_format_string_with_left_to_right_markers(WGLPH_PhoneNumberFormatter *self, cwinrt_hstring number, cwinrt_hstring *out);
 
-/* Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter.TryCreate(regionCode, phoneNumber) */
 HRESULT wglph_phone_number_formatter_try_create(cwinrt_hstring regionCode, WGLPH_PhoneNumberFormatter* phoneNumber);
 
-/* Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter.GetCountryCodeForRegion(regionCode) */
 HRESULT wglph_phone_number_formatter_get_country_code_for_region(cwinrt_hstring regionCode, int32_t *out);
 
-/* Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter.GetNationalDirectDialingPrefixForRegion(regionCode, stripNonDigit) */
 HRESULT wglph_phone_number_formatter_get_national_direct_dialing_prefix_for_region(cwinrt_hstring regionCode, BOOL stripNonDigit, cwinrt_hstring *out);
 
-/* Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter.WrapWithLeftToRightMarkers(number) */
 HRESULT wglph_phone_number_formatter_wrap_with_left_to_right_markers(cwinrt_hstring number, cwinrt_hstring *out);
 
-/* activate Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo */
 HRESULT wglph_phone_number_info_new(WGLPH_PhoneNumberInfo **out);
 
-/* Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo */
-/* Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo.get_CountryCode() */
 HRESULT wglph_phone_number_info_get__country_code(WGLPH_PhoneNumberInfo *self, int32_t *value);
 
-/* Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo.get_PhoneNumber() */
 HRESULT wglph_phone_number_info_get__phone_number(WGLPH_PhoneNumberInfo *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo.GetLengthOfGeographicalAreaCode() */
 HRESULT wglph_phone_number_info_get_length_of_geographical_area_code(WGLPH_PhoneNumberInfo *self, int32_t *out);
 
-/* Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo.GetNationalSignificantNumber() */
 HRESULT wglph_phone_number_info_get_national_significant_number(WGLPH_PhoneNumberInfo *self, cwinrt_hstring *out);
 
-/* Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo.GetLengthOfNationalDestinationCode() */
 HRESULT wglph_phone_number_info_get_length_of_national_destination_code(WGLPH_PhoneNumberInfo *self, int32_t *out);
 
-/* Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo.PredictNumberKind() */
 HRESULT wglph_phone_number_info_predict_number_kind(WGLPH_PhoneNumberInfo *self, WGLPH_PredictedPhoneNumberKind *out);
 
-/* Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo.GetGeographicRegionCode() */
 HRESULT wglph_phone_number_info_get_geographic_region_code(WGLPH_PhoneNumberInfo *self, cwinrt_hstring *out);
 
-/* Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo.CheckNumberMatch(otherNumber) */
 HRESULT wglph_phone_number_info_check_number_match(WGLPH_PhoneNumberInfo *self, WGLPH_PhoneNumberInfo* otherNumber, WGLPH_PhoneNumberMatchResult *out);
 
-/* Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo.ToString() */
 HRESULT wglph_phone_number_info_to_string(WGLPH_PhoneNumberInfo *self, cwinrt_hstring *out);
 
-/* Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo.TryParse(input, phoneNumber) */
 HRESULT wglph_phone_number_info_try_parse(cwinrt_hstring input, WGLPH_PhoneNumberInfo* phoneNumber, WGLPH_PhoneNumberParseResult *out);
 
-/* Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo.TryParse(input, regionCode, phoneNumber) */
 HRESULT wglph_phone_number_info_try_parse_str_str_p_phone_number_parse_result(cwinrt_hstring input, cwinrt_hstring regionCode, WGLPH_PhoneNumberInfo* phoneNumber, WGLPH_PhoneNumberParseResult *out);
 
-/* Windows.Globalization.PhoneNumberFormatting.IPhoneNumberFormatter */
-/* Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfo */
 #endif /* CWINRT_WINDOWS_GLOBALIZATION_PHONENUMBERFORMATTING_H */

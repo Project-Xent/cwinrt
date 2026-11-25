@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.UI.Input.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WUICO_CoreDispatcher
 #define CWINRT_FWD_WUICO_CoreDispatcher
 typedef struct WUICO_CoreDispatcher WUICO_CoreDispatcher;
@@ -27,13 +26,11 @@ typedef struct WSY_DispatcherQueue WSY_DispatcherQueue;
 typedef struct WAPCO_CoreApplicationView WAPCO_CoreApplicationView;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUIINCO_IRadialControllerIndependentInputSourceStatics WUIINCO_IRadialControllerIndependentInputSourceStatics;
 typedef struct WUIINCO_RadialControllerIndependentInputSource WUIINCO_RadialControllerIndependentInputSource;
 typedef struct WUIINCO_IRadialControllerIndependentInputSource WUIINCO_IRadialControllerIndependentInputSource;
 typedef struct WUIINCO_IRadialControllerIndependentInputSource_2 WUIINCO_IRadialControllerIndependentInputSource_2;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WAPCO_CoreApplicationView
 #define CWINRT_FWD_WAPCO_CoreApplicationView
 typedef struct WAPCO_CoreApplicationView WAPCO_CoreApplicationView;
@@ -51,7 +48,6 @@ typedef struct WUICO_CoreDispatcher WUICO_CoreDispatcher;
 typedef struct WSY_DispatcherQueue WSY_DispatcherQueue;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -68,31 +64,18 @@ static const IID CWINRT_IID_WUIINCO_IRadialControllerIndependentInputSource CWIN
 static const IID CWINRT_IID_WUIINCO_IRadialControllerIndependentInputSource_2 CWINRT_MAYBE_UNUSED = { 0x7073AAD8, 0x35F3, 0x4EEB, { 0x87, 0x51, 0xBE, 0x4D, 0x0A, 0x66, 0xFA, 0xF4 } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.Input.Core.IRadialControllerIndependentInputSourceStatics */
-/* Windows.UI.Input.Core.IRadialControllerIndependentInputSourceStatics.CreateForView(view) */
 HRESULT wuiinco_radial_controller_independent_input_source_statics_create_for_view(WUIINCO_IRadialControllerIndependentInputSourceStatics *self, WAPCO_CoreApplicationView* view, WUIINCO_RadialControllerIndependentInputSource** out);
 
-/* activate Windows.UI.Input.Core.RadialControllerIndependentInputSource */
 HRESULT wuiinco_radial_controller_independent_input_source_new(WUIINCO_RadialControllerIndependentInputSource **out);
 
-/* Windows.UI.Input.Core.RadialControllerIndependentInputSource */
-/* Windows.UI.Input.Core.RadialControllerIndependentInputSource.get_Controller() */
 HRESULT wuiinco_radial_controller_independent_input_source_get__controller(WUIINCO_RadialControllerIndependentInputSource *self, WUIIN_RadialController** value);
 
-/* Windows.UI.Input.Core.RadialControllerIndependentInputSource.get_Dispatcher() */
 HRESULT wuiinco_radial_controller_independent_input_source_get__dispatcher(WUIINCO_RadialControllerIndependentInputSource *self, WUICO_CoreDispatcher** value);
 
-/* Windows.UI.Input.Core.RadialControllerIndependentInputSource.get_DispatcherQueue() */
 HRESULT wuiinco_radial_controller_independent_input_source_get__dispatcher_queue(WUIINCO_RadialControllerIndependentInputSource *self, WSY_DispatcherQueue** value);
 
-/* Windows.UI.Input.Core.RadialControllerIndependentInputSource.CreateForView(view) */
 HRESULT wuiinco_radial_controller_independent_input_source_create_for_view(WAPCO_CoreApplicationView* view, WUIINCO_RadialControllerIndependentInputSource** out);
 
-/* Windows.UI.Input.Core.IRadialControllerIndependentInputSource */
-/* Windows.UI.Input.Core.IRadialControllerIndependentInputSource2 */
-/* Windows.UI.Input.Core.IRadialControllerIndependentInputSource2.get_DispatcherQueue() */
 HRESULT wuiinco_radial_controller_independent_input_source_2_get__dispatcher_queue(WUIINCO_IRadialControllerIndependentInputSource_2 *self, WSY_DispatcherQueue** value);
 
 #endif /* CWINRT_WINDOWS_UI_INPUT_CORE_H */

@@ -15,7 +15,6 @@
 #include <cwinrt/Windows.Storage.Streams.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStreamWithContentType
 #define CWINRT_FWD_WSTST_IRandomAccessStreamWithContentType
 typedef struct WSTST_IRandomAccessStreamWithContentType WSTST_IRandomAccessStreamWithContentType;
@@ -49,7 +48,6 @@ typedef struct WSTST_IBuffer WSTST_IBuffer;
 typedef struct WAPBA_DeviceWatcherTrigger WAPBA_DeviceWatcherTrigger;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDEEN_DeviceInformation WDEEN_DeviceInformation;
 typedef struct WDEEN_DeviceInformationCollection WDEEN_DeviceInformationCollection;
 typedef struct WDEEN_DeviceInformationCustomPairing WDEEN_DeviceInformationCustomPairing;
@@ -112,7 +110,6 @@ typedef struct WDEEN_IDeviceDisconnectButtonClickedEventArgs WDEEN_IDeviceDiscon
 typedef struct WDEEN_IEnclosureLocation WDEEN_IEnclosureLocation;
 typedef struct WDEEN_IDeviceAccessChangedEventArgs WDEEN_IDeviceAccessChangedEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IMapView_HSTRING_Object
 #define CWINRT_FWD_WFOCO_IMapView_HSTRING_Object
 typedef struct WFOCO_IMapView_HSTRING_Object WFOCO_IMapView_HSTRING_Object;
@@ -421,7 +418,6 @@ typedef enum WDEEN_DeviceAccessStatus {
 } WDEEN_DeviceAccessStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -582,132 +578,86 @@ static const IID CWINRT_IID_WDEEN_IEnclosureLocation CWINRT_MAYBE_UNUSED = { 0x4
 static const IID CWINRT_IID_WDEEN_IDeviceAccessChangedEventArgs CWINRT_MAYBE_UNUSED = { 0xDEDA0BCC, 0x4F9D, 0x4F58, { 0x9D, 0xBA, 0xA9, 0xBC, 0x80, 0x04, 0x08, 0xD5 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Devices.Enumeration.DeviceInformation */
 HRESULT wdeen_device_information_new(WDEEN_DeviceInformation **out);
 
-/* Windows.Devices.Enumeration.DeviceInformation */
-/* Windows.Devices.Enumeration.DeviceInformation.get_Id() */
 HRESULT wdeen_device_information_get__id(WDEEN_DeviceInformation *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Enumeration.DeviceInformation.get_Name() */
 HRESULT wdeen_device_information_get__name(WDEEN_DeviceInformation *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Enumeration.DeviceInformation.get_IsEnabled() */
 HRESULT wdeen_device_information_get__is_enabled(WDEEN_DeviceInformation *self, BOOL *value);
 
-/* Windows.Devices.Enumeration.DeviceInformation.get_IsDefault() */
 HRESULT wdeen_device_information_get__is_default(WDEEN_DeviceInformation *self, BOOL *value);
 
-/* Windows.Devices.Enumeration.DeviceInformation.get_EnclosureLocation() */
 HRESULT wdeen_device_information_get__enclosure_location(WDEEN_DeviceInformation *self, WDEEN_EnclosureLocation** value);
 
-/* Windows.Devices.Enumeration.DeviceInformation.get_Properties() */
 HRESULT wdeen_device_information_get__properties(WDEEN_DeviceInformation *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* Windows.Devices.Enumeration.DeviceInformation.Update(updateInfo) */
 HRESULT wdeen_device_information_update(WDEEN_DeviceInformation *self, WDEEN_DeviceInformationUpdate* updateInfo);
 
-/* Windows.Devices.Enumeration.DeviceInformation.GetThumbnailAsync() */
 HRESULT wdeen_device_information_get_thumbnail_async(WDEEN_DeviceInformation *self, WF_IAsyncOperation_WDEEN_DeviceThumbnail** out);
 
-/* Windows.Devices.Enumeration.DeviceInformation.GetGlyphThumbnailAsync() */
 HRESULT wdeen_device_information_get_glyph_thumbnail_async(WDEEN_DeviceInformation *self, WF_IAsyncOperation_WDEEN_DeviceThumbnail** out);
 
-/* Windows.Devices.Enumeration.DeviceInformation.get_Kind() */
 HRESULT wdeen_device_information_get__kind(WDEEN_DeviceInformation *self, WDEEN_DeviceInformationKind *value);
 
-/* Windows.Devices.Enumeration.DeviceInformation.get_Pairing() */
 HRESULT wdeen_device_information_get__pairing(WDEEN_DeviceInformation *self, WDEEN_DeviceInformationPairing** value);
 
-/* Windows.Devices.Enumeration.DeviceInformation.CreateFromIdAsync(deviceId, additionalProperties, kind, settings) */
 HRESULT wdeen_device_information_create_from_id_async_str_p_device_information_kind_p_p(cwinrt_hstring deviceId, WFOCO_IIterable_HSTRING* additionalProperties, WDEEN_DeviceInformationKind kind, WDEEN_IDeviceEnumerationSettings* settings, WF_IAsyncOperation_WDEEN_DeviceInformation** out);
 
-/* Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(aqsFilter, additionalProperties, kind, settings) */
 HRESULT wdeen_device_information_find_all_async_str_p_device_information_kind_p_p(cwinrt_hstring aqsFilter, WFOCO_IIterable_HSTRING* additionalProperties, WDEEN_DeviceInformationKind kind, WDEEN_IDeviceEnumerationSettings* settings, WF_IAsyncOperation_WDEEN_DeviceInformationCollection** out);
 
-/* Windows.Devices.Enumeration.DeviceInformation.CreateWatcher(aqsFilter, additionalProperties, kind, settings) */
 HRESULT wdeen_device_information_create_watcher_str_p_device_information_kind_p_p(cwinrt_hstring aqsFilter, WFOCO_IIterable_HSTRING* additionalProperties, WDEEN_DeviceInformationKind kind, WDEEN_IDeviceEnumerationSettings* settings, WDEEN_DeviceWatcher** out);
 
-/* Windows.Devices.Enumeration.DeviceInformation.GetAqsFilterFromDeviceClass(deviceClass) */
 HRESULT wdeen_device_information_get_aqs_filter_from_device_class(WDEEN_DeviceClass deviceClass, cwinrt_hstring *out);
 
-/* Windows.Devices.Enumeration.DeviceInformation.CreateFromIdAsync(deviceId, additionalProperties, kind) */
 HRESULT wdeen_device_information_create_from_id_async_str_p_device_information_kind_p(cwinrt_hstring deviceId, WFOCO_IIterable_HSTRING* additionalProperties, WDEEN_DeviceInformationKind kind, WF_IAsyncOperation_WDEEN_DeviceInformation** out);
 
-/* Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(aqsFilter, additionalProperties, kind) */
 HRESULT wdeen_device_information_find_all_async_str_p_device_information_kind_p(cwinrt_hstring aqsFilter, WFOCO_IIterable_HSTRING* additionalProperties, WDEEN_DeviceInformationKind kind, WF_IAsyncOperation_WDEEN_DeviceInformationCollection** out);
 
-/* Windows.Devices.Enumeration.DeviceInformation.CreateWatcher(aqsFilter, additionalProperties, kind) */
 HRESULT wdeen_device_information_create_watcher_str_p_device_information_kind_p(cwinrt_hstring aqsFilter, WFOCO_IIterable_HSTRING* additionalProperties, WDEEN_DeviceInformationKind kind, WDEEN_DeviceWatcher** out);
 
-/* Windows.Devices.Enumeration.DeviceInformation.CreateFromIdAsync(deviceId) */
 HRESULT wdeen_device_information_create_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDEEN_DeviceInformation** out);
 
-/* Windows.Devices.Enumeration.DeviceInformation.CreateFromIdAsync(deviceId, additionalProperties) */
 HRESULT wdeen_device_information_create_from_id_async_str_p_p(cwinrt_hstring deviceId, WFOCO_IIterable_HSTRING* additionalProperties, WF_IAsyncOperation_WDEEN_DeviceInformation** out);
 
-/* Windows.Devices.Enumeration.DeviceInformation.FindAllAsync() */
 HRESULT wdeen_device_information_find_all_async_p(WF_IAsyncOperation_WDEEN_DeviceInformationCollection** out);
 
-/* Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(deviceClass) */
 HRESULT wdeen_device_information_find_all_async(WDEEN_DeviceClass deviceClass, WF_IAsyncOperation_WDEEN_DeviceInformationCollection** out);
 
-/* Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(aqsFilter) */
 HRESULT wdeen_device_information_find_all_async_str_p(cwinrt_hstring aqsFilter, WF_IAsyncOperation_WDEEN_DeviceInformationCollection** out);
 
-/* Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(aqsFilter, additionalProperties) */
 HRESULT wdeen_device_information_find_all_async_str_p_p(cwinrt_hstring aqsFilter, WFOCO_IIterable_HSTRING* additionalProperties, WF_IAsyncOperation_WDEEN_DeviceInformationCollection** out);
 
-/* Windows.Devices.Enumeration.DeviceInformation.CreateWatcher() */
 HRESULT wdeen_device_information_create_watcher_p(WDEEN_DeviceWatcher** out);
 
-/* Windows.Devices.Enumeration.DeviceInformation.CreateWatcher(deviceClass) */
 HRESULT wdeen_device_information_create_watcher(WDEEN_DeviceClass deviceClass, WDEEN_DeviceWatcher** out);
 
-/* Windows.Devices.Enumeration.DeviceInformation.CreateWatcher(aqsFilter) */
 HRESULT wdeen_device_information_create_watcher_str_p(cwinrt_hstring aqsFilter, WDEEN_DeviceWatcher** out);
 
-/* Windows.Devices.Enumeration.DeviceInformation.CreateWatcher(aqsFilter, additionalProperties) */
 HRESULT wdeen_device_information_create_watcher_str_p_p(cwinrt_hstring aqsFilter, WFOCO_IIterable_HSTRING* additionalProperties, WDEEN_DeviceWatcher** out);
 
-/* activate Windows.Devices.Enumeration.DeviceInformationCollection */
 HRESULT wdeen_device_information_collection_new(WDEEN_DeviceInformationCollection **out);
 
-/* Windows.Devices.Enumeration.DeviceInformationCollection */
-/* Windows.Devices.Enumeration.DeviceInformationCollection.GetAt(index) */
 HRESULT wdeen_device_information_collection_get_at(WDEEN_DeviceInformationCollection *self, uint32_t index, WDEEN_DeviceInformation** out);
 
-/* Windows.Devices.Enumeration.DeviceInformationCollection.get_Size() */
 HRESULT wdeen_device_information_collection_get__size(WDEEN_DeviceInformationCollection *self, uint32_t *value);
 
-/* Windows.Devices.Enumeration.DeviceInformationCollection.IndexOf(index) */
 HRESULT wdeen_device_information_collection_index_of(WDEEN_DeviceInformationCollection *self, WDEEN_DeviceInformation* value, uint32_t index, BOOL *out);
 
-/* Windows.Devices.Enumeration.DeviceInformationCollection.GetMany(startIndex, items) */
 HRESULT wdeen_device_information_collection_get_many(WDEEN_DeviceInformationCollection *self, uint32_t startIndex, WDEEN_DeviceInformation *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Devices.Enumeration.DeviceInformationCollection.First() */
 HRESULT wdeen_device_information_collection_first(WDEEN_DeviceInformationCollection *self, WFOCO_IIterator_WDEEN_DeviceInformation** out);
 
-/* activate Windows.Devices.Enumeration.DeviceInformationCustomPairing */
 HRESULT wdeen_device_information_custom_pairing_new(WDEEN_DeviceInformationCustomPairing **out);
 
-/* Windows.Devices.Enumeration.DeviceInformationCustomPairing */
-/* Windows.Devices.Enumeration.DeviceInformationCustomPairing.PairAsync(pairingKindsSupported) */
 HRESULT wdeen_device_information_custom_pairing_pair_async(WDEEN_DeviceInformationCustomPairing *self, WDEEN_DevicePairingKinds pairingKindsSupported, WF_IAsyncOperation_WDEEN_DevicePairingResult** out);
 
-/* Windows.Devices.Enumeration.DeviceInformationCustomPairing.PairAsync(pairingKindsSupported, minProtectionLevel) */
 HRESULT wdeen_device_information_custom_pairing_pair_async_device_pairing_kinds_device_pairing__09b35498(WDEEN_DeviceInformationCustomPairing *self, WDEEN_DevicePairingKinds pairingKindsSupported, WDEEN_DevicePairingProtectionLevel minProtectionLevel, WF_IAsyncOperation_WDEEN_DevicePairingResult** out);
 
-/* Windows.Devices.Enumeration.DeviceInformationCustomPairing.PairAsync(pairingKindsSupported, minProtectionLevel, devicePairingSettings) */
 HRESULT wdeen_device_information_custom_pairing_pair_async_device_pairing_kinds_device_pairing__9482826f(WDEEN_DeviceInformationCustomPairing *self, WDEEN_DevicePairingKinds pairingKindsSupported, WDEEN_DevicePairingProtectionLevel minProtectionLevel, WDEEN_IDevicePairingSettings* devicePairingSettings, WF_IAsyncOperation_WDEEN_DevicePairingResult** out);
 
-/* Windows.Devices.Enumeration.DeviceInformationCustomPairing.AddPairingSetMember(device) */
 HRESULT wdeen_device_information_custom_pairing_add_pairing_set_member(WDEEN_DeviceInformationCustomPairing *self, WDEEN_DeviceInformation* device);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdeen_device_information_custom_pairing_on_pairing_requested(WDEEN_DeviceInformationCustomPairing *self, cwinrt_event_fn fn, void *ctx);
@@ -716,136 +666,88 @@ void wdeen_device_information_custom_pairing_off_pairing_requested(WDEEN_DeviceI
 cwinrt_token wdeen_device_information_custom_pairing_on_pairing_set_members_requested(WDEEN_DeviceInformationCustomPairing *self, cwinrt_event_fn fn, void *ctx);
 void wdeen_device_information_custom_pairing_off_pairing_set_members_requested(WDEEN_DeviceInformationCustomPairing *self, cwinrt_token token);
 
-/* activate Windows.Devices.Enumeration.DeviceInformationPairing */
 HRESULT wdeen_device_information_pairing_new(WDEEN_DeviceInformationPairing **out);
 
-/* Windows.Devices.Enumeration.DeviceInformationPairing */
-/* Windows.Devices.Enumeration.DeviceInformationPairing.get_IsPaired() */
 HRESULT wdeen_device_information_pairing_get__is_paired(WDEEN_DeviceInformationPairing *self, BOOL *value);
 
-/* Windows.Devices.Enumeration.DeviceInformationPairing.get_CanPair() */
 HRESULT wdeen_device_information_pairing_get__can_pair(WDEEN_DeviceInformationPairing *self, BOOL *value);
 
-/* Windows.Devices.Enumeration.DeviceInformationPairing.PairAsync() */
 HRESULT wdeen_device_information_pairing_pair_async(WDEEN_DeviceInformationPairing *self, WF_IAsyncOperation_WDEEN_DevicePairingResult** out);
 
-/* Windows.Devices.Enumeration.DeviceInformationPairing.PairAsync(minProtectionLevel) */
 HRESULT wdeen_device_information_pairing_pair_async_device_pairing_protection_level_p(WDEEN_DeviceInformationPairing *self, WDEEN_DevicePairingProtectionLevel minProtectionLevel, WF_IAsyncOperation_WDEEN_DevicePairingResult** out);
 
-/* Windows.Devices.Enumeration.DeviceInformationPairing.get_ProtectionLevel() */
 HRESULT wdeen_device_information_pairing_get__protection_level(WDEEN_DeviceInformationPairing *self, WDEEN_DevicePairingProtectionLevel *value);
 
-/* Windows.Devices.Enumeration.DeviceInformationPairing.get_Custom() */
 HRESULT wdeen_device_information_pairing_get__custom(WDEEN_DeviceInformationPairing *self, WDEEN_DeviceInformationCustomPairing** value);
 
-/* Windows.Devices.Enumeration.DeviceInformationPairing.PairAsync(minProtectionLevel, devicePairingSettings) */
 HRESULT wdeen_device_information_pairing_pair_async_device_pairing_protection_level_p_p(WDEEN_DeviceInformationPairing *self, WDEEN_DevicePairingProtectionLevel minProtectionLevel, WDEEN_IDevicePairingSettings* devicePairingSettings, WF_IAsyncOperation_WDEEN_DevicePairingResult** out);
 
-/* Windows.Devices.Enumeration.DeviceInformationPairing.UnpairAsync() */
 HRESULT wdeen_device_information_pairing_unpair_async(WDEEN_DeviceInformationPairing *self, WF_IAsyncOperation_WDEEN_DeviceUnpairingResult** out);
 
-/* Windows.Devices.Enumeration.DeviceInformationPairing.TryRegisterForAllInboundPairingRequestsWithProtectionLevel(pairingKindsSupported, minProtectionLevel) */
 HRESULT wdeen_device_information_pairing_try_register_for_all_inbound_pairing_requests_with_protection_level(WDEEN_DevicePairingKinds pairingKindsSupported, WDEEN_DevicePairingProtectionLevel minProtectionLevel, BOOL *out);
 
-/* Windows.Devices.Enumeration.DeviceInformationPairing.TryRegisterForAllInboundPairingRequests(pairingKindsSupported) */
 HRESULT wdeen_device_information_pairing_try_register_for_all_inbound_pairing_requests(WDEEN_DevicePairingKinds pairingKindsSupported, BOOL *out);
 
-/* activate Windows.Devices.Enumeration.DeviceInformationUpdate */
 HRESULT wdeen_device_information_update_new(WDEEN_DeviceInformationUpdate **out);
 
-/* Windows.Devices.Enumeration.DeviceInformationUpdate */
-/* Windows.Devices.Enumeration.DeviceInformationUpdate.get_Id() */
 HRESULT wdeen_device_information_update_get__id(WDEEN_DeviceInformationUpdate *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Enumeration.DeviceInformationUpdate.get_Properties() */
 HRESULT wdeen_device_information_update_get__properties(WDEEN_DeviceInformationUpdate *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* Windows.Devices.Enumeration.DeviceInformationUpdate.get_Kind() */
 HRESULT wdeen_device_information_update_get__kind(WDEEN_DeviceInformationUpdate *self, WDEEN_DeviceInformationKind *value);
 
-/* activate Windows.Devices.Enumeration.DevicePairingRequestedEventArgs */
 HRESULT wdeen_device_pairing_requested_event_args_new(WDEEN_DevicePairingRequestedEventArgs **out);
 
-/* Windows.Devices.Enumeration.DevicePairingRequestedEventArgs */
-/* Windows.Devices.Enumeration.DevicePairingRequestedEventArgs.get_DeviceInformation() */
 HRESULT wdeen_device_pairing_requested_event_args_get__device_information(WDEEN_DevicePairingRequestedEventArgs *self, WDEEN_DeviceInformation** value);
 
-/* Windows.Devices.Enumeration.DevicePairingRequestedEventArgs.get_PairingKind() */
 HRESULT wdeen_device_pairing_requested_event_args_get__pairing_kind(WDEEN_DevicePairingRequestedEventArgs *self, WDEEN_DevicePairingKinds *value);
 
-/* Windows.Devices.Enumeration.DevicePairingRequestedEventArgs.get_Pin() */
 HRESULT wdeen_device_pairing_requested_event_args_get__pin(WDEEN_DevicePairingRequestedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Enumeration.DevicePairingRequestedEventArgs.Accept() */
 HRESULT wdeen_device_pairing_requested_event_args_accept(WDEEN_DevicePairingRequestedEventArgs *self);
 
-/* Windows.Devices.Enumeration.DevicePairingRequestedEventArgs.Accept(pin) */
 HRESULT wdeen_device_pairing_requested_event_args_accept_str(WDEEN_DevicePairingRequestedEventArgs *self, cwinrt_hstring pin);
 
-/* Windows.Devices.Enumeration.DevicePairingRequestedEventArgs.GetDeferral() */
 HRESULT wdeen_device_pairing_requested_event_args_get_deferral(WDEEN_DevicePairingRequestedEventArgs *self, WF_Deferral** out);
 
-/* Windows.Devices.Enumeration.DevicePairingRequestedEventArgs.AcceptWithPasswordCredential(passwordCredential) */
 HRESULT wdeen_device_pairing_requested_event_args_accept_with_password_credential(WDEEN_DevicePairingRequestedEventArgs *self, WSECR_PasswordCredential* passwordCredential);
 
-/* Windows.Devices.Enumeration.DevicePairingRequestedEventArgs.AcceptWithAddress(address) */
 HRESULT wdeen_device_pairing_requested_event_args_accept_with_address(WDEEN_DevicePairingRequestedEventArgs *self, cwinrt_hstring address);
 
-/* activate Windows.Devices.Enumeration.DevicePairingResult */
 HRESULT wdeen_device_pairing_result_new(WDEEN_DevicePairingResult **out);
 
-/* Windows.Devices.Enumeration.DevicePairingResult */
-/* Windows.Devices.Enumeration.DevicePairingResult.get_Status() */
 HRESULT wdeen_device_pairing_result_get__status(WDEEN_DevicePairingResult *self, WDEEN_DevicePairingResultStatus *value);
 
-/* Windows.Devices.Enumeration.DevicePairingResult.get_ProtectionLevelUsed() */
 HRESULT wdeen_device_pairing_result_get__protection_level_used(WDEEN_DevicePairingResult *self, WDEEN_DevicePairingProtectionLevel *value);
 
-/* activate Windows.Devices.Enumeration.DevicePairingSetMembersRequestedEventArgs */
 HRESULT wdeen_device_pairing_set_members_requested_event_args_new(WDEEN_DevicePairingSetMembersRequestedEventArgs **out);
 
-/* Windows.Devices.Enumeration.DevicePairingSetMembersRequestedEventArgs */
-/* Windows.Devices.Enumeration.DevicePairingSetMembersRequestedEventArgs.get_Status() */
 HRESULT wdeen_device_pairing_set_members_requested_event_args_get__status(WDEEN_DevicePairingSetMembersRequestedEventArgs *self, WDEEN_DevicePairingAddPairingSetMemberStatus *value);
 
-/* Windows.Devices.Enumeration.DevicePairingSetMembersRequestedEventArgs.get_ParentDeviceInformation() */
 HRESULT wdeen_device_pairing_set_members_requested_event_args_get__parent_device_information(WDEEN_DevicePairingSetMembersRequestedEventArgs *self, WDEEN_DeviceInformation** value);
 
-/* Windows.Devices.Enumeration.DevicePairingSetMembersRequestedEventArgs.get_PairingSetMembers() */
 HRESULT wdeen_device_pairing_set_members_requested_event_args_get__pairing_set_members(WDEEN_DevicePairingSetMembersRequestedEventArgs *self, WFOCO_IVectorView_WDEEN_DeviceInformation** value);
 
-/* activate Windows.Devices.Enumeration.DevicePicker */
 HRESULT wdeen_device_picker_new(WDEEN_DevicePicker **out);
 
-/* Windows.Devices.Enumeration.DevicePicker */
-/* Windows.Devices.Enumeration.DevicePicker.get_Filter() */
 HRESULT wdeen_device_picker_get__filter(WDEEN_DevicePicker *self, WDEEN_DevicePickerFilter** value);
 
-/* Windows.Devices.Enumeration.DevicePicker.get_Appearance() */
 HRESULT wdeen_device_picker_get__appearance(WDEEN_DevicePicker *self, WDEEN_DevicePickerAppearance** value);
 
-/* Windows.Devices.Enumeration.DevicePicker.get_RequestedProperties() */
 HRESULT wdeen_device_picker_get__requested_properties(WDEEN_DevicePicker *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Devices.Enumeration.DevicePicker.Show(selection) */
 HRESULT wdeen_device_picker_show(WDEEN_DevicePicker *self, WF_Rect selection);
 
-/* Windows.Devices.Enumeration.DevicePicker.Show(selection, placement) */
 HRESULT wdeen_device_picker_show_rect_placement(WDEEN_DevicePicker *self, WF_Rect selection, WUIPO_Placement placement);
 
-/* Windows.Devices.Enumeration.DevicePicker.PickSingleDeviceAsync(selection) */
 HRESULT wdeen_device_picker_pick_single_device_async(WDEEN_DevicePicker *self, WF_Rect selection, WF_IAsyncOperation_WDEEN_DeviceInformation** out);
 
-/* Windows.Devices.Enumeration.DevicePicker.PickSingleDeviceAsync(selection, placement) */
 HRESULT wdeen_device_picker_pick_single_device_async_rect_placement_p(WDEEN_DevicePicker *self, WF_Rect selection, WUIPO_Placement placement, WF_IAsyncOperation_WDEEN_DeviceInformation** out);
 
-/* Windows.Devices.Enumeration.DevicePicker.Hide() */
 HRESULT wdeen_device_picker_hide(WDEEN_DevicePicker *self);
 
-/* Windows.Devices.Enumeration.DevicePicker.SetDisplayStatus(device, status, options) */
 HRESULT wdeen_device_picker_set_display_status(WDEEN_DevicePicker *self, WDEEN_DeviceInformation* device, cwinrt_hstring status, WDEEN_DevicePickerDisplayStatusOptions options);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdeen_device_picker_on_device_selected(WDEEN_DevicePicker *self, cwinrt_event_fn fn, void *ctx);
@@ -857,139 +759,90 @@ void wdeen_device_picker_off_disconnect_button_clicked(WDEEN_DevicePicker *self,
 cwinrt_token wdeen_device_picker_on_device_picker_dismissed(WDEEN_DevicePicker *self, cwinrt_event_fn fn, void *ctx);
 void wdeen_device_picker_off_device_picker_dismissed(WDEEN_DevicePicker *self, cwinrt_token token);
 
-/* activate Windows.Devices.Enumeration.DevicePickerAppearance */
 HRESULT wdeen_device_picker_appearance_new(WDEEN_DevicePickerAppearance **out);
 
-/* Windows.Devices.Enumeration.DevicePickerAppearance */
-/* Windows.Devices.Enumeration.DevicePickerAppearance.get_Title() */
 HRESULT wdeen_device_picker_appearance_get__title(WDEEN_DevicePickerAppearance *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Enumeration.DevicePickerAppearance.put_Title() */
 HRESULT wdeen_device_picker_appearance_put__title(WDEEN_DevicePickerAppearance *self, cwinrt_hstring value);
 
-/* Windows.Devices.Enumeration.DevicePickerAppearance.get_ForegroundColor() */
 HRESULT wdeen_device_picker_appearance_get__foreground_color(WDEEN_DevicePickerAppearance *self, WUI_Color *value);
 
-/* Windows.Devices.Enumeration.DevicePickerAppearance.put_ForegroundColor() */
 HRESULT wdeen_device_picker_appearance_put__foreground_color(WDEEN_DevicePickerAppearance *self, WUI_Color value);
 
-/* Windows.Devices.Enumeration.DevicePickerAppearance.get_BackgroundColor() */
 HRESULT wdeen_device_picker_appearance_get__background_color(WDEEN_DevicePickerAppearance *self, WUI_Color *value);
 
-/* Windows.Devices.Enumeration.DevicePickerAppearance.put_BackgroundColor() */
 HRESULT wdeen_device_picker_appearance_put__background_color(WDEEN_DevicePickerAppearance *self, WUI_Color value);
 
-/* Windows.Devices.Enumeration.DevicePickerAppearance.get_AccentColor() */
 HRESULT wdeen_device_picker_appearance_get__accent_color(WDEEN_DevicePickerAppearance *self, WUI_Color *value);
 
-/* Windows.Devices.Enumeration.DevicePickerAppearance.put_AccentColor() */
 HRESULT wdeen_device_picker_appearance_put__accent_color(WDEEN_DevicePickerAppearance *self, WUI_Color value);
 
-/* Windows.Devices.Enumeration.DevicePickerAppearance.get_SelectedForegroundColor() */
 HRESULT wdeen_device_picker_appearance_get__selected_foreground_color(WDEEN_DevicePickerAppearance *self, WUI_Color *value);
 
-/* Windows.Devices.Enumeration.DevicePickerAppearance.put_SelectedForegroundColor() */
 HRESULT wdeen_device_picker_appearance_put__selected_foreground_color(WDEEN_DevicePickerAppearance *self, WUI_Color value);
 
-/* Windows.Devices.Enumeration.DevicePickerAppearance.get_SelectedBackgroundColor() */
 HRESULT wdeen_device_picker_appearance_get__selected_background_color(WDEEN_DevicePickerAppearance *self, WUI_Color *value);
 
-/* Windows.Devices.Enumeration.DevicePickerAppearance.put_SelectedBackgroundColor() */
 HRESULT wdeen_device_picker_appearance_put__selected_background_color(WDEEN_DevicePickerAppearance *self, WUI_Color value);
 
-/* Windows.Devices.Enumeration.DevicePickerAppearance.get_SelectedAccentColor() */
 HRESULT wdeen_device_picker_appearance_get__selected_accent_color(WDEEN_DevicePickerAppearance *self, WUI_Color *value);
 
-/* Windows.Devices.Enumeration.DevicePickerAppearance.put_SelectedAccentColor() */
 HRESULT wdeen_device_picker_appearance_put__selected_accent_color(WDEEN_DevicePickerAppearance *self, WUI_Color value);
 
-/* activate Windows.Devices.Enumeration.DevicePickerFilter */
 HRESULT wdeen_device_picker_filter_new(WDEEN_DevicePickerFilter **out);
 
-/* Windows.Devices.Enumeration.DevicePickerFilter */
-/* Windows.Devices.Enumeration.DevicePickerFilter.get_SupportedDeviceClasses() */
 HRESULT wdeen_device_picker_filter_get__supported_device_classes(WDEEN_DevicePickerFilter *self, WFOCO_IVector_WDEEN_DeviceClass** value);
 
-/* Windows.Devices.Enumeration.DevicePickerFilter.get_SupportedDeviceSelectors() */
 HRESULT wdeen_device_picker_filter_get__supported_device_selectors(WDEEN_DevicePickerFilter *self, WFOCO_IVector_HSTRING** value);
 
-/* activate Windows.Devices.Enumeration.DeviceSelectedEventArgs */
 HRESULT wdeen_device_selected_event_args_new(WDEEN_DeviceSelectedEventArgs **out);
 
-/* Windows.Devices.Enumeration.DeviceSelectedEventArgs */
-/* Windows.Devices.Enumeration.DeviceSelectedEventArgs.get_SelectedDevice() */
 HRESULT wdeen_device_selected_event_args_get__selected_device(WDEEN_DeviceSelectedEventArgs *self, WDEEN_DeviceInformation** value);
 
-/* activate Windows.Devices.Enumeration.DeviceThumbnail */
 HRESULT wdeen_device_thumbnail_new(WDEEN_DeviceThumbnail **out);
 
-/* Windows.Devices.Enumeration.DeviceThumbnail */
-/* Windows.Devices.Enumeration.DeviceThumbnail.get_Size() */
 HRESULT wdeen_device_thumbnail_get__size(WDEEN_DeviceThumbnail *self, uint64_t *value);
 
-/* Windows.Devices.Enumeration.DeviceThumbnail.put_Size() */
 HRESULT wdeen_device_thumbnail_put__size(WDEEN_DeviceThumbnail *self, uint64_t value);
 
-/* Windows.Devices.Enumeration.DeviceThumbnail.GetInputStreamAt(position) */
 HRESULT wdeen_device_thumbnail_get_input_stream_at(WDEEN_DeviceThumbnail *self, uint64_t position, WSTST_IInputStream** out);
 
-/* Windows.Devices.Enumeration.DeviceThumbnail.GetOutputStreamAt(position) */
 HRESULT wdeen_device_thumbnail_get_output_stream_at(WDEEN_DeviceThumbnail *self, uint64_t position, WSTST_IOutputStream** out);
 
-/* Windows.Devices.Enumeration.DeviceThumbnail.get_Position() */
 HRESULT wdeen_device_thumbnail_get__position(WDEEN_DeviceThumbnail *self, uint64_t *value);
 
-/* Windows.Devices.Enumeration.DeviceThumbnail.Seek(position) */
 HRESULT wdeen_device_thumbnail_seek(WDEEN_DeviceThumbnail *self, uint64_t position);
 
-/* Windows.Devices.Enumeration.DeviceThumbnail.CloneStream() */
 HRESULT wdeen_device_thumbnail_clone_stream(WDEEN_DeviceThumbnail *self, WSTST_IRandomAccessStream** out);
 
-/* Windows.Devices.Enumeration.DeviceThumbnail.get_CanRead() */
 HRESULT wdeen_device_thumbnail_get__can_read(WDEEN_DeviceThumbnail *self, BOOL *value);
 
-/* Windows.Devices.Enumeration.DeviceThumbnail.get_CanWrite() */
 HRESULT wdeen_device_thumbnail_get__can_write(WDEEN_DeviceThumbnail *self, BOOL *value);
 
-/* Windows.Devices.Enumeration.DeviceThumbnail.Close() */
 HRESULT wdeen_device_thumbnail_close(WDEEN_DeviceThumbnail *self);
 
-/* Windows.Devices.Enumeration.DeviceThumbnail.ReadAsync(buffer, count, options) */
 HRESULT wdeen_device_thumbnail_read_async(WDEEN_DeviceThumbnail *self, WSTST_IBuffer* buffer, uint32_t count, WSTST_InputStreamOptions options, WF_IAsyncOperationWithProgress_WSTST_IBuffer_uint32_t** out);
 
-/* Windows.Devices.Enumeration.DeviceThumbnail.WriteAsync(buffer) */
 HRESULT wdeen_device_thumbnail_write_async(WDEEN_DeviceThumbnail *self, WSTST_IBuffer* buffer, WF_IAsyncOperationWithProgress_uint32_t_uint32_t** out);
 
-/* Windows.Devices.Enumeration.DeviceThumbnail.FlushAsync() */
 HRESULT wdeen_device_thumbnail_flush_async(WDEEN_DeviceThumbnail *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.Enumeration.DeviceThumbnail.get_ContentType() */
 HRESULT wdeen_device_thumbnail_get__content_type(WDEEN_DeviceThumbnail *self, cwinrt_hstring *value);
 
-/* activate Windows.Devices.Enumeration.DeviceUnpairingResult */
 HRESULT wdeen_device_unpairing_result_new(WDEEN_DeviceUnpairingResult **out);
 
-/* Windows.Devices.Enumeration.DeviceUnpairingResult */
-/* Windows.Devices.Enumeration.DeviceUnpairingResult.get_Status() */
 HRESULT wdeen_device_unpairing_result_get__status(WDEEN_DeviceUnpairingResult *self, WDEEN_DeviceUnpairingResultStatus *value);
 
-/* activate Windows.Devices.Enumeration.DeviceWatcher */
 HRESULT wdeen_device_watcher_new(WDEEN_DeviceWatcher **out);
 
-/* Windows.Devices.Enumeration.DeviceWatcher */
-/* Windows.Devices.Enumeration.DeviceWatcher.get_Status() */
 HRESULT wdeen_device_watcher_get__status(WDEEN_DeviceWatcher *self, WDEEN_DeviceWatcherStatus *value);
 
-/* Windows.Devices.Enumeration.DeviceWatcher.Start() */
 HRESULT wdeen_device_watcher_start(WDEEN_DeviceWatcher *self);
 
-/* Windows.Devices.Enumeration.DeviceWatcher.Stop() */
 HRESULT wdeen_device_watcher_stop(WDEEN_DeviceWatcher *self);
 
-/* Windows.Devices.Enumeration.DeviceWatcher.GetBackgroundTrigger(requestedEventKinds) */
 HRESULT wdeen_device_watcher_get_background_trigger(WDEEN_DeviceWatcher *self, WFOCO_IIterable_WDEEN_DeviceWatcherEventKind* requestedEventKinds, WAPBA_DeviceWatcherTrigger** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdeen_device_watcher_on_added(WDEEN_DeviceWatcher *self, cwinrt_event_fn fn, void *ctx);
@@ -1007,240 +860,133 @@ void wdeen_device_watcher_off_enumeration_completed(WDEEN_DeviceWatcher *self, c
 cwinrt_token wdeen_device_watcher_on_stopped(WDEEN_DeviceWatcher *self, cwinrt_event_fn fn, void *ctx);
 void wdeen_device_watcher_off_stopped(WDEEN_DeviceWatcher *self, cwinrt_token token);
 
-/* activate Windows.Devices.Enumeration.DeviceWatcherEvent */
 HRESULT wdeen_device_watcher_event_new(WDEEN_DeviceWatcherEvent **out);
 
-/* Windows.Devices.Enumeration.DeviceWatcherEvent */
-/* Windows.Devices.Enumeration.DeviceWatcherEvent.get_Kind() */
 HRESULT wdeen_device_watcher_event_get__kind(WDEEN_DeviceWatcherEvent *self, WDEEN_DeviceWatcherEventKind *value);
 
-/* Windows.Devices.Enumeration.DeviceWatcherEvent.get_DeviceInformation() */
 HRESULT wdeen_device_watcher_event_get__device_information(WDEEN_DeviceWatcherEvent *self, WDEEN_DeviceInformation** value);
 
-/* Windows.Devices.Enumeration.DeviceWatcherEvent.get_DeviceInformationUpdate() */
 HRESULT wdeen_device_watcher_event_get__device_information_update(WDEEN_DeviceWatcherEvent *self, WDEEN_DeviceInformationUpdate** value);
 
-/* activate Windows.Devices.Enumeration.DeviceWatcherTriggerDetails */
 HRESULT wdeen_device_watcher_trigger_details_new(WDEEN_DeviceWatcherTriggerDetails **out);
 
-/* Windows.Devices.Enumeration.DeviceWatcherTriggerDetails */
-/* Windows.Devices.Enumeration.DeviceWatcherTriggerDetails.get_DeviceWatcherEvents() */
 HRESULT wdeen_device_watcher_trigger_details_get__device_watcher_events(WDEEN_DeviceWatcherTriggerDetails *self, WFOCO_IVectorView_WDEEN_DeviceWatcherEvent** value);
 
-/* activate Windows.Devices.Enumeration.EnclosureLocation */
 HRESULT wdeen_enclosure_location_new(WDEEN_EnclosureLocation **out);
 
-/* Windows.Devices.Enumeration.EnclosureLocation */
-/* Windows.Devices.Enumeration.EnclosureLocation.get_InDock() */
 HRESULT wdeen_enclosure_location_get__in_dock(WDEEN_EnclosureLocation *self, BOOL *value);
 
-/* Windows.Devices.Enumeration.EnclosureLocation.get_InLid() */
 HRESULT wdeen_enclosure_location_get__in_lid(WDEEN_EnclosureLocation *self, BOOL *value);
 
-/* Windows.Devices.Enumeration.EnclosureLocation.get_Panel() */
 HRESULT wdeen_enclosure_location_get__panel(WDEEN_EnclosureLocation *self, WDEEN_Panel *value);
 
-/* Windows.Devices.Enumeration.EnclosureLocation.get_RotationAngleInDegreesClockwise() */
 HRESULT wdeen_enclosure_location_get__rotation_angle_in_degrees_clockwise(WDEEN_EnclosureLocation *self, uint32_t *value);
 
-/* Windows.Devices.Enumeration.IDeviceAccessInformationStatics */
-/* Windows.Devices.Enumeration.IDeviceAccessInformationStatics.CreateFromId(deviceId) */
 HRESULT wdeen_device_access_information_statics_create_from_id(WDEEN_IDeviceAccessInformationStatics *self, cwinrt_hstring deviceId, WDEEN_DeviceAccessInformation** out);
 
-/* Windows.Devices.Enumeration.IDeviceAccessInformationStatics.CreateFromDeviceClassId(deviceClassId) */
 HRESULT wdeen_device_access_information_statics_create_from_device_class_id(WDEEN_IDeviceAccessInformationStatics *self, GUID deviceClassId, WDEEN_DeviceAccessInformation** out);
 
-/* Windows.Devices.Enumeration.IDeviceAccessInformationStatics.CreateFromDeviceClass(deviceClass) */
 HRESULT wdeen_device_access_information_statics_create_from_device_class(WDEEN_IDeviceAccessInformationStatics *self, WDEEN_DeviceClass deviceClass, WDEEN_DeviceAccessInformation** out);
 
-/* Windows.Devices.Enumeration.IDeviceInformationPairingStatics */
-/* Windows.Devices.Enumeration.IDeviceInformationPairingStatics.TryRegisterForAllInboundPairingRequests(pairingKindsSupported) */
 HRESULT wdeen_device_information_pairing_statics_try_register_for_all_inbound_pairing_requests(WDEEN_IDeviceInformationPairingStatics *self, WDEEN_DevicePairingKinds pairingKindsSupported, BOOL *out);
 
-/* Windows.Devices.Enumeration.IDeviceInformationPairingStatics2 */
-/* Windows.Devices.Enumeration.IDeviceInformationPairingStatics2.TryRegisterForAllInboundPairingRequestsWithProtectionLevel(pairingKindsSupported, minProtectionLevel) */
 HRESULT wdeen_device_information_pairing_statics_2_try_register_for_all_inbound_pairing_requests_with_protection_level(WDEEN_IDeviceInformationPairingStatics_2 *self, WDEEN_DevicePairingKinds pairingKindsSupported, WDEEN_DevicePairingProtectionLevel minProtectionLevel, BOOL *out);
 
-/* Windows.Devices.Enumeration.IDeviceInformationStatics */
-/* Windows.Devices.Enumeration.IDeviceInformationStatics.CreateFromIdAsync(deviceId) */
 HRESULT wdeen_device_information_statics_create_from_id_async(WDEEN_IDeviceInformationStatics *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDEEN_DeviceInformation** out);
 
-/* Windows.Devices.Enumeration.IDeviceInformationStatics.CreateFromIdAsync(deviceId, additionalProperties) */
 HRESULT wdeen_device_information_statics_create_from_id_async_str_p_p(WDEEN_IDeviceInformationStatics *self, cwinrt_hstring deviceId, WFOCO_IIterable_HSTRING* additionalProperties, WF_IAsyncOperation_WDEEN_DeviceInformation** out);
 
-/* Windows.Devices.Enumeration.IDeviceInformationStatics.FindAllAsync() */
 HRESULT wdeen_device_information_statics_find_all_async_p(WDEEN_IDeviceInformationStatics *self, WF_IAsyncOperation_WDEEN_DeviceInformationCollection** out);
 
-/* Windows.Devices.Enumeration.IDeviceInformationStatics.FindAllAsync(deviceClass) */
 HRESULT wdeen_device_information_statics_find_all_async(WDEEN_IDeviceInformationStatics *self, WDEEN_DeviceClass deviceClass, WF_IAsyncOperation_WDEEN_DeviceInformationCollection** out);
 
-/* Windows.Devices.Enumeration.IDeviceInformationStatics.FindAllAsync(aqsFilter) */
 HRESULT wdeen_device_information_statics_find_all_async_str_p(WDEEN_IDeviceInformationStatics *self, cwinrt_hstring aqsFilter, WF_IAsyncOperation_WDEEN_DeviceInformationCollection** out);
 
-/* Windows.Devices.Enumeration.IDeviceInformationStatics.FindAllAsync(aqsFilter, additionalProperties) */
 HRESULT wdeen_device_information_statics_find_all_async_str_p_p(WDEEN_IDeviceInformationStatics *self, cwinrt_hstring aqsFilter, WFOCO_IIterable_HSTRING* additionalProperties, WF_IAsyncOperation_WDEEN_DeviceInformationCollection** out);
 
-/* Windows.Devices.Enumeration.IDeviceInformationStatics.CreateWatcher() */
 HRESULT wdeen_device_information_statics_create_watcher_p(WDEEN_IDeviceInformationStatics *self, WDEEN_DeviceWatcher** out);
 
-/* Windows.Devices.Enumeration.IDeviceInformationStatics.CreateWatcher(deviceClass) */
 HRESULT wdeen_device_information_statics_create_watcher(WDEEN_IDeviceInformationStatics *self, WDEEN_DeviceClass deviceClass, WDEEN_DeviceWatcher** out);
 
-/* Windows.Devices.Enumeration.IDeviceInformationStatics.CreateWatcher(aqsFilter) */
 HRESULT wdeen_device_information_statics_create_watcher_str_p(WDEEN_IDeviceInformationStatics *self, cwinrt_hstring aqsFilter, WDEEN_DeviceWatcher** out);
 
-/* Windows.Devices.Enumeration.IDeviceInformationStatics.CreateWatcher(aqsFilter, additionalProperties) */
 HRESULT wdeen_device_information_statics_create_watcher_str_p_p(WDEEN_IDeviceInformationStatics *self, cwinrt_hstring aqsFilter, WFOCO_IIterable_HSTRING* additionalProperties, WDEEN_DeviceWatcher** out);
 
-/* Windows.Devices.Enumeration.IDeviceInformationStatics2 */
-/* Windows.Devices.Enumeration.IDeviceInformationStatics2.GetAqsFilterFromDeviceClass(deviceClass) */
 HRESULT wdeen_device_information_statics_2_get_aqs_filter_from_device_class(WDEEN_IDeviceInformationStatics_2 *self, WDEEN_DeviceClass deviceClass, cwinrt_hstring *out);
 
-/* Windows.Devices.Enumeration.IDeviceInformationStatics2.CreateFromIdAsync(deviceId, additionalProperties, kind) */
 HRESULT wdeen_device_information_statics_2_create_from_id_async(WDEEN_IDeviceInformationStatics_2 *self, cwinrt_hstring deviceId, WFOCO_IIterable_HSTRING* additionalProperties, WDEEN_DeviceInformationKind kind, WF_IAsyncOperation_WDEEN_DeviceInformation** out);
 
-/* Windows.Devices.Enumeration.IDeviceInformationStatics2.FindAllAsync(aqsFilter, additionalProperties, kind) */
 HRESULT wdeen_device_information_statics_2_find_all_async(WDEEN_IDeviceInformationStatics_2 *self, cwinrt_hstring aqsFilter, WFOCO_IIterable_HSTRING* additionalProperties, WDEEN_DeviceInformationKind kind, WF_IAsyncOperation_WDEEN_DeviceInformationCollection** out);
 
-/* Windows.Devices.Enumeration.IDeviceInformationStatics2.CreateWatcher(aqsFilter, additionalProperties, kind) */
 HRESULT wdeen_device_information_statics_2_create_watcher(WDEEN_IDeviceInformationStatics_2 *self, cwinrt_hstring aqsFilter, WFOCO_IIterable_HSTRING* additionalProperties, WDEEN_DeviceInformationKind kind, WDEEN_DeviceWatcher** out);
 
-/* Windows.Devices.Enumeration.IDeviceInformationStatics3 */
-/* Windows.Devices.Enumeration.IDeviceInformationStatics3.CreateFromIdAsync(deviceId, additionalProperties, kind, settings) */
 HRESULT wdeen_device_information_statics_3_create_from_id_async(WDEEN_IDeviceInformationStatics_3 *self, cwinrt_hstring deviceId, WFOCO_IIterable_HSTRING* additionalProperties, WDEEN_DeviceInformationKind kind, WDEEN_IDeviceEnumerationSettings* settings, WF_IAsyncOperation_WDEEN_DeviceInformation** out);
 
-/* Windows.Devices.Enumeration.IDeviceInformationStatics3.FindAllAsync(aqsFilter, additionalProperties, kind, settings) */
 HRESULT wdeen_device_information_statics_3_find_all_async(WDEEN_IDeviceInformationStatics_3 *self, cwinrt_hstring aqsFilter, WFOCO_IIterable_HSTRING* additionalProperties, WDEEN_DeviceInformationKind kind, WDEEN_IDeviceEnumerationSettings* settings, WF_IAsyncOperation_WDEEN_DeviceInformationCollection** out);
 
-/* Windows.Devices.Enumeration.IDeviceInformationStatics3.CreateWatcher(aqsFilter, additionalProperties, kind, settings) */
 HRESULT wdeen_device_information_statics_3_create_watcher(WDEEN_IDeviceInformationStatics_3 *self, cwinrt_hstring aqsFilter, WFOCO_IIterable_HSTRING* additionalProperties, WDEEN_DeviceInformationKind kind, WDEEN_IDeviceEnumerationSettings* settings, WDEEN_DeviceWatcher** out);
 
-/* activate Windows.Devices.Enumeration.DeviceConnectionChangeTriggerDetails */
 HRESULT wdeen_device_connection_change_trigger_details_new(WDEEN_DeviceConnectionChangeTriggerDetails **out);
 
-/* Windows.Devices.Enumeration.DeviceConnectionChangeTriggerDetails */
-/* Windows.Devices.Enumeration.DeviceConnectionChangeTriggerDetails.get_DeviceId() */
 HRESULT wdeen_device_connection_change_trigger_details_get__device_id(WDEEN_DeviceConnectionChangeTriggerDetails *self, cwinrt_hstring *value);
 
-/* activate Windows.Devices.Enumeration.DeviceAccessInformation */
 HRESULT wdeen_device_access_information_new(WDEEN_DeviceAccessInformation **out);
 
-/* Windows.Devices.Enumeration.DeviceAccessInformation */
-/* Windows.Devices.Enumeration.DeviceAccessInformation.get_CurrentStatus() */
 HRESULT wdeen_device_access_information_get__current_status(WDEEN_DeviceAccessInformation *self, WDEEN_DeviceAccessStatus *value);
 
-/* Windows.Devices.Enumeration.DeviceAccessInformation.get_UserPromptRequired() */
 HRESULT wdeen_device_access_information_get__user_prompt_required(WDEEN_DeviceAccessInformation *self, BOOL *value);
 
-/* Windows.Devices.Enumeration.DeviceAccessInformation.CreateFromId(deviceId) */
 HRESULT wdeen_device_access_information_create_from_id(cwinrt_hstring deviceId, WDEEN_DeviceAccessInformation** out);
 
-/* Windows.Devices.Enumeration.DeviceAccessInformation.CreateFromDeviceClassId(deviceClassId) */
 HRESULT wdeen_device_access_information_create_from_device_class_id(GUID deviceClassId, WDEEN_DeviceAccessInformation** out);
 
-/* Windows.Devices.Enumeration.DeviceAccessInformation.CreateFromDeviceClass(deviceClass) */
 HRESULT wdeen_device_access_information_create_from_device_class(WDEEN_DeviceClass deviceClass, WDEEN_DeviceAccessInformation** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdeen_device_access_information_on_access_changed(WDEEN_DeviceAccessInformation *self, cwinrt_event_fn fn, void *ctx);
 void wdeen_device_access_information_off_access_changed(WDEEN_DeviceAccessInformation *self, cwinrt_token token);
 
-/* activate Windows.Devices.Enumeration.DeviceAccessChangedEventArgs */
 HRESULT wdeen_device_access_changed_event_args_new(WDEEN_DeviceAccessChangedEventArgs **out);
 
-/* Windows.Devices.Enumeration.DeviceAccessChangedEventArgs */
-/* Windows.Devices.Enumeration.DeviceAccessChangedEventArgs.get_Status() */
 HRESULT wdeen_device_access_changed_event_args_get__status(WDEEN_DeviceAccessChangedEventArgs *self, WDEEN_DeviceAccessStatus *value);
 
-/* Windows.Devices.Enumeration.DeviceAccessChangedEventArgs.get_Id() */
 HRESULT wdeen_device_access_changed_event_args_get__id(WDEEN_DeviceAccessChangedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Enumeration.DeviceAccessChangedEventArgs.get_UserPromptRequired() */
 HRESULT wdeen_device_access_changed_event_args_get__user_prompt_required(WDEEN_DeviceAccessChangedEventArgs *self, BOOL *value);
 
-/* activate Windows.Devices.Enumeration.DeviceDisconnectButtonClickedEventArgs */
 HRESULT wdeen_device_disconnect_button_clicked_event_args_new(WDEEN_DeviceDisconnectButtonClickedEventArgs **out);
 
-/* Windows.Devices.Enumeration.DeviceDisconnectButtonClickedEventArgs */
-/* Windows.Devices.Enumeration.DeviceDisconnectButtonClickedEventArgs.get_Device() */
 HRESULT wdeen_device_disconnect_button_clicked_event_args_get__device(WDEEN_DeviceDisconnectButtonClickedEventArgs *self, WDEEN_DeviceInformation** value);
 
-/* Windows.Devices.Enumeration.IDeviceInformation */
-/* Windows.Devices.Enumeration.IDeviceInformation2 */
-/* Windows.Devices.Enumeration.IDeviceInformation2.get_Kind() */
 HRESULT wdeen_device_information_2_get__kind(WDEEN_IDeviceInformation_2 *self, WDEEN_DeviceInformationKind *value);
 
-/* Windows.Devices.Enumeration.IDeviceInformation2.get_Pairing() */
 HRESULT wdeen_device_information_2_get__pairing(WDEEN_IDeviceInformation_2 *self, WDEEN_DeviceInformationPairing** value);
 
-/* Windows.Devices.Enumeration.IDeviceInformationCustomPairing */
-/* Windows.Devices.Enumeration.IDeviceInformationCustomPairing2 */
-/* Windows.Devices.Enumeration.IDeviceInformationCustomPairing2.AddPairingSetMember(device) */
 HRESULT wdeen_device_information_custom_pairing_2_add_pairing_set_member(WDEEN_IDeviceInformationCustomPairing_2 *self, WDEEN_DeviceInformation* device);
 
-/* Windows.Devices.Enumeration.IDeviceInformationPairing */
-/* Windows.Devices.Enumeration.IDeviceInformationPairing2 */
-/* Windows.Devices.Enumeration.IDeviceInformationPairing2.get_ProtectionLevel() */
 HRESULT wdeen_device_information_pairing_2_get__protection_level(WDEEN_IDeviceInformationPairing_2 *self, WDEEN_DevicePairingProtectionLevel *value);
 
-/* Windows.Devices.Enumeration.IDeviceInformationPairing2.get_Custom() */
 HRESULT wdeen_device_information_pairing_2_get__custom(WDEEN_IDeviceInformationPairing_2 *self, WDEEN_DeviceInformationCustomPairing** value);
 
-/* Windows.Devices.Enumeration.IDeviceInformationPairing2.PairAsync(minProtectionLevel, devicePairingSettings) */
 HRESULT wdeen_device_information_pairing_2_pair_async(WDEEN_IDeviceInformationPairing_2 *self, WDEEN_DevicePairingProtectionLevel minProtectionLevel, WDEEN_IDevicePairingSettings* devicePairingSettings, WF_IAsyncOperation_WDEEN_DevicePairingResult** out);
 
-/* Windows.Devices.Enumeration.IDeviceInformationPairing2.UnpairAsync() */
 HRESULT wdeen_device_information_pairing_2_unpair_async(WDEEN_IDeviceInformationPairing_2 *self, WF_IAsyncOperation_WDEEN_DeviceUnpairingResult** out);
 
-/* Windows.Devices.Enumeration.IDeviceInformationUpdate */
-/* Windows.Devices.Enumeration.IDeviceInformationUpdate2 */
-/* Windows.Devices.Enumeration.IDeviceInformationUpdate2.get_Kind() */
 HRESULT wdeen_device_information_update_2_get__kind(WDEEN_IDeviceInformationUpdate_2 *self, WDEEN_DeviceInformationKind *value);
 
-/* Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs */
-/* Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs2 */
-/* Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs2.AcceptWithPasswordCredential(passwordCredential) */
 HRESULT wdeen_device_pairing_requested_event_args_2_accept_with_password_credential(WDEEN_IDevicePairingRequestedEventArgs_2 *self, WSECR_PasswordCredential* passwordCredential);
 
-/* Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs3 */
-/* Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs3.AcceptWithAddress(address) */
 HRESULT wdeen_device_pairing_requested_event_args_3_accept_with_address(WDEEN_IDevicePairingRequestedEventArgs_3 *self, cwinrt_hstring address);
 
-/* Windows.Devices.Enumeration.IDevicePairingResult */
-/* Windows.Devices.Enumeration.IDevicePairingSetMembersRequestedEventArgs */
-/* Windows.Devices.Enumeration.IDevicePicker */
-/* Windows.Devices.Enumeration.IDevicePickerAppearance */
-/* Windows.Devices.Enumeration.IDevicePickerFilter */
-/* Windows.Devices.Enumeration.IDeviceSelectedEventArgs */
-/* Windows.Devices.Enumeration.IDeviceUnpairingResult */
-/* Windows.Devices.Enumeration.IDeviceWatcher */
-/* Windows.Devices.Enumeration.IDeviceWatcher2 */
-/* Windows.Devices.Enumeration.IDeviceWatcher2.GetBackgroundTrigger(requestedEventKinds) */
 HRESULT wdeen_device_watcher_2_get_background_trigger(WDEEN_IDeviceWatcher_2 *self, WFOCO_IIterable_WDEEN_DeviceWatcherEventKind* requestedEventKinds, WAPBA_DeviceWatcherTrigger** out);
 
-/* Windows.Devices.Enumeration.IDeviceWatcherEvent */
-/* Windows.Devices.Enumeration.IDeviceWatcherTriggerDetails */
-/* Windows.Devices.Enumeration.IEnclosureLocation2 */
-/* Windows.Devices.Enumeration.IEnclosureLocation2.get_RotationAngleInDegreesClockwise() */
 HRESULT wdeen_enclosure_location_2_get__rotation_angle_in_degrees_clockwise(WDEEN_IEnclosureLocation_2 *self, uint32_t *value);
 
-/* Windows.Devices.Enumeration.IDeviceConnectionChangeTriggerDetails */
-/* Windows.Devices.Enumeration.IDeviceAccessInformation */
-/* Windows.Devices.Enumeration.IDeviceAccessInformation2 */
-/* Windows.Devices.Enumeration.IDeviceAccessInformation2.get_UserPromptRequired() */
 HRESULT wdeen_device_access_information_2_get__user_prompt_required(WDEEN_IDeviceAccessInformation_2 *self, BOOL *value);
 
-/* Windows.Devices.Enumeration.IDeviceAccessChangedEventArgs2 */
-/* Windows.Devices.Enumeration.IDeviceAccessChangedEventArgs2.get_Id() */
 HRESULT wdeen_device_access_changed_event_args_2_get__id(WDEEN_IDeviceAccessChangedEventArgs_2 *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Enumeration.IDeviceAccessChangedEventArgs3 */
-/* Windows.Devices.Enumeration.IDeviceAccessChangedEventArgs3.get_UserPromptRequired() */
 HRESULT wdeen_device_access_changed_event_args_3_get__user_prompt_required(WDEEN_IDeviceAccessChangedEventArgs_3 *self, BOOL *value);
 
-/* Windows.Devices.Enumeration.IDeviceDisconnectButtonClickedEventArgs */
-/* Windows.Devices.Enumeration.IEnclosureLocation */
-/* Windows.Devices.Enumeration.IDeviceAccessChangedEventArgs */
 #endif /* CWINRT_WINDOWS_DEVICES_ENUMERATION_H */

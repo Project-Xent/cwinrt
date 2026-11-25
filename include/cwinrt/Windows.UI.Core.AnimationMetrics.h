@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WUICOAN_AnimationDescription WUICOAN_AnimationDescription;
 typedef struct WUICOAN_IAnimationDescriptionFactory WUICOAN_IAnimationDescriptionFactory;
 typedef struct WUICOAN_TranslationAnimation WUICOAN_TranslationAnimation;
@@ -24,7 +23,6 @@ typedef struct WUICOAN_IScaleAnimation WUICOAN_IScaleAnimation;
 typedef struct WUICOAN_IOpacityAnimation WUICOAN_IOpacityAnimation;
 typedef struct WUICOAN_IPropertyAnimation WUICOAN_IPropertyAnimation;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IVectorView_WUICOAN_IPropertyAnimation
 #define CWINRT_FWD_WFOCO_IVectorView_WUICOAN_IPropertyAnimation
 typedef struct WFOCO_IVectorView_WUICOAN_IPropertyAnimation WFOCO_IVectorView_WUICOAN_IPropertyAnimation;
@@ -111,7 +109,6 @@ typedef enum WUICOAN_PropertyAnimationType {
 } WUICOAN_PropertyAnimationType;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -136,130 +133,80 @@ static const IID CWINRT_IID_WUICOAN_IOpacityAnimation CWINRT_MAYBE_UNUSED = { 0x
 static const IID CWINRT_IID_WUICOAN_IPropertyAnimation CWINRT_MAYBE_UNUSED = { 0x3A01B4DA, 0x4D8C, 0x411E, { 0xB6, 0x15, 0x1A, 0xDE, 0x68, 0x3A, 0x99, 0x03 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.UI.Core.AnimationMetrics.AnimationDescription */
 HRESULT wuicoan_animation_description_new(WUICOAN_AnimationDescription **out);
 
-/* Windows.UI.Core.AnimationMetrics.AnimationDescription */
-/* Windows.UI.Core.AnimationMetrics.AnimationDescription.get_Animations() */
 HRESULT wuicoan_animation_description_get__animations(WUICOAN_AnimationDescription *self, WFOCO_IVectorView_WUICOAN_IPropertyAnimation** value);
 
-/* Windows.UI.Core.AnimationMetrics.AnimationDescription.get_StaggerDelay() */
 HRESULT wuicoan_animation_description_get__stagger_delay(WUICOAN_AnimationDescription *self, WF_TimeSpan *value);
 
-/* Windows.UI.Core.AnimationMetrics.AnimationDescription.get_StaggerDelayFactor() */
 HRESULT wuicoan_animation_description_get__stagger_delay_factor(WUICOAN_AnimationDescription *self, float *value);
 
-/* Windows.UI.Core.AnimationMetrics.AnimationDescription.get_DelayLimit() */
 HRESULT wuicoan_animation_description_get__delay_limit(WUICOAN_AnimationDescription *self, WF_TimeSpan *value);
 
-/* Windows.UI.Core.AnimationMetrics.AnimationDescription.get_ZOrder() */
 HRESULT wuicoan_animation_description_get__z_order(WUICOAN_AnimationDescription *self, int32_t *value);
 
-/* Windows.UI.Core.AnimationMetrics.IAnimationDescriptionFactory */
-/* Windows.UI.Core.AnimationMetrics.IAnimationDescriptionFactory.CreateInstance(effect, target) */
 HRESULT wuicoan_animation_description_factory_create_instance(WUICOAN_IAnimationDescriptionFactory *self, WUICOAN_AnimationEffect effect, WUICOAN_AnimationEffectTarget target, WUICOAN_AnimationDescription** out);
 
-/* activate Windows.UI.Core.AnimationMetrics.TranslationAnimation */
 HRESULT wuicoan_translation_animation_new(WUICOAN_TranslationAnimation **out);
 
-/* Windows.UI.Core.AnimationMetrics.TranslationAnimation */
-/* Windows.UI.Core.AnimationMetrics.TranslationAnimation.get_Type() */
 HRESULT wuicoan_translation_animation_get__type(WUICOAN_TranslationAnimation *self, WUICOAN_PropertyAnimationType *value);
 
-/* Windows.UI.Core.AnimationMetrics.TranslationAnimation.get_Delay() */
 HRESULT wuicoan_translation_animation_get__delay(WUICOAN_TranslationAnimation *self, WF_TimeSpan *value);
 
-/* Windows.UI.Core.AnimationMetrics.TranslationAnimation.get_Duration() */
 HRESULT wuicoan_translation_animation_get__duration(WUICOAN_TranslationAnimation *self, WF_TimeSpan *value);
 
-/* Windows.UI.Core.AnimationMetrics.TranslationAnimation.get_Control1() */
 HRESULT wuicoan_translation_animation_get__control1(WUICOAN_TranslationAnimation *self, WF_Point *value);
 
-/* Windows.UI.Core.AnimationMetrics.TranslationAnimation.get_Control2() */
 HRESULT wuicoan_translation_animation_get__control2(WUICOAN_TranslationAnimation *self, WF_Point *value);
 
-/* activate Windows.UI.Core.AnimationMetrics.ScaleAnimation */
 HRESULT wuicoan_scale_animation_new(WUICOAN_ScaleAnimation **out);
 
-/* Windows.UI.Core.AnimationMetrics.ScaleAnimation */
-/* Windows.UI.Core.AnimationMetrics.ScaleAnimation.get_InitialScaleX() */
 HRESULT wuicoan_scale_animation_get__initial_scale_x(WUICOAN_ScaleAnimation *self, float** value);
 
-/* Windows.UI.Core.AnimationMetrics.ScaleAnimation.get_InitialScaleY() */
 HRESULT wuicoan_scale_animation_get__initial_scale_y(WUICOAN_ScaleAnimation *self, float** value);
 
-/* Windows.UI.Core.AnimationMetrics.ScaleAnimation.get_FinalScaleX() */
 HRESULT wuicoan_scale_animation_get__final_scale_x(WUICOAN_ScaleAnimation *self, float *value);
 
-/* Windows.UI.Core.AnimationMetrics.ScaleAnimation.get_FinalScaleY() */
 HRESULT wuicoan_scale_animation_get__final_scale_y(WUICOAN_ScaleAnimation *self, float *value);
 
-/* Windows.UI.Core.AnimationMetrics.ScaleAnimation.get_NormalizedOrigin() */
 HRESULT wuicoan_scale_animation_get__normalized_origin(WUICOAN_ScaleAnimation *self, WF_Point *value);
 
-/* Windows.UI.Core.AnimationMetrics.ScaleAnimation.get_Type() */
 HRESULT wuicoan_scale_animation_get__type(WUICOAN_ScaleAnimation *self, WUICOAN_PropertyAnimationType *value);
 
-/* Windows.UI.Core.AnimationMetrics.ScaleAnimation.get_Delay() */
 HRESULT wuicoan_scale_animation_get__delay(WUICOAN_ScaleAnimation *self, WF_TimeSpan *value);
 
-/* Windows.UI.Core.AnimationMetrics.ScaleAnimation.get_Duration() */
 HRESULT wuicoan_scale_animation_get__duration(WUICOAN_ScaleAnimation *self, WF_TimeSpan *value);
 
-/* Windows.UI.Core.AnimationMetrics.ScaleAnimation.get_Control1() */
 HRESULT wuicoan_scale_animation_get__control1(WUICOAN_ScaleAnimation *self, WF_Point *value);
 
-/* Windows.UI.Core.AnimationMetrics.ScaleAnimation.get_Control2() */
 HRESULT wuicoan_scale_animation_get__control2(WUICOAN_ScaleAnimation *self, WF_Point *value);
 
-/* activate Windows.UI.Core.AnimationMetrics.PropertyAnimation */
 HRESULT wuicoan_property_animation_new(WUICOAN_PropertyAnimation **out);
 
-/* Windows.UI.Core.AnimationMetrics.PropertyAnimation */
-/* Windows.UI.Core.AnimationMetrics.PropertyAnimation.get_Type() */
 HRESULT wuicoan_property_animation_get__type(WUICOAN_PropertyAnimation *self, WUICOAN_PropertyAnimationType *value);
 
-/* Windows.UI.Core.AnimationMetrics.PropertyAnimation.get_Delay() */
 HRESULT wuicoan_property_animation_get__delay(WUICOAN_PropertyAnimation *self, WF_TimeSpan *value);
 
-/* Windows.UI.Core.AnimationMetrics.PropertyAnimation.get_Duration() */
 HRESULT wuicoan_property_animation_get__duration(WUICOAN_PropertyAnimation *self, WF_TimeSpan *value);
 
-/* Windows.UI.Core.AnimationMetrics.PropertyAnimation.get_Control1() */
 HRESULT wuicoan_property_animation_get__control1(WUICOAN_PropertyAnimation *self, WF_Point *value);
 
-/* Windows.UI.Core.AnimationMetrics.PropertyAnimation.get_Control2() */
 HRESULT wuicoan_property_animation_get__control2(WUICOAN_PropertyAnimation *self, WF_Point *value);
 
-/* activate Windows.UI.Core.AnimationMetrics.OpacityAnimation */
 HRESULT wuicoan_opacity_animation_new(WUICOAN_OpacityAnimation **out);
 
-/* Windows.UI.Core.AnimationMetrics.OpacityAnimation */
-/* Windows.UI.Core.AnimationMetrics.OpacityAnimation.get_InitialOpacity() */
 HRESULT wuicoan_opacity_animation_get__initial_opacity(WUICOAN_OpacityAnimation *self, float** value);
 
-/* Windows.UI.Core.AnimationMetrics.OpacityAnimation.get_FinalOpacity() */
 HRESULT wuicoan_opacity_animation_get__final_opacity(WUICOAN_OpacityAnimation *self, float *value);
 
-/* Windows.UI.Core.AnimationMetrics.OpacityAnimation.get_Type() */
 HRESULT wuicoan_opacity_animation_get__type(WUICOAN_OpacityAnimation *self, WUICOAN_PropertyAnimationType *value);
 
-/* Windows.UI.Core.AnimationMetrics.OpacityAnimation.get_Delay() */
 HRESULT wuicoan_opacity_animation_get__delay(WUICOAN_OpacityAnimation *self, WF_TimeSpan *value);
 
-/* Windows.UI.Core.AnimationMetrics.OpacityAnimation.get_Duration() */
 HRESULT wuicoan_opacity_animation_get__duration(WUICOAN_OpacityAnimation *self, WF_TimeSpan *value);
 
-/* Windows.UI.Core.AnimationMetrics.OpacityAnimation.get_Control1() */
 HRESULT wuicoan_opacity_animation_get__control1(WUICOAN_OpacityAnimation *self, WF_Point *value);
 
-/* Windows.UI.Core.AnimationMetrics.OpacityAnimation.get_Control2() */
 HRESULT wuicoan_opacity_animation_get__control2(WUICOAN_OpacityAnimation *self, WF_Point *value);
 
-/* Windows.UI.Core.AnimationMetrics.IAnimationDescription */
-/* Windows.UI.Core.AnimationMetrics.IScaleAnimation */
-/* Windows.UI.Core.AnimationMetrics.IOpacityAnimation */
-/* Windows.UI.Core.AnimationMetrics.IPropertyAnimation */
 #endif /* CWINRT_WINDOWS_UI_CORE_ANIMATIONMETRICS_H */

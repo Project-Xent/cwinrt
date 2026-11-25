@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.UI.Text.Core.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WDATE_AlternateWordForm WDATE_AlternateWordForm;
 typedef struct WDATE_ISelectableWordsSegmenterFactory WDATE_ISelectableWordsSegmenterFactory;
 typedef struct WDATE_ISemanticTextQueryFactory WDATE_ISemanticTextQueryFactory;
@@ -47,7 +46,6 @@ typedef struct WDATE_ITextReverseConversionGenerator_2 WDATE_ITextReverseConvers
 typedef struct WDATE_IWordSegment WDATE_IWordSegment;
 typedef struct WDATE_IWordsSegmenter WDATE_IWordsSegmenter;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IIterable_WDATE_SelectableWordSegment
 #define CWINRT_FWD_WFOCO_IIterable_WDATE_SelectableWordSegment
 typedef struct WFOCO_IIterable_WDATE_SelectableWordSegment WFOCO_IIterable_WDATE_SelectableWordSegment;
@@ -240,7 +238,6 @@ struct WDATE_TextSegment {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -329,323 +326,194 @@ static const IID CWINRT_IID_WDATE_IWordSegment CWINRT_MAYBE_UNUSED = { 0xD2D4BA6
 static const IID CWINRT_IID_WDATE_IWordsSegmenter CWINRT_MAYBE_UNUSED = { 0x86B4D4D1, 0xB2FE, 0x4E34, { 0xA8, 0x1D, 0x66, 0x64, 0x03, 0x00, 0x45, 0x4F } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Data.Text.AlternateWordForm */
 HRESULT wdate_alternate_word_form_new(WDATE_AlternateWordForm **out);
 
-/* Windows.Data.Text.AlternateWordForm */
-/* Windows.Data.Text.AlternateWordForm.get_SourceTextSegment() */
 HRESULT wdate_alternate_word_form_get__source_text_segment(WDATE_AlternateWordForm *self, WDATE_TextSegment *value);
 
-/* Windows.Data.Text.AlternateWordForm.get_AlternateText() */
 HRESULT wdate_alternate_word_form_get__alternate_text(WDATE_AlternateWordForm *self, cwinrt_hstring *value);
 
-/* Windows.Data.Text.AlternateWordForm.get_NormalizationFormat() */
 HRESULT wdate_alternate_word_form_get__normalization_format(WDATE_AlternateWordForm *self, WDATE_AlternateNormalizationFormat *value);
 
-/* Windows.Data.Text.ISelectableWordsSegmenterFactory */
-/* Windows.Data.Text.ISelectableWordsSegmenterFactory.CreateWithLanguage(language) */
 HRESULT wdate_selectable_words_segmenter_factory_create_with_language(WDATE_ISelectableWordsSegmenterFactory *self, cwinrt_hstring language, WDATE_SelectableWordsSegmenter** out);
 
-/* Windows.Data.Text.ISemanticTextQueryFactory */
-/* Windows.Data.Text.ISemanticTextQueryFactory.Create(aqsFilter) */
 HRESULT wdate_semantic_text_query_factory_create(WDATE_ISemanticTextQueryFactory *self, cwinrt_hstring aqsFilter, WDATE_SemanticTextQuery** out);
 
-/* Windows.Data.Text.ISemanticTextQueryFactory.CreateWithLanguage(aqsFilter, filterLanguage) */
 HRESULT wdate_semantic_text_query_factory_create_with_language(WDATE_ISemanticTextQueryFactory *self, cwinrt_hstring aqsFilter, cwinrt_hstring filterLanguage, WDATE_SemanticTextQuery** out);
 
-/* Windows.Data.Text.ITextConversionGeneratorFactory */
-/* Windows.Data.Text.ITextConversionGeneratorFactory.Create(languageTag) */
 HRESULT wdate_text_conversion_generator_factory_create(WDATE_ITextConversionGeneratorFactory *self, cwinrt_hstring languageTag, WDATE_TextConversionGenerator** out);
 
-/* Windows.Data.Text.ITextPredictionGeneratorFactory */
-/* Windows.Data.Text.ITextPredictionGeneratorFactory.Create(languageTag) */
 HRESULT wdate_text_prediction_generator_factory_create(WDATE_ITextPredictionGeneratorFactory *self, cwinrt_hstring languageTag, WDATE_TextPredictionGenerator** out);
 
-/* Windows.Data.Text.ITextReverseConversionGeneratorFactory */
-/* Windows.Data.Text.ITextReverseConversionGeneratorFactory.Create(languageTag) */
 HRESULT wdate_text_reverse_conversion_generator_factory_create(WDATE_ITextReverseConversionGeneratorFactory *self, cwinrt_hstring languageTag, WDATE_TextReverseConversionGenerator** out);
 
-/* Windows.Data.Text.IUnicodeCharactersStatics */
-/* Windows.Data.Text.IUnicodeCharactersStatics.GetCodepointFromSurrogatePair(highSurrogate, lowSurrogate) */
 HRESULT wdate_unicode_characters_statics_get_codepoint_from_surrogate_pair(WDATE_IUnicodeCharactersStatics *self, uint32_t highSurrogate, uint32_t lowSurrogate, uint32_t *out);
 
-/* Windows.Data.Text.IUnicodeCharactersStatics.GetSurrogatePairFromCodepoint(codepoint, highSurrogate, lowSurrogate) */
 HRESULT wdate_unicode_characters_statics_get_surrogate_pair_from_codepoint(WDATE_IUnicodeCharactersStatics *self, uint32_t codepoint, WCHAR highSurrogate, WCHAR lowSurrogate);
 
-/* Windows.Data.Text.IUnicodeCharactersStatics.IsHighSurrogate(codepoint) */
 HRESULT wdate_unicode_characters_statics_is_high_surrogate(WDATE_IUnicodeCharactersStatics *self, uint32_t codepoint, BOOL *out);
 
-/* Windows.Data.Text.IUnicodeCharactersStatics.IsLowSurrogate(codepoint) */
 HRESULT wdate_unicode_characters_statics_is_low_surrogate(WDATE_IUnicodeCharactersStatics *self, uint32_t codepoint, BOOL *out);
 
-/* Windows.Data.Text.IUnicodeCharactersStatics.IsSupplementary(codepoint) */
 HRESULT wdate_unicode_characters_statics_is_supplementary(WDATE_IUnicodeCharactersStatics *self, uint32_t codepoint, BOOL *out);
 
-/* Windows.Data.Text.IUnicodeCharactersStatics.IsNoncharacter(codepoint) */
 HRESULT wdate_unicode_characters_statics_is_noncharacter(WDATE_IUnicodeCharactersStatics *self, uint32_t codepoint, BOOL *out);
 
-/* Windows.Data.Text.IUnicodeCharactersStatics.IsWhitespace(codepoint) */
 HRESULT wdate_unicode_characters_statics_is_whitespace(WDATE_IUnicodeCharactersStatics *self, uint32_t codepoint, BOOL *out);
 
-/* Windows.Data.Text.IUnicodeCharactersStatics.IsAlphabetic(codepoint) */
 HRESULT wdate_unicode_characters_statics_is_alphabetic(WDATE_IUnicodeCharactersStatics *self, uint32_t codepoint, BOOL *out);
 
-/* Windows.Data.Text.IUnicodeCharactersStatics.IsCased(codepoint) */
 HRESULT wdate_unicode_characters_statics_is_cased(WDATE_IUnicodeCharactersStatics *self, uint32_t codepoint, BOOL *out);
 
-/* Windows.Data.Text.IUnicodeCharactersStatics.IsUppercase(codepoint) */
 HRESULT wdate_unicode_characters_statics_is_uppercase(WDATE_IUnicodeCharactersStatics *self, uint32_t codepoint, BOOL *out);
 
-/* Windows.Data.Text.IUnicodeCharactersStatics.IsLowercase(codepoint) */
 HRESULT wdate_unicode_characters_statics_is_lowercase(WDATE_IUnicodeCharactersStatics *self, uint32_t codepoint, BOOL *out);
 
-/* Windows.Data.Text.IUnicodeCharactersStatics.IsIdStart(codepoint) */
 HRESULT wdate_unicode_characters_statics_is_id_start(WDATE_IUnicodeCharactersStatics *self, uint32_t codepoint, BOOL *out);
 
-/* Windows.Data.Text.IUnicodeCharactersStatics.IsIdContinue(codepoint) */
 HRESULT wdate_unicode_characters_statics_is_id_continue(WDATE_IUnicodeCharactersStatics *self, uint32_t codepoint, BOOL *out);
 
-/* Windows.Data.Text.IUnicodeCharactersStatics.IsGraphemeBase(codepoint) */
 HRESULT wdate_unicode_characters_statics_is_grapheme_base(WDATE_IUnicodeCharactersStatics *self, uint32_t codepoint, BOOL *out);
 
-/* Windows.Data.Text.IUnicodeCharactersStatics.IsGraphemeExtend(codepoint) */
 HRESULT wdate_unicode_characters_statics_is_grapheme_extend(WDATE_IUnicodeCharactersStatics *self, uint32_t codepoint, BOOL *out);
 
-/* Windows.Data.Text.IUnicodeCharactersStatics.GetNumericType(codepoint) */
 HRESULT wdate_unicode_characters_statics_get_numeric_type(WDATE_IUnicodeCharactersStatics *self, uint32_t codepoint, WDATE_UnicodeNumericType *out);
 
-/* Windows.Data.Text.IUnicodeCharactersStatics.GetGeneralCategory(codepoint) */
 HRESULT wdate_unicode_characters_statics_get_general_category(WDATE_IUnicodeCharactersStatics *self, uint32_t codepoint, WDATE_UnicodeGeneralCategory *out);
 
-/* Windows.Data.Text.IWordsSegmenterFactory */
-/* Windows.Data.Text.IWordsSegmenterFactory.CreateWithLanguage(language) */
 HRESULT wdate_words_segmenter_factory_create_with_language(WDATE_IWordsSegmenterFactory *self, cwinrt_hstring language, WDATE_WordsSegmenter** out);
 
-/* activate Windows.Data.Text.SelectableWordSegment */
 HRESULT wdate_selectable_word_segment_new(WDATE_SelectableWordSegment **out);
 
-/* Windows.Data.Text.SelectableWordSegment */
-/* Windows.Data.Text.SelectableWordSegment.get_Text() */
 HRESULT wdate_selectable_word_segment_get__text(WDATE_SelectableWordSegment *self, cwinrt_hstring *value);
 
-/* Windows.Data.Text.SelectableWordSegment.get_SourceTextSegment() */
 HRESULT wdate_selectable_word_segment_get__source_text_segment(WDATE_SelectableWordSegment *self, WDATE_TextSegment *value);
 
-/* Windows.Data.Text.SelectableWordSegmentsTokenizingHandler */
-/* Windows.Data.Text.SelectableWordSegmentsTokenizingHandler.Invoke(precedingWords, words) */
 HRESULT wdate_selectable_word_segments_tokenizing_handler_invoke(WDATE_SelectableWordSegmentsTokenizingHandler *self, WFOCO_IIterable_WDATE_SelectableWordSegment* precedingWords, WFOCO_IIterable_WDATE_SelectableWordSegment* words);
 
-/* activate Windows.Data.Text.SelectableWordsSegmenter */
 HRESULT wdate_selectable_words_segmenter_new(WDATE_SelectableWordsSegmenter **out);
 
-/* Windows.Data.Text.SelectableWordsSegmenter */
-/* Windows.Data.Text.SelectableWordsSegmenter.get_ResolvedLanguage() */
 HRESULT wdate_selectable_words_segmenter_get__resolved_language(WDATE_SelectableWordsSegmenter *self, cwinrt_hstring *value);
 
-/* Windows.Data.Text.SelectableWordsSegmenter.GetTokenAt(text, startIndex) */
 HRESULT wdate_selectable_words_segmenter_get_token_at(WDATE_SelectableWordsSegmenter *self, cwinrt_hstring text, uint32_t startIndex, WDATE_SelectableWordSegment** out);
 
-/* Windows.Data.Text.SelectableWordsSegmenter.GetTokens(text) */
 HRESULT wdate_selectable_words_segmenter_get_tokens(WDATE_SelectableWordsSegmenter *self, cwinrt_hstring text, WFOCO_IVectorView_WDATE_SelectableWordSegment** out);
 
-/* Windows.Data.Text.SelectableWordsSegmenter.Tokenize(text, startIndex, handler) */
 HRESULT wdate_selectable_words_segmenter_tokenize(WDATE_SelectableWordsSegmenter *self, cwinrt_hstring text, uint32_t startIndex, WDATE_SelectableWordSegmentsTokenizingHandler* handler);
 
-/* activate Windows.Data.Text.SemanticTextQuery */
 HRESULT wdate_semantic_text_query_new(WDATE_SemanticTextQuery **out);
 
-/* Windows.Data.Text.SemanticTextQuery */
-/* Windows.Data.Text.SemanticTextQuery.Find(content) */
 HRESULT wdate_semantic_text_query_find(WDATE_SemanticTextQuery *self, cwinrt_hstring content, WFOCO_IVectorView_WDATE_TextSegment** out);
 
-/* Windows.Data.Text.SemanticTextQuery.FindInProperty(propertyContent, propertyName) */
 HRESULT wdate_semantic_text_query_find_in_property(WDATE_SemanticTextQuery *self, cwinrt_hstring propertyContent, cwinrt_hstring propertyName, WFOCO_IVectorView_WDATE_TextSegment** out);
 
-/* activate Windows.Data.Text.TextConversionGenerator */
 HRESULT wdate_text_conversion_generator_new(WDATE_TextConversionGenerator **out);
 
-/* Windows.Data.Text.TextConversionGenerator */
-/* Windows.Data.Text.TextConversionGenerator.get_ResolvedLanguage() */
 HRESULT wdate_text_conversion_generator_get__resolved_language(WDATE_TextConversionGenerator *self, cwinrt_hstring *value);
 
-/* Windows.Data.Text.TextConversionGenerator.get_LanguageAvailableButNotInstalled() */
 HRESULT wdate_text_conversion_generator_get__language_available_but_not_installed(WDATE_TextConversionGenerator *self, BOOL *value);
 
-/* Windows.Data.Text.TextConversionGenerator.GetCandidatesAsync(input) */
 HRESULT wdate_text_conversion_generator_get_candidates_async(WDATE_TextConversionGenerator *self, cwinrt_hstring input, WF_IAsyncOperation_WFOCO_IVectorView_HSTRING** out);
 
-/* Windows.Data.Text.TextConversionGenerator.GetCandidatesAsync(input, maxCandidates) */
 HRESULT wdate_text_conversion_generator_get_candidates_async_str_u32_p(WDATE_TextConversionGenerator *self, cwinrt_hstring input, uint32_t maxCandidates, WF_IAsyncOperation_WFOCO_IVectorView_HSTRING** out);
 
-/* activate Windows.Data.Text.TextPhoneme */
 HRESULT wdate_text_phoneme_new(WDATE_TextPhoneme **out);
 
-/* Windows.Data.Text.TextPhoneme */
-/* Windows.Data.Text.TextPhoneme.get_DisplayText() */
 HRESULT wdate_text_phoneme_get__display_text(WDATE_TextPhoneme *self, cwinrt_hstring *value);
 
-/* Windows.Data.Text.TextPhoneme.get_ReadingText() */
 HRESULT wdate_text_phoneme_get__reading_text(WDATE_TextPhoneme *self, cwinrt_hstring *value);
 
-/* activate Windows.Data.Text.TextPredictionGenerator */
 HRESULT wdate_text_prediction_generator_new(WDATE_TextPredictionGenerator **out);
 
-/* Windows.Data.Text.TextPredictionGenerator */
-/* Windows.Data.Text.TextPredictionGenerator.get_ResolvedLanguage() */
 HRESULT wdate_text_prediction_generator_get__resolved_language(WDATE_TextPredictionGenerator *self, cwinrt_hstring *value);
 
-/* Windows.Data.Text.TextPredictionGenerator.get_LanguageAvailableButNotInstalled() */
 HRESULT wdate_text_prediction_generator_get__language_available_but_not_installed(WDATE_TextPredictionGenerator *self, BOOL *value);
 
-/* Windows.Data.Text.TextPredictionGenerator.GetCandidatesAsync(input) */
 HRESULT wdate_text_prediction_generator_get_candidates_async(WDATE_TextPredictionGenerator *self, cwinrt_hstring input, WF_IAsyncOperation_WFOCO_IVectorView_HSTRING** out);
 
-/* Windows.Data.Text.TextPredictionGenerator.GetCandidatesAsync(input, maxCandidates) */
 HRESULT wdate_text_prediction_generator_get_candidates_async_str_u32_p(WDATE_TextPredictionGenerator *self, cwinrt_hstring input, uint32_t maxCandidates, WF_IAsyncOperation_WFOCO_IVectorView_HSTRING** out);
 
-/* Windows.Data.Text.TextPredictionGenerator.GetCandidatesAsync(input, maxCandidates, predictionOptions, previousStrings) */
 HRESULT wdate_text_prediction_generator_get_candidates_async_str_u32_text_prediction_options_p_p(WDATE_TextPredictionGenerator *self, cwinrt_hstring input, uint32_t maxCandidates, WDATE_TextPredictionOptions predictionOptions, WFOCO_IIterable_HSTRING* previousStrings, WF_IAsyncOperation_WFOCO_IVectorView_HSTRING** out);
 
-/* Windows.Data.Text.TextPredictionGenerator.GetNextWordCandidatesAsync(maxCandidates, previousStrings) */
 HRESULT wdate_text_prediction_generator_get_next_word_candidates_async(WDATE_TextPredictionGenerator *self, uint32_t maxCandidates, WFOCO_IIterable_HSTRING* previousStrings, WF_IAsyncOperation_WFOCO_IVectorView_HSTRING** out);
 
-/* Windows.Data.Text.TextPredictionGenerator.get_InputScope() */
 HRESULT wdate_text_prediction_generator_get__input_scope(WDATE_TextPredictionGenerator *self, WUITECO_CoreTextInputScope *value);
 
-/* Windows.Data.Text.TextPredictionGenerator.put_InputScope() */
 HRESULT wdate_text_prediction_generator_put__input_scope(WDATE_TextPredictionGenerator *self, WUITECO_CoreTextInputScope value);
 
-/* activate Windows.Data.Text.TextReverseConversionGenerator */
 HRESULT wdate_text_reverse_conversion_generator_new(WDATE_TextReverseConversionGenerator **out);
 
-/* Windows.Data.Text.TextReverseConversionGenerator */
-/* Windows.Data.Text.TextReverseConversionGenerator.get_ResolvedLanguage() */
 HRESULT wdate_text_reverse_conversion_generator_get__resolved_language(WDATE_TextReverseConversionGenerator *self, cwinrt_hstring *value);
 
-/* Windows.Data.Text.TextReverseConversionGenerator.get_LanguageAvailableButNotInstalled() */
 HRESULT wdate_text_reverse_conversion_generator_get__language_available_but_not_installed(WDATE_TextReverseConversionGenerator *self, BOOL *value);
 
-/* Windows.Data.Text.TextReverseConversionGenerator.ConvertBackAsync(input) */
 HRESULT wdate_text_reverse_conversion_generator_convert_back_async(WDATE_TextReverseConversionGenerator *self, cwinrt_hstring input, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Data.Text.TextReverseConversionGenerator.GetPhonemesAsync(input) */
 HRESULT wdate_text_reverse_conversion_generator_get_phonemes_async(WDATE_TextReverseConversionGenerator *self, cwinrt_hstring input, WF_IAsyncOperation_WFOCO_IVectorView_WDATE_TextPhoneme** out);
 
-/* activate Windows.Data.Text.UnicodeCharacters */
 HRESULT wdate_unicode_characters_new(WDATE_UnicodeCharacters **out);
 
-/* Windows.Data.Text.UnicodeCharacters */
-/* Windows.Data.Text.UnicodeCharacters.GetCodepointFromSurrogatePair(highSurrogate, lowSurrogate) */
 HRESULT wdate_unicode_characters_get_codepoint_from_surrogate_pair(uint32_t highSurrogate, uint32_t lowSurrogate, uint32_t *out);
 
-/* Windows.Data.Text.UnicodeCharacters.GetSurrogatePairFromCodepoint(codepoint, highSurrogate, lowSurrogate) */
 HRESULT wdate_unicode_characters_get_surrogate_pair_from_codepoint(uint32_t codepoint, WCHAR highSurrogate, WCHAR lowSurrogate);
 
-/* Windows.Data.Text.UnicodeCharacters.IsHighSurrogate(codepoint) */
 HRESULT wdate_unicode_characters_is_high_surrogate(uint32_t codepoint, BOOL *out);
 
-/* Windows.Data.Text.UnicodeCharacters.IsLowSurrogate(codepoint) */
 HRESULT wdate_unicode_characters_is_low_surrogate(uint32_t codepoint, BOOL *out);
 
-/* Windows.Data.Text.UnicodeCharacters.IsSupplementary(codepoint) */
 HRESULT wdate_unicode_characters_is_supplementary(uint32_t codepoint, BOOL *out);
 
-/* Windows.Data.Text.UnicodeCharacters.IsNoncharacter(codepoint) */
 HRESULT wdate_unicode_characters_is_noncharacter(uint32_t codepoint, BOOL *out);
 
-/* Windows.Data.Text.UnicodeCharacters.IsWhitespace(codepoint) */
 HRESULT wdate_unicode_characters_is_whitespace(uint32_t codepoint, BOOL *out);
 
-/* Windows.Data.Text.UnicodeCharacters.IsAlphabetic(codepoint) */
 HRESULT wdate_unicode_characters_is_alphabetic(uint32_t codepoint, BOOL *out);
 
-/* Windows.Data.Text.UnicodeCharacters.IsCased(codepoint) */
 HRESULT wdate_unicode_characters_is_cased(uint32_t codepoint, BOOL *out);
 
-/* Windows.Data.Text.UnicodeCharacters.IsUppercase(codepoint) */
 HRESULT wdate_unicode_characters_is_uppercase(uint32_t codepoint, BOOL *out);
 
-/* Windows.Data.Text.UnicodeCharacters.IsLowercase(codepoint) */
 HRESULT wdate_unicode_characters_is_lowercase(uint32_t codepoint, BOOL *out);
 
-/* Windows.Data.Text.UnicodeCharacters.IsIdStart(codepoint) */
 HRESULT wdate_unicode_characters_is_id_start(uint32_t codepoint, BOOL *out);
 
-/* Windows.Data.Text.UnicodeCharacters.IsIdContinue(codepoint) */
 HRESULT wdate_unicode_characters_is_id_continue(uint32_t codepoint, BOOL *out);
 
-/* Windows.Data.Text.UnicodeCharacters.IsGraphemeBase(codepoint) */
 HRESULT wdate_unicode_characters_is_grapheme_base(uint32_t codepoint, BOOL *out);
 
-/* Windows.Data.Text.UnicodeCharacters.IsGraphemeExtend(codepoint) */
 HRESULT wdate_unicode_characters_is_grapheme_extend(uint32_t codepoint, BOOL *out);
 
-/* Windows.Data.Text.UnicodeCharacters.GetNumericType(codepoint) */
 HRESULT wdate_unicode_characters_get_numeric_type(uint32_t codepoint, WDATE_UnicodeNumericType *out);
 
-/* Windows.Data.Text.UnicodeCharacters.GetGeneralCategory(codepoint) */
 HRESULT wdate_unicode_characters_get_general_category(uint32_t codepoint, WDATE_UnicodeGeneralCategory *out);
 
-/* activate Windows.Data.Text.WordSegment */
 HRESULT wdate_word_segment_new(WDATE_WordSegment **out);
 
-/* Windows.Data.Text.WordSegment */
-/* Windows.Data.Text.WordSegment.get_Text() */
 HRESULT wdate_word_segment_get__text(WDATE_WordSegment *self, cwinrt_hstring *value);
 
-/* Windows.Data.Text.WordSegment.get_SourceTextSegment() */
 HRESULT wdate_word_segment_get__source_text_segment(WDATE_WordSegment *self, WDATE_TextSegment *value);
 
-/* Windows.Data.Text.WordSegment.get_AlternateForms() */
 HRESULT wdate_word_segment_get__alternate_forms(WDATE_WordSegment *self, WFOCO_IVectorView_WDATE_AlternateWordForm** value);
 
-/* Windows.Data.Text.WordSegmentsTokenizingHandler */
-/* Windows.Data.Text.WordSegmentsTokenizingHandler.Invoke(precedingWords, words) */
 HRESULT wdate_word_segments_tokenizing_handler_invoke(WDATE_WordSegmentsTokenizingHandler *self, WFOCO_IIterable_WDATE_WordSegment* precedingWords, WFOCO_IIterable_WDATE_WordSegment* words);
 
-/* activate Windows.Data.Text.WordsSegmenter */
 HRESULT wdate_words_segmenter_new(WDATE_WordsSegmenter **out);
 
-/* Windows.Data.Text.WordsSegmenter */
-/* Windows.Data.Text.WordsSegmenter.get_ResolvedLanguage() */
 HRESULT wdate_words_segmenter_get__resolved_language(WDATE_WordsSegmenter *self, cwinrt_hstring *value);
 
-/* Windows.Data.Text.WordsSegmenter.GetTokenAt(text, startIndex) */
 HRESULT wdate_words_segmenter_get_token_at(WDATE_WordsSegmenter *self, cwinrt_hstring text, uint32_t startIndex, WDATE_WordSegment** out);
 
-/* Windows.Data.Text.WordsSegmenter.GetTokens(text) */
 HRESULT wdate_words_segmenter_get_tokens(WDATE_WordsSegmenter *self, cwinrt_hstring text, WFOCO_IVectorView_WDATE_WordSegment** out);
 
-/* Windows.Data.Text.WordsSegmenter.Tokenize(text, startIndex, handler) */
 HRESULT wdate_words_segmenter_tokenize(WDATE_WordsSegmenter *self, cwinrt_hstring text, uint32_t startIndex, WDATE_WordSegmentsTokenizingHandler* handler);
 
-/* Windows.Data.Text.IAlternateWordForm */
-/* Windows.Data.Text.ISelectableWordSegment */
-/* Windows.Data.Text.ISelectableWordsSegmenter */
-/* Windows.Data.Text.ISemanticTextQuery */
-/* Windows.Data.Text.ITextConversionGenerator */
-/* Windows.Data.Text.ITextPhoneme */
-/* Windows.Data.Text.ITextPredictionGenerator */
-/* Windows.Data.Text.ITextPredictionGenerator2 */
-/* Windows.Data.Text.ITextPredictionGenerator2.GetCandidatesAsync(input, maxCandidates, predictionOptions, previousStrings) */
 HRESULT wdate_text_prediction_generator_2_get_candidates_async(WDATE_ITextPredictionGenerator_2 *self, cwinrt_hstring input, uint32_t maxCandidates, WDATE_TextPredictionOptions predictionOptions, WFOCO_IIterable_HSTRING* previousStrings, WF_IAsyncOperation_WFOCO_IVectorView_HSTRING** out);
 
-/* Windows.Data.Text.ITextPredictionGenerator2.GetNextWordCandidatesAsync(maxCandidates, previousStrings) */
 HRESULT wdate_text_prediction_generator_2_get_next_word_candidates_async(WDATE_ITextPredictionGenerator_2 *self, uint32_t maxCandidates, WFOCO_IIterable_HSTRING* previousStrings, WF_IAsyncOperation_WFOCO_IVectorView_HSTRING** out);
 
-/* Windows.Data.Text.ITextPredictionGenerator2.get_InputScope() */
 HRESULT wdate_text_prediction_generator_2_get__input_scope(WDATE_ITextPredictionGenerator_2 *self, WUITECO_CoreTextInputScope *value);
 
-/* Windows.Data.Text.ITextPredictionGenerator2.put_InputScope() */
 HRESULT wdate_text_prediction_generator_2_put__input_scope(WDATE_ITextPredictionGenerator_2 *self, WUITECO_CoreTextInputScope value);
 
-/* Windows.Data.Text.ITextReverseConversionGenerator */
-/* Windows.Data.Text.ITextReverseConversionGenerator2 */
-/* Windows.Data.Text.ITextReverseConversionGenerator2.GetPhonemesAsync(input) */
 HRESULT wdate_text_reverse_conversion_generator_2_get_phonemes_async(WDATE_ITextReverseConversionGenerator_2 *self, cwinrt_hstring input, WF_IAsyncOperation_WFOCO_IVectorView_WDATE_TextPhoneme** out);
 
-/* Windows.Data.Text.IWordSegment */
-/* Windows.Data.Text.IWordsSegmenter */
 #endif /* CWINRT_WINDOWS_DATA_TEXT_H */

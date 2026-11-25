@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
@@ -26,7 +25,6 @@ typedef struct WNE_HostName WNE_HostName;
 typedef struct WSTST_IInputStream WSTST_IInputStream;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSECRCE_CertificateEnrollmentManager WSECRCE_CertificateEnrollmentManager;
 typedef struct WSECRCE_CertificateExtension WSECRCE_CertificateExtension;
 typedef struct WSECRCE_CertificateKeyUsages WSECRCE_CertificateKeyUsages;
@@ -94,7 +92,6 @@ typedef struct WSECRCE_ICertificate WSECRCE_ICertificate;
 typedef struct WSECRCE_ICertificate_2 WSECRCE_ICertificate_2;
 typedef struct WSECRCE_ICertificate_3 WSECRCE_ICertificate_3;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncAction
 #define CWINRT_FWD_WF_IAsyncAction
 typedef struct WF_IAsyncAction WF_IAsyncAction;
@@ -259,7 +256,6 @@ typedef enum WSECRCE_SignatureValidationResult {
 } WSECRCE_SignatureValidationResult;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -436,996 +432,620 @@ static const IID CWINRT_IID_WSECRCE_ICertificate_2 CWINRT_MAYBE_UNUSED = { 0x17B
 static const IID CWINRT_IID_WSECRCE_ICertificate_3 CWINRT_MAYBE_UNUSED = { 0xBE51A966, 0xAE5F, 0x4652, { 0xAC, 0xE7, 0xC6, 0xD7, 0xE7, 0x72, 0x4C, 0xF3 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager */
 HRESULT wsecrce_certificate_enrollment_manager_new(WSECRCE_CertificateEnrollmentManager **out);
 
-/* Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager */
-/* Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager.ImportPfxDataAsync(pfxData, password, pfxImportParameters) */
 HRESULT wsecrce_certificate_enrollment_manager_import_pfx_data_async(cwinrt_hstring pfxData, cwinrt_hstring password, WSECRCE_PfxImportParameters* pfxImportParameters, WF_IAsyncAction** out);
 
-/* Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager.get_UserCertificateEnrollmentManager() */
 HRESULT wsecrce_certificate_enrollment_manager_get__user_certificate_enrollment_manager(WSECRCE_UserCertificateEnrollmentManager** value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager.ImportPfxDataAsync(pfxData, password, exportable, keyProtectionLevel, installOption, friendlyName, keyStorageProvider) */
 HRESULT wsecrce_certificate_enrollment_manager_import_pfx_data_async_str_str_export_option_key_protection_32438246(cwinrt_hstring pfxData, cwinrt_hstring password, WSECRCE_ExportOption exportable, WSECRCE_KeyProtectionLevel keyProtectionLevel, WSECRCE_InstallOptions installOption, cwinrt_hstring friendlyName, cwinrt_hstring keyStorageProvider, WF_IAsyncAction** out);
 
-/* Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager.CreateRequestAsync(request) */
 HRESULT wsecrce_certificate_enrollment_manager_create_request_async(WSECRCE_CertificateRequestProperties* request, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager.InstallCertificateAsync(certificate, installOption) */
 HRESULT wsecrce_certificate_enrollment_manager_install_certificate_async(cwinrt_hstring certificate, WSECRCE_InstallOptions installOption, WF_IAsyncAction** out);
 
-/* Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager.ImportPfxDataAsync(pfxData, password, exportable, keyProtectionLevel, installOption, friendlyName) */
 HRESULT wsecrce_certificate_enrollment_manager_import_pfx_data_async_str_str_export_option_key_protection_584f4fb2(cwinrt_hstring pfxData, cwinrt_hstring password, WSECRCE_ExportOption exportable, WSECRCE_KeyProtectionLevel keyProtectionLevel, WSECRCE_InstallOptions installOption, cwinrt_hstring friendlyName, WF_IAsyncAction** out);
 
-/* activate Windows.Security.Cryptography.Certificates.CertificateExtension */
 HRESULT wsecrce_certificate_extension_new(WSECRCE_CertificateExtension **out);
 
-/* Windows.Security.Cryptography.Certificates.CertificateExtension */
-/* Windows.Security.Cryptography.Certificates.CertificateExtension.get_ObjectId() */
 HRESULT wsecrce_certificate_extension_get__object_id(WSECRCE_CertificateExtension *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateExtension.put_ObjectId() */
 HRESULT wsecrce_certificate_extension_put__object_id(WSECRCE_CertificateExtension *self, cwinrt_hstring value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateExtension.get_IsCritical() */
 HRESULT wsecrce_certificate_extension_get__is_critical(WSECRCE_CertificateExtension *self, BOOL *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateExtension.put_IsCritical() */
 HRESULT wsecrce_certificate_extension_put__is_critical(WSECRCE_CertificateExtension *self, BOOL value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateExtension.EncodeValue() */
 HRESULT wsecrce_certificate_extension_encode_value(WSECRCE_CertificateExtension *self, cwinrt_hstring value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateExtension.get_Value() */
 HRESULT wsecrce_certificate_extension_get__value(WSECRCE_CertificateExtension *self, uint8_t **value, uint32_t *value_len);
 
-/* Windows.Security.Cryptography.Certificates.CertificateExtension.put_Value() */
 HRESULT wsecrce_certificate_extension_put__value(WSECRCE_CertificateExtension *self, uint8_t *value, uint32_t value_len);
 
-/* activate Windows.Security.Cryptography.Certificates.CertificateKeyUsages */
 HRESULT wsecrce_certificate_key_usages_new(WSECRCE_CertificateKeyUsages **out);
 
-/* Windows.Security.Cryptography.Certificates.CertificateKeyUsages */
-/* Windows.Security.Cryptography.Certificates.CertificateKeyUsages.get_EncipherOnly() */
 HRESULT wsecrce_certificate_key_usages_get__encipher_only(WSECRCE_CertificateKeyUsages *self, BOOL *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateKeyUsages.put_EncipherOnly() */
 HRESULT wsecrce_certificate_key_usages_put__encipher_only(WSECRCE_CertificateKeyUsages *self, BOOL value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateKeyUsages.get_CrlSign() */
 HRESULT wsecrce_certificate_key_usages_get__crl_sign(WSECRCE_CertificateKeyUsages *self, BOOL *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateKeyUsages.put_CrlSign() */
 HRESULT wsecrce_certificate_key_usages_put__crl_sign(WSECRCE_CertificateKeyUsages *self, BOOL value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateKeyUsages.get_KeyCertificateSign() */
 HRESULT wsecrce_certificate_key_usages_get__key_certificate_sign(WSECRCE_CertificateKeyUsages *self, BOOL *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateKeyUsages.put_KeyCertificateSign() */
 HRESULT wsecrce_certificate_key_usages_put__key_certificate_sign(WSECRCE_CertificateKeyUsages *self, BOOL value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateKeyUsages.get_KeyAgreement() */
 HRESULT wsecrce_certificate_key_usages_get__key_agreement(WSECRCE_CertificateKeyUsages *self, BOOL *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateKeyUsages.put_KeyAgreement() */
 HRESULT wsecrce_certificate_key_usages_put__key_agreement(WSECRCE_CertificateKeyUsages *self, BOOL value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateKeyUsages.get_DataEncipherment() */
 HRESULT wsecrce_certificate_key_usages_get__data_encipherment(WSECRCE_CertificateKeyUsages *self, BOOL *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateKeyUsages.put_DataEncipherment() */
 HRESULT wsecrce_certificate_key_usages_put__data_encipherment(WSECRCE_CertificateKeyUsages *self, BOOL value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateKeyUsages.get_KeyEncipherment() */
 HRESULT wsecrce_certificate_key_usages_get__key_encipherment(WSECRCE_CertificateKeyUsages *self, BOOL *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateKeyUsages.put_KeyEncipherment() */
 HRESULT wsecrce_certificate_key_usages_put__key_encipherment(WSECRCE_CertificateKeyUsages *self, BOOL value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateKeyUsages.get_NonRepudiation() */
 HRESULT wsecrce_certificate_key_usages_get__non_repudiation(WSECRCE_CertificateKeyUsages *self, BOOL *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateKeyUsages.put_NonRepudiation() */
 HRESULT wsecrce_certificate_key_usages_put__non_repudiation(WSECRCE_CertificateKeyUsages *self, BOOL value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateKeyUsages.get_DigitalSignature() */
 HRESULT wsecrce_certificate_key_usages_get__digital_signature(WSECRCE_CertificateKeyUsages *self, BOOL *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateKeyUsages.put_DigitalSignature() */
 HRESULT wsecrce_certificate_key_usages_put__digital_signature(WSECRCE_CertificateKeyUsages *self, BOOL value);
 
-/* activate Windows.Security.Cryptography.Certificates.CertificateQuery */
 HRESULT wsecrce_certificate_query_new(WSECRCE_CertificateQuery **out);
 
-/* Windows.Security.Cryptography.Certificates.CertificateQuery */
-/* Windows.Security.Cryptography.Certificates.CertificateQuery.get_EnhancedKeyUsages() */
 HRESULT wsecrce_certificate_query_get__enhanced_key_usages(WSECRCE_CertificateQuery *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateQuery.get_IssuerName() */
 HRESULT wsecrce_certificate_query_get__issuer_name(WSECRCE_CertificateQuery *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateQuery.put_IssuerName() */
 HRESULT wsecrce_certificate_query_put__issuer_name(WSECRCE_CertificateQuery *self, cwinrt_hstring value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateQuery.get_FriendlyName() */
 HRESULT wsecrce_certificate_query_get__friendly_name(WSECRCE_CertificateQuery *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateQuery.put_FriendlyName() */
 HRESULT wsecrce_certificate_query_put__friendly_name(WSECRCE_CertificateQuery *self, cwinrt_hstring value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateQuery.get_Thumbprint() */
 HRESULT wsecrce_certificate_query_get__thumbprint(WSECRCE_CertificateQuery *self, uint8_t **value, uint32_t *value_len);
 
-/* Windows.Security.Cryptography.Certificates.CertificateQuery.put_Thumbprint() */
 HRESULT wsecrce_certificate_query_put__thumbprint(WSECRCE_CertificateQuery *self, uint8_t *value, uint32_t value_len);
 
-/* Windows.Security.Cryptography.Certificates.CertificateQuery.get_HardwareOnly() */
 HRESULT wsecrce_certificate_query_get__hardware_only(WSECRCE_CertificateQuery *self, BOOL *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateQuery.put_HardwareOnly() */
 HRESULT wsecrce_certificate_query_put__hardware_only(WSECRCE_CertificateQuery *self, BOOL value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateQuery.get_IncludeDuplicates() */
 HRESULT wsecrce_certificate_query_get__include_duplicates(WSECRCE_CertificateQuery *self, BOOL *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateQuery.put_IncludeDuplicates() */
 HRESULT wsecrce_certificate_query_put__include_duplicates(WSECRCE_CertificateQuery *self, BOOL value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateQuery.get_IncludeExpiredCertificates() */
 HRESULT wsecrce_certificate_query_get__include_expired_certificates(WSECRCE_CertificateQuery *self, BOOL *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateQuery.put_IncludeExpiredCertificates() */
 HRESULT wsecrce_certificate_query_put__include_expired_certificates(WSECRCE_CertificateQuery *self, BOOL value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateQuery.get_StoreName() */
 HRESULT wsecrce_certificate_query_get__store_name(WSECRCE_CertificateQuery *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateQuery.put_StoreName() */
 HRESULT wsecrce_certificate_query_put__store_name(WSECRCE_CertificateQuery *self, cwinrt_hstring value);
 
-/* activate Windows.Security.Cryptography.Certificates.CertificateRequestProperties */
 HRESULT wsecrce_certificate_request_properties_new(WSECRCE_CertificateRequestProperties **out);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties */
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.get_Subject() */
 HRESULT wsecrce_certificate_request_properties_get__subject(WSECRCE_CertificateRequestProperties *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.put_Subject() */
 HRESULT wsecrce_certificate_request_properties_put__subject(WSECRCE_CertificateRequestProperties *self, cwinrt_hstring value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.get_KeyAlgorithmName() */
 HRESULT wsecrce_certificate_request_properties_get__key_algorithm_name(WSECRCE_CertificateRequestProperties *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.put_KeyAlgorithmName() */
 HRESULT wsecrce_certificate_request_properties_put__key_algorithm_name(WSECRCE_CertificateRequestProperties *self, cwinrt_hstring value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.get_KeySize() */
 HRESULT wsecrce_certificate_request_properties_get__key_size(WSECRCE_CertificateRequestProperties *self, uint32_t *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.put_KeySize() */
 HRESULT wsecrce_certificate_request_properties_put__key_size(WSECRCE_CertificateRequestProperties *self, uint32_t value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.get_FriendlyName() */
 HRESULT wsecrce_certificate_request_properties_get__friendly_name(WSECRCE_CertificateRequestProperties *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.put_FriendlyName() */
 HRESULT wsecrce_certificate_request_properties_put__friendly_name(WSECRCE_CertificateRequestProperties *self, cwinrt_hstring value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.get_HashAlgorithmName() */
 HRESULT wsecrce_certificate_request_properties_get__hash_algorithm_name(WSECRCE_CertificateRequestProperties *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.put_HashAlgorithmName() */
 HRESULT wsecrce_certificate_request_properties_put__hash_algorithm_name(WSECRCE_CertificateRequestProperties *self, cwinrt_hstring value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.get_Exportable() */
 HRESULT wsecrce_certificate_request_properties_get__exportable(WSECRCE_CertificateRequestProperties *self, WSECRCE_ExportOption *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.put_Exportable() */
 HRESULT wsecrce_certificate_request_properties_put__exportable(WSECRCE_CertificateRequestProperties *self, WSECRCE_ExportOption value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.get_KeyUsages() */
 HRESULT wsecrce_certificate_request_properties_get__key_usages(WSECRCE_CertificateRequestProperties *self, WSECRCE_EnrollKeyUsages *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.put_KeyUsages() */
 HRESULT wsecrce_certificate_request_properties_put__key_usages(WSECRCE_CertificateRequestProperties *self, WSECRCE_EnrollKeyUsages value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.get_KeyProtectionLevel() */
 HRESULT wsecrce_certificate_request_properties_get__key_protection_level(WSECRCE_CertificateRequestProperties *self, WSECRCE_KeyProtectionLevel *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.put_KeyProtectionLevel() */
 HRESULT wsecrce_certificate_request_properties_put__key_protection_level(WSECRCE_CertificateRequestProperties *self, WSECRCE_KeyProtectionLevel value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.get_KeyStorageProviderName() */
 HRESULT wsecrce_certificate_request_properties_get__key_storage_provider_name(WSECRCE_CertificateRequestProperties *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.put_KeyStorageProviderName() */
 HRESULT wsecrce_certificate_request_properties_put__key_storage_provider_name(WSECRCE_CertificateRequestProperties *self, cwinrt_hstring value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.get_SmartcardReaderName() */
 HRESULT wsecrce_certificate_request_properties_get__smartcard_reader_name(WSECRCE_CertificateRequestProperties *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.put_SmartcardReaderName() */
 HRESULT wsecrce_certificate_request_properties_put__smartcard_reader_name(WSECRCE_CertificateRequestProperties *self, cwinrt_hstring value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.get_SigningCertificate() */
 HRESULT wsecrce_certificate_request_properties_get__signing_certificate(WSECRCE_CertificateRequestProperties *self, WSECRCE_Certificate** value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.put_SigningCertificate() */
 HRESULT wsecrce_certificate_request_properties_put__signing_certificate(WSECRCE_CertificateRequestProperties *self, WSECRCE_Certificate* value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.get_AttestationCredentialCertificate() */
 HRESULT wsecrce_certificate_request_properties_get__attestation_credential_certificate(WSECRCE_CertificateRequestProperties *self, WSECRCE_Certificate** value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.put_AttestationCredentialCertificate() */
 HRESULT wsecrce_certificate_request_properties_put__attestation_credential_certificate(WSECRCE_CertificateRequestProperties *self, WSECRCE_Certificate* value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.get_CurveName() */
 HRESULT wsecrce_certificate_request_properties_get__curve_name(WSECRCE_CertificateRequestProperties *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.put_CurveName() */
 HRESULT wsecrce_certificate_request_properties_put__curve_name(WSECRCE_CertificateRequestProperties *self, cwinrt_hstring value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.get_CurveParameters() */
 HRESULT wsecrce_certificate_request_properties_get__curve_parameters(WSECRCE_CertificateRequestProperties *self, uint8_t **value, uint32_t *value_len);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.put_CurveParameters() */
 HRESULT wsecrce_certificate_request_properties_put__curve_parameters(WSECRCE_CertificateRequestProperties *self, uint8_t *value, uint32_t value_len);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.get_ContainerNamePrefix() */
 HRESULT wsecrce_certificate_request_properties_get__container_name_prefix(WSECRCE_CertificateRequestProperties *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.put_ContainerNamePrefix() */
 HRESULT wsecrce_certificate_request_properties_put__container_name_prefix(WSECRCE_CertificateRequestProperties *self, cwinrt_hstring value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.get_ContainerName() */
 HRESULT wsecrce_certificate_request_properties_get__container_name(WSECRCE_CertificateRequestProperties *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.put_ContainerName() */
 HRESULT wsecrce_certificate_request_properties_put__container_name(WSECRCE_CertificateRequestProperties *self, cwinrt_hstring value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.get_UseExistingKey() */
 HRESULT wsecrce_certificate_request_properties_get__use_existing_key(WSECRCE_CertificateRequestProperties *self, BOOL *value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.put_UseExistingKey() */
 HRESULT wsecrce_certificate_request_properties_put__use_existing_key(WSECRCE_CertificateRequestProperties *self, BOOL value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.get_SuppressedDefaults() */
 HRESULT wsecrce_certificate_request_properties_get__suppressed_defaults(WSECRCE_CertificateRequestProperties *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.get_SubjectAlternativeName() */
 HRESULT wsecrce_certificate_request_properties_get__subject_alternative_name(WSECRCE_CertificateRequestProperties *self, WSECRCE_SubjectAlternativeNameInfo** value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateRequestProperties.get_Extensions() */
 HRESULT wsecrce_certificate_request_properties_get__extensions(WSECRCE_CertificateRequestProperties *self, WFOCO_IVector_WSECRCE_CertificateExtension** value);
 
-/* activate Windows.Security.Cryptography.Certificates.CertificateStore */
 HRESULT wsecrce_certificate_store_new(WSECRCE_CertificateStore **out);
 
-/* Windows.Security.Cryptography.Certificates.CertificateStore */
-/* Windows.Security.Cryptography.Certificates.CertificateStore.Add(certificate) */
 HRESULT wsecrce_certificate_store_add(WSECRCE_CertificateStore *self, WSECRCE_Certificate* certificate);
 
-/* Windows.Security.Cryptography.Certificates.CertificateStore.Delete(certificate) */
 HRESULT wsecrce_certificate_store_delete(WSECRCE_CertificateStore *self, WSECRCE_Certificate* certificate);
 
-/* Windows.Security.Cryptography.Certificates.CertificateStore.get_Name() */
 HRESULT wsecrce_certificate_store_get__name(WSECRCE_CertificateStore *self, cwinrt_hstring *value);
 
-/* activate Windows.Security.Cryptography.Certificates.CertificateStores */
 HRESULT wsecrce_certificate_stores_new(WSECRCE_CertificateStores **out);
 
-/* Windows.Security.Cryptography.Certificates.CertificateStores */
-/* Windows.Security.Cryptography.Certificates.CertificateStores.GetUserStoreByName(storeName) */
 HRESULT wsecrce_certificate_stores_get_user_store_by_name(cwinrt_hstring storeName, WSECRCE_UserCertificateStore** out);
 
-/* Windows.Security.Cryptography.Certificates.CertificateStores.FindAllAsync() */
 HRESULT wsecrce_certificate_stores_find_all_async(WF_IAsyncOperation_WFOCO_IVectorView_WSECRCE_Certificate** out);
 
-/* Windows.Security.Cryptography.Certificates.CertificateStores.FindAllAsync(query) */
 HRESULT wsecrce_certificate_stores_find_all_async_p_p(WSECRCE_CertificateQuery* query, WF_IAsyncOperation_WFOCO_IVectorView_WSECRCE_Certificate** out);
 
-/* Windows.Security.Cryptography.Certificates.CertificateStores.get_TrustedRootCertificationAuthorities() */
 HRESULT wsecrce_certificate_stores_get__trusted_root_certification_authorities(WSECRCE_CertificateStore** value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateStores.get_IntermediateCertificationAuthorities() */
 HRESULT wsecrce_certificate_stores_get__intermediate_certification_authorities(WSECRCE_CertificateStore** value);
 
-/* Windows.Security.Cryptography.Certificates.CertificateStores.GetStoreByName(storeName) */
 HRESULT wsecrce_certificate_stores_get_store_by_name(cwinrt_hstring storeName, WSECRCE_CertificateStore** out);
 
-/* activate Windows.Security.Cryptography.Certificates.ChainBuildingParameters */
 HRESULT wsecrce_chain_building_parameters_new(WSECRCE_ChainBuildingParameters **out);
 
-/* Windows.Security.Cryptography.Certificates.ChainBuildingParameters */
-/* Windows.Security.Cryptography.Certificates.ChainBuildingParameters.get_EnhancedKeyUsages() */
 HRESULT wsecrce_chain_building_parameters_get__enhanced_key_usages(WSECRCE_ChainBuildingParameters *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Security.Cryptography.Certificates.ChainBuildingParameters.get_ValidationTimestamp() */
 HRESULT wsecrce_chain_building_parameters_get__validation_timestamp(WSECRCE_ChainBuildingParameters *self, WF_DateTime *value);
 
-/* Windows.Security.Cryptography.Certificates.ChainBuildingParameters.put_ValidationTimestamp() */
 HRESULT wsecrce_chain_building_parameters_put__validation_timestamp(WSECRCE_ChainBuildingParameters *self, WF_DateTime value);
 
-/* Windows.Security.Cryptography.Certificates.ChainBuildingParameters.get_RevocationCheckEnabled() */
 HRESULT wsecrce_chain_building_parameters_get__revocation_check_enabled(WSECRCE_ChainBuildingParameters *self, BOOL *value);
 
-/* Windows.Security.Cryptography.Certificates.ChainBuildingParameters.put_RevocationCheckEnabled() */
 HRESULT wsecrce_chain_building_parameters_put__revocation_check_enabled(WSECRCE_ChainBuildingParameters *self, BOOL value);
 
-/* Windows.Security.Cryptography.Certificates.ChainBuildingParameters.get_NetworkRetrievalEnabled() */
 HRESULT wsecrce_chain_building_parameters_get__network_retrieval_enabled(WSECRCE_ChainBuildingParameters *self, BOOL *value);
 
-/* Windows.Security.Cryptography.Certificates.ChainBuildingParameters.put_NetworkRetrievalEnabled() */
 HRESULT wsecrce_chain_building_parameters_put__network_retrieval_enabled(WSECRCE_ChainBuildingParameters *self, BOOL value);
 
-/* Windows.Security.Cryptography.Certificates.ChainBuildingParameters.get_AuthorityInformationAccessEnabled() */
 HRESULT wsecrce_chain_building_parameters_get__authority_information_access_enabled(WSECRCE_ChainBuildingParameters *self, BOOL *value);
 
-/* Windows.Security.Cryptography.Certificates.ChainBuildingParameters.put_AuthorityInformationAccessEnabled() */
 HRESULT wsecrce_chain_building_parameters_put__authority_information_access_enabled(WSECRCE_ChainBuildingParameters *self, BOOL value);
 
-/* Windows.Security.Cryptography.Certificates.ChainBuildingParameters.get_CurrentTimeValidationEnabled() */
 HRESULT wsecrce_chain_building_parameters_get__current_time_validation_enabled(WSECRCE_ChainBuildingParameters *self, BOOL *value);
 
-/* Windows.Security.Cryptography.Certificates.ChainBuildingParameters.put_CurrentTimeValidationEnabled() */
 HRESULT wsecrce_chain_building_parameters_put__current_time_validation_enabled(WSECRCE_ChainBuildingParameters *self, BOOL value);
 
-/* Windows.Security.Cryptography.Certificates.ChainBuildingParameters.get_ExclusiveTrustRoots() */
 HRESULT wsecrce_chain_building_parameters_get__exclusive_trust_roots(WSECRCE_ChainBuildingParameters *self, WFOCO_IVector_WSECRCE_Certificate** value);
 
-/* activate Windows.Security.Cryptography.Certificates.ChainValidationParameters */
 HRESULT wsecrce_chain_validation_parameters_new(WSECRCE_ChainValidationParameters **out);
 
-/* Windows.Security.Cryptography.Certificates.ChainValidationParameters */
-/* Windows.Security.Cryptography.Certificates.ChainValidationParameters.get_CertificateChainPolicy() */
 HRESULT wsecrce_chain_validation_parameters_get__certificate_chain_policy(WSECRCE_ChainValidationParameters *self, WSECRCE_CertificateChainPolicy *value);
 
-/* Windows.Security.Cryptography.Certificates.ChainValidationParameters.put_CertificateChainPolicy() */
 HRESULT wsecrce_chain_validation_parameters_put__certificate_chain_policy(WSECRCE_ChainValidationParameters *self, WSECRCE_CertificateChainPolicy value);
 
-/* Windows.Security.Cryptography.Certificates.ChainValidationParameters.get_ServerDnsName() */
 HRESULT wsecrce_chain_validation_parameters_get__server_dns_name(WSECRCE_ChainValidationParameters *self, WNE_HostName** value);
 
-/* Windows.Security.Cryptography.Certificates.ChainValidationParameters.put_ServerDnsName() */
 HRESULT wsecrce_chain_validation_parameters_put__server_dns_name(WSECRCE_ChainValidationParameters *self, WNE_HostName* value);
 
-/* activate Windows.Security.Cryptography.Certificates.CmsAttachedSignature */
 HRESULT wsecrce_cms_attached_signature_new(WSECRCE_CmsAttachedSignature **out);
 
-/* Windows.Security.Cryptography.Certificates.CmsAttachedSignature */
-/* Windows.Security.Cryptography.Certificates.CmsAttachedSignature.get_Certificates() */
 HRESULT wsecrce_cms_attached_signature_get__certificates(WSECRCE_CmsAttachedSignature *self, WFOCO_IVectorView_WSECRCE_Certificate** value);
 
-/* Windows.Security.Cryptography.Certificates.CmsAttachedSignature.get_Content() */
 HRESULT wsecrce_cms_attached_signature_get__content(WSECRCE_CmsAttachedSignature *self, uint8_t **value, uint32_t *value_len);
 
-/* Windows.Security.Cryptography.Certificates.CmsAttachedSignature.get_Signers() */
 HRESULT wsecrce_cms_attached_signature_get__signers(WSECRCE_CmsAttachedSignature *self, WFOCO_IVectorView_WSECRCE_CmsSignerInfo** value);
 
-/* Windows.Security.Cryptography.Certificates.CmsAttachedSignature.VerifySignature() */
 HRESULT wsecrce_cms_attached_signature_verify_signature(WSECRCE_CmsAttachedSignature *self, WSECRCE_SignatureValidationResult *out);
 
-/* Windows.Security.Cryptography.Certificates.CmsAttachedSignature.GenerateSignatureAsync(data, signers, certificates) */
 HRESULT wsecrce_cms_attached_signature_generate_signature_async(WSTST_IBuffer* data, WFOCO_IIterable_WSECRCE_CmsSignerInfo* signers, WFOCO_IIterable_WSECRCE_Certificate* certificates, WF_IAsyncOperation_WSTST_IBuffer** out);
 
-/* activate Windows.Security.Cryptography.Certificates.CmsDetachedSignature */
 HRESULT wsecrce_cms_detached_signature_new(WSECRCE_CmsDetachedSignature **out);
 
-/* Windows.Security.Cryptography.Certificates.CmsDetachedSignature */
-/* Windows.Security.Cryptography.Certificates.CmsDetachedSignature.get_Certificates() */
 HRESULT wsecrce_cms_detached_signature_get__certificates(WSECRCE_CmsDetachedSignature *self, WFOCO_IVectorView_WSECRCE_Certificate** value);
 
-/* Windows.Security.Cryptography.Certificates.CmsDetachedSignature.get_Signers() */
 HRESULT wsecrce_cms_detached_signature_get__signers(WSECRCE_CmsDetachedSignature *self, WFOCO_IVectorView_WSECRCE_CmsSignerInfo** value);
 
-/* Windows.Security.Cryptography.Certificates.CmsDetachedSignature.VerifySignatureAsync(data) */
 HRESULT wsecrce_cms_detached_signature_verify_signature_async(WSECRCE_CmsDetachedSignature *self, WSTST_IInputStream* data, WF_IAsyncOperation_WSECRCE_SignatureValidationResult** out);
 
-/* Windows.Security.Cryptography.Certificates.CmsDetachedSignature.GenerateSignatureAsync(data, signers, certificates) */
 HRESULT wsecrce_cms_detached_signature_generate_signature_async(WSTST_IInputStream* data, WFOCO_IIterable_WSECRCE_CmsSignerInfo* signers, WFOCO_IIterable_WSECRCE_Certificate* certificates, WF_IAsyncOperation_WSTST_IBuffer** out);
 
-/* activate Windows.Security.Cryptography.Certificates.CmsSignerInfo */
 HRESULT wsecrce_cms_signer_info_new(WSECRCE_CmsSignerInfo **out);
 
-/* Windows.Security.Cryptography.Certificates.CmsSignerInfo */
-/* Windows.Security.Cryptography.Certificates.CmsSignerInfo.get_Certificate() */
 HRESULT wsecrce_cms_signer_info_get__certificate(WSECRCE_CmsSignerInfo *self, WSECRCE_Certificate** value);
 
-/* Windows.Security.Cryptography.Certificates.CmsSignerInfo.put_Certificate() */
 HRESULT wsecrce_cms_signer_info_put__certificate(WSECRCE_CmsSignerInfo *self, WSECRCE_Certificate* value);
 
-/* Windows.Security.Cryptography.Certificates.CmsSignerInfo.get_HashAlgorithmName() */
 HRESULT wsecrce_cms_signer_info_get__hash_algorithm_name(WSECRCE_CmsSignerInfo *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.CmsSignerInfo.put_HashAlgorithmName() */
 HRESULT wsecrce_cms_signer_info_put__hash_algorithm_name(WSECRCE_CmsSignerInfo *self, cwinrt_hstring value);
 
-/* Windows.Security.Cryptography.Certificates.CmsSignerInfo.get_TimestampInfo() */
 HRESULT wsecrce_cms_signer_info_get__timestamp_info(WSECRCE_CmsSignerInfo *self, WSECRCE_CmsTimestampInfo** value);
 
-/* activate Windows.Security.Cryptography.Certificates.CmsTimestampInfo */
 HRESULT wsecrce_cms_timestamp_info_new(WSECRCE_CmsTimestampInfo **out);
 
-/* Windows.Security.Cryptography.Certificates.CmsTimestampInfo */
-/* Windows.Security.Cryptography.Certificates.CmsTimestampInfo.get_SigningCertificate() */
 HRESULT wsecrce_cms_timestamp_info_get__signing_certificate(WSECRCE_CmsTimestampInfo *self, WSECRCE_Certificate** value);
 
-/* Windows.Security.Cryptography.Certificates.CmsTimestampInfo.get_Certificates() */
 HRESULT wsecrce_cms_timestamp_info_get__certificates(WSECRCE_CmsTimestampInfo *self, WFOCO_IVectorView_WSECRCE_Certificate** value);
 
-/* Windows.Security.Cryptography.Certificates.CmsTimestampInfo.get_Timestamp() */
 HRESULT wsecrce_cms_timestamp_info_get__timestamp(WSECRCE_CmsTimestampInfo *self, WF_DateTime *value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics */
-/* Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics.CreateRequestAsync(request) */
 HRESULT wsecrce_certificate_enrollment_manager_statics_create_request_async(WSECRCE_ICertificateEnrollmentManagerStatics *self, WSECRCE_CertificateRequestProperties* request, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics.InstallCertificateAsync(certificate, installOption) */
 HRESULT wsecrce_certificate_enrollment_manager_statics_install_certificate_async(WSECRCE_ICertificateEnrollmentManagerStatics *self, cwinrt_hstring certificate, WSECRCE_InstallOptions installOption, WF_IAsyncAction** out);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics.ImportPfxDataAsync(pfxData, password, exportable, keyProtectionLevel, installOption, friendlyName) */
 HRESULT wsecrce_certificate_enrollment_manager_statics_import_pfx_data_async(WSECRCE_ICertificateEnrollmentManagerStatics *self, cwinrt_hstring pfxData, cwinrt_hstring password, WSECRCE_ExportOption exportable, WSECRCE_KeyProtectionLevel keyProtectionLevel, WSECRCE_InstallOptions installOption, cwinrt_hstring friendlyName, WF_IAsyncAction** out);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics2 */
-/* Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics2.get_UserCertificateEnrollmentManager() */
 HRESULT wsecrce_certificate_enrollment_manager_statics_2_get__user_certificate_enrollment_manager(WSECRCE_ICertificateEnrollmentManagerStatics_2 *self, WSECRCE_UserCertificateEnrollmentManager** value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics2.ImportPfxDataAsync(pfxData, password, exportable, keyProtectionLevel, installOption, friendlyName, keyStorageProvider) */
 HRESULT wsecrce_certificate_enrollment_manager_statics_2_import_pfx_data_async(WSECRCE_ICertificateEnrollmentManagerStatics_2 *self, cwinrt_hstring pfxData, cwinrt_hstring password, WSECRCE_ExportOption exportable, WSECRCE_KeyProtectionLevel keyProtectionLevel, WSECRCE_InstallOptions installOption, cwinrt_hstring friendlyName, cwinrt_hstring keyStorageProvider, WF_IAsyncAction** out);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics3 */
-/* Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics3.ImportPfxDataAsync(pfxData, password, pfxImportParameters) */
 HRESULT wsecrce_certificate_enrollment_manager_statics_3_import_pfx_data_async(WSECRCE_ICertificateEnrollmentManagerStatics_3 *self, cwinrt_hstring pfxData, cwinrt_hstring password, WSECRCE_PfxImportParameters* pfxImportParameters, WF_IAsyncAction** out);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateFactory */
-/* Windows.Security.Cryptography.Certificates.ICertificateFactory.CreateCertificate(certBlob) */
 HRESULT wsecrce_certificate_factory_create_certificate(WSECRCE_ICertificateFactory *self, WSTST_IBuffer* certBlob, WSECRCE_Certificate** out);
 
-/* activate Windows.Security.Cryptography.Certificates.CertificateChain */
 HRESULT wsecrce_certificate_chain_new(WSECRCE_CertificateChain **out);
 
-/* Windows.Security.Cryptography.Certificates.CertificateChain */
-/* Windows.Security.Cryptography.Certificates.CertificateChain.Validate() */
 HRESULT wsecrce_certificate_chain_validate(WSECRCE_CertificateChain *self, WSECRCE_ChainValidationResult *out);
 
-/* Windows.Security.Cryptography.Certificates.CertificateChain.Validate(parameter) */
 HRESULT wsecrce_certificate_chain_validate_p_chain_validation_result(WSECRCE_CertificateChain *self, WSECRCE_ChainValidationParameters* parameter, WSECRCE_ChainValidationResult *out);
 
-/* Windows.Security.Cryptography.Certificates.CertificateChain.GetCertificates(includeRoot) */
 HRESULT wsecrce_certificate_chain_get_certificates(WSECRCE_CertificateChain *self, BOOL includeRoot, WFOCO_IVectorView_WSECRCE_Certificate** out);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateStoresStatics2 */
-/* Windows.Security.Cryptography.Certificates.ICertificateStoresStatics2.GetUserStoreByName(storeName) */
 HRESULT wsecrce_certificate_stores_statics_2_get_user_store_by_name(WSECRCE_ICertificateStoresStatics_2 *self, cwinrt_hstring storeName, WSECRCE_UserCertificateStore** out);
 
-/* Windows.Security.Cryptography.Certificates.ICmsAttachedSignatureFactory */
-/* Windows.Security.Cryptography.Certificates.ICmsAttachedSignatureFactory.CreateCmsAttachedSignature(inputBlob) */
 HRESULT wsecrce_cms_attached_signature_factory_create_cms_attached_signature(WSECRCE_ICmsAttachedSignatureFactory *self, WSTST_IBuffer* inputBlob, WSECRCE_CmsAttachedSignature** out);
 
-/* Windows.Security.Cryptography.Certificates.ICmsAttachedSignatureStatics */
-/* Windows.Security.Cryptography.Certificates.ICmsAttachedSignatureStatics.GenerateSignatureAsync(data, signers, certificates) */
 HRESULT wsecrce_cms_attached_signature_statics_generate_signature_async(WSECRCE_ICmsAttachedSignatureStatics *self, WSTST_IBuffer* data, WFOCO_IIterable_WSECRCE_CmsSignerInfo* signers, WFOCO_IIterable_WSECRCE_Certificate* certificates, WF_IAsyncOperation_WSTST_IBuffer** out);
 
-/* Windows.Security.Cryptography.Certificates.ICmsDetachedSignatureFactory */
-/* Windows.Security.Cryptography.Certificates.ICmsDetachedSignatureFactory.CreateCmsDetachedSignature(inputBlob) */
 HRESULT wsecrce_cms_detached_signature_factory_create_cms_detached_signature(WSECRCE_ICmsDetachedSignatureFactory *self, WSTST_IBuffer* inputBlob, WSECRCE_CmsDetachedSignature** out);
 
-/* Windows.Security.Cryptography.Certificates.ICmsDetachedSignatureStatics */
-/* Windows.Security.Cryptography.Certificates.ICmsDetachedSignatureStatics.GenerateSignatureAsync(data, signers, certificates) */
 HRESULT wsecrce_cms_detached_signature_statics_generate_signature_async(WSECRCE_ICmsDetachedSignatureStatics *self, WSTST_IInputStream* data, WFOCO_IIterable_WSECRCE_CmsSignerInfo* signers, WFOCO_IIterable_WSECRCE_Certificate* certificates, WF_IAsyncOperation_WSTST_IBuffer** out);
 
-/* Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics */
-/* Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics.get_Rsa() */
 HRESULT wsecrce_key_algorithm_names_statics_get__rsa(WSECRCE_IKeyAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics.get_Dsa() */
 HRESULT wsecrce_key_algorithm_names_statics_get__dsa(WSECRCE_IKeyAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics.get_Ecdh256() */
 HRESULT wsecrce_key_algorithm_names_statics_get__ecdh256(WSECRCE_IKeyAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics.get_Ecdh384() */
 HRESULT wsecrce_key_algorithm_names_statics_get__ecdh384(WSECRCE_IKeyAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics.get_Ecdh521() */
 HRESULT wsecrce_key_algorithm_names_statics_get__ecdh521(WSECRCE_IKeyAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics.get_Ecdsa256() */
 HRESULT wsecrce_key_algorithm_names_statics_get__ecdsa256(WSECRCE_IKeyAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics.get_Ecdsa384() */
 HRESULT wsecrce_key_algorithm_names_statics_get__ecdsa384(WSECRCE_IKeyAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics.get_Ecdsa521() */
 HRESULT wsecrce_key_algorithm_names_statics_get__ecdsa521(WSECRCE_IKeyAlgorithmNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics2 */
-/* Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics2.get_Ecdsa() */
 HRESULT wsecrce_key_algorithm_names_statics_2_get__ecdsa(WSECRCE_IKeyAlgorithmNamesStatics_2 *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics2.get_Ecdh() */
 HRESULT wsecrce_key_algorithm_names_statics_2_get__ecdh(WSECRCE_IKeyAlgorithmNamesStatics_2 *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.IKeyAttestationHelperStatics */
-/* Windows.Security.Cryptography.Certificates.IKeyAttestationHelperStatics.DecryptTpmAttestationCredentialAsync(credential) */
 HRESULT wsecrce_key_attestation_helper_statics_decrypt_tpm_attestation_credential_async(WSECRCE_IKeyAttestationHelperStatics *self, cwinrt_hstring credential, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Security.Cryptography.Certificates.IKeyAttestationHelperStatics.GetTpmAttestationCredentialId(credential) */
 HRESULT wsecrce_key_attestation_helper_statics_get_tpm_attestation_credential_id(WSECRCE_IKeyAttestationHelperStatics *self, cwinrt_hstring credential, cwinrt_hstring *out);
 
-/* Windows.Security.Cryptography.Certificates.IKeyAttestationHelperStatics2 */
-/* Windows.Security.Cryptography.Certificates.IKeyAttestationHelperStatics2.DecryptTpmAttestationCredentialAsync(credential, containerName) */
 HRESULT wsecrce_key_attestation_helper_statics_2_decrypt_tpm_attestation_credential_async(WSECRCE_IKeyAttestationHelperStatics_2 *self, cwinrt_hstring credential, cwinrt_hstring containerName, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Security.Cryptography.Certificates.IKeyStorageProviderNamesStatics */
-/* Windows.Security.Cryptography.Certificates.IKeyStorageProviderNamesStatics.get_SoftwareKeyStorageProvider() */
 HRESULT wsecrce_key_storage_provider_names_statics_get__software_key_storage_provider(WSECRCE_IKeyStorageProviderNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.IKeyStorageProviderNamesStatics.get_SmartcardKeyStorageProvider() */
 HRESULT wsecrce_key_storage_provider_names_statics_get__smartcard_key_storage_provider(WSECRCE_IKeyStorageProviderNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.IKeyStorageProviderNamesStatics.get_PlatformKeyStorageProvider() */
 HRESULT wsecrce_key_storage_provider_names_statics_get__platform_key_storage_provider(WSECRCE_IKeyStorageProviderNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.IKeyStorageProviderNamesStatics2 */
-/* Windows.Security.Cryptography.Certificates.IKeyStorageProviderNamesStatics2.get_PassportKeyStorageProvider() */
 HRESULT wsecrce_key_storage_provider_names_statics_2_get__passport_key_storage_provider(WSECRCE_IKeyStorageProviderNamesStatics_2 *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.IStandardCertificateStoreNamesStatics */
-/* Windows.Security.Cryptography.Certificates.IStandardCertificateStoreNamesStatics.get_Personal() */
 HRESULT wsecrce_standard_certificate_store_names_statics_get__personal(WSECRCE_IStandardCertificateStoreNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.IStandardCertificateStoreNamesStatics.get_TrustedRootCertificationAuthorities() */
 HRESULT wsecrce_standard_certificate_store_names_statics_get__trusted_root_certification_authorities(WSECRCE_IStandardCertificateStoreNamesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.IStandardCertificateStoreNamesStatics.get_IntermediateCertificationAuthorities() */
 HRESULT wsecrce_standard_certificate_store_names_statics_get__intermediate_certification_authorities(WSECRCE_IStandardCertificateStoreNamesStatics *self, cwinrt_hstring *value);
 
-/* activate Windows.Security.Cryptography.Certificates.KeyAlgorithmNames */
 HRESULT wsecrce_key_algorithm_names_new(WSECRCE_KeyAlgorithmNames **out);
 
-/* Windows.Security.Cryptography.Certificates.KeyAlgorithmNames */
-/* Windows.Security.Cryptography.Certificates.KeyAlgorithmNames.get_Ecdsa() */
 HRESULT wsecrce_key_algorithm_names_get__ecdsa(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.KeyAlgorithmNames.get_Ecdh() */
 HRESULT wsecrce_key_algorithm_names_get__ecdh(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.KeyAlgorithmNames.get_Rsa() */
 HRESULT wsecrce_key_algorithm_names_get__rsa(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.KeyAlgorithmNames.get_Dsa() */
 HRESULT wsecrce_key_algorithm_names_get__dsa(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.KeyAlgorithmNames.get_Ecdh256() */
 HRESULT wsecrce_key_algorithm_names_get__ecdh256(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.KeyAlgorithmNames.get_Ecdh384() */
 HRESULT wsecrce_key_algorithm_names_get__ecdh384(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.KeyAlgorithmNames.get_Ecdh521() */
 HRESULT wsecrce_key_algorithm_names_get__ecdh521(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.KeyAlgorithmNames.get_Ecdsa256() */
 HRESULT wsecrce_key_algorithm_names_get__ecdsa256(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.KeyAlgorithmNames.get_Ecdsa384() */
 HRESULT wsecrce_key_algorithm_names_get__ecdsa384(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.KeyAlgorithmNames.get_Ecdsa521() */
 HRESULT wsecrce_key_algorithm_names_get__ecdsa521(cwinrt_hstring *value);
 
-/* activate Windows.Security.Cryptography.Certificates.KeyAttestationHelper */
 HRESULT wsecrce_key_attestation_helper_new(WSECRCE_KeyAttestationHelper **out);
 
-/* Windows.Security.Cryptography.Certificates.KeyAttestationHelper */
-/* Windows.Security.Cryptography.Certificates.KeyAttestationHelper.DecryptTpmAttestationCredentialAsync(credential, containerName) */
 HRESULT wsecrce_key_attestation_helper_decrypt_tpm_attestation_credential_async_str_str_p(cwinrt_hstring credential, cwinrt_hstring containerName, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Security.Cryptography.Certificates.KeyAttestationHelper.DecryptTpmAttestationCredentialAsync(credential) */
 HRESULT wsecrce_key_attestation_helper_decrypt_tpm_attestation_credential_async(cwinrt_hstring credential, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Security.Cryptography.Certificates.KeyAttestationHelper.GetTpmAttestationCredentialId(credential) */
 HRESULT wsecrce_key_attestation_helper_get_tpm_attestation_credential_id(cwinrt_hstring credential, cwinrt_hstring *out);
 
-/* activate Windows.Security.Cryptography.Certificates.KeyStorageProviderNames */
 HRESULT wsecrce_key_storage_provider_names_new(WSECRCE_KeyStorageProviderNames **out);
 
-/* Windows.Security.Cryptography.Certificates.KeyStorageProviderNames */
-/* Windows.Security.Cryptography.Certificates.KeyStorageProviderNames.get_PassportKeyStorageProvider() */
 HRESULT wsecrce_key_storage_provider_names_get__passport_key_storage_provider(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.KeyStorageProviderNames.get_SoftwareKeyStorageProvider() */
 HRESULT wsecrce_key_storage_provider_names_get__software_key_storage_provider(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.KeyStorageProviderNames.get_SmartcardKeyStorageProvider() */
 HRESULT wsecrce_key_storage_provider_names_get__smartcard_key_storage_provider(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.KeyStorageProviderNames.get_PlatformKeyStorageProvider() */
 HRESULT wsecrce_key_storage_provider_names_get__platform_key_storage_provider(cwinrt_hstring *value);
 
-/* activate Windows.Security.Cryptography.Certificates.PfxImportParameters */
 HRESULT wsecrce_pfx_import_parameters_new(WSECRCE_PfxImportParameters **out);
 
-/* Windows.Security.Cryptography.Certificates.PfxImportParameters */
-/* Windows.Security.Cryptography.Certificates.PfxImportParameters.get_Exportable() */
 HRESULT wsecrce_pfx_import_parameters_get__exportable(WSECRCE_PfxImportParameters *self, WSECRCE_ExportOption *value);
 
-/* Windows.Security.Cryptography.Certificates.PfxImportParameters.put_Exportable() */
 HRESULT wsecrce_pfx_import_parameters_put__exportable(WSECRCE_PfxImportParameters *self, WSECRCE_ExportOption value);
 
-/* Windows.Security.Cryptography.Certificates.PfxImportParameters.get_KeyProtectionLevel() */
 HRESULT wsecrce_pfx_import_parameters_get__key_protection_level(WSECRCE_PfxImportParameters *self, WSECRCE_KeyProtectionLevel *value);
 
-/* Windows.Security.Cryptography.Certificates.PfxImportParameters.put_KeyProtectionLevel() */
 HRESULT wsecrce_pfx_import_parameters_put__key_protection_level(WSECRCE_PfxImportParameters *self, WSECRCE_KeyProtectionLevel value);
 
-/* Windows.Security.Cryptography.Certificates.PfxImportParameters.get_InstallOptions() */
 HRESULT wsecrce_pfx_import_parameters_get__install_options(WSECRCE_PfxImportParameters *self, WSECRCE_InstallOptions *value);
 
-/* Windows.Security.Cryptography.Certificates.PfxImportParameters.put_InstallOptions() */
 HRESULT wsecrce_pfx_import_parameters_put__install_options(WSECRCE_PfxImportParameters *self, WSECRCE_InstallOptions value);
 
-/* Windows.Security.Cryptography.Certificates.PfxImportParameters.get_FriendlyName() */
 HRESULT wsecrce_pfx_import_parameters_get__friendly_name(WSECRCE_PfxImportParameters *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.PfxImportParameters.put_FriendlyName() */
 HRESULT wsecrce_pfx_import_parameters_put__friendly_name(WSECRCE_PfxImportParameters *self, cwinrt_hstring value);
 
-/* Windows.Security.Cryptography.Certificates.PfxImportParameters.get_KeyStorageProviderName() */
 HRESULT wsecrce_pfx_import_parameters_get__key_storage_provider_name(WSECRCE_PfxImportParameters *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.PfxImportParameters.put_KeyStorageProviderName() */
 HRESULT wsecrce_pfx_import_parameters_put__key_storage_provider_name(WSECRCE_PfxImportParameters *self, cwinrt_hstring value);
 
-/* Windows.Security.Cryptography.Certificates.PfxImportParameters.get_ContainerNamePrefix() */
 HRESULT wsecrce_pfx_import_parameters_get__container_name_prefix(WSECRCE_PfxImportParameters *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.PfxImportParameters.put_ContainerNamePrefix() */
 HRESULT wsecrce_pfx_import_parameters_put__container_name_prefix(WSECRCE_PfxImportParameters *self, cwinrt_hstring value);
 
-/* Windows.Security.Cryptography.Certificates.PfxImportParameters.get_ReaderName() */
 HRESULT wsecrce_pfx_import_parameters_get__reader_name(WSECRCE_PfxImportParameters *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.PfxImportParameters.put_ReaderName() */
 HRESULT wsecrce_pfx_import_parameters_put__reader_name(WSECRCE_PfxImportParameters *self, cwinrt_hstring value);
 
-/* activate Windows.Security.Cryptography.Certificates.StandardCertificateStoreNames */
 HRESULT wsecrce_standard_certificate_store_names_new(WSECRCE_StandardCertificateStoreNames **out);
 
-/* Windows.Security.Cryptography.Certificates.StandardCertificateStoreNames */
-/* Windows.Security.Cryptography.Certificates.StandardCertificateStoreNames.get_Personal() */
 HRESULT wsecrce_standard_certificate_store_names_get__personal(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.StandardCertificateStoreNames.get_TrustedRootCertificationAuthorities() */
 HRESULT wsecrce_standard_certificate_store_names_get__trusted_root_certification_authorities(cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.StandardCertificateStoreNames.get_IntermediateCertificationAuthorities() */
 HRESULT wsecrce_standard_certificate_store_names_get__intermediate_certification_authorities(cwinrt_hstring *value);
 
-/* activate Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo */
 HRESULT wsecrce_subject_alternative_name_info_new(WSECRCE_SubjectAlternativeNameInfo **out);
 
-/* Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo */
-/* Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo.get_EmailName() */
 HRESULT wsecrce_subject_alternative_name_info_get__email_name(WSECRCE_SubjectAlternativeNameInfo *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo.get_IPAddress() */
 HRESULT wsecrce_subject_alternative_name_info_get__i_p_address(WSECRCE_SubjectAlternativeNameInfo *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo.get_Url() */
 HRESULT wsecrce_subject_alternative_name_info_get__url(WSECRCE_SubjectAlternativeNameInfo *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo.get_DnsName() */
 HRESULT wsecrce_subject_alternative_name_info_get__dns_name(WSECRCE_SubjectAlternativeNameInfo *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo.get_DistinguishedName() */
 HRESULT wsecrce_subject_alternative_name_info_get__distinguished_name(WSECRCE_SubjectAlternativeNameInfo *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo.get_PrincipalName() */
 HRESULT wsecrce_subject_alternative_name_info_get__principal_name(WSECRCE_SubjectAlternativeNameInfo *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo.get_EmailNames() */
 HRESULT wsecrce_subject_alternative_name_info_get__email_names(WSECRCE_SubjectAlternativeNameInfo *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo.get_IPAddresses() */
 HRESULT wsecrce_subject_alternative_name_info_get__i_p_addresses(WSECRCE_SubjectAlternativeNameInfo *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo.get_Urls() */
 HRESULT wsecrce_subject_alternative_name_info_get__urls(WSECRCE_SubjectAlternativeNameInfo *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo.get_DnsNames() */
 HRESULT wsecrce_subject_alternative_name_info_get__dns_names(WSECRCE_SubjectAlternativeNameInfo *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo.get_DistinguishedNames() */
 HRESULT wsecrce_subject_alternative_name_info_get__distinguished_names(WSECRCE_SubjectAlternativeNameInfo *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo.get_PrincipalNames() */
 HRESULT wsecrce_subject_alternative_name_info_get__principal_names(WSECRCE_SubjectAlternativeNameInfo *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo.get_Extension() */
 HRESULT wsecrce_subject_alternative_name_info_get__extension(WSECRCE_SubjectAlternativeNameInfo *self, WSECRCE_CertificateExtension** value);
 
-/* activate Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager */
 HRESULT wsecrce_user_certificate_enrollment_manager_new(WSECRCE_UserCertificateEnrollmentManager **out);
 
-/* Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager */
-/* Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager.CreateRequestAsync(request) */
 HRESULT wsecrce_user_certificate_enrollment_manager_create_request_async(WSECRCE_UserCertificateEnrollmentManager *self, WSECRCE_CertificateRequestProperties* request, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager.InstallCertificateAsync(certificate, installOption) */
 HRESULT wsecrce_user_certificate_enrollment_manager_install_certificate_async(WSECRCE_UserCertificateEnrollmentManager *self, cwinrt_hstring certificate, WSECRCE_InstallOptions installOption, WF_IAsyncAction** out);
 
-/* Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager.ImportPfxDataAsync(pfxData, password, exportable, keyProtectionLevel, installOption, friendlyName) */
 HRESULT wsecrce_user_certificate_enrollment_manager_import_pfx_data_async_str_str_export_option_key_protection_584f4fb2(WSECRCE_UserCertificateEnrollmentManager *self, cwinrt_hstring pfxData, cwinrt_hstring password, WSECRCE_ExportOption exportable, WSECRCE_KeyProtectionLevel keyProtectionLevel, WSECRCE_InstallOptions installOption, cwinrt_hstring friendlyName, WF_IAsyncAction** out);
 
-/* Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager.ImportPfxDataAsync(pfxData, password, exportable, keyProtectionLevel, installOption, friendlyName, keyStorageProvider) */
 HRESULT wsecrce_user_certificate_enrollment_manager_import_pfx_data_async_str_str_export_option_key_protection_32438246(WSECRCE_UserCertificateEnrollmentManager *self, cwinrt_hstring pfxData, cwinrt_hstring password, WSECRCE_ExportOption exportable, WSECRCE_KeyProtectionLevel keyProtectionLevel, WSECRCE_InstallOptions installOption, cwinrt_hstring friendlyName, cwinrt_hstring keyStorageProvider, WF_IAsyncAction** out);
 
-/* Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager.ImportPfxDataAsync(pfxData, password, pfxImportParameters) */
 HRESULT wsecrce_user_certificate_enrollment_manager_import_pfx_data_async(WSECRCE_UserCertificateEnrollmentManager *self, cwinrt_hstring pfxData, cwinrt_hstring password, WSECRCE_PfxImportParameters* pfxImportParameters, WF_IAsyncAction** out);
 
-/* activate Windows.Security.Cryptography.Certificates.UserCertificateStore */
 HRESULT wsecrce_user_certificate_store_new(WSECRCE_UserCertificateStore **out);
 
-/* Windows.Security.Cryptography.Certificates.UserCertificateStore */
-/* Windows.Security.Cryptography.Certificates.UserCertificateStore.RequestAddAsync(certificate) */
 HRESULT wsecrce_user_certificate_store_request_add_async(WSECRCE_UserCertificateStore *self, WSECRCE_Certificate* certificate, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Security.Cryptography.Certificates.UserCertificateStore.RequestDeleteAsync(certificate) */
 HRESULT wsecrce_user_certificate_store_request_delete_async(WSECRCE_UserCertificateStore *self, WSECRCE_Certificate* certificate, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Security.Cryptography.Certificates.UserCertificateStore.get_Name() */
 HRESULT wsecrce_user_certificate_store_get__name(WSECRCE_UserCertificateStore *self, cwinrt_hstring *value);
 
-/* activate Windows.Security.Cryptography.Certificates.Certificate */
 HRESULT wsecrce_certificate_new(WSECRCE_Certificate **out);
 
-/* Windows.Security.Cryptography.Certificates.Certificate */
-/* Windows.Security.Cryptography.Certificates.Certificate.BuildChainAsync(certificates) */
 HRESULT wsecrce_certificate_build_chain_async(WSECRCE_Certificate *self, WFOCO_IIterable_WSECRCE_Certificate* certificates, WF_IAsyncOperation_WSECRCE_CertificateChain** out);
 
-/* Windows.Security.Cryptography.Certificates.Certificate.BuildChainAsync(certificates, parameters) */
 HRESULT wsecrce_certificate_build_chain_async_p_p_p(WSECRCE_Certificate *self, WFOCO_IIterable_WSECRCE_Certificate* certificates, WSECRCE_ChainBuildingParameters* parameters, WF_IAsyncOperation_WSECRCE_CertificateChain** out);
 
-/* Windows.Security.Cryptography.Certificates.Certificate.get_SerialNumber() */
 HRESULT wsecrce_certificate_get__serial_number(WSECRCE_Certificate *self, uint8_t **value, uint32_t *value_len);
 
-/* Windows.Security.Cryptography.Certificates.Certificate.GetHashValue() */
 HRESULT wsecrce_certificate_get_hash_value(WSECRCE_Certificate *self, uint8_t **out, uint32_t *out_len);
 
-/* Windows.Security.Cryptography.Certificates.Certificate.GetHashValue(hashAlgorithmName) */
 HRESULT wsecrce_certificate_get_hash_value_str_u8_u32(WSECRCE_Certificate *self, cwinrt_hstring hashAlgorithmName, uint8_t **out, uint32_t *out_len);
 
-/* Windows.Security.Cryptography.Certificates.Certificate.GetCertificateBlob() */
 HRESULT wsecrce_certificate_get_certificate_blob(WSECRCE_Certificate *self, WSTST_IBuffer** out);
 
-/* Windows.Security.Cryptography.Certificates.Certificate.get_Subject() */
 HRESULT wsecrce_certificate_get__subject(WSECRCE_Certificate *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.Certificate.get_Issuer() */
 HRESULT wsecrce_certificate_get__issuer(WSECRCE_Certificate *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.Certificate.get_HasPrivateKey() */
 HRESULT wsecrce_certificate_get__has_private_key(WSECRCE_Certificate *self, BOOL *value);
 
-/* Windows.Security.Cryptography.Certificates.Certificate.get_IsStronglyProtected() */
 HRESULT wsecrce_certificate_get__is_strongly_protected(WSECRCE_Certificate *self, BOOL *value);
 
-/* Windows.Security.Cryptography.Certificates.Certificate.get_ValidFrom() */
 HRESULT wsecrce_certificate_get__valid_from(WSECRCE_Certificate *self, WF_DateTime *value);
 
-/* Windows.Security.Cryptography.Certificates.Certificate.get_ValidTo() */
 HRESULT wsecrce_certificate_get__valid_to(WSECRCE_Certificate *self, WF_DateTime *value);
 
-/* Windows.Security.Cryptography.Certificates.Certificate.get_EnhancedKeyUsages() */
 HRESULT wsecrce_certificate_get__enhanced_key_usages(WSECRCE_Certificate *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Security.Cryptography.Certificates.Certificate.put_FriendlyName() */
 HRESULT wsecrce_certificate_put__friendly_name(WSECRCE_Certificate *self, cwinrt_hstring value);
 
-/* Windows.Security.Cryptography.Certificates.Certificate.get_FriendlyName() */
 HRESULT wsecrce_certificate_get__friendly_name(WSECRCE_Certificate *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.Certificate.get_IsSecurityDeviceBound() */
 HRESULT wsecrce_certificate_get__is_security_device_bound(WSECRCE_Certificate *self, BOOL *value);
 
-/* Windows.Security.Cryptography.Certificates.Certificate.get_KeyUsages() */
 HRESULT wsecrce_certificate_get__key_usages(WSECRCE_Certificate *self, WSECRCE_CertificateKeyUsages** value);
 
-/* Windows.Security.Cryptography.Certificates.Certificate.get_KeyAlgorithmName() */
 HRESULT wsecrce_certificate_get__key_algorithm_name(WSECRCE_Certificate *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.Certificate.get_SignatureAlgorithmName() */
 HRESULT wsecrce_certificate_get__signature_algorithm_name(WSECRCE_Certificate *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.Certificate.get_SignatureHashAlgorithmName() */
 HRESULT wsecrce_certificate_get__signature_hash_algorithm_name(WSECRCE_Certificate *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.Certificate.get_SubjectAlternativeName() */
 HRESULT wsecrce_certificate_get__subject_alternative_name(WSECRCE_Certificate *self, WSECRCE_SubjectAlternativeNameInfo** value);
 
-/* Windows.Security.Cryptography.Certificates.Certificate.get_IsPerUser() */
 HRESULT wsecrce_certificate_get__is_per_user(WSECRCE_Certificate *self, BOOL *value);
 
-/* Windows.Security.Cryptography.Certificates.Certificate.get_StoreName() */
 HRESULT wsecrce_certificate_get__store_name(WSECRCE_Certificate *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.Certificate.get_KeyStorageProviderName() */
 HRESULT wsecrce_certificate_get__key_storage_provider_name(WSECRCE_Certificate *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateStoresStatics */
-/* Windows.Security.Cryptography.Certificates.ICertificateStoresStatics.FindAllAsync() */
 HRESULT wsecrce_certificate_stores_statics_find_all_async(WSECRCE_ICertificateStoresStatics *self, WF_IAsyncOperation_WFOCO_IVectorView_WSECRCE_Certificate** out);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateStoresStatics.FindAllAsync(query) */
 HRESULT wsecrce_certificate_stores_statics_find_all_async_p_p(WSECRCE_ICertificateStoresStatics *self, WSECRCE_CertificateQuery* query, WF_IAsyncOperation_WFOCO_IVectorView_WSECRCE_Certificate** out);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateStoresStatics.get_TrustedRootCertificationAuthorities() */
 HRESULT wsecrce_certificate_stores_statics_get__trusted_root_certification_authorities(WSECRCE_ICertificateStoresStatics *self, WSECRCE_CertificateStore** value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateStoresStatics.get_IntermediateCertificationAuthorities() */
 HRESULT wsecrce_certificate_stores_statics_get__intermediate_certification_authorities(WSECRCE_ICertificateStoresStatics *self, WSECRCE_CertificateStore** value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateStoresStatics.GetStoreByName(storeName) */
 HRESULT wsecrce_certificate_stores_statics_get_store_by_name(WSECRCE_ICertificateStoresStatics *self, cwinrt_hstring storeName, WSECRCE_CertificateStore** out);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateExtension */
-/* Windows.Security.Cryptography.Certificates.ICertificateKeyUsages */
-/* Windows.Security.Cryptography.Certificates.ICertificateQuery */
-/* Windows.Security.Cryptography.Certificates.ICertificateQuery2 */
-/* Windows.Security.Cryptography.Certificates.ICertificateQuery2.get_IncludeDuplicates() */
 HRESULT wsecrce_certificate_query_2_get__include_duplicates(WSECRCE_ICertificateQuery_2 *self, BOOL *value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateQuery2.put_IncludeDuplicates() */
 HRESULT wsecrce_certificate_query_2_put__include_duplicates(WSECRCE_ICertificateQuery_2 *self, BOOL value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateQuery2.get_IncludeExpiredCertificates() */
 HRESULT wsecrce_certificate_query_2_get__include_expired_certificates(WSECRCE_ICertificateQuery_2 *self, BOOL *value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateQuery2.put_IncludeExpiredCertificates() */
 HRESULT wsecrce_certificate_query_2_put__include_expired_certificates(WSECRCE_ICertificateQuery_2 *self, BOOL value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateQuery2.get_StoreName() */
 HRESULT wsecrce_certificate_query_2_get__store_name(WSECRCE_ICertificateQuery_2 *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateQuery2.put_StoreName() */
 HRESULT wsecrce_certificate_query_2_put__store_name(WSECRCE_ICertificateQuery_2 *self, cwinrt_hstring value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateRequestProperties */
-/* Windows.Security.Cryptography.Certificates.ICertificateRequestProperties2 */
-/* Windows.Security.Cryptography.Certificates.ICertificateRequestProperties2.get_SmartcardReaderName() */
 HRESULT wsecrce_certificate_request_properties_2_get__smartcard_reader_name(WSECRCE_ICertificateRequestProperties_2 *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateRequestProperties2.put_SmartcardReaderName() */
 HRESULT wsecrce_certificate_request_properties_2_put__smartcard_reader_name(WSECRCE_ICertificateRequestProperties_2 *self, cwinrt_hstring value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateRequestProperties2.get_SigningCertificate() */
 HRESULT wsecrce_certificate_request_properties_2_get__signing_certificate(WSECRCE_ICertificateRequestProperties_2 *self, WSECRCE_Certificate** value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateRequestProperties2.put_SigningCertificate() */
 HRESULT wsecrce_certificate_request_properties_2_put__signing_certificate(WSECRCE_ICertificateRequestProperties_2 *self, WSECRCE_Certificate* value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateRequestProperties2.get_AttestationCredentialCertificate() */
 HRESULT wsecrce_certificate_request_properties_2_get__attestation_credential_certificate(WSECRCE_ICertificateRequestProperties_2 *self, WSECRCE_Certificate** value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateRequestProperties2.put_AttestationCredentialCertificate() */
 HRESULT wsecrce_certificate_request_properties_2_put__attestation_credential_certificate(WSECRCE_ICertificateRequestProperties_2 *self, WSECRCE_Certificate* value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3 */
-/* Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3.get_CurveName() */
 HRESULT wsecrce_certificate_request_properties_3_get__curve_name(WSECRCE_ICertificateRequestProperties_3 *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3.put_CurveName() */
 HRESULT wsecrce_certificate_request_properties_3_put__curve_name(WSECRCE_ICertificateRequestProperties_3 *self, cwinrt_hstring value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3.get_CurveParameters() */
 HRESULT wsecrce_certificate_request_properties_3_get__curve_parameters(WSECRCE_ICertificateRequestProperties_3 *self, uint8_t **value, uint32_t *value_len);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3.put_CurveParameters() */
 HRESULT wsecrce_certificate_request_properties_3_put__curve_parameters(WSECRCE_ICertificateRequestProperties_3 *self, uint8_t *value, uint32_t value_len);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3.get_ContainerNamePrefix() */
 HRESULT wsecrce_certificate_request_properties_3_get__container_name_prefix(WSECRCE_ICertificateRequestProperties_3 *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3.put_ContainerNamePrefix() */
 HRESULT wsecrce_certificate_request_properties_3_put__container_name_prefix(WSECRCE_ICertificateRequestProperties_3 *self, cwinrt_hstring value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3.get_ContainerName() */
 HRESULT wsecrce_certificate_request_properties_3_get__container_name(WSECRCE_ICertificateRequestProperties_3 *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3.put_ContainerName() */
 HRESULT wsecrce_certificate_request_properties_3_put__container_name(WSECRCE_ICertificateRequestProperties_3 *self, cwinrt_hstring value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3.get_UseExistingKey() */
 HRESULT wsecrce_certificate_request_properties_3_get__use_existing_key(WSECRCE_ICertificateRequestProperties_3 *self, BOOL *value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3.put_UseExistingKey() */
 HRESULT wsecrce_certificate_request_properties_3_put__use_existing_key(WSECRCE_ICertificateRequestProperties_3 *self, BOOL value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateRequestProperties4 */
-/* Windows.Security.Cryptography.Certificates.ICertificateRequestProperties4.get_SuppressedDefaults() */
 HRESULT wsecrce_certificate_request_properties_4_get__suppressed_defaults(WSECRCE_ICertificateRequestProperties_4 *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateRequestProperties4.get_SubjectAlternativeName() */
 HRESULT wsecrce_certificate_request_properties_4_get__subject_alternative_name(WSECRCE_ICertificateRequestProperties_4 *self, WSECRCE_SubjectAlternativeNameInfo** value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateRequestProperties4.get_Extensions() */
 HRESULT wsecrce_certificate_request_properties_4_get__extensions(WSECRCE_ICertificateRequestProperties_4 *self, WFOCO_IVector_WSECRCE_CertificateExtension** value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificateStore */
-/* Windows.Security.Cryptography.Certificates.ICertificateStore2 */
-/* Windows.Security.Cryptography.Certificates.ICertificateStore2.get_Name() */
 HRESULT wsecrce_certificate_store_2_get__name(WSECRCE_ICertificateStore_2 *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.IChainBuildingParameters */
-/* Windows.Security.Cryptography.Certificates.IChainValidationParameters */
-/* Windows.Security.Cryptography.Certificates.ICmsAttachedSignature */
-/* Windows.Security.Cryptography.Certificates.ICmsDetachedSignature */
-/* Windows.Security.Cryptography.Certificates.ICmsSignerInfo */
-/* Windows.Security.Cryptography.Certificates.ICmsTimestampInfo */
-/* Windows.Security.Cryptography.Certificates.ICertificateChain */
-/* Windows.Security.Cryptography.Certificates.IPfxImportParameters */
-/* Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo */
-/* Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo2 */
-/* Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo2.get_EmailNames() */
 HRESULT wsecrce_subject_alternative_name_info_2_get__email_names(WSECRCE_ISubjectAlternativeNameInfo_2 *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo2.get_IPAddresses() */
 HRESULT wsecrce_subject_alternative_name_info_2_get__i_p_addresses(WSECRCE_ISubjectAlternativeNameInfo_2 *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo2.get_Urls() */
 HRESULT wsecrce_subject_alternative_name_info_2_get__urls(WSECRCE_ISubjectAlternativeNameInfo_2 *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo2.get_DnsNames() */
 HRESULT wsecrce_subject_alternative_name_info_2_get__dns_names(WSECRCE_ISubjectAlternativeNameInfo_2 *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo2.get_DistinguishedNames() */
 HRESULT wsecrce_subject_alternative_name_info_2_get__distinguished_names(WSECRCE_ISubjectAlternativeNameInfo_2 *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo2.get_PrincipalNames() */
 HRESULT wsecrce_subject_alternative_name_info_2_get__principal_names(WSECRCE_ISubjectAlternativeNameInfo_2 *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo2.get_Extension() */
 HRESULT wsecrce_subject_alternative_name_info_2_get__extension(WSECRCE_ISubjectAlternativeNameInfo_2 *self, WSECRCE_CertificateExtension** value);
 
-/* Windows.Security.Cryptography.Certificates.IUserCertificateEnrollmentManager */
-/* Windows.Security.Cryptography.Certificates.IUserCertificateEnrollmentManager2 */
-/* Windows.Security.Cryptography.Certificates.IUserCertificateEnrollmentManager2.ImportPfxDataAsync(pfxData, password, pfxImportParameters) */
 HRESULT wsecrce_user_certificate_enrollment_manager_2_import_pfx_data_async(WSECRCE_IUserCertificateEnrollmentManager_2 *self, cwinrt_hstring pfxData, cwinrt_hstring password, WSECRCE_PfxImportParameters* pfxImportParameters, WF_IAsyncAction** out);
 
-/* Windows.Security.Cryptography.Certificates.IUserCertificateStore */
-/* Windows.Security.Cryptography.Certificates.ICertificate */
-/* Windows.Security.Cryptography.Certificates.ICertificate2 */
-/* Windows.Security.Cryptography.Certificates.ICertificate2.get_IsSecurityDeviceBound() */
 HRESULT wsecrce_certificate_2_get__is_security_device_bound(WSECRCE_ICertificate_2 *self, BOOL *value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificate2.get_KeyUsages() */
 HRESULT wsecrce_certificate_2_get__key_usages(WSECRCE_ICertificate_2 *self, WSECRCE_CertificateKeyUsages** value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificate2.get_KeyAlgorithmName() */
 HRESULT wsecrce_certificate_2_get__key_algorithm_name(WSECRCE_ICertificate_2 *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificate2.get_SignatureAlgorithmName() */
 HRESULT wsecrce_certificate_2_get__signature_algorithm_name(WSECRCE_ICertificate_2 *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificate2.get_SignatureHashAlgorithmName() */
 HRESULT wsecrce_certificate_2_get__signature_hash_algorithm_name(WSECRCE_ICertificate_2 *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificate2.get_SubjectAlternativeName() */
 HRESULT wsecrce_certificate_2_get__subject_alternative_name(WSECRCE_ICertificate_2 *self, WSECRCE_SubjectAlternativeNameInfo** value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificate3 */
-/* Windows.Security.Cryptography.Certificates.ICertificate3.get_IsPerUser() */
 HRESULT wsecrce_certificate_3_get__is_per_user(WSECRCE_ICertificate_3 *self, BOOL *value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificate3.get_StoreName() */
 HRESULT wsecrce_certificate_3_get__store_name(WSECRCE_ICertificate_3 *self, cwinrt_hstring *value);
 
-/* Windows.Security.Cryptography.Certificates.ICertificate3.get_KeyStorageProviderName() */
 HRESULT wsecrce_certificate_3_get__key_storage_provider_name(WSECRCE_ICertificate_3 *self, cwinrt_hstring *value);
 
 #endif /* CWINRT_WINDOWS_SECURITY_CRYPTOGRAPHY_CERTIFICATES_H */

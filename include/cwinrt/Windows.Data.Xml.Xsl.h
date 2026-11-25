@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WDAXMDO_IXmlNode
 #define CWINRT_FWD_WDAXMDO_IXmlNode
 typedef struct WDAXMDO_IXmlNode WDAXMDO_IXmlNode;
@@ -22,13 +21,11 @@ typedef struct WDAXMDO_IXmlNode WDAXMDO_IXmlNode;
 typedef struct WDAXMDO_XmlDocument WDAXMDO_XmlDocument;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDAXMXS_IXsltProcessorFactory WDAXMXS_IXsltProcessorFactory;
 typedef struct WDAXMXS_XsltProcessor WDAXMXS_XsltProcessor;
 typedef struct WDAXMXS_IXsltProcessor WDAXMXS_IXsltProcessor;
 typedef struct WDAXMXS_IXsltProcessor_2 WDAXMXS_IXsltProcessor_2;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WDAXMDO_XmlDocument
 #define CWINRT_FWD_WDAXMDO_XmlDocument
 typedef struct WDAXMDO_XmlDocument WDAXMDO_XmlDocument;
@@ -38,7 +35,6 @@ typedef struct WDAXMDO_XmlDocument WDAXMDO_XmlDocument;
 typedef struct WDAXMDO_IXmlNode WDAXMDO_IXmlNode;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -55,25 +51,14 @@ static const IID CWINRT_IID_WDAXMXS_IXsltProcessor CWINRT_MAYBE_UNUSED = { 0x7B6
 static const IID CWINRT_IID_WDAXMXS_IXsltProcessor_2 CWINRT_MAYBE_UNUSED = { 0x8DA45C56, 0x97A5, 0x44CB, { 0xA8, 0xBE, 0x27, 0xD8, 0x62, 0x80, 0xC7, 0x0A } };
 #endif
 
-/* Methods */
-
-/* Windows.Data.Xml.Xsl.IXsltProcessorFactory */
-/* Windows.Data.Xml.Xsl.IXsltProcessorFactory.CreateInstance(document) */
 HRESULT wdaxmxs_xslt_processor_factory_create_instance(WDAXMXS_IXsltProcessorFactory *self, WDAXMDO_XmlDocument* document, WDAXMXS_XsltProcessor** out);
 
-/* activate Windows.Data.Xml.Xsl.XsltProcessor */
 HRESULT wdaxmxs_xslt_processor_new(WDAXMXS_XsltProcessor **out);
 
-/* Windows.Data.Xml.Xsl.XsltProcessor */
-/* Windows.Data.Xml.Xsl.XsltProcessor.TransformToString(inputNode) */
 HRESULT wdaxmxs_xslt_processor_transform_to_string(WDAXMXS_XsltProcessor *self, WDAXMDO_IXmlNode* inputNode, cwinrt_hstring *out);
 
-/* Windows.Data.Xml.Xsl.XsltProcessor.TransformToDocument(inputNode) */
 HRESULT wdaxmxs_xslt_processor_transform_to_document(WDAXMXS_XsltProcessor *self, WDAXMDO_IXmlNode* inputNode, WDAXMDO_XmlDocument** out);
 
-/* Windows.Data.Xml.Xsl.IXsltProcessor */
-/* Windows.Data.Xml.Xsl.IXsltProcessor2 */
-/* Windows.Data.Xml.Xsl.IXsltProcessor2.TransformToDocument(inputNode) */
 HRESULT wdaxmxs_xslt_processor_2_transform_to_document(WDAXMXS_IXsltProcessor_2 *self, WDAXMDO_IXmlNode* inputNode, WDAXMDO_XmlDocument** out);
 
 #endif /* CWINRT_WINDOWS_DATA_XML_XSL_H */

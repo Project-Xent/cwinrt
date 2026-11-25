@@ -12,13 +12,11 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WDESPPR_ISpiProvider
 #define CWINRT_FWD_WDESPPR_ISpiProvider
 typedef struct WDESPPR_ISpiProvider WDESPPR_ISpiProvider;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDESP_ISpiConnectionSettingsFactory WDESP_ISpiConnectionSettingsFactory;
 typedef struct WDESP_ISpiControllerStatics WDESP_ISpiControllerStatics;
 typedef struct WDESP_ISpiDeviceStatics WDESP_ISpiDeviceStatics;
@@ -31,7 +29,6 @@ typedef struct WDESP_ISpiController WDESP_ISpiController;
 typedef struct WDESP_ISpiConnectionSettings WDESP_ISpiConnectionSettings;
 typedef struct WDESP_ISpiBusInfo WDESP_ISpiBusInfo;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WDESP_SpiController
 #define CWINRT_FWD_WF_IAsyncOperation_WDESP_SpiController
 typedef struct WF_IAsyncOperation_WDESP_SpiController WF_IAsyncOperation_WDESP_SpiController;
@@ -71,7 +68,6 @@ typedef enum WDESP_SpiSharingMode {
 } WDESP_SpiSharingMode;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -104,134 +100,82 @@ static const IID CWINRT_IID_WDESP_ISpiConnectionSettings CWINRT_MAYBE_UNUSED = {
 static const IID CWINRT_IID_WDESP_ISpiBusInfo CWINRT_MAYBE_UNUSED = { 0x9929444A, 0x54F2, 0x48C6, { 0xB9, 0x52, 0x9C, 0x32, 0xFC, 0x02, 0xC6, 0x69 } };
 #endif
 
-/* Methods */
-
-/* Windows.Devices.Spi.ISpiConnectionSettingsFactory */
-/* Windows.Devices.Spi.ISpiConnectionSettingsFactory.Create(chipSelectLine) */
 HRESULT wdesp_spi_connection_settings_factory_create(WDESP_ISpiConnectionSettingsFactory *self, int32_t chipSelectLine, WDESP_SpiConnectionSettings** out);
 
-/* Windows.Devices.Spi.ISpiControllerStatics */
-/* Windows.Devices.Spi.ISpiControllerStatics.GetDefaultAsync() */
 HRESULT wdesp_spi_controller_statics_get_default_async(WDESP_ISpiControllerStatics *self, WF_IAsyncOperation_WDESP_SpiController** out);
 
-/* Windows.Devices.Spi.ISpiControllerStatics.GetControllersAsync(provider) */
 HRESULT wdesp_spi_controller_statics_get_controllers_async(WDESP_ISpiControllerStatics *self, WDESPPR_ISpiProvider* provider, WF_IAsyncOperation_WFOCO_IVectorView_WDESP_SpiController** out);
 
-/* Windows.Devices.Spi.ISpiDeviceStatics */
-/* Windows.Devices.Spi.ISpiDeviceStatics.GetDeviceSelector() */
 HRESULT wdesp_spi_device_statics_get_device_selector(WDESP_ISpiDeviceStatics *self, cwinrt_hstring *out);
 
-/* Windows.Devices.Spi.ISpiDeviceStatics.GetDeviceSelector(friendlyName) */
 HRESULT wdesp_spi_device_statics_get_device_selector_str_str(WDESP_ISpiDeviceStatics *self, cwinrt_hstring friendlyName, cwinrt_hstring *out);
 
-/* Windows.Devices.Spi.ISpiDeviceStatics.GetBusInfo(busId) */
 HRESULT wdesp_spi_device_statics_get_bus_info(WDESP_ISpiDeviceStatics *self, cwinrt_hstring busId, WDESP_SpiBusInfo** out);
 
-/* Windows.Devices.Spi.ISpiDeviceStatics.FromIdAsync(busId, settings) */
 HRESULT wdesp_spi_device_statics_from_id_async(WDESP_ISpiDeviceStatics *self, cwinrt_hstring busId, WDESP_SpiConnectionSettings* settings, WF_IAsyncOperation_WDESP_SpiDevice** out);
 
-/* activate Windows.Devices.Spi.SpiDevice */
 HRESULT wdesp_spi_device_new(WDESP_SpiDevice **out);
 
-/* Windows.Devices.Spi.SpiDevice */
-/* Windows.Devices.Spi.SpiDevice.get_DeviceId() */
 HRESULT wdesp_spi_device_get__device_id(WDESP_SpiDevice *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Spi.SpiDevice.get_ConnectionSettings() */
 HRESULT wdesp_spi_device_get__connection_settings(WDESP_SpiDevice *self, WDESP_SpiConnectionSettings** value);
 
-/* Windows.Devices.Spi.SpiDevice.Write(buffer) */
 HRESULT wdesp_spi_device_write(WDESP_SpiDevice *self, uint8_t *buffer, uint32_t buffer_len);
 
-/* Windows.Devices.Spi.SpiDevice.Read(buffer) */
 HRESULT wdesp_spi_device_read(WDESP_SpiDevice *self, uint8_t *buffer, uint32_t buffer_len);
 
-/* Windows.Devices.Spi.SpiDevice.TransferSequential(writeBuffer, readBuffer) */
 HRESULT wdesp_spi_device_transfer_sequential(WDESP_SpiDevice *self, uint8_t *writeBuffer, uint32_t writeBuffer_len, uint8_t *readBuffer, uint32_t readBuffer_len);
 
-/* Windows.Devices.Spi.SpiDevice.TransferFullDuplex(writeBuffer, readBuffer) */
 HRESULT wdesp_spi_device_transfer_full_duplex(WDESP_SpiDevice *self, uint8_t *writeBuffer, uint32_t writeBuffer_len, uint8_t *readBuffer, uint32_t readBuffer_len);
 
-/* Windows.Devices.Spi.SpiDevice.Close() */
 HRESULT wdesp_spi_device_close(WDESP_SpiDevice *self);
 
-/* Windows.Devices.Spi.SpiDevice.GetDeviceSelector() */
 HRESULT wdesp_spi_device_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Devices.Spi.SpiDevice.GetDeviceSelector(friendlyName) */
 HRESULT wdesp_spi_device_get_device_selector_str_str(cwinrt_hstring friendlyName, cwinrt_hstring *out);
 
-/* Windows.Devices.Spi.SpiDevice.GetBusInfo(busId) */
 HRESULT wdesp_spi_device_get_bus_info(cwinrt_hstring busId, WDESP_SpiBusInfo** out);
 
-/* Windows.Devices.Spi.SpiDevice.FromIdAsync(busId, settings) */
 HRESULT wdesp_spi_device_from_id_async(cwinrt_hstring busId, WDESP_SpiConnectionSettings* settings, WF_IAsyncOperation_WDESP_SpiDevice** out);
 
-/* activate Windows.Devices.Spi.SpiController */
 HRESULT wdesp_spi_controller_new(WDESP_SpiController **out);
 
-/* Windows.Devices.Spi.SpiController */
-/* Windows.Devices.Spi.SpiController.GetDevice(settings) */
 HRESULT wdesp_spi_controller_get_device(WDESP_SpiController *self, WDESP_SpiConnectionSettings* settings, WDESP_SpiDevice** out);
 
-/* Windows.Devices.Spi.SpiController.GetDefaultAsync() */
 HRESULT wdesp_spi_controller_get_default_async(WF_IAsyncOperation_WDESP_SpiController** out);
 
-/* Windows.Devices.Spi.SpiController.GetControllersAsync(provider) */
 HRESULT wdesp_spi_controller_get_controllers_async(WDESPPR_ISpiProvider* provider, WF_IAsyncOperation_WFOCO_IVectorView_WDESP_SpiController** out);
 
-/* activate Windows.Devices.Spi.SpiConnectionSettings */
 HRESULT wdesp_spi_connection_settings_new(WDESP_SpiConnectionSettings **out);
 
-/* Windows.Devices.Spi.SpiConnectionSettings */
-/* Windows.Devices.Spi.SpiConnectionSettings.get_ChipSelectLine() */
 HRESULT wdesp_spi_connection_settings_get__chip_select_line(WDESP_SpiConnectionSettings *self, int32_t *value);
 
-/* Windows.Devices.Spi.SpiConnectionSettings.put_ChipSelectLine() */
 HRESULT wdesp_spi_connection_settings_put__chip_select_line(WDESP_SpiConnectionSettings *self, int32_t value);
 
-/* Windows.Devices.Spi.SpiConnectionSettings.get_Mode() */
 HRESULT wdesp_spi_connection_settings_get__mode(WDESP_SpiConnectionSettings *self, WDESP_SpiMode *value);
 
-/* Windows.Devices.Spi.SpiConnectionSettings.put_Mode() */
 HRESULT wdesp_spi_connection_settings_put__mode(WDESP_SpiConnectionSettings *self, WDESP_SpiMode value);
 
-/* Windows.Devices.Spi.SpiConnectionSettings.get_DataBitLength() */
 HRESULT wdesp_spi_connection_settings_get__data_bit_length(WDESP_SpiConnectionSettings *self, int32_t *value);
 
-/* Windows.Devices.Spi.SpiConnectionSettings.put_DataBitLength() */
 HRESULT wdesp_spi_connection_settings_put__data_bit_length(WDESP_SpiConnectionSettings *self, int32_t value);
 
-/* Windows.Devices.Spi.SpiConnectionSettings.get_ClockFrequency() */
 HRESULT wdesp_spi_connection_settings_get__clock_frequency(WDESP_SpiConnectionSettings *self, int32_t *value);
 
-/* Windows.Devices.Spi.SpiConnectionSettings.put_ClockFrequency() */
 HRESULT wdesp_spi_connection_settings_put__clock_frequency(WDESP_SpiConnectionSettings *self, int32_t value);
 
-/* Windows.Devices.Spi.SpiConnectionSettings.get_SharingMode() */
 HRESULT wdesp_spi_connection_settings_get__sharing_mode(WDESP_SpiConnectionSettings *self, WDESP_SpiSharingMode *value);
 
-/* Windows.Devices.Spi.SpiConnectionSettings.put_SharingMode() */
 HRESULT wdesp_spi_connection_settings_put__sharing_mode(WDESP_SpiConnectionSettings *self, WDESP_SpiSharingMode value);
 
-/* activate Windows.Devices.Spi.SpiBusInfo */
 HRESULT wdesp_spi_bus_info_new(WDESP_SpiBusInfo **out);
 
-/* Windows.Devices.Spi.SpiBusInfo */
-/* Windows.Devices.Spi.SpiBusInfo.get_ChipSelectLineCount() */
 HRESULT wdesp_spi_bus_info_get__chip_select_line_count(WDESP_SpiBusInfo *self, int32_t *value);
 
-/* Windows.Devices.Spi.SpiBusInfo.get_MinClockFrequency() */
 HRESULT wdesp_spi_bus_info_get__min_clock_frequency(WDESP_SpiBusInfo *self, int32_t *value);
 
-/* Windows.Devices.Spi.SpiBusInfo.get_MaxClockFrequency() */
 HRESULT wdesp_spi_bus_info_get__max_clock_frequency(WDESP_SpiBusInfo *self, int32_t *value);
 
-/* Windows.Devices.Spi.SpiBusInfo.get_SupportedDataBitLengths() */
 HRESULT wdesp_spi_bus_info_get__supported_data_bit_lengths(WDESP_SpiBusInfo *self, WFOCO_IVectorView_int32_t** value);
 
-/* Windows.Devices.Spi.ISpiDevice */
-/* Windows.Devices.Spi.ISpiController */
-/* Windows.Devices.Spi.ISpiConnectionSettings */
-/* Windows.Devices.Spi.ISpiBusInfo */
 #endif /* CWINRT_WINDOWS_DEVICES_SPI_H */

@@ -14,7 +14,6 @@
 #include <cwinrt/Windows.UI.Xaml.Interop.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WUIXADA_PropertyChangedEventHandler WUIXADA_PropertyChangedEventHandler;
 typedef struct WUIXADA_PropertyChangedEventArgs WUIXADA_PropertyChangedEventArgs;
 typedef struct WUIXADA_BindableAttribute WUIXADA_BindableAttribute;
@@ -60,7 +59,6 @@ typedef struct WUIXADA_ICurrentChangingEventArgs WUIXADA_ICurrentChangingEventAr
 typedef struct WUIXADA_IItemIndexRange WUIXADA_IItemIndexRange;
 typedef struct WUIXADA_IRelativeSource WUIXADA_IRelativeSource;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WUIXA_PropertyPath
 #define CWINRT_FWD_WUIXA_PropertyPath
 typedef struct WUIXA_PropertyPath WUIXA_PropertyPath;
@@ -133,7 +131,6 @@ struct WUIXADA_LoadMoreItemsResult {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -270,357 +267,214 @@ static const IID CWINRT_IID_WUIXADA_IItemIndexRange CWINRT_MAYBE_UNUSED = { 0x83
 static const IID CWINRT_IID_WUIXADA_IRelativeSource CWINRT_MAYBE_UNUSED = { 0x2397CE84, 0x2822, 0x483A, { 0xB4, 0x99, 0xD0, 0xF0, 0x31, 0xE0, 0x6C, 0x6B } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.Xaml.Data.PropertyChangedEventHandler */
-/* Windows.UI.Xaml.Data.PropertyChangedEventHandler.Invoke(sender, e) */
 HRESULT wuixada_property_changed_event_handler_invoke(WUIXADA_PropertyChangedEventHandler *self, IInspectable* sender, WUIXADA_PropertyChangedEventArgs* e);
 
-/* Windows.UI.Xaml.Data.PropertyChangedEventArgs */
-/* Windows.UI.Xaml.Data.PropertyChangedEventArgs.get_PropertyName() */
 HRESULT wuixada_property_changed_event_args_get__property_name(WUIXADA_PropertyChangedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Data.Binding */
-/* Windows.UI.Xaml.Data.Binding.get_Path() */
 HRESULT wuixada_binding_get__path(WUIXADA_Binding *self, WUIXA_PropertyPath** value);
 
-/* Windows.UI.Xaml.Data.Binding.put_Path() */
 HRESULT wuixada_binding_put__path(WUIXADA_Binding *self, WUIXA_PropertyPath* value);
 
-/* Windows.UI.Xaml.Data.Binding.get_Mode() */
 HRESULT wuixada_binding_get__mode(WUIXADA_Binding *self, WUIXADA_BindingMode *value);
 
-/* Windows.UI.Xaml.Data.Binding.put_Mode() */
 HRESULT wuixada_binding_put__mode(WUIXADA_Binding *self, WUIXADA_BindingMode value);
 
-/* Windows.UI.Xaml.Data.Binding.get_Source() */
 HRESULT wuixada_binding_get__source(WUIXADA_Binding *self, IInspectable** value);
 
-/* Windows.UI.Xaml.Data.Binding.put_Source() */
 HRESULT wuixada_binding_put__source(WUIXADA_Binding *self, IInspectable* value);
 
-/* Windows.UI.Xaml.Data.Binding.get_RelativeSource() */
 HRESULT wuixada_binding_get__relative_source(WUIXADA_Binding *self, WUIXADA_RelativeSource** value);
 
-/* Windows.UI.Xaml.Data.Binding.put_RelativeSource() */
 HRESULT wuixada_binding_put__relative_source(WUIXADA_Binding *self, WUIXADA_RelativeSource* value);
 
-/* Windows.UI.Xaml.Data.Binding.get_ElementName() */
 HRESULT wuixada_binding_get__element_name(WUIXADA_Binding *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Data.Binding.put_ElementName() */
 HRESULT wuixada_binding_put__element_name(WUIXADA_Binding *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Data.Binding.get_Converter() */
 HRESULT wuixada_binding_get__converter(WUIXADA_Binding *self, WUIXADA_IValueConverter** value);
 
-/* Windows.UI.Xaml.Data.Binding.put_Converter() */
 HRESULT wuixada_binding_put__converter(WUIXADA_Binding *self, WUIXADA_IValueConverter* value);
 
-/* Windows.UI.Xaml.Data.Binding.get_ConverterParameter() */
 HRESULT wuixada_binding_get__converter_parameter(WUIXADA_Binding *self, IInspectable** value);
 
-/* Windows.UI.Xaml.Data.Binding.put_ConverterParameter() */
 HRESULT wuixada_binding_put__converter_parameter(WUIXADA_Binding *self, IInspectable* value);
 
-/* Windows.UI.Xaml.Data.Binding.get_ConverterLanguage() */
 HRESULT wuixada_binding_get__converter_language(WUIXADA_Binding *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Data.Binding.put_ConverterLanguage() */
 HRESULT wuixada_binding_put__converter_language(WUIXADA_Binding *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Data.Binding.get_FallbackValue() */
 HRESULT wuixada_binding_get__fallback_value(WUIXADA_Binding *self, IInspectable** value);
 
-/* Windows.UI.Xaml.Data.Binding.put_FallbackValue() */
 HRESULT wuixada_binding_put__fallback_value(WUIXADA_Binding *self, IInspectable* value);
 
-/* Windows.UI.Xaml.Data.Binding.get_TargetNullValue() */
 HRESULT wuixada_binding_get__target_null_value(WUIXADA_Binding *self, IInspectable** value);
 
-/* Windows.UI.Xaml.Data.Binding.put_TargetNullValue() */
 HRESULT wuixada_binding_put__target_null_value(WUIXADA_Binding *self, IInspectable* value);
 
-/* Windows.UI.Xaml.Data.Binding.get_UpdateSourceTrigger() */
 HRESULT wuixada_binding_get__update_source_trigger(WUIXADA_Binding *self, WUIXADA_UpdateSourceTrigger *value);
 
-/* Windows.UI.Xaml.Data.Binding.put_UpdateSourceTrigger() */
 HRESULT wuixada_binding_put__update_source_trigger(WUIXADA_Binding *self, WUIXADA_UpdateSourceTrigger value);
 
-/* Windows.UI.Xaml.Data.BindingExpression */
-/* Windows.UI.Xaml.Data.BindingExpression.get_DataItem() */
 HRESULT wuixada_binding_expression_get__data_item(WUIXADA_BindingExpression *self, IInspectable** value);
 
-/* Windows.UI.Xaml.Data.BindingExpression.get_ParentBinding() */
 HRESULT wuixada_binding_expression_get__parent_binding(WUIXADA_BindingExpression *self, WUIXADA_Binding** value);
 
-/* Windows.UI.Xaml.Data.BindingExpression.UpdateSource() */
 HRESULT wuixada_binding_expression_update_source(WUIXADA_BindingExpression *self);
 
-/* activate Windows.UI.Xaml.Data.BindingOperations */
 HRESULT wuixada_binding_operations_new(WUIXADA_BindingOperations **out);
 
-/* Windows.UI.Xaml.Data.BindingOperations */
-/* Windows.UI.Xaml.Data.BindingOperations.SetBinding(target, dp, binding) */
 HRESULT wuixada_binding_operations_set_binding(WUIXA_DependencyObject* target, WUIXA_DependencyProperty* dp, WUIXADA_BindingBase* binding);
 
-/* activate Windows.UI.Xaml.Data.CollectionViewSource */
 HRESULT wuixada_collection_view_source_new(WUIXADA_CollectionViewSource **out);
 
-/* Windows.UI.Xaml.Data.CollectionViewSource */
-/* Windows.UI.Xaml.Data.CollectionViewSource.get_Source() */
 HRESULT wuixada_collection_view_source_get__source(WUIXADA_CollectionViewSource *self, IInspectable** value);
 
-/* Windows.UI.Xaml.Data.CollectionViewSource.put_Source() */
 HRESULT wuixada_collection_view_source_put__source(WUIXADA_CollectionViewSource *self, IInspectable* value);
 
-/* Windows.UI.Xaml.Data.CollectionViewSource.get_View() */
 HRESULT wuixada_collection_view_source_get__view(WUIXADA_CollectionViewSource *self, WUIXADA_ICollectionView** value);
 
-/* Windows.UI.Xaml.Data.CollectionViewSource.get_IsSourceGrouped() */
 HRESULT wuixada_collection_view_source_get__is_source_grouped(WUIXADA_CollectionViewSource *self, BOOL *value);
 
-/* Windows.UI.Xaml.Data.CollectionViewSource.put_IsSourceGrouped() */
 HRESULT wuixada_collection_view_source_put__is_source_grouped(WUIXADA_CollectionViewSource *self, BOOL value);
 
-/* Windows.UI.Xaml.Data.CollectionViewSource.get_ItemsPath() */
 HRESULT wuixada_collection_view_source_get__items_path(WUIXADA_CollectionViewSource *self, WUIXA_PropertyPath** value);
 
-/* Windows.UI.Xaml.Data.CollectionViewSource.put_ItemsPath() */
 HRESULT wuixada_collection_view_source_put__items_path(WUIXADA_CollectionViewSource *self, WUIXA_PropertyPath* value);
 
-/* Windows.UI.Xaml.Data.CollectionViewSource.get_SourceProperty() */
 HRESULT wuixada_collection_view_source_get__source_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Data.CollectionViewSource.get_ViewProperty() */
 HRESULT wuixada_collection_view_source_get__view_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Data.CollectionViewSource.get_IsSourceGroupedProperty() */
 HRESULT wuixada_collection_view_source_get__is_source_grouped_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Data.CollectionViewSource.get_ItemsPathProperty() */
 HRESULT wuixada_collection_view_source_get__items_path_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Data.CurrentChangingEventArgs */
-/* Windows.UI.Xaml.Data.CurrentChangingEventArgs.get_Cancel() */
 HRESULT wuixada_current_changing_event_args_get__cancel(WUIXADA_CurrentChangingEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Data.CurrentChangingEventArgs.put_Cancel() */
 HRESULT wuixada_current_changing_event_args_put__cancel(WUIXADA_CurrentChangingEventArgs *self, BOOL value);
 
-/* Windows.UI.Xaml.Data.CurrentChangingEventArgs.get_IsCancelable() */
 HRESULT wuixada_current_changing_event_args_get__is_cancelable(WUIXADA_CurrentChangingEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Data.CurrentChangingEventHandler */
-/* Windows.UI.Xaml.Data.CurrentChangingEventHandler.Invoke(sender, e) */
 HRESULT wuixada_current_changing_event_handler_invoke(WUIXADA_CurrentChangingEventHandler *self, IInspectable* sender, WUIXADA_CurrentChangingEventArgs* e);
 
-/* Windows.UI.Xaml.Data.IBindingBaseFactory */
-/* Windows.UI.Xaml.Data.IBindingBaseFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixada_binding_base_factory_create_instance(WUIXADA_IBindingBaseFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXADA_BindingBase** out);
 
-/* Windows.UI.Xaml.Data.IBindingFactory */
-/* Windows.UI.Xaml.Data.IBindingFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixada_binding_factory_create_instance(WUIXADA_IBindingFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXADA_Binding** out);
 
-/* Windows.UI.Xaml.Data.IBindingOperationsStatics */
-/* Windows.UI.Xaml.Data.IBindingOperationsStatics.SetBinding(target, dp, binding) */
 HRESULT wuixada_binding_operations_statics_set_binding(WUIXADA_IBindingOperationsStatics *self, WUIXA_DependencyObject* target, WUIXA_DependencyProperty* dp, WUIXADA_BindingBase* binding);
 
-/* Windows.UI.Xaml.Data.ICollectionView */
-/* Windows.UI.Xaml.Data.ICollectionView.get_CurrentItem() */
 HRESULT wuixada_collection_view_get__current_item(WUIXADA_ICollectionView *self, IInspectable** value);
 
-/* Windows.UI.Xaml.Data.ICollectionView.get_CurrentPosition() */
 HRESULT wuixada_collection_view_get__current_position(WUIXADA_ICollectionView *self, int32_t *value);
 
-/* Windows.UI.Xaml.Data.ICollectionView.get_IsCurrentAfterLast() */
 HRESULT wuixada_collection_view_get__is_current_after_last(WUIXADA_ICollectionView *self, BOOL *value);
 
-/* Windows.UI.Xaml.Data.ICollectionView.get_IsCurrentBeforeFirst() */
 HRESULT wuixada_collection_view_get__is_current_before_first(WUIXADA_ICollectionView *self, BOOL *value);
 
-/* Windows.UI.Xaml.Data.ICollectionView.get_CollectionGroups() */
 HRESULT wuixada_collection_view_get__collection_groups(WUIXADA_ICollectionView *self, WFOCO_IObservableVector_Object** value);
 
-/* Windows.UI.Xaml.Data.ICollectionView.get_HasMoreItems() */
 HRESULT wuixada_collection_view_get__has_more_items(WUIXADA_ICollectionView *self, BOOL *value);
 
-/* Windows.UI.Xaml.Data.ICollectionView.MoveCurrentTo(item) */
 HRESULT wuixada_collection_view_move_current_to(WUIXADA_ICollectionView *self, IInspectable* item, BOOL *out);
 
-/* Windows.UI.Xaml.Data.ICollectionView.MoveCurrentToPosition(index) */
 HRESULT wuixada_collection_view_move_current_to_position(WUIXADA_ICollectionView *self, int32_t index, BOOL *out);
 
-/* Windows.UI.Xaml.Data.ICollectionView.MoveCurrentToFirst() */
 HRESULT wuixada_collection_view_move_current_to_first(WUIXADA_ICollectionView *self, BOOL *out);
 
-/* Windows.UI.Xaml.Data.ICollectionView.MoveCurrentToLast() */
 HRESULT wuixada_collection_view_move_current_to_last(WUIXADA_ICollectionView *self, BOOL *out);
 
-/* Windows.UI.Xaml.Data.ICollectionView.MoveCurrentToNext() */
 HRESULT wuixada_collection_view_move_current_to_next(WUIXADA_ICollectionView *self, BOOL *out);
 
-/* Windows.UI.Xaml.Data.ICollectionView.MoveCurrentToPrevious() */
 HRESULT wuixada_collection_view_move_current_to_previous(WUIXADA_ICollectionView *self, BOOL *out);
 
-/* Windows.UI.Xaml.Data.ICollectionView.LoadMoreItemsAsync(count) */
 HRESULT wuixada_collection_view_load_more_items_async(WUIXADA_ICollectionView *self, uint32_t count, WF_IAsyncOperation_WUIXADA_LoadMoreItemsResult** out);
 
-/* Windows.UI.Xaml.Data.ICollectionViewFactory */
-/* Windows.UI.Xaml.Data.ICollectionViewFactory.CreateView() */
 HRESULT wuixada_collection_view_factory_create_view(WUIXADA_ICollectionViewFactory *self, WUIXADA_ICollectionView** out);
 
-/* Windows.UI.Xaml.Data.ICollectionViewGroup */
-/* Windows.UI.Xaml.Data.ICollectionViewGroup.get_Group() */
 HRESULT wuixada_collection_view_group_get__group(WUIXADA_ICollectionViewGroup *self, IInspectable** value);
 
-/* Windows.UI.Xaml.Data.ICollectionViewGroup.get_GroupItems() */
 HRESULT wuixada_collection_view_group_get__group_items(WUIXADA_ICollectionViewGroup *self, WFOCO_IObservableVector_Object** value);
 
-/* Windows.UI.Xaml.Data.ICollectionViewSourceStatics */
-/* Windows.UI.Xaml.Data.ICollectionViewSourceStatics.get_SourceProperty() */
 HRESULT wuixada_collection_view_source_statics_get__source_property(WUIXADA_ICollectionViewSourceStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Data.ICollectionViewSourceStatics.get_ViewProperty() */
 HRESULT wuixada_collection_view_source_statics_get__view_property(WUIXADA_ICollectionViewSourceStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Data.ICollectionViewSourceStatics.get_IsSourceGroupedProperty() */
 HRESULT wuixada_collection_view_source_statics_get__is_source_grouped_property(WUIXADA_ICollectionViewSourceStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Data.ICollectionViewSourceStatics.get_ItemsPathProperty() */
 HRESULT wuixada_collection_view_source_statics_get__items_path_property(WUIXADA_ICollectionViewSourceStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Data.ICurrentChangingEventArgsFactory */
-/* Windows.UI.Xaml.Data.ICurrentChangingEventArgsFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixada_current_changing_event_args_factory_create_instance(WUIXADA_ICurrentChangingEventArgsFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXADA_CurrentChangingEventArgs** out);
 
-/* Windows.UI.Xaml.Data.ICurrentChangingEventArgsFactory.CreateWithCancelableParameter(isCancelable, baseInterface, innerInterface) */
 HRESULT wuixada_current_changing_event_args_factory_create_with_cancelable_parameter(WUIXADA_ICurrentChangingEventArgsFactory *self, BOOL isCancelable, IInspectable* baseInterface, IInspectable* innerInterface, WUIXADA_CurrentChangingEventArgs** out);
 
-/* Windows.UI.Xaml.Data.ICustomProperty */
-/* Windows.UI.Xaml.Data.ICustomProperty.get_Type() */
 HRESULT wuixada_custom_property_get__type(WUIXADA_ICustomProperty *self, WUIXAIN_TypeName *value);
 
-/* Windows.UI.Xaml.Data.ICustomProperty.get_Name() */
 HRESULT wuixada_custom_property_get__name(WUIXADA_ICustomProperty *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Data.ICustomProperty.GetValue(target) */
 HRESULT wuixada_custom_property_get_value(WUIXADA_ICustomProperty *self, IInspectable* target, IInspectable** out);
 
-/* Windows.UI.Xaml.Data.ICustomProperty.SetValue(target) */
 HRESULT wuixada_custom_property_set_value(WUIXADA_ICustomProperty *self, IInspectable* target, IInspectable* value);
 
-/* Windows.UI.Xaml.Data.ICustomProperty.GetIndexedValue(target, index) */
 HRESULT wuixada_custom_property_get_indexed_value(WUIXADA_ICustomProperty *self, IInspectable* target, IInspectable* index, IInspectable** out);
 
-/* Windows.UI.Xaml.Data.ICustomProperty.SetIndexedValue(target, index) */
 HRESULT wuixada_custom_property_set_indexed_value(WUIXADA_ICustomProperty *self, IInspectable* target, IInspectable* value, IInspectable* index);
 
-/* Windows.UI.Xaml.Data.ICustomProperty.get_CanWrite() */
 HRESULT wuixada_custom_property_get__can_write(WUIXADA_ICustomProperty *self, BOOL *value);
 
-/* Windows.UI.Xaml.Data.ICustomProperty.get_CanRead() */
 HRESULT wuixada_custom_property_get__can_read(WUIXADA_ICustomProperty *self, BOOL *value);
 
-/* Windows.UI.Xaml.Data.ICustomPropertyProvider */
-/* Windows.UI.Xaml.Data.ICustomPropertyProvider.GetCustomProperty(name) */
 HRESULT wuixada_custom_property_provider_get_custom_property(WUIXADA_ICustomPropertyProvider *self, cwinrt_hstring name, WUIXADA_ICustomProperty** out);
 
-/* Windows.UI.Xaml.Data.ICustomPropertyProvider.GetIndexedProperty(name) */
 HRESULT wuixada_custom_property_provider_get_indexed_property(WUIXADA_ICustomPropertyProvider *self, cwinrt_hstring name, WUIXAIN_TypeName type_, WUIXADA_ICustomProperty** out);
 
-/* Windows.UI.Xaml.Data.ICustomPropertyProvider.GetStringRepresentation() */
 HRESULT wuixada_custom_property_provider_get_string_representation(WUIXADA_ICustomPropertyProvider *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Data.ICustomPropertyProvider.get_Type() */
 HRESULT wuixada_custom_property_provider_get__type(WUIXADA_ICustomPropertyProvider *self, WUIXAIN_TypeName *value);
 
-/* Windows.UI.Xaml.Data.IItemIndexRangeFactory */
-/* Windows.UI.Xaml.Data.IItemIndexRangeFactory.CreateInstance(firstIndex, length, baseInterface, innerInterface) */
 HRESULT wuixada_item_index_range_factory_create_instance(WUIXADA_IItemIndexRangeFactory *self, int32_t firstIndex, uint32_t length, IInspectable* baseInterface, IInspectable* innerInterface, WUIXADA_ItemIndexRange** out);
 
-/* Windows.UI.Xaml.Data.IItemsRangeInfo */
-/* Windows.UI.Xaml.Data.IItemsRangeInfo.RangesChanged(visibleRange, trackedItems) */
 HRESULT wuixada_items_range_info_ranges_changed(WUIXADA_IItemsRangeInfo *self, WUIXADA_ItemIndexRange* visibleRange, WFOCO_IVectorView_WUIXADA_ItemIndexRange* trackedItems);
 
-/* Windows.UI.Xaml.Data.INotifyPropertyChanged */
-/* Windows.UI.Xaml.Data.IPropertyChangedEventArgsFactory */
-/* Windows.UI.Xaml.Data.IPropertyChangedEventArgsFactory.CreateInstance(name, baseInterface, innerInterface) */
 HRESULT wuixada_property_changed_event_args_factory_create_instance(WUIXADA_IPropertyChangedEventArgsFactory *self, cwinrt_hstring name, IInspectable* baseInterface, IInspectable* innerInterface, WUIXADA_PropertyChangedEventArgs** out);
 
-/* Windows.UI.Xaml.Data.IRelativeSourceFactory */
-/* Windows.UI.Xaml.Data.IRelativeSourceFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixada_relative_source_factory_create_instance(WUIXADA_IRelativeSourceFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXADA_RelativeSource** out);
 
-/* Windows.UI.Xaml.Data.ISelectionInfo */
-/* Windows.UI.Xaml.Data.ISelectionInfo.SelectRange(itemIndexRange) */
 HRESULT wuixada_selection_info_select_range(WUIXADA_ISelectionInfo *self, WUIXADA_ItemIndexRange* itemIndexRange);
 
-/* Windows.UI.Xaml.Data.ISelectionInfo.DeselectRange(itemIndexRange) */
 HRESULT wuixada_selection_info_deselect_range(WUIXADA_ISelectionInfo *self, WUIXADA_ItemIndexRange* itemIndexRange);
 
-/* Windows.UI.Xaml.Data.ISelectionInfo.IsSelected(index) */
 HRESULT wuixada_selection_info_is_selected(WUIXADA_ISelectionInfo *self, int32_t index, BOOL *out);
 
-/* Windows.UI.Xaml.Data.ISelectionInfo.GetSelectedRanges() */
 HRESULT wuixada_selection_info_get_selected_ranges(WUIXADA_ISelectionInfo *self, WFOCO_IVectorView_WUIXADA_ItemIndexRange** out);
 
-/* Windows.UI.Xaml.Data.ISupportIncrementalLoading */
-/* Windows.UI.Xaml.Data.ISupportIncrementalLoading.LoadMoreItemsAsync(count) */
 HRESULT wuixada_support_incremental_loading_load_more_items_async(WUIXADA_ISupportIncrementalLoading *self, uint32_t count, WF_IAsyncOperation_WUIXADA_LoadMoreItemsResult** out);
 
-/* Windows.UI.Xaml.Data.ISupportIncrementalLoading.get_HasMoreItems() */
 HRESULT wuixada_support_incremental_loading_get__has_more_items(WUIXADA_ISupportIncrementalLoading *self, BOOL *value);
 
-/* Windows.UI.Xaml.Data.IValueConverter */
-/* Windows.UI.Xaml.Data.IValueConverter.Convert(targetType, parameter, language) */
 HRESULT wuixada_value_converter_convert(WUIXADA_IValueConverter *self, IInspectable* value, WUIXAIN_TypeName targetType, IInspectable* parameter, cwinrt_hstring language, IInspectable** out);
 
-/* Windows.UI.Xaml.Data.IValueConverter.ConvertBack(targetType, parameter, language) */
 HRESULT wuixada_value_converter_convert_back(WUIXADA_IValueConverter *self, IInspectable* value, WUIXAIN_TypeName targetType, IInspectable* parameter, cwinrt_hstring language, IInspectable** out);
 
-/* Windows.UI.Xaml.Data.ItemIndexRange */
-/* Windows.UI.Xaml.Data.ItemIndexRange.get_FirstIndex() */
 HRESULT wuixada_item_index_range_get__first_index(WUIXADA_ItemIndexRange *self, int32_t *value);
 
-/* Windows.UI.Xaml.Data.ItemIndexRange.get_Length() */
 HRESULT wuixada_item_index_range_get__length(WUIXADA_ItemIndexRange *self, uint32_t *value);
 
-/* Windows.UI.Xaml.Data.ItemIndexRange.get_LastIndex() */
 HRESULT wuixada_item_index_range_get__last_index(WUIXADA_ItemIndexRange *self, int32_t *value);
 
-/* Windows.UI.Xaml.Data.RelativeSource */
-/* Windows.UI.Xaml.Data.RelativeSource.get_Mode() */
 HRESULT wuixada_relative_source_get__mode(WUIXADA_RelativeSource *self, WUIXADA_RelativeSourceMode *value);
 
-/* Windows.UI.Xaml.Data.RelativeSource.put_Mode() */
 HRESULT wuixada_relative_source_put__mode(WUIXADA_RelativeSource *self, WUIXADA_RelativeSourceMode value);
 
-/* Windows.UI.Xaml.Data.IPropertyChangedEventArgs */
-/* Windows.UI.Xaml.Data.IBinding */
-/* Windows.UI.Xaml.Data.IBinding2 */
-/* Windows.UI.Xaml.Data.IBinding2.get_FallbackValue() */
 HRESULT wuixada_binding_2_get__fallback_value(WUIXADA_IBinding_2 *self, IInspectable** value);
 
-/* Windows.UI.Xaml.Data.IBinding2.put_FallbackValue() */
 HRESULT wuixada_binding_2_put__fallback_value(WUIXADA_IBinding_2 *self, IInspectable* value);
 
-/* Windows.UI.Xaml.Data.IBinding2.get_TargetNullValue() */
 HRESULT wuixada_binding_2_get__target_null_value(WUIXADA_IBinding_2 *self, IInspectable** value);
 
-/* Windows.UI.Xaml.Data.IBinding2.put_TargetNullValue() */
 HRESULT wuixada_binding_2_put__target_null_value(WUIXADA_IBinding_2 *self, IInspectable* value);
 
-/* Windows.UI.Xaml.Data.IBinding2.get_UpdateSourceTrigger() */
 HRESULT wuixada_binding_2_get__update_source_trigger(WUIXADA_IBinding_2 *self, WUIXADA_UpdateSourceTrigger *value);
 
-/* Windows.UI.Xaml.Data.IBinding2.put_UpdateSourceTrigger() */
 HRESULT wuixada_binding_2_put__update_source_trigger(WUIXADA_IBinding_2 *self, WUIXADA_UpdateSourceTrigger value);
 
-/* Windows.UI.Xaml.Data.IBindingExpression */
-/* Windows.UI.Xaml.Data.ICollectionViewSource */
-/* Windows.UI.Xaml.Data.ICurrentChangingEventArgs */
-/* Windows.UI.Xaml.Data.IItemIndexRange */
-/* Windows.UI.Xaml.Data.IRelativeSource */
 #endif /* CWINRT_WINDOWS_UI_XAML_DATA_H */

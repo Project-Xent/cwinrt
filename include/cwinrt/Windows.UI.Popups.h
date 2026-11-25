@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WUIPO_IUICommandFactory WUIPO_IUICommandFactory;
 typedef struct WUIPO_MessageDialog WUIPO_MessageDialog;
 typedef struct WUIPO_PopupMenu WUIPO_PopupMenu;
@@ -24,7 +23,6 @@ typedef struct WUIPO_IMessageDialog WUIPO_IMessageDialog;
 typedef struct WUIPO_IPopupMenu WUIPO_IPopupMenu;
 typedef struct WUIPO_IUICommand WUIPO_IUICommand;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IVector_WUIPO_IUICommand
 #define CWINRT_FWD_WFOCO_IVector_WUIPO_IUICommand
 typedef struct WFOCO_IVector_WUIPO_IUICommand WFOCO_IVector_WUIPO_IUICommand;
@@ -53,7 +51,6 @@ typedef enum WUIPO_Placement {
 } WUIPO_Placement;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -82,130 +79,80 @@ static const IID CWINRT_IID_WUIPO_IPopupMenu CWINRT_MAYBE_UNUSED = { 0x4E9BC6DC,
 static const IID CWINRT_IID_WUIPO_IUICommand CWINRT_MAYBE_UNUSED = { 0x4FF93A75, 0x4145, 0x47FF, { 0xAC, 0x7F, 0xDF, 0xF1, 0xC1, 0xFA, 0x5B, 0x0F } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.Popups.IUICommandFactory */
-/* Windows.UI.Popups.IUICommandFactory.Create(label) */
 HRESULT wuipo_u_i_command_factory_create(WUIPO_IUICommandFactory *self, cwinrt_hstring label, WUIPO_UICommand** out);
 
-/* Windows.UI.Popups.IUICommandFactory.CreateWithHandler(label, action) */
 HRESULT wuipo_u_i_command_factory_create_with_handler(WUIPO_IUICommandFactory *self, cwinrt_hstring label, WUIPO_UICommandInvokedHandler* action, WUIPO_UICommand** out);
 
-/* Windows.UI.Popups.IUICommandFactory.CreateWithHandlerAndId(label, action, commandId) */
 HRESULT wuipo_u_i_command_factory_create_with_handler_and_id(WUIPO_IUICommandFactory *self, cwinrt_hstring label, WUIPO_UICommandInvokedHandler* action, IInspectable* commandId, WUIPO_UICommand** out);
 
-/* activate Windows.UI.Popups.MessageDialog */
 HRESULT wuipo_message_dialog_new(WUIPO_MessageDialog **out);
 
-/* Windows.UI.Popups.MessageDialog */
-/* Windows.UI.Popups.MessageDialog.get_Title() */
 HRESULT wuipo_message_dialog_get__title(WUIPO_MessageDialog *self, cwinrt_hstring *value);
 
-/* Windows.UI.Popups.MessageDialog.put_Title() */
 HRESULT wuipo_message_dialog_put__title(WUIPO_MessageDialog *self, cwinrt_hstring value);
 
-/* Windows.UI.Popups.MessageDialog.get_Commands() */
 HRESULT wuipo_message_dialog_get__commands(WUIPO_MessageDialog *self, WFOCO_IVector_WUIPO_IUICommand** value);
 
-/* Windows.UI.Popups.MessageDialog.get_DefaultCommandIndex() */
 HRESULT wuipo_message_dialog_get__default_command_index(WUIPO_MessageDialog *self, uint32_t *value);
 
-/* Windows.UI.Popups.MessageDialog.put_DefaultCommandIndex() */
 HRESULT wuipo_message_dialog_put__default_command_index(WUIPO_MessageDialog *self, uint32_t value);
 
-/* Windows.UI.Popups.MessageDialog.get_CancelCommandIndex() */
 HRESULT wuipo_message_dialog_get__cancel_command_index(WUIPO_MessageDialog *self, uint32_t *value);
 
-/* Windows.UI.Popups.MessageDialog.put_CancelCommandIndex() */
 HRESULT wuipo_message_dialog_put__cancel_command_index(WUIPO_MessageDialog *self, uint32_t value);
 
-/* Windows.UI.Popups.MessageDialog.get_Content() */
 HRESULT wuipo_message_dialog_get__content(WUIPO_MessageDialog *self, cwinrt_hstring *value);
 
-/* Windows.UI.Popups.MessageDialog.put_Content() */
 HRESULT wuipo_message_dialog_put__content(WUIPO_MessageDialog *self, cwinrt_hstring value);
 
-/* Windows.UI.Popups.MessageDialog.ShowAsync() */
 HRESULT wuipo_message_dialog_show_async(WUIPO_MessageDialog *self, WF_IAsyncOperation_WUIPO_IUICommand** out);
 
-/* Windows.UI.Popups.MessageDialog.get_Options() */
 HRESULT wuipo_message_dialog_get__options(WUIPO_MessageDialog *self, WUIPO_MessageDialogOptions *value);
 
-/* Windows.UI.Popups.MessageDialog.put_Options() */
 HRESULT wuipo_message_dialog_put__options(WUIPO_MessageDialog *self, WUIPO_MessageDialogOptions value);
 
-/* activate Windows.UI.Popups.PopupMenu */
 HRESULT wuipo_popup_menu_new(WUIPO_PopupMenu **out);
 
-/* Windows.UI.Popups.PopupMenu */
-/* Windows.UI.Popups.PopupMenu.get_Commands() */
 HRESULT wuipo_popup_menu_get__commands(WUIPO_PopupMenu *self, WFOCO_IVector_WUIPO_IUICommand** value);
 
-/* Windows.UI.Popups.PopupMenu.ShowAsync(invocationPoint) */
 HRESULT wuipo_popup_menu_show_async(WUIPO_PopupMenu *self, WF_Point invocationPoint, WF_IAsyncOperation_WUIPO_IUICommand** out);
 
-/* Windows.UI.Popups.PopupMenu.ShowForSelectionAsync(selection) */
 HRESULT wuipo_popup_menu_show_for_selection_async(WUIPO_PopupMenu *self, WF_Rect selection, WF_IAsyncOperation_WUIPO_IUICommand** out);
 
-/* Windows.UI.Popups.PopupMenu.ShowForSelectionAsync(selection, preferredPlacement) */
 HRESULT wuipo_popup_menu_show_for_selection_async_rect_placement_p(WUIPO_PopupMenu *self, WF_Rect selection, WUIPO_Placement preferredPlacement, WF_IAsyncOperation_WUIPO_IUICommand** out);
 
-/* activate Windows.UI.Popups.UICommand */
 HRESULT wuipo_u_i_command_new(WUIPO_UICommand **out);
 
-/* Windows.UI.Popups.UICommand */
-/* Windows.UI.Popups.UICommand.get_Label() */
 HRESULT wuipo_u_i_command_get__label(WUIPO_UICommand *self, cwinrt_hstring *value);
 
-/* Windows.UI.Popups.UICommand.put_Label() */
 HRESULT wuipo_u_i_command_put__label(WUIPO_UICommand *self, cwinrt_hstring value);
 
-/* Windows.UI.Popups.UICommand.get_Invoked() */
 HRESULT wuipo_u_i_command_get__invoked(WUIPO_UICommand *self, WUIPO_UICommandInvokedHandler** value);
 
-/* Windows.UI.Popups.UICommand.put_Invoked() */
 HRESULT wuipo_u_i_command_put__invoked(WUIPO_UICommand *self, WUIPO_UICommandInvokedHandler* value);
 
-/* Windows.UI.Popups.UICommand.get_Id() */
 HRESULT wuipo_u_i_command_get__id(WUIPO_UICommand *self, IInspectable** value);
 
-/* Windows.UI.Popups.UICommand.put_Id() */
 HRESULT wuipo_u_i_command_put__id(WUIPO_UICommand *self, IInspectable* value);
 
-/* Windows.UI.Popups.UICommandInvokedHandler */
-/* Windows.UI.Popups.UICommandInvokedHandler.Invoke(command) */
 HRESULT wuipo_u_i_command_invoked_handler_invoke(WUIPO_UICommandInvokedHandler *self, WUIPO_IUICommand* command);
 
-/* activate Windows.UI.Popups.UICommandSeparator */
 HRESULT wuipo_u_i_command_separator_new(WUIPO_UICommandSeparator **out);
 
-/* Windows.UI.Popups.UICommandSeparator */
-/* Windows.UI.Popups.UICommandSeparator.get_Label() */
 HRESULT wuipo_u_i_command_separator_get__label(WUIPO_UICommandSeparator *self, cwinrt_hstring *value);
 
-/* Windows.UI.Popups.UICommandSeparator.put_Label() */
 HRESULT wuipo_u_i_command_separator_put__label(WUIPO_UICommandSeparator *self, cwinrt_hstring value);
 
-/* Windows.UI.Popups.UICommandSeparator.get_Invoked() */
 HRESULT wuipo_u_i_command_separator_get__invoked(WUIPO_UICommandSeparator *self, WUIPO_UICommandInvokedHandler** value);
 
-/* Windows.UI.Popups.UICommandSeparator.put_Invoked() */
 HRESULT wuipo_u_i_command_separator_put__invoked(WUIPO_UICommandSeparator *self, WUIPO_UICommandInvokedHandler* value);
 
-/* Windows.UI.Popups.UICommandSeparator.get_Id() */
 HRESULT wuipo_u_i_command_separator_get__id(WUIPO_UICommandSeparator *self, IInspectable** value);
 
-/* Windows.UI.Popups.UICommandSeparator.put_Id() */
 HRESULT wuipo_u_i_command_separator_put__id(WUIPO_UICommandSeparator *self, IInspectable* value);
 
-/* Windows.UI.Popups.IMessageDialogFactory */
-/* Windows.UI.Popups.IMessageDialogFactory.Create(content) */
 HRESULT wuipo_message_dialog_factory_create(WUIPO_IMessageDialogFactory *self, cwinrt_hstring content, WUIPO_MessageDialog** out);
 
-/* Windows.UI.Popups.IMessageDialogFactory.CreateWithTitle(content, title) */
 HRESULT wuipo_message_dialog_factory_create_with_title(WUIPO_IMessageDialogFactory *self, cwinrt_hstring content, cwinrt_hstring title, WUIPO_MessageDialog** out);
 
-/* Windows.UI.Popups.IMessageDialog */
-/* Windows.UI.Popups.IPopupMenu */
-/* Windows.UI.Popups.IUICommand */
 #endif /* CWINRT_WINDOWS_UI_POPUPS_H */

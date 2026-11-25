@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WUI_UIContext WUI_UIContext;
 typedef struct WUI_UIContentRoot WUI_UIContentRoot;
 typedef struct WUI_IColorsStatics WUI_IColorsStatics;
@@ -50,7 +49,6 @@ struct WUI_Color {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -83,883 +81,584 @@ static const IID CWINRT_IID_WUI_IColors CWINRT_MAYBE_UNUSED = { 0x9B8C9326, 0x4C
 static const IID CWINRT_IID_WUI_IColorHelper CWINRT_MAYBE_UNUSED = { 0x193CFBE7, 0x65C7, 0x4540, { 0xAD, 0x08, 0x62, 0x83, 0xBA, 0x76, 0x87, 0x9A } };
 #endif
 
-/* Methods */
-
-/* activate Windows.UI.UIContentRoot */
 HRESULT wui_u_i_content_root_new(WUI_UIContentRoot **out);
 
-/* Windows.UI.UIContentRoot */
-/* Windows.UI.UIContentRoot.get_UIContext() */
 HRESULT wui_u_i_content_root_get__u_i_context(WUI_UIContentRoot *self, WUI_UIContext** value);
 
-/* Windows.UI.IColorsStatics */
-/* Windows.UI.IColorsStatics.get_AliceBlue() */
 HRESULT wui_colors_statics_get__alice_blue(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_AntiqueWhite() */
 HRESULT wui_colors_statics_get__antique_white(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Aqua() */
 HRESULT wui_colors_statics_get__aqua(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Aquamarine() */
 HRESULT wui_colors_statics_get__aquamarine(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Azure() */
 HRESULT wui_colors_statics_get__azure(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Beige() */
 HRESULT wui_colors_statics_get__beige(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Bisque() */
 HRESULT wui_colors_statics_get__bisque(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Black() */
 HRESULT wui_colors_statics_get__black(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_BlanchedAlmond() */
 HRESULT wui_colors_statics_get__blanched_almond(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Blue() */
 HRESULT wui_colors_statics_get__blue(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_BlueViolet() */
 HRESULT wui_colors_statics_get__blue_violet(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Brown() */
 HRESULT wui_colors_statics_get__brown(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_BurlyWood() */
 HRESULT wui_colors_statics_get__burly_wood(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_CadetBlue() */
 HRESULT wui_colors_statics_get__cadet_blue(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Chartreuse() */
 HRESULT wui_colors_statics_get__chartreuse(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Chocolate() */
 HRESULT wui_colors_statics_get__chocolate(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Coral() */
 HRESULT wui_colors_statics_get__coral(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_CornflowerBlue() */
 HRESULT wui_colors_statics_get__cornflower_blue(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Cornsilk() */
 HRESULT wui_colors_statics_get__cornsilk(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Crimson() */
 HRESULT wui_colors_statics_get__crimson(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Cyan() */
 HRESULT wui_colors_statics_get__cyan(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_DarkBlue() */
 HRESULT wui_colors_statics_get__dark_blue(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_DarkCyan() */
 HRESULT wui_colors_statics_get__dark_cyan(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_DarkGoldenrod() */
 HRESULT wui_colors_statics_get__dark_goldenrod(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_DarkGray() */
 HRESULT wui_colors_statics_get__dark_gray(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_DarkGreen() */
 HRESULT wui_colors_statics_get__dark_green(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_DarkKhaki() */
 HRESULT wui_colors_statics_get__dark_khaki(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_DarkMagenta() */
 HRESULT wui_colors_statics_get__dark_magenta(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_DarkOliveGreen() */
 HRESULT wui_colors_statics_get__dark_olive_green(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_DarkOrange() */
 HRESULT wui_colors_statics_get__dark_orange(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_DarkOrchid() */
 HRESULT wui_colors_statics_get__dark_orchid(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_DarkRed() */
 HRESULT wui_colors_statics_get__dark_red(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_DarkSalmon() */
 HRESULT wui_colors_statics_get__dark_salmon(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_DarkSeaGreen() */
 HRESULT wui_colors_statics_get__dark_sea_green(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_DarkSlateBlue() */
 HRESULT wui_colors_statics_get__dark_slate_blue(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_DarkSlateGray() */
 HRESULT wui_colors_statics_get__dark_slate_gray(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_DarkTurquoise() */
 HRESULT wui_colors_statics_get__dark_turquoise(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_DarkViolet() */
 HRESULT wui_colors_statics_get__dark_violet(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_DeepPink() */
 HRESULT wui_colors_statics_get__deep_pink(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_DeepSkyBlue() */
 HRESULT wui_colors_statics_get__deep_sky_blue(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_DimGray() */
 HRESULT wui_colors_statics_get__dim_gray(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_DodgerBlue() */
 HRESULT wui_colors_statics_get__dodger_blue(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Firebrick() */
 HRESULT wui_colors_statics_get__firebrick(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_FloralWhite() */
 HRESULT wui_colors_statics_get__floral_white(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_ForestGreen() */
 HRESULT wui_colors_statics_get__forest_green(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Fuchsia() */
 HRESULT wui_colors_statics_get__fuchsia(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Gainsboro() */
 HRESULT wui_colors_statics_get__gainsboro(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_GhostWhite() */
 HRESULT wui_colors_statics_get__ghost_white(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Gold() */
 HRESULT wui_colors_statics_get__gold(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Goldenrod() */
 HRESULT wui_colors_statics_get__goldenrod(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Gray() */
 HRESULT wui_colors_statics_get__gray(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Green() */
 HRESULT wui_colors_statics_get__green(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_GreenYellow() */
 HRESULT wui_colors_statics_get__green_yellow(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Honeydew() */
 HRESULT wui_colors_statics_get__honeydew(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_HotPink() */
 HRESULT wui_colors_statics_get__hot_pink(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_IndianRed() */
 HRESULT wui_colors_statics_get__indian_red(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Indigo() */
 HRESULT wui_colors_statics_get__indigo(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Ivory() */
 HRESULT wui_colors_statics_get__ivory(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Khaki() */
 HRESULT wui_colors_statics_get__khaki(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Lavender() */
 HRESULT wui_colors_statics_get__lavender(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_LavenderBlush() */
 HRESULT wui_colors_statics_get__lavender_blush(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_LawnGreen() */
 HRESULT wui_colors_statics_get__lawn_green(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_LemonChiffon() */
 HRESULT wui_colors_statics_get__lemon_chiffon(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_LightBlue() */
 HRESULT wui_colors_statics_get__light_blue(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_LightCoral() */
 HRESULT wui_colors_statics_get__light_coral(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_LightCyan() */
 HRESULT wui_colors_statics_get__light_cyan(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_LightGoldenrodYellow() */
 HRESULT wui_colors_statics_get__light_goldenrod_yellow(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_LightGreen() */
 HRESULT wui_colors_statics_get__light_green(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_LightGray() */
 HRESULT wui_colors_statics_get__light_gray(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_LightPink() */
 HRESULT wui_colors_statics_get__light_pink(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_LightSalmon() */
 HRESULT wui_colors_statics_get__light_salmon(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_LightSeaGreen() */
 HRESULT wui_colors_statics_get__light_sea_green(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_LightSkyBlue() */
 HRESULT wui_colors_statics_get__light_sky_blue(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_LightSlateGray() */
 HRESULT wui_colors_statics_get__light_slate_gray(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_LightSteelBlue() */
 HRESULT wui_colors_statics_get__light_steel_blue(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_LightYellow() */
 HRESULT wui_colors_statics_get__light_yellow(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Lime() */
 HRESULT wui_colors_statics_get__lime(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_LimeGreen() */
 HRESULT wui_colors_statics_get__lime_green(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Linen() */
 HRESULT wui_colors_statics_get__linen(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Magenta() */
 HRESULT wui_colors_statics_get__magenta(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Maroon() */
 HRESULT wui_colors_statics_get__maroon(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_MediumAquamarine() */
 HRESULT wui_colors_statics_get__medium_aquamarine(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_MediumBlue() */
 HRESULT wui_colors_statics_get__medium_blue(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_MediumOrchid() */
 HRESULT wui_colors_statics_get__medium_orchid(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_MediumPurple() */
 HRESULT wui_colors_statics_get__medium_purple(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_MediumSeaGreen() */
 HRESULT wui_colors_statics_get__medium_sea_green(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_MediumSlateBlue() */
 HRESULT wui_colors_statics_get__medium_slate_blue(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_MediumSpringGreen() */
 HRESULT wui_colors_statics_get__medium_spring_green(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_MediumTurquoise() */
 HRESULT wui_colors_statics_get__medium_turquoise(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_MediumVioletRed() */
 HRESULT wui_colors_statics_get__medium_violet_red(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_MidnightBlue() */
 HRESULT wui_colors_statics_get__midnight_blue(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_MintCream() */
 HRESULT wui_colors_statics_get__mint_cream(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_MistyRose() */
 HRESULT wui_colors_statics_get__misty_rose(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Moccasin() */
 HRESULT wui_colors_statics_get__moccasin(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_NavajoWhite() */
 HRESULT wui_colors_statics_get__navajo_white(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Navy() */
 HRESULT wui_colors_statics_get__navy(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_OldLace() */
 HRESULT wui_colors_statics_get__old_lace(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Olive() */
 HRESULT wui_colors_statics_get__olive(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_OliveDrab() */
 HRESULT wui_colors_statics_get__olive_drab(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Orange() */
 HRESULT wui_colors_statics_get__orange(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_OrangeRed() */
 HRESULT wui_colors_statics_get__orange_red(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Orchid() */
 HRESULT wui_colors_statics_get__orchid(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_PaleGoldenrod() */
 HRESULT wui_colors_statics_get__pale_goldenrod(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_PaleGreen() */
 HRESULT wui_colors_statics_get__pale_green(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_PaleTurquoise() */
 HRESULT wui_colors_statics_get__pale_turquoise(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_PaleVioletRed() */
 HRESULT wui_colors_statics_get__pale_violet_red(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_PapayaWhip() */
 HRESULT wui_colors_statics_get__papaya_whip(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_PeachPuff() */
 HRESULT wui_colors_statics_get__peach_puff(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Peru() */
 HRESULT wui_colors_statics_get__peru(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Pink() */
 HRESULT wui_colors_statics_get__pink(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Plum() */
 HRESULT wui_colors_statics_get__plum(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_PowderBlue() */
 HRESULT wui_colors_statics_get__powder_blue(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Purple() */
 HRESULT wui_colors_statics_get__purple(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Red() */
 HRESULT wui_colors_statics_get__red(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_RosyBrown() */
 HRESULT wui_colors_statics_get__rosy_brown(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_RoyalBlue() */
 HRESULT wui_colors_statics_get__royal_blue(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_SaddleBrown() */
 HRESULT wui_colors_statics_get__saddle_brown(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Salmon() */
 HRESULT wui_colors_statics_get__salmon(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_SandyBrown() */
 HRESULT wui_colors_statics_get__sandy_brown(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_SeaGreen() */
 HRESULT wui_colors_statics_get__sea_green(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_SeaShell() */
 HRESULT wui_colors_statics_get__sea_shell(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Sienna() */
 HRESULT wui_colors_statics_get__sienna(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Silver() */
 HRESULT wui_colors_statics_get__silver(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_SkyBlue() */
 HRESULT wui_colors_statics_get__sky_blue(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_SlateBlue() */
 HRESULT wui_colors_statics_get__slate_blue(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_SlateGray() */
 HRESULT wui_colors_statics_get__slate_gray(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Snow() */
 HRESULT wui_colors_statics_get__snow(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_SpringGreen() */
 HRESULT wui_colors_statics_get__spring_green(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_SteelBlue() */
 HRESULT wui_colors_statics_get__steel_blue(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Tan() */
 HRESULT wui_colors_statics_get__tan(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Teal() */
 HRESULT wui_colors_statics_get__teal(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Thistle() */
 HRESULT wui_colors_statics_get__thistle(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Tomato() */
 HRESULT wui_colors_statics_get__tomato(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Transparent() */
 HRESULT wui_colors_statics_get__transparent(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Turquoise() */
 HRESULT wui_colors_statics_get__turquoise(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Violet() */
 HRESULT wui_colors_statics_get__violet(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Wheat() */
 HRESULT wui_colors_statics_get__wheat(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_White() */
 HRESULT wui_colors_statics_get__white(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_WhiteSmoke() */
 HRESULT wui_colors_statics_get__white_smoke(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_Yellow() */
 HRESULT wui_colors_statics_get__yellow(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorsStatics.get_YellowGreen() */
 HRESULT wui_colors_statics_get__yellow_green(WUI_IColorsStatics *self, WUI_Color *value);
 
-/* Windows.UI.IColorHelperStatics2 */
-/* Windows.UI.IColorHelperStatics2.ToDisplayName(color) */
 HRESULT wui_color_helper_statics_2_to_display_name(WUI_IColorHelperStatics_2 *self, WUI_Color color, cwinrt_hstring *out);
 
-/* Windows.UI.IColorHelperStatics */
-/* Windows.UI.IColorHelperStatics.FromArgb(a, r, g, b) */
 HRESULT wui_color_helper_statics_from_argb(WUI_IColorHelperStatics *self, uint8_t a, uint8_t r, uint8_t g, uint8_t b, WUI_Color *out);
 
-/* activate Windows.UI.Colors */
 HRESULT wui_colors_new(WUI_Colors **out);
 
-/* Windows.UI.Colors */
-/* Windows.UI.Colors.get_AliceBlue() */
 HRESULT wui_colors_get__alice_blue(WUI_Color *value);
 
-/* Windows.UI.Colors.get_AntiqueWhite() */
 HRESULT wui_colors_get__antique_white(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Aqua() */
 HRESULT wui_colors_get__aqua(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Aquamarine() */
 HRESULT wui_colors_get__aquamarine(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Azure() */
 HRESULT wui_colors_get__azure(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Beige() */
 HRESULT wui_colors_get__beige(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Bisque() */
 HRESULT wui_colors_get__bisque(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Black() */
 HRESULT wui_colors_get__black(WUI_Color *value);
 
-/* Windows.UI.Colors.get_BlanchedAlmond() */
 HRESULT wui_colors_get__blanched_almond(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Blue() */
 HRESULT wui_colors_get__blue(WUI_Color *value);
 
-/* Windows.UI.Colors.get_BlueViolet() */
 HRESULT wui_colors_get__blue_violet(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Brown() */
 HRESULT wui_colors_get__brown(WUI_Color *value);
 
-/* Windows.UI.Colors.get_BurlyWood() */
 HRESULT wui_colors_get__burly_wood(WUI_Color *value);
 
-/* Windows.UI.Colors.get_CadetBlue() */
 HRESULT wui_colors_get__cadet_blue(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Chartreuse() */
 HRESULT wui_colors_get__chartreuse(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Chocolate() */
 HRESULT wui_colors_get__chocolate(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Coral() */
 HRESULT wui_colors_get__coral(WUI_Color *value);
 
-/* Windows.UI.Colors.get_CornflowerBlue() */
 HRESULT wui_colors_get__cornflower_blue(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Cornsilk() */
 HRESULT wui_colors_get__cornsilk(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Crimson() */
 HRESULT wui_colors_get__crimson(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Cyan() */
 HRESULT wui_colors_get__cyan(WUI_Color *value);
 
-/* Windows.UI.Colors.get_DarkBlue() */
 HRESULT wui_colors_get__dark_blue(WUI_Color *value);
 
-/* Windows.UI.Colors.get_DarkCyan() */
 HRESULT wui_colors_get__dark_cyan(WUI_Color *value);
 
-/* Windows.UI.Colors.get_DarkGoldenrod() */
 HRESULT wui_colors_get__dark_goldenrod(WUI_Color *value);
 
-/* Windows.UI.Colors.get_DarkGray() */
 HRESULT wui_colors_get__dark_gray(WUI_Color *value);
 
-/* Windows.UI.Colors.get_DarkGreen() */
 HRESULT wui_colors_get__dark_green(WUI_Color *value);
 
-/* Windows.UI.Colors.get_DarkKhaki() */
 HRESULT wui_colors_get__dark_khaki(WUI_Color *value);
 
-/* Windows.UI.Colors.get_DarkMagenta() */
 HRESULT wui_colors_get__dark_magenta(WUI_Color *value);
 
-/* Windows.UI.Colors.get_DarkOliveGreen() */
 HRESULT wui_colors_get__dark_olive_green(WUI_Color *value);
 
-/* Windows.UI.Colors.get_DarkOrange() */
 HRESULT wui_colors_get__dark_orange(WUI_Color *value);
 
-/* Windows.UI.Colors.get_DarkOrchid() */
 HRESULT wui_colors_get__dark_orchid(WUI_Color *value);
 
-/* Windows.UI.Colors.get_DarkRed() */
 HRESULT wui_colors_get__dark_red(WUI_Color *value);
 
-/* Windows.UI.Colors.get_DarkSalmon() */
 HRESULT wui_colors_get__dark_salmon(WUI_Color *value);
 
-/* Windows.UI.Colors.get_DarkSeaGreen() */
 HRESULT wui_colors_get__dark_sea_green(WUI_Color *value);
 
-/* Windows.UI.Colors.get_DarkSlateBlue() */
 HRESULT wui_colors_get__dark_slate_blue(WUI_Color *value);
 
-/* Windows.UI.Colors.get_DarkSlateGray() */
 HRESULT wui_colors_get__dark_slate_gray(WUI_Color *value);
 
-/* Windows.UI.Colors.get_DarkTurquoise() */
 HRESULT wui_colors_get__dark_turquoise(WUI_Color *value);
 
-/* Windows.UI.Colors.get_DarkViolet() */
 HRESULT wui_colors_get__dark_violet(WUI_Color *value);
 
-/* Windows.UI.Colors.get_DeepPink() */
 HRESULT wui_colors_get__deep_pink(WUI_Color *value);
 
-/* Windows.UI.Colors.get_DeepSkyBlue() */
 HRESULT wui_colors_get__deep_sky_blue(WUI_Color *value);
 
-/* Windows.UI.Colors.get_DimGray() */
 HRESULT wui_colors_get__dim_gray(WUI_Color *value);
 
-/* Windows.UI.Colors.get_DodgerBlue() */
 HRESULT wui_colors_get__dodger_blue(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Firebrick() */
 HRESULT wui_colors_get__firebrick(WUI_Color *value);
 
-/* Windows.UI.Colors.get_FloralWhite() */
 HRESULT wui_colors_get__floral_white(WUI_Color *value);
 
-/* Windows.UI.Colors.get_ForestGreen() */
 HRESULT wui_colors_get__forest_green(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Fuchsia() */
 HRESULT wui_colors_get__fuchsia(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Gainsboro() */
 HRESULT wui_colors_get__gainsboro(WUI_Color *value);
 
-/* Windows.UI.Colors.get_GhostWhite() */
 HRESULT wui_colors_get__ghost_white(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Gold() */
 HRESULT wui_colors_get__gold(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Goldenrod() */
 HRESULT wui_colors_get__goldenrod(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Gray() */
 HRESULT wui_colors_get__gray(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Green() */
 HRESULT wui_colors_get__green(WUI_Color *value);
 
-/* Windows.UI.Colors.get_GreenYellow() */
 HRESULT wui_colors_get__green_yellow(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Honeydew() */
 HRESULT wui_colors_get__honeydew(WUI_Color *value);
 
-/* Windows.UI.Colors.get_HotPink() */
 HRESULT wui_colors_get__hot_pink(WUI_Color *value);
 
-/* Windows.UI.Colors.get_IndianRed() */
 HRESULT wui_colors_get__indian_red(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Indigo() */
 HRESULT wui_colors_get__indigo(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Ivory() */
 HRESULT wui_colors_get__ivory(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Khaki() */
 HRESULT wui_colors_get__khaki(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Lavender() */
 HRESULT wui_colors_get__lavender(WUI_Color *value);
 
-/* Windows.UI.Colors.get_LavenderBlush() */
 HRESULT wui_colors_get__lavender_blush(WUI_Color *value);
 
-/* Windows.UI.Colors.get_LawnGreen() */
 HRESULT wui_colors_get__lawn_green(WUI_Color *value);
 
-/* Windows.UI.Colors.get_LemonChiffon() */
 HRESULT wui_colors_get__lemon_chiffon(WUI_Color *value);
 
-/* Windows.UI.Colors.get_LightBlue() */
 HRESULT wui_colors_get__light_blue(WUI_Color *value);
 
-/* Windows.UI.Colors.get_LightCoral() */
 HRESULT wui_colors_get__light_coral(WUI_Color *value);
 
-/* Windows.UI.Colors.get_LightCyan() */
 HRESULT wui_colors_get__light_cyan(WUI_Color *value);
 
-/* Windows.UI.Colors.get_LightGoldenrodYellow() */
 HRESULT wui_colors_get__light_goldenrod_yellow(WUI_Color *value);
 
-/* Windows.UI.Colors.get_LightGreen() */
 HRESULT wui_colors_get__light_green(WUI_Color *value);
 
-/* Windows.UI.Colors.get_LightGray() */
 HRESULT wui_colors_get__light_gray(WUI_Color *value);
 
-/* Windows.UI.Colors.get_LightPink() */
 HRESULT wui_colors_get__light_pink(WUI_Color *value);
 
-/* Windows.UI.Colors.get_LightSalmon() */
 HRESULT wui_colors_get__light_salmon(WUI_Color *value);
 
-/* Windows.UI.Colors.get_LightSeaGreen() */
 HRESULT wui_colors_get__light_sea_green(WUI_Color *value);
 
-/* Windows.UI.Colors.get_LightSkyBlue() */
 HRESULT wui_colors_get__light_sky_blue(WUI_Color *value);
 
-/* Windows.UI.Colors.get_LightSlateGray() */
 HRESULT wui_colors_get__light_slate_gray(WUI_Color *value);
 
-/* Windows.UI.Colors.get_LightSteelBlue() */
 HRESULT wui_colors_get__light_steel_blue(WUI_Color *value);
 
-/* Windows.UI.Colors.get_LightYellow() */
 HRESULT wui_colors_get__light_yellow(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Lime() */
 HRESULT wui_colors_get__lime(WUI_Color *value);
 
-/* Windows.UI.Colors.get_LimeGreen() */
 HRESULT wui_colors_get__lime_green(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Linen() */
 HRESULT wui_colors_get__linen(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Magenta() */
 HRESULT wui_colors_get__magenta(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Maroon() */
 HRESULT wui_colors_get__maroon(WUI_Color *value);
 
-/* Windows.UI.Colors.get_MediumAquamarine() */
 HRESULT wui_colors_get__medium_aquamarine(WUI_Color *value);
 
-/* Windows.UI.Colors.get_MediumBlue() */
 HRESULT wui_colors_get__medium_blue(WUI_Color *value);
 
-/* Windows.UI.Colors.get_MediumOrchid() */
 HRESULT wui_colors_get__medium_orchid(WUI_Color *value);
 
-/* Windows.UI.Colors.get_MediumPurple() */
 HRESULT wui_colors_get__medium_purple(WUI_Color *value);
 
-/* Windows.UI.Colors.get_MediumSeaGreen() */
 HRESULT wui_colors_get__medium_sea_green(WUI_Color *value);
 
-/* Windows.UI.Colors.get_MediumSlateBlue() */
 HRESULT wui_colors_get__medium_slate_blue(WUI_Color *value);
 
-/* Windows.UI.Colors.get_MediumSpringGreen() */
 HRESULT wui_colors_get__medium_spring_green(WUI_Color *value);
 
-/* Windows.UI.Colors.get_MediumTurquoise() */
 HRESULT wui_colors_get__medium_turquoise(WUI_Color *value);
 
-/* Windows.UI.Colors.get_MediumVioletRed() */
 HRESULT wui_colors_get__medium_violet_red(WUI_Color *value);
 
-/* Windows.UI.Colors.get_MidnightBlue() */
 HRESULT wui_colors_get__midnight_blue(WUI_Color *value);
 
-/* Windows.UI.Colors.get_MintCream() */
 HRESULT wui_colors_get__mint_cream(WUI_Color *value);
 
-/* Windows.UI.Colors.get_MistyRose() */
 HRESULT wui_colors_get__misty_rose(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Moccasin() */
 HRESULT wui_colors_get__moccasin(WUI_Color *value);
 
-/* Windows.UI.Colors.get_NavajoWhite() */
 HRESULT wui_colors_get__navajo_white(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Navy() */
 HRESULT wui_colors_get__navy(WUI_Color *value);
 
-/* Windows.UI.Colors.get_OldLace() */
 HRESULT wui_colors_get__old_lace(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Olive() */
 HRESULT wui_colors_get__olive(WUI_Color *value);
 
-/* Windows.UI.Colors.get_OliveDrab() */
 HRESULT wui_colors_get__olive_drab(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Orange() */
 HRESULT wui_colors_get__orange(WUI_Color *value);
 
-/* Windows.UI.Colors.get_OrangeRed() */
 HRESULT wui_colors_get__orange_red(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Orchid() */
 HRESULT wui_colors_get__orchid(WUI_Color *value);
 
-/* Windows.UI.Colors.get_PaleGoldenrod() */
 HRESULT wui_colors_get__pale_goldenrod(WUI_Color *value);
 
-/* Windows.UI.Colors.get_PaleGreen() */
 HRESULT wui_colors_get__pale_green(WUI_Color *value);
 
-/* Windows.UI.Colors.get_PaleTurquoise() */
 HRESULT wui_colors_get__pale_turquoise(WUI_Color *value);
 
-/* Windows.UI.Colors.get_PaleVioletRed() */
 HRESULT wui_colors_get__pale_violet_red(WUI_Color *value);
 
-/* Windows.UI.Colors.get_PapayaWhip() */
 HRESULT wui_colors_get__papaya_whip(WUI_Color *value);
 
-/* Windows.UI.Colors.get_PeachPuff() */
 HRESULT wui_colors_get__peach_puff(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Peru() */
 HRESULT wui_colors_get__peru(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Pink() */
 HRESULT wui_colors_get__pink(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Plum() */
 HRESULT wui_colors_get__plum(WUI_Color *value);
 
-/* Windows.UI.Colors.get_PowderBlue() */
 HRESULT wui_colors_get__powder_blue(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Purple() */
 HRESULT wui_colors_get__purple(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Red() */
 HRESULT wui_colors_get__red(WUI_Color *value);
 
-/* Windows.UI.Colors.get_RosyBrown() */
 HRESULT wui_colors_get__rosy_brown(WUI_Color *value);
 
-/* Windows.UI.Colors.get_RoyalBlue() */
 HRESULT wui_colors_get__royal_blue(WUI_Color *value);
 
-/* Windows.UI.Colors.get_SaddleBrown() */
 HRESULT wui_colors_get__saddle_brown(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Salmon() */
 HRESULT wui_colors_get__salmon(WUI_Color *value);
 
-/* Windows.UI.Colors.get_SandyBrown() */
 HRESULT wui_colors_get__sandy_brown(WUI_Color *value);
 
-/* Windows.UI.Colors.get_SeaGreen() */
 HRESULT wui_colors_get__sea_green(WUI_Color *value);
 
-/* Windows.UI.Colors.get_SeaShell() */
 HRESULT wui_colors_get__sea_shell(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Sienna() */
 HRESULT wui_colors_get__sienna(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Silver() */
 HRESULT wui_colors_get__silver(WUI_Color *value);
 
-/* Windows.UI.Colors.get_SkyBlue() */
 HRESULT wui_colors_get__sky_blue(WUI_Color *value);
 
-/* Windows.UI.Colors.get_SlateBlue() */
 HRESULT wui_colors_get__slate_blue(WUI_Color *value);
 
-/* Windows.UI.Colors.get_SlateGray() */
 HRESULT wui_colors_get__slate_gray(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Snow() */
 HRESULT wui_colors_get__snow(WUI_Color *value);
 
-/* Windows.UI.Colors.get_SpringGreen() */
 HRESULT wui_colors_get__spring_green(WUI_Color *value);
 
-/* Windows.UI.Colors.get_SteelBlue() */
 HRESULT wui_colors_get__steel_blue(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Tan() */
 HRESULT wui_colors_get__tan(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Teal() */
 HRESULT wui_colors_get__teal(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Thistle() */
 HRESULT wui_colors_get__thistle(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Tomato() */
 HRESULT wui_colors_get__tomato(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Transparent() */
 HRESULT wui_colors_get__transparent(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Turquoise() */
 HRESULT wui_colors_get__turquoise(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Violet() */
 HRESULT wui_colors_get__violet(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Wheat() */
 HRESULT wui_colors_get__wheat(WUI_Color *value);
 
-/* Windows.UI.Colors.get_White() */
 HRESULT wui_colors_get__white(WUI_Color *value);
 
-/* Windows.UI.Colors.get_WhiteSmoke() */
 HRESULT wui_colors_get__white_smoke(WUI_Color *value);
 
-/* Windows.UI.Colors.get_Yellow() */
 HRESULT wui_colors_get__yellow(WUI_Color *value);
 
-/* Windows.UI.Colors.get_YellowGreen() */
 HRESULT wui_colors_get__yellow_green(WUI_Color *value);
 
-/* activate Windows.UI.ColorHelper */
 HRESULT wui_color_helper_new(WUI_ColorHelper **out);
 
-/* Windows.UI.ColorHelper */
-/* Windows.UI.ColorHelper.ToDisplayName(color) */
 HRESULT wui_color_helper_to_display_name(WUI_Color color, cwinrt_hstring *out);
 
-/* Windows.UI.ColorHelper.FromArgb(a, r, g, b) */
 HRESULT wui_color_helper_from_argb(uint8_t a, uint8_t r, uint8_t g, uint8_t b, WUI_Color *out);
 
-/* Windows.UI.IUIContentRoot */
 #endif /* CWINRT_WINDOWS_UI_H */

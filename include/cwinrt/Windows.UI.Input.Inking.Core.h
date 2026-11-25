@@ -14,7 +14,6 @@
 #include <cwinrt/Windows.Foundation.Numerics.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WUICO_PointerEventArgs
 #define CWINRT_FWD_WUICO_PointerEventArgs
 typedef struct WUICO_PointerEventArgs WUICO_PointerEventArgs;
@@ -28,7 +27,6 @@ typedef struct WUICO_CoreCursor WUICO_CoreCursor;
 typedef struct WUC_Container WUC_Container;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUIININCO_ICoreWetStrokeUpdateSourceStatics WUIININCO_ICoreWetStrokeUpdateSourceStatics;
 typedef struct WUIININCO_CoreIncrementalInkStroke WUIININCO_CoreIncrementalInkStroke;
 typedef struct WUIININCO_CoreInkIndependentInputSource WUIININCO_CoreInkIndependentInputSource;
@@ -44,7 +42,6 @@ typedef struct WUIININCO_ICoreInkPresenterHost WUIININCO_ICoreInkPresenterHost;
 typedef struct WUIININCO_ICoreWetStrokeUpdateEventArgs WUIININCO_ICoreWetStrokeUpdateEventArgs;
 typedef struct WUIININCO_ICoreWetStrokeUpdateSource WUIININCO_ICoreWetStrokeUpdateSource;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WUIININ_InkPresenter
 #define CWINRT_FWD_WUIININ_InkPresenter
 typedef struct WUIININ_InkPresenter WUIININ_InkPresenter;
@@ -95,7 +92,6 @@ typedef enum WUIININCO_CoreWetStrokeDisposition {
 } WUIININCO_CoreWetStrokeDisposition;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -136,48 +132,30 @@ static const IID CWINRT_IID_WUIININCO_ICoreWetStrokeUpdateEventArgs CWINRT_MAYBE
 static const IID CWINRT_IID_WUIININCO_ICoreWetStrokeUpdateSource CWINRT_MAYBE_UNUSED = { 0x1F718E22, 0xEE52, 0x4E00, { 0x82, 0x09, 0x4C, 0x3E, 0x5B, 0x21, 0xA3, 0xCC } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSourceStatics */
-/* Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSourceStatics.Create(inkPresenter) */
 HRESULT wuiininco_core_wet_stroke_update_source_statics_create(WUIININCO_ICoreWetStrokeUpdateSourceStatics *self, WUIININ_InkPresenter* inkPresenter, WUIININCO_CoreWetStrokeUpdateSource** out);
 
-/* activate Windows.UI.Input.Inking.Core.CoreIncrementalInkStroke */
 HRESULT wuiininco_core_incremental_ink_stroke_new(WUIININCO_CoreIncrementalInkStroke **out);
 
-/* Windows.UI.Input.Inking.Core.CoreIncrementalInkStroke */
-/* Windows.UI.Input.Inking.Core.CoreIncrementalInkStroke.AppendInkPoints(inkPoints) */
 HRESULT wuiininco_core_incremental_ink_stroke_append_ink_points(WUIININCO_CoreIncrementalInkStroke *self, WFOCO_IIterable_WUIININ_InkPoint* inkPoints, WF_Rect *out);
 
-/* Windows.UI.Input.Inking.Core.CoreIncrementalInkStroke.CreateInkStroke() */
 HRESULT wuiininco_core_incremental_ink_stroke_create_ink_stroke(WUIININCO_CoreIncrementalInkStroke *self, WUIININ_InkStroke** out);
 
-/* Windows.UI.Input.Inking.Core.CoreIncrementalInkStroke.get_DrawingAttributes() */
 HRESULT wuiininco_core_incremental_ink_stroke_get__drawing_attributes(WUIININCO_CoreIncrementalInkStroke *self, WUIININ_InkDrawingAttributes** value);
 
-/* Windows.UI.Input.Inking.Core.CoreIncrementalInkStroke.get_PointTransform() */
 HRESULT wuiininco_core_incremental_ink_stroke_get__point_transform(WUIININCO_CoreIncrementalInkStroke *self, WFN_Matrix3x_2 *value);
 
-/* Windows.UI.Input.Inking.Core.CoreIncrementalInkStroke.get_BoundingRect() */
 HRESULT wuiininco_core_incremental_ink_stroke_get__bounding_rect(WUIININCO_CoreIncrementalInkStroke *self, WF_Rect *value);
 
-/* activate Windows.UI.Input.Inking.Core.CoreInkIndependentInputSource */
 HRESULT wuiininco_core_ink_independent_input_source_new(WUIININCO_CoreInkIndependentInputSource **out);
 
-/* Windows.UI.Input.Inking.Core.CoreInkIndependentInputSource */
-/* Windows.UI.Input.Inking.Core.CoreInkIndependentInputSource.get_InkPresenter() */
 HRESULT wuiininco_core_ink_independent_input_source_get__ink_presenter(WUIININCO_CoreInkIndependentInputSource *self, WUIININ_InkPresenter** value);
 
-/* Windows.UI.Input.Inking.Core.CoreInkIndependentInputSource.get_PointerCursor() */
 HRESULT wuiininco_core_ink_independent_input_source_get__pointer_cursor(WUIININCO_CoreInkIndependentInputSource *self, WUICO_CoreCursor** value);
 
-/* Windows.UI.Input.Inking.Core.CoreInkIndependentInputSource.put_PointerCursor() */
 HRESULT wuiininco_core_ink_independent_input_source_put__pointer_cursor(WUIININCO_CoreInkIndependentInputSource *self, WUICO_CoreCursor* value);
 
-/* Windows.UI.Input.Inking.Core.CoreInkIndependentInputSource.Create(inkPresenter) */
 HRESULT wuiininco_core_ink_independent_input_source_create(WUIININ_InkPresenter* inkPresenter, WUIININCO_CoreInkIndependentInputSource** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiininco_core_ink_independent_input_source_on_pointer_entering(WUIININCO_CoreInkIndependentInputSource *self, cwinrt_event_fn fn, void *ctx);
@@ -201,46 +179,30 @@ void wuiininco_core_ink_independent_input_source_off_pointer_releasing(WUIININCO
 cwinrt_token wuiininco_core_ink_independent_input_source_on_pointer_lost(WUIININCO_CoreInkIndependentInputSource *self, cwinrt_event_fn fn, void *ctx);
 void wuiininco_core_ink_independent_input_source_off_pointer_lost(WUIININCO_CoreInkIndependentInputSource *self, cwinrt_token token);
 
-/* activate Windows.UI.Input.Inking.Core.CoreInkPresenterHost */
 HRESULT wuiininco_core_ink_presenter_host_new(WUIININCO_CoreInkPresenterHost **out);
 
-/* Windows.UI.Input.Inking.Core.CoreInkPresenterHost */
-/* Windows.UI.Input.Inking.Core.CoreInkPresenterHost.get_InkPresenter() */
 HRESULT wuiininco_core_ink_presenter_host_get__ink_presenter(WUIININCO_CoreInkPresenterHost *self, WUIININ_InkPresenter** value);
 
-/* Windows.UI.Input.Inking.Core.CoreInkPresenterHost.get_RootVisual() */
 HRESULT wuiininco_core_ink_presenter_host_get__root_visual(WUIININCO_CoreInkPresenterHost *self, WUC_Container** value);
 
-/* Windows.UI.Input.Inking.Core.CoreInkPresenterHost.put_RootVisual() */
 HRESULT wuiininco_core_ink_presenter_host_put__root_visual(WUIININCO_CoreInkPresenterHost *self, WUC_Container* value);
 
-/* activate Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateEventArgs */
 HRESULT wuiininco_core_wet_stroke_update_event_args_new(WUIININCO_CoreWetStrokeUpdateEventArgs **out);
 
-/* Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateEventArgs */
-/* Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateEventArgs.get_NewInkPoints() */
 HRESULT wuiininco_core_wet_stroke_update_event_args_get__new_ink_points(WUIININCO_CoreWetStrokeUpdateEventArgs *self, WFOCO_IVector_WUIININ_InkPoint** value);
 
-/* Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateEventArgs.get_PointerId() */
 HRESULT wuiininco_core_wet_stroke_update_event_args_get__pointer_id(WUIININCO_CoreWetStrokeUpdateEventArgs *self, uint32_t *value);
 
-/* Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateEventArgs.get_Disposition() */
 HRESULT wuiininco_core_wet_stroke_update_event_args_get__disposition(WUIININCO_CoreWetStrokeUpdateEventArgs *self, WUIININCO_CoreWetStrokeDisposition *value);
 
-/* Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateEventArgs.put_Disposition() */
 HRESULT wuiininco_core_wet_stroke_update_event_args_put__disposition(WUIININCO_CoreWetStrokeUpdateEventArgs *self, WUIININCO_CoreWetStrokeDisposition value);
 
-/* activate Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateSource */
 HRESULT wuiininco_core_wet_stroke_update_source_new(WUIININCO_CoreWetStrokeUpdateSource **out);
 
-/* Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateSource */
-/* Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateSource.get_InkPresenter() */
 HRESULT wuiininco_core_wet_stroke_update_source_get__ink_presenter(WUIININCO_CoreWetStrokeUpdateSource *self, WUIININ_InkPresenter** value);
 
-/* Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateSource.Create(inkPresenter) */
 HRESULT wuiininco_core_wet_stroke_update_source_create(WUIININ_InkPresenter* inkPresenter, WUIININCO_CoreWetStrokeUpdateSource** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiininco_core_wet_stroke_update_source_on_wet_stroke_starting(WUIININCO_CoreWetStrokeUpdateSource *self, cwinrt_event_fn fn, void *ctx);
@@ -258,24 +220,12 @@ void wuiininco_core_wet_stroke_update_source_off_wet_stroke_completed(WUIININCO_
 cwinrt_token wuiininco_core_wet_stroke_update_source_on_wet_stroke_canceled(WUIININCO_CoreWetStrokeUpdateSource *self, cwinrt_event_fn fn, void *ctx);
 void wuiininco_core_wet_stroke_update_source_off_wet_stroke_canceled(WUIININCO_CoreWetStrokeUpdateSource *self, cwinrt_token token);
 
-/* Windows.UI.Input.Inking.Core.ICoreIncrementalInkStrokeFactory */
-/* Windows.UI.Input.Inking.Core.ICoreIncrementalInkStrokeFactory.Create(drawingAttributes, pointTransform) */
 HRESULT wuiininco_core_incremental_ink_stroke_factory_create(WUIININCO_ICoreIncrementalInkStrokeFactory *self, WUIININ_InkDrawingAttributes* drawingAttributes, WFN_Matrix3x_2 pointTransform, WUIININCO_CoreIncrementalInkStroke** out);
 
-/* Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSourceStatics */
-/* Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSourceStatics.Create(inkPresenter) */
 HRESULT wuiininco_core_ink_independent_input_source_statics_create(WUIININCO_ICoreInkIndependentInputSourceStatics *self, WUIININ_InkPresenter* inkPresenter, WUIININCO_CoreInkIndependentInputSource** out);
 
-/* Windows.UI.Input.Inking.Core.ICoreIncrementalInkStroke */
-/* Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource */
-/* Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource2 */
-/* Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource2.get_PointerCursor() */
 HRESULT wuiininco_core_ink_independent_input_source_2_get__pointer_cursor(WUIININCO_ICoreInkIndependentInputSource_2 *self, WUICO_CoreCursor** value);
 
-/* Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource2.put_PointerCursor() */
 HRESULT wuiininco_core_ink_independent_input_source_2_put__pointer_cursor(WUIININCO_ICoreInkIndependentInputSource_2 *self, WUICO_CoreCursor* value);
 
-/* Windows.UI.Input.Inking.Core.ICoreInkPresenterHost */
-/* Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateEventArgs */
-/* Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSource */
 #endif /* CWINRT_WINDOWS_UI_INPUT_INKING_CORE_H */

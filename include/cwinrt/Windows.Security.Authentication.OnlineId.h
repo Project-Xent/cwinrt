@@ -12,13 +12,11 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSEAUON_IOnlineIdServiceTicketRequestFactory WSEAUON_IOnlineIdServiceTicketRequestFactory;
 typedef struct WSEAUON_IOnlineIdSystemAuthenticatorStatics WSEAUON_IOnlineIdSystemAuthenticatorStatics;
 typedef struct WSEAUON_OnlineIdAuthenticator WSEAUON_OnlineIdAuthenticator;
@@ -39,7 +37,6 @@ typedef struct WSEAUON_IOnlineIdSystemIdentity WSEAUON_IOnlineIdSystemIdentity;
 typedef struct WSEAUON_IOnlineIdSystemTicketResult WSEAUON_IOnlineIdSystemTicketResult;
 typedef struct WSEAUON_IUserIdentity WSEAUON_IUserIdentity;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
@@ -93,7 +90,6 @@ typedef enum WSEAUON_OnlineIdSystemTicketStatus {
 } WSEAUON_OnlineIdSystemTicketStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -134,208 +130,126 @@ static const IID CWINRT_IID_WSEAUON_IOnlineIdSystemTicketResult CWINRT_MAYBE_UNU
 static const IID CWINRT_IID_WSEAUON_IUserIdentity CWINRT_MAYBE_UNUSED = { 0x2146D9CD, 0x0742, 0x4BE3, { 0x8A, 0x1C, 0x7C, 0x7A, 0xE6, 0x79, 0xAA, 0x88 } };
 #endif
 
-/* Methods */
-
-/* Windows.Security.Authentication.OnlineId.IOnlineIdServiceTicketRequestFactory */
-/* Windows.Security.Authentication.OnlineId.IOnlineIdServiceTicketRequestFactory.CreateOnlineIdServiceTicketRequest(service, policy) */
 HRESULT wseauon_online_id_service_ticket_request_factory_create_online_id_service_ticket_request(WSEAUON_IOnlineIdServiceTicketRequestFactory *self, cwinrt_hstring service, cwinrt_hstring policy, WSEAUON_OnlineIdServiceTicketRequest** out);
 
-/* Windows.Security.Authentication.OnlineId.IOnlineIdServiceTicketRequestFactory.CreateOnlineIdServiceTicketRequestAdvanced(service) */
 HRESULT wseauon_online_id_service_ticket_request_factory_create_online_id_service_ticket_request_advanced(WSEAUON_IOnlineIdServiceTicketRequestFactory *self, cwinrt_hstring service, WSEAUON_OnlineIdServiceTicketRequest** out);
 
-/* Windows.Security.Authentication.OnlineId.IOnlineIdSystemAuthenticatorStatics */
-/* Windows.Security.Authentication.OnlineId.IOnlineIdSystemAuthenticatorStatics.get_Default() */
 HRESULT wseauon_online_id_system_authenticator_statics_get__default(WSEAUON_IOnlineIdSystemAuthenticatorStatics *self, WSEAUON_OnlineIdSystemAuthenticatorForUser** value);
 
-/* Windows.Security.Authentication.OnlineId.IOnlineIdSystemAuthenticatorStatics.GetForUser(user) */
 HRESULT wseauon_online_id_system_authenticator_statics_get_for_user(WSEAUON_IOnlineIdSystemAuthenticatorStatics *self, WSY_User* user, WSEAUON_OnlineIdSystemAuthenticatorForUser** out);
 
-/* activate Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator */
 HRESULT wseauon_online_id_authenticator_new(WSEAUON_OnlineIdAuthenticator **out);
 
-/* Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator */
-/* Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator.AuthenticateUserAsync(request) */
 HRESULT wseauon_online_id_authenticator_authenticate_user_async(WSEAUON_OnlineIdAuthenticator *self, WSEAUON_OnlineIdServiceTicketRequest* request, WSEAUON_UserAuthenticationOperation** out);
 
-/* Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator.AuthenticateUserAsync(requests, credentialPromptType) */
 HRESULT wseauon_online_id_authenticator_authenticate_user_async_p_credential_prompt_type_p(WSEAUON_OnlineIdAuthenticator *self, WFOCO_IIterable_WSEAUON_OnlineIdServiceTicketRequest* requests, WSEAUON_CredentialPromptType credentialPromptType, WSEAUON_UserAuthenticationOperation** out);
 
-/* Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator.SignOutUserAsync() */
 HRESULT wseauon_online_id_authenticator_sign_out_user_async(WSEAUON_OnlineIdAuthenticator *self, WSEAUON_SignOutUserOperation** out);
 
-/* Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator.put_ApplicationId() */
 HRESULT wseauon_online_id_authenticator_put__application_id(WSEAUON_OnlineIdAuthenticator *self, GUID value);
 
-/* Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator.get_ApplicationId() */
 HRESULT wseauon_online_id_authenticator_get__application_id(WSEAUON_OnlineIdAuthenticator *self, GUID *value);
 
-/* Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator.get_CanSignOut() */
 HRESULT wseauon_online_id_authenticator_get__can_sign_out(WSEAUON_OnlineIdAuthenticator *self, BOOL *value);
 
-/* Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator.get_AuthenticatedSafeCustomerId() */
 HRESULT wseauon_online_id_authenticator_get__authenticated_safe_customer_id(WSEAUON_OnlineIdAuthenticator *self, cwinrt_hstring *value);
 
-/* activate Windows.Security.Authentication.OnlineId.OnlineIdServiceTicket */
 HRESULT wseauon_online_id_service_ticket_new(WSEAUON_OnlineIdServiceTicket **out);
 
-/* Windows.Security.Authentication.OnlineId.OnlineIdServiceTicket */
-/* Windows.Security.Authentication.OnlineId.OnlineIdServiceTicket.get_Value() */
 HRESULT wseauon_online_id_service_ticket_get__value(WSEAUON_OnlineIdServiceTicket *self, cwinrt_hstring *value);
 
-/* Windows.Security.Authentication.OnlineId.OnlineIdServiceTicket.get_Request() */
 HRESULT wseauon_online_id_service_ticket_get__request(WSEAUON_OnlineIdServiceTicket *self, WSEAUON_OnlineIdServiceTicketRequest** value);
 
-/* Windows.Security.Authentication.OnlineId.OnlineIdServiceTicket.get_ErrorCode() */
 HRESULT wseauon_online_id_service_ticket_get__error_code(WSEAUON_OnlineIdServiceTicket *self, int32_t *value);
 
-/* activate Windows.Security.Authentication.OnlineId.OnlineIdServiceTicketRequest */
 HRESULT wseauon_online_id_service_ticket_request_new(WSEAUON_OnlineIdServiceTicketRequest **out);
 
-/* Windows.Security.Authentication.OnlineId.OnlineIdServiceTicketRequest */
-/* Windows.Security.Authentication.OnlineId.OnlineIdServiceTicketRequest.get_Service() */
 HRESULT wseauon_online_id_service_ticket_request_get__service(WSEAUON_OnlineIdServiceTicketRequest *self, cwinrt_hstring *value);
 
-/* Windows.Security.Authentication.OnlineId.OnlineIdServiceTicketRequest.get_Policy() */
 HRESULT wseauon_online_id_service_ticket_request_get__policy(WSEAUON_OnlineIdServiceTicketRequest *self, cwinrt_hstring *value);
 
-/* activate Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticator */
 HRESULT wseauon_online_id_system_authenticator_new(WSEAUON_OnlineIdSystemAuthenticator **out);
 
-/* Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticator */
-/* Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticator.get_Default() */
 HRESULT wseauon_online_id_system_authenticator_get__default(WSEAUON_OnlineIdSystemAuthenticatorForUser** value);
 
-/* Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticator.GetForUser(user) */
 HRESULT wseauon_online_id_system_authenticator_get_for_user(WSY_User* user, WSEAUON_OnlineIdSystemAuthenticatorForUser** out);
 
-/* activate Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticatorForUser */
 HRESULT wseauon_online_id_system_authenticator_for_user_new(WSEAUON_OnlineIdSystemAuthenticatorForUser **out);
 
-/* Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticatorForUser */
-/* Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticatorForUser.GetTicketAsync(request) */
 HRESULT wseauon_online_id_system_authenticator_for_user_get_ticket_async(WSEAUON_OnlineIdSystemAuthenticatorForUser *self, WSEAUON_OnlineIdServiceTicketRequest* request, WF_IAsyncOperation_WSEAUON_OnlineIdSystemTicketResult** out);
 
-/* Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticatorForUser.put_ApplicationId() */
 HRESULT wseauon_online_id_system_authenticator_for_user_put__application_id(WSEAUON_OnlineIdSystemAuthenticatorForUser *self, GUID value);
 
-/* Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticatorForUser.get_ApplicationId() */
 HRESULT wseauon_online_id_system_authenticator_for_user_get__application_id(WSEAUON_OnlineIdSystemAuthenticatorForUser *self, GUID *value);
 
-/* Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticatorForUser.get_User() */
 HRESULT wseauon_online_id_system_authenticator_for_user_get__user(WSEAUON_OnlineIdSystemAuthenticatorForUser *self, WSY_User** value);
 
-/* activate Windows.Security.Authentication.OnlineId.OnlineIdSystemIdentity */
 HRESULT wseauon_online_id_system_identity_new(WSEAUON_OnlineIdSystemIdentity **out);
 
-/* Windows.Security.Authentication.OnlineId.OnlineIdSystemIdentity */
-/* Windows.Security.Authentication.OnlineId.OnlineIdSystemIdentity.get_Ticket() */
 HRESULT wseauon_online_id_system_identity_get__ticket(WSEAUON_OnlineIdSystemIdentity *self, WSEAUON_OnlineIdServiceTicket** value);
 
-/* Windows.Security.Authentication.OnlineId.OnlineIdSystemIdentity.get_Id() */
 HRESULT wseauon_online_id_system_identity_get__id(WSEAUON_OnlineIdSystemIdentity *self, cwinrt_hstring *value);
 
-/* activate Windows.Security.Authentication.OnlineId.OnlineIdSystemTicketResult */
 HRESULT wseauon_online_id_system_ticket_result_new(WSEAUON_OnlineIdSystemTicketResult **out);
 
-/* Windows.Security.Authentication.OnlineId.OnlineIdSystemTicketResult */
-/* Windows.Security.Authentication.OnlineId.OnlineIdSystemTicketResult.get_Identity() */
 HRESULT wseauon_online_id_system_ticket_result_get__identity(WSEAUON_OnlineIdSystemTicketResult *self, WSEAUON_OnlineIdSystemIdentity** value);
 
-/* Windows.Security.Authentication.OnlineId.OnlineIdSystemTicketResult.get_Status() */
 HRESULT wseauon_online_id_system_ticket_result_get__status(WSEAUON_OnlineIdSystemTicketResult *self, WSEAUON_OnlineIdSystemTicketStatus *value);
 
-/* Windows.Security.Authentication.OnlineId.OnlineIdSystemTicketResult.get_ExtendedError() */
 HRESULT wseauon_online_id_system_ticket_result_get__extended_error(WSEAUON_OnlineIdSystemTicketResult *self, HRESULT *value);
 
-/* activate Windows.Security.Authentication.OnlineId.SignOutUserOperation */
 HRESULT wseauon_sign_out_user_operation_new(WSEAUON_SignOutUserOperation **out);
 
-/* Windows.Security.Authentication.OnlineId.SignOutUserOperation */
-/* Windows.Security.Authentication.OnlineId.SignOutUserOperation.put_Completed(handler) */
 HRESULT wseauon_sign_out_user_operation_put__completed(WSEAUON_SignOutUserOperation *self, WF_AsyncActionCompletedHandler* handler);
 
-/* Windows.Security.Authentication.OnlineId.SignOutUserOperation.get_Completed() */
 HRESULT wseauon_sign_out_user_operation_get__completed(WSEAUON_SignOutUserOperation *self, WF_AsyncActionCompletedHandler** value);
 
-/* Windows.Security.Authentication.OnlineId.SignOutUserOperation.GetResults() */
 HRESULT wseauon_sign_out_user_operation_get_results(WSEAUON_SignOutUserOperation *self);
 
-/* Windows.Security.Authentication.OnlineId.SignOutUserOperation.get_Id() */
 HRESULT wseauon_sign_out_user_operation_get__id(WSEAUON_SignOutUserOperation *self, uint32_t *value);
 
-/* Windows.Security.Authentication.OnlineId.SignOutUserOperation.get_Status() */
 HRESULT wseauon_sign_out_user_operation_get__status(WSEAUON_SignOutUserOperation *self, WF_AsyncStatus *value);
 
-/* Windows.Security.Authentication.OnlineId.SignOutUserOperation.get_ErrorCode() */
 HRESULT wseauon_sign_out_user_operation_get__error_code(WSEAUON_SignOutUserOperation *self, HRESULT *value);
 
-/* Windows.Security.Authentication.OnlineId.SignOutUserOperation.Cancel() */
 HRESULT wseauon_sign_out_user_operation_cancel(WSEAUON_SignOutUserOperation *self);
 
-/* Windows.Security.Authentication.OnlineId.SignOutUserOperation.Close() */
 HRESULT wseauon_sign_out_user_operation_close(WSEAUON_SignOutUserOperation *self);
 
-/* activate Windows.Security.Authentication.OnlineId.UserAuthenticationOperation */
 HRESULT wseauon_user_authentication_operation_new(WSEAUON_UserAuthenticationOperation **out);
 
-/* Windows.Security.Authentication.OnlineId.UserAuthenticationOperation */
-/* Windows.Security.Authentication.OnlineId.UserAuthenticationOperation.put_Completed(handler) */
 HRESULT wseauon_user_authentication_operation_put__completed(WSEAUON_UserAuthenticationOperation *self, WF_AsyncOperationCompletedHandler_WSEAUON_UserIdentity* handler);
 
-/* Windows.Security.Authentication.OnlineId.UserAuthenticationOperation.get_Completed() */
 HRESULT wseauon_user_authentication_operation_get__completed(WSEAUON_UserAuthenticationOperation *self, WF_AsyncOperationCompletedHandler_WSEAUON_UserIdentity** value);
 
-/* Windows.Security.Authentication.OnlineId.UserAuthenticationOperation.GetResults() */
 HRESULT wseauon_user_authentication_operation_get_results(WSEAUON_UserAuthenticationOperation *self, WSEAUON_UserIdentity** out);
 
-/* Windows.Security.Authentication.OnlineId.UserAuthenticationOperation.get_Id() */
 HRESULT wseauon_user_authentication_operation_get__id(WSEAUON_UserAuthenticationOperation *self, uint32_t *value);
 
-/* Windows.Security.Authentication.OnlineId.UserAuthenticationOperation.get_Status() */
 HRESULT wseauon_user_authentication_operation_get__status(WSEAUON_UserAuthenticationOperation *self, WF_AsyncStatus *value);
 
-/* Windows.Security.Authentication.OnlineId.UserAuthenticationOperation.get_ErrorCode() */
 HRESULT wseauon_user_authentication_operation_get__error_code(WSEAUON_UserAuthenticationOperation *self, HRESULT *value);
 
-/* Windows.Security.Authentication.OnlineId.UserAuthenticationOperation.Cancel() */
 HRESULT wseauon_user_authentication_operation_cancel(WSEAUON_UserAuthenticationOperation *self);
 
-/* Windows.Security.Authentication.OnlineId.UserAuthenticationOperation.Close() */
 HRESULT wseauon_user_authentication_operation_close(WSEAUON_UserAuthenticationOperation *self);
 
-/* activate Windows.Security.Authentication.OnlineId.UserIdentity */
 HRESULT wseauon_user_identity_new(WSEAUON_UserIdentity **out);
 
-/* Windows.Security.Authentication.OnlineId.UserIdentity */
-/* Windows.Security.Authentication.OnlineId.UserIdentity.get_Tickets() */
 HRESULT wseauon_user_identity_get__tickets(WSEAUON_UserIdentity *self, WFOCO_IVectorView_WSEAUON_OnlineIdServiceTicket** value);
 
-/* Windows.Security.Authentication.OnlineId.UserIdentity.get_Id() */
 HRESULT wseauon_user_identity_get__id(WSEAUON_UserIdentity *self, cwinrt_hstring *value);
 
-/* Windows.Security.Authentication.OnlineId.UserIdentity.get_SafeCustomerId() */
 HRESULT wseauon_user_identity_get__safe_customer_id(WSEAUON_UserIdentity *self, cwinrt_hstring *value);
 
-/* Windows.Security.Authentication.OnlineId.UserIdentity.get_SignInName() */
 HRESULT wseauon_user_identity_get__sign_in_name(WSEAUON_UserIdentity *self, cwinrt_hstring *value);
 
-/* Windows.Security.Authentication.OnlineId.UserIdentity.get_FirstName() */
 HRESULT wseauon_user_identity_get__first_name(WSEAUON_UserIdentity *self, cwinrt_hstring *value);
 
-/* Windows.Security.Authentication.OnlineId.UserIdentity.get_LastName() */
 HRESULT wseauon_user_identity_get__last_name(WSEAUON_UserIdentity *self, cwinrt_hstring *value);
 
-/* Windows.Security.Authentication.OnlineId.UserIdentity.get_IsBetaAccount() */
 HRESULT wseauon_user_identity_get__is_beta_account(WSEAUON_UserIdentity *self, BOOL *value);
 
-/* Windows.Security.Authentication.OnlineId.UserIdentity.get_IsConfirmedPC() */
 HRESULT wseauon_user_identity_get__is_confirmed_p_c(WSEAUON_UserIdentity *self, BOOL *value);
 
-/* Windows.Security.Authentication.OnlineId.IOnlineIdAuthenticator */
-/* Windows.Security.Authentication.OnlineId.IOnlineIdServiceTicket */
-/* Windows.Security.Authentication.OnlineId.IOnlineIdServiceTicketRequest */
-/* Windows.Security.Authentication.OnlineId.IOnlineIdSystemAuthenticatorForUser */
-/* Windows.Security.Authentication.OnlineId.IOnlineIdSystemIdentity */
-/* Windows.Security.Authentication.OnlineId.IOnlineIdSystemTicketResult */
-/* Windows.Security.Authentication.OnlineId.IUserIdentity */
 #endif /* CWINRT_WINDOWS_SECURITY_AUTHENTICATION_ONLINEID_H */

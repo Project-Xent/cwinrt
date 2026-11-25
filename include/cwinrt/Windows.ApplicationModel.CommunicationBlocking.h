@@ -12,14 +12,12 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WAPCO_ICommunicationBlockingAppManagerStatics_2 WAPCO_ICommunicationBlockingAppManagerStatics_2;
 typedef struct WAPCO_ICommunicationBlockingAccessManagerStatics WAPCO_ICommunicationBlockingAccessManagerStatics;
 typedef struct WAPCO_CommunicationBlockingAppManager WAPCO_CommunicationBlockingAppManager;
 typedef struct WAPCO_CommunicationBlockingAccessManager WAPCO_CommunicationBlockingAccessManager;
 typedef struct WAPCO_ICommunicationBlockingAppManagerStatics WAPCO_ICommunicationBlockingAppManagerStatics;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_Bool
 #define CWINRT_FWD_WF_IAsyncOperation_Bool
 typedef struct WF_IAsyncOperation_Bool WF_IAsyncOperation_Bool;
@@ -29,7 +27,6 @@ typedef struct WF_IAsyncOperation_Bool WF_IAsyncOperation_Bool;
 typedef struct WFOCO_IIterable_HSTRING WFOCO_IIterable_HSTRING;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -46,71 +43,44 @@ static const IID CWINRT_IID_WAPCO_ICommunicationBlockingAccessManagerStatics CWI
 static const IID CWINRT_IID_WAPCO_ICommunicationBlockingAppManagerStatics CWINRT_MAYBE_UNUSED = { 0x77DB58EC, 0x14A6, 0x4BAA, { 0x94, 0x2A, 0x6A, 0x67, 0x3D, 0x99, 0x9B, 0xF2 } };
 #endif
 
-/* Methods */
-
-/* Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAppManagerStatics2 */
-/* Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAppManagerStatics2.RequestSetAsActiveBlockingAppAsync() */
 HRESULT wapco_communication_blocking_app_manager_statics_2_request_set_as_active_blocking_app_async(WAPCO_ICommunicationBlockingAppManagerStatics_2 *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAccessManagerStatics */
-/* Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAccessManagerStatics.get_IsBlockingActive() */
 HRESULT wapco_communication_blocking_access_manager_statics_get__is_blocking_active(WAPCO_ICommunicationBlockingAccessManagerStatics *self, BOOL *value);
 
-/* Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAccessManagerStatics.IsBlockedNumberAsync(number) */
 HRESULT wapco_communication_blocking_access_manager_statics_is_blocked_number_async(WAPCO_ICommunicationBlockingAccessManagerStatics *self, cwinrt_hstring number, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAccessManagerStatics.ShowBlockNumbersUI(phoneNumbers) */
 HRESULT wapco_communication_blocking_access_manager_statics_show_block_numbers_u_i(WAPCO_ICommunicationBlockingAccessManagerStatics *self, WFOCO_IIterable_HSTRING* phoneNumbers, BOOL *out);
 
-/* Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAccessManagerStatics.ShowUnblockNumbersUI(phoneNumbers) */
 HRESULT wapco_communication_blocking_access_manager_statics_show_unblock_numbers_u_i(WAPCO_ICommunicationBlockingAccessManagerStatics *self, WFOCO_IIterable_HSTRING* phoneNumbers, BOOL *out);
 
-/* Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAccessManagerStatics.ShowBlockedCallsUI() */
 HRESULT wapco_communication_blocking_access_manager_statics_show_blocked_calls_u_i(WAPCO_ICommunicationBlockingAccessManagerStatics *self);
 
-/* Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAccessManagerStatics.ShowBlockedMessagesUI() */
 HRESULT wapco_communication_blocking_access_manager_statics_show_blocked_messages_u_i(WAPCO_ICommunicationBlockingAccessManagerStatics *self);
 
-/* activate Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppManager */
 HRESULT wapco_communication_blocking_app_manager_new(WAPCO_CommunicationBlockingAppManager **out);
 
-/* Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppManager */
-/* Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppManager.RequestSetAsActiveBlockingAppAsync() */
 HRESULT wapco_communication_blocking_app_manager_request_set_as_active_blocking_app_async(WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppManager.get_IsCurrentAppActiveBlockingApp() */
 HRESULT wapco_communication_blocking_app_manager_get__is_current_app_active_blocking_app(BOOL *value);
 
-/* Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppManager.ShowCommunicationBlockingSettingsUI() */
 HRESULT wapco_communication_blocking_app_manager_show_communication_blocking_settings_u_i(void);
 
-/* activate Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager */
 HRESULT wapco_communication_blocking_access_manager_new(WAPCO_CommunicationBlockingAccessManager **out);
 
-/* Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager */
-/* Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager.get_IsBlockingActive() */
 HRESULT wapco_communication_blocking_access_manager_get__is_blocking_active(BOOL *value);
 
-/* Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager.IsBlockedNumberAsync(number) */
 HRESULT wapco_communication_blocking_access_manager_is_blocked_number_async(cwinrt_hstring number, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager.ShowBlockNumbersUI(phoneNumbers) */
 HRESULT wapco_communication_blocking_access_manager_show_block_numbers_u_i(WFOCO_IIterable_HSTRING* phoneNumbers, BOOL *out);
 
-/* Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager.ShowUnblockNumbersUI(phoneNumbers) */
 HRESULT wapco_communication_blocking_access_manager_show_unblock_numbers_u_i(WFOCO_IIterable_HSTRING* phoneNumbers, BOOL *out);
 
-/* Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager.ShowBlockedCallsUI() */
 HRESULT wapco_communication_blocking_access_manager_show_blocked_calls_u_i(void);
 
-/* Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager.ShowBlockedMessagesUI() */
 HRESULT wapco_communication_blocking_access_manager_show_blocked_messages_u_i(void);
 
-/* Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAppManagerStatics */
-/* Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAppManagerStatics.get_IsCurrentAppActiveBlockingApp() */
 HRESULT wapco_communication_blocking_app_manager_statics_get__is_current_app_active_blocking_app(WAPCO_ICommunicationBlockingAppManagerStatics *self, BOOL *value);
 
-/* Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAppManagerStatics.ShowCommunicationBlockingSettingsUI() */
 HRESULT wapco_communication_blocking_app_manager_statics_show_communication_blocking_settings_u_i(WAPCO_ICommunicationBlockingAppManagerStatics *self);
 
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_H */

@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Graphics.Printing.PrintTicket.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WAPAC_IActivatedEventArgs
 #define CWINRT_FWD_WAPAC_IActivatedEventArgs
 typedef struct WAPAC_IActivatedEventArgs WAPAC_IActivatedEventArgs;
@@ -121,7 +120,6 @@ typedef struct WAPAC_SplashScreen WAPAC_SplashScreen;
 typedef struct WSY_User WSY_User;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WGRPRWO_IPrintWorkflowObjectModelSourceFileContentFactory WGRPRWO_IPrintWorkflowObjectModelSourceFileContentFactory;
 typedef struct WGRPRWO_PrintWorkflowBackgroundSession WGRPRWO_PrintWorkflowBackgroundSession;
 typedef struct WGRPRWO_PrintWorkflowBackgroundSetupRequestedEventArgs WGRPRWO_PrintWorkflowBackgroundSetupRequestedEventArgs;
@@ -208,7 +206,6 @@ typedef struct WGRPRWO_IPrintWorkflowXpsDataAvailableEventArgs WGRPRWO_IPrintWor
 typedef struct WGRPRWO_IPrintWorkflowXpsObjectModelProvider WGRPRWO_IPrintWorkflowXpsObjectModelProvider;
 typedef struct WGRPRWO_IPrintWorkflowObjectModelProvider WGRPRWO_IPrintWorkflowObjectModelProvider;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSTST_IInputStream
 #define CWINRT_FWD_WSTST_IInputStream
 typedef struct WSTST_IInputStream WSTST_IInputStream;
@@ -480,7 +477,6 @@ typedef enum WGRPRWO_PrintWorkflowUICompletionStatus {
 } WGRPRWO_PrintWorkflowUICompletionStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -681,23 +677,14 @@ static const IID CWINRT_IID_WGRPRWO_IPrintWorkflowXpsObjectModelProvider CWINRT_
 static const IID CWINRT_IID_WGRPRWO_IPrintWorkflowObjectModelProvider CWINRT_MAYBE_UNUSED = { 0xE3A9F883, 0x6A2D, 0x489B, { 0xBC, 0x1F, 0x7A, 0xAB, 0x44, 0x24, 0x96, 0x22 } };
 #endif
 
-/* Methods */
-
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowObjectModelSourceFileContentFactory */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowObjectModelSourceFileContentFactory.CreateInstance(xpsStream) */
 HRESULT wgrprwo_print_workflow_object_model_source_file_content_factory_create_instance(WGRPRWO_IPrintWorkflowObjectModelSourceFileContentFactory *self, WSTST_IInputStream* xpsStream, WGRPRWO_PrintWorkflowObjectModelSourceFileContent** out);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession */
 HRESULT wgrprwo_print_workflow_background_session_new(WGRPRWO_PrintWorkflowBackgroundSession **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession.get_Status() */
 HRESULT wgrprwo_print_workflow_background_session_get__status(WGRPRWO_PrintWorkflowBackgroundSession *self, WGRPRWO_PrintWorkflowSessionStatus *value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession.Start() */
 HRESULT wgrprwo_print_workflow_background_session_start(WGRPRWO_PrintWorkflowBackgroundSession *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wgrprwo_print_workflow_background_session_on_setup_requested(WGRPRWO_PrintWorkflowBackgroundSession *self, cwinrt_event_fn fn, void *ctx);
@@ -706,49 +693,32 @@ void wgrprwo_print_workflow_background_session_off_setup_requested(WGRPRWO_Print
 cwinrt_token wgrprwo_print_workflow_background_session_on_submitted(WGRPRWO_PrintWorkflowBackgroundSession *self, cwinrt_event_fn fn, void *ctx);
 void wgrprwo_print_workflow_background_session_off_submitted(WGRPRWO_PrintWorkflowBackgroundSession *self, cwinrt_token token);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSetupRequestedEventArgs */
 HRESULT wgrprwo_print_workflow_background_setup_requested_event_args_new(WGRPRWO_PrintWorkflowBackgroundSetupRequestedEventArgs **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSetupRequestedEventArgs */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSetupRequestedEventArgs.GetUserPrintTicketAsync() */
 HRESULT wgrprwo_print_workflow_background_setup_requested_event_args_get_user_print_ticket_async(WGRPRWO_PrintWorkflowBackgroundSetupRequestedEventArgs *self, WF_IAsyncOperation_WGRPRPR_WorkflowPrintTicket** out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSetupRequestedEventArgs.get_Configuration() */
 HRESULT wgrprwo_print_workflow_background_setup_requested_event_args_get__configuration(WGRPRWO_PrintWorkflowBackgroundSetupRequestedEventArgs *self, WGRPRWO_PrintWorkflowConfiguration** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSetupRequestedEventArgs.SetRequiresUI() */
 HRESULT wgrprwo_print_workflow_background_setup_requested_event_args_set_requires_u_i(WGRPRWO_PrintWorkflowBackgroundSetupRequestedEventArgs *self);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSetupRequestedEventArgs.GetDeferral() */
 HRESULT wgrprwo_print_workflow_background_setup_requested_event_args_get_deferral(WGRPRWO_PrintWorkflowBackgroundSetupRequestedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowConfiguration */
 HRESULT wgrprwo_print_workflow_configuration_new(WGRPRWO_PrintWorkflowConfiguration **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowConfiguration */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowConfiguration.AbortPrintFlow(reason) */
 HRESULT wgrprwo_print_workflow_configuration_abort_print_flow(WGRPRWO_PrintWorkflowConfiguration *self, WGRPRWO_PrintWorkflowJobAbortReason reason);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowConfiguration.get_SourceAppDisplayName() */
 HRESULT wgrprwo_print_workflow_configuration_get__source_app_display_name(WGRPRWO_PrintWorkflowConfiguration *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowConfiguration.get_JobTitle() */
 HRESULT wgrprwo_print_workflow_configuration_get__job_title(WGRPRWO_PrintWorkflowConfiguration *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowConfiguration.get_SessionId() */
 HRESULT wgrprwo_print_workflow_configuration_get__session_id(WGRPRWO_PrintWorkflowConfiguration *self, cwinrt_hstring *value);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession */
 HRESULT wgrprwo_print_workflow_foreground_session_new(WGRPRWO_PrintWorkflowForegroundSession **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession.get_Status() */
 HRESULT wgrprwo_print_workflow_foreground_session_get__status(WGRPRWO_PrintWorkflowForegroundSession *self, WGRPRWO_PrintWorkflowSessionStatus *value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession.Start() */
 HRESULT wgrprwo_print_workflow_foreground_session_start(WGRPRWO_PrintWorkflowForegroundSession *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wgrprwo_print_workflow_foreground_session_on_setup_requested(WGRPRWO_PrintWorkflowForegroundSession *self, cwinrt_event_fn fn, void *ctx);
@@ -757,49 +727,32 @@ void wgrprwo_print_workflow_foreground_session_off_setup_requested(WGRPRWO_Print
 cwinrt_token wgrprwo_print_workflow_foreground_session_on_xps_data_available(WGRPRWO_PrintWorkflowForegroundSession *self, cwinrt_event_fn fn, void *ctx);
 void wgrprwo_print_workflow_foreground_session_off_xps_data_available(WGRPRWO_PrintWorkflowForegroundSession *self, cwinrt_token token);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSetupRequestedEventArgs */
 HRESULT wgrprwo_print_workflow_foreground_setup_requested_event_args_new(WGRPRWO_PrintWorkflowForegroundSetupRequestedEventArgs **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSetupRequestedEventArgs */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSetupRequestedEventArgs.GetUserPrintTicketAsync() */
 HRESULT wgrprwo_print_workflow_foreground_setup_requested_event_args_get_user_print_ticket_async(WGRPRWO_PrintWorkflowForegroundSetupRequestedEventArgs *self, WF_IAsyncOperation_WGRPRPR_WorkflowPrintTicket** out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSetupRequestedEventArgs.get_Configuration() */
 HRESULT wgrprwo_print_workflow_foreground_setup_requested_event_args_get__configuration(WGRPRWO_PrintWorkflowForegroundSetupRequestedEventArgs *self, WGRPRWO_PrintWorkflowConfiguration** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSetupRequestedEventArgs.GetDeferral() */
 HRESULT wgrprwo_print_workflow_foreground_setup_requested_event_args_get_deferral(WGRPRWO_PrintWorkflowForegroundSetupRequestedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowJobActivatedEventArgs */
 HRESULT wgrprwo_print_workflow_job_activated_event_args_new(WGRPRWO_PrintWorkflowJobActivatedEventArgs **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobActivatedEventArgs */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobActivatedEventArgs.get_Session() */
 HRESULT wgrprwo_print_workflow_job_activated_event_args_get__session(WGRPRWO_PrintWorkflowJobActivatedEventArgs *self, WGRPRWO_PrintWorkflowJobUISession** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobActivatedEventArgs.get_Kind() */
 HRESULT wgrprwo_print_workflow_job_activated_event_args_get__kind(WGRPRWO_PrintWorkflowJobActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wgrprwo_print_workflow_job_activated_event_args_get__previous_execution_state(WGRPRWO_PrintWorkflowJobActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobActivatedEventArgs.get_SplashScreen() */
 HRESULT wgrprwo_print_workflow_job_activated_event_args_get__splash_screen(WGRPRWO_PrintWorkflowJobActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobActivatedEventArgs.get_User() */
 HRESULT wgrprwo_print_workflow_job_activated_event_args_get__user(WGRPRWO_PrintWorkflowJobActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession */
 HRESULT wgrprwo_print_workflow_job_background_session_new(WGRPRWO_PrintWorkflowJobBackgroundSession **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession.get_Status() */
 HRESULT wgrprwo_print_workflow_job_background_session_get__status(WGRPRWO_PrintWorkflowJobBackgroundSession *self, WGRPRWO_PrintWorkflowSessionStatus *value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession.Start() */
 HRESULT wgrprwo_print_workflow_job_background_session_start(WGRPRWO_PrintWorkflowJobBackgroundSession *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wgrprwo_print_workflow_job_background_session_on_job_starting(WGRPRWO_PrintWorkflowJobBackgroundSession *self, cwinrt_event_fn fn, void *ctx);
@@ -814,93 +767,60 @@ void wgrprwo_print_workflow_job_background_session_off_job_issue_detected(WGRPRW
 cwinrt_token wgrprwo_print_workflow_job_background_session_on_job_status_changed(WGRPRWO_PrintWorkflowJobBackgroundSession *self, cwinrt_event_fn fn, void *ctx);
 void wgrprwo_print_workflow_job_background_session_off_job_status_changed(WGRPRWO_PrintWorkflowJobBackgroundSession *self, cwinrt_token token);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowJobIssueDetectedEventArgs */
 HRESULT wgrprwo_print_workflow_job_issue_detected_event_args_new(WGRPRWO_PrintWorkflowJobIssueDetectedEventArgs **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobIssueDetectedEventArgs */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobIssueDetectedEventArgs.get_JobIssueKind() */
 HRESULT wgrprwo_print_workflow_job_issue_detected_event_args_get__job_issue_kind(WGRPRWO_PrintWorkflowJobIssueDetectedEventArgs *self, WGRPRWO_PrintWorkflowJobIssueKind *value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobIssueDetectedEventArgs.get_ExtendedError() */
 HRESULT wgrprwo_print_workflow_job_issue_detected_event_args_get__extended_error(WGRPRWO_PrintWorkflowJobIssueDetectedEventArgs *self, HRESULT *value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobIssueDetectedEventArgs.get_SkipSystemErrorToast() */
 HRESULT wgrprwo_print_workflow_job_issue_detected_event_args_get__skip_system_error_toast(WGRPRWO_PrintWorkflowJobIssueDetectedEventArgs *self, BOOL *value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobIssueDetectedEventArgs.put_SkipSystemErrorToast() */
 HRESULT wgrprwo_print_workflow_job_issue_detected_event_args_put__skip_system_error_toast(WGRPRWO_PrintWorkflowJobIssueDetectedEventArgs *self, BOOL value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobIssueDetectedEventArgs.get_PrinterJob() */
 HRESULT wgrprwo_print_workflow_job_issue_detected_event_args_get__printer_job(WGRPRWO_PrintWorkflowJobIssueDetectedEventArgs *self, WGRPRWO_PrintWorkflowPrinterJob** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobIssueDetectedEventArgs.get_Configuration() */
 HRESULT wgrprwo_print_workflow_job_issue_detected_event_args_get__configuration(WGRPRWO_PrintWorkflowJobIssueDetectedEventArgs *self, WGRPRWO_PrintWorkflowConfiguration** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobIssueDetectedEventArgs.get_UILauncher() */
 HRESULT wgrprwo_print_workflow_job_issue_detected_event_args_get__u_i_launcher(WGRPRWO_PrintWorkflowJobIssueDetectedEventArgs *self, WGRPRWO_PrintWorkflowUILauncher** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobIssueDetectedEventArgs.GetDeferral() */
 HRESULT wgrprwo_print_workflow_job_issue_detected_event_args_get_deferral(WGRPRWO_PrintWorkflowJobIssueDetectedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowJobNotificationEventArgs */
 HRESULT wgrprwo_print_workflow_job_notification_event_args_new(WGRPRWO_PrintWorkflowJobNotificationEventArgs **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobNotificationEventArgs */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobNotificationEventArgs.get_Configuration() */
 HRESULT wgrprwo_print_workflow_job_notification_event_args_get__configuration(WGRPRWO_PrintWorkflowJobNotificationEventArgs *self, WGRPRWO_PrintWorkflowConfiguration** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobNotificationEventArgs.get_PrinterJob() */
 HRESULT wgrprwo_print_workflow_job_notification_event_args_get__printer_job(WGRPRWO_PrintWorkflowJobNotificationEventArgs *self, WGRPRWO_PrintWorkflowPrinterJob** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobNotificationEventArgs.GetDeferral() */
 HRESULT wgrprwo_print_workflow_job_notification_event_args_get_deferral(WGRPRWO_PrintWorkflowJobNotificationEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowJobStartingEventArgs */
 HRESULT wgrprwo_print_workflow_job_starting_event_args_new(WGRPRWO_PrintWorkflowJobStartingEventArgs **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobStartingEventArgs */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobStartingEventArgs.get_Configuration() */
 HRESULT wgrprwo_print_workflow_job_starting_event_args_get__configuration(WGRPRWO_PrintWorkflowJobStartingEventArgs *self, WGRPRWO_PrintWorkflowConfiguration** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobStartingEventArgs.get_Printer() */
 HRESULT wgrprwo_print_workflow_job_starting_event_args_get__printer(WGRPRWO_PrintWorkflowJobStartingEventArgs *self, WDEPR_IppPrintDevice** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobStartingEventArgs.SetSkipSystemRendering() */
 HRESULT wgrprwo_print_workflow_job_starting_event_args_set_skip_system_rendering(WGRPRWO_PrintWorkflowJobStartingEventArgs *self);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobStartingEventArgs.GetDeferral() */
 HRESULT wgrprwo_print_workflow_job_starting_event_args_get_deferral(WGRPRWO_PrintWorkflowJobStartingEventArgs *self, WF_Deferral** out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobStartingEventArgs.get_IsIppCompressionEnabled() */
 HRESULT wgrprwo_print_workflow_job_starting_event_args_get__is_ipp_compression_enabled(WGRPRWO_PrintWorkflowJobStartingEventArgs *self, BOOL *value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobStartingEventArgs.DisableIppCompressionForJob() */
 HRESULT wgrprwo_print_workflow_job_starting_event_args_disable_ipp_compression_for_job(WGRPRWO_PrintWorkflowJobStartingEventArgs *self);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobStartingEventArgs.get_SkipSystemFaxUI() */
 HRESULT wgrprwo_print_workflow_job_starting_event_args_get__skip_system_fax_u_i(WGRPRWO_PrintWorkflowJobStartingEventArgs *self, BOOL *value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobStartingEventArgs.put_SkipSystemFaxUI() */
 HRESULT wgrprwo_print_workflow_job_starting_event_args_put__skip_system_fax_u_i(WGRPRWO_PrintWorkflowJobStartingEventArgs *self, BOOL value);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowJobTriggerDetails */
 HRESULT wgrprwo_print_workflow_job_trigger_details_new(WGRPRWO_PrintWorkflowJobTriggerDetails **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobTriggerDetails */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobTriggerDetails.get_PrintWorkflowJobSession() */
 HRESULT wgrprwo_print_workflow_job_trigger_details_get__print_workflow_job_session(WGRPRWO_PrintWorkflowJobTriggerDetails *self, WGRPRWO_PrintWorkflowJobBackgroundSession** value);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession */
 HRESULT wgrprwo_print_workflow_job_u_i_session_new(WGRPRWO_PrintWorkflowJobUISession **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession.get_Status() */
 HRESULT wgrprwo_print_workflow_job_u_i_session_get__status(WGRPRWO_PrintWorkflowJobUISession *self, WGRPRWO_PrintWorkflowSessionStatus *value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession.Start() */
 HRESULT wgrprwo_print_workflow_job_u_i_session_start(WGRPRWO_PrintWorkflowJobUISession *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wgrprwo_print_workflow_job_u_i_session_on_pdl_data_available(WGRPRWO_PrintWorkflowJobUISession *self, cwinrt_event_fn fn, void *ctx);
@@ -912,414 +832,235 @@ void wgrprwo_print_workflow_job_u_i_session_off_job_notification(WGRPRWO_PrintWo
 cwinrt_token wgrprwo_print_workflow_job_u_i_session_on_virtual_printer_u_i_data_available(WGRPRWO_PrintWorkflowJobUISession *self, cwinrt_event_fn fn, void *ctx);
 void wgrprwo_print_workflow_job_u_i_session_off_virtual_printer_u_i_data_available(WGRPRWO_PrintWorkflowJobUISession *self, cwinrt_token token);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowPdlConverter */
 HRESULT wgrprwo_print_workflow_pdl_converter_new(WGRPRWO_PrintWorkflowPdlConverter **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPdlConverter */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPdlConverter.ConvertPdlAsync(printTicket, inputStream, outputStream) */
 HRESULT wgrprwo_print_workflow_pdl_converter_convert_pdl_async(WGRPRWO_PrintWorkflowPdlConverter *self, WGRPRPR_WorkflowPrintTicket* printTicket, WSTST_IInputStream* inputStream, WSTST_IOutputStream* outputStream, WF_IAsyncAction** out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPdlConverter.ConvertPdlAsync(printTicket, inputStream, outputStream, hostBasedProcessingOperations) */
 HRESULT wgrprwo_print_workflow_pdl_converter_convert_pdl_async_p_p_p_pdl_conversion_host_based_proc_327fd66a(WGRPRWO_PrintWorkflowPdlConverter *self, WGRPRPR_WorkflowPrintTicket* printTicket, WSTST_IInputStream* inputStream, WSTST_IOutputStream* outputStream, WGRPRWO_PdlConversionHostBasedProcessingOperations hostBasedProcessingOperations, WF_IAsyncAction** out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPdlConverter.ConvertPdlFromObjectModelAsync(printTicket, objectModelProvider, outputStream, hostBasedProcessingOperations) */
 HRESULT wgrprwo_print_workflow_pdl_converter_convert_pdl_from_object_model_async(WGRPRWO_PrintWorkflowPdlConverter *self, WGRPRPR_WorkflowPrintTicket* printTicket, WGRPRWO_IPrintWorkflowObjectModelProvider* objectModelProvider, WSTST_IOutputStream* outputStream, WGRPRWO_PdlConversionHostBasedProcessingOperations hostBasedProcessingOperations, WF_IAsyncAction** out);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowPdlDataAvailableEventArgs */
 HRESULT wgrprwo_print_workflow_pdl_data_available_event_args_new(WGRPRWO_PrintWorkflowPdlDataAvailableEventArgs **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPdlDataAvailableEventArgs */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPdlDataAvailableEventArgs.get_Configuration() */
 HRESULT wgrprwo_print_workflow_pdl_data_available_event_args_get__configuration(WGRPRWO_PrintWorkflowPdlDataAvailableEventArgs *self, WGRPRWO_PrintWorkflowConfiguration** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPdlDataAvailableEventArgs.get_PrinterJob() */
 HRESULT wgrprwo_print_workflow_pdl_data_available_event_args_get__printer_job(WGRPRWO_PrintWorkflowPdlDataAvailableEventArgs *self, WGRPRWO_PrintWorkflowPrinterJob** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPdlDataAvailableEventArgs.get_SourceContent() */
 HRESULT wgrprwo_print_workflow_pdl_data_available_event_args_get__source_content(WGRPRWO_PrintWorkflowPdlDataAvailableEventArgs *self, WGRPRWO_PrintWorkflowPdlSourceContent** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPdlDataAvailableEventArgs.GetDeferral() */
 HRESULT wgrprwo_print_workflow_pdl_data_available_event_args_get_deferral(WGRPRWO_PrintWorkflowPdlDataAvailableEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs */
 HRESULT wgrprwo_print_workflow_pdl_modification_requested_event_args_new(WGRPRWO_PrintWorkflowPdlModificationRequestedEventArgs **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs.get_Configuration() */
 HRESULT wgrprwo_print_workflow_pdl_modification_requested_event_args_get__configuration(WGRPRWO_PrintWorkflowPdlModificationRequestedEventArgs *self, WGRPRWO_PrintWorkflowConfiguration** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs.get_PrinterJob() */
 HRESULT wgrprwo_print_workflow_pdl_modification_requested_event_args_get__printer_job(WGRPRWO_PrintWorkflowPdlModificationRequestedEventArgs *self, WGRPRWO_PrintWorkflowPrinterJob** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs.get_SourceContent() */
 HRESULT wgrprwo_print_workflow_pdl_modification_requested_event_args_get__source_content(WGRPRWO_PrintWorkflowPdlModificationRequestedEventArgs *self, WGRPRWO_PrintWorkflowPdlSourceContent** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs.get_UILauncher() */
 HRESULT wgrprwo_print_workflow_pdl_modification_requested_event_args_get__u_i_launcher(WGRPRWO_PrintWorkflowPdlModificationRequestedEventArgs *self, WGRPRWO_PrintWorkflowUILauncher** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs.CreateJobOnPrinter(targetContentType) */
 HRESULT wgrprwo_print_workflow_pdl_modification_requested_event_args_create_job_on_printer(WGRPRWO_PrintWorkflowPdlModificationRequestedEventArgs *self, cwinrt_hstring targetContentType, WGRPRWO_PrintWorkflowPdlTargetStream** out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs.CreateJobOnPrinterWithAttributes(jobAttributes, targetContentType) */
 HRESULT wgrprwo_print_workflow_pdl_modification_requested_event_args_create_job_on_printer_with_attributes(WGRPRWO_PrintWorkflowPdlModificationRequestedEventArgs *self, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_WDEPR_IppAttributeValue* jobAttributes, cwinrt_hstring targetContentType, WGRPRWO_PrintWorkflowPdlTargetStream** out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs.CreateJobOnPrinterWithAttributesBuffer(jobAttributesBuffer, targetContentType) */
 HRESULT wgrprwo_print_workflow_pdl_modification_requested_event_args_create_job_on_printer_with_attributes_buffer(WGRPRWO_PrintWorkflowPdlModificationRequestedEventArgs *self, WSTST_IBuffer* jobAttributesBuffer, cwinrt_hstring targetContentType, WGRPRWO_PrintWorkflowPdlTargetStream** out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs.GetPdlConverter(conversionType) */
 HRESULT wgrprwo_print_workflow_pdl_modification_requested_event_args_get_pdl_converter(WGRPRWO_PrintWorkflowPdlModificationRequestedEventArgs *self, WGRPRWO_PrintWorkflowPdlConversionType conversionType, WGRPRWO_PrintWorkflowPdlConverter** out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs.GetDeferral() */
 HRESULT wgrprwo_print_workflow_pdl_modification_requested_event_args_get_deferral(WGRPRWO_PrintWorkflowPdlModificationRequestedEventArgs *self, WF_Deferral** out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs.CreateJobOnPrinterWithAttributes(jobAttributes, targetContentType, operationAttributes, jobAttributesMergePolicy, operationAttributesMergePolicy) */
 HRESULT wgrprwo_print_workflow_pdl_modification_requested_event_args_create_job_on_printer_with_attributes_p_str_p_print_workflow_attributes_me_06892a3b(WGRPRWO_PrintWorkflowPdlModificationRequestedEventArgs *self, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_WDEPR_IppAttributeValue* jobAttributes, cwinrt_hstring targetContentType, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_WDEPR_IppAttributeValue* operationAttributes, WGRPRWO_PrintWorkflowAttributesMergePolicy jobAttributesMergePolicy, WGRPRWO_PrintWorkflowAttributesMergePolicy operationAttributesMergePolicy, WGRPRWO_PrintWorkflowPdlTargetStream** out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs.CreateJobOnPrinterWithAttributesBuffer(jobAttributesBuffer, targetContentType, operationAttributesBuffer, jobAttributesMergePolicy, operationAttributesMergePolicy) */
 HRESULT wgrprwo_print_workflow_pdl_modification_requested_event_args_create_job_on_printer_with_attributes_buffer_p_str_p_print_workflow_attributes_me_06892a3b(WGRPRWO_PrintWorkflowPdlModificationRequestedEventArgs *self, WSTST_IBuffer* jobAttributesBuffer, cwinrt_hstring targetContentType, WSTST_IBuffer* operationAttributesBuffer, WGRPRWO_PrintWorkflowAttributesMergePolicy jobAttributesMergePolicy, WGRPRWO_PrintWorkflowAttributesMergePolicy operationAttributesMergePolicy, WGRPRWO_PrintWorkflowPdlTargetStream** out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs.DisableIppCompressionForJob() */
 HRESULT wgrprwo_print_workflow_pdl_modification_requested_event_args_disable_ipp_compression_for_job(WGRPRWO_PrintWorkflowPdlModificationRequestedEventArgs *self);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowPdlSourceContent */
 HRESULT wgrprwo_print_workflow_pdl_source_content_new(WGRPRWO_PrintWorkflowPdlSourceContent **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPdlSourceContent */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPdlSourceContent.get_ContentType() */
 HRESULT wgrprwo_print_workflow_pdl_source_content_get__content_type(WGRPRWO_PrintWorkflowPdlSourceContent *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPdlSourceContent.GetInputStream() */
 HRESULT wgrprwo_print_workflow_pdl_source_content_get_input_stream(WGRPRWO_PrintWorkflowPdlSourceContent *self, WSTST_IInputStream** out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPdlSourceContent.GetContentFileAsync() */
 HRESULT wgrprwo_print_workflow_pdl_source_content_get_content_file_async(WGRPRWO_PrintWorkflowPdlSourceContent *self, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowPdlTargetStream */
 HRESULT wgrprwo_print_workflow_pdl_target_stream_new(WGRPRWO_PrintWorkflowPdlTargetStream **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPdlTargetStream */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPdlTargetStream.GetOutputStream() */
 HRESULT wgrprwo_print_workflow_pdl_target_stream_get_output_stream(WGRPRWO_PrintWorkflowPdlTargetStream *self, WSTST_IOutputStream** out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPdlTargetStream.CompleteStreamSubmission(status) */
 HRESULT wgrprwo_print_workflow_pdl_target_stream_complete_stream_submission(WGRPRWO_PrintWorkflowPdlTargetStream *self, WGRPRWO_PrintWorkflowSubmittedStatus status);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob */
 HRESULT wgrprwo_print_workflow_printer_job_new(WGRPRWO_PrintWorkflowPrinterJob **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob.get_JobId() */
 HRESULT wgrprwo_print_workflow_printer_job_get__job_id(WGRPRWO_PrintWorkflowPrinterJob *self, int32_t *value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob.get_Printer() */
 HRESULT wgrprwo_print_workflow_printer_job_get__printer(WGRPRWO_PrintWorkflowPrinterJob *self, WDEPR_IppPrintDevice** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob.GetJobStatus() */
 HRESULT wgrprwo_print_workflow_printer_job_get_job_status(WGRPRWO_PrintWorkflowPrinterJob *self, WGRPRWO_PrintWorkflowPrinterJobStatus *out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob.GetJobPrintTicket() */
 HRESULT wgrprwo_print_workflow_printer_job_get_job_print_ticket(WGRPRWO_PrintWorkflowPrinterJob *self, WGRPRPR_WorkflowPrintTicket** out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob.GetJobAttributesAsBuffer(attributeNames) */
 HRESULT wgrprwo_print_workflow_printer_job_get_job_attributes_as_buffer(WGRPRWO_PrintWorkflowPrinterJob *self, WFOCO_IIterable_HSTRING* attributeNames, WSTST_IBuffer** out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob.GetJobAttributes(attributeNames) */
 HRESULT wgrprwo_print_workflow_printer_job_get_job_attributes(WGRPRWO_PrintWorkflowPrinterJob *self, WFOCO_IIterable_HSTRING* attributeNames, WFOCO_IMap_HSTRING_WDEPR_IppAttributeValue** out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob.SetJobAttributesFromBuffer(jobAttributesBuffer) */
 HRESULT wgrprwo_print_workflow_printer_job_set_job_attributes_from_buffer(WGRPRWO_PrintWorkflowPrinterJob *self, WSTST_IBuffer* jobAttributesBuffer, WDEPR_IppSetAttributesResult** out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob.SetJobAttributes(jobAttributes) */
 HRESULT wgrprwo_print_workflow_printer_job_set_job_attributes(WGRPRWO_PrintWorkflowPrinterJob *self, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_WDEPR_IppAttributeValue* jobAttributes, WDEPR_IppSetAttributesResult** out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob.ConvertPrintTicketToJobAttributes(printTicket, targetPdlFormat) */
 HRESULT wgrprwo_print_workflow_printer_job_convert_print_ticket_to_job_attributes(WGRPRWO_PrintWorkflowPrinterJob *self, WGRPRPR_WorkflowPrintTicket* printTicket, cwinrt_hstring targetPdlFormat, WFOCO_IMap_HSTRING_WDEPR_IppAttributeValue** out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob.get_IsPassthroughJobWithAttributes() */
 HRESULT wgrprwo_print_workflow_printer_job_get__is_passthrough_job_with_attributes(WGRPRWO_PrintWorkflowPrinterJob *self, BOOL *value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob.GetPassthroughJobAttributes() */
 HRESULT wgrprwo_print_workflow_printer_job_get_passthrough_job_attributes(WGRPRWO_PrintWorkflowPrinterJob *self, WFOCO_IMap_HSTRING_WDEPR_IppAttributeValue** out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob.GetPassthroughJobOperationAttributes() */
 HRESULT wgrprwo_print_workflow_printer_job_get_passthrough_job_operation_attributes(WGRPRWO_PrintWorkflowPrinterJob *self, WFOCO_IMap_HSTRING_WDEPR_IppAttributeValue** out);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJobStatusChangedEventArgs */
 HRESULT wgrprwo_print_workflow_printer_job_status_changed_event_args_new(WGRPRWO_PrintWorkflowPrinterJobStatusChangedEventArgs **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJobStatusChangedEventArgs */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJobStatusChangedEventArgs.get_PrinterJob() */
 HRESULT wgrprwo_print_workflow_printer_job_status_changed_event_args_get__printer_job(WGRPRWO_PrintWorkflowPrinterJobStatusChangedEventArgs *self, WGRPRWO_PrintWorkflowPrinterJob** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJobStatusChangedEventArgs.get_Configuration() */
 HRESULT wgrprwo_print_workflow_printer_job_status_changed_event_args_get__configuration(WGRPRWO_PrintWorkflowPrinterJobStatusChangedEventArgs *self, WGRPRWO_PrintWorkflowConfiguration** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJobStatusChangedEventArgs.GetDeferral() */
 HRESULT wgrprwo_print_workflow_printer_job_status_changed_event_args_get_deferral(WGRPRWO_PrintWorkflowPrinterJobStatusChangedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowSourceContent */
 HRESULT wgrprwo_print_workflow_source_content_new(WGRPRWO_PrintWorkflowSourceContent **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowSourceContent */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowSourceContent.GetJobPrintTicketAsync() */
 HRESULT wgrprwo_print_workflow_source_content_get_job_print_ticket_async(WGRPRWO_PrintWorkflowSourceContent *self, WF_IAsyncOperation_WGRPRPR_WorkflowPrintTicket** out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowSourceContent.GetSourceSpoolDataAsStreamContent() */
 HRESULT wgrprwo_print_workflow_source_content_get_source_spool_data_as_stream_content(WGRPRWO_PrintWorkflowSourceContent *self, WGRPRWO_PrintWorkflowSpoolStreamContent** out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowSourceContent.GetSourceSpoolDataAsXpsObjectModel() */
 HRESULT wgrprwo_print_workflow_source_content_get_source_spool_data_as_xps_object_model(WGRPRWO_PrintWorkflowSourceContent *self, WGRPRWO_PrintWorkflowObjectModelSourceFileContent** out);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowSpoolStreamContent */
 HRESULT wgrprwo_print_workflow_spool_stream_content_new(WGRPRWO_PrintWorkflowSpoolStreamContent **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowSpoolStreamContent */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowSpoolStreamContent.GetInputStream() */
 HRESULT wgrprwo_print_workflow_spool_stream_content_get_input_stream(WGRPRWO_PrintWorkflowSpoolStreamContent *self, WSTST_IInputStream** out);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowStreamTarget */
 HRESULT wgrprwo_print_workflow_stream_target_new(WGRPRWO_PrintWorkflowStreamTarget **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowStreamTarget */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowStreamTarget.GetOutputStream() */
 HRESULT wgrprwo_print_workflow_stream_target_get_output_stream(WGRPRWO_PrintWorkflowStreamTarget *self, WSTST_IOutputStream** out);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedEventArgs */
 HRESULT wgrprwo_print_workflow_submitted_event_args_new(WGRPRWO_PrintWorkflowSubmittedEventArgs **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedEventArgs */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedEventArgs.get_Operation() */
 HRESULT wgrprwo_print_workflow_submitted_event_args_get__operation(WGRPRWO_PrintWorkflowSubmittedEventArgs *self, WGRPRWO_PrintWorkflowSubmittedOperation** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedEventArgs.GetTarget(jobPrintTicket) */
 HRESULT wgrprwo_print_workflow_submitted_event_args_get_target(WGRPRWO_PrintWorkflowSubmittedEventArgs *self, WGRPRPR_WorkflowPrintTicket* jobPrintTicket, WGRPRWO_PrintWorkflowTarget** out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedEventArgs.GetDeferral() */
 HRESULT wgrprwo_print_workflow_submitted_event_args_get_deferral(WGRPRWO_PrintWorkflowSubmittedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedOperation */
 HRESULT wgrprwo_print_workflow_submitted_operation_new(WGRPRWO_PrintWorkflowSubmittedOperation **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedOperation */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedOperation.Complete(status) */
 HRESULT wgrprwo_print_workflow_submitted_operation_complete(WGRPRWO_PrintWorkflowSubmittedOperation *self, WGRPRWO_PrintWorkflowSubmittedStatus status);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedOperation.get_Configuration() */
 HRESULT wgrprwo_print_workflow_submitted_operation_get__configuration(WGRPRWO_PrintWorkflowSubmittedOperation *self, WGRPRWO_PrintWorkflowConfiguration** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedOperation.get_XpsContent() */
 HRESULT wgrprwo_print_workflow_submitted_operation_get__xps_content(WGRPRWO_PrintWorkflowSubmittedOperation *self, WGRPRWO_PrintWorkflowSourceContent** value);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowTarget */
 HRESULT wgrprwo_print_workflow_target_new(WGRPRWO_PrintWorkflowTarget **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowTarget */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowTarget.get_TargetAsStream() */
 HRESULT wgrprwo_print_workflow_target_get__target_as_stream(WGRPRWO_PrintWorkflowTarget *self, WGRPRWO_PrintWorkflowStreamTarget** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowTarget.get_TargetAsXpsObjectModelPackage() */
 HRESULT wgrprwo_print_workflow_target_get__target_as_xps_object_model_package(WGRPRWO_PrintWorkflowTarget *self, WGRPRWO_PrintWorkflowObjectModelTargetPackage** value);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowTriggerDetails */
 HRESULT wgrprwo_print_workflow_trigger_details_new(WGRPRWO_PrintWorkflowTriggerDetails **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowTriggerDetails */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowTriggerDetails.get_PrintWorkflowSession() */
 HRESULT wgrprwo_print_workflow_trigger_details_get__print_workflow_session(WGRPRWO_PrintWorkflowTriggerDetails *self, WGRPRWO_PrintWorkflowBackgroundSession** value);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowUIActivatedEventArgs */
 HRESULT wgrprwo_print_workflow_u_i_activated_event_args_new(WGRPRWO_PrintWorkflowUIActivatedEventArgs **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowUIActivatedEventArgs */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowUIActivatedEventArgs.get_PrintWorkflowSession() */
 HRESULT wgrprwo_print_workflow_u_i_activated_event_args_get__print_workflow_session(WGRPRWO_PrintWorkflowUIActivatedEventArgs *self, WGRPRWO_PrintWorkflowForegroundSession** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowUIActivatedEventArgs.get_Kind() */
 HRESULT wgrprwo_print_workflow_u_i_activated_event_args_get__kind(WGRPRWO_PrintWorkflowUIActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowUIActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wgrprwo_print_workflow_u_i_activated_event_args_get__previous_execution_state(WGRPRWO_PrintWorkflowUIActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowUIActivatedEventArgs.get_SplashScreen() */
 HRESULT wgrprwo_print_workflow_u_i_activated_event_args_get__splash_screen(WGRPRWO_PrintWorkflowUIActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowUIActivatedEventArgs.get_User() */
 HRESULT wgrprwo_print_workflow_u_i_activated_event_args_get__user(WGRPRWO_PrintWorkflowUIActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowUILauncher */
 HRESULT wgrprwo_print_workflow_u_i_launcher_new(WGRPRWO_PrintWorkflowUILauncher **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowUILauncher */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowUILauncher.IsUILaunchEnabled() */
 HRESULT wgrprwo_print_workflow_u_i_launcher_is_u_i_launch_enabled(WGRPRWO_PrintWorkflowUILauncher *self, BOOL *out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowUILauncher.LaunchAndCompleteUIAsync() */
 HRESULT wgrprwo_print_workflow_u_i_launcher_launch_and_complete_u_i_async(WGRPRWO_PrintWorkflowUILauncher *self, WF_IAsyncOperation_WGRPRWO_PrintWorkflowUICompletionStatus** out);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterDataAvailableEventArgs */
 HRESULT wgrprwo_print_workflow_virtual_printer_data_available_event_args_new(WGRPRWO_PrintWorkflowVirtualPrinterDataAvailableEventArgs **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterDataAvailableEventArgs */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterDataAvailableEventArgs.get_Configuration() */
 HRESULT wgrprwo_print_workflow_virtual_printer_data_available_event_args_get__configuration(WGRPRWO_PrintWorkflowVirtualPrinterDataAvailableEventArgs *self, WGRPRWO_PrintWorkflowConfiguration** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterDataAvailableEventArgs.get_SourceContent() */
 HRESULT wgrprwo_print_workflow_virtual_printer_data_available_event_args_get__source_content(WGRPRWO_PrintWorkflowVirtualPrinterDataAvailableEventArgs *self, WGRPRWO_PrintWorkflowPdlSourceContent** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterDataAvailableEventArgs.get_UILauncher() */
 HRESULT wgrprwo_print_workflow_virtual_printer_data_available_event_args_get__u_i_launcher(WGRPRWO_PrintWorkflowVirtualPrinterDataAvailableEventArgs *self, WGRPRWO_PrintWorkflowUILauncher** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterDataAvailableEventArgs.GetJobPrintTicket() */
 HRESULT wgrprwo_print_workflow_virtual_printer_data_available_event_args_get_job_print_ticket(WGRPRWO_PrintWorkflowVirtualPrinterDataAvailableEventArgs *self, WGRPRPR_WorkflowPrintTicket** out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterDataAvailableEventArgs.GetPdlConverter(conversionType) */
 HRESULT wgrprwo_print_workflow_virtual_printer_data_available_event_args_get_pdl_converter(WGRPRWO_PrintWorkflowVirtualPrinterDataAvailableEventArgs *self, WGRPRWO_PrintWorkflowPdlConversionType conversionType, WGRPRWO_PrintWorkflowPdlConverter** out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterDataAvailableEventArgs.GetTargetFileAsync() */
 HRESULT wgrprwo_print_workflow_virtual_printer_data_available_event_args_get_target_file_async(WGRPRWO_PrintWorkflowVirtualPrinterDataAvailableEventArgs *self, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterDataAvailableEventArgs.CompleteJob(status) */
 HRESULT wgrprwo_print_workflow_virtual_printer_data_available_event_args_complete_job(WGRPRWO_PrintWorkflowVirtualPrinterDataAvailableEventArgs *self, WGRPRWO_PrintWorkflowSubmittedStatus status);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterSession */
 HRESULT wgrprwo_print_workflow_virtual_printer_session_new(WGRPRWO_PrintWorkflowVirtualPrinterSession **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterSession */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterSession.get_Status() */
 HRESULT wgrprwo_print_workflow_virtual_printer_session_get__status(WGRPRWO_PrintWorkflowVirtualPrinterSession *self, WGRPRWO_PrintWorkflowSessionStatus *value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterSession.get_Printer() */
 HRESULT wgrprwo_print_workflow_virtual_printer_session_get__printer(WGRPRWO_PrintWorkflowVirtualPrinterSession *self, WDEPR_IppPrintDevice** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterSession.Start() */
 HRESULT wgrprwo_print_workflow_virtual_printer_session_start(WGRPRWO_PrintWorkflowVirtualPrinterSession *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wgrprwo_print_workflow_virtual_printer_session_on_virtual_printer_data_available(WGRPRWO_PrintWorkflowVirtualPrinterSession *self, cwinrt_event_fn fn, void *ctx);
 void wgrprwo_print_workflow_virtual_printer_session_off_virtual_printer_data_available(WGRPRWO_PrintWorkflowVirtualPrinterSession *self, cwinrt_token token);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterTriggerDetails */
 HRESULT wgrprwo_print_workflow_virtual_printer_trigger_details_new(WGRPRWO_PrintWorkflowVirtualPrinterTriggerDetails **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterTriggerDetails */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterTriggerDetails.get_VirtualPrinterSession() */
 HRESULT wgrprwo_print_workflow_virtual_printer_trigger_details_get__virtual_printer_session(WGRPRWO_PrintWorkflowVirtualPrinterTriggerDetails *self, WGRPRWO_PrintWorkflowVirtualPrinterSession** value);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterUIEventArgs */
 HRESULT wgrprwo_print_workflow_virtual_printer_u_i_event_args_new(WGRPRWO_PrintWorkflowVirtualPrinterUIEventArgs **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterUIEventArgs */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterUIEventArgs.get_Configuration() */
 HRESULT wgrprwo_print_workflow_virtual_printer_u_i_event_args_get__configuration(WGRPRWO_PrintWorkflowVirtualPrinterUIEventArgs *self, WGRPRWO_PrintWorkflowConfiguration** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterUIEventArgs.get_Printer() */
 HRESULT wgrprwo_print_workflow_virtual_printer_u_i_event_args_get__printer(WGRPRWO_PrintWorkflowVirtualPrinterUIEventArgs *self, WDEPR_IppPrintDevice** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterUIEventArgs.get_SourceContent() */
 HRESULT wgrprwo_print_workflow_virtual_printer_u_i_event_args_get__source_content(WGRPRWO_PrintWorkflowVirtualPrinterUIEventArgs *self, WGRPRWO_PrintWorkflowPdlSourceContent** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterUIEventArgs.GetJobPrintTicket() */
 HRESULT wgrprwo_print_workflow_virtual_printer_u_i_event_args_get_job_print_ticket(WGRPRWO_PrintWorkflowVirtualPrinterUIEventArgs *self, WGRPRPR_WorkflowPrintTicket** out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterUIEventArgs.GetDeferral() */
 HRESULT wgrprwo_print_workflow_virtual_printer_u_i_event_args_get_deferral(WGRPRWO_PrintWorkflowVirtualPrinterUIEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Graphics.Printing.Workflow.PrintWorkflowXpsDataAvailableEventArgs */
 HRESULT wgrprwo_print_workflow_xps_data_available_event_args_new(WGRPRWO_PrintWorkflowXpsDataAvailableEventArgs **out);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowXpsDataAvailableEventArgs */
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowXpsDataAvailableEventArgs.get_Operation() */
 HRESULT wgrprwo_print_workflow_xps_data_available_event_args_get__operation(WGRPRWO_PrintWorkflowXpsDataAvailableEventArgs *self, WGRPRWO_PrintWorkflowSubmittedOperation** value);
 
-/* Windows.Graphics.Printing.Workflow.PrintWorkflowXpsDataAvailableEventArgs.GetDeferral() */
 HRESULT wgrprwo_print_workflow_xps_data_available_event_args_get_deferral(WGRPRWO_PrintWorkflowXpsDataAvailableEventArgs *self, WF_Deferral** out);
 
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowBackgroundSession */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowBackgroundSetupRequestedEventArgs */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowConfiguration2 */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowConfiguration2.AbortPrintFlow(reason) */
 HRESULT wgrprwo_print_workflow_configuration_2_abort_print_flow(WGRPRWO_IPrintWorkflowConfiguration_2 *self, WGRPRWO_PrintWorkflowJobAbortReason reason);
 
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowConfiguration */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowForegroundSession */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowForegroundSetupRequestedEventArgs */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowJobActivatedEventArgs */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowJobBackgroundSession */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowJobBackgroundSession2 */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowJobBackgroundSession3 */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowJobIssueDetectedEventArgs */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowJobNotificationEventArgs */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowJobStartingEventArgs */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowJobStartingEventArgs2 */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowJobStartingEventArgs2.get_IsIppCompressionEnabled() */
 HRESULT wgrprwo_print_workflow_job_starting_event_args_2_get__is_ipp_compression_enabled(WGRPRWO_IPrintWorkflowJobStartingEventArgs_2 *self, BOOL *value);
 
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowJobStartingEventArgs2.DisableIppCompressionForJob() */
 HRESULT wgrprwo_print_workflow_job_starting_event_args_2_disable_ipp_compression_for_job(WGRPRWO_IPrintWorkflowJobStartingEventArgs_2 *self);
 
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowJobStartingEventArgs2.get_SkipSystemFaxUI() */
 HRESULT wgrprwo_print_workflow_job_starting_event_args_2_get__skip_system_fax_u_i(WGRPRWO_IPrintWorkflowJobStartingEventArgs_2 *self, BOOL *value);
 
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowJobStartingEventArgs2.put_SkipSystemFaxUI() */
 HRESULT wgrprwo_print_workflow_job_starting_event_args_2_put__skip_system_fax_u_i(WGRPRWO_IPrintWorkflowJobStartingEventArgs_2 *self, BOOL value);
 
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowJobTriggerDetails */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowJobUISession */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowJobUISession2 */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlConverter */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlConverter2 */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlConverter2.ConvertPdlAsync(printTicket, inputStream, outputStream, hostBasedProcessingOperations) */
 HRESULT wgrprwo_print_workflow_pdl_converter_2_convert_pdl_async(WGRPRWO_IPrintWorkflowPdlConverter_2 *self, WGRPRPR_WorkflowPrintTicket* printTicket, WSTST_IInputStream* inputStream, WSTST_IOutputStream* outputStream, WGRPRWO_PdlConversionHostBasedProcessingOperations hostBasedProcessingOperations, WF_IAsyncAction** out);
 
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlConverter3 */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlConverter3.ConvertPdlFromObjectModelAsync(printTicket, objectModelProvider, outputStream, hostBasedProcessingOperations) */
 HRESULT wgrprwo_print_workflow_pdl_converter_3_convert_pdl_from_object_model_async(WGRPRWO_IPrintWorkflowPdlConverter_3 *self, WGRPRPR_WorkflowPrintTicket* printTicket, WGRPRWO_IPrintWorkflowObjectModelProvider* objectModelProvider, WSTST_IOutputStream* outputStream, WGRPRWO_PdlConversionHostBasedProcessingOperations hostBasedProcessingOperations, WF_IAsyncAction** out);
 
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlDataAvailableEventArgs */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlModificationRequestedEventArgs */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlModificationRequestedEventArgs2 */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlModificationRequestedEventArgs2.CreateJobOnPrinterWithAttributes(jobAttributes, targetContentType, operationAttributes, jobAttributesMergePolicy, operationAttributesMergePolicy) */
 HRESULT wgrprwo_print_workflow_pdl_modification_requested_event_args_2_create_job_on_printer_with_attributes(WGRPRWO_IPrintWorkflowPdlModificationRequestedEventArgs_2 *self, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_WDEPR_IppAttributeValue* jobAttributes, cwinrt_hstring targetContentType, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_WDEPR_IppAttributeValue* operationAttributes, WGRPRWO_PrintWorkflowAttributesMergePolicy jobAttributesMergePolicy, WGRPRWO_PrintWorkflowAttributesMergePolicy operationAttributesMergePolicy, WGRPRWO_PrintWorkflowPdlTargetStream** out);
 
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlModificationRequestedEventArgs2.CreateJobOnPrinterWithAttributesBuffer(jobAttributesBuffer, targetContentType, operationAttributesBuffer, jobAttributesMergePolicy, operationAttributesMergePolicy) */
 HRESULT wgrprwo_print_workflow_pdl_modification_requested_event_args_2_create_job_on_printer_with_attributes_buffer(WGRPRWO_IPrintWorkflowPdlModificationRequestedEventArgs_2 *self, WSTST_IBuffer* jobAttributesBuffer, cwinrt_hstring targetContentType, WSTST_IBuffer* operationAttributesBuffer, WGRPRWO_PrintWorkflowAttributesMergePolicy jobAttributesMergePolicy, WGRPRWO_PrintWorkflowAttributesMergePolicy operationAttributesMergePolicy, WGRPRWO_PrintWorkflowPdlTargetStream** out);
 
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlModificationRequestedEventArgs3 */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlModificationRequestedEventArgs3.DisableIppCompressionForJob() */
 HRESULT wgrprwo_print_workflow_pdl_modification_requested_event_args_3_disable_ipp_compression_for_job(WGRPRWO_IPrintWorkflowPdlModificationRequestedEventArgs_3 *self);
 
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlSourceContent */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlTargetStream */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowPrinterJob */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowPrinterJob2 */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowPrinterJob2.ConvertPrintTicketToJobAttributes(printTicket, targetPdlFormat) */
 HRESULT wgrprwo_print_workflow_printer_job_2_convert_print_ticket_to_job_attributes(WGRPRWO_IPrintWorkflowPrinterJob_2 *self, WGRPRPR_WorkflowPrintTicket* printTicket, cwinrt_hstring targetPdlFormat, WFOCO_IMap_HSTRING_WDEPR_IppAttributeValue** out);
 
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowPrinterJob3 */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowPrinterJob3.get_IsPassthroughJobWithAttributes() */
 HRESULT wgrprwo_print_workflow_printer_job_3_get__is_passthrough_job_with_attributes(WGRPRWO_IPrintWorkflowPrinterJob_3 *self, BOOL *value);
 
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowPrinterJob3.GetPassthroughJobAttributes() */
 HRESULT wgrprwo_print_workflow_printer_job_3_get_passthrough_job_attributes(WGRPRWO_IPrintWorkflowPrinterJob_3 *self, WFOCO_IMap_HSTRING_WDEPR_IppAttributeValue** out);
 
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowPrinterJob3.GetPassthroughJobOperationAttributes() */
 HRESULT wgrprwo_print_workflow_printer_job_3_get_passthrough_job_operation_attributes(WGRPRWO_IPrintWorkflowPrinterJob_3 *self, WFOCO_IMap_HSTRING_WDEPR_IppAttributeValue** out);
 
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowPrinterJobStatusChangedEventArgs */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowSourceContent */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowSpoolStreamContent */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowStreamTarget */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowSubmittedEventArgs */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowSubmittedOperation */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowTarget */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowTriggerDetails */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowUIActivatedEventArgs */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowUILauncher */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowVirtualPrinterDataAvailableEventArgs */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowVirtualPrinterSession */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowVirtualPrinterTriggerDetails */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowVirtualPrinterUIEventArgs */
-/* Windows.Graphics.Printing.Workflow.IPrintWorkflowXpsDataAvailableEventArgs */
 #endif /* CWINRT_WINDOWS_GRAPHICS_PRINTING_WORKFLOW_H */

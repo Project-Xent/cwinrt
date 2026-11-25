@@ -12,13 +12,11 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMEAP_AppBroadcastingStatus WMEAP_AppBroadcastingStatus;
 typedef struct WMEAP_AppBroadcastingStatusDetails WMEAP_AppBroadcastingStatusDetails;
 typedef struct WMEAP_AppBroadcastingUI WMEAP_AppBroadcastingUI;
@@ -29,7 +27,6 @@ typedef struct WMEAP_IAppBroadcastingStatusDetails WMEAP_IAppBroadcastingStatusD
 typedef struct WMEAP_IAppBroadcastingUI WMEAP_IAppBroadcastingUI;
 typedef struct WMEAP_IAppBroadcastingMonitor WMEAP_IAppBroadcastingMonitor;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
@@ -39,7 +36,6 @@ typedef struct WSY_User WSY_User;
 typedef struct WF_TypedEventHandler_WMEAP_AppBroadcastingMonitor_Object WF_TypedEventHandler_WMEAP_AppBroadcastingMonitor_Object;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -64,84 +60,51 @@ static const IID CWINRT_IID_WMEAP_IAppBroadcastingUI CWINRT_MAYBE_UNUSED = { 0xE
 static const IID CWINRT_IID_WMEAP_IAppBroadcastingMonitor CWINRT_MAYBE_UNUSED = { 0x00F95A68, 0x8907, 0x48A0, { 0xB8, 0xEF, 0x24, 0xD2, 0x08, 0x13, 0x75, 0x42 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Media.AppBroadcasting.AppBroadcastingStatus */
 HRESULT wmeap_app_broadcasting_status_new(WMEAP_AppBroadcastingStatus **out);
 
-/* Windows.Media.AppBroadcasting.AppBroadcastingStatus */
-/* Windows.Media.AppBroadcasting.AppBroadcastingStatus.get_CanStartBroadcast() */
 HRESULT wmeap_app_broadcasting_status_get__can_start_broadcast(WMEAP_AppBroadcastingStatus *self, BOOL *value);
 
-/* Windows.Media.AppBroadcasting.AppBroadcastingStatus.get_Details() */
 HRESULT wmeap_app_broadcasting_status_get__details(WMEAP_AppBroadcastingStatus *self, WMEAP_AppBroadcastingStatusDetails** value);
 
-/* activate Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails */
 HRESULT wmeap_app_broadcasting_status_details_new(WMEAP_AppBroadcastingStatusDetails **out);
 
-/* Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails */
-/* Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails.get_IsAnyAppBroadcasting() */
 HRESULT wmeap_app_broadcasting_status_details_get__is_any_app_broadcasting(WMEAP_AppBroadcastingStatusDetails *self, BOOL *value);
 
-/* Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails.get_IsCaptureResourceUnavailable() */
 HRESULT wmeap_app_broadcasting_status_details_get__is_capture_resource_unavailable(WMEAP_AppBroadcastingStatusDetails *self, BOOL *value);
 
-/* Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails.get_IsGameStreamInProgress() */
 HRESULT wmeap_app_broadcasting_status_details_get__is_game_stream_in_progress(WMEAP_AppBroadcastingStatusDetails *self, BOOL *value);
 
-/* Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails.get_IsGpuConstrained() */
 HRESULT wmeap_app_broadcasting_status_details_get__is_gpu_constrained(WMEAP_AppBroadcastingStatusDetails *self, BOOL *value);
 
-/* Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails.get_IsAppInactive() */
 HRESULT wmeap_app_broadcasting_status_details_get__is_app_inactive(WMEAP_AppBroadcastingStatusDetails *self, BOOL *value);
 
-/* Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails.get_IsBlockedForApp() */
 HRESULT wmeap_app_broadcasting_status_details_get__is_blocked_for_app(WMEAP_AppBroadcastingStatusDetails *self, BOOL *value);
 
-/* Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails.get_IsDisabledByUser() */
 HRESULT wmeap_app_broadcasting_status_details_get__is_disabled_by_user(WMEAP_AppBroadcastingStatusDetails *self, BOOL *value);
 
-/* Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails.get_IsDisabledBySystem() */
 HRESULT wmeap_app_broadcasting_status_details_get__is_disabled_by_system(WMEAP_AppBroadcastingStatusDetails *self, BOOL *value);
 
-/* activate Windows.Media.AppBroadcasting.AppBroadcastingUI */
 HRESULT wmeap_app_broadcasting_u_i_new(WMEAP_AppBroadcastingUI **out);
 
-/* Windows.Media.AppBroadcasting.AppBroadcastingUI */
-/* Windows.Media.AppBroadcasting.AppBroadcastingUI.GetStatus() */
 HRESULT wmeap_app_broadcasting_u_i_get_status(WMEAP_AppBroadcastingUI *self, WMEAP_AppBroadcastingStatus** out);
 
-/* Windows.Media.AppBroadcasting.AppBroadcastingUI.ShowBroadcastUI() */
 HRESULT wmeap_app_broadcasting_u_i_show_broadcast_u_i(WMEAP_AppBroadcastingUI *self);
 
-/* Windows.Media.AppBroadcasting.AppBroadcastingUI.GetDefault() */
 HRESULT wmeap_app_broadcasting_u_i_get_default(WMEAP_AppBroadcastingUI** out);
 
-/* Windows.Media.AppBroadcasting.AppBroadcastingUI.GetForUser(user) */
 HRESULT wmeap_app_broadcasting_u_i_get_for_user(WSY_User* user, WMEAP_AppBroadcastingUI** out);
 
-/* Windows.Media.AppBroadcasting.IAppBroadcastingUIStatics */
-/* Windows.Media.AppBroadcasting.IAppBroadcastingUIStatics.GetDefault() */
 HRESULT wmeap_app_broadcasting_u_i_statics_get_default(WMEAP_IAppBroadcastingUIStatics *self, WMEAP_AppBroadcastingUI** out);
 
-/* Windows.Media.AppBroadcasting.IAppBroadcastingUIStatics.GetForUser(user) */
 HRESULT wmeap_app_broadcasting_u_i_statics_get_for_user(WMEAP_IAppBroadcastingUIStatics *self, WSY_User* user, WMEAP_AppBroadcastingUI** out);
 
-/* activate Windows.Media.AppBroadcasting.AppBroadcastingMonitor */
 HRESULT wmeap_app_broadcasting_monitor_new(WMEAP_AppBroadcastingMonitor **out);
 
-/* Windows.Media.AppBroadcasting.AppBroadcastingMonitor */
-/* Windows.Media.AppBroadcasting.AppBroadcastingMonitor.get_IsCurrentAppBroadcasting() */
 HRESULT wmeap_app_broadcasting_monitor_get__is_current_app_broadcasting(WMEAP_AppBroadcastingMonitor *self, BOOL *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeap_app_broadcasting_monitor_on_is_current_app_broadcasting_changed(WMEAP_AppBroadcastingMonitor *self, cwinrt_event_fn fn, void *ctx);
 void wmeap_app_broadcasting_monitor_off_is_current_app_broadcasting_changed(WMEAP_AppBroadcastingMonitor *self, cwinrt_token token);
 
-/* Windows.Media.AppBroadcasting.IAppBroadcastingStatus */
-/* Windows.Media.AppBroadcasting.IAppBroadcastingStatusDetails */
-/* Windows.Media.AppBroadcasting.IAppBroadcastingUI */
-/* Windows.Media.AppBroadcasting.IAppBroadcastingMonitor */
 #endif /* CWINRT_WINDOWS_MEDIA_APPBROADCASTING_H */

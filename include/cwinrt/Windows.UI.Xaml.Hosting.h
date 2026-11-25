@@ -14,7 +14,6 @@
 #include <cwinrt/Windows.UI.Xaml.Controls.Primitives.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WUIWI_AppWindow
 #define CWINRT_FWD_WUIWI_AppWindow
 typedef struct WUIWI_AppWindow WUIWI_AppWindow;
@@ -36,7 +35,6 @@ typedef struct WUC_Visual WUC_Visual;
 typedef struct WUIXACO_ScrollViewer WUIXACO_ScrollViewer;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUIXAHO_DesignerAppManager WUIXAHO_DesignerAppManager;
 typedef struct WUIXAHO_DesignerAppView WUIXAHO_DesignerAppView;
 typedef struct WUIXAHO_DesktopWindowXamlSource WUIXAHO_DesktopWindowXamlSource;
@@ -73,7 +71,6 @@ typedef struct WUIXAHO_IXamlUIPresenter WUIXAHO_IXamlUIPresenter;
 typedef struct WUIXAHO_IXamlSourceFocusNavigationResult WUIXAHO_IXamlSourceFocusNavigationResult;
 typedef struct WUIXAHO_IDesignerAppExitedEventArgs WUIXAHO_IDesignerAppExitedEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_TypedEventHandler_WUIXAHO_DesignerAppManager_WUIXAHO_DesignerAppExitedEventArgs
 #define CWINRT_FWD_WF_TypedEventHandler_WUIXAHO_DesignerAppManager_WUIXAHO_DesignerAppExitedEventArgs
 typedef struct WF_TypedEventHandler_WUIXAHO_DesignerAppManager_WUIXAHO_DesignerAppExitedEventArgs WF_TypedEventHandler_WUIXAHO_DesignerAppManager_WUIXAHO_DesignerAppExitedEventArgs;
@@ -169,7 +166,6 @@ typedef enum WUIXAHO_XamlSourceFocusNavigationReason {
 } WUIXAHO_XamlSourceFocusNavigationReason;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -270,69 +266,45 @@ static const IID CWINRT_IID_WUIXAHO_IXamlSourceFocusNavigationResult CWINRT_MAYB
 static const IID CWINRT_IID_WUIXAHO_IDesignerAppExitedEventArgs CWINRT_MAYBE_UNUSED = { 0xF6AAC86A, 0x0CAD, 0x410C, { 0x8F, 0x62, 0xDC, 0x29, 0x36, 0x15, 0x1C, 0x74 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.UI.Xaml.Hosting.DesignerAppManager */
 HRESULT wuixaho_designer_app_manager_new(WUIXAHO_DesignerAppManager **out);
 
-/* Windows.UI.Xaml.Hosting.DesignerAppManager */
-/* Windows.UI.Xaml.Hosting.DesignerAppManager.get_AppUserModelId() */
 HRESULT wuixaho_designer_app_manager_get__app_user_model_id(WUIXAHO_DesignerAppManager *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Hosting.DesignerAppManager.CreateNewViewAsync(initialViewState, initialViewSize) */
 HRESULT wuixaho_designer_app_manager_create_new_view_async(WUIXAHO_DesignerAppManager *self, WUIXAHO_DesignerAppViewState initialViewState, WF_Size initialViewSize, WF_IAsyncOperation_WUIXAHO_DesignerAppView** out);
 
-/* Windows.UI.Xaml.Hosting.DesignerAppManager.LoadObjectIntoAppAsync(dllName, classId, initializationData) */
 HRESULT wuixaho_designer_app_manager_load_object_into_app_async(WUIXAHO_DesignerAppManager *self, cwinrt_hstring dllName, GUID classId, cwinrt_hstring initializationData, WF_IAsyncAction** out);
 
-/* Windows.UI.Xaml.Hosting.DesignerAppManager.Close() */
 HRESULT wuixaho_designer_app_manager_close(WUIXAHO_DesignerAppManager *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixaho_designer_app_manager_on_designer_app_exited(WUIXAHO_DesignerAppManager *self, cwinrt_event_fn fn, void *ctx);
 void wuixaho_designer_app_manager_off_designer_app_exited(WUIXAHO_DesignerAppManager *self, cwinrt_token token);
 
-/* activate Windows.UI.Xaml.Hosting.DesignerAppView */
 HRESULT wuixaho_designer_app_view_new(WUIXAHO_DesignerAppView **out);
 
-/* Windows.UI.Xaml.Hosting.DesignerAppView */
-/* Windows.UI.Xaml.Hosting.DesignerAppView.get_ApplicationViewId() */
 HRESULT wuixaho_designer_app_view_get__application_view_id(WUIXAHO_DesignerAppView *self, int32_t *value);
 
-/* Windows.UI.Xaml.Hosting.DesignerAppView.get_AppUserModelId() */
 HRESULT wuixaho_designer_app_view_get__app_user_model_id(WUIXAHO_DesignerAppView *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Hosting.DesignerAppView.get_ViewState() */
 HRESULT wuixaho_designer_app_view_get__view_state(WUIXAHO_DesignerAppView *self, WUIXAHO_DesignerAppViewState *value);
 
-/* Windows.UI.Xaml.Hosting.DesignerAppView.get_ViewSize() */
 HRESULT wuixaho_designer_app_view_get__view_size(WUIXAHO_DesignerAppView *self, WF_Size *value);
 
-/* Windows.UI.Xaml.Hosting.DesignerAppView.UpdateViewAsync(viewState, viewSize) */
 HRESULT wuixaho_designer_app_view_update_view_async(WUIXAHO_DesignerAppView *self, WUIXAHO_DesignerAppViewState viewState, WF_Size viewSize, WF_IAsyncAction** out);
 
-/* Windows.UI.Xaml.Hosting.DesignerAppView.Close() */
 HRESULT wuixaho_designer_app_view_close(WUIXAHO_DesignerAppView *self);
 
-/* Windows.UI.Xaml.Hosting.DesktopWindowXamlSource */
-/* Windows.UI.Xaml.Hosting.DesktopWindowXamlSource.get_Content() */
 HRESULT wuixaho_desktop_window_xaml_source_get__content(WUIXAHO_DesktopWindowXamlSource *self, WUIXA_UIElement** value);
 
-/* Windows.UI.Xaml.Hosting.DesktopWindowXamlSource.put_Content() */
 HRESULT wuixaho_desktop_window_xaml_source_put__content(WUIXAHO_DesktopWindowXamlSource *self, WUIXA_UIElement* value);
 
-/* Windows.UI.Xaml.Hosting.DesktopWindowXamlSource.get_HasFocus() */
 HRESULT wuixaho_desktop_window_xaml_source_get__has_focus(WUIXAHO_DesktopWindowXamlSource *self, BOOL *value);
 
-/* Windows.UI.Xaml.Hosting.DesktopWindowXamlSource.NavigateFocus(request) */
 HRESULT wuixaho_desktop_window_xaml_source_navigate_focus(WUIXAHO_DesktopWindowXamlSource *self, WUIXAHO_XamlSourceFocusNavigationRequest* request, WUIXAHO_XamlSourceFocusNavigationResult** out);
 
-/* Windows.UI.Xaml.Hosting.DesktopWindowXamlSource.Close() */
 HRESULT wuixaho_desktop_window_xaml_source_close(WUIXAHO_DesktopWindowXamlSource *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixaho_desktop_window_xaml_source_on_take_focus_requested(WUIXAHO_DesktopWindowXamlSource *self, cwinrt_event_fn fn, void *ctx);
@@ -341,238 +313,140 @@ void wuixaho_desktop_window_xaml_source_off_take_focus_requested(WUIXAHO_Desktop
 cwinrt_token wuixaho_desktop_window_xaml_source_on_got_focus(WUIXAHO_DesktopWindowXamlSource *self, cwinrt_event_fn fn, void *ctx);
 void wuixaho_desktop_window_xaml_source_off_got_focus(WUIXAHO_DesktopWindowXamlSource *self, cwinrt_token token);
 
-/* activate Windows.UI.Xaml.Hosting.DesktopWindowXamlSourceGotFocusEventArgs */
 HRESULT wuixaho_desktop_window_xaml_source_got_focus_event_args_new(WUIXAHO_DesktopWindowXamlSourceGotFocusEventArgs **out);
 
-/* Windows.UI.Xaml.Hosting.DesktopWindowXamlSourceGotFocusEventArgs */
-/* Windows.UI.Xaml.Hosting.DesktopWindowXamlSourceGotFocusEventArgs.get_Request() */
 HRESULT wuixaho_desktop_window_xaml_source_got_focus_event_args_get__request(WUIXAHO_DesktopWindowXamlSourceGotFocusEventArgs *self, WUIXAHO_XamlSourceFocusNavigationRequest** value);
 
-/* activate Windows.UI.Xaml.Hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs */
 HRESULT wuixaho_desktop_window_xaml_source_take_focus_requested_event_args_new(WUIXAHO_DesktopWindowXamlSourceTakeFocusRequestedEventArgs **out);
 
-/* Windows.UI.Xaml.Hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs */
-/* Windows.UI.Xaml.Hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs.get_Request() */
 HRESULT wuixaho_desktop_window_xaml_source_take_focus_requested_event_args_get__request(WUIXAHO_DesktopWindowXamlSourceTakeFocusRequestedEventArgs *self, WUIXAHO_XamlSourceFocusNavigationRequest** value);
 
-/* activate Windows.UI.Xaml.Hosting.ElementCompositionPreview */
 HRESULT wuixaho_element_composition_preview_new(WUIXAHO_ElementCompositionPreview **out);
 
-/* Windows.UI.Xaml.Hosting.ElementCompositionPreview */
-/* Windows.UI.Xaml.Hosting.ElementCompositionPreview.SetAppWindowContent(appWindow, xamlContent) */
 HRESULT wuixaho_element_composition_preview_set_app_window_content(WUIWI_AppWindow* appWindow, WUIXA_UIElement* xamlContent);
 
-/* Windows.UI.Xaml.Hosting.ElementCompositionPreview.GetAppWindowContent(appWindow) */
 HRESULT wuixaho_element_composition_preview_get_app_window_content(WUIWI_AppWindow* appWindow, WUIXA_UIElement** out);
 
-/* Windows.UI.Xaml.Hosting.ElementCompositionPreview.SetImplicitShowAnimation(element, animation) */
 HRESULT wuixaho_element_composition_preview_set_implicit_show_animation(WUIXA_UIElement* element, WUC_ICompositionAnimationBase* animation);
 
-/* Windows.UI.Xaml.Hosting.ElementCompositionPreview.SetImplicitHideAnimation(element, animation) */
 HRESULT wuixaho_element_composition_preview_set_implicit_hide_animation(WUIXA_UIElement* element, WUC_ICompositionAnimationBase* animation);
 
-/* Windows.UI.Xaml.Hosting.ElementCompositionPreview.SetIsTranslationEnabled(element) */
 HRESULT wuixaho_element_composition_preview_set_is_translation_enabled(WUIXA_UIElement* element, BOOL value);
 
-/* Windows.UI.Xaml.Hosting.ElementCompositionPreview.GetPointerPositionPropertySet(targetElement) */
 HRESULT wuixaho_element_composition_preview_get_pointer_position_property_set(WUIXA_UIElement* targetElement, WUC_CompositionPropertySet** out);
 
-/* Windows.UI.Xaml.Hosting.ElementCompositionPreview.GetElementVisual(element) */
 HRESULT wuixaho_element_composition_preview_get_element_visual(WUIXA_UIElement* element, WUC_Visual** out);
 
-/* Windows.UI.Xaml.Hosting.ElementCompositionPreview.GetElementChildVisual(element) */
 HRESULT wuixaho_element_composition_preview_get_element_child_visual(WUIXA_UIElement* element, WUC_Visual** out);
 
-/* Windows.UI.Xaml.Hosting.ElementCompositionPreview.SetElementChildVisual(element, visual) */
 HRESULT wuixaho_element_composition_preview_set_element_child_visual(WUIXA_UIElement* element, WUC_Visual* visual);
 
-/* Windows.UI.Xaml.Hosting.ElementCompositionPreview.GetScrollViewerManipulationPropertySet(scrollViewer) */
 HRESULT wuixaho_element_composition_preview_get_scroll_viewer_manipulation_property_set(WUIXACO_ScrollViewer* scrollViewer, WUC_CompositionPropertySet** out);
 
-/* Windows.UI.Xaml.Hosting.IDesignerAppManagerFactory */
-/* Windows.UI.Xaml.Hosting.IDesignerAppManagerFactory.Create(appUserModelId) */
 HRESULT wuixaho_designer_app_manager_factory_create(WUIXAHO_IDesignerAppManagerFactory *self, cwinrt_hstring appUserModelId, WUIXAHO_DesignerAppManager** out);
 
-/* Windows.UI.Xaml.Hosting.IDesktopWindowXamlSourceFactory */
-/* Windows.UI.Xaml.Hosting.IDesktopWindowXamlSourceFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixaho_desktop_window_xaml_source_factory_create_instance(WUIXAHO_IDesktopWindowXamlSourceFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAHO_DesktopWindowXamlSource** out);
 
-/* Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics */
-/* Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics.GetElementVisual(element) */
 HRESULT wuixaho_element_composition_preview_statics_get_element_visual(WUIXAHO_IElementCompositionPreviewStatics *self, WUIXA_UIElement* element, WUC_Visual** out);
 
-/* Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics.GetElementChildVisual(element) */
 HRESULT wuixaho_element_composition_preview_statics_get_element_child_visual(WUIXAHO_IElementCompositionPreviewStatics *self, WUIXA_UIElement* element, WUC_Visual** out);
 
-/* Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics.SetElementChildVisual(element, visual) */
 HRESULT wuixaho_element_composition_preview_statics_set_element_child_visual(WUIXAHO_IElementCompositionPreviewStatics *self, WUIXA_UIElement* element, WUC_Visual* visual);
 
-/* Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics.GetScrollViewerManipulationPropertySet(scrollViewer) */
 HRESULT wuixaho_element_composition_preview_statics_get_scroll_viewer_manipulation_property_set(WUIXAHO_IElementCompositionPreviewStatics *self, WUIXACO_ScrollViewer* scrollViewer, WUC_CompositionPropertySet** out);
 
-/* Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics2 */
-/* Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics2.SetImplicitShowAnimation(element, animation) */
 HRESULT wuixaho_element_composition_preview_statics_2_set_implicit_show_animation(WUIXAHO_IElementCompositionPreviewStatics_2 *self, WUIXA_UIElement* element, WUC_ICompositionAnimationBase* animation);
 
-/* Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics2.SetImplicitHideAnimation(element, animation) */
 HRESULT wuixaho_element_composition_preview_statics_2_set_implicit_hide_animation(WUIXAHO_IElementCompositionPreviewStatics_2 *self, WUIXA_UIElement* element, WUC_ICompositionAnimationBase* animation);
 
-/* Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics2.SetIsTranslationEnabled(element) */
 HRESULT wuixaho_element_composition_preview_statics_2_set_is_translation_enabled(WUIXAHO_IElementCompositionPreviewStatics_2 *self, WUIXA_UIElement* element, BOOL value);
 
-/* Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics2.GetPointerPositionPropertySet(targetElement) */
 HRESULT wuixaho_element_composition_preview_statics_2_get_pointer_position_property_set(WUIXAHO_IElementCompositionPreviewStatics_2 *self, WUIXA_UIElement* targetElement, WUC_CompositionPropertySet** out);
 
-/* Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics3 */
-/* Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics3.SetAppWindowContent(appWindow, xamlContent) */
 HRESULT wuixaho_element_composition_preview_statics_3_set_app_window_content(WUIXAHO_IElementCompositionPreviewStatics_3 *self, WUIWI_AppWindow* appWindow, WUIXA_UIElement* xamlContent);
 
-/* Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics3.GetAppWindowContent(appWindow) */
 HRESULT wuixaho_element_composition_preview_statics_3_get_app_window_content(WUIXAHO_IElementCompositionPreviewStatics_3 *self, WUIWI_AppWindow* appWindow, WUIXA_UIElement** out);
 
-/* Windows.UI.Xaml.Hosting.IWindowsXamlManagerStatics */
-/* Windows.UI.Xaml.Hosting.IWindowsXamlManagerStatics.InitializeForCurrentThread() */
 HRESULT wuixaho_windows_xaml_manager_statics_initialize_for_current_thread(WUIXAHO_IWindowsXamlManagerStatics *self, WUIXAHO_WindowsXamlManager** out);
 
-/* Windows.UI.Xaml.Hosting.IXamlSourceFocusNavigationRequestFactory */
-/* Windows.UI.Xaml.Hosting.IXamlSourceFocusNavigationRequestFactory.CreateInstance(reason) */
 HRESULT wuixaho_xaml_source_focus_navigation_request_factory_create_instance(WUIXAHO_IXamlSourceFocusNavigationRequestFactory *self, WUIXAHO_XamlSourceFocusNavigationReason reason, WUIXAHO_XamlSourceFocusNavigationRequest** out);
 
-/* Windows.UI.Xaml.Hosting.IXamlSourceFocusNavigationRequestFactory.CreateInstanceWithHintRect(reason, hintRect) */
 HRESULT wuixaho_xaml_source_focus_navigation_request_factory_create_instance_with_hint_rect(WUIXAHO_IXamlSourceFocusNavigationRequestFactory *self, WUIXAHO_XamlSourceFocusNavigationReason reason, WF_Rect hintRect, WUIXAHO_XamlSourceFocusNavigationRequest** out);
 
-/* Windows.UI.Xaml.Hosting.IXamlSourceFocusNavigationRequestFactory.CreateInstanceWithHintRectAndCorrelationId(reason, hintRect, correlationId) */
 HRESULT wuixaho_xaml_source_focus_navigation_request_factory_create_instance_with_hint_rect_and_correlation_id(WUIXAHO_IXamlSourceFocusNavigationRequestFactory *self, WUIXAHO_XamlSourceFocusNavigationReason reason, WF_Rect hintRect, GUID correlationId, WUIXAHO_XamlSourceFocusNavigationRequest** out);
 
-/* Windows.UI.Xaml.Hosting.IXamlSourceFocusNavigationResultFactory */
-/* Windows.UI.Xaml.Hosting.IXamlSourceFocusNavigationResultFactory.CreateInstance(focusMoved) */
 HRESULT wuixaho_xaml_source_focus_navigation_result_factory_create_instance(WUIXAHO_IXamlSourceFocusNavigationResultFactory *self, BOOL focusMoved, WUIXAHO_XamlSourceFocusNavigationResult** out);
 
-/* Windows.UI.Xaml.Hosting.IXamlUIPresenterHost */
-/* Windows.UI.Xaml.Hosting.IXamlUIPresenterHost.ResolveFileResource(path) */
 HRESULT wuixaho_xaml_u_i_presenter_host_resolve_file_resource(WUIXAHO_IXamlUIPresenterHost *self, cwinrt_hstring path, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Hosting.IXamlUIPresenterHost2 */
-/* Windows.UI.Xaml.Hosting.IXamlUIPresenterHost2.GetGenericXamlFilePath() */
 HRESULT wuixaho_xaml_u_i_presenter_host_2_get_generic_xaml_file_path(WUIXAHO_IXamlUIPresenterHost_2 *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Hosting.IXamlUIPresenterHost3 */
-/* Windows.UI.Xaml.Hosting.IXamlUIPresenterHost3.ResolveDictionaryResource(dictionary, dictionaryKey, suggestedValue) */
 HRESULT wuixaho_xaml_u_i_presenter_host_3_resolve_dictionary_resource(WUIXAHO_IXamlUIPresenterHost_3 *self, WUIXA_ResourceDictionary* dictionary, IInspectable* dictionaryKey, IInspectable* suggestedValue, IInspectable** out);
 
-/* Windows.UI.Xaml.Hosting.IXamlUIPresenterStatics */
-/* Windows.UI.Xaml.Hosting.IXamlUIPresenterStatics.get_CompleteTimelinesAutomatically() */
 HRESULT wuixaho_xaml_u_i_presenter_statics_get__complete_timelines_automatically(WUIXAHO_IXamlUIPresenterStatics *self, BOOL *value);
 
-/* Windows.UI.Xaml.Hosting.IXamlUIPresenterStatics.put_CompleteTimelinesAutomatically() */
 HRESULT wuixaho_xaml_u_i_presenter_statics_put__complete_timelines_automatically(WUIXAHO_IXamlUIPresenterStatics *self, BOOL value);
 
-/* Windows.UI.Xaml.Hosting.IXamlUIPresenterStatics.SetHost(host) */
 HRESULT wuixaho_xaml_u_i_presenter_statics_set_host(WUIXAHO_IXamlUIPresenterStatics *self, WUIXAHO_IXamlUIPresenterHost* host);
 
-/* Windows.UI.Xaml.Hosting.IXamlUIPresenterStatics.NotifyWindowSizeChanged() */
 HRESULT wuixaho_xaml_u_i_presenter_statics_notify_window_size_changed(WUIXAHO_IXamlUIPresenterStatics *self);
 
-/* Windows.UI.Xaml.Hosting.IXamlUIPresenterStatics2 */
-/* Windows.UI.Xaml.Hosting.IXamlUIPresenterStatics2.GetFlyoutPlacementTargetInfo(placementTarget, preferredPlacement, targetPreferredPlacement, allowFallbacks) */
 HRESULT wuixaho_xaml_u_i_presenter_statics_2_get_flyout_placement_target_info(WUIXAHO_IXamlUIPresenterStatics_2 *self, WUIXA_FrameworkElement* placementTarget, WUIXACOPR_FlyoutPlacementMode preferredPlacement, WUIXACOPR_FlyoutPlacementMode targetPreferredPlacement, BOOL allowFallbacks, WF_Rect *out);
 
-/* Windows.UI.Xaml.Hosting.IXamlUIPresenterStatics2.GetFlyoutPlacement(placementTargetBounds, controlSize, minControlSize, containerRect, targetPreferredPlacement, allowFallbacks, chosenPlacement) */
 HRESULT wuixaho_xaml_u_i_presenter_statics_2_get_flyout_placement(WUIXAHO_IXamlUIPresenterStatics_2 *self, WF_Rect placementTargetBounds, WF_Size controlSize, WF_Size minControlSize, WF_Rect containerRect, WUIXACOPR_FlyoutPlacementMode targetPreferredPlacement, BOOL allowFallbacks, WUIXACOPR_FlyoutPlacementMode chosenPlacement, WF_Rect *out);
 
-/* activate Windows.UI.Xaml.Hosting.WindowsXamlManager */
 HRESULT wuixaho_windows_xaml_manager_new(WUIXAHO_WindowsXamlManager **out);
 
-/* Windows.UI.Xaml.Hosting.WindowsXamlManager */
-/* Windows.UI.Xaml.Hosting.WindowsXamlManager.Close() */
 HRESULT wuixaho_windows_xaml_manager_close(WUIXAHO_WindowsXamlManager *self);
 
-/* Windows.UI.Xaml.Hosting.WindowsXamlManager.InitializeForCurrentThread() */
 HRESULT wuixaho_windows_xaml_manager_initialize_for_current_thread(WUIXAHO_WindowsXamlManager** out);
 
-/* activate Windows.UI.Xaml.Hosting.XamlSourceFocusNavigationRequest */
 HRESULT wuixaho_xaml_source_focus_navigation_request_new(WUIXAHO_XamlSourceFocusNavigationRequest **out);
 
-/* Windows.UI.Xaml.Hosting.XamlSourceFocusNavigationRequest */
-/* Windows.UI.Xaml.Hosting.XamlSourceFocusNavigationRequest.get_Reason() */
 HRESULT wuixaho_xaml_source_focus_navigation_request_get__reason(WUIXAHO_XamlSourceFocusNavigationRequest *self, WUIXAHO_XamlSourceFocusNavigationReason *value);
 
-/* Windows.UI.Xaml.Hosting.XamlSourceFocusNavigationRequest.get_HintRect() */
 HRESULT wuixaho_xaml_source_focus_navigation_request_get__hint_rect(WUIXAHO_XamlSourceFocusNavigationRequest *self, WF_Rect *value);
 
-/* Windows.UI.Xaml.Hosting.XamlSourceFocusNavigationRequest.get_CorrelationId() */
 HRESULT wuixaho_xaml_source_focus_navigation_request_get__correlation_id(WUIXAHO_XamlSourceFocusNavigationRequest *self, GUID *value);
 
-/* activate Windows.UI.Xaml.Hosting.XamlUIPresenter */
 HRESULT wuixaho_xaml_u_i_presenter_new(WUIXAHO_XamlUIPresenter **out);
 
-/* Windows.UI.Xaml.Hosting.XamlUIPresenter */
-/* Windows.UI.Xaml.Hosting.XamlUIPresenter.get_RootElement() */
 HRESULT wuixaho_xaml_u_i_presenter_get__root_element(WUIXAHO_XamlUIPresenter *self, WUIXA_UIElement** value);
 
-/* Windows.UI.Xaml.Hosting.XamlUIPresenter.put_RootElement() */
 HRESULT wuixaho_xaml_u_i_presenter_put__root_element(WUIXAHO_XamlUIPresenter *self, WUIXA_UIElement* value);
 
-/* Windows.UI.Xaml.Hosting.XamlUIPresenter.get_ThemeKey() */
 HRESULT wuixaho_xaml_u_i_presenter_get__theme_key(WUIXAHO_XamlUIPresenter *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Hosting.XamlUIPresenter.put_ThemeKey() */
 HRESULT wuixaho_xaml_u_i_presenter_put__theme_key(WUIXAHO_XamlUIPresenter *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Hosting.XamlUIPresenter.get_ThemeResourcesXaml() */
 HRESULT wuixaho_xaml_u_i_presenter_get__theme_resources_xaml(WUIXAHO_XamlUIPresenter *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Hosting.XamlUIPresenter.put_ThemeResourcesXaml() */
 HRESULT wuixaho_xaml_u_i_presenter_put__theme_resources_xaml(WUIXAHO_XamlUIPresenter *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Hosting.XamlUIPresenter.SetSize(width, height) */
 HRESULT wuixaho_xaml_u_i_presenter_set_size(WUIXAHO_XamlUIPresenter *self, int32_t width, int32_t height);
 
-/* Windows.UI.Xaml.Hosting.XamlUIPresenter.Render() */
 HRESULT wuixaho_xaml_u_i_presenter_render(WUIXAHO_XamlUIPresenter *self);
 
-/* Windows.UI.Xaml.Hosting.XamlUIPresenter.Present() */
 HRESULT wuixaho_xaml_u_i_presenter_present(WUIXAHO_XamlUIPresenter *self);
 
-/* Windows.UI.Xaml.Hosting.XamlUIPresenter.GetFlyoutPlacementTargetInfo(placementTarget, preferredPlacement, targetPreferredPlacement, allowFallbacks) */
 HRESULT wuixaho_xaml_u_i_presenter_get_flyout_placement_target_info(WUIXA_FrameworkElement* placementTarget, WUIXACOPR_FlyoutPlacementMode preferredPlacement, WUIXACOPR_FlyoutPlacementMode targetPreferredPlacement, BOOL allowFallbacks, WF_Rect *out);
 
-/* Windows.UI.Xaml.Hosting.XamlUIPresenter.GetFlyoutPlacement(placementTargetBounds, controlSize, minControlSize, containerRect, targetPreferredPlacement, allowFallbacks, chosenPlacement) */
 HRESULT wuixaho_xaml_u_i_presenter_get_flyout_placement(WF_Rect placementTargetBounds, WF_Size controlSize, WF_Size minControlSize, WF_Rect containerRect, WUIXACOPR_FlyoutPlacementMode targetPreferredPlacement, BOOL allowFallbacks, WUIXACOPR_FlyoutPlacementMode chosenPlacement, WF_Rect *out);
 
-/* Windows.UI.Xaml.Hosting.XamlUIPresenter.get_CompleteTimelinesAutomatically() */
 HRESULT wuixaho_xaml_u_i_presenter_get__complete_timelines_automatically(BOOL *value);
 
-/* Windows.UI.Xaml.Hosting.XamlUIPresenter.put_CompleteTimelinesAutomatically() */
 HRESULT wuixaho_xaml_u_i_presenter_put__complete_timelines_automatically(BOOL value);
 
-/* Windows.UI.Xaml.Hosting.XamlUIPresenter.SetHost(host) */
 HRESULT wuixaho_xaml_u_i_presenter_set_host(WUIXAHO_IXamlUIPresenterHost* host);
 
-/* Windows.UI.Xaml.Hosting.XamlUIPresenter.NotifyWindowSizeChanged() */
 HRESULT wuixaho_xaml_u_i_presenter_notify_window_size_changed(void);
 
-/* activate Windows.UI.Xaml.Hosting.XamlSourceFocusNavigationResult */
 HRESULT wuixaho_xaml_source_focus_navigation_result_new(WUIXAHO_XamlSourceFocusNavigationResult **out);
 
-/* Windows.UI.Xaml.Hosting.XamlSourceFocusNavigationResult */
-/* Windows.UI.Xaml.Hosting.XamlSourceFocusNavigationResult.get_WasFocusMoved() */
 HRESULT wuixaho_xaml_source_focus_navigation_result_get__was_focus_moved(WUIXAHO_XamlSourceFocusNavigationResult *self, BOOL *value);
 
-/* activate Windows.UI.Xaml.Hosting.DesignerAppExitedEventArgs */
 HRESULT wuixaho_designer_app_exited_event_args_new(WUIXAHO_DesignerAppExitedEventArgs **out);
 
-/* Windows.UI.Xaml.Hosting.DesignerAppExitedEventArgs */
-/* Windows.UI.Xaml.Hosting.DesignerAppExitedEventArgs.get_ExitCode() */
 HRESULT wuixaho_designer_app_exited_event_args_get__exit_code(WUIXAHO_DesignerAppExitedEventArgs *self, uint32_t *value);
 
-/* Windows.UI.Xaml.Hosting.IDesignerAppManager */
-/* Windows.UI.Xaml.Hosting.IDesignerAppView */
-/* Windows.UI.Xaml.Hosting.IDesktopWindowXamlSource */
-/* Windows.UI.Xaml.Hosting.IDesktopWindowXamlSourceGotFocusEventArgs */
-/* Windows.UI.Xaml.Hosting.IDesktopWindowXamlSourceTakeFocusRequestedEventArgs */
-/* Windows.UI.Xaml.Hosting.IXamlSourceFocusNavigationRequest */
-/* Windows.UI.Xaml.Hosting.IXamlUIPresenter */
-/* Windows.UI.Xaml.Hosting.IXamlSourceFocusNavigationResult */
-/* Windows.UI.Xaml.Hosting.IDesignerAppExitedEventArgs */
 #endif /* CWINRT_WINDOWS_UI_XAML_HOSTING_H */

@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WGLNU_DecimalFormatter WGLNU_DecimalFormatter;
 typedef struct WGLNU_CurrencyFormatter WGLNU_CurrencyFormatter;
 typedef struct WGLNU_ICurrencyFormatterFactory WGLNU_ICurrencyFormatterFactory;
@@ -39,7 +38,6 @@ typedef struct WGLNU_INumberFormatter WGLNU_INumberFormatter;
 typedef struct WGLNU_INumberFormatter_2 WGLNU_INumberFormatter_2;
 typedef struct WGLNU_INumberParser WGLNU_INumberParser;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IVectorView_HSTRING
 #define CWINRT_FWD_WFOCO_IVectorView_HSTRING
 typedef struct WFOCO_IVectorView_HSTRING WFOCO_IVectorView_HSTRING;
@@ -74,7 +72,6 @@ typedef enum WGLNU_RoundingAlgorithm {
 } WGLNU_RoundingAlgorithm;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -151,622 +148,398 @@ static const IID CWINRT_IID_WGLNU_INumberFormatter_2 CWINRT_MAYBE_UNUSED = { 0xD
 static const IID CWINRT_IID_WGLNU_INumberParser CWINRT_MAYBE_UNUSED = { 0xE6659412, 0x4A13, 0x4A53, { 0x83, 0xA1, 0x39, 0x2F, 0xBE, 0x4C, 0xFF, 0x9F } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Globalization.NumberFormatting.DecimalFormatter */
 HRESULT wglnu_decimal_formatter_new(WGLNU_DecimalFormatter **out);
 
-/* Windows.Globalization.NumberFormatting.DecimalFormatter */
-/* Windows.Globalization.NumberFormatting.DecimalFormatter.get_Languages() */
 HRESULT wglnu_decimal_formatter_get__languages(WGLNU_DecimalFormatter *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Globalization.NumberFormatting.DecimalFormatter.get_GeographicRegion() */
 HRESULT wglnu_decimal_formatter_get__geographic_region(WGLNU_DecimalFormatter *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.NumberFormatting.DecimalFormatter.get_IntegerDigits() */
 HRESULT wglnu_decimal_formatter_get__integer_digits(WGLNU_DecimalFormatter *self, int32_t *value);
 
-/* Windows.Globalization.NumberFormatting.DecimalFormatter.put_IntegerDigits() */
 HRESULT wglnu_decimal_formatter_put__integer_digits(WGLNU_DecimalFormatter *self, int32_t value);
 
-/* Windows.Globalization.NumberFormatting.DecimalFormatter.get_FractionDigits() */
 HRESULT wglnu_decimal_formatter_get__fraction_digits(WGLNU_DecimalFormatter *self, int32_t *value);
 
-/* Windows.Globalization.NumberFormatting.DecimalFormatter.put_FractionDigits() */
 HRESULT wglnu_decimal_formatter_put__fraction_digits(WGLNU_DecimalFormatter *self, int32_t value);
 
-/* Windows.Globalization.NumberFormatting.DecimalFormatter.get_IsGrouped() */
 HRESULT wglnu_decimal_formatter_get__is_grouped(WGLNU_DecimalFormatter *self, BOOL *value);
 
-/* Windows.Globalization.NumberFormatting.DecimalFormatter.put_IsGrouped() */
 HRESULT wglnu_decimal_formatter_put__is_grouped(WGLNU_DecimalFormatter *self, BOOL value);
 
-/* Windows.Globalization.NumberFormatting.DecimalFormatter.get_IsDecimalPointAlwaysDisplayed() */
 HRESULT wglnu_decimal_formatter_get__is_decimal_point_always_displayed(WGLNU_DecimalFormatter *self, BOOL *value);
 
-/* Windows.Globalization.NumberFormatting.DecimalFormatter.put_IsDecimalPointAlwaysDisplayed() */
 HRESULT wglnu_decimal_formatter_put__is_decimal_point_always_displayed(WGLNU_DecimalFormatter *self, BOOL value);
 
-/* Windows.Globalization.NumberFormatting.DecimalFormatter.get_NumeralSystem() */
 HRESULT wglnu_decimal_formatter_get__numeral_system(WGLNU_DecimalFormatter *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.NumberFormatting.DecimalFormatter.put_NumeralSystem() */
 HRESULT wglnu_decimal_formatter_put__numeral_system(WGLNU_DecimalFormatter *self, cwinrt_hstring value);
 
-/* Windows.Globalization.NumberFormatting.DecimalFormatter.get_ResolvedLanguage() */
 HRESULT wglnu_decimal_formatter_get__resolved_language(WGLNU_DecimalFormatter *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.NumberFormatting.DecimalFormatter.get_ResolvedGeographicRegion() */
 HRESULT wglnu_decimal_formatter_get__resolved_geographic_region(WGLNU_DecimalFormatter *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.NumberFormatting.DecimalFormatter.Format() */
 HRESULT wglnu_decimal_formatter_format_i64_str(WGLNU_DecimalFormatter *self, int64_t value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.DecimalFormatter.Format() */
 HRESULT wglnu_decimal_formatter_format_u64_str(WGLNU_DecimalFormatter *self, uint64_t value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.DecimalFormatter.Format() */
 HRESULT wglnu_decimal_formatter_format(WGLNU_DecimalFormatter *self, double value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.DecimalFormatter.FormatInt() */
 HRESULT wglnu_decimal_formatter_format_int(WGLNU_DecimalFormatter *self, int64_t value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.DecimalFormatter.FormatUInt() */
 HRESULT wglnu_decimal_formatter_format_u_int(WGLNU_DecimalFormatter *self, uint64_t value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.DecimalFormatter.FormatDouble() */
 HRESULT wglnu_decimal_formatter_format_double(WGLNU_DecimalFormatter *self, double value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.DecimalFormatter.ParseInt(text) */
 HRESULT wglnu_decimal_formatter_parse_int(WGLNU_DecimalFormatter *self, cwinrt_hstring text, int64_t** out);
 
-/* Windows.Globalization.NumberFormatting.DecimalFormatter.ParseUInt(text) */
 HRESULT wglnu_decimal_formatter_parse_u_int(WGLNU_DecimalFormatter *self, cwinrt_hstring text, uint64_t** out);
 
-/* Windows.Globalization.NumberFormatting.DecimalFormatter.ParseDouble(text) */
 HRESULT wglnu_decimal_formatter_parse_double(WGLNU_DecimalFormatter *self, cwinrt_hstring text, double** out);
 
-/* Windows.Globalization.NumberFormatting.DecimalFormatter.get_SignificantDigits() */
 HRESULT wglnu_decimal_formatter_get__significant_digits(WGLNU_DecimalFormatter *self, int32_t *value);
 
-/* Windows.Globalization.NumberFormatting.DecimalFormatter.put_SignificantDigits() */
 HRESULT wglnu_decimal_formatter_put__significant_digits(WGLNU_DecimalFormatter *self, int32_t value);
 
-/* Windows.Globalization.NumberFormatting.DecimalFormatter.get_NumberRounder() */
 HRESULT wglnu_decimal_formatter_get__number_rounder(WGLNU_DecimalFormatter *self, WGLNU_INumberRounder** value);
 
-/* Windows.Globalization.NumberFormatting.DecimalFormatter.put_NumberRounder() */
 HRESULT wglnu_decimal_formatter_put__number_rounder(WGLNU_DecimalFormatter *self, WGLNU_INumberRounder* value);
 
-/* Windows.Globalization.NumberFormatting.DecimalFormatter.get_IsZeroSigned() */
 HRESULT wglnu_decimal_formatter_get__is_zero_signed(WGLNU_DecimalFormatter *self, BOOL *value);
 
-/* Windows.Globalization.NumberFormatting.DecimalFormatter.put_IsZeroSigned() */
 HRESULT wglnu_decimal_formatter_put__is_zero_signed(WGLNU_DecimalFormatter *self, BOOL value);
 
-/* activate Windows.Globalization.NumberFormatting.CurrencyFormatter */
 HRESULT wglnu_currency_formatter_new(WGLNU_CurrencyFormatter **out);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter */
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.get_Currency() */
 HRESULT wglnu_currency_formatter_get__currency(WGLNU_CurrencyFormatter *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.put_Currency() */
 HRESULT wglnu_currency_formatter_put__currency(WGLNU_CurrencyFormatter *self, cwinrt_hstring value);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.get_Languages() */
 HRESULT wglnu_currency_formatter_get__languages(WGLNU_CurrencyFormatter *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.get_GeographicRegion() */
 HRESULT wglnu_currency_formatter_get__geographic_region(WGLNU_CurrencyFormatter *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.get_IntegerDigits() */
 HRESULT wglnu_currency_formatter_get__integer_digits(WGLNU_CurrencyFormatter *self, int32_t *value);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.put_IntegerDigits() */
 HRESULT wglnu_currency_formatter_put__integer_digits(WGLNU_CurrencyFormatter *self, int32_t value);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.get_FractionDigits() */
 HRESULT wglnu_currency_formatter_get__fraction_digits(WGLNU_CurrencyFormatter *self, int32_t *value);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.put_FractionDigits() */
 HRESULT wglnu_currency_formatter_put__fraction_digits(WGLNU_CurrencyFormatter *self, int32_t value);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.get_IsGrouped() */
 HRESULT wglnu_currency_formatter_get__is_grouped(WGLNU_CurrencyFormatter *self, BOOL *value);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.put_IsGrouped() */
 HRESULT wglnu_currency_formatter_put__is_grouped(WGLNU_CurrencyFormatter *self, BOOL value);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.get_IsDecimalPointAlwaysDisplayed() */
 HRESULT wglnu_currency_formatter_get__is_decimal_point_always_displayed(WGLNU_CurrencyFormatter *self, BOOL *value);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.put_IsDecimalPointAlwaysDisplayed() */
 HRESULT wglnu_currency_formatter_put__is_decimal_point_always_displayed(WGLNU_CurrencyFormatter *self, BOOL value);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.get_NumeralSystem() */
 HRESULT wglnu_currency_formatter_get__numeral_system(WGLNU_CurrencyFormatter *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.put_NumeralSystem() */
 HRESULT wglnu_currency_formatter_put__numeral_system(WGLNU_CurrencyFormatter *self, cwinrt_hstring value);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.get_ResolvedLanguage() */
 HRESULT wglnu_currency_formatter_get__resolved_language(WGLNU_CurrencyFormatter *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.get_ResolvedGeographicRegion() */
 HRESULT wglnu_currency_formatter_get__resolved_geographic_region(WGLNU_CurrencyFormatter *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.Format() */
 HRESULT wglnu_currency_formatter_format_i64_str(WGLNU_CurrencyFormatter *self, int64_t value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.Format() */
 HRESULT wglnu_currency_formatter_format_u64_str(WGLNU_CurrencyFormatter *self, uint64_t value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.Format() */
 HRESULT wglnu_currency_formatter_format(WGLNU_CurrencyFormatter *self, double value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.FormatInt() */
 HRESULT wglnu_currency_formatter_format_int(WGLNU_CurrencyFormatter *self, int64_t value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.FormatUInt() */
 HRESULT wglnu_currency_formatter_format_u_int(WGLNU_CurrencyFormatter *self, uint64_t value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.FormatDouble() */
 HRESULT wglnu_currency_formatter_format_double(WGLNU_CurrencyFormatter *self, double value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.ParseInt(text) */
 HRESULT wglnu_currency_formatter_parse_int(WGLNU_CurrencyFormatter *self, cwinrt_hstring text, int64_t** out);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.ParseUInt(text) */
 HRESULT wglnu_currency_formatter_parse_u_int(WGLNU_CurrencyFormatter *self, cwinrt_hstring text, uint64_t** out);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.ParseDouble(text) */
 HRESULT wglnu_currency_formatter_parse_double(WGLNU_CurrencyFormatter *self, cwinrt_hstring text, double** out);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.get_Mode() */
 HRESULT wglnu_currency_formatter_get__mode(WGLNU_CurrencyFormatter *self, WGLNU_CurrencyFormatterMode *value);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.put_Mode() */
 HRESULT wglnu_currency_formatter_put__mode(WGLNU_CurrencyFormatter *self, WGLNU_CurrencyFormatterMode value);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.ApplyRoundingForCurrency(roundingAlgorithm) */
 HRESULT wglnu_currency_formatter_apply_rounding_for_currency(WGLNU_CurrencyFormatter *self, WGLNU_RoundingAlgorithm roundingAlgorithm);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.get_SignificantDigits() */
 HRESULT wglnu_currency_formatter_get__significant_digits(WGLNU_CurrencyFormatter *self, int32_t *value);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.put_SignificantDigits() */
 HRESULT wglnu_currency_formatter_put__significant_digits(WGLNU_CurrencyFormatter *self, int32_t value);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.get_NumberRounder() */
 HRESULT wglnu_currency_formatter_get__number_rounder(WGLNU_CurrencyFormatter *self, WGLNU_INumberRounder** value);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.put_NumberRounder() */
 HRESULT wglnu_currency_formatter_put__number_rounder(WGLNU_CurrencyFormatter *self, WGLNU_INumberRounder* value);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.get_IsZeroSigned() */
 HRESULT wglnu_currency_formatter_get__is_zero_signed(WGLNU_CurrencyFormatter *self, BOOL *value);
 
-/* Windows.Globalization.NumberFormatting.CurrencyFormatter.put_IsZeroSigned() */
 HRESULT wglnu_currency_formatter_put__is_zero_signed(WGLNU_CurrencyFormatter *self, BOOL value);
 
-/* Windows.Globalization.NumberFormatting.ICurrencyFormatterFactory */
-/* Windows.Globalization.NumberFormatting.ICurrencyFormatterFactory.CreateCurrencyFormatterCode(currencyCode) */
 HRESULT wglnu_currency_formatter_factory_create_currency_formatter_code(WGLNU_ICurrencyFormatterFactory *self, cwinrt_hstring currencyCode, WGLNU_CurrencyFormatter** out);
 
-/* Windows.Globalization.NumberFormatting.ICurrencyFormatterFactory.CreateCurrencyFormatterCodeContext(currencyCode, languages, geographicRegion) */
 HRESULT wglnu_currency_formatter_factory_create_currency_formatter_code_context(WGLNU_ICurrencyFormatterFactory *self, cwinrt_hstring currencyCode, WFOCO_IIterable_HSTRING* languages, cwinrt_hstring geographicRegion, WGLNU_CurrencyFormatter** out);
 
-/* Windows.Globalization.NumberFormatting.IDecimalFormatterFactory */
-/* Windows.Globalization.NumberFormatting.IDecimalFormatterFactory.CreateDecimalFormatter(languages, geographicRegion) */
 HRESULT wglnu_decimal_formatter_factory_create_decimal_formatter(WGLNU_IDecimalFormatterFactory *self, WFOCO_IIterable_HSTRING* languages, cwinrt_hstring geographicRegion, WGLNU_DecimalFormatter** out);
 
-/* Windows.Globalization.NumberFormatting.INumeralSystemTranslatorFactory */
-/* Windows.Globalization.NumberFormatting.INumeralSystemTranslatorFactory.Create(languages) */
 HRESULT wglnu_numeral_system_translator_factory_create(WGLNU_INumeralSystemTranslatorFactory *self, WFOCO_IIterable_HSTRING* languages, WGLNU_NumeralSystemTranslator** out);
 
-/* Windows.Globalization.NumberFormatting.IPercentFormatterFactory */
-/* Windows.Globalization.NumberFormatting.IPercentFormatterFactory.CreatePercentFormatter(languages, geographicRegion) */
 HRESULT wglnu_percent_formatter_factory_create_percent_formatter(WGLNU_IPercentFormatterFactory *self, WFOCO_IIterable_HSTRING* languages, cwinrt_hstring geographicRegion, WGLNU_PercentFormatter** out);
 
-/* Windows.Globalization.NumberFormatting.IPermilleFormatterFactory */
-/* Windows.Globalization.NumberFormatting.IPermilleFormatterFactory.CreatePermilleFormatter(languages, geographicRegion) */
 HRESULT wglnu_permille_formatter_factory_create_permille_formatter(WGLNU_IPermilleFormatterFactory *self, WFOCO_IIterable_HSTRING* languages, cwinrt_hstring geographicRegion, WGLNU_PermilleFormatter** out);
 
-/* activate Windows.Globalization.NumberFormatting.IncrementNumberRounder */
 HRESULT wglnu_increment_number_rounder_new(WGLNU_IncrementNumberRounder **out);
 
-/* Windows.Globalization.NumberFormatting.IncrementNumberRounder */
-/* Windows.Globalization.NumberFormatting.IncrementNumberRounder.RoundInt32() */
 HRESULT wglnu_increment_number_rounder_round_int32(WGLNU_IncrementNumberRounder *self, int32_t value, int32_t *out);
 
-/* Windows.Globalization.NumberFormatting.IncrementNumberRounder.RoundUInt32() */
 HRESULT wglnu_increment_number_rounder_round_u_int32(WGLNU_IncrementNumberRounder *self, uint32_t value, uint32_t *out);
 
-/* Windows.Globalization.NumberFormatting.IncrementNumberRounder.RoundInt64() */
 HRESULT wglnu_increment_number_rounder_round_int64(WGLNU_IncrementNumberRounder *self, int64_t value, int64_t *out);
 
-/* Windows.Globalization.NumberFormatting.IncrementNumberRounder.RoundUInt64() */
 HRESULT wglnu_increment_number_rounder_round_u_int64(WGLNU_IncrementNumberRounder *self, uint64_t value, uint64_t *out);
 
-/* Windows.Globalization.NumberFormatting.IncrementNumberRounder.RoundSingle() */
 HRESULT wglnu_increment_number_rounder_round_single(WGLNU_IncrementNumberRounder *self, float value, float *out);
 
-/* Windows.Globalization.NumberFormatting.IncrementNumberRounder.RoundDouble() */
 HRESULT wglnu_increment_number_rounder_round_double(WGLNU_IncrementNumberRounder *self, double value, double *out);
 
-/* Windows.Globalization.NumberFormatting.IncrementNumberRounder.get_RoundingAlgorithm() */
 HRESULT wglnu_increment_number_rounder_get__rounding_algorithm(WGLNU_IncrementNumberRounder *self, WGLNU_RoundingAlgorithm *value);
 
-/* Windows.Globalization.NumberFormatting.IncrementNumberRounder.put_RoundingAlgorithm() */
 HRESULT wglnu_increment_number_rounder_put__rounding_algorithm(WGLNU_IncrementNumberRounder *self, WGLNU_RoundingAlgorithm value);
 
-/* Windows.Globalization.NumberFormatting.IncrementNumberRounder.get_Increment() */
 HRESULT wglnu_increment_number_rounder_get__increment(WGLNU_IncrementNumberRounder *self, double *value);
 
-/* Windows.Globalization.NumberFormatting.IncrementNumberRounder.put_Increment() */
 HRESULT wglnu_increment_number_rounder_put__increment(WGLNU_IncrementNumberRounder *self, double value);
 
-/* activate Windows.Globalization.NumberFormatting.NumeralSystemTranslator */
 HRESULT wglnu_numeral_system_translator_new(WGLNU_NumeralSystemTranslator **out);
 
-/* Windows.Globalization.NumberFormatting.NumeralSystemTranslator */
-/* Windows.Globalization.NumberFormatting.NumeralSystemTranslator.get_Languages() */
 HRESULT wglnu_numeral_system_translator_get__languages(WGLNU_NumeralSystemTranslator *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Globalization.NumberFormatting.NumeralSystemTranslator.get_ResolvedLanguage() */
 HRESULT wglnu_numeral_system_translator_get__resolved_language(WGLNU_NumeralSystemTranslator *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.NumberFormatting.NumeralSystemTranslator.get_NumeralSystem() */
 HRESULT wglnu_numeral_system_translator_get__numeral_system(WGLNU_NumeralSystemTranslator *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.NumberFormatting.NumeralSystemTranslator.put_NumeralSystem() */
 HRESULT wglnu_numeral_system_translator_put__numeral_system(WGLNU_NumeralSystemTranslator *self, cwinrt_hstring value);
 
-/* Windows.Globalization.NumberFormatting.NumeralSystemTranslator.TranslateNumerals() */
 HRESULT wglnu_numeral_system_translator_translate_numerals(WGLNU_NumeralSystemTranslator *self, cwinrt_hstring value, cwinrt_hstring *out);
 
-/* activate Windows.Globalization.NumberFormatting.PercentFormatter */
 HRESULT wglnu_percent_formatter_new(WGLNU_PercentFormatter **out);
 
-/* Windows.Globalization.NumberFormatting.PercentFormatter */
-/* Windows.Globalization.NumberFormatting.PercentFormatter.get_Languages() */
 HRESULT wglnu_percent_formatter_get__languages(WGLNU_PercentFormatter *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Globalization.NumberFormatting.PercentFormatter.get_GeographicRegion() */
 HRESULT wglnu_percent_formatter_get__geographic_region(WGLNU_PercentFormatter *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.NumberFormatting.PercentFormatter.get_IntegerDigits() */
 HRESULT wglnu_percent_formatter_get__integer_digits(WGLNU_PercentFormatter *self, int32_t *value);
 
-/* Windows.Globalization.NumberFormatting.PercentFormatter.put_IntegerDigits() */
 HRESULT wglnu_percent_formatter_put__integer_digits(WGLNU_PercentFormatter *self, int32_t value);
 
-/* Windows.Globalization.NumberFormatting.PercentFormatter.get_FractionDigits() */
 HRESULT wglnu_percent_formatter_get__fraction_digits(WGLNU_PercentFormatter *self, int32_t *value);
 
-/* Windows.Globalization.NumberFormatting.PercentFormatter.put_FractionDigits() */
 HRESULT wglnu_percent_formatter_put__fraction_digits(WGLNU_PercentFormatter *self, int32_t value);
 
-/* Windows.Globalization.NumberFormatting.PercentFormatter.get_IsGrouped() */
 HRESULT wglnu_percent_formatter_get__is_grouped(WGLNU_PercentFormatter *self, BOOL *value);
 
-/* Windows.Globalization.NumberFormatting.PercentFormatter.put_IsGrouped() */
 HRESULT wglnu_percent_formatter_put__is_grouped(WGLNU_PercentFormatter *self, BOOL value);
 
-/* Windows.Globalization.NumberFormatting.PercentFormatter.get_IsDecimalPointAlwaysDisplayed() */
 HRESULT wglnu_percent_formatter_get__is_decimal_point_always_displayed(WGLNU_PercentFormatter *self, BOOL *value);
 
-/* Windows.Globalization.NumberFormatting.PercentFormatter.put_IsDecimalPointAlwaysDisplayed() */
 HRESULT wglnu_percent_formatter_put__is_decimal_point_always_displayed(WGLNU_PercentFormatter *self, BOOL value);
 
-/* Windows.Globalization.NumberFormatting.PercentFormatter.get_NumeralSystem() */
 HRESULT wglnu_percent_formatter_get__numeral_system(WGLNU_PercentFormatter *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.NumberFormatting.PercentFormatter.put_NumeralSystem() */
 HRESULT wglnu_percent_formatter_put__numeral_system(WGLNU_PercentFormatter *self, cwinrt_hstring value);
 
-/* Windows.Globalization.NumberFormatting.PercentFormatter.get_ResolvedLanguage() */
 HRESULT wglnu_percent_formatter_get__resolved_language(WGLNU_PercentFormatter *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.NumberFormatting.PercentFormatter.get_ResolvedGeographicRegion() */
 HRESULT wglnu_percent_formatter_get__resolved_geographic_region(WGLNU_PercentFormatter *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.NumberFormatting.PercentFormatter.Format() */
 HRESULT wglnu_percent_formatter_format_i64_str(WGLNU_PercentFormatter *self, int64_t value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.PercentFormatter.Format() */
 HRESULT wglnu_percent_formatter_format_u64_str(WGLNU_PercentFormatter *self, uint64_t value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.PercentFormatter.Format() */
 HRESULT wglnu_percent_formatter_format(WGLNU_PercentFormatter *self, double value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.PercentFormatter.FormatInt() */
 HRESULT wglnu_percent_formatter_format_int(WGLNU_PercentFormatter *self, int64_t value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.PercentFormatter.FormatUInt() */
 HRESULT wglnu_percent_formatter_format_u_int(WGLNU_PercentFormatter *self, uint64_t value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.PercentFormatter.FormatDouble() */
 HRESULT wglnu_percent_formatter_format_double(WGLNU_PercentFormatter *self, double value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.PercentFormatter.ParseInt(text) */
 HRESULT wglnu_percent_formatter_parse_int(WGLNU_PercentFormatter *self, cwinrt_hstring text, int64_t** out);
 
-/* Windows.Globalization.NumberFormatting.PercentFormatter.ParseUInt(text) */
 HRESULT wglnu_percent_formatter_parse_u_int(WGLNU_PercentFormatter *self, cwinrt_hstring text, uint64_t** out);
 
-/* Windows.Globalization.NumberFormatting.PercentFormatter.ParseDouble(text) */
 HRESULT wglnu_percent_formatter_parse_double(WGLNU_PercentFormatter *self, cwinrt_hstring text, double** out);
 
-/* Windows.Globalization.NumberFormatting.PercentFormatter.get_SignificantDigits() */
 HRESULT wglnu_percent_formatter_get__significant_digits(WGLNU_PercentFormatter *self, int32_t *value);
 
-/* Windows.Globalization.NumberFormatting.PercentFormatter.put_SignificantDigits() */
 HRESULT wglnu_percent_formatter_put__significant_digits(WGLNU_PercentFormatter *self, int32_t value);
 
-/* Windows.Globalization.NumberFormatting.PercentFormatter.get_NumberRounder() */
 HRESULT wglnu_percent_formatter_get__number_rounder(WGLNU_PercentFormatter *self, WGLNU_INumberRounder** value);
 
-/* Windows.Globalization.NumberFormatting.PercentFormatter.put_NumberRounder() */
 HRESULT wglnu_percent_formatter_put__number_rounder(WGLNU_PercentFormatter *self, WGLNU_INumberRounder* value);
 
-/* Windows.Globalization.NumberFormatting.PercentFormatter.get_IsZeroSigned() */
 HRESULT wglnu_percent_formatter_get__is_zero_signed(WGLNU_PercentFormatter *self, BOOL *value);
 
-/* Windows.Globalization.NumberFormatting.PercentFormatter.put_IsZeroSigned() */
 HRESULT wglnu_percent_formatter_put__is_zero_signed(WGLNU_PercentFormatter *self, BOOL value);
 
-/* activate Windows.Globalization.NumberFormatting.PermilleFormatter */
 HRESULT wglnu_permille_formatter_new(WGLNU_PermilleFormatter **out);
 
-/* Windows.Globalization.NumberFormatting.PermilleFormatter */
-/* Windows.Globalization.NumberFormatting.PermilleFormatter.get_Languages() */
 HRESULT wglnu_permille_formatter_get__languages(WGLNU_PermilleFormatter *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Globalization.NumberFormatting.PermilleFormatter.get_GeographicRegion() */
 HRESULT wglnu_permille_formatter_get__geographic_region(WGLNU_PermilleFormatter *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.NumberFormatting.PermilleFormatter.get_IntegerDigits() */
 HRESULT wglnu_permille_formatter_get__integer_digits(WGLNU_PermilleFormatter *self, int32_t *value);
 
-/* Windows.Globalization.NumberFormatting.PermilleFormatter.put_IntegerDigits() */
 HRESULT wglnu_permille_formatter_put__integer_digits(WGLNU_PermilleFormatter *self, int32_t value);
 
-/* Windows.Globalization.NumberFormatting.PermilleFormatter.get_FractionDigits() */
 HRESULT wglnu_permille_formatter_get__fraction_digits(WGLNU_PermilleFormatter *self, int32_t *value);
 
-/* Windows.Globalization.NumberFormatting.PermilleFormatter.put_FractionDigits() */
 HRESULT wglnu_permille_formatter_put__fraction_digits(WGLNU_PermilleFormatter *self, int32_t value);
 
-/* Windows.Globalization.NumberFormatting.PermilleFormatter.get_IsGrouped() */
 HRESULT wglnu_permille_formatter_get__is_grouped(WGLNU_PermilleFormatter *self, BOOL *value);
 
-/* Windows.Globalization.NumberFormatting.PermilleFormatter.put_IsGrouped() */
 HRESULT wglnu_permille_formatter_put__is_grouped(WGLNU_PermilleFormatter *self, BOOL value);
 
-/* Windows.Globalization.NumberFormatting.PermilleFormatter.get_IsDecimalPointAlwaysDisplayed() */
 HRESULT wglnu_permille_formatter_get__is_decimal_point_always_displayed(WGLNU_PermilleFormatter *self, BOOL *value);
 
-/* Windows.Globalization.NumberFormatting.PermilleFormatter.put_IsDecimalPointAlwaysDisplayed() */
 HRESULT wglnu_permille_formatter_put__is_decimal_point_always_displayed(WGLNU_PermilleFormatter *self, BOOL value);
 
-/* Windows.Globalization.NumberFormatting.PermilleFormatter.get_NumeralSystem() */
 HRESULT wglnu_permille_formatter_get__numeral_system(WGLNU_PermilleFormatter *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.NumberFormatting.PermilleFormatter.put_NumeralSystem() */
 HRESULT wglnu_permille_formatter_put__numeral_system(WGLNU_PermilleFormatter *self, cwinrt_hstring value);
 
-/* Windows.Globalization.NumberFormatting.PermilleFormatter.get_ResolvedLanguage() */
 HRESULT wglnu_permille_formatter_get__resolved_language(WGLNU_PermilleFormatter *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.NumberFormatting.PermilleFormatter.get_ResolvedGeographicRegion() */
 HRESULT wglnu_permille_formatter_get__resolved_geographic_region(WGLNU_PermilleFormatter *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.NumberFormatting.PermilleFormatter.Format() */
 HRESULT wglnu_permille_formatter_format_i64_str(WGLNU_PermilleFormatter *self, int64_t value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.PermilleFormatter.Format() */
 HRESULT wglnu_permille_formatter_format_u64_str(WGLNU_PermilleFormatter *self, uint64_t value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.PermilleFormatter.Format() */
 HRESULT wglnu_permille_formatter_format(WGLNU_PermilleFormatter *self, double value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.PermilleFormatter.FormatInt() */
 HRESULT wglnu_permille_formatter_format_int(WGLNU_PermilleFormatter *self, int64_t value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.PermilleFormatter.FormatUInt() */
 HRESULT wglnu_permille_formatter_format_u_int(WGLNU_PermilleFormatter *self, uint64_t value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.PermilleFormatter.FormatDouble() */
 HRESULT wglnu_permille_formatter_format_double(WGLNU_PermilleFormatter *self, double value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.PermilleFormatter.ParseInt(text) */
 HRESULT wglnu_permille_formatter_parse_int(WGLNU_PermilleFormatter *self, cwinrt_hstring text, int64_t** out);
 
-/* Windows.Globalization.NumberFormatting.PermilleFormatter.ParseUInt(text) */
 HRESULT wglnu_permille_formatter_parse_u_int(WGLNU_PermilleFormatter *self, cwinrt_hstring text, uint64_t** out);
 
-/* Windows.Globalization.NumberFormatting.PermilleFormatter.ParseDouble(text) */
 HRESULT wglnu_permille_formatter_parse_double(WGLNU_PermilleFormatter *self, cwinrt_hstring text, double** out);
 
-/* Windows.Globalization.NumberFormatting.PermilleFormatter.get_SignificantDigits() */
 HRESULT wglnu_permille_formatter_get__significant_digits(WGLNU_PermilleFormatter *self, int32_t *value);
 
-/* Windows.Globalization.NumberFormatting.PermilleFormatter.put_SignificantDigits() */
 HRESULT wglnu_permille_formatter_put__significant_digits(WGLNU_PermilleFormatter *self, int32_t value);
 
-/* Windows.Globalization.NumberFormatting.PermilleFormatter.get_NumberRounder() */
 HRESULT wglnu_permille_formatter_get__number_rounder(WGLNU_PermilleFormatter *self, WGLNU_INumberRounder** value);
 
-/* Windows.Globalization.NumberFormatting.PermilleFormatter.put_NumberRounder() */
 HRESULT wglnu_permille_formatter_put__number_rounder(WGLNU_PermilleFormatter *self, WGLNU_INumberRounder* value);
 
-/* Windows.Globalization.NumberFormatting.PermilleFormatter.get_IsZeroSigned() */
 HRESULT wglnu_permille_formatter_get__is_zero_signed(WGLNU_PermilleFormatter *self, BOOL *value);
 
-/* Windows.Globalization.NumberFormatting.PermilleFormatter.put_IsZeroSigned() */
 HRESULT wglnu_permille_formatter_put__is_zero_signed(WGLNU_PermilleFormatter *self, BOOL value);
 
-/* activate Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder */
 HRESULT wglnu_significant_digits_number_rounder_new(WGLNU_SignificantDigitsNumberRounder **out);
 
-/* Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder */
-/* Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder.RoundInt32() */
 HRESULT wglnu_significant_digits_number_rounder_round_int32(WGLNU_SignificantDigitsNumberRounder *self, int32_t value, int32_t *out);
 
-/* Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder.RoundUInt32() */
 HRESULT wglnu_significant_digits_number_rounder_round_u_int32(WGLNU_SignificantDigitsNumberRounder *self, uint32_t value, uint32_t *out);
 
-/* Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder.RoundInt64() */
 HRESULT wglnu_significant_digits_number_rounder_round_int64(WGLNU_SignificantDigitsNumberRounder *self, int64_t value, int64_t *out);
 
-/* Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder.RoundUInt64() */
 HRESULT wglnu_significant_digits_number_rounder_round_u_int64(WGLNU_SignificantDigitsNumberRounder *self, uint64_t value, uint64_t *out);
 
-/* Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder.RoundSingle() */
 HRESULT wglnu_significant_digits_number_rounder_round_single(WGLNU_SignificantDigitsNumberRounder *self, float value, float *out);
 
-/* Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder.RoundDouble() */
 HRESULT wglnu_significant_digits_number_rounder_round_double(WGLNU_SignificantDigitsNumberRounder *self, double value, double *out);
 
-/* Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder.get_RoundingAlgorithm() */
 HRESULT wglnu_significant_digits_number_rounder_get__rounding_algorithm(WGLNU_SignificantDigitsNumberRounder *self, WGLNU_RoundingAlgorithm *value);
 
-/* Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder.put_RoundingAlgorithm() */
 HRESULT wglnu_significant_digits_number_rounder_put__rounding_algorithm(WGLNU_SignificantDigitsNumberRounder *self, WGLNU_RoundingAlgorithm value);
 
-/* Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder.get_SignificantDigits() */
 HRESULT wglnu_significant_digits_number_rounder_get__significant_digits(WGLNU_SignificantDigitsNumberRounder *self, uint32_t *value);
 
-/* Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder.put_SignificantDigits() */
 HRESULT wglnu_significant_digits_number_rounder_put__significant_digits(WGLNU_SignificantDigitsNumberRounder *self, uint32_t value);
 
-/* Windows.Globalization.NumberFormatting.ICurrencyFormatter */
-/* Windows.Globalization.NumberFormatting.ICurrencyFormatter2 */
-/* Windows.Globalization.NumberFormatting.ICurrencyFormatter2.get_Mode() */
 HRESULT wglnu_currency_formatter_2_get__mode(WGLNU_ICurrencyFormatter_2 *self, WGLNU_CurrencyFormatterMode *value);
 
-/* Windows.Globalization.NumberFormatting.ICurrencyFormatter2.put_Mode() */
 HRESULT wglnu_currency_formatter_2_put__mode(WGLNU_ICurrencyFormatter_2 *self, WGLNU_CurrencyFormatterMode value);
 
-/* Windows.Globalization.NumberFormatting.ICurrencyFormatter2.ApplyRoundingForCurrency(roundingAlgorithm) */
 HRESULT wglnu_currency_formatter_2_apply_rounding_for_currency(WGLNU_ICurrencyFormatter_2 *self, WGLNU_RoundingAlgorithm roundingAlgorithm);
 
-/* Windows.Globalization.NumberFormatting.IIncrementNumberRounder */
-/* Windows.Globalization.NumberFormatting.INumeralSystemTranslator */
-/* Windows.Globalization.NumberFormatting.ISignificantDigitsOption */
-/* Windows.Globalization.NumberFormatting.ISignificantDigitsOption.get_SignificantDigits() */
 HRESULT wglnu_significant_digits_option_get__significant_digits(WGLNU_ISignificantDigitsOption *self, int32_t *value);
 
-/* Windows.Globalization.NumberFormatting.ISignificantDigitsOption.put_SignificantDigits() */
 HRESULT wglnu_significant_digits_option_put__significant_digits(WGLNU_ISignificantDigitsOption *self, int32_t value);
 
-/* Windows.Globalization.NumberFormatting.INumberRounderOption */
-/* Windows.Globalization.NumberFormatting.INumberRounderOption.get_NumberRounder() */
 HRESULT wglnu_number_rounder_option_get__number_rounder(WGLNU_INumberRounderOption *self, WGLNU_INumberRounder** value);
 
-/* Windows.Globalization.NumberFormatting.INumberRounderOption.put_NumberRounder() */
 HRESULT wglnu_number_rounder_option_put__number_rounder(WGLNU_INumberRounderOption *self, WGLNU_INumberRounder* value);
 
-/* Windows.Globalization.NumberFormatting.ISignedZeroOption */
-/* Windows.Globalization.NumberFormatting.ISignedZeroOption.get_IsZeroSigned() */
 HRESULT wglnu_signed_zero_option_get__is_zero_signed(WGLNU_ISignedZeroOption *self, BOOL *value);
 
-/* Windows.Globalization.NumberFormatting.ISignedZeroOption.put_IsZeroSigned() */
 HRESULT wglnu_signed_zero_option_put__is_zero_signed(WGLNU_ISignedZeroOption *self, BOOL value);
 
-/* Windows.Globalization.NumberFormatting.INumberRounder */
-/* Windows.Globalization.NumberFormatting.INumberRounder.RoundInt32() */
 HRESULT wglnu_number_rounder_round_int32(WGLNU_INumberRounder *self, int32_t value, int32_t *out);
 
-/* Windows.Globalization.NumberFormatting.INumberRounder.RoundUInt32() */
 HRESULT wglnu_number_rounder_round_u_int32(WGLNU_INumberRounder *self, uint32_t value, uint32_t *out);
 
-/* Windows.Globalization.NumberFormatting.INumberRounder.RoundInt64() */
 HRESULT wglnu_number_rounder_round_int64(WGLNU_INumberRounder *self, int64_t value, int64_t *out);
 
-/* Windows.Globalization.NumberFormatting.INumberRounder.RoundUInt64() */
 HRESULT wglnu_number_rounder_round_u_int64(WGLNU_INumberRounder *self, uint64_t value, uint64_t *out);
 
-/* Windows.Globalization.NumberFormatting.INumberRounder.RoundSingle() */
 HRESULT wglnu_number_rounder_round_single(WGLNU_INumberRounder *self, float value, float *out);
 
-/* Windows.Globalization.NumberFormatting.INumberRounder.RoundDouble() */
 HRESULT wglnu_number_rounder_round_double(WGLNU_INumberRounder *self, double value, double *out);
 
-/* Windows.Globalization.NumberFormatting.ISignificantDigitsNumberRounder */
-/* Windows.Globalization.NumberFormatting.INumberFormatterOptions */
-/* Windows.Globalization.NumberFormatting.INumberFormatterOptions.get_Languages() */
 HRESULT wglnu_number_formatter_options_get__languages(WGLNU_INumberFormatterOptions *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Globalization.NumberFormatting.INumberFormatterOptions.get_GeographicRegion() */
 HRESULT wglnu_number_formatter_options_get__geographic_region(WGLNU_INumberFormatterOptions *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.NumberFormatting.INumberFormatterOptions.get_IntegerDigits() */
 HRESULT wglnu_number_formatter_options_get__integer_digits(WGLNU_INumberFormatterOptions *self, int32_t *value);
 
-/* Windows.Globalization.NumberFormatting.INumberFormatterOptions.put_IntegerDigits() */
 HRESULT wglnu_number_formatter_options_put__integer_digits(WGLNU_INumberFormatterOptions *self, int32_t value);
 
-/* Windows.Globalization.NumberFormatting.INumberFormatterOptions.get_FractionDigits() */
 HRESULT wglnu_number_formatter_options_get__fraction_digits(WGLNU_INumberFormatterOptions *self, int32_t *value);
 
-/* Windows.Globalization.NumberFormatting.INumberFormatterOptions.put_FractionDigits() */
 HRESULT wglnu_number_formatter_options_put__fraction_digits(WGLNU_INumberFormatterOptions *self, int32_t value);
 
-/* Windows.Globalization.NumberFormatting.INumberFormatterOptions.get_IsGrouped() */
 HRESULT wglnu_number_formatter_options_get__is_grouped(WGLNU_INumberFormatterOptions *self, BOOL *value);
 
-/* Windows.Globalization.NumberFormatting.INumberFormatterOptions.put_IsGrouped() */
 HRESULT wglnu_number_formatter_options_put__is_grouped(WGLNU_INumberFormatterOptions *self, BOOL value);
 
-/* Windows.Globalization.NumberFormatting.INumberFormatterOptions.get_IsDecimalPointAlwaysDisplayed() */
 HRESULT wglnu_number_formatter_options_get__is_decimal_point_always_displayed(WGLNU_INumberFormatterOptions *self, BOOL *value);
 
-/* Windows.Globalization.NumberFormatting.INumberFormatterOptions.put_IsDecimalPointAlwaysDisplayed() */
 HRESULT wglnu_number_formatter_options_put__is_decimal_point_always_displayed(WGLNU_INumberFormatterOptions *self, BOOL value);
 
-/* Windows.Globalization.NumberFormatting.INumberFormatterOptions.get_NumeralSystem() */
 HRESULT wglnu_number_formatter_options_get__numeral_system(WGLNU_INumberFormatterOptions *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.NumberFormatting.INumberFormatterOptions.put_NumeralSystem() */
 HRESULT wglnu_number_formatter_options_put__numeral_system(WGLNU_INumberFormatterOptions *self, cwinrt_hstring value);
 
-/* Windows.Globalization.NumberFormatting.INumberFormatterOptions.get_ResolvedLanguage() */
 HRESULT wglnu_number_formatter_options_get__resolved_language(WGLNU_INumberFormatterOptions *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.NumberFormatting.INumberFormatterOptions.get_ResolvedGeographicRegion() */
 HRESULT wglnu_number_formatter_options_get__resolved_geographic_region(WGLNU_INumberFormatterOptions *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.NumberFormatting.INumberFormatter */
-/* Windows.Globalization.NumberFormatting.INumberFormatter.Format() */
 HRESULT wglnu_number_formatter_format_i64_str(WGLNU_INumberFormatter *self, int64_t value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.INumberFormatter.Format() */
 HRESULT wglnu_number_formatter_format_u64_str(WGLNU_INumberFormatter *self, uint64_t value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.INumberFormatter.Format() */
 HRESULT wglnu_number_formatter_format(WGLNU_INumberFormatter *self, double value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.INumberFormatter2 */
-/* Windows.Globalization.NumberFormatting.INumberFormatter2.FormatInt() */
 HRESULT wglnu_number_formatter_2_format_int(WGLNU_INumberFormatter_2 *self, int64_t value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.INumberFormatter2.FormatUInt() */
 HRESULT wglnu_number_formatter_2_format_u_int(WGLNU_INumberFormatter_2 *self, uint64_t value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.INumberFormatter2.FormatDouble() */
 HRESULT wglnu_number_formatter_2_format_double(WGLNU_INumberFormatter_2 *self, double value, cwinrt_hstring *out);
 
-/* Windows.Globalization.NumberFormatting.INumberParser */
-/* Windows.Globalization.NumberFormatting.INumberParser.ParseInt(text) */
 HRESULT wglnu_number_parser_parse_int(WGLNU_INumberParser *self, cwinrt_hstring text, int64_t** out);
 
-/* Windows.Globalization.NumberFormatting.INumberParser.ParseUInt(text) */
 HRESULT wglnu_number_parser_parse_u_int(WGLNU_INumberParser *self, cwinrt_hstring text, uint64_t** out);
 
-/* Windows.Globalization.NumberFormatting.INumberParser.ParseDouble(text) */
 HRESULT wglnu_number_parser_parse_double(WGLNU_INumberParser *self, cwinrt_hstring text, double** out);
 
 #endif /* CWINRT_WINDOWS_GLOBALIZATION_NUMBERFORMATTING_H */

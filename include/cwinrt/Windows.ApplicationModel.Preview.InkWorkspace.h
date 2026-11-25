@@ -13,12 +13,10 @@
 #include <cwinrt/Windows.Graphics.Imaging.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WAPPRIN_IInkWorkspaceHostedAppManagerStatics WAPPRIN_IInkWorkspaceHostedAppManagerStatics;
 typedef struct WAPPRIN_InkWorkspaceHostedAppManager WAPPRIN_InkWorkspaceHostedAppManager;
 typedef struct WAPPRIN_IInkWorkspaceHostedAppManager WAPPRIN_IInkWorkspaceHostedAppManager;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WGRIM_SoftwareBitmap
 #define CWINRT_FWD_WGRIM_SoftwareBitmap
 typedef struct WGRIM_SoftwareBitmap WGRIM_SoftwareBitmap;
@@ -28,7 +26,6 @@ typedef struct WGRIM_SoftwareBitmap WGRIM_SoftwareBitmap;
 typedef struct WF_IAsyncAction WF_IAsyncAction;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -41,21 +38,12 @@ static const IID CWINRT_IID_WAPPRIN_IInkWorkspaceHostedAppManagerStatics CWINRT_
 static const IID CWINRT_IID_WAPPRIN_IInkWorkspaceHostedAppManager CWINRT_MAYBE_UNUSED = { 0xFE0A7990, 0x5E59, 0x4BB7, { 0x8A, 0x63, 0x7D, 0x21, 0x8C, 0xD9, 0x63, 0x00 } };
 #endif
 
-/* Methods */
-
-/* Windows.ApplicationModel.Preview.InkWorkspace.IInkWorkspaceHostedAppManagerStatics */
-/* Windows.ApplicationModel.Preview.InkWorkspace.IInkWorkspaceHostedAppManagerStatics.GetForCurrentApp() */
 HRESULT wapprin_ink_workspace_hosted_app_manager_statics_get_for_current_app(WAPPRIN_IInkWorkspaceHostedAppManagerStatics *self, WAPPRIN_InkWorkspaceHostedAppManager** out);
 
-/* activate Windows.ApplicationModel.Preview.InkWorkspace.InkWorkspaceHostedAppManager */
 HRESULT wapprin_ink_workspace_hosted_app_manager_new(WAPPRIN_InkWorkspaceHostedAppManager **out);
 
-/* Windows.ApplicationModel.Preview.InkWorkspace.InkWorkspaceHostedAppManager */
-/* Windows.ApplicationModel.Preview.InkWorkspace.InkWorkspaceHostedAppManager.SetThumbnailAsync(bitmap) */
 HRESULT wapprin_ink_workspace_hosted_app_manager_set_thumbnail_async(WAPPRIN_InkWorkspaceHostedAppManager *self, WGRIM_SoftwareBitmap* bitmap, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Preview.InkWorkspace.InkWorkspaceHostedAppManager.GetForCurrentApp() */
 HRESULT wapprin_ink_workspace_hosted_app_manager_get_for_current_app(WAPPRIN_InkWorkspaceHostedAppManager** out);
 
-/* Windows.ApplicationModel.Preview.InkWorkspace.IInkWorkspaceHostedAppManager */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_PREVIEW_INKWORKSPACE_H */

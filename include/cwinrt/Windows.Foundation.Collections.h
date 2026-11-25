@@ -11,7 +11,6 @@
 #include <cwinrt/Windows.Foundation.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WFOCO_IObservableMap_2 WFOCO_IObservableMap_2;
 typedef struct WFOCO_IMap_2 WFOCO_IMap_2;
 typedef struct WFOCO_IMapView_2 WFOCO_IMapView_2;
@@ -30,7 +29,6 @@ typedef struct WFOCO_VectorChangedEventHandler_1 WFOCO_VectorChangedEventHandler
 typedef struct WFOCO_IObservableVector_1 WFOCO_IObservableVector_1;
 typedef struct WFOCO_IPropertySet WFOCO_IPropertySet;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_MapChangedEventHandler_Void_Void
 #define CWINRT_FWD_WFOCO_MapChangedEventHandler_Void_Void
 typedef struct WFOCO_MapChangedEventHandler_Void_Void WFOCO_MapChangedEventHandler_Void_Void;
@@ -98,7 +96,6 @@ typedef enum WFOCO_CollectionChange {
 } WFOCO_CollectionChange;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -159,241 +156,153 @@ static const IID CWINRT_IID_WFOCO_IObservableVector_1 CWINRT_MAYBE_UNUSED = { 0x
 static const IID CWINRT_IID_WFOCO_IPropertySet CWINRT_MAYBE_UNUSED = { 0x8A43ED9F, 0xF4E6, 0x4421, { 0xAC, 0xF9, 0x1D, 0xAB, 0x29, 0x86, 0x82, 0x0C } };
 #endif
 
-/* Methods */
-
-/* Windows.Foundation.Collections.IObservableMap`2 */
-/* Windows.Foundation.Collections.IMap`2 */
-/* Windows.Foundation.Collections.IMap`2.Lookup(key) */
 HRESULT wfoco_map_2_lookup(WFOCO_IMap_2 *self, void* key, void** out);
 
-/* Windows.Foundation.Collections.IMap`2.get_Size() */
 HRESULT wfoco_map_2_get__size(WFOCO_IMap_2 *self, uint32_t *value);
 
-/* Windows.Foundation.Collections.IMap`2.HasKey(key) */
 HRESULT wfoco_map_2_has_key(WFOCO_IMap_2 *self, void* key, BOOL *out);
 
-/* Windows.Foundation.Collections.IMap`2.GetView() */
 HRESULT wfoco_map_2_get_view(WFOCO_IMap_2 *self, WFOCO_IMapView_Void_Void** out);
 
-/* Windows.Foundation.Collections.IMap`2.Insert(key) */
 HRESULT wfoco_map_2_insert(WFOCO_IMap_2 *self, void* key, void* value, BOOL *out);
 
-/* Windows.Foundation.Collections.IMap`2.Remove(key) */
 HRESULT wfoco_map_2_remove(WFOCO_IMap_2 *self, void* key);
 
-/* Windows.Foundation.Collections.IMap`2.Clear() */
 HRESULT wfoco_map_2_clear(WFOCO_IMap_2 *self);
 
-/* Windows.Foundation.Collections.IMapView`2 */
-/* Windows.Foundation.Collections.IMapView`2.Lookup(key) */
 HRESULT wfoco_map_view_2_lookup(WFOCO_IMapView_2 *self, void* key, void** out);
 
-/* Windows.Foundation.Collections.IMapView`2.get_Size() */
 HRESULT wfoco_map_view_2_get__size(WFOCO_IMapView_2 *self, uint32_t *value);
 
-/* Windows.Foundation.Collections.IMapView`2.HasKey(key) */
 HRESULT wfoco_map_view_2_has_key(WFOCO_IMapView_2 *self, void* key, BOOL *out);
 
-/* Windows.Foundation.Collections.IMapView`2.Split(first, second) */
 HRESULT wfoco_map_view_2_split(WFOCO_IMapView_2 *self, WFOCO_IMapView_Void_Void* first, WFOCO_IMapView_Void_Void* second);
 
-/* Windows.Foundation.Collections.IMapChangedEventArgs`1 */
-/* Windows.Foundation.Collections.IMapChangedEventArgs`1.get_CollectionChange() */
 HRESULT wfoco_map_changed_event_args_1_get__collection_change(WFOCO_IMapChangedEventArgs_1 *self, WFOCO_CollectionChange *value);
 
-/* Windows.Foundation.Collections.IMapChangedEventArgs`1.get_Key() */
 HRESULT wfoco_map_changed_event_args_1_get__key(WFOCO_IMapChangedEventArgs_1 *self, void** value);
 
-/* Windows.Foundation.Collections.IKeyValuePair`2 */
-/* Windows.Foundation.Collections.IKeyValuePair`2.get_Key() */
 HRESULT wfoco_key_value_pair_2_get__key(WFOCO_IKeyValuePair_2 *self, void** value);
 
-/* Windows.Foundation.Collections.IKeyValuePair`2.get_Value() */
 HRESULT wfoco_key_value_pair_2_get__value(WFOCO_IKeyValuePair_2 *self, void** value);
 
-/* Windows.Foundation.Collections.IIterator`1 */
-/* Windows.Foundation.Collections.IIterator`1.get_Current() */
 HRESULT wfoco_iterator_1_get__current(WFOCO_IIterator_1 *self, void** value);
 
-/* Windows.Foundation.Collections.IIterator`1.get_HasCurrent() */
 HRESULT wfoco_iterator_1_get__has_current(WFOCO_IIterator_1 *self, BOOL *value);
 
-/* Windows.Foundation.Collections.IIterator`1.MoveNext() */
 HRESULT wfoco_iterator_1_move_next(WFOCO_IIterator_1 *self, BOOL *out);
 
-/* Windows.Foundation.Collections.IIterator`1.GetMany(items) */
 HRESULT wfoco_iterator_1_get_many(WFOCO_IIterator_1 *self, void *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Foundation.Collections.IIterable`1 */
-/* Windows.Foundation.Collections.IIterable`1.First() */
 HRESULT wfoco_iterable_1_first(WFOCO_IIterable_1 *self, WFOCO_IIterator_Void** out);
 
-/* Windows.Foundation.Collections.IVectorChangedEventArgs */
-/* Windows.Foundation.Collections.IVectorChangedEventArgs.get_CollectionChange() */
 HRESULT wfoco_vector_changed_event_args_get__collection_change(WFOCO_IVectorChangedEventArgs *self, WFOCO_CollectionChange *value);
 
-/* Windows.Foundation.Collections.IVectorChangedEventArgs.get_Index() */
 HRESULT wfoco_vector_changed_event_args_get__index(WFOCO_IVectorChangedEventArgs *self, uint32_t *value);
 
-/* Windows.Foundation.Collections.IVectorView`1 */
-/* Windows.Foundation.Collections.IVectorView`1.GetAt(index) */
 HRESULT wfoco_vector_view_1_get_at(WFOCO_IVectorView_1 *self, uint32_t index, void** out);
 
-/* Windows.Foundation.Collections.IVectorView`1.get_Size() */
 HRESULT wfoco_vector_view_1_get__size(WFOCO_IVectorView_1 *self, uint32_t *value);
 
-/* Windows.Foundation.Collections.IVectorView`1.IndexOf(index) */
 HRESULT wfoco_vector_view_1_index_of(WFOCO_IVectorView_1 *self, void* value, uint32_t index, BOOL *out);
 
-/* Windows.Foundation.Collections.IVectorView`1.GetMany(startIndex, items) */
 HRESULT wfoco_vector_view_1_get_many(WFOCO_IVectorView_1 *self, uint32_t startIndex, void *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Foundation.Collections.IVector`1 */
-/* Windows.Foundation.Collections.IVector`1.GetAt(index) */
 HRESULT wfoco_vector_1_get_at(WFOCO_IVector_1 *self, uint32_t index, void** out);
 
-/* Windows.Foundation.Collections.IVector`1.get_Size() */
 HRESULT wfoco_vector_1_get__size(WFOCO_IVector_1 *self, uint32_t *value);
 
-/* Windows.Foundation.Collections.IVector`1.GetView() */
 HRESULT wfoco_vector_1_get_view(WFOCO_IVector_1 *self, WFOCO_IVectorView_Void** out);
 
-/* Windows.Foundation.Collections.IVector`1.IndexOf(index) */
 HRESULT wfoco_vector_1_index_of(WFOCO_IVector_1 *self, void* value, uint32_t index, BOOL *out);
 
-/* Windows.Foundation.Collections.IVector`1.SetAt(index) */
 HRESULT wfoco_vector_1_set_at(WFOCO_IVector_1 *self, uint32_t index, void* value);
 
-/* Windows.Foundation.Collections.IVector`1.InsertAt(index) */
 HRESULT wfoco_vector_1_insert_at(WFOCO_IVector_1 *self, uint32_t index, void* value);
 
-/* Windows.Foundation.Collections.IVector`1.RemoveAt(index) */
 HRESULT wfoco_vector_1_remove_at(WFOCO_IVector_1 *self, uint32_t index);
 
-/* Windows.Foundation.Collections.IVector`1.Append() */
 HRESULT wfoco_vector_1_append(WFOCO_IVector_1 *self, void* value);
 
-/* Windows.Foundation.Collections.IVector`1.RemoveAtEnd() */
 HRESULT wfoco_vector_1_remove_at_end(WFOCO_IVector_1 *self);
 
-/* Windows.Foundation.Collections.IVector`1.Clear() */
 HRESULT wfoco_vector_1_clear(WFOCO_IVector_1 *self);
 
-/* Windows.Foundation.Collections.IVector`1.GetMany(startIndex, items) */
 HRESULT wfoco_vector_1_get_many(WFOCO_IVector_1 *self, uint32_t startIndex, void *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Foundation.Collections.IVector`1.ReplaceAll(items) */
 HRESULT wfoco_vector_1_replace_all(WFOCO_IVector_1 *self, void *items, uint32_t items_len);
 
-/* Windows.Foundation.Collections.MapChangedEventHandler`2 */
-/* Windows.Foundation.Collections.MapChangedEventHandler`2.Invoke(sender, event) */
 HRESULT wfoco_map_changed_event_handler_2_invoke(WFOCO_MapChangedEventHandler_2 *self, WFOCO_IObservableMap_Void_Void* sender, WFOCO_IMapChangedEventArgs_Void* event);
 
-/* activate Windows.Foundation.Collections.PropertySet */
 HRESULT wfoco_property_set_new(WFOCO_PropertySet **out);
 
-/* Windows.Foundation.Collections.PropertySet */
-/* Windows.Foundation.Collections.PropertySet.Lookup(key) */
 HRESULT wfoco_property_set_lookup(WFOCO_PropertySet *self, cwinrt_hstring key, IInspectable** out);
 
-/* Windows.Foundation.Collections.PropertySet.get_Size() */
 HRESULT wfoco_property_set_get__size(WFOCO_PropertySet *self, uint32_t *value);
 
-/* Windows.Foundation.Collections.PropertySet.HasKey(key) */
 HRESULT wfoco_property_set_has_key(WFOCO_PropertySet *self, cwinrt_hstring key, BOOL *out);
 
-/* Windows.Foundation.Collections.PropertySet.GetView() */
 HRESULT wfoco_property_set_get_view(WFOCO_PropertySet *self, WFOCO_IMapView_HSTRING_Object** out);
 
-/* Windows.Foundation.Collections.PropertySet.Insert(key) */
 HRESULT wfoco_property_set_insert(WFOCO_PropertySet *self, cwinrt_hstring key, IInspectable* value, BOOL *out);
 
-/* Windows.Foundation.Collections.PropertySet.Remove(key) */
 HRESULT wfoco_property_set_remove(WFOCO_PropertySet *self, cwinrt_hstring key);
 
-/* Windows.Foundation.Collections.PropertySet.Clear() */
 HRESULT wfoco_property_set_clear(WFOCO_PropertySet *self);
 
-/* Windows.Foundation.Collections.PropertySet.First() */
 HRESULT wfoco_property_set_first(WFOCO_PropertySet *self, WFOCO_IIterator_WFOCO_IKeyValuePair_HSTRING_Object** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wfoco_property_set_on_map_changed(WFOCO_PropertySet *self, cwinrt_event_fn fn, void *ctx);
 void wfoco_property_set_off_map_changed(WFOCO_PropertySet *self, cwinrt_token token);
 
-/* activate Windows.Foundation.Collections.StringMap */
 HRESULT wfoco_string_map_new(WFOCO_StringMap **out);
 
-/* Windows.Foundation.Collections.StringMap */
-/* Windows.Foundation.Collections.StringMap.Lookup(key) */
 HRESULT wfoco_string_map_lookup(WFOCO_StringMap *self, cwinrt_hstring key, cwinrt_hstring *out);
 
-/* Windows.Foundation.Collections.StringMap.get_Size() */
 HRESULT wfoco_string_map_get__size(WFOCO_StringMap *self, uint32_t *value);
 
-/* Windows.Foundation.Collections.StringMap.HasKey(key) */
 HRESULT wfoco_string_map_has_key(WFOCO_StringMap *self, cwinrt_hstring key, BOOL *out);
 
-/* Windows.Foundation.Collections.StringMap.GetView() */
 HRESULT wfoco_string_map_get_view(WFOCO_StringMap *self, WFOCO_IMapView_HSTRING_HSTRING** out);
 
-/* Windows.Foundation.Collections.StringMap.Insert(key) */
 HRESULT wfoco_string_map_insert(WFOCO_StringMap *self, cwinrt_hstring key, cwinrt_hstring value, BOOL *out);
 
-/* Windows.Foundation.Collections.StringMap.Remove(key) */
 HRESULT wfoco_string_map_remove(WFOCO_StringMap *self, cwinrt_hstring key);
 
-/* Windows.Foundation.Collections.StringMap.Clear() */
 HRESULT wfoco_string_map_clear(WFOCO_StringMap *self);
 
-/* Windows.Foundation.Collections.StringMap.First() */
 HRESULT wfoco_string_map_first(WFOCO_StringMap *self, WFOCO_IIterator_WFOCO_IKeyValuePair_HSTRING_HSTRING** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wfoco_string_map_on_map_changed(WFOCO_StringMap *self, cwinrt_event_fn fn, void *ctx);
 void wfoco_string_map_off_map_changed(WFOCO_StringMap *self, cwinrt_token token);
 
-/* activate Windows.Foundation.Collections.ValueSet */
 HRESULT wfoco_value_set_new(WFOCO_ValueSet **out);
 
-/* Windows.Foundation.Collections.ValueSet */
-/* Windows.Foundation.Collections.ValueSet.Lookup(key) */
 HRESULT wfoco_value_set_lookup(WFOCO_ValueSet *self, cwinrt_hstring key, IInspectable** out);
 
-/* Windows.Foundation.Collections.ValueSet.get_Size() */
 HRESULT wfoco_value_set_get__size(WFOCO_ValueSet *self, uint32_t *value);
 
-/* Windows.Foundation.Collections.ValueSet.HasKey(key) */
 HRESULT wfoco_value_set_has_key(WFOCO_ValueSet *self, cwinrt_hstring key, BOOL *out);
 
-/* Windows.Foundation.Collections.ValueSet.GetView() */
 HRESULT wfoco_value_set_get_view(WFOCO_ValueSet *self, WFOCO_IMapView_HSTRING_Object** out);
 
-/* Windows.Foundation.Collections.ValueSet.Insert(key) */
 HRESULT wfoco_value_set_insert(WFOCO_ValueSet *self, cwinrt_hstring key, IInspectable* value, BOOL *out);
 
-/* Windows.Foundation.Collections.ValueSet.Remove(key) */
 HRESULT wfoco_value_set_remove(WFOCO_ValueSet *self, cwinrt_hstring key);
 
-/* Windows.Foundation.Collections.ValueSet.Clear() */
 HRESULT wfoco_value_set_clear(WFOCO_ValueSet *self);
 
-/* Windows.Foundation.Collections.ValueSet.First() */
 HRESULT wfoco_value_set_first(WFOCO_ValueSet *self, WFOCO_IIterator_WFOCO_IKeyValuePair_HSTRING_Object** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wfoco_value_set_on_map_changed(WFOCO_ValueSet *self, cwinrt_event_fn fn, void *ctx);
 void wfoco_value_set_off_map_changed(WFOCO_ValueSet *self, cwinrt_token token);
 
-/* Windows.Foundation.Collections.VectorChangedEventHandler`1 */
-/* Windows.Foundation.Collections.VectorChangedEventHandler`1.Invoke(sender, event) */
 HRESULT wfoco_vector_changed_event_handler_1_invoke(WFOCO_VectorChangedEventHandler_1 *self, WFOCO_IObservableVector_Void* sender, WFOCO_IVectorChangedEventArgs* event);
 
-/* Windows.Foundation.Collections.IObservableVector`1 */
 #endif /* CWINRT_WINDOWS_FOUNDATION_COLLECTIONS_H */

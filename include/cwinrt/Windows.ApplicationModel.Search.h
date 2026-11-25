@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WS_StorageFolder
 #define CWINRT_FWD_WS_StorageFolder
 typedef struct WS_StorageFolder WS_StorageFolder;
@@ -22,7 +21,6 @@ typedef struct WS_StorageFolder WS_StorageFolder;
 typedef struct WSTST_IRandomAccessStreamReference WSTST_IRandomAccessStreamReference;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPSE_ISearchQueryLinguisticDetailsFactory WAPSE_ISearchQueryLinguisticDetailsFactory;
 typedef struct WAPSE_SearchSuggestionsRequest WAPSE_SearchSuggestionsRequest;
 typedef struct WAPSE_SearchSuggestionCollection WAPSE_SearchSuggestionCollection;
@@ -56,7 +54,6 @@ typedef struct WAPSE_ISearchPaneSuggestionsRequestedEventArgs WAPSE_ISearchPaneS
 typedef struct WAPSE_ISearchPaneVisibilityChangedEventArgs WAPSE_ISearchPaneVisibilityChangedEventArgs;
 typedef struct WAPSE_ISearchPaneQueryChangedEventArgs WAPSE_ISearchPaneQueryChangedEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IIterable_HSTRING
 #define CWINRT_FWD_WFOCO_IIterable_HSTRING
 typedef struct WFOCO_IIterable_HSTRING WFOCO_IIterable_HSTRING;
@@ -98,7 +95,6 @@ typedef struct WF_TypedEventHandler_WAPSE_SearchPane_WAPSE_SearchPaneQuerySubmit
 typedef struct WF_TypedEventHandler_WAPSE_SearchPane_WAPSE_SearchPaneResultSuggestionChosenEventArgs WF_TypedEventHandler_WAPSE_SearchPane_WAPSE_SearchPaneResultSuggestionChosenEventArgs;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -175,150 +171,94 @@ static const IID CWINRT_IID_WAPSE_ISearchPaneVisibilityChangedEventArgs CWINRT_M
 static const IID CWINRT_IID_WAPSE_ISearchPaneQueryChangedEventArgs CWINRT_MAYBE_UNUSED = { 0x3C064FE9, 0x2351, 0x4248, { 0xA5, 0x29, 0x71, 0x10, 0xF4, 0x64, 0xA7, 0x85 } };
 #endif
 
-/* Methods */
-
-/* Windows.ApplicationModel.Search.ISearchQueryLinguisticDetailsFactory */
-/* Windows.ApplicationModel.Search.ISearchQueryLinguisticDetailsFactory.CreateInstance(queryTextAlternatives, queryTextCompositionStart, queryTextCompositionLength) */
 HRESULT wapse_search_query_linguistic_details_factory_create_instance(WAPSE_ISearchQueryLinguisticDetailsFactory *self, WFOCO_IIterable_HSTRING* queryTextAlternatives, uint32_t queryTextCompositionStart, uint32_t queryTextCompositionLength, WAPSE_SearchQueryLinguisticDetails** out);
 
-/* activate Windows.ApplicationModel.Search.SearchSuggestionsRequest */
 HRESULT wapse_search_suggestions_request_new(WAPSE_SearchSuggestionsRequest **out);
 
-/* Windows.ApplicationModel.Search.SearchSuggestionsRequest */
-/* Windows.ApplicationModel.Search.SearchSuggestionsRequest.get_IsCanceled() */
 HRESULT wapse_search_suggestions_request_get__is_canceled(WAPSE_SearchSuggestionsRequest *self, BOOL *value);
 
-/* Windows.ApplicationModel.Search.SearchSuggestionsRequest.get_SearchSuggestionCollection() */
 HRESULT wapse_search_suggestions_request_get__search_suggestion_collection(WAPSE_SearchSuggestionsRequest *self, WAPSE_SearchSuggestionCollection** value);
 
-/* Windows.ApplicationModel.Search.SearchSuggestionsRequest.GetDeferral() */
 HRESULT wapse_search_suggestions_request_get_deferral(WAPSE_SearchSuggestionsRequest *self, WAPSE_SearchSuggestionsRequestDeferral** out);
 
-/* activate Windows.ApplicationModel.Search.SearchSuggestionCollection */
 HRESULT wapse_search_suggestion_collection_new(WAPSE_SearchSuggestionCollection **out);
 
-/* Windows.ApplicationModel.Search.SearchSuggestionCollection */
-/* Windows.ApplicationModel.Search.SearchSuggestionCollection.get_Size() */
 HRESULT wapse_search_suggestion_collection_get__size(WAPSE_SearchSuggestionCollection *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Search.SearchSuggestionCollection.AppendQuerySuggestion(text) */
 HRESULT wapse_search_suggestion_collection_append_query_suggestion(WAPSE_SearchSuggestionCollection *self, cwinrt_hstring text);
 
-/* Windows.ApplicationModel.Search.SearchSuggestionCollection.AppendQuerySuggestions(suggestions) */
 HRESULT wapse_search_suggestion_collection_append_query_suggestions(WAPSE_SearchSuggestionCollection *self, WFOCO_IIterable_HSTRING* suggestions);
 
-/* Windows.ApplicationModel.Search.SearchSuggestionCollection.AppendResultSuggestion(text, detailText, tag, image, imageAlternateText) */
 HRESULT wapse_search_suggestion_collection_append_result_suggestion(WAPSE_SearchSuggestionCollection *self, cwinrt_hstring text, cwinrt_hstring detailText, cwinrt_hstring tag, WSTST_IRandomAccessStreamReference* image, cwinrt_hstring imageAlternateText);
 
-/* Windows.ApplicationModel.Search.SearchSuggestionCollection.AppendSearchSeparator(label) */
 HRESULT wapse_search_suggestion_collection_append_search_separator(WAPSE_SearchSuggestionCollection *self, cwinrt_hstring label);
 
-/* activate Windows.ApplicationModel.Search.SearchQueryLinguisticDetails */
 HRESULT wapse_search_query_linguistic_details_new(WAPSE_SearchQueryLinguisticDetails **out);
 
-/* Windows.ApplicationModel.Search.SearchQueryLinguisticDetails */
-/* Windows.ApplicationModel.Search.SearchQueryLinguisticDetails.get_QueryTextAlternatives() */
 HRESULT wapse_search_query_linguistic_details_get__query_text_alternatives(WAPSE_SearchQueryLinguisticDetails *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.ApplicationModel.Search.SearchQueryLinguisticDetails.get_QueryTextCompositionStart() */
 HRESULT wapse_search_query_linguistic_details_get__query_text_composition_start(WAPSE_SearchQueryLinguisticDetails *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Search.SearchQueryLinguisticDetails.get_QueryTextCompositionLength() */
 HRESULT wapse_search_query_linguistic_details_get__query_text_composition_length(WAPSE_SearchQueryLinguisticDetails *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Search.ISearchPaneStatics */
-/* Windows.ApplicationModel.Search.ISearchPaneStatics.GetForCurrentView() */
 HRESULT wapse_search_pane_statics_get_for_current_view(WAPSE_ISearchPaneStatics *self, WAPSE_SearchPane** out);
 
-/* Windows.ApplicationModel.Search.ISearchPaneStaticsWithHideThisApplication */
-/* Windows.ApplicationModel.Search.ISearchPaneStaticsWithHideThisApplication.HideThisApplication() */
 HRESULT wapse_search_pane_statics_with_hide_this_application_hide_this_application(WAPSE_ISearchPaneStaticsWithHideThisApplication *self);
 
-/* activate Windows.ApplicationModel.Search.SearchSuggestionsRequestDeferral */
 HRESULT wapse_search_suggestions_request_deferral_new(WAPSE_SearchSuggestionsRequestDeferral **out);
 
-/* Windows.ApplicationModel.Search.SearchSuggestionsRequestDeferral */
-/* Windows.ApplicationModel.Search.SearchSuggestionsRequestDeferral.Complete() */
 HRESULT wapse_search_suggestions_request_deferral_complete(WAPSE_SearchSuggestionsRequestDeferral *self);
 
-/* activate Windows.ApplicationModel.Search.LocalContentSuggestionSettings */
 HRESULT wapse_local_content_suggestion_settings_new(WAPSE_LocalContentSuggestionSettings **out);
 
-/* Windows.ApplicationModel.Search.LocalContentSuggestionSettings */
-/* Windows.ApplicationModel.Search.LocalContentSuggestionSettings.put_Enabled() */
 HRESULT wapse_local_content_suggestion_settings_put__enabled(WAPSE_LocalContentSuggestionSettings *self, BOOL value);
 
-/* Windows.ApplicationModel.Search.LocalContentSuggestionSettings.get_Enabled() */
 HRESULT wapse_local_content_suggestion_settings_get__enabled(WAPSE_LocalContentSuggestionSettings *self, BOOL *value);
 
-/* Windows.ApplicationModel.Search.LocalContentSuggestionSettings.get_Locations() */
 HRESULT wapse_local_content_suggestion_settings_get__locations(WAPSE_LocalContentSuggestionSettings *self, WFOCO_IVector_WS_StorageFolder** value);
 
-/* Windows.ApplicationModel.Search.LocalContentSuggestionSettings.put_AqsFilter() */
 HRESULT wapse_local_content_suggestion_settings_put__aqs_filter(WAPSE_LocalContentSuggestionSettings *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Search.LocalContentSuggestionSettings.get_AqsFilter() */
 HRESULT wapse_local_content_suggestion_settings_get__aqs_filter(WAPSE_LocalContentSuggestionSettings *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Search.LocalContentSuggestionSettings.get_PropertiesToMatch() */
 HRESULT wapse_local_content_suggestion_settings_get__properties_to_match(WAPSE_LocalContentSuggestionSettings *self, WFOCO_IVector_HSTRING** value);
 
-/* activate Windows.ApplicationModel.Search.SearchPane */
 HRESULT wapse_search_pane_new(WAPSE_SearchPane **out);
 
-/* Windows.ApplicationModel.Search.SearchPane */
-/* Windows.ApplicationModel.Search.SearchPane.put_SearchHistoryEnabled() */
 HRESULT wapse_search_pane_put__search_history_enabled(WAPSE_SearchPane *self, BOOL value);
 
-/* Windows.ApplicationModel.Search.SearchPane.get_SearchHistoryEnabled() */
 HRESULT wapse_search_pane_get__search_history_enabled(WAPSE_SearchPane *self, BOOL *value);
 
-/* Windows.ApplicationModel.Search.SearchPane.put_SearchHistoryContext() */
 HRESULT wapse_search_pane_put__search_history_context(WAPSE_SearchPane *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Search.SearchPane.get_SearchHistoryContext() */
 HRESULT wapse_search_pane_get__search_history_context(WAPSE_SearchPane *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Search.SearchPane.put_PlaceholderText() */
 HRESULT wapse_search_pane_put__placeholder_text(WAPSE_SearchPane *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Search.SearchPane.get_PlaceholderText() */
 HRESULT wapse_search_pane_get__placeholder_text(WAPSE_SearchPane *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Search.SearchPane.get_QueryText() */
 HRESULT wapse_search_pane_get__query_text(WAPSE_SearchPane *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Search.SearchPane.get_Language() */
 HRESULT wapse_search_pane_get__language(WAPSE_SearchPane *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Search.SearchPane.get_Visible() */
 HRESULT wapse_search_pane_get__visible(WAPSE_SearchPane *self, BOOL *value);
 
-/* Windows.ApplicationModel.Search.SearchPane.SetLocalContentSuggestionSettings(settings) */
 HRESULT wapse_search_pane_set_local_content_suggestion_settings(WAPSE_SearchPane *self, WAPSE_LocalContentSuggestionSettings* settings);
 
-/* Windows.ApplicationModel.Search.SearchPane.Show() */
 HRESULT wapse_search_pane_show(WAPSE_SearchPane *self);
 
-/* Windows.ApplicationModel.Search.SearchPane.Show(query) */
 HRESULT wapse_search_pane_show_str(WAPSE_SearchPane *self, cwinrt_hstring query);
 
-/* Windows.ApplicationModel.Search.SearchPane.put_ShowOnKeyboardInput() */
 HRESULT wapse_search_pane_put__show_on_keyboard_input(WAPSE_SearchPane *self, BOOL value);
 
-/* Windows.ApplicationModel.Search.SearchPane.get_ShowOnKeyboardInput() */
 HRESULT wapse_search_pane_get__show_on_keyboard_input(WAPSE_SearchPane *self, BOOL *value);
 
-/* Windows.ApplicationModel.Search.SearchPane.TrySetQueryText(query) */
 HRESULT wapse_search_pane_try_set_query_text(WAPSE_SearchPane *self, cwinrt_hstring query, BOOL *out);
 
-/* Windows.ApplicationModel.Search.SearchPane.HideThisApplication() */
 HRESULT wapse_search_pane_hide_this_application(void);
 
-/* Windows.ApplicationModel.Search.SearchPane.GetForCurrentView() */
 HRESULT wapse_search_pane_get_for_current_view(WAPSE_SearchPane** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapse_search_pane_on_visibility_changed(WAPSE_SearchPane *self, cwinrt_event_fn fn, void *ctx);
@@ -336,111 +276,60 @@ void wapse_search_pane_off_query_submitted(WAPSE_SearchPane *self, cwinrt_token 
 cwinrt_token wapse_search_pane_on_result_suggestion_chosen(WAPSE_SearchPane *self, cwinrt_event_fn fn, void *ctx);
 void wapse_search_pane_off_result_suggestion_chosen(WAPSE_SearchPane *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs */
 HRESULT wapse_search_pane_query_changed_event_args_new(WAPSE_SearchPaneQueryChangedEventArgs **out);
 
-/* Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs */
-/* Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs.get_QueryText() */
 HRESULT wapse_search_pane_query_changed_event_args_get__query_text(WAPSE_SearchPaneQueryChangedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs.get_Language() */
 HRESULT wapse_search_pane_query_changed_event_args_get__language(WAPSE_SearchPaneQueryChangedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs.get_LinguisticDetails() */
 HRESULT wapse_search_pane_query_changed_event_args_get__linguistic_details(WAPSE_SearchPaneQueryChangedEventArgs *self, WAPSE_SearchPaneQueryLinguisticDetails** value);
 
-/* activate Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails */
 HRESULT wapse_search_pane_query_linguistic_details_new(WAPSE_SearchPaneQueryLinguisticDetails **out);
 
-/* Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails */
-/* Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails.get_QueryTextAlternatives() */
 HRESULT wapse_search_pane_query_linguistic_details_get__query_text_alternatives(WAPSE_SearchPaneQueryLinguisticDetails *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails.get_QueryTextCompositionStart() */
 HRESULT wapse_search_pane_query_linguistic_details_get__query_text_composition_start(WAPSE_SearchPaneQueryLinguisticDetails *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails.get_QueryTextCompositionLength() */
 HRESULT wapse_search_pane_query_linguistic_details_get__query_text_composition_length(WAPSE_SearchPaneQueryLinguisticDetails *self, uint32_t *value);
 
-/* activate Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs */
 HRESULT wapse_search_pane_query_submitted_event_args_new(WAPSE_SearchPaneQuerySubmittedEventArgs **out);
 
-/* Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs */
-/* Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs.get_QueryText() */
 HRESULT wapse_search_pane_query_submitted_event_args_get__query_text(WAPSE_SearchPaneQuerySubmittedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs.get_Language() */
 HRESULT wapse_search_pane_query_submitted_event_args_get__language(WAPSE_SearchPaneQuerySubmittedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs.get_LinguisticDetails() */
 HRESULT wapse_search_pane_query_submitted_event_args_get__linguistic_details(WAPSE_SearchPaneQuerySubmittedEventArgs *self, WAPSE_SearchPaneQueryLinguisticDetails** value);
 
-/* activate Windows.ApplicationModel.Search.SearchPaneResultSuggestionChosenEventArgs */
 HRESULT wapse_search_pane_result_suggestion_chosen_event_args_new(WAPSE_SearchPaneResultSuggestionChosenEventArgs **out);
 
-/* Windows.ApplicationModel.Search.SearchPaneResultSuggestionChosenEventArgs */
-/* Windows.ApplicationModel.Search.SearchPaneResultSuggestionChosenEventArgs.get_Tag() */
 HRESULT wapse_search_pane_result_suggestion_chosen_event_args_get__tag(WAPSE_SearchPaneResultSuggestionChosenEventArgs *self, cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest */
 HRESULT wapse_search_pane_suggestions_request_new(WAPSE_SearchPaneSuggestionsRequest **out);
 
-/* Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest */
-/* Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest.get_IsCanceled() */
 HRESULT wapse_search_pane_suggestions_request_get__is_canceled(WAPSE_SearchPaneSuggestionsRequest *self, BOOL *value);
 
-/* Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest.get_SearchSuggestionCollection() */
 HRESULT wapse_search_pane_suggestions_request_get__search_suggestion_collection(WAPSE_SearchPaneSuggestionsRequest *self, WAPSE_SearchSuggestionCollection** value);
 
-/* Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest.GetDeferral() */
 HRESULT wapse_search_pane_suggestions_request_get_deferral(WAPSE_SearchPaneSuggestionsRequest *self, WAPSE_SearchPaneSuggestionsRequestDeferral** out);
 
-/* activate Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestDeferral */
 HRESULT wapse_search_pane_suggestions_request_deferral_new(WAPSE_SearchPaneSuggestionsRequestDeferral **out);
 
-/* Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestDeferral */
-/* Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestDeferral.Complete() */
 HRESULT wapse_search_pane_suggestions_request_deferral_complete(WAPSE_SearchPaneSuggestionsRequestDeferral *self);
 
-/* activate Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs */
 HRESULT wapse_search_pane_suggestions_requested_event_args_new(WAPSE_SearchPaneSuggestionsRequestedEventArgs **out);
 
-/* Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs */
-/* Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs.get_Request() */
 HRESULT wapse_search_pane_suggestions_requested_event_args_get__request(WAPSE_SearchPaneSuggestionsRequestedEventArgs *self, WAPSE_SearchPaneSuggestionsRequest** value);
 
-/* Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs.get_QueryText() */
 HRESULT wapse_search_pane_suggestions_requested_event_args_get__query_text(WAPSE_SearchPaneSuggestionsRequestedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs.get_Language() */
 HRESULT wapse_search_pane_suggestions_requested_event_args_get__language(WAPSE_SearchPaneSuggestionsRequestedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs.get_LinguisticDetails() */
 HRESULT wapse_search_pane_suggestions_requested_event_args_get__linguistic_details(WAPSE_SearchPaneSuggestionsRequestedEventArgs *self, WAPSE_SearchPaneQueryLinguisticDetails** value);
 
-/* activate Windows.ApplicationModel.Search.SearchPaneVisibilityChangedEventArgs */
 HRESULT wapse_search_pane_visibility_changed_event_args_new(WAPSE_SearchPaneVisibilityChangedEventArgs **out);
 
-/* Windows.ApplicationModel.Search.SearchPaneVisibilityChangedEventArgs */
-/* Windows.ApplicationModel.Search.SearchPaneVisibilityChangedEventArgs.get_Visible() */
 HRESULT wapse_search_pane_visibility_changed_event_args_get__visible(WAPSE_SearchPaneVisibilityChangedEventArgs *self, BOOL *value);
 
-/* Windows.ApplicationModel.Search.ISearchSuggestionsRequest */
-/* Windows.ApplicationModel.Search.ISearchSuggestionCollection */
-/* Windows.ApplicationModel.Search.ISearchQueryLinguisticDetails */
-/* Windows.ApplicationModel.Search.ISearchSuggestionsRequestDeferral */
-/* Windows.ApplicationModel.Search.ILocalContentSuggestionSettings */
-/* Windows.ApplicationModel.Search.ISearchPane */
-/* Windows.ApplicationModel.Search.ISearchPaneQueryLinguisticDetails */
-/* Windows.ApplicationModel.Search.ISearchPaneQuerySubmittedEventArgs */
-/* Windows.ApplicationModel.Search.ISearchPaneQuerySubmittedEventArgsWithLinguisticDetails */
-/* Windows.ApplicationModel.Search.ISearchPaneQuerySubmittedEventArgsWithLinguisticDetails.get_LinguisticDetails() */
 HRESULT wapse_search_pane_query_submitted_event_args_with_linguistic_details_get__linguistic_details(WAPSE_ISearchPaneQuerySubmittedEventArgsWithLinguisticDetails *self, WAPSE_SearchPaneQueryLinguisticDetails** value);
 
-/* Windows.ApplicationModel.Search.ISearchPaneResultSuggestionChosenEventArgs */
-/* Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequest */
-/* Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequestDeferral */
-/* Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequestedEventArgs */
-/* Windows.ApplicationModel.Search.ISearchPaneVisibilityChangedEventArgs */
-/* Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_SEARCH_H */

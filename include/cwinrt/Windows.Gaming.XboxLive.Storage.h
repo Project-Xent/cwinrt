@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
@@ -22,7 +21,6 @@ typedef struct WSTST_IBuffer WSTST_IBuffer;
 typedef struct WSY_User WSY_User;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WGAXBST_GameSaveBlobInfo WGAXBST_GameSaveBlobInfo;
 typedef struct WGAXBST_GameSaveBlobInfoGetResult WGAXBST_GameSaveBlobInfoGetResult;
 typedef struct WGAXBST_GameSaveBlobInfoQuery WGAXBST_GameSaveBlobInfoQuery;
@@ -47,7 +45,6 @@ typedef struct WGAXBST_IGameSaveProvider WGAXBST_IGameSaveProvider;
 typedef struct WGAXBST_IGameSaveProviderGetResult WGAXBST_IGameSaveProviderGetResult;
 typedef struct WGAXBST_IGameSaveContainerInfo WGAXBST_IGameSaveContainerInfo;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IVectorView_WGAXBST_GameSaveBlobInfo
 #define CWINRT_FWD_WFOCO_IVectorView_WGAXBST_GameSaveBlobInfo
 typedef struct WFOCO_IVectorView_WGAXBST_GameSaveBlobInfo WFOCO_IVectorView_WGAXBST_GameSaveBlobInfo;
@@ -130,7 +127,6 @@ typedef enum WGAXBST_GameSaveErrorStatus {
 } WGAXBST_GameSaveErrorStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -183,182 +179,106 @@ static const IID CWINRT_IID_WGAXBST_IGameSaveProviderGetResult CWINRT_MAYBE_UNUS
 static const IID CWINRT_IID_WGAXBST_IGameSaveContainerInfo CWINRT_MAYBE_UNUSED = { 0xB7E27300, 0x155D, 0x4BB4, { 0xB2, 0xBA, 0x93, 0x03, 0x06, 0xF3, 0x91, 0xB5 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Gaming.XboxLive.Storage.GameSaveBlobInfo */
 HRESULT wgaxbst_game_save_blob_info_new(WGAXBST_GameSaveBlobInfo **out);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveBlobInfo */
-/* Windows.Gaming.XboxLive.Storage.GameSaveBlobInfo.get_Name() */
 HRESULT wgaxbst_game_save_blob_info_get__name(WGAXBST_GameSaveBlobInfo *self, cwinrt_hstring *value);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveBlobInfo.get_Size() */
 HRESULT wgaxbst_game_save_blob_info_get__size(WGAXBST_GameSaveBlobInfo *self, uint32_t *value);
 
-/* activate Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoGetResult */
 HRESULT wgaxbst_game_save_blob_info_get_result_new(WGAXBST_GameSaveBlobInfoGetResult **out);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoGetResult */
-/* Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoGetResult.get_Status() */
 HRESULT wgaxbst_game_save_blob_info_get_result_get__status(WGAXBST_GameSaveBlobInfoGetResult *self, WGAXBST_GameSaveErrorStatus *value);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoGetResult.get_Value() */
 HRESULT wgaxbst_game_save_blob_info_get_result_get__value(WGAXBST_GameSaveBlobInfoGetResult *self, WFOCO_IVectorView_WGAXBST_GameSaveBlobInfo** value);
 
-/* activate Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoQuery */
 HRESULT wgaxbst_game_save_blob_info_query_new(WGAXBST_GameSaveBlobInfoQuery **out);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoQuery */
-/* Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoQuery.GetBlobInfoAsync() */
 HRESULT wgaxbst_game_save_blob_info_query_get_blob_info_async(WGAXBST_GameSaveBlobInfoQuery *self, WF_IAsyncOperation_WGAXBST_GameSaveBlobInfoGetResult** out);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoQuery.GetBlobInfoAsync(startIndex, maxNumberOfItems) */
 HRESULT wgaxbst_game_save_blob_info_query_get_blob_info_async_u32_u32_p(WGAXBST_GameSaveBlobInfoQuery *self, uint32_t startIndex, uint32_t maxNumberOfItems, WF_IAsyncOperation_WGAXBST_GameSaveBlobInfoGetResult** out);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoQuery.GetItemCountAsync() */
 HRESULT wgaxbst_game_save_blob_info_query_get_item_count_async(WGAXBST_GameSaveBlobInfoQuery *self, WF_IAsyncOperation_uint32_t** out);
 
-/* activate Windows.Gaming.XboxLive.Storage.GameSaveContainer */
 HRESULT wgaxbst_game_save_container_new(WGAXBST_GameSaveContainer **out);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveContainer */
-/* Windows.Gaming.XboxLive.Storage.GameSaveContainer.get_Name() */
 HRESULT wgaxbst_game_save_container_get__name(WGAXBST_GameSaveContainer *self, cwinrt_hstring *value);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveContainer.get_Provider() */
 HRESULT wgaxbst_game_save_container_get__provider(WGAXBST_GameSaveContainer *self, WGAXBST_GameSaveProvider** value);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveContainer.SubmitUpdatesAsync(blobsToWrite, blobsToDelete, displayName) */
 HRESULT wgaxbst_game_save_container_submit_updates_async(WGAXBST_GameSaveContainer *self, WFOCO_IMapView_HSTRING_WSTST_IBuffer* blobsToWrite, WFOCO_IIterable_HSTRING* blobsToDelete, cwinrt_hstring displayName, WF_IAsyncOperation_WGAXBST_GameSaveOperationResult** out);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveContainer.ReadAsync(blobsToRead) */
 HRESULT wgaxbst_game_save_container_read_async(WGAXBST_GameSaveContainer *self, WFOCO_IMapView_HSTRING_WSTST_IBuffer* blobsToRead, WF_IAsyncOperation_WGAXBST_GameSaveOperationResult** out);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveContainer.GetAsync(blobsToRead) */
 HRESULT wgaxbst_game_save_container_get_async(WGAXBST_GameSaveContainer *self, WFOCO_IIterable_HSTRING* blobsToRead, WF_IAsyncOperation_WGAXBST_GameSaveBlobGetResult** out);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveContainer.SubmitPropertySetUpdatesAsync(blobsToWrite, blobsToDelete, displayName) */
 HRESULT wgaxbst_game_save_container_submit_property_set_updates_async(WGAXBST_GameSaveContainer *self, WFOCO_IPropertySet* blobsToWrite, WFOCO_IIterable_HSTRING* blobsToDelete, cwinrt_hstring displayName, WF_IAsyncOperation_WGAXBST_GameSaveOperationResult** out);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveContainer.CreateBlobInfoQuery(blobNamePrefix) */
 HRESULT wgaxbst_game_save_container_create_blob_info_query(WGAXBST_GameSaveContainer *self, cwinrt_hstring blobNamePrefix, WGAXBST_GameSaveBlobInfoQuery** out);
 
-/* activate Windows.Gaming.XboxLive.Storage.GameSaveBlobGetResult */
 HRESULT wgaxbst_game_save_blob_get_result_new(WGAXBST_GameSaveBlobGetResult **out);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveBlobGetResult */
-/* Windows.Gaming.XboxLive.Storage.GameSaveBlobGetResult.get_Status() */
 HRESULT wgaxbst_game_save_blob_get_result_get__status(WGAXBST_GameSaveBlobGetResult *self, WGAXBST_GameSaveErrorStatus *value);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveBlobGetResult.get_Value() */
 HRESULT wgaxbst_game_save_blob_get_result_get__value(WGAXBST_GameSaveBlobGetResult *self, WFOCO_IMapView_HSTRING_WSTST_IBuffer** value);
 
-/* activate Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoGetResult */
 HRESULT wgaxbst_game_save_container_info_get_result_new(WGAXBST_GameSaveContainerInfoGetResult **out);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoGetResult */
-/* Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoGetResult.get_Status() */
 HRESULT wgaxbst_game_save_container_info_get_result_get__status(WGAXBST_GameSaveContainerInfoGetResult *self, WGAXBST_GameSaveErrorStatus *value);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoGetResult.get_Value() */
 HRESULT wgaxbst_game_save_container_info_get_result_get__value(WGAXBST_GameSaveContainerInfoGetResult *self, WFOCO_IVectorView_WGAXBST_GameSaveContainerInfo** value);
 
-/* activate Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoQuery */
 HRESULT wgaxbst_game_save_container_info_query_new(WGAXBST_GameSaveContainerInfoQuery **out);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoQuery */
-/* Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoQuery.GetContainerInfoAsync() */
 HRESULT wgaxbst_game_save_container_info_query_get_container_info_async(WGAXBST_GameSaveContainerInfoQuery *self, WF_IAsyncOperation_WGAXBST_GameSaveContainerInfoGetResult** out);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoQuery.GetContainerInfoAsync(startIndex, maxNumberOfItems) */
 HRESULT wgaxbst_game_save_container_info_query_get_container_info_async_u32_u32_p(WGAXBST_GameSaveContainerInfoQuery *self, uint32_t startIndex, uint32_t maxNumberOfItems, WF_IAsyncOperation_WGAXBST_GameSaveContainerInfoGetResult** out);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoQuery.GetItemCountAsync() */
 HRESULT wgaxbst_game_save_container_info_query_get_item_count_async(WGAXBST_GameSaveContainerInfoQuery *self, WF_IAsyncOperation_uint32_t** out);
 
-/* activate Windows.Gaming.XboxLive.Storage.GameSaveOperationResult */
 HRESULT wgaxbst_game_save_operation_result_new(WGAXBST_GameSaveOperationResult **out);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveOperationResult */
-/* Windows.Gaming.XboxLive.Storage.GameSaveOperationResult.get_Status() */
 HRESULT wgaxbst_game_save_operation_result_get__status(WGAXBST_GameSaveOperationResult *self, WGAXBST_GameSaveErrorStatus *value);
 
-/* activate Windows.Gaming.XboxLive.Storage.GameSaveProvider */
 HRESULT wgaxbst_game_save_provider_new(WGAXBST_GameSaveProvider **out);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveProvider */
-/* Windows.Gaming.XboxLive.Storage.GameSaveProvider.get_User() */
 HRESULT wgaxbst_game_save_provider_get__user(WGAXBST_GameSaveProvider *self, WSY_User** value);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveProvider.CreateContainer(name) */
 HRESULT wgaxbst_game_save_provider_create_container(WGAXBST_GameSaveProvider *self, cwinrt_hstring name, WGAXBST_GameSaveContainer** out);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveProvider.DeleteContainerAsync(name) */
 HRESULT wgaxbst_game_save_provider_delete_container_async(WGAXBST_GameSaveProvider *self, cwinrt_hstring name, WF_IAsyncOperation_WGAXBST_GameSaveOperationResult** out);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveProvider.CreateContainerInfoQuery() */
 HRESULT wgaxbst_game_save_provider_create_container_info_query(WGAXBST_GameSaveProvider *self, WGAXBST_GameSaveContainerInfoQuery** out);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveProvider.CreateContainerInfoQuery(containerNamePrefix) */
 HRESULT wgaxbst_game_save_provider_create_container_info_query_str_p(WGAXBST_GameSaveProvider *self, cwinrt_hstring containerNamePrefix, WGAXBST_GameSaveContainerInfoQuery** out);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveProvider.GetRemainingBytesInQuotaAsync() */
 HRESULT wgaxbst_game_save_provider_get_remaining_bytes_in_quota_async(WGAXBST_GameSaveProvider *self, WF_IAsyncOperation_int64_t** out);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveProvider.get_ContainersChangedSinceLastSync() */
 HRESULT wgaxbst_game_save_provider_get__containers_changed_since_last_sync(WGAXBST_GameSaveProvider *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveProvider.GetForUserAsync(user, serviceConfigId) */
 HRESULT wgaxbst_game_save_provider_get_for_user_async(WSY_User* user, cwinrt_hstring serviceConfigId, WF_IAsyncOperation_WGAXBST_GameSaveProviderGetResult** out);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveProvider.GetSyncOnDemandForUserAsync(user, serviceConfigId) */
 HRESULT wgaxbst_game_save_provider_get_sync_on_demand_for_user_async(WSY_User* user, cwinrt_hstring serviceConfigId, WF_IAsyncOperation_WGAXBST_GameSaveProviderGetResult** out);
 
-/* activate Windows.Gaming.XboxLive.Storage.GameSaveProviderGetResult */
 HRESULT wgaxbst_game_save_provider_get_result_new(WGAXBST_GameSaveProviderGetResult **out);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveProviderGetResult */
-/* Windows.Gaming.XboxLive.Storage.GameSaveProviderGetResult.get_Status() */
 HRESULT wgaxbst_game_save_provider_get_result_get__status(WGAXBST_GameSaveProviderGetResult *self, WGAXBST_GameSaveErrorStatus *value);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveProviderGetResult.get_Value() */
 HRESULT wgaxbst_game_save_provider_get_result_get__value(WGAXBST_GameSaveProviderGetResult *self, WGAXBST_GameSaveProvider** value);
 
-/* Windows.Gaming.XboxLive.Storage.IGameSaveProviderStatics */
-/* Windows.Gaming.XboxLive.Storage.IGameSaveProviderStatics.GetForUserAsync(user, serviceConfigId) */
 HRESULT wgaxbst_game_save_provider_statics_get_for_user_async(WGAXBST_IGameSaveProviderStatics *self, WSY_User* user, cwinrt_hstring serviceConfigId, WF_IAsyncOperation_WGAXBST_GameSaveProviderGetResult** out);
 
-/* Windows.Gaming.XboxLive.Storage.IGameSaveProviderStatics.GetSyncOnDemandForUserAsync(user, serviceConfigId) */
 HRESULT wgaxbst_game_save_provider_statics_get_sync_on_demand_for_user_async(WGAXBST_IGameSaveProviderStatics *self, WSY_User* user, cwinrt_hstring serviceConfigId, WF_IAsyncOperation_WGAXBST_GameSaveProviderGetResult** out);
 
-/* activate Windows.Gaming.XboxLive.Storage.GameSaveContainerInfo */
 HRESULT wgaxbst_game_save_container_info_new(WGAXBST_GameSaveContainerInfo **out);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveContainerInfo */
-/* Windows.Gaming.XboxLive.Storage.GameSaveContainerInfo.get_Name() */
 HRESULT wgaxbst_game_save_container_info_get__name(WGAXBST_GameSaveContainerInfo *self, cwinrt_hstring *value);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveContainerInfo.get_TotalSize() */
 HRESULT wgaxbst_game_save_container_info_get__total_size(WGAXBST_GameSaveContainerInfo *self, uint64_t *value);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveContainerInfo.get_DisplayName() */
 HRESULT wgaxbst_game_save_container_info_get__display_name(WGAXBST_GameSaveContainerInfo *self, cwinrt_hstring *value);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveContainerInfo.get_LastModifiedTime() */
 HRESULT wgaxbst_game_save_container_info_get__last_modified_time(WGAXBST_GameSaveContainerInfo *self, WF_DateTime *value);
 
-/* Windows.Gaming.XboxLive.Storage.GameSaveContainerInfo.get_NeedsSync() */
 HRESULT wgaxbst_game_save_container_info_get__needs_sync(WGAXBST_GameSaveContainerInfo *self, BOOL *value);
 
-/* Windows.Gaming.XboxLive.Storage.IGameSaveBlobInfo */
-/* Windows.Gaming.XboxLive.Storage.IGameSaveBlobInfoGetResult */
-/* Windows.Gaming.XboxLive.Storage.IGameSaveBlobInfoQuery */
-/* Windows.Gaming.XboxLive.Storage.IGameSaveContainer */
-/* Windows.Gaming.XboxLive.Storage.IGameSaveBlobGetResult */
-/* Windows.Gaming.XboxLive.Storage.IGameSaveContainerInfoGetResult */
-/* Windows.Gaming.XboxLive.Storage.IGameSaveContainerInfoQuery */
-/* Windows.Gaming.XboxLive.Storage.IGameSaveOperationResult */
-/* Windows.Gaming.XboxLive.Storage.IGameSaveProvider */
-/* Windows.Gaming.XboxLive.Storage.IGameSaveProviderGetResult */
-/* Windows.Gaming.XboxLive.Storage.IGameSaveContainerInfo */
 #endif /* CWINRT_WINDOWS_GAMING_XBOXLIVE_STORAGE_H */

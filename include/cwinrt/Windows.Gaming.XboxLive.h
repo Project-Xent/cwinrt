@@ -12,8 +12,4 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
-
-/* Methods */
-
 #endif /* CWINRT_WINDOWS_GAMING_XBOXLIVE_H */

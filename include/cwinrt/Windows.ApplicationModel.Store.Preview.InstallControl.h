@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WMADE_PackageVolume
 #define CWINRT_FWD_WMADE_PackageVolume
 typedef struct WMADE_PackageVolume WMADE_PackageVolume;
@@ -22,7 +21,6 @@ typedef struct WMADE_PackageVolume WMADE_PackageVolume;
 typedef struct WSY_User WSY_User;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPSTPRIN_GetEntitlementResult WAPSTPRIN_GetEntitlementResult;
 typedef struct WAPSTPRIN_AppUpdateOptions WAPSTPRIN_AppUpdateOptions;
 typedef struct WAPSTPRIN_AppInstallStatus WAPSTPRIN_AppInstallStatus;
@@ -53,7 +51,6 @@ typedef struct WAPSTPRIN_IAppInstallItem_3 WAPSTPRIN_IAppInstallItem_3;
 typedef struct WAPSTPRIN_IAppInstallItem_4 WAPSTPRIN_IAppInstallItem_4;
 typedef struct WAPSTPRIN_IAppInstallItem_5 WAPSTPRIN_IAppInstallItem_5;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
@@ -150,7 +147,6 @@ typedef enum WAPSTPRIN_AppInstallState {
 } WAPSTPRIN_AppInstallState;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -243,315 +239,206 @@ static const IID CWINRT_IID_WAPSTPRIN_IAppInstallItem_4 CWINRT_MAYBE_UNUSED = { 
 static const IID CWINRT_IID_WAPSTPRIN_IAppInstallItem_5 CWINRT_MAYBE_UNUSED = { 0x5510E7CC, 0x4076, 0x4A0B, { 0x94, 0x72, 0xC2, 0x1D, 0x9D, 0x38, 0x0E, 0x55 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementResult */
 HRESULT wapstprin_get_entitlement_result_new(WAPSTPRIN_GetEntitlementResult **out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementResult */
-/* Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementResult.get_Status() */
 HRESULT wapstprin_get_entitlement_result_get__status(WAPSTPRIN_GetEntitlementResult *self, WAPSTPRIN_GetEntitlementStatus *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementResult.get_IsAlreadyOwned() */
 HRESULT wapstprin_get_entitlement_result_get__is_already_owned(WAPSTPRIN_GetEntitlementResult *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementResult.get_OrderId() */
 HRESULT wapstprin_get_entitlement_result_get__order_id(WAPSTPRIN_GetEntitlementResult *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementResult.get_SkuId() */
 HRESULT wapstprin_get_entitlement_result_get__sku_id(WAPSTPRIN_GetEntitlementResult *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementResult.get_AvailabilityId() */
 HRESULT wapstprin_get_entitlement_result_get__availability_id(WAPSTPRIN_GetEntitlementResult *self, cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.Store.Preview.InstallControl.AppUpdateOptions */
 HRESULT wapstprin_app_update_options_new(WAPSTPRIN_AppUpdateOptions **out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppUpdateOptions */
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppUpdateOptions.get_CatalogId() */
 HRESULT wapstprin_app_update_options_get__catalog_id(WAPSTPRIN_AppUpdateOptions *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppUpdateOptions.put_CatalogId() */
 HRESULT wapstprin_app_update_options_put__catalog_id(WAPSTPRIN_AppUpdateOptions *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppUpdateOptions.get_AllowForcedAppRestart() */
 HRESULT wapstprin_app_update_options_get__allow_forced_app_restart(WAPSTPRIN_AppUpdateOptions *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppUpdateOptions.put_AllowForcedAppRestart() */
 HRESULT wapstprin_app_update_options_put__allow_forced_app_restart(WAPSTPRIN_AppUpdateOptions *self, BOOL value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppUpdateOptions.get_AutomaticallyDownloadAndInstallUpdateIfFound() */
 HRESULT wapstprin_app_update_options_get__automatically_download_and_install_update_if_found(WAPSTPRIN_AppUpdateOptions *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppUpdateOptions.put_AutomaticallyDownloadAndInstallUpdateIfFound() */
 HRESULT wapstprin_app_update_options_put__automatically_download_and_install_update_if_found(WAPSTPRIN_AppUpdateOptions *self, BOOL value);
 
-/* activate Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus */
 HRESULT wapstprin_app_install_status_new(WAPSTPRIN_AppInstallStatus **out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus */
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus.get_InstallState() */
 HRESULT wapstprin_app_install_status_get__install_state(WAPSTPRIN_AppInstallStatus *self, WAPSTPRIN_AppInstallState *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus.get_DownloadSizeInBytes() */
 HRESULT wapstprin_app_install_status_get__download_size_in_bytes(WAPSTPRIN_AppInstallStatus *self, uint64_t *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus.get_BytesDownloaded() */
 HRESULT wapstprin_app_install_status_get__bytes_downloaded(WAPSTPRIN_AppInstallStatus *self, uint64_t *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus.get_PercentComplete() */
 HRESULT wapstprin_app_install_status_get__percent_complete(WAPSTPRIN_AppInstallStatus *self, double *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus.get_ErrorCode() */
 HRESULT wapstprin_app_install_status_get__error_code(WAPSTPRIN_AppInstallStatus *self, HRESULT *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus.get_User() */
 HRESULT wapstprin_app_install_status_get__user(WAPSTPRIN_AppInstallStatus *self, WSY_User** value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus.get_ReadyForLaunch() */
 HRESULT wapstprin_app_install_status_get__ready_for_launch(WAPSTPRIN_AppInstallStatus *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus.get_IsStaged() */
 HRESULT wapstprin_app_install_status_get__is_staged(WAPSTPRIN_AppInstallStatus *self, BOOL *value);
 
-/* activate Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions */
 HRESULT wapstprin_app_install_options_new(WAPSTPRIN_AppInstallOptions **out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions */
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.get_CatalogId() */
 HRESULT wapstprin_app_install_options_get__catalog_id(WAPSTPRIN_AppInstallOptions *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.put_CatalogId() */
 HRESULT wapstprin_app_install_options_put__catalog_id(WAPSTPRIN_AppInstallOptions *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.get_ForceUseOfNonRemovableStorage() */
 HRESULT wapstprin_app_install_options_get__force_use_of_non_removable_storage(WAPSTPRIN_AppInstallOptions *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.put_ForceUseOfNonRemovableStorage() */
 HRESULT wapstprin_app_install_options_put__force_use_of_non_removable_storage(WAPSTPRIN_AppInstallOptions *self, BOOL value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.get_AllowForcedAppRestart() */
 HRESULT wapstprin_app_install_options_get__allow_forced_app_restart(WAPSTPRIN_AppInstallOptions *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.put_AllowForcedAppRestart() */
 HRESULT wapstprin_app_install_options_put__allow_forced_app_restart(WAPSTPRIN_AppInstallOptions *self, BOOL value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.get_Repair() */
 HRESULT wapstprin_app_install_options_get__repair(WAPSTPRIN_AppInstallOptions *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.put_Repair() */
 HRESULT wapstprin_app_install_options_put__repair(WAPSTPRIN_AppInstallOptions *self, BOOL value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.get_TargetVolume() */
 HRESULT wapstprin_app_install_options_get__target_volume(WAPSTPRIN_AppInstallOptions *self, WMADE_PackageVolume** value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.put_TargetVolume() */
 HRESULT wapstprin_app_install_options_put__target_volume(WAPSTPRIN_AppInstallOptions *self, WMADE_PackageVolume* value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.get_LaunchAfterInstall() */
 HRESULT wapstprin_app_install_options_get__launch_after_install(WAPSTPRIN_AppInstallOptions *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.put_LaunchAfterInstall() */
 HRESULT wapstprin_app_install_options_put__launch_after_install(WAPSTPRIN_AppInstallOptions *self, BOOL value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.get_PinToDesktopAfterInstall() */
 HRESULT wapstprin_app_install_options_get__pin_to_desktop_after_install(WAPSTPRIN_AppInstallOptions *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.put_PinToDesktopAfterInstall() */
 HRESULT wapstprin_app_install_options_put__pin_to_desktop_after_install(WAPSTPRIN_AppInstallOptions *self, BOOL value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.get_PinToStartAfterInstall() */
 HRESULT wapstprin_app_install_options_get__pin_to_start_after_install(WAPSTPRIN_AppInstallOptions *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.put_PinToStartAfterInstall() */
 HRESULT wapstprin_app_install_options_put__pin_to_start_after_install(WAPSTPRIN_AppInstallOptions *self, BOOL value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.get_PinToTaskbarAfterInstall() */
 HRESULT wapstprin_app_install_options_get__pin_to_taskbar_after_install(WAPSTPRIN_AppInstallOptions *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.put_PinToTaskbarAfterInstall() */
 HRESULT wapstprin_app_install_options_put__pin_to_taskbar_after_install(WAPSTPRIN_AppInstallOptions *self, BOOL value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.get_CompletedInstallToastNotificationMode() */
 HRESULT wapstprin_app_install_options_get__completed_install_toast_notification_mode(WAPSTPRIN_AppInstallOptions *self, WAPSTPRIN_AppInstallationToastNotificationMode *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.put_CompletedInstallToastNotificationMode() */
 HRESULT wapstprin_app_install_options_put__completed_install_toast_notification_mode(WAPSTPRIN_AppInstallOptions *self, WAPSTPRIN_AppInstallationToastNotificationMode value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.get_InstallInProgressToastNotificationMode() */
 HRESULT wapstprin_app_install_options_get__install_in_progress_toast_notification_mode(WAPSTPRIN_AppInstallOptions *self, WAPSTPRIN_AppInstallationToastNotificationMode *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.put_InstallInProgressToastNotificationMode() */
 HRESULT wapstprin_app_install_options_put__install_in_progress_toast_notification_mode(WAPSTPRIN_AppInstallOptions *self, WAPSTPRIN_AppInstallationToastNotificationMode value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.get_InstallForAllUsers() */
 HRESULT wapstprin_app_install_options_get__install_for_all_users(WAPSTPRIN_AppInstallOptions *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.put_InstallForAllUsers() */
 HRESULT wapstprin_app_install_options_put__install_for_all_users(WAPSTPRIN_AppInstallOptions *self, BOOL value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.get_StageButDoNotInstall() */
 HRESULT wapstprin_app_install_options_get__stage_but_do_not_install(WAPSTPRIN_AppInstallOptions *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.put_StageButDoNotInstall() */
 HRESULT wapstprin_app_install_options_put__stage_but_do_not_install(WAPSTPRIN_AppInstallOptions *self, BOOL value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.get_CampaignId() */
 HRESULT wapstprin_app_install_options_get__campaign_id(WAPSTPRIN_AppInstallOptions *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.put_CampaignId() */
 HRESULT wapstprin_app_install_options_put__campaign_id(WAPSTPRIN_AppInstallOptions *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.get_ExtendedCampaignId() */
 HRESULT wapstprin_app_install_options_get__extended_campaign_id(WAPSTPRIN_AppInstallOptions *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions.put_ExtendedCampaignId() */
 HRESULT wapstprin_app_install_options_put__extended_campaign_id(WAPSTPRIN_AppInstallOptions *self, cwinrt_hstring value);
 
-/* activate Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManagerItemEventArgs */
 HRESULT wapstprin_app_install_manager_item_event_args_new(WAPSTPRIN_AppInstallManagerItemEventArgs **out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManagerItemEventArgs */
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManagerItemEventArgs.get_Item() */
 HRESULT wapstprin_app_install_manager_item_event_args_get__item(WAPSTPRIN_AppInstallManagerItemEventArgs *self, WAPSTPRIN_AppInstallItem** value);
 
-/* activate Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager */
 HRESULT wapstprin_app_install_manager_new(WAPSTPRIN_AppInstallManager **out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager */
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.get_AppInstallItems() */
 HRESULT wapstprin_app_install_manager_get__app_install_items(WAPSTPRIN_AppInstallManager *self, WFOCO_IVectorView_WAPSTPRIN_AppInstallItem** value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.Cancel(productId) */
 HRESULT wapstprin_app_install_manager_cancel(WAPSTPRIN_AppInstallManager *self, cwinrt_hstring productId);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.Pause(productId) */
 HRESULT wapstprin_app_install_manager_pause(WAPSTPRIN_AppInstallManager *self, cwinrt_hstring productId);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.Restart(productId) */
 HRESULT wapstprin_app_install_manager_restart(WAPSTPRIN_AppInstallManager *self, cwinrt_hstring productId);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.get_AutoUpdateSetting() */
 HRESULT wapstprin_app_install_manager_get__auto_update_setting(WAPSTPRIN_AppInstallManager *self, WAPSTPRIN_AutoUpdateSetting *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.put_AutoUpdateSetting() */
 HRESULT wapstprin_app_install_manager_put__auto_update_setting(WAPSTPRIN_AppInstallManager *self, WAPSTPRIN_AutoUpdateSetting value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.get_AcquisitionIdentity() */
 HRESULT wapstprin_app_install_manager_get__acquisition_identity(WAPSTPRIN_AppInstallManager *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.put_AcquisitionIdentity() */
 HRESULT wapstprin_app_install_manager_put__acquisition_identity(WAPSTPRIN_AppInstallManager *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.GetIsApplicableAsync(productId, skuId) */
 HRESULT wapstprin_app_install_manager_get_is_applicable_async(WAPSTPRIN_AppInstallManager *self, cwinrt_hstring productId, cwinrt_hstring skuId, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.StartAppInstallAsync(productId, skuId, repair, forceUseOfNonRemovableStorage) */
 HRESULT wapstprin_app_install_manager_start_app_install_async(WAPSTPRIN_AppInstallManager *self, cwinrt_hstring productId, cwinrt_hstring skuId, BOOL repair, BOOL forceUseOfNonRemovableStorage, WF_IAsyncOperation_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.UpdateAppByPackageFamilyNameAsync(packageFamilyName) */
 HRESULT wapstprin_app_install_manager_update_app_by_package_family_name_async(WAPSTPRIN_AppInstallManager *self, cwinrt_hstring packageFamilyName, WF_IAsyncOperation_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.SearchForUpdatesAsync(productId, skuId) */
 HRESULT wapstprin_app_install_manager_search_for_updates_async(WAPSTPRIN_AppInstallManager *self, cwinrt_hstring productId, cwinrt_hstring skuId, WF_IAsyncOperation_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.SearchForAllUpdatesAsync() */
 HRESULT wapstprin_app_install_manager_search_for_all_updates_async(WAPSTPRIN_AppInstallManager *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.IsStoreBlockedByPolicyAsync(storeClientName, storeClientPublisher) */
 HRESULT wapstprin_app_install_manager_is_store_blocked_by_policy_async(WAPSTPRIN_AppInstallManager *self, cwinrt_hstring storeClientName, cwinrt_hstring storeClientPublisher, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.GetIsAppAllowedToInstallAsync(productId) */
 HRESULT wapstprin_app_install_manager_get_is_app_allowed_to_install_async(WAPSTPRIN_AppInstallManager *self, cwinrt_hstring productId, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.StartAppInstallAsync(productId, skuId, repair, forceUseOfNonRemovableStorage, catalogId, bundleId, correlationVector) */
 HRESULT wapstprin_app_install_manager_start_app_install_async_str_str_b_b_str_str_str_p(WAPSTPRIN_AppInstallManager *self, cwinrt_hstring productId, cwinrt_hstring skuId, BOOL repair, BOOL forceUseOfNonRemovableStorage, cwinrt_hstring catalogId, cwinrt_hstring bundleId, cwinrt_hstring correlationVector, WF_IAsyncOperation_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.UpdateAppByPackageFamilyNameAsync(packageFamilyName, correlationVector) */
 HRESULT wapstprin_app_install_manager_update_app_by_package_family_name_async_str_str_p(WAPSTPRIN_AppInstallManager *self, cwinrt_hstring packageFamilyName, cwinrt_hstring correlationVector, WF_IAsyncOperation_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.SearchForUpdatesAsync(productId, skuId, catalogId, correlationVector) */
 HRESULT wapstprin_app_install_manager_search_for_updates_async_str_str_str_str_p(WAPSTPRIN_AppInstallManager *self, cwinrt_hstring productId, cwinrt_hstring skuId, cwinrt_hstring catalogId, cwinrt_hstring correlationVector, WF_IAsyncOperation_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.SearchForAllUpdatesAsync(correlationVector) */
 HRESULT wapstprin_app_install_manager_search_for_all_updates_async_str_p(WAPSTPRIN_AppInstallManager *self, cwinrt_hstring correlationVector, WF_IAsyncOperation_WFOCO_IVectorView_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.GetIsAppAllowedToInstallAsync(productId, skuId, catalogId, correlationVector) */
 HRESULT wapstprin_app_install_manager_get_is_app_allowed_to_install_async_str_str_str_str_p(WAPSTPRIN_AppInstallManager *self, cwinrt_hstring productId, cwinrt_hstring skuId, cwinrt_hstring catalogId, cwinrt_hstring correlationVector, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.Cancel(productId, correlationVector) */
 HRESULT wapstprin_app_install_manager_cancel_str_str(WAPSTPRIN_AppInstallManager *self, cwinrt_hstring productId, cwinrt_hstring correlationVector);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.Pause(productId, correlationVector) */
 HRESULT wapstprin_app_install_manager_pause_str_str(WAPSTPRIN_AppInstallManager *self, cwinrt_hstring productId, cwinrt_hstring correlationVector);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.Restart(productId, correlationVector) */
 HRESULT wapstprin_app_install_manager_restart_str_str(WAPSTPRIN_AppInstallManager *self, cwinrt_hstring productId, cwinrt_hstring correlationVector);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.StartProductInstallAsync(productId, catalogId, flightId, clientId, repair, forceUseOfNonRemovableStorage, correlationVector, targetVolume) */
 HRESULT wapstprin_app_install_manager_start_product_install_async_str_str_str_str_b_b_str_p_p(WAPSTPRIN_AppInstallManager *self, cwinrt_hstring productId, cwinrt_hstring catalogId, cwinrt_hstring flightId, cwinrt_hstring clientId, BOOL repair, BOOL forceUseOfNonRemovableStorage, cwinrt_hstring correlationVector, WMADE_PackageVolume* targetVolume, WF_IAsyncOperation_WFOCO_IVectorView_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.StartProductInstallForUserAsync(user, productId, catalogId, flightId, clientId, repair, forceUseOfNonRemovableStorage, correlationVector, targetVolume) */
 HRESULT wapstprin_app_install_manager_start_product_install_for_user_async_p_str_str_str_str_b_b_str_p_p(WAPSTPRIN_AppInstallManager *self, WSY_User* user, cwinrt_hstring productId, cwinrt_hstring catalogId, cwinrt_hstring flightId, cwinrt_hstring clientId, BOOL repair, BOOL forceUseOfNonRemovableStorage, cwinrt_hstring correlationVector, WMADE_PackageVolume* targetVolume, WF_IAsyncOperation_WFOCO_IVectorView_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.UpdateAppByPackageFamilyNameForUserAsync(user, packageFamilyName, correlationVector) */
 HRESULT wapstprin_app_install_manager_update_app_by_package_family_name_for_user_async(WAPSTPRIN_AppInstallManager *self, WSY_User* user, cwinrt_hstring packageFamilyName, cwinrt_hstring correlationVector, WF_IAsyncOperation_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.SearchForUpdatesForUserAsync(user, productId, skuId, catalogId, correlationVector) */
 HRESULT wapstprin_app_install_manager_search_for_updates_for_user_async(WAPSTPRIN_AppInstallManager *self, WSY_User* user, cwinrt_hstring productId, cwinrt_hstring skuId, cwinrt_hstring catalogId, cwinrt_hstring correlationVector, WF_IAsyncOperation_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.SearchForAllUpdatesForUserAsync(user, correlationVector) */
 HRESULT wapstprin_app_install_manager_search_for_all_updates_for_user_async(WAPSTPRIN_AppInstallManager *self, WSY_User* user, cwinrt_hstring correlationVector, WF_IAsyncOperation_WFOCO_IVectorView_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.GetIsAppAllowedToInstallForUserAsync(user, productId, skuId, catalogId, correlationVector) */
 HRESULT wapstprin_app_install_manager_get_is_app_allowed_to_install_for_user_async(WAPSTPRIN_AppInstallManager *self, WSY_User* user, cwinrt_hstring productId, cwinrt_hstring skuId, cwinrt_hstring catalogId, cwinrt_hstring correlationVector, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.GetIsApplicableForUserAsync(user, productId, skuId) */
 HRESULT wapstprin_app_install_manager_get_is_applicable_for_user_async(WAPSTPRIN_AppInstallManager *self, WSY_User* user, cwinrt_hstring productId, cwinrt_hstring skuId, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.MoveToFrontOfDownloadQueue(productId, correlationVector) */
 HRESULT wapstprin_app_install_manager_move_to_front_of_download_queue(WAPSTPRIN_AppInstallManager *self, cwinrt_hstring productId, cwinrt_hstring correlationVector);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.GetFreeUserEntitlementAsync(storeId, campaignId, correlationVector) */
 HRESULT wapstprin_app_install_manager_get_free_user_entitlement_async(WAPSTPRIN_AppInstallManager *self, cwinrt_hstring storeId, cwinrt_hstring campaignId, cwinrt_hstring correlationVector, WF_IAsyncOperation_WAPSTPRIN_GetEntitlementResult** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.GetFreeUserEntitlementForUserAsync(user, storeId, campaignId, correlationVector) */
 HRESULT wapstprin_app_install_manager_get_free_user_entitlement_for_user_async(WAPSTPRIN_AppInstallManager *self, WSY_User* user, cwinrt_hstring storeId, cwinrt_hstring campaignId, cwinrt_hstring correlationVector, WF_IAsyncOperation_WAPSTPRIN_GetEntitlementResult** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.GetFreeDeviceEntitlementAsync(storeId, campaignId, correlationVector) */
 HRESULT wapstprin_app_install_manager_get_free_device_entitlement_async(WAPSTPRIN_AppInstallManager *self, cwinrt_hstring storeId, cwinrt_hstring campaignId, cwinrt_hstring correlationVector, WF_IAsyncOperation_WAPSTPRIN_GetEntitlementResult** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.get_AppInstallItemsWithGroupSupport() */
 HRESULT wapstprin_app_install_manager_get__app_install_items_with_group_support(WAPSTPRIN_AppInstallManager *self, WFOCO_IVectorView_WAPSTPRIN_AppInstallItem** value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.SearchForAllUpdatesAsync(correlationVector, clientId, updateOptions) */
 HRESULT wapstprin_app_install_manager_search_for_all_updates_async_str_str_p_p(WAPSTPRIN_AppInstallManager *self, cwinrt_hstring correlationVector, cwinrt_hstring clientId, WAPSTPRIN_AppUpdateOptions* updateOptions, WF_IAsyncOperation_WFOCO_IVectorView_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.SearchForAllUpdatesForUserAsync(user, correlationVector, clientId, updateOptions) */
 HRESULT wapstprin_app_install_manager_search_for_all_updates_for_user_async_p_str_str_p_p(WAPSTPRIN_AppInstallManager *self, WSY_User* user, cwinrt_hstring correlationVector, cwinrt_hstring clientId, WAPSTPRIN_AppUpdateOptions* updateOptions, WF_IAsyncOperation_WFOCO_IVectorView_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.SearchForUpdatesAsync(productId, skuId, correlationVector, clientId, updateOptions) */
 HRESULT wapstprin_app_install_manager_search_for_updates_async_str_str_str_str_p_p(WAPSTPRIN_AppInstallManager *self, cwinrt_hstring productId, cwinrt_hstring skuId, cwinrt_hstring correlationVector, cwinrt_hstring clientId, WAPSTPRIN_AppUpdateOptions* updateOptions, WF_IAsyncOperation_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.SearchForUpdatesForUserAsync(user, productId, skuId, correlationVector, clientId, updateOptions) */
 HRESULT wapstprin_app_install_manager_search_for_updates_for_user_async_p_str_str_str_str_p_p(WAPSTPRIN_AppInstallManager *self, WSY_User* user, cwinrt_hstring productId, cwinrt_hstring skuId, cwinrt_hstring correlationVector, cwinrt_hstring clientId, WAPSTPRIN_AppUpdateOptions* updateOptions, WF_IAsyncOperation_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.StartProductInstallAsync(productId, flightId, clientId, correlationVector, installOptions) */
 HRESULT wapstprin_app_install_manager_start_product_install_async(WAPSTPRIN_AppInstallManager *self, cwinrt_hstring productId, cwinrt_hstring flightId, cwinrt_hstring clientId, cwinrt_hstring correlationVector, WAPSTPRIN_AppInstallOptions* installOptions, WF_IAsyncOperation_WFOCO_IVectorView_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.StartProductInstallForUserAsync(user, productId, flightId, clientId, correlationVector, installOptions) */
 HRESULT wapstprin_app_install_manager_start_product_install_for_user_async(WAPSTPRIN_AppInstallManager *self, WSY_User* user, cwinrt_hstring productId, cwinrt_hstring flightId, cwinrt_hstring clientId, cwinrt_hstring correlationVector, WAPSTPRIN_AppInstallOptions* installOptions, WF_IAsyncOperation_WFOCO_IVectorView_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.GetIsPackageIdentityAllowedToInstallAsync(correlationVector, packageIdentityName, publisherCertificateName) */
 HRESULT wapstprin_app_install_manager_get_is_package_identity_allowed_to_install_async(WAPSTPRIN_AppInstallManager *self, cwinrt_hstring correlationVector, cwinrt_hstring packageIdentityName, cwinrt_hstring publisherCertificateName, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.GetIsPackageIdentityAllowedToInstallForUserAsync(user, correlationVector, packageIdentityName, publisherCertificateName) */
 HRESULT wapstprin_app_install_manager_get_is_package_identity_allowed_to_install_for_user_async(WAPSTPRIN_AppInstallManager *self, WSY_User* user, cwinrt_hstring correlationVector, cwinrt_hstring packageIdentityName, cwinrt_hstring publisherCertificateName, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager.get_CanInstallForAllUsers() */
 HRESULT wapstprin_app_install_manager_get__can_install_for_all_users(WAPSTPRIN_AppInstallManager *self, BOOL *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapstprin_app_install_manager_on_item_completed(WAPSTPRIN_AppInstallManager *self, cwinrt_event_fn fn, void *ctx);
@@ -560,86 +447,58 @@ void wapstprin_app_install_manager_off_item_completed(WAPSTPRIN_AppInstallManage
 cwinrt_token wapstprin_app_install_manager_on_item_status_changed(WAPSTPRIN_AppInstallManager *self, cwinrt_event_fn fn, void *ctx);
 void wapstprin_app_install_manager_off_item_status_changed(WAPSTPRIN_AppInstallManager *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem */
 HRESULT wapstprin_app_install_item_new(WAPSTPRIN_AppInstallItem **out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem */
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem.get_ProductId() */
 HRESULT wapstprin_app_install_item_get__product_id(WAPSTPRIN_AppInstallItem *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem.get_PackageFamilyName() */
 HRESULT wapstprin_app_install_item_get__package_family_name(WAPSTPRIN_AppInstallItem *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem.get_InstallType() */
 HRESULT wapstprin_app_install_item_get__install_type(WAPSTPRIN_AppInstallItem *self, WAPSTPRIN_AppInstallType *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem.get_IsUserInitiated() */
 HRESULT wapstprin_app_install_item_get__is_user_initiated(WAPSTPRIN_AppInstallItem *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem.GetCurrentStatus() */
 HRESULT wapstprin_app_install_item_get_current_status(WAPSTPRIN_AppInstallItem *self, WAPSTPRIN_AppInstallStatus** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem.Cancel() */
 HRESULT wapstprin_app_install_item_cancel(WAPSTPRIN_AppInstallItem *self);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem.Pause() */
 HRESULT wapstprin_app_install_item_pause(WAPSTPRIN_AppInstallItem *self);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem.Restart() */
 HRESULT wapstprin_app_install_item_restart(WAPSTPRIN_AppInstallItem *self);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem.Cancel(correlationVector) */
 HRESULT wapstprin_app_install_item_cancel_str(WAPSTPRIN_AppInstallItem *self, cwinrt_hstring correlationVector);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem.Pause(correlationVector) */
 HRESULT wapstprin_app_install_item_pause_str(WAPSTPRIN_AppInstallItem *self, cwinrt_hstring correlationVector);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem.Restart(correlationVector) */
 HRESULT wapstprin_app_install_item_restart_str(WAPSTPRIN_AppInstallItem *self, cwinrt_hstring correlationVector);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem.get_Children() */
 HRESULT wapstprin_app_install_item_get__children(WAPSTPRIN_AppInstallItem *self, WFOCO_IVectorView_WAPSTPRIN_AppInstallItem** value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem.get_ItemOperationsMightAffectOtherItems() */
 HRESULT wapstprin_app_install_item_get__item_operations_might_affect_other_items(WAPSTPRIN_AppInstallItem *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem.get_LaunchAfterInstall() */
 HRESULT wapstprin_app_install_item_get__launch_after_install(WAPSTPRIN_AppInstallItem *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem.put_LaunchAfterInstall() */
 HRESULT wapstprin_app_install_item_put__launch_after_install(WAPSTPRIN_AppInstallItem *self, BOOL value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem.get_PinToDesktopAfterInstall() */
 HRESULT wapstprin_app_install_item_get__pin_to_desktop_after_install(WAPSTPRIN_AppInstallItem *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem.put_PinToDesktopAfterInstall() */
 HRESULT wapstprin_app_install_item_put__pin_to_desktop_after_install(WAPSTPRIN_AppInstallItem *self, BOOL value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem.get_PinToStartAfterInstall() */
 HRESULT wapstprin_app_install_item_get__pin_to_start_after_install(WAPSTPRIN_AppInstallItem *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem.put_PinToStartAfterInstall() */
 HRESULT wapstprin_app_install_item_put__pin_to_start_after_install(WAPSTPRIN_AppInstallItem *self, BOOL value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem.get_PinToTaskbarAfterInstall() */
 HRESULT wapstprin_app_install_item_get__pin_to_taskbar_after_install(WAPSTPRIN_AppInstallItem *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem.put_PinToTaskbarAfterInstall() */
 HRESULT wapstprin_app_install_item_put__pin_to_taskbar_after_install(WAPSTPRIN_AppInstallItem *self, BOOL value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem.get_CompletedInstallToastNotificationMode() */
 HRESULT wapstprin_app_install_item_get__completed_install_toast_notification_mode(WAPSTPRIN_AppInstallItem *self, WAPSTPRIN_AppInstallationToastNotificationMode *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem.put_CompletedInstallToastNotificationMode() */
 HRESULT wapstprin_app_install_item_put__completed_install_toast_notification_mode(WAPSTPRIN_AppInstallItem *self, WAPSTPRIN_AppInstallationToastNotificationMode value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem.get_InstallInProgressToastNotificationMode() */
 HRESULT wapstprin_app_install_item_get__install_in_progress_toast_notification_mode(WAPSTPRIN_AppInstallItem *self, WAPSTPRIN_AppInstallationToastNotificationMode *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem.put_InstallInProgressToastNotificationMode() */
 HRESULT wapstprin_app_install_item_put__install_in_progress_toast_notification_mode(WAPSTPRIN_AppInstallItem *self, WAPSTPRIN_AppInstallationToastNotificationMode value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapstprin_app_install_item_on_completed(WAPSTPRIN_AppInstallItem *self, cwinrt_event_fn fn, void *ctx);
@@ -648,245 +507,150 @@ void wapstprin_app_install_item_off_completed(WAPSTPRIN_AppInstallItem *self, cw
 cwinrt_token wapstprin_app_install_item_on_status_changed(WAPSTPRIN_AppInstallItem *self, cwinrt_event_fn fn, void *ctx);
 void wapstprin_app_install_item_off_status_changed(WAPSTPRIN_AppInstallItem *self, cwinrt_token token);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IGetEntitlementResult */
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IGetEntitlementResult2 */
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IGetEntitlementResult2.get_IsAlreadyOwned() */
 HRESULT wapstprin_get_entitlement_result_2_get__is_already_owned(WAPSTPRIN_IGetEntitlementResult_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IGetEntitlementResult2.get_OrderId() */
 HRESULT wapstprin_get_entitlement_result_2_get__order_id(WAPSTPRIN_IGetEntitlementResult_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IGetEntitlementResult2.get_SkuId() */
 HRESULT wapstprin_get_entitlement_result_2_get__sku_id(WAPSTPRIN_IGetEntitlementResult_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IGetEntitlementResult2.get_AvailabilityId() */
 HRESULT wapstprin_get_entitlement_result_2_get__availability_id(WAPSTPRIN_IGetEntitlementResult_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppUpdateOptions */
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppUpdateOptions2 */
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppUpdateOptions2.get_AutomaticallyDownloadAndInstallUpdateIfFound() */
 HRESULT wapstprin_app_update_options_2_get__automatically_download_and_install_update_if_found(WAPSTPRIN_IAppUpdateOptions_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppUpdateOptions2.put_AutomaticallyDownloadAndInstallUpdateIfFound() */
 HRESULT wapstprin_app_update_options_2_put__automatically_download_and_install_update_if_found(WAPSTPRIN_IAppUpdateOptions_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallStatus */
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallStatus2 */
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallStatus2.get_User() */
 HRESULT wapstprin_app_install_status_2_get__user(WAPSTPRIN_IAppInstallStatus_2 *self, WSY_User** value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallStatus2.get_ReadyForLaunch() */
 HRESULT wapstprin_app_install_status_2_get__ready_for_launch(WAPSTPRIN_IAppInstallStatus_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallStatus3 */
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallStatus3.get_IsStaged() */
 HRESULT wapstprin_app_install_status_3_get__is_staged(WAPSTPRIN_IAppInstallStatus_3 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions */
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2 */
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2.get_PinToDesktopAfterInstall() */
 HRESULT wapstprin_app_install_options_2_get__pin_to_desktop_after_install(WAPSTPRIN_IAppInstallOptions_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2.put_PinToDesktopAfterInstall() */
 HRESULT wapstprin_app_install_options_2_put__pin_to_desktop_after_install(WAPSTPRIN_IAppInstallOptions_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2.get_PinToStartAfterInstall() */
 HRESULT wapstprin_app_install_options_2_get__pin_to_start_after_install(WAPSTPRIN_IAppInstallOptions_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2.put_PinToStartAfterInstall() */
 HRESULT wapstprin_app_install_options_2_put__pin_to_start_after_install(WAPSTPRIN_IAppInstallOptions_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2.get_PinToTaskbarAfterInstall() */
 HRESULT wapstprin_app_install_options_2_get__pin_to_taskbar_after_install(WAPSTPRIN_IAppInstallOptions_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2.put_PinToTaskbarAfterInstall() */
 HRESULT wapstprin_app_install_options_2_put__pin_to_taskbar_after_install(WAPSTPRIN_IAppInstallOptions_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2.get_CompletedInstallToastNotificationMode() */
 HRESULT wapstprin_app_install_options_2_get__completed_install_toast_notification_mode(WAPSTPRIN_IAppInstallOptions_2 *self, WAPSTPRIN_AppInstallationToastNotificationMode *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2.put_CompletedInstallToastNotificationMode() */
 HRESULT wapstprin_app_install_options_2_put__completed_install_toast_notification_mode(WAPSTPRIN_IAppInstallOptions_2 *self, WAPSTPRIN_AppInstallationToastNotificationMode value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2.get_InstallInProgressToastNotificationMode() */
 HRESULT wapstprin_app_install_options_2_get__install_in_progress_toast_notification_mode(WAPSTPRIN_IAppInstallOptions_2 *self, WAPSTPRIN_AppInstallationToastNotificationMode *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2.put_InstallInProgressToastNotificationMode() */
 HRESULT wapstprin_app_install_options_2_put__install_in_progress_toast_notification_mode(WAPSTPRIN_IAppInstallOptions_2 *self, WAPSTPRIN_AppInstallationToastNotificationMode value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2.get_InstallForAllUsers() */
 HRESULT wapstprin_app_install_options_2_get__install_for_all_users(WAPSTPRIN_IAppInstallOptions_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2.put_InstallForAllUsers() */
 HRESULT wapstprin_app_install_options_2_put__install_for_all_users(WAPSTPRIN_IAppInstallOptions_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2.get_StageButDoNotInstall() */
 HRESULT wapstprin_app_install_options_2_get__stage_but_do_not_install(WAPSTPRIN_IAppInstallOptions_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2.put_StageButDoNotInstall() */
 HRESULT wapstprin_app_install_options_2_put__stage_but_do_not_install(WAPSTPRIN_IAppInstallOptions_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2.get_CampaignId() */
 HRESULT wapstprin_app_install_options_2_get__campaign_id(WAPSTPRIN_IAppInstallOptions_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2.put_CampaignId() */
 HRESULT wapstprin_app_install_options_2_put__campaign_id(WAPSTPRIN_IAppInstallOptions_2 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2.get_ExtendedCampaignId() */
 HRESULT wapstprin_app_install_options_2_get__extended_campaign_id(WAPSTPRIN_IAppInstallOptions_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2.put_ExtendedCampaignId() */
 HRESULT wapstprin_app_install_options_2_put__extended_campaign_id(WAPSTPRIN_IAppInstallOptions_2 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManagerItemEventArgs */
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager */
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager2 */
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager2.StartAppInstallAsync(productId, skuId, repair, forceUseOfNonRemovableStorage, catalogId, bundleId, correlationVector) */
 HRESULT wapstprin_app_install_manager_2_start_app_install_async(WAPSTPRIN_IAppInstallManager_2 *self, cwinrt_hstring productId, cwinrt_hstring skuId, BOOL repair, BOOL forceUseOfNonRemovableStorage, cwinrt_hstring catalogId, cwinrt_hstring bundleId, cwinrt_hstring correlationVector, WF_IAsyncOperation_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager2.UpdateAppByPackageFamilyNameAsync(packageFamilyName, correlationVector) */
 HRESULT wapstprin_app_install_manager_2_update_app_by_package_family_name_async(WAPSTPRIN_IAppInstallManager_2 *self, cwinrt_hstring packageFamilyName, cwinrt_hstring correlationVector, WF_IAsyncOperation_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager2.SearchForUpdatesAsync(productId, skuId, catalogId, correlationVector) */
 HRESULT wapstprin_app_install_manager_2_search_for_updates_async(WAPSTPRIN_IAppInstallManager_2 *self, cwinrt_hstring productId, cwinrt_hstring skuId, cwinrt_hstring catalogId, cwinrt_hstring correlationVector, WF_IAsyncOperation_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager2.SearchForAllUpdatesAsync(correlationVector) */
 HRESULT wapstprin_app_install_manager_2_search_for_all_updates_async(WAPSTPRIN_IAppInstallManager_2 *self, cwinrt_hstring correlationVector, WF_IAsyncOperation_WFOCO_IVectorView_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager2.GetIsAppAllowedToInstallAsync(productId, skuId, catalogId, correlationVector) */
 HRESULT wapstprin_app_install_manager_2_get_is_app_allowed_to_install_async(WAPSTPRIN_IAppInstallManager_2 *self, cwinrt_hstring productId, cwinrt_hstring skuId, cwinrt_hstring catalogId, cwinrt_hstring correlationVector, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager2.Cancel(productId, correlationVector) */
 HRESULT wapstprin_app_install_manager_2_cancel(WAPSTPRIN_IAppInstallManager_2 *self, cwinrt_hstring productId, cwinrt_hstring correlationVector);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager2.Pause(productId, correlationVector) */
 HRESULT wapstprin_app_install_manager_2_pause(WAPSTPRIN_IAppInstallManager_2 *self, cwinrt_hstring productId, cwinrt_hstring correlationVector);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager2.Restart(productId, correlationVector) */
 HRESULT wapstprin_app_install_manager_2_restart(WAPSTPRIN_IAppInstallManager_2 *self, cwinrt_hstring productId, cwinrt_hstring correlationVector);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager3 */
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager3.StartProductInstallAsync(productId, catalogId, flightId, clientId, repair, forceUseOfNonRemovableStorage, correlationVector, targetVolume) */
 HRESULT wapstprin_app_install_manager_3_start_product_install_async(WAPSTPRIN_IAppInstallManager_3 *self, cwinrt_hstring productId, cwinrt_hstring catalogId, cwinrt_hstring flightId, cwinrt_hstring clientId, BOOL repair, BOOL forceUseOfNonRemovableStorage, cwinrt_hstring correlationVector, WMADE_PackageVolume* targetVolume, WF_IAsyncOperation_WFOCO_IVectorView_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager3.StartProductInstallForUserAsync(user, productId, catalogId, flightId, clientId, repair, forceUseOfNonRemovableStorage, correlationVector, targetVolume) */
 HRESULT wapstprin_app_install_manager_3_start_product_install_for_user_async(WAPSTPRIN_IAppInstallManager_3 *self, WSY_User* user, cwinrt_hstring productId, cwinrt_hstring catalogId, cwinrt_hstring flightId, cwinrt_hstring clientId, BOOL repair, BOOL forceUseOfNonRemovableStorage, cwinrt_hstring correlationVector, WMADE_PackageVolume* targetVolume, WF_IAsyncOperation_WFOCO_IVectorView_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager3.UpdateAppByPackageFamilyNameForUserAsync(user, packageFamilyName, correlationVector) */
 HRESULT wapstprin_app_install_manager_3_update_app_by_package_family_name_for_user_async(WAPSTPRIN_IAppInstallManager_3 *self, WSY_User* user, cwinrt_hstring packageFamilyName, cwinrt_hstring correlationVector, WF_IAsyncOperation_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager3.SearchForUpdatesForUserAsync(user, productId, skuId, catalogId, correlationVector) */
 HRESULT wapstprin_app_install_manager_3_search_for_updates_for_user_async(WAPSTPRIN_IAppInstallManager_3 *self, WSY_User* user, cwinrt_hstring productId, cwinrt_hstring skuId, cwinrt_hstring catalogId, cwinrt_hstring correlationVector, WF_IAsyncOperation_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager3.SearchForAllUpdatesForUserAsync(user, correlationVector) */
 HRESULT wapstprin_app_install_manager_3_search_for_all_updates_for_user_async(WAPSTPRIN_IAppInstallManager_3 *self, WSY_User* user, cwinrt_hstring correlationVector, WF_IAsyncOperation_WFOCO_IVectorView_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager3.GetIsAppAllowedToInstallForUserAsync(user, productId, skuId, catalogId, correlationVector) */
 HRESULT wapstprin_app_install_manager_3_get_is_app_allowed_to_install_for_user_async(WAPSTPRIN_IAppInstallManager_3 *self, WSY_User* user, cwinrt_hstring productId, cwinrt_hstring skuId, cwinrt_hstring catalogId, cwinrt_hstring correlationVector, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager3.GetIsApplicableForUserAsync(user, productId, skuId) */
 HRESULT wapstprin_app_install_manager_3_get_is_applicable_for_user_async(WAPSTPRIN_IAppInstallManager_3 *self, WSY_User* user, cwinrt_hstring productId, cwinrt_hstring skuId, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager3.MoveToFrontOfDownloadQueue(productId, correlationVector) */
 HRESULT wapstprin_app_install_manager_3_move_to_front_of_download_queue(WAPSTPRIN_IAppInstallManager_3 *self, cwinrt_hstring productId, cwinrt_hstring correlationVector);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager4 */
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager4.GetFreeUserEntitlementAsync(storeId, campaignId, correlationVector) */
 HRESULT wapstprin_app_install_manager_4_get_free_user_entitlement_async(WAPSTPRIN_IAppInstallManager_4 *self, cwinrt_hstring storeId, cwinrt_hstring campaignId, cwinrt_hstring correlationVector, WF_IAsyncOperation_WAPSTPRIN_GetEntitlementResult** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager4.GetFreeUserEntitlementForUserAsync(user, storeId, campaignId, correlationVector) */
 HRESULT wapstprin_app_install_manager_4_get_free_user_entitlement_for_user_async(WAPSTPRIN_IAppInstallManager_4 *self, WSY_User* user, cwinrt_hstring storeId, cwinrt_hstring campaignId, cwinrt_hstring correlationVector, WF_IAsyncOperation_WAPSTPRIN_GetEntitlementResult** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager4.GetFreeDeviceEntitlementAsync(storeId, campaignId, correlationVector) */
 HRESULT wapstprin_app_install_manager_4_get_free_device_entitlement_async(WAPSTPRIN_IAppInstallManager_4 *self, cwinrt_hstring storeId, cwinrt_hstring campaignId, cwinrt_hstring correlationVector, WF_IAsyncOperation_WAPSTPRIN_GetEntitlementResult** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager5 */
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager5.get_AppInstallItemsWithGroupSupport() */
 HRESULT wapstprin_app_install_manager_5_get__app_install_items_with_group_support(WAPSTPRIN_IAppInstallManager_5 *self, WFOCO_IVectorView_WAPSTPRIN_AppInstallItem** value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager6 */
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager6.SearchForAllUpdatesAsync(correlationVector, clientId, updateOptions) */
 HRESULT wapstprin_app_install_manager_6_search_for_all_updates_async(WAPSTPRIN_IAppInstallManager_6 *self, cwinrt_hstring correlationVector, cwinrt_hstring clientId, WAPSTPRIN_AppUpdateOptions* updateOptions, WF_IAsyncOperation_WFOCO_IVectorView_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager6.SearchForAllUpdatesForUserAsync(user, correlationVector, clientId, updateOptions) */
 HRESULT wapstprin_app_install_manager_6_search_for_all_updates_for_user_async(WAPSTPRIN_IAppInstallManager_6 *self, WSY_User* user, cwinrt_hstring correlationVector, cwinrt_hstring clientId, WAPSTPRIN_AppUpdateOptions* updateOptions, WF_IAsyncOperation_WFOCO_IVectorView_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager6.SearchForUpdatesAsync(productId, skuId, correlationVector, clientId, updateOptions) */
 HRESULT wapstprin_app_install_manager_6_search_for_updates_async(WAPSTPRIN_IAppInstallManager_6 *self, cwinrt_hstring productId, cwinrt_hstring skuId, cwinrt_hstring correlationVector, cwinrt_hstring clientId, WAPSTPRIN_AppUpdateOptions* updateOptions, WF_IAsyncOperation_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager6.SearchForUpdatesForUserAsync(user, productId, skuId, correlationVector, clientId, updateOptions) */
 HRESULT wapstprin_app_install_manager_6_search_for_updates_for_user_async(WAPSTPRIN_IAppInstallManager_6 *self, WSY_User* user, cwinrt_hstring productId, cwinrt_hstring skuId, cwinrt_hstring correlationVector, cwinrt_hstring clientId, WAPSTPRIN_AppUpdateOptions* updateOptions, WF_IAsyncOperation_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager6.StartProductInstallAsync(productId, flightId, clientId, correlationVector, installOptions) */
 HRESULT wapstprin_app_install_manager_6_start_product_install_async(WAPSTPRIN_IAppInstallManager_6 *self, cwinrt_hstring productId, cwinrt_hstring flightId, cwinrt_hstring clientId, cwinrt_hstring correlationVector, WAPSTPRIN_AppInstallOptions* installOptions, WF_IAsyncOperation_WFOCO_IVectorView_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager6.StartProductInstallForUserAsync(user, productId, flightId, clientId, correlationVector, installOptions) */
 HRESULT wapstprin_app_install_manager_6_start_product_install_for_user_async(WAPSTPRIN_IAppInstallManager_6 *self, WSY_User* user, cwinrt_hstring productId, cwinrt_hstring flightId, cwinrt_hstring clientId, cwinrt_hstring correlationVector, WAPSTPRIN_AppInstallOptions* installOptions, WF_IAsyncOperation_WFOCO_IVectorView_WAPSTPRIN_AppInstallItem** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager6.GetIsPackageIdentityAllowedToInstallAsync(correlationVector, packageIdentityName, publisherCertificateName) */
 HRESULT wapstprin_app_install_manager_6_get_is_package_identity_allowed_to_install_async(WAPSTPRIN_IAppInstallManager_6 *self, cwinrt_hstring correlationVector, cwinrt_hstring packageIdentityName, cwinrt_hstring publisherCertificateName, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager6.GetIsPackageIdentityAllowedToInstallForUserAsync(user, correlationVector, packageIdentityName, publisherCertificateName) */
 HRESULT wapstprin_app_install_manager_6_get_is_package_identity_allowed_to_install_for_user_async(WAPSTPRIN_IAppInstallManager_6 *self, WSY_User* user, cwinrt_hstring correlationVector, cwinrt_hstring packageIdentityName, cwinrt_hstring publisherCertificateName, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager7 */
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager7.get_CanInstallForAllUsers() */
 HRESULT wapstprin_app_install_manager_7_get__can_install_for_all_users(WAPSTPRIN_IAppInstallManager_7 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem */
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem2 */
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem2.Cancel(correlationVector) */
 HRESULT wapstprin_app_install_item_2_cancel(WAPSTPRIN_IAppInstallItem_2 *self, cwinrt_hstring correlationVector);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem2.Pause(correlationVector) */
 HRESULT wapstprin_app_install_item_2_pause(WAPSTPRIN_IAppInstallItem_2 *self, cwinrt_hstring correlationVector);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem2.Restart(correlationVector) */
 HRESULT wapstprin_app_install_item_2_restart(WAPSTPRIN_IAppInstallItem_2 *self, cwinrt_hstring correlationVector);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem3 */
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem3.get_Children() */
 HRESULT wapstprin_app_install_item_3_get__children(WAPSTPRIN_IAppInstallItem_3 *self, WFOCO_IVectorView_WAPSTPRIN_AppInstallItem** value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem3.get_ItemOperationsMightAffectOtherItems() */
 HRESULT wapstprin_app_install_item_3_get__item_operations_might_affect_other_items(WAPSTPRIN_IAppInstallItem_3 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem4 */
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem4.get_LaunchAfterInstall() */
 HRESULT wapstprin_app_install_item_4_get__launch_after_install(WAPSTPRIN_IAppInstallItem_4 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem4.put_LaunchAfterInstall() */
 HRESULT wapstprin_app_install_item_4_put__launch_after_install(WAPSTPRIN_IAppInstallItem_4 *self, BOOL value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem5 */
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem5.get_PinToDesktopAfterInstall() */
 HRESULT wapstprin_app_install_item_5_get__pin_to_desktop_after_install(WAPSTPRIN_IAppInstallItem_5 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem5.put_PinToDesktopAfterInstall() */
 HRESULT wapstprin_app_install_item_5_put__pin_to_desktop_after_install(WAPSTPRIN_IAppInstallItem_5 *self, BOOL value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem5.get_PinToStartAfterInstall() */
 HRESULT wapstprin_app_install_item_5_get__pin_to_start_after_install(WAPSTPRIN_IAppInstallItem_5 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem5.put_PinToStartAfterInstall() */
 HRESULT wapstprin_app_install_item_5_put__pin_to_start_after_install(WAPSTPRIN_IAppInstallItem_5 *self, BOOL value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem5.get_PinToTaskbarAfterInstall() */
 HRESULT wapstprin_app_install_item_5_get__pin_to_taskbar_after_install(WAPSTPRIN_IAppInstallItem_5 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem5.put_PinToTaskbarAfterInstall() */
 HRESULT wapstprin_app_install_item_5_put__pin_to_taskbar_after_install(WAPSTPRIN_IAppInstallItem_5 *self, BOOL value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem5.get_CompletedInstallToastNotificationMode() */
 HRESULT wapstprin_app_install_item_5_get__completed_install_toast_notification_mode(WAPSTPRIN_IAppInstallItem_5 *self, WAPSTPRIN_AppInstallationToastNotificationMode *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem5.put_CompletedInstallToastNotificationMode() */
 HRESULT wapstprin_app_install_item_5_put__completed_install_toast_notification_mode(WAPSTPRIN_IAppInstallItem_5 *self, WAPSTPRIN_AppInstallationToastNotificationMode value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem5.get_InstallInProgressToastNotificationMode() */
 HRESULT wapstprin_app_install_item_5_get__install_in_progress_toast_notification_mode(WAPSTPRIN_IAppInstallItem_5 *self, WAPSTPRIN_AppInstallationToastNotificationMode *value);
 
-/* Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem5.put_InstallInProgressToastNotificationMode() */
 HRESULT wapstprin_app_install_item_5_put__install_in_progress_toast_notification_mode(WAPSTPRIN_IAppInstallItem_5 *self, WAPSTPRIN_AppInstallationToastNotificationMode value);
 
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_STORE_PREVIEW_INSTALLCONTROL_H */

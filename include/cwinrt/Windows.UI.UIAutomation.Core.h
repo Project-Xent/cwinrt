@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.UI.UIAutomation.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WUIUICO_ICoreAutomationConnectionBoundObjectProvider WUIUICO_ICoreAutomationConnectionBoundObjectProvider;
 typedef struct WUIUICO_ICoreAutomationRegistrarStatics WUIUICO_ICoreAutomationRegistrarStatics;
 typedef struct WUIUICO_ICoreAutomationRemoteOperationExtensionProvider WUIUICO_ICoreAutomationRemoteOperationExtensionProvider;
@@ -37,7 +36,6 @@ typedef struct WUIUICO_ICoreAutomationRemoteOperation WUIUICO_ICoreAutomationRem
 typedef struct WUIUICO_ICoreAutomationRemoteOperation_2 WUIUICO_ICoreAutomationRemoteOperation_2;
 typedef struct WUIUICO_IAutomationRemoteOperationResult WUIUICO_IAutomationRemoteOperationResult;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WUIUICO_RemoteAutomationWindow
 #define CWINRT_FWD_WF_IAsyncOperation_WUIUICO_RemoteAutomationWindow
 typedef struct WF_IAsyncOperation_WUIUICO_RemoteAutomationWindow WF_IAsyncOperation_WUIUICO_RemoteAutomationWindow;
@@ -100,7 +98,6 @@ struct WUIUICO_AutomationAnnotationTypeRegistration {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -157,54 +154,32 @@ static const IID CWINRT_IID_WUIUICO_ICoreAutomationRemoteOperation_2 CWINRT_MAYB
 static const IID CWINRT_IID_WUIUICO_IAutomationRemoteOperationResult CWINRT_MAYBE_UNUSED = { 0xE0F80C42, 0x4A67, 0x5534, { 0xBF, 0x5A, 0x09, 0xE8, 0xA9, 0x9B, 0x36, 0xB1 } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.UIAutomation.Core.ICoreAutomationConnectionBoundObjectProvider */
-/* Windows.UI.UIAutomation.Core.ICoreAutomationConnectionBoundObjectProvider.get_IsComThreadingRequired() */
 HRESULT wuiuico_core_automation_connection_bound_object_provider_get__is_com_threading_required(WUIUICO_ICoreAutomationConnectionBoundObjectProvider *self, BOOL *value);
 
-/* Windows.UI.UIAutomation.Core.ICoreAutomationRegistrarStatics */
-/* Windows.UI.UIAutomation.Core.ICoreAutomationRegistrarStatics.RegisterAnnotationType(guid) */
 HRESULT wuiuico_core_automation_registrar_statics_register_annotation_type(WUIUICO_ICoreAutomationRegistrarStatics *self, GUID guid, WUIUICO_AutomationAnnotationTypeRegistration *out);
 
-/* Windows.UI.UIAutomation.Core.ICoreAutomationRegistrarStatics.UnregisterAnnotationType(registration) */
 HRESULT wuiuico_core_automation_registrar_statics_unregister_annotation_type(WUIUICO_ICoreAutomationRegistrarStatics *self, WUIUICO_AutomationAnnotationTypeRegistration registration);
 
-/* Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperationExtensionProvider */
-/* Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperationExtensionProvider.CallExtension(extensionId, context, operandIds) */
 HRESULT wuiuico_core_automation_remote_operation_extension_provider_call_extension(WUIUICO_ICoreAutomationRemoteOperationExtensionProvider *self, GUID extensionId, WUIUICO_CoreAutomationRemoteOperationContext* context, WUIUICO_AutomationRemoteOperationOperandId *operandIds, uint32_t operandIds_len);
 
-/* Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperationExtensionProvider.IsExtensionSupported(extensionId) */
 HRESULT wuiuico_core_automation_remote_operation_extension_provider_is_extension_supported(WUIUICO_ICoreAutomationRemoteOperationExtensionProvider *self, GUID extensionId, BOOL *out);
 
-/* Windows.UI.UIAutomation.Core.IRemoteAutomationClientSessionFactory */
-/* Windows.UI.UIAutomation.Core.IRemoteAutomationClientSessionFactory.CreateInstance(name) */
 HRESULT wuiuico_remote_automation_client_session_factory_create_instance(WUIUICO_IRemoteAutomationClientSessionFactory *self, cwinrt_hstring name, WUIUICO_RemoteAutomationClientSession** out);
 
-/* Windows.UI.UIAutomation.Core.IRemoteAutomationClientSessionFactory.CreateInstance2(name, sessionId) */
 HRESULT wuiuico_remote_automation_client_session_factory_create_instance2(WUIUICO_IRemoteAutomationClientSessionFactory *self, cwinrt_hstring name, GUID sessionId, WUIUICO_RemoteAutomationClientSession** out);
 
-/* Windows.UI.UIAutomation.Core.IRemoteAutomationServerStatics */
-/* Windows.UI.UIAutomation.Core.IRemoteAutomationServerStatics.ReportSession(sessionId) */
 HRESULT wuiuico_remote_automation_server_statics_report_session(WUIUICO_IRemoteAutomationServerStatics *self, GUID sessionId);
 
-/* activate Windows.UI.UIAutomation.Core.RemoteAutomationClientSession */
 HRESULT wuiuico_remote_automation_client_session_new(WUIUICO_RemoteAutomationClientSession **out);
 
-/* Windows.UI.UIAutomation.Core.RemoteAutomationClientSession */
-/* Windows.UI.UIAutomation.Core.RemoteAutomationClientSession.Start() */
 HRESULT wuiuico_remote_automation_client_session_start(WUIUICO_RemoteAutomationClientSession *self);
 
-/* Windows.UI.UIAutomation.Core.RemoteAutomationClientSession.Stop() */
 HRESULT wuiuico_remote_automation_client_session_stop(WUIUICO_RemoteAutomationClientSession *self);
 
-/* Windows.UI.UIAutomation.Core.RemoteAutomationClientSession.CreateWindowAsync(remoteWindowId, remoteProcessId, parentAutomationElement) */
 HRESULT wuiuico_remote_automation_client_session_create_window_async(WUIUICO_RemoteAutomationClientSession *self, uint64_t remoteWindowId, uint32_t remoteProcessId, IInspectable* parentAutomationElement, WF_IAsyncOperation_WUIUICO_RemoteAutomationWindow** out);
 
-/* Windows.UI.UIAutomation.Core.RemoteAutomationClientSession.get_SessionId() */
 HRESULT wuiuico_remote_automation_client_session_get__session_id(WUIUICO_RemoteAutomationClientSession *self, GUID *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiuico_remote_automation_client_session_on_connection_requested(WUIUICO_RemoteAutomationClientSession *self, cwinrt_event_fn fn, void *ctx);
@@ -213,113 +188,66 @@ void wuiuico_remote_automation_client_session_off_connection_requested(WUIUICO_R
 cwinrt_token wuiuico_remote_automation_client_session_on_disconnected(WUIUICO_RemoteAutomationClientSession *self, cwinrt_event_fn fn, void *ctx);
 void wuiuico_remote_automation_client_session_off_disconnected(WUIUICO_RemoteAutomationClientSession *self, cwinrt_token token);
 
-/* activate Windows.UI.UIAutomation.Core.RemoteAutomationConnectionRequestedEventArgs */
 HRESULT wuiuico_remote_automation_connection_requested_event_args_new(WUIUICO_RemoteAutomationConnectionRequestedEventArgs **out);
 
-/* Windows.UI.UIAutomation.Core.RemoteAutomationConnectionRequestedEventArgs */
-/* Windows.UI.UIAutomation.Core.RemoteAutomationConnectionRequestedEventArgs.get_LocalPipeName() */
 HRESULT wuiuico_remote_automation_connection_requested_event_args_get__local_pipe_name(WUIUICO_RemoteAutomationConnectionRequestedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.UIAutomation.Core.RemoteAutomationConnectionRequestedEventArgs.get_RemoteProcessId() */
 HRESULT wuiuico_remote_automation_connection_requested_event_args_get__remote_process_id(WUIUICO_RemoteAutomationConnectionRequestedEventArgs *self, uint32_t *value);
 
-/* activate Windows.UI.UIAutomation.Core.RemoteAutomationDisconnectedEventArgs */
 HRESULT wuiuico_remote_automation_disconnected_event_args_new(WUIUICO_RemoteAutomationDisconnectedEventArgs **out);
 
-/* Windows.UI.UIAutomation.Core.RemoteAutomationDisconnectedEventArgs */
-/* Windows.UI.UIAutomation.Core.RemoteAutomationDisconnectedEventArgs.get_LocalPipeName() */
 HRESULT wuiuico_remote_automation_disconnected_event_args_get__local_pipe_name(WUIUICO_RemoteAutomationDisconnectedEventArgs *self, cwinrt_hstring *value);
 
-/* activate Windows.UI.UIAutomation.Core.RemoteAutomationServer */
 HRESULT wuiuico_remote_automation_server_new(WUIUICO_RemoteAutomationServer **out);
 
-/* Windows.UI.UIAutomation.Core.RemoteAutomationServer */
-/* Windows.UI.UIAutomation.Core.RemoteAutomationServer.ReportSession(sessionId) */
 HRESULT wuiuico_remote_automation_server_report_session(GUID sessionId);
 
-/* activate Windows.UI.UIAutomation.Core.RemoteAutomationWindow */
 HRESULT wuiuico_remote_automation_window_new(WUIUICO_RemoteAutomationWindow **out);
 
-/* Windows.UI.UIAutomation.Core.RemoteAutomationWindow */
-/* Windows.UI.UIAutomation.Core.RemoteAutomationWindow.get_AutomationProvider() */
 HRESULT wuiuico_remote_automation_window_get__automation_provider(WUIUICO_RemoteAutomationWindow *self, IInspectable** value);
 
-/* Windows.UI.UIAutomation.Core.RemoteAutomationWindow.UnregisterAsync() */
 HRESULT wuiuico_remote_automation_window_unregister_async(WUIUICO_RemoteAutomationWindow *self, WF_IAsyncAction** out);
 
-/* activate Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperationContext */
 HRESULT wuiuico_core_automation_remote_operation_context_new(WUIUICO_CoreAutomationRemoteOperationContext **out);
 
-/* Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperationContext */
-/* Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperationContext.GetOperand(id) */
 HRESULT wuiuico_core_automation_remote_operation_context_get_operand(WUIUICO_CoreAutomationRemoteOperationContext *self, WUIUICO_AutomationRemoteOperationOperandId id, IInspectable** out);
 
-/* Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperationContext.SetOperand(id, operand) */
 HRESULT wuiuico_core_automation_remote_operation_context_set_operand(WUIUICO_CoreAutomationRemoteOperationContext *self, WUIUICO_AutomationRemoteOperationOperandId id, IInspectable* operand);
 
-/* Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperationContext.SetOperand(id, operand, operandInterfaceId) */
 HRESULT wuiuico_core_automation_remote_operation_context_set_operand_automation_remote_operation_operand__4bfd3619(WUIUICO_CoreAutomationRemoteOperationContext *self, WUIUICO_AutomationRemoteOperationOperandId id, IInspectable* operand, GUID operandInterfaceId);
 
-/* activate Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation */
 HRESULT wuiuico_core_automation_remote_operation_new(WUIUICO_CoreAutomationRemoteOperation **out);
 
-/* Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation */
-/* Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation.IsOpcodeSupported(opcode) */
 HRESULT wuiuico_core_automation_remote_operation_is_opcode_supported(WUIUICO_CoreAutomationRemoteOperation *self, uint32_t opcode, BOOL *out);
 
-/* Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation.ImportElement(operandId, element) */
 HRESULT wuiuico_core_automation_remote_operation_import_element(WUIUICO_CoreAutomationRemoteOperation *self, WUIUICO_AutomationRemoteOperationOperandId operandId, WUIUI_AutomationElement* element);
 
-/* Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation.ImportTextRange(operandId, textRange) */
 HRESULT wuiuico_core_automation_remote_operation_import_text_range(WUIUICO_CoreAutomationRemoteOperation *self, WUIUICO_AutomationRemoteOperationOperandId operandId, WUIUI_AutomationTextRange* textRange);
 
-/* Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation.AddToResults(operandId) */
 HRESULT wuiuico_core_automation_remote_operation_add_to_results(WUIUICO_CoreAutomationRemoteOperation *self, WUIUICO_AutomationRemoteOperationOperandId operandId);
 
-/* Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation.Execute(bytecodeBuffer) */
 HRESULT wuiuico_core_automation_remote_operation_execute(WUIUICO_CoreAutomationRemoteOperation *self, uint8_t *bytecodeBuffer, uint32_t bytecodeBuffer_len, WUIUICO_AutomationRemoteOperationResult** out);
 
-/* Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation.ImportConnectionBoundObject(operandId, connectionBoundObject) */
 HRESULT wuiuico_core_automation_remote_operation_import_connection_bound_object(WUIUICO_CoreAutomationRemoteOperation *self, WUIUICO_AutomationRemoteOperationOperandId operandId, WUIUI_AutomationConnectionBoundObject* connectionBoundObject);
 
-/* activate Windows.UI.UIAutomation.Core.CoreAutomationRegistrar */
 HRESULT wuiuico_core_automation_registrar_new(WUIUICO_CoreAutomationRegistrar **out);
 
-/* Windows.UI.UIAutomation.Core.CoreAutomationRegistrar */
-/* Windows.UI.UIAutomation.Core.CoreAutomationRegistrar.RegisterAnnotationType(guid) */
 HRESULT wuiuico_core_automation_registrar_register_annotation_type(GUID guid, WUIUICO_AutomationAnnotationTypeRegistration *out);
 
-/* Windows.UI.UIAutomation.Core.CoreAutomationRegistrar.UnregisterAnnotationType(registration) */
 HRESULT wuiuico_core_automation_registrar_unregister_annotation_type(WUIUICO_AutomationAnnotationTypeRegistration registration);
 
-/* activate Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult */
 HRESULT wuiuico_automation_remote_operation_result_new(WUIUICO_AutomationRemoteOperationResult **out);
 
-/* Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult */
-/* Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult.get_Status() */
 HRESULT wuiuico_automation_remote_operation_result_get__status(WUIUICO_AutomationRemoteOperationResult *self, WUIUICO_AutomationRemoteOperationStatus *value);
 
-/* Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult.get_ExtendedError() */
 HRESULT wuiuico_automation_remote_operation_result_get__extended_error(WUIUICO_AutomationRemoteOperationResult *self, HRESULT *value);
 
-/* Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult.get_ErrorLocation() */
 HRESULT wuiuico_automation_remote_operation_result_get__error_location(WUIUICO_AutomationRemoteOperationResult *self, int32_t *value);
 
-/* Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult.HasOperand(operandId) */
 HRESULT wuiuico_automation_remote_operation_result_has_operand(WUIUICO_AutomationRemoteOperationResult *self, WUIUICO_AutomationRemoteOperationOperandId operandId, BOOL *out);
 
-/* Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult.GetOperand(operandId) */
 HRESULT wuiuico_automation_remote_operation_result_get_operand(WUIUICO_AutomationRemoteOperationResult *self, WUIUICO_AutomationRemoteOperationOperandId operandId, IInspectable** out);
 
-/* Windows.UI.UIAutomation.Core.IRemoteAutomationClientSession */
-/* Windows.UI.UIAutomation.Core.IRemoteAutomationConnectionRequestedEventArgs */
-/* Windows.UI.UIAutomation.Core.IRemoteAutomationDisconnectedEventArgs */
-/* Windows.UI.UIAutomation.Core.IRemoteAutomationWindow */
-/* Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperationContext */
-/* Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperation */
-/* Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperation2 */
-/* Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperation2.ImportConnectionBoundObject(operandId, connectionBoundObject) */
 HRESULT wuiuico_core_automation_remote_operation_2_import_connection_bound_object(WUIUICO_ICoreAutomationRemoteOperation_2 *self, WUIUICO_AutomationRemoteOperationOperandId operandId, WUIUI_AutomationConnectionBoundObject* connectionBoundObject);
 
-/* Windows.UI.UIAutomation.Core.IAutomationRemoteOperationResult */
 #endif /* CWINRT_WINDOWS_UI_UIAUTOMATION_CORE_H */

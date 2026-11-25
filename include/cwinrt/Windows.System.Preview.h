@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WDESE_SimpleOrientation
 #define CWINRT_FWD_WDESE_SimpleOrientation
 typedef enum WDESE_SimpleOrientation {
@@ -26,7 +25,6 @@ typedef enum WDESE_SimpleOrientation {
 } WDESE_SimpleOrientation;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSYPR_TwoPanelHingedDevicePosturePreviewReading WSYPR_TwoPanelHingedDevicePosturePreviewReading;
 typedef struct WSYPR_TwoPanelHingedDevicePosturePreview WSYPR_TwoPanelHingedDevicePosturePreview;
 typedef struct WSYPR_ITwoPanelHingedDevicePosturePreviewStatics WSYPR_ITwoPanelHingedDevicePosturePreviewStatics;
@@ -35,7 +33,6 @@ typedef struct WSYPR_ITwoPanelHingedDevicePosturePreviewReading WSYPR_ITwoPanelH
 typedef struct WSYPR_ITwoPanelHingedDevicePosturePreview WSYPR_ITwoPanelHingedDevicePosturePreview;
 typedef struct WSYPR_ITwoPanelHingedDevicePosturePreviewReadingChangedEventArgs WSYPR_ITwoPanelHingedDevicePosturePreviewReadingChangedEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_DateTime
 #define CWINRT_FWD_WF_DateTime
 typedef struct WF_DateTime WF_DateTime;
@@ -77,7 +74,6 @@ typedef enum WSYPR_HingeState {
 } WSYPR_HingeState;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -98,58 +94,35 @@ static const IID CWINRT_IID_WSYPR_ITwoPanelHingedDevicePosturePreview CWINRT_MAY
 static const IID CWINRT_IID_WSYPR_ITwoPanelHingedDevicePosturePreviewReadingChangedEventArgs CWINRT_MAYBE_UNUSED = { 0x2D2D1BC6, 0x02CE, 0x474A, { 0xA5, 0x56, 0xA7, 0x5B, 0x1C, 0xF9, 0x3A, 0x03 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading */
 HRESULT wsypr_two_panel_hinged_device_posture_preview_reading_new(WSYPR_TwoPanelHingedDevicePosturePreviewReading **out);
 
-/* Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading */
-/* Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading.get_Timestamp() */
 HRESULT wsypr_two_panel_hinged_device_posture_preview_reading_get__timestamp(WSYPR_TwoPanelHingedDevicePosturePreviewReading *self, WF_DateTime *value);
 
-/* Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading.get_HingeState() */
 HRESULT wsypr_two_panel_hinged_device_posture_preview_reading_get__hinge_state(WSYPR_TwoPanelHingedDevicePosturePreviewReading *self, WSYPR_HingeState *value);
 
-/* Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading.get_Panel1Orientation() */
 HRESULT wsypr_two_panel_hinged_device_posture_preview_reading_get__panel1_orientation(WSYPR_TwoPanelHingedDevicePosturePreviewReading *self, WDESE_SimpleOrientation *value);
 
-/* Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading.get_Panel1Id() */
 HRESULT wsypr_two_panel_hinged_device_posture_preview_reading_get__panel1_id(WSYPR_TwoPanelHingedDevicePosturePreviewReading *self, cwinrt_hstring *value);
 
-/* Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading.get_Panel2Orientation() */
 HRESULT wsypr_two_panel_hinged_device_posture_preview_reading_get__panel2_orientation(WSYPR_TwoPanelHingedDevicePosturePreviewReading *self, WDESE_SimpleOrientation *value);
 
-/* Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading.get_Panel2Id() */
 HRESULT wsypr_two_panel_hinged_device_posture_preview_reading_get__panel2_id(WSYPR_TwoPanelHingedDevicePosturePreviewReading *self, cwinrt_hstring *value);
 
-/* activate Windows.System.Preview.TwoPanelHingedDevicePosturePreview */
 HRESULT wsypr_two_panel_hinged_device_posture_preview_new(WSYPR_TwoPanelHingedDevicePosturePreview **out);
 
-/* Windows.System.Preview.TwoPanelHingedDevicePosturePreview */
-/* Windows.System.Preview.TwoPanelHingedDevicePosturePreview.GetCurrentPostureAsync() */
 HRESULT wsypr_two_panel_hinged_device_posture_preview_get_current_posture_async(WSYPR_TwoPanelHingedDevicePosturePreview *self, WF_IAsyncOperation_WSYPR_TwoPanelHingedDevicePosturePreviewReading** out);
 
-/* Windows.System.Preview.TwoPanelHingedDevicePosturePreview.GetDefaultAsync() */
 HRESULT wsypr_two_panel_hinged_device_posture_preview_get_default_async(WF_IAsyncOperation_WSYPR_TwoPanelHingedDevicePosturePreview** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsypr_two_panel_hinged_device_posture_preview_on_posture_changed(WSYPR_TwoPanelHingedDevicePosturePreview *self, cwinrt_event_fn fn, void *ctx);
 void wsypr_two_panel_hinged_device_posture_preview_off_posture_changed(WSYPR_TwoPanelHingedDevicePosturePreview *self, cwinrt_token token);
 
-/* Windows.System.Preview.ITwoPanelHingedDevicePosturePreviewStatics */
-/* Windows.System.Preview.ITwoPanelHingedDevicePosturePreviewStatics.GetDefaultAsync() */
 HRESULT wsypr_two_panel_hinged_device_posture_preview_statics_get_default_async(WSYPR_ITwoPanelHingedDevicePosturePreviewStatics *self, WF_IAsyncOperation_WSYPR_TwoPanelHingedDevicePosturePreview** out);
 
-/* activate Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs */
 HRESULT wsypr_two_panel_hinged_device_posture_preview_reading_changed_event_a_new(WSYPR_TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs **out);
 
-/* Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs */
-/* Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs.get_Reading() */
 HRESULT wsypr_two_panel_hinged_device_posture_preview_reading_changed_event_a_get__reading(WSYPR_TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs *self, WSYPR_TwoPanelHingedDevicePosturePreviewReading** value);
 
-/* Windows.System.Preview.ITwoPanelHingedDevicePosturePreviewReading */
-/* Windows.System.Preview.ITwoPanelHingedDevicePosturePreview */
-/* Windows.System.Preview.ITwoPanelHingedDevicePosturePreviewReadingChangedEventArgs */
 #endif /* CWINRT_WINDOWS_SYSTEM_PREVIEW_H */

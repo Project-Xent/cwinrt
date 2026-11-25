@@ -13,13 +13,11 @@
 #include <cwinrt/Windows.UI.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStream
 #define CWINRT_FWD_WSTST_IRandomAccessStream
 typedef struct WSTST_IRandomAccessStream WSTST_IRandomAccessStream;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUITE_ContentLinkInfo WUITE_ContentLinkInfo;
 typedef struct WUITE_TextConstants WUITE_TextConstants;
 typedef struct WUITE_RichEditTextRange WUITE_RichEditTextRange;
@@ -39,7 +37,6 @@ typedef struct WUITE_ITextDocument WUITE_ITextDocument;
 typedef struct WUITE_ITextRange WUITE_ITextRange;
 typedef struct WUITE_IFontWeights WUITE_IFontWeights;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_Uri
 #define CWINRT_FWD_WF_Uri
 typedef struct WF_Uri WF_Uri;
@@ -504,7 +501,6 @@ struct WUITE_FontWeight {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -561,1034 +557,678 @@ static const IID CWINRT_IID_WUITE_ITextRange CWINRT_MAYBE_UNUSED = { 0x5B9E4E57,
 static const IID CWINRT_IID_WUITE_IFontWeights CWINRT_MAYBE_UNUSED = { 0x7880A444, 0x01AB, 0x4997, { 0x85, 0x17, 0xDF, 0x82, 0x2A, 0x0C, 0x45, 0xF1 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.UI.Text.ContentLinkInfo */
 HRESULT wuite_content_link_info_new(WUITE_ContentLinkInfo **out);
 
-/* Windows.UI.Text.ContentLinkInfo */
-/* Windows.UI.Text.ContentLinkInfo.get_Id() */
 HRESULT wuite_content_link_info_get__id(WUITE_ContentLinkInfo *self, uint32_t *value);
 
-/* Windows.UI.Text.ContentLinkInfo.put_Id() */
 HRESULT wuite_content_link_info_put__id(WUITE_ContentLinkInfo *self, uint32_t value);
 
-/* Windows.UI.Text.ContentLinkInfo.get_DisplayText() */
 HRESULT wuite_content_link_info_get__display_text(WUITE_ContentLinkInfo *self, cwinrt_hstring *value);
 
-/* Windows.UI.Text.ContentLinkInfo.put_DisplayText() */
 HRESULT wuite_content_link_info_put__display_text(WUITE_ContentLinkInfo *self, cwinrt_hstring value);
 
-/* Windows.UI.Text.ContentLinkInfo.get_SecondaryText() */
 HRESULT wuite_content_link_info_get__secondary_text(WUITE_ContentLinkInfo *self, cwinrt_hstring *value);
 
-/* Windows.UI.Text.ContentLinkInfo.put_SecondaryText() */
 HRESULT wuite_content_link_info_put__secondary_text(WUITE_ContentLinkInfo *self, cwinrt_hstring value);
 
-/* Windows.UI.Text.ContentLinkInfo.get_Uri() */
 HRESULT wuite_content_link_info_get__uri(WUITE_ContentLinkInfo *self, WF_Uri** value);
 
-/* Windows.UI.Text.ContentLinkInfo.put_Uri() */
 HRESULT wuite_content_link_info_put__uri(WUITE_ContentLinkInfo *self, WF_Uri* value);
 
-/* Windows.UI.Text.ContentLinkInfo.get_LinkContentKind() */
 HRESULT wuite_content_link_info_get__link_content_kind(WUITE_ContentLinkInfo *self, cwinrt_hstring *value);
 
-/* Windows.UI.Text.ContentLinkInfo.put_LinkContentKind() */
 HRESULT wuite_content_link_info_put__link_content_kind(WUITE_ContentLinkInfo *self, cwinrt_hstring value);
 
-/* activate Windows.UI.Text.TextConstants */
 HRESULT wuite_text_constants_new(WUITE_TextConstants **out);
 
-/* Windows.UI.Text.TextConstants */
-/* Windows.UI.Text.TextConstants.get_AutoColor() */
 HRESULT wuite_text_constants_get__auto_color(WUI_Color *value);
 
-/* Windows.UI.Text.TextConstants.get_MinUnitCount() */
 HRESULT wuite_text_constants_get__min_unit_count(int32_t *value);
 
-/* Windows.UI.Text.TextConstants.get_MaxUnitCount() */
 HRESULT wuite_text_constants_get__max_unit_count(int32_t *value);
 
-/* Windows.UI.Text.TextConstants.get_UndefinedColor() */
 HRESULT wuite_text_constants_get__undefined_color(WUI_Color *value);
 
-/* Windows.UI.Text.TextConstants.get_UndefinedFloatValue() */
 HRESULT wuite_text_constants_get__undefined_float_value(float *value);
 
-/* Windows.UI.Text.TextConstants.get_UndefinedInt32Value() */
 HRESULT wuite_text_constants_get__undefined_int32_value(int32_t *value);
 
-/* Windows.UI.Text.TextConstants.get_UndefinedFontStretch() */
 HRESULT wuite_text_constants_get__undefined_font_stretch(WUITE_FontStretch *value);
 
-/* Windows.UI.Text.TextConstants.get_UndefinedFontStyle() */
 HRESULT wuite_text_constants_get__undefined_font_style(WUITE_FontStyle *value);
 
-/* activate Windows.UI.Text.RichEditTextRange */
 HRESULT wuite_rich_edit_text_range_new(WUITE_RichEditTextRange **out);
 
-/* Windows.UI.Text.RichEditTextRange */
-/* Windows.UI.Text.RichEditTextRange.get_ContentLinkInfo() */
 HRESULT wuite_rich_edit_text_range_get__content_link_info(WUITE_RichEditTextRange *self, WUITE_ContentLinkInfo** value);
 
-/* Windows.UI.Text.RichEditTextRange.put_ContentLinkInfo() */
 HRESULT wuite_rich_edit_text_range_put__content_link_info(WUITE_RichEditTextRange *self, WUITE_ContentLinkInfo* value);
 
-/* Windows.UI.Text.RichEditTextRange.get_Character() */
 HRESULT wuite_rich_edit_text_range_get__character(WUITE_RichEditTextRange *self, WCHAR *value);
 
-/* Windows.UI.Text.RichEditTextRange.put_Character() */
 HRESULT wuite_rich_edit_text_range_put__character(WUITE_RichEditTextRange *self, WCHAR value);
 
-/* Windows.UI.Text.RichEditTextRange.get_CharacterFormat() */
 HRESULT wuite_rich_edit_text_range_get__character_format(WUITE_RichEditTextRange *self, WUITE_ITextCharacterFormat** value);
 
-/* Windows.UI.Text.RichEditTextRange.put_CharacterFormat() */
 HRESULT wuite_rich_edit_text_range_put__character_format(WUITE_RichEditTextRange *self, WUITE_ITextCharacterFormat* value);
 
-/* Windows.UI.Text.RichEditTextRange.get_FormattedText() */
 HRESULT wuite_rich_edit_text_range_get__formatted_text(WUITE_RichEditTextRange *self, WUITE_ITextRange** value);
 
-/* Windows.UI.Text.RichEditTextRange.put_FormattedText() */
 HRESULT wuite_rich_edit_text_range_put__formatted_text(WUITE_RichEditTextRange *self, WUITE_ITextRange* value);
 
-/* Windows.UI.Text.RichEditTextRange.get_EndPosition() */
 HRESULT wuite_rich_edit_text_range_get__end_position(WUITE_RichEditTextRange *self, int32_t *value);
 
-/* Windows.UI.Text.RichEditTextRange.put_EndPosition() */
 HRESULT wuite_rich_edit_text_range_put__end_position(WUITE_RichEditTextRange *self, int32_t value);
 
-/* Windows.UI.Text.RichEditTextRange.get_Gravity() */
 HRESULT wuite_rich_edit_text_range_get__gravity(WUITE_RichEditTextRange *self, WUITE_RangeGravity *value);
 
-/* Windows.UI.Text.RichEditTextRange.put_Gravity() */
 HRESULT wuite_rich_edit_text_range_put__gravity(WUITE_RichEditTextRange *self, WUITE_RangeGravity value);
 
-/* Windows.UI.Text.RichEditTextRange.get_Length() */
 HRESULT wuite_rich_edit_text_range_get__length(WUITE_RichEditTextRange *self, int32_t *value);
 
-/* Windows.UI.Text.RichEditTextRange.get_Link() */
 HRESULT wuite_rich_edit_text_range_get__link(WUITE_RichEditTextRange *self, cwinrt_hstring *value);
 
-/* Windows.UI.Text.RichEditTextRange.put_Link() */
 HRESULT wuite_rich_edit_text_range_put__link(WUITE_RichEditTextRange *self, cwinrt_hstring value);
 
-/* Windows.UI.Text.RichEditTextRange.get_ParagraphFormat() */
 HRESULT wuite_rich_edit_text_range_get__paragraph_format(WUITE_RichEditTextRange *self, WUITE_ITextParagraphFormat** value);
 
-/* Windows.UI.Text.RichEditTextRange.put_ParagraphFormat() */
 HRESULT wuite_rich_edit_text_range_put__paragraph_format(WUITE_RichEditTextRange *self, WUITE_ITextParagraphFormat* value);
 
-/* Windows.UI.Text.RichEditTextRange.get_StartPosition() */
 HRESULT wuite_rich_edit_text_range_get__start_position(WUITE_RichEditTextRange *self, int32_t *value);
 
-/* Windows.UI.Text.RichEditTextRange.put_StartPosition() */
 HRESULT wuite_rich_edit_text_range_put__start_position(WUITE_RichEditTextRange *self, int32_t value);
 
-/* Windows.UI.Text.RichEditTextRange.get_StoryLength() */
 HRESULT wuite_rich_edit_text_range_get__story_length(WUITE_RichEditTextRange *self, int32_t *value);
 
-/* Windows.UI.Text.RichEditTextRange.get_Text() */
 HRESULT wuite_rich_edit_text_range_get__text(WUITE_RichEditTextRange *self, cwinrt_hstring *value);
 
-/* Windows.UI.Text.RichEditTextRange.put_Text() */
 HRESULT wuite_rich_edit_text_range_put__text(WUITE_RichEditTextRange *self, cwinrt_hstring value);
 
-/* Windows.UI.Text.RichEditTextRange.CanPaste(format) */
 HRESULT wuite_rich_edit_text_range_can_paste(WUITE_RichEditTextRange *self, int32_t format, BOOL *out);
 
-/* Windows.UI.Text.RichEditTextRange.ChangeCase() */
 HRESULT wuite_rich_edit_text_range_change_case(WUITE_RichEditTextRange *self, WUITE_LetterCase value);
 
-/* Windows.UI.Text.RichEditTextRange.Collapse() */
 HRESULT wuite_rich_edit_text_range_collapse(WUITE_RichEditTextRange *self, BOOL value);
 
-/* Windows.UI.Text.RichEditTextRange.Copy() */
 HRESULT wuite_rich_edit_text_range_copy(WUITE_RichEditTextRange *self);
 
-/* Windows.UI.Text.RichEditTextRange.Cut() */
 HRESULT wuite_rich_edit_text_range_cut(WUITE_RichEditTextRange *self);
 
-/* Windows.UI.Text.RichEditTextRange.Delete(unit, count) */
 HRESULT wuite_rich_edit_text_range_delete(WUITE_RichEditTextRange *self, WUITE_TextRangeUnit unit, int32_t count, int32_t *out);
 
-/* Windows.UI.Text.RichEditTextRange.EndOf(unit, extend) */
 HRESULT wuite_rich_edit_text_range_end_of(WUITE_RichEditTextRange *self, WUITE_TextRangeUnit unit, BOOL extend, int32_t *out);
 
-/* Windows.UI.Text.RichEditTextRange.Expand(unit) */
 HRESULT wuite_rich_edit_text_range_expand(WUITE_RichEditTextRange *self, WUITE_TextRangeUnit unit, int32_t *out);
 
-/* Windows.UI.Text.RichEditTextRange.FindText(scanLength, options) */
 HRESULT wuite_rich_edit_text_range_find_text(WUITE_RichEditTextRange *self, cwinrt_hstring value, int32_t scanLength, WUITE_FindOptions options, int32_t *out);
 
-/* Windows.UI.Text.RichEditTextRange.GetCharacterUtf32(offset) */
 HRESULT wuite_rich_edit_text_range_get_character_utf32(WUITE_RichEditTextRange *self, uint32_t value, int32_t offset);
 
-/* Windows.UI.Text.RichEditTextRange.GetClone() */
 HRESULT wuite_rich_edit_text_range_get_clone(WUITE_RichEditTextRange *self, WUITE_ITextRange** out);
 
-/* Windows.UI.Text.RichEditTextRange.GetIndex(unit) */
 HRESULT wuite_rich_edit_text_range_get_index(WUITE_RichEditTextRange *self, WUITE_TextRangeUnit unit, int32_t *out);
 
-/* Windows.UI.Text.RichEditTextRange.GetPoint(horizontalAlign, verticalAlign, options, point) */
 HRESULT wuite_rich_edit_text_range_get_point(WUITE_RichEditTextRange *self, WUITE_HorizontalCharacterAlignment horizontalAlign, WUITE_VerticalCharacterAlignment verticalAlign, WUITE_PointOptions options, WF_Point point);
 
-/* Windows.UI.Text.RichEditTextRange.GetRect(options, rect, hit) */
 HRESULT wuite_rich_edit_text_range_get_rect(WUITE_RichEditTextRange *self, WUITE_PointOptions options, WF_Rect rect, int32_t hit);
 
-/* Windows.UI.Text.RichEditTextRange.GetText(options) */
 HRESULT wuite_rich_edit_text_range_get_text(WUITE_RichEditTextRange *self, WUITE_TextGetOptions options, cwinrt_hstring value);
 
-/* Windows.UI.Text.RichEditTextRange.GetTextViaStream(options) */
 HRESULT wuite_rich_edit_text_range_get_text_via_stream(WUITE_RichEditTextRange *self, WUITE_TextGetOptions options, WSTST_IRandomAccessStream* value);
 
-/* Windows.UI.Text.RichEditTextRange.InRange(range) */
 HRESULT wuite_rich_edit_text_range_in_range(WUITE_RichEditTextRange *self, WUITE_ITextRange* range, BOOL *out);
 
-/* Windows.UI.Text.RichEditTextRange.InsertImage(width, height, ascent, verticalAlign, alternateText) */
 HRESULT wuite_rich_edit_text_range_insert_image(WUITE_RichEditTextRange *self, int32_t width, int32_t height, int32_t ascent, WUITE_VerticalCharacterAlignment verticalAlign, cwinrt_hstring alternateText, WSTST_IRandomAccessStream* value);
 
-/* Windows.UI.Text.RichEditTextRange.InStory(range) */
 HRESULT wuite_rich_edit_text_range_in_story(WUITE_RichEditTextRange *self, WUITE_ITextRange* range, BOOL *out);
 
-/* Windows.UI.Text.RichEditTextRange.IsEqual(range) */
 HRESULT wuite_rich_edit_text_range_is_equal(WUITE_RichEditTextRange *self, WUITE_ITextRange* range, BOOL *out);
 
-/* Windows.UI.Text.RichEditTextRange.Move(unit, count) */
 HRESULT wuite_rich_edit_text_range_move(WUITE_RichEditTextRange *self, WUITE_TextRangeUnit unit, int32_t count, int32_t *out);
 
-/* Windows.UI.Text.RichEditTextRange.MoveEnd(unit, count) */
 HRESULT wuite_rich_edit_text_range_move_end(WUITE_RichEditTextRange *self, WUITE_TextRangeUnit unit, int32_t count, int32_t *out);
 
-/* Windows.UI.Text.RichEditTextRange.MoveStart(unit, count) */
 HRESULT wuite_rich_edit_text_range_move_start(WUITE_RichEditTextRange *self, WUITE_TextRangeUnit unit, int32_t count, int32_t *out);
 
-/* Windows.UI.Text.RichEditTextRange.Paste(format) */
 HRESULT wuite_rich_edit_text_range_paste(WUITE_RichEditTextRange *self, int32_t format);
 
-/* Windows.UI.Text.RichEditTextRange.ScrollIntoView() */
 HRESULT wuite_rich_edit_text_range_scroll_into_view(WUITE_RichEditTextRange *self, WUITE_PointOptions value);
 
-/* Windows.UI.Text.RichEditTextRange.MatchSelection() */
 HRESULT wuite_rich_edit_text_range_match_selection(WUITE_RichEditTextRange *self);
 
-/* Windows.UI.Text.RichEditTextRange.SetIndex(unit, index, extend) */
 HRESULT wuite_rich_edit_text_range_set_index(WUITE_RichEditTextRange *self, WUITE_TextRangeUnit unit, int32_t index, BOOL extend);
 
-/* Windows.UI.Text.RichEditTextRange.SetPoint(point, options, extend) */
 HRESULT wuite_rich_edit_text_range_set_point(WUITE_RichEditTextRange *self, WF_Point point, WUITE_PointOptions options, BOOL extend);
 
-/* Windows.UI.Text.RichEditTextRange.SetRange(startPosition, endPosition) */
 HRESULT wuite_rich_edit_text_range_set_range(WUITE_RichEditTextRange *self, int32_t startPosition, int32_t endPosition);
 
-/* Windows.UI.Text.RichEditTextRange.SetText(options) */
 HRESULT wuite_rich_edit_text_range_set_text(WUITE_RichEditTextRange *self, WUITE_TextSetOptions options, cwinrt_hstring value);
 
-/* Windows.UI.Text.RichEditTextRange.SetTextViaStream(options) */
 HRESULT wuite_rich_edit_text_range_set_text_via_stream(WUITE_RichEditTextRange *self, WUITE_TextSetOptions options, WSTST_IRandomAccessStream* value);
 
-/* Windows.UI.Text.RichEditTextRange.StartOf(unit, extend) */
 HRESULT wuite_rich_edit_text_range_start_of(WUITE_RichEditTextRange *self, WUITE_TextRangeUnit unit, BOOL extend, int32_t *out);
 
-/* activate Windows.UI.Text.RichEditTextDocument */
 HRESULT wuite_rich_edit_text_document_new(WUITE_RichEditTextDocument **out);
 
-/* Windows.UI.Text.RichEditTextDocument */
-/* Windows.UI.Text.RichEditTextDocument.get_AlignmentIncludesTrailingWhitespace() */
 HRESULT wuite_rich_edit_text_document_get__alignment_includes_trailing_whitespace(WUITE_RichEditTextDocument *self, BOOL *value);
 
-/* Windows.UI.Text.RichEditTextDocument.put_AlignmentIncludesTrailingWhitespace() */
 HRESULT wuite_rich_edit_text_document_put__alignment_includes_trailing_whitespace(WUITE_RichEditTextDocument *self, BOOL value);
 
-/* Windows.UI.Text.RichEditTextDocument.get_IgnoreTrailingCharacterSpacing() */
 HRESULT wuite_rich_edit_text_document_get__ignore_trailing_character_spacing(WUITE_RichEditTextDocument *self, BOOL *value);
 
-/* Windows.UI.Text.RichEditTextDocument.put_IgnoreTrailingCharacterSpacing() */
 HRESULT wuite_rich_edit_text_document_put__ignore_trailing_character_spacing(WUITE_RichEditTextDocument *self, BOOL value);
 
-/* Windows.UI.Text.RichEditTextDocument.ClearUndoRedoHistory() */
 HRESULT wuite_rich_edit_text_document_clear_undo_redo_history(WUITE_RichEditTextDocument *self);
 
-/* Windows.UI.Text.RichEditTextDocument.SetMath() */
 HRESULT wuite_rich_edit_text_document_set_math(WUITE_RichEditTextDocument *self, cwinrt_hstring value);
 
-/* Windows.UI.Text.RichEditTextDocument.GetMath() */
 HRESULT wuite_rich_edit_text_document_get_math(WUITE_RichEditTextDocument *self, cwinrt_hstring value);
 
-/* Windows.UI.Text.RichEditTextDocument.SetMathMode(mode) */
 HRESULT wuite_rich_edit_text_document_set_math_mode(WUITE_RichEditTextDocument *self, WUITE_RichEditMathMode mode);
 
-/* Windows.UI.Text.RichEditTextDocument.get_CaretType() */
 HRESULT wuite_rich_edit_text_document_get__caret_type(WUITE_RichEditTextDocument *self, WUITE_CaretType *value);
 
-/* Windows.UI.Text.RichEditTextDocument.put_CaretType() */
 HRESULT wuite_rich_edit_text_document_put__caret_type(WUITE_RichEditTextDocument *self, WUITE_CaretType value);
 
-/* Windows.UI.Text.RichEditTextDocument.get_DefaultTabStop() */
 HRESULT wuite_rich_edit_text_document_get__default_tab_stop(WUITE_RichEditTextDocument *self, float *value);
 
-/* Windows.UI.Text.RichEditTextDocument.put_DefaultTabStop() */
 HRESULT wuite_rich_edit_text_document_put__default_tab_stop(WUITE_RichEditTextDocument *self, float value);
 
-/* Windows.UI.Text.RichEditTextDocument.get_Selection() */
 HRESULT wuite_rich_edit_text_document_get__selection(WUITE_RichEditTextDocument *self, WUITE_ITextSelection** value);
 
-/* Windows.UI.Text.RichEditTextDocument.get_UndoLimit() */
 HRESULT wuite_rich_edit_text_document_get__undo_limit(WUITE_RichEditTextDocument *self, uint32_t *value);
 
-/* Windows.UI.Text.RichEditTextDocument.put_UndoLimit() */
 HRESULT wuite_rich_edit_text_document_put__undo_limit(WUITE_RichEditTextDocument *self, uint32_t value);
 
-/* Windows.UI.Text.RichEditTextDocument.CanCopy() */
 HRESULT wuite_rich_edit_text_document_can_copy(WUITE_RichEditTextDocument *self, BOOL *out);
 
-/* Windows.UI.Text.RichEditTextDocument.CanPaste() */
 HRESULT wuite_rich_edit_text_document_can_paste(WUITE_RichEditTextDocument *self, BOOL *out);
 
-/* Windows.UI.Text.RichEditTextDocument.CanRedo() */
 HRESULT wuite_rich_edit_text_document_can_redo(WUITE_RichEditTextDocument *self, BOOL *out);
 
-/* Windows.UI.Text.RichEditTextDocument.CanUndo() */
 HRESULT wuite_rich_edit_text_document_can_undo(WUITE_RichEditTextDocument *self, BOOL *out);
 
-/* Windows.UI.Text.RichEditTextDocument.ApplyDisplayUpdates() */
 HRESULT wuite_rich_edit_text_document_apply_display_updates(WUITE_RichEditTextDocument *self, int32_t *out);
 
-/* Windows.UI.Text.RichEditTextDocument.BatchDisplayUpdates() */
 HRESULT wuite_rich_edit_text_document_batch_display_updates(WUITE_RichEditTextDocument *self, int32_t *out);
 
-/* Windows.UI.Text.RichEditTextDocument.BeginUndoGroup() */
 HRESULT wuite_rich_edit_text_document_begin_undo_group(WUITE_RichEditTextDocument *self);
 
-/* Windows.UI.Text.RichEditTextDocument.EndUndoGroup() */
 HRESULT wuite_rich_edit_text_document_end_undo_group(WUITE_RichEditTextDocument *self);
 
-/* Windows.UI.Text.RichEditTextDocument.GetDefaultCharacterFormat() */
 HRESULT wuite_rich_edit_text_document_get_default_character_format(WUITE_RichEditTextDocument *self, WUITE_ITextCharacterFormat** out);
 
-/* Windows.UI.Text.RichEditTextDocument.GetDefaultParagraphFormat() */
 HRESULT wuite_rich_edit_text_document_get_default_paragraph_format(WUITE_RichEditTextDocument *self, WUITE_ITextParagraphFormat** out);
 
-/* Windows.UI.Text.RichEditTextDocument.GetRange(startPosition, endPosition) */
 HRESULT wuite_rich_edit_text_document_get_range(WUITE_RichEditTextDocument *self, int32_t startPosition, int32_t endPosition, WUITE_ITextRange** out);
 
-/* Windows.UI.Text.RichEditTextDocument.GetRangeFromPoint(point, options) */
 HRESULT wuite_rich_edit_text_document_get_range_from_point(WUITE_RichEditTextDocument *self, WF_Point point, WUITE_PointOptions options, WUITE_ITextRange** out);
 
-/* Windows.UI.Text.RichEditTextDocument.GetText(options) */
 HRESULT wuite_rich_edit_text_document_get_text(WUITE_RichEditTextDocument *self, WUITE_TextGetOptions options, cwinrt_hstring value);
 
-/* Windows.UI.Text.RichEditTextDocument.LoadFromStream(options) */
 HRESULT wuite_rich_edit_text_document_load_from_stream(WUITE_RichEditTextDocument *self, WUITE_TextSetOptions options, WSTST_IRandomAccessStream* value);
 
-/* Windows.UI.Text.RichEditTextDocument.Redo() */
 HRESULT wuite_rich_edit_text_document_redo(WUITE_RichEditTextDocument *self);
 
-/* Windows.UI.Text.RichEditTextDocument.SaveToStream(options) */
 HRESULT wuite_rich_edit_text_document_save_to_stream(WUITE_RichEditTextDocument *self, WUITE_TextGetOptions options, WSTST_IRandomAccessStream* value);
 
-/* Windows.UI.Text.RichEditTextDocument.SetDefaultCharacterFormat() */
 HRESULT wuite_rich_edit_text_document_set_default_character_format(WUITE_RichEditTextDocument *self, WUITE_ITextCharacterFormat* value);
 
-/* Windows.UI.Text.RichEditTextDocument.SetDefaultParagraphFormat() */
 HRESULT wuite_rich_edit_text_document_set_default_paragraph_format(WUITE_RichEditTextDocument *self, WUITE_ITextParagraphFormat* value);
 
-/* Windows.UI.Text.RichEditTextDocument.SetText(options) */
 HRESULT wuite_rich_edit_text_document_set_text(WUITE_RichEditTextDocument *self, WUITE_TextSetOptions options, cwinrt_hstring value);
 
-/* Windows.UI.Text.RichEditTextDocument.Undo() */
 HRESULT wuite_rich_edit_text_document_undo(WUITE_RichEditTextDocument *self);
 
-/* Windows.UI.Text.ITextSelection */
-/* Windows.UI.Text.ITextSelection.get_Options() */
 HRESULT wuite_text_selection_get__options(WUITE_ITextSelection *self, WUITE_SelectionOptions *value);
 
-/* Windows.UI.Text.ITextSelection.put_Options() */
 HRESULT wuite_text_selection_put__options(WUITE_ITextSelection *self, WUITE_SelectionOptions value);
 
-/* Windows.UI.Text.ITextSelection.get_Type() */
 HRESULT wuite_text_selection_get__type(WUITE_ITextSelection *self, WUITE_SelectionType *value);
 
-/* Windows.UI.Text.ITextSelection.EndKey(unit, extend) */
 HRESULT wuite_text_selection_end_key(WUITE_ITextSelection *self, WUITE_TextRangeUnit unit, BOOL extend, int32_t *out);
 
-/* Windows.UI.Text.ITextSelection.HomeKey(unit, extend) */
 HRESULT wuite_text_selection_home_key(WUITE_ITextSelection *self, WUITE_TextRangeUnit unit, BOOL extend, int32_t *out);
 
-/* Windows.UI.Text.ITextSelection.MoveDown(unit, count, extend) */
 HRESULT wuite_text_selection_move_down(WUITE_ITextSelection *self, WUITE_TextRangeUnit unit, int32_t count, BOOL extend, int32_t *out);
 
-/* Windows.UI.Text.ITextSelection.MoveLeft(unit, count, extend) */
 HRESULT wuite_text_selection_move_left(WUITE_ITextSelection *self, WUITE_TextRangeUnit unit, int32_t count, BOOL extend, int32_t *out);
 
-/* Windows.UI.Text.ITextSelection.MoveRight(unit, count, extend) */
 HRESULT wuite_text_selection_move_right(WUITE_ITextSelection *self, WUITE_TextRangeUnit unit, int32_t count, BOOL extend, int32_t *out);
 
-/* Windows.UI.Text.ITextSelection.MoveUp(unit, count, extend) */
 HRESULT wuite_text_selection_move_up(WUITE_ITextSelection *self, WUITE_TextRangeUnit unit, int32_t count, BOOL extend, int32_t *out);
 
-/* Windows.UI.Text.ITextSelection.TypeText() */
 HRESULT wuite_text_selection_type_text(WUITE_ITextSelection *self, cwinrt_hstring value);
 
-/* Windows.UI.Text.ITextParagraphFormat */
-/* Windows.UI.Text.ITextParagraphFormat.get_Alignment() */
 HRESULT wuite_text_paragraph_format_get__alignment(WUITE_ITextParagraphFormat *self, WUITE_ParagraphAlignment *value);
 
-/* Windows.UI.Text.ITextParagraphFormat.put_Alignment() */
 HRESULT wuite_text_paragraph_format_put__alignment(WUITE_ITextParagraphFormat *self, WUITE_ParagraphAlignment value);
 
-/* Windows.UI.Text.ITextParagraphFormat.get_FirstLineIndent() */
 HRESULT wuite_text_paragraph_format_get__first_line_indent(WUITE_ITextParagraphFormat *self, float *value);
 
-/* Windows.UI.Text.ITextParagraphFormat.get_KeepTogether() */
 HRESULT wuite_text_paragraph_format_get__keep_together(WUITE_ITextParagraphFormat *self, WUITE_FormatEffect *value);
 
-/* Windows.UI.Text.ITextParagraphFormat.put_KeepTogether() */
 HRESULT wuite_text_paragraph_format_put__keep_together(WUITE_ITextParagraphFormat *self, WUITE_FormatEffect value);
 
-/* Windows.UI.Text.ITextParagraphFormat.get_KeepWithNext() */
 HRESULT wuite_text_paragraph_format_get__keep_with_next(WUITE_ITextParagraphFormat *self, WUITE_FormatEffect *value);
 
-/* Windows.UI.Text.ITextParagraphFormat.put_KeepWithNext() */
 HRESULT wuite_text_paragraph_format_put__keep_with_next(WUITE_ITextParagraphFormat *self, WUITE_FormatEffect value);
 
-/* Windows.UI.Text.ITextParagraphFormat.get_LeftIndent() */
 HRESULT wuite_text_paragraph_format_get__left_indent(WUITE_ITextParagraphFormat *self, float *value);
 
-/* Windows.UI.Text.ITextParagraphFormat.get_LineSpacing() */
 HRESULT wuite_text_paragraph_format_get__line_spacing(WUITE_ITextParagraphFormat *self, float *value);
 
-/* Windows.UI.Text.ITextParagraphFormat.get_LineSpacingRule() */
 HRESULT wuite_text_paragraph_format_get__line_spacing_rule(WUITE_ITextParagraphFormat *self, WUITE_LineSpacingRule *value);
 
-/* Windows.UI.Text.ITextParagraphFormat.get_ListAlignment() */
 HRESULT wuite_text_paragraph_format_get__list_alignment(WUITE_ITextParagraphFormat *self, WUITE_MarkerAlignment *value);
 
-/* Windows.UI.Text.ITextParagraphFormat.put_ListAlignment() */
 HRESULT wuite_text_paragraph_format_put__list_alignment(WUITE_ITextParagraphFormat *self, WUITE_MarkerAlignment value);
 
-/* Windows.UI.Text.ITextParagraphFormat.get_ListLevelIndex() */
 HRESULT wuite_text_paragraph_format_get__list_level_index(WUITE_ITextParagraphFormat *self, int32_t *value);
 
-/* Windows.UI.Text.ITextParagraphFormat.put_ListLevelIndex() */
 HRESULT wuite_text_paragraph_format_put__list_level_index(WUITE_ITextParagraphFormat *self, int32_t value);
 
-/* Windows.UI.Text.ITextParagraphFormat.get_ListStart() */
 HRESULT wuite_text_paragraph_format_get__list_start(WUITE_ITextParagraphFormat *self, int32_t *value);
 
-/* Windows.UI.Text.ITextParagraphFormat.put_ListStart() */
 HRESULT wuite_text_paragraph_format_put__list_start(WUITE_ITextParagraphFormat *self, int32_t value);
 
-/* Windows.UI.Text.ITextParagraphFormat.get_ListStyle() */
 HRESULT wuite_text_paragraph_format_get__list_style(WUITE_ITextParagraphFormat *self, WUITE_MarkerStyle *value);
 
-/* Windows.UI.Text.ITextParagraphFormat.put_ListStyle() */
 HRESULT wuite_text_paragraph_format_put__list_style(WUITE_ITextParagraphFormat *self, WUITE_MarkerStyle value);
 
-/* Windows.UI.Text.ITextParagraphFormat.get_ListTab() */
 HRESULT wuite_text_paragraph_format_get__list_tab(WUITE_ITextParagraphFormat *self, float *value);
 
-/* Windows.UI.Text.ITextParagraphFormat.put_ListTab() */
 HRESULT wuite_text_paragraph_format_put__list_tab(WUITE_ITextParagraphFormat *self, float value);
 
-/* Windows.UI.Text.ITextParagraphFormat.get_ListType() */
 HRESULT wuite_text_paragraph_format_get__list_type(WUITE_ITextParagraphFormat *self, WUITE_MarkerType *value);
 
-/* Windows.UI.Text.ITextParagraphFormat.put_ListType() */
 HRESULT wuite_text_paragraph_format_put__list_type(WUITE_ITextParagraphFormat *self, WUITE_MarkerType value);
 
-/* Windows.UI.Text.ITextParagraphFormat.get_NoLineNumber() */
 HRESULT wuite_text_paragraph_format_get__no_line_number(WUITE_ITextParagraphFormat *self, WUITE_FormatEffect *value);
 
-/* Windows.UI.Text.ITextParagraphFormat.put_NoLineNumber() */
 HRESULT wuite_text_paragraph_format_put__no_line_number(WUITE_ITextParagraphFormat *self, WUITE_FormatEffect value);
 
-/* Windows.UI.Text.ITextParagraphFormat.get_PageBreakBefore() */
 HRESULT wuite_text_paragraph_format_get__page_break_before(WUITE_ITextParagraphFormat *self, WUITE_FormatEffect *value);
 
-/* Windows.UI.Text.ITextParagraphFormat.put_PageBreakBefore() */
 HRESULT wuite_text_paragraph_format_put__page_break_before(WUITE_ITextParagraphFormat *self, WUITE_FormatEffect value);
 
-/* Windows.UI.Text.ITextParagraphFormat.get_RightIndent() */
 HRESULT wuite_text_paragraph_format_get__right_indent(WUITE_ITextParagraphFormat *self, float *value);
 
-/* Windows.UI.Text.ITextParagraphFormat.put_RightIndent() */
 HRESULT wuite_text_paragraph_format_put__right_indent(WUITE_ITextParagraphFormat *self, float value);
 
-/* Windows.UI.Text.ITextParagraphFormat.get_RightToLeft() */
 HRESULT wuite_text_paragraph_format_get__right_to_left(WUITE_ITextParagraphFormat *self, WUITE_FormatEffect *value);
 
-/* Windows.UI.Text.ITextParagraphFormat.put_RightToLeft() */
 HRESULT wuite_text_paragraph_format_put__right_to_left(WUITE_ITextParagraphFormat *self, WUITE_FormatEffect value);
 
-/* Windows.UI.Text.ITextParagraphFormat.get_Style() */
 HRESULT wuite_text_paragraph_format_get__style(WUITE_ITextParagraphFormat *self, WUITE_ParagraphStyle *value);
 
-/* Windows.UI.Text.ITextParagraphFormat.put_Style() */
 HRESULT wuite_text_paragraph_format_put__style(WUITE_ITextParagraphFormat *self, WUITE_ParagraphStyle value);
 
-/* Windows.UI.Text.ITextParagraphFormat.get_SpaceAfter() */
 HRESULT wuite_text_paragraph_format_get__space_after(WUITE_ITextParagraphFormat *self, float *value);
 
-/* Windows.UI.Text.ITextParagraphFormat.put_SpaceAfter() */
 HRESULT wuite_text_paragraph_format_put__space_after(WUITE_ITextParagraphFormat *self, float value);
 
-/* Windows.UI.Text.ITextParagraphFormat.get_SpaceBefore() */
 HRESULT wuite_text_paragraph_format_get__space_before(WUITE_ITextParagraphFormat *self, float *value);
 
-/* Windows.UI.Text.ITextParagraphFormat.put_SpaceBefore() */
 HRESULT wuite_text_paragraph_format_put__space_before(WUITE_ITextParagraphFormat *self, float value);
 
-/* Windows.UI.Text.ITextParagraphFormat.get_WidowControl() */
 HRESULT wuite_text_paragraph_format_get__widow_control(WUITE_ITextParagraphFormat *self, WUITE_FormatEffect *value);
 
-/* Windows.UI.Text.ITextParagraphFormat.put_WidowControl() */
 HRESULT wuite_text_paragraph_format_put__widow_control(WUITE_ITextParagraphFormat *self, WUITE_FormatEffect value);
 
-/* Windows.UI.Text.ITextParagraphFormat.get_TabCount() */
 HRESULT wuite_text_paragraph_format_get__tab_count(WUITE_ITextParagraphFormat *self, int32_t *value);
 
-/* Windows.UI.Text.ITextParagraphFormat.AddTab(position, align, leader) */
 HRESULT wuite_text_paragraph_format_add_tab(WUITE_ITextParagraphFormat *self, float position, WUITE_TabAlignment align, WUITE_TabLeader leader);
 
-/* Windows.UI.Text.ITextParagraphFormat.ClearAllTabs() */
 HRESULT wuite_text_paragraph_format_clear_all_tabs(WUITE_ITextParagraphFormat *self);
 
-/* Windows.UI.Text.ITextParagraphFormat.DeleteTab(position) */
 HRESULT wuite_text_paragraph_format_delete_tab(WUITE_ITextParagraphFormat *self, float position);
 
-/* Windows.UI.Text.ITextParagraphFormat.GetClone() */
 HRESULT wuite_text_paragraph_format_get_clone(WUITE_ITextParagraphFormat *self, WUITE_ITextParagraphFormat** out);
 
-/* Windows.UI.Text.ITextParagraphFormat.GetTab(index, position, align, leader) */
 HRESULT wuite_text_paragraph_format_get_tab(WUITE_ITextParagraphFormat *self, int32_t index, float position, WUITE_TabAlignment align, WUITE_TabLeader leader);
 
-/* Windows.UI.Text.ITextParagraphFormat.IsEqual(format) */
 HRESULT wuite_text_paragraph_format_is_equal(WUITE_ITextParagraphFormat *self, WUITE_ITextParagraphFormat* format, BOOL *out);
 
-/* Windows.UI.Text.ITextParagraphFormat.SetClone(format) */
 HRESULT wuite_text_paragraph_format_set_clone(WUITE_ITextParagraphFormat *self, WUITE_ITextParagraphFormat* format);
 
-/* Windows.UI.Text.ITextParagraphFormat.SetIndents(start, left, right) */
 HRESULT wuite_text_paragraph_format_set_indents(WUITE_ITextParagraphFormat *self, float start, float left, float right);
 
-/* Windows.UI.Text.ITextParagraphFormat.SetLineSpacing(rule, spacing) */
 HRESULT wuite_text_paragraph_format_set_line_spacing(WUITE_ITextParagraphFormat *self, WUITE_LineSpacingRule rule, float spacing);
 
-/* Windows.UI.Text.ITextConstantsStatics */
-/* Windows.UI.Text.ITextConstantsStatics.get_AutoColor() */
 HRESULT wuite_text_constants_statics_get__auto_color(WUITE_ITextConstantsStatics *self, WUI_Color *value);
 
-/* Windows.UI.Text.ITextConstantsStatics.get_MinUnitCount() */
 HRESULT wuite_text_constants_statics_get__min_unit_count(WUITE_ITextConstantsStatics *self, int32_t *value);
 
-/* Windows.UI.Text.ITextConstantsStatics.get_MaxUnitCount() */
 HRESULT wuite_text_constants_statics_get__max_unit_count(WUITE_ITextConstantsStatics *self, int32_t *value);
 
-/* Windows.UI.Text.ITextConstantsStatics.get_UndefinedColor() */
 HRESULT wuite_text_constants_statics_get__undefined_color(WUITE_ITextConstantsStatics *self, WUI_Color *value);
 
-/* Windows.UI.Text.ITextConstantsStatics.get_UndefinedFloatValue() */
 HRESULT wuite_text_constants_statics_get__undefined_float_value(WUITE_ITextConstantsStatics *self, float *value);
 
-/* Windows.UI.Text.ITextConstantsStatics.get_UndefinedInt32Value() */
 HRESULT wuite_text_constants_statics_get__undefined_int32_value(WUITE_ITextConstantsStatics *self, int32_t *value);
 
-/* Windows.UI.Text.ITextConstantsStatics.get_UndefinedFontStretch() */
 HRESULT wuite_text_constants_statics_get__undefined_font_stretch(WUITE_ITextConstantsStatics *self, WUITE_FontStretch *value);
 
-/* Windows.UI.Text.ITextConstantsStatics.get_UndefinedFontStyle() */
 HRESULT wuite_text_constants_statics_get__undefined_font_style(WUITE_ITextConstantsStatics *self, WUITE_FontStyle *value);
 
-/* Windows.UI.Text.ITextCharacterFormat */
-/* Windows.UI.Text.ITextCharacterFormat.get_AllCaps() */
 HRESULT wuite_text_character_format_get__all_caps(WUITE_ITextCharacterFormat *self, WUITE_FormatEffect *value);
 
-/* Windows.UI.Text.ITextCharacterFormat.put_AllCaps() */
 HRESULT wuite_text_character_format_put__all_caps(WUITE_ITextCharacterFormat *self, WUITE_FormatEffect value);
 
-/* Windows.UI.Text.ITextCharacterFormat.get_BackgroundColor() */
 HRESULT wuite_text_character_format_get__background_color(WUITE_ITextCharacterFormat *self, WUI_Color *value);
 
-/* Windows.UI.Text.ITextCharacterFormat.put_BackgroundColor() */
 HRESULT wuite_text_character_format_put__background_color(WUITE_ITextCharacterFormat *self, WUI_Color value);
 
-/* Windows.UI.Text.ITextCharacterFormat.get_Bold() */
 HRESULT wuite_text_character_format_get__bold(WUITE_ITextCharacterFormat *self, WUITE_FormatEffect *value);
 
-/* Windows.UI.Text.ITextCharacterFormat.put_Bold() */
 HRESULT wuite_text_character_format_put__bold(WUITE_ITextCharacterFormat *self, WUITE_FormatEffect value);
 
-/* Windows.UI.Text.ITextCharacterFormat.get_FontStretch() */
 HRESULT wuite_text_character_format_get__font_stretch(WUITE_ITextCharacterFormat *self, WUITE_FontStretch *value);
 
-/* Windows.UI.Text.ITextCharacterFormat.put_FontStretch() */
 HRESULT wuite_text_character_format_put__font_stretch(WUITE_ITextCharacterFormat *self, WUITE_FontStretch value);
 
-/* Windows.UI.Text.ITextCharacterFormat.get_FontStyle() */
 HRESULT wuite_text_character_format_get__font_style(WUITE_ITextCharacterFormat *self, WUITE_FontStyle *value);
 
-/* Windows.UI.Text.ITextCharacterFormat.put_FontStyle() */
 HRESULT wuite_text_character_format_put__font_style(WUITE_ITextCharacterFormat *self, WUITE_FontStyle value);
 
-/* Windows.UI.Text.ITextCharacterFormat.get_ForegroundColor() */
 HRESULT wuite_text_character_format_get__foreground_color(WUITE_ITextCharacterFormat *self, WUI_Color *value);
 
-/* Windows.UI.Text.ITextCharacterFormat.put_ForegroundColor() */
 HRESULT wuite_text_character_format_put__foreground_color(WUITE_ITextCharacterFormat *self, WUI_Color value);
 
-/* Windows.UI.Text.ITextCharacterFormat.get_Hidden() */
 HRESULT wuite_text_character_format_get__hidden(WUITE_ITextCharacterFormat *self, WUITE_FormatEffect *value);
 
-/* Windows.UI.Text.ITextCharacterFormat.put_Hidden() */
 HRESULT wuite_text_character_format_put__hidden(WUITE_ITextCharacterFormat *self, WUITE_FormatEffect value);
 
-/* Windows.UI.Text.ITextCharacterFormat.get_Italic() */
 HRESULT wuite_text_character_format_get__italic(WUITE_ITextCharacterFormat *self, WUITE_FormatEffect *value);
 
-/* Windows.UI.Text.ITextCharacterFormat.put_Italic() */
 HRESULT wuite_text_character_format_put__italic(WUITE_ITextCharacterFormat *self, WUITE_FormatEffect value);
 
-/* Windows.UI.Text.ITextCharacterFormat.get_Kerning() */
 HRESULT wuite_text_character_format_get__kerning(WUITE_ITextCharacterFormat *self, float *value);
 
-/* Windows.UI.Text.ITextCharacterFormat.put_Kerning() */
 HRESULT wuite_text_character_format_put__kerning(WUITE_ITextCharacterFormat *self, float value);
 
-/* Windows.UI.Text.ITextCharacterFormat.get_LanguageTag() */
 HRESULT wuite_text_character_format_get__language_tag(WUITE_ITextCharacterFormat *self, cwinrt_hstring *value);
 
-/* Windows.UI.Text.ITextCharacterFormat.put_LanguageTag() */
 HRESULT wuite_text_character_format_put__language_tag(WUITE_ITextCharacterFormat *self, cwinrt_hstring value);
 
-/* Windows.UI.Text.ITextCharacterFormat.get_LinkType() */
 HRESULT wuite_text_character_format_get__link_type(WUITE_ITextCharacterFormat *self, WUITE_LinkType *value);
 
-/* Windows.UI.Text.ITextCharacterFormat.get_Name() */
 HRESULT wuite_text_character_format_get__name(WUITE_ITextCharacterFormat *self, cwinrt_hstring *value);
 
-/* Windows.UI.Text.ITextCharacterFormat.put_Name() */
 HRESULT wuite_text_character_format_put__name(WUITE_ITextCharacterFormat *self, cwinrt_hstring value);
 
-/* Windows.UI.Text.ITextCharacterFormat.get_Outline() */
 HRESULT wuite_text_character_format_get__outline(WUITE_ITextCharacterFormat *self, WUITE_FormatEffect *value);
 
-/* Windows.UI.Text.ITextCharacterFormat.put_Outline() */
 HRESULT wuite_text_character_format_put__outline(WUITE_ITextCharacterFormat *self, WUITE_FormatEffect value);
 
-/* Windows.UI.Text.ITextCharacterFormat.get_Position() */
 HRESULT wuite_text_character_format_get__position(WUITE_ITextCharacterFormat *self, float *value);
 
-/* Windows.UI.Text.ITextCharacterFormat.put_Position() */
 HRESULT wuite_text_character_format_put__position(WUITE_ITextCharacterFormat *self, float value);
 
-/* Windows.UI.Text.ITextCharacterFormat.get_ProtectedText() */
 HRESULT wuite_text_character_format_get__protected_text(WUITE_ITextCharacterFormat *self, WUITE_FormatEffect *value);
 
-/* Windows.UI.Text.ITextCharacterFormat.put_ProtectedText() */
 HRESULT wuite_text_character_format_put__protected_text(WUITE_ITextCharacterFormat *self, WUITE_FormatEffect value);
 
-/* Windows.UI.Text.ITextCharacterFormat.get_Size() */
 HRESULT wuite_text_character_format_get__size(WUITE_ITextCharacterFormat *self, float *value);
 
-/* Windows.UI.Text.ITextCharacterFormat.put_Size() */
 HRESULT wuite_text_character_format_put__size(WUITE_ITextCharacterFormat *self, float value);
 
-/* Windows.UI.Text.ITextCharacterFormat.get_SmallCaps() */
 HRESULT wuite_text_character_format_get__small_caps(WUITE_ITextCharacterFormat *self, WUITE_FormatEffect *value);
 
-/* Windows.UI.Text.ITextCharacterFormat.put_SmallCaps() */
 HRESULT wuite_text_character_format_put__small_caps(WUITE_ITextCharacterFormat *self, WUITE_FormatEffect value);
 
-/* Windows.UI.Text.ITextCharacterFormat.get_Spacing() */
 HRESULT wuite_text_character_format_get__spacing(WUITE_ITextCharacterFormat *self, float *value);
 
-/* Windows.UI.Text.ITextCharacterFormat.put_Spacing() */
 HRESULT wuite_text_character_format_put__spacing(WUITE_ITextCharacterFormat *self, float value);
 
-/* Windows.UI.Text.ITextCharacterFormat.get_Strikethrough() */
 HRESULT wuite_text_character_format_get__strikethrough(WUITE_ITextCharacterFormat *self, WUITE_FormatEffect *value);
 
-/* Windows.UI.Text.ITextCharacterFormat.put_Strikethrough() */
 HRESULT wuite_text_character_format_put__strikethrough(WUITE_ITextCharacterFormat *self, WUITE_FormatEffect value);
 
-/* Windows.UI.Text.ITextCharacterFormat.get_Subscript() */
 HRESULT wuite_text_character_format_get__subscript(WUITE_ITextCharacterFormat *self, WUITE_FormatEffect *value);
 
-/* Windows.UI.Text.ITextCharacterFormat.put_Subscript() */
 HRESULT wuite_text_character_format_put__subscript(WUITE_ITextCharacterFormat *self, WUITE_FormatEffect value);
 
-/* Windows.UI.Text.ITextCharacterFormat.get_Superscript() */
 HRESULT wuite_text_character_format_get__superscript(WUITE_ITextCharacterFormat *self, WUITE_FormatEffect *value);
 
-/* Windows.UI.Text.ITextCharacterFormat.put_Superscript() */
 HRESULT wuite_text_character_format_put__superscript(WUITE_ITextCharacterFormat *self, WUITE_FormatEffect value);
 
-/* Windows.UI.Text.ITextCharacterFormat.get_TextScript() */
 HRESULT wuite_text_character_format_get__text_script(WUITE_ITextCharacterFormat *self, WUITE_TextScript *value);
 
-/* Windows.UI.Text.ITextCharacterFormat.put_TextScript() */
 HRESULT wuite_text_character_format_put__text_script(WUITE_ITextCharacterFormat *self, WUITE_TextScript value);
 
-/* Windows.UI.Text.ITextCharacterFormat.get_Underline() */
 HRESULT wuite_text_character_format_get__underline(WUITE_ITextCharacterFormat *self, WUITE_UnderlineType *value);
 
-/* Windows.UI.Text.ITextCharacterFormat.put_Underline() */
 HRESULT wuite_text_character_format_put__underline(WUITE_ITextCharacterFormat *self, WUITE_UnderlineType value);
 
-/* Windows.UI.Text.ITextCharacterFormat.get_Weight() */
 HRESULT wuite_text_character_format_get__weight(WUITE_ITextCharacterFormat *self, int32_t *value);
 
-/* Windows.UI.Text.ITextCharacterFormat.put_Weight() */
 HRESULT wuite_text_character_format_put__weight(WUITE_ITextCharacterFormat *self, int32_t value);
 
-/* Windows.UI.Text.ITextCharacterFormat.SetClone() */
 HRESULT wuite_text_character_format_set_clone(WUITE_ITextCharacterFormat *self, WUITE_ITextCharacterFormat* value);
 
-/* Windows.UI.Text.ITextCharacterFormat.GetClone() */
 HRESULT wuite_text_character_format_get_clone(WUITE_ITextCharacterFormat *self, WUITE_ITextCharacterFormat** out);
 
-/* Windows.UI.Text.ITextCharacterFormat.IsEqual(format) */
 HRESULT wuite_text_character_format_is_equal(WUITE_ITextCharacterFormat *self, WUITE_ITextCharacterFormat* format, BOOL *out);
 
-/* Windows.UI.Text.IFontWeightsStatics */
-/* Windows.UI.Text.IFontWeightsStatics.get_Black() */
 HRESULT wuite_font_weights_statics_get__black(WUITE_IFontWeightsStatics *self, WUITE_FontWeight *value);
 
-/* Windows.UI.Text.IFontWeightsStatics.get_Bold() */
 HRESULT wuite_font_weights_statics_get__bold(WUITE_IFontWeightsStatics *self, WUITE_FontWeight *value);
 
-/* Windows.UI.Text.IFontWeightsStatics.get_ExtraBlack() */
 HRESULT wuite_font_weights_statics_get__extra_black(WUITE_IFontWeightsStatics *self, WUITE_FontWeight *value);
 
-/* Windows.UI.Text.IFontWeightsStatics.get_ExtraBold() */
 HRESULT wuite_font_weights_statics_get__extra_bold(WUITE_IFontWeightsStatics *self, WUITE_FontWeight *value);
 
-/* Windows.UI.Text.IFontWeightsStatics.get_ExtraLight() */
 HRESULT wuite_font_weights_statics_get__extra_light(WUITE_IFontWeightsStatics *self, WUITE_FontWeight *value);
 
-/* Windows.UI.Text.IFontWeightsStatics.get_Light() */
 HRESULT wuite_font_weights_statics_get__light(WUITE_IFontWeightsStatics *self, WUITE_FontWeight *value);
 
-/* Windows.UI.Text.IFontWeightsStatics.get_Medium() */
 HRESULT wuite_font_weights_statics_get__medium(WUITE_IFontWeightsStatics *self, WUITE_FontWeight *value);
 
-/* Windows.UI.Text.IFontWeightsStatics.get_Normal() */
 HRESULT wuite_font_weights_statics_get__normal(WUITE_IFontWeightsStatics *self, WUITE_FontWeight *value);
 
-/* Windows.UI.Text.IFontWeightsStatics.get_SemiBold() */
 HRESULT wuite_font_weights_statics_get__semi_bold(WUITE_IFontWeightsStatics *self, WUITE_FontWeight *value);
 
-/* Windows.UI.Text.IFontWeightsStatics.get_SemiLight() */
 HRESULT wuite_font_weights_statics_get__semi_light(WUITE_IFontWeightsStatics *self, WUITE_FontWeight *value);
 
-/* Windows.UI.Text.IFontWeightsStatics.get_Thin() */
 HRESULT wuite_font_weights_statics_get__thin(WUITE_IFontWeightsStatics *self, WUITE_FontWeight *value);
 
-/* activate Windows.UI.Text.FontWeights */
 HRESULT wuite_font_weights_new(WUITE_FontWeights **out);
 
-/* Windows.UI.Text.FontWeights */
-/* Windows.UI.Text.FontWeights.get_Black() */
 HRESULT wuite_font_weights_get__black(WUITE_FontWeight *value);
 
-/* Windows.UI.Text.FontWeights.get_Bold() */
 HRESULT wuite_font_weights_get__bold(WUITE_FontWeight *value);
 
-/* Windows.UI.Text.FontWeights.get_ExtraBlack() */
 HRESULT wuite_font_weights_get__extra_black(WUITE_FontWeight *value);
 
-/* Windows.UI.Text.FontWeights.get_ExtraBold() */
 HRESULT wuite_font_weights_get__extra_bold(WUITE_FontWeight *value);
 
-/* Windows.UI.Text.FontWeights.get_ExtraLight() */
 HRESULT wuite_font_weights_get__extra_light(WUITE_FontWeight *value);
 
-/* Windows.UI.Text.FontWeights.get_Light() */
 HRESULT wuite_font_weights_get__light(WUITE_FontWeight *value);
 
-/* Windows.UI.Text.FontWeights.get_Medium() */
 HRESULT wuite_font_weights_get__medium(WUITE_FontWeight *value);
 
-/* Windows.UI.Text.FontWeights.get_Normal() */
 HRESULT wuite_font_weights_get__normal(WUITE_FontWeight *value);
 
-/* Windows.UI.Text.FontWeights.get_SemiBold() */
 HRESULT wuite_font_weights_get__semi_bold(WUITE_FontWeight *value);
 
-/* Windows.UI.Text.FontWeights.get_SemiLight() */
 HRESULT wuite_font_weights_get__semi_light(WUITE_FontWeight *value);
 
-/* Windows.UI.Text.FontWeights.get_Thin() */
 HRESULT wuite_font_weights_get__thin(WUITE_FontWeight *value);
 
-/* Windows.UI.Text.IContentLinkInfo */
-/* Windows.UI.Text.IRichEditTextRange */
-/* Windows.UI.Text.ITextDocument2 */
-/* Windows.UI.Text.ITextDocument2.get_AlignmentIncludesTrailingWhitespace() */
 HRESULT wuite_text_document_2_get__alignment_includes_trailing_whitespace(WUITE_ITextDocument_2 *self, BOOL *value);
 
-/* Windows.UI.Text.ITextDocument2.put_AlignmentIncludesTrailingWhitespace() */
 HRESULT wuite_text_document_2_put__alignment_includes_trailing_whitespace(WUITE_ITextDocument_2 *self, BOOL value);
 
-/* Windows.UI.Text.ITextDocument2.get_IgnoreTrailingCharacterSpacing() */
 HRESULT wuite_text_document_2_get__ignore_trailing_character_spacing(WUITE_ITextDocument_2 *self, BOOL *value);
 
-/* Windows.UI.Text.ITextDocument2.put_IgnoreTrailingCharacterSpacing() */
 HRESULT wuite_text_document_2_put__ignore_trailing_character_spacing(WUITE_ITextDocument_2 *self, BOOL value);
 
-/* Windows.UI.Text.ITextDocument3 */
-/* Windows.UI.Text.ITextDocument3.ClearUndoRedoHistory() */
 HRESULT wuite_text_document_3_clear_undo_redo_history(WUITE_ITextDocument_3 *self);
 
-/* Windows.UI.Text.ITextDocument4 */
-/* Windows.UI.Text.ITextDocument4.SetMath() */
 HRESULT wuite_text_document_4_set_math(WUITE_ITextDocument_4 *self, cwinrt_hstring value);
 
-/* Windows.UI.Text.ITextDocument4.GetMath() */
 HRESULT wuite_text_document_4_get_math(WUITE_ITextDocument_4 *self, cwinrt_hstring value);
 
-/* Windows.UI.Text.ITextDocument4.SetMathMode(mode) */
 HRESULT wuite_text_document_4_set_math_mode(WUITE_ITextDocument_4 *self, WUITE_RichEditMathMode mode);
 
-/* Windows.UI.Text.ITextDocument */
-/* Windows.UI.Text.ITextDocument.get_CaretType() */
 HRESULT wuite_text_document_get__caret_type(WUITE_ITextDocument *self, WUITE_CaretType *value);
 
-/* Windows.UI.Text.ITextDocument.put_CaretType() */
 HRESULT wuite_text_document_put__caret_type(WUITE_ITextDocument *self, WUITE_CaretType value);
 
-/* Windows.UI.Text.ITextDocument.get_DefaultTabStop() */
 HRESULT wuite_text_document_get__default_tab_stop(WUITE_ITextDocument *self, float *value);
 
-/* Windows.UI.Text.ITextDocument.put_DefaultTabStop() */
 HRESULT wuite_text_document_put__default_tab_stop(WUITE_ITextDocument *self, float value);
 
-/* Windows.UI.Text.ITextDocument.get_Selection() */
 HRESULT wuite_text_document_get__selection(WUITE_ITextDocument *self, WUITE_ITextSelection** value);
 
-/* Windows.UI.Text.ITextDocument.get_UndoLimit() */
 HRESULT wuite_text_document_get__undo_limit(WUITE_ITextDocument *self, uint32_t *value);
 
-/* Windows.UI.Text.ITextDocument.put_UndoLimit() */
 HRESULT wuite_text_document_put__undo_limit(WUITE_ITextDocument *self, uint32_t value);
 
-/* Windows.UI.Text.ITextDocument.CanCopy() */
 HRESULT wuite_text_document_can_copy(WUITE_ITextDocument *self, BOOL *out);
 
-/* Windows.UI.Text.ITextDocument.CanPaste() */
 HRESULT wuite_text_document_can_paste(WUITE_ITextDocument *self, BOOL *out);
 
-/* Windows.UI.Text.ITextDocument.CanRedo() */
 HRESULT wuite_text_document_can_redo(WUITE_ITextDocument *self, BOOL *out);
 
-/* Windows.UI.Text.ITextDocument.CanUndo() */
 HRESULT wuite_text_document_can_undo(WUITE_ITextDocument *self, BOOL *out);
 
-/* Windows.UI.Text.ITextDocument.ApplyDisplayUpdates() */
 HRESULT wuite_text_document_apply_display_updates(WUITE_ITextDocument *self, int32_t *out);
 
-/* Windows.UI.Text.ITextDocument.BatchDisplayUpdates() */
 HRESULT wuite_text_document_batch_display_updates(WUITE_ITextDocument *self, int32_t *out);
 
-/* Windows.UI.Text.ITextDocument.BeginUndoGroup() */
 HRESULT wuite_text_document_begin_undo_group(WUITE_ITextDocument *self);
 
-/* Windows.UI.Text.ITextDocument.EndUndoGroup() */
 HRESULT wuite_text_document_end_undo_group(WUITE_ITextDocument *self);
 
-/* Windows.UI.Text.ITextDocument.GetDefaultCharacterFormat() */
 HRESULT wuite_text_document_get_default_character_format(WUITE_ITextDocument *self, WUITE_ITextCharacterFormat** out);
 
-/* Windows.UI.Text.ITextDocument.GetDefaultParagraphFormat() */
 HRESULT wuite_text_document_get_default_paragraph_format(WUITE_ITextDocument *self, WUITE_ITextParagraphFormat** out);
 
-/* Windows.UI.Text.ITextDocument.GetRange(startPosition, endPosition) */
 HRESULT wuite_text_document_get_range(WUITE_ITextDocument *self, int32_t startPosition, int32_t endPosition, WUITE_ITextRange** out);
 
-/* Windows.UI.Text.ITextDocument.GetRangeFromPoint(point, options) */
 HRESULT wuite_text_document_get_range_from_point(WUITE_ITextDocument *self, WF_Point point, WUITE_PointOptions options, WUITE_ITextRange** out);
 
-/* Windows.UI.Text.ITextDocument.GetText(options) */
 HRESULT wuite_text_document_get_text(WUITE_ITextDocument *self, WUITE_TextGetOptions options, cwinrt_hstring value);
 
-/* Windows.UI.Text.ITextDocument.LoadFromStream(options) */
 HRESULT wuite_text_document_load_from_stream(WUITE_ITextDocument *self, WUITE_TextSetOptions options, WSTST_IRandomAccessStream* value);
 
-/* Windows.UI.Text.ITextDocument.Redo() */
 HRESULT wuite_text_document_redo(WUITE_ITextDocument *self);
 
-/* Windows.UI.Text.ITextDocument.SaveToStream(options) */
 HRESULT wuite_text_document_save_to_stream(WUITE_ITextDocument *self, WUITE_TextGetOptions options, WSTST_IRandomAccessStream* value);
 
-/* Windows.UI.Text.ITextDocument.SetDefaultCharacterFormat() */
 HRESULT wuite_text_document_set_default_character_format(WUITE_ITextDocument *self, WUITE_ITextCharacterFormat* value);
 
-/* Windows.UI.Text.ITextDocument.SetDefaultParagraphFormat() */
 HRESULT wuite_text_document_set_default_paragraph_format(WUITE_ITextDocument *self, WUITE_ITextParagraphFormat* value);
 
-/* Windows.UI.Text.ITextDocument.SetText(options) */
 HRESULT wuite_text_document_set_text(WUITE_ITextDocument *self, WUITE_TextSetOptions options, cwinrt_hstring value);
 
-/* Windows.UI.Text.ITextDocument.Undo() */
 HRESULT wuite_text_document_undo(WUITE_ITextDocument *self);
 
-/* Windows.UI.Text.ITextRange */
-/* Windows.UI.Text.ITextRange.get_Character() */
 HRESULT wuite_text_range_get__character(WUITE_ITextRange *self, WCHAR *value);
 
-/* Windows.UI.Text.ITextRange.put_Character() */
 HRESULT wuite_text_range_put__character(WUITE_ITextRange *self, WCHAR value);
 
-/* Windows.UI.Text.ITextRange.get_CharacterFormat() */
 HRESULT wuite_text_range_get__character_format(WUITE_ITextRange *self, WUITE_ITextCharacterFormat** value);
 
-/* Windows.UI.Text.ITextRange.put_CharacterFormat() */
 HRESULT wuite_text_range_put__character_format(WUITE_ITextRange *self, WUITE_ITextCharacterFormat* value);
 
-/* Windows.UI.Text.ITextRange.get_FormattedText() */
 HRESULT wuite_text_range_get__formatted_text(WUITE_ITextRange *self, WUITE_ITextRange** value);
 
-/* Windows.UI.Text.ITextRange.put_FormattedText() */
 HRESULT wuite_text_range_put__formatted_text(WUITE_ITextRange *self, WUITE_ITextRange* value);
 
-/* Windows.UI.Text.ITextRange.get_EndPosition() */
 HRESULT wuite_text_range_get__end_position(WUITE_ITextRange *self, int32_t *value);
 
-/* Windows.UI.Text.ITextRange.put_EndPosition() */
 HRESULT wuite_text_range_put__end_position(WUITE_ITextRange *self, int32_t value);
 
-/* Windows.UI.Text.ITextRange.get_Gravity() */
 HRESULT wuite_text_range_get__gravity(WUITE_ITextRange *self, WUITE_RangeGravity *value);
 
-/* Windows.UI.Text.ITextRange.put_Gravity() */
 HRESULT wuite_text_range_put__gravity(WUITE_ITextRange *self, WUITE_RangeGravity value);
 
-/* Windows.UI.Text.ITextRange.get_Length() */
 HRESULT wuite_text_range_get__length(WUITE_ITextRange *self, int32_t *value);
 
-/* Windows.UI.Text.ITextRange.get_Link() */
 HRESULT wuite_text_range_get__link(WUITE_ITextRange *self, cwinrt_hstring *value);
 
-/* Windows.UI.Text.ITextRange.put_Link() */
 HRESULT wuite_text_range_put__link(WUITE_ITextRange *self, cwinrt_hstring value);
 
-/* Windows.UI.Text.ITextRange.get_ParagraphFormat() */
 HRESULT wuite_text_range_get__paragraph_format(WUITE_ITextRange *self, WUITE_ITextParagraphFormat** value);
 
-/* Windows.UI.Text.ITextRange.put_ParagraphFormat() */
 HRESULT wuite_text_range_put__paragraph_format(WUITE_ITextRange *self, WUITE_ITextParagraphFormat* value);
 
-/* Windows.UI.Text.ITextRange.get_StartPosition() */
 HRESULT wuite_text_range_get__start_position(WUITE_ITextRange *self, int32_t *value);
 
-/* Windows.UI.Text.ITextRange.put_StartPosition() */
 HRESULT wuite_text_range_put__start_position(WUITE_ITextRange *self, int32_t value);
 
-/* Windows.UI.Text.ITextRange.get_StoryLength() */
 HRESULT wuite_text_range_get__story_length(WUITE_ITextRange *self, int32_t *value);
 
-/* Windows.UI.Text.ITextRange.get_Text() */
 HRESULT wuite_text_range_get__text(WUITE_ITextRange *self, cwinrt_hstring *value);
 
-/* Windows.UI.Text.ITextRange.put_Text() */
 HRESULT wuite_text_range_put__text(WUITE_ITextRange *self, cwinrt_hstring value);
 
-/* Windows.UI.Text.ITextRange.CanPaste(format) */
 HRESULT wuite_text_range_can_paste(WUITE_ITextRange *self, int32_t format, BOOL *out);
 
-/* Windows.UI.Text.ITextRange.ChangeCase() */
 HRESULT wuite_text_range_change_case(WUITE_ITextRange *self, WUITE_LetterCase value);
 
-/* Windows.UI.Text.ITextRange.Collapse() */
 HRESULT wuite_text_range_collapse(WUITE_ITextRange *self, BOOL value);
 
-/* Windows.UI.Text.ITextRange.Copy() */
 HRESULT wuite_text_range_copy(WUITE_ITextRange *self);
 
-/* Windows.UI.Text.ITextRange.Cut() */
 HRESULT wuite_text_range_cut(WUITE_ITextRange *self);
 
-/* Windows.UI.Text.ITextRange.Delete(unit, count) */
 HRESULT wuite_text_range_delete(WUITE_ITextRange *self, WUITE_TextRangeUnit unit, int32_t count, int32_t *out);
 
-/* Windows.UI.Text.ITextRange.EndOf(unit, extend) */
 HRESULT wuite_text_range_end_of(WUITE_ITextRange *self, WUITE_TextRangeUnit unit, BOOL extend, int32_t *out);
 
-/* Windows.UI.Text.ITextRange.Expand(unit) */
 HRESULT wuite_text_range_expand(WUITE_ITextRange *self, WUITE_TextRangeUnit unit, int32_t *out);
 
-/* Windows.UI.Text.ITextRange.FindText(scanLength, options) */
 HRESULT wuite_text_range_find_text(WUITE_ITextRange *self, cwinrt_hstring value, int32_t scanLength, WUITE_FindOptions options, int32_t *out);
 
-/* Windows.UI.Text.ITextRange.GetCharacterUtf32(offset) */
 HRESULT wuite_text_range_get_character_utf32(WUITE_ITextRange *self, uint32_t value, int32_t offset);
 
-/* Windows.UI.Text.ITextRange.GetClone() */
 HRESULT wuite_text_range_get_clone(WUITE_ITextRange *self, WUITE_ITextRange** out);
 
-/* Windows.UI.Text.ITextRange.GetIndex(unit) */
 HRESULT wuite_text_range_get_index(WUITE_ITextRange *self, WUITE_TextRangeUnit unit, int32_t *out);
 
-/* Windows.UI.Text.ITextRange.GetPoint(horizontalAlign, verticalAlign, options, point) */
 HRESULT wuite_text_range_get_point(WUITE_ITextRange *self, WUITE_HorizontalCharacterAlignment horizontalAlign, WUITE_VerticalCharacterAlignment verticalAlign, WUITE_PointOptions options, WF_Point point);
 
-/* Windows.UI.Text.ITextRange.GetRect(options, rect, hit) */
 HRESULT wuite_text_range_get_rect(WUITE_ITextRange *self, WUITE_PointOptions options, WF_Rect rect, int32_t hit);
 
-/* Windows.UI.Text.ITextRange.GetText(options) */
 HRESULT wuite_text_range_get_text(WUITE_ITextRange *self, WUITE_TextGetOptions options, cwinrt_hstring value);
 
-/* Windows.UI.Text.ITextRange.GetTextViaStream(options) */
 HRESULT wuite_text_range_get_text_via_stream(WUITE_ITextRange *self, WUITE_TextGetOptions options, WSTST_IRandomAccessStream* value);
 
-/* Windows.UI.Text.ITextRange.InRange(range) */
 HRESULT wuite_text_range_in_range(WUITE_ITextRange *self, WUITE_ITextRange* range, BOOL *out);
 
-/* Windows.UI.Text.ITextRange.InsertImage(width, height, ascent, verticalAlign, alternateText) */
 HRESULT wuite_text_range_insert_image(WUITE_ITextRange *self, int32_t width, int32_t height, int32_t ascent, WUITE_VerticalCharacterAlignment verticalAlign, cwinrt_hstring alternateText, WSTST_IRandomAccessStream* value);
 
-/* Windows.UI.Text.ITextRange.InStory(range) */
 HRESULT wuite_text_range_in_story(WUITE_ITextRange *self, WUITE_ITextRange* range, BOOL *out);
 
-/* Windows.UI.Text.ITextRange.IsEqual(range) */
 HRESULT wuite_text_range_is_equal(WUITE_ITextRange *self, WUITE_ITextRange* range, BOOL *out);
 
-/* Windows.UI.Text.ITextRange.Move(unit, count) */
 HRESULT wuite_text_range_move(WUITE_ITextRange *self, WUITE_TextRangeUnit unit, int32_t count, int32_t *out);
 
-/* Windows.UI.Text.ITextRange.MoveEnd(unit, count) */
 HRESULT wuite_text_range_move_end(WUITE_ITextRange *self, WUITE_TextRangeUnit unit, int32_t count, int32_t *out);
 
-/* Windows.UI.Text.ITextRange.MoveStart(unit, count) */
 HRESULT wuite_text_range_move_start(WUITE_ITextRange *self, WUITE_TextRangeUnit unit, int32_t count, int32_t *out);
 
-/* Windows.UI.Text.ITextRange.Paste(format) */
 HRESULT wuite_text_range_paste(WUITE_ITextRange *self, int32_t format);
 
-/* Windows.UI.Text.ITextRange.ScrollIntoView() */
 HRESULT wuite_text_range_scroll_into_view(WUITE_ITextRange *self, WUITE_PointOptions value);
 
-/* Windows.UI.Text.ITextRange.MatchSelection() */
 HRESULT wuite_text_range_match_selection(WUITE_ITextRange *self);
 
-/* Windows.UI.Text.ITextRange.SetIndex(unit, index, extend) */
 HRESULT wuite_text_range_set_index(WUITE_ITextRange *self, WUITE_TextRangeUnit unit, int32_t index, BOOL extend);
 
-/* Windows.UI.Text.ITextRange.SetPoint(point, options, extend) */
 HRESULT wuite_text_range_set_point(WUITE_ITextRange *self, WF_Point point, WUITE_PointOptions options, BOOL extend);
 
-/* Windows.UI.Text.ITextRange.SetRange(startPosition, endPosition) */
 HRESULT wuite_text_range_set_range(WUITE_ITextRange *self, int32_t startPosition, int32_t endPosition);
 
-/* Windows.UI.Text.ITextRange.SetText(options) */
 HRESULT wuite_text_range_set_text(WUITE_ITextRange *self, WUITE_TextSetOptions options, cwinrt_hstring value);
 
-/* Windows.UI.Text.ITextRange.SetTextViaStream(options) */
 HRESULT wuite_text_range_set_text_via_stream(WUITE_ITextRange *self, WUITE_TextSetOptions options, WSTST_IRandomAccessStream* value);
 
-/* Windows.UI.Text.ITextRange.StartOf(unit, extend) */
 HRESULT wuite_text_range_start_of(WUITE_ITextRange *self, WUITE_TextRangeUnit unit, BOOL extend, int32_t *out);
 
 #endif /* CWINRT_WINDOWS_UI_TEXT_H */

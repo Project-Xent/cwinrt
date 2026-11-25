@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
@@ -38,7 +37,6 @@ typedef struct WUIXA_UIElement WUIXA_UIElement;
 typedef struct WSECR_WebAccount WSECR_WebAccount;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPSTPR_IStorePreview WAPSTPR_IStorePreview;
 typedef struct WAPSTPR_IStoreConfigurationStatics_5 WAPSTPR_IStoreConfigurationStatics_5;
 typedef struct WAPSTPR_IWebAuthenticationCoreManagerHelper WAPSTPR_IWebAuthenticationCoreManagerHelper;
@@ -61,7 +59,6 @@ typedef struct WAPSTPR_IStorePreviewPurchaseResults WAPSTPR_IStorePreviewPurchas
 typedef struct WAPSTPR_IStorePreviewProductInfo WAPSTPR_IStorePreviewProductInfo;
 typedef struct WAPSTPR_IStoreHardwareManufacturerInfo WAPSTPR_IStoreHardwareManufacturerInfo;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WAPSTPR_StorePreviewPurchaseResults
 #define CWINRT_FWD_WF_IAsyncOperation_WAPSTPR_StorePreviewPurchaseResults
 typedef struct WF_IAsyncOperation_WAPSTPR_StorePreviewPurchaseResults WF_IAsyncOperation_WAPSTPR_StorePreviewPurchaseResults;
@@ -190,7 +187,6 @@ typedef enum WAPSTPR_StoreLogOptions {
 } WAPSTPR_StoreLogOptions;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -247,300 +243,186 @@ static const IID CWINRT_IID_WAPSTPR_IStorePreviewProductInfo CWINRT_MAYBE_UNUSED
 static const IID CWINRT_IID_WAPSTPR_IStoreHardwareManufacturerInfo CWINRT_MAYBE_UNUSED = { 0xF292DC08, 0xC654, 0x43AC, { 0xA2, 0x1F, 0x34, 0x80, 0x1C, 0x9D, 0x33, 0x88 } };
 #endif
 
-/* Methods */
-
-/* Windows.ApplicationModel.Store.Preview.IStorePreview */
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics5 */
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics5.IsPinToDesktopSupported() */
 HRESULT wapstpr_store_configuration_statics_5_is_pin_to_desktop_supported(WAPSTPR_IStoreConfigurationStatics_5 *self, BOOL *out);
 
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics5.IsPinToTaskbarSupported() */
 HRESULT wapstpr_store_configuration_statics_5_is_pin_to_taskbar_supported(WAPSTPR_IStoreConfigurationStatics_5 *self, BOOL *out);
 
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics5.IsPinToStartSupported() */
 HRESULT wapstpr_store_configuration_statics_5_is_pin_to_start_supported(WAPSTPR_IStoreConfigurationStatics_5 *self, BOOL *out);
 
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics5.PinToDesktop(appPackageFamilyName) */
 HRESULT wapstpr_store_configuration_statics_5_pin_to_desktop(WAPSTPR_IStoreConfigurationStatics_5 *self, cwinrt_hstring appPackageFamilyName);
 
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics5.PinToDesktopForUser(user, appPackageFamilyName) */
 HRESULT wapstpr_store_configuration_statics_5_pin_to_desktop_for_user(WAPSTPR_IStoreConfigurationStatics_5 *self, WSY_User* user, cwinrt_hstring appPackageFamilyName);
 
-/* Windows.ApplicationModel.Store.Preview.IWebAuthenticationCoreManagerHelper */
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4 */
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4.GetStoreWebAccountId() */
 HRESULT wapstpr_store_configuration_statics_4_get_store_web_account_id(WAPSTPR_IStoreConfigurationStatics_4 *self, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4.GetStoreWebAccountIdForUser(user) */
 HRESULT wapstpr_store_configuration_statics_4_get_store_web_account_id_for_user(WAPSTPR_IStoreConfigurationStatics_4 *self, WSY_User* user, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4.SetEnterpriseStoreWebAccountId(webAccountId) */
 HRESULT wapstpr_store_configuration_statics_4_set_enterprise_store_web_account_id(WAPSTPR_IStoreConfigurationStatics_4 *self, cwinrt_hstring webAccountId);
 
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4.SetEnterpriseStoreWebAccountIdForUser(user, webAccountId) */
 HRESULT wapstpr_store_configuration_statics_4_set_enterprise_store_web_account_id_for_user(WAPSTPR_IStoreConfigurationStatics_4 *self, WSY_User* user, cwinrt_hstring webAccountId);
 
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4.GetEnterpriseStoreWebAccountId() */
 HRESULT wapstpr_store_configuration_statics_4_get_enterprise_store_web_account_id(WAPSTPR_IStoreConfigurationStatics_4 *self, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4.GetEnterpriseStoreWebAccountIdForUser(user) */
 HRESULT wapstpr_store_configuration_statics_4_get_enterprise_store_web_account_id_for_user(WAPSTPR_IStoreConfigurationStatics_4 *self, WSY_User* user, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4.ShouldRestrictToEnterpriseStoreOnly() */
 HRESULT wapstpr_store_configuration_statics_4_should_restrict_to_enterprise_store_only(WAPSTPR_IStoreConfigurationStatics_4 *self, BOOL *out);
 
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4.ShouldRestrictToEnterpriseStoreOnlyForUser(user) */
 HRESULT wapstpr_store_configuration_statics_4_should_restrict_to_enterprise_store_only_for_user(WAPSTPR_IStoreConfigurationStatics_4 *self, WSY_User* user, BOOL *out);
 
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3 */
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3.HasStoreWebAccount() */
 HRESULT wapstpr_store_configuration_statics_3_has_store_web_account(WAPSTPR_IStoreConfigurationStatics_3 *self, BOOL *out);
 
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3.HasStoreWebAccountForUser(user) */
 HRESULT wapstpr_store_configuration_statics_3_has_store_web_account_for_user(WAPSTPR_IStoreConfigurationStatics_3 *self, WSY_User* user, BOOL *out);
 
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3.GetStoreLogDataAsync(options) */
 HRESULT wapstpr_store_configuration_statics_3_get_store_log_data_async(WAPSTPR_IStoreConfigurationStatics_3 *self, WAPSTPR_StoreLogOptions options, WF_IAsyncOperation_WSTST_IRandomAccessStreamReference** out);
 
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3.SetStoreWebAccountIdForUser(user, webAccountId) */
 HRESULT wapstpr_store_configuration_statics_3_set_store_web_account_id_for_user(WAPSTPR_IStoreConfigurationStatics_3 *self, WSY_User* user, cwinrt_hstring webAccountId);
 
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3.IsStoreWebAccountIdForUser(user, webAccountId) */
 HRESULT wapstpr_store_configuration_statics_3_is_store_web_account_id_for_user(WAPSTPR_IStoreConfigurationStatics_3 *self, WSY_User* user, cwinrt_hstring webAccountId, BOOL *out);
 
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3.GetPurchasePromptingPolicyForUser(user) */
 HRESULT wapstpr_store_configuration_statics_3_get_purchase_prompting_policy_for_user(WAPSTPR_IStoreConfigurationStatics_3 *self, WSY_User* user, uint32_t** out);
 
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3.SetPurchasePromptingPolicyForUser(user) */
 HRESULT wapstpr_store_configuration_statics_3_set_purchase_prompting_policy_for_user(WAPSTPR_IStoreConfigurationStatics_3 *self, WSY_User* user, uint32_t* value);
 
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics2 */
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics2.get_PurchasePromptingPolicy() */
 HRESULT wapstpr_store_configuration_statics_2_get__purchase_prompting_policy(WAPSTPR_IStoreConfigurationStatics_2 *self, uint32_t** value);
 
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics2.put_PurchasePromptingPolicy() */
 HRESULT wapstpr_store_configuration_statics_2_put__purchase_prompting_policy(WAPSTPR_IStoreConfigurationStatics_2 *self, uint32_t* value);
 
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics */
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics.SetSystemConfiguration(catalogHardwareManufacturerId, catalogStoreContentModifierId, systemConfigurationExpiration, catalogHardwareDescriptor) */
 HRESULT wapstpr_store_configuration_statics_set_system_configuration(WAPSTPR_IStoreConfigurationStatics *self, cwinrt_hstring catalogHardwareManufacturerId, cwinrt_hstring catalogStoreContentModifierId, WF_DateTime systemConfigurationExpiration, cwinrt_hstring catalogHardwareDescriptor);
 
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics.SetMobileOperatorConfiguration(mobileOperatorId, appDownloadLimitInMegabytes, updateDownloadLimitInMegabytes) */
 HRESULT wapstpr_store_configuration_statics_set_mobile_operator_configuration(WAPSTPR_IStoreConfigurationStatics *self, cwinrt_hstring mobileOperatorId, uint32_t appDownloadLimitInMegabytes, uint32_t updateDownloadLimitInMegabytes);
 
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics.SetStoreWebAccountId(webAccountId) */
 HRESULT wapstpr_store_configuration_statics_set_store_web_account_id(WAPSTPR_IStoreConfigurationStatics *self, cwinrt_hstring webAccountId);
 
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics.IsStoreWebAccountId(webAccountId) */
 HRESULT wapstpr_store_configuration_statics_is_store_web_account_id(WAPSTPR_IStoreConfigurationStatics *self, cwinrt_hstring webAccountId, BOOL *out);
 
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics.get_HardwareManufacturerInfo() */
 HRESULT wapstpr_store_configuration_statics_get__hardware_manufacturer_info(WAPSTPR_IStoreConfigurationStatics *self, WAPSTPR_StoreHardwareManufacturerInfo** value);
 
-/* Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics.FilterUnsupportedSystemFeaturesAsync(systemFeatures) */
 HRESULT wapstpr_store_configuration_statics_filter_unsupported_system_features_async(WAPSTPR_IStoreConfigurationStatics *self, WFOCO_IIterable_WAPSTPR_StoreSystemFeature* systemFeatures, WF_IAsyncOperation_WFOCO_IVectorView_WAPSTPR_StoreSystemFeature** out);
 
-/* Windows.ApplicationModel.Store.Preview.IDeliveryOptimizationSettingsStatics */
-/* Windows.ApplicationModel.Store.Preview.IDeliveryOptimizationSettingsStatics.GetCurrentSettings() */
 HRESULT wapstpr_delivery_optimization_settings_statics_get_current_settings(WAPSTPR_IDeliveryOptimizationSettingsStatics *self, WAPSTPR_DeliveryOptimizationSettings** out);
 
-/* activate Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings */
 HRESULT wapstpr_delivery_optimization_settings_new(WAPSTPR_DeliveryOptimizationSettings **out);
 
-/* Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings */
-/* Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings.get_DownloadMode() */
 HRESULT wapstpr_delivery_optimization_settings_get__download_mode(WAPSTPR_DeliveryOptimizationSettings *self, WAPSTPR_DeliveryOptimizationDownloadMode *value);
 
-/* Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings.get_DownloadModeSource() */
 HRESULT wapstpr_delivery_optimization_settings_get__download_mode_source(WAPSTPR_DeliveryOptimizationSettings *self, WAPSTPR_DeliveryOptimizationDownloadModeSource *value);
 
-/* Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings.GetCurrentSettings() */
 HRESULT wapstpr_delivery_optimization_settings_get_current_settings(WAPSTPR_DeliveryOptimizationSettings** out);
 
-/* activate Windows.ApplicationModel.Store.Preview.WebAuthenticationCoreManagerHelper */
 HRESULT wapstpr_web_authentication_core_manager_helper_new(WAPSTPR_WebAuthenticationCoreManagerHelper **out);
 
-/* Windows.ApplicationModel.Store.Preview.WebAuthenticationCoreManagerHelper */
-/* Windows.ApplicationModel.Store.Preview.WebAuthenticationCoreManagerHelper.RequestTokenWithUIElementHostingAsync(request, uiElement) */
 HRESULT wapstpr_web_authentication_core_manager_helper_request_token_with_u_i_element_hosting_async(WSEAUWECO_WebTokenRequest* request, WUIXA_UIElement* uiElement, WF_IAsyncOperation_WSEAUWECO_WebTokenRequestResult** out);
 
-/* Windows.ApplicationModel.Store.Preview.WebAuthenticationCoreManagerHelper.RequestTokenWithUIElementHostingAsync(request, webAccount, uiElement) */
 HRESULT wapstpr_web_authentication_core_manager_helper_request_token_with_u_i_element_hosting_async_p_p_p_p(WSEAUWECO_WebTokenRequest* request, WSECR_WebAccount* webAccount, WUIXA_UIElement* uiElement, WF_IAsyncOperation_WSEAUWECO_WebTokenRequestResult** out);
 
-/* activate Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo */
 HRESULT wapstpr_store_preview_sku_info_new(WAPSTPR_StorePreviewSkuInfo **out);
 
-/* Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo */
-/* Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo.get_ProductId() */
 HRESULT wapstpr_store_preview_sku_info_get__product_id(WAPSTPR_StorePreviewSkuInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo.get_SkuId() */
 HRESULT wapstpr_store_preview_sku_info_get__sku_id(WAPSTPR_StorePreviewSkuInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo.get_SkuType() */
 HRESULT wapstpr_store_preview_sku_info_get__sku_type(WAPSTPR_StorePreviewSkuInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo.get_Title() */
 HRESULT wapstpr_store_preview_sku_info_get__title(WAPSTPR_StorePreviewSkuInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo.get_Description() */
 HRESULT wapstpr_store_preview_sku_info_get__description(WAPSTPR_StorePreviewSkuInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo.get_CustomDeveloperData() */
 HRESULT wapstpr_store_preview_sku_info_get__custom_developer_data(WAPSTPR_StorePreviewSkuInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo.get_CurrencyCode() */
 HRESULT wapstpr_store_preview_sku_info_get__currency_code(WAPSTPR_StorePreviewSkuInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo.get_FormattedListPrice() */
 HRESULT wapstpr_store_preview_sku_info_get__formatted_list_price(WAPSTPR_StorePreviewSkuInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo.get_ExtendedData() */
 HRESULT wapstpr_store_preview_sku_info_get__extended_data(WAPSTPR_StorePreviewSkuInfo *self, cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults */
 HRESULT wapstpr_store_preview_purchase_results_new(WAPSTPR_StorePreviewPurchaseResults **out);
 
-/* Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults */
-/* Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults.get_ProductPurchaseStatus() */
 HRESULT wapstpr_store_preview_purchase_results_get__product_purchase_status(WAPSTPR_StorePreviewPurchaseResults *self, WAPSTPR_StorePreviewProductPurchaseStatus *value);
 
-/* activate Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo */
 HRESULT wapstpr_store_preview_product_info_new(WAPSTPR_StorePreviewProductInfo **out);
 
-/* Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo */
-/* Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo.get_ProductId() */
 HRESULT wapstpr_store_preview_product_info_get__product_id(WAPSTPR_StorePreviewProductInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo.get_ProductType() */
 HRESULT wapstpr_store_preview_product_info_get__product_type(WAPSTPR_StorePreviewProductInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo.get_Title() */
 HRESULT wapstpr_store_preview_product_info_get__title(WAPSTPR_StorePreviewProductInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo.get_Description() */
 HRESULT wapstpr_store_preview_product_info_get__description(WAPSTPR_StorePreviewProductInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo.get_SkuInfoList() */
 HRESULT wapstpr_store_preview_product_info_get__sku_info_list(WAPSTPR_StorePreviewProductInfo *self, WFOCO_IVectorView_WAPSTPR_StorePreviewSkuInfo** value);
 
-/* activate Windows.ApplicationModel.Store.Preview.StorePreview */
 HRESULT wapstpr_store_preview_new(WAPSTPR_StorePreview **out);
 
-/* Windows.ApplicationModel.Store.Preview.StorePreview */
-/* Windows.ApplicationModel.Store.Preview.StorePreview.RequestProductPurchaseByProductIdAndSkuIdAsync(productId, skuId) */
 HRESULT wapstpr_store_preview_request_product_purchase_by_product_id_and_sku_id_async(cwinrt_hstring productId, cwinrt_hstring skuId, WF_IAsyncOperation_WAPSTPR_StorePreviewPurchaseResults** out);
 
-/* Windows.ApplicationModel.Store.Preview.StorePreview.LoadAddOnProductInfosAsync() */
 HRESULT wapstpr_store_preview_load_add_on_product_infos_async(WF_IAsyncOperation_WFOCO_IVectorView_WAPSTPR_StorePreviewProductInfo** out);
 
-/* activate Windows.ApplicationModel.Store.Preview.StoreHardwareManufacturerInfo */
 HRESULT wapstpr_store_hardware_manufacturer_info_new(WAPSTPR_StoreHardwareManufacturerInfo **out);
 
-/* Windows.ApplicationModel.Store.Preview.StoreHardwareManufacturerInfo */
-/* Windows.ApplicationModel.Store.Preview.StoreHardwareManufacturerInfo.get_HardwareManufacturerId() */
 HRESULT wapstpr_store_hardware_manufacturer_info_get__hardware_manufacturer_id(WAPSTPR_StoreHardwareManufacturerInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.Preview.StoreHardwareManufacturerInfo.get_StoreContentModifierId() */
 HRESULT wapstpr_store_hardware_manufacturer_info_get__store_content_modifier_id(WAPSTPR_StoreHardwareManufacturerInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.Preview.StoreHardwareManufacturerInfo.get_ModelName() */
 HRESULT wapstpr_store_hardware_manufacturer_info_get__model_name(WAPSTPR_StoreHardwareManufacturerInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.Preview.StoreHardwareManufacturerInfo.get_ManufacturerName() */
 HRESULT wapstpr_store_hardware_manufacturer_info_get__manufacturer_name(WAPSTPR_StoreHardwareManufacturerInfo *self, cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.Store.Preview.StoreConfiguration */
 HRESULT wapstpr_store_configuration_new(WAPSTPR_StoreConfiguration **out);
 
-/* Windows.ApplicationModel.Store.Preview.StoreConfiguration */
-/* Windows.ApplicationModel.Store.Preview.StoreConfiguration.IsPinToDesktopSupported() */
 HRESULT wapstpr_store_configuration_is_pin_to_desktop_supported(BOOL *out);
 
-/* Windows.ApplicationModel.Store.Preview.StoreConfiguration.IsPinToTaskbarSupported() */
 HRESULT wapstpr_store_configuration_is_pin_to_taskbar_supported(BOOL *out);
 
-/* Windows.ApplicationModel.Store.Preview.StoreConfiguration.IsPinToStartSupported() */
 HRESULT wapstpr_store_configuration_is_pin_to_start_supported(BOOL *out);
 
-/* Windows.ApplicationModel.Store.Preview.StoreConfiguration.PinToDesktop(appPackageFamilyName) */
 HRESULT wapstpr_store_configuration_pin_to_desktop(cwinrt_hstring appPackageFamilyName);
 
-/* Windows.ApplicationModel.Store.Preview.StoreConfiguration.PinToDesktopForUser(user, appPackageFamilyName) */
 HRESULT wapstpr_store_configuration_pin_to_desktop_for_user(WSY_User* user, cwinrt_hstring appPackageFamilyName);
 
-/* Windows.ApplicationModel.Store.Preview.StoreConfiguration.GetStoreWebAccountId() */
 HRESULT wapstpr_store_configuration_get_store_web_account_id(cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.Store.Preview.StoreConfiguration.GetStoreWebAccountIdForUser(user) */
 HRESULT wapstpr_store_configuration_get_store_web_account_id_for_user(WSY_User* user, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.Store.Preview.StoreConfiguration.SetEnterpriseStoreWebAccountId(webAccountId) */
 HRESULT wapstpr_store_configuration_set_enterprise_store_web_account_id(cwinrt_hstring webAccountId);
 
-/* Windows.ApplicationModel.Store.Preview.StoreConfiguration.SetEnterpriseStoreWebAccountIdForUser(user, webAccountId) */
 HRESULT wapstpr_store_configuration_set_enterprise_store_web_account_id_for_user(WSY_User* user, cwinrt_hstring webAccountId);
 
-/* Windows.ApplicationModel.Store.Preview.StoreConfiguration.GetEnterpriseStoreWebAccountId() */
 HRESULT wapstpr_store_configuration_get_enterprise_store_web_account_id(cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.Store.Preview.StoreConfiguration.GetEnterpriseStoreWebAccountIdForUser(user) */
 HRESULT wapstpr_store_configuration_get_enterprise_store_web_account_id_for_user(WSY_User* user, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.Store.Preview.StoreConfiguration.ShouldRestrictToEnterpriseStoreOnly() */
 HRESULT wapstpr_store_configuration_should_restrict_to_enterprise_store_only(BOOL *out);
 
-/* Windows.ApplicationModel.Store.Preview.StoreConfiguration.ShouldRestrictToEnterpriseStoreOnlyForUser(user) */
 HRESULT wapstpr_store_configuration_should_restrict_to_enterprise_store_only_for_user(WSY_User* user, BOOL *out);
 
-/* Windows.ApplicationModel.Store.Preview.StoreConfiguration.HasStoreWebAccount() */
 HRESULT wapstpr_store_configuration_has_store_web_account(BOOL *out);
 
-/* Windows.ApplicationModel.Store.Preview.StoreConfiguration.HasStoreWebAccountForUser(user) */
 HRESULT wapstpr_store_configuration_has_store_web_account_for_user(WSY_User* user, BOOL *out);
 
-/* Windows.ApplicationModel.Store.Preview.StoreConfiguration.GetStoreLogDataAsync(options) */
 HRESULT wapstpr_store_configuration_get_store_log_data_async(WAPSTPR_StoreLogOptions options, WF_IAsyncOperation_WSTST_IRandomAccessStreamReference** out);
 
-/* Windows.ApplicationModel.Store.Preview.StoreConfiguration.SetStoreWebAccountIdForUser(user, webAccountId) */
 HRESULT wapstpr_store_configuration_set_store_web_account_id_for_user(WSY_User* user, cwinrt_hstring webAccountId);
 
-/* Windows.ApplicationModel.Store.Preview.StoreConfiguration.IsStoreWebAccountIdForUser(user, webAccountId) */
 HRESULT wapstpr_store_configuration_is_store_web_account_id_for_user(WSY_User* user, cwinrt_hstring webAccountId, BOOL *out);
 
-/* Windows.ApplicationModel.Store.Preview.StoreConfiguration.GetPurchasePromptingPolicyForUser(user) */
 HRESULT wapstpr_store_configuration_get_purchase_prompting_policy_for_user(WSY_User* user, uint32_t** out);
 
-/* Windows.ApplicationModel.Store.Preview.StoreConfiguration.SetPurchasePromptingPolicyForUser(user) */
 HRESULT wapstpr_store_configuration_set_purchase_prompting_policy_for_user(WSY_User* user, uint32_t* value);
 
-/* Windows.ApplicationModel.Store.Preview.StoreConfiguration.get_PurchasePromptingPolicy() */
 HRESULT wapstpr_store_configuration_get__purchase_prompting_policy(uint32_t** value);
 
-/* Windows.ApplicationModel.Store.Preview.StoreConfiguration.put_PurchasePromptingPolicy() */
 HRESULT wapstpr_store_configuration_put__purchase_prompting_policy(uint32_t* value);
 
-/* Windows.ApplicationModel.Store.Preview.StoreConfiguration.SetSystemConfiguration(catalogHardwareManufacturerId, catalogStoreContentModifierId, systemConfigurationExpiration, catalogHardwareDescriptor) */
 HRESULT wapstpr_store_configuration_set_system_configuration(cwinrt_hstring catalogHardwareManufacturerId, cwinrt_hstring catalogStoreContentModifierId, WF_DateTime systemConfigurationExpiration, cwinrt_hstring catalogHardwareDescriptor);
 
-/* Windows.ApplicationModel.Store.Preview.StoreConfiguration.SetMobileOperatorConfiguration(mobileOperatorId, appDownloadLimitInMegabytes, updateDownloadLimitInMegabytes) */
 HRESULT wapstpr_store_configuration_set_mobile_operator_configuration(cwinrt_hstring mobileOperatorId, uint32_t appDownloadLimitInMegabytes, uint32_t updateDownloadLimitInMegabytes);
 
-/* Windows.ApplicationModel.Store.Preview.StoreConfiguration.SetStoreWebAccountId(webAccountId) */
 HRESULT wapstpr_store_configuration_set_store_web_account_id(cwinrt_hstring webAccountId);
 
-/* Windows.ApplicationModel.Store.Preview.StoreConfiguration.IsStoreWebAccountId(webAccountId) */
 HRESULT wapstpr_store_configuration_is_store_web_account_id(cwinrt_hstring webAccountId, BOOL *out);
 
-/* Windows.ApplicationModel.Store.Preview.StoreConfiguration.get_HardwareManufacturerInfo() */
 HRESULT wapstpr_store_configuration_get__hardware_manufacturer_info(WAPSTPR_StoreHardwareManufacturerInfo** value);
 
-/* Windows.ApplicationModel.Store.Preview.StoreConfiguration.FilterUnsupportedSystemFeaturesAsync(systemFeatures) */
 HRESULT wapstpr_store_configuration_filter_unsupported_system_features_async(WFOCO_IIterable_WAPSTPR_StoreSystemFeature* systemFeatures, WF_IAsyncOperation_WFOCO_IVectorView_WAPSTPR_StoreSystemFeature** out);
 
-/* Windows.ApplicationModel.Store.Preview.IDeliveryOptimizationSettings */
-/* Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo */
-/* Windows.ApplicationModel.Store.Preview.IStorePreviewPurchaseResults */
-/* Windows.ApplicationModel.Store.Preview.IStorePreviewProductInfo */
-/* Windows.ApplicationModel.Store.Preview.IStoreHardwareManufacturerInfo */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_STORE_PREVIEW_H */

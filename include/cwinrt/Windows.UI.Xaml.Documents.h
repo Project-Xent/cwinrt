@@ -17,7 +17,6 @@
 #include <cwinrt/Windows.UI.Xaml.Media.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WUIXAME_FontFamily
 #define CWINRT_FWD_WUIXAME_FontFamily
 typedef struct WUIXAME_FontFamily WUIXAME_FontFamily;
@@ -43,7 +42,6 @@ typedef struct WUIXAIN_AccessKeyInvokedEventArgs WUIXAIN_AccessKeyInvokedEventAr
 typedef struct WUITE_ContentLinkInfo WUITE_ContentLinkInfo;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUIXADO_ITextHighlighterStatics WUIXADO_ITextHighlighterStatics;
 typedef struct WUIXADO_ITextHighlighterFactory WUIXADO_ITextHighlighterFactory;
 typedef struct WUIXADO_ITextHighlighterBaseFactory WUIXADO_ITextHighlighterBaseFactory;
@@ -131,7 +129,6 @@ typedef struct WUIXADO_ITextPointer WUIXADO_ITextPointer;
 typedef struct WUIXADO_ITypography WUIXADO_ITypography;
 typedef struct WUIXADO_IUnderline WUIXADO_IUnderline;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WUIXA_DependencyProperty
 #define CWINRT_FWD_WUIXA_DependencyProperty
 typedef struct WUIXA_DependencyProperty WUIXA_DependencyProperty;
@@ -475,7 +472,6 @@ struct WUIXADO_TextRange {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -720,371 +716,232 @@ static const IID CWINRT_IID_WUIXADO_ITypography CWINRT_MAYBE_UNUSED = { 0x866F65
 static const IID CWINRT_IID_WUIXADO_IUnderline CWINRT_MAYBE_UNUSED = { 0xA5FA8202, 0x61C0, 0x47D7, { 0x93, 0xEF, 0xBC, 0x0B, 0x57, 0x7C, 0x5F, 0x26 } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.Xaml.Documents.ITextHighlighterStatics */
-/* Windows.UI.Xaml.Documents.ITextHighlighterStatics.get_ForegroundProperty() */
 HRESULT wuixado_text_highlighter_statics_get__foreground_property(WUIXADO_ITextHighlighterStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITextHighlighterStatics.get_BackgroundProperty() */
 HRESULT wuixado_text_highlighter_statics_get__background_property(WUIXADO_ITextHighlighterStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITextHighlighterFactory */
-/* Windows.UI.Xaml.Documents.ITextHighlighterFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixado_text_highlighter_factory_create_instance(WUIXADO_ITextHighlighterFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXADO_TextHighlighter** out);
 
-/* Windows.UI.Xaml.Documents.ITextElementStatics4 */
-/* Windows.UI.Xaml.Documents.ITextElementStatics4.get_TextDecorationsProperty() */
 HRESULT wuixado_text_element_statics_4_get__text_decorations_property(WUIXADO_ITextElementStatics_4 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITextElementStatics4.get_IsAccessKeyScopeProperty() */
 HRESULT wuixado_text_element_statics_4_get__is_access_key_scope_property(WUIXADO_ITextElementStatics_4 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITextElementStatics4.get_AccessKeyScopeOwnerProperty() */
 HRESULT wuixado_text_element_statics_4_get__access_key_scope_owner_property(WUIXADO_ITextElementStatics_4 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITextElementStatics4.get_KeyTipPlacementModeProperty() */
 HRESULT wuixado_text_element_statics_4_get__key_tip_placement_mode_property(WUIXADO_ITextElementStatics_4 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITextElementStatics4.get_KeyTipHorizontalOffsetProperty() */
 HRESULT wuixado_text_element_statics_4_get__key_tip_horizontal_offset_property(WUIXADO_ITextElementStatics_4 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITextElementStatics4.get_KeyTipVerticalOffsetProperty() */
 HRESULT wuixado_text_element_statics_4_get__key_tip_vertical_offset_property(WUIXADO_ITextElementStatics_4 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITextElementStatics3 */
-/* Windows.UI.Xaml.Documents.ITextElementStatics3.get_AllowFocusOnInteractionProperty() */
 HRESULT wuixado_text_element_statics_3_get__allow_focus_on_interaction_property(WUIXADO_ITextElementStatics_3 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITextElementStatics3.get_AccessKeyProperty() */
 HRESULT wuixado_text_element_statics_3_get__access_key_property(WUIXADO_ITextElementStatics_3 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITextElementStatics3.get_ExitDisplayModeOnAccessKeyInvokedProperty() */
 HRESULT wuixado_text_element_statics_3_get__exit_display_mode_on_access_key_invoked_property(WUIXADO_ITextElementStatics_3 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITextElementStatics2 */
-/* Windows.UI.Xaml.Documents.ITextElementStatics2.get_IsTextScaleFactorEnabledProperty() */
 HRESULT wuixado_text_element_statics_2_get__is_text_scale_factor_enabled_property(WUIXADO_ITextElementStatics_2 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITextElementStatics */
-/* Windows.UI.Xaml.Documents.ITextElementStatics.get_FontSizeProperty() */
 HRESULT wuixado_text_element_statics_get__font_size_property(WUIXADO_ITextElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITextElementStatics.get_FontFamilyProperty() */
 HRESULT wuixado_text_element_statics_get__font_family_property(WUIXADO_ITextElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITextElementStatics.get_FontWeightProperty() */
 HRESULT wuixado_text_element_statics_get__font_weight_property(WUIXADO_ITextElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITextElementStatics.get_FontStyleProperty() */
 HRESULT wuixado_text_element_statics_get__font_style_property(WUIXADO_ITextElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITextElementStatics.get_FontStretchProperty() */
 HRESULT wuixado_text_element_statics_get__font_stretch_property(WUIXADO_ITextElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITextElementStatics.get_CharacterSpacingProperty() */
 HRESULT wuixado_text_element_statics_get__character_spacing_property(WUIXADO_ITextElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITextElementStatics.get_ForegroundProperty() */
 HRESULT wuixado_text_element_statics_get__foreground_property(WUIXADO_ITextElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITextElementStatics.get_LanguageProperty() */
 HRESULT wuixado_text_element_statics_get__language_property(WUIXADO_ITextElementStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ISpanFactory */
-/* Windows.UI.Xaml.Documents.ISpanFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixado_span_factory_create_instance(WUIXADO_ISpanFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXADO_Span** out);
 
-/* Windows.UI.Xaml.Documents.IRunStatics */
-/* Windows.UI.Xaml.Documents.IRunStatics.get_FlowDirectionProperty() */
 HRESULT wuixado_run_statics_get__flow_direction_property(WUIXADO_IRunStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IParagraphStatics */
-/* Windows.UI.Xaml.Documents.IParagraphStatics.get_TextIndentProperty() */
 HRESULT wuixado_paragraph_statics_get__text_indent_property(WUIXADO_IParagraphStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IInlineFactory */
-/* Windows.UI.Xaml.Documents.IInlineFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixado_inline_factory_create_instance(WUIXADO_IInlineFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXADO_Inline** out);
 
-/* Windows.UI.Xaml.Documents.IHyperlinkStatics5 */
-/* Windows.UI.Xaml.Documents.IHyperlinkStatics5.get_IsTabStopProperty() */
 HRESULT wuixado_hyperlink_statics_5_get__is_tab_stop_property(WUIXADO_IHyperlinkStatics_5 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IHyperlinkStatics5.get_TabIndexProperty() */
 HRESULT wuixado_hyperlink_statics_5_get__tab_index_property(WUIXADO_IHyperlinkStatics_5 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IHyperlinkStatics4 */
-/* Windows.UI.Xaml.Documents.IHyperlinkStatics4.get_FocusStateProperty() */
 HRESULT wuixado_hyperlink_statics_4_get__focus_state_property(WUIXADO_IHyperlinkStatics_4 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IHyperlinkStatics4.get_XYFocusUpNavigationStrategyProperty() */
 HRESULT wuixado_hyperlink_statics_4_get__x_y_focus_up_navigation_strategy_property(WUIXADO_IHyperlinkStatics_4 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IHyperlinkStatics4.get_XYFocusDownNavigationStrategyProperty() */
 HRESULT wuixado_hyperlink_statics_4_get__x_y_focus_down_navigation_strategy_property(WUIXADO_IHyperlinkStatics_4 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IHyperlinkStatics4.get_XYFocusLeftNavigationStrategyProperty() */
 HRESULT wuixado_hyperlink_statics_4_get__x_y_focus_left_navigation_strategy_property(WUIXADO_IHyperlinkStatics_4 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IHyperlinkStatics4.get_XYFocusRightNavigationStrategyProperty() */
 HRESULT wuixado_hyperlink_statics_4_get__x_y_focus_right_navigation_strategy_property(WUIXADO_IHyperlinkStatics_4 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IHyperlinkStatics3 */
-/* Windows.UI.Xaml.Documents.IHyperlinkStatics3.get_XYFocusLeftProperty() */
 HRESULT wuixado_hyperlink_statics_3_get__x_y_focus_left_property(WUIXADO_IHyperlinkStatics_3 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IHyperlinkStatics3.get_XYFocusRightProperty() */
 HRESULT wuixado_hyperlink_statics_3_get__x_y_focus_right_property(WUIXADO_IHyperlinkStatics_3 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IHyperlinkStatics3.get_XYFocusUpProperty() */
 HRESULT wuixado_hyperlink_statics_3_get__x_y_focus_up_property(WUIXADO_IHyperlinkStatics_3 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IHyperlinkStatics3.get_XYFocusDownProperty() */
 HRESULT wuixado_hyperlink_statics_3_get__x_y_focus_down_property(WUIXADO_IHyperlinkStatics_3 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IHyperlinkStatics3.get_ElementSoundModeProperty() */
 HRESULT wuixado_hyperlink_statics_3_get__element_sound_mode_property(WUIXADO_IHyperlinkStatics_3 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IHyperlinkStatics2 */
-/* Windows.UI.Xaml.Documents.IHyperlinkStatics2.get_UnderlineStyleProperty() */
 HRESULT wuixado_hyperlink_statics_2_get__underline_style_property(WUIXADO_IHyperlinkStatics_2 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IHyperlinkStatics */
-/* Windows.UI.Xaml.Documents.IHyperlinkStatics.get_NavigateUriProperty() */
 HRESULT wuixado_hyperlink_statics_get__navigate_uri_property(WUIXADO_IHyperlinkStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IGlyphsStatics2 */
-/* Windows.UI.Xaml.Documents.IGlyphsStatics2.get_IsColorFontEnabledProperty() */
 HRESULT wuixado_glyphs_statics_2_get__is_color_font_enabled_property(WUIXADO_IGlyphsStatics_2 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IGlyphsStatics2.get_ColorFontPaletteIndexProperty() */
 HRESULT wuixado_glyphs_statics_2_get__color_font_palette_index_property(WUIXADO_IGlyphsStatics_2 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IGlyphsStatics */
-/* Windows.UI.Xaml.Documents.IGlyphsStatics.get_UnicodeStringProperty() */
 HRESULT wuixado_glyphs_statics_get__unicode_string_property(WUIXADO_IGlyphsStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IGlyphsStatics.get_IndicesProperty() */
 HRESULT wuixado_glyphs_statics_get__indices_property(WUIXADO_IGlyphsStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IGlyphsStatics.get_FontUriProperty() */
 HRESULT wuixado_glyphs_statics_get__font_uri_property(WUIXADO_IGlyphsStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IGlyphsStatics.get_StyleSimulationsProperty() */
 HRESULT wuixado_glyphs_statics_get__style_simulations_property(WUIXADO_IGlyphsStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IGlyphsStatics.get_FontRenderingEmSizeProperty() */
 HRESULT wuixado_glyphs_statics_get__font_rendering_em_size_property(WUIXADO_IGlyphsStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IGlyphsStatics.get_OriginXProperty() */
 HRESULT wuixado_glyphs_statics_get__origin_x_property(WUIXADO_IGlyphsStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IGlyphsStatics.get_OriginYProperty() */
 HRESULT wuixado_glyphs_statics_get__origin_y_property(WUIXADO_IGlyphsStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IGlyphsStatics.get_FillProperty() */
 HRESULT wuixado_glyphs_statics_get__fill_property(WUIXADO_IGlyphsStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IContentLinkStatics */
-/* Windows.UI.Xaml.Documents.IContentLinkStatics.get_BackgroundProperty() */
 HRESULT wuixado_content_link_statics_get__background_property(WUIXADO_IContentLinkStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IContentLinkStatics.get_CursorProperty() */
 HRESULT wuixado_content_link_statics_get__cursor_property(WUIXADO_IContentLinkStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IContentLinkStatics.get_XYFocusLeftProperty() */
 HRESULT wuixado_content_link_statics_get__x_y_focus_left_property(WUIXADO_IContentLinkStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IContentLinkStatics.get_XYFocusRightProperty() */
 HRESULT wuixado_content_link_statics_get__x_y_focus_right_property(WUIXADO_IContentLinkStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IContentLinkStatics.get_XYFocusUpProperty() */
 HRESULT wuixado_content_link_statics_get__x_y_focus_up_property(WUIXADO_IContentLinkStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IContentLinkStatics.get_XYFocusDownProperty() */
 HRESULT wuixado_content_link_statics_get__x_y_focus_down_property(WUIXADO_IContentLinkStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IContentLinkStatics.get_ElementSoundModeProperty() */
 HRESULT wuixado_content_link_statics_get__element_sound_mode_property(WUIXADO_IContentLinkStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IContentLinkStatics.get_FocusStateProperty() */
 HRESULT wuixado_content_link_statics_get__focus_state_property(WUIXADO_IContentLinkStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IContentLinkStatics.get_XYFocusUpNavigationStrategyProperty() */
 HRESULT wuixado_content_link_statics_get__x_y_focus_up_navigation_strategy_property(WUIXADO_IContentLinkStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IContentLinkStatics.get_XYFocusDownNavigationStrategyProperty() */
 HRESULT wuixado_content_link_statics_get__x_y_focus_down_navigation_strategy_property(WUIXADO_IContentLinkStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IContentLinkStatics.get_XYFocusLeftNavigationStrategyProperty() */
 HRESULT wuixado_content_link_statics_get__x_y_focus_left_navigation_strategy_property(WUIXADO_IContentLinkStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IContentLinkStatics.get_XYFocusRightNavigationStrategyProperty() */
 HRESULT wuixado_content_link_statics_get__x_y_focus_right_navigation_strategy_property(WUIXADO_IContentLinkStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IContentLinkStatics.get_IsTabStopProperty() */
 HRESULT wuixado_content_link_statics_get__is_tab_stop_property(WUIXADO_IContentLinkStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IContentLinkStatics.get_TabIndexProperty() */
 HRESULT wuixado_content_link_statics_get__tab_index_property(WUIXADO_IContentLinkStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IContentLinkProviderFactory */
-/* Windows.UI.Xaml.Documents.IContentLinkProviderFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixado_content_link_provider_factory_create_instance(WUIXADO_IContentLinkProviderFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXADO_ContentLinkProvider** out);
 
-/* Windows.UI.Xaml.Documents.IBlockStatics2 */
-/* Windows.UI.Xaml.Documents.IBlockStatics2.get_HorizontalTextAlignmentProperty() */
 HRESULT wuixado_block_statics_2_get__horizontal_text_alignment_property(WUIXADO_IBlockStatics_2 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IBlockStatics */
-/* Windows.UI.Xaml.Documents.IBlockStatics.get_TextAlignmentProperty() */
 HRESULT wuixado_block_statics_get__text_alignment_property(WUIXADO_IBlockStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IBlockStatics.get_LineHeightProperty() */
 HRESULT wuixado_block_statics_get__line_height_property(WUIXADO_IBlockStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IBlockStatics.get_LineStackingStrategyProperty() */
 HRESULT wuixado_block_statics_get__line_stacking_strategy_property(WUIXADO_IBlockStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IBlockStatics.get_MarginProperty() */
 HRESULT wuixado_block_statics_get__margin_property(WUIXADO_IBlockStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.IBlockFactory */
-/* Windows.UI.Xaml.Documents.IBlockFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixado_block_factory_create_instance(WUIXADO_IBlockFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXADO_Block** out);
 
-/* activate Windows.UI.Xaml.Documents.Hyperlink */
 HRESULT wuixado_hyperlink_new(WUIXADO_Hyperlink **out);
 
-/* Windows.UI.Xaml.Documents.Hyperlink */
-/* Windows.UI.Xaml.Documents.Hyperlink.get_NavigateUri() */
 HRESULT wuixado_hyperlink_get__navigate_uri(WUIXADO_Hyperlink *self, WF_Uri** value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.put_NavigateUri() */
 HRESULT wuixado_hyperlink_put__navigate_uri(WUIXADO_Hyperlink *self, WF_Uri* value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.get_UnderlineStyle() */
 HRESULT wuixado_hyperlink_get__underline_style(WUIXADO_Hyperlink *self, WUIXADO_UnderlineStyle *value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.put_UnderlineStyle() */
 HRESULT wuixado_hyperlink_put__underline_style(WUIXADO_Hyperlink *self, WUIXADO_UnderlineStyle value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.get_XYFocusLeft() */
 HRESULT wuixado_hyperlink_get__x_y_focus_left(WUIXADO_Hyperlink *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.put_XYFocusLeft() */
 HRESULT wuixado_hyperlink_put__x_y_focus_left(WUIXADO_Hyperlink *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.get_XYFocusRight() */
 HRESULT wuixado_hyperlink_get__x_y_focus_right(WUIXADO_Hyperlink *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.put_XYFocusRight() */
 HRESULT wuixado_hyperlink_put__x_y_focus_right(WUIXADO_Hyperlink *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.get_XYFocusUp() */
 HRESULT wuixado_hyperlink_get__x_y_focus_up(WUIXADO_Hyperlink *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.put_XYFocusUp() */
 HRESULT wuixado_hyperlink_put__x_y_focus_up(WUIXADO_Hyperlink *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.get_XYFocusDown() */
 HRESULT wuixado_hyperlink_get__x_y_focus_down(WUIXADO_Hyperlink *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.put_XYFocusDown() */
 HRESULT wuixado_hyperlink_put__x_y_focus_down(WUIXADO_Hyperlink *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.get_ElementSoundMode() */
 HRESULT wuixado_hyperlink_get__element_sound_mode(WUIXADO_Hyperlink *self, WUIXA_ElementSoundMode *value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.put_ElementSoundMode() */
 HRESULT wuixado_hyperlink_put__element_sound_mode(WUIXADO_Hyperlink *self, WUIXA_ElementSoundMode value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.get_FocusState() */
 HRESULT wuixado_hyperlink_get__focus_state(WUIXADO_Hyperlink *self, WUIXA_FocusState *value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.get_XYFocusUpNavigationStrategy() */
 HRESULT wuixado_hyperlink_get__x_y_focus_up_navigation_strategy(WUIXADO_Hyperlink *self, WUIXAIN_XYFocusNavigationStrategy *value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.put_XYFocusUpNavigationStrategy() */
 HRESULT wuixado_hyperlink_put__x_y_focus_up_navigation_strategy(WUIXADO_Hyperlink *self, WUIXAIN_XYFocusNavigationStrategy value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.get_XYFocusDownNavigationStrategy() */
 HRESULT wuixado_hyperlink_get__x_y_focus_down_navigation_strategy(WUIXADO_Hyperlink *self, WUIXAIN_XYFocusNavigationStrategy *value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.put_XYFocusDownNavigationStrategy() */
 HRESULT wuixado_hyperlink_put__x_y_focus_down_navigation_strategy(WUIXADO_Hyperlink *self, WUIXAIN_XYFocusNavigationStrategy value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.get_XYFocusLeftNavigationStrategy() */
 HRESULT wuixado_hyperlink_get__x_y_focus_left_navigation_strategy(WUIXADO_Hyperlink *self, WUIXAIN_XYFocusNavigationStrategy *value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.put_XYFocusLeftNavigationStrategy() */
 HRESULT wuixado_hyperlink_put__x_y_focus_left_navigation_strategy(WUIXADO_Hyperlink *self, WUIXAIN_XYFocusNavigationStrategy value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.get_XYFocusRightNavigationStrategy() */
 HRESULT wuixado_hyperlink_get__x_y_focus_right_navigation_strategy(WUIXADO_Hyperlink *self, WUIXAIN_XYFocusNavigationStrategy *value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.put_XYFocusRightNavigationStrategy() */
 HRESULT wuixado_hyperlink_put__x_y_focus_right_navigation_strategy(WUIXADO_Hyperlink *self, WUIXAIN_XYFocusNavigationStrategy value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.Focus() */
 HRESULT wuixado_hyperlink_focus(WUIXADO_Hyperlink *self, WUIXA_FocusState value, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.get_IsTabStop() */
 HRESULT wuixado_hyperlink_get__is_tab_stop(WUIXADO_Hyperlink *self, BOOL *value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.put_IsTabStop() */
 HRESULT wuixado_hyperlink_put__is_tab_stop(WUIXADO_Hyperlink *self, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.get_TabIndex() */
 HRESULT wuixado_hyperlink_get__tab_index(WUIXADO_Hyperlink *self, int32_t *value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.put_TabIndex() */
 HRESULT wuixado_hyperlink_put__tab_index(WUIXADO_Hyperlink *self, int32_t value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.get_IsTabStopProperty() */
 HRESULT wuixado_hyperlink_get__is_tab_stop_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.get_TabIndexProperty() */
 HRESULT wuixado_hyperlink_get__tab_index_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.get_FocusStateProperty() */
 HRESULT wuixado_hyperlink_get__focus_state_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.get_XYFocusUpNavigationStrategyProperty() */
 HRESULT wuixado_hyperlink_get__x_y_focus_up_navigation_strategy_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.get_XYFocusDownNavigationStrategyProperty() */
 HRESULT wuixado_hyperlink_get__x_y_focus_down_navigation_strategy_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.get_XYFocusLeftNavigationStrategyProperty() */
 HRESULT wuixado_hyperlink_get__x_y_focus_left_navigation_strategy_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.get_XYFocusRightNavigationStrategyProperty() */
 HRESULT wuixado_hyperlink_get__x_y_focus_right_navigation_strategy_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.get_XYFocusLeftProperty() */
 HRESULT wuixado_hyperlink_get__x_y_focus_left_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.get_XYFocusRightProperty() */
 HRESULT wuixado_hyperlink_get__x_y_focus_right_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.get_XYFocusUpProperty() */
 HRESULT wuixado_hyperlink_get__x_y_focus_up_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.get_XYFocusDownProperty() */
 HRESULT wuixado_hyperlink_get__x_y_focus_down_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.get_ElementSoundModeProperty() */
 HRESULT wuixado_hyperlink_get__element_sound_mode_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.get_UnderlineStyleProperty() */
 HRESULT wuixado_hyperlink_get__underline_style_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Hyperlink.get_NavigateUriProperty() */
 HRESULT wuixado_hyperlink_get__navigate_uri_property(WUIXA_DependencyProperty** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixado_hyperlink_on_click(WUIXADO_Hyperlink *self, cwinrt_event_fn fn, void *ctx);
@@ -1096,293 +953,194 @@ void wuixado_hyperlink_off_got_focus(WUIXADO_Hyperlink *self, cwinrt_token token
 cwinrt_token wuixado_hyperlink_on_lost_focus(WUIXADO_Hyperlink *self, cwinrt_event_fn fn, void *ctx);
 void wuixado_hyperlink_off_lost_focus(WUIXADO_Hyperlink *self, cwinrt_token token);
 
-/* activate Windows.UI.Xaml.Documents.Glyphs */
 HRESULT wuixado_glyphs_new(WUIXADO_Glyphs **out);
 
-/* Windows.UI.Xaml.Documents.Glyphs */
-/* Windows.UI.Xaml.Documents.Glyphs.get_UnicodeString() */
 HRESULT wuixado_glyphs_get__unicode_string(WUIXADO_Glyphs *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Documents.Glyphs.put_UnicodeString() */
 HRESULT wuixado_glyphs_put__unicode_string(WUIXADO_Glyphs *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Documents.Glyphs.get_Indices() */
 HRESULT wuixado_glyphs_get__indices(WUIXADO_Glyphs *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Documents.Glyphs.put_Indices() */
 HRESULT wuixado_glyphs_put__indices(WUIXADO_Glyphs *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Documents.Glyphs.get_FontUri() */
 HRESULT wuixado_glyphs_get__font_uri(WUIXADO_Glyphs *self, WF_Uri** value);
 
-/* Windows.UI.Xaml.Documents.Glyphs.put_FontUri() */
 HRESULT wuixado_glyphs_put__font_uri(WUIXADO_Glyphs *self, WF_Uri* value);
 
-/* Windows.UI.Xaml.Documents.Glyphs.get_StyleSimulations() */
 HRESULT wuixado_glyphs_get__style_simulations(WUIXADO_Glyphs *self, WUIXAME_StyleSimulations *value);
 
-/* Windows.UI.Xaml.Documents.Glyphs.put_StyleSimulations() */
 HRESULT wuixado_glyphs_put__style_simulations(WUIXADO_Glyphs *self, WUIXAME_StyleSimulations value);
 
-/* Windows.UI.Xaml.Documents.Glyphs.get_FontRenderingEmSize() */
 HRESULT wuixado_glyphs_get__font_rendering_em_size(WUIXADO_Glyphs *self, double *value);
 
-/* Windows.UI.Xaml.Documents.Glyphs.put_FontRenderingEmSize() */
 HRESULT wuixado_glyphs_put__font_rendering_em_size(WUIXADO_Glyphs *self, double value);
 
-/* Windows.UI.Xaml.Documents.Glyphs.get_OriginX() */
 HRESULT wuixado_glyphs_get__origin_x(WUIXADO_Glyphs *self, double *value);
 
-/* Windows.UI.Xaml.Documents.Glyphs.put_OriginX() */
 HRESULT wuixado_glyphs_put__origin_x(WUIXADO_Glyphs *self, double value);
 
-/* Windows.UI.Xaml.Documents.Glyphs.get_OriginY() */
 HRESULT wuixado_glyphs_get__origin_y(WUIXADO_Glyphs *self, double *value);
 
-/* Windows.UI.Xaml.Documents.Glyphs.put_OriginY() */
 HRESULT wuixado_glyphs_put__origin_y(WUIXADO_Glyphs *self, double value);
 
-/* Windows.UI.Xaml.Documents.Glyphs.get_Fill() */
 HRESULT wuixado_glyphs_get__fill(WUIXADO_Glyphs *self, WUIXAME_Brush** value);
 
-/* Windows.UI.Xaml.Documents.Glyphs.put_Fill() */
 HRESULT wuixado_glyphs_put__fill(WUIXADO_Glyphs *self, WUIXAME_Brush* value);
 
-/* Windows.UI.Xaml.Documents.Glyphs.get_IsColorFontEnabled() */
 HRESULT wuixado_glyphs_get__is_color_font_enabled(WUIXADO_Glyphs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Documents.Glyphs.put_IsColorFontEnabled() */
 HRESULT wuixado_glyphs_put__is_color_font_enabled(WUIXADO_Glyphs *self, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Glyphs.get_ColorFontPaletteIndex() */
 HRESULT wuixado_glyphs_get__color_font_palette_index(WUIXADO_Glyphs *self, int32_t *value);
 
-/* Windows.UI.Xaml.Documents.Glyphs.put_ColorFontPaletteIndex() */
 HRESULT wuixado_glyphs_put__color_font_palette_index(WUIXADO_Glyphs *self, int32_t value);
 
-/* Windows.UI.Xaml.Documents.Glyphs.get_IsColorFontEnabledProperty() */
 HRESULT wuixado_glyphs_get__is_color_font_enabled_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Glyphs.get_ColorFontPaletteIndexProperty() */
 HRESULT wuixado_glyphs_get__color_font_palette_index_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Glyphs.get_UnicodeStringProperty() */
 HRESULT wuixado_glyphs_get__unicode_string_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Glyphs.get_IndicesProperty() */
 HRESULT wuixado_glyphs_get__indices_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Glyphs.get_FontUriProperty() */
 HRESULT wuixado_glyphs_get__font_uri_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Glyphs.get_StyleSimulationsProperty() */
 HRESULT wuixado_glyphs_get__style_simulations_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Glyphs.get_FontRenderingEmSizeProperty() */
 HRESULT wuixado_glyphs_get__font_rendering_em_size_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Glyphs.get_OriginXProperty() */
 HRESULT wuixado_glyphs_get__origin_x_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Glyphs.get_OriginYProperty() */
 HRESULT wuixado_glyphs_get__origin_y_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Glyphs.get_FillProperty() */
 HRESULT wuixado_glyphs_get__fill_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Documents.ContentLinkProviderCollection */
 HRESULT wuixado_content_link_provider_collection_new(WUIXADO_ContentLinkProviderCollection **out);
 
-/* Windows.UI.Xaml.Documents.ContentLinkProviderCollection */
-/* Windows.UI.Xaml.Documents.ContentLinkProviderCollection.GetAt(index) */
 HRESULT wuixado_content_link_provider_collection_get_at(WUIXADO_ContentLinkProviderCollection *self, uint32_t index, WUIXADO_ContentLinkProvider** out);
 
-/* Windows.UI.Xaml.Documents.ContentLinkProviderCollection.get_Size() */
 HRESULT wuixado_content_link_provider_collection_get__size(WUIXADO_ContentLinkProviderCollection *self, uint32_t *value);
 
-/* Windows.UI.Xaml.Documents.ContentLinkProviderCollection.GetView() */
 HRESULT wuixado_content_link_provider_collection_get_view(WUIXADO_ContentLinkProviderCollection *self, WFOCO_IVectorView_WUIXADO_ContentLinkProvider** out);
 
-/* Windows.UI.Xaml.Documents.ContentLinkProviderCollection.IndexOf(index) */
 HRESULT wuixado_content_link_provider_collection_index_of(WUIXADO_ContentLinkProviderCollection *self, WUIXADO_ContentLinkProvider* value, uint32_t index, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ContentLinkProviderCollection.SetAt(index) */
 HRESULT wuixado_content_link_provider_collection_set_at(WUIXADO_ContentLinkProviderCollection *self, uint32_t index, WUIXADO_ContentLinkProvider* value);
 
-/* Windows.UI.Xaml.Documents.ContentLinkProviderCollection.InsertAt(index) */
 HRESULT wuixado_content_link_provider_collection_insert_at(WUIXADO_ContentLinkProviderCollection *self, uint32_t index, WUIXADO_ContentLinkProvider* value);
 
-/* Windows.UI.Xaml.Documents.ContentLinkProviderCollection.RemoveAt(index) */
 HRESULT wuixado_content_link_provider_collection_remove_at(WUIXADO_ContentLinkProviderCollection *self, uint32_t index);
 
-/* Windows.UI.Xaml.Documents.ContentLinkProviderCollection.Append() */
 HRESULT wuixado_content_link_provider_collection_append(WUIXADO_ContentLinkProviderCollection *self, WUIXADO_ContentLinkProvider* value);
 
-/* Windows.UI.Xaml.Documents.ContentLinkProviderCollection.RemoveAtEnd() */
 HRESULT wuixado_content_link_provider_collection_remove_at_end(WUIXADO_ContentLinkProviderCollection *self);
 
-/* Windows.UI.Xaml.Documents.ContentLinkProviderCollection.Clear() */
 HRESULT wuixado_content_link_provider_collection_clear(WUIXADO_ContentLinkProviderCollection *self);
 
-/* Windows.UI.Xaml.Documents.ContentLinkProviderCollection.GetMany(startIndex, items) */
 HRESULT wuixado_content_link_provider_collection_get_many(WUIXADO_ContentLinkProviderCollection *self, uint32_t startIndex, WUIXADO_ContentLinkProvider *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.UI.Xaml.Documents.ContentLinkProviderCollection.ReplaceAll(items) */
 HRESULT wuixado_content_link_provider_collection_replace_all(WUIXADO_ContentLinkProviderCollection *self, WUIXADO_ContentLinkProvider *items, uint32_t items_len);
 
-/* Windows.UI.Xaml.Documents.ContentLinkProviderCollection.First() */
 HRESULT wuixado_content_link_provider_collection_first(WUIXADO_ContentLinkProviderCollection *self, WFOCO_IIterator_WUIXADO_ContentLinkProvider** out);
 
-/* activate Windows.UI.Xaml.Documents.ContentLinkInvokedEventArgs */
 HRESULT wuixado_content_link_invoked_event_args_new(WUIXADO_ContentLinkInvokedEventArgs **out);
 
-/* Windows.UI.Xaml.Documents.ContentLinkInvokedEventArgs */
-/* Windows.UI.Xaml.Documents.ContentLinkInvokedEventArgs.get_ContentLinkInfo() */
 HRESULT wuixado_content_link_invoked_event_args_get__content_link_info(WUIXADO_ContentLinkInvokedEventArgs *self, WUITE_ContentLinkInfo** value);
 
-/* Windows.UI.Xaml.Documents.ContentLinkInvokedEventArgs.get_Handled() */
 HRESULT wuixado_content_link_invoked_event_args_get__handled(WUIXADO_ContentLinkInvokedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Xaml.Documents.ContentLinkInvokedEventArgs.put_Handled() */
 HRESULT wuixado_content_link_invoked_event_args_put__handled(WUIXADO_ContentLinkInvokedEventArgs *self, BOOL value);
 
-/* activate Windows.UI.Xaml.Documents.ContentLink */
 HRESULT wuixado_content_link_new(WUIXADO_ContentLink **out);
 
-/* Windows.UI.Xaml.Documents.ContentLink */
-/* Windows.UI.Xaml.Documents.ContentLink.get_Info() */
 HRESULT wuixado_content_link_get__info(WUIXADO_ContentLink *self, WUITE_ContentLinkInfo** value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.put_Info() */
 HRESULT wuixado_content_link_put__info(WUIXADO_ContentLink *self, WUITE_ContentLinkInfo* value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.get_Background() */
 HRESULT wuixado_content_link_get__background(WUIXADO_ContentLink *self, WUIXAME_Brush** value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.put_Background() */
 HRESULT wuixado_content_link_put__background(WUIXADO_ContentLink *self, WUIXAME_Brush* value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.get_Cursor() */
 HRESULT wuixado_content_link_get__cursor(WUIXADO_ContentLink *self, WUICO_CoreCursorType *value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.put_Cursor() */
 HRESULT wuixado_content_link_put__cursor(WUIXADO_ContentLink *self, WUICO_CoreCursorType value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.get_XYFocusLeft() */
 HRESULT wuixado_content_link_get__x_y_focus_left(WUIXADO_ContentLink *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.put_XYFocusLeft() */
 HRESULT wuixado_content_link_put__x_y_focus_left(WUIXADO_ContentLink *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.get_XYFocusRight() */
 HRESULT wuixado_content_link_get__x_y_focus_right(WUIXADO_ContentLink *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.put_XYFocusRight() */
 HRESULT wuixado_content_link_put__x_y_focus_right(WUIXADO_ContentLink *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.get_XYFocusUp() */
 HRESULT wuixado_content_link_get__x_y_focus_up(WUIXADO_ContentLink *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.put_XYFocusUp() */
 HRESULT wuixado_content_link_put__x_y_focus_up(WUIXADO_ContentLink *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.get_XYFocusDown() */
 HRESULT wuixado_content_link_get__x_y_focus_down(WUIXADO_ContentLink *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.put_XYFocusDown() */
 HRESULT wuixado_content_link_put__x_y_focus_down(WUIXADO_ContentLink *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.get_ElementSoundMode() */
 HRESULT wuixado_content_link_get__element_sound_mode(WUIXADO_ContentLink *self, WUIXA_ElementSoundMode *value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.put_ElementSoundMode() */
 HRESULT wuixado_content_link_put__element_sound_mode(WUIXADO_ContentLink *self, WUIXA_ElementSoundMode value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.get_FocusState() */
 HRESULT wuixado_content_link_get__focus_state(WUIXADO_ContentLink *self, WUIXA_FocusState *value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.get_XYFocusUpNavigationStrategy() */
 HRESULT wuixado_content_link_get__x_y_focus_up_navigation_strategy(WUIXADO_ContentLink *self, WUIXAIN_XYFocusNavigationStrategy *value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.put_XYFocusUpNavigationStrategy() */
 HRESULT wuixado_content_link_put__x_y_focus_up_navigation_strategy(WUIXADO_ContentLink *self, WUIXAIN_XYFocusNavigationStrategy value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.get_XYFocusDownNavigationStrategy() */
 HRESULT wuixado_content_link_get__x_y_focus_down_navigation_strategy(WUIXADO_ContentLink *self, WUIXAIN_XYFocusNavigationStrategy *value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.put_XYFocusDownNavigationStrategy() */
 HRESULT wuixado_content_link_put__x_y_focus_down_navigation_strategy(WUIXADO_ContentLink *self, WUIXAIN_XYFocusNavigationStrategy value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.get_XYFocusLeftNavigationStrategy() */
 HRESULT wuixado_content_link_get__x_y_focus_left_navigation_strategy(WUIXADO_ContentLink *self, WUIXAIN_XYFocusNavigationStrategy *value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.put_XYFocusLeftNavigationStrategy() */
 HRESULT wuixado_content_link_put__x_y_focus_left_navigation_strategy(WUIXADO_ContentLink *self, WUIXAIN_XYFocusNavigationStrategy value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.get_XYFocusRightNavigationStrategy() */
 HRESULT wuixado_content_link_get__x_y_focus_right_navigation_strategy(WUIXADO_ContentLink *self, WUIXAIN_XYFocusNavigationStrategy *value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.put_XYFocusRightNavigationStrategy() */
 HRESULT wuixado_content_link_put__x_y_focus_right_navigation_strategy(WUIXADO_ContentLink *self, WUIXAIN_XYFocusNavigationStrategy value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.get_IsTabStop() */
 HRESULT wuixado_content_link_get__is_tab_stop(WUIXADO_ContentLink *self, BOOL *value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.put_IsTabStop() */
 HRESULT wuixado_content_link_put__is_tab_stop(WUIXADO_ContentLink *self, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.get_TabIndex() */
 HRESULT wuixado_content_link_get__tab_index(WUIXADO_ContentLink *self, int32_t *value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.put_TabIndex() */
 HRESULT wuixado_content_link_put__tab_index(WUIXADO_ContentLink *self, int32_t value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.Focus() */
 HRESULT wuixado_content_link_focus(WUIXADO_ContentLink *self, WUIXA_FocusState value, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ContentLink.get_BackgroundProperty() */
 HRESULT wuixado_content_link_get__background_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.get_CursorProperty() */
 HRESULT wuixado_content_link_get__cursor_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.get_XYFocusLeftProperty() */
 HRESULT wuixado_content_link_get__x_y_focus_left_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.get_XYFocusRightProperty() */
 HRESULT wuixado_content_link_get__x_y_focus_right_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.get_XYFocusUpProperty() */
 HRESULT wuixado_content_link_get__x_y_focus_up_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.get_XYFocusDownProperty() */
 HRESULT wuixado_content_link_get__x_y_focus_down_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.get_ElementSoundModeProperty() */
 HRESULT wuixado_content_link_get__element_sound_mode_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.get_FocusStateProperty() */
 HRESULT wuixado_content_link_get__focus_state_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.get_XYFocusUpNavigationStrategyProperty() */
 HRESULT wuixado_content_link_get__x_y_focus_up_navigation_strategy_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.get_XYFocusDownNavigationStrategyProperty() */
 HRESULT wuixado_content_link_get__x_y_focus_down_navigation_strategy_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.get_XYFocusLeftNavigationStrategyProperty() */
 HRESULT wuixado_content_link_get__x_y_focus_left_navigation_strategy_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.get_XYFocusRightNavigationStrategyProperty() */
 HRESULT wuixado_content_link_get__x_y_focus_right_navigation_strategy_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.get_IsTabStopProperty() */
 HRESULT wuixado_content_link_get__is_tab_stop_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ContentLink.get_TabIndexProperty() */
 HRESULT wuixado_content_link_get__tab_index_property(WUIXA_DependencyProperty** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixado_content_link_on_invoked(WUIXADO_ContentLink *self, cwinrt_event_fn fn, void *ctx);
@@ -1394,293 +1152,194 @@ void wuixado_content_link_off_got_focus(WUIXADO_ContentLink *self, cwinrt_token 
 cwinrt_token wuixado_content_link_on_lost_focus(WUIXADO_ContentLink *self, cwinrt_event_fn fn, void *ctx);
 void wuixado_content_link_off_lost_focus(WUIXADO_ContentLink *self, cwinrt_token token);
 
-/* Windows.UI.Xaml.Documents.Span */
-/* Windows.UI.Xaml.Documents.Span.get_Inlines() */
 HRESULT wuixado_span_get__inlines(WUIXADO_Span *self, WUIXADO_InlineCollection** value);
 
-/* Windows.UI.Xaml.Documents.Span.put_Inlines() */
 HRESULT wuixado_span_put__inlines(WUIXADO_Span *self, WUIXADO_InlineCollection* value);
 
-/* activate Windows.UI.Xaml.Documents.BlockCollection */
 HRESULT wuixado_block_collection_new(WUIXADO_BlockCollection **out);
 
-/* Windows.UI.Xaml.Documents.BlockCollection */
-/* Windows.UI.Xaml.Documents.BlockCollection.GetAt(index) */
 HRESULT wuixado_block_collection_get_at(WUIXADO_BlockCollection *self, uint32_t index, WUIXADO_Block** out);
 
-/* Windows.UI.Xaml.Documents.BlockCollection.get_Size() */
 HRESULT wuixado_block_collection_get__size(WUIXADO_BlockCollection *self, uint32_t *value);
 
-/* Windows.UI.Xaml.Documents.BlockCollection.GetView() */
 HRESULT wuixado_block_collection_get_view(WUIXADO_BlockCollection *self, WFOCO_IVectorView_WUIXADO_Block** out);
 
-/* Windows.UI.Xaml.Documents.BlockCollection.IndexOf(index) */
 HRESULT wuixado_block_collection_index_of(WUIXADO_BlockCollection *self, WUIXADO_Block* value, uint32_t index, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.BlockCollection.SetAt(index) */
 HRESULT wuixado_block_collection_set_at(WUIXADO_BlockCollection *self, uint32_t index, WUIXADO_Block* value);
 
-/* Windows.UI.Xaml.Documents.BlockCollection.InsertAt(index) */
 HRESULT wuixado_block_collection_insert_at(WUIXADO_BlockCollection *self, uint32_t index, WUIXADO_Block* value);
 
-/* Windows.UI.Xaml.Documents.BlockCollection.RemoveAt(index) */
 HRESULT wuixado_block_collection_remove_at(WUIXADO_BlockCollection *self, uint32_t index);
 
-/* Windows.UI.Xaml.Documents.BlockCollection.Append() */
 HRESULT wuixado_block_collection_append(WUIXADO_BlockCollection *self, WUIXADO_Block* value);
 
-/* Windows.UI.Xaml.Documents.BlockCollection.RemoveAtEnd() */
 HRESULT wuixado_block_collection_remove_at_end(WUIXADO_BlockCollection *self);
 
-/* Windows.UI.Xaml.Documents.BlockCollection.Clear() */
 HRESULT wuixado_block_collection_clear(WUIXADO_BlockCollection *self);
 
-/* Windows.UI.Xaml.Documents.BlockCollection.GetMany(startIndex, items) */
 HRESULT wuixado_block_collection_get_many(WUIXADO_BlockCollection *self, uint32_t startIndex, WUIXADO_Block *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.UI.Xaml.Documents.BlockCollection.ReplaceAll(items) */
 HRESULT wuixado_block_collection_replace_all(WUIXADO_BlockCollection *self, WUIXADO_Block *items, uint32_t items_len);
 
-/* Windows.UI.Xaml.Documents.BlockCollection.First() */
 HRESULT wuixado_block_collection_first(WUIXADO_BlockCollection *self, WFOCO_IIterator_WUIXADO_Block** out);
 
-/* Windows.UI.Xaml.Documents.Block */
-/* Windows.UI.Xaml.Documents.Block.get_TextAlignment() */
 HRESULT wuixado_block_get__text_alignment(WUIXADO_Block *self, WUIXA_TextAlignment *value);
 
-/* Windows.UI.Xaml.Documents.Block.put_TextAlignment() */
 HRESULT wuixado_block_put__text_alignment(WUIXADO_Block *self, WUIXA_TextAlignment value);
 
-/* Windows.UI.Xaml.Documents.Block.get_LineHeight() */
 HRESULT wuixado_block_get__line_height(WUIXADO_Block *self, double *value);
 
-/* Windows.UI.Xaml.Documents.Block.put_LineHeight() */
 HRESULT wuixado_block_put__line_height(WUIXADO_Block *self, double value);
 
-/* Windows.UI.Xaml.Documents.Block.get_LineStackingStrategy() */
 HRESULT wuixado_block_get__line_stacking_strategy(WUIXADO_Block *self, WUIXA_LineStackingStrategy *value);
 
-/* Windows.UI.Xaml.Documents.Block.put_LineStackingStrategy() */
 HRESULT wuixado_block_put__line_stacking_strategy(WUIXADO_Block *self, WUIXA_LineStackingStrategy value);
 
-/* Windows.UI.Xaml.Documents.Block.get_Margin() */
 HRESULT wuixado_block_get__margin(WUIXADO_Block *self, WUIXA_Thickness *value);
 
-/* Windows.UI.Xaml.Documents.Block.put_Margin() */
 HRESULT wuixado_block_put__margin(WUIXADO_Block *self, WUIXA_Thickness value);
 
-/* Windows.UI.Xaml.Documents.Block.get_HorizontalTextAlignment() */
 HRESULT wuixado_block_get__horizontal_text_alignment(WUIXADO_Block *self, WUIXA_TextAlignment *value);
 
-/* Windows.UI.Xaml.Documents.Block.put_HorizontalTextAlignment() */
 HRESULT wuixado_block_put__horizontal_text_alignment(WUIXADO_Block *self, WUIXA_TextAlignment value);
 
-/* Windows.UI.Xaml.Documents.Block.get_HorizontalTextAlignmentProperty() */
 HRESULT wuixado_block_get__horizontal_text_alignment_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Block.get_TextAlignmentProperty() */
 HRESULT wuixado_block_get__text_alignment_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Block.get_LineHeightProperty() */
 HRESULT wuixado_block_get__line_height_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Block.get_LineStackingStrategyProperty() */
 HRESULT wuixado_block_get__line_stacking_strategy_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Block.get_MarginProperty() */
 HRESULT wuixado_block_get__margin_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.TextElement */
-/* Windows.UI.Xaml.Documents.TextElement.get_Name() */
 HRESULT wuixado_text_element_get__name(WUIXADO_TextElement *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_FontSize() */
 HRESULT wuixado_text_element_get__font_size(WUIXADO_TextElement *self, double *value);
 
-/* Windows.UI.Xaml.Documents.TextElement.put_FontSize() */
 HRESULT wuixado_text_element_put__font_size(WUIXADO_TextElement *self, double value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_FontFamily() */
 HRESULT wuixado_text_element_get__font_family(WUIXADO_TextElement *self, WUIXAME_FontFamily** value);
 
-/* Windows.UI.Xaml.Documents.TextElement.put_FontFamily() */
 HRESULT wuixado_text_element_put__font_family(WUIXADO_TextElement *self, WUIXAME_FontFamily* value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_FontWeight() */
 HRESULT wuixado_text_element_get__font_weight(WUIXADO_TextElement *self, WUITE_FontWeight *value);
 
-/* Windows.UI.Xaml.Documents.TextElement.put_FontWeight() */
 HRESULT wuixado_text_element_put__font_weight(WUIXADO_TextElement *self, WUITE_FontWeight value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_FontStyle() */
 HRESULT wuixado_text_element_get__font_style(WUIXADO_TextElement *self, WUITE_FontStyle *value);
 
-/* Windows.UI.Xaml.Documents.TextElement.put_FontStyle() */
 HRESULT wuixado_text_element_put__font_style(WUIXADO_TextElement *self, WUITE_FontStyle value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_FontStretch() */
 HRESULT wuixado_text_element_get__font_stretch(WUIXADO_TextElement *self, WUITE_FontStretch *value);
 
-/* Windows.UI.Xaml.Documents.TextElement.put_FontStretch() */
 HRESULT wuixado_text_element_put__font_stretch(WUIXADO_TextElement *self, WUITE_FontStretch value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_CharacterSpacing() */
 HRESULT wuixado_text_element_get__character_spacing(WUIXADO_TextElement *self, int32_t *value);
 
-/* Windows.UI.Xaml.Documents.TextElement.put_CharacterSpacing() */
 HRESULT wuixado_text_element_put__character_spacing(WUIXADO_TextElement *self, int32_t value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_Foreground() */
 HRESULT wuixado_text_element_get__foreground(WUIXADO_TextElement *self, WUIXAME_Brush** value);
 
-/* Windows.UI.Xaml.Documents.TextElement.put_Foreground() */
 HRESULT wuixado_text_element_put__foreground(WUIXADO_TextElement *self, WUIXAME_Brush* value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_Language() */
 HRESULT wuixado_text_element_get__language(WUIXADO_TextElement *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Documents.TextElement.put_Language() */
 HRESULT wuixado_text_element_put__language(WUIXADO_TextElement *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_ContentStart() */
 HRESULT wuixado_text_element_get__content_start(WUIXADO_TextElement *self, WUIXADO_TextPointer** value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_ContentEnd() */
 HRESULT wuixado_text_element_get__content_end(WUIXADO_TextElement *self, WUIXADO_TextPointer** value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_ElementStart() */
 HRESULT wuixado_text_element_get__element_start(WUIXADO_TextElement *self, WUIXADO_TextPointer** value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_ElementEnd() */
 HRESULT wuixado_text_element_get__element_end(WUIXADO_TextElement *self, WUIXADO_TextPointer** value);
 
-/* Windows.UI.Xaml.Documents.TextElement.FindName(name) */
 HRESULT wuixado_text_element_find_name(WUIXADO_TextElement *self, cwinrt_hstring name, IInspectable** out);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_IsTextScaleFactorEnabled() */
 HRESULT wuixado_text_element_get__is_text_scale_factor_enabled(WUIXADO_TextElement *self, BOOL *value);
 
-/* Windows.UI.Xaml.Documents.TextElement.put_IsTextScaleFactorEnabled() */
 HRESULT wuixado_text_element_put__is_text_scale_factor_enabled(WUIXADO_TextElement *self, BOOL value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_AllowFocusOnInteraction() */
 HRESULT wuixado_text_element_get__allow_focus_on_interaction(WUIXADO_TextElement *self, BOOL *value);
 
-/* Windows.UI.Xaml.Documents.TextElement.put_AllowFocusOnInteraction() */
 HRESULT wuixado_text_element_put__allow_focus_on_interaction(WUIXADO_TextElement *self, BOOL value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_AccessKey() */
 HRESULT wuixado_text_element_get__access_key(WUIXADO_TextElement *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Documents.TextElement.put_AccessKey() */
 HRESULT wuixado_text_element_put__access_key(WUIXADO_TextElement *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_ExitDisplayModeOnAccessKeyInvoked() */
 HRESULT wuixado_text_element_get__exit_display_mode_on_access_key_invoked(WUIXADO_TextElement *self, BOOL *value);
 
-/* Windows.UI.Xaml.Documents.TextElement.put_ExitDisplayModeOnAccessKeyInvoked() */
 HRESULT wuixado_text_element_put__exit_display_mode_on_access_key_invoked(WUIXADO_TextElement *self, BOOL value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_TextDecorations() */
 HRESULT wuixado_text_element_get__text_decorations(WUIXADO_TextElement *self, WUITE_TextDecorations *value);
 
-/* Windows.UI.Xaml.Documents.TextElement.put_TextDecorations() */
 HRESULT wuixado_text_element_put__text_decorations(WUIXADO_TextElement *self, WUITE_TextDecorations value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_IsAccessKeyScope() */
 HRESULT wuixado_text_element_get__is_access_key_scope(WUIXADO_TextElement *self, BOOL *value);
 
-/* Windows.UI.Xaml.Documents.TextElement.put_IsAccessKeyScope() */
 HRESULT wuixado_text_element_put__is_access_key_scope(WUIXADO_TextElement *self, BOOL value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_AccessKeyScopeOwner() */
 HRESULT wuixado_text_element_get__access_key_scope_owner(WUIXADO_TextElement *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Documents.TextElement.put_AccessKeyScopeOwner() */
 HRESULT wuixado_text_element_put__access_key_scope_owner(WUIXADO_TextElement *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_KeyTipPlacementMode() */
 HRESULT wuixado_text_element_get__key_tip_placement_mode(WUIXADO_TextElement *self, WUIXAIN_KeyTipPlacementMode *value);
 
-/* Windows.UI.Xaml.Documents.TextElement.put_KeyTipPlacementMode() */
 HRESULT wuixado_text_element_put__key_tip_placement_mode(WUIXADO_TextElement *self, WUIXAIN_KeyTipPlacementMode value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_KeyTipHorizontalOffset() */
 HRESULT wuixado_text_element_get__key_tip_horizontal_offset(WUIXADO_TextElement *self, double *value);
 
-/* Windows.UI.Xaml.Documents.TextElement.put_KeyTipHorizontalOffset() */
 HRESULT wuixado_text_element_put__key_tip_horizontal_offset(WUIXADO_TextElement *self, double value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_KeyTipVerticalOffset() */
 HRESULT wuixado_text_element_get__key_tip_vertical_offset(WUIXADO_TextElement *self, double *value);
 
-/* Windows.UI.Xaml.Documents.TextElement.put_KeyTipVerticalOffset() */
 HRESULT wuixado_text_element_put__key_tip_vertical_offset(WUIXADO_TextElement *self, double value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_XamlRoot() */
 HRESULT wuixado_text_element_get__xaml_root(WUIXADO_TextElement *self, WUIXA_XamlRoot** value);
 
-/* Windows.UI.Xaml.Documents.TextElement.put_XamlRoot() */
 HRESULT wuixado_text_element_put__xaml_root(WUIXADO_TextElement *self, WUIXA_XamlRoot* value);
 
-/* Windows.UI.Xaml.Documents.TextElement.OnDisconnectVisualChildren() */
 HRESULT wuixado_text_element_handle_disconnect_visual_children(WUIXADO_TextElement *self);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_TextDecorationsProperty() */
 HRESULT wuixado_text_element_get__text_decorations_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_IsAccessKeyScopeProperty() */
 HRESULT wuixado_text_element_get__is_access_key_scope_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_AccessKeyScopeOwnerProperty() */
 HRESULT wuixado_text_element_get__access_key_scope_owner_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_KeyTipPlacementModeProperty() */
 HRESULT wuixado_text_element_get__key_tip_placement_mode_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_KeyTipHorizontalOffsetProperty() */
 HRESULT wuixado_text_element_get__key_tip_horizontal_offset_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_KeyTipVerticalOffsetProperty() */
 HRESULT wuixado_text_element_get__key_tip_vertical_offset_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_AllowFocusOnInteractionProperty() */
 HRESULT wuixado_text_element_get__allow_focus_on_interaction_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_AccessKeyProperty() */
 HRESULT wuixado_text_element_get__access_key_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_ExitDisplayModeOnAccessKeyInvokedProperty() */
 HRESULT wuixado_text_element_get__exit_display_mode_on_access_key_invoked_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_IsTextScaleFactorEnabledProperty() */
 HRESULT wuixado_text_element_get__is_text_scale_factor_enabled_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_FontSizeProperty() */
 HRESULT wuixado_text_element_get__font_size_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_FontFamilyProperty() */
 HRESULT wuixado_text_element_get__font_family_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_FontWeightProperty() */
 HRESULT wuixado_text_element_get__font_weight_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_FontStyleProperty() */
 HRESULT wuixado_text_element_get__font_style_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_FontStretchProperty() */
 HRESULT wuixado_text_element_get__font_stretch_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_CharacterSpacingProperty() */
 HRESULT wuixado_text_element_get__character_spacing_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_ForegroundProperty() */
 HRESULT wuixado_text_element_get__foreground_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.TextElement.get_LanguageProperty() */
 HRESULT wuixado_text_element_get__language_property(WUIXA_DependencyProperty** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixado_text_element_on_access_key_display_requested(WUIXADO_TextElement *self, cwinrt_event_fn fn, void *ctx);
@@ -1692,1103 +1351,716 @@ void wuixado_text_element_off_access_key_display_dismissed(WUIXADO_TextElement *
 cwinrt_token wuixado_text_element_on_access_key_invoked(WUIXADO_TextElement *self, cwinrt_event_fn fn, void *ctx);
 void wuixado_text_element_off_access_key_invoked(WUIXADO_TextElement *self, cwinrt_token token);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics */
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_AnnotationAlternatesProperty() */
 HRESULT wuixado_typography_statics_get__annotation_alternates_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetAnnotationAlternates(element) */
 HRESULT wuixado_typography_statics_get_annotation_alternates(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, int32_t *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetAnnotationAlternates(element) */
 HRESULT wuixado_typography_statics_set_annotation_alternates(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, int32_t value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_EastAsianExpertFormsProperty() */
 HRESULT wuixado_typography_statics_get__east_asian_expert_forms_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetEastAsianExpertForms(element) */
 HRESULT wuixado_typography_statics_get_east_asian_expert_forms(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetEastAsianExpertForms(element) */
 HRESULT wuixado_typography_statics_set_east_asian_expert_forms(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_EastAsianLanguageProperty() */
 HRESULT wuixado_typography_statics_get__east_asian_language_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetEastAsianLanguage(element) */
 HRESULT wuixado_typography_statics_get_east_asian_language(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, WUIXA_FontEastAsianLanguage *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetEastAsianLanguage(element) */
 HRESULT wuixado_typography_statics_set_east_asian_language(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, WUIXA_FontEastAsianLanguage value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_EastAsianWidthsProperty() */
 HRESULT wuixado_typography_statics_get__east_asian_widths_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetEastAsianWidths(element) */
 HRESULT wuixado_typography_statics_get_east_asian_widths(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, WUIXA_FontEastAsianWidths *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetEastAsianWidths(element) */
 HRESULT wuixado_typography_statics_set_east_asian_widths(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, WUIXA_FontEastAsianWidths value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_StandardLigaturesProperty() */
 HRESULT wuixado_typography_statics_get__standard_ligatures_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetStandardLigatures(element) */
 HRESULT wuixado_typography_statics_get_standard_ligatures(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetStandardLigatures(element) */
 HRESULT wuixado_typography_statics_set_standard_ligatures(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_ContextualLigaturesProperty() */
 HRESULT wuixado_typography_statics_get__contextual_ligatures_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetContextualLigatures(element) */
 HRESULT wuixado_typography_statics_get_contextual_ligatures(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetContextualLigatures(element) */
 HRESULT wuixado_typography_statics_set_contextual_ligatures(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_DiscretionaryLigaturesProperty() */
 HRESULT wuixado_typography_statics_get__discretionary_ligatures_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetDiscretionaryLigatures(element) */
 HRESULT wuixado_typography_statics_get_discretionary_ligatures(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetDiscretionaryLigatures(element) */
 HRESULT wuixado_typography_statics_set_discretionary_ligatures(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_HistoricalLigaturesProperty() */
 HRESULT wuixado_typography_statics_get__historical_ligatures_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetHistoricalLigatures(element) */
 HRESULT wuixado_typography_statics_get_historical_ligatures(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetHistoricalLigatures(element) */
 HRESULT wuixado_typography_statics_set_historical_ligatures(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_StandardSwashesProperty() */
 HRESULT wuixado_typography_statics_get__standard_swashes_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetStandardSwashes(element) */
 HRESULT wuixado_typography_statics_get_standard_swashes(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, int32_t *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetStandardSwashes(element) */
 HRESULT wuixado_typography_statics_set_standard_swashes(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, int32_t value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_ContextualSwashesProperty() */
 HRESULT wuixado_typography_statics_get__contextual_swashes_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetContextualSwashes(element) */
 HRESULT wuixado_typography_statics_get_contextual_swashes(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, int32_t *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetContextualSwashes(element) */
 HRESULT wuixado_typography_statics_set_contextual_swashes(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, int32_t value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_ContextualAlternatesProperty() */
 HRESULT wuixado_typography_statics_get__contextual_alternates_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetContextualAlternates(element) */
 HRESULT wuixado_typography_statics_get_contextual_alternates(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetContextualAlternates(element) */
 HRESULT wuixado_typography_statics_set_contextual_alternates(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_StylisticAlternatesProperty() */
 HRESULT wuixado_typography_statics_get__stylistic_alternates_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetStylisticAlternates(element) */
 HRESULT wuixado_typography_statics_get_stylistic_alternates(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, int32_t *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetStylisticAlternates(element) */
 HRESULT wuixado_typography_statics_set_stylistic_alternates(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, int32_t value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_StylisticSet1Property() */
 HRESULT wuixado_typography_statics_get__stylistic_set1_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetStylisticSet1(element) */
 HRESULT wuixado_typography_statics_get_stylistic_set1(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetStylisticSet1(element) */
 HRESULT wuixado_typography_statics_set_stylistic_set1(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_StylisticSet2Property() */
 HRESULT wuixado_typography_statics_get__stylistic_set2_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetStylisticSet2(element) */
 HRESULT wuixado_typography_statics_get_stylistic_set2(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetStylisticSet2(element) */
 HRESULT wuixado_typography_statics_set_stylistic_set2(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_StylisticSet3Property() */
 HRESULT wuixado_typography_statics_get__stylistic_set3_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetStylisticSet3(element) */
 HRESULT wuixado_typography_statics_get_stylistic_set3(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetStylisticSet3(element) */
 HRESULT wuixado_typography_statics_set_stylistic_set3(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_StylisticSet4Property() */
 HRESULT wuixado_typography_statics_get__stylistic_set4_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetStylisticSet4(element) */
 HRESULT wuixado_typography_statics_get_stylistic_set4(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetStylisticSet4(element) */
 HRESULT wuixado_typography_statics_set_stylistic_set4(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_StylisticSet5Property() */
 HRESULT wuixado_typography_statics_get__stylistic_set5_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetStylisticSet5(element) */
 HRESULT wuixado_typography_statics_get_stylistic_set5(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetStylisticSet5(element) */
 HRESULT wuixado_typography_statics_set_stylistic_set5(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_StylisticSet6Property() */
 HRESULT wuixado_typography_statics_get__stylistic_set6_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetStylisticSet6(element) */
 HRESULT wuixado_typography_statics_get_stylistic_set6(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetStylisticSet6(element) */
 HRESULT wuixado_typography_statics_set_stylistic_set6(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_StylisticSet7Property() */
 HRESULT wuixado_typography_statics_get__stylistic_set7_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetStylisticSet7(element) */
 HRESULT wuixado_typography_statics_get_stylistic_set7(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetStylisticSet7(element) */
 HRESULT wuixado_typography_statics_set_stylistic_set7(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_StylisticSet8Property() */
 HRESULT wuixado_typography_statics_get__stylistic_set8_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetStylisticSet8(element) */
 HRESULT wuixado_typography_statics_get_stylistic_set8(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetStylisticSet8(element) */
 HRESULT wuixado_typography_statics_set_stylistic_set8(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_StylisticSet9Property() */
 HRESULT wuixado_typography_statics_get__stylistic_set9_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetStylisticSet9(element) */
 HRESULT wuixado_typography_statics_get_stylistic_set9(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetStylisticSet9(element) */
 HRESULT wuixado_typography_statics_set_stylistic_set9(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_StylisticSet10Property() */
 HRESULT wuixado_typography_statics_get__stylistic_set10_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetStylisticSet10(element) */
 HRESULT wuixado_typography_statics_get_stylistic_set10(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetStylisticSet10(element) */
 HRESULT wuixado_typography_statics_set_stylistic_set10(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_StylisticSet11Property() */
 HRESULT wuixado_typography_statics_get__stylistic_set11_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetStylisticSet11(element) */
 HRESULT wuixado_typography_statics_get_stylistic_set11(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetStylisticSet11(element) */
 HRESULT wuixado_typography_statics_set_stylistic_set11(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_StylisticSet12Property() */
 HRESULT wuixado_typography_statics_get__stylistic_set12_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetStylisticSet12(element) */
 HRESULT wuixado_typography_statics_get_stylistic_set12(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetStylisticSet12(element) */
 HRESULT wuixado_typography_statics_set_stylistic_set12(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_StylisticSet13Property() */
 HRESULT wuixado_typography_statics_get__stylistic_set13_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetStylisticSet13(element) */
 HRESULT wuixado_typography_statics_get_stylistic_set13(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetStylisticSet13(element) */
 HRESULT wuixado_typography_statics_set_stylistic_set13(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_StylisticSet14Property() */
 HRESULT wuixado_typography_statics_get__stylistic_set14_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetStylisticSet14(element) */
 HRESULT wuixado_typography_statics_get_stylistic_set14(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetStylisticSet14(element) */
 HRESULT wuixado_typography_statics_set_stylistic_set14(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_StylisticSet15Property() */
 HRESULT wuixado_typography_statics_get__stylistic_set15_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetStylisticSet15(element) */
 HRESULT wuixado_typography_statics_get_stylistic_set15(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetStylisticSet15(element) */
 HRESULT wuixado_typography_statics_set_stylistic_set15(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_StylisticSet16Property() */
 HRESULT wuixado_typography_statics_get__stylistic_set16_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetStylisticSet16(element) */
 HRESULT wuixado_typography_statics_get_stylistic_set16(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetStylisticSet16(element) */
 HRESULT wuixado_typography_statics_set_stylistic_set16(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_StylisticSet17Property() */
 HRESULT wuixado_typography_statics_get__stylistic_set17_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetStylisticSet17(element) */
 HRESULT wuixado_typography_statics_get_stylistic_set17(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetStylisticSet17(element) */
 HRESULT wuixado_typography_statics_set_stylistic_set17(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_StylisticSet18Property() */
 HRESULT wuixado_typography_statics_get__stylistic_set18_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetStylisticSet18(element) */
 HRESULT wuixado_typography_statics_get_stylistic_set18(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetStylisticSet18(element) */
 HRESULT wuixado_typography_statics_set_stylistic_set18(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_StylisticSet19Property() */
 HRESULT wuixado_typography_statics_get__stylistic_set19_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetStylisticSet19(element) */
 HRESULT wuixado_typography_statics_get_stylistic_set19(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetStylisticSet19(element) */
 HRESULT wuixado_typography_statics_set_stylistic_set19(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_StylisticSet20Property() */
 HRESULT wuixado_typography_statics_get__stylistic_set20_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetStylisticSet20(element) */
 HRESULT wuixado_typography_statics_get_stylistic_set20(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetStylisticSet20(element) */
 HRESULT wuixado_typography_statics_set_stylistic_set20(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_CapitalsProperty() */
 HRESULT wuixado_typography_statics_get__capitals_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetCapitals(element) */
 HRESULT wuixado_typography_statics_get_capitals(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, WUIXA_FontCapitals *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetCapitals(element) */
 HRESULT wuixado_typography_statics_set_capitals(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, WUIXA_FontCapitals value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_CapitalSpacingProperty() */
 HRESULT wuixado_typography_statics_get__capital_spacing_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetCapitalSpacing(element) */
 HRESULT wuixado_typography_statics_get_capital_spacing(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetCapitalSpacing(element) */
 HRESULT wuixado_typography_statics_set_capital_spacing(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_KerningProperty() */
 HRESULT wuixado_typography_statics_get__kerning_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetKerning(element) */
 HRESULT wuixado_typography_statics_get_kerning(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetKerning(element) */
 HRESULT wuixado_typography_statics_set_kerning(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_CaseSensitiveFormsProperty() */
 HRESULT wuixado_typography_statics_get__case_sensitive_forms_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetCaseSensitiveForms(element) */
 HRESULT wuixado_typography_statics_get_case_sensitive_forms(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetCaseSensitiveForms(element) */
 HRESULT wuixado_typography_statics_set_case_sensitive_forms(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_HistoricalFormsProperty() */
 HRESULT wuixado_typography_statics_get__historical_forms_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetHistoricalForms(element) */
 HRESULT wuixado_typography_statics_get_historical_forms(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetHistoricalForms(element) */
 HRESULT wuixado_typography_statics_set_historical_forms(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_FractionProperty() */
 HRESULT wuixado_typography_statics_get__fraction_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetFraction(element) */
 HRESULT wuixado_typography_statics_get_fraction(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, WUIXA_FontFraction *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetFraction(element) */
 HRESULT wuixado_typography_statics_set_fraction(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, WUIXA_FontFraction value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_NumeralStyleProperty() */
 HRESULT wuixado_typography_statics_get__numeral_style_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetNumeralStyle(element) */
 HRESULT wuixado_typography_statics_get_numeral_style(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, WUIXA_FontNumeralStyle *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetNumeralStyle(element) */
 HRESULT wuixado_typography_statics_set_numeral_style(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, WUIXA_FontNumeralStyle value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_NumeralAlignmentProperty() */
 HRESULT wuixado_typography_statics_get__numeral_alignment_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetNumeralAlignment(element) */
 HRESULT wuixado_typography_statics_get_numeral_alignment(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, WUIXA_FontNumeralAlignment *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetNumeralAlignment(element) */
 HRESULT wuixado_typography_statics_set_numeral_alignment(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, WUIXA_FontNumeralAlignment value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_SlashedZeroProperty() */
 HRESULT wuixado_typography_statics_get__slashed_zero_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetSlashedZero(element) */
 HRESULT wuixado_typography_statics_get_slashed_zero(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetSlashedZero(element) */
 HRESULT wuixado_typography_statics_set_slashed_zero(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_MathematicalGreekProperty() */
 HRESULT wuixado_typography_statics_get__mathematical_greek_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetMathematicalGreek(element) */
 HRESULT wuixado_typography_statics_get_mathematical_greek(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetMathematicalGreek(element) */
 HRESULT wuixado_typography_statics_set_mathematical_greek(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.get_VariantsProperty() */
 HRESULT wuixado_typography_statics_get__variants_property(WUIXADO_ITypographyStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.GetVariants(element) */
 HRESULT wuixado_typography_statics_get_variants(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, WUIXA_FontVariants *out);
 
-/* Windows.UI.Xaml.Documents.ITypographyStatics.SetVariants(element) */
 HRESULT wuixado_typography_statics_set_variants(WUIXADO_ITypographyStatics *self, WUIXA_DependencyObject* element, WUIXA_FontVariants value);
 
-/* activate Windows.UI.Xaml.Documents.InlineCollection */
 HRESULT wuixado_inline_collection_new(WUIXADO_InlineCollection **out);
 
-/* Windows.UI.Xaml.Documents.InlineCollection */
-/* Windows.UI.Xaml.Documents.InlineCollection.GetAt(index) */
 HRESULT wuixado_inline_collection_get_at(WUIXADO_InlineCollection *self, uint32_t index, WUIXADO_Inline** out);
 
-/* Windows.UI.Xaml.Documents.InlineCollection.get_Size() */
 HRESULT wuixado_inline_collection_get__size(WUIXADO_InlineCollection *self, uint32_t *value);
 
-/* Windows.UI.Xaml.Documents.InlineCollection.GetView() */
 HRESULT wuixado_inline_collection_get_view(WUIXADO_InlineCollection *self, WFOCO_IVectorView_WUIXADO_Inline** out);
 
-/* Windows.UI.Xaml.Documents.InlineCollection.IndexOf(index) */
 HRESULT wuixado_inline_collection_index_of(WUIXADO_InlineCollection *self, WUIXADO_Inline* value, uint32_t index, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.InlineCollection.SetAt(index) */
 HRESULT wuixado_inline_collection_set_at(WUIXADO_InlineCollection *self, uint32_t index, WUIXADO_Inline* value);
 
-/* Windows.UI.Xaml.Documents.InlineCollection.InsertAt(index) */
 HRESULT wuixado_inline_collection_insert_at(WUIXADO_InlineCollection *self, uint32_t index, WUIXADO_Inline* value);
 
-/* Windows.UI.Xaml.Documents.InlineCollection.RemoveAt(index) */
 HRESULT wuixado_inline_collection_remove_at(WUIXADO_InlineCollection *self, uint32_t index);
 
-/* Windows.UI.Xaml.Documents.InlineCollection.Append() */
 HRESULT wuixado_inline_collection_append(WUIXADO_InlineCollection *self, WUIXADO_Inline* value);
 
-/* Windows.UI.Xaml.Documents.InlineCollection.RemoveAtEnd() */
 HRESULT wuixado_inline_collection_remove_at_end(WUIXADO_InlineCollection *self);
 
-/* Windows.UI.Xaml.Documents.InlineCollection.Clear() */
 HRESULT wuixado_inline_collection_clear(WUIXADO_InlineCollection *self);
 
-/* Windows.UI.Xaml.Documents.InlineCollection.GetMany(startIndex, items) */
 HRESULT wuixado_inline_collection_get_many(WUIXADO_InlineCollection *self, uint32_t startIndex, WUIXADO_Inline *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.UI.Xaml.Documents.InlineCollection.ReplaceAll(items) */
 HRESULT wuixado_inline_collection_replace_all(WUIXADO_InlineCollection *self, WUIXADO_Inline *items, uint32_t items_len);
 
-/* Windows.UI.Xaml.Documents.InlineCollection.First() */
 HRESULT wuixado_inline_collection_first(WUIXADO_InlineCollection *self, WFOCO_IIterator_WUIXADO_Inline** out);
 
-/* activate Windows.UI.Xaml.Documents.InlineUIContainer */
 HRESULT wuixado_inline_u_i_container_new(WUIXADO_InlineUIContainer **out);
 
-/* Windows.UI.Xaml.Documents.InlineUIContainer */
-/* Windows.UI.Xaml.Documents.InlineUIContainer.get_Child() */
 HRESULT wuixado_inline_u_i_container_get__child(WUIXADO_InlineUIContainer *self, WUIXA_UIElement** value);
 
-/* Windows.UI.Xaml.Documents.InlineUIContainer.put_Child() */
 HRESULT wuixado_inline_u_i_container_put__child(WUIXADO_InlineUIContainer *self, WUIXA_UIElement* value);
 
-/* activate Windows.UI.Xaml.Documents.Paragraph */
 HRESULT wuixado_paragraph_new(WUIXADO_Paragraph **out);
 
-/* Windows.UI.Xaml.Documents.Paragraph */
-/* Windows.UI.Xaml.Documents.Paragraph.get_Inlines() */
 HRESULT wuixado_paragraph_get__inlines(WUIXADO_Paragraph *self, WUIXADO_InlineCollection** value);
 
-/* Windows.UI.Xaml.Documents.Paragraph.get_TextIndent() */
 HRESULT wuixado_paragraph_get__text_indent(WUIXADO_Paragraph *self, double *value);
 
-/* Windows.UI.Xaml.Documents.Paragraph.put_TextIndent() */
 HRESULT wuixado_paragraph_put__text_indent(WUIXADO_Paragraph *self, double value);
 
-/* Windows.UI.Xaml.Documents.Paragraph.get_TextIndentProperty() */
 HRESULT wuixado_paragraph_get__text_indent_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Documents.Run */
 HRESULT wuixado_run_new(WUIXADO_Run **out);
 
-/* Windows.UI.Xaml.Documents.Run */
-/* Windows.UI.Xaml.Documents.Run.get_Text() */
 HRESULT wuixado_run_get__text(WUIXADO_Run *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Documents.Run.put_Text() */
 HRESULT wuixado_run_put__text(WUIXADO_Run *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Documents.Run.get_FlowDirection() */
 HRESULT wuixado_run_get__flow_direction(WUIXADO_Run *self, WUIXA_FlowDirection *value);
 
-/* Windows.UI.Xaml.Documents.Run.put_FlowDirection() */
 HRESULT wuixado_run_put__flow_direction(WUIXADO_Run *self, WUIXA_FlowDirection value);
 
-/* Windows.UI.Xaml.Documents.Run.get_FlowDirectionProperty() */
 HRESULT wuixado_run_get__flow_direction_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.TextHighlighter */
-/* Windows.UI.Xaml.Documents.TextHighlighter.get_Ranges() */
 HRESULT wuixado_text_highlighter_get__ranges(WUIXADO_TextHighlighter *self, WFOCO_IVector_WUIXADO_TextRange** value);
 
-/* Windows.UI.Xaml.Documents.TextHighlighter.get_Foreground() */
 HRESULT wuixado_text_highlighter_get__foreground(WUIXADO_TextHighlighter *self, WUIXAME_Brush** value);
 
-/* Windows.UI.Xaml.Documents.TextHighlighter.put_Foreground() */
 HRESULT wuixado_text_highlighter_put__foreground(WUIXADO_TextHighlighter *self, WUIXAME_Brush* value);
 
-/* Windows.UI.Xaml.Documents.TextHighlighter.get_Background() */
 HRESULT wuixado_text_highlighter_get__background(WUIXADO_TextHighlighter *self, WUIXAME_Brush** value);
 
-/* Windows.UI.Xaml.Documents.TextHighlighter.put_Background() */
 HRESULT wuixado_text_highlighter_put__background(WUIXADO_TextHighlighter *self, WUIXAME_Brush* value);
 
-/* Windows.UI.Xaml.Documents.TextHighlighter.get_ForegroundProperty() */
 HRESULT wuixado_text_highlighter_get__foreground_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.TextHighlighter.get_BackgroundProperty() */
 HRESULT wuixado_text_highlighter_get__background_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Documents.TextPointer */
 HRESULT wuixado_text_pointer_new(WUIXADO_TextPointer **out);
 
-/* Windows.UI.Xaml.Documents.TextPointer */
-/* Windows.UI.Xaml.Documents.TextPointer.get_Parent() */
 HRESULT wuixado_text_pointer_get__parent(WUIXADO_TextPointer *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Documents.TextPointer.get_VisualParent() */
 HRESULT wuixado_text_pointer_get__visual_parent(WUIXADO_TextPointer *self, WUIXA_FrameworkElement** value);
 
-/* Windows.UI.Xaml.Documents.TextPointer.get_LogicalDirection() */
 HRESULT wuixado_text_pointer_get__logical_direction(WUIXADO_TextPointer *self, WUIXADO_LogicalDirection *value);
 
-/* Windows.UI.Xaml.Documents.TextPointer.get_Offset() */
 HRESULT wuixado_text_pointer_get__offset(WUIXADO_TextPointer *self, int32_t *value);
 
-/* Windows.UI.Xaml.Documents.TextPointer.GetCharacterRect(direction) */
 HRESULT wuixado_text_pointer_get_character_rect(WUIXADO_TextPointer *self, WUIXADO_LogicalDirection direction, WF_Rect *out);
 
-/* Windows.UI.Xaml.Documents.TextPointer.GetPositionAtOffset(offset, direction) */
 HRESULT wuixado_text_pointer_get_position_at_offset(WUIXADO_TextPointer *self, int32_t offset, WUIXADO_LogicalDirection direction, WUIXADO_TextPointer** out);
 
-/* activate Windows.UI.Xaml.Documents.Typography */
 HRESULT wuixado_typography_new(WUIXADO_Typography **out);
 
-/* Windows.UI.Xaml.Documents.Typography */
-/* Windows.UI.Xaml.Documents.Typography.get_AnnotationAlternatesProperty() */
 HRESULT wuixado_typography_get__annotation_alternates_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetAnnotationAlternates(element) */
 HRESULT wuixado_typography_get_annotation_alternates(WUIXA_DependencyObject* element, int32_t *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetAnnotationAlternates(element) */
 HRESULT wuixado_typography_set_annotation_alternates(WUIXA_DependencyObject* element, int32_t value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_EastAsianExpertFormsProperty() */
 HRESULT wuixado_typography_get__east_asian_expert_forms_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetEastAsianExpertForms(element) */
 HRESULT wuixado_typography_get_east_asian_expert_forms(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetEastAsianExpertForms(element) */
 HRESULT wuixado_typography_set_east_asian_expert_forms(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_EastAsianLanguageProperty() */
 HRESULT wuixado_typography_get__east_asian_language_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetEastAsianLanguage(element) */
 HRESULT wuixado_typography_get_east_asian_language(WUIXA_DependencyObject* element, WUIXA_FontEastAsianLanguage *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetEastAsianLanguage(element) */
 HRESULT wuixado_typography_set_east_asian_language(WUIXA_DependencyObject* element, WUIXA_FontEastAsianLanguage value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_EastAsianWidthsProperty() */
 HRESULT wuixado_typography_get__east_asian_widths_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetEastAsianWidths(element) */
 HRESULT wuixado_typography_get_east_asian_widths(WUIXA_DependencyObject* element, WUIXA_FontEastAsianWidths *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetEastAsianWidths(element) */
 HRESULT wuixado_typography_set_east_asian_widths(WUIXA_DependencyObject* element, WUIXA_FontEastAsianWidths value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_StandardLigaturesProperty() */
 HRESULT wuixado_typography_get__standard_ligatures_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetStandardLigatures(element) */
 HRESULT wuixado_typography_get_standard_ligatures(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetStandardLigatures(element) */
 HRESULT wuixado_typography_set_standard_ligatures(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_ContextualLigaturesProperty() */
 HRESULT wuixado_typography_get__contextual_ligatures_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetContextualLigatures(element) */
 HRESULT wuixado_typography_get_contextual_ligatures(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetContextualLigatures(element) */
 HRESULT wuixado_typography_set_contextual_ligatures(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_DiscretionaryLigaturesProperty() */
 HRESULT wuixado_typography_get__discretionary_ligatures_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetDiscretionaryLigatures(element) */
 HRESULT wuixado_typography_get_discretionary_ligatures(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetDiscretionaryLigatures(element) */
 HRESULT wuixado_typography_set_discretionary_ligatures(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_HistoricalLigaturesProperty() */
 HRESULT wuixado_typography_get__historical_ligatures_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetHistoricalLigatures(element) */
 HRESULT wuixado_typography_get_historical_ligatures(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetHistoricalLigatures(element) */
 HRESULT wuixado_typography_set_historical_ligatures(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_StandardSwashesProperty() */
 HRESULT wuixado_typography_get__standard_swashes_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetStandardSwashes(element) */
 HRESULT wuixado_typography_get_standard_swashes(WUIXA_DependencyObject* element, int32_t *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetStandardSwashes(element) */
 HRESULT wuixado_typography_set_standard_swashes(WUIXA_DependencyObject* element, int32_t value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_ContextualSwashesProperty() */
 HRESULT wuixado_typography_get__contextual_swashes_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetContextualSwashes(element) */
 HRESULT wuixado_typography_get_contextual_swashes(WUIXA_DependencyObject* element, int32_t *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetContextualSwashes(element) */
 HRESULT wuixado_typography_set_contextual_swashes(WUIXA_DependencyObject* element, int32_t value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_ContextualAlternatesProperty() */
 HRESULT wuixado_typography_get__contextual_alternates_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetContextualAlternates(element) */
 HRESULT wuixado_typography_get_contextual_alternates(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetContextualAlternates(element) */
 HRESULT wuixado_typography_set_contextual_alternates(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_StylisticAlternatesProperty() */
 HRESULT wuixado_typography_get__stylistic_alternates_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetStylisticAlternates(element) */
 HRESULT wuixado_typography_get_stylistic_alternates(WUIXA_DependencyObject* element, int32_t *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetStylisticAlternates(element) */
 HRESULT wuixado_typography_set_stylistic_alternates(WUIXA_DependencyObject* element, int32_t value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_StylisticSet1Property() */
 HRESULT wuixado_typography_get__stylistic_set1_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetStylisticSet1(element) */
 HRESULT wuixado_typography_get_stylistic_set1(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetStylisticSet1(element) */
 HRESULT wuixado_typography_set_stylistic_set1(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_StylisticSet2Property() */
 HRESULT wuixado_typography_get__stylistic_set2_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetStylisticSet2(element) */
 HRESULT wuixado_typography_get_stylistic_set2(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetStylisticSet2(element) */
 HRESULT wuixado_typography_set_stylistic_set2(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_StylisticSet3Property() */
 HRESULT wuixado_typography_get__stylistic_set3_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetStylisticSet3(element) */
 HRESULT wuixado_typography_get_stylistic_set3(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetStylisticSet3(element) */
 HRESULT wuixado_typography_set_stylistic_set3(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_StylisticSet4Property() */
 HRESULT wuixado_typography_get__stylistic_set4_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetStylisticSet4(element) */
 HRESULT wuixado_typography_get_stylistic_set4(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetStylisticSet4(element) */
 HRESULT wuixado_typography_set_stylistic_set4(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_StylisticSet5Property() */
 HRESULT wuixado_typography_get__stylistic_set5_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetStylisticSet5(element) */
 HRESULT wuixado_typography_get_stylistic_set5(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetStylisticSet5(element) */
 HRESULT wuixado_typography_set_stylistic_set5(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_StylisticSet6Property() */
 HRESULT wuixado_typography_get__stylistic_set6_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetStylisticSet6(element) */
 HRESULT wuixado_typography_get_stylistic_set6(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetStylisticSet6(element) */
 HRESULT wuixado_typography_set_stylistic_set6(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_StylisticSet7Property() */
 HRESULT wuixado_typography_get__stylistic_set7_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetStylisticSet7(element) */
 HRESULT wuixado_typography_get_stylistic_set7(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetStylisticSet7(element) */
 HRESULT wuixado_typography_set_stylistic_set7(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_StylisticSet8Property() */
 HRESULT wuixado_typography_get__stylistic_set8_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetStylisticSet8(element) */
 HRESULT wuixado_typography_get_stylistic_set8(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetStylisticSet8(element) */
 HRESULT wuixado_typography_set_stylistic_set8(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_StylisticSet9Property() */
 HRESULT wuixado_typography_get__stylistic_set9_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetStylisticSet9(element) */
 HRESULT wuixado_typography_get_stylistic_set9(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetStylisticSet9(element) */
 HRESULT wuixado_typography_set_stylistic_set9(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_StylisticSet10Property() */
 HRESULT wuixado_typography_get__stylistic_set10_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetStylisticSet10(element) */
 HRESULT wuixado_typography_get_stylistic_set10(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetStylisticSet10(element) */
 HRESULT wuixado_typography_set_stylistic_set10(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_StylisticSet11Property() */
 HRESULT wuixado_typography_get__stylistic_set11_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetStylisticSet11(element) */
 HRESULT wuixado_typography_get_stylistic_set11(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetStylisticSet11(element) */
 HRESULT wuixado_typography_set_stylistic_set11(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_StylisticSet12Property() */
 HRESULT wuixado_typography_get__stylistic_set12_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetStylisticSet12(element) */
 HRESULT wuixado_typography_get_stylistic_set12(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetStylisticSet12(element) */
 HRESULT wuixado_typography_set_stylistic_set12(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_StylisticSet13Property() */
 HRESULT wuixado_typography_get__stylistic_set13_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetStylisticSet13(element) */
 HRESULT wuixado_typography_get_stylistic_set13(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetStylisticSet13(element) */
 HRESULT wuixado_typography_set_stylistic_set13(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_StylisticSet14Property() */
 HRESULT wuixado_typography_get__stylistic_set14_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetStylisticSet14(element) */
 HRESULT wuixado_typography_get_stylistic_set14(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetStylisticSet14(element) */
 HRESULT wuixado_typography_set_stylistic_set14(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_StylisticSet15Property() */
 HRESULT wuixado_typography_get__stylistic_set15_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetStylisticSet15(element) */
 HRESULT wuixado_typography_get_stylistic_set15(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetStylisticSet15(element) */
 HRESULT wuixado_typography_set_stylistic_set15(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_StylisticSet16Property() */
 HRESULT wuixado_typography_get__stylistic_set16_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetStylisticSet16(element) */
 HRESULT wuixado_typography_get_stylistic_set16(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetStylisticSet16(element) */
 HRESULT wuixado_typography_set_stylistic_set16(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_StylisticSet17Property() */
 HRESULT wuixado_typography_get__stylistic_set17_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetStylisticSet17(element) */
 HRESULT wuixado_typography_get_stylistic_set17(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetStylisticSet17(element) */
 HRESULT wuixado_typography_set_stylistic_set17(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_StylisticSet18Property() */
 HRESULT wuixado_typography_get__stylistic_set18_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetStylisticSet18(element) */
 HRESULT wuixado_typography_get_stylistic_set18(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetStylisticSet18(element) */
 HRESULT wuixado_typography_set_stylistic_set18(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_StylisticSet19Property() */
 HRESULT wuixado_typography_get__stylistic_set19_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetStylisticSet19(element) */
 HRESULT wuixado_typography_get_stylistic_set19(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetStylisticSet19(element) */
 HRESULT wuixado_typography_set_stylistic_set19(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_StylisticSet20Property() */
 HRESULT wuixado_typography_get__stylistic_set20_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetStylisticSet20(element) */
 HRESULT wuixado_typography_get_stylistic_set20(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetStylisticSet20(element) */
 HRESULT wuixado_typography_set_stylistic_set20(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_CapitalsProperty() */
 HRESULT wuixado_typography_get__capitals_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetCapitals(element) */
 HRESULT wuixado_typography_get_capitals(WUIXA_DependencyObject* element, WUIXA_FontCapitals *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetCapitals(element) */
 HRESULT wuixado_typography_set_capitals(WUIXA_DependencyObject* element, WUIXA_FontCapitals value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_CapitalSpacingProperty() */
 HRESULT wuixado_typography_get__capital_spacing_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetCapitalSpacing(element) */
 HRESULT wuixado_typography_get_capital_spacing(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetCapitalSpacing(element) */
 HRESULT wuixado_typography_set_capital_spacing(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_KerningProperty() */
 HRESULT wuixado_typography_get__kerning_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetKerning(element) */
 HRESULT wuixado_typography_get_kerning(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetKerning(element) */
 HRESULT wuixado_typography_set_kerning(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_CaseSensitiveFormsProperty() */
 HRESULT wuixado_typography_get__case_sensitive_forms_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetCaseSensitiveForms(element) */
 HRESULT wuixado_typography_get_case_sensitive_forms(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetCaseSensitiveForms(element) */
 HRESULT wuixado_typography_set_case_sensitive_forms(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_HistoricalFormsProperty() */
 HRESULT wuixado_typography_get__historical_forms_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetHistoricalForms(element) */
 HRESULT wuixado_typography_get_historical_forms(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetHistoricalForms(element) */
 HRESULT wuixado_typography_set_historical_forms(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_FractionProperty() */
 HRESULT wuixado_typography_get__fraction_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetFraction(element) */
 HRESULT wuixado_typography_get_fraction(WUIXA_DependencyObject* element, WUIXA_FontFraction *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetFraction(element) */
 HRESULT wuixado_typography_set_fraction(WUIXA_DependencyObject* element, WUIXA_FontFraction value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_NumeralStyleProperty() */
 HRESULT wuixado_typography_get__numeral_style_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetNumeralStyle(element) */
 HRESULT wuixado_typography_get_numeral_style(WUIXA_DependencyObject* element, WUIXA_FontNumeralStyle *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetNumeralStyle(element) */
 HRESULT wuixado_typography_set_numeral_style(WUIXA_DependencyObject* element, WUIXA_FontNumeralStyle value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_NumeralAlignmentProperty() */
 HRESULT wuixado_typography_get__numeral_alignment_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetNumeralAlignment(element) */
 HRESULT wuixado_typography_get_numeral_alignment(WUIXA_DependencyObject* element, WUIXA_FontNumeralAlignment *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetNumeralAlignment(element) */
 HRESULT wuixado_typography_set_numeral_alignment(WUIXA_DependencyObject* element, WUIXA_FontNumeralAlignment value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_SlashedZeroProperty() */
 HRESULT wuixado_typography_get__slashed_zero_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetSlashedZero(element) */
 HRESULT wuixado_typography_get_slashed_zero(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetSlashedZero(element) */
 HRESULT wuixado_typography_set_slashed_zero(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_MathematicalGreekProperty() */
 HRESULT wuixado_typography_get__mathematical_greek_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetMathematicalGreek(element) */
 HRESULT wuixado_typography_get_mathematical_greek(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetMathematicalGreek(element) */
 HRESULT wuixado_typography_set_mathematical_greek(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Documents.Typography.get_VariantsProperty() */
 HRESULT wuixado_typography_get__variants_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Documents.Typography.GetVariants(element) */
 HRESULT wuixado_typography_get_variants(WUIXA_DependencyObject* element, WUIXA_FontVariants *out);
 
-/* Windows.UI.Xaml.Documents.Typography.SetVariants(element) */
 HRESULT wuixado_typography_set_variants(WUIXA_DependencyObject* element, WUIXA_FontVariants value);
 
-/* Windows.UI.Xaml.Documents.IHyperlink */
-/* Windows.UI.Xaml.Documents.IHyperlink2 */
-/* Windows.UI.Xaml.Documents.IHyperlink2.get_UnderlineStyle() */
 HRESULT wuixado_hyperlink_2_get__underline_style(WUIXADO_IHyperlink_2 *self, WUIXADO_UnderlineStyle *value);
 
-/* Windows.UI.Xaml.Documents.IHyperlink2.put_UnderlineStyle() */
 HRESULT wuixado_hyperlink_2_put__underline_style(WUIXADO_IHyperlink_2 *self, WUIXADO_UnderlineStyle value);
 
-/* Windows.UI.Xaml.Documents.IHyperlink3 */
-/* Windows.UI.Xaml.Documents.IHyperlink3.get_XYFocusLeft() */
 HRESULT wuixado_hyperlink_3_get__x_y_focus_left(WUIXADO_IHyperlink_3 *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Documents.IHyperlink3.put_XYFocusLeft() */
 HRESULT wuixado_hyperlink_3_put__x_y_focus_left(WUIXADO_IHyperlink_3 *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.Documents.IHyperlink3.get_XYFocusRight() */
 HRESULT wuixado_hyperlink_3_get__x_y_focus_right(WUIXADO_IHyperlink_3 *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Documents.IHyperlink3.put_XYFocusRight() */
 HRESULT wuixado_hyperlink_3_put__x_y_focus_right(WUIXADO_IHyperlink_3 *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.Documents.IHyperlink3.get_XYFocusUp() */
 HRESULT wuixado_hyperlink_3_get__x_y_focus_up(WUIXADO_IHyperlink_3 *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Documents.IHyperlink3.put_XYFocusUp() */
 HRESULT wuixado_hyperlink_3_put__x_y_focus_up(WUIXADO_IHyperlink_3 *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.Documents.IHyperlink3.get_XYFocusDown() */
 HRESULT wuixado_hyperlink_3_get__x_y_focus_down(WUIXADO_IHyperlink_3 *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Documents.IHyperlink3.put_XYFocusDown() */
 HRESULT wuixado_hyperlink_3_put__x_y_focus_down(WUIXADO_IHyperlink_3 *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.Documents.IHyperlink3.get_ElementSoundMode() */
 HRESULT wuixado_hyperlink_3_get__element_sound_mode(WUIXADO_IHyperlink_3 *self, WUIXA_ElementSoundMode *value);
 
-/* Windows.UI.Xaml.Documents.IHyperlink3.put_ElementSoundMode() */
 HRESULT wuixado_hyperlink_3_put__element_sound_mode(WUIXADO_IHyperlink_3 *self, WUIXA_ElementSoundMode value);
 
-/* Windows.UI.Xaml.Documents.IHyperlink4 */
-/* Windows.UI.Xaml.Documents.IHyperlink4.get_FocusState() */
 HRESULT wuixado_hyperlink_4_get__focus_state(WUIXADO_IHyperlink_4 *self, WUIXA_FocusState *value);
 
-/* Windows.UI.Xaml.Documents.IHyperlink4.get_XYFocusUpNavigationStrategy() */
 HRESULT wuixado_hyperlink_4_get__x_y_focus_up_navigation_strategy(WUIXADO_IHyperlink_4 *self, WUIXAIN_XYFocusNavigationStrategy *value);
 
-/* Windows.UI.Xaml.Documents.IHyperlink4.put_XYFocusUpNavigationStrategy() */
 HRESULT wuixado_hyperlink_4_put__x_y_focus_up_navigation_strategy(WUIXADO_IHyperlink_4 *self, WUIXAIN_XYFocusNavigationStrategy value);
 
-/* Windows.UI.Xaml.Documents.IHyperlink4.get_XYFocusDownNavigationStrategy() */
 HRESULT wuixado_hyperlink_4_get__x_y_focus_down_navigation_strategy(WUIXADO_IHyperlink_4 *self, WUIXAIN_XYFocusNavigationStrategy *value);
 
-/* Windows.UI.Xaml.Documents.IHyperlink4.put_XYFocusDownNavigationStrategy() */
 HRESULT wuixado_hyperlink_4_put__x_y_focus_down_navigation_strategy(WUIXADO_IHyperlink_4 *self, WUIXAIN_XYFocusNavigationStrategy value);
 
-/* Windows.UI.Xaml.Documents.IHyperlink4.get_XYFocusLeftNavigationStrategy() */
 HRESULT wuixado_hyperlink_4_get__x_y_focus_left_navigation_strategy(WUIXADO_IHyperlink_4 *self, WUIXAIN_XYFocusNavigationStrategy *value);
 
-/* Windows.UI.Xaml.Documents.IHyperlink4.put_XYFocusLeftNavigationStrategy() */
 HRESULT wuixado_hyperlink_4_put__x_y_focus_left_navigation_strategy(WUIXADO_IHyperlink_4 *self, WUIXAIN_XYFocusNavigationStrategy value);
 
-/* Windows.UI.Xaml.Documents.IHyperlink4.get_XYFocusRightNavigationStrategy() */
 HRESULT wuixado_hyperlink_4_get__x_y_focus_right_navigation_strategy(WUIXADO_IHyperlink_4 *self, WUIXAIN_XYFocusNavigationStrategy *value);
 
-/* Windows.UI.Xaml.Documents.IHyperlink4.put_XYFocusRightNavigationStrategy() */
 HRESULT wuixado_hyperlink_4_put__x_y_focus_right_navigation_strategy(WUIXADO_IHyperlink_4 *self, WUIXAIN_XYFocusNavigationStrategy value);
 
-/* Windows.UI.Xaml.Documents.IHyperlink4.Focus() */
 HRESULT wuixado_hyperlink_4_focus(WUIXADO_IHyperlink_4 *self, WUIXA_FocusState value, BOOL *out);
 
-/* Windows.UI.Xaml.Documents.IHyperlink5 */
-/* Windows.UI.Xaml.Documents.IHyperlink5.get_IsTabStop() */
 HRESULT wuixado_hyperlink_5_get__is_tab_stop(WUIXADO_IHyperlink_5 *self, BOOL *value);
 
-/* Windows.UI.Xaml.Documents.IHyperlink5.put_IsTabStop() */
 HRESULT wuixado_hyperlink_5_put__is_tab_stop(WUIXADO_IHyperlink_5 *self, BOOL value);
 
-/* Windows.UI.Xaml.Documents.IHyperlink5.get_TabIndex() */
 HRESULT wuixado_hyperlink_5_get__tab_index(WUIXADO_IHyperlink_5 *self, int32_t *value);
 
-/* Windows.UI.Xaml.Documents.IHyperlink5.put_TabIndex() */
 HRESULT wuixado_hyperlink_5_put__tab_index(WUIXADO_IHyperlink_5 *self, int32_t value);
 
-/* Windows.UI.Xaml.Documents.IGlyphs */
-/* Windows.UI.Xaml.Documents.IGlyphs2 */
-/* Windows.UI.Xaml.Documents.IGlyphs2.get_IsColorFontEnabled() */
 HRESULT wuixado_glyphs_2_get__is_color_font_enabled(WUIXADO_IGlyphs_2 *self, BOOL *value);
 
-/* Windows.UI.Xaml.Documents.IGlyphs2.put_IsColorFontEnabled() */
 HRESULT wuixado_glyphs_2_put__is_color_font_enabled(WUIXADO_IGlyphs_2 *self, BOOL value);
 
-/* Windows.UI.Xaml.Documents.IGlyphs2.get_ColorFontPaletteIndex() */
 HRESULT wuixado_glyphs_2_get__color_font_palette_index(WUIXADO_IGlyphs_2 *self, int32_t *value);
 
-/* Windows.UI.Xaml.Documents.IGlyphs2.put_ColorFontPaletteIndex() */
 HRESULT wuixado_glyphs_2_put__color_font_palette_index(WUIXADO_IGlyphs_2 *self, int32_t value);
 
-/* Windows.UI.Xaml.Documents.IContentLinkInvokedEventArgs */
-/* Windows.UI.Xaml.Documents.IContentLink */
-/* Windows.UI.Xaml.Documents.ISpan */
-/* Windows.UI.Xaml.Documents.IBlock */
-/* Windows.UI.Xaml.Documents.IBlock2 */
-/* Windows.UI.Xaml.Documents.IBlock2.get_HorizontalTextAlignment() */
 HRESULT wuixado_block_2_get__horizontal_text_alignment(WUIXADO_IBlock_2 *self, WUIXA_TextAlignment *value);
 
-/* Windows.UI.Xaml.Documents.IBlock2.put_HorizontalTextAlignment() */
 HRESULT wuixado_block_2_put__horizontal_text_alignment(WUIXADO_IBlock_2 *self, WUIXA_TextAlignment value);
 
-/* Windows.UI.Xaml.Documents.ITextElement */
-/* Windows.UI.Xaml.Documents.ITextElement2 */
-/* Windows.UI.Xaml.Documents.ITextElement2.get_IsTextScaleFactorEnabled() */
 HRESULT wuixado_text_element_2_get__is_text_scale_factor_enabled(WUIXADO_ITextElement_2 *self, BOOL *value);
 
-/* Windows.UI.Xaml.Documents.ITextElement2.put_IsTextScaleFactorEnabled() */
 HRESULT wuixado_text_element_2_put__is_text_scale_factor_enabled(WUIXADO_ITextElement_2 *self, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITextElement3 */
-/* Windows.UI.Xaml.Documents.ITextElement3.get_AllowFocusOnInteraction() */
 HRESULT wuixado_text_element_3_get__allow_focus_on_interaction(WUIXADO_ITextElement_3 *self, BOOL *value);
 
-/* Windows.UI.Xaml.Documents.ITextElement3.put_AllowFocusOnInteraction() */
 HRESULT wuixado_text_element_3_put__allow_focus_on_interaction(WUIXADO_ITextElement_3 *self, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITextElement3.get_AccessKey() */
 HRESULT wuixado_text_element_3_get__access_key(WUIXADO_ITextElement_3 *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Documents.ITextElement3.put_AccessKey() */
 HRESULT wuixado_text_element_3_put__access_key(WUIXADO_ITextElement_3 *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Documents.ITextElement3.get_ExitDisplayModeOnAccessKeyInvoked() */
 HRESULT wuixado_text_element_3_get__exit_display_mode_on_access_key_invoked(WUIXADO_ITextElement_3 *self, BOOL *value);
 
-/* Windows.UI.Xaml.Documents.ITextElement3.put_ExitDisplayModeOnAccessKeyInvoked() */
 HRESULT wuixado_text_element_3_put__exit_display_mode_on_access_key_invoked(WUIXADO_ITextElement_3 *self, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITextElement4 */
-/* Windows.UI.Xaml.Documents.ITextElement4.get_TextDecorations() */
 HRESULT wuixado_text_element_4_get__text_decorations(WUIXADO_ITextElement_4 *self, WUITE_TextDecorations *value);
 
-/* Windows.UI.Xaml.Documents.ITextElement4.put_TextDecorations() */
 HRESULT wuixado_text_element_4_put__text_decorations(WUIXADO_ITextElement_4 *self, WUITE_TextDecorations value);
 
-/* Windows.UI.Xaml.Documents.ITextElement4.get_IsAccessKeyScope() */
 HRESULT wuixado_text_element_4_get__is_access_key_scope(WUIXADO_ITextElement_4 *self, BOOL *value);
 
-/* Windows.UI.Xaml.Documents.ITextElement4.put_IsAccessKeyScope() */
 HRESULT wuixado_text_element_4_put__is_access_key_scope(WUIXADO_ITextElement_4 *self, BOOL value);
 
-/* Windows.UI.Xaml.Documents.ITextElement4.get_AccessKeyScopeOwner() */
 HRESULT wuixado_text_element_4_get__access_key_scope_owner(WUIXADO_ITextElement_4 *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Documents.ITextElement4.put_AccessKeyScopeOwner() */
 HRESULT wuixado_text_element_4_put__access_key_scope_owner(WUIXADO_ITextElement_4 *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.Documents.ITextElement4.get_KeyTipPlacementMode() */
 HRESULT wuixado_text_element_4_get__key_tip_placement_mode(WUIXADO_ITextElement_4 *self, WUIXAIN_KeyTipPlacementMode *value);
 
-/* Windows.UI.Xaml.Documents.ITextElement4.put_KeyTipPlacementMode() */
 HRESULT wuixado_text_element_4_put__key_tip_placement_mode(WUIXADO_ITextElement_4 *self, WUIXAIN_KeyTipPlacementMode value);
 
-/* Windows.UI.Xaml.Documents.ITextElement4.get_KeyTipHorizontalOffset() */
 HRESULT wuixado_text_element_4_get__key_tip_horizontal_offset(WUIXADO_ITextElement_4 *self, double *value);
 
-/* Windows.UI.Xaml.Documents.ITextElement4.put_KeyTipHorizontalOffset() */
 HRESULT wuixado_text_element_4_put__key_tip_horizontal_offset(WUIXADO_ITextElement_4 *self, double value);
 
-/* Windows.UI.Xaml.Documents.ITextElement4.get_KeyTipVerticalOffset() */
 HRESULT wuixado_text_element_4_get__key_tip_vertical_offset(WUIXADO_ITextElement_4 *self, double *value);
 
-/* Windows.UI.Xaml.Documents.ITextElement4.put_KeyTipVerticalOffset() */
 HRESULT wuixado_text_element_4_put__key_tip_vertical_offset(WUIXADO_ITextElement_4 *self, double value);
 
-/* Windows.UI.Xaml.Documents.ITextElement5 */
-/* Windows.UI.Xaml.Documents.ITextElement5.get_XamlRoot() */
 HRESULT wuixado_text_element_5_get__xaml_root(WUIXADO_ITextElement_5 *self, WUIXA_XamlRoot** value);
 
-/* Windows.UI.Xaml.Documents.ITextElement5.put_XamlRoot() */
 HRESULT wuixado_text_element_5_put__xaml_root(WUIXADO_ITextElement_5 *self, WUIXA_XamlRoot* value);
 
-/* Windows.UI.Xaml.Documents.ITextElementOverrides */
-/* Windows.UI.Xaml.Documents.ITextElementOverrides.OnDisconnectVisualChildren() */
 HRESULT wuixado_text_element_overrides_handle_disconnect_visual_children(WUIXADO_ITextElementOverrides *self);
 
-/* Windows.UI.Xaml.Documents.IInlineUIContainer */
-/* Windows.UI.Xaml.Documents.IParagraph */
-/* Windows.UI.Xaml.Documents.IRun */
-/* Windows.UI.Xaml.Documents.ITextHighlighter */
-/* Windows.UI.Xaml.Documents.ITextPointer */
 #endif /* CWINRT_WINDOWS_UI_XAML_DOCUMENTS_H */

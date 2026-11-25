@@ -12,8 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
-
 #ifndef CWINRT_FWD_WGRDI_DirectXColorSpace
 #define CWINRT_FWD_WGRDI_DirectXColorSpace
 typedef enum WGRDI_DirectXColorSpace {
@@ -194,7 +192,5 @@ typedef enum WGRDI_DirectXAlphaMode {
     WGRDI_DirectXAlphaMode_Ignore = 3
 } WGRDI_DirectXAlphaMode;
 #endif
-
-/* Methods */
 
 #endif /* CWINRT_WINDOWS_GRAPHICS_DIRECTX_H */

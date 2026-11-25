@@ -14,7 +14,6 @@
 #include <cwinrt/Windows.UI.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WAIACHO_ActionCatalog WAIACHO_ActionCatalog;
 typedef struct WAIACHO_ActionDefinition WAIACHO_ActionDefinition;
 typedef struct WAIACHO_ActionOverload WAIACHO_ActionOverload;
@@ -35,7 +34,6 @@ typedef struct WAIACHO_IActionInstanceDisplayInfo WAIACHO_IActionInstanceDisplay
 typedef struct WAIACHO_IActionInstance WAIACHO_IActionInstance;
 typedef struct WAIACHO_IActionEntityRegistrationInfo WAIACHO_IActionEntityRegistrationInfo;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_TypedEventHandler_WAIACHO_ActionCatalog_Object
 #define CWINRT_FWD_WF_TypedEventHandler_WAIACHO_ActionCatalog_Object
 typedef struct WF_TypedEventHandler_WAIACHO_ActionCatalog_Object WF_TypedEventHandler_WAIACHO_ActionCatalog_Object;
@@ -85,7 +83,6 @@ typedef enum WAIAC_ActionEntityKind {
 } WAIAC_ActionEntityKind;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -142,187 +139,113 @@ static const IID CWINRT_IID_WAIACHO_IActionInstance CWINRT_MAYBE_UNUSED = { 0x80
 static const IID CWINRT_IID_WAIACHO_IActionEntityRegistrationInfo CWINRT_MAYBE_UNUSED = { 0xC3B92BDB, 0x03C3, 0x5A9E, { 0xB0, 0x49, 0x00, 0x2F, 0xA0, 0x40, 0x56, 0x99 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.AI.Actions.Hosting.ActionCatalog */
 HRESULT waiacho_action_catalog_new(WAIACHO_ActionCatalog **out);
 
-/* Windows.AI.Actions.Hosting.ActionCatalog */
-/* Windows.AI.Actions.Hosting.ActionCatalog.GetAllActions() */
 HRESULT waiacho_action_catalog_get_all_actions(WAIACHO_ActionCatalog *self, WAIACHO_ActionDefinition **out, uint32_t *out_len);
 
-/* Windows.AI.Actions.Hosting.ActionCatalog.GetActionsForInputs(inputEntities) */
 HRESULT waiacho_action_catalog_get_actions_for_inputs(WAIACHO_ActionCatalog *self, WAIAC_ActionEntity *inputEntities, uint32_t inputEntities_len, WAIACHO_ActionInstance **out, uint32_t *out_len);
 
-/* Windows.AI.Actions.Hosting.ActionCatalog.GetActionsForInputs(inputEntities, invokerWindowId) */
 HRESULT waiacho_action_catalog_get_actions_for_inputs_action_entity_u32_window_id_action_i_6ec81177(WAIACHO_ActionCatalog *self, WAIAC_ActionEntity *inputEntities, uint32_t inputEntities_len, WUI_WindowId invokerWindowId, WAIACHO_ActionInstance **out, uint32_t *out_len);
 
-/* Windows.AI.Actions.Hosting.ActionCatalog.GetActionsForCurrentApp() */
 HRESULT waiacho_action_catalog_get_actions_for_current_app(WAIACHO_ActionCatalog *self, WAIACHO_ActionDefinition **out, uint32_t *out_len);
 
-/* Windows.AI.Actions.Hosting.ActionCatalog.Close() */
 HRESULT waiacho_action_catalog_close(WAIACHO_ActionCatalog *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token waiacho_action_catalog_on_changed(WAIACHO_ActionCatalog *self, cwinrt_event_fn fn, void *ctx);
 void waiacho_action_catalog_off_changed(WAIACHO_ActionCatalog *self, cwinrt_token token);
 
-/* activate Windows.AI.Actions.Hosting.ActionDefinition */
 HRESULT waiacho_action_definition_new(WAIACHO_ActionDefinition **out);
 
-/* Windows.AI.Actions.Hosting.ActionDefinition */
-/* Windows.AI.Actions.Hosting.ActionDefinition.get_Id() */
 HRESULT waiacho_action_definition_get__id(WAIACHO_ActionDefinition *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.Hosting.ActionDefinition.get_Description() */
 HRESULT waiacho_action_definition_get__description(WAIACHO_ActionDefinition *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.Hosting.ActionDefinition.get_IconFullPath() */
 HRESULT waiacho_action_definition_get__icon_full_path(WAIACHO_ActionDefinition *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.Hosting.ActionDefinition.get_PackageFamilyName() */
 HRESULT waiacho_action_definition_get__package_family_name(WAIACHO_ActionDefinition *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.Hosting.ActionDefinition.GetInputs() */
 HRESULT waiacho_action_definition_get_inputs(WAIACHO_ActionDefinition *self, WAIACHO_ActionEntityRegistrationInfo **out, uint32_t *out_len);
 
-/* Windows.AI.Actions.Hosting.ActionDefinition.GetOutputs() */
 HRESULT waiacho_action_definition_get_outputs(WAIACHO_ActionDefinition *self, WAIACHO_ActionEntityRegistrationInfo **out, uint32_t *out_len);
 
-/* Windows.AI.Actions.Hosting.ActionDefinition.GetOverloads() */
 HRESULT waiacho_action_definition_get_overloads(WAIACHO_ActionDefinition *self, WAIACHO_ActionOverload **out, uint32_t *out_len);
 
-/* Windows.AI.Actions.Hosting.ActionDefinition.get_DisplaysUI() */
 HRESULT waiacho_action_definition_get__displays_u_i(WAIACHO_ActionDefinition *self, BOOL *value);
 
-/* Windows.AI.Actions.Hosting.ActionDefinition.get_UsesGenerativeAI() */
 HRESULT waiacho_action_definition_get__uses_generative_a_i(WAIACHO_ActionDefinition *self, BOOL *value);
 
-/* Windows.AI.Actions.Hosting.ActionDefinition.get_SchemaVersion() */
 HRESULT waiacho_action_definition_get__schema_version(WAIACHO_ActionDefinition *self, uint32_t *value);
 
-/* Windows.AI.Actions.Hosting.ActionDefinition.get_PackageRelativeApplicationId() */
 HRESULT waiacho_action_definition_get__package_relative_application_id(WAIACHO_ActionDefinition *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.Hosting.ActionDefinition.get_IsCurrentlyAvailable() */
 HRESULT waiacho_action_definition_get__is_currently_available(WAIACHO_ActionDefinition *self, BOOL *value);
 
-/* Windows.AI.Actions.Hosting.ActionDefinition.GetIconFullPath(qualifierValues) */
 HRESULT waiacho_action_definition_get_icon_full_path(WAIACHO_ActionDefinition *self, WFOCO_PropertySet* qualifierValues, cwinrt_hstring *out);
 
-/* Windows.AI.Actions.Hosting.ActionDefinition.Close() */
 HRESULT waiacho_action_definition_close(WAIACHO_ActionDefinition *self);
 
-/* activate Windows.AI.Actions.Hosting.ActionOverload */
 HRESULT waiacho_action_overload_new(WAIACHO_ActionOverload **out);
 
-/* Windows.AI.Actions.Hosting.ActionOverload */
-/* Windows.AI.Actions.Hosting.ActionOverload.get_DescriptionTemplate() */
 HRESULT waiacho_action_overload_get__description_template(WAIACHO_ActionOverload *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.Hosting.ActionOverload.GetInputs() */
 HRESULT waiacho_action_overload_get_inputs(WAIACHO_ActionOverload *self, WAIACHO_ActionEntityRegistrationInfo **out, uint32_t *out_len);
 
-/* Windows.AI.Actions.Hosting.ActionOverload.InvokeAsync(context) */
 HRESULT waiacho_action_overload_invoke_async(WAIACHO_ActionOverload *self, WAIAC_ActionInvocationContext* context, WF_IAsyncAction** out);
 
-/* Windows.AI.Actions.Hosting.ActionOverload.InvokeFeedbackAsync(context, feedback) */
 HRESULT waiacho_action_overload_invoke_feedback_async(WAIACHO_ActionOverload *self, WAIAC_ActionInvocationContext* context, WAIAC_ActionFeedback* feedback, WF_IAsyncAction** out);
 
-/* Windows.AI.Actions.Hosting.ActionOverload.GetSupportsFeedback() */
 HRESULT waiacho_action_overload_get_supports_feedback(WAIACHO_ActionOverload *self, BOOL *out);
 
-/* Windows.AI.Actions.Hosting.ActionOverload.Close() */
 HRESULT waiacho_action_overload_close(WAIACHO_ActionOverload *self);
 
-/* activate Windows.AI.Actions.Hosting.ActionInstanceDisplayInfo */
 HRESULT waiacho_action_instance_display_info_new(WAIACHO_ActionInstanceDisplayInfo **out);
 
-/* Windows.AI.Actions.Hosting.ActionInstanceDisplayInfo */
-/* Windows.AI.Actions.Hosting.ActionInstanceDisplayInfo.get_Description() */
 HRESULT waiacho_action_instance_display_info_get__description(WAIACHO_ActionInstanceDisplayInfo *self, cwinrt_hstring *value);
 
-/* activate Windows.AI.Actions.Hosting.ActionInstance */
 HRESULT waiacho_action_instance_new(WAIACHO_ActionInstance **out);
 
-/* Windows.AI.Actions.Hosting.ActionInstance */
-/* Windows.AI.Actions.Hosting.ActionInstance.get_DisplayInfo() */
 HRESULT waiacho_action_instance_get__display_info(WAIACHO_ActionInstance *self, WAIACHO_ActionInstanceDisplayInfo** value);
 
-/* Windows.AI.Actions.Hosting.ActionInstance.get_Definition() */
 HRESULT waiacho_action_instance_get__definition(WAIACHO_ActionInstance *self, WAIACHO_ActionDefinition** value);
 
-/* Windows.AI.Actions.Hosting.ActionInstance.get_Context() */
 HRESULT waiacho_action_instance_get__context(WAIACHO_ActionInstance *self, WAIAC_ActionInvocationContext** value);
 
-/* Windows.AI.Actions.Hosting.ActionInstance.InvokeAsync() */
 HRESULT waiacho_action_instance_invoke_async(WAIACHO_ActionInstance *self, WF_IAsyncAction** out);
 
-/* activate Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo */
 HRESULT waiacho_action_entity_registration_info_new(WAIACHO_ActionEntityRegistrationInfo **out);
 
-/* Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo */
-/* Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo.get_Name() */
 HRESULT waiacho_action_entity_registration_info_get__name(WAIACHO_ActionEntityRegistrationInfo *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo.put_Name() */
 HRESULT waiacho_action_entity_registration_info_put__name(WAIACHO_ActionEntityRegistrationInfo *self, cwinrt_hstring value);
 
-/* Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo.get_Kind() */
 HRESULT waiacho_action_entity_registration_info_get__kind(WAIACHO_ActionEntityRegistrationInfo *self, WAIAC_ActionEntityKind *value);
 
-/* Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo.put_Kind() */
 HRESULT waiacho_action_entity_registration_info_put__kind(WAIACHO_ActionEntityRegistrationInfo *self, WAIAC_ActionEntityKind value);
 
-/* Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo.Close() */
 HRESULT waiacho_action_entity_registration_info_close(WAIACHO_ActionEntityRegistrationInfo *self);
 
-/* Windows.AI.Actions.Hosting.IActionCatalog */
-/* Windows.AI.Actions.Hosting.IActionCatalog2 */
-/* Windows.AI.Actions.Hosting.IActionCatalog2.GetActionsForInputs(inputEntities) */
 HRESULT waiacho_action_catalog_2_get_actions_for_inputs(WAIACHO_IActionCatalog_2 *self, WAIAC_ActionEntity *inputEntities, uint32_t inputEntities_len, WAIACHO_ActionInstance **out, uint32_t *out_len);
 
-/* Windows.AI.Actions.Hosting.IActionCatalog2.GetActionsForInputs(inputEntities, invokerWindowId) */
 HRESULT waiacho_action_catalog_2_get_actions_for_inputs_action_entity_u32_window_id_action_i_6ec81177(WAIACHO_IActionCatalog_2 *self, WAIAC_ActionEntity *inputEntities, uint32_t inputEntities_len, WUI_WindowId invokerWindowId, WAIACHO_ActionInstance **out, uint32_t *out_len);
 
-/* Windows.AI.Actions.Hosting.IActionCatalog3 */
-/* Windows.AI.Actions.Hosting.IActionCatalog3.GetActionsForCurrentApp() */
 HRESULT waiacho_action_catalog_3_get_actions_for_current_app(WAIACHO_IActionCatalog_3 *self, WAIACHO_ActionDefinition **out, uint32_t *out_len);
 
-/* Windows.AI.Actions.Hosting.IActionDefinition */
-/* Windows.AI.Actions.Hosting.IActionDefinition2 */
-/* Windows.AI.Actions.Hosting.IActionDefinition2.get_DisplaysUI() */
 HRESULT waiacho_action_definition_2_get__displays_u_i(WAIACHO_IActionDefinition_2 *self, BOOL *value);
 
-/* Windows.AI.Actions.Hosting.IActionDefinition2.get_UsesGenerativeAI() */
 HRESULT waiacho_action_definition_2_get__uses_generative_a_i(WAIACHO_IActionDefinition_2 *self, BOOL *value);
 
-/* Windows.AI.Actions.Hosting.IActionDefinition2.get_SchemaVersion() */
 HRESULT waiacho_action_definition_2_get__schema_version(WAIACHO_IActionDefinition_2 *self, uint32_t *value);
 
-/* Windows.AI.Actions.Hosting.IActionDefinition3 */
-/* Windows.AI.Actions.Hosting.IActionDefinition3.get_PackageRelativeApplicationId() */
 HRESULT waiacho_action_definition_3_get__package_relative_application_id(WAIACHO_IActionDefinition_3 *self, cwinrt_hstring *value);
 
-/* Windows.AI.Actions.Hosting.IActionDefinition4 */
-/* Windows.AI.Actions.Hosting.IActionDefinition4.get_IsCurrentlyAvailable() */
 HRESULT waiacho_action_definition_4_get__is_currently_available(WAIACHO_IActionDefinition_4 *self, BOOL *value);
 
-/* Windows.AI.Actions.Hosting.IActionDefinition5 */
-/* Windows.AI.Actions.Hosting.IActionDefinition5.GetIconFullPath(qualifierValues) */
 HRESULT waiacho_action_definition_5_get_icon_full_path(WAIACHO_IActionDefinition_5 *self, WFOCO_PropertySet* qualifierValues, cwinrt_hstring *out);
 
-/* Windows.AI.Actions.Hosting.IActionOverload */
-/* Windows.AI.Actions.Hosting.IActionOverload2 */
-/* Windows.AI.Actions.Hosting.IActionOverload2.InvokeFeedbackAsync(context, feedback) */
 HRESULT waiacho_action_overload_2_invoke_feedback_async(WAIACHO_IActionOverload_2 *self, WAIAC_ActionInvocationContext* context, WAIAC_ActionFeedback* feedback, WF_IAsyncAction** out);
 
-/* Windows.AI.Actions.Hosting.IActionOverload2.GetSupportsFeedback() */
 HRESULT waiacho_action_overload_2_get_supports_feedback(WAIACHO_IActionOverload_2 *self, BOOL *out);
 
-/* Windows.AI.Actions.Hosting.IActionInstanceDisplayInfo */
-/* Windows.AI.Actions.Hosting.IActionInstance */
-/* Windows.AI.Actions.Hosting.IActionEntityRegistrationInfo */
 #endif /* CWINRT_WINDOWS_AI_ACTIONS_HOSTING_H */

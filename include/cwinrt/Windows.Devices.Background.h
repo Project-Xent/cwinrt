@@ -12,19 +12,16 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WDEBA_DeviceUseDetails WDEBA_DeviceUseDetails;
 typedef struct WDEBA_DeviceServicingDetails WDEBA_DeviceServicingDetails;
 typedef struct WDEBA_IDeviceUseDetails WDEBA_IDeviceUseDetails;
 typedef struct WDEBA_IDeviceServicingDetails WDEBA_IDeviceServicingDetails;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_TimeSpan
 #define CWINRT_FWD_WF_TimeSpan
 typedef struct WF_TimeSpan WF_TimeSpan;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -37,31 +34,18 @@ static const IID CWINRT_IID_WDEBA_IDeviceUseDetails CWINRT_MAYBE_UNUSED = { 0x7D
 static const IID CWINRT_IID_WDEBA_IDeviceServicingDetails CWINRT_MAYBE_UNUSED = { 0x4AABEE29, 0x2344, 0x4AC4, { 0x85, 0x27, 0x4A, 0x8E, 0xF6, 0x90, 0x56, 0x45 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Devices.Background.DeviceUseDetails */
 HRESULT wdeba_device_use_details_new(WDEBA_DeviceUseDetails **out);
 
-/* Windows.Devices.Background.DeviceUseDetails */
-/* Windows.Devices.Background.DeviceUseDetails.get_DeviceId() */
 HRESULT wdeba_device_use_details_get__device_id(WDEBA_DeviceUseDetails *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Background.DeviceUseDetails.get_Arguments() */
 HRESULT wdeba_device_use_details_get__arguments(WDEBA_DeviceUseDetails *self, cwinrt_hstring *value);
 
-/* activate Windows.Devices.Background.DeviceServicingDetails */
 HRESULT wdeba_device_servicing_details_new(WDEBA_DeviceServicingDetails **out);
 
-/* Windows.Devices.Background.DeviceServicingDetails */
-/* Windows.Devices.Background.DeviceServicingDetails.get_DeviceId() */
 HRESULT wdeba_device_servicing_details_get__device_id(WDEBA_DeviceServicingDetails *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Background.DeviceServicingDetails.get_Arguments() */
 HRESULT wdeba_device_servicing_details_get__arguments(WDEBA_DeviceServicingDetails *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Background.DeviceServicingDetails.get_ExpectedDuration() */
 HRESULT wdeba_device_servicing_details_get__expected_duration(WDEBA_DeviceServicingDetails *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Background.IDeviceUseDetails */
-/* Windows.Devices.Background.IDeviceServicingDetails */
 #endif /* CWINRT_WINDOWS_DEVICES_BACKGROUND_H */

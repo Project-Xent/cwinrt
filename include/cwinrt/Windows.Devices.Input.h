@@ -12,13 +12,11 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WDEHA_SimpleHapticsController
 #define CWINRT_FWD_WDEHA_SimpleHapticsController
 typedef struct WDEHA_SimpleHapticsController WDEHA_SimpleHapticsController;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDEIN_IMouseDeviceStatics WDEIN_IMouseDeviceStatics;
 typedef struct WDEIN_IPenButtonListenerStatics WDEIN_IPenButtonListenerStatics;
 typedef struct WDEIN_IPenDockListenerStatics WDEIN_IPenDockListenerStatics;
@@ -55,7 +53,6 @@ typedef struct WDEIN_IPointerDevice WDEIN_IPointerDevice;
 typedef struct WDEIN_IPointerDevice_2 WDEIN_IPointerDevice_2;
 typedef struct WDEIN_ITouchCapabilities WDEIN_ITouchCapabilities;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IVectorView_WDEIN_PointerDevice
 #define CWINRT_FWD_WFOCO_IVectorView_WDEIN_PointerDevice
 typedef struct WFOCO_IVectorView_WDEIN_PointerDevice WFOCO_IVectorView_WDEIN_PointerDevice;
@@ -141,7 +138,6 @@ struct WDEIN_PointerDeviceUsage {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -230,84 +226,51 @@ static const IID CWINRT_IID_WDEIN_IPointerDevice_2 CWINRT_MAYBE_UNUSED = { 0xF8A
 static const IID CWINRT_IID_WDEIN_ITouchCapabilities CWINRT_MAYBE_UNUSED = { 0x20DD55F9, 0x13F1, 0x46C8, { 0x92, 0x85, 0x2C, 0x05, 0xFA, 0x3E, 0xDA, 0x6F } };
 #endif
 
-/* Methods */
-
-/* Windows.Devices.Input.IMouseDeviceStatics */
-/* Windows.Devices.Input.IMouseDeviceStatics.GetForCurrentView() */
 HRESULT wdein_mouse_device_statics_get_for_current_view(WDEIN_IMouseDeviceStatics *self, WDEIN_MouseDevice** out);
 
-/* Windows.Devices.Input.IPenButtonListenerStatics */
-/* Windows.Devices.Input.IPenButtonListenerStatics.GetDefault() */
 HRESULT wdein_pen_button_listener_statics_get_default(WDEIN_IPenButtonListenerStatics *self, WDEIN_PenButtonListener** out);
 
-/* Windows.Devices.Input.IPenDockListenerStatics */
-/* Windows.Devices.Input.IPenDockListenerStatics.GetDefault() */
 HRESULT wdein_pen_dock_listener_statics_get_default(WDEIN_IPenDockListenerStatics *self, WDEIN_PenDockListener** out);
 
-/* Windows.Devices.Input.IPointerDeviceStatics */
-/* Windows.Devices.Input.IPointerDeviceStatics.GetPointerDevice(pointerId) */
 HRESULT wdein_pointer_device_statics_get_pointer_device(WDEIN_IPointerDeviceStatics *self, uint32_t pointerId, WDEIN_PointerDevice** out);
 
-/* Windows.Devices.Input.IPointerDeviceStatics.GetPointerDevices() */
 HRESULT wdein_pointer_device_statics_get_pointer_devices(WDEIN_IPointerDeviceStatics *self, WFOCO_IVectorView_WDEIN_PointerDevice** out);
 
-/* activate Windows.Devices.Input.KeyboardCapabilities */
 HRESULT wdein_keyboard_capabilities_new(WDEIN_KeyboardCapabilities **out);
 
-/* Windows.Devices.Input.KeyboardCapabilities */
-/* Windows.Devices.Input.KeyboardCapabilities.get_KeyboardPresent() */
 HRESULT wdein_keyboard_capabilities_get__keyboard_present(WDEIN_KeyboardCapabilities *self, int32_t *value);
 
-/* activate Windows.Devices.Input.MouseCapabilities */
 HRESULT wdein_mouse_capabilities_new(WDEIN_MouseCapabilities **out);
 
-/* Windows.Devices.Input.MouseCapabilities */
-/* Windows.Devices.Input.MouseCapabilities.get_MousePresent() */
 HRESULT wdein_mouse_capabilities_get__mouse_present(WDEIN_MouseCapabilities *self, int32_t *value);
 
-/* Windows.Devices.Input.MouseCapabilities.get_VerticalWheelPresent() */
 HRESULT wdein_mouse_capabilities_get__vertical_wheel_present(WDEIN_MouseCapabilities *self, int32_t *value);
 
-/* Windows.Devices.Input.MouseCapabilities.get_HorizontalWheelPresent() */
 HRESULT wdein_mouse_capabilities_get__horizontal_wheel_present(WDEIN_MouseCapabilities *self, int32_t *value);
 
-/* Windows.Devices.Input.MouseCapabilities.get_SwapButtons() */
 HRESULT wdein_mouse_capabilities_get__swap_buttons(WDEIN_MouseCapabilities *self, int32_t *value);
 
-/* Windows.Devices.Input.MouseCapabilities.get_NumberOfButtons() */
 HRESULT wdein_mouse_capabilities_get__number_of_buttons(WDEIN_MouseCapabilities *self, uint32_t *value);
 
-/* activate Windows.Devices.Input.MouseDevice */
 HRESULT wdein_mouse_device_new(WDEIN_MouseDevice **out);
 
-/* Windows.Devices.Input.MouseDevice */
-/* Windows.Devices.Input.MouseDevice.GetForCurrentView() */
 HRESULT wdein_mouse_device_get_for_current_view(WDEIN_MouseDevice** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdein_mouse_device_on_mouse_moved(WDEIN_MouseDevice *self, cwinrt_event_fn fn, void *ctx);
 void wdein_mouse_device_off_mouse_moved(WDEIN_MouseDevice *self, cwinrt_token token);
 
-/* activate Windows.Devices.Input.MouseEventArgs */
 HRESULT wdein_mouse_event_args_new(WDEIN_MouseEventArgs **out);
 
-/* Windows.Devices.Input.MouseEventArgs */
-/* Windows.Devices.Input.MouseEventArgs.get_MouseDelta() */
 HRESULT wdein_mouse_event_args_get__mouse_delta(WDEIN_MouseEventArgs *self, WDEIN_MouseDelta *value);
 
-/* activate Windows.Devices.Input.PenButtonListener */
 HRESULT wdein_pen_button_listener_new(WDEIN_PenButtonListener **out);
 
-/* Windows.Devices.Input.PenButtonListener */
-/* Windows.Devices.Input.PenButtonListener.IsSupported() */
 HRESULT wdein_pen_button_listener_is_supported(WDEIN_PenButtonListener *self, BOOL *out);
 
-/* Windows.Devices.Input.PenButtonListener.GetDefault() */
 HRESULT wdein_pen_button_listener_get_default(WDEIN_PenButtonListener** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdein_pen_button_listener_on_is_supported_changed(WDEIN_PenButtonListener *self, cwinrt_event_fn fn, void *ctx);
@@ -322,30 +285,20 @@ void wdein_pen_button_listener_off_tail_button_double_clicked(WDEIN_PenButtonLis
 cwinrt_token wdein_pen_button_listener_on_tail_button_long_pressed(WDEIN_PenButtonListener *self, cwinrt_event_fn fn, void *ctx);
 void wdein_pen_button_listener_off_tail_button_long_pressed(WDEIN_PenButtonListener *self, cwinrt_token token);
 
-/* activate Windows.Devices.Input.PenDevice */
 HRESULT wdein_pen_device_new(WDEIN_PenDevice **out);
 
-/* Windows.Devices.Input.PenDevice */
-/* Windows.Devices.Input.PenDevice.get_PenId() */
 HRESULT wdein_pen_device_get__pen_id(WDEIN_PenDevice *self, GUID *value);
 
-/* Windows.Devices.Input.PenDevice.get_SimpleHapticsController() */
 HRESULT wdein_pen_device_get__simple_haptics_controller(WDEIN_PenDevice *self, WDEHA_SimpleHapticsController** value);
 
-/* Windows.Devices.Input.PenDevice.GetFromPointerId(pointerId) */
 HRESULT wdein_pen_device_get_from_pointer_id(uint32_t pointerId, WDEIN_PenDevice** out);
 
-/* activate Windows.Devices.Input.PenDockListener */
 HRESULT wdein_pen_dock_listener_new(WDEIN_PenDockListener **out);
 
-/* Windows.Devices.Input.PenDockListener */
-/* Windows.Devices.Input.PenDockListener.IsSupported() */
 HRESULT wdein_pen_dock_listener_is_supported(WDEIN_PenDockListener *self, BOOL *out);
 
-/* Windows.Devices.Input.PenDockListener.GetDefault() */
 HRESULT wdein_pen_dock_listener_get_default(WDEIN_PenDockListener** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdein_pen_dock_listener_on_is_supported_changed(WDEIN_PenDockListener *self, cwinrt_event_fn fn, void *ctx);
@@ -357,66 +310,36 @@ void wdein_pen_dock_listener_off_docked(WDEIN_PenDockListener *self, cwinrt_toke
 cwinrt_token wdein_pen_dock_listener_on_undocked(WDEIN_PenDockListener *self, cwinrt_event_fn fn, void *ctx);
 void wdein_pen_dock_listener_off_undocked(WDEIN_PenDockListener *self, cwinrt_token token);
 
-/* activate Windows.Devices.Input.PointerDevice */
 HRESULT wdein_pointer_device_new(WDEIN_PointerDevice **out);
 
-/* Windows.Devices.Input.PointerDevice */
-/* Windows.Devices.Input.PointerDevice.get_PointerDeviceType() */
 HRESULT wdein_pointer_device_get__pointer_device_type(WDEIN_PointerDevice *self, WDEIN_PointerDeviceType *value);
 
-/* Windows.Devices.Input.PointerDevice.get_IsIntegrated() */
 HRESULT wdein_pointer_device_get__is_integrated(WDEIN_PointerDevice *self, BOOL *value);
 
-/* Windows.Devices.Input.PointerDevice.get_MaxContacts() */
 HRESULT wdein_pointer_device_get__max_contacts(WDEIN_PointerDevice *self, uint32_t *value);
 
-/* Windows.Devices.Input.PointerDevice.get_PhysicalDeviceRect() */
 HRESULT wdein_pointer_device_get__physical_device_rect(WDEIN_PointerDevice *self, WF_Rect *value);
 
-/* Windows.Devices.Input.PointerDevice.get_ScreenRect() */
 HRESULT wdein_pointer_device_get__screen_rect(WDEIN_PointerDevice *self, WF_Rect *value);
 
-/* Windows.Devices.Input.PointerDevice.get_SupportedUsages() */
 HRESULT wdein_pointer_device_get__supported_usages(WDEIN_PointerDevice *self, WFOCO_IVectorView_WDEIN_PointerDeviceUsage** value);
 
-/* Windows.Devices.Input.PointerDevice.get_MaxPointersWithZDistance() */
 HRESULT wdein_pointer_device_get__max_pointers_with_z_distance(WDEIN_PointerDevice *self, uint32_t *value);
 
-/* Windows.Devices.Input.PointerDevice.GetPointerDevice(pointerId) */
 HRESULT wdein_pointer_device_get_pointer_device(uint32_t pointerId, WDEIN_PointerDevice** out);
 
-/* Windows.Devices.Input.PointerDevice.GetPointerDevices() */
 HRESULT wdein_pointer_device_get_pointer_devices(WFOCO_IVectorView_WDEIN_PointerDevice** out);
 
-/* Windows.Devices.Input.IPenDeviceStatics */
-/* Windows.Devices.Input.IPenDeviceStatics.GetFromPointerId(pointerId) */
 HRESULT wdein_pen_device_statics_get_from_pointer_id(WDEIN_IPenDeviceStatics *self, uint32_t pointerId, WDEIN_PenDevice** out);
 
-/* activate Windows.Devices.Input.TouchCapabilities */
 HRESULT wdein_touch_capabilities_new(WDEIN_TouchCapabilities **out);
 
-/* Windows.Devices.Input.TouchCapabilities */
-/* Windows.Devices.Input.TouchCapabilities.get_TouchPresent() */
 HRESULT wdein_touch_capabilities_get__touch_present(WDEIN_TouchCapabilities *self, int32_t *value);
 
-/* Windows.Devices.Input.TouchCapabilities.get_Contacts() */
 HRESULT wdein_touch_capabilities_get__contacts(WDEIN_TouchCapabilities *self, uint32_t *value);
 
-/* Windows.Devices.Input.IKeyboardCapabilities */
-/* Windows.Devices.Input.IMouseCapabilities */
-/* Windows.Devices.Input.IMouseDevice */
-/* Windows.Devices.Input.IMouseEventArgs */
-/* Windows.Devices.Input.IPenButtonListener */
-/* Windows.Devices.Input.IPenDevice */
-/* Windows.Devices.Input.IPenDevice2 */
-/* Windows.Devices.Input.IPenDevice2.get_SimpleHapticsController() */
 HRESULT wdein_pen_device_2_get__simple_haptics_controller(WDEIN_IPenDevice_2 *self, WDEHA_SimpleHapticsController** value);
 
-/* Windows.Devices.Input.IPenDockListener */
-/* Windows.Devices.Input.IPointerDevice */
-/* Windows.Devices.Input.IPointerDevice2 */
-/* Windows.Devices.Input.IPointerDevice2.get_MaxPointersWithZDistance() */
 HRESULT wdein_pointer_device_2_get__max_pointers_with_z_distance(WDEIN_IPointerDevice_2 *self, uint32_t *value);
 
-/* Windows.Devices.Input.ITouchCapabilities */
 #endif /* CWINRT_WINDOWS_DEVICES_INPUT_H */

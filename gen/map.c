@@ -93,8 +93,6 @@ static bool map_cname_use_defining_header(char const *cname) {
 
 static bool map_ident_char(char c);
 
-/* True if `cname` appears as a standalone token in `s` that is NOT immediately
- * followed (skipping spaces) by '*' -- i.e. used by value rather than by pointer. */
 static bool map_token_by_value_in(char const *s, char const *cname, size_t clen) {
 	char const *p = s;
 	if (!s || !cname || !clen) return false;
@@ -112,10 +110,6 @@ static bool map_token_by_value_in(char const *s, char const *cname, size_t clen)
 	return false;
 }
 
-/* True if a cross-namespace value type `cname` is consumed by value anywhere in
- * the unit (method params or struct fields). Such types need their real (enum/
- * struct) definition, so the defining header must be included rather than an
- * opaque `typedef struct` forward declaration emitted. */
 static bool map_type_uses_cname_by_value(cwinrt_mapped_type const *t, char const *cname, size_t clen) {
 	uint32_t mi, fi;
 	for (mi = 0; mi < t->method_count; mi++)
@@ -212,7 +206,6 @@ typedef struct {
 	char const          *ns_prefix;
 } map_ctx;
 
-/* Map one raw type into out->types [ti] (names/uuid/fields/enum-members). */
 static int map_one_type(map_ctx const *c, uint32_t ti, uint32_t ri) {
 	cwinrt_mapped_unit    *out       = c->out;
 	char const            *ns_prefix = c->ns_prefix;
@@ -259,7 +252,6 @@ static int map_one_type(map_ctx const *c, uint32_t ti, uint32_t ri) {
 	return 0;
 }
 
-/* Locate the mapped slot whose topo_id == raw_idx, or UINT32_MAX. */
 static uint32_t map_slot_for_topo(cwinrt_mapped_unit const *out, uint32_t topo_id) {
 	uint32_t slot;
 	for (slot = 0; slot < out->type_count; slot++)
@@ -294,7 +286,6 @@ static int map_alloc_methods(cwinrt_mapped_unit *out, uint32_t const *method_cou
 	return 0;
 }
 
-/* True if raw method `im` matches `rm` by name and static-param signature. */
 static bool map_iface_method_matches(cwinrt_raw_db const *raw, uint32_t im, uint32_t iface_token, cwinrt_raw_method const *rm) {
 	if (raw->methods [im].type_token != iface_token
 		|| !raw->methods [im].name
@@ -381,7 +372,6 @@ static void map_resolve_instance_dispatch(
 	mm->dispatch_has_iid = c->out->types [slot_j].has_uuid;
 }
 
-/* Fill names, comment and signature of one mapped method (non-dispatch fields). */
 static int map_fill_method_core(map_ctx const *c, cwinrt_raw_method const *rm, uint32_t raw_idx, cwinrt_mapped_method *mm) {
 	cwinrt_mapped_unit    *out = c->out;
 	cwinrt_raw_type const *rt  = &c->raw->types [raw_idx];
@@ -411,7 +401,6 @@ static int map_fill_method_core(map_ctx const *c, cwinrt_raw_method const *rm, u
 	return 0;
 }
 
-/* Fill one mapped method slot from raw method `mi`. */
 static int map_fill_method(map_ctx const *c, uint32_t mi, uint32_t *method_fill) {
 	cwinrt_raw_method const *rm      = &c->raw->methods [mi];
 	uint32_t                 raw_idx = map_find_type_index(c->raw, rm->type_token);
@@ -488,7 +477,6 @@ static bool map_extern_should_skip_forward(
 	return false;
 }
 
-/* Emit an include or an extern forward decl for one raw extern type. */
 static int map_add_one_extern(map_ctx const *c, char const *ext) {
 	cwinrt_mapped_unit *out = c->out;
 	char                cname [128];

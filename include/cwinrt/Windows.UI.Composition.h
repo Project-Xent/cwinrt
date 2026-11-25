@@ -17,7 +17,6 @@
 #include <cwinrt/Windows.Graphics.DirectX.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WUICO_CoreDispatcher
 #define CWINRT_FWD_WUICO_CoreDispatcher
 typedef struct WUICO_CoreDispatcher WUICO_CoreDispatcher;
@@ -27,7 +26,6 @@ typedef struct WUICO_CoreDispatcher WUICO_CoreDispatcher;
 typedef struct WSY_DispatcherQueue WSY_DispatcherQueue;
 #endif
 
-/* Windows.Graphics integer value types (ABI layout) */
 #ifndef CWINRT_ABI_WG_SIZEINT32
 #define CWINRT_ABI_WG_SIZEINT32
 typedef struct WG_SizeInt32 { int32_t Width; int32_t Height; } WG_SizeInt32;
@@ -41,7 +39,6 @@ typedef struct WG_PointInt32 { int32_t X; int32_t Y; } WG_PointInt32;
 typedef struct WG_RectInt32 { int32_t X; int32_t Y; int32_t Width; int32_t Height; } WG_RectInt32;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUC_CompositionEasingFunction WUC_CompositionEasingFunction;
 typedef struct WUC_BackEasingFunction WUC_BackEasingFunction;
 typedef struct WUC_CompositionAnimation WUC_CompositionAnimation;
@@ -332,7 +329,6 @@ typedef struct WUC_ILayerVisual WUC_ILayerVisual;
 typedef struct WUC_ILayerVisual_2 WUC_ILayerVisual_2;
 typedef struct WUC_IShapeVisual WUC_IShapeVisual;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFN_Vector_2
 #define CWINRT_FWD_WFN_Vector_2
 typedef struct WFN_Vector_2 WFN_Vector_2;
@@ -845,7 +841,6 @@ struct WUC_InkTrailPoint {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -1586,3390 +1581,2100 @@ static const IID CWINRT_IID_WUC_ILayerVisual_2 CWINRT_MAYBE_UNUSED = { 0x98F9AEE
 static const IID CWINRT_IID_WUC_IShapeVisual CWINRT_MAYBE_UNUSED = { 0xF2BD13C3, 0xBA7E, 0x4B0F, { 0x91, 0x26, 0xFF, 0xB7, 0x53, 0x6B, 0x81, 0x76 } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.Composition.CompositionEasingFunction */
-/* Windows.UI.Composition.CompositionEasingFunction.CreateCubicBezierEasingFunction(owner, controlPoint1, controlPoint2) */
 HRESULT wuc_composition_easing_function_create_cubic_bezier_easing_function(WUC_Comp* owner, WFN_Vector_2 controlPoint1, WFN_Vector_2 controlPoint2, WUC_CubicBezierEasingFunction** out);
 
-/* Windows.UI.Composition.CompositionEasingFunction.CreateLinearEasingFunction(owner) */
 HRESULT wuc_composition_easing_function_create_linear_easing_function(WUC_Comp* owner, WUC_LinearEasingFunction** out);
 
-/* Windows.UI.Composition.CompositionEasingFunction.CreateStepEasingFunction(owner) */
 HRESULT wuc_composition_easing_function_create_step_easing_function(WUC_Comp* owner, WUC_StepEasingFunction** out);
 
-/* Windows.UI.Composition.CompositionEasingFunction.CreateStepEasingFunction(owner, stepCount) */
 HRESULT wuc_composition_easing_function_create_step_easing_function_p_i32_p(WUC_Comp* owner, int32_t stepCount, WUC_StepEasingFunction** out);
 
-/* Windows.UI.Composition.CompositionEasingFunction.CreateBackEasingFunction(owner, mode, amplitude) */
 HRESULT wuc_composition_easing_function_create_back_easing_function(WUC_Comp* owner, WUC_CompositionEasingFunctionMode mode, float amplitude, WUC_BackEasingFunction** out);
 
-/* Windows.UI.Composition.CompositionEasingFunction.CreateBounceEasingFunction(owner, mode, bounces, bounciness) */
 HRESULT wuc_composition_easing_function_create_bounce_easing_function(WUC_Comp* owner, WUC_CompositionEasingFunctionMode mode, int32_t bounces, float bounciness, WUC_BounceEasingFunction** out);
 
-/* Windows.UI.Composition.CompositionEasingFunction.CreateCircleEasingFunction(owner, mode) */
 HRESULT wuc_composition_easing_function_create_circle_easing_function(WUC_Comp* owner, WUC_CompositionEasingFunctionMode mode, WUC_CircleEasingFunction** out);
 
-/* Windows.UI.Composition.CompositionEasingFunction.CreateElasticEasingFunction(owner, mode, oscillations, springiness) */
 HRESULT wuc_composition_easing_function_create_elastic_easing_function(WUC_Comp* owner, WUC_CompositionEasingFunctionMode mode, int32_t oscillations, float springiness, WUC_ElasticEasingFunction** out);
 
-/* Windows.UI.Composition.CompositionEasingFunction.CreateExponentialEasingFunction(owner, mode, exponent) */
 HRESULT wuc_composition_easing_function_create_exponential_easing_function(WUC_Comp* owner, WUC_CompositionEasingFunctionMode mode, float exponent, WUC_ExponentialEasingFunction** out);
 
-/* Windows.UI.Composition.CompositionEasingFunction.CreatePowerEasingFunction(owner, mode, power) */
 HRESULT wuc_composition_easing_function_create_power_easing_function(WUC_Comp* owner, WUC_CompositionEasingFunctionMode mode, float power, WUC_PowerEasingFunction** out);
 
-/* Windows.UI.Composition.CompositionEasingFunction.CreateSineEasingFunction(owner, mode) */
 HRESULT wuc_composition_easing_function_create_sine_easing_function(WUC_Comp* owner, WUC_CompositionEasingFunctionMode mode, WUC_SineEasingFunction** out);
 
-/* activate Windows.UI.Composition.BackEasingFunction */
 HRESULT wuc_back_easing_function_new(WUC_BackEasingFunction **out);
 
-/* Windows.UI.Composition.BackEasingFunction */
-/* Windows.UI.Composition.BackEasingFunction.get_Mode() */
 HRESULT wuc_back_easing_function_get__mode(WUC_BackEasingFunction *self, WUC_CompositionEasingFunctionMode *value);
 
-/* Windows.UI.Composition.BackEasingFunction.get_Amplitude() */
 HRESULT wuc_back_easing_function_get__amplitude(WUC_BackEasingFunction *self, float *value);
 
-/* Windows.UI.Composition.CompositionAnimation */
-/* Windows.UI.Composition.CompositionAnimation.ClearAllParameters() */
 HRESULT wuc_composition_animation_clear_all_parameters(WUC_CompositionAnimation *self);
 
-/* Windows.UI.Composition.CompositionAnimation.ClearParameter(key) */
 HRESULT wuc_composition_animation_clear_parameter(WUC_CompositionAnimation *self, cwinrt_hstring key);
 
-/* Windows.UI.Composition.CompositionAnimation.SetColorParameter(key) */
 HRESULT wuc_composition_animation_set_color_parameter(WUC_CompositionAnimation *self, cwinrt_hstring key, WUI_Color value);
 
-/* Windows.UI.Composition.CompositionAnimation.SetMatrix3x2Parameter(key) */
 HRESULT wuc_composition_animation_set_matrix3x2_parameter(WUC_CompositionAnimation *self, cwinrt_hstring key, WFN_Matrix3x_2 value);
 
-/* Windows.UI.Composition.CompositionAnimation.SetMatrix4x4Parameter(key) */
 HRESULT wuc_composition_animation_set_matrix4x4_parameter(WUC_CompositionAnimation *self, cwinrt_hstring key, WFN_Matrix4x_4 value);
 
-/* Windows.UI.Composition.CompositionAnimation.SetQuaternionParameter(key) */
 HRESULT wuc_composition_animation_set_quaternion_parameter(WUC_CompositionAnimation *self, cwinrt_hstring key, WFN_Quaternion value);
 
-/* Windows.UI.Composition.CompositionAnimation.SetReferenceParameter(key, compositionObject) */
 HRESULT wuc_composition_animation_set_reference_parameter(WUC_CompositionAnimation *self, cwinrt_hstring key, WUC_CompositionObject* compositionObject);
 
-/* Windows.UI.Composition.CompositionAnimation.SetScalarParameter(key) */
 HRESULT wuc_composition_animation_set_scalar_parameter(WUC_CompositionAnimation *self, cwinrt_hstring key, float value);
 
-/* Windows.UI.Composition.CompositionAnimation.SetVector2Parameter(key) */
 HRESULT wuc_composition_animation_set_vector2_parameter(WUC_CompositionAnimation *self, cwinrt_hstring key, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.CompositionAnimation.SetVector3Parameter(key) */
 HRESULT wuc_composition_animation_set_vector3_parameter(WUC_CompositionAnimation *self, cwinrt_hstring key, WFN_Vector_3 value);
 
-/* Windows.UI.Composition.CompositionAnimation.SetVector4Parameter(key) */
 HRESULT wuc_composition_animation_set_vector4_parameter(WUC_CompositionAnimation *self, cwinrt_hstring key, WFN_Vector_4 value);
 
-/* Windows.UI.Composition.CompositionAnimation.SetBooleanParameter(key) */
 HRESULT wuc_composition_animation_set_boolean_parameter(WUC_CompositionAnimation *self, cwinrt_hstring key, BOOL value);
 
-/* Windows.UI.Composition.CompositionAnimation.get_Target() */
 HRESULT wuc_composition_animation_get__target(WUC_CompositionAnimation *self, cwinrt_hstring *value);
 
-/* Windows.UI.Composition.CompositionAnimation.put_Target() */
 HRESULT wuc_composition_animation_put__target(WUC_CompositionAnimation *self, cwinrt_hstring value);
 
-/* Windows.UI.Composition.CompositionAnimation.get_InitialValueExpressions() */
 HRESULT wuc_composition_animation_get__initial_value_expressions(WUC_CompositionAnimation *self, WUC_InitialValueExpressionCollection** value);
 
-/* Windows.UI.Composition.CompositionAnimation.SetExpressionReferenceParameter(parameterName, source) */
 HRESULT wuc_composition_animation_set_expression_reference_parameter(WUC_CompositionAnimation *self, cwinrt_hstring parameterName, WUC_IAnimationObject* source);
 
-/* Windows.UI.Composition.KeyFrameAnimation */
-/* Windows.UI.Composition.KeyFrameAnimation.get_DelayTime() */
 HRESULT wuc_key_frame_animation_get__delay_time(WUC_KeyFrameAnimation *self, WF_TimeSpan *value);
 
-/* Windows.UI.Composition.KeyFrameAnimation.put_DelayTime() */
 HRESULT wuc_key_frame_animation_put__delay_time(WUC_KeyFrameAnimation *self, WF_TimeSpan value);
 
-/* Windows.UI.Composition.KeyFrameAnimation.get_Duration() */
 HRESULT wuc_key_frame_animation_get__duration(WUC_KeyFrameAnimation *self, WF_TimeSpan *value);
 
-/* Windows.UI.Composition.KeyFrameAnimation.put_Duration() */
 HRESULT wuc_key_frame_animation_put__duration(WUC_KeyFrameAnimation *self, WF_TimeSpan value);
 
-/* Windows.UI.Composition.KeyFrameAnimation.get_IterationBehavior() */
 HRESULT wuc_key_frame_animation_get__iteration_behavior(WUC_KeyFrameAnimation *self, WUC_AnimationIterationBehavior *value);
 
-/* Windows.UI.Composition.KeyFrameAnimation.put_IterationBehavior() */
 HRESULT wuc_key_frame_animation_put__iteration_behavior(WUC_KeyFrameAnimation *self, WUC_AnimationIterationBehavior value);
 
-/* Windows.UI.Composition.KeyFrameAnimation.get_IterationCount() */
 HRESULT wuc_key_frame_animation_get__iteration_count(WUC_KeyFrameAnimation *self, int32_t *value);
 
-/* Windows.UI.Composition.KeyFrameAnimation.put_IterationCount() */
 HRESULT wuc_key_frame_animation_put__iteration_count(WUC_KeyFrameAnimation *self, int32_t value);
 
-/* Windows.UI.Composition.KeyFrameAnimation.get_KeyFrameCount() */
 HRESULT wuc_key_frame_animation_get__key_frame_count(WUC_KeyFrameAnimation *self, int32_t *value);
 
-/* Windows.UI.Composition.KeyFrameAnimation.get_StopBehavior() */
 HRESULT wuc_key_frame_animation_get__stop_behavior(WUC_KeyFrameAnimation *self, WUC_AnimationStopBehavior *value);
 
-/* Windows.UI.Composition.KeyFrameAnimation.put_StopBehavior() */
 HRESULT wuc_key_frame_animation_put__stop_behavior(WUC_KeyFrameAnimation *self, WUC_AnimationStopBehavior value);
 
-/* Windows.UI.Composition.KeyFrameAnimation.InsertExpressionKeyFrame(normalizedProgressKey) */
 HRESULT wuc_key_frame_animation_insert_expression_key_frame(WUC_KeyFrameAnimation *self, float normalizedProgressKey, cwinrt_hstring value);
 
-/* Windows.UI.Composition.KeyFrameAnimation.InsertExpressionKeyFrame(normalizedProgressKey, easingFunction) */
 HRESULT wuc_key_frame_animation_insert_expression_key_frame_f32_str_p(WUC_KeyFrameAnimation *self, float normalizedProgressKey, cwinrt_hstring value, WUC_CompositionEasingFunction* easingFunction);
 
-/* Windows.UI.Composition.KeyFrameAnimation.get_Direction() */
 HRESULT wuc_key_frame_animation_get__direction(WUC_KeyFrameAnimation *self, WUC_AnimationDirection *value);
 
-/* Windows.UI.Composition.KeyFrameAnimation.put_Direction() */
 HRESULT wuc_key_frame_animation_put__direction(WUC_KeyFrameAnimation *self, WUC_AnimationDirection value);
 
-/* Windows.UI.Composition.KeyFrameAnimation.get_DelayBehavior() */
 HRESULT wuc_key_frame_animation_get__delay_behavior(WUC_KeyFrameAnimation *self, WUC_AnimationDelayBehavior *value);
 
-/* Windows.UI.Composition.KeyFrameAnimation.put_DelayBehavior() */
 HRESULT wuc_key_frame_animation_put__delay_behavior(WUC_KeyFrameAnimation *self, WUC_AnimationDelayBehavior value);
 
-/* activate Windows.UI.Composition.BooleanKeyFrameAnimation */
 HRESULT wuc_boolean_key_frame_animation_new(WUC_BooleanKeyFrameAnimation **out);
 
-/* Windows.UI.Composition.BooleanKeyFrameAnimation */
-/* Windows.UI.Composition.BooleanKeyFrameAnimation.InsertKeyFrame(normalizedProgressKey) */
 HRESULT wuc_boolean_key_frame_animation_insert_key_frame(WUC_BooleanKeyFrameAnimation *self, float normalizedProgressKey, BOOL value);
 
-/* activate Windows.UI.Composition.BounceEasingFunction */
 HRESULT wuc_bounce_easing_function_new(WUC_BounceEasingFunction **out);
 
-/* Windows.UI.Composition.BounceEasingFunction */
-/* Windows.UI.Composition.BounceEasingFunction.get_Mode() */
 HRESULT wuc_bounce_easing_function_get__mode(WUC_BounceEasingFunction *self, WUC_CompositionEasingFunctionMode *value);
 
-/* Windows.UI.Composition.BounceEasingFunction.get_Bounces() */
 HRESULT wuc_bounce_easing_function_get__bounces(WUC_BounceEasingFunction *self, int32_t *value);
 
-/* Windows.UI.Composition.BounceEasingFunction.get_Bounciness() */
 HRESULT wuc_bounce_easing_function_get__bounciness(WUC_BounceEasingFunction *self, float *value);
 
-/* Windows.UI.Composition.NaturalMotionAnimation */
-/* Windows.UI.Composition.NaturalMotionAnimation.get_DelayBehavior() */
 HRESULT wuc_natural_motion_animation_get__delay_behavior(WUC_NaturalMotionAnimation *self, WUC_AnimationDelayBehavior *value);
 
-/* Windows.UI.Composition.NaturalMotionAnimation.put_DelayBehavior() */
 HRESULT wuc_natural_motion_animation_put__delay_behavior(WUC_NaturalMotionAnimation *self, WUC_AnimationDelayBehavior value);
 
-/* Windows.UI.Composition.NaturalMotionAnimation.get_DelayTime() */
 HRESULT wuc_natural_motion_animation_get__delay_time(WUC_NaturalMotionAnimation *self, WF_TimeSpan *value);
 
-/* Windows.UI.Composition.NaturalMotionAnimation.put_DelayTime() */
 HRESULT wuc_natural_motion_animation_put__delay_time(WUC_NaturalMotionAnimation *self, WF_TimeSpan value);
 
-/* Windows.UI.Composition.NaturalMotionAnimation.get_StopBehavior() */
 HRESULT wuc_natural_motion_animation_get__stop_behavior(WUC_NaturalMotionAnimation *self, WUC_AnimationStopBehavior *value);
 
-/* Windows.UI.Composition.NaturalMotionAnimation.put_StopBehavior() */
 HRESULT wuc_natural_motion_animation_put__stop_behavior(WUC_NaturalMotionAnimation *self, WUC_AnimationStopBehavior value);
 
-/* Windows.UI.Composition.ScalarNaturalMotionAnimation */
-/* Windows.UI.Composition.ScalarNaturalMotionAnimation.get_FinalValue() */
 HRESULT wuc_scalar_natural_motion_animation_get__final_value(WUC_ScalarNaturalMotionAnimation *self, float** value);
 
-/* Windows.UI.Composition.ScalarNaturalMotionAnimation.put_FinalValue() */
 HRESULT wuc_scalar_natural_motion_animation_put__final_value(WUC_ScalarNaturalMotionAnimation *self, float* value);
 
-/* Windows.UI.Composition.ScalarNaturalMotionAnimation.get_InitialValue() */
 HRESULT wuc_scalar_natural_motion_animation_get__initial_value(WUC_ScalarNaturalMotionAnimation *self, float** value);
 
-/* Windows.UI.Composition.ScalarNaturalMotionAnimation.put_InitialValue() */
 HRESULT wuc_scalar_natural_motion_animation_put__initial_value(WUC_ScalarNaturalMotionAnimation *self, float* value);
 
-/* Windows.UI.Composition.ScalarNaturalMotionAnimation.get_InitialVelocity() */
 HRESULT wuc_scalar_natural_motion_animation_get__initial_velocity(WUC_ScalarNaturalMotionAnimation *self, float *value);
 
-/* Windows.UI.Composition.ScalarNaturalMotionAnimation.put_InitialVelocity() */
 HRESULT wuc_scalar_natural_motion_animation_put__initial_velocity(WUC_ScalarNaturalMotionAnimation *self, float value);
 
-/* activate Windows.UI.Composition.BounceScalarNaturalMotionAnimation */
 HRESULT wuc_bounce_scalar_natural_motion_animation_new(WUC_BounceScalarNaturalMotionAnimation **out);
 
-/* Windows.UI.Composition.BounceScalarNaturalMotionAnimation */
-/* Windows.UI.Composition.BounceScalarNaturalMotionAnimation.get_Acceleration() */
 HRESULT wuc_bounce_scalar_natural_motion_animation_get__acceleration(WUC_BounceScalarNaturalMotionAnimation *self, float *value);
 
-/* Windows.UI.Composition.BounceScalarNaturalMotionAnimation.put_Acceleration() */
 HRESULT wuc_bounce_scalar_natural_motion_animation_put__acceleration(WUC_BounceScalarNaturalMotionAnimation *self, float value);
 
-/* Windows.UI.Composition.BounceScalarNaturalMotionAnimation.get_Restitution() */
 HRESULT wuc_bounce_scalar_natural_motion_animation_get__restitution(WUC_BounceScalarNaturalMotionAnimation *self, float *value);
 
-/* Windows.UI.Composition.BounceScalarNaturalMotionAnimation.put_Restitution() */
 HRESULT wuc_bounce_scalar_natural_motion_animation_put__restitution(WUC_BounceScalarNaturalMotionAnimation *self, float value);
 
-/* Windows.UI.Composition.Vector2NaturalMotionAnimation */
-/* Windows.UI.Composition.Vector2NaturalMotionAnimation.get_FinalValue() */
 HRESULT wuc_vector2_natural_motion_animation_get__final_value(WUC_Vector2NaturalMotionAnimation *self, WFN_Vector_2** value);
 
-/* Windows.UI.Composition.Vector2NaturalMotionAnimation.put_FinalValue() */
 HRESULT wuc_vector2_natural_motion_animation_put__final_value(WUC_Vector2NaturalMotionAnimation *self, WFN_Vector_2* value);
 
-/* Windows.UI.Composition.Vector2NaturalMotionAnimation.get_InitialValue() */
 HRESULT wuc_vector2_natural_motion_animation_get__initial_value(WUC_Vector2NaturalMotionAnimation *self, WFN_Vector_2** value);
 
-/* Windows.UI.Composition.Vector2NaturalMotionAnimation.put_InitialValue() */
 HRESULT wuc_vector2_natural_motion_animation_put__initial_value(WUC_Vector2NaturalMotionAnimation *self, WFN_Vector_2* value);
 
-/* Windows.UI.Composition.Vector2NaturalMotionAnimation.get_InitialVelocity() */
 HRESULT wuc_vector2_natural_motion_animation_get__initial_velocity(WUC_Vector2NaturalMotionAnimation *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.Vector2NaturalMotionAnimation.put_InitialVelocity() */
 HRESULT wuc_vector2_natural_motion_animation_put__initial_velocity(WUC_Vector2NaturalMotionAnimation *self, WFN_Vector_2 value);
 
-/* activate Windows.UI.Composition.BounceVector2NaturalMotionAnimation */
 HRESULT wuc_bounce_vector2_natural_motion_animation_new(WUC_BounceVector2NaturalMotionAnimation **out);
 
-/* Windows.UI.Composition.BounceVector2NaturalMotionAnimation */
-/* Windows.UI.Composition.BounceVector2NaturalMotionAnimation.get_Acceleration() */
 HRESULT wuc_bounce_vector2_natural_motion_animation_get__acceleration(WUC_BounceVector2NaturalMotionAnimation *self, float *value);
 
-/* Windows.UI.Composition.BounceVector2NaturalMotionAnimation.put_Acceleration() */
 HRESULT wuc_bounce_vector2_natural_motion_animation_put__acceleration(WUC_BounceVector2NaturalMotionAnimation *self, float value);
 
-/* Windows.UI.Composition.BounceVector2NaturalMotionAnimation.get_Restitution() */
 HRESULT wuc_bounce_vector2_natural_motion_animation_get__restitution(WUC_BounceVector2NaturalMotionAnimation *self, float *value);
 
-/* Windows.UI.Composition.BounceVector2NaturalMotionAnimation.put_Restitution() */
 HRESULT wuc_bounce_vector2_natural_motion_animation_put__restitution(WUC_BounceVector2NaturalMotionAnimation *self, float value);
 
-/* Windows.UI.Composition.Vector3NaturalMotionAnimation */
-/* Windows.UI.Composition.Vector3NaturalMotionAnimation.get_FinalValue() */
 HRESULT wuc_vector3_natural_motion_animation_get__final_value(WUC_Vector3NaturalMotionAnimation *self, WFN_Vector_3** value);
 
-/* Windows.UI.Composition.Vector3NaturalMotionAnimation.put_FinalValue() */
 HRESULT wuc_vector3_natural_motion_animation_put__final_value(WUC_Vector3NaturalMotionAnimation *self, WFN_Vector_3* value);
 
-/* Windows.UI.Composition.Vector3NaturalMotionAnimation.get_InitialValue() */
 HRESULT wuc_vector3_natural_motion_animation_get__initial_value(WUC_Vector3NaturalMotionAnimation *self, WFN_Vector_3** value);
 
-/* Windows.UI.Composition.Vector3NaturalMotionAnimation.put_InitialValue() */
 HRESULT wuc_vector3_natural_motion_animation_put__initial_value(WUC_Vector3NaturalMotionAnimation *self, WFN_Vector_3* value);
 
-/* Windows.UI.Composition.Vector3NaturalMotionAnimation.get_InitialVelocity() */
 HRESULT wuc_vector3_natural_motion_animation_get__initial_velocity(WUC_Vector3NaturalMotionAnimation *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.Vector3NaturalMotionAnimation.put_InitialVelocity() */
 HRESULT wuc_vector3_natural_motion_animation_put__initial_velocity(WUC_Vector3NaturalMotionAnimation *self, WFN_Vector_3 value);
 
-/* activate Windows.UI.Composition.BounceVector3NaturalMotionAnimation */
 HRESULT wuc_bounce_vector3_natural_motion_animation_new(WUC_BounceVector3NaturalMotionAnimation **out);
 
-/* Windows.UI.Composition.BounceVector3NaturalMotionAnimation */
-/* Windows.UI.Composition.BounceVector3NaturalMotionAnimation.get_Acceleration() */
 HRESULT wuc_bounce_vector3_natural_motion_animation_get__acceleration(WUC_BounceVector3NaturalMotionAnimation *self, float *value);
 
-/* Windows.UI.Composition.BounceVector3NaturalMotionAnimation.put_Acceleration() */
 HRESULT wuc_bounce_vector3_natural_motion_animation_put__acceleration(WUC_BounceVector3NaturalMotionAnimation *self, float value);
 
-/* Windows.UI.Composition.BounceVector3NaturalMotionAnimation.get_Restitution() */
 HRESULT wuc_bounce_vector3_natural_motion_animation_get__restitution(WUC_BounceVector3NaturalMotionAnimation *self, float *value);
 
-/* Windows.UI.Composition.BounceVector3NaturalMotionAnimation.put_Restitution() */
 HRESULT wuc_bounce_vector3_natural_motion_animation_put__restitution(WUC_BounceVector3NaturalMotionAnimation *self, float value);
 
-/* activate Windows.UI.Composition.CircleEasingFunction */
 HRESULT wuc_circle_easing_function_new(WUC_CircleEasingFunction **out);
 
-/* Windows.UI.Composition.CircleEasingFunction */
-/* Windows.UI.Composition.CircleEasingFunction.get_Mode() */
 HRESULT wuc_circle_easing_function_get__mode(WUC_CircleEasingFunction *self, WUC_CompositionEasingFunctionMode *value);
 
-/* activate Windows.UI.Composition.ColorKeyFrameAnimation */
 HRESULT wuc_color_key_frame_animation_new(WUC_ColorKeyFrameAnimation **out);
 
-/* Windows.UI.Composition.ColorKeyFrameAnimation */
-/* Windows.UI.Composition.ColorKeyFrameAnimation.get_InterpolationColorSpace() */
 HRESULT wuc_color_key_frame_animation_get__interpolation_color_space(WUC_ColorKeyFrameAnimation *self, WUC_CompositionColorSpace *value);
 
-/* Windows.UI.Composition.ColorKeyFrameAnimation.put_InterpolationColorSpace() */
 HRESULT wuc_color_key_frame_animation_put__interpolation_color_space(WUC_ColorKeyFrameAnimation *self, WUC_CompositionColorSpace value);
 
-/* Windows.UI.Composition.ColorKeyFrameAnimation.InsertKeyFrame(normalizedProgressKey) */
 HRESULT wuc_color_key_frame_animation_insert_key_frame(WUC_ColorKeyFrameAnimation *self, float normalizedProgressKey, WUI_Color value);
 
-/* Windows.UI.Composition.ColorKeyFrameAnimation.InsertKeyFrame(normalizedProgressKey, easingFunction) */
 HRESULT wuc_color_key_frame_animation_insert_key_frame_f32_color_p(WUC_ColorKeyFrameAnimation *self, float normalizedProgressKey, WUI_Color value, WUC_CompositionEasingFunction* easingFunction);
 
-/* activate Windows.UI.Composition.CompositionAnimationGroup */
 HRESULT wuc_composition_animation_group_new(WUC_CompositionAnimationGroup **out);
 
-/* Windows.UI.Composition.CompositionAnimationGroup */
-/* Windows.UI.Composition.CompositionAnimationGroup.get_Count() */
 HRESULT wuc_composition_animation_group_get__count(WUC_CompositionAnimationGroup *self, int32_t *value);
 
-/* Windows.UI.Composition.CompositionAnimationGroup.Add() */
 HRESULT wuc_composition_animation_group_add(WUC_CompositionAnimationGroup *self, WUC_CompositionAnimation* value);
 
-/* Windows.UI.Composition.CompositionAnimationGroup.Remove() */
 HRESULT wuc_composition_animation_group_remove(WUC_CompositionAnimationGroup *self, WUC_CompositionAnimation* value);
 
-/* Windows.UI.Composition.CompositionAnimationGroup.RemoveAll() */
 HRESULT wuc_composition_animation_group_remove_all(WUC_CompositionAnimationGroup *self);
 
-/* Windows.UI.Composition.CompositionAnimationGroup.First() */
 HRESULT wuc_composition_animation_group_first(WUC_CompositionAnimationGroup *self, WFOCO_IIterator_WUC_CompositionAnimation** out);
 
-/* activate Windows.UI.Composition.CompositionCapabilities */
 HRESULT wuc_composition_capabilities_new(WUC_CompositionCapabilities **out);
 
-/* Windows.UI.Composition.CompositionCapabilities */
-/* Windows.UI.Composition.CompositionCapabilities.AreEffectsSupported() */
 HRESULT wuc_composition_capabilities_are_effects_supported(WUC_CompositionCapabilities *self, BOOL *out);
 
-/* Windows.UI.Composition.CompositionCapabilities.AreEffectsFast() */
 HRESULT wuc_composition_capabilities_are_effects_fast(WUC_CompositionCapabilities *self, BOOL *out);
 
-/* Windows.UI.Composition.CompositionCapabilities.GetForCurrentView() */
 HRESULT wuc_composition_capabilities_get_for_current_view(WUC_CompositionCapabilities** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuc_composition_capabilities_on_changed(WUC_CompositionCapabilities *self, cwinrt_event_fn fn, void *ctx);
 void wuc_composition_capabilities_off_changed(WUC_CompositionCapabilities *self, cwinrt_token token);
 
-/* Windows.UI.Composition.CompositionClip */
-/* Windows.UI.Composition.CompositionClip.get_AnchorPoint() */
 HRESULT wuc_composition_clip_get__anchor_point(WUC_CompositionClip *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionClip.put_AnchorPoint() */
 HRESULT wuc_composition_clip_put__anchor_point(WUC_CompositionClip *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.CompositionClip.get_CenterPoint() */
 HRESULT wuc_composition_clip_get__center_point(WUC_CompositionClip *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionClip.put_CenterPoint() */
 HRESULT wuc_composition_clip_put__center_point(WUC_CompositionClip *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.CompositionClip.get_Offset() */
 HRESULT wuc_composition_clip_get__offset(WUC_CompositionClip *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionClip.put_Offset() */
 HRESULT wuc_composition_clip_put__offset(WUC_CompositionClip *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.CompositionClip.get_RotationAngle() */
 HRESULT wuc_composition_clip_get__rotation_angle(WUC_CompositionClip *self, float *value);
 
-/* Windows.UI.Composition.CompositionClip.put_RotationAngle() */
 HRESULT wuc_composition_clip_put__rotation_angle(WUC_CompositionClip *self, float value);
 
-/* Windows.UI.Composition.CompositionClip.get_RotationAngleInDegrees() */
 HRESULT wuc_composition_clip_get__rotation_angle_in_degrees(WUC_CompositionClip *self, float *value);
 
-/* Windows.UI.Composition.CompositionClip.put_RotationAngleInDegrees() */
 HRESULT wuc_composition_clip_put__rotation_angle_in_degrees(WUC_CompositionClip *self, float value);
 
-/* Windows.UI.Composition.CompositionClip.get_Scale() */
 HRESULT wuc_composition_clip_get__scale(WUC_CompositionClip *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionClip.put_Scale() */
 HRESULT wuc_composition_clip_put__scale(WUC_CompositionClip *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.CompositionClip.get_TransformMatrix() */
 HRESULT wuc_composition_clip_get__transform_matrix(WUC_CompositionClip *self, WFN_Matrix3x_2 *value);
 
-/* Windows.UI.Composition.CompositionClip.put_TransformMatrix() */
 HRESULT wuc_composition_clip_put__transform_matrix(WUC_CompositionClip *self, WFN_Matrix3x_2 value);
 
-/* activate Windows.UI.Composition.CompositionColorBrush */
 HRESULT wuc_composition_color_brush_new(WUC_CompositionColorBrush **out);
 
-/* Windows.UI.Composition.CompositionColorBrush */
-/* Windows.UI.Composition.CompositionColorBrush.get_Color() */
 HRESULT wuc_composition_color_brush_get__color(WUC_CompositionColorBrush *self, WUI_Color *value);
 
-/* Windows.UI.Composition.CompositionColorBrush.put_Color() */
 HRESULT wuc_composition_color_brush_put__color(WUC_CompositionColorBrush *self, WUI_Color value);
 
-/* activate Windows.UI.Composition.CompositionColorGradientStop */
 HRESULT wuc_composition_color_gradient_stop_new(WUC_CompositionColorGradientStop **out);
 
-/* Windows.UI.Composition.CompositionColorGradientStop */
-/* Windows.UI.Composition.CompositionColorGradientStop.get_Color() */
 HRESULT wuc_composition_color_gradient_stop_get__color(WUC_CompositionColorGradientStop *self, WUI_Color *value);
 
-/* Windows.UI.Composition.CompositionColorGradientStop.put_Color() */
 HRESULT wuc_composition_color_gradient_stop_put__color(WUC_CompositionColorGradientStop *self, WUI_Color value);
 
-/* Windows.UI.Composition.CompositionColorGradientStop.get_Offset() */
 HRESULT wuc_composition_color_gradient_stop_get__offset(WUC_CompositionColorGradientStop *self, float *value);
 
-/* Windows.UI.Composition.CompositionColorGradientStop.put_Offset() */
 HRESULT wuc_composition_color_gradient_stop_put__offset(WUC_CompositionColorGradientStop *self, float value);
 
-/* activate Windows.UI.Composition.CompositionColorGradientStopCollection */
 HRESULT wuc_composition_color_gradient_stop_collection_new(WUC_CompositionColorGradientStopCollection **out);
 
-/* Windows.UI.Composition.CompositionColorGradientStopCollection */
-/* Windows.UI.Composition.CompositionColorGradientStopCollection.First() */
 HRESULT wuc_composition_color_gradient_stop_collection_first(WUC_CompositionColorGradientStopCollection *self, WFOCO_IIterator_WUC_CompositionColorGradientStop** out);
 
-/* Windows.UI.Composition.CompositionColorGradientStopCollection.GetAt(index) */
 HRESULT wuc_composition_color_gradient_stop_collection_get_at(WUC_CompositionColorGradientStopCollection *self, uint32_t index, WUC_CompositionColorGradientStop** out);
 
-/* Windows.UI.Composition.CompositionColorGradientStopCollection.get_Size() */
 HRESULT wuc_composition_color_gradient_stop_collection_get__size(WUC_CompositionColorGradientStopCollection *self, uint32_t *value);
 
-/* Windows.UI.Composition.CompositionColorGradientStopCollection.GetView() */
 HRESULT wuc_composition_color_gradient_stop_collection_get_view(WUC_CompositionColorGradientStopCollection *self, WFOCO_IVectorView_WUC_CompositionColorGradientStop** out);
 
-/* Windows.UI.Composition.CompositionColorGradientStopCollection.IndexOf(index) */
 HRESULT wuc_composition_color_gradient_stop_collection_index_of(WUC_CompositionColorGradientStopCollection *self, WUC_CompositionColorGradientStop* value, uint32_t index, BOOL *out);
 
-/* Windows.UI.Composition.CompositionColorGradientStopCollection.SetAt(index) */
 HRESULT wuc_composition_color_gradient_stop_collection_set_at(WUC_CompositionColorGradientStopCollection *self, uint32_t index, WUC_CompositionColorGradientStop* value);
 
-/* Windows.UI.Composition.CompositionColorGradientStopCollection.InsertAt(index) */
 HRESULT wuc_composition_color_gradient_stop_collection_insert_at(WUC_CompositionColorGradientStopCollection *self, uint32_t index, WUC_CompositionColorGradientStop* value);
 
-/* Windows.UI.Composition.CompositionColorGradientStopCollection.RemoveAt(index) */
 HRESULT wuc_composition_color_gradient_stop_collection_remove_at(WUC_CompositionColorGradientStopCollection *self, uint32_t index);
 
-/* Windows.UI.Composition.CompositionColorGradientStopCollection.Append() */
 HRESULT wuc_composition_color_gradient_stop_collection_append(WUC_CompositionColorGradientStopCollection *self, WUC_CompositionColorGradientStop* value);
 
-/* Windows.UI.Composition.CompositionColorGradientStopCollection.RemoveAtEnd() */
 HRESULT wuc_composition_color_gradient_stop_collection_remove_at_end(WUC_CompositionColorGradientStopCollection *self);
 
-/* Windows.UI.Composition.CompositionColorGradientStopCollection.Clear() */
 HRESULT wuc_composition_color_gradient_stop_collection_clear(WUC_CompositionColorGradientStopCollection *self);
 
-/* Windows.UI.Composition.CompositionColorGradientStopCollection.GetMany(startIndex, items) */
 HRESULT wuc_composition_color_gradient_stop_collection_get_many(WUC_CompositionColorGradientStopCollection *self, uint32_t startIndex, WUC_CompositionColorGradientStop *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.UI.Composition.CompositionColorGradientStopCollection.ReplaceAll(items) */
 HRESULT wuc_composition_color_gradient_stop_collection_replace_all(WUC_CompositionColorGradientStopCollection *self, WUC_CompositionColorGradientStop *items, uint32_t items_len);
 
-/* activate Windows.UI.Composition.CompositionCommitBatch */
 HRESULT wuc_composition_commit_batch_new(WUC_CompositionCommitBatch **out);
 
-/* Windows.UI.Composition.CompositionCommitBatch */
-/* Windows.UI.Composition.CompositionCommitBatch.get_IsActive() */
 HRESULT wuc_composition_commit_batch_get__is_active(WUC_CompositionCommitBatch *self, BOOL *value);
 
-/* Windows.UI.Composition.CompositionCommitBatch.get_IsEnded() */
 HRESULT wuc_composition_commit_batch_get__is_ended(WUC_CompositionCommitBatch *self, BOOL *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuc_composition_commit_batch_on_completed(WUC_CompositionCommitBatch *self, cwinrt_event_fn fn, void *ctx);
 void wuc_composition_commit_batch_off_completed(WUC_CompositionCommitBatch *self, cwinrt_token token);
 
-/* Windows.UI.Composition.CompositionShape */
-/* Windows.UI.Composition.CompositionShape.get_CenterPoint() */
 HRESULT wuc_composition_shape_get__center_point(WUC_CompositionShape *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionShape.put_CenterPoint() */
 HRESULT wuc_composition_shape_put__center_point(WUC_CompositionShape *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.CompositionShape.get_Offset() */
 HRESULT wuc_composition_shape_get__offset(WUC_CompositionShape *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionShape.put_Offset() */
 HRESULT wuc_composition_shape_put__offset(WUC_CompositionShape *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.CompositionShape.get_RotationAngle() */
 HRESULT wuc_composition_shape_get__rotation_angle(WUC_CompositionShape *self, float *value);
 
-/* Windows.UI.Composition.CompositionShape.put_RotationAngle() */
 HRESULT wuc_composition_shape_put__rotation_angle(WUC_CompositionShape *self, float value);
 
-/* Windows.UI.Composition.CompositionShape.get_RotationAngleInDegrees() */
 HRESULT wuc_composition_shape_get__rotation_angle_in_degrees(WUC_CompositionShape *self, float *value);
 
-/* Windows.UI.Composition.CompositionShape.put_RotationAngleInDegrees() */
 HRESULT wuc_composition_shape_put__rotation_angle_in_degrees(WUC_CompositionShape *self, float value);
 
-/* Windows.UI.Composition.CompositionShape.get_Scale() */
 HRESULT wuc_composition_shape_get__scale(WUC_CompositionShape *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionShape.put_Scale() */
 HRESULT wuc_composition_shape_put__scale(WUC_CompositionShape *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.CompositionShape.get_TransformMatrix() */
 HRESULT wuc_composition_shape_get__transform_matrix(WUC_CompositionShape *self, WFN_Matrix3x_2 *value);
 
-/* Windows.UI.Composition.CompositionShape.put_TransformMatrix() */
 HRESULT wuc_composition_shape_put__transform_matrix(WUC_CompositionShape *self, WFN_Matrix3x_2 value);
 
-/* activate Windows.UI.Composition.CompositionContainerShape */
 HRESULT wuc_composition_container_shape_new(WUC_CompositionContainerShape **out);
 
-/* Windows.UI.Composition.CompositionContainerShape */
-/* Windows.UI.Composition.CompositionContainerShape.get_Shapes() */
 HRESULT wuc_composition_container_shape_get__shapes(WUC_CompositionContainerShape *self, WUC_CompositionShapeCollection** value);
 
-/* Windows.UI.Composition.CompositionDrawingSurface */
-/* Windows.UI.Composition.CompositionDrawingSurface.get_AlphaMode() */
 HRESULT wuc_composition_drawing_surface_get__alpha_mode(WUC_CompositionDrawingSurface *self, WGRDI_DirectXAlphaMode *value);
 
-/* Windows.UI.Composition.CompositionDrawingSurface.get_PixelFormat() */
 HRESULT wuc_composition_drawing_surface_get__pixel_format(WUC_CompositionDrawingSurface *self, WGRDI_DirectXPixelFormat *value);
 
-/* Windows.UI.Composition.CompositionDrawingSurface.get_Size() */
 HRESULT wuc_composition_drawing_surface_get__size(WUC_CompositionDrawingSurface *self, WF_Size *value);
 
-/* Windows.UI.Composition.CompositionDrawingSurface.get_SizeInt32() */
 HRESULT wuc_composition_drawing_surface_get__size_int32(WUC_CompositionDrawingSurface *self, WG_SizeInt32 *value);
 
-/* Windows.UI.Composition.CompositionDrawingSurface.Resize(sizePixels) */
 HRESULT wuc_composition_drawing_surface_resize(WUC_CompositionDrawingSurface *self, WG_SizeInt32 sizePixels);
 
-/* Windows.UI.Composition.CompositionDrawingSurface.Scroll(offset) */
 HRESULT wuc_composition_drawing_surface_scroll(WUC_CompositionDrawingSurface *self, WG_PointInt32 offset);
 
-/* Windows.UI.Composition.CompositionDrawingSurface.Scroll(offset, scrollRect) */
 HRESULT wuc_composition_drawing_surface_scroll_point_int32_rect_int32(WUC_CompositionDrawingSurface *self, WG_PointInt32 offset, WG_RectInt32 scrollRect);
 
-/* Windows.UI.Composition.CompositionDrawingSurface.ScrollWithClip(offset, clipRect) */
 HRESULT wuc_composition_drawing_surface_scroll_with_clip(WUC_CompositionDrawingSurface *self, WG_PointInt32 offset, WG_RectInt32 clipRect);
 
-/* Windows.UI.Composition.CompositionDrawingSurface.ScrollWithClip(offset, clipRect, scrollRect) */
 HRESULT wuc_composition_drawing_surface_scroll_with_clip_point_int32_rect_int32_rect_int32(WUC_CompositionDrawingSurface *self, WG_PointInt32 offset, WG_RectInt32 clipRect, WG_RectInt32 scrollRect);
 
-/* activate Windows.UI.Composition.CompositionEffectBrush */
 HRESULT wuc_composition_effect_brush_new(WUC_CompositionEffectBrush **out);
 
-/* Windows.UI.Composition.CompositionEffectBrush */
-/* Windows.UI.Composition.CompositionEffectBrush.GetSourceParameter(name) */
 HRESULT wuc_composition_effect_brush_get_source_parameter(WUC_CompositionEffectBrush *self, cwinrt_hstring name, WUC_Brush** out);
 
-/* Windows.UI.Composition.CompositionEffectBrush.SetSourceParameter(name, source) */
 HRESULT wuc_composition_effect_brush_set_source_parameter(WUC_CompositionEffectBrush *self, cwinrt_hstring name, WUC_Brush* source);
 
-/* activate Windows.UI.Composition.CompositionEffectFactory */
 HRESULT wuc_composition_effect_factory_new(WUC_CompositionEffectFactory **out);
 
-/* Windows.UI.Composition.CompositionEffectFactory */
-/* Windows.UI.Composition.CompositionEffectFactory.CreateBrush() */
 HRESULT wuc_composition_effect_factory_create_brush(WUC_CompositionEffectFactory *self, WUC_CompositionEffectBrush** out);
 
-/* Windows.UI.Composition.CompositionEffectFactory.get_ExtendedError() */
 HRESULT wuc_composition_effect_factory_get__extended_error(WUC_CompositionEffectFactory *self, HRESULT *value);
 
-/* Windows.UI.Composition.CompositionEffectFactory.get_LoadStatus() */
 HRESULT wuc_composition_effect_factory_get__load_status(WUC_CompositionEffectFactory *self, WUC_CompositionEffectFactoryLoadStatus *value);
 
-/* activate Windows.UI.Composition.CompositionEffectSourceParameter */
 HRESULT wuc_composition_effect_source_parameter_new(WUC_CompositionEffectSourceParameter **out);
 
-/* Windows.UI.Composition.CompositionEffectSourceParameter */
-/* Windows.UI.Composition.CompositionEffectSourceParameter.get_Name() */
 HRESULT wuc_composition_effect_source_parameter_get__name(WUC_CompositionEffectSourceParameter *self, cwinrt_hstring *value);
 
-/* Windows.UI.Composition.CompositionGeometry */
-/* Windows.UI.Composition.CompositionGeometry.get_TrimEnd() */
 HRESULT wuc_composition_geometry_get__trim_end(WUC_CompositionGeometry *self, float *value);
 
-/* Windows.UI.Composition.CompositionGeometry.put_TrimEnd() */
 HRESULT wuc_composition_geometry_put__trim_end(WUC_CompositionGeometry *self, float value);
 
-/* Windows.UI.Composition.CompositionGeometry.get_TrimOffset() */
 HRESULT wuc_composition_geometry_get__trim_offset(WUC_CompositionGeometry *self, float *value);
 
-/* Windows.UI.Composition.CompositionGeometry.put_TrimOffset() */
 HRESULT wuc_composition_geometry_put__trim_offset(WUC_CompositionGeometry *self, float value);
 
-/* Windows.UI.Composition.CompositionGeometry.get_TrimStart() */
 HRESULT wuc_composition_geometry_get__trim_start(WUC_CompositionGeometry *self, float *value);
 
-/* Windows.UI.Composition.CompositionGeometry.put_TrimStart() */
 HRESULT wuc_composition_geometry_put__trim_start(WUC_CompositionGeometry *self, float value);
 
-/* activate Windows.UI.Composition.CompositionEllipseGeometry */
 HRESULT wuc_composition_ellipse_geometry_new(WUC_CompositionEllipseGeometry **out);
 
-/* Windows.UI.Composition.CompositionEllipseGeometry */
-/* Windows.UI.Composition.CompositionEllipseGeometry.get_Center() */
 HRESULT wuc_composition_ellipse_geometry_get__center(WUC_CompositionEllipseGeometry *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionEllipseGeometry.put_Center() */
 HRESULT wuc_composition_ellipse_geometry_put__center(WUC_CompositionEllipseGeometry *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.CompositionEllipseGeometry.get_Radius() */
 HRESULT wuc_composition_ellipse_geometry_get__radius(WUC_CompositionEllipseGeometry *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionEllipseGeometry.put_Radius() */
 HRESULT wuc_composition_ellipse_geometry_put__radius(WUC_CompositionEllipseGeometry *self, WFN_Vector_2 value);
 
-/* activate Windows.UI.Composition.CompositionGeometricClip */
 HRESULT wuc_composition_geometric_clip_new(WUC_CompositionGeometricClip **out);
 
-/* Windows.UI.Composition.CompositionGeometricClip */
-/* Windows.UI.Composition.CompositionGeometricClip.get_Geometry() */
 HRESULT wuc_composition_geometric_clip_get__geometry(WUC_CompositionGeometricClip *self, WUC_CompositionGeometry** value);
 
-/* Windows.UI.Composition.CompositionGeometricClip.put_Geometry() */
 HRESULT wuc_composition_geometric_clip_put__geometry(WUC_CompositionGeometricClip *self, WUC_CompositionGeometry* value);
 
-/* Windows.UI.Composition.CompositionGeometricClip.get_ViewBox() */
 HRESULT wuc_composition_geometric_clip_get__view_box(WUC_CompositionGeometricClip *self, WUC_CompositionViewBox** value);
 
-/* Windows.UI.Composition.CompositionGeometricClip.put_ViewBox() */
 HRESULT wuc_composition_geometric_clip_put__view_box(WUC_CompositionGeometricClip *self, WUC_CompositionViewBox* value);
 
-/* Windows.UI.Composition.CompositionGradientBrush */
-/* Windows.UI.Composition.CompositionGradientBrush.get_AnchorPoint() */
 HRESULT wuc_composition_gradient_brush_get__anchor_point(WUC_CompositionGradientBrush *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionGradientBrush.put_AnchorPoint() */
 HRESULT wuc_composition_gradient_brush_put__anchor_point(WUC_CompositionGradientBrush *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.CompositionGradientBrush.get_CenterPoint() */
 HRESULT wuc_composition_gradient_brush_get__center_point(WUC_CompositionGradientBrush *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionGradientBrush.put_CenterPoint() */
 HRESULT wuc_composition_gradient_brush_put__center_point(WUC_CompositionGradientBrush *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.CompositionGradientBrush.get_ColorStops() */
 HRESULT wuc_composition_gradient_brush_get__color_stops(WUC_CompositionGradientBrush *self, WUC_CompositionColorGradientStopCollection** value);
 
-/* Windows.UI.Composition.CompositionGradientBrush.get_ExtendMode() */
 HRESULT wuc_composition_gradient_brush_get__extend_mode(WUC_CompositionGradientBrush *self, WUC_CompositionGradientExtendMode *value);
 
-/* Windows.UI.Composition.CompositionGradientBrush.put_ExtendMode() */
 HRESULT wuc_composition_gradient_brush_put__extend_mode(WUC_CompositionGradientBrush *self, WUC_CompositionGradientExtendMode value);
 
-/* Windows.UI.Composition.CompositionGradientBrush.get_InterpolationSpace() */
 HRESULT wuc_composition_gradient_brush_get__interpolation_space(WUC_CompositionGradientBrush *self, WUC_CompositionColorSpace *value);
 
-/* Windows.UI.Composition.CompositionGradientBrush.put_InterpolationSpace() */
 HRESULT wuc_composition_gradient_brush_put__interpolation_space(WUC_CompositionGradientBrush *self, WUC_CompositionColorSpace value);
 
-/* Windows.UI.Composition.CompositionGradientBrush.get_Offset() */
 HRESULT wuc_composition_gradient_brush_get__offset(WUC_CompositionGradientBrush *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionGradientBrush.put_Offset() */
 HRESULT wuc_composition_gradient_brush_put__offset(WUC_CompositionGradientBrush *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.CompositionGradientBrush.get_RotationAngle() */
 HRESULT wuc_composition_gradient_brush_get__rotation_angle(WUC_CompositionGradientBrush *self, float *value);
 
-/* Windows.UI.Composition.CompositionGradientBrush.put_RotationAngle() */
 HRESULT wuc_composition_gradient_brush_put__rotation_angle(WUC_CompositionGradientBrush *self, float value);
 
-/* Windows.UI.Composition.CompositionGradientBrush.get_RotationAngleInDegrees() */
 HRESULT wuc_composition_gradient_brush_get__rotation_angle_in_degrees(WUC_CompositionGradientBrush *self, float *value);
 
-/* Windows.UI.Composition.CompositionGradientBrush.put_RotationAngleInDegrees() */
 HRESULT wuc_composition_gradient_brush_put__rotation_angle_in_degrees(WUC_CompositionGradientBrush *self, float value);
 
-/* Windows.UI.Composition.CompositionGradientBrush.get_Scale() */
 HRESULT wuc_composition_gradient_brush_get__scale(WUC_CompositionGradientBrush *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionGradientBrush.put_Scale() */
 HRESULT wuc_composition_gradient_brush_put__scale(WUC_CompositionGradientBrush *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.CompositionGradientBrush.get_TransformMatrix() */
 HRESULT wuc_composition_gradient_brush_get__transform_matrix(WUC_CompositionGradientBrush *self, WFN_Matrix3x_2 *value);
 
-/* Windows.UI.Composition.CompositionGradientBrush.put_TransformMatrix() */
 HRESULT wuc_composition_gradient_brush_put__transform_matrix(WUC_CompositionGradientBrush *self, WFN_Matrix3x_2 value);
 
-/* Windows.UI.Composition.CompositionGradientBrush.get_MappingMode() */
 HRESULT wuc_composition_gradient_brush_get__mapping_mode(WUC_CompositionGradientBrush *self, WUC_CompositionMappingMode *value);
 
-/* Windows.UI.Composition.CompositionGradientBrush.put_MappingMode() */
 HRESULT wuc_composition_gradient_brush_put__mapping_mode(WUC_CompositionGradientBrush *self, WUC_CompositionMappingMode value);
 
-/* activate Windows.UI.Composition.CompositionGraphicsDevice */
 HRESULT wuc_composition_graphics_device_new(WUC_CompositionGraphicsDevice **out);
 
-/* Windows.UI.Composition.CompositionGraphicsDevice */
-/* Windows.UI.Composition.CompositionGraphicsDevice.CreateDrawingSurface(sizePixels, pixelFormat, alphaMode) */
 HRESULT wuc_composition_graphics_device_create_drawing_surface(WUC_CompositionGraphicsDevice *self, WF_Size sizePixels, WGRDI_DirectXPixelFormat pixelFormat, WGRDI_DirectXAlphaMode alphaMode, WUC_CompositionDrawingSurface** out);
 
-/* Windows.UI.Composition.CompositionGraphicsDevice.CreateDrawingSurface2(sizePixels, pixelFormat, alphaMode) */
 HRESULT wuc_composition_graphics_device_create_drawing_surface2(WUC_CompositionGraphicsDevice *self, WG_SizeInt32 sizePixels, WGRDI_DirectXPixelFormat pixelFormat, WGRDI_DirectXAlphaMode alphaMode, WUC_CompositionDrawingSurface** out);
 
-/* Windows.UI.Composition.CompositionGraphicsDevice.CreateVirtualDrawingSurface(sizePixels, pixelFormat, alphaMode) */
 HRESULT wuc_composition_graphics_device_create_virtual_drawing_surface(WUC_CompositionGraphicsDevice *self, WG_SizeInt32 sizePixels, WGRDI_DirectXPixelFormat pixelFormat, WGRDI_DirectXAlphaMode alphaMode, WUC_CompositionVirtualDrawingSurface** out);
 
-/* Windows.UI.Composition.CompositionGraphicsDevice.CreateMipmapSurface(sizePixels, pixelFormat, alphaMode) */
 HRESULT wuc_composition_graphics_device_create_mipmap_surface(WUC_CompositionGraphicsDevice *self, WG_SizeInt32 sizePixels, WGRDI_DirectXPixelFormat pixelFormat, WGRDI_DirectXAlphaMode alphaMode, WUC_CompositionMipmapSurface** out);
 
-/* Windows.UI.Composition.CompositionGraphicsDevice.Trim() */
 HRESULT wuc_composition_graphics_device_trim(WUC_CompositionGraphicsDevice *self);
 
-/* Windows.UI.Composition.CompositionGraphicsDevice.CaptureAsync(captureVisual, size, pixelFormat, alphaMode, sdrBoost) */
 HRESULT wuc_composition_graphics_device_capture_async(WUC_CompositionGraphicsDevice *self, WUC_Visual* captureVisual, WG_SizeInt32 size, WGRDI_DirectXPixelFormat pixelFormat, WGRDI_DirectXAlphaMode alphaMode, float sdrBoost, WF_IAsyncOperation_WUC_ICompositionSurface** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuc_composition_graphics_device_on_rendering_device_replaced(WUC_CompositionGraphicsDevice *self, cwinrt_event_fn fn, void *ctx);
 void wuc_composition_graphics_device_off_rendering_device_replaced(WUC_CompositionGraphicsDevice *self, cwinrt_token token);
 
-/* activate Windows.UI.Composition.CompositionLineGeometry */
 HRESULT wuc_composition_line_geometry_new(WUC_CompositionLineGeometry **out);
 
-/* Windows.UI.Composition.CompositionLineGeometry */
-/* Windows.UI.Composition.CompositionLineGeometry.get_Start() */
 HRESULT wuc_composition_line_geometry_get__start(WUC_CompositionLineGeometry *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionLineGeometry.put_Start() */
 HRESULT wuc_composition_line_geometry_put__start(WUC_CompositionLineGeometry *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.CompositionLineGeometry.get_End() */
 HRESULT wuc_composition_line_geometry_get__end(WUC_CompositionLineGeometry *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionLineGeometry.put_End() */
 HRESULT wuc_composition_line_geometry_put__end(WUC_CompositionLineGeometry *self, WFN_Vector_2 value);
 
-/* activate Windows.UI.Composition.CompositionLinearGradientBrush */
 HRESULT wuc_composition_linear_gradient_brush_new(WUC_CompositionLinearGradientBrush **out);
 
-/* Windows.UI.Composition.CompositionLinearGradientBrush */
-/* Windows.UI.Composition.CompositionLinearGradientBrush.get_EndPoint() */
 HRESULT wuc_composition_linear_gradient_brush_get__end_point(WUC_CompositionLinearGradientBrush *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionLinearGradientBrush.put_EndPoint() */
 HRESULT wuc_composition_linear_gradient_brush_put__end_point(WUC_CompositionLinearGradientBrush *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.CompositionLinearGradientBrush.get_StartPoint() */
 HRESULT wuc_composition_linear_gradient_brush_get__start_point(WUC_CompositionLinearGradientBrush *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionLinearGradientBrush.put_StartPoint() */
 HRESULT wuc_composition_linear_gradient_brush_put__start_point(WUC_CompositionLinearGradientBrush *self, WFN_Vector_2 value);
 
-/* activate Windows.UI.Composition.CompositionMaskBrush */
 HRESULT wuc_composition_mask_brush_new(WUC_CompositionMaskBrush **out);
 
-/* Windows.UI.Composition.CompositionMaskBrush */
-/* Windows.UI.Composition.CompositionMaskBrush.get_Mask() */
 HRESULT wuc_composition_mask_brush_get__mask(WUC_CompositionMaskBrush *self, WUC_Brush** value);
 
-/* Windows.UI.Composition.CompositionMaskBrush.put_Mask() */
 HRESULT wuc_composition_mask_brush_put__mask(WUC_CompositionMaskBrush *self, WUC_Brush* value);
 
-/* Windows.UI.Composition.CompositionMaskBrush.get_Source() */
 HRESULT wuc_composition_mask_brush_get__source(WUC_CompositionMaskBrush *self, WUC_Brush** value);
 
-/* Windows.UI.Composition.CompositionMaskBrush.put_Source() */
 HRESULT wuc_composition_mask_brush_put__source(WUC_CompositionMaskBrush *self, WUC_Brush* value);
 
-/* activate Windows.UI.Composition.CompositionMipmapSurface */
 HRESULT wuc_composition_mipmap_surface_new(WUC_CompositionMipmapSurface **out);
 
-/* Windows.UI.Composition.CompositionMipmapSurface */
-/* Windows.UI.Composition.CompositionMipmapSurface.get_LevelCount() */
 HRESULT wuc_composition_mipmap_surface_get__level_count(WUC_CompositionMipmapSurface *self, uint32_t *value);
 
-/* Windows.UI.Composition.CompositionMipmapSurface.get_AlphaMode() */
 HRESULT wuc_composition_mipmap_surface_get__alpha_mode(WUC_CompositionMipmapSurface *self, WGRDI_DirectXAlphaMode *value);
 
-/* Windows.UI.Composition.CompositionMipmapSurface.get_PixelFormat() */
 HRESULT wuc_composition_mipmap_surface_get__pixel_format(WUC_CompositionMipmapSurface *self, WGRDI_DirectXPixelFormat *value);
 
-/* Windows.UI.Composition.CompositionMipmapSurface.get_SizeInt32() */
 HRESULT wuc_composition_mipmap_surface_get__size_int32(WUC_CompositionMipmapSurface *self, WG_SizeInt32 *value);
 
-/* Windows.UI.Composition.CompositionMipmapSurface.GetDrawingSurfaceForLevel(level) */
 HRESULT wuc_composition_mipmap_surface_get_drawing_surface_for_level(WUC_CompositionMipmapSurface *self, uint32_t level, WUC_CompositionDrawingSurface** out);
 
-/* activate Windows.UI.Composition.CompositionNineGridBrush */
 HRESULT wuc_composition_nine_grid_brush_new(WUC_CompositionNineGridBrush **out);
 
-/* Windows.UI.Composition.CompositionNineGridBrush */
-/* Windows.UI.Composition.CompositionNineGridBrush.get_BottomInset() */
 HRESULT wuc_composition_nine_grid_brush_get__bottom_inset(WUC_CompositionNineGridBrush *self, float *value);
 
-/* Windows.UI.Composition.CompositionNineGridBrush.put_BottomInset() */
 HRESULT wuc_composition_nine_grid_brush_put__bottom_inset(WUC_CompositionNineGridBrush *self, float value);
 
-/* Windows.UI.Composition.CompositionNineGridBrush.get_BottomInsetScale() */
 HRESULT wuc_composition_nine_grid_brush_get__bottom_inset_scale(WUC_CompositionNineGridBrush *self, float *value);
 
-/* Windows.UI.Composition.CompositionNineGridBrush.put_BottomInsetScale() */
 HRESULT wuc_composition_nine_grid_brush_put__bottom_inset_scale(WUC_CompositionNineGridBrush *self, float value);
 
-/* Windows.UI.Composition.CompositionNineGridBrush.get_IsCenterHollow() */
 HRESULT wuc_composition_nine_grid_brush_get__is_center_hollow(WUC_CompositionNineGridBrush *self, BOOL *value);
 
-/* Windows.UI.Composition.CompositionNineGridBrush.put_IsCenterHollow() */
 HRESULT wuc_composition_nine_grid_brush_put__is_center_hollow(WUC_CompositionNineGridBrush *self, BOOL value);
 
-/* Windows.UI.Composition.CompositionNineGridBrush.get_LeftInset() */
 HRESULT wuc_composition_nine_grid_brush_get__left_inset(WUC_CompositionNineGridBrush *self, float *value);
 
-/* Windows.UI.Composition.CompositionNineGridBrush.put_LeftInset() */
 HRESULT wuc_composition_nine_grid_brush_put__left_inset(WUC_CompositionNineGridBrush *self, float value);
 
-/* Windows.UI.Composition.CompositionNineGridBrush.get_LeftInsetScale() */
 HRESULT wuc_composition_nine_grid_brush_get__left_inset_scale(WUC_CompositionNineGridBrush *self, float *value);
 
-/* Windows.UI.Composition.CompositionNineGridBrush.put_LeftInsetScale() */
 HRESULT wuc_composition_nine_grid_brush_put__left_inset_scale(WUC_CompositionNineGridBrush *self, float value);
 
-/* Windows.UI.Composition.CompositionNineGridBrush.get_RightInset() */
 HRESULT wuc_composition_nine_grid_brush_get__right_inset(WUC_CompositionNineGridBrush *self, float *value);
 
-/* Windows.UI.Composition.CompositionNineGridBrush.put_RightInset() */
 HRESULT wuc_composition_nine_grid_brush_put__right_inset(WUC_CompositionNineGridBrush *self, float value);
 
-/* Windows.UI.Composition.CompositionNineGridBrush.get_RightInsetScale() */
 HRESULT wuc_composition_nine_grid_brush_get__right_inset_scale(WUC_CompositionNineGridBrush *self, float *value);
 
-/* Windows.UI.Composition.CompositionNineGridBrush.put_RightInsetScale() */
 HRESULT wuc_composition_nine_grid_brush_put__right_inset_scale(WUC_CompositionNineGridBrush *self, float value);
 
-/* Windows.UI.Composition.CompositionNineGridBrush.get_Source() */
 HRESULT wuc_composition_nine_grid_brush_get__source(WUC_CompositionNineGridBrush *self, WUC_Brush** value);
 
-/* Windows.UI.Composition.CompositionNineGridBrush.put_Source() */
 HRESULT wuc_composition_nine_grid_brush_put__source(WUC_CompositionNineGridBrush *self, WUC_Brush* value);
 
-/* Windows.UI.Composition.CompositionNineGridBrush.get_TopInset() */
 HRESULT wuc_composition_nine_grid_brush_get__top_inset(WUC_CompositionNineGridBrush *self, float *value);
 
-/* Windows.UI.Composition.CompositionNineGridBrush.put_TopInset() */
 HRESULT wuc_composition_nine_grid_brush_put__top_inset(WUC_CompositionNineGridBrush *self, float value);
 
-/* Windows.UI.Composition.CompositionNineGridBrush.get_TopInsetScale() */
 HRESULT wuc_composition_nine_grid_brush_get__top_inset_scale(WUC_CompositionNineGridBrush *self, float *value);
 
-/* Windows.UI.Composition.CompositionNineGridBrush.put_TopInsetScale() */
 HRESULT wuc_composition_nine_grid_brush_put__top_inset_scale(WUC_CompositionNineGridBrush *self, float value);
 
-/* Windows.UI.Composition.CompositionNineGridBrush.SetInsets(inset) */
 HRESULT wuc_composition_nine_grid_brush_set_insets(WUC_CompositionNineGridBrush *self, float inset);
 
-/* Windows.UI.Composition.CompositionNineGridBrush.SetInsets(left, top, right, bottom) */
 HRESULT wuc_composition_nine_grid_brush_set_insets_f32_f32_f32_f32(WUC_CompositionNineGridBrush *self, float left, float top, float right, float bottom);
 
-/* Windows.UI.Composition.CompositionNineGridBrush.SetInsetScales(scale) */
 HRESULT wuc_composition_nine_grid_brush_set_inset_scales(WUC_CompositionNineGridBrush *self, float scale);
 
-/* Windows.UI.Composition.CompositionNineGridBrush.SetInsetScales(left, top, right, bottom) */
 HRESULT wuc_composition_nine_grid_brush_set_inset_scales_f32_f32_f32_f32(WUC_CompositionNineGridBrush *self, float left, float top, float right, float bottom);
 
-/* activate Windows.UI.Composition.CompositionPathGeometry */
 HRESULT wuc_composition_path_geometry_new(WUC_CompositionPathGeometry **out);
 
-/* Windows.UI.Composition.CompositionPathGeometry */
-/* Windows.UI.Composition.CompositionPathGeometry.get_Path() */
 HRESULT wuc_composition_path_geometry_get__path(WUC_CompositionPathGeometry *self, WUC_CompositionPath** value);
 
-/* Windows.UI.Composition.CompositionPathGeometry.put_Path() */
 HRESULT wuc_composition_path_geometry_put__path(WUC_CompositionPathGeometry *self, WUC_CompositionPath* value);
 
-/* activate Windows.UI.Composition.CompositionProjectedShadow */
 HRESULT wuc_composition_projected_shadow_new(WUC_CompositionProjectedShadow **out);
 
-/* Windows.UI.Composition.CompositionProjectedShadow */
-/* Windows.UI.Composition.CompositionProjectedShadow.get_BlurRadiusMultiplier() */
 HRESULT wuc_composition_projected_shadow_get__blur_radius_multiplier(WUC_CompositionProjectedShadow *self, float *value);
 
-/* Windows.UI.Composition.CompositionProjectedShadow.put_BlurRadiusMultiplier() */
 HRESULT wuc_composition_projected_shadow_put__blur_radius_multiplier(WUC_CompositionProjectedShadow *self, float value);
 
-/* Windows.UI.Composition.CompositionProjectedShadow.get_Casters() */
 HRESULT wuc_composition_projected_shadow_get__casters(WUC_CompositionProjectedShadow *self, WUC_CompositionProjectedShadowCasterCollection** value);
 
-/* Windows.UI.Composition.CompositionProjectedShadow.get_LightSource() */
 HRESULT wuc_composition_projected_shadow_get__light_source(WUC_CompositionProjectedShadow *self, WUC_CompositionLight** value);
 
-/* Windows.UI.Composition.CompositionProjectedShadow.put_LightSource() */
 HRESULT wuc_composition_projected_shadow_put__light_source(WUC_CompositionProjectedShadow *self, WUC_CompositionLight* value);
 
-/* Windows.UI.Composition.CompositionProjectedShadow.get_MaxBlurRadius() */
 HRESULT wuc_composition_projected_shadow_get__max_blur_radius(WUC_CompositionProjectedShadow *self, float *value);
 
-/* Windows.UI.Composition.CompositionProjectedShadow.put_MaxBlurRadius() */
 HRESULT wuc_composition_projected_shadow_put__max_blur_radius(WUC_CompositionProjectedShadow *self, float value);
 
-/* Windows.UI.Composition.CompositionProjectedShadow.get_MinBlurRadius() */
 HRESULT wuc_composition_projected_shadow_get__min_blur_radius(WUC_CompositionProjectedShadow *self, float *value);
 
-/* Windows.UI.Composition.CompositionProjectedShadow.put_MinBlurRadius() */
 HRESULT wuc_composition_projected_shadow_put__min_blur_radius(WUC_CompositionProjectedShadow *self, float value);
 
-/* Windows.UI.Composition.CompositionProjectedShadow.get_Receivers() */
 HRESULT wuc_composition_projected_shadow_get__receivers(WUC_CompositionProjectedShadow *self, WUC_CompositionProjectedShadowReceiverUnorderedCollection** value);
 
-/* activate Windows.UI.Composition.CompositionProjectedShadowCaster */
 HRESULT wuc_composition_projected_shadow_caster_new(WUC_CompositionProjectedShadowCaster **out);
 
-/* Windows.UI.Composition.CompositionProjectedShadowCaster */
-/* Windows.UI.Composition.CompositionProjectedShadowCaster.get_Brush() */
 HRESULT wuc_composition_projected_shadow_caster_get__brush(WUC_CompositionProjectedShadowCaster *self, WUC_Brush** value);
 
-/* Windows.UI.Composition.CompositionProjectedShadowCaster.put_Brush() */
 HRESULT wuc_composition_projected_shadow_caster_put__brush(WUC_CompositionProjectedShadowCaster *self, WUC_Brush* value);
 
-/* Windows.UI.Composition.CompositionProjectedShadowCaster.get_CastingVisual() */
 HRESULT wuc_composition_projected_shadow_caster_get__casting_visual(WUC_CompositionProjectedShadowCaster *self, WUC_Visual** value);
 
-/* Windows.UI.Composition.CompositionProjectedShadowCaster.put_CastingVisual() */
 HRESULT wuc_composition_projected_shadow_caster_put__casting_visual(WUC_CompositionProjectedShadowCaster *self, WUC_Visual* value);
 
-/* activate Windows.UI.Composition.CompositionProjectedShadowCasterCollection */
 HRESULT wuc_composition_projected_shadow_caster_collection_new(WUC_CompositionProjectedShadowCasterCollection **out);
 
-/* Windows.UI.Composition.CompositionProjectedShadowCasterCollection */
-/* Windows.UI.Composition.CompositionProjectedShadowCasterCollection.get_Count() */
 HRESULT wuc_composition_projected_shadow_caster_collection_get__count(WUC_CompositionProjectedShadowCasterCollection *self, int32_t *value);
 
-/* Windows.UI.Composition.CompositionProjectedShadowCasterCollection.InsertAbove(newCaster, reference) */
 HRESULT wuc_composition_projected_shadow_caster_collection_insert_above(WUC_CompositionProjectedShadowCasterCollection *self, WUC_CompositionProjectedShadowCaster* newCaster, WUC_CompositionProjectedShadowCaster* reference);
 
-/* Windows.UI.Composition.CompositionProjectedShadowCasterCollection.InsertAtBottom(newCaster) */
 HRESULT wuc_composition_projected_shadow_caster_collection_insert_at_bottom(WUC_CompositionProjectedShadowCasterCollection *self, WUC_CompositionProjectedShadowCaster* newCaster);
 
-/* Windows.UI.Composition.CompositionProjectedShadowCasterCollection.InsertAtTop(newCaster) */
 HRESULT wuc_composition_projected_shadow_caster_collection_insert_at_top(WUC_CompositionProjectedShadowCasterCollection *self, WUC_CompositionProjectedShadowCaster* newCaster);
 
-/* Windows.UI.Composition.CompositionProjectedShadowCasterCollection.InsertBelow(newCaster, reference) */
 HRESULT wuc_composition_projected_shadow_caster_collection_insert_below(WUC_CompositionProjectedShadowCasterCollection *self, WUC_CompositionProjectedShadowCaster* newCaster, WUC_CompositionProjectedShadowCaster* reference);
 
-/* Windows.UI.Composition.CompositionProjectedShadowCasterCollection.Remove(caster) */
 HRESULT wuc_composition_projected_shadow_caster_collection_remove(WUC_CompositionProjectedShadowCasterCollection *self, WUC_CompositionProjectedShadowCaster* caster);
 
-/* Windows.UI.Composition.CompositionProjectedShadowCasterCollection.RemoveAll() */
 HRESULT wuc_composition_projected_shadow_caster_collection_remove_all(WUC_CompositionProjectedShadowCasterCollection *self);
 
-/* Windows.UI.Composition.CompositionProjectedShadowCasterCollection.First() */
 HRESULT wuc_composition_projected_shadow_caster_collection_first(WUC_CompositionProjectedShadowCasterCollection *self, WFOCO_IIterator_WUC_CompositionProjectedShadowCaster** out);
 
-/* Windows.UI.Composition.CompositionProjectedShadowCasterCollection.get_MaxRespectedCasters() */
 HRESULT wuc_composition_projected_shadow_caster_collection_get__max_respected_casters(int32_t *value);
 
-/* activate Windows.UI.Composition.CompositionProjectedShadowReceiver */
 HRESULT wuc_composition_projected_shadow_receiver_new(WUC_CompositionProjectedShadowReceiver **out);
 
-/* Windows.UI.Composition.CompositionProjectedShadowReceiver */
-/* Windows.UI.Composition.CompositionProjectedShadowReceiver.get_ReceivingVisual() */
 HRESULT wuc_composition_projected_shadow_receiver_get__receiving_visual(WUC_CompositionProjectedShadowReceiver *self, WUC_Visual** value);
 
-/* Windows.UI.Composition.CompositionProjectedShadowReceiver.put_ReceivingVisual() */
 HRESULT wuc_composition_projected_shadow_receiver_put__receiving_visual(WUC_CompositionProjectedShadowReceiver *self, WUC_Visual* value);
 
-/* activate Windows.UI.Composition.CompositionProjectedShadowReceiverUnorderedCollection */
 HRESULT wuc_composition_projected_shadow_receiver_unordered_collection_new(WUC_CompositionProjectedShadowReceiverUnorderedCollection **out);
 
-/* Windows.UI.Composition.CompositionProjectedShadowReceiverUnorderedCollection */
-/* Windows.UI.Composition.CompositionProjectedShadowReceiverUnorderedCollection.Add() */
 HRESULT wuc_composition_projected_shadow_receiver_unordered_collection_add(WUC_CompositionProjectedShadowReceiverUnorderedCollection *self, WUC_CompositionProjectedShadowReceiver* value);
 
-/* Windows.UI.Composition.CompositionProjectedShadowReceiverUnorderedCollection.get_Count() */
 HRESULT wuc_composition_projected_shadow_receiver_unordered_collection_get__count(WUC_CompositionProjectedShadowReceiverUnorderedCollection *self, int32_t *value);
 
-/* Windows.UI.Composition.CompositionProjectedShadowReceiverUnorderedCollection.Remove() */
 HRESULT wuc_composition_projected_shadow_receiver_unordered_collection_remove(WUC_CompositionProjectedShadowReceiverUnorderedCollection *self, WUC_CompositionProjectedShadowReceiver* value);
 
-/* Windows.UI.Composition.CompositionProjectedShadowReceiverUnorderedCollection.RemoveAll() */
 HRESULT wuc_composition_projected_shadow_receiver_unordered_collection_remove_all(WUC_CompositionProjectedShadowReceiverUnorderedCollection *self);
 
-/* Windows.UI.Composition.CompositionProjectedShadowReceiverUnorderedCollection.First() */
 HRESULT wuc_composition_projected_shadow_receiver_unordered_collection_first(WUC_CompositionProjectedShadowReceiverUnorderedCollection *self, WFOCO_IIterator_WUC_CompositionProjectedShadowReceiver** out);
 
-/* activate Windows.UI.Composition.CompositionPropertySet */
 HRESULT wuc_composition_property_set_new(WUC_CompositionPropertySet **out);
 
-/* Windows.UI.Composition.CompositionPropertySet */
-/* Windows.UI.Composition.CompositionPropertySet.InsertColor(propertyName) */
 HRESULT wuc_composition_property_set_insert_color(WUC_CompositionPropertySet *self, cwinrt_hstring propertyName, WUI_Color value);
 
-/* Windows.UI.Composition.CompositionPropertySet.InsertMatrix3x2(propertyName) */
 HRESULT wuc_composition_property_set_insert_matrix3x2(WUC_CompositionPropertySet *self, cwinrt_hstring propertyName, WFN_Matrix3x_2 value);
 
-/* Windows.UI.Composition.CompositionPropertySet.InsertMatrix4x4(propertyName) */
 HRESULT wuc_composition_property_set_insert_matrix4x4(WUC_CompositionPropertySet *self, cwinrt_hstring propertyName, WFN_Matrix4x_4 value);
 
-/* Windows.UI.Composition.CompositionPropertySet.InsertQuaternion(propertyName) */
 HRESULT wuc_composition_property_set_insert_quaternion(WUC_CompositionPropertySet *self, cwinrt_hstring propertyName, WFN_Quaternion value);
 
-/* Windows.UI.Composition.CompositionPropertySet.InsertScalar(propertyName) */
 HRESULT wuc_composition_property_set_insert_scalar(WUC_CompositionPropertySet *self, cwinrt_hstring propertyName, float value);
 
-/* Windows.UI.Composition.CompositionPropertySet.InsertVector2(propertyName) */
 HRESULT wuc_composition_property_set_insert_vector2(WUC_CompositionPropertySet *self, cwinrt_hstring propertyName, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.CompositionPropertySet.InsertVector3(propertyName) */
 HRESULT wuc_composition_property_set_insert_vector3(WUC_CompositionPropertySet *self, cwinrt_hstring propertyName, WFN_Vector_3 value);
 
-/* Windows.UI.Composition.CompositionPropertySet.InsertVector4(propertyName) */
 HRESULT wuc_composition_property_set_insert_vector4(WUC_CompositionPropertySet *self, cwinrt_hstring propertyName, WFN_Vector_4 value);
 
-/* Windows.UI.Composition.CompositionPropertySet.TryGetColor(propertyName) */
 HRESULT wuc_composition_property_set_try_get_color(WUC_CompositionPropertySet *self, cwinrt_hstring propertyName, WUI_Color value, WUC_CompositionGetValueStatus *out);
 
-/* Windows.UI.Composition.CompositionPropertySet.TryGetMatrix3x2(propertyName) */
 HRESULT wuc_composition_property_set_try_get_matrix3x2(WUC_CompositionPropertySet *self, cwinrt_hstring propertyName, WFN_Matrix3x_2 value, WUC_CompositionGetValueStatus *out);
 
-/* Windows.UI.Composition.CompositionPropertySet.TryGetMatrix4x4(propertyName) */
 HRESULT wuc_composition_property_set_try_get_matrix4x4(WUC_CompositionPropertySet *self, cwinrt_hstring propertyName, WFN_Matrix4x_4 value, WUC_CompositionGetValueStatus *out);
 
-/* Windows.UI.Composition.CompositionPropertySet.TryGetQuaternion(propertyName) */
 HRESULT wuc_composition_property_set_try_get_quaternion(WUC_CompositionPropertySet *self, cwinrt_hstring propertyName, WFN_Quaternion value, WUC_CompositionGetValueStatus *out);
 
-/* Windows.UI.Composition.CompositionPropertySet.TryGetScalar(propertyName) */
 HRESULT wuc_composition_property_set_try_get_scalar(WUC_CompositionPropertySet *self, cwinrt_hstring propertyName, float value, WUC_CompositionGetValueStatus *out);
 
-/* Windows.UI.Composition.CompositionPropertySet.TryGetVector2(propertyName) */
 HRESULT wuc_composition_property_set_try_get_vector2(WUC_CompositionPropertySet *self, cwinrt_hstring propertyName, WFN_Vector_2 value, WUC_CompositionGetValueStatus *out);
 
-/* Windows.UI.Composition.CompositionPropertySet.TryGetVector3(propertyName) */
 HRESULT wuc_composition_property_set_try_get_vector3(WUC_CompositionPropertySet *self, cwinrt_hstring propertyName, WFN_Vector_3 value, WUC_CompositionGetValueStatus *out);
 
-/* Windows.UI.Composition.CompositionPropertySet.TryGetVector4(propertyName) */
 HRESULT wuc_composition_property_set_try_get_vector4(WUC_CompositionPropertySet *self, cwinrt_hstring propertyName, WFN_Vector_4 value, WUC_CompositionGetValueStatus *out);
 
-/* Windows.UI.Composition.CompositionPropertySet.InsertBoolean(propertyName) */
 HRESULT wuc_composition_property_set_insert_boolean(WUC_CompositionPropertySet *self, cwinrt_hstring propertyName, BOOL value);
 
-/* Windows.UI.Composition.CompositionPropertySet.TryGetBoolean(propertyName) */
 HRESULT wuc_composition_property_set_try_get_boolean(WUC_CompositionPropertySet *self, cwinrt_hstring propertyName, BOOL value, WUC_CompositionGetValueStatus *out);
 
-/* activate Windows.UI.Composition.CompositionRadialGradientBrush */
 HRESULT wuc_composition_radial_gradient_brush_new(WUC_CompositionRadialGradientBrush **out);
 
-/* Windows.UI.Composition.CompositionRadialGradientBrush */
-/* Windows.UI.Composition.CompositionRadialGradientBrush.get_EllipseCenter() */
 HRESULT wuc_composition_radial_gradient_brush_get__ellipse_center(WUC_CompositionRadialGradientBrush *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionRadialGradientBrush.put_EllipseCenter() */
 HRESULT wuc_composition_radial_gradient_brush_put__ellipse_center(WUC_CompositionRadialGradientBrush *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.CompositionRadialGradientBrush.get_EllipseRadius() */
 HRESULT wuc_composition_radial_gradient_brush_get__ellipse_radius(WUC_CompositionRadialGradientBrush *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionRadialGradientBrush.put_EllipseRadius() */
 HRESULT wuc_composition_radial_gradient_brush_put__ellipse_radius(WUC_CompositionRadialGradientBrush *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.CompositionRadialGradientBrush.get_GradientOriginOffset() */
 HRESULT wuc_composition_radial_gradient_brush_get__gradient_origin_offset(WUC_CompositionRadialGradientBrush *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionRadialGradientBrush.put_GradientOriginOffset() */
 HRESULT wuc_composition_radial_gradient_brush_put__gradient_origin_offset(WUC_CompositionRadialGradientBrush *self, WFN_Vector_2 value);
 
-/* activate Windows.UI.Composition.CompositionRectangleGeometry */
 HRESULT wuc_composition_rectangle_geometry_new(WUC_CompositionRectangleGeometry **out);
 
-/* Windows.UI.Composition.CompositionRectangleGeometry */
-/* Windows.UI.Composition.CompositionRectangleGeometry.get_Offset() */
 HRESULT wuc_composition_rectangle_geometry_get__offset(WUC_CompositionRectangleGeometry *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionRectangleGeometry.put_Offset() */
 HRESULT wuc_composition_rectangle_geometry_put__offset(WUC_CompositionRectangleGeometry *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.CompositionRectangleGeometry.get_Size() */
 HRESULT wuc_composition_rectangle_geometry_get__size(WUC_CompositionRectangleGeometry *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionRectangleGeometry.put_Size() */
 HRESULT wuc_composition_rectangle_geometry_put__size(WUC_CompositionRectangleGeometry *self, WFN_Vector_2 value);
 
-/* activate Windows.UI.Composition.CompositionRoundedRectangleGeometry */
 HRESULT wuc_composition_rounded_rectangle_geometry_new(WUC_CompositionRoundedRectangleGeometry **out);
 
-/* Windows.UI.Composition.CompositionRoundedRectangleGeometry */
-/* Windows.UI.Composition.CompositionRoundedRectangleGeometry.get_CornerRadius() */
 HRESULT wuc_composition_rounded_rectangle_geometry_get__corner_radius(WUC_CompositionRoundedRectangleGeometry *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionRoundedRectangleGeometry.put_CornerRadius() */
 HRESULT wuc_composition_rounded_rectangle_geometry_put__corner_radius(WUC_CompositionRoundedRectangleGeometry *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.CompositionRoundedRectangleGeometry.get_Offset() */
 HRESULT wuc_composition_rounded_rectangle_geometry_get__offset(WUC_CompositionRoundedRectangleGeometry *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionRoundedRectangleGeometry.put_Offset() */
 HRESULT wuc_composition_rounded_rectangle_geometry_put__offset(WUC_CompositionRoundedRectangleGeometry *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.CompositionRoundedRectangleGeometry.get_Size() */
 HRESULT wuc_composition_rounded_rectangle_geometry_get__size(WUC_CompositionRoundedRectangleGeometry *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionRoundedRectangleGeometry.put_Size() */
 HRESULT wuc_composition_rounded_rectangle_geometry_put__size(WUC_CompositionRoundedRectangleGeometry *self, WFN_Vector_2 value);
 
-/* activate Windows.UI.Composition.CompositionScopedBatch */
 HRESULT wuc_composition_scoped_batch_new(WUC_CompositionScopedBatch **out);
 
-/* Windows.UI.Composition.CompositionScopedBatch */
-/* Windows.UI.Composition.CompositionScopedBatch.get_IsActive() */
 HRESULT wuc_composition_scoped_batch_get__is_active(WUC_CompositionScopedBatch *self, BOOL *value);
 
-/* Windows.UI.Composition.CompositionScopedBatch.get_IsEnded() */
 HRESULT wuc_composition_scoped_batch_get__is_ended(WUC_CompositionScopedBatch *self, BOOL *value);
 
-/* Windows.UI.Composition.CompositionScopedBatch.End() */
 HRESULT wuc_composition_scoped_batch_end(WUC_CompositionScopedBatch *self);
 
-/* Windows.UI.Composition.CompositionScopedBatch.Resume() */
 HRESULT wuc_composition_scoped_batch_resume(WUC_CompositionScopedBatch *self);
 
-/* Windows.UI.Composition.CompositionScopedBatch.Suspend() */
 HRESULT wuc_composition_scoped_batch_suspend(WUC_CompositionScopedBatch *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuc_composition_scoped_batch_on_completed(WUC_CompositionScopedBatch *self, cwinrt_event_fn fn, void *ctx);
 void wuc_composition_scoped_batch_off_completed(WUC_CompositionScopedBatch *self, cwinrt_token token);
 
-/* activate Windows.UI.Composition.CompositionShapeCollection */
 HRESULT wuc_composition_shape_collection_new(WUC_CompositionShapeCollection **out);
 
-/* Windows.UI.Composition.CompositionShapeCollection */
-/* Windows.UI.Composition.CompositionShapeCollection.GetAt(index) */
 HRESULT wuc_composition_shape_collection_get_at(WUC_CompositionShapeCollection *self, uint32_t index, WUC_CompositionShape** out);
 
-/* Windows.UI.Composition.CompositionShapeCollection.get_Size() */
 HRESULT wuc_composition_shape_collection_get__size(WUC_CompositionShapeCollection *self, uint32_t *value);
 
-/* Windows.UI.Composition.CompositionShapeCollection.GetView() */
 HRESULT wuc_composition_shape_collection_get_view(WUC_CompositionShapeCollection *self, WFOCO_IVectorView_WUC_CompositionShape** out);
 
-/* Windows.UI.Composition.CompositionShapeCollection.IndexOf(index) */
 HRESULT wuc_composition_shape_collection_index_of(WUC_CompositionShapeCollection *self, WUC_CompositionShape* value, uint32_t index, BOOL *out);
 
-/* Windows.UI.Composition.CompositionShapeCollection.SetAt(index) */
 HRESULT wuc_composition_shape_collection_set_at(WUC_CompositionShapeCollection *self, uint32_t index, WUC_CompositionShape* value);
 
-/* Windows.UI.Composition.CompositionShapeCollection.InsertAt(index) */
 HRESULT wuc_composition_shape_collection_insert_at(WUC_CompositionShapeCollection *self, uint32_t index, WUC_CompositionShape* value);
 
-/* Windows.UI.Composition.CompositionShapeCollection.RemoveAt(index) */
 HRESULT wuc_composition_shape_collection_remove_at(WUC_CompositionShapeCollection *self, uint32_t index);
 
-/* Windows.UI.Composition.CompositionShapeCollection.Append() */
 HRESULT wuc_composition_shape_collection_append(WUC_CompositionShapeCollection *self, WUC_CompositionShape* value);
 
-/* Windows.UI.Composition.CompositionShapeCollection.RemoveAtEnd() */
 HRESULT wuc_composition_shape_collection_remove_at_end(WUC_CompositionShapeCollection *self);
 
-/* Windows.UI.Composition.CompositionShapeCollection.Clear() */
 HRESULT wuc_composition_shape_collection_clear(WUC_CompositionShapeCollection *self);
 
-/* Windows.UI.Composition.CompositionShapeCollection.GetMany(startIndex, items) */
 HRESULT wuc_composition_shape_collection_get_many(WUC_CompositionShapeCollection *self, uint32_t startIndex, WUC_CompositionShape *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.UI.Composition.CompositionShapeCollection.ReplaceAll(items) */
 HRESULT wuc_composition_shape_collection_replace_all(WUC_CompositionShapeCollection *self, WUC_CompositionShape *items, uint32_t items_len);
 
-/* Windows.UI.Composition.CompositionShapeCollection.First() */
 HRESULT wuc_composition_shape_collection_first(WUC_CompositionShapeCollection *self, WFOCO_IIterator_WUC_CompositionShape** out);
 
-/* activate Windows.UI.Composition.CompositionSpriteShape */
 HRESULT wuc_composition_sprite_shape_new(WUC_CompositionSpriteShape **out);
 
-/* Windows.UI.Composition.CompositionSpriteShape */
-/* Windows.UI.Composition.CompositionSpriteShape.get_FillBrush() */
 HRESULT wuc_composition_sprite_shape_get__fill_brush(WUC_CompositionSpriteShape *self, WUC_Brush** value);
 
-/* Windows.UI.Composition.CompositionSpriteShape.put_FillBrush() */
 HRESULT wuc_composition_sprite_shape_put__fill_brush(WUC_CompositionSpriteShape *self, WUC_Brush* value);
 
-/* Windows.UI.Composition.CompositionSpriteShape.get_Geometry() */
 HRESULT wuc_composition_sprite_shape_get__geometry(WUC_CompositionSpriteShape *self, WUC_CompositionGeometry** value);
 
-/* Windows.UI.Composition.CompositionSpriteShape.put_Geometry() */
 HRESULT wuc_composition_sprite_shape_put__geometry(WUC_CompositionSpriteShape *self, WUC_CompositionGeometry* value);
 
-/* Windows.UI.Composition.CompositionSpriteShape.get_IsStrokeNonScaling() */
 HRESULT wuc_composition_sprite_shape_get__is_stroke_non_scaling(WUC_CompositionSpriteShape *self, BOOL *value);
 
-/* Windows.UI.Composition.CompositionSpriteShape.put_IsStrokeNonScaling() */
 HRESULT wuc_composition_sprite_shape_put__is_stroke_non_scaling(WUC_CompositionSpriteShape *self, BOOL value);
 
-/* Windows.UI.Composition.CompositionSpriteShape.get_StrokeBrush() */
 HRESULT wuc_composition_sprite_shape_get__stroke_brush(WUC_CompositionSpriteShape *self, WUC_Brush** value);
 
-/* Windows.UI.Composition.CompositionSpriteShape.put_StrokeBrush() */
 HRESULT wuc_composition_sprite_shape_put__stroke_brush(WUC_CompositionSpriteShape *self, WUC_Brush* value);
 
-/* Windows.UI.Composition.CompositionSpriteShape.get_StrokeDashArray() */
 HRESULT wuc_composition_sprite_shape_get__stroke_dash_array(WUC_CompositionSpriteShape *self, WUC_CompositionStrokeDashArray** value);
 
-/* Windows.UI.Composition.CompositionSpriteShape.get_StrokeDashCap() */
 HRESULT wuc_composition_sprite_shape_get__stroke_dash_cap(WUC_CompositionSpriteShape *self, WUC_CompositionStrokeCap *value);
 
-/* Windows.UI.Composition.CompositionSpriteShape.put_StrokeDashCap() */
 HRESULT wuc_composition_sprite_shape_put__stroke_dash_cap(WUC_CompositionSpriteShape *self, WUC_CompositionStrokeCap value);
 
-/* Windows.UI.Composition.CompositionSpriteShape.get_StrokeDashOffset() */
 HRESULT wuc_composition_sprite_shape_get__stroke_dash_offset(WUC_CompositionSpriteShape *self, float *value);
 
-/* Windows.UI.Composition.CompositionSpriteShape.put_StrokeDashOffset() */
 HRESULT wuc_composition_sprite_shape_put__stroke_dash_offset(WUC_CompositionSpriteShape *self, float value);
 
-/* Windows.UI.Composition.CompositionSpriteShape.get_StrokeEndCap() */
 HRESULT wuc_composition_sprite_shape_get__stroke_end_cap(WUC_CompositionSpriteShape *self, WUC_CompositionStrokeCap *value);
 
-/* Windows.UI.Composition.CompositionSpriteShape.put_StrokeEndCap() */
 HRESULT wuc_composition_sprite_shape_put__stroke_end_cap(WUC_CompositionSpriteShape *self, WUC_CompositionStrokeCap value);
 
-/* Windows.UI.Composition.CompositionSpriteShape.get_StrokeLineJoin() */
 HRESULT wuc_composition_sprite_shape_get__stroke_line_join(WUC_CompositionSpriteShape *self, WUC_CompositionStrokeLineJoin *value);
 
-/* Windows.UI.Composition.CompositionSpriteShape.put_StrokeLineJoin() */
 HRESULT wuc_composition_sprite_shape_put__stroke_line_join(WUC_CompositionSpriteShape *self, WUC_CompositionStrokeLineJoin value);
 
-/* Windows.UI.Composition.CompositionSpriteShape.get_StrokeMiterLimit() */
 HRESULT wuc_composition_sprite_shape_get__stroke_miter_limit(WUC_CompositionSpriteShape *self, float *value);
 
-/* Windows.UI.Composition.CompositionSpriteShape.put_StrokeMiterLimit() */
 HRESULT wuc_composition_sprite_shape_put__stroke_miter_limit(WUC_CompositionSpriteShape *self, float value);
 
-/* Windows.UI.Composition.CompositionSpriteShape.get_StrokeStartCap() */
 HRESULT wuc_composition_sprite_shape_get__stroke_start_cap(WUC_CompositionSpriteShape *self, WUC_CompositionStrokeCap *value);
 
-/* Windows.UI.Composition.CompositionSpriteShape.put_StrokeStartCap() */
 HRESULT wuc_composition_sprite_shape_put__stroke_start_cap(WUC_CompositionSpriteShape *self, WUC_CompositionStrokeCap value);
 
-/* Windows.UI.Composition.CompositionSpriteShape.get_StrokeThickness() */
 HRESULT wuc_composition_sprite_shape_get__stroke_thickness(WUC_CompositionSpriteShape *self, float *value);
 
-/* Windows.UI.Composition.CompositionSpriteShape.put_StrokeThickness() */
 HRESULT wuc_composition_sprite_shape_put__stroke_thickness(WUC_CompositionSpriteShape *self, float value);
 
-/* activate Windows.UI.Composition.CompositionStrokeDashArray */
 HRESULT wuc_composition_stroke_dash_array_new(WUC_CompositionStrokeDashArray **out);
 
-/* Windows.UI.Composition.CompositionStrokeDashArray */
-/* Windows.UI.Composition.CompositionStrokeDashArray.GetAt(index) */
 HRESULT wuc_composition_stroke_dash_array_get_at(WUC_CompositionStrokeDashArray *self, uint32_t index, float *out);
 
-/* Windows.UI.Composition.CompositionStrokeDashArray.get_Size() */
 HRESULT wuc_composition_stroke_dash_array_get__size(WUC_CompositionStrokeDashArray *self, uint32_t *value);
 
-/* Windows.UI.Composition.CompositionStrokeDashArray.GetView() */
 HRESULT wuc_composition_stroke_dash_array_get_view(WUC_CompositionStrokeDashArray *self, WFOCO_IVectorView_F32** out);
 
-/* Windows.UI.Composition.CompositionStrokeDashArray.IndexOf(index) */
 HRESULT wuc_composition_stroke_dash_array_index_of(WUC_CompositionStrokeDashArray *self, float value, uint32_t index, BOOL *out);
 
-/* Windows.UI.Composition.CompositionStrokeDashArray.SetAt(index) */
 HRESULT wuc_composition_stroke_dash_array_set_at(WUC_CompositionStrokeDashArray *self, uint32_t index, float value);
 
-/* Windows.UI.Composition.CompositionStrokeDashArray.InsertAt(index) */
 HRESULT wuc_composition_stroke_dash_array_insert_at(WUC_CompositionStrokeDashArray *self, uint32_t index, float value);
 
-/* Windows.UI.Composition.CompositionStrokeDashArray.RemoveAt(index) */
 HRESULT wuc_composition_stroke_dash_array_remove_at(WUC_CompositionStrokeDashArray *self, uint32_t index);
 
-/* Windows.UI.Composition.CompositionStrokeDashArray.Append() */
 HRESULT wuc_composition_stroke_dash_array_append(WUC_CompositionStrokeDashArray *self, float value);
 
-/* Windows.UI.Composition.CompositionStrokeDashArray.RemoveAtEnd() */
 HRESULT wuc_composition_stroke_dash_array_remove_at_end(WUC_CompositionStrokeDashArray *self);
 
-/* Windows.UI.Composition.CompositionStrokeDashArray.Clear() */
 HRESULT wuc_composition_stroke_dash_array_clear(WUC_CompositionStrokeDashArray *self);
 
-/* Windows.UI.Composition.CompositionStrokeDashArray.GetMany(startIndex, items) */
 HRESULT wuc_composition_stroke_dash_array_get_many(WUC_CompositionStrokeDashArray *self, uint32_t startIndex, float *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.UI.Composition.CompositionStrokeDashArray.ReplaceAll(items) */
 HRESULT wuc_composition_stroke_dash_array_replace_all(WUC_CompositionStrokeDashArray *self, float *items, uint32_t items_len);
 
-/* Windows.UI.Composition.CompositionStrokeDashArray.First() */
 HRESULT wuc_composition_stroke_dash_array_first(WUC_CompositionStrokeDashArray *self, WFOCO_IIterator_F32** out);
 
-/* activate Windows.UI.Composition.CompositionSurfaceBrush */
 HRESULT wuc_composition_surface_brush_new(WUC_CompositionSurfaceBrush **out);
 
-/* Windows.UI.Composition.CompositionSurfaceBrush */
-/* Windows.UI.Composition.CompositionSurfaceBrush.get_BitmapInterpolationMode() */
 HRESULT wuc_composition_surface_brush_get__bitmap_interpolation_mode(WUC_CompositionSurfaceBrush *self, WUC_CompositionBitmapInterpolationMode *value);
 
-/* Windows.UI.Composition.CompositionSurfaceBrush.put_BitmapInterpolationMode() */
 HRESULT wuc_composition_surface_brush_put__bitmap_interpolation_mode(WUC_CompositionSurfaceBrush *self, WUC_CompositionBitmapInterpolationMode value);
 
-/* Windows.UI.Composition.CompositionSurfaceBrush.get_HorizontalAlignmentRatio() */
 HRESULT wuc_composition_surface_brush_get__horizontal_alignment_ratio(WUC_CompositionSurfaceBrush *self, float *value);
 
-/* Windows.UI.Composition.CompositionSurfaceBrush.put_HorizontalAlignmentRatio() */
 HRESULT wuc_composition_surface_brush_put__horizontal_alignment_ratio(WUC_CompositionSurfaceBrush *self, float value);
 
-/* Windows.UI.Composition.CompositionSurfaceBrush.get_Stretch() */
 HRESULT wuc_composition_surface_brush_get__stretch(WUC_CompositionSurfaceBrush *self, WUC_CompositionStretch *value);
 
-/* Windows.UI.Composition.CompositionSurfaceBrush.put_Stretch() */
 HRESULT wuc_composition_surface_brush_put__stretch(WUC_CompositionSurfaceBrush *self, WUC_CompositionStretch value);
 
-/* Windows.UI.Composition.CompositionSurfaceBrush.get_Surface() */
 HRESULT wuc_composition_surface_brush_get__surface(WUC_CompositionSurfaceBrush *self, WUC_ICompositionSurface** value);
 
-/* Windows.UI.Composition.CompositionSurfaceBrush.put_Surface() */
 HRESULT wuc_composition_surface_brush_put__surface(WUC_CompositionSurfaceBrush *self, WUC_ICompositionSurface* value);
 
-/* Windows.UI.Composition.CompositionSurfaceBrush.get_VerticalAlignmentRatio() */
 HRESULT wuc_composition_surface_brush_get__vertical_alignment_ratio(WUC_CompositionSurfaceBrush *self, float *value);
 
-/* Windows.UI.Composition.CompositionSurfaceBrush.put_VerticalAlignmentRatio() */
 HRESULT wuc_composition_surface_brush_put__vertical_alignment_ratio(WUC_CompositionSurfaceBrush *self, float value);
 
-/* Windows.UI.Composition.CompositionSurfaceBrush.get_AnchorPoint() */
 HRESULT wuc_composition_surface_brush_get__anchor_point(WUC_CompositionSurfaceBrush *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionSurfaceBrush.put_AnchorPoint() */
 HRESULT wuc_composition_surface_brush_put__anchor_point(WUC_CompositionSurfaceBrush *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.CompositionSurfaceBrush.get_CenterPoint() */
 HRESULT wuc_composition_surface_brush_get__center_point(WUC_CompositionSurfaceBrush *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionSurfaceBrush.put_CenterPoint() */
 HRESULT wuc_composition_surface_brush_put__center_point(WUC_CompositionSurfaceBrush *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.CompositionSurfaceBrush.get_Offset() */
 HRESULT wuc_composition_surface_brush_get__offset(WUC_CompositionSurfaceBrush *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionSurfaceBrush.put_Offset() */
 HRESULT wuc_composition_surface_brush_put__offset(WUC_CompositionSurfaceBrush *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.CompositionSurfaceBrush.get_RotationAngle() */
 HRESULT wuc_composition_surface_brush_get__rotation_angle(WUC_CompositionSurfaceBrush *self, float *value);
 
-/* Windows.UI.Composition.CompositionSurfaceBrush.put_RotationAngle() */
 HRESULT wuc_composition_surface_brush_put__rotation_angle(WUC_CompositionSurfaceBrush *self, float value);
 
-/* Windows.UI.Composition.CompositionSurfaceBrush.get_RotationAngleInDegrees() */
 HRESULT wuc_composition_surface_brush_get__rotation_angle_in_degrees(WUC_CompositionSurfaceBrush *self, float *value);
 
-/* Windows.UI.Composition.CompositionSurfaceBrush.put_RotationAngleInDegrees() */
 HRESULT wuc_composition_surface_brush_put__rotation_angle_in_degrees(WUC_CompositionSurfaceBrush *self, float value);
 
-/* Windows.UI.Composition.CompositionSurfaceBrush.get_Scale() */
 HRESULT wuc_composition_surface_brush_get__scale(WUC_CompositionSurfaceBrush *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionSurfaceBrush.put_Scale() */
 HRESULT wuc_composition_surface_brush_put__scale(WUC_CompositionSurfaceBrush *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.CompositionSurfaceBrush.get_TransformMatrix() */
 HRESULT wuc_composition_surface_brush_get__transform_matrix(WUC_CompositionSurfaceBrush *self, WFN_Matrix3x_2 *value);
 
-/* Windows.UI.Composition.CompositionSurfaceBrush.put_TransformMatrix() */
 HRESULT wuc_composition_surface_brush_put__transform_matrix(WUC_CompositionSurfaceBrush *self, WFN_Matrix3x_2 value);
 
-/* Windows.UI.Composition.CompositionSurfaceBrush.get_SnapToPixels() */
 HRESULT wuc_composition_surface_brush_get__snap_to_pixels(WUC_CompositionSurfaceBrush *self, BOOL *value);
 
-/* Windows.UI.Composition.CompositionSurfaceBrush.put_SnapToPixels() */
 HRESULT wuc_composition_surface_brush_put__snap_to_pixels(WUC_CompositionSurfaceBrush *self, BOOL value);
 
-/* Windows.UI.Composition.CompositionTarget */
-/* Windows.UI.Composition.CompositionTarget.get_Root() */
 HRESULT wuc_composition_target_get__root(WUC_CompositionTarget *self, WUC_Visual** value);
 
-/* Windows.UI.Composition.CompositionTarget.put_Root() */
 HRESULT wuc_composition_target_put__root(WUC_CompositionTarget *self, WUC_Visual* value);
 
-/* Windows.UI.Composition.CompositionTexture */
-/* Windows.UI.Composition.CompositionTexture.get_SourceRect() */
 HRESULT wuc_composition_texture_get__source_rect(WUC_CompositionTexture *self, WG_RectInt32 *value);
 
-/* Windows.UI.Composition.CompositionTexture.put_SourceRect() */
 HRESULT wuc_composition_texture_put__source_rect(WUC_CompositionTexture *self, WG_RectInt32 value);
 
-/* Windows.UI.Composition.CompositionTexture.get_AlphaMode() */
 HRESULT wuc_composition_texture_get__alpha_mode(WUC_CompositionTexture *self, WGRDI_DirectXAlphaMode *value);
 
-/* Windows.UI.Composition.CompositionTexture.put_AlphaMode() */
 HRESULT wuc_composition_texture_put__alpha_mode(WUC_CompositionTexture *self, WGRDI_DirectXAlphaMode value);
 
-/* Windows.UI.Composition.CompositionTexture.get_ColorSpace() */
 HRESULT wuc_composition_texture_get__color_space(WUC_CompositionTexture *self, WGRDI_DirectXColorSpace *value);
 
-/* Windows.UI.Composition.CompositionTexture.put_ColorSpace() */
 HRESULT wuc_composition_texture_put__color_space(WUC_CompositionTexture *self, WGRDI_DirectXColorSpace value);
 
-/* activate Windows.UI.Composition.CompositionViewBox */
 HRESULT wuc_composition_view_box_new(WUC_CompositionViewBox **out);
 
-/* Windows.UI.Composition.CompositionViewBox */
-/* Windows.UI.Composition.CompositionViewBox.get_HorizontalAlignmentRatio() */
 HRESULT wuc_composition_view_box_get__horizontal_alignment_ratio(WUC_CompositionViewBox *self, float *value);
 
-/* Windows.UI.Composition.CompositionViewBox.put_HorizontalAlignmentRatio() */
 HRESULT wuc_composition_view_box_put__horizontal_alignment_ratio(WUC_CompositionViewBox *self, float value);
 
-/* Windows.UI.Composition.CompositionViewBox.get_Offset() */
 HRESULT wuc_composition_view_box_get__offset(WUC_CompositionViewBox *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionViewBox.put_Offset() */
 HRESULT wuc_composition_view_box_put__offset(WUC_CompositionViewBox *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.CompositionViewBox.get_Size() */
 HRESULT wuc_composition_view_box_get__size(WUC_CompositionViewBox *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionViewBox.put_Size() */
 HRESULT wuc_composition_view_box_put__size(WUC_CompositionViewBox *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.CompositionViewBox.get_Stretch() */
 HRESULT wuc_composition_view_box_get__stretch(WUC_CompositionViewBox *self, WUC_CompositionStretch *value);
 
-/* Windows.UI.Composition.CompositionViewBox.put_Stretch() */
 HRESULT wuc_composition_view_box_put__stretch(WUC_CompositionViewBox *self, WUC_CompositionStretch value);
 
-/* Windows.UI.Composition.CompositionViewBox.get_VerticalAlignmentRatio() */
 HRESULT wuc_composition_view_box_get__vertical_alignment_ratio(WUC_CompositionViewBox *self, float *value);
 
-/* Windows.UI.Composition.CompositionViewBox.put_VerticalAlignmentRatio() */
 HRESULT wuc_composition_view_box_put__vertical_alignment_ratio(WUC_CompositionViewBox *self, float value);
 
-/* Windows.UI.Composition.CompositionVirtualDrawingSurface */
-/* Windows.UI.Composition.CompositionVirtualDrawingSurface.Trim(rects) */
 HRESULT wuc_composition_virtual_drawing_surface_trim(WUC_CompositionVirtualDrawingSurface *self, WG_RectInt32 *rects, uint32_t rects_len);
 
-/* activate Windows.UI.Composition.CompositionVisualSurface */
 HRESULT wuc_composition_visual_surface_new(WUC_CompositionVisualSurface **out);
 
-/* Windows.UI.Composition.CompositionVisualSurface */
-/* Windows.UI.Composition.CompositionVisualSurface.get_SourceVisual() */
 HRESULT wuc_composition_visual_surface_get__source_visual(WUC_CompositionVisualSurface *self, WUC_Visual** value);
 
-/* Windows.UI.Composition.CompositionVisualSurface.put_SourceVisual() */
 HRESULT wuc_composition_visual_surface_put__source_visual(WUC_CompositionVisualSurface *self, WUC_Visual* value);
 
-/* Windows.UI.Composition.CompositionVisualSurface.get_SourceOffset() */
 HRESULT wuc_composition_visual_surface_get__source_offset(WUC_CompositionVisualSurface *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionVisualSurface.put_SourceOffset() */
 HRESULT wuc_composition_visual_surface_put__source_offset(WUC_CompositionVisualSurface *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.CompositionVisualSurface.get_SourceSize() */
 HRESULT wuc_composition_visual_surface_get__source_size(WUC_CompositionVisualSurface *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CompositionVisualSurface.put_SourceSize() */
 HRESULT wuc_composition_visual_surface_put__source_size(WUC_CompositionVisualSurface *self, WFN_Vector_2 value);
 
-/* activate Windows.UI.Composition.Compositor */
 HRESULT wuc_comp_new(WUC_Comp **out);
 
-/* Windows.UI.Composition.Compositor */
-/* Windows.UI.Composition.Compositor.CreateColorKeyFrameAnimation() */
 HRESULT wuc_comp_create_color_key_frame_animation(WUC_Comp *self, WUC_ColorKeyFrameAnimation** out);
 
-/* Windows.UI.Composition.Compositor.CreateColorBrush() */
 HRESULT wuc_comp_create_color_brush(WUC_Comp *self, WUC_CompositionColorBrush** out);
 
-/* Windows.UI.Composition.Compositor.CreateColorBrush(color) */
 HRESULT wuc_comp_create_color_brush_color_p(WUC_Comp *self, WUI_Color color, WUC_CompositionColorBrush** out);
 
-/* Windows.UI.Composition.Compositor.CreateContainerVisual() */
 HRESULT wuc_comp_create_container_visual(WUC_Comp *self, WUC_Container** out);
 
-/* Windows.UI.Composition.Compositor.CreateCubicBezierEasingFunction(controlPoint1, controlPoint2) */
 HRESULT wuc_comp_create_cubic_bezier_easing_function(WUC_Comp *self, WFN_Vector_2 controlPoint1, WFN_Vector_2 controlPoint2, WUC_CubicBezierEasingFunction** out);
 
-/* Windows.UI.Composition.Compositor.CreateEffectFactory(graphicsEffect) */
 HRESULT wuc_comp_create_effect_factory(WUC_Comp *self, WGREF_IGraphicsEffect* graphicsEffect, WUC_CompositionEffectFactory** out);
 
-/* Windows.UI.Composition.Compositor.CreateEffectFactory(graphicsEffect, animatableProperties) */
 HRESULT wuc_comp_create_effect_factory_p_p_p(WUC_Comp *self, WGREF_IGraphicsEffect* graphicsEffect, WFOCO_IIterable_HSTRING* animatableProperties, WUC_CompositionEffectFactory** out);
 
-/* Windows.UI.Composition.Compositor.CreateExpressionAnimation() */
 HRESULT wuc_comp_create_expression_animation(WUC_Comp *self, WUC_ExpressionAnimation** out);
 
-/* Windows.UI.Composition.Compositor.CreateExpressionAnimation(expression) */
 HRESULT wuc_comp_create_expression_animation_str_p(WUC_Comp *self, cwinrt_hstring expression, WUC_ExpressionAnimation** out);
 
-/* Windows.UI.Composition.Compositor.CreateInsetClip() */
 HRESULT wuc_comp_create_inset_clip(WUC_Comp *self, WUC_InsetClip** out);
 
-/* Windows.UI.Composition.Compositor.CreateInsetClip(leftInset, topInset, rightInset, bottomInset) */
 HRESULT wuc_comp_create_inset_clip_f32_f32_f32_f32_p(WUC_Comp *self, float leftInset, float topInset, float rightInset, float bottomInset, WUC_InsetClip** out);
 
-/* Windows.UI.Composition.Compositor.CreateLinearEasingFunction() */
 HRESULT wuc_comp_create_linear_easing_function(WUC_Comp *self, WUC_LinearEasingFunction** out);
 
-/* Windows.UI.Composition.Compositor.CreatePropertySet() */
 HRESULT wuc_comp_create_property_set(WUC_Comp *self, WUC_CompositionPropertySet** out);
 
-/* Windows.UI.Composition.Compositor.CreateQuaternionKeyFrameAnimation() */
 HRESULT wuc_comp_create_quaternion_key_frame_animation(WUC_Comp *self, WUC_QuaternionKeyFrameAnimation** out);
 
-/* Windows.UI.Composition.Compositor.CreateScalarKeyFrameAnimation() */
 HRESULT wuc_comp_create_scalar_key_frame_animation(WUC_Comp *self, WUC_ScalarKeyFrameAnimation** out);
 
-/* Windows.UI.Composition.Compositor.CreateScopedBatch(batchType) */
 HRESULT wuc_comp_create_scoped_batch(WUC_Comp *self, WUC_CompositionBatchTypes batchType, WUC_CompositionScopedBatch** out);
 
-/* Windows.UI.Composition.Compositor.CreateSpriteVisual() */
 HRESULT wuc_comp_create_sprite_visual(WUC_Comp *self, WUC_Sprite** out);
 
-/* Windows.UI.Composition.Compositor.CreateSurfaceBrush() */
 HRESULT wuc_comp_create_surface_brush(WUC_Comp *self, WUC_CompositionSurfaceBrush** out);
 
-/* Windows.UI.Composition.Compositor.CreateSurfaceBrush(surface) */
 HRESULT wuc_comp_create_surface_brush_p_p(WUC_Comp *self, WUC_ICompositionSurface* surface, WUC_CompositionSurfaceBrush** out);
 
-/* Windows.UI.Composition.Compositor.CreateTargetForCurrentView() */
 HRESULT wuc_comp_create_target_for_current_view(WUC_Comp *self, WUC_CompositionTarget** out);
 
-/* Windows.UI.Composition.Compositor.CreateVector2KeyFrameAnimation() */
 HRESULT wuc_comp_create_vector2_key_frame_animation(WUC_Comp *self, WUC_Vector2KeyFrameAnimation** out);
 
-/* Windows.UI.Composition.Compositor.CreateVector3KeyFrameAnimation() */
 HRESULT wuc_comp_create_vector3_key_frame_animation(WUC_Comp *self, WUC_Vector3KeyFrameAnimation** out);
 
-/* Windows.UI.Composition.Compositor.CreateVector4KeyFrameAnimation() */
 HRESULT wuc_comp_create_vector4_key_frame_animation(WUC_Comp *self, WUC_Vector4KeyFrameAnimation** out);
 
-/* Windows.UI.Composition.Compositor.GetCommitBatch(batchType) */
 HRESULT wuc_comp_get_commit_batch(WUC_Comp *self, WUC_CompositionBatchTypes batchType, WUC_CompositionCommitBatch** out);
 
-/* Windows.UI.Composition.Compositor.CreateAmbientLight() */
 HRESULT wuc_comp_create_ambient_light(WUC_Comp *self, WUC_AmbientLight** out);
 
-/* Windows.UI.Composition.Compositor.CreateAnimationGroup() */
 HRESULT wuc_comp_create_animation_group(WUC_Comp *self, WUC_CompositionAnimationGroup** out);
 
-/* Windows.UI.Composition.Compositor.CreateBackdropBrush() */
 HRESULT wuc_comp_create_backdrop_brush(WUC_Comp *self, WUC_BackdropBrush** out);
 
-/* Windows.UI.Composition.Compositor.CreateDistantLight() */
 HRESULT wuc_comp_create_distant_light(WUC_Comp *self, WUC_DistantLight** out);
 
-/* Windows.UI.Composition.Compositor.CreateDropShadow() */
 HRESULT wuc_comp_create_drop_shadow(WUC_Comp *self, WUC_DropShadow** out);
 
-/* Windows.UI.Composition.Compositor.CreateImplicitAnimationCollection() */
 HRESULT wuc_comp_create_implicit_animation_collection(WUC_Comp *self, WUC_ImplicitAnimationCollection** out);
 
-/* Windows.UI.Composition.Compositor.CreateLayerVisual() */
 HRESULT wuc_comp_create_layer_visual(WUC_Comp *self, WUC_LayerVisual** out);
 
-/* Windows.UI.Composition.Compositor.CreateMaskBrush() */
 HRESULT wuc_comp_create_mask_brush(WUC_Comp *self, WUC_CompositionMaskBrush** out);
 
-/* Windows.UI.Composition.Compositor.CreateNineGridBrush() */
 HRESULT wuc_comp_create_nine_grid_brush(WUC_Comp *self, WUC_CompositionNineGridBrush** out);
 
-/* Windows.UI.Composition.Compositor.CreatePointLight() */
 HRESULT wuc_comp_create_point_light(WUC_Comp *self, WUC_PointLight** out);
 
-/* Windows.UI.Composition.Compositor.CreateSpotLight() */
 HRESULT wuc_comp_create_spot_light(WUC_Comp *self, WUC_SpotLight** out);
 
-/* Windows.UI.Composition.Compositor.CreateStepEasingFunction() */
 HRESULT wuc_comp_create_step_easing_function(WUC_Comp *self, WUC_StepEasingFunction** out);
 
-/* Windows.UI.Composition.Compositor.CreateStepEasingFunction(stepCount) */
 HRESULT wuc_comp_create_step_easing_function_i32_p(WUC_Comp *self, int32_t stepCount, WUC_StepEasingFunction** out);
 
-/* Windows.UI.Composition.Compositor.CreateHostBackdropBrush() */
 HRESULT wuc_comp_create_host_backdrop_brush(WUC_Comp *self, WUC_BackdropBrush** out);
 
-/* Windows.UI.Composition.Compositor.CreateColorGradientStop() */
 HRESULT wuc_comp_create_color_gradient_stop(WUC_Comp *self, WUC_CompositionColorGradientStop** out);
 
-/* Windows.UI.Composition.Compositor.CreateColorGradientStop(offset, color) */
 HRESULT wuc_comp_create_color_gradient_stop_f32_color_p(WUC_Comp *self, float offset, WUI_Color color, WUC_CompositionColorGradientStop** out);
 
-/* Windows.UI.Composition.Compositor.CreateLinearGradientBrush() */
 HRESULT wuc_comp_create_linear_gradient_brush(WUC_Comp *self, WUC_CompositionLinearGradientBrush** out);
 
-/* Windows.UI.Composition.Compositor.CreateSpringScalarAnimation() */
 HRESULT wuc_comp_create_spring_scalar_animation(WUC_Comp *self, WUC_SpringScalarNaturalMotionAnimation** out);
 
-/* Windows.UI.Composition.Compositor.CreateSpringVector2Animation() */
 HRESULT wuc_comp_create_spring_vector2_animation(WUC_Comp *self, WUC_SpringVector2NaturalMotionAnimation** out);
 
-/* Windows.UI.Composition.Compositor.CreateSpringVector3Animation() */
 HRESULT wuc_comp_create_spring_vector3_animation(WUC_Comp *self, WUC_SpringVector3NaturalMotionAnimation** out);
 
-/* Windows.UI.Composition.Compositor.get_Comment() */
 HRESULT wuc_comp_get__comment(WUC_Comp *self, cwinrt_hstring *value);
 
-/* Windows.UI.Composition.Compositor.put_Comment() */
 HRESULT wuc_comp_put__comment(WUC_Comp *self, cwinrt_hstring value);
 
-/* Windows.UI.Composition.Compositor.get_GlobalPlaybackRate() */
 HRESULT wuc_comp_get__global_playback_rate(WUC_Comp *self, float *value);
 
-/* Windows.UI.Composition.Compositor.put_GlobalPlaybackRate() */
 HRESULT wuc_comp_put__global_playback_rate(WUC_Comp *self, float value);
 
-/* Windows.UI.Composition.Compositor.CreateBounceScalarAnimation() */
 HRESULT wuc_comp_create_bounce_scalar_animation(WUC_Comp *self, WUC_BounceScalarNaturalMotionAnimation** out);
 
-/* Windows.UI.Composition.Compositor.CreateBounceVector2Animation() */
 HRESULT wuc_comp_create_bounce_vector2_animation(WUC_Comp *self, WUC_BounceVector2NaturalMotionAnimation** out);
 
-/* Windows.UI.Composition.Compositor.CreateBounceVector3Animation() */
 HRESULT wuc_comp_create_bounce_vector3_animation(WUC_Comp *self, WUC_BounceVector3NaturalMotionAnimation** out);
 
-/* Windows.UI.Composition.Compositor.CreateContainerShape() */
 HRESULT wuc_comp_create_container_shape(WUC_Comp *self, WUC_CompositionContainerShape** out);
 
-/* Windows.UI.Composition.Compositor.CreateEllipseGeometry() */
 HRESULT wuc_comp_create_ellipse_geometry(WUC_Comp *self, WUC_CompositionEllipseGeometry** out);
 
-/* Windows.UI.Composition.Compositor.CreateLineGeometry() */
 HRESULT wuc_comp_create_line_geometry(WUC_Comp *self, WUC_CompositionLineGeometry** out);
 
-/* Windows.UI.Composition.Compositor.CreatePathGeometry() */
 HRESULT wuc_comp_create_path_geometry(WUC_Comp *self, WUC_CompositionPathGeometry** out);
 
-/* Windows.UI.Composition.Compositor.CreatePathGeometry(path) */
 HRESULT wuc_comp_create_path_geometry_p_p(WUC_Comp *self, WUC_CompositionPath* path, WUC_CompositionPathGeometry** out);
 
-/* Windows.UI.Composition.Compositor.CreatePathKeyFrameAnimation() */
 HRESULT wuc_comp_create_path_key_frame_animation(WUC_Comp *self, WUC_PathKeyFrameAnimation** out);
 
-/* Windows.UI.Composition.Compositor.CreateRectangleGeometry() */
 HRESULT wuc_comp_create_rectangle_geometry(WUC_Comp *self, WUC_CompositionRectangleGeometry** out);
 
-/* Windows.UI.Composition.Compositor.CreateRoundedRectangleGeometry() */
 HRESULT wuc_comp_create_rounded_rectangle_geometry(WUC_Comp *self, WUC_CompositionRoundedRectangleGeometry** out);
 
-/* Windows.UI.Composition.Compositor.CreateShapeVisual() */
 HRESULT wuc_comp_create_shape_visual(WUC_Comp *self, WUC_ShapeVisual** out);
 
-/* Windows.UI.Composition.Compositor.CreateSpriteShape() */
 HRESULT wuc_comp_create_sprite_shape(WUC_Comp *self, WUC_CompositionSpriteShape** out);
 
-/* Windows.UI.Composition.Compositor.CreateSpriteShape(geometry) */
 HRESULT wuc_comp_create_sprite_shape_p_p(WUC_Comp *self, WUC_CompositionGeometry* geometry, WUC_CompositionSpriteShape** out);
 
-/* Windows.UI.Composition.Compositor.CreateViewBox() */
 HRESULT wuc_comp_create_view_box(WUC_Comp *self, WUC_CompositionViewBox** out);
 
-/* Windows.UI.Composition.Compositor.RequestCommitAsync() */
 HRESULT wuc_comp_request_commit_async(WUC_Comp *self, WF_IAsyncAction** out);
 
-/* Windows.UI.Composition.Compositor.CreateGeometricClip() */
 HRESULT wuc_comp_create_geometric_clip(WUC_Comp *self, WUC_CompositionGeometricClip** out);
 
-/* Windows.UI.Composition.Compositor.CreateGeometricClip(geometry) */
 HRESULT wuc_comp_create_geometric_clip_p_p(WUC_Comp *self, WUC_CompositionGeometry* geometry, WUC_CompositionGeometricClip** out);
 
-/* Windows.UI.Composition.Compositor.CreateRedirectVisual() */
 HRESULT wuc_comp_create_redirect_visual(WUC_Comp *self, WUC_RedirectVisual** out);
 
-/* Windows.UI.Composition.Compositor.CreateRedirectVisual(source) */
 HRESULT wuc_comp_create_redirect_visual_p_p(WUC_Comp *self, WUC_Visual* source, WUC_RedirectVisual** out);
 
-/* Windows.UI.Composition.Compositor.CreateBooleanKeyFrameAnimation() */
 HRESULT wuc_comp_create_boolean_key_frame_animation(WUC_Comp *self, WUC_BooleanKeyFrameAnimation** out);
 
-/* Windows.UI.Composition.Compositor.CreateProjectedShadowCaster() */
 HRESULT wuc_comp_create_projected_shadow_caster(WUC_Comp *self, WUC_CompositionProjectedShadowCaster** out);
 
-/* Windows.UI.Composition.Compositor.CreateProjectedShadow() */
 HRESULT wuc_comp_create_projected_shadow(WUC_Comp *self, WUC_CompositionProjectedShadow** out);
 
-/* Windows.UI.Composition.Compositor.CreateProjectedShadowReceiver() */
 HRESULT wuc_comp_create_projected_shadow_receiver(WUC_Comp *self, WUC_CompositionProjectedShadowReceiver** out);
 
-/* Windows.UI.Composition.Compositor.CreateRadialGradientBrush() */
 HRESULT wuc_comp_create_radial_gradient_brush(WUC_Comp *self, WUC_CompositionRadialGradientBrush** out);
 
-/* Windows.UI.Composition.Compositor.CreateVisualSurface() */
 HRESULT wuc_comp_create_visual_surface(WUC_Comp *self, WUC_CompositionVisualSurface** out);
 
-/* Windows.UI.Composition.Compositor.get_DispatcherQueue() */
 HRESULT wuc_comp_get__dispatcher_queue(WUC_Comp *self, WSY_DispatcherQueue** value);
 
-/* Windows.UI.Composition.Compositor.CreateAnimationPropertyInfo() */
 HRESULT wuc_comp_create_animation_property_info(WUC_Comp *self, WUC_AnimationPropertyInfo** out);
 
-/* Windows.UI.Composition.Compositor.CreateRectangleClip() */
 HRESULT wuc_comp_create_rectangle_clip(WUC_Comp *self, WUC_RectangleClip** out);
 
-/* Windows.UI.Composition.Compositor.CreateRectangleClip(left, top, right, bottom) */
 HRESULT wuc_comp_create_rectangle_clip_f32_f32_f32_f32_p(WUC_Comp *self, float left, float top, float right, float bottom, WUC_RectangleClip** out);
 
-/* Windows.UI.Composition.Compositor.CreateRectangleClip(left, top, right, bottom, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius) */
 HRESULT wuc_comp_create_rectangle_clip_f32_f32_f32_f32_2_2_2_2_p(WUC_Comp *self, float left, float top, float right, float bottom, WFN_Vector_2 topLeftRadius, WFN_Vector_2 topRightRadius, WFN_Vector_2 bottomRightRadius, WFN_Vector_2 bottomLeftRadius, WUC_RectangleClip** out);
 
-/* Windows.UI.Composition.Compositor.TryCreateBlurredWallpaperBackdropBrush() */
 HRESULT wuc_comp_try_create_blurred_wallpaper_backdrop_brush(WUC_Comp *self, WUC_BackdropBrush** out);
 
-/* Windows.UI.Composition.Compositor.CreateAnimationController() */
 HRESULT wuc_comp_create_animation_controller(WUC_Comp *self, WUC_AnimationController** out);
 
-/* Windows.UI.Composition.Compositor.Close() */
 HRESULT wuc_comp_close(WUC_Comp *self);
 
-/* Windows.UI.Composition.Compositor.get_MaxGlobalPlaybackRate() */
 HRESULT wuc_comp_get__max_global_playback_rate(float *value);
 
-/* Windows.UI.Composition.Compositor.get_MinGlobalPlaybackRate() */
 HRESULT wuc_comp_get__min_global_playback_rate(float *value);
 
-/* Windows.UI.Composition.Visual */
-/* Windows.UI.Composition.Visual.get_AnchorPoint() */
 HRESULT wuc_visual_get__anchor_point(WUC_Visual *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.Visual.put_AnchorPoint() */
 HRESULT wuc_visual_put__anchor_point(WUC_Visual *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.Visual.get_BackfaceVisibility() */
 HRESULT wuc_visual_get__backface_visibility(WUC_Visual *self, WUC_CompositionBackfaceVisibility *value);
 
-/* Windows.UI.Composition.Visual.put_BackfaceVisibility() */
 HRESULT wuc_visual_put__backface_visibility(WUC_Visual *self, WUC_CompositionBackfaceVisibility value);
 
-/* Windows.UI.Composition.Visual.get_BorderMode() */
 HRESULT wuc_visual_get__border_mode(WUC_Visual *self, WUC_CompositionBorderMode *value);
 
-/* Windows.UI.Composition.Visual.put_BorderMode() */
 HRESULT wuc_visual_put__border_mode(WUC_Visual *self, WUC_CompositionBorderMode value);
 
-/* Windows.UI.Composition.Visual.get_CenterPoint() */
 HRESULT wuc_visual_get__center_point(WUC_Visual *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.Visual.put_CenterPoint() */
 HRESULT wuc_visual_put__center_point(WUC_Visual *self, WFN_Vector_3 value);
 
-/* Windows.UI.Composition.Visual.get_Clip() */
 HRESULT wuc_visual_get__clip(WUC_Visual *self, WUC_CompositionClip** value);
 
-/* Windows.UI.Composition.Visual.put_Clip() */
 HRESULT wuc_visual_put__clip(WUC_Visual *self, WUC_CompositionClip* value);
 
-/* Windows.UI.Composition.Visual.get_CompositeMode() */
 HRESULT wuc_visual_get__composite_mode(WUC_Visual *self, WUC_CompositionCompositeMode *value);
 
-/* Windows.UI.Composition.Visual.put_CompositeMode() */
 HRESULT wuc_visual_put__composite_mode(WUC_Visual *self, WUC_CompositionCompositeMode value);
 
-/* Windows.UI.Composition.Visual.get_IsVisible() */
 HRESULT wuc_visual_get__is_visible(WUC_Visual *self, BOOL *value);
 
-/* Windows.UI.Composition.Visual.put_IsVisible() */
 HRESULT wuc_visual_put__is_visible(WUC_Visual *self, BOOL value);
 
-/* Windows.UI.Composition.Visual.get_Offset() */
 HRESULT wuc_visual_get__offset(WUC_Visual *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.Visual.put_Offset() */
 HRESULT wuc_visual_put__offset(WUC_Visual *self, WFN_Vector_3 value);
 
-/* Windows.UI.Composition.Visual.get_Opacity() */
 HRESULT wuc_visual_get__opacity(WUC_Visual *self, float *value);
 
-/* Windows.UI.Composition.Visual.put_Opacity() */
 HRESULT wuc_visual_put__opacity(WUC_Visual *self, float value);
 
-/* Windows.UI.Composition.Visual.get_Orientation() */
 HRESULT wuc_visual_get__orientation(WUC_Visual *self, WFN_Quaternion *value);
 
-/* Windows.UI.Composition.Visual.put_Orientation() */
 HRESULT wuc_visual_put__orientation(WUC_Visual *self, WFN_Quaternion value);
 
-/* Windows.UI.Composition.Visual.get_Parent() */
 HRESULT wuc_visual_get__parent(WUC_Visual *self, WUC_Container** value);
 
-/* Windows.UI.Composition.Visual.get_RotationAngle() */
 HRESULT wuc_visual_get__rotation_angle(WUC_Visual *self, float *value);
 
-/* Windows.UI.Composition.Visual.put_RotationAngle() */
 HRESULT wuc_visual_put__rotation_angle(WUC_Visual *self, float value);
 
-/* Windows.UI.Composition.Visual.get_RotationAngleInDegrees() */
 HRESULT wuc_visual_get__rotation_angle_in_degrees(WUC_Visual *self, float *value);
 
-/* Windows.UI.Composition.Visual.put_RotationAngleInDegrees() */
 HRESULT wuc_visual_put__rotation_angle_in_degrees(WUC_Visual *self, float value);
 
-/* Windows.UI.Composition.Visual.get_RotationAxis() */
 HRESULT wuc_visual_get__rotation_axis(WUC_Visual *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.Visual.put_RotationAxis() */
 HRESULT wuc_visual_put__rotation_axis(WUC_Visual *self, WFN_Vector_3 value);
 
-/* Windows.UI.Composition.Visual.get_Scale() */
 HRESULT wuc_visual_get__scale(WUC_Visual *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.Visual.put_Scale() */
 HRESULT wuc_visual_put__scale(WUC_Visual *self, WFN_Vector_3 value);
 
-/* Windows.UI.Composition.Visual.get_Size() */
 HRESULT wuc_visual_get__size(WUC_Visual *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.Visual.put_Size() */
 HRESULT wuc_visual_put__size(WUC_Visual *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.Visual.get_TransformMatrix() */
 HRESULT wuc_visual_get__transform_matrix(WUC_Visual *self, WFN_Matrix4x_4 *value);
 
-/* Windows.UI.Composition.Visual.put_TransformMatrix() */
 HRESULT wuc_visual_put__transform_matrix(WUC_Visual *self, WFN_Matrix4x_4 value);
 
-/* Windows.UI.Composition.Visual.get_ParentForTransform() */
 HRESULT wuc_visual_get__parent_for_transform(WUC_Visual *self, WUC_Visual** value);
 
-/* Windows.UI.Composition.Visual.put_ParentForTransform() */
 HRESULT wuc_visual_put__parent_for_transform(WUC_Visual *self, WUC_Visual* value);
 
-/* Windows.UI.Composition.Visual.get_RelativeOffsetAdjustment() */
 HRESULT wuc_visual_get__relative_offset_adjustment(WUC_Visual *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.Visual.put_RelativeOffsetAdjustment() */
 HRESULT wuc_visual_put__relative_offset_adjustment(WUC_Visual *self, WFN_Vector_3 value);
 
-/* Windows.UI.Composition.Visual.get_RelativeSizeAdjustment() */
 HRESULT wuc_visual_get__relative_size_adjustment(WUC_Visual *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.Visual.put_RelativeSizeAdjustment() */
 HRESULT wuc_visual_put__relative_size_adjustment(WUC_Visual *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.Visual.get_IsHitTestVisible() */
 HRESULT wuc_visual_get__is_hit_test_visible(WUC_Visual *self, BOOL *value);
 
-/* Windows.UI.Composition.Visual.put_IsHitTestVisible() */
 HRESULT wuc_visual_put__is_hit_test_visible(WUC_Visual *self, BOOL value);
 
-/* Windows.UI.Composition.Visual.get_IsPixelSnappingEnabled() */
 HRESULT wuc_visual_get__is_pixel_snapping_enabled(WUC_Visual *self, BOOL *value);
 
-/* Windows.UI.Composition.Visual.put_IsPixelSnappingEnabled() */
 HRESULT wuc_visual_put__is_pixel_snapping_enabled(WUC_Visual *self, BOOL value);
 
-/* Windows.UI.Composition.ContainerVisual */
-/* Windows.UI.Composition.ContainerVisual.get_Children() */
 HRESULT wuc_container_get__children(WUC_Container *self, WUC_VisualCollection** value);
 
-/* activate Windows.UI.Composition.SineEasingFunction */
 HRESULT wuc_sine_easing_function_new(WUC_SineEasingFunction **out);
 
-/* Windows.UI.Composition.SineEasingFunction */
-/* Windows.UI.Composition.SineEasingFunction.get_Mode() */
 HRESULT wuc_sine_easing_function_get__mode(WUC_SineEasingFunction *self, WUC_CompositionEasingFunctionMode *value);
 
-/* activate Windows.UI.Composition.SpotLight */
 HRESULT wuc_spot_light_new(WUC_SpotLight **out);
 
-/* Windows.UI.Composition.SpotLight */
-/* Windows.UI.Composition.SpotLight.get_ConstantAttenuation() */
 HRESULT wuc_spot_light_get__constant_attenuation(WUC_SpotLight *self, float *value);
 
-/* Windows.UI.Composition.SpotLight.put_ConstantAttenuation() */
 HRESULT wuc_spot_light_put__constant_attenuation(WUC_SpotLight *self, float value);
 
-/* Windows.UI.Composition.SpotLight.get_CoordinateSpace() */
 HRESULT wuc_spot_light_get__coordinate_space(WUC_SpotLight *self, WUC_Visual** value);
 
-/* Windows.UI.Composition.SpotLight.put_CoordinateSpace() */
 HRESULT wuc_spot_light_put__coordinate_space(WUC_SpotLight *self, WUC_Visual* value);
 
-/* Windows.UI.Composition.SpotLight.get_Direction() */
 HRESULT wuc_spot_light_get__direction(WUC_SpotLight *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.SpotLight.put_Direction() */
 HRESULT wuc_spot_light_put__direction(WUC_SpotLight *self, WFN_Vector_3 value);
 
-/* Windows.UI.Composition.SpotLight.get_InnerConeAngle() */
 HRESULT wuc_spot_light_get__inner_cone_angle(WUC_SpotLight *self, float *value);
 
-/* Windows.UI.Composition.SpotLight.put_InnerConeAngle() */
 HRESULT wuc_spot_light_put__inner_cone_angle(WUC_SpotLight *self, float value);
 
-/* Windows.UI.Composition.SpotLight.get_InnerConeAngleInDegrees() */
 HRESULT wuc_spot_light_get__inner_cone_angle_in_degrees(WUC_SpotLight *self, float *value);
 
-/* Windows.UI.Composition.SpotLight.put_InnerConeAngleInDegrees() */
 HRESULT wuc_spot_light_put__inner_cone_angle_in_degrees(WUC_SpotLight *self, float value);
 
-/* Windows.UI.Composition.SpotLight.get_InnerConeColor() */
 HRESULT wuc_spot_light_get__inner_cone_color(WUC_SpotLight *self, WUI_Color *value);
 
-/* Windows.UI.Composition.SpotLight.put_InnerConeColor() */
 HRESULT wuc_spot_light_put__inner_cone_color(WUC_SpotLight *self, WUI_Color value);
 
-/* Windows.UI.Composition.SpotLight.get_LinearAttenuation() */
 HRESULT wuc_spot_light_get__linear_attenuation(WUC_SpotLight *self, float *value);
 
-/* Windows.UI.Composition.SpotLight.put_LinearAttenuation() */
 HRESULT wuc_spot_light_put__linear_attenuation(WUC_SpotLight *self, float value);
 
-/* Windows.UI.Composition.SpotLight.get_Offset() */
 HRESULT wuc_spot_light_get__offset(WUC_SpotLight *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.SpotLight.put_Offset() */
 HRESULT wuc_spot_light_put__offset(WUC_SpotLight *self, WFN_Vector_3 value);
 
-/* Windows.UI.Composition.SpotLight.get_OuterConeAngle() */
 HRESULT wuc_spot_light_get__outer_cone_angle(WUC_SpotLight *self, float *value);
 
-/* Windows.UI.Composition.SpotLight.put_OuterConeAngle() */
 HRESULT wuc_spot_light_put__outer_cone_angle(WUC_SpotLight *self, float value);
 
-/* Windows.UI.Composition.SpotLight.get_OuterConeAngleInDegrees() */
 HRESULT wuc_spot_light_get__outer_cone_angle_in_degrees(WUC_SpotLight *self, float *value);
 
-/* Windows.UI.Composition.SpotLight.put_OuterConeAngleInDegrees() */
 HRESULT wuc_spot_light_put__outer_cone_angle_in_degrees(WUC_SpotLight *self, float value);
 
-/* Windows.UI.Composition.SpotLight.get_OuterConeColor() */
 HRESULT wuc_spot_light_get__outer_cone_color(WUC_SpotLight *self, WUI_Color *value);
 
-/* Windows.UI.Composition.SpotLight.put_OuterConeColor() */
 HRESULT wuc_spot_light_put__outer_cone_color(WUC_SpotLight *self, WUI_Color value);
 
-/* Windows.UI.Composition.SpotLight.get_QuadraticAttenuation() */
 HRESULT wuc_spot_light_get__quadratic_attenuation(WUC_SpotLight *self, float *value);
 
-/* Windows.UI.Composition.SpotLight.put_QuadraticAttenuation() */
 HRESULT wuc_spot_light_put__quadratic_attenuation(WUC_SpotLight *self, float value);
 
-/* Windows.UI.Composition.SpotLight.get_InnerConeIntensity() */
 HRESULT wuc_spot_light_get__inner_cone_intensity(WUC_SpotLight *self, float *value);
 
-/* Windows.UI.Composition.SpotLight.put_InnerConeIntensity() */
 HRESULT wuc_spot_light_put__inner_cone_intensity(WUC_SpotLight *self, float value);
 
-/* Windows.UI.Composition.SpotLight.get_OuterConeIntensity() */
 HRESULT wuc_spot_light_get__outer_cone_intensity(WUC_SpotLight *self, float *value);
 
-/* Windows.UI.Composition.SpotLight.put_OuterConeIntensity() */
 HRESULT wuc_spot_light_put__outer_cone_intensity(WUC_SpotLight *self, float value);
 
-/* Windows.UI.Composition.SpotLight.get_MinAttenuationCutoff() */
 HRESULT wuc_spot_light_get__min_attenuation_cutoff(WUC_SpotLight *self, float *value);
 
-/* Windows.UI.Composition.SpotLight.put_MinAttenuationCutoff() */
 HRESULT wuc_spot_light_put__min_attenuation_cutoff(WUC_SpotLight *self, float value);
 
-/* Windows.UI.Composition.SpotLight.get_MaxAttenuationCutoff() */
 HRESULT wuc_spot_light_get__max_attenuation_cutoff(WUC_SpotLight *self, float *value);
 
-/* Windows.UI.Composition.SpotLight.put_MaxAttenuationCutoff() */
 HRESULT wuc_spot_light_put__max_attenuation_cutoff(WUC_SpotLight *self, float value);
 
-/* activate Windows.UI.Composition.CubicBezierEasingFunction */
 HRESULT wuc_cubic_bezier_easing_function_new(WUC_CubicBezierEasingFunction **out);
 
-/* Windows.UI.Composition.CubicBezierEasingFunction */
-/* Windows.UI.Composition.CubicBezierEasingFunction.get_ControlPoint1() */
 HRESULT wuc_cubic_bezier_easing_function_get__control_point1(WUC_CubicBezierEasingFunction *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.CubicBezierEasingFunction.get_ControlPoint2() */
 HRESULT wuc_cubic_bezier_easing_function_get__control_point2(WUC_CubicBezierEasingFunction *self, WFN_Vector_2 *value);
 
-/* activate Windows.UI.Composition.DelegatedInkTrailVisual */
 HRESULT wuc_delegated_ink_trail_visual_new(WUC_DelegatedInkTrailVisual **out);
 
-/* Windows.UI.Composition.DelegatedInkTrailVisual */
-/* Windows.UI.Composition.DelegatedInkTrailVisual.AddTrailPoints(inkPoints) */
 HRESULT wuc_delegated_ink_trail_visual_add_trail_points(WUC_DelegatedInkTrailVisual *self, WUC_InkTrailPoint *inkPoints, uint32_t inkPoints_len, uint32_t *out);
 
-/* Windows.UI.Composition.DelegatedInkTrailVisual.AddTrailPointsWithPrediction(inkPoints, predictedInkPoints) */
 HRESULT wuc_delegated_ink_trail_visual_add_trail_points_with_prediction(WUC_DelegatedInkTrailVisual *self, WUC_InkTrailPoint *inkPoints, uint32_t inkPoints_len, WUC_InkTrailPoint *predictedInkPoints, uint32_t predictedInkPoints_len, uint32_t *out);
 
-/* Windows.UI.Composition.DelegatedInkTrailVisual.RemoveTrailPoints(generationId) */
 HRESULT wuc_delegated_ink_trail_visual_remove_trail_points(WUC_DelegatedInkTrailVisual *self, uint32_t generationId);
 
-/* Windows.UI.Composition.DelegatedInkTrailVisual.StartNewTrail(color) */
 HRESULT wuc_delegated_ink_trail_visual_start_new_trail(WUC_DelegatedInkTrailVisual *self, WUI_Color color);
 
-/* Windows.UI.Composition.DelegatedInkTrailVisual.Create(compositor) */
 HRESULT wuc_delegated_ink_trail_visual_create(WUC_Comp* compositor, WUC_DelegatedInkTrailVisual** out);
 
-/* Windows.UI.Composition.DelegatedInkTrailVisual.CreateForSwapChain(compositor, swapChain) */
 HRESULT wuc_delegated_ink_trail_visual_create_for_swap_chain(WUC_Comp* compositor, WUC_ICompositionSurface* swapChain, WUC_DelegatedInkTrailVisual** out);
 
-/* activate Windows.UI.Composition.SpringScalarNaturalMotionAnimation */
 HRESULT wuc_spring_scalar_natural_motion_animation_new(WUC_SpringScalarNaturalMotionAnimation **out);
 
-/* Windows.UI.Composition.SpringScalarNaturalMotionAnimation */
-/* Windows.UI.Composition.SpringScalarNaturalMotionAnimation.get_DampingRatio() */
 HRESULT wuc_spring_scalar_natural_motion_animation_get__damping_ratio(WUC_SpringScalarNaturalMotionAnimation *self, float *value);
 
-/* Windows.UI.Composition.SpringScalarNaturalMotionAnimation.put_DampingRatio() */
 HRESULT wuc_spring_scalar_natural_motion_animation_put__damping_ratio(WUC_SpringScalarNaturalMotionAnimation *self, float value);
 
-/* Windows.UI.Composition.SpringScalarNaturalMotionAnimation.get_Period() */
 HRESULT wuc_spring_scalar_natural_motion_animation_get__period(WUC_SpringScalarNaturalMotionAnimation *self, WF_TimeSpan *value);
 
-/* Windows.UI.Composition.SpringScalarNaturalMotionAnimation.put_Period() */
 HRESULT wuc_spring_scalar_natural_motion_animation_put__period(WUC_SpringScalarNaturalMotionAnimation *self, WF_TimeSpan value);
 
-/* activate Windows.UI.Composition.SpringVector2NaturalMotionAnimation */
 HRESULT wuc_spring_vector2_natural_motion_animation_new(WUC_SpringVector2NaturalMotionAnimation **out);
 
-/* Windows.UI.Composition.SpringVector2NaturalMotionAnimation */
-/* Windows.UI.Composition.SpringVector2NaturalMotionAnimation.get_DampingRatio() */
 HRESULT wuc_spring_vector2_natural_motion_animation_get__damping_ratio(WUC_SpringVector2NaturalMotionAnimation *self, float *value);
 
-/* Windows.UI.Composition.SpringVector2NaturalMotionAnimation.put_DampingRatio() */
 HRESULT wuc_spring_vector2_natural_motion_animation_put__damping_ratio(WUC_SpringVector2NaturalMotionAnimation *self, float value);
 
-/* Windows.UI.Composition.SpringVector2NaturalMotionAnimation.get_Period() */
 HRESULT wuc_spring_vector2_natural_motion_animation_get__period(WUC_SpringVector2NaturalMotionAnimation *self, WF_TimeSpan *value);
 
-/* Windows.UI.Composition.SpringVector2NaturalMotionAnimation.put_Period() */
 HRESULT wuc_spring_vector2_natural_motion_animation_put__period(WUC_SpringVector2NaturalMotionAnimation *self, WF_TimeSpan value);
 
-/* activate Windows.UI.Composition.SpringVector3NaturalMotionAnimation */
 HRESULT wuc_spring_vector3_natural_motion_animation_new(WUC_SpringVector3NaturalMotionAnimation **out);
 
-/* Windows.UI.Composition.SpringVector3NaturalMotionAnimation */
-/* Windows.UI.Composition.SpringVector3NaturalMotionAnimation.get_DampingRatio() */
 HRESULT wuc_spring_vector3_natural_motion_animation_get__damping_ratio(WUC_SpringVector3NaturalMotionAnimation *self, float *value);
 
-/* Windows.UI.Composition.SpringVector3NaturalMotionAnimation.put_DampingRatio() */
 HRESULT wuc_spring_vector3_natural_motion_animation_put__damping_ratio(WUC_SpringVector3NaturalMotionAnimation *self, float value);
 
-/* Windows.UI.Composition.SpringVector3NaturalMotionAnimation.get_Period() */
 HRESULT wuc_spring_vector3_natural_motion_animation_get__period(WUC_SpringVector3NaturalMotionAnimation *self, WF_TimeSpan *value);
 
-/* Windows.UI.Composition.SpringVector3NaturalMotionAnimation.put_Period() */
 HRESULT wuc_spring_vector3_natural_motion_animation_put__period(WUC_SpringVector3NaturalMotionAnimation *self, WF_TimeSpan value);
 
-/* activate Windows.UI.Composition.SpriteVisual */
 HRESULT wuc_sprite_new(WUC_Sprite **out);
 
-/* Windows.UI.Composition.SpriteVisual */
-/* Windows.UI.Composition.SpriteVisual.get_Brush() */
 HRESULT wuc_sprite_get__brush(WUC_Sprite *self, WUC_Brush** value);
 
-/* Windows.UI.Composition.SpriteVisual.put_Brush() */
 HRESULT wuc_sprite_put__brush(WUC_Sprite *self, WUC_Brush* value);
 
-/* Windows.UI.Composition.SpriteVisual.get_Shadow() */
 HRESULT wuc_sprite_get__shadow(WUC_Sprite *self, WUC_CompositionShadow** value);
 
-/* Windows.UI.Composition.SpriteVisual.put_Shadow() */
 HRESULT wuc_sprite_put__shadow(WUC_Sprite *self, WUC_CompositionShadow* value);
 
-/* activate Windows.UI.Composition.StepEasingFunction */
 HRESULT wuc_step_easing_function_new(WUC_StepEasingFunction **out);
 
-/* Windows.UI.Composition.StepEasingFunction */
-/* Windows.UI.Composition.StepEasingFunction.get_FinalStep() */
 HRESULT wuc_step_easing_function_get__final_step(WUC_StepEasingFunction *self, int32_t *value);
 
-/* Windows.UI.Composition.StepEasingFunction.put_FinalStep() */
 HRESULT wuc_step_easing_function_put__final_step(WUC_StepEasingFunction *self, int32_t value);
 
-/* Windows.UI.Composition.StepEasingFunction.get_InitialStep() */
 HRESULT wuc_step_easing_function_get__initial_step(WUC_StepEasingFunction *self, int32_t *value);
 
-/* Windows.UI.Composition.StepEasingFunction.put_InitialStep() */
 HRESULT wuc_step_easing_function_put__initial_step(WUC_StepEasingFunction *self, int32_t value);
 
-/* Windows.UI.Composition.StepEasingFunction.get_IsFinalStepSingleFrame() */
 HRESULT wuc_step_easing_function_get__is_final_step_single_frame(WUC_StepEasingFunction *self, BOOL *value);
 
-/* Windows.UI.Composition.StepEasingFunction.put_IsFinalStepSingleFrame() */
 HRESULT wuc_step_easing_function_put__is_final_step_single_frame(WUC_StepEasingFunction *self, BOOL value);
 
-/* Windows.UI.Composition.StepEasingFunction.get_IsInitialStepSingleFrame() */
 HRESULT wuc_step_easing_function_get__is_initial_step_single_frame(WUC_StepEasingFunction *self, BOOL *value);
 
-/* Windows.UI.Composition.StepEasingFunction.put_IsInitialStepSingleFrame() */
 HRESULT wuc_step_easing_function_put__is_initial_step_single_frame(WUC_StepEasingFunction *self, BOOL value);
 
-/* Windows.UI.Composition.StepEasingFunction.get_StepCount() */
 HRESULT wuc_step_easing_function_get__step_count(WUC_StepEasingFunction *self, int32_t *value);
 
-/* Windows.UI.Composition.StepEasingFunction.put_StepCount() */
 HRESULT wuc_step_easing_function_put__step_count(WUC_StepEasingFunction *self, int32_t value);
 
-/* activate Windows.UI.Composition.Vector2KeyFrameAnimation */
 HRESULT wuc_vector2_key_frame_animation_new(WUC_Vector2KeyFrameAnimation **out);
 
-/* Windows.UI.Composition.Vector2KeyFrameAnimation */
-/* Windows.UI.Composition.Vector2KeyFrameAnimation.InsertKeyFrame(normalizedProgressKey) */
 HRESULT wuc_vector2_key_frame_animation_insert_key_frame(WUC_Vector2KeyFrameAnimation *self, float normalizedProgressKey, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.Vector2KeyFrameAnimation.InsertKeyFrame(normalizedProgressKey, easingFunction) */
 HRESULT wuc_vector2_key_frame_animation_insert_key_frame_f32_2_p(WUC_Vector2KeyFrameAnimation *self, float normalizedProgressKey, WFN_Vector_2 value, WUC_CompositionEasingFunction* easingFunction);
 
-/* activate Windows.UI.Composition.Vector3KeyFrameAnimation */
 HRESULT wuc_vector3_key_frame_animation_new(WUC_Vector3KeyFrameAnimation **out);
 
-/* Windows.UI.Composition.Vector3KeyFrameAnimation */
-/* Windows.UI.Composition.Vector3KeyFrameAnimation.InsertKeyFrame(normalizedProgressKey) */
 HRESULT wuc_vector3_key_frame_animation_insert_key_frame(WUC_Vector3KeyFrameAnimation *self, float normalizedProgressKey, WFN_Vector_3 value);
 
-/* Windows.UI.Composition.Vector3KeyFrameAnimation.InsertKeyFrame(normalizedProgressKey, easingFunction) */
 HRESULT wuc_vector3_key_frame_animation_insert_key_frame_f32_3_p(WUC_Vector3KeyFrameAnimation *self, float normalizedProgressKey, WFN_Vector_3 value, WUC_CompositionEasingFunction* easingFunction);
 
-/* activate Windows.UI.Composition.Vector4KeyFrameAnimation */
 HRESULT wuc_vector4_key_frame_animation_new(WUC_Vector4KeyFrameAnimation **out);
 
-/* Windows.UI.Composition.Vector4KeyFrameAnimation */
-/* Windows.UI.Composition.Vector4KeyFrameAnimation.InsertKeyFrame(normalizedProgressKey) */
 HRESULT wuc_vector4_key_frame_animation_insert_key_frame(WUC_Vector4KeyFrameAnimation *self, float normalizedProgressKey, WFN_Vector_4 value);
 
-/* Windows.UI.Composition.Vector4KeyFrameAnimation.InsertKeyFrame(normalizedProgressKey, easingFunction) */
 HRESULT wuc_vector4_key_frame_animation_insert_key_frame_f32_4_p(WUC_Vector4KeyFrameAnimation *self, float normalizedProgressKey, WFN_Vector_4 value, WUC_CompositionEasingFunction* easingFunction);
 
-/* activate Windows.UI.Composition.DistantLight */
 HRESULT wuc_distant_light_new(WUC_DistantLight **out);
 
-/* Windows.UI.Composition.DistantLight */
-/* Windows.UI.Composition.DistantLight.get_Color() */
 HRESULT wuc_distant_light_get__color(WUC_DistantLight *self, WUI_Color *value);
 
-/* Windows.UI.Composition.DistantLight.put_Color() */
 HRESULT wuc_distant_light_put__color(WUC_DistantLight *self, WUI_Color value);
 
-/* Windows.UI.Composition.DistantLight.get_CoordinateSpace() */
 HRESULT wuc_distant_light_get__coordinate_space(WUC_DistantLight *self, WUC_Visual** value);
 
-/* Windows.UI.Composition.DistantLight.put_CoordinateSpace() */
 HRESULT wuc_distant_light_put__coordinate_space(WUC_DistantLight *self, WUC_Visual* value);
 
-/* Windows.UI.Composition.DistantLight.get_Direction() */
 HRESULT wuc_distant_light_get__direction(WUC_DistantLight *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.DistantLight.put_Direction() */
 HRESULT wuc_distant_light_put__direction(WUC_DistantLight *self, WFN_Vector_3 value);
 
-/* Windows.UI.Composition.DistantLight.get_Intensity() */
 HRESULT wuc_distant_light_get__intensity(WUC_DistantLight *self, float *value);
 
-/* Windows.UI.Composition.DistantLight.put_Intensity() */
 HRESULT wuc_distant_light_put__intensity(WUC_DistantLight *self, float value);
 
-/* activate Windows.UI.Composition.DropShadow */
 HRESULT wuc_drop_shadow_new(WUC_DropShadow **out);
 
-/* Windows.UI.Composition.DropShadow */
-/* Windows.UI.Composition.DropShadow.get_BlurRadius() */
 HRESULT wuc_drop_shadow_get__blur_radius(WUC_DropShadow *self, float *value);
 
-/* Windows.UI.Composition.DropShadow.put_BlurRadius() */
 HRESULT wuc_drop_shadow_put__blur_radius(WUC_DropShadow *self, float value);
 
-/* Windows.UI.Composition.DropShadow.get_Color() */
 HRESULT wuc_drop_shadow_get__color(WUC_DropShadow *self, WUI_Color *value);
 
-/* Windows.UI.Composition.DropShadow.put_Color() */
 HRESULT wuc_drop_shadow_put__color(WUC_DropShadow *self, WUI_Color value);
 
-/* Windows.UI.Composition.DropShadow.get_Mask() */
 HRESULT wuc_drop_shadow_get__mask(WUC_DropShadow *self, WUC_Brush** value);
 
-/* Windows.UI.Composition.DropShadow.put_Mask() */
 HRESULT wuc_drop_shadow_put__mask(WUC_DropShadow *self, WUC_Brush* value);
 
-/* Windows.UI.Composition.DropShadow.get_Offset() */
 HRESULT wuc_drop_shadow_get__offset(WUC_DropShadow *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.DropShadow.put_Offset() */
 HRESULT wuc_drop_shadow_put__offset(WUC_DropShadow *self, WFN_Vector_3 value);
 
-/* Windows.UI.Composition.DropShadow.get_Opacity() */
 HRESULT wuc_drop_shadow_get__opacity(WUC_DropShadow *self, float *value);
 
-/* Windows.UI.Composition.DropShadow.put_Opacity() */
 HRESULT wuc_drop_shadow_put__opacity(WUC_DropShadow *self, float value);
 
-/* Windows.UI.Composition.DropShadow.get_SourcePolicy() */
 HRESULT wuc_drop_shadow_get__source_policy(WUC_DropShadow *self, WUC_CompositionDropShadowSourcePolicy *value);
 
-/* Windows.UI.Composition.DropShadow.put_SourcePolicy() */
 HRESULT wuc_drop_shadow_put__source_policy(WUC_DropShadow *self, WUC_CompositionDropShadowSourcePolicy value);
 
-/* activate Windows.UI.Composition.VisualCollection */
 HRESULT wuc_visual_collection_new(WUC_VisualCollection **out);
 
-/* Windows.UI.Composition.VisualCollection */
-/* Windows.UI.Composition.VisualCollection.get_Count() */
 HRESULT wuc_visual_collection_get__count(WUC_VisualCollection *self, int32_t *value);
 
-/* Windows.UI.Composition.VisualCollection.InsertAbove(newChild, sibling) */
 HRESULT wuc_visual_collection_insert_above(WUC_VisualCollection *self, WUC_Visual* newChild, WUC_Visual* sibling);
 
-/* Windows.UI.Composition.VisualCollection.InsertAtBottom(newChild) */
 HRESULT wuc_visual_collection_insert_at_bottom(WUC_VisualCollection *self, WUC_Visual* newChild);
 
-/* Windows.UI.Composition.VisualCollection.InsertAtTop(newChild) */
 HRESULT wuc_visual_collection_insert_at_top(WUC_VisualCollection *self, WUC_Visual* newChild);
 
-/* Windows.UI.Composition.VisualCollection.InsertBelow(newChild, sibling) */
 HRESULT wuc_visual_collection_insert_below(WUC_VisualCollection *self, WUC_Visual* newChild, WUC_Visual* sibling);
 
-/* Windows.UI.Composition.VisualCollection.Remove(child) */
 HRESULT wuc_visual_collection_remove(WUC_VisualCollection *self, WUC_Visual* child);
 
-/* Windows.UI.Composition.VisualCollection.RemoveAll() */
 HRESULT wuc_visual_collection_remove_all(WUC_VisualCollection *self);
 
-/* Windows.UI.Composition.VisualCollection.First() */
 HRESULT wuc_visual_collection_first(WUC_VisualCollection *self, WFOCO_IIterator_WUC_Visual** out);
 
-/* activate Windows.UI.Composition.VisualUnorderedCollection */
 HRESULT wuc_visual_unordered_collection_new(WUC_VisualUnorderedCollection **out);
 
-/* Windows.UI.Composition.VisualUnorderedCollection */
-/* Windows.UI.Composition.VisualUnorderedCollection.get_Count() */
 HRESULT wuc_visual_unordered_collection_get__count(WUC_VisualUnorderedCollection *self, int32_t *value);
 
-/* Windows.UI.Composition.VisualUnorderedCollection.Add(newVisual) */
 HRESULT wuc_visual_unordered_collection_add(WUC_VisualUnorderedCollection *self, WUC_Visual* newVisual);
 
-/* Windows.UI.Composition.VisualUnorderedCollection.Remove(visual) */
 HRESULT wuc_visual_unordered_collection_remove(WUC_VisualUnorderedCollection *self, WUC_Visual* visual);
 
-/* Windows.UI.Composition.VisualUnorderedCollection.RemoveAll() */
 HRESULT wuc_visual_unordered_collection_remove_all(WUC_VisualUnorderedCollection *self);
 
-/* Windows.UI.Composition.VisualUnorderedCollection.First() */
 HRESULT wuc_visual_unordered_collection_first(WUC_VisualUnorderedCollection *self, WFOCO_IIterator_WUC_Visual** out);
 
-/* activate Windows.UI.Composition.ElasticEasingFunction */
 HRESULT wuc_elastic_easing_function_new(WUC_ElasticEasingFunction **out);
 
-/* Windows.UI.Composition.ElasticEasingFunction */
-/* Windows.UI.Composition.ElasticEasingFunction.get_Mode() */
 HRESULT wuc_elastic_easing_function_get__mode(WUC_ElasticEasingFunction *self, WUC_CompositionEasingFunctionMode *value);
 
-/* Windows.UI.Composition.ElasticEasingFunction.get_Oscillations() */
 HRESULT wuc_elastic_easing_function_get__oscillations(WUC_ElasticEasingFunction *self, int32_t *value);
 
-/* Windows.UI.Composition.ElasticEasingFunction.get_Springiness() */
 HRESULT wuc_elastic_easing_function_get__springiness(WUC_ElasticEasingFunction *self, float *value);
 
-/* activate Windows.UI.Composition.ExponentialEasingFunction */
 HRESULT wuc_exponential_easing_function_new(WUC_ExponentialEasingFunction **out);
 
-/* Windows.UI.Composition.ExponentialEasingFunction */
-/* Windows.UI.Composition.ExponentialEasingFunction.get_Mode() */
 HRESULT wuc_exponential_easing_function_get__mode(WUC_ExponentialEasingFunction *self, WUC_CompositionEasingFunctionMode *value);
 
-/* Windows.UI.Composition.ExponentialEasingFunction.get_Exponent() */
 HRESULT wuc_exponential_easing_function_get__exponent(WUC_ExponentialEasingFunction *self, float *value);
 
-/* activate Windows.UI.Composition.ExpressionAnimation */
 HRESULT wuc_expression_animation_new(WUC_ExpressionAnimation **out);
 
-/* Windows.UI.Composition.ExpressionAnimation */
-/* Windows.UI.Composition.ExpressionAnimation.get_Expression() */
 HRESULT wuc_expression_animation_get__expression(WUC_ExpressionAnimation *self, cwinrt_hstring *value);
 
-/* Windows.UI.Composition.ExpressionAnimation.put_Expression() */
 HRESULT wuc_expression_animation_put__expression(WUC_ExpressionAnimation *self, cwinrt_hstring value);
 
-/* Windows.UI.Composition.IAnimationControllerStatics */
-/* Windows.UI.Composition.IAnimationControllerStatics.get_MaxPlaybackRate() */
 HRESULT wuc_animation_controller_statics_get__max_playback_rate(WUC_IAnimationControllerStatics *self, float *value);
 
-/* Windows.UI.Composition.IAnimationControllerStatics.get_MinPlaybackRate() */
 HRESULT wuc_animation_controller_statics_get__min_playback_rate(WUC_IAnimationControllerStatics *self, float *value);
 
-/* Windows.UI.Composition.ICompositionCapabilitiesStatics */
-/* Windows.UI.Composition.ICompositionCapabilitiesStatics.GetForCurrentView() */
 HRESULT wuc_composition_capabilities_statics_get_for_current_view(WUC_ICompositionCapabilitiesStatics *self, WUC_CompositionCapabilities** out);
 
-/* Windows.UI.Composition.ICompositionEasingFunctionStatics */
-/* Windows.UI.Composition.ICompositionEasingFunctionStatics.CreateCubicBezierEasingFunction(owner, controlPoint1, controlPoint2) */
 HRESULT wuc_composition_easing_function_statics_create_cubic_bezier_easing_function(WUC_ICompositionEasingFunctionStatics *self, WUC_Comp* owner, WFN_Vector_2 controlPoint1, WFN_Vector_2 controlPoint2, WUC_CubicBezierEasingFunction** out);
 
-/* Windows.UI.Composition.ICompositionEasingFunctionStatics.CreateLinearEasingFunction(owner) */
 HRESULT wuc_composition_easing_function_statics_create_linear_easing_function(WUC_ICompositionEasingFunctionStatics *self, WUC_Comp* owner, WUC_LinearEasingFunction** out);
 
-/* Windows.UI.Composition.ICompositionEasingFunctionStatics.CreateStepEasingFunction(owner) */
 HRESULT wuc_composition_easing_function_statics_create_step_easing_function(WUC_ICompositionEasingFunctionStatics *self, WUC_Comp* owner, WUC_StepEasingFunction** out);
 
-/* Windows.UI.Composition.ICompositionEasingFunctionStatics.CreateStepEasingFunction(owner, stepCount) */
 HRESULT wuc_composition_easing_function_statics_create_step_easing_function_p_i32_p(WUC_ICompositionEasingFunctionStatics *self, WUC_Comp* owner, int32_t stepCount, WUC_StepEasingFunction** out);
 
-/* Windows.UI.Composition.ICompositionEasingFunctionStatics.CreateBackEasingFunction(owner, mode, amplitude) */
 HRESULT wuc_composition_easing_function_statics_create_back_easing_function(WUC_ICompositionEasingFunctionStatics *self, WUC_Comp* owner, WUC_CompositionEasingFunctionMode mode, float amplitude, WUC_BackEasingFunction** out);
 
-/* Windows.UI.Composition.ICompositionEasingFunctionStatics.CreateBounceEasingFunction(owner, mode, bounces, bounciness) */
 HRESULT wuc_composition_easing_function_statics_create_bounce_easing_function(WUC_ICompositionEasingFunctionStatics *self, WUC_Comp* owner, WUC_CompositionEasingFunctionMode mode, int32_t bounces, float bounciness, WUC_BounceEasingFunction** out);
 
-/* Windows.UI.Composition.ICompositionEasingFunctionStatics.CreateCircleEasingFunction(owner, mode) */
 HRESULT wuc_composition_easing_function_statics_create_circle_easing_function(WUC_ICompositionEasingFunctionStatics *self, WUC_Comp* owner, WUC_CompositionEasingFunctionMode mode, WUC_CircleEasingFunction** out);
 
-/* Windows.UI.Composition.ICompositionEasingFunctionStatics.CreateElasticEasingFunction(owner, mode, oscillations, springiness) */
 HRESULT wuc_composition_easing_function_statics_create_elastic_easing_function(WUC_ICompositionEasingFunctionStatics *self, WUC_Comp* owner, WUC_CompositionEasingFunctionMode mode, int32_t oscillations, float springiness, WUC_ElasticEasingFunction** out);
 
-/* Windows.UI.Composition.ICompositionEasingFunctionStatics.CreateExponentialEasingFunction(owner, mode, exponent) */
 HRESULT wuc_composition_easing_function_statics_create_exponential_easing_function(WUC_ICompositionEasingFunctionStatics *self, WUC_Comp* owner, WUC_CompositionEasingFunctionMode mode, float exponent, WUC_ExponentialEasingFunction** out);
 
-/* Windows.UI.Composition.ICompositionEasingFunctionStatics.CreatePowerEasingFunction(owner, mode, power) */
 HRESULT wuc_composition_easing_function_statics_create_power_easing_function(WUC_ICompositionEasingFunctionStatics *self, WUC_Comp* owner, WUC_CompositionEasingFunctionMode mode, float power, WUC_PowerEasingFunction** out);
 
-/* Windows.UI.Composition.ICompositionEasingFunctionStatics.CreateSineEasingFunction(owner, mode) */
 HRESULT wuc_composition_easing_function_statics_create_sine_easing_function(WUC_ICompositionEasingFunctionStatics *self, WUC_Comp* owner, WUC_CompositionEasingFunctionMode mode, WUC_SineEasingFunction** out);
 
-/* Windows.UI.Composition.ICompositionEffectSourceParameterFactory */
-/* Windows.UI.Composition.ICompositionEffectSourceParameterFactory.Create(name) */
 HRESULT wuc_composition_effect_source_parameter_factory_create(WUC_ICompositionEffectSourceParameterFactory *self, cwinrt_hstring name, WUC_CompositionEffectSourceParameter** out);
 
-/* Windows.UI.Composition.ICompositionObjectStatics */
-/* Windows.UI.Composition.ICompositionObjectStatics.StartAnimationWithIAnimationObject(target, propertyName, animation) */
 HRESULT wuc_composition_object_statics_start_animation_with_i_animation_object(WUC_ICompositionObjectStatics *self, WUC_IAnimationObject* target, cwinrt_hstring propertyName, WUC_CompositionAnimation* animation);
 
-/* Windows.UI.Composition.ICompositionObjectStatics.StartAnimationGroupWithIAnimationObject(target, animation) */
 HRESULT wuc_composition_object_statics_start_animation_group_with_i_animation_object(WUC_ICompositionObjectStatics *self, WUC_IAnimationObject* target, WUC_ICompositionAnimationBase* animation);
 
-/* Windows.UI.Composition.ICompositionPathFactory */
-/* Windows.UI.Composition.ICompositionPathFactory.Create(source) */
 HRESULT wuc_composition_path_factory_create(WUC_ICompositionPathFactory *self, WG_IGeometrySource2D* source, WUC_CompositionPath** out);
 
-/* Windows.UI.Composition.ICompositionProjectedShadowCasterCollectionStatics */
-/* Windows.UI.Composition.ICompositionProjectedShadowCasterCollectionStatics.get_MaxRespectedCasters() */
 HRESULT wuc_composition_projected_shadow_caster_collection_statics_get__max_respected_casters(WUC_ICompositionProjectedShadowCasterCollectionStatics *self, int32_t *value);
 
-/* Windows.UI.Composition.ICompositionSupportsSystemBackdrop */
-/* Windows.UI.Composition.ICompositionSupportsSystemBackdrop.get_SystemBackdrop() */
 HRESULT wuc_composition_supports_system_backdrop_get__system_backdrop(WUC_ICompositionSupportsSystemBackdrop *self, WUC_Brush** value);
 
-/* Windows.UI.Composition.ICompositionSupportsSystemBackdrop.put_SystemBackdrop() */
 HRESULT wuc_composition_supports_system_backdrop_put__system_backdrop(WUC_ICompositionSupportsSystemBackdrop *self, WUC_Brush* value);
 
-/* Windows.UI.Composition.ICompositionSurfaceFacade */
-/* Windows.UI.Composition.ICompositionSurfaceFacade.GetRealSurface() */
 HRESULT wuc_composition_surface_facade_get_real_surface(WUC_ICompositionSurfaceFacade *self, WUC_ICompositionSurface** out);
 
-/* Windows.UI.Composition.ICompositorStatics */
-/* Windows.UI.Composition.ICompositorStatics.get_MaxGlobalPlaybackRate() */
 HRESULT wuc_compositor_statics_get__max_global_playback_rate(WUC_ICompositorStatics *self, float *value);
 
-/* Windows.UI.Composition.ICompositorStatics.get_MinGlobalPlaybackRate() */
 HRESULT wuc_compositor_statics_get__min_global_playback_rate(WUC_ICompositorStatics *self, float *value);
 
-/* Windows.UI.Composition.IDelegatedInkTrailVisualStatics */
-/* Windows.UI.Composition.IDelegatedInkTrailVisualStatics.Create(compositor) */
 HRESULT wuc_delegated_ink_trail_visual_statics_create(WUC_IDelegatedInkTrailVisualStatics *self, WUC_Comp* compositor, WUC_DelegatedInkTrailVisual** out);
 
-/* Windows.UI.Composition.IDelegatedInkTrailVisualStatics.CreateForSwapChain(compositor, swapChain) */
 HRESULT wuc_delegated_ink_trail_visual_statics_create_for_swap_chain(WUC_IDelegatedInkTrailVisualStatics *self, WUC_Comp* compositor, WUC_ICompositionSurface* swapChain, WUC_DelegatedInkTrailVisual** out);
 
-/* Windows.UI.Composition.IVisualElement2 */
-/* Windows.UI.Composition.IVisualElement2.GetVisualInternal() */
 HRESULT wuc_visual_element_2_get_visual_internal(WUC_IVisualElement_2 *self, WUC_Visual** out);
 
-/* activate Windows.UI.Composition.ImplicitAnimationCollection */
 HRESULT wuc_implicit_animation_collection_new(WUC_ImplicitAnimationCollection **out);
 
-/* Windows.UI.Composition.ImplicitAnimationCollection */
-/* Windows.UI.Composition.ImplicitAnimationCollection.First() */
 HRESULT wuc_implicit_animation_collection_first(WUC_ImplicitAnimationCollection *self, WFOCO_IIterator_WFOCO_IKeyValuePair_HSTRING_WUC_ICompositionAnimationBase** out);
 
-/* Windows.UI.Composition.ImplicitAnimationCollection.Lookup(key) */
 HRESULT wuc_implicit_animation_collection_lookup(WUC_ImplicitAnimationCollection *self, cwinrt_hstring key, WUC_ICompositionAnimationBase** out);
 
-/* Windows.UI.Composition.ImplicitAnimationCollection.get_Size() */
 HRESULT wuc_implicit_animation_collection_get__size(WUC_ImplicitAnimationCollection *self, uint32_t *value);
 
-/* Windows.UI.Composition.ImplicitAnimationCollection.HasKey(key) */
 HRESULT wuc_implicit_animation_collection_has_key(WUC_ImplicitAnimationCollection *self, cwinrt_hstring key, BOOL *out);
 
-/* Windows.UI.Composition.ImplicitAnimationCollection.GetView() */
 HRESULT wuc_implicit_animation_collection_get_view(WUC_ImplicitAnimationCollection *self, WFOCO_IMapView_HSTRING_WUC_ICompositionAnimationBase** out);
 
-/* Windows.UI.Composition.ImplicitAnimationCollection.Insert(key) */
 HRESULT wuc_implicit_animation_collection_insert(WUC_ImplicitAnimationCollection *self, cwinrt_hstring key, WUC_ICompositionAnimationBase* value, BOOL *out);
 
-/* Windows.UI.Composition.ImplicitAnimationCollection.Remove(key) */
 HRESULT wuc_implicit_animation_collection_remove(WUC_ImplicitAnimationCollection *self, cwinrt_hstring key);
 
-/* Windows.UI.Composition.ImplicitAnimationCollection.Clear() */
 HRESULT wuc_implicit_animation_collection_clear(WUC_ImplicitAnimationCollection *self);
 
-/* activate Windows.UI.Composition.InitialValueExpressionCollection */
 HRESULT wuc_initial_value_expression_collection_new(WUC_InitialValueExpressionCollection **out);
 
-/* Windows.UI.Composition.InitialValueExpressionCollection */
-/* Windows.UI.Composition.InitialValueExpressionCollection.Lookup(key) */
 HRESULT wuc_initial_value_expression_collection_lookup(WUC_InitialValueExpressionCollection *self, cwinrt_hstring key, cwinrt_hstring *out);
 
-/* Windows.UI.Composition.InitialValueExpressionCollection.get_Size() */
 HRESULT wuc_initial_value_expression_collection_get__size(WUC_InitialValueExpressionCollection *self, uint32_t *value);
 
-/* Windows.UI.Composition.InitialValueExpressionCollection.HasKey(key) */
 HRESULT wuc_initial_value_expression_collection_has_key(WUC_InitialValueExpressionCollection *self, cwinrt_hstring key, BOOL *out);
 
-/* Windows.UI.Composition.InitialValueExpressionCollection.GetView() */
 HRESULT wuc_initial_value_expression_collection_get_view(WUC_InitialValueExpressionCollection *self, WFOCO_IMapView_HSTRING_HSTRING** out);
 
-/* Windows.UI.Composition.InitialValueExpressionCollection.Insert(key) */
 HRESULT wuc_initial_value_expression_collection_insert(WUC_InitialValueExpressionCollection *self, cwinrt_hstring key, cwinrt_hstring value, BOOL *out);
 
-/* Windows.UI.Composition.InitialValueExpressionCollection.Remove(key) */
 HRESULT wuc_initial_value_expression_collection_remove(WUC_InitialValueExpressionCollection *self, cwinrt_hstring key);
 
-/* Windows.UI.Composition.InitialValueExpressionCollection.Clear() */
 HRESULT wuc_initial_value_expression_collection_clear(WUC_InitialValueExpressionCollection *self);
 
-/* Windows.UI.Composition.InitialValueExpressionCollection.First() */
 HRESULT wuc_initial_value_expression_collection_first(WUC_InitialValueExpressionCollection *self, WFOCO_IIterator_WFOCO_IKeyValuePair_HSTRING_HSTRING** out);
 
-/* activate Windows.UI.Composition.InsetClip */
 HRESULT wuc_inset_clip_new(WUC_InsetClip **out);
 
-/* Windows.UI.Composition.InsetClip */
-/* Windows.UI.Composition.InsetClip.get_BottomInset() */
 HRESULT wuc_inset_clip_get__bottom_inset(WUC_InsetClip *self, float *value);
 
-/* Windows.UI.Composition.InsetClip.put_BottomInset() */
 HRESULT wuc_inset_clip_put__bottom_inset(WUC_InsetClip *self, float value);
 
-/* Windows.UI.Composition.InsetClip.get_LeftInset() */
 HRESULT wuc_inset_clip_get__left_inset(WUC_InsetClip *self, float *value);
 
-/* Windows.UI.Composition.InsetClip.put_LeftInset() */
 HRESULT wuc_inset_clip_put__left_inset(WUC_InsetClip *self, float value);
 
-/* Windows.UI.Composition.InsetClip.get_RightInset() */
 HRESULT wuc_inset_clip_get__right_inset(WUC_InsetClip *self, float *value);
 
-/* Windows.UI.Composition.InsetClip.put_RightInset() */
 HRESULT wuc_inset_clip_put__right_inset(WUC_InsetClip *self, float value);
 
-/* Windows.UI.Composition.InsetClip.get_TopInset() */
 HRESULT wuc_inset_clip_get__top_inset(WUC_InsetClip *self, float *value);
 
-/* Windows.UI.Composition.InsetClip.put_TopInset() */
 HRESULT wuc_inset_clip_put__top_inset(WUC_InsetClip *self, float value);
 
-/* activate Windows.UI.Composition.AnimationPropertyInfo */
 HRESULT wuc_animation_property_info_new(WUC_AnimationPropertyInfo **out);
 
-/* Windows.UI.Composition.AnimationPropertyInfo */
-/* Windows.UI.Composition.AnimationPropertyInfo.get_AccessMode() */
 HRESULT wuc_animation_property_info_get__access_mode(WUC_AnimationPropertyInfo *self, WUC_AnimationPropertyAccessMode *value);
 
-/* Windows.UI.Composition.AnimationPropertyInfo.put_AccessMode() */
 HRESULT wuc_animation_property_info_put__access_mode(WUC_AnimationPropertyInfo *self, WUC_AnimationPropertyAccessMode value);
 
-/* Windows.UI.Composition.AnimationPropertyInfo.GetResolvedCompositionObject() */
 HRESULT wuc_animation_property_info_get_resolved_composition_object(WUC_AnimationPropertyInfo *self, WUC_CompositionObject** out);
 
-/* Windows.UI.Composition.AnimationPropertyInfo.GetResolvedCompositionObjectProperty() */
 HRESULT wuc_animation_property_info_get_resolved_composition_object_property(WUC_AnimationPropertyInfo *self, cwinrt_hstring *out);
 
-/* activate Windows.UI.Composition.AnimationController */
 HRESULT wuc_animation_controller_new(WUC_AnimationController **out);
 
-/* Windows.UI.Composition.AnimationController */
-/* Windows.UI.Composition.AnimationController.get_PlaybackRate() */
 HRESULT wuc_animation_controller_get__playback_rate(WUC_AnimationController *self, float *value);
 
-/* Windows.UI.Composition.AnimationController.put_PlaybackRate() */
 HRESULT wuc_animation_controller_put__playback_rate(WUC_AnimationController *self, float value);
 
-/* Windows.UI.Composition.AnimationController.get_Progress() */
 HRESULT wuc_animation_controller_get__progress(WUC_AnimationController *self, float *value);
 
-/* Windows.UI.Composition.AnimationController.put_Progress() */
 HRESULT wuc_animation_controller_put__progress(WUC_AnimationController *self, float value);
 
-/* Windows.UI.Composition.AnimationController.get_ProgressBehavior() */
 HRESULT wuc_animation_controller_get__progress_behavior(WUC_AnimationController *self, WUC_AnimationControllerProgressBehavior *value);
 
-/* Windows.UI.Composition.AnimationController.put_ProgressBehavior() */
 HRESULT wuc_animation_controller_put__progress_behavior(WUC_AnimationController *self, WUC_AnimationControllerProgressBehavior value);
 
-/* Windows.UI.Composition.AnimationController.Pause() */
 HRESULT wuc_animation_controller_pause(WUC_AnimationController *self);
 
-/* Windows.UI.Composition.AnimationController.Resume() */
 HRESULT wuc_animation_controller_resume(WUC_AnimationController *self);
 
-/* Windows.UI.Composition.AnimationController.get_MaxPlaybackRate() */
 HRESULT wuc_animation_controller_get__max_playback_rate(float *value);
 
-/* Windows.UI.Composition.AnimationController.get_MinPlaybackRate() */
 HRESULT wuc_animation_controller_get__min_playback_rate(float *value);
 
-/* activate Windows.UI.Composition.AmbientLight */
 HRESULT wuc_ambient_light_new(WUC_AmbientLight **out);
 
-/* Windows.UI.Composition.AmbientLight */
-/* Windows.UI.Composition.AmbientLight.get_Color() */
 HRESULT wuc_ambient_light_get__color(WUC_AmbientLight *self, WUI_Color *value);
 
-/* Windows.UI.Composition.AmbientLight.put_Color() */
 HRESULT wuc_ambient_light_put__color(WUC_AmbientLight *self, WUI_Color value);
 
-/* Windows.UI.Composition.AmbientLight.get_Intensity() */
 HRESULT wuc_ambient_light_get__intensity(WUC_AmbientLight *self, float *value);
 
-/* Windows.UI.Composition.AmbientLight.put_Intensity() */
 HRESULT wuc_ambient_light_put__intensity(WUC_AmbientLight *self, float value);
 
-/* Windows.UI.Composition.CompositionLight */
-/* Windows.UI.Composition.CompositionLight.get_Targets() */
 HRESULT wuc_composition_light_get__targets(WUC_CompositionLight *self, WUC_VisualUnorderedCollection** value);
 
-/* Windows.UI.Composition.CompositionLight.get_ExclusionsFromTargets() */
 HRESULT wuc_composition_light_get__exclusions_from_targets(WUC_CompositionLight *self, WUC_VisualUnorderedCollection** value);
 
-/* Windows.UI.Composition.CompositionLight.get_IsEnabled() */
 HRESULT wuc_composition_light_get__is_enabled(WUC_CompositionLight *self, BOOL *value);
 
-/* Windows.UI.Composition.CompositionLight.put_IsEnabled() */
 HRESULT wuc_composition_light_put__is_enabled(WUC_CompositionLight *self, BOOL value);
 
-/* Windows.UI.Composition.CompositionObject */
-/* Windows.UI.Composition.CompositionObject.get_Compositor() */
 HRESULT wuc_composition_object_get__compositor(WUC_CompositionObject *self, WUC_Comp** value);
 
-/* Windows.UI.Composition.CompositionObject.get_Dispatcher() */
 HRESULT wuc_composition_object_get__dispatcher(WUC_CompositionObject *self, WUICO_CoreDispatcher** value);
 
-/* Windows.UI.Composition.CompositionObject.get_Properties() */
 HRESULT wuc_composition_object_get__properties(WUC_CompositionObject *self, WUC_CompositionPropertySet** value);
 
-/* Windows.UI.Composition.CompositionObject.StartAnimation(propertyName, animation) */
 HRESULT wuc_composition_object_start_animation(WUC_CompositionObject *self, cwinrt_hstring propertyName, WUC_CompositionAnimation* animation);
 
-/* Windows.UI.Composition.CompositionObject.StopAnimation(propertyName) */
 HRESULT wuc_composition_object_stop_animation(WUC_CompositionObject *self, cwinrt_hstring propertyName);
 
-/* Windows.UI.Composition.CompositionObject.get_Comment() */
 HRESULT wuc_composition_object_get__comment(WUC_CompositionObject *self, cwinrt_hstring *value);
 
-/* Windows.UI.Composition.CompositionObject.put_Comment() */
 HRESULT wuc_composition_object_put__comment(WUC_CompositionObject *self, cwinrt_hstring value);
 
-/* Windows.UI.Composition.CompositionObject.get_ImplicitAnimations() */
 HRESULT wuc_composition_object_get__implicit_animations(WUC_CompositionObject *self, WUC_ImplicitAnimationCollection** value);
 
-/* Windows.UI.Composition.CompositionObject.put_ImplicitAnimations() */
 HRESULT wuc_composition_object_put__implicit_animations(WUC_CompositionObject *self, WUC_ImplicitAnimationCollection* value);
 
-/* Windows.UI.Composition.CompositionObject.StartAnimationGroup() */
 HRESULT wuc_composition_object_start_animation_group(WUC_CompositionObject *self, WUC_ICompositionAnimationBase* value);
 
-/* Windows.UI.Composition.CompositionObject.StopAnimationGroup() */
 HRESULT wuc_composition_object_stop_animation_group(WUC_CompositionObject *self, WUC_ICompositionAnimationBase* value);
 
-/* Windows.UI.Composition.CompositionObject.get_DispatcherQueue() */
 HRESULT wuc_composition_object_get__dispatcher_queue(WUC_CompositionObject *self, WSY_DispatcherQueue** value);
 
-/* Windows.UI.Composition.CompositionObject.TryGetAnimationController(propertyName) */
 HRESULT wuc_composition_object_try_get_animation_controller(WUC_CompositionObject *self, cwinrt_hstring propertyName, WUC_AnimationController** out);
 
-/* Windows.UI.Composition.CompositionObject.StartAnimation(propertyName, animation, animationController) */
 HRESULT wuc_composition_object_start_animation_str_p_p(WUC_CompositionObject *self, cwinrt_hstring propertyName, WUC_CompositionAnimation* animation, WUC_AnimationController* animationController);
 
-/* Windows.UI.Composition.CompositionObject.Close() */
 HRESULT wuc_composition_object_close(WUC_CompositionObject *self);
 
-/* Windows.UI.Composition.CompositionObject.PopulatePropertyInfo(propertyName, propertyInfo) */
 HRESULT wuc_composition_object_populate_property_info(WUC_CompositionObject *self, cwinrt_hstring propertyName, WUC_AnimationPropertyInfo* propertyInfo);
 
-/* Windows.UI.Composition.CompositionObject.StartAnimationWithIAnimationObject(target, propertyName, animation) */
 HRESULT wuc_composition_object_start_animation_with_i_animation_object(WUC_IAnimationObject* target, cwinrt_hstring propertyName, WUC_CompositionAnimation* animation);
 
-/* Windows.UI.Composition.CompositionObject.StartAnimationGroupWithIAnimationObject(target, animation) */
 HRESULT wuc_composition_object_start_animation_group_with_i_animation_object(WUC_IAnimationObject* target, WUC_ICompositionAnimationBase* animation);
 
-/* activate Windows.UI.Composition.ScalarKeyFrameAnimation */
 HRESULT wuc_scalar_key_frame_animation_new(WUC_ScalarKeyFrameAnimation **out);
 
-/* Windows.UI.Composition.ScalarKeyFrameAnimation */
-/* Windows.UI.Composition.ScalarKeyFrameAnimation.InsertKeyFrame(normalizedProgressKey) */
 HRESULT wuc_scalar_key_frame_animation_insert_key_frame(WUC_ScalarKeyFrameAnimation *self, float normalizedProgressKey, float value);
 
-/* Windows.UI.Composition.ScalarKeyFrameAnimation.InsertKeyFrame(normalizedProgressKey, easingFunction) */
 HRESULT wuc_scalar_key_frame_animation_insert_key_frame_f32_f32_p(WUC_ScalarKeyFrameAnimation *self, float normalizedProgressKey, float value, WUC_CompositionEasingFunction* easingFunction);
 
-/* activate Windows.UI.Composition.RenderingDeviceReplacedEventArgs */
 HRESULT wuc_rendering_device_replaced_event_args_new(WUC_RenderingDeviceReplacedEventArgs **out);
 
-/* Windows.UI.Composition.RenderingDeviceReplacedEventArgs */
-/* Windows.UI.Composition.RenderingDeviceReplacedEventArgs.get_GraphicsDevice() */
 HRESULT wuc_rendering_device_replaced_event_args_get__graphics_device(WUC_RenderingDeviceReplacedEventArgs *self, WUC_CompositionGraphicsDevice** value);
 
-/* activate Windows.UI.Composition.RedirectVisual */
 HRESULT wuc_redirect_visual_new(WUC_RedirectVisual **out);
 
-/* Windows.UI.Composition.RedirectVisual */
-/* Windows.UI.Composition.RedirectVisual.get_Source() */
 HRESULT wuc_redirect_visual_get__source(WUC_RedirectVisual *self, WUC_Visual** value);
 
-/* Windows.UI.Composition.RedirectVisual.put_Source() */
 HRESULT wuc_redirect_visual_put__source(WUC_RedirectVisual *self, WUC_Visual* value);
 
-/* activate Windows.UI.Composition.RectangleClip */
 HRESULT wuc_rectangle_clip_new(WUC_RectangleClip **out);
 
-/* Windows.UI.Composition.RectangleClip */
-/* Windows.UI.Composition.RectangleClip.get_Bottom() */
 HRESULT wuc_rectangle_clip_get__bottom(WUC_RectangleClip *self, float *value);
 
-/* Windows.UI.Composition.RectangleClip.put_Bottom() */
 HRESULT wuc_rectangle_clip_put__bottom(WUC_RectangleClip *self, float value);
 
-/* Windows.UI.Composition.RectangleClip.get_BottomLeftRadius() */
 HRESULT wuc_rectangle_clip_get__bottom_left_radius(WUC_RectangleClip *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.RectangleClip.put_BottomLeftRadius() */
 HRESULT wuc_rectangle_clip_put__bottom_left_radius(WUC_RectangleClip *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.RectangleClip.get_BottomRightRadius() */
 HRESULT wuc_rectangle_clip_get__bottom_right_radius(WUC_RectangleClip *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.RectangleClip.put_BottomRightRadius() */
 HRESULT wuc_rectangle_clip_put__bottom_right_radius(WUC_RectangleClip *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.RectangleClip.get_Left() */
 HRESULT wuc_rectangle_clip_get__left(WUC_RectangleClip *self, float *value);
 
-/* Windows.UI.Composition.RectangleClip.put_Left() */
 HRESULT wuc_rectangle_clip_put__left(WUC_RectangleClip *self, float value);
 
-/* Windows.UI.Composition.RectangleClip.get_Right() */
 HRESULT wuc_rectangle_clip_get__right(WUC_RectangleClip *self, float *value);
 
-/* Windows.UI.Composition.RectangleClip.put_Right() */
 HRESULT wuc_rectangle_clip_put__right(WUC_RectangleClip *self, float value);
 
-/* Windows.UI.Composition.RectangleClip.get_Top() */
 HRESULT wuc_rectangle_clip_get__top(WUC_RectangleClip *self, float *value);
 
-/* Windows.UI.Composition.RectangleClip.put_Top() */
 HRESULT wuc_rectangle_clip_put__top(WUC_RectangleClip *self, float value);
 
-/* Windows.UI.Composition.RectangleClip.get_TopLeftRadius() */
 HRESULT wuc_rectangle_clip_get__top_left_radius(WUC_RectangleClip *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.RectangleClip.put_TopLeftRadius() */
 HRESULT wuc_rectangle_clip_put__top_left_radius(WUC_RectangleClip *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.RectangleClip.get_TopRightRadius() */
 HRESULT wuc_rectangle_clip_get__top_right_radius(WUC_RectangleClip *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.RectangleClip.put_TopRightRadius() */
 HRESULT wuc_rectangle_clip_put__top_right_radius(WUC_RectangleClip *self, WFN_Vector_2 value);
 
-/* activate Windows.UI.Composition.QuaternionKeyFrameAnimation */
 HRESULT wuc_quaternion_key_frame_animation_new(WUC_QuaternionKeyFrameAnimation **out);
 
-/* Windows.UI.Composition.QuaternionKeyFrameAnimation */
-/* Windows.UI.Composition.QuaternionKeyFrameAnimation.InsertKeyFrame(normalizedProgressKey) */
 HRESULT wuc_quaternion_key_frame_animation_insert_key_frame(WUC_QuaternionKeyFrameAnimation *self, float normalizedProgressKey, WFN_Quaternion value);
 
-/* Windows.UI.Composition.QuaternionKeyFrameAnimation.InsertKeyFrame(normalizedProgressKey, easingFunction) */
 HRESULT wuc_quaternion_key_frame_animation_insert_key_frame_f32_quaternion_p(WUC_QuaternionKeyFrameAnimation *self, float normalizedProgressKey, WFN_Quaternion value, WUC_CompositionEasingFunction* easingFunction);
 
-/* activate Windows.UI.Composition.PowerEasingFunction */
 HRESULT wuc_power_easing_function_new(WUC_PowerEasingFunction **out);
 
-/* Windows.UI.Composition.PowerEasingFunction */
-/* Windows.UI.Composition.PowerEasingFunction.get_Mode() */
 HRESULT wuc_power_easing_function_get__mode(WUC_PowerEasingFunction *self, WUC_CompositionEasingFunctionMode *value);
 
-/* Windows.UI.Composition.PowerEasingFunction.get_Power() */
 HRESULT wuc_power_easing_function_get__power(WUC_PowerEasingFunction *self, float *value);
 
-/* activate Windows.UI.Composition.PointLight */
 HRESULT wuc_point_light_new(WUC_PointLight **out);
 
-/* Windows.UI.Composition.PointLight */
-/* Windows.UI.Composition.PointLight.get_Color() */
 HRESULT wuc_point_light_get__color(WUC_PointLight *self, WUI_Color *value);
 
-/* Windows.UI.Composition.PointLight.put_Color() */
 HRESULT wuc_point_light_put__color(WUC_PointLight *self, WUI_Color value);
 
-/* Windows.UI.Composition.PointLight.get_ConstantAttenuation() */
 HRESULT wuc_point_light_get__constant_attenuation(WUC_PointLight *self, float *value);
 
-/* Windows.UI.Composition.PointLight.put_ConstantAttenuation() */
 HRESULT wuc_point_light_put__constant_attenuation(WUC_PointLight *self, float value);
 
-/* Windows.UI.Composition.PointLight.get_CoordinateSpace() */
 HRESULT wuc_point_light_get__coordinate_space(WUC_PointLight *self, WUC_Visual** value);
 
-/* Windows.UI.Composition.PointLight.put_CoordinateSpace() */
 HRESULT wuc_point_light_put__coordinate_space(WUC_PointLight *self, WUC_Visual* value);
 
-/* Windows.UI.Composition.PointLight.get_LinearAttenuation() */
 HRESULT wuc_point_light_get__linear_attenuation(WUC_PointLight *self, float *value);
 
-/* Windows.UI.Composition.PointLight.put_LinearAttenuation() */
 HRESULT wuc_point_light_put__linear_attenuation(WUC_PointLight *self, float value);
 
-/* Windows.UI.Composition.PointLight.get_Offset() */
 HRESULT wuc_point_light_get__offset(WUC_PointLight *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.PointLight.put_Offset() */
 HRESULT wuc_point_light_put__offset(WUC_PointLight *self, WFN_Vector_3 value);
 
-/* Windows.UI.Composition.PointLight.get_QuadraticAttenuation() */
 HRESULT wuc_point_light_get__quadratic_attenuation(WUC_PointLight *self, float *value);
 
-/* Windows.UI.Composition.PointLight.put_QuadraticAttenuation() */
 HRESULT wuc_point_light_put__quadratic_attenuation(WUC_PointLight *self, float value);
 
-/* Windows.UI.Composition.PointLight.get_Intensity() */
 HRESULT wuc_point_light_get__intensity(WUC_PointLight *self, float *value);
 
-/* Windows.UI.Composition.PointLight.put_Intensity() */
 HRESULT wuc_point_light_put__intensity(WUC_PointLight *self, float value);
 
-/* Windows.UI.Composition.PointLight.get_MinAttenuationCutoff() */
 HRESULT wuc_point_light_get__min_attenuation_cutoff(WUC_PointLight *self, float *value);
 
-/* Windows.UI.Composition.PointLight.put_MinAttenuationCutoff() */
 HRESULT wuc_point_light_put__min_attenuation_cutoff(WUC_PointLight *self, float value);
 
-/* Windows.UI.Composition.PointLight.get_MaxAttenuationCutoff() */
 HRESULT wuc_point_light_get__max_attenuation_cutoff(WUC_PointLight *self, float *value);
 
-/* Windows.UI.Composition.PointLight.put_MaxAttenuationCutoff() */
 HRESULT wuc_point_light_put__max_attenuation_cutoff(WUC_PointLight *self, float value);
 
-/* activate Windows.UI.Composition.PathKeyFrameAnimation */
 HRESULT wuc_path_key_frame_animation_new(WUC_PathKeyFrameAnimation **out);
 
-/* Windows.UI.Composition.PathKeyFrameAnimation */
-/* Windows.UI.Composition.PathKeyFrameAnimation.InsertKeyFrame(normalizedProgressKey, path) */
 HRESULT wuc_path_key_frame_animation_insert_key_frame(WUC_PathKeyFrameAnimation *self, float normalizedProgressKey, WUC_CompositionPath* path);
 
-/* Windows.UI.Composition.PathKeyFrameAnimation.InsertKeyFrame(normalizedProgressKey, path, easingFunction) */
 HRESULT wuc_path_key_frame_animation_insert_key_frame_f32_p_p(WUC_PathKeyFrameAnimation *self, float normalizedProgressKey, WUC_CompositionPath* path, WUC_CompositionEasingFunction* easingFunction);
 
-/* activate Windows.UI.Composition.LayerVisual */
 HRESULT wuc_layer_visual_new(WUC_LayerVisual **out);
 
-/* Windows.UI.Composition.LayerVisual */
-/* Windows.UI.Composition.LayerVisual.get_Effect() */
 HRESULT wuc_layer_visual_get__effect(WUC_LayerVisual *self, WUC_CompositionEffectBrush** value);
 
-/* Windows.UI.Composition.LayerVisual.put_Effect() */
 HRESULT wuc_layer_visual_put__effect(WUC_LayerVisual *self, WUC_CompositionEffectBrush* value);
 
-/* Windows.UI.Composition.LayerVisual.get_Shadow() */
 HRESULT wuc_layer_visual_get__shadow(WUC_LayerVisual *self, WUC_CompositionShadow** value);
 
-/* Windows.UI.Composition.LayerVisual.put_Shadow() */
 HRESULT wuc_layer_visual_put__shadow(WUC_LayerVisual *self, WUC_CompositionShadow* value);
 
-/* activate Windows.UI.Composition.ShapeVisual */
 HRESULT wuc_shape_visual_new(WUC_ShapeVisual **out);
 
-/* Windows.UI.Composition.ShapeVisual */
-/* Windows.UI.Composition.ShapeVisual.get_Shapes() */
 HRESULT wuc_shape_visual_get__shapes(WUC_ShapeVisual *self, WUC_CompositionShapeCollection** value);
 
-/* Windows.UI.Composition.ShapeVisual.get_ViewBox() */
 HRESULT wuc_shape_visual_get__view_box(WUC_ShapeVisual *self, WUC_CompositionViewBox** value);
 
-/* Windows.UI.Composition.ShapeVisual.put_ViewBox() */
 HRESULT wuc_shape_visual_put__view_box(WUC_ShapeVisual *self, WUC_CompositionViewBox* value);
 
-/* Windows.UI.Composition.IBackEasingFunction */
-/* Windows.UI.Composition.ICompositionAnimation */
-/* Windows.UI.Composition.ICompositionAnimation2 */
-/* Windows.UI.Composition.ICompositionAnimation2.SetBooleanParameter(key) */
 HRESULT wuc_composition_animation_2_set_boolean_parameter(WUC_ICompositionAnimation_2 *self, cwinrt_hstring key, BOOL value);
 
-/* Windows.UI.Composition.ICompositionAnimation2.get_Target() */
 HRESULT wuc_composition_animation_2_get__target(WUC_ICompositionAnimation_2 *self, cwinrt_hstring *value);
 
-/* Windows.UI.Composition.ICompositionAnimation2.put_Target() */
 HRESULT wuc_composition_animation_2_put__target(WUC_ICompositionAnimation_2 *self, cwinrt_hstring value);
 
-/* Windows.UI.Composition.ICompositionAnimation3 */
-/* Windows.UI.Composition.ICompositionAnimation3.get_InitialValueExpressions() */
 HRESULT wuc_composition_animation_3_get__initial_value_expressions(WUC_ICompositionAnimation_3 *self, WUC_InitialValueExpressionCollection** value);
 
-/* Windows.UI.Composition.ICompositionAnimation4 */
-/* Windows.UI.Composition.ICompositionAnimation4.SetExpressionReferenceParameter(parameterName, source) */
 HRESULT wuc_composition_animation_4_set_expression_reference_parameter(WUC_ICompositionAnimation_4 *self, cwinrt_hstring parameterName, WUC_IAnimationObject* source);
 
-/* Windows.UI.Composition.IKeyFrameAnimation */
-/* Windows.UI.Composition.IKeyFrameAnimation2 */
-/* Windows.UI.Composition.IKeyFrameAnimation2.get_Direction() */
 HRESULT wuc_key_frame_animation_2_get__direction(WUC_IKeyFrameAnimation_2 *self, WUC_AnimationDirection *value);
 
-/* Windows.UI.Composition.IKeyFrameAnimation2.put_Direction() */
 HRESULT wuc_key_frame_animation_2_put__direction(WUC_IKeyFrameAnimation_2 *self, WUC_AnimationDirection value);
 
-/* Windows.UI.Composition.IKeyFrameAnimation3 */
-/* Windows.UI.Composition.IKeyFrameAnimation3.get_DelayBehavior() */
 HRESULT wuc_key_frame_animation_3_get__delay_behavior(WUC_IKeyFrameAnimation_3 *self, WUC_AnimationDelayBehavior *value);
 
-/* Windows.UI.Composition.IKeyFrameAnimation3.put_DelayBehavior() */
 HRESULT wuc_key_frame_animation_3_put__delay_behavior(WUC_IKeyFrameAnimation_3 *self, WUC_AnimationDelayBehavior value);
 
-/* Windows.UI.Composition.IBooleanKeyFrameAnimation */
-/* Windows.UI.Composition.IBounceEasingFunction */
-/* Windows.UI.Composition.INaturalMotionAnimation */
-/* Windows.UI.Composition.IScalarNaturalMotionAnimation */
-/* Windows.UI.Composition.IBounceScalarNaturalMotionAnimation */
-/* Windows.UI.Composition.IVector2NaturalMotionAnimation */
-/* Windows.UI.Composition.IBounceVector2NaturalMotionAnimation */
-/* Windows.UI.Composition.IVector3NaturalMotionAnimation */
-/* Windows.UI.Composition.IBounceVector3NaturalMotionAnimation */
-/* Windows.UI.Composition.ICircleEasingFunction */
-/* Windows.UI.Composition.IColorKeyFrameAnimation */
-/* Windows.UI.Composition.ICompositionAnimationGroup */
-/* Windows.UI.Composition.ICompositionCapabilities */
-/* Windows.UI.Composition.ICompositionClip2 */
-/* Windows.UI.Composition.ICompositionClip2.get_AnchorPoint() */
 HRESULT wuc_composition_clip_2_get__anchor_point(WUC_ICompositionClip_2 *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.ICompositionClip2.put_AnchorPoint() */
 HRESULT wuc_composition_clip_2_put__anchor_point(WUC_ICompositionClip_2 *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.ICompositionClip2.get_CenterPoint() */
 HRESULT wuc_composition_clip_2_get__center_point(WUC_ICompositionClip_2 *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.ICompositionClip2.put_CenterPoint() */
 HRESULT wuc_composition_clip_2_put__center_point(WUC_ICompositionClip_2 *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.ICompositionClip2.get_Offset() */
 HRESULT wuc_composition_clip_2_get__offset(WUC_ICompositionClip_2 *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.ICompositionClip2.put_Offset() */
 HRESULT wuc_composition_clip_2_put__offset(WUC_ICompositionClip_2 *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.ICompositionClip2.get_RotationAngle() */
 HRESULT wuc_composition_clip_2_get__rotation_angle(WUC_ICompositionClip_2 *self, float *value);
 
-/* Windows.UI.Composition.ICompositionClip2.put_RotationAngle() */
 HRESULT wuc_composition_clip_2_put__rotation_angle(WUC_ICompositionClip_2 *self, float value);
 
-/* Windows.UI.Composition.ICompositionClip2.get_RotationAngleInDegrees() */
 HRESULT wuc_composition_clip_2_get__rotation_angle_in_degrees(WUC_ICompositionClip_2 *self, float *value);
 
-/* Windows.UI.Composition.ICompositionClip2.put_RotationAngleInDegrees() */
 HRESULT wuc_composition_clip_2_put__rotation_angle_in_degrees(WUC_ICompositionClip_2 *self, float value);
 
-/* Windows.UI.Composition.ICompositionClip2.get_Scale() */
 HRESULT wuc_composition_clip_2_get__scale(WUC_ICompositionClip_2 *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.ICompositionClip2.put_Scale() */
 HRESULT wuc_composition_clip_2_put__scale(WUC_ICompositionClip_2 *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.ICompositionClip2.get_TransformMatrix() */
 HRESULT wuc_composition_clip_2_get__transform_matrix(WUC_ICompositionClip_2 *self, WFN_Matrix3x_2 *value);
 
-/* Windows.UI.Composition.ICompositionClip2.put_TransformMatrix() */
 HRESULT wuc_composition_clip_2_put__transform_matrix(WUC_ICompositionClip_2 *self, WFN_Matrix3x_2 value);
 
-/* Windows.UI.Composition.ICompositionColorBrush */
-/* Windows.UI.Composition.ICompositionColorGradientStop */
-/* Windows.UI.Composition.ICompositionCommitBatch */
-/* Windows.UI.Composition.ICompositionShape */
-/* Windows.UI.Composition.ICompositionContainerShape */
-/* Windows.UI.Composition.ICompositionDrawingSurface */
-/* Windows.UI.Composition.ICompositionDrawingSurface2 */
-/* Windows.UI.Composition.ICompositionDrawingSurface2.get_SizeInt32() */
 HRESULT wuc_composition_drawing_surface_2_get__size_int32(WUC_ICompositionDrawingSurface_2 *self, WG_SizeInt32 *value);
 
-/* Windows.UI.Composition.ICompositionDrawingSurface2.Resize(sizePixels) */
 HRESULT wuc_composition_drawing_surface_2_resize(WUC_ICompositionDrawingSurface_2 *self, WG_SizeInt32 sizePixels);
 
-/* Windows.UI.Composition.ICompositionDrawingSurface2.Scroll(offset) */
 HRESULT wuc_composition_drawing_surface_2_scroll(WUC_ICompositionDrawingSurface_2 *self, WG_PointInt32 offset);
 
-/* Windows.UI.Composition.ICompositionDrawingSurface2.Scroll(offset, scrollRect) */
 HRESULT wuc_composition_drawing_surface_2_scroll_point_int32_rect_int32(WUC_ICompositionDrawingSurface_2 *self, WG_PointInt32 offset, WG_RectInt32 scrollRect);
 
-/* Windows.UI.Composition.ICompositionDrawingSurface2.ScrollWithClip(offset, clipRect) */
 HRESULT wuc_composition_drawing_surface_2_scroll_with_clip(WUC_ICompositionDrawingSurface_2 *self, WG_PointInt32 offset, WG_RectInt32 clipRect);
 
-/* Windows.UI.Composition.ICompositionDrawingSurface2.ScrollWithClip(offset, clipRect, scrollRect) */
 HRESULT wuc_composition_drawing_surface_2_scroll_with_clip_point_int32_rect_int32_rect_int32(WUC_ICompositionDrawingSurface_2 *self, WG_PointInt32 offset, WG_RectInt32 clipRect, WG_RectInt32 scrollRect);
 
-/* Windows.UI.Composition.ICompositionEffectBrush */
-/* Windows.UI.Composition.ICompositionEffectFactory */
-/* Windows.UI.Composition.ICompositionEffectSourceParameter */
-/* Windows.UI.Composition.ICompositionGeometry */
-/* Windows.UI.Composition.ICompositionEllipseGeometry */
-/* Windows.UI.Composition.ICompositionGeometricClip */
-/* Windows.UI.Composition.ICompositionGradientBrush */
-/* Windows.UI.Composition.ICompositionGradientBrush2 */
-/* Windows.UI.Composition.ICompositionGradientBrush2.get_MappingMode() */
 HRESULT wuc_composition_gradient_brush_2_get__mapping_mode(WUC_ICompositionGradientBrush_2 *self, WUC_CompositionMappingMode *value);
 
-/* Windows.UI.Composition.ICompositionGradientBrush2.put_MappingMode() */
 HRESULT wuc_composition_gradient_brush_2_put__mapping_mode(WUC_ICompositionGradientBrush_2 *self, WUC_CompositionMappingMode value);
 
-/* Windows.UI.Composition.ICompositionGraphicsDevice */
-/* Windows.UI.Composition.ICompositionGraphicsDevice2 */
-/* Windows.UI.Composition.ICompositionGraphicsDevice2.CreateDrawingSurface2(sizePixels, pixelFormat, alphaMode) */
 HRESULT wuc_composition_graphics_device_2_create_drawing_surface2(WUC_ICompositionGraphicsDevice_2 *self, WG_SizeInt32 sizePixels, WGRDI_DirectXPixelFormat pixelFormat, WGRDI_DirectXAlphaMode alphaMode, WUC_CompositionDrawingSurface** out);
 
-/* Windows.UI.Composition.ICompositionGraphicsDevice2.CreateVirtualDrawingSurface(sizePixels, pixelFormat, alphaMode) */
 HRESULT wuc_composition_graphics_device_2_create_virtual_drawing_surface(WUC_ICompositionGraphicsDevice_2 *self, WG_SizeInt32 sizePixels, WGRDI_DirectXPixelFormat pixelFormat, WGRDI_DirectXAlphaMode alphaMode, WUC_CompositionVirtualDrawingSurface** out);
 
-/* Windows.UI.Composition.ICompositionGraphicsDevice3 */
-/* Windows.UI.Composition.ICompositionGraphicsDevice3.CreateMipmapSurface(sizePixels, pixelFormat, alphaMode) */
 HRESULT wuc_composition_graphics_device_3_create_mipmap_surface(WUC_ICompositionGraphicsDevice_3 *self, WG_SizeInt32 sizePixels, WGRDI_DirectXPixelFormat pixelFormat, WGRDI_DirectXAlphaMode alphaMode, WUC_CompositionMipmapSurface** out);
 
-/* Windows.UI.Composition.ICompositionGraphicsDevice3.Trim() */
 HRESULT wuc_composition_graphics_device_3_trim(WUC_ICompositionGraphicsDevice_3 *self);
 
-/* Windows.UI.Composition.ICompositionGraphicsDevice4 */
-/* Windows.UI.Composition.ICompositionGraphicsDevice4.CaptureAsync(captureVisual, size, pixelFormat, alphaMode, sdrBoost) */
 HRESULT wuc_composition_graphics_device_4_capture_async(WUC_ICompositionGraphicsDevice_4 *self, WUC_Visual* captureVisual, WG_SizeInt32 size, WGRDI_DirectXPixelFormat pixelFormat, WGRDI_DirectXAlphaMode alphaMode, float sdrBoost, WF_IAsyncOperation_WUC_ICompositionSurface** out);
 
-/* Windows.UI.Composition.ICompositionLineGeometry */
-/* Windows.UI.Composition.ICompositionLinearGradientBrush */
-/* Windows.UI.Composition.ICompositionMaskBrush */
-/* Windows.UI.Composition.ICompositionMipmapSurface */
-/* Windows.UI.Composition.ICompositionNineGridBrush */
-/* Windows.UI.Composition.ICompositionPathGeometry */
-/* Windows.UI.Composition.ICompositionProjectedShadow */
-/* Windows.UI.Composition.ICompositionProjectedShadowCaster */
-/* Windows.UI.Composition.ICompositionProjectedShadowCasterCollection */
-/* Windows.UI.Composition.ICompositionProjectedShadowReceiver */
-/* Windows.UI.Composition.ICompositionProjectedShadowReceiverUnorderedCollection */
-/* Windows.UI.Composition.ICompositionPropertySet */
-/* Windows.UI.Composition.ICompositionPropertySet2 */
-/* Windows.UI.Composition.ICompositionPropertySet2.InsertBoolean(propertyName) */
 HRESULT wuc_composition_property_set_2_insert_boolean(WUC_ICompositionPropertySet_2 *self, cwinrt_hstring propertyName, BOOL value);
 
-/* Windows.UI.Composition.ICompositionPropertySet2.TryGetBoolean(propertyName) */
 HRESULT wuc_composition_property_set_2_try_get_boolean(WUC_ICompositionPropertySet_2 *self, cwinrt_hstring propertyName, BOOL value, WUC_CompositionGetValueStatus *out);
 
-/* Windows.UI.Composition.ICompositionRadialGradientBrush */
-/* Windows.UI.Composition.ICompositionRectangleGeometry */
-/* Windows.UI.Composition.ICompositionRoundedRectangleGeometry */
-/* Windows.UI.Composition.ICompositionScopedBatch */
-/* Windows.UI.Composition.ICompositionSpriteShape */
-/* Windows.UI.Composition.ICompositionSurfaceBrush */
-/* Windows.UI.Composition.ICompositionSurfaceBrush2 */
-/* Windows.UI.Composition.ICompositionSurfaceBrush2.get_AnchorPoint() */
 HRESULT wuc_composition_surface_brush_2_get__anchor_point(WUC_ICompositionSurfaceBrush_2 *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.ICompositionSurfaceBrush2.put_AnchorPoint() */
 HRESULT wuc_composition_surface_brush_2_put__anchor_point(WUC_ICompositionSurfaceBrush_2 *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.ICompositionSurfaceBrush2.get_CenterPoint() */
 HRESULT wuc_composition_surface_brush_2_get__center_point(WUC_ICompositionSurfaceBrush_2 *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.ICompositionSurfaceBrush2.put_CenterPoint() */
 HRESULT wuc_composition_surface_brush_2_put__center_point(WUC_ICompositionSurfaceBrush_2 *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.ICompositionSurfaceBrush2.get_Offset() */
 HRESULT wuc_composition_surface_brush_2_get__offset(WUC_ICompositionSurfaceBrush_2 *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.ICompositionSurfaceBrush2.put_Offset() */
 HRESULT wuc_composition_surface_brush_2_put__offset(WUC_ICompositionSurfaceBrush_2 *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.ICompositionSurfaceBrush2.get_RotationAngle() */
 HRESULT wuc_composition_surface_brush_2_get__rotation_angle(WUC_ICompositionSurfaceBrush_2 *self, float *value);
 
-/* Windows.UI.Composition.ICompositionSurfaceBrush2.put_RotationAngle() */
 HRESULT wuc_composition_surface_brush_2_put__rotation_angle(WUC_ICompositionSurfaceBrush_2 *self, float value);
 
-/* Windows.UI.Composition.ICompositionSurfaceBrush2.get_RotationAngleInDegrees() */
 HRESULT wuc_composition_surface_brush_2_get__rotation_angle_in_degrees(WUC_ICompositionSurfaceBrush_2 *self, float *value);
 
-/* Windows.UI.Composition.ICompositionSurfaceBrush2.put_RotationAngleInDegrees() */
 HRESULT wuc_composition_surface_brush_2_put__rotation_angle_in_degrees(WUC_ICompositionSurfaceBrush_2 *self, float value);
 
-/* Windows.UI.Composition.ICompositionSurfaceBrush2.get_Scale() */
 HRESULT wuc_composition_surface_brush_2_get__scale(WUC_ICompositionSurfaceBrush_2 *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.ICompositionSurfaceBrush2.put_Scale() */
 HRESULT wuc_composition_surface_brush_2_put__scale(WUC_ICompositionSurfaceBrush_2 *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.ICompositionSurfaceBrush2.get_TransformMatrix() */
 HRESULT wuc_composition_surface_brush_2_get__transform_matrix(WUC_ICompositionSurfaceBrush_2 *self, WFN_Matrix3x_2 *value);
 
-/* Windows.UI.Composition.ICompositionSurfaceBrush2.put_TransformMatrix() */
 HRESULT wuc_composition_surface_brush_2_put__transform_matrix(WUC_ICompositionSurfaceBrush_2 *self, WFN_Matrix3x_2 value);
 
-/* Windows.UI.Composition.ICompositionSurfaceBrush3 */
-/* Windows.UI.Composition.ICompositionSurfaceBrush3.get_SnapToPixels() */
 HRESULT wuc_composition_surface_brush_3_get__snap_to_pixels(WUC_ICompositionSurfaceBrush_3 *self, BOOL *value);
 
-/* Windows.UI.Composition.ICompositionSurfaceBrush3.put_SnapToPixels() */
 HRESULT wuc_composition_surface_brush_3_put__snap_to_pixels(WUC_ICompositionSurfaceBrush_3 *self, BOOL value);
 
-/* Windows.UI.Composition.ICompositionTarget */
-/* Windows.UI.Composition.ICompositionTexture */
-/* Windows.UI.Composition.ICompositionViewBox */
-/* Windows.UI.Composition.ICompositionVirtualDrawingSurface */
-/* Windows.UI.Composition.ICompositionVisualSurface */
-/* Windows.UI.Composition.ICompositor */
-/* Windows.UI.Composition.ICompositor2 */
-/* Windows.UI.Composition.ICompositor2.CreateAmbientLight() */
 HRESULT wuc_compositor_2_create_ambient_light(WUC_ICompositor_2 *self, WUC_AmbientLight** out);
 
-/* Windows.UI.Composition.ICompositor2.CreateAnimationGroup() */
 HRESULT wuc_compositor_2_create_animation_group(WUC_ICompositor_2 *self, WUC_CompositionAnimationGroup** out);
 
-/* Windows.UI.Composition.ICompositor2.CreateBackdropBrush() */
 HRESULT wuc_compositor_2_create_backdrop_brush(WUC_ICompositor_2 *self, WUC_BackdropBrush** out);
 
-/* Windows.UI.Composition.ICompositor2.CreateDistantLight() */
 HRESULT wuc_compositor_2_create_distant_light(WUC_ICompositor_2 *self, WUC_DistantLight** out);
 
-/* Windows.UI.Composition.ICompositor2.CreateDropShadow() */
 HRESULT wuc_compositor_2_create_drop_shadow(WUC_ICompositor_2 *self, WUC_DropShadow** out);
 
-/* Windows.UI.Composition.ICompositor2.CreateImplicitAnimationCollection() */
 HRESULT wuc_compositor_2_create_implicit_animation_collection(WUC_ICompositor_2 *self, WUC_ImplicitAnimationCollection** out);
 
-/* Windows.UI.Composition.ICompositor2.CreateLayerVisual() */
 HRESULT wuc_compositor_2_create_layer_visual(WUC_ICompositor_2 *self, WUC_LayerVisual** out);
 
-/* Windows.UI.Composition.ICompositor2.CreateMaskBrush() */
 HRESULT wuc_compositor_2_create_mask_brush(WUC_ICompositor_2 *self, WUC_CompositionMaskBrush** out);
 
-/* Windows.UI.Composition.ICompositor2.CreateNineGridBrush() */
 HRESULT wuc_compositor_2_create_nine_grid_brush(WUC_ICompositor_2 *self, WUC_CompositionNineGridBrush** out);
 
-/* Windows.UI.Composition.ICompositor2.CreatePointLight() */
 HRESULT wuc_compositor_2_create_point_light(WUC_ICompositor_2 *self, WUC_PointLight** out);
 
-/* Windows.UI.Composition.ICompositor2.CreateSpotLight() */
 HRESULT wuc_compositor_2_create_spot_light(WUC_ICompositor_2 *self, WUC_SpotLight** out);
 
-/* Windows.UI.Composition.ICompositor2.CreateStepEasingFunction() */
 HRESULT wuc_compositor_2_create_step_easing_function(WUC_ICompositor_2 *self, WUC_StepEasingFunction** out);
 
-/* Windows.UI.Composition.ICompositor2.CreateStepEasingFunction(stepCount) */
 HRESULT wuc_compositor_2_create_step_easing_function_i32_p(WUC_ICompositor_2 *self, int32_t stepCount, WUC_StepEasingFunction** out);
 
-/* Windows.UI.Composition.ICompositor3 */
-/* Windows.UI.Composition.ICompositor3.CreateHostBackdropBrush() */
 HRESULT wuc_compositor_3_create_host_backdrop_brush(WUC_ICompositor_3 *self, WUC_BackdropBrush** out);
 
-/* Windows.UI.Composition.ICompositor4 */
-/* Windows.UI.Composition.ICompositor4.CreateColorGradientStop() */
 HRESULT wuc_compositor_4_create_color_gradient_stop(WUC_ICompositor_4 *self, WUC_CompositionColorGradientStop** out);
 
-/* Windows.UI.Composition.ICompositor4.CreateColorGradientStop(offset, color) */
 HRESULT wuc_compositor_4_create_color_gradient_stop_f32_color_p(WUC_ICompositor_4 *self, float offset, WUI_Color color, WUC_CompositionColorGradientStop** out);
 
-/* Windows.UI.Composition.ICompositor4.CreateLinearGradientBrush() */
 HRESULT wuc_compositor_4_create_linear_gradient_brush(WUC_ICompositor_4 *self, WUC_CompositionLinearGradientBrush** out);
 
-/* Windows.UI.Composition.ICompositor4.CreateSpringScalarAnimation() */
 HRESULT wuc_compositor_4_create_spring_scalar_animation(WUC_ICompositor_4 *self, WUC_SpringScalarNaturalMotionAnimation** out);
 
-/* Windows.UI.Composition.ICompositor4.CreateSpringVector2Animation() */
 HRESULT wuc_compositor_4_create_spring_vector2_animation(WUC_ICompositor_4 *self, WUC_SpringVector2NaturalMotionAnimation** out);
 
-/* Windows.UI.Composition.ICompositor4.CreateSpringVector3Animation() */
 HRESULT wuc_compositor_4_create_spring_vector3_animation(WUC_ICompositor_4 *self, WUC_SpringVector3NaturalMotionAnimation** out);
 
-/* Windows.UI.Composition.ICompositor5 */
-/* Windows.UI.Composition.ICompositor5.get_Comment() */
 HRESULT wuc_compositor_5_get__comment(WUC_ICompositor_5 *self, cwinrt_hstring *value);
 
-/* Windows.UI.Composition.ICompositor5.put_Comment() */
 HRESULT wuc_compositor_5_put__comment(WUC_ICompositor_5 *self, cwinrt_hstring value);
 
-/* Windows.UI.Composition.ICompositor5.get_GlobalPlaybackRate() */
 HRESULT wuc_compositor_5_get__global_playback_rate(WUC_ICompositor_5 *self, float *value);
 
-/* Windows.UI.Composition.ICompositor5.put_GlobalPlaybackRate() */
 HRESULT wuc_compositor_5_put__global_playback_rate(WUC_ICompositor_5 *self, float value);
 
-/* Windows.UI.Composition.ICompositor5.CreateBounceScalarAnimation() */
 HRESULT wuc_compositor_5_create_bounce_scalar_animation(WUC_ICompositor_5 *self, WUC_BounceScalarNaturalMotionAnimation** out);
 
-/* Windows.UI.Composition.ICompositor5.CreateBounceVector2Animation() */
 HRESULT wuc_compositor_5_create_bounce_vector2_animation(WUC_ICompositor_5 *self, WUC_BounceVector2NaturalMotionAnimation** out);
 
-/* Windows.UI.Composition.ICompositor5.CreateBounceVector3Animation() */
 HRESULT wuc_compositor_5_create_bounce_vector3_animation(WUC_ICompositor_5 *self, WUC_BounceVector3NaturalMotionAnimation** out);
 
-/* Windows.UI.Composition.ICompositor5.CreateContainerShape() */
 HRESULT wuc_compositor_5_create_container_shape(WUC_ICompositor_5 *self, WUC_CompositionContainerShape** out);
 
-/* Windows.UI.Composition.ICompositor5.CreateEllipseGeometry() */
 HRESULT wuc_compositor_5_create_ellipse_geometry(WUC_ICompositor_5 *self, WUC_CompositionEllipseGeometry** out);
 
-/* Windows.UI.Composition.ICompositor5.CreateLineGeometry() */
 HRESULT wuc_compositor_5_create_line_geometry(WUC_ICompositor_5 *self, WUC_CompositionLineGeometry** out);
 
-/* Windows.UI.Composition.ICompositor5.CreatePathGeometry() */
 HRESULT wuc_compositor_5_create_path_geometry(WUC_ICompositor_5 *self, WUC_CompositionPathGeometry** out);
 
-/* Windows.UI.Composition.ICompositor5.CreatePathGeometry(path) */
 HRESULT wuc_compositor_5_create_path_geometry_p_p(WUC_ICompositor_5 *self, WUC_CompositionPath* path, WUC_CompositionPathGeometry** out);
 
-/* Windows.UI.Composition.ICompositor5.CreatePathKeyFrameAnimation() */
 HRESULT wuc_compositor_5_create_path_key_frame_animation(WUC_ICompositor_5 *self, WUC_PathKeyFrameAnimation** out);
 
-/* Windows.UI.Composition.ICompositor5.CreateRectangleGeometry() */
 HRESULT wuc_compositor_5_create_rectangle_geometry(WUC_ICompositor_5 *self, WUC_CompositionRectangleGeometry** out);
 
-/* Windows.UI.Composition.ICompositor5.CreateRoundedRectangleGeometry() */
 HRESULT wuc_compositor_5_create_rounded_rectangle_geometry(WUC_ICompositor_5 *self, WUC_CompositionRoundedRectangleGeometry** out);
 
-/* Windows.UI.Composition.ICompositor5.CreateShapeVisual() */
 HRESULT wuc_compositor_5_create_shape_visual(WUC_ICompositor_5 *self, WUC_ShapeVisual** out);
 
-/* Windows.UI.Composition.ICompositor5.CreateSpriteShape() */
 HRESULT wuc_compositor_5_create_sprite_shape(WUC_ICompositor_5 *self, WUC_CompositionSpriteShape** out);
 
-/* Windows.UI.Composition.ICompositor5.CreateSpriteShape(geometry) */
 HRESULT wuc_compositor_5_create_sprite_shape_p_p(WUC_ICompositor_5 *self, WUC_CompositionGeometry* geometry, WUC_CompositionSpriteShape** out);
 
-/* Windows.UI.Composition.ICompositor5.CreateViewBox() */
 HRESULT wuc_compositor_5_create_view_box(WUC_ICompositor_5 *self, WUC_CompositionViewBox** out);
 
-/* Windows.UI.Composition.ICompositor5.RequestCommitAsync() */
 HRESULT wuc_compositor_5_request_commit_async(WUC_ICompositor_5 *self, WF_IAsyncAction** out);
 
-/* Windows.UI.Composition.ICompositor6 */
-/* Windows.UI.Composition.ICompositor6.CreateGeometricClip() */
 HRESULT wuc_compositor_6_create_geometric_clip(WUC_ICompositor_6 *self, WUC_CompositionGeometricClip** out);
 
-/* Windows.UI.Composition.ICompositor6.CreateGeometricClip(geometry) */
 HRESULT wuc_compositor_6_create_geometric_clip_p_p(WUC_ICompositor_6 *self, WUC_CompositionGeometry* geometry, WUC_CompositionGeometricClip** out);
 
-/* Windows.UI.Composition.ICompositor6.CreateRedirectVisual() */
 HRESULT wuc_compositor_6_create_redirect_visual(WUC_ICompositor_6 *self, WUC_RedirectVisual** out);
 
-/* Windows.UI.Composition.ICompositor6.CreateRedirectVisual(source) */
 HRESULT wuc_compositor_6_create_redirect_visual_p_p(WUC_ICompositor_6 *self, WUC_Visual* source, WUC_RedirectVisual** out);
 
-/* Windows.UI.Composition.ICompositor6.CreateBooleanKeyFrameAnimation() */
 HRESULT wuc_compositor_6_create_boolean_key_frame_animation(WUC_ICompositor_6 *self, WUC_BooleanKeyFrameAnimation** out);
 
-/* Windows.UI.Composition.ICompositorWithProjectedShadow */
-/* Windows.UI.Composition.ICompositorWithProjectedShadow.CreateProjectedShadowCaster() */
 HRESULT wuc_compositor_with_projected_shadow_create_projected_shadow_caster(WUC_ICompositorWithProjectedShadow *self, WUC_CompositionProjectedShadowCaster** out);
 
-/* Windows.UI.Composition.ICompositorWithProjectedShadow.CreateProjectedShadow() */
 HRESULT wuc_compositor_with_projected_shadow_create_projected_shadow(WUC_ICompositorWithProjectedShadow *self, WUC_CompositionProjectedShadow** out);
 
-/* Windows.UI.Composition.ICompositorWithProjectedShadow.CreateProjectedShadowReceiver() */
 HRESULT wuc_compositor_with_projected_shadow_create_projected_shadow_receiver(WUC_ICompositorWithProjectedShadow *self, WUC_CompositionProjectedShadowReceiver** out);
 
-/* Windows.UI.Composition.ICompositorWithRadialGradient */
-/* Windows.UI.Composition.ICompositorWithRadialGradient.CreateRadialGradientBrush() */
 HRESULT wuc_compositor_with_radial_gradient_create_radial_gradient_brush(WUC_ICompositorWithRadialGradient *self, WUC_CompositionRadialGradientBrush** out);
 
-/* Windows.UI.Composition.ICompositorWithVisualSurface */
-/* Windows.UI.Composition.ICompositorWithVisualSurface.CreateVisualSurface() */
 HRESULT wuc_compositor_with_visual_surface_create_visual_surface(WUC_ICompositorWithVisualSurface *self, WUC_CompositionVisualSurface** out);
 
-/* Windows.UI.Composition.ICompositor7 */
-/* Windows.UI.Composition.ICompositor7.get_DispatcherQueue() */
 HRESULT wuc_compositor_7_get__dispatcher_queue(WUC_ICompositor_7 *self, WSY_DispatcherQueue** value);
 
-/* Windows.UI.Composition.ICompositor7.CreateAnimationPropertyInfo() */
 HRESULT wuc_compositor_7_create_animation_property_info(WUC_ICompositor_7 *self, WUC_AnimationPropertyInfo** out);
 
-/* Windows.UI.Composition.ICompositor7.CreateRectangleClip() */
 HRESULT wuc_compositor_7_create_rectangle_clip(WUC_ICompositor_7 *self, WUC_RectangleClip** out);
 
-/* Windows.UI.Composition.ICompositor7.CreateRectangleClip(left, top, right, bottom) */
 HRESULT wuc_compositor_7_create_rectangle_clip_f32_f32_f32_f32_p(WUC_ICompositor_7 *self, float left, float top, float right, float bottom, WUC_RectangleClip** out);
 
-/* Windows.UI.Composition.ICompositor7.CreateRectangleClip(left, top, right, bottom, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius) */
 HRESULT wuc_compositor_7_create_rectangle_clip_f32_f32_f32_f32_2_2_2_2_p(WUC_ICompositor_7 *self, float left, float top, float right, float bottom, WFN_Vector_2 topLeftRadius, WFN_Vector_2 topRightRadius, WFN_Vector_2 bottomRightRadius, WFN_Vector_2 bottomLeftRadius, WUC_RectangleClip** out);
 
-/* Windows.UI.Composition.ICompositorWithBlurredWallpaperBackdropBrush */
-/* Windows.UI.Composition.ICompositorWithBlurredWallpaperBackdropBrush.TryCreateBlurredWallpaperBackdropBrush() */
 HRESULT wuc_compositor_with_blurred_wallpaper_backdrop_brush_try_create_blurred_wallpaper_backdrop_brush(WUC_ICompositorWithBlurredWallpaperBackdropBrush *self, WUC_BackdropBrush** out);
 
-/* Windows.UI.Composition.ICompositor8 */
-/* Windows.UI.Composition.ICompositor8.CreateAnimationController() */
 HRESULT wuc_compositor_8_create_animation_controller(WUC_ICompositor_8 *self, WUC_AnimationController** out);
 
-/* Windows.UI.Composition.IVisual */
-/* Windows.UI.Composition.IVisual2 */
-/* Windows.UI.Composition.IVisual2.get_ParentForTransform() */
 HRESULT wuc_visual_2_get__parent_for_transform(WUC_IVisual_2 *self, WUC_Visual** value);
 
-/* Windows.UI.Composition.IVisual2.put_ParentForTransform() */
 HRESULT wuc_visual_2_put__parent_for_transform(WUC_IVisual_2 *self, WUC_Visual* value);
 
-/* Windows.UI.Composition.IVisual2.get_RelativeOffsetAdjustment() */
 HRESULT wuc_visual_2_get__relative_offset_adjustment(WUC_IVisual_2 *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.IVisual2.put_RelativeOffsetAdjustment() */
 HRESULT wuc_visual_2_put__relative_offset_adjustment(WUC_IVisual_2 *self, WFN_Vector_3 value);
 
-/* Windows.UI.Composition.IVisual2.get_RelativeSizeAdjustment() */
 HRESULT wuc_visual_2_get__relative_size_adjustment(WUC_IVisual_2 *self, WFN_Vector_2 *value);
 
-/* Windows.UI.Composition.IVisual2.put_RelativeSizeAdjustment() */
 HRESULT wuc_visual_2_put__relative_size_adjustment(WUC_IVisual_2 *self, WFN_Vector_2 value);
 
-/* Windows.UI.Composition.IVisual3 */
-/* Windows.UI.Composition.IVisual3.get_IsHitTestVisible() */
 HRESULT wuc_visual_3_get__is_hit_test_visible(WUC_IVisual_3 *self, BOOL *value);
 
-/* Windows.UI.Composition.IVisual3.put_IsHitTestVisible() */
 HRESULT wuc_visual_3_put__is_hit_test_visible(WUC_IVisual_3 *self, BOOL value);
 
-/* Windows.UI.Composition.IVisual4 */
-/* Windows.UI.Composition.IVisual4.get_IsPixelSnappingEnabled() */
 HRESULT wuc_visual_4_get__is_pixel_snapping_enabled(WUC_IVisual_4 *self, BOOL *value);
 
-/* Windows.UI.Composition.IVisual4.put_IsPixelSnappingEnabled() */
 HRESULT wuc_visual_4_put__is_pixel_snapping_enabled(WUC_IVisual_4 *self, BOOL value);
 
-/* Windows.UI.Composition.IContainerVisual */
-/* Windows.UI.Composition.ISineEasingFunction */
-/* Windows.UI.Composition.ISpotLight */
-/* Windows.UI.Composition.ISpotLight2 */
-/* Windows.UI.Composition.ISpotLight2.get_InnerConeIntensity() */
 HRESULT wuc_spot_light_2_get__inner_cone_intensity(WUC_ISpotLight_2 *self, float *value);
 
-/* Windows.UI.Composition.ISpotLight2.put_InnerConeIntensity() */
 HRESULT wuc_spot_light_2_put__inner_cone_intensity(WUC_ISpotLight_2 *self, float value);
 
-/* Windows.UI.Composition.ISpotLight2.get_OuterConeIntensity() */
 HRESULT wuc_spot_light_2_get__outer_cone_intensity(WUC_ISpotLight_2 *self, float *value);
 
-/* Windows.UI.Composition.ISpotLight2.put_OuterConeIntensity() */
 HRESULT wuc_spot_light_2_put__outer_cone_intensity(WUC_ISpotLight_2 *self, float value);
 
-/* Windows.UI.Composition.ISpotLight3 */
-/* Windows.UI.Composition.ISpotLight3.get_MinAttenuationCutoff() */
 HRESULT wuc_spot_light_3_get__min_attenuation_cutoff(WUC_ISpotLight_3 *self, float *value);
 
-/* Windows.UI.Composition.ISpotLight3.put_MinAttenuationCutoff() */
 HRESULT wuc_spot_light_3_put__min_attenuation_cutoff(WUC_ISpotLight_3 *self, float value);
 
-/* Windows.UI.Composition.ISpotLight3.get_MaxAttenuationCutoff() */
 HRESULT wuc_spot_light_3_get__max_attenuation_cutoff(WUC_ISpotLight_3 *self, float *value);
 
-/* Windows.UI.Composition.ISpotLight3.put_MaxAttenuationCutoff() */
 HRESULT wuc_spot_light_3_put__max_attenuation_cutoff(WUC_ISpotLight_3 *self, float value);
 
-/* Windows.UI.Composition.ICubicBezierEasingFunction */
-/* Windows.UI.Composition.IDelegatedInkTrailVisual */
-/* Windows.UI.Composition.ISpringScalarNaturalMotionAnimation */
-/* Windows.UI.Composition.ISpringVector2NaturalMotionAnimation */
-/* Windows.UI.Composition.ISpringVector3NaturalMotionAnimation */
-/* Windows.UI.Composition.ISpriteVisual */
-/* Windows.UI.Composition.ISpriteVisual2 */
-/* Windows.UI.Composition.ISpriteVisual2.get_Shadow() */
 HRESULT wuc_sprite_visual_2_get__shadow(WUC_ISpriteVisual_2 *self, WUC_CompositionShadow** value);
 
-/* Windows.UI.Composition.ISpriteVisual2.put_Shadow() */
 HRESULT wuc_sprite_visual_2_put__shadow(WUC_ISpriteVisual_2 *self, WUC_CompositionShadow* value);
 
-/* Windows.UI.Composition.IStepEasingFunction */
-/* Windows.UI.Composition.IVector2KeyFrameAnimation */
-/* Windows.UI.Composition.IVector3KeyFrameAnimation */
-/* Windows.UI.Composition.IVector4KeyFrameAnimation */
-/* Windows.UI.Composition.IDistantLight */
-/* Windows.UI.Composition.IDistantLight2 */
-/* Windows.UI.Composition.IDistantLight2.get_Intensity() */
 HRESULT wuc_distant_light_2_get__intensity(WUC_IDistantLight_2 *self, float *value);
 
-/* Windows.UI.Composition.IDistantLight2.put_Intensity() */
 HRESULT wuc_distant_light_2_put__intensity(WUC_IDistantLight_2 *self, float value);
 
-/* Windows.UI.Composition.IDropShadow */
-/* Windows.UI.Composition.IDropShadow2 */
-/* Windows.UI.Composition.IDropShadow2.get_SourcePolicy() */
 HRESULT wuc_drop_shadow_2_get__source_policy(WUC_IDropShadow_2 *self, WUC_CompositionDropShadowSourcePolicy *value);
 
-/* Windows.UI.Composition.IDropShadow2.put_SourcePolicy() */
 HRESULT wuc_drop_shadow_2_put__source_policy(WUC_IDropShadow_2 *self, WUC_CompositionDropShadowSourcePolicy value);
 
-/* Windows.UI.Composition.IVisualCollection */
-/* Windows.UI.Composition.IVisualUnorderedCollection */
-/* Windows.UI.Composition.IElasticEasingFunction */
-/* Windows.UI.Composition.IExponentialEasingFunction */
-/* Windows.UI.Composition.IExpressionAnimation */
-/* Windows.UI.Composition.IInsetClip */
-/* Windows.UI.Composition.IAnimationPropertyInfo */
-/* Windows.UI.Composition.IAnimationPropertyInfo2 */
-/* Windows.UI.Composition.IAnimationPropertyInfo2.GetResolvedCompositionObject() */
 HRESULT wuc_animation_property_info_2_get_resolved_composition_object(WUC_IAnimationPropertyInfo_2 *self, WUC_CompositionObject** out);
 
-/* Windows.UI.Composition.IAnimationPropertyInfo2.GetResolvedCompositionObjectProperty() */
 HRESULT wuc_animation_property_info_2_get_resolved_composition_object_property(WUC_IAnimationPropertyInfo_2 *self, cwinrt_hstring *out);
 
-/* Windows.UI.Composition.IAnimationController */
-/* Windows.UI.Composition.IAmbientLight */
-/* Windows.UI.Composition.IAmbientLight2 */
-/* Windows.UI.Composition.IAmbientLight2.get_Intensity() */
 HRESULT wuc_ambient_light_2_get__intensity(WUC_IAmbientLight_2 *self, float *value);
 
-/* Windows.UI.Composition.IAmbientLight2.put_Intensity() */
 HRESULT wuc_ambient_light_2_put__intensity(WUC_IAmbientLight_2 *self, float value);
 
-/* Windows.UI.Composition.ICompositionLight */
-/* Windows.UI.Composition.ICompositionLight2 */
-/* Windows.UI.Composition.ICompositionLight2.get_ExclusionsFromTargets() */
 HRESULT wuc_composition_light_2_get__exclusions_from_targets(WUC_ICompositionLight_2 *self, WUC_VisualUnorderedCollection** value);
 
-/* Windows.UI.Composition.ICompositionLight3 */
-/* Windows.UI.Composition.ICompositionLight3.get_IsEnabled() */
 HRESULT wuc_composition_light_3_get__is_enabled(WUC_ICompositionLight_3 *self, BOOL *value);
 
-/* Windows.UI.Composition.ICompositionLight3.put_IsEnabled() */
 HRESULT wuc_composition_light_3_put__is_enabled(WUC_ICompositionLight_3 *self, BOOL value);
 
-/* Windows.UI.Composition.ICompositionObject */
-/* Windows.UI.Composition.ICompositionObject2 */
-/* Windows.UI.Composition.ICompositionObject2.get_Comment() */
 HRESULT wuc_composition_object_2_get__comment(WUC_ICompositionObject_2 *self, cwinrt_hstring *value);
 
-/* Windows.UI.Composition.ICompositionObject2.put_Comment() */
 HRESULT wuc_composition_object_2_put__comment(WUC_ICompositionObject_2 *self, cwinrt_hstring value);
 
-/* Windows.UI.Composition.ICompositionObject2.get_ImplicitAnimations() */
 HRESULT wuc_composition_object_2_get__implicit_animations(WUC_ICompositionObject_2 *self, WUC_ImplicitAnimationCollection** value);
 
-/* Windows.UI.Composition.ICompositionObject2.put_ImplicitAnimations() */
 HRESULT wuc_composition_object_2_put__implicit_animations(WUC_ICompositionObject_2 *self, WUC_ImplicitAnimationCollection* value);
 
-/* Windows.UI.Composition.ICompositionObject2.StartAnimationGroup() */
 HRESULT wuc_composition_object_2_start_animation_group(WUC_ICompositionObject_2 *self, WUC_ICompositionAnimationBase* value);
 
-/* Windows.UI.Composition.ICompositionObject2.StopAnimationGroup() */
 HRESULT wuc_composition_object_2_stop_animation_group(WUC_ICompositionObject_2 *self, WUC_ICompositionAnimationBase* value);
 
-/* Windows.UI.Composition.ICompositionObject3 */
-/* Windows.UI.Composition.ICompositionObject3.get_DispatcherQueue() */
 HRESULT wuc_composition_object_3_get__dispatcher_queue(WUC_ICompositionObject_3 *self, WSY_DispatcherQueue** value);
 
-/* Windows.UI.Composition.ICompositionObject4 */
-/* Windows.UI.Composition.ICompositionObject4.TryGetAnimationController(propertyName) */
 HRESULT wuc_composition_object_4_try_get_animation_controller(WUC_ICompositionObject_4 *self, cwinrt_hstring propertyName, WUC_AnimationController** out);
 
-/* Windows.UI.Composition.ICompositionObject5 */
-/* Windows.UI.Composition.ICompositionObject5.StartAnimation(propertyName, animation, animationController) */
 HRESULT wuc_composition_object_5_start_animation(WUC_ICompositionObject_5 *self, cwinrt_hstring propertyName, WUC_CompositionAnimation* animation, WUC_AnimationController* animationController);
 
-/* Windows.UI.Composition.IAnimationObject */
-/* Windows.UI.Composition.IAnimationObject.PopulatePropertyInfo(propertyName, propertyInfo) */
 HRESULT wuc_animation_object_populate_property_info(WUC_IAnimationObject *self, cwinrt_hstring propertyName, WUC_AnimationPropertyInfo* propertyInfo);
 
-/* Windows.UI.Composition.IScalarKeyFrameAnimation */
-/* Windows.UI.Composition.IRenderingDeviceReplacedEventArgs */
-/* Windows.UI.Composition.IRedirectVisual */
-/* Windows.UI.Composition.IRectangleClip */
-/* Windows.UI.Composition.IQuaternionKeyFrameAnimation */
-/* Windows.UI.Composition.IPowerEasingFunction */
-/* Windows.UI.Composition.IPointLight */
-/* Windows.UI.Composition.IPointLight2 */
-/* Windows.UI.Composition.IPointLight2.get_Intensity() */
 HRESULT wuc_point_light_2_get__intensity(WUC_IPointLight_2 *self, float *value);
 
-/* Windows.UI.Composition.IPointLight2.put_Intensity() */
 HRESULT wuc_point_light_2_put__intensity(WUC_IPointLight_2 *self, float value);
 
-/* Windows.UI.Composition.IPointLight3 */
-/* Windows.UI.Composition.IPointLight3.get_MinAttenuationCutoff() */
 HRESULT wuc_point_light_3_get__min_attenuation_cutoff(WUC_IPointLight_3 *self, float *value);
 
-/* Windows.UI.Composition.IPointLight3.put_MinAttenuationCutoff() */
 HRESULT wuc_point_light_3_put__min_attenuation_cutoff(WUC_IPointLight_3 *self, float value);
 
-/* Windows.UI.Composition.IPointLight3.get_MaxAttenuationCutoff() */
 HRESULT wuc_point_light_3_get__max_attenuation_cutoff(WUC_IPointLight_3 *self, float *value);
 
-/* Windows.UI.Composition.IPointLight3.put_MaxAttenuationCutoff() */
 HRESULT wuc_point_light_3_put__max_attenuation_cutoff(WUC_IPointLight_3 *self, float value);
 
-/* Windows.UI.Composition.IPathKeyFrameAnimation */
-/* Windows.UI.Composition.ILayerVisual */
-/* Windows.UI.Composition.ILayerVisual2 */
-/* Windows.UI.Composition.ILayerVisual2.get_Shadow() */
 HRESULT wuc_layer_visual_2_get__shadow(WUC_ILayerVisual_2 *self, WUC_CompositionShadow** value);
 
-/* Windows.UI.Composition.ILayerVisual2.put_Shadow() */
 HRESULT wuc_layer_visual_2_put__shadow(WUC_ILayerVisual_2 *self, WUC_CompositionShadow* value);
 
-/* Windows.UI.Composition.IShapeVisual */
 #endif /* CWINRT_WINDOWS_UI_COMPOSITION_H */

@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WAPCABA_PhoneCallBlockedTriggerDetails WAPCABA_PhoneCallBlockedTriggerDetails;
 typedef struct WAPCABA_PhoneCallOriginDataRequestTriggerDetails WAPCABA_PhoneCallOriginDataRequestTriggerDetails;
 typedef struct WAPCABA_PhoneIncomingCallDismissedTriggerDetails WAPCABA_PhoneIncomingCallDismissedTriggerDetails;
@@ -26,7 +25,6 @@ typedef struct WAPCABA_IPhoneIncomingCallNotificationTriggerDetails WAPCABA_IPho
 typedef struct WAPCABA_IPhoneLineChangedTriggerDetails WAPCABA_IPhoneLineChangedTriggerDetails;
 typedef struct WAPCABA_IPhoneNewVoicemailMessageTriggerDetails WAPCABA_IPhoneNewVoicemailMessageTriggerDetails;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_DateTime
 #define CWINRT_FWD_WF_DateTime
 typedef struct WF_DateTime WF_DateTime;
@@ -90,7 +88,6 @@ typedef enum WAPCABA_PhoneLineProperties {
 } WAPCABA_PhoneLineProperties;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -119,93 +116,54 @@ static const IID CWINRT_IID_WAPCABA_IPhoneLineChangedTriggerDetails CWINRT_MAYBE
 static const IID CWINRT_IID_WAPCABA_IPhoneNewVoicemailMessageTriggerDetails CWINRT_MAYBE_UNUSED = { 0x13A8C01B, 0xB831, 0x48D3, { 0x8B, 0xA9, 0x8D, 0x22, 0xA6, 0x58, 0x0D, 0xCF } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails */
 HRESULT wapcaba_phone_call_blocked_trigger_details_new(WAPCABA_PhoneCallBlockedTriggerDetails **out);
 
-/* Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails */
-/* Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails.get_PhoneNumber() */
 HRESULT wapcaba_phone_call_blocked_trigger_details_get__phone_number(WAPCABA_PhoneCallBlockedTriggerDetails *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails.get_LineId() */
 HRESULT wapcaba_phone_call_blocked_trigger_details_get__line_id(WAPCABA_PhoneCallBlockedTriggerDetails *self, GUID *value);
 
-/* Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails.get_CallBlockedReason() */
 HRESULT wapcaba_phone_call_blocked_trigger_details_get__call_blocked_reason(WAPCABA_PhoneCallBlockedTriggerDetails *self, WAPCABA_PhoneCallBlockedReason *value);
 
-/* activate Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails */
 HRESULT wapcaba_phone_call_origin_data_request_trigger_details_new(WAPCABA_PhoneCallOriginDataRequestTriggerDetails **out);
 
-/* Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails */
-/* Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails.get_RequestId() */
 HRESULT wapcaba_phone_call_origin_data_request_trigger_details_get__request_id(WAPCABA_PhoneCallOriginDataRequestTriggerDetails *self, GUID *value);
 
-/* Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails.get_PhoneNumber() */
 HRESULT wapcaba_phone_call_origin_data_request_trigger_details_get__phone_number(WAPCABA_PhoneCallOriginDataRequestTriggerDetails *self, cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails */
 HRESULT wapcaba_phone_incoming_call_dismissed_trigger_details_new(WAPCABA_PhoneIncomingCallDismissedTriggerDetails **out);
 
-/* Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails */
-/* Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails.get_LineId() */
 HRESULT wapcaba_phone_incoming_call_dismissed_trigger_details_get__line_id(WAPCABA_PhoneIncomingCallDismissedTriggerDetails *self, GUID *value);
 
-/* Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails.get_PhoneNumber() */
 HRESULT wapcaba_phone_incoming_call_dismissed_trigger_details_get__phone_number(WAPCABA_PhoneIncomingCallDismissedTriggerDetails *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails.get_DisplayName() */
 HRESULT wapcaba_phone_incoming_call_dismissed_trigger_details_get__display_name(WAPCABA_PhoneIncomingCallDismissedTriggerDetails *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails.get_DismissalTime() */
 HRESULT wapcaba_phone_incoming_call_dismissed_trigger_details_get__dismissal_time(WAPCABA_PhoneIncomingCallDismissedTriggerDetails *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails.get_TextReplyMessage() */
 HRESULT wapcaba_phone_incoming_call_dismissed_trigger_details_get__text_reply_message(WAPCABA_PhoneIncomingCallDismissedTriggerDetails *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails.get_Reason() */
 HRESULT wapcaba_phone_incoming_call_dismissed_trigger_details_get__reason(WAPCABA_PhoneIncomingCallDismissedTriggerDetails *self, WAPCABA_PhoneIncomingCallDismissedReason *value);
 
-/* activate Windows.ApplicationModel.Calls.Background.PhoneIncomingCallNotificationTriggerDetails */
 HRESULT wapcaba_phone_incoming_call_notification_trigger_details_new(WAPCABA_PhoneIncomingCallNotificationTriggerDetails **out);
 
-/* Windows.ApplicationModel.Calls.Background.PhoneIncomingCallNotificationTriggerDetails */
-/* Windows.ApplicationModel.Calls.Background.PhoneIncomingCallNotificationTriggerDetails.get_LineId() */
 HRESULT wapcaba_phone_incoming_call_notification_trigger_details_get__line_id(WAPCABA_PhoneIncomingCallNotificationTriggerDetails *self, GUID *value);
 
-/* Windows.ApplicationModel.Calls.Background.PhoneIncomingCallNotificationTriggerDetails.get_CallId() */
 HRESULT wapcaba_phone_incoming_call_notification_trigger_details_get__call_id(WAPCABA_PhoneIncomingCallNotificationTriggerDetails *self, cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails */
 HRESULT wapcaba_phone_line_changed_trigger_details_new(WAPCABA_PhoneLineChangedTriggerDetails **out);
 
-/* Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails */
-/* Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails.get_LineId() */
 HRESULT wapcaba_phone_line_changed_trigger_details_get__line_id(WAPCABA_PhoneLineChangedTriggerDetails *self, GUID *value);
 
-/* Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails.get_ChangeType() */
 HRESULT wapcaba_phone_line_changed_trigger_details_get__change_type(WAPCABA_PhoneLineChangedTriggerDetails *self, WAPCABA_PhoneLineChangeKind *value);
 
-/* Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails.HasLinePropertyChanged(lineProperty) */
 HRESULT wapcaba_phone_line_changed_trigger_details_has_line_property_changed(WAPCABA_PhoneLineChangedTriggerDetails *self, WAPCABA_PhoneLineProperties lineProperty, BOOL *out);
 
-/* activate Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails */
 HRESULT wapcaba_phone_new_voicemail_message_trigger_details_new(WAPCABA_PhoneNewVoicemailMessageTriggerDetails **out);
 
-/* Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails */
-/* Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails.get_LineId() */
 HRESULT wapcaba_phone_new_voicemail_message_trigger_details_get__line_id(WAPCABA_PhoneNewVoicemailMessageTriggerDetails *self, GUID *value);
 
-/* Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails.get_VoicemailCount() */
 HRESULT wapcaba_phone_new_voicemail_message_trigger_details_get__voicemail_count(WAPCABA_PhoneNewVoicemailMessageTriggerDetails *self, int32_t *value);
 
-/* Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails.get_OperatorMessage() */
 HRESULT wapcaba_phone_new_voicemail_message_trigger_details_get__operator_message(WAPCABA_PhoneNewVoicemailMessageTriggerDetails *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.Background.IPhoneCallBlockedTriggerDetails */
-/* Windows.ApplicationModel.Calls.Background.IPhoneCallOriginDataRequestTriggerDetails */
-/* Windows.ApplicationModel.Calls.Background.IPhoneIncomingCallDismissedTriggerDetails */
-/* Windows.ApplicationModel.Calls.Background.IPhoneIncomingCallNotificationTriggerDetails */
-/* Windows.ApplicationModel.Calls.Background.IPhoneLineChangedTriggerDetails */
-/* Windows.ApplicationModel.Calls.Background.IPhoneNewVoicemailMessageTriggerDetails */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_H */

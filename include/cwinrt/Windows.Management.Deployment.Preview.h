@@ -12,13 +12,11 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WMADEPR_IClassicAppManagerStatics WMADEPR_IClassicAppManagerStatics;
 typedef struct WMADEPR_ClassicAppManager WMADEPR_ClassicAppManager;
 typedef struct WMADEPR_InstalledClassicAppInfo WMADEPR_InstalledClassicAppInfo;
 typedef struct WMADEPR_IInstalledClassicAppInfo WMADEPR_IInstalledClassicAppInfo;
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -31,28 +29,16 @@ static const IID CWINRT_IID_WMADEPR_IClassicAppManagerStatics CWINRT_MAYBE_UNUSE
 static const IID CWINRT_IID_WMADEPR_IInstalledClassicAppInfo CWINRT_MAYBE_UNUSED = { 0x0A7D3DA3, 0x65D0, 0x4086, { 0x80, 0xD6, 0x06, 0x10, 0xD7, 0x60, 0x20, 0x7D } };
 #endif
 
-/* Methods */
-
-/* Windows.Management.Deployment.Preview.IClassicAppManagerStatics */
-/* Windows.Management.Deployment.Preview.IClassicAppManagerStatics.FindInstalledApp(appUninstallKey) */
 HRESULT wmadepr_classic_app_manager_statics_find_installed_app(WMADEPR_IClassicAppManagerStatics *self, cwinrt_hstring appUninstallKey, WMADEPR_InstalledClassicAppInfo** out);
 
-/* activate Windows.Management.Deployment.Preview.ClassicAppManager */
 HRESULT wmadepr_classic_app_manager_new(WMADEPR_ClassicAppManager **out);
 
-/* Windows.Management.Deployment.Preview.ClassicAppManager */
-/* Windows.Management.Deployment.Preview.ClassicAppManager.FindInstalledApp(appUninstallKey) */
 HRESULT wmadepr_classic_app_manager_find_installed_app(cwinrt_hstring appUninstallKey, WMADEPR_InstalledClassicAppInfo** out);
 
-/* activate Windows.Management.Deployment.Preview.InstalledClassicAppInfo */
 HRESULT wmadepr_installed_classic_app_info_new(WMADEPR_InstalledClassicAppInfo **out);
 
-/* Windows.Management.Deployment.Preview.InstalledClassicAppInfo */
-/* Windows.Management.Deployment.Preview.InstalledClassicAppInfo.get_DisplayName() */
 HRESULT wmadepr_installed_classic_app_info_get__display_name(WMADEPR_InstalledClassicAppInfo *self, cwinrt_hstring *value);
 
-/* Windows.Management.Deployment.Preview.InstalledClassicAppInfo.get_DisplayVersion() */
 HRESULT wmadepr_installed_classic_app_info_get__display_version(WMADEPR_InstalledClassicAppInfo *self, cwinrt_hstring *value);
 
-/* Windows.Management.Deployment.Preview.IInstalledClassicAppInfo */
 #endif /* CWINRT_WINDOWS_MANAGEMENT_DEPLOYMENT_PREVIEW_H */

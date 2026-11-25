@@ -12,11 +12,9 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WDAHT_IHtmlUtilities WDAHT_IHtmlUtilities;
 typedef struct WDAHT_HtmlUtilities WDAHT_HtmlUtilities;
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -25,14 +23,8 @@ typedef struct WDAHT_HtmlUtilities WDAHT_HtmlUtilities;
 static const IID CWINRT_IID_WDAHT_IHtmlUtilities CWINRT_MAYBE_UNUSED = { 0xFEC00ADD, 0x2399, 0x4FAC, { 0xB5, 0xA7, 0x05, 0xE9, 0xAC, 0xD7, 0x18, 0x1D } };
 #endif
 
-/* Methods */
-
-/* Windows.Data.Html.IHtmlUtilities */
-/* activate Windows.Data.Html.HtmlUtilities */
 HRESULT wdaht_html_utilities_new(WDAHT_HtmlUtilities **out);
 
-/* Windows.Data.Html.HtmlUtilities */
-/* Windows.Data.Html.HtmlUtilities.ConvertToText(html) */
 HRESULT wdaht_html_utilities_convert_to_text(cwinrt_hstring html, cwinrt_hstring *out);
 
 #endif /* CWINRT_WINDOWS_DATA_HTML_H */

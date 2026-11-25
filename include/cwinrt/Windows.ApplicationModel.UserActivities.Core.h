@@ -13,11 +13,9 @@
 #include <cwinrt/Windows.ApplicationModel.UserActivities.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WAPUSCO_CoreUserActivityManager WAPUSCO_CoreUserActivityManager;
 typedef struct WAPUSCO_ICoreUserActivityManagerStatics WAPUSCO_ICoreUserActivityManagerStatics;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WAPUS_UserActivity
 #define CWINRT_FWD_WAPUS_UserActivity
 typedef struct WAPUS_UserActivity WAPUS_UserActivity;
@@ -39,7 +37,6 @@ typedef struct WF_DateTime WF_DateTime;
 typedef struct WF_IAsyncAction WF_IAsyncAction;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -48,23 +45,14 @@ typedef struct WF_IAsyncAction WF_IAsyncAction;
 static const IID CWINRT_IID_WAPUSCO_ICoreUserActivityManagerStatics CWINRT_MAYBE_UNUSED = { 0xCA3ADB02, 0xA4BE, 0x4D4D, { 0xBF, 0xA8, 0x67, 0x95, 0xF4, 0x26, 0x4E, 0xFB } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.UserActivities.Core.CoreUserActivityManager */
 HRESULT wapusco_core_user_activity_manager_new(WAPUSCO_CoreUserActivityManager **out);
 
-/* Windows.ApplicationModel.UserActivities.Core.CoreUserActivityManager */
-/* Windows.ApplicationModel.UserActivities.Core.CoreUserActivityManager.CreateUserActivitySessionInBackground(activity) */
 HRESULT wapusco_core_user_activity_manager_create_user_activity_session_in_background(WAPUS_UserActivity* activity, WAPUS_UserActivitySession** out);
 
-/* Windows.ApplicationModel.UserActivities.Core.CoreUserActivityManager.DeleteUserActivitySessionsInTimeRangeAsync(channel, startTime, endTime) */
 HRESULT wapusco_core_user_activity_manager_delete_user_activity_sessions_in_time_range_async(WAPUS_UserActivityChannel* channel, WF_DateTime startTime, WF_DateTime endTime, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.UserActivities.Core.ICoreUserActivityManagerStatics */
-/* Windows.ApplicationModel.UserActivities.Core.ICoreUserActivityManagerStatics.CreateUserActivitySessionInBackground(activity) */
 HRESULT wapusco_core_user_activity_manager_statics_create_user_activity_session_in_background(WAPUSCO_ICoreUserActivityManagerStatics *self, WAPUS_UserActivity* activity, WAPUS_UserActivitySession** out);
 
-/* Windows.ApplicationModel.UserActivities.Core.ICoreUserActivityManagerStatics.DeleteUserActivitySessionsInTimeRangeAsync(channel, startTime, endTime) */
 HRESULT wapusco_core_user_activity_manager_statics_delete_user_activity_sessions_in_time_range_async(WAPUSCO_ICoreUserActivityManagerStatics *self, WAPUS_UserActivityChannel* channel, WF_DateTime startTime, WF_DateTime endTime, WF_IAsyncAction** out);
 
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_USERACTIVITIES_CORE_H */

@@ -13,12 +13,10 @@
 #include <cwinrt/Windows.UI.Notifications.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WUINOMA_UserNotificationListener WUINOMA_UserNotificationListener;
 typedef struct WUINOMA_IUserNotificationListenerStatics WUINOMA_IUserNotificationListenerStatics;
 typedef struct WUINOMA_IUserNotificationListener WUINOMA_IUserNotificationListener;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WUINOMA_UserNotificationListenerAccessStatus
 #define CWINRT_FWD_WF_IAsyncOperation_WUINOMA_UserNotificationListenerAccessStatus
 typedef struct WF_IAsyncOperation_WUINOMA_UserNotificationListenerAccessStatus WF_IAsyncOperation_WUINOMA_UserNotificationListenerAccessStatus;
@@ -53,7 +51,6 @@ typedef enum WUINOMA_UserNotificationListenerAccessStatus {
 } WUINOMA_UserNotificationListenerAccessStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -66,42 +63,27 @@ static const IID CWINRT_IID_WUINOMA_IUserNotificationListenerStatics CWINRT_MAYB
 static const IID CWINRT_IID_WUINOMA_IUserNotificationListener CWINRT_MAYBE_UNUSED = { 0x62553E41, 0x8A06, 0x4CEF, { 0x82, 0x15, 0x60, 0x33, 0xA5, 0xBE, 0x4B, 0x03 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.UI.Notifications.Management.UserNotificationListener */
 HRESULT wuinoma_user_notification_listener_new(WUINOMA_UserNotificationListener **out);
 
-/* Windows.UI.Notifications.Management.UserNotificationListener */
-/* Windows.UI.Notifications.Management.UserNotificationListener.RequestAccessAsync() */
 HRESULT wuinoma_user_notification_listener_request_access_async(WUINOMA_UserNotificationListener *self, WF_IAsyncOperation_WUINOMA_UserNotificationListenerAccessStatus** out);
 
-/* Windows.UI.Notifications.Management.UserNotificationListener.GetAccessStatus() */
 HRESULT wuinoma_user_notification_listener_get_access_status(WUINOMA_UserNotificationListener *self, WUINOMA_UserNotificationListenerAccessStatus *out);
 
-/* Windows.UI.Notifications.Management.UserNotificationListener.GetNotificationsAsync(kinds) */
 HRESULT wuinoma_user_notification_listener_get_notifications_async(WUINOMA_UserNotificationListener *self, WUINO_NotificationKinds kinds, WF_IAsyncOperation_WFOCO_IVectorView_WUINO_UserNotification** out);
 
-/* Windows.UI.Notifications.Management.UserNotificationListener.GetNotification(notificationId) */
 HRESULT wuinoma_user_notification_listener_get_notification(WUINOMA_UserNotificationListener *self, uint32_t notificationId, WUINO_UserNotification** out);
 
-/* Windows.UI.Notifications.Management.UserNotificationListener.ClearNotifications() */
 HRESULT wuinoma_user_notification_listener_clear_notifications(WUINOMA_UserNotificationListener *self);
 
-/* Windows.UI.Notifications.Management.UserNotificationListener.RemoveNotification(notificationId) */
 HRESULT wuinoma_user_notification_listener_remove_notification(WUINOMA_UserNotificationListener *self, uint32_t notificationId);
 
-/* Windows.UI.Notifications.Management.UserNotificationListener.get_Current() */
 HRESULT wuinoma_user_notification_listener_get__current(WUINOMA_UserNotificationListener** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuinoma_user_notification_listener_on_notification_changed(WUINOMA_UserNotificationListener *self, cwinrt_event_fn fn, void *ctx);
 void wuinoma_user_notification_listener_off_notification_changed(WUINOMA_UserNotificationListener *self, cwinrt_token token);
 
-/* Windows.UI.Notifications.Management.IUserNotificationListenerStatics */
-/* Windows.UI.Notifications.Management.IUserNotificationListenerStatics.get_Current() */
 HRESULT wuinoma_user_notification_listener_statics_get__current(WUINOMA_IUserNotificationListenerStatics *self, WUINOMA_UserNotificationListener** value);
 
-/* Windows.UI.Notifications.Management.IUserNotificationListener */
 #endif /* CWINRT_WINDOWS_UI_NOTIFICATIONS_MANAGEMENT_H */

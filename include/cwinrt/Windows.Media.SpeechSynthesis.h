@@ -14,7 +14,6 @@
 #include <cwinrt/Windows.Storage.Streams.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStreamWithContentType
 #define CWINRT_FWD_WSTST_IRandomAccessStreamWithContentType
 typedef struct WSTST_IRandomAccessStreamWithContentType WSTST_IRandomAccessStreamWithContentType;
@@ -48,7 +47,6 @@ typedef struct WSTST_IBuffer WSTST_IBuffer;
 typedef struct WMECO_TimedMetadataTrack WMECO_TimedMetadataTrack;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMESP_SpeechSynthesisStream WMESP_SpeechSynthesisStream;
 typedef struct WMESP_SpeechSynthesizer WMESP_SpeechSynthesizer;
 typedef struct WMESP_SpeechSynthesizerOptions WMESP_SpeechSynthesizerOptions;
@@ -63,7 +61,6 @@ typedef struct WMESP_ISpeechSynthesizerOptions_2 WMESP_ISpeechSynthesizerOptions
 typedef struct WMESP_ISpeechSynthesizerOptions_3 WMESP_ISpeechSynthesizerOptions_3;
 typedef struct WMESP_IVoiceInformation WMESP_IVoiceInformation;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IVectorView_WME_IMediaMarker
 #define CWINRT_FWD_WFOCO_IVectorView_WME_IMediaMarker
 typedef struct WFOCO_IVectorView_WME_IMediaMarker WFOCO_IVectorView_WME_IMediaMarker;
@@ -142,7 +139,6 @@ typedef enum WMESP_SpeechAppendedSilence {
 } WMESP_SpeechAppendedSilence;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -183,205 +179,128 @@ static const IID CWINRT_IID_WMESP_ISpeechSynthesizerOptions_3 CWINRT_MAYBE_UNUSE
 static const IID CWINRT_IID_WMESP_IVoiceInformation CWINRT_MAYBE_UNUSED = { 0xB127D6A4, 0x1291, 0x4604, { 0xAA, 0x9C, 0x83, 0x13, 0x40, 0x83, 0x35, 0x2C } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Media.SpeechSynthesis.SpeechSynthesisStream */
 HRESULT wmesp_speech_synthesis_stream_new(WMESP_SpeechSynthesisStream **out);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesisStream */
-/* Windows.Media.SpeechSynthesis.SpeechSynthesisStream.get_Markers() */
 HRESULT wmesp_speech_synthesis_stream_get__markers(WMESP_SpeechSynthesisStream *self, WFOCO_IVectorView_WME_IMediaMarker** value);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesisStream.get_Size() */
 HRESULT wmesp_speech_synthesis_stream_get__size(WMESP_SpeechSynthesisStream *self, uint64_t *value);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesisStream.put_Size() */
 HRESULT wmesp_speech_synthesis_stream_put__size(WMESP_SpeechSynthesisStream *self, uint64_t value);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesisStream.GetInputStreamAt(position) */
 HRESULT wmesp_speech_synthesis_stream_get_input_stream_at(WMESP_SpeechSynthesisStream *self, uint64_t position, WSTST_IInputStream** out);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesisStream.GetOutputStreamAt(position) */
 HRESULT wmesp_speech_synthesis_stream_get_output_stream_at(WMESP_SpeechSynthesisStream *self, uint64_t position, WSTST_IOutputStream** out);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesisStream.get_Position() */
 HRESULT wmesp_speech_synthesis_stream_get__position(WMESP_SpeechSynthesisStream *self, uint64_t *value);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesisStream.Seek(position) */
 HRESULT wmesp_speech_synthesis_stream_seek(WMESP_SpeechSynthesisStream *self, uint64_t position);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesisStream.CloneStream() */
 HRESULT wmesp_speech_synthesis_stream_clone_stream(WMESP_SpeechSynthesisStream *self, WSTST_IRandomAccessStream** out);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesisStream.get_CanRead() */
 HRESULT wmesp_speech_synthesis_stream_get__can_read(WMESP_SpeechSynthesisStream *self, BOOL *value);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesisStream.get_CanWrite() */
 HRESULT wmesp_speech_synthesis_stream_get__can_write(WMESP_SpeechSynthesisStream *self, BOOL *value);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesisStream.Close() */
 HRESULT wmesp_speech_synthesis_stream_close(WMESP_SpeechSynthesisStream *self);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesisStream.ReadAsync(buffer, count, options) */
 HRESULT wmesp_speech_synthesis_stream_read_async(WMESP_SpeechSynthesisStream *self, WSTST_IBuffer* buffer, uint32_t count, WSTST_InputStreamOptions options, WF_IAsyncOperationWithProgress_WSTST_IBuffer_uint32_t** out);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesisStream.WriteAsync(buffer) */
 HRESULT wmesp_speech_synthesis_stream_write_async(WMESP_SpeechSynthesisStream *self, WSTST_IBuffer* buffer, WF_IAsyncOperationWithProgress_uint32_t_uint32_t** out);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesisStream.FlushAsync() */
 HRESULT wmesp_speech_synthesis_stream_flush_async(WMESP_SpeechSynthesisStream *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesisStream.get_ContentType() */
 HRESULT wmesp_speech_synthesis_stream_get__content_type(WMESP_SpeechSynthesisStream *self, cwinrt_hstring *value);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesisStream.get_TimedMetadataTracks() */
 HRESULT wmesp_speech_synthesis_stream_get__timed_metadata_tracks(WMESP_SpeechSynthesisStream *self, WFOCO_IVectorView_WMECO_TimedMetadataTrack** value);
 
-/* activate Windows.Media.SpeechSynthesis.SpeechSynthesizer */
 HRESULT wmesp_speech_synthesizer_new(WMESP_SpeechSynthesizer **out);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesizer */
-/* Windows.Media.SpeechSynthesis.SpeechSynthesizer.SynthesizeTextToStreamAsync(text) */
 HRESULT wmesp_speech_synthesizer_synthesize_text_to_stream_async(WMESP_SpeechSynthesizer *self, cwinrt_hstring text, WF_IAsyncOperation_WMESP_SpeechSynthesisStream** out);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesizer.SynthesizeSsmlToStreamAsync(Ssml) */
 HRESULT wmesp_speech_synthesizer_synthesize_ssml_to_stream_async(WMESP_SpeechSynthesizer *self, cwinrt_hstring Ssml, WF_IAsyncOperation_WMESP_SpeechSynthesisStream** out);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesizer.put_Voice() */
 HRESULT wmesp_speech_synthesizer_put__voice(WMESP_SpeechSynthesizer *self, WMESP_VoiceInformation* value);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesizer.get_Voice() */
 HRESULT wmesp_speech_synthesizer_get__voice(WMESP_SpeechSynthesizer *self, WMESP_VoiceInformation** value);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesizer.Close() */
 HRESULT wmesp_speech_synthesizer_close(WMESP_SpeechSynthesizer *self);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesizer.get_Options() */
 HRESULT wmesp_speech_synthesizer_get__options(WMESP_SpeechSynthesizer *self, WMESP_SpeechSynthesizerOptions** value);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesizer.TrySetDefaultVoiceAsync(voice) */
 HRESULT wmesp_speech_synthesizer_try_set_default_voice_async(WMESP_VoiceInformation* voice, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesizer.get_AllVoices() */
 HRESULT wmesp_speech_synthesizer_get__all_voices(WFOCO_IVectorView_WMESP_VoiceInformation** value);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesizer.get_DefaultVoice() */
 HRESULT wmesp_speech_synthesizer_get__default_voice(WMESP_VoiceInformation** value);
 
-/* activate Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions */
 HRESULT wmesp_speech_synthesizer_options_new(WMESP_SpeechSynthesizerOptions **out);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions */
-/* Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions.get_IncludeWordBoundaryMetadata() */
 HRESULT wmesp_speech_synthesizer_options_get__include_word_boundary_metadata(WMESP_SpeechSynthesizerOptions *self, BOOL *value);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions.put_IncludeWordBoundaryMetadata() */
 HRESULT wmesp_speech_synthesizer_options_put__include_word_boundary_metadata(WMESP_SpeechSynthesizerOptions *self, BOOL value);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions.get_IncludeSentenceBoundaryMetadata() */
 HRESULT wmesp_speech_synthesizer_options_get__include_sentence_boundary_metadata(WMESP_SpeechSynthesizerOptions *self, BOOL *value);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions.put_IncludeSentenceBoundaryMetadata() */
 HRESULT wmesp_speech_synthesizer_options_put__include_sentence_boundary_metadata(WMESP_SpeechSynthesizerOptions *self, BOOL value);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions.get_AudioVolume() */
 HRESULT wmesp_speech_synthesizer_options_get__audio_volume(WMESP_SpeechSynthesizerOptions *self, double *value);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions.put_AudioVolume() */
 HRESULT wmesp_speech_synthesizer_options_put__audio_volume(WMESP_SpeechSynthesizerOptions *self, double value);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions.get_SpeakingRate() */
 HRESULT wmesp_speech_synthesizer_options_get__speaking_rate(WMESP_SpeechSynthesizerOptions *self, double *value);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions.put_SpeakingRate() */
 HRESULT wmesp_speech_synthesizer_options_put__speaking_rate(WMESP_SpeechSynthesizerOptions *self, double value);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions.get_AudioPitch() */
 HRESULT wmesp_speech_synthesizer_options_get__audio_pitch(WMESP_SpeechSynthesizerOptions *self, double *value);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions.put_AudioPitch() */
 HRESULT wmesp_speech_synthesizer_options_put__audio_pitch(WMESP_SpeechSynthesizerOptions *self, double value);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions.get_AppendedSilence() */
 HRESULT wmesp_speech_synthesizer_options_get__appended_silence(WMESP_SpeechSynthesizerOptions *self, WMESP_SpeechAppendedSilence *value);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions.put_AppendedSilence() */
 HRESULT wmesp_speech_synthesizer_options_put__appended_silence(WMESP_SpeechSynthesizerOptions *self, WMESP_SpeechAppendedSilence value);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions.get_PunctuationSilence() */
 HRESULT wmesp_speech_synthesizer_options_get__punctuation_silence(WMESP_SpeechSynthesizerOptions *self, WMESP_SpeechPunctuationSilence *value);
 
-/* Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions.put_PunctuationSilence() */
 HRESULT wmesp_speech_synthesizer_options_put__punctuation_silence(WMESP_SpeechSynthesizerOptions *self, WMESP_SpeechPunctuationSilence value);
 
-/* activate Windows.Media.SpeechSynthesis.VoiceInformation */
 HRESULT wmesp_voice_information_new(WMESP_VoiceInformation **out);
 
-/* Windows.Media.SpeechSynthesis.VoiceInformation */
-/* Windows.Media.SpeechSynthesis.VoiceInformation.get_DisplayName() */
 HRESULT wmesp_voice_information_get__display_name(WMESP_VoiceInformation *self, cwinrt_hstring *value);
 
-/* Windows.Media.SpeechSynthesis.VoiceInformation.get_Id() */
 HRESULT wmesp_voice_information_get__id(WMESP_VoiceInformation *self, cwinrt_hstring *value);
 
-/* Windows.Media.SpeechSynthesis.VoiceInformation.get_Language() */
 HRESULT wmesp_voice_information_get__language(WMESP_VoiceInformation *self, cwinrt_hstring *value);
 
-/* Windows.Media.SpeechSynthesis.VoiceInformation.get_Description() */
 HRESULT wmesp_voice_information_get__description(WMESP_VoiceInformation *self, cwinrt_hstring *value);
 
-/* Windows.Media.SpeechSynthesis.VoiceInformation.get_Gender() */
 HRESULT wmesp_voice_information_get__gender(WMESP_VoiceInformation *self, WMESP_VoiceGender *value);
 
-/* Windows.Media.SpeechSynthesis.IInstalledVoicesStatic */
-/* Windows.Media.SpeechSynthesis.IInstalledVoicesStatic.get_AllVoices() */
 HRESULT wmesp_installed_voices_static_get__all_voices(WMESP_IInstalledVoicesStatic *self, WFOCO_IVectorView_WMESP_VoiceInformation** value);
 
-/* Windows.Media.SpeechSynthesis.IInstalledVoicesStatic.get_DefaultVoice() */
 HRESULT wmesp_installed_voices_static_get__default_voice(WMESP_IInstalledVoicesStatic *self, WMESP_VoiceInformation** value);
 
-/* Windows.Media.SpeechSynthesis.IInstalledVoicesStatic2 */
-/* Windows.Media.SpeechSynthesis.IInstalledVoicesStatic2.TrySetDefaultVoiceAsync(voice) */
 HRESULT wmesp_installed_voices_static_2_try_set_default_voice_async(WMESP_IInstalledVoicesStatic_2 *self, WMESP_VoiceInformation* voice, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Media.SpeechSynthesis.ISpeechSynthesisStream */
-/* Windows.Media.SpeechSynthesis.ISpeechSynthesizer */
-/* Windows.Media.SpeechSynthesis.ISpeechSynthesizer2 */
-/* Windows.Media.SpeechSynthesis.ISpeechSynthesizer2.get_Options() */
 HRESULT wmesp_speech_synthesizer_2_get__options(WMESP_ISpeechSynthesizer_2 *self, WMESP_SpeechSynthesizerOptions** value);
 
-/* Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions */
-/* Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2 */
-/* Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2.get_AudioVolume() */
 HRESULT wmesp_speech_synthesizer_options_2_get__audio_volume(WMESP_ISpeechSynthesizerOptions_2 *self, double *value);
 
-/* Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2.put_AudioVolume() */
 HRESULT wmesp_speech_synthesizer_options_2_put__audio_volume(WMESP_ISpeechSynthesizerOptions_2 *self, double value);
 
-/* Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2.get_SpeakingRate() */
 HRESULT wmesp_speech_synthesizer_options_2_get__speaking_rate(WMESP_ISpeechSynthesizerOptions_2 *self, double *value);
 
-/* Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2.put_SpeakingRate() */
 HRESULT wmesp_speech_synthesizer_options_2_put__speaking_rate(WMESP_ISpeechSynthesizerOptions_2 *self, double value);
 
-/* Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2.get_AudioPitch() */
 HRESULT wmesp_speech_synthesizer_options_2_get__audio_pitch(WMESP_ISpeechSynthesizerOptions_2 *self, double *value);
 
-/* Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2.put_AudioPitch() */
 HRESULT wmesp_speech_synthesizer_options_2_put__audio_pitch(WMESP_ISpeechSynthesizerOptions_2 *self, double value);
 
-/* Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions3 */
-/* Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions3.get_AppendedSilence() */
 HRESULT wmesp_speech_synthesizer_options_3_get__appended_silence(WMESP_ISpeechSynthesizerOptions_3 *self, WMESP_SpeechAppendedSilence *value);
 
-/* Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions3.put_AppendedSilence() */
 HRESULT wmesp_speech_synthesizer_options_3_put__appended_silence(WMESP_ISpeechSynthesizerOptions_3 *self, WMESP_SpeechAppendedSilence value);
 
-/* Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions3.get_PunctuationSilence() */
 HRESULT wmesp_speech_synthesizer_options_3_get__punctuation_silence(WMESP_ISpeechSynthesizerOptions_3 *self, WMESP_SpeechPunctuationSilence *value);
 
-/* Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions3.put_PunctuationSilence() */
 HRESULT wmesp_speech_synthesizer_options_3_put__punctuation_silence(WMESP_ISpeechSynthesizerOptions_3 *self, WMESP_SpeechPunctuationSilence value);
 
-/* Windows.Media.SpeechSynthesis.IVoiceInformation */
 #endif /* CWINRT_WINDOWS_MEDIA_SPEECHSYNTHESIS_H */

@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WDEGE_GeocoordinateSatelliteData WDEGE_GeocoordinateSatelliteData;
 typedef struct WDEGE_GeoboundingBox WDEGE_GeoboundingBox;
 typedef struct WDEGE_CivicAddress WDEGE_CivicAddress;
@@ -63,7 +62,6 @@ typedef struct WDEGE_IGeolocator WDEGE_IGeolocator;
 typedef struct WDEGE_IGeoposition WDEGE_IGeoposition;
 typedef struct WDEGE_IGeoshape WDEGE_IGeoshape;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IIterable_WDEGE_BasicGeoposition
 #define CWINRT_FWD_WFOCO_IIterable_WDEGE_BasicGeoposition
 typedef struct WFOCO_IIterable_WDEGE_BasicGeoposition WFOCO_IIterable_WDEGE_BasicGeoposition;
@@ -207,7 +205,6 @@ struct WDEGE_BasicGeoposition {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -344,209 +341,134 @@ static const IID CWINRT_IID_WDEGE_IGeoposition CWINRT_MAYBE_UNUSED = { 0xC18D045
 static const IID CWINRT_IID_WDEGE_IGeoshape CWINRT_MAYBE_UNUSED = { 0xC99CA2AF, 0xC729, 0x43C1, { 0x8F, 0xAB, 0xD6, 0xDE, 0xC9, 0x14, 0xDF, 0x7E } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Devices.Geolocation.GeocoordinateSatelliteData */
 HRESULT wdege_geocoordinate_satellite_data_new(WDEGE_GeocoordinateSatelliteData **out);
 
-/* Windows.Devices.Geolocation.GeocoordinateSatelliteData */
-/* Windows.Devices.Geolocation.GeocoordinateSatelliteData.get_PositionDilutionOfPrecision() */
 HRESULT wdege_geocoordinate_satellite_data_get__position_dilution_of_precision(WDEGE_GeocoordinateSatelliteData *self, double** value);
 
-/* Windows.Devices.Geolocation.GeocoordinateSatelliteData.get_HorizontalDilutionOfPrecision() */
 HRESULT wdege_geocoordinate_satellite_data_get__horizontal_dilution_of_precision(WDEGE_GeocoordinateSatelliteData *self, double** value);
 
-/* Windows.Devices.Geolocation.GeocoordinateSatelliteData.get_VerticalDilutionOfPrecision() */
 HRESULT wdege_geocoordinate_satellite_data_get__vertical_dilution_of_precision(WDEGE_GeocoordinateSatelliteData *self, double** value);
 
-/* Windows.Devices.Geolocation.GeocoordinateSatelliteData.get_GeometricDilutionOfPrecision() */
 HRESULT wdege_geocoordinate_satellite_data_get__geometric_dilution_of_precision(WDEGE_GeocoordinateSatelliteData *self, double** value);
 
-/* Windows.Devices.Geolocation.GeocoordinateSatelliteData.get_TimeDilutionOfPrecision() */
 HRESULT wdege_geocoordinate_satellite_data_get__time_dilution_of_precision(WDEGE_GeocoordinateSatelliteData *self, double** value);
 
-/* activate Windows.Devices.Geolocation.GeoboundingBox */
 HRESULT wdege_geobounding_box_new(WDEGE_GeoboundingBox **out);
 
-/* Windows.Devices.Geolocation.GeoboundingBox */
-/* Windows.Devices.Geolocation.GeoboundingBox.get_NorthwestCorner() */
 HRESULT wdege_geobounding_box_get__northwest_corner(WDEGE_GeoboundingBox *self, WDEGE_BasicGeoposition *value);
 
-/* Windows.Devices.Geolocation.GeoboundingBox.get_SoutheastCorner() */
 HRESULT wdege_geobounding_box_get__southeast_corner(WDEGE_GeoboundingBox *self, WDEGE_BasicGeoposition *value);
 
-/* Windows.Devices.Geolocation.GeoboundingBox.get_Center() */
 HRESULT wdege_geobounding_box_get__center(WDEGE_GeoboundingBox *self, WDEGE_BasicGeoposition *value);
 
-/* Windows.Devices.Geolocation.GeoboundingBox.get_MinAltitude() */
 HRESULT wdege_geobounding_box_get__min_altitude(WDEGE_GeoboundingBox *self, double *value);
 
-/* Windows.Devices.Geolocation.GeoboundingBox.get_MaxAltitude() */
 HRESULT wdege_geobounding_box_get__max_altitude(WDEGE_GeoboundingBox *self, double *value);
 
-/* Windows.Devices.Geolocation.GeoboundingBox.get_GeoshapeType() */
 HRESULT wdege_geobounding_box_get__geoshape_type(WDEGE_GeoboundingBox *self, WDEGE_GeoshapeType *value);
 
-/* Windows.Devices.Geolocation.GeoboundingBox.get_SpatialReferenceId() */
 HRESULT wdege_geobounding_box_get__spatial_reference_id(WDEGE_GeoboundingBox *self, uint32_t *value);
 
-/* Windows.Devices.Geolocation.GeoboundingBox.get_AltitudeReferenceSystem() */
 HRESULT wdege_geobounding_box_get__altitude_reference_system(WDEGE_GeoboundingBox *self, WDEGE_AltitudeReferenceSystem *value);
 
-/* Windows.Devices.Geolocation.GeoboundingBox.TryCompute(positions) */
 HRESULT wdege_geobounding_box_try_compute(WFOCO_IIterable_WDEGE_BasicGeoposition* positions, WDEGE_GeoboundingBox** out);
 
-/* Windows.Devices.Geolocation.GeoboundingBox.TryCompute(positions, altitudeRefSystem) */
 HRESULT wdege_geobounding_box_try_compute_p_altitude_reference_system_p(WFOCO_IIterable_WDEGE_BasicGeoposition* positions, WDEGE_AltitudeReferenceSystem altitudeRefSystem, WDEGE_GeoboundingBox** out);
 
-/* Windows.Devices.Geolocation.GeoboundingBox.TryCompute(positions, altitudeRefSystem, spatialReferenceId) */
 HRESULT wdege_geobounding_box_try_compute_p_altitude_reference_system_u32_p(WFOCO_IIterable_WDEGE_BasicGeoposition* positions, WDEGE_AltitudeReferenceSystem altitudeRefSystem, uint32_t spatialReferenceId, WDEGE_GeoboundingBox** out);
 
-/* activate Windows.Devices.Geolocation.CivicAddress */
 HRESULT wdege_civic_address_new(WDEGE_CivicAddress **out);
 
-/* Windows.Devices.Geolocation.CivicAddress */
-/* Windows.Devices.Geolocation.CivicAddress.get_Country() */
 HRESULT wdege_civic_address_get__country(WDEGE_CivicAddress *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Geolocation.CivicAddress.get_State() */
 HRESULT wdege_civic_address_get__state(WDEGE_CivicAddress *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Geolocation.CivicAddress.get_City() */
 HRESULT wdege_civic_address_get__city(WDEGE_CivicAddress *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Geolocation.CivicAddress.get_PostalCode() */
 HRESULT wdege_civic_address_get__postal_code(WDEGE_CivicAddress *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Geolocation.CivicAddress.get_Timestamp() */
 HRESULT wdege_civic_address_get__timestamp(WDEGE_CivicAddress *self, WF_DateTime *value);
 
-/* activate Windows.Devices.Geolocation.Geocoordinate */
 HRESULT wdege_geocoordinate_new(WDEGE_Geocoordinate **out);
 
-/* Windows.Devices.Geolocation.Geocoordinate */
-/* Windows.Devices.Geolocation.Geocoordinate.get_Latitude() */
 HRESULT wdege_geocoordinate_get__latitude(WDEGE_Geocoordinate *self, double *value);
 
-/* Windows.Devices.Geolocation.Geocoordinate.get_Longitude() */
 HRESULT wdege_geocoordinate_get__longitude(WDEGE_Geocoordinate *self, double *value);
 
-/* Windows.Devices.Geolocation.Geocoordinate.get_Altitude() */
 HRESULT wdege_geocoordinate_get__altitude(WDEGE_Geocoordinate *self, double** value);
 
-/* Windows.Devices.Geolocation.Geocoordinate.get_Accuracy() */
 HRESULT wdege_geocoordinate_get__accuracy(WDEGE_Geocoordinate *self, double *value);
 
-/* Windows.Devices.Geolocation.Geocoordinate.get_AltitudeAccuracy() */
 HRESULT wdege_geocoordinate_get__altitude_accuracy(WDEGE_Geocoordinate *self, double** value);
 
-/* Windows.Devices.Geolocation.Geocoordinate.get_Heading() */
 HRESULT wdege_geocoordinate_get__heading(WDEGE_Geocoordinate *self, double** value);
 
-/* Windows.Devices.Geolocation.Geocoordinate.get_Speed() */
 HRESULT wdege_geocoordinate_get__speed(WDEGE_Geocoordinate *self, double** value);
 
-/* Windows.Devices.Geolocation.Geocoordinate.get_Timestamp() */
 HRESULT wdege_geocoordinate_get__timestamp(WDEGE_Geocoordinate *self, WF_DateTime *value);
 
-/* Windows.Devices.Geolocation.Geocoordinate.get_PositionSource() */
 HRESULT wdege_geocoordinate_get__position_source(WDEGE_Geocoordinate *self, WDEGE_PositionSource *value);
 
-/* Windows.Devices.Geolocation.Geocoordinate.get_SatelliteData() */
 HRESULT wdege_geocoordinate_get__satellite_data(WDEGE_Geocoordinate *self, WDEGE_GeocoordinateSatelliteData** value);
 
-/* Windows.Devices.Geolocation.Geocoordinate.get_Point() */
 HRESULT wdege_geocoordinate_get__point(WDEGE_Geocoordinate *self, WDEGE_Geopoint** value);
 
-/* Windows.Devices.Geolocation.Geocoordinate.get_PositionSourceTimestamp() */
 HRESULT wdege_geocoordinate_get__position_source_timestamp(WDEGE_Geocoordinate *self, WF_DateTime** value);
 
-/* Windows.Devices.Geolocation.Geocoordinate.get_IsRemoteSource() */
 HRESULT wdege_geocoordinate_get__is_remote_source(WDEGE_Geocoordinate *self, BOOL *value);
 
-/* activate Windows.Devices.Geolocation.VenueData */
 HRESULT wdege_venue_data_new(WDEGE_VenueData **out);
 
-/* Windows.Devices.Geolocation.VenueData */
-/* Windows.Devices.Geolocation.VenueData.get_Id() */
 HRESULT wdege_venue_data_get__id(WDEGE_VenueData *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Geolocation.VenueData.get_Level() */
 HRESULT wdege_venue_data_get__level(WDEGE_VenueData *self, cwinrt_hstring *value);
 
-/* activate Windows.Devices.Geolocation.StatusChangedEventArgs */
 HRESULT wdege_status_changed_event_args_new(WDEGE_StatusChangedEventArgs **out);
 
-/* Windows.Devices.Geolocation.StatusChangedEventArgs */
-/* Windows.Devices.Geolocation.StatusChangedEventArgs.get_Status() */
 HRESULT wdege_status_changed_event_args_get__status(WDEGE_StatusChangedEventArgs *self, WDEGE_PositionStatus *value);
 
-/* activate Windows.Devices.Geolocation.PositionChangedEventArgs */
 HRESULT wdege_position_changed_event_args_new(WDEGE_PositionChangedEventArgs **out);
 
-/* Windows.Devices.Geolocation.PositionChangedEventArgs */
-/* Windows.Devices.Geolocation.PositionChangedEventArgs.get_Position() */
 HRESULT wdege_position_changed_event_args_get__position(WDEGE_PositionChangedEventArgs *self, WDEGE_Geoposition** value);
 
-/* activate Windows.Devices.Geolocation.Geolocator */
 HRESULT wdege_geolocator_new(WDEGE_Geolocator **out);
 
-/* Windows.Devices.Geolocation.Geolocator */
-/* Windows.Devices.Geolocation.Geolocator.get_DesiredAccuracy() */
 HRESULT wdege_geolocator_get__desired_accuracy(WDEGE_Geolocator *self, WDEGE_PositionAccuracy *value);
 
-/* Windows.Devices.Geolocation.Geolocator.put_DesiredAccuracy() */
 HRESULT wdege_geolocator_put__desired_accuracy(WDEGE_Geolocator *self, WDEGE_PositionAccuracy value);
 
-/* Windows.Devices.Geolocation.Geolocator.get_MovementThreshold() */
 HRESULT wdege_geolocator_get__movement_threshold(WDEGE_Geolocator *self, double *value);
 
-/* Windows.Devices.Geolocation.Geolocator.put_MovementThreshold() */
 HRESULT wdege_geolocator_put__movement_threshold(WDEGE_Geolocator *self, double value);
 
-/* Windows.Devices.Geolocation.Geolocator.get_ReportInterval() */
 HRESULT wdege_geolocator_get__report_interval(WDEGE_Geolocator *self, uint32_t *value);
 
-/* Windows.Devices.Geolocation.Geolocator.put_ReportInterval() */
 HRESULT wdege_geolocator_put__report_interval(WDEGE_Geolocator *self, uint32_t value);
 
-/* Windows.Devices.Geolocation.Geolocator.get_LocationStatus() */
 HRESULT wdege_geolocator_get__location_status(WDEGE_Geolocator *self, WDEGE_PositionStatus *value);
 
-/* Windows.Devices.Geolocation.Geolocator.GetGeopositionAsync() */
 HRESULT wdege_geolocator_get_geoposition_async(WDEGE_Geolocator *self, WF_IAsyncOperation_WDEGE_Geoposition** out);
 
-/* Windows.Devices.Geolocation.Geolocator.GetGeopositionAsync(maximumAge, timeout) */
 HRESULT wdege_geolocator_get_geoposition_async_time_span_time_span_p(WDEGE_Geolocator *self, WF_TimeSpan maximumAge, WF_TimeSpan timeout, WF_IAsyncOperation_WDEGE_Geoposition** out);
 
-/* Windows.Devices.Geolocation.Geolocator.get_DesiredAccuracyInMeters() */
 HRESULT wdege_geolocator_get__desired_accuracy_in_meters(WDEGE_Geolocator *self, uint32_t** value);
 
-/* Windows.Devices.Geolocation.Geolocator.put_DesiredAccuracyInMeters() */
 HRESULT wdege_geolocator_put__desired_accuracy_in_meters(WDEGE_Geolocator *self, uint32_t* value);
 
-/* Windows.Devices.Geolocation.Geolocator.AllowFallbackToConsentlessPositions() */
 HRESULT wdege_geolocator_allow_fallback_to_consentless_positions(WDEGE_Geolocator *self);
 
-/* Windows.Devices.Geolocation.Geolocator.get_IsDefaultGeopositionRecommended() */
 HRESULT wdege_geolocator_get__is_default_geoposition_recommended(BOOL *value);
 
-/* Windows.Devices.Geolocation.Geolocator.put_DefaultGeoposition() */
 HRESULT wdege_geolocator_put__default_geoposition(WDEGE_BasicGeoposition* value);
 
-/* Windows.Devices.Geolocation.Geolocator.get_DefaultGeoposition() */
 HRESULT wdege_geolocator_get__default_geoposition(WDEGE_BasicGeoposition** value);
 
-/* Windows.Devices.Geolocation.Geolocator.RequestAccessAsync() */
 HRESULT wdege_geolocator_request_access_async(WF_IAsyncOperation_WDEGE_GeolocationAccessStatus** out);
 
-/* Windows.Devices.Geolocation.Geolocator.GetGeopositionHistoryAsync(startTime) */
 HRESULT wdege_geolocator_get_geoposition_history_async(WF_DateTime startTime, WF_IAsyncOperation_WFOCO_IVectorView_WDEGE_Geoposition** out);
 
-/* Windows.Devices.Geolocation.Geolocator.GetGeopositionHistoryAsync(startTime, duration) */
 HRESULT wdege_geolocator_get_geoposition_history_async_date_time_time_span_p(WF_DateTime startTime, WF_TimeSpan duration, WF_IAsyncOperation_WFOCO_IVectorView_WDEGE_Geoposition** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdege_geolocator_on_position_changed(WDEGE_Geolocator *self, cwinrt_event_fn fn, void *ctx);
@@ -555,258 +477,147 @@ void wdege_geolocator_off_position_changed(WDEGE_Geolocator *self, cwinrt_token 
 cwinrt_token wdege_geolocator_on_status_changed(WDEGE_Geolocator *self, cwinrt_event_fn fn, void *ctx);
 void wdege_geolocator_off_status_changed(WDEGE_Geolocator *self, cwinrt_token token);
 
-/* activate Windows.Devices.Geolocation.Geopath */
 HRESULT wdege_geopath_new(WDEGE_Geopath **out);
 
-/* Windows.Devices.Geolocation.Geopath */
-/* Windows.Devices.Geolocation.Geopath.get_Positions() */
 HRESULT wdege_geopath_get__positions(WDEGE_Geopath *self, WFOCO_IVectorView_WDEGE_BasicGeoposition** value);
 
-/* Windows.Devices.Geolocation.Geopath.get_GeoshapeType() */
 HRESULT wdege_geopath_get__geoshape_type(WDEGE_Geopath *self, WDEGE_GeoshapeType *value);
 
-/* Windows.Devices.Geolocation.Geopath.get_SpatialReferenceId() */
 HRESULT wdege_geopath_get__spatial_reference_id(WDEGE_Geopath *self, uint32_t *value);
 
-/* Windows.Devices.Geolocation.Geopath.get_AltitudeReferenceSystem() */
 HRESULT wdege_geopath_get__altitude_reference_system(WDEGE_Geopath *self, WDEGE_AltitudeReferenceSystem *value);
 
-/* activate Windows.Devices.Geolocation.Geopoint */
 HRESULT wdege_geopoint_new(WDEGE_Geopoint **out);
 
-/* Windows.Devices.Geolocation.Geopoint */
-/* Windows.Devices.Geolocation.Geopoint.get_Position() */
 HRESULT wdege_geopoint_get__position(WDEGE_Geopoint *self, WDEGE_BasicGeoposition *value);
 
-/* Windows.Devices.Geolocation.Geopoint.get_GeoshapeType() */
 HRESULT wdege_geopoint_get__geoshape_type(WDEGE_Geopoint *self, WDEGE_GeoshapeType *value);
 
-/* Windows.Devices.Geolocation.Geopoint.get_SpatialReferenceId() */
 HRESULT wdege_geopoint_get__spatial_reference_id(WDEGE_Geopoint *self, uint32_t *value);
 
-/* Windows.Devices.Geolocation.Geopoint.get_AltitudeReferenceSystem() */
 HRESULT wdege_geopoint_get__altitude_reference_system(WDEGE_Geopoint *self, WDEGE_AltitudeReferenceSystem *value);
 
-/* activate Windows.Devices.Geolocation.Geoposition */
 HRESULT wdege_geoposition_new(WDEGE_Geoposition **out);
 
-/* Windows.Devices.Geolocation.Geoposition */
-/* Windows.Devices.Geolocation.Geoposition.get_Coordinate() */
 HRESULT wdege_geoposition_get__coordinate(WDEGE_Geoposition *self, WDEGE_Geocoordinate** value);
 
-/* Windows.Devices.Geolocation.Geoposition.get_CivicAddress() */
 HRESULT wdege_geoposition_get__civic_address(WDEGE_Geoposition *self, WDEGE_CivicAddress** value);
 
-/* Windows.Devices.Geolocation.Geoposition.get_VenueData() */
 HRESULT wdege_geoposition_get__venue_data(WDEGE_Geoposition *self, WDEGE_VenueData** value);
 
-/* activate Windows.Devices.Geolocation.Geovisit */
 HRESULT wdege_geovisit_new(WDEGE_Geovisit **out);
 
-/* Windows.Devices.Geolocation.Geovisit */
-/* Windows.Devices.Geolocation.Geovisit.get_Position() */
 HRESULT wdege_geovisit_get__position(WDEGE_Geovisit *self, WDEGE_Geoposition** value);
 
-/* Windows.Devices.Geolocation.Geovisit.get_StateChange() */
 HRESULT wdege_geovisit_get__state_change(WDEGE_Geovisit *self, WDEGE_VisitStateChange *value);
 
-/* Windows.Devices.Geolocation.Geovisit.get_Timestamp() */
 HRESULT wdege_geovisit_get__timestamp(WDEGE_Geovisit *self, WF_DateTime *value);
 
-/* activate Windows.Devices.Geolocation.GeovisitMonitor */
 HRESULT wdege_geovisit_monitor_new(WDEGE_GeovisitMonitor **out);
 
-/* Windows.Devices.Geolocation.GeovisitMonitor */
-/* Windows.Devices.Geolocation.GeovisitMonitor.get_MonitoringScope() */
 HRESULT wdege_geovisit_monitor_get__monitoring_scope(WDEGE_GeovisitMonitor *self, WDEGE_VisitMonitoringScope *value);
 
-/* Windows.Devices.Geolocation.GeovisitMonitor.Start() */
 HRESULT wdege_geovisit_monitor_start(WDEGE_GeovisitMonitor *self, WDEGE_VisitMonitoringScope value);
 
-/* Windows.Devices.Geolocation.GeovisitMonitor.Stop() */
 HRESULT wdege_geovisit_monitor_stop(WDEGE_GeovisitMonitor *self);
 
-/* Windows.Devices.Geolocation.GeovisitMonitor.GetLastReportAsync() */
 HRESULT wdege_geovisit_monitor_get_last_report_async(WF_IAsyncOperation_WDEGE_Geovisit** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdege_geovisit_monitor_on_visit_state_changed(WDEGE_GeovisitMonitor *self, cwinrt_event_fn fn, void *ctx);
 void wdege_geovisit_monitor_off_visit_state_changed(WDEGE_GeovisitMonitor *self, cwinrt_token token);
 
-/* activate Windows.Devices.Geolocation.GeovisitStateChangedEventArgs */
 HRESULT wdege_geovisit_state_changed_event_args_new(WDEGE_GeovisitStateChangedEventArgs **out);
 
-/* Windows.Devices.Geolocation.GeovisitStateChangedEventArgs */
-/* Windows.Devices.Geolocation.GeovisitStateChangedEventArgs.get_Visit() */
 HRESULT wdege_geovisit_state_changed_event_args_get__visit(WDEGE_GeovisitStateChangedEventArgs *self, WDEGE_Geovisit** value);
 
-/* activate Windows.Devices.Geolocation.GeovisitTriggerDetails */
 HRESULT wdege_geovisit_trigger_details_new(WDEGE_GeovisitTriggerDetails **out);
 
-/* Windows.Devices.Geolocation.GeovisitTriggerDetails */
-/* Windows.Devices.Geolocation.GeovisitTriggerDetails.ReadReports() */
 HRESULT wdege_geovisit_trigger_details_read_reports(WDEGE_GeovisitTriggerDetails *self, WFOCO_IVectorView_WDEGE_Geovisit** out);
 
-/* Windows.Devices.Geolocation.IGeoboundingBoxFactory */
-/* Windows.Devices.Geolocation.IGeoboundingBoxFactory.Create(northwestCorner, southeastCorner) */
 HRESULT wdege_geobounding_box_factory_create(WDEGE_IGeoboundingBoxFactory *self, WDEGE_BasicGeoposition northwestCorner, WDEGE_BasicGeoposition southeastCorner, WDEGE_GeoboundingBox** out);
 
-/* Windows.Devices.Geolocation.IGeoboundingBoxFactory.CreateWithAltitudeReference(northwestCorner, southeastCorner, altitudeReferenceSystem) */
 HRESULT wdege_geobounding_box_factory_create_with_altitude_reference(WDEGE_IGeoboundingBoxFactory *self, WDEGE_BasicGeoposition northwestCorner, WDEGE_BasicGeoposition southeastCorner, WDEGE_AltitudeReferenceSystem altitudeReferenceSystem, WDEGE_GeoboundingBox** out);
 
-/* Windows.Devices.Geolocation.IGeoboundingBoxFactory.CreateWithAltitudeReferenceAndSpatialReference(northwestCorner, southeastCorner, altitudeReferenceSystem, spatialReferenceId) */
 HRESULT wdege_geobounding_box_factory_create_with_altitude_reference_and_spatial_reference(WDEGE_IGeoboundingBoxFactory *self, WDEGE_BasicGeoposition northwestCorner, WDEGE_BasicGeoposition southeastCorner, WDEGE_AltitudeReferenceSystem altitudeReferenceSystem, uint32_t spatialReferenceId, WDEGE_GeoboundingBox** out);
 
-/* Windows.Devices.Geolocation.IGeoboundingBoxStatics */
-/* Windows.Devices.Geolocation.IGeoboundingBoxStatics.TryCompute(positions) */
 HRESULT wdege_geobounding_box_statics_try_compute(WDEGE_IGeoboundingBoxStatics *self, WFOCO_IIterable_WDEGE_BasicGeoposition* positions, WDEGE_GeoboundingBox** out);
 
-/* Windows.Devices.Geolocation.IGeoboundingBoxStatics.TryCompute(positions, altitudeRefSystem) */
 HRESULT wdege_geobounding_box_statics_try_compute_p_altitude_reference_system_p(WDEGE_IGeoboundingBoxStatics *self, WFOCO_IIterable_WDEGE_BasicGeoposition* positions, WDEGE_AltitudeReferenceSystem altitudeRefSystem, WDEGE_GeoboundingBox** out);
 
-/* Windows.Devices.Geolocation.IGeoboundingBoxStatics.TryCompute(positions, altitudeRefSystem, spatialReferenceId) */
 HRESULT wdege_geobounding_box_statics_try_compute_p_altitude_reference_system_u32_p(WDEGE_IGeoboundingBoxStatics *self, WFOCO_IIterable_WDEGE_BasicGeoposition* positions, WDEGE_AltitudeReferenceSystem altitudeRefSystem, uint32_t spatialReferenceId, WDEGE_GeoboundingBox** out);
 
-/* Windows.Devices.Geolocation.IGeocircleFactory */
-/* Windows.Devices.Geolocation.IGeocircleFactory.Create(position, radius) */
 HRESULT wdege_geocircle_factory_create(WDEGE_IGeocircleFactory *self, WDEGE_BasicGeoposition position, double radius, WDEGE_Geocircle** out);
 
-/* Windows.Devices.Geolocation.IGeocircleFactory.CreateWithAltitudeReferenceSystem(position, radius, altitudeReferenceSystem) */
 HRESULT wdege_geocircle_factory_create_with_altitude_reference_system(WDEGE_IGeocircleFactory *self, WDEGE_BasicGeoposition position, double radius, WDEGE_AltitudeReferenceSystem altitudeReferenceSystem, WDEGE_Geocircle** out);
 
-/* Windows.Devices.Geolocation.IGeocircleFactory.CreateWithAltitudeReferenceSystemAndSpatialReferenceId(position, radius, altitudeReferenceSystem, spatialReferenceId) */
 HRESULT wdege_geocircle_factory_create_with_altitude_reference_system_and_spatial_reference_id(WDEGE_IGeocircleFactory *self, WDEGE_BasicGeoposition position, double radius, WDEGE_AltitudeReferenceSystem altitudeReferenceSystem, uint32_t spatialReferenceId, WDEGE_Geocircle** out);
 
-/* Windows.Devices.Geolocation.IGeolocatorStatics */
-/* Windows.Devices.Geolocation.IGeolocatorStatics.RequestAccessAsync() */
 HRESULT wdege_geolocator_statics_request_access_async(WDEGE_IGeolocatorStatics *self, WF_IAsyncOperation_WDEGE_GeolocationAccessStatus** out);
 
-/* Windows.Devices.Geolocation.IGeolocatorStatics.GetGeopositionHistoryAsync(startTime) */
 HRESULT wdege_geolocator_statics_get_geoposition_history_async(WDEGE_IGeolocatorStatics *self, WF_DateTime startTime, WF_IAsyncOperation_WFOCO_IVectorView_WDEGE_Geoposition** out);
 
-/* Windows.Devices.Geolocation.IGeolocatorStatics.GetGeopositionHistoryAsync(startTime, duration) */
 HRESULT wdege_geolocator_statics_get_geoposition_history_async_date_time_time_span_p(WDEGE_IGeolocatorStatics *self, WF_DateTime startTime, WF_TimeSpan duration, WF_IAsyncOperation_WFOCO_IVectorView_WDEGE_Geoposition** out);
 
-/* Windows.Devices.Geolocation.IGeolocatorStatics2 */
-/* Windows.Devices.Geolocation.IGeolocatorStatics2.get_IsDefaultGeopositionRecommended() */
 HRESULT wdege_geolocator_statics_2_get__is_default_geoposition_recommended(WDEGE_IGeolocatorStatics_2 *self, BOOL *value);
 
-/* Windows.Devices.Geolocation.IGeolocatorStatics2.put_DefaultGeoposition() */
 HRESULT wdege_geolocator_statics_2_put__default_geoposition(WDEGE_IGeolocatorStatics_2 *self, WDEGE_BasicGeoposition* value);
 
-/* Windows.Devices.Geolocation.IGeolocatorStatics2.get_DefaultGeoposition() */
 HRESULT wdege_geolocator_statics_2_get__default_geoposition(WDEGE_IGeolocatorStatics_2 *self, WDEGE_BasicGeoposition** value);
 
-/* Windows.Devices.Geolocation.IGeopathFactory */
-/* Windows.Devices.Geolocation.IGeopathFactory.Create(positions) */
 HRESULT wdege_geopath_factory_create(WDEGE_IGeopathFactory *self, WFOCO_IIterable_WDEGE_BasicGeoposition* positions, WDEGE_Geopath** out);
 
-/* Windows.Devices.Geolocation.IGeopathFactory.CreateWithAltitudeReference(positions, altitudeReferenceSystem) */
 HRESULT wdege_geopath_factory_create_with_altitude_reference(WDEGE_IGeopathFactory *self, WFOCO_IIterable_WDEGE_BasicGeoposition* positions, WDEGE_AltitudeReferenceSystem altitudeReferenceSystem, WDEGE_Geopath** out);
 
-/* Windows.Devices.Geolocation.IGeopathFactory.CreateWithAltitudeReferenceAndSpatialReference(positions, altitudeReferenceSystem, spatialReferenceId) */
 HRESULT wdege_geopath_factory_create_with_altitude_reference_and_spatial_reference(WDEGE_IGeopathFactory *self, WFOCO_IIterable_WDEGE_BasicGeoposition* positions, WDEGE_AltitudeReferenceSystem altitudeReferenceSystem, uint32_t spatialReferenceId, WDEGE_Geopath** out);
 
-/* Windows.Devices.Geolocation.IGeopointFactory */
-/* Windows.Devices.Geolocation.IGeopointFactory.Create(position) */
 HRESULT wdege_geopoint_factory_create(WDEGE_IGeopointFactory *self, WDEGE_BasicGeoposition position, WDEGE_Geopoint** out);
 
-/* Windows.Devices.Geolocation.IGeopointFactory.CreateWithAltitudeReferenceSystem(position, altitudeReferenceSystem) */
 HRESULT wdege_geopoint_factory_create_with_altitude_reference_system(WDEGE_IGeopointFactory *self, WDEGE_BasicGeoposition position, WDEGE_AltitudeReferenceSystem altitudeReferenceSystem, WDEGE_Geopoint** out);
 
-/* Windows.Devices.Geolocation.IGeopointFactory.CreateWithAltitudeReferenceSystemAndSpatialReferenceId(position, altitudeReferenceSystem, spatialReferenceId) */
 HRESULT wdege_geopoint_factory_create_with_altitude_reference_system_and_spatial_reference_id(WDEGE_IGeopointFactory *self, WDEGE_BasicGeoposition position, WDEGE_AltitudeReferenceSystem altitudeReferenceSystem, uint32_t spatialReferenceId, WDEGE_Geopoint** out);
 
-/* Windows.Devices.Geolocation.IGeovisitMonitorStatics */
-/* Windows.Devices.Geolocation.IGeovisitMonitorStatics.GetLastReportAsync() */
 HRESULT wdege_geovisit_monitor_statics_get_last_report_async(WDEGE_IGeovisitMonitorStatics *self, WF_IAsyncOperation_WDEGE_Geovisit** out);
 
-/* activate Windows.Devices.Geolocation.Geocircle */
 HRESULT wdege_geocircle_new(WDEGE_Geocircle **out);
 
-/* Windows.Devices.Geolocation.Geocircle */
-/* Windows.Devices.Geolocation.Geocircle.get_Center() */
 HRESULT wdege_geocircle_get__center(WDEGE_Geocircle *self, WDEGE_BasicGeoposition *value);
 
-/* Windows.Devices.Geolocation.Geocircle.get_Radius() */
 HRESULT wdege_geocircle_get__radius(WDEGE_Geocircle *self, double *value);
 
-/* Windows.Devices.Geolocation.Geocircle.get_GeoshapeType() */
 HRESULT wdege_geocircle_get__geoshape_type(WDEGE_Geocircle *self, WDEGE_GeoshapeType *value);
 
-/* Windows.Devices.Geolocation.Geocircle.get_SpatialReferenceId() */
 HRESULT wdege_geocircle_get__spatial_reference_id(WDEGE_Geocircle *self, uint32_t *value);
 
-/* Windows.Devices.Geolocation.Geocircle.get_AltitudeReferenceSystem() */
 HRESULT wdege_geocircle_get__altitude_reference_system(WDEGE_Geocircle *self, WDEGE_AltitudeReferenceSystem *value);
 
-/* Windows.Devices.Geolocation.IGeocoordinateSatelliteData */
-/* Windows.Devices.Geolocation.IGeocoordinateSatelliteData2 */
-/* Windows.Devices.Geolocation.IGeocoordinateSatelliteData2.get_GeometricDilutionOfPrecision() */
 HRESULT wdege_geocoordinate_satellite_data_2_get__geometric_dilution_of_precision(WDEGE_IGeocoordinateSatelliteData_2 *self, double** value);
 
-/* Windows.Devices.Geolocation.IGeocoordinateSatelliteData2.get_TimeDilutionOfPrecision() */
 HRESULT wdege_geocoordinate_satellite_data_2_get__time_dilution_of_precision(WDEGE_IGeocoordinateSatelliteData_2 *self, double** value);
 
-/* Windows.Devices.Geolocation.IGeoboundingBox */
-/* Windows.Devices.Geolocation.ICivicAddress */
-/* Windows.Devices.Geolocation.IGeocoordinateWithPositionData */
-/* Windows.Devices.Geolocation.IGeocoordinateWithPositionData.get_PositionSource() */
 HRESULT wdege_geocoordinate_with_position_data_get__position_source(WDEGE_IGeocoordinateWithPositionData *self, WDEGE_PositionSource *value);
 
-/* Windows.Devices.Geolocation.IGeocoordinateWithPositionData.get_SatelliteData() */
 HRESULT wdege_geocoordinate_with_position_data_get__satellite_data(WDEGE_IGeocoordinateWithPositionData *self, WDEGE_GeocoordinateSatelliteData** value);
 
-/* Windows.Devices.Geolocation.IGeocoordinateWithPoint */
-/* Windows.Devices.Geolocation.IGeocoordinateWithPoint.get_Point() */
 HRESULT wdege_geocoordinate_with_point_get__point(WDEGE_IGeocoordinateWithPoint *self, WDEGE_Geopoint** value);
 
-/* Windows.Devices.Geolocation.IGeocoordinateWithPositionSourceTimestamp */
-/* Windows.Devices.Geolocation.IGeocoordinateWithPositionSourceTimestamp.get_PositionSourceTimestamp() */
 HRESULT wdege_geocoordinate_with_position_source_timestamp_get__position_source_timestamp(WDEGE_IGeocoordinateWithPositionSourceTimestamp *self, WF_DateTime** value);
 
-/* Windows.Devices.Geolocation.IGeocoordinateWithRemoteSource */
-/* Windows.Devices.Geolocation.IGeocoordinateWithRemoteSource.get_IsRemoteSource() */
 HRESULT wdege_geocoordinate_with_remote_source_get__is_remote_source(WDEGE_IGeocoordinateWithRemoteSource *self, BOOL *value);
 
-/* Windows.Devices.Geolocation.IVenueData */
-/* Windows.Devices.Geolocation.IStatusChangedEventArgs */
-/* Windows.Devices.Geolocation.IPositionChangedEventArgs */
-/* Windows.Devices.Geolocation.IGeolocatorWithScalarAccuracy */
-/* Windows.Devices.Geolocation.IGeolocatorWithScalarAccuracy.get_DesiredAccuracyInMeters() */
 HRESULT wdege_geolocator_with_scalar_accuracy_get__desired_accuracy_in_meters(WDEGE_IGeolocatorWithScalarAccuracy *self, uint32_t** value);
 
-/* Windows.Devices.Geolocation.IGeolocatorWithScalarAccuracy.put_DesiredAccuracyInMeters() */
 HRESULT wdege_geolocator_with_scalar_accuracy_put__desired_accuracy_in_meters(WDEGE_IGeolocatorWithScalarAccuracy *self, uint32_t* value);
 
-/* Windows.Devices.Geolocation.IGeolocator2 */
-/* Windows.Devices.Geolocation.IGeolocator2.AllowFallbackToConsentlessPositions() */
 HRESULT wdege_geolocator_2_allow_fallback_to_consentless_positions(WDEGE_IGeolocator_2 *self);
 
-/* Windows.Devices.Geolocation.IGeopath */
-/* Windows.Devices.Geolocation.IGeopoint */
-/* Windows.Devices.Geolocation.IGeoposition2 */
-/* Windows.Devices.Geolocation.IGeoposition2.get_VenueData() */
 HRESULT wdege_geoposition_2_get__venue_data(WDEGE_IGeoposition_2 *self, WDEGE_VenueData** value);
 
-/* Windows.Devices.Geolocation.IGeovisit */
-/* Windows.Devices.Geolocation.IGeovisitMonitor */
-/* Windows.Devices.Geolocation.IGeovisitStateChangedEventArgs */
-/* Windows.Devices.Geolocation.IGeovisitTriggerDetails */
-/* Windows.Devices.Geolocation.IGeocircle */
-/* Windows.Devices.Geolocation.IGeocoordinate */
-/* Windows.Devices.Geolocation.IGeolocator */
-/* Windows.Devices.Geolocation.IGeoposition */
-/* Windows.Devices.Geolocation.IGeoshape */
-/* Windows.Devices.Geolocation.IGeoshape.get_GeoshapeType() */
 HRESULT wdege_geoshape_get__geoshape_type(WDEGE_IGeoshape *self, WDEGE_GeoshapeType *value);
 
-/* Windows.Devices.Geolocation.IGeoshape.get_SpatialReferenceId() */
 HRESULT wdege_geoshape_get__spatial_reference_id(WDEGE_IGeoshape *self, uint32_t *value);
 
-/* Windows.Devices.Geolocation.IGeoshape.get_AltitudeReferenceSystem() */
 HRESULT wdege_geoshape_get__altitude_reference_system(WDEGE_IGeoshape *self, WDEGE_AltitudeReferenceSystem *value);
 
 #endif /* CWINRT_WINDOWS_DEVICES_GEOLOCATION_H */

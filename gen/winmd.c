@@ -673,8 +673,6 @@ static int scan_guid_binary(uint8_t const *blob, uint32_t blob_len, uint8_t out 
 	return nz ? 0 : -1;
 }
 
-/* Copies the GUID-text characters of blob starting at i (hex digits, '-', '{')
-   into tmp (NUL-terminated), stopping at '}'/NUL/end, and returns the length. */
 static uint32_t copy_guid_chars(uint8_t const *blob, uint32_t blob_len, uint32_t i, char *tmp, size_t cap) {
 	uint32_t j;
 	uint32_t len = 0;

@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Web.Http.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSECRCE_Certificate
 #define CWINRT_FWD_WSECRCE_Certificate
 typedef struct WSECRCE_Certificate WSECRCE_Certificate;
@@ -56,7 +55,6 @@ typedef enum WNESO_SocketSslErrorSeverity {
 } WNESO_SocketSslErrorSeverity;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WWEHTFI_HttpBaseProtocolFilter WWEHTFI_HttpBaseProtocolFilter;
 typedef struct WWEHTFI_HttpServerCustomValidationRequestedEventArgs WWEHTFI_HttpServerCustomValidationRequestedEventArgs;
 typedef struct WWEHTFI_IHttpBaseProtocolFilterStatics WWEHTFI_IHttpBaseProtocolFilterStatics;
@@ -70,7 +68,6 @@ typedef struct WWEHTFI_IHttpFilter WWEHTFI_IHttpFilter;
 typedef struct WWEHTFI_IHttpServerCustomValidationRequestedEventArgs WWEHTFI_IHttpServerCustomValidationRequestedEventArgs;
 typedef struct WWEHTFI_IHttpCacheControl WWEHTFI_IHttpCacheControl;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WWEHT_HttpCookieManager
 #define CWINRT_FWD_WWEHT_HttpCookieManager
 typedef struct WWEHT_HttpCookieManager WWEHT_HttpCookieManager;
@@ -161,7 +158,6 @@ typedef enum WWEHTFI_HttpCookieUsageBehavior {
 } WWEHTFI_HttpCookieUsageBehavior;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -202,174 +198,109 @@ static const IID CWINRT_IID_WWEHTFI_IHttpServerCustomValidationRequestedEventArg
 static const IID CWINRT_IID_WWEHTFI_IHttpCacheControl CWINRT_MAYBE_UNUSED = { 0xC77E1CB4, 0x3CEA, 0x4EB5, { 0xAC, 0x85, 0x04, 0xE1, 0x86, 0xE6, 0x3A, 0xB7 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Web.Http.Filters.HttpBaseProtocolFilter */
 HRESULT wwehtfi_http_base_protocol_filter_new(WWEHTFI_HttpBaseProtocolFilter **out);
 
-/* Windows.Web.Http.Filters.HttpBaseProtocolFilter */
-/* Windows.Web.Http.Filters.HttpBaseProtocolFilter.get_AllowAutoRedirect() */
 HRESULT wwehtfi_http_base_protocol_filter_get__allow_auto_redirect(WWEHTFI_HttpBaseProtocolFilter *self, BOOL *value);
 
-/* Windows.Web.Http.Filters.HttpBaseProtocolFilter.put_AllowAutoRedirect() */
 HRESULT wwehtfi_http_base_protocol_filter_put__allow_auto_redirect(WWEHTFI_HttpBaseProtocolFilter *self, BOOL value);
 
-/* Windows.Web.Http.Filters.HttpBaseProtocolFilter.get_AllowUI() */
 HRESULT wwehtfi_http_base_protocol_filter_get__allow_u_i(WWEHTFI_HttpBaseProtocolFilter *self, BOOL *value);
 
-/* Windows.Web.Http.Filters.HttpBaseProtocolFilter.put_AllowUI() */
 HRESULT wwehtfi_http_base_protocol_filter_put__allow_u_i(WWEHTFI_HttpBaseProtocolFilter *self, BOOL value);
 
-/* Windows.Web.Http.Filters.HttpBaseProtocolFilter.get_AutomaticDecompression() */
 HRESULT wwehtfi_http_base_protocol_filter_get__automatic_decompression(WWEHTFI_HttpBaseProtocolFilter *self, BOOL *value);
 
-/* Windows.Web.Http.Filters.HttpBaseProtocolFilter.put_AutomaticDecompression() */
 HRESULT wwehtfi_http_base_protocol_filter_put__automatic_decompression(WWEHTFI_HttpBaseProtocolFilter *self, BOOL value);
 
-/* Windows.Web.Http.Filters.HttpBaseProtocolFilter.get_CacheControl() */
 HRESULT wwehtfi_http_base_protocol_filter_get__cache_control(WWEHTFI_HttpBaseProtocolFilter *self, WWEHTFI_HttpCacheControl** value);
 
-/* Windows.Web.Http.Filters.HttpBaseProtocolFilter.get_CookieManager() */
 HRESULT wwehtfi_http_base_protocol_filter_get__cookie_manager(WWEHTFI_HttpBaseProtocolFilter *self, WWEHT_HttpCookieManager** value);
 
-/* Windows.Web.Http.Filters.HttpBaseProtocolFilter.get_ClientCertificate() */
 HRESULT wwehtfi_http_base_protocol_filter_get__client_certificate(WWEHTFI_HttpBaseProtocolFilter *self, WSECRCE_Certificate** value);
 
-/* Windows.Web.Http.Filters.HttpBaseProtocolFilter.put_ClientCertificate() */
 HRESULT wwehtfi_http_base_protocol_filter_put__client_certificate(WWEHTFI_HttpBaseProtocolFilter *self, WSECRCE_Certificate* value);
 
-/* Windows.Web.Http.Filters.HttpBaseProtocolFilter.get_IgnorableServerCertificateErrors() */
 HRESULT wwehtfi_http_base_protocol_filter_get__ignorable_server_certificate_errors(WWEHTFI_HttpBaseProtocolFilter *self, WFOCO_IVector_WSECRCE_ChainValidationResult** value);
 
-/* Windows.Web.Http.Filters.HttpBaseProtocolFilter.get_MaxConnectionsPerServer() */
 HRESULT wwehtfi_http_base_protocol_filter_get__max_connections_per_server(WWEHTFI_HttpBaseProtocolFilter *self, uint32_t *value);
 
-/* Windows.Web.Http.Filters.HttpBaseProtocolFilter.put_MaxConnectionsPerServer() */
 HRESULT wwehtfi_http_base_protocol_filter_put__max_connections_per_server(WWEHTFI_HttpBaseProtocolFilter *self, uint32_t value);
 
-/* Windows.Web.Http.Filters.HttpBaseProtocolFilter.get_ProxyCredential() */
 HRESULT wwehtfi_http_base_protocol_filter_get__proxy_credential(WWEHTFI_HttpBaseProtocolFilter *self, WSECR_PasswordCredential** value);
 
-/* Windows.Web.Http.Filters.HttpBaseProtocolFilter.put_ProxyCredential() */
 HRESULT wwehtfi_http_base_protocol_filter_put__proxy_credential(WWEHTFI_HttpBaseProtocolFilter *self, WSECR_PasswordCredential* value);
 
-/* Windows.Web.Http.Filters.HttpBaseProtocolFilter.get_ServerCredential() */
 HRESULT wwehtfi_http_base_protocol_filter_get__server_credential(WWEHTFI_HttpBaseProtocolFilter *self, WSECR_PasswordCredential** value);
 
-/* Windows.Web.Http.Filters.HttpBaseProtocolFilter.put_ServerCredential() */
 HRESULT wwehtfi_http_base_protocol_filter_put__server_credential(WWEHTFI_HttpBaseProtocolFilter *self, WSECR_PasswordCredential* value);
 
-/* Windows.Web.Http.Filters.HttpBaseProtocolFilter.get_UseProxy() */
 HRESULT wwehtfi_http_base_protocol_filter_get__use_proxy(WWEHTFI_HttpBaseProtocolFilter *self, BOOL *value);
 
-/* Windows.Web.Http.Filters.HttpBaseProtocolFilter.put_UseProxy() */
 HRESULT wwehtfi_http_base_protocol_filter_put__use_proxy(WWEHTFI_HttpBaseProtocolFilter *self, BOOL value);
 
-/* Windows.Web.Http.Filters.HttpBaseProtocolFilter.get_MaxVersion() */
 HRESULT wwehtfi_http_base_protocol_filter_get__max_version(WWEHTFI_HttpBaseProtocolFilter *self, WWEHT_HttpVersion *value);
 
-/* Windows.Web.Http.Filters.HttpBaseProtocolFilter.put_MaxVersion() */
 HRESULT wwehtfi_http_base_protocol_filter_put__max_version(WWEHTFI_HttpBaseProtocolFilter *self, WWEHT_HttpVersion value);
 
-/* Windows.Web.Http.Filters.HttpBaseProtocolFilter.get_CookieUsageBehavior() */
 HRESULT wwehtfi_http_base_protocol_filter_get__cookie_usage_behavior(WWEHTFI_HttpBaseProtocolFilter *self, WWEHTFI_HttpCookieUsageBehavior *value);
 
-/* Windows.Web.Http.Filters.HttpBaseProtocolFilter.put_CookieUsageBehavior() */
 HRESULT wwehtfi_http_base_protocol_filter_put__cookie_usage_behavior(WWEHTFI_HttpBaseProtocolFilter *self, WWEHTFI_HttpCookieUsageBehavior value);
 
-/* Windows.Web.Http.Filters.HttpBaseProtocolFilter.ClearAuthenticationCache() */
 HRESULT wwehtfi_http_base_protocol_filter_clear_authentication_cache(WWEHTFI_HttpBaseProtocolFilter *self);
 
-/* Windows.Web.Http.Filters.HttpBaseProtocolFilter.get_User() */
 HRESULT wwehtfi_http_base_protocol_filter_get__user(WWEHTFI_HttpBaseProtocolFilter *self, WSY_User** value);
 
-/* Windows.Web.Http.Filters.HttpBaseProtocolFilter.SendRequestAsync(request) */
 HRESULT wwehtfi_http_base_protocol_filter_send_request_async(WWEHTFI_HttpBaseProtocolFilter *self, WWEHT_HttpRequestMessage* request, WF_IAsyncOperationWithProgress_WWEHT_HttpResponseMessage_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.Filters.HttpBaseProtocolFilter.Close() */
 HRESULT wwehtfi_http_base_protocol_filter_close(WWEHTFI_HttpBaseProtocolFilter *self);
 
-/* Windows.Web.Http.Filters.HttpBaseProtocolFilter.CreateForUser(user) */
 HRESULT wwehtfi_http_base_protocol_filter_create_for_user(WSY_User* user, WWEHTFI_HttpBaseProtocolFilter** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wwehtfi_http_base_protocol_filter_on_server_custom_validation_requested(WWEHTFI_HttpBaseProtocolFilter *self, cwinrt_event_fn fn, void *ctx);
 void wwehtfi_http_base_protocol_filter_off_server_custom_validation_requested(WWEHTFI_HttpBaseProtocolFilter *self, cwinrt_token token);
 
-/* activate Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs */
 HRESULT wwehtfi_http_server_custom_validation_requested_event_args_new(WWEHTFI_HttpServerCustomValidationRequestedEventArgs **out);
 
-/* Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs */
-/* Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs.get_RequestMessage() */
 HRESULT wwehtfi_http_server_custom_validation_requested_event_args_get__request_message(WWEHTFI_HttpServerCustomValidationRequestedEventArgs *self, WWEHT_HttpRequestMessage** value);
 
-/* Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs.get_ServerCertificate() */
 HRESULT wwehtfi_http_server_custom_validation_requested_event_args_get__server_certificate(WWEHTFI_HttpServerCustomValidationRequestedEventArgs *self, WSECRCE_Certificate** value);
 
-/* Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs.get_ServerCertificateErrorSeverity() */
 HRESULT wwehtfi_http_server_custom_validation_requested_event_args_get__server_certificate_error_severity(WWEHTFI_HttpServerCustomValidationRequestedEventArgs *self, WNESO_SocketSslErrorSeverity *value);
 
-/* Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs.get_ServerCertificateErrors() */
 HRESULT wwehtfi_http_server_custom_validation_requested_event_args_get__server_certificate_errors(WWEHTFI_HttpServerCustomValidationRequestedEventArgs *self, WFOCO_IVectorView_WSECRCE_ChainValidationResult** value);
 
-/* Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs.get_ServerIntermediateCertificates() */
 HRESULT wwehtfi_http_server_custom_validation_requested_event_args_get__server_intermediate_certificates(WWEHTFI_HttpServerCustomValidationRequestedEventArgs *self, WFOCO_IVectorView_WSECRCE_Certificate** value);
 
-/* Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs.Reject() */
 HRESULT wwehtfi_http_server_custom_validation_requested_event_args_reject(WWEHTFI_HttpServerCustomValidationRequestedEventArgs *self);
 
-/* Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs.GetDeferral() */
 HRESULT wwehtfi_http_server_custom_validation_requested_event_args_get_deferral(WWEHTFI_HttpServerCustomValidationRequestedEventArgs *self, WF_Deferral** out);
 
-/* Windows.Web.Http.Filters.IHttpBaseProtocolFilterStatics */
-/* Windows.Web.Http.Filters.IHttpBaseProtocolFilterStatics.CreateForUser(user) */
 HRESULT wwehtfi_http_base_protocol_filter_statics_create_for_user(WWEHTFI_IHttpBaseProtocolFilterStatics *self, WSY_User* user, WWEHTFI_HttpBaseProtocolFilter** out);
 
-/* activate Windows.Web.Http.Filters.HttpCacheControl */
 HRESULT wwehtfi_http_cache_control_new(WWEHTFI_HttpCacheControl **out);
 
-/* Windows.Web.Http.Filters.HttpCacheControl */
-/* Windows.Web.Http.Filters.HttpCacheControl.get_ReadBehavior() */
 HRESULT wwehtfi_http_cache_control_get__read_behavior(WWEHTFI_HttpCacheControl *self, WWEHTFI_HttpCacheReadBehavior *value);
 
-/* Windows.Web.Http.Filters.HttpCacheControl.put_ReadBehavior() */
 HRESULT wwehtfi_http_cache_control_put__read_behavior(WWEHTFI_HttpCacheControl *self, WWEHTFI_HttpCacheReadBehavior value);
 
-/* Windows.Web.Http.Filters.HttpCacheControl.get_WriteBehavior() */
 HRESULT wwehtfi_http_cache_control_get__write_behavior(WWEHTFI_HttpCacheControl *self, WWEHTFI_HttpCacheWriteBehavior *value);
 
-/* Windows.Web.Http.Filters.HttpCacheControl.put_WriteBehavior() */
 HRESULT wwehtfi_http_cache_control_put__write_behavior(WWEHTFI_HttpCacheControl *self, WWEHTFI_HttpCacheWriteBehavior value);
 
-/* Windows.Web.Http.Filters.IHttpBaseProtocolFilter */
-/* Windows.Web.Http.Filters.IHttpBaseProtocolFilter2 */
-/* Windows.Web.Http.Filters.IHttpBaseProtocolFilter2.get_MaxVersion() */
 HRESULT wwehtfi_http_base_protocol_filter_2_get__max_version(WWEHTFI_IHttpBaseProtocolFilter_2 *self, WWEHT_HttpVersion *value);
 
-/* Windows.Web.Http.Filters.IHttpBaseProtocolFilter2.put_MaxVersion() */
 HRESULT wwehtfi_http_base_protocol_filter_2_put__max_version(WWEHTFI_IHttpBaseProtocolFilter_2 *self, WWEHT_HttpVersion value);
 
-/* Windows.Web.Http.Filters.IHttpBaseProtocolFilter3 */
-/* Windows.Web.Http.Filters.IHttpBaseProtocolFilter3.get_CookieUsageBehavior() */
 HRESULT wwehtfi_http_base_protocol_filter_3_get__cookie_usage_behavior(WWEHTFI_IHttpBaseProtocolFilter_3 *self, WWEHTFI_HttpCookieUsageBehavior *value);
 
-/* Windows.Web.Http.Filters.IHttpBaseProtocolFilter3.put_CookieUsageBehavior() */
 HRESULT wwehtfi_http_base_protocol_filter_3_put__cookie_usage_behavior(WWEHTFI_IHttpBaseProtocolFilter_3 *self, WWEHTFI_HttpCookieUsageBehavior value);
 
-/* Windows.Web.Http.Filters.IHttpBaseProtocolFilter4 */
-/* Windows.Web.Http.Filters.IHttpBaseProtocolFilter4.ClearAuthenticationCache() */
 HRESULT wwehtfi_http_base_protocol_filter_4_clear_authentication_cache(WWEHTFI_IHttpBaseProtocolFilter_4 *self);
 
-/* Windows.Web.Http.Filters.IHttpBaseProtocolFilter5 */
-/* Windows.Web.Http.Filters.IHttpBaseProtocolFilter5.get_User() */
 HRESULT wwehtfi_http_base_protocol_filter_5_get__user(WWEHTFI_IHttpBaseProtocolFilter_5 *self, WSY_User** value);
 
-/* Windows.Web.Http.Filters.IHttpFilter */
-/* Windows.Web.Http.Filters.IHttpFilter.SendRequestAsync(request) */
 HRESULT wwehtfi_http_filter_send_request_async(WWEHTFI_IHttpFilter *self, WWEHT_HttpRequestMessage* request, WF_IAsyncOperationWithProgress_WWEHT_HttpResponseMessage_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.Filters.IHttpServerCustomValidationRequestedEventArgs */
-/* Windows.Web.Http.Filters.IHttpCacheControl */
 #endif /* CWINRT_WINDOWS_WEB_HTTP_FILTERS_H */

@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Graphics.Printing.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStream
 #define CWINRT_FWD_WSTST_IRandomAccessStream
 typedef struct WSTST_IRandomAccessStream WSTST_IRandomAccessStream;
@@ -27,7 +26,6 @@ typedef struct WS_StorageFolder WS_StorageFolder;
 typedef struct WS_StorageFile WS_StorageFile;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDESC_IImageScannerStatics WDESC_IImageScannerStatics;
 typedef struct WDESC_ImageScanner WDESC_ImageScanner;
 typedef struct WDESC_ImageScannerAutoConfiguration WDESC_ImageScannerAutoConfiguration;
@@ -42,7 +40,6 @@ typedef struct WDESC_IImageScannerScanResult WDESC_IImageScannerScanResult;
 typedef struct WDESC_IImageScannerSourceConfiguration WDESC_IImageScannerSourceConfiguration;
 typedef struct WDESC_IImageScannerFormatConfiguration WDESC_IImageScannerFormatConfiguration;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WDESC_ImageScanner
 #define CWINRT_FWD_WF_IAsyncOperation_WDESC_ImageScanner
 typedef struct WF_IAsyncOperation_WDESC_ImageScanner WF_IAsyncOperation_WDESC_ImageScanner;
@@ -314,7 +311,6 @@ struct WDESC_ImageScannerResolution {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -347,445 +343,288 @@ static const IID CWINRT_IID_WDESC_IImageScannerSourceConfiguration CWINRT_MAYBE_
 static const IID CWINRT_IID_WDESC_IImageScannerFormatConfiguration CWINRT_MAYBE_UNUSED = { 0xAE275D11, 0xDADF, 0x4010, { 0xBF, 0x10, 0xCC, 0xA5, 0xC8, 0x3D, 0xCB, 0xB0 } };
 #endif
 
-/* Methods */
-
-/* Windows.Devices.Scanners.IImageScannerStatics */
-/* Windows.Devices.Scanners.IImageScannerStatics.FromIdAsync(deviceId) */
 HRESULT wdesc_image_scanner_statics_from_id_async(WDESC_IImageScannerStatics *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDESC_ImageScanner** out);
 
-/* Windows.Devices.Scanners.IImageScannerStatics.GetDeviceSelector() */
 HRESULT wdesc_image_scanner_statics_get_device_selector(WDESC_IImageScannerStatics *self, cwinrt_hstring *out);
 
-/* activate Windows.Devices.Scanners.ImageScanner */
 HRESULT wdesc_image_scanner_new(WDESC_ImageScanner **out);
 
-/* Windows.Devices.Scanners.ImageScanner */
-/* Windows.Devices.Scanners.ImageScanner.get_DeviceId() */
 HRESULT wdesc_image_scanner_get__device_id(WDESC_ImageScanner *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Scanners.ImageScanner.get_DefaultScanSource() */
 HRESULT wdesc_image_scanner_get__default_scan_source(WDESC_ImageScanner *self, WDESC_ImageScannerScanSource *value);
 
-/* Windows.Devices.Scanners.ImageScanner.IsScanSourceSupported() */
 HRESULT wdesc_image_scanner_is_scan_source_supported(WDESC_ImageScanner *self, WDESC_ImageScannerScanSource value, BOOL *out);
 
-/* Windows.Devices.Scanners.ImageScanner.get_FlatbedConfiguration() */
 HRESULT wdesc_image_scanner_get__flatbed_configuration(WDESC_ImageScanner *self, WDESC_ImageScannerFlatbedConfiguration** value);
 
-/* Windows.Devices.Scanners.ImageScanner.get_FeederConfiguration() */
 HRESULT wdesc_image_scanner_get__feeder_configuration(WDESC_ImageScanner *self, WDESC_ImageScannerFeederConfiguration** value);
 
-/* Windows.Devices.Scanners.ImageScanner.get_AutoConfiguration() */
 HRESULT wdesc_image_scanner_get__auto_configuration(WDESC_ImageScanner *self, WDESC_ImageScannerAutoConfiguration** value);
 
-/* Windows.Devices.Scanners.ImageScanner.IsPreviewSupported(scanSource) */
 HRESULT wdesc_image_scanner_is_preview_supported(WDESC_ImageScanner *self, WDESC_ImageScannerScanSource scanSource, BOOL *out);
 
-/* Windows.Devices.Scanners.ImageScanner.ScanPreviewToStreamAsync(scanSource, targetStream) */
 HRESULT wdesc_image_scanner_scan_preview_to_stream_async(WDESC_ImageScanner *self, WDESC_ImageScannerScanSource scanSource, WSTST_IRandomAccessStream* targetStream, WF_IAsyncOperation_WDESC_ImageScannerPreviewResult** out);
 
-/* Windows.Devices.Scanners.ImageScanner.ScanFilesToFolderAsync(scanSource, storageFolder) */
 HRESULT wdesc_image_scanner_scan_files_to_folder_async(WDESC_ImageScanner *self, WDESC_ImageScannerScanSource scanSource, WS_StorageFolder* storageFolder, WF_IAsyncOperationWithProgress_WDESC_ImageScannerScanResult_uint32_t** out);
 
-/* Windows.Devices.Scanners.ImageScanner.FromIdAsync(deviceId) */
 HRESULT wdesc_image_scanner_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDESC_ImageScanner** out);
 
-/* Windows.Devices.Scanners.ImageScanner.GetDeviceSelector() */
 HRESULT wdesc_image_scanner_get_device_selector(cwinrt_hstring *out);
 
-/* activate Windows.Devices.Scanners.ImageScannerAutoConfiguration */
 HRESULT wdesc_image_scanner_auto_configuration_new(WDESC_ImageScannerAutoConfiguration **out);
 
-/* Windows.Devices.Scanners.ImageScannerAutoConfiguration */
-/* Windows.Devices.Scanners.ImageScannerAutoConfiguration.get_DefaultFormat() */
 HRESULT wdesc_image_scanner_auto_configuration_get__default_format(WDESC_ImageScannerAutoConfiguration *self, WDESC_ImageScannerFormat *value);
 
-/* Windows.Devices.Scanners.ImageScannerAutoConfiguration.get_Format() */
 HRESULT wdesc_image_scanner_auto_configuration_get__format(WDESC_ImageScannerAutoConfiguration *self, WDESC_ImageScannerFormat *value);
 
-/* Windows.Devices.Scanners.ImageScannerAutoConfiguration.put_Format() */
 HRESULT wdesc_image_scanner_auto_configuration_put__format(WDESC_ImageScannerAutoConfiguration *self, WDESC_ImageScannerFormat value);
 
-/* Windows.Devices.Scanners.ImageScannerAutoConfiguration.IsFormatSupported() */
 HRESULT wdesc_image_scanner_auto_configuration_is_format_supported(WDESC_ImageScannerAutoConfiguration *self, WDESC_ImageScannerFormat value, BOOL *out);
 
-/* activate Windows.Devices.Scanners.ImageScannerFeederConfiguration */
 HRESULT wdesc_image_scanner_feeder_configuration_new(WDESC_ImageScannerFeederConfiguration **out);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration */
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_DefaultFormat() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__default_format(WDESC_ImageScannerFeederConfiguration *self, WDESC_ImageScannerFormat *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_Format() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__format(WDESC_ImageScannerFeederConfiguration *self, WDESC_ImageScannerFormat *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.put_Format() */
 HRESULT wdesc_image_scanner_feeder_configuration_put__format(WDESC_ImageScannerFeederConfiguration *self, WDESC_ImageScannerFormat value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsFormatSupported() */
 HRESULT wdesc_image_scanner_feeder_configuration_is_format_supported(WDESC_ImageScannerFeederConfiguration *self, WDESC_ImageScannerFormat value, BOOL *out);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_MinScanArea() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__min_scan_area(WDESC_ImageScannerFeederConfiguration *self, WF_Size *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_MaxScanArea() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__max_scan_area(WDESC_ImageScannerFeederConfiguration *self, WF_Size *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_SelectedScanRegion() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__selected_scan_region(WDESC_ImageScannerFeederConfiguration *self, WF_Rect *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.put_SelectedScanRegion() */
 HRESULT wdesc_image_scanner_feeder_configuration_put__selected_scan_region(WDESC_ImageScannerFeederConfiguration *self, WF_Rect value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_AutoCroppingMode() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__auto_cropping_mode(WDESC_ImageScannerFeederConfiguration *self, WDESC_ImageScannerAutoCroppingMode *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.put_AutoCroppingMode() */
 HRESULT wdesc_image_scanner_feeder_configuration_put__auto_cropping_mode(WDESC_ImageScannerFeederConfiguration *self, WDESC_ImageScannerAutoCroppingMode value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsAutoCroppingModeSupported() */
 HRESULT wdesc_image_scanner_feeder_configuration_is_auto_cropping_mode_supported(WDESC_ImageScannerFeederConfiguration *self, WDESC_ImageScannerAutoCroppingMode value, BOOL *out);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_MinResolution() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__min_resolution(WDESC_ImageScannerFeederConfiguration *self, WDESC_ImageScannerResolution *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_MaxResolution() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__max_resolution(WDESC_ImageScannerFeederConfiguration *self, WDESC_ImageScannerResolution *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_OpticalResolution() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__optical_resolution(WDESC_ImageScannerFeederConfiguration *self, WDESC_ImageScannerResolution *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_DesiredResolution() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__desired_resolution(WDESC_ImageScannerFeederConfiguration *self, WDESC_ImageScannerResolution *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.put_DesiredResolution() */
 HRESULT wdesc_image_scanner_feeder_configuration_put__desired_resolution(WDESC_ImageScannerFeederConfiguration *self, WDESC_ImageScannerResolution value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_ActualResolution() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__actual_resolution(WDESC_ImageScannerFeederConfiguration *self, WDESC_ImageScannerResolution *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_DefaultColorMode() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__default_color_mode(WDESC_ImageScannerFeederConfiguration *self, WDESC_ImageScannerColorMode *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_ColorMode() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__color_mode(WDESC_ImageScannerFeederConfiguration *self, WDESC_ImageScannerColorMode *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.put_ColorMode() */
 HRESULT wdesc_image_scanner_feeder_configuration_put__color_mode(WDESC_ImageScannerFeederConfiguration *self, WDESC_ImageScannerColorMode value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsColorModeSupported() */
 HRESULT wdesc_image_scanner_feeder_configuration_is_color_mode_supported(WDESC_ImageScannerFeederConfiguration *self, WDESC_ImageScannerColorMode value, BOOL *out);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_MinBrightness() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__min_brightness(WDESC_ImageScannerFeederConfiguration *self, int32_t *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_MaxBrightness() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__max_brightness(WDESC_ImageScannerFeederConfiguration *self, int32_t *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_BrightnessStep() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__brightness_step(WDESC_ImageScannerFeederConfiguration *self, uint32_t *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_DefaultBrightness() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__default_brightness(WDESC_ImageScannerFeederConfiguration *self, int32_t *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_Brightness() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__brightness(WDESC_ImageScannerFeederConfiguration *self, int32_t *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.put_Brightness() */
 HRESULT wdesc_image_scanner_feeder_configuration_put__brightness(WDESC_ImageScannerFeederConfiguration *self, int32_t value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_MinContrast() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__min_contrast(WDESC_ImageScannerFeederConfiguration *self, int32_t *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_MaxContrast() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__max_contrast(WDESC_ImageScannerFeederConfiguration *self, int32_t *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_ContrastStep() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__contrast_step(WDESC_ImageScannerFeederConfiguration *self, uint32_t *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_DefaultContrast() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__default_contrast(WDESC_ImageScannerFeederConfiguration *self, int32_t *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_Contrast() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__contrast(WDESC_ImageScannerFeederConfiguration *self, int32_t *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.put_Contrast() */
 HRESULT wdesc_image_scanner_feeder_configuration_put__contrast(WDESC_ImageScannerFeederConfiguration *self, int32_t value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_CanAutoDetectPageSize() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__can_auto_detect_page_size(WDESC_ImageScannerFeederConfiguration *self, BOOL *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_AutoDetectPageSize() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__auto_detect_page_size(WDESC_ImageScannerFeederConfiguration *self, BOOL *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.put_AutoDetectPageSize() */
 HRESULT wdesc_image_scanner_feeder_configuration_put__auto_detect_page_size(WDESC_ImageScannerFeederConfiguration *self, BOOL value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_PageSize() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__page_size(WDESC_ImageScannerFeederConfiguration *self, WGRPR_PrintMediaSize *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.put_PageSize() */
 HRESULT wdesc_image_scanner_feeder_configuration_put__page_size(WDESC_ImageScannerFeederConfiguration *self, WGRPR_PrintMediaSize value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_PageOrientation() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__page_orientation(WDESC_ImageScannerFeederConfiguration *self, WGRPR_PrintOrientation *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.put_PageOrientation() */
 HRESULT wdesc_image_scanner_feeder_configuration_put__page_orientation(WDESC_ImageScannerFeederConfiguration *self, WGRPR_PrintOrientation value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_PageSizeDimensions() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__page_size_dimensions(WDESC_ImageScannerFeederConfiguration *self, WF_Size *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsPageSizeSupported(pageSize, pageOrientation) */
 HRESULT wdesc_image_scanner_feeder_configuration_is_page_size_supported(WDESC_ImageScannerFeederConfiguration *self, WGRPR_PrintMediaSize pageSize, WGRPR_PrintOrientation pageOrientation, BOOL *out);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_MaxNumberOfPages() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__max_number_of_pages(WDESC_ImageScannerFeederConfiguration *self, uint32_t *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.put_MaxNumberOfPages() */
 HRESULT wdesc_image_scanner_feeder_configuration_put__max_number_of_pages(WDESC_ImageScannerFeederConfiguration *self, uint32_t value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_CanScanDuplex() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__can_scan_duplex(WDESC_ImageScannerFeederConfiguration *self, BOOL *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_Duplex() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__duplex(WDESC_ImageScannerFeederConfiguration *self, BOOL *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.put_Duplex() */
 HRESULT wdesc_image_scanner_feeder_configuration_put__duplex(WDESC_ImageScannerFeederConfiguration *self, BOOL value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_CanScanAhead() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__can_scan_ahead(WDESC_ImageScannerFeederConfiguration *self, BOOL *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.get_ScanAhead() */
 HRESULT wdesc_image_scanner_feeder_configuration_get__scan_ahead(WDESC_ImageScannerFeederConfiguration *self, BOOL *value);
 
-/* Windows.Devices.Scanners.ImageScannerFeederConfiguration.put_ScanAhead() */
 HRESULT wdesc_image_scanner_feeder_configuration_put__scan_ahead(WDESC_ImageScannerFeederConfiguration *self, BOOL value);
 
-/* activate Windows.Devices.Scanners.ImageScannerFlatbedConfiguration */
 HRESULT wdesc_image_scanner_flatbed_configuration_new(WDESC_ImageScannerFlatbedConfiguration **out);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration */
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.get_DefaultFormat() */
 HRESULT wdesc_image_scanner_flatbed_configuration_get__default_format(WDESC_ImageScannerFlatbedConfiguration *self, WDESC_ImageScannerFormat *value);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.get_Format() */
 HRESULT wdesc_image_scanner_flatbed_configuration_get__format(WDESC_ImageScannerFlatbedConfiguration *self, WDESC_ImageScannerFormat *value);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.put_Format() */
 HRESULT wdesc_image_scanner_flatbed_configuration_put__format(WDESC_ImageScannerFlatbedConfiguration *self, WDESC_ImageScannerFormat value);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.IsFormatSupported() */
 HRESULT wdesc_image_scanner_flatbed_configuration_is_format_supported(WDESC_ImageScannerFlatbedConfiguration *self, WDESC_ImageScannerFormat value, BOOL *out);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.get_MinScanArea() */
 HRESULT wdesc_image_scanner_flatbed_configuration_get__min_scan_area(WDESC_ImageScannerFlatbedConfiguration *self, WF_Size *value);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.get_MaxScanArea() */
 HRESULT wdesc_image_scanner_flatbed_configuration_get__max_scan_area(WDESC_ImageScannerFlatbedConfiguration *self, WF_Size *value);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.get_SelectedScanRegion() */
 HRESULT wdesc_image_scanner_flatbed_configuration_get__selected_scan_region(WDESC_ImageScannerFlatbedConfiguration *self, WF_Rect *value);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.put_SelectedScanRegion() */
 HRESULT wdesc_image_scanner_flatbed_configuration_put__selected_scan_region(WDESC_ImageScannerFlatbedConfiguration *self, WF_Rect value);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.get_AutoCroppingMode() */
 HRESULT wdesc_image_scanner_flatbed_configuration_get__auto_cropping_mode(WDESC_ImageScannerFlatbedConfiguration *self, WDESC_ImageScannerAutoCroppingMode *value);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.put_AutoCroppingMode() */
 HRESULT wdesc_image_scanner_flatbed_configuration_put__auto_cropping_mode(WDESC_ImageScannerFlatbedConfiguration *self, WDESC_ImageScannerAutoCroppingMode value);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.IsAutoCroppingModeSupported() */
 HRESULT wdesc_image_scanner_flatbed_configuration_is_auto_cropping_mode_supported(WDESC_ImageScannerFlatbedConfiguration *self, WDESC_ImageScannerAutoCroppingMode value, BOOL *out);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.get_MinResolution() */
 HRESULT wdesc_image_scanner_flatbed_configuration_get__min_resolution(WDESC_ImageScannerFlatbedConfiguration *self, WDESC_ImageScannerResolution *value);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.get_MaxResolution() */
 HRESULT wdesc_image_scanner_flatbed_configuration_get__max_resolution(WDESC_ImageScannerFlatbedConfiguration *self, WDESC_ImageScannerResolution *value);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.get_OpticalResolution() */
 HRESULT wdesc_image_scanner_flatbed_configuration_get__optical_resolution(WDESC_ImageScannerFlatbedConfiguration *self, WDESC_ImageScannerResolution *value);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.get_DesiredResolution() */
 HRESULT wdesc_image_scanner_flatbed_configuration_get__desired_resolution(WDESC_ImageScannerFlatbedConfiguration *self, WDESC_ImageScannerResolution *value);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.put_DesiredResolution() */
 HRESULT wdesc_image_scanner_flatbed_configuration_put__desired_resolution(WDESC_ImageScannerFlatbedConfiguration *self, WDESC_ImageScannerResolution value);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.get_ActualResolution() */
 HRESULT wdesc_image_scanner_flatbed_configuration_get__actual_resolution(WDESC_ImageScannerFlatbedConfiguration *self, WDESC_ImageScannerResolution *value);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.get_DefaultColorMode() */
 HRESULT wdesc_image_scanner_flatbed_configuration_get__default_color_mode(WDESC_ImageScannerFlatbedConfiguration *self, WDESC_ImageScannerColorMode *value);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.get_ColorMode() */
 HRESULT wdesc_image_scanner_flatbed_configuration_get__color_mode(WDESC_ImageScannerFlatbedConfiguration *self, WDESC_ImageScannerColorMode *value);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.put_ColorMode() */
 HRESULT wdesc_image_scanner_flatbed_configuration_put__color_mode(WDESC_ImageScannerFlatbedConfiguration *self, WDESC_ImageScannerColorMode value);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.IsColorModeSupported() */
 HRESULT wdesc_image_scanner_flatbed_configuration_is_color_mode_supported(WDESC_ImageScannerFlatbedConfiguration *self, WDESC_ImageScannerColorMode value, BOOL *out);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.get_MinBrightness() */
 HRESULT wdesc_image_scanner_flatbed_configuration_get__min_brightness(WDESC_ImageScannerFlatbedConfiguration *self, int32_t *value);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.get_MaxBrightness() */
 HRESULT wdesc_image_scanner_flatbed_configuration_get__max_brightness(WDESC_ImageScannerFlatbedConfiguration *self, int32_t *value);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.get_BrightnessStep() */
 HRESULT wdesc_image_scanner_flatbed_configuration_get__brightness_step(WDESC_ImageScannerFlatbedConfiguration *self, uint32_t *value);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.get_DefaultBrightness() */
 HRESULT wdesc_image_scanner_flatbed_configuration_get__default_brightness(WDESC_ImageScannerFlatbedConfiguration *self, int32_t *value);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.get_Brightness() */
 HRESULT wdesc_image_scanner_flatbed_configuration_get__brightness(WDESC_ImageScannerFlatbedConfiguration *self, int32_t *value);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.put_Brightness() */
 HRESULT wdesc_image_scanner_flatbed_configuration_put__brightness(WDESC_ImageScannerFlatbedConfiguration *self, int32_t value);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.get_MinContrast() */
 HRESULT wdesc_image_scanner_flatbed_configuration_get__min_contrast(WDESC_ImageScannerFlatbedConfiguration *self, int32_t *value);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.get_MaxContrast() */
 HRESULT wdesc_image_scanner_flatbed_configuration_get__max_contrast(WDESC_ImageScannerFlatbedConfiguration *self, int32_t *value);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.get_ContrastStep() */
 HRESULT wdesc_image_scanner_flatbed_configuration_get__contrast_step(WDESC_ImageScannerFlatbedConfiguration *self, uint32_t *value);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.get_DefaultContrast() */
 HRESULT wdesc_image_scanner_flatbed_configuration_get__default_contrast(WDESC_ImageScannerFlatbedConfiguration *self, int32_t *value);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.get_Contrast() */
 HRESULT wdesc_image_scanner_flatbed_configuration_get__contrast(WDESC_ImageScannerFlatbedConfiguration *self, int32_t *value);
 
-/* Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.put_Contrast() */
 HRESULT wdesc_image_scanner_flatbed_configuration_put__contrast(WDESC_ImageScannerFlatbedConfiguration *self, int32_t value);
 
-/* activate Windows.Devices.Scanners.ImageScannerPreviewResult */
 HRESULT wdesc_image_scanner_preview_result_new(WDESC_ImageScannerPreviewResult **out);
 
-/* Windows.Devices.Scanners.ImageScannerPreviewResult */
-/* Windows.Devices.Scanners.ImageScannerPreviewResult.get_Succeeded() */
 HRESULT wdesc_image_scanner_preview_result_get__succeeded(WDESC_ImageScannerPreviewResult *self, BOOL *value);
 
-/* Windows.Devices.Scanners.ImageScannerPreviewResult.get_Format() */
 HRESULT wdesc_image_scanner_preview_result_get__format(WDESC_ImageScannerPreviewResult *self, WDESC_ImageScannerFormat *value);
 
-/* activate Windows.Devices.Scanners.ImageScannerScanResult */
 HRESULT wdesc_image_scanner_scan_result_new(WDESC_ImageScannerScanResult **out);
 
-/* Windows.Devices.Scanners.ImageScannerScanResult */
-/* Windows.Devices.Scanners.ImageScannerScanResult.get_ScannedFiles() */
 HRESULT wdesc_image_scanner_scan_result_get__scanned_files(WDESC_ImageScannerScanResult *self, WFOCO_IVectorView_WS_StorageFile** value);
 
-/* Windows.Devices.Scanners.IImageScanner */
-/* Windows.Devices.Scanners.IImageScannerFeederConfiguration */
-/* Windows.Devices.Scanners.IImageScannerPreviewResult */
-/* Windows.Devices.Scanners.IImageScannerScanResult */
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration */
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration.get_MinScanArea() */
 HRESULT wdesc_image_scanner_source_configuration_get__min_scan_area(WDESC_IImageScannerSourceConfiguration *self, WF_Size *value);
 
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration.get_MaxScanArea() */
 HRESULT wdesc_image_scanner_source_configuration_get__max_scan_area(WDESC_IImageScannerSourceConfiguration *self, WF_Size *value);
 
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration.get_SelectedScanRegion() */
 HRESULT wdesc_image_scanner_source_configuration_get__selected_scan_region(WDESC_IImageScannerSourceConfiguration *self, WF_Rect *value);
 
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration.put_SelectedScanRegion() */
 HRESULT wdesc_image_scanner_source_configuration_put__selected_scan_region(WDESC_IImageScannerSourceConfiguration *self, WF_Rect value);
 
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration.get_AutoCroppingMode() */
 HRESULT wdesc_image_scanner_source_configuration_get__auto_cropping_mode(WDESC_IImageScannerSourceConfiguration *self, WDESC_ImageScannerAutoCroppingMode *value);
 
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration.put_AutoCroppingMode() */
 HRESULT wdesc_image_scanner_source_configuration_put__auto_cropping_mode(WDESC_IImageScannerSourceConfiguration *self, WDESC_ImageScannerAutoCroppingMode value);
 
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration.IsAutoCroppingModeSupported() */
 HRESULT wdesc_image_scanner_source_configuration_is_auto_cropping_mode_supported(WDESC_IImageScannerSourceConfiguration *self, WDESC_ImageScannerAutoCroppingMode value, BOOL *out);
 
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration.get_MinResolution() */
 HRESULT wdesc_image_scanner_source_configuration_get__min_resolution(WDESC_IImageScannerSourceConfiguration *self, WDESC_ImageScannerResolution *value);
 
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration.get_MaxResolution() */
 HRESULT wdesc_image_scanner_source_configuration_get__max_resolution(WDESC_IImageScannerSourceConfiguration *self, WDESC_ImageScannerResolution *value);
 
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration.get_OpticalResolution() */
 HRESULT wdesc_image_scanner_source_configuration_get__optical_resolution(WDESC_IImageScannerSourceConfiguration *self, WDESC_ImageScannerResolution *value);
 
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration.get_DesiredResolution() */
 HRESULT wdesc_image_scanner_source_configuration_get__desired_resolution(WDESC_IImageScannerSourceConfiguration *self, WDESC_ImageScannerResolution *value);
 
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration.put_DesiredResolution() */
 HRESULT wdesc_image_scanner_source_configuration_put__desired_resolution(WDESC_IImageScannerSourceConfiguration *self, WDESC_ImageScannerResolution value);
 
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration.get_ActualResolution() */
 HRESULT wdesc_image_scanner_source_configuration_get__actual_resolution(WDESC_IImageScannerSourceConfiguration *self, WDESC_ImageScannerResolution *value);
 
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration.get_DefaultColorMode() */
 HRESULT wdesc_image_scanner_source_configuration_get__default_color_mode(WDESC_IImageScannerSourceConfiguration *self, WDESC_ImageScannerColorMode *value);
 
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration.get_ColorMode() */
 HRESULT wdesc_image_scanner_source_configuration_get__color_mode(WDESC_IImageScannerSourceConfiguration *self, WDESC_ImageScannerColorMode *value);
 
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration.put_ColorMode() */
 HRESULT wdesc_image_scanner_source_configuration_put__color_mode(WDESC_IImageScannerSourceConfiguration *self, WDESC_ImageScannerColorMode value);
 
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration.IsColorModeSupported() */
 HRESULT wdesc_image_scanner_source_configuration_is_color_mode_supported(WDESC_IImageScannerSourceConfiguration *self, WDESC_ImageScannerColorMode value, BOOL *out);
 
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration.get_MinBrightness() */
 HRESULT wdesc_image_scanner_source_configuration_get__min_brightness(WDESC_IImageScannerSourceConfiguration *self, int32_t *value);
 
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration.get_MaxBrightness() */
 HRESULT wdesc_image_scanner_source_configuration_get__max_brightness(WDESC_IImageScannerSourceConfiguration *self, int32_t *value);
 
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration.get_BrightnessStep() */
 HRESULT wdesc_image_scanner_source_configuration_get__brightness_step(WDESC_IImageScannerSourceConfiguration *self, uint32_t *value);
 
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration.get_DefaultBrightness() */
 HRESULT wdesc_image_scanner_source_configuration_get__default_brightness(WDESC_IImageScannerSourceConfiguration *self, int32_t *value);
 
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration.get_Brightness() */
 HRESULT wdesc_image_scanner_source_configuration_get__brightness(WDESC_IImageScannerSourceConfiguration *self, int32_t *value);
 
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration.put_Brightness() */
 HRESULT wdesc_image_scanner_source_configuration_put__brightness(WDESC_IImageScannerSourceConfiguration *self, int32_t value);
 
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration.get_MinContrast() */
 HRESULT wdesc_image_scanner_source_configuration_get__min_contrast(WDESC_IImageScannerSourceConfiguration *self, int32_t *value);
 
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration.get_MaxContrast() */
 HRESULT wdesc_image_scanner_source_configuration_get__max_contrast(WDESC_IImageScannerSourceConfiguration *self, int32_t *value);
 
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration.get_ContrastStep() */
 HRESULT wdesc_image_scanner_source_configuration_get__contrast_step(WDESC_IImageScannerSourceConfiguration *self, uint32_t *value);
 
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration.get_DefaultContrast() */
 HRESULT wdesc_image_scanner_source_configuration_get__default_contrast(WDESC_IImageScannerSourceConfiguration *self, int32_t *value);
 
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration.get_Contrast() */
 HRESULT wdesc_image_scanner_source_configuration_get__contrast(WDESC_IImageScannerSourceConfiguration *self, int32_t *value);
 
-/* Windows.Devices.Scanners.IImageScannerSourceConfiguration.put_Contrast() */
 HRESULT wdesc_image_scanner_source_configuration_put__contrast(WDESC_IImageScannerSourceConfiguration *self, int32_t value);
 
-/* Windows.Devices.Scanners.IImageScannerFormatConfiguration */
-/* Windows.Devices.Scanners.IImageScannerFormatConfiguration.get_DefaultFormat() */
 HRESULT wdesc_image_scanner_format_configuration_get__default_format(WDESC_IImageScannerFormatConfiguration *self, WDESC_ImageScannerFormat *value);
 
-/* Windows.Devices.Scanners.IImageScannerFormatConfiguration.get_Format() */
 HRESULT wdesc_image_scanner_format_configuration_get__format(WDESC_IImageScannerFormatConfiguration *self, WDESC_ImageScannerFormat *value);
 
-/* Windows.Devices.Scanners.IImageScannerFormatConfiguration.put_Format() */
 HRESULT wdesc_image_scanner_format_configuration_put__format(WDESC_IImageScannerFormatConfiguration *self, WDESC_ImageScannerFormat value);
 
-/* Windows.Devices.Scanners.IImageScannerFormatConfiguration.IsFormatSupported() */
 HRESULT wdesc_image_scanner_format_configuration_is_format_supported(WDESC_IImageScannerFormatConfiguration *self, WDESC_ImageScannerFormat value, BOOL *out);
 
 #endif /* CWINRT_WINDOWS_DEVICES_SCANNERS_H */

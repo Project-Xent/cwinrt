@@ -14,7 +14,6 @@
 #include <cwinrt/Windows.Perception.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IOutputStream
 #define CWINRT_FWD_WSTST_IOutputStream
 typedef struct WSTST_IOutputStream WSTST_IOutputStream;
@@ -28,7 +27,6 @@ typedef struct WSTST_IInputStream WSTST_IInputStream;
 typedef struct WSYRE_RemoteSystemSession WSYRE_RemoteSystemSession;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WPESP_ISpatialAnchorExporterStatics WPESP_ISpatialAnchorExporterStatics;
 typedef struct WPESP_ISpatialAnchorManagerStatics WPESP_ISpatialAnchorManagerStatics;
 typedef struct WPESP_ISpatialAnchorStatics WPESP_ISpatialAnchorStatics;
@@ -81,7 +79,6 @@ typedef struct WPESP_ISpatialLocatorAttachedFrameOfReference WPESP_ISpatialLocat
 typedef struct WPESP_ISpatialLocatorPositionalTrackingDeactivatingEventArgs WPESP_ISpatialLocatorPositionalTrackingDeactivatingEventArgs;
 typedef struct WPESP_ISpatialStationaryFrameOfReference WPESP_ISpatialStationaryFrameOfReference;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WPESP_SpatialPerceptionAccessStatus
 #define CWINRT_FWD_WF_IAsyncOperation_WPESP_SpatialPerceptionAccessStatus
 typedef struct WF_IAsyncOperation_WPESP_SpatialPerceptionAccessStatus WF_IAsyncOperation_WPESP_SpatialPerceptionAccessStatus;
@@ -305,7 +302,6 @@ struct WPESP_SpatialBoundingSphere {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -430,298 +426,184 @@ static const IID CWINRT_IID_WPESP_ISpatialLocatorPositionalTrackingDeactivatingE
 static const IID CWINRT_IID_WPESP_ISpatialStationaryFrameOfReference CWINRT_MAYBE_UNUSED = { 0x09DBCCB9, 0xBCF8, 0x3E7F, { 0xBE, 0x7E, 0x7E, 0xDC, 0xCB, 0xB1, 0x78, 0xA8 } };
 #endif
 
-/* Methods */
-
-/* Windows.Perception.Spatial.ISpatialAnchorExporterStatics */
-/* Windows.Perception.Spatial.ISpatialAnchorExporterStatics.GetDefault() */
 HRESULT wpesp_spatial_anchor_exporter_statics_get_default(WPESP_ISpatialAnchorExporterStatics *self, WPESP_SpatialAnchorExporter** out);
 
-/* Windows.Perception.Spatial.ISpatialAnchorExporterStatics.RequestAccessAsync() */
 HRESULT wpesp_spatial_anchor_exporter_statics_request_access_async(WPESP_ISpatialAnchorExporterStatics *self, WF_IAsyncOperation_WPESP_SpatialPerceptionAccessStatus** out);
 
-/* Windows.Perception.Spatial.ISpatialAnchorManagerStatics */
-/* Windows.Perception.Spatial.ISpatialAnchorManagerStatics.RequestStoreAsync() */
 HRESULT wpesp_spatial_anchor_manager_statics_request_store_async(WPESP_ISpatialAnchorManagerStatics *self, WF_IAsyncOperation_WPESP_SpatialAnchorStore** out);
 
-/* Windows.Perception.Spatial.ISpatialAnchorStatics */
-/* Windows.Perception.Spatial.ISpatialAnchorStatics.TryCreateRelativeTo(coordinateSystem) */
 HRESULT wpesp_spatial_anchor_statics_try_create_relative_to(WPESP_ISpatialAnchorStatics *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WPESP_SpatialAnchor** out);
 
-/* Windows.Perception.Spatial.ISpatialAnchorStatics.TryCreateRelativeTo(coordinateSystem, position) */
 HRESULT wpesp_spatial_anchor_statics_try_create_relative_to_p_3_p(WPESP_ISpatialAnchorStatics *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WFN_Vector_3 position, WPESP_SpatialAnchor** out);
 
-/* Windows.Perception.Spatial.ISpatialAnchorStatics.TryCreateRelativeTo(coordinateSystem, position, orientation) */
 HRESULT wpesp_spatial_anchor_statics_try_create_relative_to_p_3_quaternion_p(WPESP_ISpatialAnchorStatics *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WFN_Vector_3 position, WFN_Quaternion orientation, WPESP_SpatialAnchor** out);
 
-/* Windows.Perception.Spatial.ISpatialAnchorTransferManagerStatics */
-/* Windows.Perception.Spatial.ISpatialAnchorTransferManagerStatics.TryImportAnchorsAsync(stream) */
 HRESULT wpesp_spatial_anchor_transfer_manager_statics_try_import_anchors_async(WPESP_ISpatialAnchorTransferManagerStatics *self, WSTST_IInputStream* stream, WF_IAsyncOperation_WFOCO_IMapView_HSTRING_WPESP_SpatialAnchor** out);
 
-/* Windows.Perception.Spatial.ISpatialAnchorTransferManagerStatics.TryExportAnchorsAsync(anchors, stream) */
 HRESULT wpesp_spatial_anchor_transfer_manager_statics_try_export_anchors_async(WPESP_ISpatialAnchorTransferManagerStatics *self, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_WPESP_SpatialAnchor* anchors, WSTST_IOutputStream* stream, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Perception.Spatial.ISpatialAnchorTransferManagerStatics.RequestAccessAsync() */
 HRESULT wpesp_spatial_anchor_transfer_manager_statics_request_access_async(WPESP_ISpatialAnchorTransferManagerStatics *self, WF_IAsyncOperation_WPESP_SpatialPerceptionAccessStatus** out);
 
-/* Windows.Perception.Spatial.ISpatialBoundingVolumeStatics */
-/* Windows.Perception.Spatial.ISpatialBoundingVolumeStatics.FromBox(coordinateSystem, box) */
 HRESULT wpesp_spatial_bounding_volume_statics_from_box(WPESP_ISpatialBoundingVolumeStatics *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WPESP_SpatialBoundingBox box, WPESP_SpatialBoundingVolume** out);
 
-/* Windows.Perception.Spatial.ISpatialBoundingVolumeStatics.FromOrientedBox(coordinateSystem, box) */
 HRESULT wpesp_spatial_bounding_volume_statics_from_oriented_box(WPESP_ISpatialBoundingVolumeStatics *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WPESP_SpatialBoundingOrientedBox box, WPESP_SpatialBoundingVolume** out);
 
-/* Windows.Perception.Spatial.ISpatialBoundingVolumeStatics.FromSphere(coordinateSystem, sphere) */
 HRESULT wpesp_spatial_bounding_volume_statics_from_sphere(WPESP_ISpatialBoundingVolumeStatics *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WPESP_SpatialBoundingSphere sphere, WPESP_SpatialBoundingVolume** out);
 
-/* Windows.Perception.Spatial.ISpatialBoundingVolumeStatics.FromFrustum(coordinateSystem, frustum) */
 HRESULT wpesp_spatial_bounding_volume_statics_from_frustum(WPESP_ISpatialBoundingVolumeStatics *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WPESP_SpatialBoundingFrustum frustum, WPESP_SpatialBoundingVolume** out);
 
-/* Windows.Perception.Spatial.ISpatialEntityFactory */
-/* Windows.Perception.Spatial.ISpatialEntityFactory.CreateWithSpatialAnchor(spatialAnchor) */
 HRESULT wpesp_spatial_entity_factory_create_with_spatial_anchor(WPESP_ISpatialEntityFactory *self, WPESP_SpatialAnchor* spatialAnchor, WPESP_SpatialEntity** out);
 
-/* Windows.Perception.Spatial.ISpatialEntityFactory.CreateWithSpatialAnchorAndProperties(spatialAnchor, propertySet) */
 HRESULT wpesp_spatial_entity_factory_create_with_spatial_anchor_and_properties(WPESP_ISpatialEntityFactory *self, WPESP_SpatialAnchor* spatialAnchor, WFOCO_ValueSet* propertySet, WPESP_SpatialEntity** out);
 
-/* Windows.Perception.Spatial.ISpatialEntityStoreStatics */
-/* Windows.Perception.Spatial.ISpatialEntityStoreStatics.get_IsSupported() */
 HRESULT wpesp_spatial_entity_store_statics_get__is_supported(WPESP_ISpatialEntityStoreStatics *self, BOOL *value);
 
-/* Windows.Perception.Spatial.ISpatialEntityStoreStatics.TryGet(session) */
 HRESULT wpesp_spatial_entity_store_statics_try_get(WPESP_ISpatialEntityStoreStatics *self, WSYRE_RemoteSystemSession* session, WPESP_SpatialEntityStore** out);
 
-/* Windows.Perception.Spatial.ISpatialLocatorStatics */
-/* Windows.Perception.Spatial.ISpatialLocatorStatics.GetDefault() */
 HRESULT wpesp_spatial_locator_statics_get_default(WPESP_ISpatialLocatorStatics *self, WPESP_SpatialLocator** out);
 
-/* Windows.Perception.Spatial.ISpatialStageFrameOfReferenceStatics */
-/* Windows.Perception.Spatial.ISpatialStageFrameOfReferenceStatics.get_Current() */
 HRESULT wpesp_spatial_stage_frame_of_reference_statics_get__current(WPESP_ISpatialStageFrameOfReferenceStatics *self, WPESP_SpatialStageFrameOfReference** value);
 
-/* Windows.Perception.Spatial.ISpatialStageFrameOfReferenceStatics.RequestNewStageAsync() */
 HRESULT wpesp_spatial_stage_frame_of_reference_statics_request_new_stage_async(WPESP_ISpatialStageFrameOfReferenceStatics *self, WF_IAsyncOperation_WPESP_SpatialStageFrameOfReference** out);
 
-/* activate Windows.Perception.Spatial.SpatialStageFrameOfReference */
 HRESULT wpesp_spatial_stage_frame_of_reference_new(WPESP_SpatialStageFrameOfReference **out);
 
-/* Windows.Perception.Spatial.SpatialStageFrameOfReference */
-/* Windows.Perception.Spatial.SpatialStageFrameOfReference.get_CoordinateSystem() */
 HRESULT wpesp_spatial_stage_frame_of_reference_get__coordinate_system(WPESP_SpatialStageFrameOfReference *self, WPESP_SpatialCoordinateSystem** value);
 
-/* Windows.Perception.Spatial.SpatialStageFrameOfReference.get_MovementRange() */
 HRESULT wpesp_spatial_stage_frame_of_reference_get__movement_range(WPESP_SpatialStageFrameOfReference *self, WPESP_SpatialMovementRange *value);
 
-/* Windows.Perception.Spatial.SpatialStageFrameOfReference.get_LookDirectionRange() */
 HRESULT wpesp_spatial_stage_frame_of_reference_get__look_direction_range(WPESP_SpatialStageFrameOfReference *self, WPESP_SpatialLookDirectionRange *value);
 
-/* Windows.Perception.Spatial.SpatialStageFrameOfReference.GetCoordinateSystemAtCurrentLocation(locator) */
 HRESULT wpesp_spatial_stage_frame_of_reference_get_coordinate_system_at_current_location(WPESP_SpatialStageFrameOfReference *self, WPESP_SpatialLocator* locator, WPESP_SpatialCoordinateSystem** out);
 
-/* Windows.Perception.Spatial.SpatialStageFrameOfReference.TryGetMovementBounds(coordinateSystem) */
 HRESULT wpesp_spatial_stage_frame_of_reference_try_get_movement_bounds(WPESP_SpatialStageFrameOfReference *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WFN_Vector_3 **out, uint32_t *out_len);
 
-/* Windows.Perception.Spatial.SpatialStageFrameOfReference.get_Current() */
 HRESULT wpesp_spatial_stage_frame_of_reference_get__current(WPESP_SpatialStageFrameOfReference** value);
 
-/* Windows.Perception.Spatial.SpatialStageFrameOfReference.RequestNewStageAsync() */
 HRESULT wpesp_spatial_stage_frame_of_reference_request_new_stage_async(WF_IAsyncOperation_WPESP_SpatialStageFrameOfReference** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wpesp_spatial_stage_frame_of_reference_on_current_changed(WPESP_SpatialStageFrameOfReference *self, cwinrt_event_fn fn, void *ctx);
 void wpesp_spatial_stage_frame_of_reference_off_current_changed(WPESP_SpatialStageFrameOfReference *self, cwinrt_token token);
 
-/* activate Windows.Perception.Spatial.SpatialAnchor */
 HRESULT wpesp_spatial_anchor_new(WPESP_SpatialAnchor **out);
 
-/* Windows.Perception.Spatial.SpatialAnchor */
-/* Windows.Perception.Spatial.SpatialAnchor.get_CoordinateSystem() */
 HRESULT wpesp_spatial_anchor_get__coordinate_system(WPESP_SpatialAnchor *self, WPESP_SpatialCoordinateSystem** value);
 
-/* Windows.Perception.Spatial.SpatialAnchor.get_RawCoordinateSystem() */
 HRESULT wpesp_spatial_anchor_get__raw_coordinate_system(WPESP_SpatialAnchor *self, WPESP_SpatialCoordinateSystem** value);
 
-/* Windows.Perception.Spatial.SpatialAnchor.get_RemovedByUser() */
 HRESULT wpesp_spatial_anchor_get__removed_by_user(WPESP_SpatialAnchor *self, BOOL *value);
 
-/* Windows.Perception.Spatial.SpatialAnchor.TryCreateRelativeTo(coordinateSystem) */
 HRESULT wpesp_spatial_anchor_try_create_relative_to(WPESP_SpatialCoordinateSystem* coordinateSystem, WPESP_SpatialAnchor** out);
 
-/* Windows.Perception.Spatial.SpatialAnchor.TryCreateRelativeTo(coordinateSystem, position) */
 HRESULT wpesp_spatial_anchor_try_create_relative_to_p_3_p(WPESP_SpatialCoordinateSystem* coordinateSystem, WFN_Vector_3 position, WPESP_SpatialAnchor** out);
 
-/* Windows.Perception.Spatial.SpatialAnchor.TryCreateRelativeTo(coordinateSystem, position, orientation) */
 HRESULT wpesp_spatial_anchor_try_create_relative_to_p_3_quaternion_p(WPESP_SpatialCoordinateSystem* coordinateSystem, WFN_Vector_3 position, WFN_Quaternion orientation, WPESP_SpatialAnchor** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wpesp_spatial_anchor_on_raw_coordinate_system_adjusted(WPESP_SpatialAnchor *self, cwinrt_event_fn fn, void *ctx);
 void wpesp_spatial_anchor_off_raw_coordinate_system_adjusted(WPESP_SpatialAnchor *self, cwinrt_token token);
 
-/* activate Windows.Perception.Spatial.SpatialAnchorExportSufficiency */
 HRESULT wpesp_spatial_anchor_export_sufficiency_new(WPESP_SpatialAnchorExportSufficiency **out);
 
-/* Windows.Perception.Spatial.SpatialAnchorExportSufficiency */
-/* Windows.Perception.Spatial.SpatialAnchorExportSufficiency.get_IsMinimallySufficient() */
 HRESULT wpesp_spatial_anchor_export_sufficiency_get__is_minimally_sufficient(WPESP_SpatialAnchorExportSufficiency *self, BOOL *value);
 
-/* Windows.Perception.Spatial.SpatialAnchorExportSufficiency.get_SufficiencyLevel() */
 HRESULT wpesp_spatial_anchor_export_sufficiency_get__sufficiency_level(WPESP_SpatialAnchorExportSufficiency *self, double *value);
 
-/* Windows.Perception.Spatial.SpatialAnchorExportSufficiency.get_RecommendedSufficiencyLevel() */
 HRESULT wpesp_spatial_anchor_export_sufficiency_get__recommended_sufficiency_level(WPESP_SpatialAnchorExportSufficiency *self, double *value);
 
-/* activate Windows.Perception.Spatial.SpatialAnchorExporter */
 HRESULT wpesp_spatial_anchor_exporter_new(WPESP_SpatialAnchorExporter **out);
 
-/* Windows.Perception.Spatial.SpatialAnchorExporter */
-/* Windows.Perception.Spatial.SpatialAnchorExporter.GetAnchorExportSufficiencyAsync(anchor, purpose) */
 HRESULT wpesp_spatial_anchor_exporter_get_anchor_export_sufficiency_async(WPESP_SpatialAnchorExporter *self, WPESP_SpatialAnchor* anchor, WPESP_SpatialAnchorExportPurpose purpose, WF_IAsyncOperation_WPESP_SpatialAnchorExportSufficiency** out);
 
-/* Windows.Perception.Spatial.SpatialAnchorExporter.TryExportAnchorAsync(anchor, purpose, stream) */
 HRESULT wpesp_spatial_anchor_exporter_try_export_anchor_async(WPESP_SpatialAnchorExporter *self, WPESP_SpatialAnchor* anchor, WPESP_SpatialAnchorExportPurpose purpose, WSTST_IOutputStream* stream, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Perception.Spatial.SpatialAnchorExporter.GetDefault() */
 HRESULT wpesp_spatial_anchor_exporter_get_default(WPESP_SpatialAnchorExporter** out);
 
-/* Windows.Perception.Spatial.SpatialAnchorExporter.RequestAccessAsync() */
 HRESULT wpesp_spatial_anchor_exporter_request_access_async(WF_IAsyncOperation_WPESP_SpatialPerceptionAccessStatus** out);
 
-/* activate Windows.Perception.Spatial.SpatialAnchorManager */
 HRESULT wpesp_spatial_anchor_manager_new(WPESP_SpatialAnchorManager **out);
 
-/* Windows.Perception.Spatial.SpatialAnchorManager */
-/* Windows.Perception.Spatial.SpatialAnchorManager.RequestStoreAsync() */
 HRESULT wpesp_spatial_anchor_manager_request_store_async(WF_IAsyncOperation_WPESP_SpatialAnchorStore** out);
 
-/* activate Windows.Perception.Spatial.SpatialAnchorRawCoordinateSystemAdjustedEventArgs */
 HRESULT wpesp_spatial_anchor_raw_coordinate_system_adjusted_event_args_new(WPESP_SpatialAnchorRawCoordinateSystemAdjustedEventArgs **out);
 
-/* Windows.Perception.Spatial.SpatialAnchorRawCoordinateSystemAdjustedEventArgs */
-/* Windows.Perception.Spatial.SpatialAnchorRawCoordinateSystemAdjustedEventArgs.get_OldRawCoordinateSystemToNewRawCoordinateSystemTransform() */
 HRESULT wpesp_spatial_anchor_raw_coordinate_system_adjusted_event_args_get__old_raw_coordinate_system_to_new_raw_coordinate_system_transform(WPESP_SpatialAnchorRawCoordinateSystemAdjustedEventArgs *self, WFN_Matrix4x_4 *value);
 
-/* activate Windows.Perception.Spatial.SpatialAnchorStore */
 HRESULT wpesp_spatial_anchor_store_new(WPESP_SpatialAnchorStore **out);
 
-/* Windows.Perception.Spatial.SpatialAnchorStore */
-/* Windows.Perception.Spatial.SpatialAnchorStore.GetAllSavedAnchors() */
 HRESULT wpesp_spatial_anchor_store_get_all_saved_anchors(WPESP_SpatialAnchorStore *self, WFOCO_IMapView_HSTRING_WPESP_SpatialAnchor** out);
 
-/* Windows.Perception.Spatial.SpatialAnchorStore.TrySave(id, anchor) */
 HRESULT wpesp_spatial_anchor_store_try_save(WPESP_SpatialAnchorStore *self, cwinrt_hstring id, WPESP_SpatialAnchor* anchor, BOOL *out);
 
-/* Windows.Perception.Spatial.SpatialAnchorStore.Remove(id) */
 HRESULT wpesp_spatial_anchor_store_remove(WPESP_SpatialAnchorStore *self, cwinrt_hstring id);
 
-/* Windows.Perception.Spatial.SpatialAnchorStore.Clear() */
 HRESULT wpesp_spatial_anchor_store_clear(WPESP_SpatialAnchorStore *self);
 
-/* activate Windows.Perception.Spatial.SpatialAnchorTransferManager */
 HRESULT wpesp_spatial_anchor_transfer_manager_new(WPESP_SpatialAnchorTransferManager **out);
 
-/* Windows.Perception.Spatial.SpatialAnchorTransferManager */
-/* Windows.Perception.Spatial.SpatialAnchorTransferManager.TryImportAnchorsAsync(stream) */
 HRESULT wpesp_spatial_anchor_transfer_manager_try_import_anchors_async(WSTST_IInputStream* stream, WF_IAsyncOperation_WFOCO_IMapView_HSTRING_WPESP_SpatialAnchor** out);
 
-/* Windows.Perception.Spatial.SpatialAnchorTransferManager.TryExportAnchorsAsync(anchors, stream) */
 HRESULT wpesp_spatial_anchor_transfer_manager_try_export_anchors_async(WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_WPESP_SpatialAnchor* anchors, WSTST_IOutputStream* stream, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Perception.Spatial.SpatialAnchorTransferManager.RequestAccessAsync() */
 HRESULT wpesp_spatial_anchor_transfer_manager_request_access_async(WF_IAsyncOperation_WPESP_SpatialPerceptionAccessStatus** out);
 
-/* activate Windows.Perception.Spatial.SpatialBoundingVolume */
 HRESULT wpesp_spatial_bounding_volume_new(WPESP_SpatialBoundingVolume **out);
 
-/* Windows.Perception.Spatial.SpatialBoundingVolume */
-/* Windows.Perception.Spatial.SpatialBoundingVolume.FromBox(coordinateSystem, box) */
 HRESULT wpesp_spatial_bounding_volume_from_box(WPESP_SpatialCoordinateSystem* coordinateSystem, WPESP_SpatialBoundingBox box, WPESP_SpatialBoundingVolume** out);
 
-/* Windows.Perception.Spatial.SpatialBoundingVolume.FromOrientedBox(coordinateSystem, box) */
 HRESULT wpesp_spatial_bounding_volume_from_oriented_box(WPESP_SpatialCoordinateSystem* coordinateSystem, WPESP_SpatialBoundingOrientedBox box, WPESP_SpatialBoundingVolume** out);
 
-/* Windows.Perception.Spatial.SpatialBoundingVolume.FromSphere(coordinateSystem, sphere) */
 HRESULT wpesp_spatial_bounding_volume_from_sphere(WPESP_SpatialCoordinateSystem* coordinateSystem, WPESP_SpatialBoundingSphere sphere, WPESP_SpatialBoundingVolume** out);
 
-/* Windows.Perception.Spatial.SpatialBoundingVolume.FromFrustum(coordinateSystem, frustum) */
 HRESULT wpesp_spatial_bounding_volume_from_frustum(WPESP_SpatialCoordinateSystem* coordinateSystem, WPESP_SpatialBoundingFrustum frustum, WPESP_SpatialBoundingVolume** out);
 
-/* activate Windows.Perception.Spatial.SpatialCoordinateSystem */
 HRESULT wpesp_spatial_coordinate_system_new(WPESP_SpatialCoordinateSystem **out);
 
-/* Windows.Perception.Spatial.SpatialCoordinateSystem */
-/* Windows.Perception.Spatial.SpatialCoordinateSystem.TryGetTransformTo(target) */
 HRESULT wpesp_spatial_coordinate_system_try_get_transform_to(WPESP_SpatialCoordinateSystem *self, WPESP_SpatialCoordinateSystem* target, WFN_Matrix4x_4** out);
 
-/* activate Windows.Perception.Spatial.SpatialEntity */
 HRESULT wpesp_spatial_entity_new(WPESP_SpatialEntity **out);
 
-/* Windows.Perception.Spatial.SpatialEntity */
-/* Windows.Perception.Spatial.SpatialEntity.get_Id() */
 HRESULT wpesp_spatial_entity_get__id(WPESP_SpatialEntity *self, cwinrt_hstring *value);
 
-/* Windows.Perception.Spatial.SpatialEntity.get_Anchor() */
 HRESULT wpesp_spatial_entity_get__anchor(WPESP_SpatialEntity *self, WPESP_SpatialAnchor** value);
 
-/* Windows.Perception.Spatial.SpatialEntity.get_Properties() */
 HRESULT wpesp_spatial_entity_get__properties(WPESP_SpatialEntity *self, WFOCO_ValueSet** value);
 
-/* activate Windows.Perception.Spatial.SpatialEntityAddedEventArgs */
 HRESULT wpesp_spatial_entity_added_event_args_new(WPESP_SpatialEntityAddedEventArgs **out);
 
-/* Windows.Perception.Spatial.SpatialEntityAddedEventArgs */
-/* Windows.Perception.Spatial.SpatialEntityAddedEventArgs.get_Entity() */
 HRESULT wpesp_spatial_entity_added_event_args_get__entity(WPESP_SpatialEntityAddedEventArgs *self, WPESP_SpatialEntity** value);
 
-/* activate Windows.Perception.Spatial.SpatialEntityRemovedEventArgs */
 HRESULT wpesp_spatial_entity_removed_event_args_new(WPESP_SpatialEntityRemovedEventArgs **out);
 
-/* Windows.Perception.Spatial.SpatialEntityRemovedEventArgs */
-/* Windows.Perception.Spatial.SpatialEntityRemovedEventArgs.get_Entity() */
 HRESULT wpesp_spatial_entity_removed_event_args_get__entity(WPESP_SpatialEntityRemovedEventArgs *self, WPESP_SpatialEntity** value);
 
-/* activate Windows.Perception.Spatial.SpatialEntityStore */
 HRESULT wpesp_spatial_entity_store_new(WPESP_SpatialEntityStore **out);
 
-/* Windows.Perception.Spatial.SpatialEntityStore */
-/* Windows.Perception.Spatial.SpatialEntityStore.SaveAsync(entity) */
 HRESULT wpesp_spatial_entity_store_save_async(WPESP_SpatialEntityStore *self, WPESP_SpatialEntity* entity, WF_IAsyncAction** out);
 
-/* Windows.Perception.Spatial.SpatialEntityStore.RemoveAsync(entity) */
 HRESULT wpesp_spatial_entity_store_remove_async(WPESP_SpatialEntityStore *self, WPESP_SpatialEntity* entity, WF_IAsyncAction** out);
 
-/* Windows.Perception.Spatial.SpatialEntityStore.CreateEntityWatcher() */
 HRESULT wpesp_spatial_entity_store_create_entity_watcher(WPESP_SpatialEntityStore *self, WPESP_SpatialEntityWatcher** out);
 
-/* Windows.Perception.Spatial.SpatialEntityStore.get_IsSupported() */
 HRESULT wpesp_spatial_entity_store_get__is_supported(BOOL *value);
 
-/* Windows.Perception.Spatial.SpatialEntityStore.TryGet(session) */
 HRESULT wpesp_spatial_entity_store_try_get(WSYRE_RemoteSystemSession* session, WPESP_SpatialEntityStore** out);
 
-/* activate Windows.Perception.Spatial.SpatialEntityUpdatedEventArgs */
 HRESULT wpesp_spatial_entity_updated_event_args_new(WPESP_SpatialEntityUpdatedEventArgs **out);
 
-/* Windows.Perception.Spatial.SpatialEntityUpdatedEventArgs */
-/* Windows.Perception.Spatial.SpatialEntityUpdatedEventArgs.get_Entity() */
 HRESULT wpesp_spatial_entity_updated_event_args_get__entity(WPESP_SpatialEntityUpdatedEventArgs *self, WPESP_SpatialEntity** value);
 
-/* activate Windows.Perception.Spatial.SpatialEntityWatcher */
 HRESULT wpesp_spatial_entity_watcher_new(WPESP_SpatialEntityWatcher **out);
 
-/* Windows.Perception.Spatial.SpatialEntityWatcher */
-/* Windows.Perception.Spatial.SpatialEntityWatcher.get_Status() */
 HRESULT wpesp_spatial_entity_watcher_get__status(WPESP_SpatialEntityWatcher *self, WPESP_SpatialEntityWatcherStatus *value);
 
-/* Windows.Perception.Spatial.SpatialEntityWatcher.Start() */
 HRESULT wpesp_spatial_entity_watcher_start(WPESP_SpatialEntityWatcher *self);
 
-/* Windows.Perception.Spatial.SpatialEntityWatcher.Stop() */
 HRESULT wpesp_spatial_entity_watcher_stop(WPESP_SpatialEntityWatcher *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wpesp_spatial_entity_watcher_on_added(WPESP_SpatialEntityWatcher *self, cwinrt_event_fn fn, void *ctx);
@@ -736,72 +618,48 @@ void wpesp_spatial_entity_watcher_off_removed(WPESP_SpatialEntityWatcher *self, 
 cwinrt_token wpesp_spatial_entity_watcher_on_enumeration_completed(WPESP_SpatialEntityWatcher *self, cwinrt_event_fn fn, void *ctx);
 void wpesp_spatial_entity_watcher_off_enumeration_completed(WPESP_SpatialEntityWatcher *self, cwinrt_token token);
 
-/* activate Windows.Perception.Spatial.SpatialLocation */
 HRESULT wpesp_spatial_location_new(WPESP_SpatialLocation **out);
 
-/* Windows.Perception.Spatial.SpatialLocation */
-/* Windows.Perception.Spatial.SpatialLocation.get_Position() */
 HRESULT wpesp_spatial_location_get__position(WPESP_SpatialLocation *self, WFN_Vector_3 *value);
 
-/* Windows.Perception.Spatial.SpatialLocation.get_Orientation() */
 HRESULT wpesp_spatial_location_get__orientation(WPESP_SpatialLocation *self, WFN_Quaternion *value);
 
-/* Windows.Perception.Spatial.SpatialLocation.get_AbsoluteLinearVelocity() */
 HRESULT wpesp_spatial_location_get__absolute_linear_velocity(WPESP_SpatialLocation *self, WFN_Vector_3 *value);
 
-/* Windows.Perception.Spatial.SpatialLocation.get_AbsoluteLinearAcceleration() */
 HRESULT wpesp_spatial_location_get__absolute_linear_acceleration(WPESP_SpatialLocation *self, WFN_Vector_3 *value);
 
-/* Windows.Perception.Spatial.SpatialLocation.get_AbsoluteAngularVelocity() */
 HRESULT wpesp_spatial_location_get__absolute_angular_velocity(WPESP_SpatialLocation *self, WFN_Quaternion *value);
 
-/* Windows.Perception.Spatial.SpatialLocation.get_AbsoluteAngularAcceleration() */
 HRESULT wpesp_spatial_location_get__absolute_angular_acceleration(WPESP_SpatialLocation *self, WFN_Quaternion *value);
 
-/* Windows.Perception.Spatial.SpatialLocation.get_AbsoluteAngularVelocityAxisAngle() */
 HRESULT wpesp_spatial_location_get__absolute_angular_velocity_axis_angle(WPESP_SpatialLocation *self, WFN_Vector_3 *value);
 
-/* Windows.Perception.Spatial.SpatialLocation.get_AbsoluteAngularAccelerationAxisAngle() */
 HRESULT wpesp_spatial_location_get__absolute_angular_acceleration_axis_angle(WPESP_SpatialLocation *self, WFN_Vector_3 *value);
 
-/* activate Windows.Perception.Spatial.SpatialLocator */
 HRESULT wpesp_spatial_locator_new(WPESP_SpatialLocator **out);
 
-/* Windows.Perception.Spatial.SpatialLocator */
-/* Windows.Perception.Spatial.SpatialLocator.get_Locatability() */
 HRESULT wpesp_spatial_locator_get__locatability(WPESP_SpatialLocator *self, WPESP_SpatialLocatability *value);
 
-/* Windows.Perception.Spatial.SpatialLocator.TryLocateAtTimestamp(timestamp, coordinateSystem) */
 HRESULT wpesp_spatial_locator_try_locate_at_timestamp(WPESP_SpatialLocator *self, WPE_PerceptionTimestamp* timestamp, WPESP_SpatialCoordinateSystem* coordinateSystem, WPESP_SpatialLocation** out);
 
-/* Windows.Perception.Spatial.SpatialLocator.CreateAttachedFrameOfReferenceAtCurrentHeading() */
 HRESULT wpesp_spatial_locator_create_attached_frame_of_reference_at_current_heading(WPESP_SpatialLocator *self, WPESP_SpatialLocatorAttachedFrameOfReference** out);
 
-/* Windows.Perception.Spatial.SpatialLocator.CreateAttachedFrameOfReferenceAtCurrentHeading(relativePosition) */
 HRESULT wpesp_spatial_locator_create_attached_frame_of_reference_at_current_heading_3_p(WPESP_SpatialLocator *self, WFN_Vector_3 relativePosition, WPESP_SpatialLocatorAttachedFrameOfReference** out);
 
-/* Windows.Perception.Spatial.SpatialLocator.CreateAttachedFrameOfReferenceAtCurrentHeading(relativePosition, relativeOrientation) */
 HRESULT wpesp_spatial_locator_create_attached_frame_of_reference_at_current_heading_3_quaternion_p(WPESP_SpatialLocator *self, WFN_Vector_3 relativePosition, WFN_Quaternion relativeOrientation, WPESP_SpatialLocatorAttachedFrameOfReference** out);
 
-/* Windows.Perception.Spatial.SpatialLocator.CreateAttachedFrameOfReferenceAtCurrentHeading(relativePosition, relativeOrientation, relativeHeadingInRadians) */
 HRESULT wpesp_spatial_locator_create_attached_frame_of_reference_at_current_heading_3_quaternion_f64_p(WPESP_SpatialLocator *self, WFN_Vector_3 relativePosition, WFN_Quaternion relativeOrientation, double relativeHeadingInRadians, WPESP_SpatialLocatorAttachedFrameOfReference** out);
 
-/* Windows.Perception.Spatial.SpatialLocator.CreateStationaryFrameOfReferenceAtCurrentLocation() */
 HRESULT wpesp_spatial_locator_create_stationary_frame_of_reference_at_current_location(WPESP_SpatialLocator *self, WPESP_SpatialStationaryFrameOfReference** out);
 
-/* Windows.Perception.Spatial.SpatialLocator.CreateStationaryFrameOfReferenceAtCurrentLocation(relativePosition) */
 HRESULT wpesp_spatial_locator_create_stationary_frame_of_reference_at_current_location_3_p(WPESP_SpatialLocator *self, WFN_Vector_3 relativePosition, WPESP_SpatialStationaryFrameOfReference** out);
 
-/* Windows.Perception.Spatial.SpatialLocator.CreateStationaryFrameOfReferenceAtCurrentLocation(relativePosition, relativeOrientation) */
 HRESULT wpesp_spatial_locator_create_stationary_frame_of_reference_at_current_location_3_quaternion_p(WPESP_SpatialLocator *self, WFN_Vector_3 relativePosition, WFN_Quaternion relativeOrientation, WPESP_SpatialStationaryFrameOfReference** out);
 
-/* Windows.Perception.Spatial.SpatialLocator.CreateStationaryFrameOfReferenceAtCurrentLocation(relativePosition, relativeOrientation, relativeHeadingInRadians) */
 HRESULT wpesp_spatial_locator_create_stationary_frame_of_reference_at_current_location_3_quaternion_f64_p(WPESP_SpatialLocator *self, WFN_Vector_3 relativePosition, WFN_Quaternion relativeOrientation, double relativeHeadingInRadians, WPESP_SpatialStationaryFrameOfReference** out);
 
-/* Windows.Perception.Spatial.SpatialLocator.GetDefault() */
 HRESULT wpesp_spatial_locator_get_default(WPESP_SpatialLocator** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wpesp_spatial_locator_on_locatability_changed(WPESP_SpatialLocator *self, cwinrt_event_fn fn, void *ctx);
@@ -810,75 +668,36 @@ void wpesp_spatial_locator_off_locatability_changed(WPESP_SpatialLocator *self, 
 cwinrt_token wpesp_spatial_locator_on_positional_tracking_deactivating(WPESP_SpatialLocator *self, cwinrt_event_fn fn, void *ctx);
 void wpesp_spatial_locator_off_positional_tracking_deactivating(WPESP_SpatialLocator *self, cwinrt_token token);
 
-/* activate Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference */
 HRESULT wpesp_spatial_locator_attached_frame_of_reference_new(WPESP_SpatialLocatorAttachedFrameOfReference **out);
 
-/* Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference */
-/* Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference.get_RelativePosition() */
 HRESULT wpesp_spatial_locator_attached_frame_of_reference_get__relative_position(WPESP_SpatialLocatorAttachedFrameOfReference *self, WFN_Vector_3 *value);
 
-/* Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference.put_RelativePosition() */
 HRESULT wpesp_spatial_locator_attached_frame_of_reference_put__relative_position(WPESP_SpatialLocatorAttachedFrameOfReference *self, WFN_Vector_3 value);
 
-/* Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference.get_RelativeOrientation() */
 HRESULT wpesp_spatial_locator_attached_frame_of_reference_get__relative_orientation(WPESP_SpatialLocatorAttachedFrameOfReference *self, WFN_Quaternion *value);
 
-/* Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference.put_RelativeOrientation() */
 HRESULT wpesp_spatial_locator_attached_frame_of_reference_put__relative_orientation(WPESP_SpatialLocatorAttachedFrameOfReference *self, WFN_Quaternion value);
 
-/* Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference.AdjustHeading(headingOffsetInRadians) */
 HRESULT wpesp_spatial_locator_attached_frame_of_reference_adjust_heading(WPESP_SpatialLocatorAttachedFrameOfReference *self, double headingOffsetInRadians);
 
-/* Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference.GetStationaryCoordinateSystemAtTimestamp(timestamp) */
 HRESULT wpesp_spatial_locator_attached_frame_of_reference_get_stationary_coordinate_system_at_timestamp(WPESP_SpatialLocatorAttachedFrameOfReference *self, WPE_PerceptionTimestamp* timestamp, WPESP_SpatialCoordinateSystem** out);
 
-/* Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference.TryGetRelativeHeadingAtTimestamp(timestamp) */
 HRESULT wpesp_spatial_locator_attached_frame_of_reference_try_get_relative_heading_at_timestamp(WPESP_SpatialLocatorAttachedFrameOfReference *self, WPE_PerceptionTimestamp* timestamp, double** out);
 
-/* activate Windows.Perception.Spatial.SpatialLocatorPositionalTrackingDeactivatingEventArgs */
 HRESULT wpesp_spatial_locator_positional_tracking_deactivating_event_args_new(WPESP_SpatialLocatorPositionalTrackingDeactivatingEventArgs **out);
 
-/* Windows.Perception.Spatial.SpatialLocatorPositionalTrackingDeactivatingEventArgs */
-/* Windows.Perception.Spatial.SpatialLocatorPositionalTrackingDeactivatingEventArgs.get_Canceled() */
 HRESULT wpesp_spatial_locator_positional_tracking_deactivating_event_args_get__canceled(WPESP_SpatialLocatorPositionalTrackingDeactivatingEventArgs *self, BOOL *value);
 
-/* Windows.Perception.Spatial.SpatialLocatorPositionalTrackingDeactivatingEventArgs.put_Canceled() */
 HRESULT wpesp_spatial_locator_positional_tracking_deactivating_event_args_put__canceled(WPESP_SpatialLocatorPositionalTrackingDeactivatingEventArgs *self, BOOL value);
 
-/* activate Windows.Perception.Spatial.SpatialStationaryFrameOfReference */
 HRESULT wpesp_spatial_stationary_frame_of_reference_new(WPESP_SpatialStationaryFrameOfReference **out);
 
-/* Windows.Perception.Spatial.SpatialStationaryFrameOfReference */
-/* Windows.Perception.Spatial.SpatialStationaryFrameOfReference.get_CoordinateSystem() */
 HRESULT wpesp_spatial_stationary_frame_of_reference_get__coordinate_system(WPESP_SpatialStationaryFrameOfReference *self, WPESP_SpatialCoordinateSystem** value);
 
-/* Windows.Perception.Spatial.ISpatialStageFrameOfReference */
-/* Windows.Perception.Spatial.ISpatialAnchor */
-/* Windows.Perception.Spatial.ISpatialAnchor2 */
-/* Windows.Perception.Spatial.ISpatialAnchor2.get_RemovedByUser() */
 HRESULT wpesp_spatial_anchor_2_get__removed_by_user(WPESP_ISpatialAnchor_2 *self, BOOL *value);
 
-/* Windows.Perception.Spatial.ISpatialAnchorExportSufficiency */
-/* Windows.Perception.Spatial.ISpatialAnchorExporter */
-/* Windows.Perception.Spatial.ISpatialAnchorRawCoordinateSystemAdjustedEventArgs */
-/* Windows.Perception.Spatial.ISpatialAnchorStore */
-/* Windows.Perception.Spatial.ISpatialCoordinateSystem */
-/* Windows.Perception.Spatial.ISpatialEntity */
-/* Windows.Perception.Spatial.ISpatialEntityAddedEventArgs */
-/* Windows.Perception.Spatial.ISpatialEntityRemovedEventArgs */
-/* Windows.Perception.Spatial.ISpatialEntityStore */
-/* Windows.Perception.Spatial.ISpatialEntityUpdatedEventArgs */
-/* Windows.Perception.Spatial.ISpatialEntityWatcher */
-/* Windows.Perception.Spatial.ISpatialLocation */
-/* Windows.Perception.Spatial.ISpatialLocation2 */
-/* Windows.Perception.Spatial.ISpatialLocation2.get_AbsoluteAngularVelocityAxisAngle() */
 HRESULT wpesp_spatial_location_2_get__absolute_angular_velocity_axis_angle(WPESP_ISpatialLocation_2 *self, WFN_Vector_3 *value);
 
-/* Windows.Perception.Spatial.ISpatialLocation2.get_AbsoluteAngularAccelerationAxisAngle() */
 HRESULT wpesp_spatial_location_2_get__absolute_angular_acceleration_axis_angle(WPESP_ISpatialLocation_2 *self, WFN_Vector_3 *value);
 
-/* Windows.Perception.Spatial.ISpatialLocator */
-/* Windows.Perception.Spatial.ISpatialLocatorAttachedFrameOfReference */
-/* Windows.Perception.Spatial.ISpatialLocatorPositionalTrackingDeactivatingEventArgs */
-/* Windows.Perception.Spatial.ISpatialStationaryFrameOfReference */
 #endif /* CWINRT_WINDOWS_PERCEPTION_SPATIAL_H */

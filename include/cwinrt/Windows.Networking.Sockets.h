@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Networking.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WAPBA_IBackgroundTask
 #define CWINRT_FWD_WAPBA_IBackgroundTask
 typedef struct WAPBA_IBackgroundTask WAPBA_IBackgroundTask;
@@ -136,7 +135,6 @@ typedef enum WWE_WebErrorStatus {
 typedef struct WAPBA_IBackgroundTaskInstance WAPBA_IBackgroundTaskInstance;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WNESO_ControlChannelTrigger WNESO_ControlChannelTrigger;
 typedef struct WNESO_DatagramSocket WNESO_DatagramSocket;
 typedef struct WNESO_DatagramSocketControl WNESO_DatagramSocketControl;
@@ -231,7 +229,6 @@ typedef struct WNESO_IWebSocketControl WNESO_IWebSocketControl;
 typedef struct WNESO_IWebSocketInformation WNESO_IWebSocketInformation;
 typedef struct WNESO_IWebSocket WNESO_IWebSocket;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WAPBA_IBackgroundTrigger
 #define CWINRT_FWD_WAPBA_IBackgroundTrigger
 typedef struct WAPBA_IBackgroundTrigger WAPBA_IBackgroundTrigger;
@@ -607,7 +604,6 @@ struct WNESO_RoundTripTimeStatistics {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -856,273 +852,173 @@ static const IID CWINRT_IID_WNESO_IWebSocketInformation CWINRT_MAYBE_UNUSED = { 
 static const IID CWINRT_IID_WNESO_IWebSocket CWINRT_MAYBE_UNUSED = { 0xF877396F, 0x99B1, 0x4E18, { 0xBC, 0x08, 0x85, 0x0C, 0x9A, 0xDF, 0x15, 0x6E } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Networking.Sockets.ControlChannelTrigger */
 HRESULT wneso_control_channel_trigger_new(WNESO_ControlChannelTrigger **out);
 
-/* Windows.Networking.Sockets.ControlChannelTrigger */
-/* Windows.Networking.Sockets.ControlChannelTrigger.get_ControlChannelTriggerId() */
 HRESULT wneso_control_channel_trigger_get__control_channel_trigger_id(WNESO_ControlChannelTrigger *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Sockets.ControlChannelTrigger.get_ServerKeepAliveIntervalInMinutes() */
 HRESULT wneso_control_channel_trigger_get__server_keep_alive_interval_in_minutes(WNESO_ControlChannelTrigger *self, uint32_t *value);
 
-/* Windows.Networking.Sockets.ControlChannelTrigger.put_ServerKeepAliveIntervalInMinutes() */
 HRESULT wneso_control_channel_trigger_put__server_keep_alive_interval_in_minutes(WNESO_ControlChannelTrigger *self, uint32_t value);
 
-/* Windows.Networking.Sockets.ControlChannelTrigger.get_CurrentKeepAliveIntervalInMinutes() */
 HRESULT wneso_control_channel_trigger_get__current_keep_alive_interval_in_minutes(WNESO_ControlChannelTrigger *self, uint32_t *value);
 
-/* Windows.Networking.Sockets.ControlChannelTrigger.get_TransportObject() */
 HRESULT wneso_control_channel_trigger_get__transport_object(WNESO_ControlChannelTrigger *self, IInspectable** value);
 
-/* Windows.Networking.Sockets.ControlChannelTrigger.get_KeepAliveTrigger() */
 HRESULT wneso_control_channel_trigger_get__keep_alive_trigger(WNESO_ControlChannelTrigger *self, WAPBA_IBackgroundTrigger** value);
 
-/* Windows.Networking.Sockets.ControlChannelTrigger.get_PushNotificationTrigger() */
 HRESULT wneso_control_channel_trigger_get__push_notification_trigger(WNESO_ControlChannelTrigger *self, WAPBA_IBackgroundTrigger** value);
 
-/* Windows.Networking.Sockets.ControlChannelTrigger.UsingTransport(transport) */
 HRESULT wneso_control_channel_trigger_using_transport(WNESO_ControlChannelTrigger *self, IInspectable* transport);
 
-/* Windows.Networking.Sockets.ControlChannelTrigger.WaitForPushEnabled() */
 HRESULT wneso_control_channel_trigger_wait_for_push_enabled(WNESO_ControlChannelTrigger *self, WNESO_ControlChannelTriggerStatus *out);
 
-/* Windows.Networking.Sockets.ControlChannelTrigger.DecreaseNetworkKeepAliveInterval() */
 HRESULT wneso_control_channel_trigger_decrease_network_keep_alive_interval(WNESO_ControlChannelTrigger *self);
 
-/* Windows.Networking.Sockets.ControlChannelTrigger.FlushTransport() */
 HRESULT wneso_control_channel_trigger_flush_transport(WNESO_ControlChannelTrigger *self);
 
-/* Windows.Networking.Sockets.ControlChannelTrigger.Close() */
 HRESULT wneso_control_channel_trigger_close(WNESO_ControlChannelTrigger *self);
 
-/* Windows.Networking.Sockets.ControlChannelTrigger.get_IsWakeFromLowPowerSupported() */
 HRESULT wneso_control_channel_trigger_get__is_wake_from_low_power_supported(WNESO_ControlChannelTrigger *self, BOOL *value);
 
-/* activate Windows.Networking.Sockets.DatagramSocket */
 HRESULT wneso_datagram_socket_new(WNESO_DatagramSocket **out);
 
-/* Windows.Networking.Sockets.DatagramSocket */
-/* Windows.Networking.Sockets.DatagramSocket.get_Control() */
 HRESULT wneso_datagram_socket_get__control(WNESO_DatagramSocket *self, WNESO_DatagramSocketControl** value);
 
-/* Windows.Networking.Sockets.DatagramSocket.get_Information() */
 HRESULT wneso_datagram_socket_get__information(WNESO_DatagramSocket *self, WNESO_DatagramSocketInformation** value);
 
-/* Windows.Networking.Sockets.DatagramSocket.get_OutputStream() */
 HRESULT wneso_datagram_socket_get__output_stream(WNESO_DatagramSocket *self, WSTST_IOutputStream** value);
 
-/* Windows.Networking.Sockets.DatagramSocket.ConnectAsync(remoteHostName, remoteServiceName) */
 HRESULT wneso_datagram_socket_connect_async_p_str_p(WNESO_DatagramSocket *self, WNE_HostName* remoteHostName, cwinrt_hstring remoteServiceName, WF_IAsyncAction** out);
 
-/* Windows.Networking.Sockets.DatagramSocket.ConnectAsync(endpointPair) */
 HRESULT wneso_datagram_socket_connect_async(WNESO_DatagramSocket *self, WNE_EndpointPair* endpointPair, WF_IAsyncAction** out);
 
-/* Windows.Networking.Sockets.DatagramSocket.BindServiceNameAsync(localServiceName) */
 HRESULT wneso_datagram_socket_bind_service_name_async(WNESO_DatagramSocket *self, cwinrt_hstring localServiceName, WF_IAsyncAction** out);
 
-/* Windows.Networking.Sockets.DatagramSocket.BindEndpointAsync(localHostName, localServiceName) */
 HRESULT wneso_datagram_socket_bind_endpoint_async(WNESO_DatagramSocket *self, WNE_HostName* localHostName, cwinrt_hstring localServiceName, WF_IAsyncAction** out);
 
-/* Windows.Networking.Sockets.DatagramSocket.JoinMulticastGroup(host) */
 HRESULT wneso_datagram_socket_join_multicast_group(WNESO_DatagramSocket *self, WNE_HostName* host);
 
-/* Windows.Networking.Sockets.DatagramSocket.GetOutputStreamAsync(remoteHostName, remoteServiceName) */
 HRESULT wneso_datagram_socket_get_output_stream_async_p_str_p(WNESO_DatagramSocket *self, WNE_HostName* remoteHostName, cwinrt_hstring remoteServiceName, WF_IAsyncOperation_WSTST_IOutputStream** out);
 
-/* Windows.Networking.Sockets.DatagramSocket.GetOutputStreamAsync(endpointPair) */
 HRESULT wneso_datagram_socket_get_output_stream_async(WNESO_DatagramSocket *self, WNE_EndpointPair* endpointPair, WF_IAsyncOperation_WSTST_IOutputStream** out);
 
-/* Windows.Networking.Sockets.DatagramSocket.Close() */
 HRESULT wneso_datagram_socket_close(WNESO_DatagramSocket *self);
 
-/* Windows.Networking.Sockets.DatagramSocket.BindServiceNameAsync(localServiceName, adapter) */
 HRESULT wneso_datagram_socket_bind_service_name_async_str_p_p(WNESO_DatagramSocket *self, cwinrt_hstring localServiceName, WNECO_NetworkAdapter* adapter, WF_IAsyncAction** out);
 
-/* Windows.Networking.Sockets.DatagramSocket.CancelIOAsync() */
 HRESULT wneso_datagram_socket_cancel_i_o_async(WNESO_DatagramSocket *self, WF_IAsyncAction** out);
 
-/* Windows.Networking.Sockets.DatagramSocket.EnableTransferOwnership(taskId) */
 HRESULT wneso_datagram_socket_enable_transfer_ownership(WNESO_DatagramSocket *self, GUID taskId);
 
-/* Windows.Networking.Sockets.DatagramSocket.EnableTransferOwnership(taskId, connectedStandbyAction) */
 HRESULT wneso_datagram_socket_enable_transfer_ownership_g_u_i_d_socket_activity_connected_st_c20823ca(WNESO_DatagramSocket *self, GUID taskId, WNESO_SocketActivityConnectedStandbyAction connectedStandbyAction);
 
-/* Windows.Networking.Sockets.DatagramSocket.TransferOwnership(socketId) */
 HRESULT wneso_datagram_socket_transfer_ownership(WNESO_DatagramSocket *self, cwinrt_hstring socketId);
 
-/* Windows.Networking.Sockets.DatagramSocket.TransferOwnership(socketId, data) */
 HRESULT wneso_datagram_socket_transfer_ownership_str_p(WNESO_DatagramSocket *self, cwinrt_hstring socketId, WNESO_SocketActivityContext* data);
 
-/* Windows.Networking.Sockets.DatagramSocket.TransferOwnership(socketId, data, keepAliveTime) */
 HRESULT wneso_datagram_socket_transfer_ownership_str_p_time_span(WNESO_DatagramSocket *self, cwinrt_hstring socketId, WNESO_SocketActivityContext* data, WF_TimeSpan keepAliveTime);
 
-/* Windows.Networking.Sockets.DatagramSocket.GetEndpointPairsAsync(remoteHostName, remoteServiceName) */
 HRESULT wneso_datagram_socket_get_endpoint_pairs_async(WNE_HostName* remoteHostName, cwinrt_hstring remoteServiceName, WF_IAsyncOperation_WFOCO_IVectorView_WNE_EndpointPair** out);
 
-/* Windows.Networking.Sockets.DatagramSocket.GetEndpointPairsAsync(remoteHostName, remoteServiceName, sortOptions) */
 HRESULT wneso_datagram_socket_get_endpoint_pairs_async_p_str_host_name_sort_options_p(WNE_HostName* remoteHostName, cwinrt_hstring remoteServiceName, WNE_HostNameSortOptions sortOptions, WF_IAsyncOperation_WFOCO_IVectorView_WNE_EndpointPair** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wneso_datagram_socket_on_message_received(WNESO_DatagramSocket *self, cwinrt_event_fn fn, void *ctx);
 void wneso_datagram_socket_off_message_received(WNESO_DatagramSocket *self, cwinrt_token token);
 
-/* activate Windows.Networking.Sockets.DatagramSocketControl */
 HRESULT wneso_datagram_socket_control_new(WNESO_DatagramSocketControl **out);
 
-/* Windows.Networking.Sockets.DatagramSocketControl */
-/* Windows.Networking.Sockets.DatagramSocketControl.get_QualityOfService() */
 HRESULT wneso_datagram_socket_control_get__quality_of_service(WNESO_DatagramSocketControl *self, WNESO_SocketQualityOfService *value);
 
-/* Windows.Networking.Sockets.DatagramSocketControl.put_QualityOfService() */
 HRESULT wneso_datagram_socket_control_put__quality_of_service(WNESO_DatagramSocketControl *self, WNESO_SocketQualityOfService value);
 
-/* Windows.Networking.Sockets.DatagramSocketControl.get_OutboundUnicastHopLimit() */
 HRESULT wneso_datagram_socket_control_get__outbound_unicast_hop_limit(WNESO_DatagramSocketControl *self, uint8_t *value);
 
-/* Windows.Networking.Sockets.DatagramSocketControl.put_OutboundUnicastHopLimit() */
 HRESULT wneso_datagram_socket_control_put__outbound_unicast_hop_limit(WNESO_DatagramSocketControl *self, uint8_t value);
 
-/* Windows.Networking.Sockets.DatagramSocketControl.get_InboundBufferSizeInBytes() */
 HRESULT wneso_datagram_socket_control_get__inbound_buffer_size_in_bytes(WNESO_DatagramSocketControl *self, uint32_t *value);
 
-/* Windows.Networking.Sockets.DatagramSocketControl.put_InboundBufferSizeInBytes() */
 HRESULT wneso_datagram_socket_control_put__inbound_buffer_size_in_bytes(WNESO_DatagramSocketControl *self, uint32_t value);
 
-/* Windows.Networking.Sockets.DatagramSocketControl.get_DontFragment() */
 HRESULT wneso_datagram_socket_control_get__dont_fragment(WNESO_DatagramSocketControl *self, BOOL *value);
 
-/* Windows.Networking.Sockets.DatagramSocketControl.put_DontFragment() */
 HRESULT wneso_datagram_socket_control_put__dont_fragment(WNESO_DatagramSocketControl *self, BOOL value);
 
-/* Windows.Networking.Sockets.DatagramSocketControl.get_MulticastOnly() */
 HRESULT wneso_datagram_socket_control_get__multicast_only(WNESO_DatagramSocketControl *self, BOOL *value);
 
-/* Windows.Networking.Sockets.DatagramSocketControl.put_MulticastOnly() */
 HRESULT wneso_datagram_socket_control_put__multicast_only(WNESO_DatagramSocketControl *self, BOOL value);
 
-/* activate Windows.Networking.Sockets.DatagramSocketInformation */
 HRESULT wneso_datagram_socket_information_new(WNESO_DatagramSocketInformation **out);
 
-/* Windows.Networking.Sockets.DatagramSocketInformation */
-/* Windows.Networking.Sockets.DatagramSocketInformation.get_LocalAddress() */
 HRESULT wneso_datagram_socket_information_get__local_address(WNESO_DatagramSocketInformation *self, WNE_HostName** value);
 
-/* Windows.Networking.Sockets.DatagramSocketInformation.get_LocalPort() */
 HRESULT wneso_datagram_socket_information_get__local_port(WNESO_DatagramSocketInformation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Sockets.DatagramSocketInformation.get_RemoteAddress() */
 HRESULT wneso_datagram_socket_information_get__remote_address(WNESO_DatagramSocketInformation *self, WNE_HostName** value);
 
-/* Windows.Networking.Sockets.DatagramSocketInformation.get_RemotePort() */
 HRESULT wneso_datagram_socket_information_get__remote_port(WNESO_DatagramSocketInformation *self, cwinrt_hstring *value);
 
-/* activate Windows.Networking.Sockets.DatagramSocketMessageReceivedEventArgs */
 HRESULT wneso_datagram_socket_message_received_event_args_new(WNESO_DatagramSocketMessageReceivedEventArgs **out);
 
-/* Windows.Networking.Sockets.DatagramSocketMessageReceivedEventArgs */
-/* Windows.Networking.Sockets.DatagramSocketMessageReceivedEventArgs.get_RemoteAddress() */
 HRESULT wneso_datagram_socket_message_received_event_args_get__remote_address(WNESO_DatagramSocketMessageReceivedEventArgs *self, WNE_HostName** value);
 
-/* Windows.Networking.Sockets.DatagramSocketMessageReceivedEventArgs.get_RemotePort() */
 HRESULT wneso_datagram_socket_message_received_event_args_get__remote_port(WNESO_DatagramSocketMessageReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Sockets.DatagramSocketMessageReceivedEventArgs.get_LocalAddress() */
 HRESULT wneso_datagram_socket_message_received_event_args_get__local_address(WNESO_DatagramSocketMessageReceivedEventArgs *self, WNE_HostName** value);
 
-/* Windows.Networking.Sockets.DatagramSocketMessageReceivedEventArgs.GetDataReader() */
 HRESULT wneso_datagram_socket_message_received_event_args_get_data_reader(WNESO_DatagramSocketMessageReceivedEventArgs *self, WSTST_DataReader** out);
 
-/* Windows.Networking.Sockets.DatagramSocketMessageReceivedEventArgs.GetDataStream() */
 HRESULT wneso_datagram_socket_message_received_event_args_get_data_stream(WNESO_DatagramSocketMessageReceivedEventArgs *self, WSTST_IInputStream** out);
 
-/* Windows.Networking.Sockets.IControlChannelTriggerEventDetails */
-/* Windows.Networking.Sockets.IControlChannelTriggerEventDetails.get_ControlChannelTrigger() */
 HRESULT wneso_control_channel_trigger_event_details_get__control_channel_trigger(WNESO_IControlChannelTriggerEventDetails *self, WNESO_ControlChannelTrigger** value);
 
-/* Windows.Networking.Sockets.IControlChannelTriggerFactory */
-/* Windows.Networking.Sockets.IControlChannelTriggerFactory.CreateControlChannelTrigger(channelId, serverKeepAliveIntervalInMinutes) */
 HRESULT wneso_control_channel_trigger_factory_create_control_channel_trigger(WNESO_IControlChannelTriggerFactory *self, cwinrt_hstring channelId, uint32_t serverKeepAliveIntervalInMinutes, WNESO_ControlChannelTrigger** out);
 
-/* Windows.Networking.Sockets.IControlChannelTriggerFactory.CreateControlChannelTriggerEx(channelId, serverKeepAliveIntervalInMinutes, resourceRequestType) */
 HRESULT wneso_control_channel_trigger_factory_create_control_channel_trigger_ex(WNESO_IControlChannelTriggerFactory *self, cwinrt_hstring channelId, uint32_t serverKeepAliveIntervalInMinutes, WNESO_ControlChannelTriggerResourceType resourceRequestType, WNESO_ControlChannelTrigger** out);
 
-/* Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails */
-/* Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails.get_ResetReason() */
 HRESULT wneso_control_channel_trigger_reset_event_details_get__reset_reason(WNESO_IControlChannelTriggerResetEventDetails *self, WNESO_ControlChannelTriggerResetReason *value);
 
-/* Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails.get_HardwareSlotReset() */
 HRESULT wneso_control_channel_trigger_reset_event_details_get__hardware_slot_reset(WNESO_IControlChannelTriggerResetEventDetails *self, BOOL *value);
 
-/* Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails.get_SoftwareSlotReset() */
 HRESULT wneso_control_channel_trigger_reset_event_details_get__software_slot_reset(WNESO_IControlChannelTriggerResetEventDetails *self, BOOL *value);
 
-/* Windows.Networking.Sockets.IDatagramSocketStatics */
-/* Windows.Networking.Sockets.IDatagramSocketStatics.GetEndpointPairsAsync(remoteHostName, remoteServiceName) */
 HRESULT wneso_datagram_socket_statics_get_endpoint_pairs_async(WNESO_IDatagramSocketStatics *self, WNE_HostName* remoteHostName, cwinrt_hstring remoteServiceName, WF_IAsyncOperation_WFOCO_IVectorView_WNE_EndpointPair** out);
 
-/* Windows.Networking.Sockets.IDatagramSocketStatics.GetEndpointPairsAsync(remoteHostName, remoteServiceName, sortOptions) */
 HRESULT wneso_datagram_socket_statics_get_endpoint_pairs_async_p_str_host_name_sort_options_p(WNESO_IDatagramSocketStatics *self, WNE_HostName* remoteHostName, cwinrt_hstring remoteServiceName, WNE_HostNameSortOptions sortOptions, WF_IAsyncOperation_WFOCO_IVectorView_WNE_EndpointPair** out);
 
-/* Windows.Networking.Sockets.ISocketActivityContextFactory */
-/* Windows.Networking.Sockets.ISocketActivityContextFactory.Create(data) */
 HRESULT wneso_socket_activity_context_factory_create(WNESO_ISocketActivityContextFactory *self, WSTST_IBuffer* data, WNESO_SocketActivityContext** out);
 
-/* Windows.Networking.Sockets.ISocketActivityInformationStatics */
-/* Windows.Networking.Sockets.ISocketActivityInformationStatics.get_AllSockets() */
 HRESULT wneso_socket_activity_information_statics_get__all_sockets(WNESO_ISocketActivityInformationStatics *self, WFOCO_IMapView_HSTRING_WNESO_SocketActivityInformation** value);
 
-/* Windows.Networking.Sockets.ISocketErrorStatics */
-/* Windows.Networking.Sockets.ISocketErrorStatics.GetStatus(hresult) */
 HRESULT wneso_socket_error_statics_get_status(WNESO_ISocketErrorStatics *self, int32_t hresult, WNESO_SocketErrorStatus *out);
 
-/* Windows.Networking.Sockets.IStreamSocketStatics */
-/* Windows.Networking.Sockets.IStreamSocketStatics.GetEndpointPairsAsync(remoteHostName, remoteServiceName) */
 HRESULT wneso_stream_socket_statics_get_endpoint_pairs_async(WNESO_IStreamSocketStatics *self, WNE_HostName* remoteHostName, cwinrt_hstring remoteServiceName, WF_IAsyncOperation_WFOCO_IVectorView_WNE_EndpointPair** out);
 
-/* Windows.Networking.Sockets.IStreamSocketStatics.GetEndpointPairsAsync(remoteHostName, remoteServiceName, sortOptions) */
 HRESULT wneso_stream_socket_statics_get_endpoint_pairs_async_p_str_host_name_sort_options_p(WNESO_IStreamSocketStatics *self, WNE_HostName* remoteHostName, cwinrt_hstring remoteServiceName, WNE_HostNameSortOptions sortOptions, WF_IAsyncOperation_WFOCO_IVectorView_WNE_EndpointPair** out);
 
-/* Windows.Networking.Sockets.IWebSocketErrorStatics */
-/* Windows.Networking.Sockets.IWebSocketErrorStatics.GetStatus(hresult) */
 HRESULT wneso_web_socket_error_statics_get_status(WNESO_IWebSocketErrorStatics *self, int32_t hresult, WWE_WebErrorStatus *out);
 
-/* activate Windows.Networking.Sockets.MessageWebSocket */
 HRESULT wneso_message_web_socket_new(WNESO_MessageWebSocket **out);
 
-/* Windows.Networking.Sockets.MessageWebSocket */
-/* Windows.Networking.Sockets.MessageWebSocket.get_Control() */
 HRESULT wneso_message_web_socket_get__control(WNESO_MessageWebSocket *self, WNESO_MessageWebSocketControl** value);
 
-/* Windows.Networking.Sockets.MessageWebSocket.get_Information() */
 HRESULT wneso_message_web_socket_get__information(WNESO_MessageWebSocket *self, WNESO_MessageWebSocketInformation** value);
 
-/* Windows.Networking.Sockets.MessageWebSocket.get_OutputStream() */
 HRESULT wneso_message_web_socket_get__output_stream(WNESO_MessageWebSocket *self, WSTST_IOutputStream** value);
 
-/* Windows.Networking.Sockets.MessageWebSocket.ConnectAsync(uri) */
 HRESULT wneso_message_web_socket_connect_async(WNESO_MessageWebSocket *self, WF_Uri* uri, WF_IAsyncAction** out);
 
-/* Windows.Networking.Sockets.MessageWebSocket.SetRequestHeader(headerName, headerValue) */
 HRESULT wneso_message_web_socket_set_request_header(WNESO_MessageWebSocket *self, cwinrt_hstring headerName, cwinrt_hstring headerValue);
 
-/* Windows.Networking.Sockets.MessageWebSocket.Close(code, reason) */
 HRESULT wneso_message_web_socket_close_u16_str(WNESO_MessageWebSocket *self, uint16_t code, cwinrt_hstring reason);
 
-/* Windows.Networking.Sockets.MessageWebSocket.Close() */
 HRESULT wneso_message_web_socket_close(WNESO_MessageWebSocket *self);
 
-/* Windows.Networking.Sockets.MessageWebSocket.SendNonfinalFrameAsync(data) */
 HRESULT wneso_message_web_socket_send_nonfinal_frame_async(WNESO_MessageWebSocket *self, WSTST_IBuffer* data, WF_IAsyncOperationWithProgress_uint32_t_uint32_t** out);
 
-/* Windows.Networking.Sockets.MessageWebSocket.SendFinalFrameAsync(data) */
 HRESULT wneso_message_web_socket_send_final_frame_async(WNESO_MessageWebSocket *self, WSTST_IBuffer* data, WF_IAsyncOperationWithProgress_uint32_t_uint32_t** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wneso_message_web_socket_on_message_received(WNESO_MessageWebSocket *self, cwinrt_event_fn fn, void *ctx);
@@ -1134,128 +1030,84 @@ void wneso_message_web_socket_off_closed(WNESO_MessageWebSocket *self, cwinrt_to
 cwinrt_token wneso_message_web_socket_on_server_custom_validation_requested(WNESO_MessageWebSocket *self, cwinrt_event_fn fn, void *ctx);
 void wneso_message_web_socket_off_server_custom_validation_requested(WNESO_MessageWebSocket *self, cwinrt_token token);
 
-/* activate Windows.Networking.Sockets.MessageWebSocketControl */
 HRESULT wneso_message_web_socket_control_new(WNESO_MessageWebSocketControl **out);
 
-/* Windows.Networking.Sockets.MessageWebSocketControl */
-/* Windows.Networking.Sockets.MessageWebSocketControl.get_MaxMessageSize() */
 HRESULT wneso_message_web_socket_control_get__max_message_size(WNESO_MessageWebSocketControl *self, uint32_t *value);
 
-/* Windows.Networking.Sockets.MessageWebSocketControl.put_MaxMessageSize() */
 HRESULT wneso_message_web_socket_control_put__max_message_size(WNESO_MessageWebSocketControl *self, uint32_t value);
 
-/* Windows.Networking.Sockets.MessageWebSocketControl.get_MessageType() */
 HRESULT wneso_message_web_socket_control_get__message_type(WNESO_MessageWebSocketControl *self, WNESO_SocketMessageType *value);
 
-/* Windows.Networking.Sockets.MessageWebSocketControl.put_MessageType() */
 HRESULT wneso_message_web_socket_control_put__message_type(WNESO_MessageWebSocketControl *self, WNESO_SocketMessageType value);
 
-/* Windows.Networking.Sockets.MessageWebSocketControl.get_OutboundBufferSizeInBytes() */
 HRESULT wneso_message_web_socket_control_get__outbound_buffer_size_in_bytes(WNESO_MessageWebSocketControl *self, uint32_t *value);
 
-/* Windows.Networking.Sockets.MessageWebSocketControl.put_OutboundBufferSizeInBytes() */
 HRESULT wneso_message_web_socket_control_put__outbound_buffer_size_in_bytes(WNESO_MessageWebSocketControl *self, uint32_t value);
 
-/* Windows.Networking.Sockets.MessageWebSocketControl.get_ServerCredential() */
 HRESULT wneso_message_web_socket_control_get__server_credential(WNESO_MessageWebSocketControl *self, WSECR_PasswordCredential** value);
 
-/* Windows.Networking.Sockets.MessageWebSocketControl.put_ServerCredential() */
 HRESULT wneso_message_web_socket_control_put__server_credential(WNESO_MessageWebSocketControl *self, WSECR_PasswordCredential* value);
 
-/* Windows.Networking.Sockets.MessageWebSocketControl.get_ProxyCredential() */
 HRESULT wneso_message_web_socket_control_get__proxy_credential(WNESO_MessageWebSocketControl *self, WSECR_PasswordCredential** value);
 
-/* Windows.Networking.Sockets.MessageWebSocketControl.put_ProxyCredential() */
 HRESULT wneso_message_web_socket_control_put__proxy_credential(WNESO_MessageWebSocketControl *self, WSECR_PasswordCredential* value);
 
-/* Windows.Networking.Sockets.MessageWebSocketControl.get_SupportedProtocols() */
 HRESULT wneso_message_web_socket_control_get__supported_protocols(WNESO_MessageWebSocketControl *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Networking.Sockets.MessageWebSocketControl.get_IgnorableServerCertificateErrors() */
 HRESULT wneso_message_web_socket_control_get__ignorable_server_certificate_errors(WNESO_MessageWebSocketControl *self, WFOCO_IVector_WSECRCE_ChainValidationResult** value);
 
-/* Windows.Networking.Sockets.MessageWebSocketControl.get_DesiredUnsolicitedPongInterval() */
 HRESULT wneso_message_web_socket_control_get__desired_unsolicited_pong_interval(WNESO_MessageWebSocketControl *self, WF_TimeSpan *value);
 
-/* Windows.Networking.Sockets.MessageWebSocketControl.put_DesiredUnsolicitedPongInterval() */
 HRESULT wneso_message_web_socket_control_put__desired_unsolicited_pong_interval(WNESO_MessageWebSocketControl *self, WF_TimeSpan value);
 
-/* Windows.Networking.Sockets.MessageWebSocketControl.get_ActualUnsolicitedPongInterval() */
 HRESULT wneso_message_web_socket_control_get__actual_unsolicited_pong_interval(WNESO_MessageWebSocketControl *self, WF_TimeSpan *value);
 
-/* Windows.Networking.Sockets.MessageWebSocketControl.get_ReceiveMode() */
 HRESULT wneso_message_web_socket_control_get__receive_mode(WNESO_MessageWebSocketControl *self, WNESO_MessageWebSocketReceiveMode *value);
 
-/* Windows.Networking.Sockets.MessageWebSocketControl.put_ReceiveMode() */
 HRESULT wneso_message_web_socket_control_put__receive_mode(WNESO_MessageWebSocketControl *self, WNESO_MessageWebSocketReceiveMode value);
 
-/* Windows.Networking.Sockets.MessageWebSocketControl.get_ClientCertificate() */
 HRESULT wneso_message_web_socket_control_get__client_certificate(WNESO_MessageWebSocketControl *self, WSECRCE_Certificate** value);
 
-/* Windows.Networking.Sockets.MessageWebSocketControl.put_ClientCertificate() */
 HRESULT wneso_message_web_socket_control_put__client_certificate(WNESO_MessageWebSocketControl *self, WSECRCE_Certificate* value);
 
-/* activate Windows.Networking.Sockets.MessageWebSocketInformation */
 HRESULT wneso_message_web_socket_information_new(WNESO_MessageWebSocketInformation **out);
 
-/* Windows.Networking.Sockets.MessageWebSocketInformation */
-/* Windows.Networking.Sockets.MessageWebSocketInformation.get_LocalAddress() */
 HRESULT wneso_message_web_socket_information_get__local_address(WNESO_MessageWebSocketInformation *self, WNE_HostName** value);
 
-/* Windows.Networking.Sockets.MessageWebSocketInformation.get_BandwidthStatistics() */
 HRESULT wneso_message_web_socket_information_get__bandwidth_statistics(WNESO_MessageWebSocketInformation *self, WNESO_BandwidthStatistics *value);
 
-/* Windows.Networking.Sockets.MessageWebSocketInformation.get_Protocol() */
 HRESULT wneso_message_web_socket_information_get__protocol(WNESO_MessageWebSocketInformation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Sockets.MessageWebSocketInformation.get_ServerCertificate() */
 HRESULT wneso_message_web_socket_information_get__server_certificate(WNESO_MessageWebSocketInformation *self, WSECRCE_Certificate** value);
 
-/* Windows.Networking.Sockets.MessageWebSocketInformation.get_ServerCertificateErrorSeverity() */
 HRESULT wneso_message_web_socket_information_get__server_certificate_error_severity(WNESO_MessageWebSocketInformation *self, WNESO_SocketSslErrorSeverity *value);
 
-/* Windows.Networking.Sockets.MessageWebSocketInformation.get_ServerCertificateErrors() */
 HRESULT wneso_message_web_socket_information_get__server_certificate_errors(WNESO_MessageWebSocketInformation *self, WFOCO_IVectorView_WSECRCE_ChainValidationResult** value);
 
-/* Windows.Networking.Sockets.MessageWebSocketInformation.get_ServerIntermediateCertificates() */
 HRESULT wneso_message_web_socket_information_get__server_intermediate_certificates(WNESO_MessageWebSocketInformation *self, WFOCO_IVectorView_WSECRCE_Certificate** value);
 
-/* activate Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs */
 HRESULT wneso_message_web_socket_message_received_event_args_new(WNESO_MessageWebSocketMessageReceivedEventArgs **out);
 
-/* Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs */
-/* Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs.get_MessageType() */
 HRESULT wneso_message_web_socket_message_received_event_args_get__message_type(WNESO_MessageWebSocketMessageReceivedEventArgs *self, WNESO_SocketMessageType *value);
 
-/* Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs.GetDataReader() */
 HRESULT wneso_message_web_socket_message_received_event_args_get_data_reader(WNESO_MessageWebSocketMessageReceivedEventArgs *self, WSTST_DataReader** out);
 
-/* Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs.GetDataStream() */
 HRESULT wneso_message_web_socket_message_received_event_args_get_data_stream(WNESO_MessageWebSocketMessageReceivedEventArgs *self, WSTST_IInputStream** out);
 
-/* Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs.get_IsMessageComplete() */
 HRESULT wneso_message_web_socket_message_received_event_args_get__is_message_complete(WNESO_MessageWebSocketMessageReceivedEventArgs *self, BOOL *value);
 
-/* activate Windows.Networking.Sockets.ServerMessageWebSocket */
 HRESULT wneso_server_message_web_socket_new(WNESO_ServerMessageWebSocket **out);
 
-/* Windows.Networking.Sockets.ServerMessageWebSocket */
-/* Windows.Networking.Sockets.ServerMessageWebSocket.get_Control() */
 HRESULT wneso_server_message_web_socket_get__control(WNESO_ServerMessageWebSocket *self, WNESO_ServerMessageWebSocketControl** value);
 
-/* Windows.Networking.Sockets.ServerMessageWebSocket.get_Information() */
 HRESULT wneso_server_message_web_socket_get__information(WNESO_ServerMessageWebSocket *self, WNESO_ServerMessageWebSocketInformation** value);
 
-/* Windows.Networking.Sockets.ServerMessageWebSocket.get_OutputStream() */
 HRESULT wneso_server_message_web_socket_get__output_stream(WNESO_ServerMessageWebSocket *self, WSTST_IOutputStream** value);
 
-/* Windows.Networking.Sockets.ServerMessageWebSocket.Close(code, reason) */
 HRESULT wneso_server_message_web_socket_close_u16_str(WNESO_ServerMessageWebSocket *self, uint16_t code, cwinrt_hstring reason);
 
-/* Windows.Networking.Sockets.ServerMessageWebSocket.Close() */
 HRESULT wneso_server_message_web_socket_close(WNESO_ServerMessageWebSocket *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wneso_server_message_web_socket_on_message_received(WNESO_ServerMessageWebSocket *self, cwinrt_event_fn fn, void *ctx);
@@ -1264,404 +1116,262 @@ void wneso_server_message_web_socket_off_message_received(WNESO_ServerMessageWeb
 cwinrt_token wneso_server_message_web_socket_on_closed(WNESO_ServerMessageWebSocket *self, cwinrt_event_fn fn, void *ctx);
 void wneso_server_message_web_socket_off_closed(WNESO_ServerMessageWebSocket *self, cwinrt_token token);
 
-/* activate Windows.Networking.Sockets.ServerMessageWebSocketControl */
 HRESULT wneso_server_message_web_socket_control_new(WNESO_ServerMessageWebSocketControl **out);
 
-/* Windows.Networking.Sockets.ServerMessageWebSocketControl */
-/* Windows.Networking.Sockets.ServerMessageWebSocketControl.get_MessageType() */
 HRESULT wneso_server_message_web_socket_control_get__message_type(WNESO_ServerMessageWebSocketControl *self, WNESO_SocketMessageType *value);
 
-/* Windows.Networking.Sockets.ServerMessageWebSocketControl.put_MessageType() */
 HRESULT wneso_server_message_web_socket_control_put__message_type(WNESO_ServerMessageWebSocketControl *self, WNESO_SocketMessageType value);
 
-/* activate Windows.Networking.Sockets.ServerMessageWebSocketInformation */
 HRESULT wneso_server_message_web_socket_information_new(WNESO_ServerMessageWebSocketInformation **out);
 
-/* Windows.Networking.Sockets.ServerMessageWebSocketInformation */
-/* Windows.Networking.Sockets.ServerMessageWebSocketInformation.get_BandwidthStatistics() */
 HRESULT wneso_server_message_web_socket_information_get__bandwidth_statistics(WNESO_ServerMessageWebSocketInformation *self, WNESO_BandwidthStatistics *value);
 
-/* Windows.Networking.Sockets.ServerMessageWebSocketInformation.get_Protocol() */
 HRESULT wneso_server_message_web_socket_information_get__protocol(WNESO_ServerMessageWebSocketInformation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Sockets.ServerMessageWebSocketInformation.get_LocalAddress() */
 HRESULT wneso_server_message_web_socket_information_get__local_address(WNESO_ServerMessageWebSocketInformation *self, WNE_HostName** value);
 
-/* activate Windows.Networking.Sockets.ServerStreamWebSocket */
 HRESULT wneso_server_stream_web_socket_new(WNESO_ServerStreamWebSocket **out);
 
-/* Windows.Networking.Sockets.ServerStreamWebSocket */
-/* Windows.Networking.Sockets.ServerStreamWebSocket.get_Information() */
 HRESULT wneso_server_stream_web_socket_get__information(WNESO_ServerStreamWebSocket *self, WNESO_ServerStreamWebSocketInformation** value);
 
-/* Windows.Networking.Sockets.ServerStreamWebSocket.get_InputStream() */
 HRESULT wneso_server_stream_web_socket_get__input_stream(WNESO_ServerStreamWebSocket *self, WSTST_IInputStream** value);
 
-/* Windows.Networking.Sockets.ServerStreamWebSocket.get_OutputStream() */
 HRESULT wneso_server_stream_web_socket_get__output_stream(WNESO_ServerStreamWebSocket *self, WSTST_IOutputStream** value);
 
-/* Windows.Networking.Sockets.ServerStreamWebSocket.Close(code, reason) */
 HRESULT wneso_server_stream_web_socket_close_u16_str(WNESO_ServerStreamWebSocket *self, uint16_t code, cwinrt_hstring reason);
 
-/* Windows.Networking.Sockets.ServerStreamWebSocket.Close() */
 HRESULT wneso_server_stream_web_socket_close(WNESO_ServerStreamWebSocket *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wneso_server_stream_web_socket_on_closed(WNESO_ServerStreamWebSocket *self, cwinrt_event_fn fn, void *ctx);
 void wneso_server_stream_web_socket_off_closed(WNESO_ServerStreamWebSocket *self, cwinrt_token token);
 
-/* activate Windows.Networking.Sockets.ServerStreamWebSocketInformation */
 HRESULT wneso_server_stream_web_socket_information_new(WNESO_ServerStreamWebSocketInformation **out);
 
-/* Windows.Networking.Sockets.ServerStreamWebSocketInformation */
-/* Windows.Networking.Sockets.ServerStreamWebSocketInformation.get_BandwidthStatistics() */
 HRESULT wneso_server_stream_web_socket_information_get__bandwidth_statistics(WNESO_ServerStreamWebSocketInformation *self, WNESO_BandwidthStatistics *value);
 
-/* Windows.Networking.Sockets.ServerStreamWebSocketInformation.get_Protocol() */
 HRESULT wneso_server_stream_web_socket_information_get__protocol(WNESO_ServerStreamWebSocketInformation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Sockets.ServerStreamWebSocketInformation.get_LocalAddress() */
 HRESULT wneso_server_stream_web_socket_information_get__local_address(WNESO_ServerStreamWebSocketInformation *self, WNE_HostName** value);
 
-/* activate Windows.Networking.Sockets.SocketActivityContext */
 HRESULT wneso_socket_activity_context_new(WNESO_SocketActivityContext **out);
 
-/* Windows.Networking.Sockets.SocketActivityContext */
-/* Windows.Networking.Sockets.SocketActivityContext.get_Data() */
 HRESULT wneso_socket_activity_context_get__data(WNESO_SocketActivityContext *self, WSTST_IBuffer** value);
 
-/* activate Windows.Networking.Sockets.SocketActivityInformation */
 HRESULT wneso_socket_activity_information_new(WNESO_SocketActivityInformation **out);
 
-/* Windows.Networking.Sockets.SocketActivityInformation */
-/* Windows.Networking.Sockets.SocketActivityInformation.get_TaskId() */
 HRESULT wneso_socket_activity_information_get__task_id(WNESO_SocketActivityInformation *self, GUID *value);
 
-/* Windows.Networking.Sockets.SocketActivityInformation.get_Id() */
 HRESULT wneso_socket_activity_information_get__id(WNESO_SocketActivityInformation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Sockets.SocketActivityInformation.get_SocketKind() */
 HRESULT wneso_socket_activity_information_get__socket_kind(WNESO_SocketActivityInformation *self, WNESO_SocketActivityKind *value);
 
-/* Windows.Networking.Sockets.SocketActivityInformation.get_Context() */
 HRESULT wneso_socket_activity_information_get__context(WNESO_SocketActivityInformation *self, WNESO_SocketActivityContext** value);
 
-/* Windows.Networking.Sockets.SocketActivityInformation.get_DatagramSocket() */
 HRESULT wneso_socket_activity_information_get__datagram_socket(WNESO_SocketActivityInformation *self, WNESO_DatagramSocket** value);
 
-/* Windows.Networking.Sockets.SocketActivityInformation.get_StreamSocket() */
 HRESULT wneso_socket_activity_information_get__stream_socket(WNESO_SocketActivityInformation *self, WNESO_StreamSocket** value);
 
-/* Windows.Networking.Sockets.SocketActivityInformation.get_StreamSocketListener() */
 HRESULT wneso_socket_activity_information_get__stream_socket_listener(WNESO_SocketActivityInformation *self, WNESO_StreamSocketListener** value);
 
-/* Windows.Networking.Sockets.SocketActivityInformation.get_AllSockets() */
 HRESULT wneso_socket_activity_information_get__all_sockets(WFOCO_IMapView_HSTRING_WNESO_SocketActivityInformation** value);
 
-/* activate Windows.Networking.Sockets.SocketActivityTriggerDetails */
 HRESULT wneso_socket_activity_trigger_details_new(WNESO_SocketActivityTriggerDetails **out);
 
-/* Windows.Networking.Sockets.SocketActivityTriggerDetails */
-/* Windows.Networking.Sockets.SocketActivityTriggerDetails.get_Reason() */
 HRESULT wneso_socket_activity_trigger_details_get__reason(WNESO_SocketActivityTriggerDetails *self, WNESO_SocketActivityTriggerReason *value);
 
-/* Windows.Networking.Sockets.SocketActivityTriggerDetails.get_SocketInformation() */
 HRESULT wneso_socket_activity_trigger_details_get__socket_information(WNESO_SocketActivityTriggerDetails *self, WNESO_SocketActivityInformation** value);
 
-/* activate Windows.Networking.Sockets.SocketError */
 HRESULT wneso_socket_error_new(WNESO_SocketError **out);
 
-/* Windows.Networking.Sockets.SocketError */
-/* Windows.Networking.Sockets.SocketError.GetStatus(hresult) */
 HRESULT wneso_socket_error_get_status(int32_t hresult, WNESO_SocketErrorStatus *out);
 
-/* activate Windows.Networking.Sockets.StreamSocket */
 HRESULT wneso_stream_socket_new(WNESO_StreamSocket **out);
 
-/* Windows.Networking.Sockets.StreamSocket */
-/* Windows.Networking.Sockets.StreamSocket.get_Control() */
 HRESULT wneso_stream_socket_get__control(WNESO_StreamSocket *self, WNESO_StreamSocketControl** value);
 
-/* Windows.Networking.Sockets.StreamSocket.get_Information() */
 HRESULT wneso_stream_socket_get__information(WNESO_StreamSocket *self, WNESO_StreamSocketInformation** value);
 
-/* Windows.Networking.Sockets.StreamSocket.get_InputStream() */
 HRESULT wneso_stream_socket_get__input_stream(WNESO_StreamSocket *self, WSTST_IInputStream** value);
 
-/* Windows.Networking.Sockets.StreamSocket.get_OutputStream() */
 HRESULT wneso_stream_socket_get__output_stream(WNESO_StreamSocket *self, WSTST_IOutputStream** value);
 
-/* Windows.Networking.Sockets.StreamSocket.ConnectAsync(endpointPair) */
 HRESULT wneso_stream_socket_connect_async_p_p(WNESO_StreamSocket *self, WNE_EndpointPair* endpointPair, WF_IAsyncAction** out);
 
-/* Windows.Networking.Sockets.StreamSocket.ConnectAsync(remoteHostName, remoteServiceName) */
 HRESULT wneso_stream_socket_connect_async(WNESO_StreamSocket *self, WNE_HostName* remoteHostName, cwinrt_hstring remoteServiceName, WF_IAsyncAction** out);
 
-/* Windows.Networking.Sockets.StreamSocket.ConnectAsync(endpointPair, protectionLevel) */
 HRESULT wneso_stream_socket_connect_async_p_socket_protection_level_p(WNESO_StreamSocket *self, WNE_EndpointPair* endpointPair, WNESO_SocketProtectionLevel protectionLevel, WF_IAsyncAction** out);
 
-/* Windows.Networking.Sockets.StreamSocket.ConnectAsync(remoteHostName, remoteServiceName, protectionLevel) */
 HRESULT wneso_stream_socket_connect_async_p_str_socket_protection_level_p(WNESO_StreamSocket *self, WNE_HostName* remoteHostName, cwinrt_hstring remoteServiceName, WNESO_SocketProtectionLevel protectionLevel, WF_IAsyncAction** out);
 
-/* Windows.Networking.Sockets.StreamSocket.UpgradeToSslAsync(protectionLevel, validationHostName) */
 HRESULT wneso_stream_socket_upgrade_to_ssl_async(WNESO_StreamSocket *self, WNESO_SocketProtectionLevel protectionLevel, WNE_HostName* validationHostName, WF_IAsyncAction** out);
 
-/* Windows.Networking.Sockets.StreamSocket.Close() */
 HRESULT wneso_stream_socket_close(WNESO_StreamSocket *self);
 
-/* Windows.Networking.Sockets.StreamSocket.ConnectAsync(remoteHostName, remoteServiceName, protectionLevel, adapter) */
 HRESULT wneso_stream_socket_connect_async_p_str_socket_protection_level_p_p(WNESO_StreamSocket *self, WNE_HostName* remoteHostName, cwinrt_hstring remoteServiceName, WNESO_SocketProtectionLevel protectionLevel, WNECO_NetworkAdapter* adapter, WF_IAsyncAction** out);
 
-/* Windows.Networking.Sockets.StreamSocket.CancelIOAsync() */
 HRESULT wneso_stream_socket_cancel_i_o_async(WNESO_StreamSocket *self, WF_IAsyncAction** out);
 
-/* Windows.Networking.Sockets.StreamSocket.EnableTransferOwnership(taskId) */
 HRESULT wneso_stream_socket_enable_transfer_ownership(WNESO_StreamSocket *self, GUID taskId);
 
-/* Windows.Networking.Sockets.StreamSocket.EnableTransferOwnership(taskId, connectedStandbyAction) */
 HRESULT wneso_stream_socket_enable_transfer_ownership_g_u_i_d_socket_activity_connected_st_c20823ca(WNESO_StreamSocket *self, GUID taskId, WNESO_SocketActivityConnectedStandbyAction connectedStandbyAction);
 
-/* Windows.Networking.Sockets.StreamSocket.TransferOwnership(socketId) */
 HRESULT wneso_stream_socket_transfer_ownership(WNESO_StreamSocket *self, cwinrt_hstring socketId);
 
-/* Windows.Networking.Sockets.StreamSocket.TransferOwnership(socketId, data) */
 HRESULT wneso_stream_socket_transfer_ownership_str_p(WNESO_StreamSocket *self, cwinrt_hstring socketId, WNESO_SocketActivityContext* data);
 
-/* Windows.Networking.Sockets.StreamSocket.TransferOwnership(socketId, data, keepAliveTime) */
 HRESULT wneso_stream_socket_transfer_ownership_str_p_time_span(WNESO_StreamSocket *self, cwinrt_hstring socketId, WNESO_SocketActivityContext* data, WF_TimeSpan keepAliveTime);
 
-/* Windows.Networking.Sockets.StreamSocket.GetEndpointPairsAsync(remoteHostName, remoteServiceName) */
 HRESULT wneso_stream_socket_get_endpoint_pairs_async(WNE_HostName* remoteHostName, cwinrt_hstring remoteServiceName, WF_IAsyncOperation_WFOCO_IVectorView_WNE_EndpointPair** out);
 
-/* Windows.Networking.Sockets.StreamSocket.GetEndpointPairsAsync(remoteHostName, remoteServiceName, sortOptions) */
 HRESULT wneso_stream_socket_get_endpoint_pairs_async_p_str_host_name_sort_options_p(WNE_HostName* remoteHostName, cwinrt_hstring remoteServiceName, WNE_HostNameSortOptions sortOptions, WF_IAsyncOperation_WFOCO_IVectorView_WNE_EndpointPair** out);
 
-/* activate Windows.Networking.Sockets.StreamSocketControl */
 HRESULT wneso_stream_socket_control_new(WNESO_StreamSocketControl **out);
 
-/* Windows.Networking.Sockets.StreamSocketControl */
-/* Windows.Networking.Sockets.StreamSocketControl.get_NoDelay() */
 HRESULT wneso_stream_socket_control_get__no_delay(WNESO_StreamSocketControl *self, BOOL *value);
 
-/* Windows.Networking.Sockets.StreamSocketControl.put_NoDelay() */
 HRESULT wneso_stream_socket_control_put__no_delay(WNESO_StreamSocketControl *self, BOOL value);
 
-/* Windows.Networking.Sockets.StreamSocketControl.get_KeepAlive() */
 HRESULT wneso_stream_socket_control_get__keep_alive(WNESO_StreamSocketControl *self, BOOL *value);
 
-/* Windows.Networking.Sockets.StreamSocketControl.put_KeepAlive() */
 HRESULT wneso_stream_socket_control_put__keep_alive(WNESO_StreamSocketControl *self, BOOL value);
 
-/* Windows.Networking.Sockets.StreamSocketControl.get_OutboundBufferSizeInBytes() */
 HRESULT wneso_stream_socket_control_get__outbound_buffer_size_in_bytes(WNESO_StreamSocketControl *self, uint32_t *value);
 
-/* Windows.Networking.Sockets.StreamSocketControl.put_OutboundBufferSizeInBytes() */
 HRESULT wneso_stream_socket_control_put__outbound_buffer_size_in_bytes(WNESO_StreamSocketControl *self, uint32_t value);
 
-/* Windows.Networking.Sockets.StreamSocketControl.get_QualityOfService() */
 HRESULT wneso_stream_socket_control_get__quality_of_service(WNESO_StreamSocketControl *self, WNESO_SocketQualityOfService *value);
 
-/* Windows.Networking.Sockets.StreamSocketControl.put_QualityOfService() */
 HRESULT wneso_stream_socket_control_put__quality_of_service(WNESO_StreamSocketControl *self, WNESO_SocketQualityOfService value);
 
-/* Windows.Networking.Sockets.StreamSocketControl.get_OutboundUnicastHopLimit() */
 HRESULT wneso_stream_socket_control_get__outbound_unicast_hop_limit(WNESO_StreamSocketControl *self, uint8_t *value);
 
-/* Windows.Networking.Sockets.StreamSocketControl.put_OutboundUnicastHopLimit() */
 HRESULT wneso_stream_socket_control_put__outbound_unicast_hop_limit(WNESO_StreamSocketControl *self, uint8_t value);
 
-/* Windows.Networking.Sockets.StreamSocketControl.get_IgnorableServerCertificateErrors() */
 HRESULT wneso_stream_socket_control_get__ignorable_server_certificate_errors(WNESO_StreamSocketControl *self, WFOCO_IVector_WSECRCE_ChainValidationResult** value);
 
-/* Windows.Networking.Sockets.StreamSocketControl.get_SerializeConnectionAttempts() */
 HRESULT wneso_stream_socket_control_get__serialize_connection_attempts(WNESO_StreamSocketControl *self, BOOL *value);
 
-/* Windows.Networking.Sockets.StreamSocketControl.put_SerializeConnectionAttempts() */
 HRESULT wneso_stream_socket_control_put__serialize_connection_attempts(WNESO_StreamSocketControl *self, BOOL value);
 
-/* Windows.Networking.Sockets.StreamSocketControl.get_ClientCertificate() */
 HRESULT wneso_stream_socket_control_get__client_certificate(WNESO_StreamSocketControl *self, WSECRCE_Certificate** value);
 
-/* Windows.Networking.Sockets.StreamSocketControl.put_ClientCertificate() */
 HRESULT wneso_stream_socket_control_put__client_certificate(WNESO_StreamSocketControl *self, WSECRCE_Certificate* value);
 
-/* Windows.Networking.Sockets.StreamSocketControl.get_MinProtectionLevel() */
 HRESULT wneso_stream_socket_control_get__min_protection_level(WNESO_StreamSocketControl *self, WNESO_SocketProtectionLevel *value);
 
-/* Windows.Networking.Sockets.StreamSocketControl.put_MinProtectionLevel() */
 HRESULT wneso_stream_socket_control_put__min_protection_level(WNESO_StreamSocketControl *self, WNESO_SocketProtectionLevel value);
 
-/* activate Windows.Networking.Sockets.StreamSocketInformation */
 HRESULT wneso_stream_socket_information_new(WNESO_StreamSocketInformation **out);
 
-/* Windows.Networking.Sockets.StreamSocketInformation */
-/* Windows.Networking.Sockets.StreamSocketInformation.get_LocalAddress() */
 HRESULT wneso_stream_socket_information_get__local_address(WNESO_StreamSocketInformation *self, WNE_HostName** value);
 
-/* Windows.Networking.Sockets.StreamSocketInformation.get_LocalPort() */
 HRESULT wneso_stream_socket_information_get__local_port(WNESO_StreamSocketInformation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Sockets.StreamSocketInformation.get_RemoteHostName() */
 HRESULT wneso_stream_socket_information_get__remote_host_name(WNESO_StreamSocketInformation *self, WNE_HostName** value);
 
-/* Windows.Networking.Sockets.StreamSocketInformation.get_RemoteAddress() */
 HRESULT wneso_stream_socket_information_get__remote_address(WNESO_StreamSocketInformation *self, WNE_HostName** value);
 
-/* Windows.Networking.Sockets.StreamSocketInformation.get_RemoteServiceName() */
 HRESULT wneso_stream_socket_information_get__remote_service_name(WNESO_StreamSocketInformation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Sockets.StreamSocketInformation.get_RemotePort() */
 HRESULT wneso_stream_socket_information_get__remote_port(WNESO_StreamSocketInformation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Sockets.StreamSocketInformation.get_RoundTripTimeStatistics() */
 HRESULT wneso_stream_socket_information_get__round_trip_time_statistics(WNESO_StreamSocketInformation *self, WNESO_RoundTripTimeStatistics *value);
 
-/* Windows.Networking.Sockets.StreamSocketInformation.get_BandwidthStatistics() */
 HRESULT wneso_stream_socket_information_get__bandwidth_statistics(WNESO_StreamSocketInformation *self, WNESO_BandwidthStatistics *value);
 
-/* Windows.Networking.Sockets.StreamSocketInformation.get_ProtectionLevel() */
 HRESULT wneso_stream_socket_information_get__protection_level(WNESO_StreamSocketInformation *self, WNESO_SocketProtectionLevel *value);
 
-/* Windows.Networking.Sockets.StreamSocketInformation.get_SessionKey() */
 HRESULT wneso_stream_socket_information_get__session_key(WNESO_StreamSocketInformation *self, WSTST_IBuffer** value);
 
-/* Windows.Networking.Sockets.StreamSocketInformation.get_ServerCertificateErrorSeverity() */
 HRESULT wneso_stream_socket_information_get__server_certificate_error_severity(WNESO_StreamSocketInformation *self, WNESO_SocketSslErrorSeverity *value);
 
-/* Windows.Networking.Sockets.StreamSocketInformation.get_ServerCertificateErrors() */
 HRESULT wneso_stream_socket_information_get__server_certificate_errors(WNESO_StreamSocketInformation *self, WFOCO_IVectorView_WSECRCE_ChainValidationResult** value);
 
-/* Windows.Networking.Sockets.StreamSocketInformation.get_ServerCertificate() */
 HRESULT wneso_stream_socket_information_get__server_certificate(WNESO_StreamSocketInformation *self, WSECRCE_Certificate** value);
 
-/* Windows.Networking.Sockets.StreamSocketInformation.get_ServerIntermediateCertificates() */
 HRESULT wneso_stream_socket_information_get__server_intermediate_certificates(WNESO_StreamSocketInformation *self, WFOCO_IVectorView_WSECRCE_Certificate** value);
 
-/* activate Windows.Networking.Sockets.StreamSocketListener */
 HRESULT wneso_stream_socket_listener_new(WNESO_StreamSocketListener **out);
 
-/* Windows.Networking.Sockets.StreamSocketListener */
-/* Windows.Networking.Sockets.StreamSocketListener.get_Control() */
 HRESULT wneso_stream_socket_listener_get__control(WNESO_StreamSocketListener *self, WNESO_StreamSocketListenerControl** value);
 
-/* Windows.Networking.Sockets.StreamSocketListener.get_Information() */
 HRESULT wneso_stream_socket_listener_get__information(WNESO_StreamSocketListener *self, WNESO_StreamSocketListenerInformation** value);
 
-/* Windows.Networking.Sockets.StreamSocketListener.BindServiceNameAsync(localServiceName) */
 HRESULT wneso_stream_socket_listener_bind_service_name_async(WNESO_StreamSocketListener *self, cwinrt_hstring localServiceName, WF_IAsyncAction** out);
 
-/* Windows.Networking.Sockets.StreamSocketListener.BindEndpointAsync(localHostName, localServiceName) */
 HRESULT wneso_stream_socket_listener_bind_endpoint_async(WNESO_StreamSocketListener *self, WNE_HostName* localHostName, cwinrt_hstring localServiceName, WF_IAsyncAction** out);
 
-/* Windows.Networking.Sockets.StreamSocketListener.Close() */
 HRESULT wneso_stream_socket_listener_close(WNESO_StreamSocketListener *self);
 
-/* Windows.Networking.Sockets.StreamSocketListener.BindServiceNameAsync(localServiceName, protectionLevel) */
 HRESULT wneso_stream_socket_listener_bind_service_name_async_str_socket_protection_level_p(WNESO_StreamSocketListener *self, cwinrt_hstring localServiceName, WNESO_SocketProtectionLevel protectionLevel, WF_IAsyncAction** out);
 
-/* Windows.Networking.Sockets.StreamSocketListener.BindServiceNameAsync(localServiceName, protectionLevel, adapter) */
 HRESULT wneso_stream_socket_listener_bind_service_name_async_str_socket_protection_level_p_p(WNESO_StreamSocketListener *self, cwinrt_hstring localServiceName, WNESO_SocketProtectionLevel protectionLevel, WNECO_NetworkAdapter* adapter, WF_IAsyncAction** out);
 
-/* Windows.Networking.Sockets.StreamSocketListener.CancelIOAsync() */
 HRESULT wneso_stream_socket_listener_cancel_i_o_async(WNESO_StreamSocketListener *self, WF_IAsyncAction** out);
 
-/* Windows.Networking.Sockets.StreamSocketListener.EnableTransferOwnership(taskId) */
 HRESULT wneso_stream_socket_listener_enable_transfer_ownership(WNESO_StreamSocketListener *self, GUID taskId);
 
-/* Windows.Networking.Sockets.StreamSocketListener.EnableTransferOwnership(taskId, connectedStandbyAction) */
 HRESULT wneso_stream_socket_listener_enable_transfer_ownership_g_u_i_d_socket_activity_connected_st_c20823ca(WNESO_StreamSocketListener *self, GUID taskId, WNESO_SocketActivityConnectedStandbyAction connectedStandbyAction);
 
-/* Windows.Networking.Sockets.StreamSocketListener.TransferOwnership(socketId) */
 HRESULT wneso_stream_socket_listener_transfer_ownership(WNESO_StreamSocketListener *self, cwinrt_hstring socketId);
 
-/* Windows.Networking.Sockets.StreamSocketListener.TransferOwnership(socketId, data) */
 HRESULT wneso_stream_socket_listener_transfer_ownership_str_p(WNESO_StreamSocketListener *self, cwinrt_hstring socketId, WNESO_SocketActivityContext* data);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wneso_stream_socket_listener_on_connection_received(WNESO_StreamSocketListener *self, cwinrt_event_fn fn, void *ctx);
 void wneso_stream_socket_listener_off_connection_received(WNESO_StreamSocketListener *self, cwinrt_token token);
 
-/* activate Windows.Networking.Sockets.StreamSocketListenerConnectionReceivedEventArgs */
 HRESULT wneso_stream_socket_listener_connection_received_event_args_new(WNESO_StreamSocketListenerConnectionReceivedEventArgs **out);
 
-/* Windows.Networking.Sockets.StreamSocketListenerConnectionReceivedEventArgs */
-/* Windows.Networking.Sockets.StreamSocketListenerConnectionReceivedEventArgs.get_Socket() */
 HRESULT wneso_stream_socket_listener_connection_received_event_args_get__socket(WNESO_StreamSocketListenerConnectionReceivedEventArgs *self, WNESO_StreamSocket** value);
 
-/* activate Windows.Networking.Sockets.StreamSocketListenerControl */
 HRESULT wneso_stream_socket_listener_control_new(WNESO_StreamSocketListenerControl **out);
 
-/* Windows.Networking.Sockets.StreamSocketListenerControl */
-/* Windows.Networking.Sockets.StreamSocketListenerControl.get_QualityOfService() */
 HRESULT wneso_stream_socket_listener_control_get__quality_of_service(WNESO_StreamSocketListenerControl *self, WNESO_SocketQualityOfService *value);
 
-/* Windows.Networking.Sockets.StreamSocketListenerControl.put_QualityOfService() */
 HRESULT wneso_stream_socket_listener_control_put__quality_of_service(WNESO_StreamSocketListenerControl *self, WNESO_SocketQualityOfService value);
 
-/* Windows.Networking.Sockets.StreamSocketListenerControl.get_NoDelay() */
 HRESULT wneso_stream_socket_listener_control_get__no_delay(WNESO_StreamSocketListenerControl *self, BOOL *value);
 
-/* Windows.Networking.Sockets.StreamSocketListenerControl.put_NoDelay() */
 HRESULT wneso_stream_socket_listener_control_put__no_delay(WNESO_StreamSocketListenerControl *self, BOOL value);
 
-/* Windows.Networking.Sockets.StreamSocketListenerControl.get_KeepAlive() */
 HRESULT wneso_stream_socket_listener_control_get__keep_alive(WNESO_StreamSocketListenerControl *self, BOOL *value);
 
-/* Windows.Networking.Sockets.StreamSocketListenerControl.put_KeepAlive() */
 HRESULT wneso_stream_socket_listener_control_put__keep_alive(WNESO_StreamSocketListenerControl *self, BOOL value);
 
-/* Windows.Networking.Sockets.StreamSocketListenerControl.get_OutboundBufferSizeInBytes() */
 HRESULT wneso_stream_socket_listener_control_get__outbound_buffer_size_in_bytes(WNESO_StreamSocketListenerControl *self, uint32_t *value);
 
-/* Windows.Networking.Sockets.StreamSocketListenerControl.put_OutboundBufferSizeInBytes() */
 HRESULT wneso_stream_socket_listener_control_put__outbound_buffer_size_in_bytes(WNESO_StreamSocketListenerControl *self, uint32_t value);
 
-/* Windows.Networking.Sockets.StreamSocketListenerControl.get_OutboundUnicastHopLimit() */
 HRESULT wneso_stream_socket_listener_control_get__outbound_unicast_hop_limit(WNESO_StreamSocketListenerControl *self, uint8_t *value);
 
-/* Windows.Networking.Sockets.StreamSocketListenerControl.put_OutboundUnicastHopLimit() */
 HRESULT wneso_stream_socket_listener_control_put__outbound_unicast_hop_limit(WNESO_StreamSocketListenerControl *self, uint8_t value);
 
-/* activate Windows.Networking.Sockets.StreamSocketListenerInformation */
 HRESULT wneso_stream_socket_listener_information_new(WNESO_StreamSocketListenerInformation **out);
 
-/* Windows.Networking.Sockets.StreamSocketListenerInformation */
-/* Windows.Networking.Sockets.StreamSocketListenerInformation.get_LocalPort() */
 HRESULT wneso_stream_socket_listener_information_get__local_port(WNESO_StreamSocketListenerInformation *self, cwinrt_hstring *value);
 
-/* activate Windows.Networking.Sockets.StreamWebSocket */
 HRESULT wneso_stream_web_socket_new(WNESO_StreamWebSocket **out);
 
-/* Windows.Networking.Sockets.StreamWebSocket */
-/* Windows.Networking.Sockets.StreamWebSocket.get_Control() */
 HRESULT wneso_stream_web_socket_get__control(WNESO_StreamWebSocket *self, WNESO_StreamWebSocketControl** value);
 
-/* Windows.Networking.Sockets.StreamWebSocket.get_Information() */
 HRESULT wneso_stream_web_socket_get__information(WNESO_StreamWebSocket *self, WNESO_StreamWebSocketInformation** value);
 
-/* Windows.Networking.Sockets.StreamWebSocket.get_InputStream() */
 HRESULT wneso_stream_web_socket_get__input_stream(WNESO_StreamWebSocket *self, WSTST_IInputStream** value);
 
-/* Windows.Networking.Sockets.StreamWebSocket.get_OutputStream() */
 HRESULT wneso_stream_web_socket_get__output_stream(WNESO_StreamWebSocket *self, WSTST_IOutputStream** value);
 
-/* Windows.Networking.Sockets.StreamWebSocket.ConnectAsync(uri) */
 HRESULT wneso_stream_web_socket_connect_async(WNESO_StreamWebSocket *self, WF_Uri* uri, WF_IAsyncAction** out);
 
-/* Windows.Networking.Sockets.StreamWebSocket.SetRequestHeader(headerName, headerValue) */
 HRESULT wneso_stream_web_socket_set_request_header(WNESO_StreamWebSocket *self, cwinrt_hstring headerName, cwinrt_hstring headerValue);
 
-/* Windows.Networking.Sockets.StreamWebSocket.Close(code, reason) */
 HRESULT wneso_stream_web_socket_close_u16_str(WNESO_StreamWebSocket *self, uint16_t code, cwinrt_hstring reason);
 
-/* Windows.Networking.Sockets.StreamWebSocket.Close() */
 HRESULT wneso_stream_web_socket_close(WNESO_StreamWebSocket *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wneso_stream_web_socket_on_closed(WNESO_StreamWebSocket *self, cwinrt_event_fn fn, void *ctx);
@@ -1670,419 +1380,242 @@ void wneso_stream_web_socket_off_closed(WNESO_StreamWebSocket *self, cwinrt_toke
 cwinrt_token wneso_stream_web_socket_on_server_custom_validation_requested(WNESO_StreamWebSocket *self, cwinrt_event_fn fn, void *ctx);
 void wneso_stream_web_socket_off_server_custom_validation_requested(WNESO_StreamWebSocket *self, cwinrt_token token);
 
-/* activate Windows.Networking.Sockets.StreamWebSocketControl */
 HRESULT wneso_stream_web_socket_control_new(WNESO_StreamWebSocketControl **out);
 
-/* Windows.Networking.Sockets.StreamWebSocketControl */
-/* Windows.Networking.Sockets.StreamWebSocketControl.get_NoDelay() */
 HRESULT wneso_stream_web_socket_control_get__no_delay(WNESO_StreamWebSocketControl *self, BOOL *value);
 
-/* Windows.Networking.Sockets.StreamWebSocketControl.put_NoDelay() */
 HRESULT wneso_stream_web_socket_control_put__no_delay(WNESO_StreamWebSocketControl *self, BOOL value);
 
-/* Windows.Networking.Sockets.StreamWebSocketControl.get_OutboundBufferSizeInBytes() */
 HRESULT wneso_stream_web_socket_control_get__outbound_buffer_size_in_bytes(WNESO_StreamWebSocketControl *self, uint32_t *value);
 
-/* Windows.Networking.Sockets.StreamWebSocketControl.put_OutboundBufferSizeInBytes() */
 HRESULT wneso_stream_web_socket_control_put__outbound_buffer_size_in_bytes(WNESO_StreamWebSocketControl *self, uint32_t value);
 
-/* Windows.Networking.Sockets.StreamWebSocketControl.get_ServerCredential() */
 HRESULT wneso_stream_web_socket_control_get__server_credential(WNESO_StreamWebSocketControl *self, WSECR_PasswordCredential** value);
 
-/* Windows.Networking.Sockets.StreamWebSocketControl.put_ServerCredential() */
 HRESULT wneso_stream_web_socket_control_put__server_credential(WNESO_StreamWebSocketControl *self, WSECR_PasswordCredential* value);
 
-/* Windows.Networking.Sockets.StreamWebSocketControl.get_ProxyCredential() */
 HRESULT wneso_stream_web_socket_control_get__proxy_credential(WNESO_StreamWebSocketControl *self, WSECR_PasswordCredential** value);
 
-/* Windows.Networking.Sockets.StreamWebSocketControl.put_ProxyCredential() */
 HRESULT wneso_stream_web_socket_control_put__proxy_credential(WNESO_StreamWebSocketControl *self, WSECR_PasswordCredential* value);
 
-/* Windows.Networking.Sockets.StreamWebSocketControl.get_SupportedProtocols() */
 HRESULT wneso_stream_web_socket_control_get__supported_protocols(WNESO_StreamWebSocketControl *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Networking.Sockets.StreamWebSocketControl.get_IgnorableServerCertificateErrors() */
 HRESULT wneso_stream_web_socket_control_get__ignorable_server_certificate_errors(WNESO_StreamWebSocketControl *self, WFOCO_IVector_WSECRCE_ChainValidationResult** value);
 
-/* Windows.Networking.Sockets.StreamWebSocketControl.get_DesiredUnsolicitedPongInterval() */
 HRESULT wneso_stream_web_socket_control_get__desired_unsolicited_pong_interval(WNESO_StreamWebSocketControl *self, WF_TimeSpan *value);
 
-/* Windows.Networking.Sockets.StreamWebSocketControl.put_DesiredUnsolicitedPongInterval() */
 HRESULT wneso_stream_web_socket_control_put__desired_unsolicited_pong_interval(WNESO_StreamWebSocketControl *self, WF_TimeSpan value);
 
-/* Windows.Networking.Sockets.StreamWebSocketControl.get_ActualUnsolicitedPongInterval() */
 HRESULT wneso_stream_web_socket_control_get__actual_unsolicited_pong_interval(WNESO_StreamWebSocketControl *self, WF_TimeSpan *value);
 
-/* Windows.Networking.Sockets.StreamWebSocketControl.get_ClientCertificate() */
 HRESULT wneso_stream_web_socket_control_get__client_certificate(WNESO_StreamWebSocketControl *self, WSECRCE_Certificate** value);
 
-/* Windows.Networking.Sockets.StreamWebSocketControl.put_ClientCertificate() */
 HRESULT wneso_stream_web_socket_control_put__client_certificate(WNESO_StreamWebSocketControl *self, WSECRCE_Certificate* value);
 
-/* activate Windows.Networking.Sockets.StreamWebSocketInformation */
 HRESULT wneso_stream_web_socket_information_new(WNESO_StreamWebSocketInformation **out);
 
-/* Windows.Networking.Sockets.StreamWebSocketInformation */
-/* Windows.Networking.Sockets.StreamWebSocketInformation.get_LocalAddress() */
 HRESULT wneso_stream_web_socket_information_get__local_address(WNESO_StreamWebSocketInformation *self, WNE_HostName** value);
 
-/* Windows.Networking.Sockets.StreamWebSocketInformation.get_BandwidthStatistics() */
 HRESULT wneso_stream_web_socket_information_get__bandwidth_statistics(WNESO_StreamWebSocketInformation *self, WNESO_BandwidthStatistics *value);
 
-/* Windows.Networking.Sockets.StreamWebSocketInformation.get_Protocol() */
 HRESULT wneso_stream_web_socket_information_get__protocol(WNESO_StreamWebSocketInformation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Sockets.StreamWebSocketInformation.get_ServerCertificate() */
 HRESULT wneso_stream_web_socket_information_get__server_certificate(WNESO_StreamWebSocketInformation *self, WSECRCE_Certificate** value);
 
-/* Windows.Networking.Sockets.StreamWebSocketInformation.get_ServerCertificateErrorSeverity() */
 HRESULT wneso_stream_web_socket_information_get__server_certificate_error_severity(WNESO_StreamWebSocketInformation *self, WNESO_SocketSslErrorSeverity *value);
 
-/* Windows.Networking.Sockets.StreamWebSocketInformation.get_ServerCertificateErrors() */
 HRESULT wneso_stream_web_socket_information_get__server_certificate_errors(WNESO_StreamWebSocketInformation *self, WFOCO_IVectorView_WSECRCE_ChainValidationResult** value);
 
-/* Windows.Networking.Sockets.StreamWebSocketInformation.get_ServerIntermediateCertificates() */
 HRESULT wneso_stream_web_socket_information_get__server_intermediate_certificates(WNESO_StreamWebSocketInformation *self, WFOCO_IVectorView_WSECRCE_Certificate** value);
 
-/* activate Windows.Networking.Sockets.WebSocketClosedEventArgs */
 HRESULT wneso_web_socket_closed_event_args_new(WNESO_WebSocketClosedEventArgs **out);
 
-/* Windows.Networking.Sockets.WebSocketClosedEventArgs */
-/* Windows.Networking.Sockets.WebSocketClosedEventArgs.get_Code() */
 HRESULT wneso_web_socket_closed_event_args_get__code(WNESO_WebSocketClosedEventArgs *self, uint16_t *value);
 
-/* Windows.Networking.Sockets.WebSocketClosedEventArgs.get_Reason() */
 HRESULT wneso_web_socket_closed_event_args_get__reason(WNESO_WebSocketClosedEventArgs *self, cwinrt_hstring *value);
 
-/* activate Windows.Networking.Sockets.WebSocketError */
 HRESULT wneso_web_socket_error_new(WNESO_WebSocketError **out);
 
-/* Windows.Networking.Sockets.WebSocketError */
-/* Windows.Networking.Sockets.WebSocketError.GetStatus(hresult) */
 HRESULT wneso_web_socket_error_get_status(int32_t hresult, WWE_WebErrorStatus *out);
 
-/* activate Windows.Networking.Sockets.WebSocketKeepAlive */
 HRESULT wneso_web_socket_keep_alive_new(WNESO_WebSocketKeepAlive **out);
 
-/* Windows.Networking.Sockets.WebSocketKeepAlive */
-/* Windows.Networking.Sockets.WebSocketKeepAlive.Run(taskInstance) */
 HRESULT wneso_web_socket_keep_alive_run(WNESO_WebSocketKeepAlive *self, WAPBA_IBackgroundTaskInstance* taskInstance);
 
-/* activate Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs */
 HRESULT wneso_web_socket_server_custom_validation_requested_event_args_new(WNESO_WebSocketServerCustomValidationRequestedEventArgs **out);
 
-/* Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs */
-/* Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs.get_ServerCertificate() */
 HRESULT wneso_web_socket_server_custom_validation_requested_event_args_get__server_certificate(WNESO_WebSocketServerCustomValidationRequestedEventArgs *self, WSECRCE_Certificate** value);
 
-/* Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs.get_ServerCertificateErrorSeverity() */
 HRESULT wneso_web_socket_server_custom_validation_requested_event_args_get__server_certificate_error_severity(WNESO_WebSocketServerCustomValidationRequestedEventArgs *self, WNESO_SocketSslErrorSeverity *value);
 
-/* Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs.get_ServerCertificateErrors() */
 HRESULT wneso_web_socket_server_custom_validation_requested_event_args_get__server_certificate_errors(WNESO_WebSocketServerCustomValidationRequestedEventArgs *self, WFOCO_IVectorView_WSECRCE_ChainValidationResult** value);
 
-/* Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs.get_ServerIntermediateCertificates() */
 HRESULT wneso_web_socket_server_custom_validation_requested_event_args_get__server_intermediate_certificates(WNESO_WebSocketServerCustomValidationRequestedEventArgs *self, WFOCO_IVectorView_WSECRCE_Certificate** value);
 
-/* Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs.Reject() */
 HRESULT wneso_web_socket_server_custom_validation_requested_event_args_reject(WNESO_WebSocketServerCustomValidationRequestedEventArgs *self);
 
-/* Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs.GetDeferral() */
 HRESULT wneso_web_socket_server_custom_validation_requested_event_args_get_deferral(WNESO_WebSocketServerCustomValidationRequestedEventArgs *self, WF_Deferral** out);
 
-/* Windows.Networking.Sockets.IControlChannelTrigger */
-/* Windows.Networking.Sockets.IControlChannelTrigger2 */
-/* Windows.Networking.Sockets.IControlChannelTrigger2.get_IsWakeFromLowPowerSupported() */
 HRESULT wneso_control_channel_trigger_2_get__is_wake_from_low_power_supported(WNESO_IControlChannelTrigger_2 *self, BOOL *value);
 
-/* Windows.Networking.Sockets.IDatagramSocket */
-/* Windows.Networking.Sockets.IDatagramSocket2 */
-/* Windows.Networking.Sockets.IDatagramSocket2.BindServiceNameAsync(localServiceName, adapter) */
 HRESULT wneso_datagram_socket_2_bind_service_name_async(WNESO_IDatagramSocket_2 *self, cwinrt_hstring localServiceName, WNECO_NetworkAdapter* adapter, WF_IAsyncAction** out);
 
-/* Windows.Networking.Sockets.IDatagramSocket3 */
-/* Windows.Networking.Sockets.IDatagramSocket3.CancelIOAsync() */
 HRESULT wneso_datagram_socket_3_cancel_i_o_async(WNESO_IDatagramSocket_3 *self, WF_IAsyncAction** out);
 
-/* Windows.Networking.Sockets.IDatagramSocket3.EnableTransferOwnership(taskId) */
 HRESULT wneso_datagram_socket_3_enable_transfer_ownership(WNESO_IDatagramSocket_3 *self, GUID taskId);
 
-/* Windows.Networking.Sockets.IDatagramSocket3.EnableTransferOwnership(taskId, connectedStandbyAction) */
 HRESULT wneso_datagram_socket_3_enable_transfer_ownership_g_u_i_d_socket_activity_connected_st_c20823ca(WNESO_IDatagramSocket_3 *self, GUID taskId, WNESO_SocketActivityConnectedStandbyAction connectedStandbyAction);
 
-/* Windows.Networking.Sockets.IDatagramSocket3.TransferOwnership(socketId) */
 HRESULT wneso_datagram_socket_3_transfer_ownership(WNESO_IDatagramSocket_3 *self, cwinrt_hstring socketId);
 
-/* Windows.Networking.Sockets.IDatagramSocket3.TransferOwnership(socketId, data) */
 HRESULT wneso_datagram_socket_3_transfer_ownership_str_p(WNESO_IDatagramSocket_3 *self, cwinrt_hstring socketId, WNESO_SocketActivityContext* data);
 
-/* Windows.Networking.Sockets.IDatagramSocket3.TransferOwnership(socketId, data, keepAliveTime) */
 HRESULT wneso_datagram_socket_3_transfer_ownership_str_p_time_span(WNESO_IDatagramSocket_3 *self, cwinrt_hstring socketId, WNESO_SocketActivityContext* data, WF_TimeSpan keepAliveTime);
 
-/* Windows.Networking.Sockets.IDatagramSocketControl */
-/* Windows.Networking.Sockets.IDatagramSocketControl2 */
-/* Windows.Networking.Sockets.IDatagramSocketControl2.get_InboundBufferSizeInBytes() */
 HRESULT wneso_datagram_socket_control_2_get__inbound_buffer_size_in_bytes(WNESO_IDatagramSocketControl_2 *self, uint32_t *value);
 
-/* Windows.Networking.Sockets.IDatagramSocketControl2.put_InboundBufferSizeInBytes() */
 HRESULT wneso_datagram_socket_control_2_put__inbound_buffer_size_in_bytes(WNESO_IDatagramSocketControl_2 *self, uint32_t value);
 
-/* Windows.Networking.Sockets.IDatagramSocketControl2.get_DontFragment() */
 HRESULT wneso_datagram_socket_control_2_get__dont_fragment(WNESO_IDatagramSocketControl_2 *self, BOOL *value);
 
-/* Windows.Networking.Sockets.IDatagramSocketControl2.put_DontFragment() */
 HRESULT wneso_datagram_socket_control_2_put__dont_fragment(WNESO_IDatagramSocketControl_2 *self, BOOL value);
 
-/* Windows.Networking.Sockets.IDatagramSocketControl3 */
-/* Windows.Networking.Sockets.IDatagramSocketControl3.get_MulticastOnly() */
 HRESULT wneso_datagram_socket_control_3_get__multicast_only(WNESO_IDatagramSocketControl_3 *self, BOOL *value);
 
-/* Windows.Networking.Sockets.IDatagramSocketControl3.put_MulticastOnly() */
 HRESULT wneso_datagram_socket_control_3_put__multicast_only(WNESO_IDatagramSocketControl_3 *self, BOOL value);
 
-/* Windows.Networking.Sockets.IDatagramSocketInformation */
-/* Windows.Networking.Sockets.IDatagramSocketMessageReceivedEventArgs */
-/* Windows.Networking.Sockets.IMessageWebSocket2 */
-/* Windows.Networking.Sockets.IMessageWebSocket3 */
-/* Windows.Networking.Sockets.IMessageWebSocket3.SendNonfinalFrameAsync(data) */
 HRESULT wneso_message_web_socket_3_send_nonfinal_frame_async(WNESO_IMessageWebSocket_3 *self, WSTST_IBuffer* data, WF_IAsyncOperationWithProgress_uint32_t_uint32_t** out);
 
-/* Windows.Networking.Sockets.IMessageWebSocket3.SendFinalFrameAsync(data) */
 HRESULT wneso_message_web_socket_3_send_final_frame_async(WNESO_IMessageWebSocket_3 *self, WSTST_IBuffer* data, WF_IAsyncOperationWithProgress_uint32_t_uint32_t** out);
 
-/* Windows.Networking.Sockets.IMessageWebSocketControl */
-/* Windows.Networking.Sockets.IMessageWebSocketControl2 */
-/* Windows.Networking.Sockets.IMessageWebSocketControl2.get_DesiredUnsolicitedPongInterval() */
 HRESULT wneso_message_web_socket_control_2_get__desired_unsolicited_pong_interval(WNESO_IMessageWebSocketControl_2 *self, WF_TimeSpan *value);
 
-/* Windows.Networking.Sockets.IMessageWebSocketControl2.put_DesiredUnsolicitedPongInterval() */
 HRESULT wneso_message_web_socket_control_2_put__desired_unsolicited_pong_interval(WNESO_IMessageWebSocketControl_2 *self, WF_TimeSpan value);
 
-/* Windows.Networking.Sockets.IMessageWebSocketControl2.get_ActualUnsolicitedPongInterval() */
 HRESULT wneso_message_web_socket_control_2_get__actual_unsolicited_pong_interval(WNESO_IMessageWebSocketControl_2 *self, WF_TimeSpan *value);
 
-/* Windows.Networking.Sockets.IMessageWebSocketControl2.get_ReceiveMode() */
 HRESULT wneso_message_web_socket_control_2_get__receive_mode(WNESO_IMessageWebSocketControl_2 *self, WNESO_MessageWebSocketReceiveMode *value);
 
-/* Windows.Networking.Sockets.IMessageWebSocketControl2.put_ReceiveMode() */
 HRESULT wneso_message_web_socket_control_2_put__receive_mode(WNESO_IMessageWebSocketControl_2 *self, WNESO_MessageWebSocketReceiveMode value);
 
-/* Windows.Networking.Sockets.IMessageWebSocketControl2.get_ClientCertificate() */
 HRESULT wneso_message_web_socket_control_2_get__client_certificate(WNESO_IMessageWebSocketControl_2 *self, WSECRCE_Certificate** value);
 
-/* Windows.Networking.Sockets.IMessageWebSocketControl2.put_ClientCertificate() */
 HRESULT wneso_message_web_socket_control_2_put__client_certificate(WNESO_IMessageWebSocketControl_2 *self, WSECRCE_Certificate* value);
 
-/* Windows.Networking.Sockets.IMessageWebSocketMessageReceivedEventArgs2 */
-/* Windows.Networking.Sockets.IMessageWebSocketMessageReceivedEventArgs2.get_IsMessageComplete() */
 HRESULT wneso_message_web_socket_message_received_event_args_2_get__is_message_complete(WNESO_IMessageWebSocketMessageReceivedEventArgs_2 *self, BOOL *value);
 
-/* Windows.Networking.Sockets.IServerMessageWebSocket */
-/* Windows.Networking.Sockets.IServerMessageWebSocketControl */
-/* Windows.Networking.Sockets.IServerMessageWebSocketInformation */
-/* Windows.Networking.Sockets.IServerStreamWebSocket */
-/* Windows.Networking.Sockets.IServerStreamWebSocketInformation */
-/* Windows.Networking.Sockets.ISocketActivityContext */
-/* Windows.Networking.Sockets.ISocketActivityInformation */
-/* Windows.Networking.Sockets.ISocketActivityTriggerDetails */
-/* Windows.Networking.Sockets.IStreamSocket */
-/* Windows.Networking.Sockets.IStreamSocket2 */
-/* Windows.Networking.Sockets.IStreamSocket2.ConnectAsync(remoteHostName, remoteServiceName, protectionLevel, adapter) */
 HRESULT wneso_stream_socket_2_connect_async(WNESO_IStreamSocket_2 *self, WNE_HostName* remoteHostName, cwinrt_hstring remoteServiceName, WNESO_SocketProtectionLevel protectionLevel, WNECO_NetworkAdapter* adapter, WF_IAsyncAction** out);
 
-/* Windows.Networking.Sockets.IStreamSocket3 */
-/* Windows.Networking.Sockets.IStreamSocket3.CancelIOAsync() */
 HRESULT wneso_stream_socket_3_cancel_i_o_async(WNESO_IStreamSocket_3 *self, WF_IAsyncAction** out);
 
-/* Windows.Networking.Sockets.IStreamSocket3.EnableTransferOwnership(taskId) */
 HRESULT wneso_stream_socket_3_enable_transfer_ownership(WNESO_IStreamSocket_3 *self, GUID taskId);
 
-/* Windows.Networking.Sockets.IStreamSocket3.EnableTransferOwnership(taskId, connectedStandbyAction) */
 HRESULT wneso_stream_socket_3_enable_transfer_ownership_g_u_i_d_socket_activity_connected_st_c20823ca(WNESO_IStreamSocket_3 *self, GUID taskId, WNESO_SocketActivityConnectedStandbyAction connectedStandbyAction);
 
-/* Windows.Networking.Sockets.IStreamSocket3.TransferOwnership(socketId) */
 HRESULT wneso_stream_socket_3_transfer_ownership(WNESO_IStreamSocket_3 *self, cwinrt_hstring socketId);
 
-/* Windows.Networking.Sockets.IStreamSocket3.TransferOwnership(socketId, data) */
 HRESULT wneso_stream_socket_3_transfer_ownership_str_p(WNESO_IStreamSocket_3 *self, cwinrt_hstring socketId, WNESO_SocketActivityContext* data);
 
-/* Windows.Networking.Sockets.IStreamSocket3.TransferOwnership(socketId, data, keepAliveTime) */
 HRESULT wneso_stream_socket_3_transfer_ownership_str_p_time_span(WNESO_IStreamSocket_3 *self, cwinrt_hstring socketId, WNESO_SocketActivityContext* data, WF_TimeSpan keepAliveTime);
 
-/* Windows.Networking.Sockets.IStreamSocketControl */
-/* Windows.Networking.Sockets.IStreamSocketControl2 */
-/* Windows.Networking.Sockets.IStreamSocketControl2.get_IgnorableServerCertificateErrors() */
 HRESULT wneso_stream_socket_control_2_get__ignorable_server_certificate_errors(WNESO_IStreamSocketControl_2 *self, WFOCO_IVector_WSECRCE_ChainValidationResult** value);
 
-/* Windows.Networking.Sockets.IStreamSocketControl3 */
-/* Windows.Networking.Sockets.IStreamSocketControl3.get_SerializeConnectionAttempts() */
 HRESULT wneso_stream_socket_control_3_get__serialize_connection_attempts(WNESO_IStreamSocketControl_3 *self, BOOL *value);
 
-/* Windows.Networking.Sockets.IStreamSocketControl3.put_SerializeConnectionAttempts() */
 HRESULT wneso_stream_socket_control_3_put__serialize_connection_attempts(WNESO_IStreamSocketControl_3 *self, BOOL value);
 
-/* Windows.Networking.Sockets.IStreamSocketControl3.get_ClientCertificate() */
 HRESULT wneso_stream_socket_control_3_get__client_certificate(WNESO_IStreamSocketControl_3 *self, WSECRCE_Certificate** value);
 
-/* Windows.Networking.Sockets.IStreamSocketControl3.put_ClientCertificate() */
 HRESULT wneso_stream_socket_control_3_put__client_certificate(WNESO_IStreamSocketControl_3 *self, WSECRCE_Certificate* value);
 
-/* Windows.Networking.Sockets.IStreamSocketControl4 */
-/* Windows.Networking.Sockets.IStreamSocketControl4.get_MinProtectionLevel() */
 HRESULT wneso_stream_socket_control_4_get__min_protection_level(WNESO_IStreamSocketControl_4 *self, WNESO_SocketProtectionLevel *value);
 
-/* Windows.Networking.Sockets.IStreamSocketControl4.put_MinProtectionLevel() */
 HRESULT wneso_stream_socket_control_4_put__min_protection_level(WNESO_IStreamSocketControl_4 *self, WNESO_SocketProtectionLevel value);
 
-/* Windows.Networking.Sockets.IStreamSocketInformation */
-/* Windows.Networking.Sockets.IStreamSocketInformation2 */
-/* Windows.Networking.Sockets.IStreamSocketInformation2.get_ServerCertificateErrorSeverity() */
 HRESULT wneso_stream_socket_information_2_get__server_certificate_error_severity(WNESO_IStreamSocketInformation_2 *self, WNESO_SocketSslErrorSeverity *value);
 
-/* Windows.Networking.Sockets.IStreamSocketInformation2.get_ServerCertificateErrors() */
 HRESULT wneso_stream_socket_information_2_get__server_certificate_errors(WNESO_IStreamSocketInformation_2 *self, WFOCO_IVectorView_WSECRCE_ChainValidationResult** value);
 
-/* Windows.Networking.Sockets.IStreamSocketInformation2.get_ServerCertificate() */
 HRESULT wneso_stream_socket_information_2_get__server_certificate(WNESO_IStreamSocketInformation_2 *self, WSECRCE_Certificate** value);
 
-/* Windows.Networking.Sockets.IStreamSocketInformation2.get_ServerIntermediateCertificates() */
 HRESULT wneso_stream_socket_information_2_get__server_intermediate_certificates(WNESO_IStreamSocketInformation_2 *self, WFOCO_IVectorView_WSECRCE_Certificate** value);
 
-/* Windows.Networking.Sockets.IStreamSocketListener */
-/* Windows.Networking.Sockets.IStreamSocketListener2 */
-/* Windows.Networking.Sockets.IStreamSocketListener2.BindServiceNameAsync(localServiceName, protectionLevel) */
 HRESULT wneso_stream_socket_listener_2_bind_service_name_async(WNESO_IStreamSocketListener_2 *self, cwinrt_hstring localServiceName, WNESO_SocketProtectionLevel protectionLevel, WF_IAsyncAction** out);
 
-/* Windows.Networking.Sockets.IStreamSocketListener2.BindServiceNameAsync(localServiceName, protectionLevel, adapter) */
 HRESULT wneso_stream_socket_listener_2_bind_service_name_async_str_socket_protection_level_p_p(WNESO_IStreamSocketListener_2 *self, cwinrt_hstring localServiceName, WNESO_SocketProtectionLevel protectionLevel, WNECO_NetworkAdapter* adapter, WF_IAsyncAction** out);
 
-/* Windows.Networking.Sockets.IStreamSocketListener3 */
-/* Windows.Networking.Sockets.IStreamSocketListener3.CancelIOAsync() */
 HRESULT wneso_stream_socket_listener_3_cancel_i_o_async(WNESO_IStreamSocketListener_3 *self, WF_IAsyncAction** out);
 
-/* Windows.Networking.Sockets.IStreamSocketListener3.EnableTransferOwnership(taskId) */
 HRESULT wneso_stream_socket_listener_3_enable_transfer_ownership(WNESO_IStreamSocketListener_3 *self, GUID taskId);
 
-/* Windows.Networking.Sockets.IStreamSocketListener3.EnableTransferOwnership(taskId, connectedStandbyAction) */
 HRESULT wneso_stream_socket_listener_3_enable_transfer_ownership_g_u_i_d_socket_activity_connected_st_c20823ca(WNESO_IStreamSocketListener_3 *self, GUID taskId, WNESO_SocketActivityConnectedStandbyAction connectedStandbyAction);
 
-/* Windows.Networking.Sockets.IStreamSocketListener3.TransferOwnership(socketId) */
 HRESULT wneso_stream_socket_listener_3_transfer_ownership(WNESO_IStreamSocketListener_3 *self, cwinrt_hstring socketId);
 
-/* Windows.Networking.Sockets.IStreamSocketListener3.TransferOwnership(socketId, data) */
 HRESULT wneso_stream_socket_listener_3_transfer_ownership_str_p(WNESO_IStreamSocketListener_3 *self, cwinrt_hstring socketId, WNESO_SocketActivityContext* data);
 
-/* Windows.Networking.Sockets.IStreamSocketListenerConnectionReceivedEventArgs */
-/* Windows.Networking.Sockets.IStreamSocketListenerControl */
-/* Windows.Networking.Sockets.IStreamSocketListenerControl2 */
-/* Windows.Networking.Sockets.IStreamSocketListenerControl2.get_NoDelay() */
 HRESULT wneso_stream_socket_listener_control_2_get__no_delay(WNESO_IStreamSocketListenerControl_2 *self, BOOL *value);
 
-/* Windows.Networking.Sockets.IStreamSocketListenerControl2.put_NoDelay() */
 HRESULT wneso_stream_socket_listener_control_2_put__no_delay(WNESO_IStreamSocketListenerControl_2 *self, BOOL value);
 
-/* Windows.Networking.Sockets.IStreamSocketListenerControl2.get_KeepAlive() */
 HRESULT wneso_stream_socket_listener_control_2_get__keep_alive(WNESO_IStreamSocketListenerControl_2 *self, BOOL *value);
 
-/* Windows.Networking.Sockets.IStreamSocketListenerControl2.put_KeepAlive() */
 HRESULT wneso_stream_socket_listener_control_2_put__keep_alive(WNESO_IStreamSocketListenerControl_2 *self, BOOL value);
 
-/* Windows.Networking.Sockets.IStreamSocketListenerControl2.get_OutboundBufferSizeInBytes() */
 HRESULT wneso_stream_socket_listener_control_2_get__outbound_buffer_size_in_bytes(WNESO_IStreamSocketListenerControl_2 *self, uint32_t *value);
 
-/* Windows.Networking.Sockets.IStreamSocketListenerControl2.put_OutboundBufferSizeInBytes() */
 HRESULT wneso_stream_socket_listener_control_2_put__outbound_buffer_size_in_bytes(WNESO_IStreamSocketListenerControl_2 *self, uint32_t value);
 
-/* Windows.Networking.Sockets.IStreamSocketListenerControl2.get_OutboundUnicastHopLimit() */
 HRESULT wneso_stream_socket_listener_control_2_get__outbound_unicast_hop_limit(WNESO_IStreamSocketListenerControl_2 *self, uint8_t *value);
 
-/* Windows.Networking.Sockets.IStreamSocketListenerControl2.put_OutboundUnicastHopLimit() */
 HRESULT wneso_stream_socket_listener_control_2_put__outbound_unicast_hop_limit(WNESO_IStreamSocketListenerControl_2 *self, uint8_t value);
 
-/* Windows.Networking.Sockets.IStreamSocketListenerInformation */
-/* Windows.Networking.Sockets.IStreamWebSocket2 */
-/* Windows.Networking.Sockets.IStreamWebSocketControl */
-/* Windows.Networking.Sockets.IWebSocketControl2 */
-/* Windows.Networking.Sockets.IWebSocketControl2.get_IgnorableServerCertificateErrors() */
 HRESULT wneso_web_socket_control_2_get__ignorable_server_certificate_errors(WNESO_IWebSocketControl_2 *self, WFOCO_IVector_WSECRCE_ChainValidationResult** value);
 
-/* Windows.Networking.Sockets.IStreamWebSocketControl2 */
-/* Windows.Networking.Sockets.IStreamWebSocketControl2.get_DesiredUnsolicitedPongInterval() */
 HRESULT wneso_stream_web_socket_control_2_get__desired_unsolicited_pong_interval(WNESO_IStreamWebSocketControl_2 *self, WF_TimeSpan *value);
 
-/* Windows.Networking.Sockets.IStreamWebSocketControl2.put_DesiredUnsolicitedPongInterval() */
 HRESULT wneso_stream_web_socket_control_2_put__desired_unsolicited_pong_interval(WNESO_IStreamWebSocketControl_2 *self, WF_TimeSpan value);
 
-/* Windows.Networking.Sockets.IStreamWebSocketControl2.get_ActualUnsolicitedPongInterval() */
 HRESULT wneso_stream_web_socket_control_2_get__actual_unsolicited_pong_interval(WNESO_IStreamWebSocketControl_2 *self, WF_TimeSpan *value);
 
-/* Windows.Networking.Sockets.IStreamWebSocketControl2.get_ClientCertificate() */
 HRESULT wneso_stream_web_socket_control_2_get__client_certificate(WNESO_IStreamWebSocketControl_2 *self, WSECRCE_Certificate** value);
 
-/* Windows.Networking.Sockets.IStreamWebSocketControl2.put_ClientCertificate() */
 HRESULT wneso_stream_web_socket_control_2_put__client_certificate(WNESO_IStreamWebSocketControl_2 *self, WSECRCE_Certificate* value);
 
-/* Windows.Networking.Sockets.IWebSocketInformation2 */
-/* Windows.Networking.Sockets.IWebSocketInformation2.get_ServerCertificate() */
 HRESULT wneso_web_socket_information_2_get__server_certificate(WNESO_IWebSocketInformation_2 *self, WSECRCE_Certificate** value);
 
-/* Windows.Networking.Sockets.IWebSocketInformation2.get_ServerCertificateErrorSeverity() */
 HRESULT wneso_web_socket_information_2_get__server_certificate_error_severity(WNESO_IWebSocketInformation_2 *self, WNESO_SocketSslErrorSeverity *value);
 
-/* Windows.Networking.Sockets.IWebSocketInformation2.get_ServerCertificateErrors() */
 HRESULT wneso_web_socket_information_2_get__server_certificate_errors(WNESO_IWebSocketInformation_2 *self, WFOCO_IVectorView_WSECRCE_ChainValidationResult** value);
 
-/* Windows.Networking.Sockets.IWebSocketInformation2.get_ServerIntermediateCertificates() */
 HRESULT wneso_web_socket_information_2_get__server_intermediate_certificates(WNESO_IWebSocketInformation_2 *self, WFOCO_IVectorView_WSECRCE_Certificate** value);
 
-/* Windows.Networking.Sockets.IWebSocketClosedEventArgs */
-/* Windows.Networking.Sockets.IWebSocketServerCustomValidationRequestedEventArgs */
-/* Windows.Networking.Sockets.IMessageWebSocket */
-/* Windows.Networking.Sockets.IMessageWebSocketMessageReceivedEventArgs */
-/* Windows.Networking.Sockets.IStreamWebSocket */
-/* Windows.Networking.Sockets.IWebSocketControl */
-/* Windows.Networking.Sockets.IWebSocketControl.get_OutboundBufferSizeInBytes() */
 HRESULT wneso_web_socket_control_get__outbound_buffer_size_in_bytes(WNESO_IWebSocketControl *self, uint32_t *value);
 
-/* Windows.Networking.Sockets.IWebSocketControl.put_OutboundBufferSizeInBytes() */
 HRESULT wneso_web_socket_control_put__outbound_buffer_size_in_bytes(WNESO_IWebSocketControl *self, uint32_t value);
 
-/* Windows.Networking.Sockets.IWebSocketControl.get_ServerCredential() */
 HRESULT wneso_web_socket_control_get__server_credential(WNESO_IWebSocketControl *self, WSECR_PasswordCredential** value);
 
-/* Windows.Networking.Sockets.IWebSocketControl.put_ServerCredential() */
 HRESULT wneso_web_socket_control_put__server_credential(WNESO_IWebSocketControl *self, WSECR_PasswordCredential* value);
 
-/* Windows.Networking.Sockets.IWebSocketControl.get_ProxyCredential() */
 HRESULT wneso_web_socket_control_get__proxy_credential(WNESO_IWebSocketControl *self, WSECR_PasswordCredential** value);
 
-/* Windows.Networking.Sockets.IWebSocketControl.put_ProxyCredential() */
 HRESULT wneso_web_socket_control_put__proxy_credential(WNESO_IWebSocketControl *self, WSECR_PasswordCredential* value);
 
-/* Windows.Networking.Sockets.IWebSocketControl.get_SupportedProtocols() */
 HRESULT wneso_web_socket_control_get__supported_protocols(WNESO_IWebSocketControl *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Networking.Sockets.IWebSocketInformation */
-/* Windows.Networking.Sockets.IWebSocketInformation.get_LocalAddress() */
 HRESULT wneso_web_socket_information_get__local_address(WNESO_IWebSocketInformation *self, WNE_HostName** value);
 
-/* Windows.Networking.Sockets.IWebSocketInformation.get_BandwidthStatistics() */
 HRESULT wneso_web_socket_information_get__bandwidth_statistics(WNESO_IWebSocketInformation *self, WNESO_BandwidthStatistics *value);
 
-/* Windows.Networking.Sockets.IWebSocketInformation.get_Protocol() */
 HRESULT wneso_web_socket_information_get__protocol(WNESO_IWebSocketInformation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Sockets.IWebSocket */
-/* Windows.Networking.Sockets.IWebSocket.get_OutputStream() */
 HRESULT wneso_web_socket_get__output_stream(WNESO_IWebSocket *self, WSTST_IOutputStream** value);
 
-/* Windows.Networking.Sockets.IWebSocket.ConnectAsync(uri) */
 HRESULT wneso_web_socket_connect_async(WNESO_IWebSocket *self, WF_Uri* uri, WF_IAsyncAction** out);
 
-/* Windows.Networking.Sockets.IWebSocket.SetRequestHeader(headerName, headerValue) */
 HRESULT wneso_web_socket_set_request_header(WNESO_IWebSocket *self, cwinrt_hstring headerName, cwinrt_hstring headerValue);
 
-/* Windows.Networking.Sockets.IWebSocket.Close(code, reason) */
 HRESULT wneso_web_socket_close(WNESO_IWebSocket *self, uint16_t code, cwinrt_hstring reason);
 
 #endif /* CWINRT_WINDOWS_NETWORKING_SOCKETS_H */

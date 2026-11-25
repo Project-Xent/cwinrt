@@ -13,13 +13,11 @@
 #include <cwinrt/Windows.Storage.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDEHU_HidInputReport WDEHU_HidInputReport;
 typedef struct WDEHU_HidInputReportReceivedEventArgs WDEHU_HidInputReportReceivedEventArgs;
 typedef struct WDEHU_HidNumericControl WDEHU_HidNumericControl;
@@ -43,7 +41,6 @@ typedef struct WDEHU_IHidCollection WDEHU_IHidCollection;
 typedef struct WDEHU_IHidDevice WDEHU_IHidDevice;
 typedef struct WDEHU_IHidFeatureReport WDEHU_IHidFeatureReport;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
@@ -116,7 +113,6 @@ typedef enum WDEHU_HidCollectionType {
 } WDEHU_HidCollectionType;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -169,334 +165,209 @@ static const IID CWINRT_IID_WDEHU_IHidDevice CWINRT_MAYBE_UNUSED = { 0x5F8A14E7,
 static const IID CWINRT_IID_WDEHU_IHidFeatureReport CWINRT_MAYBE_UNUSED = { 0x841D9B79, 0x5AE5, 0x46E3, { 0x82, 0xEF, 0x1F, 0xEC, 0x5C, 0x89, 0x42, 0xF4 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Devices.HumanInterfaceDevice.HidInputReport */
 HRESULT wdehu_hid_input_report_new(WDEHU_HidInputReport **out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidInputReport */
-/* Windows.Devices.HumanInterfaceDevice.HidInputReport.get_Id() */
 HRESULT wdehu_hid_input_report_get__id(WDEHU_HidInputReport *self, uint16_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidInputReport.get_Data() */
 HRESULT wdehu_hid_input_report_get__data(WDEHU_HidInputReport *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidInputReport.get_ActivatedBooleanControls() */
 HRESULT wdehu_hid_input_report_get__activated_boolean_controls(WDEHU_HidInputReport *self, WFOCO_IVectorView_WDEHU_HidBooleanControl** value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidInputReport.get_TransitionedBooleanControls() */
 HRESULT wdehu_hid_input_report_get__transitioned_boolean_controls(WDEHU_HidInputReport *self, WFOCO_IVectorView_WDEHU_HidBooleanControl** value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidInputReport.GetBooleanControl(usagePage, usageId) */
 HRESULT wdehu_hid_input_report_get_boolean_control(WDEHU_HidInputReport *self, uint16_t usagePage, uint16_t usageId, WDEHU_HidBooleanControl** out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidInputReport.GetBooleanControlByDescription(controlDescription) */
 HRESULT wdehu_hid_input_report_get_boolean_control_by_description(WDEHU_HidInputReport *self, WDEHU_HidBooleanControlDescription* controlDescription, WDEHU_HidBooleanControl** out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidInputReport.GetNumericControl(usagePage, usageId) */
 HRESULT wdehu_hid_input_report_get_numeric_control(WDEHU_HidInputReport *self, uint16_t usagePage, uint16_t usageId, WDEHU_HidNumericControl** out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidInputReport.GetNumericControlByDescription(controlDescription) */
 HRESULT wdehu_hid_input_report_get_numeric_control_by_description(WDEHU_HidInputReport *self, WDEHU_HidNumericControlDescription* controlDescription, WDEHU_HidNumericControl** out);
 
-/* activate Windows.Devices.HumanInterfaceDevice.HidInputReportReceivedEventArgs */
 HRESULT wdehu_hid_input_report_received_event_args_new(WDEHU_HidInputReportReceivedEventArgs **out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidInputReportReceivedEventArgs */
-/* Windows.Devices.HumanInterfaceDevice.HidInputReportReceivedEventArgs.get_Report() */
 HRESULT wdehu_hid_input_report_received_event_args_get__report(WDEHU_HidInputReportReceivedEventArgs *self, WDEHU_HidInputReport** value);
 
-/* activate Windows.Devices.HumanInterfaceDevice.HidNumericControl */
 HRESULT wdehu_hid_numeric_control_new(WDEHU_HidNumericControl **out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidNumericControl */
-/* Windows.Devices.HumanInterfaceDevice.HidNumericControl.get_Id() */
 HRESULT wdehu_hid_numeric_control_get__id(WDEHU_HidNumericControl *self, uint32_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidNumericControl.get_IsGrouped() */
 HRESULT wdehu_hid_numeric_control_get__is_grouped(WDEHU_HidNumericControl *self, BOOL *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidNumericControl.get_UsagePage() */
 HRESULT wdehu_hid_numeric_control_get__usage_page(WDEHU_HidNumericControl *self, uint16_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidNumericControl.get_UsageId() */
 HRESULT wdehu_hid_numeric_control_get__usage_id(WDEHU_HidNumericControl *self, uint16_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidNumericControl.get_Value() */
 HRESULT wdehu_hid_numeric_control_get__value(WDEHU_HidNumericControl *self, int64_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidNumericControl.put_Value() */
 HRESULT wdehu_hid_numeric_control_put__value(WDEHU_HidNumericControl *self, int64_t value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidNumericControl.get_ScaledValue() */
 HRESULT wdehu_hid_numeric_control_get__scaled_value(WDEHU_HidNumericControl *self, int64_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidNumericControl.put_ScaledValue() */
 HRESULT wdehu_hid_numeric_control_put__scaled_value(WDEHU_HidNumericControl *self, int64_t value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidNumericControl.get_ControlDescription() */
 HRESULT wdehu_hid_numeric_control_get__control_description(WDEHU_HidNumericControl *self, WDEHU_HidNumericControlDescription** value);
 
-/* activate Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription */
 HRESULT wdehu_hid_numeric_control_description_new(WDEHU_HidNumericControlDescription **out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription */
-/* Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription.get_Id() */
 HRESULT wdehu_hid_numeric_control_description_get__id(WDEHU_HidNumericControlDescription *self, uint32_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription.get_ReportId() */
 HRESULT wdehu_hid_numeric_control_description_get__report_id(WDEHU_HidNumericControlDescription *self, uint16_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription.get_ReportType() */
 HRESULT wdehu_hid_numeric_control_description_get__report_type(WDEHU_HidNumericControlDescription *self, WDEHU_HidReportType *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription.get_ReportSize() */
 HRESULT wdehu_hid_numeric_control_description_get__report_size(WDEHU_HidNumericControlDescription *self, uint32_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription.get_ReportCount() */
 HRESULT wdehu_hid_numeric_control_description_get__report_count(WDEHU_HidNumericControlDescription *self, uint32_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription.get_UsagePage() */
 HRESULT wdehu_hid_numeric_control_description_get__usage_page(WDEHU_HidNumericControlDescription *self, uint16_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription.get_UsageId() */
 HRESULT wdehu_hid_numeric_control_description_get__usage_id(WDEHU_HidNumericControlDescription *self, uint16_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription.get_LogicalMinimum() */
 HRESULT wdehu_hid_numeric_control_description_get__logical_minimum(WDEHU_HidNumericControlDescription *self, int32_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription.get_LogicalMaximum() */
 HRESULT wdehu_hid_numeric_control_description_get__logical_maximum(WDEHU_HidNumericControlDescription *self, int32_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription.get_PhysicalMinimum() */
 HRESULT wdehu_hid_numeric_control_description_get__physical_minimum(WDEHU_HidNumericControlDescription *self, int32_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription.get_PhysicalMaximum() */
 HRESULT wdehu_hid_numeric_control_description_get__physical_maximum(WDEHU_HidNumericControlDescription *self, int32_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription.get_UnitExponent() */
 HRESULT wdehu_hid_numeric_control_description_get__unit_exponent(WDEHU_HidNumericControlDescription *self, uint32_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription.get_Unit() */
 HRESULT wdehu_hid_numeric_control_description_get__unit(WDEHU_HidNumericControlDescription *self, uint32_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription.get_IsAbsolute() */
 HRESULT wdehu_hid_numeric_control_description_get__is_absolute(WDEHU_HidNumericControlDescription *self, BOOL *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription.get_HasNull() */
 HRESULT wdehu_hid_numeric_control_description_get__has_null(WDEHU_HidNumericControlDescription *self, BOOL *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription.get_ParentCollections() */
 HRESULT wdehu_hid_numeric_control_description_get__parent_collections(WDEHU_HidNumericControlDescription *self, WFOCO_IVectorView_WDEHU_HidCollection** value);
 
-/* activate Windows.Devices.HumanInterfaceDevice.HidOutputReport */
 HRESULT wdehu_hid_output_report_new(WDEHU_HidOutputReport **out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidOutputReport */
-/* Windows.Devices.HumanInterfaceDevice.HidOutputReport.get_Id() */
 HRESULT wdehu_hid_output_report_get__id(WDEHU_HidOutputReport *self, uint16_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidOutputReport.get_Data() */
 HRESULT wdehu_hid_output_report_get__data(WDEHU_HidOutputReport *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidOutputReport.put_Data() */
 HRESULT wdehu_hid_output_report_put__data(WDEHU_HidOutputReport *self, WSTST_IBuffer* value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidOutputReport.GetBooleanControl(usagePage, usageId) */
 HRESULT wdehu_hid_output_report_get_boolean_control(WDEHU_HidOutputReport *self, uint16_t usagePage, uint16_t usageId, WDEHU_HidBooleanControl** out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidOutputReport.GetBooleanControlByDescription(controlDescription) */
 HRESULT wdehu_hid_output_report_get_boolean_control_by_description(WDEHU_HidOutputReport *self, WDEHU_HidBooleanControlDescription* controlDescription, WDEHU_HidBooleanControl** out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidOutputReport.GetNumericControl(usagePage, usageId) */
 HRESULT wdehu_hid_output_report_get_numeric_control(WDEHU_HidOutputReport *self, uint16_t usagePage, uint16_t usageId, WDEHU_HidNumericControl** out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidOutputReport.GetNumericControlByDescription(controlDescription) */
 HRESULT wdehu_hid_output_report_get_numeric_control_by_description(WDEHU_HidOutputReport *self, WDEHU_HidNumericControlDescription* controlDescription, WDEHU_HidNumericControl** out);
 
-/* Windows.Devices.HumanInterfaceDevice.IHidDeviceStatics */
-/* Windows.Devices.HumanInterfaceDevice.IHidDeviceStatics.GetDeviceSelector(usagePage, usageId) */
 HRESULT wdehu_hid_device_statics_get_device_selector(WDEHU_IHidDeviceStatics *self, uint16_t usagePage, uint16_t usageId, cwinrt_hstring *out);
 
-/* Windows.Devices.HumanInterfaceDevice.IHidDeviceStatics.GetDeviceSelector(usagePage, usageId, vendorId, productId) */
 HRESULT wdehu_hid_device_statics_get_device_selector_u16_u16_u16_u16_str(WDEHU_IHidDeviceStatics *self, uint16_t usagePage, uint16_t usageId, uint16_t vendorId, uint16_t productId, cwinrt_hstring *out);
 
-/* Windows.Devices.HumanInterfaceDevice.IHidDeviceStatics.FromIdAsync(deviceId, accessMode) */
 HRESULT wdehu_hid_device_statics_from_id_async(WDEHU_IHidDeviceStatics *self, cwinrt_hstring deviceId, WS_FileAccessMode accessMode, WF_IAsyncOperation_WDEHU_HidDevice** out);
 
-/* activate Windows.Devices.HumanInterfaceDevice.HidBooleanControl */
 HRESULT wdehu_hid_boolean_control_new(WDEHU_HidBooleanControl **out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidBooleanControl */
-/* Windows.Devices.HumanInterfaceDevice.HidBooleanControl.get_Id() */
 HRESULT wdehu_hid_boolean_control_get__id(WDEHU_HidBooleanControl *self, uint32_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidBooleanControl.get_UsagePage() */
 HRESULT wdehu_hid_boolean_control_get__usage_page(WDEHU_HidBooleanControl *self, uint16_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidBooleanControl.get_UsageId() */
 HRESULT wdehu_hid_boolean_control_get__usage_id(WDEHU_HidBooleanControl *self, uint16_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidBooleanControl.get_IsActive() */
 HRESULT wdehu_hid_boolean_control_get__is_active(WDEHU_HidBooleanControl *self, BOOL *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidBooleanControl.put_IsActive() */
 HRESULT wdehu_hid_boolean_control_put__is_active(WDEHU_HidBooleanControl *self, BOOL value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidBooleanControl.get_ControlDescription() */
 HRESULT wdehu_hid_boolean_control_get__control_description(WDEHU_HidBooleanControl *self, WDEHU_HidBooleanControlDescription** value);
 
-/* activate Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription */
 HRESULT wdehu_hid_boolean_control_description_new(WDEHU_HidBooleanControlDescription **out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription */
-/* Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription.get_Id() */
 HRESULT wdehu_hid_boolean_control_description_get__id(WDEHU_HidBooleanControlDescription *self, uint32_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription.get_ReportId() */
 HRESULT wdehu_hid_boolean_control_description_get__report_id(WDEHU_HidBooleanControlDescription *self, uint16_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription.get_ReportType() */
 HRESULT wdehu_hid_boolean_control_description_get__report_type(WDEHU_HidBooleanControlDescription *self, WDEHU_HidReportType *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription.get_UsagePage() */
 HRESULT wdehu_hid_boolean_control_description_get__usage_page(WDEHU_HidBooleanControlDescription *self, uint16_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription.get_UsageId() */
 HRESULT wdehu_hid_boolean_control_description_get__usage_id(WDEHU_HidBooleanControlDescription *self, uint16_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription.get_ParentCollections() */
 HRESULT wdehu_hid_boolean_control_description_get__parent_collections(WDEHU_HidBooleanControlDescription *self, WFOCO_IVectorView_WDEHU_HidCollection** value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription.get_IsAbsolute() */
 HRESULT wdehu_hid_boolean_control_description_get__is_absolute(WDEHU_HidBooleanControlDescription *self, BOOL *value);
 
-/* activate Windows.Devices.HumanInterfaceDevice.HidCollection */
 HRESULT wdehu_hid_collection_new(WDEHU_HidCollection **out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidCollection */
-/* Windows.Devices.HumanInterfaceDevice.HidCollection.get_Id() */
 HRESULT wdehu_hid_collection_get__id(WDEHU_HidCollection *self, uint32_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidCollection.get_Type() */
 HRESULT wdehu_hid_collection_get__type(WDEHU_HidCollection *self, WDEHU_HidCollectionType *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidCollection.get_UsagePage() */
 HRESULT wdehu_hid_collection_get__usage_page(WDEHU_HidCollection *self, uint32_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidCollection.get_UsageId() */
 HRESULT wdehu_hid_collection_get__usage_id(WDEHU_HidCollection *self, uint32_t *value);
 
-/* activate Windows.Devices.HumanInterfaceDevice.HidDevice */
 HRESULT wdehu_hid_device_new(WDEHU_HidDevice **out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidDevice */
-/* Windows.Devices.HumanInterfaceDevice.HidDevice.get_VendorId() */
 HRESULT wdehu_hid_device_get__vendor_id(WDEHU_HidDevice *self, uint16_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidDevice.get_ProductId() */
 HRESULT wdehu_hid_device_get__product_id(WDEHU_HidDevice *self, uint16_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidDevice.get_Version() */
 HRESULT wdehu_hid_device_get__version(WDEHU_HidDevice *self, uint16_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidDevice.get_UsagePage() */
 HRESULT wdehu_hid_device_get__usage_page(WDEHU_HidDevice *self, uint16_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidDevice.get_UsageId() */
 HRESULT wdehu_hid_device_get__usage_id(WDEHU_HidDevice *self, uint16_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidDevice.GetInputReportAsync() */
 HRESULT wdehu_hid_device_get_input_report_async(WDEHU_HidDevice *self, WF_IAsyncOperation_WDEHU_HidInputReport** out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidDevice.GetInputReportAsync(reportId) */
 HRESULT wdehu_hid_device_get_input_report_async_u16_p(WDEHU_HidDevice *self, uint16_t reportId, WF_IAsyncOperation_WDEHU_HidInputReport** out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidDevice.GetFeatureReportAsync() */
 HRESULT wdehu_hid_device_get_feature_report_async(WDEHU_HidDevice *self, WF_IAsyncOperation_WDEHU_HidFeatureReport** out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidDevice.GetFeatureReportAsync(reportId) */
 HRESULT wdehu_hid_device_get_feature_report_async_u16_p(WDEHU_HidDevice *self, uint16_t reportId, WF_IAsyncOperation_WDEHU_HidFeatureReport** out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidDevice.CreateOutputReport() */
 HRESULT wdehu_hid_device_create_output_report(WDEHU_HidDevice *self, WDEHU_HidOutputReport** out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidDevice.CreateOutputReport(reportId) */
 HRESULT wdehu_hid_device_create_output_report_u16_p(WDEHU_HidDevice *self, uint16_t reportId, WDEHU_HidOutputReport** out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidDevice.CreateFeatureReport() */
 HRESULT wdehu_hid_device_create_feature_report(WDEHU_HidDevice *self, WDEHU_HidFeatureReport** out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidDevice.CreateFeatureReport(reportId) */
 HRESULT wdehu_hid_device_create_feature_report_u16_p(WDEHU_HidDevice *self, uint16_t reportId, WDEHU_HidFeatureReport** out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidDevice.SendOutputReportAsync(outputReport) */
 HRESULT wdehu_hid_device_send_output_report_async(WDEHU_HidDevice *self, WDEHU_HidOutputReport* outputReport, WF_IAsyncOperation_uint32_t** out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidDevice.SendFeatureReportAsync(featureReport) */
 HRESULT wdehu_hid_device_send_feature_report_async(WDEHU_HidDevice *self, WDEHU_HidFeatureReport* featureReport, WF_IAsyncOperation_uint32_t** out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidDevice.GetBooleanControlDescriptions(reportType, usagePage, usageId) */
 HRESULT wdehu_hid_device_get_boolean_control_descriptions(WDEHU_HidDevice *self, WDEHU_HidReportType reportType, uint16_t usagePage, uint16_t usageId, WFOCO_IVectorView_WDEHU_HidBooleanControlDescription** out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidDevice.GetNumericControlDescriptions(reportType, usagePage, usageId) */
 HRESULT wdehu_hid_device_get_numeric_control_descriptions(WDEHU_HidDevice *self, WDEHU_HidReportType reportType, uint16_t usagePage, uint16_t usageId, WFOCO_IVectorView_WDEHU_HidNumericControlDescription** out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidDevice.Close() */
 HRESULT wdehu_hid_device_close(WDEHU_HidDevice *self);
 
-/* Windows.Devices.HumanInterfaceDevice.HidDevice.GetDeviceSelector(usagePage, usageId) */
 HRESULT wdehu_hid_device_get_device_selector(uint16_t usagePage, uint16_t usageId, cwinrt_hstring *out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidDevice.GetDeviceSelector(usagePage, usageId, vendorId, productId) */
 HRESULT wdehu_hid_device_get_device_selector_u16_u16_u16_u16_str(uint16_t usagePage, uint16_t usageId, uint16_t vendorId, uint16_t productId, cwinrt_hstring *out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidDevice.FromIdAsync(deviceId, accessMode) */
 HRESULT wdehu_hid_device_from_id_async(cwinrt_hstring deviceId, WS_FileAccessMode accessMode, WF_IAsyncOperation_WDEHU_HidDevice** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdehu_hid_device_on_input_report_received(WDEHU_HidDevice *self, cwinrt_event_fn fn, void *ctx);
 void wdehu_hid_device_off_input_report_received(WDEHU_HidDevice *self, cwinrt_token token);
 
-/* activate Windows.Devices.HumanInterfaceDevice.HidFeatureReport */
 HRESULT wdehu_hid_feature_report_new(WDEHU_HidFeatureReport **out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidFeatureReport */
-/* Windows.Devices.HumanInterfaceDevice.HidFeatureReport.get_Id() */
 HRESULT wdehu_hid_feature_report_get__id(WDEHU_HidFeatureReport *self, uint16_t *value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidFeatureReport.get_Data() */
 HRESULT wdehu_hid_feature_report_get__data(WDEHU_HidFeatureReport *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidFeatureReport.put_Data() */
 HRESULT wdehu_hid_feature_report_put__data(WDEHU_HidFeatureReport *self, WSTST_IBuffer* value);
 
-/* Windows.Devices.HumanInterfaceDevice.HidFeatureReport.GetBooleanControl(usagePage, usageId) */
 HRESULT wdehu_hid_feature_report_get_boolean_control(WDEHU_HidFeatureReport *self, uint16_t usagePage, uint16_t usageId, WDEHU_HidBooleanControl** out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidFeatureReport.GetBooleanControlByDescription(controlDescription) */
 HRESULT wdehu_hid_feature_report_get_boolean_control_by_description(WDEHU_HidFeatureReport *self, WDEHU_HidBooleanControlDescription* controlDescription, WDEHU_HidBooleanControl** out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidFeatureReport.GetNumericControl(usagePage, usageId) */
 HRESULT wdehu_hid_feature_report_get_numeric_control(WDEHU_HidFeatureReport *self, uint16_t usagePage, uint16_t usageId, WDEHU_HidNumericControl** out);
 
-/* Windows.Devices.HumanInterfaceDevice.HidFeatureReport.GetNumericControlByDescription(controlDescription) */
 HRESULT wdehu_hid_feature_report_get_numeric_control_by_description(WDEHU_HidFeatureReport *self, WDEHU_HidNumericControlDescription* controlDescription, WDEHU_HidNumericControl** out);
 
-/* Windows.Devices.HumanInterfaceDevice.IHidInputReport */
-/* Windows.Devices.HumanInterfaceDevice.IHidInputReportReceivedEventArgs */
-/* Windows.Devices.HumanInterfaceDevice.IHidNumericControl */
-/* Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription */
-/* Windows.Devices.HumanInterfaceDevice.IHidOutputReport */
-/* Windows.Devices.HumanInterfaceDevice.IHidBooleanControl */
-/* Windows.Devices.HumanInterfaceDevice.IHidBooleanControlDescription */
-/* Windows.Devices.HumanInterfaceDevice.IHidBooleanControlDescription2 */
-/* Windows.Devices.HumanInterfaceDevice.IHidBooleanControlDescription2.get_IsAbsolute() */
 HRESULT wdehu_hid_boolean_control_description_2_get__is_absolute(WDEHU_IHidBooleanControlDescription_2 *self, BOOL *value);
 
-/* Windows.Devices.HumanInterfaceDevice.IHidCollection */
-/* Windows.Devices.HumanInterfaceDevice.IHidDevice */
-/* Windows.Devices.HumanInterfaceDevice.IHidFeatureReport */
 #endif /* CWINRT_WINDOWS_DEVICES_HUMANINTERFACEDEVICE_H */

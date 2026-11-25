@@ -12,13 +12,11 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WS_StorageFile
 #define CWINRT_FWD_WS_StorageFile
 typedef struct WS_StorageFile WS_StorageFile;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPST_ICurrentApp WAPST_ICurrentApp;
 typedef struct WAPST_ICurrentApp2Statics WAPST_ICurrentApp2Statics;
 typedef struct WAPST_ICurrentAppSimulator WAPST_ICurrentAppSimulator;
@@ -52,7 +50,6 @@ typedef struct WAPST_IProductLicenseWithFulfillment WAPST_IProductLicenseWithFul
 typedef struct WAPST_IProductListing WAPST_IProductListing;
 typedef struct WAPST_IProductLicense WAPST_IProductLicense;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_Uri
 #define CWINRT_FWD_WF_Uri
 typedef struct WF_Uri WF_Uri;
@@ -132,7 +129,6 @@ typedef enum WAPST_ProductType {
 } WAPST_ProductType;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -229,404 +225,249 @@ static const IID CWINRT_IID_WAPST_IProductListing CWINRT_MAYBE_UNUSED = { 0x45A7
 static const IID CWINRT_IID_WAPST_IProductLicense CWINRT_MAYBE_UNUSED = { 0x363308C7, 0x2BCF, 0x4C0E, { 0x8F, 0x2F, 0xE8, 0x08, 0xAA, 0xA8, 0xF9, 0x9D } };
 #endif
 
-/* Methods */
-
-/* Windows.ApplicationModel.Store.ICurrentApp */
-/* Windows.ApplicationModel.Store.ICurrentApp2Statics */
-/* Windows.ApplicationModel.Store.ICurrentApp2Statics.GetCustomerPurchaseIdAsync(serviceTicket, publisherUserId) */
 HRESULT wapst_current_app2_statics_get_customer_purchase_id_async(WAPST_ICurrentApp2Statics *self, cwinrt_hstring serviceTicket, cwinrt_hstring publisherUserId, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Store.ICurrentApp2Statics.GetCustomerCollectionsIdAsync(serviceTicket, publisherUserId) */
 HRESULT wapst_current_app2_statics_get_customer_collections_id_async(WAPST_ICurrentApp2Statics *self, cwinrt_hstring serviceTicket, cwinrt_hstring publisherUserId, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Store.ICurrentAppSimulator */
-/* Windows.ApplicationModel.Store.ICurrentAppSimulatorStaticsWithFiltering */
-/* Windows.ApplicationModel.Store.ICurrentAppSimulatorStaticsWithFiltering.LoadListingInformationByProductIdsAsync(productIds) */
 HRESULT wapst_current_app_simulator_statics_with_filtering_load_listing_information_by_product_ids_async(WAPST_ICurrentAppSimulatorStaticsWithFiltering *self, WFOCO_IIterable_HSTRING* productIds, WF_IAsyncOperation_WAPST_ListingInformation** out);
 
-/* Windows.ApplicationModel.Store.ICurrentAppSimulatorStaticsWithFiltering.LoadListingInformationByKeywordsAsync(keywords) */
 HRESULT wapst_current_app_simulator_statics_with_filtering_load_listing_information_by_keywords_async(WAPST_ICurrentAppSimulatorStaticsWithFiltering *self, WFOCO_IIterable_HSTRING* keywords, WF_IAsyncOperation_WAPST_ListingInformation** out);
 
-/* Windows.ApplicationModel.Store.ICurrentAppSimulatorWithCampaignId */
-/* Windows.ApplicationModel.Store.ICurrentAppSimulatorWithCampaignId.GetAppPurchaseCampaignIdAsync() */
 HRESULT wapst_current_app_simulator_with_campaign_id_get_app_purchase_campaign_id_async(WAPST_ICurrentAppSimulatorWithCampaignId *self, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Store.ICurrentAppStaticsWithFiltering */
-/* Windows.ApplicationModel.Store.ICurrentAppStaticsWithFiltering.LoadListingInformationByProductIdsAsync(productIds) */
 HRESULT wapst_current_app_statics_with_filtering_load_listing_information_by_product_ids_async(WAPST_ICurrentAppStaticsWithFiltering *self, WFOCO_IIterable_HSTRING* productIds, WF_IAsyncOperation_WAPST_ListingInformation** out);
 
-/* Windows.ApplicationModel.Store.ICurrentAppStaticsWithFiltering.LoadListingInformationByKeywordsAsync(keywords) */
 HRESULT wapst_current_app_statics_with_filtering_load_listing_information_by_keywords_async(WAPST_ICurrentAppStaticsWithFiltering *self, WFOCO_IIterable_HSTRING* keywords, WF_IAsyncOperation_WAPST_ListingInformation** out);
 
-/* Windows.ApplicationModel.Store.ICurrentAppStaticsWithFiltering.ReportProductFulfillment(productId) */
 HRESULT wapst_current_app_statics_with_filtering_report_product_fulfillment(WAPST_ICurrentAppStaticsWithFiltering *self, cwinrt_hstring productId);
 
-/* Windows.ApplicationModel.Store.ICurrentAppWithCampaignId */
-/* Windows.ApplicationModel.Store.ICurrentAppWithCampaignId.GetAppPurchaseCampaignIdAsync() */
 HRESULT wapst_current_app_with_campaign_id_get_app_purchase_campaign_id_async(WAPST_ICurrentAppWithCampaignId *self, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Store.ICurrentAppWithConsumables */
-/* Windows.ApplicationModel.Store.ICurrentAppWithConsumables.ReportConsumableFulfillmentAsync(productId, transactionId) */
 HRESULT wapst_current_app_with_consumables_report_consumable_fulfillment_async(WAPST_ICurrentAppWithConsumables *self, cwinrt_hstring productId, GUID transactionId, WF_IAsyncOperation_WAPST_FulfillmentResult** out);
 
-/* Windows.ApplicationModel.Store.ICurrentAppWithConsumables.RequestProductPurchaseAsync(productId) */
 HRESULT wapst_current_app_with_consumables_request_product_purchase_async(WAPST_ICurrentAppWithConsumables *self, cwinrt_hstring productId, WF_IAsyncOperation_WAPST_PurchaseResults** out);
 
-/* Windows.ApplicationModel.Store.ICurrentAppWithConsumables.RequestProductPurchaseAsync(productId, offerId, displayProperties) */
 HRESULT wapst_current_app_with_consumables_request_product_purchase_async_str_str_p_p(WAPST_ICurrentAppWithConsumables *self, cwinrt_hstring productId, cwinrt_hstring offerId, WAPST_ProductPurchaseDisplayProperties* displayProperties, WF_IAsyncOperation_WAPST_PurchaseResults** out);
 
-/* Windows.ApplicationModel.Store.ICurrentAppWithConsumables.GetUnfulfilledConsumablesAsync() */
 HRESULT wapst_current_app_with_consumables_get_unfulfilled_consumables_async(WAPST_ICurrentAppWithConsumables *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPST_UnfulfilledConsumable** out);
 
-/* Windows.ApplicationModel.Store.IProductListingWithConsumables */
-/* Windows.ApplicationModel.Store.IProductListingWithConsumables.get_ProductType() */
 HRESULT wapst_product_listing_with_consumables_get__product_type(WAPST_IProductListingWithConsumables *self, WAPST_ProductType *value);
 
-/* Windows.ApplicationModel.Store.IProductPurchaseDisplayPropertiesFactory */
-/* Windows.ApplicationModel.Store.IProductPurchaseDisplayPropertiesFactory.CreateProductPurchaseDisplayProperties(name) */
 HRESULT wapst_product_purchase_display_properties_factory_create_product_purchase_display_properties(WAPST_IProductPurchaseDisplayPropertiesFactory *self, cwinrt_hstring name, WAPST_ProductPurchaseDisplayProperties** out);
 
-/* Windows.ApplicationModel.Store.LicenseChangedEventHandler */
-/* Windows.ApplicationModel.Store.LicenseChangedEventHandler.Invoke() */
 HRESULT wapst_license_changed_event_handler_invoke(WAPST_LicenseChangedEventHandler *self);
 
-/* activate Windows.ApplicationModel.Store.LicenseInformation */
 HRESULT wapst_license_information_new(WAPST_LicenseInformation **out);
 
-/* Windows.ApplicationModel.Store.LicenseInformation */
-/* Windows.ApplicationModel.Store.LicenseInformation.get_ProductLicenses() */
 HRESULT wapst_license_information_get__product_licenses(WAPST_LicenseInformation *self, WFOCO_IMapView_HSTRING_WAPST_ProductLicense** value);
 
-/* Windows.ApplicationModel.Store.LicenseInformation.get_IsActive() */
 HRESULT wapst_license_information_get__is_active(WAPST_LicenseInformation *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.LicenseInformation.get_IsTrial() */
 HRESULT wapst_license_information_get__is_trial(WAPST_LicenseInformation *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.LicenseInformation.get_ExpirationDate() */
 HRESULT wapst_license_information_get__expiration_date(WAPST_LicenseInformation *self, WF_DateTime *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapst_license_information_on_license_changed(WAPST_LicenseInformation *self, cwinrt_event_fn fn, void *ctx);
 void wapst_license_information_off_license_changed(WAPST_LicenseInformation *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Store.ProductListing */
 HRESULT wapst_product_listing_new(WAPST_ProductListing **out);
 
-/* Windows.ApplicationModel.Store.ProductListing */
-/* Windows.ApplicationModel.Store.ProductListing.get_ProductId() */
 HRESULT wapst_product_listing_get__product_id(WAPST_ProductListing *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.ProductListing.get_FormattedPrice() */
 HRESULT wapst_product_listing_get__formatted_price(WAPST_ProductListing *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.ProductListing.get_Name() */
 HRESULT wapst_product_listing_get__name(WAPST_ProductListing *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.ProductListing.get_Description() */
 HRESULT wapst_product_listing_get__description(WAPST_ProductListing *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.ProductListing.get_Keywords() */
 HRESULT wapst_product_listing_get__keywords(WAPST_ProductListing *self, WFOCO_IIterable_HSTRING** value);
 
-/* Windows.ApplicationModel.Store.ProductListing.get_ProductType() */
 HRESULT wapst_product_listing_get__product_type(WAPST_ProductListing *self, WAPST_ProductType *value);
 
-/* Windows.ApplicationModel.Store.ProductListing.get_Tag() */
 HRESULT wapst_product_listing_get__tag(WAPST_ProductListing *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.ProductListing.get_ImageUri() */
 HRESULT wapst_product_listing_get__image_uri(WAPST_ProductListing *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.Store.ProductListing.get_FormattedBasePrice() */
 HRESULT wapst_product_listing_get__formatted_base_price(WAPST_ProductListing *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.ProductListing.get_SaleEndDate() */
 HRESULT wapst_product_listing_get__sale_end_date(WAPST_ProductListing *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Store.ProductListing.get_IsOnSale() */
 HRESULT wapst_product_listing_get__is_on_sale(WAPST_ProductListing *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.ProductListing.get_CurrencyCode() */
 HRESULT wapst_product_listing_get__currency_code(WAPST_ProductListing *self, cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties */
 HRESULT wapst_product_purchase_display_properties_new(WAPST_ProductPurchaseDisplayProperties **out);
 
-/* Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties */
-/* Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties.get_Name() */
 HRESULT wapst_product_purchase_display_properties_get__name(WAPST_ProductPurchaseDisplayProperties *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties.put_Name() */
 HRESULT wapst_product_purchase_display_properties_put__name(WAPST_ProductPurchaseDisplayProperties *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties.get_Description() */
 HRESULT wapst_product_purchase_display_properties_get__description(WAPST_ProductPurchaseDisplayProperties *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties.put_Description() */
 HRESULT wapst_product_purchase_display_properties_put__description(WAPST_ProductPurchaseDisplayProperties *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties.get_Image() */
 HRESULT wapst_product_purchase_display_properties_get__image(WAPST_ProductPurchaseDisplayProperties *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties.put_Image() */
 HRESULT wapst_product_purchase_display_properties_put__image(WAPST_ProductPurchaseDisplayProperties *self, WF_Uri* value);
 
-/* activate Windows.ApplicationModel.Store.PurchaseResults */
 HRESULT wapst_purchase_results_new(WAPST_PurchaseResults **out);
 
-/* Windows.ApplicationModel.Store.PurchaseResults */
-/* Windows.ApplicationModel.Store.PurchaseResults.get_Status() */
 HRESULT wapst_purchase_results_get__status(WAPST_PurchaseResults *self, WAPST_ProductPurchaseStatus *value);
 
-/* Windows.ApplicationModel.Store.PurchaseResults.get_TransactionId() */
 HRESULT wapst_purchase_results_get__transaction_id(WAPST_PurchaseResults *self, GUID *value);
 
-/* Windows.ApplicationModel.Store.PurchaseResults.get_ReceiptXml() */
 HRESULT wapst_purchase_results_get__receipt_xml(WAPST_PurchaseResults *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.PurchaseResults.get_OfferId() */
 HRESULT wapst_purchase_results_get__offer_id(WAPST_PurchaseResults *self, cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.Store.UnfulfilledConsumable */
 HRESULT wapst_unfulfilled_consumable_new(WAPST_UnfulfilledConsumable **out);
 
-/* Windows.ApplicationModel.Store.UnfulfilledConsumable */
-/* Windows.ApplicationModel.Store.UnfulfilledConsumable.get_ProductId() */
 HRESULT wapst_unfulfilled_consumable_get__product_id(WAPST_UnfulfilledConsumable *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.UnfulfilledConsumable.get_TransactionId() */
 HRESULT wapst_unfulfilled_consumable_get__transaction_id(WAPST_UnfulfilledConsumable *self, GUID *value);
 
-/* Windows.ApplicationModel.Store.UnfulfilledConsumable.get_OfferId() */
 HRESULT wapst_unfulfilled_consumable_get__offer_id(WAPST_UnfulfilledConsumable *self, cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.Store.CurrentAppSimulator */
 HRESULT wapst_current_app_simulator_new(WAPST_CurrentAppSimulator **out);
 
-/* Windows.ApplicationModel.Store.CurrentAppSimulator */
-/* Windows.ApplicationModel.Store.CurrentAppSimulator.GetAppPurchaseCampaignIdAsync() */
 HRESULT wapst_current_app_simulator_get_app_purchase_campaign_id_async(WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Store.CurrentAppSimulator.LoadListingInformationByProductIdsAsync(productIds) */
 HRESULT wapst_current_app_simulator_load_listing_information_by_product_ids_async(WFOCO_IIterable_HSTRING* productIds, WF_IAsyncOperation_WAPST_ListingInformation** out);
 
-/* Windows.ApplicationModel.Store.CurrentAppSimulator.LoadListingInformationByKeywordsAsync(keywords) */
 HRESULT wapst_current_app_simulator_load_listing_information_by_keywords_async(WFOCO_IIterable_HSTRING* keywords, WF_IAsyncOperation_WAPST_ListingInformation** out);
 
-/* Windows.ApplicationModel.Store.CurrentAppSimulator.ReportConsumableFulfillmentAsync(productId, transactionId) */
 HRESULT wapst_current_app_simulator_report_consumable_fulfillment_async(cwinrt_hstring productId, GUID transactionId, WF_IAsyncOperation_WAPST_FulfillmentResult** out);
 
-/* Windows.ApplicationModel.Store.CurrentAppSimulator.RequestProductPurchaseAsync(productId) */
 HRESULT wapst_current_app_simulator_request_product_purchase_async(cwinrt_hstring productId, WF_IAsyncOperation_WAPST_PurchaseResults** out);
 
-/* Windows.ApplicationModel.Store.CurrentAppSimulator.RequestProductPurchaseAsync(productId, offerId, displayProperties) */
 HRESULT wapst_current_app_simulator_request_product_purchase_async_str_str_p_p(cwinrt_hstring productId, cwinrt_hstring offerId, WAPST_ProductPurchaseDisplayProperties* displayProperties, WF_IAsyncOperation_WAPST_PurchaseResults** out);
 
-/* Windows.ApplicationModel.Store.CurrentAppSimulator.GetUnfulfilledConsumablesAsync() */
 HRESULT wapst_current_app_simulator_get_unfulfilled_consumables_async(WF_IAsyncOperation_WFOCO_IVectorView_WAPST_UnfulfilledConsumable** out);
 
-/* Windows.ApplicationModel.Store.CurrentAppSimulator.get_LicenseInformation() */
 HRESULT wapst_current_app_simulator_get__license_information(WAPST_LicenseInformation** value);
 
-/* Windows.ApplicationModel.Store.CurrentAppSimulator.get_LinkUri() */
 HRESULT wapst_current_app_simulator_get__link_uri(WF_Uri** value);
 
-/* Windows.ApplicationModel.Store.CurrentAppSimulator.get_AppId() */
 HRESULT wapst_current_app_simulator_get__app_id(GUID *value);
 
-/* Windows.ApplicationModel.Store.CurrentAppSimulator.RequestAppPurchaseAsync(includeReceipt) */
 HRESULT wapst_current_app_simulator_request_app_purchase_async(BOOL includeReceipt, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Store.CurrentAppSimulator.RequestProductPurchaseAsync(productId, includeReceipt) */
 HRESULT wapst_current_app_simulator_request_product_purchase_async_str_b_p(cwinrt_hstring productId, BOOL includeReceipt, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Store.CurrentAppSimulator.LoadListingInformationAsync() */
 HRESULT wapst_current_app_simulator_load_listing_information_async(WF_IAsyncOperation_WAPST_ListingInformation** out);
 
-/* Windows.ApplicationModel.Store.CurrentAppSimulator.GetAppReceiptAsync() */
 HRESULT wapst_current_app_simulator_get_app_receipt_async(WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Store.CurrentAppSimulator.GetProductReceiptAsync(productId) */
 HRESULT wapst_current_app_simulator_get_product_receipt_async(cwinrt_hstring productId, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Store.CurrentAppSimulator.ReloadSimulatorAsync(simulatorSettingsFile) */
 HRESULT wapst_current_app_simulator_reload_simulator_async(WS_StorageFile* simulatorSettingsFile, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Store.CurrentApp */
 HRESULT wapst_current_app_new(WAPST_CurrentApp **out);
 
-/* Windows.ApplicationModel.Store.CurrentApp */
-/* Windows.ApplicationModel.Store.CurrentApp.GetCustomerPurchaseIdAsync(serviceTicket, publisherUserId) */
 HRESULT wapst_current_app_get_customer_purchase_id_async(cwinrt_hstring serviceTicket, cwinrt_hstring publisherUserId, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Store.CurrentApp.GetCustomerCollectionsIdAsync(serviceTicket, publisherUserId) */
 HRESULT wapst_current_app_get_customer_collections_id_async(cwinrt_hstring serviceTicket, cwinrt_hstring publisherUserId, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Store.CurrentApp.GetAppPurchaseCampaignIdAsync() */
 HRESULT wapst_current_app_get_app_purchase_campaign_id_async(WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Store.CurrentApp.LoadListingInformationByProductIdsAsync(productIds) */
 HRESULT wapst_current_app_load_listing_information_by_product_ids_async(WFOCO_IIterable_HSTRING* productIds, WF_IAsyncOperation_WAPST_ListingInformation** out);
 
-/* Windows.ApplicationModel.Store.CurrentApp.LoadListingInformationByKeywordsAsync(keywords) */
 HRESULT wapst_current_app_load_listing_information_by_keywords_async(WFOCO_IIterable_HSTRING* keywords, WF_IAsyncOperation_WAPST_ListingInformation** out);
 
-/* Windows.ApplicationModel.Store.CurrentApp.ReportProductFulfillment(productId) */
 HRESULT wapst_current_app_report_product_fulfillment(cwinrt_hstring productId);
 
-/* Windows.ApplicationModel.Store.CurrentApp.ReportConsumableFulfillmentAsync(productId, transactionId) */
 HRESULT wapst_current_app_report_consumable_fulfillment_async(cwinrt_hstring productId, GUID transactionId, WF_IAsyncOperation_WAPST_FulfillmentResult** out);
 
-/* Windows.ApplicationModel.Store.CurrentApp.RequestProductPurchaseAsync(productId) */
 HRESULT wapst_current_app_request_product_purchase_async(cwinrt_hstring productId, WF_IAsyncOperation_WAPST_PurchaseResults** out);
 
-/* Windows.ApplicationModel.Store.CurrentApp.RequestProductPurchaseAsync(productId, offerId, displayProperties) */
 HRESULT wapst_current_app_request_product_purchase_async_str_str_p_p(cwinrt_hstring productId, cwinrt_hstring offerId, WAPST_ProductPurchaseDisplayProperties* displayProperties, WF_IAsyncOperation_WAPST_PurchaseResults** out);
 
-/* Windows.ApplicationModel.Store.CurrentApp.GetUnfulfilledConsumablesAsync() */
 HRESULT wapst_current_app_get_unfulfilled_consumables_async(WF_IAsyncOperation_WFOCO_IVectorView_WAPST_UnfulfilledConsumable** out);
 
-/* Windows.ApplicationModel.Store.CurrentApp.get_LicenseInformation() */
 HRESULT wapst_current_app_get__license_information(WAPST_LicenseInformation** value);
 
-/* Windows.ApplicationModel.Store.CurrentApp.get_LinkUri() */
 HRESULT wapst_current_app_get__link_uri(WF_Uri** value);
 
-/* Windows.ApplicationModel.Store.CurrentApp.get_AppId() */
 HRESULT wapst_current_app_get__app_id(GUID *value);
 
-/* Windows.ApplicationModel.Store.CurrentApp.RequestAppPurchaseAsync(includeReceipt) */
 HRESULT wapst_current_app_request_app_purchase_async(BOOL includeReceipt, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Store.CurrentApp.RequestProductPurchaseAsync(productId, includeReceipt) */
 HRESULT wapst_current_app_request_product_purchase_async_str_b_p(cwinrt_hstring productId, BOOL includeReceipt, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Store.CurrentApp.LoadListingInformationAsync() */
 HRESULT wapst_current_app_load_listing_information_async(WF_IAsyncOperation_WAPST_ListingInformation** out);
 
-/* Windows.ApplicationModel.Store.CurrentApp.GetAppReceiptAsync() */
 HRESULT wapst_current_app_get_app_receipt_async(WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Store.CurrentApp.GetProductReceiptAsync(productId) */
 HRESULT wapst_current_app_get_product_receipt_async(cwinrt_hstring productId, WF_IAsyncOperation_HSTRING** out);
 
-/* activate Windows.ApplicationModel.Store.ListingInformation */
 HRESULT wapst_listing_information_new(WAPST_ListingInformation **out);
 
-/* Windows.ApplicationModel.Store.ListingInformation */
-/* Windows.ApplicationModel.Store.ListingInformation.get_CurrentMarket() */
 HRESULT wapst_listing_information_get__current_market(WAPST_ListingInformation *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.ListingInformation.get_Description() */
 HRESULT wapst_listing_information_get__description(WAPST_ListingInformation *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.ListingInformation.get_ProductListings() */
 HRESULT wapst_listing_information_get__product_listings(WAPST_ListingInformation *self, WFOCO_IMapView_HSTRING_WAPST_ProductListing** value);
 
-/* Windows.ApplicationModel.Store.ListingInformation.get_FormattedPrice() */
 HRESULT wapst_listing_information_get__formatted_price(WAPST_ListingInformation *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.ListingInformation.get_Name() */
 HRESULT wapst_listing_information_get__name(WAPST_ListingInformation *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.ListingInformation.get_AgeRating() */
 HRESULT wapst_listing_information_get__age_rating(WAPST_ListingInformation *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Store.ListingInformation.get_FormattedBasePrice() */
 HRESULT wapst_listing_information_get__formatted_base_price(WAPST_ListingInformation *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.ListingInformation.get_SaleEndDate() */
 HRESULT wapst_listing_information_get__sale_end_date(WAPST_ListingInformation *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Store.ListingInformation.get_IsOnSale() */
 HRESULT wapst_listing_information_get__is_on_sale(WAPST_ListingInformation *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.ListingInformation.get_CurrencyCode() */
 HRESULT wapst_listing_information_get__currency_code(WAPST_ListingInformation *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.ICurrentAppSimulatorWithConsumables */
-/* Windows.ApplicationModel.Store.ICurrentAppSimulatorWithConsumables.ReportConsumableFulfillmentAsync(productId, transactionId) */
 HRESULT wapst_current_app_simulator_with_consumables_report_consumable_fulfillment_async(WAPST_ICurrentAppSimulatorWithConsumables *self, cwinrt_hstring productId, GUID transactionId, WF_IAsyncOperation_WAPST_FulfillmentResult** out);
 
-/* Windows.ApplicationModel.Store.ICurrentAppSimulatorWithConsumables.RequestProductPurchaseAsync(productId) */
 HRESULT wapst_current_app_simulator_with_consumables_request_product_purchase_async(WAPST_ICurrentAppSimulatorWithConsumables *self, cwinrt_hstring productId, WF_IAsyncOperation_WAPST_PurchaseResults** out);
 
-/* Windows.ApplicationModel.Store.ICurrentAppSimulatorWithConsumables.RequestProductPurchaseAsync(productId, offerId, displayProperties) */
 HRESULT wapst_current_app_simulator_with_consumables_request_product_purchase_async_str_str_p_p(WAPST_ICurrentAppSimulatorWithConsumables *self, cwinrt_hstring productId, cwinrt_hstring offerId, WAPST_ProductPurchaseDisplayProperties* displayProperties, WF_IAsyncOperation_WAPST_PurchaseResults** out);
 
-/* Windows.ApplicationModel.Store.ICurrentAppSimulatorWithConsumables.GetUnfulfilledConsumablesAsync() */
 HRESULT wapst_current_app_simulator_with_consumables_get_unfulfilled_consumables_async(WAPST_ICurrentAppSimulatorWithConsumables *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPST_UnfulfilledConsumable** out);
 
-/* activate Windows.ApplicationModel.Store.ProductLicense */
 HRESULT wapst_product_license_new(WAPST_ProductLicense **out);
 
-/* Windows.ApplicationModel.Store.ProductLicense */
-/* Windows.ApplicationModel.Store.ProductLicense.get_ProductId() */
 HRESULT wapst_product_license_get__product_id(WAPST_ProductLicense *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.ProductLicense.get_IsActive() */
 HRESULT wapst_product_license_get__is_active(WAPST_ProductLicense *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.ProductLicense.get_ExpirationDate() */
 HRESULT wapst_product_license_get__expiration_date(WAPST_ProductLicense *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Store.ProductLicense.get_IsConsumable() */
 HRESULT wapst_product_license_get__is_consumable(WAPST_ProductLicense *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.ILicenseInformation */
-/* Windows.ApplicationModel.Store.IProductListingWithMetadata */
-/* Windows.ApplicationModel.Store.IProductListingWithMetadata.get_Description() */
 HRESULT wapst_product_listing_with_metadata_get__description(WAPST_IProductListingWithMetadata *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.IProductListingWithMetadata.get_Keywords() */
 HRESULT wapst_product_listing_with_metadata_get__keywords(WAPST_IProductListingWithMetadata *self, WFOCO_IIterable_HSTRING** value);
 
-/* Windows.ApplicationModel.Store.IProductListingWithMetadata.get_ProductType() */
 HRESULT wapst_product_listing_with_metadata_get__product_type(WAPST_IProductListingWithMetadata *self, WAPST_ProductType *value);
 
-/* Windows.ApplicationModel.Store.IProductListingWithMetadata.get_Tag() */
 HRESULT wapst_product_listing_with_metadata_get__tag(WAPST_IProductListingWithMetadata *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.IProductListingWithMetadata.get_ImageUri() */
 HRESULT wapst_product_listing_with_metadata_get__image_uri(WAPST_IProductListingWithMetadata *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.Store.IProductListing2 */
-/* Windows.ApplicationModel.Store.IProductListing2.get_FormattedBasePrice() */
 HRESULT wapst_product_listing_2_get__formatted_base_price(WAPST_IProductListing_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.IProductListing2.get_SaleEndDate() */
 HRESULT wapst_product_listing_2_get__sale_end_date(WAPST_IProductListing_2 *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Store.IProductListing2.get_IsOnSale() */
 HRESULT wapst_product_listing_2_get__is_on_sale(WAPST_IProductListing_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.IProductListing2.get_CurrencyCode() */
 HRESULT wapst_product_listing_2_get__currency_code(WAPST_IProductListing_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.IProductPurchaseDisplayProperties */
-/* Windows.ApplicationModel.Store.IPurchaseResults */
-/* Windows.ApplicationModel.Store.IUnfulfilledConsumable */
-/* Windows.ApplicationModel.Store.IListingInformation */
-/* Windows.ApplicationModel.Store.IListingInformation2 */
-/* Windows.ApplicationModel.Store.IListingInformation2.get_FormattedBasePrice() */
 HRESULT wapst_listing_information_2_get__formatted_base_price(WAPST_IListingInformation_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.IListingInformation2.get_SaleEndDate() */
 HRESULT wapst_listing_information_2_get__sale_end_date(WAPST_IListingInformation_2 *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Store.IListingInformation2.get_IsOnSale() */
 HRESULT wapst_listing_information_2_get__is_on_sale(WAPST_IListingInformation_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.IListingInformation2.get_CurrencyCode() */
 HRESULT wapst_listing_information_2_get__currency_code(WAPST_IListingInformation_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Store.IProductLicenseWithFulfillment */
-/* Windows.ApplicationModel.Store.IProductLicenseWithFulfillment.get_IsConsumable() */
 HRESULT wapst_product_license_with_fulfillment_get__is_consumable(WAPST_IProductLicenseWithFulfillment *self, BOOL *value);
 
-/* Windows.ApplicationModel.Store.IProductListing */
-/* Windows.ApplicationModel.Store.IProductLicense */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_STORE_H */

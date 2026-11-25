@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.ApplicationModel.Payments.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WAPPAPR_PaymentAppCanMakePaymentTriggerDetails WAPPAPR_PaymentAppCanMakePaymentTriggerDetails;
 typedef struct WAPPAPR_PaymentAppManager WAPPAPR_PaymentAppManager;
 typedef struct WAPPAPR_IPaymentTransactionStatics WAPPAPR_IPaymentTransactionStatics;
@@ -25,7 +24,6 @@ typedef struct WAPPAPR_IPaymentAppManager WAPPAPR_IPaymentAppManager;
 typedef struct WAPPAPR_IPaymentTransactionAcceptResult WAPPAPR_IPaymentTransactionAcceptResult;
 typedef struct WAPPAPR_IPaymentTransaction WAPPAPR_IPaymentTransaction;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WAPPA_PaymentRequest
 #define CWINRT_FWD_WAPPA_PaymentRequest
 typedef struct WAPPA_PaymentRequest WAPPA_PaymentRequest;
@@ -76,7 +74,6 @@ typedef struct WAPPA_PaymentToken WAPPA_PaymentToken;
 typedef struct WF_IAsyncOperation_WAPPAPR_PaymentTransactionAcceptResult WF_IAsyncOperation_WAPPAPR_PaymentTransactionAcceptResult;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -105,88 +102,52 @@ static const IID CWINRT_IID_WAPPAPR_IPaymentTransactionAcceptResult CWINRT_MAYBE
 static const IID CWINRT_IID_WAPPAPR_IPaymentTransaction CWINRT_MAYBE_UNUSED = { 0x62581DA0, 0x26A5, 0x4E9B, { 0xA6, 0xEB, 0x66, 0x60, 0x6C, 0xF0, 0x01, 0xD3 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.Payments.Provider.PaymentAppCanMakePaymentTriggerDetails */
 HRESULT wappapr_payment_app_can_make_payment_trigger_details_new(WAPPAPR_PaymentAppCanMakePaymentTriggerDetails **out);
 
-/* Windows.ApplicationModel.Payments.Provider.PaymentAppCanMakePaymentTriggerDetails */
-/* Windows.ApplicationModel.Payments.Provider.PaymentAppCanMakePaymentTriggerDetails.get_Request() */
 HRESULT wappapr_payment_app_can_make_payment_trigger_details_get__request(WAPPAPR_PaymentAppCanMakePaymentTriggerDetails *self, WAPPA_PaymentRequest** value);
 
-/* Windows.ApplicationModel.Payments.Provider.PaymentAppCanMakePaymentTriggerDetails.ReportCanMakePaymentResult() */
 HRESULT wappapr_payment_app_can_make_payment_trigger_details_report_can_make_payment_result(WAPPAPR_PaymentAppCanMakePaymentTriggerDetails *self, WAPPA_PaymentCanMakePaymentResult* value);
 
-/* activate Windows.ApplicationModel.Payments.Provider.PaymentAppManager */
 HRESULT wappapr_payment_app_manager_new(WAPPAPR_PaymentAppManager **out);
 
-/* Windows.ApplicationModel.Payments.Provider.PaymentAppManager */
-/* Windows.ApplicationModel.Payments.Provider.PaymentAppManager.RegisterAsync(supportedPaymentMethodIds) */
 HRESULT wappapr_payment_app_manager_register_async(WAPPAPR_PaymentAppManager *self, WFOCO_IIterable_HSTRING* supportedPaymentMethodIds, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Payments.Provider.PaymentAppManager.UnregisterAsync() */
 HRESULT wappapr_payment_app_manager_unregister_async(WAPPAPR_PaymentAppManager *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Payments.Provider.PaymentAppManager.get_Current() */
 HRESULT wappapr_payment_app_manager_get__current(WAPPAPR_PaymentAppManager** value);
 
-/* Windows.ApplicationModel.Payments.Provider.IPaymentTransactionStatics */
-/* Windows.ApplicationModel.Payments.Provider.IPaymentTransactionStatics.FromIdAsync(id) */
 HRESULT wappapr_payment_transaction_statics_from_id_async(WAPPAPR_IPaymentTransactionStatics *self, cwinrt_hstring id, WF_IAsyncOperation_WAPPAPR_PaymentTransaction** out);
 
-/* activate Windows.ApplicationModel.Payments.Provider.PaymentTransactionAcceptResult */
 HRESULT wappapr_payment_transaction_accept_result_new(WAPPAPR_PaymentTransactionAcceptResult **out);
 
-/* Windows.ApplicationModel.Payments.Provider.PaymentTransactionAcceptResult */
-/* Windows.ApplicationModel.Payments.Provider.PaymentTransactionAcceptResult.get_Status() */
 HRESULT wappapr_payment_transaction_accept_result_get__status(WAPPAPR_PaymentTransactionAcceptResult *self, WAPPA_PaymentRequestCompletionStatus *value);
 
-/* Windows.ApplicationModel.Payments.Provider.IPaymentAppManagerStatics */
-/* Windows.ApplicationModel.Payments.Provider.IPaymentAppManagerStatics.get_Current() */
 HRESULT wappapr_payment_app_manager_statics_get__current(WAPPAPR_IPaymentAppManagerStatics *self, WAPPAPR_PaymentAppManager** value);
 
-/* activate Windows.ApplicationModel.Payments.Provider.PaymentTransaction */
 HRESULT wappapr_payment_transaction_new(WAPPAPR_PaymentTransaction **out);
 
-/* Windows.ApplicationModel.Payments.Provider.PaymentTransaction */
-/* Windows.ApplicationModel.Payments.Provider.PaymentTransaction.get_PaymentRequest() */
 HRESULT wappapr_payment_transaction_get__payment_request(WAPPAPR_PaymentTransaction *self, WAPPA_PaymentRequest** value);
 
-/* Windows.ApplicationModel.Payments.Provider.PaymentTransaction.get_PayerEmail() */
 HRESULT wappapr_payment_transaction_get__payer_email(WAPPAPR_PaymentTransaction *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Payments.Provider.PaymentTransaction.put_PayerEmail() */
 HRESULT wappapr_payment_transaction_put__payer_email(WAPPAPR_PaymentTransaction *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Payments.Provider.PaymentTransaction.get_PayerName() */
 HRESULT wappapr_payment_transaction_get__payer_name(WAPPAPR_PaymentTransaction *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Payments.Provider.PaymentTransaction.put_PayerName() */
 HRESULT wappapr_payment_transaction_put__payer_name(WAPPAPR_PaymentTransaction *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Payments.Provider.PaymentTransaction.get_PayerPhoneNumber() */
 HRESULT wappapr_payment_transaction_get__payer_phone_number(WAPPAPR_PaymentTransaction *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Payments.Provider.PaymentTransaction.put_PayerPhoneNumber() */
 HRESULT wappapr_payment_transaction_put__payer_phone_number(WAPPAPR_PaymentTransaction *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Payments.Provider.PaymentTransaction.UpdateShippingAddressAsync(shippingAddress) */
 HRESULT wappapr_payment_transaction_update_shipping_address_async(WAPPAPR_PaymentTransaction *self, WAPPA_PaymentAddress* shippingAddress, WF_IAsyncOperation_WAPPA_PaymentRequestChangedResult** out);
 
-/* Windows.ApplicationModel.Payments.Provider.PaymentTransaction.UpdateSelectedShippingOptionAsync(selectedShippingOption) */
 HRESULT wappapr_payment_transaction_update_selected_shipping_option_async(WAPPAPR_PaymentTransaction *self, WAPPA_PaymentShippingOption* selectedShippingOption, WF_IAsyncOperation_WAPPA_PaymentRequestChangedResult** out);
 
-/* Windows.ApplicationModel.Payments.Provider.PaymentTransaction.AcceptAsync(paymentToken) */
 HRESULT wappapr_payment_transaction_accept_async(WAPPAPR_PaymentTransaction *self, WAPPA_PaymentToken* paymentToken, WF_IAsyncOperation_WAPPAPR_PaymentTransactionAcceptResult** out);
 
-/* Windows.ApplicationModel.Payments.Provider.PaymentTransaction.Reject() */
 HRESULT wappapr_payment_transaction_reject(WAPPAPR_PaymentTransaction *self);
 
-/* Windows.ApplicationModel.Payments.Provider.PaymentTransaction.FromIdAsync(id) */
 HRESULT wappapr_payment_transaction_from_id_async(cwinrt_hstring id, WF_IAsyncOperation_WAPPAPR_PaymentTransaction** out);
 
-/* Windows.ApplicationModel.Payments.Provider.IPaymentAppCanMakePaymentTriggerDetails */
-/* Windows.ApplicationModel.Payments.Provider.IPaymentAppManager */
-/* Windows.ApplicationModel.Payments.Provider.IPaymentTransactionAcceptResult */
-/* Windows.ApplicationModel.Payments.Provider.IPaymentTransaction */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_PAYMENTS_PROVIDER_H */

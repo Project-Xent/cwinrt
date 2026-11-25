@@ -15,7 +15,6 @@
 #include <cwinrt/Windows.Graphics.DirectX.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WUICOSC_ISceneRendererComponentFactory WUICOSC_ISceneRendererComponentFactory;
 typedef struct WUICOSC_ISceneSurfaceMaterialInputStatics WUICOSC_ISceneSurfaceMaterialInputStatics;
 typedef struct WUICOSC_ISceneVisualStatics WUICOSC_ISceneVisualStatics;
@@ -63,7 +62,6 @@ typedef struct WUICOSC_ISceneNodeCollection WUICOSC_ISceneNodeCollection;
 typedef struct WUICOSC_ISceneSurfaceMaterialInput WUICOSC_ISceneSurfaceMaterialInput;
 typedef struct WUICOSC_ISceneVisual WUICOSC_ISceneVisual;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WUC_Comp
 #define CWINRT_FWD_WUC_Comp
 typedef struct WUC_Comp WUC_Comp;
@@ -307,7 +305,6 @@ typedef enum WUICOSC_SceneWrappingMode {
 } WUICOSC_SceneWrappingMode;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -428,416 +425,258 @@ static const IID CWINRT_IID_WUICOSC_ISceneSurfaceMaterialInput CWINRT_MAYBE_UNUS
 static const IID CWINRT_IID_WUICOSC_ISceneVisual CWINRT_MAYBE_UNUSED = { 0x8E672C1E, 0xD734, 0x47B1, { 0xBE, 0x14, 0x3D, 0x69, 0x4F, 0xFA, 0x43, 0x01 } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.Composition.Scenes.ISceneSurfaceMaterialInputStatics */
-/* Windows.UI.Composition.Scenes.ISceneSurfaceMaterialInputStatics.Create(compositor) */
 HRESULT wuicosc_scene_surface_material_input_statics_create(WUICOSC_ISceneSurfaceMaterialInputStatics *self, WUC_Comp* compositor, WUICOSC_SceneSurfaceMaterialInput** out);
 
-/* Windows.UI.Composition.Scenes.ISceneVisualStatics */
-/* Windows.UI.Composition.Scenes.ISceneVisualStatics.Create(compositor) */
 HRESULT wuicosc_scene_visual_statics_create(WUICOSC_ISceneVisualStatics *self, WUC_Comp* compositor, WUICOSC_SceneVisual** out);
 
-/* activate Windows.UI.Composition.Scenes.SceneBoundingBox */
 HRESULT wuicosc_scene_bounding_box_new(WUICOSC_SceneBoundingBox **out);
 
-/* Windows.UI.Composition.Scenes.SceneBoundingBox */
-/* Windows.UI.Composition.Scenes.SceneBoundingBox.get_Center() */
 HRESULT wuicosc_scene_bounding_box_get__center(WUICOSC_SceneBoundingBox *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.Scenes.SceneBoundingBox.get_Extents() */
 HRESULT wuicosc_scene_bounding_box_get__extents(WUICOSC_SceneBoundingBox *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.Scenes.SceneBoundingBox.get_Max() */
 HRESULT wuicosc_scene_bounding_box_get__max(WUICOSC_SceneBoundingBox *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.Scenes.SceneBoundingBox.get_Min() */
 HRESULT wuicosc_scene_bounding_box_get__min(WUICOSC_SceneBoundingBox *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.Scenes.SceneBoundingBox.get_Size() */
 HRESULT wuicosc_scene_bounding_box_get__size(WUICOSC_SceneBoundingBox *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.Scenes.SceneComponent */
-/* Windows.UI.Composition.Scenes.SceneComponent.get_ComponentType() */
 HRESULT wuicosc_scene_component_get__component_type(WUICOSC_SceneComponent *self, WUICOSC_SceneComponentType *value);
 
-/* activate Windows.UI.Composition.Scenes.SceneComponentCollection */
 HRESULT wuicosc_scene_component_collection_new(WUICOSC_SceneComponentCollection **out);
 
-/* Windows.UI.Composition.Scenes.SceneComponentCollection */
-/* Windows.UI.Composition.Scenes.SceneComponentCollection.GetAt(index) */
 HRESULT wuicosc_scene_component_collection_get_at(WUICOSC_SceneComponentCollection *self, uint32_t index, WUICOSC_SceneComponent** out);
 
-/* Windows.UI.Composition.Scenes.SceneComponentCollection.get_Size() */
 HRESULT wuicosc_scene_component_collection_get__size(WUICOSC_SceneComponentCollection *self, uint32_t *value);
 
-/* Windows.UI.Composition.Scenes.SceneComponentCollection.GetView() */
 HRESULT wuicosc_scene_component_collection_get_view(WUICOSC_SceneComponentCollection *self, WFOCO_IVectorView_WUICOSC_SceneComponent** out);
 
-/* Windows.UI.Composition.Scenes.SceneComponentCollection.IndexOf(index) */
 HRESULT wuicosc_scene_component_collection_index_of(WUICOSC_SceneComponentCollection *self, WUICOSC_SceneComponent* value, uint32_t index, BOOL *out);
 
-/* Windows.UI.Composition.Scenes.SceneComponentCollection.SetAt(index) */
 HRESULT wuicosc_scene_component_collection_set_at(WUICOSC_SceneComponentCollection *self, uint32_t index, WUICOSC_SceneComponent* value);
 
-/* Windows.UI.Composition.Scenes.SceneComponentCollection.InsertAt(index) */
 HRESULT wuicosc_scene_component_collection_insert_at(WUICOSC_SceneComponentCollection *self, uint32_t index, WUICOSC_SceneComponent* value);
 
-/* Windows.UI.Composition.Scenes.SceneComponentCollection.RemoveAt(index) */
 HRESULT wuicosc_scene_component_collection_remove_at(WUICOSC_SceneComponentCollection *self, uint32_t index);
 
-/* Windows.UI.Composition.Scenes.SceneComponentCollection.Append() */
 HRESULT wuicosc_scene_component_collection_append(WUICOSC_SceneComponentCollection *self, WUICOSC_SceneComponent* value);
 
-/* Windows.UI.Composition.Scenes.SceneComponentCollection.RemoveAtEnd() */
 HRESULT wuicosc_scene_component_collection_remove_at_end(WUICOSC_SceneComponentCollection *self);
 
-/* Windows.UI.Composition.Scenes.SceneComponentCollection.Clear() */
 HRESULT wuicosc_scene_component_collection_clear(WUICOSC_SceneComponentCollection *self);
 
-/* Windows.UI.Composition.Scenes.SceneComponentCollection.GetMany(startIndex, items) */
 HRESULT wuicosc_scene_component_collection_get_many(WUICOSC_SceneComponentCollection *self, uint32_t startIndex, WUICOSC_SceneComponent *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.UI.Composition.Scenes.SceneComponentCollection.ReplaceAll(items) */
 HRESULT wuicosc_scene_component_collection_replace_all(WUICOSC_SceneComponentCollection *self, WUICOSC_SceneComponent *items, uint32_t items_len);
 
-/* Windows.UI.Composition.Scenes.SceneComponentCollection.First() */
 HRESULT wuicosc_scene_component_collection_first(WUICOSC_SceneComponentCollection *self, WFOCO_IIterator_WUICOSC_SceneComponent** out);
 
-/* activate Windows.UI.Composition.Scenes.SceneMesh */
 HRESULT wuicosc_scene_mesh_new(WUICOSC_SceneMesh **out);
 
-/* Windows.UI.Composition.Scenes.SceneMesh */
-/* Windows.UI.Composition.Scenes.SceneMesh.get_Bounds() */
 HRESULT wuicosc_scene_mesh_get__bounds(WUICOSC_SceneMesh *self, WUICOSC_SceneBoundingBox** value);
 
-/* Windows.UI.Composition.Scenes.SceneMesh.get_PrimitiveTopology() */
 HRESULT wuicosc_scene_mesh_get__primitive_topology(WUICOSC_SceneMesh *self, WGRDI_DirectXPrimitiveTopology *value);
 
-/* Windows.UI.Composition.Scenes.SceneMesh.put_PrimitiveTopology() */
 HRESULT wuicosc_scene_mesh_put__primitive_topology(WUICOSC_SceneMesh *self, WGRDI_DirectXPrimitiveTopology value);
 
-/* Windows.UI.Composition.Scenes.SceneMesh.FillMeshAttribute(semantic, format, memory) */
 HRESULT wuicosc_scene_mesh_fill_mesh_attribute(WUICOSC_SceneMesh *self, WUICOSC_SceneAttributeSemantic semantic, WGRDI_DirectXPixelFormat format, WF_MemoryBuffer* memory);
 
-/* Windows.UI.Composition.Scenes.SceneMesh.Create(compositor) */
 HRESULT wuicosc_scene_mesh_create(WUC_Comp* compositor, WUICOSC_SceneMesh** out);
 
-/* activate Windows.UI.Composition.Scenes.SceneMeshMaterialAttributeMap */
 HRESULT wuicosc_scene_mesh_material_attribute_map_new(WUICOSC_SceneMeshMaterialAttributeMap **out);
 
-/* Windows.UI.Composition.Scenes.SceneMeshMaterialAttributeMap */
-/* Windows.UI.Composition.Scenes.SceneMeshMaterialAttributeMap.Lookup(key) */
 HRESULT wuicosc_scene_mesh_material_attribute_map_lookup(WUICOSC_SceneMeshMaterialAttributeMap *self, cwinrt_hstring key, WUICOSC_SceneAttributeSemantic *out);
 
-/* Windows.UI.Composition.Scenes.SceneMeshMaterialAttributeMap.get_Size() */
 HRESULT wuicosc_scene_mesh_material_attribute_map_get__size(WUICOSC_SceneMeshMaterialAttributeMap *self, uint32_t *value);
 
-/* Windows.UI.Composition.Scenes.SceneMeshMaterialAttributeMap.HasKey(key) */
 HRESULT wuicosc_scene_mesh_material_attribute_map_has_key(WUICOSC_SceneMeshMaterialAttributeMap *self, cwinrt_hstring key, BOOL *out);
 
-/* Windows.UI.Composition.Scenes.SceneMeshMaterialAttributeMap.GetView() */
 HRESULT wuicosc_scene_mesh_material_attribute_map_get_view(WUICOSC_SceneMeshMaterialAttributeMap *self, WFOCO_IMapView_HSTRING_WUICOSC_SceneAttributeSemantic** out);
 
-/* Windows.UI.Composition.Scenes.SceneMeshMaterialAttributeMap.Insert(key) */
 HRESULT wuicosc_scene_mesh_material_attribute_map_insert(WUICOSC_SceneMeshMaterialAttributeMap *self, cwinrt_hstring key, WUICOSC_SceneAttributeSemantic value, BOOL *out);
 
-/* Windows.UI.Composition.Scenes.SceneMeshMaterialAttributeMap.Remove(key) */
 HRESULT wuicosc_scene_mesh_material_attribute_map_remove(WUICOSC_SceneMeshMaterialAttributeMap *self, cwinrt_hstring key);
 
-/* Windows.UI.Composition.Scenes.SceneMeshMaterialAttributeMap.Clear() */
 HRESULT wuicosc_scene_mesh_material_attribute_map_clear(WUICOSC_SceneMeshMaterialAttributeMap *self);
 
-/* Windows.UI.Composition.Scenes.SceneMeshMaterialAttributeMap.First() */
 HRESULT wuicosc_scene_mesh_material_attribute_map_first(WUICOSC_SceneMeshMaterialAttributeMap *self, WFOCO_IIterator_WFOCO_IKeyValuePair_HSTRING_WUICOSC_SceneAttributeSemantic** out);
 
-/* activate Windows.UI.Composition.Scenes.SceneMeshRendererComponent */
 HRESULT wuicosc_scene_mesh_renderer_component_new(WUICOSC_SceneMeshRendererComponent **out);
 
-/* Windows.UI.Composition.Scenes.SceneMeshRendererComponent */
-/* Windows.UI.Composition.Scenes.SceneMeshRendererComponent.get_Material() */
 HRESULT wuicosc_scene_mesh_renderer_component_get__material(WUICOSC_SceneMeshRendererComponent *self, WUICOSC_SceneMaterial** value);
 
-/* Windows.UI.Composition.Scenes.SceneMeshRendererComponent.put_Material() */
 HRESULT wuicosc_scene_mesh_renderer_component_put__material(WUICOSC_SceneMeshRendererComponent *self, WUICOSC_SceneMaterial* value);
 
-/* Windows.UI.Composition.Scenes.SceneMeshRendererComponent.get_Mesh() */
 HRESULT wuicosc_scene_mesh_renderer_component_get__mesh(WUICOSC_SceneMeshRendererComponent *self, WUICOSC_SceneMesh** value);
 
-/* Windows.UI.Composition.Scenes.SceneMeshRendererComponent.put_Mesh() */
 HRESULT wuicosc_scene_mesh_renderer_component_put__mesh(WUICOSC_SceneMeshRendererComponent *self, WUICOSC_SceneMesh* value);
 
-/* Windows.UI.Composition.Scenes.SceneMeshRendererComponent.get_UVMappings() */
 HRESULT wuicosc_scene_mesh_renderer_component_get__u_v_mappings(WUICOSC_SceneMeshRendererComponent *self, WUICOSC_SceneMeshMaterialAttributeMap** value);
 
-/* Windows.UI.Composition.Scenes.SceneMeshRendererComponent.Create(compositor) */
 HRESULT wuicosc_scene_mesh_renderer_component_create(WUC_Comp* compositor, WUICOSC_SceneMeshRendererComponent** out);
 
-/* Windows.UI.Composition.Scenes.ScenePbrMaterial */
-/* Windows.UI.Composition.Scenes.ScenePbrMaterial.get_AlphaCutoff() */
 HRESULT wuicosc_scene_pbr_material_get__alpha_cutoff(WUICOSC_ScenePbrMaterial *self, float *value);
 
-/* Windows.UI.Composition.Scenes.ScenePbrMaterial.put_AlphaCutoff() */
 HRESULT wuicosc_scene_pbr_material_put__alpha_cutoff(WUICOSC_ScenePbrMaterial *self, float value);
 
-/* Windows.UI.Composition.Scenes.ScenePbrMaterial.get_AlphaMode() */
 HRESULT wuicosc_scene_pbr_material_get__alpha_mode(WUICOSC_ScenePbrMaterial *self, WUICOSC_SceneAlphaMode *value);
 
-/* Windows.UI.Composition.Scenes.ScenePbrMaterial.put_AlphaMode() */
 HRESULT wuicosc_scene_pbr_material_put__alpha_mode(WUICOSC_ScenePbrMaterial *self, WUICOSC_SceneAlphaMode value);
 
-/* Windows.UI.Composition.Scenes.ScenePbrMaterial.get_EmissiveInput() */
 HRESULT wuicosc_scene_pbr_material_get__emissive_input(WUICOSC_ScenePbrMaterial *self, WUICOSC_SceneMaterialInput** value);
 
-/* Windows.UI.Composition.Scenes.ScenePbrMaterial.put_EmissiveInput() */
 HRESULT wuicosc_scene_pbr_material_put__emissive_input(WUICOSC_ScenePbrMaterial *self, WUICOSC_SceneMaterialInput* value);
 
-/* Windows.UI.Composition.Scenes.ScenePbrMaterial.get_EmissiveFactor() */
 HRESULT wuicosc_scene_pbr_material_get__emissive_factor(WUICOSC_ScenePbrMaterial *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.Scenes.ScenePbrMaterial.put_EmissiveFactor() */
 HRESULT wuicosc_scene_pbr_material_put__emissive_factor(WUICOSC_ScenePbrMaterial *self, WFN_Vector_3 value);
 
-/* Windows.UI.Composition.Scenes.ScenePbrMaterial.get_IsDoubleSided() */
 HRESULT wuicosc_scene_pbr_material_get__is_double_sided(WUICOSC_ScenePbrMaterial *self, BOOL *value);
 
-/* Windows.UI.Composition.Scenes.ScenePbrMaterial.put_IsDoubleSided() */
 HRESULT wuicosc_scene_pbr_material_put__is_double_sided(WUICOSC_ScenePbrMaterial *self, BOOL value);
 
-/* Windows.UI.Composition.Scenes.ScenePbrMaterial.get_NormalInput() */
 HRESULT wuicosc_scene_pbr_material_get__normal_input(WUICOSC_ScenePbrMaterial *self, WUICOSC_SceneMaterialInput** value);
 
-/* Windows.UI.Composition.Scenes.ScenePbrMaterial.put_NormalInput() */
 HRESULT wuicosc_scene_pbr_material_put__normal_input(WUICOSC_ScenePbrMaterial *self, WUICOSC_SceneMaterialInput* value);
 
-/* Windows.UI.Composition.Scenes.ScenePbrMaterial.get_NormalScale() */
 HRESULT wuicosc_scene_pbr_material_get__normal_scale(WUICOSC_ScenePbrMaterial *self, float *value);
 
-/* Windows.UI.Composition.Scenes.ScenePbrMaterial.put_NormalScale() */
 HRESULT wuicosc_scene_pbr_material_put__normal_scale(WUICOSC_ScenePbrMaterial *self, float value);
 
-/* Windows.UI.Composition.Scenes.ScenePbrMaterial.get_OcclusionInput() */
 HRESULT wuicosc_scene_pbr_material_get__occlusion_input(WUICOSC_ScenePbrMaterial *self, WUICOSC_SceneMaterialInput** value);
 
-/* Windows.UI.Composition.Scenes.ScenePbrMaterial.put_OcclusionInput() */
 HRESULT wuicosc_scene_pbr_material_put__occlusion_input(WUICOSC_ScenePbrMaterial *self, WUICOSC_SceneMaterialInput* value);
 
-/* Windows.UI.Composition.Scenes.ScenePbrMaterial.get_OcclusionStrength() */
 HRESULT wuicosc_scene_pbr_material_get__occlusion_strength(WUICOSC_ScenePbrMaterial *self, float *value);
 
-/* Windows.UI.Composition.Scenes.ScenePbrMaterial.put_OcclusionStrength() */
 HRESULT wuicosc_scene_pbr_material_put__occlusion_strength(WUICOSC_ScenePbrMaterial *self, float value);
 
-/* activate Windows.UI.Composition.Scenes.SceneMetallicRoughnessMaterial */
 HRESULT wuicosc_scene_metallic_roughness_material_new(WUICOSC_SceneMetallicRoughnessMaterial **out);
 
-/* Windows.UI.Composition.Scenes.SceneMetallicRoughnessMaterial */
-/* Windows.UI.Composition.Scenes.SceneMetallicRoughnessMaterial.get_BaseColorInput() */
 HRESULT wuicosc_scene_metallic_roughness_material_get__base_color_input(WUICOSC_SceneMetallicRoughnessMaterial *self, WUICOSC_SceneMaterialInput** value);
 
-/* Windows.UI.Composition.Scenes.SceneMetallicRoughnessMaterial.put_BaseColorInput() */
 HRESULT wuicosc_scene_metallic_roughness_material_put__base_color_input(WUICOSC_SceneMetallicRoughnessMaterial *self, WUICOSC_SceneMaterialInput* value);
 
-/* Windows.UI.Composition.Scenes.SceneMetallicRoughnessMaterial.get_BaseColorFactor() */
 HRESULT wuicosc_scene_metallic_roughness_material_get__base_color_factor(WUICOSC_SceneMetallicRoughnessMaterial *self, WFN_Vector_4 *value);
 
-/* Windows.UI.Composition.Scenes.SceneMetallicRoughnessMaterial.put_BaseColorFactor() */
 HRESULT wuicosc_scene_metallic_roughness_material_put__base_color_factor(WUICOSC_SceneMetallicRoughnessMaterial *self, WFN_Vector_4 value);
 
-/* Windows.UI.Composition.Scenes.SceneMetallicRoughnessMaterial.get_MetallicFactor() */
 HRESULT wuicosc_scene_metallic_roughness_material_get__metallic_factor(WUICOSC_SceneMetallicRoughnessMaterial *self, float *value);
 
-/* Windows.UI.Composition.Scenes.SceneMetallicRoughnessMaterial.put_MetallicFactor() */
 HRESULT wuicosc_scene_metallic_roughness_material_put__metallic_factor(WUICOSC_SceneMetallicRoughnessMaterial *self, float value);
 
-/* Windows.UI.Composition.Scenes.SceneMetallicRoughnessMaterial.get_MetallicRoughnessInput() */
 HRESULT wuicosc_scene_metallic_roughness_material_get__metallic_roughness_input(WUICOSC_SceneMetallicRoughnessMaterial *self, WUICOSC_SceneMaterialInput** value);
 
-/* Windows.UI.Composition.Scenes.SceneMetallicRoughnessMaterial.put_MetallicRoughnessInput() */
 HRESULT wuicosc_scene_metallic_roughness_material_put__metallic_roughness_input(WUICOSC_SceneMetallicRoughnessMaterial *self, WUICOSC_SceneMaterialInput* value);
 
-/* Windows.UI.Composition.Scenes.SceneMetallicRoughnessMaterial.get_RoughnessFactor() */
 HRESULT wuicosc_scene_metallic_roughness_material_get__roughness_factor(WUICOSC_SceneMetallicRoughnessMaterial *self, float *value);
 
-/* Windows.UI.Composition.Scenes.SceneMetallicRoughnessMaterial.put_RoughnessFactor() */
 HRESULT wuicosc_scene_metallic_roughness_material_put__roughness_factor(WUICOSC_SceneMetallicRoughnessMaterial *self, float value);
 
-/* Windows.UI.Composition.Scenes.SceneMetallicRoughnessMaterial.Create(compositor) */
 HRESULT wuicosc_scene_metallic_roughness_material_create(WUC_Comp* compositor, WUICOSC_SceneMetallicRoughnessMaterial** out);
 
-/* activate Windows.UI.Composition.Scenes.SceneModelTransform */
 HRESULT wuicosc_scene_model_transform_new(WUICOSC_SceneModelTransform **out);
 
-/* Windows.UI.Composition.Scenes.SceneModelTransform */
-/* Windows.UI.Composition.Scenes.SceneModelTransform.get_Orientation() */
 HRESULT wuicosc_scene_model_transform_get__orientation(WUICOSC_SceneModelTransform *self, WFN_Quaternion *value);
 
-/* Windows.UI.Composition.Scenes.SceneModelTransform.put_Orientation() */
 HRESULT wuicosc_scene_model_transform_put__orientation(WUICOSC_SceneModelTransform *self, WFN_Quaternion value);
 
-/* Windows.UI.Composition.Scenes.SceneModelTransform.get_RotationAngle() */
 HRESULT wuicosc_scene_model_transform_get__rotation_angle(WUICOSC_SceneModelTransform *self, float *value);
 
-/* Windows.UI.Composition.Scenes.SceneModelTransform.put_RotationAngle() */
 HRESULT wuicosc_scene_model_transform_put__rotation_angle(WUICOSC_SceneModelTransform *self, float value);
 
-/* Windows.UI.Composition.Scenes.SceneModelTransform.get_RotationAngleInDegrees() */
 HRESULT wuicosc_scene_model_transform_get__rotation_angle_in_degrees(WUICOSC_SceneModelTransform *self, float *value);
 
-/* Windows.UI.Composition.Scenes.SceneModelTransform.put_RotationAngleInDegrees() */
 HRESULT wuicosc_scene_model_transform_put__rotation_angle_in_degrees(WUICOSC_SceneModelTransform *self, float value);
 
-/* Windows.UI.Composition.Scenes.SceneModelTransform.get_RotationAxis() */
 HRESULT wuicosc_scene_model_transform_get__rotation_axis(WUICOSC_SceneModelTransform *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.Scenes.SceneModelTransform.put_RotationAxis() */
 HRESULT wuicosc_scene_model_transform_put__rotation_axis(WUICOSC_SceneModelTransform *self, WFN_Vector_3 value);
 
-/* Windows.UI.Composition.Scenes.SceneModelTransform.get_Scale() */
 HRESULT wuicosc_scene_model_transform_get__scale(WUICOSC_SceneModelTransform *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.Scenes.SceneModelTransform.put_Scale() */
 HRESULT wuicosc_scene_model_transform_put__scale(WUICOSC_SceneModelTransform *self, WFN_Vector_3 value);
 
-/* Windows.UI.Composition.Scenes.SceneModelTransform.get_Translation() */
 HRESULT wuicosc_scene_model_transform_get__translation(WUICOSC_SceneModelTransform *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.Scenes.SceneModelTransform.put_Translation() */
 HRESULT wuicosc_scene_model_transform_put__translation(WUICOSC_SceneModelTransform *self, WFN_Vector_3 value);
 
-/* activate Windows.UI.Composition.Scenes.SceneNode */
 HRESULT wuicosc_scene_node_new(WUICOSC_SceneNode **out);
 
-/* Windows.UI.Composition.Scenes.SceneNode */
-/* Windows.UI.Composition.Scenes.SceneNode.get_Children() */
 HRESULT wuicosc_scene_node_get__children(WUICOSC_SceneNode *self, WUICOSC_SceneNodeCollection** value);
 
-/* Windows.UI.Composition.Scenes.SceneNode.get_Components() */
 HRESULT wuicosc_scene_node_get__components(WUICOSC_SceneNode *self, WUICOSC_SceneComponentCollection** value);
 
-/* Windows.UI.Composition.Scenes.SceneNode.get_Parent() */
 HRESULT wuicosc_scene_node_get__parent(WUICOSC_SceneNode *self, WUICOSC_SceneNode** value);
 
-/* Windows.UI.Composition.Scenes.SceneNode.get_Transform() */
 HRESULT wuicosc_scene_node_get__transform(WUICOSC_SceneNode *self, WUICOSC_SceneModelTransform** value);
 
-/* Windows.UI.Composition.Scenes.SceneNode.FindFirstComponentOfType() */
 HRESULT wuicosc_scene_node_find_first_component_of_type(WUICOSC_SceneNode *self, WUICOSC_SceneComponentType value, WUICOSC_SceneComponent** out);
 
-/* Windows.UI.Composition.Scenes.SceneNode.Create(compositor) */
 HRESULT wuicosc_scene_node_create(WUC_Comp* compositor, WUICOSC_SceneNode** out);
 
-/* activate Windows.UI.Composition.Scenes.SceneNodeCollection */
 HRESULT wuicosc_scene_node_collection_new(WUICOSC_SceneNodeCollection **out);
 
-/* Windows.UI.Composition.Scenes.SceneNodeCollection */
-/* Windows.UI.Composition.Scenes.SceneNodeCollection.GetAt(index) */
 HRESULT wuicosc_scene_node_collection_get_at(WUICOSC_SceneNodeCollection *self, uint32_t index, WUICOSC_SceneNode** out);
 
-/* Windows.UI.Composition.Scenes.SceneNodeCollection.get_Size() */
 HRESULT wuicosc_scene_node_collection_get__size(WUICOSC_SceneNodeCollection *self, uint32_t *value);
 
-/* Windows.UI.Composition.Scenes.SceneNodeCollection.GetView() */
 HRESULT wuicosc_scene_node_collection_get_view(WUICOSC_SceneNodeCollection *self, WFOCO_IVectorView_WUICOSC_SceneNode** out);
 
-/* Windows.UI.Composition.Scenes.SceneNodeCollection.IndexOf(index) */
 HRESULT wuicosc_scene_node_collection_index_of(WUICOSC_SceneNodeCollection *self, WUICOSC_SceneNode* value, uint32_t index, BOOL *out);
 
-/* Windows.UI.Composition.Scenes.SceneNodeCollection.SetAt(index) */
 HRESULT wuicosc_scene_node_collection_set_at(WUICOSC_SceneNodeCollection *self, uint32_t index, WUICOSC_SceneNode* value);
 
-/* Windows.UI.Composition.Scenes.SceneNodeCollection.InsertAt(index) */
 HRESULT wuicosc_scene_node_collection_insert_at(WUICOSC_SceneNodeCollection *self, uint32_t index, WUICOSC_SceneNode* value);
 
-/* Windows.UI.Composition.Scenes.SceneNodeCollection.RemoveAt(index) */
 HRESULT wuicosc_scene_node_collection_remove_at(WUICOSC_SceneNodeCollection *self, uint32_t index);
 
-/* Windows.UI.Composition.Scenes.SceneNodeCollection.Append() */
 HRESULT wuicosc_scene_node_collection_append(WUICOSC_SceneNodeCollection *self, WUICOSC_SceneNode* value);
 
-/* Windows.UI.Composition.Scenes.SceneNodeCollection.RemoveAtEnd() */
 HRESULT wuicosc_scene_node_collection_remove_at_end(WUICOSC_SceneNodeCollection *self);
 
-/* Windows.UI.Composition.Scenes.SceneNodeCollection.Clear() */
 HRESULT wuicosc_scene_node_collection_clear(WUICOSC_SceneNodeCollection *self);
 
-/* Windows.UI.Composition.Scenes.SceneNodeCollection.GetMany(startIndex, items) */
 HRESULT wuicosc_scene_node_collection_get_many(WUICOSC_SceneNodeCollection *self, uint32_t startIndex, WUICOSC_SceneNode *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.UI.Composition.Scenes.SceneNodeCollection.ReplaceAll(items) */
 HRESULT wuicosc_scene_node_collection_replace_all(WUICOSC_SceneNodeCollection *self, WUICOSC_SceneNode *items, uint32_t items_len);
 
-/* Windows.UI.Composition.Scenes.SceneNodeCollection.First() */
 HRESULT wuicosc_scene_node_collection_first(WUICOSC_SceneNodeCollection *self, WFOCO_IIterator_WUICOSC_SceneNode** out);
 
-/* activate Windows.UI.Composition.Scenes.SceneSurfaceMaterialInput */
 HRESULT wuicosc_scene_surface_material_input_new(WUICOSC_SceneSurfaceMaterialInput **out);
 
-/* Windows.UI.Composition.Scenes.SceneSurfaceMaterialInput */
-/* Windows.UI.Composition.Scenes.SceneSurfaceMaterialInput.get_BitmapInterpolationMode() */
 HRESULT wuicosc_scene_surface_material_input_get__bitmap_interpolation_mode(WUICOSC_SceneSurfaceMaterialInput *self, WUC_CompositionBitmapInterpolationMode *value);
 
-/* Windows.UI.Composition.Scenes.SceneSurfaceMaterialInput.put_BitmapInterpolationMode() */
 HRESULT wuicosc_scene_surface_material_input_put__bitmap_interpolation_mode(WUICOSC_SceneSurfaceMaterialInput *self, WUC_CompositionBitmapInterpolationMode value);
 
-/* Windows.UI.Composition.Scenes.SceneSurfaceMaterialInput.get_Surface() */
 HRESULT wuicosc_scene_surface_material_input_get__surface(WUICOSC_SceneSurfaceMaterialInput *self, WUC_ICompositionSurface** value);
 
-/* Windows.UI.Composition.Scenes.SceneSurfaceMaterialInput.put_Surface() */
 HRESULT wuicosc_scene_surface_material_input_put__surface(WUICOSC_SceneSurfaceMaterialInput *self, WUC_ICompositionSurface* value);
 
-/* Windows.UI.Composition.Scenes.SceneSurfaceMaterialInput.get_WrappingUMode() */
 HRESULT wuicosc_scene_surface_material_input_get__wrapping_u_mode(WUICOSC_SceneSurfaceMaterialInput *self, WUICOSC_SceneWrappingMode *value);
 
-/* Windows.UI.Composition.Scenes.SceneSurfaceMaterialInput.put_WrappingUMode() */
 HRESULT wuicosc_scene_surface_material_input_put__wrapping_u_mode(WUICOSC_SceneSurfaceMaterialInput *self, WUICOSC_SceneWrappingMode value);
 
-/* Windows.UI.Composition.Scenes.SceneSurfaceMaterialInput.get_WrappingVMode() */
 HRESULT wuicosc_scene_surface_material_input_get__wrapping_v_mode(WUICOSC_SceneSurfaceMaterialInput *self, WUICOSC_SceneWrappingMode *value);
 
-/* Windows.UI.Composition.Scenes.SceneSurfaceMaterialInput.put_WrappingVMode() */
 HRESULT wuicosc_scene_surface_material_input_put__wrapping_v_mode(WUICOSC_SceneSurfaceMaterialInput *self, WUICOSC_SceneWrappingMode value);
 
-/* Windows.UI.Composition.Scenes.SceneSurfaceMaterialInput.Create(compositor) */
 HRESULT wuicosc_scene_surface_material_input_create(WUC_Comp* compositor, WUICOSC_SceneSurfaceMaterialInput** out);
 
-/* activate Windows.UI.Composition.Scenes.SceneVisual */
 HRESULT wuicosc_scene_visual_new(WUICOSC_SceneVisual **out);
 
-/* Windows.UI.Composition.Scenes.SceneVisual */
-/* Windows.UI.Composition.Scenes.SceneVisual.get_Root() */
 HRESULT wuicosc_scene_visual_get__root(WUICOSC_SceneVisual *self, WUICOSC_SceneNode** value);
 
-/* Windows.UI.Composition.Scenes.SceneVisual.put_Root() */
 HRESULT wuicosc_scene_visual_put__root(WUICOSC_SceneVisual *self, WUICOSC_SceneNode* value);
 
-/* Windows.UI.Composition.Scenes.SceneVisual.Create(compositor) */
 HRESULT wuicosc_scene_visual_create(WUC_Comp* compositor, WUICOSC_SceneVisual** out);
 
-/* Windows.UI.Composition.Scenes.ISceneNodeStatics */
-/* Windows.UI.Composition.Scenes.ISceneNodeStatics.Create(compositor) */
 HRESULT wuicosc_scene_node_statics_create(WUICOSC_ISceneNodeStatics *self, WUC_Comp* compositor, WUICOSC_SceneNode** out);
 
-/* Windows.UI.Composition.Scenes.ISceneMetallicRoughnessMaterialStatics */
-/* Windows.UI.Composition.Scenes.ISceneMetallicRoughnessMaterialStatics.Create(compositor) */
 HRESULT wuicosc_scene_metallic_roughness_material_statics_create(WUICOSC_ISceneMetallicRoughnessMaterialStatics *self, WUC_Comp* compositor, WUICOSC_SceneMetallicRoughnessMaterial** out);
 
-/* Windows.UI.Composition.Scenes.ISceneMeshStatics */
-/* Windows.UI.Composition.Scenes.ISceneMeshStatics.Create(compositor) */
 HRESULT wuicosc_scene_mesh_statics_create(WUICOSC_ISceneMeshStatics *self, WUC_Comp* compositor, WUICOSC_SceneMesh** out);
 
-/* Windows.UI.Composition.Scenes.ISceneMeshRendererComponentStatics */
-/* Windows.UI.Composition.Scenes.ISceneMeshRendererComponentStatics.Create(compositor) */
 HRESULT wuicosc_scene_mesh_renderer_component_statics_create(WUICOSC_ISceneMeshRendererComponentStatics *self, WUC_Comp* compositor, WUICOSC_SceneMeshRendererComponent** out);
 
-/* Windows.UI.Composition.Scenes.ISceneBoundingBox */
-/* Windows.UI.Composition.Scenes.ISceneComponent */
-/* Windows.UI.Composition.Scenes.ISceneMesh */
-/* Windows.UI.Composition.Scenes.ISceneMeshRendererComponent */
-/* Windows.UI.Composition.Scenes.IScenePbrMaterial */
-/* Windows.UI.Composition.Scenes.ISceneMetallicRoughnessMaterial */
-/* Windows.UI.Composition.Scenes.ISceneModelTransform */
-/* Windows.UI.Composition.Scenes.ISceneNode */
-/* Windows.UI.Composition.Scenes.ISceneSurfaceMaterialInput */
-/* Windows.UI.Composition.Scenes.ISceneVisual */
 #endif /* CWINRT_WINDOWS_UI_COMPOSITION_SCENES_H */

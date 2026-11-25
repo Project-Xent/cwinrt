@@ -15,7 +15,6 @@
 #include <cwinrt/Windows.Web.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WUICO_CoreAcceleratorKeyEventType
 #define CWINRT_FWD_WUICO_CoreAcceleratorKeyEventType
 typedef enum WUICO_CoreAcceleratorKeyEventType {
@@ -226,7 +225,6 @@ typedef struct WSTST_IRandomAccessStream WSTST_IRandomAccessStream;
 typedef struct WAPDA_DataPackage WAPDA_DataPackage;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WWEUIIN_WebViewControlProcessOptions WWEUIIN_WebViewControlProcessOptions;
 typedef struct WWEUIIN_WebViewControlProcess WWEUIIN_WebViewControlProcess;
 typedef struct WWEUIIN_WebViewControlMoveFocusRequestedEventArgs WWEUIIN_WebViewControlMoveFocusRequestedEventArgs;
@@ -240,7 +238,6 @@ typedef struct WWEUIIN_IWebViewControlAcceleratorKeyPressedEventArgs WWEUIIN_IWe
 typedef struct WWEUIIN_IWebViewControlSite WWEUIIN_IWebViewControlSite;
 typedef struct WWEUIIN_IWebViewControlSite_2 WWEUIIN_IWebViewControlSite_2;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WWEUIIN_WebViewControl
 #define CWINRT_FWD_WF_IAsyncOperation_WWEUIIN_WebViewControl
 typedef struct WF_IAsyncOperation_WWEUIIN_WebViewControl WF_IAsyncOperation_WWEUIIN_WebViewControl;
@@ -585,7 +582,6 @@ typedef enum WWEUIIN_WebViewControlAcceleratorKeyRoutingStage {
 } WWEUIIN_WebViewControlAcceleratorKeyRoutingStage;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -618,185 +614,121 @@ static const IID CWINRT_IID_WWEUIIN_IWebViewControlSite CWINRT_MAYBE_UNUSED = { 
 static const IID CWINRT_IID_WWEUIIN_IWebViewControlSite_2 CWINRT_MAYBE_UNUSED = { 0xD13B2E3F, 0x48EE, 0x4730, { 0x82, 0x43, 0xD2, 0xED, 0x0C, 0x05, 0x60, 0x6A } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Web.UI.Interop.WebViewControlProcessOptions */
 HRESULT wweuiin_web_view_control_process_options_new(WWEUIIN_WebViewControlProcessOptions **out);
 
-/* Windows.Web.UI.Interop.WebViewControlProcessOptions */
-/* Windows.Web.UI.Interop.WebViewControlProcessOptions.put_EnterpriseId() */
 HRESULT wweuiin_web_view_control_process_options_put__enterprise_id(WWEUIIN_WebViewControlProcessOptions *self, cwinrt_hstring value);
 
-/* Windows.Web.UI.Interop.WebViewControlProcessOptions.get_EnterpriseId() */
 HRESULT wweuiin_web_view_control_process_options_get__enterprise_id(WWEUIIN_WebViewControlProcessOptions *self, cwinrt_hstring *value);
 
-/* Windows.Web.UI.Interop.WebViewControlProcessOptions.put_PrivateNetworkClientServerCapability() */
 HRESULT wweuiin_web_view_control_process_options_put__private_network_client_server_capability(WWEUIIN_WebViewControlProcessOptions *self, WWEUIIN_WebViewControlProcessCapabilityState value);
 
-/* Windows.Web.UI.Interop.WebViewControlProcessOptions.get_PrivateNetworkClientServerCapability() */
 HRESULT wweuiin_web_view_control_process_options_get__private_network_client_server_capability(WWEUIIN_WebViewControlProcessOptions *self, WWEUIIN_WebViewControlProcessCapabilityState *value);
 
-/* activate Windows.Web.UI.Interop.WebViewControlProcess */
 HRESULT wweuiin_web_view_control_process_new(WWEUIIN_WebViewControlProcess **out);
 
-/* Windows.Web.UI.Interop.WebViewControlProcess */
-/* Windows.Web.UI.Interop.WebViewControlProcess.get_ProcessId() */
 HRESULT wweuiin_web_view_control_process_get__process_id(WWEUIIN_WebViewControlProcess *self, uint32_t *value);
 
-/* Windows.Web.UI.Interop.WebViewControlProcess.get_EnterpriseId() */
 HRESULT wweuiin_web_view_control_process_get__enterprise_id(WWEUIIN_WebViewControlProcess *self, cwinrt_hstring *value);
 
-/* Windows.Web.UI.Interop.WebViewControlProcess.get_IsPrivateNetworkClientServerCapabilityEnabled() */
 HRESULT wweuiin_web_view_control_process_get__is_private_network_client_server_capability_enabled(WWEUIIN_WebViewControlProcess *self, BOOL *value);
 
-/* Windows.Web.UI.Interop.WebViewControlProcess.CreateWebViewControlAsync(hostWindowHandle, bounds) */
 HRESULT wweuiin_web_view_control_process_create_web_view_control_async(WWEUIIN_WebViewControlProcess *self, int64_t hostWindowHandle, WF_Rect bounds, WF_IAsyncOperation_WWEUIIN_WebViewControl** out);
 
-/* Windows.Web.UI.Interop.WebViewControlProcess.GetWebViewControls() */
 HRESULT wweuiin_web_view_control_process_get_web_view_controls(WWEUIIN_WebViewControlProcess *self, WFOCO_IVectorView_WWEUIIN_WebViewControl** out);
 
-/* Windows.Web.UI.Interop.WebViewControlProcess.Terminate() */
 HRESULT wweuiin_web_view_control_process_terminate(WWEUIIN_WebViewControlProcess *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wweuiin_web_view_control_process_on_process_exited(WWEUIIN_WebViewControlProcess *self, cwinrt_event_fn fn, void *ctx);
 void wweuiin_web_view_control_process_off_process_exited(WWEUIIN_WebViewControlProcess *self, cwinrt_token token);
 
-/* activate Windows.Web.UI.Interop.WebViewControlMoveFocusRequestedEventArgs */
 HRESULT wweuiin_web_view_control_move_focus_requested_event_args_new(WWEUIIN_WebViewControlMoveFocusRequestedEventArgs **out);
 
-/* Windows.Web.UI.Interop.WebViewControlMoveFocusRequestedEventArgs */
-/* Windows.Web.UI.Interop.WebViewControlMoveFocusRequestedEventArgs.get_Reason() */
 HRESULT wweuiin_web_view_control_move_focus_requested_event_args_get__reason(WWEUIIN_WebViewControlMoveFocusRequestedEventArgs *self, WWEUIIN_WebViewControlMoveFocusReason *value);
 
-/* activate Windows.Web.UI.Interop.WebViewControlAcceleratorKeyPressedEventArgs */
 HRESULT wweuiin_web_view_control_accelerator_key_pressed_event_args_new(WWEUIIN_WebViewControlAcceleratorKeyPressedEventArgs **out);
 
-/* Windows.Web.UI.Interop.WebViewControlAcceleratorKeyPressedEventArgs */
-/* Windows.Web.UI.Interop.WebViewControlAcceleratorKeyPressedEventArgs.get_EventType() */
 HRESULT wweuiin_web_view_control_accelerator_key_pressed_event_args_get__event_type(WWEUIIN_WebViewControlAcceleratorKeyPressedEventArgs *self, WUICO_CoreAcceleratorKeyEventType *value);
 
-/* Windows.Web.UI.Interop.WebViewControlAcceleratorKeyPressedEventArgs.get_VirtualKey() */
 HRESULT wweuiin_web_view_control_accelerator_key_pressed_event_args_get__virtual_key(WWEUIIN_WebViewControlAcceleratorKeyPressedEventArgs *self, WSY_VirtualKey *value);
 
-/* Windows.Web.UI.Interop.WebViewControlAcceleratorKeyPressedEventArgs.get_KeyStatus() */
 HRESULT wweuiin_web_view_control_accelerator_key_pressed_event_args_get__key_status(WWEUIIN_WebViewControlAcceleratorKeyPressedEventArgs *self, WUICO_CorePhysicalKeyStatus *value);
 
-/* Windows.Web.UI.Interop.WebViewControlAcceleratorKeyPressedEventArgs.get_RoutingStage() */
 HRESULT wweuiin_web_view_control_accelerator_key_pressed_event_args_get__routing_stage(WWEUIIN_WebViewControlAcceleratorKeyPressedEventArgs *self, WWEUIIN_WebViewControlAcceleratorKeyRoutingStage *value);
 
-/* Windows.Web.UI.Interop.WebViewControlAcceleratorKeyPressedEventArgs.get_Handled() */
 HRESULT wweuiin_web_view_control_accelerator_key_pressed_event_args_get__handled(WWEUIIN_WebViewControlAcceleratorKeyPressedEventArgs *self, BOOL *value);
 
-/* Windows.Web.UI.Interop.WebViewControlAcceleratorKeyPressedEventArgs.put_Handled() */
 HRESULT wweuiin_web_view_control_accelerator_key_pressed_event_args_put__handled(WWEUIIN_WebViewControlAcceleratorKeyPressedEventArgs *self, BOOL value);
 
-/* activate Windows.Web.UI.Interop.WebViewControl */
 HRESULT wweuiin_web_view_control_new(WWEUIIN_WebViewControl **out);
 
-/* Windows.Web.UI.Interop.WebViewControl */
-/* Windows.Web.UI.Interop.WebViewControl.get_Source() */
 HRESULT wweuiin_web_view_control_get__source(WWEUIIN_WebViewControl *self, WF_Uri** value);
 
-/* Windows.Web.UI.Interop.WebViewControl.put_Source(source) */
 HRESULT wweuiin_web_view_control_put__source(WWEUIIN_WebViewControl *self, WF_Uri* source);
 
-/* Windows.Web.UI.Interop.WebViewControl.get_DocumentTitle() */
 HRESULT wweuiin_web_view_control_get__document_title(WWEUIIN_WebViewControl *self, cwinrt_hstring *value);
 
-/* Windows.Web.UI.Interop.WebViewControl.get_CanGoBack() */
 HRESULT wweuiin_web_view_control_get__can_go_back(WWEUIIN_WebViewControl *self, BOOL *value);
 
-/* Windows.Web.UI.Interop.WebViewControl.get_CanGoForward() */
 HRESULT wweuiin_web_view_control_get__can_go_forward(WWEUIIN_WebViewControl *self, BOOL *value);
 
-/* Windows.Web.UI.Interop.WebViewControl.put_DefaultBackgroundColor() */
 HRESULT wweuiin_web_view_control_put__default_background_color(WWEUIIN_WebViewControl *self, WUI_Color value);
 
-/* Windows.Web.UI.Interop.WebViewControl.get_DefaultBackgroundColor() */
 HRESULT wweuiin_web_view_control_get__default_background_color(WWEUIIN_WebViewControl *self, WUI_Color *value);
 
-/* Windows.Web.UI.Interop.WebViewControl.get_ContainsFullScreenElement() */
 HRESULT wweuiin_web_view_control_get__contains_full_screen_element(WWEUIIN_WebViewControl *self, BOOL *value);
 
-/* Windows.Web.UI.Interop.WebViewControl.get_Settings() */
 HRESULT wweuiin_web_view_control_get__settings(WWEUIIN_WebViewControl *self, WWEUI_WebViewControlSettings** value);
 
-/* Windows.Web.UI.Interop.WebViewControl.get_DeferredPermissionRequests() */
 HRESULT wweuiin_web_view_control_get__deferred_permission_requests(WWEUIIN_WebViewControl *self, WFOCO_IVectorView_WWEUI_WebViewControlDeferredPermissionRequest** value);
 
-/* Windows.Web.UI.Interop.WebViewControl.GoForward() */
 HRESULT wweuiin_web_view_control_go_forward(WWEUIIN_WebViewControl *self);
 
-/* Windows.Web.UI.Interop.WebViewControl.GoBack() */
 HRESULT wweuiin_web_view_control_go_back(WWEUIIN_WebViewControl *self);
 
-/* Windows.Web.UI.Interop.WebViewControl.Refresh() */
 HRESULT wweuiin_web_view_control_refresh(WWEUIIN_WebViewControl *self);
 
-/* Windows.Web.UI.Interop.WebViewControl.Stop() */
 HRESULT wweuiin_web_view_control_stop(WWEUIIN_WebViewControl *self);
 
-/* Windows.Web.UI.Interop.WebViewControl.Navigate(source) */
 HRESULT wweuiin_web_view_control_navigate(WWEUIIN_WebViewControl *self, WF_Uri* source);
 
-/* Windows.Web.UI.Interop.WebViewControl.NavigateToString(text) */
 HRESULT wweuiin_web_view_control_navigate_to_string(WWEUIIN_WebViewControl *self, cwinrt_hstring text);
 
-/* Windows.Web.UI.Interop.WebViewControl.NavigateToLocalStreamUri(source, streamResolver) */
 HRESULT wweuiin_web_view_control_navigate_to_local_stream_uri(WWEUIIN_WebViewControl *self, WF_Uri* source, WWE_IUriToStreamResolver* streamResolver);
 
-/* Windows.Web.UI.Interop.WebViewControl.NavigateWithHttpRequestMessage(requestMessage) */
 HRESULT wweuiin_web_view_control_navigate_with_http_request_message(WWEUIIN_WebViewControl *self, WWEHT_HttpRequestMessage* requestMessage);
 
-/* Windows.Web.UI.Interop.WebViewControl.InvokeScriptAsync(scriptName, arguments) */
 HRESULT wweuiin_web_view_control_invoke_script_async(WWEUIIN_WebViewControl *self, cwinrt_hstring scriptName, WFOCO_IIterable_HSTRING* arguments, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Web.UI.Interop.WebViewControl.CapturePreviewToStreamAsync(stream) */
 HRESULT wweuiin_web_view_control_capture_preview_to_stream_async(WWEUIIN_WebViewControl *self, WSTST_IRandomAccessStream* stream, WF_IAsyncAction** out);
 
-/* Windows.Web.UI.Interop.WebViewControl.CaptureSelectedContentToDataPackageAsync() */
 HRESULT wweuiin_web_view_control_capture_selected_content_to_data_package_async(WWEUIIN_WebViewControl *self, WF_IAsyncOperation_WAPDA_DataPackage** out);
 
-/* Windows.Web.UI.Interop.WebViewControl.BuildLocalStreamUri(contentIdentifier, relativePath) */
 HRESULT wweuiin_web_view_control_build_local_stream_uri(WWEUIIN_WebViewControl *self, cwinrt_hstring contentIdentifier, cwinrt_hstring relativePath, WF_Uri** out);
 
-/* Windows.Web.UI.Interop.WebViewControl.GetDeferredPermissionRequestById(id, result) */
 HRESULT wweuiin_web_view_control_get_deferred_permission_request_by_id(WWEUIIN_WebViewControl *self, uint32_t id, WWEUI_WebViewControlDeferredPermissionRequest* result);
 
-/* Windows.Web.UI.Interop.WebViewControl.get_Process() */
 HRESULT wweuiin_web_view_control_get__process(WWEUIIN_WebViewControl *self, WWEUIIN_WebViewControlProcess** value);
 
-/* Windows.Web.UI.Interop.WebViewControl.put_Scale() */
 HRESULT wweuiin_web_view_control_put__scale(WWEUIIN_WebViewControl *self, double value);
 
-/* Windows.Web.UI.Interop.WebViewControl.get_Scale() */
 HRESULT wweuiin_web_view_control_get__scale(WWEUIIN_WebViewControl *self, double *value);
 
-/* Windows.Web.UI.Interop.WebViewControl.put_Bounds() */
 HRESULT wweuiin_web_view_control_put__bounds(WWEUIIN_WebViewControl *self, WF_Rect value);
 
-/* Windows.Web.UI.Interop.WebViewControl.get_Bounds() */
 HRESULT wweuiin_web_view_control_get__bounds(WWEUIIN_WebViewControl *self, WF_Rect *value);
 
-/* Windows.Web.UI.Interop.WebViewControl.put_IsVisible() */
 HRESULT wweuiin_web_view_control_put__is_visible(WWEUIIN_WebViewControl *self, BOOL value);
 
-/* Windows.Web.UI.Interop.WebViewControl.get_IsVisible() */
 HRESULT wweuiin_web_view_control_get__is_visible(WWEUIIN_WebViewControl *self, BOOL *value);
 
-/* Windows.Web.UI.Interop.WebViewControl.Close() */
 HRESULT wweuiin_web_view_control_close(WWEUIIN_WebViewControl *self);
 
-/* Windows.Web.UI.Interop.WebViewControl.MoveFocus(reason) */
 HRESULT wweuiin_web_view_control_move_focus(WWEUIIN_WebViewControl *self, WWEUIIN_WebViewControlMoveFocusReason reason);
 
-/* Windows.Web.UI.Interop.WebViewControl.AddInitializeScript(script) */
 HRESULT wweuiin_web_view_control_add_initialize_script(WWEUIIN_WebViewControl *self, cwinrt_hstring script);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wweuiin_web_view_control_on_navigation_starting(WWEUIIN_WebViewControl *self, cwinrt_event_fn fn, void *ctx);
@@ -862,41 +794,24 @@ void wweuiin_web_view_control_off_got_focus(WWEUIIN_WebViewControl *self, cwinrt
 cwinrt_token wweuiin_web_view_control_on_lost_focus(WWEUIIN_WebViewControl *self, cwinrt_event_fn fn, void *ctx);
 void wweuiin_web_view_control_off_lost_focus(WWEUIIN_WebViewControl *self, cwinrt_token token);
 
-/* Windows.Web.UI.Interop.IWebViewControlProcessFactory */
-/* Windows.Web.UI.Interop.IWebViewControlProcessFactory.CreateWithOptions(processOptions) */
 HRESULT wweuiin_web_view_control_process_factory_create_with_options(WWEUIIN_IWebViewControlProcessFactory *self, WWEUIIN_WebViewControlProcessOptions* processOptions, WWEUIIN_WebViewControlProcess** out);
 
-/* Windows.Web.UI.Interop.IWebViewControlProcessOptions */
-/* Windows.Web.UI.Interop.IWebViewControlProcess */
-/* Windows.Web.UI.Interop.IWebViewControlMoveFocusRequestedEventArgs */
-/* Windows.Web.UI.Interop.IWebViewControlAcceleratorKeyPressedEventArgs */
-/* Windows.Web.UI.Interop.IWebViewControlSite */
-/* Windows.Web.UI.Interop.IWebViewControlSite.get_Process() */
 HRESULT wweuiin_web_view_control_site_get__process(WWEUIIN_IWebViewControlSite *self, WWEUIIN_WebViewControlProcess** value);
 
-/* Windows.Web.UI.Interop.IWebViewControlSite.put_Scale() */
 HRESULT wweuiin_web_view_control_site_put__scale(WWEUIIN_IWebViewControlSite *self, double value);
 
-/* Windows.Web.UI.Interop.IWebViewControlSite.get_Scale() */
 HRESULT wweuiin_web_view_control_site_get__scale(WWEUIIN_IWebViewControlSite *self, double *value);
 
-/* Windows.Web.UI.Interop.IWebViewControlSite.put_Bounds() */
 HRESULT wweuiin_web_view_control_site_put__bounds(WWEUIIN_IWebViewControlSite *self, WF_Rect value);
 
-/* Windows.Web.UI.Interop.IWebViewControlSite.get_Bounds() */
 HRESULT wweuiin_web_view_control_site_get__bounds(WWEUIIN_IWebViewControlSite *self, WF_Rect *value);
 
-/* Windows.Web.UI.Interop.IWebViewControlSite.put_IsVisible() */
 HRESULT wweuiin_web_view_control_site_put__is_visible(WWEUIIN_IWebViewControlSite *self, BOOL value);
 
-/* Windows.Web.UI.Interop.IWebViewControlSite.get_IsVisible() */
 HRESULT wweuiin_web_view_control_site_get__is_visible(WWEUIIN_IWebViewControlSite *self, BOOL *value);
 
-/* Windows.Web.UI.Interop.IWebViewControlSite.Close() */
 HRESULT wweuiin_web_view_control_site_close(WWEUIIN_IWebViewControlSite *self);
 
-/* Windows.Web.UI.Interop.IWebViewControlSite.MoveFocus(reason) */
 HRESULT wweuiin_web_view_control_site_move_focus(WWEUIIN_IWebViewControlSite *self, WWEUIIN_WebViewControlMoveFocusReason reason);
 
-/* Windows.Web.UI.Interop.IWebViewControlSite2 */
 #endif /* CWINRT_WINDOWS_WEB_UI_INTEROP_H */

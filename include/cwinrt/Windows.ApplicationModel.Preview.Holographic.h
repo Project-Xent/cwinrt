@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Foundation.Numerics.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WAPAC_IActivatedEventArgs
 #define CWINRT_FWD_WAPAC_IActivatedEventArgs
 typedef struct WAPAC_IActivatedEventArgs WAPAC_IActivatedEventArgs;
@@ -23,14 +22,12 @@ typedef struct WAPAC_IActivatedEventArgs WAPAC_IActivatedEventArgs;
 typedef struct WPESP_SpatialCoordinateSystem WPESP_SpatialCoordinateSystem;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPPRHO_HolographicKeyboardPlacementOverridePreview WAPPRHO_HolographicKeyboardPlacementOverridePreview;
 typedef struct WAPPRHO_IHolographicApplicationPreviewStatics WAPPRHO_IHolographicApplicationPreviewStatics;
 typedef struct WAPPRHO_IHolographicKeyboardPlacementOverridePreviewStatics WAPPRHO_IHolographicKeyboardPlacementOverridePreviewStatics;
 typedef struct WAPPRHO_HolographicApplicationPreview WAPPRHO_HolographicApplicationPreview;
 typedef struct WAPPRHO_IHolographicKeyboardPlacementOverridePreview WAPPRHO_IHolographicKeyboardPlacementOverridePreview;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WPESP_SpatialCoordinateSystem
 #define CWINRT_FWD_WPESP_SpatialCoordinateSystem
 typedef struct WPESP_SpatialCoordinateSystem WPESP_SpatialCoordinateSystem;
@@ -48,7 +45,6 @@ typedef struct WFN_Vector_2 WFN_Vector_2;
 typedef struct WAPAC_IActivatedEventArgs WAPAC_IActivatedEventArgs;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -65,44 +61,26 @@ static const IID CWINRT_IID_WAPPRHO_IHolographicKeyboardPlacementOverridePreview
 static const IID CWINRT_IID_WAPPRHO_IHolographicKeyboardPlacementOverridePreview CWINRT_MAYBE_UNUSED = { 0xC8A8CE3A, 0xDFDE, 0x5A14, { 0x8D, 0x5F, 0x18, 0x2C, 0x52, 0x6D, 0xD9, 0xC4 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview */
 HRESULT wapprho_holographic_keyboard_placement_override_preview_new(WAPPRHO_HolographicKeyboardPlacementOverridePreview **out);
 
-/* Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview */
-/* Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview.SetPlacementOverride(coordinateSystem, topCenterPosition, normal) */
 HRESULT wapprho_holographic_keyboard_placement_override_preview_set_placement_override(WAPPRHO_HolographicKeyboardPlacementOverridePreview *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WFN_Vector_3 topCenterPosition, WFN_Vector_3 normal);
 
-/* Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview.SetPlacementOverride(coordinateSystem, topCenterPosition, normal, maxSize) */
 HRESULT wapprho_holographic_keyboard_placement_override_preview_set_placement_override_p_3_3_2(WAPPRHO_HolographicKeyboardPlacementOverridePreview *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WFN_Vector_3 topCenterPosition, WFN_Vector_3 normal, WFN_Vector_2 maxSize);
 
-/* Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview.ResetPlacementOverride() */
 HRESULT wapprho_holographic_keyboard_placement_override_preview_reset_placement_override(WAPPRHO_HolographicKeyboardPlacementOverridePreview *self);
 
-/* Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview.GetForCurrentView() */
 HRESULT wapprho_holographic_keyboard_placement_override_preview_get_for_current_view(WAPPRHO_HolographicKeyboardPlacementOverridePreview** out);
 
-/* Windows.ApplicationModel.Preview.Holographic.IHolographicApplicationPreviewStatics */
-/* Windows.ApplicationModel.Preview.Holographic.IHolographicApplicationPreviewStatics.IsCurrentViewPresentedOnHolographicDisplay() */
 HRESULT wapprho_holographic_application_preview_statics_is_current_view_presented_on_holographic_display(WAPPRHO_IHolographicApplicationPreviewStatics *self, BOOL *out);
 
-/* Windows.ApplicationModel.Preview.Holographic.IHolographicApplicationPreviewStatics.IsHolographicActivation(activatedEventArgs) */
 HRESULT wapprho_holographic_application_preview_statics_is_holographic_activation(WAPPRHO_IHolographicApplicationPreviewStatics *self, WAPAC_IActivatedEventArgs* activatedEventArgs, BOOL *out);
 
-/* Windows.ApplicationModel.Preview.Holographic.IHolographicKeyboardPlacementOverridePreviewStatics */
-/* Windows.ApplicationModel.Preview.Holographic.IHolographicKeyboardPlacementOverridePreviewStatics.GetForCurrentView() */
 HRESULT wapprho_holographic_keyboard_placement_override_preview_statics_get_for_current_view(WAPPRHO_IHolographicKeyboardPlacementOverridePreviewStatics *self, WAPPRHO_HolographicKeyboardPlacementOverridePreview** out);
 
-/* activate Windows.ApplicationModel.Preview.Holographic.HolographicApplicationPreview */
 HRESULT wapprho_holographic_application_preview_new(WAPPRHO_HolographicApplicationPreview **out);
 
-/* Windows.ApplicationModel.Preview.Holographic.HolographicApplicationPreview */
-/* Windows.ApplicationModel.Preview.Holographic.HolographicApplicationPreview.IsCurrentViewPresentedOnHolographicDisplay() */
 HRESULT wapprho_holographic_application_preview_is_current_view_presented_on_holographic_display(BOOL *out);
 
-/* Windows.ApplicationModel.Preview.Holographic.HolographicApplicationPreview.IsHolographicActivation(activatedEventArgs) */
 HRESULT wapprho_holographic_application_preview_is_holographic_activation(WAPAC_IActivatedEventArgs* activatedEventArgs, BOOL *out);
 
-/* Windows.ApplicationModel.Preview.Holographic.IHolographicKeyboardPlacementOverridePreview */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_PREVIEW_HOLOGRAPHIC_H */

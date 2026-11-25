@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IInputStream
 #define CWINRT_FWD_WSTST_IInputStream
 typedef struct WSTST_IInputStream WSTST_IInputStream;
@@ -26,7 +25,6 @@ typedef struct WSTST_IOutputStream WSTST_IOutputStream;
 typedef struct WSTST_IBuffer WSTST_IBuffer;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDEUS_IUsbConfigurationDescriptorStatics WDEUS_IUsbConfigurationDescriptorStatics;
 typedef struct WDEUS_IUsbDeviceClassesStatics WDEUS_IUsbDeviceClassesStatics;
 typedef struct WDEUS_IUsbDeviceStatics WDEUS_IUsbDeviceStatics;
@@ -78,7 +76,6 @@ typedef struct WDEUS_IUsbInterruptOutEndpointDescriptor WDEUS_IUsbInterruptOutEn
 typedef struct WDEUS_IUsbInterruptOutPipe WDEUS_IUsbInterruptOutPipe;
 typedef struct WDEUS_IUsbSetupPacket WDEUS_IUsbSetupPacket;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WDEUS_UsbDevice
 #define CWINRT_FWD_WF_IAsyncOperation_WDEUS_UsbDevice
 typedef struct WF_IAsyncOperation_WDEUS_UsbDevice WF_IAsyncOperation_WDEUS_UsbDevice;
@@ -218,7 +215,6 @@ typedef enum WDEUS_UsbWriteOptions {
 } WDEUS_UsbWriteOptions;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -335,577 +331,353 @@ static const IID CWINRT_IID_WDEUS_IUsbInterruptOutPipe CWINRT_MAYBE_UNUSED = { 0
 static const IID CWINRT_IID_WDEUS_IUsbSetupPacket CWINRT_MAYBE_UNUSED = { 0x104BA132, 0xC78F, 0x4C51, { 0xB6, 0x54, 0xE4, 0x9D, 0x02, 0xF2, 0xCB, 0x03 } };
 #endif
 
-/* Methods */
-
-/* Windows.Devices.Usb.IUsbConfigurationDescriptorStatics */
-/* Windows.Devices.Usb.IUsbConfigurationDescriptorStatics.TryParse(descriptor, parsed) */
 HRESULT wdeus_usb_configuration_descriptor_statics_try_parse(WDEUS_IUsbConfigurationDescriptorStatics *self, WDEUS_UsbDescriptor* descriptor, WDEUS_UsbConfigurationDescriptor* parsed, BOOL *out);
 
-/* Windows.Devices.Usb.IUsbConfigurationDescriptorStatics.Parse(descriptor) */
 HRESULT wdeus_usb_configuration_descriptor_statics_parse(WDEUS_IUsbConfigurationDescriptorStatics *self, WDEUS_UsbDescriptor* descriptor, WDEUS_UsbConfigurationDescriptor** out);
 
-/* Windows.Devices.Usb.IUsbDeviceClassesStatics */
-/* Windows.Devices.Usb.IUsbDeviceClassesStatics.get_CdcControl() */
 HRESULT wdeus_usb_device_classes_statics_get__cdc_control(WDEUS_IUsbDeviceClassesStatics *self, WDEUS_UsbDeviceClass** value);
 
-/* Windows.Devices.Usb.IUsbDeviceClassesStatics.get_Physical() */
 HRESULT wdeus_usb_device_classes_statics_get__physical(WDEUS_IUsbDeviceClassesStatics *self, WDEUS_UsbDeviceClass** value);
 
-/* Windows.Devices.Usb.IUsbDeviceClassesStatics.get_PersonalHealthcare() */
 HRESULT wdeus_usb_device_classes_statics_get__personal_healthcare(WDEUS_IUsbDeviceClassesStatics *self, WDEUS_UsbDeviceClass** value);
 
-/* Windows.Devices.Usb.IUsbDeviceClassesStatics.get_ActiveSync() */
 HRESULT wdeus_usb_device_classes_statics_get__active_sync(WDEUS_IUsbDeviceClassesStatics *self, WDEUS_UsbDeviceClass** value);
 
-/* Windows.Devices.Usb.IUsbDeviceClassesStatics.get_PalmSync() */
 HRESULT wdeus_usb_device_classes_statics_get__palm_sync(WDEUS_IUsbDeviceClassesStatics *self, WDEUS_UsbDeviceClass** value);
 
-/* Windows.Devices.Usb.IUsbDeviceClassesStatics.get_DeviceFirmwareUpdate() */
 HRESULT wdeus_usb_device_classes_statics_get__device_firmware_update(WDEUS_IUsbDeviceClassesStatics *self, WDEUS_UsbDeviceClass** value);
 
-/* Windows.Devices.Usb.IUsbDeviceClassesStatics.get_Irda() */
 HRESULT wdeus_usb_device_classes_statics_get__irda(WDEUS_IUsbDeviceClassesStatics *self, WDEUS_UsbDeviceClass** value);
 
-/* Windows.Devices.Usb.IUsbDeviceClassesStatics.get_Measurement() */
 HRESULT wdeus_usb_device_classes_statics_get__measurement(WDEUS_IUsbDeviceClassesStatics *self, WDEUS_UsbDeviceClass** value);
 
-/* Windows.Devices.Usb.IUsbDeviceClassesStatics.get_VendorSpecific() */
 HRESULT wdeus_usb_device_classes_statics_get__vendor_specific(WDEUS_IUsbDeviceClassesStatics *self, WDEUS_UsbDeviceClass** value);
 
-/* Windows.Devices.Usb.IUsbDeviceStatics */
-/* Windows.Devices.Usb.IUsbDeviceStatics.GetDeviceSelector(vendorId, productId, winUsbInterfaceClass) */
 HRESULT wdeus_usb_device_statics_get_device_selector_u32_u32_g_u_i_d_str(WDEUS_IUsbDeviceStatics *self, uint32_t vendorId, uint32_t productId, GUID winUsbInterfaceClass, cwinrt_hstring *out);
 
-/* Windows.Devices.Usb.IUsbDeviceStatics.GetDeviceSelector(winUsbInterfaceClass) */
 HRESULT wdeus_usb_device_statics_get_device_selector(WDEUS_IUsbDeviceStatics *self, GUID winUsbInterfaceClass, cwinrt_hstring *out);
 
-/* Windows.Devices.Usb.IUsbDeviceStatics.GetDeviceSelector(vendorId, productId) */
 HRESULT wdeus_usb_device_statics_get_device_selector_u32_u32_str(WDEUS_IUsbDeviceStatics *self, uint32_t vendorId, uint32_t productId, cwinrt_hstring *out);
 
-/* Windows.Devices.Usb.IUsbDeviceStatics.GetDeviceClassSelector(usbClass) */
 HRESULT wdeus_usb_device_statics_get_device_class_selector(WDEUS_IUsbDeviceStatics *self, WDEUS_UsbDeviceClass* usbClass, cwinrt_hstring *out);
 
-/* Windows.Devices.Usb.IUsbDeviceStatics.FromIdAsync(deviceId) */
 HRESULT wdeus_usb_device_statics_from_id_async(WDEUS_IUsbDeviceStatics *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDEUS_UsbDevice** out);
 
-/* Windows.Devices.Usb.IUsbEndpointDescriptorStatics */
-/* Windows.Devices.Usb.IUsbEndpointDescriptorStatics.TryParse(descriptor, parsed) */
 HRESULT wdeus_usb_endpoint_descriptor_statics_try_parse(WDEUS_IUsbEndpointDescriptorStatics *self, WDEUS_UsbDescriptor* descriptor, WDEUS_UsbEndpointDescriptor* parsed, BOOL *out);
 
-/* Windows.Devices.Usb.IUsbEndpointDescriptorStatics.Parse(descriptor) */
 HRESULT wdeus_usb_endpoint_descriptor_statics_parse(WDEUS_IUsbEndpointDescriptorStatics *self, WDEUS_UsbDescriptor* descriptor, WDEUS_UsbEndpointDescriptor** out);
 
-/* Windows.Devices.Usb.IUsbInterfaceDescriptorStatics */
-/* Windows.Devices.Usb.IUsbInterfaceDescriptorStatics.TryParse(descriptor, parsed) */
 HRESULT wdeus_usb_interface_descriptor_statics_try_parse(WDEUS_IUsbInterfaceDescriptorStatics *self, WDEUS_UsbDescriptor* descriptor, WDEUS_UsbInterfaceDescriptor* parsed, BOOL *out);
 
-/* Windows.Devices.Usb.IUsbInterfaceDescriptorStatics.Parse(descriptor) */
 HRESULT wdeus_usb_interface_descriptor_statics_parse(WDEUS_IUsbInterfaceDescriptorStatics *self, WDEUS_UsbDescriptor* descriptor, WDEUS_UsbInterfaceDescriptor** out);
 
-/* Windows.Devices.Usb.IUsbSetupPacketFactory */
-/* Windows.Devices.Usb.IUsbSetupPacketFactory.CreateWithEightByteBuffer(eightByteBuffer) */
 HRESULT wdeus_usb_setup_packet_factory_create_with_eight_byte_buffer(WDEUS_IUsbSetupPacketFactory *self, WSTST_IBuffer* eightByteBuffer, WDEUS_UsbSetupPacket** out);
 
-/* activate Windows.Devices.Usb.UsbBulkInEndpointDescriptor */
 HRESULT wdeus_usb_bulk_in_endpoint_descriptor_new(WDEUS_UsbBulkInEndpointDescriptor **out);
 
-/* Windows.Devices.Usb.UsbBulkInEndpointDescriptor */
-/* Windows.Devices.Usb.UsbBulkInEndpointDescriptor.get_MaxPacketSize() */
 HRESULT wdeus_usb_bulk_in_endpoint_descriptor_get__max_packet_size(WDEUS_UsbBulkInEndpointDescriptor *self, uint32_t *value);
 
-/* Windows.Devices.Usb.UsbBulkInEndpointDescriptor.get_EndpointNumber() */
 HRESULT wdeus_usb_bulk_in_endpoint_descriptor_get__endpoint_number(WDEUS_UsbBulkInEndpointDescriptor *self, uint8_t *value);
 
-/* Windows.Devices.Usb.UsbBulkInEndpointDescriptor.get_Pipe() */
 HRESULT wdeus_usb_bulk_in_endpoint_descriptor_get__pipe(WDEUS_UsbBulkInEndpointDescriptor *self, WDEUS_UsbBulkInPipe** value);
 
-/* activate Windows.Devices.Usb.UsbBulkInPipe */
 HRESULT wdeus_usb_bulk_in_pipe_new(WDEUS_UsbBulkInPipe **out);
 
-/* Windows.Devices.Usb.UsbBulkInPipe */
-/* Windows.Devices.Usb.UsbBulkInPipe.get_MaxTransferSizeBytes() */
 HRESULT wdeus_usb_bulk_in_pipe_get__max_transfer_size_bytes(WDEUS_UsbBulkInPipe *self, uint32_t *value);
 
-/* Windows.Devices.Usb.UsbBulkInPipe.get_EndpointDescriptor() */
 HRESULT wdeus_usb_bulk_in_pipe_get__endpoint_descriptor(WDEUS_UsbBulkInPipe *self, WDEUS_UsbBulkInEndpointDescriptor** value);
 
-/* Windows.Devices.Usb.UsbBulkInPipe.ClearStallAsync() */
 HRESULT wdeus_usb_bulk_in_pipe_clear_stall_async(WDEUS_UsbBulkInPipe *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.Usb.UsbBulkInPipe.put_ReadOptions() */
 HRESULT wdeus_usb_bulk_in_pipe_put__read_options(WDEUS_UsbBulkInPipe *self, WDEUS_UsbReadOptions value);
 
-/* Windows.Devices.Usb.UsbBulkInPipe.get_ReadOptions() */
 HRESULT wdeus_usb_bulk_in_pipe_get__read_options(WDEUS_UsbBulkInPipe *self, WDEUS_UsbReadOptions *value);
 
-/* Windows.Devices.Usb.UsbBulkInPipe.FlushBuffer() */
 HRESULT wdeus_usb_bulk_in_pipe_flush_buffer(WDEUS_UsbBulkInPipe *self);
 
-/* Windows.Devices.Usb.UsbBulkInPipe.get_InputStream() */
 HRESULT wdeus_usb_bulk_in_pipe_get__input_stream(WDEUS_UsbBulkInPipe *self, WSTST_IInputStream** value);
 
-/* activate Windows.Devices.Usb.UsbBulkOutEndpointDescriptor */
 HRESULT wdeus_usb_bulk_out_endpoint_descriptor_new(WDEUS_UsbBulkOutEndpointDescriptor **out);
 
-/* Windows.Devices.Usb.UsbBulkOutEndpointDescriptor */
-/* Windows.Devices.Usb.UsbBulkOutEndpointDescriptor.get_MaxPacketSize() */
 HRESULT wdeus_usb_bulk_out_endpoint_descriptor_get__max_packet_size(WDEUS_UsbBulkOutEndpointDescriptor *self, uint32_t *value);
 
-/* Windows.Devices.Usb.UsbBulkOutEndpointDescriptor.get_EndpointNumber() */
 HRESULT wdeus_usb_bulk_out_endpoint_descriptor_get__endpoint_number(WDEUS_UsbBulkOutEndpointDescriptor *self, uint8_t *value);
 
-/* Windows.Devices.Usb.UsbBulkOutEndpointDescriptor.get_Pipe() */
 HRESULT wdeus_usb_bulk_out_endpoint_descriptor_get__pipe(WDEUS_UsbBulkOutEndpointDescriptor *self, WDEUS_UsbBulkOutPipe** value);
 
-/* activate Windows.Devices.Usb.UsbBulkOutPipe */
 HRESULT wdeus_usb_bulk_out_pipe_new(WDEUS_UsbBulkOutPipe **out);
 
-/* Windows.Devices.Usb.UsbBulkOutPipe */
-/* Windows.Devices.Usb.UsbBulkOutPipe.get_EndpointDescriptor() */
 HRESULT wdeus_usb_bulk_out_pipe_get__endpoint_descriptor(WDEUS_UsbBulkOutPipe *self, WDEUS_UsbBulkOutEndpointDescriptor** value);
 
-/* Windows.Devices.Usb.UsbBulkOutPipe.ClearStallAsync() */
 HRESULT wdeus_usb_bulk_out_pipe_clear_stall_async(WDEUS_UsbBulkOutPipe *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.Usb.UsbBulkOutPipe.put_WriteOptions() */
 HRESULT wdeus_usb_bulk_out_pipe_put__write_options(WDEUS_UsbBulkOutPipe *self, WDEUS_UsbWriteOptions value);
 
-/* Windows.Devices.Usb.UsbBulkOutPipe.get_WriteOptions() */
 HRESULT wdeus_usb_bulk_out_pipe_get__write_options(WDEUS_UsbBulkOutPipe *self, WDEUS_UsbWriteOptions *value);
 
-/* Windows.Devices.Usb.UsbBulkOutPipe.get_OutputStream() */
 HRESULT wdeus_usb_bulk_out_pipe_get__output_stream(WDEUS_UsbBulkOutPipe *self, WSTST_IOutputStream** value);
 
-/* activate Windows.Devices.Usb.UsbConfiguration */
 HRESULT wdeus_usb_configuration_new(WDEUS_UsbConfiguration **out);
 
-/* Windows.Devices.Usb.UsbConfiguration */
-/* Windows.Devices.Usb.UsbConfiguration.get_UsbInterfaces() */
 HRESULT wdeus_usb_configuration_get__usb_interfaces(WDEUS_UsbConfiguration *self, WFOCO_IVectorView_WDEUS_UsbInterface** value);
 
-/* Windows.Devices.Usb.UsbConfiguration.get_ConfigurationDescriptor() */
 HRESULT wdeus_usb_configuration_get__configuration_descriptor(WDEUS_UsbConfiguration *self, WDEUS_UsbConfigurationDescriptor** value);
 
-/* Windows.Devices.Usb.UsbConfiguration.get_Descriptors() */
 HRESULT wdeus_usb_configuration_get__descriptors(WDEUS_UsbConfiguration *self, WFOCO_IVectorView_WDEUS_UsbDescriptor** value);
 
-/* activate Windows.Devices.Usb.UsbConfigurationDescriptor */
 HRESULT wdeus_usb_configuration_descriptor_new(WDEUS_UsbConfigurationDescriptor **out);
 
-/* Windows.Devices.Usb.UsbConfigurationDescriptor */
-/* Windows.Devices.Usb.UsbConfigurationDescriptor.get_ConfigurationValue() */
 HRESULT wdeus_usb_configuration_descriptor_get__configuration_value(WDEUS_UsbConfigurationDescriptor *self, uint8_t *value);
 
-/* Windows.Devices.Usb.UsbConfigurationDescriptor.get_MaxPowerMilliamps() */
 HRESULT wdeus_usb_configuration_descriptor_get__max_power_milliamps(WDEUS_UsbConfigurationDescriptor *self, uint32_t *value);
 
-/* Windows.Devices.Usb.UsbConfigurationDescriptor.get_SelfPowered() */
 HRESULT wdeus_usb_configuration_descriptor_get__self_powered(WDEUS_UsbConfigurationDescriptor *self, BOOL *value);
 
-/* Windows.Devices.Usb.UsbConfigurationDescriptor.get_RemoteWakeup() */
 HRESULT wdeus_usb_configuration_descriptor_get__remote_wakeup(WDEUS_UsbConfigurationDescriptor *self, BOOL *value);
 
-/* Windows.Devices.Usb.UsbConfigurationDescriptor.TryParse(descriptor, parsed) */
 HRESULT wdeus_usb_configuration_descriptor_try_parse(WDEUS_UsbDescriptor* descriptor, WDEUS_UsbConfigurationDescriptor* parsed, BOOL *out);
 
-/* Windows.Devices.Usb.UsbConfigurationDescriptor.Parse(descriptor) */
 HRESULT wdeus_usb_configuration_descriptor_parse(WDEUS_UsbDescriptor* descriptor, WDEUS_UsbConfigurationDescriptor** out);
 
-/* activate Windows.Devices.Usb.UsbControlRequestType */
 HRESULT wdeus_usb_control_request_type_new(WDEUS_UsbControlRequestType **out);
 
-/* Windows.Devices.Usb.UsbControlRequestType */
-/* Windows.Devices.Usb.UsbControlRequestType.get_Direction() */
 HRESULT wdeus_usb_control_request_type_get__direction(WDEUS_UsbControlRequestType *self, WDEUS_UsbTransferDirection *value);
 
-/* Windows.Devices.Usb.UsbControlRequestType.put_Direction() */
 HRESULT wdeus_usb_control_request_type_put__direction(WDEUS_UsbControlRequestType *self, WDEUS_UsbTransferDirection value);
 
-/* Windows.Devices.Usb.UsbControlRequestType.get_ControlTransferType() */
 HRESULT wdeus_usb_control_request_type_get__control_transfer_type(WDEUS_UsbControlRequestType *self, WDEUS_UsbControlTransferType *value);
 
-/* Windows.Devices.Usb.UsbControlRequestType.put_ControlTransferType() */
 HRESULT wdeus_usb_control_request_type_put__control_transfer_type(WDEUS_UsbControlRequestType *self, WDEUS_UsbControlTransferType value);
 
-/* Windows.Devices.Usb.UsbControlRequestType.get_Recipient() */
 HRESULT wdeus_usb_control_request_type_get__recipient(WDEUS_UsbControlRequestType *self, WDEUS_UsbControlRecipient *value);
 
-/* Windows.Devices.Usb.UsbControlRequestType.put_Recipient() */
 HRESULT wdeus_usb_control_request_type_put__recipient(WDEUS_UsbControlRequestType *self, WDEUS_UsbControlRecipient value);
 
-/* Windows.Devices.Usb.UsbControlRequestType.get_AsByte() */
 HRESULT wdeus_usb_control_request_type_get__as_byte(WDEUS_UsbControlRequestType *self, uint8_t *value);
 
-/* Windows.Devices.Usb.UsbControlRequestType.put_AsByte() */
 HRESULT wdeus_usb_control_request_type_put__as_byte(WDEUS_UsbControlRequestType *self, uint8_t value);
 
-/* activate Windows.Devices.Usb.UsbDescriptor */
 HRESULT wdeus_usb_descriptor_new(WDEUS_UsbDescriptor **out);
 
-/* Windows.Devices.Usb.UsbDescriptor */
-/* Windows.Devices.Usb.UsbDescriptor.get_Length() */
 HRESULT wdeus_usb_descriptor_get__length(WDEUS_UsbDescriptor *self, uint8_t *value);
 
-/* Windows.Devices.Usb.UsbDescriptor.get_DescriptorType() */
 HRESULT wdeus_usb_descriptor_get__descriptor_type(WDEUS_UsbDescriptor *self, uint8_t *value);
 
-/* Windows.Devices.Usb.UsbDescriptor.ReadDescriptorBuffer(buffer) */
 HRESULT wdeus_usb_descriptor_read_descriptor_buffer(WDEUS_UsbDescriptor *self, WSTST_IBuffer* buffer);
 
-/* activate Windows.Devices.Usb.UsbDevice */
 HRESULT wdeus_usb_device_new(WDEUS_UsbDevice **out);
 
-/* Windows.Devices.Usb.UsbDevice */
-/* Windows.Devices.Usb.UsbDevice.SendControlOutTransferAsync(setupPacket, buffer) */
 HRESULT wdeus_usb_device_send_control_out_transfer_async_p_p_p(WDEUS_UsbDevice *self, WDEUS_UsbSetupPacket* setupPacket, WSTST_IBuffer* buffer, WF_IAsyncOperation_uint32_t** out);
 
-/* Windows.Devices.Usb.UsbDevice.SendControlOutTransferAsync(setupPacket) */
 HRESULT wdeus_usb_device_send_control_out_transfer_async(WDEUS_UsbDevice *self, WDEUS_UsbSetupPacket* setupPacket, WF_IAsyncOperation_uint32_t** out);
 
-/* Windows.Devices.Usb.UsbDevice.SendControlInTransferAsync(setupPacket, buffer) */
 HRESULT wdeus_usb_device_send_control_in_transfer_async_p_p_p(WDEUS_UsbDevice *self, WDEUS_UsbSetupPacket* setupPacket, WSTST_IBuffer* buffer, WF_IAsyncOperation_WSTST_IBuffer** out);
 
-/* Windows.Devices.Usb.UsbDevice.SendControlInTransferAsync(setupPacket) */
 HRESULT wdeus_usb_device_send_control_in_transfer_async(WDEUS_UsbDevice *self, WDEUS_UsbSetupPacket* setupPacket, WF_IAsyncOperation_WSTST_IBuffer** out);
 
-/* Windows.Devices.Usb.UsbDevice.get_DefaultInterface() */
 HRESULT wdeus_usb_device_get__default_interface(WDEUS_UsbDevice *self, WDEUS_UsbInterface** value);
 
-/* Windows.Devices.Usb.UsbDevice.get_DeviceDescriptor() */
 HRESULT wdeus_usb_device_get__device_descriptor(WDEUS_UsbDevice *self, WDEUS_UsbDeviceDescriptor** value);
 
-/* Windows.Devices.Usb.UsbDevice.get_Configuration() */
 HRESULT wdeus_usb_device_get__configuration(WDEUS_UsbDevice *self, WDEUS_UsbConfiguration** value);
 
-/* Windows.Devices.Usb.UsbDevice.Close() */
 HRESULT wdeus_usb_device_close(WDEUS_UsbDevice *self);
 
-/* Windows.Devices.Usb.UsbDevice.GetDeviceSelector(vendorId, productId, winUsbInterfaceClass) */
 HRESULT wdeus_usb_device_get_device_selector_u32_u32_g_u_i_d_str(uint32_t vendorId, uint32_t productId, GUID winUsbInterfaceClass, cwinrt_hstring *out);
 
-/* Windows.Devices.Usb.UsbDevice.GetDeviceSelector(winUsbInterfaceClass) */
 HRESULT wdeus_usb_device_get_device_selector(GUID winUsbInterfaceClass, cwinrt_hstring *out);
 
-/* Windows.Devices.Usb.UsbDevice.GetDeviceSelector(vendorId, productId) */
 HRESULT wdeus_usb_device_get_device_selector_u32_u32_str(uint32_t vendorId, uint32_t productId, cwinrt_hstring *out);
 
-/* Windows.Devices.Usb.UsbDevice.GetDeviceClassSelector(usbClass) */
 HRESULT wdeus_usb_device_get_device_class_selector(WDEUS_UsbDeviceClass* usbClass, cwinrt_hstring *out);
 
-/* Windows.Devices.Usb.UsbDevice.FromIdAsync(deviceId) */
 HRESULT wdeus_usb_device_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDEUS_UsbDevice** out);
 
-/* activate Windows.Devices.Usb.UsbDeviceClass */
 HRESULT wdeus_usb_device_class_new(WDEUS_UsbDeviceClass **out);
 
-/* Windows.Devices.Usb.UsbDeviceClass */
-/* Windows.Devices.Usb.UsbDeviceClass.get_ClassCode() */
 HRESULT wdeus_usb_device_class_get__class_code(WDEUS_UsbDeviceClass *self, uint8_t *value);
 
-/* Windows.Devices.Usb.UsbDeviceClass.put_ClassCode() */
 HRESULT wdeus_usb_device_class_put__class_code(WDEUS_UsbDeviceClass *self, uint8_t value);
 
-/* Windows.Devices.Usb.UsbDeviceClass.get_SubclassCode() */
 HRESULT wdeus_usb_device_class_get__subclass_code(WDEUS_UsbDeviceClass *self, uint8_t** value);
 
-/* Windows.Devices.Usb.UsbDeviceClass.put_SubclassCode() */
 HRESULT wdeus_usb_device_class_put__subclass_code(WDEUS_UsbDeviceClass *self, uint8_t* value);
 
-/* Windows.Devices.Usb.UsbDeviceClass.get_ProtocolCode() */
 HRESULT wdeus_usb_device_class_get__protocol_code(WDEUS_UsbDeviceClass *self, uint8_t** value);
 
-/* Windows.Devices.Usb.UsbDeviceClass.put_ProtocolCode() */
 HRESULT wdeus_usb_device_class_put__protocol_code(WDEUS_UsbDeviceClass *self, uint8_t* value);
 
-/* activate Windows.Devices.Usb.UsbDeviceClasses */
 HRESULT wdeus_usb_device_classes_new(WDEUS_UsbDeviceClasses **out);
 
-/* Windows.Devices.Usb.UsbDeviceClasses */
-/* Windows.Devices.Usb.UsbDeviceClasses.get_CdcControl() */
 HRESULT wdeus_usb_device_classes_get__cdc_control(WDEUS_UsbDeviceClass** value);
 
-/* Windows.Devices.Usb.UsbDeviceClasses.get_Physical() */
 HRESULT wdeus_usb_device_classes_get__physical(WDEUS_UsbDeviceClass** value);
 
-/* Windows.Devices.Usb.UsbDeviceClasses.get_PersonalHealthcare() */
 HRESULT wdeus_usb_device_classes_get__personal_healthcare(WDEUS_UsbDeviceClass** value);
 
-/* Windows.Devices.Usb.UsbDeviceClasses.get_ActiveSync() */
 HRESULT wdeus_usb_device_classes_get__active_sync(WDEUS_UsbDeviceClass** value);
 
-/* Windows.Devices.Usb.UsbDeviceClasses.get_PalmSync() */
 HRESULT wdeus_usb_device_classes_get__palm_sync(WDEUS_UsbDeviceClass** value);
 
-/* Windows.Devices.Usb.UsbDeviceClasses.get_DeviceFirmwareUpdate() */
 HRESULT wdeus_usb_device_classes_get__device_firmware_update(WDEUS_UsbDeviceClass** value);
 
-/* Windows.Devices.Usb.UsbDeviceClasses.get_Irda() */
 HRESULT wdeus_usb_device_classes_get__irda(WDEUS_UsbDeviceClass** value);
 
-/* Windows.Devices.Usb.UsbDeviceClasses.get_Measurement() */
 HRESULT wdeus_usb_device_classes_get__measurement(WDEUS_UsbDeviceClass** value);
 
-/* Windows.Devices.Usb.UsbDeviceClasses.get_VendorSpecific() */
 HRESULT wdeus_usb_device_classes_get__vendor_specific(WDEUS_UsbDeviceClass** value);
 
-/* activate Windows.Devices.Usb.UsbDeviceDescriptor */
 HRESULT wdeus_usb_device_descriptor_new(WDEUS_UsbDeviceDescriptor **out);
 
-/* Windows.Devices.Usb.UsbDeviceDescriptor */
-/* Windows.Devices.Usb.UsbDeviceDescriptor.get_BcdUsb() */
 HRESULT wdeus_usb_device_descriptor_get__bcd_usb(WDEUS_UsbDeviceDescriptor *self, uint32_t *value);
 
-/* Windows.Devices.Usb.UsbDeviceDescriptor.get_MaxPacketSize0() */
 HRESULT wdeus_usb_device_descriptor_get__max_packet_size0(WDEUS_UsbDeviceDescriptor *self, uint8_t *value);
 
-/* Windows.Devices.Usb.UsbDeviceDescriptor.get_VendorId() */
 HRESULT wdeus_usb_device_descriptor_get__vendor_id(WDEUS_UsbDeviceDescriptor *self, uint32_t *value);
 
-/* Windows.Devices.Usb.UsbDeviceDescriptor.get_ProductId() */
 HRESULT wdeus_usb_device_descriptor_get__product_id(WDEUS_UsbDeviceDescriptor *self, uint32_t *value);
 
-/* Windows.Devices.Usb.UsbDeviceDescriptor.get_BcdDeviceRevision() */
 HRESULT wdeus_usb_device_descriptor_get__bcd_device_revision(WDEUS_UsbDeviceDescriptor *self, uint32_t *value);
 
-/* Windows.Devices.Usb.UsbDeviceDescriptor.get_NumberOfConfigurations() */
 HRESULT wdeus_usb_device_descriptor_get__number_of_configurations(WDEUS_UsbDeviceDescriptor *self, uint8_t *value);
 
-/* activate Windows.Devices.Usb.UsbEndpointDescriptor */
 HRESULT wdeus_usb_endpoint_descriptor_new(WDEUS_UsbEndpointDescriptor **out);
 
-/* Windows.Devices.Usb.UsbEndpointDescriptor */
-/* Windows.Devices.Usb.UsbEndpointDescriptor.get_EndpointNumber() */
 HRESULT wdeus_usb_endpoint_descriptor_get__endpoint_number(WDEUS_UsbEndpointDescriptor *self, uint8_t *value);
 
-/* Windows.Devices.Usb.UsbEndpointDescriptor.get_Direction() */
 HRESULT wdeus_usb_endpoint_descriptor_get__direction(WDEUS_UsbEndpointDescriptor *self, WDEUS_UsbTransferDirection *value);
 
-/* Windows.Devices.Usb.UsbEndpointDescriptor.get_EndpointType() */
 HRESULT wdeus_usb_endpoint_descriptor_get__endpoint_type(WDEUS_UsbEndpointDescriptor *self, WDEUS_UsbEndpointType *value);
 
-/* Windows.Devices.Usb.UsbEndpointDescriptor.get_AsBulkInEndpointDescriptor() */
 HRESULT wdeus_usb_endpoint_descriptor_get__as_bulk_in_endpoint_descriptor(WDEUS_UsbEndpointDescriptor *self, WDEUS_UsbBulkInEndpointDescriptor** value);
 
-/* Windows.Devices.Usb.UsbEndpointDescriptor.get_AsInterruptInEndpointDescriptor() */
 HRESULT wdeus_usb_endpoint_descriptor_get__as_interrupt_in_endpoint_descriptor(WDEUS_UsbEndpointDescriptor *self, WDEUS_UsbInterruptInEndpointDescriptor** value);
 
-/* Windows.Devices.Usb.UsbEndpointDescriptor.get_AsBulkOutEndpointDescriptor() */
 HRESULT wdeus_usb_endpoint_descriptor_get__as_bulk_out_endpoint_descriptor(WDEUS_UsbEndpointDescriptor *self, WDEUS_UsbBulkOutEndpointDescriptor** value);
 
-/* Windows.Devices.Usb.UsbEndpointDescriptor.get_AsInterruptOutEndpointDescriptor() */
 HRESULT wdeus_usb_endpoint_descriptor_get__as_interrupt_out_endpoint_descriptor(WDEUS_UsbEndpointDescriptor *self, WDEUS_UsbInterruptOutEndpointDescriptor** value);
 
-/* Windows.Devices.Usb.UsbEndpointDescriptor.TryParse(descriptor, parsed) */
 HRESULT wdeus_usb_endpoint_descriptor_try_parse(WDEUS_UsbDescriptor* descriptor, WDEUS_UsbEndpointDescriptor* parsed, BOOL *out);
 
-/* Windows.Devices.Usb.UsbEndpointDescriptor.Parse(descriptor) */
 HRESULT wdeus_usb_endpoint_descriptor_parse(WDEUS_UsbDescriptor* descriptor, WDEUS_UsbEndpointDescriptor** out);
 
-/* activate Windows.Devices.Usb.UsbInterface */
 HRESULT wdeus_usb_interface_new(WDEUS_UsbInterface **out);
 
-/* Windows.Devices.Usb.UsbInterface */
-/* Windows.Devices.Usb.UsbInterface.get_BulkInPipes() */
 HRESULT wdeus_usb_interface_get__bulk_in_pipes(WDEUS_UsbInterface *self, WFOCO_IVectorView_WDEUS_UsbBulkInPipe** value);
 
-/* Windows.Devices.Usb.UsbInterface.get_InterruptInPipes() */
 HRESULT wdeus_usb_interface_get__interrupt_in_pipes(WDEUS_UsbInterface *self, WFOCO_IVectorView_WDEUS_UsbInterruptInPipe** value);
 
-/* Windows.Devices.Usb.UsbInterface.get_BulkOutPipes() */
 HRESULT wdeus_usb_interface_get__bulk_out_pipes(WDEUS_UsbInterface *self, WFOCO_IVectorView_WDEUS_UsbBulkOutPipe** value);
 
-/* Windows.Devices.Usb.UsbInterface.get_InterruptOutPipes() */
 HRESULT wdeus_usb_interface_get__interrupt_out_pipes(WDEUS_UsbInterface *self, WFOCO_IVectorView_WDEUS_UsbInterruptOutPipe** value);
 
-/* Windows.Devices.Usb.UsbInterface.get_InterfaceSettings() */
 HRESULT wdeus_usb_interface_get__interface_settings(WDEUS_UsbInterface *self, WFOCO_IVectorView_WDEUS_UsbInterfaceSetting** value);
 
-/* Windows.Devices.Usb.UsbInterface.get_InterfaceNumber() */
 HRESULT wdeus_usb_interface_get__interface_number(WDEUS_UsbInterface *self, uint8_t *value);
 
-/* Windows.Devices.Usb.UsbInterface.get_Descriptors() */
 HRESULT wdeus_usb_interface_get__descriptors(WDEUS_UsbInterface *self, WFOCO_IVectorView_WDEUS_UsbDescriptor** value);
 
-/* activate Windows.Devices.Usb.UsbInterfaceDescriptor */
 HRESULT wdeus_usb_interface_descriptor_new(WDEUS_UsbInterfaceDescriptor **out);
 
-/* Windows.Devices.Usb.UsbInterfaceDescriptor */
-/* Windows.Devices.Usb.UsbInterfaceDescriptor.get_ClassCode() */
 HRESULT wdeus_usb_interface_descriptor_get__class_code(WDEUS_UsbInterfaceDescriptor *self, uint8_t *value);
 
-/* Windows.Devices.Usb.UsbInterfaceDescriptor.get_SubclassCode() */
 HRESULT wdeus_usb_interface_descriptor_get__subclass_code(WDEUS_UsbInterfaceDescriptor *self, uint8_t *value);
 
-/* Windows.Devices.Usb.UsbInterfaceDescriptor.get_ProtocolCode() */
 HRESULT wdeus_usb_interface_descriptor_get__protocol_code(WDEUS_UsbInterfaceDescriptor *self, uint8_t *value);
 
-/* Windows.Devices.Usb.UsbInterfaceDescriptor.get_AlternateSettingNumber() */
 HRESULT wdeus_usb_interface_descriptor_get__alternate_setting_number(WDEUS_UsbInterfaceDescriptor *self, uint8_t *value);
 
-/* Windows.Devices.Usb.UsbInterfaceDescriptor.get_InterfaceNumber() */
 HRESULT wdeus_usb_interface_descriptor_get__interface_number(WDEUS_UsbInterfaceDescriptor *self, uint8_t *value);
 
-/* Windows.Devices.Usb.UsbInterfaceDescriptor.TryParse(descriptor, parsed) */
 HRESULT wdeus_usb_interface_descriptor_try_parse(WDEUS_UsbDescriptor* descriptor, WDEUS_UsbInterfaceDescriptor* parsed, BOOL *out);
 
-/* Windows.Devices.Usb.UsbInterfaceDescriptor.Parse(descriptor) */
 HRESULT wdeus_usb_interface_descriptor_parse(WDEUS_UsbDescriptor* descriptor, WDEUS_UsbInterfaceDescriptor** out);
 
-/* activate Windows.Devices.Usb.UsbInterfaceSetting */
 HRESULT wdeus_usb_interface_setting_new(WDEUS_UsbInterfaceSetting **out);
 
-/* Windows.Devices.Usb.UsbInterfaceSetting */
-/* Windows.Devices.Usb.UsbInterfaceSetting.get_BulkInEndpoints() */
 HRESULT wdeus_usb_interface_setting_get__bulk_in_endpoints(WDEUS_UsbInterfaceSetting *self, WFOCO_IVectorView_WDEUS_UsbBulkInEndpointDescriptor** value);
 
-/* Windows.Devices.Usb.UsbInterfaceSetting.get_InterruptInEndpoints() */
 HRESULT wdeus_usb_interface_setting_get__interrupt_in_endpoints(WDEUS_UsbInterfaceSetting *self, WFOCO_IVectorView_WDEUS_UsbInterruptInEndpointDescriptor** value);
 
-/* Windows.Devices.Usb.UsbInterfaceSetting.get_BulkOutEndpoints() */
 HRESULT wdeus_usb_interface_setting_get__bulk_out_endpoints(WDEUS_UsbInterfaceSetting *self, WFOCO_IVectorView_WDEUS_UsbBulkOutEndpointDescriptor** value);
 
-/* Windows.Devices.Usb.UsbInterfaceSetting.get_InterruptOutEndpoints() */
 HRESULT wdeus_usb_interface_setting_get__interrupt_out_endpoints(WDEUS_UsbInterfaceSetting *self, WFOCO_IVectorView_WDEUS_UsbInterruptOutEndpointDescriptor** value);
 
-/* Windows.Devices.Usb.UsbInterfaceSetting.get_Selected() */
 HRESULT wdeus_usb_interface_setting_get__selected(WDEUS_UsbInterfaceSetting *self, BOOL *value);
 
-/* Windows.Devices.Usb.UsbInterfaceSetting.SelectSettingAsync() */
 HRESULT wdeus_usb_interface_setting_select_setting_async(WDEUS_UsbInterfaceSetting *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.Usb.UsbInterfaceSetting.get_InterfaceDescriptor() */
 HRESULT wdeus_usb_interface_setting_get__interface_descriptor(WDEUS_UsbInterfaceSetting *self, WDEUS_UsbInterfaceDescriptor** value);
 
-/* Windows.Devices.Usb.UsbInterfaceSetting.get_Descriptors() */
 HRESULT wdeus_usb_interface_setting_get__descriptors(WDEUS_UsbInterfaceSetting *self, WFOCO_IVectorView_WDEUS_UsbDescriptor** value);
 
-/* activate Windows.Devices.Usb.UsbInterruptInEndpointDescriptor */
 HRESULT wdeus_usb_interrupt_in_endpoint_descriptor_new(WDEUS_UsbInterruptInEndpointDescriptor **out);
 
-/* Windows.Devices.Usb.UsbInterruptInEndpointDescriptor */
-/* Windows.Devices.Usb.UsbInterruptInEndpointDescriptor.get_MaxPacketSize() */
 HRESULT wdeus_usb_interrupt_in_endpoint_descriptor_get__max_packet_size(WDEUS_UsbInterruptInEndpointDescriptor *self, uint32_t *value);
 
-/* Windows.Devices.Usb.UsbInterruptInEndpointDescriptor.get_EndpointNumber() */
 HRESULT wdeus_usb_interrupt_in_endpoint_descriptor_get__endpoint_number(WDEUS_UsbInterruptInEndpointDescriptor *self, uint8_t *value);
 
-/* Windows.Devices.Usb.UsbInterruptInEndpointDescriptor.get_Interval() */
 HRESULT wdeus_usb_interrupt_in_endpoint_descriptor_get__interval(WDEUS_UsbInterruptInEndpointDescriptor *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Usb.UsbInterruptInEndpointDescriptor.get_Pipe() */
 HRESULT wdeus_usb_interrupt_in_endpoint_descriptor_get__pipe(WDEUS_UsbInterruptInEndpointDescriptor *self, WDEUS_UsbInterruptInPipe** value);
 
-/* activate Windows.Devices.Usb.UsbInterruptInEventArgs */
 HRESULT wdeus_usb_interrupt_in_event_args_new(WDEUS_UsbInterruptInEventArgs **out);
 
-/* Windows.Devices.Usb.UsbInterruptInEventArgs */
-/* Windows.Devices.Usb.UsbInterruptInEventArgs.get_InterruptData() */
 HRESULT wdeus_usb_interrupt_in_event_args_get__interrupt_data(WDEUS_UsbInterruptInEventArgs *self, WSTST_IBuffer** value);
 
-/* activate Windows.Devices.Usb.UsbInterruptInPipe */
 HRESULT wdeus_usb_interrupt_in_pipe_new(WDEUS_UsbInterruptInPipe **out);
 
-/* Windows.Devices.Usb.UsbInterruptInPipe */
-/* Windows.Devices.Usb.UsbInterruptInPipe.get_EndpointDescriptor() */
 HRESULT wdeus_usb_interrupt_in_pipe_get__endpoint_descriptor(WDEUS_UsbInterruptInPipe *self, WDEUS_UsbInterruptInEndpointDescriptor** value);
 
-/* Windows.Devices.Usb.UsbInterruptInPipe.ClearStallAsync() */
 HRESULT wdeus_usb_interrupt_in_pipe_clear_stall_async(WDEUS_UsbInterruptInPipe *self, WF_IAsyncAction** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdeus_usb_interrupt_in_pipe_on_data_received(WDEUS_UsbInterruptInPipe *self, cwinrt_event_fn fn, void *ctx);
 void wdeus_usb_interrupt_in_pipe_off_data_received(WDEUS_UsbInterruptInPipe *self, cwinrt_token token);
 
-/* activate Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor */
 HRESULT wdeus_usb_interrupt_out_endpoint_descriptor_new(WDEUS_UsbInterruptOutEndpointDescriptor **out);
 
-/* Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor */
-/* Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor.get_MaxPacketSize() */
 HRESULT wdeus_usb_interrupt_out_endpoint_descriptor_get__max_packet_size(WDEUS_UsbInterruptOutEndpointDescriptor *self, uint32_t *value);
 
-/* Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor.get_EndpointNumber() */
 HRESULT wdeus_usb_interrupt_out_endpoint_descriptor_get__endpoint_number(WDEUS_UsbInterruptOutEndpointDescriptor *self, uint8_t *value);
 
-/* Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor.get_Interval() */
 HRESULT wdeus_usb_interrupt_out_endpoint_descriptor_get__interval(WDEUS_UsbInterruptOutEndpointDescriptor *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor.get_Pipe() */
 HRESULT wdeus_usb_interrupt_out_endpoint_descriptor_get__pipe(WDEUS_UsbInterruptOutEndpointDescriptor *self, WDEUS_UsbInterruptOutPipe** value);
 
-/* activate Windows.Devices.Usb.UsbInterruptOutPipe */
 HRESULT wdeus_usb_interrupt_out_pipe_new(WDEUS_UsbInterruptOutPipe **out);
 
-/* Windows.Devices.Usb.UsbInterruptOutPipe */
-/* Windows.Devices.Usb.UsbInterruptOutPipe.get_EndpointDescriptor() */
 HRESULT wdeus_usb_interrupt_out_pipe_get__endpoint_descriptor(WDEUS_UsbInterruptOutPipe *self, WDEUS_UsbInterruptOutEndpointDescriptor** value);
 
-/* Windows.Devices.Usb.UsbInterruptOutPipe.ClearStallAsync() */
 HRESULT wdeus_usb_interrupt_out_pipe_clear_stall_async(WDEUS_UsbInterruptOutPipe *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.Usb.UsbInterruptOutPipe.put_WriteOptions() */
 HRESULT wdeus_usb_interrupt_out_pipe_put__write_options(WDEUS_UsbInterruptOutPipe *self, WDEUS_UsbWriteOptions value);
 
-/* Windows.Devices.Usb.UsbInterruptOutPipe.get_WriteOptions() */
 HRESULT wdeus_usb_interrupt_out_pipe_get__write_options(WDEUS_UsbInterruptOutPipe *self, WDEUS_UsbWriteOptions *value);
 
-/* Windows.Devices.Usb.UsbInterruptOutPipe.get_OutputStream() */
 HRESULT wdeus_usb_interrupt_out_pipe_get__output_stream(WDEUS_UsbInterruptOutPipe *self, WSTST_IOutputStream** value);
 
-/* activate Windows.Devices.Usb.UsbSetupPacket */
 HRESULT wdeus_usb_setup_packet_new(WDEUS_UsbSetupPacket **out);
 
-/* Windows.Devices.Usb.UsbSetupPacket */
-/* Windows.Devices.Usb.UsbSetupPacket.get_RequestType() */
 HRESULT wdeus_usb_setup_packet_get__request_type(WDEUS_UsbSetupPacket *self, WDEUS_UsbControlRequestType** value);
 
-/* Windows.Devices.Usb.UsbSetupPacket.put_RequestType() */
 HRESULT wdeus_usb_setup_packet_put__request_type(WDEUS_UsbSetupPacket *self, WDEUS_UsbControlRequestType* value);
 
-/* Windows.Devices.Usb.UsbSetupPacket.get_Request() */
 HRESULT wdeus_usb_setup_packet_get__request(WDEUS_UsbSetupPacket *self, uint8_t *value);
 
-/* Windows.Devices.Usb.UsbSetupPacket.put_Request() */
 HRESULT wdeus_usb_setup_packet_put__request(WDEUS_UsbSetupPacket *self, uint8_t value);
 
-/* Windows.Devices.Usb.UsbSetupPacket.get_Value() */
 HRESULT wdeus_usb_setup_packet_get__value(WDEUS_UsbSetupPacket *self, uint32_t *value);
 
-/* Windows.Devices.Usb.UsbSetupPacket.put_Value() */
 HRESULT wdeus_usb_setup_packet_put__value(WDEUS_UsbSetupPacket *self, uint32_t value);
 
-/* Windows.Devices.Usb.UsbSetupPacket.get_Index() */
 HRESULT wdeus_usb_setup_packet_get__index(WDEUS_UsbSetupPacket *self, uint32_t *value);
 
-/* Windows.Devices.Usb.UsbSetupPacket.put_Index() */
 HRESULT wdeus_usb_setup_packet_put__index(WDEUS_UsbSetupPacket *self, uint32_t value);
 
-/* Windows.Devices.Usb.UsbSetupPacket.get_Length() */
 HRESULT wdeus_usb_setup_packet_get__length(WDEUS_UsbSetupPacket *self, uint32_t *value);
 
-/* Windows.Devices.Usb.UsbSetupPacket.put_Length() */
 HRESULT wdeus_usb_setup_packet_put__length(WDEUS_UsbSetupPacket *self, uint32_t value);
 
-/* Windows.Devices.Usb.IUsbBulkInEndpointDescriptor */
-/* Windows.Devices.Usb.IUsbBulkInPipe */
-/* Windows.Devices.Usb.IUsbBulkOutEndpointDescriptor */
-/* Windows.Devices.Usb.IUsbBulkOutPipe */
-/* Windows.Devices.Usb.IUsbConfiguration */
-/* Windows.Devices.Usb.IUsbConfigurationDescriptor */
-/* Windows.Devices.Usb.IUsbControlRequestType */
-/* Windows.Devices.Usb.IUsbDescriptor */
-/* Windows.Devices.Usb.IUsbDevice */
-/* Windows.Devices.Usb.IUsbDeviceClass */
-/* Windows.Devices.Usb.IUsbDeviceDescriptor */
-/* Windows.Devices.Usb.IUsbEndpointDescriptor */
-/* Windows.Devices.Usb.IUsbInterface */
-/* Windows.Devices.Usb.IUsbInterfaceDescriptor */
-/* Windows.Devices.Usb.IUsbInterfaceSetting */
-/* Windows.Devices.Usb.IUsbInterruptInEndpointDescriptor */
-/* Windows.Devices.Usb.IUsbInterruptInEventArgs */
-/* Windows.Devices.Usb.IUsbInterruptInPipe */
-/* Windows.Devices.Usb.IUsbInterruptOutEndpointDescriptor */
-/* Windows.Devices.Usb.IUsbInterruptOutPipe */
-/* Windows.Devices.Usb.IUsbSetupPacket */
 #endif /* CWINRT_WINDOWS_DEVICES_USB_H */

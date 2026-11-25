@@ -10,7 +10,6 @@
 #include <inspectable.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Well-known value types (ABI layout) */
 typedef struct WF_Size { float Width; float Height; } WF_Size;
 typedef struct WF_Point { float X; float Y; } WF_Point;
 typedef struct WF_Rect { float X; float Y; float Width; float Height; } WF_Rect;
@@ -28,7 +27,6 @@ typedef enum WF_AsyncStatus {
 } WF_AsyncStatus;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WF_AsyncActionCompletedHandler WF_AsyncActionCompletedHandler;
 typedef struct WF_AsyncActionProgressHandler_1 WF_AsyncActionProgressHandler_1;
 typedef struct WF_AsyncActionWithProgressCompletedHandler_1 WF_AsyncActionWithProgressCompletedHandler_1;
@@ -71,7 +69,6 @@ typedef struct WF_IPropertyValue WF_IPropertyValue;
 typedef struct WF_IAsyncInfo WF_IAsyncInfo;
 typedef struct WF_IClosable WF_IClosable;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncActionWithProgress_Void
 #define CWINRT_FWD_WF_IAsyncActionWithProgress_Void
 typedef struct WF_IAsyncActionWithProgress_Void WF_IAsyncActionWithProgress_Void;
@@ -204,7 +201,6 @@ struct WF_EventRegistrationToken {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -345,728 +341,458 @@ static const IID CWINRT_IID_WF_IAsyncInfo CWINRT_MAYBE_UNUSED = { 0x00000036, 0x
 static const IID CWINRT_IID_WF_IClosable CWINRT_MAYBE_UNUSED = { 0x30D5A829, 0x7FA4, 0x4026, { 0x83, 0xBB, 0xD7, 0x5B, 0xAE, 0x4E, 0xA9, 0x9E } };
 #endif
 
-/* Methods */
-
-/* Windows.Foundation.AsyncActionCompletedHandler */
-/* Windows.Foundation.AsyncActionCompletedHandler.Invoke(asyncInfo, asyncStatus) */
 HRESULT wf_async_action_completed_handler_invoke(WF_AsyncActionCompletedHandler *self, WF_IAsyncAction* asyncInfo, WF_AsyncStatus asyncStatus);
 
-/* Windows.Foundation.AsyncActionProgressHandler`1 */
-/* Windows.Foundation.AsyncActionProgressHandler`1.Invoke(asyncInfo, progressInfo) */
 HRESULT wf_async_action_progress_handler_1_invoke(WF_AsyncActionProgressHandler_1 *self, WF_IAsyncActionWithProgress_Void* asyncInfo, void* progressInfo);
 
-/* Windows.Foundation.AsyncActionWithProgressCompletedHandler`1 */
-/* Windows.Foundation.AsyncActionWithProgressCompletedHandler`1.Invoke(asyncInfo, asyncStatus) */
 HRESULT wf_async_action_with_progress_completed_handler_1_invoke(WF_AsyncActionWithProgressCompletedHandler_1 *self, WF_IAsyncActionWithProgress_Void* asyncInfo, WF_AsyncStatus asyncStatus);
 
-/* Windows.Foundation.AsyncOperationCompletedHandler`1 */
-/* Windows.Foundation.AsyncOperationCompletedHandler`1.Invoke(asyncInfo, asyncStatus) */
 HRESULT wf_async_operation_completed_handler_1_invoke(WF_AsyncOperationCompletedHandler_1 *self, WF_IAsyncOperation_Void* asyncInfo, WF_AsyncStatus asyncStatus);
 
-/* Windows.Foundation.AsyncOperationProgressHandler`2 */
-/* Windows.Foundation.AsyncOperationProgressHandler`2.Invoke(asyncInfo, progressInfo) */
 HRESULT wf_async_operation_progress_handler_2_invoke(WF_AsyncOperationProgressHandler_2 *self, WF_IAsyncOperationWithProgress_Void_Void* asyncInfo, void* progressInfo);
 
-/* Windows.Foundation.AsyncOperationWithProgressCompletedHandler`2 */
-/* Windows.Foundation.AsyncOperationWithProgressCompletedHandler`2.Invoke(asyncInfo, asyncStatus) */
 HRESULT wf_async_operation_with_progress_completed_handler_2_invoke(WF_AsyncOperationWithProgressCompletedHandler_2 *self, WF_IAsyncOperationWithProgress_Void_Void* asyncInfo, WF_AsyncStatus asyncStatus);
 
-/* Windows.Foundation.TypedEventHandler`2 */
-/* Windows.Foundation.TypedEventHandler`2.Invoke(sender, args) */
 HRESULT wf_typed_event_handler_2_invoke(WF_TypedEventHandler_2 *self, void* sender, void* args);
 
-/* activate Windows.Foundation.Uri */
 HRESULT wf_uri_new(WF_Uri **out);
 
-/* Windows.Foundation.Uri */
-/* Windows.Foundation.Uri.get_AbsoluteUri() */
 HRESULT wf_uri_get__absolute_uri(WF_Uri *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.Uri.get_DisplayUri() */
 HRESULT wf_uri_get__display_uri(WF_Uri *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.Uri.get_Domain() */
 HRESULT wf_uri_get__domain(WF_Uri *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.Uri.get_Extension() */
 HRESULT wf_uri_get__extension(WF_Uri *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.Uri.get_Fragment() */
 HRESULT wf_uri_get__fragment(WF_Uri *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.Uri.get_Host() */
 HRESULT wf_uri_get__host(WF_Uri *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.Uri.get_Password() */
 HRESULT wf_uri_get__password(WF_Uri *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.Uri.get_Path() */
 HRESULT wf_uri_get__path(WF_Uri *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.Uri.get_Query() */
 HRESULT wf_uri_get__query(WF_Uri *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.Uri.get_QueryParsed() */
 HRESULT wf_uri_get__query_parsed(WF_Uri *self, WF_WwwFormUrlDecoder** value);
 
-/* Windows.Foundation.Uri.get_RawUri() */
 HRESULT wf_uri_get__raw_uri(WF_Uri *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.Uri.get_SchemeName() */
 HRESULT wf_uri_get__scheme_name(WF_Uri *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.Uri.get_UserName() */
 HRESULT wf_uri_get__user_name(WF_Uri *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.Uri.get_Port() */
 HRESULT wf_uri_get__port(WF_Uri *self, int32_t *value);
 
-/* Windows.Foundation.Uri.get_Suspicious() */
 HRESULT wf_uri_get__suspicious(WF_Uri *self, BOOL *value);
 
-/* Windows.Foundation.Uri.Equals(pUri) */
 HRESULT wf_uri_equals(WF_Uri *self, WF_Uri* pUri, BOOL *out);
 
-/* Windows.Foundation.Uri.CombineUri(relativeUri) */
 HRESULT wf_uri_combine_uri(WF_Uri *self, cwinrt_hstring relativeUri, WF_Uri** out);
 
-/* Windows.Foundation.Uri.get_AbsoluteCanonicalUri() */
 HRESULT wf_uri_get__absolute_canonical_uri(WF_Uri *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.Uri.get_DisplayIri() */
 HRESULT wf_uri_get__display_iri(WF_Uri *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.Uri.ToString() */
 HRESULT wf_uri_to_string(WF_Uri *self, cwinrt_hstring *out);
 
-/* Windows.Foundation.Uri.UnescapeComponent(toUnescape) */
 HRESULT wf_uri_unescape_component(cwinrt_hstring toUnescape, cwinrt_hstring *out);
 
-/* Windows.Foundation.Uri.EscapeComponent(toEscape) */
 HRESULT wf_uri_escape_component(cwinrt_hstring toEscape, cwinrt_hstring *out);
 
-/* activate Windows.Foundation.WwwFormUrlDecoder */
 HRESULT wf_www_form_url_decoder_new(WF_WwwFormUrlDecoder **out);
 
-/* Windows.Foundation.WwwFormUrlDecoder */
-/* Windows.Foundation.WwwFormUrlDecoder.GetFirstValueByName(name) */
 HRESULT wf_www_form_url_decoder_get_first_value_by_name(WF_WwwFormUrlDecoder *self, cwinrt_hstring name, cwinrt_hstring *out);
 
-/* Windows.Foundation.WwwFormUrlDecoder.First() */
 HRESULT wf_www_form_url_decoder_first(WF_WwwFormUrlDecoder *self, WFOCO_IIterator_WF_IWwwFormUrlDecoderEntry** out);
 
-/* Windows.Foundation.WwwFormUrlDecoder.GetAt(index) */
 HRESULT wf_www_form_url_decoder_get_at(WF_WwwFormUrlDecoder *self, uint32_t index, WF_IWwwFormUrlDecoderEntry** out);
 
-/* Windows.Foundation.WwwFormUrlDecoder.get_Size() */
 HRESULT wf_www_form_url_decoder_get__size(WF_WwwFormUrlDecoder *self, uint32_t *value);
 
-/* Windows.Foundation.WwwFormUrlDecoder.IndexOf(index) */
 HRESULT wf_www_form_url_decoder_index_of(WF_WwwFormUrlDecoder *self, WF_IWwwFormUrlDecoderEntry* value, uint32_t index, BOOL *out);
 
-/* Windows.Foundation.WwwFormUrlDecoder.GetMany(startIndex, items) */
 HRESULT wf_www_form_url_decoder_get_many(WF_WwwFormUrlDecoder *self, uint32_t startIndex, WF_IWwwFormUrlDecoderEntry *items, uint32_t items_len, uint32_t *out);
 
-/* activate Windows.Foundation.WwwFormUrlDecoderEntry */
 HRESULT wf_www_form_url_decoder_entry_new(WF_WwwFormUrlDecoderEntry **out);
 
-/* Windows.Foundation.WwwFormUrlDecoderEntry */
-/* Windows.Foundation.WwwFormUrlDecoderEntry.get_Name() */
 HRESULT wf_www_form_url_decoder_entry_get__name(WF_WwwFormUrlDecoderEntry *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.WwwFormUrlDecoderEntry.get_Value() */
 HRESULT wf_www_form_url_decoder_entry_get__value(WF_WwwFormUrlDecoderEntry *self, cwinrt_hstring *value);
 
-/* activate Windows.Foundation.MemoryBuffer */
 HRESULT wf_memory_buffer_new(WF_MemoryBuffer **out);
 
-/* Windows.Foundation.MemoryBuffer */
-/* Windows.Foundation.MemoryBuffer.CreateReference() */
 HRESULT wf_memory_buffer_create_reference(WF_MemoryBuffer *self, WF_IMemoryBufferReference** out);
 
-/* Windows.Foundation.MemoryBuffer.Close() */
 HRESULT wf_memory_buffer_close(WF_MemoryBuffer *self);
 
-/* Windows.Foundation.IWwwFormUrlDecoderRuntimeClassFactory */
-/* Windows.Foundation.IWwwFormUrlDecoderRuntimeClassFactory.CreateWwwFormUrlDecoder(query) */
 HRESULT wf_www_form_url_decoder_runtime_class_factory_create_www_form_url_decoder(WF_IWwwFormUrlDecoderRuntimeClassFactory *self, cwinrt_hstring query, WF_WwwFormUrlDecoder** out);
 
-/* Windows.Foundation.IUriRuntimeClassFactory */
-/* Windows.Foundation.IUriRuntimeClassFactory.CreateUri(uri) */
 HRESULT wf_uri_runtime_class_factory_create_uri(WF_IUriRuntimeClassFactory *self, cwinrt_hstring uri, WF_Uri** out);
 
-/* Windows.Foundation.IUriRuntimeClassFactory.CreateWithRelativeUri(baseUri, relativeUri) */
 HRESULT wf_uri_runtime_class_factory_create_with_relative_uri(WF_IUriRuntimeClassFactory *self, cwinrt_hstring baseUri, cwinrt_hstring relativeUri, WF_Uri** out);
 
-/* Windows.Foundation.IUriEscapeStatics */
-/* Windows.Foundation.IUriEscapeStatics.UnescapeComponent(toUnescape) */
 HRESULT wf_uri_escape_statics_unescape_component(WF_IUriEscapeStatics *self, cwinrt_hstring toUnescape, cwinrt_hstring *out);
 
-/* Windows.Foundation.IUriEscapeStatics.EscapeComponent(toEscape) */
 HRESULT wf_uri_escape_statics_escape_component(WF_IUriEscapeStatics *self, cwinrt_hstring toEscape, cwinrt_hstring *out);
 
-/* activate Windows.Foundation.Deferral */
 HRESULT wf_deferral_new(WF_Deferral **out);
 
-/* Windows.Foundation.Deferral */
-/* Windows.Foundation.Deferral.Complete() */
 HRESULT wf_deferral_complete(WF_Deferral *self);
 
-/* Windows.Foundation.Deferral.Close() */
 HRESULT wf_deferral_close(WF_Deferral *self);
 
-/* Windows.Foundation.DeferralCompletedHandler */
-/* Windows.Foundation.DeferralCompletedHandler.Invoke() */
 HRESULT wf_deferral_completed_handler_invoke(WF_DeferralCompletedHandler *self);
 
-/* Windows.Foundation.IReference`1 */
-/* Windows.Foundation.IReference`1.get_Value() */
 HRESULT wf_reference_1_get__value(WF_IReference_1 *self, void** value);
 
-/* Windows.Foundation.IReferenceArray`1 */
-/* Windows.Foundation.IReferenceArray`1.get_Value() */
 HRESULT wf_reference_array_1_get__value(WF_IReferenceArray_1 *self, void **value, uint32_t *value_len);
 
-/* Windows.Foundation.IPropertyValueStatics */
-/* Windows.Foundation.IPropertyValueStatics.CreateEmpty() */
 HRESULT wf_property_value_statics_create_empty(WF_IPropertyValueStatics *self, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateUInt8() */
 HRESULT wf_property_value_statics_create_u_int8(WF_IPropertyValueStatics *self, uint8_t value, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateInt16() */
 HRESULT wf_property_value_statics_create_int16(WF_IPropertyValueStatics *self, int16_t value, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateUInt16() */
 HRESULT wf_property_value_statics_create_u_int16(WF_IPropertyValueStatics *self, uint16_t value, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateInt32() */
 HRESULT wf_property_value_statics_create_int32(WF_IPropertyValueStatics *self, int32_t value, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateUInt32() */
 HRESULT wf_property_value_statics_create_u_int32(WF_IPropertyValueStatics *self, uint32_t value, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateInt64() */
 HRESULT wf_property_value_statics_create_int64(WF_IPropertyValueStatics *self, int64_t value, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateUInt64() */
 HRESULT wf_property_value_statics_create_u_int64(WF_IPropertyValueStatics *self, uint64_t value, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateSingle() */
 HRESULT wf_property_value_statics_create_single(WF_IPropertyValueStatics *self, float value, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateDouble() */
 HRESULT wf_property_value_statics_create_double(WF_IPropertyValueStatics *self, double value, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateChar16() */
 HRESULT wf_property_value_statics_create_char16(WF_IPropertyValueStatics *self, WCHAR value, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateBoolean() */
 HRESULT wf_property_value_statics_create_boolean(WF_IPropertyValueStatics *self, BOOL value, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateString() */
 HRESULT wf_property_value_statics_create_string(WF_IPropertyValueStatics *self, cwinrt_hstring value, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateInspectable() */
 HRESULT wf_property_value_statics_create_inspectable(WF_IPropertyValueStatics *self, IInspectable* value, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateGuid() */
 HRESULT wf_property_value_statics_create_guid(WF_IPropertyValueStatics *self, GUID value, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateDateTime() */
 HRESULT wf_property_value_statics_create_date_time(WF_IPropertyValueStatics *self, WF_DateTime value, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateTimeSpan() */
 HRESULT wf_property_value_statics_create_time_span(WF_IPropertyValueStatics *self, WF_TimeSpan value, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreatePoint() */
 HRESULT wf_property_value_statics_create_point(WF_IPropertyValueStatics *self, WF_Point value, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateSize() */
 HRESULT wf_property_value_statics_create_size(WF_IPropertyValueStatics *self, WF_Size value, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateRect() */
 HRESULT wf_property_value_statics_create_rect(WF_IPropertyValueStatics *self, WF_Rect value, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateUInt8Array() */
 HRESULT wf_property_value_statics_create_u_int8_array(WF_IPropertyValueStatics *self, uint8_t *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateInt16Array() */
 HRESULT wf_property_value_statics_create_int16_array(WF_IPropertyValueStatics *self, int16_t *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateUInt16Array() */
 HRESULT wf_property_value_statics_create_u_int16_array(WF_IPropertyValueStatics *self, uint16_t *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateInt32Array() */
 HRESULT wf_property_value_statics_create_int32_array(WF_IPropertyValueStatics *self, int32_t *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateUInt32Array() */
 HRESULT wf_property_value_statics_create_u_int32_array(WF_IPropertyValueStatics *self, uint32_t *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateInt64Array() */
 HRESULT wf_property_value_statics_create_int64_array(WF_IPropertyValueStatics *self, int64_t *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateUInt64Array() */
 HRESULT wf_property_value_statics_create_u_int64_array(WF_IPropertyValueStatics *self, uint64_t *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateSingleArray() */
 HRESULT wf_property_value_statics_create_single_array(WF_IPropertyValueStatics *self, float *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateDoubleArray() */
 HRESULT wf_property_value_statics_create_double_array(WF_IPropertyValueStatics *self, double *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateChar16Array() */
 HRESULT wf_property_value_statics_create_char16_array(WF_IPropertyValueStatics *self, WCHAR *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateBooleanArray() */
 HRESULT wf_property_value_statics_create_boolean_array(WF_IPropertyValueStatics *self, BOOL *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateStringArray() */
 HRESULT wf_property_value_statics_create_string_array(WF_IPropertyValueStatics *self, cwinrt_hstring *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateInspectableArray() */
 HRESULT wf_property_value_statics_create_inspectable_array(WF_IPropertyValueStatics *self, IInspectable *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateGuidArray() */
 HRESULT wf_property_value_statics_create_guid_array(WF_IPropertyValueStatics *self, GUID *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateDateTimeArray() */
 HRESULT wf_property_value_statics_create_date_time_array(WF_IPropertyValueStatics *self, WF_DateTime *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateTimeSpanArray() */
 HRESULT wf_property_value_statics_create_time_span_array(WF_IPropertyValueStatics *self, WF_TimeSpan *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreatePointArray() */
 HRESULT wf_property_value_statics_create_point_array(WF_IPropertyValueStatics *self, WF_Point *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateSizeArray() */
 HRESULT wf_property_value_statics_create_size_array(WF_IPropertyValueStatics *self, WF_Size *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.IPropertyValueStatics.CreateRectArray() */
 HRESULT wf_property_value_statics_create_rect_array(WF_IPropertyValueStatics *self, WF_Rect *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.IMemoryBufferReference */
-/* Windows.Foundation.IMemoryBufferReference.get_Capacity() */
 HRESULT wf_memory_buffer_reference_get__capacity(WF_IMemoryBufferReference *self, uint32_t *value);
 
-/* activate Windows.Foundation.PropertyValue */
 HRESULT wf_property_value_new(WF_PropertyValue **out);
 
-/* Windows.Foundation.PropertyValue */
-/* Windows.Foundation.PropertyValue.CreateEmpty() */
 HRESULT wf_property_value_create_empty(IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateUInt8() */
 HRESULT wf_property_value_create_u_int8(uint8_t value, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateInt16() */
 HRESULT wf_property_value_create_int16(int16_t value, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateUInt16() */
 HRESULT wf_property_value_create_u_int16(uint16_t value, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateInt32() */
 HRESULT wf_property_value_create_int32(int32_t value, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateUInt32() */
 HRESULT wf_property_value_create_u_int32(uint32_t value, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateInt64() */
 HRESULT wf_property_value_create_int64(int64_t value, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateUInt64() */
 HRESULT wf_property_value_create_u_int64(uint64_t value, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateSingle() */
 HRESULT wf_property_value_create_single(float value, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateDouble() */
 HRESULT wf_property_value_create_double(double value, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateChar16() */
 HRESULT wf_property_value_create_char16(WCHAR value, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateBoolean() */
 HRESULT wf_property_value_create_boolean(BOOL value, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateString() */
 HRESULT wf_property_value_create_string(cwinrt_hstring value, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateInspectable() */
 HRESULT wf_property_value_create_inspectable(IInspectable* value, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateGuid() */
 HRESULT wf_property_value_create_guid(GUID value, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateDateTime() */
 HRESULT wf_property_value_create_date_time(WF_DateTime value, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateTimeSpan() */
 HRESULT wf_property_value_create_time_span(WF_TimeSpan value, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreatePoint() */
 HRESULT wf_property_value_create_point(WF_Point value, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateSize() */
 HRESULT wf_property_value_create_size(WF_Size value, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateRect() */
 HRESULT wf_property_value_create_rect(WF_Rect value, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateUInt8Array() */
 HRESULT wf_property_value_create_u_int8_array(uint8_t *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateInt16Array() */
 HRESULT wf_property_value_create_int16_array(int16_t *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateUInt16Array() */
 HRESULT wf_property_value_create_u_int16_array(uint16_t *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateInt32Array() */
 HRESULT wf_property_value_create_int32_array(int32_t *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateUInt32Array() */
 HRESULT wf_property_value_create_u_int32_array(uint32_t *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateInt64Array() */
 HRESULT wf_property_value_create_int64_array(int64_t *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateUInt64Array() */
 HRESULT wf_property_value_create_u_int64_array(uint64_t *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateSingleArray() */
 HRESULT wf_property_value_create_single_array(float *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateDoubleArray() */
 HRESULT wf_property_value_create_double_array(double *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateChar16Array() */
 HRESULT wf_property_value_create_char16_array(WCHAR *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateBooleanArray() */
 HRESULT wf_property_value_create_boolean_array(BOOL *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateStringArray() */
 HRESULT wf_property_value_create_string_array(cwinrt_hstring *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateInspectableArray() */
 HRESULT wf_property_value_create_inspectable_array(IInspectable *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateGuidArray() */
 HRESULT wf_property_value_create_guid_array(GUID *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateDateTimeArray() */
 HRESULT wf_property_value_create_date_time_array(WF_DateTime *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateTimeSpanArray() */
 HRESULT wf_property_value_create_time_span_array(WF_TimeSpan *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreatePointArray() */
 HRESULT wf_property_value_create_point_array(WF_Point *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateSizeArray() */
 HRESULT wf_property_value_create_size_array(WF_Size *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.PropertyValue.CreateRectArray() */
 HRESULT wf_property_value_create_rect_array(WF_Rect *value, uint32_t value_len, IInspectable** out);
 
-/* Windows.Foundation.IMemoryBufferFactory */
-/* Windows.Foundation.IMemoryBufferFactory.Create(capacity) */
 HRESULT wf_memory_buffer_factory_create(WF_IMemoryBufferFactory *self, uint32_t capacity, WF_MemoryBuffer** out);
 
-/* Windows.Foundation.IGuidHelperStatics */
-/* Windows.Foundation.IGuidHelperStatics.CreateNewGuid() */
 HRESULT wf_guid_helper_statics_create_new_guid(WF_IGuidHelperStatics *self, GUID *out);
 
-/* Windows.Foundation.IGuidHelperStatics.get_Empty() */
 HRESULT wf_guid_helper_statics_get__empty(WF_IGuidHelperStatics *self, GUID *value);
 
-/* Windows.Foundation.IGuidHelperStatics.Equals(target) */
 HRESULT wf_guid_helper_statics_equals(WF_IGuidHelperStatics *self, void* target, void* value, BOOL *out);
 
-/* Windows.Foundation.IGetActivationFactory */
-/* Windows.Foundation.IGetActivationFactory.GetActivationFactory(activatableClassId) */
 HRESULT wf_get_activation_factory_get_activation_factory(WF_IGetActivationFactory *self, cwinrt_hstring activatableClassId, IInspectable** out);
 
-/* Windows.Foundation.IDeferralFactory */
-/* Windows.Foundation.IDeferralFactory.Create(handler) */
 HRESULT wf_deferral_factory_create(WF_IDeferralFactory *self, WF_DeferralCompletedHandler* handler, WF_Deferral** out);
 
-/* Windows.Foundation.IAsyncOperation`1 */
-/* Windows.Foundation.IAsyncOperation`1.put_Completed(handler) */
 HRESULT wf_async_operation_1_put__completed(WF_IAsyncOperation_1 *self, WF_AsyncOperationCompletedHandler_Void* handler);
 
-/* Windows.Foundation.IAsyncOperation`1.get_Completed() */
 HRESULT wf_async_operation_1_get__completed(WF_IAsyncOperation_1 *self, WF_AsyncOperationCompletedHandler_Void** value);
 
-/* Windows.Foundation.IAsyncOperation`1.GetResults() */
 HRESULT wf_async_operation_1_get_results(WF_IAsyncOperation_1 *self, void** out);
 
-/* Windows.Foundation.IAsyncOperationWithProgress`2 */
-/* Windows.Foundation.IAsyncOperationWithProgress`2.put_Progress(handler) */
 HRESULT wf_async_operation_with_progress_2_put__progress(WF_IAsyncOperationWithProgress_2 *self, WF_AsyncOperationProgressHandler_Void_Void* handler);
 
-/* Windows.Foundation.IAsyncOperationWithProgress`2.get_Progress() */
 HRESULT wf_async_operation_with_progress_2_get__progress(WF_IAsyncOperationWithProgress_2 *self, WF_AsyncOperationProgressHandler_Void_Void** value);
 
-/* Windows.Foundation.IAsyncOperationWithProgress`2.put_Completed(handler) */
 HRESULT wf_async_operation_with_progress_2_put__completed(WF_IAsyncOperationWithProgress_2 *self, WF_AsyncOperationWithProgressCompletedHandler_Void_Void* handler);
 
-/* Windows.Foundation.IAsyncOperationWithProgress`2.get_Completed() */
 HRESULT wf_async_operation_with_progress_2_get__completed(WF_IAsyncOperationWithProgress_2 *self, WF_AsyncOperationWithProgressCompletedHandler_Void_Void** value);
 
-/* Windows.Foundation.IAsyncOperationWithProgress`2.GetResults() */
 HRESULT wf_async_operation_with_progress_2_get_results(WF_IAsyncOperationWithProgress_2 *self, void** out);
 
-/* Windows.Foundation.IAsyncActionWithProgress`1 */
-/* Windows.Foundation.IAsyncActionWithProgress`1.put_Progress(handler) */
 HRESULT wf_async_action_with_progress_1_put__progress(WF_IAsyncActionWithProgress_1 *self, WF_AsyncActionProgressHandler_Void* handler);
 
-/* Windows.Foundation.IAsyncActionWithProgress`1.get_Progress() */
 HRESULT wf_async_action_with_progress_1_get__progress(WF_IAsyncActionWithProgress_1 *self, WF_AsyncActionProgressHandler_Void** value);
 
-/* Windows.Foundation.IAsyncActionWithProgress`1.put_Completed(handler) */
 HRESULT wf_async_action_with_progress_1_put__completed(WF_IAsyncActionWithProgress_1 *self, WF_AsyncActionWithProgressCompletedHandler_Void* handler);
 
-/* Windows.Foundation.IAsyncActionWithProgress`1.get_Completed() */
 HRESULT wf_async_action_with_progress_1_get__completed(WF_IAsyncActionWithProgress_1 *self, WF_AsyncActionWithProgressCompletedHandler_Void** value);
 
-/* Windows.Foundation.IAsyncActionWithProgress`1.GetResults() */
 HRESULT wf_async_action_with_progress_1_get_results(WF_IAsyncActionWithProgress_1 *self);
 
-/* Windows.Foundation.IAsyncAction */
-/* Windows.Foundation.IAsyncAction.put_Completed(handler) */
 HRESULT wf_async_action_put__completed(WF_IAsyncAction *self, WF_AsyncActionCompletedHandler* handler);
 
-/* Windows.Foundation.IAsyncAction.get_Completed() */
 HRESULT wf_async_action_get__completed(WF_IAsyncAction *self, WF_AsyncActionCompletedHandler** value);
 
-/* Windows.Foundation.IAsyncAction.GetResults() */
 HRESULT wf_async_action_get_results(WF_IAsyncAction *self);
 
-/* activate Windows.Foundation.GuidHelper */
 HRESULT wf_guid_new(WF_Guid **out);
 
-/* Windows.Foundation.GuidHelper */
-/* Windows.Foundation.GuidHelper.CreateNewGuid() */
 HRESULT wf_guid_create_new_guid(GUID *out);
 
-/* Windows.Foundation.GuidHelper.get_Empty() */
 HRESULT wf_guid_get__empty(GUID *value);
 
-/* Windows.Foundation.GuidHelper.Equals(target) */
 HRESULT wf_guid_equals(void* target, void* value, BOOL *out);
 
-/* Windows.Foundation.EventHandler`1 */
-/* Windows.Foundation.EventHandler`1.Invoke(sender, args) */
 HRESULT wf_event_handler_1_invoke(WF_EventHandler_1 *self, IInspectable* sender, void* args);
 
-/* Windows.Foundation.IUriRuntimeClass */
-/* Windows.Foundation.IUriRuntimeClass.get_AbsoluteUri() */
 HRESULT wf_uri_runtime_class_get__absolute_uri(WF_IUriRuntimeClass *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.IUriRuntimeClass.get_DisplayUri() */
 HRESULT wf_uri_runtime_class_get__display_uri(WF_IUriRuntimeClass *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.IUriRuntimeClass.get_Domain() */
 HRESULT wf_uri_runtime_class_get__domain(WF_IUriRuntimeClass *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.IUriRuntimeClass.get_Extension() */
 HRESULT wf_uri_runtime_class_get__extension(WF_IUriRuntimeClass *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.IUriRuntimeClass.get_Fragment() */
 HRESULT wf_uri_runtime_class_get__fragment(WF_IUriRuntimeClass *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.IUriRuntimeClass.get_Host() */
 HRESULT wf_uri_runtime_class_get__host(WF_IUriRuntimeClass *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.IUriRuntimeClass.get_Password() */
 HRESULT wf_uri_runtime_class_get__password(WF_IUriRuntimeClass *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.IUriRuntimeClass.get_Path() */
 HRESULT wf_uri_runtime_class_get__path(WF_IUriRuntimeClass *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.IUriRuntimeClass.get_Query() */
 HRESULT wf_uri_runtime_class_get__query(WF_IUriRuntimeClass *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.IUriRuntimeClass.get_QueryParsed() */
 HRESULT wf_uri_runtime_class_get__query_parsed(WF_IUriRuntimeClass *self, WF_WwwFormUrlDecoder** value);
 
-/* Windows.Foundation.IUriRuntimeClass.get_RawUri() */
 HRESULT wf_uri_runtime_class_get__raw_uri(WF_IUriRuntimeClass *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.IUriRuntimeClass.get_SchemeName() */
 HRESULT wf_uri_runtime_class_get__scheme_name(WF_IUriRuntimeClass *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.IUriRuntimeClass.get_UserName() */
 HRESULT wf_uri_runtime_class_get__user_name(WF_IUriRuntimeClass *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.IUriRuntimeClass.get_Port() */
 HRESULT wf_uri_runtime_class_get__port(WF_IUriRuntimeClass *self, int32_t *value);
 
-/* Windows.Foundation.IUriRuntimeClass.get_Suspicious() */
 HRESULT wf_uri_runtime_class_get__suspicious(WF_IUriRuntimeClass *self, BOOL *value);
 
-/* Windows.Foundation.IUriRuntimeClass.Equals(pUri) */
 HRESULT wf_uri_runtime_class_equals(WF_IUriRuntimeClass *self, WF_Uri* pUri, BOOL *out);
 
-/* Windows.Foundation.IUriRuntimeClass.CombineUri(relativeUri) */
 HRESULT wf_uri_runtime_class_combine_uri(WF_IUriRuntimeClass *self, cwinrt_hstring relativeUri, WF_Uri** out);
 
-/* Windows.Foundation.IUriRuntimeClassWithAbsoluteCanonicalUri */
-/* Windows.Foundation.IUriRuntimeClassWithAbsoluteCanonicalUri.get_AbsoluteCanonicalUri() */
 HRESULT wf_uri_runtime_class_with_absolute_canonical_uri_get__absolute_canonical_uri(WF_IUriRuntimeClassWithAbsoluteCanonicalUri *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.IUriRuntimeClassWithAbsoluteCanonicalUri.get_DisplayIri() */
 HRESULT wf_uri_runtime_class_with_absolute_canonical_uri_get__display_iri(WF_IUriRuntimeClassWithAbsoluteCanonicalUri *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.IStringable */
-/* Windows.Foundation.IStringable.ToString() */
 HRESULT wf_stringable_to_string(WF_IStringable *self, cwinrt_hstring *out);
 
-/* Windows.Foundation.IWwwFormUrlDecoderRuntimeClass */
-/* Windows.Foundation.IWwwFormUrlDecoderRuntimeClass.GetFirstValueByName(name) */
 HRESULT wf_www_form_url_decoder_runtime_class_get_first_value_by_name(WF_IWwwFormUrlDecoderRuntimeClass *self, cwinrt_hstring name, cwinrt_hstring *out);
 
-/* Windows.Foundation.IWwwFormUrlDecoderEntry */
-/* Windows.Foundation.IMemoryBuffer */
-/* Windows.Foundation.IDeferral */
-/* Windows.Foundation.IPropertyValue */
-/* Windows.Foundation.IPropertyValue.get_Type() */
 HRESULT wf_property_value_get__type(WF_IPropertyValue *self, WF_PropertyType *value);
 
-/* Windows.Foundation.IPropertyValue.get_IsNumericScalar() */
 HRESULT wf_property_value_get__is_numeric_scalar(WF_IPropertyValue *self, BOOL *value);
 
-/* Windows.Foundation.IPropertyValue.GetUInt8() */
 HRESULT wf_property_value_get_u_int8(WF_IPropertyValue *self, uint8_t *out);
 
-/* Windows.Foundation.IPropertyValue.GetInt16() */
 HRESULT wf_property_value_get_int16(WF_IPropertyValue *self, int16_t *out);
 
-/* Windows.Foundation.IPropertyValue.GetUInt16() */
 HRESULT wf_property_value_get_u_int16(WF_IPropertyValue *self, uint16_t *out);
 
-/* Windows.Foundation.IPropertyValue.GetInt32() */
 HRESULT wf_property_value_get_int32(WF_IPropertyValue *self, int32_t *out);
 
-/* Windows.Foundation.IPropertyValue.GetUInt32() */
 HRESULT wf_property_value_get_u_int32(WF_IPropertyValue *self, uint32_t *out);
 
-/* Windows.Foundation.IPropertyValue.GetInt64() */
 HRESULT wf_property_value_get_int64(WF_IPropertyValue *self, int64_t *out);
 
-/* Windows.Foundation.IPropertyValue.GetUInt64() */
 HRESULT wf_property_value_get_u_int64(WF_IPropertyValue *self, uint64_t *out);
 
-/* Windows.Foundation.IPropertyValue.GetSingle() */
 HRESULT wf_property_value_get_single(WF_IPropertyValue *self, float *out);
 
-/* Windows.Foundation.IPropertyValue.GetDouble() */
 HRESULT wf_property_value_get_double(WF_IPropertyValue *self, double *out);
 
-/* Windows.Foundation.IPropertyValue.GetChar16() */
 HRESULT wf_property_value_get_char16(WF_IPropertyValue *self, WCHAR *out);
 
-/* Windows.Foundation.IPropertyValue.GetBoolean() */
 HRESULT wf_property_value_get_boolean(WF_IPropertyValue *self, BOOL *out);
 
-/* Windows.Foundation.IPropertyValue.GetString() */
 HRESULT wf_property_value_get_string(WF_IPropertyValue *self, cwinrt_hstring *out);
 
-/* Windows.Foundation.IPropertyValue.GetGuid() */
 HRESULT wf_property_value_get_guid(WF_IPropertyValue *self, GUID *out);
 
-/* Windows.Foundation.IPropertyValue.GetDateTime() */
 HRESULT wf_property_value_get_date_time(WF_IPropertyValue *self, WF_DateTime *out);
 
-/* Windows.Foundation.IPropertyValue.GetTimeSpan() */
 HRESULT wf_property_value_get_time_span(WF_IPropertyValue *self, WF_TimeSpan *out);
 
-/* Windows.Foundation.IPropertyValue.GetPoint() */
 HRESULT wf_property_value_get_point(WF_IPropertyValue *self, WF_Point *out);
 
-/* Windows.Foundation.IPropertyValue.GetSize() */
 HRESULT wf_property_value_get_size(WF_IPropertyValue *self, WF_Size *out);
 
-/* Windows.Foundation.IPropertyValue.GetRect() */
 HRESULT wf_property_value_get_rect(WF_IPropertyValue *self, WF_Rect *out);
 
-/* Windows.Foundation.IPropertyValue.GetUInt8Array() */
 HRESULT wf_property_value_get_u_int8_array(WF_IPropertyValue *self, uint8_t *value, uint32_t value_len);
 
-/* Windows.Foundation.IPropertyValue.GetInt16Array() */
 HRESULT wf_property_value_get_int16_array(WF_IPropertyValue *self, int16_t *value, uint32_t value_len);
 
-/* Windows.Foundation.IPropertyValue.GetUInt16Array() */
 HRESULT wf_property_value_get_u_int16_array(WF_IPropertyValue *self, uint16_t *value, uint32_t value_len);
 
-/* Windows.Foundation.IPropertyValue.GetInt32Array() */
 HRESULT wf_property_value_get_int32_array(WF_IPropertyValue *self, int32_t *value, uint32_t value_len);
 
-/* Windows.Foundation.IPropertyValue.GetUInt32Array() */
 HRESULT wf_property_value_get_u_int32_array(WF_IPropertyValue *self, uint32_t *value, uint32_t value_len);
 
-/* Windows.Foundation.IPropertyValue.GetInt64Array() */
 HRESULT wf_property_value_get_int64_array(WF_IPropertyValue *self, int64_t *value, uint32_t value_len);
 
-/* Windows.Foundation.IPropertyValue.GetUInt64Array() */
 HRESULT wf_property_value_get_u_int64_array(WF_IPropertyValue *self, uint64_t *value, uint32_t value_len);
 
-/* Windows.Foundation.IPropertyValue.GetSingleArray() */
 HRESULT wf_property_value_get_single_array(WF_IPropertyValue *self, float *value, uint32_t value_len);
 
-/* Windows.Foundation.IPropertyValue.GetDoubleArray() */
 HRESULT wf_property_value_get_double_array(WF_IPropertyValue *self, double *value, uint32_t value_len);
 
-/* Windows.Foundation.IPropertyValue.GetChar16Array() */
 HRESULT wf_property_value_get_char16_array(WF_IPropertyValue *self, WCHAR *value, uint32_t value_len);
 
-/* Windows.Foundation.IPropertyValue.GetBooleanArray() */
 HRESULT wf_property_value_get_boolean_array(WF_IPropertyValue *self, BOOL *value, uint32_t value_len);
 
-/* Windows.Foundation.IPropertyValue.GetStringArray() */
 HRESULT wf_property_value_get_string_array(WF_IPropertyValue *self, cwinrt_hstring *value, uint32_t value_len);
 
-/* Windows.Foundation.IPropertyValue.GetInspectableArray() */
 HRESULT wf_property_value_get_inspectable_array(WF_IPropertyValue *self, IInspectable *value, uint32_t value_len);
 
-/* Windows.Foundation.IPropertyValue.GetGuidArray() */
 HRESULT wf_property_value_get_guid_array(WF_IPropertyValue *self, GUID *value, uint32_t value_len);
 
-/* Windows.Foundation.IPropertyValue.GetDateTimeArray() */
 HRESULT wf_property_value_get_date_time_array(WF_IPropertyValue *self, WF_DateTime *value, uint32_t value_len);
 
-/* Windows.Foundation.IPropertyValue.GetTimeSpanArray() */
 HRESULT wf_property_value_get_time_span_array(WF_IPropertyValue *self, WF_TimeSpan *value, uint32_t value_len);
 
-/* Windows.Foundation.IPropertyValue.GetPointArray() */
 HRESULT wf_property_value_get_point_array(WF_IPropertyValue *self, WF_Point *value, uint32_t value_len);
 
-/* Windows.Foundation.IPropertyValue.GetSizeArray() */
 HRESULT wf_property_value_get_size_array(WF_IPropertyValue *self, WF_Size *value, uint32_t value_len);
 
-/* Windows.Foundation.IPropertyValue.GetRectArray() */
 HRESULT wf_property_value_get_rect_array(WF_IPropertyValue *self, WF_Rect *value, uint32_t value_len);
 
-/* Windows.Foundation.IAsyncInfo */
-/* Windows.Foundation.IAsyncInfo.get_Id() */
 HRESULT wf_async_info_get__id(WF_IAsyncInfo *self, uint32_t *value);
 
-/* Windows.Foundation.IAsyncInfo.get_Status() */
 HRESULT wf_async_info_get__status(WF_IAsyncInfo *self, WF_AsyncStatus *value);
 
-/* Windows.Foundation.IAsyncInfo.get_ErrorCode() */
 HRESULT wf_async_info_get__error_code(WF_IAsyncInfo *self, HRESULT *value);
 
-/* Windows.Foundation.IAsyncInfo.Cancel() */
 HRESULT wf_async_info_cancel(WF_IAsyncInfo *self);
 
-/* Windows.Foundation.IAsyncInfo.Close() */
 HRESULT wf_async_info_close(WF_IAsyncInfo *self);
 
-/* Windows.Foundation.IClosable */
-/* Windows.Foundation.IClosable.Close() */
 HRESULT wf_closable_close(WF_IClosable *self);
 
 #endif /* CWINRT_WINDOWS_FOUNDATION_H */

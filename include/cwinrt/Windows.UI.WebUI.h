@@ -14,7 +14,6 @@
 #include <cwinrt/Windows.UI.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WAPAC_IBackgroundActivatedEventArgs
 #define CWINRT_FWD_WAPAC_IBackgroundActivatedEventArgs
 typedef struct WAPAC_IBackgroundActivatedEventArgs WAPAC_IBackgroundActivatedEventArgs;
@@ -563,7 +562,6 @@ typedef struct WSEAUWEPR_IWebAccountProviderOperation WSEAUWEPR_IWebAccountProvi
 typedef struct WSEAUWE_WebAuthenticationResult WSEAUWE_WebAuthenticationResult;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUIWE_ActivatedEventHandler WUIWE_ActivatedEventHandler;
 typedef struct WUIWE_ActivatedOperation WUIWE_ActivatedOperation;
 typedef struct WUIWE_BackgroundActivatedEventArgs WUIWE_BackgroundActivatedEventArgs;
@@ -650,7 +648,6 @@ typedef struct WUIWE_IWebUIView WUIWE_IWebUIView;
 typedef struct WUIWE_IActivatedEventArgsDeferral WUIWE_IActivatedEventArgsDeferral;
 typedef struct WUIWE_IActivatedDeferral WUIWE_IActivatedDeferral;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WAPAC_IActivatedEventArgs
 #define CWINRT_FWD_WAPAC_IActivatedEventArgs
 typedef struct WAPAC_IActivatedEventArgs WAPAC_IActivatedEventArgs;
@@ -1031,7 +1028,6 @@ typedef enum WUIWE_PrintContent {
 } WUIWE_PrintContent;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -1128,203 +1124,120 @@ static const IID CWINRT_IID_WUIWE_IActivatedEventArgsDeferral CWINRT_MAYBE_UNUSE
 static const IID CWINRT_IID_WUIWE_IActivatedDeferral CWINRT_MAYBE_UNUSED = { 0xC3BD1978, 0xA431, 0x49D8, { 0xA7, 0x6A, 0x39, 0x5A, 0x4E, 0x03, 0xDC, 0xF3 } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.WebUI.ActivatedEventHandler */
-/* Windows.UI.WebUI.ActivatedEventHandler.Invoke(sender, eventArgs) */
 HRESULT wuiwe_activated_event_handler_invoke(WUIWE_ActivatedEventHandler *self, IInspectable* sender, WAPAC_IActivatedEventArgs* eventArgs);
 
-/* activate Windows.UI.WebUI.ActivatedOperation */
 HRESULT wuiwe_activated_operation_new(WUIWE_ActivatedOperation **out);
 
-/* Windows.UI.WebUI.ActivatedOperation */
-/* Windows.UI.WebUI.ActivatedOperation.GetDeferral() */
 HRESULT wuiwe_activated_operation_get_deferral(WUIWE_ActivatedOperation *self, WUIWE_ActivatedDeferral** out);
 
-/* activate Windows.UI.WebUI.BackgroundActivatedEventArgs */
 HRESULT wuiwe_background_activated_event_args_new(WUIWE_BackgroundActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.BackgroundActivatedEventArgs */
-/* Windows.UI.WebUI.BackgroundActivatedEventArgs.get_TaskInstance() */
 HRESULT wuiwe_background_activated_event_args_get__task_instance(WUIWE_BackgroundActivatedEventArgs *self, WAPBA_IBackgroundTaskInstance** value);
 
-/* Windows.UI.WebUI.BackgroundActivatedEventHandler */
-/* Windows.UI.WebUI.BackgroundActivatedEventHandler.Invoke(sender, eventArgs) */
 HRESULT wuiwe_background_activated_event_handler_invoke(WUIWE_BackgroundActivatedEventHandler *self, IInspectable* sender, WAPAC_IBackgroundActivatedEventArgs* eventArgs);
 
-/* activate Windows.UI.WebUI.EnteredBackgroundEventArgs */
 HRESULT wuiwe_entered_background_event_args_new(WUIWE_EnteredBackgroundEventArgs **out);
 
-/* Windows.UI.WebUI.EnteredBackgroundEventArgs */
-/* Windows.UI.WebUI.EnteredBackgroundEventArgs.GetDeferral() */
 HRESULT wuiwe_entered_background_event_args_get_deferral(WUIWE_EnteredBackgroundEventArgs *self, WF_Deferral** out);
 
-/* Windows.UI.WebUI.EnteredBackgroundEventHandler */
-/* Windows.UI.WebUI.EnteredBackgroundEventHandler.Invoke(sender, e) */
 HRESULT wuiwe_entered_background_event_handler_invoke(WUIWE_EnteredBackgroundEventHandler *self, IInspectable* sender, WAM_IEnteredBackgroundEventArgs* e);
 
-/* activate Windows.UI.WebUI.HtmlPrintDocumentSource */
 HRESULT wuiwe_html_print_document_source_new(WUIWE_HtmlPrintDocumentSource **out);
 
-/* Windows.UI.WebUI.HtmlPrintDocumentSource */
-/* Windows.UI.WebUI.HtmlPrintDocumentSource.get_Content() */
 HRESULT wuiwe_html_print_document_source_get__content(WUIWE_HtmlPrintDocumentSource *self, WUIWE_PrintContent *value);
 
-/* Windows.UI.WebUI.HtmlPrintDocumentSource.put_Content() */
 HRESULT wuiwe_html_print_document_source_put__content(WUIWE_HtmlPrintDocumentSource *self, WUIWE_PrintContent value);
 
-/* Windows.UI.WebUI.HtmlPrintDocumentSource.get_LeftMargin() */
 HRESULT wuiwe_html_print_document_source_get__left_margin(WUIWE_HtmlPrintDocumentSource *self, float *value);
 
-/* Windows.UI.WebUI.HtmlPrintDocumentSource.put_LeftMargin() */
 HRESULT wuiwe_html_print_document_source_put__left_margin(WUIWE_HtmlPrintDocumentSource *self, float value);
 
-/* Windows.UI.WebUI.HtmlPrintDocumentSource.get_TopMargin() */
 HRESULT wuiwe_html_print_document_source_get__top_margin(WUIWE_HtmlPrintDocumentSource *self, float *value);
 
-/* Windows.UI.WebUI.HtmlPrintDocumentSource.put_TopMargin() */
 HRESULT wuiwe_html_print_document_source_put__top_margin(WUIWE_HtmlPrintDocumentSource *self, float value);
 
-/* Windows.UI.WebUI.HtmlPrintDocumentSource.get_RightMargin() */
 HRESULT wuiwe_html_print_document_source_get__right_margin(WUIWE_HtmlPrintDocumentSource *self, float *value);
 
-/* Windows.UI.WebUI.HtmlPrintDocumentSource.put_RightMargin() */
 HRESULT wuiwe_html_print_document_source_put__right_margin(WUIWE_HtmlPrintDocumentSource *self, float value);
 
-/* Windows.UI.WebUI.HtmlPrintDocumentSource.get_BottomMargin() */
 HRESULT wuiwe_html_print_document_source_get__bottom_margin(WUIWE_HtmlPrintDocumentSource *self, float *value);
 
-/* Windows.UI.WebUI.HtmlPrintDocumentSource.put_BottomMargin() */
 HRESULT wuiwe_html_print_document_source_put__bottom_margin(WUIWE_HtmlPrintDocumentSource *self, float value);
 
-/* Windows.UI.WebUI.HtmlPrintDocumentSource.get_EnableHeaderFooter() */
 HRESULT wuiwe_html_print_document_source_get__enable_header_footer(WUIWE_HtmlPrintDocumentSource *self, BOOL *value);
 
-/* Windows.UI.WebUI.HtmlPrintDocumentSource.put_EnableHeaderFooter() */
 HRESULT wuiwe_html_print_document_source_put__enable_header_footer(WUIWE_HtmlPrintDocumentSource *self, BOOL value);
 
-/* Windows.UI.WebUI.HtmlPrintDocumentSource.get_ShrinkToFit() */
 HRESULT wuiwe_html_print_document_source_get__shrink_to_fit(WUIWE_HtmlPrintDocumentSource *self, BOOL *value);
 
-/* Windows.UI.WebUI.HtmlPrintDocumentSource.put_ShrinkToFit() */
 HRESULT wuiwe_html_print_document_source_put__shrink_to_fit(WUIWE_HtmlPrintDocumentSource *self, BOOL value);
 
-/* Windows.UI.WebUI.HtmlPrintDocumentSource.get_PercentScale() */
 HRESULT wuiwe_html_print_document_source_get__percent_scale(WUIWE_HtmlPrintDocumentSource *self, float *value);
 
-/* Windows.UI.WebUI.HtmlPrintDocumentSource.put_PercentScale(scalePercent) */
 HRESULT wuiwe_html_print_document_source_put__percent_scale(WUIWE_HtmlPrintDocumentSource *self, float scalePercent);
 
-/* Windows.UI.WebUI.HtmlPrintDocumentSource.get_PageRange() */
 HRESULT wuiwe_html_print_document_source_get__page_range(WUIWE_HtmlPrintDocumentSource *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.HtmlPrintDocumentSource.TrySetPageRange(strPageRange) */
 HRESULT wuiwe_html_print_document_source_try_set_page_range(WUIWE_HtmlPrintDocumentSource *self, cwinrt_hstring strPageRange, BOOL *out);
 
-/* Windows.UI.WebUI.HtmlPrintDocumentSource.Close() */
 HRESULT wuiwe_html_print_document_source_close(WUIWE_HtmlPrintDocumentSource *self);
 
-/* Windows.UI.WebUI.IWebUIActivationStatics */
-/* Windows.UI.WebUI.IWebUIActivationStatics2 */
-/* Windows.UI.WebUI.IWebUIActivationStatics2.EnablePrelaunch() */
 HRESULT wuiwe_web_u_i_activation_statics_2_enable_prelaunch(WUIWE_IWebUIActivationStatics_2 *self, BOOL value);
 
-/* Windows.UI.WebUI.IWebUIActivationStatics3 */
-/* Windows.UI.WebUI.IWebUIActivationStatics3.RequestRestartAsync(launchArguments) */
 HRESULT wuiwe_web_u_i_activation_statics_3_request_restart_async(WUIWE_IWebUIActivationStatics_3 *self, cwinrt_hstring launchArguments, WF_IAsyncOperation_WAPCO_AppRestartFailureReason** out);
 
-/* Windows.UI.WebUI.IWebUIActivationStatics3.RequestRestartForUserAsync(user, launchArguments) */
 HRESULT wuiwe_web_u_i_activation_statics_3_request_restart_for_user_async(WUIWE_IWebUIActivationStatics_3 *self, WSY_User* user, cwinrt_hstring launchArguments, WF_IAsyncOperation_WAPCO_AppRestartFailureReason** out);
 
-/* Windows.UI.WebUI.IWebUIActivationStatics4 */
-/* Windows.UI.WebUI.IWebUIBackgroundTaskInstanceStatics */
-/* Windows.UI.WebUI.IWebUIBackgroundTaskInstanceStatics.get_Current() */
 HRESULT wuiwe_web_u_i_background_task_instance_statics_get__current(WUIWE_IWebUIBackgroundTaskInstanceStatics *self, WUIWE_IWebUIBackgroundTaskInstance** value);
 
-/* Windows.UI.WebUI.IWebUIViewStatics */
-/* Windows.UI.WebUI.IWebUIViewStatics.CreateAsync() */
 HRESULT wuiwe_web_u_i_view_statics_create_async(WUIWE_IWebUIViewStatics *self, WF_IAsyncOperation_WUIWE_WebUIView** out);
 
-/* Windows.UI.WebUI.IWebUIViewStatics.CreateAsync(uri) */
 HRESULT wuiwe_web_u_i_view_statics_create_async_p_p(WUIWE_IWebUIViewStatics *self, WF_Uri* uri, WF_IAsyncOperation_WUIWE_WebUIView** out);
 
-/* activate Windows.UI.WebUI.LeavingBackgroundEventArgs */
 HRESULT wuiwe_leaving_background_event_args_new(WUIWE_LeavingBackgroundEventArgs **out);
 
-/* Windows.UI.WebUI.LeavingBackgroundEventArgs */
-/* Windows.UI.WebUI.LeavingBackgroundEventArgs.GetDeferral() */
 HRESULT wuiwe_leaving_background_event_args_get_deferral(WUIWE_LeavingBackgroundEventArgs *self, WF_Deferral** out);
 
-/* Windows.UI.WebUI.LeavingBackgroundEventHandler */
-/* Windows.UI.WebUI.LeavingBackgroundEventHandler.Invoke(sender, e) */
 HRESULT wuiwe_leaving_background_event_handler_invoke(WUIWE_LeavingBackgroundEventHandler *self, IInspectable* sender, WAM_ILeavingBackgroundEventArgs* e);
 
-/* Windows.UI.WebUI.NavigatedEventHandler */
-/* Windows.UI.WebUI.NavigatedEventHandler.Invoke(sender, e) */
 HRESULT wuiwe_navigated_event_handler_invoke(WUIWE_NavigatedEventHandler *self, IInspectable* sender, WUIWE_IWebUINavigatedEventArgs* e);
 
-/* activate Windows.UI.WebUI.NewWebUIViewCreatedEventArgs */
 HRESULT wuiwe_new_web_u_i_view_created_event_args_new(WUIWE_NewWebUIViewCreatedEventArgs **out);
 
-/* Windows.UI.WebUI.NewWebUIViewCreatedEventArgs */
-/* Windows.UI.WebUI.NewWebUIViewCreatedEventArgs.get_WebUIView() */
 HRESULT wuiwe_new_web_u_i_view_created_event_args_get__web_u_i_view(WUIWE_NewWebUIViewCreatedEventArgs *self, WUIWE_WebUIView** value);
 
-/* Windows.UI.WebUI.NewWebUIViewCreatedEventArgs.get_ActivatedEventArgs() */
 HRESULT wuiwe_new_web_u_i_view_created_event_args_get__activated_event_args(WUIWE_NewWebUIViewCreatedEventArgs *self, WAPAC_IActivatedEventArgs** value);
 
-/* Windows.UI.WebUI.NewWebUIViewCreatedEventArgs.get_HasPendingNavigate() */
 HRESULT wuiwe_new_web_u_i_view_created_event_args_get__has_pending_navigate(WUIWE_NewWebUIViewCreatedEventArgs *self, BOOL *value);
 
-/* Windows.UI.WebUI.NewWebUIViewCreatedEventArgs.GetDeferral() */
 HRESULT wuiwe_new_web_u_i_view_created_event_args_get_deferral(WUIWE_NewWebUIViewCreatedEventArgs *self, WF_Deferral** out);
 
-/* Windows.UI.WebUI.ResumingEventHandler */
-/* Windows.UI.WebUI.ResumingEventHandler.Invoke(sender) */
 HRESULT wuiwe_resuming_event_handler_invoke(WUIWE_ResumingEventHandler *self, IInspectable* sender);
 
-/* activate Windows.UI.WebUI.SuspendingDeferral */
 HRESULT wuiwe_suspending_deferral_new(WUIWE_SuspendingDeferral **out);
 
-/* Windows.UI.WebUI.SuspendingDeferral */
-/* Windows.UI.WebUI.SuspendingDeferral.Complete() */
 HRESULT wuiwe_suspending_deferral_complete(WUIWE_SuspendingDeferral *self);
 
-/* activate Windows.UI.WebUI.SuspendingEventArgs */
 HRESULT wuiwe_suspending_event_args_new(WUIWE_SuspendingEventArgs **out);
 
-/* Windows.UI.WebUI.SuspendingEventArgs */
-/* Windows.UI.WebUI.SuspendingEventArgs.get_SuspendingOperation() */
 HRESULT wuiwe_suspending_event_args_get__suspending_operation(WUIWE_SuspendingEventArgs *self, WAM_SuspendingOperation** value);
 
-/* Windows.UI.WebUI.SuspendingEventHandler */
-/* Windows.UI.WebUI.SuspendingEventHandler.Invoke(sender, e) */
 HRESULT wuiwe_suspending_event_handler_invoke(WUIWE_SuspendingEventHandler *self, IInspectable* sender, WAM_ISuspendingEventArgs* e);
 
-/* activate Windows.UI.WebUI.SuspendingOperation */
 HRESULT wuiwe_suspending_operation_new(WUIWE_SuspendingOperation **out);
 
-/* Windows.UI.WebUI.SuspendingOperation */
-/* Windows.UI.WebUI.SuspendingOperation.GetDeferral() */
 HRESULT wuiwe_suspending_operation_get_deferral(WUIWE_SuspendingOperation *self, WAM_SuspendingDeferral** out);
 
-/* Windows.UI.WebUI.SuspendingOperation.get_Deadline() */
 HRESULT wuiwe_suspending_operation_get__deadline(WUIWE_SuspendingOperation *self, WF_DateTime *value);
 
-/* activate Windows.UI.WebUI.WebUIApplication */
 HRESULT wuiwe_web_u_i_application_new(WUIWE_WebUIApplication **out);
 
-/* Windows.UI.WebUI.WebUIApplication */
-/* Windows.UI.WebUI.WebUIApplication.RequestRestartAsync(launchArguments) */
 HRESULT wuiwe_web_u_i_application_request_restart_async(cwinrt_hstring launchArguments, WF_IAsyncOperation_WAPCO_AppRestartFailureReason** out);
 
-/* Windows.UI.WebUI.WebUIApplication.RequestRestartForUserAsync(user, launchArguments) */
 HRESULT wuiwe_web_u_i_application_request_restart_for_user_async(WSY_User* user, cwinrt_hstring launchArguments, WF_IAsyncOperation_WAPCO_AppRestartFailureReason** out);
 
-/* Windows.UI.WebUI.WebUIApplication.EnablePrelaunch() */
 HRESULT wuiwe_web_u_i_application_enable_prelaunch(BOOL value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiwe_web_u_i_application_on_new_web_u_i_view_created(WUIWE_WebUIApplication *self, cwinrt_event_fn fn, void *ctx);
@@ -1351,1188 +1264,763 @@ void wuiwe_web_u_i_application_off_resuming(WUIWE_WebUIApplication *self, cwinrt
 cwinrt_token wuiwe_web_u_i_application_on_navigated(WUIWE_WebUIApplication *self, cwinrt_event_fn fn, void *ctx);
 void wuiwe_web_u_i_application_off_navigated(WUIWE_WebUIApplication *self, cwinrt_token token);
 
-/* activate Windows.UI.WebUI.WebUIAppointmentsProviderAddAppointmentActivatedEventArgs */
 HRESULT wuiwe_web_u_i_appointments_provider_add_appointment_activated_event_a_new(WUIWE_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderAddAppointmentActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIAppointmentsProviderAddAppointmentActivatedEventArgs.get_AddAppointmentOperation() */
 HRESULT wuiwe_web_u_i_appointments_provider_add_appointment_activated_event_a_get__add_appointment_operation(WUIWE_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs *self, WAPAPAP_AddAppointmentOperation** value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderAddAppointmentActivatedEventArgs.get_Verb() */
 HRESULT wuiwe_web_u_i_appointments_provider_add_appointment_activated_event_a_get__verb(WUIWE_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderAddAppointmentActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_appointments_provider_add_appointment_activated_event_a_get__kind(WUIWE_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderAddAppointmentActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_appointments_provider_add_appointment_activated_event_a_get__previous_execution_state(WUIWE_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderAddAppointmentActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_appointments_provider_add_appointment_activated_event_a_get__splash_screen(WUIWE_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderAddAppointmentActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_appointments_provider_add_appointment_activated_event_a_get__activated_operation(WUIWE_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderAddAppointmentActivatedEventArgs.get_User() */
 HRESULT wuiwe_web_u_i_appointments_provider_add_appointment_activated_event_a_get__user(WUIWE_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.UI.WebUI.WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs */
 HRESULT wuiwe_web_u_i_appointments_provider_remove_appointment_activated_even_new(WUIWE_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs.get_RemoveAppointmentOperation() */
 HRESULT wuiwe_web_u_i_appointments_provider_remove_appointment_activated_even_get__remove_appointment_operation(WUIWE_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs *self, WAPAPAP_RemoveAppointmentOperation** value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs.get_Verb() */
 HRESULT wuiwe_web_u_i_appointments_provider_remove_appointment_activated_even_get__verb(WUIWE_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_appointments_provider_remove_appointment_activated_even_get__kind(WUIWE_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_appointments_provider_remove_appointment_activated_even_get__previous_execution_state(WUIWE_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_appointments_provider_remove_appointment_activated_even_get__splash_screen(WUIWE_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_appointments_provider_remove_appointment_activated_even_get__activated_operation(WUIWE_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs.get_User() */
 HRESULT wuiwe_web_u_i_appointments_provider_remove_appointment_activated_even_get__user(WUIWE_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.UI.WebUI.WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs */
 HRESULT wuiwe_web_u_i_appointments_provider_replace_appointment_activated_eve_new(WUIWE_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs.get_ReplaceAppointmentOperation() */
 HRESULT wuiwe_web_u_i_appointments_provider_replace_appointment_activated_eve_get__replace_appointment_operation(WUIWE_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs *self, WAPAPAP_ReplaceAppointmentOperation** value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs.get_Verb() */
 HRESULT wuiwe_web_u_i_appointments_provider_replace_appointment_activated_eve_get__verb(WUIWE_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_appointments_provider_replace_appointment_activated_eve_get__kind(WUIWE_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_appointments_provider_replace_appointment_activated_eve_get__previous_execution_state(WUIWE_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_appointments_provider_replace_appointment_activated_eve_get__splash_screen(WUIWE_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_appointments_provider_replace_appointment_activated_eve_get__activated_operation(WUIWE_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs.get_User() */
 HRESULT wuiwe_web_u_i_appointments_provider_replace_appointment_activated_eve_get__user(WUIWE_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs */
 HRESULT wuiwe_web_u_i_appointments_provider_show_appointment_details_activate_new(WUIWE_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs.get_InstanceStartDate() */
 HRESULT wuiwe_web_u_i_appointments_provider_show_appointment_details_activate_get__instance_start_date(WUIWE_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs *self, WF_DateTime** value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs.get_LocalId() */
 HRESULT wuiwe_web_u_i_appointments_provider_show_appointment_details_activate_get__local_id(WUIWE_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs.get_RoamingId() */
 HRESULT wuiwe_web_u_i_appointments_provider_show_appointment_details_activate_get__roaming_id(WUIWE_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs.get_Verb() */
 HRESULT wuiwe_web_u_i_appointments_provider_show_appointment_details_activate_get__verb(WUIWE_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_appointments_provider_show_appointment_details_activate_get__kind(WUIWE_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_appointments_provider_show_appointment_details_activate_get__previous_execution_state(WUIWE_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_appointments_provider_show_appointment_details_activate_get__splash_screen(WUIWE_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_appointments_provider_show_appointment_details_activate_get__activated_operation(WUIWE_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs.get_User() */
 HRESULT wuiwe_web_u_i_appointments_provider_show_appointment_details_activate_get__user(WUIWE_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.UI.WebUI.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs */
 HRESULT wuiwe_web_u_i_appointments_provider_show_time_frame_activated_event_a_new(WUIWE_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs.get_TimeToShow() */
 HRESULT wuiwe_web_u_i_appointments_provider_show_time_frame_activated_event_a_get__time_to_show(WUIWE_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs *self, WF_DateTime *value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs.get_Duration() */
 HRESULT wuiwe_web_u_i_appointments_provider_show_time_frame_activated_event_a_get__duration(WUIWE_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs *self, WF_TimeSpan *value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs.get_Verb() */
 HRESULT wuiwe_web_u_i_appointments_provider_show_time_frame_activated_event_a_get__verb(WUIWE_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_appointments_provider_show_time_frame_activated_event_a_get__kind(WUIWE_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_appointments_provider_show_time_frame_activated_event_a_get__previous_execution_state(WUIWE_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_appointments_provider_show_time_frame_activated_event_a_get__splash_screen(WUIWE_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_appointments_provider_show_time_frame_activated_event_a_get__activated_operation(WUIWE_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* Windows.UI.WebUI.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs.get_User() */
 HRESULT wuiwe_web_u_i_appointments_provider_show_time_frame_activated_event_a_get__user(WUIWE_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.UI.WebUI.WebUIBackgroundTaskInstance */
 HRESULT wuiwe_web_u_i_background_task_instance_new(WUIWE_WebUIBackgroundTaskInstance **out);
 
-/* Windows.UI.WebUI.WebUIBackgroundTaskInstance */
-/* Windows.UI.WebUI.WebUIBackgroundTaskInstance.get_Current() */
 HRESULT wuiwe_web_u_i_background_task_instance_get__current(WUIWE_IWebUIBackgroundTaskInstance** value);
 
-/* activate Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass */
 HRESULT wuiwe_web_u_i_background_task_instance_runtime_class_new(WUIWE_WebUIBackgroundTaskInstanceRuntimeClass **out);
 
-/* Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass */
-/* Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass.get_Succeeded() */
 HRESULT wuiwe_web_u_i_background_task_instance_runtime_class_get__succeeded(WUIWE_WebUIBackgroundTaskInstanceRuntimeClass *self, BOOL *value);
 
-/* Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass.put_Succeeded(succeeded) */
 HRESULT wuiwe_web_u_i_background_task_instance_runtime_class_put__succeeded(WUIWE_WebUIBackgroundTaskInstanceRuntimeClass *self, BOOL succeeded);
 
-/* Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass.get_InstanceId() */
 HRESULT wuiwe_web_u_i_background_task_instance_runtime_class_get__instance_id(WUIWE_WebUIBackgroundTaskInstanceRuntimeClass *self, GUID *value);
 
-/* Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass.get_Task() */
 HRESULT wuiwe_web_u_i_background_task_instance_runtime_class_get__task(WUIWE_WebUIBackgroundTaskInstanceRuntimeClass *self, WAPBA_BackgroundTaskRegistration** value);
 
-/* Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass.get_Progress() */
 HRESULT wuiwe_web_u_i_background_task_instance_runtime_class_get__progress(WUIWE_WebUIBackgroundTaskInstanceRuntimeClass *self, uint32_t *value);
 
-/* Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass.put_Progress() */
 HRESULT wuiwe_web_u_i_background_task_instance_runtime_class_put__progress(WUIWE_WebUIBackgroundTaskInstanceRuntimeClass *self, uint32_t value);
 
-/* Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass.get_TriggerDetails() */
 HRESULT wuiwe_web_u_i_background_task_instance_runtime_class_get__trigger_details(WUIWE_WebUIBackgroundTaskInstanceRuntimeClass *self, IInspectable** value);
 
-/* Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass.get_SuspendedCount() */
 HRESULT wuiwe_web_u_i_background_task_instance_runtime_class_get__suspended_count(WUIWE_WebUIBackgroundTaskInstanceRuntimeClass *self, uint32_t *value);
 
-/* Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass.GetDeferral() */
 HRESULT wuiwe_web_u_i_background_task_instance_runtime_class_get_deferral(WUIWE_WebUIBackgroundTaskInstanceRuntimeClass *self, WAPBA_BackgroundTaskDeferral** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiwe_web_u_i_background_task_instance_runtime_class_on_canceled(WUIWE_WebUIBackgroundTaskInstanceRuntimeClass *self, cwinrt_event_fn fn, void *ctx);
 void wuiwe_web_u_i_background_task_instance_runtime_class_off_canceled(WUIWE_WebUIBackgroundTaskInstanceRuntimeClass *self, cwinrt_token token);
 
-/* activate Windows.UI.WebUI.WebUIBarcodeScannerPreviewActivatedEventArgs */
 HRESULT wuiwe_web_u_i_barcode_scanner_preview_activated_event_args_new(WUIWE_WebUIBarcodeScannerPreviewActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIBarcodeScannerPreviewActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIBarcodeScannerPreviewActivatedEventArgs.get_ConnectionId() */
 HRESULT wuiwe_web_u_i_barcode_scanner_preview_activated_event_args_get__connection_id(WUIWE_WebUIBarcodeScannerPreviewActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIBarcodeScannerPreviewActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_barcode_scanner_preview_activated_event_args_get__kind(WUIWE_WebUIBarcodeScannerPreviewActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIBarcodeScannerPreviewActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_barcode_scanner_preview_activated_event_args_get__previous_execution_state(WUIWE_WebUIBarcodeScannerPreviewActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIBarcodeScannerPreviewActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_barcode_scanner_preview_activated_event_args_get__splash_screen(WUIWE_WebUIBarcodeScannerPreviewActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIBarcodeScannerPreviewActivatedEventArgs.get_User() */
 HRESULT wuiwe_web_u_i_barcode_scanner_preview_activated_event_args_get__user(WUIWE_WebUIBarcodeScannerPreviewActivatedEventArgs *self, WSY_User** value);
 
-/* Windows.UI.WebUI.WebUIBarcodeScannerPreviewActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_barcode_scanner_preview_activated_event_args_get__activated_operation(WUIWE_WebUIBarcodeScannerPreviewActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* activate Windows.UI.WebUI.WebUICachedFileUpdaterActivatedEventArgs */
 HRESULT wuiwe_web_u_i_cached_file_updater_activated_event_args_new(WUIWE_WebUICachedFileUpdaterActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUICachedFileUpdaterActivatedEventArgs */
-/* Windows.UI.WebUI.WebUICachedFileUpdaterActivatedEventArgs.get_CachedFileUpdaterUI() */
 HRESULT wuiwe_web_u_i_cached_file_updater_activated_event_args_get__cached_file_updater_u_i(WUIWE_WebUICachedFileUpdaterActivatedEventArgs *self, WSTPR_CachedFileUpdaterUI** value);
 
-/* Windows.UI.WebUI.WebUICachedFileUpdaterActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_cached_file_updater_activated_event_args_get__kind(WUIWE_WebUICachedFileUpdaterActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUICachedFileUpdaterActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_cached_file_updater_activated_event_args_get__previous_execution_state(WUIWE_WebUICachedFileUpdaterActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUICachedFileUpdaterActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_cached_file_updater_activated_event_args_get__splash_screen(WUIWE_WebUICachedFileUpdaterActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUICachedFileUpdaterActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_cached_file_updater_activated_event_args_get__activated_operation(WUIWE_WebUICachedFileUpdaterActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* Windows.UI.WebUI.WebUICachedFileUpdaterActivatedEventArgs.get_User() */
 HRESULT wuiwe_web_u_i_cached_file_updater_activated_event_args_get__user(WUIWE_WebUICachedFileUpdaterActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.UI.WebUI.WebUICameraSettingsActivatedEventArgs */
 HRESULT wuiwe_web_u_i_camera_settings_activated_event_args_new(WUIWE_WebUICameraSettingsActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUICameraSettingsActivatedEventArgs */
-/* Windows.UI.WebUI.WebUICameraSettingsActivatedEventArgs.get_VideoDeviceController() */
 HRESULT wuiwe_web_u_i_camera_settings_activated_event_args_get__video_device_controller(WUIWE_WebUICameraSettingsActivatedEventArgs *self, IInspectable** value);
 
-/* Windows.UI.WebUI.WebUICameraSettingsActivatedEventArgs.get_VideoDeviceExtension() */
 HRESULT wuiwe_web_u_i_camera_settings_activated_event_args_get__video_device_extension(WUIWE_WebUICameraSettingsActivatedEventArgs *self, IInspectable** value);
 
-/* Windows.UI.WebUI.WebUICameraSettingsActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_camera_settings_activated_event_args_get__kind(WUIWE_WebUICameraSettingsActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUICameraSettingsActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_camera_settings_activated_event_args_get__previous_execution_state(WUIWE_WebUICameraSettingsActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUICameraSettingsActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_camera_settings_activated_event_args_get__splash_screen(WUIWE_WebUICameraSettingsActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUICameraSettingsActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_camera_settings_activated_event_args_get__activated_operation(WUIWE_WebUICameraSettingsActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* activate Windows.UI.WebUI.WebUICommandLineActivatedEventArgs */
 HRESULT wuiwe_web_u_i_command_line_activated_event_args_new(WUIWE_WebUICommandLineActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUICommandLineActivatedEventArgs */
-/* Windows.UI.WebUI.WebUICommandLineActivatedEventArgs.get_Operation() */
 HRESULT wuiwe_web_u_i_command_line_activated_event_args_get__operation(WUIWE_WebUICommandLineActivatedEventArgs *self, WAPAC_CommandLineActivationOperation** value);
 
-/* Windows.UI.WebUI.WebUICommandLineActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_command_line_activated_event_args_get__kind(WUIWE_WebUICommandLineActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUICommandLineActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_command_line_activated_event_args_get__previous_execution_state(WUIWE_WebUICommandLineActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUICommandLineActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_command_line_activated_event_args_get__splash_screen(WUIWE_WebUICommandLineActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUICommandLineActivatedEventArgs.get_User() */
 HRESULT wuiwe_web_u_i_command_line_activated_event_args_get__user(WUIWE_WebUICommandLineActivatedEventArgs *self, WSY_User** value);
 
-/* Windows.UI.WebUI.WebUICommandLineActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_command_line_activated_event_args_get__activated_operation(WUIWE_WebUICommandLineActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* activate Windows.UI.WebUI.WebUIContactCallActivatedEventArgs */
 HRESULT wuiwe_web_u_i_contact_call_activated_event_args_new(WUIWE_WebUIContactCallActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIContactCallActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.get_ServiceId() */
 HRESULT wuiwe_web_u_i_contact_call_activated_event_args_get__service_id(WUIWE_WebUIContactCallActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.get_ServiceUserId() */
 HRESULT wuiwe_web_u_i_contact_call_activated_event_args_get__service_user_id(WUIWE_WebUIContactCallActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.get_Contact() */
 HRESULT wuiwe_web_u_i_contact_call_activated_event_args_get__contact(WUIWE_WebUIContactCallActivatedEventArgs *self, WAPCO_Contact** value);
 
-/* Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.get_Verb() */
 HRESULT wuiwe_web_u_i_contact_call_activated_event_args_get__verb(WUIWE_WebUIContactCallActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_contact_call_activated_event_args_get__kind(WUIWE_WebUIContactCallActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_contact_call_activated_event_args_get__previous_execution_state(WUIWE_WebUIContactCallActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_contact_call_activated_event_args_get__splash_screen(WUIWE_WebUIContactCallActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_contact_call_activated_event_args_get__activated_operation(WUIWE_WebUIContactCallActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* activate Windows.UI.WebUI.WebUIContactMapActivatedEventArgs */
 HRESULT wuiwe_web_u_i_contact_map_activated_event_args_new(WUIWE_WebUIContactMapActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIContactMapActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.get_Address() */
 HRESULT wuiwe_web_u_i_contact_map_activated_event_args_get__address(WUIWE_WebUIContactMapActivatedEventArgs *self, WAPCO_ContactAddress** value);
 
-/* Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.get_Contact() */
 HRESULT wuiwe_web_u_i_contact_map_activated_event_args_get__contact(WUIWE_WebUIContactMapActivatedEventArgs *self, WAPCO_Contact** value);
 
-/* Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.get_Verb() */
 HRESULT wuiwe_web_u_i_contact_map_activated_event_args_get__verb(WUIWE_WebUIContactMapActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_contact_map_activated_event_args_get__kind(WUIWE_WebUIContactMapActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_contact_map_activated_event_args_get__previous_execution_state(WUIWE_WebUIContactMapActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_contact_map_activated_event_args_get__splash_screen(WUIWE_WebUIContactMapActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_contact_map_activated_event_args_get__activated_operation(WUIWE_WebUIContactMapActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* activate Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs */
 HRESULT wuiwe_web_u_i_contact_message_activated_event_args_new(WUIWE_WebUIContactMessageActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.get_ServiceId() */
 HRESULT wuiwe_web_u_i_contact_message_activated_event_args_get__service_id(WUIWE_WebUIContactMessageActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.get_ServiceUserId() */
 HRESULT wuiwe_web_u_i_contact_message_activated_event_args_get__service_user_id(WUIWE_WebUIContactMessageActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.get_Contact() */
 HRESULT wuiwe_web_u_i_contact_message_activated_event_args_get__contact(WUIWE_WebUIContactMessageActivatedEventArgs *self, WAPCO_Contact** value);
 
-/* Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.get_Verb() */
 HRESULT wuiwe_web_u_i_contact_message_activated_event_args_get__verb(WUIWE_WebUIContactMessageActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_contact_message_activated_event_args_get__kind(WUIWE_WebUIContactMessageActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_contact_message_activated_event_args_get__previous_execution_state(WUIWE_WebUIContactMessageActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_contact_message_activated_event_args_get__splash_screen(WUIWE_WebUIContactMessageActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_contact_message_activated_event_args_get__activated_operation(WUIWE_WebUIContactMessageActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* activate Windows.UI.WebUI.WebUIContactPanelActivatedEventArgs */
 HRESULT wuiwe_web_u_i_contact_panel_activated_event_args_new(WUIWE_WebUIContactPanelActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIContactPanelActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIContactPanelActivatedEventArgs.get_ContactPanel() */
 HRESULT wuiwe_web_u_i_contact_panel_activated_event_args_get__contact_panel(WUIWE_WebUIContactPanelActivatedEventArgs *self, WAPCO_ContactPanel** value);
 
-/* Windows.UI.WebUI.WebUIContactPanelActivatedEventArgs.get_Contact() */
 HRESULT wuiwe_web_u_i_contact_panel_activated_event_args_get__contact(WUIWE_WebUIContactPanelActivatedEventArgs *self, WAPCO_Contact** value);
 
-/* Windows.UI.WebUI.WebUIContactPanelActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_contact_panel_activated_event_args_get__kind(WUIWE_WebUIContactPanelActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIContactPanelActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_contact_panel_activated_event_args_get__previous_execution_state(WUIWE_WebUIContactPanelActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIContactPanelActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_contact_panel_activated_event_args_get__splash_screen(WUIWE_WebUIContactPanelActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIContactPanelActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_contact_panel_activated_event_args_get__activated_operation(WUIWE_WebUIContactPanelActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* Windows.UI.WebUI.WebUIContactPanelActivatedEventArgs.get_User() */
 HRESULT wuiwe_web_u_i_contact_panel_activated_event_args_get__user(WUIWE_WebUIContactPanelActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs */
 HRESULT wuiwe_web_u_i_contact_picker_activated_event_args_new(WUIWE_WebUIContactPickerActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.get_ContactPickerUI() */
 HRESULT wuiwe_web_u_i_contact_picker_activated_event_args_get__contact_picker_u_i(WUIWE_WebUIContactPickerActivatedEventArgs *self, WAPCOPR_ContactPickerUI** value);
 
-/* Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_contact_picker_activated_event_args_get__kind(WUIWE_WebUIContactPickerActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_contact_picker_activated_event_args_get__previous_execution_state(WUIWE_WebUIContactPickerActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_contact_picker_activated_event_args_get__splash_screen(WUIWE_WebUIContactPickerActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_contact_picker_activated_event_args_get__activated_operation(WUIWE_WebUIContactPickerActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* activate Windows.UI.WebUI.WebUIContactPostActivatedEventArgs */
 HRESULT wuiwe_web_u_i_contact_post_activated_event_args_new(WUIWE_WebUIContactPostActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIContactPostActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.get_ServiceId() */
 HRESULT wuiwe_web_u_i_contact_post_activated_event_args_get__service_id(WUIWE_WebUIContactPostActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.get_ServiceUserId() */
 HRESULT wuiwe_web_u_i_contact_post_activated_event_args_get__service_user_id(WUIWE_WebUIContactPostActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.get_Contact() */
 HRESULT wuiwe_web_u_i_contact_post_activated_event_args_get__contact(WUIWE_WebUIContactPostActivatedEventArgs *self, WAPCO_Contact** value);
 
-/* Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.get_Verb() */
 HRESULT wuiwe_web_u_i_contact_post_activated_event_args_get__verb(WUIWE_WebUIContactPostActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_contact_post_activated_event_args_get__kind(WUIWE_WebUIContactPostActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_contact_post_activated_event_args_get__previous_execution_state(WUIWE_WebUIContactPostActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_contact_post_activated_event_args_get__splash_screen(WUIWE_WebUIContactPostActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_contact_post_activated_event_args_get__activated_operation(WUIWE_WebUIContactPostActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* activate Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs */
 HRESULT wuiwe_web_u_i_contact_video_call_activated_event_args_new(WUIWE_WebUIContactVideoCallActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.get_ServiceId() */
 HRESULT wuiwe_web_u_i_contact_video_call_activated_event_args_get__service_id(WUIWE_WebUIContactVideoCallActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.get_ServiceUserId() */
 HRESULT wuiwe_web_u_i_contact_video_call_activated_event_args_get__service_user_id(WUIWE_WebUIContactVideoCallActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.get_Contact() */
 HRESULT wuiwe_web_u_i_contact_video_call_activated_event_args_get__contact(WUIWE_WebUIContactVideoCallActivatedEventArgs *self, WAPCO_Contact** value);
 
-/* Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.get_Verb() */
 HRESULT wuiwe_web_u_i_contact_video_call_activated_event_args_get__verb(WUIWE_WebUIContactVideoCallActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_contact_video_call_activated_event_args_get__kind(WUIWE_WebUIContactVideoCallActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_contact_video_call_activated_event_args_get__previous_execution_state(WUIWE_WebUIContactVideoCallActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_contact_video_call_activated_event_args_get__splash_screen(WUIWE_WebUIContactVideoCallActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_contact_video_call_activated_event_args_get__activated_operation(WUIWE_WebUIContactVideoCallActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* activate Windows.UI.WebUI.WebUIDeviceActivatedEventArgs */
 HRESULT wuiwe_web_u_i_device_activated_event_args_new(WUIWE_WebUIDeviceActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIDeviceActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIDeviceActivatedEventArgs.get_DeviceInformationId() */
 HRESULT wuiwe_web_u_i_device_activated_event_args_get__device_information_id(WUIWE_WebUIDeviceActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIDeviceActivatedEventArgs.get_Verb() */
 HRESULT wuiwe_web_u_i_device_activated_event_args_get__verb(WUIWE_WebUIDeviceActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIDeviceActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_device_activated_event_args_get__kind(WUIWE_WebUIDeviceActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIDeviceActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_device_activated_event_args_get__previous_execution_state(WUIWE_WebUIDeviceActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIDeviceActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_device_activated_event_args_get__splash_screen(WUIWE_WebUIDeviceActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIDeviceActivatedEventArgs.get_CurrentlyShownApplicationViewId() */
 HRESULT wuiwe_web_u_i_device_activated_event_args_get__currently_shown_application_view_id(WUIWE_WebUIDeviceActivatedEventArgs *self, int32_t *value);
 
-/* Windows.UI.WebUI.WebUIDeviceActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_device_activated_event_args_get__activated_operation(WUIWE_WebUIDeviceActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* Windows.UI.WebUI.WebUIDeviceActivatedEventArgs.get_User() */
 HRESULT wuiwe_web_u_i_device_activated_event_args_get__user(WUIWE_WebUIDeviceActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.UI.WebUI.WebUIDevicePairingActivatedEventArgs */
 HRESULT wuiwe_web_u_i_device_pairing_activated_event_args_new(WUIWE_WebUIDevicePairingActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIDevicePairingActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIDevicePairingActivatedEventArgs.get_DeviceInformation() */
 HRESULT wuiwe_web_u_i_device_pairing_activated_event_args_get__device_information(WUIWE_WebUIDevicePairingActivatedEventArgs *self, WDEEN_DeviceInformation** value);
 
-/* Windows.UI.WebUI.WebUIDevicePairingActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_device_pairing_activated_event_args_get__kind(WUIWE_WebUIDevicePairingActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIDevicePairingActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_device_pairing_activated_event_args_get__previous_execution_state(WUIWE_WebUIDevicePairingActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIDevicePairingActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_device_pairing_activated_event_args_get__splash_screen(WUIWE_WebUIDevicePairingActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIDevicePairingActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_device_pairing_activated_event_args_get__activated_operation(WUIWE_WebUIDevicePairingActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* Windows.UI.WebUI.WebUIDevicePairingActivatedEventArgs.get_User() */
 HRESULT wuiwe_web_u_i_device_pairing_activated_event_args_get__user(WUIWE_WebUIDevicePairingActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs */
 HRESULT wuiwe_web_u_i_dial_receiver_activated_event_args_new(WUIWE_WebUIDialReceiverActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs.get_AppName() */
 HRESULT wuiwe_web_u_i_dial_receiver_activated_event_args_get__app_name(WUIWE_WebUIDialReceiverActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs.get_Arguments() */
 HRESULT wuiwe_web_u_i_dial_receiver_activated_event_args_get__arguments(WUIWE_WebUIDialReceiverActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs.get_TileId() */
 HRESULT wuiwe_web_u_i_dial_receiver_activated_event_args_get__tile_id(WUIWE_WebUIDialReceiverActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_dial_receiver_activated_event_args_get__kind(WUIWE_WebUIDialReceiverActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_dial_receiver_activated_event_args_get__previous_execution_state(WUIWE_WebUIDialReceiverActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_dial_receiver_activated_event_args_get__splash_screen(WUIWE_WebUIDialReceiverActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs.get_CurrentlyShownApplicationViewId() */
 HRESULT wuiwe_web_u_i_dial_receiver_activated_event_args_get__currently_shown_application_view_id(WUIWE_WebUIDialReceiverActivatedEventArgs *self, int32_t *value);
 
-/* Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_dial_receiver_activated_event_args_get__activated_operation(WUIWE_WebUIDialReceiverActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs.get_User() */
 HRESULT wuiwe_web_u_i_dial_receiver_activated_event_args_get__user(WUIWE_WebUIDialReceiverActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.UI.WebUI.WebUIFileActivatedEventArgs */
 HRESULT wuiwe_web_u_i_file_activated_event_args_new(WUIWE_WebUIFileActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIFileActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIFileActivatedEventArgs.get_Files() */
 HRESULT wuiwe_web_u_i_file_activated_event_args_get__files(WUIWE_WebUIFileActivatedEventArgs *self, WFOCO_IVectorView_WS_IStorageItem** value);
 
-/* Windows.UI.WebUI.WebUIFileActivatedEventArgs.get_Verb() */
 HRESULT wuiwe_web_u_i_file_activated_event_args_get__verb(WUIWE_WebUIFileActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIFileActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_file_activated_event_args_get__kind(WUIWE_WebUIFileActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIFileActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_file_activated_event_args_get__previous_execution_state(WUIWE_WebUIFileActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIFileActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_file_activated_event_args_get__splash_screen(WUIWE_WebUIFileActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIFileActivatedEventArgs.get_CurrentlyShownApplicationViewId() */
 HRESULT wuiwe_web_u_i_file_activated_event_args_get__currently_shown_application_view_id(WUIWE_WebUIFileActivatedEventArgs *self, int32_t *value);
 
-/* Windows.UI.WebUI.WebUIFileActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_file_activated_event_args_get__activated_operation(WUIWE_WebUIFileActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* Windows.UI.WebUI.WebUIFileActivatedEventArgs.get_NeighboringFilesQuery() */
 HRESULT wuiwe_web_u_i_file_activated_event_args_get__neighboring_files_query(WUIWE_WebUIFileActivatedEventArgs *self, WSTSE_StorageFileQueryResult** value);
 
-/* Windows.UI.WebUI.WebUIFileActivatedEventArgs.get_User() */
 HRESULT wuiwe_web_u_i_file_activated_event_args_get__user(WUIWE_WebUIFileActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.UI.WebUI.WebUIFileOpenPickerActivatedEventArgs */
 HRESULT wuiwe_web_u_i_file_open_picker_activated_event_args_new(WUIWE_WebUIFileOpenPickerActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIFileOpenPickerActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIFileOpenPickerActivatedEventArgs.get_FileOpenPickerUI() */
 HRESULT wuiwe_web_u_i_file_open_picker_activated_event_args_get__file_open_picker_u_i(WUIWE_WebUIFileOpenPickerActivatedEventArgs *self, WSTPIPR_FileOpenPickerUI** value);
 
-/* Windows.UI.WebUI.WebUIFileOpenPickerActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_file_open_picker_activated_event_args_get__kind(WUIWE_WebUIFileOpenPickerActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIFileOpenPickerActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_file_open_picker_activated_event_args_get__previous_execution_state(WUIWE_WebUIFileOpenPickerActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIFileOpenPickerActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_file_open_picker_activated_event_args_get__splash_screen(WUIWE_WebUIFileOpenPickerActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIFileOpenPickerActivatedEventArgs.get_CallerPackageFamilyName() */
 HRESULT wuiwe_web_u_i_file_open_picker_activated_event_args_get__caller_package_family_name(WUIWE_WebUIFileOpenPickerActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIFileOpenPickerActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_file_open_picker_activated_event_args_get__activated_operation(WUIWE_WebUIFileOpenPickerActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* Windows.UI.WebUI.WebUIFileOpenPickerActivatedEventArgs.get_User() */
 HRESULT wuiwe_web_u_i_file_open_picker_activated_event_args_get__user(WUIWE_WebUIFileOpenPickerActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.UI.WebUI.WebUIFileOpenPickerContinuationEventArgs */
 HRESULT wuiwe_web_u_i_file_open_picker_continuation_event_args_new(WUIWE_WebUIFileOpenPickerContinuationEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIFileOpenPickerContinuationEventArgs */
-/* Windows.UI.WebUI.WebUIFileOpenPickerContinuationEventArgs.get_Files() */
 HRESULT wuiwe_web_u_i_file_open_picker_continuation_event_args_get__files(WUIWE_WebUIFileOpenPickerContinuationEventArgs *self, WFOCO_IVectorView_WS_StorageFile** value);
 
-/* Windows.UI.WebUI.WebUIFileOpenPickerContinuationEventArgs.get_ContinuationData() */
 HRESULT wuiwe_web_u_i_file_open_picker_continuation_event_args_get__continuation_data(WUIWE_WebUIFileOpenPickerContinuationEventArgs *self, WFOCO_ValueSet** value);
 
-/* Windows.UI.WebUI.WebUIFileOpenPickerContinuationEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_file_open_picker_continuation_event_args_get__kind(WUIWE_WebUIFileOpenPickerContinuationEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIFileOpenPickerContinuationEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_file_open_picker_continuation_event_args_get__previous_execution_state(WUIWE_WebUIFileOpenPickerContinuationEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIFileOpenPickerContinuationEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_file_open_picker_continuation_event_args_get__splash_screen(WUIWE_WebUIFileOpenPickerContinuationEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIFileOpenPickerContinuationEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_file_open_picker_continuation_event_args_get__activated_operation(WUIWE_WebUIFileOpenPickerContinuationEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* Windows.UI.WebUI.WebUIFileOpenPickerContinuationEventArgs.get_User() */
 HRESULT wuiwe_web_u_i_file_open_picker_continuation_event_args_get__user(WUIWE_WebUIFileOpenPickerContinuationEventArgs *self, WSY_User** value);
 
-/* activate Windows.UI.WebUI.WebUIFileSavePickerActivatedEventArgs */
 HRESULT wuiwe_web_u_i_file_save_picker_activated_event_args_new(WUIWE_WebUIFileSavePickerActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIFileSavePickerActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIFileSavePickerActivatedEventArgs.get_FileSavePickerUI() */
 HRESULT wuiwe_web_u_i_file_save_picker_activated_event_args_get__file_save_picker_u_i(WUIWE_WebUIFileSavePickerActivatedEventArgs *self, WSTPIPR_FileSavePickerUI** value);
 
-/* Windows.UI.WebUI.WebUIFileSavePickerActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_file_save_picker_activated_event_args_get__kind(WUIWE_WebUIFileSavePickerActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIFileSavePickerActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_file_save_picker_activated_event_args_get__previous_execution_state(WUIWE_WebUIFileSavePickerActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIFileSavePickerActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_file_save_picker_activated_event_args_get__splash_screen(WUIWE_WebUIFileSavePickerActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIFileSavePickerActivatedEventArgs.get_CallerPackageFamilyName() */
 HRESULT wuiwe_web_u_i_file_save_picker_activated_event_args_get__caller_package_family_name(WUIWE_WebUIFileSavePickerActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIFileSavePickerActivatedEventArgs.get_EnterpriseId() */
 HRESULT wuiwe_web_u_i_file_save_picker_activated_event_args_get__enterprise_id(WUIWE_WebUIFileSavePickerActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIFileSavePickerActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_file_save_picker_activated_event_args_get__activated_operation(WUIWE_WebUIFileSavePickerActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* Windows.UI.WebUI.WebUIFileSavePickerActivatedEventArgs.get_User() */
 HRESULT wuiwe_web_u_i_file_save_picker_activated_event_args_get__user(WUIWE_WebUIFileSavePickerActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.UI.WebUI.WebUIFileSavePickerContinuationEventArgs */
 HRESULT wuiwe_web_u_i_file_save_picker_continuation_event_args_new(WUIWE_WebUIFileSavePickerContinuationEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIFileSavePickerContinuationEventArgs */
-/* Windows.UI.WebUI.WebUIFileSavePickerContinuationEventArgs.get_File() */
 HRESULT wuiwe_web_u_i_file_save_picker_continuation_event_args_get__file(WUIWE_WebUIFileSavePickerContinuationEventArgs *self, WS_StorageFile** value);
 
-/* Windows.UI.WebUI.WebUIFileSavePickerContinuationEventArgs.get_ContinuationData() */
 HRESULT wuiwe_web_u_i_file_save_picker_continuation_event_args_get__continuation_data(WUIWE_WebUIFileSavePickerContinuationEventArgs *self, WFOCO_ValueSet** value);
 
-/* Windows.UI.WebUI.WebUIFileSavePickerContinuationEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_file_save_picker_continuation_event_args_get__kind(WUIWE_WebUIFileSavePickerContinuationEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIFileSavePickerContinuationEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_file_save_picker_continuation_event_args_get__previous_execution_state(WUIWE_WebUIFileSavePickerContinuationEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIFileSavePickerContinuationEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_file_save_picker_continuation_event_args_get__splash_screen(WUIWE_WebUIFileSavePickerContinuationEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIFileSavePickerContinuationEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_file_save_picker_continuation_event_args_get__activated_operation(WUIWE_WebUIFileSavePickerContinuationEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* Windows.UI.WebUI.WebUIFileSavePickerContinuationEventArgs.get_User() */
 HRESULT wuiwe_web_u_i_file_save_picker_continuation_event_args_get__user(WUIWE_WebUIFileSavePickerContinuationEventArgs *self, WSY_User** value);
 
-/* activate Windows.UI.WebUI.WebUIFolderPickerContinuationEventArgs */
 HRESULT wuiwe_web_u_i_folder_picker_continuation_event_args_new(WUIWE_WebUIFolderPickerContinuationEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIFolderPickerContinuationEventArgs */
-/* Windows.UI.WebUI.WebUIFolderPickerContinuationEventArgs.get_Folder() */
 HRESULT wuiwe_web_u_i_folder_picker_continuation_event_args_get__folder(WUIWE_WebUIFolderPickerContinuationEventArgs *self, WS_StorageFolder** value);
 
-/* Windows.UI.WebUI.WebUIFolderPickerContinuationEventArgs.get_ContinuationData() */
 HRESULT wuiwe_web_u_i_folder_picker_continuation_event_args_get__continuation_data(WUIWE_WebUIFolderPickerContinuationEventArgs *self, WFOCO_ValueSet** value);
 
-/* Windows.UI.WebUI.WebUIFolderPickerContinuationEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_folder_picker_continuation_event_args_get__kind(WUIWE_WebUIFolderPickerContinuationEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIFolderPickerContinuationEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_folder_picker_continuation_event_args_get__previous_execution_state(WUIWE_WebUIFolderPickerContinuationEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIFolderPickerContinuationEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_folder_picker_continuation_event_args_get__splash_screen(WUIWE_WebUIFolderPickerContinuationEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIFolderPickerContinuationEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_folder_picker_continuation_event_args_get__activated_operation(WUIWE_WebUIFolderPickerContinuationEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* Windows.UI.WebUI.WebUIFolderPickerContinuationEventArgs.get_User() */
 HRESULT wuiwe_web_u_i_folder_picker_continuation_event_args_get__user(WUIWE_WebUIFolderPickerContinuationEventArgs *self, WSY_User** value);
 
-/* activate Windows.UI.WebUI.WebUILaunchActivatedEventArgs */
 HRESULT wuiwe_web_u_i_launch_activated_event_args_new(WUIWE_WebUILaunchActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUILaunchActivatedEventArgs */
-/* Windows.UI.WebUI.WebUILaunchActivatedEventArgs.get_Arguments() */
 HRESULT wuiwe_web_u_i_launch_activated_event_args_get__arguments(WUIWE_WebUILaunchActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUILaunchActivatedEventArgs.get_TileId() */
 HRESULT wuiwe_web_u_i_launch_activated_event_args_get__tile_id(WUIWE_WebUILaunchActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUILaunchActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_launch_activated_event_args_get__kind(WUIWE_WebUILaunchActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUILaunchActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_launch_activated_event_args_get__previous_execution_state(WUIWE_WebUILaunchActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUILaunchActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_launch_activated_event_args_get__splash_screen(WUIWE_WebUILaunchActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUILaunchActivatedEventArgs.get_PrelaunchActivated() */
 HRESULT wuiwe_web_u_i_launch_activated_event_args_get__prelaunch_activated(WUIWE_WebUILaunchActivatedEventArgs *self, BOOL *value);
 
-/* Windows.UI.WebUI.WebUILaunchActivatedEventArgs.get_CurrentlyShownApplicationViewId() */
 HRESULT wuiwe_web_u_i_launch_activated_event_args_get__currently_shown_application_view_id(WUIWE_WebUILaunchActivatedEventArgs *self, int32_t *value);
 
-/* Windows.UI.WebUI.WebUILaunchActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_launch_activated_event_args_get__activated_operation(WUIWE_WebUILaunchActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* Windows.UI.WebUI.WebUILaunchActivatedEventArgs.get_User() */
 HRESULT wuiwe_web_u_i_launch_activated_event_args_get__user(WUIWE_WebUILaunchActivatedEventArgs *self, WSY_User** value);
 
-/* Windows.UI.WebUI.WebUILaunchActivatedEventArgs.get_TileActivatedInfo() */
 HRESULT wuiwe_web_u_i_launch_activated_event_args_get__tile_activated_info(WUIWE_WebUILaunchActivatedEventArgs *self, WAPAC_TileActivatedInfo** value);
 
-/* activate Windows.UI.WebUI.WebUILockScreenActivatedEventArgs */
 HRESULT wuiwe_web_u_i_lock_screen_activated_event_args_new(WUIWE_WebUILockScreenActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUILockScreenActivatedEventArgs */
-/* Windows.UI.WebUI.WebUILockScreenActivatedEventArgs.get_Info() */
 HRESULT wuiwe_web_u_i_lock_screen_activated_event_args_get__info(WUIWE_WebUILockScreenActivatedEventArgs *self, IInspectable** value);
 
-/* Windows.UI.WebUI.WebUILockScreenActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_lock_screen_activated_event_args_get__kind(WUIWE_WebUILockScreenActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUILockScreenActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_lock_screen_activated_event_args_get__previous_execution_state(WUIWE_WebUILockScreenActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUILockScreenActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_lock_screen_activated_event_args_get__splash_screen(WUIWE_WebUILockScreenActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUILockScreenActivatedEventArgs.get_CurrentlyShownApplicationViewId() */
 HRESULT wuiwe_web_u_i_lock_screen_activated_event_args_get__currently_shown_application_view_id(WUIWE_WebUILockScreenActivatedEventArgs *self, int32_t *value);
 
-/* Windows.UI.WebUI.WebUILockScreenActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_lock_screen_activated_event_args_get__activated_operation(WUIWE_WebUILockScreenActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* Windows.UI.WebUI.WebUILockScreenActivatedEventArgs.get_User() */
 HRESULT wuiwe_web_u_i_lock_screen_activated_event_args_get__user(WUIWE_WebUILockScreenActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs */
 HRESULT wuiwe_web_u_i_lock_screen_call_activated_event_args_new(WUIWE_WebUILockScreenCallActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs */
-/* Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.get_CallUI() */
 HRESULT wuiwe_web_u_i_lock_screen_call_activated_event_args_get__call_u_i(WUIWE_WebUILockScreenCallActivatedEventArgs *self, WAPCA_LockScreenCallUI** value);
 
-/* Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.get_Arguments() */
 HRESULT wuiwe_web_u_i_lock_screen_call_activated_event_args_get__arguments(WUIWE_WebUILockScreenCallActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.get_TileId() */
 HRESULT wuiwe_web_u_i_lock_screen_call_activated_event_args_get__tile_id(WUIWE_WebUILockScreenCallActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_lock_screen_call_activated_event_args_get__kind(WUIWE_WebUILockScreenCallActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_lock_screen_call_activated_event_args_get__previous_execution_state(WUIWE_WebUILockScreenCallActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_lock_screen_call_activated_event_args_get__splash_screen(WUIWE_WebUILockScreenCallActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.get_CurrentlyShownApplicationViewId() */
 HRESULT wuiwe_web_u_i_lock_screen_call_activated_event_args_get__currently_shown_application_view_id(WUIWE_WebUILockScreenCallActivatedEventArgs *self, int32_t *value);
 
-/* Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_lock_screen_call_activated_event_args_get__activated_operation(WUIWE_WebUILockScreenCallActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* activate Windows.UI.WebUI.WebUILockScreenComponentActivatedEventArgs */
 HRESULT wuiwe_web_u_i_lock_screen_component_activated_event_args_new(WUIWE_WebUILockScreenComponentActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUILockScreenComponentActivatedEventArgs */
-/* Windows.UI.WebUI.WebUILockScreenComponentActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_lock_screen_component_activated_event_args_get__kind(WUIWE_WebUILockScreenComponentActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUILockScreenComponentActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_lock_screen_component_activated_event_args_get__previous_execution_state(WUIWE_WebUILockScreenComponentActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUILockScreenComponentActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_lock_screen_component_activated_event_args_get__splash_screen(WUIWE_WebUILockScreenComponentActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUILockScreenComponentActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_lock_screen_component_activated_event_args_get__activated_operation(WUIWE_WebUILockScreenComponentActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* activate Windows.UI.WebUI.WebUINavigatedDeferral */
 HRESULT wuiwe_web_u_i_navigated_deferral_new(WUIWE_WebUINavigatedDeferral **out);
 
-/* Windows.UI.WebUI.WebUINavigatedDeferral */
-/* Windows.UI.WebUI.WebUINavigatedDeferral.Complete() */
 HRESULT wuiwe_web_u_i_navigated_deferral_complete(WUIWE_WebUINavigatedDeferral *self);
 
-/* activate Windows.UI.WebUI.WebUINavigatedEventArgs */
 HRESULT wuiwe_web_u_i_navigated_event_args_new(WUIWE_WebUINavigatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUINavigatedEventArgs */
-/* Windows.UI.WebUI.WebUINavigatedEventArgs.get_NavigatedOperation() */
 HRESULT wuiwe_web_u_i_navigated_event_args_get__navigated_operation(WUIWE_WebUINavigatedEventArgs *self, WUIWE_WebUINavigatedOperation** value);
 
-/* activate Windows.UI.WebUI.WebUINavigatedOperation */
 HRESULT wuiwe_web_u_i_navigated_operation_new(WUIWE_WebUINavigatedOperation **out);
 
-/* Windows.UI.WebUI.WebUINavigatedOperation */
-/* Windows.UI.WebUI.WebUINavigatedOperation.GetDeferral() */
 HRESULT wuiwe_web_u_i_navigated_operation_get_deferral(WUIWE_WebUINavigatedOperation *self, WUIWE_WebUINavigatedDeferral** out);
 
-/* activate Windows.UI.WebUI.WebUIPhoneCallActivatedEventArgs */
 HRESULT wuiwe_web_u_i_phone_call_activated_event_args_new(WUIWE_WebUIPhoneCallActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIPhoneCallActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIPhoneCallActivatedEventArgs.get_LineId() */
 HRESULT wuiwe_web_u_i_phone_call_activated_event_args_get__line_id(WUIWE_WebUIPhoneCallActivatedEventArgs *self, GUID *value);
 
-/* Windows.UI.WebUI.WebUIPhoneCallActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_phone_call_activated_event_args_get__kind(WUIWE_WebUIPhoneCallActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIPhoneCallActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_phone_call_activated_event_args_get__previous_execution_state(WUIWE_WebUIPhoneCallActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIPhoneCallActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_phone_call_activated_event_args_get__splash_screen(WUIWE_WebUIPhoneCallActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIPhoneCallActivatedEventArgs.get_User() */
 HRESULT wuiwe_web_u_i_phone_call_activated_event_args_get__user(WUIWE_WebUIPhoneCallActivatedEventArgs *self, WSY_User** value);
 
-/* Windows.UI.WebUI.WebUIPhoneCallActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_phone_call_activated_event_args_get__activated_operation(WUIWE_WebUIPhoneCallActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* activate Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs */
 HRESULT wuiwe_web_u_i_print3_d_workflow_activated_event_args_new(WUIWE_WebUIPrint3DWorkflowActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.get_Workflow() */
 HRESULT wuiwe_web_u_i_print3_d_workflow_activated_event_args_get__workflow(WUIWE_WebUIPrint3DWorkflowActivatedEventArgs *self, WDEPREX_Print3DWorkflow** value);
 
-/* Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_print3_d_workflow_activated_event_args_get__kind(WUIWE_WebUIPrint3DWorkflowActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_print3_d_workflow_activated_event_args_get__previous_execution_state(WUIWE_WebUIPrint3DWorkflowActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_print3_d_workflow_activated_event_args_get__splash_screen(WUIWE_WebUIPrint3DWorkflowActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_print3_d_workflow_activated_event_args_get__activated_operation(WUIWE_WebUIPrint3DWorkflowActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* activate Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs */
 HRESULT wuiwe_web_u_i_print_task_settings_activated_event_args_new(WUIWE_WebUIPrintTaskSettingsActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.get_Configuration() */
 HRESULT wuiwe_web_u_i_print_task_settings_activated_event_args_get__configuration(WUIWE_WebUIPrintTaskSettingsActivatedEventArgs *self, WDEPREX_PrintTaskConfiguration** value);
 
-/* Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_print_task_settings_activated_event_args_get__kind(WUIWE_WebUIPrintTaskSettingsActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_print_task_settings_activated_event_args_get__previous_execution_state(WUIWE_WebUIPrintTaskSettingsActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_print_task_settings_activated_event_args_get__splash_screen(WUIWE_WebUIPrintTaskSettingsActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_print_task_settings_activated_event_args_get__activated_operation(WUIWE_WebUIPrintTaskSettingsActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* activate Windows.UI.WebUI.WebUIPrintWorkflowForegroundTaskActivatedEventArgs */
 HRESULT wuiwe_web_u_i_print_workflow_foreground_task_activated_event_args_new(WUIWE_WebUIPrintWorkflowForegroundTaskActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIPrintWorkflowForegroundTaskActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIPrintWorkflowForegroundTaskActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_print_workflow_foreground_task_activated_event_args_get__kind(WUIWE_WebUIPrintWorkflowForegroundTaskActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIPrintWorkflowForegroundTaskActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_print_workflow_foreground_task_activated_event_args_get__previous_execution_state(WUIWE_WebUIPrintWorkflowForegroundTaskActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIPrintWorkflowForegroundTaskActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_print_workflow_foreground_task_activated_event_args_get__splash_screen(WUIWE_WebUIPrintWorkflowForegroundTaskActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIPrintWorkflowForegroundTaskActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_print_workflow_foreground_task_activated_event_args_get__activated_operation(WUIWE_WebUIPrintWorkflowForegroundTaskActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* activate Windows.UI.WebUI.WebUIProtocolActivatedEventArgs */
 HRESULT wuiwe_web_u_i_protocol_activated_event_args_new(WUIWE_WebUIProtocolActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIProtocolActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIProtocolActivatedEventArgs.get_Uri() */
 HRESULT wuiwe_web_u_i_protocol_activated_event_args_get__uri(WUIWE_WebUIProtocolActivatedEventArgs *self, WF_Uri** value);
 
-/* Windows.UI.WebUI.WebUIProtocolActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_protocol_activated_event_args_get__kind(WUIWE_WebUIProtocolActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIProtocolActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_protocol_activated_event_args_get__previous_execution_state(WUIWE_WebUIProtocolActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIProtocolActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_protocol_activated_event_args_get__splash_screen(WUIWE_WebUIProtocolActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIProtocolActivatedEventArgs.get_CallerPackageFamilyName() */
 HRESULT wuiwe_web_u_i_protocol_activated_event_args_get__caller_package_family_name(WUIWE_WebUIProtocolActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIProtocolActivatedEventArgs.get_Data() */
 HRESULT wuiwe_web_u_i_protocol_activated_event_args_get__data(WUIWE_WebUIProtocolActivatedEventArgs *self, WFOCO_ValueSet** value);
 
-/* Windows.UI.WebUI.WebUIProtocolActivatedEventArgs.get_CurrentlyShownApplicationViewId() */
 HRESULT wuiwe_web_u_i_protocol_activated_event_args_get__currently_shown_application_view_id(WUIWE_WebUIProtocolActivatedEventArgs *self, int32_t *value);
 
-/* Windows.UI.WebUI.WebUIProtocolActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_protocol_activated_event_args_get__activated_operation(WUIWE_WebUIProtocolActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* Windows.UI.WebUI.WebUIProtocolActivatedEventArgs.get_User() */
 HRESULT wuiwe_web_u_i_protocol_activated_event_args_get__user(WUIWE_WebUIProtocolActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs */
 HRESULT wuiwe_web_u_i_protocol_for_results_activated_event_args_new(WUIWE_WebUIProtocolForResultsActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs.get_ProtocolForResultsOperation() */
 HRESULT wuiwe_web_u_i_protocol_for_results_activated_event_args_get__protocol_for_results_operation(WUIWE_WebUIProtocolForResultsActivatedEventArgs *self, WSY_ProtocolForResultsOperation** value);
 
-/* Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_protocol_for_results_activated_event_args_get__kind(WUIWE_WebUIProtocolForResultsActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_protocol_for_results_activated_event_args_get__previous_execution_state(WUIWE_WebUIProtocolForResultsActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_protocol_for_results_activated_event_args_get__splash_screen(WUIWE_WebUIProtocolForResultsActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs.get_Uri() */
 HRESULT wuiwe_web_u_i_protocol_for_results_activated_event_args_get__uri(WUIWE_WebUIProtocolForResultsActivatedEventArgs *self, WF_Uri** value);
 
-/* Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs.get_CallerPackageFamilyName() */
 HRESULT wuiwe_web_u_i_protocol_for_results_activated_event_args_get__caller_package_family_name(WUIWE_WebUIProtocolForResultsActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs.get_Data() */
 HRESULT wuiwe_web_u_i_protocol_for_results_activated_event_args_get__data(WUIWE_WebUIProtocolForResultsActivatedEventArgs *self, WFOCO_ValueSet** value);
 
-/* Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs.get_CurrentlyShownApplicationViewId() */
 HRESULT wuiwe_web_u_i_protocol_for_results_activated_event_args_get__currently_shown_application_view_id(WUIWE_WebUIProtocolForResultsActivatedEventArgs *self, int32_t *value);
 
-/* Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_protocol_for_results_activated_event_args_get__activated_operation(WUIWE_WebUIProtocolForResultsActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs.get_User() */
 HRESULT wuiwe_web_u_i_protocol_for_results_activated_event_args_get__user(WUIWE_WebUIProtocolForResultsActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.UI.WebUI.WebUIRestrictedLaunchActivatedEventArgs */
 HRESULT wuiwe_web_u_i_restricted_launch_activated_event_args_new(WUIWE_WebUIRestrictedLaunchActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIRestrictedLaunchActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIRestrictedLaunchActivatedEventArgs.get_SharedContext() */
 HRESULT wuiwe_web_u_i_restricted_launch_activated_event_args_get__shared_context(WUIWE_WebUIRestrictedLaunchActivatedEventArgs *self, IInspectable** value);
 
-/* Windows.UI.WebUI.WebUIRestrictedLaunchActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_restricted_launch_activated_event_args_get__kind(WUIWE_WebUIRestrictedLaunchActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIRestrictedLaunchActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_restricted_launch_activated_event_args_get__previous_execution_state(WUIWE_WebUIRestrictedLaunchActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIRestrictedLaunchActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_restricted_launch_activated_event_args_get__splash_screen(WUIWE_WebUIRestrictedLaunchActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIRestrictedLaunchActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_restricted_launch_activated_event_args_get__activated_operation(WUIWE_WebUIRestrictedLaunchActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* Windows.UI.WebUI.WebUIRestrictedLaunchActivatedEventArgs.get_User() */
 HRESULT wuiwe_web_u_i_restricted_launch_activated_event_args_get__user(WUIWE_WebUIRestrictedLaunchActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.UI.WebUI.WebUISearchActivatedEventArgs */
 HRESULT wuiwe_web_u_i_search_activated_event_args_new(WUIWE_WebUISearchActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUISearchActivatedEventArgs */
-/* Windows.UI.WebUI.WebUISearchActivatedEventArgs.get_QueryText() */
 HRESULT wuiwe_web_u_i_search_activated_event_args_get__query_text(WUIWE_WebUISearchActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUISearchActivatedEventArgs.get_Language() */
 HRESULT wuiwe_web_u_i_search_activated_event_args_get__language(WUIWE_WebUISearchActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUISearchActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_search_activated_event_args_get__kind(WUIWE_WebUISearchActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUISearchActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_search_activated_event_args_get__previous_execution_state(WUIWE_WebUISearchActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUISearchActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_search_activated_event_args_get__splash_screen(WUIWE_WebUISearchActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUISearchActivatedEventArgs.get_LinguisticDetails() */
 HRESULT wuiwe_web_u_i_search_activated_event_args_get__linguistic_details(WUIWE_WebUISearchActivatedEventArgs *self, WAPSE_SearchPaneQueryLinguisticDetails** value);
 
-/* Windows.UI.WebUI.WebUISearchActivatedEventArgs.get_CurrentlyShownApplicationViewId() */
 HRESULT wuiwe_web_u_i_search_activated_event_args_get__currently_shown_application_view_id(WUIWE_WebUISearchActivatedEventArgs *self, int32_t *value);
 
-/* Windows.UI.WebUI.WebUISearchActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_search_activated_event_args_get__activated_operation(WUIWE_WebUISearchActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* activate Windows.UI.WebUI.WebUIShareTargetActivatedEventArgs */
 HRESULT wuiwe_web_u_i_share_target_activated_event_args_new(WUIWE_WebUIShareTargetActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIShareTargetActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIShareTargetActivatedEventArgs.get_ShareOperation() */
 HRESULT wuiwe_web_u_i_share_target_activated_event_args_get__share_operation(WUIWE_WebUIShareTargetActivatedEventArgs *self, WAPDASH_ShareOperation** value);
 
-/* Windows.UI.WebUI.WebUIShareTargetActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_share_target_activated_event_args_get__kind(WUIWE_WebUIShareTargetActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIShareTargetActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_share_target_activated_event_args_get__previous_execution_state(WUIWE_WebUIShareTargetActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIShareTargetActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_share_target_activated_event_args_get__splash_screen(WUIWE_WebUIShareTargetActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIShareTargetActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_share_target_activated_event_args_get__activated_operation(WUIWE_WebUIShareTargetActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* Windows.UI.WebUI.WebUIShareTargetActivatedEventArgs.get_User() */
 HRESULT wuiwe_web_u_i_share_target_activated_event_args_get__user(WUIWE_WebUIShareTargetActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.UI.WebUI.WebUIStartupTaskActivatedEventArgs */
 HRESULT wuiwe_web_u_i_startup_task_activated_event_args_new(WUIWE_WebUIStartupTaskActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIStartupTaskActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIStartupTaskActivatedEventArgs.get_TaskId() */
 HRESULT wuiwe_web_u_i_startup_task_activated_event_args_get__task_id(WUIWE_WebUIStartupTaskActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIStartupTaskActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_startup_task_activated_event_args_get__kind(WUIWE_WebUIStartupTaskActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIStartupTaskActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_startup_task_activated_event_args_get__previous_execution_state(WUIWE_WebUIStartupTaskActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIStartupTaskActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_startup_task_activated_event_args_get__splash_screen(WUIWE_WebUIStartupTaskActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIStartupTaskActivatedEventArgs.get_User() */
 HRESULT wuiwe_web_u_i_startup_task_activated_event_args_get__user(WUIWE_WebUIStartupTaskActivatedEventArgs *self, WSY_User** value);
 
-/* Windows.UI.WebUI.WebUIStartupTaskActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_startup_task_activated_event_args_get__activated_operation(WUIWE_WebUIStartupTaskActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* activate Windows.UI.WebUI.WebUIToastNotificationActivatedEventArgs */
 HRESULT wuiwe_web_u_i_toast_notification_activated_event_args_new(WUIWE_WebUIToastNotificationActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIToastNotificationActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIToastNotificationActivatedEventArgs.get_Argument() */
 HRESULT wuiwe_web_u_i_toast_notification_activated_event_args_get__argument(WUIWE_WebUIToastNotificationActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIToastNotificationActivatedEventArgs.get_UserInput() */
 HRESULT wuiwe_web_u_i_toast_notification_activated_event_args_get__user_input(WUIWE_WebUIToastNotificationActivatedEventArgs *self, WFOCO_ValueSet** value);
 
-/* Windows.UI.WebUI.WebUIToastNotificationActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_toast_notification_activated_event_args_get__kind(WUIWE_WebUIToastNotificationActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIToastNotificationActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_toast_notification_activated_event_args_get__previous_execution_state(WUIWE_WebUIToastNotificationActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIToastNotificationActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_toast_notification_activated_event_args_get__splash_screen(WUIWE_WebUIToastNotificationActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIToastNotificationActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_toast_notification_activated_event_args_get__activated_operation(WUIWE_WebUIToastNotificationActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* Windows.UI.WebUI.WebUIToastNotificationActivatedEventArgs.get_User() */
 HRESULT wuiwe_web_u_i_toast_notification_activated_event_args_get__user(WUIWE_WebUIToastNotificationActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.UI.WebUI.WebUIUserDataAccountProviderActivatedEventArgs */
 HRESULT wuiwe_web_u_i_user_data_account_provider_activated_event_args_new(WUIWE_WebUIUserDataAccountProviderActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIUserDataAccountProviderActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIUserDataAccountProviderActivatedEventArgs.get_Operation() */
 HRESULT wuiwe_web_u_i_user_data_account_provider_activated_event_args_get__operation(WUIWE_WebUIUserDataAccountProviderActivatedEventArgs *self, WAPUSPR_IUserDataAccountProviderOperation** value);
 
-/* Windows.UI.WebUI.WebUIUserDataAccountProviderActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_user_data_account_provider_activated_event_args_get__kind(WUIWE_WebUIUserDataAccountProviderActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIUserDataAccountProviderActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_user_data_account_provider_activated_event_args_get__previous_execution_state(WUIWE_WebUIUserDataAccountProviderActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIUserDataAccountProviderActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_user_data_account_provider_activated_event_args_get__splash_screen(WUIWE_WebUIUserDataAccountProviderActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIUserDataAccountProviderActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_user_data_account_provider_activated_event_args_get__activated_operation(WUIWE_WebUIUserDataAccountProviderActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* activate Windows.UI.WebUI.WebUIView */
 HRESULT wuiwe_web_u_i_view_new(WUIWE_WebUIView **out);
 
-/* Windows.UI.WebUI.WebUIView */
-/* Windows.UI.WebUI.WebUIView.get_ApplicationViewId() */
 HRESULT wuiwe_web_u_i_view_get__application_view_id(WUIWE_WebUIView *self, int32_t *value);
 
-/* Windows.UI.WebUI.WebUIView.get_IgnoreApplicationContentUriRulesNavigationRestrictions() */
 HRESULT wuiwe_web_u_i_view_get__ignore_application_content_uri_rules_navigation_restrictions(WUIWE_WebUIView *self, BOOL *value);
 
-/* Windows.UI.WebUI.WebUIView.put_IgnoreApplicationContentUriRulesNavigationRestrictions() */
 HRESULT wuiwe_web_u_i_view_put__ignore_application_content_uri_rules_navigation_restrictions(WUIWE_WebUIView *self, BOOL value);
 
-/* Windows.UI.WebUI.WebUIView.get_Source() */
 HRESULT wuiwe_web_u_i_view_get__source(WUIWE_WebUIView *self, WF_Uri** value);
 
-/* Windows.UI.WebUI.WebUIView.put_Source(source) */
 HRESULT wuiwe_web_u_i_view_put__source(WUIWE_WebUIView *self, WF_Uri* source);
 
-/* Windows.UI.WebUI.WebUIView.get_DocumentTitle() */
 HRESULT wuiwe_web_u_i_view_get__document_title(WUIWE_WebUIView *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIView.get_CanGoBack() */
 HRESULT wuiwe_web_u_i_view_get__can_go_back(WUIWE_WebUIView *self, BOOL *value);
 
-/* Windows.UI.WebUI.WebUIView.get_CanGoForward() */
 HRESULT wuiwe_web_u_i_view_get__can_go_forward(WUIWE_WebUIView *self, BOOL *value);
 
-/* Windows.UI.WebUI.WebUIView.put_DefaultBackgroundColor() */
 HRESULT wuiwe_web_u_i_view_put__default_background_color(WUIWE_WebUIView *self, WUI_Color value);
 
-/* Windows.UI.WebUI.WebUIView.get_DefaultBackgroundColor() */
 HRESULT wuiwe_web_u_i_view_get__default_background_color(WUIWE_WebUIView *self, WUI_Color *value);
 
-/* Windows.UI.WebUI.WebUIView.get_ContainsFullScreenElement() */
 HRESULT wuiwe_web_u_i_view_get__contains_full_screen_element(WUIWE_WebUIView *self, BOOL *value);
 
-/* Windows.UI.WebUI.WebUIView.get_Settings() */
 HRESULT wuiwe_web_u_i_view_get__settings(WUIWE_WebUIView *self, WWEUI_WebViewControlSettings** value);
 
-/* Windows.UI.WebUI.WebUIView.get_DeferredPermissionRequests() */
 HRESULT wuiwe_web_u_i_view_get__deferred_permission_requests(WUIWE_WebUIView *self, WFOCO_IVectorView_WWEUI_WebViewControlDeferredPermissionRequest** value);
 
-/* Windows.UI.WebUI.WebUIView.GoForward() */
 HRESULT wuiwe_web_u_i_view_go_forward(WUIWE_WebUIView *self);
 
-/* Windows.UI.WebUI.WebUIView.GoBack() */
 HRESULT wuiwe_web_u_i_view_go_back(WUIWE_WebUIView *self);
 
-/* Windows.UI.WebUI.WebUIView.Refresh() */
 HRESULT wuiwe_web_u_i_view_refresh(WUIWE_WebUIView *self);
 
-/* Windows.UI.WebUI.WebUIView.Stop() */
 HRESULT wuiwe_web_u_i_view_stop(WUIWE_WebUIView *self);
 
-/* Windows.UI.WebUI.WebUIView.Navigate(source) */
 HRESULT wuiwe_web_u_i_view_navigate(WUIWE_WebUIView *self, WF_Uri* source);
 
-/* Windows.UI.WebUI.WebUIView.NavigateToString(text) */
 HRESULT wuiwe_web_u_i_view_navigate_to_string(WUIWE_WebUIView *self, cwinrt_hstring text);
 
-/* Windows.UI.WebUI.WebUIView.NavigateToLocalStreamUri(source, streamResolver) */
 HRESULT wuiwe_web_u_i_view_navigate_to_local_stream_uri(WUIWE_WebUIView *self, WF_Uri* source, WWE_IUriToStreamResolver* streamResolver);
 
-/* Windows.UI.WebUI.WebUIView.NavigateWithHttpRequestMessage(requestMessage) */
 HRESULT wuiwe_web_u_i_view_navigate_with_http_request_message(WUIWE_WebUIView *self, WWEHT_HttpRequestMessage* requestMessage);
 
-/* Windows.UI.WebUI.WebUIView.InvokeScriptAsync(scriptName, arguments) */
 HRESULT wuiwe_web_u_i_view_invoke_script_async(WUIWE_WebUIView *self, cwinrt_hstring scriptName, WFOCO_IIterable_HSTRING* arguments, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.UI.WebUI.WebUIView.CapturePreviewToStreamAsync(stream) */
 HRESULT wuiwe_web_u_i_view_capture_preview_to_stream_async(WUIWE_WebUIView *self, WSTST_IRandomAccessStream* stream, WF_IAsyncAction** out);
 
-/* Windows.UI.WebUI.WebUIView.CaptureSelectedContentToDataPackageAsync() */
 HRESULT wuiwe_web_u_i_view_capture_selected_content_to_data_package_async(WUIWE_WebUIView *self, WF_IAsyncOperation_WAPDA_DataPackage** out);
 
-/* Windows.UI.WebUI.WebUIView.BuildLocalStreamUri(contentIdentifier, relativePath) */
 HRESULT wuiwe_web_u_i_view_build_local_stream_uri(WUIWE_WebUIView *self, cwinrt_hstring contentIdentifier, cwinrt_hstring relativePath, WF_Uri** out);
 
-/* Windows.UI.WebUI.WebUIView.GetDeferredPermissionRequestById(id, result) */
 HRESULT wuiwe_web_u_i_view_get_deferred_permission_request_by_id(WUIWE_WebUIView *self, uint32_t id, WWEUI_WebViewControlDeferredPermissionRequest* result);
 
-/* Windows.UI.WebUI.WebUIView.AddInitializeScript(script) */
 HRESULT wuiwe_web_u_i_view_add_initialize_script(WUIWE_WebUIView *self, cwinrt_hstring script);
 
-/* Windows.UI.WebUI.WebUIView.CreateAsync() */
 HRESULT wuiwe_web_u_i_view_create_async(WF_IAsyncOperation_WUIWE_WebUIView** out);
 
-/* Windows.UI.WebUI.WebUIView.CreateAsync(uri) */
 HRESULT wuiwe_web_u_i_view_create_async_p_p(WF_Uri* uri, WF_IAsyncOperation_WUIWE_WebUIView** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiwe_web_u_i_view_on_closed(WUIWE_WebUIView *self, cwinrt_event_fn fn, void *ctx);
@@ -2592,121 +2080,72 @@ void wuiwe_web_u_i_view_off_contains_full_screen_element_changed(WUIWE_WebUIView
 cwinrt_token wuiwe_web_u_i_view_on_web_resource_requested(WUIWE_WebUIView *self, cwinrt_event_fn fn, void *ctx);
 void wuiwe_web_u_i_view_off_web_resource_requested(WUIWE_WebUIView *self, cwinrt_token token);
 
-/* activate Windows.UI.WebUI.WebUIVoiceCommandActivatedEventArgs */
 HRESULT wuiwe_web_u_i_voice_command_activated_event_args_new(WUIWE_WebUIVoiceCommandActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIVoiceCommandActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIVoiceCommandActivatedEventArgs.get_Result() */
 HRESULT wuiwe_web_u_i_voice_command_activated_event_args_get__result(WUIWE_WebUIVoiceCommandActivatedEventArgs *self, WMESP_SpeechRecognitionResult** value);
 
-/* Windows.UI.WebUI.WebUIVoiceCommandActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_voice_command_activated_event_args_get__kind(WUIWE_WebUIVoiceCommandActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIVoiceCommandActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_voice_command_activated_event_args_get__previous_execution_state(WUIWE_WebUIVoiceCommandActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIVoiceCommandActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_voice_command_activated_event_args_get__splash_screen(WUIWE_WebUIVoiceCommandActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIVoiceCommandActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_voice_command_activated_event_args_get__activated_operation(WUIWE_WebUIVoiceCommandActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* Windows.UI.WebUI.WebUIVoiceCommandActivatedEventArgs.get_User() */
 HRESULT wuiwe_web_u_i_voice_command_activated_event_args_get__user(WUIWE_WebUIVoiceCommandActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs */
 HRESULT wuiwe_web_u_i_wallet_action_activated_event_args_new(WUIWE_WebUIWalletActionActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.get_ItemId() */
 HRESULT wuiwe_web_u_i_wallet_action_activated_event_args_get__item_id(WUIWE_WebUIWalletActionActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.get_ActionKind() */
 HRESULT wuiwe_web_u_i_wallet_action_activated_event_args_get__action_kind(WUIWE_WebUIWalletActionActivatedEventArgs *self, WAPWA_WalletActionKind *value);
 
-/* Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.get_ActionId() */
 HRESULT wuiwe_web_u_i_wallet_action_activated_event_args_get__action_id(WUIWE_WebUIWalletActionActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_wallet_action_activated_event_args_get__kind(WUIWE_WebUIWalletActionActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_wallet_action_activated_event_args_get__previous_execution_state(WUIWE_WebUIWalletActionActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_wallet_action_activated_event_args_get__splash_screen(WUIWE_WebUIWalletActionActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_wallet_action_activated_event_args_get__activated_operation(WUIWE_WebUIWalletActionActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* activate Windows.UI.WebUI.WebUIWebAccountProviderActivatedEventArgs */
 HRESULT wuiwe_web_u_i_web_account_provider_activated_event_args_new(WUIWE_WebUIWebAccountProviderActivatedEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIWebAccountProviderActivatedEventArgs */
-/* Windows.UI.WebUI.WebUIWebAccountProviderActivatedEventArgs.get_Operation() */
 HRESULT wuiwe_web_u_i_web_account_provider_activated_event_args_get__operation(WUIWE_WebUIWebAccountProviderActivatedEventArgs *self, WSEAUWEPR_IWebAccountProviderOperation** value);
 
-/* Windows.UI.WebUI.WebUIWebAccountProviderActivatedEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_web_account_provider_activated_event_args_get__kind(WUIWE_WebUIWebAccountProviderActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIWebAccountProviderActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_web_account_provider_activated_event_args_get__previous_execution_state(WUIWE_WebUIWebAccountProviderActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIWebAccountProviderActivatedEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_web_account_provider_activated_event_args_get__splash_screen(WUIWE_WebUIWebAccountProviderActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIWebAccountProviderActivatedEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_web_account_provider_activated_event_args_get__activated_operation(WUIWE_WebUIWebAccountProviderActivatedEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* Windows.UI.WebUI.WebUIWebAccountProviderActivatedEventArgs.get_User() */
 HRESULT wuiwe_web_u_i_web_account_provider_activated_event_args_get__user(WUIWE_WebUIWebAccountProviderActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.UI.WebUI.WebUIWebAuthenticationBrokerContinuationEventArgs */
 HRESULT wuiwe_web_u_i_web_authentication_broker_continuation_event_args_new(WUIWE_WebUIWebAuthenticationBrokerContinuationEventArgs **out);
 
-/* Windows.UI.WebUI.WebUIWebAuthenticationBrokerContinuationEventArgs */
-/* Windows.UI.WebUI.WebUIWebAuthenticationBrokerContinuationEventArgs.get_WebAuthenticationResult() */
 HRESULT wuiwe_web_u_i_web_authentication_broker_continuation_event_args_get__web_authentication_result(WUIWE_WebUIWebAuthenticationBrokerContinuationEventArgs *self, WSEAUWE_WebAuthenticationResult** value);
 
-/* Windows.UI.WebUI.WebUIWebAuthenticationBrokerContinuationEventArgs.get_ContinuationData() */
 HRESULT wuiwe_web_u_i_web_authentication_broker_continuation_event_args_get__continuation_data(WUIWE_WebUIWebAuthenticationBrokerContinuationEventArgs *self, WFOCO_ValueSet** value);
 
-/* Windows.UI.WebUI.WebUIWebAuthenticationBrokerContinuationEventArgs.get_Kind() */
 HRESULT wuiwe_web_u_i_web_authentication_broker_continuation_event_args_get__kind(WUIWE_WebUIWebAuthenticationBrokerContinuationEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.UI.WebUI.WebUIWebAuthenticationBrokerContinuationEventArgs.get_PreviousExecutionState() */
 HRESULT wuiwe_web_u_i_web_authentication_broker_continuation_event_args_get__previous_execution_state(WUIWE_WebUIWebAuthenticationBrokerContinuationEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.UI.WebUI.WebUIWebAuthenticationBrokerContinuationEventArgs.get_SplashScreen() */
 HRESULT wuiwe_web_u_i_web_authentication_broker_continuation_event_args_get__splash_screen(WUIWE_WebUIWebAuthenticationBrokerContinuationEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.UI.WebUI.WebUIWebAuthenticationBrokerContinuationEventArgs.get_ActivatedOperation() */
 HRESULT wuiwe_web_u_i_web_authentication_broker_continuation_event_args_get__activated_operation(WUIWE_WebUIWebAuthenticationBrokerContinuationEventArgs *self, WUIWE_ActivatedOperation** value);
 
-/* activate Windows.UI.WebUI.ActivatedDeferral */
 HRESULT wuiwe_activated_deferral_new(WUIWE_ActivatedDeferral **out);
 
-/* Windows.UI.WebUI.ActivatedDeferral */
-/* Windows.UI.WebUI.ActivatedDeferral.Complete() */
 HRESULT wuiwe_activated_deferral_complete(WUIWE_ActivatedDeferral *self);
 
-/* Windows.UI.WebUI.IActivatedOperation */
-/* Windows.UI.WebUI.IHtmlPrintDocumentSource */
-/* Windows.UI.WebUI.INewWebUIViewCreatedEventArgs */
-/* Windows.UI.WebUI.IWebUIBackgroundTaskInstance */
-/* Windows.UI.WebUI.IWebUIBackgroundTaskInstance.get_Succeeded() */
 HRESULT wuiwe_web_u_i_background_task_instance_get__succeeded(WUIWE_IWebUIBackgroundTaskInstance *self, BOOL *value);
 
-/* Windows.UI.WebUI.IWebUIBackgroundTaskInstance.put_Succeeded(succeeded) */
 HRESULT wuiwe_web_u_i_background_task_instance_put__succeeded(WUIWE_IWebUIBackgroundTaskInstance *self, BOOL succeeded);
 
-/* Windows.UI.WebUI.IWebUINavigatedDeferral */
-/* Windows.UI.WebUI.IWebUINavigatedEventArgs */
-/* Windows.UI.WebUI.IWebUINavigatedOperation */
-/* Windows.UI.WebUI.IWebUIView */
-/* Windows.UI.WebUI.IActivatedEventArgsDeferral */
-/* Windows.UI.WebUI.IActivatedEventArgsDeferral.get_ActivatedOperation() */
 HRESULT wuiwe_activated_event_args_deferral_get__activated_operation(WUIWE_IActivatedEventArgsDeferral *self, WUIWE_ActivatedOperation** value);
 
-/* Windows.UI.WebUI.IActivatedDeferral */
 #endif /* CWINRT_WINDOWS_UI_WEBUI_H */

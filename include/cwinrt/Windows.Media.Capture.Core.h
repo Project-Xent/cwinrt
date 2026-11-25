@@ -13,14 +13,12 @@
 #include <cwinrt/Windows.Media.Capture.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WMECACO_VariablePhotoCapturedEventArgs WMECACO_VariablePhotoCapturedEventArgs;
 typedef struct WMECACO_VariablePhotoSequenceCapture WMECACO_VariablePhotoSequenceCapture;
 typedef struct WMECACO_IVariablePhotoCapturedEventArgs WMECACO_IVariablePhotoCapturedEventArgs;
 typedef struct WMECACO_IVariablePhotoSequenceCapture WMECACO_IVariablePhotoSequenceCapture;
 typedef struct WMECACO_IVariablePhotoSequenceCapture_2 WMECACO_IVariablePhotoSequenceCapture_2;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WMECA_CapturedFrame
 #define CWINRT_FWD_WMECA_CapturedFrame
 typedef struct WMECA_CapturedFrame WMECA_CapturedFrame;
@@ -46,7 +44,6 @@ typedef struct WF_TypedEventHandler_WMECACO_VariablePhotoSequenceCapture_WMECACO
 typedef struct WF_TypedEventHandler_WMECACO_VariablePhotoSequenceCapture_Object WF_TypedEventHandler_WMECACO_VariablePhotoSequenceCapture_Object;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -63,41 +60,26 @@ static const IID CWINRT_IID_WMECACO_IVariablePhotoSequenceCapture CWINRT_MAYBE_U
 static const IID CWINRT_IID_WMECACO_IVariablePhotoSequenceCapture_2 CWINRT_MAYBE_UNUSED = { 0xFE2C62BC, 0x50B0, 0x43E3, { 0x91, 0x7C, 0xE3, 0xB9, 0x27, 0x98, 0x94, 0x2F } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Media.Capture.Core.VariablePhotoCapturedEventArgs */
 HRESULT wmecaco_variable_photo_captured_event_args_new(WMECACO_VariablePhotoCapturedEventArgs **out);
 
-/* Windows.Media.Capture.Core.VariablePhotoCapturedEventArgs */
-/* Windows.Media.Capture.Core.VariablePhotoCapturedEventArgs.get_Frame() */
 HRESULT wmecaco_variable_photo_captured_event_args_get__frame(WMECACO_VariablePhotoCapturedEventArgs *self, WMECA_CapturedFrame** value);
 
-/* Windows.Media.Capture.Core.VariablePhotoCapturedEventArgs.get_CaptureTimeOffset() */
 HRESULT wmecaco_variable_photo_captured_event_args_get__capture_time_offset(WMECACO_VariablePhotoCapturedEventArgs *self, WF_TimeSpan *value);
 
-/* Windows.Media.Capture.Core.VariablePhotoCapturedEventArgs.get_UsedFrameControllerIndex() */
 HRESULT wmecaco_variable_photo_captured_event_args_get__used_frame_controller_index(WMECACO_VariablePhotoCapturedEventArgs *self, uint32_t** value);
 
-/* Windows.Media.Capture.Core.VariablePhotoCapturedEventArgs.get_CapturedFrameControlValues() */
 HRESULT wmecaco_variable_photo_captured_event_args_get__captured_frame_control_values(WMECACO_VariablePhotoCapturedEventArgs *self, WMECA_CapturedFrameControlValues** value);
 
-/* activate Windows.Media.Capture.Core.VariablePhotoSequenceCapture */
 HRESULT wmecaco_variable_photo_sequence_capture_new(WMECACO_VariablePhotoSequenceCapture **out);
 
-/* Windows.Media.Capture.Core.VariablePhotoSequenceCapture */
-/* Windows.Media.Capture.Core.VariablePhotoSequenceCapture.StartAsync() */
 HRESULT wmecaco_variable_photo_sequence_capture_start_async(WMECACO_VariablePhotoSequenceCapture *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.Core.VariablePhotoSequenceCapture.StopAsync() */
 HRESULT wmecaco_variable_photo_sequence_capture_stop_async(WMECACO_VariablePhotoSequenceCapture *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.Core.VariablePhotoSequenceCapture.FinishAsync() */
 HRESULT wmecaco_variable_photo_sequence_capture_finish_async(WMECACO_VariablePhotoSequenceCapture *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.Core.VariablePhotoSequenceCapture.UpdateSettingsAsync() */
 HRESULT wmecaco_variable_photo_sequence_capture_update_settings_async(WMECACO_VariablePhotoSequenceCapture *self, WF_IAsyncAction** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmecaco_variable_photo_sequence_capture_on_photo_captured(WMECACO_VariablePhotoSequenceCapture *self, cwinrt_event_fn fn, void *ctx);
@@ -106,10 +88,6 @@ void wmecaco_variable_photo_sequence_capture_off_photo_captured(WMECACO_Variable
 cwinrt_token wmecaco_variable_photo_sequence_capture_on_stopped(WMECACO_VariablePhotoSequenceCapture *self, cwinrt_event_fn fn, void *ctx);
 void wmecaco_variable_photo_sequence_capture_off_stopped(WMECACO_VariablePhotoSequenceCapture *self, cwinrt_token token);
 
-/* Windows.Media.Capture.Core.IVariablePhotoCapturedEventArgs */
-/* Windows.Media.Capture.Core.IVariablePhotoSequenceCapture */
-/* Windows.Media.Capture.Core.IVariablePhotoSequenceCapture2 */
-/* Windows.Media.Capture.Core.IVariablePhotoSequenceCapture2.UpdateSettingsAsync() */
 HRESULT wmecaco_variable_photo_sequence_capture_2_update_settings_async(WMECACO_IVariablePhotoSequenceCapture_2 *self, WF_IAsyncAction** out);
 
 #endif /* CWINRT_WINDOWS_MEDIA_CAPTURE_CORE_H */

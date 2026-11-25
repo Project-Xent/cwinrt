@@ -12,8 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
-
 #ifndef CWINRT_FWD_WAPDADR_DragDropModifiers
 #define CWINRT_FWD_WAPDADR_DragDropModifiers
 typedef enum WAPDADR_DragDropModifiers {
@@ -26,7 +24,5 @@ typedef enum WAPDADR_DragDropModifiers {
     WAPDADR_DragDropModifiers_RightButton = 32
 } WAPDADR_DragDropModifiers;
 #endif
-
-/* Methods */
 
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_DATATRANSFER_DRAGDROP_H */

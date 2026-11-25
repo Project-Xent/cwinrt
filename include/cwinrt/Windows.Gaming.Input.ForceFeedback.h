@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Foundation.Numerics.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WGAINFO_ConditionForceEffect WGAINFO_ConditionForceEffect;
 typedef struct WGAINFO_ConstantForceEffect WGAINFO_ConstantForceEffect;
 typedef struct WGAINFO_ForceFeedbackMotor WGAINFO_ForceFeedbackMotor;
@@ -28,7 +27,6 @@ typedef struct WGAINFO_IRampForceEffect WGAINFO_IRampForceEffect;
 typedef struct WGAINFO_IPeriodicForceEffect WGAINFO_IPeriodicForceEffect;
 typedef struct WGAINFO_IForceFeedbackEffect WGAINFO_IForceFeedbackEffect;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFN_Vector_3
 #define CWINRT_FWD_WFN_Vector_3
 typedef struct WFN_Vector_3 WFN_Vector_3;
@@ -96,7 +94,6 @@ typedef enum WGAINFO_PeriodicForceEffectKind {
 } WGAINFO_PeriodicForceEffectKind;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -133,181 +130,112 @@ static const IID CWINRT_IID_WGAINFO_IPeriodicForceEffect CWINRT_MAYBE_UNUSED = {
 static const IID CWINRT_IID_WGAINFO_IForceFeedbackEffect CWINRT_MAYBE_UNUSED = { 0xA17FBA0C, 0x2AE4, 0x48C2, { 0x80, 0x63, 0xEA, 0xBD, 0x07, 0x77, 0xCB, 0x89 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Gaming.Input.ForceFeedback.ConditionForceEffect */
 HRESULT wgainfo_condition_force_effect_new(WGAINFO_ConditionForceEffect **out);
 
-/* Windows.Gaming.Input.ForceFeedback.ConditionForceEffect */
-/* Windows.Gaming.Input.ForceFeedback.ConditionForceEffect.get_Gain() */
 HRESULT wgainfo_condition_force_effect_get__gain(WGAINFO_ConditionForceEffect *self, double *value);
 
-/* Windows.Gaming.Input.ForceFeedback.ConditionForceEffect.put_Gain() */
 HRESULT wgainfo_condition_force_effect_put__gain(WGAINFO_ConditionForceEffect *self, double value);
 
-/* Windows.Gaming.Input.ForceFeedback.ConditionForceEffect.get_State() */
 HRESULT wgainfo_condition_force_effect_get__state(WGAINFO_ConditionForceEffect *self, WGAINFO_ForceFeedbackEffectState *value);
 
-/* Windows.Gaming.Input.ForceFeedback.ConditionForceEffect.Start() */
 HRESULT wgainfo_condition_force_effect_start(WGAINFO_ConditionForceEffect *self);
 
-/* Windows.Gaming.Input.ForceFeedback.ConditionForceEffect.Stop() */
 HRESULT wgainfo_condition_force_effect_stop(WGAINFO_ConditionForceEffect *self);
 
-/* Windows.Gaming.Input.ForceFeedback.ConditionForceEffect.get_Kind() */
 HRESULT wgainfo_condition_force_effect_get__kind(WGAINFO_ConditionForceEffect *self, WGAINFO_ConditionForceEffectKind *value);
 
-/* Windows.Gaming.Input.ForceFeedback.ConditionForceEffect.SetParameters(direction, positiveCoefficient, negativeCoefficient, maxPositiveMagnitude, maxNegativeMagnitude, deadZone, bias) */
 HRESULT wgainfo_condition_force_effect_set_parameters(WGAINFO_ConditionForceEffect *self, WFN_Vector_3 direction, float positiveCoefficient, float negativeCoefficient, float maxPositiveMagnitude, float maxNegativeMagnitude, float deadZone, float bias);
 
-/* activate Windows.Gaming.Input.ForceFeedback.ConstantForceEffect */
 HRESULT wgainfo_constant_force_effect_new(WGAINFO_ConstantForceEffect **out);
 
-/* Windows.Gaming.Input.ForceFeedback.ConstantForceEffect */
-/* Windows.Gaming.Input.ForceFeedback.ConstantForceEffect.get_Gain() */
 HRESULT wgainfo_constant_force_effect_get__gain(WGAINFO_ConstantForceEffect *self, double *value);
 
-/* Windows.Gaming.Input.ForceFeedback.ConstantForceEffect.put_Gain() */
 HRESULT wgainfo_constant_force_effect_put__gain(WGAINFO_ConstantForceEffect *self, double value);
 
-/* Windows.Gaming.Input.ForceFeedback.ConstantForceEffect.get_State() */
 HRESULT wgainfo_constant_force_effect_get__state(WGAINFO_ConstantForceEffect *self, WGAINFO_ForceFeedbackEffectState *value);
 
-/* Windows.Gaming.Input.ForceFeedback.ConstantForceEffect.Start() */
 HRESULT wgainfo_constant_force_effect_start(WGAINFO_ConstantForceEffect *self);
 
-/* Windows.Gaming.Input.ForceFeedback.ConstantForceEffect.Stop() */
 HRESULT wgainfo_constant_force_effect_stop(WGAINFO_ConstantForceEffect *self);
 
-/* Windows.Gaming.Input.ForceFeedback.ConstantForceEffect.SetParameters(vector, duration) */
 HRESULT wgainfo_constant_force_effect_set_parameters(WGAINFO_ConstantForceEffect *self, WFN_Vector_3 vector, WF_TimeSpan duration);
 
-/* Windows.Gaming.Input.ForceFeedback.ConstantForceEffect.SetParametersWithEnvelope(vector, attackGain, sustainGain, releaseGain, startDelay, attackDuration, sustainDuration, releaseDuration, repeatCount) */
 HRESULT wgainfo_constant_force_effect_set_parameters_with_envelope(WGAINFO_ConstantForceEffect *self, WFN_Vector_3 vector, float attackGain, float sustainGain, float releaseGain, WF_TimeSpan startDelay, WF_TimeSpan attackDuration, WF_TimeSpan sustainDuration, WF_TimeSpan releaseDuration, uint32_t repeatCount);
 
-/* activate Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor */
 HRESULT wgainfo_force_feedback_motor_new(WGAINFO_ForceFeedbackMotor **out);
 
-/* Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor */
-/* Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor.get_AreEffectsPaused() */
 HRESULT wgainfo_force_feedback_motor_get__are_effects_paused(WGAINFO_ForceFeedbackMotor *self, BOOL *value);
 
-/* Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor.get_MasterGain() */
 HRESULT wgainfo_force_feedback_motor_get__master_gain(WGAINFO_ForceFeedbackMotor *self, double *value);
 
-/* Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor.put_MasterGain() */
 HRESULT wgainfo_force_feedback_motor_put__master_gain(WGAINFO_ForceFeedbackMotor *self, double value);
 
-/* Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor.get_IsEnabled() */
 HRESULT wgainfo_force_feedback_motor_get__is_enabled(WGAINFO_ForceFeedbackMotor *self, BOOL *value);
 
-/* Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor.get_SupportedAxes() */
 HRESULT wgainfo_force_feedback_motor_get__supported_axes(WGAINFO_ForceFeedbackMotor *self, WGAINFO_ForceFeedbackEffectAxes *value);
 
-/* Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor.LoadEffectAsync(effect) */
 HRESULT wgainfo_force_feedback_motor_load_effect_async(WGAINFO_ForceFeedbackMotor *self, WGAINFO_IForceFeedbackEffect* effect, WF_IAsyncOperation_WGAINFO_ForceFeedbackLoadEffectResult** out);
 
-/* Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor.PauseAllEffects() */
 HRESULT wgainfo_force_feedback_motor_pause_all_effects(WGAINFO_ForceFeedbackMotor *self);
 
-/* Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor.ResumeAllEffects() */
 HRESULT wgainfo_force_feedback_motor_resume_all_effects(WGAINFO_ForceFeedbackMotor *self);
 
-/* Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor.StopAllEffects() */
 HRESULT wgainfo_force_feedback_motor_stop_all_effects(WGAINFO_ForceFeedbackMotor *self);
 
-/* Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor.TryDisableAsync() */
 HRESULT wgainfo_force_feedback_motor_try_disable_async(WGAINFO_ForceFeedbackMotor *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor.TryEnableAsync() */
 HRESULT wgainfo_force_feedback_motor_try_enable_async(WGAINFO_ForceFeedbackMotor *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor.TryResetAsync() */
 HRESULT wgainfo_force_feedback_motor_try_reset_async(WGAINFO_ForceFeedbackMotor *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor.TryUnloadEffectAsync(effect) */
 HRESULT wgainfo_force_feedback_motor_try_unload_effect_async(WGAINFO_ForceFeedbackMotor *self, WGAINFO_IForceFeedbackEffect* effect, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Gaming.Input.ForceFeedback.IConditionForceEffectFactory */
-/* Windows.Gaming.Input.ForceFeedback.IConditionForceEffectFactory.CreateInstance(effectKind) */
 HRESULT wgainfo_condition_force_effect_factory_create_instance(WGAINFO_IConditionForceEffectFactory *self, WGAINFO_ConditionForceEffectKind effectKind, WGAINFO_ConditionForceEffect** out);
 
-/* activate Windows.Gaming.Input.ForceFeedback.RampForceEffect */
 HRESULT wgainfo_ramp_force_effect_new(WGAINFO_RampForceEffect **out);
 
-/* Windows.Gaming.Input.ForceFeedback.RampForceEffect */
-/* Windows.Gaming.Input.ForceFeedback.RampForceEffect.get_Gain() */
 HRESULT wgainfo_ramp_force_effect_get__gain(WGAINFO_RampForceEffect *self, double *value);
 
-/* Windows.Gaming.Input.ForceFeedback.RampForceEffect.put_Gain() */
 HRESULT wgainfo_ramp_force_effect_put__gain(WGAINFO_RampForceEffect *self, double value);
 
-/* Windows.Gaming.Input.ForceFeedback.RampForceEffect.get_State() */
 HRESULT wgainfo_ramp_force_effect_get__state(WGAINFO_RampForceEffect *self, WGAINFO_ForceFeedbackEffectState *value);
 
-/* Windows.Gaming.Input.ForceFeedback.RampForceEffect.Start() */
 HRESULT wgainfo_ramp_force_effect_start(WGAINFO_RampForceEffect *self);
 
-/* Windows.Gaming.Input.ForceFeedback.RampForceEffect.Stop() */
 HRESULT wgainfo_ramp_force_effect_stop(WGAINFO_RampForceEffect *self);
 
-/* Windows.Gaming.Input.ForceFeedback.RampForceEffect.SetParameters(startVector, endVector, duration) */
 HRESULT wgainfo_ramp_force_effect_set_parameters(WGAINFO_RampForceEffect *self, WFN_Vector_3 startVector, WFN_Vector_3 endVector, WF_TimeSpan duration);
 
-/* Windows.Gaming.Input.ForceFeedback.RampForceEffect.SetParametersWithEnvelope(startVector, endVector, attackGain, sustainGain, releaseGain, startDelay, attackDuration, sustainDuration, releaseDuration, repeatCount) */
 HRESULT wgainfo_ramp_force_effect_set_parameters_with_envelope(WGAINFO_RampForceEffect *self, WFN_Vector_3 startVector, WFN_Vector_3 endVector, float attackGain, float sustainGain, float releaseGain, WF_TimeSpan startDelay, WF_TimeSpan attackDuration, WF_TimeSpan sustainDuration, WF_TimeSpan releaseDuration, uint32_t repeatCount);
 
-/* Windows.Gaming.Input.ForceFeedback.IPeriodicForceEffectFactory */
-/* Windows.Gaming.Input.ForceFeedback.IPeriodicForceEffectFactory.CreateInstance(effectKind) */
 HRESULT wgainfo_periodic_force_effect_factory_create_instance(WGAINFO_IPeriodicForceEffectFactory *self, WGAINFO_PeriodicForceEffectKind effectKind, WGAINFO_PeriodicForceEffect** out);
 
-/* activate Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect */
 HRESULT wgainfo_periodic_force_effect_new(WGAINFO_PeriodicForceEffect **out);
 
-/* Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect */
-/* Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect.get_Gain() */
 HRESULT wgainfo_periodic_force_effect_get__gain(WGAINFO_PeriodicForceEffect *self, double *value);
 
-/* Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect.put_Gain() */
 HRESULT wgainfo_periodic_force_effect_put__gain(WGAINFO_PeriodicForceEffect *self, double value);
 
-/* Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect.get_State() */
 HRESULT wgainfo_periodic_force_effect_get__state(WGAINFO_PeriodicForceEffect *self, WGAINFO_ForceFeedbackEffectState *value);
 
-/* Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect.Start() */
 HRESULT wgainfo_periodic_force_effect_start(WGAINFO_PeriodicForceEffect *self);
 
-/* Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect.Stop() */
 HRESULT wgainfo_periodic_force_effect_stop(WGAINFO_PeriodicForceEffect *self);
 
-/* Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect.get_Kind() */
 HRESULT wgainfo_periodic_force_effect_get__kind(WGAINFO_PeriodicForceEffect *self, WGAINFO_PeriodicForceEffectKind *value);
 
-/* Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect.SetParameters(vector, frequency, phase, bias, duration) */
 HRESULT wgainfo_periodic_force_effect_set_parameters(WGAINFO_PeriodicForceEffect *self, WFN_Vector_3 vector, float frequency, float phase, float bias, WF_TimeSpan duration);
 
-/* Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect.SetParametersWithEnvelope(vector, frequency, phase, bias, attackGain, sustainGain, releaseGain, startDelay, attackDuration, sustainDuration, releaseDuration, repeatCount) */
 HRESULT wgainfo_periodic_force_effect_set_parameters_with_envelope(WGAINFO_PeriodicForceEffect *self, WFN_Vector_3 vector, float frequency, float phase, float bias, float attackGain, float sustainGain, float releaseGain, WF_TimeSpan startDelay, WF_TimeSpan attackDuration, WF_TimeSpan sustainDuration, WF_TimeSpan releaseDuration, uint32_t repeatCount);
 
-/* Windows.Gaming.Input.ForceFeedback.IConditionForceEffect */
-/* Windows.Gaming.Input.ForceFeedback.IConstantForceEffect */
-/* Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor */
-/* Windows.Gaming.Input.ForceFeedback.IRampForceEffect */
-/* Windows.Gaming.Input.ForceFeedback.IPeriodicForceEffect */
-/* Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect */
-/* Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect.get_Gain() */
 HRESULT wgainfo_force_feedback_effect_get__gain(WGAINFO_IForceFeedbackEffect *self, double *value);
 
-/* Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect.put_Gain() */
 HRESULT wgainfo_force_feedback_effect_put__gain(WGAINFO_IForceFeedbackEffect *self, double value);
 
-/* Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect.get_State() */
 HRESULT wgainfo_force_feedback_effect_get__state(WGAINFO_IForceFeedbackEffect *self, WGAINFO_ForceFeedbackEffectState *value);
 
-/* Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect.Start() */
 HRESULT wgainfo_force_feedback_effect_start(WGAINFO_IForceFeedbackEffect *self);
 
-/* Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect.Stop() */
 HRESULT wgainfo_force_feedback_effect_stop(WGAINFO_IForceFeedbackEffect *self);
 
 #endif /* CWINRT_WINDOWS_GAMING_INPUT_FORCEFEEDBACK_H */

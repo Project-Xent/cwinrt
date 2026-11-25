@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WDAXMDO_XmlDocument
 #define CWINRT_FWD_WDAXMDO_XmlDocument
 typedef struct WDAXMDO_XmlDocument WDAXMDO_XmlDocument;
@@ -26,7 +25,6 @@ typedef struct WSY_User WSY_User;
 typedef struct WAM_AppInfo WAM_AppInfo;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUINO_BadgeUpdateManager WUINO_BadgeUpdateManager;
 typedef struct WUINO_BadgeUpdateManagerForUser WUINO_BadgeUpdateManagerForUser;
 typedef struct WUINO_BadgeUpdater WUINO_BadgeUpdater;
@@ -131,7 +129,6 @@ typedef struct WUINO_IToastNotifier WUINO_IToastNotifier;
 typedef struct WUINO_IToastNotifier_2 WUINO_IToastNotifier_2;
 typedef struct WUINO_IToastNotifier_3 WUINO_IToastNotifier_3;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
@@ -496,7 +493,6 @@ typedef enum WUINO_ToastTemplateType {
 } WUINO_ToastTemplateType;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -765,870 +761,546 @@ static const IID CWINRT_IID_WUINO_IToastNotifier_2 CWINRT_MAYBE_UNUSED = { 0x354
 static const IID CWINRT_IID_WUINO_IToastNotifier_3 CWINRT_MAYBE_UNUSED = { 0xAE75A04A, 0x3B0C, 0x51AD, { 0xB7, 0xE8, 0xB0, 0x8A, 0xB6, 0x05, 0x25, 0x49 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.UI.Notifications.BadgeUpdateManager */
 HRESULT wuino_badge_update_manager_new(WUINO_BadgeUpdateManager **out);
 
-/* Windows.UI.Notifications.BadgeUpdateManager */
-/* Windows.UI.Notifications.BadgeUpdateManager.GetForUser(user) */
 HRESULT wuino_badge_update_manager_get_for_user(WSY_User* user, WUINO_BadgeUpdateManagerForUser** out);
 
-/* Windows.UI.Notifications.BadgeUpdateManager.CreateBadgeUpdaterForApplication() */
 HRESULT wuino_badge_update_manager_create_badge_updater_for_application(WUINO_BadgeUpdater** out);
 
-/* Windows.UI.Notifications.BadgeUpdateManager.CreateBadgeUpdaterForApplication(applicationId) */
 HRESULT wuino_badge_update_manager_create_badge_updater_for_application_str_p(cwinrt_hstring applicationId, WUINO_BadgeUpdater** out);
 
-/* Windows.UI.Notifications.BadgeUpdateManager.CreateBadgeUpdaterForSecondaryTile(tileId) */
 HRESULT wuino_badge_update_manager_create_badge_updater_for_secondary_tile(cwinrt_hstring tileId, WUINO_BadgeUpdater** out);
 
-/* Windows.UI.Notifications.BadgeUpdateManager.GetTemplateContent() */
 HRESULT wuino_badge_update_manager_get_template_content(WUINO_BadgeTemplateType type_, WDAXMDO_XmlDocument** out);
 
-/* activate Windows.UI.Notifications.BadgeUpdateManagerForUser */
 HRESULT wuino_badge_update_manager_for_user_new(WUINO_BadgeUpdateManagerForUser **out);
 
-/* Windows.UI.Notifications.BadgeUpdateManagerForUser */
-/* Windows.UI.Notifications.BadgeUpdateManagerForUser.CreateBadgeUpdaterForApplication() */
 HRESULT wuino_badge_update_manager_for_user_create_badge_updater_for_application(WUINO_BadgeUpdateManagerForUser *self, WUINO_BadgeUpdater** out);
 
-/* Windows.UI.Notifications.BadgeUpdateManagerForUser.CreateBadgeUpdaterForApplication(applicationId) */
 HRESULT wuino_badge_update_manager_for_user_create_badge_updater_for_application_str_p(WUINO_BadgeUpdateManagerForUser *self, cwinrt_hstring applicationId, WUINO_BadgeUpdater** out);
 
-/* Windows.UI.Notifications.BadgeUpdateManagerForUser.CreateBadgeUpdaterForSecondaryTile(tileId) */
 HRESULT wuino_badge_update_manager_for_user_create_badge_updater_for_secondary_tile(WUINO_BadgeUpdateManagerForUser *self, cwinrt_hstring tileId, WUINO_BadgeUpdater** out);
 
-/* Windows.UI.Notifications.BadgeUpdateManagerForUser.get_User() */
 HRESULT wuino_badge_update_manager_for_user_get__user(WUINO_BadgeUpdateManagerForUser *self, WSY_User** value);
 
-/* activate Windows.UI.Notifications.BadgeUpdater */
 HRESULT wuino_badge_updater_new(WUINO_BadgeUpdater **out);
 
-/* Windows.UI.Notifications.BadgeUpdater */
-/* Windows.UI.Notifications.BadgeUpdater.Update(notification) */
 HRESULT wuino_badge_updater_update(WUINO_BadgeUpdater *self, WUINO_BadgeNotification* notification);
 
-/* Windows.UI.Notifications.BadgeUpdater.Clear() */
 HRESULT wuino_badge_updater_clear(WUINO_BadgeUpdater *self);
 
-/* Windows.UI.Notifications.BadgeUpdater.StartPeriodicUpdate(badgeContent, requestedInterval) */
 HRESULT wuino_badge_updater_start_periodic_update(WUINO_BadgeUpdater *self, WF_Uri* badgeContent, WUINO_PeriodicUpdateRecurrence requestedInterval);
 
-/* Windows.UI.Notifications.BadgeUpdater.StartPeriodicUpdate(badgeContent, startTime, requestedInterval) */
 HRESULT wuino_badge_updater_start_periodic_update_p_date_time_periodic_update_recurrence(WUINO_BadgeUpdater *self, WF_Uri* badgeContent, WF_DateTime startTime, WUINO_PeriodicUpdateRecurrence requestedInterval);
 
-/* Windows.UI.Notifications.BadgeUpdater.StopPeriodicUpdate() */
 HRESULT wuino_badge_updater_stop_periodic_update(WUINO_BadgeUpdater *self);
 
-/* Windows.UI.Notifications.IBadgeNotificationFactory */
-/* Windows.UI.Notifications.IBadgeNotificationFactory.CreateBadgeNotification(content) */
 HRESULT wuino_badge_notification_factory_create_badge_notification(WUINO_IBadgeNotificationFactory *self, WDAXMDO_XmlDocument* content, WUINO_BadgeNotification** out);
 
-/* Windows.UI.Notifications.IBadgeUpdateManagerStatics */
-/* Windows.UI.Notifications.IBadgeUpdateManagerStatics.CreateBadgeUpdaterForApplication() */
 HRESULT wuino_badge_update_manager_statics_create_badge_updater_for_application(WUINO_IBadgeUpdateManagerStatics *self, WUINO_BadgeUpdater** out);
 
-/* Windows.UI.Notifications.IBadgeUpdateManagerStatics.CreateBadgeUpdaterForApplication(applicationId) */
 HRESULT wuino_badge_update_manager_statics_create_badge_updater_for_application_str_p(WUINO_IBadgeUpdateManagerStatics *self, cwinrt_hstring applicationId, WUINO_BadgeUpdater** out);
 
-/* Windows.UI.Notifications.IBadgeUpdateManagerStatics.CreateBadgeUpdaterForSecondaryTile(tileId) */
 HRESULT wuino_badge_update_manager_statics_create_badge_updater_for_secondary_tile(WUINO_IBadgeUpdateManagerStatics *self, cwinrt_hstring tileId, WUINO_BadgeUpdater** out);
 
-/* Windows.UI.Notifications.IBadgeUpdateManagerStatics.GetTemplateContent() */
 HRESULT wuino_badge_update_manager_statics_get_template_content(WUINO_IBadgeUpdateManagerStatics *self, WUINO_BadgeTemplateType type_, WDAXMDO_XmlDocument** out);
 
-/* Windows.UI.Notifications.IBadgeUpdateManagerStatics2 */
-/* Windows.UI.Notifications.IBadgeUpdateManagerStatics2.GetForUser(user) */
 HRESULT wuino_badge_update_manager_statics_2_get_for_user(WUINO_IBadgeUpdateManagerStatics_2 *self, WSY_User* user, WUINO_BadgeUpdateManagerForUser** out);
 
-/* Windows.UI.Notifications.IKnownAdaptiveNotificationHintsStatics */
-/* Windows.UI.Notifications.IKnownAdaptiveNotificationHintsStatics.get_Style() */
 HRESULT wuino_known_adaptive_notification_hints_statics_get__style(WUINO_IKnownAdaptiveNotificationHintsStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IKnownAdaptiveNotificationHintsStatics.get_Wrap() */
 HRESULT wuino_known_adaptive_notification_hints_statics_get__wrap(WUINO_IKnownAdaptiveNotificationHintsStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IKnownAdaptiveNotificationHintsStatics.get_MaxLines() */
 HRESULT wuino_known_adaptive_notification_hints_statics_get__max_lines(WUINO_IKnownAdaptiveNotificationHintsStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IKnownAdaptiveNotificationHintsStatics.get_MinLines() */
 HRESULT wuino_known_adaptive_notification_hints_statics_get__min_lines(WUINO_IKnownAdaptiveNotificationHintsStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IKnownAdaptiveNotificationHintsStatics.get_TextStacking() */
 HRESULT wuino_known_adaptive_notification_hints_statics_get__text_stacking(WUINO_IKnownAdaptiveNotificationHintsStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IKnownAdaptiveNotificationHintsStatics.get_Align() */
 HRESULT wuino_known_adaptive_notification_hints_statics_get__align(WUINO_IKnownAdaptiveNotificationHintsStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics */
-/* Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics.get_Caption() */
 HRESULT wuino_known_adaptive_notification_text_styles_statics_get__caption(WUINO_IKnownAdaptiveNotificationTextStylesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics.get_Body() */
 HRESULT wuino_known_adaptive_notification_text_styles_statics_get__body(WUINO_IKnownAdaptiveNotificationTextStylesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics.get_Base() */
 HRESULT wuino_known_adaptive_notification_text_styles_statics_get__base(WUINO_IKnownAdaptiveNotificationTextStylesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics.get_Subtitle() */
 HRESULT wuino_known_adaptive_notification_text_styles_statics_get__subtitle(WUINO_IKnownAdaptiveNotificationTextStylesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics.get_Title() */
 HRESULT wuino_known_adaptive_notification_text_styles_statics_get__title(WUINO_IKnownAdaptiveNotificationTextStylesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics.get_Subheader() */
 HRESULT wuino_known_adaptive_notification_text_styles_statics_get__subheader(WUINO_IKnownAdaptiveNotificationTextStylesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics.get_Header() */
 HRESULT wuino_known_adaptive_notification_text_styles_statics_get__header(WUINO_IKnownAdaptiveNotificationTextStylesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics.get_TitleNumeral() */
 HRESULT wuino_known_adaptive_notification_text_styles_statics_get__title_numeral(WUINO_IKnownAdaptiveNotificationTextStylesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics.get_SubheaderNumeral() */
 HRESULT wuino_known_adaptive_notification_text_styles_statics_get__subheader_numeral(WUINO_IKnownAdaptiveNotificationTextStylesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics.get_HeaderNumeral() */
 HRESULT wuino_known_adaptive_notification_text_styles_statics_get__header_numeral(WUINO_IKnownAdaptiveNotificationTextStylesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics.get_CaptionSubtle() */
 HRESULT wuino_known_adaptive_notification_text_styles_statics_get__caption_subtle(WUINO_IKnownAdaptiveNotificationTextStylesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics.get_BodySubtle() */
 HRESULT wuino_known_adaptive_notification_text_styles_statics_get__body_subtle(WUINO_IKnownAdaptiveNotificationTextStylesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics.get_BaseSubtle() */
 HRESULT wuino_known_adaptive_notification_text_styles_statics_get__base_subtle(WUINO_IKnownAdaptiveNotificationTextStylesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics.get_SubtitleSubtle() */
 HRESULT wuino_known_adaptive_notification_text_styles_statics_get__subtitle_subtle(WUINO_IKnownAdaptiveNotificationTextStylesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics.get_TitleSubtle() */
 HRESULT wuino_known_adaptive_notification_text_styles_statics_get__title_subtle(WUINO_IKnownAdaptiveNotificationTextStylesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics.get_SubheaderSubtle() */
 HRESULT wuino_known_adaptive_notification_text_styles_statics_get__subheader_subtle(WUINO_IKnownAdaptiveNotificationTextStylesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics.get_SubheaderNumeralSubtle() */
 HRESULT wuino_known_adaptive_notification_text_styles_statics_get__subheader_numeral_subtle(WUINO_IKnownAdaptiveNotificationTextStylesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics.get_HeaderSubtle() */
 HRESULT wuino_known_adaptive_notification_text_styles_statics_get__header_subtle(WUINO_IKnownAdaptiveNotificationTextStylesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics.get_HeaderNumeralSubtle() */
 HRESULT wuino_known_adaptive_notification_text_styles_statics_get__header_numeral_subtle(WUINO_IKnownAdaptiveNotificationTextStylesStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IKnownNotificationBindingsStatics */
-/* Windows.UI.Notifications.IKnownNotificationBindingsStatics.get_ToastGeneric() */
 HRESULT wuino_known_notification_bindings_statics_get__toast_generic(WUINO_IKnownNotificationBindingsStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.INotificationDataFactory */
-/* Windows.UI.Notifications.INotificationDataFactory.CreateNotificationData(initialValues, sequenceNumber) */
 HRESULT wuino_notification_data_factory_create_notification_data_p_u32_p(WUINO_INotificationDataFactory *self, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_HSTRING* initialValues, uint32_t sequenceNumber, WUINO_NotificationData** out);
 
-/* Windows.UI.Notifications.INotificationDataFactory.CreateNotificationData(initialValues) */
 HRESULT wuino_notification_data_factory_create_notification_data(WUINO_INotificationDataFactory *self, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_HSTRING* initialValues, WUINO_NotificationData** out);
 
-/* Windows.UI.Notifications.IScheduledTileNotificationFactory */
-/* Windows.UI.Notifications.IScheduledTileNotificationFactory.CreateScheduledTileNotification(content, deliveryTime) */
 HRESULT wuino_scheduled_tile_notification_factory_create_scheduled_tile_notification(WUINO_IScheduledTileNotificationFactory *self, WDAXMDO_XmlDocument* content, WF_DateTime deliveryTime, WUINO_ScheduledTileNotification** out);
 
-/* Windows.UI.Notifications.IScheduledToastNotificationFactory */
-/* Windows.UI.Notifications.IScheduledToastNotificationFactory.CreateScheduledToastNotification(content, deliveryTime) */
 HRESULT wuino_scheduled_toast_notification_factory_create_scheduled_toast_notification(WUINO_IScheduledToastNotificationFactory *self, WDAXMDO_XmlDocument* content, WF_DateTime deliveryTime, WUINO_ScheduledToastNotification** out);
 
-/* Windows.UI.Notifications.IScheduledToastNotificationFactory.CreateScheduledToastNotificationRecurring(content, deliveryTime, snoozeInterval, maximumSnoozeCount) */
 HRESULT wuino_scheduled_toast_notification_factory_create_scheduled_toast_notification_recurring(WUINO_IScheduledToastNotificationFactory *self, WDAXMDO_XmlDocument* content, WF_DateTime deliveryTime, WF_TimeSpan snoozeInterval, uint32_t maximumSnoozeCount, WUINO_ScheduledToastNotification** out);
 
-/* Windows.UI.Notifications.ITileFlyoutNotificationFactory */
-/* Windows.UI.Notifications.ITileFlyoutNotificationFactory.CreateTileFlyoutNotification(content) */
 HRESULT wuino_tile_flyout_notification_factory_create_tile_flyout_notification(WUINO_ITileFlyoutNotificationFactory *self, WDAXMDO_XmlDocument* content, WUINO_TileFlyoutNotification** out);
 
-/* Windows.UI.Notifications.ITileFlyoutUpdateManagerStatics */
-/* Windows.UI.Notifications.ITileFlyoutUpdateManagerStatics.CreateTileFlyoutUpdaterForApplication() */
 HRESULT wuino_tile_flyout_update_manager_statics_create_tile_flyout_updater_for_application(WUINO_ITileFlyoutUpdateManagerStatics *self, WUINO_TileFlyoutUpdater** out);
 
-/* Windows.UI.Notifications.ITileFlyoutUpdateManagerStatics.CreateTileFlyoutUpdaterForApplication(applicationId) */
 HRESULT wuino_tile_flyout_update_manager_statics_create_tile_flyout_updater_for_application_str_p(WUINO_ITileFlyoutUpdateManagerStatics *self, cwinrt_hstring applicationId, WUINO_TileFlyoutUpdater** out);
 
-/* Windows.UI.Notifications.ITileFlyoutUpdateManagerStatics.CreateTileFlyoutUpdaterForSecondaryTile(tileId) */
 HRESULT wuino_tile_flyout_update_manager_statics_create_tile_flyout_updater_for_secondary_tile(WUINO_ITileFlyoutUpdateManagerStatics *self, cwinrt_hstring tileId, WUINO_TileFlyoutUpdater** out);
 
-/* Windows.UI.Notifications.ITileFlyoutUpdateManagerStatics.GetTemplateContent() */
 HRESULT wuino_tile_flyout_update_manager_statics_get_template_content(WUINO_ITileFlyoutUpdateManagerStatics *self, WUINO_TileFlyoutTemplateType type_, WDAXMDO_XmlDocument** out);
 
-/* Windows.UI.Notifications.ITileNotificationFactory */
-/* Windows.UI.Notifications.ITileNotificationFactory.CreateTileNotification(content) */
 HRESULT wuino_tile_notification_factory_create_tile_notification(WUINO_ITileNotificationFactory *self, WDAXMDO_XmlDocument* content, WUINO_TileNotification** out);
 
-/* Windows.UI.Notifications.ITileUpdateManagerStatics */
-/* Windows.UI.Notifications.ITileUpdateManagerStatics.CreateTileUpdaterForApplication() */
 HRESULT wuino_tile_update_manager_statics_create_tile_updater_for_application(WUINO_ITileUpdateManagerStatics *self, WUINO_TileUpdater** out);
 
-/* Windows.UI.Notifications.ITileUpdateManagerStatics.CreateTileUpdaterForApplication(applicationId) */
 HRESULT wuino_tile_update_manager_statics_create_tile_updater_for_application_str_p(WUINO_ITileUpdateManagerStatics *self, cwinrt_hstring applicationId, WUINO_TileUpdater** out);
 
-/* Windows.UI.Notifications.ITileUpdateManagerStatics.CreateTileUpdaterForSecondaryTile(tileId) */
 HRESULT wuino_tile_update_manager_statics_create_tile_updater_for_secondary_tile(WUINO_ITileUpdateManagerStatics *self, cwinrt_hstring tileId, WUINO_TileUpdater** out);
 
-/* Windows.UI.Notifications.ITileUpdateManagerStatics.GetTemplateContent() */
 HRESULT wuino_tile_update_manager_statics_get_template_content(WUINO_ITileUpdateManagerStatics *self, WUINO_TileTemplateType type_, WDAXMDO_XmlDocument** out);
 
-/* Windows.UI.Notifications.ITileUpdateManagerStatics2 */
-/* Windows.UI.Notifications.ITileUpdateManagerStatics2.GetForUser(user) */
 HRESULT wuino_tile_update_manager_statics_2_get_for_user(WUINO_ITileUpdateManagerStatics_2 *self, WSY_User* user, WUINO_TileUpdateManagerForUser** out);
 
-/* Windows.UI.Notifications.IToastCollectionFactory */
-/* Windows.UI.Notifications.IToastCollectionFactory.CreateInstance(collectionId, displayName, launchArgs, iconUri) */
 HRESULT wuino_toast_collection_factory_create_instance(WUINO_IToastCollectionFactory *self, cwinrt_hstring collectionId, cwinrt_hstring displayName, cwinrt_hstring launchArgs, WF_Uri* iconUri, WUINO_ToastCollection** out);
 
-/* Windows.UI.Notifications.IToastNotificationFactory */
-/* Windows.UI.Notifications.IToastNotificationFactory.CreateToastNotification(content) */
 HRESULT wuino_toast_notification_factory_create_toast_notification(WUINO_IToastNotificationFactory *self, WDAXMDO_XmlDocument* content, WUINO_ToastNotification** out);
 
-/* Windows.UI.Notifications.IToastNotificationManagerStatics */
-/* Windows.UI.Notifications.IToastNotificationManagerStatics.CreateToastNotifier() */
 HRESULT wuino_toast_notification_manager_statics_create_toast_notifier(WUINO_IToastNotificationManagerStatics *self, WUINO_ToastNotifier** out);
 
-/* Windows.UI.Notifications.IToastNotificationManagerStatics.CreateToastNotifier(applicationId) */
 HRESULT wuino_toast_notification_manager_statics_create_toast_notifier_str_p(WUINO_IToastNotificationManagerStatics *self, cwinrt_hstring applicationId, WUINO_ToastNotifier** out);
 
-/* Windows.UI.Notifications.IToastNotificationManagerStatics.GetTemplateContent() */
 HRESULT wuino_toast_notification_manager_statics_get_template_content(WUINO_IToastNotificationManagerStatics *self, WUINO_ToastTemplateType type_, WDAXMDO_XmlDocument** out);
 
-/* Windows.UI.Notifications.IToastNotificationManagerStatics2 */
-/* Windows.UI.Notifications.IToastNotificationManagerStatics2.get_History() */
 HRESULT wuino_toast_notification_manager_statics_2_get__history(WUINO_IToastNotificationManagerStatics_2 *self, WUINO_ToastNotificationHistory** value);
 
-/* Windows.UI.Notifications.IToastNotificationManagerStatics4 */
-/* Windows.UI.Notifications.IToastNotificationManagerStatics4.GetForUser(user) */
 HRESULT wuino_toast_notification_manager_statics_4_get_for_user(WUINO_IToastNotificationManagerStatics_4 *self, WSY_User* user, WUINO_ToastNotificationManagerForUser** out);
 
-/* Windows.UI.Notifications.IToastNotificationManagerStatics4.ConfigureNotificationMirroring() */
 HRESULT wuino_toast_notification_manager_statics_4_configure_notification_mirroring(WUINO_IToastNotificationManagerStatics_4 *self, WUINO_NotificationMirroring value);
 
-/* Windows.UI.Notifications.IToastNotificationManagerStatics5 */
-/* Windows.UI.Notifications.IToastNotificationManagerStatics5.GetDefault() */
 HRESULT wuino_toast_notification_manager_statics_5_get_default(WUINO_IToastNotificationManagerStatics_5 *self, WUINO_ToastNotificationManagerForUser** out);
 
-/* activate Windows.UI.Notifications.KnownAdaptiveNotificationHints */
 HRESULT wuino_known_adaptive_notification_hints_new(WUINO_KnownAdaptiveNotificationHints **out);
 
-/* Windows.UI.Notifications.KnownAdaptiveNotificationHints */
-/* Windows.UI.Notifications.KnownAdaptiveNotificationHints.get_Style() */
 HRESULT wuino_known_adaptive_notification_hints_get__style(cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.KnownAdaptiveNotificationHints.get_Wrap() */
 HRESULT wuino_known_adaptive_notification_hints_get__wrap(cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.KnownAdaptiveNotificationHints.get_MaxLines() */
 HRESULT wuino_known_adaptive_notification_hints_get__max_lines(cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.KnownAdaptiveNotificationHints.get_MinLines() */
 HRESULT wuino_known_adaptive_notification_hints_get__min_lines(cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.KnownAdaptiveNotificationHints.get_TextStacking() */
 HRESULT wuino_known_adaptive_notification_hints_get__text_stacking(cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.KnownAdaptiveNotificationHints.get_Align() */
 HRESULT wuino_known_adaptive_notification_hints_get__align(cwinrt_hstring *value);
 
-/* activate Windows.UI.Notifications.KnownAdaptiveNotificationTextStyles */
 HRESULT wuino_known_adaptive_notification_text_styles_new(WUINO_KnownAdaptiveNotificationTextStyles **out);
 
-/* Windows.UI.Notifications.KnownAdaptiveNotificationTextStyles */
-/* Windows.UI.Notifications.KnownAdaptiveNotificationTextStyles.get_Caption() */
 HRESULT wuino_known_adaptive_notification_text_styles_get__caption(cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.KnownAdaptiveNotificationTextStyles.get_Body() */
 HRESULT wuino_known_adaptive_notification_text_styles_get__body(cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.KnownAdaptiveNotificationTextStyles.get_Base() */
 HRESULT wuino_known_adaptive_notification_text_styles_get__base(cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.KnownAdaptiveNotificationTextStyles.get_Subtitle() */
 HRESULT wuino_known_adaptive_notification_text_styles_get__subtitle(cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.KnownAdaptiveNotificationTextStyles.get_Title() */
 HRESULT wuino_known_adaptive_notification_text_styles_get__title(cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.KnownAdaptiveNotificationTextStyles.get_Subheader() */
 HRESULT wuino_known_adaptive_notification_text_styles_get__subheader(cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.KnownAdaptiveNotificationTextStyles.get_Header() */
 HRESULT wuino_known_adaptive_notification_text_styles_get__header(cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.KnownAdaptiveNotificationTextStyles.get_TitleNumeral() */
 HRESULT wuino_known_adaptive_notification_text_styles_get__title_numeral(cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.KnownAdaptiveNotificationTextStyles.get_SubheaderNumeral() */
 HRESULT wuino_known_adaptive_notification_text_styles_get__subheader_numeral(cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.KnownAdaptiveNotificationTextStyles.get_HeaderNumeral() */
 HRESULT wuino_known_adaptive_notification_text_styles_get__header_numeral(cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.KnownAdaptiveNotificationTextStyles.get_CaptionSubtle() */
 HRESULT wuino_known_adaptive_notification_text_styles_get__caption_subtle(cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.KnownAdaptiveNotificationTextStyles.get_BodySubtle() */
 HRESULT wuino_known_adaptive_notification_text_styles_get__body_subtle(cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.KnownAdaptiveNotificationTextStyles.get_BaseSubtle() */
 HRESULT wuino_known_adaptive_notification_text_styles_get__base_subtle(cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.KnownAdaptiveNotificationTextStyles.get_SubtitleSubtle() */
 HRESULT wuino_known_adaptive_notification_text_styles_get__subtitle_subtle(cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.KnownAdaptiveNotificationTextStyles.get_TitleSubtle() */
 HRESULT wuino_known_adaptive_notification_text_styles_get__title_subtle(cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.KnownAdaptiveNotificationTextStyles.get_SubheaderSubtle() */
 HRESULT wuino_known_adaptive_notification_text_styles_get__subheader_subtle(cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.KnownAdaptiveNotificationTextStyles.get_SubheaderNumeralSubtle() */
 HRESULT wuino_known_adaptive_notification_text_styles_get__subheader_numeral_subtle(cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.KnownAdaptiveNotificationTextStyles.get_HeaderSubtle() */
 HRESULT wuino_known_adaptive_notification_text_styles_get__header_subtle(cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.KnownAdaptiveNotificationTextStyles.get_HeaderNumeralSubtle() */
 HRESULT wuino_known_adaptive_notification_text_styles_get__header_numeral_subtle(cwinrt_hstring *value);
 
-/* activate Windows.UI.Notifications.KnownNotificationBindings */
 HRESULT wuino_known_notification_bindings_new(WUINO_KnownNotificationBindings **out);
 
-/* Windows.UI.Notifications.KnownNotificationBindings */
-/* Windows.UI.Notifications.KnownNotificationBindings.get_ToastGeneric() */
 HRESULT wuino_known_notification_bindings_get__toast_generic(cwinrt_hstring *value);
 
-/* activate Windows.UI.Notifications.AdaptiveNotificationText */
 HRESULT wuino_adaptive_notification_text_new(WUINO_AdaptiveNotificationText **out);
 
-/* Windows.UI.Notifications.AdaptiveNotificationText */
-/* Windows.UI.Notifications.AdaptiveNotificationText.get_Text() */
 HRESULT wuino_adaptive_notification_text_get__text(WUINO_AdaptiveNotificationText *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.AdaptiveNotificationText.put_Text() */
 HRESULT wuino_adaptive_notification_text_put__text(WUINO_AdaptiveNotificationText *self, cwinrt_hstring value);
 
-/* Windows.UI.Notifications.AdaptiveNotificationText.get_Language() */
 HRESULT wuino_adaptive_notification_text_get__language(WUINO_AdaptiveNotificationText *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.AdaptiveNotificationText.put_Language() */
 HRESULT wuino_adaptive_notification_text_put__language(WUINO_AdaptiveNotificationText *self, cwinrt_hstring value);
 
-/* Windows.UI.Notifications.AdaptiveNotificationText.get_Kind() */
 HRESULT wuino_adaptive_notification_text_get__kind(WUINO_AdaptiveNotificationText *self, WUINO_AdaptiveNotificationContentKind *value);
 
-/* Windows.UI.Notifications.AdaptiveNotificationText.get_Hints() */
 HRESULT wuino_adaptive_notification_text_get__hints(WUINO_AdaptiveNotificationText *self, WFOCO_IMap_HSTRING_HSTRING** value);
 
-/* activate Windows.UI.Notifications.BadgeNotification */
 HRESULT wuino_badge_notification_new(WUINO_BadgeNotification **out);
 
-/* Windows.UI.Notifications.BadgeNotification */
-/* Windows.UI.Notifications.BadgeNotification.get_Content() */
 HRESULT wuino_badge_notification_get__content(WUINO_BadgeNotification *self, WDAXMDO_XmlDocument** value);
 
-/* Windows.UI.Notifications.BadgeNotification.put_ExpirationTime() */
 HRESULT wuino_badge_notification_put__expiration_time(WUINO_BadgeNotification *self, WF_DateTime* value);
 
-/* Windows.UI.Notifications.BadgeNotification.get_ExpirationTime() */
 HRESULT wuino_badge_notification_get__expiration_time(WUINO_BadgeNotification *self, WF_DateTime** value);
 
-/* activate Windows.UI.Notifications.Notification */
 HRESULT wuino_notification_new(WUINO_Notification **out);
 
-/* Windows.UI.Notifications.Notification */
-/* Windows.UI.Notifications.Notification.get_ExpirationTime() */
 HRESULT wuino_notification_get__expiration_time(WUINO_Notification *self, WF_DateTime** value);
 
-/* Windows.UI.Notifications.Notification.put_ExpirationTime() */
 HRESULT wuino_notification_put__expiration_time(WUINO_Notification *self, WF_DateTime* value);
 
-/* Windows.UI.Notifications.Notification.get_Visual() */
 HRESULT wuino_notification_get__visual(WUINO_Notification *self, WUINO_NotificationVisual** value);
 
-/* Windows.UI.Notifications.Notification.put_Visual() */
 HRESULT wuino_notification_put__visual(WUINO_Notification *self, WUINO_NotificationVisual* value);
 
-/* activate Windows.UI.Notifications.NotificationBinding */
 HRESULT wuino_notification_binding_new(WUINO_NotificationBinding **out);
 
-/* Windows.UI.Notifications.NotificationBinding */
-/* Windows.UI.Notifications.NotificationBinding.get_Template() */
 HRESULT wuino_notification_binding_get__template(WUINO_NotificationBinding *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.NotificationBinding.put_Template() */
 HRESULT wuino_notification_binding_put__template(WUINO_NotificationBinding *self, cwinrt_hstring value);
 
-/* Windows.UI.Notifications.NotificationBinding.get_Language() */
 HRESULT wuino_notification_binding_get__language(WUINO_NotificationBinding *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.NotificationBinding.put_Language() */
 HRESULT wuino_notification_binding_put__language(WUINO_NotificationBinding *self, cwinrt_hstring value);
 
-/* Windows.UI.Notifications.NotificationBinding.get_Hints() */
 HRESULT wuino_notification_binding_get__hints(WUINO_NotificationBinding *self, WFOCO_IMap_HSTRING_HSTRING** value);
 
-/* Windows.UI.Notifications.NotificationBinding.GetTextElements() */
 HRESULT wuino_notification_binding_get_text_elements(WUINO_NotificationBinding *self, WFOCO_IVectorView_WUINO_AdaptiveNotificationText** out);
 
-/* activate Windows.UI.Notifications.NotificationData */
 HRESULT wuino_notification_data_new(WUINO_NotificationData **out);
 
-/* Windows.UI.Notifications.NotificationData */
-/* Windows.UI.Notifications.NotificationData.get_Values() */
 HRESULT wuino_notification_data_get__values(WUINO_NotificationData *self, WFOCO_IMap_HSTRING_HSTRING** value);
 
-/* Windows.UI.Notifications.NotificationData.get_SequenceNumber() */
 HRESULT wuino_notification_data_get__sequence_number(WUINO_NotificationData *self, uint32_t *value);
 
-/* Windows.UI.Notifications.NotificationData.put_SequenceNumber() */
 HRESULT wuino_notification_data_put__sequence_number(WUINO_NotificationData *self, uint32_t value);
 
-/* activate Windows.UI.Notifications.NotificationVisual */
 HRESULT wuino_notification_visual_new(WUINO_NotificationVisual **out);
 
-/* Windows.UI.Notifications.NotificationVisual */
-/* Windows.UI.Notifications.NotificationVisual.get_Language() */
 HRESULT wuino_notification_visual_get__language(WUINO_NotificationVisual *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.NotificationVisual.put_Language() */
 HRESULT wuino_notification_visual_put__language(WUINO_NotificationVisual *self, cwinrt_hstring value);
 
-/* Windows.UI.Notifications.NotificationVisual.get_Bindings() */
 HRESULT wuino_notification_visual_get__bindings(WUINO_NotificationVisual *self, WFOCO_IVector_WUINO_NotificationBinding** value);
 
-/* Windows.UI.Notifications.NotificationVisual.GetBinding(templateName) */
 HRESULT wuino_notification_visual_get_binding(WUINO_NotificationVisual *self, cwinrt_hstring templateName, WUINO_NotificationBinding** out);
 
-/* activate Windows.UI.Notifications.UserNotificationChangedEventArgs */
 HRESULT wuino_user_notification_changed_event_args_new(WUINO_UserNotificationChangedEventArgs **out);
 
-/* Windows.UI.Notifications.UserNotificationChangedEventArgs */
-/* Windows.UI.Notifications.UserNotificationChangedEventArgs.get_ChangeKind() */
 HRESULT wuino_user_notification_changed_event_args_get__change_kind(WUINO_UserNotificationChangedEventArgs *self, WUINO_UserNotificationChangedKind *value);
 
-/* Windows.UI.Notifications.UserNotificationChangedEventArgs.get_UserNotificationId() */
 HRESULT wuino_user_notification_changed_event_args_get__user_notification_id(WUINO_UserNotificationChangedEventArgs *self, uint32_t *value);
 
-/* activate Windows.UI.Notifications.UserNotification */
 HRESULT wuino_user_notification_new(WUINO_UserNotification **out);
 
-/* Windows.UI.Notifications.UserNotification */
-/* Windows.UI.Notifications.UserNotification.get_Notification() */
 HRESULT wuino_user_notification_get__notification(WUINO_UserNotification *self, WUINO_Notification** value);
 
-/* Windows.UI.Notifications.UserNotification.get_AppInfo() */
 HRESULT wuino_user_notification_get__app_info(WUINO_UserNotification *self, WAM_AppInfo** value);
 
-/* Windows.UI.Notifications.UserNotification.get_Id() */
 HRESULT wuino_user_notification_get__id(WUINO_UserNotification *self, uint32_t *value);
 
-/* Windows.UI.Notifications.UserNotification.get_CreationTime() */
 HRESULT wuino_user_notification_get__creation_time(WUINO_UserNotification *self, WF_DateTime *value);
 
-/* activate Windows.UI.Notifications.ScheduledTileNotification */
 HRESULT wuino_scheduled_tile_notification_new(WUINO_ScheduledTileNotification **out);
 
-/* Windows.UI.Notifications.ScheduledTileNotification */
-/* Windows.UI.Notifications.ScheduledTileNotification.get_Content() */
 HRESULT wuino_scheduled_tile_notification_get__content(WUINO_ScheduledTileNotification *self, WDAXMDO_XmlDocument** value);
 
-/* Windows.UI.Notifications.ScheduledTileNotification.get_DeliveryTime() */
 HRESULT wuino_scheduled_tile_notification_get__delivery_time(WUINO_ScheduledTileNotification *self, WF_DateTime *value);
 
-/* Windows.UI.Notifications.ScheduledTileNotification.put_ExpirationTime() */
 HRESULT wuino_scheduled_tile_notification_put__expiration_time(WUINO_ScheduledTileNotification *self, WF_DateTime* value);
 
-/* Windows.UI.Notifications.ScheduledTileNotification.get_ExpirationTime() */
 HRESULT wuino_scheduled_tile_notification_get__expiration_time(WUINO_ScheduledTileNotification *self, WF_DateTime** value);
 
-/* Windows.UI.Notifications.ScheduledTileNotification.put_Tag() */
 HRESULT wuino_scheduled_tile_notification_put__tag(WUINO_ScheduledTileNotification *self, cwinrt_hstring value);
 
-/* Windows.UI.Notifications.ScheduledTileNotification.get_Tag() */
 HRESULT wuino_scheduled_tile_notification_get__tag(WUINO_ScheduledTileNotification *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.ScheduledTileNotification.put_Id() */
 HRESULT wuino_scheduled_tile_notification_put__id(WUINO_ScheduledTileNotification *self, cwinrt_hstring value);
 
-/* Windows.UI.Notifications.ScheduledTileNotification.get_Id() */
 HRESULT wuino_scheduled_tile_notification_get__id(WUINO_ScheduledTileNotification *self, cwinrt_hstring *value);
 
-/* activate Windows.UI.Notifications.ScheduledToastNotification */
 HRESULT wuino_scheduled_toast_notification_new(WUINO_ScheduledToastNotification **out);
 
-/* Windows.UI.Notifications.ScheduledToastNotification */
-/* Windows.UI.Notifications.ScheduledToastNotification.get_Content() */
 HRESULT wuino_scheduled_toast_notification_get__content(WUINO_ScheduledToastNotification *self, WDAXMDO_XmlDocument** value);
 
-/* Windows.UI.Notifications.ScheduledToastNotification.get_DeliveryTime() */
 HRESULT wuino_scheduled_toast_notification_get__delivery_time(WUINO_ScheduledToastNotification *self, WF_DateTime *value);
 
-/* Windows.UI.Notifications.ScheduledToastNotification.get_SnoozeInterval() */
 HRESULT wuino_scheduled_toast_notification_get__snooze_interval(WUINO_ScheduledToastNotification *self, WF_TimeSpan** value);
 
-/* Windows.UI.Notifications.ScheduledToastNotification.get_MaximumSnoozeCount() */
 HRESULT wuino_scheduled_toast_notification_get__maximum_snooze_count(WUINO_ScheduledToastNotification *self, uint32_t *value);
 
-/* Windows.UI.Notifications.ScheduledToastNotification.put_Id() */
 HRESULT wuino_scheduled_toast_notification_put__id(WUINO_ScheduledToastNotification *self, cwinrt_hstring value);
 
-/* Windows.UI.Notifications.ScheduledToastNotification.get_Id() */
 HRESULT wuino_scheduled_toast_notification_get__id(WUINO_ScheduledToastNotification *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.ScheduledToastNotification.put_Tag() */
 HRESULT wuino_scheduled_toast_notification_put__tag(WUINO_ScheduledToastNotification *self, cwinrt_hstring value);
 
-/* Windows.UI.Notifications.ScheduledToastNotification.get_Tag() */
 HRESULT wuino_scheduled_toast_notification_get__tag(WUINO_ScheduledToastNotification *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.ScheduledToastNotification.put_Group() */
 HRESULT wuino_scheduled_toast_notification_put__group(WUINO_ScheduledToastNotification *self, cwinrt_hstring value);
 
-/* Windows.UI.Notifications.ScheduledToastNotification.get_Group() */
 HRESULT wuino_scheduled_toast_notification_get__group(WUINO_ScheduledToastNotification *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.ScheduledToastNotification.put_SuppressPopup() */
 HRESULT wuino_scheduled_toast_notification_put__suppress_popup(WUINO_ScheduledToastNotification *self, BOOL value);
 
-/* Windows.UI.Notifications.ScheduledToastNotification.get_SuppressPopup() */
 HRESULT wuino_scheduled_toast_notification_get__suppress_popup(WUINO_ScheduledToastNotification *self, BOOL *value);
 
-/* Windows.UI.Notifications.ScheduledToastNotification.get_NotificationMirroring() */
 HRESULT wuino_scheduled_toast_notification_get__notification_mirroring(WUINO_ScheduledToastNotification *self, WUINO_NotificationMirroring *value);
 
-/* Windows.UI.Notifications.ScheduledToastNotification.put_NotificationMirroring() */
 HRESULT wuino_scheduled_toast_notification_put__notification_mirroring(WUINO_ScheduledToastNotification *self, WUINO_NotificationMirroring value);
 
-/* Windows.UI.Notifications.ScheduledToastNotification.get_RemoteId() */
 HRESULT wuino_scheduled_toast_notification_get__remote_id(WUINO_ScheduledToastNotification *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.ScheduledToastNotification.put_RemoteId() */
 HRESULT wuino_scheduled_toast_notification_put__remote_id(WUINO_ScheduledToastNotification *self, cwinrt_hstring value);
 
-/* Windows.UI.Notifications.ScheduledToastNotification.get_ExpirationTime() */
 HRESULT wuino_scheduled_toast_notification_get__expiration_time(WUINO_ScheduledToastNotification *self, WF_DateTime** value);
 
-/* Windows.UI.Notifications.ScheduledToastNotification.put_ExpirationTime() */
 HRESULT wuino_scheduled_toast_notification_put__expiration_time(WUINO_ScheduledToastNotification *self, WF_DateTime* value);
 
-/* activate Windows.UI.Notifications.ScheduledToastNotificationShowingEventArgs */
 HRESULT wuino_scheduled_toast_notification_showing_event_args_new(WUINO_ScheduledToastNotificationShowingEventArgs **out);
 
-/* Windows.UI.Notifications.ScheduledToastNotificationShowingEventArgs */
-/* Windows.UI.Notifications.ScheduledToastNotificationShowingEventArgs.get_Cancel() */
 HRESULT wuino_scheduled_toast_notification_showing_event_args_get__cancel(WUINO_ScheduledToastNotificationShowingEventArgs *self, BOOL *value);
 
-/* Windows.UI.Notifications.ScheduledToastNotificationShowingEventArgs.put_Cancel() */
 HRESULT wuino_scheduled_toast_notification_showing_event_args_put__cancel(WUINO_ScheduledToastNotificationShowingEventArgs *self, BOOL value);
 
-/* Windows.UI.Notifications.ScheduledToastNotificationShowingEventArgs.get_ScheduledToastNotification() */
 HRESULT wuino_scheduled_toast_notification_showing_event_args_get__scheduled_toast_notification(WUINO_ScheduledToastNotificationShowingEventArgs *self, WUINO_ScheduledToastNotification** value);
 
-/* Windows.UI.Notifications.ScheduledToastNotificationShowingEventArgs.GetDeferral() */
 HRESULT wuino_scheduled_toast_notification_showing_event_args_get_deferral(WUINO_ScheduledToastNotificationShowingEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.UI.Notifications.ShownTileNotification */
 HRESULT wuino_shown_tile_notification_new(WUINO_ShownTileNotification **out);
 
-/* Windows.UI.Notifications.ShownTileNotification */
-/* Windows.UI.Notifications.ShownTileNotification.get_Arguments() */
 HRESULT wuino_shown_tile_notification_get__arguments(WUINO_ShownTileNotification *self, cwinrt_hstring *value);
 
-/* activate Windows.UI.Notifications.TileFlyoutNotification */
 HRESULT wuino_tile_flyout_notification_new(WUINO_TileFlyoutNotification **out);
 
-/* Windows.UI.Notifications.TileFlyoutNotification */
-/* Windows.UI.Notifications.TileFlyoutNotification.get_Content() */
 HRESULT wuino_tile_flyout_notification_get__content(WUINO_TileFlyoutNotification *self, WDAXMDO_XmlDocument** value);
 
-/* Windows.UI.Notifications.TileFlyoutNotification.put_ExpirationTime() */
 HRESULT wuino_tile_flyout_notification_put__expiration_time(WUINO_TileFlyoutNotification *self, WF_DateTime* value);
 
-/* Windows.UI.Notifications.TileFlyoutNotification.get_ExpirationTime() */
 HRESULT wuino_tile_flyout_notification_get__expiration_time(WUINO_TileFlyoutNotification *self, WF_DateTime** value);
 
-/* activate Windows.UI.Notifications.TileFlyoutUpdateManager */
 HRESULT wuino_tile_flyout_update_manager_new(WUINO_TileFlyoutUpdateManager **out);
 
-/* Windows.UI.Notifications.TileFlyoutUpdateManager */
-/* Windows.UI.Notifications.TileFlyoutUpdateManager.CreateTileFlyoutUpdaterForApplication() */
 HRESULT wuino_tile_flyout_update_manager_create_tile_flyout_updater_for_application(WUINO_TileFlyoutUpdater** out);
 
-/* Windows.UI.Notifications.TileFlyoutUpdateManager.CreateTileFlyoutUpdaterForApplication(applicationId) */
 HRESULT wuino_tile_flyout_update_manager_create_tile_flyout_updater_for_application_str_p(cwinrt_hstring applicationId, WUINO_TileFlyoutUpdater** out);
 
-/* Windows.UI.Notifications.TileFlyoutUpdateManager.CreateTileFlyoutUpdaterForSecondaryTile(tileId) */
 HRESULT wuino_tile_flyout_update_manager_create_tile_flyout_updater_for_secondary_tile(cwinrt_hstring tileId, WUINO_TileFlyoutUpdater** out);
 
-/* Windows.UI.Notifications.TileFlyoutUpdateManager.GetTemplateContent() */
 HRESULT wuino_tile_flyout_update_manager_get_template_content(WUINO_TileFlyoutTemplateType type_, WDAXMDO_XmlDocument** out);
 
-/* activate Windows.UI.Notifications.TileFlyoutUpdater */
 HRESULT wuino_tile_flyout_updater_new(WUINO_TileFlyoutUpdater **out);
 
-/* Windows.UI.Notifications.TileFlyoutUpdater */
-/* Windows.UI.Notifications.TileFlyoutUpdater.Update(notification) */
 HRESULT wuino_tile_flyout_updater_update(WUINO_TileFlyoutUpdater *self, WUINO_TileFlyoutNotification* notification);
 
-/* Windows.UI.Notifications.TileFlyoutUpdater.Clear() */
 HRESULT wuino_tile_flyout_updater_clear(WUINO_TileFlyoutUpdater *self);
 
-/* Windows.UI.Notifications.TileFlyoutUpdater.StartPeriodicUpdate(tileFlyoutContent, requestedInterval) */
 HRESULT wuino_tile_flyout_updater_start_periodic_update(WUINO_TileFlyoutUpdater *self, WF_Uri* tileFlyoutContent, WUINO_PeriodicUpdateRecurrence requestedInterval);
 
-/* Windows.UI.Notifications.TileFlyoutUpdater.StartPeriodicUpdate(tileFlyoutContent, startTime, requestedInterval) */
 HRESULT wuino_tile_flyout_updater_start_periodic_update_p_date_time_periodic_update_recurrence(WUINO_TileFlyoutUpdater *self, WF_Uri* tileFlyoutContent, WF_DateTime startTime, WUINO_PeriodicUpdateRecurrence requestedInterval);
 
-/* Windows.UI.Notifications.TileFlyoutUpdater.StopPeriodicUpdate() */
 HRESULT wuino_tile_flyout_updater_stop_periodic_update(WUINO_TileFlyoutUpdater *self);
 
-/* Windows.UI.Notifications.TileFlyoutUpdater.get_Setting() */
 HRESULT wuino_tile_flyout_updater_get__setting(WUINO_TileFlyoutUpdater *self, WUINO_NotificationSetting *value);
 
-/* activate Windows.UI.Notifications.TileNotification */
 HRESULT wuino_tile_notification_new(WUINO_TileNotification **out);
 
-/* Windows.UI.Notifications.TileNotification */
-/* Windows.UI.Notifications.TileNotification.get_Content() */
 HRESULT wuino_tile_notification_get__content(WUINO_TileNotification *self, WDAXMDO_XmlDocument** value);
 
-/* Windows.UI.Notifications.TileNotification.put_ExpirationTime() */
 HRESULT wuino_tile_notification_put__expiration_time(WUINO_TileNotification *self, WF_DateTime* value);
 
-/* Windows.UI.Notifications.TileNotification.get_ExpirationTime() */
 HRESULT wuino_tile_notification_get__expiration_time(WUINO_TileNotification *self, WF_DateTime** value);
 
-/* Windows.UI.Notifications.TileNotification.put_Tag() */
 HRESULT wuino_tile_notification_put__tag(WUINO_TileNotification *self, cwinrt_hstring value);
 
-/* Windows.UI.Notifications.TileNotification.get_Tag() */
 HRESULT wuino_tile_notification_get__tag(WUINO_TileNotification *self, cwinrt_hstring *value);
 
-/* activate Windows.UI.Notifications.TileUpdateManager */
 HRESULT wuino_tile_update_manager_new(WUINO_TileUpdateManager **out);
 
-/* Windows.UI.Notifications.TileUpdateManager */
-/* Windows.UI.Notifications.TileUpdateManager.GetForUser(user) */
 HRESULT wuino_tile_update_manager_get_for_user(WSY_User* user, WUINO_TileUpdateManagerForUser** out);
 
-/* Windows.UI.Notifications.TileUpdateManager.CreateTileUpdaterForApplication() */
 HRESULT wuino_tile_update_manager_create_tile_updater_for_application(WUINO_TileUpdater** out);
 
-/* Windows.UI.Notifications.TileUpdateManager.CreateTileUpdaterForApplication(applicationId) */
 HRESULT wuino_tile_update_manager_create_tile_updater_for_application_str_p(cwinrt_hstring applicationId, WUINO_TileUpdater** out);
 
-/* Windows.UI.Notifications.TileUpdateManager.CreateTileUpdaterForSecondaryTile(tileId) */
 HRESULT wuino_tile_update_manager_create_tile_updater_for_secondary_tile(cwinrt_hstring tileId, WUINO_TileUpdater** out);
 
-/* Windows.UI.Notifications.TileUpdateManager.GetTemplateContent() */
 HRESULT wuino_tile_update_manager_get_template_content(WUINO_TileTemplateType type_, WDAXMDO_XmlDocument** out);
 
-/* activate Windows.UI.Notifications.TileUpdateManagerForUser */
 HRESULT wuino_tile_update_manager_for_user_new(WUINO_TileUpdateManagerForUser **out);
 
-/* Windows.UI.Notifications.TileUpdateManagerForUser */
-/* Windows.UI.Notifications.TileUpdateManagerForUser.CreateTileUpdaterForApplicationForUser() */
 HRESULT wuino_tile_update_manager_for_user_create_tile_updater_for_application_for_user(WUINO_TileUpdateManagerForUser *self, WUINO_TileUpdater** out);
 
-/* Windows.UI.Notifications.TileUpdateManagerForUser.CreateTileUpdaterForApplication(applicationId) */
 HRESULT wuino_tile_update_manager_for_user_create_tile_updater_for_application(WUINO_TileUpdateManagerForUser *self, cwinrt_hstring applicationId, WUINO_TileUpdater** out);
 
-/* Windows.UI.Notifications.TileUpdateManagerForUser.CreateTileUpdaterForSecondaryTile(tileId) */
 HRESULT wuino_tile_update_manager_for_user_create_tile_updater_for_secondary_tile(WUINO_TileUpdateManagerForUser *self, cwinrt_hstring tileId, WUINO_TileUpdater** out);
 
-/* Windows.UI.Notifications.TileUpdateManagerForUser.get_User() */
 HRESULT wuino_tile_update_manager_for_user_get__user(WUINO_TileUpdateManagerForUser *self, WSY_User** value);
 
-/* activate Windows.UI.Notifications.TileUpdater */
 HRESULT wuino_tile_updater_new(WUINO_TileUpdater **out);
 
-/* Windows.UI.Notifications.TileUpdater */
-/* Windows.UI.Notifications.TileUpdater.Update(notification) */
 HRESULT wuino_tile_updater_update(WUINO_TileUpdater *self, WUINO_TileNotification* notification);
 
-/* Windows.UI.Notifications.TileUpdater.Clear() */
 HRESULT wuino_tile_updater_clear(WUINO_TileUpdater *self);
 
-/* Windows.UI.Notifications.TileUpdater.EnableNotificationQueue(enable) */
 HRESULT wuino_tile_updater_enable_notification_queue(WUINO_TileUpdater *self, BOOL enable);
 
-/* Windows.UI.Notifications.TileUpdater.get_Setting() */
 HRESULT wuino_tile_updater_get__setting(WUINO_TileUpdater *self, WUINO_NotificationSetting *value);
 
-/* Windows.UI.Notifications.TileUpdater.AddToSchedule(scheduledTile) */
 HRESULT wuino_tile_updater_add_to_schedule(WUINO_TileUpdater *self, WUINO_ScheduledTileNotification* scheduledTile);
 
-/* Windows.UI.Notifications.TileUpdater.RemoveFromSchedule(scheduledTile) */
 HRESULT wuino_tile_updater_remove_from_schedule(WUINO_TileUpdater *self, WUINO_ScheduledTileNotification* scheduledTile);
 
-/* Windows.UI.Notifications.TileUpdater.GetScheduledTileNotifications() */
 HRESULT wuino_tile_updater_get_scheduled_tile_notifications(WUINO_TileUpdater *self, WFOCO_IVectorView_WUINO_ScheduledTileNotification** out);
 
-/* Windows.UI.Notifications.TileUpdater.StartPeriodicUpdate(tileContent, requestedInterval) */
 HRESULT wuino_tile_updater_start_periodic_update(WUINO_TileUpdater *self, WF_Uri* tileContent, WUINO_PeriodicUpdateRecurrence requestedInterval);
 
-/* Windows.UI.Notifications.TileUpdater.StartPeriodicUpdate(tileContent, startTime, requestedInterval) */
 HRESULT wuino_tile_updater_start_periodic_update_p_date_time_periodic_update_recurrence(WUINO_TileUpdater *self, WF_Uri* tileContent, WF_DateTime startTime, WUINO_PeriodicUpdateRecurrence requestedInterval);
 
-/* Windows.UI.Notifications.TileUpdater.StopPeriodicUpdate() */
 HRESULT wuino_tile_updater_stop_periodic_update(WUINO_TileUpdater *self);
 
-/* Windows.UI.Notifications.TileUpdater.StartPeriodicUpdateBatch(tileContents, requestedInterval) */
 HRESULT wuino_tile_updater_start_periodic_update_batch(WUINO_TileUpdater *self, WFOCO_IIterable_WF_Uri* tileContents, WUINO_PeriodicUpdateRecurrence requestedInterval);
 
-/* Windows.UI.Notifications.TileUpdater.StartPeriodicUpdateBatch(tileContents, startTime, requestedInterval) */
 HRESULT wuino_tile_updater_start_periodic_update_batch_p_date_time_periodic_update_recurrence(WUINO_TileUpdater *self, WFOCO_IIterable_WF_Uri* tileContents, WF_DateTime startTime, WUINO_PeriodicUpdateRecurrence requestedInterval);
 
-/* Windows.UI.Notifications.TileUpdater.EnableNotificationQueueForSquare150x150(enable) */
 HRESULT wuino_tile_updater_enable_notification_queue_for_square150x150(WUINO_TileUpdater *self, BOOL enable);
 
-/* Windows.UI.Notifications.TileUpdater.EnableNotificationQueueForWide310x150(enable) */
 HRESULT wuino_tile_updater_enable_notification_queue_for_wide310x150(WUINO_TileUpdater *self, BOOL enable);
 
-/* Windows.UI.Notifications.TileUpdater.EnableNotificationQueueForSquare310x310(enable) */
 HRESULT wuino_tile_updater_enable_notification_queue_for_square310x310(WUINO_TileUpdater *self, BOOL enable);
 
-/* activate Windows.UI.Notifications.ToastActivatedEventArgs */
 HRESULT wuino_toast_activated_event_args_new(WUINO_ToastActivatedEventArgs **out);
 
-/* Windows.UI.Notifications.ToastActivatedEventArgs */
-/* Windows.UI.Notifications.ToastActivatedEventArgs.get_Arguments() */
 HRESULT wuino_toast_activated_event_args_get__arguments(WUINO_ToastActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.ToastActivatedEventArgs.get_UserInput() */
 HRESULT wuino_toast_activated_event_args_get__user_input(WUINO_ToastActivatedEventArgs *self, WFOCO_ValueSet** value);
 
-/* activate Windows.UI.Notifications.ToastCollection */
 HRESULT wuino_toast_collection_new(WUINO_ToastCollection **out);
 
-/* Windows.UI.Notifications.ToastCollection */
-/* Windows.UI.Notifications.ToastCollection.get_Id() */
 HRESULT wuino_toast_collection_get__id(WUINO_ToastCollection *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.ToastCollection.get_DisplayName() */
 HRESULT wuino_toast_collection_get__display_name(WUINO_ToastCollection *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.ToastCollection.put_DisplayName() */
 HRESULT wuino_toast_collection_put__display_name(WUINO_ToastCollection *self, cwinrt_hstring value);
 
-/* Windows.UI.Notifications.ToastCollection.get_LaunchArgs() */
 HRESULT wuino_toast_collection_get__launch_args(WUINO_ToastCollection *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.ToastCollection.put_LaunchArgs() */
 HRESULT wuino_toast_collection_put__launch_args(WUINO_ToastCollection *self, cwinrt_hstring value);
 
-/* Windows.UI.Notifications.ToastCollection.get_Icon() */
 HRESULT wuino_toast_collection_get__icon(WUINO_ToastCollection *self, WF_Uri** value);
 
-/* Windows.UI.Notifications.ToastCollection.put_Icon() */
 HRESULT wuino_toast_collection_put__icon(WUINO_ToastCollection *self, WF_Uri* value);
 
-/* activate Windows.UI.Notifications.ToastCollectionManager */
 HRESULT wuino_toast_collection_manager_new(WUINO_ToastCollectionManager **out);
 
-/* Windows.UI.Notifications.ToastCollectionManager */
-/* Windows.UI.Notifications.ToastCollectionManager.SaveToastCollectionAsync(collection) */
 HRESULT wuino_toast_collection_manager_save_toast_collection_async(WUINO_ToastCollectionManager *self, WUINO_ToastCollection* collection, WF_IAsyncAction** out);
 
-/* Windows.UI.Notifications.ToastCollectionManager.FindAllToastCollectionsAsync() */
 HRESULT wuino_toast_collection_manager_find_all_toast_collections_async(WUINO_ToastCollectionManager *self, WF_IAsyncOperation_WFOCO_IVectorView_WUINO_ToastCollection** out);
 
-/* Windows.UI.Notifications.ToastCollectionManager.GetToastCollectionAsync(collectionId) */
 HRESULT wuino_toast_collection_manager_get_toast_collection_async(WUINO_ToastCollectionManager *self, cwinrt_hstring collectionId, WF_IAsyncOperation_WUINO_ToastCollection** out);
 
-/* Windows.UI.Notifications.ToastCollectionManager.RemoveToastCollectionAsync(collectionId) */
 HRESULT wuino_toast_collection_manager_remove_toast_collection_async(WUINO_ToastCollectionManager *self, cwinrt_hstring collectionId, WF_IAsyncAction** out);
 
-/* Windows.UI.Notifications.ToastCollectionManager.RemoveAllToastCollectionsAsync() */
 HRESULT wuino_toast_collection_manager_remove_all_toast_collections_async(WUINO_ToastCollectionManager *self, WF_IAsyncAction** out);
 
-/* Windows.UI.Notifications.ToastCollectionManager.get_User() */
 HRESULT wuino_toast_collection_manager_get__user(WUINO_ToastCollectionManager *self, WSY_User** value);
 
-/* Windows.UI.Notifications.ToastCollectionManager.get_AppId() */
 HRESULT wuino_toast_collection_manager_get__app_id(WUINO_ToastCollectionManager *self, cwinrt_hstring *value);
 
-/* activate Windows.UI.Notifications.ToastDismissedEventArgs */
 HRESULT wuino_toast_dismissed_event_args_new(WUINO_ToastDismissedEventArgs **out);
 
-/* Windows.UI.Notifications.ToastDismissedEventArgs */
-/* Windows.UI.Notifications.ToastDismissedEventArgs.get_Reason() */
 HRESULT wuino_toast_dismissed_event_args_get__reason(WUINO_ToastDismissedEventArgs *self, WUINO_ToastDismissalReason *value);
 
-/* activate Windows.UI.Notifications.ToastFailedEventArgs */
 HRESULT wuino_toast_failed_event_args_new(WUINO_ToastFailedEventArgs **out);
 
-/* Windows.UI.Notifications.ToastFailedEventArgs */
-/* Windows.UI.Notifications.ToastFailedEventArgs.get_ErrorCode() */
 HRESULT wuino_toast_failed_event_args_get__error_code(WUINO_ToastFailedEventArgs *self, HRESULT *value);
 
-/* activate Windows.UI.Notifications.ToastNotification */
 HRESULT wuino_toast_notification_new(WUINO_ToastNotification **out);
 
-/* Windows.UI.Notifications.ToastNotification */
-/* Windows.UI.Notifications.ToastNotification.get_Content() */
 HRESULT wuino_toast_notification_get__content(WUINO_ToastNotification *self, WDAXMDO_XmlDocument** value);
 
-/* Windows.UI.Notifications.ToastNotification.put_ExpirationTime() */
 HRESULT wuino_toast_notification_put__expiration_time(WUINO_ToastNotification *self, WF_DateTime* value);
 
-/* Windows.UI.Notifications.ToastNotification.get_ExpirationTime() */
 HRESULT wuino_toast_notification_get__expiration_time(WUINO_ToastNotification *self, WF_DateTime** value);
 
-/* Windows.UI.Notifications.ToastNotification.put_Tag() */
 HRESULT wuino_toast_notification_put__tag(WUINO_ToastNotification *self, cwinrt_hstring value);
 
-/* Windows.UI.Notifications.ToastNotification.get_Tag() */
 HRESULT wuino_toast_notification_get__tag(WUINO_ToastNotification *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.ToastNotification.put_Group() */
 HRESULT wuino_toast_notification_put__group(WUINO_ToastNotification *self, cwinrt_hstring value);
 
-/* Windows.UI.Notifications.ToastNotification.get_Group() */
 HRESULT wuino_toast_notification_get__group(WUINO_ToastNotification *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.ToastNotification.put_SuppressPopup() */
 HRESULT wuino_toast_notification_put__suppress_popup(WUINO_ToastNotification *self, BOOL value);
 
-/* Windows.UI.Notifications.ToastNotification.get_SuppressPopup() */
 HRESULT wuino_toast_notification_get__suppress_popup(WUINO_ToastNotification *self, BOOL *value);
 
-/* Windows.UI.Notifications.ToastNotification.get_NotificationMirroring() */
 HRESULT wuino_toast_notification_get__notification_mirroring(WUINO_ToastNotification *self, WUINO_NotificationMirroring *value);
 
-/* Windows.UI.Notifications.ToastNotification.put_NotificationMirroring() */
 HRESULT wuino_toast_notification_put__notification_mirroring(WUINO_ToastNotification *self, WUINO_NotificationMirroring value);
 
-/* Windows.UI.Notifications.ToastNotification.get_RemoteId() */
 HRESULT wuino_toast_notification_get__remote_id(WUINO_ToastNotification *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.ToastNotification.put_RemoteId() */
 HRESULT wuino_toast_notification_put__remote_id(WUINO_ToastNotification *self, cwinrt_hstring value);
 
-/* Windows.UI.Notifications.ToastNotification.get_Data() */
 HRESULT wuino_toast_notification_get__data(WUINO_ToastNotification *self, WUINO_NotificationData** value);
 
-/* Windows.UI.Notifications.ToastNotification.put_Data() */
 HRESULT wuino_toast_notification_put__data(WUINO_ToastNotification *self, WUINO_NotificationData* value);
 
-/* Windows.UI.Notifications.ToastNotification.get_Priority() */
 HRESULT wuino_toast_notification_get__priority(WUINO_ToastNotification *self, WUINO_ToastNotificationPriority *value);
 
-/* Windows.UI.Notifications.ToastNotification.put_Priority() */
 HRESULT wuino_toast_notification_put__priority(WUINO_ToastNotification *self, WUINO_ToastNotificationPriority value);
 
-/* Windows.UI.Notifications.ToastNotification.get_ExpiresOnReboot() */
 HRESULT wuino_toast_notification_get__expires_on_reboot(WUINO_ToastNotification *self, BOOL *value);
 
-/* Windows.UI.Notifications.ToastNotification.put_ExpiresOnReboot() */
 HRESULT wuino_toast_notification_put__expires_on_reboot(WUINO_ToastNotification *self, BOOL value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuino_toast_notification_on_dismissed(WUINO_ToastNotification *self, cwinrt_event_fn fn, void *ctx);
@@ -1640,329 +1312,188 @@ void wuino_toast_notification_off_activated(WUINO_ToastNotification *self, cwinr
 cwinrt_token wuino_toast_notification_on_failed(WUINO_ToastNotification *self, cwinrt_event_fn fn, void *ctx);
 void wuino_toast_notification_off_failed(WUINO_ToastNotification *self, cwinrt_token token);
 
-/* activate Windows.UI.Notifications.ToastNotificationActionTriggerDetail */
 HRESULT wuino_toast_notification_action_trigger_detail_new(WUINO_ToastNotificationActionTriggerDetail **out);
 
-/* Windows.UI.Notifications.ToastNotificationActionTriggerDetail */
-/* Windows.UI.Notifications.ToastNotificationActionTriggerDetail.get_Argument() */
 HRESULT wuino_toast_notification_action_trigger_detail_get__argument(WUINO_ToastNotificationActionTriggerDetail *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.ToastNotificationActionTriggerDetail.get_UserInput() */
 HRESULT wuino_toast_notification_action_trigger_detail_get__user_input(WUINO_ToastNotificationActionTriggerDetail *self, WFOCO_ValueSet** value);
 
-/* activate Windows.UI.Notifications.ToastNotificationHistory */
 HRESULT wuino_toast_notification_history_new(WUINO_ToastNotificationHistory **out);
 
-/* Windows.UI.Notifications.ToastNotificationHistory */
-/* Windows.UI.Notifications.ToastNotificationHistory.GetHistory() */
 HRESULT wuino_toast_notification_history_get_history(WUINO_ToastNotificationHistory *self, WFOCO_IVectorView_WUINO_ToastNotification** out);
 
-/* Windows.UI.Notifications.ToastNotificationHistory.GetHistory(applicationId) */
 HRESULT wuino_toast_notification_history_get_history_str_p(WUINO_ToastNotificationHistory *self, cwinrt_hstring applicationId, WFOCO_IVectorView_WUINO_ToastNotification** out);
 
-/* Windows.UI.Notifications.ToastNotificationHistory.RemoveGroup(group) */
 HRESULT wuino_toast_notification_history_remove_group(WUINO_ToastNotificationHistory *self, cwinrt_hstring group);
 
-/* Windows.UI.Notifications.ToastNotificationHistory.RemoveGroup(group, applicationId) */
 HRESULT wuino_toast_notification_history_remove_group_str_str(WUINO_ToastNotificationHistory *self, cwinrt_hstring group, cwinrt_hstring applicationId);
 
-/* Windows.UI.Notifications.ToastNotificationHistory.Remove(tag, group, applicationId) */
 HRESULT wuino_toast_notification_history_remove_str_str_str(WUINO_ToastNotificationHistory *self, cwinrt_hstring tag, cwinrt_hstring group, cwinrt_hstring applicationId);
 
-/* Windows.UI.Notifications.ToastNotificationHistory.Remove(tag, group) */
 HRESULT wuino_toast_notification_history_remove_str_str(WUINO_ToastNotificationHistory *self, cwinrt_hstring tag, cwinrt_hstring group);
 
-/* Windows.UI.Notifications.ToastNotificationHistory.Remove(tag) */
 HRESULT wuino_toast_notification_history_remove(WUINO_ToastNotificationHistory *self, cwinrt_hstring tag);
 
-/* Windows.UI.Notifications.ToastNotificationHistory.Clear() */
 HRESULT wuino_toast_notification_history_clear(WUINO_ToastNotificationHistory *self);
 
-/* Windows.UI.Notifications.ToastNotificationHistory.Clear(applicationId) */
 HRESULT wuino_toast_notification_history_clear_str(WUINO_ToastNotificationHistory *self, cwinrt_hstring applicationId);
 
-/* activate Windows.UI.Notifications.ToastNotificationHistoryChangedTriggerDetail */
 HRESULT wuino_toast_notification_history_changed_trigger_detail_new(WUINO_ToastNotificationHistoryChangedTriggerDetail **out);
 
-/* Windows.UI.Notifications.ToastNotificationHistoryChangedTriggerDetail */
-/* Windows.UI.Notifications.ToastNotificationHistoryChangedTriggerDetail.get_ChangeType() */
 HRESULT wuino_toast_notification_history_changed_trigger_detail_get__change_type(WUINO_ToastNotificationHistoryChangedTriggerDetail *self, WUINO_ToastHistoryChangedType *value);
 
-/* Windows.UI.Notifications.ToastNotificationHistoryChangedTriggerDetail.get_CollectionId() */
 HRESULT wuino_toast_notification_history_changed_trigger_detail_get__collection_id(WUINO_ToastNotificationHistoryChangedTriggerDetail *self, cwinrt_hstring *value);
 
-/* activate Windows.UI.Notifications.ToastNotificationManager */
 HRESULT wuino_toast_notification_manager_new(WUINO_ToastNotificationManager **out);
 
-/* Windows.UI.Notifications.ToastNotificationManager */
-/* Windows.UI.Notifications.ToastNotificationManager.GetDefault() */
 HRESULT wuino_toast_notification_manager_get_default(WUINO_ToastNotificationManagerForUser** out);
 
-/* Windows.UI.Notifications.ToastNotificationManager.GetForUser(user) */
 HRESULT wuino_toast_notification_manager_get_for_user(WSY_User* user, WUINO_ToastNotificationManagerForUser** out);
 
-/* Windows.UI.Notifications.ToastNotificationManager.ConfigureNotificationMirroring() */
 HRESULT wuino_toast_notification_manager_configure_notification_mirroring(WUINO_NotificationMirroring value);
 
-/* Windows.UI.Notifications.ToastNotificationManager.get_History() */
 HRESULT wuino_toast_notification_manager_get__history(WUINO_ToastNotificationHistory** value);
 
-/* Windows.UI.Notifications.ToastNotificationManager.CreateToastNotifier() */
 HRESULT wuino_toast_notification_manager_create_toast_notifier(WUINO_ToastNotifier** out);
 
-/* Windows.UI.Notifications.ToastNotificationManager.CreateToastNotifier(applicationId) */
 HRESULT wuino_toast_notification_manager_create_toast_notifier_str_p(cwinrt_hstring applicationId, WUINO_ToastNotifier** out);
 
-/* Windows.UI.Notifications.ToastNotificationManager.GetTemplateContent() */
 HRESULT wuino_toast_notification_manager_get_template_content(WUINO_ToastTemplateType type_, WDAXMDO_XmlDocument** out);
 
-/* activate Windows.UI.Notifications.ToastNotificationManagerForUser */
 HRESULT wuino_toast_notification_manager_for_user_new(WUINO_ToastNotificationManagerForUser **out);
 
-/* Windows.UI.Notifications.ToastNotificationManagerForUser */
-/* Windows.UI.Notifications.ToastNotificationManagerForUser.CreateToastNotifier() */
 HRESULT wuino_toast_notification_manager_for_user_create_toast_notifier(WUINO_ToastNotificationManagerForUser *self, WUINO_ToastNotifier** out);
 
-/* Windows.UI.Notifications.ToastNotificationManagerForUser.CreateToastNotifier(applicationId) */
 HRESULT wuino_toast_notification_manager_for_user_create_toast_notifier_str_p(WUINO_ToastNotificationManagerForUser *self, cwinrt_hstring applicationId, WUINO_ToastNotifier** out);
 
-/* Windows.UI.Notifications.ToastNotificationManagerForUser.get_History() */
 HRESULT wuino_toast_notification_manager_for_user_get__history(WUINO_ToastNotificationManagerForUser *self, WUINO_ToastNotificationHistory** value);
 
-/* Windows.UI.Notifications.ToastNotificationManagerForUser.get_User() */
 HRESULT wuino_toast_notification_manager_for_user_get__user(WUINO_ToastNotificationManagerForUser *self, WSY_User** value);
 
-/* Windows.UI.Notifications.ToastNotificationManagerForUser.GetToastNotifierForToastCollectionIdAsync(collectionId) */
 HRESULT wuino_toast_notification_manager_for_user_get_toast_notifier_for_toast_collection_id_async(WUINO_ToastNotificationManagerForUser *self, cwinrt_hstring collectionId, WF_IAsyncOperation_WUINO_ToastNotifier** out);
 
-/* Windows.UI.Notifications.ToastNotificationManagerForUser.GetHistoryForToastCollectionIdAsync(collectionId) */
 HRESULT wuino_toast_notification_manager_for_user_get_history_for_toast_collection_id_async(WUINO_ToastNotificationManagerForUser *self, cwinrt_hstring collectionId, WF_IAsyncOperation_WUINO_ToastNotificationHistory** out);
 
-/* Windows.UI.Notifications.ToastNotificationManagerForUser.GetToastCollectionManager() */
 HRESULT wuino_toast_notification_manager_for_user_get_toast_collection_manager(WUINO_ToastNotificationManagerForUser *self, WUINO_ToastCollectionManager** out);
 
-/* Windows.UI.Notifications.ToastNotificationManagerForUser.GetToastCollectionManager(appId) */
 HRESULT wuino_toast_notification_manager_for_user_get_toast_collection_manager_str_p(WUINO_ToastNotificationManagerForUser *self, cwinrt_hstring appId, WUINO_ToastCollectionManager** out);
 
-/* Windows.UI.Notifications.ToastNotificationManagerForUser.get_NotificationMode() */
 HRESULT wuino_toast_notification_manager_for_user_get__notification_mode(WUINO_ToastNotificationManagerForUser *self, WUINO_ToastNotificationMode *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuino_toast_notification_manager_for_user_on_notification_mode_changed(WUINO_ToastNotificationManagerForUser *self, cwinrt_event_fn fn, void *ctx);
 void wuino_toast_notification_manager_for_user_off_notification_mode_changed(WUINO_ToastNotificationManagerForUser *self, cwinrt_token token);
 
-/* activate Windows.UI.Notifications.ToastNotifier */
 HRESULT wuino_toast_notifier_new(WUINO_ToastNotifier **out);
 
-/* Windows.UI.Notifications.ToastNotifier */
-/* Windows.UI.Notifications.ToastNotifier.Show(notification) */
 HRESULT wuino_toast_notifier_show(WUINO_ToastNotifier *self, WUINO_ToastNotification* notification);
 
-/* Windows.UI.Notifications.ToastNotifier.Hide(notification) */
 HRESULT wuino_toast_notifier_hide(WUINO_ToastNotifier *self, WUINO_ToastNotification* notification);
 
-/* Windows.UI.Notifications.ToastNotifier.get_Setting() */
 HRESULT wuino_toast_notifier_get__setting(WUINO_ToastNotifier *self, WUINO_NotificationSetting *value);
 
-/* Windows.UI.Notifications.ToastNotifier.AddToSchedule(scheduledToast) */
 HRESULT wuino_toast_notifier_add_to_schedule(WUINO_ToastNotifier *self, WUINO_ScheduledToastNotification* scheduledToast);
 
-/* Windows.UI.Notifications.ToastNotifier.RemoveFromSchedule(scheduledToast) */
 HRESULT wuino_toast_notifier_remove_from_schedule(WUINO_ToastNotifier *self, WUINO_ScheduledToastNotification* scheduledToast);
 
-/* Windows.UI.Notifications.ToastNotifier.GetScheduledToastNotifications() */
 HRESULT wuino_toast_notifier_get_scheduled_toast_notifications(WUINO_ToastNotifier *self, WFOCO_IVectorView_WUINO_ScheduledToastNotification** out);
 
-/* Windows.UI.Notifications.ToastNotifier.Update(data, tag, group) */
 HRESULT wuino_toast_notifier_update_p_str_str_notification_update_result(WUINO_ToastNotifier *self, WUINO_NotificationData* data, cwinrt_hstring tag, cwinrt_hstring group, WUINO_NotificationUpdateResult *out);
 
-/* Windows.UI.Notifications.ToastNotifier.Update(data, tag) */
 HRESULT wuino_toast_notifier_update(WUINO_ToastNotifier *self, WUINO_NotificationData* data, cwinrt_hstring tag, WUINO_NotificationUpdateResult *out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuino_toast_notifier_on_scheduled_toast_notification_showing(WUINO_ToastNotifier *self, cwinrt_event_fn fn, void *ctx);
 void wuino_toast_notifier_off_scheduled_toast_notification_showing(WUINO_ToastNotifier *self, cwinrt_token token);
 
-/* Windows.UI.Notifications.IBadgeUpdateManagerForUser */
-/* Windows.UI.Notifications.IBadgeUpdater */
-/* Windows.UI.Notifications.IAdaptiveNotificationText */
-/* Windows.UI.Notifications.IAdaptiveNotificationContent */
-/* Windows.UI.Notifications.IAdaptiveNotificationContent.get_Kind() */
 HRESULT wuino_adaptive_notification_content_get__kind(WUINO_IAdaptiveNotificationContent *self, WUINO_AdaptiveNotificationContentKind *value);
 
-/* Windows.UI.Notifications.IAdaptiveNotificationContent.get_Hints() */
 HRESULT wuino_adaptive_notification_content_get__hints(WUINO_IAdaptiveNotificationContent *self, WFOCO_IMap_HSTRING_HSTRING** value);
 
-/* Windows.UI.Notifications.IBadgeNotification */
-/* Windows.UI.Notifications.INotification */
-/* Windows.UI.Notifications.INotificationBinding */
-/* Windows.UI.Notifications.INotificationData */
-/* Windows.UI.Notifications.INotificationVisual */
-/* Windows.UI.Notifications.IUserNotificationChangedEventArgs */
-/* Windows.UI.Notifications.IUserNotification */
-/* Windows.UI.Notifications.IScheduledTileNotification */
-/* Windows.UI.Notifications.IScheduledToastNotification */
-/* Windows.UI.Notifications.IScheduledToastNotification2 */
-/* Windows.UI.Notifications.IScheduledToastNotification2.put_Tag() */
 HRESULT wuino_scheduled_toast_notification_2_put__tag(WUINO_IScheduledToastNotification_2 *self, cwinrt_hstring value);
 
-/* Windows.UI.Notifications.IScheduledToastNotification2.get_Tag() */
 HRESULT wuino_scheduled_toast_notification_2_get__tag(WUINO_IScheduledToastNotification_2 *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IScheduledToastNotification2.put_Group() */
 HRESULT wuino_scheduled_toast_notification_2_put__group(WUINO_IScheduledToastNotification_2 *self, cwinrt_hstring value);
 
-/* Windows.UI.Notifications.IScheduledToastNotification2.get_Group() */
 HRESULT wuino_scheduled_toast_notification_2_get__group(WUINO_IScheduledToastNotification_2 *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IScheduledToastNotification2.put_SuppressPopup() */
 HRESULT wuino_scheduled_toast_notification_2_put__suppress_popup(WUINO_IScheduledToastNotification_2 *self, BOOL value);
 
-/* Windows.UI.Notifications.IScheduledToastNotification2.get_SuppressPopup() */
 HRESULT wuino_scheduled_toast_notification_2_get__suppress_popup(WUINO_IScheduledToastNotification_2 *self, BOOL *value);
 
-/* Windows.UI.Notifications.IScheduledToastNotification3 */
-/* Windows.UI.Notifications.IScheduledToastNotification3.get_NotificationMirroring() */
 HRESULT wuino_scheduled_toast_notification_3_get__notification_mirroring(WUINO_IScheduledToastNotification_3 *self, WUINO_NotificationMirroring *value);
 
-/* Windows.UI.Notifications.IScheduledToastNotification3.put_NotificationMirroring() */
 HRESULT wuino_scheduled_toast_notification_3_put__notification_mirroring(WUINO_IScheduledToastNotification_3 *self, WUINO_NotificationMirroring value);
 
-/* Windows.UI.Notifications.IScheduledToastNotification3.get_RemoteId() */
 HRESULT wuino_scheduled_toast_notification_3_get__remote_id(WUINO_IScheduledToastNotification_3 *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IScheduledToastNotification3.put_RemoteId() */
 HRESULT wuino_scheduled_toast_notification_3_put__remote_id(WUINO_IScheduledToastNotification_3 *self, cwinrt_hstring value);
 
-/* Windows.UI.Notifications.IScheduledToastNotification4 */
-/* Windows.UI.Notifications.IScheduledToastNotification4.get_ExpirationTime() */
 HRESULT wuino_scheduled_toast_notification_4_get__expiration_time(WUINO_IScheduledToastNotification_4 *self, WF_DateTime** value);
 
-/* Windows.UI.Notifications.IScheduledToastNotification4.put_ExpirationTime() */
 HRESULT wuino_scheduled_toast_notification_4_put__expiration_time(WUINO_IScheduledToastNotification_4 *self, WF_DateTime* value);
 
-/* Windows.UI.Notifications.IScheduledToastNotificationShowingEventArgs */
-/* Windows.UI.Notifications.IShownTileNotification */
-/* Windows.UI.Notifications.ITileFlyoutNotification */
-/* Windows.UI.Notifications.ITileFlyoutUpdater */
-/* Windows.UI.Notifications.ITileNotification */
-/* Windows.UI.Notifications.ITileUpdateManagerForUser */
-/* Windows.UI.Notifications.ITileUpdater */
-/* Windows.UI.Notifications.ITileUpdater2 */
-/* Windows.UI.Notifications.ITileUpdater2.EnableNotificationQueueForSquare150x150(enable) */
 HRESULT wuino_tile_updater_2_enable_notification_queue_for_square150x150(WUINO_ITileUpdater_2 *self, BOOL enable);
 
-/* Windows.UI.Notifications.ITileUpdater2.EnableNotificationQueueForWide310x150(enable) */
 HRESULT wuino_tile_updater_2_enable_notification_queue_for_wide310x150(WUINO_ITileUpdater_2 *self, BOOL enable);
 
-/* Windows.UI.Notifications.ITileUpdater2.EnableNotificationQueueForSquare310x310(enable) */
 HRESULT wuino_tile_updater_2_enable_notification_queue_for_square310x310(WUINO_ITileUpdater_2 *self, BOOL enable);
 
-/* Windows.UI.Notifications.IToastActivatedEventArgs */
-/* Windows.UI.Notifications.IToastActivatedEventArgs2 */
-/* Windows.UI.Notifications.IToastActivatedEventArgs2.get_UserInput() */
 HRESULT wuino_toast_activated_event_args_2_get__user_input(WUINO_IToastActivatedEventArgs_2 *self, WFOCO_ValueSet** value);
 
-/* Windows.UI.Notifications.IToastCollection */
-/* Windows.UI.Notifications.IToastCollectionManager */
-/* Windows.UI.Notifications.IToastDismissedEventArgs */
-/* Windows.UI.Notifications.IToastFailedEventArgs */
-/* Windows.UI.Notifications.IToastNotification */
-/* Windows.UI.Notifications.IToastNotification2 */
-/* Windows.UI.Notifications.IToastNotification2.put_Tag() */
 HRESULT wuino_toast_notification_2_put__tag(WUINO_IToastNotification_2 *self, cwinrt_hstring value);
 
-/* Windows.UI.Notifications.IToastNotification2.get_Tag() */
 HRESULT wuino_toast_notification_2_get__tag(WUINO_IToastNotification_2 *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IToastNotification2.put_Group() */
 HRESULT wuino_toast_notification_2_put__group(WUINO_IToastNotification_2 *self, cwinrt_hstring value);
 
-/* Windows.UI.Notifications.IToastNotification2.get_Group() */
 HRESULT wuino_toast_notification_2_get__group(WUINO_IToastNotification_2 *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IToastNotification2.put_SuppressPopup() */
 HRESULT wuino_toast_notification_2_put__suppress_popup(WUINO_IToastNotification_2 *self, BOOL value);
 
-/* Windows.UI.Notifications.IToastNotification2.get_SuppressPopup() */
 HRESULT wuino_toast_notification_2_get__suppress_popup(WUINO_IToastNotification_2 *self, BOOL *value);
 
-/* Windows.UI.Notifications.IToastNotification3 */
-/* Windows.UI.Notifications.IToastNotification3.get_NotificationMirroring() */
 HRESULT wuino_toast_notification_3_get__notification_mirroring(WUINO_IToastNotification_3 *self, WUINO_NotificationMirroring *value);
 
-/* Windows.UI.Notifications.IToastNotification3.put_NotificationMirroring() */
 HRESULT wuino_toast_notification_3_put__notification_mirroring(WUINO_IToastNotification_3 *self, WUINO_NotificationMirroring value);
 
-/* Windows.UI.Notifications.IToastNotification3.get_RemoteId() */
 HRESULT wuino_toast_notification_3_get__remote_id(WUINO_IToastNotification_3 *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IToastNotification3.put_RemoteId() */
 HRESULT wuino_toast_notification_3_put__remote_id(WUINO_IToastNotification_3 *self, cwinrt_hstring value);
 
-/* Windows.UI.Notifications.IToastNotification4 */
-/* Windows.UI.Notifications.IToastNotification4.get_Data() */
 HRESULT wuino_toast_notification_4_get__data(WUINO_IToastNotification_4 *self, WUINO_NotificationData** value);
 
-/* Windows.UI.Notifications.IToastNotification4.put_Data() */
 HRESULT wuino_toast_notification_4_put__data(WUINO_IToastNotification_4 *self, WUINO_NotificationData* value);
 
-/* Windows.UI.Notifications.IToastNotification4.get_Priority() */
 HRESULT wuino_toast_notification_4_get__priority(WUINO_IToastNotification_4 *self, WUINO_ToastNotificationPriority *value);
 
-/* Windows.UI.Notifications.IToastNotification4.put_Priority() */
 HRESULT wuino_toast_notification_4_put__priority(WUINO_IToastNotification_4 *self, WUINO_ToastNotificationPriority value);
 
-/* Windows.UI.Notifications.IToastNotification6 */
-/* Windows.UI.Notifications.IToastNotification6.get_ExpiresOnReboot() */
 HRESULT wuino_toast_notification_6_get__expires_on_reboot(WUINO_IToastNotification_6 *self, BOOL *value);
 
-/* Windows.UI.Notifications.IToastNotification6.put_ExpiresOnReboot() */
 HRESULT wuino_toast_notification_6_put__expires_on_reboot(WUINO_IToastNotification_6 *self, BOOL value);
 
-/* Windows.UI.Notifications.IToastNotificationActionTriggerDetail */
-/* Windows.UI.Notifications.IToastNotificationHistory2 */
-/* Windows.UI.Notifications.IToastNotificationHistory2.GetHistory() */
 HRESULT wuino_toast_notification_history_2_get_history(WUINO_IToastNotificationHistory_2 *self, WFOCO_IVectorView_WUINO_ToastNotification** out);
 
-/* Windows.UI.Notifications.IToastNotificationHistory2.GetHistory(applicationId) */
 HRESULT wuino_toast_notification_history_2_get_history_str_p(WUINO_IToastNotificationHistory_2 *self, cwinrt_hstring applicationId, WFOCO_IVectorView_WUINO_ToastNotification** out);
 
-/* Windows.UI.Notifications.IToastNotificationHistory */
-/* Windows.UI.Notifications.IToastNotificationHistoryChangedTriggerDetail */
-/* Windows.UI.Notifications.IToastNotificationHistoryChangedTriggerDetail2 */
-/* Windows.UI.Notifications.IToastNotificationHistoryChangedTriggerDetail2.get_CollectionId() */
 HRESULT wuino_toast_notification_history_changed_trigger_detail_2_get__collection_id(WUINO_IToastNotificationHistoryChangedTriggerDetail_2 *self, cwinrt_hstring *value);
 
-/* Windows.UI.Notifications.IToastNotificationManagerForUser */
-/* Windows.UI.Notifications.IToastNotificationManagerForUser2 */
-/* Windows.UI.Notifications.IToastNotificationManagerForUser2.GetToastNotifierForToastCollectionIdAsync(collectionId) */
 HRESULT wuino_toast_notification_manager_for_user_2_get_toast_notifier_for_toast_collection_id_async(WUINO_IToastNotificationManagerForUser_2 *self, cwinrt_hstring collectionId, WF_IAsyncOperation_WUINO_ToastNotifier** out);
 
-/* Windows.UI.Notifications.IToastNotificationManagerForUser2.GetHistoryForToastCollectionIdAsync(collectionId) */
 HRESULT wuino_toast_notification_manager_for_user_2_get_history_for_toast_collection_id_async(WUINO_IToastNotificationManagerForUser_2 *self, cwinrt_hstring collectionId, WF_IAsyncOperation_WUINO_ToastNotificationHistory** out);
 
-/* Windows.UI.Notifications.IToastNotificationManagerForUser2.GetToastCollectionManager() */
 HRESULT wuino_toast_notification_manager_for_user_2_get_toast_collection_manager(WUINO_IToastNotificationManagerForUser_2 *self, WUINO_ToastCollectionManager** out);
 
-/* Windows.UI.Notifications.IToastNotificationManagerForUser2.GetToastCollectionManager(appId) */
 HRESULT wuino_toast_notification_manager_for_user_2_get_toast_collection_manager_str_p(WUINO_IToastNotificationManagerForUser_2 *self, cwinrt_hstring appId, WUINO_ToastCollectionManager** out);
 
-/* Windows.UI.Notifications.IToastNotificationManagerForUser3 */
-/* Windows.UI.Notifications.IToastNotificationManagerForUser3.get_NotificationMode() */
 HRESULT wuino_toast_notification_manager_for_user_3_get__notification_mode(WUINO_IToastNotificationManagerForUser_3 *self, WUINO_ToastNotificationMode *value);
 
-/* Windows.UI.Notifications.IToastNotifier */
-/* Windows.UI.Notifications.IToastNotifier2 */
-/* Windows.UI.Notifications.IToastNotifier2.Update(data, tag, group) */
 HRESULT wuino_toast_notifier_2_update_p_str_str_notification_update_result(WUINO_IToastNotifier_2 *self, WUINO_NotificationData* data, cwinrt_hstring tag, cwinrt_hstring group, WUINO_NotificationUpdateResult *out);
 
-/* Windows.UI.Notifications.IToastNotifier2.Update(data, tag) */
 HRESULT wuino_toast_notifier_2_update(WUINO_IToastNotifier_2 *self, WUINO_NotificationData* data, cwinrt_hstring tag, WUINO_NotificationUpdateResult *out);
 
-/* Windows.UI.Notifications.IToastNotifier3 */
 #endif /* CWINRT_WINDOWS_UI_NOTIFICATIONS_H */

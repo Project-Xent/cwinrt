@@ -14,7 +14,6 @@
 #include <cwinrt/Windows.UI.Popups.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WAM_AppInfo
 #define CWINRT_FWD_WAM_AppInfo
 typedef struct WAM_AppInfo WAM_AppInfo;
@@ -60,7 +59,6 @@ typedef struct WSYRE_RemoteSystemConnectionRequest WSYRE_RemoteSystemConnectionR
 typedef struct WSTST_IRandomAccessStreamReference WSTST_IRandomAccessStreamReference;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSY_AppActivationResult WSY_AppActivationResult;
 typedef struct WSY_AppDiagnosticInfo WSY_AppDiagnosticInfo;
 typedef struct WSY_AppDiagnosticInfoWatcher WSY_AppDiagnosticInfoWatcher;
@@ -189,7 +187,6 @@ typedef struct WSY_IDispatcherQueueTimer WSY_IDispatcherQueueTimer;
 typedef struct WSY_IFolderLauncherOptions WSY_IFolderLauncherOptions;
 typedef struct WSY_ILauncherViewOptions WSY_ILauncherViewOptions;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WAM_AppInfo
 #define CWINRT_FWD_WAM_AppInfo
 typedef struct WAM_AppInfo WAM_AppInfo;
@@ -867,7 +864,6 @@ typedef enum WSY_RemoteLaunchUriStatus {
 } WSY_RemoteLaunchUriStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -1196,66 +1192,42 @@ static const IID CWINRT_IID_WSY_IFolderLauncherOptions CWINRT_MAYBE_UNUSED = { 0
 static const IID CWINRT_IID_WSY_ILauncherViewOptions CWINRT_MAYBE_UNUSED = { 0x8A9B29F1, 0x7CA7, 0x49DE, { 0x9B, 0xD3, 0x3C, 0x5B, 0x71, 0x84, 0xF6, 0x16 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.System.AppActivationResult */
 HRESULT wsy_app_activation_result_new(WSY_AppActivationResult **out);
 
-/* Windows.System.AppActivationResult */
-/* Windows.System.AppActivationResult.get_ExtendedError() */
 HRESULT wsy_app_activation_result_get__extended_error(WSY_AppActivationResult *self, HRESULT *value);
 
-/* Windows.System.AppActivationResult.get_AppResourceGroupInfo() */
 HRESULT wsy_app_activation_result_get__app_resource_group_info(WSY_AppActivationResult *self, WSY_AppResourceGroupInfo** value);
 
-/* activate Windows.System.AppDiagnosticInfo */
 HRESULT wsy_app_diagnostic_info_new(WSY_AppDiagnosticInfo **out);
 
-/* Windows.System.AppDiagnosticInfo */
-/* Windows.System.AppDiagnosticInfo.get_AppInfo() */
 HRESULT wsy_app_diagnostic_info_get__app_info(WSY_AppDiagnosticInfo *self, WAM_AppInfo** value);
 
-/* Windows.System.AppDiagnosticInfo.GetResourceGroups() */
 HRESULT wsy_app_diagnostic_info_get_resource_groups(WSY_AppDiagnosticInfo *self, WFOCO_IVector_WSY_AppResourceGroupInfo** out);
 
-/* Windows.System.AppDiagnosticInfo.CreateResourceGroupWatcher() */
 HRESULT wsy_app_diagnostic_info_create_resource_group_watcher(WSY_AppDiagnosticInfo *self, WSY_AppResourceGroupInfoWatcher** out);
 
-/* Windows.System.AppDiagnosticInfo.LaunchAsync() */
 HRESULT wsy_app_diagnostic_info_launch_async(WSY_AppDiagnosticInfo *self, WF_IAsyncOperation_WSY_AppActivationResult** out);
 
-/* Windows.System.AppDiagnosticInfo.CreateWatcher() */
 HRESULT wsy_app_diagnostic_info_create_watcher(WSY_AppDiagnosticInfoWatcher** out);
 
-/* Windows.System.AppDiagnosticInfo.RequestAccessAsync() */
 HRESULT wsy_app_diagnostic_info_request_access_async(WF_IAsyncOperation_WSY_DiagnosticAccessStatus** out);
 
-/* Windows.System.AppDiagnosticInfo.RequestInfoForPackageAsync(packageFamilyName) */
 HRESULT wsy_app_diagnostic_info_request_info_for_package_async(cwinrt_hstring packageFamilyName, WF_IAsyncOperation_WFOCO_IVector_WSY_AppDiagnosticInfo** out);
 
-/* Windows.System.AppDiagnosticInfo.RequestInfoForAppAsync() */
 HRESULT wsy_app_diagnostic_info_request_info_for_app_async(WF_IAsyncOperation_WFOCO_IVector_WSY_AppDiagnosticInfo** out);
 
-/* Windows.System.AppDiagnosticInfo.RequestInfoForAppAsync(appUserModelId) */
 HRESULT wsy_app_diagnostic_info_request_info_for_app_async_str_p(cwinrt_hstring appUserModelId, WF_IAsyncOperation_WFOCO_IVector_WSY_AppDiagnosticInfo** out);
 
-/* Windows.System.AppDiagnosticInfo.RequestInfoAsync() */
 HRESULT wsy_app_diagnostic_info_request_info_async(WF_IAsyncOperation_WFOCO_IVector_WSY_AppDiagnosticInfo** out);
 
-/* activate Windows.System.AppDiagnosticInfoWatcher */
 HRESULT wsy_app_diagnostic_info_watcher_new(WSY_AppDiagnosticInfoWatcher **out);
 
-/* Windows.System.AppDiagnosticInfoWatcher */
-/* Windows.System.AppDiagnosticInfoWatcher.get_Status() */
 HRESULT wsy_app_diagnostic_info_watcher_get__status(WSY_AppDiagnosticInfoWatcher *self, WSY_AppDiagnosticInfoWatcherStatus *value);
 
-/* Windows.System.AppDiagnosticInfoWatcher.Start() */
 HRESULT wsy_app_diagnostic_info_watcher_start(WSY_AppDiagnosticInfoWatcher *self);
 
-/* Windows.System.AppDiagnosticInfoWatcher.Stop() */
 HRESULT wsy_app_diagnostic_info_watcher_stop(WSY_AppDiagnosticInfoWatcher *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsy_app_diagnostic_info_watcher_on_added(WSY_AppDiagnosticInfoWatcher *self, cwinrt_event_fn fn, void *ctx);
@@ -1270,110 +1242,70 @@ void wsy_app_diagnostic_info_watcher_off_enumeration_completed(WSY_AppDiagnostic
 cwinrt_token wsy_app_diagnostic_info_watcher_on_stopped(WSY_AppDiagnosticInfoWatcher *self, cwinrt_event_fn fn, void *ctx);
 void wsy_app_diagnostic_info_watcher_off_stopped(WSY_AppDiagnosticInfoWatcher *self, cwinrt_token token);
 
-/* activate Windows.System.AppDiagnosticInfoWatcherEventArgs */
 HRESULT wsy_app_diagnostic_info_watcher_event_args_new(WSY_AppDiagnosticInfoWatcherEventArgs **out);
 
-/* Windows.System.AppDiagnosticInfoWatcherEventArgs */
-/* Windows.System.AppDiagnosticInfoWatcherEventArgs.get_AppDiagnosticInfo() */
 HRESULT wsy_app_diagnostic_info_watcher_event_args_get__app_diagnostic_info(WSY_AppDiagnosticInfoWatcherEventArgs *self, WSY_AppDiagnosticInfo** value);
 
-/* activate Windows.System.AppExecutionStateChangeResult */
 HRESULT wsy_app_execution_state_change_result_new(WSY_AppExecutionStateChangeResult **out);
 
-/* Windows.System.AppExecutionStateChangeResult */
-/* Windows.System.AppExecutionStateChangeResult.get_ExtendedError() */
 HRESULT wsy_app_execution_state_change_result_get__extended_error(WSY_AppExecutionStateChangeResult *self, HRESULT *value);
 
-/* activate Windows.System.AppMemoryReport */
 HRESULT wsy_app_memory_report_new(WSY_AppMemoryReport **out);
 
-/* Windows.System.AppMemoryReport */
-/* Windows.System.AppMemoryReport.get_PrivateCommitUsage() */
 HRESULT wsy_app_memory_report_get__private_commit_usage(WSY_AppMemoryReport *self, uint64_t *value);
 
-/* Windows.System.AppMemoryReport.get_PeakPrivateCommitUsage() */
 HRESULT wsy_app_memory_report_get__peak_private_commit_usage(WSY_AppMemoryReport *self, uint64_t *value);
 
-/* Windows.System.AppMemoryReport.get_TotalCommitUsage() */
 HRESULT wsy_app_memory_report_get__total_commit_usage(WSY_AppMemoryReport *self, uint64_t *value);
 
-/* Windows.System.AppMemoryReport.get_TotalCommitLimit() */
 HRESULT wsy_app_memory_report_get__total_commit_limit(WSY_AppMemoryReport *self, uint64_t *value);
 
-/* Windows.System.AppMemoryReport.get_ExpectedTotalCommitLimit() */
 HRESULT wsy_app_memory_report_get__expected_total_commit_limit(WSY_AppMemoryReport *self, uint64_t *value);
 
-/* activate Windows.System.AppMemoryUsageLimitChangingEventArgs */
 HRESULT wsy_app_memory_usage_limit_changing_event_args_new(WSY_AppMemoryUsageLimitChangingEventArgs **out);
 
-/* Windows.System.AppMemoryUsageLimitChangingEventArgs */
-/* Windows.System.AppMemoryUsageLimitChangingEventArgs.get_OldLimit() */
 HRESULT wsy_app_memory_usage_limit_changing_event_args_get__old_limit(WSY_AppMemoryUsageLimitChangingEventArgs *self, uint64_t *value);
 
-/* Windows.System.AppMemoryUsageLimitChangingEventArgs.get_NewLimit() */
 HRESULT wsy_app_memory_usage_limit_changing_event_args_get__new_limit(WSY_AppMemoryUsageLimitChangingEventArgs *self, uint64_t *value);
 
-/* activate Windows.System.AppResourceGroupBackgroundTaskReport */
 HRESULT wsy_app_resource_group_background_task_report_new(WSY_AppResourceGroupBackgroundTaskReport **out);
 
-/* Windows.System.AppResourceGroupBackgroundTaskReport */
-/* Windows.System.AppResourceGroupBackgroundTaskReport.get_TaskId() */
 HRESULT wsy_app_resource_group_background_task_report_get__task_id(WSY_AppResourceGroupBackgroundTaskReport *self, GUID *value);
 
-/* Windows.System.AppResourceGroupBackgroundTaskReport.get_Name() */
 HRESULT wsy_app_resource_group_background_task_report_get__name(WSY_AppResourceGroupBackgroundTaskReport *self, cwinrt_hstring *value);
 
-/* Windows.System.AppResourceGroupBackgroundTaskReport.get_Trigger() */
 HRESULT wsy_app_resource_group_background_task_report_get__trigger(WSY_AppResourceGroupBackgroundTaskReport *self, cwinrt_hstring *value);
 
-/* Windows.System.AppResourceGroupBackgroundTaskReport.get_EntryPoint() */
 HRESULT wsy_app_resource_group_background_task_report_get__entry_point(WSY_AppResourceGroupBackgroundTaskReport *self, cwinrt_hstring *value);
 
-/* activate Windows.System.AppResourceGroupInfo */
 HRESULT wsy_app_resource_group_info_new(WSY_AppResourceGroupInfo **out);
 
-/* Windows.System.AppResourceGroupInfo */
-/* Windows.System.AppResourceGroupInfo.get_InstanceId() */
 HRESULT wsy_app_resource_group_info_get__instance_id(WSY_AppResourceGroupInfo *self, GUID *value);
 
-/* Windows.System.AppResourceGroupInfo.get_IsShared() */
 HRESULT wsy_app_resource_group_info_get__is_shared(WSY_AppResourceGroupInfo *self, BOOL *value);
 
-/* Windows.System.AppResourceGroupInfo.GetBackgroundTaskReports() */
 HRESULT wsy_app_resource_group_info_get_background_task_reports(WSY_AppResourceGroupInfo *self, WFOCO_IVector_WSY_AppResourceGroupBackgroundTaskReport** out);
 
-/* Windows.System.AppResourceGroupInfo.GetMemoryReport() */
 HRESULT wsy_app_resource_group_info_get_memory_report(WSY_AppResourceGroupInfo *self, WSY_AppResourceGroupMemoryReport** out);
 
-/* Windows.System.AppResourceGroupInfo.GetProcessDiagnosticInfos() */
 HRESULT wsy_app_resource_group_info_get_process_diagnostic_infos(WSY_AppResourceGroupInfo *self, WFOCO_IVector_WSYDI_ProcessDiagnosticInfo** out);
 
-/* Windows.System.AppResourceGroupInfo.GetStateReport() */
 HRESULT wsy_app_resource_group_info_get_state_report(WSY_AppResourceGroupInfo *self, WSY_AppResourceGroupStateReport** out);
 
-/* Windows.System.AppResourceGroupInfo.StartSuspendAsync() */
 HRESULT wsy_app_resource_group_info_start_suspend_async(WSY_AppResourceGroupInfo *self, WF_IAsyncOperation_WSY_AppExecutionStateChangeResult** out);
 
-/* Windows.System.AppResourceGroupInfo.StartResumeAsync() */
 HRESULT wsy_app_resource_group_info_start_resume_async(WSY_AppResourceGroupInfo *self, WF_IAsyncOperation_WSY_AppExecutionStateChangeResult** out);
 
-/* Windows.System.AppResourceGroupInfo.StartTerminateAsync() */
 HRESULT wsy_app_resource_group_info_start_terminate_async(WSY_AppResourceGroupInfo *self, WF_IAsyncOperation_WSY_AppExecutionStateChangeResult** out);
 
-/* activate Windows.System.AppResourceGroupInfoWatcher */
 HRESULT wsy_app_resource_group_info_watcher_new(WSY_AppResourceGroupInfoWatcher **out);
 
-/* Windows.System.AppResourceGroupInfoWatcher */
-/* Windows.System.AppResourceGroupInfoWatcher.get_Status() */
 HRESULT wsy_app_resource_group_info_watcher_get__status(WSY_AppResourceGroupInfoWatcher *self, WSY_AppResourceGroupInfoWatcherStatus *value);
 
-/* Windows.System.AppResourceGroupInfoWatcher.Start() */
 HRESULT wsy_app_resource_group_info_watcher_start(WSY_AppResourceGroupInfoWatcher *self);
 
-/* Windows.System.AppResourceGroupInfoWatcher.Stop() */
 HRESULT wsy_app_resource_group_info_watcher_stop(WSY_AppResourceGroupInfoWatcher *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsy_app_resource_group_info_watcher_on_added(WSY_AppResourceGroupInfoWatcher *self, cwinrt_event_fn fn, void *ctx);
@@ -1391,334 +1323,211 @@ void wsy_app_resource_group_info_watcher_off_stopped(WSY_AppResourceGroupInfoWat
 cwinrt_token wsy_app_resource_group_info_watcher_on_execution_state_changed(WSY_AppResourceGroupInfoWatcher *self, cwinrt_event_fn fn, void *ctx);
 void wsy_app_resource_group_info_watcher_off_execution_state_changed(WSY_AppResourceGroupInfoWatcher *self, cwinrt_token token);
 
-/* activate Windows.System.AppResourceGroupInfoWatcherEventArgs */
 HRESULT wsy_app_resource_group_info_watcher_event_args_new(WSY_AppResourceGroupInfoWatcherEventArgs **out);
 
-/* Windows.System.AppResourceGroupInfoWatcherEventArgs */
-/* Windows.System.AppResourceGroupInfoWatcherEventArgs.get_AppDiagnosticInfos() */
 HRESULT wsy_app_resource_group_info_watcher_event_args_get__app_diagnostic_infos(WSY_AppResourceGroupInfoWatcherEventArgs *self, WFOCO_IVectorView_WSY_AppDiagnosticInfo** value);
 
-/* Windows.System.AppResourceGroupInfoWatcherEventArgs.get_AppResourceGroupInfo() */
 HRESULT wsy_app_resource_group_info_watcher_event_args_get__app_resource_group_info(WSY_AppResourceGroupInfoWatcherEventArgs *self, WSY_AppResourceGroupInfo** value);
 
-/* activate Windows.System.AppResourceGroupInfoWatcherExecutionStateChangedEventArgs */
 HRESULT wsy_app_resource_group_info_watcher_execution_state_changed_event_a_new(WSY_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs **out);
 
-/* Windows.System.AppResourceGroupInfoWatcherExecutionStateChangedEventArgs */
-/* Windows.System.AppResourceGroupInfoWatcherExecutionStateChangedEventArgs.get_AppDiagnosticInfos() */
 HRESULT wsy_app_resource_group_info_watcher_execution_state_changed_event_a_get__app_diagnostic_infos(WSY_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs *self, WFOCO_IVectorView_WSY_AppDiagnosticInfo** value);
 
-/* Windows.System.AppResourceGroupInfoWatcherExecutionStateChangedEventArgs.get_AppResourceGroupInfo() */
 HRESULT wsy_app_resource_group_info_watcher_execution_state_changed_event_a_get__app_resource_group_info(WSY_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs *self, WSY_AppResourceGroupInfo** value);
 
-/* activate Windows.System.AppResourceGroupMemoryReport */
 HRESULT wsy_app_resource_group_memory_report_new(WSY_AppResourceGroupMemoryReport **out);
 
-/* Windows.System.AppResourceGroupMemoryReport */
-/* Windows.System.AppResourceGroupMemoryReport.get_CommitUsageLimit() */
 HRESULT wsy_app_resource_group_memory_report_get__commit_usage_limit(WSY_AppResourceGroupMemoryReport *self, uint64_t *value);
 
-/* Windows.System.AppResourceGroupMemoryReport.get_CommitUsageLevel() */
 HRESULT wsy_app_resource_group_memory_report_get__commit_usage_level(WSY_AppResourceGroupMemoryReport *self, WSY_AppMemoryUsageLevel *value);
 
-/* Windows.System.AppResourceGroupMemoryReport.get_PrivateCommitUsage() */
 HRESULT wsy_app_resource_group_memory_report_get__private_commit_usage(WSY_AppResourceGroupMemoryReport *self, uint64_t *value);
 
-/* Windows.System.AppResourceGroupMemoryReport.get_TotalCommitUsage() */
 HRESULT wsy_app_resource_group_memory_report_get__total_commit_usage(WSY_AppResourceGroupMemoryReport *self, uint64_t *value);
 
-/* activate Windows.System.AppResourceGroupStateReport */
 HRESULT wsy_app_resource_group_state_report_new(WSY_AppResourceGroupStateReport **out);
 
-/* Windows.System.AppResourceGroupStateReport */
-/* Windows.System.AppResourceGroupStateReport.get_ExecutionState() */
 HRESULT wsy_app_resource_group_state_report_get__execution_state(WSY_AppResourceGroupStateReport *self, WSY_AppResourceGroupExecutionState *value);
 
-/* Windows.System.AppResourceGroupStateReport.get_EnergyQuotaState() */
 HRESULT wsy_app_resource_group_state_report_get__energy_quota_state(WSY_AppResourceGroupStateReport *self, WSY_AppResourceGroupEnergyQuotaState *value);
 
-/* activate Windows.System.AppUriHandlerHost */
 HRESULT wsy_app_uri_handler_host_new(WSY_AppUriHandlerHost **out);
 
-/* Windows.System.AppUriHandlerHost */
-/* Windows.System.AppUriHandlerHost.get_Name() */
 HRESULT wsy_app_uri_handler_host_get__name(WSY_AppUriHandlerHost *self, cwinrt_hstring *value);
 
-/* Windows.System.AppUriHandlerHost.put_Name() */
 HRESULT wsy_app_uri_handler_host_put__name(WSY_AppUriHandlerHost *self, cwinrt_hstring value);
 
-/* Windows.System.AppUriHandlerHost.get_IsEnabled() */
 HRESULT wsy_app_uri_handler_host_get__is_enabled(WSY_AppUriHandlerHost *self, BOOL *value);
 
-/* Windows.System.AppUriHandlerHost.put_IsEnabled() */
 HRESULT wsy_app_uri_handler_host_put__is_enabled(WSY_AppUriHandlerHost *self, BOOL value);
 
-/* activate Windows.System.AppUriHandlerRegistration */
 HRESULT wsy_app_uri_handler_registration_new(WSY_AppUriHandlerRegistration **out);
 
-/* Windows.System.AppUriHandlerRegistration */
-/* Windows.System.AppUriHandlerRegistration.get_Name() */
 HRESULT wsy_app_uri_handler_registration_get__name(WSY_AppUriHandlerRegistration *self, cwinrt_hstring *value);
 
-/* Windows.System.AppUriHandlerRegistration.get_User() */
 HRESULT wsy_app_uri_handler_registration_get__user(WSY_AppUriHandlerRegistration *self, WSY_User** value);
 
-/* Windows.System.AppUriHandlerRegistration.GetAppAddedHostsAsync() */
 HRESULT wsy_app_uri_handler_registration_get_app_added_hosts_async(WSY_AppUriHandlerRegistration *self, WF_IAsyncOperation_WFOCO_IVector_WSY_AppUriHandlerHost** out);
 
-/* Windows.System.AppUriHandlerRegistration.SetAppAddedHostsAsync(hosts) */
 HRESULT wsy_app_uri_handler_registration_set_app_added_hosts_async(WSY_AppUriHandlerRegistration *self, WFOCO_IIterable_WSY_AppUriHandlerHost* hosts, WF_IAsyncAction** out);
 
-/* Windows.System.AppUriHandlerRegistration.GetAllHosts() */
 HRESULT wsy_app_uri_handler_registration_get_all_hosts(WSY_AppUriHandlerRegistration *self, WFOCO_IVector_WSY_AppUriHandlerHost** out);
 
-/* Windows.System.AppUriHandlerRegistration.UpdateHosts(hosts) */
 HRESULT wsy_app_uri_handler_registration_update_hosts(WSY_AppUriHandlerRegistration *self, WFOCO_IIterable_WSY_AppUriHandlerHost* hosts);
 
-/* Windows.System.AppUriHandlerRegistration.get_PackageFamilyName() */
 HRESULT wsy_app_uri_handler_registration_get__package_family_name(WSY_AppUriHandlerRegistration *self, cwinrt_hstring *value);
 
-/* activate Windows.System.AppUriHandlerRegistrationManager */
 HRESULT wsy_app_uri_handler_registration_manager_new(WSY_AppUriHandlerRegistrationManager **out);
 
-/* Windows.System.AppUriHandlerRegistrationManager */
-/* Windows.System.AppUriHandlerRegistrationManager.get_User() */
 HRESULT wsy_app_uri_handler_registration_manager_get__user(WSY_AppUriHandlerRegistrationManager *self, WSY_User** value);
 
-/* Windows.System.AppUriHandlerRegistrationManager.TryGetRegistration(name) */
 HRESULT wsy_app_uri_handler_registration_manager_try_get_registration(WSY_AppUriHandlerRegistrationManager *self, cwinrt_hstring name, WSY_AppUriHandlerRegistration** out);
 
-/* Windows.System.AppUriHandlerRegistrationManager.get_PackageFamilyName() */
 HRESULT wsy_app_uri_handler_registration_manager_get__package_family_name(WSY_AppUriHandlerRegistrationManager *self, cwinrt_hstring *value);
 
-/* Windows.System.AppUriHandlerRegistrationManager.GetForPackage(packageFamilyName) */
 HRESULT wsy_app_uri_handler_registration_manager_get_for_package(cwinrt_hstring packageFamilyName, WSY_AppUriHandlerRegistrationManager** out);
 
-/* Windows.System.AppUriHandlerRegistrationManager.GetForPackageForUser(packageFamilyName, user) */
 HRESULT wsy_app_uri_handler_registration_manager_get_for_package_for_user(cwinrt_hstring packageFamilyName, WSY_User* user, WSY_AppUriHandlerRegistrationManager** out);
 
-/* Windows.System.AppUriHandlerRegistrationManager.GetDefault() */
 HRESULT wsy_app_uri_handler_registration_manager_get_default(WSY_AppUriHandlerRegistrationManager** out);
 
-/* Windows.System.AppUriHandlerRegistrationManager.GetForUser(user) */
 HRESULT wsy_app_uri_handler_registration_manager_get_for_user(WSY_User* user, WSY_AppUriHandlerRegistrationManager** out);
 
-/* activate Windows.System.DateTimeSettings */
 HRESULT wsy_date_time_settings_new(WSY_DateTimeSettings **out);
 
-/* Windows.System.DateTimeSettings */
-/* Windows.System.DateTimeSettings.SetSystemDateTime(utcDateTime) */
 HRESULT wsy_date_time_settings_set_system_date_time(WF_DateTime utcDateTime);
 
-/* activate Windows.System.RemoteLauncher */
 HRESULT wsy_remote_launcher_new(WSY_RemoteLauncher **out);
 
-/* Windows.System.RemoteLauncher */
-/* Windows.System.RemoteLauncher.LaunchUriAsync(remoteSystemConnectionRequest, uri) */
 HRESULT wsy_remote_launcher_launch_uri_async(WSYRE_RemoteSystemConnectionRequest* remoteSystemConnectionRequest, WF_Uri* uri, WF_IAsyncOperation_WSY_RemoteLaunchUriStatus** out);
 
-/* Windows.System.RemoteLauncher.LaunchUriAsync(remoteSystemConnectionRequest, uri, options) */
 HRESULT wsy_remote_launcher_launch_uri_async_p_p_p_p(WSYRE_RemoteSystemConnectionRequest* remoteSystemConnectionRequest, WF_Uri* uri, WSY_RemoteLauncherOptions* options, WF_IAsyncOperation_WSY_RemoteLaunchUriStatus** out);
 
-/* Windows.System.RemoteLauncher.LaunchUriAsync(remoteSystemConnectionRequest, uri, options, inputData) */
 HRESULT wsy_remote_launcher_launch_uri_async_p_p_p_p_p(WSYRE_RemoteSystemConnectionRequest* remoteSystemConnectionRequest, WF_Uri* uri, WSY_RemoteLauncherOptions* options, WFOCO_ValueSet* inputData, WF_IAsyncOperation_WSY_RemoteLaunchUriStatus** out);
 
-/* activate Windows.System.RemoteLauncherOptions */
 HRESULT wsy_remote_launcher_options_new(WSY_RemoteLauncherOptions **out);
 
-/* Windows.System.RemoteLauncherOptions */
-/* Windows.System.RemoteLauncherOptions.get_FallbackUri() */
 HRESULT wsy_remote_launcher_options_get__fallback_uri(WSY_RemoteLauncherOptions *self, WF_Uri** value);
 
-/* Windows.System.RemoteLauncherOptions.put_FallbackUri() */
 HRESULT wsy_remote_launcher_options_put__fallback_uri(WSY_RemoteLauncherOptions *self, WF_Uri* value);
 
-/* Windows.System.RemoteLauncherOptions.get_PreferredAppIds() */
 HRESULT wsy_remote_launcher_options_get__preferred_app_ids(WSY_RemoteLauncherOptions *self, WFOCO_IVector_HSTRING** value);
 
-/* activate Windows.System.ShutdownManager */
 HRESULT wsy_shutdown_manager_new(WSY_ShutdownManager **out);
 
-/* Windows.System.ShutdownManager */
-/* Windows.System.ShutdownManager.IsPowerStateSupported(powerState) */
 HRESULT wsy_shutdown_manager_is_power_state_supported(WSY_PowerState powerState, BOOL *out);
 
-/* Windows.System.ShutdownManager.EnterPowerState(powerState) */
 HRESULT wsy_shutdown_manager_enter_power_state(WSY_PowerState powerState);
 
-/* Windows.System.ShutdownManager.EnterPowerState(powerState, wakeUpAfter) */
 HRESULT wsy_shutdown_manager_enter_power_state_power_state_time_span(WSY_PowerState powerState, WF_TimeSpan wakeUpAfter);
 
-/* Windows.System.ShutdownManager.BeginShutdown(shutdownKind, timeout) */
 HRESULT wsy_shutdown_manager_begin_shutdown(WSY_ShutdownKind shutdownKind, WF_TimeSpan timeout);
 
-/* Windows.System.ShutdownManager.CancelShutdown() */
 HRESULT wsy_shutdown_manager_cancel_shutdown(void);
 
-/* activate Windows.System.TimeZoneSettings */
 HRESULT wsy_time_zone_settings_new(WSY_TimeZoneSettings **out);
 
-/* Windows.System.TimeZoneSettings */
-/* Windows.System.TimeZoneSettings.AutoUpdateTimeZoneAsync(timeout) */
 HRESULT wsy_time_zone_settings_auto_update_time_zone_async(WF_TimeSpan timeout, WF_IAsyncOperation_WSY_AutoUpdateTimeZoneStatus** out);
 
-/* Windows.System.TimeZoneSettings.get_CurrentTimeZoneDisplayName() */
 HRESULT wsy_time_zone_settings_get__current_time_zone_display_name(cwinrt_hstring *value);
 
-/* Windows.System.TimeZoneSettings.get_SupportedTimeZoneDisplayNames() */
 HRESULT wsy_time_zone_settings_get__supported_time_zone_display_names(WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.System.TimeZoneSettings.get_CanChangeTimeZone() */
 HRESULT wsy_time_zone_settings_get__can_change_time_zone(BOOL *value);
 
-/* Windows.System.TimeZoneSettings.ChangeTimeZoneByDisplayName(timeZoneDisplayName) */
 HRESULT wsy_time_zone_settings_change_time_zone_by_display_name(cwinrt_hstring timeZoneDisplayName);
 
-/* activate Windows.System.User */
 HRESULT wsy_user_new(WSY_User **out);
 
-/* Windows.System.User */
-/* Windows.System.User.get_NonRoamableId() */
 HRESULT wsy_user_get__non_roamable_id(WSY_User *self, cwinrt_hstring *value);
 
-/* Windows.System.User.get_AuthenticationStatus() */
 HRESULT wsy_user_get__authentication_status(WSY_User *self, WSY_UserAuthenticationStatus *value);
 
-/* Windows.System.User.get_Type() */
 HRESULT wsy_user_get__type(WSY_User *self, WSY_UserType *value);
 
-/* Windows.System.User.GetPropertyAsync() */
 HRESULT wsy_user_get_property_async(WSY_User *self, cwinrt_hstring value, WF_IAsyncOperation_Object** out);
 
-/* Windows.System.User.GetPropertiesAsync(values) */
 HRESULT wsy_user_get_properties_async(WSY_User *self, WFOCO_IVectorView_HSTRING* values, WF_IAsyncOperation_WFOCO_IPropertySet** out);
 
-/* Windows.System.User.GetPictureAsync(desiredSize) */
 HRESULT wsy_user_get_picture_async(WSY_User *self, WSY_UserPictureSize desiredSize, WF_IAsyncOperation_WSTST_IRandomAccessStreamReference** out);
 
-/* Windows.System.User.CheckUserAgeConsentGroupAsync(consentGroup) */
 HRESULT wsy_user_check_user_age_consent_group_async(WSY_User *self, WSY_UserAgeConsentGroup consentGroup, WF_IAsyncOperation_WSY_UserAgeConsentResult** out);
 
-/* Windows.System.User.GetDefault() */
 HRESULT wsy_user_get_default(WSY_User** out);
 
-/* Windows.System.User.CreateWatcher() */
 HRESULT wsy_user_create_watcher(WSY_UserWatcher** out);
 
-/* Windows.System.User.FindAllAsync() */
 HRESULT wsy_user_find_all_async(WF_IAsyncOperation_WFOCO_IVectorView_WSY_User** out);
 
-/* Windows.System.User.FindAllAsync() */
 HRESULT wsy_user_find_all_async_user_type_p(WSY_UserType type_, WF_IAsyncOperation_WFOCO_IVectorView_WSY_User** out);
 
-/* Windows.System.User.FindAllAsync(status) */
 HRESULT wsy_user_find_all_async_user_type_user_authentication_status_p(WSY_UserType type_, WSY_UserAuthenticationStatus status, WF_IAsyncOperation_WFOCO_IVectorView_WSY_User** out);
 
-/* Windows.System.User.GetFromId(nonRoamableId) */
 HRESULT wsy_user_get_from_id(cwinrt_hstring nonRoamableId, WSY_User** out);
 
-/* activate Windows.System.UserAuthenticationStatusChangeDeferral */
 HRESULT wsy_user_authentication_status_change_deferral_new(WSY_UserAuthenticationStatusChangeDeferral **out);
 
-/* Windows.System.UserAuthenticationStatusChangeDeferral */
-/* Windows.System.UserAuthenticationStatusChangeDeferral.Complete() */
 HRESULT wsy_user_authentication_status_change_deferral_complete(WSY_UserAuthenticationStatusChangeDeferral *self);
 
-/* activate Windows.System.UserAuthenticationStatusChangingEventArgs */
 HRESULT wsy_user_authentication_status_changing_event_args_new(WSY_UserAuthenticationStatusChangingEventArgs **out);
 
-/* Windows.System.UserAuthenticationStatusChangingEventArgs */
-/* Windows.System.UserAuthenticationStatusChangingEventArgs.GetDeferral() */
 HRESULT wsy_user_authentication_status_changing_event_args_get_deferral(WSY_UserAuthenticationStatusChangingEventArgs *self, WSY_UserAuthenticationStatusChangeDeferral** out);
 
-/* Windows.System.UserAuthenticationStatusChangingEventArgs.get_User() */
 HRESULT wsy_user_authentication_status_changing_event_args_get__user(WSY_UserAuthenticationStatusChangingEventArgs *self, WSY_User** value);
 
-/* Windows.System.UserAuthenticationStatusChangingEventArgs.get_NewStatus() */
 HRESULT wsy_user_authentication_status_changing_event_args_get__new_status(WSY_UserAuthenticationStatusChangingEventArgs *self, WSY_UserAuthenticationStatus *value);
 
-/* Windows.System.UserAuthenticationStatusChangingEventArgs.get_CurrentStatus() */
 HRESULT wsy_user_authentication_status_changing_event_args_get__current_status(WSY_UserAuthenticationStatusChangingEventArgs *self, WSY_UserAuthenticationStatus *value);
 
-/* activate Windows.System.UserChangedEventArgs */
 HRESULT wsy_user_changed_event_args_new(WSY_UserChangedEventArgs **out);
 
-/* Windows.System.UserChangedEventArgs */
-/* Windows.System.UserChangedEventArgs.get_User() */
 HRESULT wsy_user_changed_event_args_get__user(WSY_UserChangedEventArgs *self, WSY_User** value);
 
-/* Windows.System.UserChangedEventArgs.get_ChangedPropertyKinds() */
 HRESULT wsy_user_changed_event_args_get__changed_property_kinds(WSY_UserChangedEventArgs *self, WFOCO_IVectorView_WSY_UserWatcherUpdateKind** value);
 
-/* activate Windows.System.ProtocolForResultsOperation */
 HRESULT wsy_protocol_for_results_operation_new(WSY_ProtocolForResultsOperation **out);
 
-/* Windows.System.ProtocolForResultsOperation */
-/* Windows.System.ProtocolForResultsOperation.ReportCompleted(data) */
 HRESULT wsy_protocol_for_results_operation_report_completed(WSY_ProtocolForResultsOperation *self, WFOCO_ValueSet* data);
 
-/* activate Windows.System.UserDeviceAssociation */
 HRESULT wsy_user_device_association_new(WSY_UserDeviceAssociation **out);
 
-/* Windows.System.UserDeviceAssociation */
-/* Windows.System.UserDeviceAssociation.FindUserFromDeviceId(deviceId) */
 HRESULT wsy_user_device_association_find_user_from_device_id(cwinrt_hstring deviceId, WSY_User** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsy_user_device_association_on_user_device_association_changed(WSY_UserDeviceAssociation *self, cwinrt_event_fn fn, void *ctx);
 void wsy_user_device_association_off_user_device_association_changed(WSY_UserDeviceAssociation *self, cwinrt_token token);
 
-/* activate Windows.System.UserDeviceAssociationChangedEventArgs */
 HRESULT wsy_user_device_association_changed_event_args_new(WSY_UserDeviceAssociationChangedEventArgs **out);
 
-/* Windows.System.UserDeviceAssociationChangedEventArgs */
-/* Windows.System.UserDeviceAssociationChangedEventArgs.get_DeviceId() */
 HRESULT wsy_user_device_association_changed_event_args_get__device_id(WSY_UserDeviceAssociationChangedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.System.UserDeviceAssociationChangedEventArgs.get_NewUser() */
 HRESULT wsy_user_device_association_changed_event_args_get__new_user(WSY_UserDeviceAssociationChangedEventArgs *self, WSY_User** value);
 
-/* Windows.System.UserDeviceAssociationChangedEventArgs.get_OldUser() */
 HRESULT wsy_user_device_association_changed_event_args_get__old_user(WSY_UserDeviceAssociationChangedEventArgs *self, WSY_User** value);
 
-/* activate Windows.System.UserPicker */
 HRESULT wsy_user_picker_new(WSY_UserPicker **out);
 
-/* Windows.System.UserPicker */
-/* Windows.System.UserPicker.get_AllowGuestAccounts() */
 HRESULT wsy_user_picker_get__allow_guest_accounts(WSY_UserPicker *self, BOOL *value);
 
-/* Windows.System.UserPicker.put_AllowGuestAccounts() */
 HRESULT wsy_user_picker_put__allow_guest_accounts(WSY_UserPicker *self, BOOL value);
 
-/* Windows.System.UserPicker.get_SuggestedSelectedUser() */
 HRESULT wsy_user_picker_get__suggested_selected_user(WSY_UserPicker *self, WSY_User** value);
 
-/* Windows.System.UserPicker.put_SuggestedSelectedUser() */
 HRESULT wsy_user_picker_put__suggested_selected_user(WSY_UserPicker *self, WSY_User* value);
 
-/* Windows.System.UserPicker.PickSingleUserAsync() */
 HRESULT wsy_user_picker_pick_single_user_async(WSY_UserPicker *self, WF_IAsyncOperation_WSY_User** out);
 
-/* Windows.System.UserPicker.IsSupported() */
 HRESULT wsy_user_picker_is_supported(BOOL *out);
 
-/* activate Windows.System.UserWatcher */
 HRESULT wsy_user_watcher_new(WSY_UserWatcher **out);
 
-/* Windows.System.UserWatcher */
-/* Windows.System.UserWatcher.get_Status() */
 HRESULT wsy_user_watcher_get__status(WSY_UserWatcher *self, WSY_UserWatcherStatus *value);
 
-/* Windows.System.UserWatcher.Start() */
 HRESULT wsy_user_watcher_start(WSY_UserWatcher *self);
 
-/* Windows.System.UserWatcher.Stop() */
 HRESULT wsy_user_watcher_stop(WSY_UserWatcher *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsy_user_watcher_on_added(WSY_UserWatcher *self, cwinrt_event_fn fn, void *ctx);
@@ -1742,87 +1551,56 @@ void wsy_user_watcher_off_enumeration_completed(WSY_UserWatcher *self, cwinrt_to
 cwinrt_token wsy_user_watcher_on_stopped(WSY_UserWatcher *self, cwinrt_event_fn fn, void *ctx);
 void wsy_user_watcher_off_stopped(WSY_UserWatcher *self, cwinrt_token token);
 
-/* activate Windows.System.ProcessMemoryReport */
 HRESULT wsy_process_memory_report_new(WSY_ProcessMemoryReport **out);
 
-/* Windows.System.ProcessMemoryReport */
-/* Windows.System.ProcessMemoryReport.get_PrivateWorkingSetUsage() */
 HRESULT wsy_process_memory_report_get__private_working_set_usage(WSY_ProcessMemoryReport *self, uint64_t *value);
 
-/* Windows.System.ProcessMemoryReport.get_TotalWorkingSetUsage() */
 HRESULT wsy_process_memory_report_get__total_working_set_usage(WSY_ProcessMemoryReport *self, uint64_t *value);
 
-/* activate Windows.System.ProcessLauncherResult */
 HRESULT wsy_process_launcher_result_new(WSY_ProcessLauncherResult **out);
 
-/* Windows.System.ProcessLauncherResult */
-/* Windows.System.ProcessLauncherResult.get_ExitCode() */
 HRESULT wsy_process_launcher_result_get__exit_code(WSY_ProcessLauncherResult *self, uint32_t *value);
 
-/* activate Windows.System.ProcessLauncherOptions */
 HRESULT wsy_process_launcher_options_new(WSY_ProcessLauncherOptions **out);
 
-/* Windows.System.ProcessLauncherOptions */
-/* Windows.System.ProcessLauncherOptions.get_StandardInput() */
 HRESULT wsy_process_launcher_options_get__standard_input(WSY_ProcessLauncherOptions *self, WSTST_IInputStream** value);
 
-/* Windows.System.ProcessLauncherOptions.put_StandardInput() */
 HRESULT wsy_process_launcher_options_put__standard_input(WSY_ProcessLauncherOptions *self, WSTST_IInputStream* value);
 
-/* Windows.System.ProcessLauncherOptions.get_StandardOutput() */
 HRESULT wsy_process_launcher_options_get__standard_output(WSY_ProcessLauncherOptions *self, WSTST_IOutputStream** value);
 
-/* Windows.System.ProcessLauncherOptions.put_StandardOutput() */
 HRESULT wsy_process_launcher_options_put__standard_output(WSY_ProcessLauncherOptions *self, WSTST_IOutputStream* value);
 
-/* Windows.System.ProcessLauncherOptions.get_StandardError() */
 HRESULT wsy_process_launcher_options_get__standard_error(WSY_ProcessLauncherOptions *self, WSTST_IOutputStream** value);
 
-/* Windows.System.ProcessLauncherOptions.put_StandardError() */
 HRESULT wsy_process_launcher_options_put__standard_error(WSY_ProcessLauncherOptions *self, WSTST_IOutputStream* value);
 
-/* Windows.System.ProcessLauncherOptions.get_WorkingDirectory() */
 HRESULT wsy_process_launcher_options_get__working_directory(WSY_ProcessLauncherOptions *self, cwinrt_hstring *value);
 
-/* Windows.System.ProcessLauncherOptions.put_WorkingDirectory() */
 HRESULT wsy_process_launcher_options_put__working_directory(WSY_ProcessLauncherOptions *self, cwinrt_hstring value);
 
-/* activate Windows.System.ProcessLauncher */
 HRESULT wsy_process_launcher_new(WSY_ProcessLauncher **out);
 
-/* Windows.System.ProcessLauncher */
-/* Windows.System.ProcessLauncher.RunToCompletionAsync(fileName, args) */
 HRESULT wsy_process_launcher_run_to_completion_async(cwinrt_hstring fileName, cwinrt_hstring args, WF_IAsyncOperation_WSY_ProcessLauncherResult** out);
 
-/* Windows.System.ProcessLauncher.RunToCompletionAsync(fileName, args, options) */
 HRESULT wsy_process_launcher_run_to_completion_async_str_str_p_p(cwinrt_hstring fileName, cwinrt_hstring args, WSY_ProcessLauncherOptions* options, WF_IAsyncOperation_WSY_ProcessLauncherResult** out);
 
-/* activate Windows.System.MemoryManager */
 HRESULT wsy_memory_manager_new(WSY_MemoryManager **out);
 
-/* Windows.System.MemoryManager */
-/* Windows.System.MemoryManager.get_ExpectedAppMemoryUsageLimit() */
 HRESULT wsy_memory_manager_get__expected_app_memory_usage_limit(uint64_t *value);
 
-/* Windows.System.MemoryManager.TrySetAppMemoryUsageLimit() */
 HRESULT wsy_memory_manager_try_set_app_memory_usage_limit(uint64_t value, BOOL *out);
 
-/* Windows.System.MemoryManager.GetAppMemoryReport() */
 HRESULT wsy_memory_manager_get_app_memory_report(WSY_AppMemoryReport** out);
 
-/* Windows.System.MemoryManager.GetProcessMemoryReport() */
 HRESULT wsy_memory_manager_get_process_memory_report(WSY_ProcessMemoryReport** out);
 
-/* Windows.System.MemoryManager.get_AppMemoryUsage() */
 HRESULT wsy_memory_manager_get__app_memory_usage(uint64_t *value);
 
-/* Windows.System.MemoryManager.get_AppMemoryUsageLimit() */
 HRESULT wsy_memory_manager_get__app_memory_usage_limit(uint64_t *value);
 
-/* Windows.System.MemoryManager.get_AppMemoryUsageLevel() */
 HRESULT wsy_memory_manager_get__app_memory_usage_level(WSY_AppMemoryUsageLevel *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsy_memory_manager_on_app_memory_usage_increased(WSY_MemoryManager *self, cwinrt_event_fn fn, void *ctx);
@@ -1834,329 +1612,210 @@ void wsy_memory_manager_off_app_memory_usage_decreased(WSY_MemoryManager *self, 
 cwinrt_token wsy_memory_manager_on_app_memory_usage_limit_changing(WSY_MemoryManager *self, cwinrt_event_fn fn, void *ctx);
 void wsy_memory_manager_off_app_memory_usage_limit_changing(WSY_MemoryManager *self, cwinrt_token token);
 
-/* activate Windows.System.LauncherUIOptions */
 HRESULT wsy_launcher_u_i_options_new(WSY_LauncherUIOptions **out);
 
-/* Windows.System.LauncherUIOptions */
-/* Windows.System.LauncherUIOptions.get_InvocationPoint() */
 HRESULT wsy_launcher_u_i_options_get__invocation_point(WSY_LauncherUIOptions *self, WF_Point** value);
 
-/* Windows.System.LauncherUIOptions.put_InvocationPoint() */
 HRESULT wsy_launcher_u_i_options_put__invocation_point(WSY_LauncherUIOptions *self, WF_Point* value);
 
-/* Windows.System.LauncherUIOptions.get_SelectionRect() */
 HRESULT wsy_launcher_u_i_options_get__selection_rect(WSY_LauncherUIOptions *self, WF_Rect** value);
 
-/* Windows.System.LauncherUIOptions.put_SelectionRect() */
 HRESULT wsy_launcher_u_i_options_put__selection_rect(WSY_LauncherUIOptions *self, WF_Rect* value);
 
-/* Windows.System.LauncherUIOptions.get_PreferredPlacement() */
 HRESULT wsy_launcher_u_i_options_get__preferred_placement(WSY_LauncherUIOptions *self, WUIPO_Placement *value);
 
-/* Windows.System.LauncherUIOptions.put_PreferredPlacement() */
 HRESULT wsy_launcher_u_i_options_put__preferred_placement(WSY_LauncherUIOptions *self, WUIPO_Placement value);
 
-/* activate Windows.System.LauncherOptions */
 HRESULT wsy_launcher_options_new(WSY_LauncherOptions **out);
 
-/* Windows.System.LauncherOptions */
-/* Windows.System.LauncherOptions.get_TargetApplicationPackageFamilyName() */
 HRESULT wsy_launcher_options_get__target_application_package_family_name(WSY_LauncherOptions *self, cwinrt_hstring *value);
 
-/* Windows.System.LauncherOptions.put_TargetApplicationPackageFamilyName() */
 HRESULT wsy_launcher_options_put__target_application_package_family_name(WSY_LauncherOptions *self, cwinrt_hstring value);
 
-/* Windows.System.LauncherOptions.get_NeighboringFilesQuery() */
 HRESULT wsy_launcher_options_get__neighboring_files_query(WSY_LauncherOptions *self, WSTSE_StorageFileQueryResult** value);
 
-/* Windows.System.LauncherOptions.put_NeighboringFilesQuery() */
 HRESULT wsy_launcher_options_put__neighboring_files_query(WSY_LauncherOptions *self, WSTSE_StorageFileQueryResult* value);
 
-/* Windows.System.LauncherOptions.get_TreatAsUntrusted() */
 HRESULT wsy_launcher_options_get__treat_as_untrusted(WSY_LauncherOptions *self, BOOL *value);
 
-/* Windows.System.LauncherOptions.put_TreatAsUntrusted() */
 HRESULT wsy_launcher_options_put__treat_as_untrusted(WSY_LauncherOptions *self, BOOL value);
 
-/* Windows.System.LauncherOptions.get_DisplayApplicationPicker() */
 HRESULT wsy_launcher_options_get__display_application_picker(WSY_LauncherOptions *self, BOOL *value);
 
-/* Windows.System.LauncherOptions.put_DisplayApplicationPicker() */
 HRESULT wsy_launcher_options_put__display_application_picker(WSY_LauncherOptions *self, BOOL value);
 
-/* Windows.System.LauncherOptions.get_UI() */
 HRESULT wsy_launcher_options_get__u_i(WSY_LauncherOptions *self, WSY_LauncherUIOptions** value);
 
-/* Windows.System.LauncherOptions.get_PreferredApplicationPackageFamilyName() */
 HRESULT wsy_launcher_options_get__preferred_application_package_family_name(WSY_LauncherOptions *self, cwinrt_hstring *value);
 
-/* Windows.System.LauncherOptions.put_PreferredApplicationPackageFamilyName() */
 HRESULT wsy_launcher_options_put__preferred_application_package_family_name(WSY_LauncherOptions *self, cwinrt_hstring value);
 
-/* Windows.System.LauncherOptions.get_PreferredApplicationDisplayName() */
 HRESULT wsy_launcher_options_get__preferred_application_display_name(WSY_LauncherOptions *self, cwinrt_hstring *value);
 
-/* Windows.System.LauncherOptions.put_PreferredApplicationDisplayName() */
 HRESULT wsy_launcher_options_put__preferred_application_display_name(WSY_LauncherOptions *self, cwinrt_hstring value);
 
-/* Windows.System.LauncherOptions.get_FallbackUri() */
 HRESULT wsy_launcher_options_get__fallback_uri(WSY_LauncherOptions *self, WF_Uri** value);
 
-/* Windows.System.LauncherOptions.put_FallbackUri() */
 HRESULT wsy_launcher_options_put__fallback_uri(WSY_LauncherOptions *self, WF_Uri* value);
 
-/* Windows.System.LauncherOptions.get_ContentType() */
 HRESULT wsy_launcher_options_get__content_type(WSY_LauncherOptions *self, cwinrt_hstring *value);
 
-/* Windows.System.LauncherOptions.put_ContentType() */
 HRESULT wsy_launcher_options_put__content_type(WSY_LauncherOptions *self, cwinrt_hstring value);
 
-/* Windows.System.LauncherOptions.get_IgnoreAppUriHandlers() */
 HRESULT wsy_launcher_options_get__ignore_app_uri_handlers(WSY_LauncherOptions *self, BOOL *value);
 
-/* Windows.System.LauncherOptions.put_IgnoreAppUriHandlers() */
 HRESULT wsy_launcher_options_put__ignore_app_uri_handlers(WSY_LauncherOptions *self, BOOL value);
 
-/* Windows.System.LauncherOptions.get_LimitPickerToCurrentAppAndAppUriHandlers() */
 HRESULT wsy_launcher_options_get__limit_picker_to_current_app_and_app_uri_handlers(WSY_LauncherOptions *self, BOOL *value);
 
-/* Windows.System.LauncherOptions.put_LimitPickerToCurrentAppAndAppUriHandlers() */
 HRESULT wsy_launcher_options_put__limit_picker_to_current_app_and_app_uri_handlers(WSY_LauncherOptions *self, BOOL value);
 
-/* Windows.System.LauncherOptions.get_DesiredRemainingView() */
 HRESULT wsy_launcher_options_get__desired_remaining_view(WSY_LauncherOptions *self, WUIVI_ViewSizePreference *value);
 
-/* Windows.System.LauncherOptions.put_DesiredRemainingView() */
 HRESULT wsy_launcher_options_put__desired_remaining_view(WSY_LauncherOptions *self, WUIVI_ViewSizePreference value);
 
-/* activate Windows.System.Launcher */
 HRESULT wsy_launcher_new(WSY_Launcher **out);
 
-/* Windows.System.Launcher */
-/* Windows.System.Launcher.LaunchFolderPathAsync(path) */
 HRESULT wsy_launcher_launch_folder_path_async(cwinrt_hstring path, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.Launcher.LaunchFolderPathAsync(path, options) */
 HRESULT wsy_launcher_launch_folder_path_async_str_p_p(cwinrt_hstring path, WSY_FolderLauncherOptions* options, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.Launcher.LaunchFolderPathForUserAsync(user, path) */
 HRESULT wsy_launcher_launch_folder_path_for_user_async(WSY_User* user, cwinrt_hstring path, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.Launcher.LaunchFolderPathForUserAsync(user, path, options) */
 HRESULT wsy_launcher_launch_folder_path_for_user_async_p_str_p_p(WSY_User* user, cwinrt_hstring path, WSY_FolderLauncherOptions* options, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.Launcher.QueryAppUriSupportAsync(uri) */
 HRESULT wsy_launcher_query_app_uri_support_async(WF_Uri* uri, WF_IAsyncOperation_WSY_LaunchQuerySupportStatus** out);
 
-/* Windows.System.Launcher.QueryAppUriSupportAsync(uri, packageFamilyName) */
 HRESULT wsy_launcher_query_app_uri_support_async_p_str_p(WF_Uri* uri, cwinrt_hstring packageFamilyName, WF_IAsyncOperation_WSY_LaunchQuerySupportStatus** out);
 
-/* Windows.System.Launcher.FindAppUriHandlersAsync(uri) */
 HRESULT wsy_launcher_find_app_uri_handlers_async(WF_Uri* uri, WF_IAsyncOperation_WFOCO_IVectorView_WAM_AppInfo** out);
 
-/* Windows.System.Launcher.LaunchUriForUserAsync(user, uri) */
 HRESULT wsy_launcher_launch_uri_for_user_async(WSY_User* user, WF_Uri* uri, WF_IAsyncOperation_WSY_LaunchUriStatus** out);
 
-/* Windows.System.Launcher.LaunchUriForUserAsync(user, uri, options) */
 HRESULT wsy_launcher_launch_uri_for_user_async_p_p_p_p(WSY_User* user, WF_Uri* uri, WSY_LauncherOptions* options, WF_IAsyncOperation_WSY_LaunchUriStatus** out);
 
-/* Windows.System.Launcher.LaunchUriForUserAsync(user, uri, options, inputData) */
 HRESULT wsy_launcher_launch_uri_for_user_async_p_p_p_p_p(WSY_User* user, WF_Uri* uri, WSY_LauncherOptions* options, WFOCO_ValueSet* inputData, WF_IAsyncOperation_WSY_LaunchUriStatus** out);
 
-/* Windows.System.Launcher.LaunchUriForResultsForUserAsync(user, uri, options) */
 HRESULT wsy_launcher_launch_uri_for_results_for_user_async(WSY_User* user, WF_Uri* uri, WSY_LauncherOptions* options, WF_IAsyncOperation_WSY_LaunchUriResult** out);
 
-/* Windows.System.Launcher.LaunchUriForResultsForUserAsync(user, uri, options, inputData) */
 HRESULT wsy_launcher_launch_uri_for_results_for_user_async_p_p_p_p_p(WSY_User* user, WF_Uri* uri, WSY_LauncherOptions* options, WFOCO_ValueSet* inputData, WF_IAsyncOperation_WSY_LaunchUriResult** out);
 
-/* Windows.System.Launcher.LaunchFileAsync(file) */
 HRESULT wsy_launcher_launch_file_async(WS_IStorageFile* file, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.Launcher.LaunchFileAsync(file, options) */
 HRESULT wsy_launcher_launch_file_async_p_p_p(WS_IStorageFile* file, WSY_LauncherOptions* options, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.Launcher.LaunchUriAsync(uri) */
 HRESULT wsy_launcher_launch_uri_async(WF_Uri* uri, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.Launcher.LaunchUriAsync(uri, options) */
 HRESULT wsy_launcher_launch_uri_async_p_p_p(WF_Uri* uri, WSY_LauncherOptions* options, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.Launcher.LaunchFolderAsync(folder) */
 HRESULT wsy_launcher_launch_folder_async(WS_IStorageFolder* folder, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.Launcher.LaunchFolderAsync(folder, options) */
 HRESULT wsy_launcher_launch_folder_async_p_p_p(WS_IStorageFolder* folder, WSY_FolderLauncherOptions* options, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.Launcher.LaunchUriForResultsAsync(uri, options) */
 HRESULT wsy_launcher_launch_uri_for_results_async(WF_Uri* uri, WSY_LauncherOptions* options, WF_IAsyncOperation_WSY_LaunchUriResult** out);
 
-/* Windows.System.Launcher.LaunchUriForResultsAsync(uri, options, inputData) */
 HRESULT wsy_launcher_launch_uri_for_results_async_p_p_p_p(WF_Uri* uri, WSY_LauncherOptions* options, WFOCO_ValueSet* inputData, WF_IAsyncOperation_WSY_LaunchUriResult** out);
 
-/* Windows.System.Launcher.LaunchUriAsync(uri, options, inputData) */
 HRESULT wsy_launcher_launch_uri_async_p_p_p_p(WF_Uri* uri, WSY_LauncherOptions* options, WFOCO_ValueSet* inputData, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.Launcher.QueryUriSupportAsync(uri, launchQuerySupportType) */
 HRESULT wsy_launcher_query_uri_support_async(WF_Uri* uri, WSY_LaunchQuerySupportType launchQuerySupportType, WF_IAsyncOperation_WSY_LaunchQuerySupportStatus** out);
 
-/* Windows.System.Launcher.QueryUriSupportAsync(uri, launchQuerySupportType, packageFamilyName) */
 HRESULT wsy_launcher_query_uri_support_async_p_launch_query_support_type_str_p(WF_Uri* uri, WSY_LaunchQuerySupportType launchQuerySupportType, cwinrt_hstring packageFamilyName, WF_IAsyncOperation_WSY_LaunchQuerySupportStatus** out);
 
-/* Windows.System.Launcher.QueryFileSupportAsync(file) */
 HRESULT wsy_launcher_query_file_support_async(WS_StorageFile* file, WF_IAsyncOperation_WSY_LaunchQuerySupportStatus** out);
 
-/* Windows.System.Launcher.QueryFileSupportAsync(file, packageFamilyName) */
 HRESULT wsy_launcher_query_file_support_async_p_str_p(WS_StorageFile* file, cwinrt_hstring packageFamilyName, WF_IAsyncOperation_WSY_LaunchQuerySupportStatus** out);
 
-/* Windows.System.Launcher.FindUriSchemeHandlersAsync(scheme) */
 HRESULT wsy_launcher_find_uri_scheme_handlers_async(cwinrt_hstring scheme, WF_IAsyncOperation_WFOCO_IVectorView_WAM_AppInfo** out);
 
-/* Windows.System.Launcher.FindUriSchemeHandlersAsync(scheme, launchQuerySupportType) */
 HRESULT wsy_launcher_find_uri_scheme_handlers_async_str_launch_query_support_type_p(cwinrt_hstring scheme, WSY_LaunchQuerySupportType launchQuerySupportType, WF_IAsyncOperation_WFOCO_IVectorView_WAM_AppInfo** out);
 
-/* Windows.System.Launcher.FindFileHandlersAsync(extension) */
 HRESULT wsy_launcher_find_file_handlers_async(cwinrt_hstring extension, WF_IAsyncOperation_WFOCO_IVectorView_WAM_AppInfo** out);
 
-/* activate Windows.System.LaunchUriResult */
 HRESULT wsy_launch_uri_result_new(WSY_LaunchUriResult **out);
 
-/* Windows.System.LaunchUriResult */
-/* Windows.System.LaunchUriResult.get_Status() */
 HRESULT wsy_launch_uri_result_get__status(WSY_LaunchUriResult *self, WSY_LaunchUriStatus *value);
 
-/* Windows.System.LaunchUriResult.get_Result() */
 HRESULT wsy_launch_uri_result_get__result(WSY_LaunchUriResult *self, WFOCO_ValueSet** value);
 
-/* activate Windows.System.KnownUserProperties */
 HRESULT wsy_known_user_properties_new(WSY_KnownUserProperties **out);
 
-/* Windows.System.KnownUserProperties */
-/* Windows.System.KnownUserProperties.get_AgeEnforcementRegion() */
 HRESULT wsy_known_user_properties_get__age_enforcement_region(cwinrt_hstring *value);
 
-/* Windows.System.KnownUserProperties.get_DisplayName() */
 HRESULT wsy_known_user_properties_get__display_name(cwinrt_hstring *value);
 
-/* Windows.System.KnownUserProperties.get_FirstName() */
 HRESULT wsy_known_user_properties_get__first_name(cwinrt_hstring *value);
 
-/* Windows.System.KnownUserProperties.get_LastName() */
 HRESULT wsy_known_user_properties_get__last_name(cwinrt_hstring *value);
 
-/* Windows.System.KnownUserProperties.get_ProviderName() */
 HRESULT wsy_known_user_properties_get__provider_name(cwinrt_hstring *value);
 
-/* Windows.System.KnownUserProperties.get_AccountName() */
 HRESULT wsy_known_user_properties_get__account_name(cwinrt_hstring *value);
 
-/* Windows.System.KnownUserProperties.get_GuestHost() */
 HRESULT wsy_known_user_properties_get__guest_host(cwinrt_hstring *value);
 
-/* Windows.System.KnownUserProperties.get_PrincipalName() */
 HRESULT wsy_known_user_properties_get__principal_name(cwinrt_hstring *value);
 
-/* Windows.System.KnownUserProperties.get_DomainName() */
 HRESULT wsy_known_user_properties_get__domain_name(cwinrt_hstring *value);
 
-/* Windows.System.KnownUserProperties.get_SessionInitiationProtocolUri() */
 HRESULT wsy_known_user_properties_get__session_initiation_protocol_uri(cwinrt_hstring *value);
 
-/* Windows.System.IUserStatics2 */
-/* Windows.System.IUserStatics2.GetDefault() */
 HRESULT wsy_user_statics_2_get_default(WSY_IUserStatics_2 *self, WSY_User** out);
 
-/* Windows.System.IUserStatics */
-/* Windows.System.IUserStatics.CreateWatcher() */
 HRESULT wsy_user_statics_create_watcher(WSY_IUserStatics *self, WSY_UserWatcher** out);
 
-/* Windows.System.IUserStatics.FindAllAsync() */
 HRESULT wsy_user_statics_find_all_async(WSY_IUserStatics *self, WF_IAsyncOperation_WFOCO_IVectorView_WSY_User** out);
 
-/* Windows.System.IUserStatics.FindAllAsync() */
 HRESULT wsy_user_statics_find_all_async_user_type_p(WSY_IUserStatics *self, WSY_UserType type_, WF_IAsyncOperation_WFOCO_IVectorView_WSY_User** out);
 
-/* Windows.System.IUserStatics.FindAllAsync(status) */
 HRESULT wsy_user_statics_find_all_async_user_type_user_authentication_status_p(WSY_IUserStatics *self, WSY_UserType type_, WSY_UserAuthenticationStatus status, WF_IAsyncOperation_WFOCO_IVectorView_WSY_User** out);
 
-/* Windows.System.IUserStatics.GetFromId(nonRoamableId) */
 HRESULT wsy_user_statics_get_from_id(WSY_IUserStatics *self, cwinrt_hstring nonRoamableId, WSY_User** out);
 
-/* Windows.System.IUserPickerStatics */
-/* Windows.System.IUserPickerStatics.IsSupported() */
 HRESULT wsy_user_picker_statics_is_supported(WSY_IUserPickerStatics *self, BOOL *out);
 
-/* Windows.System.IUserDeviceAssociationStatics */
-/* Windows.System.IUserDeviceAssociationStatics.FindUserFromDeviceId(deviceId) */
 HRESULT wsy_user_device_association_statics_find_user_from_device_id(WSY_IUserDeviceAssociationStatics *self, cwinrt_hstring deviceId, WSY_User** out);
 
-/* Windows.System.ITimeZoneSettingsStatics2 */
-/* Windows.System.ITimeZoneSettingsStatics2.AutoUpdateTimeZoneAsync(timeout) */
 HRESULT wsy_time_zone_settings_statics_2_auto_update_time_zone_async(WSY_ITimeZoneSettingsStatics_2 *self, WF_TimeSpan timeout, WF_IAsyncOperation_WSY_AutoUpdateTimeZoneStatus** out);
 
-/* Windows.System.ITimeZoneSettingsStatics */
-/* Windows.System.ITimeZoneSettingsStatics.get_CurrentTimeZoneDisplayName() */
 HRESULT wsy_time_zone_settings_statics_get__current_time_zone_display_name(WSY_ITimeZoneSettingsStatics *self, cwinrt_hstring *value);
 
-/* Windows.System.ITimeZoneSettingsStatics.get_SupportedTimeZoneDisplayNames() */
 HRESULT wsy_time_zone_settings_statics_get__supported_time_zone_display_names(WSY_ITimeZoneSettingsStatics *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.System.ITimeZoneSettingsStatics.get_CanChangeTimeZone() */
 HRESULT wsy_time_zone_settings_statics_get__can_change_time_zone(WSY_ITimeZoneSettingsStatics *self, BOOL *value);
 
-/* Windows.System.ITimeZoneSettingsStatics.ChangeTimeZoneByDisplayName(timeZoneDisplayName) */
 HRESULT wsy_time_zone_settings_statics_change_time_zone_by_display_name(WSY_ITimeZoneSettingsStatics *self, cwinrt_hstring timeZoneDisplayName);
 
-/* Windows.System.IShutdownManagerStatics2 */
-/* Windows.System.IShutdownManagerStatics2.IsPowerStateSupported(powerState) */
 HRESULT wsy_shutdown_manager_statics_2_is_power_state_supported(WSY_IShutdownManagerStatics_2 *self, WSY_PowerState powerState, BOOL *out);
 
-/* Windows.System.IShutdownManagerStatics2.EnterPowerState(powerState) */
 HRESULT wsy_shutdown_manager_statics_2_enter_power_state(WSY_IShutdownManagerStatics_2 *self, WSY_PowerState powerState);
 
-/* Windows.System.IShutdownManagerStatics2.EnterPowerState(powerState, wakeUpAfter) */
 HRESULT wsy_shutdown_manager_statics_2_enter_power_state_power_state_time_span(WSY_IShutdownManagerStatics_2 *self, WSY_PowerState powerState, WF_TimeSpan wakeUpAfter);
 
-/* Windows.System.IRemoteLauncherStatics */
-/* Windows.System.IRemoteLauncherStatics.LaunchUriAsync(remoteSystemConnectionRequest, uri) */
 HRESULT wsy_remote_launcher_statics_launch_uri_async(WSY_IRemoteLauncherStatics *self, WSYRE_RemoteSystemConnectionRequest* remoteSystemConnectionRequest, WF_Uri* uri, WF_IAsyncOperation_WSY_RemoteLaunchUriStatus** out);
 
-/* Windows.System.IRemoteLauncherStatics.LaunchUriAsync(remoteSystemConnectionRequest, uri, options) */
 HRESULT wsy_remote_launcher_statics_launch_uri_async_p_p_p_p(WSY_IRemoteLauncherStatics *self, WSYRE_RemoteSystemConnectionRequest* remoteSystemConnectionRequest, WF_Uri* uri, WSY_RemoteLauncherOptions* options, WF_IAsyncOperation_WSY_RemoteLaunchUriStatus** out);
 
-/* Windows.System.IRemoteLauncherStatics.LaunchUriAsync(remoteSystemConnectionRequest, uri, options, inputData) */
 HRESULT wsy_remote_launcher_statics_launch_uri_async_p_p_p_p_p(WSY_IRemoteLauncherStatics *self, WSYRE_RemoteSystemConnectionRequest* remoteSystemConnectionRequest, WF_Uri* uri, WSY_RemoteLauncherOptions* options, WFOCO_ValueSet* inputData, WF_IAsyncOperation_WSY_RemoteLaunchUriStatus** out);
 
-/* Windows.System.IProcessLauncherStatics */
-/* Windows.System.IProcessLauncherStatics.RunToCompletionAsync(fileName, args) */
 HRESULT wsy_process_launcher_statics_run_to_completion_async(WSY_IProcessLauncherStatics *self, cwinrt_hstring fileName, cwinrt_hstring args, WF_IAsyncOperation_WSY_ProcessLauncherResult** out);
 
-/* Windows.System.IProcessLauncherStatics.RunToCompletionAsync(fileName, args, options) */
 HRESULT wsy_process_launcher_statics_run_to_completion_async_str_str_p_p(WSY_IProcessLauncherStatics *self, cwinrt_hstring fileName, cwinrt_hstring args, WSY_ProcessLauncherOptions* options, WF_IAsyncOperation_WSY_ProcessLauncherResult** out);
 
-/* Windows.System.IMemoryManagerStatics4 */
-/* Windows.System.IMemoryManagerStatics4.get_ExpectedAppMemoryUsageLimit() */
 HRESULT wsy_memory_manager_statics_4_get__expected_app_memory_usage_limit(WSY_IMemoryManagerStatics_4 *self, uint64_t *value);
 
-/* activate Windows.System.DispatcherQueue */
 HRESULT wsy_dispatcher_queue_new(WSY_DispatcherQueue **out);
 
-/* Windows.System.DispatcherQueue */
-/* Windows.System.DispatcherQueue.CreateTimer() */
 HRESULT wsy_dispatcher_queue_create_timer(WSY_DispatcherQueue *self, WSY_DispatcherQueueTimer** out);
 
-/* Windows.System.DispatcherQueue.TryEnqueue(callback) */
 HRESULT wsy_dispatcher_queue_try_enqueue(WSY_DispatcherQueue *self, WSY_DispatcherQueueHandler* callback, BOOL *out);
 
-/* Windows.System.DispatcherQueue.TryEnqueue(priority, callback) */
 HRESULT wsy_dispatcher_queue_try_enqueue_dispatcher_queue_priority_p_b(WSY_DispatcherQueue *self, WSY_DispatcherQueuePriority priority, WSY_DispatcherQueueHandler* callback, BOOL *out);
 
-/* Windows.System.DispatcherQueue.get_HasThreadAccess() */
 HRESULT wsy_dispatcher_queue_get__has_thread_access(WSY_DispatcherQueue *self, BOOL *value);
 
-/* Windows.System.DispatcherQueue.GetForCurrentThread() */
 HRESULT wsy_dispatcher_queue_get_for_current_thread(WSY_DispatcherQueue** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsy_dispatcher_queue_on_shutdown_starting(WSY_DispatcherQueue *self, cwinrt_event_fn fn, void *ctx);
@@ -2165,400 +1824,219 @@ void wsy_dispatcher_queue_off_shutdown_starting(WSY_DispatcherQueue *self, cwinr
 cwinrt_token wsy_dispatcher_queue_on_shutdown_completed(WSY_DispatcherQueue *self, cwinrt_event_fn fn, void *ctx);
 void wsy_dispatcher_queue_off_shutdown_completed(WSY_DispatcherQueue *self, cwinrt_token token);
 
-/* activate Windows.System.DispatcherQueueController */
 HRESULT wsy_dispatcher_queue_controller_new(WSY_DispatcherQueueController **out);
 
-/* Windows.System.DispatcherQueueController */
-/* Windows.System.DispatcherQueueController.get_DispatcherQueue() */
 HRESULT wsy_dispatcher_queue_controller_get__dispatcher_queue(WSY_DispatcherQueueController *self, WSY_DispatcherQueue** value);
 
-/* Windows.System.DispatcherQueueController.ShutdownQueueAsync() */
 HRESULT wsy_dispatcher_queue_controller_shutdown_queue_async(WSY_DispatcherQueueController *self, WF_IAsyncAction** out);
 
-/* Windows.System.DispatcherQueueController.CreateOnDedicatedThread() */
 HRESULT wsy_dispatcher_queue_controller_create_on_dedicated_thread(WSY_DispatcherQueueController** out);
 
-/* Windows.System.DispatcherQueueHandler */
-/* Windows.System.DispatcherQueueHandler.Invoke() */
 HRESULT wsy_dispatcher_queue_handler_invoke(WSY_DispatcherQueueHandler *self);
 
-/* activate Windows.System.DispatcherQueueShutdownStartingEventArgs */
 HRESULT wsy_dispatcher_queue_shutdown_starting_event_args_new(WSY_DispatcherQueueShutdownStartingEventArgs **out);
 
-/* Windows.System.DispatcherQueueShutdownStartingEventArgs */
-/* Windows.System.DispatcherQueueShutdownStartingEventArgs.GetDeferral() */
 HRESULT wsy_dispatcher_queue_shutdown_starting_event_args_get_deferral(WSY_DispatcherQueueShutdownStartingEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.System.DispatcherQueueTimer */
 HRESULT wsy_dispatcher_queue_timer_new(WSY_DispatcherQueueTimer **out);
 
-/* Windows.System.DispatcherQueueTimer */
-/* Windows.System.DispatcherQueueTimer.get_Interval() */
 HRESULT wsy_dispatcher_queue_timer_get__interval(WSY_DispatcherQueueTimer *self, WF_TimeSpan *value);
 
-/* Windows.System.DispatcherQueueTimer.put_Interval() */
 HRESULT wsy_dispatcher_queue_timer_put__interval(WSY_DispatcherQueueTimer *self, WF_TimeSpan value);
 
-/* Windows.System.DispatcherQueueTimer.get_IsRunning() */
 HRESULT wsy_dispatcher_queue_timer_get__is_running(WSY_DispatcherQueueTimer *self, BOOL *value);
 
-/* Windows.System.DispatcherQueueTimer.get_IsRepeating() */
 HRESULT wsy_dispatcher_queue_timer_get__is_repeating(WSY_DispatcherQueueTimer *self, BOOL *value);
 
-/* Windows.System.DispatcherQueueTimer.put_IsRepeating() */
 HRESULT wsy_dispatcher_queue_timer_put__is_repeating(WSY_DispatcherQueueTimer *self, BOOL value);
 
-/* Windows.System.DispatcherQueueTimer.Start() */
 HRESULT wsy_dispatcher_queue_timer_start(WSY_DispatcherQueueTimer *self);
 
-/* Windows.System.DispatcherQueueTimer.Stop() */
 HRESULT wsy_dispatcher_queue_timer_stop(WSY_DispatcherQueueTimer *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsy_dispatcher_queue_timer_on_tick(WSY_DispatcherQueueTimer *self, cwinrt_event_fn fn, void *ctx);
 void wsy_dispatcher_queue_timer_off_tick(WSY_DispatcherQueueTimer *self, cwinrt_token token);
 
-/* Windows.System.IMemoryManagerStatics3 */
-/* Windows.System.IMemoryManagerStatics3.TrySetAppMemoryUsageLimit() */
 HRESULT wsy_memory_manager_statics_3_try_set_app_memory_usage_limit(WSY_IMemoryManagerStatics_3 *self, uint64_t value, BOOL *out);
 
-/* Windows.System.IMemoryManagerStatics2 */
-/* Windows.System.IMemoryManagerStatics2.GetAppMemoryReport() */
 HRESULT wsy_memory_manager_statics_2_get_app_memory_report(WSY_IMemoryManagerStatics_2 *self, WSY_AppMemoryReport** out);
 
-/* Windows.System.IMemoryManagerStatics2.GetProcessMemoryReport() */
 HRESULT wsy_memory_manager_statics_2_get_process_memory_report(WSY_IMemoryManagerStatics_2 *self, WSY_ProcessMemoryReport** out);
 
-/* activate Windows.System.FolderLauncherOptions */
 HRESULT wsy_folder_launcher_options_new(WSY_FolderLauncherOptions **out);
 
-/* Windows.System.FolderLauncherOptions */
-/* Windows.System.FolderLauncherOptions.get_ItemsToSelect() */
 HRESULT wsy_folder_launcher_options_get__items_to_select(WSY_FolderLauncherOptions *self, WFOCO_IVector_WS_IStorageItem** value);
 
-/* Windows.System.FolderLauncherOptions.get_DesiredRemainingView() */
 HRESULT wsy_folder_launcher_options_get__desired_remaining_view(WSY_FolderLauncherOptions *self, WUIVI_ViewSizePreference *value);
 
-/* Windows.System.FolderLauncherOptions.put_DesiredRemainingView() */
 HRESULT wsy_folder_launcher_options_put__desired_remaining_view(WSY_FolderLauncherOptions *self, WUIVI_ViewSizePreference value);
 
-/* Windows.System.IAppDiagnosticInfoStatics */
-/* Windows.System.IAppDiagnosticInfoStatics.RequestInfoAsync() */
 HRESULT wsy_app_diagnostic_info_statics_request_info_async(WSY_IAppDiagnosticInfoStatics *self, WF_IAsyncOperation_WFOCO_IVector_WSY_AppDiagnosticInfo** out);
 
-/* Windows.System.IAppDiagnosticInfoStatics2 */
-/* Windows.System.IAppDiagnosticInfoStatics2.CreateWatcher() */
 HRESULT wsy_app_diagnostic_info_statics_2_create_watcher(WSY_IAppDiagnosticInfoStatics_2 *self, WSY_AppDiagnosticInfoWatcher** out);
 
-/* Windows.System.IAppDiagnosticInfoStatics2.RequestAccessAsync() */
 HRESULT wsy_app_diagnostic_info_statics_2_request_access_async(WSY_IAppDiagnosticInfoStatics_2 *self, WF_IAsyncOperation_WSY_DiagnosticAccessStatus** out);
 
-/* Windows.System.IAppDiagnosticInfoStatics2.RequestInfoForPackageAsync(packageFamilyName) */
 HRESULT wsy_app_diagnostic_info_statics_2_request_info_for_package_async(WSY_IAppDiagnosticInfoStatics_2 *self, cwinrt_hstring packageFamilyName, WF_IAsyncOperation_WFOCO_IVector_WSY_AppDiagnosticInfo** out);
 
-/* Windows.System.IAppDiagnosticInfoStatics2.RequestInfoForAppAsync() */
 HRESULT wsy_app_diagnostic_info_statics_2_request_info_for_app_async(WSY_IAppDiagnosticInfoStatics_2 *self, WF_IAsyncOperation_WFOCO_IVector_WSY_AppDiagnosticInfo** out);
 
-/* Windows.System.IAppDiagnosticInfoStatics2.RequestInfoForAppAsync(appUserModelId) */
 HRESULT wsy_app_diagnostic_info_statics_2_request_info_for_app_async_str_p(WSY_IAppDiagnosticInfoStatics_2 *self, cwinrt_hstring appUserModelId, WF_IAsyncOperation_WFOCO_IVector_WSY_AppDiagnosticInfo** out);
 
-/* Windows.System.IAppUriHandlerHostFactory */
-/* Windows.System.IAppUriHandlerHostFactory.CreateInstance(name) */
 HRESULT wsy_app_uri_handler_host_factory_create_instance(WSY_IAppUriHandlerHostFactory *self, cwinrt_hstring name, WSY_AppUriHandlerHost** out);
 
-/* Windows.System.IAppUriHandlerRegistrationManagerStatics */
-/* Windows.System.IAppUriHandlerRegistrationManagerStatics.GetDefault() */
 HRESULT wsy_app_uri_handler_registration_manager_statics_get_default(WSY_IAppUriHandlerRegistrationManagerStatics *self, WSY_AppUriHandlerRegistrationManager** out);
 
-/* Windows.System.IAppUriHandlerRegistrationManagerStatics.GetForUser(user) */
 HRESULT wsy_app_uri_handler_registration_manager_statics_get_for_user(WSY_IAppUriHandlerRegistrationManagerStatics *self, WSY_User* user, WSY_AppUriHandlerRegistrationManager** out);
 
-/* Windows.System.IAppUriHandlerRegistrationManagerStatics2 */
-/* Windows.System.IAppUriHandlerRegistrationManagerStatics2.GetForPackage(packageFamilyName) */
 HRESULT wsy_app_uri_handler_registration_manager_statics_2_get_for_package(WSY_IAppUriHandlerRegistrationManagerStatics_2 *self, cwinrt_hstring packageFamilyName, WSY_AppUriHandlerRegistrationManager** out);
 
-/* Windows.System.IAppUriHandlerRegistrationManagerStatics2.GetForPackageForUser(packageFamilyName, user) */
 HRESULT wsy_app_uri_handler_registration_manager_statics_2_get_for_package_for_user(WSY_IAppUriHandlerRegistrationManagerStatics_2 *self, cwinrt_hstring packageFamilyName, WSY_User* user, WSY_AppUriHandlerRegistrationManager** out);
 
-/* Windows.System.IDateTimeSettingsStatics */
-/* Windows.System.IDateTimeSettingsStatics.SetSystemDateTime(utcDateTime) */
 HRESULT wsy_date_time_settings_statics_set_system_date_time(WSY_IDateTimeSettingsStatics *self, WF_DateTime utcDateTime);
 
-/* Windows.System.IDispatcherQueueControllerStatics */
-/* Windows.System.IDispatcherQueueControllerStatics.CreateOnDedicatedThread() */
 HRESULT wsy_dispatcher_queue_controller_statics_create_on_dedicated_thread(WSY_IDispatcherQueueControllerStatics *self, WSY_DispatcherQueueController** out);
 
-/* Windows.System.IDispatcherQueueStatics */
-/* Windows.System.IDispatcherQueueStatics.GetForCurrentThread() */
 HRESULT wsy_dispatcher_queue_statics_get_for_current_thread(WSY_IDispatcherQueueStatics *self, WSY_DispatcherQueue** out);
 
-/* Windows.System.IKnownUserPropertiesStatics */
-/* Windows.System.IKnownUserPropertiesStatics.get_DisplayName() */
 HRESULT wsy_known_user_properties_statics_get__display_name(WSY_IKnownUserPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.System.IKnownUserPropertiesStatics.get_FirstName() */
 HRESULT wsy_known_user_properties_statics_get__first_name(WSY_IKnownUserPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.System.IKnownUserPropertiesStatics.get_LastName() */
 HRESULT wsy_known_user_properties_statics_get__last_name(WSY_IKnownUserPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.System.IKnownUserPropertiesStatics.get_ProviderName() */
 HRESULT wsy_known_user_properties_statics_get__provider_name(WSY_IKnownUserPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.System.IKnownUserPropertiesStatics.get_AccountName() */
 HRESULT wsy_known_user_properties_statics_get__account_name(WSY_IKnownUserPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.System.IKnownUserPropertiesStatics.get_GuestHost() */
 HRESULT wsy_known_user_properties_statics_get__guest_host(WSY_IKnownUserPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.System.IKnownUserPropertiesStatics.get_PrincipalName() */
 HRESULT wsy_known_user_properties_statics_get__principal_name(WSY_IKnownUserPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.System.IKnownUserPropertiesStatics.get_DomainName() */
 HRESULT wsy_known_user_properties_statics_get__domain_name(WSY_IKnownUserPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.System.IKnownUserPropertiesStatics.get_SessionInitiationProtocolUri() */
 HRESULT wsy_known_user_properties_statics_get__session_initiation_protocol_uri(WSY_IKnownUserPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.System.IKnownUserPropertiesStatics2 */
-/* Windows.System.IKnownUserPropertiesStatics2.get_AgeEnforcementRegion() */
 HRESULT wsy_known_user_properties_statics_2_get__age_enforcement_region(WSY_IKnownUserPropertiesStatics_2 *self, cwinrt_hstring *value);
 
-/* Windows.System.ILauncherStatics */
-/* Windows.System.ILauncherStatics.LaunchFileAsync(file) */
 HRESULT wsy_launcher_statics_launch_file_async(WSY_ILauncherStatics *self, WS_IStorageFile* file, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.ILauncherStatics.LaunchFileAsync(file, options) */
 HRESULT wsy_launcher_statics_launch_file_async_p_p_p(WSY_ILauncherStatics *self, WS_IStorageFile* file, WSY_LauncherOptions* options, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.ILauncherStatics.LaunchUriAsync(uri) */
 HRESULT wsy_launcher_statics_launch_uri_async(WSY_ILauncherStatics *self, WF_Uri* uri, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.ILauncherStatics.LaunchUriAsync(uri, options) */
 HRESULT wsy_launcher_statics_launch_uri_async_p_p_p(WSY_ILauncherStatics *self, WF_Uri* uri, WSY_LauncherOptions* options, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.ILauncherStatics2 */
-/* Windows.System.ILauncherStatics2.LaunchUriForResultsAsync(uri, options) */
 HRESULT wsy_launcher_statics_2_launch_uri_for_results_async(WSY_ILauncherStatics_2 *self, WF_Uri* uri, WSY_LauncherOptions* options, WF_IAsyncOperation_WSY_LaunchUriResult** out);
 
-/* Windows.System.ILauncherStatics2.LaunchUriForResultsAsync(uri, options, inputData) */
 HRESULT wsy_launcher_statics_2_launch_uri_for_results_async_p_p_p_p(WSY_ILauncherStatics_2 *self, WF_Uri* uri, WSY_LauncherOptions* options, WFOCO_ValueSet* inputData, WF_IAsyncOperation_WSY_LaunchUriResult** out);
 
-/* Windows.System.ILauncherStatics2.LaunchUriAsync(uri, options, inputData) */
 HRESULT wsy_launcher_statics_2_launch_uri_async(WSY_ILauncherStatics_2 *self, WF_Uri* uri, WSY_LauncherOptions* options, WFOCO_ValueSet* inputData, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.ILauncherStatics2.QueryUriSupportAsync(uri, launchQuerySupportType) */
 HRESULT wsy_launcher_statics_2_query_uri_support_async(WSY_ILauncherStatics_2 *self, WF_Uri* uri, WSY_LaunchQuerySupportType launchQuerySupportType, WF_IAsyncOperation_WSY_LaunchQuerySupportStatus** out);
 
-/* Windows.System.ILauncherStatics2.QueryUriSupportAsync(uri, launchQuerySupportType, packageFamilyName) */
 HRESULT wsy_launcher_statics_2_query_uri_support_async_p_launch_query_support_type_str_p(WSY_ILauncherStatics_2 *self, WF_Uri* uri, WSY_LaunchQuerySupportType launchQuerySupportType, cwinrt_hstring packageFamilyName, WF_IAsyncOperation_WSY_LaunchQuerySupportStatus** out);
 
-/* Windows.System.ILauncherStatics2.QueryFileSupportAsync(file) */
 HRESULT wsy_launcher_statics_2_query_file_support_async(WSY_ILauncherStatics_2 *self, WS_StorageFile* file, WF_IAsyncOperation_WSY_LaunchQuerySupportStatus** out);
 
-/* Windows.System.ILauncherStatics2.QueryFileSupportAsync(file, packageFamilyName) */
 HRESULT wsy_launcher_statics_2_query_file_support_async_p_str_p(WSY_ILauncherStatics_2 *self, WS_StorageFile* file, cwinrt_hstring packageFamilyName, WF_IAsyncOperation_WSY_LaunchQuerySupportStatus** out);
 
-/* Windows.System.ILauncherStatics2.FindUriSchemeHandlersAsync(scheme) */
 HRESULT wsy_launcher_statics_2_find_uri_scheme_handlers_async(WSY_ILauncherStatics_2 *self, cwinrt_hstring scheme, WF_IAsyncOperation_WFOCO_IVectorView_WAM_AppInfo** out);
 
-/* Windows.System.ILauncherStatics2.FindUriSchemeHandlersAsync(scheme, launchQuerySupportType) */
 HRESULT wsy_launcher_statics_2_find_uri_scheme_handlers_async_str_launch_query_support_type_p(WSY_ILauncherStatics_2 *self, cwinrt_hstring scheme, WSY_LaunchQuerySupportType launchQuerySupportType, WF_IAsyncOperation_WFOCO_IVectorView_WAM_AppInfo** out);
 
-/* Windows.System.ILauncherStatics2.FindFileHandlersAsync(extension) */
 HRESULT wsy_launcher_statics_2_find_file_handlers_async(WSY_ILauncherStatics_2 *self, cwinrt_hstring extension, WF_IAsyncOperation_WFOCO_IVectorView_WAM_AppInfo** out);
 
-/* Windows.System.ILauncherStatics3 */
-/* Windows.System.ILauncherStatics3.LaunchFolderAsync(folder) */
 HRESULT wsy_launcher_statics_3_launch_folder_async(WSY_ILauncherStatics_3 *self, WS_IStorageFolder* folder, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.ILauncherStatics3.LaunchFolderAsync(folder, options) */
 HRESULT wsy_launcher_statics_3_launch_folder_async_p_p_p(WSY_ILauncherStatics_3 *self, WS_IStorageFolder* folder, WSY_FolderLauncherOptions* options, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.ILauncherStatics4 */
-/* Windows.System.ILauncherStatics4.QueryAppUriSupportAsync(uri) */
 HRESULT wsy_launcher_statics_4_query_app_uri_support_async(WSY_ILauncherStatics_4 *self, WF_Uri* uri, WF_IAsyncOperation_WSY_LaunchQuerySupportStatus** out);
 
-/* Windows.System.ILauncherStatics4.QueryAppUriSupportAsync(uri, packageFamilyName) */
 HRESULT wsy_launcher_statics_4_query_app_uri_support_async_p_str_p(WSY_ILauncherStatics_4 *self, WF_Uri* uri, cwinrt_hstring packageFamilyName, WF_IAsyncOperation_WSY_LaunchQuerySupportStatus** out);
 
-/* Windows.System.ILauncherStatics4.FindAppUriHandlersAsync(uri) */
 HRESULT wsy_launcher_statics_4_find_app_uri_handlers_async(WSY_ILauncherStatics_4 *self, WF_Uri* uri, WF_IAsyncOperation_WFOCO_IVectorView_WAM_AppInfo** out);
 
-/* Windows.System.ILauncherStatics4.LaunchUriForUserAsync(user, uri) */
 HRESULT wsy_launcher_statics_4_launch_uri_for_user_async(WSY_ILauncherStatics_4 *self, WSY_User* user, WF_Uri* uri, WF_IAsyncOperation_WSY_LaunchUriStatus** out);
 
-/* Windows.System.ILauncherStatics4.LaunchUriForUserAsync(user, uri, options) */
 HRESULT wsy_launcher_statics_4_launch_uri_for_user_async_p_p_p_p(WSY_ILauncherStatics_4 *self, WSY_User* user, WF_Uri* uri, WSY_LauncherOptions* options, WF_IAsyncOperation_WSY_LaunchUriStatus** out);
 
-/* Windows.System.ILauncherStatics4.LaunchUriForUserAsync(user, uri, options, inputData) */
 HRESULT wsy_launcher_statics_4_launch_uri_for_user_async_p_p_p_p_p(WSY_ILauncherStatics_4 *self, WSY_User* user, WF_Uri* uri, WSY_LauncherOptions* options, WFOCO_ValueSet* inputData, WF_IAsyncOperation_WSY_LaunchUriStatus** out);
 
-/* Windows.System.ILauncherStatics4.LaunchUriForResultsForUserAsync(user, uri, options) */
 HRESULT wsy_launcher_statics_4_launch_uri_for_results_for_user_async(WSY_ILauncherStatics_4 *self, WSY_User* user, WF_Uri* uri, WSY_LauncherOptions* options, WF_IAsyncOperation_WSY_LaunchUriResult** out);
 
-/* Windows.System.ILauncherStatics4.LaunchUriForResultsForUserAsync(user, uri, options, inputData) */
 HRESULT wsy_launcher_statics_4_launch_uri_for_results_for_user_async_p_p_p_p_p(WSY_ILauncherStatics_4 *self, WSY_User* user, WF_Uri* uri, WSY_LauncherOptions* options, WFOCO_ValueSet* inputData, WF_IAsyncOperation_WSY_LaunchUriResult** out);
 
-/* Windows.System.ILauncherStatics5 */
-/* Windows.System.ILauncherStatics5.LaunchFolderPathAsync(path) */
 HRESULT wsy_launcher_statics_5_launch_folder_path_async(WSY_ILauncherStatics_5 *self, cwinrt_hstring path, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.ILauncherStatics5.LaunchFolderPathAsync(path, options) */
 HRESULT wsy_launcher_statics_5_launch_folder_path_async_str_p_p(WSY_ILauncherStatics_5 *self, cwinrt_hstring path, WSY_FolderLauncherOptions* options, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.ILauncherStatics5.LaunchFolderPathForUserAsync(user, path) */
 HRESULT wsy_launcher_statics_5_launch_folder_path_for_user_async(WSY_ILauncherStatics_5 *self, WSY_User* user, cwinrt_hstring path, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.ILauncherStatics5.LaunchFolderPathForUserAsync(user, path, options) */
 HRESULT wsy_launcher_statics_5_launch_folder_path_for_user_async_p_str_p_p(WSY_ILauncherStatics_5 *self, WSY_User* user, cwinrt_hstring path, WSY_FolderLauncherOptions* options, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.IMemoryManagerStatics */
-/* Windows.System.IMemoryManagerStatics.get_AppMemoryUsage() */
 HRESULT wsy_memory_manager_statics_get__app_memory_usage(WSY_IMemoryManagerStatics *self, uint64_t *value);
 
-/* Windows.System.IMemoryManagerStatics.get_AppMemoryUsageLimit() */
 HRESULT wsy_memory_manager_statics_get__app_memory_usage_limit(WSY_IMemoryManagerStatics *self, uint64_t *value);
 
-/* Windows.System.IMemoryManagerStatics.get_AppMemoryUsageLevel() */
 HRESULT wsy_memory_manager_statics_get__app_memory_usage_level(WSY_IMemoryManagerStatics *self, WSY_AppMemoryUsageLevel *value);
 
-/* Windows.System.IAppActivationResult */
-/* Windows.System.IAppDiagnosticInfo */
-/* Windows.System.IAppDiagnosticInfo2 */
-/* Windows.System.IAppDiagnosticInfo2.GetResourceGroups() */
 HRESULT wsy_app_diagnostic_info_2_get_resource_groups(WSY_IAppDiagnosticInfo_2 *self, WFOCO_IVector_WSY_AppResourceGroupInfo** out);
 
-/* Windows.System.IAppDiagnosticInfo2.CreateResourceGroupWatcher() */
 HRESULT wsy_app_diagnostic_info_2_create_resource_group_watcher(WSY_IAppDiagnosticInfo_2 *self, WSY_AppResourceGroupInfoWatcher** out);
 
-/* Windows.System.IAppDiagnosticInfo3 */
-/* Windows.System.IAppDiagnosticInfo3.LaunchAsync() */
 HRESULT wsy_app_diagnostic_info_3_launch_async(WSY_IAppDiagnosticInfo_3 *self, WF_IAsyncOperation_WSY_AppActivationResult** out);
 
-/* Windows.System.IAppDiagnosticInfoWatcher */
-/* Windows.System.IAppDiagnosticInfoWatcherEventArgs */
-/* Windows.System.IAppExecutionStateChangeResult */
-/* Windows.System.IAppMemoryReport */
-/* Windows.System.IAppMemoryReport2 */
-/* Windows.System.IAppMemoryReport2.get_ExpectedTotalCommitLimit() */
 HRESULT wsy_app_memory_report_2_get__expected_total_commit_limit(WSY_IAppMemoryReport_2 *self, uint64_t *value);
 
-/* Windows.System.IAppMemoryUsageLimitChangingEventArgs */
-/* Windows.System.IAppResourceGroupBackgroundTaskReport */
-/* Windows.System.IAppResourceGroupInfo */
-/* Windows.System.IAppResourceGroupInfo2 */
-/* Windows.System.IAppResourceGroupInfo2.StartSuspendAsync() */
 HRESULT wsy_app_resource_group_info_2_start_suspend_async(WSY_IAppResourceGroupInfo_2 *self, WF_IAsyncOperation_WSY_AppExecutionStateChangeResult** out);
 
-/* Windows.System.IAppResourceGroupInfo2.StartResumeAsync() */
 HRESULT wsy_app_resource_group_info_2_start_resume_async(WSY_IAppResourceGroupInfo_2 *self, WF_IAsyncOperation_WSY_AppExecutionStateChangeResult** out);
 
-/* Windows.System.IAppResourceGroupInfo2.StartTerminateAsync() */
 HRESULT wsy_app_resource_group_info_2_start_terminate_async(WSY_IAppResourceGroupInfo_2 *self, WF_IAsyncOperation_WSY_AppExecutionStateChangeResult** out);
 
-/* Windows.System.IAppResourceGroupInfoWatcher */
-/* Windows.System.IAppResourceGroupInfoWatcherEventArgs */
-/* Windows.System.IAppResourceGroupInfoWatcherExecutionStateChangedEventArgs */
-/* Windows.System.IAppResourceGroupMemoryReport */
-/* Windows.System.IAppResourceGroupStateReport */
-/* Windows.System.IAppUriHandlerHost */
-/* Windows.System.IAppUriHandlerHost2 */
-/* Windows.System.IAppUriHandlerHost2.get_IsEnabled() */
 HRESULT wsy_app_uri_handler_host_2_get__is_enabled(WSY_IAppUriHandlerHost_2 *self, BOOL *value);
 
-/* Windows.System.IAppUriHandlerHost2.put_IsEnabled() */
 HRESULT wsy_app_uri_handler_host_2_put__is_enabled(WSY_IAppUriHandlerHost_2 *self, BOOL value);
 
-/* Windows.System.IAppUriHandlerRegistration */
-/* Windows.System.IAppUriHandlerRegistration2 */
-/* Windows.System.IAppUriHandlerRegistration2.GetAllHosts() */
 HRESULT wsy_app_uri_handler_registration_2_get_all_hosts(WSY_IAppUriHandlerRegistration_2 *self, WFOCO_IVector_WSY_AppUriHandlerHost** out);
 
-/* Windows.System.IAppUriHandlerRegistration2.UpdateHosts(hosts) */
 HRESULT wsy_app_uri_handler_registration_2_update_hosts(WSY_IAppUriHandlerRegistration_2 *self, WFOCO_IIterable_WSY_AppUriHandlerHost* hosts);
 
-/* Windows.System.IAppUriHandlerRegistration2.get_PackageFamilyName() */
 HRESULT wsy_app_uri_handler_registration_2_get__package_family_name(WSY_IAppUriHandlerRegistration_2 *self, cwinrt_hstring *value);
 
-/* Windows.System.IAppUriHandlerRegistrationManager */
-/* Windows.System.IAppUriHandlerRegistrationManager2 */
-/* Windows.System.IAppUriHandlerRegistrationManager2.get_PackageFamilyName() */
 HRESULT wsy_app_uri_handler_registration_manager_2_get__package_family_name(WSY_IAppUriHandlerRegistrationManager_2 *self, cwinrt_hstring *value);
 
-/* Windows.System.IRemoteLauncherOptions */
-/* Windows.System.IUser */
-/* Windows.System.IUser2 */
-/* Windows.System.IUser2.CheckUserAgeConsentGroupAsync(consentGroup) */
 HRESULT wsy_user_2_check_user_age_consent_group_async(WSY_IUser_2 *self, WSY_UserAgeConsentGroup consentGroup, WF_IAsyncOperation_WSY_UserAgeConsentResult** out);
 
-/* Windows.System.IUserAuthenticationStatusChangeDeferral */
-/* Windows.System.IUserAuthenticationStatusChangingEventArgs */
-/* Windows.System.IUserChangedEventArgs */
-/* Windows.System.IUserChangedEventArgs2 */
-/* Windows.System.IUserChangedEventArgs2.get_ChangedPropertyKinds() */
 HRESULT wsy_user_changed_event_args_2_get__changed_property_kinds(WSY_IUserChangedEventArgs_2 *self, WFOCO_IVectorView_WSY_UserWatcherUpdateKind** value);
 
-/* Windows.System.IProtocolForResultsOperation */
-/* Windows.System.IUserDeviceAssociationChangedEventArgs */
-/* Windows.System.IUserPicker */
-/* Windows.System.IUserWatcher */
-/* Windows.System.IProcessMemoryReport */
-/* Windows.System.IProcessLauncherResult */
-/* Windows.System.IProcessLauncherOptions */
-/* Windows.System.ILauncherUIOptions */
-/* Windows.System.ILauncherOptions2 */
-/* Windows.System.ILauncherOptions2.get_TargetApplicationPackageFamilyName() */
 HRESULT wsy_launcher_options_2_get__target_application_package_family_name(WSY_ILauncherOptions_2 *self, cwinrt_hstring *value);
 
-/* Windows.System.ILauncherOptions2.put_TargetApplicationPackageFamilyName() */
 HRESULT wsy_launcher_options_2_put__target_application_package_family_name(WSY_ILauncherOptions_2 *self, cwinrt_hstring value);
 
-/* Windows.System.ILauncherOptions2.get_NeighboringFilesQuery() */
 HRESULT wsy_launcher_options_2_get__neighboring_files_query(WSY_ILauncherOptions_2 *self, WSTSE_StorageFileQueryResult** value);
 
-/* Windows.System.ILauncherOptions2.put_NeighboringFilesQuery() */
 HRESULT wsy_launcher_options_2_put__neighboring_files_query(WSY_ILauncherOptions_2 *self, WSTSE_StorageFileQueryResult* value);
 
-/* Windows.System.ILauncherOptions */
-/* Windows.System.ILauncherOptions3 */
-/* Windows.System.ILauncherOptions3.get_IgnoreAppUriHandlers() */
 HRESULT wsy_launcher_options_3_get__ignore_app_uri_handlers(WSY_ILauncherOptions_3 *self, BOOL *value);
 
-/* Windows.System.ILauncherOptions3.put_IgnoreAppUriHandlers() */
 HRESULT wsy_launcher_options_3_put__ignore_app_uri_handlers(WSY_ILauncherOptions_3 *self, BOOL value);
 
-/* Windows.System.ILauncherOptions4 */
-/* Windows.System.ILauncherOptions4.get_LimitPickerToCurrentAppAndAppUriHandlers() */
 HRESULT wsy_launcher_options_4_get__limit_picker_to_current_app_and_app_uri_handlers(WSY_ILauncherOptions_4 *self, BOOL *value);
 
-/* Windows.System.ILauncherOptions4.put_LimitPickerToCurrentAppAndAppUriHandlers() */
 HRESULT wsy_launcher_options_4_put__limit_picker_to_current_app_and_app_uri_handlers(WSY_ILauncherOptions_4 *self, BOOL value);
 
-/* Windows.System.ILaunchUriResult */
-/* Windows.System.IShutdownManagerStatics */
-/* Windows.System.IShutdownManagerStatics.BeginShutdown(shutdownKind, timeout) */
 HRESULT wsy_shutdown_manager_statics_begin_shutdown(WSY_IShutdownManagerStatics *self, WSY_ShutdownKind shutdownKind, WF_TimeSpan timeout);
 
-/* Windows.System.IShutdownManagerStatics.CancelShutdown() */
 HRESULT wsy_shutdown_manager_statics_cancel_shutdown(WSY_IShutdownManagerStatics *self);
 
-/* Windows.System.IDispatcherQueue */
-/* Windows.System.IDispatcherQueue2 */
-/* Windows.System.IDispatcherQueue2.get_HasThreadAccess() */
 HRESULT wsy_dispatcher_queue_2_get__has_thread_access(WSY_IDispatcherQueue_2 *self, BOOL *value);
 
-/* Windows.System.IDispatcherQueueController */
-/* Windows.System.IDispatcherQueueShutdownStartingEventArgs */
-/* Windows.System.IDispatcherQueueTimer */
-/* Windows.System.IFolderLauncherOptions */
-/* Windows.System.ILauncherViewOptions */
-/* Windows.System.ILauncherViewOptions.get_DesiredRemainingView() */
 HRESULT wsy_launcher_view_options_get__desired_remaining_view(WSY_ILauncherViewOptions *self, WUIVI_ViewSizePreference *value);
 
-/* Windows.System.ILauncherViewOptions.put_DesiredRemainingView() */
 HRESULT wsy_launcher_view_options_put__desired_remaining_view(WSY_ILauncherViewOptions *self, WUIVI_ViewSizePreference value);
 
 #endif /* CWINRT_WINDOWS_SYSTEM_H */

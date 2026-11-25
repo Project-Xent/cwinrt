@@ -13,13 +13,11 @@
 #include <cwinrt/Windows.ApplicationModel.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WS_StorageFolder
 #define CWINRT_FWD_WS_StorageFolder
 typedef struct WS_StorageFolder WS_StorageFolder;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPPA_PackageExtensionPackageUpdatingEventArgs WAPPA_PackageExtensionPackageUpdatingEventArgs;
 typedef struct WAPPA_PackageExtensionPackageUpdatedEventArgs WAPPA_PackageExtensionPackageUpdatedEventArgs;
 typedef struct WAPPA_PackageExtensionPackageUninstallingEventArgs WAPPA_PackageExtensionPackageUninstallingEventArgs;
@@ -36,7 +34,6 @@ typedef struct WAPPA_IPackageExtensionPackageInstalledEventArgs WAPPA_IPackageEx
 typedef struct WAPPA_IPackageExtensionCatalog WAPPA_IPackageExtensionCatalog;
 typedef struct WAPPA_IPackageExtension WAPPA_IPackageExtension;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WAM_Package
 #define CWINRT_FWD_WAM_Package
 typedef struct WAM_Package WAM_Package;
@@ -90,7 +87,6 @@ typedef struct WS_StorageFolder WS_StorageFolder;
 typedef struct WF_IAsyncOperation_WS_StorageFolder WF_IAsyncOperation_WS_StorageFolder;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -127,81 +123,50 @@ static const IID CWINRT_IID_WAPPA_IPackageExtensionCatalog CWINRT_MAYBE_UNUSED =
 static const IID CWINRT_IID_WAPPA_IPackageExtension CWINRT_MAYBE_UNUSED = { 0xDA70C957, 0x7EAD, 0x5C3B, { 0x9C, 0xF0, 0xCC, 0x43, 0xFA, 0xF4, 0x74, 0xB4 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUpdatingEventArgs */
 HRESULT wappa_package_extension_package_updating_event_args_new(WAPPA_PackageExtensionPackageUpdatingEventArgs **out);
 
-/* Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUpdatingEventArgs */
-/* Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUpdatingEventArgs.get_PackageExtensionName() */
 HRESULT wappa_package_extension_package_updating_event_args_get__package_extension_name(WAPPA_PackageExtensionPackageUpdatingEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUpdatingEventArgs.get_Package() */
 HRESULT wappa_package_extension_package_updating_event_args_get__package(WAPPA_PackageExtensionPackageUpdatingEventArgs *self, WAM_Package** value);
 
-/* activate Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUpdatedEventArgs */
 HRESULT wappa_package_extension_package_updated_event_args_new(WAPPA_PackageExtensionPackageUpdatedEventArgs **out);
 
-/* Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUpdatedEventArgs */
-/* Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUpdatedEventArgs.get_PackageExtensionName() */
 HRESULT wappa_package_extension_package_updated_event_args_get__package_extension_name(WAPPA_PackageExtensionPackageUpdatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUpdatedEventArgs.get_Package() */
 HRESULT wappa_package_extension_package_updated_event_args_get__package(WAPPA_PackageExtensionPackageUpdatedEventArgs *self, WAM_Package** value);
 
-/* Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUpdatedEventArgs.get_Extensions() */
 HRESULT wappa_package_extension_package_updated_event_args_get__extensions(WAPPA_PackageExtensionPackageUpdatedEventArgs *self, WFOCO_IVectorView_WAPPA_PackageExtension** value);
 
-/* activate Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUninstallingEventArgs */
 HRESULT wappa_package_extension_package_uninstalling_event_args_new(WAPPA_PackageExtensionPackageUninstallingEventArgs **out);
 
-/* Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUninstallingEventArgs */
-/* Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUninstallingEventArgs.get_PackageExtensionName() */
 HRESULT wappa_package_extension_package_uninstalling_event_args_get__package_extension_name(WAPPA_PackageExtensionPackageUninstallingEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUninstallingEventArgs.get_Package() */
 HRESULT wappa_package_extension_package_uninstalling_event_args_get__package(WAPPA_PackageExtensionPackageUninstallingEventArgs *self, WAM_Package** value);
 
-/* activate Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageStatusChangedEventArgs */
 HRESULT wappa_package_extension_package_status_changed_event_args_new(WAPPA_PackageExtensionPackageStatusChangedEventArgs **out);
 
-/* Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageStatusChangedEventArgs */
-/* Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageStatusChangedEventArgs.get_PackageExtensionName() */
 HRESULT wappa_package_extension_package_status_changed_event_args_get__package_extension_name(WAPPA_PackageExtensionPackageStatusChangedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageStatusChangedEventArgs.get_Package() */
 HRESULT wappa_package_extension_package_status_changed_event_args_get__package(WAPPA_PackageExtensionPackageStatusChangedEventArgs *self, WAM_Package** value);
 
-/* activate Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageInstalledEventArgs */
 HRESULT wappa_package_extension_package_installed_event_args_new(WAPPA_PackageExtensionPackageInstalledEventArgs **out);
 
-/* Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageInstalledEventArgs */
-/* Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageInstalledEventArgs.get_PackageExtensionName() */
 HRESULT wappa_package_extension_package_installed_event_args_get__package_extension_name(WAPPA_PackageExtensionPackageInstalledEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageInstalledEventArgs.get_Package() */
 HRESULT wappa_package_extension_package_installed_event_args_get__package(WAPPA_PackageExtensionPackageInstalledEventArgs *self, WAM_Package** value);
 
-/* Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageInstalledEventArgs.get_Extensions() */
 HRESULT wappa_package_extension_package_installed_event_args_get__extensions(WAPPA_PackageExtensionPackageInstalledEventArgs *self, WFOCO_IVectorView_WAPPA_PackageExtension** value);
 
-/* activate Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog */
 HRESULT wappa_package_extension_catalog_new(WAPPA_PackageExtensionCatalog **out);
 
-/* Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog */
-/* Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog.FindAll() */
 HRESULT wappa_package_extension_catalog_find_all(WAPPA_PackageExtensionCatalog *self, WFOCO_IVectorView_WAPPA_PackageExtension** out);
 
-/* Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog.FindAllAsync() */
 HRESULT wappa_package_extension_catalog_find_all_async(WAPPA_PackageExtensionCatalog *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPPA_PackageExtension** out);
 
-/* Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog.RequestRemovePackageAsync(packageFullName) */
 HRESULT wappa_package_extension_catalog_request_remove_package_async(WAPPA_PackageExtensionCatalog *self, cwinrt_hstring packageFullName, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog.Open(packageExtensionName) */
 HRESULT wappa_package_extension_catalog_open(cwinrt_hstring packageExtensionName, WAPPA_PackageExtensionCatalog** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wappa_package_extension_catalog_on_package_installed(WAPPA_PackageExtensionCatalog *self, cwinrt_event_fn fn, void *ctx);
@@ -219,46 +184,26 @@ void wappa_package_extension_catalog_off_package_uninstalling(WAPPA_PackageExten
 cwinrt_token wappa_package_extension_catalog_on_package_status_changed(WAPPA_PackageExtensionCatalog *self, cwinrt_event_fn fn, void *ctx);
 void wappa_package_extension_catalog_off_package_status_changed(WAPPA_PackageExtensionCatalog *self, cwinrt_token token);
 
-/* Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalogStatics */
-/* Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalogStatics.Open(packageExtensionName) */
 HRESULT wappa_package_extension_catalog_statics_open(WAPPA_IPackageExtensionCatalogStatics *self, cwinrt_hstring packageExtensionName, WAPPA_PackageExtensionCatalog** out);
 
-/* activate Windows.ApplicationModel.PackageExtensions.PackageExtension */
 HRESULT wappa_package_extension_new(WAPPA_PackageExtension **out);
 
-/* Windows.ApplicationModel.PackageExtensions.PackageExtension */
-/* Windows.ApplicationModel.PackageExtensions.PackageExtension.get_Id() */
 HRESULT wappa_package_extension_get__id(WAPPA_PackageExtension *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.PackageExtensions.PackageExtension.get_DisplayName() */
 HRESULT wappa_package_extension_get__display_name(WAPPA_PackageExtension *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.PackageExtensions.PackageExtension.get_Description() */
 HRESULT wappa_package_extension_get__description(WAPPA_PackageExtension *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.PackageExtensions.PackageExtension.get_Package() */
 HRESULT wappa_package_extension_get__package(WAPPA_PackageExtension *self, WAM_Package** value);
 
-/* Windows.ApplicationModel.PackageExtensions.PackageExtension.GetExtensionProperties() */
 HRESULT wappa_package_extension_get_extension_properties(WAPPA_PackageExtension *self, WFOCO_IPropertySet** out);
 
-/* Windows.ApplicationModel.PackageExtensions.PackageExtension.GetExtensionPropertiesAsync() */
 HRESULT wappa_package_extension_get_extension_properties_async(WAPPA_PackageExtension *self, WF_IAsyncOperation_WFOCO_IPropertySet** out);
 
-/* Windows.ApplicationModel.PackageExtensions.PackageExtension.GetPublicPath() */
 HRESULT wappa_package_extension_get_public_path(WAPPA_PackageExtension *self, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.PackageExtensions.PackageExtension.GetPublicFolder() */
 HRESULT wappa_package_extension_get_public_folder(WAPPA_PackageExtension *self, WS_StorageFolder** out);
 
-/* Windows.ApplicationModel.PackageExtensions.PackageExtension.GetPublicFolderAsync() */
 HRESULT wappa_package_extension_get_public_folder_async(WAPPA_PackageExtension *self, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageUpdatingEventArgs */
-/* Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageUpdatedEventArgs */
-/* Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageUninstallingEventArgs */
-/* Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageStatusChangedEventArgs */
-/* Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageInstalledEventArgs */
-/* Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalog */
-/* Windows.ApplicationModel.PackageExtensions.IPackageExtension */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_PACKAGEEXTENSIONS_H */

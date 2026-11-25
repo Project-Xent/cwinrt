@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.UI.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WMECL_ClosedCaptionProperties WMECL_ClosedCaptionProperties;
 typedef struct WMECL_ClosedCaptionTheme WMECL_ClosedCaptionTheme;
 typedef struct WMECL_IClosedCaptionPropertiesStatics WMECL_IClosedCaptionPropertiesStatics;
@@ -21,7 +20,6 @@ typedef struct WMECL_IClosedCaptionPropertiesStatics_2 WMECL_IClosedCaptionPrope
 typedef struct WMECL_IClosedCaptionThemeStatics WMECL_IClosedCaptionThemeStatics;
 typedef struct WMECL_IClosedCaptionTheme WMECL_IClosedCaptionTheme;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_EventHandler_Object
 #define CWINRT_FWD_WF_EventHandler_Object
 typedef struct WF_EventHandler_Object WF_EventHandler_Object;
@@ -94,7 +92,6 @@ typedef enum WMECL_ClosedCaptionStyle {
 } WMECL_ClosedCaptionStyle;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -115,110 +112,73 @@ static const IID CWINRT_IID_WMECL_IClosedCaptionThemeStatics CWINRT_MAYBE_UNUSED
 static const IID CWINRT_IID_WMECL_IClosedCaptionTheme CWINRT_MAYBE_UNUSED = { 0xD3974055, 0xB9B5, 0x52A4, { 0xB6, 0x55, 0x30, 0x66, 0x1F, 0x73, 0xD1, 0xC1 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Media.ClosedCaptioning.ClosedCaptionProperties */
 HRESULT wmecl_closed_caption_properties_new(WMECL_ClosedCaptionProperties **out);
 
-/* Windows.Media.ClosedCaptioning.ClosedCaptionProperties */
-/* Windows.Media.ClosedCaptioning.ClosedCaptionProperties.get_FontColor() */
 HRESULT wmecl_closed_caption_properties_get__font_color(WMECL_ClosedCaptionColor *value);
 
-/* Windows.Media.ClosedCaptioning.ClosedCaptionProperties.get_ComputedFontColor() */
 HRESULT wmecl_closed_caption_properties_get__computed_font_color(WUI_Color *value);
 
-/* Windows.Media.ClosedCaptioning.ClosedCaptionProperties.get_FontOpacity() */
 HRESULT wmecl_closed_caption_properties_get__font_opacity(WMECL_ClosedCaptionOpacity *value);
 
-/* Windows.Media.ClosedCaptioning.ClosedCaptionProperties.get_FontSize() */
 HRESULT wmecl_closed_caption_properties_get__font_size(WMECL_ClosedCaptionSize *value);
 
-/* Windows.Media.ClosedCaptioning.ClosedCaptionProperties.get_FontStyle() */
 HRESULT wmecl_closed_caption_properties_get__font_style(WMECL_ClosedCaptionStyle *value);
 
-/* Windows.Media.ClosedCaptioning.ClosedCaptionProperties.get_FontEffect() */
 HRESULT wmecl_closed_caption_properties_get__font_effect(WMECL_ClosedCaptionEdgeEffect *value);
 
-/* Windows.Media.ClosedCaptioning.ClosedCaptionProperties.get_BackgroundColor() */
 HRESULT wmecl_closed_caption_properties_get__background_color(WMECL_ClosedCaptionColor *value);
 
-/* Windows.Media.ClosedCaptioning.ClosedCaptionProperties.get_ComputedBackgroundColor() */
 HRESULT wmecl_closed_caption_properties_get__computed_background_color(WUI_Color *value);
 
-/* Windows.Media.ClosedCaptioning.ClosedCaptionProperties.get_BackgroundOpacity() */
 HRESULT wmecl_closed_caption_properties_get__background_opacity(WMECL_ClosedCaptionOpacity *value);
 
-/* Windows.Media.ClosedCaptioning.ClosedCaptionProperties.get_RegionColor() */
 HRESULT wmecl_closed_caption_properties_get__region_color(WMECL_ClosedCaptionColor *value);
 
-/* Windows.Media.ClosedCaptioning.ClosedCaptionProperties.get_ComputedRegionColor() */
 HRESULT wmecl_closed_caption_properties_get__computed_region_color(WUI_Color *value);
 
-/* Windows.Media.ClosedCaptioning.ClosedCaptionProperties.get_RegionOpacity() */
 HRESULT wmecl_closed_caption_properties_get__region_opacity(WMECL_ClosedCaptionOpacity *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmecl_closed_caption_properties_on_properties_changed(WMECL_ClosedCaptionProperties *self, cwinrt_event_fn fn, void *ctx);
 void wmecl_closed_caption_properties_off_properties_changed(WMECL_ClosedCaptionProperties *self, cwinrt_token token);
 
-/* activate Windows.Media.ClosedCaptioning.ClosedCaptionTheme */
 HRESULT wmecl_closed_caption_theme_new(WMECL_ClosedCaptionTheme **out);
 
-/* Windows.Media.ClosedCaptioning.ClosedCaptionTheme */
-/* Windows.Media.ClosedCaptioning.ClosedCaptionTheme.get_Id() */
 HRESULT wmecl_closed_caption_theme_get__id(WMECL_ClosedCaptionTheme *self, cwinrt_hstring *value);
 
-/* Windows.Media.ClosedCaptioning.ClosedCaptionTheme.get_DisplayName() */
 HRESULT wmecl_closed_caption_theme_get__display_name(WMECL_ClosedCaptionTheme *self, cwinrt_hstring *value);
 
-/* Windows.Media.ClosedCaptioning.ClosedCaptionTheme.get_FontColor() */
 HRESULT wmecl_closed_caption_theme_get__font_color(WMECL_ClosedCaptionTheme *self, WMECL_ClosedCaptionColor *value);
 
-/* Windows.Media.ClosedCaptioning.ClosedCaptionTheme.get_ComputedFontColor() */
 HRESULT wmecl_closed_caption_theme_get__computed_font_color(WMECL_ClosedCaptionTheme *self, WUI_Color *value);
 
-/* Windows.Media.ClosedCaptioning.ClosedCaptionTheme.get_FontOpacity() */
 HRESULT wmecl_closed_caption_theme_get__font_opacity(WMECL_ClosedCaptionTheme *self, WMECL_ClosedCaptionOpacity *value);
 
-/* Windows.Media.ClosedCaptioning.ClosedCaptionTheme.get_FontSize() */
 HRESULT wmecl_closed_caption_theme_get__font_size(WMECL_ClosedCaptionTheme *self, WMECL_ClosedCaptionSize *value);
 
-/* Windows.Media.ClosedCaptioning.ClosedCaptionTheme.get_FontStyle() */
 HRESULT wmecl_closed_caption_theme_get__font_style(WMECL_ClosedCaptionTheme *self, WMECL_ClosedCaptionStyle *value);
 
-/* Windows.Media.ClosedCaptioning.ClosedCaptionTheme.get_FontEffect() */
 HRESULT wmecl_closed_caption_theme_get__font_effect(WMECL_ClosedCaptionTheme *self, WMECL_ClosedCaptionEdgeEffect *value);
 
-/* Windows.Media.ClosedCaptioning.ClosedCaptionTheme.get_BackgroundColor() */
 HRESULT wmecl_closed_caption_theme_get__background_color(WMECL_ClosedCaptionTheme *self, WMECL_ClosedCaptionColor *value);
 
-/* Windows.Media.ClosedCaptioning.ClosedCaptionTheme.get_ComputedBackgroundColor() */
 HRESULT wmecl_closed_caption_theme_get__computed_background_color(WMECL_ClosedCaptionTheme *self, WUI_Color *value);
 
-/* Windows.Media.ClosedCaptioning.ClosedCaptionTheme.get_BackgroundOpacity() */
 HRESULT wmecl_closed_caption_theme_get__background_opacity(WMECL_ClosedCaptionTheme *self, WMECL_ClosedCaptionOpacity *value);
 
-/* Windows.Media.ClosedCaptioning.ClosedCaptionTheme.get_RegionColor() */
 HRESULT wmecl_closed_caption_theme_get__region_color(WMECL_ClosedCaptionTheme *self, WMECL_ClosedCaptionColor *value);
 
-/* Windows.Media.ClosedCaptioning.ClosedCaptionTheme.get_ComputedRegionColor() */
 HRESULT wmecl_closed_caption_theme_get__computed_region_color(WMECL_ClosedCaptionTheme *self, WUI_Color *value);
 
-/* Windows.Media.ClosedCaptioning.ClosedCaptionTheme.get_RegionOpacity() */
 HRESULT wmecl_closed_caption_theme_get__region_opacity(WMECL_ClosedCaptionTheme *self, WMECL_ClosedCaptionOpacity *value);
 
-/* Windows.Media.ClosedCaptioning.ClosedCaptionTheme.GetAvailableThemes() */
 HRESULT wmecl_closed_caption_theme_get_available_themes(WMECL_ClosedCaptionTheme **out, uint32_t *out_len);
 
-/* Windows.Media.ClosedCaptioning.ClosedCaptionTheme.GetSelectedTheme() */
 HRESULT wmecl_closed_caption_theme_get_selected_theme(WMECL_ClosedCaptionTheme** out);
 
-/* Windows.Media.ClosedCaptioning.ClosedCaptionTheme.TrySetSelectedTheme() */
 HRESULT wmecl_closed_caption_theme_try_set_selected_theme(WMECL_ClosedCaptionTheme* value, BOOL *out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmecl_closed_caption_theme_on_themes_changed(WMECL_ClosedCaptionTheme *self, cwinrt_event_fn fn, void *ctx);
@@ -227,53 +187,34 @@ void wmecl_closed_caption_theme_off_themes_changed(WMECL_ClosedCaptionTheme *sel
 cwinrt_token wmecl_closed_caption_theme_on_selected_theme_changed(WMECL_ClosedCaptionTheme *self, cwinrt_event_fn fn, void *ctx);
 void wmecl_closed_caption_theme_off_selected_theme_changed(WMECL_ClosedCaptionTheme *self, cwinrt_token token);
 
-/* Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics */
-/* Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics.get_FontColor() */
 HRESULT wmecl_closed_caption_properties_statics_get__font_color(WMECL_IClosedCaptionPropertiesStatics *self, WMECL_ClosedCaptionColor *value);
 
-/* Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics.get_ComputedFontColor() */
 HRESULT wmecl_closed_caption_properties_statics_get__computed_font_color(WMECL_IClosedCaptionPropertiesStatics *self, WUI_Color *value);
 
-/* Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics.get_FontOpacity() */
 HRESULT wmecl_closed_caption_properties_statics_get__font_opacity(WMECL_IClosedCaptionPropertiesStatics *self, WMECL_ClosedCaptionOpacity *value);
 
-/* Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics.get_FontSize() */
 HRESULT wmecl_closed_caption_properties_statics_get__font_size(WMECL_IClosedCaptionPropertiesStatics *self, WMECL_ClosedCaptionSize *value);
 
-/* Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics.get_FontStyle() */
 HRESULT wmecl_closed_caption_properties_statics_get__font_style(WMECL_IClosedCaptionPropertiesStatics *self, WMECL_ClosedCaptionStyle *value);
 
-/* Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics.get_FontEffect() */
 HRESULT wmecl_closed_caption_properties_statics_get__font_effect(WMECL_IClosedCaptionPropertiesStatics *self, WMECL_ClosedCaptionEdgeEffect *value);
 
-/* Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics.get_BackgroundColor() */
 HRESULT wmecl_closed_caption_properties_statics_get__background_color(WMECL_IClosedCaptionPropertiesStatics *self, WMECL_ClosedCaptionColor *value);
 
-/* Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics.get_ComputedBackgroundColor() */
 HRESULT wmecl_closed_caption_properties_statics_get__computed_background_color(WMECL_IClosedCaptionPropertiesStatics *self, WUI_Color *value);
 
-/* Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics.get_BackgroundOpacity() */
 HRESULT wmecl_closed_caption_properties_statics_get__background_opacity(WMECL_IClosedCaptionPropertiesStatics *self, WMECL_ClosedCaptionOpacity *value);
 
-/* Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics.get_RegionColor() */
 HRESULT wmecl_closed_caption_properties_statics_get__region_color(WMECL_IClosedCaptionPropertiesStatics *self, WMECL_ClosedCaptionColor *value);
 
-/* Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics.get_ComputedRegionColor() */
 HRESULT wmecl_closed_caption_properties_statics_get__computed_region_color(WMECL_IClosedCaptionPropertiesStatics *self, WUI_Color *value);
 
-/* Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics.get_RegionOpacity() */
 HRESULT wmecl_closed_caption_properties_statics_get__region_opacity(WMECL_IClosedCaptionPropertiesStatics *self, WMECL_ClosedCaptionOpacity *value);
 
-/* Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics2 */
-/* Windows.Media.ClosedCaptioning.IClosedCaptionThemeStatics */
-/* Windows.Media.ClosedCaptioning.IClosedCaptionThemeStatics.GetAvailableThemes() */
 HRESULT wmecl_closed_caption_theme_statics_get_available_themes(WMECL_IClosedCaptionThemeStatics *self, WMECL_ClosedCaptionTheme **out, uint32_t *out_len);
 
-/* Windows.Media.ClosedCaptioning.IClosedCaptionThemeStatics.GetSelectedTheme() */
 HRESULT wmecl_closed_caption_theme_statics_get_selected_theme(WMECL_IClosedCaptionThemeStatics *self, WMECL_ClosedCaptionTheme** out);
 
-/* Windows.Media.ClosedCaptioning.IClosedCaptionThemeStatics.TrySetSelectedTheme() */
 HRESULT wmecl_closed_caption_theme_statics_try_set_selected_theme(WMECL_IClosedCaptionThemeStatics *self, WMECL_ClosedCaptionTheme* value, BOOL *out);
 
-/* Windows.Media.ClosedCaptioning.IClosedCaptionTheme */
 #endif /* CWINRT_WINDOWS_MEDIA_CLOSEDCAPTIONING_H */

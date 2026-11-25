@@ -13,11 +13,9 @@
 #include <cwinrt/Windows.UI.Composition.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WUICODE_DesktopWindowTarget WUICODE_DesktopWindowTarget;
 typedef struct WUICODE_IDesktopWindowTarget WUICODE_IDesktopWindowTarget;
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -26,14 +24,8 @@ typedef struct WUICODE_IDesktopWindowTarget WUICODE_IDesktopWindowTarget;
 static const IID CWINRT_IID_WUICODE_IDesktopWindowTarget CWINRT_MAYBE_UNUSED = { 0x6329D6CA, 0x3366, 0x490E, { 0x9D, 0xB3, 0x25, 0x31, 0x29, 0x29, 0xAC, 0x51 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.UI.Composition.Desktop.DesktopWindowTarget */
 HRESULT wuicode_desktop_window_target_new(WUICODE_DesktopWindowTarget **out);
 
-/* Windows.UI.Composition.Desktop.DesktopWindowTarget */
-/* Windows.UI.Composition.Desktop.DesktopWindowTarget.get_IsTopmost() */
 HRESULT wuicode_desktop_window_target_get__is_topmost(WUICODE_DesktopWindowTarget *self, BOOL *value);
 
-/* Windows.UI.Composition.Desktop.IDesktopWindowTarget */
 #endif /* CWINRT_WINDOWS_UI_COMPOSITION_DESKTOP_H */

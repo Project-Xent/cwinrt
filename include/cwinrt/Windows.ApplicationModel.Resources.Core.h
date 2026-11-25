@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WS_StorageFile
 #define CWINRT_FWD_WS_StorageFile
 typedef struct WS_StorageFile WS_StorageFile;
@@ -30,7 +29,6 @@ typedef struct WUI_UIContext WUI_UIContext;
 typedef struct WS_IStorageFile WS_IStorageFile;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPRECO_NamedResource WAPRECO_NamedResource;
 typedef struct WAPRECO_ResourceCandidate WAPRECO_ResourceCandidate;
 typedef struct WAPRECO_ResourceCandidateVectorView WAPRECO_ResourceCandidateVectorView;
@@ -60,7 +58,6 @@ typedef struct WAPRECO_IResourceManager_2 WAPRECO_IResourceManager_2;
 typedef struct WAPRECO_IResourceMap WAPRECO_IResourceMap;
 typedef struct WAPRECO_IResourceQualifier WAPRECO_IResourceQualifier;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_Uri
 #define CWINRT_FWD_WF_Uri
 typedef struct WF_Uri WF_Uri;
@@ -194,7 +191,6 @@ struct WAPRECO_ResourceLayoutInfo {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -255,406 +251,253 @@ static const IID CWINRT_IID_WAPRECO_IResourceMap CWINRT_MAYBE_UNUSED = { 0x72284
 static const IID CWINRT_IID_WAPRECO_IResourceQualifier CWINRT_MAYBE_UNUSED = { 0x785DA5B2, 0x4AFD, 0x4376, { 0xA8, 0x88, 0xC5, 0xF9, 0xA6, 0xB7, 0xA0, 0x5C } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.Resources.Core.NamedResource */
 HRESULT wapreco_named_resource_new(WAPRECO_NamedResource **out);
 
-/* Windows.ApplicationModel.Resources.Core.NamedResource */
-/* Windows.ApplicationModel.Resources.Core.NamedResource.get_Uri() */
 HRESULT wapreco_named_resource_get__uri(WAPRECO_NamedResource *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.Resources.Core.NamedResource.get_Candidates() */
 HRESULT wapreco_named_resource_get__candidates(WAPRECO_NamedResource *self, WFOCO_IVectorView_WAPRECO_ResourceCandidate** value);
 
-/* Windows.ApplicationModel.Resources.Core.NamedResource.Resolve() */
 HRESULT wapreco_named_resource_resolve(WAPRECO_NamedResource *self, WAPRECO_ResourceCandidate** out);
 
-/* Windows.ApplicationModel.Resources.Core.NamedResource.Resolve(resourceContext) */
 HRESULT wapreco_named_resource_resolve_p_p(WAPRECO_NamedResource *self, WAPRECO_ResourceContext* resourceContext, WAPRECO_ResourceCandidate** out);
 
-/* Windows.ApplicationModel.Resources.Core.NamedResource.ResolveAll() */
 HRESULT wapreco_named_resource_resolve_all(WAPRECO_NamedResource *self, WFOCO_IVectorView_WAPRECO_ResourceCandidate** out);
 
-/* Windows.ApplicationModel.Resources.Core.NamedResource.ResolveAll(resourceContext) */
 HRESULT wapreco_named_resource_resolve_all_p_p(WAPRECO_NamedResource *self, WAPRECO_ResourceContext* resourceContext, WFOCO_IVectorView_WAPRECO_ResourceCandidate** out);
 
-/* activate Windows.ApplicationModel.Resources.Core.ResourceCandidate */
 HRESULT wapreco_resource_candidate_new(WAPRECO_ResourceCandidate **out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceCandidate */
-/* Windows.ApplicationModel.Resources.Core.ResourceCandidate.get_Qualifiers() */
 HRESULT wapreco_resource_candidate_get__qualifiers(WAPRECO_ResourceCandidate *self, WFOCO_IVectorView_WAPRECO_ResourceQualifier** value);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceCandidate.get_IsMatch() */
 HRESULT wapreco_resource_candidate_get__is_match(WAPRECO_ResourceCandidate *self, BOOL *value);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceCandidate.get_IsMatchAsDefault() */
 HRESULT wapreco_resource_candidate_get__is_match_as_default(WAPRECO_ResourceCandidate *self, BOOL *value);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceCandidate.get_IsDefault() */
 HRESULT wapreco_resource_candidate_get__is_default(WAPRECO_ResourceCandidate *self, BOOL *value);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceCandidate.get_ValueAsString() */
 HRESULT wapreco_resource_candidate_get__value_as_string(WAPRECO_ResourceCandidate *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceCandidate.GetValueAsFileAsync() */
 HRESULT wapreco_resource_candidate_get_value_as_file_async(WAPRECO_ResourceCandidate *self, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceCandidate.GetQualifierValue(qualifierName) */
 HRESULT wapreco_resource_candidate_get_qualifier_value(WAPRECO_ResourceCandidate *self, cwinrt_hstring qualifierName, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceCandidate.GetValueAsStreamAsync() */
 HRESULT wapreco_resource_candidate_get_value_as_stream_async(WAPRECO_ResourceCandidate *self, WF_IAsyncOperation_WSTST_IRandomAccessStream** out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceCandidate.get_Kind() */
 HRESULT wapreco_resource_candidate_get__kind(WAPRECO_ResourceCandidate *self, WAPRECO_ResourceCandidateKind *value);
 
-/* activate Windows.ApplicationModel.Resources.Core.ResourceCandidateVectorView */
 HRESULT wapreco_resource_candidate_vector_view_new(WAPRECO_ResourceCandidateVectorView **out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceCandidateVectorView */
-/* Windows.ApplicationModel.Resources.Core.ResourceCandidateVectorView.GetAt(index) */
 HRESULT wapreco_resource_candidate_vector_view_get_at(WAPRECO_ResourceCandidateVectorView *self, uint32_t index, WAPRECO_ResourceCandidate** out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceCandidateVectorView.get_Size() */
 HRESULT wapreco_resource_candidate_vector_view_get__size(WAPRECO_ResourceCandidateVectorView *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceCandidateVectorView.IndexOf(index) */
 HRESULT wapreco_resource_candidate_vector_view_index_of(WAPRECO_ResourceCandidateVectorView *self, WAPRECO_ResourceCandidate* value, uint32_t index, BOOL *out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceCandidateVectorView.GetMany(startIndex, items) */
 HRESULT wapreco_resource_candidate_vector_view_get_many(WAPRECO_ResourceCandidateVectorView *self, uint32_t startIndex, WAPRECO_ResourceCandidate *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceCandidateVectorView.First() */
 HRESULT wapreco_resource_candidate_vector_view_first(WAPRECO_ResourceCandidateVectorView *self, WFOCO_IIterator_WAPRECO_ResourceCandidate** out);
 
-/* activate Windows.ApplicationModel.Resources.Core.ResourceContext */
 HRESULT wapreco_resource_context_new(WAPRECO_ResourceContext **out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceContext */
-/* Windows.ApplicationModel.Resources.Core.ResourceContext.get_QualifierValues() */
 HRESULT wapreco_resource_context_get__qualifier_values(WAPRECO_ResourceContext *self, WFOCO_IObservableMap_HSTRING_HSTRING** value);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceContext.Reset() */
 HRESULT wapreco_resource_context_reset(WAPRECO_ResourceContext *self);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceContext.Reset(qualifierNames) */
 HRESULT wapreco_resource_context_reset_p(WAPRECO_ResourceContext *self, WFOCO_IIterable_HSTRING* qualifierNames);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceContext.OverrideToMatch(result) */
 HRESULT wapreco_resource_context_override_to_match(WAPRECO_ResourceContext *self, WFOCO_IIterable_WAPRECO_ResourceQualifier* result);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceContext.Clone() */
 HRESULT wapreco_resource_context_clone(WAPRECO_ResourceContext *self, WAPRECO_ResourceContext** out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceContext.get_Languages() */
 HRESULT wapreco_resource_context_get__languages(WAPRECO_ResourceContext *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceContext.put_Languages(languages) */
 HRESULT wapreco_resource_context_put__languages(WAPRECO_ResourceContext *self, WFOCO_IVectorView_HSTRING* languages);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceContext.GetForUIContext(context) */
 HRESULT wapreco_resource_context_get_for_u_i_context(WUI_UIContext* context, WAPRECO_ResourceContext** out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceContext.SetGlobalQualifierValue(key, persistence) */
 HRESULT wapreco_resource_context_set_global_qualifier_value_str_str_resource_qualifier_persistence(cwinrt_hstring key, cwinrt_hstring value, WAPRECO_ResourceQualifierPersistence persistence);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceContext.GetForCurrentView() */
 HRESULT wapreco_resource_context_get_for_current_view(WAPRECO_ResourceContext** out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceContext.SetGlobalQualifierValue(key) */
 HRESULT wapreco_resource_context_set_global_qualifier_value(cwinrt_hstring key, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceContext.ResetGlobalQualifierValues() */
 HRESULT wapreco_resource_context_reset_global_qualifier_values(void);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceContext.ResetGlobalQualifierValues(qualifierNames) */
 HRESULT wapreco_resource_context_reset_global_qualifier_values_p(WFOCO_IIterable_HSTRING* qualifierNames);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceContext.GetForViewIndependentUse() */
 HRESULT wapreco_resource_context_get_for_view_independent_use(WAPRECO_ResourceContext** out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceContext.CreateMatchingContext(result) */
 HRESULT wapreco_resource_context_create_matching_context(WFOCO_IIterable_WAPRECO_ResourceQualifier* result, WAPRECO_ResourceContext** out);
 
-/* activate Windows.ApplicationModel.Resources.Core.ResourceContextLanguagesVectorView */
 HRESULT wapreco_resource_context_languages_vector_view_new(WAPRECO_ResourceContextLanguagesVectorView **out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceContextLanguagesVectorView */
-/* Windows.ApplicationModel.Resources.Core.ResourceContextLanguagesVectorView.GetAt(index) */
 HRESULT wapreco_resource_context_languages_vector_view_get_at(WAPRECO_ResourceContextLanguagesVectorView *self, uint32_t index, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceContextLanguagesVectorView.get_Size() */
 HRESULT wapreco_resource_context_languages_vector_view_get__size(WAPRECO_ResourceContextLanguagesVectorView *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceContextLanguagesVectorView.IndexOf(index) */
 HRESULT wapreco_resource_context_languages_vector_view_index_of(WAPRECO_ResourceContextLanguagesVectorView *self, cwinrt_hstring value, uint32_t index, BOOL *out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceContextLanguagesVectorView.GetMany(startIndex, items) */
 HRESULT wapreco_resource_context_languages_vector_view_get_many(WAPRECO_ResourceContextLanguagesVectorView *self, uint32_t startIndex, cwinrt_hstring *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceContextLanguagesVectorView.First() */
 HRESULT wapreco_resource_context_languages_vector_view_first(WAPRECO_ResourceContextLanguagesVectorView *self, WFOCO_IIterator_HSTRING** out);
 
-/* activate Windows.ApplicationModel.Resources.Core.ResourceManager */
 HRESULT wapreco_resource_manager_new(WAPRECO_ResourceManager **out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceManager */
-/* Windows.ApplicationModel.Resources.Core.ResourceManager.get_MainResourceMap() */
 HRESULT wapreco_resource_manager_get__main_resource_map(WAPRECO_ResourceManager *self, WAPRECO_ResourceMap** value);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceManager.get_AllResourceMaps() */
 HRESULT wapreco_resource_manager_get__all_resource_maps(WAPRECO_ResourceManager *self, WFOCO_IMapView_HSTRING_WAPRECO_ResourceMap** value);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceManager.get_DefaultContext() */
 HRESULT wapreco_resource_manager_get__default_context(WAPRECO_ResourceManager *self, WAPRECO_ResourceContext** value);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceManager.LoadPriFiles(files) */
 HRESULT wapreco_resource_manager_load_pri_files(WAPRECO_ResourceManager *self, WFOCO_IIterable_WS_IStorageFile* files);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceManager.UnloadPriFiles(files) */
 HRESULT wapreco_resource_manager_unload_pri_files(WAPRECO_ResourceManager *self, WFOCO_IIterable_WS_IStorageFile* files);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceManager.GetAllNamedResourcesForPackage(packageName, resourceLayoutInfo) */
 HRESULT wapreco_resource_manager_get_all_named_resources_for_package(WAPRECO_ResourceManager *self, cwinrt_hstring packageName, WAPRECO_ResourceLayoutInfo resourceLayoutInfo, WFOCO_IVectorView_WAPRECO_NamedResource** out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceManager.GetAllSubtreesForPackage(packageName, resourceLayoutInfo) */
 HRESULT wapreco_resource_manager_get_all_subtrees_for_package(WAPRECO_ResourceManager *self, cwinrt_hstring packageName, WAPRECO_ResourceLayoutInfo resourceLayoutInfo, WFOCO_IVectorView_WAPRECO_ResourceMap** out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceManager.get_Current() */
 HRESULT wapreco_resource_manager_get__current(WAPRECO_ResourceManager** value);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceManager.IsResourceReference(resourceReference) */
 HRESULT wapreco_resource_manager_is_resource_reference(cwinrt_hstring resourceReference, BOOL *out);
 
-/* activate Windows.ApplicationModel.Resources.Core.ResourceMap */
 HRESULT wapreco_resource_map_new(WAPRECO_ResourceMap **out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceMap */
-/* Windows.ApplicationModel.Resources.Core.ResourceMap.get_Uri() */
 HRESULT wapreco_resource_map_get__uri(WAPRECO_ResourceMap *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceMap.GetValue(resource) */
 HRESULT wapreco_resource_map_get_value(WAPRECO_ResourceMap *self, cwinrt_hstring resource, WAPRECO_ResourceCandidate** out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceMap.GetValue(resource, context) */
 HRESULT wapreco_resource_map_get_value_str_p_p(WAPRECO_ResourceMap *self, cwinrt_hstring resource, WAPRECO_ResourceContext* context, WAPRECO_ResourceCandidate** out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceMap.GetSubtree(reference) */
 HRESULT wapreco_resource_map_get_subtree(WAPRECO_ResourceMap *self, cwinrt_hstring reference, WAPRECO_ResourceMap** out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceMap.Lookup(key) */
 HRESULT wapreco_resource_map_lookup(WAPRECO_ResourceMap *self, cwinrt_hstring key, WAPRECO_NamedResource** out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceMap.get_Size() */
 HRESULT wapreco_resource_map_get__size(WAPRECO_ResourceMap *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceMap.HasKey(key) */
 HRESULT wapreco_resource_map_has_key(WAPRECO_ResourceMap *self, cwinrt_hstring key, BOOL *out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceMap.Split(first, second) */
 HRESULT wapreco_resource_map_split(WAPRECO_ResourceMap *self, WFOCO_IMapView_HSTRING_WAPRECO_NamedResource* first, WFOCO_IMapView_HSTRING_WAPRECO_NamedResource* second);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceMap.First() */
 HRESULT wapreco_resource_map_first(WAPRECO_ResourceMap *self, WFOCO_IIterator_WFOCO_IKeyValuePair_HSTRING_WAPRECO_NamedResource** out);
 
-/* activate Windows.ApplicationModel.Resources.Core.ResourceMapIterator */
 HRESULT wapreco_resource_map_iterator_new(WAPRECO_ResourceMapIterator **out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceMapIterator */
-/* Windows.ApplicationModel.Resources.Core.ResourceMapIterator.get_Current() */
 HRESULT wapreco_resource_map_iterator_get__current(WAPRECO_ResourceMapIterator *self, WFOCO_IKeyValuePair_HSTRING_WAPRECO_NamedResource** value);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceMapIterator.get_HasCurrent() */
 HRESULT wapreco_resource_map_iterator_get__has_current(WAPRECO_ResourceMapIterator *self, BOOL *value);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceMapIterator.MoveNext() */
 HRESULT wapreco_resource_map_iterator_move_next(WAPRECO_ResourceMapIterator *self, BOOL *out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceMapIterator.GetMany(items) */
 HRESULT wapreco_resource_map_iterator_get_many(WAPRECO_ResourceMapIterator *self, WFOCO_IKeyValuePair_HSTRING_WAPRECO_NamedResource *items, uint32_t items_len, uint32_t *out);
 
-/* activate Windows.ApplicationModel.Resources.Core.ResourceMapMapView */
 HRESULT wapreco_resource_map_map_view_new(WAPRECO_ResourceMapMapView **out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceMapMapView */
-/* Windows.ApplicationModel.Resources.Core.ResourceMapMapView.Lookup(key) */
 HRESULT wapreco_resource_map_map_view_lookup(WAPRECO_ResourceMapMapView *self, cwinrt_hstring key, WAPRECO_ResourceMap** out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceMapMapView.get_Size() */
 HRESULT wapreco_resource_map_map_view_get__size(WAPRECO_ResourceMapMapView *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceMapMapView.HasKey(key) */
 HRESULT wapreco_resource_map_map_view_has_key(WAPRECO_ResourceMapMapView *self, cwinrt_hstring key, BOOL *out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceMapMapView.Split(first, second) */
 HRESULT wapreco_resource_map_map_view_split(WAPRECO_ResourceMapMapView *self, WFOCO_IMapView_HSTRING_WAPRECO_ResourceMap* first, WFOCO_IMapView_HSTRING_WAPRECO_ResourceMap* second);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceMapMapView.First() */
 HRESULT wapreco_resource_map_map_view_first(WAPRECO_ResourceMapMapView *self, WFOCO_IIterator_WFOCO_IKeyValuePair_HSTRING_WAPRECO_ResourceMap** out);
 
-/* activate Windows.ApplicationModel.Resources.Core.ResourceMapMapViewIterator */
 HRESULT wapreco_resource_map_map_view_iterator_new(WAPRECO_ResourceMapMapViewIterator **out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceMapMapViewIterator */
-/* Windows.ApplicationModel.Resources.Core.ResourceMapMapViewIterator.get_Current() */
 HRESULT wapreco_resource_map_map_view_iterator_get__current(WAPRECO_ResourceMapMapViewIterator *self, WFOCO_IKeyValuePair_HSTRING_WAPRECO_ResourceMap** value);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceMapMapViewIterator.get_HasCurrent() */
 HRESULT wapreco_resource_map_map_view_iterator_get__has_current(WAPRECO_ResourceMapMapViewIterator *self, BOOL *value);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceMapMapViewIterator.MoveNext() */
 HRESULT wapreco_resource_map_map_view_iterator_move_next(WAPRECO_ResourceMapMapViewIterator *self, BOOL *out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceMapMapViewIterator.GetMany(items) */
 HRESULT wapreco_resource_map_map_view_iterator_get_many(WAPRECO_ResourceMapMapViewIterator *self, WFOCO_IKeyValuePair_HSTRING_WAPRECO_ResourceMap *items, uint32_t items_len, uint32_t *out);
 
-/* activate Windows.ApplicationModel.Resources.Core.ResourceQualifier */
 HRESULT wapreco_resource_qualifier_new(WAPRECO_ResourceQualifier **out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceQualifier */
-/* Windows.ApplicationModel.Resources.Core.ResourceQualifier.get_QualifierName() */
 HRESULT wapreco_resource_qualifier_get__qualifier_name(WAPRECO_ResourceQualifier *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceQualifier.get_QualifierValue() */
 HRESULT wapreco_resource_qualifier_get__qualifier_value(WAPRECO_ResourceQualifier *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceQualifier.get_IsDefault() */
 HRESULT wapreco_resource_qualifier_get__is_default(WAPRECO_ResourceQualifier *self, BOOL *value);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceQualifier.get_IsMatch() */
 HRESULT wapreco_resource_qualifier_get__is_match(WAPRECO_ResourceQualifier *self, BOOL *value);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceQualifier.get_Score() */
 HRESULT wapreco_resource_qualifier_get__score(WAPRECO_ResourceQualifier *self, double *value);
 
-/* activate Windows.ApplicationModel.Resources.Core.ResourceQualifierMapView */
 HRESULT wapreco_resource_qualifier_map_view_new(WAPRECO_ResourceQualifierMapView **out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceQualifierMapView */
-/* Windows.ApplicationModel.Resources.Core.ResourceQualifierMapView.Lookup(key) */
 HRESULT wapreco_resource_qualifier_map_view_lookup(WAPRECO_ResourceQualifierMapView *self, cwinrt_hstring key, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceQualifierMapView.get_Size() */
 HRESULT wapreco_resource_qualifier_map_view_get__size(WAPRECO_ResourceQualifierMapView *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceQualifierMapView.HasKey(key) */
 HRESULT wapreco_resource_qualifier_map_view_has_key(WAPRECO_ResourceQualifierMapView *self, cwinrt_hstring key, BOOL *out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceQualifierMapView.Split(first, second) */
 HRESULT wapreco_resource_qualifier_map_view_split(WAPRECO_ResourceQualifierMapView *self, WFOCO_IMapView_HSTRING_HSTRING* first, WFOCO_IMapView_HSTRING_HSTRING* second);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceQualifierMapView.First() */
 HRESULT wapreco_resource_qualifier_map_view_first(WAPRECO_ResourceQualifierMapView *self, WFOCO_IIterator_WFOCO_IKeyValuePair_HSTRING_HSTRING** out);
 
-/* activate Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap */
 HRESULT wapreco_resource_qualifier_observable_map_new(WAPRECO_ResourceQualifierObservableMap **out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap */
-/* Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap.Lookup(key) */
 HRESULT wapreco_resource_qualifier_observable_map_lookup(WAPRECO_ResourceQualifierObservableMap *self, cwinrt_hstring key, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap.get_Size() */
 HRESULT wapreco_resource_qualifier_observable_map_get__size(WAPRECO_ResourceQualifierObservableMap *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap.HasKey(key) */
 HRESULT wapreco_resource_qualifier_observable_map_has_key(WAPRECO_ResourceQualifierObservableMap *self, cwinrt_hstring key, BOOL *out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap.GetView() */
 HRESULT wapreco_resource_qualifier_observable_map_get_view(WAPRECO_ResourceQualifierObservableMap *self, WFOCO_IMapView_HSTRING_HSTRING** out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap.Insert(key) */
 HRESULT wapreco_resource_qualifier_observable_map_insert(WAPRECO_ResourceQualifierObservableMap *self, cwinrt_hstring key, cwinrt_hstring value, BOOL *out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap.Remove(key) */
 HRESULT wapreco_resource_qualifier_observable_map_remove(WAPRECO_ResourceQualifierObservableMap *self, cwinrt_hstring key);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap.Clear() */
 HRESULT wapreco_resource_qualifier_observable_map_clear(WAPRECO_ResourceQualifierObservableMap *self);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap.First() */
 HRESULT wapreco_resource_qualifier_observable_map_first(WAPRECO_ResourceQualifierObservableMap *self, WFOCO_IIterator_WFOCO_IKeyValuePair_HSTRING_HSTRING** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapreco_resource_qualifier_observable_map_on_map_changed(WAPRECO_ResourceQualifierObservableMap *self, cwinrt_event_fn fn, void *ctx);
 void wapreco_resource_qualifier_observable_map_off_map_changed(WAPRECO_ResourceQualifierObservableMap *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Resources.Core.ResourceQualifierVectorView */
 HRESULT wapreco_resource_qualifier_vector_view_new(WAPRECO_ResourceQualifierVectorView **out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceQualifierVectorView */
-/* Windows.ApplicationModel.Resources.Core.ResourceQualifierVectorView.GetAt(index) */
 HRESULT wapreco_resource_qualifier_vector_view_get_at(WAPRECO_ResourceQualifierVectorView *self, uint32_t index, WAPRECO_ResourceQualifier** out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceQualifierVectorView.get_Size() */
 HRESULT wapreco_resource_qualifier_vector_view_get__size(WAPRECO_ResourceQualifierVectorView *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceQualifierVectorView.IndexOf(index) */
 HRESULT wapreco_resource_qualifier_vector_view_index_of(WAPRECO_ResourceQualifierVectorView *self, WAPRECO_ResourceQualifier* value, uint32_t index, BOOL *out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceQualifierVectorView.GetMany(startIndex, items) */
 HRESULT wapreco_resource_qualifier_vector_view_get_many(WAPRECO_ResourceQualifierVectorView *self, uint32_t startIndex, WAPRECO_ResourceQualifier *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.ApplicationModel.Resources.Core.ResourceQualifierVectorView.First() */
 HRESULT wapreco_resource_qualifier_vector_view_first(WAPRECO_ResourceQualifierVectorView *self, WFOCO_IIterator_WAPRECO_ResourceQualifier** out);
 
-/* Windows.ApplicationModel.Resources.Core.IResourceContextStatics4 */
-/* Windows.ApplicationModel.Resources.Core.IResourceContextStatics4.GetForUIContext(context) */
 HRESULT wapreco_resource_context_statics_4_get_for_u_i_context(WAPRECO_IResourceContextStatics_4 *self, WUI_UIContext* context, WAPRECO_ResourceContext** out);
 
-/* Windows.ApplicationModel.Resources.Core.IResourceContextStatics3 */
-/* Windows.ApplicationModel.Resources.Core.IResourceContextStatics3.SetGlobalQualifierValue(key, persistence) */
 HRESULT wapreco_resource_context_statics_3_set_global_qualifier_value(WAPRECO_IResourceContextStatics_3 *self, cwinrt_hstring key, cwinrt_hstring value, WAPRECO_ResourceQualifierPersistence persistence);
 
-/* Windows.ApplicationModel.Resources.Core.IResourceContextStatics2 */
-/* Windows.ApplicationModel.Resources.Core.IResourceContextStatics2.GetForCurrentView() */
 HRESULT wapreco_resource_context_statics_2_get_for_current_view(WAPRECO_IResourceContextStatics_2 *self, WAPRECO_ResourceContext** out);
 
-/* Windows.ApplicationModel.Resources.Core.IResourceContextStatics2.SetGlobalQualifierValue(key) */
 HRESULT wapreco_resource_context_statics_2_set_global_qualifier_value(WAPRECO_IResourceContextStatics_2 *self, cwinrt_hstring key, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Resources.Core.IResourceContextStatics2.ResetGlobalQualifierValues() */
 HRESULT wapreco_resource_context_statics_2_reset_global_qualifier_values(WAPRECO_IResourceContextStatics_2 *self);
 
-/* Windows.ApplicationModel.Resources.Core.IResourceContextStatics2.ResetGlobalQualifierValues(qualifierNames) */
 HRESULT wapreco_resource_context_statics_2_reset_global_qualifier_values_p(WAPRECO_IResourceContextStatics_2 *self, WFOCO_IIterable_HSTRING* qualifierNames);
 
-/* Windows.ApplicationModel.Resources.Core.IResourceContextStatics2.GetForViewIndependentUse() */
 HRESULT wapreco_resource_context_statics_2_get_for_view_independent_use(WAPRECO_IResourceContextStatics_2 *self, WAPRECO_ResourceContext** out);
 
-/* Windows.ApplicationModel.Resources.Core.IResourceContextStatics */
-/* Windows.ApplicationModel.Resources.Core.IResourceContextStatics.CreateMatchingContext(result) */
 HRESULT wapreco_resource_context_statics_create_matching_context(WAPRECO_IResourceContextStatics *self, WFOCO_IIterable_WAPRECO_ResourceQualifier* result, WAPRECO_ResourceContext** out);
 
-/* Windows.ApplicationModel.Resources.Core.IResourceManagerStatics */
-/* Windows.ApplicationModel.Resources.Core.IResourceManagerStatics.get_Current() */
 HRESULT wapreco_resource_manager_statics_get__current(WAPRECO_IResourceManagerStatics *self, WAPRECO_ResourceManager** value);
 
-/* Windows.ApplicationModel.Resources.Core.IResourceManagerStatics.IsResourceReference(resourceReference) */
 HRESULT wapreco_resource_manager_statics_is_resource_reference(WAPRECO_IResourceManagerStatics *self, cwinrt_hstring resourceReference, BOOL *out);
 
-/* Windows.ApplicationModel.Resources.Core.INamedResource */
-/* Windows.ApplicationModel.Resources.Core.IResourceCandidate */
-/* Windows.ApplicationModel.Resources.Core.IResourceCandidate2 */
-/* Windows.ApplicationModel.Resources.Core.IResourceCandidate2.GetValueAsStreamAsync() */
 HRESULT wapreco_resource_candidate_2_get_value_as_stream_async(WAPRECO_IResourceCandidate_2 *self, WF_IAsyncOperation_WSTST_IRandomAccessStream** out);
 
-/* Windows.ApplicationModel.Resources.Core.IResourceCandidate3 */
-/* Windows.ApplicationModel.Resources.Core.IResourceCandidate3.get_Kind() */
 HRESULT wapreco_resource_candidate_3_get__kind(WAPRECO_IResourceCandidate_3 *self, WAPRECO_ResourceCandidateKind *value);
 
-/* Windows.ApplicationModel.Resources.Core.IResourceContext */
-/* Windows.ApplicationModel.Resources.Core.IResourceManager */
-/* Windows.ApplicationModel.Resources.Core.IResourceManager2 */
-/* Windows.ApplicationModel.Resources.Core.IResourceManager2.GetAllNamedResourcesForPackage(packageName, resourceLayoutInfo) */
 HRESULT wapreco_resource_manager_2_get_all_named_resources_for_package(WAPRECO_IResourceManager_2 *self, cwinrt_hstring packageName, WAPRECO_ResourceLayoutInfo resourceLayoutInfo, WFOCO_IVectorView_WAPRECO_NamedResource** out);
 
-/* Windows.ApplicationModel.Resources.Core.IResourceManager2.GetAllSubtreesForPackage(packageName, resourceLayoutInfo) */
 HRESULT wapreco_resource_manager_2_get_all_subtrees_for_package(WAPRECO_IResourceManager_2 *self, cwinrt_hstring packageName, WAPRECO_ResourceLayoutInfo resourceLayoutInfo, WFOCO_IVectorView_WAPRECO_ResourceMap** out);
 
-/* Windows.ApplicationModel.Resources.Core.IResourceMap */
-/* Windows.ApplicationModel.Resources.Core.IResourceQualifier */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_RESOURCES_CORE_H */

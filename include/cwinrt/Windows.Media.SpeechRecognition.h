@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WS_StorageFile
 #define CWINRT_FWD_WS_StorageFile
 typedef struct WS_StorageFile WS_StorageFile;
@@ -22,7 +21,6 @@ typedef struct WS_StorageFile WS_StorageFile;
 typedef struct WGL_Language WGL_Language;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMESP_ISpeechRecognitionListConstraintFactory WMESP_ISpeechRecognitionListConstraintFactory;
 typedef struct WMESP_ISpeechRecognitionTopicConstraintFactory WMESP_ISpeechRecognitionTopicConstraintFactory;
 typedef struct WMESP_ISpeechRecognizerFactory WMESP_ISpeechRecognizerFactory;
@@ -67,7 +65,6 @@ typedef struct WMESP_ISpeechRecognizerTimeouts WMESP_ISpeechRecognizerTimeouts;
 typedef struct WMESP_ISpeechRecognizerUIOptions WMESP_ISpeechRecognizerUIOptions;
 typedef struct WMESP_ISpeechRecognitionConstraint WMESP_ISpeechRecognitionConstraint;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IIterable_HSTRING
 #define CWINRT_FWD_WFOCO_IIterable_HSTRING
 typedef struct WFOCO_IIterable_HSTRING WFOCO_IIterable_HSTRING;
@@ -238,7 +235,6 @@ typedef enum WMESP_SpeechRecognizerState {
 } WMESP_SpeechRecognizerState;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -347,83 +343,50 @@ static const IID CWINRT_IID_WMESP_ISpeechRecognizerUIOptions CWINRT_MAYBE_UNUSED
 static const IID CWINRT_IID_WMESP_ISpeechRecognitionConstraint CWINRT_MAYBE_UNUSED = { 0x79AC1628, 0x4D68, 0x43C4, { 0x89, 0x11, 0x40, 0xDC, 0x41, 0x01, 0xB5, 0x5B } };
 #endif
 
-/* Methods */
-
-/* Windows.Media.SpeechRecognition.ISpeechRecognitionListConstraintFactory */
-/* Windows.Media.SpeechRecognition.ISpeechRecognitionListConstraintFactory.Create(commands) */
 HRESULT wmesp_speech_recognition_list_constraint_factory_create(WMESP_ISpeechRecognitionListConstraintFactory *self, WFOCO_IIterable_HSTRING* commands, WMESP_SpeechRecognitionListConstraint** out);
 
-/* Windows.Media.SpeechRecognition.ISpeechRecognitionListConstraintFactory.CreateWithTag(commands, tag) */
 HRESULT wmesp_speech_recognition_list_constraint_factory_create_with_tag(WMESP_ISpeechRecognitionListConstraintFactory *self, WFOCO_IIterable_HSTRING* commands, cwinrt_hstring tag, WMESP_SpeechRecognitionListConstraint** out);
 
-/* Windows.Media.SpeechRecognition.ISpeechRecognitionTopicConstraintFactory */
-/* Windows.Media.SpeechRecognition.ISpeechRecognitionTopicConstraintFactory.Create(scenario, topicHint) */
 HRESULT wmesp_speech_recognition_topic_constraint_factory_create(WMESP_ISpeechRecognitionTopicConstraintFactory *self, WMESP_SpeechRecognitionScenario scenario, cwinrt_hstring topicHint, WMESP_SpeechRecognitionTopicConstraint** out);
 
-/* Windows.Media.SpeechRecognition.ISpeechRecognitionTopicConstraintFactory.CreateWithTag(scenario, topicHint, tag) */
 HRESULT wmesp_speech_recognition_topic_constraint_factory_create_with_tag(WMESP_ISpeechRecognitionTopicConstraintFactory *self, WMESP_SpeechRecognitionScenario scenario, cwinrt_hstring topicHint, cwinrt_hstring tag, WMESP_SpeechRecognitionTopicConstraint** out);
 
-/* Windows.Media.SpeechRecognition.ISpeechRecognizerFactory */
-/* Windows.Media.SpeechRecognition.ISpeechRecognizerFactory.Create(language) */
 HRESULT wmesp_speech_recognizer_factory_create(WMESP_ISpeechRecognizerFactory *self, WGL_Language* language, WMESP_SpeechRecognizer** out);
 
-/* Windows.Media.SpeechRecognition.ISpeechRecognizerStatics */
-/* Windows.Media.SpeechRecognition.ISpeechRecognizerStatics.get_SystemSpeechLanguage() */
 HRESULT wmesp_speech_recognizer_statics_get__system_speech_language(WMESP_ISpeechRecognizerStatics *self, WGL_Language** value);
 
-/* Windows.Media.SpeechRecognition.ISpeechRecognizerStatics.get_SupportedTopicLanguages() */
 HRESULT wmesp_speech_recognizer_statics_get__supported_topic_languages(WMESP_ISpeechRecognizerStatics *self, WFOCO_IVectorView_WGL_Language** value);
 
-/* Windows.Media.SpeechRecognition.ISpeechRecognizerStatics.get_SupportedGrammarLanguages() */
 HRESULT wmesp_speech_recognizer_statics_get__supported_grammar_languages(WMESP_ISpeechRecognizerStatics *self, WFOCO_IVectorView_WGL_Language** value);
 
-/* Windows.Media.SpeechRecognition.ISpeechRecognizerStatics2 */
-/* Windows.Media.SpeechRecognition.ISpeechRecognizerStatics2.TrySetSystemSpeechLanguageAsync(speechLanguage) */
 HRESULT wmesp_speech_recognizer_statics_2_try_set_system_speech_language_async(WMESP_ISpeechRecognizerStatics_2 *self, WGL_Language* speechLanguage, WF_IAsyncOperation_Bool** out);
 
-/* activate Windows.Media.SpeechRecognition.SpeechContinuousRecognitionCompletedEventArgs */
 HRESULT wmesp_speech_continuous_recognition_completed_event_args_new(WMESP_SpeechContinuousRecognitionCompletedEventArgs **out);
 
-/* Windows.Media.SpeechRecognition.SpeechContinuousRecognitionCompletedEventArgs */
-/* Windows.Media.SpeechRecognition.SpeechContinuousRecognitionCompletedEventArgs.get_Status() */
 HRESULT wmesp_speech_continuous_recognition_completed_event_args_get__status(WMESP_SpeechContinuousRecognitionCompletedEventArgs *self, WMESP_SpeechRecognitionResultStatus *value);
 
-/* activate Windows.Media.SpeechRecognition.SpeechContinuousRecognitionResultGeneratedEventArgs */
 HRESULT wmesp_speech_continuous_recognition_result_generated_event_args_new(WMESP_SpeechContinuousRecognitionResultGeneratedEventArgs **out);
 
-/* Windows.Media.SpeechRecognition.SpeechContinuousRecognitionResultGeneratedEventArgs */
-/* Windows.Media.SpeechRecognition.SpeechContinuousRecognitionResultGeneratedEventArgs.get_Result() */
 HRESULT wmesp_speech_continuous_recognition_result_generated_event_args_get__result(WMESP_SpeechContinuousRecognitionResultGeneratedEventArgs *self, WMESP_SpeechRecognitionResult** value);
 
-/* activate Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession */
 HRESULT wmesp_speech_continuous_recognition_session_new(WMESP_SpeechContinuousRecognitionSession **out);
 
-/* Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession */
-/* Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession.get_AutoStopSilenceTimeout() */
 HRESULT wmesp_speech_continuous_recognition_session_get__auto_stop_silence_timeout(WMESP_SpeechContinuousRecognitionSession *self, WF_TimeSpan *value);
 
-/* Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession.put_AutoStopSilenceTimeout() */
 HRESULT wmesp_speech_continuous_recognition_session_put__auto_stop_silence_timeout(WMESP_SpeechContinuousRecognitionSession *self, WF_TimeSpan value);
 
-/* Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession.StartAsync() */
 HRESULT wmesp_speech_continuous_recognition_session_start_async(WMESP_SpeechContinuousRecognitionSession *self, WF_IAsyncAction** out);
 
-/* Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession.StartAsync(mode) */
 HRESULT wmesp_speech_continuous_recognition_session_start_async_speech_continuous_recognition_mode_p(WMESP_SpeechContinuousRecognitionSession *self, WMESP_SpeechContinuousRecognitionMode mode, WF_IAsyncAction** out);
 
-/* Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession.StopAsync() */
 HRESULT wmesp_speech_continuous_recognition_session_stop_async(WMESP_SpeechContinuousRecognitionSession *self, WF_IAsyncAction** out);
 
-/* Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession.CancelAsync() */
 HRESULT wmesp_speech_continuous_recognition_session_cancel_async(WMESP_SpeechContinuousRecognitionSession *self, WF_IAsyncAction** out);
 
-/* Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession.PauseAsync() */
 HRESULT wmesp_speech_continuous_recognition_session_pause_async(WMESP_SpeechContinuousRecognitionSession *self, WF_IAsyncAction** out);
 
-/* Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession.Resume() */
 HRESULT wmesp_speech_continuous_recognition_session_resume(WMESP_SpeechContinuousRecognitionSession *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmesp_speech_continuous_recognition_session_on_completed(WMESP_SpeechContinuousRecognitionSession *self, cwinrt_event_fn fn, void *ctx);
@@ -432,237 +395,152 @@ void wmesp_speech_continuous_recognition_session_off_completed(WMESP_SpeechConti
 cwinrt_token wmesp_speech_continuous_recognition_session_on_result_generated(WMESP_SpeechContinuousRecognitionSession *self, cwinrt_event_fn fn, void *ctx);
 void wmesp_speech_continuous_recognition_session_off_result_generated(WMESP_SpeechContinuousRecognitionSession *self, cwinrt_token token);
 
-/* activate Windows.Media.SpeechRecognition.SpeechRecognitionCompilationResult */
 HRESULT wmesp_speech_recognition_compilation_result_new(WMESP_SpeechRecognitionCompilationResult **out);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionCompilationResult */
-/* Windows.Media.SpeechRecognition.SpeechRecognitionCompilationResult.get_Status() */
 HRESULT wmesp_speech_recognition_compilation_result_get__status(WMESP_SpeechRecognitionCompilationResult *self, WMESP_SpeechRecognitionResultStatus *value);
 
-/* activate Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint */
 HRESULT wmesp_speech_recognition_grammar_file_constraint_new(WMESP_SpeechRecognitionGrammarFileConstraint **out);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint */
-/* Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint.get_GrammarFile() */
 HRESULT wmesp_speech_recognition_grammar_file_constraint_get__grammar_file(WMESP_SpeechRecognitionGrammarFileConstraint *self, WS_StorageFile** value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint.get_IsEnabled() */
 HRESULT wmesp_speech_recognition_grammar_file_constraint_get__is_enabled(WMESP_SpeechRecognitionGrammarFileConstraint *self, BOOL *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint.put_IsEnabled() */
 HRESULT wmesp_speech_recognition_grammar_file_constraint_put__is_enabled(WMESP_SpeechRecognitionGrammarFileConstraint *self, BOOL value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint.get_Tag() */
 HRESULT wmesp_speech_recognition_grammar_file_constraint_get__tag(WMESP_SpeechRecognitionGrammarFileConstraint *self, cwinrt_hstring *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint.put_Tag() */
 HRESULT wmesp_speech_recognition_grammar_file_constraint_put__tag(WMESP_SpeechRecognitionGrammarFileConstraint *self, cwinrt_hstring value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint.get_Type() */
 HRESULT wmesp_speech_recognition_grammar_file_constraint_get__type(WMESP_SpeechRecognitionGrammarFileConstraint *self, WMESP_SpeechRecognitionConstraintType *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint.get_Probability() */
 HRESULT wmesp_speech_recognition_grammar_file_constraint_get__probability(WMESP_SpeechRecognitionGrammarFileConstraint *self, WMESP_SpeechRecognitionConstraintProbability *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint.put_Probability() */
 HRESULT wmesp_speech_recognition_grammar_file_constraint_put__probability(WMESP_SpeechRecognitionGrammarFileConstraint *self, WMESP_SpeechRecognitionConstraintProbability value);
 
-/* activate Windows.Media.SpeechRecognition.SpeechRecognitionHypothesis */
 HRESULT wmesp_speech_recognition_hypothesis_new(WMESP_SpeechRecognitionHypothesis **out);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionHypothesis */
-/* Windows.Media.SpeechRecognition.SpeechRecognitionHypothesis.get_Text() */
 HRESULT wmesp_speech_recognition_hypothesis_get__text(WMESP_SpeechRecognitionHypothesis *self, cwinrt_hstring *value);
 
-/* activate Windows.Media.SpeechRecognition.SpeechRecognitionHypothesisGeneratedEventArgs */
 HRESULT wmesp_speech_recognition_hypothesis_generated_event_args_new(WMESP_SpeechRecognitionHypothesisGeneratedEventArgs **out);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionHypothesisGeneratedEventArgs */
-/* Windows.Media.SpeechRecognition.SpeechRecognitionHypothesisGeneratedEventArgs.get_Hypothesis() */
 HRESULT wmesp_speech_recognition_hypothesis_generated_event_args_get__hypothesis(WMESP_SpeechRecognitionHypothesisGeneratedEventArgs *self, WMESP_SpeechRecognitionHypothesis** value);
 
-/* activate Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint */
 HRESULT wmesp_speech_recognition_list_constraint_new(WMESP_SpeechRecognitionListConstraint **out);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint */
-/* Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint.get_Commands() */
 HRESULT wmesp_speech_recognition_list_constraint_get__commands(WMESP_SpeechRecognitionListConstraint *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint.get_IsEnabled() */
 HRESULT wmesp_speech_recognition_list_constraint_get__is_enabled(WMESP_SpeechRecognitionListConstraint *self, BOOL *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint.put_IsEnabled() */
 HRESULT wmesp_speech_recognition_list_constraint_put__is_enabled(WMESP_SpeechRecognitionListConstraint *self, BOOL value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint.get_Tag() */
 HRESULT wmesp_speech_recognition_list_constraint_get__tag(WMESP_SpeechRecognitionListConstraint *self, cwinrt_hstring *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint.put_Tag() */
 HRESULT wmesp_speech_recognition_list_constraint_put__tag(WMESP_SpeechRecognitionListConstraint *self, cwinrt_hstring value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint.get_Type() */
 HRESULT wmesp_speech_recognition_list_constraint_get__type(WMESP_SpeechRecognitionListConstraint *self, WMESP_SpeechRecognitionConstraintType *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint.get_Probability() */
 HRESULT wmesp_speech_recognition_list_constraint_get__probability(WMESP_SpeechRecognitionListConstraint *self, WMESP_SpeechRecognitionConstraintProbability *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint.put_Probability() */
 HRESULT wmesp_speech_recognition_list_constraint_put__probability(WMESP_SpeechRecognitionListConstraint *self, WMESP_SpeechRecognitionConstraintProbability value);
 
-/* activate Windows.Media.SpeechRecognition.SpeechRecognitionQualityDegradingEventArgs */
 HRESULT wmesp_speech_recognition_quality_degrading_event_args_new(WMESP_SpeechRecognitionQualityDegradingEventArgs **out);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionQualityDegradingEventArgs */
-/* Windows.Media.SpeechRecognition.SpeechRecognitionQualityDegradingEventArgs.get_Problem() */
 HRESULT wmesp_speech_recognition_quality_degrading_event_args_get__problem(WMESP_SpeechRecognitionQualityDegradingEventArgs *self, WMESP_SpeechRecognitionAudioProblem *value);
 
-/* activate Windows.Media.SpeechRecognition.SpeechRecognitionResult */
 HRESULT wmesp_speech_recognition_result_new(WMESP_SpeechRecognitionResult **out);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionResult */
-/* Windows.Media.SpeechRecognition.SpeechRecognitionResult.get_Status() */
 HRESULT wmesp_speech_recognition_result_get__status(WMESP_SpeechRecognitionResult *self, WMESP_SpeechRecognitionResultStatus *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionResult.get_Text() */
 HRESULT wmesp_speech_recognition_result_get__text(WMESP_SpeechRecognitionResult *self, cwinrt_hstring *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionResult.get_Confidence() */
 HRESULT wmesp_speech_recognition_result_get__confidence(WMESP_SpeechRecognitionResult *self, WMESP_SpeechRecognitionConfidence *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionResult.get_SemanticInterpretation() */
 HRESULT wmesp_speech_recognition_result_get__semantic_interpretation(WMESP_SpeechRecognitionResult *self, WMESP_SpeechRecognitionSemanticInterpretation** value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionResult.GetAlternates(maxAlternates) */
 HRESULT wmesp_speech_recognition_result_get_alternates(WMESP_SpeechRecognitionResult *self, uint32_t maxAlternates, WFOCO_IVectorView_WMESP_SpeechRecognitionResult** out);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionResult.get_Constraint() */
 HRESULT wmesp_speech_recognition_result_get__constraint(WMESP_SpeechRecognitionResult *self, WMESP_ISpeechRecognitionConstraint** value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionResult.get_RulePath() */
 HRESULT wmesp_speech_recognition_result_get__rule_path(WMESP_SpeechRecognitionResult *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionResult.get_RawConfidence() */
 HRESULT wmesp_speech_recognition_result_get__raw_confidence(WMESP_SpeechRecognitionResult *self, double *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionResult.get_PhraseStartTime() */
 HRESULT wmesp_speech_recognition_result_get__phrase_start_time(WMESP_SpeechRecognitionResult *self, WF_DateTime *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionResult.get_PhraseDuration() */
 HRESULT wmesp_speech_recognition_result_get__phrase_duration(WMESP_SpeechRecognitionResult *self, WF_TimeSpan *value);
 
-/* activate Windows.Media.SpeechRecognition.SpeechRecognitionSemanticInterpretation */
 HRESULT wmesp_speech_recognition_semantic_interpretation_new(WMESP_SpeechRecognitionSemanticInterpretation **out);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionSemanticInterpretation */
-/* Windows.Media.SpeechRecognition.SpeechRecognitionSemanticInterpretation.get_Properties() */
 HRESULT wmesp_speech_recognition_semantic_interpretation_get__properties(WMESP_SpeechRecognitionSemanticInterpretation *self, WFOCO_IMapView_HSTRING_WFOCO_IVectorView_HSTRING** value);
 
-/* activate Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint */
 HRESULT wmesp_speech_recognition_topic_constraint_new(WMESP_SpeechRecognitionTopicConstraint **out);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint */
-/* Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint.get_Scenario() */
 HRESULT wmesp_speech_recognition_topic_constraint_get__scenario(WMESP_SpeechRecognitionTopicConstraint *self, WMESP_SpeechRecognitionScenario *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint.get_TopicHint() */
 HRESULT wmesp_speech_recognition_topic_constraint_get__topic_hint(WMESP_SpeechRecognitionTopicConstraint *self, cwinrt_hstring *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint.get_IsEnabled() */
 HRESULT wmesp_speech_recognition_topic_constraint_get__is_enabled(WMESP_SpeechRecognitionTopicConstraint *self, BOOL *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint.put_IsEnabled() */
 HRESULT wmesp_speech_recognition_topic_constraint_put__is_enabled(WMESP_SpeechRecognitionTopicConstraint *self, BOOL value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint.get_Tag() */
 HRESULT wmesp_speech_recognition_topic_constraint_get__tag(WMESP_SpeechRecognitionTopicConstraint *self, cwinrt_hstring *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint.put_Tag() */
 HRESULT wmesp_speech_recognition_topic_constraint_put__tag(WMESP_SpeechRecognitionTopicConstraint *self, cwinrt_hstring value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint.get_Type() */
 HRESULT wmesp_speech_recognition_topic_constraint_get__type(WMESP_SpeechRecognitionTopicConstraint *self, WMESP_SpeechRecognitionConstraintType *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint.get_Probability() */
 HRESULT wmesp_speech_recognition_topic_constraint_get__probability(WMESP_SpeechRecognitionTopicConstraint *self, WMESP_SpeechRecognitionConstraintProbability *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint.put_Probability() */
 HRESULT wmesp_speech_recognition_topic_constraint_put__probability(WMESP_SpeechRecognitionTopicConstraint *self, WMESP_SpeechRecognitionConstraintProbability value);
 
-/* activate Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint */
 HRESULT wmesp_speech_recognition_voice_command_definition_constraint_new(WMESP_SpeechRecognitionVoiceCommandDefinitionConstraint **out);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint */
-/* Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint.get_IsEnabled() */
 HRESULT wmesp_speech_recognition_voice_command_definition_constraint_get__is_enabled(WMESP_SpeechRecognitionVoiceCommandDefinitionConstraint *self, BOOL *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint.put_IsEnabled() */
 HRESULT wmesp_speech_recognition_voice_command_definition_constraint_put__is_enabled(WMESP_SpeechRecognitionVoiceCommandDefinitionConstraint *self, BOOL value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint.get_Tag() */
 HRESULT wmesp_speech_recognition_voice_command_definition_constraint_get__tag(WMESP_SpeechRecognitionVoiceCommandDefinitionConstraint *self, cwinrt_hstring *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint.put_Tag() */
 HRESULT wmesp_speech_recognition_voice_command_definition_constraint_put__tag(WMESP_SpeechRecognitionVoiceCommandDefinitionConstraint *self, cwinrt_hstring value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint.get_Type() */
 HRESULT wmesp_speech_recognition_voice_command_definition_constraint_get__type(WMESP_SpeechRecognitionVoiceCommandDefinitionConstraint *self, WMESP_SpeechRecognitionConstraintType *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint.get_Probability() */
 HRESULT wmesp_speech_recognition_voice_command_definition_constraint_get__probability(WMESP_SpeechRecognitionVoiceCommandDefinitionConstraint *self, WMESP_SpeechRecognitionConstraintProbability *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint.put_Probability() */
 HRESULT wmesp_speech_recognition_voice_command_definition_constraint_put__probability(WMESP_SpeechRecognitionVoiceCommandDefinitionConstraint *self, WMESP_SpeechRecognitionConstraintProbability value);
 
-/* activate Windows.Media.SpeechRecognition.SpeechRecognizer */
 HRESULT wmesp_speech_recognizer_new(WMESP_SpeechRecognizer **out);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizer */
-/* Windows.Media.SpeechRecognition.SpeechRecognizer.get_CurrentLanguage() */
 HRESULT wmesp_speech_recognizer_get__current_language(WMESP_SpeechRecognizer *self, WGL_Language** value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizer.get_Constraints() */
 HRESULT wmesp_speech_recognizer_get__constraints(WMESP_SpeechRecognizer *self, WFOCO_IVector_WMESP_ISpeechRecognitionConstraint** value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizer.get_Timeouts() */
 HRESULT wmesp_speech_recognizer_get__timeouts(WMESP_SpeechRecognizer *self, WMESP_SpeechRecognizerTimeouts** value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizer.get_UIOptions() */
 HRESULT wmesp_speech_recognizer_get__u_i_options(WMESP_SpeechRecognizer *self, WMESP_SpeechRecognizerUIOptions** value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizer.CompileConstraintsAsync() */
 HRESULT wmesp_speech_recognizer_compile_constraints_async(WMESP_SpeechRecognizer *self, WF_IAsyncOperation_WMESP_SpeechRecognitionCompilationResult** out);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizer.RecognizeAsync() */
 HRESULT wmesp_speech_recognizer_recognize_async(WMESP_SpeechRecognizer *self, WF_IAsyncOperation_WMESP_SpeechRecognitionResult** out);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizer.RecognizeWithUIAsync() */
 HRESULT wmesp_speech_recognizer_recognize_with_u_i_async(WMESP_SpeechRecognizer *self, WF_IAsyncOperation_WMESP_SpeechRecognitionResult** out);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizer.Close() */
 HRESULT wmesp_speech_recognizer_close(WMESP_SpeechRecognizer *self);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizer.get_ContinuousRecognitionSession() */
 HRESULT wmesp_speech_recognizer_get__continuous_recognition_session(WMESP_SpeechRecognizer *self, WMESP_SpeechContinuousRecognitionSession** value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizer.get_State() */
 HRESULT wmesp_speech_recognizer_get__state(WMESP_SpeechRecognizer *self, WMESP_SpeechRecognizerState *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizer.StopRecognitionAsync() */
 HRESULT wmesp_speech_recognizer_stop_recognition_async(WMESP_SpeechRecognizer *self, WF_IAsyncAction** out);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizer.TrySetSystemSpeechLanguageAsync(speechLanguage) */
 HRESULT wmesp_speech_recognizer_try_set_system_speech_language_async(WGL_Language* speechLanguage, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizer.get_SystemSpeechLanguage() */
 HRESULT wmesp_speech_recognizer_get__system_speech_language(WGL_Language** value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizer.get_SupportedTopicLanguages() */
 HRESULT wmesp_speech_recognizer_get__supported_topic_languages(WFOCO_IVectorView_WGL_Language** value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizer.get_SupportedGrammarLanguages() */
 HRESULT wmesp_speech_recognizer_get__supported_grammar_languages(WFOCO_IVectorView_WGL_Language** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmesp_speech_recognizer_on_recognition_quality_degrading(WMESP_SpeechRecognizer *self, cwinrt_event_fn fn, void *ctx);
@@ -674,123 +552,68 @@ void wmesp_speech_recognizer_off_state_changed(WMESP_SpeechRecognizer *self, cwi
 cwinrt_token wmesp_speech_recognizer_on_hypothesis_generated(WMESP_SpeechRecognizer *self, cwinrt_event_fn fn, void *ctx);
 void wmesp_speech_recognizer_off_hypothesis_generated(WMESP_SpeechRecognizer *self, cwinrt_token token);
 
-/* activate Windows.Media.SpeechRecognition.SpeechRecognizerStateChangedEventArgs */
 HRESULT wmesp_speech_recognizer_state_changed_event_args_new(WMESP_SpeechRecognizerStateChangedEventArgs **out);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizerStateChangedEventArgs */
-/* Windows.Media.SpeechRecognition.SpeechRecognizerStateChangedEventArgs.get_State() */
 HRESULT wmesp_speech_recognizer_state_changed_event_args_get__state(WMESP_SpeechRecognizerStateChangedEventArgs *self, WMESP_SpeechRecognizerState *value);
 
-/* activate Windows.Media.SpeechRecognition.SpeechRecognizerTimeouts */
 HRESULT wmesp_speech_recognizer_timeouts_new(WMESP_SpeechRecognizerTimeouts **out);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizerTimeouts */
-/* Windows.Media.SpeechRecognition.SpeechRecognizerTimeouts.get_InitialSilenceTimeout() */
 HRESULT wmesp_speech_recognizer_timeouts_get__initial_silence_timeout(WMESP_SpeechRecognizerTimeouts *self, WF_TimeSpan *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizerTimeouts.put_InitialSilenceTimeout() */
 HRESULT wmesp_speech_recognizer_timeouts_put__initial_silence_timeout(WMESP_SpeechRecognizerTimeouts *self, WF_TimeSpan value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizerTimeouts.get_EndSilenceTimeout() */
 HRESULT wmesp_speech_recognizer_timeouts_get__end_silence_timeout(WMESP_SpeechRecognizerTimeouts *self, WF_TimeSpan *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizerTimeouts.put_EndSilenceTimeout() */
 HRESULT wmesp_speech_recognizer_timeouts_put__end_silence_timeout(WMESP_SpeechRecognizerTimeouts *self, WF_TimeSpan value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizerTimeouts.get_BabbleTimeout() */
 HRESULT wmesp_speech_recognizer_timeouts_get__babble_timeout(WMESP_SpeechRecognizerTimeouts *self, WF_TimeSpan *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizerTimeouts.put_BabbleTimeout() */
 HRESULT wmesp_speech_recognizer_timeouts_put__babble_timeout(WMESP_SpeechRecognizerTimeouts *self, WF_TimeSpan value);
 
-/* activate Windows.Media.SpeechRecognition.SpeechRecognizerUIOptions */
 HRESULT wmesp_speech_recognizer_u_i_options_new(WMESP_SpeechRecognizerUIOptions **out);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizerUIOptions */
-/* Windows.Media.SpeechRecognition.SpeechRecognizerUIOptions.get_ExampleText() */
 HRESULT wmesp_speech_recognizer_u_i_options_get__example_text(WMESP_SpeechRecognizerUIOptions *self, cwinrt_hstring *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizerUIOptions.put_ExampleText() */
 HRESULT wmesp_speech_recognizer_u_i_options_put__example_text(WMESP_SpeechRecognizerUIOptions *self, cwinrt_hstring value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizerUIOptions.get_AudiblePrompt() */
 HRESULT wmesp_speech_recognizer_u_i_options_get__audible_prompt(WMESP_SpeechRecognizerUIOptions *self, cwinrt_hstring *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizerUIOptions.put_AudiblePrompt() */
 HRESULT wmesp_speech_recognizer_u_i_options_put__audible_prompt(WMESP_SpeechRecognizerUIOptions *self, cwinrt_hstring value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizerUIOptions.get_IsReadBackEnabled() */
 HRESULT wmesp_speech_recognizer_u_i_options_get__is_read_back_enabled(WMESP_SpeechRecognizerUIOptions *self, BOOL *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizerUIOptions.put_IsReadBackEnabled() */
 HRESULT wmesp_speech_recognizer_u_i_options_put__is_read_back_enabled(WMESP_SpeechRecognizerUIOptions *self, BOOL value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizerUIOptions.get_ShowConfirmation() */
 HRESULT wmesp_speech_recognizer_u_i_options_get__show_confirmation(WMESP_SpeechRecognizerUIOptions *self, BOOL *value);
 
-/* Windows.Media.SpeechRecognition.SpeechRecognizerUIOptions.put_ShowConfirmation() */
 HRESULT wmesp_speech_recognizer_u_i_options_put__show_confirmation(WMESP_SpeechRecognizerUIOptions *self, BOOL value);
 
-/* Windows.Media.SpeechRecognition.ISpeechRecognitionGrammarFileConstraintFactory */
-/* Windows.Media.SpeechRecognition.ISpeechRecognitionGrammarFileConstraintFactory.Create(file) */
 HRESULT wmesp_speech_recognition_grammar_file_constraint_factory_create(WMESP_ISpeechRecognitionGrammarFileConstraintFactory *self, WS_StorageFile* file, WMESP_SpeechRecognitionGrammarFileConstraint** out);
 
-/* Windows.Media.SpeechRecognition.ISpeechRecognitionGrammarFileConstraintFactory.CreateWithTag(file, tag) */
 HRESULT wmesp_speech_recognition_grammar_file_constraint_factory_create_with_tag(WMESP_ISpeechRecognitionGrammarFileConstraintFactory *self, WS_StorageFile* file, cwinrt_hstring tag, WMESP_SpeechRecognitionGrammarFileConstraint** out);
 
-/* Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionCompletedEventArgs */
-/* Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionResultGeneratedEventArgs */
-/* Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionSession */
-/* Windows.Media.SpeechRecognition.ISpeechRecognitionCompilationResult */
-/* Windows.Media.SpeechRecognition.ISpeechRecognitionGrammarFileConstraint */
-/* Windows.Media.SpeechRecognition.ISpeechRecognitionHypothesis */
-/* Windows.Media.SpeechRecognition.ISpeechRecognitionHypothesisGeneratedEventArgs */
-/* Windows.Media.SpeechRecognition.ISpeechRecognitionListConstraint */
-/* Windows.Media.SpeechRecognition.ISpeechRecognitionQualityDegradingEventArgs */
-/* Windows.Media.SpeechRecognition.ISpeechRecognitionResult */
-/* Windows.Media.SpeechRecognition.ISpeechRecognitionResult2 */
-/* Windows.Media.SpeechRecognition.ISpeechRecognitionResult2.get_PhraseStartTime() */
 HRESULT wmesp_speech_recognition_result_2_get__phrase_start_time(WMESP_ISpeechRecognitionResult_2 *self, WF_DateTime *value);
 
-/* Windows.Media.SpeechRecognition.ISpeechRecognitionResult2.get_PhraseDuration() */
 HRESULT wmesp_speech_recognition_result_2_get__phrase_duration(WMESP_ISpeechRecognitionResult_2 *self, WF_TimeSpan *value);
 
-/* Windows.Media.SpeechRecognition.ISpeechRecognitionSemanticInterpretation */
-/* Windows.Media.SpeechRecognition.ISpeechRecognitionTopicConstraint */
-/* Windows.Media.SpeechRecognition.ISpeechRecognizer */
-/* Windows.Media.SpeechRecognition.ISpeechRecognizer2 */
-/* Windows.Media.SpeechRecognition.ISpeechRecognizer2.get_ContinuousRecognitionSession() */
 HRESULT wmesp_speech_recognizer_2_get__continuous_recognition_session(WMESP_ISpeechRecognizer_2 *self, WMESP_SpeechContinuousRecognitionSession** value);
 
-/* Windows.Media.SpeechRecognition.ISpeechRecognizer2.get_State() */
 HRESULT wmesp_speech_recognizer_2_get__state(WMESP_ISpeechRecognizer_2 *self, WMESP_SpeechRecognizerState *value);
 
-/* Windows.Media.SpeechRecognition.ISpeechRecognizer2.StopRecognitionAsync() */
 HRESULT wmesp_speech_recognizer_2_stop_recognition_async(WMESP_ISpeechRecognizer_2 *self, WF_IAsyncAction** out);
 
-/* Windows.Media.SpeechRecognition.ISpeechRecognizerStateChangedEventArgs */
-/* Windows.Media.SpeechRecognition.ISpeechRecognizerTimeouts */
-/* Windows.Media.SpeechRecognition.ISpeechRecognizerUIOptions */
-/* Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint */
-/* Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint.get_IsEnabled() */
 HRESULT wmesp_speech_recognition_constraint_get__is_enabled(WMESP_ISpeechRecognitionConstraint *self, BOOL *value);
 
-/* Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint.put_IsEnabled() */
 HRESULT wmesp_speech_recognition_constraint_put__is_enabled(WMESP_ISpeechRecognitionConstraint *self, BOOL value);
 
-/* Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint.get_Tag() */
 HRESULT wmesp_speech_recognition_constraint_get__tag(WMESP_ISpeechRecognitionConstraint *self, cwinrt_hstring *value);
 
-/* Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint.put_Tag() */
 HRESULT wmesp_speech_recognition_constraint_put__tag(WMESP_ISpeechRecognitionConstraint *self, cwinrt_hstring value);
 
-/* Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint.get_Type() */
 HRESULT wmesp_speech_recognition_constraint_get__type(WMESP_ISpeechRecognitionConstraint *self, WMESP_SpeechRecognitionConstraintType *value);
 
-/* Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint.get_Probability() */
 HRESULT wmesp_speech_recognition_constraint_get__probability(WMESP_ISpeechRecognitionConstraint *self, WMESP_SpeechRecognitionConstraintProbability *value);
 
-/* Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint.put_Probability() */
 HRESULT wmesp_speech_recognition_constraint_put__probability(WMESP_ISpeechRecognitionConstraint *self, WMESP_SpeechRecognitionConstraintProbability value);
 
 #endif /* CWINRT_WINDOWS_MEDIA_SPEECHRECOGNITION_H */

@@ -12,13 +12,11 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WUIWI_AppWindow
 #define CWINRT_FWD_WUIWI_AppWindow
 typedef struct WUIWI_AppWindow WUIWI_AppWindow;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUICOPR_SystemNavigationManagerPreview WUICOPR_SystemNavigationManagerPreview;
 typedef struct WUICOPR_SystemNavigationCloseRequestedPreviewEventArgs WUICOPR_SystemNavigationCloseRequestedPreviewEventArgs;
 typedef struct WUICOPR_ISystemNavigationManagerPreviewStatics WUICOPR_ISystemNavigationManagerPreviewStatics;
@@ -28,7 +26,6 @@ typedef struct WUICOPR_ISystemNavigationManagerPreview WUICOPR_ISystemNavigation
 typedef struct WUICOPR_ISystemNavigationCloseRequestedPreviewEventArgs WUICOPR_ISystemNavigationCloseRequestedPreviewEventArgs;
 typedef struct WUICOPR_ICoreAppWindowPreview WUICOPR_ICoreAppWindowPreview;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_EventHandler_WUICOPR_SystemNavigationCloseRequestedPreviewEventArgs
 #define CWINRT_FWD_WF_EventHandler_WUICOPR_SystemNavigationCloseRequestedPreviewEventArgs
 typedef struct WF_EventHandler_WUICOPR_SystemNavigationCloseRequestedPreviewEventArgs WF_EventHandler_WUICOPR_SystemNavigationCloseRequestedPreviewEventArgs;
@@ -42,7 +39,6 @@ typedef struct WF_Deferral WF_Deferral;
 typedef struct WUIWI_AppWindow WUIWI_AppWindow;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -67,49 +63,29 @@ static const IID CWINRT_IID_WUICOPR_ISystemNavigationCloseRequestedPreviewEventA
 static const IID CWINRT_IID_WUICOPR_ICoreAppWindowPreview CWINRT_MAYBE_UNUSED = { 0xA4F6E665, 0x365E, 0x5FDE, { 0x87, 0xA5, 0x95, 0x43, 0xC3, 0xA1, 0x5A, 0xA8 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.UI.Core.Preview.SystemNavigationManagerPreview */
 HRESULT wuicopr_system_navigation_manager_preview_new(WUICOPR_SystemNavigationManagerPreview **out);
 
-/* Windows.UI.Core.Preview.SystemNavigationManagerPreview */
-/* Windows.UI.Core.Preview.SystemNavigationManagerPreview.GetForCurrentView() */
 HRESULT wuicopr_system_navigation_manager_preview_get_for_current_view(WUICOPR_SystemNavigationManagerPreview** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuicopr_system_navigation_manager_preview_on_close_requested(WUICOPR_SystemNavigationManagerPreview *self, cwinrt_event_fn fn, void *ctx);
 void wuicopr_system_navigation_manager_preview_off_close_requested(WUICOPR_SystemNavigationManagerPreview *self, cwinrt_token token);
 
-/* activate Windows.UI.Core.Preview.SystemNavigationCloseRequestedPreviewEventArgs */
 HRESULT wuicopr_system_navigation_close_requested_preview_event_args_new(WUICOPR_SystemNavigationCloseRequestedPreviewEventArgs **out);
 
-/* Windows.UI.Core.Preview.SystemNavigationCloseRequestedPreviewEventArgs */
-/* Windows.UI.Core.Preview.SystemNavigationCloseRequestedPreviewEventArgs.get_Handled() */
 HRESULT wuicopr_system_navigation_close_requested_preview_event_args_get__handled(WUICOPR_SystemNavigationCloseRequestedPreviewEventArgs *self, BOOL *value);
 
-/* Windows.UI.Core.Preview.SystemNavigationCloseRequestedPreviewEventArgs.put_Handled() */
 HRESULT wuicopr_system_navigation_close_requested_preview_event_args_put__handled(WUICOPR_SystemNavigationCloseRequestedPreviewEventArgs *self, BOOL value);
 
-/* Windows.UI.Core.Preview.SystemNavigationCloseRequestedPreviewEventArgs.GetDeferral() */
 HRESULT wuicopr_system_navigation_close_requested_preview_event_args_get_deferral(WUICOPR_SystemNavigationCloseRequestedPreviewEventArgs *self, WF_Deferral** out);
 
-/* Windows.UI.Core.Preview.ISystemNavigationManagerPreviewStatics */
-/* Windows.UI.Core.Preview.ISystemNavigationManagerPreviewStatics.GetForCurrentView() */
 HRESULT wuicopr_system_navigation_manager_preview_statics_get_for_current_view(WUICOPR_ISystemNavigationManagerPreviewStatics *self, WUICOPR_SystemNavigationManagerPreview** out);
 
-/* activate Windows.UI.Core.Preview.CoreAppWindowPreview */
 HRESULT wuicopr_core_app_window_preview_new(WUICOPR_CoreAppWindowPreview **out);
 
-/* Windows.UI.Core.Preview.CoreAppWindowPreview */
-/* Windows.UI.Core.Preview.CoreAppWindowPreview.GetIdFromWindow(window) */
 HRESULT wuicopr_core_app_window_preview_get_id_from_window(WUIWI_AppWindow* window, int32_t *out);
 
-/* Windows.UI.Core.Preview.ICoreAppWindowPreviewStatics */
-/* Windows.UI.Core.Preview.ICoreAppWindowPreviewStatics.GetIdFromWindow(window) */
 HRESULT wuicopr_core_app_window_preview_statics_get_id_from_window(WUICOPR_ICoreAppWindowPreviewStatics *self, WUIWI_AppWindow* window, int32_t *out);
 
-/* Windows.UI.Core.Preview.ISystemNavigationManagerPreview */
-/* Windows.UI.Core.Preview.ISystemNavigationCloseRequestedPreviewEventArgs */
 #endif /* CWINRT_WINDOWS_UI_CORE_PREVIEW_H */

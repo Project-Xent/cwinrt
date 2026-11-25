@@ -14,7 +14,6 @@
 #include <cwinrt/Windows.UI.Popups.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
@@ -28,7 +27,6 @@ typedef struct WAPCO_AppListEntry WAPCO_AppListEntry;
 typedef struct WPESP_SpatialBoundingBox WPESP_SpatialBoundingBox;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUIST_IJumpListItemStatics WUIST_IJumpListItemStatics;
 typedef struct WUIST_IJumpListStatics WUIST_IJumpListStatics;
 typedef struct WUIST_ISecondaryTileFactory_2 WUIST_ISecondaryTileFactory_2;
@@ -60,7 +58,6 @@ typedef struct WUIST_IVisualElementsRequestedEventArgs WUIST_IVisualElementsRequ
 typedef struct WUIST_ISecondaryTile WUIST_ISecondaryTile;
 typedef struct WUIST_IStartScreenManager WUIST_IStartScreenManager;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WUIST_JumpList
 #define CWINRT_FWD_WF_IAsyncOperation_WUIST_JumpList
 typedef struct WF_IAsyncOperation_WUIST_JumpList WF_IAsyncOperation_WUIST_JumpList;
@@ -182,7 +179,6 @@ typedef enum WUIST_ForegroundText {
 } WUIST_ForegroundText;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -271,471 +267,295 @@ static const IID CWINRT_IID_WUIST_ISecondaryTile CWINRT_MAYBE_UNUSED = { 0x9E9E5
 static const IID CWINRT_IID_WUIST_IStartScreenManager CWINRT_MAYBE_UNUSED = { 0x4A1DCBCB, 0x26E9, 0x4EB4, { 0x89, 0x33, 0x85, 0x9E, 0xB6, 0xEC, 0xDB, 0x29 } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.StartScreen.IJumpListItemStatics */
-/* Windows.UI.StartScreen.IJumpListItemStatics.CreateWithArguments(arguments, displayName) */
 HRESULT wuist_jump_list_item_statics_create_with_arguments(WUIST_IJumpListItemStatics *self, cwinrt_hstring arguments, cwinrt_hstring displayName, WUIST_JumpListItem** out);
 
-/* Windows.UI.StartScreen.IJumpListItemStatics.CreateSeparator() */
 HRESULT wuist_jump_list_item_statics_create_separator(WUIST_IJumpListItemStatics *self, WUIST_JumpListItem** out);
 
-/* Windows.UI.StartScreen.IJumpListStatics */
-/* Windows.UI.StartScreen.IJumpListStatics.LoadCurrentAsync() */
 HRESULT wuist_jump_list_statics_load_current_async(WUIST_IJumpListStatics *self, WF_IAsyncOperation_WUIST_JumpList** out);
 
-/* Windows.UI.StartScreen.IJumpListStatics.IsSupported() */
 HRESULT wuist_jump_list_statics_is_supported(WUIST_IJumpListStatics *self, BOOL *out);
 
-/* Windows.UI.StartScreen.ISecondaryTileFactory2 */
-/* Windows.UI.StartScreen.ISecondaryTileFactory2.CreateMinimalTile(tileId, displayName, arguments, square150x150Logo, desiredSize) */
 HRESULT wuist_secondary_tile_factory_2_create_minimal_tile(WUIST_ISecondaryTileFactory_2 *self, cwinrt_hstring tileId, cwinrt_hstring displayName, cwinrt_hstring arguments, WF_Uri* square150x150Logo, WUIST_TileSize desiredSize, WUIST_SecondaryTile** out);
 
-/* Windows.UI.StartScreen.ISecondaryTileStatics */
-/* Windows.UI.StartScreen.ISecondaryTileStatics.Exists(tileId) */
 HRESULT wuist_secondary_tile_statics_exists(WUIST_ISecondaryTileStatics *self, cwinrt_hstring tileId, BOOL *out);
 
-/* Windows.UI.StartScreen.ISecondaryTileStatics.FindAllAsync() */
 HRESULT wuist_secondary_tile_statics_find_all_async(WUIST_ISecondaryTileStatics *self, WF_IAsyncOperation_WFOCO_IVectorView_WUIST_SecondaryTile** out);
 
-/* Windows.UI.StartScreen.ISecondaryTileStatics.FindAllAsync(applicationId) */
 HRESULT wuist_secondary_tile_statics_find_all_async_str_p(WUIST_ISecondaryTileStatics *self, cwinrt_hstring applicationId, WF_IAsyncOperation_WFOCO_IVectorView_WUIST_SecondaryTile** out);
 
-/* Windows.UI.StartScreen.ISecondaryTileStatics.FindAllForPackageAsync() */
 HRESULT wuist_secondary_tile_statics_find_all_for_package_async(WUIST_ISecondaryTileStatics *self, WF_IAsyncOperation_WFOCO_IVectorView_WUIST_SecondaryTile** out);
 
-/* Windows.UI.StartScreen.IStartScreenManagerStatics */
-/* Windows.UI.StartScreen.IStartScreenManagerStatics.GetDefault() */
 HRESULT wuist_start_screen_manager_statics_get_default(WUIST_IStartScreenManagerStatics *self, WUIST_StartScreenManager** out);
 
-/* Windows.UI.StartScreen.IStartScreenManagerStatics.GetForUser(user) */
 HRESULT wuist_start_screen_manager_statics_get_for_user(WUIST_IStartScreenManagerStatics *self, WSY_User* user, WUIST_StartScreenManager** out);
 
-/* activate Windows.UI.StartScreen.JumpList */
 HRESULT wuist_jump_list_new(WUIST_JumpList **out);
 
-/* Windows.UI.StartScreen.JumpList */
-/* Windows.UI.StartScreen.JumpList.get_Items() */
 HRESULT wuist_jump_list_get__items(WUIST_JumpList *self, WFOCO_IVector_WUIST_JumpListItem** value);
 
-/* Windows.UI.StartScreen.JumpList.get_SystemGroupKind() */
 HRESULT wuist_jump_list_get__system_group_kind(WUIST_JumpList *self, WUIST_JumpListSystemGroupKind *value);
 
-/* Windows.UI.StartScreen.JumpList.put_SystemGroupKind() */
 HRESULT wuist_jump_list_put__system_group_kind(WUIST_JumpList *self, WUIST_JumpListSystemGroupKind value);
 
-/* Windows.UI.StartScreen.JumpList.SaveAsync() */
 HRESULT wuist_jump_list_save_async(WUIST_JumpList *self, WF_IAsyncAction** out);
 
-/* Windows.UI.StartScreen.JumpList.LoadCurrentAsync() */
 HRESULT wuist_jump_list_load_current_async(WF_IAsyncOperation_WUIST_JumpList** out);
 
-/* Windows.UI.StartScreen.JumpList.IsSupported() */
 HRESULT wuist_jump_list_is_supported(BOOL *out);
 
-/* activate Windows.UI.StartScreen.JumpListItem */
 HRESULT wuist_jump_list_item_new(WUIST_JumpListItem **out);
 
-/* Windows.UI.StartScreen.JumpListItem */
-/* Windows.UI.StartScreen.JumpListItem.get_Kind() */
 HRESULT wuist_jump_list_item_get__kind(WUIST_JumpListItem *self, WUIST_JumpListItemKind *value);
 
-/* Windows.UI.StartScreen.JumpListItem.get_Arguments() */
 HRESULT wuist_jump_list_item_get__arguments(WUIST_JumpListItem *self, cwinrt_hstring *value);
 
-/* Windows.UI.StartScreen.JumpListItem.get_RemovedByUser() */
 HRESULT wuist_jump_list_item_get__removed_by_user(WUIST_JumpListItem *self, BOOL *value);
 
-/* Windows.UI.StartScreen.JumpListItem.get_Description() */
 HRESULT wuist_jump_list_item_get__description(WUIST_JumpListItem *self, cwinrt_hstring *value);
 
-/* Windows.UI.StartScreen.JumpListItem.put_Description() */
 HRESULT wuist_jump_list_item_put__description(WUIST_JumpListItem *self, cwinrt_hstring value);
 
-/* Windows.UI.StartScreen.JumpListItem.get_DisplayName() */
 HRESULT wuist_jump_list_item_get__display_name(WUIST_JumpListItem *self, cwinrt_hstring *value);
 
-/* Windows.UI.StartScreen.JumpListItem.put_DisplayName() */
 HRESULT wuist_jump_list_item_put__display_name(WUIST_JumpListItem *self, cwinrt_hstring value);
 
-/* Windows.UI.StartScreen.JumpListItem.get_GroupName() */
 HRESULT wuist_jump_list_item_get__group_name(WUIST_JumpListItem *self, cwinrt_hstring *value);
 
-/* Windows.UI.StartScreen.JumpListItem.put_GroupName() */
 HRESULT wuist_jump_list_item_put__group_name(WUIST_JumpListItem *self, cwinrt_hstring value);
 
-/* Windows.UI.StartScreen.JumpListItem.get_Logo() */
 HRESULT wuist_jump_list_item_get__logo(WUIST_JumpListItem *self, WF_Uri** value);
 
-/* Windows.UI.StartScreen.JumpListItem.put_Logo() */
 HRESULT wuist_jump_list_item_put__logo(WUIST_JumpListItem *self, WF_Uri* value);
 
-/* Windows.UI.StartScreen.JumpListItem.CreateWithArguments(arguments, displayName) */
 HRESULT wuist_jump_list_item_create_with_arguments(cwinrt_hstring arguments, cwinrt_hstring displayName, WUIST_JumpListItem** out);
 
-/* Windows.UI.StartScreen.JumpListItem.CreateSeparator() */
 HRESULT wuist_jump_list_item_create_separator(WUIST_JumpListItem** out);
 
-/* activate Windows.UI.StartScreen.SecondaryTile */
 HRESULT wuist_secondary_tile_new(WUIST_SecondaryTile **out);
 
-/* Windows.UI.StartScreen.SecondaryTile */
-/* Windows.UI.StartScreen.SecondaryTile.put_TileId() */
 HRESULT wuist_secondary_tile_put__tile_id(WUIST_SecondaryTile *self, cwinrt_hstring value);
 
-/* Windows.UI.StartScreen.SecondaryTile.get_TileId() */
 HRESULT wuist_secondary_tile_get__tile_id(WUIST_SecondaryTile *self, cwinrt_hstring *value);
 
-/* Windows.UI.StartScreen.SecondaryTile.put_Arguments() */
 HRESULT wuist_secondary_tile_put__arguments(WUIST_SecondaryTile *self, cwinrt_hstring value);
 
-/* Windows.UI.StartScreen.SecondaryTile.get_Arguments() */
 HRESULT wuist_secondary_tile_get__arguments(WUIST_SecondaryTile *self, cwinrt_hstring *value);
 
-/* Windows.UI.StartScreen.SecondaryTile.put_ShortName() */
 HRESULT wuist_secondary_tile_put__short_name(WUIST_SecondaryTile *self, cwinrt_hstring value);
 
-/* Windows.UI.StartScreen.SecondaryTile.get_ShortName() */
 HRESULT wuist_secondary_tile_get__short_name(WUIST_SecondaryTile *self, cwinrt_hstring *value);
 
-/* Windows.UI.StartScreen.SecondaryTile.put_DisplayName() */
 HRESULT wuist_secondary_tile_put__display_name(WUIST_SecondaryTile *self, cwinrt_hstring value);
 
-/* Windows.UI.StartScreen.SecondaryTile.get_DisplayName() */
 HRESULT wuist_secondary_tile_get__display_name(WUIST_SecondaryTile *self, cwinrt_hstring *value);
 
-/* Windows.UI.StartScreen.SecondaryTile.put_Logo() */
 HRESULT wuist_secondary_tile_put__logo(WUIST_SecondaryTile *self, WF_Uri* value);
 
-/* Windows.UI.StartScreen.SecondaryTile.get_Logo() */
 HRESULT wuist_secondary_tile_get__logo(WUIST_SecondaryTile *self, WF_Uri** value);
 
-/* Windows.UI.StartScreen.SecondaryTile.put_SmallLogo() */
 HRESULT wuist_secondary_tile_put__small_logo(WUIST_SecondaryTile *self, WF_Uri* value);
 
-/* Windows.UI.StartScreen.SecondaryTile.get_SmallLogo() */
 HRESULT wuist_secondary_tile_get__small_logo(WUIST_SecondaryTile *self, WF_Uri** value);
 
-/* Windows.UI.StartScreen.SecondaryTile.put_WideLogo() */
 HRESULT wuist_secondary_tile_put__wide_logo(WUIST_SecondaryTile *self, WF_Uri* value);
 
-/* Windows.UI.StartScreen.SecondaryTile.get_WideLogo() */
 HRESULT wuist_secondary_tile_get__wide_logo(WUIST_SecondaryTile *self, WF_Uri** value);
 
-/* Windows.UI.StartScreen.SecondaryTile.put_LockScreenBadgeLogo() */
 HRESULT wuist_secondary_tile_put__lock_screen_badge_logo(WUIST_SecondaryTile *self, WF_Uri* value);
 
-/* Windows.UI.StartScreen.SecondaryTile.get_LockScreenBadgeLogo() */
 HRESULT wuist_secondary_tile_get__lock_screen_badge_logo(WUIST_SecondaryTile *self, WF_Uri** value);
 
-/* Windows.UI.StartScreen.SecondaryTile.put_LockScreenDisplayBadgeAndTileText() */
 HRESULT wuist_secondary_tile_put__lock_screen_display_badge_and_tile_text(WUIST_SecondaryTile *self, BOOL value);
 
-/* Windows.UI.StartScreen.SecondaryTile.get_LockScreenDisplayBadgeAndTileText() */
 HRESULT wuist_secondary_tile_get__lock_screen_display_badge_and_tile_text(WUIST_SecondaryTile *self, BOOL *value);
 
-/* Windows.UI.StartScreen.SecondaryTile.put_TileOptions() */
 HRESULT wuist_secondary_tile_put__tile_options(WUIST_SecondaryTile *self, WUIST_TileOptions value);
 
-/* Windows.UI.StartScreen.SecondaryTile.get_TileOptions() */
 HRESULT wuist_secondary_tile_get__tile_options(WUIST_SecondaryTile *self, WUIST_TileOptions *value);
 
-/* Windows.UI.StartScreen.SecondaryTile.put_ForegroundText() */
 HRESULT wuist_secondary_tile_put__foreground_text(WUIST_SecondaryTile *self, WUIST_ForegroundText value);
 
-/* Windows.UI.StartScreen.SecondaryTile.get_ForegroundText() */
 HRESULT wuist_secondary_tile_get__foreground_text(WUIST_SecondaryTile *self, WUIST_ForegroundText *value);
 
-/* Windows.UI.StartScreen.SecondaryTile.put_BackgroundColor() */
 HRESULT wuist_secondary_tile_put__background_color(WUIST_SecondaryTile *self, WUI_Color value);
 
-/* Windows.UI.StartScreen.SecondaryTile.get_BackgroundColor() */
 HRESULT wuist_secondary_tile_get__background_color(WUIST_SecondaryTile *self, WUI_Color *value);
 
-/* Windows.UI.StartScreen.SecondaryTile.RequestCreateAsync() */
 HRESULT wuist_secondary_tile_request_create_async(WUIST_SecondaryTile *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.StartScreen.SecondaryTile.RequestCreateAsync(invocationPoint) */
 HRESULT wuist_secondary_tile_request_create_async_point_p(WUIST_SecondaryTile *self, WF_Point invocationPoint, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.StartScreen.SecondaryTile.RequestCreateForSelectionAsync(selection) */
 HRESULT wuist_secondary_tile_request_create_for_selection_async(WUIST_SecondaryTile *self, WF_Rect selection, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.StartScreen.SecondaryTile.RequestCreateForSelectionAsync(selection, preferredPlacement) */
 HRESULT wuist_secondary_tile_request_create_for_selection_async_rect_placement_p(WUIST_SecondaryTile *self, WF_Rect selection, WUIPO_Placement preferredPlacement, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.StartScreen.SecondaryTile.RequestDeleteAsync() */
 HRESULT wuist_secondary_tile_request_delete_async(WUIST_SecondaryTile *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.StartScreen.SecondaryTile.RequestDeleteAsync(invocationPoint) */
 HRESULT wuist_secondary_tile_request_delete_async_point_p(WUIST_SecondaryTile *self, WF_Point invocationPoint, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.StartScreen.SecondaryTile.RequestDeleteForSelectionAsync(selection) */
 HRESULT wuist_secondary_tile_request_delete_for_selection_async(WUIST_SecondaryTile *self, WF_Rect selection, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.StartScreen.SecondaryTile.RequestDeleteForSelectionAsync(selection, preferredPlacement) */
 HRESULT wuist_secondary_tile_request_delete_for_selection_async_rect_placement_p(WUIST_SecondaryTile *self, WF_Rect selection, WUIPO_Placement preferredPlacement, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.StartScreen.SecondaryTile.UpdateAsync() */
 HRESULT wuist_secondary_tile_update_async(WUIST_SecondaryTile *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.StartScreen.SecondaryTile.put_PhoneticName() */
 HRESULT wuist_secondary_tile_put__phonetic_name(WUIST_SecondaryTile *self, cwinrt_hstring value);
 
-/* Windows.UI.StartScreen.SecondaryTile.get_PhoneticName() */
 HRESULT wuist_secondary_tile_get__phonetic_name(WUIST_SecondaryTile *self, cwinrt_hstring *value);
 
-/* Windows.UI.StartScreen.SecondaryTile.get_VisualElements() */
 HRESULT wuist_secondary_tile_get__visual_elements(WUIST_SecondaryTile *self, WUIST_SecondaryTileVisualElements** value);
 
-/* Windows.UI.StartScreen.SecondaryTile.put_RoamingEnabled() */
 HRESULT wuist_secondary_tile_put__roaming_enabled(WUIST_SecondaryTile *self, BOOL value);
 
-/* Windows.UI.StartScreen.SecondaryTile.get_RoamingEnabled() */
 HRESULT wuist_secondary_tile_get__roaming_enabled(WUIST_SecondaryTile *self, BOOL *value);
 
-/* Windows.UI.StartScreen.SecondaryTile.Exists(tileId) */
 HRESULT wuist_secondary_tile_exists(cwinrt_hstring tileId, BOOL *out);
 
-/* Windows.UI.StartScreen.SecondaryTile.FindAllAsync() */
 HRESULT wuist_secondary_tile_find_all_async(WF_IAsyncOperation_WFOCO_IVectorView_WUIST_SecondaryTile** out);
 
-/* Windows.UI.StartScreen.SecondaryTile.FindAllAsync(applicationId) */
 HRESULT wuist_secondary_tile_find_all_async_str_p(cwinrt_hstring applicationId, WF_IAsyncOperation_WFOCO_IVectorView_WUIST_SecondaryTile** out);
 
-/* Windows.UI.StartScreen.SecondaryTile.FindAllForPackageAsync() */
 HRESULT wuist_secondary_tile_find_all_for_package_async(WF_IAsyncOperation_WFOCO_IVectorView_WUIST_SecondaryTile** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuist_secondary_tile_on_visual_elements_requested(WUIST_SecondaryTile *self, cwinrt_event_fn fn, void *ctx);
 void wuist_secondary_tile_off_visual_elements_requested(WUIST_SecondaryTile *self, cwinrt_token token);
 
-/* activate Windows.UI.StartScreen.SecondaryTileVisualElements */
 HRESULT wuist_secondary_tile_visual_elements_new(WUIST_SecondaryTileVisualElements **out);
 
-/* Windows.UI.StartScreen.SecondaryTileVisualElements */
-/* Windows.UI.StartScreen.SecondaryTileVisualElements.put_Square30x30Logo() */
 HRESULT wuist_secondary_tile_visual_elements_put__square30x30_logo(WUIST_SecondaryTileVisualElements *self, WF_Uri* value);
 
-/* Windows.UI.StartScreen.SecondaryTileVisualElements.get_Square30x30Logo() */
 HRESULT wuist_secondary_tile_visual_elements_get__square30x30_logo(WUIST_SecondaryTileVisualElements *self, WF_Uri** value);
 
-/* Windows.UI.StartScreen.SecondaryTileVisualElements.put_Square70x70Logo() */
 HRESULT wuist_secondary_tile_visual_elements_put__square70x70_logo(WUIST_SecondaryTileVisualElements *self, WF_Uri* value);
 
-/* Windows.UI.StartScreen.SecondaryTileVisualElements.get_Square70x70Logo() */
 HRESULT wuist_secondary_tile_visual_elements_get__square70x70_logo(WUIST_SecondaryTileVisualElements *self, WF_Uri** value);
 
-/* Windows.UI.StartScreen.SecondaryTileVisualElements.put_Square150x150Logo() */
 HRESULT wuist_secondary_tile_visual_elements_put__square150x150_logo(WUIST_SecondaryTileVisualElements *self, WF_Uri* value);
 
-/* Windows.UI.StartScreen.SecondaryTileVisualElements.get_Square150x150Logo() */
 HRESULT wuist_secondary_tile_visual_elements_get__square150x150_logo(WUIST_SecondaryTileVisualElements *self, WF_Uri** value);
 
-/* Windows.UI.StartScreen.SecondaryTileVisualElements.put_Wide310x150Logo() */
 HRESULT wuist_secondary_tile_visual_elements_put__wide310x150_logo(WUIST_SecondaryTileVisualElements *self, WF_Uri* value);
 
-/* Windows.UI.StartScreen.SecondaryTileVisualElements.get_Wide310x150Logo() */
 HRESULT wuist_secondary_tile_visual_elements_get__wide310x150_logo(WUIST_SecondaryTileVisualElements *self, WF_Uri** value);
 
-/* Windows.UI.StartScreen.SecondaryTileVisualElements.put_Square310x310Logo() */
 HRESULT wuist_secondary_tile_visual_elements_put__square310x310_logo(WUIST_SecondaryTileVisualElements *self, WF_Uri* value);
 
-/* Windows.UI.StartScreen.SecondaryTileVisualElements.get_Square310x310Logo() */
 HRESULT wuist_secondary_tile_visual_elements_get__square310x310_logo(WUIST_SecondaryTileVisualElements *self, WF_Uri** value);
 
-/* Windows.UI.StartScreen.SecondaryTileVisualElements.put_ForegroundText() */
 HRESULT wuist_secondary_tile_visual_elements_put__foreground_text(WUIST_SecondaryTileVisualElements *self, WUIST_ForegroundText value);
 
-/* Windows.UI.StartScreen.SecondaryTileVisualElements.get_ForegroundText() */
 HRESULT wuist_secondary_tile_visual_elements_get__foreground_text(WUIST_SecondaryTileVisualElements *self, WUIST_ForegroundText *value);
 
-/* Windows.UI.StartScreen.SecondaryTileVisualElements.put_BackgroundColor() */
 HRESULT wuist_secondary_tile_visual_elements_put__background_color(WUIST_SecondaryTileVisualElements *self, WUI_Color value);
 
-/* Windows.UI.StartScreen.SecondaryTileVisualElements.get_BackgroundColor() */
 HRESULT wuist_secondary_tile_visual_elements_get__background_color(WUIST_SecondaryTileVisualElements *self, WUI_Color *value);
 
-/* Windows.UI.StartScreen.SecondaryTileVisualElements.put_ShowNameOnSquare150x150Logo() */
 HRESULT wuist_secondary_tile_visual_elements_put__show_name_on_square150x150_logo(WUIST_SecondaryTileVisualElements *self, BOOL value);
 
-/* Windows.UI.StartScreen.SecondaryTileVisualElements.get_ShowNameOnSquare150x150Logo() */
 HRESULT wuist_secondary_tile_visual_elements_get__show_name_on_square150x150_logo(WUIST_SecondaryTileVisualElements *self, BOOL *value);
 
-/* Windows.UI.StartScreen.SecondaryTileVisualElements.put_ShowNameOnWide310x150Logo() */
 HRESULT wuist_secondary_tile_visual_elements_put__show_name_on_wide310x150_logo(WUIST_SecondaryTileVisualElements *self, BOOL value);
 
-/* Windows.UI.StartScreen.SecondaryTileVisualElements.get_ShowNameOnWide310x150Logo() */
 HRESULT wuist_secondary_tile_visual_elements_get__show_name_on_wide310x150_logo(WUIST_SecondaryTileVisualElements *self, BOOL *value);
 
-/* Windows.UI.StartScreen.SecondaryTileVisualElements.put_ShowNameOnSquare310x310Logo() */
 HRESULT wuist_secondary_tile_visual_elements_put__show_name_on_square310x310_logo(WUIST_SecondaryTileVisualElements *self, BOOL value);
 
-/* Windows.UI.StartScreen.SecondaryTileVisualElements.get_ShowNameOnSquare310x310Logo() */
 HRESULT wuist_secondary_tile_visual_elements_get__show_name_on_square310x310_logo(WUIST_SecondaryTileVisualElements *self, BOOL *value);
 
-/* Windows.UI.StartScreen.SecondaryTileVisualElements.put_Square71x71Logo() */
 HRESULT wuist_secondary_tile_visual_elements_put__square71x71_logo(WUIST_SecondaryTileVisualElements *self, WF_Uri* value);
 
-/* Windows.UI.StartScreen.SecondaryTileVisualElements.get_Square71x71Logo() */
 HRESULT wuist_secondary_tile_visual_elements_get__square71x71_logo(WUIST_SecondaryTileVisualElements *self, WF_Uri** value);
 
-/* Windows.UI.StartScreen.SecondaryTileVisualElements.put_Square44x44Logo() */
 HRESULT wuist_secondary_tile_visual_elements_put__square44x44_logo(WUIST_SecondaryTileVisualElements *self, WF_Uri* value);
 
-/* Windows.UI.StartScreen.SecondaryTileVisualElements.get_Square44x44Logo() */
 HRESULT wuist_secondary_tile_visual_elements_get__square44x44_logo(WUIST_SecondaryTileVisualElements *self, WF_Uri** value);
 
-/* Windows.UI.StartScreen.SecondaryTileVisualElements.get_MixedRealityModel() */
 HRESULT wuist_secondary_tile_visual_elements_get__mixed_reality_model(WUIST_SecondaryTileVisualElements *self, WUIST_TileMixedRealityModel** value);
 
-/* activate Windows.UI.StartScreen.StartScreenManager */
 HRESULT wuist_start_screen_manager_new(WUIST_StartScreenManager **out);
 
-/* Windows.UI.StartScreen.StartScreenManager */
-/* Windows.UI.StartScreen.StartScreenManager.get_User() */
 HRESULT wuist_start_screen_manager_get__user(WUIST_StartScreenManager *self, WSY_User** value);
 
-/* Windows.UI.StartScreen.StartScreenManager.SupportsAppListEntry(appListEntry) */
 HRESULT wuist_start_screen_manager_supports_app_list_entry(WUIST_StartScreenManager *self, WAPCO_AppListEntry* appListEntry, BOOL *out);
 
-/* Windows.UI.StartScreen.StartScreenManager.ContainsAppListEntryAsync(appListEntry) */
 HRESULT wuist_start_screen_manager_contains_app_list_entry_async(WUIST_StartScreenManager *self, WAPCO_AppListEntry* appListEntry, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.StartScreen.StartScreenManager.RequestAddAppListEntryAsync(appListEntry) */
 HRESULT wuist_start_screen_manager_request_add_app_list_entry_async(WUIST_StartScreenManager *self, WAPCO_AppListEntry* appListEntry, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.StartScreen.StartScreenManager.ContainsSecondaryTileAsync(tileId) */
 HRESULT wuist_start_screen_manager_contains_secondary_tile_async(WUIST_StartScreenManager *self, cwinrt_hstring tileId, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.StartScreen.StartScreenManager.TryRemoveSecondaryTileAsync(tileId) */
 HRESULT wuist_start_screen_manager_try_remove_secondary_tile_async(WUIST_StartScreenManager *self, cwinrt_hstring tileId, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.StartScreen.StartScreenManager.GetDefault() */
 HRESULT wuist_start_screen_manager_get_default(WUIST_StartScreenManager** out);
 
-/* Windows.UI.StartScreen.StartScreenManager.GetForUser(user) */
 HRESULT wuist_start_screen_manager_get_for_user(WSY_User* user, WUIST_StartScreenManager** out);
 
-/* activate Windows.UI.StartScreen.TileMixedRealityModel */
 HRESULT wuist_tile_mixed_reality_model_new(WUIST_TileMixedRealityModel **out);
 
-/* Windows.UI.StartScreen.TileMixedRealityModel */
-/* Windows.UI.StartScreen.TileMixedRealityModel.put_Uri() */
 HRESULT wuist_tile_mixed_reality_model_put__uri(WUIST_TileMixedRealityModel *self, WF_Uri* value);
 
-/* Windows.UI.StartScreen.TileMixedRealityModel.get_Uri() */
 HRESULT wuist_tile_mixed_reality_model_get__uri(WUIST_TileMixedRealityModel *self, WF_Uri** value);
 
-/* Windows.UI.StartScreen.TileMixedRealityModel.put_BoundingBox() */
 HRESULT wuist_tile_mixed_reality_model_put__bounding_box(WUIST_TileMixedRealityModel *self, WPESP_SpatialBoundingBox* value);
 
-/* Windows.UI.StartScreen.TileMixedRealityModel.get_BoundingBox() */
 HRESULT wuist_tile_mixed_reality_model_get__bounding_box(WUIST_TileMixedRealityModel *self, WPESP_SpatialBoundingBox** value);
 
-/* Windows.UI.StartScreen.TileMixedRealityModel.put_ActivationBehavior() */
 HRESULT wuist_tile_mixed_reality_model_put__activation_behavior(WUIST_TileMixedRealityModel *self, WUIST_TileMixedRealityModelActivationBehavior value);
 
-/* Windows.UI.StartScreen.TileMixedRealityModel.get_ActivationBehavior() */
 HRESULT wuist_tile_mixed_reality_model_get__activation_behavior(WUIST_TileMixedRealityModel *self, WUIST_TileMixedRealityModelActivationBehavior *value);
 
-/* activate Windows.UI.StartScreen.VisualElementsRequest */
 HRESULT wuist_visual_elements_request_new(WUIST_VisualElementsRequest **out);
 
-/* Windows.UI.StartScreen.VisualElementsRequest */
-/* Windows.UI.StartScreen.VisualElementsRequest.get_VisualElements() */
 HRESULT wuist_visual_elements_request_get__visual_elements(WUIST_VisualElementsRequest *self, WUIST_SecondaryTileVisualElements** value);
 
-/* Windows.UI.StartScreen.VisualElementsRequest.get_AlternateVisualElements() */
 HRESULT wuist_visual_elements_request_get__alternate_visual_elements(WUIST_VisualElementsRequest *self, WFOCO_IVectorView_WUIST_SecondaryTileVisualElements** value);
 
-/* Windows.UI.StartScreen.VisualElementsRequest.get_Deadline() */
 HRESULT wuist_visual_elements_request_get__deadline(WUIST_VisualElementsRequest *self, WF_DateTime *value);
 
-/* Windows.UI.StartScreen.VisualElementsRequest.GetDeferral() */
 HRESULT wuist_visual_elements_request_get_deferral(WUIST_VisualElementsRequest *self, WUIST_VisualElementsRequestDeferral** out);
 
-/* activate Windows.UI.StartScreen.VisualElementsRequestDeferral */
 HRESULT wuist_visual_elements_request_deferral_new(WUIST_VisualElementsRequestDeferral **out);
 
-/* Windows.UI.StartScreen.VisualElementsRequestDeferral */
-/* Windows.UI.StartScreen.VisualElementsRequestDeferral.Complete() */
 HRESULT wuist_visual_elements_request_deferral_complete(WUIST_VisualElementsRequestDeferral *self);
 
-/* activate Windows.UI.StartScreen.VisualElementsRequestedEventArgs */
 HRESULT wuist_visual_elements_requested_event_args_new(WUIST_VisualElementsRequestedEventArgs **out);
 
-/* Windows.UI.StartScreen.VisualElementsRequestedEventArgs */
-/* Windows.UI.StartScreen.VisualElementsRequestedEventArgs.get_Request() */
 HRESULT wuist_visual_elements_requested_event_args_get__request(WUIST_VisualElementsRequestedEventArgs *self, WUIST_VisualElementsRequest** value);
 
-/* Windows.UI.StartScreen.ISecondaryTileFactory */
-/* Windows.UI.StartScreen.ISecondaryTileFactory.CreateTile(tileId, shortName, displayName, arguments, tileOptions, logoReference) */
 HRESULT wuist_secondary_tile_factory_create_tile(WUIST_ISecondaryTileFactory *self, cwinrt_hstring tileId, cwinrt_hstring shortName, cwinrt_hstring displayName, cwinrt_hstring arguments, WUIST_TileOptions tileOptions, WF_Uri* logoReference, WUIST_SecondaryTile** out);
 
-/* Windows.UI.StartScreen.ISecondaryTileFactory.CreateWideTile(tileId, shortName, displayName, arguments, tileOptions, logoReference, wideLogoReference) */
 HRESULT wuist_secondary_tile_factory_create_wide_tile(WUIST_ISecondaryTileFactory *self, cwinrt_hstring tileId, cwinrt_hstring shortName, cwinrt_hstring displayName, cwinrt_hstring arguments, WUIST_TileOptions tileOptions, WF_Uri* logoReference, WF_Uri* wideLogoReference, WUIST_SecondaryTile** out);
 
-/* Windows.UI.StartScreen.ISecondaryTileFactory.CreateWithId(tileId) */
 HRESULT wuist_secondary_tile_factory_create_with_id(WUIST_ISecondaryTileFactory *self, cwinrt_hstring tileId, WUIST_SecondaryTile** out);
 
-/* Windows.UI.StartScreen.IJumpList */
-/* Windows.UI.StartScreen.IJumpListItem */
-/* Windows.UI.StartScreen.ISecondaryTile2 */
-/* Windows.UI.StartScreen.ISecondaryTile2.put_PhoneticName() */
 HRESULT wuist_secondary_tile_2_put__phonetic_name(WUIST_ISecondaryTile_2 *self, cwinrt_hstring value);
 
-/* Windows.UI.StartScreen.ISecondaryTile2.get_PhoneticName() */
 HRESULT wuist_secondary_tile_2_get__phonetic_name(WUIST_ISecondaryTile_2 *self, cwinrt_hstring *value);
 
-/* Windows.UI.StartScreen.ISecondaryTile2.get_VisualElements() */
 HRESULT wuist_secondary_tile_2_get__visual_elements(WUIST_ISecondaryTile_2 *self, WUIST_SecondaryTileVisualElements** value);
 
-/* Windows.UI.StartScreen.ISecondaryTile2.put_RoamingEnabled() */
 HRESULT wuist_secondary_tile_2_put__roaming_enabled(WUIST_ISecondaryTile_2 *self, BOOL value);
 
-/* Windows.UI.StartScreen.ISecondaryTile2.get_RoamingEnabled() */
 HRESULT wuist_secondary_tile_2_get__roaming_enabled(WUIST_ISecondaryTile_2 *self, BOOL *value);
 
-/* Windows.UI.StartScreen.ISecondaryTileVisualElements */
-/* Windows.UI.StartScreen.ISecondaryTileVisualElements2 */
-/* Windows.UI.StartScreen.ISecondaryTileVisualElements2.put_Square71x71Logo() */
 HRESULT wuist_secondary_tile_visual_elements_2_put__square71x71_logo(WUIST_ISecondaryTileVisualElements_2 *self, WF_Uri* value);
 
-/* Windows.UI.StartScreen.ISecondaryTileVisualElements2.get_Square71x71Logo() */
 HRESULT wuist_secondary_tile_visual_elements_2_get__square71x71_logo(WUIST_ISecondaryTileVisualElements_2 *self, WF_Uri** value);
 
-/* Windows.UI.StartScreen.ISecondaryTileVisualElements3 */
-/* Windows.UI.StartScreen.ISecondaryTileVisualElements3.put_Square44x44Logo() */
 HRESULT wuist_secondary_tile_visual_elements_3_put__square44x44_logo(WUIST_ISecondaryTileVisualElements_3 *self, WF_Uri* value);
 
-/* Windows.UI.StartScreen.ISecondaryTileVisualElements3.get_Square44x44Logo() */
 HRESULT wuist_secondary_tile_visual_elements_3_get__square44x44_logo(WUIST_ISecondaryTileVisualElements_3 *self, WF_Uri** value);
 
-/* Windows.UI.StartScreen.ISecondaryTileVisualElements4 */
-/* Windows.UI.StartScreen.ISecondaryTileVisualElements4.get_MixedRealityModel() */
 HRESULT wuist_secondary_tile_visual_elements_4_get__mixed_reality_model(WUIST_ISecondaryTileVisualElements_4 *self, WUIST_TileMixedRealityModel** value);
 
-/* Windows.UI.StartScreen.IStartScreenManager2 */
-/* Windows.UI.StartScreen.IStartScreenManager2.ContainsSecondaryTileAsync(tileId) */
 HRESULT wuist_start_screen_manager_2_contains_secondary_tile_async(WUIST_IStartScreenManager_2 *self, cwinrt_hstring tileId, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.StartScreen.IStartScreenManager2.TryRemoveSecondaryTileAsync(tileId) */
 HRESULT wuist_start_screen_manager_2_try_remove_secondary_tile_async(WUIST_IStartScreenManager_2 *self, cwinrt_hstring tileId, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.StartScreen.ITileMixedRealityModel */
-/* Windows.UI.StartScreen.ITileMixedRealityModel2 */
-/* Windows.UI.StartScreen.ITileMixedRealityModel2.put_ActivationBehavior() */
 HRESULT wuist_tile_mixed_reality_model_2_put__activation_behavior(WUIST_ITileMixedRealityModel_2 *self, WUIST_TileMixedRealityModelActivationBehavior value);
 
-/* Windows.UI.StartScreen.ITileMixedRealityModel2.get_ActivationBehavior() */
 HRESULT wuist_tile_mixed_reality_model_2_get__activation_behavior(WUIST_ITileMixedRealityModel_2 *self, WUIST_TileMixedRealityModelActivationBehavior *value);
 
-/* Windows.UI.StartScreen.IVisualElementsRequest */
-/* Windows.UI.StartScreen.IVisualElementsRequestDeferral */
-/* Windows.UI.StartScreen.IVisualElementsRequestedEventArgs */
-/* Windows.UI.StartScreen.ISecondaryTile */
-/* Windows.UI.StartScreen.IStartScreenManager */
 #endif /* CWINRT_WINDOWS_UI_STARTSCREEN_H */

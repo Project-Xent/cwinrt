@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Networking.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WNESO_StreamSocket
 #define CWINRT_FWD_WNESO_StreamSocket
 typedef struct WNESO_StreamSocket WNESO_StreamSocket;
@@ -23,7 +22,6 @@ typedef struct WNESO_StreamSocket WNESO_StreamSocket;
 typedef struct WSTST_IBuffer WSTST_IBuffer;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WNEPR_ConnectionRequestedEventArgs WNEPR_ConnectionRequestedEventArgs;
 typedef struct WNEPR_DeviceArrivedEventHandler WNEPR_DeviceArrivedEventHandler;
 typedef struct WNEPR_DeviceDepartedEventHandler WNEPR_DeviceDepartedEventHandler;
@@ -47,7 +45,6 @@ typedef struct WNEPR_IProximityDevice WNEPR_IProximityDevice;
 typedef struct WNEPR_IProximityMessage WNEPR_IProximityMessage;
 typedef struct WNEPR_ITriggeredConnectionStateChangedEventArgs WNEPR_ITriggeredConnectionStateChangedEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IMap_HSTRING_HSTRING
 #define CWINRT_FWD_WFOCO_IMap_HSTRING_HSTRING
 typedef struct WFOCO_IMap_HSTRING_HSTRING WFOCO_IMap_HSTRING_HSTRING;
@@ -135,7 +132,6 @@ typedef enum WNEPR_TriggeredConnectState {
 } WNEPR_TriggeredConnectState;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -200,168 +196,106 @@ static const IID CWINRT_IID_WNEPR_IProximityMessage CWINRT_MAYBE_UNUSED = { 0xEF
 static const IID CWINRT_IID_WNEPR_ITriggeredConnectionStateChangedEventArgs CWINRT_MAYBE_UNUSED = { 0xC6A780AD, 0xF6E1, 0x4D54, { 0x96, 0xE2, 0x33, 0xF6, 0x20, 0xBC, 0xA8, 0x8A } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Networking.Proximity.ConnectionRequestedEventArgs */
 HRESULT wnepr_connection_requested_event_args_new(WNEPR_ConnectionRequestedEventArgs **out);
 
-/* Windows.Networking.Proximity.ConnectionRequestedEventArgs */
-/* Windows.Networking.Proximity.ConnectionRequestedEventArgs.get_PeerInformation() */
 HRESULT wnepr_connection_requested_event_args_get__peer_information(WNEPR_ConnectionRequestedEventArgs *self, WNEPR_PeerInformation** value);
 
-/* Windows.Networking.Proximity.DeviceArrivedEventHandler */
-/* Windows.Networking.Proximity.DeviceArrivedEventHandler.Invoke(sender) */
 HRESULT wnepr_device_arrived_event_handler_invoke(WNEPR_DeviceArrivedEventHandler *self, WNEPR_ProximityDevice* sender);
 
-/* Windows.Networking.Proximity.DeviceDepartedEventHandler */
-/* Windows.Networking.Proximity.DeviceDepartedEventHandler.Invoke(sender) */
 HRESULT wnepr_device_departed_event_handler_invoke(WNEPR_DeviceDepartedEventHandler *self, WNEPR_ProximityDevice* sender);
 
-/* Windows.Networking.Proximity.IPeerFinderStatics */
-/* Windows.Networking.Proximity.IPeerFinderStatics.get_AllowBluetooth() */
 HRESULT wnepr_peer_finder_statics_get__allow_bluetooth(WNEPR_IPeerFinderStatics *self, BOOL *value);
 
-/* Windows.Networking.Proximity.IPeerFinderStatics.put_AllowBluetooth() */
 HRESULT wnepr_peer_finder_statics_put__allow_bluetooth(WNEPR_IPeerFinderStatics *self, BOOL value);
 
-/* Windows.Networking.Proximity.IPeerFinderStatics.get_AllowInfrastructure() */
 HRESULT wnepr_peer_finder_statics_get__allow_infrastructure(WNEPR_IPeerFinderStatics *self, BOOL *value);
 
-/* Windows.Networking.Proximity.IPeerFinderStatics.put_AllowInfrastructure() */
 HRESULT wnepr_peer_finder_statics_put__allow_infrastructure(WNEPR_IPeerFinderStatics *self, BOOL value);
 
-/* Windows.Networking.Proximity.IPeerFinderStatics.get_AllowWiFiDirect() */
 HRESULT wnepr_peer_finder_statics_get__allow_wi_fi_direct(WNEPR_IPeerFinderStatics *self, BOOL *value);
 
-/* Windows.Networking.Proximity.IPeerFinderStatics.put_AllowWiFiDirect() */
 HRESULT wnepr_peer_finder_statics_put__allow_wi_fi_direct(WNEPR_IPeerFinderStatics *self, BOOL value);
 
-/* Windows.Networking.Proximity.IPeerFinderStatics.get_DisplayName() */
 HRESULT wnepr_peer_finder_statics_get__display_name(WNEPR_IPeerFinderStatics *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Proximity.IPeerFinderStatics.put_DisplayName() */
 HRESULT wnepr_peer_finder_statics_put__display_name(WNEPR_IPeerFinderStatics *self, cwinrt_hstring value);
 
-/* Windows.Networking.Proximity.IPeerFinderStatics.get_SupportedDiscoveryTypes() */
 HRESULT wnepr_peer_finder_statics_get__supported_discovery_types(WNEPR_IPeerFinderStatics *self, WNEPR_PeerDiscoveryTypes *value);
 
-/* Windows.Networking.Proximity.IPeerFinderStatics.get_AlternateIdentities() */
 HRESULT wnepr_peer_finder_statics_get__alternate_identities(WNEPR_IPeerFinderStatics *self, WFOCO_IMap_HSTRING_HSTRING** value);
 
-/* Windows.Networking.Proximity.IPeerFinderStatics.Start() */
 HRESULT wnepr_peer_finder_statics_start(WNEPR_IPeerFinderStatics *self);
 
-/* Windows.Networking.Proximity.IPeerFinderStatics.Start(peerMessage) */
 HRESULT wnepr_peer_finder_statics_start_str(WNEPR_IPeerFinderStatics *self, cwinrt_hstring peerMessage);
 
-/* Windows.Networking.Proximity.IPeerFinderStatics.Stop() */
 HRESULT wnepr_peer_finder_statics_stop(WNEPR_IPeerFinderStatics *self);
 
-/* Windows.Networking.Proximity.IPeerFinderStatics.FindAllPeersAsync() */
 HRESULT wnepr_peer_finder_statics_find_all_peers_async(WNEPR_IPeerFinderStatics *self, WF_IAsyncOperation_WFOCO_IVectorView_WNEPR_PeerInformation** out);
 
-/* Windows.Networking.Proximity.IPeerFinderStatics.ConnectAsync(peerInformation) */
 HRESULT wnepr_peer_finder_statics_connect_async(WNEPR_IPeerFinderStatics *self, WNEPR_PeerInformation* peerInformation, WF_IAsyncOperation_WNESO_StreamSocket** out);
 
-/* Windows.Networking.Proximity.IPeerFinderStatics2 */
-/* Windows.Networking.Proximity.IPeerFinderStatics2.get_Role() */
 HRESULT wnepr_peer_finder_statics_2_get__role(WNEPR_IPeerFinderStatics_2 *self, WNEPR_PeerRole *value);
 
-/* Windows.Networking.Proximity.IPeerFinderStatics2.put_Role() */
 HRESULT wnepr_peer_finder_statics_2_put__role(WNEPR_IPeerFinderStatics_2 *self, WNEPR_PeerRole value);
 
-/* Windows.Networking.Proximity.IPeerFinderStatics2.get_DiscoveryData() */
 HRESULT wnepr_peer_finder_statics_2_get__discovery_data(WNEPR_IPeerFinderStatics_2 *self, WSTST_IBuffer** value);
 
-/* Windows.Networking.Proximity.IPeerFinderStatics2.put_DiscoveryData() */
 HRESULT wnepr_peer_finder_statics_2_put__discovery_data(WNEPR_IPeerFinderStatics_2 *self, WSTST_IBuffer* value);
 
-/* Windows.Networking.Proximity.IPeerFinderStatics2.CreateWatcher() */
 HRESULT wnepr_peer_finder_statics_2_create_watcher(WNEPR_IPeerFinderStatics_2 *self, WNEPR_PeerWatcher** out);
 
-/* Windows.Networking.Proximity.IProximityDeviceStatics */
-/* Windows.Networking.Proximity.IProximityDeviceStatics.GetDeviceSelector() */
 HRESULT wnepr_proximity_device_statics_get_device_selector(WNEPR_IProximityDeviceStatics *self, cwinrt_hstring *out);
 
-/* Windows.Networking.Proximity.IProximityDeviceStatics.GetDefault() */
 HRESULT wnepr_proximity_device_statics_get_default(WNEPR_IProximityDeviceStatics *self, WNEPR_ProximityDevice** out);
 
-/* Windows.Networking.Proximity.IProximityDeviceStatics.FromId(deviceId) */
 HRESULT wnepr_proximity_device_statics_from_id(WNEPR_IProximityDeviceStatics *self, cwinrt_hstring deviceId, WNEPR_ProximityDevice** out);
 
-/* Windows.Networking.Proximity.MessageReceivedHandler */
-/* Windows.Networking.Proximity.MessageReceivedHandler.Invoke(sender, message) */
 HRESULT wnepr_message_received_handler_invoke(WNEPR_MessageReceivedHandler *self, WNEPR_ProximityDevice* sender, WNEPR_ProximityMessage* message);
 
-/* Windows.Networking.Proximity.MessageTransmittedHandler */
-/* Windows.Networking.Proximity.MessageTransmittedHandler.Invoke(sender, messageId) */
 HRESULT wnepr_message_transmitted_handler_invoke(WNEPR_MessageTransmittedHandler *self, WNEPR_ProximityDevice* sender, int64_t messageId);
 
-/* activate Windows.Networking.Proximity.PeerFinder */
 HRESULT wnepr_peer_finder_new(WNEPR_PeerFinder **out);
 
-/* Windows.Networking.Proximity.PeerFinder */
-/* Windows.Networking.Proximity.PeerFinder.get_Role() */
 HRESULT wnepr_peer_finder_get__role(WNEPR_PeerRole *value);
 
-/* Windows.Networking.Proximity.PeerFinder.put_Role() */
 HRESULT wnepr_peer_finder_put__role(WNEPR_PeerRole value);
 
-/* Windows.Networking.Proximity.PeerFinder.get_DiscoveryData() */
 HRESULT wnepr_peer_finder_get__discovery_data(WSTST_IBuffer** value);
 
-/* Windows.Networking.Proximity.PeerFinder.put_DiscoveryData() */
 HRESULT wnepr_peer_finder_put__discovery_data(WSTST_IBuffer* value);
 
-/* Windows.Networking.Proximity.PeerFinder.CreateWatcher() */
 HRESULT wnepr_peer_finder_create_watcher(WNEPR_PeerWatcher** out);
 
-/* Windows.Networking.Proximity.PeerFinder.get_AllowBluetooth() */
 HRESULT wnepr_peer_finder_get__allow_bluetooth(BOOL *value);
 
-/* Windows.Networking.Proximity.PeerFinder.put_AllowBluetooth() */
 HRESULT wnepr_peer_finder_put__allow_bluetooth(BOOL value);
 
-/* Windows.Networking.Proximity.PeerFinder.get_AllowInfrastructure() */
 HRESULT wnepr_peer_finder_get__allow_infrastructure(BOOL *value);
 
-/* Windows.Networking.Proximity.PeerFinder.put_AllowInfrastructure() */
 HRESULT wnepr_peer_finder_put__allow_infrastructure(BOOL value);
 
-/* Windows.Networking.Proximity.PeerFinder.get_AllowWiFiDirect() */
 HRESULT wnepr_peer_finder_get__allow_wi_fi_direct(BOOL *value);
 
-/* Windows.Networking.Proximity.PeerFinder.put_AllowWiFiDirect() */
 HRESULT wnepr_peer_finder_put__allow_wi_fi_direct(BOOL value);
 
-/* Windows.Networking.Proximity.PeerFinder.get_DisplayName() */
 HRESULT wnepr_peer_finder_get__display_name(cwinrt_hstring *value);
 
-/* Windows.Networking.Proximity.PeerFinder.put_DisplayName() */
 HRESULT wnepr_peer_finder_put__display_name(cwinrt_hstring value);
 
-/* Windows.Networking.Proximity.PeerFinder.get_SupportedDiscoveryTypes() */
 HRESULT wnepr_peer_finder_get__supported_discovery_types(WNEPR_PeerDiscoveryTypes *value);
 
-/* Windows.Networking.Proximity.PeerFinder.get_AlternateIdentities() */
 HRESULT wnepr_peer_finder_get__alternate_identities(WFOCO_IMap_HSTRING_HSTRING** value);
 
-/* Windows.Networking.Proximity.PeerFinder.Start() */
 HRESULT wnepr_peer_finder_start(void);
 
-/* Windows.Networking.Proximity.PeerFinder.Start(peerMessage) */
 HRESULT wnepr_peer_finder_start_str(cwinrt_hstring peerMessage);
 
-/* Windows.Networking.Proximity.PeerFinder.Stop() */
 HRESULT wnepr_peer_finder_stop(void);
 
-/* Windows.Networking.Proximity.PeerFinder.FindAllPeersAsync() */
 HRESULT wnepr_peer_finder_find_all_peers_async(WF_IAsyncOperation_WFOCO_IVectorView_WNEPR_PeerInformation** out);
 
-/* Windows.Networking.Proximity.PeerFinder.ConnectAsync(peerInformation) */
 HRESULT wnepr_peer_finder_connect_async(WNEPR_PeerInformation* peerInformation, WF_IAsyncOperation_WNESO_StreamSocket** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wnepr_peer_finder_on_triggered_connection_state_changed(WNEPR_PeerFinder *self, cwinrt_event_fn fn, void *ctx);
@@ -370,39 +304,26 @@ void wnepr_peer_finder_off_triggered_connection_state_changed(WNEPR_PeerFinder *
 cwinrt_token wnepr_peer_finder_on_connection_requested(WNEPR_PeerFinder *self, cwinrt_event_fn fn, void *ctx);
 void wnepr_peer_finder_off_connection_requested(WNEPR_PeerFinder *self, cwinrt_token token);
 
-/* activate Windows.Networking.Proximity.PeerInformation */
 HRESULT wnepr_peer_information_new(WNEPR_PeerInformation **out);
 
-/* Windows.Networking.Proximity.PeerInformation */
-/* Windows.Networking.Proximity.PeerInformation.get_DisplayName() */
 HRESULT wnepr_peer_information_get__display_name(WNEPR_PeerInformation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Proximity.PeerInformation.get_Id() */
 HRESULT wnepr_peer_information_get__id(WNEPR_PeerInformation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Proximity.PeerInformation.get_DiscoveryData() */
 HRESULT wnepr_peer_information_get__discovery_data(WNEPR_PeerInformation *self, WSTST_IBuffer** value);
 
-/* Windows.Networking.Proximity.PeerInformation.get_HostName() */
 HRESULT wnepr_peer_information_get__host_name(WNEPR_PeerInformation *self, WNE_HostName** value);
 
-/* Windows.Networking.Proximity.PeerInformation.get_ServiceName() */
 HRESULT wnepr_peer_information_get__service_name(WNEPR_PeerInformation *self, cwinrt_hstring *value);
 
-/* activate Windows.Networking.Proximity.PeerWatcher */
 HRESULT wnepr_peer_watcher_new(WNEPR_PeerWatcher **out);
 
-/* Windows.Networking.Proximity.PeerWatcher */
-/* Windows.Networking.Proximity.PeerWatcher.get_Status() */
 HRESULT wnepr_peer_watcher_get__status(WNEPR_PeerWatcher *self, WNEPR_PeerWatcherStatus *value);
 
-/* Windows.Networking.Proximity.PeerWatcher.Start() */
 HRESULT wnepr_peer_watcher_start(WNEPR_PeerWatcher *self);
 
-/* Windows.Networking.Proximity.PeerWatcher.Stop() */
 HRESULT wnepr_peer_watcher_stop(WNEPR_PeerWatcher *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wnepr_peer_watcher_on_added(WNEPR_PeerWatcher *self, cwinrt_event_fn fn, void *ctx);
@@ -420,56 +341,38 @@ void wnepr_peer_watcher_off_enumeration_completed(WNEPR_PeerWatcher *self, cwinr
 cwinrt_token wnepr_peer_watcher_on_stopped(WNEPR_PeerWatcher *self, cwinrt_event_fn fn, void *ctx);
 void wnepr_peer_watcher_off_stopped(WNEPR_PeerWatcher *self, cwinrt_token token);
 
-/* activate Windows.Networking.Proximity.ProximityDevice */
 HRESULT wnepr_proximity_device_new(WNEPR_ProximityDevice **out);
 
-/* Windows.Networking.Proximity.ProximityDevice */
-/* Windows.Networking.Proximity.ProximityDevice.SubscribeForMessage(messageType, messageReceivedHandler) */
 HRESULT wnepr_proximity_device_subscribe_for_message(WNEPR_ProximityDevice *self, cwinrt_hstring messageType, WNEPR_MessageReceivedHandler* messageReceivedHandler, int64_t *out);
 
-/* Windows.Networking.Proximity.ProximityDevice.PublishMessage(messageType, message) */
 HRESULT wnepr_proximity_device_publish_message(WNEPR_ProximityDevice *self, cwinrt_hstring messageType, cwinrt_hstring message, int64_t *out);
 
-/* Windows.Networking.Proximity.ProximityDevice.PublishMessage(messageType, message, messageTransmittedHandler) */
 HRESULT wnepr_proximity_device_publish_message_str_str_p_i64(WNEPR_ProximityDevice *self, cwinrt_hstring messageType, cwinrt_hstring message, WNEPR_MessageTransmittedHandler* messageTransmittedHandler, int64_t *out);
 
-/* Windows.Networking.Proximity.ProximityDevice.PublishBinaryMessage(messageType, message) */
 HRESULT wnepr_proximity_device_publish_binary_message(WNEPR_ProximityDevice *self, cwinrt_hstring messageType, WSTST_IBuffer* message, int64_t *out);
 
-/* Windows.Networking.Proximity.ProximityDevice.PublishBinaryMessage(messageType, message, messageTransmittedHandler) */
 HRESULT wnepr_proximity_device_publish_binary_message_str_p_p_i64(WNEPR_ProximityDevice *self, cwinrt_hstring messageType, WSTST_IBuffer* message, WNEPR_MessageTransmittedHandler* messageTransmittedHandler, int64_t *out);
 
-/* Windows.Networking.Proximity.ProximityDevice.PublishUriMessage(message) */
 HRESULT wnepr_proximity_device_publish_uri_message(WNEPR_ProximityDevice *self, WF_Uri* message, int64_t *out);
 
-/* Windows.Networking.Proximity.ProximityDevice.PublishUriMessage(message, messageTransmittedHandler) */
 HRESULT wnepr_proximity_device_publish_uri_message_p_p_i64(WNEPR_ProximityDevice *self, WF_Uri* message, WNEPR_MessageTransmittedHandler* messageTransmittedHandler, int64_t *out);
 
-/* Windows.Networking.Proximity.ProximityDevice.StopSubscribingForMessage(subscriptionId) */
 HRESULT wnepr_proximity_device_stop_subscribing_for_message(WNEPR_ProximityDevice *self, int64_t subscriptionId);
 
-/* Windows.Networking.Proximity.ProximityDevice.StopPublishingMessage(messageId) */
 HRESULT wnepr_proximity_device_stop_publishing_message(WNEPR_ProximityDevice *self, int64_t messageId);
 
-/* Windows.Networking.Proximity.ProximityDevice.get_MaxMessageBytes() */
 HRESULT wnepr_proximity_device_get__max_message_bytes(WNEPR_ProximityDevice *self, uint32_t *value);
 
-/* Windows.Networking.Proximity.ProximityDevice.get_BitsPerSecond() */
 HRESULT wnepr_proximity_device_get__bits_per_second(WNEPR_ProximityDevice *self, uint64_t *value);
 
-/* Windows.Networking.Proximity.ProximityDevice.get_DeviceId() */
 HRESULT wnepr_proximity_device_get__device_id(WNEPR_ProximityDevice *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Proximity.ProximityDevice.GetDeviceSelector() */
 HRESULT wnepr_proximity_device_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Networking.Proximity.ProximityDevice.GetDefault() */
 HRESULT wnepr_proximity_device_get_default(WNEPR_ProximityDevice** out);
 
-/* Windows.Networking.Proximity.ProximityDevice.FromId(deviceId) */
 HRESULT wnepr_proximity_device_from_id(cwinrt_hstring deviceId, WNEPR_ProximityDevice** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wnepr_proximity_device_on_device_arrived(WNEPR_ProximityDevice *self, cwinrt_event_fn fn, void *ctx);
@@ -478,53 +381,30 @@ void wnepr_proximity_device_off_device_arrived(WNEPR_ProximityDevice *self, cwin
 cwinrt_token wnepr_proximity_device_on_device_departed(WNEPR_ProximityDevice *self, cwinrt_event_fn fn, void *ctx);
 void wnepr_proximity_device_off_device_departed(WNEPR_ProximityDevice *self, cwinrt_token token);
 
-/* activate Windows.Networking.Proximity.ProximityMessage */
 HRESULT wnepr_proximity_message_new(WNEPR_ProximityMessage **out);
 
-/* Windows.Networking.Proximity.ProximityMessage */
-/* Windows.Networking.Proximity.ProximityMessage.get_MessageType() */
 HRESULT wnepr_proximity_message_get__message_type(WNEPR_ProximityMessage *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Proximity.ProximityMessage.get_SubscriptionId() */
 HRESULT wnepr_proximity_message_get__subscription_id(WNEPR_ProximityMessage *self, int64_t *value);
 
-/* Windows.Networking.Proximity.ProximityMessage.get_Data() */
 HRESULT wnepr_proximity_message_get__data(WNEPR_ProximityMessage *self, WSTST_IBuffer** value);
 
-/* Windows.Networking.Proximity.ProximityMessage.get_DataAsString() */
 HRESULT wnepr_proximity_message_get__data_as_string(WNEPR_ProximityMessage *self, cwinrt_hstring *value);
 
-/* activate Windows.Networking.Proximity.TriggeredConnectionStateChangedEventArgs */
 HRESULT wnepr_triggered_connection_state_changed_event_args_new(WNEPR_TriggeredConnectionStateChangedEventArgs **out);
 
-/* Windows.Networking.Proximity.TriggeredConnectionStateChangedEventArgs */
-/* Windows.Networking.Proximity.TriggeredConnectionStateChangedEventArgs.get_State() */
 HRESULT wnepr_triggered_connection_state_changed_event_args_get__state(WNEPR_TriggeredConnectionStateChangedEventArgs *self, WNEPR_TriggeredConnectState *value);
 
-/* Windows.Networking.Proximity.TriggeredConnectionStateChangedEventArgs.get_Id() */
 HRESULT wnepr_triggered_connection_state_changed_event_args_get__id(WNEPR_TriggeredConnectionStateChangedEventArgs *self, uint32_t *value);
 
-/* Windows.Networking.Proximity.TriggeredConnectionStateChangedEventArgs.get_Socket() */
 HRESULT wnepr_triggered_connection_state_changed_event_args_get__socket(WNEPR_TriggeredConnectionStateChangedEventArgs *self, WNESO_StreamSocket** value);
 
-/* Windows.Networking.Proximity.IConnectionRequestedEventArgs */
-/* Windows.Networking.Proximity.IPeerInformation */
-/* Windows.Networking.Proximity.IPeerInformation3 */
-/* Windows.Networking.Proximity.IPeerInformation3.get_Id() */
 HRESULT wnepr_peer_information_3_get__id(WNEPR_IPeerInformation_3 *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Proximity.IPeerInformation3.get_DiscoveryData() */
 HRESULT wnepr_peer_information_3_get__discovery_data(WNEPR_IPeerInformation_3 *self, WSTST_IBuffer** value);
 
-/* Windows.Networking.Proximity.IPeerInformationWithHostAndService */
-/* Windows.Networking.Proximity.IPeerInformationWithHostAndService.get_HostName() */
 HRESULT wnepr_peer_information_with_host_and_service_get__host_name(WNEPR_IPeerInformationWithHostAndService *self, WNE_HostName** value);
 
-/* Windows.Networking.Proximity.IPeerInformationWithHostAndService.get_ServiceName() */
 HRESULT wnepr_peer_information_with_host_and_service_get__service_name(WNEPR_IPeerInformationWithHostAndService *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Proximity.IPeerWatcher */
-/* Windows.Networking.Proximity.IProximityDevice */
-/* Windows.Networking.Proximity.IProximityMessage */
-/* Windows.Networking.Proximity.ITriggeredConnectionStateChangedEventArgs */
 #endif /* CWINRT_WINDOWS_NETWORKING_PROXIMITY_H */

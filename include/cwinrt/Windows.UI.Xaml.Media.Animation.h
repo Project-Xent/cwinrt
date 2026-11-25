@@ -15,7 +15,6 @@
 #include <cwinrt/Windows.UI.Xaml.Controls.Primitives.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WUC_ICompositionAnimationBase
 #define CWINRT_FWD_WUC_ICompositionAnimationBase
 typedef struct WUC_ICompositionAnimationBase WUC_ICompositionAnimationBase;
@@ -29,7 +28,6 @@ typedef struct WUC_CompositionEasingFunction WUC_CompositionEasingFunction;
 typedef struct WUIXACO_ListViewBase WUIXACO_ListViewBase;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUIXAMEAN_TransitionCollection WUIXAMEAN_TransitionCollection;
 typedef struct WUIXAMEAN_TimelineCollection WUIXAMEAN_TimelineCollection;
 typedef struct WUIXAMEAN_SwipeHintThemeAnimation WUIXAMEAN_SwipeHintThemeAnimation;
@@ -275,7 +273,6 @@ typedef struct WUIXAMEAN_IFadeOutThemeAnimation WUIXAMEAN_IFadeOutThemeAnimation
 typedef struct WUIXAMEAN_IGravityConnectedAnimationConfiguration WUIXAMEAN_IGravityConnectedAnimationConfiguration;
 typedef struct WUIXAMEAN_IGravityConnectedAnimationConfiguration_2 WUIXAMEAN_IGravityConnectedAnimationConfiguration_2;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IVectorView_WUIXAMEAN_Transition
 #define CWINRT_FWD_WFOCO_IVectorView_WUIXAMEAN_Transition
 typedef struct WFOCO_IVectorView_WUIXAMEAN_Transition WFOCO_IVectorView_WUIXAMEAN_Transition;
@@ -471,7 +468,6 @@ struct WUIXAMEAN_KeyTime {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -1096,2356 +1092,1446 @@ static const IID CWINRT_IID_WUIXAMEAN_IGravityConnectedAnimationConfiguration CW
 static const IID CWINRT_IID_WUIXAMEAN_IGravityConnectedAnimationConfiguration_2 CWINRT_MAYBE_UNUSED = { 0x62333ADD, 0xAED4, 0x5FED, { 0x95, 0xFF, 0xD1, 0x28, 0xAC, 0xCE, 0x8B, 0xE4 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.UI.Xaml.Media.Animation.TransitionCollection */
 HRESULT wuixamean_transition_collection_new(WUIXAMEAN_TransitionCollection **out);
 
-/* Windows.UI.Xaml.Media.Animation.TransitionCollection */
-/* Windows.UI.Xaml.Media.Animation.TransitionCollection.GetAt(index) */
 HRESULT wuixamean_transition_collection_get_at(WUIXAMEAN_TransitionCollection *self, uint32_t index, WUIXAMEAN_Transition** out);
 
-/* Windows.UI.Xaml.Media.Animation.TransitionCollection.get_Size() */
 HRESULT wuixamean_transition_collection_get__size(WUIXAMEAN_TransitionCollection *self, uint32_t *value);
 
-/* Windows.UI.Xaml.Media.Animation.TransitionCollection.GetView() */
 HRESULT wuixamean_transition_collection_get_view(WUIXAMEAN_TransitionCollection *self, WFOCO_IVectorView_WUIXAMEAN_Transition** out);
 
-/* Windows.UI.Xaml.Media.Animation.TransitionCollection.IndexOf(index) */
 HRESULT wuixamean_transition_collection_index_of(WUIXAMEAN_TransitionCollection *self, WUIXAMEAN_Transition* value, uint32_t index, BOOL *out);
 
-/* Windows.UI.Xaml.Media.Animation.TransitionCollection.SetAt(index) */
 HRESULT wuixamean_transition_collection_set_at(WUIXAMEAN_TransitionCollection *self, uint32_t index, WUIXAMEAN_Transition* value);
 
-/* Windows.UI.Xaml.Media.Animation.TransitionCollection.InsertAt(index) */
 HRESULT wuixamean_transition_collection_insert_at(WUIXAMEAN_TransitionCollection *self, uint32_t index, WUIXAMEAN_Transition* value);
 
-/* Windows.UI.Xaml.Media.Animation.TransitionCollection.RemoveAt(index) */
 HRESULT wuixamean_transition_collection_remove_at(WUIXAMEAN_TransitionCollection *self, uint32_t index);
 
-/* Windows.UI.Xaml.Media.Animation.TransitionCollection.Append() */
 HRESULT wuixamean_transition_collection_append(WUIXAMEAN_TransitionCollection *self, WUIXAMEAN_Transition* value);
 
-/* Windows.UI.Xaml.Media.Animation.TransitionCollection.RemoveAtEnd() */
 HRESULT wuixamean_transition_collection_remove_at_end(WUIXAMEAN_TransitionCollection *self);
 
-/* Windows.UI.Xaml.Media.Animation.TransitionCollection.Clear() */
 HRESULT wuixamean_transition_collection_clear(WUIXAMEAN_TransitionCollection *self);
 
-/* Windows.UI.Xaml.Media.Animation.TransitionCollection.GetMany(startIndex, items) */
 HRESULT wuixamean_transition_collection_get_many(WUIXAMEAN_TransitionCollection *self, uint32_t startIndex, WUIXAMEAN_Transition *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.UI.Xaml.Media.Animation.TransitionCollection.ReplaceAll(items) */
 HRESULT wuixamean_transition_collection_replace_all(WUIXAMEAN_TransitionCollection *self, WUIXAMEAN_Transition *items, uint32_t items_len);
 
-/* Windows.UI.Xaml.Media.Animation.TransitionCollection.First() */
 HRESULT wuixamean_transition_collection_first(WUIXAMEAN_TransitionCollection *self, WFOCO_IIterator_WUIXAMEAN_Transition** out);
 
-/* activate Windows.UI.Xaml.Media.Animation.TimelineCollection */
 HRESULT wuixamean_timeline_collection_new(WUIXAMEAN_TimelineCollection **out);
 
-/* Windows.UI.Xaml.Media.Animation.TimelineCollection */
-/* Windows.UI.Xaml.Media.Animation.TimelineCollection.GetAt(index) */
 HRESULT wuixamean_timeline_collection_get_at(WUIXAMEAN_TimelineCollection *self, uint32_t index, WUIXAMEAN_Timeline** out);
 
-/* Windows.UI.Xaml.Media.Animation.TimelineCollection.get_Size() */
 HRESULT wuixamean_timeline_collection_get__size(WUIXAMEAN_TimelineCollection *self, uint32_t *value);
 
-/* Windows.UI.Xaml.Media.Animation.TimelineCollection.GetView() */
 HRESULT wuixamean_timeline_collection_get_view(WUIXAMEAN_TimelineCollection *self, WFOCO_IVectorView_WUIXAMEAN_Timeline** out);
 
-/* Windows.UI.Xaml.Media.Animation.TimelineCollection.IndexOf(index) */
 HRESULT wuixamean_timeline_collection_index_of(WUIXAMEAN_TimelineCollection *self, WUIXAMEAN_Timeline* value, uint32_t index, BOOL *out);
 
-/* Windows.UI.Xaml.Media.Animation.TimelineCollection.SetAt(index) */
 HRESULT wuixamean_timeline_collection_set_at(WUIXAMEAN_TimelineCollection *self, uint32_t index, WUIXAMEAN_Timeline* value);
 
-/* Windows.UI.Xaml.Media.Animation.TimelineCollection.InsertAt(index) */
 HRESULT wuixamean_timeline_collection_insert_at(WUIXAMEAN_TimelineCollection *self, uint32_t index, WUIXAMEAN_Timeline* value);
 
-/* Windows.UI.Xaml.Media.Animation.TimelineCollection.RemoveAt(index) */
 HRESULT wuixamean_timeline_collection_remove_at(WUIXAMEAN_TimelineCollection *self, uint32_t index);
 
-/* Windows.UI.Xaml.Media.Animation.TimelineCollection.Append() */
 HRESULT wuixamean_timeline_collection_append(WUIXAMEAN_TimelineCollection *self, WUIXAMEAN_Timeline* value);
 
-/* Windows.UI.Xaml.Media.Animation.TimelineCollection.RemoveAtEnd() */
 HRESULT wuixamean_timeline_collection_remove_at_end(WUIXAMEAN_TimelineCollection *self);
 
-/* Windows.UI.Xaml.Media.Animation.TimelineCollection.Clear() */
 HRESULT wuixamean_timeline_collection_clear(WUIXAMEAN_TimelineCollection *self);
 
-/* Windows.UI.Xaml.Media.Animation.TimelineCollection.GetMany(startIndex, items) */
 HRESULT wuixamean_timeline_collection_get_many(WUIXAMEAN_TimelineCollection *self, uint32_t startIndex, WUIXAMEAN_Timeline *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.UI.Xaml.Media.Animation.TimelineCollection.ReplaceAll(items) */
 HRESULT wuixamean_timeline_collection_replace_all(WUIXAMEAN_TimelineCollection *self, WUIXAMEAN_Timeline *items, uint32_t items_len);
 
-/* Windows.UI.Xaml.Media.Animation.TimelineCollection.First() */
 HRESULT wuixamean_timeline_collection_first(WUIXAMEAN_TimelineCollection *self, WFOCO_IIterator_WUIXAMEAN_Timeline** out);
 
-/* activate Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation */
 HRESULT wuixamean_swipe_hint_theme_animation_new(WUIXAMEAN_SwipeHintThemeAnimation **out);
 
-/* Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation.get_TargetName() */
 HRESULT wuixamean_swipe_hint_theme_animation_get__target_name(WUIXAMEAN_SwipeHintThemeAnimation *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation.put_TargetName() */
 HRESULT wuixamean_swipe_hint_theme_animation_put__target_name(WUIXAMEAN_SwipeHintThemeAnimation *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation.get_ToHorizontalOffset() */
 HRESULT wuixamean_swipe_hint_theme_animation_get__to_horizontal_offset(WUIXAMEAN_SwipeHintThemeAnimation *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation.put_ToHorizontalOffset() */
 HRESULT wuixamean_swipe_hint_theme_animation_put__to_horizontal_offset(WUIXAMEAN_SwipeHintThemeAnimation *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation.get_ToVerticalOffset() */
 HRESULT wuixamean_swipe_hint_theme_animation_get__to_vertical_offset(WUIXAMEAN_SwipeHintThemeAnimation *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation.put_ToVerticalOffset() */
 HRESULT wuixamean_swipe_hint_theme_animation_put__to_vertical_offset(WUIXAMEAN_SwipeHintThemeAnimation *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation.get_TargetNameProperty() */
 HRESULT wuixamean_swipe_hint_theme_animation_get__target_name_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation.get_ToHorizontalOffsetProperty() */
 HRESULT wuixamean_swipe_hint_theme_animation_get__to_horizontal_offset_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation.get_ToVerticalOffsetProperty() */
 HRESULT wuixamean_swipe_hint_theme_animation_get__to_vertical_offset_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation */
 HRESULT wuixamean_swipe_back_theme_animation_new(WUIXAMEAN_SwipeBackThemeAnimation **out);
 
-/* Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation.get_TargetName() */
 HRESULT wuixamean_swipe_back_theme_animation_get__target_name(WUIXAMEAN_SwipeBackThemeAnimation *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation.put_TargetName() */
 HRESULT wuixamean_swipe_back_theme_animation_put__target_name(WUIXAMEAN_SwipeBackThemeAnimation *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation.get_FromHorizontalOffset() */
 HRESULT wuixamean_swipe_back_theme_animation_get__from_horizontal_offset(WUIXAMEAN_SwipeBackThemeAnimation *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation.put_FromHorizontalOffset() */
 HRESULT wuixamean_swipe_back_theme_animation_put__from_horizontal_offset(WUIXAMEAN_SwipeBackThemeAnimation *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation.get_FromVerticalOffset() */
 HRESULT wuixamean_swipe_back_theme_animation_get__from_vertical_offset(WUIXAMEAN_SwipeBackThemeAnimation *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation.put_FromVerticalOffset() */
 HRESULT wuixamean_swipe_back_theme_animation_put__from_vertical_offset(WUIXAMEAN_SwipeBackThemeAnimation *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation.get_TargetNameProperty() */
 HRESULT wuixamean_swipe_back_theme_animation_get__target_name_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation.get_FromHorizontalOffsetProperty() */
 HRESULT wuixamean_swipe_back_theme_animation_get__from_horizontal_offset_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation.get_FromVerticalOffsetProperty() */
 HRESULT wuixamean_swipe_back_theme_animation_get__from_vertical_offset_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.Storyboard */
 HRESULT wuixamean_storyboard_new(WUIXAMEAN_Storyboard **out);
 
-/* Windows.UI.Xaml.Media.Animation.Storyboard */
-/* Windows.UI.Xaml.Media.Animation.Storyboard.get_Children() */
 HRESULT wuixamean_storyboard_get__children(WUIXAMEAN_Storyboard *self, WUIXAMEAN_TimelineCollection** value);
 
-/* Windows.UI.Xaml.Media.Animation.Storyboard.Seek(offset) */
 HRESULT wuixamean_storyboard_seek(WUIXAMEAN_Storyboard *self, WF_TimeSpan offset);
 
-/* Windows.UI.Xaml.Media.Animation.Storyboard.Stop() */
 HRESULT wuixamean_storyboard_stop(WUIXAMEAN_Storyboard *self);
 
-/* Windows.UI.Xaml.Media.Animation.Storyboard.Begin() */
 HRESULT wuixamean_storyboard_begin(WUIXAMEAN_Storyboard *self);
 
-/* Windows.UI.Xaml.Media.Animation.Storyboard.Pause() */
 HRESULT wuixamean_storyboard_pause(WUIXAMEAN_Storyboard *self);
 
-/* Windows.UI.Xaml.Media.Animation.Storyboard.Resume() */
 HRESULT wuixamean_storyboard_resume(WUIXAMEAN_Storyboard *self);
 
-/* Windows.UI.Xaml.Media.Animation.Storyboard.GetCurrentState() */
 HRESULT wuixamean_storyboard_get_current_state(WUIXAMEAN_Storyboard *self, WUIXAMEAN_ClockState *out);
 
-/* Windows.UI.Xaml.Media.Animation.Storyboard.GetCurrentTime() */
 HRESULT wuixamean_storyboard_get_current_time(WUIXAMEAN_Storyboard *self, WF_TimeSpan *out);
 
-/* Windows.UI.Xaml.Media.Animation.Storyboard.SeekAlignedToLastTick(offset) */
 HRESULT wuixamean_storyboard_seek_aligned_to_last_tick(WUIXAMEAN_Storyboard *self, WF_TimeSpan offset);
 
-/* Windows.UI.Xaml.Media.Animation.Storyboard.SkipToFill() */
 HRESULT wuixamean_storyboard_skip_to_fill(WUIXAMEAN_Storyboard *self);
 
-/* Windows.UI.Xaml.Media.Animation.Storyboard.get_TargetPropertyProperty() */
 HRESULT wuixamean_storyboard_get__target_property_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.Storyboard.GetTargetProperty(element) */
 HRESULT wuixamean_storyboard_get_target_property(WUIXAMEAN_Timeline* element, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Media.Animation.Storyboard.SetTargetProperty(element, path) */
 HRESULT wuixamean_storyboard_set_target_property(WUIXAMEAN_Timeline* element, cwinrt_hstring path);
 
-/* Windows.UI.Xaml.Media.Animation.Storyboard.get_TargetNameProperty() */
 HRESULT wuixamean_storyboard_get__target_name_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.Storyboard.GetTargetName(element) */
 HRESULT wuixamean_storyboard_get_target_name(WUIXAMEAN_Timeline* element, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Media.Animation.Storyboard.SetTargetName(element, name) */
 HRESULT wuixamean_storyboard_set_target_name(WUIXAMEAN_Timeline* element, cwinrt_hstring name);
 
-/* Windows.UI.Xaml.Media.Animation.Storyboard.SetTarget(timeline, target) */
 HRESULT wuixamean_storyboard_set_target(WUIXAMEAN_Timeline* timeline, WUIXA_DependencyObject* target);
 
-/* activate Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation */
 HRESULT wuixamean_split_open_theme_animation_new(WUIXAMEAN_SplitOpenThemeAnimation **out);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.get_OpenedTargetName() */
 HRESULT wuixamean_split_open_theme_animation_get__opened_target_name(WUIXAMEAN_SplitOpenThemeAnimation *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.put_OpenedTargetName() */
 HRESULT wuixamean_split_open_theme_animation_put__opened_target_name(WUIXAMEAN_SplitOpenThemeAnimation *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.get_OpenedTarget() */
 HRESULT wuixamean_split_open_theme_animation_get__opened_target(WUIXAMEAN_SplitOpenThemeAnimation *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.put_OpenedTarget() */
 HRESULT wuixamean_split_open_theme_animation_put__opened_target(WUIXAMEAN_SplitOpenThemeAnimation *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.get_ClosedTargetName() */
 HRESULT wuixamean_split_open_theme_animation_get__closed_target_name(WUIXAMEAN_SplitOpenThemeAnimation *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.put_ClosedTargetName() */
 HRESULT wuixamean_split_open_theme_animation_put__closed_target_name(WUIXAMEAN_SplitOpenThemeAnimation *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.get_ClosedTarget() */
 HRESULT wuixamean_split_open_theme_animation_get__closed_target(WUIXAMEAN_SplitOpenThemeAnimation *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.put_ClosedTarget() */
 HRESULT wuixamean_split_open_theme_animation_put__closed_target(WUIXAMEAN_SplitOpenThemeAnimation *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.get_ContentTargetName() */
 HRESULT wuixamean_split_open_theme_animation_get__content_target_name(WUIXAMEAN_SplitOpenThemeAnimation *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.put_ContentTargetName() */
 HRESULT wuixamean_split_open_theme_animation_put__content_target_name(WUIXAMEAN_SplitOpenThemeAnimation *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.get_ContentTarget() */
 HRESULT wuixamean_split_open_theme_animation_get__content_target(WUIXAMEAN_SplitOpenThemeAnimation *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.put_ContentTarget() */
 HRESULT wuixamean_split_open_theme_animation_put__content_target(WUIXAMEAN_SplitOpenThemeAnimation *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.get_OpenedLength() */
 HRESULT wuixamean_split_open_theme_animation_get__opened_length(WUIXAMEAN_SplitOpenThemeAnimation *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.put_OpenedLength() */
 HRESULT wuixamean_split_open_theme_animation_put__opened_length(WUIXAMEAN_SplitOpenThemeAnimation *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.get_ClosedLength() */
 HRESULT wuixamean_split_open_theme_animation_get__closed_length(WUIXAMEAN_SplitOpenThemeAnimation *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.put_ClosedLength() */
 HRESULT wuixamean_split_open_theme_animation_put__closed_length(WUIXAMEAN_SplitOpenThemeAnimation *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.get_OffsetFromCenter() */
 HRESULT wuixamean_split_open_theme_animation_get__offset_from_center(WUIXAMEAN_SplitOpenThemeAnimation *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.put_OffsetFromCenter() */
 HRESULT wuixamean_split_open_theme_animation_put__offset_from_center(WUIXAMEAN_SplitOpenThemeAnimation *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.get_ContentTranslationDirection() */
 HRESULT wuixamean_split_open_theme_animation_get__content_translation_direction(WUIXAMEAN_SplitOpenThemeAnimation *self, WUIXACOPR_AnimationDirection *value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.put_ContentTranslationDirection() */
 HRESULT wuixamean_split_open_theme_animation_put__content_translation_direction(WUIXAMEAN_SplitOpenThemeAnimation *self, WUIXACOPR_AnimationDirection value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.get_ContentTranslationOffset() */
 HRESULT wuixamean_split_open_theme_animation_get__content_translation_offset(WUIXAMEAN_SplitOpenThemeAnimation *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.put_ContentTranslationOffset() */
 HRESULT wuixamean_split_open_theme_animation_put__content_translation_offset(WUIXAMEAN_SplitOpenThemeAnimation *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.get_OpenedTargetNameProperty() */
 HRESULT wuixamean_split_open_theme_animation_get__opened_target_name_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.get_OpenedTargetProperty() */
 HRESULT wuixamean_split_open_theme_animation_get__opened_target_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.get_ClosedTargetNameProperty() */
 HRESULT wuixamean_split_open_theme_animation_get__closed_target_name_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.get_ClosedTargetProperty() */
 HRESULT wuixamean_split_open_theme_animation_get__closed_target_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.get_ContentTargetNameProperty() */
 HRESULT wuixamean_split_open_theme_animation_get__content_target_name_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.get_ContentTargetProperty() */
 HRESULT wuixamean_split_open_theme_animation_get__content_target_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.get_OpenedLengthProperty() */
 HRESULT wuixamean_split_open_theme_animation_get__opened_length_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.get_ClosedLengthProperty() */
 HRESULT wuixamean_split_open_theme_animation_get__closed_length_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.get_OffsetFromCenterProperty() */
 HRESULT wuixamean_split_open_theme_animation_get__offset_from_center_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.get_ContentTranslationDirectionProperty() */
 HRESULT wuixamean_split_open_theme_animation_get__content_translation_direction_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation.get_ContentTranslationOffsetProperty() */
 HRESULT wuixamean_split_open_theme_animation_get__content_translation_offset_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation */
 HRESULT wuixamean_split_close_theme_animation_new(WUIXAMEAN_SplitCloseThemeAnimation **out);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.get_OpenedTargetName() */
 HRESULT wuixamean_split_close_theme_animation_get__opened_target_name(WUIXAMEAN_SplitCloseThemeAnimation *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.put_OpenedTargetName() */
 HRESULT wuixamean_split_close_theme_animation_put__opened_target_name(WUIXAMEAN_SplitCloseThemeAnimation *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.get_OpenedTarget() */
 HRESULT wuixamean_split_close_theme_animation_get__opened_target(WUIXAMEAN_SplitCloseThemeAnimation *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.put_OpenedTarget() */
 HRESULT wuixamean_split_close_theme_animation_put__opened_target(WUIXAMEAN_SplitCloseThemeAnimation *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.get_ClosedTargetName() */
 HRESULT wuixamean_split_close_theme_animation_get__closed_target_name(WUIXAMEAN_SplitCloseThemeAnimation *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.put_ClosedTargetName() */
 HRESULT wuixamean_split_close_theme_animation_put__closed_target_name(WUIXAMEAN_SplitCloseThemeAnimation *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.get_ClosedTarget() */
 HRESULT wuixamean_split_close_theme_animation_get__closed_target(WUIXAMEAN_SplitCloseThemeAnimation *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.put_ClosedTarget() */
 HRESULT wuixamean_split_close_theme_animation_put__closed_target(WUIXAMEAN_SplitCloseThemeAnimation *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.get_ContentTargetName() */
 HRESULT wuixamean_split_close_theme_animation_get__content_target_name(WUIXAMEAN_SplitCloseThemeAnimation *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.put_ContentTargetName() */
 HRESULT wuixamean_split_close_theme_animation_put__content_target_name(WUIXAMEAN_SplitCloseThemeAnimation *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.get_ContentTarget() */
 HRESULT wuixamean_split_close_theme_animation_get__content_target(WUIXAMEAN_SplitCloseThemeAnimation *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.put_ContentTarget() */
 HRESULT wuixamean_split_close_theme_animation_put__content_target(WUIXAMEAN_SplitCloseThemeAnimation *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.get_OpenedLength() */
 HRESULT wuixamean_split_close_theme_animation_get__opened_length(WUIXAMEAN_SplitCloseThemeAnimation *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.put_OpenedLength() */
 HRESULT wuixamean_split_close_theme_animation_put__opened_length(WUIXAMEAN_SplitCloseThemeAnimation *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.get_ClosedLength() */
 HRESULT wuixamean_split_close_theme_animation_get__closed_length(WUIXAMEAN_SplitCloseThemeAnimation *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.put_ClosedLength() */
 HRESULT wuixamean_split_close_theme_animation_put__closed_length(WUIXAMEAN_SplitCloseThemeAnimation *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.get_OffsetFromCenter() */
 HRESULT wuixamean_split_close_theme_animation_get__offset_from_center(WUIXAMEAN_SplitCloseThemeAnimation *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.put_OffsetFromCenter() */
 HRESULT wuixamean_split_close_theme_animation_put__offset_from_center(WUIXAMEAN_SplitCloseThemeAnimation *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.get_ContentTranslationDirection() */
 HRESULT wuixamean_split_close_theme_animation_get__content_translation_direction(WUIXAMEAN_SplitCloseThemeAnimation *self, WUIXACOPR_AnimationDirection *value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.put_ContentTranslationDirection() */
 HRESULT wuixamean_split_close_theme_animation_put__content_translation_direction(WUIXAMEAN_SplitCloseThemeAnimation *self, WUIXACOPR_AnimationDirection value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.get_ContentTranslationOffset() */
 HRESULT wuixamean_split_close_theme_animation_get__content_translation_offset(WUIXAMEAN_SplitCloseThemeAnimation *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.put_ContentTranslationOffset() */
 HRESULT wuixamean_split_close_theme_animation_put__content_translation_offset(WUIXAMEAN_SplitCloseThemeAnimation *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.get_OpenedTargetNameProperty() */
 HRESULT wuixamean_split_close_theme_animation_get__opened_target_name_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.get_OpenedTargetProperty() */
 HRESULT wuixamean_split_close_theme_animation_get__opened_target_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.get_ClosedTargetNameProperty() */
 HRESULT wuixamean_split_close_theme_animation_get__closed_target_name_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.get_ClosedTargetProperty() */
 HRESULT wuixamean_split_close_theme_animation_get__closed_target_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.get_ContentTargetNameProperty() */
 HRESULT wuixamean_split_close_theme_animation_get__content_target_name_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.get_ContentTargetProperty() */
 HRESULT wuixamean_split_close_theme_animation_get__content_target_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.get_OpenedLengthProperty() */
 HRESULT wuixamean_split_close_theme_animation_get__opened_length_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.get_ClosedLengthProperty() */
 HRESULT wuixamean_split_close_theme_animation_get__closed_length_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.get_OffsetFromCenterProperty() */
 HRESULT wuixamean_split_close_theme_animation_get__offset_from_center_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.get_ContentTranslationDirectionProperty() */
 HRESULT wuixamean_split_close_theme_animation_get__content_translation_direction_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation.get_ContentTranslationOffsetProperty() */
 HRESULT wuixamean_split_close_theme_animation_get__content_translation_offset_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.SplinePointKeyFrame */
 HRESULT wuixamean_spline_point_key_frame_new(WUIXAMEAN_SplinePointKeyFrame **out);
 
-/* Windows.UI.Xaml.Media.Animation.SplinePointKeyFrame */
-/* Windows.UI.Xaml.Media.Animation.SplinePointKeyFrame.get_KeySpline() */
 HRESULT wuixamean_spline_point_key_frame_get__key_spline(WUIXAMEAN_SplinePointKeyFrame *self, WUIXAMEAN_KeySpline** value);
 
-/* Windows.UI.Xaml.Media.Animation.SplinePointKeyFrame.put_KeySpline() */
 HRESULT wuixamean_spline_point_key_frame_put__key_spline(WUIXAMEAN_SplinePointKeyFrame *self, WUIXAMEAN_KeySpline* value);
 
-/* Windows.UI.Xaml.Media.Animation.SplinePointKeyFrame.get_KeySplineProperty() */
 HRESULT wuixamean_spline_point_key_frame_get__key_spline_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.SplineDoubleKeyFrame */
 HRESULT wuixamean_spline_double_key_frame_new(WUIXAMEAN_SplineDoubleKeyFrame **out);
 
-/* Windows.UI.Xaml.Media.Animation.SplineDoubleKeyFrame */
-/* Windows.UI.Xaml.Media.Animation.SplineDoubleKeyFrame.get_KeySpline() */
 HRESULT wuixamean_spline_double_key_frame_get__key_spline(WUIXAMEAN_SplineDoubleKeyFrame *self, WUIXAMEAN_KeySpline** value);
 
-/* Windows.UI.Xaml.Media.Animation.SplineDoubleKeyFrame.put_KeySpline() */
 HRESULT wuixamean_spline_double_key_frame_put__key_spline(WUIXAMEAN_SplineDoubleKeyFrame *self, WUIXAMEAN_KeySpline* value);
 
-/* Windows.UI.Xaml.Media.Animation.SplineDoubleKeyFrame.get_KeySplineProperty() */
 HRESULT wuixamean_spline_double_key_frame_get__key_spline_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.SplineColorKeyFrame */
 HRESULT wuixamean_spline_color_key_frame_new(WUIXAMEAN_SplineColorKeyFrame **out);
 
-/* Windows.UI.Xaml.Media.Animation.SplineColorKeyFrame */
-/* Windows.UI.Xaml.Media.Animation.SplineColorKeyFrame.get_KeySpline() */
 HRESULT wuixamean_spline_color_key_frame_get__key_spline(WUIXAMEAN_SplineColorKeyFrame *self, WUIXAMEAN_KeySpline** value);
 
-/* Windows.UI.Xaml.Media.Animation.SplineColorKeyFrame.put_KeySpline() */
 HRESULT wuixamean_spline_color_key_frame_put__key_spline(WUIXAMEAN_SplineColorKeyFrame *self, WUIXAMEAN_KeySpline* value);
 
-/* Windows.UI.Xaml.Media.Animation.SplineColorKeyFrame.get_KeySplineProperty() */
 HRESULT wuixamean_spline_color_key_frame_get__key_spline_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.SlideNavigationTransitionInfo */
 HRESULT wuixamean_slide_navigation_transition_info_new(WUIXAMEAN_SlideNavigationTransitionInfo **out);
 
-/* Windows.UI.Xaml.Media.Animation.SlideNavigationTransitionInfo */
-/* Windows.UI.Xaml.Media.Animation.SlideNavigationTransitionInfo.get_Effect() */
 HRESULT wuixamean_slide_navigation_transition_info_get__effect(WUIXAMEAN_SlideNavigationTransitionInfo *self, WUIXAMEAN_SlideNavigationTransitionEffect *value);
 
-/* Windows.UI.Xaml.Media.Animation.SlideNavigationTransitionInfo.put_Effect() */
 HRESULT wuixamean_slide_navigation_transition_info_put__effect(WUIXAMEAN_SlideNavigationTransitionInfo *self, WUIXAMEAN_SlideNavigationTransitionEffect value);
 
-/* Windows.UI.Xaml.Media.Animation.SlideNavigationTransitionInfo.get_EffectProperty() */
 HRESULT wuixamean_slide_navigation_transition_info_get__effect_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.RepositionThemeTransition */
 HRESULT wuixamean_reposition_theme_transition_new(WUIXAMEAN_RepositionThemeTransition **out);
 
-/* Windows.UI.Xaml.Media.Animation.RepositionThemeTransition */
-/* Windows.UI.Xaml.Media.Animation.RepositionThemeTransition.get_IsStaggeringEnabled() */
 HRESULT wuixamean_reposition_theme_transition_get__is_staggering_enabled(WUIXAMEAN_RepositionThemeTransition *self, BOOL *value);
 
-/* Windows.UI.Xaml.Media.Animation.RepositionThemeTransition.put_IsStaggeringEnabled() */
 HRESULT wuixamean_reposition_theme_transition_put__is_staggering_enabled(WUIXAMEAN_RepositionThemeTransition *self, BOOL value);
 
-/* Windows.UI.Xaml.Media.Animation.RepositionThemeTransition.get_IsStaggeringEnabledProperty() */
 HRESULT wuixamean_reposition_theme_transition_get__is_staggering_enabled_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation */
 HRESULT wuixamean_reposition_theme_animation_new(WUIXAMEAN_RepositionThemeAnimation **out);
 
-/* Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation.get_TargetName() */
 HRESULT wuixamean_reposition_theme_animation_get__target_name(WUIXAMEAN_RepositionThemeAnimation *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation.put_TargetName() */
 HRESULT wuixamean_reposition_theme_animation_put__target_name(WUIXAMEAN_RepositionThemeAnimation *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation.get_FromHorizontalOffset() */
 HRESULT wuixamean_reposition_theme_animation_get__from_horizontal_offset(WUIXAMEAN_RepositionThemeAnimation *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation.put_FromHorizontalOffset() */
 HRESULT wuixamean_reposition_theme_animation_put__from_horizontal_offset(WUIXAMEAN_RepositionThemeAnimation *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation.get_FromVerticalOffset() */
 HRESULT wuixamean_reposition_theme_animation_get__from_vertical_offset(WUIXAMEAN_RepositionThemeAnimation *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation.put_FromVerticalOffset() */
 HRESULT wuixamean_reposition_theme_animation_put__from_vertical_offset(WUIXAMEAN_RepositionThemeAnimation *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation.get_TargetNameProperty() */
 HRESULT wuixamean_reposition_theme_animation_get__target_name_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation.get_FromHorizontalOffsetProperty() */
 HRESULT wuixamean_reposition_theme_animation_get__from_horizontal_offset_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation.get_FromVerticalOffsetProperty() */
 HRESULT wuixamean_reposition_theme_animation_get__from_vertical_offset_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.RepeatBehaviorHelper */
 HRESULT wuixamean_repeat_behavior_helper_new(WUIXAMEAN_RepeatBehaviorHelper **out);
 
-/* Windows.UI.Xaml.Media.Animation.RepeatBehaviorHelper */
-/* Windows.UI.Xaml.Media.Animation.RepeatBehaviorHelper.get_Forever() */
 HRESULT wuixamean_repeat_behavior_helper_get__forever(WUIXAMEAN_RepeatBehavior *value);
 
-/* Windows.UI.Xaml.Media.Animation.RepeatBehaviorHelper.FromCount(count) */
 HRESULT wuixamean_repeat_behavior_helper_from_count(double count, WUIXAMEAN_RepeatBehavior *out);
 
-/* Windows.UI.Xaml.Media.Animation.RepeatBehaviorHelper.FromDuration(duration) */
 HRESULT wuixamean_repeat_behavior_helper_from_duration(WF_TimeSpan duration, WUIXAMEAN_RepeatBehavior *out);
 
-/* Windows.UI.Xaml.Media.Animation.RepeatBehaviorHelper.GetHasCount(target) */
 HRESULT wuixamean_repeat_behavior_helper_get_has_count(WUIXAMEAN_RepeatBehavior target, BOOL *out);
 
-/* Windows.UI.Xaml.Media.Animation.RepeatBehaviorHelper.GetHasDuration(target) */
 HRESULT wuixamean_repeat_behavior_helper_get_has_duration(WUIXAMEAN_RepeatBehavior target, BOOL *out);
 
-/* Windows.UI.Xaml.Media.Animation.RepeatBehaviorHelper.Equals(target) */
 HRESULT wuixamean_repeat_behavior_helper_equals(WUIXAMEAN_RepeatBehavior target, WUIXAMEAN_RepeatBehavior value, BOOL *out);
 
-/* activate Windows.UI.Xaml.Media.Animation.PowerEase */
 HRESULT wuixamean_power_ease_new(WUIXAMEAN_PowerEase **out);
 
-/* Windows.UI.Xaml.Media.Animation.PowerEase */
-/* Windows.UI.Xaml.Media.Animation.PowerEase.get_Power() */
 HRESULT wuixamean_power_ease_get__power(WUIXAMEAN_PowerEase *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.PowerEase.put_Power() */
 HRESULT wuixamean_power_ease_put__power(WUIXAMEAN_PowerEase *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.PowerEase.get_PowerProperty() */
 HRESULT wuixamean_power_ease_get__power_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.PopupThemeTransition */
 HRESULT wuixamean_popup_theme_transition_new(WUIXAMEAN_PopupThemeTransition **out);
 
-/* Windows.UI.Xaml.Media.Animation.PopupThemeTransition */
-/* Windows.UI.Xaml.Media.Animation.PopupThemeTransition.get_FromHorizontalOffset() */
 HRESULT wuixamean_popup_theme_transition_get__from_horizontal_offset(WUIXAMEAN_PopupThemeTransition *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.PopupThemeTransition.put_FromHorizontalOffset() */
 HRESULT wuixamean_popup_theme_transition_put__from_horizontal_offset(WUIXAMEAN_PopupThemeTransition *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.PopupThemeTransition.get_FromVerticalOffset() */
 HRESULT wuixamean_popup_theme_transition_get__from_vertical_offset(WUIXAMEAN_PopupThemeTransition *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.PopupThemeTransition.put_FromVerticalOffset() */
 HRESULT wuixamean_popup_theme_transition_put__from_vertical_offset(WUIXAMEAN_PopupThemeTransition *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.PopupThemeTransition.get_FromHorizontalOffsetProperty() */
 HRESULT wuixamean_popup_theme_transition_get__from_horizontal_offset_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.PopupThemeTransition.get_FromVerticalOffsetProperty() */
 HRESULT wuixamean_popup_theme_transition_get__from_vertical_offset_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.PopOutThemeAnimation */
 HRESULT wuixamean_pop_out_theme_animation_new(WUIXAMEAN_PopOutThemeAnimation **out);
 
-/* Windows.UI.Xaml.Media.Animation.PopOutThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.PopOutThemeAnimation.get_TargetName() */
 HRESULT wuixamean_pop_out_theme_animation_get__target_name(WUIXAMEAN_PopOutThemeAnimation *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Media.Animation.PopOutThemeAnimation.put_TargetName() */
 HRESULT wuixamean_pop_out_theme_animation_put__target_name(WUIXAMEAN_PopOutThemeAnimation *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Media.Animation.PopOutThemeAnimation.get_TargetNameProperty() */
 HRESULT wuixamean_pop_out_theme_animation_get__target_name_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.PopInThemeAnimation */
 HRESULT wuixamean_pop_in_theme_animation_new(WUIXAMEAN_PopInThemeAnimation **out);
 
-/* Windows.UI.Xaml.Media.Animation.PopInThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.PopInThemeAnimation.get_TargetName() */
 HRESULT wuixamean_pop_in_theme_animation_get__target_name(WUIXAMEAN_PopInThemeAnimation *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Media.Animation.PopInThemeAnimation.put_TargetName() */
 HRESULT wuixamean_pop_in_theme_animation_put__target_name(WUIXAMEAN_PopInThemeAnimation *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Media.Animation.PopInThemeAnimation.get_FromHorizontalOffset() */
 HRESULT wuixamean_pop_in_theme_animation_get__from_horizontal_offset(WUIXAMEAN_PopInThemeAnimation *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.PopInThemeAnimation.put_FromHorizontalOffset() */
 HRESULT wuixamean_pop_in_theme_animation_put__from_horizontal_offset(WUIXAMEAN_PopInThemeAnimation *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.PopInThemeAnimation.get_FromVerticalOffset() */
 HRESULT wuixamean_pop_in_theme_animation_get__from_vertical_offset(WUIXAMEAN_PopInThemeAnimation *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.PopInThemeAnimation.put_FromVerticalOffset() */
 HRESULT wuixamean_pop_in_theme_animation_put__from_vertical_offset(WUIXAMEAN_PopInThemeAnimation *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.PopInThemeAnimation.get_TargetNameProperty() */
 HRESULT wuixamean_pop_in_theme_animation_get__target_name_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.PopInThemeAnimation.get_FromHorizontalOffsetProperty() */
 HRESULT wuixamean_pop_in_theme_animation_get__from_horizontal_offset_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.PopInThemeAnimation.get_FromVerticalOffsetProperty() */
 HRESULT wuixamean_pop_in_theme_animation_get__from_vertical_offset_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.PointerUpThemeAnimation */
 HRESULT wuixamean_pointer_up_theme_animation_new(WUIXAMEAN_PointerUpThemeAnimation **out);
 
-/* Windows.UI.Xaml.Media.Animation.PointerUpThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.PointerUpThemeAnimation.get_TargetName() */
 HRESULT wuixamean_pointer_up_theme_animation_get__target_name(WUIXAMEAN_PointerUpThemeAnimation *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Media.Animation.PointerUpThemeAnimation.put_TargetName() */
 HRESULT wuixamean_pointer_up_theme_animation_put__target_name(WUIXAMEAN_PointerUpThemeAnimation *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Media.Animation.PointerUpThemeAnimation.get_TargetNameProperty() */
 HRESULT wuixamean_pointer_up_theme_animation_get__target_name_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.PointerDownThemeAnimation */
 HRESULT wuixamean_pointer_down_theme_animation_new(WUIXAMEAN_PointerDownThemeAnimation **out);
 
-/* Windows.UI.Xaml.Media.Animation.PointerDownThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.PointerDownThemeAnimation.get_TargetName() */
 HRESULT wuixamean_pointer_down_theme_animation_get__target_name(WUIXAMEAN_PointerDownThemeAnimation *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Media.Animation.PointerDownThemeAnimation.put_TargetName() */
 HRESULT wuixamean_pointer_down_theme_animation_put__target_name(WUIXAMEAN_PointerDownThemeAnimation *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Media.Animation.PointerDownThemeAnimation.get_TargetNameProperty() */
 HRESULT wuixamean_pointer_down_theme_animation_get__target_name_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection */
 HRESULT wuixamean_point_key_frame_collection_new(WUIXAMEAN_PointKeyFrameCollection **out);
 
-/* Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection */
-/* Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection.GetAt(index) */
 HRESULT wuixamean_point_key_frame_collection_get_at(WUIXAMEAN_PointKeyFrameCollection *self, uint32_t index, WUIXAMEAN_PointKeyFrame** out);
 
-/* Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection.get_Size() */
 HRESULT wuixamean_point_key_frame_collection_get__size(WUIXAMEAN_PointKeyFrameCollection *self, uint32_t *value);
 
-/* Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection.GetView() */
 HRESULT wuixamean_point_key_frame_collection_get_view(WUIXAMEAN_PointKeyFrameCollection *self, WFOCO_IVectorView_WUIXAMEAN_PointKeyFrame** out);
 
-/* Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection.IndexOf(index) */
 HRESULT wuixamean_point_key_frame_collection_index_of(WUIXAMEAN_PointKeyFrameCollection *self, WUIXAMEAN_PointKeyFrame* value, uint32_t index, BOOL *out);
 
-/* Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection.SetAt(index) */
 HRESULT wuixamean_point_key_frame_collection_set_at(WUIXAMEAN_PointKeyFrameCollection *self, uint32_t index, WUIXAMEAN_PointKeyFrame* value);
 
-/* Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection.InsertAt(index) */
 HRESULT wuixamean_point_key_frame_collection_insert_at(WUIXAMEAN_PointKeyFrameCollection *self, uint32_t index, WUIXAMEAN_PointKeyFrame* value);
 
-/* Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection.RemoveAt(index) */
 HRESULT wuixamean_point_key_frame_collection_remove_at(WUIXAMEAN_PointKeyFrameCollection *self, uint32_t index);
 
-/* Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection.Append() */
 HRESULT wuixamean_point_key_frame_collection_append(WUIXAMEAN_PointKeyFrameCollection *self, WUIXAMEAN_PointKeyFrame* value);
 
-/* Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection.RemoveAtEnd() */
 HRESULT wuixamean_point_key_frame_collection_remove_at_end(WUIXAMEAN_PointKeyFrameCollection *self);
 
-/* Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection.Clear() */
 HRESULT wuixamean_point_key_frame_collection_clear(WUIXAMEAN_PointKeyFrameCollection *self);
 
-/* Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection.GetMany(startIndex, items) */
 HRESULT wuixamean_point_key_frame_collection_get_many(WUIXAMEAN_PointKeyFrameCollection *self, uint32_t startIndex, WUIXAMEAN_PointKeyFrame *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection.ReplaceAll(items) */
 HRESULT wuixamean_point_key_frame_collection_replace_all(WUIXAMEAN_PointKeyFrameCollection *self, WUIXAMEAN_PointKeyFrame *items, uint32_t items_len);
 
-/* Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection.First() */
 HRESULT wuixamean_point_key_frame_collection_first(WUIXAMEAN_PointKeyFrameCollection *self, WFOCO_IIterator_WUIXAMEAN_PointKeyFrame** out);
 
-/* activate Windows.UI.Xaml.Media.Animation.PointAnimationUsingKeyFrames */
 HRESULT wuixamean_point_animation_using_key_frames_new(WUIXAMEAN_PointAnimationUsingKeyFrames **out);
 
-/* Windows.UI.Xaml.Media.Animation.PointAnimationUsingKeyFrames */
-/* Windows.UI.Xaml.Media.Animation.PointAnimationUsingKeyFrames.get_KeyFrames() */
 HRESULT wuixamean_point_animation_using_key_frames_get__key_frames(WUIXAMEAN_PointAnimationUsingKeyFrames *self, WUIXAMEAN_PointKeyFrameCollection** value);
 
-/* Windows.UI.Xaml.Media.Animation.PointAnimationUsingKeyFrames.get_EnableDependentAnimation() */
 HRESULT wuixamean_point_animation_using_key_frames_get__enable_dependent_animation(WUIXAMEAN_PointAnimationUsingKeyFrames *self, BOOL *value);
 
-/* Windows.UI.Xaml.Media.Animation.PointAnimationUsingKeyFrames.put_EnableDependentAnimation() */
 HRESULT wuixamean_point_animation_using_key_frames_put__enable_dependent_animation(WUIXAMEAN_PointAnimationUsingKeyFrames *self, BOOL value);
 
-/* Windows.UI.Xaml.Media.Animation.PointAnimationUsingKeyFrames.get_EnableDependentAnimationProperty() */
 HRESULT wuixamean_point_animation_using_key_frames_get__enable_dependent_animation_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.PointAnimation */
 HRESULT wuixamean_point_animation_new(WUIXAMEAN_PointAnimation **out);
 
-/* Windows.UI.Xaml.Media.Animation.PointAnimation */
-/* Windows.UI.Xaml.Media.Animation.PointAnimation.get_From() */
 HRESULT wuixamean_point_animation_get__from(WUIXAMEAN_PointAnimation *self, WF_Point** value);
 
-/* Windows.UI.Xaml.Media.Animation.PointAnimation.put_From() */
 HRESULT wuixamean_point_animation_put__from(WUIXAMEAN_PointAnimation *self, WF_Point* value);
 
-/* Windows.UI.Xaml.Media.Animation.PointAnimation.get_To() */
 HRESULT wuixamean_point_animation_get__to(WUIXAMEAN_PointAnimation *self, WF_Point** value);
 
-/* Windows.UI.Xaml.Media.Animation.PointAnimation.put_To() */
 HRESULT wuixamean_point_animation_put__to(WUIXAMEAN_PointAnimation *self, WF_Point* value);
 
-/* Windows.UI.Xaml.Media.Animation.PointAnimation.get_By() */
 HRESULT wuixamean_point_animation_get__by(WUIXAMEAN_PointAnimation *self, WF_Point** value);
 
-/* Windows.UI.Xaml.Media.Animation.PointAnimation.put_By() */
 HRESULT wuixamean_point_animation_put__by(WUIXAMEAN_PointAnimation *self, WF_Point* value);
 
-/* Windows.UI.Xaml.Media.Animation.PointAnimation.get_EasingFunction() */
 HRESULT wuixamean_point_animation_get__easing_function(WUIXAMEAN_PointAnimation *self, WUIXAMEAN_EasingFunctionBase** value);
 
-/* Windows.UI.Xaml.Media.Animation.PointAnimation.put_EasingFunction() */
 HRESULT wuixamean_point_animation_put__easing_function(WUIXAMEAN_PointAnimation *self, WUIXAMEAN_EasingFunctionBase* value);
 
-/* Windows.UI.Xaml.Media.Animation.PointAnimation.get_EnableDependentAnimation() */
 HRESULT wuixamean_point_animation_get__enable_dependent_animation(WUIXAMEAN_PointAnimation *self, BOOL *value);
 
-/* Windows.UI.Xaml.Media.Animation.PointAnimation.put_EnableDependentAnimation() */
 HRESULT wuixamean_point_animation_put__enable_dependent_animation(WUIXAMEAN_PointAnimation *self, BOOL value);
 
-/* Windows.UI.Xaml.Media.Animation.PointAnimation.get_FromProperty() */
 HRESULT wuixamean_point_animation_get__from_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.PointAnimation.get_ToProperty() */
 HRESULT wuixamean_point_animation_get__to_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.PointAnimation.get_ByProperty() */
 HRESULT wuixamean_point_animation_get__by_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.PointAnimation.get_EasingFunctionProperty() */
 HRESULT wuixamean_point_animation_get__easing_function_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.PointAnimation.get_EnableDependentAnimationProperty() */
 HRESULT wuixamean_point_animation_get__enable_dependent_animation_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.PaneThemeTransition */
 HRESULT wuixamean_pane_theme_transition_new(WUIXAMEAN_PaneThemeTransition **out);
 
-/* Windows.UI.Xaml.Media.Animation.PaneThemeTransition */
-/* Windows.UI.Xaml.Media.Animation.PaneThemeTransition.get_Edge() */
 HRESULT wuixamean_pane_theme_transition_get__edge(WUIXAMEAN_PaneThemeTransition *self, WUIXACOPR_EdgeTransitionLocation *value);
 
-/* Windows.UI.Xaml.Media.Animation.PaneThemeTransition.put_Edge() */
 HRESULT wuixamean_pane_theme_transition_put__edge(WUIXAMEAN_PaneThemeTransition *self, WUIXACOPR_EdgeTransitionLocation value);
 
-/* Windows.UI.Xaml.Media.Animation.PaneThemeTransition.get_EdgeProperty() */
 HRESULT wuixamean_pane_theme_transition_get__edge_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection */
 HRESULT wuixamean_object_key_frame_collection_new(WUIXAMEAN_ObjectKeyFrameCollection **out);
 
-/* Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection */
-/* Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection.GetAt(index) */
 HRESULT wuixamean_object_key_frame_collection_get_at(WUIXAMEAN_ObjectKeyFrameCollection *self, uint32_t index, WUIXAMEAN_ObjectKeyFrame** out);
 
-/* Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection.get_Size() */
 HRESULT wuixamean_object_key_frame_collection_get__size(WUIXAMEAN_ObjectKeyFrameCollection *self, uint32_t *value);
 
-/* Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection.GetView() */
 HRESULT wuixamean_object_key_frame_collection_get_view(WUIXAMEAN_ObjectKeyFrameCollection *self, WFOCO_IVectorView_WUIXAMEAN_ObjectKeyFrame** out);
 
-/* Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection.IndexOf(index) */
 HRESULT wuixamean_object_key_frame_collection_index_of(WUIXAMEAN_ObjectKeyFrameCollection *self, WUIXAMEAN_ObjectKeyFrame* value, uint32_t index, BOOL *out);
 
-/* Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection.SetAt(index) */
 HRESULT wuixamean_object_key_frame_collection_set_at(WUIXAMEAN_ObjectKeyFrameCollection *self, uint32_t index, WUIXAMEAN_ObjectKeyFrame* value);
 
-/* Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection.InsertAt(index) */
 HRESULT wuixamean_object_key_frame_collection_insert_at(WUIXAMEAN_ObjectKeyFrameCollection *self, uint32_t index, WUIXAMEAN_ObjectKeyFrame* value);
 
-/* Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection.RemoveAt(index) */
 HRESULT wuixamean_object_key_frame_collection_remove_at(WUIXAMEAN_ObjectKeyFrameCollection *self, uint32_t index);
 
-/* Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection.Append() */
 HRESULT wuixamean_object_key_frame_collection_append(WUIXAMEAN_ObjectKeyFrameCollection *self, WUIXAMEAN_ObjectKeyFrame* value);
 
-/* Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection.RemoveAtEnd() */
 HRESULT wuixamean_object_key_frame_collection_remove_at_end(WUIXAMEAN_ObjectKeyFrameCollection *self);
 
-/* Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection.Clear() */
 HRESULT wuixamean_object_key_frame_collection_clear(WUIXAMEAN_ObjectKeyFrameCollection *self);
 
-/* Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection.GetMany(startIndex, items) */
 HRESULT wuixamean_object_key_frame_collection_get_many(WUIXAMEAN_ObjectKeyFrameCollection *self, uint32_t startIndex, WUIXAMEAN_ObjectKeyFrame *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection.ReplaceAll(items) */
 HRESULT wuixamean_object_key_frame_collection_replace_all(WUIXAMEAN_ObjectKeyFrameCollection *self, WUIXAMEAN_ObjectKeyFrame *items, uint32_t items_len);
 
-/* Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection.First() */
 HRESULT wuixamean_object_key_frame_collection_first(WUIXAMEAN_ObjectKeyFrameCollection *self, WFOCO_IIterator_WUIXAMEAN_ObjectKeyFrame** out);
 
-/* activate Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames */
 HRESULT wuixamean_object_animation_using_key_frames_new(WUIXAMEAN_ObjectAnimationUsingKeyFrames **out);
 
-/* Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames */
-/* Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames.get_KeyFrames() */
 HRESULT wuixamean_object_animation_using_key_frames_get__key_frames(WUIXAMEAN_ObjectAnimationUsingKeyFrames *self, WUIXAMEAN_ObjectKeyFrameCollection** value);
 
-/* Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames.get_EnableDependentAnimation() */
 HRESULT wuixamean_object_animation_using_key_frames_get__enable_dependent_animation(WUIXAMEAN_ObjectAnimationUsingKeyFrames *self, BOOL *value);
 
-/* Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames.put_EnableDependentAnimation() */
 HRESULT wuixamean_object_animation_using_key_frames_put__enable_dependent_animation(WUIXAMEAN_ObjectAnimationUsingKeyFrames *self, BOOL value);
 
-/* Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames.get_EnableDependentAnimationProperty() */
 HRESULT wuixamean_object_animation_using_key_frames_get__enable_dependent_animation_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.NavigationThemeTransition */
 HRESULT wuixamean_navigation_theme_transition_new(WUIXAMEAN_NavigationThemeTransition **out);
 
-/* Windows.UI.Xaml.Media.Animation.NavigationThemeTransition */
-/* Windows.UI.Xaml.Media.Animation.NavigationThemeTransition.get_DefaultNavigationTransitionInfo() */
 HRESULT wuixamean_navigation_theme_transition_get__default_navigation_transition_info(WUIXAMEAN_NavigationThemeTransition *self, WUIXAMEAN_NavigationTransitionInfo** value);
 
-/* Windows.UI.Xaml.Media.Animation.NavigationThemeTransition.put_DefaultNavigationTransitionInfo() */
 HRESULT wuixamean_navigation_theme_transition_put__default_navigation_transition_info(WUIXAMEAN_NavigationThemeTransition *self, WUIXAMEAN_NavigationTransitionInfo* value);
 
-/* Windows.UI.Xaml.Media.Animation.NavigationThemeTransition.get_DefaultNavigationTransitionInfoProperty() */
 HRESULT wuixamean_navigation_theme_transition_get__default_navigation_transition_info_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.KeyTimeHelper */
 HRESULT wuixamean_key_time_helper_new(WUIXAMEAN_KeyTimeHelper **out);
 
-/* Windows.UI.Xaml.Media.Animation.KeyTimeHelper */
-/* Windows.UI.Xaml.Media.Animation.KeyTimeHelper.FromTimeSpan(timeSpan) */
 HRESULT wuixamean_key_time_helper_from_time_span(WF_TimeSpan timeSpan, WUIXAMEAN_KeyTime *out);
 
-/* activate Windows.UI.Xaml.Media.Animation.KeySpline */
 HRESULT wuixamean_key_spline_new(WUIXAMEAN_KeySpline **out);
 
-/* Windows.UI.Xaml.Media.Animation.KeySpline */
-/* Windows.UI.Xaml.Media.Animation.KeySpline.get_ControlPoint1() */
 HRESULT wuixamean_key_spline_get__control_point1(WUIXAMEAN_KeySpline *self, WF_Point *value);
 
-/* Windows.UI.Xaml.Media.Animation.KeySpline.put_ControlPoint1() */
 HRESULT wuixamean_key_spline_put__control_point1(WUIXAMEAN_KeySpline *self, WF_Point value);
 
-/* Windows.UI.Xaml.Media.Animation.KeySpline.get_ControlPoint2() */
 HRESULT wuixamean_key_spline_get__control_point2(WUIXAMEAN_KeySpline *self, WF_Point *value);
 
-/* Windows.UI.Xaml.Media.Animation.KeySpline.put_ControlPoint2() */
 HRESULT wuixamean_key_spline_put__control_point2(WUIXAMEAN_KeySpline *self, WF_Point value);
 
-/* Windows.UI.Xaml.Media.Animation.ITimelineStatics */
-/* Windows.UI.Xaml.Media.Animation.ITimelineStatics.get_AllowDependentAnimations() */
 HRESULT wuixamean_timeline_statics_get__allow_dependent_animations(WUIXAMEAN_ITimelineStatics *self, BOOL *value);
 
-/* Windows.UI.Xaml.Media.Animation.ITimelineStatics.put_AllowDependentAnimations() */
 HRESULT wuixamean_timeline_statics_put__allow_dependent_animations(WUIXAMEAN_ITimelineStatics *self, BOOL value);
 
-/* Windows.UI.Xaml.Media.Animation.ITimelineStatics.get_AutoReverseProperty() */
 HRESULT wuixamean_timeline_statics_get__auto_reverse_property(WUIXAMEAN_ITimelineStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ITimelineStatics.get_BeginTimeProperty() */
 HRESULT wuixamean_timeline_statics_get__begin_time_property(WUIXAMEAN_ITimelineStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ITimelineStatics.get_DurationProperty() */
 HRESULT wuixamean_timeline_statics_get__duration_property(WUIXAMEAN_ITimelineStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ITimelineStatics.get_SpeedRatioProperty() */
 HRESULT wuixamean_timeline_statics_get__speed_ratio_property(WUIXAMEAN_ITimelineStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ITimelineStatics.get_FillBehaviorProperty() */
 HRESULT wuixamean_timeline_statics_get__fill_behavior_property(WUIXAMEAN_ITimelineStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ITimelineStatics.get_RepeatBehaviorProperty() */
 HRESULT wuixamean_timeline_statics_get__repeat_behavior_property(WUIXAMEAN_ITimelineStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ITimelineFactory */
-/* Windows.UI.Xaml.Media.Animation.ITimelineFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixamean_timeline_factory_create_instance(WUIXAMEAN_ITimelineFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAMEAN_Timeline** out);
 
-/* Windows.UI.Xaml.Media.Animation.ISwipeHintThemeAnimationStatics */
-/* Windows.UI.Xaml.Media.Animation.ISwipeHintThemeAnimationStatics.get_TargetNameProperty() */
 HRESULT wuixamean_swipe_hint_theme_animation_statics_get__target_name_property(WUIXAMEAN_ISwipeHintThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISwipeHintThemeAnimationStatics.get_ToHorizontalOffsetProperty() */
 HRESULT wuixamean_swipe_hint_theme_animation_statics_get__to_horizontal_offset_property(WUIXAMEAN_ISwipeHintThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISwipeHintThemeAnimationStatics.get_ToVerticalOffsetProperty() */
 HRESULT wuixamean_swipe_hint_theme_animation_statics_get__to_vertical_offset_property(WUIXAMEAN_ISwipeHintThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISwipeBackThemeAnimationStatics */
-/* Windows.UI.Xaml.Media.Animation.ISwipeBackThemeAnimationStatics.get_TargetNameProperty() */
 HRESULT wuixamean_swipe_back_theme_animation_statics_get__target_name_property(WUIXAMEAN_ISwipeBackThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISwipeBackThemeAnimationStatics.get_FromHorizontalOffsetProperty() */
 HRESULT wuixamean_swipe_back_theme_animation_statics_get__from_horizontal_offset_property(WUIXAMEAN_ISwipeBackThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISwipeBackThemeAnimationStatics.get_FromVerticalOffsetProperty() */
 HRESULT wuixamean_swipe_back_theme_animation_statics_get__from_vertical_offset_property(WUIXAMEAN_ISwipeBackThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IStoryboardStatics */
-/* Windows.UI.Xaml.Media.Animation.IStoryboardStatics.get_TargetPropertyProperty() */
 HRESULT wuixamean_storyboard_statics_get__target_property_property(WUIXAMEAN_IStoryboardStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IStoryboardStatics.GetTargetProperty(element) */
 HRESULT wuixamean_storyboard_statics_get_target_property(WUIXAMEAN_IStoryboardStatics *self, WUIXAMEAN_Timeline* element, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Media.Animation.IStoryboardStatics.SetTargetProperty(element, path) */
 HRESULT wuixamean_storyboard_statics_set_target_property(WUIXAMEAN_IStoryboardStatics *self, WUIXAMEAN_Timeline* element, cwinrt_hstring path);
 
-/* Windows.UI.Xaml.Media.Animation.IStoryboardStatics.get_TargetNameProperty() */
 HRESULT wuixamean_storyboard_statics_get__target_name_property(WUIXAMEAN_IStoryboardStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IStoryboardStatics.GetTargetName(element) */
 HRESULT wuixamean_storyboard_statics_get_target_name(WUIXAMEAN_IStoryboardStatics *self, WUIXAMEAN_Timeline* element, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Media.Animation.IStoryboardStatics.SetTargetName(element, name) */
 HRESULT wuixamean_storyboard_statics_set_target_name(WUIXAMEAN_IStoryboardStatics *self, WUIXAMEAN_Timeline* element, cwinrt_hstring name);
 
-/* Windows.UI.Xaml.Media.Animation.IStoryboardStatics.SetTarget(timeline, target) */
 HRESULT wuixamean_storyboard_statics_set_target(WUIXAMEAN_IStoryboardStatics *self, WUIXAMEAN_Timeline* timeline, WUIXA_DependencyObject* target);
 
-/* Windows.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics */
-/* Windows.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics.get_OpenedTargetNameProperty() */
 HRESULT wuixamean_split_open_theme_animation_statics_get__opened_target_name_property(WUIXAMEAN_ISplitOpenThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics.get_OpenedTargetProperty() */
 HRESULT wuixamean_split_open_theme_animation_statics_get__opened_target_property(WUIXAMEAN_ISplitOpenThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics.get_ClosedTargetNameProperty() */
 HRESULT wuixamean_split_open_theme_animation_statics_get__closed_target_name_property(WUIXAMEAN_ISplitOpenThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics.get_ClosedTargetProperty() */
 HRESULT wuixamean_split_open_theme_animation_statics_get__closed_target_property(WUIXAMEAN_ISplitOpenThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics.get_ContentTargetNameProperty() */
 HRESULT wuixamean_split_open_theme_animation_statics_get__content_target_name_property(WUIXAMEAN_ISplitOpenThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics.get_ContentTargetProperty() */
 HRESULT wuixamean_split_open_theme_animation_statics_get__content_target_property(WUIXAMEAN_ISplitOpenThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics.get_OpenedLengthProperty() */
 HRESULT wuixamean_split_open_theme_animation_statics_get__opened_length_property(WUIXAMEAN_ISplitOpenThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics.get_ClosedLengthProperty() */
 HRESULT wuixamean_split_open_theme_animation_statics_get__closed_length_property(WUIXAMEAN_ISplitOpenThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics.get_OffsetFromCenterProperty() */
 HRESULT wuixamean_split_open_theme_animation_statics_get__offset_from_center_property(WUIXAMEAN_ISplitOpenThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics.get_ContentTranslationDirectionProperty() */
 HRESULT wuixamean_split_open_theme_animation_statics_get__content_translation_direction_property(WUIXAMEAN_ISplitOpenThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics.get_ContentTranslationOffsetProperty() */
 HRESULT wuixamean_split_open_theme_animation_statics_get__content_translation_offset_property(WUIXAMEAN_ISplitOpenThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics */
-/* Windows.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics.get_OpenedTargetNameProperty() */
 HRESULT wuixamean_split_close_theme_animation_statics_get__opened_target_name_property(WUIXAMEAN_ISplitCloseThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics.get_OpenedTargetProperty() */
 HRESULT wuixamean_split_close_theme_animation_statics_get__opened_target_property(WUIXAMEAN_ISplitCloseThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics.get_ClosedTargetNameProperty() */
 HRESULT wuixamean_split_close_theme_animation_statics_get__closed_target_name_property(WUIXAMEAN_ISplitCloseThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics.get_ClosedTargetProperty() */
 HRESULT wuixamean_split_close_theme_animation_statics_get__closed_target_property(WUIXAMEAN_ISplitCloseThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics.get_ContentTargetNameProperty() */
 HRESULT wuixamean_split_close_theme_animation_statics_get__content_target_name_property(WUIXAMEAN_ISplitCloseThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics.get_ContentTargetProperty() */
 HRESULT wuixamean_split_close_theme_animation_statics_get__content_target_property(WUIXAMEAN_ISplitCloseThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics.get_OpenedLengthProperty() */
 HRESULT wuixamean_split_close_theme_animation_statics_get__opened_length_property(WUIXAMEAN_ISplitCloseThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics.get_ClosedLengthProperty() */
 HRESULT wuixamean_split_close_theme_animation_statics_get__closed_length_property(WUIXAMEAN_ISplitCloseThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics.get_OffsetFromCenterProperty() */
 HRESULT wuixamean_split_close_theme_animation_statics_get__offset_from_center_property(WUIXAMEAN_ISplitCloseThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics.get_ContentTranslationDirectionProperty() */
 HRESULT wuixamean_split_close_theme_animation_statics_get__content_translation_direction_property(WUIXAMEAN_ISplitCloseThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics.get_ContentTranslationOffsetProperty() */
 HRESULT wuixamean_split_close_theme_animation_statics_get__content_translation_offset_property(WUIXAMEAN_ISplitCloseThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISplinePointKeyFrameStatics */
-/* Windows.UI.Xaml.Media.Animation.ISplinePointKeyFrameStatics.get_KeySplineProperty() */
 HRESULT wuixamean_spline_point_key_frame_statics_get__key_spline_property(WUIXAMEAN_ISplinePointKeyFrameStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISplineDoubleKeyFrameStatics */
-/* Windows.UI.Xaml.Media.Animation.ISplineDoubleKeyFrameStatics.get_KeySplineProperty() */
 HRESULT wuixamean_spline_double_key_frame_statics_get__key_spline_property(WUIXAMEAN_ISplineDoubleKeyFrameStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISplineColorKeyFrameStatics */
-/* Windows.UI.Xaml.Media.Animation.ISplineColorKeyFrameStatics.get_KeySplineProperty() */
 HRESULT wuixamean_spline_color_key_frame_statics_get__key_spline_property(WUIXAMEAN_ISplineColorKeyFrameStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ISlideNavigationTransitionInfoStatics2 */
-/* Windows.UI.Xaml.Media.Animation.ISlideNavigationTransitionInfoStatics2.get_EffectProperty() */
 HRESULT wuixamean_slide_navigation_transition_info_statics_2_get__effect_property(WUIXAMEAN_ISlideNavigationTransitionInfoStatics_2 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IRepositionThemeTransitionStatics2 */
-/* Windows.UI.Xaml.Media.Animation.IRepositionThemeTransitionStatics2.get_IsStaggeringEnabledProperty() */
 HRESULT wuixamean_reposition_theme_transition_statics_2_get__is_staggering_enabled_property(WUIXAMEAN_IRepositionThemeTransitionStatics_2 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IRepositionThemeAnimationStatics */
-/* Windows.UI.Xaml.Media.Animation.IRepositionThemeAnimationStatics.get_TargetNameProperty() */
 HRESULT wuixamean_reposition_theme_animation_statics_get__target_name_property(WUIXAMEAN_IRepositionThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IRepositionThemeAnimationStatics.get_FromHorizontalOffsetProperty() */
 HRESULT wuixamean_reposition_theme_animation_statics_get__from_horizontal_offset_property(WUIXAMEAN_IRepositionThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IRepositionThemeAnimationStatics.get_FromVerticalOffsetProperty() */
 HRESULT wuixamean_reposition_theme_animation_statics_get__from_vertical_offset_property(WUIXAMEAN_IRepositionThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IRepeatBehaviorHelperStatics */
-/* Windows.UI.Xaml.Media.Animation.IRepeatBehaviorHelperStatics.get_Forever() */
 HRESULT wuixamean_repeat_behavior_helper_statics_get__forever(WUIXAMEAN_IRepeatBehaviorHelperStatics *self, WUIXAMEAN_RepeatBehavior *value);
 
-/* Windows.UI.Xaml.Media.Animation.IRepeatBehaviorHelperStatics.FromCount(count) */
 HRESULT wuixamean_repeat_behavior_helper_statics_from_count(WUIXAMEAN_IRepeatBehaviorHelperStatics *self, double count, WUIXAMEAN_RepeatBehavior *out);
 
-/* Windows.UI.Xaml.Media.Animation.IRepeatBehaviorHelperStatics.FromDuration(duration) */
 HRESULT wuixamean_repeat_behavior_helper_statics_from_duration(WUIXAMEAN_IRepeatBehaviorHelperStatics *self, WF_TimeSpan duration, WUIXAMEAN_RepeatBehavior *out);
 
-/* Windows.UI.Xaml.Media.Animation.IRepeatBehaviorHelperStatics.GetHasCount(target) */
 HRESULT wuixamean_repeat_behavior_helper_statics_get_has_count(WUIXAMEAN_IRepeatBehaviorHelperStatics *self, WUIXAMEAN_RepeatBehavior target, BOOL *out);
 
-/* Windows.UI.Xaml.Media.Animation.IRepeatBehaviorHelperStatics.GetHasDuration(target) */
 HRESULT wuixamean_repeat_behavior_helper_statics_get_has_duration(WUIXAMEAN_IRepeatBehaviorHelperStatics *self, WUIXAMEAN_RepeatBehavior target, BOOL *out);
 
-/* Windows.UI.Xaml.Media.Animation.IRepeatBehaviorHelperStatics.Equals(target) */
 HRESULT wuixamean_repeat_behavior_helper_statics_equals(WUIXAMEAN_IRepeatBehaviorHelperStatics *self, WUIXAMEAN_RepeatBehavior target, WUIXAMEAN_RepeatBehavior value, BOOL *out);
 
-/* Windows.UI.Xaml.Media.Animation.IPowerEaseStatics */
-/* Windows.UI.Xaml.Media.Animation.IPowerEaseStatics.get_PowerProperty() */
 HRESULT wuixamean_power_ease_statics_get__power_property(WUIXAMEAN_IPowerEaseStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IPopupThemeTransitionStatics */
-/* Windows.UI.Xaml.Media.Animation.IPopupThemeTransitionStatics.get_FromHorizontalOffsetProperty() */
 HRESULT wuixamean_popup_theme_transition_statics_get__from_horizontal_offset_property(WUIXAMEAN_IPopupThemeTransitionStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IPopupThemeTransitionStatics.get_FromVerticalOffsetProperty() */
 HRESULT wuixamean_popup_theme_transition_statics_get__from_vertical_offset_property(WUIXAMEAN_IPopupThemeTransitionStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IPopOutThemeAnimationStatics */
-/* Windows.UI.Xaml.Media.Animation.IPopOutThemeAnimationStatics.get_TargetNameProperty() */
 HRESULT wuixamean_pop_out_theme_animation_statics_get__target_name_property(WUIXAMEAN_IPopOutThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IPopInThemeAnimationStatics */
-/* Windows.UI.Xaml.Media.Animation.IPopInThemeAnimationStatics.get_TargetNameProperty() */
 HRESULT wuixamean_pop_in_theme_animation_statics_get__target_name_property(WUIXAMEAN_IPopInThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IPopInThemeAnimationStatics.get_FromHorizontalOffsetProperty() */
 HRESULT wuixamean_pop_in_theme_animation_statics_get__from_horizontal_offset_property(WUIXAMEAN_IPopInThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IPopInThemeAnimationStatics.get_FromVerticalOffsetProperty() */
 HRESULT wuixamean_pop_in_theme_animation_statics_get__from_vertical_offset_property(WUIXAMEAN_IPopInThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IPointerUpThemeAnimationStatics */
-/* Windows.UI.Xaml.Media.Animation.IPointerUpThemeAnimationStatics.get_TargetNameProperty() */
 HRESULT wuixamean_pointer_up_theme_animation_statics_get__target_name_property(WUIXAMEAN_IPointerUpThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IPointerDownThemeAnimationStatics */
-/* Windows.UI.Xaml.Media.Animation.IPointerDownThemeAnimationStatics.get_TargetNameProperty() */
 HRESULT wuixamean_pointer_down_theme_animation_statics_get__target_name_property(WUIXAMEAN_IPointerDownThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IPointKeyFrameStatics */
-/* Windows.UI.Xaml.Media.Animation.IPointKeyFrameStatics.get_ValueProperty() */
 HRESULT wuixamean_point_key_frame_statics_get__value_property(WUIXAMEAN_IPointKeyFrameStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IPointKeyFrameStatics.get_KeyTimeProperty() */
 HRESULT wuixamean_point_key_frame_statics_get__key_time_property(WUIXAMEAN_IPointKeyFrameStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IPointKeyFrameFactory */
-/* Windows.UI.Xaml.Media.Animation.IPointKeyFrameFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixamean_point_key_frame_factory_create_instance(WUIXAMEAN_IPointKeyFrameFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAMEAN_PointKeyFrame** out);
 
-/* Windows.UI.Xaml.Media.Animation.IPointAnimationUsingKeyFramesStatics */
-/* Windows.UI.Xaml.Media.Animation.IPointAnimationUsingKeyFramesStatics.get_EnableDependentAnimationProperty() */
 HRESULT wuixamean_point_animation_using_key_frames_statics_get__enable_dependent_animation_property(WUIXAMEAN_IPointAnimationUsingKeyFramesStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IPointAnimationStatics */
-/* Windows.UI.Xaml.Media.Animation.IPointAnimationStatics.get_FromProperty() */
 HRESULT wuixamean_point_animation_statics_get__from_property(WUIXAMEAN_IPointAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IPointAnimationStatics.get_ToProperty() */
 HRESULT wuixamean_point_animation_statics_get__to_property(WUIXAMEAN_IPointAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IPointAnimationStatics.get_ByProperty() */
 HRESULT wuixamean_point_animation_statics_get__by_property(WUIXAMEAN_IPointAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IPointAnimationStatics.get_EasingFunctionProperty() */
 HRESULT wuixamean_point_animation_statics_get__easing_function_property(WUIXAMEAN_IPointAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IPointAnimationStatics.get_EnableDependentAnimationProperty() */
 HRESULT wuixamean_point_animation_statics_get__enable_dependent_animation_property(WUIXAMEAN_IPointAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IPaneThemeTransitionStatics */
-/* Windows.UI.Xaml.Media.Animation.IPaneThemeTransitionStatics.get_EdgeProperty() */
 HRESULT wuixamean_pane_theme_transition_statics_get__edge_property(WUIXAMEAN_IPaneThemeTransitionStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IObjectKeyFrameStatics */
-/* Windows.UI.Xaml.Media.Animation.IObjectKeyFrameStatics.get_ValueProperty() */
 HRESULT wuixamean_object_key_frame_statics_get__value_property(WUIXAMEAN_IObjectKeyFrameStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IObjectKeyFrameStatics.get_KeyTimeProperty() */
 HRESULT wuixamean_object_key_frame_statics_get__key_time_property(WUIXAMEAN_IObjectKeyFrameStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IObjectKeyFrameFactory */
-/* Windows.UI.Xaml.Media.Animation.IObjectKeyFrameFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixamean_object_key_frame_factory_create_instance(WUIXAMEAN_IObjectKeyFrameFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAMEAN_ObjectKeyFrame** out);
 
-/* Windows.UI.Xaml.Media.Animation.IObjectAnimationUsingKeyFramesStatics */
-/* Windows.UI.Xaml.Media.Animation.IObjectAnimationUsingKeyFramesStatics.get_EnableDependentAnimationProperty() */
 HRESULT wuixamean_object_animation_using_key_frames_statics_get__enable_dependent_animation_property(WUIXAMEAN_IObjectAnimationUsingKeyFramesStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.INavigationTransitionInfoFactory */
-/* Windows.UI.Xaml.Media.Animation.INavigationTransitionInfoFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixamean_navigation_transition_info_factory_create_instance(WUIXAMEAN_INavigationTransitionInfoFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAMEAN_NavigationTransitionInfo** out);
 
-/* Windows.UI.Xaml.Media.Animation.INavigationThemeTransitionStatics */
-/* Windows.UI.Xaml.Media.Animation.INavigationThemeTransitionStatics.get_DefaultNavigationTransitionInfoProperty() */
 HRESULT wuixamean_navigation_theme_transition_statics_get__default_navigation_transition_info_property(WUIXAMEAN_INavigationThemeTransitionStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IKeyTimeHelperStatics */
-/* Windows.UI.Xaml.Media.Animation.IKeyTimeHelperStatics.FromTimeSpan(timeSpan) */
 HRESULT wuixamean_key_time_helper_statics_from_time_span(WUIXAMEAN_IKeyTimeHelperStatics *self, WF_TimeSpan timeSpan, WUIXAMEAN_KeyTime *out);
 
-/* Windows.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfigurationFactory */
-/* Windows.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfigurationFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixamean_gravity_connected_animation_configuration_factory_create_instance(WUIXAMEAN_IGravityConnectedAnimationConfigurationFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAMEAN_GravityConnectedAnimationConfiguration** out);
 
-/* Windows.UI.Xaml.Media.Animation.IFadeOutThemeAnimationStatics */
-/* Windows.UI.Xaml.Media.Animation.IFadeOutThemeAnimationStatics.get_TargetNameProperty() */
 HRESULT wuixamean_fade_out_theme_animation_statics_get__target_name_property(WUIXAMEAN_IFadeOutThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IFadeInThemeAnimationStatics */
-/* Windows.UI.Xaml.Media.Animation.IFadeInThemeAnimationStatics.get_TargetNameProperty() */
 HRESULT wuixamean_fade_in_theme_animation_statics_get__target_name_property(WUIXAMEAN_IFadeInThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IExponentialEaseStatics */
-/* Windows.UI.Xaml.Media.Animation.IExponentialEaseStatics.get_ExponentProperty() */
 HRESULT wuixamean_exponential_ease_statics_get__exponent_property(WUIXAMEAN_IExponentialEaseStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IEntranceThemeTransitionStatics */
-/* Windows.UI.Xaml.Media.Animation.IEntranceThemeTransitionStatics.get_FromHorizontalOffsetProperty() */
 HRESULT wuixamean_entrance_theme_transition_statics_get__from_horizontal_offset_property(WUIXAMEAN_IEntranceThemeTransitionStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IEntranceThemeTransitionStatics.get_FromVerticalOffsetProperty() */
 HRESULT wuixamean_entrance_theme_transition_statics_get__from_vertical_offset_property(WUIXAMEAN_IEntranceThemeTransitionStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IEntranceThemeTransitionStatics.get_IsStaggeringEnabledProperty() */
 HRESULT wuixamean_entrance_theme_transition_statics_get__is_staggering_enabled_property(WUIXAMEAN_IEntranceThemeTransitionStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IEntranceNavigationTransitionInfoStatics */
-/* Windows.UI.Xaml.Media.Animation.IEntranceNavigationTransitionInfoStatics.get_IsTargetElementProperty() */
 HRESULT wuixamean_entrance_navigation_transition_info_statics_get__is_target_element_property(WUIXAMEAN_IEntranceNavigationTransitionInfoStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IEntranceNavigationTransitionInfoStatics.GetIsTargetElement(element) */
 HRESULT wuixamean_entrance_navigation_transition_info_statics_get_is_target_element(WUIXAMEAN_IEntranceNavigationTransitionInfoStatics *self, WUIXA_UIElement* element, BOOL *out);
 
-/* Windows.UI.Xaml.Media.Animation.IEntranceNavigationTransitionInfoStatics.SetIsTargetElement(element) */
 HRESULT wuixamean_entrance_navigation_transition_info_statics_set_is_target_element(WUIXAMEAN_IEntranceNavigationTransitionInfoStatics *self, WUIXA_UIElement* element, BOOL value);
 
-/* Windows.UI.Xaml.Media.Animation.IElasticEaseStatics */
-/* Windows.UI.Xaml.Media.Animation.IElasticEaseStatics.get_OscillationsProperty() */
 HRESULT wuixamean_elastic_ease_statics_get__oscillations_property(WUIXAMEAN_IElasticEaseStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IElasticEaseStatics.get_SpringinessProperty() */
 HRESULT wuixamean_elastic_ease_statics_get__springiness_property(WUIXAMEAN_IElasticEaseStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IEdgeUIThemeTransitionStatics */
-/* Windows.UI.Xaml.Media.Animation.IEdgeUIThemeTransitionStatics.get_EdgeProperty() */
 HRESULT wuixamean_edge_u_i_theme_transition_statics_get__edge_property(WUIXAMEAN_IEdgeUIThemeTransitionStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IEasingPointKeyFrameStatics */
-/* Windows.UI.Xaml.Media.Animation.IEasingPointKeyFrameStatics.get_EasingFunctionProperty() */
 HRESULT wuixamean_easing_point_key_frame_statics_get__easing_function_property(WUIXAMEAN_IEasingPointKeyFrameStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IEasingFunctionBaseStatics */
-/* Windows.UI.Xaml.Media.Animation.IEasingFunctionBaseStatics.get_EasingModeProperty() */
 HRESULT wuixamean_easing_function_base_statics_get__easing_mode_property(WUIXAMEAN_IEasingFunctionBaseStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IEasingDoubleKeyFrameStatics */
-/* Windows.UI.Xaml.Media.Animation.IEasingDoubleKeyFrameStatics.get_EasingFunctionProperty() */
 HRESULT wuixamean_easing_double_key_frame_statics_get__easing_function_property(WUIXAMEAN_IEasingDoubleKeyFrameStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IEasingColorKeyFrameStatics */
-/* Windows.UI.Xaml.Media.Animation.IEasingColorKeyFrameStatics.get_EasingFunctionProperty() */
 HRESULT wuixamean_easing_color_key_frame_statics_get__easing_function_property(WUIXAMEAN_IEasingColorKeyFrameStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.EasingFunctionBase */
-/* Windows.UI.Xaml.Media.Animation.EasingFunctionBase.get_EasingMode() */
 HRESULT wuixamean_easing_function_base_get__easing_mode(WUIXAMEAN_EasingFunctionBase *self, WUIXAMEAN_EasingMode *value);
 
-/* Windows.UI.Xaml.Media.Animation.EasingFunctionBase.put_EasingMode() */
 HRESULT wuixamean_easing_function_base_put__easing_mode(WUIXAMEAN_EasingFunctionBase *self, WUIXAMEAN_EasingMode value);
 
-/* Windows.UI.Xaml.Media.Animation.EasingFunctionBase.Ease(normalizedTime) */
 HRESULT wuixamean_easing_function_base_ease(WUIXAMEAN_EasingFunctionBase *self, double normalizedTime, double *out);
 
-/* Windows.UI.Xaml.Media.Animation.EasingFunctionBase.get_EasingModeProperty() */
 HRESULT wuixamean_easing_function_base_get__easing_mode_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.BackEase */
 HRESULT wuixamean_back_ease_new(WUIXAMEAN_BackEase **out);
 
-/* Windows.UI.Xaml.Media.Animation.BackEase */
-/* Windows.UI.Xaml.Media.Animation.BackEase.get_Amplitude() */
 HRESULT wuixamean_back_ease_get__amplitude(WUIXAMEAN_BackEase *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.BackEase.put_Amplitude() */
 HRESULT wuixamean_back_ease_put__amplitude(WUIXAMEAN_BackEase *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.BackEase.get_AmplitudeProperty() */
 HRESULT wuixamean_back_ease_get__amplitude_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.BeginStoryboard */
 HRESULT wuixamean_begin_storyboard_new(WUIXAMEAN_BeginStoryboard **out);
 
-/* Windows.UI.Xaml.Media.Animation.BeginStoryboard */
-/* Windows.UI.Xaml.Media.Animation.BeginStoryboard.get_Storyboard() */
 HRESULT wuixamean_begin_storyboard_get__storyboard(WUIXAMEAN_BeginStoryboard *self, WUIXAMEAN_Storyboard** value);
 
-/* Windows.UI.Xaml.Media.Animation.BeginStoryboard.put_Storyboard() */
 HRESULT wuixamean_begin_storyboard_put__storyboard(WUIXAMEAN_BeginStoryboard *self, WUIXAMEAN_Storyboard* value);
 
-/* Windows.UI.Xaml.Media.Animation.BeginStoryboard.get_StoryboardProperty() */
 HRESULT wuixamean_begin_storyboard_get__storyboard_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.BounceEase */
 HRESULT wuixamean_bounce_ease_new(WUIXAMEAN_BounceEase **out);
 
-/* Windows.UI.Xaml.Media.Animation.BounceEase */
-/* Windows.UI.Xaml.Media.Animation.BounceEase.get_Bounces() */
 HRESULT wuixamean_bounce_ease_get__bounces(WUIXAMEAN_BounceEase *self, int32_t *value);
 
-/* Windows.UI.Xaml.Media.Animation.BounceEase.put_Bounces() */
 HRESULT wuixamean_bounce_ease_put__bounces(WUIXAMEAN_BounceEase *self, int32_t value);
 
-/* Windows.UI.Xaml.Media.Animation.BounceEase.get_Bounciness() */
 HRESULT wuixamean_bounce_ease_get__bounciness(WUIXAMEAN_BounceEase *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.BounceEase.put_Bounciness() */
 HRESULT wuixamean_bounce_ease_put__bounciness(WUIXAMEAN_BounceEase *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.BounceEase.get_BouncesProperty() */
 HRESULT wuixamean_bounce_ease_get__bounces_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.BounceEase.get_BouncinessProperty() */
 HRESULT wuixamean_bounce_ease_get__bounciness_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.Timeline */
-/* Windows.UI.Xaml.Media.Animation.Timeline.get_AutoReverse() */
 HRESULT wuixamean_timeline_get__auto_reverse(WUIXAMEAN_Timeline *self, BOOL *value);
 
-/* Windows.UI.Xaml.Media.Animation.Timeline.put_AutoReverse() */
 HRESULT wuixamean_timeline_put__auto_reverse(WUIXAMEAN_Timeline *self, BOOL value);
 
-/* Windows.UI.Xaml.Media.Animation.Timeline.get_BeginTime() */
 HRESULT wuixamean_timeline_get__begin_time(WUIXAMEAN_Timeline *self, WF_TimeSpan** value);
 
-/* Windows.UI.Xaml.Media.Animation.Timeline.put_BeginTime() */
 HRESULT wuixamean_timeline_put__begin_time(WUIXAMEAN_Timeline *self, WF_TimeSpan* value);
 
-/* Windows.UI.Xaml.Media.Animation.Timeline.get_Duration() */
 HRESULT wuixamean_timeline_get__duration(WUIXAMEAN_Timeline *self, WUIXA_Duration *value);
 
-/* Windows.UI.Xaml.Media.Animation.Timeline.put_Duration() */
 HRESULT wuixamean_timeline_put__duration(WUIXAMEAN_Timeline *self, WUIXA_Duration value);
 
-/* Windows.UI.Xaml.Media.Animation.Timeline.get_SpeedRatio() */
 HRESULT wuixamean_timeline_get__speed_ratio(WUIXAMEAN_Timeline *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.Timeline.put_SpeedRatio() */
 HRESULT wuixamean_timeline_put__speed_ratio(WUIXAMEAN_Timeline *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.Timeline.get_FillBehavior() */
 HRESULT wuixamean_timeline_get__fill_behavior(WUIXAMEAN_Timeline *self, WUIXAMEAN_FillBehavior *value);
 
-/* Windows.UI.Xaml.Media.Animation.Timeline.put_FillBehavior() */
 HRESULT wuixamean_timeline_put__fill_behavior(WUIXAMEAN_Timeline *self, WUIXAMEAN_FillBehavior value);
 
-/* Windows.UI.Xaml.Media.Animation.Timeline.get_RepeatBehavior() */
 HRESULT wuixamean_timeline_get__repeat_behavior(WUIXAMEAN_Timeline *self, WUIXAMEAN_RepeatBehavior *value);
 
-/* Windows.UI.Xaml.Media.Animation.Timeline.put_RepeatBehavior() */
 HRESULT wuixamean_timeline_put__repeat_behavior(WUIXAMEAN_Timeline *self, WUIXAMEAN_RepeatBehavior value);
 
-/* Windows.UI.Xaml.Media.Animation.Timeline.get_AllowDependentAnimations() */
 HRESULT wuixamean_timeline_get__allow_dependent_animations(BOOL *value);
 
-/* Windows.UI.Xaml.Media.Animation.Timeline.put_AllowDependentAnimations() */
 HRESULT wuixamean_timeline_put__allow_dependent_animations(BOOL value);
 
-/* Windows.UI.Xaml.Media.Animation.Timeline.get_AutoReverseProperty() */
 HRESULT wuixamean_timeline_get__auto_reverse_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.Timeline.get_BeginTimeProperty() */
 HRESULT wuixamean_timeline_get__begin_time_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.Timeline.get_DurationProperty() */
 HRESULT wuixamean_timeline_get__duration_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.Timeline.get_SpeedRatioProperty() */
 HRESULT wuixamean_timeline_get__speed_ratio_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.Timeline.get_FillBehaviorProperty() */
 HRESULT wuixamean_timeline_get__fill_behavior_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.Timeline.get_RepeatBehaviorProperty() */
 HRESULT wuixamean_timeline_get__repeat_behavior_property(WUIXA_DependencyProperty** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixamean_timeline_on_completed(WUIXAMEAN_Timeline *self, cwinrt_event_fn fn, void *ctx);
 void wuixamean_timeline_off_completed(WUIXAMEAN_Timeline *self, cwinrt_token token);
 
-/* activate Windows.UI.Xaml.Media.Animation.ColorAnimation */
 HRESULT wuixamean_color_animation_new(WUIXAMEAN_ColorAnimation **out);
 
-/* Windows.UI.Xaml.Media.Animation.ColorAnimation */
-/* Windows.UI.Xaml.Media.Animation.ColorAnimation.get_From() */
 HRESULT wuixamean_color_animation_get__from(WUIXAMEAN_ColorAnimation *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.Media.Animation.ColorAnimation.put_From() */
 HRESULT wuixamean_color_animation_put__from(WUIXAMEAN_ColorAnimation *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.Media.Animation.ColorAnimation.get_To() */
 HRESULT wuixamean_color_animation_get__to(WUIXAMEAN_ColorAnimation *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.Media.Animation.ColorAnimation.put_To() */
 HRESULT wuixamean_color_animation_put__to(WUIXAMEAN_ColorAnimation *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.Media.Animation.ColorAnimation.get_By() */
 HRESULT wuixamean_color_animation_get__by(WUIXAMEAN_ColorAnimation *self, WUI_Color** value);
 
-/* Windows.UI.Xaml.Media.Animation.ColorAnimation.put_By() */
 HRESULT wuixamean_color_animation_put__by(WUIXAMEAN_ColorAnimation *self, WUI_Color* value);
 
-/* Windows.UI.Xaml.Media.Animation.ColorAnimation.get_EasingFunction() */
 HRESULT wuixamean_color_animation_get__easing_function(WUIXAMEAN_ColorAnimation *self, WUIXAMEAN_EasingFunctionBase** value);
 
-/* Windows.UI.Xaml.Media.Animation.ColorAnimation.put_EasingFunction() */
 HRESULT wuixamean_color_animation_put__easing_function(WUIXAMEAN_ColorAnimation *self, WUIXAMEAN_EasingFunctionBase* value);
 
-/* Windows.UI.Xaml.Media.Animation.ColorAnimation.get_EnableDependentAnimation() */
 HRESULT wuixamean_color_animation_get__enable_dependent_animation(WUIXAMEAN_ColorAnimation *self, BOOL *value);
 
-/* Windows.UI.Xaml.Media.Animation.ColorAnimation.put_EnableDependentAnimation() */
 HRESULT wuixamean_color_animation_put__enable_dependent_animation(WUIXAMEAN_ColorAnimation *self, BOOL value);
 
-/* Windows.UI.Xaml.Media.Animation.ColorAnimation.get_FromProperty() */
 HRESULT wuixamean_color_animation_get__from_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ColorAnimation.get_ToProperty() */
 HRESULT wuixamean_color_animation_get__to_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ColorAnimation.get_ByProperty() */
 HRESULT wuixamean_color_animation_get__by_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ColorAnimation.get_EasingFunctionProperty() */
 HRESULT wuixamean_color_animation_get__easing_function_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ColorAnimation.get_EnableDependentAnimationProperty() */
 HRESULT wuixamean_color_animation_get__enable_dependent_animation_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.ColorAnimationUsingKeyFrames */
 HRESULT wuixamean_color_animation_using_key_frames_new(WUIXAMEAN_ColorAnimationUsingKeyFrames **out);
 
-/* Windows.UI.Xaml.Media.Animation.ColorAnimationUsingKeyFrames */
-/* Windows.UI.Xaml.Media.Animation.ColorAnimationUsingKeyFrames.get_KeyFrames() */
 HRESULT wuixamean_color_animation_using_key_frames_get__key_frames(WUIXAMEAN_ColorAnimationUsingKeyFrames *self, WUIXAMEAN_ColorKeyFrameCollection** value);
 
-/* Windows.UI.Xaml.Media.Animation.ColorAnimationUsingKeyFrames.get_EnableDependentAnimation() */
 HRESULT wuixamean_color_animation_using_key_frames_get__enable_dependent_animation(WUIXAMEAN_ColorAnimationUsingKeyFrames *self, BOOL *value);
 
-/* Windows.UI.Xaml.Media.Animation.ColorAnimationUsingKeyFrames.put_EnableDependentAnimation() */
 HRESULT wuixamean_color_animation_using_key_frames_put__enable_dependent_animation(WUIXAMEAN_ColorAnimationUsingKeyFrames *self, BOOL value);
 
-/* Windows.UI.Xaml.Media.Animation.ColorAnimationUsingKeyFrames.get_EnableDependentAnimationProperty() */
 HRESULT wuixamean_color_animation_using_key_frames_get__enable_dependent_animation_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ColorKeyFrame */
-/* Windows.UI.Xaml.Media.Animation.ColorKeyFrame.get_Value() */
 HRESULT wuixamean_color_key_frame_get__value(WUIXAMEAN_ColorKeyFrame *self, WUI_Color *value);
 
-/* Windows.UI.Xaml.Media.Animation.ColorKeyFrame.put_Value() */
 HRESULT wuixamean_color_key_frame_put__value(WUIXAMEAN_ColorKeyFrame *self, WUI_Color value);
 
-/* Windows.UI.Xaml.Media.Animation.ColorKeyFrame.get_KeyTime() */
 HRESULT wuixamean_color_key_frame_get__key_time(WUIXAMEAN_ColorKeyFrame *self, WUIXAMEAN_KeyTime *value);
 
-/* Windows.UI.Xaml.Media.Animation.ColorKeyFrame.put_KeyTime() */
 HRESULT wuixamean_color_key_frame_put__key_time(WUIXAMEAN_ColorKeyFrame *self, WUIXAMEAN_KeyTime value);
 
-/* Windows.UI.Xaml.Media.Animation.ColorKeyFrame.get_ValueProperty() */
 HRESULT wuixamean_color_key_frame_get__value_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ColorKeyFrame.get_KeyTimeProperty() */
 HRESULT wuixamean_color_key_frame_get__key_time_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection */
 HRESULT wuixamean_color_key_frame_collection_new(WUIXAMEAN_ColorKeyFrameCollection **out);
 
-/* Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection */
-/* Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection.GetAt(index) */
 HRESULT wuixamean_color_key_frame_collection_get_at(WUIXAMEAN_ColorKeyFrameCollection *self, uint32_t index, WUIXAMEAN_ColorKeyFrame** out);
 
-/* Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection.get_Size() */
 HRESULT wuixamean_color_key_frame_collection_get__size(WUIXAMEAN_ColorKeyFrameCollection *self, uint32_t *value);
 
-/* Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection.GetView() */
 HRESULT wuixamean_color_key_frame_collection_get_view(WUIXAMEAN_ColorKeyFrameCollection *self, WFOCO_IVectorView_WUIXAMEAN_ColorKeyFrame** out);
 
-/* Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection.IndexOf(index) */
 HRESULT wuixamean_color_key_frame_collection_index_of(WUIXAMEAN_ColorKeyFrameCollection *self, WUIXAMEAN_ColorKeyFrame* value, uint32_t index, BOOL *out);
 
-/* Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection.SetAt(index) */
 HRESULT wuixamean_color_key_frame_collection_set_at(WUIXAMEAN_ColorKeyFrameCollection *self, uint32_t index, WUIXAMEAN_ColorKeyFrame* value);
 
-/* Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection.InsertAt(index) */
 HRESULT wuixamean_color_key_frame_collection_insert_at(WUIXAMEAN_ColorKeyFrameCollection *self, uint32_t index, WUIXAMEAN_ColorKeyFrame* value);
 
-/* Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection.RemoveAt(index) */
 HRESULT wuixamean_color_key_frame_collection_remove_at(WUIXAMEAN_ColorKeyFrameCollection *self, uint32_t index);
 
-/* Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection.Append() */
 HRESULT wuixamean_color_key_frame_collection_append(WUIXAMEAN_ColorKeyFrameCollection *self, WUIXAMEAN_ColorKeyFrame* value);
 
-/* Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection.RemoveAtEnd() */
 HRESULT wuixamean_color_key_frame_collection_remove_at_end(WUIXAMEAN_ColorKeyFrameCollection *self);
 
-/* Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection.Clear() */
 HRESULT wuixamean_color_key_frame_collection_clear(WUIXAMEAN_ColorKeyFrameCollection *self);
 
-/* Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection.GetMany(startIndex, items) */
 HRESULT wuixamean_color_key_frame_collection_get_many(WUIXAMEAN_ColorKeyFrameCollection *self, uint32_t startIndex, WUIXAMEAN_ColorKeyFrame *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection.ReplaceAll(items) */
 HRESULT wuixamean_color_key_frame_collection_replace_all(WUIXAMEAN_ColorKeyFrameCollection *self, WUIXAMEAN_ColorKeyFrame *items, uint32_t items_len);
 
-/* Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection.First() */
 HRESULT wuixamean_color_key_frame_collection_first(WUIXAMEAN_ColorKeyFrameCollection *self, WFOCO_IIterator_WUIXAMEAN_ColorKeyFrame** out);
 
-/* Windows.UI.Xaml.Media.Animation.NavigationTransitionInfo */
-/* Windows.UI.Xaml.Media.Animation.NavigationTransitionInfo.GetNavigationStateCore() */
 HRESULT wuixamean_navigation_transition_info_get_navigation_state_core(WUIXAMEAN_NavigationTransitionInfo *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Media.Animation.NavigationTransitionInfo.SetNavigationStateCore(navigationState) */
 HRESULT wuixamean_navigation_transition_info_set_navigation_state_core(WUIXAMEAN_NavigationTransitionInfo *self, cwinrt_hstring navigationState);
 
-/* activate Windows.UI.Xaml.Media.Animation.CommonNavigationTransitionInfo */
 HRESULT wuixamean_common_navigation_transition_info_new(WUIXAMEAN_CommonNavigationTransitionInfo **out);
 
-/* Windows.UI.Xaml.Media.Animation.CommonNavigationTransitionInfo */
-/* Windows.UI.Xaml.Media.Animation.CommonNavigationTransitionInfo.get_IsStaggeringEnabled() */
 HRESULT wuixamean_common_navigation_transition_info_get__is_staggering_enabled(WUIXAMEAN_CommonNavigationTransitionInfo *self, BOOL *value);
 
-/* Windows.UI.Xaml.Media.Animation.CommonNavigationTransitionInfo.put_IsStaggeringEnabled() */
 HRESULT wuixamean_common_navigation_transition_info_put__is_staggering_enabled(WUIXAMEAN_CommonNavigationTransitionInfo *self, BOOL value);
 
-/* Windows.UI.Xaml.Media.Animation.CommonNavigationTransitionInfo.get_IsStaggeringEnabledProperty() */
 HRESULT wuixamean_common_navigation_transition_info_get__is_staggering_enabled_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.CommonNavigationTransitionInfo.get_IsStaggerElementProperty() */
 HRESULT wuixamean_common_navigation_transition_info_get__is_stagger_element_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.CommonNavigationTransitionInfo.GetIsStaggerElement(element) */
 HRESULT wuixamean_common_navigation_transition_info_get_is_stagger_element(WUIXA_UIElement* element, BOOL *out);
 
-/* Windows.UI.Xaml.Media.Animation.CommonNavigationTransitionInfo.SetIsStaggerElement(element) */
 HRESULT wuixamean_common_navigation_transition_info_set_is_stagger_element(WUIXA_UIElement* element, BOOL value);
 
-/* activate Windows.UI.Xaml.Media.Animation.ConnectedAnimation */
 HRESULT wuixamean_connected_animation_new(WUIXAMEAN_ConnectedAnimation **out);
 
-/* Windows.UI.Xaml.Media.Animation.ConnectedAnimation */
-/* Windows.UI.Xaml.Media.Animation.ConnectedAnimation.TryStart(destination) */
 HRESULT wuixamean_connected_animation_try_start(WUIXAMEAN_ConnectedAnimation *self, WUIXA_UIElement* destination, BOOL *out);
 
-/* Windows.UI.Xaml.Media.Animation.ConnectedAnimation.Cancel() */
 HRESULT wuixamean_connected_animation_cancel(WUIXAMEAN_ConnectedAnimation *self);
 
-/* Windows.UI.Xaml.Media.Animation.ConnectedAnimation.get_IsScaleAnimationEnabled() */
 HRESULT wuixamean_connected_animation_get__is_scale_animation_enabled(WUIXAMEAN_ConnectedAnimation *self, BOOL *value);
 
-/* Windows.UI.Xaml.Media.Animation.ConnectedAnimation.put_IsScaleAnimationEnabled() */
 HRESULT wuixamean_connected_animation_put__is_scale_animation_enabled(WUIXAMEAN_ConnectedAnimation *self, BOOL value);
 
-/* Windows.UI.Xaml.Media.Animation.ConnectedAnimation.TryStart(destination, coordinatedElements) */
 HRESULT wuixamean_connected_animation_try_start_p_p_b(WUIXAMEAN_ConnectedAnimation *self, WUIXA_UIElement* destination, WFOCO_IIterable_WUIXA_UIElement* coordinatedElements, BOOL *out);
 
-/* Windows.UI.Xaml.Media.Animation.ConnectedAnimation.SetAnimationComponent(component, animation) */
 HRESULT wuixamean_connected_animation_set_animation_component(WUIXAMEAN_ConnectedAnimation *self, WUIXAMEAN_ConnectedAnimationComponent component, WUC_ICompositionAnimationBase* animation);
 
-/* Windows.UI.Xaml.Media.Animation.ConnectedAnimation.get_Configuration() */
 HRESULT wuixamean_connected_animation_get__configuration(WUIXAMEAN_ConnectedAnimation *self, WUIXAMEAN_ConnectedAnimationConfiguration** value);
 
-/* Windows.UI.Xaml.Media.Animation.ConnectedAnimation.put_Configuration() */
 HRESULT wuixamean_connected_animation_put__configuration(WUIXAMEAN_ConnectedAnimation *self, WUIXAMEAN_ConnectedAnimationConfiguration* value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixamean_connected_animation_on_completed(WUIXAMEAN_ConnectedAnimation *self, cwinrt_event_fn fn, void *ctx);
 void wuixamean_connected_animation_off_completed(WUIXAMEAN_ConnectedAnimation *self, cwinrt_token token);
 
-/* activate Windows.UI.Xaml.Media.Animation.ConnectedAnimationService */
 HRESULT wuixamean_connected_animation_service_new(WUIXAMEAN_ConnectedAnimationService **out);
 
-/* Windows.UI.Xaml.Media.Animation.ConnectedAnimationService */
-/* Windows.UI.Xaml.Media.Animation.ConnectedAnimationService.get_DefaultDuration() */
 HRESULT wuixamean_connected_animation_service_get__default_duration(WUIXAMEAN_ConnectedAnimationService *self, WF_TimeSpan *value);
 
-/* Windows.UI.Xaml.Media.Animation.ConnectedAnimationService.put_DefaultDuration() */
 HRESULT wuixamean_connected_animation_service_put__default_duration(WUIXAMEAN_ConnectedAnimationService *self, WF_TimeSpan value);
 
-/* Windows.UI.Xaml.Media.Animation.ConnectedAnimationService.get_DefaultEasingFunction() */
 HRESULT wuixamean_connected_animation_service_get__default_easing_function(WUIXAMEAN_ConnectedAnimationService *self, WUC_CompositionEasingFunction** value);
 
-/* Windows.UI.Xaml.Media.Animation.ConnectedAnimationService.put_DefaultEasingFunction() */
 HRESULT wuixamean_connected_animation_service_put__default_easing_function(WUIXAMEAN_ConnectedAnimationService *self, WUC_CompositionEasingFunction* value);
 
-/* Windows.UI.Xaml.Media.Animation.ConnectedAnimationService.PrepareToAnimate(key, source) */
 HRESULT wuixamean_connected_animation_service_prepare_to_animate(WUIXAMEAN_ConnectedAnimationService *self, cwinrt_hstring key, WUIXA_UIElement* source, WUIXAMEAN_ConnectedAnimation** out);
 
-/* Windows.UI.Xaml.Media.Animation.ConnectedAnimationService.GetAnimation(key) */
 HRESULT wuixamean_connected_animation_service_get_animation(WUIXAMEAN_ConnectedAnimationService *self, cwinrt_hstring key, WUIXAMEAN_ConnectedAnimation** out);
 
-/* Windows.UI.Xaml.Media.Animation.ConnectedAnimationService.GetForCurrentView() */
 HRESULT wuixamean_connected_animation_service_get_for_current_view(WUIXAMEAN_ConnectedAnimationService** out);
 
-/* activate Windows.UI.Xaml.Media.Animation.ContentThemeTransition */
 HRESULT wuixamean_content_theme_transition_new(WUIXAMEAN_ContentThemeTransition **out);
 
-/* Windows.UI.Xaml.Media.Animation.ContentThemeTransition */
-/* Windows.UI.Xaml.Media.Animation.ContentThemeTransition.get_HorizontalOffset() */
 HRESULT wuixamean_content_theme_transition_get__horizontal_offset(WUIXAMEAN_ContentThemeTransition *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.ContentThemeTransition.put_HorizontalOffset() */
 HRESULT wuixamean_content_theme_transition_put__horizontal_offset(WUIXAMEAN_ContentThemeTransition *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.ContentThemeTransition.get_VerticalOffset() */
 HRESULT wuixamean_content_theme_transition_get__vertical_offset(WUIXAMEAN_ContentThemeTransition *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.ContentThemeTransition.put_VerticalOffset() */
 HRESULT wuixamean_content_theme_transition_put__vertical_offset(WUIXAMEAN_ContentThemeTransition *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.ContentThemeTransition.get_HorizontalOffsetProperty() */
 HRESULT wuixamean_content_theme_transition_get__horizontal_offset_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ContentThemeTransition.get_VerticalOffsetProperty() */
 HRESULT wuixamean_content_theme_transition_get__vertical_offset_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo */
 HRESULT wuixamean_continuum_navigation_transition_info_new(WUIXAMEAN_ContinuumNavigationTransitionInfo **out);
 
-/* Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo */
-/* Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo.get_ExitElement() */
 HRESULT wuixamean_continuum_navigation_transition_info_get__exit_element(WUIXAMEAN_ContinuumNavigationTransitionInfo *self, WUIXA_UIElement** value);
 
-/* Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo.put_ExitElement() */
 HRESULT wuixamean_continuum_navigation_transition_info_put__exit_element(WUIXAMEAN_ContinuumNavigationTransitionInfo *self, WUIXA_UIElement* value);
 
-/* Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo.get_ExitElementProperty() */
 HRESULT wuixamean_continuum_navigation_transition_info_get__exit_element_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo.get_IsEntranceElementProperty() */
 HRESULT wuixamean_continuum_navigation_transition_info_get__is_entrance_element_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo.GetIsEntranceElement(element) */
 HRESULT wuixamean_continuum_navigation_transition_info_get_is_entrance_element(WUIXA_UIElement* element, BOOL *out);
 
-/* Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo.SetIsEntranceElement(element) */
 HRESULT wuixamean_continuum_navigation_transition_info_set_is_entrance_element(WUIXA_UIElement* element, BOOL value);
 
-/* Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo.get_IsExitElementProperty() */
 HRESULT wuixamean_continuum_navigation_transition_info_get__is_exit_element_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo.GetIsExitElement(element) */
 HRESULT wuixamean_continuum_navigation_transition_info_get_is_exit_element(WUIXA_UIElement* element, BOOL *out);
 
-/* Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo.SetIsExitElement(element) */
 HRESULT wuixamean_continuum_navigation_transition_info_set_is_exit_element(WUIXA_UIElement* element, BOOL value);
 
-/* Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo.get_ExitElementContainerProperty() */
 HRESULT wuixamean_continuum_navigation_transition_info_get__exit_element_container_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo.GetExitElementContainer(element) */
 HRESULT wuixamean_continuum_navigation_transition_info_get_exit_element_container(WUIXACO_ListViewBase* element, BOOL *out);
 
-/* Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo.SetExitElementContainer(element) */
 HRESULT wuixamean_continuum_navigation_transition_info_set_exit_element_container(WUIXACO_ListViewBase* element, BOOL value);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleKeyFrame */
-/* Windows.UI.Xaml.Media.Animation.DoubleKeyFrame.get_Value() */
 HRESULT wuixamean_double_key_frame_get__value(WUIXAMEAN_DoubleKeyFrame *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleKeyFrame.put_Value() */
 HRESULT wuixamean_double_key_frame_put__value(WUIXAMEAN_DoubleKeyFrame *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleKeyFrame.get_KeyTime() */
 HRESULT wuixamean_double_key_frame_get__key_time(WUIXAMEAN_DoubleKeyFrame *self, WUIXAMEAN_KeyTime *value);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleKeyFrame.put_KeyTime() */
 HRESULT wuixamean_double_key_frame_put__key_time(WUIXAMEAN_DoubleKeyFrame *self, WUIXAMEAN_KeyTime value);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleKeyFrame.get_ValueProperty() */
 HRESULT wuixamean_double_key_frame_get__value_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleKeyFrame.get_KeyTimeProperty() */
 HRESULT wuixamean_double_key_frame_get__key_time_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ObjectKeyFrame */
-/* Windows.UI.Xaml.Media.Animation.ObjectKeyFrame.get_Value() */
 HRESULT wuixamean_object_key_frame_get__value(WUIXAMEAN_ObjectKeyFrame *self, IInspectable** value);
 
-/* Windows.UI.Xaml.Media.Animation.ObjectKeyFrame.put_Value() */
 HRESULT wuixamean_object_key_frame_put__value(WUIXAMEAN_ObjectKeyFrame *self, IInspectable* value);
 
-/* Windows.UI.Xaml.Media.Animation.ObjectKeyFrame.get_KeyTime() */
 HRESULT wuixamean_object_key_frame_get__key_time(WUIXAMEAN_ObjectKeyFrame *self, WUIXAMEAN_KeyTime *value);
 
-/* Windows.UI.Xaml.Media.Animation.ObjectKeyFrame.put_KeyTime() */
 HRESULT wuixamean_object_key_frame_put__key_time(WUIXAMEAN_ObjectKeyFrame *self, WUIXAMEAN_KeyTime value);
 
-/* Windows.UI.Xaml.Media.Animation.ObjectKeyFrame.get_ValueProperty() */
 HRESULT wuixamean_object_key_frame_get__value_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ObjectKeyFrame.get_KeyTimeProperty() */
 HRESULT wuixamean_object_key_frame_get__key_time_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.PointKeyFrame */
-/* Windows.UI.Xaml.Media.Animation.PointKeyFrame.get_Value() */
 HRESULT wuixamean_point_key_frame_get__value(WUIXAMEAN_PointKeyFrame *self, WF_Point *value);
 
-/* Windows.UI.Xaml.Media.Animation.PointKeyFrame.put_Value() */
 HRESULT wuixamean_point_key_frame_put__value(WUIXAMEAN_PointKeyFrame *self, WF_Point value);
 
-/* Windows.UI.Xaml.Media.Animation.PointKeyFrame.get_KeyTime() */
 HRESULT wuixamean_point_key_frame_get__key_time(WUIXAMEAN_PointKeyFrame *self, WUIXAMEAN_KeyTime *value);
 
-/* Windows.UI.Xaml.Media.Animation.PointKeyFrame.put_KeyTime() */
 HRESULT wuixamean_point_key_frame_put__key_time(WUIXAMEAN_PointKeyFrame *self, WUIXAMEAN_KeyTime value);
 
-/* Windows.UI.Xaml.Media.Animation.PointKeyFrame.get_ValueProperty() */
 HRESULT wuixamean_point_key_frame_get__value_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.PointKeyFrame.get_KeyTimeProperty() */
 HRESULT wuixamean_point_key_frame_get__key_time_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.DoubleAnimation */
 HRESULT wuixamean_double_animation_new(WUIXAMEAN_DoubleAnimation **out);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleAnimation */
-/* Windows.UI.Xaml.Media.Animation.DoubleAnimation.get_From() */
 HRESULT wuixamean_double_animation_get__from(WUIXAMEAN_DoubleAnimation *self, double** value);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleAnimation.put_From() */
 HRESULT wuixamean_double_animation_put__from(WUIXAMEAN_DoubleAnimation *self, double* value);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleAnimation.get_To() */
 HRESULT wuixamean_double_animation_get__to(WUIXAMEAN_DoubleAnimation *self, double** value);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleAnimation.put_To() */
 HRESULT wuixamean_double_animation_put__to(WUIXAMEAN_DoubleAnimation *self, double* value);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleAnimation.get_By() */
 HRESULT wuixamean_double_animation_get__by(WUIXAMEAN_DoubleAnimation *self, double** value);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleAnimation.put_By() */
 HRESULT wuixamean_double_animation_put__by(WUIXAMEAN_DoubleAnimation *self, double* value);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleAnimation.get_EasingFunction() */
 HRESULT wuixamean_double_animation_get__easing_function(WUIXAMEAN_DoubleAnimation *self, WUIXAMEAN_EasingFunctionBase** value);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleAnimation.put_EasingFunction() */
 HRESULT wuixamean_double_animation_put__easing_function(WUIXAMEAN_DoubleAnimation *self, WUIXAMEAN_EasingFunctionBase* value);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleAnimation.get_EnableDependentAnimation() */
 HRESULT wuixamean_double_animation_get__enable_dependent_animation(WUIXAMEAN_DoubleAnimation *self, BOOL *value);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleAnimation.put_EnableDependentAnimation() */
 HRESULT wuixamean_double_animation_put__enable_dependent_animation(WUIXAMEAN_DoubleAnimation *self, BOOL value);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleAnimation.get_FromProperty() */
 HRESULT wuixamean_double_animation_get__from_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleAnimation.get_ToProperty() */
 HRESULT wuixamean_double_animation_get__to_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleAnimation.get_ByProperty() */
 HRESULT wuixamean_double_animation_get__by_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleAnimation.get_EasingFunctionProperty() */
 HRESULT wuixamean_double_animation_get__easing_function_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleAnimation.get_EnableDependentAnimationProperty() */
 HRESULT wuixamean_double_animation_get__enable_dependent_animation_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.DoubleAnimationUsingKeyFrames */
 HRESULT wuixamean_double_animation_using_key_frames_new(WUIXAMEAN_DoubleAnimationUsingKeyFrames **out);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleAnimationUsingKeyFrames */
-/* Windows.UI.Xaml.Media.Animation.DoubleAnimationUsingKeyFrames.get_KeyFrames() */
 HRESULT wuixamean_double_animation_using_key_frames_get__key_frames(WUIXAMEAN_DoubleAnimationUsingKeyFrames *self, WUIXAMEAN_DoubleKeyFrameCollection** value);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleAnimationUsingKeyFrames.get_EnableDependentAnimation() */
 HRESULT wuixamean_double_animation_using_key_frames_get__enable_dependent_animation(WUIXAMEAN_DoubleAnimationUsingKeyFrames *self, BOOL *value);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleAnimationUsingKeyFrames.put_EnableDependentAnimation() */
 HRESULT wuixamean_double_animation_using_key_frames_put__enable_dependent_animation(WUIXAMEAN_DoubleAnimationUsingKeyFrames *self, BOOL value);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleAnimationUsingKeyFrames.get_EnableDependentAnimationProperty() */
 HRESULT wuixamean_double_animation_using_key_frames_get__enable_dependent_animation_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection */
 HRESULT wuixamean_double_key_frame_collection_new(WUIXAMEAN_DoubleKeyFrameCollection **out);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection */
-/* Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection.GetAt(index) */
 HRESULT wuixamean_double_key_frame_collection_get_at(WUIXAMEAN_DoubleKeyFrameCollection *self, uint32_t index, WUIXAMEAN_DoubleKeyFrame** out);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection.get_Size() */
 HRESULT wuixamean_double_key_frame_collection_get__size(WUIXAMEAN_DoubleKeyFrameCollection *self, uint32_t *value);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection.GetView() */
 HRESULT wuixamean_double_key_frame_collection_get_view(WUIXAMEAN_DoubleKeyFrameCollection *self, WFOCO_IVectorView_WUIXAMEAN_DoubleKeyFrame** out);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection.IndexOf(index) */
 HRESULT wuixamean_double_key_frame_collection_index_of(WUIXAMEAN_DoubleKeyFrameCollection *self, WUIXAMEAN_DoubleKeyFrame* value, uint32_t index, BOOL *out);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection.SetAt(index) */
 HRESULT wuixamean_double_key_frame_collection_set_at(WUIXAMEAN_DoubleKeyFrameCollection *self, uint32_t index, WUIXAMEAN_DoubleKeyFrame* value);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection.InsertAt(index) */
 HRESULT wuixamean_double_key_frame_collection_insert_at(WUIXAMEAN_DoubleKeyFrameCollection *self, uint32_t index, WUIXAMEAN_DoubleKeyFrame* value);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection.RemoveAt(index) */
 HRESULT wuixamean_double_key_frame_collection_remove_at(WUIXAMEAN_DoubleKeyFrameCollection *self, uint32_t index);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection.Append() */
 HRESULT wuixamean_double_key_frame_collection_append(WUIXAMEAN_DoubleKeyFrameCollection *self, WUIXAMEAN_DoubleKeyFrame* value);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection.RemoveAtEnd() */
 HRESULT wuixamean_double_key_frame_collection_remove_at_end(WUIXAMEAN_DoubleKeyFrameCollection *self);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection.Clear() */
 HRESULT wuixamean_double_key_frame_collection_clear(WUIXAMEAN_DoubleKeyFrameCollection *self);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection.GetMany(startIndex, items) */
 HRESULT wuixamean_double_key_frame_collection_get_many(WUIXAMEAN_DoubleKeyFrameCollection *self, uint32_t startIndex, WUIXAMEAN_DoubleKeyFrame *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection.ReplaceAll(items) */
 HRESULT wuixamean_double_key_frame_collection_replace_all(WUIXAMEAN_DoubleKeyFrameCollection *self, WUIXAMEAN_DoubleKeyFrame *items, uint32_t items_len);
 
-/* Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection.First() */
 HRESULT wuixamean_double_key_frame_collection_first(WUIXAMEAN_DoubleKeyFrameCollection *self, WFOCO_IIterator_WUIXAMEAN_DoubleKeyFrame** out);
 
-/* activate Windows.UI.Xaml.Media.Animation.DragItemThemeAnimation */
 HRESULT wuixamean_drag_item_theme_animation_new(WUIXAMEAN_DragItemThemeAnimation **out);
 
-/* Windows.UI.Xaml.Media.Animation.DragItemThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.DragItemThemeAnimation.get_TargetName() */
 HRESULT wuixamean_drag_item_theme_animation_get__target_name(WUIXAMEAN_DragItemThemeAnimation *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Media.Animation.DragItemThemeAnimation.put_TargetName() */
 HRESULT wuixamean_drag_item_theme_animation_put__target_name(WUIXAMEAN_DragItemThemeAnimation *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Media.Animation.DragItemThemeAnimation.get_TargetNameProperty() */
 HRESULT wuixamean_drag_item_theme_animation_get__target_name_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation */
 HRESULT wuixamean_drag_over_theme_animation_new(WUIXAMEAN_DragOverThemeAnimation **out);
 
-/* Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation.get_TargetName() */
 HRESULT wuixamean_drag_over_theme_animation_get__target_name(WUIXAMEAN_DragOverThemeAnimation *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation.put_TargetName() */
 HRESULT wuixamean_drag_over_theme_animation_put__target_name(WUIXAMEAN_DragOverThemeAnimation *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation.get_ToOffset() */
 HRESULT wuixamean_drag_over_theme_animation_get__to_offset(WUIXAMEAN_DragOverThemeAnimation *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation.put_ToOffset() */
 HRESULT wuixamean_drag_over_theme_animation_put__to_offset(WUIXAMEAN_DragOverThemeAnimation *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation.get_Direction() */
 HRESULT wuixamean_drag_over_theme_animation_get__direction(WUIXAMEAN_DragOverThemeAnimation *self, WUIXACOPR_AnimationDirection *value);
 
-/* Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation.put_Direction() */
 HRESULT wuixamean_drag_over_theme_animation_put__direction(WUIXAMEAN_DragOverThemeAnimation *self, WUIXACOPR_AnimationDirection value);
 
-/* Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation.get_TargetNameProperty() */
 HRESULT wuixamean_drag_over_theme_animation_get__target_name_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation.get_ToOffsetProperty() */
 HRESULT wuixamean_drag_over_theme_animation_get__to_offset_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation.get_DirectionProperty() */
 HRESULT wuixamean_drag_over_theme_animation_get__direction_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation */
 HRESULT wuixamean_drill_in_theme_animation_new(WUIXAMEAN_DrillInThemeAnimation **out);
 
-/* Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation.get_EntranceTargetName() */
 HRESULT wuixamean_drill_in_theme_animation_get__entrance_target_name(WUIXAMEAN_DrillInThemeAnimation *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation.put_EntranceTargetName() */
 HRESULT wuixamean_drill_in_theme_animation_put__entrance_target_name(WUIXAMEAN_DrillInThemeAnimation *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation.get_EntranceTarget() */
 HRESULT wuixamean_drill_in_theme_animation_get__entrance_target(WUIXAMEAN_DrillInThemeAnimation *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation.put_EntranceTarget() */
 HRESULT wuixamean_drill_in_theme_animation_put__entrance_target(WUIXAMEAN_DrillInThemeAnimation *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation.get_ExitTargetName() */
 HRESULT wuixamean_drill_in_theme_animation_get__exit_target_name(WUIXAMEAN_DrillInThemeAnimation *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation.put_ExitTargetName() */
 HRESULT wuixamean_drill_in_theme_animation_put__exit_target_name(WUIXAMEAN_DrillInThemeAnimation *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation.get_ExitTarget() */
 HRESULT wuixamean_drill_in_theme_animation_get__exit_target(WUIXAMEAN_DrillInThemeAnimation *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation.put_ExitTarget() */
 HRESULT wuixamean_drill_in_theme_animation_put__exit_target(WUIXAMEAN_DrillInThemeAnimation *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation.get_EntranceTargetNameProperty() */
 HRESULT wuixamean_drill_in_theme_animation_get__entrance_target_name_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation.get_EntranceTargetProperty() */
 HRESULT wuixamean_drill_in_theme_animation_get__entrance_target_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation.get_ExitTargetNameProperty() */
 HRESULT wuixamean_drill_in_theme_animation_get__exit_target_name_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation.get_ExitTargetProperty() */
 HRESULT wuixamean_drill_in_theme_animation_get__exit_target_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation */
 HRESULT wuixamean_drill_out_theme_animation_new(WUIXAMEAN_DrillOutThemeAnimation **out);
 
-/* Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation.get_EntranceTargetName() */
 HRESULT wuixamean_drill_out_theme_animation_get__entrance_target_name(WUIXAMEAN_DrillOutThemeAnimation *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation.put_EntranceTargetName() */
 HRESULT wuixamean_drill_out_theme_animation_put__entrance_target_name(WUIXAMEAN_DrillOutThemeAnimation *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation.get_EntranceTarget() */
 HRESULT wuixamean_drill_out_theme_animation_get__entrance_target(WUIXAMEAN_DrillOutThemeAnimation *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation.put_EntranceTarget() */
 HRESULT wuixamean_drill_out_theme_animation_put__entrance_target(WUIXAMEAN_DrillOutThemeAnimation *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation.get_ExitTargetName() */
 HRESULT wuixamean_drill_out_theme_animation_get__exit_target_name(WUIXAMEAN_DrillOutThemeAnimation *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation.put_ExitTargetName() */
 HRESULT wuixamean_drill_out_theme_animation_put__exit_target_name(WUIXAMEAN_DrillOutThemeAnimation *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation.get_ExitTarget() */
 HRESULT wuixamean_drill_out_theme_animation_get__exit_target(WUIXAMEAN_DrillOutThemeAnimation *self, WUIXA_DependencyObject** value);
 
-/* Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation.put_ExitTarget() */
 HRESULT wuixamean_drill_out_theme_animation_put__exit_target(WUIXAMEAN_DrillOutThemeAnimation *self, WUIXA_DependencyObject* value);
 
-/* Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation.get_EntranceTargetNameProperty() */
 HRESULT wuixamean_drill_out_theme_animation_get__entrance_target_name_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation.get_EntranceTargetProperty() */
 HRESULT wuixamean_drill_out_theme_animation_get__entrance_target_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation.get_ExitTargetNameProperty() */
 HRESULT wuixamean_drill_out_theme_animation_get__exit_target_name_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation.get_ExitTargetProperty() */
 HRESULT wuixamean_drill_out_theme_animation_get__exit_target_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.DropTargetItemThemeAnimation */
 HRESULT wuixamean_drop_target_item_theme_animation_new(WUIXAMEAN_DropTargetItemThemeAnimation **out);
 
-/* Windows.UI.Xaml.Media.Animation.DropTargetItemThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.DropTargetItemThemeAnimation.get_TargetName() */
 HRESULT wuixamean_drop_target_item_theme_animation_get__target_name(WUIXAMEAN_DropTargetItemThemeAnimation *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Media.Animation.DropTargetItemThemeAnimation.put_TargetName() */
 HRESULT wuixamean_drop_target_item_theme_animation_put__target_name(WUIXAMEAN_DropTargetItemThemeAnimation *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Media.Animation.DropTargetItemThemeAnimation.get_TargetNameProperty() */
 HRESULT wuixamean_drop_target_item_theme_animation_get__target_name_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.EasingColorKeyFrame */
 HRESULT wuixamean_easing_color_key_frame_new(WUIXAMEAN_EasingColorKeyFrame **out);
 
-/* Windows.UI.Xaml.Media.Animation.EasingColorKeyFrame */
-/* Windows.UI.Xaml.Media.Animation.EasingColorKeyFrame.get_EasingFunction() */
 HRESULT wuixamean_easing_color_key_frame_get__easing_function(WUIXAMEAN_EasingColorKeyFrame *self, WUIXAMEAN_EasingFunctionBase** value);
 
-/* Windows.UI.Xaml.Media.Animation.EasingColorKeyFrame.put_EasingFunction() */
 HRESULT wuixamean_easing_color_key_frame_put__easing_function(WUIXAMEAN_EasingColorKeyFrame *self, WUIXAMEAN_EasingFunctionBase* value);
 
-/* Windows.UI.Xaml.Media.Animation.EasingColorKeyFrame.get_EasingFunctionProperty() */
 HRESULT wuixamean_easing_color_key_frame_get__easing_function_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.EasingDoubleKeyFrame */
 HRESULT wuixamean_easing_double_key_frame_new(WUIXAMEAN_EasingDoubleKeyFrame **out);
 
-/* Windows.UI.Xaml.Media.Animation.EasingDoubleKeyFrame */
-/* Windows.UI.Xaml.Media.Animation.EasingDoubleKeyFrame.get_EasingFunction() */
 HRESULT wuixamean_easing_double_key_frame_get__easing_function(WUIXAMEAN_EasingDoubleKeyFrame *self, WUIXAMEAN_EasingFunctionBase** value);
 
-/* Windows.UI.Xaml.Media.Animation.EasingDoubleKeyFrame.put_EasingFunction() */
 HRESULT wuixamean_easing_double_key_frame_put__easing_function(WUIXAMEAN_EasingDoubleKeyFrame *self, WUIXAMEAN_EasingFunctionBase* value);
 
-/* Windows.UI.Xaml.Media.Animation.EasingDoubleKeyFrame.get_EasingFunctionProperty() */
 HRESULT wuixamean_easing_double_key_frame_get__easing_function_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IDropTargetItemThemeAnimationStatics */
-/* Windows.UI.Xaml.Media.Animation.IDropTargetItemThemeAnimationStatics.get_TargetNameProperty() */
 HRESULT wuixamean_drop_target_item_theme_animation_statics_get__target_name_property(WUIXAMEAN_IDropTargetItemThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IDrillOutThemeAnimationStatics */
-/* Windows.UI.Xaml.Media.Animation.IDrillOutThemeAnimationStatics.get_EntranceTargetNameProperty() */
 HRESULT wuixamean_drill_out_theme_animation_statics_get__entrance_target_name_property(WUIXAMEAN_IDrillOutThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IDrillOutThemeAnimationStatics.get_EntranceTargetProperty() */
 HRESULT wuixamean_drill_out_theme_animation_statics_get__entrance_target_property(WUIXAMEAN_IDrillOutThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IDrillOutThemeAnimationStatics.get_ExitTargetNameProperty() */
 HRESULT wuixamean_drill_out_theme_animation_statics_get__exit_target_name_property(WUIXAMEAN_IDrillOutThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IDrillOutThemeAnimationStatics.get_ExitTargetProperty() */
 HRESULT wuixamean_drill_out_theme_animation_statics_get__exit_target_property(WUIXAMEAN_IDrillOutThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IDrillInThemeAnimationStatics */
-/* Windows.UI.Xaml.Media.Animation.IDrillInThemeAnimationStatics.get_EntranceTargetNameProperty() */
 HRESULT wuixamean_drill_in_theme_animation_statics_get__entrance_target_name_property(WUIXAMEAN_IDrillInThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IDrillInThemeAnimationStatics.get_EntranceTargetProperty() */
 HRESULT wuixamean_drill_in_theme_animation_statics_get__entrance_target_property(WUIXAMEAN_IDrillInThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IDrillInThemeAnimationStatics.get_ExitTargetNameProperty() */
 HRESULT wuixamean_drill_in_theme_animation_statics_get__exit_target_name_property(WUIXAMEAN_IDrillInThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IDrillInThemeAnimationStatics.get_ExitTargetProperty() */
 HRESULT wuixamean_drill_in_theme_animation_statics_get__exit_target_property(WUIXAMEAN_IDrillInThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IDragOverThemeAnimationStatics */
-/* Windows.UI.Xaml.Media.Animation.IDragOverThemeAnimationStatics.get_TargetNameProperty() */
 HRESULT wuixamean_drag_over_theme_animation_statics_get__target_name_property(WUIXAMEAN_IDragOverThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IDragOverThemeAnimationStatics.get_ToOffsetProperty() */
 HRESULT wuixamean_drag_over_theme_animation_statics_get__to_offset_property(WUIXAMEAN_IDragOverThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IDragOverThemeAnimationStatics.get_DirectionProperty() */
 HRESULT wuixamean_drag_over_theme_animation_statics_get__direction_property(WUIXAMEAN_IDragOverThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IDragItemThemeAnimationStatics */
-/* Windows.UI.Xaml.Media.Animation.IDragItemThemeAnimationStatics.get_TargetNameProperty() */
 HRESULT wuixamean_drag_item_theme_animation_statics_get__target_name_property(WUIXAMEAN_IDragItemThemeAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.EasingPointKeyFrame */
 HRESULT wuixamean_easing_point_key_frame_new(WUIXAMEAN_EasingPointKeyFrame **out);
 
-/* Windows.UI.Xaml.Media.Animation.EasingPointKeyFrame */
-/* Windows.UI.Xaml.Media.Animation.EasingPointKeyFrame.get_EasingFunction() */
 HRESULT wuixamean_easing_point_key_frame_get__easing_function(WUIXAMEAN_EasingPointKeyFrame *self, WUIXAMEAN_EasingFunctionBase** value);
 
-/* Windows.UI.Xaml.Media.Animation.EasingPointKeyFrame.put_EasingFunction() */
 HRESULT wuixamean_easing_point_key_frame_put__easing_function(WUIXAMEAN_EasingPointKeyFrame *self, WUIXAMEAN_EasingFunctionBase* value);
 
-/* Windows.UI.Xaml.Media.Animation.EasingPointKeyFrame.get_EasingFunctionProperty() */
 HRESULT wuixamean_easing_point_key_frame_get__easing_function_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.EdgeUIThemeTransition */
 HRESULT wuixamean_edge_u_i_theme_transition_new(WUIXAMEAN_EdgeUIThemeTransition **out);
 
-/* Windows.UI.Xaml.Media.Animation.EdgeUIThemeTransition */
-/* Windows.UI.Xaml.Media.Animation.EdgeUIThemeTransition.get_Edge() */
 HRESULT wuixamean_edge_u_i_theme_transition_get__edge(WUIXAMEAN_EdgeUIThemeTransition *self, WUIXACOPR_EdgeTransitionLocation *value);
 
-/* Windows.UI.Xaml.Media.Animation.EdgeUIThemeTransition.put_Edge() */
 HRESULT wuixamean_edge_u_i_theme_transition_put__edge(WUIXAMEAN_EdgeUIThemeTransition *self, WUIXACOPR_EdgeTransitionLocation value);
 
-/* Windows.UI.Xaml.Media.Animation.EdgeUIThemeTransition.get_EdgeProperty() */
 HRESULT wuixamean_edge_u_i_theme_transition_get__edge_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.ElasticEase */
 HRESULT wuixamean_elastic_ease_new(WUIXAMEAN_ElasticEase **out);
 
-/* Windows.UI.Xaml.Media.Animation.ElasticEase */
-/* Windows.UI.Xaml.Media.Animation.ElasticEase.get_Oscillations() */
 HRESULT wuixamean_elastic_ease_get__oscillations(WUIXAMEAN_ElasticEase *self, int32_t *value);
 
-/* Windows.UI.Xaml.Media.Animation.ElasticEase.put_Oscillations() */
 HRESULT wuixamean_elastic_ease_put__oscillations(WUIXAMEAN_ElasticEase *self, int32_t value);
 
-/* Windows.UI.Xaml.Media.Animation.ElasticEase.get_Springiness() */
 HRESULT wuixamean_elastic_ease_get__springiness(WUIXAMEAN_ElasticEase *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.ElasticEase.put_Springiness() */
 HRESULT wuixamean_elastic_ease_put__springiness(WUIXAMEAN_ElasticEase *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.ElasticEase.get_OscillationsProperty() */
 HRESULT wuixamean_elastic_ease_get__oscillations_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ElasticEase.get_SpringinessProperty() */
 HRESULT wuixamean_elastic_ease_get__springiness_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.EntranceNavigationTransitionInfo */
 HRESULT wuixamean_entrance_navigation_transition_info_new(WUIXAMEAN_EntranceNavigationTransitionInfo **out);
 
-/* Windows.UI.Xaml.Media.Animation.EntranceNavigationTransitionInfo */
-/* Windows.UI.Xaml.Media.Animation.EntranceNavigationTransitionInfo.get_IsTargetElementProperty() */
 HRESULT wuixamean_entrance_navigation_transition_info_get__is_target_element_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.EntranceNavigationTransitionInfo.GetIsTargetElement(element) */
 HRESULT wuixamean_entrance_navigation_transition_info_get_is_target_element(WUIXA_UIElement* element, BOOL *out);
 
-/* Windows.UI.Xaml.Media.Animation.EntranceNavigationTransitionInfo.SetIsTargetElement(element) */
 HRESULT wuixamean_entrance_navigation_transition_info_set_is_target_element(WUIXA_UIElement* element, BOOL value);
 
-/* activate Windows.UI.Xaml.Media.Animation.EntranceThemeTransition */
 HRESULT wuixamean_entrance_theme_transition_new(WUIXAMEAN_EntranceThemeTransition **out);
 
-/* Windows.UI.Xaml.Media.Animation.EntranceThemeTransition */
-/* Windows.UI.Xaml.Media.Animation.EntranceThemeTransition.get_FromHorizontalOffset() */
 HRESULT wuixamean_entrance_theme_transition_get__from_horizontal_offset(WUIXAMEAN_EntranceThemeTransition *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.EntranceThemeTransition.put_FromHorizontalOffset() */
 HRESULT wuixamean_entrance_theme_transition_put__from_horizontal_offset(WUIXAMEAN_EntranceThemeTransition *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.EntranceThemeTransition.get_FromVerticalOffset() */
 HRESULT wuixamean_entrance_theme_transition_get__from_vertical_offset(WUIXAMEAN_EntranceThemeTransition *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.EntranceThemeTransition.put_FromVerticalOffset() */
 HRESULT wuixamean_entrance_theme_transition_put__from_vertical_offset(WUIXAMEAN_EntranceThemeTransition *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.EntranceThemeTransition.get_IsStaggeringEnabled() */
 HRESULT wuixamean_entrance_theme_transition_get__is_staggering_enabled(WUIXAMEAN_EntranceThemeTransition *self, BOOL *value);
 
-/* Windows.UI.Xaml.Media.Animation.EntranceThemeTransition.put_IsStaggeringEnabled() */
 HRESULT wuixamean_entrance_theme_transition_put__is_staggering_enabled(WUIXAMEAN_EntranceThemeTransition *self, BOOL value);
 
-/* Windows.UI.Xaml.Media.Animation.EntranceThemeTransition.get_FromHorizontalOffsetProperty() */
 HRESULT wuixamean_entrance_theme_transition_get__from_horizontal_offset_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.EntranceThemeTransition.get_FromVerticalOffsetProperty() */
 HRESULT wuixamean_entrance_theme_transition_get__from_vertical_offset_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.EntranceThemeTransition.get_IsStaggeringEnabledProperty() */
 HRESULT wuixamean_entrance_theme_transition_get__is_staggering_enabled_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.ExponentialEase */
 HRESULT wuixamean_exponential_ease_new(WUIXAMEAN_ExponentialEase **out);
 
-/* Windows.UI.Xaml.Media.Animation.ExponentialEase */
-/* Windows.UI.Xaml.Media.Animation.ExponentialEase.get_Exponent() */
 HRESULT wuixamean_exponential_ease_get__exponent(WUIXAMEAN_ExponentialEase *self, double *value);
 
-/* Windows.UI.Xaml.Media.Animation.ExponentialEase.put_Exponent() */
 HRESULT wuixamean_exponential_ease_put__exponent(WUIXAMEAN_ExponentialEase *self, double value);
 
-/* Windows.UI.Xaml.Media.Animation.ExponentialEase.get_ExponentProperty() */
 HRESULT wuixamean_exponential_ease_get__exponent_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation */
 HRESULT wuixamean_fade_in_theme_animation_new(WUIXAMEAN_FadeInThemeAnimation **out);
 
-/* Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation.get_TargetName() */
 HRESULT wuixamean_fade_in_theme_animation_get__target_name(WUIXAMEAN_FadeInThemeAnimation *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation.put_TargetName() */
 HRESULT wuixamean_fade_in_theme_animation_put__target_name(WUIXAMEAN_FadeInThemeAnimation *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation.get_TargetNameProperty() */
 HRESULT wuixamean_fade_in_theme_animation_get__target_name_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation */
 HRESULT wuixamean_fade_out_theme_animation_new(WUIXAMEAN_FadeOutThemeAnimation **out);
 
-/* Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation.get_TargetName() */
 HRESULT wuixamean_fade_out_theme_animation_get__target_name(WUIXAMEAN_FadeOutThemeAnimation *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation.put_TargetName() */
 HRESULT wuixamean_fade_out_theme_animation_put__target_name(WUIXAMEAN_FadeOutThemeAnimation *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation.get_TargetNameProperty() */
 HRESULT wuixamean_fade_out_theme_animation_get__target_name_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.GravityConnectedAnimationConfiguration */
-/* Windows.UI.Xaml.Media.Animation.GravityConnectedAnimationConfiguration.get_IsShadowEnabled() */
 HRESULT wuixamean_gravity_connected_animation_configuration_get__is_shadow_enabled(WUIXAMEAN_GravityConnectedAnimationConfiguration *self, BOOL *value);
 
-/* Windows.UI.Xaml.Media.Animation.GravityConnectedAnimationConfiguration.put_IsShadowEnabled() */
 HRESULT wuixamean_gravity_connected_animation_configuration_put__is_shadow_enabled(WUIXAMEAN_GravityConnectedAnimationConfiguration *self, BOOL value);
 
-/* Windows.UI.Xaml.Media.Animation.IBackEaseStatics */
-/* Windows.UI.Xaml.Media.Animation.IBackEaseStatics.get_AmplitudeProperty() */
 HRESULT wuixamean_back_ease_statics_get__amplitude_property(WUIXAMEAN_IBackEaseStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IDoubleKeyFrameStatics */
-/* Windows.UI.Xaml.Media.Animation.IDoubleKeyFrameStatics.get_ValueProperty() */
 HRESULT wuixamean_double_key_frame_statics_get__value_property(WUIXAMEAN_IDoubleKeyFrameStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IDoubleKeyFrameStatics.get_KeyTimeProperty() */
 HRESULT wuixamean_double_key_frame_statics_get__key_time_property(WUIXAMEAN_IDoubleKeyFrameStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IDoubleKeyFrameFactory */
-/* Windows.UI.Xaml.Media.Animation.IDoubleKeyFrameFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixamean_double_key_frame_factory_create_instance(WUIXAMEAN_IDoubleKeyFrameFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAMEAN_DoubleKeyFrame** out);
 
-/* Windows.UI.Xaml.Media.Animation.IDoubleAnimationUsingKeyFramesStatics */
-/* Windows.UI.Xaml.Media.Animation.IDoubleAnimationUsingKeyFramesStatics.get_EnableDependentAnimationProperty() */
 HRESULT wuixamean_double_animation_using_key_frames_statics_get__enable_dependent_animation_property(WUIXAMEAN_IDoubleAnimationUsingKeyFramesStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IDoubleAnimationStatics */
-/* Windows.UI.Xaml.Media.Animation.IDoubleAnimationStatics.get_FromProperty() */
 HRESULT wuixamean_double_animation_statics_get__from_property(WUIXAMEAN_IDoubleAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IDoubleAnimationStatics.get_ToProperty() */
 HRESULT wuixamean_double_animation_statics_get__to_property(WUIXAMEAN_IDoubleAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IDoubleAnimationStatics.get_ByProperty() */
 HRESULT wuixamean_double_animation_statics_get__by_property(WUIXAMEAN_IDoubleAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IDoubleAnimationStatics.get_EasingFunctionProperty() */
 HRESULT wuixamean_double_animation_statics_get__easing_function_property(WUIXAMEAN_IDoubleAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IDoubleAnimationStatics.get_EnableDependentAnimationProperty() */
 HRESULT wuixamean_double_animation_statics_get__enable_dependent_animation_property(WUIXAMEAN_IDoubleAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IDirectConnectedAnimationConfigurationFactory */
-/* Windows.UI.Xaml.Media.Animation.IDirectConnectedAnimationConfigurationFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixamean_direct_connected_animation_configuration_factory_create_instance(WUIXAMEAN_IDirectConnectedAnimationConfigurationFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAMEAN_DirectConnectedAnimationConfiguration** out);
 
-/* Windows.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics */
-/* Windows.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics.get_ExitElementProperty() */
 HRESULT wuixamean_continuum_navigation_transition_info_statics_get__exit_element_property(WUIXAMEAN_IContinuumNavigationTransitionInfoStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics.get_IsEntranceElementProperty() */
 HRESULT wuixamean_continuum_navigation_transition_info_statics_get__is_entrance_element_property(WUIXAMEAN_IContinuumNavigationTransitionInfoStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics.GetIsEntranceElement(element) */
 HRESULT wuixamean_continuum_navigation_transition_info_statics_get_is_entrance_element(WUIXAMEAN_IContinuumNavigationTransitionInfoStatics *self, WUIXA_UIElement* element, BOOL *out);
 
-/* Windows.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics.SetIsEntranceElement(element) */
 HRESULT wuixamean_continuum_navigation_transition_info_statics_set_is_entrance_element(WUIXAMEAN_IContinuumNavigationTransitionInfoStatics *self, WUIXA_UIElement* element, BOOL value);
 
-/* Windows.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics.get_IsExitElementProperty() */
 HRESULT wuixamean_continuum_navigation_transition_info_statics_get__is_exit_element_property(WUIXAMEAN_IContinuumNavigationTransitionInfoStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics.GetIsExitElement(element) */
 HRESULT wuixamean_continuum_navigation_transition_info_statics_get_is_exit_element(WUIXAMEAN_IContinuumNavigationTransitionInfoStatics *self, WUIXA_UIElement* element, BOOL *out);
 
-/* Windows.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics.SetIsExitElement(element) */
 HRESULT wuixamean_continuum_navigation_transition_info_statics_set_is_exit_element(WUIXAMEAN_IContinuumNavigationTransitionInfoStatics *self, WUIXA_UIElement* element, BOOL value);
 
-/* Windows.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics.get_ExitElementContainerProperty() */
 HRESULT wuixamean_continuum_navigation_transition_info_statics_get__exit_element_container_property(WUIXAMEAN_IContinuumNavigationTransitionInfoStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics.GetExitElementContainer(element) */
 HRESULT wuixamean_continuum_navigation_transition_info_statics_get_exit_element_container(WUIXAMEAN_IContinuumNavigationTransitionInfoStatics *self, WUIXACO_ListViewBase* element, BOOL *out);
 
-/* Windows.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics.SetExitElementContainer(element) */
 HRESULT wuixamean_continuum_navigation_transition_info_statics_set_exit_element_container(WUIXAMEAN_IContinuumNavigationTransitionInfoStatics *self, WUIXACO_ListViewBase* element, BOOL value);
 
-/* Windows.UI.Xaml.Media.Animation.IContentThemeTransitionStatics */
-/* Windows.UI.Xaml.Media.Animation.IContentThemeTransitionStatics.get_HorizontalOffsetProperty() */
 HRESULT wuixamean_content_theme_transition_statics_get__horizontal_offset_property(WUIXAMEAN_IContentThemeTransitionStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IContentThemeTransitionStatics.get_VerticalOffsetProperty() */
 HRESULT wuixamean_content_theme_transition_statics_get__vertical_offset_property(WUIXAMEAN_IContentThemeTransitionStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IConnectedAnimationServiceStatics */
-/* Windows.UI.Xaml.Media.Animation.IConnectedAnimationServiceStatics.GetForCurrentView() */
 HRESULT wuixamean_connected_animation_service_statics_get_for_current_view(WUIXAMEAN_IConnectedAnimationServiceStatics *self, WUIXAMEAN_ConnectedAnimationService** out);
 
-/* Windows.UI.Xaml.Media.Animation.ICommonNavigationTransitionInfoStatics */
-/* Windows.UI.Xaml.Media.Animation.ICommonNavigationTransitionInfoStatics.get_IsStaggeringEnabledProperty() */
 HRESULT wuixamean_common_navigation_transition_info_statics_get__is_staggering_enabled_property(WUIXAMEAN_ICommonNavigationTransitionInfoStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ICommonNavigationTransitionInfoStatics.get_IsStaggerElementProperty() */
 HRESULT wuixamean_common_navigation_transition_info_statics_get__is_stagger_element_property(WUIXAMEAN_ICommonNavigationTransitionInfoStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.ICommonNavigationTransitionInfoStatics.GetIsStaggerElement(element) */
 HRESULT wuixamean_common_navigation_transition_info_statics_get_is_stagger_element(WUIXAMEAN_ICommonNavigationTransitionInfoStatics *self, WUIXA_UIElement* element, BOOL *out);
 
-/* Windows.UI.Xaml.Media.Animation.ICommonNavigationTransitionInfoStatics.SetIsStaggerElement(element) */
 HRESULT wuixamean_common_navigation_transition_info_statics_set_is_stagger_element(WUIXAMEAN_ICommonNavigationTransitionInfoStatics *self, WUIXA_UIElement* element, BOOL value);
 
-/* Windows.UI.Xaml.Media.Animation.IColorKeyFrameStatics */
-/* Windows.UI.Xaml.Media.Animation.IColorKeyFrameStatics.get_ValueProperty() */
 HRESULT wuixamean_color_key_frame_statics_get__value_property(WUIXAMEAN_IColorKeyFrameStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IColorKeyFrameStatics.get_KeyTimeProperty() */
 HRESULT wuixamean_color_key_frame_statics_get__key_time_property(WUIXAMEAN_IColorKeyFrameStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IColorKeyFrameFactory */
-/* Windows.UI.Xaml.Media.Animation.IColorKeyFrameFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixamean_color_key_frame_factory_create_instance(WUIXAMEAN_IColorKeyFrameFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAMEAN_ColorKeyFrame** out);
 
-/* Windows.UI.Xaml.Media.Animation.IColorAnimationUsingKeyFramesStatics */
-/* Windows.UI.Xaml.Media.Animation.IColorAnimationUsingKeyFramesStatics.get_EnableDependentAnimationProperty() */
 HRESULT wuixamean_color_animation_using_key_frames_statics_get__enable_dependent_animation_property(WUIXAMEAN_IColorAnimationUsingKeyFramesStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IColorAnimationStatics */
-/* Windows.UI.Xaml.Media.Animation.IColorAnimationStatics.get_FromProperty() */
 HRESULT wuixamean_color_animation_statics_get__from_property(WUIXAMEAN_IColorAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IColorAnimationStatics.get_ToProperty() */
 HRESULT wuixamean_color_animation_statics_get__to_property(WUIXAMEAN_IColorAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IColorAnimationStatics.get_ByProperty() */
 HRESULT wuixamean_color_animation_statics_get__by_property(WUIXAMEAN_IColorAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IColorAnimationStatics.get_EasingFunctionProperty() */
 HRESULT wuixamean_color_animation_statics_get__easing_function_property(WUIXAMEAN_IColorAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IColorAnimationStatics.get_EnableDependentAnimationProperty() */
 HRESULT wuixamean_color_animation_statics_get__enable_dependent_animation_property(WUIXAMEAN_IColorAnimationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IBounceEaseStatics */
-/* Windows.UI.Xaml.Media.Animation.IBounceEaseStatics.get_BouncesProperty() */
 HRESULT wuixamean_bounce_ease_statics_get__bounces_property(WUIXAMEAN_IBounceEaseStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IBounceEaseStatics.get_BouncinessProperty() */
 HRESULT wuixamean_bounce_ease_statics_get__bounciness_property(WUIXAMEAN_IBounceEaseStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IBeginStoryboardStatics */
-/* Windows.UI.Xaml.Media.Animation.IBeginStoryboardStatics.get_StoryboardProperty() */
 HRESULT wuixamean_begin_storyboard_statics_get__storyboard_property(WUIXAMEAN_IBeginStoryboardStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Animation.IBasicConnectedAnimationConfigurationFactory */
-/* Windows.UI.Xaml.Media.Animation.IBasicConnectedAnimationConfigurationFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixamean_basic_connected_animation_configuration_factory_create_instance(WUIXAMEAN_IBasicConnectedAnimationConfigurationFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAMEAN_BasicConnectedAnimationConfiguration** out);
 
-/* Windows.UI.Xaml.Media.Animation.ISwipeHintThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.ISwipeBackThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.IStoryboard */
-/* Windows.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.ISplinePointKeyFrame */
-/* Windows.UI.Xaml.Media.Animation.ISplineDoubleKeyFrame */
-/* Windows.UI.Xaml.Media.Animation.ISplineColorKeyFrame */
-/* Windows.UI.Xaml.Media.Animation.ISlideNavigationTransitionInfo2 */
-/* Windows.UI.Xaml.Media.Animation.ISlideNavigationTransitionInfo2.get_Effect() */
 HRESULT wuixamean_slide_navigation_transition_info_2_get__effect(WUIXAMEAN_ISlideNavigationTransitionInfo_2 *self, WUIXAMEAN_SlideNavigationTransitionEffect *value);
 
-/* Windows.UI.Xaml.Media.Animation.ISlideNavigationTransitionInfo2.put_Effect() */
 HRESULT wuixamean_slide_navigation_transition_info_2_put__effect(WUIXAMEAN_ISlideNavigationTransitionInfo_2 *self, WUIXAMEAN_SlideNavigationTransitionEffect value);
 
-/* Windows.UI.Xaml.Media.Animation.IRepositionThemeTransition2 */
-/* Windows.UI.Xaml.Media.Animation.IRepositionThemeTransition2.get_IsStaggeringEnabled() */
 HRESULT wuixamean_reposition_theme_transition_2_get__is_staggering_enabled(WUIXAMEAN_IRepositionThemeTransition_2 *self, BOOL *value);
 
-/* Windows.UI.Xaml.Media.Animation.IRepositionThemeTransition2.put_IsStaggeringEnabled() */
 HRESULT wuixamean_reposition_theme_transition_2_put__is_staggering_enabled(WUIXAMEAN_IRepositionThemeTransition_2 *self, BOOL value);
 
-/* Windows.UI.Xaml.Media.Animation.IRepositionThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.IPowerEase */
-/* Windows.UI.Xaml.Media.Animation.IPopupThemeTransition */
-/* Windows.UI.Xaml.Media.Animation.IPopOutThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.IPopInThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.IPointerUpThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.IPointerDownThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.IPointAnimationUsingKeyFrames */
-/* Windows.UI.Xaml.Media.Animation.IPointAnimation */
-/* Windows.UI.Xaml.Media.Animation.IPaneThemeTransition */
-/* Windows.UI.Xaml.Media.Animation.IObjectAnimationUsingKeyFrames */
-/* Windows.UI.Xaml.Media.Animation.INavigationThemeTransition */
-/* Windows.UI.Xaml.Media.Animation.IKeySpline */
-/* Windows.UI.Xaml.Media.Animation.IEasingFunctionBase */
-/* Windows.UI.Xaml.Media.Animation.IBackEase */
-/* Windows.UI.Xaml.Media.Animation.IBeginStoryboard */
-/* Windows.UI.Xaml.Media.Animation.IBounceEase */
-/* Windows.UI.Xaml.Media.Animation.ITimeline */
-/* Windows.UI.Xaml.Media.Animation.IColorAnimation */
-/* Windows.UI.Xaml.Media.Animation.IColorAnimationUsingKeyFrames */
-/* Windows.UI.Xaml.Media.Animation.IColorKeyFrame */
-/* Windows.UI.Xaml.Media.Animation.INavigationTransitionInfoOverrides */
-/* Windows.UI.Xaml.Media.Animation.INavigationTransitionInfoOverrides.GetNavigationStateCore() */
 HRESULT wuixamean_navigation_transition_info_overrides_get_navigation_state_core(WUIXAMEAN_INavigationTransitionInfoOverrides *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Media.Animation.INavigationTransitionInfoOverrides.SetNavigationStateCore(navigationState) */
 HRESULT wuixamean_navigation_transition_info_overrides_set_navigation_state_core(WUIXAMEAN_INavigationTransitionInfoOverrides *self, cwinrt_hstring navigationState);
 
-/* Windows.UI.Xaml.Media.Animation.ICommonNavigationTransitionInfo */
-/* Windows.UI.Xaml.Media.Animation.IConnectedAnimation */
-/* Windows.UI.Xaml.Media.Animation.IConnectedAnimation2 */
-/* Windows.UI.Xaml.Media.Animation.IConnectedAnimation2.get_IsScaleAnimationEnabled() */
 HRESULT wuixamean_connected_animation_2_get__is_scale_animation_enabled(WUIXAMEAN_IConnectedAnimation_2 *self, BOOL *value);
 
-/* Windows.UI.Xaml.Media.Animation.IConnectedAnimation2.put_IsScaleAnimationEnabled() */
 HRESULT wuixamean_connected_animation_2_put__is_scale_animation_enabled(WUIXAMEAN_IConnectedAnimation_2 *self, BOOL value);
 
-/* Windows.UI.Xaml.Media.Animation.IConnectedAnimation2.TryStart(destination, coordinatedElements) */
 HRESULT wuixamean_connected_animation_2_try_start(WUIXAMEAN_IConnectedAnimation_2 *self, WUIXA_UIElement* destination, WFOCO_IIterable_WUIXA_UIElement* coordinatedElements, BOOL *out);
 
-/* Windows.UI.Xaml.Media.Animation.IConnectedAnimation2.SetAnimationComponent(component, animation) */
 HRESULT wuixamean_connected_animation_2_set_animation_component(WUIXAMEAN_IConnectedAnimation_2 *self, WUIXAMEAN_ConnectedAnimationComponent component, WUC_ICompositionAnimationBase* animation);
 
-/* Windows.UI.Xaml.Media.Animation.IConnectedAnimation3 */
-/* Windows.UI.Xaml.Media.Animation.IConnectedAnimation3.get_Configuration() */
 HRESULT wuixamean_connected_animation_3_get__configuration(WUIXAMEAN_IConnectedAnimation_3 *self, WUIXAMEAN_ConnectedAnimationConfiguration** value);
 
-/* Windows.UI.Xaml.Media.Animation.IConnectedAnimation3.put_Configuration() */
 HRESULT wuixamean_connected_animation_3_put__configuration(WUIXAMEAN_IConnectedAnimation_3 *self, WUIXAMEAN_ConnectedAnimationConfiguration* value);
 
-/* Windows.UI.Xaml.Media.Animation.IConnectedAnimationService */
-/* Windows.UI.Xaml.Media.Animation.IContentThemeTransition */
-/* Windows.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfo */
-/* Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame */
-/* Windows.UI.Xaml.Media.Animation.IObjectKeyFrame */
-/* Windows.UI.Xaml.Media.Animation.IPointKeyFrame */
-/* Windows.UI.Xaml.Media.Animation.IDoubleAnimation */
-/* Windows.UI.Xaml.Media.Animation.IDoubleAnimationUsingKeyFrames */
-/* Windows.UI.Xaml.Media.Animation.IDragItemThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.IDragOverThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.IDrillInThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.IDrillOutThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.IDropTargetItemThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.IEasingColorKeyFrame */
-/* Windows.UI.Xaml.Media.Animation.IEasingDoubleKeyFrame */
-/* Windows.UI.Xaml.Media.Animation.IEasingPointKeyFrame */
-/* Windows.UI.Xaml.Media.Animation.IEdgeUIThemeTransition */
-/* Windows.UI.Xaml.Media.Animation.IElasticEase */
-/* Windows.UI.Xaml.Media.Animation.IEntranceThemeTransition */
-/* Windows.UI.Xaml.Media.Animation.IExponentialEase */
-/* Windows.UI.Xaml.Media.Animation.IFadeInThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.IFadeOutThemeAnimation */
-/* Windows.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfiguration2 */
-/* Windows.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfiguration2.get_IsShadowEnabled() */
 HRESULT wuixamean_gravity_connected_animation_configuration_2_get__is_shadow_enabled(WUIXAMEAN_IGravityConnectedAnimationConfiguration_2 *self, BOOL *value);
 
-/* Windows.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfiguration2.put_IsShadowEnabled() */
 HRESULT wuixamean_gravity_connected_animation_configuration_2_put__is_shadow_enabled(WUIXAMEAN_IGravityConnectedAnimationConfiguration_2 *self, BOOL value);
 
 #endif /* CWINRT_WINDOWS_UI_XAML_MEDIA_ANIMATION_H */

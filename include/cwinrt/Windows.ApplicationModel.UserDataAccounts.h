@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStreamReference
 #define CWINRT_FWD_WSTST_IRandomAccessStreamReference
 typedef struct WSTST_IRandomAccessStreamReference WSTST_IRandomAccessStreamReference;
@@ -46,7 +45,6 @@ typedef struct WAPCO_ContactGroup WAPCO_ContactGroup;
 typedef struct WSY_User WSY_User;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPUS_IUserDataAccountManagerStatics WAPUS_IUserDataAccountManagerStatics;
 typedef struct WAPUS_IUserDataAccountManagerStatics_2 WAPUS_IUserDataAccountManagerStatics_2;
 typedef struct WAPUS_UserDataAccountStoreChangedEventArgs WAPUS_UserDataAccountStoreChangedEventArgs;
@@ -64,7 +62,6 @@ typedef struct WAPUS_IUserDataAccount_4 WAPUS_IUserDataAccount_4;
 typedef struct WAPUS_IUserDataAccountStore WAPUS_IUserDataAccountStore;
 typedef struct WAPUS_IUserDataAccount WAPUS_IUserDataAccount;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WAPUS_UserDataAccountStore
 #define CWINRT_FWD_WF_IAsyncOperation_WAPUS_UserDataAccountStore
 typedef struct WF_IAsyncOperation_WAPUS_UserDataAccountStore WF_IAsyncOperation_WAPUS_UserDataAccountStore;
@@ -160,7 +157,6 @@ typedef enum WAPUS_UserDataAccountContentKinds {
 } WAPUS_UserDataAccountContentKinds;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -209,223 +205,139 @@ static const IID CWINRT_IID_WAPUS_IUserDataAccountStore CWINRT_MAYBE_UNUSED = { 
 static const IID CWINRT_IID_WAPUS_IUserDataAccount CWINRT_MAYBE_UNUSED = { 0xB9C4367E, 0xB348, 0x4910, { 0xBE, 0x94, 0x4A, 0xD4, 0xBB, 0xA6, 0xDE, 0xA7 } };
 #endif
 
-/* Methods */
-
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccountManagerStatics */
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccountManagerStatics.RequestStoreAsync(storeAccessType) */
 HRESULT wapus_user_data_account_manager_statics_request_store_async(WAPUS_IUserDataAccountManagerStatics *self, WAPUS_UserDataAccountStoreAccessType storeAccessType, WF_IAsyncOperation_WAPUS_UserDataAccountStore** out);
 
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccountManagerStatics.ShowAddAccountAsync(contentKinds) */
 HRESULT wapus_user_data_account_manager_statics_show_add_account_async(WAPUS_IUserDataAccountManagerStatics *self, WAPUS_UserDataAccountContentKinds contentKinds, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccountManagerStatics.ShowAccountSettingsAsync(id) */
 HRESULT wapus_user_data_account_manager_statics_show_account_settings_async(WAPUS_IUserDataAccountManagerStatics *self, cwinrt_hstring id, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccountManagerStatics.ShowAccountErrorResolverAsync(id) */
 HRESULT wapus_user_data_account_manager_statics_show_account_error_resolver_async(WAPUS_IUserDataAccountManagerStatics *self, cwinrt_hstring id, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccountManagerStatics2 */
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccountManagerStatics2.GetForUser(user) */
 HRESULT wapus_user_data_account_manager_statics_2_get_for_user(WAPUS_IUserDataAccountManagerStatics_2 *self, WSY_User* user, WAPUS_UserDataAccountManagerForUser** out);
 
-/* activate Windows.ApplicationModel.UserDataAccounts.UserDataAccountStoreChangedEventArgs */
 HRESULT wapus_user_data_account_store_changed_event_args_new(WAPUS_UserDataAccountStoreChangedEventArgs **out);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccountStoreChangedEventArgs */
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccountStoreChangedEventArgs.GetDeferral() */
 HRESULT wapus_user_data_account_store_changed_event_args_get_deferral(WAPUS_UserDataAccountStoreChangedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore */
 HRESULT wapus_user_data_account_store_new(WAPUS_UserDataAccountStore **out);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore */
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore.FindAccountsAsync() */
 HRESULT wapus_user_data_account_store_find_accounts_async(WAPUS_UserDataAccountStore *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPUS_UserDataAccount** out);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore.GetAccountAsync(id) */
 HRESULT wapus_user_data_account_store_get_account_async(WAPUS_UserDataAccountStore *self, cwinrt_hstring id, WF_IAsyncOperation_WAPUS_UserDataAccount** out);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore.CreateAccountAsync(userDisplayName) */
 HRESULT wapus_user_data_account_store_create_account_async(WAPUS_UserDataAccountStore *self, cwinrt_hstring userDisplayName, WF_IAsyncOperation_WAPUS_UserDataAccount** out);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore.CreateAccountAsync(userDisplayName, packageRelativeAppId) */
 HRESULT wapus_user_data_account_store_create_account_async_str_str_p(WAPUS_UserDataAccountStore *self, cwinrt_hstring userDisplayName, cwinrt_hstring packageRelativeAppId, WF_IAsyncOperation_WAPUS_UserDataAccount** out);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore.CreateAccountAsync(userDisplayName, packageRelativeAppId, enterpriseId) */
 HRESULT wapus_user_data_account_store_create_account_async_str_str_str_p(WAPUS_UserDataAccountStore *self, cwinrt_hstring userDisplayName, cwinrt_hstring packageRelativeAppId, cwinrt_hstring enterpriseId, WF_IAsyncOperation_WAPUS_UserDataAccount** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapus_user_data_account_store_on_store_changed(WAPUS_UserDataAccountStore *self, cwinrt_event_fn fn, void *ctx);
 void wapus_user_data_account_store_off_store_changed(WAPUS_UserDataAccountStore *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.UserDataAccounts.UserDataAccountManagerForUser */
 HRESULT wapus_user_data_account_manager_for_user_new(WAPUS_UserDataAccountManagerForUser **out);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccountManagerForUser */
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccountManagerForUser.RequestStoreAsync(storeAccessType) */
 HRESULT wapus_user_data_account_manager_for_user_request_store_async(WAPUS_UserDataAccountManagerForUser *self, WAPUS_UserDataAccountStoreAccessType storeAccessType, WF_IAsyncOperation_WAPUS_UserDataAccountStore** out);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccountManagerForUser.get_User() */
 HRESULT wapus_user_data_account_manager_for_user_get__user(WAPUS_UserDataAccountManagerForUser *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.UserDataAccounts.UserDataAccountManager */
 HRESULT wapus_user_data_account_manager_new(WAPUS_UserDataAccountManager **out);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccountManager */
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccountManager.GetForUser(user) */
 HRESULT wapus_user_data_account_manager_get_for_user(WSY_User* user, WAPUS_UserDataAccountManagerForUser** out);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccountManager.RequestStoreAsync(storeAccessType) */
 HRESULT wapus_user_data_account_manager_request_store_async(WAPUS_UserDataAccountStoreAccessType storeAccessType, WF_IAsyncOperation_WAPUS_UserDataAccountStore** out);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccountManager.ShowAddAccountAsync(contentKinds) */
 HRESULT wapus_user_data_account_manager_show_add_account_async(WAPUS_UserDataAccountContentKinds contentKinds, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccountManager.ShowAccountSettingsAsync(id) */
 HRESULT wapus_user_data_account_manager_show_account_settings_async(cwinrt_hstring id, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccountManager.ShowAccountErrorResolverAsync(id) */
 HRESULT wapus_user_data_account_manager_show_account_error_resolver_async(cwinrt_hstring id, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.UserDataAccounts.UserDataAccount */
 HRESULT wapus_user_data_account_new(WAPUS_UserDataAccount **out);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccount */
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccount.get_Id() */
 HRESULT wapus_user_data_account_get__id(WAPUS_UserDataAccount *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccount.get_UserDisplayName() */
 HRESULT wapus_user_data_account_get__user_display_name(WAPUS_UserDataAccount *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccount.put_UserDisplayName() */
 HRESULT wapus_user_data_account_put__user_display_name(WAPUS_UserDataAccount *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccount.get_OtherAppReadAccess() */
 HRESULT wapus_user_data_account_get__other_app_read_access(WAPUS_UserDataAccount *self, WAPUS_UserDataAccountOtherAppReadAccess *value);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccount.put_OtherAppReadAccess() */
 HRESULT wapus_user_data_account_put__other_app_read_access(WAPUS_UserDataAccount *self, WAPUS_UserDataAccountOtherAppReadAccess value);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccount.get_Icon() */
 HRESULT wapus_user_data_account_get__icon(WAPUS_UserDataAccount *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccount.get_DeviceAccountTypeId() */
 HRESULT wapus_user_data_account_get__device_account_type_id(WAPUS_UserDataAccount *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccount.get_PackageFamilyName() */
 HRESULT wapus_user_data_account_get__package_family_name(WAPUS_UserDataAccount *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccount.SaveAsync() */
 HRESULT wapus_user_data_account_save_async(WAPUS_UserDataAccount *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccount.DeleteAsync() */
 HRESULT wapus_user_data_account_delete_async(WAPUS_UserDataAccount *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccount.FindAppointmentCalendarsAsync() */
 HRESULT wapus_user_data_account_find_appointment_calendars_async(WAPUS_UserDataAccount *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPAP_AppointmentCalendar** out);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccount.FindEmailMailboxesAsync() */
 HRESULT wapus_user_data_account_find_email_mailboxes_async(WAPUS_UserDataAccount *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPEM_EmailMailbox** out);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccount.FindContactListsAsync() */
 HRESULT wapus_user_data_account_find_contact_lists_async(WAPUS_UserDataAccount *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPCO_ContactList** out);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccount.FindContactAnnotationListsAsync() */
 HRESULT wapus_user_data_account_find_contact_annotation_lists_async(WAPUS_UserDataAccount *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPCO_ContactAnnotationList** out);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccount.get_EnterpriseId() */
 HRESULT wapus_user_data_account_get__enterprise_id(WAPUS_UserDataAccount *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccount.get_IsProtectedUnderLock() */
 HRESULT wapus_user_data_account_get__is_protected_under_lock(WAPUS_UserDataAccount *self, BOOL *value);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccount.get_ExplictReadAccessPackageFamilyNames() */
 HRESULT wapus_user_data_account_get__explict_read_access_package_family_names(WAPUS_UserDataAccount *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccount.get_DisplayName() */
 HRESULT wapus_user_data_account_get__display_name(WAPUS_UserDataAccount *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccount.put_DisplayName() */
 HRESULT wapus_user_data_account_put__display_name(WAPUS_UserDataAccount *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccount.get_CanShowCreateContactGroup() */
 HRESULT wapus_user_data_account_get__can_show_create_contact_group(WAPUS_UserDataAccount *self, BOOL *value);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccount.put_CanShowCreateContactGroup() */
 HRESULT wapus_user_data_account_put__can_show_create_contact_group(WAPUS_UserDataAccount *self, BOOL value);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccount.get_ProviderProperties() */
 HRESULT wapus_user_data_account_get__provider_properties(WAPUS_UserDataAccount *self, WFOCO_IPropertySet** value);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccount.FindUserDataTaskListsAsync() */
 HRESULT wapus_user_data_account_find_user_data_task_lists_async(WAPUS_UserDataAccount *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPUS_UserDataTaskList** out);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccount.FindContactGroupsAsync() */
 HRESULT wapus_user_data_account_find_contact_groups_async(WAPUS_UserDataAccount *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPCO_ContactGroup** out);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccount.TryShowCreateContactGroupAsync() */
 HRESULT wapus_user_data_account_try_show_create_contact_group_async(WAPUS_UserDataAccount *self, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccount.put_IsProtectedUnderLock() */
 HRESULT wapus_user_data_account_put__is_protected_under_lock(WAPUS_UserDataAccount *self, BOOL value);
 
-/* Windows.ApplicationModel.UserDataAccounts.UserDataAccount.put_Icon() */
 HRESULT wapus_user_data_account_put__icon(WAPUS_UserDataAccount *self, WSTST_IRandomAccessStreamReference* value);
 
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccountStoreChangedEventArgs */
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccountStore2 */
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccountStore2.CreateAccountAsync(userDisplayName, packageRelativeAppId) */
 HRESULT wapus_user_data_account_store_2_create_account_async(WAPUS_IUserDataAccountStore_2 *self, cwinrt_hstring userDisplayName, cwinrt_hstring packageRelativeAppId, WF_IAsyncOperation_WAPUS_UserDataAccount** out);
 
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccountStore3 */
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccountStore3.CreateAccountAsync(userDisplayName, packageRelativeAppId, enterpriseId) */
 HRESULT wapus_user_data_account_store_3_create_account_async(WAPUS_IUserDataAccountStore_3 *self, cwinrt_hstring userDisplayName, cwinrt_hstring packageRelativeAppId, cwinrt_hstring enterpriseId, WF_IAsyncOperation_WAPUS_UserDataAccount** out);
 
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccountManagerForUser */
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccount2 */
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccount2.get_EnterpriseId() */
 HRESULT wapus_user_data_account_2_get__enterprise_id(WAPUS_IUserDataAccount_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccount2.get_IsProtectedUnderLock() */
 HRESULT wapus_user_data_account_2_get__is_protected_under_lock(WAPUS_IUserDataAccount_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccount3 */
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccount3.get_ExplictReadAccessPackageFamilyNames() */
 HRESULT wapus_user_data_account_3_get__explict_read_access_package_family_names(WAPUS_IUserDataAccount_3 *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccount3.get_DisplayName() */
 HRESULT wapus_user_data_account_3_get__display_name(WAPUS_IUserDataAccount_3 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccount3.put_DisplayName() */
 HRESULT wapus_user_data_account_3_put__display_name(WAPUS_IUserDataAccount_3 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccount4 */
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccount4.get_CanShowCreateContactGroup() */
 HRESULT wapus_user_data_account_4_get__can_show_create_contact_group(WAPUS_IUserDataAccount_4 *self, BOOL *value);
 
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccount4.put_CanShowCreateContactGroup() */
 HRESULT wapus_user_data_account_4_put__can_show_create_contact_group(WAPUS_IUserDataAccount_4 *self, BOOL value);
 
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccount4.get_ProviderProperties() */
 HRESULT wapus_user_data_account_4_get__provider_properties(WAPUS_IUserDataAccount_4 *self, WFOCO_IPropertySet** value);
 
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccount4.FindUserDataTaskListsAsync() */
 HRESULT wapus_user_data_account_4_find_user_data_task_lists_async(WAPUS_IUserDataAccount_4 *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPUS_UserDataTaskList** out);
 
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccount4.FindContactGroupsAsync() */
 HRESULT wapus_user_data_account_4_find_contact_groups_async(WAPUS_IUserDataAccount_4 *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPCO_ContactGroup** out);
 
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccount4.TryShowCreateContactGroupAsync() */
 HRESULT wapus_user_data_account_4_try_show_create_contact_group_async(WAPUS_IUserDataAccount_4 *self, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccount4.put_IsProtectedUnderLock() */
 HRESULT wapus_user_data_account_4_put__is_protected_under_lock(WAPUS_IUserDataAccount_4 *self, BOOL value);
 
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccount4.put_Icon() */
 HRESULT wapus_user_data_account_4_put__icon(WAPUS_IUserDataAccount_4 *self, WSTST_IRandomAccessStreamReference* value);
 
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccountStore */
-/* Windows.ApplicationModel.UserDataAccounts.IUserDataAccount */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_USERDATAACCOUNTS_H */

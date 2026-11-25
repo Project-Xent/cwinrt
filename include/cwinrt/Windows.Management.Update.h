@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WMAUP_IPreviewBuildsManagerStatics WMAUP_IPreviewBuildsManagerStatics;
 typedef struct WMAUP_IWindowsSoftwareUpdateActionInfoFactory WMAUP_IWindowsSoftwareUpdateActionInfoFactory;
 typedef struct WMAUP_IWindowsSoftwareUpdateAppPackageInfoFactory WMAUP_IWindowsSoftwareUpdateAppPackageInfoFactory;
@@ -103,7 +102,6 @@ typedef struct WMAUP_IWindowsUpdateProgressChangedEventArgs WMAUP_IWindowsUpdate
 typedef struct WMAUP_IWindowsUpdateRestartRequestOptions WMAUP_IWindowsUpdateRestartRequestOptions;
 typedef struct WMAUP_IWindowsUpdateScanCompletedEventArgs WMAUP_IWindowsUpdateScanCompletedEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_Uri
 #define CWINRT_FWD_WF_Uri
 typedef struct WF_Uri WF_Uri;
@@ -329,7 +327,6 @@ typedef enum WMAUP_WindowsUpdateAttentionRequiredReason {
 } WMAUP_WindowsUpdateAttentionRequiredReason;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -554,797 +551,499 @@ static const IID CWINRT_IID_WMAUP_IWindowsUpdateRestartRequestOptions CWINRT_MAY
 static const IID CWINRT_IID_WMAUP_IWindowsUpdateScanCompletedEventArgs CWINRT_MAYBE_UNUSED = { 0x95B6953E, 0xBA5C, 0x5FE8, { 0xB1, 0x15, 0x12, 0xDE, 0x18, 0x4A, 0x6B, 0xB0 } };
 #endif
 
-/* Methods */
-
-/* Windows.Management.Update.IPreviewBuildsManagerStatics */
-/* Windows.Management.Update.IPreviewBuildsManagerStatics.GetDefault() */
 HRESULT wmaup_preview_builds_manager_statics_get_default(WMAUP_IPreviewBuildsManagerStatics *self, WMAUP_PreviewBuildsManager** out);
 
-/* Windows.Management.Update.IPreviewBuildsManagerStatics.IsSupported() */
 HRESULT wmaup_preview_builds_manager_statics_is_supported(WMAUP_IPreviewBuildsManagerStatics *self, BOOL *out);
 
-/* Windows.Management.Update.IWindowsSoftwareUpdateActionInfoFactory */
-/* Windows.Management.Update.IWindowsSoftwareUpdateActionInfoFactory.CreateInstance(fileName, fileArguments, actionType) */
 HRESULT wmaup_windows_software_update_action_info_factory_create_instance(WMAUP_IWindowsSoftwareUpdateActionInfoFactory *self, cwinrt_hstring fileName, cwinrt_hstring fileArguments, WMAUP_WindowsSoftwareUpdateActionType actionType, WMAUP_WindowsSoftwareUpdateActionInfo** out);
 
-/* Windows.Management.Update.IWindowsSoftwareUpdateAppPackageInfoFactory */
-/* Windows.Management.Update.IWindowsSoftwareUpdateAppPackageInfoFactory.CreateInstance(packageFamilyName, packageArchitecture, installUri) */
 HRESULT wmaup_windows_software_update_app_package_info_factory_create_instance(WMAUP_IWindowsSoftwareUpdateAppPackageInfoFactory *self, cwinrt_hstring packageFamilyName, WMAUP_WindowsSoftwareUpdateArchitecture packageArchitecture, WF_Uri* installUri, WMAUP_WindowsSoftwareUpdateAppPackageInfo** out);
 
-/* Windows.Management.Update.IWindowsSoftwareUpdateApprovalInfoFactory */
-/* Windows.Management.Update.IWindowsSoftwareUpdateApprovalInfoFactory.CreateInstance(userInitiated, appClosure, meteredNetwork, seeker) */
 HRESULT wmaup_windows_software_update_approval_info_factory_create_instance(WMAUP_IWindowsSoftwareUpdateApprovalInfoFactory *self, BOOL userInitiated, BOOL appClosure, BOOL meteredNetwork, BOOL seeker, WMAUP_WindowsSoftwareUpdateApprovalInfo** out);
 
-/* Windows.Management.Update.IWindowsSoftwareUpdateExecutionInfoFactory */
-/* Windows.Management.Update.IWindowsSoftwareUpdateExecutionInfoFactory.CreateInstance(downloadInfo, installInfo, actions) */
 HRESULT wmaup_windows_software_update_execution_info_factory_create_instance(WMAUP_IWindowsSoftwareUpdateExecutionInfoFactory *self, WMAUP_WindowsSoftwareUpdateActionInfo* downloadInfo, WMAUP_WindowsSoftwareUpdateActionInfo* installInfo, WMAUP_WindowsSoftwareUpdateOptionalActionInfo* actions, WMAUP_WindowsSoftwareUpdateExecutionInfo** out);
 
-/* Windows.Management.Update.IWindowsSoftwareUpdateExecutionInfoFactory.CreateInstance2(deployInfo, actions) */
 HRESULT wmaup_windows_software_update_execution_info_factory_create_instance2(WMAUP_IWindowsSoftwareUpdateExecutionInfoFactory *self, WMAUP_WindowsSoftwareUpdateActionInfo* deployInfo, WMAUP_WindowsSoftwareUpdateOptionalActionInfo* actions, WMAUP_WindowsSoftwareUpdateExecutionInfo** out);
 
-/* Windows.Management.Update.IWindowsSoftwareUpdateFactory */
-/* Windows.Management.Update.IWindowsSoftwareUpdateFactory.CreateInstance(providerId, installationType, updateId, title, description, moreInfoUrl, downloadSizeInBytes, installSizeInBytes, sourceVersion, targetVersion, appPackageInfo, executionInfo, optionalInfo) */
 HRESULT wmaup_windows_software_update_factory_create_instance(WMAUP_IWindowsSoftwareUpdateFactory *self, cwinrt_hstring providerId, WMAUP_WindowsSoftwareUpdateInstallationType installationType, cwinrt_hstring updateId, cwinrt_hstring title, cwinrt_hstring description, WF_Uri* moreInfoUrl, uint64_t downloadSizeInBytes, uint64_t installSizeInBytes, WMAUP_WindowsSoftwareUpdateVersion* sourceVersion, WMAUP_WindowsSoftwareUpdateVersion* targetVersion, WMAUP_WindowsSoftwareUpdateAppPackageInfo* appPackageInfo, WMAUP_WindowsSoftwareUpdateExecutionInfo* executionInfo, WMAUP_WindowsSoftwareUpdateOptionalInfo* optionalInfo, WMAUP_WindowsSoftwareUpdate** out);
 
-/* Windows.Management.Update.IWindowsSoftwareUpdateFactory.CreateInstance2(providerId, installationType, updateId, title, description, moreInfoUrl, downloadSizeInBytes, installSizeInBytes, productCode, packageFamilyName, sourceVersion, targetVersion, appPackageInfo, executionInfo, optionalInfo) */
 HRESULT wmaup_windows_software_update_factory_create_instance2(WMAUP_IWindowsSoftwareUpdateFactory *self, cwinrt_hstring providerId, WMAUP_WindowsSoftwareUpdateInstallationType installationType, cwinrt_hstring updateId, cwinrt_hstring title, cwinrt_hstring description, WF_Uri* moreInfoUrl, uint64_t downloadSizeInBytes, uint64_t installSizeInBytes, GUID* productCode, cwinrt_hstring packageFamilyName, WMAUP_WindowsSoftwareUpdateVersion* sourceVersion, WMAUP_WindowsSoftwareUpdateVersion* targetVersion, WMAUP_WindowsSoftwareUpdateAppPackageInfo* appPackageInfo, WMAUP_WindowsSoftwareUpdateExecutionInfo* executionInfo, WMAUP_WindowsSoftwareUpdateOptionalInfo* optionalInfo, WMAUP_WindowsSoftwareUpdate** out);
 
-/* Windows.Management.Update.IWindowsSoftwareUpdateLocalizationInfoFactory */
-/* Windows.Management.Update.IWindowsSoftwareUpdateLocalizationInfoFactory.CreateInstance(languageId, title, description, moreInfoUrl) */
 HRESULT wmaup_windows_software_update_localization_info_factory_create_instance(WMAUP_IWindowsSoftwareUpdateLocalizationInfoFactory *self, uint32_t languageId, cwinrt_hstring title, cwinrt_hstring description, WF_Uri* moreInfoUrl, WMAUP_WindowsSoftwareUpdateLocalizationInfo** out);
 
-/* Windows.Management.Update.IWindowsSoftwareUpdateOptionalActionInfoFactory */
-/* Windows.Management.Update.IWindowsSoftwareUpdateOptionalActionInfoFactory.CreateInstance(closeAndDeployInfo, closeAndInstallInfo, closeAndRestartInfo) */
 HRESULT wmaup_windows_software_update_optional_action_info_factory_create_instance(WMAUP_IWindowsSoftwareUpdateOptionalActionInfoFactory *self, WMAUP_WindowsSoftwareUpdateActionInfo* closeAndDeployInfo, WMAUP_WindowsSoftwareUpdateActionInfo* closeAndInstallInfo, WMAUP_WindowsSoftwareUpdateActionInfo* closeAndRestartInfo, WMAUP_WindowsSoftwareUpdateOptionalActionInfo** out);
 
-/* Windows.Management.Update.IWindowsSoftwareUpdateOptionalInfoFactory */
-/* Windows.Management.Update.IWindowsSoftwareUpdateOptionalInfoFactory.CreateInstance(complianceDeadlineInDays, complianceGracePeriodInDays) */
 HRESULT wmaup_windows_software_update_optional_info_factory_create_instance(WMAUP_IWindowsSoftwareUpdateOptionalInfoFactory *self, int32_t* complianceDeadlineInDays, int32_t* complianceGracePeriodInDays, WMAUP_WindowsSoftwareUpdateOptionalInfo** out);
 
-/* Windows.Management.Update.IWindowsSoftwareUpdateOptionalInfoFactory.CreateInstance2(localizationInfo, complianceDeadlineInDays, complianceGracePeriodInDays) */
 HRESULT wmaup_windows_software_update_optional_info_factory_create_instance2(WMAUP_IWindowsSoftwareUpdateOptionalInfoFactory *self, WFOCO_IIterable_WMAUP_WindowsSoftwareUpdateLocalizationInfo* localizationInfo, int32_t* complianceDeadlineInDays, int32_t* complianceGracePeriodInDays, WMAUP_WindowsSoftwareUpdateOptionalInfo** out);
 
-/* Windows.Management.Update.IWindowsSoftwareUpdateProviderActionResultFactory */
-/* Windows.Management.Update.IWindowsSoftwareUpdateProviderActionResultFactory.CreateInstance(actionResult, restartReason, resultCode, extendedError) */
 HRESULT wmaup_windows_software_update_provider_action_result_factory_create_instance(WMAUP_IWindowsSoftwareUpdateProviderActionResultFactory *self, WMAUP_WindowsSoftwareUpdateActionResult actionResult, WMAUP_WindowsSoftwareUpdateRestartReason restartReason, uint32_t resultCode, uint64_t extendedError, WMAUP_WindowsSoftwareUpdateProviderActionResult** out);
 
-/* Windows.Management.Update.IWindowsSoftwareUpdateProviderFactory */
-/* Windows.Management.Update.IWindowsSoftwareUpdateProviderFactory.CreateInstance(folderPath) */
 HRESULT wmaup_windows_software_update_provider_factory_create_instance(WMAUP_IWindowsSoftwareUpdateProviderFactory *self, cwinrt_hstring folderPath, WMAUP_WindowsSoftwareUpdateProvider** out);
 
-/* Windows.Management.Update.IWindowsSoftwareUpdateProviderStatusFactory */
-/* Windows.Management.Update.IWindowsSoftwareUpdateProviderStatusFactory.CreateInstance(providerId) */
 HRESULT wmaup_windows_software_update_provider_status_factory_create_instance(WMAUP_IWindowsSoftwareUpdateProviderStatusFactory *self, cwinrt_hstring providerId, WMAUP_WindowsSoftwareUpdateProviderStatus** out);
 
-/* Windows.Management.Update.IWindowsSoftwareUpdateResultFactory */
-/* Windows.Management.Update.IWindowsSoftwareUpdateResultFactory.CreateInstance(succeeded, resultCode) */
 HRESULT wmaup_windows_software_update_result_factory_create_instance(WMAUP_IWindowsSoftwareUpdateResultFactory *self, BOOL succeeded, uint32_t resultCode, WMAUP_WindowsSoftwareUpdateResult** out);
 
-/* Windows.Management.Update.IWindowsSoftwareUpdateResultFactory.CreateInstance2(succeeded, resultCode, extendedError) */
 HRESULT wmaup_windows_software_update_result_factory_create_instance2(WMAUP_IWindowsSoftwareUpdateResultFactory *self, BOOL succeeded, uint32_t resultCode, uint64_t extendedError, WMAUP_WindowsSoftwareUpdateResult** out);
 
-/* Windows.Management.Update.IWindowsSoftwareUpdateResultFactory.CreateInstance3(succeeded, cancelRequested, resultCode, extendedError) */
 HRESULT wmaup_windows_software_update_result_factory_create_instance3(WMAUP_IWindowsSoftwareUpdateResultFactory *self, BOOL succeeded, BOOL cancelRequested, uint32_t resultCode, uint64_t extendedError, WMAUP_WindowsSoftwareUpdateResult** out);
 
-/* Windows.Management.Update.IWindowsSoftwareUpdateScanResultFactory */
-/* Windows.Management.Update.IWindowsSoftwareUpdateScanResultFactory.CreateInstance(succeeded, resultCode, updates) */
 HRESULT wmaup_windows_software_update_scan_result_factory_create_instance(WMAUP_IWindowsSoftwareUpdateScanResultFactory *self, BOOL succeeded, uint32_t resultCode, WFOCO_IIterable_WMAUP_WindowsSoftwareUpdate* updates, WMAUP_WindowsSoftwareUpdateScanResult** out);
 
-/* Windows.Management.Update.IWindowsSoftwareUpdateScanResultFactory.CreateInstance2(succeeded, resultCode, extendedError, updates) */
 HRESULT wmaup_windows_software_update_scan_result_factory_create_instance2(WMAUP_IWindowsSoftwareUpdateScanResultFactory *self, BOOL succeeded, uint32_t resultCode, uint64_t extendedError, WFOCO_IIterable_WMAUP_WindowsSoftwareUpdate* updates, WMAUP_WindowsSoftwareUpdateScanResult** out);
 
-/* Windows.Management.Update.IWindowsSoftwareUpdateVersionFactory */
-/* Windows.Management.Update.IWindowsSoftwareUpdateVersionFactory.CreateInstance(major, minor, revisionMajor, revisionMinor) */
 HRESULT wmaup_windows_software_update_version_factory_create_instance(WMAUP_IWindowsSoftwareUpdateVersionFactory *self, uint32_t major, uint32_t minor, uint32_t revisionMajor, uint32_t revisionMinor, WMAUP_WindowsSoftwareUpdateVersion** out);
 
-/* Windows.Management.Update.IWindowsUpdateAdministratorStatics */
-/* Windows.Management.Update.IWindowsUpdateAdministratorStatics.GetRegisteredAdministrator(organizationName) */
 HRESULT wmaup_windows_update_administrator_statics_get_registered_administrator(WMAUP_IWindowsUpdateAdministratorStatics *self, cwinrt_hstring organizationName, WMAUP_WindowsUpdateGetAdministratorResult** out);
 
-/* Windows.Management.Update.IWindowsUpdateAdministratorStatics.RegisterForAdministration(organizationName, options) */
 HRESULT wmaup_windows_update_administrator_statics_register_for_administration(WMAUP_IWindowsUpdateAdministratorStatics *self, cwinrt_hstring organizationName, WMAUP_WindowsUpdateAdministratorOptions options, WMAUP_WindowsUpdateAdministratorStatus *out);
 
-/* Windows.Management.Update.IWindowsUpdateAdministratorStatics.UnregisterForAdministration(organizationName) */
 HRESULT wmaup_windows_update_administrator_statics_unregister_for_administration(WMAUP_IWindowsUpdateAdministratorStatics *self, cwinrt_hstring organizationName, WMAUP_WindowsUpdateAdministratorStatus *out);
 
-/* Windows.Management.Update.IWindowsUpdateAdministratorStatics.GetRegisteredAdministratorName() */
 HRESULT wmaup_windows_update_administrator_statics_get_registered_administrator_name(WMAUP_IWindowsUpdateAdministratorStatics *self, cwinrt_hstring *out);
 
-/* Windows.Management.Update.IWindowsUpdateAdministratorStatics.RequestRestart(restartOptions) */
 HRESULT wmaup_windows_update_administrator_statics_request_restart(WMAUP_IWindowsUpdateAdministratorStatics *self, WMAUP_WindowsUpdateRestartRequestOptions* restartOptions, cwinrt_hstring *out);
 
-/* Windows.Management.Update.IWindowsUpdateAdministratorStatics.CancelRestartRequest(requestRestartToken) */
 HRESULT wmaup_windows_update_administrator_statics_cancel_restart_request(WMAUP_IWindowsUpdateAdministratorStatics *self, cwinrt_hstring requestRestartToken);
 
-/* Windows.Management.Update.IWindowsUpdateManagerFactory */
-/* Windows.Management.Update.IWindowsUpdateManagerFactory.CreateInstance(clientId) */
 HRESULT wmaup_windows_update_manager_factory_create_instance(WMAUP_IWindowsUpdateManagerFactory *self, cwinrt_hstring clientId, WMAUP_WindowsUpdateManager** out);
 
-/* Windows.Management.Update.IWindowsUpdateManagerFactory2 */
-/* Windows.Management.Update.IWindowsUpdateManagerFactory2.CreateInstance(clientId, providerIdFilter) */
 HRESULT wmaup_windows_update_manager_factory_2_create_instance(WMAUP_IWindowsUpdateManagerFactory_2 *self, cwinrt_hstring clientId, cwinrt_hstring *providerIdFilter, uint32_t providerIdFilter_len, WMAUP_WindowsUpdateManager** out);
 
-/* Windows.Management.Update.IWindowsUpdateManagerScanOptionsFactory */
-/* Windows.Management.Update.IWindowsUpdateManagerScanOptionsFactory.CreateInstance(isUserInitiated) */
 HRESULT wmaup_windows_update_manager_scan_options_factory_create_instance(WMAUP_IWindowsUpdateManagerScanOptionsFactory *self, BOOL isUserInitiated, WMAUP_WindowsUpdateManagerScanOptions** out);
 
-/* Windows.Management.Update.IWindowsUpdateRestartRequestOptionsFactory */
-/* Windows.Management.Update.IWindowsUpdateRestartRequestOptionsFactory.CreateInstance(title, description, moreInfoUrl, complianceDeadlineInDays, complianceGracePeriodInDays) */
 HRESULT wmaup_windows_update_restart_request_options_factory_create_instance(WMAUP_IWindowsUpdateRestartRequestOptionsFactory *self, cwinrt_hstring title, cwinrt_hstring description, WF_Uri* moreInfoUrl, int32_t complianceDeadlineInDays, int32_t complianceGracePeriodInDays, WMAUP_WindowsUpdateRestartRequestOptions** out);
 
-/* activate Windows.Management.Update.PreviewBuildsManager */
 HRESULT wmaup_preview_builds_manager_new(WMAUP_PreviewBuildsManager **out);
 
-/* Windows.Management.Update.PreviewBuildsManager */
-/* Windows.Management.Update.PreviewBuildsManager.get_ArePreviewBuildsAllowed() */
 HRESULT wmaup_preview_builds_manager_get__are_preview_builds_allowed(WMAUP_PreviewBuildsManager *self, BOOL *value);
 
-/* Windows.Management.Update.PreviewBuildsManager.put_ArePreviewBuildsAllowed() */
 HRESULT wmaup_preview_builds_manager_put__are_preview_builds_allowed(WMAUP_PreviewBuildsManager *self, BOOL value);
 
-/* Windows.Management.Update.PreviewBuildsManager.GetCurrentState() */
 HRESULT wmaup_preview_builds_manager_get_current_state(WMAUP_PreviewBuildsManager *self, WMAUP_PreviewBuildsState** out);
 
-/* Windows.Management.Update.PreviewBuildsManager.SyncAsync() */
 HRESULT wmaup_preview_builds_manager_sync_async(WMAUP_PreviewBuildsManager *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Management.Update.PreviewBuildsManager.GetDefault() */
 HRESULT wmaup_preview_builds_manager_get_default(WMAUP_PreviewBuildsManager** out);
 
-/* Windows.Management.Update.PreviewBuildsManager.IsSupported() */
 HRESULT wmaup_preview_builds_manager_is_supported(BOOL *out);
 
-/* activate Windows.Management.Update.PreviewBuildsState */
 HRESULT wmaup_preview_builds_state_new(WMAUP_PreviewBuildsState **out);
 
-/* Windows.Management.Update.PreviewBuildsState */
-/* Windows.Management.Update.PreviewBuildsState.get_Properties() */
 HRESULT wmaup_preview_builds_state_get__properties(WMAUP_PreviewBuildsState *self, WFOCO_ValueSet** value);
 
-/* activate Windows.Management.Update.WindowsSoftwareUpdate */
 HRESULT wmaup_windows_software_update_new(WMAUP_WindowsSoftwareUpdate **out);
 
-/* Windows.Management.Update.WindowsSoftwareUpdate */
-/* Windows.Management.Update.WindowsSoftwareUpdate.get_InstallationType() */
 HRESULT wmaup_windows_software_update_get__installation_type(WMAUP_WindowsSoftwareUpdate *self, WMAUP_WindowsSoftwareUpdateInstallationType *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdate.get_ProviderId() */
 HRESULT wmaup_windows_software_update_get__provider_id(WMAUP_WindowsSoftwareUpdate *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdate.get_UpdateId() */
 HRESULT wmaup_windows_software_update_get__update_id(WMAUP_WindowsSoftwareUpdate *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdate.get_Title() */
 HRESULT wmaup_windows_software_update_get__title(WMAUP_WindowsSoftwareUpdate *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdate.get_Description() */
 HRESULT wmaup_windows_software_update_get__description(WMAUP_WindowsSoftwareUpdate *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdate.get_MoreInfoUrl() */
 HRESULT wmaup_windows_software_update_get__more_info_url(WMAUP_WindowsSoftwareUpdate *self, WF_Uri** value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdate.get_DownloadSizeInBytes() */
 HRESULT wmaup_windows_software_update_get__download_size_in_bytes(WMAUP_WindowsSoftwareUpdate *self, uint64_t *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdate.get_InstallSizeInBytes() */
 HRESULT wmaup_windows_software_update_get__install_size_in_bytes(WMAUP_WindowsSoftwareUpdate *self, uint64_t *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdate.get_SourceVersion() */
 HRESULT wmaup_windows_software_update_get__source_version(WMAUP_WindowsSoftwareUpdate *self, WMAUP_WindowsSoftwareUpdateVersion** value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdate.get_TargetVersion() */
 HRESULT wmaup_windows_software_update_get__target_version(WMAUP_WindowsSoftwareUpdate *self, WMAUP_WindowsSoftwareUpdateVersion** value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdate.get_ProductCode() */
 HRESULT wmaup_windows_software_update_get__product_code(WMAUP_WindowsSoftwareUpdate *self, GUID** value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdate.get_PackageFamilyName() */
 HRESULT wmaup_windows_software_update_get__package_family_name(WMAUP_WindowsSoftwareUpdate *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdate.Approve(approvalInfo) */
 HRESULT wmaup_windows_software_update_approve(WMAUP_WindowsSoftwareUpdate *self, WMAUP_WindowsSoftwareUpdateApprovalInfo* approvalInfo, WMAUP_WindowsSoftwareUpdateResult** out);
 
-/* Windows.Management.Update.WindowsSoftwareUpdate.ApproveCurrentAction(approve) */
 HRESULT wmaup_windows_software_update_approve_current_action(WMAUP_WindowsSoftwareUpdate *self, BOOL approve, WMAUP_WindowsSoftwareUpdateResult** out);
 
-/* Windows.Management.Update.WindowsSoftwareUpdate.get_CurrentAction() */
 HRESULT wmaup_windows_software_update_get__current_action(WMAUP_WindowsSoftwareUpdate *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdate.get_ActionResultInfo() */
 HRESULT wmaup_windows_software_update_get__action_result_info(WMAUP_WindowsSoftwareUpdate *self, WMAUP_WindowsSoftwareUpdateActionResultInfo** value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdate.get_ApprovalInfo() */
 HRESULT wmaup_windows_software_update_get__approval_info(WMAUP_WindowsSoftwareUpdate *self, WMAUP_WindowsSoftwareUpdateApprovalInfo** value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdate.get_ApprovedActions() */
 HRESULT wmaup_windows_software_update_get__approved_actions(WMAUP_WindowsSoftwareUpdate *self, WFOCO_IVectorView_WMAUP_WindowsSoftwareUpdateActionType** value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdate.get_AttentionRequiredInfo() */
 HRESULT wmaup_windows_software_update_get__attention_required_info(WMAUP_WindowsSoftwareUpdate *self, WMAUP_WindowsUpdateAttentionRequiredInfo** value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdate.get_ActionProgress() */
 HRESULT wmaup_windows_software_update_get__action_progress(WMAUP_WindowsSoftwareUpdate *self, WMAUP_WindowsSoftwareUpdateActionProgress** value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdate.get_RestartReason() */
 HRESULT wmaup_windows_software_update_get__restart_reason(WMAUP_WindowsSoftwareUpdate *self, WMAUP_WindowsSoftwareUpdateRestartReason** value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdate.get_AppPackageInfo() */
 HRESULT wmaup_windows_software_update_get__app_package_info(WMAUP_WindowsSoftwareUpdate *self, WMAUP_WindowsSoftwareUpdateAppPackageInfo** value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdate.get_ExecutionInfo() */
 HRESULT wmaup_windows_software_update_get__execution_info(WMAUP_WindowsSoftwareUpdate *self, WMAUP_WindowsSoftwareUpdateExecutionInfo** value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdate.get_OptionalInfo() */
 HRESULT wmaup_windows_software_update_get__optional_info(WMAUP_WindowsSoftwareUpdate *self, WMAUP_WindowsSoftwareUpdateOptionalInfo** value);
 
-/* activate Windows.Management.Update.WindowsSoftwareUpdateActionInfo */
 HRESULT wmaup_windows_software_update_action_info_new(WMAUP_WindowsSoftwareUpdateActionInfo **out);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateActionInfo */
-/* Windows.Management.Update.WindowsSoftwareUpdateActionInfo.get_FileName() */
 HRESULT wmaup_windows_software_update_action_info_get__file_name(WMAUP_WindowsSoftwareUpdateActionInfo *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateActionInfo.get_FileArguments() */
 HRESULT wmaup_windows_software_update_action_info_get__file_arguments(WMAUP_WindowsSoftwareUpdateActionInfo *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateActionInfo.get_ActionType() */
 HRESULT wmaup_windows_software_update_action_info_get__action_type(WMAUP_WindowsSoftwareUpdateActionInfo *self, WMAUP_WindowsSoftwareUpdateActionType *value);
 
-/* activate Windows.Management.Update.WindowsSoftwareUpdateActionProgress */
 HRESULT wmaup_windows_software_update_action_progress_new(WMAUP_WindowsSoftwareUpdateActionProgress **out);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateActionProgress */
-/* Windows.Management.Update.WindowsSoftwareUpdateActionProgress.get_Action() */
 HRESULT wmaup_windows_software_update_action_progress_get__action(WMAUP_WindowsSoftwareUpdateActionProgress *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateActionProgress.get_CurrentProgress() */
 HRESULT wmaup_windows_software_update_action_progress_get__current_progress(WMAUP_WindowsSoftwareUpdateActionProgress *self, uint64_t *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateActionProgress.get_TotalProgress() */
 HRESULT wmaup_windows_software_update_action_progress_get__total_progress(WMAUP_WindowsSoftwareUpdateActionProgress *self, uint64_t *value);
 
-/* activate Windows.Management.Update.WindowsSoftwareUpdateActionResultInfo */
 HRESULT wmaup_windows_software_update_action_result_info_new(WMAUP_WindowsSoftwareUpdateActionResultInfo **out);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateActionResultInfo */
-/* Windows.Management.Update.WindowsSoftwareUpdateActionResultInfo.get_Timestamp() */
 HRESULT wmaup_windows_software_update_action_result_info_get__timestamp(WMAUP_WindowsSoftwareUpdateActionResultInfo *self, WF_DateTime *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateActionResultInfo.get_Succeeded() */
 HRESULT wmaup_windows_software_update_action_result_info_get__succeeded(WMAUP_WindowsSoftwareUpdateActionResultInfo *self, BOOL *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateActionResultInfo.get_ResultCode() */
 HRESULT wmaup_windows_software_update_action_result_info_get__result_code(WMAUP_WindowsSoftwareUpdateActionResultInfo *self, uint32_t *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateActionResultInfo.get_ExtendedError() */
 HRESULT wmaup_windows_software_update_action_result_info_get__extended_error(WMAUP_WindowsSoftwareUpdateActionResultInfo *self, uint64_t *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateActionResultInfo.get_Action() */
 HRESULT wmaup_windows_software_update_action_result_info_get__action(WMAUP_WindowsSoftwareUpdateActionResultInfo *self, cwinrt_hstring *value);
 
-/* activate Windows.Management.Update.WindowsSoftwareUpdateAppPackageInfo */
 HRESULT wmaup_windows_software_update_app_package_info_new(WMAUP_WindowsSoftwareUpdateAppPackageInfo **out);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateAppPackageInfo */
-/* Windows.Management.Update.WindowsSoftwareUpdateAppPackageInfo.get_PackageFamilyName() */
 HRESULT wmaup_windows_software_update_app_package_info_get__package_family_name(WMAUP_WindowsSoftwareUpdateAppPackageInfo *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateAppPackageInfo.get_PackageArchitecture() */
 HRESULT wmaup_windows_software_update_app_package_info_get__package_architecture(WMAUP_WindowsSoftwareUpdateAppPackageInfo *self, WMAUP_WindowsSoftwareUpdateArchitecture *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateAppPackageInfo.get_InstallUri() */
 HRESULT wmaup_windows_software_update_app_package_info_get__install_uri(WMAUP_WindowsSoftwareUpdateAppPackageInfo *self, WF_Uri** value);
 
-/* activate Windows.Management.Update.WindowsSoftwareUpdateApprovalInfo */
 HRESULT wmaup_windows_software_update_approval_info_new(WMAUP_WindowsSoftwareUpdateApprovalInfo **out);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateApprovalInfo */
-/* Windows.Management.Update.WindowsSoftwareUpdateApprovalInfo.get_UserInitiated() */
 HRESULT wmaup_windows_software_update_approval_info_get__user_initiated(WMAUP_WindowsSoftwareUpdateApprovalInfo *self, BOOL *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateApprovalInfo.get_AppClosure() */
 HRESULT wmaup_windows_software_update_approval_info_get__app_closure(WMAUP_WindowsSoftwareUpdateApprovalInfo *self, BOOL *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateApprovalInfo.get_MeteredNetwork() */
 HRESULT wmaup_windows_software_update_approval_info_get__metered_network(WMAUP_WindowsSoftwareUpdateApprovalInfo *self, BOOL *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateApprovalInfo.get_Seeker() */
 HRESULT wmaup_windows_software_update_approval_info_get__seeker(WMAUP_WindowsSoftwareUpdateApprovalInfo *self, BOOL *value);
 
-/* activate Windows.Management.Update.WindowsSoftwareUpdateExecutionInfo */
 HRESULT wmaup_windows_software_update_execution_info_new(WMAUP_WindowsSoftwareUpdateExecutionInfo **out);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateExecutionInfo */
-/* Windows.Management.Update.WindowsSoftwareUpdateExecutionInfo.get_DownloadInfo() */
 HRESULT wmaup_windows_software_update_execution_info_get__download_info(WMAUP_WindowsSoftwareUpdateExecutionInfo *self, WMAUP_WindowsSoftwareUpdateActionInfo** value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateExecutionInfo.get_InstallInfo() */
 HRESULT wmaup_windows_software_update_execution_info_get__install_info(WMAUP_WindowsSoftwareUpdateExecutionInfo *self, WMAUP_WindowsSoftwareUpdateActionInfo** value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateExecutionInfo.get_DeployInfo() */
 HRESULT wmaup_windows_software_update_execution_info_get__deploy_info(WMAUP_WindowsSoftwareUpdateExecutionInfo *self, WMAUP_WindowsSoftwareUpdateActionInfo** value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateExecutionInfo.get_OptionalActionInfo() */
 HRESULT wmaup_windows_software_update_execution_info_get__optional_action_info(WMAUP_WindowsSoftwareUpdateExecutionInfo *self, WMAUP_WindowsSoftwareUpdateOptionalActionInfo** value);
 
-/* activate Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo */
 HRESULT wmaup_windows_software_update_localization_info_new(WMAUP_WindowsSoftwareUpdateLocalizationInfo **out);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo */
-/* Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo.get_LanguageId() */
 HRESULT wmaup_windows_software_update_localization_info_get__language_id(WMAUP_WindowsSoftwareUpdateLocalizationInfo *self, uint32_t *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo.get_Title() */
 HRESULT wmaup_windows_software_update_localization_info_get__title(WMAUP_WindowsSoftwareUpdateLocalizationInfo *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo.get_Description() */
 HRESULT wmaup_windows_software_update_localization_info_get__description(WMAUP_WindowsSoftwareUpdateLocalizationInfo *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo.get_MoreInfoUrl() */
 HRESULT wmaup_windows_software_update_localization_info_get__more_info_url(WMAUP_WindowsSoftwareUpdateLocalizationInfo *self, WF_Uri** value);
 
-/* activate Windows.Management.Update.WindowsSoftwareUpdateOptionalActionInfo */
 HRESULT wmaup_windows_software_update_optional_action_info_new(WMAUP_WindowsSoftwareUpdateOptionalActionInfo **out);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateOptionalActionInfo */
-/* Windows.Management.Update.WindowsSoftwareUpdateOptionalActionInfo.get_CloseAndDeployInfo() */
 HRESULT wmaup_windows_software_update_optional_action_info_get__close_and_deploy_info(WMAUP_WindowsSoftwareUpdateOptionalActionInfo *self, WMAUP_WindowsSoftwareUpdateActionInfo** value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateOptionalActionInfo.get_CloseAndInstallInfo() */
 HRESULT wmaup_windows_software_update_optional_action_info_get__close_and_install_info(WMAUP_WindowsSoftwareUpdateOptionalActionInfo *self, WMAUP_WindowsSoftwareUpdateActionInfo** value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateOptionalActionInfo.get_CloseAndRestartInfo() */
 HRESULT wmaup_windows_software_update_optional_action_info_get__close_and_restart_info(WMAUP_WindowsSoftwareUpdateOptionalActionInfo *self, WMAUP_WindowsSoftwareUpdateActionInfo** value);
 
-/* activate Windows.Management.Update.WindowsSoftwareUpdateOptionalInfo */
 HRESULT wmaup_windows_software_update_optional_info_new(WMAUP_WindowsSoftwareUpdateOptionalInfo **out);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateOptionalInfo */
-/* Windows.Management.Update.WindowsSoftwareUpdateOptionalInfo.get_LocalizationInfo() */
 HRESULT wmaup_windows_software_update_optional_info_get__localization_info(WMAUP_WindowsSoftwareUpdateOptionalInfo *self, WFOCO_IVectorView_WMAUP_WindowsSoftwareUpdateLocalizationInfo** value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateOptionalInfo.get_ComplianceDeadlineInDays() */
 HRESULT wmaup_windows_software_update_optional_info_get__compliance_deadline_in_days(WMAUP_WindowsSoftwareUpdateOptionalInfo *self, int32_t** value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateOptionalInfo.get_ComplianceGracePeriodInDays() */
 HRESULT wmaup_windows_software_update_optional_info_get__compliance_grace_period_in_days(WMAUP_WindowsSoftwareUpdateOptionalInfo *self, int32_t** value);
 
-/* activate Windows.Management.Update.WindowsSoftwareUpdateProvider */
 HRESULT wmaup_windows_software_update_provider_new(WMAUP_WindowsSoftwareUpdateProvider **out);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateProvider */
-/* Windows.Management.Update.WindowsSoftwareUpdateProvider.Register() */
 HRESULT wmaup_windows_software_update_provider_register(WMAUP_WindowsSoftwareUpdateProvider *self, WMAUP_WindowsSoftwareUpdateResult** out);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateProvider.Unregister() */
 HRESULT wmaup_windows_software_update_provider_unregister(WMAUP_WindowsSoftwareUpdateProvider *self, WMAUP_WindowsSoftwareUpdateResult** out);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateProvider.Validate() */
 HRESULT wmaup_windows_software_update_provider_validate(WMAUP_WindowsSoftwareUpdateProvider *self, WMAUP_WindowsSoftwareUpdateResult** out);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateProvider.get_Id() */
 HRESULT wmaup_windows_software_update_provider_get__id(WMAUP_WindowsSoftwareUpdateProvider *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateProvider.get_Version() */
 HRESULT wmaup_windows_software_update_provider_get__version(WMAUP_WindowsSoftwareUpdateProvider *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateProvider.get_FolderPath() */
 HRESULT wmaup_windows_software_update_provider_get__folder_path(WMAUP_WindowsSoftwareUpdateProvider *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateProvider.get_CatalogFile() */
 HRESULT wmaup_windows_software_update_provider_get__catalog_file(WMAUP_WindowsSoftwareUpdateProvider *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateProvider.get_ScanFileName() */
 HRESULT wmaup_windows_software_update_provider_get__scan_file_name(WMAUP_WindowsSoftwareUpdateProvider *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateProvider.get_ScanFileArguments() */
 HRESULT wmaup_windows_software_update_provider_get__scan_file_arguments(WMAUP_WindowsSoftwareUpdateProvider *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateProvider.get_Type() */
 HRESULT wmaup_windows_software_update_provider_get__type(WMAUP_WindowsSoftwareUpdateProvider *self, WMAUP_WindowsSoftwareUpdateProviderType *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateProvider.get_PayloadFiles() */
 HRESULT wmaup_windows_software_update_provider_get__payload_files(WMAUP_WindowsSoftwareUpdateProvider *self, WFOCO_IVectorView_WMAUP_WindowsSoftwareUpdateProviderPayloadFileInfo** value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateProvider.get_TrustState() */
 HRESULT wmaup_windows_software_update_provider_get__trust_state(WMAUP_WindowsSoftwareUpdateProvider *self, WMAUP_WindowsSoftwareUpdateProviderTrustState *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateProvider.get_RegistrationType() */
 HRESULT wmaup_windows_software_update_provider_get__registration_type(WMAUP_WindowsSoftwareUpdateProvider *self, WMAUP_WindowsSoftwareUpdateProviderRegistrationType *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateProvider.get_Properties() */
 HRESULT wmaup_windows_software_update_provider_get__properties(WMAUP_WindowsSoftwareUpdateProvider *self, WFOCO_PropertySet** value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateProvider.GetPropertyValue(name) */
 HRESULT wmaup_windows_software_update_provider_get_property_value(WMAUP_WindowsSoftwareUpdateProvider *self, cwinrt_hstring name, IInspectable** out);
 
-/* activate Windows.Management.Update.WindowsSoftwareUpdateProviderActionResult */
 HRESULT wmaup_windows_software_update_provider_action_result_new(WMAUP_WindowsSoftwareUpdateProviderActionResult **out);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateProviderActionResult */
-/* Windows.Management.Update.WindowsSoftwareUpdateProviderActionResult.get_Result() */
 HRESULT wmaup_windows_software_update_provider_action_result_get__result(WMAUP_WindowsSoftwareUpdateProviderActionResult *self, WMAUP_WindowsSoftwareUpdateActionResult *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateProviderActionResult.get_RestartReason() */
 HRESULT wmaup_windows_software_update_provider_action_result_get__restart_reason(WMAUP_WindowsSoftwareUpdateProviderActionResult *self, WMAUP_WindowsSoftwareUpdateRestartReason *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateProviderActionResult.get_ResultCode() */
 HRESULT wmaup_windows_software_update_provider_action_result_get__result_code(WMAUP_WindowsSoftwareUpdateProviderActionResult *self, uint32_t *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateProviderActionResult.get_ExtendedError() */
 HRESULT wmaup_windows_software_update_provider_action_result_get__extended_error(WMAUP_WindowsSoftwareUpdateProviderActionResult *self, uint64_t *value);
 
-/* activate Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo */
 HRESULT wmaup_windows_software_update_provider_payload_file_info_new(WMAUP_WindowsSoftwareUpdateProviderPayloadFileInfo **out);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo */
-/* Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo.get_Filename() */
 HRESULT wmaup_windows_software_update_provider_payload_file_info_get__filename(WMAUP_WindowsSoftwareUpdateProviderPayloadFileInfo *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo.get_FileHash() */
 HRESULT wmaup_windows_software_update_provider_payload_file_info_get__file_hash(WMAUP_WindowsSoftwareUpdateProviderPayloadFileInfo *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo.get_CatalogFile() */
 HRESULT wmaup_windows_software_update_provider_payload_file_info_get__catalog_file(WMAUP_WindowsSoftwareUpdateProviderPayloadFileInfo *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo.get_TrustState() */
 HRESULT wmaup_windows_software_update_provider_payload_file_info_get__trust_state(WMAUP_WindowsSoftwareUpdateProviderPayloadFileInfo *self, WMAUP_WindowsSoftwareUpdateProviderTrustState *value);
 
-/* activate Windows.Management.Update.WindowsSoftwareUpdateProviderStatus */
 HRESULT wmaup_windows_software_update_provider_status_new(WMAUP_WindowsSoftwareUpdateProviderStatus **out);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateProviderStatus */
-/* Windows.Management.Update.WindowsSoftwareUpdateProviderStatus.SetScanResult(succeeded, resultCode, extendedError, updates) */
 HRESULT wmaup_windows_software_update_provider_status_set_scan_result(WMAUP_WindowsSoftwareUpdateProviderStatus *self, BOOL succeeded, uint32_t resultCode, uint64_t extendedError, WFOCO_IIterable_WMAUP_WindowsSoftwareUpdate* updates, WMAUP_WindowsSoftwareUpdateResult** out);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateProviderStatus.SetActionProgress(current, total) */
 HRESULT wmaup_windows_software_update_provider_status_set_action_progress(WMAUP_WindowsSoftwareUpdateProviderStatus *self, uint64_t current, uint64_t total, WMAUP_WindowsSoftwareUpdateResult** out);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateProviderStatus.SetActionResult(actionResult) */
 HRESULT wmaup_windows_software_update_provider_status_set_action_result(WMAUP_WindowsSoftwareUpdateProviderStatus *self, WMAUP_WindowsSoftwareUpdateProviderActionResult* actionResult, WMAUP_WindowsSoftwareUpdateResult** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmaup_windows_software_update_provider_status_on_cancel_requested(WMAUP_WindowsSoftwareUpdateProviderStatus *self, cwinrt_event_fn fn, void *ctx);
 void wmaup_windows_software_update_provider_status_off_cancel_requested(WMAUP_WindowsSoftwareUpdateProviderStatus *self, cwinrt_token token);
 
-/* activate Windows.Management.Update.WindowsSoftwareUpdateResult */
 HRESULT wmaup_windows_software_update_result_new(WMAUP_WindowsSoftwareUpdateResult **out);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateResult */
-/* Windows.Management.Update.WindowsSoftwareUpdateResult.get_Succeeded() */
 HRESULT wmaup_windows_software_update_result_get__succeeded(WMAUP_WindowsSoftwareUpdateResult *self, BOOL *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateResult.get_CancelRequested() */
 HRESULT wmaup_windows_software_update_result_get__cancel_requested(WMAUP_WindowsSoftwareUpdateResult *self, BOOL *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateResult.get_ResultCode() */
 HRESULT wmaup_windows_software_update_result_get__result_code(WMAUP_WindowsSoftwareUpdateResult *self, uint32_t *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateResult.get_ExtendedError() */
 HRESULT wmaup_windows_software_update_result_get__extended_error(WMAUP_WindowsSoftwareUpdateResult *self, uint64_t *value);
 
-/* activate Windows.Management.Update.WindowsSoftwareUpdateScanResult */
 HRESULT wmaup_windows_software_update_scan_result_new(WMAUP_WindowsSoftwareUpdateScanResult **out);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateScanResult */
-/* Windows.Management.Update.WindowsSoftwareUpdateScanResult.get_Succeeded() */
 HRESULT wmaup_windows_software_update_scan_result_get__succeeded(WMAUP_WindowsSoftwareUpdateScanResult *self, BOOL *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateScanResult.get_ResultCode() */
 HRESULT wmaup_windows_software_update_scan_result_get__result_code(WMAUP_WindowsSoftwareUpdateScanResult *self, uint32_t *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateScanResult.get_ExtendedError() */
 HRESULT wmaup_windows_software_update_scan_result_get__extended_error(WMAUP_WindowsSoftwareUpdateScanResult *self, uint64_t *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateScanResult.get_Updates() */
 HRESULT wmaup_windows_software_update_scan_result_get__updates(WMAUP_WindowsSoftwareUpdateScanResult *self, WFOCO_IVectorView_WMAUP_WindowsSoftwareUpdate** value);
 
-/* activate Windows.Management.Update.WindowsSoftwareUpdateVersion */
 HRESULT wmaup_windows_software_update_version_new(WMAUP_WindowsSoftwareUpdateVersion **out);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateVersion */
-/* Windows.Management.Update.WindowsSoftwareUpdateVersion.get_Major() */
 HRESULT wmaup_windows_software_update_version_get__major(WMAUP_WindowsSoftwareUpdateVersion *self, uint32_t *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateVersion.get_Minor() */
 HRESULT wmaup_windows_software_update_version_get__minor(WMAUP_WindowsSoftwareUpdateVersion *self, uint32_t *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateVersion.get_RevisionMajor() */
 HRESULT wmaup_windows_software_update_version_get__revision_major(WMAUP_WindowsSoftwareUpdateVersion *self, uint32_t *value);
 
-/* Windows.Management.Update.WindowsSoftwareUpdateVersion.get_RevisionMinor() */
 HRESULT wmaup_windows_software_update_version_get__revision_minor(WMAUP_WindowsSoftwareUpdateVersion *self, uint32_t *value);
 
-/* activate Windows.Management.Update.WindowsUpdate */
 HRESULT wmaup_windows_update_new(WMAUP_WindowsUpdate **out);
 
-/* Windows.Management.Update.WindowsUpdate */
-/* Windows.Management.Update.WindowsUpdate.get_ProviderId() */
 HRESULT wmaup_windows_update_get__provider_id(WMAUP_WindowsUpdate *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsUpdate.get_UpdateId() */
 HRESULT wmaup_windows_update_get__update_id(WMAUP_WindowsUpdate *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsUpdate.get_Title() */
 HRESULT wmaup_windows_update_get__title(WMAUP_WindowsUpdate *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsUpdate.get_Description() */
 HRESULT wmaup_windows_update_get__description(WMAUP_WindowsUpdate *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsUpdate.get_IsFeatureUpdate() */
 HRESULT wmaup_windows_update_get__is_feature_update(WMAUP_WindowsUpdate *self, BOOL *value);
 
-/* Windows.Management.Update.WindowsUpdate.get_IsMinorImpact() */
 HRESULT wmaup_windows_update_get__is_minor_impact(WMAUP_WindowsUpdate *self, BOOL *value);
 
-/* Windows.Management.Update.WindowsUpdate.get_IsSecurity() */
 HRESULT wmaup_windows_update_get__is_security(WMAUP_WindowsUpdate *self, BOOL *value);
 
-/* Windows.Management.Update.WindowsUpdate.get_IsCritical() */
 HRESULT wmaup_windows_update_get__is_critical(WMAUP_WindowsUpdate *self, BOOL *value);
 
-/* Windows.Management.Update.WindowsUpdate.get_IsForOS() */
 HRESULT wmaup_windows_update_get__is_for_o_s(WMAUP_WindowsUpdate *self, BOOL *value);
 
-/* Windows.Management.Update.WindowsUpdate.get_IsDriver() */
 HRESULT wmaup_windows_update_get__is_driver(WMAUP_WindowsUpdate *self, BOOL *value);
 
-/* Windows.Management.Update.WindowsUpdate.get_IsMandatory() */
 HRESULT wmaup_windows_update_get__is_mandatory(WMAUP_WindowsUpdate *self, BOOL *value);
 
-/* Windows.Management.Update.WindowsUpdate.get_IsUrgent() */
 HRESULT wmaup_windows_update_get__is_urgent(WMAUP_WindowsUpdate *self, BOOL *value);
 
-/* Windows.Management.Update.WindowsUpdate.get_IsSeeker() */
 HRESULT wmaup_windows_update_get__is_seeker(WMAUP_WindowsUpdate *self, BOOL *value);
 
-/* Windows.Management.Update.WindowsUpdate.get_MoreInfoUrl() */
 HRESULT wmaup_windows_update_get__more_info_url(WMAUP_WindowsUpdate *self, WF_Uri** value);
 
-/* Windows.Management.Update.WindowsUpdate.get_SupportUrl() */
 HRESULT wmaup_windows_update_get__support_url(WMAUP_WindowsUpdate *self, WF_Uri** value);
 
-/* Windows.Management.Update.WindowsUpdate.get_IsEulaAccepted() */
 HRESULT wmaup_windows_update_get__is_eula_accepted(WMAUP_WindowsUpdate *self, BOOL *value);
 
-/* Windows.Management.Update.WindowsUpdate.get_EulaText() */
 HRESULT wmaup_windows_update_get__eula_text(WMAUP_WindowsUpdate *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsUpdate.get_Deadline() */
 HRESULT wmaup_windows_update_get__deadline(WMAUP_WindowsUpdate *self, WF_DateTime** value);
 
-/* Windows.Management.Update.WindowsUpdate.get_AttentionRequiredInfo() */
 HRESULT wmaup_windows_update_get__attention_required_info(WMAUP_WindowsUpdate *self, WMAUP_WindowsUpdateAttentionRequiredInfo** value);
 
-/* Windows.Management.Update.WindowsUpdate.get_ActionResult() */
 HRESULT wmaup_windows_update_get__action_result(WMAUP_WindowsUpdate *self, WMAUP_WindowsUpdateActionResult** value);
 
-/* Windows.Management.Update.WindowsUpdate.get_CurrentAction() */
 HRESULT wmaup_windows_update_get__current_action(WMAUP_WindowsUpdate *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsUpdate.get_ActionProgress() */
 HRESULT wmaup_windows_update_get__action_progress(WMAUP_WindowsUpdate *self, WMAUP_WindowsUpdateActionProgress** value);
 
-/* Windows.Management.Update.WindowsUpdate.GetPropertyValue(propertyName) */
 HRESULT wmaup_windows_update_get_property_value(WMAUP_WindowsUpdate *self, cwinrt_hstring propertyName, IInspectable** out);
 
-/* Windows.Management.Update.WindowsUpdate.AcceptEula() */
 HRESULT wmaup_windows_update_accept_eula(WMAUP_WindowsUpdate *self);
 
-/* activate Windows.Management.Update.WindowsUpdateActionCompletedEventArgs */
 HRESULT wmaup_windows_update_action_completed_event_args_new(WMAUP_WindowsUpdateActionCompletedEventArgs **out);
 
-/* Windows.Management.Update.WindowsUpdateActionCompletedEventArgs */
-/* Windows.Management.Update.WindowsUpdateActionCompletedEventArgs.get_Update() */
 HRESULT wmaup_windows_update_action_completed_event_args_get__update(WMAUP_WindowsUpdateActionCompletedEventArgs *self, WMAUP_WindowsUpdate** value);
 
-/* Windows.Management.Update.WindowsUpdateActionCompletedEventArgs.get_Action() */
 HRESULT wmaup_windows_update_action_completed_event_args_get__action(WMAUP_WindowsUpdateActionCompletedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsUpdateActionCompletedEventArgs.get_Succeeded() */
 HRESULT wmaup_windows_update_action_completed_event_args_get__succeeded(WMAUP_WindowsUpdateActionCompletedEventArgs *self, BOOL *value);
 
-/* Windows.Management.Update.WindowsUpdateActionCompletedEventArgs.get_ExtendedError() */
 HRESULT wmaup_windows_update_action_completed_event_args_get__extended_error(WMAUP_WindowsUpdateActionCompletedEventArgs *self, HRESULT *value);
 
-/* activate Windows.Management.Update.WindowsUpdateActionProgress */
 HRESULT wmaup_windows_update_action_progress_new(WMAUP_WindowsUpdateActionProgress **out);
 
-/* Windows.Management.Update.WindowsUpdateActionProgress */
-/* Windows.Management.Update.WindowsUpdateActionProgress.get_Action() */
 HRESULT wmaup_windows_update_action_progress_get__action(WMAUP_WindowsUpdateActionProgress *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsUpdateActionProgress.get_Progress() */
 HRESULT wmaup_windows_update_action_progress_get__progress(WMAUP_WindowsUpdateActionProgress *self, double *value);
 
-/* activate Windows.Management.Update.WindowsUpdateActionResult */
 HRESULT wmaup_windows_update_action_result_new(WMAUP_WindowsUpdateActionResult **out);
 
-/* Windows.Management.Update.WindowsUpdateActionResult */
-/* Windows.Management.Update.WindowsUpdateActionResult.get_Timestamp() */
 HRESULT wmaup_windows_update_action_result_get__timestamp(WMAUP_WindowsUpdateActionResult *self, WF_DateTime *value);
 
-/* Windows.Management.Update.WindowsUpdateActionResult.get_Succeeded() */
 HRESULT wmaup_windows_update_action_result_get__succeeded(WMAUP_WindowsUpdateActionResult *self, BOOL *value);
 
-/* Windows.Management.Update.WindowsUpdateActionResult.get_ExtendedError() */
 HRESULT wmaup_windows_update_action_result_get__extended_error(WMAUP_WindowsUpdateActionResult *self, HRESULT *value);
 
-/* Windows.Management.Update.WindowsUpdateActionResult.get_Action() */
 HRESULT wmaup_windows_update_action_result_get__action(WMAUP_WindowsUpdateActionResult *self, cwinrt_hstring *value);
 
-/* activate Windows.Management.Update.WindowsUpdateAdministrator */
 HRESULT wmaup_windows_update_administrator_new(WMAUP_WindowsUpdateAdministrator **out);
 
-/* Windows.Management.Update.WindowsUpdateAdministrator */
-/* Windows.Management.Update.WindowsUpdateAdministrator.StartAdministratorScan() */
 HRESULT wmaup_windows_update_administrator_start_administrator_scan(WMAUP_WindowsUpdateAdministrator *self);
 
-/* Windows.Management.Update.WindowsUpdateAdministrator.ApproveWindowsUpdateAction(updateId, action) */
 HRESULT wmaup_windows_update_administrator_approve_windows_update_action(WMAUP_WindowsUpdateAdministrator *self, cwinrt_hstring updateId, cwinrt_hstring action);
 
-/* Windows.Management.Update.WindowsUpdateAdministrator.RevokeWindowsUpdateActionApproval(updateId, action) */
 HRESULT wmaup_windows_update_administrator_revoke_windows_update_action_approval(WMAUP_WindowsUpdateAdministrator *self, cwinrt_hstring updateId, cwinrt_hstring action);
 
-/* Windows.Management.Update.WindowsUpdateAdministrator.ApproveWindowsUpdate(updateId, approvalData) */
 HRESULT wmaup_windows_update_administrator_approve_windows_update(WMAUP_WindowsUpdateAdministrator *self, cwinrt_hstring updateId, WMAUP_WindowsUpdateApprovalData* approvalData);
 
-/* Windows.Management.Update.WindowsUpdateAdministrator.RevokeWindowsUpdateApproval(updateId) */
 HRESULT wmaup_windows_update_administrator_revoke_windows_update_approval(WMAUP_WindowsUpdateAdministrator *self, cwinrt_hstring updateId);
 
-/* Windows.Management.Update.WindowsUpdateAdministrator.GetUpdates() */
 HRESULT wmaup_windows_update_administrator_get_updates(WMAUP_WindowsUpdateAdministrator *self, WFOCO_IVectorView_WMAUP_WindowsUpdate** out);
 
-/* Windows.Management.Update.WindowsUpdateAdministrator.GetRegisteredAdministrator(organizationName) */
 HRESULT wmaup_windows_update_administrator_get_registered_administrator(cwinrt_hstring organizationName, WMAUP_WindowsUpdateGetAdministratorResult** out);
 
-/* Windows.Management.Update.WindowsUpdateAdministrator.RegisterForAdministration(organizationName, options) */
 HRESULT wmaup_windows_update_administrator_register_for_administration(cwinrt_hstring organizationName, WMAUP_WindowsUpdateAdministratorOptions options, WMAUP_WindowsUpdateAdministratorStatus *out);
 
-/* Windows.Management.Update.WindowsUpdateAdministrator.UnregisterForAdministration(organizationName) */
 HRESULT wmaup_windows_update_administrator_unregister_for_administration(cwinrt_hstring organizationName, WMAUP_WindowsUpdateAdministratorStatus *out);
 
-/* Windows.Management.Update.WindowsUpdateAdministrator.GetRegisteredAdministratorName() */
 HRESULT wmaup_windows_update_administrator_get_registered_administrator_name(cwinrt_hstring *out);
 
-/* Windows.Management.Update.WindowsUpdateAdministrator.RequestRestart(restartOptions) */
 HRESULT wmaup_windows_update_administrator_request_restart(WMAUP_WindowsUpdateRestartRequestOptions* restartOptions, cwinrt_hstring *out);
 
-/* Windows.Management.Update.WindowsUpdateAdministrator.CancelRestartRequest(requestRestartToken) */
 HRESULT wmaup_windows_update_administrator_cancel_restart_request(cwinrt_hstring requestRestartToken);
 
-/* activate Windows.Management.Update.WindowsUpdateApprovalData */
 HRESULT wmaup_windows_update_approval_data_new(WMAUP_WindowsUpdateApprovalData **out);
 
-/* Windows.Management.Update.WindowsUpdateApprovalData */
-/* Windows.Management.Update.WindowsUpdateApprovalData.get_Seeker() */
 HRESULT wmaup_windows_update_approval_data_get__seeker(WMAUP_WindowsUpdateApprovalData *self, BOOL** value);
 
-/* Windows.Management.Update.WindowsUpdateApprovalData.put_Seeker() */
 HRESULT wmaup_windows_update_approval_data_put__seeker(WMAUP_WindowsUpdateApprovalData *self, BOOL* value);
 
-/* Windows.Management.Update.WindowsUpdateApprovalData.get_AllowDownloadOnMetered() */
 HRESULT wmaup_windows_update_approval_data_get__allow_download_on_metered(WMAUP_WindowsUpdateApprovalData *self, BOOL** value);
 
-/* Windows.Management.Update.WindowsUpdateApprovalData.put_AllowDownloadOnMetered() */
 HRESULT wmaup_windows_update_approval_data_put__allow_download_on_metered(WMAUP_WindowsUpdateApprovalData *self, BOOL* value);
 
-/* Windows.Management.Update.WindowsUpdateApprovalData.get_ComplianceDeadlineInDays() */
 HRESULT wmaup_windows_update_approval_data_get__compliance_deadline_in_days(WMAUP_WindowsUpdateApprovalData *self, int32_t** value);
 
-/* Windows.Management.Update.WindowsUpdateApprovalData.put_ComplianceDeadlineInDays() */
 HRESULT wmaup_windows_update_approval_data_put__compliance_deadline_in_days(WMAUP_WindowsUpdateApprovalData *self, int32_t* value);
 
-/* Windows.Management.Update.WindowsUpdateApprovalData.get_ComplianceGracePeriodInDays() */
 HRESULT wmaup_windows_update_approval_data_get__compliance_grace_period_in_days(WMAUP_WindowsUpdateApprovalData *self, int32_t** value);
 
-/* Windows.Management.Update.WindowsUpdateApprovalData.put_ComplianceGracePeriodInDays() */
 HRESULT wmaup_windows_update_approval_data_put__compliance_grace_period_in_days(WMAUP_WindowsUpdateApprovalData *self, int32_t* value);
 
-/* Windows.Management.Update.WindowsUpdateApprovalData.get_OptOutOfAutoReboot() */
 HRESULT wmaup_windows_update_approval_data_get__opt_out_of_auto_reboot(WMAUP_WindowsUpdateApprovalData *self, BOOL** value);
 
-/* Windows.Management.Update.WindowsUpdateApprovalData.put_OptOutOfAutoReboot() */
 HRESULT wmaup_windows_update_approval_data_put__opt_out_of_auto_reboot(WMAUP_WindowsUpdateApprovalData *self, BOOL* value);
 
-/* activate Windows.Management.Update.WindowsUpdateAttentionRequiredInfo */
 HRESULT wmaup_windows_update_attention_required_info_new(WMAUP_WindowsUpdateAttentionRequiredInfo **out);
 
-/* Windows.Management.Update.WindowsUpdateAttentionRequiredInfo */
-/* Windows.Management.Update.WindowsUpdateAttentionRequiredInfo.get_Reason() */
 HRESULT wmaup_windows_update_attention_required_info_get__reason(WMAUP_WindowsUpdateAttentionRequiredInfo *self, WMAUP_WindowsUpdateAttentionRequiredReason *value);
 
-/* Windows.Management.Update.WindowsUpdateAttentionRequiredInfo.get_Timestamp() */
 HRESULT wmaup_windows_update_attention_required_info_get__timestamp(WMAUP_WindowsUpdateAttentionRequiredInfo *self, WF_DateTime** value);
 
-/* activate Windows.Management.Update.WindowsUpdateAttentionRequiredReasonChangedEventArgs */
 HRESULT wmaup_windows_update_attention_required_reason_changed_event_args_new(WMAUP_WindowsUpdateAttentionRequiredReasonChangedEventArgs **out);
 
-/* Windows.Management.Update.WindowsUpdateAttentionRequiredReasonChangedEventArgs */
-/* Windows.Management.Update.WindowsUpdateAttentionRequiredReasonChangedEventArgs.get_Update() */
 HRESULT wmaup_windows_update_attention_required_reason_changed_event_args_get__update(WMAUP_WindowsUpdateAttentionRequiredReasonChangedEventArgs *self, WMAUP_WindowsUpdate** value);
 
-/* Windows.Management.Update.WindowsUpdateAttentionRequiredReasonChangedEventArgs.get_Reason() */
 HRESULT wmaup_windows_update_attention_required_reason_changed_event_args_get__reason(WMAUP_WindowsUpdateAttentionRequiredReasonChangedEventArgs *self, WMAUP_WindowsUpdateAttentionRequiredReason *value);
 
-/* activate Windows.Management.Update.WindowsUpdateGetAdministratorResult */
 HRESULT wmaup_windows_update_get_administrator_result_new(WMAUP_WindowsUpdateGetAdministratorResult **out);
 
-/* Windows.Management.Update.WindowsUpdateGetAdministratorResult */
-/* Windows.Management.Update.WindowsUpdateGetAdministratorResult.get_Administrator() */
 HRESULT wmaup_windows_update_get_administrator_result_get__administrator(WMAUP_WindowsUpdateGetAdministratorResult *self, WMAUP_WindowsUpdateAdministrator** value);
 
-/* Windows.Management.Update.WindowsUpdateGetAdministratorResult.get_Status() */
 HRESULT wmaup_windows_update_get_administrator_result_get__status(WMAUP_WindowsUpdateGetAdministratorResult *self, WMAUP_WindowsUpdateAdministratorStatus *value);
 
-/* activate Windows.Management.Update.WindowsUpdateItem */
 HRESULT wmaup_windows_update_item_new(WMAUP_WindowsUpdateItem **out);
 
-/* Windows.Management.Update.WindowsUpdateItem */
-/* Windows.Management.Update.WindowsUpdateItem.get_ProviderId() */
 HRESULT wmaup_windows_update_item_get__provider_id(WMAUP_WindowsUpdateItem *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsUpdateItem.get_UpdateId() */
 HRESULT wmaup_windows_update_item_get__update_id(WMAUP_WindowsUpdateItem *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsUpdateItem.get_Timestamp() */
 HRESULT wmaup_windows_update_item_get__timestamp(WMAUP_WindowsUpdateItem *self, WF_DateTime *value);
 
-/* Windows.Management.Update.WindowsUpdateItem.get_Title() */
 HRESULT wmaup_windows_update_item_get__title(WMAUP_WindowsUpdateItem *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsUpdateItem.get_Description() */
 HRESULT wmaup_windows_update_item_get__description(WMAUP_WindowsUpdateItem *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsUpdateItem.get_MoreInfoUrl() */
 HRESULT wmaup_windows_update_item_get__more_info_url(WMAUP_WindowsUpdateItem *self, WF_Uri** value);
 
-/* Windows.Management.Update.WindowsUpdateItem.get_Category() */
 HRESULT wmaup_windows_update_item_get__category(WMAUP_WindowsUpdateItem *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsUpdateItem.get_Operation() */
 HRESULT wmaup_windows_update_item_get__operation(WMAUP_WindowsUpdateItem *self, cwinrt_hstring *value);
 
-/* activate Windows.Management.Update.WindowsUpdateManager */
 HRESULT wmaup_windows_update_manager_new(WMAUP_WindowsUpdateManager **out);
 
-/* Windows.Management.Update.WindowsUpdateManager */
-/* Windows.Management.Update.WindowsUpdateManager.get_IsScanning() */
 HRESULT wmaup_windows_update_manager_get__is_scanning(WMAUP_WindowsUpdateManager *self, BOOL *value);
 
-/* Windows.Management.Update.WindowsUpdateManager.get_IsWorking() */
 HRESULT wmaup_windows_update_manager_get__is_working(WMAUP_WindowsUpdateManager *self, BOOL *value);
 
-/* Windows.Management.Update.WindowsUpdateManager.get_LastSuccessfulScanTimestamp() */
 HRESULT wmaup_windows_update_manager_get__last_successful_scan_timestamp(WMAUP_WindowsUpdateManager *self, WF_DateTime** value);
 
-/* Windows.Management.Update.WindowsUpdateManager.GetApplicableUpdates() */
 HRESULT wmaup_windows_update_manager_get_applicable_updates(WMAUP_WindowsUpdateManager *self, WFOCO_IVectorView_WMAUP_WindowsUpdate** out);
 
-/* Windows.Management.Update.WindowsUpdateManager.GetMostRecentCompletedUpdates(count) */
 HRESULT wmaup_windows_update_manager_get_most_recent_completed_updates(WMAUP_WindowsUpdateManager *self, int32_t count, WFOCO_IVectorView_WMAUP_WindowsUpdateItem** out);
 
-/* Windows.Management.Update.WindowsUpdateManager.GetMostRecentCompletedUpdatesAsync(count) */
 HRESULT wmaup_windows_update_manager_get_most_recent_completed_updates_async(WMAUP_WindowsUpdateManager *self, int32_t count, WF_IAsyncOperation_WFOCO_IVectorView_WMAUP_WindowsUpdateItem** out);
 
-/* Windows.Management.Update.WindowsUpdateManager.StartScan(userInitiated) */
 HRESULT wmaup_windows_update_manager_start_scan(WMAUP_WindowsUpdateManager *self, BOOL userInitiated);
 
-/* Windows.Management.Update.WindowsUpdateManager.GetProvider(id) */
 HRESULT wmaup_windows_update_manager_get_provider(WMAUP_WindowsUpdateManager *self, cwinrt_hstring id, WMAUP_WindowsSoftwareUpdateProvider** out);
 
-/* Windows.Management.Update.WindowsUpdateManager.get_ProviderIds() */
 HRESULT wmaup_windows_update_manager_get__provider_ids(WMAUP_WindowsUpdateManager *self, cwinrt_hstring **value, uint32_t *value_len);
 
-/* Windows.Management.Update.WindowsUpdateManager.GetApplicableSoftwareUpdates() */
 HRESULT wmaup_windows_update_manager_get_applicable_software_updates(WMAUP_WindowsUpdateManager *self, WFOCO_IVectorView_WMAUP_WindowsSoftwareUpdate** out);
 
-/* Windows.Management.Update.WindowsUpdateManager.PerformScan(options) */
 HRESULT wmaup_windows_update_manager_perform_scan(WMAUP_WindowsUpdateManager *self, WMAUP_WindowsUpdateManagerScanOptions* options, WMAUP_WindowsSoftwareUpdateScanResult** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmaup_windows_update_manager_on_scanning_state_changed(WMAUP_WindowsUpdateManager *self, cwinrt_event_fn fn, void *ctx);
@@ -1365,145 +1064,72 @@ void wmaup_windows_update_manager_off_action_completed(WMAUP_WindowsUpdateManage
 cwinrt_token wmaup_windows_update_manager_on_scan_completed(WMAUP_WindowsUpdateManager *self, cwinrt_event_fn fn, void *ctx);
 void wmaup_windows_update_manager_off_scan_completed(WMAUP_WindowsUpdateManager *self, cwinrt_token token);
 
-/* activate Windows.Management.Update.WindowsUpdateManagerScanOptions */
 HRESULT wmaup_windows_update_manager_scan_options_new(WMAUP_WindowsUpdateManagerScanOptions **out);
 
-/* Windows.Management.Update.WindowsUpdateManagerScanOptions */
-/* Windows.Management.Update.WindowsUpdateManagerScanOptions.get_IsUserInitiated() */
 HRESULT wmaup_windows_update_manager_scan_options_get__is_user_initiated(WMAUP_WindowsUpdateManagerScanOptions *self, BOOL *value);
 
-/* Windows.Management.Update.WindowsUpdateManagerScanOptions.put_IsUserInitiated() */
 HRESULT wmaup_windows_update_manager_scan_options_put__is_user_initiated(WMAUP_WindowsUpdateManagerScanOptions *self, BOOL value);
 
-/* Windows.Management.Update.WindowsUpdateManagerScanOptions.get_AllowBypassThrottling() */
 HRESULT wmaup_windows_update_manager_scan_options_get__allow_bypass_throttling(WMAUP_WindowsUpdateManagerScanOptions *self, BOOL *value);
 
-/* Windows.Management.Update.WindowsUpdateManagerScanOptions.put_AllowBypassThrottling() */
 HRESULT wmaup_windows_update_manager_scan_options_put__allow_bypass_throttling(WMAUP_WindowsUpdateManagerScanOptions *self, BOOL value);
 
-/* Windows.Management.Update.WindowsUpdateManagerScanOptions.get_PerformUpdateActions() */
 HRESULT wmaup_windows_update_manager_scan_options_get__perform_update_actions(WMAUP_WindowsUpdateManagerScanOptions *self, BOOL *value);
 
-/* Windows.Management.Update.WindowsUpdateManagerScanOptions.put_PerformUpdateActions() */
 HRESULT wmaup_windows_update_manager_scan_options_put__perform_update_actions(WMAUP_WindowsUpdateManagerScanOptions *self, BOOL value);
 
-/* activate Windows.Management.Update.WindowsUpdateProgressChangedEventArgs */
 HRESULT wmaup_windows_update_progress_changed_event_args_new(WMAUP_WindowsUpdateProgressChangedEventArgs **out);
 
-/* Windows.Management.Update.WindowsUpdateProgressChangedEventArgs */
-/* Windows.Management.Update.WindowsUpdateProgressChangedEventArgs.get_Update() */
 HRESULT wmaup_windows_update_progress_changed_event_args_get__update(WMAUP_WindowsUpdateProgressChangedEventArgs *self, WMAUP_WindowsUpdate** value);
 
-/* Windows.Management.Update.WindowsUpdateProgressChangedEventArgs.get_ActionProgress() */
 HRESULT wmaup_windows_update_progress_changed_event_args_get__action_progress(WMAUP_WindowsUpdateProgressChangedEventArgs *self, WMAUP_WindowsUpdateActionProgress** value);
 
-/* activate Windows.Management.Update.WindowsUpdateRestartRequestOptions */
 HRESULT wmaup_windows_update_restart_request_options_new(WMAUP_WindowsUpdateRestartRequestOptions **out);
 
-/* Windows.Management.Update.WindowsUpdateRestartRequestOptions */
-/* Windows.Management.Update.WindowsUpdateRestartRequestOptions.get_Title() */
 HRESULT wmaup_windows_update_restart_request_options_get__title(WMAUP_WindowsUpdateRestartRequestOptions *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsUpdateRestartRequestOptions.put_Title() */
 HRESULT wmaup_windows_update_restart_request_options_put__title(WMAUP_WindowsUpdateRestartRequestOptions *self, cwinrt_hstring value);
 
-/* Windows.Management.Update.WindowsUpdateRestartRequestOptions.get_Description() */
 HRESULT wmaup_windows_update_restart_request_options_get__description(WMAUP_WindowsUpdateRestartRequestOptions *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsUpdateRestartRequestOptions.put_Description() */
 HRESULT wmaup_windows_update_restart_request_options_put__description(WMAUP_WindowsUpdateRestartRequestOptions *self, cwinrt_hstring value);
 
-/* Windows.Management.Update.WindowsUpdateRestartRequestOptions.get_MoreInfoUrl() */
 HRESULT wmaup_windows_update_restart_request_options_get__more_info_url(WMAUP_WindowsUpdateRestartRequestOptions *self, WF_Uri** value);
 
-/* Windows.Management.Update.WindowsUpdateRestartRequestOptions.put_MoreInfoUrl() */
 HRESULT wmaup_windows_update_restart_request_options_put__more_info_url(WMAUP_WindowsUpdateRestartRequestOptions *self, WF_Uri* value);
 
-/* Windows.Management.Update.WindowsUpdateRestartRequestOptions.get_ComplianceDeadlineInDays() */
 HRESULT wmaup_windows_update_restart_request_options_get__compliance_deadline_in_days(WMAUP_WindowsUpdateRestartRequestOptions *self, int32_t *value);
 
-/* Windows.Management.Update.WindowsUpdateRestartRequestOptions.put_ComplianceDeadlineInDays() */
 HRESULT wmaup_windows_update_restart_request_options_put__compliance_deadline_in_days(WMAUP_WindowsUpdateRestartRequestOptions *self, int32_t value);
 
-/* Windows.Management.Update.WindowsUpdateRestartRequestOptions.get_ComplianceGracePeriodInDays() */
 HRESULT wmaup_windows_update_restart_request_options_get__compliance_grace_period_in_days(WMAUP_WindowsUpdateRestartRequestOptions *self, int32_t *value);
 
-/* Windows.Management.Update.WindowsUpdateRestartRequestOptions.put_ComplianceGracePeriodInDays() */
 HRESULT wmaup_windows_update_restart_request_options_put__compliance_grace_period_in_days(WMAUP_WindowsUpdateRestartRequestOptions *self, int32_t value);
 
-/* Windows.Management.Update.WindowsUpdateRestartRequestOptions.get_OrganizationName() */
 HRESULT wmaup_windows_update_restart_request_options_get__organization_name(WMAUP_WindowsUpdateRestartRequestOptions *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsUpdateRestartRequestOptions.put_OrganizationName() */
 HRESULT wmaup_windows_update_restart_request_options_put__organization_name(WMAUP_WindowsUpdateRestartRequestOptions *self, cwinrt_hstring value);
 
-/* Windows.Management.Update.WindowsUpdateRestartRequestOptions.get_OptOutOfAutoReboot() */
 HRESULT wmaup_windows_update_restart_request_options_get__opt_out_of_auto_reboot(WMAUP_WindowsUpdateRestartRequestOptions *self, BOOL *value);
 
-/* Windows.Management.Update.WindowsUpdateRestartRequestOptions.put_OptOutOfAutoReboot() */
 HRESULT wmaup_windows_update_restart_request_options_put__opt_out_of_auto_reboot(WMAUP_WindowsUpdateRestartRequestOptions *self, BOOL value);
 
-/* activate Windows.Management.Update.WindowsUpdateScanCompletedEventArgs */
 HRESULT wmaup_windows_update_scan_completed_event_args_new(WMAUP_WindowsUpdateScanCompletedEventArgs **out);
 
-/* Windows.Management.Update.WindowsUpdateScanCompletedEventArgs */
-/* Windows.Management.Update.WindowsUpdateScanCompletedEventArgs.get_ProviderId() */
 HRESULT wmaup_windows_update_scan_completed_event_args_get__provider_id(WMAUP_WindowsUpdateScanCompletedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Management.Update.WindowsUpdateScanCompletedEventArgs.get_Succeeded() */
 HRESULT wmaup_windows_update_scan_completed_event_args_get__succeeded(WMAUP_WindowsUpdateScanCompletedEventArgs *self, BOOL *value);
 
-/* Windows.Management.Update.WindowsUpdateScanCompletedEventArgs.get_ExtendedError() */
 HRESULT wmaup_windows_update_scan_completed_event_args_get__extended_error(WMAUP_WindowsUpdateScanCompletedEventArgs *self, HRESULT *value);
 
-/* Windows.Management.Update.WindowsUpdateScanCompletedEventArgs.get_Updates() */
 HRESULT wmaup_windows_update_scan_completed_event_args_get__updates(WMAUP_WindowsUpdateScanCompletedEventArgs *self, WFOCO_IVectorView_WMAUP_WindowsUpdate** value);
 
-/* Windows.Management.Update.IPreviewBuildsManager */
-/* Windows.Management.Update.IPreviewBuildsState */
-/* Windows.Management.Update.IWindowsSoftwareUpdate */
-/* Windows.Management.Update.IWindowsSoftwareUpdateActionInfo */
-/* Windows.Management.Update.IWindowsSoftwareUpdateActionProgress */
-/* Windows.Management.Update.IWindowsSoftwareUpdateActionResultInfo */
-/* Windows.Management.Update.IWindowsSoftwareUpdateAppPackageInfo */
-/* Windows.Management.Update.IWindowsSoftwareUpdateApprovalInfo */
-/* Windows.Management.Update.IWindowsSoftwareUpdateExecutionInfo */
-/* Windows.Management.Update.IWindowsSoftwareUpdateLocalizationInfo */
-/* Windows.Management.Update.IWindowsSoftwareUpdateOptionalActionInfo */
-/* Windows.Management.Update.IWindowsSoftwareUpdateOptionalInfo */
-/* Windows.Management.Update.IWindowsSoftwareUpdateProvider */
-/* Windows.Management.Update.IWindowsSoftwareUpdateProviderActionResult */
-/* Windows.Management.Update.IWindowsSoftwareUpdateProviderPayloadFileInfo */
-/* Windows.Management.Update.IWindowsSoftwareUpdateProviderStatus */
-/* Windows.Management.Update.IWindowsSoftwareUpdateResult */
-/* Windows.Management.Update.IWindowsSoftwareUpdateScanResult */
-/* Windows.Management.Update.IWindowsSoftwareUpdateVersion */
-/* Windows.Management.Update.IWindowsUpdate */
-/* Windows.Management.Update.IWindowsUpdateActionCompletedEventArgs */
-/* Windows.Management.Update.IWindowsUpdateActionProgress */
-/* Windows.Management.Update.IWindowsUpdateActionResult */
-/* Windows.Management.Update.IWindowsUpdateAdministrator */
-/* Windows.Management.Update.IWindowsUpdateApprovalData */
-/* Windows.Management.Update.IWindowsUpdateAttentionRequiredInfo */
-/* Windows.Management.Update.IWindowsUpdateAttentionRequiredReasonChangedEventArgs */
-/* Windows.Management.Update.IWindowsUpdateGetAdministratorResult */
-/* Windows.Management.Update.IWindowsUpdateItem */
-/* Windows.Management.Update.IWindowsUpdateManager */
-/* Windows.Management.Update.IWindowsUpdateManager2 */
-/* Windows.Management.Update.IWindowsUpdateManager2.GetProvider(id) */
 HRESULT wmaup_windows_update_manager_2_get_provider(WMAUP_IWindowsUpdateManager_2 *self, cwinrt_hstring id, WMAUP_WindowsSoftwareUpdateProvider** out);
 
-/* Windows.Management.Update.IWindowsUpdateManager2.get_ProviderIds() */
 HRESULT wmaup_windows_update_manager_2_get__provider_ids(WMAUP_IWindowsUpdateManager_2 *self, cwinrt_hstring **value, uint32_t *value_len);
 
-/* Windows.Management.Update.IWindowsUpdateManager2.GetApplicableSoftwareUpdates() */
 HRESULT wmaup_windows_update_manager_2_get_applicable_software_updates(WMAUP_IWindowsUpdateManager_2 *self, WFOCO_IVectorView_WMAUP_WindowsSoftwareUpdate** out);
 
-/* Windows.Management.Update.IWindowsUpdateManager2.PerformScan(options) */
 HRESULT wmaup_windows_update_manager_2_perform_scan(WMAUP_IWindowsUpdateManager_2 *self, WMAUP_WindowsUpdateManagerScanOptions* options, WMAUP_WindowsSoftwareUpdateScanResult** out);
 
-/* Windows.Management.Update.IWindowsUpdateManagerScanOptions */
-/* Windows.Management.Update.IWindowsUpdateProgressChangedEventArgs */
-/* Windows.Management.Update.IWindowsUpdateRestartRequestOptions */
-/* Windows.Management.Update.IWindowsUpdateScanCompletedEventArgs */
 #endif /* CWINRT_WINDOWS_MANAGEMENT_UPDATE_H */

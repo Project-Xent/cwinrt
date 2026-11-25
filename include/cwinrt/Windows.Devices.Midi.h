@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
@@ -22,7 +21,6 @@ typedef struct WSTST_IBuffer WSTST_IBuffer;
 typedef struct WDEEN_DeviceInformation WDEEN_DeviceInformation;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDEMI_IMidiChannelPressureMessageFactory WDEMI_IMidiChannelPressureMessageFactory;
 typedef struct WDEMI_IMidiControlChangeMessageFactory WDEMI_IMidiControlChangeMessageFactory;
 typedef struct WDEMI_IMidiInPortStatics WDEMI_IMidiInPortStatics;
@@ -75,7 +73,6 @@ typedef struct WDEMI_IMidiTimeCodeMessage WDEMI_IMidiTimeCodeMessage;
 typedef struct WDEMI_IMidiOutPort WDEMI_IMidiOutPort;
 typedef struct WDEMI_IMidiMessage WDEMI_IMidiMessage;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WDEMI_MidiInPort
 #define CWINRT_FWD_WF_IAsyncOperation_WDEMI_MidiInPort
 typedef struct WF_IAsyncOperation_WDEMI_MidiInPort WF_IAsyncOperation_WDEMI_MidiInPort;
@@ -131,7 +128,6 @@ typedef enum WDEMI_MidiMessageType {
 } WDEMI_MidiMessageType;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -252,483 +248,289 @@ static const IID CWINRT_IID_WDEMI_IMidiOutPort CWINRT_MAYBE_UNUSED = { 0x931D6D9
 static const IID CWINRT_IID_WDEMI_IMidiMessage CWINRT_MAYBE_UNUSED = { 0x79767945, 0x1094, 0x4283, { 0x9B, 0xE0, 0x28, 0x9F, 0xC0, 0xEE, 0x83, 0x34 } };
 #endif
 
-/* Methods */
-
-/* Windows.Devices.Midi.IMidiChannelPressureMessageFactory */
-/* Windows.Devices.Midi.IMidiChannelPressureMessageFactory.CreateMidiChannelPressureMessage(channel, pressure) */
 HRESULT wdemi_midi_channel_pressure_message_factory_create_midi_channel_pressure_message(WDEMI_IMidiChannelPressureMessageFactory *self, uint8_t channel, uint8_t pressure, WDEMI_MidiChannelPressureMessage** out);
 
-/* Windows.Devices.Midi.IMidiControlChangeMessageFactory */
-/* Windows.Devices.Midi.IMidiControlChangeMessageFactory.CreateMidiControlChangeMessage(channel, controller, controlValue) */
 HRESULT wdemi_midi_control_change_message_factory_create_midi_control_change_message(WDEMI_IMidiControlChangeMessageFactory *self, uint8_t channel, uint8_t controller, uint8_t controlValue, WDEMI_MidiControlChangeMessage** out);
 
-/* Windows.Devices.Midi.IMidiInPortStatics */
-/* Windows.Devices.Midi.IMidiInPortStatics.FromIdAsync(deviceId) */
 HRESULT wdemi_midi_in_port_statics_from_id_async(WDEMI_IMidiInPortStatics *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDEMI_MidiInPort** out);
 
-/* Windows.Devices.Midi.IMidiInPortStatics.GetDeviceSelector() */
 HRESULT wdemi_midi_in_port_statics_get_device_selector(WDEMI_IMidiInPortStatics *self, cwinrt_hstring *out);
 
-/* Windows.Devices.Midi.IMidiNoteOffMessageFactory */
-/* Windows.Devices.Midi.IMidiNoteOffMessageFactory.CreateMidiNoteOffMessage(channel, note, velocity) */
 HRESULT wdemi_midi_note_off_message_factory_create_midi_note_off_message(WDEMI_IMidiNoteOffMessageFactory *self, uint8_t channel, uint8_t note, uint8_t velocity, WDEMI_MidiNoteOffMessage** out);
 
-/* Windows.Devices.Midi.IMidiNoteOnMessageFactory */
-/* Windows.Devices.Midi.IMidiNoteOnMessageFactory.CreateMidiNoteOnMessage(channel, note, velocity) */
 HRESULT wdemi_midi_note_on_message_factory_create_midi_note_on_message(WDEMI_IMidiNoteOnMessageFactory *self, uint8_t channel, uint8_t note, uint8_t velocity, WDEMI_MidiNoteOnMessage** out);
 
-/* Windows.Devices.Midi.IMidiOutPortStatics */
-/* Windows.Devices.Midi.IMidiOutPortStatics.FromIdAsync(deviceId) */
 HRESULT wdemi_midi_out_port_statics_from_id_async(WDEMI_IMidiOutPortStatics *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDEMI_IMidiOutPort** out);
 
-/* Windows.Devices.Midi.IMidiOutPortStatics.GetDeviceSelector() */
 HRESULT wdemi_midi_out_port_statics_get_device_selector(WDEMI_IMidiOutPortStatics *self, cwinrt_hstring *out);
 
-/* Windows.Devices.Midi.IMidiPitchBendChangeMessageFactory */
-/* Windows.Devices.Midi.IMidiPitchBendChangeMessageFactory.CreateMidiPitchBendChangeMessage(channel, bend) */
 HRESULT wdemi_midi_pitch_bend_change_message_factory_create_midi_pitch_bend_change_message(WDEMI_IMidiPitchBendChangeMessageFactory *self, uint8_t channel, uint16_t bend, WDEMI_MidiPitchBendChangeMessage** out);
 
-/* Windows.Devices.Midi.IMidiPolyphonicKeyPressureMessageFactory */
-/* Windows.Devices.Midi.IMidiPolyphonicKeyPressureMessageFactory.CreateMidiPolyphonicKeyPressureMessage(channel, note, pressure) */
 HRESULT wdemi_midi_polyphonic_key_pressure_message_factory_create_midi_polyphonic_key_pressure_message(WDEMI_IMidiPolyphonicKeyPressureMessageFactory *self, uint8_t channel, uint8_t note, uint8_t pressure, WDEMI_MidiPolyphonicKeyPressureMessage** out);
 
-/* Windows.Devices.Midi.IMidiProgramChangeMessageFactory */
-/* Windows.Devices.Midi.IMidiProgramChangeMessageFactory.CreateMidiProgramChangeMessage(channel, program) */
 HRESULT wdemi_midi_program_change_message_factory_create_midi_program_change_message(WDEMI_IMidiProgramChangeMessageFactory *self, uint8_t channel, uint8_t program, WDEMI_MidiProgramChangeMessage** out);
 
-/* Windows.Devices.Midi.IMidiSongPositionPointerMessageFactory */
-/* Windows.Devices.Midi.IMidiSongPositionPointerMessageFactory.CreateMidiSongPositionPointerMessage(beats) */
 HRESULT wdemi_midi_song_position_pointer_message_factory_create_midi_song_position_pointer_message(WDEMI_IMidiSongPositionPointerMessageFactory *self, uint16_t beats, WDEMI_MidiSongPositionPointerMessage** out);
 
-/* Windows.Devices.Midi.IMidiSongSelectMessageFactory */
-/* Windows.Devices.Midi.IMidiSongSelectMessageFactory.CreateMidiSongSelectMessage(song) */
 HRESULT wdemi_midi_song_select_message_factory_create_midi_song_select_message(WDEMI_IMidiSongSelectMessageFactory *self, uint8_t song, WDEMI_MidiSongSelectMessage** out);
 
-/* Windows.Devices.Midi.IMidiSynthesizerStatics */
-/* Windows.Devices.Midi.IMidiSynthesizerStatics.CreateAsync() */
 HRESULT wdemi_midi_synthesizer_statics_create_async(WDEMI_IMidiSynthesizerStatics *self, WF_IAsyncOperation_WDEMI_MidiSynthesizer** out);
 
-/* Windows.Devices.Midi.IMidiSynthesizerStatics.CreateAsync(audioDevice) */
 HRESULT wdemi_midi_synthesizer_statics_create_async_p_p(WDEMI_IMidiSynthesizerStatics *self, WDEEN_DeviceInformation* audioDevice, WF_IAsyncOperation_WDEMI_MidiSynthesizer** out);
 
-/* Windows.Devices.Midi.IMidiSynthesizerStatics.IsSynthesizer(midiDevice) */
 HRESULT wdemi_midi_synthesizer_statics_is_synthesizer(WDEMI_IMidiSynthesizerStatics *self, WDEEN_DeviceInformation* midiDevice, BOOL *out);
 
-/* Windows.Devices.Midi.IMidiSystemExclusiveMessageFactory */
-/* Windows.Devices.Midi.IMidiSystemExclusiveMessageFactory.CreateMidiSystemExclusiveMessage(rawData) */
 HRESULT wdemi_midi_system_exclusive_message_factory_create_midi_system_exclusive_message(WDEMI_IMidiSystemExclusiveMessageFactory *self, WSTST_IBuffer* rawData, WDEMI_MidiSystemExclusiveMessage** out);
 
-/* Windows.Devices.Midi.IMidiTimeCodeMessageFactory */
-/* Windows.Devices.Midi.IMidiTimeCodeMessageFactory.CreateMidiTimeCodeMessage(frameType, values) */
 HRESULT wdemi_midi_time_code_message_factory_create_midi_time_code_message(WDEMI_IMidiTimeCodeMessageFactory *self, uint8_t frameType, uint8_t values, WDEMI_MidiTimeCodeMessage** out);
 
-/* activate Windows.Devices.Midi.MidiActiveSensingMessage */
 HRESULT wdemi_midi_active_sensing_message_new(WDEMI_MidiActiveSensingMessage **out);
 
-/* Windows.Devices.Midi.MidiActiveSensingMessage */
-/* Windows.Devices.Midi.MidiActiveSensingMessage.get_Timestamp() */
 HRESULT wdemi_midi_active_sensing_message_get__timestamp(WDEMI_MidiActiveSensingMessage *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Midi.MidiActiveSensingMessage.get_RawData() */
 HRESULT wdemi_midi_active_sensing_message_get__raw_data(WDEMI_MidiActiveSensingMessage *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.Midi.MidiActiveSensingMessage.get_Type() */
 HRESULT wdemi_midi_active_sensing_message_get__type(WDEMI_MidiActiveSensingMessage *self, WDEMI_MidiMessageType *value);
 
-/* activate Windows.Devices.Midi.MidiChannelPressureMessage */
 HRESULT wdemi_midi_channel_pressure_message_new(WDEMI_MidiChannelPressureMessage **out);
 
-/* Windows.Devices.Midi.MidiChannelPressureMessage */
-/* Windows.Devices.Midi.MidiChannelPressureMessage.get_Channel() */
 HRESULT wdemi_midi_channel_pressure_message_get__channel(WDEMI_MidiChannelPressureMessage *self, uint8_t *value);
 
-/* Windows.Devices.Midi.MidiChannelPressureMessage.get_Pressure() */
 HRESULT wdemi_midi_channel_pressure_message_get__pressure(WDEMI_MidiChannelPressureMessage *self, uint8_t *value);
 
-/* Windows.Devices.Midi.MidiChannelPressureMessage.get_Timestamp() */
 HRESULT wdemi_midi_channel_pressure_message_get__timestamp(WDEMI_MidiChannelPressureMessage *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Midi.MidiChannelPressureMessage.get_RawData() */
 HRESULT wdemi_midi_channel_pressure_message_get__raw_data(WDEMI_MidiChannelPressureMessage *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.Midi.MidiChannelPressureMessage.get_Type() */
 HRESULT wdemi_midi_channel_pressure_message_get__type(WDEMI_MidiChannelPressureMessage *self, WDEMI_MidiMessageType *value);
 
-/* activate Windows.Devices.Midi.MidiContinueMessage */
 HRESULT wdemi_midi_continue_message_new(WDEMI_MidiContinueMessage **out);
 
-/* Windows.Devices.Midi.MidiContinueMessage */
-/* Windows.Devices.Midi.MidiContinueMessage.get_Timestamp() */
 HRESULT wdemi_midi_continue_message_get__timestamp(WDEMI_MidiContinueMessage *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Midi.MidiContinueMessage.get_RawData() */
 HRESULT wdemi_midi_continue_message_get__raw_data(WDEMI_MidiContinueMessage *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.Midi.MidiContinueMessage.get_Type() */
 HRESULT wdemi_midi_continue_message_get__type(WDEMI_MidiContinueMessage *self, WDEMI_MidiMessageType *value);
 
-/* activate Windows.Devices.Midi.MidiControlChangeMessage */
 HRESULT wdemi_midi_control_change_message_new(WDEMI_MidiControlChangeMessage **out);
 
-/* Windows.Devices.Midi.MidiControlChangeMessage */
-/* Windows.Devices.Midi.MidiControlChangeMessage.get_Channel() */
 HRESULT wdemi_midi_control_change_message_get__channel(WDEMI_MidiControlChangeMessage *self, uint8_t *value);
 
-/* Windows.Devices.Midi.MidiControlChangeMessage.get_Controller() */
 HRESULT wdemi_midi_control_change_message_get__controller(WDEMI_MidiControlChangeMessage *self, uint8_t *value);
 
-/* Windows.Devices.Midi.MidiControlChangeMessage.get_ControlValue() */
 HRESULT wdemi_midi_control_change_message_get__control_value(WDEMI_MidiControlChangeMessage *self, uint8_t *value);
 
-/* Windows.Devices.Midi.MidiControlChangeMessage.get_Timestamp() */
 HRESULT wdemi_midi_control_change_message_get__timestamp(WDEMI_MidiControlChangeMessage *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Midi.MidiControlChangeMessage.get_RawData() */
 HRESULT wdemi_midi_control_change_message_get__raw_data(WDEMI_MidiControlChangeMessage *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.Midi.MidiControlChangeMessage.get_Type() */
 HRESULT wdemi_midi_control_change_message_get__type(WDEMI_MidiControlChangeMessage *self, WDEMI_MidiMessageType *value);
 
-/* activate Windows.Devices.Midi.MidiInPort */
 HRESULT wdemi_midi_in_port_new(WDEMI_MidiInPort **out);
 
-/* Windows.Devices.Midi.MidiInPort */
-/* Windows.Devices.Midi.MidiInPort.get_DeviceId() */
 HRESULT wdemi_midi_in_port_get__device_id(WDEMI_MidiInPort *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Midi.MidiInPort.Close() */
 HRESULT wdemi_midi_in_port_close(WDEMI_MidiInPort *self);
 
-/* Windows.Devices.Midi.MidiInPort.FromIdAsync(deviceId) */
 HRESULT wdemi_midi_in_port_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDEMI_MidiInPort** out);
 
-/* Windows.Devices.Midi.MidiInPort.GetDeviceSelector() */
 HRESULT wdemi_midi_in_port_get_device_selector(cwinrt_hstring *out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdemi_midi_in_port_on_message_received(WDEMI_MidiInPort *self, cwinrt_event_fn fn, void *ctx);
 void wdemi_midi_in_port_off_message_received(WDEMI_MidiInPort *self, cwinrt_token token);
 
-/* activate Windows.Devices.Midi.MidiMessageReceivedEventArgs */
 HRESULT wdemi_midi_message_received_event_args_new(WDEMI_MidiMessageReceivedEventArgs **out);
 
-/* Windows.Devices.Midi.MidiMessageReceivedEventArgs */
-/* Windows.Devices.Midi.MidiMessageReceivedEventArgs.get_Message() */
 HRESULT wdemi_midi_message_received_event_args_get__message(WDEMI_MidiMessageReceivedEventArgs *self, WDEMI_IMidiMessage** value);
 
-/* activate Windows.Devices.Midi.MidiNoteOffMessage */
 HRESULT wdemi_midi_note_off_message_new(WDEMI_MidiNoteOffMessage **out);
 
-/* Windows.Devices.Midi.MidiNoteOffMessage */
-/* Windows.Devices.Midi.MidiNoteOffMessage.get_Channel() */
 HRESULT wdemi_midi_note_off_message_get__channel(WDEMI_MidiNoteOffMessage *self, uint8_t *value);
 
-/* Windows.Devices.Midi.MidiNoteOffMessage.get_Note() */
 HRESULT wdemi_midi_note_off_message_get__note(WDEMI_MidiNoteOffMessage *self, uint8_t *value);
 
-/* Windows.Devices.Midi.MidiNoteOffMessage.get_Velocity() */
 HRESULT wdemi_midi_note_off_message_get__velocity(WDEMI_MidiNoteOffMessage *self, uint8_t *value);
 
-/* Windows.Devices.Midi.MidiNoteOffMessage.get_Timestamp() */
 HRESULT wdemi_midi_note_off_message_get__timestamp(WDEMI_MidiNoteOffMessage *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Midi.MidiNoteOffMessage.get_RawData() */
 HRESULT wdemi_midi_note_off_message_get__raw_data(WDEMI_MidiNoteOffMessage *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.Midi.MidiNoteOffMessage.get_Type() */
 HRESULT wdemi_midi_note_off_message_get__type(WDEMI_MidiNoteOffMessage *self, WDEMI_MidiMessageType *value);
 
-/* activate Windows.Devices.Midi.MidiNoteOnMessage */
 HRESULT wdemi_midi_note_on_message_new(WDEMI_MidiNoteOnMessage **out);
 
-/* Windows.Devices.Midi.MidiNoteOnMessage */
-/* Windows.Devices.Midi.MidiNoteOnMessage.get_Channel() */
 HRESULT wdemi_midi_note_on_message_get__channel(WDEMI_MidiNoteOnMessage *self, uint8_t *value);
 
-/* Windows.Devices.Midi.MidiNoteOnMessage.get_Note() */
 HRESULT wdemi_midi_note_on_message_get__note(WDEMI_MidiNoteOnMessage *self, uint8_t *value);
 
-/* Windows.Devices.Midi.MidiNoteOnMessage.get_Velocity() */
 HRESULT wdemi_midi_note_on_message_get__velocity(WDEMI_MidiNoteOnMessage *self, uint8_t *value);
 
-/* Windows.Devices.Midi.MidiNoteOnMessage.get_Timestamp() */
 HRESULT wdemi_midi_note_on_message_get__timestamp(WDEMI_MidiNoteOnMessage *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Midi.MidiNoteOnMessage.get_RawData() */
 HRESULT wdemi_midi_note_on_message_get__raw_data(WDEMI_MidiNoteOnMessage *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.Midi.MidiNoteOnMessage.get_Type() */
 HRESULT wdemi_midi_note_on_message_get__type(WDEMI_MidiNoteOnMessage *self, WDEMI_MidiMessageType *value);
 
-/* activate Windows.Devices.Midi.MidiOutPort */
 HRESULT wdemi_midi_out_port_new(WDEMI_MidiOutPort **out);
 
-/* Windows.Devices.Midi.MidiOutPort */
-/* Windows.Devices.Midi.MidiOutPort.SendMessage(midiMessage) */
 HRESULT wdemi_midi_out_port_send_message(WDEMI_MidiOutPort *self, WDEMI_IMidiMessage* midiMessage);
 
-/* Windows.Devices.Midi.MidiOutPort.SendBuffer(midiData) */
 HRESULT wdemi_midi_out_port_send_buffer(WDEMI_MidiOutPort *self, WSTST_IBuffer* midiData);
 
-/* Windows.Devices.Midi.MidiOutPort.get_DeviceId() */
 HRESULT wdemi_midi_out_port_get__device_id(WDEMI_MidiOutPort *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Midi.MidiOutPort.Close() */
 HRESULT wdemi_midi_out_port_close(WDEMI_MidiOutPort *self);
 
-/* Windows.Devices.Midi.MidiOutPort.FromIdAsync(deviceId) */
 HRESULT wdemi_midi_out_port_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDEMI_IMidiOutPort** out);
 
-/* Windows.Devices.Midi.MidiOutPort.GetDeviceSelector() */
 HRESULT wdemi_midi_out_port_get_device_selector(cwinrt_hstring *out);
 
-/* activate Windows.Devices.Midi.MidiPitchBendChangeMessage */
 HRESULT wdemi_midi_pitch_bend_change_message_new(WDEMI_MidiPitchBendChangeMessage **out);
 
-/* Windows.Devices.Midi.MidiPitchBendChangeMessage */
-/* Windows.Devices.Midi.MidiPitchBendChangeMessage.get_Channel() */
 HRESULT wdemi_midi_pitch_bend_change_message_get__channel(WDEMI_MidiPitchBendChangeMessage *self, uint8_t *value);
 
-/* Windows.Devices.Midi.MidiPitchBendChangeMessage.get_Bend() */
 HRESULT wdemi_midi_pitch_bend_change_message_get__bend(WDEMI_MidiPitchBendChangeMessage *self, uint16_t *value);
 
-/* Windows.Devices.Midi.MidiPitchBendChangeMessage.get_Timestamp() */
 HRESULT wdemi_midi_pitch_bend_change_message_get__timestamp(WDEMI_MidiPitchBendChangeMessage *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Midi.MidiPitchBendChangeMessage.get_RawData() */
 HRESULT wdemi_midi_pitch_bend_change_message_get__raw_data(WDEMI_MidiPitchBendChangeMessage *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.Midi.MidiPitchBendChangeMessage.get_Type() */
 HRESULT wdemi_midi_pitch_bend_change_message_get__type(WDEMI_MidiPitchBendChangeMessage *self, WDEMI_MidiMessageType *value);
 
-/* activate Windows.Devices.Midi.MidiPolyphonicKeyPressureMessage */
 HRESULT wdemi_midi_polyphonic_key_pressure_message_new(WDEMI_MidiPolyphonicKeyPressureMessage **out);
 
-/* Windows.Devices.Midi.MidiPolyphonicKeyPressureMessage */
-/* Windows.Devices.Midi.MidiPolyphonicKeyPressureMessage.get_Channel() */
 HRESULT wdemi_midi_polyphonic_key_pressure_message_get__channel(WDEMI_MidiPolyphonicKeyPressureMessage *self, uint8_t *value);
 
-/* Windows.Devices.Midi.MidiPolyphonicKeyPressureMessage.get_Note() */
 HRESULT wdemi_midi_polyphonic_key_pressure_message_get__note(WDEMI_MidiPolyphonicKeyPressureMessage *self, uint8_t *value);
 
-/* Windows.Devices.Midi.MidiPolyphonicKeyPressureMessage.get_Pressure() */
 HRESULT wdemi_midi_polyphonic_key_pressure_message_get__pressure(WDEMI_MidiPolyphonicKeyPressureMessage *self, uint8_t *value);
 
-/* Windows.Devices.Midi.MidiPolyphonicKeyPressureMessage.get_Timestamp() */
 HRESULT wdemi_midi_polyphonic_key_pressure_message_get__timestamp(WDEMI_MidiPolyphonicKeyPressureMessage *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Midi.MidiPolyphonicKeyPressureMessage.get_RawData() */
 HRESULT wdemi_midi_polyphonic_key_pressure_message_get__raw_data(WDEMI_MidiPolyphonicKeyPressureMessage *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.Midi.MidiPolyphonicKeyPressureMessage.get_Type() */
 HRESULT wdemi_midi_polyphonic_key_pressure_message_get__type(WDEMI_MidiPolyphonicKeyPressureMessage *self, WDEMI_MidiMessageType *value);
 
-/* activate Windows.Devices.Midi.MidiProgramChangeMessage */
 HRESULT wdemi_midi_program_change_message_new(WDEMI_MidiProgramChangeMessage **out);
 
-/* Windows.Devices.Midi.MidiProgramChangeMessage */
-/* Windows.Devices.Midi.MidiProgramChangeMessage.get_Channel() */
 HRESULT wdemi_midi_program_change_message_get__channel(WDEMI_MidiProgramChangeMessage *self, uint8_t *value);
 
-/* Windows.Devices.Midi.MidiProgramChangeMessage.get_Program() */
 HRESULT wdemi_midi_program_change_message_get__program(WDEMI_MidiProgramChangeMessage *self, uint8_t *value);
 
-/* Windows.Devices.Midi.MidiProgramChangeMessage.get_Timestamp() */
 HRESULT wdemi_midi_program_change_message_get__timestamp(WDEMI_MidiProgramChangeMessage *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Midi.MidiProgramChangeMessage.get_RawData() */
 HRESULT wdemi_midi_program_change_message_get__raw_data(WDEMI_MidiProgramChangeMessage *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.Midi.MidiProgramChangeMessage.get_Type() */
 HRESULT wdemi_midi_program_change_message_get__type(WDEMI_MidiProgramChangeMessage *self, WDEMI_MidiMessageType *value);
 
-/* activate Windows.Devices.Midi.MidiSongPositionPointerMessage */
 HRESULT wdemi_midi_song_position_pointer_message_new(WDEMI_MidiSongPositionPointerMessage **out);
 
-/* Windows.Devices.Midi.MidiSongPositionPointerMessage */
-/* Windows.Devices.Midi.MidiSongPositionPointerMessage.get_Beats() */
 HRESULT wdemi_midi_song_position_pointer_message_get__beats(WDEMI_MidiSongPositionPointerMessage *self, uint16_t *value);
 
-/* Windows.Devices.Midi.MidiSongPositionPointerMessage.get_Timestamp() */
 HRESULT wdemi_midi_song_position_pointer_message_get__timestamp(WDEMI_MidiSongPositionPointerMessage *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Midi.MidiSongPositionPointerMessage.get_RawData() */
 HRESULT wdemi_midi_song_position_pointer_message_get__raw_data(WDEMI_MidiSongPositionPointerMessage *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.Midi.MidiSongPositionPointerMessage.get_Type() */
 HRESULT wdemi_midi_song_position_pointer_message_get__type(WDEMI_MidiSongPositionPointerMessage *self, WDEMI_MidiMessageType *value);
 
-/* activate Windows.Devices.Midi.MidiSongSelectMessage */
 HRESULT wdemi_midi_song_select_message_new(WDEMI_MidiSongSelectMessage **out);
 
-/* Windows.Devices.Midi.MidiSongSelectMessage */
-/* Windows.Devices.Midi.MidiSongSelectMessage.get_Song() */
 HRESULT wdemi_midi_song_select_message_get__song(WDEMI_MidiSongSelectMessage *self, uint8_t *value);
 
-/* Windows.Devices.Midi.MidiSongSelectMessage.get_Timestamp() */
 HRESULT wdemi_midi_song_select_message_get__timestamp(WDEMI_MidiSongSelectMessage *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Midi.MidiSongSelectMessage.get_RawData() */
 HRESULT wdemi_midi_song_select_message_get__raw_data(WDEMI_MidiSongSelectMessage *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.Midi.MidiSongSelectMessage.get_Type() */
 HRESULT wdemi_midi_song_select_message_get__type(WDEMI_MidiSongSelectMessage *self, WDEMI_MidiMessageType *value);
 
-/* activate Windows.Devices.Midi.MidiStartMessage */
 HRESULT wdemi_midi_start_message_new(WDEMI_MidiStartMessage **out);
 
-/* Windows.Devices.Midi.MidiStartMessage */
-/* Windows.Devices.Midi.MidiStartMessage.get_Timestamp() */
 HRESULT wdemi_midi_start_message_get__timestamp(WDEMI_MidiStartMessage *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Midi.MidiStartMessage.get_RawData() */
 HRESULT wdemi_midi_start_message_get__raw_data(WDEMI_MidiStartMessage *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.Midi.MidiStartMessage.get_Type() */
 HRESULT wdemi_midi_start_message_get__type(WDEMI_MidiStartMessage *self, WDEMI_MidiMessageType *value);
 
-/* activate Windows.Devices.Midi.MidiStopMessage */
 HRESULT wdemi_midi_stop_message_new(WDEMI_MidiStopMessage **out);
 
-/* Windows.Devices.Midi.MidiStopMessage */
-/* Windows.Devices.Midi.MidiStopMessage.get_Timestamp() */
 HRESULT wdemi_midi_stop_message_get__timestamp(WDEMI_MidiStopMessage *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Midi.MidiStopMessage.get_RawData() */
 HRESULT wdemi_midi_stop_message_get__raw_data(WDEMI_MidiStopMessage *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.Midi.MidiStopMessage.get_Type() */
 HRESULT wdemi_midi_stop_message_get__type(WDEMI_MidiStopMessage *self, WDEMI_MidiMessageType *value);
 
-/* activate Windows.Devices.Midi.MidiSynthesizer */
 HRESULT wdemi_midi_synthesizer_new(WDEMI_MidiSynthesizer **out);
 
-/* Windows.Devices.Midi.MidiSynthesizer */
-/* Windows.Devices.Midi.MidiSynthesizer.get_AudioDevice() */
 HRESULT wdemi_midi_synthesizer_get__audio_device(WDEMI_MidiSynthesizer *self, WDEEN_DeviceInformation** value);
 
-/* Windows.Devices.Midi.MidiSynthesizer.get_Volume() */
 HRESULT wdemi_midi_synthesizer_get__volume(WDEMI_MidiSynthesizer *self, double *value);
 
-/* Windows.Devices.Midi.MidiSynthesizer.put_Volume() */
 HRESULT wdemi_midi_synthesizer_put__volume(WDEMI_MidiSynthesizer *self, double value);
 
-/* Windows.Devices.Midi.MidiSynthesizer.SendMessage(midiMessage) */
 HRESULT wdemi_midi_synthesizer_send_message(WDEMI_MidiSynthesizer *self, WDEMI_IMidiMessage* midiMessage);
 
-/* Windows.Devices.Midi.MidiSynthesizer.SendBuffer(midiData) */
 HRESULT wdemi_midi_synthesizer_send_buffer(WDEMI_MidiSynthesizer *self, WSTST_IBuffer* midiData);
 
-/* Windows.Devices.Midi.MidiSynthesizer.get_DeviceId() */
 HRESULT wdemi_midi_synthesizer_get__device_id(WDEMI_MidiSynthesizer *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Midi.MidiSynthesizer.Close() */
 HRESULT wdemi_midi_synthesizer_close(WDEMI_MidiSynthesizer *self);
 
-/* Windows.Devices.Midi.MidiSynthesizer.CreateAsync() */
 HRESULT wdemi_midi_synthesizer_create_async(WF_IAsyncOperation_WDEMI_MidiSynthesizer** out);
 
-/* Windows.Devices.Midi.MidiSynthesizer.CreateAsync(audioDevice) */
 HRESULT wdemi_midi_synthesizer_create_async_p_p(WDEEN_DeviceInformation* audioDevice, WF_IAsyncOperation_WDEMI_MidiSynthesizer** out);
 
-/* Windows.Devices.Midi.MidiSynthesizer.IsSynthesizer(midiDevice) */
 HRESULT wdemi_midi_synthesizer_is_synthesizer(WDEEN_DeviceInformation* midiDevice, BOOL *out);
 
-/* activate Windows.Devices.Midi.MidiSystemExclusiveMessage */
 HRESULT wdemi_midi_system_exclusive_message_new(WDEMI_MidiSystemExclusiveMessage **out);
 
-/* Windows.Devices.Midi.MidiSystemExclusiveMessage */
-/* Windows.Devices.Midi.MidiSystemExclusiveMessage.get_Timestamp() */
 HRESULT wdemi_midi_system_exclusive_message_get__timestamp(WDEMI_MidiSystemExclusiveMessage *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Midi.MidiSystemExclusiveMessage.get_RawData() */
 HRESULT wdemi_midi_system_exclusive_message_get__raw_data(WDEMI_MidiSystemExclusiveMessage *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.Midi.MidiSystemExclusiveMessage.get_Type() */
 HRESULT wdemi_midi_system_exclusive_message_get__type(WDEMI_MidiSystemExclusiveMessage *self, WDEMI_MidiMessageType *value);
 
-/* activate Windows.Devices.Midi.MidiSystemResetMessage */
 HRESULT wdemi_midi_system_reset_message_new(WDEMI_MidiSystemResetMessage **out);
 
-/* Windows.Devices.Midi.MidiSystemResetMessage */
-/* Windows.Devices.Midi.MidiSystemResetMessage.get_Timestamp() */
 HRESULT wdemi_midi_system_reset_message_get__timestamp(WDEMI_MidiSystemResetMessage *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Midi.MidiSystemResetMessage.get_RawData() */
 HRESULT wdemi_midi_system_reset_message_get__raw_data(WDEMI_MidiSystemResetMessage *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.Midi.MidiSystemResetMessage.get_Type() */
 HRESULT wdemi_midi_system_reset_message_get__type(WDEMI_MidiSystemResetMessage *self, WDEMI_MidiMessageType *value);
 
-/* activate Windows.Devices.Midi.MidiTimeCodeMessage */
 HRESULT wdemi_midi_time_code_message_new(WDEMI_MidiTimeCodeMessage **out);
 
-/* Windows.Devices.Midi.MidiTimeCodeMessage */
-/* Windows.Devices.Midi.MidiTimeCodeMessage.get_FrameType() */
 HRESULT wdemi_midi_time_code_message_get__frame_type(WDEMI_MidiTimeCodeMessage *self, uint8_t *value);
 
-/* Windows.Devices.Midi.MidiTimeCodeMessage.get_Values() */
 HRESULT wdemi_midi_time_code_message_get__values(WDEMI_MidiTimeCodeMessage *self, uint8_t *value);
 
-/* Windows.Devices.Midi.MidiTimeCodeMessage.get_Timestamp() */
 HRESULT wdemi_midi_time_code_message_get__timestamp(WDEMI_MidiTimeCodeMessage *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Midi.MidiTimeCodeMessage.get_RawData() */
 HRESULT wdemi_midi_time_code_message_get__raw_data(WDEMI_MidiTimeCodeMessage *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.Midi.MidiTimeCodeMessage.get_Type() */
 HRESULT wdemi_midi_time_code_message_get__type(WDEMI_MidiTimeCodeMessage *self, WDEMI_MidiMessageType *value);
 
-/* activate Windows.Devices.Midi.MidiTimingClockMessage */
 HRESULT wdemi_midi_timing_clock_message_new(WDEMI_MidiTimingClockMessage **out);
 
-/* Windows.Devices.Midi.MidiTimingClockMessage */
-/* Windows.Devices.Midi.MidiTimingClockMessage.get_Timestamp() */
 HRESULT wdemi_midi_timing_clock_message_get__timestamp(WDEMI_MidiTimingClockMessage *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Midi.MidiTimingClockMessage.get_RawData() */
 HRESULT wdemi_midi_timing_clock_message_get__raw_data(WDEMI_MidiTimingClockMessage *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.Midi.MidiTimingClockMessage.get_Type() */
 HRESULT wdemi_midi_timing_clock_message_get__type(WDEMI_MidiTimingClockMessage *self, WDEMI_MidiMessageType *value);
 
-/* activate Windows.Devices.Midi.MidiTuneRequestMessage */
 HRESULT wdemi_midi_tune_request_message_new(WDEMI_MidiTuneRequestMessage **out);
 
-/* Windows.Devices.Midi.MidiTuneRequestMessage */
-/* Windows.Devices.Midi.MidiTuneRequestMessage.get_Timestamp() */
 HRESULT wdemi_midi_tune_request_message_get__timestamp(WDEMI_MidiTuneRequestMessage *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Midi.MidiTuneRequestMessage.get_RawData() */
 HRESULT wdemi_midi_tune_request_message_get__raw_data(WDEMI_MidiTuneRequestMessage *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.Midi.MidiTuneRequestMessage.get_Type() */
 HRESULT wdemi_midi_tune_request_message_get__type(WDEMI_MidiTuneRequestMessage *self, WDEMI_MidiMessageType *value);
 
-/* Windows.Devices.Midi.IMidiChannelPressureMessage */
-/* Windows.Devices.Midi.IMidiControlChangeMessage */
-/* Windows.Devices.Midi.IMidiInPort */
-/* Windows.Devices.Midi.IMidiMessageReceivedEventArgs */
-/* Windows.Devices.Midi.IMidiNoteOffMessage */
-/* Windows.Devices.Midi.IMidiNoteOnMessage */
-/* Windows.Devices.Midi.IMidiPitchBendChangeMessage */
-/* Windows.Devices.Midi.IMidiPolyphonicKeyPressureMessage */
-/* Windows.Devices.Midi.IMidiProgramChangeMessage */
-/* Windows.Devices.Midi.IMidiSongPositionPointerMessage */
-/* Windows.Devices.Midi.IMidiSongSelectMessage */
-/* Windows.Devices.Midi.IMidiSynthesizer */
-/* Windows.Devices.Midi.IMidiTimeCodeMessage */
-/* Windows.Devices.Midi.IMidiOutPort */
-/* Windows.Devices.Midi.IMidiMessage */
-/* Windows.Devices.Midi.IMidiMessage.get_Timestamp() */
 HRESULT wdemi_midi_message_get__timestamp(WDEMI_IMidiMessage *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Midi.IMidiMessage.get_RawData() */
 HRESULT wdemi_midi_message_get__raw_data(WDEMI_IMidiMessage *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.Midi.IMidiMessage.get_Type() */
 HRESULT wdemi_midi_message_get__type(WDEMI_IMidiMessage *self, WDEMI_MidiMessageType *value);
 
 #endif /* CWINRT_WINDOWS_DEVICES_MIDI_H */

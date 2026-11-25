@@ -17,7 +17,6 @@ typedef struct sig_genv {
 	uint32_t           count;
 } sig_genv;
 
-/* Growable C parameter-list accumulator (NUL-terminated). */
 typedef struct sig_outbuf {
 	char  *buf;
 	size_t cap;
@@ -420,8 +419,6 @@ static int resolve_extra_param_type(winmd_meta const *m, char const *name, char 
 	return -1;
 }
 
-/* Emit one Param-table-only parameter (no matching blob entry). Returns 1 when
-   the name is reserved and was skipped, 0 on success, -1 on error. */
 static int append_one_extra_param(sig_outbuf *o, winmd_meta const *m, char const *pn, uint32_t ni) {
 	char ptype [128];
 	char pname [64];
@@ -465,9 +462,6 @@ typedef struct sig_emit {
 	sig_outbuf              *o;
 } sig_emit;
 
-/* Read the MethodDefSig header: calling convention then, if GENERIC, the
-   generic argument list. Fills gen_ptrs[] (decoded slots, padded with empty
-   slots) and stores the generic arg count in *gen. */
 static int sig_read_gen_slots(sig_reader *sr, winmd_meta const *m, char *gen_buf, char const **gen_ptrs, uint32_t gen) {
 	sig_genv const empty = {NULL, 0};
 	sig_dec        d     = {sr, m, &empty};
@@ -495,8 +489,6 @@ static int sig_read_gen_header(sig_reader *sr, winmd_meta const *m, char *gen_bu
 	return 0;
 }
 
-/* Append one already-decoded parameter (`ptype`, size SIG_TYPE_BUFSZ) to the C
-   parameter list. A generic items/values param degrades to the element array. */
 static int sig_append_param(sig_emit *e, char const *pn, bool byref, uint32_t i) {
 	char     *ptype = e->ptype;
 	sig_genv const *gv = e->gv;
@@ -512,7 +504,6 @@ static int sig_append_param(sig_emit *e, char const *pn, bool byref, uint32_t i)
 	return sig_cat(e->o, pchunk);
 }
 
-/* Append the WinRT [out] retval as a trailing pointer parameter named `outn`. */
 static int sig_append_retval(sig_outbuf *o, char const *ret_type, char const *outn) {
 	char   elem [512];
 	char   outp [1024];
@@ -551,8 +542,6 @@ static int sig_finish_retval(winmd_method_sig *out, char const *method_name, cha
 	return 0;
 }
 
-/* Emit the implicit `this` parameter. ECMA-335 ParamCount excludes this and the
-   blob carries no this slot, so it is synthesized here for instance methods. */
 static int sig_emit_self_param(sig_outbuf *o, char const *self_c_type, bool is_static) {
 	if (is_static || !self_c_type) return 0;
 	if (sig_cat(o, self_c_type) != 0) return -1;

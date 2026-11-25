@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WSYPOTH_IPowerThermalChannelDataConsumerFactory WSYPOTH_IPowerThermalChannelDataConsumerFactory;
 typedef struct WSYPOTH_IPowerThermalChannelFinderStatics WSYPOTH_IPowerThermalChannelFinderStatics;
 typedef struct WSYPOTH_PowerThermalChannelFinder WSYPOTH_PowerThermalChannelFinder;
@@ -29,7 +28,6 @@ typedef struct WSYPOTH_IPowerThermalChannelDataConsumer WSYPOTH_IPowerThermalCha
 typedef struct WSYPOTH_IPowerThermalChannelConfiguration WSYPOTH_IPowerThermalChannelConfiguration;
 typedef struct WSYPOTH_IPowerThermalChannelDiagnostics WSYPOTH_IPowerThermalChannelDiagnostics;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IMapView_WSYPOTH_PowerThermalChannelId_WSYPOTH_PowerThermalChannelConfiguration
 #define CWINRT_FWD_WFOCO_IMapView_WSYPOTH_PowerThermalChannelId_WSYPOTH_PowerThermalChannelConfiguration
 typedef struct WFOCO_IMapView_WSYPOTH_PowerThermalChannelId_WSYPOTH_PowerThermalChannelConfiguration WFOCO_IMapView_WSYPOTH_PowerThermalChannelId_WSYPOTH_PowerThermalChannelConfiguration;
@@ -79,7 +77,6 @@ struct WSYPOTH_PowerThermalChannelData {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -120,91 +117,57 @@ static const IID CWINRT_IID_WSYPOTH_IPowerThermalChannelConfiguration CWINRT_MAY
 static const IID CWINRT_IID_WSYPOTH_IPowerThermalChannelDiagnostics CWINRT_MAYBE_UNUSED = { 0x628FD5C4, 0x49B7, 0x508F, { 0xAD, 0x9F, 0x23, 0x09, 0xB1, 0x16, 0x8A, 0xAD } };
 #endif
 
-/* Methods */
-
-/* Windows.System.Power.Thermal.IPowerThermalChannelDataConsumerFactory */
-/* Windows.System.Power.Thermal.IPowerThermalChannelDataConsumerFactory.CreateInstance(channelIds) */
 HRESULT wsypoth_power_thermal_channel_data_consumer_factory_create_instance(WSYPOTH_IPowerThermalChannelDataConsumerFactory *self, WSYPOTH_PowerThermalChannelId *channelIds, uint32_t channelIds_len, WSYPOTH_PowerThermalChannelDataConsumer** out);
 
-/* Windows.System.Power.Thermal.IPowerThermalChannelFinderStatics */
-/* Windows.System.Power.Thermal.IPowerThermalChannelFinderStatics.FindChannels(channelInterfaceType) */
 HRESULT wsypoth_power_thermal_channel_finder_statics_find_channels(WSYPOTH_IPowerThermalChannelFinderStatics *self, GUID channelInterfaceType, WSYPOTH_PowerThermalChannelId **out, uint32_t *out_len);
 
-/* activate Windows.System.Power.Thermal.PowerThermalChannelFinder */
 HRESULT wsypoth_power_thermal_channel_finder_new(WSYPOTH_PowerThermalChannelFinder **out);
 
-/* Windows.System.Power.Thermal.PowerThermalChannelFinder */
-/* Windows.System.Power.Thermal.PowerThermalChannelFinder.FindChannels(channelInterfaceType) */
 HRESULT wsypoth_power_thermal_channel_finder_find_channels(GUID channelInterfaceType, WSYPOTH_PowerThermalChannelId **out, uint32_t *out_len);
 
-/* Windows.System.Power.Thermal.IPowerThermalChannelDataProducerFactory */
-/* Windows.System.Power.Thermal.IPowerThermalChannelDataProducerFactory.CreateInstance(channelIds) */
 HRESULT wsypoth_power_thermal_channel_data_producer_factory_create_instance(WSYPOTH_IPowerThermalChannelDataProducerFactory *self, WSYPOTH_PowerThermalChannelId *channelIds, uint32_t channelIds_len, WSYPOTH_PowerThermalChannelDataProducer** out);
 
-/* activate Windows.System.Power.Thermal.PowerThermalChannelDataReceivedEventArgs */
 HRESULT wsypoth_power_thermal_channel_data_received_event_args_new(WSYPOTH_PowerThermalChannelDataReceivedEventArgs **out);
 
-/* Windows.System.Power.Thermal.PowerThermalChannelDataReceivedEventArgs */
-/* Windows.System.Power.Thermal.PowerThermalChannelDataReceivedEventArgs.GetData() */
 HRESULT wsypoth_power_thermal_channel_data_received_event_args_get_data(WSYPOTH_PowerThermalChannelDataReceivedEventArgs *self, WSYPOTH_PowerThermalChannelData **out, uint32_t *out_len);
 
-/* activate Windows.System.Power.Thermal.PowerThermalChannelDataProducer */
 HRESULT wsypoth_power_thermal_channel_data_producer_new(WSYPOTH_PowerThermalChannelDataProducer **out);
 
-/* Windows.System.Power.Thermal.PowerThermalChannelDataProducer */
-/* Windows.System.Power.Thermal.PowerThermalChannelDataProducer.GetChannelIds() */
 HRESULT wsypoth_power_thermal_channel_data_producer_get_channel_ids(WSYPOTH_PowerThermalChannelDataProducer *self, WSYPOTH_PowerThermalChannelId **out, uint32_t *out_len);
 
-/* Windows.System.Power.Thermal.PowerThermalChannelDataProducer.GetChannelConfigurations() */
 HRESULT wsypoth_power_thermal_channel_data_producer_get_channel_configurations(WSYPOTH_PowerThermalChannelDataProducer *self, WFOCO_IMapView_WSYPOTH_PowerThermalChannelId_WSYPOTH_PowerThermalChannelConfiguration** out);
 
-/* Windows.System.Power.Thermal.PowerThermalChannelDataProducer.DisableChannel(channelId) */
 HRESULT wsypoth_power_thermal_channel_data_producer_disable_channel(WSYPOTH_PowerThermalChannelDataProducer *self, WSYPOTH_PowerThermalChannelId channelId);
 
-/* Windows.System.Power.Thermal.PowerThermalChannelDataProducer.Start() */
 HRESULT wsypoth_power_thermal_channel_data_producer_start(WSYPOTH_PowerThermalChannelDataProducer *self);
 
-/* Windows.System.Power.Thermal.PowerThermalChannelDataProducer.Stop() */
 HRESULT wsypoth_power_thermal_channel_data_producer_stop(WSYPOTH_PowerThermalChannelDataProducer *self);
 
-/* Windows.System.Power.Thermal.PowerThermalChannelDataProducer.PublishInputChannelData(data) */
 HRESULT wsypoth_power_thermal_channel_data_producer_publish_input_channel_data(WSYPOTH_PowerThermalChannelDataProducer *self, WSYPOTH_PowerThermalChannelData *data, uint32_t data_len);
 
-/* Windows.System.Power.Thermal.PowerThermalChannelDataProducer.get_BackEndStatus() */
 HRESULT wsypoth_power_thermal_channel_data_producer_get__back_end_status(WSYPOTH_PowerThermalChannelDataProducer *self, WSYPOTH_PowerThermalBackEndStatus *value);
 
-/* Windows.System.Power.Thermal.PowerThermalChannelDataProducer.Close() */
 HRESULT wsypoth_power_thermal_channel_data_producer_close(WSYPOTH_PowerThermalChannelDataProducer *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsypoth_power_thermal_channel_data_producer_on_back_end_status_changed(WSYPOTH_PowerThermalChannelDataProducer *self, cwinrt_event_fn fn, void *ctx);
 void wsypoth_power_thermal_channel_data_producer_off_back_end_status_changed(WSYPOTH_PowerThermalChannelDataProducer *self, cwinrt_token token);
 
-/* activate Windows.System.Power.Thermal.PowerThermalChannelDataConsumer */
 HRESULT wsypoth_power_thermal_channel_data_consumer_new(WSYPOTH_PowerThermalChannelDataConsumer **out);
 
-/* Windows.System.Power.Thermal.PowerThermalChannelDataConsumer */
-/* Windows.System.Power.Thermal.PowerThermalChannelDataConsumer.GetChannelIds() */
 HRESULT wsypoth_power_thermal_channel_data_consumer_get_channel_ids(WSYPOTH_PowerThermalChannelDataConsumer *self, WSYPOTH_PowerThermalChannelId **out, uint32_t *out_len);
 
-/* Windows.System.Power.Thermal.PowerThermalChannelDataConsumer.GetChannelConfigurations() */
 HRESULT wsypoth_power_thermal_channel_data_consumer_get_channel_configurations(WSYPOTH_PowerThermalChannelDataConsumer *self, WFOCO_IMapView_WSYPOTH_PowerThermalChannelId_WSYPOTH_PowerThermalChannelConfiguration** out);
 
-/* Windows.System.Power.Thermal.PowerThermalChannelDataConsumer.Start() */
 HRESULT wsypoth_power_thermal_channel_data_consumer_start(WSYPOTH_PowerThermalChannelDataConsumer *self);
 
-/* Windows.System.Power.Thermal.PowerThermalChannelDataConsumer.Stop() */
 HRESULT wsypoth_power_thermal_channel_data_consumer_stop(WSYPOTH_PowerThermalChannelDataConsumer *self);
 
-/* Windows.System.Power.Thermal.PowerThermalChannelDataConsumer.get_BackEndStatus() */
 HRESULT wsypoth_power_thermal_channel_data_consumer_get__back_end_status(WSYPOTH_PowerThermalChannelDataConsumer *self, WSYPOTH_PowerThermalBackEndStatus *value);
 
-/* Windows.System.Power.Thermal.PowerThermalChannelDataConsumer.Close() */
 HRESULT wsypoth_power_thermal_channel_data_consumer_close(WSYPOTH_PowerThermalChannelDataConsumer *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsypoth_power_thermal_channel_data_consumer_on_channel_data_received(WSYPOTH_PowerThermalChannelDataConsumer *self, cwinrt_event_fn fn, void *ctx);
@@ -213,38 +176,22 @@ void wsypoth_power_thermal_channel_data_consumer_off_channel_data_received(WSYPO
 cwinrt_token wsypoth_power_thermal_channel_data_consumer_on_back_end_status_changed(WSYPOTH_PowerThermalChannelDataConsumer *self, cwinrt_event_fn fn, void *ctx);
 void wsypoth_power_thermal_channel_data_consumer_off_back_end_status_changed(WSYPOTH_PowerThermalChannelDataConsumer *self, cwinrt_token token);
 
-/* activate Windows.System.Power.Thermal.PowerThermalChannelConfiguration */
 HRESULT wsypoth_power_thermal_channel_configuration_new(WSYPOTH_PowerThermalChannelConfiguration **out);
 
-/* Windows.System.Power.Thermal.PowerThermalChannelConfiguration */
-/* Windows.System.Power.Thermal.PowerThermalChannelConfiguration.get_Id() */
 HRESULT wsypoth_power_thermal_channel_configuration_get__id(WSYPOTH_PowerThermalChannelConfiguration *self, WSYPOTH_PowerThermalChannelId *value);
 
-/* Windows.System.Power.Thermal.PowerThermalChannelConfiguration.get_ConfigurationString() */
 HRESULT wsypoth_power_thermal_channel_configuration_get__configuration_string(WSYPOTH_PowerThermalChannelConfiguration *self, cwinrt_hstring *value);
 
-/* Windows.System.Power.Thermal.PowerThermalChannelConfiguration.GetConfigurationNumericParameters() */
 HRESULT wsypoth_power_thermal_channel_configuration_get_configuration_numeric_parameters(WSYPOTH_PowerThermalChannelConfiguration *self, int32_t **out, uint32_t *out_len);
 
-/* activate Windows.System.Power.Thermal.PowerThermalChannelDiagnostics */
 HRESULT wsypoth_power_thermal_channel_diagnostics_new(WSYPOTH_PowerThermalChannelDiagnostics **out);
 
-/* Windows.System.Power.Thermal.PowerThermalChannelDiagnostics */
-/* Windows.System.Power.Thermal.PowerThermalChannelDiagnostics.get_Current() */
 HRESULT wsypoth_power_thermal_channel_diagnostics_get__current(WSYPOTH_PowerThermalChannelDiagnostics** value);
 
-/* Windows.System.Power.Thermal.PowerThermalChannelDiagnostics.GetDataForChannels(channelIds) */
 HRESULT wsypoth_power_thermal_channel_diagnostics_get_data_for_channels(WSYPOTH_PowerThermalChannelId *channelIds, uint32_t channelIds_len, WSYPOTH_PowerThermalChannelData **out, uint32_t *out_len);
 
-/* Windows.System.Power.Thermal.IPowerThermalChannelDiagnosticsStatics */
-/* Windows.System.Power.Thermal.IPowerThermalChannelDiagnosticsStatics.get_Current() */
 HRESULT wsypoth_power_thermal_channel_diagnostics_statics_get__current(WSYPOTH_IPowerThermalChannelDiagnosticsStatics *self, WSYPOTH_PowerThermalChannelDiagnostics** value);
 
-/* Windows.System.Power.Thermal.IPowerThermalChannelDiagnosticsStatics.GetDataForChannels(channelIds) */
 HRESULT wsypoth_power_thermal_channel_diagnostics_statics_get_data_for_channels(WSYPOTH_IPowerThermalChannelDiagnosticsStatics *self, WSYPOTH_PowerThermalChannelId *channelIds, uint32_t channelIds_len, WSYPOTH_PowerThermalChannelData **out, uint32_t *out_len);
 
-/* Windows.System.Power.Thermal.IPowerThermalChannelDataReceivedEventArgs */
-/* Windows.System.Power.Thermal.IPowerThermalChannelDataProducer */
-/* Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer */
-/* Windows.System.Power.Thermal.IPowerThermalChannelConfiguration */
 #endif /* CWINRT_WINDOWS_SYSTEM_POWER_THERMAL_H */

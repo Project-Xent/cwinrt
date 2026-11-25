@@ -13,17 +13,14 @@
 #include <cwinrt/Windows.UI.Input.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WUIWI_AppWindow
 #define CWINRT_FWD_WUIWI_AppWindow
 typedef struct WUIWI_AppWindow WUIWI_AppWindow;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUIINPR_InputActivationListenerPreview WUIINPR_InputActivationListenerPreview;
 typedef struct WUIINPR_IInputActivationListenerPreviewStatics WUIINPR_IInputActivationListenerPreviewStatics;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WUIWI_AppWindow
 #define CWINRT_FWD_WUIWI_AppWindow
 typedef struct WUIWI_AppWindow WUIWI_AppWindow;
@@ -33,7 +30,6 @@ typedef struct WUIWI_AppWindow WUIWI_AppWindow;
 typedef struct WUIIN_InputActivationListener WUIIN_InputActivationListener;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -42,17 +38,10 @@ typedef struct WUIIN_InputActivationListener WUIIN_InputActivationListener;
 static const IID CWINRT_IID_WUIINPR_IInputActivationListenerPreviewStatics CWINRT_MAYBE_UNUSED = { 0xF0551CE5, 0x0DE6, 0x5BE0, { 0xA5, 0x89, 0xF7, 0x37, 0x20, 0x1A, 0x45, 0x82 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.UI.Input.Preview.InputActivationListenerPreview */
 HRESULT wuiinpr_input_activation_listener_preview_new(WUIINPR_InputActivationListenerPreview **out);
 
-/* Windows.UI.Input.Preview.InputActivationListenerPreview */
-/* Windows.UI.Input.Preview.InputActivationListenerPreview.CreateForApplicationWindow(window) */
 HRESULT wuiinpr_input_activation_listener_preview_create_for_application_window(WUIWI_AppWindow* window, WUIIN_InputActivationListener** out);
 
-/* Windows.UI.Input.Preview.IInputActivationListenerPreviewStatics */
-/* Windows.UI.Input.Preview.IInputActivationListenerPreviewStatics.CreateForApplicationWindow(window) */
 HRESULT wuiinpr_input_activation_listener_preview_statics_create_for_application_window(WUIINPR_IInputActivationListenerPreviewStatics *self, WUIWI_AppWindow* window, WUIIN_InputActivationListener** out);
 
 #endif /* CWINRT_WINDOWS_UI_INPUT_PREVIEW_H */

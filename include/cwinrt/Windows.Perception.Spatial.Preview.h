@@ -14,14 +14,12 @@
 #include <cwinrt/Windows.Foundation.Numerics.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WPESPPR_ISpatialGraphInteropPreviewStatics_2 WPESPPR_ISpatialGraphInteropPreviewStatics_2;
 typedef struct WPESPPR_ISpatialGraphInteropPreviewStatics WPESPPR_ISpatialGraphInteropPreviewStatics;
 typedef struct WPESPPR_SpatialGraphInteropFrameOfReferencePreview WPESPPR_SpatialGraphInteropFrameOfReferencePreview;
 typedef struct WPESPPR_SpatialGraphInteropPreview WPESPPR_SpatialGraphInteropPreview;
 typedef struct WPESPPR_ISpatialGraphInteropFrameOfReferencePreview WPESPPR_ISpatialGraphInteropFrameOfReferencePreview;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WPESP_SpatialCoordinateSystem
 #define CWINRT_FWD_WPESP_SpatialCoordinateSystem
 typedef struct WPESP_SpatialCoordinateSystem WPESP_SpatialCoordinateSystem;
@@ -43,7 +41,6 @@ typedef struct WPESP_SpatialLocator WPESP_SpatialLocator;
 typedef struct WFN_Matrix4x_4 WFN_Matrix4x_4;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -60,68 +57,42 @@ static const IID CWINRT_IID_WPESPPR_ISpatialGraphInteropPreviewStatics CWINRT_MA
 static const IID CWINRT_IID_WPESPPR_ISpatialGraphInteropFrameOfReferencePreview CWINRT_MAYBE_UNUSED = { 0xA8271B23, 0x735F, 0x5729, { 0xA9, 0x8E, 0xE6, 0x4E, 0xD1, 0x89, 0xAB, 0xC5 } };
 #endif
 
-/* Methods */
-
-/* Windows.Perception.Spatial.Preview.ISpatialGraphInteropPreviewStatics2 */
-/* Windows.Perception.Spatial.Preview.ISpatialGraphInteropPreviewStatics2.TryCreateFrameOfReference(coordinateSystem) */
 HRESULT wpesppr_spatial_graph_interop_preview_statics_2_try_create_frame_of_reference(WPESPPR_ISpatialGraphInteropPreviewStatics_2 *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WPESPPR_SpatialGraphInteropFrameOfReferencePreview** out);
 
-/* Windows.Perception.Spatial.Preview.ISpatialGraphInteropPreviewStatics2.TryCreateFrameOfReference(coordinateSystem, relativePosition) */
 HRESULT wpesppr_spatial_graph_interop_preview_statics_2_try_create_frame_of_reference_p_3_p(WPESPPR_ISpatialGraphInteropPreviewStatics_2 *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WFN_Vector_3 relativePosition, WPESPPR_SpatialGraphInteropFrameOfReferencePreview** out);
 
-/* Windows.Perception.Spatial.Preview.ISpatialGraphInteropPreviewStatics2.TryCreateFrameOfReference(coordinateSystem, relativePosition, relativeOrientation) */
 HRESULT wpesppr_spatial_graph_interop_preview_statics_2_try_create_frame_of_reference_p_3_quaternion_p(WPESPPR_ISpatialGraphInteropPreviewStatics_2 *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WFN_Vector_3 relativePosition, WFN_Quaternion relativeOrientation, WPESPPR_SpatialGraphInteropFrameOfReferencePreview** out);
 
-/* Windows.Perception.Spatial.Preview.ISpatialGraphInteropPreviewStatics */
-/* Windows.Perception.Spatial.Preview.ISpatialGraphInteropPreviewStatics.CreateCoordinateSystemForNode(nodeId) */
 HRESULT wpesppr_spatial_graph_interop_preview_statics_create_coordinate_system_for_node(WPESPPR_ISpatialGraphInteropPreviewStatics *self, GUID nodeId, WPESP_SpatialCoordinateSystem** out);
 
-/* Windows.Perception.Spatial.Preview.ISpatialGraphInteropPreviewStatics.CreateCoordinateSystemForNode(nodeId, relativePosition) */
 HRESULT wpesppr_spatial_graph_interop_preview_statics_create_coordinate_system_for_node_g_u_i_d_3_p(WPESPPR_ISpatialGraphInteropPreviewStatics *self, GUID nodeId, WFN_Vector_3 relativePosition, WPESP_SpatialCoordinateSystem** out);
 
-/* Windows.Perception.Spatial.Preview.ISpatialGraphInteropPreviewStatics.CreateCoordinateSystemForNode(nodeId, relativePosition, relativeOrientation) */
 HRESULT wpesppr_spatial_graph_interop_preview_statics_create_coordinate_system_for_node_g_u_i_d_3_quaternion_p(WPESPPR_ISpatialGraphInteropPreviewStatics *self, GUID nodeId, WFN_Vector_3 relativePosition, WFN_Quaternion relativeOrientation, WPESP_SpatialCoordinateSystem** out);
 
-/* Windows.Perception.Spatial.Preview.ISpatialGraphInteropPreviewStatics.CreateLocatorForNode(nodeId) */
 HRESULT wpesppr_spatial_graph_interop_preview_statics_create_locator_for_node(WPESPPR_ISpatialGraphInteropPreviewStatics *self, GUID nodeId, WPESP_SpatialLocator** out);
 
-/* activate Windows.Perception.Spatial.Preview.SpatialGraphInteropFrameOfReferencePreview */
 HRESULT wpesppr_spatial_graph_interop_frame_of_reference_preview_new(WPESPPR_SpatialGraphInteropFrameOfReferencePreview **out);
 
-/* Windows.Perception.Spatial.Preview.SpatialGraphInteropFrameOfReferencePreview */
-/* Windows.Perception.Spatial.Preview.SpatialGraphInteropFrameOfReferencePreview.get_CoordinateSystem() */
 HRESULT wpesppr_spatial_graph_interop_frame_of_reference_preview_get__coordinate_system(WPESPPR_SpatialGraphInteropFrameOfReferencePreview *self, WPESP_SpatialCoordinateSystem** value);
 
-/* Windows.Perception.Spatial.Preview.SpatialGraphInteropFrameOfReferencePreview.get_NodeId() */
 HRESULT wpesppr_spatial_graph_interop_frame_of_reference_preview_get__node_id(WPESPPR_SpatialGraphInteropFrameOfReferencePreview *self, GUID *value);
 
-/* Windows.Perception.Spatial.Preview.SpatialGraphInteropFrameOfReferencePreview.get_CoordinateSystemToNodeTransform() */
 HRESULT wpesppr_spatial_graph_interop_frame_of_reference_preview_get__coordinate_system_to_node_transform(WPESPPR_SpatialGraphInteropFrameOfReferencePreview *self, WFN_Matrix4x_4 *value);
 
-/* activate Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview */
 HRESULT wpesppr_spatial_graph_interop_preview_new(WPESPPR_SpatialGraphInteropPreview **out);
 
-/* Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview */
-/* Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview.TryCreateFrameOfReference(coordinateSystem) */
 HRESULT wpesppr_spatial_graph_interop_preview_try_create_frame_of_reference(WPESP_SpatialCoordinateSystem* coordinateSystem, WPESPPR_SpatialGraphInteropFrameOfReferencePreview** out);
 
-/* Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview.TryCreateFrameOfReference(coordinateSystem, relativePosition) */
 HRESULT wpesppr_spatial_graph_interop_preview_try_create_frame_of_reference_p_3_p(WPESP_SpatialCoordinateSystem* coordinateSystem, WFN_Vector_3 relativePosition, WPESPPR_SpatialGraphInteropFrameOfReferencePreview** out);
 
-/* Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview.TryCreateFrameOfReference(coordinateSystem, relativePosition, relativeOrientation) */
 HRESULT wpesppr_spatial_graph_interop_preview_try_create_frame_of_reference_p_3_quaternion_p(WPESP_SpatialCoordinateSystem* coordinateSystem, WFN_Vector_3 relativePosition, WFN_Quaternion relativeOrientation, WPESPPR_SpatialGraphInteropFrameOfReferencePreview** out);
 
-/* Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview.CreateCoordinateSystemForNode(nodeId) */
 HRESULT wpesppr_spatial_graph_interop_preview_create_coordinate_system_for_node(GUID nodeId, WPESP_SpatialCoordinateSystem** out);
 
-/* Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview.CreateCoordinateSystemForNode(nodeId, relativePosition) */
 HRESULT wpesppr_spatial_graph_interop_preview_create_coordinate_system_for_node_g_u_i_d_3_p(GUID nodeId, WFN_Vector_3 relativePosition, WPESP_SpatialCoordinateSystem** out);
 
-/* Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview.CreateCoordinateSystemForNode(nodeId, relativePosition, relativeOrientation) */
 HRESULT wpesppr_spatial_graph_interop_preview_create_coordinate_system_for_node_g_u_i_d_3_quaternion_p(GUID nodeId, WFN_Vector_3 relativePosition, WFN_Quaternion relativeOrientation, WPESP_SpatialCoordinateSystem** out);
 
-/* Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview.CreateLocatorForNode(nodeId) */
 HRESULT wpesppr_spatial_graph_interop_preview_create_locator_for_node(GUID nodeId, WPESP_SpatialLocator** out);
 
-/* Windows.Perception.Spatial.Preview.ISpatialGraphInteropFrameOfReferencePreview */
 #endif /* CWINRT_WINDOWS_PERCEPTION_SPATIAL_PREVIEW_H */

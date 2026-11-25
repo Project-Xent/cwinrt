@@ -12,13 +12,11 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WS_StorageFile
 #define CWINRT_FWD_WS_StorageFile
 typedef struct WS_StorageFile WS_StorageFile;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPCAPR_IPhoneCallOriginManagerStatics_2 WAPCAPR_IPhoneCallOriginManagerStatics_2;
 typedef struct WAPCAPR_IPhoneCallOriginManagerStatics_3 WAPCAPR_IPhoneCallOriginManagerStatics_3;
 typedef struct WAPCAPR_PhoneCallOrigin WAPCAPR_PhoneCallOrigin;
@@ -28,7 +26,6 @@ typedef struct WAPCAPR_IPhoneCallOrigin_3 WAPCAPR_IPhoneCallOrigin_3;
 typedef struct WAPCAPR_IPhoneCallOrigin_2 WAPCAPR_IPhoneCallOrigin_2;
 typedef struct WAPCAPR_IPhoneCallOrigin WAPCAPR_IPhoneCallOrigin;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_Bool
 #define CWINRT_FWD_WF_IAsyncOperation_Bool
 typedef struct WF_IAsyncOperation_Bool WF_IAsyncOperation_Bool;
@@ -38,7 +35,6 @@ typedef struct WF_IAsyncOperation_Bool WF_IAsyncOperation_Bool;
 typedef struct WS_StorageFile WS_StorageFile;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -67,92 +63,56 @@ static const IID CWINRT_IID_WAPCAPR_IPhoneCallOrigin_2 CWINRT_MAYBE_UNUSED = { 0
 static const IID CWINRT_IID_WAPCAPR_IPhoneCallOrigin CWINRT_MAYBE_UNUSED = { 0x20613479, 0x0EF9, 0x4454, { 0x87, 0x1C, 0xAF, 0xB6, 0x6A, 0x14, 0xB6, 0xA5 } };
 #endif
 
-/* Methods */
-
-/* Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics2 */
-/* Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics2.RequestSetAsActiveCallOriginAppAsync() */
 HRESULT wapcapr_phone_call_origin_manager_statics_2_request_set_as_active_call_origin_app_async(WAPCAPR_IPhoneCallOriginManagerStatics_2 *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics3 */
-/* Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics3.get_IsSupported() */
 HRESULT wapcapr_phone_call_origin_manager_statics_3_get__is_supported(WAPCAPR_IPhoneCallOriginManagerStatics_3 *self, BOOL *value);
 
-/* activate Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin */
 HRESULT wapcapr_phone_call_origin_new(WAPCAPR_PhoneCallOrigin **out);
 
-/* Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin */
-/* Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin.get_Category() */
 HRESULT wapcapr_phone_call_origin_get__category(WAPCAPR_PhoneCallOrigin *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin.put_Category() */
 HRESULT wapcapr_phone_call_origin_put__category(WAPCAPR_PhoneCallOrigin *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin.get_CategoryDescription() */
 HRESULT wapcapr_phone_call_origin_get__category_description(WAPCAPR_PhoneCallOrigin *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin.put_CategoryDescription() */
 HRESULT wapcapr_phone_call_origin_put__category_description(WAPCAPR_PhoneCallOrigin *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin.get_Location() */
 HRESULT wapcapr_phone_call_origin_get__location(WAPCAPR_PhoneCallOrigin *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin.put_Location() */
 HRESULT wapcapr_phone_call_origin_put__location(WAPCAPR_PhoneCallOrigin *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin.get_DisplayName() */
 HRESULT wapcapr_phone_call_origin_get__display_name(WAPCAPR_PhoneCallOrigin *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin.put_DisplayName() */
 HRESULT wapcapr_phone_call_origin_put__display_name(WAPCAPR_PhoneCallOrigin *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin.get_DisplayPicture() */
 HRESULT wapcapr_phone_call_origin_get__display_picture(WAPCAPR_PhoneCallOrigin *self, WS_StorageFile** value);
 
-/* Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin.put_DisplayPicture() */
 HRESULT wapcapr_phone_call_origin_put__display_picture(WAPCAPR_PhoneCallOrigin *self, WS_StorageFile* value);
 
-/* activate Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager */
 HRESULT wapcapr_phone_call_origin_manager_new(WAPCAPR_PhoneCallOriginManager **out);
 
-/* Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager */
-/* Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager.get_IsSupported() */
 HRESULT wapcapr_phone_call_origin_manager_get__is_supported(BOOL *value);
 
-/* Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager.RequestSetAsActiveCallOriginAppAsync() */
 HRESULT wapcapr_phone_call_origin_manager_request_set_as_active_call_origin_app_async(WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager.get_IsCurrentAppActiveCallOriginApp() */
 HRESULT wapcapr_phone_call_origin_manager_get__is_current_app_active_call_origin_app(BOOL *value);
 
-/* Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager.ShowPhoneCallOriginSettingsUI() */
 HRESULT wapcapr_phone_call_origin_manager_show_phone_call_origin_settings_u_i(void);
 
-/* Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager.SetCallOrigin(requestId, callOrigin) */
 HRESULT wapcapr_phone_call_origin_manager_set_call_origin(GUID requestId, WAPCAPR_PhoneCallOrigin* callOrigin);
 
-/* Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics */
-/* Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics.get_IsCurrentAppActiveCallOriginApp() */
 HRESULT wapcapr_phone_call_origin_manager_statics_get__is_current_app_active_call_origin_app(WAPCAPR_IPhoneCallOriginManagerStatics *self, BOOL *value);
 
-/* Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics.ShowPhoneCallOriginSettingsUI() */
 HRESULT wapcapr_phone_call_origin_manager_statics_show_phone_call_origin_settings_u_i(WAPCAPR_IPhoneCallOriginManagerStatics *self);
 
-/* Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics.SetCallOrigin(requestId, callOrigin) */
 HRESULT wapcapr_phone_call_origin_manager_statics_set_call_origin(WAPCAPR_IPhoneCallOriginManagerStatics *self, GUID requestId, WAPCAPR_PhoneCallOrigin* callOrigin);
 
-/* Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin3 */
-/* Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin3.get_DisplayPicture() */
 HRESULT wapcapr_phone_call_origin_3_get__display_picture(WAPCAPR_IPhoneCallOrigin_3 *self, WS_StorageFile** value);
 
-/* Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin3.put_DisplayPicture() */
 HRESULT wapcapr_phone_call_origin_3_put__display_picture(WAPCAPR_IPhoneCallOrigin_3 *self, WS_StorageFile* value);
 
-/* Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin2 */
-/* Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin2.get_DisplayName() */
 HRESULT wapcapr_phone_call_origin_2_get__display_name(WAPCAPR_IPhoneCallOrigin_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin2.put_DisplayName() */
 HRESULT wapcapr_phone_call_origin_2_put__display_name(WAPCAPR_IPhoneCallOrigin_2 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_CALLS_PROVIDER_H */

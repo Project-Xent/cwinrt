@@ -4,8 +4,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-/* ---- SHA-1 (RFC 3174) ---------------------------------------------------- */
-
 static uint32_t sha1_rol(uint32_t v, int b) { return (v << b) | (v >> (32 - b)); }
 
 /* Per-round nonlinear function f(b,c,d) for round index t (0..79). */
@@ -57,7 +55,6 @@ static size_t sha1_padded_len(size_t len) {
 	return padded + 8;
 }
 
-/* Build the padded SHA-1 message into buf (size sha1_padded_len(len)). */
 static void sha1_pad(uint8_t *buf, uint8_t const *data, size_t len, size_t padded) {
 	uint64_t ml = ( uint64_t ) len * 8u;
 	size_t   i;
@@ -114,8 +111,6 @@ void cwinrt_uuid_v5(uint8_t const ns [16], char const *name, size_t namelen, uin
 	out [6] = ( uint8_t ) ((out [6] & 0x0F) | 0x50); /* version 5 */
 	out [8] = ( uint8_t ) ((out [8] & 0x3F) | 0x80); /* RFC-4122 variant */
 }
-
-/* ---- WinRT signature strings -------------------------------------------- */
 
 /* Canonical WinRT signatures for primitive types. */
 static struct {

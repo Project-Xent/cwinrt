@@ -12,13 +12,11 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WAPEXFO_ExtendedExecutionForegroundSession WAPEXFO_ExtendedExecutionForegroundSession;
 typedef struct WAPEXFO_ExtendedExecutionForegroundRevokedEventArgs WAPEXFO_ExtendedExecutionForegroundRevokedEventArgs;
 typedef struct WAPEXFO_IExtendedExecutionForegroundSession WAPEXFO_IExtendedExecutionForegroundSession;
 typedef struct WAPEXFO_IExtendedExecutionForegroundRevokedEventArgs WAPEXFO_IExtendedExecutionForegroundRevokedEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_TypedEventHandler_Object_WAPEXFO_ExtendedExecutionForegroundRevokedEventArgs
 #define CWINRT_FWD_WF_TypedEventHandler_Object_WAPEXFO_ExtendedExecutionForegroundRevokedEventArgs
 typedef struct WF_TypedEventHandler_Object_WAPEXFO_ExtendedExecutionForegroundRevokedEventArgs WF_TypedEventHandler_Object_WAPEXFO_ExtendedExecutionForegroundRevokedEventArgs;
@@ -54,7 +52,6 @@ typedef enum WAPEXFO_ExtendedExecutionForegroundResult {
 } WAPEXFO_ExtendedExecutionForegroundResult;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -67,43 +64,27 @@ static const IID CWINRT_IID_WAPEXFO_IExtendedExecutionForegroundSession CWINRT_M
 static const IID CWINRT_IID_WAPEXFO_IExtendedExecutionForegroundRevokedEventArgs CWINRT_MAYBE_UNUSED = { 0xB07CD940, 0x9557, 0xAEA4, { 0x2C, 0x99, 0xBD, 0xD5, 0x6D, 0x9B, 0xE4, 0x61 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundSession */
 HRESULT wapexfo_extended_execution_foreground_session_new(WAPEXFO_ExtendedExecutionForegroundSession **out);
 
-/* Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundSession */
-/* Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundSession.get_Description() */
 HRESULT wapexfo_extended_execution_foreground_session_get__description(WAPEXFO_ExtendedExecutionForegroundSession *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundSession.put_Description() */
 HRESULT wapexfo_extended_execution_foreground_session_put__description(WAPEXFO_ExtendedExecutionForegroundSession *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundSession.RequestExtensionAsync() */
 HRESULT wapexfo_extended_execution_foreground_session_request_extension_async(WAPEXFO_ExtendedExecutionForegroundSession *self, WF_IAsyncOperation_WAPEXFO_ExtendedExecutionForegroundResult** out);
 
-/* Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundSession.get_Reason() */
 HRESULT wapexfo_extended_execution_foreground_session_get__reason(WAPEXFO_ExtendedExecutionForegroundSession *self, WAPEXFO_ExtendedExecutionForegroundReason *value);
 
-/* Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundSession.put_Reason() */
 HRESULT wapexfo_extended_execution_foreground_session_put__reason(WAPEXFO_ExtendedExecutionForegroundSession *self, WAPEXFO_ExtendedExecutionForegroundReason value);
 
-/* Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundSession.Close() */
 HRESULT wapexfo_extended_execution_foreground_session_close(WAPEXFO_ExtendedExecutionForegroundSession *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapexfo_extended_execution_foreground_session_on_revoked(WAPEXFO_ExtendedExecutionForegroundSession *self, cwinrt_event_fn fn, void *ctx);
 void wapexfo_extended_execution_foreground_session_off_revoked(WAPEXFO_ExtendedExecutionForegroundSession *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundRevokedEventArgs */
 HRESULT wapexfo_extended_execution_foreground_revoked_event_args_new(WAPEXFO_ExtendedExecutionForegroundRevokedEventArgs **out);
 
-/* Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundRevokedEventArgs */
-/* Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundRevokedEventArgs.get_Reason() */
 HRESULT wapexfo_extended_execution_foreground_revoked_event_args_get__reason(WAPEXFO_ExtendedExecutionForegroundRevokedEventArgs *self, WAPEXFO_ExtendedExecutionForegroundRevokedReason *value);
 
-/* Windows.ApplicationModel.ExtendedExecution.Foreground.IExtendedExecutionForegroundSession */
-/* Windows.ApplicationModel.ExtendedExecution.Foreground.IExtendedExecutionForegroundRevokedEventArgs */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_EXTENDEDEXECUTION_FOREGROUND_H */

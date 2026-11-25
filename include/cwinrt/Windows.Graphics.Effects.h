@@ -12,11 +12,9 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WGREF_IGraphicsEffect WGREF_IGraphicsEffect;
 typedef struct WGREF_IGraphicsEffectSource WGREF_IGraphicsEffectSource;
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -29,13 +27,8 @@ static const IID CWINRT_IID_WGREF_IGraphicsEffect CWINRT_MAYBE_UNUSED = { 0xCB51
 static const IID CWINRT_IID_WGREF_IGraphicsEffectSource CWINRT_MAYBE_UNUSED = { 0x2D8F9DDC, 0x4339, 0x4EB9, { 0x92, 0x16, 0xF9, 0xDE, 0xB7, 0x56, 0x58, 0xA2 } };
 #endif
 
-/* Methods */
-
-/* Windows.Graphics.Effects.IGraphicsEffect */
-/* Windows.Graphics.Effects.IGraphicsEffect.get_Name() */
 HRESULT wgref_graphics_effect_get__name(WGREF_IGraphicsEffect *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Effects.IGraphicsEffect.put_Name(name) */
 HRESULT wgref_graphics_effect_put__name(WGREF_IGraphicsEffect *self, cwinrt_hstring name);
 
 #endif /* CWINRT_WINDOWS_GRAPHICS_EFFECTS_H */

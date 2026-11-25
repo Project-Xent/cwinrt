@@ -59,8 +59,6 @@ typedef struct winmd_field_info {
 
 uint8_t const *winmd_row_ptr(winmd_tables const *t, int tbl, uint32_t row1);
 
-/* --- Shared low-level metadata primitives (gen/winmd_util.c) --- */
-
 /* 2- or 4-byte little-endian unsigned at p. */
 uint32_t       winmd_read_idx(uint8_t const *p, uint8_t sz);
 
@@ -112,10 +110,8 @@ int      winmd_typedef_uuid(winmd_meta const *m, uint32_t typedef_row1, uint8_t 
 /* MethodDef row1 -> [Overload] fixed string argument; -1 if absent. */
 int      winmd_method_overload_name(winmd_meta const *m, uint32_t method_row1, char *buf, size_t bufsz);
 
-/* MethodDef row1 has [DefaultOverload] custom attribute. */
 bool     winmd_method_is_default_overload(winmd_meta const *m, uint32_t method_row1);
 
-/* TypeDef row1 has [activatable] custom attribute. */
 bool     winmd_typedef_is_activatable(winmd_meta const *m, uint32_t typedef_row1);
 
 /* Param names with Sequence >= 1, sorted by sequence. Allocates *names (winmd_param_names_free). */
@@ -123,7 +119,6 @@ int      winmd_method_param_names(winmd_meta const *m, uint32_t method_row1, cha
 
 void     winmd_param_names_free(char **names, uint32_t count);
 
-/* Resolve coded TypeDefOrRef to WinRT full name (namespace.name). */
 int      winmd_coded_type_full_name(winmd_meta const *m, uint32_t coded, char *buf, size_t bufsz);
 
 /* True when coded token is a TypeDef with ClassSemantics Enumeration (0x100). */
@@ -132,8 +127,6 @@ bool     winmd_coded_typedef_is_enum(winmd_meta const *m, uint32_t coded);
 /* typedef_row1 -> metadata token 0x02000000 | row */
 uint32_t winmd_typedef_token(uint32_t typedef_row1);
 
-/* Find the TypeDef row1 (1-based) whose WinRT full name == `winrt_full_name`
-   (e.g. "Windows.Foundation.Collections.IVector`1"). 0 if not found. */
 uint32_t winmd_typedef_find_by_name(const struct winmd_db *db, char const *winrt_full_name);
 
 /* Pointer to a blob's contents (past the ECMA compressed-length prefix); sets
@@ -165,9 +158,6 @@ int      winmd_typedef_classify(winmd_meta const *m, uint32_t typedef_row1);
    InterfaceImpl carrying [Windows.Foundation.Metadata.Default]. 0 if none. */
 uint32_t winmd_typedef_default_iface(winmd_meta const *m, uint32_t typedef_row1);
 
-/* True if the row identified by (HasCustomAttribute tag, row1) carries a custom
-   attribute whose constructor's declaring type short name == attr_short
-   (post-mapping: e.g. "DefaultAttribute", "Activatable"). */
 bool     winmd_ca_has_attr_on(winmd_meta const *m, uint32_t parent_tag, uint32_t parent_row1, char const *attr_short);
 
 /* Unique namespace strings from TypeDef rows; optional prefix filter (e.g. "Windows"). */

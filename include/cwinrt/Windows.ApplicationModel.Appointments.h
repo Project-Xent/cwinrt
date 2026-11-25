@@ -14,13 +14,11 @@
 #include <cwinrt/Windows.UI.Popups.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPAP_IAppointmentPropertiesStatics_2 WAPAP_IAppointmentPropertiesStatics_2;
 typedef struct WAPAP_IAppointmentManagerStatics_3 WAPAP_IAppointmentManagerStatics_3;
 typedef struct WAPAP_IAppointmentManagerStatics_2 WAPAP_IAppointmentManagerStatics_2;
@@ -74,7 +72,6 @@ typedef struct WAPAP_IAppointment_2 WAPAP_IAppointment_2;
 typedef struct WAPAP_IAppointmentRecurrence WAPAP_IAppointmentRecurrence;
 typedef struct WAPAP_IAppointment WAPAP_IAppointment;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
@@ -351,7 +348,6 @@ typedef enum WAPAP_FindAppointmentCalendarsOptions {
 } WAPAP_FindAppointmentCalendarsOptions;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -488,1163 +484,744 @@ static const IID CWINRT_IID_WAPAP_IAppointmentRecurrence CWINRT_MAYBE_UNUSED = {
 static const IID CWINRT_IID_WAPAP_IAppointment CWINRT_MAYBE_UNUSED = { 0xDD002F2F, 0x2BDD, 0x4076, { 0x90, 0xA3, 0x22, 0xC2, 0x75, 0x31, 0x29, 0x65 } };
 #endif
 
-/* Methods */
-
-/* Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics2 */
-/* Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics2.get_ChangeNumber() */
 HRESULT wapap_appointment_properties_statics_2_get__change_number(WAPAP_IAppointmentPropertiesStatics_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics2.get_RemoteChangeNumber() */
 HRESULT wapap_appointment_properties_statics_2_get__remote_change_number(WAPAP_IAppointmentPropertiesStatics_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics2.get_DetailsKind() */
 HRESULT wapap_appointment_properties_statics_2_get__details_kind(WAPAP_IAppointmentPropertiesStatics_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentManagerStatics3 */
-/* Windows.ApplicationModel.Appointments.IAppointmentManagerStatics3.GetForUser(user) */
 HRESULT wapap_appointment_manager_statics_3_get_for_user(WAPAP_IAppointmentManagerStatics_3 *self, WSY_User* user, WAPAP_AppointmentManagerForUser** out);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentManagerStatics2 */
-/* Windows.ApplicationModel.Appointments.IAppointmentManagerStatics2.ShowAppointmentDetailsAsync(appointmentId) */
 HRESULT wapap_appointment_manager_statics_2_show_appointment_details_async(WAPAP_IAppointmentManagerStatics_2 *self, cwinrt_hstring appointmentId, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentManagerStatics2.ShowAppointmentDetailsAsync(appointmentId, instanceStartDate) */
 HRESULT wapap_appointment_manager_statics_2_show_appointment_details_async_str_date_time_p(WAPAP_IAppointmentManagerStatics_2 *self, cwinrt_hstring appointmentId, WF_DateTime instanceStartDate, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentManagerStatics2.ShowEditNewAppointmentAsync(appointment) */
 HRESULT wapap_appointment_manager_statics_2_show_edit_new_appointment_async(WAPAP_IAppointmentManagerStatics_2 *self, WAPAP_Appointment* appointment, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentManagerStatics2.RequestStoreAsync(options) */
 HRESULT wapap_appointment_manager_statics_2_request_store_async(WAPAP_IAppointmentManagerStatics_2 *self, WAPAP_AppointmentStoreAccessType options, WF_IAsyncOperation_WAPAP_AppointmentStore** out);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentManagerStatics */
-/* Windows.ApplicationModel.Appointments.IAppointmentManagerStatics.ShowAddAppointmentAsync(appointment, selection) */
 HRESULT wapap_appointment_manager_statics_show_add_appointment_async(WAPAP_IAppointmentManagerStatics *self, WAPAP_Appointment* appointment, WF_Rect selection, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentManagerStatics.ShowAddAppointmentAsync(appointment, selection, preferredPlacement) */
 HRESULT wapap_appointment_manager_statics_show_add_appointment_async_p_rect_placement_p(WAPAP_IAppointmentManagerStatics *self, WAPAP_Appointment* appointment, WF_Rect selection, WUIPO_Placement preferredPlacement, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentManagerStatics.ShowReplaceAppointmentAsync(appointmentId, appointment, selection) */
 HRESULT wapap_appointment_manager_statics_show_replace_appointment_async(WAPAP_IAppointmentManagerStatics *self, cwinrt_hstring appointmentId, WAPAP_Appointment* appointment, WF_Rect selection, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentManagerStatics.ShowReplaceAppointmentAsync(appointmentId, appointment, selection, preferredPlacement) */
 HRESULT wapap_appointment_manager_statics_show_replace_appointment_async_str_p_rect_placement_p(WAPAP_IAppointmentManagerStatics *self, cwinrt_hstring appointmentId, WAPAP_Appointment* appointment, WF_Rect selection, WUIPO_Placement preferredPlacement, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentManagerStatics.ShowReplaceAppointmentAsync(appointmentId, appointment, selection, preferredPlacement, instanceStartDate) */
 HRESULT wapap_appointment_manager_statics_show_replace_appointment_async_str_p_rect_placement_date_time_p(WAPAP_IAppointmentManagerStatics *self, cwinrt_hstring appointmentId, WAPAP_Appointment* appointment, WF_Rect selection, WUIPO_Placement preferredPlacement, WF_DateTime instanceStartDate, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentManagerStatics.ShowRemoveAppointmentAsync(appointmentId, selection) */
 HRESULT wapap_appointment_manager_statics_show_remove_appointment_async(WAPAP_IAppointmentManagerStatics *self, cwinrt_hstring appointmentId, WF_Rect selection, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentManagerStatics.ShowRemoveAppointmentAsync(appointmentId, selection, preferredPlacement) */
 HRESULT wapap_appointment_manager_statics_show_remove_appointment_async_str_rect_placement_p(WAPAP_IAppointmentManagerStatics *self, cwinrt_hstring appointmentId, WF_Rect selection, WUIPO_Placement preferredPlacement, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentManagerStatics.ShowRemoveAppointmentAsync(appointmentId, selection, preferredPlacement, instanceStartDate) */
 HRESULT wapap_appointment_manager_statics_show_remove_appointment_async_str_rect_placement_date_time_p(WAPAP_IAppointmentManagerStatics *self, cwinrt_hstring appointmentId, WF_Rect selection, WUIPO_Placement preferredPlacement, WF_DateTime instanceStartDate, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentManagerStatics.ShowTimeFrameAsync(timeToShow, duration) */
 HRESULT wapap_appointment_manager_statics_show_time_frame_async(WAPAP_IAppointmentManagerStatics *self, WF_DateTime timeToShow, WF_TimeSpan duration, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Appointments.AppointmentStoreChangedEventArgs */
 HRESULT wapap_appointment_store_changed_event_args_new(WAPAP_AppointmentStoreChangedEventArgs **out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStoreChangedEventArgs */
-/* Windows.ApplicationModel.Appointments.AppointmentStoreChangedEventArgs.GetDeferral() */
 HRESULT wapap_appointment_store_changed_event_args_get_deferral(WAPAP_AppointmentStoreChangedEventArgs *self, WAPAP_AppointmentStoreChangedDeferral** out);
 
-/* activate Windows.ApplicationModel.Appointments.AppointmentStoreChangedDeferral */
 HRESULT wapap_appointment_store_changed_deferral_new(WAPAP_AppointmentStoreChangedDeferral **out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStoreChangedDeferral */
-/* Windows.ApplicationModel.Appointments.AppointmentStoreChangedDeferral.Complete() */
 HRESULT wapap_appointment_store_changed_deferral_complete(WAPAP_AppointmentStoreChangedDeferral *self);
 
-/* activate Windows.ApplicationModel.Appointments.AppointmentStoreChangeTracker */
 HRESULT wapap_appointment_store_change_tracker_new(WAPAP_AppointmentStoreChangeTracker **out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStoreChangeTracker */
-/* Windows.ApplicationModel.Appointments.AppointmentStoreChangeTracker.GetChangeReader() */
 HRESULT wapap_appointment_store_change_tracker_get_change_reader(WAPAP_AppointmentStoreChangeTracker *self, WAPAP_AppointmentStoreChangeReader** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStoreChangeTracker.Enable() */
 HRESULT wapap_appointment_store_change_tracker_enable(WAPAP_AppointmentStoreChangeTracker *self);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStoreChangeTracker.Reset() */
 HRESULT wapap_appointment_store_change_tracker_reset(WAPAP_AppointmentStoreChangeTracker *self);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStoreChangeTracker.get_IsTracking() */
 HRESULT wapap_appointment_store_change_tracker_get__is_tracking(WAPAP_AppointmentStoreChangeTracker *self, BOOL *value);
 
-/* activate Windows.ApplicationModel.Appointments.AppointmentStoreChangeReader */
 HRESULT wapap_appointment_store_change_reader_new(WAPAP_AppointmentStoreChangeReader **out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStoreChangeReader */
-/* Windows.ApplicationModel.Appointments.AppointmentStoreChangeReader.ReadBatchAsync() */
 HRESULT wapap_appointment_store_change_reader_read_batch_async(WAPAP_AppointmentStoreChangeReader *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPAP_AppointmentStoreChange** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStoreChangeReader.AcceptChanges() */
 HRESULT wapap_appointment_store_change_reader_accept_changes(WAPAP_AppointmentStoreChangeReader *self);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStoreChangeReader.AcceptChangesThrough(lastChangeToAccept) */
 HRESULT wapap_appointment_store_change_reader_accept_changes_through(WAPAP_AppointmentStoreChangeReader *self, WAPAP_AppointmentStoreChange* lastChangeToAccept);
 
-/* activate Windows.ApplicationModel.Appointments.AppointmentStoreChange */
 HRESULT wapap_appointment_store_change_new(WAPAP_AppointmentStoreChange **out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStoreChange */
-/* Windows.ApplicationModel.Appointments.AppointmentStoreChange.get_Appointment() */
 HRESULT wapap_appointment_store_change_get__appointment(WAPAP_AppointmentStoreChange *self, WAPAP_Appointment** value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStoreChange.get_ChangeType() */
 HRESULT wapap_appointment_store_change_get__change_type(WAPAP_AppointmentStoreChange *self, WAPAP_AppointmentStoreChangeType *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStoreChange.get_AppointmentCalendar() */
 HRESULT wapap_appointment_store_change_get__appointment_calendar(WAPAP_AppointmentStoreChange *self, WAPAP_AppointmentCalendar** value);
 
-/* activate Windows.ApplicationModel.Appointments.AppointmentStore */
 HRESULT wapap_appointment_store_new(WAPAP_AppointmentStore **out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStore */
-/* Windows.ApplicationModel.Appointments.AppointmentStore.get_ChangeTracker() */
 HRESULT wapap_appointment_store_get__change_tracker(WAPAP_AppointmentStore *self, WAPAP_AppointmentStoreChangeTracker** value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStore.CreateAppointmentCalendarAsync(name) */
 HRESULT wapap_appointment_store_create_appointment_calendar_async(WAPAP_AppointmentStore *self, cwinrt_hstring name, WF_IAsyncOperation_WAPAP_AppointmentCalendar** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStore.GetAppointmentCalendarAsync(calendarId) */
 HRESULT wapap_appointment_store_get_appointment_calendar_async(WAPAP_AppointmentStore *self, cwinrt_hstring calendarId, WF_IAsyncOperation_WAPAP_AppointmentCalendar** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStore.GetAppointmentAsync(localId) */
 HRESULT wapap_appointment_store_get_appointment_async(WAPAP_AppointmentStore *self, cwinrt_hstring localId, WF_IAsyncOperation_WAPAP_Appointment** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStore.GetAppointmentInstanceAsync(localId, instanceStartTime) */
 HRESULT wapap_appointment_store_get_appointment_instance_async(WAPAP_AppointmentStore *self, cwinrt_hstring localId, WF_DateTime instanceStartTime, WF_IAsyncOperation_WAPAP_Appointment** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStore.FindAppointmentCalendarsAsync() */
 HRESULT wapap_appointment_store_find_appointment_calendars_async(WAPAP_AppointmentStore *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPAP_AppointmentCalendar** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStore.FindAppointmentCalendarsAsync(options) */
 HRESULT wapap_appointment_store_find_appointment_calendars_async_find_appointment_calendars_options_p(WAPAP_AppointmentStore *self, WAPAP_FindAppointmentCalendarsOptions options, WF_IAsyncOperation_WFOCO_IVectorView_WAPAP_AppointmentCalendar** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStore.FindAppointmentsAsync(rangeStart, rangeLength) */
 HRESULT wapap_appointment_store_find_appointments_async(WAPAP_AppointmentStore *self, WF_DateTime rangeStart, WF_TimeSpan rangeLength, WF_IAsyncOperation_WFOCO_IVectorView_WAPAP_Appointment** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStore.FindAppointmentsAsync(rangeStart, rangeLength, options) */
 HRESULT wapap_appointment_store_find_appointments_async_date_time_time_span_p_p(WAPAP_AppointmentStore *self, WF_DateTime rangeStart, WF_TimeSpan rangeLength, WAPAP_FindAppointmentsOptions* options, WF_IAsyncOperation_WFOCO_IVectorView_WAPAP_Appointment** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStore.FindConflictAsync(appointment) */
 HRESULT wapap_appointment_store_find_conflict_async(WAPAP_AppointmentStore *self, WAPAP_Appointment* appointment, WF_IAsyncOperation_WAPAP_AppointmentConflictResult** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStore.FindConflictAsync(appointment, instanceStartTime) */
 HRESULT wapap_appointment_store_find_conflict_async_p_date_time_p(WAPAP_AppointmentStore *self, WAPAP_Appointment* appointment, WF_DateTime instanceStartTime, WF_IAsyncOperation_WAPAP_AppointmentConflictResult** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStore.MoveAppointmentAsync(appointment, destinationCalendar) */
 HRESULT wapap_appointment_store_move_appointment_async(WAPAP_AppointmentStore *self, WAPAP_Appointment* appointment, WAPAP_AppointmentCalendar* destinationCalendar, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStore.ShowAddAppointmentAsync(appointment, selection) */
 HRESULT wapap_appointment_store_show_add_appointment_async(WAPAP_AppointmentStore *self, WAPAP_Appointment* appointment, WF_Rect selection, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStore.ShowReplaceAppointmentAsync(localId, appointment, selection) */
 HRESULT wapap_appointment_store_show_replace_appointment_async(WAPAP_AppointmentStore *self, cwinrt_hstring localId, WAPAP_Appointment* appointment, WF_Rect selection, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStore.ShowReplaceAppointmentAsync(localId, appointment, selection, preferredPlacement, instanceStartDate) */
 HRESULT wapap_appointment_store_show_replace_appointment_async_str_p_rect_placement_date_time_p(WAPAP_AppointmentStore *self, cwinrt_hstring localId, WAPAP_Appointment* appointment, WF_Rect selection, WUIPO_Placement preferredPlacement, WF_DateTime instanceStartDate, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStore.ShowRemoveAppointmentAsync(localId, selection) */
 HRESULT wapap_appointment_store_show_remove_appointment_async(WAPAP_AppointmentStore *self, cwinrt_hstring localId, WF_Rect selection, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStore.ShowRemoveAppointmentAsync(localId, selection, preferredPlacement, instanceStartDate) */
 HRESULT wapap_appointment_store_show_remove_appointment_async_str_rect_placement_date_time_p(WAPAP_AppointmentStore *self, cwinrt_hstring localId, WF_Rect selection, WUIPO_Placement preferredPlacement, WF_DateTime instanceStartDate, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStore.ShowAppointmentDetailsAsync(localId) */
 HRESULT wapap_appointment_store_show_appointment_details_async(WAPAP_AppointmentStore *self, cwinrt_hstring localId, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStore.ShowAppointmentDetailsAsync(localId, instanceStartDate) */
 HRESULT wapap_appointment_store_show_appointment_details_async_str_date_time_p(WAPAP_AppointmentStore *self, cwinrt_hstring localId, WF_DateTime instanceStartDate, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStore.ShowEditNewAppointmentAsync(appointment) */
 HRESULT wapap_appointment_store_show_edit_new_appointment_async(WAPAP_AppointmentStore *self, WAPAP_Appointment* appointment, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStore.FindLocalIdsFromRoamingIdAsync(roamingId) */
 HRESULT wapap_appointment_store_find_local_ids_from_roaming_id_async(WAPAP_AppointmentStore *self, cwinrt_hstring roamingId, WF_IAsyncOperation_WFOCO_IVectorView_HSTRING** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStore.CreateAppointmentCalendarAsync(name, userDataAccountId) */
 HRESULT wapap_appointment_store_create_appointment_calendar_async_str_str_p(WAPAP_AppointmentStore *self, cwinrt_hstring name, cwinrt_hstring userDataAccountId, WF_IAsyncOperation_WAPAP_AppointmentCalendar** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentStore.GetChangeTracker(identity) */
 HRESULT wapap_appointment_store_get_change_tracker(WAPAP_AppointmentStore *self, cwinrt_hstring identity, WAPAP_AppointmentStoreChangeTracker** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapap_appointment_store_on_store_changed(WAPAP_AppointmentStore *self, cwinrt_event_fn fn, void *ctx);
 void wapap_appointment_store_off_store_changed(WAPAP_AppointmentStore *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Appointments.AppointmentRecurrence */
 HRESULT wapap_appointment_recurrence_new(WAPAP_AppointmentRecurrence **out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentRecurrence */
-/* Windows.ApplicationModel.Appointments.AppointmentRecurrence.get_Unit() */
 HRESULT wapap_appointment_recurrence_get__unit(WAPAP_AppointmentRecurrence *self, WAPAP_AppointmentRecurrenceUnit *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentRecurrence.put_Unit() */
 HRESULT wapap_appointment_recurrence_put__unit(WAPAP_AppointmentRecurrence *self, WAPAP_AppointmentRecurrenceUnit value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentRecurrence.get_Occurrences() */
 HRESULT wapap_appointment_recurrence_get__occurrences(WAPAP_AppointmentRecurrence *self, uint32_t** value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentRecurrence.put_Occurrences() */
 HRESULT wapap_appointment_recurrence_put__occurrences(WAPAP_AppointmentRecurrence *self, uint32_t* value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentRecurrence.get_Until() */
 HRESULT wapap_appointment_recurrence_get__until(WAPAP_AppointmentRecurrence *self, WF_DateTime** value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentRecurrence.put_Until() */
 HRESULT wapap_appointment_recurrence_put__until(WAPAP_AppointmentRecurrence *self, WF_DateTime* value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentRecurrence.get_Interval() */
 HRESULT wapap_appointment_recurrence_get__interval(WAPAP_AppointmentRecurrence *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentRecurrence.put_Interval() */
 HRESULT wapap_appointment_recurrence_put__interval(WAPAP_AppointmentRecurrence *self, uint32_t value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentRecurrence.get_DaysOfWeek() */
 HRESULT wapap_appointment_recurrence_get__days_of_week(WAPAP_AppointmentRecurrence *self, WAPAP_AppointmentDaysOfWeek *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentRecurrence.put_DaysOfWeek() */
 HRESULT wapap_appointment_recurrence_put__days_of_week(WAPAP_AppointmentRecurrence *self, WAPAP_AppointmentDaysOfWeek value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentRecurrence.get_WeekOfMonth() */
 HRESULT wapap_appointment_recurrence_get__week_of_month(WAPAP_AppointmentRecurrence *self, WAPAP_AppointmentWeekOfMonth *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentRecurrence.put_WeekOfMonth() */
 HRESULT wapap_appointment_recurrence_put__week_of_month(WAPAP_AppointmentRecurrence *self, WAPAP_AppointmentWeekOfMonth value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentRecurrence.get_Month() */
 HRESULT wapap_appointment_recurrence_get__month(WAPAP_AppointmentRecurrence *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentRecurrence.put_Month() */
 HRESULT wapap_appointment_recurrence_put__month(WAPAP_AppointmentRecurrence *self, uint32_t value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentRecurrence.get_Day() */
 HRESULT wapap_appointment_recurrence_get__day(WAPAP_AppointmentRecurrence *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentRecurrence.put_Day() */
 HRESULT wapap_appointment_recurrence_put__day(WAPAP_AppointmentRecurrence *self, uint32_t value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentRecurrence.get_RecurrenceType() */
 HRESULT wapap_appointment_recurrence_get__recurrence_type(WAPAP_AppointmentRecurrence *self, WAPAP_RecurrenceType *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentRecurrence.get_TimeZone() */
 HRESULT wapap_appointment_recurrence_get__time_zone(WAPAP_AppointmentRecurrence *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentRecurrence.put_TimeZone() */
 HRESULT wapap_appointment_recurrence_put__time_zone(WAPAP_AppointmentRecurrence *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentRecurrence.get_CalendarIdentifier() */
 HRESULT wapap_appointment_recurrence_get__calendar_identifier(WAPAP_AppointmentRecurrence *self, cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.Appointments.AppointmentProperties */
 HRESULT wapap_appointment_properties_new(WAPAP_AppointmentProperties **out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentProperties */
-/* Windows.ApplicationModel.Appointments.AppointmentProperties.get_ChangeNumber() */
 HRESULT wapap_appointment_properties_get__change_number(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentProperties.get_RemoteChangeNumber() */
 HRESULT wapap_appointment_properties_get__remote_change_number(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentProperties.get_DetailsKind() */
 HRESULT wapap_appointment_properties_get__details_kind(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentProperties.get_Subject() */
 HRESULT wapap_appointment_properties_get__subject(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentProperties.get_Location() */
 HRESULT wapap_appointment_properties_get__location(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentProperties.get_StartTime() */
 HRESULT wapap_appointment_properties_get__start_time(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentProperties.get_Duration() */
 HRESULT wapap_appointment_properties_get__duration(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentProperties.get_Reminder() */
 HRESULT wapap_appointment_properties_get__reminder(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentProperties.get_BusyStatus() */
 HRESULT wapap_appointment_properties_get__busy_status(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentProperties.get_Sensitivity() */
 HRESULT wapap_appointment_properties_get__sensitivity(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentProperties.get_OriginalStartTime() */
 HRESULT wapap_appointment_properties_get__original_start_time(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentProperties.get_IsResponseRequested() */
 HRESULT wapap_appointment_properties_get__is_response_requested(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentProperties.get_AllowNewTimeProposal() */
 HRESULT wapap_appointment_properties_get__allow_new_time_proposal(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentProperties.get_AllDay() */
 HRESULT wapap_appointment_properties_get__all_day(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentProperties.get_Details() */
 HRESULT wapap_appointment_properties_get__details(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentProperties.get_OnlineMeetingLink() */
 HRESULT wapap_appointment_properties_get__online_meeting_link(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentProperties.get_ReplyTime() */
 HRESULT wapap_appointment_properties_get__reply_time(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentProperties.get_Organizer() */
 HRESULT wapap_appointment_properties_get__organizer(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentProperties.get_UserResponse() */
 HRESULT wapap_appointment_properties_get__user_response(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentProperties.get_HasInvitees() */
 HRESULT wapap_appointment_properties_get__has_invitees(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentProperties.get_IsCanceledMeeting() */
 HRESULT wapap_appointment_properties_get__is_canceled_meeting(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentProperties.get_IsOrganizedByUser() */
 HRESULT wapap_appointment_properties_get__is_organized_by_user(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentProperties.get_Recurrence() */
 HRESULT wapap_appointment_properties_get__recurrence(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentProperties.get_Uri() */
 HRESULT wapap_appointment_properties_get__uri(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentProperties.get_Invitees() */
 HRESULT wapap_appointment_properties_get__invitees(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentProperties.get_DefaultProperties() */
 HRESULT wapap_appointment_properties_get__default_properties(WFOCO_IVector_HSTRING** value);
 
-/* activate Windows.ApplicationModel.Appointments.AppointmentOrganizer */
 HRESULT wapap_appointment_organizer_new(WAPAP_AppointmentOrganizer **out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentOrganizer */
-/* Windows.ApplicationModel.Appointments.AppointmentOrganizer.get_DisplayName() */
 HRESULT wapap_appointment_organizer_get__display_name(WAPAP_AppointmentOrganizer *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentOrganizer.put_DisplayName() */
 HRESULT wapap_appointment_organizer_put__display_name(WAPAP_AppointmentOrganizer *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentOrganizer.get_Address() */
 HRESULT wapap_appointment_organizer_get__address(WAPAP_AppointmentOrganizer *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentOrganizer.put_Address() */
 HRESULT wapap_appointment_organizer_put__address(WAPAP_AppointmentOrganizer *self, cwinrt_hstring value);
 
-/* activate Windows.ApplicationModel.Appointments.AppointmentManagerForUser */
 HRESULT wapap_appointment_manager_for_user_new(WAPAP_AppointmentManagerForUser **out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentManagerForUser */
-/* Windows.ApplicationModel.Appointments.AppointmentManagerForUser.ShowAddAppointmentAsync(appointment, selection) */
 HRESULT wapap_appointment_manager_for_user_show_add_appointment_async(WAPAP_AppointmentManagerForUser *self, WAPAP_Appointment* appointment, WF_Rect selection, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentManagerForUser.ShowAddAppointmentAsync(appointment, selection, preferredPlacement) */
 HRESULT wapap_appointment_manager_for_user_show_add_appointment_async_p_rect_placement_p(WAPAP_AppointmentManagerForUser *self, WAPAP_Appointment* appointment, WF_Rect selection, WUIPO_Placement preferredPlacement, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentManagerForUser.ShowReplaceAppointmentAsync(appointmentId, appointment, selection) */
 HRESULT wapap_appointment_manager_for_user_show_replace_appointment_async(WAPAP_AppointmentManagerForUser *self, cwinrt_hstring appointmentId, WAPAP_Appointment* appointment, WF_Rect selection, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentManagerForUser.ShowReplaceAppointmentAsync(appointmentId, appointment, selection, preferredPlacement) */
 HRESULT wapap_appointment_manager_for_user_show_replace_appointment_async_str_p_rect_placement_p(WAPAP_AppointmentManagerForUser *self, cwinrt_hstring appointmentId, WAPAP_Appointment* appointment, WF_Rect selection, WUIPO_Placement preferredPlacement, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentManagerForUser.ShowReplaceAppointmentAsync(appointmentId, appointment, selection, preferredPlacement, instanceStartDate) */
 HRESULT wapap_appointment_manager_for_user_show_replace_appointment_async_str_p_rect_placement_date_time_p(WAPAP_AppointmentManagerForUser *self, cwinrt_hstring appointmentId, WAPAP_Appointment* appointment, WF_Rect selection, WUIPO_Placement preferredPlacement, WF_DateTime instanceStartDate, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentManagerForUser.ShowRemoveAppointmentAsync(appointmentId, selection) */
 HRESULT wapap_appointment_manager_for_user_show_remove_appointment_async(WAPAP_AppointmentManagerForUser *self, cwinrt_hstring appointmentId, WF_Rect selection, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentManagerForUser.ShowRemoveAppointmentAsync(appointmentId, selection, preferredPlacement) */
 HRESULT wapap_appointment_manager_for_user_show_remove_appointment_async_str_rect_placement_p(WAPAP_AppointmentManagerForUser *self, cwinrt_hstring appointmentId, WF_Rect selection, WUIPO_Placement preferredPlacement, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentManagerForUser.ShowRemoveAppointmentAsync(appointmentId, selection, preferredPlacement, instanceStartDate) */
 HRESULT wapap_appointment_manager_for_user_show_remove_appointment_async_str_rect_placement_date_time_p(WAPAP_AppointmentManagerForUser *self, cwinrt_hstring appointmentId, WF_Rect selection, WUIPO_Placement preferredPlacement, WF_DateTime instanceStartDate, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentManagerForUser.ShowTimeFrameAsync(timeToShow, duration) */
 HRESULT wapap_appointment_manager_for_user_show_time_frame_async(WAPAP_AppointmentManagerForUser *self, WF_DateTime timeToShow, WF_TimeSpan duration, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentManagerForUser.ShowAppointmentDetailsAsync(appointmentId) */
 HRESULT wapap_appointment_manager_for_user_show_appointment_details_async(WAPAP_AppointmentManagerForUser *self, cwinrt_hstring appointmentId, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentManagerForUser.ShowAppointmentDetailsAsync(appointmentId, instanceStartDate) */
 HRESULT wapap_appointment_manager_for_user_show_appointment_details_async_str_date_time_p(WAPAP_AppointmentManagerForUser *self, cwinrt_hstring appointmentId, WF_DateTime instanceStartDate, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentManagerForUser.ShowEditNewAppointmentAsync(appointment) */
 HRESULT wapap_appointment_manager_for_user_show_edit_new_appointment_async(WAPAP_AppointmentManagerForUser *self, WAPAP_Appointment* appointment, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentManagerForUser.RequestStoreAsync(options) */
 HRESULT wapap_appointment_manager_for_user_request_store_async(WAPAP_AppointmentManagerForUser *self, WAPAP_AppointmentStoreAccessType options, WF_IAsyncOperation_WAPAP_AppointmentStore** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentManagerForUser.get_User() */
 HRESULT wapap_appointment_manager_for_user_get__user(WAPAP_AppointmentManagerForUser *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Appointments.AppointmentManager */
 HRESULT wapap_appointment_manager_new(WAPAP_AppointmentManager **out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentManager */
-/* Windows.ApplicationModel.Appointments.AppointmentManager.GetForUser(user) */
 HRESULT wapap_appointment_manager_get_for_user(WSY_User* user, WAPAP_AppointmentManagerForUser** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentManager.ShowAppointmentDetailsAsync(appointmentId) */
 HRESULT wapap_appointment_manager_show_appointment_details_async(cwinrt_hstring appointmentId, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentManager.ShowAppointmentDetailsAsync(appointmentId, instanceStartDate) */
 HRESULT wapap_appointment_manager_show_appointment_details_async_str_date_time_p(cwinrt_hstring appointmentId, WF_DateTime instanceStartDate, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentManager.ShowEditNewAppointmentAsync(appointment) */
 HRESULT wapap_appointment_manager_show_edit_new_appointment_async(WAPAP_Appointment* appointment, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentManager.RequestStoreAsync(options) */
 HRESULT wapap_appointment_manager_request_store_async(WAPAP_AppointmentStoreAccessType options, WF_IAsyncOperation_WAPAP_AppointmentStore** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentManager.ShowAddAppointmentAsync(appointment, selection) */
 HRESULT wapap_appointment_manager_show_add_appointment_async(WAPAP_Appointment* appointment, WF_Rect selection, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentManager.ShowAddAppointmentAsync(appointment, selection, preferredPlacement) */
 HRESULT wapap_appointment_manager_show_add_appointment_async_p_rect_placement_p(WAPAP_Appointment* appointment, WF_Rect selection, WUIPO_Placement preferredPlacement, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentManager.ShowReplaceAppointmentAsync(appointmentId, appointment, selection) */
 HRESULT wapap_appointment_manager_show_replace_appointment_async(cwinrt_hstring appointmentId, WAPAP_Appointment* appointment, WF_Rect selection, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentManager.ShowReplaceAppointmentAsync(appointmentId, appointment, selection, preferredPlacement) */
 HRESULT wapap_appointment_manager_show_replace_appointment_async_str_p_rect_placement_p(cwinrt_hstring appointmentId, WAPAP_Appointment* appointment, WF_Rect selection, WUIPO_Placement preferredPlacement, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentManager.ShowReplaceAppointmentAsync(appointmentId, appointment, selection, preferredPlacement, instanceStartDate) */
 HRESULT wapap_appointment_manager_show_replace_appointment_async_str_p_rect_placement_date_time_p(cwinrt_hstring appointmentId, WAPAP_Appointment* appointment, WF_Rect selection, WUIPO_Placement preferredPlacement, WF_DateTime instanceStartDate, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentManager.ShowRemoveAppointmentAsync(appointmentId, selection) */
 HRESULT wapap_appointment_manager_show_remove_appointment_async(cwinrt_hstring appointmentId, WF_Rect selection, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentManager.ShowRemoveAppointmentAsync(appointmentId, selection, preferredPlacement) */
 HRESULT wapap_appointment_manager_show_remove_appointment_async_str_rect_placement_p(cwinrt_hstring appointmentId, WF_Rect selection, WUIPO_Placement preferredPlacement, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentManager.ShowRemoveAppointmentAsync(appointmentId, selection, preferredPlacement, instanceStartDate) */
 HRESULT wapap_appointment_manager_show_remove_appointment_async_str_rect_placement_date_time_p(cwinrt_hstring appointmentId, WF_Rect selection, WUIPO_Placement preferredPlacement, WF_DateTime instanceStartDate, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentManager.ShowTimeFrameAsync(timeToShow, duration) */
 HRESULT wapap_appointment_manager_show_time_frame_async(WF_DateTime timeToShow, WF_TimeSpan duration, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Appointments.AppointmentInvitee */
 HRESULT wapap_appointment_invitee_new(WAPAP_AppointmentInvitee **out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentInvitee */
-/* Windows.ApplicationModel.Appointments.AppointmentInvitee.get_Role() */
 HRESULT wapap_appointment_invitee_get__role(WAPAP_AppointmentInvitee *self, WAPAP_AppointmentParticipantRole *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentInvitee.put_Role() */
 HRESULT wapap_appointment_invitee_put__role(WAPAP_AppointmentInvitee *self, WAPAP_AppointmentParticipantRole value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentInvitee.get_Response() */
 HRESULT wapap_appointment_invitee_get__response(WAPAP_AppointmentInvitee *self, WAPAP_AppointmentParticipantResponse *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentInvitee.put_Response() */
 HRESULT wapap_appointment_invitee_put__response(WAPAP_AppointmentInvitee *self, WAPAP_AppointmentParticipantResponse value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentInvitee.get_DisplayName() */
 HRESULT wapap_appointment_invitee_get__display_name(WAPAP_AppointmentInvitee *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentInvitee.put_DisplayName() */
 HRESULT wapap_appointment_invitee_put__display_name(WAPAP_AppointmentInvitee *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentInvitee.get_Address() */
 HRESULT wapap_appointment_invitee_get__address(WAPAP_AppointmentInvitee *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentInvitee.put_Address() */
 HRESULT wapap_appointment_invitee_put__address(WAPAP_AppointmentInvitee *self, cwinrt_hstring value);
 
-/* activate Windows.ApplicationModel.Appointments.AppointmentException */
 HRESULT wapap_appointment_exception_new(WAPAP_AppointmentException **out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentException */
-/* Windows.ApplicationModel.Appointments.AppointmentException.get_Appointment() */
 HRESULT wapap_appointment_exception_get__appointment(WAPAP_AppointmentException *self, WAPAP_Appointment** value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentException.get_ExceptionProperties() */
 HRESULT wapap_appointment_exception_get__exception_properties(WAPAP_AppointmentException *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentException.get_IsDeleted() */
 HRESULT wapap_appointment_exception_get__is_deleted(WAPAP_AppointmentException *self, BOOL *value);
 
-/* activate Windows.ApplicationModel.Appointments.AppointmentConflictResult */
 HRESULT wapap_appointment_conflict_result_new(WAPAP_AppointmentConflictResult **out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentConflictResult */
-/* Windows.ApplicationModel.Appointments.AppointmentConflictResult.get_Type() */
 HRESULT wapap_appointment_conflict_result_get__type(WAPAP_AppointmentConflictResult *self, WAPAP_AppointmentConflictType *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentConflictResult.get_Date() */
 HRESULT wapap_appointment_conflict_result_get__date(WAPAP_AppointmentConflictResult *self, WF_DateTime *value);
 
-/* activate Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager */
 HRESULT wapap_appointment_calendar_sync_manager_new(WAPAP_AppointmentCalendarSyncManager **out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager */
-/* Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager.get_Status() */
 HRESULT wapap_appointment_calendar_sync_manager_get__status(WAPAP_AppointmentCalendarSyncManager *self, WAPAP_AppointmentCalendarSyncStatus *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager.get_LastSuccessfulSyncTime() */
 HRESULT wapap_appointment_calendar_sync_manager_get__last_successful_sync_time(WAPAP_AppointmentCalendarSyncManager *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager.get_LastAttemptedSyncTime() */
 HRESULT wapap_appointment_calendar_sync_manager_get__last_attempted_sync_time(WAPAP_AppointmentCalendarSyncManager *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager.SyncAsync() */
 HRESULT wapap_appointment_calendar_sync_manager_sync_async(WAPAP_AppointmentCalendarSyncManager *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager.put_Status() */
 HRESULT wapap_appointment_calendar_sync_manager_put__status(WAPAP_AppointmentCalendarSyncManager *self, WAPAP_AppointmentCalendarSyncStatus value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager.put_LastSuccessfulSyncTime() */
 HRESULT wapap_appointment_calendar_sync_manager_put__last_successful_sync_time(WAPAP_AppointmentCalendarSyncManager *self, WF_DateTime value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager.put_LastAttemptedSyncTime() */
 HRESULT wapap_appointment_calendar_sync_manager_put__last_attempted_sync_time(WAPAP_AppointmentCalendarSyncManager *self, WF_DateTime value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapap_appointment_calendar_sync_manager_on_sync_status_changed(WAPAP_AppointmentCalendarSyncManager *self, cwinrt_event_fn fn, void *ctx);
 void wapap_appointment_calendar_sync_manager_off_sync_status_changed(WAPAP_AppointmentCalendarSyncManager *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Appointments.AppointmentCalendar */
 HRESULT wapap_appointment_calendar_new(WAPAP_AppointmentCalendar **out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar */
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.get_DisplayColor() */
 HRESULT wapap_appointment_calendar_get__display_color(WAPAP_AppointmentCalendar *self, WUI_Color *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.get_DisplayName() */
 HRESULT wapap_appointment_calendar_get__display_name(WAPAP_AppointmentCalendar *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.put_DisplayName() */
 HRESULT wapap_appointment_calendar_put__display_name(WAPAP_AppointmentCalendar *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.get_LocalId() */
 HRESULT wapap_appointment_calendar_get__local_id(WAPAP_AppointmentCalendar *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.get_IsHidden() */
 HRESULT wapap_appointment_calendar_get__is_hidden(WAPAP_AppointmentCalendar *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.get_OtherAppReadAccess() */
 HRESULT wapap_appointment_calendar_get__other_app_read_access(WAPAP_AppointmentCalendar *self, WAPAP_AppointmentCalendarOtherAppReadAccess *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.put_OtherAppReadAccess() */
 HRESULT wapap_appointment_calendar_put__other_app_read_access(WAPAP_AppointmentCalendar *self, WAPAP_AppointmentCalendarOtherAppReadAccess value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.get_OtherAppWriteAccess() */
 HRESULT wapap_appointment_calendar_get__other_app_write_access(WAPAP_AppointmentCalendar *self, WAPAP_AppointmentCalendarOtherAppWriteAccess *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.put_OtherAppWriteAccess() */
 HRESULT wapap_appointment_calendar_put__other_app_write_access(WAPAP_AppointmentCalendar *self, WAPAP_AppointmentCalendarOtherAppWriteAccess value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.get_SourceDisplayName() */
 HRESULT wapap_appointment_calendar_get__source_display_name(WAPAP_AppointmentCalendar *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.get_SummaryCardView() */
 HRESULT wapap_appointment_calendar_get__summary_card_view(WAPAP_AppointmentCalendar *self, WAPAP_AppointmentSummaryCardView *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.put_SummaryCardView() */
 HRESULT wapap_appointment_calendar_put__summary_card_view(WAPAP_AppointmentCalendar *self, WAPAP_AppointmentSummaryCardView value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.FindAppointmentsAsync(rangeStart, rangeLength) */
 HRESULT wapap_appointment_calendar_find_appointments_async(WAPAP_AppointmentCalendar *self, WF_DateTime rangeStart, WF_TimeSpan rangeLength, WF_IAsyncOperation_WFOCO_IVectorView_WAPAP_Appointment** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.FindAppointmentsAsync(rangeStart, rangeLength, options) */
 HRESULT wapap_appointment_calendar_find_appointments_async_date_time_time_span_p_p(WAPAP_AppointmentCalendar *self, WF_DateTime rangeStart, WF_TimeSpan rangeLength, WAPAP_FindAppointmentsOptions* options, WF_IAsyncOperation_WFOCO_IVectorView_WAPAP_Appointment** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.FindExceptionsFromMasterAsync(masterLocalId) */
 HRESULT wapap_appointment_calendar_find_exceptions_from_master_async(WAPAP_AppointmentCalendar *self, cwinrt_hstring masterLocalId, WF_IAsyncOperation_WFOCO_IVectorView_WAPAP_AppointmentException** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.FindAllInstancesAsync(masterLocalId, rangeStart, rangeLength) */
 HRESULT wapap_appointment_calendar_find_all_instances_async(WAPAP_AppointmentCalendar *self, cwinrt_hstring masterLocalId, WF_DateTime rangeStart, WF_TimeSpan rangeLength, WF_IAsyncOperation_WFOCO_IVectorView_WAPAP_Appointment** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.FindAllInstancesAsync(masterLocalId, rangeStart, rangeLength, pOptions) */
 HRESULT wapap_appointment_calendar_find_all_instances_async_str_date_time_time_span_p_p(WAPAP_AppointmentCalendar *self, cwinrt_hstring masterLocalId, WF_DateTime rangeStart, WF_TimeSpan rangeLength, WAPAP_FindAppointmentsOptions* pOptions, WF_IAsyncOperation_WFOCO_IVectorView_WAPAP_Appointment** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.GetAppointmentAsync(localId) */
 HRESULT wapap_appointment_calendar_get_appointment_async(WAPAP_AppointmentCalendar *self, cwinrt_hstring localId, WF_IAsyncOperation_WAPAP_Appointment** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.GetAppointmentInstanceAsync(localId, instanceStartTime) */
 HRESULT wapap_appointment_calendar_get_appointment_instance_async(WAPAP_AppointmentCalendar *self, cwinrt_hstring localId, WF_DateTime instanceStartTime, WF_IAsyncOperation_WAPAP_Appointment** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.FindUnexpandedAppointmentsAsync() */
 HRESULT wapap_appointment_calendar_find_unexpanded_appointments_async(WAPAP_AppointmentCalendar *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPAP_Appointment** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.FindUnexpandedAppointmentsAsync(options) */
 HRESULT wapap_appointment_calendar_find_unexpanded_appointments_async_p_p(WAPAP_AppointmentCalendar *self, WAPAP_FindAppointmentsOptions* options, WF_IAsyncOperation_WFOCO_IVectorView_WAPAP_Appointment** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.DeleteAsync() */
 HRESULT wapap_appointment_calendar_delete_async(WAPAP_AppointmentCalendar *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.SaveAsync() */
 HRESULT wapap_appointment_calendar_save_async(WAPAP_AppointmentCalendar *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.DeleteAppointmentAsync(localId) */
 HRESULT wapap_appointment_calendar_delete_appointment_async(WAPAP_AppointmentCalendar *self, cwinrt_hstring localId, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.DeleteAppointmentInstanceAsync(localId, instanceStartTime) */
 HRESULT wapap_appointment_calendar_delete_appointment_instance_async(WAPAP_AppointmentCalendar *self, cwinrt_hstring localId, WF_DateTime instanceStartTime, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.SaveAppointmentAsync(pAppointment) */
 HRESULT wapap_appointment_calendar_save_appointment_async(WAPAP_AppointmentCalendar *self, WAPAP_Appointment* pAppointment, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.get_SyncManager() */
 HRESULT wapap_appointment_calendar_get__sync_manager(WAPAP_AppointmentCalendar *self, WAPAP_AppointmentCalendarSyncManager** value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.get_RemoteId() */
 HRESULT wapap_appointment_calendar_get__remote_id(WAPAP_AppointmentCalendar *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.put_RemoteId() */
 HRESULT wapap_appointment_calendar_put__remote_id(WAPAP_AppointmentCalendar *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.put_DisplayColor() */
 HRESULT wapap_appointment_calendar_put__display_color(WAPAP_AppointmentCalendar *self, WUI_Color value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.put_IsHidden() */
 HRESULT wapap_appointment_calendar_put__is_hidden(WAPAP_AppointmentCalendar *self, BOOL value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.get_UserDataAccountId() */
 HRESULT wapap_appointment_calendar_get__user_data_account_id(WAPAP_AppointmentCalendar *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.get_CanCreateOrUpdateAppointments() */
 HRESULT wapap_appointment_calendar_get__can_create_or_update_appointments(WAPAP_AppointmentCalendar *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.put_CanCreateOrUpdateAppointments() */
 HRESULT wapap_appointment_calendar_put__can_create_or_update_appointments(WAPAP_AppointmentCalendar *self, BOOL value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.get_CanCancelMeetings() */
 HRESULT wapap_appointment_calendar_get__can_cancel_meetings(WAPAP_AppointmentCalendar *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.put_CanCancelMeetings() */
 HRESULT wapap_appointment_calendar_put__can_cancel_meetings(WAPAP_AppointmentCalendar *self, BOOL value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.get_CanForwardMeetings() */
 HRESULT wapap_appointment_calendar_get__can_forward_meetings(WAPAP_AppointmentCalendar *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.put_CanForwardMeetings() */
 HRESULT wapap_appointment_calendar_put__can_forward_meetings(WAPAP_AppointmentCalendar *self, BOOL value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.get_CanProposeNewTimeForMeetings() */
 HRESULT wapap_appointment_calendar_get__can_propose_new_time_for_meetings(WAPAP_AppointmentCalendar *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.put_CanProposeNewTimeForMeetings() */
 HRESULT wapap_appointment_calendar_put__can_propose_new_time_for_meetings(WAPAP_AppointmentCalendar *self, BOOL value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.get_CanUpdateMeetingResponses() */
 HRESULT wapap_appointment_calendar_get__can_update_meeting_responses(WAPAP_AppointmentCalendar *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.put_CanUpdateMeetingResponses() */
 HRESULT wapap_appointment_calendar_put__can_update_meeting_responses(WAPAP_AppointmentCalendar *self, BOOL value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.get_CanNotifyInvitees() */
 HRESULT wapap_appointment_calendar_get__can_notify_invitees(WAPAP_AppointmentCalendar *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.put_CanNotifyInvitees() */
 HRESULT wapap_appointment_calendar_put__can_notify_invitees(WAPAP_AppointmentCalendar *self, BOOL value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.get_MustNofityInvitees() */
 HRESULT wapap_appointment_calendar_get__must_nofity_invitees(WAPAP_AppointmentCalendar *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.put_MustNofityInvitees() */
 HRESULT wapap_appointment_calendar_put__must_nofity_invitees(WAPAP_AppointmentCalendar *self, BOOL value);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.TryCreateOrUpdateAppointmentAsync(appointment, notifyInvitees) */
 HRESULT wapap_appointment_calendar_try_create_or_update_appointment_async(WAPAP_AppointmentCalendar *self, WAPAP_Appointment* appointment, BOOL notifyInvitees, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.TryCancelMeetingAsync(meeting, subject, comment, notifyInvitees) */
 HRESULT wapap_appointment_calendar_try_cancel_meeting_async(WAPAP_AppointmentCalendar *self, WAPAP_Appointment* meeting, cwinrt_hstring subject, cwinrt_hstring comment, BOOL notifyInvitees, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.TryForwardMeetingAsync(meeting, invitees, subject, forwardHeader, comment) */
 HRESULT wapap_appointment_calendar_try_forward_meeting_async(WAPAP_AppointmentCalendar *self, WAPAP_Appointment* meeting, WFOCO_IIterable_WAPAP_AppointmentInvitee* invitees, cwinrt_hstring subject, cwinrt_hstring forwardHeader, cwinrt_hstring comment, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.TryProposeNewTimeForMeetingAsync(meeting, newStartTime, newDuration, subject, comment) */
 HRESULT wapap_appointment_calendar_try_propose_new_time_for_meeting_async(WAPAP_AppointmentCalendar *self, WAPAP_Appointment* meeting, WF_DateTime newStartTime, WF_TimeSpan newDuration, cwinrt_hstring subject, cwinrt_hstring comment, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.TryUpdateMeetingResponseAsync(meeting, response, subject, comment, sendUpdate) */
 HRESULT wapap_appointment_calendar_try_update_meeting_response_async(WAPAP_AppointmentCalendar *self, WAPAP_Appointment* meeting, WAPAP_AppointmentParticipantResponse response, cwinrt_hstring subject, cwinrt_hstring comment, BOOL sendUpdate, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Appointments.AppointmentCalendar.RegisterSyncManagerAsync() */
 HRESULT wapap_appointment_calendar_register_sync_manager_async(WAPAP_AppointmentCalendar *self, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Appointments.Appointment */
 HRESULT wapap_appointment_new(WAPAP_Appointment **out);
 
-/* Windows.ApplicationModel.Appointments.Appointment */
-/* Windows.ApplicationModel.Appointments.Appointment.get_StartTime() */
 HRESULT wapap_appointment_get__start_time(WAPAP_Appointment *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.put_StartTime() */
 HRESULT wapap_appointment_put__start_time(WAPAP_Appointment *self, WF_DateTime value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.get_Duration() */
 HRESULT wapap_appointment_get__duration(WAPAP_Appointment *self, WF_TimeSpan *value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.put_Duration() */
 HRESULT wapap_appointment_put__duration(WAPAP_Appointment *self, WF_TimeSpan value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.get_Location() */
 HRESULT wapap_appointment_get__location(WAPAP_Appointment *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.put_Location() */
 HRESULT wapap_appointment_put__location(WAPAP_Appointment *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.get_Subject() */
 HRESULT wapap_appointment_get__subject(WAPAP_Appointment *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.put_Subject() */
 HRESULT wapap_appointment_put__subject(WAPAP_Appointment *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.get_Details() */
 HRESULT wapap_appointment_get__details(WAPAP_Appointment *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.put_Details() */
 HRESULT wapap_appointment_put__details(WAPAP_Appointment *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.get_Reminder() */
 HRESULT wapap_appointment_get__reminder(WAPAP_Appointment *self, WF_TimeSpan** value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.put_Reminder() */
 HRESULT wapap_appointment_put__reminder(WAPAP_Appointment *self, WF_TimeSpan* value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.get_Organizer() */
 HRESULT wapap_appointment_get__organizer(WAPAP_Appointment *self, WAPAP_AppointmentOrganizer** value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.put_Organizer() */
 HRESULT wapap_appointment_put__organizer(WAPAP_Appointment *self, WAPAP_AppointmentOrganizer* value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.get_Invitees() */
 HRESULT wapap_appointment_get__invitees(WAPAP_Appointment *self, WFOCO_IVector_WAPAP_AppointmentInvitee** value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.get_Recurrence() */
 HRESULT wapap_appointment_get__recurrence(WAPAP_Appointment *self, WAPAP_AppointmentRecurrence** value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.put_Recurrence() */
 HRESULT wapap_appointment_put__recurrence(WAPAP_Appointment *self, WAPAP_AppointmentRecurrence* value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.get_BusyStatus() */
 HRESULT wapap_appointment_get__busy_status(WAPAP_Appointment *self, WAPAP_AppointmentBusyStatus *value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.put_BusyStatus() */
 HRESULT wapap_appointment_put__busy_status(WAPAP_Appointment *self, WAPAP_AppointmentBusyStatus value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.get_AllDay() */
 HRESULT wapap_appointment_get__all_day(WAPAP_Appointment *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.put_AllDay() */
 HRESULT wapap_appointment_put__all_day(WAPAP_Appointment *self, BOOL value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.get_Sensitivity() */
 HRESULT wapap_appointment_get__sensitivity(WAPAP_Appointment *self, WAPAP_AppointmentSensitivity *value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.put_Sensitivity() */
 HRESULT wapap_appointment_put__sensitivity(WAPAP_Appointment *self, WAPAP_AppointmentSensitivity value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.get_Uri() */
 HRESULT wapap_appointment_get__uri(WAPAP_Appointment *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.put_Uri() */
 HRESULT wapap_appointment_put__uri(WAPAP_Appointment *self, WF_Uri* value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.get_LocalId() */
 HRESULT wapap_appointment_get__local_id(WAPAP_Appointment *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.get_CalendarId() */
 HRESULT wapap_appointment_get__calendar_id(WAPAP_Appointment *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.get_RoamingId() */
 HRESULT wapap_appointment_get__roaming_id(WAPAP_Appointment *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.put_RoamingId() */
 HRESULT wapap_appointment_put__roaming_id(WAPAP_Appointment *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.get_OriginalStartTime() */
 HRESULT wapap_appointment_get__original_start_time(WAPAP_Appointment *self, WF_DateTime** value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.get_IsResponseRequested() */
 HRESULT wapap_appointment_get__is_response_requested(WAPAP_Appointment *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.put_IsResponseRequested() */
 HRESULT wapap_appointment_put__is_response_requested(WAPAP_Appointment *self, BOOL value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.get_AllowNewTimeProposal() */
 HRESULT wapap_appointment_get__allow_new_time_proposal(WAPAP_Appointment *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.put_AllowNewTimeProposal() */
 HRESULT wapap_appointment_put__allow_new_time_proposal(WAPAP_Appointment *self, BOOL value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.get_OnlineMeetingLink() */
 HRESULT wapap_appointment_get__online_meeting_link(WAPAP_Appointment *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.put_OnlineMeetingLink() */
 HRESULT wapap_appointment_put__online_meeting_link(WAPAP_Appointment *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.get_ReplyTime() */
 HRESULT wapap_appointment_get__reply_time(WAPAP_Appointment *self, WF_DateTime** value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.put_ReplyTime() */
 HRESULT wapap_appointment_put__reply_time(WAPAP_Appointment *self, WF_DateTime* value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.get_UserResponse() */
 HRESULT wapap_appointment_get__user_response(WAPAP_Appointment *self, WAPAP_AppointmentParticipantResponse *value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.put_UserResponse() */
 HRESULT wapap_appointment_put__user_response(WAPAP_Appointment *self, WAPAP_AppointmentParticipantResponse value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.get_HasInvitees() */
 HRESULT wapap_appointment_get__has_invitees(WAPAP_Appointment *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.get_IsCanceledMeeting() */
 HRESULT wapap_appointment_get__is_canceled_meeting(WAPAP_Appointment *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.put_IsCanceledMeeting() */
 HRESULT wapap_appointment_put__is_canceled_meeting(WAPAP_Appointment *self, BOOL value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.get_IsOrganizedByUser() */
 HRESULT wapap_appointment_get__is_organized_by_user(WAPAP_Appointment *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.put_IsOrganizedByUser() */
 HRESULT wapap_appointment_put__is_organized_by_user(WAPAP_Appointment *self, BOOL value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.get_ChangeNumber() */
 HRESULT wapap_appointment_get__change_number(WAPAP_Appointment *self, uint64_t *value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.get_RemoteChangeNumber() */
 HRESULT wapap_appointment_get__remote_change_number(WAPAP_Appointment *self, uint64_t *value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.put_RemoteChangeNumber() */
 HRESULT wapap_appointment_put__remote_change_number(WAPAP_Appointment *self, uint64_t value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.get_DetailsKind() */
 HRESULT wapap_appointment_get__details_kind(WAPAP_Appointment *self, WAPAP_AppointmentDetailsKind *value);
 
-/* Windows.ApplicationModel.Appointments.Appointment.put_DetailsKind() */
 HRESULT wapap_appointment_put__details_kind(WAPAP_Appointment *self, WAPAP_AppointmentDetailsKind value);
 
-/* activate Windows.ApplicationModel.Appointments.FindAppointmentsOptions */
 HRESULT wapap_find_appointments_options_new(WAPAP_FindAppointmentsOptions **out);
 
-/* Windows.ApplicationModel.Appointments.FindAppointmentsOptions */
-/* Windows.ApplicationModel.Appointments.FindAppointmentsOptions.get_CalendarIds() */
 HRESULT wapap_find_appointments_options_get__calendar_ids(WAPAP_FindAppointmentsOptions *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.ApplicationModel.Appointments.FindAppointmentsOptions.get_FetchProperties() */
 HRESULT wapap_find_appointments_options_get__fetch_properties(WAPAP_FindAppointmentsOptions *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.ApplicationModel.Appointments.FindAppointmentsOptions.get_IncludeHidden() */
 HRESULT wapap_find_appointments_options_get__include_hidden(WAPAP_FindAppointmentsOptions *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.FindAppointmentsOptions.put_IncludeHidden() */
 HRESULT wapap_find_appointments_options_put__include_hidden(WAPAP_FindAppointmentsOptions *self, BOOL value);
 
-/* Windows.ApplicationModel.Appointments.FindAppointmentsOptions.get_MaxCount() */
 HRESULT wapap_find_appointments_options_get__max_count(WAPAP_FindAppointmentsOptions *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Appointments.FindAppointmentsOptions.put_MaxCount() */
 HRESULT wapap_find_appointments_options_put__max_count(WAPAP_FindAppointmentsOptions *self, uint32_t value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics */
-/* Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics.get_Subject() */
 HRESULT wapap_appointment_properties_statics_get__subject(WAPAP_IAppointmentPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics.get_Location() */
 HRESULT wapap_appointment_properties_statics_get__location(WAPAP_IAppointmentPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics.get_StartTime() */
 HRESULT wapap_appointment_properties_statics_get__start_time(WAPAP_IAppointmentPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics.get_Duration() */
 HRESULT wapap_appointment_properties_statics_get__duration(WAPAP_IAppointmentPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics.get_Reminder() */
 HRESULT wapap_appointment_properties_statics_get__reminder(WAPAP_IAppointmentPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics.get_BusyStatus() */
 HRESULT wapap_appointment_properties_statics_get__busy_status(WAPAP_IAppointmentPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics.get_Sensitivity() */
 HRESULT wapap_appointment_properties_statics_get__sensitivity(WAPAP_IAppointmentPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics.get_OriginalStartTime() */
 HRESULT wapap_appointment_properties_statics_get__original_start_time(WAPAP_IAppointmentPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics.get_IsResponseRequested() */
 HRESULT wapap_appointment_properties_statics_get__is_response_requested(WAPAP_IAppointmentPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics.get_AllowNewTimeProposal() */
 HRESULT wapap_appointment_properties_statics_get__allow_new_time_proposal(WAPAP_IAppointmentPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics.get_AllDay() */
 HRESULT wapap_appointment_properties_statics_get__all_day(WAPAP_IAppointmentPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics.get_Details() */
 HRESULT wapap_appointment_properties_statics_get__details(WAPAP_IAppointmentPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics.get_OnlineMeetingLink() */
 HRESULT wapap_appointment_properties_statics_get__online_meeting_link(WAPAP_IAppointmentPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics.get_ReplyTime() */
 HRESULT wapap_appointment_properties_statics_get__reply_time(WAPAP_IAppointmentPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics.get_Organizer() */
 HRESULT wapap_appointment_properties_statics_get__organizer(WAPAP_IAppointmentPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics.get_UserResponse() */
 HRESULT wapap_appointment_properties_statics_get__user_response(WAPAP_IAppointmentPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics.get_HasInvitees() */
 HRESULT wapap_appointment_properties_statics_get__has_invitees(WAPAP_IAppointmentPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics.get_IsCanceledMeeting() */
 HRESULT wapap_appointment_properties_statics_get__is_canceled_meeting(WAPAP_IAppointmentPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics.get_IsOrganizedByUser() */
 HRESULT wapap_appointment_properties_statics_get__is_organized_by_user(WAPAP_IAppointmentPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics.get_Recurrence() */
 HRESULT wapap_appointment_properties_statics_get__recurrence(WAPAP_IAppointmentPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics.get_Uri() */
 HRESULT wapap_appointment_properties_statics_get__uri(WAPAP_IAppointmentPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics.get_Invitees() */
 HRESULT wapap_appointment_properties_statics_get__invitees(WAPAP_IAppointmentPropertiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics.get_DefaultProperties() */
 HRESULT wapap_appointment_properties_statics_get__default_properties(WAPAP_IAppointmentPropertiesStatics *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentStoreChangedEventArgs */
-/* Windows.ApplicationModel.Appointments.IAppointmentStoreChangedDeferral */
-/* Windows.ApplicationModel.Appointments.IAppointmentStoreChangeTracker */
-/* Windows.ApplicationModel.Appointments.IAppointmentStoreChangeTracker2 */
-/* Windows.ApplicationModel.Appointments.IAppointmentStoreChangeTracker2.get_IsTracking() */
 HRESULT wapap_appointment_store_change_tracker_2_get__is_tracking(WAPAP_IAppointmentStoreChangeTracker_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentStoreChangeReader */
-/* Windows.ApplicationModel.Appointments.IAppointmentStoreChange2 */
-/* Windows.ApplicationModel.Appointments.IAppointmentStoreChange2.get_AppointmentCalendar() */
 HRESULT wapap_appointment_store_change_2_get__appointment_calendar(WAPAP_IAppointmentStoreChange_2 *self, WAPAP_AppointmentCalendar** value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentStore2 */
-/* Windows.ApplicationModel.Appointments.IAppointmentStore2.CreateAppointmentCalendarAsync(name, userDataAccountId) */
 HRESULT wapap_appointment_store_2_create_appointment_calendar_async(WAPAP_IAppointmentStore_2 *self, cwinrt_hstring name, cwinrt_hstring userDataAccountId, WF_IAsyncOperation_WAPAP_AppointmentCalendar** out);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentStore3 */
-/* Windows.ApplicationModel.Appointments.IAppointmentStore3.GetChangeTracker(identity) */
 HRESULT wapap_appointment_store_3_get_change_tracker(WAPAP_IAppointmentStore_3 *self, cwinrt_hstring identity, WAPAP_AppointmentStoreChangeTracker** out);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentRecurrence3 */
-/* Windows.ApplicationModel.Appointments.IAppointmentRecurrence3.get_CalendarIdentifier() */
 HRESULT wapap_appointment_recurrence_3_get__calendar_identifier(WAPAP_IAppointmentRecurrence_3 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentManagerForUser */
-/* Windows.ApplicationModel.Appointments.IAppointmentInvitee */
-/* Windows.ApplicationModel.Appointments.IAppointmentException */
-/* Windows.ApplicationModel.Appointments.IAppointmentConflictResult */
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendarSyncManager */
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendarSyncManager2 */
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendarSyncManager2.put_Status() */
 HRESULT wapap_appointment_calendar_sync_manager_2_put__status(WAPAP_IAppointmentCalendarSyncManager_2 *self, WAPAP_AppointmentCalendarSyncStatus value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendarSyncManager2.put_LastSuccessfulSyncTime() */
 HRESULT wapap_appointment_calendar_sync_manager_2_put__last_successful_sync_time(WAPAP_IAppointmentCalendarSyncManager_2 *self, WF_DateTime value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendarSyncManager2.put_LastAttemptedSyncTime() */
 HRESULT wapap_appointment_calendar_sync_manager_2_put__last_attempted_sync_time(WAPAP_IAppointmentCalendarSyncManager_2 *self, WF_DateTime value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendar2 */
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendar2.get_SyncManager() */
 HRESULT wapap_appointment_calendar_2_get__sync_manager(WAPAP_IAppointmentCalendar_2 *self, WAPAP_AppointmentCalendarSyncManager** value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendar2.get_RemoteId() */
 HRESULT wapap_appointment_calendar_2_get__remote_id(WAPAP_IAppointmentCalendar_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendar2.put_RemoteId() */
 HRESULT wapap_appointment_calendar_2_put__remote_id(WAPAP_IAppointmentCalendar_2 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendar2.put_DisplayColor() */
 HRESULT wapap_appointment_calendar_2_put__display_color(WAPAP_IAppointmentCalendar_2 *self, WUI_Color value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendar2.put_IsHidden() */
 HRESULT wapap_appointment_calendar_2_put__is_hidden(WAPAP_IAppointmentCalendar_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendar2.get_UserDataAccountId() */
 HRESULT wapap_appointment_calendar_2_get__user_data_account_id(WAPAP_IAppointmentCalendar_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendar2.get_CanCreateOrUpdateAppointments() */
 HRESULT wapap_appointment_calendar_2_get__can_create_or_update_appointments(WAPAP_IAppointmentCalendar_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendar2.put_CanCreateOrUpdateAppointments() */
 HRESULT wapap_appointment_calendar_2_put__can_create_or_update_appointments(WAPAP_IAppointmentCalendar_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendar2.get_CanCancelMeetings() */
 HRESULT wapap_appointment_calendar_2_get__can_cancel_meetings(WAPAP_IAppointmentCalendar_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendar2.put_CanCancelMeetings() */
 HRESULT wapap_appointment_calendar_2_put__can_cancel_meetings(WAPAP_IAppointmentCalendar_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendar2.get_CanForwardMeetings() */
 HRESULT wapap_appointment_calendar_2_get__can_forward_meetings(WAPAP_IAppointmentCalendar_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendar2.put_CanForwardMeetings() */
 HRESULT wapap_appointment_calendar_2_put__can_forward_meetings(WAPAP_IAppointmentCalendar_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendar2.get_CanProposeNewTimeForMeetings() */
 HRESULT wapap_appointment_calendar_2_get__can_propose_new_time_for_meetings(WAPAP_IAppointmentCalendar_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendar2.put_CanProposeNewTimeForMeetings() */
 HRESULT wapap_appointment_calendar_2_put__can_propose_new_time_for_meetings(WAPAP_IAppointmentCalendar_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendar2.get_CanUpdateMeetingResponses() */
 HRESULT wapap_appointment_calendar_2_get__can_update_meeting_responses(WAPAP_IAppointmentCalendar_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendar2.put_CanUpdateMeetingResponses() */
 HRESULT wapap_appointment_calendar_2_put__can_update_meeting_responses(WAPAP_IAppointmentCalendar_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendar2.get_CanNotifyInvitees() */
 HRESULT wapap_appointment_calendar_2_get__can_notify_invitees(WAPAP_IAppointmentCalendar_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendar2.put_CanNotifyInvitees() */
 HRESULT wapap_appointment_calendar_2_put__can_notify_invitees(WAPAP_IAppointmentCalendar_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendar2.get_MustNofityInvitees() */
 HRESULT wapap_appointment_calendar_2_get__must_nofity_invitees(WAPAP_IAppointmentCalendar_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendar2.put_MustNofityInvitees() */
 HRESULT wapap_appointment_calendar_2_put__must_nofity_invitees(WAPAP_IAppointmentCalendar_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendar2.TryCreateOrUpdateAppointmentAsync(appointment, notifyInvitees) */
 HRESULT wapap_appointment_calendar_2_try_create_or_update_appointment_async(WAPAP_IAppointmentCalendar_2 *self, WAPAP_Appointment* appointment, BOOL notifyInvitees, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendar2.TryCancelMeetingAsync(meeting, subject, comment, notifyInvitees) */
 HRESULT wapap_appointment_calendar_2_try_cancel_meeting_async(WAPAP_IAppointmentCalendar_2 *self, WAPAP_Appointment* meeting, cwinrt_hstring subject, cwinrt_hstring comment, BOOL notifyInvitees, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendar2.TryForwardMeetingAsync(meeting, invitees, subject, forwardHeader, comment) */
 HRESULT wapap_appointment_calendar_2_try_forward_meeting_async(WAPAP_IAppointmentCalendar_2 *self, WAPAP_Appointment* meeting, WFOCO_IIterable_WAPAP_AppointmentInvitee* invitees, cwinrt_hstring subject, cwinrt_hstring forwardHeader, cwinrt_hstring comment, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendar2.TryProposeNewTimeForMeetingAsync(meeting, newStartTime, newDuration, subject, comment) */
 HRESULT wapap_appointment_calendar_2_try_propose_new_time_for_meeting_async(WAPAP_IAppointmentCalendar_2 *self, WAPAP_Appointment* meeting, WF_DateTime newStartTime, WF_TimeSpan newDuration, cwinrt_hstring subject, cwinrt_hstring comment, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendar2.TryUpdateMeetingResponseAsync(meeting, response, subject, comment, sendUpdate) */
 HRESULT wapap_appointment_calendar_2_try_update_meeting_response_async(WAPAP_IAppointmentCalendar_2 *self, WAPAP_Appointment* meeting, WAPAP_AppointmentParticipantResponse response, cwinrt_hstring subject, cwinrt_hstring comment, BOOL sendUpdate, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendar3 */
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendar3.RegisterSyncManagerAsync() */
 HRESULT wapap_appointment_calendar_3_register_sync_manager_async(WAPAP_IAppointmentCalendar_3 *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Appointments.IAppointment3 */
-/* Windows.ApplicationModel.Appointments.IAppointment3.get_ChangeNumber() */
 HRESULT wapap_appointment_3_get__change_number(WAPAP_IAppointment_3 *self, uint64_t *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointment3.get_RemoteChangeNumber() */
 HRESULT wapap_appointment_3_get__remote_change_number(WAPAP_IAppointment_3 *self, uint64_t *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointment3.put_RemoteChangeNumber() */
 HRESULT wapap_appointment_3_put__remote_change_number(WAPAP_IAppointment_3 *self, uint64_t value);
 
-/* Windows.ApplicationModel.Appointments.IAppointment3.get_DetailsKind() */
 HRESULT wapap_appointment_3_get__details_kind(WAPAP_IAppointment_3 *self, WAPAP_AppointmentDetailsKind *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointment3.put_DetailsKind() */
 HRESULT wapap_appointment_3_put__details_kind(WAPAP_IAppointment_3 *self, WAPAP_AppointmentDetailsKind value);
 
-/* Windows.ApplicationModel.Appointments.IFindAppointmentsOptions */
-/* Windows.ApplicationModel.Appointments.IAppointmentStoreChange */
-/* Windows.ApplicationModel.Appointments.IAppointmentStore */
-/* Windows.ApplicationModel.Appointments.IAppointmentRecurrence2 */
-/* Windows.ApplicationModel.Appointments.IAppointmentRecurrence2.get_RecurrenceType() */
 HRESULT wapap_appointment_recurrence_2_get__recurrence_type(WAPAP_IAppointmentRecurrence_2 *self, WAPAP_RecurrenceType *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentRecurrence2.get_TimeZone() */
 HRESULT wapap_appointment_recurrence_2_get__time_zone(WAPAP_IAppointmentRecurrence_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentRecurrence2.put_TimeZone() */
 HRESULT wapap_appointment_recurrence_2_put__time_zone(WAPAP_IAppointmentRecurrence_2 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentParticipant */
-/* Windows.ApplicationModel.Appointments.IAppointmentParticipant.get_DisplayName() */
 HRESULT wapap_appointment_participant_get__display_name(WAPAP_IAppointmentParticipant *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentParticipant.put_DisplayName() */
 HRESULT wapap_appointment_participant_put__display_name(WAPAP_IAppointmentParticipant *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentParticipant.get_Address() */
 HRESULT wapap_appointment_participant_get__address(WAPAP_IAppointmentParticipant *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentParticipant.put_Address() */
 HRESULT wapap_appointment_participant_put__address(WAPAP_IAppointmentParticipant *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentCalendar */
-/* Windows.ApplicationModel.Appointments.IAppointment2 */
-/* Windows.ApplicationModel.Appointments.IAppointment2.get_LocalId() */
 HRESULT wapap_appointment_2_get__local_id(WAPAP_IAppointment_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointment2.get_CalendarId() */
 HRESULT wapap_appointment_2_get__calendar_id(WAPAP_IAppointment_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointment2.get_RoamingId() */
 HRESULT wapap_appointment_2_get__roaming_id(WAPAP_IAppointment_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointment2.put_RoamingId() */
 HRESULT wapap_appointment_2_put__roaming_id(WAPAP_IAppointment_2 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Appointments.IAppointment2.get_OriginalStartTime() */
 HRESULT wapap_appointment_2_get__original_start_time(WAPAP_IAppointment_2 *self, WF_DateTime** value);
 
-/* Windows.ApplicationModel.Appointments.IAppointment2.get_IsResponseRequested() */
 HRESULT wapap_appointment_2_get__is_response_requested(WAPAP_IAppointment_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointment2.put_IsResponseRequested() */
 HRESULT wapap_appointment_2_put__is_response_requested(WAPAP_IAppointment_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Appointments.IAppointment2.get_AllowNewTimeProposal() */
 HRESULT wapap_appointment_2_get__allow_new_time_proposal(WAPAP_IAppointment_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointment2.put_AllowNewTimeProposal() */
 HRESULT wapap_appointment_2_put__allow_new_time_proposal(WAPAP_IAppointment_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Appointments.IAppointment2.get_OnlineMeetingLink() */
 HRESULT wapap_appointment_2_get__online_meeting_link(WAPAP_IAppointment_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointment2.put_OnlineMeetingLink() */
 HRESULT wapap_appointment_2_put__online_meeting_link(WAPAP_IAppointment_2 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Appointments.IAppointment2.get_ReplyTime() */
 HRESULT wapap_appointment_2_get__reply_time(WAPAP_IAppointment_2 *self, WF_DateTime** value);
 
-/* Windows.ApplicationModel.Appointments.IAppointment2.put_ReplyTime() */
 HRESULT wapap_appointment_2_put__reply_time(WAPAP_IAppointment_2 *self, WF_DateTime* value);
 
-/* Windows.ApplicationModel.Appointments.IAppointment2.get_UserResponse() */
 HRESULT wapap_appointment_2_get__user_response(WAPAP_IAppointment_2 *self, WAPAP_AppointmentParticipantResponse *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointment2.put_UserResponse() */
 HRESULT wapap_appointment_2_put__user_response(WAPAP_IAppointment_2 *self, WAPAP_AppointmentParticipantResponse value);
 
-/* Windows.ApplicationModel.Appointments.IAppointment2.get_HasInvitees() */
 HRESULT wapap_appointment_2_get__has_invitees(WAPAP_IAppointment_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointment2.get_IsCanceledMeeting() */
 HRESULT wapap_appointment_2_get__is_canceled_meeting(WAPAP_IAppointment_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointment2.put_IsCanceledMeeting() */
 HRESULT wapap_appointment_2_put__is_canceled_meeting(WAPAP_IAppointment_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Appointments.IAppointment2.get_IsOrganizedByUser() */
 HRESULT wapap_appointment_2_get__is_organized_by_user(WAPAP_IAppointment_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.IAppointment2.put_IsOrganizedByUser() */
 HRESULT wapap_appointment_2_put__is_organized_by_user(WAPAP_IAppointment_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Appointments.IAppointmentRecurrence */
-/* Windows.ApplicationModel.Appointments.IAppointment */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_APPOINTMENTS_H */

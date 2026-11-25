@@ -15,7 +15,6 @@
 #include <cwinrt/Windows.Graphics.Imaging.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WAPDADRCO_CoreDragOperation WAPDADRCO_CoreDragOperation;
 typedef struct WAPDADRCO_CoreDragUIOverride WAPDADRCO_CoreDragUIOverride;
 typedef struct WAPDADRCO_CoreDragInfo WAPDADRCO_CoreDragInfo;
@@ -31,7 +30,6 @@ typedef struct WAPDADRCO_ICoreDropOperationTargetRequestedEventArgs WAPDADRCO_IC
 typedef struct WAPDADRCO_ICoreDragOperation WAPDADRCO_ICoreDragOperation;
 typedef struct WAPDADRCO_ICoreDragInfo WAPDADRCO_ICoreDragInfo;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WAPDA_DataPackage
 #define CWINRT_FWD_WAPDA_DataPackage
 typedef struct WAPDA_DataPackage WAPDA_DataPackage;
@@ -88,7 +86,6 @@ typedef enum WAPDADRCO_CoreDragUIContentMode {
 } WAPDADRCO_CoreDragUIContentMode;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -129,149 +126,91 @@ static const IID CWINRT_IID_WAPDADRCO_ICoreDragOperation CWINRT_MAYBE_UNUSED = {
 static const IID CWINRT_IID_WAPDADRCO_ICoreDragInfo CWINRT_MAYBE_UNUSED = { 0x48353A8B, 0xCB50, 0x464E, { 0x95, 0x75, 0xCD, 0x4E, 0x3A, 0x7A, 0xB0, 0x28 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation */
 HRESULT wapdadrco_core_drag_operation_new(WAPDADRCO_CoreDragOperation **out);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation */
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation.get_Data() */
 HRESULT wapdadrco_core_drag_operation_get__data(WAPDADRCO_CoreDragOperation *self, WAPDA_DataPackage** value);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation.SetPointerId(pointerId) */
 HRESULT wapdadrco_core_drag_operation_set_pointer_id(WAPDADRCO_CoreDragOperation *self, uint32_t pointerId);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation.SetDragUIContentFromSoftwareBitmap(softwareBitmap) */
 HRESULT wapdadrco_core_drag_operation_set_drag_u_i_content_from_software_bitmap(WAPDADRCO_CoreDragOperation *self, WGRIM_SoftwareBitmap* softwareBitmap);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation.SetDragUIContentFromSoftwareBitmap(softwareBitmap, anchorPoint) */
 HRESULT wapdadrco_core_drag_operation_set_drag_u_i_content_from_software_bitmap_p_point(WAPDADRCO_CoreDragOperation *self, WGRIM_SoftwareBitmap* softwareBitmap, WF_Point anchorPoint);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation.get_DragUIContentMode() */
 HRESULT wapdadrco_core_drag_operation_get__drag_u_i_content_mode(WAPDADRCO_CoreDragOperation *self, WAPDADRCO_CoreDragUIContentMode *value);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation.put_DragUIContentMode() */
 HRESULT wapdadrco_core_drag_operation_put__drag_u_i_content_mode(WAPDADRCO_CoreDragOperation *self, WAPDADRCO_CoreDragUIContentMode value);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation.StartAsync() */
 HRESULT wapdadrco_core_drag_operation_start_async(WAPDADRCO_CoreDragOperation *self, WF_IAsyncOperation_WAPDA_DataPackageOperation** out);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation.get_AllowedOperations() */
 HRESULT wapdadrco_core_drag_operation_get__allowed_operations(WAPDADRCO_CoreDragOperation *self, WAPDA_DataPackageOperation *value);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation.put_AllowedOperations() */
 HRESULT wapdadrco_core_drag_operation_put__allowed_operations(WAPDADRCO_CoreDragOperation *self, WAPDA_DataPackageOperation value);
 
-/* activate Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride */
 HRESULT wapdadrco_core_drag_u_i_override_new(WAPDADRCO_CoreDragUIOverride **out);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride */
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride.SetContentFromSoftwareBitmap(softwareBitmap) */
 HRESULT wapdadrco_core_drag_u_i_override_set_content_from_software_bitmap(WAPDADRCO_CoreDragUIOverride *self, WGRIM_SoftwareBitmap* softwareBitmap);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride.SetContentFromSoftwareBitmap(softwareBitmap, anchorPoint) */
 HRESULT wapdadrco_core_drag_u_i_override_set_content_from_software_bitmap_p_point(WAPDADRCO_CoreDragUIOverride *self, WGRIM_SoftwareBitmap* softwareBitmap, WF_Point anchorPoint);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride.get_IsContentVisible() */
 HRESULT wapdadrco_core_drag_u_i_override_get__is_content_visible(WAPDADRCO_CoreDragUIOverride *self, BOOL *value);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride.put_IsContentVisible() */
 HRESULT wapdadrco_core_drag_u_i_override_put__is_content_visible(WAPDADRCO_CoreDragUIOverride *self, BOOL value);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride.get_Caption() */
 HRESULT wapdadrco_core_drag_u_i_override_get__caption(WAPDADRCO_CoreDragUIOverride *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride.put_Caption() */
 HRESULT wapdadrco_core_drag_u_i_override_put__caption(WAPDADRCO_CoreDragUIOverride *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride.get_IsCaptionVisible() */
 HRESULT wapdadrco_core_drag_u_i_override_get__is_caption_visible(WAPDADRCO_CoreDragUIOverride *self, BOOL *value);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride.put_IsCaptionVisible() */
 HRESULT wapdadrco_core_drag_u_i_override_put__is_caption_visible(WAPDADRCO_CoreDragUIOverride *self, BOOL value);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride.get_IsGlyphVisible() */
 HRESULT wapdadrco_core_drag_u_i_override_get__is_glyph_visible(WAPDADRCO_CoreDragUIOverride *self, BOOL *value);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride.put_IsGlyphVisible() */
 HRESULT wapdadrco_core_drag_u_i_override_put__is_glyph_visible(WAPDADRCO_CoreDragUIOverride *self, BOOL value);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride.Clear() */
 HRESULT wapdadrco_core_drag_u_i_override_clear(WAPDADRCO_CoreDragUIOverride *self);
 
-/* activate Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo */
 HRESULT wapdadrco_core_drag_info_new(WAPDADRCO_CoreDragInfo **out);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo */
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo.get_Data() */
 HRESULT wapdadrco_core_drag_info_get__data(WAPDADRCO_CoreDragInfo *self, WAPDA_DataPackageView** value);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo.get_Modifiers() */
 HRESULT wapdadrco_core_drag_info_get__modifiers(WAPDADRCO_CoreDragInfo *self, WAPDADR_DragDropModifiers *value);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo.get_Position() */
 HRESULT wapdadrco_core_drag_info_get__position(WAPDADRCO_CoreDragInfo *self, WF_Point *value);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo.get_AllowedOperations() */
 HRESULT wapdadrco_core_drag_info_get__allowed_operations(WAPDADRCO_CoreDragInfo *self, WAPDA_DataPackageOperation *value);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTarget */
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTarget.EnterAsync(dragInfo, dragUIOverride) */
 HRESULT wapdadrco_core_drop_operation_target_enter_async(WAPDADRCO_ICoreDropOperationTarget *self, WAPDADRCO_CoreDragInfo* dragInfo, WAPDADRCO_CoreDragUIOverride* dragUIOverride, WF_IAsyncOperation_WAPDA_DataPackageOperation** out);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTarget.OverAsync(dragInfo, dragUIOverride) */
 HRESULT wapdadrco_core_drop_operation_target_over_async(WAPDADRCO_ICoreDropOperationTarget *self, WAPDADRCO_CoreDragInfo* dragInfo, WAPDADRCO_CoreDragUIOverride* dragUIOverride, WF_IAsyncOperation_WAPDA_DataPackageOperation** out);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTarget.LeaveAsync(dragInfo) */
 HRESULT wapdadrco_core_drop_operation_target_leave_async(WAPDADRCO_ICoreDropOperationTarget *self, WAPDADRCO_CoreDragInfo* dragInfo, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTarget.DropAsync(dragInfo) */
 HRESULT wapdadrco_core_drop_operation_target_drop_async(WAPDADRCO_ICoreDropOperationTarget *self, WAPDADRCO_CoreDragInfo* dragInfo, WF_IAsyncOperation_WAPDA_DataPackageOperation** out);
 
-/* activate Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragDropManager */
 HRESULT wapdadrco_core_drag_drop_manager_new(WAPDADRCO_CoreDragDropManager **out);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragDropManager */
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragDropManager.get_AreConcurrentOperationsEnabled() */
 HRESULT wapdadrco_core_drag_drop_manager_get__are_concurrent_operations_enabled(WAPDADRCO_CoreDragDropManager *self, BOOL *value);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragDropManager.put_AreConcurrentOperationsEnabled() */
 HRESULT wapdadrco_core_drag_drop_manager_put__are_concurrent_operations_enabled(WAPDADRCO_CoreDragDropManager *self, BOOL value);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragDropManager.GetForCurrentView() */
 HRESULT wapdadrco_core_drag_drop_manager_get_for_current_view(WAPDADRCO_CoreDragDropManager** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapdadrco_core_drag_drop_manager_on_target_requested(WAPDADRCO_CoreDragDropManager *self, cwinrt_event_fn fn, void *ctx);
 void wapdadrco_core_drag_drop_manager_off_target_requested(WAPDADRCO_CoreDragDropManager *self, cwinrt_token token);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragDropManagerStatics */
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragDropManagerStatics.GetForCurrentView() */
 HRESULT wapdadrco_core_drag_drop_manager_statics_get_for_current_view(WAPDADRCO_ICoreDragDropManagerStatics *self, WAPDADRCO_CoreDragDropManager** out);
 
-/* activate Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDropOperationTargetRequestedEventArgs */
 HRESULT wapdadrco_core_drop_operation_target_requested_event_args_new(WAPDADRCO_CoreDropOperationTargetRequestedEventArgs **out);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDropOperationTargetRequestedEventArgs */
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDropOperationTargetRequestedEventArgs.SetTarget(target) */
 HRESULT wapdadrco_core_drop_operation_target_requested_event_args_set_target(WAPDADRCO_CoreDropOperationTargetRequestedEventArgs *self, WAPDADRCO_ICoreDropOperationTarget* target);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragOperation2 */
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragOperation2.get_AllowedOperations() */
 HRESULT wapdadrco_core_drag_operation_2_get__allowed_operations(WAPDADRCO_ICoreDragOperation_2 *self, WAPDA_DataPackageOperation *value);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragOperation2.put_AllowedOperations() */
 HRESULT wapdadrco_core_drag_operation_2_put__allowed_operations(WAPDADRCO_ICoreDragOperation_2 *self, WAPDA_DataPackageOperation value);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragUIOverride */
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragInfo2 */
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragInfo2.get_AllowedOperations() */
 HRESULT wapdadrco_core_drag_info_2_get__allowed_operations(WAPDADRCO_ICoreDragInfo_2 *self, WAPDA_DataPackageOperation *value);
 
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragDropManager */
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTargetRequestedEventArgs */
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragOperation */
-/* Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragInfo */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_DATATRANSFER_DRAGDROP_CORE_H */

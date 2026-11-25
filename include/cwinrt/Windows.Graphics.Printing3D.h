@@ -14,7 +14,6 @@
 #include <cwinrt/Windows.Foundation.Numerics.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStream
 #define CWINRT_FWD_WSTST_IRandomAccessStream
 typedef struct WSTST_IRandomAccessStream WSTST_IRandomAccessStream;
@@ -28,7 +27,6 @@ typedef struct WSTST_IBuffer WSTST_IBuffer;
 typedef struct WSTST_IRandomAccessStreamWithContentType WSTST_IRandomAccessStreamWithContentType;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WGRPR_IPrinting3D3MFPackageStatics WGRPR_IPrinting3D3MFPackageStatics;
 typedef struct WGRPR_IPrinting3DBaseMaterialGroupFactory WGRPR_IPrinting3DBaseMaterialGroupFactory;
 typedef struct WGRPR_IPrinting3DBaseMaterialStatics WGRPR_IPrinting3DBaseMaterialStatics;
@@ -98,7 +96,6 @@ typedef struct WGRPR_IPrinting3DTexture2CoordMaterialGroup WGRPR_IPrinting3DText
 typedef struct WGRPR_IPrinting3DTexture2CoordMaterialGroup_2 WGRPR_IPrinting3DTexture2CoordMaterialGroup_2;
 typedef struct WGRPR_IPrinting3DTextureResource WGRPR_IPrinting3DTextureResource;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStream
 #define CWINRT_FWD_WSTST_IRandomAccessStream
 typedef struct WSTST_IRandomAccessStream WSTST_IRandomAccessStream;
@@ -353,7 +350,6 @@ struct WGRPR_Printing3DBufferDescription {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -522,63 +518,37 @@ static const IID CWINRT_IID_WGRPR_IPrinting3DTexture2CoordMaterialGroup_2 CWINRT
 static const IID CWINRT_IID_WGRPR_IPrinting3DTextureResource CWINRT_MAYBE_UNUSED = { 0xA70DF32D, 0x6AB1, 0x44AE, { 0xBC, 0x45, 0xA2, 0x73, 0x82, 0xC0, 0xD3, 0x8C } };
 #endif
 
-/* Methods */
-
-/* Windows.Graphics.Printing3D.IPrinting3D3MFPackageStatics */
-/* Windows.Graphics.Printing3D.IPrinting3D3MFPackageStatics.LoadAsync() */
 HRESULT wgrpr_printing3_d3_m_f_package_statics_load_async(WGRPR_IPrinting3D3MFPackageStatics *self, WSTST_IRandomAccessStream* value, WF_IAsyncOperation_WGRPR_Printing3D3MFPackage** out);
 
-/* Windows.Graphics.Printing3D.IPrinting3DBaseMaterialGroupFactory */
-/* Windows.Graphics.Printing3D.IPrinting3DBaseMaterialGroupFactory.Create(MaterialGroupId) */
 HRESULT wgrpr_printing3_d_base_material_group_factory_create(WGRPR_IPrinting3DBaseMaterialGroupFactory *self, uint32_t MaterialGroupId, WGRPR_Printing3DBaseMaterialGroup** out);
 
-/* Windows.Graphics.Printing3D.IPrinting3DBaseMaterialStatics */
-/* Windows.Graphics.Printing3D.IPrinting3DBaseMaterialStatics.get_Abs() */
 HRESULT wgrpr_printing3_d_base_material_statics_get__abs(WGRPR_IPrinting3DBaseMaterialStatics *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing3D.IPrinting3DBaseMaterialStatics.get_Pla() */
 HRESULT wgrpr_printing3_d_base_material_statics_get__pla(WGRPR_IPrinting3DBaseMaterialStatics *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing3D.IPrinting3DColorMaterialGroupFactory */
-/* Windows.Graphics.Printing3D.IPrinting3DColorMaterialGroupFactory.Create(MaterialGroupId) */
 HRESULT wgrpr_printing3_d_color_material_group_factory_create(WGRPR_IPrinting3DColorMaterialGroupFactory *self, uint32_t MaterialGroupId, WGRPR_Printing3DColorMaterialGroup** out);
 
-/* Windows.Graphics.Printing3D.IPrinting3DCompositeMaterialGroupFactory */
-/* Windows.Graphics.Printing3D.IPrinting3DCompositeMaterialGroupFactory.Create(MaterialGroupId) */
 HRESULT wgrpr_printing3_d_composite_material_group_factory_create(WGRPR_IPrinting3DCompositeMaterialGroupFactory *self, uint32_t MaterialGroupId, WGRPR_Printing3DCompositeMaterialGroup** out);
 
-/* Windows.Graphics.Printing3D.IPrinting3DMultiplePropertyMaterialGroupFactory */
-/* Windows.Graphics.Printing3D.IPrinting3DMultiplePropertyMaterialGroupFactory.Create(MaterialGroupId) */
 HRESULT wgrpr_printing3_d_multiple_property_material_group_factory_create(WGRPR_IPrinting3DMultiplePropertyMaterialGroupFactory *self, uint32_t MaterialGroupId, WGRPR_Printing3DMultiplePropertyMaterialGroup** out);
 
-/* Windows.Graphics.Printing3D.IPrinting3DTexture2CoordMaterialGroupFactory */
-/* Windows.Graphics.Printing3D.IPrinting3DTexture2CoordMaterialGroupFactory.Create(MaterialGroupId) */
 HRESULT wgrpr_printing3_d_texture2_coord_material_group_factory_create(WGRPR_IPrinting3DTexture2CoordMaterialGroupFactory *self, uint32_t MaterialGroupId, WGRPR_Printing3DTexture2CoordMaterialGroup** out);
 
-/* activate Windows.Graphics.Printing3D.Print3DManager */
 HRESULT wgrpr_print3_d_manager_new(WGRPR_Print3DManager **out);
 
-/* Windows.Graphics.Printing3D.Print3DManager */
-/* Windows.Graphics.Printing3D.Print3DManager.GetForCurrentView() */
 HRESULT wgrpr_print3_d_manager_get_for_current_view(WGRPR_Print3DManager** out);
 
-/* Windows.Graphics.Printing3D.Print3DManager.ShowPrintUIAsync() */
 HRESULT wgrpr_print3_d_manager_show_print_u_i_async(WF_IAsyncOperation_Bool** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wgrpr_print3_d_manager_on_task_requested(WGRPR_Print3DManager *self, cwinrt_event_fn fn, void *ctx);
 void wgrpr_print3_d_manager_off_task_requested(WGRPR_Print3DManager *self, cwinrt_token token);
 
-/* activate Windows.Graphics.Printing3D.Print3DTask */
 HRESULT wgrpr_print3_d_task_new(WGRPR_Print3DTask **out);
 
-/* Windows.Graphics.Printing3D.Print3DTask */
-/* Windows.Graphics.Printing3D.Print3DTask.get_Source() */
 HRESULT wgrpr_print3_d_task_get__source(WGRPR_Print3DTask *self, WGRPR_Printing3D3MFPackage** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wgrpr_print3_d_task_on_submitting(WGRPR_Print3DTask *self, cwinrt_event_fn fn, void *ctx);
@@ -590,597 +560,360 @@ void wgrpr_print3_d_task_off_completed(WGRPR_Print3DTask *self, cwinrt_token tok
 cwinrt_token wgrpr_print3_d_task_on_source_changed(WGRPR_Print3DTask *self, cwinrt_event_fn fn, void *ctx);
 void wgrpr_print3_d_task_off_source_changed(WGRPR_Print3DTask *self, cwinrt_token token);
 
-/* activate Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs */
 HRESULT wgrpr_print3_d_task_completed_event_args_new(WGRPR_Print3DTaskCompletedEventArgs **out);
 
-/* Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs */
-/* Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs.get_Completion() */
 HRESULT wgrpr_print3_d_task_completed_event_args_get__completion(WGRPR_Print3DTaskCompletedEventArgs *self, WGRPR_Print3DTaskCompletion *value);
 
-/* Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs.get_ExtendedStatus() */
 HRESULT wgrpr_print3_d_task_completed_event_args_get__extended_status(WGRPR_Print3DTaskCompletedEventArgs *self, WGRPR_Print3DTaskDetail *value);
 
-/* activate Windows.Graphics.Printing3D.Print3DTaskRequest */
 HRESULT wgrpr_print3_d_task_request_new(WGRPR_Print3DTaskRequest **out);
 
-/* Windows.Graphics.Printing3D.Print3DTaskRequest */
-/* Windows.Graphics.Printing3D.Print3DTaskRequest.CreateTask(title, printerId, handler) */
 HRESULT wgrpr_print3_d_task_request_create_task(WGRPR_Print3DTaskRequest *self, cwinrt_hstring title, cwinrt_hstring printerId, WGRPR_Print3DTaskSourceRequestedHandler* handler, WGRPR_Print3DTask** out);
 
-/* activate Windows.Graphics.Printing3D.Print3DTaskRequestedEventArgs */
 HRESULT wgrpr_print3_d_task_requested_event_args_new(WGRPR_Print3DTaskRequestedEventArgs **out);
 
-/* Windows.Graphics.Printing3D.Print3DTaskRequestedEventArgs */
-/* Windows.Graphics.Printing3D.Print3DTaskRequestedEventArgs.get_Request() */
 HRESULT wgrpr_print3_d_task_requested_event_args_get__request(WGRPR_Print3DTaskRequestedEventArgs *self, WGRPR_Print3DTaskRequest** value);
 
-/* activate Windows.Graphics.Printing3D.Print3DTaskSourceChangedEventArgs */
 HRESULT wgrpr_print3_d_task_source_changed_event_args_new(WGRPR_Print3DTaskSourceChangedEventArgs **out);
 
-/* Windows.Graphics.Printing3D.Print3DTaskSourceChangedEventArgs */
-/* Windows.Graphics.Printing3D.Print3DTaskSourceChangedEventArgs.get_Source() */
 HRESULT wgrpr_print3_d_task_source_changed_event_args_get__source(WGRPR_Print3DTaskSourceChangedEventArgs *self, WGRPR_Printing3D3MFPackage** value);
 
-/* activate Windows.Graphics.Printing3D.Print3DTaskSourceRequestedArgs */
 HRESULT wgrpr_print3_d_task_source_requested_args_new(WGRPR_Print3DTaskSourceRequestedArgs **out);
 
-/* Windows.Graphics.Printing3D.Print3DTaskSourceRequestedArgs */
-/* Windows.Graphics.Printing3D.Print3DTaskSourceRequestedArgs.SetSource(source) */
 HRESULT wgrpr_print3_d_task_source_requested_args_set_source(WGRPR_Print3DTaskSourceRequestedArgs *self, WGRPR_Printing3D3MFPackage* source);
 
-/* Windows.Graphics.Printing3D.Print3DTaskSourceRequestedHandler */
-/* Windows.Graphics.Printing3D.Print3DTaskSourceRequestedHandler.Invoke(args) */
 HRESULT wgrpr_print3_d_task_source_requested_handler_invoke(WGRPR_Print3DTaskSourceRequestedHandler *self, WGRPR_Print3DTaskSourceRequestedArgs* args);
 
-/* activate Windows.Graphics.Printing3D.Printing3D3MFPackage */
 HRESULT wgrpr_printing3_d3_m_f_package_new(WGRPR_Printing3D3MFPackage **out);
 
-/* Windows.Graphics.Printing3D.Printing3D3MFPackage */
-/* Windows.Graphics.Printing3D.Printing3D3MFPackage.SaveAsync() */
 HRESULT wgrpr_printing3_d3_m_f_package_save_async(WGRPR_Printing3D3MFPackage *self, WF_IAsyncOperation_WSTST_IRandomAccessStream** out);
 
-/* Windows.Graphics.Printing3D.Printing3D3MFPackage.get_PrintTicket() */
 HRESULT wgrpr_printing3_d3_m_f_package_get__print_ticket(WGRPR_Printing3D3MFPackage *self, WSTST_IRandomAccessStream** value);
 
-/* Windows.Graphics.Printing3D.Printing3D3MFPackage.put_PrintTicket() */
 HRESULT wgrpr_printing3_d3_m_f_package_put__print_ticket(WGRPR_Printing3D3MFPackage *self, WSTST_IRandomAccessStream* value);
 
-/* Windows.Graphics.Printing3D.Printing3D3MFPackage.get_ModelPart() */
 HRESULT wgrpr_printing3_d3_m_f_package_get__model_part(WGRPR_Printing3D3MFPackage *self, WSTST_IRandomAccessStream** value);
 
-/* Windows.Graphics.Printing3D.Printing3D3MFPackage.put_ModelPart() */
 HRESULT wgrpr_printing3_d3_m_f_package_put__model_part(WGRPR_Printing3D3MFPackage *self, WSTST_IRandomAccessStream* value);
 
-/* Windows.Graphics.Printing3D.Printing3D3MFPackage.get_Thumbnail() */
 HRESULT wgrpr_printing3_d3_m_f_package_get__thumbnail(WGRPR_Printing3D3MFPackage *self, WGRPR_Printing3DTextureResource** value);
 
-/* Windows.Graphics.Printing3D.Printing3D3MFPackage.put_Thumbnail() */
 HRESULT wgrpr_printing3_d3_m_f_package_put__thumbnail(WGRPR_Printing3D3MFPackage *self, WGRPR_Printing3DTextureResource* value);
 
-/* Windows.Graphics.Printing3D.Printing3D3MFPackage.get_Textures() */
 HRESULT wgrpr_printing3_d3_m_f_package_get__textures(WGRPR_Printing3D3MFPackage *self, WFOCO_IVector_WGRPR_Printing3DTextureResource** value);
 
-/* Windows.Graphics.Printing3D.Printing3D3MFPackage.LoadModelFromPackageAsync() */
 HRESULT wgrpr_printing3_d3_m_f_package_load_model_from_package_async(WGRPR_Printing3D3MFPackage *self, WSTST_IRandomAccessStream* value, WF_IAsyncOperation_WGRPR_Printing3DModel** out);
 
-/* Windows.Graphics.Printing3D.Printing3D3MFPackage.SaveModelToPackageAsync() */
 HRESULT wgrpr_printing3_d3_m_f_package_save_model_to_package_async(WGRPR_Printing3D3MFPackage *self, WGRPR_Printing3DModel* value, WF_IAsyncAction** out);
 
-/* Windows.Graphics.Printing3D.Printing3D3MFPackage.get_Compression() */
 HRESULT wgrpr_printing3_d3_m_f_package_get__compression(WGRPR_Printing3D3MFPackage *self, WGRPR_Printing3DPackageCompression *value);
 
-/* Windows.Graphics.Printing3D.Printing3D3MFPackage.put_Compression() */
 HRESULT wgrpr_printing3_d3_m_f_package_put__compression(WGRPR_Printing3D3MFPackage *self, WGRPR_Printing3DPackageCompression value);
 
-/* Windows.Graphics.Printing3D.Printing3D3MFPackage.LoadAsync() */
 HRESULT wgrpr_printing3_d3_m_f_package_load_async(WSTST_IRandomAccessStream* value, WF_IAsyncOperation_WGRPR_Printing3D3MFPackage** out);
 
-/* activate Windows.Graphics.Printing3D.Printing3DBaseMaterial */
 HRESULT wgrpr_printing3_d_base_material_new(WGRPR_Printing3DBaseMaterial **out);
 
-/* Windows.Graphics.Printing3D.Printing3DBaseMaterial */
-/* Windows.Graphics.Printing3D.Printing3DBaseMaterial.get_Name() */
 HRESULT wgrpr_printing3_d_base_material_get__name(WGRPR_Printing3DBaseMaterial *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing3D.Printing3DBaseMaterial.put_Name() */
 HRESULT wgrpr_printing3_d_base_material_put__name(WGRPR_Printing3DBaseMaterial *self, cwinrt_hstring value);
 
-/* Windows.Graphics.Printing3D.Printing3DBaseMaterial.get_Color() */
 HRESULT wgrpr_printing3_d_base_material_get__color(WGRPR_Printing3DBaseMaterial *self, WGRPR_Printing3DColorMaterial** value);
 
-/* Windows.Graphics.Printing3D.Printing3DBaseMaterial.put_Color() */
 HRESULT wgrpr_printing3_d_base_material_put__color(WGRPR_Printing3DBaseMaterial *self, WGRPR_Printing3DColorMaterial* value);
 
-/* Windows.Graphics.Printing3D.Printing3DBaseMaterial.get_Abs() */
 HRESULT wgrpr_printing3_d_base_material_get__abs(cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing3D.Printing3DBaseMaterial.get_Pla() */
 HRESULT wgrpr_printing3_d_base_material_get__pla(cwinrt_hstring *value);
 
-/* activate Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup */
 HRESULT wgrpr_printing3_d_base_material_group_new(WGRPR_Printing3DBaseMaterialGroup **out);
 
-/* Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup */
-/* Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup.get_Bases() */
 HRESULT wgrpr_printing3_d_base_material_group_get__bases(WGRPR_Printing3DBaseMaterialGroup *self, WFOCO_IVector_WGRPR_Printing3DBaseMaterial** value);
 
-/* Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup.get_MaterialGroupId() */
 HRESULT wgrpr_printing3_d_base_material_group_get__material_group_id(WGRPR_Printing3DBaseMaterialGroup *self, uint32_t *value);
 
-/* activate Windows.Graphics.Printing3D.Printing3DColorMaterial */
 HRESULT wgrpr_printing3_d_color_material_new(WGRPR_Printing3DColorMaterial **out);
 
-/* Windows.Graphics.Printing3D.Printing3DColorMaterial */
-/* Windows.Graphics.Printing3D.Printing3DColorMaterial.get_Value() */
 HRESULT wgrpr_printing3_d_color_material_get__value(WGRPR_Printing3DColorMaterial *self, uint32_t *value);
 
-/* Windows.Graphics.Printing3D.Printing3DColorMaterial.put_Value() */
 HRESULT wgrpr_printing3_d_color_material_put__value(WGRPR_Printing3DColorMaterial *self, uint32_t value);
 
-/* Windows.Graphics.Printing3D.Printing3DColorMaterial.get_Color() */
 HRESULT wgrpr_printing3_d_color_material_get__color(WGRPR_Printing3DColorMaterial *self, WUI_Color *value);
 
-/* Windows.Graphics.Printing3D.Printing3DColorMaterial.put_Color() */
 HRESULT wgrpr_printing3_d_color_material_put__color(WGRPR_Printing3DColorMaterial *self, WUI_Color value);
 
-/* activate Windows.Graphics.Printing3D.Printing3DColorMaterialGroup */
 HRESULT wgrpr_printing3_d_color_material_group_new(WGRPR_Printing3DColorMaterialGroup **out);
 
-/* Windows.Graphics.Printing3D.Printing3DColorMaterialGroup */
-/* Windows.Graphics.Printing3D.Printing3DColorMaterialGroup.get_Colors() */
 HRESULT wgrpr_printing3_d_color_material_group_get__colors(WGRPR_Printing3DColorMaterialGroup *self, WFOCO_IVector_WGRPR_Printing3DColorMaterial** value);
 
-/* Windows.Graphics.Printing3D.Printing3DColorMaterialGroup.get_MaterialGroupId() */
 HRESULT wgrpr_printing3_d_color_material_group_get__material_group_id(WGRPR_Printing3DColorMaterialGroup *self, uint32_t *value);
 
-/* activate Windows.Graphics.Printing3D.Printing3DComponent */
 HRESULT wgrpr_printing3_d_component_new(WGRPR_Printing3DComponent **out);
 
-/* Windows.Graphics.Printing3D.Printing3DComponent */
-/* Windows.Graphics.Printing3D.Printing3DComponent.get_Mesh() */
 HRESULT wgrpr_printing3_d_component_get__mesh(WGRPR_Printing3DComponent *self, WGRPR_Printing3DMesh** value);
 
-/* Windows.Graphics.Printing3D.Printing3DComponent.put_Mesh() */
 HRESULT wgrpr_printing3_d_component_put__mesh(WGRPR_Printing3DComponent *self, WGRPR_Printing3DMesh* value);
 
-/* Windows.Graphics.Printing3D.Printing3DComponent.get_Components() */
 HRESULT wgrpr_printing3_d_component_get__components(WGRPR_Printing3DComponent *self, WFOCO_IVector_WGRPR_Printing3DComponentWithMatrix** value);
 
-/* Windows.Graphics.Printing3D.Printing3DComponent.get_Thumbnail() */
 HRESULT wgrpr_printing3_d_component_get__thumbnail(WGRPR_Printing3DComponent *self, WGRPR_Printing3DTextureResource** value);
 
-/* Windows.Graphics.Printing3D.Printing3DComponent.put_Thumbnail() */
 HRESULT wgrpr_printing3_d_component_put__thumbnail(WGRPR_Printing3DComponent *self, WGRPR_Printing3DTextureResource* value);
 
-/* Windows.Graphics.Printing3D.Printing3DComponent.get_Type() */
 HRESULT wgrpr_printing3_d_component_get__type(WGRPR_Printing3DComponent *self, WGRPR_Printing3DObjectType *value);
 
-/* Windows.Graphics.Printing3D.Printing3DComponent.put_Type() */
 HRESULT wgrpr_printing3_d_component_put__type(WGRPR_Printing3DComponent *self, WGRPR_Printing3DObjectType value);
 
-/* Windows.Graphics.Printing3D.Printing3DComponent.get_Name() */
 HRESULT wgrpr_printing3_d_component_get__name(WGRPR_Printing3DComponent *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing3D.Printing3DComponent.put_Name() */
 HRESULT wgrpr_printing3_d_component_put__name(WGRPR_Printing3DComponent *self, cwinrt_hstring value);
 
-/* Windows.Graphics.Printing3D.Printing3DComponent.get_PartNumber() */
 HRESULT wgrpr_printing3_d_component_get__part_number(WGRPR_Printing3DComponent *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing3D.Printing3DComponent.put_PartNumber() */
 HRESULT wgrpr_printing3_d_component_put__part_number(WGRPR_Printing3DComponent *self, cwinrt_hstring value);
 
-/* activate Windows.Graphics.Printing3D.Printing3DComponentWithMatrix */
 HRESULT wgrpr_printing3_d_component_with_matrix_new(WGRPR_Printing3DComponentWithMatrix **out);
 
-/* Windows.Graphics.Printing3D.Printing3DComponentWithMatrix */
-/* Windows.Graphics.Printing3D.Printing3DComponentWithMatrix.get_Component() */
 HRESULT wgrpr_printing3_d_component_with_matrix_get__component(WGRPR_Printing3DComponentWithMatrix *self, WGRPR_Printing3DComponent** value);
 
-/* Windows.Graphics.Printing3D.Printing3DComponentWithMatrix.put_Component() */
 HRESULT wgrpr_printing3_d_component_with_matrix_put__component(WGRPR_Printing3DComponentWithMatrix *self, WGRPR_Printing3DComponent* value);
 
-/* Windows.Graphics.Printing3D.Printing3DComponentWithMatrix.get_Matrix() */
 HRESULT wgrpr_printing3_d_component_with_matrix_get__matrix(WGRPR_Printing3DComponentWithMatrix *self, WFN_Matrix4x_4 *value);
 
-/* Windows.Graphics.Printing3D.Printing3DComponentWithMatrix.put_Matrix() */
 HRESULT wgrpr_printing3_d_component_with_matrix_put__matrix(WGRPR_Printing3DComponentWithMatrix *self, WFN_Matrix4x_4 value);
 
-/* activate Windows.Graphics.Printing3D.Printing3DCompositeMaterial */
 HRESULT wgrpr_printing3_d_composite_material_new(WGRPR_Printing3DCompositeMaterial **out);
 
-/* Windows.Graphics.Printing3D.Printing3DCompositeMaterial */
-/* Windows.Graphics.Printing3D.Printing3DCompositeMaterial.get_Values() */
 HRESULT wgrpr_printing3_d_composite_material_get__values(WGRPR_Printing3DCompositeMaterial *self, WFOCO_IVector_F64** value);
 
-/* activate Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup */
 HRESULT wgrpr_printing3_d_composite_material_group_new(WGRPR_Printing3DCompositeMaterialGroup **out);
 
-/* Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup */
-/* Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup.get_Composites() */
 HRESULT wgrpr_printing3_d_composite_material_group_get__composites(WGRPR_Printing3DCompositeMaterialGroup *self, WFOCO_IVector_WGRPR_Printing3DCompositeMaterial** value);
 
-/* Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup.get_MaterialGroupId() */
 HRESULT wgrpr_printing3_d_composite_material_group_get__material_group_id(WGRPR_Printing3DCompositeMaterialGroup *self, uint32_t *value);
 
-/* Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup.get_MaterialIndices() */
 HRESULT wgrpr_printing3_d_composite_material_group_get__material_indices(WGRPR_Printing3DCompositeMaterialGroup *self, WFOCO_IVector_uint32_t** value);
 
-/* Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup.get_BaseMaterialGroup() */
 HRESULT wgrpr_printing3_d_composite_material_group_get__base_material_group(WGRPR_Printing3DCompositeMaterialGroup *self, WGRPR_Printing3DBaseMaterialGroup** value);
 
-/* Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup.put_BaseMaterialGroup() */
 HRESULT wgrpr_printing3_d_composite_material_group_put__base_material_group(WGRPR_Printing3DCompositeMaterialGroup *self, WGRPR_Printing3DBaseMaterialGroup* value);
 
-/* activate Windows.Graphics.Printing3D.Printing3DFaceReductionOptions */
 HRESULT wgrpr_printing3_d_face_reduction_options_new(WGRPR_Printing3DFaceReductionOptions **out);
 
-/* Windows.Graphics.Printing3D.Printing3DFaceReductionOptions */
-/* Windows.Graphics.Printing3D.Printing3DFaceReductionOptions.get_MaxReductionArea() */
 HRESULT wgrpr_printing3_d_face_reduction_options_get__max_reduction_area(WGRPR_Printing3DFaceReductionOptions *self, double *value);
 
-/* Windows.Graphics.Printing3D.Printing3DFaceReductionOptions.put_MaxReductionArea() */
 HRESULT wgrpr_printing3_d_face_reduction_options_put__max_reduction_area(WGRPR_Printing3DFaceReductionOptions *self, double value);
 
-/* Windows.Graphics.Printing3D.Printing3DFaceReductionOptions.get_TargetTriangleCount() */
 HRESULT wgrpr_printing3_d_face_reduction_options_get__target_triangle_count(WGRPR_Printing3DFaceReductionOptions *self, uint32_t *value);
 
-/* Windows.Graphics.Printing3D.Printing3DFaceReductionOptions.put_TargetTriangleCount() */
 HRESULT wgrpr_printing3_d_face_reduction_options_put__target_triangle_count(WGRPR_Printing3DFaceReductionOptions *self, uint32_t value);
 
-/* Windows.Graphics.Printing3D.Printing3DFaceReductionOptions.get_MaxEdgeLength() */
 HRESULT wgrpr_printing3_d_face_reduction_options_get__max_edge_length(WGRPR_Printing3DFaceReductionOptions *self, double *value);
 
-/* Windows.Graphics.Printing3D.Printing3DFaceReductionOptions.put_MaxEdgeLength() */
 HRESULT wgrpr_printing3_d_face_reduction_options_put__max_edge_length(WGRPR_Printing3DFaceReductionOptions *self, double value);
 
-/* activate Windows.Graphics.Printing3D.Printing3DMaterial */
 HRESULT wgrpr_printing3_d_material_new(WGRPR_Printing3DMaterial **out);
 
-/* Windows.Graphics.Printing3D.Printing3DMaterial */
-/* Windows.Graphics.Printing3D.Printing3DMaterial.get_BaseGroups() */
 HRESULT wgrpr_printing3_d_material_get__base_groups(WGRPR_Printing3DMaterial *self, WFOCO_IVector_WGRPR_Printing3DBaseMaterialGroup** value);
 
-/* Windows.Graphics.Printing3D.Printing3DMaterial.get_ColorGroups() */
 HRESULT wgrpr_printing3_d_material_get__color_groups(WGRPR_Printing3DMaterial *self, WFOCO_IVector_WGRPR_Printing3DColorMaterialGroup** value);
 
-/* Windows.Graphics.Printing3D.Printing3DMaterial.get_Texture2CoordGroups() */
 HRESULT wgrpr_printing3_d_material_get__texture2_coord_groups(WGRPR_Printing3DMaterial *self, WFOCO_IVector_WGRPR_Printing3DTexture2CoordMaterialGroup** value);
 
-/* Windows.Graphics.Printing3D.Printing3DMaterial.get_CompositeGroups() */
 HRESULT wgrpr_printing3_d_material_get__composite_groups(WGRPR_Printing3DMaterial *self, WFOCO_IVector_WGRPR_Printing3DCompositeMaterialGroup** value);
 
-/* Windows.Graphics.Printing3D.Printing3DMaterial.get_MultiplePropertyGroups() */
 HRESULT wgrpr_printing3_d_material_get__multiple_property_groups(WGRPR_Printing3DMaterial *self, WFOCO_IVector_WGRPR_Printing3DMultiplePropertyMaterialGroup** value);
 
-/* activate Windows.Graphics.Printing3D.Printing3DMesh */
 HRESULT wgrpr_printing3_d_mesh_new(WGRPR_Printing3DMesh **out);
 
-/* Windows.Graphics.Printing3D.Printing3DMesh */
-/* Windows.Graphics.Printing3D.Printing3DMesh.get_VertexCount() */
 HRESULT wgrpr_printing3_d_mesh_get__vertex_count(WGRPR_Printing3DMesh *self, uint32_t *value);
 
-/* Windows.Graphics.Printing3D.Printing3DMesh.put_VertexCount() */
 HRESULT wgrpr_printing3_d_mesh_put__vertex_count(WGRPR_Printing3DMesh *self, uint32_t value);
 
-/* Windows.Graphics.Printing3D.Printing3DMesh.get_IndexCount() */
 HRESULT wgrpr_printing3_d_mesh_get__index_count(WGRPR_Printing3DMesh *self, uint32_t *value);
 
-/* Windows.Graphics.Printing3D.Printing3DMesh.put_IndexCount() */
 HRESULT wgrpr_printing3_d_mesh_put__index_count(WGRPR_Printing3DMesh *self, uint32_t value);
 
-/* Windows.Graphics.Printing3D.Printing3DMesh.get_VertexPositionsDescription() */
 HRESULT wgrpr_printing3_d_mesh_get__vertex_positions_description(WGRPR_Printing3DMesh *self, WGRPR_Printing3DBufferDescription *value);
 
-/* Windows.Graphics.Printing3D.Printing3DMesh.put_VertexPositionsDescription() */
 HRESULT wgrpr_printing3_d_mesh_put__vertex_positions_description(WGRPR_Printing3DMesh *self, WGRPR_Printing3DBufferDescription value);
 
-/* Windows.Graphics.Printing3D.Printing3DMesh.get_VertexNormalsDescription() */
 HRESULT wgrpr_printing3_d_mesh_get__vertex_normals_description(WGRPR_Printing3DMesh *self, WGRPR_Printing3DBufferDescription *value);
 
-/* Windows.Graphics.Printing3D.Printing3DMesh.put_VertexNormalsDescription() */
 HRESULT wgrpr_printing3_d_mesh_put__vertex_normals_description(WGRPR_Printing3DMesh *self, WGRPR_Printing3DBufferDescription value);
 
-/* Windows.Graphics.Printing3D.Printing3DMesh.get_TriangleIndicesDescription() */
 HRESULT wgrpr_printing3_d_mesh_get__triangle_indices_description(WGRPR_Printing3DMesh *self, WGRPR_Printing3DBufferDescription *value);
 
-/* Windows.Graphics.Printing3D.Printing3DMesh.put_TriangleIndicesDescription() */
 HRESULT wgrpr_printing3_d_mesh_put__triangle_indices_description(WGRPR_Printing3DMesh *self, WGRPR_Printing3DBufferDescription value);
 
-/* Windows.Graphics.Printing3D.Printing3DMesh.get_TriangleMaterialIndicesDescription() */
 HRESULT wgrpr_printing3_d_mesh_get__triangle_material_indices_description(WGRPR_Printing3DMesh *self, WGRPR_Printing3DBufferDescription *value);
 
-/* Windows.Graphics.Printing3D.Printing3DMesh.put_TriangleMaterialIndicesDescription() */
 HRESULT wgrpr_printing3_d_mesh_put__triangle_material_indices_description(WGRPR_Printing3DMesh *self, WGRPR_Printing3DBufferDescription value);
 
-/* Windows.Graphics.Printing3D.Printing3DMesh.GetVertexPositions() */
 HRESULT wgrpr_printing3_d_mesh_get_vertex_positions(WGRPR_Printing3DMesh *self, WSTST_IBuffer** out);
 
-/* Windows.Graphics.Printing3D.Printing3DMesh.CreateVertexPositions() */
 HRESULT wgrpr_printing3_d_mesh_create_vertex_positions(WGRPR_Printing3DMesh *self, uint32_t value);
 
-/* Windows.Graphics.Printing3D.Printing3DMesh.GetVertexNormals() */
 HRESULT wgrpr_printing3_d_mesh_get_vertex_normals(WGRPR_Printing3DMesh *self, WSTST_IBuffer** out);
 
-/* Windows.Graphics.Printing3D.Printing3DMesh.CreateVertexNormals() */
 HRESULT wgrpr_printing3_d_mesh_create_vertex_normals(WGRPR_Printing3DMesh *self, uint32_t value);
 
-/* Windows.Graphics.Printing3D.Printing3DMesh.GetTriangleIndices() */
 HRESULT wgrpr_printing3_d_mesh_get_triangle_indices(WGRPR_Printing3DMesh *self, WSTST_IBuffer** out);
 
-/* Windows.Graphics.Printing3D.Printing3DMesh.CreateTriangleIndices() */
 HRESULT wgrpr_printing3_d_mesh_create_triangle_indices(WGRPR_Printing3DMesh *self, uint32_t value);
 
-/* Windows.Graphics.Printing3D.Printing3DMesh.GetTriangleMaterialIndices() */
 HRESULT wgrpr_printing3_d_mesh_get_triangle_material_indices(WGRPR_Printing3DMesh *self, WSTST_IBuffer** out);
 
-/* Windows.Graphics.Printing3D.Printing3DMesh.CreateTriangleMaterialIndices() */
 HRESULT wgrpr_printing3_d_mesh_create_triangle_material_indices(WGRPR_Printing3DMesh *self, uint32_t value);
 
-/* Windows.Graphics.Printing3D.Printing3DMesh.get_BufferDescriptionSet() */
 HRESULT wgrpr_printing3_d_mesh_get__buffer_description_set(WGRPR_Printing3DMesh *self, WFOCO_IPropertySet** value);
 
-/* Windows.Graphics.Printing3D.Printing3DMesh.get_BufferSet() */
 HRESULT wgrpr_printing3_d_mesh_get__buffer_set(WGRPR_Printing3DMesh *self, WFOCO_IPropertySet** value);
 
-/* Windows.Graphics.Printing3D.Printing3DMesh.VerifyAsync() */
 HRESULT wgrpr_printing3_d_mesh_verify_async(WGRPR_Printing3DMesh *self, WGRPR_Printing3DMeshVerificationMode value, WF_IAsyncOperation_WGRPR_Printing3DMeshVerificationResult** out);
 
-/* activate Windows.Graphics.Printing3D.Printing3DMeshVerificationResult */
 HRESULT wgrpr_printing3_d_mesh_verification_result_new(WGRPR_Printing3DMeshVerificationResult **out);
 
-/* Windows.Graphics.Printing3D.Printing3DMeshVerificationResult */
-/* Windows.Graphics.Printing3D.Printing3DMeshVerificationResult.get_IsValid() */
 HRESULT wgrpr_printing3_d_mesh_verification_result_get__is_valid(WGRPR_Printing3DMeshVerificationResult *self, BOOL *value);
 
-/* Windows.Graphics.Printing3D.Printing3DMeshVerificationResult.get_NonmanifoldTriangles() */
 HRESULT wgrpr_printing3_d_mesh_verification_result_get__nonmanifold_triangles(WGRPR_Printing3DMeshVerificationResult *self, WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Graphics.Printing3D.Printing3DMeshVerificationResult.get_ReversedNormalTriangles() */
 HRESULT wgrpr_printing3_d_mesh_verification_result_get__reversed_normal_triangles(WGRPR_Printing3DMeshVerificationResult *self, WFOCO_IVectorView_uint32_t** value);
 
-/* activate Windows.Graphics.Printing3D.Printing3DModel */
 HRESULT wgrpr_printing3_d_model_new(WGRPR_Printing3DModel **out);
 
-/* Windows.Graphics.Printing3D.Printing3DModel */
-/* Windows.Graphics.Printing3D.Printing3DModel.get_Unit() */
 HRESULT wgrpr_printing3_d_model_get__unit(WGRPR_Printing3DModel *self, WGRPR_Printing3DModelUnit *value);
 
-/* Windows.Graphics.Printing3D.Printing3DModel.put_Unit() */
 HRESULT wgrpr_printing3_d_model_put__unit(WGRPR_Printing3DModel *self, WGRPR_Printing3DModelUnit value);
 
-/* Windows.Graphics.Printing3D.Printing3DModel.get_Textures() */
 HRESULT wgrpr_printing3_d_model_get__textures(WGRPR_Printing3DModel *self, WFOCO_IVector_WGRPR_Printing3DModelTexture** value);
 
-/* Windows.Graphics.Printing3D.Printing3DModel.get_Meshes() */
 HRESULT wgrpr_printing3_d_model_get__meshes(WGRPR_Printing3DModel *self, WFOCO_IVector_WGRPR_Printing3DMesh** value);
 
-/* Windows.Graphics.Printing3D.Printing3DModel.get_Components() */
 HRESULT wgrpr_printing3_d_model_get__components(WGRPR_Printing3DModel *self, WFOCO_IVector_WGRPR_Printing3DComponent** value);
 
-/* Windows.Graphics.Printing3D.Printing3DModel.get_Material() */
 HRESULT wgrpr_printing3_d_model_get__material(WGRPR_Printing3DModel *self, WGRPR_Printing3DMaterial** value);
 
-/* Windows.Graphics.Printing3D.Printing3DModel.put_Material() */
 HRESULT wgrpr_printing3_d_model_put__material(WGRPR_Printing3DModel *self, WGRPR_Printing3DMaterial* value);
 
-/* Windows.Graphics.Printing3D.Printing3DModel.get_Build() */
 HRESULT wgrpr_printing3_d_model_get__build(WGRPR_Printing3DModel *self, WGRPR_Printing3DComponent** value);
 
-/* Windows.Graphics.Printing3D.Printing3DModel.put_Build() */
 HRESULT wgrpr_printing3_d_model_put__build(WGRPR_Printing3DModel *self, WGRPR_Printing3DComponent* value);
 
-/* Windows.Graphics.Printing3D.Printing3DModel.get_Version() */
 HRESULT wgrpr_printing3_d_model_get__version(WGRPR_Printing3DModel *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing3D.Printing3DModel.put_Version() */
 HRESULT wgrpr_printing3_d_model_put__version(WGRPR_Printing3DModel *self, cwinrt_hstring value);
 
-/* Windows.Graphics.Printing3D.Printing3DModel.get_RequiredExtensions() */
 HRESULT wgrpr_printing3_d_model_get__required_extensions(WGRPR_Printing3DModel *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Graphics.Printing3D.Printing3DModel.get_Metadata() */
 HRESULT wgrpr_printing3_d_model_get__metadata(WGRPR_Printing3DModel *self, WFOCO_IMap_HSTRING_HSTRING** value);
 
-/* Windows.Graphics.Printing3D.Printing3DModel.RepairAsync() */
 HRESULT wgrpr_printing3_d_model_repair_async(WGRPR_Printing3DModel *self, WF_IAsyncAction** out);
 
-/* Windows.Graphics.Printing3D.Printing3DModel.Clone() */
 HRESULT wgrpr_printing3_d_model_clone(WGRPR_Printing3DModel *self, WGRPR_Printing3DModel** out);
 
-/* Windows.Graphics.Printing3D.Printing3DModel.TryPartialRepairAsync() */
 HRESULT wgrpr_printing3_d_model_try_partial_repair_async(WGRPR_Printing3DModel *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Graphics.Printing3D.Printing3DModel.TryPartialRepairAsync(maxWaitTime) */
 HRESULT wgrpr_printing3_d_model_try_partial_repair_async_time_span_p(WGRPR_Printing3DModel *self, WF_TimeSpan maxWaitTime, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Graphics.Printing3D.Printing3DModel.TryReduceFacesAsync() */
 HRESULT wgrpr_printing3_d_model_try_reduce_faces_async(WGRPR_Printing3DModel *self, WF_IAsyncOperationWithProgress_Bool_F64** out);
 
-/* Windows.Graphics.Printing3D.Printing3DModel.TryReduceFacesAsync(printing3DFaceReductionOptions) */
 HRESULT wgrpr_printing3_d_model_try_reduce_faces_async_p_p(WGRPR_Printing3DModel *self, WGRPR_Printing3DFaceReductionOptions* printing3DFaceReductionOptions, WF_IAsyncOperationWithProgress_Bool_F64** out);
 
-/* Windows.Graphics.Printing3D.Printing3DModel.TryReduceFacesAsync(printing3DFaceReductionOptions, maxWait) */
 HRESULT wgrpr_printing3_d_model_try_reduce_faces_async_p_time_span_p(WGRPR_Printing3DModel *self, WGRPR_Printing3DFaceReductionOptions* printing3DFaceReductionOptions, WF_TimeSpan maxWait, WF_IAsyncOperationWithProgress_Bool_F64** out);
 
-/* Windows.Graphics.Printing3D.Printing3DModel.RepairWithProgressAsync() */
 HRESULT wgrpr_printing3_d_model_repair_with_progress_async(WGRPR_Printing3DModel *self, WF_IAsyncOperationWithProgress_Bool_F64** out);
 
-/* activate Windows.Graphics.Printing3D.Printing3DModelTexture */
 HRESULT wgrpr_printing3_d_model_texture_new(WGRPR_Printing3DModelTexture **out);
 
-/* Windows.Graphics.Printing3D.Printing3DModelTexture */
-/* Windows.Graphics.Printing3D.Printing3DModelTexture.get_TextureResource() */
 HRESULT wgrpr_printing3_d_model_texture_get__texture_resource(WGRPR_Printing3DModelTexture *self, WGRPR_Printing3DTextureResource** value);
 
-/* Windows.Graphics.Printing3D.Printing3DModelTexture.put_TextureResource() */
 HRESULT wgrpr_printing3_d_model_texture_put__texture_resource(WGRPR_Printing3DModelTexture *self, WGRPR_Printing3DTextureResource* value);
 
-/* Windows.Graphics.Printing3D.Printing3DModelTexture.get_TileStyleU() */
 HRESULT wgrpr_printing3_d_model_texture_get__tile_style_u(WGRPR_Printing3DModelTexture *self, WGRPR_Printing3DTextureEdgeBehavior *value);
 
-/* Windows.Graphics.Printing3D.Printing3DModelTexture.put_TileStyleU() */
 HRESULT wgrpr_printing3_d_model_texture_put__tile_style_u(WGRPR_Printing3DModelTexture *self, WGRPR_Printing3DTextureEdgeBehavior value);
 
-/* Windows.Graphics.Printing3D.Printing3DModelTexture.get_TileStyleV() */
 HRESULT wgrpr_printing3_d_model_texture_get__tile_style_v(WGRPR_Printing3DModelTexture *self, WGRPR_Printing3DTextureEdgeBehavior *value);
 
-/* Windows.Graphics.Printing3D.Printing3DModelTexture.put_TileStyleV() */
 HRESULT wgrpr_printing3_d_model_texture_put__tile_style_v(WGRPR_Printing3DModelTexture *self, WGRPR_Printing3DTextureEdgeBehavior value);
 
-/* activate Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial */
 HRESULT wgrpr_printing3_d_multiple_property_material_new(WGRPR_Printing3DMultiplePropertyMaterial **out);
 
-/* Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial */
-/* Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial.get_MaterialIndices() */
 HRESULT wgrpr_printing3_d_multiple_property_material_get__material_indices(WGRPR_Printing3DMultiplePropertyMaterial *self, WFOCO_IVector_uint32_t** value);
 
-/* activate Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup */
 HRESULT wgrpr_printing3_d_multiple_property_material_group_new(WGRPR_Printing3DMultiplePropertyMaterialGroup **out);
 
-/* Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup */
-/* Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup.get_MultipleProperties() */
 HRESULT wgrpr_printing3_d_multiple_property_material_group_get__multiple_properties(WGRPR_Printing3DMultiplePropertyMaterialGroup *self, WFOCO_IVector_WGRPR_Printing3DMultiplePropertyMaterial** value);
 
-/* Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup.get_MaterialGroupIndices() */
 HRESULT wgrpr_printing3_d_multiple_property_material_group_get__material_group_indices(WGRPR_Printing3DMultiplePropertyMaterialGroup *self, WFOCO_IVector_uint32_t** value);
 
-/* Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup.get_MaterialGroupId() */
 HRESULT wgrpr_printing3_d_multiple_property_material_group_get__material_group_id(WGRPR_Printing3DMultiplePropertyMaterialGroup *self, uint32_t *value);
 
-/* activate Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial */
 HRESULT wgrpr_printing3_d_texture2_coord_material_new(WGRPR_Printing3DTexture2CoordMaterial **out);
 
-/* Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial */
-/* Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial.get_Texture() */
 HRESULT wgrpr_printing3_d_texture2_coord_material_get__texture(WGRPR_Printing3DTexture2CoordMaterial *self, WGRPR_Printing3DModelTexture** value);
 
-/* Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial.put_Texture() */
 HRESULT wgrpr_printing3_d_texture2_coord_material_put__texture(WGRPR_Printing3DTexture2CoordMaterial *self, WGRPR_Printing3DModelTexture* value);
 
-/* Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial.get_U() */
 HRESULT wgrpr_printing3_d_texture2_coord_material_get__u(WGRPR_Printing3DTexture2CoordMaterial *self, double *value);
 
-/* Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial.put_U() */
 HRESULT wgrpr_printing3_d_texture2_coord_material_put__u(WGRPR_Printing3DTexture2CoordMaterial *self, double value);
 
-/* Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial.get_V() */
 HRESULT wgrpr_printing3_d_texture2_coord_material_get__v(WGRPR_Printing3DTexture2CoordMaterial *self, double *value);
 
-/* Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial.put_V() */
 HRESULT wgrpr_printing3_d_texture2_coord_material_put__v(WGRPR_Printing3DTexture2CoordMaterial *self, double value);
 
-/* activate Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup */
 HRESULT wgrpr_printing3_d_texture2_coord_material_group_new(WGRPR_Printing3DTexture2CoordMaterialGroup **out);
 
-/* Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup */
-/* Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup.get_Texture2Coords() */
 HRESULT wgrpr_printing3_d_texture2_coord_material_group_get__texture2_coords(WGRPR_Printing3DTexture2CoordMaterialGroup *self, WFOCO_IVector_WGRPR_Printing3DTexture2CoordMaterial** value);
 
-/* Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup.get_MaterialGroupId() */
 HRESULT wgrpr_printing3_d_texture2_coord_material_group_get__material_group_id(WGRPR_Printing3DTexture2CoordMaterialGroup *self, uint32_t *value);
 
-/* Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup.get_Texture() */
 HRESULT wgrpr_printing3_d_texture2_coord_material_group_get__texture(WGRPR_Printing3DTexture2CoordMaterialGroup *self, WGRPR_Printing3DModelTexture** value);
 
-/* Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup.put_Texture() */
 HRESULT wgrpr_printing3_d_texture2_coord_material_group_put__texture(WGRPR_Printing3DTexture2CoordMaterialGroup *self, WGRPR_Printing3DModelTexture* value);
 
-/* activate Windows.Graphics.Printing3D.Printing3DTextureResource */
 HRESULT wgrpr_printing3_d_texture_resource_new(WGRPR_Printing3DTextureResource **out);
 
-/* Windows.Graphics.Printing3D.Printing3DTextureResource */
-/* Windows.Graphics.Printing3D.Printing3DTextureResource.get_TextureData() */
 HRESULT wgrpr_printing3_d_texture_resource_get__texture_data(WGRPR_Printing3DTextureResource *self, WSTST_IRandomAccessStreamWithContentType** value);
 
-/* Windows.Graphics.Printing3D.Printing3DTextureResource.put_TextureData() */
 HRESULT wgrpr_printing3_d_texture_resource_put__texture_data(WGRPR_Printing3DTextureResource *self, WSTST_IRandomAccessStreamWithContentType* value);
 
-/* Windows.Graphics.Printing3D.Printing3DTextureResource.get_Name() */
 HRESULT wgrpr_printing3_d_texture_resource_get__name(WGRPR_Printing3DTextureResource *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing3D.Printing3DTextureResource.put_Name() */
 HRESULT wgrpr_printing3_d_texture_resource_put__name(WGRPR_Printing3DTextureResource *self, cwinrt_hstring value);
 
-/* Windows.Graphics.Printing3D.IPrint3DManagerStatics */
-/* Windows.Graphics.Printing3D.IPrint3DManagerStatics.GetForCurrentView() */
 HRESULT wgrpr_print3_d_manager_statics_get_for_current_view(WGRPR_IPrint3DManagerStatics *self, WGRPR_Print3DManager** out);
 
-/* Windows.Graphics.Printing3D.IPrint3DManagerStatics.ShowPrintUIAsync() */
 HRESULT wgrpr_print3_d_manager_statics_show_print_u_i_async(WGRPR_IPrint3DManagerStatics *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Graphics.Printing3D.IPrint3DManager */
-/* Windows.Graphics.Printing3D.IPrint3DTask */
-/* Windows.Graphics.Printing3D.IPrint3DTaskCompletedEventArgs */
-/* Windows.Graphics.Printing3D.IPrint3DTaskRequest */
-/* Windows.Graphics.Printing3D.IPrint3DTaskRequestedEventArgs */
-/* Windows.Graphics.Printing3D.IPrint3DTaskSourceChangedEventArgs */
-/* Windows.Graphics.Printing3D.IPrint3DTaskSourceRequestedArgs */
-/* Windows.Graphics.Printing3D.IPrinting3D3MFPackage */
-/* Windows.Graphics.Printing3D.IPrinting3D3MFPackage2 */
-/* Windows.Graphics.Printing3D.IPrinting3D3MFPackage2.get_Compression() */
 HRESULT wgrpr_printing3_d3_m_f_package_2_get__compression(WGRPR_IPrinting3D3MFPackage_2 *self, WGRPR_Printing3DPackageCompression *value);
 
-/* Windows.Graphics.Printing3D.IPrinting3D3MFPackage2.put_Compression() */
 HRESULT wgrpr_printing3_d3_m_f_package_2_put__compression(WGRPR_IPrinting3D3MFPackage_2 *self, WGRPR_Printing3DPackageCompression value);
 
-/* Windows.Graphics.Printing3D.IPrinting3DBaseMaterial */
-/* Windows.Graphics.Printing3D.IPrinting3DBaseMaterialGroup */
-/* Windows.Graphics.Printing3D.IPrinting3DColorMaterial */
-/* Windows.Graphics.Printing3D.IPrinting3DColorMaterial2 */
-/* Windows.Graphics.Printing3D.IPrinting3DColorMaterial2.get_Color() */
 HRESULT wgrpr_printing3_d_color_material_2_get__color(WGRPR_IPrinting3DColorMaterial_2 *self, WUI_Color *value);
 
-/* Windows.Graphics.Printing3D.IPrinting3DColorMaterial2.put_Color() */
 HRESULT wgrpr_printing3_d_color_material_2_put__color(WGRPR_IPrinting3DColorMaterial_2 *self, WUI_Color value);
 
-/* Windows.Graphics.Printing3D.IPrinting3DColorMaterialGroup */
-/* Windows.Graphics.Printing3D.IPrinting3DComponent */
-/* Windows.Graphics.Printing3D.IPrinting3DComponentWithMatrix */
-/* Windows.Graphics.Printing3D.IPrinting3DCompositeMaterial */
-/* Windows.Graphics.Printing3D.IPrinting3DCompositeMaterialGroup */
-/* Windows.Graphics.Printing3D.IPrinting3DCompositeMaterialGroup2 */
-/* Windows.Graphics.Printing3D.IPrinting3DCompositeMaterialGroup2.get_BaseMaterialGroup() */
 HRESULT wgrpr_printing3_d_composite_material_group_2_get__base_material_group(WGRPR_IPrinting3DCompositeMaterialGroup_2 *self, WGRPR_Printing3DBaseMaterialGroup** value);
 
-/* Windows.Graphics.Printing3D.IPrinting3DCompositeMaterialGroup2.put_BaseMaterialGroup() */
 HRESULT wgrpr_printing3_d_composite_material_group_2_put__base_material_group(WGRPR_IPrinting3DCompositeMaterialGroup_2 *self, WGRPR_Printing3DBaseMaterialGroup* value);
 
-/* Windows.Graphics.Printing3D.IPrinting3DFaceReductionOptions */
-/* Windows.Graphics.Printing3D.IPrinting3DMaterial */
-/* Windows.Graphics.Printing3D.IPrinting3DMesh */
-/* Windows.Graphics.Printing3D.IPrinting3DMeshVerificationResult */
-/* Windows.Graphics.Printing3D.IPrinting3DModel */
-/* Windows.Graphics.Printing3D.IPrinting3DModel2 */
-/* Windows.Graphics.Printing3D.IPrinting3DModel2.TryPartialRepairAsync() */
 HRESULT wgrpr_printing3_d_model_2_try_partial_repair_async(WGRPR_IPrinting3DModel_2 *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Graphics.Printing3D.IPrinting3DModel2.TryPartialRepairAsync(maxWaitTime) */
 HRESULT wgrpr_printing3_d_model_2_try_partial_repair_async_time_span_p(WGRPR_IPrinting3DModel_2 *self, WF_TimeSpan maxWaitTime, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Graphics.Printing3D.IPrinting3DModel2.TryReduceFacesAsync() */
 HRESULT wgrpr_printing3_d_model_2_try_reduce_faces_async(WGRPR_IPrinting3DModel_2 *self, WF_IAsyncOperationWithProgress_Bool_F64** out);
 
-/* Windows.Graphics.Printing3D.IPrinting3DModel2.TryReduceFacesAsync(printing3DFaceReductionOptions) */
 HRESULT wgrpr_printing3_d_model_2_try_reduce_faces_async_p_p(WGRPR_IPrinting3DModel_2 *self, WGRPR_Printing3DFaceReductionOptions* printing3DFaceReductionOptions, WF_IAsyncOperationWithProgress_Bool_F64** out);
 
-/* Windows.Graphics.Printing3D.IPrinting3DModel2.TryReduceFacesAsync(printing3DFaceReductionOptions, maxWait) */
 HRESULT wgrpr_printing3_d_model_2_try_reduce_faces_async_p_time_span_p(WGRPR_IPrinting3DModel_2 *self, WGRPR_Printing3DFaceReductionOptions* printing3DFaceReductionOptions, WF_TimeSpan maxWait, WF_IAsyncOperationWithProgress_Bool_F64** out);
 
-/* Windows.Graphics.Printing3D.IPrinting3DModel2.RepairWithProgressAsync() */
 HRESULT wgrpr_printing3_d_model_2_repair_with_progress_async(WGRPR_IPrinting3DModel_2 *self, WF_IAsyncOperationWithProgress_Bool_F64** out);
 
-/* Windows.Graphics.Printing3D.IPrinting3DModelTexture */
-/* Windows.Graphics.Printing3D.IPrinting3DMultiplePropertyMaterial */
-/* Windows.Graphics.Printing3D.IPrinting3DMultiplePropertyMaterialGroup */
-/* Windows.Graphics.Printing3D.IPrinting3DTexture2CoordMaterial */
-/* Windows.Graphics.Printing3D.IPrinting3DTexture2CoordMaterialGroup */
-/* Windows.Graphics.Printing3D.IPrinting3DTexture2CoordMaterialGroup2 */
-/* Windows.Graphics.Printing3D.IPrinting3DTexture2CoordMaterialGroup2.get_Texture() */
 HRESULT wgrpr_printing3_d_texture2_coord_material_group_2_get__texture(WGRPR_IPrinting3DTexture2CoordMaterialGroup_2 *self, WGRPR_Printing3DModelTexture** value);
 
-/* Windows.Graphics.Printing3D.IPrinting3DTexture2CoordMaterialGroup2.put_Texture() */
 HRESULT wgrpr_printing3_d_texture2_coord_material_group_2_put__texture(WGRPR_IPrinting3DTexture2CoordMaterialGroup_2 *self, WGRPR_Printing3DModelTexture* value);
 
-/* Windows.Graphics.Printing3D.IPrinting3DTextureResource */
 #endif /* CWINRT_WINDOWS_GRAPHICS_PRINTING3D_H */

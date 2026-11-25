@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
@@ -26,12 +25,10 @@ typedef struct WSTST_IInputStream WSTST_IInputStream;
 typedef struct WSTST_IOutputStream WSTST_IOutputStream;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSECRDA_IDataProtectionProviderFactory WSECRDA_IDataProtectionProviderFactory;
 typedef struct WSECRDA_DataProtectionProvider WSECRDA_DataProtectionProvider;
 typedef struct WSECRDA_IDataProtectionProvider WSECRDA_IDataProtectionProvider;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
@@ -53,7 +50,6 @@ typedef struct WSTST_IOutputStream WSTST_IOutputStream;
 typedef struct WF_IAsyncAction WF_IAsyncAction;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -66,27 +62,16 @@ static const IID CWINRT_IID_WSECRDA_IDataProtectionProviderFactory CWINRT_MAYBE_
 static const IID CWINRT_IID_WSECRDA_IDataProtectionProvider CWINRT_MAYBE_UNUSED = { 0x09639948, 0xED22, 0x4270, { 0xBD, 0x1C, 0x6D, 0x72, 0xC0, 0x0F, 0x87, 0x87 } };
 #endif
 
-/* Methods */
-
-/* Windows.Security.Cryptography.DataProtection.IDataProtectionProviderFactory */
-/* Windows.Security.Cryptography.DataProtection.IDataProtectionProviderFactory.CreateOverloadExplicit(protectionDescriptor) */
 HRESULT wsecrda_data_protection_provider_factory_create_overload_explicit(WSECRDA_IDataProtectionProviderFactory *self, cwinrt_hstring protectionDescriptor, WSECRDA_DataProtectionProvider** out);
 
-/* activate Windows.Security.Cryptography.DataProtection.DataProtectionProvider */
 HRESULT wsecrda_data_protection_provider_new(WSECRDA_DataProtectionProvider **out);
 
-/* Windows.Security.Cryptography.DataProtection.DataProtectionProvider */
-/* Windows.Security.Cryptography.DataProtection.DataProtectionProvider.ProtectAsync(data) */
 HRESULT wsecrda_data_protection_provider_protect_async(WSECRDA_DataProtectionProvider *self, WSTST_IBuffer* data, WF_IAsyncOperation_WSTST_IBuffer** out);
 
-/* Windows.Security.Cryptography.DataProtection.DataProtectionProvider.UnprotectAsync(data) */
 HRESULT wsecrda_data_protection_provider_unprotect_async(WSECRDA_DataProtectionProvider *self, WSTST_IBuffer* data, WF_IAsyncOperation_WSTST_IBuffer** out);
 
-/* Windows.Security.Cryptography.DataProtection.DataProtectionProvider.ProtectStreamAsync(src, dest) */
 HRESULT wsecrda_data_protection_provider_protect_stream_async(WSECRDA_DataProtectionProvider *self, WSTST_IInputStream* src, WSTST_IOutputStream* dest, WF_IAsyncAction** out);
 
-/* Windows.Security.Cryptography.DataProtection.DataProtectionProvider.UnprotectStreamAsync(src, dest) */
 HRESULT wsecrda_data_protection_provider_unprotect_stream_async(WSECRDA_DataProtectionProvider *self, WSTST_IInputStream* src, WSTST_IOutputStream* dest, WF_IAsyncAction** out);
 
-/* Windows.Security.Cryptography.DataProtection.IDataProtectionProvider */
 #endif /* CWINRT_WINDOWS_SECURITY_CRYPTOGRAPHY_DATAPROTECTION_H */

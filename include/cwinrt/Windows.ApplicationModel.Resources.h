@@ -12,13 +12,11 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WUI_UIContext
 #define CWINRT_FWD_WUI_UIContext
 typedef struct WUI_UIContext WUI_UIContext;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPRE_IResourceLoaderStatics_2 WAPRE_IResourceLoaderStatics_2;
 typedef struct WAPRE_IResourceLoaderStatics WAPRE_IResourceLoaderStatics;
 typedef struct WAPRE_IResourceLoaderFactory WAPRE_IResourceLoaderFactory;
@@ -28,7 +26,6 @@ typedef struct WAPRE_IResourceLoaderStatics_4 WAPRE_IResourceLoaderStatics_4;
 typedef struct WAPRE_IResourceLoader WAPRE_IResourceLoader;
 typedef struct WAPRE_IResourceLoader_2 WAPRE_IResourceLoader_2;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_Uri
 #define CWINRT_FWD_WF_Uri
 typedef struct WF_Uri WF_Uri;
@@ -38,7 +35,6 @@ typedef struct WF_Uri WF_Uri;
 typedef struct WUI_UIContext WUI_UIContext;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -71,71 +67,42 @@ static const IID CWINRT_IID_WAPRE_IResourceLoader CWINRT_MAYBE_UNUSED = { 0x0852
 static const IID CWINRT_IID_WAPRE_IResourceLoader_2 CWINRT_MAYBE_UNUSED = { 0x10EB6EC6, 0x8138, 0x48C1, { 0xBC, 0x65, 0xE1, 0xF1, 0x42, 0x07, 0x36, 0x7C } };
 #endif
 
-/* Methods */
-
-/* Windows.ApplicationModel.Resources.IResourceLoaderStatics2 */
-/* Windows.ApplicationModel.Resources.IResourceLoaderStatics2.GetForCurrentView() */
 HRESULT wapre_resource_loader_statics_2_get_for_current_view(WAPRE_IResourceLoaderStatics_2 *self, WAPRE_ResourceLoader** out);
 
-/* Windows.ApplicationModel.Resources.IResourceLoaderStatics2.GetForCurrentView(name) */
 HRESULT wapre_resource_loader_statics_2_get_for_current_view_str_p(WAPRE_IResourceLoaderStatics_2 *self, cwinrt_hstring name, WAPRE_ResourceLoader** out);
 
-/* Windows.ApplicationModel.Resources.IResourceLoaderStatics2.GetForViewIndependentUse() */
 HRESULT wapre_resource_loader_statics_2_get_for_view_independent_use(WAPRE_IResourceLoaderStatics_2 *self, WAPRE_ResourceLoader** out);
 
-/* Windows.ApplicationModel.Resources.IResourceLoaderStatics2.GetForViewIndependentUse(name) */
 HRESULT wapre_resource_loader_statics_2_get_for_view_independent_use_str_p(WAPRE_IResourceLoaderStatics_2 *self, cwinrt_hstring name, WAPRE_ResourceLoader** out);
 
-/* Windows.ApplicationModel.Resources.IResourceLoaderStatics */
-/* Windows.ApplicationModel.Resources.IResourceLoaderStatics.GetStringForReference(uri) */
 HRESULT wapre_resource_loader_statics_get_string_for_reference(WAPRE_IResourceLoaderStatics *self, WF_Uri* uri, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.Resources.IResourceLoaderFactory */
-/* Windows.ApplicationModel.Resources.IResourceLoaderFactory.CreateResourceLoaderByName(name) */
 HRESULT wapre_resource_loader_factory_create_resource_loader_by_name(WAPRE_IResourceLoaderFactory *self, cwinrt_hstring name, WAPRE_ResourceLoader** out);
 
-/* activate Windows.ApplicationModel.Resources.ResourceLoader */
 HRESULT wapre_resource_loader_new(WAPRE_ResourceLoader **out);
 
-/* Windows.ApplicationModel.Resources.ResourceLoader */
-/* Windows.ApplicationModel.Resources.ResourceLoader.GetString(resource) */
 HRESULT wapre_resource_loader_get_string(WAPRE_ResourceLoader *self, cwinrt_hstring resource, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.Resources.ResourceLoader.GetStringForUri(uri) */
 HRESULT wapre_resource_loader_get_string_for_uri(WAPRE_ResourceLoader *self, WF_Uri* uri, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.Resources.ResourceLoader.GetDefaultPriPath(packageFullName) */
 HRESULT wapre_resource_loader_get_default_pri_path(cwinrt_hstring packageFullName, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.Resources.ResourceLoader.GetForUIContext(context) */
 HRESULT wapre_resource_loader_get_for_u_i_context(WUI_UIContext* context, WAPRE_ResourceLoader** out);
 
-/* Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView() */
 HRESULT wapre_resource_loader_get_for_current_view(WAPRE_ResourceLoader** out);
 
-/* Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView(name) */
 HRESULT wapre_resource_loader_get_for_current_view_str_p(cwinrt_hstring name, WAPRE_ResourceLoader** out);
 
-/* Windows.ApplicationModel.Resources.ResourceLoader.GetForViewIndependentUse() */
 HRESULT wapre_resource_loader_get_for_view_independent_use(WAPRE_ResourceLoader** out);
 
-/* Windows.ApplicationModel.Resources.ResourceLoader.GetForViewIndependentUse(name) */
 HRESULT wapre_resource_loader_get_for_view_independent_use_str_p(cwinrt_hstring name, WAPRE_ResourceLoader** out);
 
-/* Windows.ApplicationModel.Resources.ResourceLoader.GetStringForReference(uri) */
 HRESULT wapre_resource_loader_get_string_for_reference(WF_Uri* uri, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.Resources.IResourceLoaderStatics3 */
-/* Windows.ApplicationModel.Resources.IResourceLoaderStatics3.GetForUIContext(context) */
 HRESULT wapre_resource_loader_statics_3_get_for_u_i_context(WAPRE_IResourceLoaderStatics_3 *self, WUI_UIContext* context, WAPRE_ResourceLoader** out);
 
-/* Windows.ApplicationModel.Resources.IResourceLoaderStatics4 */
-/* Windows.ApplicationModel.Resources.IResourceLoaderStatics4.GetDefaultPriPath(packageFullName) */
 HRESULT wapre_resource_loader_statics_4_get_default_pri_path(WAPRE_IResourceLoaderStatics_4 *self, cwinrt_hstring packageFullName, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.Resources.IResourceLoader */
-/* Windows.ApplicationModel.Resources.IResourceLoader2 */
-/* Windows.ApplicationModel.Resources.IResourceLoader2.GetStringForUri(uri) */
 HRESULT wapre_resource_loader_2_get_string_for_uri(WAPRE_IResourceLoader_2 *self, WF_Uri* uri, cwinrt_hstring *out);
 
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_RESOURCES_H */

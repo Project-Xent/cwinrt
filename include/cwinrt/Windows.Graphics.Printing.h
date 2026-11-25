@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WAPDA_DataPackagePropertySet
 #define CWINRT_FWD_WAPDA_DataPackagePropertySet
 typedef struct WAPDA_DataPackagePropertySet WAPDA_DataPackagePropertySet;
@@ -22,7 +21,6 @@ typedef struct WAPDA_DataPackagePropertySet WAPDA_DataPackagePropertySet;
 typedef struct WSTST_IRandomAccessStream WSTST_IRandomAccessStream;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WGRPR_IPrintManagerStatic WGRPR_IPrintManagerStatic;
 typedef struct WGRPR_IPrintManagerStatic_2 WGRPR_IPrintManagerStatic_2;
 typedef struct WGRPR_IPrintPageRangeFactory WGRPR_IPrintPageRangeFactory;
@@ -65,7 +63,6 @@ typedef struct WGRPR_IPrintPageRange WGRPR_IPrintPageRange;
 typedef struct WGRPR_IPrintPageInfo WGRPR_IPrintPageInfo;
 typedef struct WGRPR_IPrintManager WGRPR_IPrintManager;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_Bool
 #define CWINRT_FWD_WF_IAsyncOperation_Bool
 typedef struct WF_IAsyncOperation_Bool WF_IAsyncOperation_Bool;
@@ -480,7 +477,6 @@ struct WGRPR_PrintPageDescription {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -593,268 +589,168 @@ static const IID CWINRT_IID_WGRPR_IPrintPageInfo CWINRT_MAYBE_UNUSED = { 0xDD4BE
 static const IID CWINRT_IID_WGRPR_IPrintManager CWINRT_MAYBE_UNUSED = { 0xFF2A9694, 0x8C99, 0x44FD, { 0xAE, 0x4A, 0x19, 0xD9, 0xAA, 0x9A, 0x0F, 0x0A } };
 #endif
 
-/* Methods */
-
-/* Windows.Graphics.Printing.IPrintManagerStatic */
-/* Windows.Graphics.Printing.IPrintManagerStatic.GetForCurrentView() */
 HRESULT wgrpr_print_manager_static_get_for_current_view(WGRPR_IPrintManagerStatic *self, WGRPR_PrintManager** out);
 
-/* Windows.Graphics.Printing.IPrintManagerStatic.ShowPrintUIAsync() */
 HRESULT wgrpr_print_manager_static_show_print_u_i_async(WGRPR_IPrintManagerStatic *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Graphics.Printing.IPrintManagerStatic2 */
-/* Windows.Graphics.Printing.IPrintManagerStatic2.IsSupported() */
 HRESULT wgrpr_print_manager_static_2_is_supported(WGRPR_IPrintManagerStatic_2 *self, BOOL *out);
 
-/* Windows.Graphics.Printing.IPrintPageRangeFactory */
-/* Windows.Graphics.Printing.IPrintPageRangeFactory.Create(firstPage, lastPage) */
 HRESULT wgrpr_print_page_range_factory_create(WGRPR_IPrintPageRangeFactory *self, int32_t firstPage, int32_t lastPage, WGRPR_PrintPageRange** out);
 
-/* Windows.Graphics.Printing.IPrintPageRangeFactory.CreateWithSinglePage(page) */
 HRESULT wgrpr_print_page_range_factory_create_with_single_page(WGRPR_IPrintPageRangeFactory *self, int32_t page, WGRPR_PrintPageRange** out);
 
-/* Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic */
-/* Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic.get_MediaSize() */
 HRESULT wgrpr_standard_print_task_options_static_get__media_size(WGRPR_IStandardPrintTaskOptionsStatic *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic.get_MediaType() */
 HRESULT wgrpr_standard_print_task_options_static_get__media_type(WGRPR_IStandardPrintTaskOptionsStatic *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic.get_Orientation() */
 HRESULT wgrpr_standard_print_task_options_static_get__orientation(WGRPR_IStandardPrintTaskOptionsStatic *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic.get_PrintQuality() */
 HRESULT wgrpr_standard_print_task_options_static_get__print_quality(WGRPR_IStandardPrintTaskOptionsStatic *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic.get_ColorMode() */
 HRESULT wgrpr_standard_print_task_options_static_get__color_mode(WGRPR_IStandardPrintTaskOptionsStatic *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic.get_Duplex() */
 HRESULT wgrpr_standard_print_task_options_static_get__duplex(WGRPR_IStandardPrintTaskOptionsStatic *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic.get_Collation() */
 HRESULT wgrpr_standard_print_task_options_static_get__collation(WGRPR_IStandardPrintTaskOptionsStatic *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic.get_Staple() */
 HRESULT wgrpr_standard_print_task_options_static_get__staple(WGRPR_IStandardPrintTaskOptionsStatic *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic.get_HolePunch() */
 HRESULT wgrpr_standard_print_task_options_static_get__hole_punch(WGRPR_IStandardPrintTaskOptionsStatic *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic.get_Binding() */
 HRESULT wgrpr_standard_print_task_options_static_get__binding(WGRPR_IStandardPrintTaskOptionsStatic *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic.get_Copies() */
 HRESULT wgrpr_standard_print_task_options_static_get__copies(WGRPR_IStandardPrintTaskOptionsStatic *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic.get_NUp() */
 HRESULT wgrpr_standard_print_task_options_static_get__n_up(WGRPR_IStandardPrintTaskOptionsStatic *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic.get_InputBin() */
 HRESULT wgrpr_standard_print_task_options_static_get__input_bin(WGRPR_IStandardPrintTaskOptionsStatic *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic2 */
-/* Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic2.get_Bordering() */
 HRESULT wgrpr_standard_print_task_options_static_2_get__bordering(WGRPR_IStandardPrintTaskOptionsStatic_2 *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic3 */
-/* Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic3.get_CustomPageRanges() */
 HRESULT wgrpr_standard_print_task_options_static_3_get__custom_page_ranges(WGRPR_IStandardPrintTaskOptionsStatic_3 *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.PrintTaskSourceRequestedHandler */
-/* Windows.Graphics.Printing.PrintTaskSourceRequestedHandler.Invoke(args) */
 HRESULT wgrpr_print_task_source_requested_handler_invoke(WGRPR_PrintTaskSourceRequestedHandler *self, WGRPR_PrintTaskSourceRequestedArgs* args);
 
-/* activate Windows.Graphics.Printing.PrintTaskSourceRequestedDeferral */
 HRESULT wgrpr_print_task_source_requested_deferral_new(WGRPR_PrintTaskSourceRequestedDeferral **out);
 
-/* Windows.Graphics.Printing.PrintTaskSourceRequestedDeferral */
-/* Windows.Graphics.Printing.PrintTaskSourceRequestedDeferral.Complete() */
 HRESULT wgrpr_print_task_source_requested_deferral_complete(WGRPR_PrintTaskSourceRequestedDeferral *self);
 
-/* activate Windows.Graphics.Printing.PrintTaskSourceRequestedArgs */
 HRESULT wgrpr_print_task_source_requested_args_new(WGRPR_PrintTaskSourceRequestedArgs **out);
 
-/* Windows.Graphics.Printing.PrintTaskSourceRequestedArgs */
-/* Windows.Graphics.Printing.PrintTaskSourceRequestedArgs.get_Deadline() */
 HRESULT wgrpr_print_task_source_requested_args_get__deadline(WGRPR_PrintTaskSourceRequestedArgs *self, WF_DateTime *value);
 
-/* Windows.Graphics.Printing.PrintTaskSourceRequestedArgs.SetSource(source) */
 HRESULT wgrpr_print_task_source_requested_args_set_source(WGRPR_PrintTaskSourceRequestedArgs *self, WGRPR_IPrintDocumentSource* source);
 
-/* Windows.Graphics.Printing.PrintTaskSourceRequestedArgs.GetDeferral() */
 HRESULT wgrpr_print_task_source_requested_args_get_deferral(WGRPR_PrintTaskSourceRequestedArgs *self, WGRPR_PrintTaskSourceRequestedDeferral** out);
 
-/* activate Windows.Graphics.Printing.PrintTaskRequestedEventArgs */
 HRESULT wgrpr_print_task_requested_event_args_new(WGRPR_PrintTaskRequestedEventArgs **out);
 
-/* Windows.Graphics.Printing.PrintTaskRequestedEventArgs */
-/* Windows.Graphics.Printing.PrintTaskRequestedEventArgs.get_Request() */
 HRESULT wgrpr_print_task_requested_event_args_get__request(WGRPR_PrintTaskRequestedEventArgs *self, WGRPR_PrintTaskRequest** value);
 
-/* activate Windows.Graphics.Printing.PrintTaskRequestedDeferral */
 HRESULT wgrpr_print_task_requested_deferral_new(WGRPR_PrintTaskRequestedDeferral **out);
 
-/* Windows.Graphics.Printing.PrintTaskRequestedDeferral */
-/* Windows.Graphics.Printing.PrintTaskRequestedDeferral.Complete() */
 HRESULT wgrpr_print_task_requested_deferral_complete(WGRPR_PrintTaskRequestedDeferral *self);
 
-/* activate Windows.Graphics.Printing.PrintTaskRequest */
 HRESULT wgrpr_print_task_request_new(WGRPR_PrintTaskRequest **out);
 
-/* Windows.Graphics.Printing.PrintTaskRequest */
-/* Windows.Graphics.Printing.PrintTaskRequest.get_Deadline() */
 HRESULT wgrpr_print_task_request_get__deadline(WGRPR_PrintTaskRequest *self, WF_DateTime *value);
 
-/* Windows.Graphics.Printing.PrintTaskRequest.CreatePrintTask(title, handler) */
 HRESULT wgrpr_print_task_request_create_print_task(WGRPR_PrintTaskRequest *self, cwinrt_hstring title, WGRPR_PrintTaskSourceRequestedHandler* handler, WGRPR_PrintTask** out);
 
-/* Windows.Graphics.Printing.PrintTaskRequest.GetDeferral() */
 HRESULT wgrpr_print_task_request_get_deferral(WGRPR_PrintTaskRequest *self, WGRPR_PrintTaskRequestedDeferral** out);
 
-/* activate Windows.Graphics.Printing.PrintTaskProgressingEventArgs */
 HRESULT wgrpr_print_task_progressing_event_args_new(WGRPR_PrintTaskProgressingEventArgs **out);
 
-/* Windows.Graphics.Printing.PrintTaskProgressingEventArgs */
-/* Windows.Graphics.Printing.PrintTaskProgressingEventArgs.get_DocumentPageCount() */
 HRESULT wgrpr_print_task_progressing_event_args_get__document_page_count(WGRPR_PrintTaskProgressingEventArgs *self, uint32_t *value);
 
-/* activate Windows.Graphics.Printing.PrintTaskOptions */
 HRESULT wgrpr_print_task_options_new(WGRPR_PrintTaskOptions **out);
 
-/* Windows.Graphics.Printing.PrintTaskOptions */
-/* Windows.Graphics.Printing.PrintTaskOptions.GetPageDescription(jobPageNumber) */
 HRESULT wgrpr_print_task_options_get_page_description(WGRPR_PrintTaskOptions *self, uint32_t jobPageNumber, WGRPR_PrintPageDescription *out);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.put_MediaSize() */
 HRESULT wgrpr_print_task_options_put__media_size(WGRPR_PrintTaskOptions *self, WGRPR_PrintMediaSize value);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.get_MediaSize() */
 HRESULT wgrpr_print_task_options_get__media_size(WGRPR_PrintTaskOptions *self, WGRPR_PrintMediaSize *value);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.put_MediaType() */
 HRESULT wgrpr_print_task_options_put__media_type(WGRPR_PrintTaskOptions *self, WGRPR_PrintMediaType value);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.get_MediaType() */
 HRESULT wgrpr_print_task_options_get__media_type(WGRPR_PrintTaskOptions *self, WGRPR_PrintMediaType *value);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.put_Orientation() */
 HRESULT wgrpr_print_task_options_put__orientation(WGRPR_PrintTaskOptions *self, WGRPR_PrintOrientation value);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.get_Orientation() */
 HRESULT wgrpr_print_task_options_get__orientation(WGRPR_PrintTaskOptions *self, WGRPR_PrintOrientation *value);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.put_PrintQuality() */
 HRESULT wgrpr_print_task_options_put__print_quality(WGRPR_PrintTaskOptions *self, WGRPR_PrintQuality value);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.get_PrintQuality() */
 HRESULT wgrpr_print_task_options_get__print_quality(WGRPR_PrintTaskOptions *self, WGRPR_PrintQuality *value);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.put_ColorMode() */
 HRESULT wgrpr_print_task_options_put__color_mode(WGRPR_PrintTaskOptions *self, WGRPR_PrintColorMode value);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.get_ColorMode() */
 HRESULT wgrpr_print_task_options_get__color_mode(WGRPR_PrintTaskOptions *self, WGRPR_PrintColorMode *value);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.put_Duplex() */
 HRESULT wgrpr_print_task_options_put__duplex(WGRPR_PrintTaskOptions *self, WGRPR_PrintDuplex value);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.get_Duplex() */
 HRESULT wgrpr_print_task_options_get__duplex(WGRPR_PrintTaskOptions *self, WGRPR_PrintDuplex *value);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.put_Collation() */
 HRESULT wgrpr_print_task_options_put__collation(WGRPR_PrintTaskOptions *self, WGRPR_PrintCollation value);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.get_Collation() */
 HRESULT wgrpr_print_task_options_get__collation(WGRPR_PrintTaskOptions *self, WGRPR_PrintCollation *value);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.put_Staple() */
 HRESULT wgrpr_print_task_options_put__staple(WGRPR_PrintTaskOptions *self, WGRPR_PrintStaple value);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.get_Staple() */
 HRESULT wgrpr_print_task_options_get__staple(WGRPR_PrintTaskOptions *self, WGRPR_PrintStaple *value);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.put_HolePunch() */
 HRESULT wgrpr_print_task_options_put__hole_punch(WGRPR_PrintTaskOptions *self, WGRPR_PrintHolePunch value);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.get_HolePunch() */
 HRESULT wgrpr_print_task_options_get__hole_punch(WGRPR_PrintTaskOptions *self, WGRPR_PrintHolePunch *value);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.put_Binding() */
 HRESULT wgrpr_print_task_options_put__binding(WGRPR_PrintTaskOptions *self, WGRPR_PrintBinding value);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.get_Binding() */
 HRESULT wgrpr_print_task_options_get__binding(WGRPR_PrintTaskOptions *self, WGRPR_PrintBinding *value);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.get_MinCopies() */
 HRESULT wgrpr_print_task_options_get__min_copies(WGRPR_PrintTaskOptions *self, uint32_t *value);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.get_MaxCopies() */
 HRESULT wgrpr_print_task_options_get__max_copies(WGRPR_PrintTaskOptions *self, uint32_t *value);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.put_NumberOfCopies() */
 HRESULT wgrpr_print_task_options_put__number_of_copies(WGRPR_PrintTaskOptions *self, uint32_t value);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.get_NumberOfCopies() */
 HRESULT wgrpr_print_task_options_get__number_of_copies(WGRPR_PrintTaskOptions *self, uint32_t *value);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.get_DisplayedOptions() */
 HRESULT wgrpr_print_task_options_get__displayed_options(WGRPR_PrintTaskOptions *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.put_Bordering() */
 HRESULT wgrpr_print_task_options_put__bordering(WGRPR_PrintTaskOptions *self, WGRPR_PrintBordering value);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.get_Bordering() */
 HRESULT wgrpr_print_task_options_get__bordering(WGRPR_PrintTaskOptions *self, WGRPR_PrintBordering *value);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.GetPagePrintTicket(printPageInfo) */
 HRESULT wgrpr_print_task_options_get_page_print_ticket(WGRPR_PrintTaskOptions *self, WGRPR_PrintPageInfo* printPageInfo, WSTST_IRandomAccessStream** out);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.get_PageRangeOptions() */
 HRESULT wgrpr_print_task_options_get__page_range_options(WGRPR_PrintTaskOptions *self, WGRPR_PrintPageRangeOptions** value);
 
-/* Windows.Graphics.Printing.PrintTaskOptions.get_CustomPageRanges() */
 HRESULT wgrpr_print_task_options_get__custom_page_ranges(WGRPR_PrintTaskOptions *self, WFOCO_IVector_WGRPR_PrintPageRange** value);
 
-/* activate Windows.Graphics.Printing.PrintTaskCompletedEventArgs */
 HRESULT wgrpr_print_task_completed_event_args_new(WGRPR_PrintTaskCompletedEventArgs **out);
 
-/* Windows.Graphics.Printing.PrintTaskCompletedEventArgs */
-/* Windows.Graphics.Printing.PrintTaskCompletedEventArgs.get_Completion() */
 HRESULT wgrpr_print_task_completed_event_args_get__completion(WGRPR_PrintTaskCompletedEventArgs *self, WGRPR_PrintTaskCompletion *value);
 
-/* activate Windows.Graphics.Printing.PrintTask */
 HRESULT wgrpr_print_task_new(WGRPR_PrintTask **out);
 
-/* Windows.Graphics.Printing.PrintTask */
-/* Windows.Graphics.Printing.PrintTask.get_Properties() */
 HRESULT wgrpr_print_task_get__properties(WGRPR_PrintTask *self, WAPDA_DataPackagePropertySet** value);
 
-/* Windows.Graphics.Printing.PrintTask.get_Source() */
 HRESULT wgrpr_print_task_get__source(WGRPR_PrintTask *self, WGRPR_IPrintDocumentSource** value);
 
-/* Windows.Graphics.Printing.PrintTask.get_Options() */
 HRESULT wgrpr_print_task_get__options(WGRPR_PrintTask *self, WGRPR_PrintTaskOptions** value);
 
-/* Windows.Graphics.Printing.PrintTask.put_IsPrinterTargetEnabled() */
 HRESULT wgrpr_print_task_put__is_printer_target_enabled(WGRPR_PrintTask *self, BOOL value);
 
-/* Windows.Graphics.Printing.PrintTask.get_IsPrinterTargetEnabled() */
 HRESULT wgrpr_print_task_get__is_printer_target_enabled(WGRPR_PrintTask *self, BOOL *value);
 
-/* Windows.Graphics.Printing.PrintTask.put_Is3DManufacturingTargetEnabled() */
 HRESULT wgrpr_print_task_put__is3_d_manufacturing_target_enabled(WGRPR_PrintTask *self, BOOL value);
 
-/* Windows.Graphics.Printing.PrintTask.get_Is3DManufacturingTargetEnabled() */
 HRESULT wgrpr_print_task_get__is3_d_manufacturing_target_enabled(WGRPR_PrintTask *self, BOOL *value);
 
-/* Windows.Graphics.Printing.PrintTask.put_IsPreviewEnabled() */
 HRESULT wgrpr_print_task_put__is_preview_enabled(WGRPR_PrintTask *self, BOOL value);
 
-/* Windows.Graphics.Printing.PrintTask.get_IsPreviewEnabled() */
 HRESULT wgrpr_print_task_get__is_preview_enabled(WGRPR_PrintTask *self, BOOL *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wgrpr_print_task_on_previewing(WGRPR_PrintTask *self, cwinrt_event_fn fn, void *ctx);
@@ -869,259 +765,159 @@ void wgrpr_print_task_off_progressing(WGRPR_PrintTask *self, cwinrt_token token)
 cwinrt_token wgrpr_print_task_on_completed(WGRPR_PrintTask *self, cwinrt_event_fn fn, void *ctx);
 void wgrpr_print_task_off_completed(WGRPR_PrintTask *self, cwinrt_token token);
 
-/* activate Windows.Graphics.Printing.PrintPageRangeOptions */
 HRESULT wgrpr_print_page_range_options_new(WGRPR_PrintPageRangeOptions **out);
 
-/* Windows.Graphics.Printing.PrintPageRangeOptions */
-/* Windows.Graphics.Printing.PrintPageRangeOptions.put_AllowAllPages() */
 HRESULT wgrpr_print_page_range_options_put__allow_all_pages(WGRPR_PrintPageRangeOptions *self, BOOL value);
 
-/* Windows.Graphics.Printing.PrintPageRangeOptions.get_AllowAllPages() */
 HRESULT wgrpr_print_page_range_options_get__allow_all_pages(WGRPR_PrintPageRangeOptions *self, BOOL *value);
 
-/* Windows.Graphics.Printing.PrintPageRangeOptions.put_AllowCurrentPage() */
 HRESULT wgrpr_print_page_range_options_put__allow_current_page(WGRPR_PrintPageRangeOptions *self, BOOL value);
 
-/* Windows.Graphics.Printing.PrintPageRangeOptions.get_AllowCurrentPage() */
 HRESULT wgrpr_print_page_range_options_get__allow_current_page(WGRPR_PrintPageRangeOptions *self, BOOL *value);
 
-/* Windows.Graphics.Printing.PrintPageRangeOptions.put_AllowCustomSetOfPages() */
 HRESULT wgrpr_print_page_range_options_put__allow_custom_set_of_pages(WGRPR_PrintPageRangeOptions *self, BOOL value);
 
-/* Windows.Graphics.Printing.PrintPageRangeOptions.get_AllowCustomSetOfPages() */
 HRESULT wgrpr_print_page_range_options_get__allow_custom_set_of_pages(WGRPR_PrintPageRangeOptions *self, BOOL *value);
 
-/* activate Windows.Graphics.Printing.PrintPageRange */
 HRESULT wgrpr_print_page_range_new(WGRPR_PrintPageRange **out);
 
-/* Windows.Graphics.Printing.PrintPageRange */
-/* Windows.Graphics.Printing.PrintPageRange.get_FirstPageNumber() */
 HRESULT wgrpr_print_page_range_get__first_page_number(WGRPR_PrintPageRange *self, int32_t *value);
 
-/* Windows.Graphics.Printing.PrintPageRange.get_LastPageNumber() */
 HRESULT wgrpr_print_page_range_get__last_page_number(WGRPR_PrintPageRange *self, int32_t *value);
 
-/* activate Windows.Graphics.Printing.PrintPageInfo */
 HRESULT wgrpr_print_page_info_new(WGRPR_PrintPageInfo **out);
 
-/* Windows.Graphics.Printing.PrintPageInfo */
-/* Windows.Graphics.Printing.PrintPageInfo.put_MediaSize() */
 HRESULT wgrpr_print_page_info_put__media_size(WGRPR_PrintPageInfo *self, WGRPR_PrintMediaSize value);
 
-/* Windows.Graphics.Printing.PrintPageInfo.get_MediaSize() */
 HRESULT wgrpr_print_page_info_get__media_size(WGRPR_PrintPageInfo *self, WGRPR_PrintMediaSize *value);
 
-/* Windows.Graphics.Printing.PrintPageInfo.put_PageSize() */
 HRESULT wgrpr_print_page_info_put__page_size(WGRPR_PrintPageInfo *self, WF_Size value);
 
-/* Windows.Graphics.Printing.PrintPageInfo.get_PageSize() */
 HRESULT wgrpr_print_page_info_get__page_size(WGRPR_PrintPageInfo *self, WF_Size *value);
 
-/* Windows.Graphics.Printing.PrintPageInfo.put_DpiX() */
 HRESULT wgrpr_print_page_info_put__dpi_x(WGRPR_PrintPageInfo *self, uint32_t value);
 
-/* Windows.Graphics.Printing.PrintPageInfo.get_DpiX() */
 HRESULT wgrpr_print_page_info_get__dpi_x(WGRPR_PrintPageInfo *self, uint32_t *value);
 
-/* Windows.Graphics.Printing.PrintPageInfo.put_DpiY() */
 HRESULT wgrpr_print_page_info_put__dpi_y(WGRPR_PrintPageInfo *self, uint32_t value);
 
-/* Windows.Graphics.Printing.PrintPageInfo.get_DpiY() */
 HRESULT wgrpr_print_page_info_get__dpi_y(WGRPR_PrintPageInfo *self, uint32_t *value);
 
-/* Windows.Graphics.Printing.PrintPageInfo.put_Orientation() */
 HRESULT wgrpr_print_page_info_put__orientation(WGRPR_PrintPageInfo *self, WGRPR_PrintOrientation value);
 
-/* Windows.Graphics.Printing.PrintPageInfo.get_Orientation() */
 HRESULT wgrpr_print_page_info_get__orientation(WGRPR_PrintPageInfo *self, WGRPR_PrintOrientation *value);
 
-/* activate Windows.Graphics.Printing.PrintManager */
 HRESULT wgrpr_print_manager_new(WGRPR_PrintManager **out);
 
-/* Windows.Graphics.Printing.PrintManager */
-/* Windows.Graphics.Printing.PrintManager.IsSupported() */
 HRESULT wgrpr_print_manager_is_supported(BOOL *out);
 
-/* Windows.Graphics.Printing.PrintManager.GetForCurrentView() */
 HRESULT wgrpr_print_manager_get_for_current_view(WGRPR_PrintManager** out);
 
-/* Windows.Graphics.Printing.PrintManager.ShowPrintUIAsync() */
 HRESULT wgrpr_print_manager_show_print_u_i_async(WF_IAsyncOperation_Bool** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wgrpr_print_manager_on_print_task_requested(WGRPR_PrintManager *self, cwinrt_event_fn fn, void *ctx);
 void wgrpr_print_manager_off_print_task_requested(WGRPR_PrintManager *self, cwinrt_token token);
 
-/* activate Windows.Graphics.Printing.StandardPrintTaskOptions */
 HRESULT wgrpr_standard_print_task_options_new(WGRPR_StandardPrintTaskOptions **out);
 
-/* Windows.Graphics.Printing.StandardPrintTaskOptions */
-/* Windows.Graphics.Printing.StandardPrintTaskOptions.get_CustomPageRanges() */
 HRESULT wgrpr_standard_print_task_options_get__custom_page_ranges(cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.StandardPrintTaskOptions.get_Bordering() */
 HRESULT wgrpr_standard_print_task_options_get__bordering(cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.StandardPrintTaskOptions.get_MediaSize() */
 HRESULT wgrpr_standard_print_task_options_get__media_size(cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.StandardPrintTaskOptions.get_MediaType() */
 HRESULT wgrpr_standard_print_task_options_get__media_type(cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.StandardPrintTaskOptions.get_Orientation() */
 HRESULT wgrpr_standard_print_task_options_get__orientation(cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.StandardPrintTaskOptions.get_PrintQuality() */
 HRESULT wgrpr_standard_print_task_options_get__print_quality(cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.StandardPrintTaskOptions.get_ColorMode() */
 HRESULT wgrpr_standard_print_task_options_get__color_mode(cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.StandardPrintTaskOptions.get_Duplex() */
 HRESULT wgrpr_standard_print_task_options_get__duplex(cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.StandardPrintTaskOptions.get_Collation() */
 HRESULT wgrpr_standard_print_task_options_get__collation(cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.StandardPrintTaskOptions.get_Staple() */
 HRESULT wgrpr_standard_print_task_options_get__staple(cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.StandardPrintTaskOptions.get_HolePunch() */
 HRESULT wgrpr_standard_print_task_options_get__hole_punch(cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.StandardPrintTaskOptions.get_Binding() */
 HRESULT wgrpr_standard_print_task_options_get__binding(cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.StandardPrintTaskOptions.get_Copies() */
 HRESULT wgrpr_standard_print_task_options_get__copies(cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.StandardPrintTaskOptions.get_NUp() */
 HRESULT wgrpr_standard_print_task_options_get__n_up(cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.StandardPrintTaskOptions.get_InputBin() */
 HRESULT wgrpr_standard_print_task_options_get__input_bin(cwinrt_hstring *value);
 
-/* Windows.Graphics.Printing.IPrintTaskSourceRequestedDeferral */
-/* Windows.Graphics.Printing.IPrintTaskSourceRequestedArgs */
-/* Windows.Graphics.Printing.IPrintTaskRequestedEventArgs */
-/* Windows.Graphics.Printing.IPrintTaskRequestedDeferral */
-/* Windows.Graphics.Printing.IPrintTaskRequest */
-/* Windows.Graphics.Printing.IPrintTaskProgressingEventArgs */
-/* Windows.Graphics.Printing.IPrintTaskOptionsCore */
-/* Windows.Graphics.Printing.IPrintTaskOptionsCore.GetPageDescription(jobPageNumber) */
 HRESULT wgrpr_print_task_options_core_get_page_description(WGRPR_IPrintTaskOptionsCore *self, uint32_t jobPageNumber, WGRPR_PrintPageDescription *out);
 
-/* Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties */
-/* Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties.put_MediaSize() */
 HRESULT wgrpr_print_task_options_core_properties_put__media_size(WGRPR_IPrintTaskOptionsCoreProperties *self, WGRPR_PrintMediaSize value);
 
-/* Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties.get_MediaSize() */
 HRESULT wgrpr_print_task_options_core_properties_get__media_size(WGRPR_IPrintTaskOptionsCoreProperties *self, WGRPR_PrintMediaSize *value);
 
-/* Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties.put_MediaType() */
 HRESULT wgrpr_print_task_options_core_properties_put__media_type(WGRPR_IPrintTaskOptionsCoreProperties *self, WGRPR_PrintMediaType value);
 
-/* Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties.get_MediaType() */
 HRESULT wgrpr_print_task_options_core_properties_get__media_type(WGRPR_IPrintTaskOptionsCoreProperties *self, WGRPR_PrintMediaType *value);
 
-/* Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties.put_Orientation() */
 HRESULT wgrpr_print_task_options_core_properties_put__orientation(WGRPR_IPrintTaskOptionsCoreProperties *self, WGRPR_PrintOrientation value);
 
-/* Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties.get_Orientation() */
 HRESULT wgrpr_print_task_options_core_properties_get__orientation(WGRPR_IPrintTaskOptionsCoreProperties *self, WGRPR_PrintOrientation *value);
 
-/* Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties.put_PrintQuality() */
 HRESULT wgrpr_print_task_options_core_properties_put__print_quality(WGRPR_IPrintTaskOptionsCoreProperties *self, WGRPR_PrintQuality value);
 
-/* Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties.get_PrintQuality() */
 HRESULT wgrpr_print_task_options_core_properties_get__print_quality(WGRPR_IPrintTaskOptionsCoreProperties *self, WGRPR_PrintQuality *value);
 
-/* Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties.put_ColorMode() */
 HRESULT wgrpr_print_task_options_core_properties_put__color_mode(WGRPR_IPrintTaskOptionsCoreProperties *self, WGRPR_PrintColorMode value);
 
-/* Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties.get_ColorMode() */
 HRESULT wgrpr_print_task_options_core_properties_get__color_mode(WGRPR_IPrintTaskOptionsCoreProperties *self, WGRPR_PrintColorMode *value);
 
-/* Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties.put_Duplex() */
 HRESULT wgrpr_print_task_options_core_properties_put__duplex(WGRPR_IPrintTaskOptionsCoreProperties *self, WGRPR_PrintDuplex value);
 
-/* Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties.get_Duplex() */
 HRESULT wgrpr_print_task_options_core_properties_get__duplex(WGRPR_IPrintTaskOptionsCoreProperties *self, WGRPR_PrintDuplex *value);
 
-/* Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties.put_Collation() */
 HRESULT wgrpr_print_task_options_core_properties_put__collation(WGRPR_IPrintTaskOptionsCoreProperties *self, WGRPR_PrintCollation value);
 
-/* Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties.get_Collation() */
 HRESULT wgrpr_print_task_options_core_properties_get__collation(WGRPR_IPrintTaskOptionsCoreProperties *self, WGRPR_PrintCollation *value);
 
-/* Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties.put_Staple() */
 HRESULT wgrpr_print_task_options_core_properties_put__staple(WGRPR_IPrintTaskOptionsCoreProperties *self, WGRPR_PrintStaple value);
 
-/* Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties.get_Staple() */
 HRESULT wgrpr_print_task_options_core_properties_get__staple(WGRPR_IPrintTaskOptionsCoreProperties *self, WGRPR_PrintStaple *value);
 
-/* Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties.put_HolePunch() */
 HRESULT wgrpr_print_task_options_core_properties_put__hole_punch(WGRPR_IPrintTaskOptionsCoreProperties *self, WGRPR_PrintHolePunch value);
 
-/* Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties.get_HolePunch() */
 HRESULT wgrpr_print_task_options_core_properties_get__hole_punch(WGRPR_IPrintTaskOptionsCoreProperties *self, WGRPR_PrintHolePunch *value);
 
-/* Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties.put_Binding() */
 HRESULT wgrpr_print_task_options_core_properties_put__binding(WGRPR_IPrintTaskOptionsCoreProperties *self, WGRPR_PrintBinding value);
 
-/* Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties.get_Binding() */
 HRESULT wgrpr_print_task_options_core_properties_get__binding(WGRPR_IPrintTaskOptionsCoreProperties *self, WGRPR_PrintBinding *value);
 
-/* Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties.get_MinCopies() */
 HRESULT wgrpr_print_task_options_core_properties_get__min_copies(WGRPR_IPrintTaskOptionsCoreProperties *self, uint32_t *value);
 
-/* Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties.get_MaxCopies() */
 HRESULT wgrpr_print_task_options_core_properties_get__max_copies(WGRPR_IPrintTaskOptionsCoreProperties *self, uint32_t *value);
 
-/* Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties.put_NumberOfCopies() */
 HRESULT wgrpr_print_task_options_core_properties_put__number_of_copies(WGRPR_IPrintTaskOptionsCoreProperties *self, uint32_t value);
 
-/* Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties.get_NumberOfCopies() */
 HRESULT wgrpr_print_task_options_core_properties_get__number_of_copies(WGRPR_IPrintTaskOptionsCoreProperties *self, uint32_t *value);
 
-/* Windows.Graphics.Printing.IPrintTaskOptionsCoreUIConfiguration */
-/* Windows.Graphics.Printing.IPrintTaskOptionsCoreUIConfiguration.get_DisplayedOptions() */
 HRESULT wgrpr_print_task_options_core_u_i_configuration_get__displayed_options(WGRPR_IPrintTaskOptionsCoreUIConfiguration *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Graphics.Printing.IPrintTaskOptions */
-/* Windows.Graphics.Printing.IPrintTaskOptions2 */
-/* Windows.Graphics.Printing.IPrintTaskOptions2.get_PageRangeOptions() */
 HRESULT wgrpr_print_task_options_2_get__page_range_options(WGRPR_IPrintTaskOptions_2 *self, WGRPR_PrintPageRangeOptions** value);
 
-/* Windows.Graphics.Printing.IPrintTaskOptions2.get_CustomPageRanges() */
 HRESULT wgrpr_print_task_options_2_get__custom_page_ranges(WGRPR_IPrintTaskOptions_2 *self, WFOCO_IVector_WGRPR_PrintPageRange** value);
 
-/* Windows.Graphics.Printing.IPrintTaskCompletedEventArgs */
-/* Windows.Graphics.Printing.IPrintTask */
-/* Windows.Graphics.Printing.IPrintTaskTargetDeviceSupport */
-/* Windows.Graphics.Printing.IPrintTaskTargetDeviceSupport.put_IsPrinterTargetEnabled() */
 HRESULT wgrpr_print_task_target_device_support_put__is_printer_target_enabled(WGRPR_IPrintTaskTargetDeviceSupport *self, BOOL value);
 
-/* Windows.Graphics.Printing.IPrintTaskTargetDeviceSupport.get_IsPrinterTargetEnabled() */
 HRESULT wgrpr_print_task_target_device_support_get__is_printer_target_enabled(WGRPR_IPrintTaskTargetDeviceSupport *self, BOOL *value);
 
-/* Windows.Graphics.Printing.IPrintTaskTargetDeviceSupport.put_Is3DManufacturingTargetEnabled() */
 HRESULT wgrpr_print_task_target_device_support_put__is3_d_manufacturing_target_enabled(WGRPR_IPrintTaskTargetDeviceSupport *self, BOOL value);
 
-/* Windows.Graphics.Printing.IPrintTaskTargetDeviceSupport.get_Is3DManufacturingTargetEnabled() */
 HRESULT wgrpr_print_task_target_device_support_get__is3_d_manufacturing_target_enabled(WGRPR_IPrintTaskTargetDeviceSupport *self, BOOL *value);
 
-/* Windows.Graphics.Printing.IPrintTask2 */
-/* Windows.Graphics.Printing.IPrintTask2.put_IsPreviewEnabled() */
 HRESULT wgrpr_print_task_2_put__is_preview_enabled(WGRPR_IPrintTask_2 *self, BOOL value);
 
-/* Windows.Graphics.Printing.IPrintTask2.get_IsPreviewEnabled() */
 HRESULT wgrpr_print_task_2_get__is_preview_enabled(WGRPR_IPrintTask_2 *self, BOOL *value);
 
-/* Windows.Graphics.Printing.IPrintPageRangeOptions */
-/* Windows.Graphics.Printing.IPrintPageRange */
-/* Windows.Graphics.Printing.IPrintPageInfo */
-/* Windows.Graphics.Printing.IPrintManager */
 #endif /* CWINRT_WINDOWS_GRAPHICS_PRINTING_H */

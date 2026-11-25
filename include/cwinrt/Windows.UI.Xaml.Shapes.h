@@ -14,7 +14,6 @@
 #include <cwinrt/Windows.UI.Xaml.Media.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WUIXAME_Brush
 #define CWINRT_FWD_WUIXAME_Brush
 typedef struct WUIXAME_Brush WUIXAME_Brush;
@@ -40,7 +39,6 @@ typedef struct WUIXAME_Geometry WUIXAME_Geometry;
 typedef struct WUIXAME_PointCollection WUIXAME_PointCollection;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUIXASH_Rectangle WUIXASH_Rectangle;
 typedef struct WUIXASH_Polyline WUIXASH_Polyline;
 typedef struct WUIXASH_Polygon WUIXASH_Polygon;
@@ -65,7 +63,6 @@ typedef struct WUIXASH_IEllipse WUIXASH_IEllipse;
 typedef struct WUIXASH_IShape WUIXASH_IShape;
 typedef struct WUIXASH_IShape_2 WUIXASH_IShape_2;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WUIXA_DependencyProperty
 #define CWINRT_FWD_WUIXA_DependencyProperty
 typedef struct WUIXA_DependencyProperty WUIXA_DependencyProperty;
@@ -132,7 +129,6 @@ typedef struct WUIXAME_Transform WUIXAME_Transform;
 typedef struct WUC_Brush WUC_Brush;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -201,318 +197,198 @@ static const IID CWINRT_IID_WUIXASH_IShape CWINRT_MAYBE_UNUSED = { 0x786F2B75, 0
 static const IID CWINRT_IID_WUIXASH_IShape_2 CWINRT_MAYBE_UNUSED = { 0x97248DBA, 0x49F2, 0x49A4, { 0xA5, 0xDD, 0x16, 0x4D, 0xF8, 0x24, 0xDB, 0x14 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.UI.Xaml.Shapes.Rectangle */
 HRESULT wuixash_rectangle_new(WUIXASH_Rectangle **out);
 
-/* Windows.UI.Xaml.Shapes.Rectangle */
-/* Windows.UI.Xaml.Shapes.Rectangle.get_RadiusX() */
 HRESULT wuixash_rectangle_get__radius_x(WUIXASH_Rectangle *self, double *value);
 
-/* Windows.UI.Xaml.Shapes.Rectangle.put_RadiusX() */
 HRESULT wuixash_rectangle_put__radius_x(WUIXASH_Rectangle *self, double value);
 
-/* Windows.UI.Xaml.Shapes.Rectangle.get_RadiusY() */
 HRESULT wuixash_rectangle_get__radius_y(WUIXASH_Rectangle *self, double *value);
 
-/* Windows.UI.Xaml.Shapes.Rectangle.put_RadiusY() */
 HRESULT wuixash_rectangle_put__radius_y(WUIXASH_Rectangle *self, double value);
 
-/* Windows.UI.Xaml.Shapes.Rectangle.get_RadiusXProperty() */
 HRESULT wuixash_rectangle_get__radius_x_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.Rectangle.get_RadiusYProperty() */
 HRESULT wuixash_rectangle_get__radius_y_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Shapes.Polyline */
 HRESULT wuixash_polyline_new(WUIXASH_Polyline **out);
 
-/* Windows.UI.Xaml.Shapes.Polyline */
-/* Windows.UI.Xaml.Shapes.Polyline.get_FillRule() */
 HRESULT wuixash_polyline_get__fill_rule(WUIXASH_Polyline *self, WUIXAME_FillRule *value);
 
-/* Windows.UI.Xaml.Shapes.Polyline.put_FillRule() */
 HRESULT wuixash_polyline_put__fill_rule(WUIXASH_Polyline *self, WUIXAME_FillRule value);
 
-/* Windows.UI.Xaml.Shapes.Polyline.get_Points() */
 HRESULT wuixash_polyline_get__points(WUIXASH_Polyline *self, WUIXAME_PointCollection** value);
 
-/* Windows.UI.Xaml.Shapes.Polyline.put_Points() */
 HRESULT wuixash_polyline_put__points(WUIXASH_Polyline *self, WUIXAME_PointCollection* value);
 
-/* Windows.UI.Xaml.Shapes.Polyline.get_FillRuleProperty() */
 HRESULT wuixash_polyline_get__fill_rule_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.Polyline.get_PointsProperty() */
 HRESULT wuixash_polyline_get__points_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Shapes.Polygon */
 HRESULT wuixash_polygon_new(WUIXASH_Polygon **out);
 
-/* Windows.UI.Xaml.Shapes.Polygon */
-/* Windows.UI.Xaml.Shapes.Polygon.get_FillRule() */
 HRESULT wuixash_polygon_get__fill_rule(WUIXASH_Polygon *self, WUIXAME_FillRule *value);
 
-/* Windows.UI.Xaml.Shapes.Polygon.put_FillRule() */
 HRESULT wuixash_polygon_put__fill_rule(WUIXASH_Polygon *self, WUIXAME_FillRule value);
 
-/* Windows.UI.Xaml.Shapes.Polygon.get_Points() */
 HRESULT wuixash_polygon_get__points(WUIXASH_Polygon *self, WUIXAME_PointCollection** value);
 
-/* Windows.UI.Xaml.Shapes.Polygon.put_Points() */
 HRESULT wuixash_polygon_put__points(WUIXASH_Polygon *self, WUIXAME_PointCollection* value);
 
-/* Windows.UI.Xaml.Shapes.Polygon.get_FillRuleProperty() */
 HRESULT wuixash_polygon_get__fill_rule_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.Polygon.get_PointsProperty() */
 HRESULT wuixash_polygon_get__points_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.Path */
-/* Windows.UI.Xaml.Shapes.Path.get_Data() */
 HRESULT wuixash_path_get__data(WUIXASH_Path *self, WUIXAME_Geometry** value);
 
-/* Windows.UI.Xaml.Shapes.Path.put_Data() */
 HRESULT wuixash_path_put__data(WUIXASH_Path *self, WUIXAME_Geometry* value);
 
-/* Windows.UI.Xaml.Shapes.Path.get_DataProperty() */
 HRESULT wuixash_path_get__data_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Shapes.Line */
 HRESULT wuixash_line_new(WUIXASH_Line **out);
 
-/* Windows.UI.Xaml.Shapes.Line */
-/* Windows.UI.Xaml.Shapes.Line.get_X1() */
 HRESULT wuixash_line_get__x1(WUIXASH_Line *self, double *value);
 
-/* Windows.UI.Xaml.Shapes.Line.put_X1() */
 HRESULT wuixash_line_put__x1(WUIXASH_Line *self, double value);
 
-/* Windows.UI.Xaml.Shapes.Line.get_Y1() */
 HRESULT wuixash_line_get__y1(WUIXASH_Line *self, double *value);
 
-/* Windows.UI.Xaml.Shapes.Line.put_Y1() */
 HRESULT wuixash_line_put__y1(WUIXASH_Line *self, double value);
 
-/* Windows.UI.Xaml.Shapes.Line.get_X2() */
 HRESULT wuixash_line_get__x2(WUIXASH_Line *self, double *value);
 
-/* Windows.UI.Xaml.Shapes.Line.put_X2() */
 HRESULT wuixash_line_put__x2(WUIXASH_Line *self, double value);
 
-/* Windows.UI.Xaml.Shapes.Line.get_Y2() */
 HRESULT wuixash_line_get__y2(WUIXASH_Line *self, double *value);
 
-/* Windows.UI.Xaml.Shapes.Line.put_Y2() */
 HRESULT wuixash_line_put__y2(WUIXASH_Line *self, double value);
 
-/* Windows.UI.Xaml.Shapes.Line.get_X1Property() */
 HRESULT wuixash_line_get__x1_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.Line.get_Y1Property() */
 HRESULT wuixash_line_get__y1_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.Line.get_X2Property() */
 HRESULT wuixash_line_get__x2_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.Line.get_Y2Property() */
 HRESULT wuixash_line_get__y2_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.IShapeStatics */
-/* Windows.UI.Xaml.Shapes.IShapeStatics.get_FillProperty() */
 HRESULT wuixash_shape_statics_get__fill_property(WUIXASH_IShapeStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.IShapeStatics.get_StrokeProperty() */
 HRESULT wuixash_shape_statics_get__stroke_property(WUIXASH_IShapeStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.IShapeStatics.get_StrokeMiterLimitProperty() */
 HRESULT wuixash_shape_statics_get__stroke_miter_limit_property(WUIXASH_IShapeStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.IShapeStatics.get_StrokeThicknessProperty() */
 HRESULT wuixash_shape_statics_get__stroke_thickness_property(WUIXASH_IShapeStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.IShapeStatics.get_StrokeStartLineCapProperty() */
 HRESULT wuixash_shape_statics_get__stroke_start_line_cap_property(WUIXASH_IShapeStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.IShapeStatics.get_StrokeEndLineCapProperty() */
 HRESULT wuixash_shape_statics_get__stroke_end_line_cap_property(WUIXASH_IShapeStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.IShapeStatics.get_StrokeLineJoinProperty() */
 HRESULT wuixash_shape_statics_get__stroke_line_join_property(WUIXASH_IShapeStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.IShapeStatics.get_StrokeDashOffsetProperty() */
 HRESULT wuixash_shape_statics_get__stroke_dash_offset_property(WUIXASH_IShapeStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.IShapeStatics.get_StrokeDashCapProperty() */
 HRESULT wuixash_shape_statics_get__stroke_dash_cap_property(WUIXASH_IShapeStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.IShapeStatics.get_StrokeDashArrayProperty() */
 HRESULT wuixash_shape_statics_get__stroke_dash_array_property(WUIXASH_IShapeStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.IShapeStatics.get_StretchProperty() */
 HRESULT wuixash_shape_statics_get__stretch_property(WUIXASH_IShapeStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.IShapeFactory */
-/* Windows.UI.Xaml.Shapes.IShapeFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixash_shape_factory_create_instance(WUIXASH_IShapeFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXASH_Shape** out);
 
-/* Windows.UI.Xaml.Shapes.IRectangleStatics */
-/* Windows.UI.Xaml.Shapes.IRectangleStatics.get_RadiusXProperty() */
 HRESULT wuixash_rectangle_statics_get__radius_x_property(WUIXASH_IRectangleStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.IRectangleStatics.get_RadiusYProperty() */
 HRESULT wuixash_rectangle_statics_get__radius_y_property(WUIXASH_IRectangleStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.IPolylineStatics */
-/* Windows.UI.Xaml.Shapes.IPolylineStatics.get_FillRuleProperty() */
 HRESULT wuixash_polyline_statics_get__fill_rule_property(WUIXASH_IPolylineStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.IPolylineStatics.get_PointsProperty() */
 HRESULT wuixash_polyline_statics_get__points_property(WUIXASH_IPolylineStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.IPolygonStatics */
-/* Windows.UI.Xaml.Shapes.IPolygonStatics.get_FillRuleProperty() */
 HRESULT wuixash_polygon_statics_get__fill_rule_property(WUIXASH_IPolygonStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.IPolygonStatics.get_PointsProperty() */
 HRESULT wuixash_polygon_statics_get__points_property(WUIXASH_IPolygonStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.IPathStatics */
-/* Windows.UI.Xaml.Shapes.IPathStatics.get_DataProperty() */
 HRESULT wuixash_path_statics_get__data_property(WUIXASH_IPathStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.IPathFactory */
-/* Windows.UI.Xaml.Shapes.IPathFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixash_path_factory_create_instance(WUIXASH_IPathFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXASH_Path** out);
 
-/* Windows.UI.Xaml.Shapes.ILineStatics */
-/* Windows.UI.Xaml.Shapes.ILineStatics.get_X1Property() */
 HRESULT wuixash_line_statics_get__x1_property(WUIXASH_ILineStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.ILineStatics.get_Y1Property() */
 HRESULT wuixash_line_statics_get__y1_property(WUIXASH_ILineStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.ILineStatics.get_X2Property() */
 HRESULT wuixash_line_statics_get__x2_property(WUIXASH_ILineStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.ILineStatics.get_Y2Property() */
 HRESULT wuixash_line_statics_get__y2_property(WUIXASH_ILineStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.Shape */
-/* Windows.UI.Xaml.Shapes.Shape.get_Fill() */
 HRESULT wuixash_shape_get__fill(WUIXASH_Shape *self, WUIXAME_Brush** value);
 
-/* Windows.UI.Xaml.Shapes.Shape.put_Fill() */
 HRESULT wuixash_shape_put__fill(WUIXASH_Shape *self, WUIXAME_Brush* value);
 
-/* Windows.UI.Xaml.Shapes.Shape.get_Stroke() */
 HRESULT wuixash_shape_get__stroke(WUIXASH_Shape *self, WUIXAME_Brush** value);
 
-/* Windows.UI.Xaml.Shapes.Shape.put_Stroke() */
 HRESULT wuixash_shape_put__stroke(WUIXASH_Shape *self, WUIXAME_Brush* value);
 
-/* Windows.UI.Xaml.Shapes.Shape.get_StrokeMiterLimit() */
 HRESULT wuixash_shape_get__stroke_miter_limit(WUIXASH_Shape *self, double *value);
 
-/* Windows.UI.Xaml.Shapes.Shape.put_StrokeMiterLimit() */
 HRESULT wuixash_shape_put__stroke_miter_limit(WUIXASH_Shape *self, double value);
 
-/* Windows.UI.Xaml.Shapes.Shape.get_StrokeThickness() */
 HRESULT wuixash_shape_get__stroke_thickness(WUIXASH_Shape *self, double *value);
 
-/* Windows.UI.Xaml.Shapes.Shape.put_StrokeThickness() */
 HRESULT wuixash_shape_put__stroke_thickness(WUIXASH_Shape *self, double value);
 
-/* Windows.UI.Xaml.Shapes.Shape.get_StrokeStartLineCap() */
 HRESULT wuixash_shape_get__stroke_start_line_cap(WUIXASH_Shape *self, WUIXAME_PenLineCap *value);
 
-/* Windows.UI.Xaml.Shapes.Shape.put_StrokeStartLineCap() */
 HRESULT wuixash_shape_put__stroke_start_line_cap(WUIXASH_Shape *self, WUIXAME_PenLineCap value);
 
-/* Windows.UI.Xaml.Shapes.Shape.get_StrokeEndLineCap() */
 HRESULT wuixash_shape_get__stroke_end_line_cap(WUIXASH_Shape *self, WUIXAME_PenLineCap *value);
 
-/* Windows.UI.Xaml.Shapes.Shape.put_StrokeEndLineCap() */
 HRESULT wuixash_shape_put__stroke_end_line_cap(WUIXASH_Shape *self, WUIXAME_PenLineCap value);
 
-/* Windows.UI.Xaml.Shapes.Shape.get_StrokeLineJoin() */
 HRESULT wuixash_shape_get__stroke_line_join(WUIXASH_Shape *self, WUIXAME_PenLineJoin *value);
 
-/* Windows.UI.Xaml.Shapes.Shape.put_StrokeLineJoin() */
 HRESULT wuixash_shape_put__stroke_line_join(WUIXASH_Shape *self, WUIXAME_PenLineJoin value);
 
-/* Windows.UI.Xaml.Shapes.Shape.get_StrokeDashOffset() */
 HRESULT wuixash_shape_get__stroke_dash_offset(WUIXASH_Shape *self, double *value);
 
-/* Windows.UI.Xaml.Shapes.Shape.put_StrokeDashOffset() */
 HRESULT wuixash_shape_put__stroke_dash_offset(WUIXASH_Shape *self, double value);
 
-/* Windows.UI.Xaml.Shapes.Shape.get_StrokeDashCap() */
 HRESULT wuixash_shape_get__stroke_dash_cap(WUIXASH_Shape *self, WUIXAME_PenLineCap *value);
 
-/* Windows.UI.Xaml.Shapes.Shape.put_StrokeDashCap() */
 HRESULT wuixash_shape_put__stroke_dash_cap(WUIXASH_Shape *self, WUIXAME_PenLineCap value);
 
-/* Windows.UI.Xaml.Shapes.Shape.get_StrokeDashArray() */
 HRESULT wuixash_shape_get__stroke_dash_array(WUIXASH_Shape *self, WUIXAME_DoubleCollection** value);
 
-/* Windows.UI.Xaml.Shapes.Shape.put_StrokeDashArray() */
 HRESULT wuixash_shape_put__stroke_dash_array(WUIXASH_Shape *self, WUIXAME_DoubleCollection* value);
 
-/* Windows.UI.Xaml.Shapes.Shape.get_Stretch() */
 HRESULT wuixash_shape_get__stretch(WUIXASH_Shape *self, WUIXAME_Stretch *value);
 
-/* Windows.UI.Xaml.Shapes.Shape.put_Stretch() */
 HRESULT wuixash_shape_put__stretch(WUIXASH_Shape *self, WUIXAME_Stretch value);
 
-/* Windows.UI.Xaml.Shapes.Shape.get_GeometryTransform() */
 HRESULT wuixash_shape_get__geometry_transform(WUIXASH_Shape *self, WUIXAME_Transform** value);
 
-/* Windows.UI.Xaml.Shapes.Shape.GetAlphaMask() */
 HRESULT wuixash_shape_get_alpha_mask(WUIXASH_Shape *self, WUC_Brush** out);
 
-/* Windows.UI.Xaml.Shapes.Shape.get_FillProperty() */
 HRESULT wuixash_shape_get__fill_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.Shape.get_StrokeProperty() */
 HRESULT wuixash_shape_get__stroke_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.Shape.get_StrokeMiterLimitProperty() */
 HRESULT wuixash_shape_get__stroke_miter_limit_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.Shape.get_StrokeThicknessProperty() */
 HRESULT wuixash_shape_get__stroke_thickness_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.Shape.get_StrokeStartLineCapProperty() */
 HRESULT wuixash_shape_get__stroke_start_line_cap_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.Shape.get_StrokeEndLineCapProperty() */
 HRESULT wuixash_shape_get__stroke_end_line_cap_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.Shape.get_StrokeLineJoinProperty() */
 HRESULT wuixash_shape_get__stroke_line_join_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.Shape.get_StrokeDashOffsetProperty() */
 HRESULT wuixash_shape_get__stroke_dash_offset_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.Shape.get_StrokeDashCapProperty() */
 HRESULT wuixash_shape_get__stroke_dash_cap_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.Shape.get_StrokeDashArrayProperty() */
 HRESULT wuixash_shape_get__stroke_dash_array_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.Shape.get_StretchProperty() */
 HRESULT wuixash_shape_get__stretch_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Shapes.IRectangle */
-/* Windows.UI.Xaml.Shapes.IPolyline */
-/* Windows.UI.Xaml.Shapes.IPolygon */
-/* Windows.UI.Xaml.Shapes.IPath */
-/* Windows.UI.Xaml.Shapes.ILine */
-/* Windows.UI.Xaml.Shapes.IShape */
-/* Windows.UI.Xaml.Shapes.IShape2 */
-/* Windows.UI.Xaml.Shapes.IShape2.GetAlphaMask() */
 HRESULT wuixash_shape_2_get_alpha_mask(WUIXASH_IShape_2 *self, WUC_Brush** out);
 
 #endif /* CWINRT_WINDOWS_UI_XAML_SHAPES_H */

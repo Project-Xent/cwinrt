@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSY_UserChangedEventArgs
 #define CWINRT_FWD_WSY_UserChangedEventArgs
 typedef struct WSY_UserChangedEventArgs WSY_UserChangedEventArgs;
@@ -34,7 +33,6 @@ typedef struct WGAINFO_ForceFeedbackMotor WGAINFO_ForceFeedbackMotor;
 typedef struct WDEHA_SimpleHapticsController WDEHA_SimpleHapticsController;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WGAIN_ArcadeStick WGAIN_ArcadeStick;
 typedef struct WGAIN_UINavigationController WGAIN_UINavigationController;
 typedef struct WGAIN_RawGameController WGAIN_RawGameController;
@@ -64,7 +62,6 @@ typedef struct WGAIN_IRawGameController WGAIN_IRawGameController;
 typedef struct WGAIN_IGamepad WGAIN_IGamepad;
 typedef struct WGAIN_IGameController WGAIN_IGameController;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_TypedEventHandler_WGAIN_IGameController_WGAIN_Headset
 #define CWINRT_FWD_WF_TypedEventHandler_WGAIN_IGameController_WGAIN_Headset
 typedef struct WF_TypedEventHandler_WGAIN_IGameController_WGAIN_Headset WF_TypedEventHandler_WGAIN_IGameController_WGAIN_Headset;
@@ -449,7 +446,6 @@ struct WGAIN_GamepadReading {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -538,37 +534,24 @@ static const IID CWINRT_IID_WGAIN_IGamepad CWINRT_MAYBE_UNUSED = { 0xBC7BB43C, 0
 static const IID CWINRT_IID_WGAIN_IGameController CWINRT_MAYBE_UNUSED = { 0x1BAF6522, 0x5F64, 0x42C5, { 0x82, 0x67, 0xB9, 0xFE, 0x22, 0x15, 0xBF, 0xBD } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Gaming.Input.ArcadeStick */
 HRESULT wgain_arcade_stick_new(WGAIN_ArcadeStick **out);
 
-/* Windows.Gaming.Input.ArcadeStick */
-/* Windows.Gaming.Input.ArcadeStick.GetButtonLabel(button) */
 HRESULT wgain_arcade_stick_get_button_label(WGAIN_ArcadeStick *self, WGAIN_ArcadeStickButtons button, WGAIN_GameControllerButtonLabel *out);
 
-/* Windows.Gaming.Input.ArcadeStick.GetCurrentReading() */
 HRESULT wgain_arcade_stick_get_current_reading(WGAIN_ArcadeStick *self, WGAIN_ArcadeStickReading *out);
 
-/* Windows.Gaming.Input.ArcadeStick.get_Headset() */
 HRESULT wgain_arcade_stick_get__headset(WGAIN_ArcadeStick *self, WGAIN_Headset** value);
 
-/* Windows.Gaming.Input.ArcadeStick.get_IsWireless() */
 HRESULT wgain_arcade_stick_get__is_wireless(WGAIN_ArcadeStick *self, BOOL *value);
 
-/* Windows.Gaming.Input.ArcadeStick.get_User() */
 HRESULT wgain_arcade_stick_get__user(WGAIN_ArcadeStick *self, WSY_User** value);
 
-/* Windows.Gaming.Input.ArcadeStick.TryGetBatteryReport() */
 HRESULT wgain_arcade_stick_try_get_battery_report(WGAIN_ArcadeStick *self, WDEPO_BatteryReport** out);
 
-/* Windows.Gaming.Input.ArcadeStick.FromGameController(gameController) */
 HRESULT wgain_arcade_stick_from_game_controller(WGAIN_IGameController* gameController, WGAIN_ArcadeStick** out);
 
-/* Windows.Gaming.Input.ArcadeStick.get_ArcadeSticks() */
 HRESULT wgain_arcade_stick_get__arcade_sticks(WFOCO_IVectorView_WGAIN_ArcadeStick** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wgain_arcade_stick_on_headset_connected(WGAIN_ArcadeStick *self, cwinrt_event_fn fn, void *ctx);
@@ -586,38 +569,26 @@ void wgain_arcade_stick_off_arcade_stick_added(WGAIN_ArcadeStick *self, cwinrt_t
 cwinrt_token wgain_arcade_stick_on_arcade_stick_removed(WGAIN_ArcadeStick *self, cwinrt_event_fn fn, void *ctx);
 void wgain_arcade_stick_off_arcade_stick_removed(WGAIN_ArcadeStick *self, cwinrt_token token);
 
-/* activate Windows.Gaming.Input.UINavigationController */
 HRESULT wgain_u_i_navigation_controller_new(WGAIN_UINavigationController **out);
 
-/* Windows.Gaming.Input.UINavigationController */
-/* Windows.Gaming.Input.UINavigationController.GetCurrentReading() */
 HRESULT wgain_u_i_navigation_controller_get_current_reading(WGAIN_UINavigationController *self, WGAIN_UINavigationReading *out);
 
-/* Windows.Gaming.Input.UINavigationController.GetOptionalButtonLabel(button) */
 HRESULT wgain_u_i_navigation_controller_get_optional_button_label(WGAIN_UINavigationController *self, WGAIN_OptionalUINavigationButtons button, WGAIN_GameControllerButtonLabel *out);
 
-/* Windows.Gaming.Input.UINavigationController.GetRequiredButtonLabel(button) */
 HRESULT wgain_u_i_navigation_controller_get_required_button_label(WGAIN_UINavigationController *self, WGAIN_RequiredUINavigationButtons button, WGAIN_GameControllerButtonLabel *out);
 
-/* Windows.Gaming.Input.UINavigationController.get_Headset() */
 HRESULT wgain_u_i_navigation_controller_get__headset(WGAIN_UINavigationController *self, WGAIN_Headset** value);
 
-/* Windows.Gaming.Input.UINavigationController.get_IsWireless() */
 HRESULT wgain_u_i_navigation_controller_get__is_wireless(WGAIN_UINavigationController *self, BOOL *value);
 
-/* Windows.Gaming.Input.UINavigationController.get_User() */
 HRESULT wgain_u_i_navigation_controller_get__user(WGAIN_UINavigationController *self, WSY_User** value);
 
-/* Windows.Gaming.Input.UINavigationController.TryGetBatteryReport() */
 HRESULT wgain_u_i_navigation_controller_try_get_battery_report(WGAIN_UINavigationController *self, WDEPO_BatteryReport** out);
 
-/* Windows.Gaming.Input.UINavigationController.FromGameController(gameController) */
 HRESULT wgain_u_i_navigation_controller_from_game_controller(WGAIN_IGameController* gameController, WGAIN_UINavigationController** out);
 
-/* Windows.Gaming.Input.UINavigationController.get_UINavigationControllers() */
 HRESULT wgain_u_i_navigation_controller_get__u_i_navigation_controllers(WFOCO_IVectorView_WGAIN_UINavigationController** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wgain_u_i_navigation_controller_on_headset_connected(WGAIN_UINavigationController *self, cwinrt_event_fn fn, void *ctx);
@@ -635,65 +606,44 @@ void wgain_u_i_navigation_controller_off_u_i_navigation_controller_added(WGAIN_U
 cwinrt_token wgain_u_i_navigation_controller_on_u_i_navigation_controller_removed(WGAIN_UINavigationController *self, cwinrt_event_fn fn, void *ctx);
 void wgain_u_i_navigation_controller_off_u_i_navigation_controller_removed(WGAIN_UINavigationController *self, cwinrt_token token);
 
-/* activate Windows.Gaming.Input.RawGameController */
 HRESULT wgain_raw_game_controller_new(WGAIN_RawGameController **out);
 
-/* Windows.Gaming.Input.RawGameController */
-/* Windows.Gaming.Input.RawGameController.get_AxisCount() */
 HRESULT wgain_raw_game_controller_get__axis_count(WGAIN_RawGameController *self, int32_t *value);
 
-/* Windows.Gaming.Input.RawGameController.get_ButtonCount() */
 HRESULT wgain_raw_game_controller_get__button_count(WGAIN_RawGameController *self, int32_t *value);
 
-/* Windows.Gaming.Input.RawGameController.get_ForceFeedbackMotors() */
 HRESULT wgain_raw_game_controller_get__force_feedback_motors(WGAIN_RawGameController *self, WFOCO_IVectorView_WGAINFO_ForceFeedbackMotor** value);
 
-/* Windows.Gaming.Input.RawGameController.get_HardwareProductId() */
 HRESULT wgain_raw_game_controller_get__hardware_product_id(WGAIN_RawGameController *self, uint16_t *value);
 
-/* Windows.Gaming.Input.RawGameController.get_HardwareVendorId() */
 HRESULT wgain_raw_game_controller_get__hardware_vendor_id(WGAIN_RawGameController *self, uint16_t *value);
 
-/* Windows.Gaming.Input.RawGameController.get_SwitchCount() */
 HRESULT wgain_raw_game_controller_get__switch_count(WGAIN_RawGameController *self, int32_t *value);
 
-/* Windows.Gaming.Input.RawGameController.GetButtonLabel(buttonIndex) */
 HRESULT wgain_raw_game_controller_get_button_label(WGAIN_RawGameController *self, int32_t buttonIndex, WGAIN_GameControllerButtonLabel *out);
 
-/* Windows.Gaming.Input.RawGameController.GetCurrentReading(buttonArray, switchArray, axisArray) */
 HRESULT wgain_raw_game_controller_get_current_reading(WGAIN_RawGameController *self, BOOL *buttonArray, uint32_t buttonArray_len, WGAIN_GameControllerSwitchPosition *switchArray, uint32_t switchArray_len, double *axisArray, uint32_t axisArray_len, uint64_t *out);
 
-/* Windows.Gaming.Input.RawGameController.GetSwitchKind(switchIndex) */
 HRESULT wgain_raw_game_controller_get_switch_kind(WGAIN_RawGameController *self, int32_t switchIndex, WGAIN_GameControllerSwitchKind *out);
 
-/* Windows.Gaming.Input.RawGameController.get_Headset() */
 HRESULT wgain_raw_game_controller_get__headset(WGAIN_RawGameController *self, WGAIN_Headset** value);
 
-/* Windows.Gaming.Input.RawGameController.get_IsWireless() */
 HRESULT wgain_raw_game_controller_get__is_wireless(WGAIN_RawGameController *self, BOOL *value);
 
-/* Windows.Gaming.Input.RawGameController.get_User() */
 HRESULT wgain_raw_game_controller_get__user(WGAIN_RawGameController *self, WSY_User** value);
 
-/* Windows.Gaming.Input.RawGameController.TryGetBatteryReport() */
 HRESULT wgain_raw_game_controller_try_get_battery_report(WGAIN_RawGameController *self, WDEPO_BatteryReport** out);
 
-/* Windows.Gaming.Input.RawGameController.get_SimpleHapticsControllers() */
 HRESULT wgain_raw_game_controller_get__simple_haptics_controllers(WGAIN_RawGameController *self, WFOCO_IVectorView_WDEHA_SimpleHapticsController** value);
 
-/* Windows.Gaming.Input.RawGameController.get_NonRoamableId() */
 HRESULT wgain_raw_game_controller_get__non_roamable_id(WGAIN_RawGameController *self, cwinrt_hstring *value);
 
-/* Windows.Gaming.Input.RawGameController.get_DisplayName() */
 HRESULT wgain_raw_game_controller_get__display_name(WGAIN_RawGameController *self, cwinrt_hstring *value);
 
-/* Windows.Gaming.Input.RawGameController.get_RawGameControllers() */
 HRESULT wgain_raw_game_controller_get__raw_game_controllers(WFOCO_IVectorView_WGAIN_RawGameController** value);
 
-/* Windows.Gaming.Input.RawGameController.FromGameController(gameController) */
 HRESULT wgain_raw_game_controller_from_game_controller(WGAIN_IGameController* gameController, WGAIN_RawGameController** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wgain_raw_game_controller_on_headset_connected(WGAIN_RawGameController *self, cwinrt_event_fn fn, void *ctx);
@@ -711,53 +661,36 @@ void wgain_raw_game_controller_off_raw_game_controller_added(WGAIN_RawGameContro
 cwinrt_token wgain_raw_game_controller_on_raw_game_controller_removed(WGAIN_RawGameController *self, cwinrt_event_fn fn, void *ctx);
 void wgain_raw_game_controller_off_raw_game_controller_removed(WGAIN_RawGameController *self, cwinrt_token token);
 
-/* activate Windows.Gaming.Input.RacingWheel */
 HRESULT wgain_racing_wheel_new(WGAIN_RacingWheel **out);
 
-/* Windows.Gaming.Input.RacingWheel */
-/* Windows.Gaming.Input.RacingWheel.get_HasClutch() */
 HRESULT wgain_racing_wheel_get__has_clutch(WGAIN_RacingWheel *self, BOOL *value);
 
-/* Windows.Gaming.Input.RacingWheel.get_HasHandbrake() */
 HRESULT wgain_racing_wheel_get__has_handbrake(WGAIN_RacingWheel *self, BOOL *value);
 
-/* Windows.Gaming.Input.RacingWheel.get_HasPatternShifter() */
 HRESULT wgain_racing_wheel_get__has_pattern_shifter(WGAIN_RacingWheel *self, BOOL *value);
 
-/* Windows.Gaming.Input.RacingWheel.get_MaxPatternShifterGear() */
 HRESULT wgain_racing_wheel_get__max_pattern_shifter_gear(WGAIN_RacingWheel *self, int32_t *value);
 
-/* Windows.Gaming.Input.RacingWheel.get_MaxWheelAngle() */
 HRESULT wgain_racing_wheel_get__max_wheel_angle(WGAIN_RacingWheel *self, double *value);
 
-/* Windows.Gaming.Input.RacingWheel.get_WheelMotor() */
 HRESULT wgain_racing_wheel_get__wheel_motor(WGAIN_RacingWheel *self, WGAINFO_ForceFeedbackMotor** value);
 
-/* Windows.Gaming.Input.RacingWheel.GetButtonLabel(button) */
 HRESULT wgain_racing_wheel_get_button_label(WGAIN_RacingWheel *self, WGAIN_RacingWheelButtons button, WGAIN_GameControllerButtonLabel *out);
 
-/* Windows.Gaming.Input.RacingWheel.GetCurrentReading() */
 HRESULT wgain_racing_wheel_get_current_reading(WGAIN_RacingWheel *self, WGAIN_RacingWheelReading *out);
 
-/* Windows.Gaming.Input.RacingWheel.get_Headset() */
 HRESULT wgain_racing_wheel_get__headset(WGAIN_RacingWheel *self, WGAIN_Headset** value);
 
-/* Windows.Gaming.Input.RacingWheel.get_IsWireless() */
 HRESULT wgain_racing_wheel_get__is_wireless(WGAIN_RacingWheel *self, BOOL *value);
 
-/* Windows.Gaming.Input.RacingWheel.get_User() */
 HRESULT wgain_racing_wheel_get__user(WGAIN_RacingWheel *self, WSY_User** value);
 
-/* Windows.Gaming.Input.RacingWheel.TryGetBatteryReport() */
 HRESULT wgain_racing_wheel_try_get_battery_report(WGAIN_RacingWheel *self, WDEPO_BatteryReport** out);
 
-/* Windows.Gaming.Input.RacingWheel.FromGameController(gameController) */
 HRESULT wgain_racing_wheel_from_game_controller(WGAIN_IGameController* gameController, WGAIN_RacingWheel** out);
 
-/* Windows.Gaming.Input.RacingWheel.get_RacingWheels() */
 HRESULT wgain_racing_wheel_get__racing_wheels(WFOCO_IVectorView_WGAIN_RacingWheel** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wgain_racing_wheel_on_headset_connected(WGAIN_RacingWheel *self, cwinrt_event_fn fn, void *ctx);
@@ -775,57 +708,36 @@ void wgain_racing_wheel_off_racing_wheel_added(WGAIN_RacingWheel *self, cwinrt_t
 cwinrt_token wgain_racing_wheel_on_racing_wheel_removed(WGAIN_RacingWheel *self, cwinrt_event_fn fn, void *ctx);
 void wgain_racing_wheel_off_racing_wheel_removed(WGAIN_RacingWheel *self, cwinrt_token token);
 
-/* Windows.Gaming.Input.IUINavigationControllerStatics2 */
-/* Windows.Gaming.Input.IUINavigationControllerStatics2.FromGameController(gameController) */
 HRESULT wgain_u_i_navigation_controller_statics_2_from_game_controller(WGAIN_IUINavigationControllerStatics_2 *self, WGAIN_IGameController* gameController, WGAIN_UINavigationController** out);
 
-/* Windows.Gaming.Input.IRawGameControllerStatics */
-/* Windows.Gaming.Input.IRawGameControllerStatics.get_RawGameControllers() */
 HRESULT wgain_raw_game_controller_statics_get__raw_game_controllers(WGAIN_IRawGameControllerStatics *self, WFOCO_IVectorView_WGAIN_RawGameController** value);
 
-/* Windows.Gaming.Input.IRawGameControllerStatics.FromGameController(gameController) */
 HRESULT wgain_raw_game_controller_statics_from_game_controller(WGAIN_IRawGameControllerStatics *self, WGAIN_IGameController* gameController, WGAIN_RawGameController** out);
 
-/* Windows.Gaming.Input.IRacingWheelStatics2 */
-/* Windows.Gaming.Input.IRacingWheelStatics2.FromGameController(gameController) */
 HRESULT wgain_racing_wheel_statics_2_from_game_controller(WGAIN_IRacingWheelStatics_2 *self, WGAIN_IGameController* gameController, WGAIN_RacingWheel** out);
 
-/* Windows.Gaming.Input.IGamepadStatics2 */
-/* Windows.Gaming.Input.IGamepadStatics2.FromGameController(gameController) */
 HRESULT wgain_gamepad_statics_2_from_game_controller(WGAIN_IGamepadStatics_2 *self, WGAIN_IGameController* gameController, WGAIN_Gamepad** out);
 
-/* activate Windows.Gaming.Input.FlightStick */
 HRESULT wgain_flight_stick_new(WGAIN_FlightStick **out);
 
-/* Windows.Gaming.Input.FlightStick */
-/* Windows.Gaming.Input.FlightStick.get_HatSwitchKind() */
 HRESULT wgain_flight_stick_get__hat_switch_kind(WGAIN_FlightStick *self, WGAIN_GameControllerSwitchKind *value);
 
-/* Windows.Gaming.Input.FlightStick.GetButtonLabel(button) */
 HRESULT wgain_flight_stick_get_button_label(WGAIN_FlightStick *self, WGAIN_FlightStickButtons button, WGAIN_GameControllerButtonLabel *out);
 
-/* Windows.Gaming.Input.FlightStick.GetCurrentReading() */
 HRESULT wgain_flight_stick_get_current_reading(WGAIN_FlightStick *self, WGAIN_FlightStickReading *out);
 
-/* Windows.Gaming.Input.FlightStick.get_Headset() */
 HRESULT wgain_flight_stick_get__headset(WGAIN_FlightStick *self, WGAIN_Headset** value);
 
-/* Windows.Gaming.Input.FlightStick.get_IsWireless() */
 HRESULT wgain_flight_stick_get__is_wireless(WGAIN_FlightStick *self, BOOL *value);
 
-/* Windows.Gaming.Input.FlightStick.get_User() */
 HRESULT wgain_flight_stick_get__user(WGAIN_FlightStick *self, WSY_User** value);
 
-/* Windows.Gaming.Input.FlightStick.TryGetBatteryReport() */
 HRESULT wgain_flight_stick_try_get_battery_report(WGAIN_FlightStick *self, WDEPO_BatteryReport** out);
 
-/* Windows.Gaming.Input.FlightStick.get_FlightSticks() */
 HRESULT wgain_flight_stick_get__flight_sticks(WFOCO_IVectorView_WGAIN_FlightStick** value);
 
-/* Windows.Gaming.Input.FlightStick.FromGameController(gameController) */
 HRESULT wgain_flight_stick_from_game_controller(WGAIN_IGameController* gameController, WGAIN_FlightStick** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wgain_flight_stick_on_headset_connected(WGAIN_FlightStick *self, cwinrt_event_fn fn, void *ctx);
@@ -843,65 +755,42 @@ void wgain_flight_stick_off_flight_stick_added(WGAIN_FlightStick *self, cwinrt_t
 cwinrt_token wgain_flight_stick_on_flight_stick_removed(WGAIN_FlightStick *self, cwinrt_event_fn fn, void *ctx);
 void wgain_flight_stick_off_flight_stick_removed(WGAIN_FlightStick *self, cwinrt_token token);
 
-/* Windows.Gaming.Input.IFlightStickStatics */
-/* Windows.Gaming.Input.IFlightStickStatics.get_FlightSticks() */
 HRESULT wgain_flight_stick_statics_get__flight_sticks(WGAIN_IFlightStickStatics *self, WFOCO_IVectorView_WGAIN_FlightStick** value);
 
-/* Windows.Gaming.Input.IFlightStickStatics.FromGameController(gameController) */
 HRESULT wgain_flight_stick_statics_from_game_controller(WGAIN_IFlightStickStatics *self, WGAIN_IGameController* gameController, WGAIN_FlightStick** out);
 
-/* Windows.Gaming.Input.IArcadeStickStatics2 */
-/* Windows.Gaming.Input.IArcadeStickStatics2.FromGameController(gameController) */
 HRESULT wgain_arcade_stick_statics_2_from_game_controller(WGAIN_IArcadeStickStatics_2 *self, WGAIN_IGameController* gameController, WGAIN_ArcadeStick** out);
 
-/* activate Windows.Gaming.Input.Headset */
 HRESULT wgain_headset_new(WGAIN_Headset **out);
 
-/* Windows.Gaming.Input.Headset */
-/* Windows.Gaming.Input.Headset.get_CaptureDeviceId() */
 HRESULT wgain_headset_get__capture_device_id(WGAIN_Headset *self, cwinrt_hstring *value);
 
-/* Windows.Gaming.Input.Headset.get_RenderDeviceId() */
 HRESULT wgain_headset_get__render_device_id(WGAIN_Headset *self, cwinrt_hstring *value);
 
-/* Windows.Gaming.Input.Headset.TryGetBatteryReport() */
 HRESULT wgain_headset_try_get_battery_report(WGAIN_Headset *self, WDEPO_BatteryReport** out);
 
-/* activate Windows.Gaming.Input.Gamepad */
 HRESULT wgain_gamepad_new(WGAIN_Gamepad **out);
 
-/* Windows.Gaming.Input.Gamepad */
-/* Windows.Gaming.Input.Gamepad.get_Vibration() */
 HRESULT wgain_gamepad_get__vibration(WGAIN_Gamepad *self, WGAIN_GamepadVibration *value);
 
-/* Windows.Gaming.Input.Gamepad.put_Vibration() */
 HRESULT wgain_gamepad_put__vibration(WGAIN_Gamepad *self, WGAIN_GamepadVibration value);
 
-/* Windows.Gaming.Input.Gamepad.GetCurrentReading() */
 HRESULT wgain_gamepad_get_current_reading(WGAIN_Gamepad *self, WGAIN_GamepadReading *out);
 
-/* Windows.Gaming.Input.Gamepad.get_Headset() */
 HRESULT wgain_gamepad_get__headset(WGAIN_Gamepad *self, WGAIN_Headset** value);
 
-/* Windows.Gaming.Input.Gamepad.get_IsWireless() */
 HRESULT wgain_gamepad_get__is_wireless(WGAIN_Gamepad *self, BOOL *value);
 
-/* Windows.Gaming.Input.Gamepad.get_User() */
 HRESULT wgain_gamepad_get__user(WGAIN_Gamepad *self, WSY_User** value);
 
-/* Windows.Gaming.Input.Gamepad.GetButtonLabel(button) */
 HRESULT wgain_gamepad_get_button_label(WGAIN_Gamepad *self, WGAIN_GamepadButtons button, WGAIN_GameControllerButtonLabel *out);
 
-/* Windows.Gaming.Input.Gamepad.TryGetBatteryReport() */
 HRESULT wgain_gamepad_try_get_battery_report(WGAIN_Gamepad *self, WDEPO_BatteryReport** out);
 
-/* Windows.Gaming.Input.Gamepad.FromGameController(gameController) */
 HRESULT wgain_gamepad_from_game_controller(WGAIN_IGameController* gameController, WGAIN_Gamepad** out);
 
-/* Windows.Gaming.Input.Gamepad.get_Gamepads() */
 HRESULT wgain_gamepad_get__gamepads(WFOCO_IVectorView_WGAIN_Gamepad** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wgain_gamepad_on_headset_connected(WGAIN_Gamepad *self, cwinrt_event_fn fn, void *ctx);
@@ -919,55 +808,28 @@ void wgain_gamepad_off_gamepad_added(WGAIN_Gamepad *self, cwinrt_token token);
 cwinrt_token wgain_gamepad_on_gamepad_removed(WGAIN_Gamepad *self, cwinrt_event_fn fn, void *ctx);
 void wgain_gamepad_off_gamepad_removed(WGAIN_Gamepad *self, cwinrt_token token);
 
-/* Windows.Gaming.Input.IArcadeStick */
-/* Windows.Gaming.Input.IUINavigationController */
-/* Windows.Gaming.Input.IRawGameController2 */
-/* Windows.Gaming.Input.IRawGameController2.get_SimpleHapticsControllers() */
 HRESULT wgain_raw_game_controller_2_get__simple_haptics_controllers(WGAIN_IRawGameController_2 *self, WFOCO_IVectorView_WDEHA_SimpleHapticsController** value);
 
-/* Windows.Gaming.Input.IRawGameController2.get_NonRoamableId() */
 HRESULT wgain_raw_game_controller_2_get__non_roamable_id(WGAIN_IRawGameController_2 *self, cwinrt_hstring *value);
 
-/* Windows.Gaming.Input.IRawGameController2.get_DisplayName() */
 HRESULT wgain_raw_game_controller_2_get__display_name(WGAIN_IRawGameController_2 *self, cwinrt_hstring *value);
 
-/* Windows.Gaming.Input.IRacingWheel */
-/* Windows.Gaming.Input.IUINavigationControllerStatics */
-/* Windows.Gaming.Input.IUINavigationControllerStatics.get_UINavigationControllers() */
 HRESULT wgain_u_i_navigation_controller_statics_get__u_i_navigation_controllers(WGAIN_IUINavigationControllerStatics *self, WFOCO_IVectorView_WGAIN_UINavigationController** value);
 
-/* Windows.Gaming.Input.IRacingWheelStatics */
-/* Windows.Gaming.Input.IRacingWheelStatics.get_RacingWheels() */
 HRESULT wgain_racing_wheel_statics_get__racing_wheels(WGAIN_IRacingWheelStatics *self, WFOCO_IVectorView_WGAIN_RacingWheel** value);
 
-/* Windows.Gaming.Input.IGamepadStatics */
-/* Windows.Gaming.Input.IGamepadStatics.get_Gamepads() */
 HRESULT wgain_gamepad_statics_get__gamepads(WGAIN_IGamepadStatics *self, WFOCO_IVectorView_WGAIN_Gamepad** value);
 
-/* Windows.Gaming.Input.IFlightStick */
-/* Windows.Gaming.Input.IArcadeStickStatics */
-/* Windows.Gaming.Input.IArcadeStickStatics.get_ArcadeSticks() */
 HRESULT wgain_arcade_stick_statics_get__arcade_sticks(WGAIN_IArcadeStickStatics *self, WFOCO_IVectorView_WGAIN_ArcadeStick** value);
 
-/* Windows.Gaming.Input.IHeadset */
-/* Windows.Gaming.Input.IGamepad2 */
-/* Windows.Gaming.Input.IGamepad2.GetButtonLabel(button) */
 HRESULT wgain_gamepad_2_get_button_label(WGAIN_IGamepad_2 *self, WGAIN_GamepadButtons button, WGAIN_GameControllerButtonLabel *out);
 
-/* Windows.Gaming.Input.IGameControllerBatteryInfo */
-/* Windows.Gaming.Input.IGameControllerBatteryInfo.TryGetBatteryReport() */
 HRESULT wgain_game_controller_battery_info_try_get_battery_report(WGAIN_IGameControllerBatteryInfo *self, WDEPO_BatteryReport** out);
 
-/* Windows.Gaming.Input.IRawGameController */
-/* Windows.Gaming.Input.IGamepad */
-/* Windows.Gaming.Input.IGameController */
-/* Windows.Gaming.Input.IGameController.get_Headset() */
 HRESULT wgain_game_controller_get__headset(WGAIN_IGameController *self, WGAIN_Headset** value);
 
-/* Windows.Gaming.Input.IGameController.get_IsWireless() */
 HRESULT wgain_game_controller_get__is_wireless(WGAIN_IGameController *self, BOOL *value);
 
-/* Windows.Gaming.Input.IGameController.get_User() */
 HRESULT wgain_game_controller_get__user(WGAIN_IGameController *self, WSY_User** value);
 
 #endif /* CWINRT_WINDOWS_GAMING_INPUT_H */

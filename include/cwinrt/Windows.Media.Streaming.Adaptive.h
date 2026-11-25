@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WMECO_IMediaSource
 #define CWINRT_FWD_WMECO_IMediaSource
 typedef struct WMECO_IMediaSource WMECO_IMediaSource;
@@ -34,7 +33,6 @@ typedef struct WWEHT_HttpResponseMessage WWEHT_HttpResponseMessage;
 typedef struct WSTST_IBuffer WSTST_IBuffer;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMESTAD_AdaptiveMediaSourceDownloadCompletedEventArgs WMESTAD_AdaptiveMediaSourceDownloadCompletedEventArgs;
 typedef struct WMESTAD_AdaptiveMediaSourceDownloadFailedEventArgs WMESTAD_AdaptiveMediaSourceDownloadFailedEventArgs;
 typedef struct WMESTAD_AdaptiveMediaSourceDownloadRequestedDeferral WMESTAD_AdaptiveMediaSourceDownloadRequestedDeferral;
@@ -78,7 +76,6 @@ typedef struct WMESTAD_IAdaptiveMediaSource_2 WMESTAD_IAdaptiveMediaSource_2;
 typedef struct WMESTAD_IAdaptiveMediaSource_3 WMESTAD_IAdaptiveMediaSource_3;
 typedef struct WMESTAD_IAdaptiveMediaSourceCorrelatedTimes WMESTAD_IAdaptiveMediaSourceCorrelatedTimes;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_Uri
 #define CWINRT_FWD_WF_Uri
 typedef struct WF_Uri WF_Uri;
@@ -193,7 +190,6 @@ typedef enum WMESTAD_AdaptiveMediaSourceCreationStatus {
 } WMESTAD_AdaptiveMediaSourceCreationStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -310,404 +306,261 @@ static const IID CWINRT_IID_WMESTAD_IAdaptiveMediaSource_3 CWINRT_MAYBE_UNUSED =
 static const IID CWINRT_IID_WMESTAD_IAdaptiveMediaSourceCorrelatedTimes CWINRT_MAYBE_UNUSED = { 0x05108787, 0xE032, 0x48E1, { 0xAB, 0x8D, 0x00, 0x2B, 0x0B, 0x30, 0x51, 0xDF } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs */
 HRESULT wmestad_adaptive_media_source_download_completed_event_args_new(WMESTAD_AdaptiveMediaSourceDownloadCompletedEventArgs **out);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs */
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs.get_ResourceType() */
 HRESULT wmestad_adaptive_media_source_download_completed_event_args_get__resource_type(WMESTAD_AdaptiveMediaSourceDownloadCompletedEventArgs *self, WMESTAD_AdaptiveMediaSourceResourceType *value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs.get_ResourceUri() */
 HRESULT wmestad_adaptive_media_source_download_completed_event_args_get__resource_uri(WMESTAD_AdaptiveMediaSourceDownloadCompletedEventArgs *self, WF_Uri** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs.get_ResourceByteRangeOffset() */
 HRESULT wmestad_adaptive_media_source_download_completed_event_args_get__resource_byte_range_offset(WMESTAD_AdaptiveMediaSourceDownloadCompletedEventArgs *self, uint64_t** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs.get_ResourceByteRangeLength() */
 HRESULT wmestad_adaptive_media_source_download_completed_event_args_get__resource_byte_range_length(WMESTAD_AdaptiveMediaSourceDownloadCompletedEventArgs *self, uint64_t** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs.get_HttpResponseMessage() */
 HRESULT wmestad_adaptive_media_source_download_completed_event_args_get__http_response_message(WMESTAD_AdaptiveMediaSourceDownloadCompletedEventArgs *self, WWEHT_HttpResponseMessage** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs.get_RequestId() */
 HRESULT wmestad_adaptive_media_source_download_completed_event_args_get__request_id(WMESTAD_AdaptiveMediaSourceDownloadCompletedEventArgs *self, int32_t *value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs.get_Statistics() */
 HRESULT wmestad_adaptive_media_source_download_completed_event_args_get__statistics(WMESTAD_AdaptiveMediaSourceDownloadCompletedEventArgs *self, WMESTAD_AdaptiveMediaSourceDownloadStatistics** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs.get_Position() */
 HRESULT wmestad_adaptive_media_source_download_completed_event_args_get__position(WMESTAD_AdaptiveMediaSourceDownloadCompletedEventArgs *self, WF_TimeSpan** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs.get_ResourceDuration() */
 HRESULT wmestad_adaptive_media_source_download_completed_event_args_get__resource_duration(WMESTAD_AdaptiveMediaSourceDownloadCompletedEventArgs *self, WF_TimeSpan** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs.get_ResourceContentType() */
 HRESULT wmestad_adaptive_media_source_download_completed_event_args_get__resource_content_type(WMESTAD_AdaptiveMediaSourceDownloadCompletedEventArgs *self, cwinrt_hstring *value);
 
-/* activate Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs */
 HRESULT wmestad_adaptive_media_source_download_failed_event_args_new(WMESTAD_AdaptiveMediaSourceDownloadFailedEventArgs **out);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs */
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs.get_ResourceType() */
 HRESULT wmestad_adaptive_media_source_download_failed_event_args_get__resource_type(WMESTAD_AdaptiveMediaSourceDownloadFailedEventArgs *self, WMESTAD_AdaptiveMediaSourceResourceType *value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs.get_ResourceUri() */
 HRESULT wmestad_adaptive_media_source_download_failed_event_args_get__resource_uri(WMESTAD_AdaptiveMediaSourceDownloadFailedEventArgs *self, WF_Uri** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs.get_ResourceByteRangeOffset() */
 HRESULT wmestad_adaptive_media_source_download_failed_event_args_get__resource_byte_range_offset(WMESTAD_AdaptiveMediaSourceDownloadFailedEventArgs *self, uint64_t** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs.get_ResourceByteRangeLength() */
 HRESULT wmestad_adaptive_media_source_download_failed_event_args_get__resource_byte_range_length(WMESTAD_AdaptiveMediaSourceDownloadFailedEventArgs *self, uint64_t** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs.get_HttpResponseMessage() */
 HRESULT wmestad_adaptive_media_source_download_failed_event_args_get__http_response_message(WMESTAD_AdaptiveMediaSourceDownloadFailedEventArgs *self, WWEHT_HttpResponseMessage** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs.get_RequestId() */
 HRESULT wmestad_adaptive_media_source_download_failed_event_args_get__request_id(WMESTAD_AdaptiveMediaSourceDownloadFailedEventArgs *self, int32_t *value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs.get_ExtendedError() */
 HRESULT wmestad_adaptive_media_source_download_failed_event_args_get__extended_error(WMESTAD_AdaptiveMediaSourceDownloadFailedEventArgs *self, HRESULT *value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs.get_Statistics() */
 HRESULT wmestad_adaptive_media_source_download_failed_event_args_get__statistics(WMESTAD_AdaptiveMediaSourceDownloadFailedEventArgs *self, WMESTAD_AdaptiveMediaSourceDownloadStatistics** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs.get_Position() */
 HRESULT wmestad_adaptive_media_source_download_failed_event_args_get__position(WMESTAD_AdaptiveMediaSourceDownloadFailedEventArgs *self, WF_TimeSpan** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs.get_ResourceDuration() */
 HRESULT wmestad_adaptive_media_source_download_failed_event_args_get__resource_duration(WMESTAD_AdaptiveMediaSourceDownloadFailedEventArgs *self, WF_TimeSpan** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs.get_ResourceContentType() */
 HRESULT wmestad_adaptive_media_source_download_failed_event_args_get__resource_content_type(WMESTAD_AdaptiveMediaSourceDownloadFailedEventArgs *self, cwinrt_hstring *value);
 
-/* activate Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedDeferral */
 HRESULT wmestad_adaptive_media_source_download_requested_deferral_new(WMESTAD_AdaptiveMediaSourceDownloadRequestedDeferral **out);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedDeferral */
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedDeferral.Complete() */
 HRESULT wmestad_adaptive_media_source_download_requested_deferral_complete(WMESTAD_AdaptiveMediaSourceDownloadRequestedDeferral *self);
 
-/* activate Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs */
 HRESULT wmestad_adaptive_media_source_download_requested_event_args_new(WMESTAD_AdaptiveMediaSourceDownloadRequestedEventArgs **out);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs */
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs.get_ResourceType() */
 HRESULT wmestad_adaptive_media_source_download_requested_event_args_get__resource_type(WMESTAD_AdaptiveMediaSourceDownloadRequestedEventArgs *self, WMESTAD_AdaptiveMediaSourceResourceType *value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs.get_ResourceUri() */
 HRESULT wmestad_adaptive_media_source_download_requested_event_args_get__resource_uri(WMESTAD_AdaptiveMediaSourceDownloadRequestedEventArgs *self, WF_Uri** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs.get_ResourceByteRangeOffset() */
 HRESULT wmestad_adaptive_media_source_download_requested_event_args_get__resource_byte_range_offset(WMESTAD_AdaptiveMediaSourceDownloadRequestedEventArgs *self, uint64_t** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs.get_ResourceByteRangeLength() */
 HRESULT wmestad_adaptive_media_source_download_requested_event_args_get__resource_byte_range_length(WMESTAD_AdaptiveMediaSourceDownloadRequestedEventArgs *self, uint64_t** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs.get_Result() */
 HRESULT wmestad_adaptive_media_source_download_requested_event_args_get__result(WMESTAD_AdaptiveMediaSourceDownloadRequestedEventArgs *self, WMESTAD_AdaptiveMediaSourceDownloadResult** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs.GetDeferral() */
 HRESULT wmestad_adaptive_media_source_download_requested_event_args_get_deferral(WMESTAD_AdaptiveMediaSourceDownloadRequestedEventArgs *self, WMESTAD_AdaptiveMediaSourceDownloadRequestedDeferral** out);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs.get_RequestId() */
 HRESULT wmestad_adaptive_media_source_download_requested_event_args_get__request_id(WMESTAD_AdaptiveMediaSourceDownloadRequestedEventArgs *self, int32_t *value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs.get_Position() */
 HRESULT wmestad_adaptive_media_source_download_requested_event_args_get__position(WMESTAD_AdaptiveMediaSourceDownloadRequestedEventArgs *self, WF_TimeSpan** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs.get_ResourceDuration() */
 HRESULT wmestad_adaptive_media_source_download_requested_event_args_get__resource_duration(WMESTAD_AdaptiveMediaSourceDownloadRequestedEventArgs *self, WF_TimeSpan** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs.get_ResourceContentType() */
 HRESULT wmestad_adaptive_media_source_download_requested_event_args_get__resource_content_type(WMESTAD_AdaptiveMediaSourceDownloadRequestedEventArgs *self, cwinrt_hstring *value);
 
-/* activate Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult */
 HRESULT wmestad_adaptive_media_source_download_result_new(WMESTAD_AdaptiveMediaSourceDownloadResult **out);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult */
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult.get_ResourceUri() */
 HRESULT wmestad_adaptive_media_source_download_result_get__resource_uri(WMESTAD_AdaptiveMediaSourceDownloadResult *self, WF_Uri** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult.put_ResourceUri() */
 HRESULT wmestad_adaptive_media_source_download_result_put__resource_uri(WMESTAD_AdaptiveMediaSourceDownloadResult *self, WF_Uri* value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult.get_InputStream() */
 HRESULT wmestad_adaptive_media_source_download_result_get__input_stream(WMESTAD_AdaptiveMediaSourceDownloadResult *self, WSTST_IInputStream** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult.put_InputStream() */
 HRESULT wmestad_adaptive_media_source_download_result_put__input_stream(WMESTAD_AdaptiveMediaSourceDownloadResult *self, WSTST_IInputStream* value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult.get_Buffer() */
 HRESULT wmestad_adaptive_media_source_download_result_get__buffer(WMESTAD_AdaptiveMediaSourceDownloadResult *self, WSTST_IBuffer** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult.put_Buffer() */
 HRESULT wmestad_adaptive_media_source_download_result_put__buffer(WMESTAD_AdaptiveMediaSourceDownloadResult *self, WSTST_IBuffer* value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult.get_ContentType() */
 HRESULT wmestad_adaptive_media_source_download_result_get__content_type(WMESTAD_AdaptiveMediaSourceDownloadResult *self, cwinrt_hstring *value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult.put_ContentType() */
 HRESULT wmestad_adaptive_media_source_download_result_put__content_type(WMESTAD_AdaptiveMediaSourceDownloadResult *self, cwinrt_hstring value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult.get_ExtendedStatus() */
 HRESULT wmestad_adaptive_media_source_download_result_get__extended_status(WMESTAD_AdaptiveMediaSourceDownloadResult *self, uint32_t *value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult.put_ExtendedStatus() */
 HRESULT wmestad_adaptive_media_source_download_result_put__extended_status(WMESTAD_AdaptiveMediaSourceDownloadResult *self, uint32_t value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult.get_ResourceByteRangeOffset() */
 HRESULT wmestad_adaptive_media_source_download_result_get__resource_byte_range_offset(WMESTAD_AdaptiveMediaSourceDownloadResult *self, uint64_t** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult.put_ResourceByteRangeOffset() */
 HRESULT wmestad_adaptive_media_source_download_result_put__resource_byte_range_offset(WMESTAD_AdaptiveMediaSourceDownloadResult *self, uint64_t* value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult.get_ResourceByteRangeLength() */
 HRESULT wmestad_adaptive_media_source_download_result_get__resource_byte_range_length(WMESTAD_AdaptiveMediaSourceDownloadResult *self, uint64_t** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult.put_ResourceByteRangeLength() */
 HRESULT wmestad_adaptive_media_source_download_result_put__resource_byte_range_length(WMESTAD_AdaptiveMediaSourceDownloadResult *self, uint64_t* value);
 
-/* activate Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadStatistics */
 HRESULT wmestad_adaptive_media_source_download_statistics_new(WMESTAD_AdaptiveMediaSourceDownloadStatistics **out);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadStatistics */
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadStatistics.get_ContentBytesReceivedCount() */
 HRESULT wmestad_adaptive_media_source_download_statistics_get__content_bytes_received_count(WMESTAD_AdaptiveMediaSourceDownloadStatistics *self, uint64_t *value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadStatistics.get_TimeToHeadersReceived() */
 HRESULT wmestad_adaptive_media_source_download_statistics_get__time_to_headers_received(WMESTAD_AdaptiveMediaSourceDownloadStatistics *self, WF_TimeSpan** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadStatistics.get_TimeToFirstByteReceived() */
 HRESULT wmestad_adaptive_media_source_download_statistics_get__time_to_first_byte_received(WMESTAD_AdaptiveMediaSourceDownloadStatistics *self, WF_TimeSpan** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadStatistics.get_TimeToLastByteReceived() */
 HRESULT wmestad_adaptive_media_source_download_statistics_get__time_to_last_byte_received(WMESTAD_AdaptiveMediaSourceDownloadStatistics *self, WF_TimeSpan** value);
 
-/* activate Windows.Media.Streaming.Adaptive.AdaptiveMediaSourcePlaybackBitrateChangedEventArgs */
 HRESULT wmestad_adaptive_media_source_playback_bitrate_changed_event_args_new(WMESTAD_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs **out);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourcePlaybackBitrateChangedEventArgs */
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourcePlaybackBitrateChangedEventArgs.get_OldValue() */
 HRESULT wmestad_adaptive_media_source_playback_bitrate_changed_event_args_get__old_value(WMESTAD_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs *self, uint32_t *value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourcePlaybackBitrateChangedEventArgs.get_NewValue() */
 HRESULT wmestad_adaptive_media_source_playback_bitrate_changed_event_args_get__new_value(WMESTAD_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs *self, uint32_t *value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourcePlaybackBitrateChangedEventArgs.get_AudioOnly() */
 HRESULT wmestad_adaptive_media_source_playback_bitrate_changed_event_args_get__audio_only(WMESTAD_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs *self, BOOL *value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceStatics */
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceStatics.IsContentTypeSupported(contentType) */
 HRESULT wmestad_adaptive_media_source_statics_is_content_type_supported(WMESTAD_IAdaptiveMediaSourceStatics *self, cwinrt_hstring contentType, BOOL *out);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceStatics.CreateFromUriAsync(uri) */
 HRESULT wmestad_adaptive_media_source_statics_create_from_uri_async(WMESTAD_IAdaptiveMediaSourceStatics *self, WF_Uri* uri, WF_IAsyncOperation_WMESTAD_AdaptiveMediaSourceCreationResult** out);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceStatics.CreateFromUriAsync(uri, httpClient) */
 HRESULT wmestad_adaptive_media_source_statics_create_from_uri_async_p_p_p(WMESTAD_IAdaptiveMediaSourceStatics *self, WF_Uri* uri, WWEHT_HttpClient* httpClient, WF_IAsyncOperation_WMESTAD_AdaptiveMediaSourceCreationResult** out);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceStatics.CreateFromStreamAsync(stream, uri, contentType) */
 HRESULT wmestad_adaptive_media_source_statics_create_from_stream_async(WMESTAD_IAdaptiveMediaSourceStatics *self, WSTST_IInputStream* stream, WF_Uri* uri, cwinrt_hstring contentType, WF_IAsyncOperation_WMESTAD_AdaptiveMediaSourceCreationResult** out);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceStatics.CreateFromStreamAsync(stream, uri, contentType, httpClient) */
 HRESULT wmestad_adaptive_media_source_statics_create_from_stream_async_p_p_str_p_p(WMESTAD_IAdaptiveMediaSourceStatics *self, WSTST_IInputStream* stream, WF_Uri* uri, cwinrt_hstring contentType, WWEHT_HttpClient* httpClient, WF_IAsyncOperation_WMESTAD_AdaptiveMediaSourceCreationResult** out);
 
-/* activate Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadBitrateChangedEventArgs */
 HRESULT wmestad_adaptive_media_source_download_bitrate_changed_event_args_new(WMESTAD_AdaptiveMediaSourceDownloadBitrateChangedEventArgs **out);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadBitrateChangedEventArgs */
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadBitrateChangedEventArgs.get_OldValue() */
 HRESULT wmestad_adaptive_media_source_download_bitrate_changed_event_args_get__old_value(WMESTAD_AdaptiveMediaSourceDownloadBitrateChangedEventArgs *self, uint32_t *value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadBitrateChangedEventArgs.get_NewValue() */
 HRESULT wmestad_adaptive_media_source_download_bitrate_changed_event_args_get__new_value(WMESTAD_AdaptiveMediaSourceDownloadBitrateChangedEventArgs *self, uint32_t *value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadBitrateChangedEventArgs.get_Reason() */
 HRESULT wmestad_adaptive_media_source_download_bitrate_changed_event_args_get__reason(WMESTAD_AdaptiveMediaSourceDownloadBitrateChangedEventArgs *self, WMESTAD_AdaptiveMediaSourceDownloadBitrateChangedReason *value);
 
-/* activate Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnostics */
 HRESULT wmestad_adaptive_media_source_diagnostics_new(WMESTAD_AdaptiveMediaSourceDiagnostics **out);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnostics */
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmestad_adaptive_media_source_diagnostics_on_diagnostic_available(WMESTAD_AdaptiveMediaSourceDiagnostics *self, cwinrt_event_fn fn, void *ctx);
 void wmestad_adaptive_media_source_diagnostics_off_diagnostic_available(WMESTAD_AdaptiveMediaSourceDiagnostics *self, cwinrt_token token);
 
-/* activate Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs */
 HRESULT wmestad_adaptive_media_source_diagnostic_available_event_args_new(WMESTAD_AdaptiveMediaSourceDiagnosticAvailableEventArgs **out);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs */
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs.get_DiagnosticType() */
 HRESULT wmestad_adaptive_media_source_diagnostic_available_event_args_get__diagnostic_type(WMESTAD_AdaptiveMediaSourceDiagnosticAvailableEventArgs *self, WMESTAD_AdaptiveMediaSourceDiagnosticType *value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs.get_RequestId() */
 HRESULT wmestad_adaptive_media_source_diagnostic_available_event_args_get__request_id(WMESTAD_AdaptiveMediaSourceDiagnosticAvailableEventArgs *self, int32_t** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs.get_Position() */
 HRESULT wmestad_adaptive_media_source_diagnostic_available_event_args_get__position(WMESTAD_AdaptiveMediaSourceDiagnosticAvailableEventArgs *self, WF_TimeSpan** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs.get_SegmentId() */
 HRESULT wmestad_adaptive_media_source_diagnostic_available_event_args_get__segment_id(WMESTAD_AdaptiveMediaSourceDiagnosticAvailableEventArgs *self, uint64_t** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs.get_ResourceType() */
 HRESULT wmestad_adaptive_media_source_diagnostic_available_event_args_get__resource_type(WMESTAD_AdaptiveMediaSourceDiagnosticAvailableEventArgs *self, WMESTAD_AdaptiveMediaSourceResourceType** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs.get_ResourceUri() */
 HRESULT wmestad_adaptive_media_source_diagnostic_available_event_args_get__resource_uri(WMESTAD_AdaptiveMediaSourceDiagnosticAvailableEventArgs *self, WF_Uri** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs.get_ResourceByteRangeOffset() */
 HRESULT wmestad_adaptive_media_source_diagnostic_available_event_args_get__resource_byte_range_offset(WMESTAD_AdaptiveMediaSourceDiagnosticAvailableEventArgs *self, uint64_t** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs.get_ResourceByteRangeLength() */
 HRESULT wmestad_adaptive_media_source_diagnostic_available_event_args_get__resource_byte_range_length(WMESTAD_AdaptiveMediaSourceDiagnosticAvailableEventArgs *self, uint64_t** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs.get_Bitrate() */
 HRESULT wmestad_adaptive_media_source_diagnostic_available_event_args_get__bitrate(WMESTAD_AdaptiveMediaSourceDiagnosticAvailableEventArgs *self, uint32_t** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs.get_ExtendedError() */
 HRESULT wmestad_adaptive_media_source_diagnostic_available_event_args_get__extended_error(WMESTAD_AdaptiveMediaSourceDiagnosticAvailableEventArgs *self, HRESULT *value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs.get_ResourceDuration() */
 HRESULT wmestad_adaptive_media_source_diagnostic_available_event_args_get__resource_duration(WMESTAD_AdaptiveMediaSourceDiagnosticAvailableEventArgs *self, WF_TimeSpan** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs.get_ResourceContentType() */
 HRESULT wmestad_adaptive_media_source_diagnostic_available_event_args_get__resource_content_type(WMESTAD_AdaptiveMediaSourceDiagnosticAvailableEventArgs *self, cwinrt_hstring *value);
 
-/* activate Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult */
 HRESULT wmestad_adaptive_media_source_creation_result_new(WMESTAD_AdaptiveMediaSourceCreationResult **out);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult */
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult.get_Status() */
 HRESULT wmestad_adaptive_media_source_creation_result_get__status(WMESTAD_AdaptiveMediaSourceCreationResult *self, WMESTAD_AdaptiveMediaSourceCreationStatus *value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult.get_MediaSource() */
 HRESULT wmestad_adaptive_media_source_creation_result_get__media_source(WMESTAD_AdaptiveMediaSourceCreationResult *self, WMESTAD_AdaptiveMediaSource** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult.get_HttpResponseMessage() */
 HRESULT wmestad_adaptive_media_source_creation_result_get__http_response_message(WMESTAD_AdaptiveMediaSourceCreationResult *self, WWEHT_HttpResponseMessage** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult.get_ExtendedError() */
 HRESULT wmestad_adaptive_media_source_creation_result_get__extended_error(WMESTAD_AdaptiveMediaSourceCreationResult *self, HRESULT *value);
 
-/* activate Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceAdvancedSettings */
 HRESULT wmestad_adaptive_media_source_advanced_settings_new(WMESTAD_AdaptiveMediaSourceAdvancedSettings **out);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceAdvancedSettings */
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceAdvancedSettings.get_AllSegmentsIndependent() */
 HRESULT wmestad_adaptive_media_source_advanced_settings_get__all_segments_independent(WMESTAD_AdaptiveMediaSourceAdvancedSettings *self, BOOL *value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceAdvancedSettings.put_AllSegmentsIndependent() */
 HRESULT wmestad_adaptive_media_source_advanced_settings_put__all_segments_independent(WMESTAD_AdaptiveMediaSourceAdvancedSettings *self, BOOL value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceAdvancedSettings.get_DesiredBitrateHeadroomRatio() */
 HRESULT wmestad_adaptive_media_source_advanced_settings_get__desired_bitrate_headroom_ratio(WMESTAD_AdaptiveMediaSourceAdvancedSettings *self, double** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceAdvancedSettings.put_DesiredBitrateHeadroomRatio() */
 HRESULT wmestad_adaptive_media_source_advanced_settings_put__desired_bitrate_headroom_ratio(WMESTAD_AdaptiveMediaSourceAdvancedSettings *self, double* value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceAdvancedSettings.get_BitrateDowngradeTriggerRatio() */
 HRESULT wmestad_adaptive_media_source_advanced_settings_get__bitrate_downgrade_trigger_ratio(WMESTAD_AdaptiveMediaSourceAdvancedSettings *self, double** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceAdvancedSettings.put_BitrateDowngradeTriggerRatio() */
 HRESULT wmestad_adaptive_media_source_advanced_settings_put__bitrate_downgrade_trigger_ratio(WMESTAD_AdaptiveMediaSourceAdvancedSettings *self, double* value);
 
-/* activate Windows.Media.Streaming.Adaptive.AdaptiveMediaSource */
 HRESULT wmestad_adaptive_media_source_new(WMESTAD_AdaptiveMediaSource **out);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource */
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource.get_IsLive() */
 HRESULT wmestad_adaptive_media_source_get__is_live(WMESTAD_AdaptiveMediaSource *self, BOOL *value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource.get_DesiredLiveOffset() */
 HRESULT wmestad_adaptive_media_source_get__desired_live_offset(WMESTAD_AdaptiveMediaSource *self, WF_TimeSpan *value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource.put_DesiredLiveOffset() */
 HRESULT wmestad_adaptive_media_source_put__desired_live_offset(WMESTAD_AdaptiveMediaSource *self, WF_TimeSpan value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource.get_InitialBitrate() */
 HRESULT wmestad_adaptive_media_source_get__initial_bitrate(WMESTAD_AdaptiveMediaSource *self, uint32_t *value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource.put_InitialBitrate() */
 HRESULT wmestad_adaptive_media_source_put__initial_bitrate(WMESTAD_AdaptiveMediaSource *self, uint32_t value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource.get_CurrentDownloadBitrate() */
 HRESULT wmestad_adaptive_media_source_get__current_download_bitrate(WMESTAD_AdaptiveMediaSource *self, uint32_t *value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource.get_CurrentPlaybackBitrate() */
 HRESULT wmestad_adaptive_media_source_get__current_playback_bitrate(WMESTAD_AdaptiveMediaSource *self, uint32_t *value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource.get_AvailableBitrates() */
 HRESULT wmestad_adaptive_media_source_get__available_bitrates(WMESTAD_AdaptiveMediaSource *self, WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource.get_DesiredMinBitrate() */
 HRESULT wmestad_adaptive_media_source_get__desired_min_bitrate(WMESTAD_AdaptiveMediaSource *self, uint32_t** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource.put_DesiredMinBitrate() */
 HRESULT wmestad_adaptive_media_source_put__desired_min_bitrate(WMESTAD_AdaptiveMediaSource *self, uint32_t* value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource.get_DesiredMaxBitrate() */
 HRESULT wmestad_adaptive_media_source_get__desired_max_bitrate(WMESTAD_AdaptiveMediaSource *self, uint32_t** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource.put_DesiredMaxBitrate() */
 HRESULT wmestad_adaptive_media_source_put__desired_max_bitrate(WMESTAD_AdaptiveMediaSource *self, uint32_t* value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource.get_AudioOnlyPlayback() */
 HRESULT wmestad_adaptive_media_source_get__audio_only_playback(WMESTAD_AdaptiveMediaSource *self, BOOL *value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource.get_InboundBitsPerSecond() */
 HRESULT wmestad_adaptive_media_source_get__inbound_bits_per_second(WMESTAD_AdaptiveMediaSource *self, uint64_t *value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource.get_InboundBitsPerSecondWindow() */
 HRESULT wmestad_adaptive_media_source_get__inbound_bits_per_second_window(WMESTAD_AdaptiveMediaSource *self, WF_TimeSpan *value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource.put_InboundBitsPerSecondWindow() */
 HRESULT wmestad_adaptive_media_source_put__inbound_bits_per_second_window(WMESTAD_AdaptiveMediaSource *self, WF_TimeSpan value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource.get_AdvancedSettings() */
 HRESULT wmestad_adaptive_media_source_get__advanced_settings(WMESTAD_AdaptiveMediaSource *self, WMESTAD_AdaptiveMediaSourceAdvancedSettings** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource.get_MinLiveOffset() */
 HRESULT wmestad_adaptive_media_source_get__min_live_offset(WMESTAD_AdaptiveMediaSource *self, WF_TimeSpan** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource.get_MaxSeekableWindowSize() */
 HRESULT wmestad_adaptive_media_source_get__max_seekable_window_size(WMESTAD_AdaptiveMediaSource *self, WF_TimeSpan** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource.get_DesiredSeekableWindowSize() */
 HRESULT wmestad_adaptive_media_source_get__desired_seekable_window_size(WMESTAD_AdaptiveMediaSource *self, WF_TimeSpan** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource.put_DesiredSeekableWindowSize() */
 HRESULT wmestad_adaptive_media_source_put__desired_seekable_window_size(WMESTAD_AdaptiveMediaSource *self, WF_TimeSpan* value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource.get_Diagnostics() */
 HRESULT wmestad_adaptive_media_source_get__diagnostics(WMESTAD_AdaptiveMediaSource *self, WMESTAD_AdaptiveMediaSourceDiagnostics** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource.GetCorrelatedTimes() */
 HRESULT wmestad_adaptive_media_source_get_correlated_times(WMESTAD_AdaptiveMediaSource *self, WMESTAD_AdaptiveMediaSourceCorrelatedTimes** out);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource.Close() */
 HRESULT wmestad_adaptive_media_source_close(WMESTAD_AdaptiveMediaSource *self);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource.IsContentTypeSupported(contentType) */
 HRESULT wmestad_adaptive_media_source_is_content_type_supported(cwinrt_hstring contentType, BOOL *out);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource.CreateFromUriAsync(uri) */
 HRESULT wmestad_adaptive_media_source_create_from_uri_async(WF_Uri* uri, WF_IAsyncOperation_WMESTAD_AdaptiveMediaSourceCreationResult** out);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource.CreateFromUriAsync(uri, httpClient) */
 HRESULT wmestad_adaptive_media_source_create_from_uri_async_p_p_p(WF_Uri* uri, WWEHT_HttpClient* httpClient, WF_IAsyncOperation_WMESTAD_AdaptiveMediaSourceCreationResult** out);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource.CreateFromStreamAsync(stream, uri, contentType) */
 HRESULT wmestad_adaptive_media_source_create_from_stream_async(WSTST_IInputStream* stream, WF_Uri* uri, cwinrt_hstring contentType, WF_IAsyncOperation_WMESTAD_AdaptiveMediaSourceCreationResult** out);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSource.CreateFromStreamAsync(stream, uri, contentType, httpClient) */
 HRESULT wmestad_adaptive_media_source_create_from_stream_async_p_p_str_p_p(WSTST_IInputStream* stream, WF_Uri* uri, cwinrt_hstring contentType, WWEHT_HttpClient* httpClient, WF_IAsyncOperation_WMESTAD_AdaptiveMediaSourceCreationResult** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmestad_adaptive_media_source_on_download_bitrate_changed(WMESTAD_AdaptiveMediaSource *self, cwinrt_event_fn fn, void *ctx);
@@ -725,137 +578,74 @@ void wmestad_adaptive_media_source_off_download_completed(WMESTAD_AdaptiveMediaS
 cwinrt_token wmestad_adaptive_media_source_on_download_failed(WMESTAD_AdaptiveMediaSource *self, cwinrt_event_fn fn, void *ctx);
 void wmestad_adaptive_media_source_off_download_failed(WMESTAD_AdaptiveMediaSource *self, cwinrt_token token);
 
-/* activate Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCorrelatedTimes */
 HRESULT wmestad_adaptive_media_source_correlated_times_new(WMESTAD_AdaptiveMediaSourceCorrelatedTimes **out);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCorrelatedTimes */
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCorrelatedTimes.get_Position() */
 HRESULT wmestad_adaptive_media_source_correlated_times_get__position(WMESTAD_AdaptiveMediaSourceCorrelatedTimes *self, WF_TimeSpan** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCorrelatedTimes.get_PresentationTimeStamp() */
 HRESULT wmestad_adaptive_media_source_correlated_times_get__presentation_time_stamp(WMESTAD_AdaptiveMediaSourceCorrelatedTimes *self, WF_TimeSpan** value);
 
-/* Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCorrelatedTimes.get_ProgramDateTime() */
 HRESULT wmestad_adaptive_media_source_correlated_times_get__program_date_time(WMESTAD_AdaptiveMediaSourceCorrelatedTimes *self, WF_DateTime** value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadCompletedEventArgs */
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadCompletedEventArgs2 */
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadCompletedEventArgs2.get_RequestId() */
 HRESULT wmestad_adaptive_media_source_download_completed_event_args_2_get__request_id(WMESTAD_IAdaptiveMediaSourceDownloadCompletedEventArgs_2 *self, int32_t *value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadCompletedEventArgs2.get_Statistics() */
 HRESULT wmestad_adaptive_media_source_download_completed_event_args_2_get__statistics(WMESTAD_IAdaptiveMediaSourceDownloadCompletedEventArgs_2 *self, WMESTAD_AdaptiveMediaSourceDownloadStatistics** value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadCompletedEventArgs2.get_Position() */
 HRESULT wmestad_adaptive_media_source_download_completed_event_args_2_get__position(WMESTAD_IAdaptiveMediaSourceDownloadCompletedEventArgs_2 *self, WF_TimeSpan** value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadCompletedEventArgs3 */
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadCompletedEventArgs3.get_ResourceDuration() */
 HRESULT wmestad_adaptive_media_source_download_completed_event_args_3_get__resource_duration(WMESTAD_IAdaptiveMediaSourceDownloadCompletedEventArgs_3 *self, WF_TimeSpan** value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadCompletedEventArgs3.get_ResourceContentType() */
 HRESULT wmestad_adaptive_media_source_download_completed_event_args_3_get__resource_content_type(WMESTAD_IAdaptiveMediaSourceDownloadCompletedEventArgs_3 *self, cwinrt_hstring *value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadFailedEventArgs */
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadFailedEventArgs2 */
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadFailedEventArgs2.get_RequestId() */
 HRESULT wmestad_adaptive_media_source_download_failed_event_args_2_get__request_id(WMESTAD_IAdaptiveMediaSourceDownloadFailedEventArgs_2 *self, int32_t *value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadFailedEventArgs2.get_ExtendedError() */
 HRESULT wmestad_adaptive_media_source_download_failed_event_args_2_get__extended_error(WMESTAD_IAdaptiveMediaSourceDownloadFailedEventArgs_2 *self, HRESULT *value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadFailedEventArgs2.get_Statistics() */
 HRESULT wmestad_adaptive_media_source_download_failed_event_args_2_get__statistics(WMESTAD_IAdaptiveMediaSourceDownloadFailedEventArgs_2 *self, WMESTAD_AdaptiveMediaSourceDownloadStatistics** value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadFailedEventArgs2.get_Position() */
 HRESULT wmestad_adaptive_media_source_download_failed_event_args_2_get__position(WMESTAD_IAdaptiveMediaSourceDownloadFailedEventArgs_2 *self, WF_TimeSpan** value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadFailedEventArgs3 */
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadFailedEventArgs3.get_ResourceDuration() */
 HRESULT wmestad_adaptive_media_source_download_failed_event_args_3_get__resource_duration(WMESTAD_IAdaptiveMediaSourceDownloadFailedEventArgs_3 *self, WF_TimeSpan** value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadFailedEventArgs3.get_ResourceContentType() */
 HRESULT wmestad_adaptive_media_source_download_failed_event_args_3_get__resource_content_type(WMESTAD_IAdaptiveMediaSourceDownloadFailedEventArgs_3 *self, cwinrt_hstring *value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadRequestedDeferral */
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadRequestedEventArgs */
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadRequestedEventArgs2 */
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadRequestedEventArgs2.get_RequestId() */
 HRESULT wmestad_adaptive_media_source_download_requested_event_args_2_get__request_id(WMESTAD_IAdaptiveMediaSourceDownloadRequestedEventArgs_2 *self, int32_t *value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadRequestedEventArgs2.get_Position() */
 HRESULT wmestad_adaptive_media_source_download_requested_event_args_2_get__position(WMESTAD_IAdaptiveMediaSourceDownloadRequestedEventArgs_2 *self, WF_TimeSpan** value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadRequestedEventArgs3 */
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadRequestedEventArgs3.get_ResourceDuration() */
 HRESULT wmestad_adaptive_media_source_download_requested_event_args_3_get__resource_duration(WMESTAD_IAdaptiveMediaSourceDownloadRequestedEventArgs_3 *self, WF_TimeSpan** value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadRequestedEventArgs3.get_ResourceContentType() */
 HRESULT wmestad_adaptive_media_source_download_requested_event_args_3_get__resource_content_type(WMESTAD_IAdaptiveMediaSourceDownloadRequestedEventArgs_3 *self, cwinrt_hstring *value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadResult */
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadResult2 */
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadResult2.get_ResourceByteRangeOffset() */
 HRESULT wmestad_adaptive_media_source_download_result_2_get__resource_byte_range_offset(WMESTAD_IAdaptiveMediaSourceDownloadResult_2 *self, uint64_t** value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadResult2.put_ResourceByteRangeOffset() */
 HRESULT wmestad_adaptive_media_source_download_result_2_put__resource_byte_range_offset(WMESTAD_IAdaptiveMediaSourceDownloadResult_2 *self, uint64_t* value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadResult2.get_ResourceByteRangeLength() */
 HRESULT wmestad_adaptive_media_source_download_result_2_get__resource_byte_range_length(WMESTAD_IAdaptiveMediaSourceDownloadResult_2 *self, uint64_t** value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadResult2.put_ResourceByteRangeLength() */
 HRESULT wmestad_adaptive_media_source_download_result_2_put__resource_byte_range_length(WMESTAD_IAdaptiveMediaSourceDownloadResult_2 *self, uint64_t* value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadStatistics */
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourcePlaybackBitrateChangedEventArgs */
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadBitrateChangedEventArgs */
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadBitrateChangedEventArgs2 */
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadBitrateChangedEventArgs2.get_Reason() */
 HRESULT wmestad_adaptive_media_source_download_bitrate_changed_event_args_2_get__reason(WMESTAD_IAdaptiveMediaSourceDownloadBitrateChangedEventArgs_2 *self, WMESTAD_AdaptiveMediaSourceDownloadBitrateChangedReason *value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnostics */
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnosticAvailableEventArgs */
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnosticAvailableEventArgs2 */
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnosticAvailableEventArgs2.get_ExtendedError() */
 HRESULT wmestad_adaptive_media_source_diagnostic_available_event_args_2_get__extended_error(WMESTAD_IAdaptiveMediaSourceDiagnosticAvailableEventArgs_2 *self, HRESULT *value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnosticAvailableEventArgs3 */
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnosticAvailableEventArgs3.get_ResourceDuration() */
 HRESULT wmestad_adaptive_media_source_diagnostic_available_event_args_3_get__resource_duration(WMESTAD_IAdaptiveMediaSourceDiagnosticAvailableEventArgs_3 *self, WF_TimeSpan** value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnosticAvailableEventArgs3.get_ResourceContentType() */
 HRESULT wmestad_adaptive_media_source_diagnostic_available_event_args_3_get__resource_content_type(WMESTAD_IAdaptiveMediaSourceDiagnosticAvailableEventArgs_3 *self, cwinrt_hstring *value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceCreationResult */
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceCreationResult2 */
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceCreationResult2.get_ExtendedError() */
 HRESULT wmestad_adaptive_media_source_creation_result_2_get__extended_error(WMESTAD_IAdaptiveMediaSourceCreationResult_2 *self, HRESULT *value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceAdvancedSettings */
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource */
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource2 */
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource2.get_AdvancedSettings() */
 HRESULT wmestad_adaptive_media_source_2_get__advanced_settings(WMESTAD_IAdaptiveMediaSource_2 *self, WMESTAD_AdaptiveMediaSourceAdvancedSettings** value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource3 */
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource3.get_MinLiveOffset() */
 HRESULT wmestad_adaptive_media_source_3_get__min_live_offset(WMESTAD_IAdaptiveMediaSource_3 *self, WF_TimeSpan** value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource3.get_MaxSeekableWindowSize() */
 HRESULT wmestad_adaptive_media_source_3_get__max_seekable_window_size(WMESTAD_IAdaptiveMediaSource_3 *self, WF_TimeSpan** value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource3.get_DesiredSeekableWindowSize() */
 HRESULT wmestad_adaptive_media_source_3_get__desired_seekable_window_size(WMESTAD_IAdaptiveMediaSource_3 *self, WF_TimeSpan** value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource3.put_DesiredSeekableWindowSize() */
 HRESULT wmestad_adaptive_media_source_3_put__desired_seekable_window_size(WMESTAD_IAdaptiveMediaSource_3 *self, WF_TimeSpan* value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource3.get_Diagnostics() */
 HRESULT wmestad_adaptive_media_source_3_get__diagnostics(WMESTAD_IAdaptiveMediaSource_3 *self, WMESTAD_AdaptiveMediaSourceDiagnostics** value);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource3.GetCorrelatedTimes() */
 HRESULT wmestad_adaptive_media_source_3_get_correlated_times(WMESTAD_IAdaptiveMediaSource_3 *self, WMESTAD_AdaptiveMediaSourceCorrelatedTimes** out);
 
-/* Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceCorrelatedTimes */
 #endif /* CWINRT_WINDOWS_MEDIA_STREAMING_ADAPTIVE_H */

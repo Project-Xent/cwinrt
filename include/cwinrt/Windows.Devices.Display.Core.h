@@ -17,13 +17,11 @@
 #include <cwinrt/Windows.Devices.Display.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
 #endif
 
-/* Windows.Graphics integer value types (ABI layout) */
 #ifndef CWINRT_ABI_WG_SIZEINT32
 #define CWINRT_ABI_WG_SIZEINT32
 typedef struct WG_SizeInt32 { int32_t Width; int32_t Height; } WG_SizeInt32;
@@ -37,7 +35,6 @@ typedef struct WG_PointInt32 { int32_t X; int32_t Y; } WG_PointInt32;
 typedef struct WG_RectInt32 { int32_t X; int32_t Y; int32_t Width; int32_t Height; } WG_RectInt32;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDEDICO_DisplayMuxDevice WDEDICO_DisplayMuxDevice;
 typedef struct WDEDICO_DisplayPath WDEDICO_DisplayPath;
 typedef struct WDEDICO_DisplayPrimaryDescription WDEDICO_DisplayPrimaryDescription;
@@ -104,7 +101,6 @@ typedef struct WDEDICO_IDisplayDevice_2 WDEDICO_IDisplayDevice_2;
 typedef struct WDEDICO_IDisplayDeviceRenderAdapter WDEDICO_IDisplayDeviceRenderAdapter;
 typedef struct WDEDICO_IDisplayFence WDEDICO_IDisplayFence;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IVectorView_WDEDICO_DisplayTarget
 #define CWINRT_FWD_WFOCO_IVectorView_WDEDICO_DisplayTarget
 typedef struct WFOCO_IVectorView_WDEDICO_DisplayTarget WFOCO_IVectorView_WDEDICO_DisplayTarget;
@@ -584,7 +580,6 @@ struct WDEDICO_DisplayPresentationRate {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -753,211 +748,139 @@ static const IID CWINRT_IID_WDEDICO_IDisplayDeviceRenderAdapter CWINRT_MAYBE_UNU
 static const IID CWINRT_IID_WDEDICO_IDisplayFence CWINRT_MAYBE_UNUSED = { 0x04DCF9EF, 0x3406, 0x5700, { 0x8F, 0xEC, 0x77, 0xEB, 0xA4, 0xC5, 0xA7, 0x4B } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Devices.Display.Core.DisplayMuxDevice */
 HRESULT wdedico_display_mux_device_new(WDEDICO_DisplayMuxDevice **out);
 
-/* Windows.Devices.Display.Core.DisplayMuxDevice */
-/* Windows.Devices.Display.Core.DisplayMuxDevice.get_Id() */
 HRESULT wdedico_display_mux_device_get__id(WDEDICO_DisplayMuxDevice *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Display.Core.DisplayMuxDevice.get_IsActive() */
 HRESULT wdedico_display_mux_device_get__is_active(WDEDICO_DisplayMuxDevice *self, BOOL *value);
 
-/* Windows.Devices.Display.Core.DisplayMuxDevice.GetAvailableMuxTargets() */
 HRESULT wdedico_display_mux_device_get_available_mux_targets(WDEDICO_DisplayMuxDevice *self, WFOCO_IVectorView_WDEDICO_DisplayTarget** out);
 
-/* Windows.Devices.Display.Core.DisplayMuxDevice.get_CurrentTarget() */
 HRESULT wdedico_display_mux_device_get__current_target(WDEDICO_DisplayMuxDevice *self, WDEDICO_DisplayTarget** value);
 
-/* Windows.Devices.Display.Core.DisplayMuxDevice.get_PreferredTarget() */
 HRESULT wdedico_display_mux_device_get__preferred_target(WDEDICO_DisplayMuxDevice *self, WDEDICO_DisplayTarget** value);
 
-/* Windows.Devices.Display.Core.DisplayMuxDevice.get_IsAutomaticTargetSwitchingEnabled() */
 HRESULT wdedico_display_mux_device_get__is_automatic_target_switching_enabled(WDEDICO_DisplayMuxDevice *self, BOOL *value);
 
-/* Windows.Devices.Display.Core.DisplayMuxDevice.SetPreferredTarget(target) */
 HRESULT wdedico_display_mux_device_set_preferred_target(WDEDICO_DisplayMuxDevice *self, WDEDICO_DisplayTarget* target, WF_IAsyncAction** out);
 
-/* Windows.Devices.Display.Core.DisplayMuxDevice.SetAutomaticTargetSwitching() */
 HRESULT wdedico_display_mux_device_set_automatic_target_switching(WDEDICO_DisplayMuxDevice *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.Display.Core.DisplayMuxDevice.Close() */
 HRESULT wdedico_display_mux_device_close(WDEDICO_DisplayMuxDevice *self);
 
-/* Windows.Devices.Display.Core.DisplayMuxDevice.GetDeviceSelector() */
 HRESULT wdedico_display_mux_device_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Devices.Display.Core.DisplayMuxDevice.FromIdAsync(deviceInterfaceId) */
 HRESULT wdedico_display_mux_device_from_id_async(cwinrt_hstring deviceInterfaceId, WF_IAsyncOperation_WDEDICO_DisplayMuxDevice** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdedico_display_mux_device_on_changed(WDEDICO_DisplayMuxDevice *self, cwinrt_event_fn fn, void *ctx);
 void wdedico_display_mux_device_off_changed(WDEDICO_DisplayMuxDevice *self, cwinrt_token token);
 
-/* activate Windows.Devices.Display.Core.DisplayPath */
 HRESULT wdedico_display_path_new(WDEDICO_DisplayPath **out);
 
-/* Windows.Devices.Display.Core.DisplayPath */
-/* Windows.Devices.Display.Core.DisplayPath.get_View() */
 HRESULT wdedico_display_path_get__view(WDEDICO_DisplayPath *self, WDEDICO_DisplayView** value);
 
-/* Windows.Devices.Display.Core.DisplayPath.get_Target() */
 HRESULT wdedico_display_path_get__target(WDEDICO_DisplayPath *self, WDEDICO_DisplayTarget** value);
 
-/* Windows.Devices.Display.Core.DisplayPath.get_Status() */
 HRESULT wdedico_display_path_get__status(WDEDICO_DisplayPath *self, WDEDICO_DisplayPathStatus *value);
 
-/* Windows.Devices.Display.Core.DisplayPath.get_SourceResolution() */
 HRESULT wdedico_display_path_get__source_resolution(WDEDICO_DisplayPath *self, WG_SizeInt32** value);
 
-/* Windows.Devices.Display.Core.DisplayPath.put_SourceResolution() */
 HRESULT wdedico_display_path_put__source_resolution(WDEDICO_DisplayPath *self, WG_SizeInt32* value);
 
-/* Windows.Devices.Display.Core.DisplayPath.get_SourcePixelFormat() */
 HRESULT wdedico_display_path_get__source_pixel_format(WDEDICO_DisplayPath *self, WGRDI_DirectXPixelFormat *value);
 
-/* Windows.Devices.Display.Core.DisplayPath.put_SourcePixelFormat() */
 HRESULT wdedico_display_path_put__source_pixel_format(WDEDICO_DisplayPath *self, WGRDI_DirectXPixelFormat value);
 
-/* Windows.Devices.Display.Core.DisplayPath.get_IsStereo() */
 HRESULT wdedico_display_path_get__is_stereo(WDEDICO_DisplayPath *self, BOOL *value);
 
-/* Windows.Devices.Display.Core.DisplayPath.put_IsStereo() */
 HRESULT wdedico_display_path_put__is_stereo(WDEDICO_DisplayPath *self, BOOL value);
 
-/* Windows.Devices.Display.Core.DisplayPath.get_TargetResolution() */
 HRESULT wdedico_display_path_get__target_resolution(WDEDICO_DisplayPath *self, WG_SizeInt32** value);
 
-/* Windows.Devices.Display.Core.DisplayPath.put_TargetResolution() */
 HRESULT wdedico_display_path_put__target_resolution(WDEDICO_DisplayPath *self, WG_SizeInt32* value);
 
-/* Windows.Devices.Display.Core.DisplayPath.get_PresentationRate() */
 HRESULT wdedico_display_path_get__presentation_rate(WDEDICO_DisplayPath *self, WDEDICO_DisplayPresentationRate** value);
 
-/* Windows.Devices.Display.Core.DisplayPath.put_PresentationRate() */
 HRESULT wdedico_display_path_put__presentation_rate(WDEDICO_DisplayPath *self, WDEDICO_DisplayPresentationRate* value);
 
-/* Windows.Devices.Display.Core.DisplayPath.get_IsInterlaced() */
 HRESULT wdedico_display_path_get__is_interlaced(WDEDICO_DisplayPath *self, BOOL** value);
 
-/* Windows.Devices.Display.Core.DisplayPath.put_IsInterlaced() */
 HRESULT wdedico_display_path_put__is_interlaced(WDEDICO_DisplayPath *self, BOOL* value);
 
-/* Windows.Devices.Display.Core.DisplayPath.get_WireFormat() */
 HRESULT wdedico_display_path_get__wire_format(WDEDICO_DisplayPath *self, WDEDICO_DisplayWireFormat** value);
 
-/* Windows.Devices.Display.Core.DisplayPath.put_WireFormat() */
 HRESULT wdedico_display_path_put__wire_format(WDEDICO_DisplayPath *self, WDEDICO_DisplayWireFormat* value);
 
-/* Windows.Devices.Display.Core.DisplayPath.get_Rotation() */
 HRESULT wdedico_display_path_get__rotation(WDEDICO_DisplayPath *self, WDEDICO_DisplayRotation *value);
 
-/* Windows.Devices.Display.Core.DisplayPath.put_Rotation() */
 HRESULT wdedico_display_path_put__rotation(WDEDICO_DisplayPath *self, WDEDICO_DisplayRotation value);
 
-/* Windows.Devices.Display.Core.DisplayPath.get_Scaling() */
 HRESULT wdedico_display_path_get__scaling(WDEDICO_DisplayPath *self, WDEDICO_DisplayPathScaling *value);
 
-/* Windows.Devices.Display.Core.DisplayPath.put_Scaling() */
 HRESULT wdedico_display_path_put__scaling(WDEDICO_DisplayPath *self, WDEDICO_DisplayPathScaling value);
 
-/* Windows.Devices.Display.Core.DisplayPath.FindModes(flags) */
 HRESULT wdedico_display_path_find_modes(WDEDICO_DisplayPath *self, WDEDICO_DisplayModeQueryOptions flags, WFOCO_IVectorView_WDEDICO_DisplayModeInfo** out);
 
-/* Windows.Devices.Display.Core.DisplayPath.ApplyPropertiesFromMode(modeResult) */
 HRESULT wdedico_display_path_apply_properties_from_mode(WDEDICO_DisplayPath *self, WDEDICO_DisplayModeInfo* modeResult);
 
-/* Windows.Devices.Display.Core.DisplayPath.get_Properties() */
 HRESULT wdedico_display_path_get__properties(WDEDICO_DisplayPath *self, WFOCO_IMap_Guid_Object** value);
 
-/* Windows.Devices.Display.Core.DisplayPath.get_PhysicalPresentationRate() */
 HRESULT wdedico_display_path_get__physical_presentation_rate(WDEDICO_DisplayPath *self, WDEDICO_DisplayPresentationRate** value);
 
-/* Windows.Devices.Display.Core.DisplayPath.put_PhysicalPresentationRate() */
 HRESULT wdedico_display_path_put__physical_presentation_rate(WDEDICO_DisplayPath *self, WDEDICO_DisplayPresentationRate* value);
 
-/* activate Windows.Devices.Display.Core.DisplayPrimaryDescription */
 HRESULT wdedico_display_primary_description_new(WDEDICO_DisplayPrimaryDescription **out);
 
-/* Windows.Devices.Display.Core.DisplayPrimaryDescription */
-/* Windows.Devices.Display.Core.DisplayPrimaryDescription.get_Width() */
 HRESULT wdedico_display_primary_description_get__width(WDEDICO_DisplayPrimaryDescription *self, uint32_t *value);
 
-/* Windows.Devices.Display.Core.DisplayPrimaryDescription.get_Height() */
 HRESULT wdedico_display_primary_description_get__height(WDEDICO_DisplayPrimaryDescription *self, uint32_t *value);
 
-/* Windows.Devices.Display.Core.DisplayPrimaryDescription.get_Format() */
 HRESULT wdedico_display_primary_description_get__format(WDEDICO_DisplayPrimaryDescription *self, WGRDI_DirectXPixelFormat *value);
 
-/* Windows.Devices.Display.Core.DisplayPrimaryDescription.get_ColorSpace() */
 HRESULT wdedico_display_primary_description_get__color_space(WDEDICO_DisplayPrimaryDescription *self, WGRDI_DirectXColorSpace *value);
 
-/* Windows.Devices.Display.Core.DisplayPrimaryDescription.get_IsStereo() */
 HRESULT wdedico_display_primary_description_get__is_stereo(WDEDICO_DisplayPrimaryDescription *self, BOOL *value);
 
-/* Windows.Devices.Display.Core.DisplayPrimaryDescription.get_MultisampleDescription() */
 HRESULT wdedico_display_primary_description_get__multisample_description(WDEDICO_DisplayPrimaryDescription *self, WGRDIDI_Direct3DMultisampleDescription *value);
 
-/* Windows.Devices.Display.Core.DisplayPrimaryDescription.get_Properties() */
 HRESULT wdedico_display_primary_description_get__properties(WDEDICO_DisplayPrimaryDescription *self, WFOCO_IMapView_Guid_Object** value);
 
-/* Windows.Devices.Display.Core.DisplayPrimaryDescription.CreateWithProperties(extraProperties, width, height, pixelFormat, colorSpace, isStereo, multisampleDescription) */
 HRESULT wdedico_display_primary_description_create_with_properties(WFOCO_IIterable_WFOCO_IKeyValuePair_Guid_Object* extraProperties, uint32_t width, uint32_t height, WGRDI_DirectXPixelFormat pixelFormat, WGRDI_DirectXColorSpace colorSpace, BOOL isStereo, WGRDIDI_Direct3DMultisampleDescription multisampleDescription, WDEDICO_DisplayPrimaryDescription** out);
 
-/* activate Windows.Devices.Display.Core.DisplayManager */
 HRESULT wdedico_display_manager_new(WDEDICO_DisplayManager **out);
 
-/* Windows.Devices.Display.Core.DisplayManager */
-/* Windows.Devices.Display.Core.DisplayManager.GetCurrentTargets() */
 HRESULT wdedico_display_manager_get_current_targets(WDEDICO_DisplayManager *self, WFOCO_IVectorView_WDEDICO_DisplayTarget** out);
 
-/* Windows.Devices.Display.Core.DisplayManager.GetCurrentAdapters() */
 HRESULT wdedico_display_manager_get_current_adapters(WDEDICO_DisplayManager *self, WFOCO_IVectorView_WDEDICO_DisplayAdapter** out);
 
-/* Windows.Devices.Display.Core.DisplayManager.TryAcquireTarget(target) */
 HRESULT wdedico_display_manager_try_acquire_target(WDEDICO_DisplayManager *self, WDEDICO_DisplayTarget* target, WDEDICO_DisplayManagerResult *out);
 
-/* Windows.Devices.Display.Core.DisplayManager.ReleaseTarget(target) */
 HRESULT wdedico_display_manager_release_target(WDEDICO_DisplayManager *self, WDEDICO_DisplayTarget* target);
 
-/* Windows.Devices.Display.Core.DisplayManager.TryReadCurrentStateForAllTargets() */
 HRESULT wdedico_display_manager_try_read_current_state_for_all_targets(WDEDICO_DisplayManager *self, WDEDICO_DisplayManagerResultWithState** out);
 
-/* Windows.Devices.Display.Core.DisplayManager.TryAcquireTargetsAndReadCurrentState(targets) */
 HRESULT wdedico_display_manager_try_acquire_targets_and_read_current_state(WDEDICO_DisplayManager *self, WFOCO_IIterable_WDEDICO_DisplayTarget* targets, WDEDICO_DisplayManagerResultWithState** out);
 
-/* Windows.Devices.Display.Core.DisplayManager.TryAcquireTargetsAndCreateEmptyState(targets) */
 HRESULT wdedico_display_manager_try_acquire_targets_and_create_empty_state(WDEDICO_DisplayManager *self, WFOCO_IIterable_WDEDICO_DisplayTarget* targets, WDEDICO_DisplayManagerResultWithState** out);
 
-/* Windows.Devices.Display.Core.DisplayManager.TryAcquireTargetsAndCreateSubstate(existingState, targets) */
 HRESULT wdedico_display_manager_try_acquire_targets_and_create_substate(WDEDICO_DisplayManager *self, WDEDICO_DisplayState* existingState, WFOCO_IIterable_WDEDICO_DisplayTarget* targets, WDEDICO_DisplayManagerResultWithState** out);
 
-/* Windows.Devices.Display.Core.DisplayManager.CreateDisplayDevice(adapter) */
 HRESULT wdedico_display_manager_create_display_device(WDEDICO_DisplayManager *self, WDEDICO_DisplayAdapter* adapter, WDEDICO_DisplayDevice** out);
 
-/* Windows.Devices.Display.Core.DisplayManager.Start() */
 HRESULT wdedico_display_manager_start(WDEDICO_DisplayManager *self);
 
-/* Windows.Devices.Display.Core.DisplayManager.Stop() */
 HRESULT wdedico_display_manager_stop(WDEDICO_DisplayManager *self);
 
-/* Windows.Devices.Display.Core.DisplayManager.TryReadCurrentStateForModeQuery() */
 HRESULT wdedico_display_manager_try_read_current_state_for_mode_query(WDEDICO_DisplayManager *self, WDEDICO_DisplayManagerResultWithState** out);
 
-/* Windows.Devices.Display.Core.DisplayManager.CreateDisplayDeviceForIndirectAdapter(indirectAdapter, renderAdapter) */
 HRESULT wdedico_display_manager_create_display_device_for_indirect_adapter(WDEDICO_DisplayManager *self, WDEDICO_DisplayAdapter* indirectAdapter, WDEDICO_DisplayAdapter* renderAdapter, WDEDICO_DisplayDevice** out);
 
-/* Windows.Devices.Display.Core.DisplayManager.Close() */
 HRESULT wdedico_display_manager_close(WDEDICO_DisplayManager *self);
 
-/* Windows.Devices.Display.Core.DisplayManager.Create(options) */
 HRESULT wdedico_display_manager_create(WDEDICO_DisplayManagerOptions options, WDEDICO_DisplayManager** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdedico_display_manager_on_enabled(WDEDICO_DisplayManager *self, cwinrt_event_fn fn, void *ctx);
@@ -972,476 +895,283 @@ void wdedico_display_manager_off_changed(WDEDICO_DisplayManager *self, cwinrt_to
 cwinrt_token wdedico_display_manager_on_paths_failed_or_invalidated(WDEDICO_DisplayManager *self, cwinrt_event_fn fn, void *ctx);
 void wdedico_display_manager_off_paths_failed_or_invalidated(WDEDICO_DisplayManager *self, cwinrt_token token);
 
-/* activate Windows.Devices.Display.Core.DisplaySource */
 HRESULT wdedico_display_source_new(WDEDICO_DisplaySource **out);
 
-/* Windows.Devices.Display.Core.DisplaySource */
-/* Windows.Devices.Display.Core.DisplaySource.get_AdapterId() */
 HRESULT wdedico_display_source_get__adapter_id(WDEDICO_DisplaySource *self, WG_DisplayAdapterId *value);
 
-/* Windows.Devices.Display.Core.DisplaySource.get_SourceId() */
 HRESULT wdedico_display_source_get__source_id(WDEDICO_DisplaySource *self, uint32_t *value);
 
-/* Windows.Devices.Display.Core.DisplaySource.GetMetadata(Key) */
 HRESULT wdedico_display_source_get_metadata(WDEDICO_DisplaySource *self, GUID Key, WSTST_IBuffer** out);
 
-/* Windows.Devices.Display.Core.DisplaySource.get_Status() */
 HRESULT wdedico_display_source_get__status(WDEDICO_DisplaySource *self, WDEDICO_DisplaySourceStatus *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdedico_display_source_on_status_changed(WDEDICO_DisplaySource *self, cwinrt_event_fn fn, void *ctx);
 void wdedico_display_source_off_status_changed(WDEDICO_DisplaySource *self, cwinrt_token token);
 
-/* activate Windows.Devices.Display.Core.DisplayState */
 HRESULT wdedico_display_state_new(WDEDICO_DisplayState **out);
 
-/* Windows.Devices.Display.Core.DisplayState */
-/* Windows.Devices.Display.Core.DisplayState.get_IsReadOnly() */
 HRESULT wdedico_display_state_get__is_read_only(WDEDICO_DisplayState *self, BOOL *value);
 
-/* Windows.Devices.Display.Core.DisplayState.get_IsStale() */
 HRESULT wdedico_display_state_get__is_stale(WDEDICO_DisplayState *self, BOOL *value);
 
-/* Windows.Devices.Display.Core.DisplayState.get_Targets() */
 HRESULT wdedico_display_state_get__targets(WDEDICO_DisplayState *self, WFOCO_IVectorView_WDEDICO_DisplayTarget** value);
 
-/* Windows.Devices.Display.Core.DisplayState.get_Views() */
 HRESULT wdedico_display_state_get__views(WDEDICO_DisplayState *self, WFOCO_IVectorView_WDEDICO_DisplayView** value);
 
-/* Windows.Devices.Display.Core.DisplayState.get_Properties() */
 HRESULT wdedico_display_state_get__properties(WDEDICO_DisplayState *self, WFOCO_IMap_Guid_Object** value);
 
-/* Windows.Devices.Display.Core.DisplayState.ConnectTarget(target) */
 HRESULT wdedico_display_state_connect_target(WDEDICO_DisplayState *self, WDEDICO_DisplayTarget* target, WDEDICO_DisplayPath** out);
 
-/* Windows.Devices.Display.Core.DisplayState.ConnectTarget(target, view) */
 HRESULT wdedico_display_state_connect_target_p_p_p(WDEDICO_DisplayState *self, WDEDICO_DisplayTarget* target, WDEDICO_DisplayView* view, WDEDICO_DisplayPath** out);
 
-/* Windows.Devices.Display.Core.DisplayState.CanConnectTargetToView(target, view) */
 HRESULT wdedico_display_state_can_connect_target_to_view(WDEDICO_DisplayState *self, WDEDICO_DisplayTarget* target, WDEDICO_DisplayView* view, BOOL *out);
 
-/* Windows.Devices.Display.Core.DisplayState.GetViewForTarget(target) */
 HRESULT wdedico_display_state_get_view_for_target(WDEDICO_DisplayState *self, WDEDICO_DisplayTarget* target, WDEDICO_DisplayView** out);
 
-/* Windows.Devices.Display.Core.DisplayState.GetPathForTarget(target) */
 HRESULT wdedico_display_state_get_path_for_target(WDEDICO_DisplayState *self, WDEDICO_DisplayTarget* target, WDEDICO_DisplayPath** out);
 
-/* Windows.Devices.Display.Core.DisplayState.DisconnectTarget(target) */
 HRESULT wdedico_display_state_disconnect_target(WDEDICO_DisplayState *self, WDEDICO_DisplayTarget* target);
 
-/* Windows.Devices.Display.Core.DisplayState.TryFunctionalize(options) */
 HRESULT wdedico_display_state_try_functionalize(WDEDICO_DisplayState *self, WDEDICO_DisplayStateFunctionalizeOptions options, WDEDICO_DisplayStateOperationResult** out);
 
-/* Windows.Devices.Display.Core.DisplayState.TryApply(options) */
 HRESULT wdedico_display_state_try_apply(WDEDICO_DisplayState *self, WDEDICO_DisplayStateApplyOptions options, WDEDICO_DisplayStateOperationResult** out);
 
-/* Windows.Devices.Display.Core.DisplayState.Clone() */
 HRESULT wdedico_display_state_clone(WDEDICO_DisplayState *self, WDEDICO_DisplayState** out);
 
-/* activate Windows.Devices.Display.Core.DisplayStateOperationResult */
 HRESULT wdedico_display_state_operation_result_new(WDEDICO_DisplayStateOperationResult **out);
 
-/* Windows.Devices.Display.Core.DisplayStateOperationResult */
-/* Windows.Devices.Display.Core.DisplayStateOperationResult.get_Status() */
 HRESULT wdedico_display_state_operation_result_get__status(WDEDICO_DisplayStateOperationResult *self, WDEDICO_DisplayStateOperationStatus *value);
 
-/* Windows.Devices.Display.Core.DisplayStateOperationResult.get_ExtendedErrorCode() */
 HRESULT wdedico_display_state_operation_result_get__extended_error_code(WDEDICO_DisplayStateOperationResult *self, HRESULT *value);
 
-/* activate Windows.Devices.Display.Core.DisplayTarget */
 HRESULT wdedico_display_target_new(WDEDICO_DisplayTarget **out);
 
-/* Windows.Devices.Display.Core.DisplayTarget */
-/* Windows.Devices.Display.Core.DisplayTarget.get_Adapter() */
 HRESULT wdedico_display_target_get__adapter(WDEDICO_DisplayTarget *self, WDEDICO_DisplayAdapter** value);
 
-/* Windows.Devices.Display.Core.DisplayTarget.get_DeviceInterfacePath() */
 HRESULT wdedico_display_target_get__device_interface_path(WDEDICO_DisplayTarget *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Display.Core.DisplayTarget.get_AdapterRelativeId() */
 HRESULT wdedico_display_target_get__adapter_relative_id(WDEDICO_DisplayTarget *self, uint32_t *value);
 
-/* Windows.Devices.Display.Core.DisplayTarget.get_IsConnected() */
 HRESULT wdedico_display_target_get__is_connected(WDEDICO_DisplayTarget *self, BOOL *value);
 
-/* Windows.Devices.Display.Core.DisplayTarget.get_IsVirtualModeEnabled() */
 HRESULT wdedico_display_target_get__is_virtual_mode_enabled(WDEDICO_DisplayTarget *self, BOOL *value);
 
-/* Windows.Devices.Display.Core.DisplayTarget.get_IsVirtualTopologyEnabled() */
 HRESULT wdedico_display_target_get__is_virtual_topology_enabled(WDEDICO_DisplayTarget *self, BOOL *value);
 
-/* Windows.Devices.Display.Core.DisplayTarget.get_UsageKind() */
 HRESULT wdedico_display_target_get__usage_kind(WDEDICO_DisplayTarget *self, WDEDI_DisplayMonitorUsageKind *value);
 
-/* Windows.Devices.Display.Core.DisplayTarget.get_MonitorPersistence() */
 HRESULT wdedico_display_target_get__monitor_persistence(WDEDICO_DisplayTarget *self, WDEDICO_DisplayTargetPersistence *value);
 
-/* Windows.Devices.Display.Core.DisplayTarget.get_StableMonitorId() */
 HRESULT wdedico_display_target_get__stable_monitor_id(WDEDICO_DisplayTarget *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Display.Core.DisplayTarget.TryGetMonitor() */
 HRESULT wdedico_display_target_try_get_monitor(WDEDICO_DisplayTarget *self, WDEDI_DisplayMonitor** out);
 
-/* Windows.Devices.Display.Core.DisplayTarget.get_Properties() */
 HRESULT wdedico_display_target_get__properties(WDEDICO_DisplayTarget *self, WFOCO_IMapView_Guid_Object** value);
 
-/* Windows.Devices.Display.Core.DisplayTarget.get_IsStale() */
 HRESULT wdedico_display_target_get__is_stale(WDEDICO_DisplayTarget *self, BOOL *value);
 
-/* Windows.Devices.Display.Core.DisplayTarget.IsSame(otherTarget) */
 HRESULT wdedico_display_target_is_same(WDEDICO_DisplayTarget *self, WDEDICO_DisplayTarget* otherTarget, BOOL *out);
 
-/* Windows.Devices.Display.Core.DisplayTarget.IsEqual(otherTarget) */
 HRESULT wdedico_display_target_is_equal(WDEDICO_DisplayTarget *self, WDEDICO_DisplayTarget* otherTarget, BOOL *out);
 
-/* activate Windows.Devices.Display.Core.DisplayTask */
 HRESULT wdedico_display_task_new(WDEDICO_DisplayTask **out);
 
-/* Windows.Devices.Display.Core.DisplayTask */
-/* Windows.Devices.Display.Core.DisplayTask.SetScanout(scanout) */
 HRESULT wdedico_display_task_set_scanout(WDEDICO_DisplayTask *self, WDEDICO_DisplayScanout* scanout);
 
-/* Windows.Devices.Display.Core.DisplayTask.SetWait(readyFence, readyFenceValue) */
 HRESULT wdedico_display_task_set_wait(WDEDICO_DisplayTask *self, WDEDICO_DisplayFence* readyFence, uint64_t readyFenceValue);
 
-/* Windows.Devices.Display.Core.DisplayTask.SetSignal(signalKind, fence) */
 HRESULT wdedico_display_task_set_signal(WDEDICO_DisplayTask *self, WDEDICO_DisplayTaskSignalKind signalKind, WDEDICO_DisplayFence* fence);
 
-/* activate Windows.Devices.Display.Core.DisplayTaskPool */
 HRESULT wdedico_display_task_pool_new(WDEDICO_DisplayTaskPool **out);
 
-/* Windows.Devices.Display.Core.DisplayTaskPool */
-/* Windows.Devices.Display.Core.DisplayTaskPool.CreateTask() */
 HRESULT wdedico_display_task_pool_create_task(WDEDICO_DisplayTaskPool *self, WDEDICO_DisplayTask** out);
 
-/* Windows.Devices.Display.Core.DisplayTaskPool.ExecuteTask(task) */
 HRESULT wdedico_display_task_pool_execute_task(WDEDICO_DisplayTaskPool *self, WDEDICO_DisplayTask* task);
 
-/* Windows.Devices.Display.Core.DisplayTaskPool.TryExecuteTask(task) */
 HRESULT wdedico_display_task_pool_try_execute_task(WDEDICO_DisplayTaskPool *self, WDEDICO_DisplayTask* task, WDEDICO_DisplayTaskResult** out);
 
-/* activate Windows.Devices.Display.Core.DisplayTaskResult */
 HRESULT wdedico_display_task_result_new(WDEDICO_DisplayTaskResult **out);
 
-/* Windows.Devices.Display.Core.DisplayTaskResult */
-/* Windows.Devices.Display.Core.DisplayTaskResult.get_PresentStatus() */
 HRESULT wdedico_display_task_result_get__present_status(WDEDICO_DisplayTaskResult *self, WDEDICO_DisplayPresentStatus *value);
 
-/* Windows.Devices.Display.Core.DisplayTaskResult.get_PresentId() */
 HRESULT wdedico_display_task_result_get__present_id(WDEDICO_DisplayTaskResult *self, uint64_t *value);
 
-/* Windows.Devices.Display.Core.DisplayTaskResult.get_SourceStatus() */
 HRESULT wdedico_display_task_result_get__source_status(WDEDICO_DisplayTaskResult *self, WDEDICO_DisplaySourceStatus *value);
 
-/* activate Windows.Devices.Display.Core.DisplayView */
 HRESULT wdedico_display_view_new(WDEDICO_DisplayView **out);
 
-/* Windows.Devices.Display.Core.DisplayView */
-/* Windows.Devices.Display.Core.DisplayView.get_Paths() */
 HRESULT wdedico_display_view_get__paths(WDEDICO_DisplayView *self, WFOCO_IVectorView_WDEDICO_DisplayPath** value);
 
-/* Windows.Devices.Display.Core.DisplayView.get_ContentResolution() */
 HRESULT wdedico_display_view_get__content_resolution(WDEDICO_DisplayView *self, WG_SizeInt32** value);
 
-/* Windows.Devices.Display.Core.DisplayView.put_ContentResolution() */
 HRESULT wdedico_display_view_put__content_resolution(WDEDICO_DisplayView *self, WG_SizeInt32* value);
 
-/* Windows.Devices.Display.Core.DisplayView.SetPrimaryPath(path) */
 HRESULT wdedico_display_view_set_primary_path(WDEDICO_DisplayView *self, WDEDICO_DisplayPath* path);
 
-/* Windows.Devices.Display.Core.DisplayView.get_Properties() */
 HRESULT wdedico_display_view_get__properties(WDEDICO_DisplayView *self, WFOCO_IMap_Guid_Object** value);
 
-/* activate Windows.Devices.Display.Core.DisplayWireFormat */
 HRESULT wdedico_display_wire_format_new(WDEDICO_DisplayWireFormat **out);
 
-/* Windows.Devices.Display.Core.DisplayWireFormat */
-/* Windows.Devices.Display.Core.DisplayWireFormat.get_PixelEncoding() */
 HRESULT wdedico_display_wire_format_get__pixel_encoding(WDEDICO_DisplayWireFormat *self, WDEDICO_DisplayWireFormatPixelEncoding *value);
 
-/* Windows.Devices.Display.Core.DisplayWireFormat.get_BitsPerChannel() */
 HRESULT wdedico_display_wire_format_get__bits_per_channel(WDEDICO_DisplayWireFormat *self, int32_t *value);
 
-/* Windows.Devices.Display.Core.DisplayWireFormat.get_ColorSpace() */
 HRESULT wdedico_display_wire_format_get__color_space(WDEDICO_DisplayWireFormat *self, WDEDICO_DisplayWireFormatColorSpace *value);
 
-/* Windows.Devices.Display.Core.DisplayWireFormat.get_Eotf() */
 HRESULT wdedico_display_wire_format_get__eotf(WDEDICO_DisplayWireFormat *self, WDEDICO_DisplayWireFormatEotf *value);
 
-/* Windows.Devices.Display.Core.DisplayWireFormat.get_HdrMetadata() */
 HRESULT wdedico_display_wire_format_get__hdr_metadata(WDEDICO_DisplayWireFormat *self, WDEDICO_DisplayWireFormatHdrMetadata *value);
 
-/* Windows.Devices.Display.Core.DisplayWireFormat.get_Properties() */
 HRESULT wdedico_display_wire_format_get__properties(WDEDICO_DisplayWireFormat *self, WFOCO_IMapView_Guid_Object** value);
 
-/* Windows.Devices.Display.Core.DisplayWireFormat.CreateWithProperties(extraProperties, pixelEncoding, bitsPerChannel, colorSpace, eotf, hdrMetadata) */
 HRESULT wdedico_display_wire_format_create_with_properties(WFOCO_IIterable_WFOCO_IKeyValuePair_Guid_Object* extraProperties, WDEDICO_DisplayWireFormatPixelEncoding pixelEncoding, int32_t bitsPerChannel, WDEDICO_DisplayWireFormatColorSpace colorSpace, WDEDICO_DisplayWireFormatEotf eotf, WDEDICO_DisplayWireFormatHdrMetadata hdrMetadata, WDEDICO_DisplayWireFormat** out);
 
-/* Windows.Devices.Display.Core.IDisplayAdapterStatics */
-/* Windows.Devices.Display.Core.IDisplayAdapterStatics.FromId(id) */
 HRESULT wdedico_display_adapter_statics_from_id(WDEDICO_IDisplayAdapterStatics *self, WG_DisplayAdapterId id, WDEDICO_DisplayAdapter** out);
 
-/* activate Windows.Devices.Display.Core.DisplayModeInfo */
 HRESULT wdedico_display_mode_info_new(WDEDICO_DisplayModeInfo **out);
 
-/* Windows.Devices.Display.Core.DisplayModeInfo */
-/* Windows.Devices.Display.Core.DisplayModeInfo.get_SourceResolution() */
 HRESULT wdedico_display_mode_info_get__source_resolution(WDEDICO_DisplayModeInfo *self, WG_SizeInt32 *value);
 
-/* Windows.Devices.Display.Core.DisplayModeInfo.get_IsStereo() */
 HRESULT wdedico_display_mode_info_get__is_stereo(WDEDICO_DisplayModeInfo *self, BOOL *value);
 
-/* Windows.Devices.Display.Core.DisplayModeInfo.get_SourcePixelFormat() */
 HRESULT wdedico_display_mode_info_get__source_pixel_format(WDEDICO_DisplayModeInfo *self, WGRDI_DirectXPixelFormat *value);
 
-/* Windows.Devices.Display.Core.DisplayModeInfo.get_TargetResolution() */
 HRESULT wdedico_display_mode_info_get__target_resolution(WDEDICO_DisplayModeInfo *self, WG_SizeInt32 *value);
 
-/* Windows.Devices.Display.Core.DisplayModeInfo.get_PresentationRate() */
 HRESULT wdedico_display_mode_info_get__presentation_rate(WDEDICO_DisplayModeInfo *self, WDEDICO_DisplayPresentationRate *value);
 
-/* Windows.Devices.Display.Core.DisplayModeInfo.get_IsInterlaced() */
 HRESULT wdedico_display_mode_info_get__is_interlaced(WDEDICO_DisplayModeInfo *self, BOOL *value);
 
-/* Windows.Devices.Display.Core.DisplayModeInfo.GetWireFormatSupportedBitsPerChannel(encoding) */
 HRESULT wdedico_display_mode_info_get_wire_format_supported_bits_per_channel(WDEDICO_DisplayModeInfo *self, WDEDICO_DisplayWireFormatPixelEncoding encoding, WDEDICO_DisplayBitsPerChannel *out);
 
-/* Windows.Devices.Display.Core.DisplayModeInfo.IsWireFormatSupported(wireFormat) */
 HRESULT wdedico_display_mode_info_is_wire_format_supported(WDEDICO_DisplayModeInfo *self, WDEDICO_DisplayWireFormat* wireFormat, BOOL *out);
 
-/* Windows.Devices.Display.Core.DisplayModeInfo.get_Properties() */
 HRESULT wdedico_display_mode_info_get__properties(WDEDICO_DisplayModeInfo *self, WFOCO_IMapView_Guid_Object** value);
 
-/* Windows.Devices.Display.Core.DisplayModeInfo.get_PhysicalPresentationRate() */
 HRESULT wdedico_display_mode_info_get__physical_presentation_rate(WDEDICO_DisplayModeInfo *self, WDEDICO_DisplayPresentationRate *value);
 
-/* Windows.Devices.Display.Core.IDisplayManagerStatics */
-/* Windows.Devices.Display.Core.IDisplayManagerStatics.Create(options) */
 HRESULT wdedico_display_manager_statics_create(WDEDICO_IDisplayManagerStatics *self, WDEDICO_DisplayManagerOptions options, WDEDICO_DisplayManager** out);
 
-/* Windows.Devices.Display.Core.IDisplayMuxDeviceStatics */
-/* Windows.Devices.Display.Core.IDisplayMuxDeviceStatics.GetDeviceSelector() */
 HRESULT wdedico_display_mux_device_statics_get_device_selector(WDEDICO_IDisplayMuxDeviceStatics *self, cwinrt_hstring *out);
 
-/* Windows.Devices.Display.Core.IDisplayMuxDeviceStatics.FromIdAsync(deviceInterfaceId) */
 HRESULT wdedico_display_mux_device_statics_from_id_async(WDEDICO_IDisplayMuxDeviceStatics *self, cwinrt_hstring deviceInterfaceId, WF_IAsyncOperation_WDEDICO_DisplayMuxDevice** out);
 
-/* Windows.Devices.Display.Core.IDisplayPrimaryDescriptionFactory */
-/* Windows.Devices.Display.Core.IDisplayPrimaryDescriptionFactory.CreateInstance(width, height, pixelFormat, colorSpace, isStereo, multisampleDescription) */
 HRESULT wdedico_display_primary_description_factory_create_instance(WDEDICO_IDisplayPrimaryDescriptionFactory *self, uint32_t width, uint32_t height, WGRDI_DirectXPixelFormat pixelFormat, WGRDI_DirectXColorSpace colorSpace, BOOL isStereo, WGRDIDI_Direct3DMultisampleDescription multisampleDescription, WDEDICO_DisplayPrimaryDescription** out);
 
-/* Windows.Devices.Display.Core.IDisplayPrimaryDescriptionStatics */
-/* Windows.Devices.Display.Core.IDisplayPrimaryDescriptionStatics.CreateWithProperties(extraProperties, width, height, pixelFormat, colorSpace, isStereo, multisampleDescription) */
 HRESULT wdedico_display_primary_description_statics_create_with_properties(WDEDICO_IDisplayPrimaryDescriptionStatics *self, WFOCO_IIterable_WFOCO_IKeyValuePair_Guid_Object* extraProperties, uint32_t width, uint32_t height, WGRDI_DirectXPixelFormat pixelFormat, WGRDI_DirectXColorSpace colorSpace, BOOL isStereo, WGRDIDI_Direct3DMultisampleDescription multisampleDescription, WDEDICO_DisplayPrimaryDescription** out);
 
-/* Windows.Devices.Display.Core.IDisplayWireFormatFactory */
-/* Windows.Devices.Display.Core.IDisplayWireFormatFactory.CreateInstance(pixelEncoding, bitsPerChannel, colorSpace, eotf, hdrMetadata) */
 HRESULT wdedico_display_wire_format_factory_create_instance(WDEDICO_IDisplayWireFormatFactory *self, WDEDICO_DisplayWireFormatPixelEncoding pixelEncoding, int32_t bitsPerChannel, WDEDICO_DisplayWireFormatColorSpace colorSpace, WDEDICO_DisplayWireFormatEotf eotf, WDEDICO_DisplayWireFormatHdrMetadata hdrMetadata, WDEDICO_DisplayWireFormat** out);
 
-/* Windows.Devices.Display.Core.IDisplayWireFormatStatics */
-/* Windows.Devices.Display.Core.IDisplayWireFormatStatics.CreateWithProperties(extraProperties, pixelEncoding, bitsPerChannel, colorSpace, eotf, hdrMetadata) */
 HRESULT wdedico_display_wire_format_statics_create_with_properties(WDEDICO_IDisplayWireFormatStatics *self, WFOCO_IIterable_WFOCO_IKeyValuePair_Guid_Object* extraProperties, WDEDICO_DisplayWireFormatPixelEncoding pixelEncoding, int32_t bitsPerChannel, WDEDICO_DisplayWireFormatColorSpace colorSpace, WDEDICO_DisplayWireFormatEotf eotf, WDEDICO_DisplayWireFormatHdrMetadata hdrMetadata, WDEDICO_DisplayWireFormat** out);
 
-/* activate Windows.Devices.Display.Core.DisplayManagerResultWithState */
 HRESULT wdedico_display_manager_result_with_state_new(WDEDICO_DisplayManagerResultWithState **out);
 
-/* Windows.Devices.Display.Core.DisplayManagerResultWithState */
-/* Windows.Devices.Display.Core.DisplayManagerResultWithState.get_ErrorCode() */
 HRESULT wdedico_display_manager_result_with_state_get__error_code(WDEDICO_DisplayManagerResultWithState *self, WDEDICO_DisplayManagerResult *value);
 
-/* Windows.Devices.Display.Core.DisplayManagerResultWithState.get_ExtendedErrorCode() */
 HRESULT wdedico_display_manager_result_with_state_get__extended_error_code(WDEDICO_DisplayManagerResultWithState *self, HRESULT *value);
 
-/* Windows.Devices.Display.Core.DisplayManagerResultWithState.get_State() */
 HRESULT wdedico_display_manager_result_with_state_get__state(WDEDICO_DisplayManagerResultWithState *self, WDEDICO_DisplayState** value);
 
-/* activate Windows.Devices.Display.Core.DisplayManagerPathsFailedOrInvalidatedEventArgs */
 HRESULT wdedico_display_manager_paths_failed_or_invalidated_event_args_new(WDEDICO_DisplayManagerPathsFailedOrInvalidatedEventArgs **out);
 
-/* Windows.Devices.Display.Core.DisplayManagerPathsFailedOrInvalidatedEventArgs */
-/* Windows.Devices.Display.Core.DisplayManagerPathsFailedOrInvalidatedEventArgs.get_Handled() */
 HRESULT wdedico_display_manager_paths_failed_or_invalidated_event_args_get__handled(WDEDICO_DisplayManagerPathsFailedOrInvalidatedEventArgs *self, BOOL *value);
 
-/* Windows.Devices.Display.Core.DisplayManagerPathsFailedOrInvalidatedEventArgs.put_Handled() */
 HRESULT wdedico_display_manager_paths_failed_or_invalidated_event_args_put__handled(WDEDICO_DisplayManagerPathsFailedOrInvalidatedEventArgs *self, BOOL value);
 
-/* Windows.Devices.Display.Core.DisplayManagerPathsFailedOrInvalidatedEventArgs.GetDeferral() */
 HRESULT wdedico_display_manager_paths_failed_or_invalidated_event_args_get_deferral(WDEDICO_DisplayManagerPathsFailedOrInvalidatedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Devices.Display.Core.DisplayManagerChangedEventArgs */
 HRESULT wdedico_display_manager_changed_event_args_new(WDEDICO_DisplayManagerChangedEventArgs **out);
 
-/* Windows.Devices.Display.Core.DisplayManagerChangedEventArgs */
-/* Windows.Devices.Display.Core.DisplayManagerChangedEventArgs.get_Handled() */
 HRESULT wdedico_display_manager_changed_event_args_get__handled(WDEDICO_DisplayManagerChangedEventArgs *self, BOOL *value);
 
-/* Windows.Devices.Display.Core.DisplayManagerChangedEventArgs.put_Handled() */
 HRESULT wdedico_display_manager_changed_event_args_put__handled(WDEDICO_DisplayManagerChangedEventArgs *self, BOOL value);
 
-/* Windows.Devices.Display.Core.DisplayManagerChangedEventArgs.GetDeferral() */
 HRESULT wdedico_display_manager_changed_event_args_get_deferral(WDEDICO_DisplayManagerChangedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Devices.Display.Core.DisplayManagerEnabledEventArgs */
 HRESULT wdedico_display_manager_enabled_event_args_new(WDEDICO_DisplayManagerEnabledEventArgs **out);
 
-/* Windows.Devices.Display.Core.DisplayManagerEnabledEventArgs */
-/* Windows.Devices.Display.Core.DisplayManagerEnabledEventArgs.get_Handled() */
 HRESULT wdedico_display_manager_enabled_event_args_get__handled(WDEDICO_DisplayManagerEnabledEventArgs *self, BOOL *value);
 
-/* Windows.Devices.Display.Core.DisplayManagerEnabledEventArgs.put_Handled() */
 HRESULT wdedico_display_manager_enabled_event_args_put__handled(WDEDICO_DisplayManagerEnabledEventArgs *self, BOOL value);
 
-/* Windows.Devices.Display.Core.DisplayManagerEnabledEventArgs.GetDeferral() */
 HRESULT wdedico_display_manager_enabled_event_args_get_deferral(WDEDICO_DisplayManagerEnabledEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Devices.Display.Core.DisplayManagerDisabledEventArgs */
 HRESULT wdedico_display_manager_disabled_event_args_new(WDEDICO_DisplayManagerDisabledEventArgs **out);
 
-/* Windows.Devices.Display.Core.DisplayManagerDisabledEventArgs */
-/* Windows.Devices.Display.Core.DisplayManagerDisabledEventArgs.get_Handled() */
 HRESULT wdedico_display_manager_disabled_event_args_get__handled(WDEDICO_DisplayManagerDisabledEventArgs *self, BOOL *value);
 
-/* Windows.Devices.Display.Core.DisplayManagerDisabledEventArgs.put_Handled() */
 HRESULT wdedico_display_manager_disabled_event_args_put__handled(WDEDICO_DisplayManagerDisabledEventArgs *self, BOOL value);
 
-/* Windows.Devices.Display.Core.DisplayManagerDisabledEventArgs.GetDeferral() */
 HRESULT wdedico_display_manager_disabled_event_args_get_deferral(WDEDICO_DisplayManagerDisabledEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Devices.Display.Core.DisplayAdapter */
 HRESULT wdedico_display_adapter_new(WDEDICO_DisplayAdapter **out);
 
-/* Windows.Devices.Display.Core.DisplayAdapter */
-/* Windows.Devices.Display.Core.DisplayAdapter.get_Id() */
 HRESULT wdedico_display_adapter_get__id(WDEDICO_DisplayAdapter *self, WG_DisplayAdapterId *value);
 
-/* Windows.Devices.Display.Core.DisplayAdapter.get_DeviceInterfacePath() */
 HRESULT wdedico_display_adapter_get__device_interface_path(WDEDICO_DisplayAdapter *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Display.Core.DisplayAdapter.get_SourceCount() */
 HRESULT wdedico_display_adapter_get__source_count(WDEDICO_DisplayAdapter *self, uint32_t *value);
 
-/* Windows.Devices.Display.Core.DisplayAdapter.get_PciVendorId() */
 HRESULT wdedico_display_adapter_get__pci_vendor_id(WDEDICO_DisplayAdapter *self, uint32_t *value);
 
-/* Windows.Devices.Display.Core.DisplayAdapter.get_PciDeviceId() */
 HRESULT wdedico_display_adapter_get__pci_device_id(WDEDICO_DisplayAdapter *self, uint32_t *value);
 
-/* Windows.Devices.Display.Core.DisplayAdapter.get_PciSubSystemId() */
 HRESULT wdedico_display_adapter_get__pci_sub_system_id(WDEDICO_DisplayAdapter *self, uint32_t *value);
 
-/* Windows.Devices.Display.Core.DisplayAdapter.get_PciRevision() */
 HRESULT wdedico_display_adapter_get__pci_revision(WDEDICO_DisplayAdapter *self, uint32_t *value);
 
-/* Windows.Devices.Display.Core.DisplayAdapter.get_Properties() */
 HRESULT wdedico_display_adapter_get__properties(WDEDICO_DisplayAdapter *self, WFOCO_IMapView_Guid_Object** value);
 
-/* Windows.Devices.Display.Core.DisplayAdapter.get_IsIndirectDisplayDevice() */
 HRESULT wdedico_display_adapter_get__is_indirect_display_device(WDEDICO_DisplayAdapter *self, BOOL *value);
 
-/* Windows.Devices.Display.Core.DisplayAdapter.get_PreferredRenderAdapter() */
 HRESULT wdedico_display_adapter_get__preferred_render_adapter(WDEDICO_DisplayAdapter *self, WDEDICO_DisplayAdapter** value);
 
-/* Windows.Devices.Display.Core.DisplayAdapter.FromId(id) */
 HRESULT wdedico_display_adapter_from_id(WG_DisplayAdapterId id, WDEDICO_DisplayAdapter** out);
 
-/* activate Windows.Devices.Display.Core.DisplayDevice */
 HRESULT wdedico_display_device_new(WDEDICO_DisplayDevice **out);
 
-/* Windows.Devices.Display.Core.DisplayDevice */
-/* Windows.Devices.Display.Core.DisplayDevice.CreateScanoutSource(target) */
 HRESULT wdedico_display_device_create_scanout_source(WDEDICO_DisplayDevice *self, WDEDICO_DisplayTarget* target, WDEDICO_DisplaySource** out);
 
-/* Windows.Devices.Display.Core.DisplayDevice.CreatePrimary(target, desc) */
 HRESULT wdedico_display_device_create_primary(WDEDICO_DisplayDevice *self, WDEDICO_DisplayTarget* target, WDEDICO_DisplayPrimaryDescription* desc, WDEDICO_DisplaySurface** out);
 
-/* Windows.Devices.Display.Core.DisplayDevice.CreateTaskPool() */
 HRESULT wdedico_display_device_create_task_pool(WDEDICO_DisplayDevice *self, WDEDICO_DisplayTaskPool** out);
 
-/* Windows.Devices.Display.Core.DisplayDevice.CreatePeriodicFence(target, offsetFromVBlank) */
 HRESULT wdedico_display_device_create_periodic_fence(WDEDICO_DisplayDevice *self, WDEDICO_DisplayTarget* target, WF_TimeSpan offsetFromVBlank, WDEDICO_DisplayFence** out);
 
-/* Windows.Devices.Display.Core.DisplayDevice.WaitForVBlank(source) */
 HRESULT wdedico_display_device_wait_for_v_blank(WDEDICO_DisplayDevice *self, WDEDICO_DisplaySource* source);
 
-/* Windows.Devices.Display.Core.DisplayDevice.CreateSimpleScanout(pSource, pSurface, SubResourceIndex, SyncInterval) */
 HRESULT wdedico_display_device_create_simple_scanout(WDEDICO_DisplayDevice *self, WDEDICO_DisplaySource* pSource, WDEDICO_DisplaySurface* pSurface, uint32_t SubResourceIndex, uint32_t SyncInterval, WDEDICO_DisplayScanout** out);
 
-/* Windows.Devices.Display.Core.DisplayDevice.IsCapabilitySupported(capability) */
 HRESULT wdedico_display_device_is_capability_supported(WDEDICO_DisplayDevice *self, WDEDICO_DisplayDeviceCapability capability, BOOL *out);
 
-/* Windows.Devices.Display.Core.DisplayDevice.CreateSimpleScanoutWithDirtyRectsAndOptions(source, surface, subresourceIndex, syncInterval, dirtyRects, options) */
 HRESULT wdedico_display_device_create_simple_scanout_with_dirty_rects_and_options(WDEDICO_DisplayDevice *self, WDEDICO_DisplaySource* source, WDEDICO_DisplaySurface* surface, uint32_t subresourceIndex, uint32_t syncInterval, WFOCO_IIterable_WG_RectInt32* dirtyRects, WDEDICO_DisplayScanoutOptions options, WDEDICO_DisplayScanout** out);
 
-/* Windows.Devices.Display.Core.DisplayDevice.get_RenderAdapterId() */
 HRESULT wdedico_display_device_get__render_adapter_id(WDEDICO_DisplayDevice *self, WG_DisplayAdapterId *value);
 
-/* Windows.Devices.Display.Core.IDisplayMuxDevice */
-/* Windows.Devices.Display.Core.IDisplayPath */
-/* Windows.Devices.Display.Core.IDisplayPath2 */
-/* Windows.Devices.Display.Core.IDisplayPath2.get_PhysicalPresentationRate() */
 HRESULT wdedico_display_path_2_get__physical_presentation_rate(WDEDICO_IDisplayPath_2 *self, WDEDICO_DisplayPresentationRate** value);
 
-/* Windows.Devices.Display.Core.IDisplayPath2.put_PhysicalPresentationRate() */
 HRESULT wdedico_display_path_2_put__physical_presentation_rate(WDEDICO_IDisplayPath_2 *self, WDEDICO_DisplayPresentationRate* value);
 
-/* Windows.Devices.Display.Core.IDisplayPrimaryDescription */
-/* Windows.Devices.Display.Core.IDisplayManager */
-/* Windows.Devices.Display.Core.IDisplayManager2 */
-/* Windows.Devices.Display.Core.IDisplayManager2.TryReadCurrentStateForModeQuery() */
 HRESULT wdedico_display_manager_2_try_read_current_state_for_mode_query(WDEDICO_IDisplayManager_2 *self, WDEDICO_DisplayManagerResultWithState** out);
 
-/* Windows.Devices.Display.Core.IDisplayManager3 */
-/* Windows.Devices.Display.Core.IDisplayManager3.CreateDisplayDeviceForIndirectAdapter(indirectAdapter, renderAdapter) */
 HRESULT wdedico_display_manager_3_create_display_device_for_indirect_adapter(WDEDICO_IDisplayManager_3 *self, WDEDICO_DisplayAdapter* indirectAdapter, WDEDICO_DisplayAdapter* renderAdapter, WDEDICO_DisplayDevice** out);
 
-/* Windows.Devices.Display.Core.IDisplaySource */
-/* Windows.Devices.Display.Core.IDisplaySource2 */
-/* Windows.Devices.Display.Core.IDisplaySource2.get_Status() */
 HRESULT wdedico_display_source_2_get__status(WDEDICO_IDisplaySource_2 *self, WDEDICO_DisplaySourceStatus *value);
 
-/* Windows.Devices.Display.Core.IDisplayState */
-/* Windows.Devices.Display.Core.IDisplayStateOperationResult */
-/* Windows.Devices.Display.Core.IDisplayTarget */
-/* Windows.Devices.Display.Core.IDisplayTask */
-/* Windows.Devices.Display.Core.IDisplayTask2 */
-/* Windows.Devices.Display.Core.IDisplayTask2.SetSignal(signalKind, fence) */
 HRESULT wdedico_display_task_2_set_signal(WDEDICO_IDisplayTask_2 *self, WDEDICO_DisplayTaskSignalKind signalKind, WDEDICO_DisplayFence* fence);
 
-/* Windows.Devices.Display.Core.IDisplayTaskPool */
-/* Windows.Devices.Display.Core.IDisplayTaskPool2 */
-/* Windows.Devices.Display.Core.IDisplayTaskPool2.TryExecuteTask(task) */
 HRESULT wdedico_display_task_pool_2_try_execute_task(WDEDICO_IDisplayTaskPool_2 *self, WDEDICO_DisplayTask* task, WDEDICO_DisplayTaskResult** out);
 
-/* Windows.Devices.Display.Core.IDisplayTaskResult */
-/* Windows.Devices.Display.Core.IDisplayView */
-/* Windows.Devices.Display.Core.IDisplayWireFormat */
-/* Windows.Devices.Display.Core.IDisplayModeInfo */
-/* Windows.Devices.Display.Core.IDisplayModeInfo2 */
-/* Windows.Devices.Display.Core.IDisplayModeInfo2.get_PhysicalPresentationRate() */
 HRESULT wdedico_display_mode_info_2_get__physical_presentation_rate(WDEDICO_IDisplayModeInfo_2 *self, WDEDICO_DisplayPresentationRate *value);
 
-/* Windows.Devices.Display.Core.IDisplayManagerResultWithState */
-/* Windows.Devices.Display.Core.IDisplayManagerPathsFailedOrInvalidatedEventArgs */
-/* Windows.Devices.Display.Core.IDisplayManagerChangedEventArgs */
-/* Windows.Devices.Display.Core.IDisplayManagerEnabledEventArgs */
-/* Windows.Devices.Display.Core.IDisplayManagerDisabledEventArgs */
-/* Windows.Devices.Display.Core.IDisplayAdapter */
-/* Windows.Devices.Display.Core.IDisplayAdapter2 */
-/* Windows.Devices.Display.Core.IDisplayAdapter2.get_IsIndirectDisplayDevice() */
 HRESULT wdedico_display_adapter_2_get__is_indirect_display_device(WDEDICO_IDisplayAdapter_2 *self, BOOL *value);
 
-/* Windows.Devices.Display.Core.IDisplayAdapter2.get_PreferredRenderAdapter() */
 HRESULT wdedico_display_adapter_2_get__preferred_render_adapter(WDEDICO_IDisplayAdapter_2 *self, WDEDICO_DisplayAdapter** value);
 
-/* Windows.Devices.Display.Core.IDisplayDevice */
-/* Windows.Devices.Display.Core.IDisplayDevice2 */
-/* Windows.Devices.Display.Core.IDisplayDevice2.CreateSimpleScanoutWithDirtyRectsAndOptions(source, surface, subresourceIndex, syncInterval, dirtyRects, options) */
 HRESULT wdedico_display_device_2_create_simple_scanout_with_dirty_rects_and_options(WDEDICO_IDisplayDevice_2 *self, WDEDICO_DisplaySource* source, WDEDICO_DisplaySurface* surface, uint32_t subresourceIndex, uint32_t syncInterval, WFOCO_IIterable_WG_RectInt32* dirtyRects, WDEDICO_DisplayScanoutOptions options, WDEDICO_DisplayScanout** out);
 
-/* Windows.Devices.Display.Core.IDisplayDeviceRenderAdapter */
-/* Windows.Devices.Display.Core.IDisplayDeviceRenderAdapter.get_RenderAdapterId() */
 HRESULT wdedico_display_device_render_adapter_get__render_adapter_id(WDEDICO_IDisplayDeviceRenderAdapter *self, WG_DisplayAdapterId *value);
 
 #endif /* CWINRT_WINDOWS_DEVICES_DISPLAY_CORE_H */

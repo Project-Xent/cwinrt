@@ -13,13 +13,11 @@
 #include <cwinrt/Windows.Graphics.Imaging.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPPRNO_NotesWindowManagerPreviewShowNoteOptions WAPPRNO_NotesWindowManagerPreviewShowNoteOptions;
 typedef struct WAPPRNO_NotesWindowManagerPreview WAPPRNO_NotesWindowManagerPreview;
 typedef struct WAPPRNO_NoteVisibilityChangedPreviewEventArgs WAPPRNO_NoteVisibilityChangedPreviewEventArgs;
@@ -31,7 +29,6 @@ typedef struct WAPPRNO_INotesWindowManagerPreview_2 WAPPRNO_INotesWindowManagerP
 typedef struct WAPPRNO_INoteVisibilityChangedPreviewEventArgs WAPPRNO_INoteVisibilityChangedPreviewEventArgs;
 typedef struct WAPPRNO_INotePlacementChangedPreviewEventArgs WAPPRNO_INotePlacementChangedPreviewEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
@@ -57,7 +54,6 @@ typedef struct WF_TypedEventHandler_WAPPRNO_NotesWindowManagerPreview_WAPPRNO_No
 typedef struct WGRIM_SoftwareBitmap WGRIM_SoftwareBitmap;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -86,65 +82,42 @@ static const IID CWINRT_IID_WAPPRNO_INoteVisibilityChangedPreviewEventArgs CWINR
 static const IID CWINRT_IID_WAPPRNO_INotePlacementChangedPreviewEventArgs CWINRT_MAYBE_UNUSED = { 0x491D57B7, 0xF780, 0x4E7F, { 0xA9, 0x39, 0x9A, 0x4C, 0xAF, 0x96, 0x52, 0x14 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreviewShowNoteOptions */
 HRESULT wapprno_notes_window_manager_preview_show_note_options_new(WAPPRNO_NotesWindowManagerPreviewShowNoteOptions **out);
 
-/* Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreviewShowNoteOptions */
-/* Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreviewShowNoteOptions.get_ShowWithFocus() */
 HRESULT wapprno_notes_window_manager_preview_show_note_options_get__show_with_focus(WAPPRNO_NotesWindowManagerPreviewShowNoteOptions *self, BOOL *value);
 
-/* Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreviewShowNoteOptions.put_ShowWithFocus() */
 HRESULT wapprno_notes_window_manager_preview_show_note_options_put__show_with_focus(WAPPRNO_NotesWindowManagerPreviewShowNoteOptions *self, BOOL value);
 
-/* activate Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview */
 HRESULT wapprno_notes_window_manager_preview_new(WAPPRNO_NotesWindowManagerPreview **out);
 
-/* Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview */
-/* Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.get_IsScreenLocked() */
 HRESULT wapprno_notes_window_manager_preview_get__is_screen_locked(WAPPRNO_NotesWindowManagerPreview *self, BOOL *value);
 
-/* Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.ShowNote(noteViewId) */
 HRESULT wapprno_notes_window_manager_preview_show_note(WAPPRNO_NotesWindowManagerPreview *self, int32_t noteViewId);
 
-/* Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.ShowNoteRelativeTo(noteViewId, anchorNoteViewId) */
 HRESULT wapprno_notes_window_manager_preview_show_note_relative_to(WAPPRNO_NotesWindowManagerPreview *self, int32_t noteViewId, int32_t anchorNoteViewId);
 
-/* Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.ShowNoteWithPlacement(noteViewId, data) */
 HRESULT wapprno_notes_window_manager_preview_show_note_with_placement(WAPPRNO_NotesWindowManagerPreview *self, int32_t noteViewId, WSTST_IBuffer* data);
 
-/* Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.HideNote(noteViewId) */
 HRESULT wapprno_notes_window_manager_preview_hide_note(WAPPRNO_NotesWindowManagerPreview *self, int32_t noteViewId);
 
-/* Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.GetNotePlacement(noteViewId) */
 HRESULT wapprno_notes_window_manager_preview_get_note_placement(WAPPRNO_NotesWindowManagerPreview *self, int32_t noteViewId, WSTST_IBuffer** out);
 
-/* Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.TrySetNoteSize(noteViewId, size) */
 HRESULT wapprno_notes_window_manager_preview_try_set_note_size(WAPPRNO_NotesWindowManagerPreview *self, int32_t noteViewId, WF_Size size, BOOL *out);
 
-/* Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.SetFocusToNextView() */
 HRESULT wapprno_notes_window_manager_preview_set_focus_to_next_view(WAPPRNO_NotesWindowManagerPreview *self);
 
-/* Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.SetNotesThumbnailAsync(thumbnail) */
 HRESULT wapprno_notes_window_manager_preview_set_notes_thumbnail_async(WAPPRNO_NotesWindowManagerPreview *self, WSTST_IBuffer* thumbnail, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.ShowNoteRelativeTo(noteViewId, anchorNoteViewId, options) */
 HRESULT wapprno_notes_window_manager_preview_show_note_relative_to_i32_i32_p(WAPPRNO_NotesWindowManagerPreview *self, int32_t noteViewId, int32_t anchorNoteViewId, WAPPRNO_NotesWindowManagerPreviewShowNoteOptions* options);
 
-/* Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.ShowNoteWithPlacement(noteViewId, data, options) */
 HRESULT wapprno_notes_window_manager_preview_show_note_with_placement_i32_p_p(WAPPRNO_NotesWindowManagerPreview *self, int32_t noteViewId, WSTST_IBuffer* data, WAPPRNO_NotesWindowManagerPreviewShowNoteOptions* options);
 
-/* Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.SetFocusToPreviousView() */
 HRESULT wapprno_notes_window_manager_preview_set_focus_to_previous_view(WAPPRNO_NotesWindowManagerPreview *self);
 
-/* Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.SetThumbnailImageForTaskSwitcherAsync(bitmap) */
 HRESULT wapprno_notes_window_manager_preview_set_thumbnail_image_for_task_switcher_async(WAPPRNO_NotesWindowManagerPreview *self, WGRIM_SoftwareBitmap* bitmap, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview.GetForCurrentApp() */
 HRESULT wapprno_notes_window_manager_preview_get_for_current_app(WAPPRNO_NotesWindowManagerPreview** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapprno_notes_window_manager_preview_on_system_lock_state_changed(WAPPRNO_NotesWindowManagerPreview *self, cwinrt_event_fn fn, void *ctx);
@@ -156,42 +129,24 @@ void wapprno_notes_window_manager_preview_off_note_placement_changed(WAPPRNO_Not
 cwinrt_token wapprno_notes_window_manager_preview_on_note_visibility_changed(WAPPRNO_NotesWindowManagerPreview *self, cwinrt_event_fn fn, void *ctx);
 void wapprno_notes_window_manager_preview_off_note_visibility_changed(WAPPRNO_NotesWindowManagerPreview *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs */
 HRESULT wapprno_note_visibility_changed_preview_event_args_new(WAPPRNO_NoteVisibilityChangedPreviewEventArgs **out);
 
-/* Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs */
-/* Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs.get_ViewId() */
 HRESULT wapprno_note_visibility_changed_preview_event_args_get__view_id(WAPPRNO_NoteVisibilityChangedPreviewEventArgs *self, int32_t *value);
 
-/* Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs.get_IsVisible() */
 HRESULT wapprno_note_visibility_changed_preview_event_args_get__is_visible(WAPPRNO_NoteVisibilityChangedPreviewEventArgs *self, BOOL *value);
 
-/* activate Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs */
 HRESULT wapprno_note_placement_changed_preview_event_args_new(WAPPRNO_NotePlacementChangedPreviewEventArgs **out);
 
-/* Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs */
-/* Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs.get_ViewId() */
 HRESULT wapprno_note_placement_changed_preview_event_args_get__view_id(WAPPRNO_NotePlacementChangedPreviewEventArgs *self, int32_t *value);
 
-/* Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreviewStatics */
-/* Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreviewStatics.GetForCurrentApp() */
 HRESULT wapprno_notes_window_manager_preview_statics_get_for_current_app(WAPPRNO_INotesWindowManagerPreviewStatics *self, WAPPRNO_NotesWindowManagerPreview** out);
 
-/* Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreviewShowNoteOptions */
-/* Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview */
-/* Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview2 */
-/* Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview2.ShowNoteRelativeTo(noteViewId, anchorNoteViewId, options) */
 HRESULT wapprno_notes_window_manager_preview_2_show_note_relative_to(WAPPRNO_INotesWindowManagerPreview_2 *self, int32_t noteViewId, int32_t anchorNoteViewId, WAPPRNO_NotesWindowManagerPreviewShowNoteOptions* options);
 
-/* Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview2.ShowNoteWithPlacement(noteViewId, data, options) */
 HRESULT wapprno_notes_window_manager_preview_2_show_note_with_placement(WAPPRNO_INotesWindowManagerPreview_2 *self, int32_t noteViewId, WSTST_IBuffer* data, WAPPRNO_NotesWindowManagerPreviewShowNoteOptions* options);
 
-/* Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview2.SetFocusToPreviousView() */
 HRESULT wapprno_notes_window_manager_preview_2_set_focus_to_previous_view(WAPPRNO_INotesWindowManagerPreview_2 *self);
 
-/* Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview2.SetThumbnailImageForTaskSwitcherAsync(bitmap) */
 HRESULT wapprno_notes_window_manager_preview_2_set_thumbnail_image_for_task_switcher_async(WAPPRNO_INotesWindowManagerPreview_2 *self, WGRIM_SoftwareBitmap* bitmap, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Preview.Notes.INoteVisibilityChangedPreviewEventArgs */
-/* Windows.ApplicationModel.Preview.Notes.INotePlacementChangedPreviewEventArgs */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_PREVIEW_NOTES_H */

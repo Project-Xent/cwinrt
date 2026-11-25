@@ -16,13 +16,11 @@
 #include <cwinrt/Windows.UI.Xaml.Media.Media3D.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WUIXACODI_XamlDirect WUIXACODI_XamlDirect;
 typedef struct WUIXACODI_IXamlDirectObject WUIXACODI_IXamlDirectObject;
 typedef struct WUIXACODI_IXamlDirectStatics WUIXACODI_IXamlDirectStatics;
 typedef struct WUIXACODI_IXamlDirect WUIXACODI_IXamlDirect;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_DateTime
 #define CWINRT_FWD_WF_DateTime
 typedef struct WF_DateTime WF_DateTime;
@@ -2135,7 +2133,6 @@ typedef enum WUIXACODI_XamlEventIndex {
 } WUIXACODI_XamlEventIndex;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -2152,174 +2149,114 @@ static const IID CWINRT_IID_WUIXACODI_IXamlDirectStatics CWINRT_MAYBE_UNUSED = {
 static const IID CWINRT_IID_WUIXACODI_IXamlDirect CWINRT_MAYBE_UNUSED = { 0x5FFA1295, 0xADD2, 0x590F, { 0xA0, 0x51, 0x70, 0x98, 0x9B, 0x86, 0x6A, 0xDE } };
 #endif
 
-/* Methods */
-
-/* activate Windows.UI.Xaml.Core.Direct.XamlDirect */
 HRESULT wuixacodi_xaml_direct_new(WUIXACODI_XamlDirect **out);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect */
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.GetObject(xamlDirectObject) */
 HRESULT wuixacodi_xaml_direct_get_object(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, IInspectable** out);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.GetXamlDirectObject(object) */
 HRESULT wuixacodi_xaml_direct_get_xaml_direct_object(WUIXACODI_XamlDirect *self, IInspectable* object, WUIXACODI_IXamlDirectObject** out);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.CreateInstance(typeIndex) */
 HRESULT wuixacodi_xaml_direct_create_instance(WUIXACODI_XamlDirect *self, WUIXACODI_XamlTypeIndex typeIndex, WUIXACODI_IXamlDirectObject** out);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.SetObjectProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_set_object_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, IInspectable* value);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.SetXamlDirectObjectProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_set_xaml_direct_object_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, WUIXACODI_IXamlDirectObject* value);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.SetBooleanProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_set_boolean_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, BOOL value);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.SetDoubleProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_set_double_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, double value);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.SetInt32Property(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_set_int32_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, int32_t value);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.SetStringProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_set_string_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.SetDateTimeProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_set_date_time_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, WF_DateTime value);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.SetPointProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_set_point_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, WF_Point value);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.SetRectProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_set_rect_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, WF_Rect value);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.SetSizeProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_set_size_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, WF_Size value);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.SetTimeSpanProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_set_time_span_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, WF_TimeSpan value);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.SetColorProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_set_color_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, WUI_Color value);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.SetCornerRadiusProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_set_corner_radius_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, WUIXA_CornerRadius value);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.SetDurationProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_set_duration_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, WUIXA_Duration value);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.SetGridLengthProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_set_grid_length_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, WUIXA_GridLength value);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.SetThicknessProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_set_thickness_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, WUIXA_Thickness value);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.SetMatrixProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_set_matrix_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, WUIXAME_Matrix value);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.SetMatrix3DProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_set_matrix3_d_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, WUIXAMEME_Matrix3D value);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.SetEnumProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_set_enum_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, uint32_t value);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.GetObjectProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_get_object_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, IInspectable** out);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.GetXamlDirectObjectProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_get_xaml_direct_object_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, WUIXACODI_IXamlDirectObject** out);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.GetBooleanProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_get_boolean_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, BOOL *out);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.GetDoubleProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_get_double_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, double *out);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.GetInt32Property(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_get_int32_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, int32_t *out);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.GetStringProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_get_string_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.GetDateTimeProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_get_date_time_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, WF_DateTime *out);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.GetPointProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_get_point_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, WF_Point *out);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.GetRectProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_get_rect_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, WF_Rect *out);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.GetSizeProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_get_size_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, WF_Size *out);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.GetTimeSpanProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_get_time_span_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, WF_TimeSpan *out);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.GetColorProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_get_color_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, WUI_Color *out);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.GetCornerRadiusProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_get_corner_radius_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, WUIXA_CornerRadius *out);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.GetDurationProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_get_duration_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, WUIXA_Duration *out);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.GetGridLengthProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_get_grid_length_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, WUIXA_GridLength *out);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.GetThicknessProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_get_thickness_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, WUIXA_Thickness *out);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.GetMatrixProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_get_matrix_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, WUIXAME_Matrix *out);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.GetMatrix3DProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_get_matrix3_d_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, WUIXAMEME_Matrix3D *out);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.GetEnumProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_get_enum_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex, uint32_t *out);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.ClearProperty(xamlDirectObject, propertyIndex) */
 HRESULT wuixacodi_xaml_direct_clear_property(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlPropertyIndex propertyIndex);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.GetCollectionCount(xamlDirectObject) */
 HRESULT wuixacodi_xaml_direct_get_collection_count(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, uint32_t *out);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.GetXamlDirectObjectFromCollectionAt(xamlDirectObject, index) */
 HRESULT wuixacodi_xaml_direct_get_xaml_direct_object_from_collection_at(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, uint32_t index, WUIXACODI_IXamlDirectObject** out);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.AddToCollection(xamlDirectObject) */
 HRESULT wuixacodi_xaml_direct_add_to_collection(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_IXamlDirectObject* value);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.InsertIntoCollectionAt(xamlDirectObject, index) */
 HRESULT wuixacodi_xaml_direct_insert_into_collection_at(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, uint32_t index, WUIXACODI_IXamlDirectObject* value);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.RemoveFromCollection(xamlDirectObject) */
 HRESULT wuixacodi_xaml_direct_remove_from_collection(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_IXamlDirectObject* value, BOOL *out);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.RemoveFromCollectionAt(xamlDirectObject, index) */
 HRESULT wuixacodi_xaml_direct_remove_from_collection_at(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, uint32_t index);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.ClearCollection(xamlDirectObject) */
 HRESULT wuixacodi_xaml_direct_clear_collection(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.AddEventHandler(xamlDirectObject, eventIndex, handler) */
 HRESULT wuixacodi_xaml_direct_add_event_handler(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlEventIndex eventIndex, IInspectable* handler);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.AddEventHandler(xamlDirectObject, eventIndex, handler, handledEventsToo) */
 HRESULT wuixacodi_xaml_direct_add_event_handler_p_xaml_event_index_p_b(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlEventIndex eventIndex, IInspectable* handler, BOOL handledEventsToo);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.RemoveEventHandler(xamlDirectObject, eventIndex, handler) */
 HRESULT wuixacodi_xaml_direct_remove_event_handler(WUIXACODI_XamlDirect *self, WUIXACODI_IXamlDirectObject* xamlDirectObject, WUIXACODI_XamlEventIndex eventIndex, IInspectable* handler);
 
-/* Windows.UI.Xaml.Core.Direct.XamlDirect.GetDefault() */
 HRESULT wuixacodi_xaml_direct_get_default(WUIXACODI_XamlDirect** out);
 
-/* Windows.UI.Xaml.Core.Direct.IXamlDirectStatics */
-/* Windows.UI.Xaml.Core.Direct.IXamlDirectStatics.GetDefault() */
 HRESULT wuixacodi_xaml_direct_statics_get_default(WUIXACODI_IXamlDirectStatics *self, WUIXACODI_XamlDirect** out);
 
-/* Windows.UI.Xaml.Core.Direct.IXamlDirect */
 #endif /* CWINRT_WINDOWS_UI_XAML_CORE_DIRECT_H */

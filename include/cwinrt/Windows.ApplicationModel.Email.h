@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStreamReference
 #define CWINRT_FWD_WSTST_IRandomAccessStreamReference
 typedef struct WSTST_IRandomAccessStreamReference WSTST_IRandomAccessStreamReference;
@@ -30,7 +29,6 @@ typedef struct WSY_User WSY_User;
 typedef struct WAPAP_AppointmentRecurrence WAPAP_AppointmentRecurrence;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPEM_EmailMailboxSyncManager WAPEM_EmailMailboxSyncManager;
 typedef struct WAPEM_EmailManager WAPEM_EmailManager;
 typedef struct WAPEM_EmailManagerForUser WAPEM_EmailManagerForUser;
@@ -121,7 +119,6 @@ typedef struct WAPEM_IEmailMailboxAutoReplySettings WAPEM_IEmailMailboxAutoReply
 typedef struct WAPEM_IEmailMailbox_2 WAPEM_IEmailMailbox_2;
 typedef struct WAPEM_IEmailMailbox WAPEM_IEmailMailbox;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_DateTime
 #define CWINRT_FWD_WF_DateTime
 typedef struct WF_DateTime WF_DateTime;
@@ -590,7 +587,6 @@ typedef enum WAPEM_EmailMailboxEmptyFolderStatus {
 } WAPEM_EmailMailboxEmptyFolderStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -819,1647 +815,1042 @@ static const IID CWINRT_IID_WAPEM_IEmailMailbox_2 CWINRT_MAYBE_UNUSED = { 0x14F8
 static const IID CWINRT_IID_WAPEM_IEmailMailbox CWINRT_MAYBE_UNUSED = { 0xA8790649, 0xCF5B, 0x411B, { 0x80, 0xB1, 0x4A, 0x6A, 0x14, 0x84, 0xCE, 0x25 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.Email.EmailMailboxSyncManager */
 HRESULT wapem_email_mailbox_sync_manager_new(WAPEM_EmailMailboxSyncManager **out);
 
-/* Windows.ApplicationModel.Email.EmailMailboxSyncManager */
-/* Windows.ApplicationModel.Email.EmailMailboxSyncManager.get_Status() */
 HRESULT wapem_email_mailbox_sync_manager_get__status(WAPEM_EmailMailboxSyncManager *self, WAPEM_EmailMailboxSyncStatus *value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxSyncManager.get_LastSuccessfulSyncTime() */
 HRESULT wapem_email_mailbox_sync_manager_get__last_successful_sync_time(WAPEM_EmailMailboxSyncManager *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxSyncManager.get_LastAttemptedSyncTime() */
 HRESULT wapem_email_mailbox_sync_manager_get__last_attempted_sync_time(WAPEM_EmailMailboxSyncManager *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxSyncManager.SyncAsync() */
 HRESULT wapem_email_mailbox_sync_manager_sync_async(WAPEM_EmailMailboxSyncManager *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Email.EmailMailboxSyncManager.put_Status() */
 HRESULT wapem_email_mailbox_sync_manager_put__status(WAPEM_EmailMailboxSyncManager *self, WAPEM_EmailMailboxSyncStatus value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxSyncManager.put_LastSuccessfulSyncTime() */
 HRESULT wapem_email_mailbox_sync_manager_put__last_successful_sync_time(WAPEM_EmailMailboxSyncManager *self, WF_DateTime value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxSyncManager.put_LastAttemptedSyncTime() */
 HRESULT wapem_email_mailbox_sync_manager_put__last_attempted_sync_time(WAPEM_EmailMailboxSyncManager *self, WF_DateTime value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapem_email_mailbox_sync_manager_on_sync_status_changed(WAPEM_EmailMailboxSyncManager *self, cwinrt_event_fn fn, void *ctx);
 void wapem_email_mailbox_sync_manager_off_sync_status_changed(WAPEM_EmailMailboxSyncManager *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Email.EmailManager */
 HRESULT wapem_email_manager_new(WAPEM_EmailManager **out);
 
-/* Windows.ApplicationModel.Email.EmailManager */
-/* Windows.ApplicationModel.Email.EmailManager.GetForUser(user) */
 HRESULT wapem_email_manager_get_for_user(WSY_User* user, WAPEM_EmailManagerForUser** out);
 
-/* Windows.ApplicationModel.Email.EmailManager.RequestStoreAsync(accessType) */
 HRESULT wapem_email_manager_request_store_async(WAPEM_EmailStoreAccessType accessType, WF_IAsyncOperation_WAPEM_EmailStore** out);
 
-/* Windows.ApplicationModel.Email.EmailManager.ShowComposeNewEmailAsync(message) */
 HRESULT wapem_email_manager_show_compose_new_email_async(WAPEM_EmailMessage* message, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Email.EmailManagerForUser */
 HRESULT wapem_email_manager_for_user_new(WAPEM_EmailManagerForUser **out);
 
-/* Windows.ApplicationModel.Email.EmailManagerForUser */
-/* Windows.ApplicationModel.Email.EmailManagerForUser.ShowComposeNewEmailAsync(message) */
 HRESULT wapem_email_manager_for_user_show_compose_new_email_async(WAPEM_EmailManagerForUser *self, WAPEM_EmailMessage* message, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.EmailManagerForUser.RequestStoreAsync(accessType) */
 HRESULT wapem_email_manager_for_user_request_store_async(WAPEM_EmailManagerForUser *self, WAPEM_EmailStoreAccessType accessType, WF_IAsyncOperation_WAPEM_EmailStore** out);
 
-/* Windows.ApplicationModel.Email.EmailManagerForUser.get_User() */
 HRESULT wapem_email_manager_for_user_get__user(WAPEM_EmailManagerForUser *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Email.EmailMeetingInfo */
 HRESULT wapem_email_meeting_info_new(WAPEM_EmailMeetingInfo **out);
 
-/* Windows.ApplicationModel.Email.EmailMeetingInfo */
-/* Windows.ApplicationModel.Email.EmailMeetingInfo.get_AllowNewTimeProposal() */
 HRESULT wapem_email_meeting_info_get__allow_new_time_proposal(WAPEM_EmailMeetingInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMeetingInfo.put_AllowNewTimeProposal() */
 HRESULT wapem_email_meeting_info_put__allow_new_time_proposal(WAPEM_EmailMeetingInfo *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailMeetingInfo.get_AppointmentRoamingId() */
 HRESULT wapem_email_meeting_info_get__appointment_roaming_id(WAPEM_EmailMeetingInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailMeetingInfo.put_AppointmentRoamingId() */
 HRESULT wapem_email_meeting_info_put__appointment_roaming_id(WAPEM_EmailMeetingInfo *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Email.EmailMeetingInfo.get_AppointmentOriginalStartTime() */
 HRESULT wapem_email_meeting_info_get__appointment_original_start_time(WAPEM_EmailMeetingInfo *self, WF_DateTime** value);
 
-/* Windows.ApplicationModel.Email.EmailMeetingInfo.put_AppointmentOriginalStartTime() */
 HRESULT wapem_email_meeting_info_put__appointment_original_start_time(WAPEM_EmailMeetingInfo *self, WF_DateTime* value);
 
-/* Windows.ApplicationModel.Email.EmailMeetingInfo.get_Duration() */
 HRESULT wapem_email_meeting_info_get__duration(WAPEM_EmailMeetingInfo *self, WF_TimeSpan *value);
 
-/* Windows.ApplicationModel.Email.EmailMeetingInfo.put_Duration() */
 HRESULT wapem_email_meeting_info_put__duration(WAPEM_EmailMeetingInfo *self, WF_TimeSpan value);
 
-/* Windows.ApplicationModel.Email.EmailMeetingInfo.get_IsAllDay() */
 HRESULT wapem_email_meeting_info_get__is_all_day(WAPEM_EmailMeetingInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMeetingInfo.put_IsAllDay() */
 HRESULT wapem_email_meeting_info_put__is_all_day(WAPEM_EmailMeetingInfo *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailMeetingInfo.get_IsResponseRequested() */
 HRESULT wapem_email_meeting_info_get__is_response_requested(WAPEM_EmailMeetingInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMeetingInfo.put_IsResponseRequested() */
 HRESULT wapem_email_meeting_info_put__is_response_requested(WAPEM_EmailMeetingInfo *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailMeetingInfo.get_Location() */
 HRESULT wapem_email_meeting_info_get__location(WAPEM_EmailMeetingInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailMeetingInfo.put_Location() */
 HRESULT wapem_email_meeting_info_put__location(WAPEM_EmailMeetingInfo *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Email.EmailMeetingInfo.get_ProposedStartTime() */
 HRESULT wapem_email_meeting_info_get__proposed_start_time(WAPEM_EmailMeetingInfo *self, WF_DateTime** value);
 
-/* Windows.ApplicationModel.Email.EmailMeetingInfo.put_ProposedStartTime(proposedStartTime) */
 HRESULT wapem_email_meeting_info_put__proposed_start_time(WAPEM_EmailMeetingInfo *self, WF_DateTime* proposedStartTime);
 
-/* Windows.ApplicationModel.Email.EmailMeetingInfo.get_ProposedDuration() */
 HRESULT wapem_email_meeting_info_get__proposed_duration(WAPEM_EmailMeetingInfo *self, WF_TimeSpan** value);
 
-/* Windows.ApplicationModel.Email.EmailMeetingInfo.put_ProposedDuration(duration) */
 HRESULT wapem_email_meeting_info_put__proposed_duration(WAPEM_EmailMeetingInfo *self, WF_TimeSpan* duration);
 
-/* Windows.ApplicationModel.Email.EmailMeetingInfo.get_RecurrenceStartTime() */
 HRESULT wapem_email_meeting_info_get__recurrence_start_time(WAPEM_EmailMeetingInfo *self, WF_DateTime** value);
 
-/* Windows.ApplicationModel.Email.EmailMeetingInfo.put_RecurrenceStartTime() */
 HRESULT wapem_email_meeting_info_put__recurrence_start_time(WAPEM_EmailMeetingInfo *self, WF_DateTime* value);
 
-/* Windows.ApplicationModel.Email.EmailMeetingInfo.get_Recurrence() */
 HRESULT wapem_email_meeting_info_get__recurrence(WAPEM_EmailMeetingInfo *self, WAPAP_AppointmentRecurrence** value);
 
-/* Windows.ApplicationModel.Email.EmailMeetingInfo.put_Recurrence() */
 HRESULT wapem_email_meeting_info_put__recurrence(WAPEM_EmailMeetingInfo *self, WAPAP_AppointmentRecurrence* value);
 
-/* Windows.ApplicationModel.Email.EmailMeetingInfo.get_RemoteChangeNumber() */
 HRESULT wapem_email_meeting_info_get__remote_change_number(WAPEM_EmailMeetingInfo *self, uint64_t *value);
 
-/* Windows.ApplicationModel.Email.EmailMeetingInfo.put_RemoteChangeNumber() */
 HRESULT wapem_email_meeting_info_put__remote_change_number(WAPEM_EmailMeetingInfo *self, uint64_t value);
 
-/* Windows.ApplicationModel.Email.EmailMeetingInfo.get_StartTime() */
 HRESULT wapem_email_meeting_info_get__start_time(WAPEM_EmailMeetingInfo *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Email.EmailMeetingInfo.put_StartTime() */
 HRESULT wapem_email_meeting_info_put__start_time(WAPEM_EmailMeetingInfo *self, WF_DateTime value);
 
-/* Windows.ApplicationModel.Email.EmailMeetingInfo.get_IsReportedOutOfDateByServer() */
 HRESULT wapem_email_meeting_info_get__is_reported_out_of_date_by_server(WAPEM_EmailMeetingInfo *self, BOOL *value);
 
-/* activate Windows.ApplicationModel.Email.EmailMessage */
 HRESULT wapem_email_message_new(WAPEM_EmailMessage **out);
 
-/* Windows.ApplicationModel.Email.EmailMessage */
-/* Windows.ApplicationModel.Email.EmailMessage.get_Subject() */
 HRESULT wapem_email_message_get__subject(WAPEM_EmailMessage *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.put_Subject() */
 HRESULT wapem_email_message_put__subject(WAPEM_EmailMessage *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_Body() */
 HRESULT wapem_email_message_get__body(WAPEM_EmailMessage *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.put_Body() */
 HRESULT wapem_email_message_put__body(WAPEM_EmailMessage *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_To() */
 HRESULT wapem_email_message_get__to(WAPEM_EmailMessage *self, WFOCO_IVector_WAPEM_EmailRecipient** value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_CC() */
 HRESULT wapem_email_message_get__c_c(WAPEM_EmailMessage *self, WFOCO_IVector_WAPEM_EmailRecipient** value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_Bcc() */
 HRESULT wapem_email_message_get__bcc(WAPEM_EmailMessage *self, WFOCO_IVector_WAPEM_EmailRecipient** value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_Attachments() */
 HRESULT wapem_email_message_get__attachments(WAPEM_EmailMessage *self, WFOCO_IVector_WAPEM_EmailAttachment** value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_Id() */
 HRESULT wapem_email_message_get__id(WAPEM_EmailMessage *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_RemoteId() */
 HRESULT wapem_email_message_get__remote_id(WAPEM_EmailMessage *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.put_RemoteId() */
 HRESULT wapem_email_message_put__remote_id(WAPEM_EmailMessage *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_MailboxId() */
 HRESULT wapem_email_message_get__mailbox_id(WAPEM_EmailMessage *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_ConversationId() */
 HRESULT wapem_email_message_get__conversation_id(WAPEM_EmailMessage *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_FolderId() */
 HRESULT wapem_email_message_get__folder_id(WAPEM_EmailMessage *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_AllowInternetImages() */
 HRESULT wapem_email_message_get__allow_internet_images(WAPEM_EmailMessage *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.put_AllowInternetImages() */
 HRESULT wapem_email_message_put__allow_internet_images(WAPEM_EmailMessage *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_ChangeNumber() */
 HRESULT wapem_email_message_get__change_number(WAPEM_EmailMessage *self, uint64_t *value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_DownloadState() */
 HRESULT wapem_email_message_get__download_state(WAPEM_EmailMessage *self, WAPEM_EmailMessageDownloadState *value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.put_DownloadState() */
 HRESULT wapem_email_message_put__download_state(WAPEM_EmailMessage *self, WAPEM_EmailMessageDownloadState value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_EstimatedDownloadSizeInBytes() */
 HRESULT wapem_email_message_get__estimated_download_size_in_bytes(WAPEM_EmailMessage *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.put_EstimatedDownloadSizeInBytes() */
 HRESULT wapem_email_message_put__estimated_download_size_in_bytes(WAPEM_EmailMessage *self, uint32_t value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_FlagState() */
 HRESULT wapem_email_message_get__flag_state(WAPEM_EmailMessage *self, WAPEM_EmailFlagState *value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.put_FlagState() */
 HRESULT wapem_email_message_put__flag_state(WAPEM_EmailMessage *self, WAPEM_EmailFlagState value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_HasPartialBodies() */
 HRESULT wapem_email_message_get__has_partial_bodies(WAPEM_EmailMessage *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_Importance() */
 HRESULT wapem_email_message_get__importance(WAPEM_EmailMessage *self, WAPEM_EmailImportance *value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.put_Importance() */
 HRESULT wapem_email_message_put__importance(WAPEM_EmailMessage *self, WAPEM_EmailImportance value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_InResponseToMessageId() */
 HRESULT wapem_email_message_get__in_response_to_message_id(WAPEM_EmailMessage *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_IrmInfo() */
 HRESULT wapem_email_message_get__irm_info(WAPEM_EmailMessage *self, WAPEM_EmailIrmInfo** value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.put_IrmInfo() */
 HRESULT wapem_email_message_put__irm_info(WAPEM_EmailMessage *self, WAPEM_EmailIrmInfo* value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_IsDraftMessage() */
 HRESULT wapem_email_message_get__is_draft_message(WAPEM_EmailMessage *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_IsRead() */
 HRESULT wapem_email_message_get__is_read(WAPEM_EmailMessage *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.put_IsRead() */
 HRESULT wapem_email_message_put__is_read(WAPEM_EmailMessage *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_IsSeen() */
 HRESULT wapem_email_message_get__is_seen(WAPEM_EmailMessage *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.put_IsSeen() */
 HRESULT wapem_email_message_put__is_seen(WAPEM_EmailMessage *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_IsServerSearchMessage() */
 HRESULT wapem_email_message_get__is_server_search_message(WAPEM_EmailMessage *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_IsSmartSendable() */
 HRESULT wapem_email_message_get__is_smart_sendable(WAPEM_EmailMessage *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_MessageClass() */
 HRESULT wapem_email_message_get__message_class(WAPEM_EmailMessage *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.put_MessageClass() */
 HRESULT wapem_email_message_put__message_class(WAPEM_EmailMessage *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_NormalizedSubject() */
 HRESULT wapem_email_message_get__normalized_subject(WAPEM_EmailMessage *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_OriginalCodePage() */
 HRESULT wapem_email_message_get__original_code_page(WAPEM_EmailMessage *self, int32_t *value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.put_OriginalCodePage() */
 HRESULT wapem_email_message_put__original_code_page(WAPEM_EmailMessage *self, int32_t value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_Preview() */
 HRESULT wapem_email_message_get__preview(WAPEM_EmailMessage *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.put_Preview() */
 HRESULT wapem_email_message_put__preview(WAPEM_EmailMessage *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_LastResponseKind() */
 HRESULT wapem_email_message_get__last_response_kind(WAPEM_EmailMessage *self, WAPEM_EmailMessageResponseKind *value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.put_LastResponseKind() */
 HRESULT wapem_email_message_put__last_response_kind(WAPEM_EmailMessage *self, WAPEM_EmailMessageResponseKind value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_Sender() */
 HRESULT wapem_email_message_get__sender(WAPEM_EmailMessage *self, WAPEM_EmailRecipient** value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.put_Sender() */
 HRESULT wapem_email_message_put__sender(WAPEM_EmailMessage *self, WAPEM_EmailRecipient* value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_SentTime() */
 HRESULT wapem_email_message_get__sent_time(WAPEM_EmailMessage *self, WF_DateTime** value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.put_SentTime() */
 HRESULT wapem_email_message_put__sent_time(WAPEM_EmailMessage *self, WF_DateTime* value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_MeetingInfo() */
 HRESULT wapem_email_message_get__meeting_info(WAPEM_EmailMessage *self, WAPEM_EmailMeetingInfo** value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.put_MeetingInfo() */
 HRESULT wapem_email_message_put__meeting_info(WAPEM_EmailMessage *self, WAPEM_EmailMeetingInfo* value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.GetBodyStream() */
 HRESULT wapem_email_message_get_body_stream(WAPEM_EmailMessage *self, WAPEM_EmailMessageBodyKind type_, WSTST_IRandomAccessStreamReference** out);
 
-/* Windows.ApplicationModel.Email.EmailMessage.SetBodyStream(stream) */
 HRESULT wapem_email_message_set_body_stream(WAPEM_EmailMessage *self, WAPEM_EmailMessageBodyKind type_, WSTST_IRandomAccessStreamReference* stream);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_SmimeData() */
 HRESULT wapem_email_message_get__smime_data(WAPEM_EmailMessage *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.put_SmimeData() */
 HRESULT wapem_email_message_put__smime_data(WAPEM_EmailMessage *self, WSTST_IRandomAccessStreamReference* value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_SmimeKind() */
 HRESULT wapem_email_message_get__smime_kind(WAPEM_EmailMessage *self, WAPEM_EmailMessageSmimeKind *value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.put_SmimeKind() */
 HRESULT wapem_email_message_put__smime_kind(WAPEM_EmailMessage *self, WAPEM_EmailMessageSmimeKind value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_ReplyTo() */
 HRESULT wapem_email_message_get__reply_to(WAPEM_EmailMessage *self, WFOCO_IVector_WAPEM_EmailRecipient** value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.get_SentRepresenting() */
 HRESULT wapem_email_message_get__sent_representing(WAPEM_EmailMessage *self, WAPEM_EmailRecipient** value);
 
-/* Windows.ApplicationModel.Email.EmailMessage.put_SentRepresenting() */
 HRESULT wapem_email_message_put__sent_representing(WAPEM_EmailMessage *self, WAPEM_EmailRecipient* value);
 
-/* activate Windows.ApplicationModel.Email.EmailMessageBatch */
 HRESULT wapem_email_message_batch_new(WAPEM_EmailMessageBatch **out);
 
-/* Windows.ApplicationModel.Email.EmailMessageBatch */
-/* Windows.ApplicationModel.Email.EmailMessageBatch.get_Messages() */
 HRESULT wapem_email_message_batch_get__messages(WAPEM_EmailMessageBatch *self, WFOCO_IVectorView_WAPEM_EmailMessage** value);
 
-/* Windows.ApplicationModel.Email.EmailMessageBatch.get_Status() */
 HRESULT wapem_email_message_batch_get__status(WAPEM_EmailMessageBatch *self, WAPEM_EmailBatchStatus *value);
 
-/* activate Windows.ApplicationModel.Email.EmailMessageReader */
 HRESULT wapem_email_message_reader_new(WAPEM_EmailMessageReader **out);
 
-/* Windows.ApplicationModel.Email.EmailMessageReader */
-/* Windows.ApplicationModel.Email.EmailMessageReader.ReadBatchAsync() */
 HRESULT wapem_email_message_reader_read_batch_async(WAPEM_EmailMessageReader *self, WF_IAsyncOperation_WAPEM_EmailMessageBatch** out);
 
-/* activate Windows.ApplicationModel.Email.EmailQueryOptions */
 HRESULT wapem_email_query_options_new(WAPEM_EmailQueryOptions **out);
 
-/* Windows.ApplicationModel.Email.EmailQueryOptions */
-/* Windows.ApplicationModel.Email.EmailQueryOptions.get_TextSearch() */
 HRESULT wapem_email_query_options_get__text_search(WAPEM_EmailQueryOptions *self, WAPEM_EmailQueryTextSearch** value);
 
-/* Windows.ApplicationModel.Email.EmailQueryOptions.get_SortDirection() */
 HRESULT wapem_email_query_options_get__sort_direction(WAPEM_EmailQueryOptions *self, WAPEM_EmailQuerySortDirection *value);
 
-/* Windows.ApplicationModel.Email.EmailQueryOptions.put_SortDirection() */
 HRESULT wapem_email_query_options_put__sort_direction(WAPEM_EmailQueryOptions *self, WAPEM_EmailQuerySortDirection value);
 
-/* Windows.ApplicationModel.Email.EmailQueryOptions.get_SortProperty() */
 HRESULT wapem_email_query_options_get__sort_property(WAPEM_EmailQueryOptions *self, WAPEM_EmailQuerySortProperty *value);
 
-/* Windows.ApplicationModel.Email.EmailQueryOptions.put_SortProperty() */
 HRESULT wapem_email_query_options_put__sort_property(WAPEM_EmailQueryOptions *self, WAPEM_EmailQuerySortProperty value);
 
-/* Windows.ApplicationModel.Email.EmailQueryOptions.get_Kind() */
 HRESULT wapem_email_query_options_get__kind(WAPEM_EmailQueryOptions *self, WAPEM_EmailQueryKind *value);
 
-/* Windows.ApplicationModel.Email.EmailQueryOptions.put_Kind() */
 HRESULT wapem_email_query_options_put__kind(WAPEM_EmailQueryOptions *self, WAPEM_EmailQueryKind value);
 
-/* Windows.ApplicationModel.Email.EmailQueryOptions.get_FolderIds() */
 HRESULT wapem_email_query_options_get__folder_ids(WAPEM_EmailQueryOptions *self, WFOCO_IVector_HSTRING** value);
 
-/* activate Windows.ApplicationModel.Email.EmailQueryTextSearch */
 HRESULT wapem_email_query_text_search_new(WAPEM_EmailQueryTextSearch **out);
 
-/* Windows.ApplicationModel.Email.EmailQueryTextSearch */
-/* Windows.ApplicationModel.Email.EmailQueryTextSearch.get_Fields() */
 HRESULT wapem_email_query_text_search_get__fields(WAPEM_EmailQueryTextSearch *self, WAPEM_EmailQuerySearchFields *value);
 
-/* Windows.ApplicationModel.Email.EmailQueryTextSearch.put_Fields() */
 HRESULT wapem_email_query_text_search_put__fields(WAPEM_EmailQueryTextSearch *self, WAPEM_EmailQuerySearchFields value);
 
-/* Windows.ApplicationModel.Email.EmailQueryTextSearch.get_SearchScope() */
 HRESULT wapem_email_query_text_search_get__search_scope(WAPEM_EmailQueryTextSearch *self, WAPEM_EmailQuerySearchScope *value);
 
-/* Windows.ApplicationModel.Email.EmailQueryTextSearch.put_SearchScope() */
 HRESULT wapem_email_query_text_search_put__search_scope(WAPEM_EmailQueryTextSearch *self, WAPEM_EmailQuerySearchScope value);
 
-/* Windows.ApplicationModel.Email.EmailQueryTextSearch.get_Text() */
 HRESULT wapem_email_query_text_search_get__text(WAPEM_EmailQueryTextSearch *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailQueryTextSearch.put_Text() */
 HRESULT wapem_email_query_text_search_put__text(WAPEM_EmailQueryTextSearch *self, cwinrt_hstring value);
 
-/* activate Windows.ApplicationModel.Email.EmailRecipient */
 HRESULT wapem_email_recipient_new(WAPEM_EmailRecipient **out);
 
-/* Windows.ApplicationModel.Email.EmailRecipient */
-/* Windows.ApplicationModel.Email.EmailRecipient.get_Name() */
 HRESULT wapem_email_recipient_get__name(WAPEM_EmailRecipient *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailRecipient.put_Name() */
 HRESULT wapem_email_recipient_put__name(WAPEM_EmailRecipient *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Email.EmailRecipient.get_Address() */
 HRESULT wapem_email_recipient_get__address(WAPEM_EmailRecipient *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailRecipient.put_Address() */
 HRESULT wapem_email_recipient_put__address(WAPEM_EmailRecipient *self, cwinrt_hstring value);
 
-/* activate Windows.ApplicationModel.Email.EmailRecipientResolutionResult */
 HRESULT wapem_email_recipient_resolution_result_new(WAPEM_EmailRecipientResolutionResult **out);
 
-/* Windows.ApplicationModel.Email.EmailRecipientResolutionResult */
-/* Windows.ApplicationModel.Email.EmailRecipientResolutionResult.get_Status() */
 HRESULT wapem_email_recipient_resolution_result_get__status(WAPEM_EmailRecipientResolutionResult *self, WAPEM_EmailRecipientResolutionStatus *value);
 
-/* Windows.ApplicationModel.Email.EmailRecipientResolutionResult.get_PublicKeys() */
 HRESULT wapem_email_recipient_resolution_result_get__public_keys(WAPEM_EmailRecipientResolutionResult *self, WFOCO_IVectorView_WSECRCE_Certificate** value);
 
-/* Windows.ApplicationModel.Email.EmailRecipientResolutionResult.put_Status() */
 HRESULT wapem_email_recipient_resolution_result_put__status(WAPEM_EmailRecipientResolutionResult *self, WAPEM_EmailRecipientResolutionStatus value);
 
-/* Windows.ApplicationModel.Email.EmailRecipientResolutionResult.SetPublicKeys() */
 HRESULT wapem_email_recipient_resolution_result_set_public_keys(WAPEM_EmailRecipientResolutionResult *self, WFOCO_IIterable_WSECRCE_Certificate* value);
 
-/* activate Windows.ApplicationModel.Email.EmailStore */
 HRESULT wapem_email_store_new(WAPEM_EmailStore **out);
 
-/* Windows.ApplicationModel.Email.EmailStore */
-/* Windows.ApplicationModel.Email.EmailStore.FindMailboxesAsync() */
 HRESULT wapem_email_store_find_mailboxes_async(WAPEM_EmailStore *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPEM_EmailMailbox** out);
 
-/* Windows.ApplicationModel.Email.EmailStore.GetConversationReader() */
 HRESULT wapem_email_store_get_conversation_reader(WAPEM_EmailStore *self, WAPEM_EmailConversationReader** out);
 
-/* Windows.ApplicationModel.Email.EmailStore.GetConversationReader(options) */
 HRESULT wapem_email_store_get_conversation_reader_p_p(WAPEM_EmailStore *self, WAPEM_EmailQueryOptions* options, WAPEM_EmailConversationReader** out);
 
-/* Windows.ApplicationModel.Email.EmailStore.GetMessageReader() */
 HRESULT wapem_email_store_get_message_reader(WAPEM_EmailStore *self, WAPEM_EmailMessageReader** out);
 
-/* Windows.ApplicationModel.Email.EmailStore.GetMessageReader(options) */
 HRESULT wapem_email_store_get_message_reader_p_p(WAPEM_EmailStore *self, WAPEM_EmailQueryOptions* options, WAPEM_EmailMessageReader** out);
 
-/* Windows.ApplicationModel.Email.EmailStore.GetMailboxAsync(id) */
 HRESULT wapem_email_store_get_mailbox_async(WAPEM_EmailStore *self, cwinrt_hstring id, WF_IAsyncOperation_WAPEM_EmailMailbox** out);
 
-/* Windows.ApplicationModel.Email.EmailStore.GetConversationAsync(id) */
 HRESULT wapem_email_store_get_conversation_async(WAPEM_EmailStore *self, cwinrt_hstring id, WF_IAsyncOperation_WAPEM_EmailConversation** out);
 
-/* Windows.ApplicationModel.Email.EmailStore.GetFolderAsync(id) */
 HRESULT wapem_email_store_get_folder_async(WAPEM_EmailStore *self, cwinrt_hstring id, WF_IAsyncOperation_WAPEM_EmailFolder** out);
 
-/* Windows.ApplicationModel.Email.EmailStore.GetMessageAsync(id) */
 HRESULT wapem_email_store_get_message_async(WAPEM_EmailStore *self, cwinrt_hstring id, WF_IAsyncOperation_WAPEM_EmailMessage** out);
 
-/* Windows.ApplicationModel.Email.EmailStore.CreateMailboxAsync(accountName, accountAddress) */
 HRESULT wapem_email_store_create_mailbox_async(WAPEM_EmailStore *self, cwinrt_hstring accountName, cwinrt_hstring accountAddress, WF_IAsyncOperation_WAPEM_EmailMailbox** out);
 
-/* Windows.ApplicationModel.Email.EmailStore.CreateMailboxAsync(accountName, accountAddress, userDataAccountId) */
 HRESULT wapem_email_store_create_mailbox_async_str_str_str_p(WAPEM_EmailStore *self, cwinrt_hstring accountName, cwinrt_hstring accountAddress, cwinrt_hstring userDataAccountId, WF_IAsyncOperation_WAPEM_EmailMailbox** out);
 
-/* Windows.ApplicationModel.Email.IEmailAttachmentFactory */
-/* Windows.ApplicationModel.Email.IEmailAttachmentFactory.Create(fileName, data) */
 HRESULT wapem_email_attachment_factory_create(WAPEM_IEmailAttachmentFactory *self, cwinrt_hstring fileName, WSTST_IRandomAccessStreamReference* data, WAPEM_EmailAttachment** out);
 
-/* Windows.ApplicationModel.Email.IEmailAttachmentFactory2 */
-/* Windows.ApplicationModel.Email.IEmailAttachmentFactory2.Create(fileName, data, mimeType) */
 HRESULT wapem_email_attachment_factory_2_create(WAPEM_IEmailAttachmentFactory_2 *self, cwinrt_hstring fileName, WSTST_IRandomAccessStreamReference* data, cwinrt_hstring mimeType, WAPEM_EmailAttachment** out);
 
-/* Windows.ApplicationModel.Email.IEmailIrmInfoFactory */
-/* Windows.ApplicationModel.Email.IEmailIrmInfoFactory.Create(expiration, irmTemplate) */
 HRESULT wapem_email_irm_info_factory_create(WAPEM_IEmailIrmInfoFactory *self, WF_DateTime expiration, WAPEM_EmailIrmTemplate* irmTemplate, WAPEM_EmailIrmInfo** out);
 
-/* Windows.ApplicationModel.Email.IEmailIrmTemplateFactory */
-/* Windows.ApplicationModel.Email.IEmailIrmTemplateFactory.Create(id, name, description) */
 HRESULT wapem_email_irm_template_factory_create(WAPEM_IEmailIrmTemplateFactory *self, cwinrt_hstring id, cwinrt_hstring name, cwinrt_hstring description, WAPEM_EmailIrmTemplate** out);
 
-/* activate Windows.ApplicationModel.Email.EmailMailboxPolicies */
 HRESULT wapem_email_mailbox_policies_new(WAPEM_EmailMailboxPolicies **out);
 
-/* Windows.ApplicationModel.Email.EmailMailboxPolicies */
-/* Windows.ApplicationModel.Email.EmailMailboxPolicies.get_AllowedSmimeEncryptionAlgorithmNegotiation() */
 HRESULT wapem_email_mailbox_policies_get__allowed_smime_encryption_algorithm_negotiation(WAPEM_EmailMailboxPolicies *self, WAPEM_EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation *value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxPolicies.get_AllowSmimeSoftCertificates() */
 HRESULT wapem_email_mailbox_policies_get__allow_smime_soft_certificates(WAPEM_EmailMailboxPolicies *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxPolicies.get_RequiredSmimeEncryptionAlgorithm() */
 HRESULT wapem_email_mailbox_policies_get__required_smime_encryption_algorithm(WAPEM_EmailMailboxPolicies *self, WAPEM_EmailMailboxSmimeEncryptionAlgorithm** value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxPolicies.get_RequiredSmimeSigningAlgorithm() */
 HRESULT wapem_email_mailbox_policies_get__required_smime_signing_algorithm(WAPEM_EmailMailboxPolicies *self, WAPEM_EmailMailboxSmimeSigningAlgorithm** value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxPolicies.get_MustEncryptSmimeMessages() */
 HRESULT wapem_email_mailbox_policies_get__must_encrypt_smime_messages(WAPEM_EmailMailboxPolicies *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxPolicies.get_MustSignSmimeMessages() */
 HRESULT wapem_email_mailbox_policies_get__must_sign_smime_messages(WAPEM_EmailMailboxPolicies *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxPolicies.put_AllowedSmimeEncryptionAlgorithmNegotiation() */
 HRESULT wapem_email_mailbox_policies_put__allowed_smime_encryption_algorithm_negotiation(WAPEM_EmailMailboxPolicies *self, WAPEM_EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxPolicies.put_AllowSmimeSoftCertificates() */
 HRESULT wapem_email_mailbox_policies_put__allow_smime_soft_certificates(WAPEM_EmailMailboxPolicies *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxPolicies.put_RequiredSmimeEncryptionAlgorithm() */
 HRESULT wapem_email_mailbox_policies_put__required_smime_encryption_algorithm(WAPEM_EmailMailboxPolicies *self, WAPEM_EmailMailboxSmimeEncryptionAlgorithm* value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxPolicies.put_RequiredSmimeSigningAlgorithm() */
 HRESULT wapem_email_mailbox_policies_put__required_smime_signing_algorithm(WAPEM_EmailMailboxPolicies *self, WAPEM_EmailMailboxSmimeSigningAlgorithm* value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxPolicies.put_MustEncryptSmimeMessages() */
 HRESULT wapem_email_mailbox_policies_put__must_encrypt_smime_messages(WAPEM_EmailMailboxPolicies *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxPolicies.put_MustSignSmimeMessages() */
 HRESULT wapem_email_mailbox_policies_put__must_sign_smime_messages(WAPEM_EmailMailboxPolicies *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.IEmailManagerStatics */
-/* Windows.ApplicationModel.Email.IEmailManagerStatics.ShowComposeNewEmailAsync(message) */
 HRESULT wapem_email_manager_statics_show_compose_new_email_async(WAPEM_IEmailManagerStatics *self, WAPEM_EmailMessage* message, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.IEmailManagerStatics2 */
-/* Windows.ApplicationModel.Email.IEmailManagerStatics2.RequestStoreAsync(accessType) */
 HRESULT wapem_email_manager_statics_2_request_store_async(WAPEM_IEmailManagerStatics_2 *self, WAPEM_EmailStoreAccessType accessType, WF_IAsyncOperation_WAPEM_EmailStore** out);
 
-/* Windows.ApplicationModel.Email.IEmailManagerStatics3 */
-/* Windows.ApplicationModel.Email.IEmailManagerStatics3.GetForUser(user) */
 HRESULT wapem_email_manager_statics_3_get_for_user(WAPEM_IEmailManagerStatics_3 *self, WSY_User* user, WAPEM_EmailManagerForUser** out);
 
-/* Windows.ApplicationModel.Email.IEmailQueryOptionsFactory */
-/* Windows.ApplicationModel.Email.IEmailQueryOptionsFactory.CreateWithText(text) */
 HRESULT wapem_email_query_options_factory_create_with_text(WAPEM_IEmailQueryOptionsFactory *self, cwinrt_hstring text, WAPEM_EmailQueryOptions** out);
 
-/* Windows.ApplicationModel.Email.IEmailQueryOptionsFactory.CreateWithTextAndFields(text, fields) */
 HRESULT wapem_email_query_options_factory_create_with_text_and_fields(WAPEM_IEmailQueryOptionsFactory *self, cwinrt_hstring text, WAPEM_EmailQuerySearchFields fields, WAPEM_EmailQueryOptions** out);
 
-/* Windows.ApplicationModel.Email.IEmailRecipientFactory */
-/* Windows.ApplicationModel.Email.IEmailRecipientFactory.Create(address) */
 HRESULT wapem_email_recipient_factory_create(WAPEM_IEmailRecipientFactory *self, cwinrt_hstring address, WAPEM_EmailRecipient** out);
 
-/* Windows.ApplicationModel.Email.IEmailRecipientFactory.CreateWithName(address, name) */
 HRESULT wapem_email_recipient_factory_create_with_name(WAPEM_IEmailRecipientFactory *self, cwinrt_hstring address, cwinrt_hstring name, WAPEM_EmailRecipient** out);
 
-/* activate Windows.ApplicationModel.Email.EmailFolder */
 HRESULT wapem_email_folder_new(WAPEM_EmailFolder **out);
 
-/* Windows.ApplicationModel.Email.EmailFolder */
-/* Windows.ApplicationModel.Email.EmailFolder.get_Id() */
 HRESULT wapem_email_folder_get__id(WAPEM_EmailFolder *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailFolder.get_RemoteId() */
 HRESULT wapem_email_folder_get__remote_id(WAPEM_EmailFolder *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailFolder.put_RemoteId() */
 HRESULT wapem_email_folder_put__remote_id(WAPEM_EmailFolder *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Email.EmailFolder.get_MailboxId() */
 HRESULT wapem_email_folder_get__mailbox_id(WAPEM_EmailFolder *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailFolder.get_ParentFolderId() */
 HRESULT wapem_email_folder_get__parent_folder_id(WAPEM_EmailFolder *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailFolder.get_DisplayName() */
 HRESULT wapem_email_folder_get__display_name(WAPEM_EmailFolder *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailFolder.put_DisplayName() */
 HRESULT wapem_email_folder_put__display_name(WAPEM_EmailFolder *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Email.EmailFolder.get_IsSyncEnabled() */
 HRESULT wapem_email_folder_get__is_sync_enabled(WAPEM_EmailFolder *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailFolder.put_IsSyncEnabled() */
 HRESULT wapem_email_folder_put__is_sync_enabled(WAPEM_EmailFolder *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailFolder.get_LastSuccessfulSyncTime() */
 HRESULT wapem_email_folder_get__last_successful_sync_time(WAPEM_EmailFolder *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Email.EmailFolder.put_LastSuccessfulSyncTime() */
 HRESULT wapem_email_folder_put__last_successful_sync_time(WAPEM_EmailFolder *self, WF_DateTime value);
 
-/* Windows.ApplicationModel.Email.EmailFolder.get_Kind() */
 HRESULT wapem_email_folder_get__kind(WAPEM_EmailFolder *self, WAPEM_EmailSpecialFolderKind *value);
 
-/* Windows.ApplicationModel.Email.EmailFolder.CreateFolderAsync(name) */
 HRESULT wapem_email_folder_create_folder_async(WAPEM_EmailFolder *self, cwinrt_hstring name, WF_IAsyncOperation_WAPEM_EmailFolder** out);
 
-/* Windows.ApplicationModel.Email.EmailFolder.DeleteAsync() */
 HRESULT wapem_email_folder_delete_async(WAPEM_EmailFolder *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.EmailFolder.FindChildFoldersAsync() */
 HRESULT wapem_email_folder_find_child_folders_async(WAPEM_EmailFolder *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPEM_EmailFolder** out);
 
-/* Windows.ApplicationModel.Email.EmailFolder.GetConversationReader() */
 HRESULT wapem_email_folder_get_conversation_reader(WAPEM_EmailFolder *self, WAPEM_EmailConversationReader** out);
 
-/* Windows.ApplicationModel.Email.EmailFolder.GetConversationReader(options) */
 HRESULT wapem_email_folder_get_conversation_reader_p_p(WAPEM_EmailFolder *self, WAPEM_EmailQueryOptions* options, WAPEM_EmailConversationReader** out);
 
-/* Windows.ApplicationModel.Email.EmailFolder.GetMessageAsync(id) */
 HRESULT wapem_email_folder_get_message_async(WAPEM_EmailFolder *self, cwinrt_hstring id, WF_IAsyncOperation_WAPEM_EmailMessage** out);
 
-/* Windows.ApplicationModel.Email.EmailFolder.GetMessageReader() */
 HRESULT wapem_email_folder_get_message_reader(WAPEM_EmailFolder *self, WAPEM_EmailMessageReader** out);
 
-/* Windows.ApplicationModel.Email.EmailFolder.GetMessageReader(options) */
 HRESULT wapem_email_folder_get_message_reader_p_p(WAPEM_EmailFolder *self, WAPEM_EmailQueryOptions* options, WAPEM_EmailMessageReader** out);
 
-/* Windows.ApplicationModel.Email.EmailFolder.GetMessageCountsAsync() */
 HRESULT wapem_email_folder_get_message_counts_async(WAPEM_EmailFolder *self, WF_IAsyncOperation_WAPEM_EmailItemCounts** out);
 
-/* Windows.ApplicationModel.Email.EmailFolder.TryMoveAsync(newParentFolder) */
 HRESULT wapem_email_folder_try_move_async(WAPEM_EmailFolder *self, WAPEM_EmailFolder* newParentFolder, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Email.EmailFolder.TryMoveAsync(newParentFolder, newFolderName) */
 HRESULT wapem_email_folder_try_move_async_p_str_p(WAPEM_EmailFolder *self, WAPEM_EmailFolder* newParentFolder, cwinrt_hstring newFolderName, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Email.EmailFolder.TrySaveAsync() */
 HRESULT wapem_email_folder_try_save_async(WAPEM_EmailFolder *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Email.EmailFolder.SaveMessageAsync(message) */
 HRESULT wapem_email_folder_save_message_async(WAPEM_EmailFolder *self, WAPEM_EmailMessage* message, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Email.EmailConversationReader */
 HRESULT wapem_email_conversation_reader_new(WAPEM_EmailConversationReader **out);
 
-/* Windows.ApplicationModel.Email.EmailConversationReader */
-/* Windows.ApplicationModel.Email.EmailConversationReader.ReadBatchAsync() */
 HRESULT wapem_email_conversation_reader_read_batch_async(WAPEM_EmailConversationReader *self, WF_IAsyncOperation_WAPEM_EmailConversationBatch** out);
 
-/* activate Windows.ApplicationModel.Email.EmailConversationBatch */
 HRESULT wapem_email_conversation_batch_new(WAPEM_EmailConversationBatch **out);
 
-/* Windows.ApplicationModel.Email.EmailConversationBatch */
-/* Windows.ApplicationModel.Email.EmailConversationBatch.get_Conversations() */
 HRESULT wapem_email_conversation_batch_get__conversations(WAPEM_EmailConversationBatch *self, WFOCO_IVectorView_WAPEM_EmailConversation** value);
 
-/* Windows.ApplicationModel.Email.EmailConversationBatch.get_Status() */
 HRESULT wapem_email_conversation_batch_get__status(WAPEM_EmailConversationBatch *self, WAPEM_EmailBatchStatus *value);
 
-/* activate Windows.ApplicationModel.Email.EmailConversation */
 HRESULT wapem_email_conversation_new(WAPEM_EmailConversation **out);
 
-/* Windows.ApplicationModel.Email.EmailConversation */
-/* Windows.ApplicationModel.Email.EmailConversation.get_Id() */
 HRESULT wapem_email_conversation_get__id(WAPEM_EmailConversation *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailConversation.get_MailboxId() */
 HRESULT wapem_email_conversation_get__mailbox_id(WAPEM_EmailConversation *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailConversation.get_FlagState() */
 HRESULT wapem_email_conversation_get__flag_state(WAPEM_EmailConversation *self, WAPEM_EmailFlagState *value);
 
-/* Windows.ApplicationModel.Email.EmailConversation.get_HasAttachment() */
 HRESULT wapem_email_conversation_get__has_attachment(WAPEM_EmailConversation *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailConversation.get_Importance() */
 HRESULT wapem_email_conversation_get__importance(WAPEM_EmailConversation *self, WAPEM_EmailImportance *value);
 
-/* Windows.ApplicationModel.Email.EmailConversation.get_LastEmailResponseKind() */
 HRESULT wapem_email_conversation_get__last_email_response_kind(WAPEM_EmailConversation *self, WAPEM_EmailMessageResponseKind *value);
 
-/* Windows.ApplicationModel.Email.EmailConversation.get_MessageCount() */
 HRESULT wapem_email_conversation_get__message_count(WAPEM_EmailConversation *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Email.EmailConversation.get_MostRecentMessageId() */
 HRESULT wapem_email_conversation_get__most_recent_message_id(WAPEM_EmailConversation *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailConversation.get_MostRecentMessageTime() */
 HRESULT wapem_email_conversation_get__most_recent_message_time(WAPEM_EmailConversation *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Email.EmailConversation.get_Preview() */
 HRESULT wapem_email_conversation_get__preview(WAPEM_EmailConversation *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailConversation.get_LatestSender() */
 HRESULT wapem_email_conversation_get__latest_sender(WAPEM_EmailConversation *self, WAPEM_EmailRecipient** value);
 
-/* Windows.ApplicationModel.Email.EmailConversation.get_Subject() */
 HRESULT wapem_email_conversation_get__subject(WAPEM_EmailConversation *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailConversation.get_UnreadMessageCount() */
 HRESULT wapem_email_conversation_get__unread_message_count(WAPEM_EmailConversation *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Email.EmailConversation.FindMessagesAsync() */
 HRESULT wapem_email_conversation_find_messages_async(WAPEM_EmailConversation *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPEM_EmailMessage** out);
 
-/* Windows.ApplicationModel.Email.EmailConversation.FindMessagesAsync(count) */
 HRESULT wapem_email_conversation_find_messages_async_u32_p(WAPEM_EmailConversation *self, uint32_t count, WF_IAsyncOperation_WFOCO_IVectorView_WAPEM_EmailMessage** out);
 
-/* activate Windows.ApplicationModel.Email.EmailAttachment */
 HRESULT wapem_email_attachment_new(WAPEM_EmailAttachment **out);
 
-/* Windows.ApplicationModel.Email.EmailAttachment */
-/* Windows.ApplicationModel.Email.EmailAttachment.get_FileName() */
 HRESULT wapem_email_attachment_get__file_name(WAPEM_EmailAttachment *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailAttachment.put_FileName() */
 HRESULT wapem_email_attachment_put__file_name(WAPEM_EmailAttachment *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Email.EmailAttachment.get_Data() */
 HRESULT wapem_email_attachment_get__data(WAPEM_EmailAttachment *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.Email.EmailAttachment.put_Data() */
 HRESULT wapem_email_attachment_put__data(WAPEM_EmailAttachment *self, WSTST_IRandomAccessStreamReference* value);
 
-/* Windows.ApplicationModel.Email.EmailAttachment.get_Id() */
 HRESULT wapem_email_attachment_get__id(WAPEM_EmailAttachment *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailAttachment.get_ContentId() */
 HRESULT wapem_email_attachment_get__content_id(WAPEM_EmailAttachment *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailAttachment.put_ContentId() */
 HRESULT wapem_email_attachment_put__content_id(WAPEM_EmailAttachment *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Email.EmailAttachment.get_ContentLocation() */
 HRESULT wapem_email_attachment_get__content_location(WAPEM_EmailAttachment *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailAttachment.put_ContentLocation() */
 HRESULT wapem_email_attachment_put__content_location(WAPEM_EmailAttachment *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Email.EmailAttachment.get_DownloadState() */
 HRESULT wapem_email_attachment_get__download_state(WAPEM_EmailAttachment *self, WAPEM_EmailAttachmentDownloadState *value);
 
-/* Windows.ApplicationModel.Email.EmailAttachment.put_DownloadState() */
 HRESULT wapem_email_attachment_put__download_state(WAPEM_EmailAttachment *self, WAPEM_EmailAttachmentDownloadState value);
 
-/* Windows.ApplicationModel.Email.EmailAttachment.get_EstimatedDownloadSizeInBytes() */
 HRESULT wapem_email_attachment_get__estimated_download_size_in_bytes(WAPEM_EmailAttachment *self, uint64_t *value);
 
-/* Windows.ApplicationModel.Email.EmailAttachment.put_EstimatedDownloadSizeInBytes() */
 HRESULT wapem_email_attachment_put__estimated_download_size_in_bytes(WAPEM_EmailAttachment *self, uint64_t value);
 
-/* Windows.ApplicationModel.Email.EmailAttachment.get_IsFromBaseMessage() */
 HRESULT wapem_email_attachment_get__is_from_base_message(WAPEM_EmailAttachment *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailAttachment.get_IsInline() */
 HRESULT wapem_email_attachment_get__is_inline(WAPEM_EmailAttachment *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailAttachment.put_IsInline() */
 HRESULT wapem_email_attachment_put__is_inline(WAPEM_EmailAttachment *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailAttachment.get_MimeType() */
 HRESULT wapem_email_attachment_get__mime_type(WAPEM_EmailAttachment *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailAttachment.put_MimeType() */
 HRESULT wapem_email_attachment_put__mime_type(WAPEM_EmailAttachment *self, cwinrt_hstring value);
 
-/* activate Windows.ApplicationModel.Email.EmailIrmInfo */
 HRESULT wapem_email_irm_info_new(WAPEM_EmailIrmInfo **out);
 
-/* Windows.ApplicationModel.Email.EmailIrmInfo */
-/* Windows.ApplicationModel.Email.EmailIrmInfo.get_CanEdit() */
 HRESULT wapem_email_irm_info_get__can_edit(WAPEM_EmailIrmInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailIrmInfo.put_CanEdit() */
 HRESULT wapem_email_irm_info_put__can_edit(WAPEM_EmailIrmInfo *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailIrmInfo.get_CanExtractData() */
 HRESULT wapem_email_irm_info_get__can_extract_data(WAPEM_EmailIrmInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailIrmInfo.put_CanExtractData() */
 HRESULT wapem_email_irm_info_put__can_extract_data(WAPEM_EmailIrmInfo *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailIrmInfo.get_CanForward() */
 HRESULT wapem_email_irm_info_get__can_forward(WAPEM_EmailIrmInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailIrmInfo.put_CanForward() */
 HRESULT wapem_email_irm_info_put__can_forward(WAPEM_EmailIrmInfo *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailIrmInfo.get_CanModifyRecipientsOnResponse() */
 HRESULT wapem_email_irm_info_get__can_modify_recipients_on_response(WAPEM_EmailIrmInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailIrmInfo.put_CanModifyRecipientsOnResponse() */
 HRESULT wapem_email_irm_info_put__can_modify_recipients_on_response(WAPEM_EmailIrmInfo *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailIrmInfo.get_CanPrintData() */
 HRESULT wapem_email_irm_info_get__can_print_data(WAPEM_EmailIrmInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailIrmInfo.put_CanPrintData() */
 HRESULT wapem_email_irm_info_put__can_print_data(WAPEM_EmailIrmInfo *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailIrmInfo.get_CanRemoveIrmOnResponse() */
 HRESULT wapem_email_irm_info_get__can_remove_irm_on_response(WAPEM_EmailIrmInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailIrmInfo.put_CanRemoveIrmOnResponse() */
 HRESULT wapem_email_irm_info_put__can_remove_irm_on_response(WAPEM_EmailIrmInfo *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailIrmInfo.get_CanReply() */
 HRESULT wapem_email_irm_info_get__can_reply(WAPEM_EmailIrmInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailIrmInfo.put_CanReply() */
 HRESULT wapem_email_irm_info_put__can_reply(WAPEM_EmailIrmInfo *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailIrmInfo.get_CanReplyAll() */
 HRESULT wapem_email_irm_info_get__can_reply_all(WAPEM_EmailIrmInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailIrmInfo.put_CanReplyAll() */
 HRESULT wapem_email_irm_info_put__can_reply_all(WAPEM_EmailIrmInfo *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailIrmInfo.get_ExpirationDate() */
 HRESULT wapem_email_irm_info_get__expiration_date(WAPEM_EmailIrmInfo *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Email.EmailIrmInfo.put_ExpirationDate() */
 HRESULT wapem_email_irm_info_put__expiration_date(WAPEM_EmailIrmInfo *self, WF_DateTime value);
 
-/* Windows.ApplicationModel.Email.EmailIrmInfo.get_IsIrmOriginator() */
 HRESULT wapem_email_irm_info_get__is_irm_originator(WAPEM_EmailIrmInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailIrmInfo.put_IsIrmOriginator() */
 HRESULT wapem_email_irm_info_put__is_irm_originator(WAPEM_EmailIrmInfo *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailIrmInfo.get_IsProgramaticAccessAllowed() */
 HRESULT wapem_email_irm_info_get__is_programatic_access_allowed(WAPEM_EmailIrmInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailIrmInfo.put_IsProgramaticAccessAllowed() */
 HRESULT wapem_email_irm_info_put__is_programatic_access_allowed(WAPEM_EmailIrmInfo *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailIrmInfo.get_Template() */
 HRESULT wapem_email_irm_info_get__template(WAPEM_EmailIrmInfo *self, WAPEM_EmailIrmTemplate** value);
 
-/* Windows.ApplicationModel.Email.EmailIrmInfo.put_Template() */
 HRESULT wapem_email_irm_info_put__template(WAPEM_EmailIrmInfo *self, WAPEM_EmailIrmTemplate* value);
 
-/* activate Windows.ApplicationModel.Email.EmailMailboxCreateFolderResult */
 HRESULT wapem_email_mailbox_create_folder_result_new(WAPEM_EmailMailboxCreateFolderResult **out);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCreateFolderResult */
-/* Windows.ApplicationModel.Email.EmailMailboxCreateFolderResult.get_Status() */
 HRESULT wapem_email_mailbox_create_folder_result_get__status(WAPEM_EmailMailboxCreateFolderResult *self, WAPEM_EmailMailboxCreateFolderStatus *value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCreateFolderResult.get_Folder() */
 HRESULT wapem_email_mailbox_create_folder_result_get__folder(WAPEM_EmailMailboxCreateFolderResult *self, WAPEM_EmailFolder** value);
 
-/* activate Windows.ApplicationModel.Email.EmailMailboxChangedEventArgs */
 HRESULT wapem_email_mailbox_changed_event_args_new(WAPEM_EmailMailboxChangedEventArgs **out);
 
-/* Windows.ApplicationModel.Email.EmailMailboxChangedEventArgs */
-/* Windows.ApplicationModel.Email.EmailMailboxChangedEventArgs.GetDeferral() */
 HRESULT wapem_email_mailbox_changed_event_args_get_deferral(WAPEM_EmailMailboxChangedEventArgs *self, WAPEM_EmailMailboxChangedDeferral** out);
 
-/* activate Windows.ApplicationModel.Email.EmailMailboxChangedDeferral */
 HRESULT wapem_email_mailbox_changed_deferral_new(WAPEM_EmailMailboxChangedDeferral **out);
 
-/* Windows.ApplicationModel.Email.EmailMailboxChangedDeferral */
-/* Windows.ApplicationModel.Email.EmailMailboxChangedDeferral.Complete() */
 HRESULT wapem_email_mailbox_changed_deferral_complete(WAPEM_EmailMailboxChangedDeferral *self);
 
-/* activate Windows.ApplicationModel.Email.EmailMailboxChangeTracker */
 HRESULT wapem_email_mailbox_change_tracker_new(WAPEM_EmailMailboxChangeTracker **out);
 
-/* Windows.ApplicationModel.Email.EmailMailboxChangeTracker */
-/* Windows.ApplicationModel.Email.EmailMailboxChangeTracker.get_IsTracking() */
 HRESULT wapem_email_mailbox_change_tracker_get__is_tracking(WAPEM_EmailMailboxChangeTracker *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxChangeTracker.Enable() */
 HRESULT wapem_email_mailbox_change_tracker_enable(WAPEM_EmailMailboxChangeTracker *self);
 
-/* Windows.ApplicationModel.Email.EmailMailboxChangeTracker.GetChangeReader() */
 HRESULT wapem_email_mailbox_change_tracker_get_change_reader(WAPEM_EmailMailboxChangeTracker *self, WAPEM_EmailMailboxChangeReader** out);
 
-/* Windows.ApplicationModel.Email.EmailMailboxChangeTracker.Reset() */
 HRESULT wapem_email_mailbox_change_tracker_reset(WAPEM_EmailMailboxChangeTracker *self);
 
-/* activate Windows.ApplicationModel.Email.EmailMailboxChangeReader */
 HRESULT wapem_email_mailbox_change_reader_new(WAPEM_EmailMailboxChangeReader **out);
 
-/* Windows.ApplicationModel.Email.EmailMailboxChangeReader */
-/* Windows.ApplicationModel.Email.EmailMailboxChangeReader.AcceptChanges() */
 HRESULT wapem_email_mailbox_change_reader_accept_changes(WAPEM_EmailMailboxChangeReader *self);
 
-/* Windows.ApplicationModel.Email.EmailMailboxChangeReader.AcceptChangesThrough(lastChangeToAcknowledge) */
 HRESULT wapem_email_mailbox_change_reader_accept_changes_through(WAPEM_EmailMailboxChangeReader *self, WAPEM_EmailMailboxChange* lastChangeToAcknowledge);
 
-/* Windows.ApplicationModel.Email.EmailMailboxChangeReader.ReadBatchAsync() */
 HRESULT wapem_email_mailbox_change_reader_read_batch_async(WAPEM_EmailMailboxChangeReader *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPEM_EmailMailboxChange** out);
 
-/* activate Windows.ApplicationModel.Email.EmailMailboxChange */
 HRESULT wapem_email_mailbox_change_new(WAPEM_EmailMailboxChange **out);
 
-/* Windows.ApplicationModel.Email.EmailMailboxChange */
-/* Windows.ApplicationModel.Email.EmailMailboxChange.get_ChangeType() */
 HRESULT wapem_email_mailbox_change_get__change_type(WAPEM_EmailMailboxChange *self, WAPEM_EmailMailboxChangeType *value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxChange.get_MailboxActions() */
 HRESULT wapem_email_mailbox_change_get__mailbox_actions(WAPEM_EmailMailboxChange *self, WFOCO_IVector_WAPEM_EmailMailboxAction** value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxChange.get_Message() */
 HRESULT wapem_email_mailbox_change_get__message(WAPEM_EmailMailboxChange *self, WAPEM_EmailMessage** value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxChange.get_Folder() */
 HRESULT wapem_email_mailbox_change_get__folder(WAPEM_EmailMailboxChange *self, WAPEM_EmailFolder** value);
 
-/* activate Windows.ApplicationModel.Email.EmailMailboxCapabilities */
 HRESULT wapem_email_mailbox_capabilities_new(WAPEM_EmailMailboxCapabilities **out);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCapabilities */
-/* Windows.ApplicationModel.Email.EmailMailboxCapabilities.get_CanForwardMeetings() */
 HRESULT wapem_email_mailbox_capabilities_get__can_forward_meetings(WAPEM_EmailMailboxCapabilities *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCapabilities.get_CanGetAndSetExternalAutoReplies() */
 HRESULT wapem_email_mailbox_capabilities_get__can_get_and_set_external_auto_replies(WAPEM_EmailMailboxCapabilities *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCapabilities.get_CanGetAndSetInternalAutoReplies() */
 HRESULT wapem_email_mailbox_capabilities_get__can_get_and_set_internal_auto_replies(WAPEM_EmailMailboxCapabilities *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCapabilities.get_CanUpdateMeetingResponses() */
 HRESULT wapem_email_mailbox_capabilities_get__can_update_meeting_responses(WAPEM_EmailMailboxCapabilities *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCapabilities.get_CanServerSearchFolders() */
 HRESULT wapem_email_mailbox_capabilities_get__can_server_search_folders(WAPEM_EmailMailboxCapabilities *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCapabilities.get_CanServerSearchMailbox() */
 HRESULT wapem_email_mailbox_capabilities_get__can_server_search_mailbox(WAPEM_EmailMailboxCapabilities *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCapabilities.get_CanProposeNewTimeForMeetings() */
 HRESULT wapem_email_mailbox_capabilities_get__can_propose_new_time_for_meetings(WAPEM_EmailMailboxCapabilities *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCapabilities.get_CanSmartSend() */
 HRESULT wapem_email_mailbox_capabilities_get__can_smart_send(WAPEM_EmailMailboxCapabilities *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCapabilities.get_CanResolveRecipients() */
 HRESULT wapem_email_mailbox_capabilities_get__can_resolve_recipients(WAPEM_EmailMailboxCapabilities *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCapabilities.get_CanValidateCertificates() */
 HRESULT wapem_email_mailbox_capabilities_get__can_validate_certificates(WAPEM_EmailMailboxCapabilities *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCapabilities.get_CanEmptyFolder() */
 HRESULT wapem_email_mailbox_capabilities_get__can_empty_folder(WAPEM_EmailMailboxCapabilities *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCapabilities.get_CanCreateFolder() */
 HRESULT wapem_email_mailbox_capabilities_get__can_create_folder(WAPEM_EmailMailboxCapabilities *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCapabilities.get_CanDeleteFolder() */
 HRESULT wapem_email_mailbox_capabilities_get__can_delete_folder(WAPEM_EmailMailboxCapabilities *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCapabilities.get_CanMoveFolder() */
 HRESULT wapem_email_mailbox_capabilities_get__can_move_folder(WAPEM_EmailMailboxCapabilities *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCapabilities.put_CanForwardMeetings() */
 HRESULT wapem_email_mailbox_capabilities_put__can_forward_meetings(WAPEM_EmailMailboxCapabilities *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCapabilities.put_CanGetAndSetExternalAutoReplies() */
 HRESULT wapem_email_mailbox_capabilities_put__can_get_and_set_external_auto_replies(WAPEM_EmailMailboxCapabilities *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCapabilities.put_CanGetAndSetInternalAutoReplies() */
 HRESULT wapem_email_mailbox_capabilities_put__can_get_and_set_internal_auto_replies(WAPEM_EmailMailboxCapabilities *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCapabilities.put_CanUpdateMeetingResponses() */
 HRESULT wapem_email_mailbox_capabilities_put__can_update_meeting_responses(WAPEM_EmailMailboxCapabilities *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCapabilities.put_CanServerSearchFolders() */
 HRESULT wapem_email_mailbox_capabilities_put__can_server_search_folders(WAPEM_EmailMailboxCapabilities *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCapabilities.put_CanServerSearchMailbox() */
 HRESULT wapem_email_mailbox_capabilities_put__can_server_search_mailbox(WAPEM_EmailMailboxCapabilities *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCapabilities.put_CanProposeNewTimeForMeetings() */
 HRESULT wapem_email_mailbox_capabilities_put__can_propose_new_time_for_meetings(WAPEM_EmailMailboxCapabilities *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCapabilities.put_CanSmartSend() */
 HRESULT wapem_email_mailbox_capabilities_put__can_smart_send(WAPEM_EmailMailboxCapabilities *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCapabilities.put_CanResolveRecipients() */
 HRESULT wapem_email_mailbox_capabilities_put__can_resolve_recipients(WAPEM_EmailMailboxCapabilities *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCapabilities.put_CanValidateCertificates() */
 HRESULT wapem_email_mailbox_capabilities_put__can_validate_certificates(WAPEM_EmailMailboxCapabilities *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCapabilities.put_CanEmptyFolder() */
 HRESULT wapem_email_mailbox_capabilities_put__can_empty_folder(WAPEM_EmailMailboxCapabilities *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCapabilities.put_CanCreateFolder() */
 HRESULT wapem_email_mailbox_capabilities_put__can_create_folder(WAPEM_EmailMailboxCapabilities *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCapabilities.put_CanDeleteFolder() */
 HRESULT wapem_email_mailbox_capabilities_put__can_delete_folder(WAPEM_EmailMailboxCapabilities *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxCapabilities.put_CanMoveFolder() */
 HRESULT wapem_email_mailbox_capabilities_put__can_move_folder(WAPEM_EmailMailboxCapabilities *self, BOOL value);
 
-/* activate Windows.ApplicationModel.Email.EmailIrmTemplate */
 HRESULT wapem_email_irm_template_new(WAPEM_EmailIrmTemplate **out);
 
-/* Windows.ApplicationModel.Email.EmailIrmTemplate */
-/* Windows.ApplicationModel.Email.EmailIrmTemplate.get_Id() */
 HRESULT wapem_email_irm_template_get__id(WAPEM_EmailIrmTemplate *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailIrmTemplate.put_Id() */
 HRESULT wapem_email_irm_template_put__id(WAPEM_EmailIrmTemplate *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Email.EmailIrmTemplate.get_Description() */
 HRESULT wapem_email_irm_template_get__description(WAPEM_EmailIrmTemplate *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailIrmTemplate.put_Description() */
 HRESULT wapem_email_irm_template_put__description(WAPEM_EmailIrmTemplate *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Email.EmailIrmTemplate.get_Name() */
 HRESULT wapem_email_irm_template_get__name(WAPEM_EmailIrmTemplate *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailIrmTemplate.put_Name() */
 HRESULT wapem_email_irm_template_put__name(WAPEM_EmailIrmTemplate *self, cwinrt_hstring value);
 
-/* activate Windows.ApplicationModel.Email.EmailMailboxAutoReply */
 HRESULT wapem_email_mailbox_auto_reply_new(WAPEM_EmailMailboxAutoReply **out);
 
-/* Windows.ApplicationModel.Email.EmailMailboxAutoReply */
-/* Windows.ApplicationModel.Email.EmailMailboxAutoReply.get_IsEnabled() */
 HRESULT wapem_email_mailbox_auto_reply_get__is_enabled(WAPEM_EmailMailboxAutoReply *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxAutoReply.put_IsEnabled() */
 HRESULT wapem_email_mailbox_auto_reply_put__is_enabled(WAPEM_EmailMailboxAutoReply *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxAutoReply.get_Response() */
 HRESULT wapem_email_mailbox_auto_reply_get__response(WAPEM_EmailMailboxAutoReply *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxAutoReply.put_Response() */
 HRESULT wapem_email_mailbox_auto_reply_put__response(WAPEM_EmailMailboxAutoReply *self, cwinrt_hstring value);
 
-/* activate Windows.ApplicationModel.Email.EmailMailboxAction */
 HRESULT wapem_email_mailbox_action_new(WAPEM_EmailMailboxAction **out);
 
-/* Windows.ApplicationModel.Email.EmailMailboxAction */
-/* Windows.ApplicationModel.Email.EmailMailboxAction.get_Kind() */
 HRESULT wapem_email_mailbox_action_get__kind(WAPEM_EmailMailboxAction *self, WAPEM_EmailMailboxActionKind *value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxAction.get_ChangeNumber() */
 HRESULT wapem_email_mailbox_action_get__change_number(WAPEM_EmailMailboxAction *self, uint64_t *value);
 
-/* activate Windows.ApplicationModel.Email.EmailMailbox */
 HRESULT wapem_email_mailbox_new(WAPEM_EmailMailbox **out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox */
-/* Windows.ApplicationModel.Email.EmailMailbox.get_Capabilities() */
 HRESULT wapem_email_mailbox_get__capabilities(WAPEM_EmailMailbox *self, WAPEM_EmailMailboxCapabilities** value);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.get_ChangeTracker() */
 HRESULT wapem_email_mailbox_get__change_tracker(WAPEM_EmailMailbox *self, WAPEM_EmailMailboxChangeTracker** value);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.get_DisplayName() */
 HRESULT wapem_email_mailbox_get__display_name(WAPEM_EmailMailbox *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.put_DisplayName() */
 HRESULT wapem_email_mailbox_put__display_name(WAPEM_EmailMailbox *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.get_Id() */
 HRESULT wapem_email_mailbox_get__id(WAPEM_EmailMailbox *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.get_IsOwnedByCurrentApp() */
 HRESULT wapem_email_mailbox_get__is_owned_by_current_app(WAPEM_EmailMailbox *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.get_IsDataEncryptedUnderLock() */
 HRESULT wapem_email_mailbox_get__is_data_encrypted_under_lock(WAPEM_EmailMailbox *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.get_MailAddress() */
 HRESULT wapem_email_mailbox_get__mail_address(WAPEM_EmailMailbox *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.put_MailAddress() */
 HRESULT wapem_email_mailbox_put__mail_address(WAPEM_EmailMailbox *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.get_MailAddressAliases() */
 HRESULT wapem_email_mailbox_get__mail_address_aliases(WAPEM_EmailMailbox *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.get_OtherAppReadAccess() */
 HRESULT wapem_email_mailbox_get__other_app_read_access(WAPEM_EmailMailbox *self, WAPEM_EmailMailboxOtherAppReadAccess *value);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.put_OtherAppReadAccess() */
 HRESULT wapem_email_mailbox_put__other_app_read_access(WAPEM_EmailMailbox *self, WAPEM_EmailMailboxOtherAppReadAccess value);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.get_OtherAppWriteAccess() */
 HRESULT wapem_email_mailbox_get__other_app_write_access(WAPEM_EmailMailbox *self, WAPEM_EmailMailboxOtherAppWriteAccess *value);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.put_OtherAppWriteAccess() */
 HRESULT wapem_email_mailbox_put__other_app_write_access(WAPEM_EmailMailbox *self, WAPEM_EmailMailboxOtherAppWriteAccess value);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.get_Policies() */
 HRESULT wapem_email_mailbox_get__policies(WAPEM_EmailMailbox *self, WAPEM_EmailMailboxPolicies** value);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.get_SourceDisplayName() */
 HRESULT wapem_email_mailbox_get__source_display_name(WAPEM_EmailMailbox *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.get_SyncManager() */
 HRESULT wapem_email_mailbox_get__sync_manager(WAPEM_EmailMailbox *self, WAPEM_EmailMailboxSyncManager** value);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.get_UserDataAccountId() */
 HRESULT wapem_email_mailbox_get__user_data_account_id(WAPEM_EmailMailbox *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.GetConversationReader() */
 HRESULT wapem_email_mailbox_get_conversation_reader(WAPEM_EmailMailbox *self, WAPEM_EmailConversationReader** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.GetConversationReader(options) */
 HRESULT wapem_email_mailbox_get_conversation_reader_p_p(WAPEM_EmailMailbox *self, WAPEM_EmailQueryOptions* options, WAPEM_EmailConversationReader** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.GetMessageReader() */
 HRESULT wapem_email_mailbox_get_message_reader(WAPEM_EmailMailbox *self, WAPEM_EmailMessageReader** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.GetMessageReader(options) */
 HRESULT wapem_email_mailbox_get_message_reader_p_p(WAPEM_EmailMailbox *self, WAPEM_EmailQueryOptions* options, WAPEM_EmailMessageReader** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.DeleteAsync() */
 HRESULT wapem_email_mailbox_delete_async(WAPEM_EmailMailbox *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.GetConversationAsync(id) */
 HRESULT wapem_email_mailbox_get_conversation_async(WAPEM_EmailMailbox *self, cwinrt_hstring id, WF_IAsyncOperation_WAPEM_EmailConversation** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.GetFolderAsync(id) */
 HRESULT wapem_email_mailbox_get_folder_async(WAPEM_EmailMailbox *self, cwinrt_hstring id, WF_IAsyncOperation_WAPEM_EmailFolder** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.GetMessageAsync(id) */
 HRESULT wapem_email_mailbox_get_message_async(WAPEM_EmailMailbox *self, cwinrt_hstring id, WF_IAsyncOperation_WAPEM_EmailMessage** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.GetSpecialFolderAsync(folderType) */
 HRESULT wapem_email_mailbox_get_special_folder_async(WAPEM_EmailMailbox *self, WAPEM_EmailSpecialFolderKind folderType, WF_IAsyncOperation_WAPEM_EmailFolder** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.SaveAsync() */
 HRESULT wapem_email_mailbox_save_async(WAPEM_EmailMailbox *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.MarkMessageAsSeenAsync(messageId) */
 HRESULT wapem_email_mailbox_mark_message_as_seen_async(WAPEM_EmailMailbox *self, cwinrt_hstring messageId, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.MarkFolderAsSeenAsync(folderId) */
 HRESULT wapem_email_mailbox_mark_folder_as_seen_async(WAPEM_EmailMailbox *self, cwinrt_hstring folderId, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.MarkMessageReadAsync(messageId, isRead) */
 HRESULT wapem_email_mailbox_mark_message_read_async(WAPEM_EmailMailbox *self, cwinrt_hstring messageId, BOOL isRead, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.ChangeMessageFlagStateAsync(messageId, flagState) */
 HRESULT wapem_email_mailbox_change_message_flag_state_async(WAPEM_EmailMailbox *self, cwinrt_hstring messageId, WAPEM_EmailFlagState flagState, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.TryMoveMessageAsync(messageId, newParentFolderId) */
 HRESULT wapem_email_mailbox_try_move_message_async(WAPEM_EmailMailbox *self, cwinrt_hstring messageId, cwinrt_hstring newParentFolderId, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.TryMoveFolderAsync(folderId, newParentFolderId) */
 HRESULT wapem_email_mailbox_try_move_folder_async(WAPEM_EmailMailbox *self, cwinrt_hstring folderId, cwinrt_hstring newParentFolderId, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.TryMoveFolderAsync(folderId, newParentFolderId, newFolderName) */
 HRESULT wapem_email_mailbox_try_move_folder_async_str_str_str_p(WAPEM_EmailMailbox *self, cwinrt_hstring folderId, cwinrt_hstring newParentFolderId, cwinrt_hstring newFolderName, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.DeleteMessageAsync(messageId) */
 HRESULT wapem_email_mailbox_delete_message_async(WAPEM_EmailMailbox *self, cwinrt_hstring messageId, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.MarkFolderSyncEnabledAsync(folderId, isSyncEnabled) */
 HRESULT wapem_email_mailbox_mark_folder_sync_enabled_async(WAPEM_EmailMailbox *self, cwinrt_hstring folderId, BOOL isSyncEnabled, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.SendMessageAsync(message) */
 HRESULT wapem_email_mailbox_send_message_async(WAPEM_EmailMailbox *self, WAPEM_EmailMessage* message, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.SaveDraftAsync(message) */
 HRESULT wapem_email_mailbox_save_draft_async(WAPEM_EmailMailbox *self, WAPEM_EmailMessage* message, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.DownloadMessageAsync(messageId) */
 HRESULT wapem_email_mailbox_download_message_async(WAPEM_EmailMailbox *self, cwinrt_hstring messageId, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.DownloadAttachmentAsync(attachmentId) */
 HRESULT wapem_email_mailbox_download_attachment_async(WAPEM_EmailMailbox *self, cwinrt_hstring attachmentId, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.CreateResponseMessageAsync(messageId, responseType, subject, responseHeaderType, responseHeader) */
 HRESULT wapem_email_mailbox_create_response_message_async(WAPEM_EmailMailbox *self, cwinrt_hstring messageId, WAPEM_EmailMessageResponseKind responseType, cwinrt_hstring subject, WAPEM_EmailMessageBodyKind responseHeaderType, cwinrt_hstring responseHeader, WF_IAsyncOperation_WAPEM_EmailMessage** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.TryUpdateMeetingResponseAsync(meeting, response, subject, comment, sendUpdate) */
 HRESULT wapem_email_mailbox_try_update_meeting_response_async(WAPEM_EmailMailbox *self, WAPEM_EmailMessage* meeting, WAPEM_EmailMeetingResponseType response, cwinrt_hstring subject, cwinrt_hstring comment, BOOL sendUpdate, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.TryForwardMeetingAsync(meeting, recipients, subject, forwardHeaderType, forwardHeader, comment) */
 HRESULT wapem_email_mailbox_try_forward_meeting_async(WAPEM_EmailMailbox *self, WAPEM_EmailMessage* meeting, WFOCO_IIterable_WAPEM_EmailRecipient* recipients, cwinrt_hstring subject, WAPEM_EmailMessageBodyKind forwardHeaderType, cwinrt_hstring forwardHeader, cwinrt_hstring comment, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.TryProposeNewTimeForMeetingAsync(meeting, newStartTime, newDuration, subject, comment) */
 HRESULT wapem_email_mailbox_try_propose_new_time_for_meeting_async(WAPEM_EmailMailbox *self, WAPEM_EmailMessage* meeting, WF_DateTime newStartTime, WF_TimeSpan newDuration, cwinrt_hstring subject, cwinrt_hstring comment, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.SendMessageAsync(message, smartSend) */
 HRESULT wapem_email_mailbox_send_message_async_p_b_p(WAPEM_EmailMailbox *self, WAPEM_EmailMessage* message, BOOL smartSend, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.TrySetAutoReplySettingsAsync(autoReplySettings) */
 HRESULT wapem_email_mailbox_try_set_auto_reply_settings_async(WAPEM_EmailMailbox *self, WAPEM_EmailMailboxAutoReplySettings* autoReplySettings, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.TryGetAutoReplySettingsAsync(requestedFormat) */
 HRESULT wapem_email_mailbox_try_get_auto_reply_settings_async(WAPEM_EmailMailbox *self, WAPEM_EmailMailboxAutoReplyMessageResponseKind requestedFormat, WF_IAsyncOperation_WAPEM_EmailMailboxAutoReplySettings** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.get_LinkedMailboxId() */
 HRESULT wapem_email_mailbox_get__linked_mailbox_id(WAPEM_EmailMailbox *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.get_NetworkAccountId() */
 HRESULT wapem_email_mailbox_get__network_account_id(WAPEM_EmailMailbox *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.get_NetworkId() */
 HRESULT wapem_email_mailbox_get__network_id(WAPEM_EmailMailbox *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.ResolveRecipientsAsync(recipients) */
 HRESULT wapem_email_mailbox_resolve_recipients_async(WAPEM_EmailMailbox *self, WFOCO_IIterable_HSTRING* recipients, WF_IAsyncOperation_WFOCO_IVectorView_WAPEM_EmailRecipientResolutionResult** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.ValidateCertificatesAsync(certificates) */
 HRESULT wapem_email_mailbox_validate_certificates_async(WAPEM_EmailMailbox *self, WFOCO_IIterable_WSECRCE_Certificate* certificates, WF_IAsyncOperation_WFOCO_IVectorView_WAPEM_EmailCertificateValidationStatus** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.TryEmptyFolderAsync(folderId) */
 HRESULT wapem_email_mailbox_try_empty_folder_async(WAPEM_EmailMailbox *self, cwinrt_hstring folderId, WF_IAsyncOperation_WAPEM_EmailMailboxEmptyFolderStatus** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.TryCreateFolderAsync(parentFolderId, name) */
 HRESULT wapem_email_mailbox_try_create_folder_async(WAPEM_EmailMailbox *self, cwinrt_hstring parentFolderId, cwinrt_hstring name, WF_IAsyncOperation_WAPEM_EmailMailboxCreateFolderResult** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.TryDeleteFolderAsync(folderId) */
 HRESULT wapem_email_mailbox_try_delete_folder_async(WAPEM_EmailMailbox *self, cwinrt_hstring folderId, WF_IAsyncOperation_WAPEM_EmailMailboxDeleteFolderStatus** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.RegisterSyncManagerAsync() */
 HRESULT wapem_email_mailbox_register_sync_manager_async(WAPEM_EmailMailbox *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.EmailMailbox.GetChangeTracker(identity) */
 HRESULT wapem_email_mailbox_get_change_tracker(WAPEM_EmailMailbox *self, cwinrt_hstring identity, WAPEM_EmailMailboxChangeTracker** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapem_email_mailbox_on_mailbox_changed(WAPEM_EmailMailbox *self, cwinrt_event_fn fn, void *ctx);
 void wapem_email_mailbox_off_mailbox_changed(WAPEM_EmailMailbox *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Email.EmailItemCounts */
 HRESULT wapem_email_item_counts_new(WAPEM_EmailItemCounts **out);
 
-/* Windows.ApplicationModel.Email.EmailItemCounts */
-/* Windows.ApplicationModel.Email.EmailItemCounts.get_Flagged() */
 HRESULT wapem_email_item_counts_get__flagged(WAPEM_EmailItemCounts *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Email.EmailItemCounts.get_Important() */
 HRESULT wapem_email_item_counts_get__important(WAPEM_EmailItemCounts *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Email.EmailItemCounts.get_Total() */
 HRESULT wapem_email_item_counts_get__total(WAPEM_EmailItemCounts *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Email.EmailItemCounts.get_Unread() */
 HRESULT wapem_email_item_counts_get__unread(WAPEM_EmailItemCounts *self, uint32_t *value);
 
-/* activate Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings */
 HRESULT wapem_email_mailbox_auto_reply_settings_new(WAPEM_EmailMailboxAutoReplySettings **out);
 
-/* Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings */
-/* Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings.get_IsEnabled() */
 HRESULT wapem_email_mailbox_auto_reply_settings_get__is_enabled(WAPEM_EmailMailboxAutoReplySettings *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings.put_IsEnabled() */
 HRESULT wapem_email_mailbox_auto_reply_settings_put__is_enabled(WAPEM_EmailMailboxAutoReplySettings *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings.get_ResponseKind() */
 HRESULT wapem_email_mailbox_auto_reply_settings_get__response_kind(WAPEM_EmailMailboxAutoReplySettings *self, WAPEM_EmailMailboxAutoReplyMessageResponseKind *value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings.put_ResponseKind() */
 HRESULT wapem_email_mailbox_auto_reply_settings_put__response_kind(WAPEM_EmailMailboxAutoReplySettings *self, WAPEM_EmailMailboxAutoReplyMessageResponseKind value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings.get_StartTime() */
 HRESULT wapem_email_mailbox_auto_reply_settings_get__start_time(WAPEM_EmailMailboxAutoReplySettings *self, WF_DateTime** value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings.put_StartTime() */
 HRESULT wapem_email_mailbox_auto_reply_settings_put__start_time(WAPEM_EmailMailboxAutoReplySettings *self, WF_DateTime* value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings.get_EndTime() */
 HRESULT wapem_email_mailbox_auto_reply_settings_get__end_time(WAPEM_EmailMailboxAutoReplySettings *self, WF_DateTime** value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings.put_EndTime() */
 HRESULT wapem_email_mailbox_auto_reply_settings_put__end_time(WAPEM_EmailMailboxAutoReplySettings *self, WF_DateTime* value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings.get_InternalReply() */
 HRESULT wapem_email_mailbox_auto_reply_settings_get__internal_reply(WAPEM_EmailMailboxAutoReplySettings *self, WAPEM_EmailMailboxAutoReply** value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings.get_KnownExternalReply() */
 HRESULT wapem_email_mailbox_auto_reply_settings_get__known_external_reply(WAPEM_EmailMailboxAutoReplySettings *self, WAPEM_EmailMailboxAutoReply** value);
 
-/* Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings.get_UnknownExternalReply() */
 HRESULT wapem_email_mailbox_auto_reply_settings_get__unknown_external_reply(WAPEM_EmailMailboxAutoReplySettings *self, WAPEM_EmailMailboxAutoReply** value);
 
-/* Windows.ApplicationModel.Email.IEmailMailboxSyncManager */
-/* Windows.ApplicationModel.Email.IEmailMailboxSyncManager2 */
-/* Windows.ApplicationModel.Email.IEmailMailboxSyncManager2.put_Status() */
 HRESULT wapem_email_mailbox_sync_manager_2_put__status(WAPEM_IEmailMailboxSyncManager_2 *self, WAPEM_EmailMailboxSyncStatus value);
 
-/* Windows.ApplicationModel.Email.IEmailMailboxSyncManager2.put_LastSuccessfulSyncTime() */
 HRESULT wapem_email_mailbox_sync_manager_2_put__last_successful_sync_time(WAPEM_IEmailMailboxSyncManager_2 *self, WF_DateTime value);
 
-/* Windows.ApplicationModel.Email.IEmailMailboxSyncManager2.put_LastAttemptedSyncTime() */
 HRESULT wapem_email_mailbox_sync_manager_2_put__last_attempted_sync_time(WAPEM_IEmailMailboxSyncManager_2 *self, WF_DateTime value);
 
-/* Windows.ApplicationModel.Email.IEmailManagerForUser */
-/* Windows.ApplicationModel.Email.IEmailMeetingInfo */
-/* Windows.ApplicationModel.Email.IEmailMeetingInfo2 */
-/* Windows.ApplicationModel.Email.IEmailMeetingInfo2.get_IsReportedOutOfDateByServer() */
 HRESULT wapem_email_meeting_info_2_get__is_reported_out_of_date_by_server(WAPEM_IEmailMeetingInfo_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage */
-/* Windows.ApplicationModel.Email.IEmailMessage2 */
-/* Windows.ApplicationModel.Email.IEmailMessage2.get_Id() */
 HRESULT wapem_email_message_2_get__id(WAPEM_IEmailMessage_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.get_RemoteId() */
 HRESULT wapem_email_message_2_get__remote_id(WAPEM_IEmailMessage_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.put_RemoteId() */
 HRESULT wapem_email_message_2_put__remote_id(WAPEM_IEmailMessage_2 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.get_MailboxId() */
 HRESULT wapem_email_message_2_get__mailbox_id(WAPEM_IEmailMessage_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.get_ConversationId() */
 HRESULT wapem_email_message_2_get__conversation_id(WAPEM_IEmailMessage_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.get_FolderId() */
 HRESULT wapem_email_message_2_get__folder_id(WAPEM_IEmailMessage_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.get_AllowInternetImages() */
 HRESULT wapem_email_message_2_get__allow_internet_images(WAPEM_IEmailMessage_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.put_AllowInternetImages() */
 HRESULT wapem_email_message_2_put__allow_internet_images(WAPEM_IEmailMessage_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.get_ChangeNumber() */
 HRESULT wapem_email_message_2_get__change_number(WAPEM_IEmailMessage_2 *self, uint64_t *value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.get_DownloadState() */
 HRESULT wapem_email_message_2_get__download_state(WAPEM_IEmailMessage_2 *self, WAPEM_EmailMessageDownloadState *value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.put_DownloadState() */
 HRESULT wapem_email_message_2_put__download_state(WAPEM_IEmailMessage_2 *self, WAPEM_EmailMessageDownloadState value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.get_EstimatedDownloadSizeInBytes() */
 HRESULT wapem_email_message_2_get__estimated_download_size_in_bytes(WAPEM_IEmailMessage_2 *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.put_EstimatedDownloadSizeInBytes() */
 HRESULT wapem_email_message_2_put__estimated_download_size_in_bytes(WAPEM_IEmailMessage_2 *self, uint32_t value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.get_FlagState() */
 HRESULT wapem_email_message_2_get__flag_state(WAPEM_IEmailMessage_2 *self, WAPEM_EmailFlagState *value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.put_FlagState() */
 HRESULT wapem_email_message_2_put__flag_state(WAPEM_IEmailMessage_2 *self, WAPEM_EmailFlagState value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.get_HasPartialBodies() */
 HRESULT wapem_email_message_2_get__has_partial_bodies(WAPEM_IEmailMessage_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.get_Importance() */
 HRESULT wapem_email_message_2_get__importance(WAPEM_IEmailMessage_2 *self, WAPEM_EmailImportance *value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.put_Importance() */
 HRESULT wapem_email_message_2_put__importance(WAPEM_IEmailMessage_2 *self, WAPEM_EmailImportance value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.get_InResponseToMessageId() */
 HRESULT wapem_email_message_2_get__in_response_to_message_id(WAPEM_IEmailMessage_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.get_IrmInfo() */
 HRESULT wapem_email_message_2_get__irm_info(WAPEM_IEmailMessage_2 *self, WAPEM_EmailIrmInfo** value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.put_IrmInfo() */
 HRESULT wapem_email_message_2_put__irm_info(WAPEM_IEmailMessage_2 *self, WAPEM_EmailIrmInfo* value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.get_IsDraftMessage() */
 HRESULT wapem_email_message_2_get__is_draft_message(WAPEM_IEmailMessage_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.get_IsRead() */
 HRESULT wapem_email_message_2_get__is_read(WAPEM_IEmailMessage_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.put_IsRead() */
 HRESULT wapem_email_message_2_put__is_read(WAPEM_IEmailMessage_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.get_IsSeen() */
 HRESULT wapem_email_message_2_get__is_seen(WAPEM_IEmailMessage_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.put_IsSeen() */
 HRESULT wapem_email_message_2_put__is_seen(WAPEM_IEmailMessage_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.get_IsServerSearchMessage() */
 HRESULT wapem_email_message_2_get__is_server_search_message(WAPEM_IEmailMessage_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.get_IsSmartSendable() */
 HRESULT wapem_email_message_2_get__is_smart_sendable(WAPEM_IEmailMessage_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.get_MessageClass() */
 HRESULT wapem_email_message_2_get__message_class(WAPEM_IEmailMessage_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.put_MessageClass() */
 HRESULT wapem_email_message_2_put__message_class(WAPEM_IEmailMessage_2 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.get_NormalizedSubject() */
 HRESULT wapem_email_message_2_get__normalized_subject(WAPEM_IEmailMessage_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.get_OriginalCodePage() */
 HRESULT wapem_email_message_2_get__original_code_page(WAPEM_IEmailMessage_2 *self, int32_t *value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.put_OriginalCodePage() */
 HRESULT wapem_email_message_2_put__original_code_page(WAPEM_IEmailMessage_2 *self, int32_t value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.get_Preview() */
 HRESULT wapem_email_message_2_get__preview(WAPEM_IEmailMessage_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.put_Preview() */
 HRESULT wapem_email_message_2_put__preview(WAPEM_IEmailMessage_2 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.get_LastResponseKind() */
 HRESULT wapem_email_message_2_get__last_response_kind(WAPEM_IEmailMessage_2 *self, WAPEM_EmailMessageResponseKind *value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.put_LastResponseKind() */
 HRESULT wapem_email_message_2_put__last_response_kind(WAPEM_IEmailMessage_2 *self, WAPEM_EmailMessageResponseKind value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.get_Sender() */
 HRESULT wapem_email_message_2_get__sender(WAPEM_IEmailMessage_2 *self, WAPEM_EmailRecipient** value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.put_Sender() */
 HRESULT wapem_email_message_2_put__sender(WAPEM_IEmailMessage_2 *self, WAPEM_EmailRecipient* value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.get_SentTime() */
 HRESULT wapem_email_message_2_get__sent_time(WAPEM_IEmailMessage_2 *self, WF_DateTime** value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.put_SentTime() */
 HRESULT wapem_email_message_2_put__sent_time(WAPEM_IEmailMessage_2 *self, WF_DateTime* value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.get_MeetingInfo() */
 HRESULT wapem_email_message_2_get__meeting_info(WAPEM_IEmailMessage_2 *self, WAPEM_EmailMeetingInfo** value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.put_MeetingInfo() */
 HRESULT wapem_email_message_2_put__meeting_info(WAPEM_IEmailMessage_2 *self, WAPEM_EmailMeetingInfo* value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.GetBodyStream() */
 HRESULT wapem_email_message_2_get_body_stream(WAPEM_IEmailMessage_2 *self, WAPEM_EmailMessageBodyKind type_, WSTST_IRandomAccessStreamReference** out);
 
-/* Windows.ApplicationModel.Email.IEmailMessage2.SetBodyStream(stream) */
 HRESULT wapem_email_message_2_set_body_stream(WAPEM_IEmailMessage_2 *self, WAPEM_EmailMessageBodyKind type_, WSTST_IRandomAccessStreamReference* stream);
 
-/* Windows.ApplicationModel.Email.IEmailMessage3 */
-/* Windows.ApplicationModel.Email.IEmailMessage3.get_SmimeData() */
 HRESULT wapem_email_message_3_get__smime_data(WAPEM_IEmailMessage_3 *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage3.put_SmimeData() */
 HRESULT wapem_email_message_3_put__smime_data(WAPEM_IEmailMessage_3 *self, WSTST_IRandomAccessStreamReference* value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage3.get_SmimeKind() */
 HRESULT wapem_email_message_3_get__smime_kind(WAPEM_IEmailMessage_3 *self, WAPEM_EmailMessageSmimeKind *value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage3.put_SmimeKind() */
 HRESULT wapem_email_message_3_put__smime_kind(WAPEM_IEmailMessage_3 *self, WAPEM_EmailMessageSmimeKind value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage4 */
-/* Windows.ApplicationModel.Email.IEmailMessage4.get_ReplyTo() */
 HRESULT wapem_email_message_4_get__reply_to(WAPEM_IEmailMessage_4 *self, WFOCO_IVector_WAPEM_EmailRecipient** value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage4.get_SentRepresenting() */
 HRESULT wapem_email_message_4_get__sent_representing(WAPEM_IEmailMessage_4 *self, WAPEM_EmailRecipient** value);
 
-/* Windows.ApplicationModel.Email.IEmailMessage4.put_SentRepresenting() */
 HRESULT wapem_email_message_4_put__sent_representing(WAPEM_IEmailMessage_4 *self, WAPEM_EmailRecipient* value);
 
-/* Windows.ApplicationModel.Email.IEmailMessageBatch */
-/* Windows.ApplicationModel.Email.IEmailMessageReader */
-/* Windows.ApplicationModel.Email.IEmailQueryOptions */
-/* Windows.ApplicationModel.Email.IEmailQueryTextSearch */
-/* Windows.ApplicationModel.Email.IEmailRecipient */
-/* Windows.ApplicationModel.Email.IEmailRecipientResolutionResult */
-/* Windows.ApplicationModel.Email.IEmailRecipientResolutionResult2 */
-/* Windows.ApplicationModel.Email.IEmailRecipientResolutionResult2.put_Status() */
 HRESULT wapem_email_recipient_resolution_result_2_put__status(WAPEM_IEmailRecipientResolutionResult_2 *self, WAPEM_EmailRecipientResolutionStatus value);
 
-/* Windows.ApplicationModel.Email.IEmailRecipientResolutionResult2.SetPublicKeys() */
 HRESULT wapem_email_recipient_resolution_result_2_set_public_keys(WAPEM_IEmailRecipientResolutionResult_2 *self, WFOCO_IIterable_WSECRCE_Certificate* value);
 
-/* Windows.ApplicationModel.Email.IEmailStore */
-/* Windows.ApplicationModel.Email.IEmailMailboxPolicies */
-/* Windows.ApplicationModel.Email.IEmailMailboxPolicies2 */
-/* Windows.ApplicationModel.Email.IEmailMailboxPolicies2.get_MustEncryptSmimeMessages() */
 HRESULT wapem_email_mailbox_policies_2_get__must_encrypt_smime_messages(WAPEM_IEmailMailboxPolicies_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.IEmailMailboxPolicies2.get_MustSignSmimeMessages() */
 HRESULT wapem_email_mailbox_policies_2_get__must_sign_smime_messages(WAPEM_IEmailMailboxPolicies_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.IEmailMailboxPolicies3 */
-/* Windows.ApplicationModel.Email.IEmailMailboxPolicies3.put_AllowedSmimeEncryptionAlgorithmNegotiation() */
 HRESULT wapem_email_mailbox_policies_3_put__allowed_smime_encryption_algorithm_negotiation(WAPEM_IEmailMailboxPolicies_3 *self, WAPEM_EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation value);
 
-/* Windows.ApplicationModel.Email.IEmailMailboxPolicies3.put_AllowSmimeSoftCertificates() */
 HRESULT wapem_email_mailbox_policies_3_put__allow_smime_soft_certificates(WAPEM_IEmailMailboxPolicies_3 *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.IEmailMailboxPolicies3.put_RequiredSmimeEncryptionAlgorithm() */
 HRESULT wapem_email_mailbox_policies_3_put__required_smime_encryption_algorithm(WAPEM_IEmailMailboxPolicies_3 *self, WAPEM_EmailMailboxSmimeEncryptionAlgorithm* value);
 
-/* Windows.ApplicationModel.Email.IEmailMailboxPolicies3.put_RequiredSmimeSigningAlgorithm() */
 HRESULT wapem_email_mailbox_policies_3_put__required_smime_signing_algorithm(WAPEM_IEmailMailboxPolicies_3 *self, WAPEM_EmailMailboxSmimeSigningAlgorithm* value);
 
-/* Windows.ApplicationModel.Email.IEmailMailboxPolicies3.put_MustEncryptSmimeMessages() */
 HRESULT wapem_email_mailbox_policies_3_put__must_encrypt_smime_messages(WAPEM_IEmailMailboxPolicies_3 *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.IEmailMailboxPolicies3.put_MustSignSmimeMessages() */
 HRESULT wapem_email_mailbox_policies_3_put__must_sign_smime_messages(WAPEM_IEmailMailboxPolicies_3 *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.IEmailFolder */
-/* Windows.ApplicationModel.Email.IEmailConversationReader */
-/* Windows.ApplicationModel.Email.IEmailConversationBatch */
-/* Windows.ApplicationModel.Email.IEmailConversation */
-/* Windows.ApplicationModel.Email.IEmailAttachment */
-/* Windows.ApplicationModel.Email.IEmailAttachment2 */
-/* Windows.ApplicationModel.Email.IEmailAttachment2.get_Id() */
 HRESULT wapem_email_attachment_2_get__id(WAPEM_IEmailAttachment_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.IEmailAttachment2.get_ContentId() */
 HRESULT wapem_email_attachment_2_get__content_id(WAPEM_IEmailAttachment_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.IEmailAttachment2.put_ContentId() */
 HRESULT wapem_email_attachment_2_put__content_id(WAPEM_IEmailAttachment_2 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Email.IEmailAttachment2.get_ContentLocation() */
 HRESULT wapem_email_attachment_2_get__content_location(WAPEM_IEmailAttachment_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.IEmailAttachment2.put_ContentLocation() */
 HRESULT wapem_email_attachment_2_put__content_location(WAPEM_IEmailAttachment_2 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Email.IEmailAttachment2.get_DownloadState() */
 HRESULT wapem_email_attachment_2_get__download_state(WAPEM_IEmailAttachment_2 *self, WAPEM_EmailAttachmentDownloadState *value);
 
-/* Windows.ApplicationModel.Email.IEmailAttachment2.put_DownloadState() */
 HRESULT wapem_email_attachment_2_put__download_state(WAPEM_IEmailAttachment_2 *self, WAPEM_EmailAttachmentDownloadState value);
 
-/* Windows.ApplicationModel.Email.IEmailAttachment2.get_EstimatedDownloadSizeInBytes() */
 HRESULT wapem_email_attachment_2_get__estimated_download_size_in_bytes(WAPEM_IEmailAttachment_2 *self, uint64_t *value);
 
-/* Windows.ApplicationModel.Email.IEmailAttachment2.put_EstimatedDownloadSizeInBytes() */
 HRESULT wapem_email_attachment_2_put__estimated_download_size_in_bytes(WAPEM_IEmailAttachment_2 *self, uint64_t value);
 
-/* Windows.ApplicationModel.Email.IEmailAttachment2.get_IsFromBaseMessage() */
 HRESULT wapem_email_attachment_2_get__is_from_base_message(WAPEM_IEmailAttachment_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.IEmailAttachment2.get_IsInline() */
 HRESULT wapem_email_attachment_2_get__is_inline(WAPEM_IEmailAttachment_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.IEmailAttachment2.put_IsInline() */
 HRESULT wapem_email_attachment_2_put__is_inline(WAPEM_IEmailAttachment_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.IEmailAttachment2.get_MimeType() */
 HRESULT wapem_email_attachment_2_get__mime_type(WAPEM_IEmailAttachment_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.IEmailAttachment2.put_MimeType() */
 HRESULT wapem_email_attachment_2_put__mime_type(WAPEM_IEmailAttachment_2 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Email.IEmailIrmInfo */
-/* Windows.ApplicationModel.Email.IEmailMailboxCreateFolderResult */
-/* Windows.ApplicationModel.Email.IEmailMailboxChangedEventArgs */
-/* Windows.ApplicationModel.Email.IEmailMailboxChangedDeferral */
-/* Windows.ApplicationModel.Email.IEmailMailboxChangeTracker */
-/* Windows.ApplicationModel.Email.IEmailMailboxChangeReader */
-/* Windows.ApplicationModel.Email.IEmailMailboxChange */
-/* Windows.ApplicationModel.Email.IEmailMailboxCapabilities */
-/* Windows.ApplicationModel.Email.IEmailMailboxCapabilities2 */
-/* Windows.ApplicationModel.Email.IEmailMailboxCapabilities2.get_CanResolveRecipients() */
 HRESULT wapem_email_mailbox_capabilities_2_get__can_resolve_recipients(WAPEM_IEmailMailboxCapabilities_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.IEmailMailboxCapabilities2.get_CanValidateCertificates() */
 HRESULT wapem_email_mailbox_capabilities_2_get__can_validate_certificates(WAPEM_IEmailMailboxCapabilities_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.IEmailMailboxCapabilities2.get_CanEmptyFolder() */
 HRESULT wapem_email_mailbox_capabilities_2_get__can_empty_folder(WAPEM_IEmailMailboxCapabilities_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.IEmailMailboxCapabilities2.get_CanCreateFolder() */
 HRESULT wapem_email_mailbox_capabilities_2_get__can_create_folder(WAPEM_IEmailMailboxCapabilities_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.IEmailMailboxCapabilities2.get_CanDeleteFolder() */
 HRESULT wapem_email_mailbox_capabilities_2_get__can_delete_folder(WAPEM_IEmailMailboxCapabilities_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.IEmailMailboxCapabilities2.get_CanMoveFolder() */
 HRESULT wapem_email_mailbox_capabilities_2_get__can_move_folder(WAPEM_IEmailMailboxCapabilities_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Email.IEmailMailboxCapabilities3 */
-/* Windows.ApplicationModel.Email.IEmailMailboxCapabilities3.put_CanForwardMeetings() */
 HRESULT wapem_email_mailbox_capabilities_3_put__can_forward_meetings(WAPEM_IEmailMailboxCapabilities_3 *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.IEmailMailboxCapabilities3.put_CanGetAndSetExternalAutoReplies() */
 HRESULT wapem_email_mailbox_capabilities_3_put__can_get_and_set_external_auto_replies(WAPEM_IEmailMailboxCapabilities_3 *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.IEmailMailboxCapabilities3.put_CanGetAndSetInternalAutoReplies() */
 HRESULT wapem_email_mailbox_capabilities_3_put__can_get_and_set_internal_auto_replies(WAPEM_IEmailMailboxCapabilities_3 *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.IEmailMailboxCapabilities3.put_CanUpdateMeetingResponses() */
 HRESULT wapem_email_mailbox_capabilities_3_put__can_update_meeting_responses(WAPEM_IEmailMailboxCapabilities_3 *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.IEmailMailboxCapabilities3.put_CanServerSearchFolders() */
 HRESULT wapem_email_mailbox_capabilities_3_put__can_server_search_folders(WAPEM_IEmailMailboxCapabilities_3 *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.IEmailMailboxCapabilities3.put_CanServerSearchMailbox() */
 HRESULT wapem_email_mailbox_capabilities_3_put__can_server_search_mailbox(WAPEM_IEmailMailboxCapabilities_3 *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.IEmailMailboxCapabilities3.put_CanProposeNewTimeForMeetings() */
 HRESULT wapem_email_mailbox_capabilities_3_put__can_propose_new_time_for_meetings(WAPEM_IEmailMailboxCapabilities_3 *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.IEmailMailboxCapabilities3.put_CanSmartSend() */
 HRESULT wapem_email_mailbox_capabilities_3_put__can_smart_send(WAPEM_IEmailMailboxCapabilities_3 *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.IEmailMailboxCapabilities3.put_CanResolveRecipients() */
 HRESULT wapem_email_mailbox_capabilities_3_put__can_resolve_recipients(WAPEM_IEmailMailboxCapabilities_3 *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.IEmailMailboxCapabilities3.put_CanValidateCertificates() */
 HRESULT wapem_email_mailbox_capabilities_3_put__can_validate_certificates(WAPEM_IEmailMailboxCapabilities_3 *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.IEmailMailboxCapabilities3.put_CanEmptyFolder() */
 HRESULT wapem_email_mailbox_capabilities_3_put__can_empty_folder(WAPEM_IEmailMailboxCapabilities_3 *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.IEmailMailboxCapabilities3.put_CanCreateFolder() */
 HRESULT wapem_email_mailbox_capabilities_3_put__can_create_folder(WAPEM_IEmailMailboxCapabilities_3 *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.IEmailMailboxCapabilities3.put_CanDeleteFolder() */
 HRESULT wapem_email_mailbox_capabilities_3_put__can_delete_folder(WAPEM_IEmailMailboxCapabilities_3 *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.IEmailMailboxCapabilities3.put_CanMoveFolder() */
 HRESULT wapem_email_mailbox_capabilities_3_put__can_move_folder(WAPEM_IEmailMailboxCapabilities_3 *self, BOOL value);
 
-/* Windows.ApplicationModel.Email.IEmailIrmTemplate */
-/* Windows.ApplicationModel.Email.IEmailMailboxAutoReply */
-/* Windows.ApplicationModel.Email.IEmailMailboxAction */
-/* Windows.ApplicationModel.Email.IEmailMailbox3 */
-/* Windows.ApplicationModel.Email.IEmailMailbox3.ResolveRecipientsAsync(recipients) */
 HRESULT wapem_email_mailbox_3_resolve_recipients_async(WAPEM_IEmailMailbox_3 *self, WFOCO_IIterable_HSTRING* recipients, WF_IAsyncOperation_WFOCO_IVectorView_WAPEM_EmailRecipientResolutionResult** out);
 
-/* Windows.ApplicationModel.Email.IEmailMailbox3.ValidateCertificatesAsync(certificates) */
 HRESULT wapem_email_mailbox_3_validate_certificates_async(WAPEM_IEmailMailbox_3 *self, WFOCO_IIterable_WSECRCE_Certificate* certificates, WF_IAsyncOperation_WFOCO_IVectorView_WAPEM_EmailCertificateValidationStatus** out);
 
-/* Windows.ApplicationModel.Email.IEmailMailbox3.TryEmptyFolderAsync(folderId) */
 HRESULT wapem_email_mailbox_3_try_empty_folder_async(WAPEM_IEmailMailbox_3 *self, cwinrt_hstring folderId, WF_IAsyncOperation_WAPEM_EmailMailboxEmptyFolderStatus** out);
 
-/* Windows.ApplicationModel.Email.IEmailMailbox3.TryCreateFolderAsync(parentFolderId, name) */
 HRESULT wapem_email_mailbox_3_try_create_folder_async(WAPEM_IEmailMailbox_3 *self, cwinrt_hstring parentFolderId, cwinrt_hstring name, WF_IAsyncOperation_WAPEM_EmailMailboxCreateFolderResult** out);
 
-/* Windows.ApplicationModel.Email.IEmailMailbox3.TryDeleteFolderAsync(folderId) */
 HRESULT wapem_email_mailbox_3_try_delete_folder_async(WAPEM_IEmailMailbox_3 *self, cwinrt_hstring folderId, WF_IAsyncOperation_WAPEM_EmailMailboxDeleteFolderStatus** out);
 
-/* Windows.ApplicationModel.Email.IEmailMailbox4 */
-/* Windows.ApplicationModel.Email.IEmailMailbox4.RegisterSyncManagerAsync() */
 HRESULT wapem_email_mailbox_4_register_sync_manager_async(WAPEM_IEmailMailbox_4 *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Email.IEmailMailbox5 */
-/* Windows.ApplicationModel.Email.IEmailMailbox5.GetChangeTracker(identity) */
 HRESULT wapem_email_mailbox_5_get_change_tracker(WAPEM_IEmailMailbox_5 *self, cwinrt_hstring identity, WAPEM_EmailMailboxChangeTracker** out);
 
-/* Windows.ApplicationModel.Email.IEmailItemCounts */
-/* Windows.ApplicationModel.Email.IEmailMailboxAutoReplySettings */
-/* Windows.ApplicationModel.Email.IEmailMailbox2 */
-/* Windows.ApplicationModel.Email.IEmailMailbox2.get_LinkedMailboxId() */
 HRESULT wapem_email_mailbox_2_get__linked_mailbox_id(WAPEM_IEmailMailbox_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.IEmailMailbox2.get_NetworkAccountId() */
 HRESULT wapem_email_mailbox_2_get__network_account_id(WAPEM_IEmailMailbox_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.IEmailMailbox2.get_NetworkId() */
 HRESULT wapem_email_mailbox_2_get__network_id(WAPEM_IEmailMailbox_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Email.IEmailMailbox */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_EMAIL_H */

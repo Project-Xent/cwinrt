@@ -12,13 +12,11 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStream
 #define CWINRT_FWD_WSTST_IRandomAccessStream
 typedef struct WSTST_IRandomAccessStream WSTST_IRandomAccessStream;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPLO_ILockApplicationHostStatics WAPLO_ILockApplicationHostStatics;
 typedef struct WAPLO_LockApplicationHost WAPLO_LockApplicationHost;
 typedef struct WAPLO_LockScreenBadge WAPLO_LockScreenBadge;
@@ -31,7 +29,6 @@ typedef struct WAPLO_ILockScreenInfo WAPLO_ILockScreenInfo;
 typedef struct WAPLO_ILockScreenUnlockingDeferral WAPLO_ILockScreenUnlockingDeferral;
 typedef struct WAPLO_ILockScreenUnlockingEventArgs WAPLO_ILockScreenUnlockingEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_TypedEventHandler_WAPLO_LockApplicationHost_WAPLO_LockScreenUnlockingEventArgs
 #define CWINRT_FWD_WF_TypedEventHandler_WAPLO_LockApplicationHost_WAPLO_LockScreenUnlockingEventArgs
 typedef struct WF_TypedEventHandler_WAPLO_LockApplicationHost_WAPLO_LockScreenUnlockingEventArgs WF_TypedEventHandler_WAPLO_LockApplicationHost_WAPLO_LockScreenUnlockingEventArgs;
@@ -57,7 +54,6 @@ typedef struct WFOCO_IVectorView_HSTRING WFOCO_IVectorView_HSTRING;
 typedef struct WF_DateTime WF_DateTime;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -86,64 +82,41 @@ static const IID CWINRT_IID_WAPLO_ILockScreenUnlockingDeferral CWINRT_MAYBE_UNUS
 static const IID CWINRT_IID_WAPLO_ILockScreenUnlockingEventArgs CWINRT_MAYBE_UNUSED = { 0x44E6C007, 0x75FB, 0x4ABB, { 0x9F, 0x8B, 0x82, 0x47, 0x48, 0x90, 0x0C, 0x71 } };
 #endif
 
-/* Methods */
-
-/* Windows.ApplicationModel.LockScreen.ILockApplicationHostStatics */
-/* Windows.ApplicationModel.LockScreen.ILockApplicationHostStatics.GetForCurrentView() */
 HRESULT waplo_lock_application_host_statics_get_for_current_view(WAPLO_ILockApplicationHostStatics *self, WAPLO_LockApplicationHost** out);
 
-/* activate Windows.ApplicationModel.LockScreen.LockApplicationHost */
 HRESULT waplo_lock_application_host_new(WAPLO_LockApplicationHost **out);
 
-/* Windows.ApplicationModel.LockScreen.LockApplicationHost */
-/* Windows.ApplicationModel.LockScreen.LockApplicationHost.RequestUnlock() */
 HRESULT waplo_lock_application_host_request_unlock(WAPLO_LockApplicationHost *self);
 
-/* Windows.ApplicationModel.LockScreen.LockApplicationHost.GetForCurrentView() */
 HRESULT waplo_lock_application_host_get_for_current_view(WAPLO_LockApplicationHost** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token waplo_lock_application_host_on_unlocking(WAPLO_LockApplicationHost *self, cwinrt_event_fn fn, void *ctx);
 void waplo_lock_application_host_off_unlocking(WAPLO_LockApplicationHost *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.LockScreen.LockScreenBadge */
 HRESULT waplo_lock_screen_badge_new(WAPLO_LockScreenBadge **out);
 
-/* Windows.ApplicationModel.LockScreen.LockScreenBadge */
-/* Windows.ApplicationModel.LockScreen.LockScreenBadge.get_Logo() */
 HRESULT waplo_lock_screen_badge_get__logo(WAPLO_LockScreenBadge *self, WSTST_IRandomAccessStream** value);
 
-/* Windows.ApplicationModel.LockScreen.LockScreenBadge.get_Glyph() */
 HRESULT waplo_lock_screen_badge_get__glyph(WAPLO_LockScreenBadge *self, WSTST_IRandomAccessStream** value);
 
-/* Windows.ApplicationModel.LockScreen.LockScreenBadge.get_Number() */
 HRESULT waplo_lock_screen_badge_get__number(WAPLO_LockScreenBadge *self, uint32_t** value);
 
-/* Windows.ApplicationModel.LockScreen.LockScreenBadge.get_AutomationName() */
 HRESULT waplo_lock_screen_badge_get__automation_name(WAPLO_LockScreenBadge *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.LockScreen.LockScreenBadge.LaunchApp() */
 HRESULT waplo_lock_screen_badge_launch_app(WAPLO_LockScreenBadge *self);
 
-/* activate Windows.ApplicationModel.LockScreen.LockScreenInfo */
 HRESULT waplo_lock_screen_info_new(WAPLO_LockScreenInfo **out);
 
-/* Windows.ApplicationModel.LockScreen.LockScreenInfo */
-/* Windows.ApplicationModel.LockScreen.LockScreenInfo.get_LockScreenImage() */
 HRESULT waplo_lock_screen_info_get__lock_screen_image(WAPLO_LockScreenInfo *self, WSTST_IRandomAccessStream** value);
 
-/* Windows.ApplicationModel.LockScreen.LockScreenInfo.get_Badges() */
 HRESULT waplo_lock_screen_info_get__badges(WAPLO_LockScreenInfo *self, WFOCO_IVectorView_WAPLO_LockScreenBadge** value);
 
-/* Windows.ApplicationModel.LockScreen.LockScreenInfo.get_DetailText() */
 HRESULT waplo_lock_screen_info_get__detail_text(WAPLO_LockScreenInfo *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.ApplicationModel.LockScreen.LockScreenInfo.get_AlarmIcon() */
 HRESULT waplo_lock_screen_info_get__alarm_icon(WAPLO_LockScreenInfo *self, WSTST_IRandomAccessStream** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token waplo_lock_screen_info_on_lock_screen_image_changed(WAPLO_LockScreenInfo *self, cwinrt_event_fn fn, void *ctx);
@@ -158,26 +131,14 @@ void waplo_lock_screen_info_off_detail_text_changed(WAPLO_LockScreenInfo *self, 
 cwinrt_token waplo_lock_screen_info_on_alarm_icon_changed(WAPLO_LockScreenInfo *self, cwinrt_event_fn fn, void *ctx);
 void waplo_lock_screen_info_off_alarm_icon_changed(WAPLO_LockScreenInfo *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.LockScreen.LockScreenUnlockingDeferral */
 HRESULT waplo_lock_screen_unlocking_deferral_new(WAPLO_LockScreenUnlockingDeferral **out);
 
-/* Windows.ApplicationModel.LockScreen.LockScreenUnlockingDeferral */
-/* Windows.ApplicationModel.LockScreen.LockScreenUnlockingDeferral.Complete() */
 HRESULT waplo_lock_screen_unlocking_deferral_complete(WAPLO_LockScreenUnlockingDeferral *self);
 
-/* activate Windows.ApplicationModel.LockScreen.LockScreenUnlockingEventArgs */
 HRESULT waplo_lock_screen_unlocking_event_args_new(WAPLO_LockScreenUnlockingEventArgs **out);
 
-/* Windows.ApplicationModel.LockScreen.LockScreenUnlockingEventArgs */
-/* Windows.ApplicationModel.LockScreen.LockScreenUnlockingEventArgs.GetDeferral() */
 HRESULT waplo_lock_screen_unlocking_event_args_get_deferral(WAPLO_LockScreenUnlockingEventArgs *self, WAPLO_LockScreenUnlockingDeferral** out);
 
-/* Windows.ApplicationModel.LockScreen.LockScreenUnlockingEventArgs.get_Deadline() */
 HRESULT waplo_lock_screen_unlocking_event_args_get__deadline(WAPLO_LockScreenUnlockingEventArgs *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.LockScreen.ILockApplicationHost */
-/* Windows.ApplicationModel.LockScreen.ILockScreenBadge */
-/* Windows.ApplicationModel.LockScreen.ILockScreenInfo */
-/* Windows.ApplicationModel.LockScreen.ILockScreenUnlockingDeferral */
-/* Windows.ApplicationModel.LockScreen.ILockScreenUnlockingEventArgs */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_LOCKSCREEN_H */

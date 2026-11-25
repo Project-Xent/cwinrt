@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WSEEX_EasClientDeviceInformation WSEEX_EasClientDeviceInformation;
 typedef struct WSEEX_EasClientSecurityPolicy WSEEX_EasClientSecurityPolicy;
 typedef struct WSEEX_EasComplianceResults WSEEX_EasComplianceResults;
@@ -22,7 +21,6 @@ typedef struct WSEEX_IEasComplianceResults_2 WSEEX_IEasComplianceResults_2;
 typedef struct WSEEX_IEasClientDeviceInformation WSEEX_IEasClientDeviceInformation;
 typedef struct WSEEX_IEasComplianceResults WSEEX_IEasComplianceResults;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_TimeSpan
 #define CWINRT_FWD_WF_TimeSpan
 typedef struct WF_TimeSpan WF_TimeSpan;
@@ -166,7 +164,6 @@ typedef enum WSEEX_EasRequireEncryptionResult {
 } WSEEX_EasRequireEncryptionResult;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -191,140 +188,88 @@ static const IID CWINRT_IID_WSEEX_IEasClientDeviceInformation CWINRT_MAYBE_UNUSE
 static const IID CWINRT_IID_WSEEX_IEasComplianceResults CWINRT_MAYBE_UNUSED = { 0x463C299C, 0x7F19, 0x4C66, { 0xB4, 0x03, 0xCB, 0x45, 0xDD, 0x57, 0xA2, 0xB3 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation */
 HRESULT wseex_eas_client_device_information_new(WSEEX_EasClientDeviceInformation **out);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation */
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation.get_Id() */
 HRESULT wseex_eas_client_device_information_get__id(WSEEX_EasClientDeviceInformation *self, GUID *value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation.get_OperatingSystem() */
 HRESULT wseex_eas_client_device_information_get__operating_system(WSEEX_EasClientDeviceInformation *self, cwinrt_hstring *value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation.get_FriendlyName() */
 HRESULT wseex_eas_client_device_information_get__friendly_name(WSEEX_EasClientDeviceInformation *self, cwinrt_hstring *value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation.get_SystemManufacturer() */
 HRESULT wseex_eas_client_device_information_get__system_manufacturer(WSEEX_EasClientDeviceInformation *self, cwinrt_hstring *value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation.get_SystemProductName() */
 HRESULT wseex_eas_client_device_information_get__system_product_name(WSEEX_EasClientDeviceInformation *self, cwinrt_hstring *value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation.get_SystemSku() */
 HRESULT wseex_eas_client_device_information_get__system_sku(WSEEX_EasClientDeviceInformation *self, cwinrt_hstring *value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation.get_SystemHardwareVersion() */
 HRESULT wseex_eas_client_device_information_get__system_hardware_version(WSEEX_EasClientDeviceInformation *self, cwinrt_hstring *value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation.get_SystemFirmwareVersion() */
 HRESULT wseex_eas_client_device_information_get__system_firmware_version(WSEEX_EasClientDeviceInformation *self, cwinrt_hstring *value);
 
-/* activate Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy */
 HRESULT wseex_eas_client_security_policy_new(WSEEX_EasClientSecurityPolicy **out);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy */
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.get_RequireEncryption() */
 HRESULT wseex_eas_client_security_policy_get__require_encryption(WSEEX_EasClientSecurityPolicy *self, BOOL *value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.put_RequireEncryption() */
 HRESULT wseex_eas_client_security_policy_put__require_encryption(WSEEX_EasClientSecurityPolicy *self, BOOL value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.get_MinPasswordLength() */
 HRESULT wseex_eas_client_security_policy_get__min_password_length(WSEEX_EasClientSecurityPolicy *self, uint8_t *value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.put_MinPasswordLength() */
 HRESULT wseex_eas_client_security_policy_put__min_password_length(WSEEX_EasClientSecurityPolicy *self, uint8_t value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.get_DisallowConvenienceLogon() */
 HRESULT wseex_eas_client_security_policy_get__disallow_convenience_logon(WSEEX_EasClientSecurityPolicy *self, BOOL *value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.put_DisallowConvenienceLogon() */
 HRESULT wseex_eas_client_security_policy_put__disallow_convenience_logon(WSEEX_EasClientSecurityPolicy *self, BOOL value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.get_MinPasswordComplexCharacters() */
 HRESULT wseex_eas_client_security_policy_get__min_password_complex_characters(WSEEX_EasClientSecurityPolicy *self, uint8_t *value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.put_MinPasswordComplexCharacters() */
 HRESULT wseex_eas_client_security_policy_put__min_password_complex_characters(WSEEX_EasClientSecurityPolicy *self, uint8_t value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.get_PasswordExpiration() */
 HRESULT wseex_eas_client_security_policy_get__password_expiration(WSEEX_EasClientSecurityPolicy *self, WF_TimeSpan *value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.put_PasswordExpiration() */
 HRESULT wseex_eas_client_security_policy_put__password_expiration(WSEEX_EasClientSecurityPolicy *self, WF_TimeSpan value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.get_PasswordHistory() */
 HRESULT wseex_eas_client_security_policy_get__password_history(WSEEX_EasClientSecurityPolicy *self, uint32_t *value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.put_PasswordHistory() */
 HRESULT wseex_eas_client_security_policy_put__password_history(WSEEX_EasClientSecurityPolicy *self, uint32_t value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.get_MaxPasswordFailedAttempts() */
 HRESULT wseex_eas_client_security_policy_get__max_password_failed_attempts(WSEEX_EasClientSecurityPolicy *self, uint8_t *value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.put_MaxPasswordFailedAttempts() */
 HRESULT wseex_eas_client_security_policy_put__max_password_failed_attempts(WSEEX_EasClientSecurityPolicy *self, uint8_t value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.get_MaxInactivityTimeLock() */
 HRESULT wseex_eas_client_security_policy_get__max_inactivity_time_lock(WSEEX_EasClientSecurityPolicy *self, WF_TimeSpan *value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.put_MaxInactivityTimeLock() */
 HRESULT wseex_eas_client_security_policy_put__max_inactivity_time_lock(WSEEX_EasClientSecurityPolicy *self, WF_TimeSpan value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.CheckCompliance() */
 HRESULT wseex_eas_client_security_policy_check_compliance(WSEEX_EasClientSecurityPolicy *self, WSEEX_EasComplianceResults** out);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.ApplyAsync() */
 HRESULT wseex_eas_client_security_policy_apply_async(WSEEX_EasClientSecurityPolicy *self, WF_IAsyncOperation_WSEEX_EasComplianceResults** out);
 
-/* activate Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults */
 HRESULT wseex_eas_compliance_results_new(WSEEX_EasComplianceResults **out);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults */
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.get_Compliant() */
 HRESULT wseex_eas_compliance_results_get__compliant(WSEEX_EasComplianceResults *self, BOOL *value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.get_RequireEncryptionResult() */
 HRESULT wseex_eas_compliance_results_get__require_encryption_result(WSEEX_EasComplianceResults *self, WSEEX_EasRequireEncryptionResult *value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.get_MinPasswordLengthResult() */
 HRESULT wseex_eas_compliance_results_get__min_password_length_result(WSEEX_EasComplianceResults *self, WSEEX_EasMinPasswordLengthResult *value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.get_DisallowConvenienceLogonResult() */
 HRESULT wseex_eas_compliance_results_get__disallow_convenience_logon_result(WSEEX_EasComplianceResults *self, WSEEX_EasDisallowConvenienceLogonResult *value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.get_MinPasswordComplexCharactersResult() */
 HRESULT wseex_eas_compliance_results_get__min_password_complex_characters_result(WSEEX_EasComplianceResults *self, WSEEX_EasMinPasswordComplexCharactersResult *value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.get_PasswordExpirationResult() */
 HRESULT wseex_eas_compliance_results_get__password_expiration_result(WSEEX_EasComplianceResults *self, WSEEX_EasPasswordExpirationResult *value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.get_PasswordHistoryResult() */
 HRESULT wseex_eas_compliance_results_get__password_history_result(WSEEX_EasComplianceResults *self, WSEEX_EasPasswordHistoryResult *value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.get_MaxPasswordFailedAttemptsResult() */
 HRESULT wseex_eas_compliance_results_get__max_password_failed_attempts_result(WSEEX_EasComplianceResults *self, WSEEX_EasMaxPasswordFailedAttemptsResult *value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.get_MaxInactivityTimeLockResult() */
 HRESULT wseex_eas_compliance_results_get__max_inactivity_time_lock_result(WSEEX_EasComplianceResults *self, WSEEX_EasMaxInactivityTimeLockResult *value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.get_EncryptionProviderType() */
 HRESULT wseex_eas_compliance_results_get__encryption_provider_type(WSEEX_EasComplianceResults *self, WSEEX_EasEncryptionProviderType *value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.IEasClientDeviceInformation2 */
-/* Windows.Security.ExchangeActiveSyncProvisioning.IEasClientDeviceInformation2.get_SystemHardwareVersion() */
 HRESULT wseex_eas_client_device_information_2_get__system_hardware_version(WSEEX_IEasClientDeviceInformation_2 *self, cwinrt_hstring *value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.IEasClientDeviceInformation2.get_SystemFirmwareVersion() */
 HRESULT wseex_eas_client_device_information_2_get__system_firmware_version(WSEEX_IEasClientDeviceInformation_2 *self, cwinrt_hstring *value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.IEasClientSecurityPolicy */
-/* Windows.Security.ExchangeActiveSyncProvisioning.IEasComplianceResults2 */
-/* Windows.Security.ExchangeActiveSyncProvisioning.IEasComplianceResults2.get_EncryptionProviderType() */
 HRESULT wseex_eas_compliance_results_2_get__encryption_provider_type(WSEEX_IEasComplianceResults_2 *self, WSEEX_EasEncryptionProviderType *value);
 
-/* Windows.Security.ExchangeActiveSyncProvisioning.IEasClientDeviceInformation */
-/* Windows.Security.ExchangeActiveSyncProvisioning.IEasComplianceResults */
 #endif /* CWINRT_WINDOWS_SECURITY_EXCHANGEACTIVESYNCPROVISIONING_H */

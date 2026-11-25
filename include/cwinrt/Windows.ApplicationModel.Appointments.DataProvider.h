@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.ApplicationModel.Appointments.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WAPAPDA_AppointmentCalendarCancelMeetingRequest WAPAPDA_AppointmentCalendarCancelMeetingRequest;
 typedef struct WAPAPDA_AppointmentCalendarCancelMeetingRequestEventArgs WAPAPDA_AppointmentCalendarCancelMeetingRequestEventArgs;
 typedef struct WAPAPDA_AppointmentCalendarCreateOrUpdateAppointmentRequest WAPAPDA_AppointmentCalendarCreateOrUpdateAppointmentRequest;
@@ -43,7 +42,6 @@ typedef struct WAPAPDA_IAppointmentDataProviderConnection WAPAPDA_IAppointmentDa
 typedef struct WAPAPDA_IAppointmentCalendarUpdateMeetingResponseRequestEventArgs WAPAPDA_IAppointmentCalendarUpdateMeetingResponseRequestEventArgs;
 typedef struct WAPAPDA_IAppointmentCalendarUpdateMeetingResponseRequest WAPAPDA_IAppointmentCalendarUpdateMeetingResponseRequest;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_DateTime
 #define CWINRT_FWD_WF_DateTime
 typedef struct WF_DateTime WF_DateTime;
@@ -100,7 +98,6 @@ typedef enum WAPAP_AppointmentParticipantResponse {
 } WAPAP_AppointmentParticipantResponse;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -161,198 +158,124 @@ static const IID CWINRT_IID_WAPAPDA_IAppointmentCalendarUpdateMeetingResponseReq
 static const IID CWINRT_IID_WAPAPDA_IAppointmentCalendarUpdateMeetingResponseRequest CWINRT_MAYBE_UNUSED = { 0xA36D608C, 0xC29D, 0x4B94, { 0xB0, 0x86, 0x7E, 0x9F, 0xF7, 0xBD, 0x84, 0xA0 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequest */
 HRESULT wapapda_appointment_calendar_cancel_meeting_request_new(WAPAPDA_AppointmentCalendarCancelMeetingRequest **out);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequest */
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequest.get_AppointmentCalendarLocalId() */
 HRESULT wapapda_appointment_calendar_cancel_meeting_request_get__appointment_calendar_local_id(WAPAPDA_AppointmentCalendarCancelMeetingRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequest.get_AppointmentLocalId() */
 HRESULT wapapda_appointment_calendar_cancel_meeting_request_get__appointment_local_id(WAPAPDA_AppointmentCalendarCancelMeetingRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequest.get_AppointmentOriginalStartTime() */
 HRESULT wapapda_appointment_calendar_cancel_meeting_request_get__appointment_original_start_time(WAPAPDA_AppointmentCalendarCancelMeetingRequest *self, WF_DateTime** value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequest.get_Subject() */
 HRESULT wapapda_appointment_calendar_cancel_meeting_request_get__subject(WAPAPDA_AppointmentCalendarCancelMeetingRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequest.get_Comment() */
 HRESULT wapapda_appointment_calendar_cancel_meeting_request_get__comment(WAPAPDA_AppointmentCalendarCancelMeetingRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequest.get_NotifyInvitees() */
 HRESULT wapapda_appointment_calendar_cancel_meeting_request_get__notify_invitees(WAPAPDA_AppointmentCalendarCancelMeetingRequest *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequest.ReportCompletedAsync() */
 HRESULT wapapda_appointment_calendar_cancel_meeting_request_report_completed_async(WAPAPDA_AppointmentCalendarCancelMeetingRequest *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequest.ReportFailedAsync() */
 HRESULT wapapda_appointment_calendar_cancel_meeting_request_report_failed_async(WAPAPDA_AppointmentCalendarCancelMeetingRequest *self, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequestEventArgs */
 HRESULT wapapda_appointment_calendar_cancel_meeting_request_event_args_new(WAPAPDA_AppointmentCalendarCancelMeetingRequestEventArgs **out);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequestEventArgs */
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequestEventArgs.get_Request() */
 HRESULT wapapda_appointment_calendar_cancel_meeting_request_event_args_get__request(WAPAPDA_AppointmentCalendarCancelMeetingRequestEventArgs *self, WAPAPDA_AppointmentCalendarCancelMeetingRequest** value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequestEventArgs.GetDeferral() */
 HRESULT wapapda_appointment_calendar_cancel_meeting_request_event_args_get_deferral(WAPAPDA_AppointmentCalendarCancelMeetingRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequest */
 HRESULT wapapda_appointment_calendar_create_or_update_appointment_request_new(WAPAPDA_AppointmentCalendarCreateOrUpdateAppointmentRequest **out);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequest */
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequest.get_AppointmentCalendarLocalId() */
 HRESULT wapapda_appointment_calendar_create_or_update_appointment_request_get__appointment_calendar_local_id(WAPAPDA_AppointmentCalendarCreateOrUpdateAppointmentRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequest.get_Appointment() */
 HRESULT wapapda_appointment_calendar_create_or_update_appointment_request_get__appointment(WAPAPDA_AppointmentCalendarCreateOrUpdateAppointmentRequest *self, WAPAP_Appointment** value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequest.get_NotifyInvitees() */
 HRESULT wapapda_appointment_calendar_create_or_update_appointment_request_get__notify_invitees(WAPAPDA_AppointmentCalendarCreateOrUpdateAppointmentRequest *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequest.get_ChangedProperties() */
 HRESULT wapapda_appointment_calendar_create_or_update_appointment_request_get__changed_properties(WAPAPDA_AppointmentCalendarCreateOrUpdateAppointmentRequest *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequest.ReportCompletedAsync(createdOrUpdatedAppointment) */
 HRESULT wapapda_appointment_calendar_create_or_update_appointment_request_report_completed_async(WAPAPDA_AppointmentCalendarCreateOrUpdateAppointmentRequest *self, WAPAP_Appointment* createdOrUpdatedAppointment, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequest.ReportFailedAsync() */
 HRESULT wapapda_appointment_calendar_create_or_update_appointment_request_report_failed_async(WAPAPDA_AppointmentCalendarCreateOrUpdateAppointmentRequest *self, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs */
 HRESULT wapapda_appointment_calendar_create_or_update_appointment_request_event_new(WAPAPDA_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs **out);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs */
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs.get_Request() */
 HRESULT wapapda_appointment_calendar_create_or_update_appointment_request_event_get__request(WAPAPDA_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs *self, WAPAPDA_AppointmentCalendarCreateOrUpdateAppointmentRequest** value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs.GetDeferral() */
 HRESULT wapapda_appointment_calendar_create_or_update_appointment_request_event_get_deferral(WAPAPDA_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequest */
 HRESULT wapapda_appointment_calendar_forward_meeting_request_new(WAPAPDA_AppointmentCalendarForwardMeetingRequest **out);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequest */
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequest.get_AppointmentCalendarLocalId() */
 HRESULT wapapda_appointment_calendar_forward_meeting_request_get__appointment_calendar_local_id(WAPAPDA_AppointmentCalendarForwardMeetingRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequest.get_AppointmentLocalId() */
 HRESULT wapapda_appointment_calendar_forward_meeting_request_get__appointment_local_id(WAPAPDA_AppointmentCalendarForwardMeetingRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequest.get_AppointmentOriginalStartTime() */
 HRESULT wapapda_appointment_calendar_forward_meeting_request_get__appointment_original_start_time(WAPAPDA_AppointmentCalendarForwardMeetingRequest *self, WF_DateTime** value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequest.get_Invitees() */
 HRESULT wapapda_appointment_calendar_forward_meeting_request_get__invitees(WAPAPDA_AppointmentCalendarForwardMeetingRequest *self, WFOCO_IVectorView_WAPAP_AppointmentInvitee** value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequest.get_Subject() */
 HRESULT wapapda_appointment_calendar_forward_meeting_request_get__subject(WAPAPDA_AppointmentCalendarForwardMeetingRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequest.get_ForwardHeader() */
 HRESULT wapapda_appointment_calendar_forward_meeting_request_get__forward_header(WAPAPDA_AppointmentCalendarForwardMeetingRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequest.get_Comment() */
 HRESULT wapapda_appointment_calendar_forward_meeting_request_get__comment(WAPAPDA_AppointmentCalendarForwardMeetingRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequest.ReportCompletedAsync() */
 HRESULT wapapda_appointment_calendar_forward_meeting_request_report_completed_async(WAPAPDA_AppointmentCalendarForwardMeetingRequest *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequest.ReportFailedAsync() */
 HRESULT wapapda_appointment_calendar_forward_meeting_request_report_failed_async(WAPAPDA_AppointmentCalendarForwardMeetingRequest *self, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequestEventArgs */
 HRESULT wapapda_appointment_calendar_forward_meeting_request_event_args_new(WAPAPDA_AppointmentCalendarForwardMeetingRequestEventArgs **out);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequestEventArgs */
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequestEventArgs.get_Request() */
 HRESULT wapapda_appointment_calendar_forward_meeting_request_event_args_get__request(WAPAPDA_AppointmentCalendarForwardMeetingRequestEventArgs *self, WAPAPDA_AppointmentCalendarForwardMeetingRequest** value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequestEventArgs.GetDeferral() */
 HRESULT wapapda_appointment_calendar_forward_meeting_request_event_args_get_deferral(WAPAPDA_AppointmentCalendarForwardMeetingRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequest */
 HRESULT wapapda_appointment_calendar_propose_new_time_for_meeting_request_new(WAPAPDA_AppointmentCalendarProposeNewTimeForMeetingRequest **out);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequest */
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequest.get_AppointmentCalendarLocalId() */
 HRESULT wapapda_appointment_calendar_propose_new_time_for_meeting_request_get__appointment_calendar_local_id(WAPAPDA_AppointmentCalendarProposeNewTimeForMeetingRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequest.get_AppointmentLocalId() */
 HRESULT wapapda_appointment_calendar_propose_new_time_for_meeting_request_get__appointment_local_id(WAPAPDA_AppointmentCalendarProposeNewTimeForMeetingRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequest.get_AppointmentOriginalStartTime() */
 HRESULT wapapda_appointment_calendar_propose_new_time_for_meeting_request_get__appointment_original_start_time(WAPAPDA_AppointmentCalendarProposeNewTimeForMeetingRequest *self, WF_DateTime** value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequest.get_NewStartTime() */
 HRESULT wapapda_appointment_calendar_propose_new_time_for_meeting_request_get__new_start_time(WAPAPDA_AppointmentCalendarProposeNewTimeForMeetingRequest *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequest.get_NewDuration() */
 HRESULT wapapda_appointment_calendar_propose_new_time_for_meeting_request_get__new_duration(WAPAPDA_AppointmentCalendarProposeNewTimeForMeetingRequest *self, WF_TimeSpan *value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequest.get_Subject() */
 HRESULT wapapda_appointment_calendar_propose_new_time_for_meeting_request_get__subject(WAPAPDA_AppointmentCalendarProposeNewTimeForMeetingRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequest.get_Comment() */
 HRESULT wapapda_appointment_calendar_propose_new_time_for_meeting_request_get__comment(WAPAPDA_AppointmentCalendarProposeNewTimeForMeetingRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequest.ReportCompletedAsync() */
 HRESULT wapapda_appointment_calendar_propose_new_time_for_meeting_request_report_completed_async(WAPAPDA_AppointmentCalendarProposeNewTimeForMeetingRequest *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequest.ReportFailedAsync() */
 HRESULT wapapda_appointment_calendar_propose_new_time_for_meeting_request_report_failed_async(WAPAPDA_AppointmentCalendarProposeNewTimeForMeetingRequest *self, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs */
 HRESULT wapapda_appointment_calendar_propose_new_time_for_meeting_request_event_new(WAPAPDA_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs **out);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs */
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs.get_Request() */
 HRESULT wapapda_appointment_calendar_propose_new_time_for_meeting_request_event_get__request(WAPAPDA_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs *self, WAPAPDA_AppointmentCalendarProposeNewTimeForMeetingRequest** value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs.GetDeferral() */
 HRESULT wapapda_appointment_calendar_propose_new_time_for_meeting_request_event_get_deferral(WAPAPDA_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequest */
 HRESULT wapapda_appointment_calendar_sync_manager_sync_request_new(WAPAPDA_AppointmentCalendarSyncManagerSyncRequest **out);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequest */
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequest.get_AppointmentCalendarLocalId() */
 HRESULT wapapda_appointment_calendar_sync_manager_sync_request_get__appointment_calendar_local_id(WAPAPDA_AppointmentCalendarSyncManagerSyncRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequest.ReportCompletedAsync() */
 HRESULT wapapda_appointment_calendar_sync_manager_sync_request_report_completed_async(WAPAPDA_AppointmentCalendarSyncManagerSyncRequest *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequest.ReportFailedAsync() */
 HRESULT wapapda_appointment_calendar_sync_manager_sync_request_report_failed_async(WAPAPDA_AppointmentCalendarSyncManagerSyncRequest *self, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequestEventArgs */
 HRESULT wapapda_appointment_calendar_sync_manager_sync_request_event_args_new(WAPAPDA_AppointmentCalendarSyncManagerSyncRequestEventArgs **out);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequestEventArgs */
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequestEventArgs.get_Request() */
 HRESULT wapapda_appointment_calendar_sync_manager_sync_request_event_args_get__request(WAPAPDA_AppointmentCalendarSyncManagerSyncRequestEventArgs *self, WAPAPDA_AppointmentCalendarSyncManagerSyncRequest** value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequestEventArgs.GetDeferral() */
 HRESULT wapapda_appointment_calendar_sync_manager_sync_request_event_args_get_deferral(WAPAPDA_AppointmentCalendarSyncManagerSyncRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderTriggerDetails */
 HRESULT wapapda_appointment_data_provider_trigger_details_new(WAPAPDA_AppointmentDataProviderTriggerDetails **out);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderTriggerDetails */
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderTriggerDetails.get_Connection() */
 HRESULT wapapda_appointment_data_provider_trigger_details_get__connection(WAPAPDA_AppointmentDataProviderTriggerDetails *self, WAPAPDA_AppointmentDataProviderConnection** value);
 
-/* activate Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection */
 HRESULT wapapda_appointment_data_provider_connection_new(WAPAPDA_AppointmentDataProviderConnection **out);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection */
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection.Start() */
 HRESULT wapapda_appointment_data_provider_connection_start(WAPAPDA_AppointmentDataProviderConnection *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapapda_appointment_data_provider_connection_on_sync_requested(WAPAPDA_AppointmentDataProviderConnection *self, cwinrt_event_fn fn, void *ctx);
@@ -373,59 +296,30 @@ void wapapda_appointment_data_provider_connection_off_propose_new_time_for_meeti
 cwinrt_token wapapda_appointment_data_provider_connection_on_update_meeting_response_requested(WAPAPDA_AppointmentDataProviderConnection *self, cwinrt_event_fn fn, void *ctx);
 void wapapda_appointment_data_provider_connection_off_update_meeting_response_requested(WAPAPDA_AppointmentDataProviderConnection *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequestEventArgs */
 HRESULT wapapda_appointment_calendar_update_meeting_response_request_event_args_new(WAPAPDA_AppointmentCalendarUpdateMeetingResponseRequestEventArgs **out);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequestEventArgs */
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequestEventArgs.get_Request() */
 HRESULT wapapda_appointment_calendar_update_meeting_response_request_event_args_get__request(WAPAPDA_AppointmentCalendarUpdateMeetingResponseRequestEventArgs *self, WAPAPDA_AppointmentCalendarUpdateMeetingResponseRequest** value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequestEventArgs.GetDeferral() */
 HRESULT wapapda_appointment_calendar_update_meeting_response_request_event_args_get_deferral(WAPAPDA_AppointmentCalendarUpdateMeetingResponseRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequest */
 HRESULT wapapda_appointment_calendar_update_meeting_response_request_new(WAPAPDA_AppointmentCalendarUpdateMeetingResponseRequest **out);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequest */
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequest.get_AppointmentCalendarLocalId() */
 HRESULT wapapda_appointment_calendar_update_meeting_response_request_get__appointment_calendar_local_id(WAPAPDA_AppointmentCalendarUpdateMeetingResponseRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequest.get_AppointmentLocalId() */
 HRESULT wapapda_appointment_calendar_update_meeting_response_request_get__appointment_local_id(WAPAPDA_AppointmentCalendarUpdateMeetingResponseRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequest.get_AppointmentOriginalStartTime() */
 HRESULT wapapda_appointment_calendar_update_meeting_response_request_get__appointment_original_start_time(WAPAPDA_AppointmentCalendarUpdateMeetingResponseRequest *self, WF_DateTime** value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequest.get_Response() */
 HRESULT wapapda_appointment_calendar_update_meeting_response_request_get__response(WAPAPDA_AppointmentCalendarUpdateMeetingResponseRequest *self, WAPAP_AppointmentParticipantResponse *value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequest.get_Subject() */
 HRESULT wapapda_appointment_calendar_update_meeting_response_request_get__subject(WAPAPDA_AppointmentCalendarUpdateMeetingResponseRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequest.get_Comment() */
 HRESULT wapapda_appointment_calendar_update_meeting_response_request_get__comment(WAPAPDA_AppointmentCalendarUpdateMeetingResponseRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequest.get_SendUpdate() */
 HRESULT wapapda_appointment_calendar_update_meeting_response_request_get__send_update(WAPAPDA_AppointmentCalendarUpdateMeetingResponseRequest *self, BOOL *value);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequest.ReportCompletedAsync() */
 HRESULT wapapda_appointment_calendar_update_meeting_response_request_report_completed_async(WAPAPDA_AppointmentCalendarUpdateMeetingResponseRequest *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequest.ReportFailedAsync() */
 HRESULT wapapda_appointment_calendar_update_meeting_response_request_report_failed_async(WAPAPDA_AppointmentCalendarUpdateMeetingResponseRequest *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest */
-/* Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequestEventArgs */
-/* Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequest */
-/* Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs */
-/* Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest */
-/* Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequestEventArgs */
-/* Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest */
-/* Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequestEventArgs */
-/* Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarSyncManagerSyncRequest */
-/* Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarSyncManagerSyncRequestEventArgs */
-/* Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderTriggerDetails */
-/* Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection */
-/* Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequestEventArgs */
-/* Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_APPOINTMENTS_DATAPROVIDER_H */

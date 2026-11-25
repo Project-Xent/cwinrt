@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WDEGPPR_IGpioPinProviderValueChangedEventArgsFactory WDEGPPR_IGpioPinProviderValueChangedEventArgsFactory;
 typedef struct WDEGPPR_IGpioPinProvider WDEGPPR_IGpioPinProvider;
 typedef struct WDEGPPR_IGpioControllerProvider WDEGPPR_IGpioControllerProvider;
@@ -20,7 +19,6 @@ typedef struct WDEGPPR_GpioPinProviderValueChangedEventArgs WDEGPPR_GpioPinProvi
 typedef struct WDEGPPR_IGpioProvider WDEGPPR_IGpioProvider;
 typedef struct WDEGPPR_IGpioPinProviderValueChangedEventArgs WDEGPPR_IGpioPinProviderValueChangedEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_TypedEventHandler_WDEGPPR_IGpioPinProvider_WDEGPPR_GpioPinProviderValueChangedEventArgs
 #define CWINRT_FWD_WF_TypedEventHandler_WDEGPPR_IGpioPinProvider_WDEGPPR_GpioPinProviderValueChangedEventArgs
 typedef struct WF_TypedEventHandler_WDEGPPR_IGpioPinProvider_WDEGPPR_GpioPinProviderValueChangedEventArgs WF_TypedEventHandler_WDEGPPR_IGpioPinProvider_WDEGPPR_GpioPinProviderValueChangedEventArgs;
@@ -72,7 +70,6 @@ typedef enum WDEGPPR_ProviderGpioSharingMode {
 } WDEGPPR_ProviderGpioSharingMode;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -97,57 +94,34 @@ static const IID CWINRT_IID_WDEGPPR_IGpioProvider CWINRT_MAYBE_UNUSED = { 0x44E8
 static const IID CWINRT_IID_WDEGPPR_IGpioPinProviderValueChangedEventArgs CWINRT_MAYBE_UNUSED = { 0x32A6D6F2, 0x3D5B, 0x44CD, { 0x8F, 0xBE, 0x13, 0xA6, 0x9F, 0x2E, 0xDB, 0x24 } };
 #endif
 
-/* Methods */
-
-/* Windows.Devices.Gpio.Provider.IGpioPinProviderValueChangedEventArgsFactory */
-/* Windows.Devices.Gpio.Provider.IGpioPinProviderValueChangedEventArgsFactory.Create(edge) */
 HRESULT wdegppr_gpio_pin_provider_value_changed_event_args_factory_create(WDEGPPR_IGpioPinProviderValueChangedEventArgsFactory *self, WDEGPPR_ProviderGpioPinEdge edge, WDEGPPR_GpioPinProviderValueChangedEventArgs** out);
 
-/* Windows.Devices.Gpio.Provider.IGpioPinProvider */
-/* Windows.Devices.Gpio.Provider.IGpioPinProvider.get_DebounceTimeout() */
 HRESULT wdegppr_gpio_pin_provider_get__debounce_timeout(WDEGPPR_IGpioPinProvider *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Gpio.Provider.IGpioPinProvider.put_DebounceTimeout() */
 HRESULT wdegppr_gpio_pin_provider_put__debounce_timeout(WDEGPPR_IGpioPinProvider *self, WF_TimeSpan value);
 
-/* Windows.Devices.Gpio.Provider.IGpioPinProvider.get_PinNumber() */
 HRESULT wdegppr_gpio_pin_provider_get__pin_number(WDEGPPR_IGpioPinProvider *self, int32_t *value);
 
-/* Windows.Devices.Gpio.Provider.IGpioPinProvider.get_SharingMode() */
 HRESULT wdegppr_gpio_pin_provider_get__sharing_mode(WDEGPPR_IGpioPinProvider *self, WDEGPPR_ProviderGpioSharingMode *value);
 
-/* Windows.Devices.Gpio.Provider.IGpioPinProvider.IsDriveModeSupported(driveMode) */
 HRESULT wdegppr_gpio_pin_provider_is_drive_mode_supported(WDEGPPR_IGpioPinProvider *self, WDEGPPR_ProviderGpioPinDriveMode driveMode, BOOL *out);
 
-/* Windows.Devices.Gpio.Provider.IGpioPinProvider.GetDriveMode() */
 HRESULT wdegppr_gpio_pin_provider_get_drive_mode(WDEGPPR_IGpioPinProvider *self, WDEGPPR_ProviderGpioPinDriveMode *out);
 
-/* Windows.Devices.Gpio.Provider.IGpioPinProvider.SetDriveMode() */
 HRESULT wdegppr_gpio_pin_provider_set_drive_mode(WDEGPPR_IGpioPinProvider *self, WDEGPPR_ProviderGpioPinDriveMode value);
 
-/* Windows.Devices.Gpio.Provider.IGpioPinProvider.Write() */
 HRESULT wdegppr_gpio_pin_provider_write(WDEGPPR_IGpioPinProvider *self, WDEGPPR_ProviderGpioPinValue value);
 
-/* Windows.Devices.Gpio.Provider.IGpioPinProvider.Read() */
 HRESULT wdegppr_gpio_pin_provider_read(WDEGPPR_IGpioPinProvider *self, WDEGPPR_ProviderGpioPinValue *out);
 
-/* Windows.Devices.Gpio.Provider.IGpioControllerProvider */
-/* Windows.Devices.Gpio.Provider.IGpioControllerProvider.get_PinCount() */
 HRESULT wdegppr_gpio_controller_provider_get__pin_count(WDEGPPR_IGpioControllerProvider *self, int32_t *value);
 
-/* Windows.Devices.Gpio.Provider.IGpioControllerProvider.OpenPinProvider(pin, sharingMode) */
 HRESULT wdegppr_gpio_controller_provider_open_pin_provider(WDEGPPR_IGpioControllerProvider *self, int32_t pin, WDEGPPR_ProviderGpioSharingMode sharingMode, WDEGPPR_IGpioPinProvider** out);
 
-/* activate Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs */
 HRESULT wdegppr_gpio_pin_provider_value_changed_event_args_new(WDEGPPR_GpioPinProviderValueChangedEventArgs **out);
 
-/* Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs */
-/* Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs.get_Edge() */
 HRESULT wdegppr_gpio_pin_provider_value_changed_event_args_get__edge(WDEGPPR_GpioPinProviderValueChangedEventArgs *self, WDEGPPR_ProviderGpioPinEdge *value);
 
-/* Windows.Devices.Gpio.Provider.IGpioProvider */
-/* Windows.Devices.Gpio.Provider.IGpioProvider.GetControllers() */
 HRESULT wdegppr_gpio_provider_get_controllers(WDEGPPR_IGpioProvider *self, WFOCO_IVectorView_WDEGPPR_IGpioControllerProvider** out);
 
-/* Windows.Devices.Gpio.Provider.IGpioPinProviderValueChangedEventArgs */
 #endif /* CWINRT_WINDOWS_DEVICES_GPIO_PROVIDER_H */

@@ -13,20 +13,17 @@
 #include <cwinrt/Windows.ApplicationModel.Wallet.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStreamReference
 #define CWINRT_FWD_WSTST_IRandomAccessStreamReference
 typedef struct WSTST_IRandomAccessStreamReference WSTST_IRandomAccessStreamReference;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPWASY_WalletItemSystemStore WAPWASY_WalletItemSystemStore;
 typedef struct WAPWASY_IWalletManagerSystemStatics WAPWASY_IWalletManagerSystemStatics;
 typedef struct WAPWASY_WalletManagerSystem WAPWASY_WalletManagerSystem;
 typedef struct WAPWASY_IWalletItemSystemStore WAPWASY_IWalletItemSystemStore;
 typedef struct WAPWASY_IWalletItemSystemStore_2 WAPWASY_IWalletItemSystemStore_2;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WFOCO_IVectorView_WAPWA_WalletItem
 #define CWINRT_FWD_WF_IAsyncOperation_WFOCO_IVectorView_WAPWA_WalletItem
 typedef struct WF_IAsyncOperation_WFOCO_IVectorView_WAPWA_WalletItem WF_IAsyncOperation_WFOCO_IVectorView_WAPWA_WalletItem;
@@ -69,7 +66,6 @@ typedef enum WAPWASY_WalletItemAppAssociation {
 } WAPWASY_WalletItemAppAssociation;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -86,44 +82,27 @@ static const IID CWINRT_IID_WAPWASY_IWalletItemSystemStore CWINRT_MAYBE_UNUSED =
 static const IID CWINRT_IID_WAPWASY_IWalletItemSystemStore_2 CWINRT_MAYBE_UNUSED = { 0xF98D3A4E, 0xBE00, 0x4FDD, { 0x97, 0x34, 0x6C, 0x11, 0x3C, 0x1A, 0xC1, 0xCB } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.Wallet.System.WalletItemSystemStore */
 HRESULT wapwasy_wallet_item_system_store_new(WAPWASY_WalletItemSystemStore **out);
 
-/* Windows.ApplicationModel.Wallet.System.WalletItemSystemStore */
-/* Windows.ApplicationModel.Wallet.System.WalletItemSystemStore.GetItemsAsync() */
 HRESULT wapwasy_wallet_item_system_store_get_items_async(WAPWASY_WalletItemSystemStore *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPWA_WalletItem** out);
 
-/* Windows.ApplicationModel.Wallet.System.WalletItemSystemStore.DeleteAsync(item) */
 HRESULT wapwasy_wallet_item_system_store_delete_async(WAPWASY_WalletItemSystemStore *self, WAPWA_WalletItem* item, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Wallet.System.WalletItemSystemStore.ImportItemAsync(stream) */
 HRESULT wapwasy_wallet_item_system_store_import_item_async(WAPWASY_WalletItemSystemStore *self, WSTST_IRandomAccessStreamReference* stream, WF_IAsyncOperation_WAPWA_WalletItem** out);
 
-/* Windows.ApplicationModel.Wallet.System.WalletItemSystemStore.GetAppStatusForItem(item) */
 HRESULT wapwasy_wallet_item_system_store_get_app_status_for_item(WAPWASY_WalletItemSystemStore *self, WAPWA_WalletItem* item, WAPWASY_WalletItemAppAssociation *out);
 
-/* Windows.ApplicationModel.Wallet.System.WalletItemSystemStore.LaunchAppForItemAsync(item) */
 HRESULT wapwasy_wallet_item_system_store_launch_app_for_item_async(WAPWASY_WalletItemSystemStore *self, WAPWA_WalletItem* item, WF_IAsyncOperation_Bool** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapwasy_wallet_item_system_store_on_items_changed(WAPWASY_WalletItemSystemStore *self, cwinrt_event_fn fn, void *ctx);
 void wapwasy_wallet_item_system_store_off_items_changed(WAPWASY_WalletItemSystemStore *self, cwinrt_token token);
 
-/* Windows.ApplicationModel.Wallet.System.IWalletManagerSystemStatics */
-/* Windows.ApplicationModel.Wallet.System.IWalletManagerSystemStatics.RequestStoreAsync() */
 HRESULT wapwasy_wallet_manager_system_statics_request_store_async(WAPWASY_IWalletManagerSystemStatics *self, WF_IAsyncOperation_WAPWASY_WalletItemSystemStore** out);
 
-/* activate Windows.ApplicationModel.Wallet.System.WalletManagerSystem */
 HRESULT wapwasy_wallet_manager_system_new(WAPWASY_WalletManagerSystem **out);
 
-/* Windows.ApplicationModel.Wallet.System.WalletManagerSystem */
-/* Windows.ApplicationModel.Wallet.System.WalletManagerSystem.RequestStoreAsync() */
 HRESULT wapwasy_wallet_manager_system_request_store_async(WF_IAsyncOperation_WAPWASY_WalletItemSystemStore** out);
 
-/* Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore */
-/* Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore2 */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_WALLET_SYSTEM_H */

@@ -14,7 +14,6 @@
 #include <cwinrt/Windows.UI.Popups.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WUIWI_WindowingEnvironment
 #define CWINRT_FWD_WUIWI_WindowingEnvironment
 typedef struct WUIWI_WindowingEnvironment WUIWI_WindowingEnvironment;
@@ -32,7 +31,6 @@ typedef struct WUICO_ICoreWindow WUICO_ICoreWindow;
 typedef struct WDEEN_DeviceInformation WDEEN_DeviceInformation;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUIVI_ActivationViewSwitcher WUIVI_ActivationViewSwitcher;
 typedef struct WUIVI_ApplicationView WUIVI_ApplicationView;
 typedef struct WUIVI_ApplicationViewConsolidatedEventArgs WUIVI_ApplicationViewConsolidatedEventArgs;
@@ -98,7 +96,6 @@ typedef struct WUIVI_IInputPane WUIVI_IInputPane;
 typedef struct WUIVI_IInputPane_2 WUIVI_IInputPane_2;
 typedef struct WUIVI_IInputPaneControl WUIVI_IInputPaneControl;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncAction
 #define CWINRT_FWD_WF_IAsyncAction
 typedef struct WF_IAsyncAction WF_IAsyncAction;
@@ -330,7 +327,6 @@ typedef enum WUIVI_HandPreference {
 } WUIVI_HandPreference;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -523,167 +519,110 @@ static const IID CWINRT_IID_WUIVI_IInputPane_2 CWINRT_MAYBE_UNUSED = { 0x8A6B3F2
 static const IID CWINRT_IID_WUIVI_IInputPaneControl CWINRT_MAYBE_UNUSED = { 0x088BB24F, 0x962F, 0x489D, { 0xAA, 0x6E, 0xC6, 0xBE, 0x1A, 0x0A, 0x6E, 0x52 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.UI.ViewManagement.ActivationViewSwitcher */
 HRESULT wuivi_activation_view_switcher_new(WUIVI_ActivationViewSwitcher **out);
 
-/* Windows.UI.ViewManagement.ActivationViewSwitcher */
-/* Windows.UI.ViewManagement.ActivationViewSwitcher.ShowAsStandaloneAsync(viewId) */
 HRESULT wuivi_activation_view_switcher_show_as_standalone_async(WUIVI_ActivationViewSwitcher *self, int32_t viewId, WF_IAsyncAction** out);
 
-/* Windows.UI.ViewManagement.ActivationViewSwitcher.ShowAsStandaloneAsync(viewId, sizePreference) */
 HRESULT wuivi_activation_view_switcher_show_as_standalone_async_i32_view_size_preference_p(WUIVI_ActivationViewSwitcher *self, int32_t viewId, WUIVI_ViewSizePreference sizePreference, WF_IAsyncAction** out);
 
-/* Windows.UI.ViewManagement.ActivationViewSwitcher.IsViewPresentedOnActivationVirtualDesktop(viewId) */
 HRESULT wuivi_activation_view_switcher_is_view_presented_on_activation_virtual_desktop(WUIVI_ActivationViewSwitcher *self, int32_t viewId, BOOL *out);
 
-/* activate Windows.UI.ViewManagement.ApplicationView */
 HRESULT wuivi_application_view_new(WUIVI_ApplicationView **out);
 
-/* Windows.UI.ViewManagement.ApplicationView */
-/* Windows.UI.ViewManagement.ApplicationView.get_Orientation() */
 HRESULT wuivi_application_view_get__orientation(WUIVI_ApplicationView *self, WUIVI_ApplicationViewOrientation *value);
 
-/* Windows.UI.ViewManagement.ApplicationView.get_AdjacentToLeftDisplayEdge() */
 HRESULT wuivi_application_view_get__adjacent_to_left_display_edge(WUIVI_ApplicationView *self, BOOL *value);
 
-/* Windows.UI.ViewManagement.ApplicationView.get_AdjacentToRightDisplayEdge() */
 HRESULT wuivi_application_view_get__adjacent_to_right_display_edge(WUIVI_ApplicationView *self, BOOL *value);
 
-/* Windows.UI.ViewManagement.ApplicationView.get_IsFullScreen() */
 HRESULT wuivi_application_view_get__is_full_screen(WUIVI_ApplicationView *self, BOOL *value);
 
-/* Windows.UI.ViewManagement.ApplicationView.get_IsOnLockScreen() */
 HRESULT wuivi_application_view_get__is_on_lock_screen(WUIVI_ApplicationView *self, BOOL *value);
 
-/* Windows.UI.ViewManagement.ApplicationView.get_IsScreenCaptureEnabled() */
 HRESULT wuivi_application_view_get__is_screen_capture_enabled(WUIVI_ApplicationView *self, BOOL *value);
 
-/* Windows.UI.ViewManagement.ApplicationView.put_IsScreenCaptureEnabled() */
 HRESULT wuivi_application_view_put__is_screen_capture_enabled(WUIVI_ApplicationView *self, BOOL value);
 
-/* Windows.UI.ViewManagement.ApplicationView.put_Title() */
 HRESULT wuivi_application_view_put__title(WUIVI_ApplicationView *self, cwinrt_hstring value);
 
-/* Windows.UI.ViewManagement.ApplicationView.get_Title() */
 HRESULT wuivi_application_view_get__title(WUIVI_ApplicationView *self, cwinrt_hstring *value);
 
-/* Windows.UI.ViewManagement.ApplicationView.get_Id() */
 HRESULT wuivi_application_view_get__id(WUIVI_ApplicationView *self, int32_t *value);
 
-/* Windows.UI.ViewManagement.ApplicationView.get_SuppressSystemOverlays() */
 HRESULT wuivi_application_view_get__suppress_system_overlays(WUIVI_ApplicationView *self, BOOL *value);
 
-/* Windows.UI.ViewManagement.ApplicationView.put_SuppressSystemOverlays() */
 HRESULT wuivi_application_view_put__suppress_system_overlays(WUIVI_ApplicationView *self, BOOL value);
 
-/* Windows.UI.ViewManagement.ApplicationView.get_VisibleBounds() */
 HRESULT wuivi_application_view_get__visible_bounds(WUIVI_ApplicationView *self, WF_Rect *value);
 
-/* Windows.UI.ViewManagement.ApplicationView.SetDesiredBoundsMode(boundsMode) */
 HRESULT wuivi_application_view_set_desired_bounds_mode(WUIVI_ApplicationView *self, WUIVI_ApplicationViewBoundsMode boundsMode, BOOL *out);
 
-/* Windows.UI.ViewManagement.ApplicationView.get_DesiredBoundsMode() */
 HRESULT wuivi_application_view_get__desired_bounds_mode(WUIVI_ApplicationView *self, WUIVI_ApplicationViewBoundsMode *value);
 
-/* Windows.UI.ViewManagement.ApplicationView.get_TitleBar() */
 HRESULT wuivi_application_view_get__title_bar(WUIVI_ApplicationView *self, WUIVI_ApplicationViewTitleBar** value);
 
-/* Windows.UI.ViewManagement.ApplicationView.get_FullScreenSystemOverlayMode() */
 HRESULT wuivi_application_view_get__full_screen_system_overlay_mode(WUIVI_ApplicationView *self, WUIVI_FullScreenSystemOverlayMode *value);
 
-/* Windows.UI.ViewManagement.ApplicationView.put_FullScreenSystemOverlayMode() */
 HRESULT wuivi_application_view_put__full_screen_system_overlay_mode(WUIVI_ApplicationView *self, WUIVI_FullScreenSystemOverlayMode value);
 
-/* Windows.UI.ViewManagement.ApplicationView.get_IsFullScreenMode() */
 HRESULT wuivi_application_view_get__is_full_screen_mode(WUIVI_ApplicationView *self, BOOL *value);
 
-/* Windows.UI.ViewManagement.ApplicationView.TryEnterFullScreenMode() */
 HRESULT wuivi_application_view_try_enter_full_screen_mode(WUIVI_ApplicationView *self, BOOL *out);
 
-/* Windows.UI.ViewManagement.ApplicationView.ExitFullScreenMode() */
 HRESULT wuivi_application_view_exit_full_screen_mode(WUIVI_ApplicationView *self);
 
-/* Windows.UI.ViewManagement.ApplicationView.ShowStandardSystemOverlays() */
 HRESULT wuivi_application_view_show_standard_system_overlays(WUIVI_ApplicationView *self);
 
-/* Windows.UI.ViewManagement.ApplicationView.TryResizeView() */
 HRESULT wuivi_application_view_try_resize_view(WUIVI_ApplicationView *self, WF_Size value, BOOL *out);
 
-/* Windows.UI.ViewManagement.ApplicationView.SetPreferredMinSize(minSize) */
 HRESULT wuivi_application_view_set_preferred_min_size(WUIVI_ApplicationView *self, WF_Size minSize);
 
-/* Windows.UI.ViewManagement.ApplicationView.get_ViewMode() */
 HRESULT wuivi_application_view_get__view_mode(WUIVI_ApplicationView *self, WUIVI_ApplicationViewMode *value);
 
-/* Windows.UI.ViewManagement.ApplicationView.IsViewModeSupported(viewMode) */
 HRESULT wuivi_application_view_is_view_mode_supported(WUIVI_ApplicationView *self, WUIVI_ApplicationViewMode viewMode, BOOL *out);
 
-/* Windows.UI.ViewManagement.ApplicationView.TryEnterViewModeAsync(viewMode) */
 HRESULT wuivi_application_view_try_enter_view_mode_async(WUIVI_ApplicationView *self, WUIVI_ApplicationViewMode viewMode, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.ViewManagement.ApplicationView.TryEnterViewModeAsync(viewMode, viewModePreferences) */
 HRESULT wuivi_application_view_try_enter_view_mode_async_application_view_mode_p_p(WUIVI_ApplicationView *self, WUIVI_ApplicationViewMode viewMode, WUIVI_ViewModePreferences* viewModePreferences, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.ViewManagement.ApplicationView.TryConsolidateAsync() */
 HRESULT wuivi_application_view_try_consolidate_async(WUIVI_ApplicationView *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.ViewManagement.ApplicationView.get_PersistedStateId() */
 HRESULT wuivi_application_view_get__persisted_state_id(WUIVI_ApplicationView *self, cwinrt_hstring *value);
 
-/* Windows.UI.ViewManagement.ApplicationView.put_PersistedStateId() */
 HRESULT wuivi_application_view_put__persisted_state_id(WUIVI_ApplicationView *self, cwinrt_hstring value);
 
-/* Windows.UI.ViewManagement.ApplicationView.get_WindowingEnvironment() */
 HRESULT wuivi_application_view_get__windowing_environment(WUIVI_ApplicationView *self, WUIWI_WindowingEnvironment** value);
 
-/* Windows.UI.ViewManagement.ApplicationView.GetDisplayRegions() */
 HRESULT wuivi_application_view_get_display_regions(WUIVI_ApplicationView *self, WFOCO_IVectorView_WUIWI_DisplayRegion** out);
 
-/* Windows.UI.ViewManagement.ApplicationView.get_UIContext() */
 HRESULT wuivi_application_view_get__u_i_context(WUIVI_ApplicationView *self, WUI_UIContext** value);
 
-/* Windows.UI.ViewManagement.ApplicationView.ClearAllPersistedState() */
 HRESULT wuivi_application_view_clear_all_persisted_state(void);
 
-/* Windows.UI.ViewManagement.ApplicationView.ClearPersistedState(key) */
 HRESULT wuivi_application_view_clear_persisted_state(cwinrt_hstring key);
 
-/* Windows.UI.ViewManagement.ApplicationView.get_PreferredLaunchWindowingMode() */
 HRESULT wuivi_application_view_get__preferred_launch_windowing_mode(WUIVI_ApplicationViewWindowingMode *value);
 
-/* Windows.UI.ViewManagement.ApplicationView.put_PreferredLaunchWindowingMode() */
 HRESULT wuivi_application_view_put__preferred_launch_windowing_mode(WUIVI_ApplicationViewWindowingMode value);
 
-/* Windows.UI.ViewManagement.ApplicationView.get_PreferredLaunchViewSize() */
 HRESULT wuivi_application_view_get__preferred_launch_view_size(WF_Size *value);
 
-/* Windows.UI.ViewManagement.ApplicationView.put_PreferredLaunchViewSize() */
 HRESULT wuivi_application_view_put__preferred_launch_view_size(WF_Size value);
 
-/* Windows.UI.ViewManagement.ApplicationView.TryUnsnapToFullscreen() */
 HRESULT wuivi_application_view_try_unsnap_to_fullscreen(BOOL *out);
 
-/* Windows.UI.ViewManagement.ApplicationView.GetApplicationViewIdForWindow(window) */
 HRESULT wuivi_application_view_get_application_view_id_for_window(WUICO_ICoreWindow* window, int32_t *out);
 
-/* Windows.UI.ViewManagement.ApplicationView.GetForCurrentView() */
 HRESULT wuivi_application_view_get_for_current_view(WUIVI_ApplicationView** out);
 
-/* Windows.UI.ViewManagement.ApplicationView.get_TerminateAppOnFinalViewClose() */
 HRESULT wuivi_application_view_get__terminate_app_on_final_view_close(BOOL *value);
 
-/* Windows.UI.ViewManagement.ApplicationView.put_TerminateAppOnFinalViewClose() */
 HRESULT wuivi_application_view_put__terminate_app_on_final_view_close(BOOL value);
 
-/* Windows.UI.ViewManagement.ApplicationView.get_Value() */
 HRESULT wuivi_application_view_get__value(WUIVI_ApplicationViewState *value);
 
-/* Windows.UI.ViewManagement.ApplicationView.TryUnsnap() */
 HRESULT wuivi_application_view_try_unsnap(BOOL *out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuivi_application_view_on_consolidated(WUIVI_ApplicationView *self, cwinrt_event_fn fn, void *ctx);
@@ -692,262 +631,172 @@ void wuivi_application_view_off_consolidated(WUIVI_ApplicationView *self, cwinrt
 cwinrt_token wuivi_application_view_on_visible_bounds_changed(WUIVI_ApplicationView *self, cwinrt_event_fn fn, void *ctx);
 void wuivi_application_view_off_visible_bounds_changed(WUIVI_ApplicationView *self, cwinrt_token token);
 
-/* activate Windows.UI.ViewManagement.ApplicationViewConsolidatedEventArgs */
 HRESULT wuivi_application_view_consolidated_event_args_new(WUIVI_ApplicationViewConsolidatedEventArgs **out);
 
-/* Windows.UI.ViewManagement.ApplicationViewConsolidatedEventArgs */
-/* Windows.UI.ViewManagement.ApplicationViewConsolidatedEventArgs.get_IsUserInitiated() */
 HRESULT wuivi_application_view_consolidated_event_args_get__is_user_initiated(WUIVI_ApplicationViewConsolidatedEventArgs *self, BOOL *value);
 
-/* Windows.UI.ViewManagement.ApplicationViewConsolidatedEventArgs.get_IsAppInitiated() */
 HRESULT wuivi_application_view_consolidated_event_args_get__is_app_initiated(WUIVI_ApplicationViewConsolidatedEventArgs *self, BOOL *value);
 
-/* activate Windows.UI.ViewManagement.ApplicationViewScaling */
 HRESULT wuivi_application_view_scaling_new(WUIVI_ApplicationViewScaling **out);
 
-/* Windows.UI.ViewManagement.ApplicationViewScaling */
-/* Windows.UI.ViewManagement.ApplicationViewScaling.get_DisableLayoutScaling() */
 HRESULT wuivi_application_view_scaling_get__disable_layout_scaling(BOOL *value);
 
-/* Windows.UI.ViewManagement.ApplicationViewScaling.TrySetDisableLayoutScaling(disableLayoutScaling) */
 HRESULT wuivi_application_view_scaling_try_set_disable_layout_scaling(BOOL disableLayoutScaling, BOOL *out);
 
-/* activate Windows.UI.ViewManagement.ApplicationViewSwitcher */
 HRESULT wuivi_application_view_switcher_new(WUIVI_ApplicationViewSwitcher **out);
 
-/* Windows.UI.ViewManagement.ApplicationViewSwitcher */
-/* Windows.UI.ViewManagement.ApplicationViewSwitcher.TryShowAsViewModeAsync(viewId, viewMode) */
 HRESULT wuivi_application_view_switcher_try_show_as_view_mode_async(int32_t viewId, WUIVI_ApplicationViewMode viewMode, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.ViewManagement.ApplicationViewSwitcher.TryShowAsViewModeAsync(viewId, viewMode, viewModePreferences) */
 HRESULT wuivi_application_view_switcher_try_show_as_view_mode_async_i32_application_view_mode_p_p(int32_t viewId, WUIVI_ApplicationViewMode viewMode, WUIVI_ViewModePreferences* viewModePreferences, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.ViewManagement.ApplicationViewSwitcher.DisableSystemViewActivationPolicy() */
 HRESULT wuivi_application_view_switcher_disable_system_view_activation_policy(void);
 
-/* Windows.UI.ViewManagement.ApplicationViewSwitcher.DisableShowingMainViewOnActivation() */
 HRESULT wuivi_application_view_switcher_disable_showing_main_view_on_activation(void);
 
-/* Windows.UI.ViewManagement.ApplicationViewSwitcher.TryShowAsStandaloneAsync(viewId) */
 HRESULT wuivi_application_view_switcher_try_show_as_standalone_async(int32_t viewId, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.ViewManagement.ApplicationViewSwitcher.TryShowAsStandaloneAsync(viewId, sizePreference) */
 HRESULT wuivi_application_view_switcher_try_show_as_standalone_async_i32_view_size_preference_p(int32_t viewId, WUIVI_ViewSizePreference sizePreference, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.ViewManagement.ApplicationViewSwitcher.TryShowAsStandaloneAsync(viewId, sizePreference, anchorViewId, anchorSizePreference) */
 HRESULT wuivi_application_view_switcher_try_show_as_standalone_async_i32_view_size_preference_i32_view_si_33f3a191(int32_t viewId, WUIVI_ViewSizePreference sizePreference, int32_t anchorViewId, WUIVI_ViewSizePreference anchorSizePreference, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.ViewManagement.ApplicationViewSwitcher.SwitchAsync(viewId) */
 HRESULT wuivi_application_view_switcher_switch_async(int32_t viewId, WF_IAsyncAction** out);
 
-/* Windows.UI.ViewManagement.ApplicationViewSwitcher.SwitchAsync(toViewId, fromViewId) */
 HRESULT wuivi_application_view_switcher_switch_async_i32_i32_p(int32_t toViewId, int32_t fromViewId, WF_IAsyncAction** out);
 
-/* Windows.UI.ViewManagement.ApplicationViewSwitcher.SwitchAsync(toViewId, fromViewId, options) */
 HRESULT wuivi_application_view_switcher_switch_async_i32_i32_application_view_switching_options_p(int32_t toViewId, int32_t fromViewId, WUIVI_ApplicationViewSwitchingOptions options, WF_IAsyncAction** out);
 
-/* Windows.UI.ViewManagement.ApplicationViewSwitcher.PrepareForCustomAnimatedSwitchAsync(toViewId, fromViewId, options) */
 HRESULT wuivi_application_view_switcher_prepare_for_custom_animated_switch_async(int32_t toViewId, int32_t fromViewId, WUIVI_ApplicationViewSwitchingOptions options, WF_IAsyncOperation_Bool** out);
 
-/* activate Windows.UI.ViewManagement.ApplicationViewTitleBar */
 HRESULT wuivi_application_view_title_bar_new(WUIVI_ApplicationViewTitleBar **out);
 
-/* Windows.UI.ViewManagement.ApplicationViewTitleBar */
-/* Windows.UI.ViewManagement.ApplicationViewTitleBar.put_ForegroundColor() */
 HRESULT wuivi_application_view_title_bar_put__foreground_color(WUIVI_ApplicationViewTitleBar *self, WUI_Color* value);
 
-/* Windows.UI.ViewManagement.ApplicationViewTitleBar.get_ForegroundColor() */
 HRESULT wuivi_application_view_title_bar_get__foreground_color(WUIVI_ApplicationViewTitleBar *self, WUI_Color** value);
 
-/* Windows.UI.ViewManagement.ApplicationViewTitleBar.put_BackgroundColor() */
 HRESULT wuivi_application_view_title_bar_put__background_color(WUIVI_ApplicationViewTitleBar *self, WUI_Color* value);
 
-/* Windows.UI.ViewManagement.ApplicationViewTitleBar.get_BackgroundColor() */
 HRESULT wuivi_application_view_title_bar_get__background_color(WUIVI_ApplicationViewTitleBar *self, WUI_Color** value);
 
-/* Windows.UI.ViewManagement.ApplicationViewTitleBar.put_ButtonForegroundColor() */
 HRESULT wuivi_application_view_title_bar_put__button_foreground_color(WUIVI_ApplicationViewTitleBar *self, WUI_Color* value);
 
-/* Windows.UI.ViewManagement.ApplicationViewTitleBar.get_ButtonForegroundColor() */
 HRESULT wuivi_application_view_title_bar_get__button_foreground_color(WUIVI_ApplicationViewTitleBar *self, WUI_Color** value);
 
-/* Windows.UI.ViewManagement.ApplicationViewTitleBar.put_ButtonBackgroundColor() */
 HRESULT wuivi_application_view_title_bar_put__button_background_color(WUIVI_ApplicationViewTitleBar *self, WUI_Color* value);
 
-/* Windows.UI.ViewManagement.ApplicationViewTitleBar.get_ButtonBackgroundColor() */
 HRESULT wuivi_application_view_title_bar_get__button_background_color(WUIVI_ApplicationViewTitleBar *self, WUI_Color** value);
 
-/* Windows.UI.ViewManagement.ApplicationViewTitleBar.put_ButtonHoverForegroundColor() */
 HRESULT wuivi_application_view_title_bar_put__button_hover_foreground_color(WUIVI_ApplicationViewTitleBar *self, WUI_Color* value);
 
-/* Windows.UI.ViewManagement.ApplicationViewTitleBar.get_ButtonHoverForegroundColor() */
 HRESULT wuivi_application_view_title_bar_get__button_hover_foreground_color(WUIVI_ApplicationViewTitleBar *self, WUI_Color** value);
 
-/* Windows.UI.ViewManagement.ApplicationViewTitleBar.put_ButtonHoverBackgroundColor() */
 HRESULT wuivi_application_view_title_bar_put__button_hover_background_color(WUIVI_ApplicationViewTitleBar *self, WUI_Color* value);
 
-/* Windows.UI.ViewManagement.ApplicationViewTitleBar.get_ButtonHoverBackgroundColor() */
 HRESULT wuivi_application_view_title_bar_get__button_hover_background_color(WUIVI_ApplicationViewTitleBar *self, WUI_Color** value);
 
-/* Windows.UI.ViewManagement.ApplicationViewTitleBar.put_ButtonPressedForegroundColor() */
 HRESULT wuivi_application_view_title_bar_put__button_pressed_foreground_color(WUIVI_ApplicationViewTitleBar *self, WUI_Color* value);
 
-/* Windows.UI.ViewManagement.ApplicationViewTitleBar.get_ButtonPressedForegroundColor() */
 HRESULT wuivi_application_view_title_bar_get__button_pressed_foreground_color(WUIVI_ApplicationViewTitleBar *self, WUI_Color** value);
 
-/* Windows.UI.ViewManagement.ApplicationViewTitleBar.put_ButtonPressedBackgroundColor() */
 HRESULT wuivi_application_view_title_bar_put__button_pressed_background_color(WUIVI_ApplicationViewTitleBar *self, WUI_Color* value);
 
-/* Windows.UI.ViewManagement.ApplicationViewTitleBar.get_ButtonPressedBackgroundColor() */
 HRESULT wuivi_application_view_title_bar_get__button_pressed_background_color(WUIVI_ApplicationViewTitleBar *self, WUI_Color** value);
 
-/* Windows.UI.ViewManagement.ApplicationViewTitleBar.put_InactiveForegroundColor() */
 HRESULT wuivi_application_view_title_bar_put__inactive_foreground_color(WUIVI_ApplicationViewTitleBar *self, WUI_Color* value);
 
-/* Windows.UI.ViewManagement.ApplicationViewTitleBar.get_InactiveForegroundColor() */
 HRESULT wuivi_application_view_title_bar_get__inactive_foreground_color(WUIVI_ApplicationViewTitleBar *self, WUI_Color** value);
 
-/* Windows.UI.ViewManagement.ApplicationViewTitleBar.put_InactiveBackgroundColor() */
 HRESULT wuivi_application_view_title_bar_put__inactive_background_color(WUIVI_ApplicationViewTitleBar *self, WUI_Color* value);
 
-/* Windows.UI.ViewManagement.ApplicationViewTitleBar.get_InactiveBackgroundColor() */
 HRESULT wuivi_application_view_title_bar_get__inactive_background_color(WUIVI_ApplicationViewTitleBar *self, WUI_Color** value);
 
-/* Windows.UI.ViewManagement.ApplicationViewTitleBar.put_ButtonInactiveForegroundColor() */
 HRESULT wuivi_application_view_title_bar_put__button_inactive_foreground_color(WUIVI_ApplicationViewTitleBar *self, WUI_Color* value);
 
-/* Windows.UI.ViewManagement.ApplicationViewTitleBar.get_ButtonInactiveForegroundColor() */
 HRESULT wuivi_application_view_title_bar_get__button_inactive_foreground_color(WUIVI_ApplicationViewTitleBar *self, WUI_Color** value);
 
-/* Windows.UI.ViewManagement.ApplicationViewTitleBar.put_ButtonInactiveBackgroundColor() */
 HRESULT wuivi_application_view_title_bar_put__button_inactive_background_color(WUIVI_ApplicationViewTitleBar *self, WUI_Color* value);
 
-/* Windows.UI.ViewManagement.ApplicationViewTitleBar.get_ButtonInactiveBackgroundColor() */
 HRESULT wuivi_application_view_title_bar_get__button_inactive_background_color(WUIVI_ApplicationViewTitleBar *self, WUI_Color** value);
 
-/* activate Windows.UI.ViewManagement.ApplicationViewTransferContext */
 HRESULT wuivi_application_view_transfer_context_new(WUIVI_ApplicationViewTransferContext **out);
 
-/* Windows.UI.ViewManagement.ApplicationViewTransferContext */
-/* Windows.UI.ViewManagement.ApplicationViewTransferContext.get_ViewId() */
 HRESULT wuivi_application_view_transfer_context_get__view_id(WUIVI_ApplicationViewTransferContext *self, int32_t *value);
 
-/* Windows.UI.ViewManagement.ApplicationViewTransferContext.put_ViewId() */
 HRESULT wuivi_application_view_transfer_context_put__view_id(WUIVI_ApplicationViewTransferContext *self, int32_t value);
 
-/* Windows.UI.ViewManagement.ApplicationViewTransferContext.get_DataPackageFormatId() */
 HRESULT wuivi_application_view_transfer_context_get__data_package_format_id(cwinrt_hstring *value);
 
-/* activate Windows.UI.ViewManagement.AccessibilitySettings */
 HRESULT wuivi_accessibility_settings_new(WUIVI_AccessibilitySettings **out);
 
-/* Windows.UI.ViewManagement.AccessibilitySettings */
-/* Windows.UI.ViewManagement.AccessibilitySettings.get_HighContrast() */
 HRESULT wuivi_accessibility_settings_get__high_contrast(WUIVI_AccessibilitySettings *self, BOOL *value);
 
-/* Windows.UI.ViewManagement.AccessibilitySettings.get_HighContrastScheme() */
 HRESULT wuivi_accessibility_settings_get__high_contrast_scheme(WUIVI_AccessibilitySettings *self, cwinrt_hstring *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuivi_accessibility_settings_on_high_contrast_changed(WUIVI_AccessibilitySettings *self, cwinrt_event_fn fn, void *ctx);
 void wuivi_accessibility_settings_off_high_contrast_changed(WUIVI_AccessibilitySettings *self, cwinrt_token token);
 
-/* activate Windows.UI.ViewManagement.ViewModePreferences */
 HRESULT wuivi_view_mode_preferences_new(WUIVI_ViewModePreferences **out);
 
-/* Windows.UI.ViewManagement.ViewModePreferences */
-/* Windows.UI.ViewManagement.ViewModePreferences.get_ViewSizePreference() */
 HRESULT wuivi_view_mode_preferences_get__view_size_preference(WUIVI_ViewModePreferences *self, WUIVI_ViewSizePreference *value);
 
-/* Windows.UI.ViewManagement.ViewModePreferences.put_ViewSizePreference() */
 HRESULT wuivi_view_mode_preferences_put__view_size_preference(WUIVI_ViewModePreferences *self, WUIVI_ViewSizePreference value);
 
-/* Windows.UI.ViewManagement.ViewModePreferences.get_CustomSize() */
 HRESULT wuivi_view_mode_preferences_get__custom_size(WUIVI_ViewModePreferences *self, WF_Size *value);
 
-/* Windows.UI.ViewManagement.ViewModePreferences.put_CustomSize() */
 HRESULT wuivi_view_mode_preferences_put__custom_size(WUIVI_ViewModePreferences *self, WF_Size value);
 
-/* Windows.UI.ViewManagement.ViewModePreferences.CreateDefault(mode) */
 HRESULT wuivi_view_mode_preferences_create_default(WUIVI_ApplicationViewMode mode, WUIVI_ViewModePreferences** out);
 
-/* activate Windows.UI.ViewManagement.UIViewSettings */
 HRESULT wuivi_u_i_view_settings_new(WUIVI_UIViewSettings **out);
 
-/* Windows.UI.ViewManagement.UIViewSettings */
-/* Windows.UI.ViewManagement.UIViewSettings.get_UserInteractionMode() */
 HRESULT wuivi_u_i_view_settings_get__user_interaction_mode(WUIVI_UIViewSettings *self, WUIVI_UserInteractionMode *value);
 
-/* Windows.UI.ViewManagement.UIViewSettings.GetPreferredInteractionMode(supportedModes) */
 HRESULT wuivi_u_i_view_settings_get_preferred_interaction_mode(WUIVI_UIViewSettings *self, WUIVI_UserInteractionMode *supportedModes, uint32_t supportedModes_len, WUIVI_UserInteractionMode *out);
 
-/* Windows.UI.ViewManagement.UIViewSettings.GetForCurrentView() */
 HRESULT wuivi_u_i_view_settings_get_for_current_view(WUIVI_UIViewSettings** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuivi_u_i_view_settings_on_preferred_interaction_mode_changed(WUIVI_UIViewSettings *self, cwinrt_event_fn fn, void *ctx);
 void wuivi_u_i_view_settings_off_preferred_interaction_mode_changed(WUIVI_UIViewSettings *self, cwinrt_token token);
 
-/* activate Windows.UI.ViewManagement.UISettings */
 HRESULT wuivi_u_i_settings_new(WUIVI_UISettings **out);
 
-/* Windows.UI.ViewManagement.UISettings */
-/* Windows.UI.ViewManagement.UISettings.get_HandPreference() */
 HRESULT wuivi_u_i_settings_get__hand_preference(WUIVI_UISettings *self, WUIVI_HandPreference *value);
 
-/* Windows.UI.ViewManagement.UISettings.get_CursorSize() */
 HRESULT wuivi_u_i_settings_get__cursor_size(WUIVI_UISettings *self, WF_Size *value);
 
-/* Windows.UI.ViewManagement.UISettings.get_ScrollBarSize() */
 HRESULT wuivi_u_i_settings_get__scroll_bar_size(WUIVI_UISettings *self, WF_Size *value);
 
-/* Windows.UI.ViewManagement.UISettings.get_ScrollBarArrowSize() */
 HRESULT wuivi_u_i_settings_get__scroll_bar_arrow_size(WUIVI_UISettings *self, WF_Size *value);
 
-/* Windows.UI.ViewManagement.UISettings.get_ScrollBarThumbBoxSize() */
 HRESULT wuivi_u_i_settings_get__scroll_bar_thumb_box_size(WUIVI_UISettings *self, WF_Size *value);
 
-/* Windows.UI.ViewManagement.UISettings.get_MessageDuration() */
 HRESULT wuivi_u_i_settings_get__message_duration(WUIVI_UISettings *self, uint32_t *value);
 
-/* Windows.UI.ViewManagement.UISettings.get_AnimationsEnabled() */
 HRESULT wuivi_u_i_settings_get__animations_enabled(WUIVI_UISettings *self, BOOL *value);
 
-/* Windows.UI.ViewManagement.UISettings.get_CaretBrowsingEnabled() */
 HRESULT wuivi_u_i_settings_get__caret_browsing_enabled(WUIVI_UISettings *self, BOOL *value);
 
-/* Windows.UI.ViewManagement.UISettings.get_CaretBlinkRate() */
 HRESULT wuivi_u_i_settings_get__caret_blink_rate(WUIVI_UISettings *self, uint32_t *value);
 
-/* Windows.UI.ViewManagement.UISettings.get_CaretWidth() */
 HRESULT wuivi_u_i_settings_get__caret_width(WUIVI_UISettings *self, uint32_t *value);
 
-/* Windows.UI.ViewManagement.UISettings.get_DoubleClickTime() */
 HRESULT wuivi_u_i_settings_get__double_click_time(WUIVI_UISettings *self, uint32_t *value);
 
-/* Windows.UI.ViewManagement.UISettings.get_MouseHoverTime() */
 HRESULT wuivi_u_i_settings_get__mouse_hover_time(WUIVI_UISettings *self, uint32_t *value);
 
-/* Windows.UI.ViewManagement.UISettings.UIElementColor(desiredElement) */
 HRESULT wuivi_u_i_settings_u_i_element_color(WUIVI_UISettings *self, WUIVI_UIElementType desiredElement, WUI_Color *out);
 
-/* Windows.UI.ViewManagement.UISettings.get_TextScaleFactor() */
 HRESULT wuivi_u_i_settings_get__text_scale_factor(WUIVI_UISettings *self, double *value);
 
-/* Windows.UI.ViewManagement.UISettings.GetColorValue(desiredColor) */
 HRESULT wuivi_u_i_settings_get_color_value(WUIVI_UISettings *self, WUIVI_UIColorType desiredColor, WUI_Color *out);
 
-/* Windows.UI.ViewManagement.UISettings.get_AdvancedEffectsEnabled() */
 HRESULT wuivi_u_i_settings_get__advanced_effects_enabled(WUIVI_UISettings *self, BOOL *value);
 
-/* Windows.UI.ViewManagement.UISettings.get_AutoHideScrollBars() */
 HRESULT wuivi_u_i_settings_get__auto_hide_scroll_bars(WUIVI_UISettings *self, BOOL *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuivi_u_i_settings_on_text_scale_factor_changed(WUIVI_UISettings *self, cwinrt_event_fn fn, void *ctx);
@@ -968,79 +817,53 @@ void wuivi_u_i_settings_off_animations_enabled_changed(WUIVI_UISettings *self, c
 cwinrt_token wuivi_u_i_settings_on_message_duration_changed(WUIVI_UISettings *self, cwinrt_event_fn fn, void *ctx);
 void wuivi_u_i_settings_off_message_duration_changed(WUIVI_UISettings *self, cwinrt_token token);
 
-/* activate Windows.UI.ViewManagement.ProjectionManager */
 HRESULT wuivi_projection_manager_new(WUIVI_ProjectionManager **out);
 
-/* Windows.UI.ViewManagement.ProjectionManager */
-/* Windows.UI.ViewManagement.ProjectionManager.StartProjectingAsync(projectionViewId, anchorViewId, displayDeviceInfo) */
 HRESULT wuivi_projection_manager_start_projecting_async_i32_i32_p_p(int32_t projectionViewId, int32_t anchorViewId, WDEEN_DeviceInformation* displayDeviceInfo, WF_IAsyncAction** out);
 
-/* Windows.UI.ViewManagement.ProjectionManager.RequestStartProjectingAsync(projectionViewId, anchorViewId, selection) */
 HRESULT wuivi_projection_manager_request_start_projecting_async(int32_t projectionViewId, int32_t anchorViewId, WF_Rect selection, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.ViewManagement.ProjectionManager.RequestStartProjectingAsync(projectionViewId, anchorViewId, selection, prefferedPlacement) */
 HRESULT wuivi_projection_manager_request_start_projecting_async_i32_i32_rect_placement_p(int32_t projectionViewId, int32_t anchorViewId, WF_Rect selection, WUIPO_Placement prefferedPlacement, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.ViewManagement.ProjectionManager.GetDeviceSelector() */
 HRESULT wuivi_projection_manager_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.UI.ViewManagement.ProjectionManager.StartProjectingAsync(projectionViewId, anchorViewId) */
 HRESULT wuivi_projection_manager_start_projecting_async(int32_t projectionViewId, int32_t anchorViewId, WF_IAsyncAction** out);
 
-/* Windows.UI.ViewManagement.ProjectionManager.SwapDisplaysForViewsAsync(projectionViewId, anchorViewId) */
 HRESULT wuivi_projection_manager_swap_displays_for_views_async(int32_t projectionViewId, int32_t anchorViewId, WF_IAsyncAction** out);
 
-/* Windows.UI.ViewManagement.ProjectionManager.StopProjectingAsync(projectionViewId, anchorViewId) */
 HRESULT wuivi_projection_manager_stop_projecting_async(int32_t projectionViewId, int32_t anchorViewId, WF_IAsyncAction** out);
 
-/* Windows.UI.ViewManagement.ProjectionManager.get_ProjectionDisplayAvailable() */
 HRESULT wuivi_projection_manager_get__projection_display_available(BOOL *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuivi_projection_manager_on_projection_display_available_changed(WUIVI_ProjectionManager *self, cwinrt_event_fn fn, void *ctx);
 void wuivi_projection_manager_off_projection_display_available_changed(WUIVI_ProjectionManager *self, cwinrt_token token);
 
-/* activate Windows.UI.ViewManagement.InputPaneVisibilityEventArgs */
 HRESULT wuivi_input_pane_visibility_event_args_new(WUIVI_InputPaneVisibilityEventArgs **out);
 
-/* Windows.UI.ViewManagement.InputPaneVisibilityEventArgs */
-/* Windows.UI.ViewManagement.InputPaneVisibilityEventArgs.get_OccludedRect() */
 HRESULT wuivi_input_pane_visibility_event_args_get__occluded_rect(WUIVI_InputPaneVisibilityEventArgs *self, WF_Rect *value);
 
-/* Windows.UI.ViewManagement.InputPaneVisibilityEventArgs.put_EnsuredFocusedElementInView() */
 HRESULT wuivi_input_pane_visibility_event_args_put__ensured_focused_element_in_view(WUIVI_InputPaneVisibilityEventArgs *self, BOOL value);
 
-/* Windows.UI.ViewManagement.InputPaneVisibilityEventArgs.get_EnsuredFocusedElementInView() */
 HRESULT wuivi_input_pane_visibility_event_args_get__ensured_focused_element_in_view(WUIVI_InputPaneVisibilityEventArgs *self, BOOL *value);
 
-/* activate Windows.UI.ViewManagement.InputPane */
 HRESULT wuivi_input_pane_new(WUIVI_InputPane **out);
 
-/* Windows.UI.ViewManagement.InputPane */
-/* Windows.UI.ViewManagement.InputPane.get_OccludedRect() */
 HRESULT wuivi_input_pane_get__occluded_rect(WUIVI_InputPane *self, WF_Rect *value);
 
-/* Windows.UI.ViewManagement.InputPane.TryShow() */
 HRESULT wuivi_input_pane_try_show(WUIVI_InputPane *self, BOOL *out);
 
-/* Windows.UI.ViewManagement.InputPane.TryHide() */
 HRESULT wuivi_input_pane_try_hide(WUIVI_InputPane *self, BOOL *out);
 
-/* Windows.UI.ViewManagement.InputPane.get_Visible() */
 HRESULT wuivi_input_pane_get__visible(WUIVI_InputPane *self, BOOL *value);
 
-/* Windows.UI.ViewManagement.InputPane.put_Visible() */
 HRESULT wuivi_input_pane_put__visible(WUIVI_InputPane *self, BOOL value);
 
-/* Windows.UI.ViewManagement.InputPane.GetForUIContext(context) */
 HRESULT wuivi_input_pane_get_for_u_i_context(WUI_UIContext* context, WUIVI_InputPane** out);
 
-/* Windows.UI.ViewManagement.InputPane.GetForCurrentView() */
 HRESULT wuivi_input_pane_get_for_current_view(WUIVI_InputPane** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuivi_input_pane_on_showing(WUIVI_InputPane *self, cwinrt_event_fn fn, void *ctx);
@@ -1049,266 +872,150 @@ void wuivi_input_pane_off_showing(WUIVI_InputPane *self, cwinrt_token token);
 cwinrt_token wuivi_input_pane_on_hiding(WUIVI_InputPane *self, cwinrt_event_fn fn, void *ctx);
 void wuivi_input_pane_off_hiding(WUIVI_InputPane *self, cwinrt_token token);
 
-/* Windows.UI.ViewManagement.IViewModePreferencesStatics */
-/* Windows.UI.ViewManagement.IViewModePreferencesStatics.CreateDefault(mode) */
 HRESULT wuivi_view_mode_preferences_statics_create_default(WUIVI_IViewModePreferencesStatics *self, WUIVI_ApplicationViewMode mode, WUIVI_ViewModePreferences** out);
 
-/* Windows.UI.ViewManagement.IUIViewSettingsStatics */
-/* Windows.UI.ViewManagement.IUIViewSettingsStatics.GetForCurrentView() */
 HRESULT wuivi_u_i_view_settings_statics_get_for_current_view(WUIVI_IUIViewSettingsStatics *self, WUIVI_UIViewSettings** out);
 
-/* Windows.UI.ViewManagement.IProjectionManagerStatics2 */
-/* Windows.UI.ViewManagement.IProjectionManagerStatics2.StartProjectingAsync(projectionViewId, anchorViewId, displayDeviceInfo) */
 HRESULT wuivi_projection_manager_statics_2_start_projecting_async(WUIVI_IProjectionManagerStatics_2 *self, int32_t projectionViewId, int32_t anchorViewId, WDEEN_DeviceInformation* displayDeviceInfo, WF_IAsyncAction** out);
 
-/* Windows.UI.ViewManagement.IProjectionManagerStatics2.RequestStartProjectingAsync(projectionViewId, anchorViewId, selection) */
 HRESULT wuivi_projection_manager_statics_2_request_start_projecting_async(WUIVI_IProjectionManagerStatics_2 *self, int32_t projectionViewId, int32_t anchorViewId, WF_Rect selection, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.ViewManagement.IProjectionManagerStatics2.RequestStartProjectingAsync(projectionViewId, anchorViewId, selection, prefferedPlacement) */
 HRESULT wuivi_projection_manager_statics_2_request_start_projecting_async_i32_i32_rect_placement_p(WUIVI_IProjectionManagerStatics_2 *self, int32_t projectionViewId, int32_t anchorViewId, WF_Rect selection, WUIPO_Placement prefferedPlacement, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.ViewManagement.IProjectionManagerStatics2.GetDeviceSelector() */
 HRESULT wuivi_projection_manager_statics_2_get_device_selector(WUIVI_IProjectionManagerStatics_2 *self, cwinrt_hstring *out);
 
-/* Windows.UI.ViewManagement.IProjectionManagerStatics */
-/* Windows.UI.ViewManagement.IProjectionManagerStatics.StartProjectingAsync(projectionViewId, anchorViewId) */
 HRESULT wuivi_projection_manager_statics_start_projecting_async(WUIVI_IProjectionManagerStatics *self, int32_t projectionViewId, int32_t anchorViewId, WF_IAsyncAction** out);
 
-/* Windows.UI.ViewManagement.IProjectionManagerStatics.SwapDisplaysForViewsAsync(projectionViewId, anchorViewId) */
 HRESULT wuivi_projection_manager_statics_swap_displays_for_views_async(WUIVI_IProjectionManagerStatics *self, int32_t projectionViewId, int32_t anchorViewId, WF_IAsyncAction** out);
 
-/* Windows.UI.ViewManagement.IProjectionManagerStatics.StopProjectingAsync(projectionViewId, anchorViewId) */
 HRESULT wuivi_projection_manager_statics_stop_projecting_async(WUIVI_IProjectionManagerStatics *self, int32_t projectionViewId, int32_t anchorViewId, WF_IAsyncAction** out);
 
-/* Windows.UI.ViewManagement.IProjectionManagerStatics.get_ProjectionDisplayAvailable() */
 HRESULT wuivi_projection_manager_statics_get__projection_display_available(WUIVI_IProjectionManagerStatics *self, BOOL *value);
 
-/* Windows.UI.ViewManagement.IApplicationViewFullscreenStatics */
-/* Windows.UI.ViewManagement.IApplicationViewFullscreenStatics.TryUnsnapToFullscreen() */
 HRESULT wuivi_application_view_fullscreen_statics_try_unsnap_to_fullscreen(WUIVI_IApplicationViewFullscreenStatics *self, BOOL *out);
 
-/* Windows.UI.ViewManagement.IApplicationViewInteropStatics */
-/* Windows.UI.ViewManagement.IApplicationViewInteropStatics.GetApplicationViewIdForWindow(window) */
 HRESULT wuivi_application_view_interop_statics_get_application_view_id_for_window(WUIVI_IApplicationViewInteropStatics *self, WUICO_ICoreWindow* window, int32_t *out);
 
-/* Windows.UI.ViewManagement.IApplicationViewScalingStatics */
-/* Windows.UI.ViewManagement.IApplicationViewScalingStatics.get_DisableLayoutScaling() */
 HRESULT wuivi_application_view_scaling_statics_get__disable_layout_scaling(WUIVI_IApplicationViewScalingStatics *self, BOOL *value);
 
-/* Windows.UI.ViewManagement.IApplicationViewScalingStatics.TrySetDisableLayoutScaling(disableLayoutScaling) */
 HRESULT wuivi_application_view_scaling_statics_try_set_disable_layout_scaling(WUIVI_IApplicationViewScalingStatics *self, BOOL disableLayoutScaling, BOOL *out);
 
-/* Windows.UI.ViewManagement.IApplicationViewStatics */
-/* Windows.UI.ViewManagement.IApplicationViewStatics.get_Value() */
 HRESULT wuivi_application_view_statics_get__value(WUIVI_IApplicationViewStatics *self, WUIVI_ApplicationViewState *value);
 
-/* Windows.UI.ViewManagement.IApplicationViewStatics.TryUnsnap() */
 HRESULT wuivi_application_view_statics_try_unsnap(WUIVI_IApplicationViewStatics *self, BOOL *out);
 
-/* Windows.UI.ViewManagement.IApplicationViewStatics2 */
-/* Windows.UI.ViewManagement.IApplicationViewStatics2.GetForCurrentView() */
 HRESULT wuivi_application_view_statics_2_get_for_current_view(WUIVI_IApplicationViewStatics_2 *self, WUIVI_ApplicationView** out);
 
-/* Windows.UI.ViewManagement.IApplicationViewStatics2.get_TerminateAppOnFinalViewClose() */
 HRESULT wuivi_application_view_statics_2_get__terminate_app_on_final_view_close(WUIVI_IApplicationViewStatics_2 *self, BOOL *value);
 
-/* Windows.UI.ViewManagement.IApplicationViewStatics2.put_TerminateAppOnFinalViewClose() */
 HRESULT wuivi_application_view_statics_2_put__terminate_app_on_final_view_close(WUIVI_IApplicationViewStatics_2 *self, BOOL value);
 
-/* Windows.UI.ViewManagement.IApplicationViewStatics3 */
-/* Windows.UI.ViewManagement.IApplicationViewStatics3.get_PreferredLaunchWindowingMode() */
 HRESULT wuivi_application_view_statics_3_get__preferred_launch_windowing_mode(WUIVI_IApplicationViewStatics_3 *self, WUIVI_ApplicationViewWindowingMode *value);
 
-/* Windows.UI.ViewManagement.IApplicationViewStatics3.put_PreferredLaunchWindowingMode() */
 HRESULT wuivi_application_view_statics_3_put__preferred_launch_windowing_mode(WUIVI_IApplicationViewStatics_3 *self, WUIVI_ApplicationViewWindowingMode value);
 
-/* Windows.UI.ViewManagement.IApplicationViewStatics3.get_PreferredLaunchViewSize() */
 HRESULT wuivi_application_view_statics_3_get__preferred_launch_view_size(WUIVI_IApplicationViewStatics_3 *self, WF_Size *value);
 
-/* Windows.UI.ViewManagement.IApplicationViewStatics3.put_PreferredLaunchViewSize() */
 HRESULT wuivi_application_view_statics_3_put__preferred_launch_view_size(WUIVI_IApplicationViewStatics_3 *self, WF_Size value);
 
-/* Windows.UI.ViewManagement.IApplicationViewStatics4 */
-/* Windows.UI.ViewManagement.IApplicationViewStatics4.ClearAllPersistedState() */
 HRESULT wuivi_application_view_statics_4_clear_all_persisted_state(WUIVI_IApplicationViewStatics_4 *self);
 
-/* Windows.UI.ViewManagement.IApplicationViewStatics4.ClearPersistedState(key) */
 HRESULT wuivi_application_view_statics_4_clear_persisted_state(WUIVI_IApplicationViewStatics_4 *self, cwinrt_hstring key);
 
-/* Windows.UI.ViewManagement.IApplicationViewSwitcherStatics */
-/* Windows.UI.ViewManagement.IApplicationViewSwitcherStatics.DisableShowingMainViewOnActivation() */
 HRESULT wuivi_application_view_switcher_statics_disable_showing_main_view_on_activation(WUIVI_IApplicationViewSwitcherStatics *self);
 
-/* Windows.UI.ViewManagement.IApplicationViewSwitcherStatics.TryShowAsStandaloneAsync(viewId) */
 HRESULT wuivi_application_view_switcher_statics_try_show_as_standalone_async(WUIVI_IApplicationViewSwitcherStatics *self, int32_t viewId, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.ViewManagement.IApplicationViewSwitcherStatics.TryShowAsStandaloneAsync(viewId, sizePreference) */
 HRESULT wuivi_application_view_switcher_statics_try_show_as_standalone_async_i32_view_size_preference_p(WUIVI_IApplicationViewSwitcherStatics *self, int32_t viewId, WUIVI_ViewSizePreference sizePreference, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.ViewManagement.IApplicationViewSwitcherStatics.TryShowAsStandaloneAsync(viewId, sizePreference, anchorViewId, anchorSizePreference) */
 HRESULT wuivi_application_view_switcher_statics_try_show_as_standalone_async_i32_view_size_preference_i32_view_si_33f3a191(WUIVI_IApplicationViewSwitcherStatics *self, int32_t viewId, WUIVI_ViewSizePreference sizePreference, int32_t anchorViewId, WUIVI_ViewSizePreference anchorSizePreference, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.ViewManagement.IApplicationViewSwitcherStatics.SwitchAsync(viewId) */
 HRESULT wuivi_application_view_switcher_statics_switch_async(WUIVI_IApplicationViewSwitcherStatics *self, int32_t viewId, WF_IAsyncAction** out);
 
-/* Windows.UI.ViewManagement.IApplicationViewSwitcherStatics.SwitchAsync(toViewId, fromViewId) */
 HRESULT wuivi_application_view_switcher_statics_switch_async_i32_i32_p(WUIVI_IApplicationViewSwitcherStatics *self, int32_t toViewId, int32_t fromViewId, WF_IAsyncAction** out);
 
-/* Windows.UI.ViewManagement.IApplicationViewSwitcherStatics.SwitchAsync(toViewId, fromViewId, options) */
 HRESULT wuivi_application_view_switcher_statics_switch_async_i32_i32_application_view_switching_options_p(WUIVI_IApplicationViewSwitcherStatics *self, int32_t toViewId, int32_t fromViewId, WUIVI_ApplicationViewSwitchingOptions options, WF_IAsyncAction** out);
 
-/* Windows.UI.ViewManagement.IApplicationViewSwitcherStatics.PrepareForCustomAnimatedSwitchAsync(toViewId, fromViewId, options) */
 HRESULT wuivi_application_view_switcher_statics_prepare_for_custom_animated_switch_async(WUIVI_IApplicationViewSwitcherStatics *self, int32_t toViewId, int32_t fromViewId, WUIVI_ApplicationViewSwitchingOptions options, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.ViewManagement.IApplicationViewSwitcherStatics2 */
-/* Windows.UI.ViewManagement.IApplicationViewSwitcherStatics2.DisableSystemViewActivationPolicy() */
 HRESULT wuivi_application_view_switcher_statics_2_disable_system_view_activation_policy(WUIVI_IApplicationViewSwitcherStatics_2 *self);
 
-/* Windows.UI.ViewManagement.IApplicationViewSwitcherStatics3 */
-/* Windows.UI.ViewManagement.IApplicationViewSwitcherStatics3.TryShowAsViewModeAsync(viewId, viewMode) */
 HRESULT wuivi_application_view_switcher_statics_3_try_show_as_view_mode_async(WUIVI_IApplicationViewSwitcherStatics_3 *self, int32_t viewId, WUIVI_ApplicationViewMode viewMode, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.ViewManagement.IApplicationViewSwitcherStatics3.TryShowAsViewModeAsync(viewId, viewMode, viewModePreferences) */
 HRESULT wuivi_application_view_switcher_statics_3_try_show_as_view_mode_async_i32_application_view_mode_p_p(WUIVI_IApplicationViewSwitcherStatics_3 *self, int32_t viewId, WUIVI_ApplicationViewMode viewMode, WUIVI_ViewModePreferences* viewModePreferences, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.ViewManagement.IApplicationViewTransferContextStatics */
-/* Windows.UI.ViewManagement.IApplicationViewTransferContextStatics.get_DataPackageFormatId() */
 HRESULT wuivi_application_view_transfer_context_statics_get__data_package_format_id(WUIVI_IApplicationViewTransferContextStatics *self, cwinrt_hstring *value);
 
-/* Windows.UI.ViewManagement.IInputPaneStatics */
-/* Windows.UI.ViewManagement.IInputPaneStatics.GetForCurrentView() */
 HRESULT wuivi_input_pane_statics_get_for_current_view(WUIVI_IInputPaneStatics *self, WUIVI_InputPane** out);
 
-/* Windows.UI.ViewManagement.IInputPaneStatics2 */
-/* Windows.UI.ViewManagement.IInputPaneStatics2.GetForUIContext(context) */
 HRESULT wuivi_input_pane_statics_2_get_for_u_i_context(WUIVI_IInputPaneStatics_2 *self, WUI_UIContext* context, WUIVI_InputPane** out);
 
-/* Windows.UI.ViewManagement.IActivationViewSwitcher */
-/* Windows.UI.ViewManagement.IApplicationView */
-/* Windows.UI.ViewManagement.IApplicationView2 */
-/* Windows.UI.ViewManagement.IApplicationView2.get_SuppressSystemOverlays() */
 HRESULT wuivi_application_view_2_get__suppress_system_overlays(WUIVI_IApplicationView_2 *self, BOOL *value);
 
-/* Windows.UI.ViewManagement.IApplicationView2.put_SuppressSystemOverlays() */
 HRESULT wuivi_application_view_2_put__suppress_system_overlays(WUIVI_IApplicationView_2 *self, BOOL value);
 
-/* Windows.UI.ViewManagement.IApplicationView2.get_VisibleBounds() */
 HRESULT wuivi_application_view_2_get__visible_bounds(WUIVI_IApplicationView_2 *self, WF_Rect *value);
 
-/* Windows.UI.ViewManagement.IApplicationView2.SetDesiredBoundsMode(boundsMode) */
 HRESULT wuivi_application_view_2_set_desired_bounds_mode(WUIVI_IApplicationView_2 *self, WUIVI_ApplicationViewBoundsMode boundsMode, BOOL *out);
 
-/* Windows.UI.ViewManagement.IApplicationView2.get_DesiredBoundsMode() */
 HRESULT wuivi_application_view_2_get__desired_bounds_mode(WUIVI_IApplicationView_2 *self, WUIVI_ApplicationViewBoundsMode *value);
 
-/* Windows.UI.ViewManagement.IApplicationView3 */
-/* Windows.UI.ViewManagement.IApplicationView3.get_TitleBar() */
 HRESULT wuivi_application_view_3_get__title_bar(WUIVI_IApplicationView_3 *self, WUIVI_ApplicationViewTitleBar** value);
 
-/* Windows.UI.ViewManagement.IApplicationView3.get_FullScreenSystemOverlayMode() */
 HRESULT wuivi_application_view_3_get__full_screen_system_overlay_mode(WUIVI_IApplicationView_3 *self, WUIVI_FullScreenSystemOverlayMode *value);
 
-/* Windows.UI.ViewManagement.IApplicationView3.put_FullScreenSystemOverlayMode() */
 HRESULT wuivi_application_view_3_put__full_screen_system_overlay_mode(WUIVI_IApplicationView_3 *self, WUIVI_FullScreenSystemOverlayMode value);
 
-/* Windows.UI.ViewManagement.IApplicationView3.get_IsFullScreenMode() */
 HRESULT wuivi_application_view_3_get__is_full_screen_mode(WUIVI_IApplicationView_3 *self, BOOL *value);
 
-/* Windows.UI.ViewManagement.IApplicationView3.TryEnterFullScreenMode() */
 HRESULT wuivi_application_view_3_try_enter_full_screen_mode(WUIVI_IApplicationView_3 *self, BOOL *out);
 
-/* Windows.UI.ViewManagement.IApplicationView3.ExitFullScreenMode() */
 HRESULT wuivi_application_view_3_exit_full_screen_mode(WUIVI_IApplicationView_3 *self);
 
-/* Windows.UI.ViewManagement.IApplicationView3.ShowStandardSystemOverlays() */
 HRESULT wuivi_application_view_3_show_standard_system_overlays(WUIVI_IApplicationView_3 *self);
 
-/* Windows.UI.ViewManagement.IApplicationView3.TryResizeView() */
 HRESULT wuivi_application_view_3_try_resize_view(WUIVI_IApplicationView_3 *self, WF_Size value, BOOL *out);
 
-/* Windows.UI.ViewManagement.IApplicationView3.SetPreferredMinSize(minSize) */
 HRESULT wuivi_application_view_3_set_preferred_min_size(WUIVI_IApplicationView_3 *self, WF_Size minSize);
 
-/* Windows.UI.ViewManagement.IApplicationView4 */
-/* Windows.UI.ViewManagement.IApplicationView4.get_ViewMode() */
 HRESULT wuivi_application_view_4_get__view_mode(WUIVI_IApplicationView_4 *self, WUIVI_ApplicationViewMode *value);
 
-/* Windows.UI.ViewManagement.IApplicationView4.IsViewModeSupported(viewMode) */
 HRESULT wuivi_application_view_4_is_view_mode_supported(WUIVI_IApplicationView_4 *self, WUIVI_ApplicationViewMode viewMode, BOOL *out);
 
-/* Windows.UI.ViewManagement.IApplicationView4.TryEnterViewModeAsync(viewMode) */
 HRESULT wuivi_application_view_4_try_enter_view_mode_async(WUIVI_IApplicationView_4 *self, WUIVI_ApplicationViewMode viewMode, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.ViewManagement.IApplicationView4.TryEnterViewModeAsync(viewMode, viewModePreferences) */
 HRESULT wuivi_application_view_4_try_enter_view_mode_async_application_view_mode_p_p(WUIVI_IApplicationView_4 *self, WUIVI_ApplicationViewMode viewMode, WUIVI_ViewModePreferences* viewModePreferences, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.ViewManagement.IApplicationView4.TryConsolidateAsync() */
 HRESULT wuivi_application_view_4_try_consolidate_async(WUIVI_IApplicationView_4 *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.ViewManagement.IApplicationView7 */
-/* Windows.UI.ViewManagement.IApplicationView7.get_PersistedStateId() */
 HRESULT wuivi_application_view_7_get__persisted_state_id(WUIVI_IApplicationView_7 *self, cwinrt_hstring *value);
 
-/* Windows.UI.ViewManagement.IApplicationView7.put_PersistedStateId() */
 HRESULT wuivi_application_view_7_put__persisted_state_id(WUIVI_IApplicationView_7 *self, cwinrt_hstring value);
 
-/* Windows.UI.ViewManagement.IApplicationView9 */
-/* Windows.UI.ViewManagement.IApplicationView9.get_WindowingEnvironment() */
 HRESULT wuivi_application_view_9_get__windowing_environment(WUIVI_IApplicationView_9 *self, WUIWI_WindowingEnvironment** value);
 
-/* Windows.UI.ViewManagement.IApplicationView9.GetDisplayRegions() */
 HRESULT wuivi_application_view_9_get_display_regions(WUIVI_IApplicationView_9 *self, WFOCO_IVectorView_WUIWI_DisplayRegion** out);
 
-/* Windows.UI.ViewManagement.IApplicationViewWithContext */
-/* Windows.UI.ViewManagement.IApplicationViewWithContext.get_UIContext() */
 HRESULT wuivi_application_view_with_context_get__u_i_context(WUIVI_IApplicationViewWithContext *self, WUI_UIContext** value);
 
-/* Windows.UI.ViewManagement.IApplicationViewConsolidatedEventArgs */
-/* Windows.UI.ViewManagement.IApplicationViewConsolidatedEventArgs2 */
-/* Windows.UI.ViewManagement.IApplicationViewConsolidatedEventArgs2.get_IsAppInitiated() */
 HRESULT wuivi_application_view_consolidated_event_args_2_get__is_app_initiated(WUIVI_IApplicationViewConsolidatedEventArgs_2 *self, BOOL *value);
 
-/* Windows.UI.ViewManagement.IApplicationViewTitleBar */
-/* Windows.UI.ViewManagement.IApplicationViewTransferContext */
-/* Windows.UI.ViewManagement.IAccessibilitySettings */
-/* Windows.UI.ViewManagement.IViewModePreferences */
-/* Windows.UI.ViewManagement.IUIViewSettings */
-/* Windows.UI.ViewManagement.IUIViewSettingsPreferredInteractionMode */
-/* Windows.UI.ViewManagement.IUIViewSettingsPreferredInteractionMode.GetPreferredInteractionMode(supportedModes) */
 HRESULT wuivi_u_i_view_settings_preferred_interaction_mode_get_preferred_interaction_mode(WUIVI_IUIViewSettingsPreferredInteractionMode *self, WUIVI_UserInteractionMode *supportedModes, uint32_t supportedModes_len, WUIVI_UserInteractionMode *out);
 
-/* Windows.UI.ViewManagement.IUISettings */
-/* Windows.UI.ViewManagement.IUISettings2 */
-/* Windows.UI.ViewManagement.IUISettings2.get_TextScaleFactor() */
 HRESULT wuivi_u_i_settings_2_get__text_scale_factor(WUIVI_IUISettings_2 *self, double *value);
 
-/* Windows.UI.ViewManagement.IUISettings3 */
-/* Windows.UI.ViewManagement.IUISettings3.GetColorValue(desiredColor) */
 HRESULT wuivi_u_i_settings_3_get_color_value(WUIVI_IUISettings_3 *self, WUIVI_UIColorType desiredColor, WUI_Color *out);
 
-/* Windows.UI.ViewManagement.IUISettings4 */
-/* Windows.UI.ViewManagement.IUISettings4.get_AdvancedEffectsEnabled() */
 HRESULT wuivi_u_i_settings_4_get__advanced_effects_enabled(WUIVI_IUISettings_4 *self, BOOL *value);
 
-/* Windows.UI.ViewManagement.IUISettings5 */
-/* Windows.UI.ViewManagement.IUISettings5.get_AutoHideScrollBars() */
 HRESULT wuivi_u_i_settings_5_get__auto_hide_scroll_bars(WUIVI_IUISettings_5 *self, BOOL *value);
 
-/* Windows.UI.ViewManagement.IUISettings6 */
-/* Windows.UI.ViewManagement.IInputPaneVisibilityEventArgs */
-/* Windows.UI.ViewManagement.IInputPane */
-/* Windows.UI.ViewManagement.IInputPane2 */
-/* Windows.UI.ViewManagement.IInputPane2.TryShow() */
 HRESULT wuivi_input_pane_2_try_show(WUIVI_IInputPane_2 *self, BOOL *out);
 
-/* Windows.UI.ViewManagement.IInputPane2.TryHide() */
 HRESULT wuivi_input_pane_2_try_hide(WUIVI_IInputPane_2 *self, BOOL *out);
 
-/* Windows.UI.ViewManagement.IInputPaneControl */
-/* Windows.UI.ViewManagement.IInputPaneControl.get_Visible() */
 HRESULT wuivi_input_pane_control_get__visible(WUIVI_IInputPaneControl *self, BOOL *value);
 
-/* Windows.UI.ViewManagement.IInputPaneControl.put_Visible() */
 HRESULT wuivi_input_pane_control_put__visible(WUIVI_IInputPaneControl *self, BOOL value);
 
 #endif /* CWINRT_WINDOWS_UI_VIEWMANAGEMENT_H */

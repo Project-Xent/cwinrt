@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
@@ -26,7 +25,6 @@ typedef struct WSTST_IRandomAccessStreamReference WSTST_IRandomAccessStreamRefer
 typedef struct WAPDA_DataPackage WAPDA_DataPackage;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSECO_CortanaActionableInsights WSECO_CortanaActionableInsights;
 typedef struct WSECO_CortanaActionableInsightsOptions WSECO_CortanaActionableInsightsOptions;
 typedef struct WSECO_CortanaPermissionsManager WSECO_CortanaPermissionsManager;
@@ -39,7 +37,6 @@ typedef struct WSECO_ICortanaActionableInsightsOptions WSECO_ICortanaActionableI
 typedef struct WSECO_ICortanaPermissionsManager WSECO_ICortanaPermissionsManager;
 typedef struct WSECO_ICortanaSettings WSECO_ICortanaSettings;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
@@ -99,7 +96,6 @@ typedef enum WSECO_CortanaPermissionsChangeResult {
 } WSECO_CortanaPermissionsChangeResult;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -132,116 +128,70 @@ static const IID CWINRT_IID_WSECO_ICortanaPermissionsManager CWINRT_MAYBE_UNUSED
 static const IID CWINRT_IID_WSECO_ICortanaSettings CWINRT_MAYBE_UNUSED = { 0x54D571A7, 0x8062, 0x40F4, { 0xAB, 0xE7, 0xDE, 0xDF, 0xD6, 0x97, 0xB0, 0x19 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Services.Cortana.CortanaActionableInsights */
 HRESULT wseco_cortana_actionable_insights_new(WSECO_CortanaActionableInsights **out);
 
-/* Windows.Services.Cortana.CortanaActionableInsights */
-/* Windows.Services.Cortana.CortanaActionableInsights.get_User() */
 HRESULT wseco_cortana_actionable_insights_get__user(WSECO_CortanaActionableInsights *self, WSY_User** value);
 
-/* Windows.Services.Cortana.CortanaActionableInsights.IsAvailableAsync() */
 HRESULT wseco_cortana_actionable_insights_is_available_async(WSECO_CortanaActionableInsights *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Services.Cortana.CortanaActionableInsights.ShowInsightsForImageAsync(imageStream) */
 HRESULT wseco_cortana_actionable_insights_show_insights_for_image_async(WSECO_CortanaActionableInsights *self, WSTST_IRandomAccessStreamReference* imageStream, WF_IAsyncAction** out);
 
-/* Windows.Services.Cortana.CortanaActionableInsights.ShowInsightsForImageAsync(imageStream, options) */
 HRESULT wseco_cortana_actionable_insights_show_insights_for_image_async_p_p_p(WSECO_CortanaActionableInsights *self, WSTST_IRandomAccessStreamReference* imageStream, WSECO_CortanaActionableInsightsOptions* options, WF_IAsyncAction** out);
 
-/* Windows.Services.Cortana.CortanaActionableInsights.ShowInsightsForTextAsync(text) */
 HRESULT wseco_cortana_actionable_insights_show_insights_for_text_async(WSECO_CortanaActionableInsights *self, cwinrt_hstring text, WF_IAsyncAction** out);
 
-/* Windows.Services.Cortana.CortanaActionableInsights.ShowInsightsForTextAsync(text, options) */
 HRESULT wseco_cortana_actionable_insights_show_insights_for_text_async_str_p_p(WSECO_CortanaActionableInsights *self, cwinrt_hstring text, WSECO_CortanaActionableInsightsOptions* options, WF_IAsyncAction** out);
 
-/* Windows.Services.Cortana.CortanaActionableInsights.ShowInsightsAsync(datapackage) */
 HRESULT wseco_cortana_actionable_insights_show_insights_async(WSECO_CortanaActionableInsights *self, WAPDA_DataPackage* datapackage, WF_IAsyncAction** out);
 
-/* Windows.Services.Cortana.CortanaActionableInsights.ShowInsightsAsync(datapackage, options) */
 HRESULT wseco_cortana_actionable_insights_show_insights_async_p_p_p(WSECO_CortanaActionableInsights *self, WAPDA_DataPackage* datapackage, WSECO_CortanaActionableInsightsOptions* options, WF_IAsyncAction** out);
 
-/* Windows.Services.Cortana.CortanaActionableInsights.GetDefault() */
 HRESULT wseco_cortana_actionable_insights_get_default(WSECO_CortanaActionableInsights** out);
 
-/* Windows.Services.Cortana.CortanaActionableInsights.GetForUser(user) */
 HRESULT wseco_cortana_actionable_insights_get_for_user(WSY_User* user, WSECO_CortanaActionableInsights** out);
 
-/* activate Windows.Services.Cortana.CortanaActionableInsightsOptions */
 HRESULT wseco_cortana_actionable_insights_options_new(WSECO_CortanaActionableInsightsOptions **out);
 
-/* Windows.Services.Cortana.CortanaActionableInsightsOptions */
-/* Windows.Services.Cortana.CortanaActionableInsightsOptions.get_ContentSourceWebLink() */
 HRESULT wseco_cortana_actionable_insights_options_get__content_source_web_link(WSECO_CortanaActionableInsightsOptions *self, WF_Uri** value);
 
-/* Windows.Services.Cortana.CortanaActionableInsightsOptions.put_ContentSourceWebLink() */
 HRESULT wseco_cortana_actionable_insights_options_put__content_source_web_link(WSECO_CortanaActionableInsightsOptions *self, WF_Uri* value);
 
-/* Windows.Services.Cortana.CortanaActionableInsightsOptions.get_SurroundingText() */
 HRESULT wseco_cortana_actionable_insights_options_get__surrounding_text(WSECO_CortanaActionableInsightsOptions *self, cwinrt_hstring *value);
 
-/* Windows.Services.Cortana.CortanaActionableInsightsOptions.put_SurroundingText() */
 HRESULT wseco_cortana_actionable_insights_options_put__surrounding_text(WSECO_CortanaActionableInsightsOptions *self, cwinrt_hstring value);
 
-/* activate Windows.Services.Cortana.CortanaPermissionsManager */
 HRESULT wseco_cortana_permissions_manager_new(WSECO_CortanaPermissionsManager **out);
 
-/* Windows.Services.Cortana.CortanaPermissionsManager */
-/* Windows.Services.Cortana.CortanaPermissionsManager.IsSupported() */
 HRESULT wseco_cortana_permissions_manager_is_supported(WSECO_CortanaPermissionsManager *self, BOOL *out);
 
-/* Windows.Services.Cortana.CortanaPermissionsManager.ArePermissionsGrantedAsync(permissions) */
 HRESULT wseco_cortana_permissions_manager_are_permissions_granted_async(WSECO_CortanaPermissionsManager *self, WFOCO_IIterable_WSECO_CortanaPermission* permissions, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Services.Cortana.CortanaPermissionsManager.GrantPermissionsAsync(permissions) */
 HRESULT wseco_cortana_permissions_manager_grant_permissions_async(WSECO_CortanaPermissionsManager *self, WFOCO_IIterable_WSECO_CortanaPermission* permissions, WF_IAsyncOperation_WSECO_CortanaPermissionsChangeResult** out);
 
-/* Windows.Services.Cortana.CortanaPermissionsManager.RevokePermissionsAsync(permissions) */
 HRESULT wseco_cortana_permissions_manager_revoke_permissions_async(WSECO_CortanaPermissionsManager *self, WFOCO_IIterable_WSECO_CortanaPermission* permissions, WF_IAsyncOperation_WSECO_CortanaPermissionsChangeResult** out);
 
-/* Windows.Services.Cortana.CortanaPermissionsManager.GetDefault() */
 HRESULT wseco_cortana_permissions_manager_get_default(WSECO_CortanaPermissionsManager** out);
 
-/* activate Windows.Services.Cortana.CortanaSettings */
 HRESULT wseco_cortana_settings_new(WSECO_CortanaSettings **out);
 
-/* Windows.Services.Cortana.CortanaSettings */
-/* Windows.Services.Cortana.CortanaSettings.get_HasUserConsentToVoiceActivation() */
 HRESULT wseco_cortana_settings_get__has_user_consent_to_voice_activation(WSECO_CortanaSettings *self, BOOL *value);
 
-/* Windows.Services.Cortana.CortanaSettings.get_IsVoiceActivationEnabled() */
 HRESULT wseco_cortana_settings_get__is_voice_activation_enabled(WSECO_CortanaSettings *self, BOOL *value);
 
-/* Windows.Services.Cortana.CortanaSettings.put_IsVoiceActivationEnabled() */
 HRESULT wseco_cortana_settings_put__is_voice_activation_enabled(WSECO_CortanaSettings *self, BOOL value);
 
-/* Windows.Services.Cortana.CortanaSettings.IsSupported() */
 HRESULT wseco_cortana_settings_is_supported(BOOL *out);
 
-/* Windows.Services.Cortana.CortanaSettings.GetDefault() */
 HRESULT wseco_cortana_settings_get_default(WSECO_CortanaSettings** out);
 
-/* Windows.Services.Cortana.ICortanaActionableInsightsStatics */
-/* Windows.Services.Cortana.ICortanaActionableInsightsStatics.GetDefault() */
 HRESULT wseco_cortana_actionable_insights_statics_get_default(WSECO_ICortanaActionableInsightsStatics *self, WSECO_CortanaActionableInsights** out);
 
-/* Windows.Services.Cortana.ICortanaActionableInsightsStatics.GetForUser(user) */
 HRESULT wseco_cortana_actionable_insights_statics_get_for_user(WSECO_ICortanaActionableInsightsStatics *self, WSY_User* user, WSECO_CortanaActionableInsights** out);
 
-/* Windows.Services.Cortana.ICortanaPermissionsManagerStatics */
-/* Windows.Services.Cortana.ICortanaPermissionsManagerStatics.GetDefault() */
 HRESULT wseco_cortana_permissions_manager_statics_get_default(WSECO_ICortanaPermissionsManagerStatics *self, WSECO_CortanaPermissionsManager** out);
 
-/* Windows.Services.Cortana.ICortanaSettingsStatics */
-/* Windows.Services.Cortana.ICortanaSettingsStatics.IsSupported() */
 HRESULT wseco_cortana_settings_statics_is_supported(WSECO_ICortanaSettingsStatics *self, BOOL *out);
 
-/* Windows.Services.Cortana.ICortanaSettingsStatics.GetDefault() */
 HRESULT wseco_cortana_settings_statics_get_default(WSECO_ICortanaSettingsStatics *self, WSECO_CortanaSettings** out);
 
-/* Windows.Services.Cortana.ICortanaActionableInsights */
-/* Windows.Services.Cortana.ICortanaActionableInsightsOptions */
-/* Windows.Services.Cortana.ICortanaPermissionsManager */
-/* Windows.Services.Cortana.ICortanaSettings */
 #endif /* CWINRT_WINDOWS_SERVICES_CORTANA_H */

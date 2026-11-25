@@ -13,13 +13,11 @@
 #include <cwinrt/Windows.Media.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStreamReference
 #define CWINRT_FWD_WSTST_IRandomAccessStreamReference
 typedef struct WSTST_IRandomAccessStreamReference WSTST_IRandomAccessStreamReference;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMECO_CurrentSessionChangedEventArgs WMECO_CurrentSessionChangedEventArgs;
 typedef struct WMECO_GlobalSystemMediaTransportControlsSession WMECO_GlobalSystemMediaTransportControlsSession;
 typedef struct WMECO_GlobalSystemMediaTransportControlsSessionManager WMECO_GlobalSystemMediaTransportControlsSessionManager;
@@ -44,7 +42,6 @@ typedef struct WMECO_IPlaybackInfoChangedEventArgs WMECO_IPlaybackInfoChangedEve
 typedef struct WMECO_ISessionsChangedEventArgs WMECO_ISessionsChangedEventArgs;
 typedef struct WMECO_ITimelinePropertiesChangedEventArgs WMECO_ITimelinePropertiesChangedEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WMECO_GlobalSystemMediaTransportControlsSessionMediaProperties
 #define CWINRT_FWD_WF_IAsyncOperation_WMECO_GlobalSystemMediaTransportControlsSessionMediaProperties
 typedef struct WF_IAsyncOperation_WMECO_GlobalSystemMediaTransportControlsSessionMediaProperties WF_IAsyncOperation_WMECO_GlobalSystemMediaTransportControlsSessionMediaProperties;
@@ -129,7 +126,6 @@ typedef enum WMECO_GlobalSystemMediaTransportControlsSessionPlaybackStatus {
 } WMECO_GlobalSystemMediaTransportControlsSessionPlaybackStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -182,70 +178,46 @@ static const IID CWINRT_IID_WMECO_ISessionsChangedEventArgs CWINRT_MAYBE_UNUSED 
 static const IID CWINRT_IID_WMECO_ITimelinePropertiesChangedEventArgs CWINRT_MAYBE_UNUSED = { 0x29033A2F, 0xC923, 0x5A77, { 0xBC, 0xAF, 0x05, 0x5F, 0xF4, 0x15, 0xAD, 0x32 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Media.Control.GlobalSystemMediaTransportControlsSession */
 HRESULT wmeco_global_system_media_transport_controls_session_new(WMECO_GlobalSystemMediaTransportControlsSession **out);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSession */
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSession.get_SourceAppUserModelId() */
 HRESULT wmeco_global_system_media_transport_controls_session_get__source_app_user_model_id(WMECO_GlobalSystemMediaTransportControlsSession *self, cwinrt_hstring *value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSession.TryGetMediaPropertiesAsync() */
 HRESULT wmeco_global_system_media_transport_controls_session_try_get_media_properties_async(WMECO_GlobalSystemMediaTransportControlsSession *self, WF_IAsyncOperation_WMECO_GlobalSystemMediaTransportControlsSessionMediaProperties** out);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSession.GetTimelineProperties() */
 HRESULT wmeco_global_system_media_transport_controls_session_get_timeline_properties(WMECO_GlobalSystemMediaTransportControlsSession *self, WMECO_GlobalSystemMediaTransportControlsSessionTimelineProperties** out);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSession.GetPlaybackInfo() */
 HRESULT wmeco_global_system_media_transport_controls_session_get_playback_info(WMECO_GlobalSystemMediaTransportControlsSession *self, WMECO_GlobalSystemMediaTransportControlsSessionPlaybackInfo** out);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSession.TryPlayAsync() */
 HRESULT wmeco_global_system_media_transport_controls_session_try_play_async(WMECO_GlobalSystemMediaTransportControlsSession *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSession.TryPauseAsync() */
 HRESULT wmeco_global_system_media_transport_controls_session_try_pause_async(WMECO_GlobalSystemMediaTransportControlsSession *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSession.TryStopAsync() */
 HRESULT wmeco_global_system_media_transport_controls_session_try_stop_async(WMECO_GlobalSystemMediaTransportControlsSession *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSession.TryRecordAsync() */
 HRESULT wmeco_global_system_media_transport_controls_session_try_record_async(WMECO_GlobalSystemMediaTransportControlsSession *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSession.TryFastForwardAsync() */
 HRESULT wmeco_global_system_media_transport_controls_session_try_fast_forward_async(WMECO_GlobalSystemMediaTransportControlsSession *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSession.TryRewindAsync() */
 HRESULT wmeco_global_system_media_transport_controls_session_try_rewind_async(WMECO_GlobalSystemMediaTransportControlsSession *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSession.TrySkipNextAsync() */
 HRESULT wmeco_global_system_media_transport_controls_session_try_skip_next_async(WMECO_GlobalSystemMediaTransportControlsSession *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSession.TrySkipPreviousAsync() */
 HRESULT wmeco_global_system_media_transport_controls_session_try_skip_previous_async(WMECO_GlobalSystemMediaTransportControlsSession *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSession.TryChangeChannelUpAsync() */
 HRESULT wmeco_global_system_media_transport_controls_session_try_change_channel_up_async(WMECO_GlobalSystemMediaTransportControlsSession *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSession.TryChangeChannelDownAsync() */
 HRESULT wmeco_global_system_media_transport_controls_session_try_change_channel_down_async(WMECO_GlobalSystemMediaTransportControlsSession *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSession.TryTogglePlayPauseAsync() */
 HRESULT wmeco_global_system_media_transport_controls_session_try_toggle_play_pause_async(WMECO_GlobalSystemMediaTransportControlsSession *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSession.TryChangeAutoRepeatModeAsync(requestedAutoRepeatMode) */
 HRESULT wmeco_global_system_media_transport_controls_session_try_change_auto_repeat_mode_async(WMECO_GlobalSystemMediaTransportControlsSession *self, WME_MediaPlaybackAutoRepeatMode requestedAutoRepeatMode, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSession.TryChangePlaybackRateAsync(requestedPlaybackRate) */
 HRESULT wmeco_global_system_media_transport_controls_session_try_change_playback_rate_async(WMECO_GlobalSystemMediaTransportControlsSession *self, double requestedPlaybackRate, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSession.TryChangeShuffleActiveAsync(requestedShuffleState) */
 HRESULT wmeco_global_system_media_transport_controls_session_try_change_shuffle_active_async(WMECO_GlobalSystemMediaTransportControlsSession *self, BOOL requestedShuffleState, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSession.TryChangePlaybackPositionAsync(requestedPlaybackPosition) */
 HRESULT wmeco_global_system_media_transport_controls_session_try_change_playback_position_async(WMECO_GlobalSystemMediaTransportControlsSession *self, int64_t requestedPlaybackPosition, WF_IAsyncOperation_Bool** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeco_global_system_media_transport_controls_session_on_timeline_properties_changed(WMECO_GlobalSystemMediaTransportControlsSession *self, cwinrt_event_fn fn, void *ctx);
@@ -257,20 +229,14 @@ void wmeco_global_system_media_transport_controls_session_off_playback_info_chan
 cwinrt_token wmeco_global_system_media_transport_controls_session_on_media_properties_changed(WMECO_GlobalSystemMediaTransportControlsSession *self, cwinrt_event_fn fn, void *ctx);
 void wmeco_global_system_media_transport_controls_session_off_media_properties_changed(WMECO_GlobalSystemMediaTransportControlsSession *self, cwinrt_token token);
 
-/* activate Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager */
 HRESULT wmeco_global_system_media_transport_controls_session_manager_new(WMECO_GlobalSystemMediaTransportControlsSessionManager **out);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager */
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager.GetCurrentSession() */
 HRESULT wmeco_global_system_media_transport_controls_session_manager_get_current_session(WMECO_GlobalSystemMediaTransportControlsSessionManager *self, WMECO_GlobalSystemMediaTransportControlsSession** out);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager.GetSessions() */
 HRESULT wmeco_global_system_media_transport_controls_session_manager_get_sessions(WMECO_GlobalSystemMediaTransportControlsSessionManager *self, WFOCO_IVectorView_WMECO_GlobalSystemMediaTransportControlsSession** out);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager.RequestAsync() */
 HRESULT wmeco_global_system_media_transport_controls_session_manager_request_async(WF_IAsyncOperation_WMECO_GlobalSystemMediaTransportControlsSessionManager** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeco_global_system_media_transport_controls_session_manager_on_current_session_changed(WMECO_GlobalSystemMediaTransportControlsSessionManager *self, cwinrt_event_fn fn, void *ctx);
@@ -279,141 +245,88 @@ void wmeco_global_system_media_transport_controls_session_manager_off_current_se
 cwinrt_token wmeco_global_system_media_transport_controls_session_manager_on_sessions_changed(WMECO_GlobalSystemMediaTransportControlsSessionManager *self, cwinrt_event_fn fn, void *ctx);
 void wmeco_global_system_media_transport_controls_session_manager_off_sessions_changed(WMECO_GlobalSystemMediaTransportControlsSessionManager *self, cwinrt_token token);
 
-/* activate Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties */
 HRESULT wmeco_global_system_media_transport_controls_session_media_properties_new(WMECO_GlobalSystemMediaTransportControlsSessionMediaProperties **out);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties */
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties.get_Title() */
 HRESULT wmeco_global_system_media_transport_controls_session_media_properties_get__title(WMECO_GlobalSystemMediaTransportControlsSessionMediaProperties *self, cwinrt_hstring *value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties.get_Subtitle() */
 HRESULT wmeco_global_system_media_transport_controls_session_media_properties_get__subtitle(WMECO_GlobalSystemMediaTransportControlsSessionMediaProperties *self, cwinrt_hstring *value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties.get_AlbumArtist() */
 HRESULT wmeco_global_system_media_transport_controls_session_media_properties_get__album_artist(WMECO_GlobalSystemMediaTransportControlsSessionMediaProperties *self, cwinrt_hstring *value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties.get_Artist() */
 HRESULT wmeco_global_system_media_transport_controls_session_media_properties_get__artist(WMECO_GlobalSystemMediaTransportControlsSessionMediaProperties *self, cwinrt_hstring *value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties.get_AlbumTitle() */
 HRESULT wmeco_global_system_media_transport_controls_session_media_properties_get__album_title(WMECO_GlobalSystemMediaTransportControlsSessionMediaProperties *self, cwinrt_hstring *value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties.get_TrackNumber() */
 HRESULT wmeco_global_system_media_transport_controls_session_media_properties_get__track_number(WMECO_GlobalSystemMediaTransportControlsSessionMediaProperties *self, int32_t *value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties.get_Genres() */
 HRESULT wmeco_global_system_media_transport_controls_session_media_properties_get__genres(WMECO_GlobalSystemMediaTransportControlsSessionMediaProperties *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties.get_AlbumTrackCount() */
 HRESULT wmeco_global_system_media_transport_controls_session_media_properties_get__album_track_count(WMECO_GlobalSystemMediaTransportControlsSessionMediaProperties *self, int32_t *value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties.get_PlaybackType() */
 HRESULT wmeco_global_system_media_transport_controls_session_media_properties_get__playback_type(WMECO_GlobalSystemMediaTransportControlsSessionMediaProperties *self, WME_MediaPlaybackType** value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties.get_Thumbnail() */
 HRESULT wmeco_global_system_media_transport_controls_session_media_properties_get__thumbnail(WMECO_GlobalSystemMediaTransportControlsSessionMediaProperties *self, WSTST_IRandomAccessStreamReference** value);
 
-/* activate Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls */
 HRESULT wmeco_global_system_media_transport_controls_session_playback_control_new(WMECO_GlobalSystemMediaTransportControlsSessionPlaybackControls **out);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls */
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls.get_IsPlayEnabled() */
 HRESULT wmeco_global_system_media_transport_controls_session_playback_control_get__is_play_enabled(WMECO_GlobalSystemMediaTransportControlsSessionPlaybackControls *self, BOOL *value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls.get_IsPauseEnabled() */
 HRESULT wmeco_global_system_media_transport_controls_session_playback_control_get__is_pause_enabled(WMECO_GlobalSystemMediaTransportControlsSessionPlaybackControls *self, BOOL *value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls.get_IsStopEnabled() */
 HRESULT wmeco_global_system_media_transport_controls_session_playback_control_get__is_stop_enabled(WMECO_GlobalSystemMediaTransportControlsSessionPlaybackControls *self, BOOL *value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls.get_IsRecordEnabled() */
 HRESULT wmeco_global_system_media_transport_controls_session_playback_control_get__is_record_enabled(WMECO_GlobalSystemMediaTransportControlsSessionPlaybackControls *self, BOOL *value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls.get_IsFastForwardEnabled() */
 HRESULT wmeco_global_system_media_transport_controls_session_playback_control_get__is_fast_forward_enabled(WMECO_GlobalSystemMediaTransportControlsSessionPlaybackControls *self, BOOL *value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls.get_IsRewindEnabled() */
 HRESULT wmeco_global_system_media_transport_controls_session_playback_control_get__is_rewind_enabled(WMECO_GlobalSystemMediaTransportControlsSessionPlaybackControls *self, BOOL *value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls.get_IsNextEnabled() */
 HRESULT wmeco_global_system_media_transport_controls_session_playback_control_get__is_next_enabled(WMECO_GlobalSystemMediaTransportControlsSessionPlaybackControls *self, BOOL *value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls.get_IsPreviousEnabled() */
 HRESULT wmeco_global_system_media_transport_controls_session_playback_control_get__is_previous_enabled(WMECO_GlobalSystemMediaTransportControlsSessionPlaybackControls *self, BOOL *value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls.get_IsChannelUpEnabled() */
 HRESULT wmeco_global_system_media_transport_controls_session_playback_control_get__is_channel_up_enabled(WMECO_GlobalSystemMediaTransportControlsSessionPlaybackControls *self, BOOL *value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls.get_IsChannelDownEnabled() */
 HRESULT wmeco_global_system_media_transport_controls_session_playback_control_get__is_channel_down_enabled(WMECO_GlobalSystemMediaTransportControlsSessionPlaybackControls *self, BOOL *value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls.get_IsPlayPauseToggleEnabled() */
 HRESULT wmeco_global_system_media_transport_controls_session_playback_control_get__is_play_pause_toggle_enabled(WMECO_GlobalSystemMediaTransportControlsSessionPlaybackControls *self, BOOL *value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls.get_IsShuffleEnabled() */
 HRESULT wmeco_global_system_media_transport_controls_session_playback_control_get__is_shuffle_enabled(WMECO_GlobalSystemMediaTransportControlsSessionPlaybackControls *self, BOOL *value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls.get_IsRepeatEnabled() */
 HRESULT wmeco_global_system_media_transport_controls_session_playback_control_get__is_repeat_enabled(WMECO_GlobalSystemMediaTransportControlsSessionPlaybackControls *self, BOOL *value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls.get_IsPlaybackRateEnabled() */
 HRESULT wmeco_global_system_media_transport_controls_session_playback_control_get__is_playback_rate_enabled(WMECO_GlobalSystemMediaTransportControlsSessionPlaybackControls *self, BOOL *value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls.get_IsPlaybackPositionEnabled() */
 HRESULT wmeco_global_system_media_transport_controls_session_playback_control_get__is_playback_position_enabled(WMECO_GlobalSystemMediaTransportControlsSessionPlaybackControls *self, BOOL *value);
 
-/* activate Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackInfo */
 HRESULT wmeco_global_system_media_transport_controls_session_playback_info_new(WMECO_GlobalSystemMediaTransportControlsSessionPlaybackInfo **out);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackInfo */
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackInfo.get_Controls() */
 HRESULT wmeco_global_system_media_transport_controls_session_playback_info_get__controls(WMECO_GlobalSystemMediaTransportControlsSessionPlaybackInfo *self, WMECO_GlobalSystemMediaTransportControlsSessionPlaybackControls** value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackInfo.get_PlaybackStatus() */
 HRESULT wmeco_global_system_media_transport_controls_session_playback_info_get__playback_status(WMECO_GlobalSystemMediaTransportControlsSessionPlaybackInfo *self, WMECO_GlobalSystemMediaTransportControlsSessionPlaybackStatus *value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackInfo.get_PlaybackType() */
 HRESULT wmeco_global_system_media_transport_controls_session_playback_info_get__playback_type(WMECO_GlobalSystemMediaTransportControlsSessionPlaybackInfo *self, WME_MediaPlaybackType** value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackInfo.get_AutoRepeatMode() */
 HRESULT wmeco_global_system_media_transport_controls_session_playback_info_get__auto_repeat_mode(WMECO_GlobalSystemMediaTransportControlsSessionPlaybackInfo *self, WME_MediaPlaybackAutoRepeatMode** value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackInfo.get_PlaybackRate() */
 HRESULT wmeco_global_system_media_transport_controls_session_playback_info_get__playback_rate(WMECO_GlobalSystemMediaTransportControlsSessionPlaybackInfo *self, double** value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackInfo.get_IsShuffleActive() */
 HRESULT wmeco_global_system_media_transport_controls_session_playback_info_get__is_shuffle_active(WMECO_GlobalSystemMediaTransportControlsSessionPlaybackInfo *self, BOOL** value);
 
-/* activate Windows.Media.Control.GlobalSystemMediaTransportControlsSessionTimelineProperties */
 HRESULT wmeco_global_system_media_transport_controls_session_timeline_propert_new(WMECO_GlobalSystemMediaTransportControlsSessionTimelineProperties **out);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionTimelineProperties */
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionTimelineProperties.get_StartTime() */
 HRESULT wmeco_global_system_media_transport_controls_session_timeline_propert_get__start_time(WMECO_GlobalSystemMediaTransportControlsSessionTimelineProperties *self, WF_TimeSpan *value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionTimelineProperties.get_EndTime() */
 HRESULT wmeco_global_system_media_transport_controls_session_timeline_propert_get__end_time(WMECO_GlobalSystemMediaTransportControlsSessionTimelineProperties *self, WF_TimeSpan *value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionTimelineProperties.get_MinSeekTime() */
 HRESULT wmeco_global_system_media_transport_controls_session_timeline_propert_get__min_seek_time(WMECO_GlobalSystemMediaTransportControlsSessionTimelineProperties *self, WF_TimeSpan *value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionTimelineProperties.get_MaxSeekTime() */
 HRESULT wmeco_global_system_media_transport_controls_session_timeline_propert_get__max_seek_time(WMECO_GlobalSystemMediaTransportControlsSessionTimelineProperties *self, WF_TimeSpan *value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionTimelineProperties.get_Position() */
 HRESULT wmeco_global_system_media_transport_controls_session_timeline_propert_get__position(WMECO_GlobalSystemMediaTransportControlsSessionTimelineProperties *self, WF_TimeSpan *value);
 
-/* Windows.Media.Control.GlobalSystemMediaTransportControlsSessionTimelineProperties.get_LastUpdatedTime() */
 HRESULT wmeco_global_system_media_transport_controls_session_timeline_propert_get__last_updated_time(WMECO_GlobalSystemMediaTransportControlsSessionTimelineProperties *self, WF_DateTime *value);
 
-/* Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManagerStatics */
-/* Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManagerStatics.RequestAsync() */
 HRESULT wmeco_global_system_media_transport_controls_session_manager_statics_request_async(WMECO_IGlobalSystemMediaTransportControlsSessionManagerStatics *self, WF_IAsyncOperation_WMECO_GlobalSystemMediaTransportControlsSessionManager** out);
 
-/* Windows.Media.Control.IGlobalSystemMediaTransportControlsSession */
-/* Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManager */
-/* Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties */
-/* Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls */
-/* Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackInfo */
-/* Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionTimelineProperties */
 #endif /* CWINRT_WINDOWS_MEDIA_CONTROL_H */

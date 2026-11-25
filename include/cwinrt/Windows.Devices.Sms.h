@@ -12,13 +12,11 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDESM_DeleteSmsMessageOperation WDESM_DeleteSmsMessageOperation;
 typedef struct WDESM_DeleteSmsMessagesOperation WDESM_DeleteSmsMessagesOperation;
 typedef struct WDESM_GetSmsDeviceOperation WDESM_GetSmsDeviceOperation;
@@ -74,7 +72,6 @@ typedef struct WDESM_ISmsWapMessage WDESM_ISmsWapMessage;
 typedef struct WDESM_ISmsMessage WDESM_ISmsMessage;
 typedef struct WDESM_ISmsMessageBase WDESM_ISmsMessageBase;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_AsyncActionCompletedHandler
 #define CWINRT_FWD_WF_AsyncActionCompletedHandler
 typedef struct WF_AsyncActionCompletedHandler WF_AsyncActionCompletedHandler;
@@ -339,7 +336,6 @@ struct WDESM_SmsEncodedLength {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -464,422 +460,270 @@ static const IID CWINRT_IID_WDESM_ISmsMessage CWINRT_MAYBE_UNUSED = { 0xED3C5E28
 static const IID CWINRT_IID_WDESM_ISmsMessageBase CWINRT_MAYBE_UNUSED = { 0x2CF0FE30, 0xFE50, 0x4FC6, { 0xAA, 0x88, 0x4C, 0xCF, 0xE2, 0x7A, 0x29, 0xEA } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Devices.Sms.DeleteSmsMessageOperation */
 HRESULT wdesm_delete_sms_message_operation_new(WDESM_DeleteSmsMessageOperation **out);
 
-/* Windows.Devices.Sms.DeleteSmsMessageOperation */
-/* Windows.Devices.Sms.DeleteSmsMessageOperation.put_Completed(handler) */
 HRESULT wdesm_delete_sms_message_operation_put__completed(WDESM_DeleteSmsMessageOperation *self, WF_AsyncActionCompletedHandler* handler);
 
-/* Windows.Devices.Sms.DeleteSmsMessageOperation.get_Completed() */
 HRESULT wdesm_delete_sms_message_operation_get__completed(WDESM_DeleteSmsMessageOperation *self, WF_AsyncActionCompletedHandler** value);
 
-/* Windows.Devices.Sms.DeleteSmsMessageOperation.GetResults() */
 HRESULT wdesm_delete_sms_message_operation_get_results(WDESM_DeleteSmsMessageOperation *self);
 
-/* Windows.Devices.Sms.DeleteSmsMessageOperation.get_Id() */
 HRESULT wdesm_delete_sms_message_operation_get__id(WDESM_DeleteSmsMessageOperation *self, uint32_t *value);
 
-/* Windows.Devices.Sms.DeleteSmsMessageOperation.get_Status() */
 HRESULT wdesm_delete_sms_message_operation_get__status(WDESM_DeleteSmsMessageOperation *self, WF_AsyncStatus *value);
 
-/* Windows.Devices.Sms.DeleteSmsMessageOperation.get_ErrorCode() */
 HRESULT wdesm_delete_sms_message_operation_get__error_code(WDESM_DeleteSmsMessageOperation *self, HRESULT *value);
 
-/* Windows.Devices.Sms.DeleteSmsMessageOperation.Cancel() */
 HRESULT wdesm_delete_sms_message_operation_cancel(WDESM_DeleteSmsMessageOperation *self);
 
-/* Windows.Devices.Sms.DeleteSmsMessageOperation.Close() */
 HRESULT wdesm_delete_sms_message_operation_close(WDESM_DeleteSmsMessageOperation *self);
 
-/* activate Windows.Devices.Sms.DeleteSmsMessagesOperation */
 HRESULT wdesm_delete_sms_messages_operation_new(WDESM_DeleteSmsMessagesOperation **out);
 
-/* Windows.Devices.Sms.DeleteSmsMessagesOperation */
-/* Windows.Devices.Sms.DeleteSmsMessagesOperation.put_Completed(handler) */
 HRESULT wdesm_delete_sms_messages_operation_put__completed(WDESM_DeleteSmsMessagesOperation *self, WF_AsyncActionCompletedHandler* handler);
 
-/* Windows.Devices.Sms.DeleteSmsMessagesOperation.get_Completed() */
 HRESULT wdesm_delete_sms_messages_operation_get__completed(WDESM_DeleteSmsMessagesOperation *self, WF_AsyncActionCompletedHandler** value);
 
-/* Windows.Devices.Sms.DeleteSmsMessagesOperation.GetResults() */
 HRESULT wdesm_delete_sms_messages_operation_get_results(WDESM_DeleteSmsMessagesOperation *self);
 
-/* Windows.Devices.Sms.DeleteSmsMessagesOperation.get_Id() */
 HRESULT wdesm_delete_sms_messages_operation_get__id(WDESM_DeleteSmsMessagesOperation *self, uint32_t *value);
 
-/* Windows.Devices.Sms.DeleteSmsMessagesOperation.get_Status() */
 HRESULT wdesm_delete_sms_messages_operation_get__status(WDESM_DeleteSmsMessagesOperation *self, WF_AsyncStatus *value);
 
-/* Windows.Devices.Sms.DeleteSmsMessagesOperation.get_ErrorCode() */
 HRESULT wdesm_delete_sms_messages_operation_get__error_code(WDESM_DeleteSmsMessagesOperation *self, HRESULT *value);
 
-/* Windows.Devices.Sms.DeleteSmsMessagesOperation.Cancel() */
 HRESULT wdesm_delete_sms_messages_operation_cancel(WDESM_DeleteSmsMessagesOperation *self);
 
-/* Windows.Devices.Sms.DeleteSmsMessagesOperation.Close() */
 HRESULT wdesm_delete_sms_messages_operation_close(WDESM_DeleteSmsMessagesOperation *self);
 
-/* activate Windows.Devices.Sms.GetSmsDeviceOperation */
 HRESULT wdesm_get_sms_device_operation_new(WDESM_GetSmsDeviceOperation **out);
 
-/* Windows.Devices.Sms.GetSmsDeviceOperation */
-/* Windows.Devices.Sms.GetSmsDeviceOperation.put_Completed(handler) */
 HRESULT wdesm_get_sms_device_operation_put__completed(WDESM_GetSmsDeviceOperation *self, WF_AsyncOperationCompletedHandler_WDESM_SmsDevice* handler);
 
-/* Windows.Devices.Sms.GetSmsDeviceOperation.get_Completed() */
 HRESULT wdesm_get_sms_device_operation_get__completed(WDESM_GetSmsDeviceOperation *self, WF_AsyncOperationCompletedHandler_WDESM_SmsDevice** value);
 
-/* Windows.Devices.Sms.GetSmsDeviceOperation.GetResults() */
 HRESULT wdesm_get_sms_device_operation_get_results(WDESM_GetSmsDeviceOperation *self, WDESM_SmsDevice** out);
 
-/* Windows.Devices.Sms.GetSmsDeviceOperation.get_Id() */
 HRESULT wdesm_get_sms_device_operation_get__id(WDESM_GetSmsDeviceOperation *self, uint32_t *value);
 
-/* Windows.Devices.Sms.GetSmsDeviceOperation.get_Status() */
 HRESULT wdesm_get_sms_device_operation_get__status(WDESM_GetSmsDeviceOperation *self, WF_AsyncStatus *value);
 
-/* Windows.Devices.Sms.GetSmsDeviceOperation.get_ErrorCode() */
 HRESULT wdesm_get_sms_device_operation_get__error_code(WDESM_GetSmsDeviceOperation *self, HRESULT *value);
 
-/* Windows.Devices.Sms.GetSmsDeviceOperation.Cancel() */
 HRESULT wdesm_get_sms_device_operation_cancel(WDESM_GetSmsDeviceOperation *self);
 
-/* Windows.Devices.Sms.GetSmsDeviceOperation.Close() */
 HRESULT wdesm_get_sms_device_operation_close(WDESM_GetSmsDeviceOperation *self);
 
-/* activate Windows.Devices.Sms.GetSmsMessageOperation */
 HRESULT wdesm_get_sms_message_operation_new(WDESM_GetSmsMessageOperation **out);
 
-/* Windows.Devices.Sms.GetSmsMessageOperation */
-/* Windows.Devices.Sms.GetSmsMessageOperation.put_Completed(handler) */
 HRESULT wdesm_get_sms_message_operation_put__completed(WDESM_GetSmsMessageOperation *self, WF_AsyncOperationCompletedHandler_WDESM_ISmsMessage* handler);
 
-/* Windows.Devices.Sms.GetSmsMessageOperation.get_Completed() */
 HRESULT wdesm_get_sms_message_operation_get__completed(WDESM_GetSmsMessageOperation *self, WF_AsyncOperationCompletedHandler_WDESM_ISmsMessage** value);
 
-/* Windows.Devices.Sms.GetSmsMessageOperation.GetResults() */
 HRESULT wdesm_get_sms_message_operation_get_results(WDESM_GetSmsMessageOperation *self, WDESM_ISmsMessage** out);
 
-/* Windows.Devices.Sms.GetSmsMessageOperation.get_Id() */
 HRESULT wdesm_get_sms_message_operation_get__id(WDESM_GetSmsMessageOperation *self, uint32_t *value);
 
-/* Windows.Devices.Sms.GetSmsMessageOperation.get_Status() */
 HRESULT wdesm_get_sms_message_operation_get__status(WDESM_GetSmsMessageOperation *self, WF_AsyncStatus *value);
 
-/* Windows.Devices.Sms.GetSmsMessageOperation.get_ErrorCode() */
 HRESULT wdesm_get_sms_message_operation_get__error_code(WDESM_GetSmsMessageOperation *self, HRESULT *value);
 
-/* Windows.Devices.Sms.GetSmsMessageOperation.Cancel() */
 HRESULT wdesm_get_sms_message_operation_cancel(WDESM_GetSmsMessageOperation *self);
 
-/* Windows.Devices.Sms.GetSmsMessageOperation.Close() */
 HRESULT wdesm_get_sms_message_operation_close(WDESM_GetSmsMessageOperation *self);
 
-/* activate Windows.Devices.Sms.GetSmsMessagesOperation */
 HRESULT wdesm_get_sms_messages_operation_new(WDESM_GetSmsMessagesOperation **out);
 
-/* Windows.Devices.Sms.GetSmsMessagesOperation */
-/* Windows.Devices.Sms.GetSmsMessagesOperation.put_Progress(handler) */
 HRESULT wdesm_get_sms_messages_operation_put__progress(WDESM_GetSmsMessagesOperation *self, WF_AsyncOperationProgressHandler_WFOCO_IVectorView_WDESM_ISmsMessage_int32_t* handler);
 
-/* Windows.Devices.Sms.GetSmsMessagesOperation.get_Progress() */
 HRESULT wdesm_get_sms_messages_operation_get__progress(WDESM_GetSmsMessagesOperation *self, WF_AsyncOperationProgressHandler_WFOCO_IVectorView_WDESM_ISmsMessage_int32_t** value);
 
-/* Windows.Devices.Sms.GetSmsMessagesOperation.put_Completed(handler) */
 HRESULT wdesm_get_sms_messages_operation_put__completed(WDESM_GetSmsMessagesOperation *self, WF_AsyncOperationWithProgressCompletedHandler_WFOCO_IVectorView_WDESM_ISmsMessage_int32_t* handler);
 
-/* Windows.Devices.Sms.GetSmsMessagesOperation.get_Completed() */
 HRESULT wdesm_get_sms_messages_operation_get__completed(WDESM_GetSmsMessagesOperation *self, WF_AsyncOperationWithProgressCompletedHandler_WFOCO_IVectorView_WDESM_ISmsMessage_int32_t** value);
 
-/* Windows.Devices.Sms.GetSmsMessagesOperation.GetResults() */
 HRESULT wdesm_get_sms_messages_operation_get_results(WDESM_GetSmsMessagesOperation *self, WFOCO_IVectorView_WDESM_ISmsMessage** out);
 
-/* Windows.Devices.Sms.GetSmsMessagesOperation.get_Id() */
 HRESULT wdesm_get_sms_messages_operation_get__id(WDESM_GetSmsMessagesOperation *self, uint32_t *value);
 
-/* Windows.Devices.Sms.GetSmsMessagesOperation.get_Status() */
 HRESULT wdesm_get_sms_messages_operation_get__status(WDESM_GetSmsMessagesOperation *self, WF_AsyncStatus *value);
 
-/* Windows.Devices.Sms.GetSmsMessagesOperation.get_ErrorCode() */
 HRESULT wdesm_get_sms_messages_operation_get__error_code(WDESM_GetSmsMessagesOperation *self, HRESULT *value);
 
-/* Windows.Devices.Sms.GetSmsMessagesOperation.Cancel() */
 HRESULT wdesm_get_sms_messages_operation_cancel(WDESM_GetSmsMessagesOperation *self);
 
-/* Windows.Devices.Sms.GetSmsMessagesOperation.Close() */
 HRESULT wdesm_get_sms_messages_operation_close(WDESM_GetSmsMessagesOperation *self);
 
-/* Windows.Devices.Sms.ISmsDevice2Statics */
-/* Windows.Devices.Sms.ISmsDevice2Statics.GetDeviceSelector() */
 HRESULT wdesm_sms_device2_statics_get_device_selector(WDESM_ISmsDevice2Statics *self, cwinrt_hstring *out);
 
-/* Windows.Devices.Sms.ISmsDevice2Statics.FromId(deviceId) */
 HRESULT wdesm_sms_device2_statics_from_id(WDESM_ISmsDevice2Statics *self, cwinrt_hstring deviceId, WDESM_SmsDevice_2** out);
 
-/* Windows.Devices.Sms.ISmsDevice2Statics.GetDefault() */
 HRESULT wdesm_sms_device2_statics_get_default(WDESM_ISmsDevice2Statics *self, WDESM_SmsDevice_2** out);
 
-/* Windows.Devices.Sms.ISmsDevice2Statics.FromParentId(parentDeviceId) */
 HRESULT wdesm_sms_device2_statics_from_parent_id(WDESM_ISmsDevice2Statics *self, cwinrt_hstring parentDeviceId, WDESM_SmsDevice_2** out);
 
-/* Windows.Devices.Sms.ISmsDeviceStatics */
-/* Windows.Devices.Sms.ISmsDeviceStatics.GetDeviceSelector() */
 HRESULT wdesm_sms_device_statics_get_device_selector(WDESM_ISmsDeviceStatics *self, cwinrt_hstring *out);
 
-/* Windows.Devices.Sms.ISmsDeviceStatics.FromIdAsync(deviceId) */
 HRESULT wdesm_sms_device_statics_from_id_async(WDESM_ISmsDeviceStatics *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDESM_SmsDevice** out);
 
-/* Windows.Devices.Sms.ISmsDeviceStatics.GetDefaultAsync() */
 HRESULT wdesm_sms_device_statics_get_default_async(WDESM_ISmsDeviceStatics *self, WF_IAsyncOperation_WDESM_SmsDevice** out);
 
-/* Windows.Devices.Sms.ISmsDeviceStatics2 */
-/* Windows.Devices.Sms.ISmsDeviceStatics2.FromNetworkAccountIdAsync(networkAccountId) */
 HRESULT wdesm_sms_device_statics_2_from_network_account_id_async(WDESM_ISmsDeviceStatics_2 *self, cwinrt_hstring networkAccountId, WF_IAsyncOperation_WDESM_SmsDevice** out);
 
-/* Windows.Devices.Sms.ISmsFilterRuleFactory */
-/* Windows.Devices.Sms.ISmsFilterRuleFactory.CreateFilterRule(messageType) */
 HRESULT wdesm_sms_filter_rule_factory_create_filter_rule(WDESM_ISmsFilterRuleFactory *self, WDESM_SmsMessageType messageType, WDESM_SmsFilterRule** out);
 
-/* Windows.Devices.Sms.ISmsFilterRulesFactory */
-/* Windows.Devices.Sms.ISmsFilterRulesFactory.CreateFilterRules(actionType) */
 HRESULT wdesm_sms_filter_rules_factory_create_filter_rules(WDESM_ISmsFilterRulesFactory *self, WDESM_SmsFilterActionType actionType, WDESM_SmsFilterRules** out);
 
-/* Windows.Devices.Sms.ISmsMessageRegistrationStatics */
-/* Windows.Devices.Sms.ISmsMessageRegistrationStatics.get_AllRegistrations() */
 HRESULT wdesm_sms_message_registration_statics_get__all_registrations(WDESM_ISmsMessageRegistrationStatics *self, WFOCO_IVectorView_WDESM_SmsMessageRegistration** value);
 
-/* Windows.Devices.Sms.ISmsMessageRegistrationStatics.Register(id, filterRules) */
 HRESULT wdesm_sms_message_registration_statics_register(WDESM_ISmsMessageRegistrationStatics *self, cwinrt_hstring id, WDESM_SmsFilterRules* filterRules, WDESM_SmsMessageRegistration** out);
 
-/* Windows.Devices.Sms.ISmsTextMessageStatics */
-/* Windows.Devices.Sms.ISmsTextMessageStatics.FromBinaryMessage(binaryMessage) */
 HRESULT wdesm_sms_text_message_statics_from_binary_message(WDESM_ISmsTextMessageStatics *self, WDESM_SmsBinaryMessage* binaryMessage, WDESM_SmsTextMessage** out);
 
-/* Windows.Devices.Sms.ISmsTextMessageStatics.FromBinaryData(format) */
 HRESULT wdesm_sms_text_message_statics_from_binary_data(WDESM_ISmsTextMessageStatics *self, WDESM_SmsDataFormat format, uint8_t *value, uint32_t value_len, WDESM_SmsTextMessage** out);
 
-/* activate Windows.Devices.Sms.SendSmsMessageOperation */
 HRESULT wdesm_send_sms_message_operation_new(WDESM_SendSmsMessageOperation **out);
 
-/* Windows.Devices.Sms.SendSmsMessageOperation */
-/* Windows.Devices.Sms.SendSmsMessageOperation.put_Completed(handler) */
 HRESULT wdesm_send_sms_message_operation_put__completed(WDESM_SendSmsMessageOperation *self, WF_AsyncActionCompletedHandler* handler);
 
-/* Windows.Devices.Sms.SendSmsMessageOperation.get_Completed() */
 HRESULT wdesm_send_sms_message_operation_get__completed(WDESM_SendSmsMessageOperation *self, WF_AsyncActionCompletedHandler** value);
 
-/* Windows.Devices.Sms.SendSmsMessageOperation.GetResults() */
 HRESULT wdesm_send_sms_message_operation_get_results(WDESM_SendSmsMessageOperation *self);
 
-/* Windows.Devices.Sms.SendSmsMessageOperation.get_Id() */
 HRESULT wdesm_send_sms_message_operation_get__id(WDESM_SendSmsMessageOperation *self, uint32_t *value);
 
-/* Windows.Devices.Sms.SendSmsMessageOperation.get_Status() */
 HRESULT wdesm_send_sms_message_operation_get__status(WDESM_SendSmsMessageOperation *self, WF_AsyncStatus *value);
 
-/* Windows.Devices.Sms.SendSmsMessageOperation.get_ErrorCode() */
 HRESULT wdesm_send_sms_message_operation_get__error_code(WDESM_SendSmsMessageOperation *self, HRESULT *value);
 
-/* Windows.Devices.Sms.SendSmsMessageOperation.Cancel() */
 HRESULT wdesm_send_sms_message_operation_cancel(WDESM_SendSmsMessageOperation *self);
 
-/* Windows.Devices.Sms.SendSmsMessageOperation.Close() */
 HRESULT wdesm_send_sms_message_operation_close(WDESM_SendSmsMessageOperation *self);
 
-/* activate Windows.Devices.Sms.SmsAppMessage */
 HRESULT wdesm_sms_app_message_new(WDESM_SmsAppMessage **out);
 
-/* Windows.Devices.Sms.SmsAppMessage */
-/* Windows.Devices.Sms.SmsAppMessage.get_Timestamp() */
 HRESULT wdesm_sms_app_message_get__timestamp(WDESM_SmsAppMessage *self, WF_DateTime *value);
 
-/* Windows.Devices.Sms.SmsAppMessage.get_To() */
 HRESULT wdesm_sms_app_message_get__to(WDESM_SmsAppMessage *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsAppMessage.put_To() */
 HRESULT wdesm_sms_app_message_put__to(WDESM_SmsAppMessage *self, cwinrt_hstring value);
 
-/* Windows.Devices.Sms.SmsAppMessage.get_From() */
 HRESULT wdesm_sms_app_message_get__from(WDESM_SmsAppMessage *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsAppMessage.get_Body() */
 HRESULT wdesm_sms_app_message_get__body(WDESM_SmsAppMessage *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsAppMessage.put_Body() */
 HRESULT wdesm_sms_app_message_put__body(WDESM_SmsAppMessage *self, cwinrt_hstring value);
 
-/* Windows.Devices.Sms.SmsAppMessage.get_CallbackNumber() */
 HRESULT wdesm_sms_app_message_get__callback_number(WDESM_SmsAppMessage *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsAppMessage.put_CallbackNumber() */
 HRESULT wdesm_sms_app_message_put__callback_number(WDESM_SmsAppMessage *self, cwinrt_hstring value);
 
-/* Windows.Devices.Sms.SmsAppMessage.get_IsDeliveryNotificationEnabled() */
 HRESULT wdesm_sms_app_message_get__is_delivery_notification_enabled(WDESM_SmsAppMessage *self, BOOL *value);
 
-/* Windows.Devices.Sms.SmsAppMessage.put_IsDeliveryNotificationEnabled() */
 HRESULT wdesm_sms_app_message_put__is_delivery_notification_enabled(WDESM_SmsAppMessage *self, BOOL value);
 
-/* Windows.Devices.Sms.SmsAppMessage.get_RetryAttemptCount() */
 HRESULT wdesm_sms_app_message_get__retry_attempt_count(WDESM_SmsAppMessage *self, int32_t *value);
 
-/* Windows.Devices.Sms.SmsAppMessage.put_RetryAttemptCount() */
 HRESULT wdesm_sms_app_message_put__retry_attempt_count(WDESM_SmsAppMessage *self, int32_t value);
 
-/* Windows.Devices.Sms.SmsAppMessage.get_Encoding() */
 HRESULT wdesm_sms_app_message_get__encoding(WDESM_SmsAppMessage *self, WDESM_SmsEncoding *value);
 
-/* Windows.Devices.Sms.SmsAppMessage.put_Encoding() */
 HRESULT wdesm_sms_app_message_put__encoding(WDESM_SmsAppMessage *self, WDESM_SmsEncoding value);
 
-/* Windows.Devices.Sms.SmsAppMessage.get_PortNumber() */
 HRESULT wdesm_sms_app_message_get__port_number(WDESM_SmsAppMessage *self, int32_t *value);
 
-/* Windows.Devices.Sms.SmsAppMessage.put_PortNumber() */
 HRESULT wdesm_sms_app_message_put__port_number(WDESM_SmsAppMessage *self, int32_t value);
 
-/* Windows.Devices.Sms.SmsAppMessage.get_TeleserviceId() */
 HRESULT wdesm_sms_app_message_get__teleservice_id(WDESM_SmsAppMessage *self, int32_t *value);
 
-/* Windows.Devices.Sms.SmsAppMessage.put_TeleserviceId() */
 HRESULT wdesm_sms_app_message_put__teleservice_id(WDESM_SmsAppMessage *self, int32_t value);
 
-/* Windows.Devices.Sms.SmsAppMessage.get_ProtocolId() */
 HRESULT wdesm_sms_app_message_get__protocol_id(WDESM_SmsAppMessage *self, int32_t *value);
 
-/* Windows.Devices.Sms.SmsAppMessage.put_ProtocolId() */
 HRESULT wdesm_sms_app_message_put__protocol_id(WDESM_SmsAppMessage *self, int32_t value);
 
-/* Windows.Devices.Sms.SmsAppMessage.get_BinaryBody() */
 HRESULT wdesm_sms_app_message_get__binary_body(WDESM_SmsAppMessage *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.Sms.SmsAppMessage.put_BinaryBody() */
 HRESULT wdesm_sms_app_message_put__binary_body(WDESM_SmsAppMessage *self, WSTST_IBuffer* value);
 
-/* Windows.Devices.Sms.SmsAppMessage.get_MessageType() */
 HRESULT wdesm_sms_app_message_get__message_type(WDESM_SmsAppMessage *self, WDESM_SmsMessageType *value);
 
-/* Windows.Devices.Sms.SmsAppMessage.get_DeviceId() */
 HRESULT wdesm_sms_app_message_get__device_id(WDESM_SmsAppMessage *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsAppMessage.get_CellularClass() */
 HRESULT wdesm_sms_app_message_get__cellular_class(WDESM_SmsAppMessage *self, WDESM_CellularClass *value);
 
-/* Windows.Devices.Sms.SmsAppMessage.get_MessageClass() */
 HRESULT wdesm_sms_app_message_get__message_class(WDESM_SmsAppMessage *self, WDESM_SmsMessageClass *value);
 
-/* Windows.Devices.Sms.SmsAppMessage.get_SimIccId() */
 HRESULT wdesm_sms_app_message_get__sim_icc_id(WDESM_SmsAppMessage *self, cwinrt_hstring *value);
 
-/* activate Windows.Devices.Sms.SmsBinaryMessage */
 HRESULT wdesm_sms_binary_message_new(WDESM_SmsBinaryMessage **out);
 
-/* Windows.Devices.Sms.SmsBinaryMessage */
-/* Windows.Devices.Sms.SmsBinaryMessage.get_Format() */
 HRESULT wdesm_sms_binary_message_get__format(WDESM_SmsBinaryMessage *self, WDESM_SmsDataFormat *value);
 
-/* Windows.Devices.Sms.SmsBinaryMessage.put_Format() */
 HRESULT wdesm_sms_binary_message_put__format(WDESM_SmsBinaryMessage *self, WDESM_SmsDataFormat value);
 
-/* Windows.Devices.Sms.SmsBinaryMessage.GetData() */
 HRESULT wdesm_sms_binary_message_get_data(WDESM_SmsBinaryMessage *self, uint8_t **out, uint32_t *out_len);
 
-/* Windows.Devices.Sms.SmsBinaryMessage.SetData() */
 HRESULT wdesm_sms_binary_message_set_data(WDESM_SmsBinaryMessage *self, uint8_t *value, uint32_t value_len);
 
-/* Windows.Devices.Sms.SmsBinaryMessage.get_Id() */
 HRESULT wdesm_sms_binary_message_get__id(WDESM_SmsBinaryMessage *self, uint32_t *value);
 
-/* Windows.Devices.Sms.SmsBinaryMessage.get_MessageClass() */
 HRESULT wdesm_sms_binary_message_get__message_class(WDESM_SmsBinaryMessage *self, WDESM_SmsMessageClass *value);
 
-/* activate Windows.Devices.Sms.SmsBroadcastMessage */
 HRESULT wdesm_sms_broadcast_message_new(WDESM_SmsBroadcastMessage **out);
 
-/* Windows.Devices.Sms.SmsBroadcastMessage */
-/* Windows.Devices.Sms.SmsBroadcastMessage.get_Timestamp() */
 HRESULT wdesm_sms_broadcast_message_get__timestamp(WDESM_SmsBroadcastMessage *self, WF_DateTime *value);
 
-/* Windows.Devices.Sms.SmsBroadcastMessage.get_To() */
 HRESULT wdesm_sms_broadcast_message_get__to(WDESM_SmsBroadcastMessage *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsBroadcastMessage.get_Body() */
 HRESULT wdesm_sms_broadcast_message_get__body(WDESM_SmsBroadcastMessage *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsBroadcastMessage.get_Channel() */
 HRESULT wdesm_sms_broadcast_message_get__channel(WDESM_SmsBroadcastMessage *self, int32_t *value);
 
-/* Windows.Devices.Sms.SmsBroadcastMessage.get_GeographicalScope() */
 HRESULT wdesm_sms_broadcast_message_get__geographical_scope(WDESM_SmsBroadcastMessage *self, WDESM_SmsGeographicalScope *value);
 
-/* Windows.Devices.Sms.SmsBroadcastMessage.get_MessageCode() */
 HRESULT wdesm_sms_broadcast_message_get__message_code(WDESM_SmsBroadcastMessage *self, int32_t *value);
 
-/* Windows.Devices.Sms.SmsBroadcastMessage.get_UpdateNumber() */
 HRESULT wdesm_sms_broadcast_message_get__update_number(WDESM_SmsBroadcastMessage *self, int32_t *value);
 
-/* Windows.Devices.Sms.SmsBroadcastMessage.get_BroadcastType() */
 HRESULT wdesm_sms_broadcast_message_get__broadcast_type(WDESM_SmsBroadcastMessage *self, WDESM_SmsBroadcastType *value);
 
-/* Windows.Devices.Sms.SmsBroadcastMessage.get_IsEmergencyAlert() */
 HRESULT wdesm_sms_broadcast_message_get__is_emergency_alert(WDESM_SmsBroadcastMessage *self, BOOL *value);
 
-/* Windows.Devices.Sms.SmsBroadcastMessage.get_IsUserPopupRequested() */
 HRESULT wdesm_sms_broadcast_message_get__is_user_popup_requested(WDESM_SmsBroadcastMessage *self, BOOL *value);
 
-/* Windows.Devices.Sms.SmsBroadcastMessage.get_MessageType() */
 HRESULT wdesm_sms_broadcast_message_get__message_type(WDESM_SmsBroadcastMessage *self, WDESM_SmsMessageType *value);
 
-/* Windows.Devices.Sms.SmsBroadcastMessage.get_DeviceId() */
 HRESULT wdesm_sms_broadcast_message_get__device_id(WDESM_SmsBroadcastMessage *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsBroadcastMessage.get_CellularClass() */
 HRESULT wdesm_sms_broadcast_message_get__cellular_class(WDESM_SmsBroadcastMessage *self, WDESM_CellularClass *value);
 
-/* Windows.Devices.Sms.SmsBroadcastMessage.get_MessageClass() */
 HRESULT wdesm_sms_broadcast_message_get__message_class(WDESM_SmsBroadcastMessage *self, WDESM_SmsMessageClass *value);
 
-/* Windows.Devices.Sms.SmsBroadcastMessage.get_SimIccId() */
 HRESULT wdesm_sms_broadcast_message_get__sim_icc_id(WDESM_SmsBroadcastMessage *self, cwinrt_hstring *value);
 
-/* activate Windows.Devices.Sms.SmsDevice */
 HRESULT wdesm_sms_device_new(WDESM_SmsDevice **out);
 
-/* Windows.Devices.Sms.SmsDevice */
-/* Windows.Devices.Sms.SmsDevice.SendMessageAsync(message) */
 HRESULT wdesm_sms_device_send_message_async(WDESM_SmsDevice *self, WDESM_ISmsMessage* message, WDESM_SendSmsMessageOperation** out);
 
-/* Windows.Devices.Sms.SmsDevice.CalculateLength(message) */
 HRESULT wdesm_sms_device_calculate_length(WDESM_SmsDevice *self, WDESM_SmsTextMessage* message, WDESM_SmsEncodedLength *out);
 
-/* Windows.Devices.Sms.SmsDevice.get_AccountPhoneNumber() */
 HRESULT wdesm_sms_device_get__account_phone_number(WDESM_SmsDevice *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsDevice.get_CellularClass() */
 HRESULT wdesm_sms_device_get__cellular_class(WDESM_SmsDevice *self, WDESM_CellularClass *value);
 
-/* Windows.Devices.Sms.SmsDevice.get_MessageStore() */
 HRESULT wdesm_sms_device_get__message_store(WDESM_SmsDevice *self, WDESM_SmsDeviceMessageStore** value);
 
-/* Windows.Devices.Sms.SmsDevice.get_DeviceStatus() */
 HRESULT wdesm_sms_device_get__device_status(WDESM_SmsDevice *self, WDESM_SmsDeviceStatus *value);
 
-/* Windows.Devices.Sms.SmsDevice.FromNetworkAccountIdAsync(networkAccountId) */
 HRESULT wdesm_sms_device_from_network_account_id_async(cwinrt_hstring networkAccountId, WF_IAsyncOperation_WDESM_SmsDevice** out);
 
-/* Windows.Devices.Sms.SmsDevice.GetDeviceSelector() */
 HRESULT wdesm_sms_device_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Devices.Sms.SmsDevice.FromIdAsync(deviceId) */
 HRESULT wdesm_sms_device_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDESM_SmsDevice** out);
 
-/* Windows.Devices.Sms.SmsDevice.GetDefaultAsync() */
 HRESULT wdesm_sms_device_get_default_async(WF_IAsyncOperation_WDESM_SmsDevice** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdesm_sms_device_on_sms_message_received(WDESM_SmsDevice *self, cwinrt_event_fn fn, void *ctx);
@@ -888,521 +732,326 @@ void wdesm_sms_device_off_sms_message_received(WDESM_SmsDevice *self, cwinrt_tok
 cwinrt_token wdesm_sms_device_on_sms_device_status_changed(WDESM_SmsDevice *self, cwinrt_event_fn fn, void *ctx);
 void wdesm_sms_device_off_sms_device_status_changed(WDESM_SmsDevice *self, cwinrt_token token);
 
-/* activate Windows.Devices.Sms.SmsDevice2 */
 HRESULT wdesm_sms_device_2_new(WDESM_SmsDevice_2 **out);
 
-/* Windows.Devices.Sms.SmsDevice2 */
-/* Windows.Devices.Sms.SmsDevice2.get_SmscAddress() */
 HRESULT wdesm_sms_device_2_get__smsc_address(WDESM_SmsDevice_2 *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsDevice2.put_SmscAddress() */
 HRESULT wdesm_sms_device_2_put__smsc_address(WDESM_SmsDevice_2 *self, cwinrt_hstring value);
 
-/* Windows.Devices.Sms.SmsDevice2.get_DeviceId() */
 HRESULT wdesm_sms_device_2_get__device_id(WDESM_SmsDevice_2 *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsDevice2.get_ParentDeviceId() */
 HRESULT wdesm_sms_device_2_get__parent_device_id(WDESM_SmsDevice_2 *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsDevice2.get_AccountPhoneNumber() */
 HRESULT wdesm_sms_device_2_get__account_phone_number(WDESM_SmsDevice_2 *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsDevice2.get_CellularClass() */
 HRESULT wdesm_sms_device_2_get__cellular_class(WDESM_SmsDevice_2 *self, WDESM_CellularClass *value);
 
-/* Windows.Devices.Sms.SmsDevice2.get_DeviceStatus() */
 HRESULT wdesm_sms_device_2_get__device_status(WDESM_SmsDevice_2 *self, WDESM_SmsDeviceStatus *value);
 
-/* Windows.Devices.Sms.SmsDevice2.CalculateLength(message) */
 HRESULT wdesm_sms_device_2_calculate_length(WDESM_SmsDevice_2 *self, WDESM_ISmsMessageBase* message, WDESM_SmsEncodedLength *out);
 
-/* Windows.Devices.Sms.SmsDevice2.SendMessageAndGetResultAsync(message) */
 HRESULT wdesm_sms_device_2_send_message_and_get_result_async(WDESM_SmsDevice_2 *self, WDESM_ISmsMessageBase* message, WF_IAsyncOperation_WDESM_SmsSendMessageResult** out);
 
-/* Windows.Devices.Sms.SmsDevice2.GetDeviceSelector() */
 HRESULT wdesm_sms_device_2_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Devices.Sms.SmsDevice2.FromId(deviceId) */
 HRESULT wdesm_sms_device_2_from_id(cwinrt_hstring deviceId, WDESM_SmsDevice_2** out);
 
-/* Windows.Devices.Sms.SmsDevice2.GetDefault() */
 HRESULT wdesm_sms_device_2_get_default(WDESM_SmsDevice_2** out);
 
-/* Windows.Devices.Sms.SmsDevice2.FromParentId(parentDeviceId) */
 HRESULT wdesm_sms_device_2_from_parent_id(cwinrt_hstring parentDeviceId, WDESM_SmsDevice_2** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdesm_sms_device_2_on_device_status_changed(WDESM_SmsDevice_2 *self, cwinrt_event_fn fn, void *ctx);
 void wdesm_sms_device_2_off_device_status_changed(WDESM_SmsDevice_2 *self, cwinrt_token token);
 
-/* activate Windows.Devices.Sms.SmsDeviceMessageStore */
 HRESULT wdesm_sms_device_message_store_new(WDESM_SmsDeviceMessageStore **out);
 
-/* Windows.Devices.Sms.SmsDeviceMessageStore */
-/* Windows.Devices.Sms.SmsDeviceMessageStore.DeleteMessageAsync(messageId) */
 HRESULT wdesm_sms_device_message_store_delete_message_async(WDESM_SmsDeviceMessageStore *self, uint32_t messageId, WF_IAsyncAction** out);
 
-/* Windows.Devices.Sms.SmsDeviceMessageStore.DeleteMessagesAsync(messageFilter) */
 HRESULT wdesm_sms_device_message_store_delete_messages_async(WDESM_SmsDeviceMessageStore *self, WDESM_SmsMessageFilter messageFilter, WF_IAsyncAction** out);
 
-/* Windows.Devices.Sms.SmsDeviceMessageStore.GetMessageAsync(messageId) */
 HRESULT wdesm_sms_device_message_store_get_message_async(WDESM_SmsDeviceMessageStore *self, uint32_t messageId, WF_IAsyncOperation_WDESM_ISmsMessage** out);
 
-/* Windows.Devices.Sms.SmsDeviceMessageStore.GetMessagesAsync(messageFilter) */
 HRESULT wdesm_sms_device_message_store_get_messages_async(WDESM_SmsDeviceMessageStore *self, WDESM_SmsMessageFilter messageFilter, WF_IAsyncOperationWithProgress_WFOCO_IVectorView_WDESM_ISmsMessage_int32_t** out);
 
-/* Windows.Devices.Sms.SmsDeviceMessageStore.get_MaxMessages() */
 HRESULT wdesm_sms_device_message_store_get__max_messages(WDESM_SmsDeviceMessageStore *self, uint32_t *value);
 
-/* Windows.Devices.Sms.SmsDeviceStatusChangedEventHandler */
-/* Windows.Devices.Sms.SmsDeviceStatusChangedEventHandler.Invoke(sender) */
 HRESULT wdesm_sms_device_status_changed_event_handler_invoke(WDESM_SmsDeviceStatusChangedEventHandler *self, WDESM_SmsDevice* sender);
 
-/* activate Windows.Devices.Sms.SmsFilterRule */
 HRESULT wdesm_sms_filter_rule_new(WDESM_SmsFilterRule **out);
 
-/* Windows.Devices.Sms.SmsFilterRule */
-/* Windows.Devices.Sms.SmsFilterRule.get_MessageType() */
 HRESULT wdesm_sms_filter_rule_get__message_type(WDESM_SmsFilterRule *self, WDESM_SmsMessageType *value);
 
-/* Windows.Devices.Sms.SmsFilterRule.get_ImsiPrefixes() */
 HRESULT wdesm_sms_filter_rule_get__imsi_prefixes(WDESM_SmsFilterRule *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Devices.Sms.SmsFilterRule.get_DeviceIds() */
 HRESULT wdesm_sms_filter_rule_get__device_ids(WDESM_SmsFilterRule *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Devices.Sms.SmsFilterRule.get_SenderNumbers() */
 HRESULT wdesm_sms_filter_rule_get__sender_numbers(WDESM_SmsFilterRule *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Devices.Sms.SmsFilterRule.get_TextMessagePrefixes() */
 HRESULT wdesm_sms_filter_rule_get__text_message_prefixes(WDESM_SmsFilterRule *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Devices.Sms.SmsFilterRule.get_PortNumbers() */
 HRESULT wdesm_sms_filter_rule_get__port_numbers(WDESM_SmsFilterRule *self, WFOCO_IVector_int32_t** value);
 
-/* Windows.Devices.Sms.SmsFilterRule.get_CellularClass() */
 HRESULT wdesm_sms_filter_rule_get__cellular_class(WDESM_SmsFilterRule *self, WDESM_CellularClass *value);
 
-/* Windows.Devices.Sms.SmsFilterRule.put_CellularClass() */
 HRESULT wdesm_sms_filter_rule_put__cellular_class(WDESM_SmsFilterRule *self, WDESM_CellularClass value);
 
-/* Windows.Devices.Sms.SmsFilterRule.get_ProtocolIds() */
 HRESULT wdesm_sms_filter_rule_get__protocol_ids(WDESM_SmsFilterRule *self, WFOCO_IVector_int32_t** value);
 
-/* Windows.Devices.Sms.SmsFilterRule.get_TeleserviceIds() */
 HRESULT wdesm_sms_filter_rule_get__teleservice_ids(WDESM_SmsFilterRule *self, WFOCO_IVector_int32_t** value);
 
-/* Windows.Devices.Sms.SmsFilterRule.get_WapApplicationIds() */
 HRESULT wdesm_sms_filter_rule_get__wap_application_ids(WDESM_SmsFilterRule *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Devices.Sms.SmsFilterRule.get_WapContentTypes() */
 HRESULT wdesm_sms_filter_rule_get__wap_content_types(WDESM_SmsFilterRule *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Devices.Sms.SmsFilterRule.get_BroadcastTypes() */
 HRESULT wdesm_sms_filter_rule_get__broadcast_types(WDESM_SmsFilterRule *self, WFOCO_IVector_WDESM_SmsBroadcastType** value);
 
-/* Windows.Devices.Sms.SmsFilterRule.get_BroadcastChannels() */
 HRESULT wdesm_sms_filter_rule_get__broadcast_channels(WDESM_SmsFilterRule *self, WFOCO_IVector_int32_t** value);
 
-/* activate Windows.Devices.Sms.SmsFilterRules */
 HRESULT wdesm_sms_filter_rules_new(WDESM_SmsFilterRules **out);
 
-/* Windows.Devices.Sms.SmsFilterRules */
-/* Windows.Devices.Sms.SmsFilterRules.get_ActionType() */
 HRESULT wdesm_sms_filter_rules_get__action_type(WDESM_SmsFilterRules *self, WDESM_SmsFilterActionType *value);
 
-/* Windows.Devices.Sms.SmsFilterRules.get_Rules() */
 HRESULT wdesm_sms_filter_rules_get__rules(WDESM_SmsFilterRules *self, WFOCO_IVector_WDESM_SmsFilterRule** value);
 
-/* activate Windows.Devices.Sms.SmsMessageReceivedEventArgs */
 HRESULT wdesm_sms_message_received_event_args_new(WDESM_SmsMessageReceivedEventArgs **out);
 
-/* Windows.Devices.Sms.SmsMessageReceivedEventArgs */
-/* Windows.Devices.Sms.SmsMessageReceivedEventArgs.get_TextMessage() */
 HRESULT wdesm_sms_message_received_event_args_get__text_message(WDESM_SmsMessageReceivedEventArgs *self, WDESM_SmsTextMessage** value);
 
-/* Windows.Devices.Sms.SmsMessageReceivedEventArgs.get_BinaryMessage() */
 HRESULT wdesm_sms_message_received_event_args_get__binary_message(WDESM_SmsMessageReceivedEventArgs *self, WDESM_SmsBinaryMessage** value);
 
-/* Windows.Devices.Sms.SmsMessageReceivedEventHandler */
-/* Windows.Devices.Sms.SmsMessageReceivedEventHandler.Invoke(sender, e) */
 HRESULT wdesm_sms_message_received_event_handler_invoke(WDESM_SmsMessageReceivedEventHandler *self, WDESM_SmsDevice* sender, WDESM_SmsMessageReceivedEventArgs* e);
 
-/* activate Windows.Devices.Sms.SmsMessageReceivedTriggerDetails */
 HRESULT wdesm_sms_message_received_trigger_details_new(WDESM_SmsMessageReceivedTriggerDetails **out);
 
-/* Windows.Devices.Sms.SmsMessageReceivedTriggerDetails */
-/* Windows.Devices.Sms.SmsMessageReceivedTriggerDetails.get_MessageType() */
 HRESULT wdesm_sms_message_received_trigger_details_get__message_type(WDESM_SmsMessageReceivedTriggerDetails *self, WDESM_SmsMessageType *value);
 
-/* Windows.Devices.Sms.SmsMessageReceivedTriggerDetails.get_TextMessage() */
 HRESULT wdesm_sms_message_received_trigger_details_get__text_message(WDESM_SmsMessageReceivedTriggerDetails *self, WDESM_SmsTextMessage_2** value);
 
-/* Windows.Devices.Sms.SmsMessageReceivedTriggerDetails.get_WapMessage() */
 HRESULT wdesm_sms_message_received_trigger_details_get__wap_message(WDESM_SmsMessageReceivedTriggerDetails *self, WDESM_SmsWapMessage** value);
 
-/* Windows.Devices.Sms.SmsMessageReceivedTriggerDetails.get_AppMessage() */
 HRESULT wdesm_sms_message_received_trigger_details_get__app_message(WDESM_SmsMessageReceivedTriggerDetails *self, WDESM_SmsAppMessage** value);
 
-/* Windows.Devices.Sms.SmsMessageReceivedTriggerDetails.get_BroadcastMessage() */
 HRESULT wdesm_sms_message_received_trigger_details_get__broadcast_message(WDESM_SmsMessageReceivedTriggerDetails *self, WDESM_SmsBroadcastMessage** value);
 
-/* Windows.Devices.Sms.SmsMessageReceivedTriggerDetails.get_VoicemailMessage() */
 HRESULT wdesm_sms_message_received_trigger_details_get__voicemail_message(WDESM_SmsMessageReceivedTriggerDetails *self, WDESM_SmsVoicemailMessage** value);
 
-/* Windows.Devices.Sms.SmsMessageReceivedTriggerDetails.get_StatusMessage() */
 HRESULT wdesm_sms_message_received_trigger_details_get__status_message(WDESM_SmsMessageReceivedTriggerDetails *self, WDESM_SmsStatusMessage** value);
 
-/* Windows.Devices.Sms.SmsMessageReceivedTriggerDetails.Drop() */
 HRESULT wdesm_sms_message_received_trigger_details_drop(WDESM_SmsMessageReceivedTriggerDetails *self);
 
-/* Windows.Devices.Sms.SmsMessageReceivedTriggerDetails.Accept() */
 HRESULT wdesm_sms_message_received_trigger_details_accept(WDESM_SmsMessageReceivedTriggerDetails *self);
 
-/* activate Windows.Devices.Sms.SmsMessageRegistration */
 HRESULT wdesm_sms_message_registration_new(WDESM_SmsMessageRegistration **out);
 
-/* Windows.Devices.Sms.SmsMessageRegistration */
-/* Windows.Devices.Sms.SmsMessageRegistration.get_Id() */
 HRESULT wdesm_sms_message_registration_get__id(WDESM_SmsMessageRegistration *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsMessageRegistration.Unregister() */
 HRESULT wdesm_sms_message_registration_unregister(WDESM_SmsMessageRegistration *self);
 
-/* Windows.Devices.Sms.SmsMessageRegistration.get_AllRegistrations() */
 HRESULT wdesm_sms_message_registration_get__all_registrations(WFOCO_IVectorView_WDESM_SmsMessageRegistration** value);
 
-/* Windows.Devices.Sms.SmsMessageRegistration.Register(id, filterRules) */
 HRESULT wdesm_sms_message_registration_register(cwinrt_hstring id, WDESM_SmsFilterRules* filterRules, WDESM_SmsMessageRegistration** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdesm_sms_message_registration_on_message_received(WDESM_SmsMessageRegistration *self, cwinrt_event_fn fn, void *ctx);
 void wdesm_sms_message_registration_off_message_received(WDESM_SmsMessageRegistration *self, cwinrt_token token);
 
-/* activate Windows.Devices.Sms.SmsReceivedEventDetails */
 HRESULT wdesm_sms_received_event_details_new(WDESM_SmsReceivedEventDetails **out);
 
-/* Windows.Devices.Sms.SmsReceivedEventDetails */
-/* Windows.Devices.Sms.SmsReceivedEventDetails.get_DeviceId() */
 HRESULT wdesm_sms_received_event_details_get__device_id(WDESM_SmsReceivedEventDetails *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsReceivedEventDetails.get_MessageIndex() */
 HRESULT wdesm_sms_received_event_details_get__message_index(WDESM_SmsReceivedEventDetails *self, uint32_t *value);
 
-/* Windows.Devices.Sms.SmsReceivedEventDetails.get_MessageClass() */
 HRESULT wdesm_sms_received_event_details_get__message_class(WDESM_SmsReceivedEventDetails *self, WDESM_SmsMessageClass *value);
 
-/* Windows.Devices.Sms.SmsReceivedEventDetails.get_BinaryMessage() */
 HRESULT wdesm_sms_received_event_details_get__binary_message(WDESM_SmsReceivedEventDetails *self, WDESM_SmsBinaryMessage** value);
 
-/* activate Windows.Devices.Sms.SmsSendMessageResult */
 HRESULT wdesm_sms_send_message_result_new(WDESM_SmsSendMessageResult **out);
 
-/* Windows.Devices.Sms.SmsSendMessageResult */
-/* Windows.Devices.Sms.SmsSendMessageResult.get_IsSuccessful() */
 HRESULT wdesm_sms_send_message_result_get__is_successful(WDESM_SmsSendMessageResult *self, BOOL *value);
 
-/* Windows.Devices.Sms.SmsSendMessageResult.get_MessageReferenceNumbers() */
 HRESULT wdesm_sms_send_message_result_get__message_reference_numbers(WDESM_SmsSendMessageResult *self, WFOCO_IVectorView_int32_t** value);
 
-/* Windows.Devices.Sms.SmsSendMessageResult.get_CellularClass() */
 HRESULT wdesm_sms_send_message_result_get__cellular_class(WDESM_SmsSendMessageResult *self, WDESM_CellularClass *value);
 
-/* Windows.Devices.Sms.SmsSendMessageResult.get_ModemErrorCode() */
 HRESULT wdesm_sms_send_message_result_get__modem_error_code(WDESM_SmsSendMessageResult *self, WDESM_SmsModemErrorCode *value);
 
-/* Windows.Devices.Sms.SmsSendMessageResult.get_IsErrorTransient() */
 HRESULT wdesm_sms_send_message_result_get__is_error_transient(WDESM_SmsSendMessageResult *self, BOOL *value);
 
-/* Windows.Devices.Sms.SmsSendMessageResult.get_NetworkCauseCode() */
 HRESULT wdesm_sms_send_message_result_get__network_cause_code(WDESM_SmsSendMessageResult *self, int32_t *value);
 
-/* Windows.Devices.Sms.SmsSendMessageResult.get_TransportFailureCause() */
 HRESULT wdesm_sms_send_message_result_get__transport_failure_cause(WDESM_SmsSendMessageResult *self, int32_t *value);
 
-/* activate Windows.Devices.Sms.SmsStatusMessage */
 HRESULT wdesm_sms_status_message_new(WDESM_SmsStatusMessage **out);
 
-/* Windows.Devices.Sms.SmsStatusMessage */
-/* Windows.Devices.Sms.SmsStatusMessage.get_To() */
 HRESULT wdesm_sms_status_message_get__to(WDESM_SmsStatusMessage *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsStatusMessage.get_From() */
 HRESULT wdesm_sms_status_message_get__from(WDESM_SmsStatusMessage *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsStatusMessage.get_Body() */
 HRESULT wdesm_sms_status_message_get__body(WDESM_SmsStatusMessage *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsStatusMessage.get_Status() */
 HRESULT wdesm_sms_status_message_get__status(WDESM_SmsStatusMessage *self, int32_t *value);
 
-/* Windows.Devices.Sms.SmsStatusMessage.get_MessageReferenceNumber() */
 HRESULT wdesm_sms_status_message_get__message_reference_number(WDESM_SmsStatusMessage *self, int32_t *value);
 
-/* Windows.Devices.Sms.SmsStatusMessage.get_ServiceCenterTimestamp() */
 HRESULT wdesm_sms_status_message_get__service_center_timestamp(WDESM_SmsStatusMessage *self, WF_DateTime *value);
 
-/* Windows.Devices.Sms.SmsStatusMessage.get_DischargeTime() */
 HRESULT wdesm_sms_status_message_get__discharge_time(WDESM_SmsStatusMessage *self, WF_DateTime *value);
 
-/* Windows.Devices.Sms.SmsStatusMessage.get_MessageType() */
 HRESULT wdesm_sms_status_message_get__message_type(WDESM_SmsStatusMessage *self, WDESM_SmsMessageType *value);
 
-/* Windows.Devices.Sms.SmsStatusMessage.get_DeviceId() */
 HRESULT wdesm_sms_status_message_get__device_id(WDESM_SmsStatusMessage *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsStatusMessage.get_CellularClass() */
 HRESULT wdesm_sms_status_message_get__cellular_class(WDESM_SmsStatusMessage *self, WDESM_CellularClass *value);
 
-/* Windows.Devices.Sms.SmsStatusMessage.get_MessageClass() */
 HRESULT wdesm_sms_status_message_get__message_class(WDESM_SmsStatusMessage *self, WDESM_SmsMessageClass *value);
 
-/* Windows.Devices.Sms.SmsStatusMessage.get_SimIccId() */
 HRESULT wdesm_sms_status_message_get__sim_icc_id(WDESM_SmsStatusMessage *self, cwinrt_hstring *value);
 
-/* activate Windows.Devices.Sms.SmsTextMessage */
 HRESULT wdesm_sms_text_message_new(WDESM_SmsTextMessage **out);
 
-/* Windows.Devices.Sms.SmsTextMessage */
-/* Windows.Devices.Sms.SmsTextMessage.get_Timestamp() */
 HRESULT wdesm_sms_text_message_get__timestamp(WDESM_SmsTextMessage *self, WF_DateTime *value);
 
-/* Windows.Devices.Sms.SmsTextMessage.get_PartReferenceId() */
 HRESULT wdesm_sms_text_message_get__part_reference_id(WDESM_SmsTextMessage *self, uint32_t *value);
 
-/* Windows.Devices.Sms.SmsTextMessage.get_PartNumber() */
 HRESULT wdesm_sms_text_message_get__part_number(WDESM_SmsTextMessage *self, uint32_t *value);
 
-/* Windows.Devices.Sms.SmsTextMessage.get_PartCount() */
 HRESULT wdesm_sms_text_message_get__part_count(WDESM_SmsTextMessage *self, uint32_t *value);
 
-/* Windows.Devices.Sms.SmsTextMessage.get_To() */
 HRESULT wdesm_sms_text_message_get__to(WDESM_SmsTextMessage *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsTextMessage.put_To() */
 HRESULT wdesm_sms_text_message_put__to(WDESM_SmsTextMessage *self, cwinrt_hstring value);
 
-/* Windows.Devices.Sms.SmsTextMessage.get_From() */
 HRESULT wdesm_sms_text_message_get__from(WDESM_SmsTextMessage *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsTextMessage.put_From() */
 HRESULT wdesm_sms_text_message_put__from(WDESM_SmsTextMessage *self, cwinrt_hstring value);
 
-/* Windows.Devices.Sms.SmsTextMessage.get_Body() */
 HRESULT wdesm_sms_text_message_get__body(WDESM_SmsTextMessage *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsTextMessage.put_Body() */
 HRESULT wdesm_sms_text_message_put__body(WDESM_SmsTextMessage *self, cwinrt_hstring value);
 
-/* Windows.Devices.Sms.SmsTextMessage.get_Encoding() */
 HRESULT wdesm_sms_text_message_get__encoding(WDESM_SmsTextMessage *self, WDESM_SmsEncoding *value);
 
-/* Windows.Devices.Sms.SmsTextMessage.put_Encoding() */
 HRESULT wdesm_sms_text_message_put__encoding(WDESM_SmsTextMessage *self, WDESM_SmsEncoding value);
 
-/* Windows.Devices.Sms.SmsTextMessage.ToBinaryMessages(format) */
 HRESULT wdesm_sms_text_message_to_binary_messages(WDESM_SmsTextMessage *self, WDESM_SmsDataFormat format, WFOCO_IVectorView_WDESM_ISmsBinaryMessage** out);
 
-/* Windows.Devices.Sms.SmsTextMessage.get_Id() */
 HRESULT wdesm_sms_text_message_get__id(WDESM_SmsTextMessage *self, uint32_t *value);
 
-/* Windows.Devices.Sms.SmsTextMessage.get_MessageClass() */
 HRESULT wdesm_sms_text_message_get__message_class(WDESM_SmsTextMessage *self, WDESM_SmsMessageClass *value);
 
-/* Windows.Devices.Sms.SmsTextMessage.FromBinaryMessage(binaryMessage) */
 HRESULT wdesm_sms_text_message_from_binary_message(WDESM_SmsBinaryMessage* binaryMessage, WDESM_SmsTextMessage** out);
 
-/* Windows.Devices.Sms.SmsTextMessage.FromBinaryData(format) */
 HRESULT wdesm_sms_text_message_from_binary_data(WDESM_SmsDataFormat format, uint8_t *value, uint32_t value_len, WDESM_SmsTextMessage** out);
 
-/* activate Windows.Devices.Sms.SmsTextMessage2 */
 HRESULT wdesm_sms_text_message_2_new(WDESM_SmsTextMessage_2 **out);
 
-/* Windows.Devices.Sms.SmsTextMessage2 */
-/* Windows.Devices.Sms.SmsTextMessage2.get_Timestamp() */
 HRESULT wdesm_sms_text_message_2_get__timestamp(WDESM_SmsTextMessage_2 *self, WF_DateTime *value);
 
-/* Windows.Devices.Sms.SmsTextMessage2.get_To() */
 HRESULT wdesm_sms_text_message_2_get__to(WDESM_SmsTextMessage_2 *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsTextMessage2.put_To() */
 HRESULT wdesm_sms_text_message_2_put__to(WDESM_SmsTextMessage_2 *self, cwinrt_hstring value);
 
-/* Windows.Devices.Sms.SmsTextMessage2.get_From() */
 HRESULT wdesm_sms_text_message_2_get__from(WDESM_SmsTextMessage_2 *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsTextMessage2.get_Body() */
 HRESULT wdesm_sms_text_message_2_get__body(WDESM_SmsTextMessage_2 *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsTextMessage2.put_Body() */
 HRESULT wdesm_sms_text_message_2_put__body(WDESM_SmsTextMessage_2 *self, cwinrt_hstring value);
 
-/* Windows.Devices.Sms.SmsTextMessage2.get_Encoding() */
 HRESULT wdesm_sms_text_message_2_get__encoding(WDESM_SmsTextMessage_2 *self, WDESM_SmsEncoding *value);
 
-/* Windows.Devices.Sms.SmsTextMessage2.put_Encoding() */
 HRESULT wdesm_sms_text_message_2_put__encoding(WDESM_SmsTextMessage_2 *self, WDESM_SmsEncoding value);
 
-/* Windows.Devices.Sms.SmsTextMessage2.get_CallbackNumber() */
 HRESULT wdesm_sms_text_message_2_get__callback_number(WDESM_SmsTextMessage_2 *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsTextMessage2.put_CallbackNumber() */
 HRESULT wdesm_sms_text_message_2_put__callback_number(WDESM_SmsTextMessage_2 *self, cwinrt_hstring value);
 
-/* Windows.Devices.Sms.SmsTextMessage2.get_IsDeliveryNotificationEnabled() */
 HRESULT wdesm_sms_text_message_2_get__is_delivery_notification_enabled(WDESM_SmsTextMessage_2 *self, BOOL *value);
 
-/* Windows.Devices.Sms.SmsTextMessage2.put_IsDeliveryNotificationEnabled() */
 HRESULT wdesm_sms_text_message_2_put__is_delivery_notification_enabled(WDESM_SmsTextMessage_2 *self, BOOL value);
 
-/* Windows.Devices.Sms.SmsTextMessage2.get_RetryAttemptCount() */
 HRESULT wdesm_sms_text_message_2_get__retry_attempt_count(WDESM_SmsTextMessage_2 *self, int32_t *value);
 
-/* Windows.Devices.Sms.SmsTextMessage2.put_RetryAttemptCount() */
 HRESULT wdesm_sms_text_message_2_put__retry_attempt_count(WDESM_SmsTextMessage_2 *self, int32_t value);
 
-/* Windows.Devices.Sms.SmsTextMessage2.get_TeleserviceId() */
 HRESULT wdesm_sms_text_message_2_get__teleservice_id(WDESM_SmsTextMessage_2 *self, int32_t *value);
 
-/* Windows.Devices.Sms.SmsTextMessage2.get_ProtocolId() */
 HRESULT wdesm_sms_text_message_2_get__protocol_id(WDESM_SmsTextMessage_2 *self, int32_t *value);
 
-/* Windows.Devices.Sms.SmsTextMessage2.get_MessageType() */
 HRESULT wdesm_sms_text_message_2_get__message_type(WDESM_SmsTextMessage_2 *self, WDESM_SmsMessageType *value);
 
-/* Windows.Devices.Sms.SmsTextMessage2.get_DeviceId() */
 HRESULT wdesm_sms_text_message_2_get__device_id(WDESM_SmsTextMessage_2 *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsTextMessage2.get_CellularClass() */
 HRESULT wdesm_sms_text_message_2_get__cellular_class(WDESM_SmsTextMessage_2 *self, WDESM_CellularClass *value);
 
-/* Windows.Devices.Sms.SmsTextMessage2.get_MessageClass() */
 HRESULT wdesm_sms_text_message_2_get__message_class(WDESM_SmsTextMessage_2 *self, WDESM_SmsMessageClass *value);
 
-/* Windows.Devices.Sms.SmsTextMessage2.get_SimIccId() */
 HRESULT wdesm_sms_text_message_2_get__sim_icc_id(WDESM_SmsTextMessage_2 *self, cwinrt_hstring *value);
 
-/* activate Windows.Devices.Sms.SmsVoicemailMessage */
 HRESULT wdesm_sms_voicemail_message_new(WDESM_SmsVoicemailMessage **out);
 
-/* Windows.Devices.Sms.SmsVoicemailMessage */
-/* Windows.Devices.Sms.SmsVoicemailMessage.get_Timestamp() */
 HRESULT wdesm_sms_voicemail_message_get__timestamp(WDESM_SmsVoicemailMessage *self, WF_DateTime *value);
 
-/* Windows.Devices.Sms.SmsVoicemailMessage.get_To() */
 HRESULT wdesm_sms_voicemail_message_get__to(WDESM_SmsVoicemailMessage *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsVoicemailMessage.get_Body() */
 HRESULT wdesm_sms_voicemail_message_get__body(WDESM_SmsVoicemailMessage *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsVoicemailMessage.get_MessageCount() */
 HRESULT wdesm_sms_voicemail_message_get__message_count(WDESM_SmsVoicemailMessage *self, int32_t** value);
 
-/* Windows.Devices.Sms.SmsVoicemailMessage.get_MessageType() */
 HRESULT wdesm_sms_voicemail_message_get__message_type(WDESM_SmsVoicemailMessage *self, WDESM_SmsMessageType *value);
 
-/* Windows.Devices.Sms.SmsVoicemailMessage.get_DeviceId() */
 HRESULT wdesm_sms_voicemail_message_get__device_id(WDESM_SmsVoicemailMessage *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsVoicemailMessage.get_CellularClass() */
 HRESULT wdesm_sms_voicemail_message_get__cellular_class(WDESM_SmsVoicemailMessage *self, WDESM_CellularClass *value);
 
-/* Windows.Devices.Sms.SmsVoicemailMessage.get_MessageClass() */
 HRESULT wdesm_sms_voicemail_message_get__message_class(WDESM_SmsVoicemailMessage *self, WDESM_SmsMessageClass *value);
 
-/* Windows.Devices.Sms.SmsVoicemailMessage.get_SimIccId() */
 HRESULT wdesm_sms_voicemail_message_get__sim_icc_id(WDESM_SmsVoicemailMessage *self, cwinrt_hstring *value);
 
-/* activate Windows.Devices.Sms.SmsWapMessage */
 HRESULT wdesm_sms_wap_message_new(WDESM_SmsWapMessage **out);
 
-/* Windows.Devices.Sms.SmsWapMessage */
-/* Windows.Devices.Sms.SmsWapMessage.get_Timestamp() */
 HRESULT wdesm_sms_wap_message_get__timestamp(WDESM_SmsWapMessage *self, WF_DateTime *value);
 
-/* Windows.Devices.Sms.SmsWapMessage.get_To() */
 HRESULT wdesm_sms_wap_message_get__to(WDESM_SmsWapMessage *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsWapMessage.get_From() */
 HRESULT wdesm_sms_wap_message_get__from(WDESM_SmsWapMessage *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsWapMessage.get_ApplicationId() */
 HRESULT wdesm_sms_wap_message_get__application_id(WDESM_SmsWapMessage *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsWapMessage.get_ContentType() */
 HRESULT wdesm_sms_wap_message_get__content_type(WDESM_SmsWapMessage *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsWapMessage.get_BinaryBody() */
 HRESULT wdesm_sms_wap_message_get__binary_body(WDESM_SmsWapMessage *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.Sms.SmsWapMessage.get_Headers() */
 HRESULT wdesm_sms_wap_message_get__headers(WDESM_SmsWapMessage *self, WFOCO_IMap_HSTRING_HSTRING** value);
 
-/* Windows.Devices.Sms.SmsWapMessage.get_MessageType() */
 HRESULT wdesm_sms_wap_message_get__message_type(WDESM_SmsWapMessage *self, WDESM_SmsMessageType *value);
 
-/* Windows.Devices.Sms.SmsWapMessage.get_DeviceId() */
 HRESULT wdesm_sms_wap_message_get__device_id(WDESM_SmsWapMessage *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.SmsWapMessage.get_CellularClass() */
 HRESULT wdesm_sms_wap_message_get__cellular_class(WDESM_SmsWapMessage *self, WDESM_CellularClass *value);
 
-/* Windows.Devices.Sms.SmsWapMessage.get_MessageClass() */
 HRESULT wdesm_sms_wap_message_get__message_class(WDESM_SmsWapMessage *self, WDESM_SmsMessageClass *value);
 
-/* Windows.Devices.Sms.SmsWapMessage.get_SimIccId() */
 HRESULT wdesm_sms_wap_message_get__sim_icc_id(WDESM_SmsWapMessage *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.ISmsAppMessage */
-/* Windows.Devices.Sms.ISmsBinaryMessage */
-/* Windows.Devices.Sms.ISmsBroadcastMessage */
-/* Windows.Devices.Sms.ISmsDevice */
-/* Windows.Devices.Sms.ISmsDevice2 */
-/* Windows.Devices.Sms.ISmsDeviceMessageStore */
-/* Windows.Devices.Sms.ISmsFilterRule */
-/* Windows.Devices.Sms.ISmsFilterRules */
-/* Windows.Devices.Sms.ISmsMessageReceivedEventArgs */
-/* Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails */
-/* Windows.Devices.Sms.ISmsMessageRegistration */
-/* Windows.Devices.Sms.ISmsReceivedEventDetails */
-/* Windows.Devices.Sms.ISmsReceivedEventDetails2 */
-/* Windows.Devices.Sms.ISmsReceivedEventDetails2.get_MessageClass() */
 HRESULT wdesm_sms_received_event_details_2_get__message_class(WDESM_ISmsReceivedEventDetails_2 *self, WDESM_SmsMessageClass *value);
 
-/* Windows.Devices.Sms.ISmsReceivedEventDetails2.get_BinaryMessage() */
 HRESULT wdesm_sms_received_event_details_2_get__binary_message(WDESM_ISmsReceivedEventDetails_2 *self, WDESM_SmsBinaryMessage** value);
 
-/* Windows.Devices.Sms.ISmsSendMessageResult */
-/* Windows.Devices.Sms.ISmsStatusMessage */
-/* Windows.Devices.Sms.ISmsTextMessage */
-/* Windows.Devices.Sms.ISmsTextMessage2 */
-/* Windows.Devices.Sms.ISmsVoicemailMessage */
-/* Windows.Devices.Sms.ISmsWapMessage */
-/* Windows.Devices.Sms.ISmsMessage */
-/* Windows.Devices.Sms.ISmsMessage.get_Id() */
 HRESULT wdesm_sms_message_get__id(WDESM_ISmsMessage *self, uint32_t *value);
 
-/* Windows.Devices.Sms.ISmsMessage.get_MessageClass() */
 HRESULT wdesm_sms_message_get__message_class(WDESM_ISmsMessage *self, WDESM_SmsMessageClass *value);
 
-/* Windows.Devices.Sms.ISmsMessageBase */
-/* Windows.Devices.Sms.ISmsMessageBase.get_MessageType() */
 HRESULT wdesm_sms_message_base_get__message_type(WDESM_ISmsMessageBase *self, WDESM_SmsMessageType *value);
 
-/* Windows.Devices.Sms.ISmsMessageBase.get_DeviceId() */
 HRESULT wdesm_sms_message_base_get__device_id(WDESM_ISmsMessageBase *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Sms.ISmsMessageBase.get_CellularClass() */
 HRESULT wdesm_sms_message_base_get__cellular_class(WDESM_ISmsMessageBase *self, WDESM_CellularClass *value);
 
-/* Windows.Devices.Sms.ISmsMessageBase.get_MessageClass() */
 HRESULT wdesm_sms_message_base_get__message_class(WDESM_ISmsMessageBase *self, WDESM_SmsMessageClass *value);
 
-/* Windows.Devices.Sms.ISmsMessageBase.get_SimIccId() */
 HRESULT wdesm_sms_message_base_get__sim_icc_id(WDESM_ISmsMessageBase *self, cwinrt_hstring *value);
 
 #endif /* CWINRT_WINDOWS_DEVICES_SMS_H */

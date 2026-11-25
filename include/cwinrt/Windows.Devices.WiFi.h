@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WNECO_NetworkAdapter
 #define CWINRT_FWD_WNECO_NetworkAdapter
 typedef struct WNECO_NetworkAdapter WNECO_NetworkAdapter;
@@ -26,7 +25,6 @@ typedef struct WSECR_PasswordCredential WSECR_PasswordCredential;
 typedef struct WNECO_NetworkSecuritySettings WNECO_NetworkSecuritySettings;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDEWI_IWiFiAdapterStatics WDEWI_IWiFiAdapterStatics;
 typedef struct WDEWI_IWiFiOnDemandHotspotNetworkStatics WDEWI_IWiFiOnDemandHotspotNetworkStatics;
 typedef struct WDEWI_WiFiAdapter WDEWI_WiFiAdapter;
@@ -49,7 +47,6 @@ typedef struct WDEWI_IWiFiOnDemandHotspotNetwork WDEWI_IWiFiOnDemandHotspotNetwo
 typedef struct WDEWI_IWiFiOnDemandHotspotNetworkProperties WDEWI_IWiFiOnDemandHotspotNetworkProperties;
 typedef struct WDEWI_IWiFiWpsConfigurationResult WDEWI_IWiFiWpsConfigurationResult;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WFOCO_IVectorView_WDEWI_WiFiAdapter
 #define CWINRT_FWD_WF_IAsyncOperation_WFOCO_IVectorView_WDEWI_WiFiAdapter
 typedef struct WF_IAsyncOperation_WFOCO_IVectorView_WDEWI_WiFiAdapter WF_IAsyncOperation_WFOCO_IVectorView_WDEWI_WiFiAdapter;
@@ -244,7 +241,6 @@ typedef enum WDEWI_WiFiWpsKind {
 } WDEWI_WiFiWpsKind;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -297,237 +293,145 @@ static const IID CWINRT_IID_WDEWI_IWiFiOnDemandHotspotNetworkProperties CWINRT_M
 static const IID CWINRT_IID_WDEWI_IWiFiWpsConfigurationResult CWINRT_MAYBE_UNUSED = { 0x67B49871, 0x17EE, 0x42D1, { 0xB1, 0x4F, 0x5A, 0x11, 0xF1, 0x22, 0x6F, 0xB5 } };
 #endif
 
-/* Methods */
-
-/* Windows.Devices.WiFi.IWiFiAdapterStatics */
-/* Windows.Devices.WiFi.IWiFiAdapterStatics.FindAllAdaptersAsync() */
 HRESULT wdewi_wi_fi_adapter_statics_find_all_adapters_async(WDEWI_IWiFiAdapterStatics *self, WF_IAsyncOperation_WFOCO_IVectorView_WDEWI_WiFiAdapter** out);
 
-/* Windows.Devices.WiFi.IWiFiAdapterStatics.GetDeviceSelector() */
 HRESULT wdewi_wi_fi_adapter_statics_get_device_selector(WDEWI_IWiFiAdapterStatics *self, cwinrt_hstring *out);
 
-/* Windows.Devices.WiFi.IWiFiAdapterStatics.FromIdAsync(deviceId) */
 HRESULT wdewi_wi_fi_adapter_statics_from_id_async(WDEWI_IWiFiAdapterStatics *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDEWI_WiFiAdapter** out);
 
-/* Windows.Devices.WiFi.IWiFiAdapterStatics.RequestAccessAsync() */
 HRESULT wdewi_wi_fi_adapter_statics_request_access_async(WDEWI_IWiFiAdapterStatics *self, WF_IAsyncOperation_WDEWI_WiFiAccessStatus** out);
 
-/* Windows.Devices.WiFi.IWiFiOnDemandHotspotNetworkStatics */
-/* Windows.Devices.WiFi.IWiFiOnDemandHotspotNetworkStatics.GetOrCreateById(networkId) */
 HRESULT wdewi_wi_fi_on_demand_hotspot_network_statics_get_or_create_by_id(WDEWI_IWiFiOnDemandHotspotNetworkStatics *self, GUID networkId, WDEWI_WiFiOnDemandHotspotNetwork** out);
 
-/* activate Windows.Devices.WiFi.WiFiAdapter */
 HRESULT wdewi_wi_fi_adapter_new(WDEWI_WiFiAdapter **out);
 
-/* Windows.Devices.WiFi.WiFiAdapter */
-/* Windows.Devices.WiFi.WiFiAdapter.get_NetworkAdapter() */
 HRESULT wdewi_wi_fi_adapter_get__network_adapter(WDEWI_WiFiAdapter *self, WNECO_NetworkAdapter** value);
 
-/* Windows.Devices.WiFi.WiFiAdapter.ScanAsync() */
 HRESULT wdewi_wi_fi_adapter_scan_async(WDEWI_WiFiAdapter *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.WiFi.WiFiAdapter.get_NetworkReport() */
 HRESULT wdewi_wi_fi_adapter_get__network_report(WDEWI_WiFiAdapter *self, WDEWI_WiFiNetworkReport** value);
 
-/* Windows.Devices.WiFi.WiFiAdapter.ConnectAsync(availableNetwork, reconnectionKind) */
 HRESULT wdewi_wi_fi_adapter_connect_async(WDEWI_WiFiAdapter *self, WDEWI_WiFiAvailableNetwork* availableNetwork, WDEWI_WiFiReconnectionKind reconnectionKind, WF_IAsyncOperation_WDEWI_WiFiConnectionResult** out);
 
-/* Windows.Devices.WiFi.WiFiAdapter.ConnectAsync(availableNetwork, reconnectionKind, passwordCredential) */
 HRESULT wdewi_wi_fi_adapter_connect_async_p_wi_fi_reconnection_kind_p_p(WDEWI_WiFiAdapter *self, WDEWI_WiFiAvailableNetwork* availableNetwork, WDEWI_WiFiReconnectionKind reconnectionKind, WSECR_PasswordCredential* passwordCredential, WF_IAsyncOperation_WDEWI_WiFiConnectionResult** out);
 
-/* Windows.Devices.WiFi.WiFiAdapter.ConnectAsync(availableNetwork, reconnectionKind, passwordCredential, ssid) */
 HRESULT wdewi_wi_fi_adapter_connect_async_p_wi_fi_reconnection_kind_p_str_p(WDEWI_WiFiAdapter *self, WDEWI_WiFiAvailableNetwork* availableNetwork, WDEWI_WiFiReconnectionKind reconnectionKind, WSECR_PasswordCredential* passwordCredential, cwinrt_hstring ssid, WF_IAsyncOperation_WDEWI_WiFiConnectionResult** out);
 
-/* Windows.Devices.WiFi.WiFiAdapter.Disconnect() */
 HRESULT wdewi_wi_fi_adapter_disconnect(WDEWI_WiFiAdapter *self);
 
-/* Windows.Devices.WiFi.WiFiAdapter.GetWpsConfigurationAsync(availableNetwork) */
 HRESULT wdewi_wi_fi_adapter_get_wps_configuration_async(WDEWI_WiFiAdapter *self, WDEWI_WiFiAvailableNetwork* availableNetwork, WF_IAsyncOperation_WDEWI_WiFiWpsConfigurationResult** out);
 
-/* Windows.Devices.WiFi.WiFiAdapter.ConnectAsync(availableNetwork, reconnectionKind, passwordCredential, ssid, connectionMethod) */
 HRESULT wdewi_wi_fi_adapter_connect_async_p_wi_fi_reconnection_kind_p_str_wi_f_08b06aab(WDEWI_WiFiAdapter *self, WDEWI_WiFiAvailableNetwork* availableNetwork, WDEWI_WiFiReconnectionKind reconnectionKind, WSECR_PasswordCredential* passwordCredential, cwinrt_hstring ssid, WDEWI_WiFiConnectionMethod connectionMethod, WF_IAsyncOperation_WDEWI_WiFiConnectionResult** out);
 
-/* Windows.Devices.WiFi.WiFiAdapter.FindAllAdaptersAsync() */
 HRESULT wdewi_wi_fi_adapter_find_all_adapters_async(WF_IAsyncOperation_WFOCO_IVectorView_WDEWI_WiFiAdapter** out);
 
-/* Windows.Devices.WiFi.WiFiAdapter.GetDeviceSelector() */
 HRESULT wdewi_wi_fi_adapter_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Devices.WiFi.WiFiAdapter.FromIdAsync(deviceId) */
 HRESULT wdewi_wi_fi_adapter_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDEWI_WiFiAdapter** out);
 
-/* Windows.Devices.WiFi.WiFiAdapter.RequestAccessAsync() */
 HRESULT wdewi_wi_fi_adapter_request_access_async(WF_IAsyncOperation_WDEWI_WiFiAccessStatus** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdewi_wi_fi_adapter_on_available_networks_changed(WDEWI_WiFiAdapter *self, cwinrt_event_fn fn, void *ctx);
 void wdewi_wi_fi_adapter_off_available_networks_changed(WDEWI_WiFiAdapter *self, cwinrt_token token);
 
-/* activate Windows.Devices.WiFi.WiFiAvailableNetwork */
 HRESULT wdewi_wi_fi_available_network_new(WDEWI_WiFiAvailableNetwork **out);
 
-/* Windows.Devices.WiFi.WiFiAvailableNetwork */
-/* Windows.Devices.WiFi.WiFiAvailableNetwork.get_Uptime() */
 HRESULT wdewi_wi_fi_available_network_get__uptime(WDEWI_WiFiAvailableNetwork *self, WF_TimeSpan *value);
 
-/* Windows.Devices.WiFi.WiFiAvailableNetwork.get_Ssid() */
 HRESULT wdewi_wi_fi_available_network_get__ssid(WDEWI_WiFiAvailableNetwork *self, cwinrt_hstring *value);
 
-/* Windows.Devices.WiFi.WiFiAvailableNetwork.get_Bssid() */
 HRESULT wdewi_wi_fi_available_network_get__bssid(WDEWI_WiFiAvailableNetwork *self, cwinrt_hstring *value);
 
-/* Windows.Devices.WiFi.WiFiAvailableNetwork.get_ChannelCenterFrequencyInKilohertz() */
 HRESULT wdewi_wi_fi_available_network_get__channel_center_frequency_in_kilohertz(WDEWI_WiFiAvailableNetwork *self, int32_t *value);
 
-/* Windows.Devices.WiFi.WiFiAvailableNetwork.get_NetworkRssiInDecibelMilliwatts() */
 HRESULT wdewi_wi_fi_available_network_get__network_rssi_in_decibel_milliwatts(WDEWI_WiFiAvailableNetwork *self, double *value);
 
-/* Windows.Devices.WiFi.WiFiAvailableNetwork.get_SignalBars() */
 HRESULT wdewi_wi_fi_available_network_get__signal_bars(WDEWI_WiFiAvailableNetwork *self, uint8_t *value);
 
-/* Windows.Devices.WiFi.WiFiAvailableNetwork.get_NetworkKind() */
 HRESULT wdewi_wi_fi_available_network_get__network_kind(WDEWI_WiFiAvailableNetwork *self, WDEWI_WiFiNetworkKind *value);
 
-/* Windows.Devices.WiFi.WiFiAvailableNetwork.get_PhyKind() */
 HRESULT wdewi_wi_fi_available_network_get__phy_kind(WDEWI_WiFiAvailableNetwork *self, WDEWI_WiFiPhyKind *value);
 
-/* Windows.Devices.WiFi.WiFiAvailableNetwork.get_SecuritySettings() */
 HRESULT wdewi_wi_fi_available_network_get__security_settings(WDEWI_WiFiAvailableNetwork *self, WNECO_NetworkSecuritySettings** value);
 
-/* Windows.Devices.WiFi.WiFiAvailableNetwork.get_BeaconInterval() */
 HRESULT wdewi_wi_fi_available_network_get__beacon_interval(WDEWI_WiFiAvailableNetwork *self, WF_TimeSpan *value);
 
-/* Windows.Devices.WiFi.WiFiAvailableNetwork.get_IsWiFiDirect() */
 HRESULT wdewi_wi_fi_available_network_get__is_wi_fi_direct(WDEWI_WiFiAvailableNetwork *self, BOOL *value);
 
-/* activate Windows.Devices.WiFi.WiFiConnectionResult */
 HRESULT wdewi_wi_fi_connection_result_new(WDEWI_WiFiConnectionResult **out);
 
-/* Windows.Devices.WiFi.WiFiConnectionResult */
-/* Windows.Devices.WiFi.WiFiConnectionResult.get_ConnectionStatus() */
 HRESULT wdewi_wi_fi_connection_result_get__connection_status(WDEWI_WiFiConnectionResult *self, WDEWI_WiFiConnectionStatus *value);
 
-/* activate Windows.Devices.WiFi.WiFiNetworkReport */
 HRESULT wdewi_wi_fi_network_report_new(WDEWI_WiFiNetworkReport **out);
 
-/* Windows.Devices.WiFi.WiFiNetworkReport */
-/* Windows.Devices.WiFi.WiFiNetworkReport.get_Timestamp() */
 HRESULT wdewi_wi_fi_network_report_get__timestamp(WDEWI_WiFiNetworkReport *self, WF_DateTime *value);
 
-/* Windows.Devices.WiFi.WiFiNetworkReport.get_AvailableNetworks() */
 HRESULT wdewi_wi_fi_network_report_get__available_networks(WDEWI_WiFiNetworkReport *self, WFOCO_IVectorView_WDEWI_WiFiAvailableNetwork** value);
 
-/* activate Windows.Devices.WiFi.WiFiOnDemandHotspotConnectTriggerDetails */
 HRESULT wdewi_wi_fi_on_demand_hotspot_connect_trigger_details_new(WDEWI_WiFiOnDemandHotspotConnectTriggerDetails **out);
 
-/* Windows.Devices.WiFi.WiFiOnDemandHotspotConnectTriggerDetails */
-/* Windows.Devices.WiFi.WiFiOnDemandHotspotConnectTriggerDetails.get_RequestedNetwork() */
 HRESULT wdewi_wi_fi_on_demand_hotspot_connect_trigger_details_get__requested_network(WDEWI_WiFiOnDemandHotspotConnectTriggerDetails *self, WDEWI_WiFiOnDemandHotspotNetwork** value);
 
-/* Windows.Devices.WiFi.WiFiOnDemandHotspotConnectTriggerDetails.ReportError(status) */
 HRESULT wdewi_wi_fi_on_demand_hotspot_connect_trigger_details_report_error(WDEWI_WiFiOnDemandHotspotConnectTriggerDetails *self, WDEWI_WiFiOnDemandHotspotConnectStatus status);
 
-/* Windows.Devices.WiFi.WiFiOnDemandHotspotConnectTriggerDetails.ConnectAsync() */
 HRESULT wdewi_wi_fi_on_demand_hotspot_connect_trigger_details_connect_async(WDEWI_WiFiOnDemandHotspotConnectTriggerDetails *self, WF_IAsyncOperation_WDEWI_WiFiOnDemandHotspotConnectionResult** out);
 
-/* Windows.Devices.WiFi.WiFiOnDemandHotspotConnectTriggerDetails.Connect() */
 HRESULT wdewi_wi_fi_on_demand_hotspot_connect_trigger_details_connect(WDEWI_WiFiOnDemandHotspotConnectTriggerDetails *self, WDEWI_WiFiOnDemandHotspotConnectionResult** out);
 
-/* activate Windows.Devices.WiFi.WiFiOnDemandHotspotConnectionResult */
 HRESULT wdewi_wi_fi_on_demand_hotspot_connection_result_new(WDEWI_WiFiOnDemandHotspotConnectionResult **out);
 
-/* Windows.Devices.WiFi.WiFiOnDemandHotspotConnectionResult */
-/* Windows.Devices.WiFi.WiFiOnDemandHotspotConnectionResult.get_Status() */
 HRESULT wdewi_wi_fi_on_demand_hotspot_connection_result_get__status(WDEWI_WiFiOnDemandHotspotConnectionResult *self, WDEWI_WiFiOnDemandHotspotConnectStatus *value);
 
-/* activate Windows.Devices.WiFi.WiFiOnDemandHotspotNetwork */
 HRESULT wdewi_wi_fi_on_demand_hotspot_network_new(WDEWI_WiFiOnDemandHotspotNetwork **out);
 
-/* Windows.Devices.WiFi.WiFiOnDemandHotspotNetwork */
-/* Windows.Devices.WiFi.WiFiOnDemandHotspotNetwork.GetProperties() */
 HRESULT wdewi_wi_fi_on_demand_hotspot_network_get_properties(WDEWI_WiFiOnDemandHotspotNetwork *self, WDEWI_WiFiOnDemandHotspotNetworkProperties** out);
 
-/* Windows.Devices.WiFi.WiFiOnDemandHotspotNetwork.UpdateProperties(newProperties) */
 HRESULT wdewi_wi_fi_on_demand_hotspot_network_update_properties(WDEWI_WiFiOnDemandHotspotNetwork *self, WDEWI_WiFiOnDemandHotspotNetworkProperties* newProperties);
 
-/* Windows.Devices.WiFi.WiFiOnDemandHotspotNetwork.get_Id() */
 HRESULT wdewi_wi_fi_on_demand_hotspot_network_get__id(WDEWI_WiFiOnDemandHotspotNetwork *self, GUID *value);
 
-/* Windows.Devices.WiFi.WiFiOnDemandHotspotNetwork.GetOrCreateById(networkId) */
 HRESULT wdewi_wi_fi_on_demand_hotspot_network_get_or_create_by_id(GUID networkId, WDEWI_WiFiOnDemandHotspotNetwork** out);
 
-/* activate Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties */
 HRESULT wdewi_wi_fi_on_demand_hotspot_network_properties_new(WDEWI_WiFiOnDemandHotspotNetworkProperties **out);
 
-/* Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties */
-/* Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties.get_DisplayName() */
 HRESULT wdewi_wi_fi_on_demand_hotspot_network_properties_get__display_name(WDEWI_WiFiOnDemandHotspotNetworkProperties *self, cwinrt_hstring *value);
 
-/* Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties.put_DisplayName() */
 HRESULT wdewi_wi_fi_on_demand_hotspot_network_properties_put__display_name(WDEWI_WiFiOnDemandHotspotNetworkProperties *self, cwinrt_hstring value);
 
-/* Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties.get_Availability() */
 HRESULT wdewi_wi_fi_on_demand_hotspot_network_properties_get__availability(WDEWI_WiFiOnDemandHotspotNetworkProperties *self, WDEWI_WiFiOnDemandHotspotAvailability *value);
 
-/* Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties.put_Availability() */
 HRESULT wdewi_wi_fi_on_demand_hotspot_network_properties_put__availability(WDEWI_WiFiOnDemandHotspotNetworkProperties *self, WDEWI_WiFiOnDemandHotspotAvailability value);
 
-/* Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties.get_RemainingBatteryPercent() */
 HRESULT wdewi_wi_fi_on_demand_hotspot_network_properties_get__remaining_battery_percent(WDEWI_WiFiOnDemandHotspotNetworkProperties *self, uint32_t** value);
 
-/* Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties.put_RemainingBatteryPercent() */
 HRESULT wdewi_wi_fi_on_demand_hotspot_network_properties_put__remaining_battery_percent(WDEWI_WiFiOnDemandHotspotNetworkProperties *self, uint32_t* value);
 
-/* Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties.get_CellularBars() */
 HRESULT wdewi_wi_fi_on_demand_hotspot_network_properties_get__cellular_bars(WDEWI_WiFiOnDemandHotspotNetworkProperties *self, WDEWI_WiFiOnDemandHotspotCellularBars** value);
 
-/* Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties.put_CellularBars() */
 HRESULT wdewi_wi_fi_on_demand_hotspot_network_properties_put__cellular_bars(WDEWI_WiFiOnDemandHotspotNetworkProperties *self, WDEWI_WiFiOnDemandHotspotCellularBars* value);
 
-/* Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties.get_IsMetered() */
 HRESULT wdewi_wi_fi_on_demand_hotspot_network_properties_get__is_metered(WDEWI_WiFiOnDemandHotspotNetworkProperties *self, BOOL *value);
 
-/* Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties.put_IsMetered() */
 HRESULT wdewi_wi_fi_on_demand_hotspot_network_properties_put__is_metered(WDEWI_WiFiOnDemandHotspotNetworkProperties *self, BOOL value);
 
-/* Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties.get_Ssid() */
 HRESULT wdewi_wi_fi_on_demand_hotspot_network_properties_get__ssid(WDEWI_WiFiOnDemandHotspotNetworkProperties *self, cwinrt_hstring *value);
 
-/* Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties.put_Ssid() */
 HRESULT wdewi_wi_fi_on_demand_hotspot_network_properties_put__ssid(WDEWI_WiFiOnDemandHotspotNetworkProperties *self, cwinrt_hstring value);
 
-/* Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties.get_Password() */
 HRESULT wdewi_wi_fi_on_demand_hotspot_network_properties_get__password(WDEWI_WiFiOnDemandHotspotNetworkProperties *self, WSECR_PasswordCredential** value);
 
-/* Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties.put_Password() */
 HRESULT wdewi_wi_fi_on_demand_hotspot_network_properties_put__password(WDEWI_WiFiOnDemandHotspotNetworkProperties *self, WSECR_PasswordCredential* value);
 
-/* activate Windows.Devices.WiFi.WiFiWpsConfigurationResult */
 HRESULT wdewi_wi_fi_wps_configuration_result_new(WDEWI_WiFiWpsConfigurationResult **out);
 
-/* Windows.Devices.WiFi.WiFiWpsConfigurationResult */
-/* Windows.Devices.WiFi.WiFiWpsConfigurationResult.get_Status() */
 HRESULT wdewi_wi_fi_wps_configuration_result_get__status(WDEWI_WiFiWpsConfigurationResult *self, WDEWI_WiFiWpsConfigurationStatus *value);
 
-/* Windows.Devices.WiFi.WiFiWpsConfigurationResult.get_SupportedWpsKinds() */
 HRESULT wdewi_wi_fi_wps_configuration_result_get__supported_wps_kinds(WDEWI_WiFiWpsConfigurationResult *self, WFOCO_IVectorView_WDEWI_WiFiWpsKind** value);
 
-/* Windows.Devices.WiFi.IWiFiAdapter */
-/* Windows.Devices.WiFi.IWiFiAdapter2 */
-/* Windows.Devices.WiFi.IWiFiAdapter2.GetWpsConfigurationAsync(availableNetwork) */
 HRESULT wdewi_wi_fi_adapter_2_get_wps_configuration_async(WDEWI_IWiFiAdapter_2 *self, WDEWI_WiFiAvailableNetwork* availableNetwork, WF_IAsyncOperation_WDEWI_WiFiWpsConfigurationResult** out);
 
-/* Windows.Devices.WiFi.IWiFiAdapter2.ConnectAsync(availableNetwork, reconnectionKind, passwordCredential, ssid, connectionMethod) */
 HRESULT wdewi_wi_fi_adapter_2_connect_async(WDEWI_IWiFiAdapter_2 *self, WDEWI_WiFiAvailableNetwork* availableNetwork, WDEWI_WiFiReconnectionKind reconnectionKind, WSECR_PasswordCredential* passwordCredential, cwinrt_hstring ssid, WDEWI_WiFiConnectionMethod connectionMethod, WF_IAsyncOperation_WDEWI_WiFiConnectionResult** out);
 
-/* Windows.Devices.WiFi.IWiFiAvailableNetwork */
-/* Windows.Devices.WiFi.IWiFiConnectionResult */
-/* Windows.Devices.WiFi.IWiFiNetworkReport */
-/* Windows.Devices.WiFi.IWiFiOnDemandHotspotConnectTriggerDetails */
-/* Windows.Devices.WiFi.IWiFiOnDemandHotspotConnectionResult */
-/* Windows.Devices.WiFi.IWiFiOnDemandHotspotNetwork */
-/* Windows.Devices.WiFi.IWiFiOnDemandHotspotNetworkProperties */
-/* Windows.Devices.WiFi.IWiFiWpsConfigurationResult */
 #endif /* CWINRT_WINDOWS_DEVICES_WIFI_H */

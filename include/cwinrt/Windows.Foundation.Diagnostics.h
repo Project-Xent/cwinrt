@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WS_StorageFile
 #define CWINRT_FWD_WS_StorageFile
 typedef struct WS_StorageFile WS_StorageFile;
@@ -22,7 +21,6 @@ typedef struct WS_StorageFile WS_StorageFile;
 typedef struct WS_IStorageFolder WS_IStorageFolder;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WFODI_TracingStatusChangedEventArgs WFODI_TracingStatusChangedEventArgs;
 typedef struct WFODI_ILoggingChannelOptionsFactory WFODI_ILoggingChannelOptionsFactory;
 typedef struct WFODI_ILoggingChannelFactory_2 WFODI_ILoggingChannelFactory_2;
@@ -59,7 +57,6 @@ typedef struct WFODI_ILoggingChannel WFODI_ILoggingChannel;
 typedef struct WFODI_ILoggingActivity WFODI_ILoggingActivity;
 typedef struct WFODI_ILoggingTarget WFODI_ILoggingTarget;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WFODI_ErrorDetails
 #define CWINRT_FWD_WF_IAsyncOperation_WFODI_ErrorDetails
 typedef struct WF_IAsyncOperation_WFODI_ErrorDetails WF_IAsyncOperation_WFODI_ErrorDetails;
@@ -209,7 +206,6 @@ typedef enum WFODI_ErrorOptions {
 } WFODI_ErrorOptions;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -306,773 +302,495 @@ static const IID CWINRT_IID_WFODI_ILoggingActivity CWINRT_MAYBE_UNUSED = { 0xBC0
 static const IID CWINRT_IID_WFODI_ILoggingTarget CWINRT_MAYBE_UNUSED = { 0x65F16C35, 0xE388, 0x4E26, { 0xB1, 0x7A, 0xF5, 0x1C, 0xD3, 0xA8, 0x39, 0x16 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Foundation.Diagnostics.TracingStatusChangedEventArgs */
 HRESULT wfodi_tracing_status_changed_event_args_new(WFODI_TracingStatusChangedEventArgs **out);
 
-/* Windows.Foundation.Diagnostics.TracingStatusChangedEventArgs */
-/* Windows.Foundation.Diagnostics.TracingStatusChangedEventArgs.get_Enabled() */
 HRESULT wfodi_tracing_status_changed_event_args_get__enabled(WFODI_TracingStatusChangedEventArgs *self, BOOL *value);
 
-/* Windows.Foundation.Diagnostics.TracingStatusChangedEventArgs.get_TraceLevel() */
 HRESULT wfodi_tracing_status_changed_event_args_get__trace_level(WFODI_TracingStatusChangedEventArgs *self, WFODI_CausalityTraceLevel *value);
 
-/* Windows.Foundation.Diagnostics.ILoggingChannelOptionsFactory */
-/* Windows.Foundation.Diagnostics.ILoggingChannelOptionsFactory.Create(group) */
 HRESULT wfodi_logging_channel_options_factory_create(WFODI_ILoggingChannelOptionsFactory *self, GUID group, WFODI_LoggingChannelOptions** out);
 
-/* Windows.Foundation.Diagnostics.ILoggingChannelFactory2 */
-/* Windows.Foundation.Diagnostics.ILoggingChannelFactory2.CreateWithOptions(name, options) */
 HRESULT wfodi_logging_channel_factory_2_create_with_options(WFODI_ILoggingChannelFactory_2 *self, cwinrt_hstring name, WFODI_LoggingChannelOptions* options, WFODI_LoggingChannel** out);
 
-/* Windows.Foundation.Diagnostics.ILoggingChannelFactory2.CreateWithOptionsAndId(name, options, id) */
 HRESULT wfodi_logging_channel_factory_2_create_with_options_and_id(WFODI_ILoggingChannelFactory_2 *self, cwinrt_hstring name, WFODI_LoggingChannelOptions* options, GUID id, WFODI_LoggingChannel** out);
 
-/* Windows.Foundation.Diagnostics.ILoggingChannelFactory */
-/* Windows.Foundation.Diagnostics.ILoggingChannelFactory.Create(name) */
 HRESULT wfodi_logging_channel_factory_create(WFODI_ILoggingChannelFactory *self, cwinrt_hstring name, WFODI_LoggingChannel** out);
 
-/* Windows.Foundation.Diagnostics.ILoggingActivityFactory */
-/* Windows.Foundation.Diagnostics.ILoggingActivityFactory.CreateLoggingActivity(activityName, loggingChannel) */
 HRESULT wfodi_logging_activity_factory_create_logging_activity(WFODI_ILoggingActivityFactory *self, cwinrt_hstring activityName, WFODI_ILoggingChannel* loggingChannel, WFODI_LoggingActivity** out);
 
-/* Windows.Foundation.Diagnostics.ILoggingActivityFactory.CreateLoggingActivityWithLevel(activityName, loggingChannel, level) */
 HRESULT wfodi_logging_activity_factory_create_logging_activity_with_level(WFODI_ILoggingActivityFactory *self, cwinrt_hstring activityName, WFODI_ILoggingChannel* loggingChannel, WFODI_LoggingLevel level, WFODI_LoggingActivity** out);
 
-/* Windows.Foundation.Diagnostics.IFileLoggingSessionFactory */
-/* Windows.Foundation.Diagnostics.IFileLoggingSessionFactory.Create(name) */
 HRESULT wfodi_file_logging_session_factory_create(WFODI_IFileLoggingSessionFactory *self, cwinrt_hstring name, WFODI_FileLoggingSession** out);
 
-/* activate Windows.Foundation.Diagnostics.RuntimeBrokerErrorSettings */
 HRESULT wfodi_runtime_broker_error_settings_new(WFODI_RuntimeBrokerErrorSettings **out);
 
-/* Windows.Foundation.Diagnostics.RuntimeBrokerErrorSettings */
-/* Windows.Foundation.Diagnostics.RuntimeBrokerErrorSettings.SetErrorOptions() */
 HRESULT wfodi_runtime_broker_error_settings_set_error_options(WFODI_RuntimeBrokerErrorSettings *self, WFODI_ErrorOptions value);
 
-/* Windows.Foundation.Diagnostics.RuntimeBrokerErrorSettings.GetErrorOptions() */
 HRESULT wfodi_runtime_broker_error_settings_get_error_options(WFODI_RuntimeBrokerErrorSettings *self, WFODI_ErrorOptions *out);
 
-/* Windows.Foundation.Diagnostics.IErrorDetailsStatics */
-/* Windows.Foundation.Diagnostics.IErrorDetailsStatics.CreateFromHResultAsync(errorCode) */
 HRESULT wfodi_error_details_statics_create_from_h_result_async(WFODI_IErrorDetailsStatics *self, int32_t errorCode, WF_IAsyncOperation_WFODI_ErrorDetails** out);
 
-/* Windows.Foundation.Diagnostics.IAsyncCausalityTracerStatics */
-/* Windows.Foundation.Diagnostics.IAsyncCausalityTracerStatics.TraceOperationCreation(traceLevel, source, platformId, operationId, operationName, relatedContext) */
 HRESULT wfodi_async_causality_tracer_statics_trace_operation_creation(WFODI_IAsyncCausalityTracerStatics *self, WFODI_CausalityTraceLevel traceLevel, WFODI_CausalitySource source, GUID platformId, uint64_t operationId, cwinrt_hstring operationName, uint64_t relatedContext);
 
-/* Windows.Foundation.Diagnostics.IAsyncCausalityTracerStatics.TraceOperationCompletion(traceLevel, source, platformId, operationId, status) */
 HRESULT wfodi_async_causality_tracer_statics_trace_operation_completion(WFODI_IAsyncCausalityTracerStatics *self, WFODI_CausalityTraceLevel traceLevel, WFODI_CausalitySource source, GUID platformId, uint64_t operationId, WF_AsyncStatus status);
 
-/* Windows.Foundation.Diagnostics.IAsyncCausalityTracerStatics.TraceOperationRelation(traceLevel, source, platformId, operationId, relation) */
 HRESULT wfodi_async_causality_tracer_statics_trace_operation_relation(WFODI_IAsyncCausalityTracerStatics *self, WFODI_CausalityTraceLevel traceLevel, WFODI_CausalitySource source, GUID platformId, uint64_t operationId, WFODI_CausalityRelation relation);
 
-/* Windows.Foundation.Diagnostics.IAsyncCausalityTracerStatics.TraceSynchronousWorkStart(traceLevel, source, platformId, operationId, work) */
 HRESULT wfodi_async_causality_tracer_statics_trace_synchronous_work_start(WFODI_IAsyncCausalityTracerStatics *self, WFODI_CausalityTraceLevel traceLevel, WFODI_CausalitySource source, GUID platformId, uint64_t operationId, WFODI_CausalitySynchronousWork work);
 
-/* Windows.Foundation.Diagnostics.IAsyncCausalityTracerStatics.TraceSynchronousWorkCompletion(traceLevel, source, work) */
 HRESULT wfodi_async_causality_tracer_statics_trace_synchronous_work_completion(WFODI_IAsyncCausalityTracerStatics *self, WFODI_CausalityTraceLevel traceLevel, WFODI_CausalitySource source, WFODI_CausalitySynchronousWork work);
 
-/* activate Windows.Foundation.Diagnostics.FileLoggingSession */
 HRESULT wfodi_file_logging_session_new(WFODI_FileLoggingSession **out);
 
-/* Windows.Foundation.Diagnostics.FileLoggingSession */
-/* Windows.Foundation.Diagnostics.FileLoggingSession.get_Name() */
 HRESULT wfodi_file_logging_session_get__name(WFODI_FileLoggingSession *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.Diagnostics.FileLoggingSession.AddLoggingChannel(loggingChannel) */
 HRESULT wfodi_file_logging_session_add_logging_channel(WFODI_FileLoggingSession *self, WFODI_ILoggingChannel* loggingChannel);
 
-/* Windows.Foundation.Diagnostics.FileLoggingSession.AddLoggingChannel(loggingChannel, maxLevel) */
 HRESULT wfodi_file_logging_session_add_logging_channel_p_logging_level(WFODI_FileLoggingSession *self, WFODI_ILoggingChannel* loggingChannel, WFODI_LoggingLevel maxLevel);
 
-/* Windows.Foundation.Diagnostics.FileLoggingSession.RemoveLoggingChannel(loggingChannel) */
 HRESULT wfodi_file_logging_session_remove_logging_channel(WFODI_FileLoggingSession *self, WFODI_ILoggingChannel* loggingChannel);
 
-/* Windows.Foundation.Diagnostics.FileLoggingSession.CloseAndSaveToFileAsync() */
 HRESULT wfodi_file_logging_session_close_and_save_to_file_async(WFODI_FileLoggingSession *self, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Foundation.Diagnostics.FileLoggingSession.Close() */
 HRESULT wfodi_file_logging_session_close(WFODI_FileLoggingSession *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wfodi_file_logging_session_on_log_file_generated(WFODI_FileLoggingSession *self, cwinrt_event_fn fn, void *ctx);
 void wfodi_file_logging_session_off_log_file_generated(WFODI_FileLoggingSession *self, cwinrt_token token);
 
-/* activate Windows.Foundation.Diagnostics.ErrorDetails */
 HRESULT wfodi_error_details_new(WFODI_ErrorDetails **out);
 
-/* Windows.Foundation.Diagnostics.ErrorDetails */
-/* Windows.Foundation.Diagnostics.ErrorDetails.get_Description() */
 HRESULT wfodi_error_details_get__description(WFODI_ErrorDetails *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.Diagnostics.ErrorDetails.get_LongDescription() */
 HRESULT wfodi_error_details_get__long_description(WFODI_ErrorDetails *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.Diagnostics.ErrorDetails.get_HelpUri() */
 HRESULT wfodi_error_details_get__help_uri(WFODI_ErrorDetails *self, WF_Uri** value);
 
-/* Windows.Foundation.Diagnostics.ErrorDetails.CreateFromHResultAsync(errorCode) */
 HRESULT wfodi_error_details_create_from_h_result_async(int32_t errorCode, WF_IAsyncOperation_WFODI_ErrorDetails** out);
 
-/* activate Windows.Foundation.Diagnostics.AsyncCausalityTracer */
 HRESULT wfodi_async_causality_tracer_new(WFODI_AsyncCausalityTracer **out);
 
-/* Windows.Foundation.Diagnostics.AsyncCausalityTracer */
-/* Windows.Foundation.Diagnostics.AsyncCausalityTracer.TraceOperationCreation(traceLevel, source, platformId, operationId, operationName, relatedContext) */
 HRESULT wfodi_async_causality_tracer_trace_operation_creation(WFODI_CausalityTraceLevel traceLevel, WFODI_CausalitySource source, GUID platformId, uint64_t operationId, cwinrt_hstring operationName, uint64_t relatedContext);
 
-/* Windows.Foundation.Diagnostics.AsyncCausalityTracer.TraceOperationCompletion(traceLevel, source, platformId, operationId, status) */
 HRESULT wfodi_async_causality_tracer_trace_operation_completion(WFODI_CausalityTraceLevel traceLevel, WFODI_CausalitySource source, GUID platformId, uint64_t operationId, WF_AsyncStatus status);
 
-/* Windows.Foundation.Diagnostics.AsyncCausalityTracer.TraceOperationRelation(traceLevel, source, platformId, operationId, relation) */
 HRESULT wfodi_async_causality_tracer_trace_operation_relation(WFODI_CausalityTraceLevel traceLevel, WFODI_CausalitySource source, GUID platformId, uint64_t operationId, WFODI_CausalityRelation relation);
 
-/* Windows.Foundation.Diagnostics.AsyncCausalityTracer.TraceSynchronousWorkStart(traceLevel, source, platformId, operationId, work) */
 HRESULT wfodi_async_causality_tracer_trace_synchronous_work_start(WFODI_CausalityTraceLevel traceLevel, WFODI_CausalitySource source, GUID platformId, uint64_t operationId, WFODI_CausalitySynchronousWork work);
 
-/* Windows.Foundation.Diagnostics.AsyncCausalityTracer.TraceSynchronousWorkCompletion(traceLevel, source, work) */
 HRESULT wfodi_async_causality_tracer_trace_synchronous_work_completion(WFODI_CausalityTraceLevel traceLevel, WFODI_CausalitySource source, WFODI_CausalitySynchronousWork work);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wfodi_async_causality_tracer_on_tracing_status_changed(WFODI_AsyncCausalityTracer *self, cwinrt_event_fn fn, void *ctx);
 void wfodi_async_causality_tracer_off_tracing_status_changed(WFODI_AsyncCausalityTracer *self, cwinrt_token token);
 
-/* activate Windows.Foundation.Diagnostics.LoggingSession */
 HRESULT wfodi_logging_session_new(WFODI_LoggingSession **out);
 
-/* Windows.Foundation.Diagnostics.LoggingSession */
-/* Windows.Foundation.Diagnostics.LoggingSession.get_Name() */
 HRESULT wfodi_logging_session_get__name(WFODI_LoggingSession *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.Diagnostics.LoggingSession.SaveToFileAsync(folder, fileName) */
 HRESULT wfodi_logging_session_save_to_file_async(WFODI_LoggingSession *self, WS_IStorageFolder* folder, cwinrt_hstring fileName, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Foundation.Diagnostics.LoggingSession.AddLoggingChannel(loggingChannel) */
 HRESULT wfodi_logging_session_add_logging_channel(WFODI_LoggingSession *self, WFODI_ILoggingChannel* loggingChannel);
 
-/* Windows.Foundation.Diagnostics.LoggingSession.AddLoggingChannel(loggingChannel, maxLevel) */
 HRESULT wfodi_logging_session_add_logging_channel_p_logging_level(WFODI_LoggingSession *self, WFODI_ILoggingChannel* loggingChannel, WFODI_LoggingLevel maxLevel);
 
-/* Windows.Foundation.Diagnostics.LoggingSession.RemoveLoggingChannel(loggingChannel) */
 HRESULT wfodi_logging_session_remove_logging_channel(WFODI_LoggingSession *self, WFODI_ILoggingChannel* loggingChannel);
 
-/* Windows.Foundation.Diagnostics.LoggingSession.Close() */
 HRESULT wfodi_logging_session_close(WFODI_LoggingSession *self);
 
-/* activate Windows.Foundation.Diagnostics.LoggingOptions */
 HRESULT wfodi_logging_options_new(WFODI_LoggingOptions **out);
 
-/* Windows.Foundation.Diagnostics.LoggingOptions */
-/* Windows.Foundation.Diagnostics.LoggingOptions.get_Keywords() */
 HRESULT wfodi_logging_options_get__keywords(WFODI_LoggingOptions *self, int64_t *value);
 
-/* Windows.Foundation.Diagnostics.LoggingOptions.put_Keywords() */
 HRESULT wfodi_logging_options_put__keywords(WFODI_LoggingOptions *self, int64_t value);
 
-/* Windows.Foundation.Diagnostics.LoggingOptions.get_Tags() */
 HRESULT wfodi_logging_options_get__tags(WFODI_LoggingOptions *self, int32_t *value);
 
-/* Windows.Foundation.Diagnostics.LoggingOptions.put_Tags() */
 HRESULT wfodi_logging_options_put__tags(WFODI_LoggingOptions *self, int32_t value);
 
-/* Windows.Foundation.Diagnostics.LoggingOptions.get_Task() */
 HRESULT wfodi_logging_options_get__task(WFODI_LoggingOptions *self, int16_t *value);
 
-/* Windows.Foundation.Diagnostics.LoggingOptions.put_Task() */
 HRESULT wfodi_logging_options_put__task(WFODI_LoggingOptions *self, int16_t value);
 
-/* Windows.Foundation.Diagnostics.LoggingOptions.get_Opcode() */
 HRESULT wfodi_logging_options_get__opcode(WFODI_LoggingOptions *self, WFODI_LoggingOpcode *value);
 
-/* Windows.Foundation.Diagnostics.LoggingOptions.put_Opcode() */
 HRESULT wfodi_logging_options_put__opcode(WFODI_LoggingOptions *self, WFODI_LoggingOpcode value);
 
-/* Windows.Foundation.Diagnostics.LoggingOptions.get_ActivityId() */
 HRESULT wfodi_logging_options_get__activity_id(WFODI_LoggingOptions *self, GUID *value);
 
-/* Windows.Foundation.Diagnostics.LoggingOptions.put_ActivityId() */
 HRESULT wfodi_logging_options_put__activity_id(WFODI_LoggingOptions *self, GUID value);
 
-/* Windows.Foundation.Diagnostics.LoggingOptions.get_RelatedActivityId() */
 HRESULT wfodi_logging_options_get__related_activity_id(WFODI_LoggingOptions *self, GUID *value);
 
-/* Windows.Foundation.Diagnostics.LoggingOptions.put_RelatedActivityId() */
 HRESULT wfodi_logging_options_put__related_activity_id(WFODI_LoggingOptions *self, GUID value);
 
-/* activate Windows.Foundation.Diagnostics.LoggingFields */
 HRESULT wfodi_logging_fields_new(WFODI_LoggingFields **out);
 
-/* Windows.Foundation.Diagnostics.LoggingFields */
-/* Windows.Foundation.Diagnostics.LoggingFields.Clear() */
 HRESULT wfodi_logging_fields_clear(WFODI_LoggingFields *self);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.BeginStruct(name) */
 HRESULT wfodi_logging_fields_begin_struct(WFODI_LoggingFields *self, cwinrt_hstring name);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.BeginStruct(name, tags) */
 HRESULT wfodi_logging_fields_begin_struct_str_i32(WFODI_LoggingFields *self, cwinrt_hstring name, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.EndStruct() */
 HRESULT wfodi_logging_fields_end_struct(WFODI_LoggingFields *self);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddEmpty(name) */
 HRESULT wfodi_logging_fields_add_empty(WFODI_LoggingFields *self, cwinrt_hstring name);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddEmpty(name, format) */
 HRESULT wfodi_logging_fields_add_empty_str_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddEmpty(name, format, tags) */
 HRESULT wfodi_logging_fields_add_empty_str_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddUInt8(name) */
 HRESULT wfodi_logging_fields_add_u_int8(WFODI_LoggingFields *self, cwinrt_hstring name, uint8_t value);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddUInt8(name, format) */
 HRESULT wfodi_logging_fields_add_u_int8_str_u8_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, uint8_t value, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddUInt8(name, format, tags) */
 HRESULT wfodi_logging_fields_add_u_int8_str_u8_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, uint8_t value, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddUInt8Array(name) */
 HRESULT wfodi_logging_fields_add_u_int8_array(WFODI_LoggingFields *self, cwinrt_hstring name, uint8_t *value, uint32_t value_len);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddUInt8Array(name, format) */
 HRESULT wfodi_logging_fields_add_u_int8_array_str_u8_u32_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, uint8_t *value, uint32_t value_len, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddUInt8Array(name, format, tags) */
 HRESULT wfodi_logging_fields_add_u_int8_array_str_u8_u32_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, uint8_t *value, uint32_t value_len, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddInt16(name) */
 HRESULT wfodi_logging_fields_add_int16(WFODI_LoggingFields *self, cwinrt_hstring name, int16_t value);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddInt16(name, format) */
 HRESULT wfodi_logging_fields_add_int16_str_i16_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, int16_t value, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddInt16(name, format, tags) */
 HRESULT wfodi_logging_fields_add_int16_str_i16_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, int16_t value, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddInt16Array(name) */
 HRESULT wfodi_logging_fields_add_int16_array(WFODI_LoggingFields *self, cwinrt_hstring name, int16_t *value, uint32_t value_len);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddInt16Array(name, format) */
 HRESULT wfodi_logging_fields_add_int16_array_str_i16_u32_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, int16_t *value, uint32_t value_len, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddInt16Array(name, format, tags) */
 HRESULT wfodi_logging_fields_add_int16_array_str_i16_u32_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, int16_t *value, uint32_t value_len, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddUInt16(name) */
 HRESULT wfodi_logging_fields_add_u_int16(WFODI_LoggingFields *self, cwinrt_hstring name, uint16_t value);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddUInt16(name, format) */
 HRESULT wfodi_logging_fields_add_u_int16_str_u16_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, uint16_t value, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddUInt16(name, format, tags) */
 HRESULT wfodi_logging_fields_add_u_int16_str_u16_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, uint16_t value, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddUInt16Array(name) */
 HRESULT wfodi_logging_fields_add_u_int16_array(WFODI_LoggingFields *self, cwinrt_hstring name, uint16_t *value, uint32_t value_len);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddUInt16Array(name, format) */
 HRESULT wfodi_logging_fields_add_u_int16_array_str_u16_u32_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, uint16_t *value, uint32_t value_len, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddUInt16Array(name, format, tags) */
 HRESULT wfodi_logging_fields_add_u_int16_array_str_u16_u32_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, uint16_t *value, uint32_t value_len, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddInt32(name) */
 HRESULT wfodi_logging_fields_add_int32(WFODI_LoggingFields *self, cwinrt_hstring name, int32_t value);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddInt32(name, format) */
 HRESULT wfodi_logging_fields_add_int32_str_i32_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, int32_t value, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddInt32(name, format, tags) */
 HRESULT wfodi_logging_fields_add_int32_str_i32_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, int32_t value, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddInt32Array(name) */
 HRESULT wfodi_logging_fields_add_int32_array(WFODI_LoggingFields *self, cwinrt_hstring name, int32_t *value, uint32_t value_len);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddInt32Array(name, format) */
 HRESULT wfodi_logging_fields_add_int32_array_str_i32_u32_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, int32_t *value, uint32_t value_len, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddInt32Array(name, format, tags) */
 HRESULT wfodi_logging_fields_add_int32_array_str_i32_u32_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, int32_t *value, uint32_t value_len, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddUInt32(name) */
 HRESULT wfodi_logging_fields_add_u_int32(WFODI_LoggingFields *self, cwinrt_hstring name, uint32_t value);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddUInt32(name, format) */
 HRESULT wfodi_logging_fields_add_u_int32_str_u32_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, uint32_t value, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddUInt32(name, format, tags) */
 HRESULT wfodi_logging_fields_add_u_int32_str_u32_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, uint32_t value, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddUInt32Array(name) */
 HRESULT wfodi_logging_fields_add_u_int32_array(WFODI_LoggingFields *self, cwinrt_hstring name, uint32_t *value, uint32_t value_len);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddUInt32Array(name, format) */
 HRESULT wfodi_logging_fields_add_u_int32_array_str_u32_u32_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, uint32_t *value, uint32_t value_len, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddUInt32Array(name, format, tags) */
 HRESULT wfodi_logging_fields_add_u_int32_array_str_u32_u32_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, uint32_t *value, uint32_t value_len, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddInt64(name) */
 HRESULT wfodi_logging_fields_add_int64(WFODI_LoggingFields *self, cwinrt_hstring name, int64_t value);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddInt64(name, format) */
 HRESULT wfodi_logging_fields_add_int64_str_i64_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, int64_t value, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddInt64(name, format, tags) */
 HRESULT wfodi_logging_fields_add_int64_str_i64_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, int64_t value, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddInt64Array(name) */
 HRESULT wfodi_logging_fields_add_int64_array(WFODI_LoggingFields *self, cwinrt_hstring name, int64_t *value, uint32_t value_len);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddInt64Array(name, format) */
 HRESULT wfodi_logging_fields_add_int64_array_str_i64_u32_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, int64_t *value, uint32_t value_len, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddInt64Array(name, format, tags) */
 HRESULT wfodi_logging_fields_add_int64_array_str_i64_u32_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, int64_t *value, uint32_t value_len, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddUInt64(name) */
 HRESULT wfodi_logging_fields_add_u_int64(WFODI_LoggingFields *self, cwinrt_hstring name, uint64_t value);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddUInt64(name, format) */
 HRESULT wfodi_logging_fields_add_u_int64_str_u64_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, uint64_t value, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddUInt64(name, format, tags) */
 HRESULT wfodi_logging_fields_add_u_int64_str_u64_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, uint64_t value, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddUInt64Array(name) */
 HRESULT wfodi_logging_fields_add_u_int64_array(WFODI_LoggingFields *self, cwinrt_hstring name, uint64_t *value, uint32_t value_len);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddUInt64Array(name, format) */
 HRESULT wfodi_logging_fields_add_u_int64_array_str_u64_u32_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, uint64_t *value, uint32_t value_len, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddUInt64Array(name, format, tags) */
 HRESULT wfodi_logging_fields_add_u_int64_array_str_u64_u32_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, uint64_t *value, uint32_t value_len, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddSingle(name) */
 HRESULT wfodi_logging_fields_add_single(WFODI_LoggingFields *self, cwinrt_hstring name, float value);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddSingle(name, format) */
 HRESULT wfodi_logging_fields_add_single_str_f32_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, float value, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddSingle(name, format, tags) */
 HRESULT wfodi_logging_fields_add_single_str_f32_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, float value, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddSingleArray(name) */
 HRESULT wfodi_logging_fields_add_single_array(WFODI_LoggingFields *self, cwinrt_hstring name, float *value, uint32_t value_len);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddSingleArray(name, format) */
 HRESULT wfodi_logging_fields_add_single_array_str_f32_u32_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, float *value, uint32_t value_len, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddSingleArray(name, format, tags) */
 HRESULT wfodi_logging_fields_add_single_array_str_f32_u32_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, float *value, uint32_t value_len, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddDouble(name) */
 HRESULT wfodi_logging_fields_add_double(WFODI_LoggingFields *self, cwinrt_hstring name, double value);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddDouble(name, format) */
 HRESULT wfodi_logging_fields_add_double_str_f64_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, double value, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddDouble(name, format, tags) */
 HRESULT wfodi_logging_fields_add_double_str_f64_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, double value, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddDoubleArray(name) */
 HRESULT wfodi_logging_fields_add_double_array(WFODI_LoggingFields *self, cwinrt_hstring name, double *value, uint32_t value_len);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddDoubleArray(name, format) */
 HRESULT wfodi_logging_fields_add_double_array_str_f64_u32_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, double *value, uint32_t value_len, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddDoubleArray(name, format, tags) */
 HRESULT wfodi_logging_fields_add_double_array_str_f64_u32_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, double *value, uint32_t value_len, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddChar16(name) */
 HRESULT wfodi_logging_fields_add_char16(WFODI_LoggingFields *self, cwinrt_hstring name, WCHAR value);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddChar16(name, format) */
 HRESULT wfodi_logging_fields_add_char16_str_w_c_h_a_r_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, WCHAR value, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddChar16(name, format, tags) */
 HRESULT wfodi_logging_fields_add_char16_str_w_c_h_a_r_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, WCHAR value, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddChar16Array(name) */
 HRESULT wfodi_logging_fields_add_char16_array(WFODI_LoggingFields *self, cwinrt_hstring name, WCHAR *value, uint32_t value_len);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddChar16Array(name, format) */
 HRESULT wfodi_logging_fields_add_char16_array_str_w_c_h_a_r_u32_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, WCHAR *value, uint32_t value_len, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddChar16Array(name, format, tags) */
 HRESULT wfodi_logging_fields_add_char16_array_str_w_c_h_a_r_u32_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, WCHAR *value, uint32_t value_len, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddBoolean(name) */
 HRESULT wfodi_logging_fields_add_boolean(WFODI_LoggingFields *self, cwinrt_hstring name, BOOL value);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddBoolean(name, format) */
 HRESULT wfodi_logging_fields_add_boolean_str_b_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, BOOL value, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddBoolean(name, format, tags) */
 HRESULT wfodi_logging_fields_add_boolean_str_b_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, BOOL value, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddBooleanArray(name) */
 HRESULT wfodi_logging_fields_add_boolean_array(WFODI_LoggingFields *self, cwinrt_hstring name, BOOL *value, uint32_t value_len);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddBooleanArray(name, format) */
 HRESULT wfodi_logging_fields_add_boolean_array_str_b_u32_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, BOOL *value, uint32_t value_len, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddBooleanArray(name, format, tags) */
 HRESULT wfodi_logging_fields_add_boolean_array_str_b_u32_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, BOOL *value, uint32_t value_len, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddString(name) */
 HRESULT wfodi_logging_fields_add_string(WFODI_LoggingFields *self, cwinrt_hstring name, cwinrt_hstring value);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddString(name, format) */
 HRESULT wfodi_logging_fields_add_string_str_str_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, cwinrt_hstring value, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddString(name, format, tags) */
 HRESULT wfodi_logging_fields_add_string_str_str_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, cwinrt_hstring value, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddStringArray(name) */
 HRESULT wfodi_logging_fields_add_string_array(WFODI_LoggingFields *self, cwinrt_hstring name, cwinrt_hstring *value, uint32_t value_len);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddStringArray(name, format) */
 HRESULT wfodi_logging_fields_add_string_array_str_str_u32_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, cwinrt_hstring *value, uint32_t value_len, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddStringArray(name, format, tags) */
 HRESULT wfodi_logging_fields_add_string_array_str_str_u32_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, cwinrt_hstring *value, uint32_t value_len, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddGuid(name) */
 HRESULT wfodi_logging_fields_add_guid(WFODI_LoggingFields *self, cwinrt_hstring name, GUID value);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddGuid(name, format) */
 HRESULT wfodi_logging_fields_add_guid_str_g_u_i_d_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, GUID value, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddGuid(name, format, tags) */
 HRESULT wfodi_logging_fields_add_guid_str_g_u_i_d_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, GUID value, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddGuidArray(name) */
 HRESULT wfodi_logging_fields_add_guid_array(WFODI_LoggingFields *self, cwinrt_hstring name, GUID *value, uint32_t value_len);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddGuidArray(name, format) */
 HRESULT wfodi_logging_fields_add_guid_array_str_g_u_i_d_u32_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, GUID *value, uint32_t value_len, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddGuidArray(name, format, tags) */
 HRESULT wfodi_logging_fields_add_guid_array_str_g_u_i_d_u32_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, GUID *value, uint32_t value_len, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddDateTime(name) */
 HRESULT wfodi_logging_fields_add_date_time(WFODI_LoggingFields *self, cwinrt_hstring name, WF_DateTime value);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddDateTime(name, format) */
 HRESULT wfodi_logging_fields_add_date_time_str_date_time_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, WF_DateTime value, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddDateTime(name, format, tags) */
 HRESULT wfodi_logging_fields_add_date_time_str_date_time_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, WF_DateTime value, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddDateTimeArray(name) */
 HRESULT wfodi_logging_fields_add_date_time_array(WFODI_LoggingFields *self, cwinrt_hstring name, WF_DateTime *value, uint32_t value_len);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddDateTimeArray(name, format) */
 HRESULT wfodi_logging_fields_add_date_time_array_str_date_time_u32_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, WF_DateTime *value, uint32_t value_len, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddDateTimeArray(name, format, tags) */
 HRESULT wfodi_logging_fields_add_date_time_array_str_date_time_u32_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, WF_DateTime *value, uint32_t value_len, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddTimeSpan(name) */
 HRESULT wfodi_logging_fields_add_time_span(WFODI_LoggingFields *self, cwinrt_hstring name, WF_TimeSpan value);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddTimeSpan(name, format) */
 HRESULT wfodi_logging_fields_add_time_span_str_time_span_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, WF_TimeSpan value, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddTimeSpan(name, format, tags) */
 HRESULT wfodi_logging_fields_add_time_span_str_time_span_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, WF_TimeSpan value, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddTimeSpanArray(name) */
 HRESULT wfodi_logging_fields_add_time_span_array(WFODI_LoggingFields *self, cwinrt_hstring name, WF_TimeSpan *value, uint32_t value_len);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddTimeSpanArray(name, format) */
 HRESULT wfodi_logging_fields_add_time_span_array_str_time_span_u32_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, WF_TimeSpan *value, uint32_t value_len, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddTimeSpanArray(name, format, tags) */
 HRESULT wfodi_logging_fields_add_time_span_array_str_time_span_u32_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, WF_TimeSpan *value, uint32_t value_len, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddPoint(name) */
 HRESULT wfodi_logging_fields_add_point(WFODI_LoggingFields *self, cwinrt_hstring name, WF_Point value);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddPoint(name, format) */
 HRESULT wfodi_logging_fields_add_point_str_point_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, WF_Point value, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddPoint(name, format, tags) */
 HRESULT wfodi_logging_fields_add_point_str_point_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, WF_Point value, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddPointArray(name) */
 HRESULT wfodi_logging_fields_add_point_array(WFODI_LoggingFields *self, cwinrt_hstring name, WF_Point *value, uint32_t value_len);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddPointArray(name, format) */
 HRESULT wfodi_logging_fields_add_point_array_str_point_u32_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, WF_Point *value, uint32_t value_len, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddPointArray(name, format, tags) */
 HRESULT wfodi_logging_fields_add_point_array_str_point_u32_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, WF_Point *value, uint32_t value_len, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddSize(name) */
 HRESULT wfodi_logging_fields_add_size(WFODI_LoggingFields *self, cwinrt_hstring name, WF_Size value);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddSize(name, format) */
 HRESULT wfodi_logging_fields_add_size_str_size_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, WF_Size value, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddSize(name, format, tags) */
 HRESULT wfodi_logging_fields_add_size_str_size_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, WF_Size value, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddSizeArray(name) */
 HRESULT wfodi_logging_fields_add_size_array(WFODI_LoggingFields *self, cwinrt_hstring name, WF_Size *value, uint32_t value_len);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddSizeArray(name, format) */
 HRESULT wfodi_logging_fields_add_size_array_str_size_u32_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, WF_Size *value, uint32_t value_len, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddSizeArray(name, format, tags) */
 HRESULT wfodi_logging_fields_add_size_array_str_size_u32_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, WF_Size *value, uint32_t value_len, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddRect(name) */
 HRESULT wfodi_logging_fields_add_rect(WFODI_LoggingFields *self, cwinrt_hstring name, WF_Rect value);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddRect(name, format) */
 HRESULT wfodi_logging_fields_add_rect_str_rect_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, WF_Rect value, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddRect(name, format, tags) */
 HRESULT wfodi_logging_fields_add_rect_str_rect_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, WF_Rect value, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddRectArray(name) */
 HRESULT wfodi_logging_fields_add_rect_array(WFODI_LoggingFields *self, cwinrt_hstring name, WF_Rect *value, uint32_t value_len);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddRectArray(name, format) */
 HRESULT wfodi_logging_fields_add_rect_array_str_rect_u32_logging_field_format(WFODI_LoggingFields *self, cwinrt_hstring name, WF_Rect *value, uint32_t value_len, WFODI_LoggingFieldFormat format);
 
-/* Windows.Foundation.Diagnostics.LoggingFields.AddRectArray(name, format, tags) */
 HRESULT wfodi_logging_fields_add_rect_array_str_rect_u32_logging_field_format_i32(WFODI_LoggingFields *self, cwinrt_hstring name, WF_Rect *value, uint32_t value_len, WFODI_LoggingFieldFormat format, int32_t tags);
 
-/* activate Windows.Foundation.Diagnostics.LoggingChannelOptions */
 HRESULT wfodi_logging_channel_options_new(WFODI_LoggingChannelOptions **out);
 
-/* Windows.Foundation.Diagnostics.LoggingChannelOptions */
-/* Windows.Foundation.Diagnostics.LoggingChannelOptions.get_Group() */
 HRESULT wfodi_logging_channel_options_get__group(WFODI_LoggingChannelOptions *self, GUID *value);
 
-/* Windows.Foundation.Diagnostics.LoggingChannelOptions.put_Group() */
 HRESULT wfodi_logging_channel_options_put__group(WFODI_LoggingChannelOptions *self, GUID value);
 
-/* activate Windows.Foundation.Diagnostics.LoggingChannel */
 HRESULT wfodi_logging_channel_new(WFODI_LoggingChannel **out);
 
-/* Windows.Foundation.Diagnostics.LoggingChannel */
-/* Windows.Foundation.Diagnostics.LoggingChannel.get_Name() */
 HRESULT wfodi_logging_channel_get__name(WFODI_LoggingChannel *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.Diagnostics.LoggingChannel.get_Enabled() */
 HRESULT wfodi_logging_channel_get__enabled(WFODI_LoggingChannel *self, BOOL *value);
 
-/* Windows.Foundation.Diagnostics.LoggingChannel.get_Level() */
 HRESULT wfodi_logging_channel_get__level(WFODI_LoggingChannel *self, WFODI_LoggingLevel *value);
 
-/* Windows.Foundation.Diagnostics.LoggingChannel.LogMessage(eventString) */
 HRESULT wfodi_logging_channel_log_message(WFODI_LoggingChannel *self, cwinrt_hstring eventString);
 
-/* Windows.Foundation.Diagnostics.LoggingChannel.LogMessage(eventString, level) */
 HRESULT wfodi_logging_channel_log_message_str_logging_level(WFODI_LoggingChannel *self, cwinrt_hstring eventString, WFODI_LoggingLevel level);
 
-/* Windows.Foundation.Diagnostics.LoggingChannel.LogValuePair(value1, value2) */
 HRESULT wfodi_logging_channel_log_value_pair(WFODI_LoggingChannel *self, cwinrt_hstring value1, int32_t value2);
 
-/* Windows.Foundation.Diagnostics.LoggingChannel.LogValuePair(value1, value2, level) */
 HRESULT wfodi_logging_channel_log_value_pair_str_i32_logging_level(WFODI_LoggingChannel *self, cwinrt_hstring value1, int32_t value2, WFODI_LoggingLevel level);
 
-/* Windows.Foundation.Diagnostics.LoggingChannel.Close() */
 HRESULT wfodi_logging_channel_close(WFODI_LoggingChannel *self);
 
-/* Windows.Foundation.Diagnostics.LoggingChannel.get_Id() */
 HRESULT wfodi_logging_channel_get__id(WFODI_LoggingChannel *self, GUID *value);
 
-/* Windows.Foundation.Diagnostics.LoggingChannel.IsEnabled() */
 HRESULT wfodi_logging_channel_is_enabled(WFODI_LoggingChannel *self, BOOL *out);
 
-/* Windows.Foundation.Diagnostics.LoggingChannel.IsEnabled(level) */
 HRESULT wfodi_logging_channel_is_enabled_logging_level_b(WFODI_LoggingChannel *self, WFODI_LoggingLevel level, BOOL *out);
 
-/* Windows.Foundation.Diagnostics.LoggingChannel.IsEnabled(level, keywords) */
 HRESULT wfodi_logging_channel_is_enabled_logging_level_i64_b(WFODI_LoggingChannel *self, WFODI_LoggingLevel level, int64_t keywords, BOOL *out);
 
-/* Windows.Foundation.Diagnostics.LoggingChannel.LogEvent(eventName) */
 HRESULT wfodi_logging_channel_log_event(WFODI_LoggingChannel *self, cwinrt_hstring eventName);
 
-/* Windows.Foundation.Diagnostics.LoggingChannel.LogEvent(eventName, fields) */
 HRESULT wfodi_logging_channel_log_event_str_p(WFODI_LoggingChannel *self, cwinrt_hstring eventName, WFODI_LoggingFields* fields);
 
-/* Windows.Foundation.Diagnostics.LoggingChannel.LogEvent(eventName, fields, level) */
 HRESULT wfodi_logging_channel_log_event_str_p_logging_level(WFODI_LoggingChannel *self, cwinrt_hstring eventName, WFODI_LoggingFields* fields, WFODI_LoggingLevel level);
 
-/* Windows.Foundation.Diagnostics.LoggingChannel.LogEvent(eventName, fields, level, options) */
 HRESULT wfodi_logging_channel_log_event_str_p_logging_level_p(WFODI_LoggingChannel *self, cwinrt_hstring eventName, WFODI_LoggingFields* fields, WFODI_LoggingLevel level, WFODI_LoggingOptions* options);
 
-/* Windows.Foundation.Diagnostics.LoggingChannel.StartActivity(startEventName) */
 HRESULT wfodi_logging_channel_start_activity(WFODI_LoggingChannel *self, cwinrt_hstring startEventName, WFODI_LoggingActivity** out);
 
-/* Windows.Foundation.Diagnostics.LoggingChannel.StartActivity(startEventName, fields) */
 HRESULT wfodi_logging_channel_start_activity_str_p_p(WFODI_LoggingChannel *self, cwinrt_hstring startEventName, WFODI_LoggingFields* fields, WFODI_LoggingActivity** out);
 
-/* Windows.Foundation.Diagnostics.LoggingChannel.StartActivity(startEventName, fields, level) */
 HRESULT wfodi_logging_channel_start_activity_str_p_logging_level_p(WFODI_LoggingChannel *self, cwinrt_hstring startEventName, WFODI_LoggingFields* fields, WFODI_LoggingLevel level, WFODI_LoggingActivity** out);
 
-/* Windows.Foundation.Diagnostics.LoggingChannel.StartActivity(startEventName, fields, level, options) */
 HRESULT wfodi_logging_channel_start_activity_str_p_logging_level_p_p(WFODI_LoggingChannel *self, cwinrt_hstring startEventName, WFODI_LoggingFields* fields, WFODI_LoggingLevel level, WFODI_LoggingOptions* options, WFODI_LoggingActivity** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wfodi_logging_channel_on_logging_enabled(WFODI_LoggingChannel *self, cwinrt_event_fn fn, void *ctx);
 void wfodi_logging_channel_off_logging_enabled(WFODI_LoggingChannel *self, cwinrt_token token);
 
-/* activate Windows.Foundation.Diagnostics.LoggingActivity */
 HRESULT wfodi_logging_activity_new(WFODI_LoggingActivity **out);
 
-/* Windows.Foundation.Diagnostics.LoggingActivity */
-/* Windows.Foundation.Diagnostics.LoggingActivity.get_Name() */
 HRESULT wfodi_logging_activity_get__name(WFODI_LoggingActivity *self, cwinrt_hstring *value);
 
-/* Windows.Foundation.Diagnostics.LoggingActivity.get_Id() */
 HRESULT wfodi_logging_activity_get__id(WFODI_LoggingActivity *self, GUID *value);
 
-/* Windows.Foundation.Diagnostics.LoggingActivity.Close() */
 HRESULT wfodi_logging_activity_close(WFODI_LoggingActivity *self);
 
-/* Windows.Foundation.Diagnostics.LoggingActivity.get_Channel() */
 HRESULT wfodi_logging_activity_get__channel(WFODI_LoggingActivity *self, WFODI_LoggingChannel** value);
 
-/* Windows.Foundation.Diagnostics.LoggingActivity.StopActivity(stopEventName) */
 HRESULT wfodi_logging_activity_stop_activity(WFODI_LoggingActivity *self, cwinrt_hstring stopEventName);
 
-/* Windows.Foundation.Diagnostics.LoggingActivity.StopActivity(stopEventName, fields) */
 HRESULT wfodi_logging_activity_stop_activity_str_p(WFODI_LoggingActivity *self, cwinrt_hstring stopEventName, WFODI_LoggingFields* fields);
 
-/* Windows.Foundation.Diagnostics.LoggingActivity.StopActivity(stopEventName, fields, options) */
 HRESULT wfodi_logging_activity_stop_activity_str_p_p(WFODI_LoggingActivity *self, cwinrt_hstring stopEventName, WFODI_LoggingFields* fields, WFODI_LoggingOptions* options);
 
-/* Windows.Foundation.Diagnostics.LoggingActivity.IsEnabled() */
 HRESULT wfodi_logging_activity_is_enabled(WFODI_LoggingActivity *self, BOOL *out);
 
-/* Windows.Foundation.Diagnostics.LoggingActivity.IsEnabled(level) */
 HRESULT wfodi_logging_activity_is_enabled_logging_level_b(WFODI_LoggingActivity *self, WFODI_LoggingLevel level, BOOL *out);
 
-/* Windows.Foundation.Diagnostics.LoggingActivity.IsEnabled(level, keywords) */
 HRESULT wfodi_logging_activity_is_enabled_logging_level_i64_b(WFODI_LoggingActivity *self, WFODI_LoggingLevel level, int64_t keywords, BOOL *out);
 
-/* Windows.Foundation.Diagnostics.LoggingActivity.LogEvent(eventName) */
 HRESULT wfodi_logging_activity_log_event(WFODI_LoggingActivity *self, cwinrt_hstring eventName);
 
-/* Windows.Foundation.Diagnostics.LoggingActivity.LogEvent(eventName, fields) */
 HRESULT wfodi_logging_activity_log_event_str_p(WFODI_LoggingActivity *self, cwinrt_hstring eventName, WFODI_LoggingFields* fields);
 
-/* Windows.Foundation.Diagnostics.LoggingActivity.LogEvent(eventName, fields, level) */
 HRESULT wfodi_logging_activity_log_event_str_p_logging_level(WFODI_LoggingActivity *self, cwinrt_hstring eventName, WFODI_LoggingFields* fields, WFODI_LoggingLevel level);
 
-/* Windows.Foundation.Diagnostics.LoggingActivity.LogEvent(eventName, fields, level, options) */
 HRESULT wfodi_logging_activity_log_event_str_p_logging_level_p(WFODI_LoggingActivity *self, cwinrt_hstring eventName, WFODI_LoggingFields* fields, WFODI_LoggingLevel level, WFODI_LoggingOptions* options);
 
-/* Windows.Foundation.Diagnostics.LoggingActivity.StartActivity(startEventName) */
 HRESULT wfodi_logging_activity_start_activity(WFODI_LoggingActivity *self, cwinrt_hstring startEventName, WFODI_LoggingActivity** out);
 
-/* Windows.Foundation.Diagnostics.LoggingActivity.StartActivity(startEventName, fields) */
 HRESULT wfodi_logging_activity_start_activity_str_p_p(WFODI_LoggingActivity *self, cwinrt_hstring startEventName, WFODI_LoggingFields* fields, WFODI_LoggingActivity** out);
 
-/* Windows.Foundation.Diagnostics.LoggingActivity.StartActivity(startEventName, fields, level) */
 HRESULT wfodi_logging_activity_start_activity_str_p_logging_level_p(WFODI_LoggingActivity *self, cwinrt_hstring startEventName, WFODI_LoggingFields* fields, WFODI_LoggingLevel level, WFODI_LoggingActivity** out);
 
-/* Windows.Foundation.Diagnostics.LoggingActivity.StartActivity(startEventName, fields, level, options) */
 HRESULT wfodi_logging_activity_start_activity_str_p_logging_level_p_p(WFODI_LoggingActivity *self, cwinrt_hstring startEventName, WFODI_LoggingFields* fields, WFODI_LoggingLevel level, WFODI_LoggingOptions* options, WFODI_LoggingActivity** out);
 
-/* activate Windows.Foundation.Diagnostics.LogFileGeneratedEventArgs */
 HRESULT wfodi_log_file_generated_event_args_new(WFODI_LogFileGeneratedEventArgs **out);
 
-/* Windows.Foundation.Diagnostics.LogFileGeneratedEventArgs */
-/* Windows.Foundation.Diagnostics.LogFileGeneratedEventArgs.get_File() */
 HRESULT wfodi_log_file_generated_event_args_get__file(WFODI_LogFileGeneratedEventArgs *self, WS_StorageFile** value);
 
-/* Windows.Foundation.Diagnostics.ILoggingSessionFactory */
-/* Windows.Foundation.Diagnostics.ILoggingSessionFactory.Create(name) */
 HRESULT wfodi_logging_session_factory_create(WFODI_ILoggingSessionFactory *self, cwinrt_hstring name, WFODI_LoggingSession** out);
 
-/* Windows.Foundation.Diagnostics.ILoggingOptionsFactory */
-/* Windows.Foundation.Diagnostics.ILoggingOptionsFactory.CreateWithKeywords(keywords) */
 HRESULT wfodi_logging_options_factory_create_with_keywords(WFODI_ILoggingOptionsFactory *self, int64_t keywords, WFODI_LoggingOptions** out);
 
-/* Windows.Foundation.Diagnostics.ITracingStatusChangedEventArgs */
-/* Windows.Foundation.Diagnostics.IErrorReportingSettings */
-/* Windows.Foundation.Diagnostics.IErrorReportingSettings.SetErrorOptions() */
 HRESULT wfodi_error_reporting_settings_set_error_options(WFODI_IErrorReportingSettings *self, WFODI_ErrorOptions value);
 
-/* Windows.Foundation.Diagnostics.IErrorReportingSettings.GetErrorOptions() */
 HRESULT wfodi_error_reporting_settings_get_error_options(WFODI_IErrorReportingSettings *self, WFODI_ErrorOptions *out);
 
-/* Windows.Foundation.Diagnostics.IFileLoggingSession */
-/* Windows.Foundation.Diagnostics.IErrorDetails */
-/* Windows.Foundation.Diagnostics.ILoggingSession */
-/* Windows.Foundation.Diagnostics.ILoggingOptions */
-/* Windows.Foundation.Diagnostics.ILoggingFields */
-/* Windows.Foundation.Diagnostics.ILoggingChannelOptions */
-/* Windows.Foundation.Diagnostics.ILoggingChannel2 */
-/* Windows.Foundation.Diagnostics.ILoggingChannel2.get_Id() */
 HRESULT wfodi_logging_channel_2_get__id(WFODI_ILoggingChannel_2 *self, GUID *value);
 
-/* Windows.Foundation.Diagnostics.ILoggingActivity2 */
-/* Windows.Foundation.Diagnostics.ILoggingActivity2.get_Channel() */
 HRESULT wfodi_logging_activity_2_get__channel(WFODI_ILoggingActivity_2 *self, WFODI_LoggingChannel** value);
 
-/* Windows.Foundation.Diagnostics.ILoggingActivity2.StopActivity(stopEventName) */
 HRESULT wfodi_logging_activity_2_stop_activity(WFODI_ILoggingActivity_2 *self, cwinrt_hstring stopEventName);
 
-/* Windows.Foundation.Diagnostics.ILoggingActivity2.StopActivity(stopEventName, fields) */
 HRESULT wfodi_logging_activity_2_stop_activity_str_p(WFODI_ILoggingActivity_2 *self, cwinrt_hstring stopEventName, WFODI_LoggingFields* fields);
 
-/* Windows.Foundation.Diagnostics.ILoggingActivity2.StopActivity(stopEventName, fields, options) */
 HRESULT wfodi_logging_activity_2_stop_activity_str_p_p(WFODI_ILoggingActivity_2 *self, cwinrt_hstring stopEventName, WFODI_LoggingFields* fields, WFODI_LoggingOptions* options);
 
-/* Windows.Foundation.Diagnostics.ILogFileGeneratedEventArgs */
-/* Windows.Foundation.Diagnostics.ILoggingChannel */
-/* Windows.Foundation.Diagnostics.ILoggingActivity */
-/* Windows.Foundation.Diagnostics.ILoggingTarget */
-/* Windows.Foundation.Diagnostics.ILoggingTarget.IsEnabled() */
 HRESULT wfodi_logging_target_is_enabled(WFODI_ILoggingTarget *self, BOOL *out);
 
-/* Windows.Foundation.Diagnostics.ILoggingTarget.IsEnabled(level) */
 HRESULT wfodi_logging_target_is_enabled_logging_level_b(WFODI_ILoggingTarget *self, WFODI_LoggingLevel level, BOOL *out);
 
-/* Windows.Foundation.Diagnostics.ILoggingTarget.IsEnabled(level, keywords) */
 HRESULT wfodi_logging_target_is_enabled_logging_level_i64_b(WFODI_ILoggingTarget *self, WFODI_LoggingLevel level, int64_t keywords, BOOL *out);
 
-/* Windows.Foundation.Diagnostics.ILoggingTarget.LogEvent(eventName) */
 HRESULT wfodi_logging_target_log_event(WFODI_ILoggingTarget *self, cwinrt_hstring eventName);
 
-/* Windows.Foundation.Diagnostics.ILoggingTarget.LogEvent(eventName, fields) */
 HRESULT wfodi_logging_target_log_event_str_p(WFODI_ILoggingTarget *self, cwinrt_hstring eventName, WFODI_LoggingFields* fields);
 
-/* Windows.Foundation.Diagnostics.ILoggingTarget.LogEvent(eventName, fields, level) */
 HRESULT wfodi_logging_target_log_event_str_p_logging_level(WFODI_ILoggingTarget *self, cwinrt_hstring eventName, WFODI_LoggingFields* fields, WFODI_LoggingLevel level);
 
-/* Windows.Foundation.Diagnostics.ILoggingTarget.LogEvent(eventName, fields, level, options) */
 HRESULT wfodi_logging_target_log_event_str_p_logging_level_p(WFODI_ILoggingTarget *self, cwinrt_hstring eventName, WFODI_LoggingFields* fields, WFODI_LoggingLevel level, WFODI_LoggingOptions* options);
 
-/* Windows.Foundation.Diagnostics.ILoggingTarget.StartActivity(startEventName) */
 HRESULT wfodi_logging_target_start_activity(WFODI_ILoggingTarget *self, cwinrt_hstring startEventName, WFODI_LoggingActivity** out);
 
-/* Windows.Foundation.Diagnostics.ILoggingTarget.StartActivity(startEventName, fields) */
 HRESULT wfodi_logging_target_start_activity_str_p_p(WFODI_ILoggingTarget *self, cwinrt_hstring startEventName, WFODI_LoggingFields* fields, WFODI_LoggingActivity** out);
 
-/* Windows.Foundation.Diagnostics.ILoggingTarget.StartActivity(startEventName, fields, level) */
 HRESULT wfodi_logging_target_start_activity_str_p_logging_level_p(WFODI_ILoggingTarget *self, cwinrt_hstring startEventName, WFODI_LoggingFields* fields, WFODI_LoggingLevel level, WFODI_LoggingActivity** out);
 
-/* Windows.Foundation.Diagnostics.ILoggingTarget.StartActivity(startEventName, fields, level, options) */
 HRESULT wfodi_logging_target_start_activity_str_p_logging_level_p_p(WFODI_ILoggingTarget *self, cwinrt_hstring startEventName, WFODI_LoggingFields* fields, WFODI_LoggingLevel level, WFODI_LoggingOptions* options, WFODI_LoggingActivity** out);
 
 #endif /* CWINRT_WINDOWS_FOUNDATION_DIAGNOSTICS_H */

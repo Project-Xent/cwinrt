@@ -67,7 +67,7 @@ typedef struct cwinrt_raw_type {
 	char             *full_name;
 	char             *ns;
 	char             *short_name;
-	uint32_t          flags;         /* TypeDef flags from winmd */
+	uint32_t          flags;
 	uint8_t           uuid [16];     /* from [uuid] custom attribute, zero if unknown */
 	bool              has_uuid;
 	uint32_t          extends_token; /* TypeDef token of base, 0 if none */

@@ -19,7 +19,6 @@
 #include <cwinrt/Windows.UI.Notifications.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WDESE_ActivityType
 #define CWINRT_FWD_WDESE_ActivityType
 typedef enum WDESE_ActivityType {
@@ -127,7 +126,6 @@ typedef struct WS_StorageLibraryChangeTracker WS_StorageLibraryChangeTracker;
 typedef struct WS_StorageLibrary WS_StorageLibrary;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPBA_IContentPrefetchTriggerFactory WAPBA_IContentPrefetchTriggerFactory;
 typedef struct WAPBA_ICustomSystemEventTriggerFactory WAPBA_ICustomSystemEventTriggerFactory;
 typedef struct WAPBA_IDeviceConnectionChangeTriggerStatics WAPBA_IDeviceConnectionChangeTriggerStatics;
@@ -302,7 +300,6 @@ typedef struct WAPBA_IBackgroundCondition WAPBA_IBackgroundCondition;
 typedef struct WAPBA_IBackgroundTaskRegistration WAPBA_IBackgroundTaskRegistration;
 typedef struct WAPBA_IBackgroundTrigger WAPBA_IBackgroundTrigger;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_TimeSpan
 #define CWINRT_FWD_WF_TimeSpan
 typedef struct WF_TimeSpan WF_TimeSpan;
@@ -702,7 +699,6 @@ typedef enum WAPBA_AlarmAccessStatus {
 } WAPBA_AlarmAccessStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -1127,615 +1123,367 @@ static const IID CWINRT_IID_WAPBA_IBackgroundTaskRegistration CWINRT_MAYBE_UNUSE
 static const IID CWINRT_IID_WAPBA_IBackgroundTrigger CWINRT_MAYBE_UNUSED = { 0x84B3A058, 0x6027, 0x4B87, { 0x97, 0x90, 0xBD, 0xF3, 0xF7, 0x57, 0xDB, 0xD7 } };
 #endif
 
-/* Methods */
-
-/* Windows.ApplicationModel.Background.IContentPrefetchTriggerFactory */
-/* Windows.ApplicationModel.Background.IContentPrefetchTriggerFactory.Create(waitInterval) */
 HRESULT wapba_content_prefetch_trigger_factory_create(WAPBA_IContentPrefetchTriggerFactory *self, WF_TimeSpan waitInterval, WAPBA_ContentPrefetchTrigger** out);
 
-/* Windows.ApplicationModel.Background.ICustomSystemEventTriggerFactory */
-/* Windows.ApplicationModel.Background.ICustomSystemEventTriggerFactory.Create(triggerId, recurrence) */
 HRESULT wapba_custom_system_event_trigger_factory_create(WAPBA_ICustomSystemEventTriggerFactory *self, cwinrt_hstring triggerId, WAPBA_CustomSystemEventTriggerRecurrence recurrence, WAPBA_CustomSystemEventTrigger** out);
 
-/* Windows.ApplicationModel.Background.IDeviceConnectionChangeTriggerStatics */
-/* Windows.ApplicationModel.Background.IDeviceConnectionChangeTriggerStatics.FromIdAsync(deviceId) */
 HRESULT wapba_device_connection_change_trigger_statics_from_id_async(WAPBA_IDeviceConnectionChangeTriggerStatics *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WAPBA_DeviceConnectionChangeTrigger** out);
 
-/* Windows.ApplicationModel.Background.IDeviceManufacturerNotificationTriggerFactory */
-/* Windows.ApplicationModel.Background.IDeviceManufacturerNotificationTriggerFactory.Create(triggerQualifier, oneShot) */
 HRESULT wapba_device_manufacturer_notification_trigger_factory_create(WAPBA_IDeviceManufacturerNotificationTriggerFactory *self, cwinrt_hstring triggerQualifier, BOOL oneShot, WAPBA_DeviceManufacturerNotificationTrigger** out);
 
-/* Windows.ApplicationModel.Background.IGattCharacteristicNotificationTriggerFactory */
-/* Windows.ApplicationModel.Background.IGattCharacteristicNotificationTriggerFactory.Create(characteristic) */
 HRESULT wapba_gatt_characteristic_notification_trigger_factory_create(WAPBA_IGattCharacteristicNotificationTriggerFactory *self, WDEBLGE_GattCharacteristic* characteristic, WAPBA_GattCharacteristicNotificationTrigger** out);
 
-/* Windows.ApplicationModel.Background.IGattCharacteristicNotificationTriggerFactory2 */
-/* Windows.ApplicationModel.Background.IGattCharacteristicNotificationTriggerFactory2.Create(characteristic, eventTriggeringMode) */
 HRESULT wapba_gatt_characteristic_notification_trigger_factory_2_create(WAPBA_IGattCharacteristicNotificationTriggerFactory_2 *self, WDEBLGE_GattCharacteristic* characteristic, WDEBLBA_BluetoothEventTriggeringMode eventTriggeringMode, WAPBA_GattCharacteristicNotificationTrigger** out);
 
-/* Windows.ApplicationModel.Background.IGattServiceProviderTriggerStatics */
-/* Windows.ApplicationModel.Background.IGattServiceProviderTriggerStatics.CreateAsync(triggerId, serviceUuid) */
 HRESULT wapba_gatt_service_provider_trigger_statics_create_async(WAPBA_IGattServiceProviderTriggerStatics *self, cwinrt_hstring triggerId, GUID serviceUuid, WF_IAsyncOperation_WAPBA_GattServiceProviderTriggerResult** out);
 
-/* Windows.ApplicationModel.Background.ILocationTriggerFactory */
-/* Windows.ApplicationModel.Background.ILocationTriggerFactory.Create(triggerType) */
 HRESULT wapba_location_trigger_factory_create(WAPBA_ILocationTriggerFactory *self, WAPBA_LocationTriggerType triggerType, WAPBA_LocationTrigger** out);
 
-/* Windows.ApplicationModel.Background.IMaintenanceTriggerFactory */
-/* Windows.ApplicationModel.Background.IMaintenanceTriggerFactory.Create(freshnessTime, oneShot) */
 HRESULT wapba_maintenance_trigger_factory_create(WAPBA_IMaintenanceTriggerFactory *self, uint32_t freshnessTime, BOOL oneShot, WAPBA_MaintenanceTrigger** out);
 
-/* Windows.ApplicationModel.Background.INetworkOperatorNotificationTriggerFactory */
-/* Windows.ApplicationModel.Background.INetworkOperatorNotificationTriggerFactory.Create(networkAccountId) */
 HRESULT wapba_network_operator_notification_trigger_factory_create(WAPBA_INetworkOperatorNotificationTriggerFactory *self, cwinrt_hstring networkAccountId, WAPBA_NetworkOperatorNotificationTrigger** out);
 
-/* Windows.ApplicationModel.Background.IPhoneTriggerFactory */
-/* Windows.ApplicationModel.Background.IPhoneTriggerFactory.Create(oneShot) */
 HRESULT wapba_phone_trigger_factory_create(WAPBA_IPhoneTriggerFactory *self, WAPCABA_PhoneTriggerType type_, BOOL oneShot, WAPBA_PhoneTrigger** out);
 
-/* Windows.ApplicationModel.Background.IPushNotificationTriggerFactory */
-/* Windows.ApplicationModel.Background.IPushNotificationTriggerFactory.Create(applicationId) */
 HRESULT wapba_push_notification_trigger_factory_create(WAPBA_IPushNotificationTriggerFactory *self, cwinrt_hstring applicationId, WAPBA_PushNotificationTrigger** out);
 
-/* Windows.ApplicationModel.Background.ISensorDataThresholdTriggerFactory */
-/* Windows.ApplicationModel.Background.ISensorDataThresholdTriggerFactory.Create(threshold) */
 HRESULT wapba_sensor_data_threshold_trigger_factory_create(WAPBA_ISensorDataThresholdTriggerFactory *self, WDESE_ISensorDataThreshold* threshold, WAPBA_SensorDataThresholdTrigger** out);
 
-/* Windows.ApplicationModel.Background.ISmartCardTriggerFactory */
-/* Windows.ApplicationModel.Background.ISmartCardTriggerFactory.Create(triggerType) */
 HRESULT wapba_smart_card_trigger_factory_create(WAPBA_ISmartCardTriggerFactory *self, WDESM_SmartCardTriggerType triggerType, WAPBA_SmartCardTrigger** out);
 
-/* Windows.ApplicationModel.Background.ISmsMessageReceivedTriggerFactory */
-/* Windows.ApplicationModel.Background.ISmsMessageReceivedTriggerFactory.Create(filterRules) */
 HRESULT wapba_sms_message_received_trigger_factory_create(WAPBA_ISmsMessageReceivedTriggerFactory *self, WDESM_SmsFilterRules* filterRules, WAPBA_SmsMessageReceivedTrigger** out);
 
-/* Windows.ApplicationModel.Background.IStorageLibraryChangeTrackerTriggerFactory */
-/* Windows.ApplicationModel.Background.IStorageLibraryChangeTrackerTriggerFactory.Create(tracker) */
 HRESULT wapba_storage_library_change_tracker_trigger_factory_create(WAPBA_IStorageLibraryChangeTrackerTriggerFactory *self, WS_StorageLibraryChangeTracker* tracker, WAPBA_StorageLibraryChangeTrackerTrigger** out);
 
-/* Windows.ApplicationModel.Background.IStorageLibraryContentChangedTriggerStatics */
-/* Windows.ApplicationModel.Background.IStorageLibraryContentChangedTriggerStatics.Create(storageLibrary) */
 HRESULT wapba_storage_library_content_changed_trigger_statics_create(WAPBA_IStorageLibraryContentChangedTriggerStatics *self, WS_StorageLibrary* storageLibrary, WAPBA_StorageLibraryContentChangedTrigger** out);
 
-/* Windows.ApplicationModel.Background.IStorageLibraryContentChangedTriggerStatics.CreateFromLibraries(storageLibraries) */
 HRESULT wapba_storage_library_content_changed_trigger_statics_create_from_libraries(WAPBA_IStorageLibraryContentChangedTriggerStatics *self, WFOCO_IIterable_WS_StorageLibrary* storageLibraries, WAPBA_StorageLibraryContentChangedTrigger** out);
 
-/* Windows.ApplicationModel.Background.ISystemConditionFactory */
-/* Windows.ApplicationModel.Background.ISystemConditionFactory.Create(conditionType) */
 HRESULT wapba_system_condition_factory_create(WAPBA_ISystemConditionFactory *self, WAPBA_SystemConditionType conditionType, WAPBA_SystemCondition** out);
 
-/* Windows.ApplicationModel.Background.ISystemTriggerFactory */
-/* Windows.ApplicationModel.Background.ISystemTriggerFactory.Create(triggerType, oneShot) */
 HRESULT wapba_system_trigger_factory_create(WAPBA_ISystemTriggerFactory *self, WAPBA_SystemTriggerType triggerType, BOOL oneShot, WAPBA_SystemTrigger** out);
 
-/* Windows.ApplicationModel.Background.ITimeTriggerFactory */
-/* Windows.ApplicationModel.Background.ITimeTriggerFactory.Create(freshnessTime, oneShot) */
 HRESULT wapba_time_trigger_factory_create(WAPBA_ITimeTriggerFactory *self, uint32_t freshnessTime, BOOL oneShot, WAPBA_TimeTrigger** out);
 
-/* Windows.ApplicationModel.Background.IToastNotificationActionTriggerFactory */
-/* Windows.ApplicationModel.Background.IToastNotificationActionTriggerFactory.Create(applicationId) */
 HRESULT wapba_toast_notification_action_trigger_factory_create(WAPBA_IToastNotificationActionTriggerFactory *self, cwinrt_hstring applicationId, WAPBA_ToastNotificationActionTrigger** out);
 
-/* Windows.ApplicationModel.Background.IToastNotificationHistoryChangedTriggerFactory */
-/* Windows.ApplicationModel.Background.IToastNotificationHistoryChangedTriggerFactory.Create(applicationId) */
 HRESULT wapba_toast_notification_history_changed_trigger_factory_create(WAPBA_IToastNotificationHistoryChangedTriggerFactory *self, cwinrt_hstring applicationId, WAPBA_ToastNotificationHistoryChangedTrigger** out);
 
-/* Windows.ApplicationModel.Background.IUserNotificationChangedTriggerFactory */
-/* Windows.ApplicationModel.Background.IUserNotificationChangedTriggerFactory.Create(notificationKinds) */
 HRESULT wapba_user_notification_changed_trigger_factory_create(WAPBA_IUserNotificationChangedTriggerFactory *self, WUINO_NotificationKinds notificationKinds, WAPBA_UserNotificationChangedTrigger** out);
 
-/* activate Windows.ApplicationModel.Background.LocationTrigger */
 HRESULT wapba_location_trigger_new(WAPBA_LocationTrigger **out);
 
-/* Windows.ApplicationModel.Background.LocationTrigger */
-/* Windows.ApplicationModel.Background.LocationTrigger.get_TriggerType() */
 HRESULT wapba_location_trigger_get__trigger_type(WAPBA_LocationTrigger *self, WAPBA_LocationTriggerType *value);
 
-/* activate Windows.ApplicationModel.Background.MaintenanceTrigger */
 HRESULT wapba_maintenance_trigger_new(WAPBA_MaintenanceTrigger **out);
 
-/* Windows.ApplicationModel.Background.MaintenanceTrigger */
-/* Windows.ApplicationModel.Background.MaintenanceTrigger.get_FreshnessTime() */
 HRESULT wapba_maintenance_trigger_get__freshness_time(WAPBA_MaintenanceTrigger *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Background.MaintenanceTrigger.get_OneShot() */
 HRESULT wapba_maintenance_trigger_get__one_shot(WAPBA_MaintenanceTrigger *self, BOOL *value);
 
-/* activate Windows.ApplicationModel.Background.MediaProcessingTrigger */
 HRESULT wapba_media_processing_trigger_new(WAPBA_MediaProcessingTrigger **out);
 
-/* Windows.ApplicationModel.Background.MediaProcessingTrigger */
-/* Windows.ApplicationModel.Background.MediaProcessingTrigger.RequestAsync() */
 HRESULT wapba_media_processing_trigger_request_async(WAPBA_MediaProcessingTrigger *self, WF_IAsyncOperation_WAPBA_MediaProcessingTriggerResult** out);
 
-/* Windows.ApplicationModel.Background.MediaProcessingTrigger.RequestAsync(arguments) */
 HRESULT wapba_media_processing_trigger_request_async_p_p(WAPBA_MediaProcessingTrigger *self, WFOCO_ValueSet* arguments, WF_IAsyncOperation_WAPBA_MediaProcessingTriggerResult** out);
 
-/* activate Windows.ApplicationModel.Background.NetworkOperatorNotificationTrigger */
 HRESULT wapba_network_operator_notification_trigger_new(WAPBA_NetworkOperatorNotificationTrigger **out);
 
-/* Windows.ApplicationModel.Background.NetworkOperatorNotificationTrigger */
-/* Windows.ApplicationModel.Background.NetworkOperatorNotificationTrigger.get_NetworkAccountId() */
 HRESULT wapba_network_operator_notification_trigger_get__network_account_id(WAPBA_NetworkOperatorNotificationTrigger *self, cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.Background.PhoneTrigger */
 HRESULT wapba_phone_trigger_new(WAPBA_PhoneTrigger **out);
 
-/* Windows.ApplicationModel.Background.PhoneTrigger */
-/* Windows.ApplicationModel.Background.PhoneTrigger.get_OneShot() */
 HRESULT wapba_phone_trigger_get__one_shot(WAPBA_PhoneTrigger *self, BOOL *value);
 
-/* Windows.ApplicationModel.Background.PhoneTrigger.get_TriggerType() */
 HRESULT wapba_phone_trigger_get__trigger_type(WAPBA_PhoneTrigger *self, WAPCABA_PhoneTriggerType *value);
 
-/* activate Windows.ApplicationModel.Background.RfcommConnectionTrigger */
 HRESULT wapba_rfcomm_connection_trigger_new(WAPBA_RfcommConnectionTrigger **out);
 
-/* Windows.ApplicationModel.Background.RfcommConnectionTrigger */
-/* Windows.ApplicationModel.Background.RfcommConnectionTrigger.get_InboundConnection() */
 HRESULT wapba_rfcomm_connection_trigger_get__inbound_connection(WAPBA_RfcommConnectionTrigger *self, WDEBLBA_RfcommInboundConnectionInformation** value);
 
-/* Windows.ApplicationModel.Background.RfcommConnectionTrigger.get_OutboundConnection() */
 HRESULT wapba_rfcomm_connection_trigger_get__outbound_connection(WAPBA_RfcommConnectionTrigger *self, WDEBLBA_RfcommOutboundConnectionInformation** value);
 
-/* Windows.ApplicationModel.Background.RfcommConnectionTrigger.get_AllowMultipleConnections() */
 HRESULT wapba_rfcomm_connection_trigger_get__allow_multiple_connections(WAPBA_RfcommConnectionTrigger *self, BOOL *value);
 
-/* Windows.ApplicationModel.Background.RfcommConnectionTrigger.put_AllowMultipleConnections() */
 HRESULT wapba_rfcomm_connection_trigger_put__allow_multiple_connections(WAPBA_RfcommConnectionTrigger *self, BOOL value);
 
-/* Windows.ApplicationModel.Background.RfcommConnectionTrigger.get_ProtectionLevel() */
 HRESULT wapba_rfcomm_connection_trigger_get__protection_level(WAPBA_RfcommConnectionTrigger *self, WNESO_SocketProtectionLevel *value);
 
-/* Windows.ApplicationModel.Background.RfcommConnectionTrigger.put_ProtectionLevel() */
 HRESULT wapba_rfcomm_connection_trigger_put__protection_level(WAPBA_RfcommConnectionTrigger *self, WNESO_SocketProtectionLevel value);
 
-/* Windows.ApplicationModel.Background.RfcommConnectionTrigger.get_RemoteHostName() */
 HRESULT wapba_rfcomm_connection_trigger_get__remote_host_name(WAPBA_RfcommConnectionTrigger *self, WNE_HostName** value);
 
-/* Windows.ApplicationModel.Background.RfcommConnectionTrigger.put_RemoteHostName() */
 HRESULT wapba_rfcomm_connection_trigger_put__remote_host_name(WAPBA_RfcommConnectionTrigger *self, WNE_HostName* value);
 
-/* activate Windows.ApplicationModel.Background.SmartCardTrigger */
 HRESULT wapba_smart_card_trigger_new(WAPBA_SmartCardTrigger **out);
 
-/* Windows.ApplicationModel.Background.SmartCardTrigger */
-/* Windows.ApplicationModel.Background.SmartCardTrigger.get_TriggerType() */
 HRESULT wapba_smart_card_trigger_get__trigger_type(WAPBA_SmartCardTrigger *self, WDESM_SmartCardTriggerType *value);
 
-/* activate Windows.ApplicationModel.Background.SocketActivityTrigger */
 HRESULT wapba_socket_activity_trigger_new(WAPBA_SocketActivityTrigger **out);
 
-/* Windows.ApplicationModel.Background.SocketActivityTrigger */
-/* Windows.ApplicationModel.Background.SocketActivityTrigger.get_IsWakeFromLowPowerSupported() */
 HRESULT wapba_socket_activity_trigger_get__is_wake_from_low_power_supported(WAPBA_SocketActivityTrigger *self, BOOL *value);
 
-/* activate Windows.ApplicationModel.Background.StorageLibraryContentChangedTrigger */
 HRESULT wapba_storage_library_content_changed_trigger_new(WAPBA_StorageLibraryContentChangedTrigger **out);
 
-/* Windows.ApplicationModel.Background.StorageLibraryContentChangedTrigger */
-/* Windows.ApplicationModel.Background.StorageLibraryContentChangedTrigger.Create(storageLibrary) */
 HRESULT wapba_storage_library_content_changed_trigger_create(WS_StorageLibrary* storageLibrary, WAPBA_StorageLibraryContentChangedTrigger** out);
 
-/* Windows.ApplicationModel.Background.StorageLibraryContentChangedTrigger.CreateFromLibraries(storageLibraries) */
 HRESULT wapba_storage_library_content_changed_trigger_create_from_libraries(WFOCO_IIterable_WS_StorageLibrary* storageLibraries, WAPBA_StorageLibraryContentChangedTrigger** out);
 
-/* activate Windows.ApplicationModel.Background.SystemCondition */
 HRESULT wapba_system_condition_new(WAPBA_SystemCondition **out);
 
-/* Windows.ApplicationModel.Background.SystemCondition */
-/* Windows.ApplicationModel.Background.SystemCondition.get_ConditionType() */
 HRESULT wapba_system_condition_get__condition_type(WAPBA_SystemCondition *self, WAPBA_SystemConditionType *value);
 
-/* activate Windows.ApplicationModel.Background.SystemTrigger */
 HRESULT wapba_system_trigger_new(WAPBA_SystemTrigger **out);
 
-/* Windows.ApplicationModel.Background.SystemTrigger */
-/* Windows.ApplicationModel.Background.SystemTrigger.get_OneShot() */
 HRESULT wapba_system_trigger_get__one_shot(WAPBA_SystemTrigger *self, BOOL *value);
 
-/* Windows.ApplicationModel.Background.SystemTrigger.get_TriggerType() */
 HRESULT wapba_system_trigger_get__trigger_type(WAPBA_SystemTrigger *self, WAPBA_SystemTriggerType *value);
 
-/* activate Windows.ApplicationModel.Background.TimeTrigger */
 HRESULT wapba_time_trigger_new(WAPBA_TimeTrigger **out);
 
-/* Windows.ApplicationModel.Background.TimeTrigger */
-/* Windows.ApplicationModel.Background.TimeTrigger.get_FreshnessTime() */
 HRESULT wapba_time_trigger_get__freshness_time(WAPBA_TimeTrigger *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Background.TimeTrigger.get_OneShot() */
 HRESULT wapba_time_trigger_get__one_shot(WAPBA_TimeTrigger *self, BOOL *value);
 
-/* Windows.ApplicationModel.Background.IBackgroundWorkCostStatics2 */
-/* Windows.ApplicationModel.Background.IBackgroundWorkCostStatics2.get_AppEnergyUseLevel() */
 HRESULT wapba_background_work_cost_statics_2_get__app_energy_use_level(WAPBA_IBackgroundWorkCostStatics_2 *self, WAPBA_EnergyUseLevel *value);
 
-/* Windows.ApplicationModel.Background.IBackgroundWorkCostStatics2.get_AppEnergyUsePrediction() */
 HRESULT wapba_background_work_cost_statics_2_get__app_energy_use_prediction(WAPBA_IBackgroundWorkCostStatics_2 *self, WAPBA_EnergyUseLevel *value);
 
-/* Windows.ApplicationModel.Background.IBackgroundWorkCostStatics2.get_AppLastThrottledInStandbyTimestamp() */
 HRESULT wapba_background_work_cost_statics_2_get__app_last_throttled_in_standby_timestamp(WAPBA_IBackgroundWorkCostStatics_2 *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Background.IBackgroundWorkCostStatics */
-/* Windows.ApplicationModel.Background.IBackgroundWorkCostStatics.get_CurrentBackgroundWorkCost() */
 HRESULT wapba_background_work_cost_statics_get__current_background_work_cost(WAPBA_IBackgroundWorkCostStatics *self, WAPBA_BackgroundWorkCostValue *value);
 
-/* Windows.ApplicationModel.Background.IBackgroundTaskRegistrationStatics2 */
-/* Windows.ApplicationModel.Background.IBackgroundTaskRegistrationStatics2.get_AllTaskGroups() */
 HRESULT wapba_background_task_registration_statics_2_get__all_task_groups(WAPBA_IBackgroundTaskRegistrationStatics_2 *self, WFOCO_IMapView_HSTRING_WAPBA_BackgroundTaskRegistrationGroup** value);
 
-/* Windows.ApplicationModel.Background.IBackgroundTaskRegistrationStatics2.GetTaskGroup(groupId) */
 HRESULT wapba_background_task_registration_statics_2_get_task_group(WAPBA_IBackgroundTaskRegistrationStatics_2 *self, cwinrt_hstring groupId, WAPBA_BackgroundTaskRegistrationGroup** out);
 
-/* Windows.ApplicationModel.Background.IBackgroundTaskRegistrationStatics */
-/* Windows.ApplicationModel.Background.IBackgroundTaskRegistrationStatics.get_AllTasks() */
 HRESULT wapba_background_task_registration_statics_get__all_tasks(WAPBA_IBackgroundTaskRegistrationStatics *self, WFOCO_IMapView_Guid_WAPBA_IBackgroundTaskRegistration** value);
 
-/* Windows.ApplicationModel.Background.IBackgroundTaskRegistrationGroupFactory */
-/* Windows.ApplicationModel.Background.IBackgroundTaskRegistrationGroupFactory.Create(id) */
 HRESULT wapba_background_task_registration_group_factory_create(WAPBA_IBackgroundTaskRegistrationGroupFactory *self, cwinrt_hstring id, WAPBA_BackgroundTaskRegistrationGroup** out);
 
-/* Windows.ApplicationModel.Background.IBackgroundTaskRegistrationGroupFactory.CreateWithName(id, name) */
 HRESULT wapba_background_task_registration_group_factory_create_with_name(WAPBA_IBackgroundTaskRegistrationGroupFactory *self, cwinrt_hstring id, cwinrt_hstring name, WAPBA_BackgroundTaskRegistrationGroup** out);
 
-/* Windows.ApplicationModel.Background.IBackgroundTaskInstance4 */
-/* Windows.ApplicationModel.Background.IBackgroundTaskInstance4.get_User() */
 HRESULT wapba_background_task_instance_4_get__user(WAPBA_IBackgroundTaskInstance_4 *self, WSY_User** value);
 
-/* Windows.ApplicationModel.Background.IBackgroundTaskInstance2 */
-/* Windows.ApplicationModel.Background.IBackgroundTaskInstance2.GetThrottleCount(counter) */
 HRESULT wapba_background_task_instance_2_get_throttle_count(WAPBA_IBackgroundTaskInstance_2 *self, WAPBA_BackgroundTaskThrottleCounter counter, uint32_t *out);
 
-/* Windows.ApplicationModel.Background.IBackgroundTaskBuilderStatics */
-/* Windows.ApplicationModel.Background.IBackgroundTaskBuilderStatics.get_IsRunningTaskInStandbySupported() */
 HRESULT wapba_background_task_builder_statics_get__is_running_task_in_standby_supported(WAPBA_IBackgroundTaskBuilderStatics *self, BOOL *value);
 
-/* Windows.ApplicationModel.Background.IBackgroundTask */
-/* Windows.ApplicationModel.Background.IBackgroundTask.Run(taskInstance) */
 HRESULT wapba_background_task_run(WAPBA_IBackgroundTask *self, WAPBA_IBackgroundTaskInstance* taskInstance);
 
-/* Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics3 */
-/* Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics3.RequestAccessKindForModernStandbyAsync(requestedAccess, reason) */
 HRESULT wapba_background_execution_manager_statics_3_request_access_kind_for_modern_standby_async(WAPBA_IBackgroundExecutionManagerStatics_3 *self, WAPBA_BackgroundAccessRequestKind requestedAccess, cwinrt_hstring reason, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics3.GetAccessStatusForModernStandby() */
 HRESULT wapba_background_execution_manager_statics_3_get_access_status_for_modern_standby(WAPBA_IBackgroundExecutionManagerStatics_3 *self, WAPBA_BackgroundAccessStatus *out);
 
-/* Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics3.GetAccessStatusForModernStandby(applicationId) */
 HRESULT wapba_background_execution_manager_statics_3_get_access_status_for_modern_standby_str_background_access_status(WAPBA_IBackgroundExecutionManagerStatics_3 *self, cwinrt_hstring applicationId, WAPBA_BackgroundAccessStatus *out);
 
-/* Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics2 */
-/* Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics2.RequestAccessKindAsync(requestedAccess, reason) */
 HRESULT wapba_background_execution_manager_statics_2_request_access_kind_async(WAPBA_IBackgroundExecutionManagerStatics_2 *self, WAPBA_BackgroundAccessRequestKind requestedAccess, cwinrt_hstring reason, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics */
-/* Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics.RequestAccessAsync() */
 HRESULT wapba_background_execution_manager_statics_request_access_async(WAPBA_IBackgroundExecutionManagerStatics *self, WF_IAsyncOperation_WAPBA_BackgroundAccessStatus** out);
 
-/* Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics.RequestAccessAsync(applicationId) */
 HRESULT wapba_background_execution_manager_statics_request_access_async_str_p(WAPBA_IBackgroundExecutionManagerStatics *self, cwinrt_hstring applicationId, WF_IAsyncOperation_WAPBA_BackgroundAccessStatus** out);
 
-/* Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics.RemoveAccess() */
 HRESULT wapba_background_execution_manager_statics_remove_access(WAPBA_IBackgroundExecutionManagerStatics *self);
 
-/* Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics.RemoveAccess(applicationId) */
 HRESULT wapba_background_execution_manager_statics_remove_access_str(WAPBA_IBackgroundExecutionManagerStatics *self, cwinrt_hstring applicationId);
 
-/* Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics.GetAccessStatus() */
 HRESULT wapba_background_execution_manager_statics_get_access_status(WAPBA_IBackgroundExecutionManagerStatics *self, WAPBA_BackgroundAccessStatus *out);
 
-/* Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics.GetAccessStatus(applicationId) */
 HRESULT wapba_background_execution_manager_statics_get_access_status_str_background_access_status(WAPBA_IBackgroundExecutionManagerStatics *self, cwinrt_hstring applicationId, WAPBA_BackgroundAccessStatus *out);
 
-/* Windows.ApplicationModel.Background.IAppBroadcastTriggerFactory */
-/* Windows.ApplicationModel.Background.IAppBroadcastTriggerFactory.CreateAppBroadcastTrigger(providerKey) */
 HRESULT wapba_app_broadcast_trigger_factory_create_app_broadcast_trigger(WAPBA_IAppBroadcastTriggerFactory *self, cwinrt_hstring providerKey, WAPBA_AppBroadcastTrigger** out);
 
-/* Windows.ApplicationModel.Background.IAlarmApplicationManagerStatics */
-/* Windows.ApplicationModel.Background.IAlarmApplicationManagerStatics.RequestAccessAsync() */
 HRESULT wapba_alarm_application_manager_statics_request_access_async(WAPBA_IAlarmApplicationManagerStatics *self, WF_IAsyncOperation_WAPBA_AlarmAccessStatus** out);
 
-/* Windows.ApplicationModel.Background.IAlarmApplicationManagerStatics.GetAccessStatus() */
 HRESULT wapba_alarm_application_manager_statics_get_access_status(WAPBA_IAlarmApplicationManagerStatics *self, WAPBA_AlarmAccessStatus *out);
 
-/* Windows.ApplicationModel.Background.IActivitySensorTriggerFactory */
-/* Windows.ApplicationModel.Background.IActivitySensorTriggerFactory.Create(reportIntervalInMilliseconds) */
 HRESULT wapba_activity_sensor_trigger_factory_create(WAPBA_IActivitySensorTriggerFactory *self, uint32_t reportIntervalInMilliseconds, WAPBA_ActivitySensorTrigger** out);
 
-/* activate Windows.ApplicationModel.Background.GeovisitTrigger */
 HRESULT wapba_geovisit_trigger_new(WAPBA_GeovisitTrigger **out);
 
-/* Windows.ApplicationModel.Background.GeovisitTrigger */
-/* Windows.ApplicationModel.Background.GeovisitTrigger.get_MonitoringScope() */
 HRESULT wapba_geovisit_trigger_get__monitoring_scope(WAPBA_GeovisitTrigger *self, WDEGE_VisitMonitoringScope *value);
 
-/* Windows.ApplicationModel.Background.GeovisitTrigger.put_MonitoringScope() */
 HRESULT wapba_geovisit_trigger_put__monitoring_scope(WAPBA_GeovisitTrigger *self, WDEGE_VisitMonitoringScope value);
 
-/* activate Windows.ApplicationModel.Background.GattServiceProviderTriggerResult */
 HRESULT wapba_gatt_service_provider_trigger_result_new(WAPBA_GattServiceProviderTriggerResult **out);
 
-/* Windows.ApplicationModel.Background.GattServiceProviderTriggerResult */
-/* Windows.ApplicationModel.Background.GattServiceProviderTriggerResult.get_Trigger() */
 HRESULT wapba_gatt_service_provider_trigger_result_get__trigger(WAPBA_GattServiceProviderTriggerResult *self, WAPBA_GattServiceProviderTrigger** value);
 
-/* Windows.ApplicationModel.Background.GattServiceProviderTriggerResult.get_Error() */
 HRESULT wapba_gatt_service_provider_trigger_result_get__error(WAPBA_GattServiceProviderTriggerResult *self, WDEBL_BluetoothError *value);
 
-/* activate Windows.ApplicationModel.Background.GattServiceProviderTrigger */
 HRESULT wapba_gatt_service_provider_trigger_new(WAPBA_GattServiceProviderTrigger **out);
 
-/* Windows.ApplicationModel.Background.GattServiceProviderTrigger */
-/* Windows.ApplicationModel.Background.GattServiceProviderTrigger.get_TriggerId() */
 HRESULT wapba_gatt_service_provider_trigger_get__trigger_id(WAPBA_GattServiceProviderTrigger *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Background.GattServiceProviderTrigger.get_Service() */
 HRESULT wapba_gatt_service_provider_trigger_get__service(WAPBA_GattServiceProviderTrigger *self, WDEBLGE_GattLocalService** value);
 
-/* Windows.ApplicationModel.Background.GattServiceProviderTrigger.put_AdvertisingParameters() */
 HRESULT wapba_gatt_service_provider_trigger_put__advertising_parameters(WAPBA_GattServiceProviderTrigger *self, WDEBLGE_GattServiceProviderAdvertisingParameters* value);
 
-/* Windows.ApplicationModel.Background.GattServiceProviderTrigger.get_AdvertisingParameters() */
 HRESULT wapba_gatt_service_provider_trigger_get__advertising_parameters(WAPBA_GattServiceProviderTrigger *self, WDEBLGE_GattServiceProviderAdvertisingParameters** value);
 
-/* Windows.ApplicationModel.Background.GattServiceProviderTrigger.CreateAsync(triggerId, serviceUuid) */
 HRESULT wapba_gatt_service_provider_trigger_create_async(cwinrt_hstring triggerId, GUID serviceUuid, WF_IAsyncOperation_WAPBA_GattServiceProviderTriggerResult** out);
 
-/* activate Windows.ApplicationModel.Background.GattCharacteristicNotificationTrigger */
 HRESULT wapba_gatt_characteristic_notification_trigger_new(WAPBA_GattCharacteristicNotificationTrigger **out);
 
-/* Windows.ApplicationModel.Background.GattCharacteristicNotificationTrigger */
-/* Windows.ApplicationModel.Background.GattCharacteristicNotificationTrigger.get_Characteristic() */
 HRESULT wapba_gatt_characteristic_notification_trigger_get__characteristic(WAPBA_GattCharacteristicNotificationTrigger *self, WDEBLGE_GattCharacteristic** value);
 
-/* Windows.ApplicationModel.Background.GattCharacteristicNotificationTrigger.get_EventTriggeringMode() */
 HRESULT wapba_gatt_characteristic_notification_trigger_get__event_triggering_mode(WAPBA_GattCharacteristicNotificationTrigger *self, WDEBLBA_BluetoothEventTriggeringMode *value);
 
-/* activate Windows.ApplicationModel.Background.DeviceUseTrigger */
 HRESULT wapba_device_use_trigger_new(WAPBA_DeviceUseTrigger **out);
 
-/* Windows.ApplicationModel.Background.DeviceUseTrigger */
-/* Windows.ApplicationModel.Background.DeviceUseTrigger.RequestAsync(deviceId) */
 HRESULT wapba_device_use_trigger_request_async(WAPBA_DeviceUseTrigger *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WAPBA_DeviceTriggerResult** out);
 
-/* Windows.ApplicationModel.Background.DeviceUseTrigger.RequestAsync(deviceId, arguments) */
 HRESULT wapba_device_use_trigger_request_async_str_str_p(WAPBA_DeviceUseTrigger *self, cwinrt_hstring deviceId, cwinrt_hstring arguments, WF_IAsyncOperation_WAPBA_DeviceTriggerResult** out);
 
-/* activate Windows.ApplicationModel.Background.DeviceServicingTrigger */
 HRESULT wapba_device_servicing_trigger_new(WAPBA_DeviceServicingTrigger **out);
 
-/* Windows.ApplicationModel.Background.DeviceServicingTrigger */
-/* Windows.ApplicationModel.Background.DeviceServicingTrigger.RequestAsync(deviceId, expectedDuration) */
 HRESULT wapba_device_servicing_trigger_request_async(WAPBA_DeviceServicingTrigger *self, cwinrt_hstring deviceId, WF_TimeSpan expectedDuration, WF_IAsyncOperation_WAPBA_DeviceTriggerResult** out);
 
-/* Windows.ApplicationModel.Background.DeviceServicingTrigger.RequestAsync(deviceId, expectedDuration, arguments) */
 HRESULT wapba_device_servicing_trigger_request_async_str_time_span_str_p(WAPBA_DeviceServicingTrigger *self, cwinrt_hstring deviceId, WF_TimeSpan expectedDuration, cwinrt_hstring arguments, WF_IAsyncOperation_WAPBA_DeviceTriggerResult** out);
 
-/* activate Windows.ApplicationModel.Background.DeviceManufacturerNotificationTrigger */
 HRESULT wapba_device_manufacturer_notification_trigger_new(WAPBA_DeviceManufacturerNotificationTrigger **out);
 
-/* Windows.ApplicationModel.Background.DeviceManufacturerNotificationTrigger */
-/* Windows.ApplicationModel.Background.DeviceManufacturerNotificationTrigger.get_TriggerQualifier() */
 HRESULT wapba_device_manufacturer_notification_trigger_get__trigger_qualifier(WAPBA_DeviceManufacturerNotificationTrigger *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Background.DeviceManufacturerNotificationTrigger.get_OneShot() */
 HRESULT wapba_device_manufacturer_notification_trigger_get__one_shot(WAPBA_DeviceManufacturerNotificationTrigger *self, BOOL *value);
 
-/* activate Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger */
 HRESULT wapba_device_connection_change_trigger_new(WAPBA_DeviceConnectionChangeTrigger **out);
 
-/* Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger */
-/* Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger.get_DeviceId() */
 HRESULT wapba_device_connection_change_trigger_get__device_id(WAPBA_DeviceConnectionChangeTrigger *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger.get_CanMaintainConnection() */
 HRESULT wapba_device_connection_change_trigger_get__can_maintain_connection(WAPBA_DeviceConnectionChangeTrigger *self, BOOL *value);
 
-/* Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger.get_MaintainConnection() */
 HRESULT wapba_device_connection_change_trigger_get__maintain_connection(WAPBA_DeviceConnectionChangeTrigger *self, BOOL *value);
 
-/* Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger.put_MaintainConnection() */
 HRESULT wapba_device_connection_change_trigger_put__maintain_connection(WAPBA_DeviceConnectionChangeTrigger *self, BOOL value);
 
-/* Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger.FromIdAsync(deviceId) */
 HRESULT wapba_device_connection_change_trigger_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WAPBA_DeviceConnectionChangeTrigger** out);
 
-/* activate Windows.ApplicationModel.Background.CustomSystemEventTrigger */
 HRESULT wapba_custom_system_event_trigger_new(WAPBA_CustomSystemEventTrigger **out);
 
-/* Windows.ApplicationModel.Background.CustomSystemEventTrigger */
-/* Windows.ApplicationModel.Background.CustomSystemEventTrigger.get_TriggerId() */
 HRESULT wapba_custom_system_event_trigger_get__trigger_id(WAPBA_CustomSystemEventTrigger *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Background.CustomSystemEventTrigger.get_Recurrence() */
 HRESULT wapba_custom_system_event_trigger_get__recurrence(WAPBA_CustomSystemEventTrigger *self, WAPBA_CustomSystemEventTriggerRecurrence *value);
 
-/* activate Windows.ApplicationModel.Background.ContentPrefetchTrigger */
 HRESULT wapba_content_prefetch_trigger_new(WAPBA_ContentPrefetchTrigger **out);
 
-/* Windows.ApplicationModel.Background.ContentPrefetchTrigger */
-/* Windows.ApplicationModel.Background.ContentPrefetchTrigger.get_WaitInterval() */
 HRESULT wapba_content_prefetch_trigger_get__wait_interval(WAPBA_ContentPrefetchTrigger *self, WF_TimeSpan *value);
 
-/* activate Windows.ApplicationModel.Background.CachedFileUpdaterTriggerDetails */
 HRESULT wapba_cached_file_updater_trigger_details_new(WAPBA_CachedFileUpdaterTriggerDetails **out);
 
-/* Windows.ApplicationModel.Background.CachedFileUpdaterTriggerDetails */
-/* Windows.ApplicationModel.Background.CachedFileUpdaterTriggerDetails.get_UpdateTarget() */
 HRESULT wapba_cached_file_updater_trigger_details_get__update_target(WAPBA_CachedFileUpdaterTriggerDetails *self, WSTPR_CachedFileTarget *value);
 
-/* Windows.ApplicationModel.Background.CachedFileUpdaterTriggerDetails.get_UpdateRequest() */
 HRESULT wapba_cached_file_updater_trigger_details_get__update_request(WAPBA_CachedFileUpdaterTriggerDetails *self, WSTPR_FileUpdateRequest** value);
 
-/* Windows.ApplicationModel.Background.CachedFileUpdaterTriggerDetails.get_CanRequestUserInput() */
 HRESULT wapba_cached_file_updater_trigger_details_get__can_request_user_input(WAPBA_CachedFileUpdaterTriggerDetails *self, BOOL *value);
 
-/* activate Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger */
 HRESULT wapba_bluetooth_l_e_advertisement_watcher_trigger_new(WAPBA_BluetoothLEAdvertisementWatcherTrigger **out);
 
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger */
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger.get_MinSamplingInterval() */
 HRESULT wapba_bluetooth_l_e_advertisement_watcher_trigger_get__min_sampling_interval(WAPBA_BluetoothLEAdvertisementWatcherTrigger *self, WF_TimeSpan *value);
 
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger.get_MaxSamplingInterval() */
 HRESULT wapba_bluetooth_l_e_advertisement_watcher_trigger_get__max_sampling_interval(WAPBA_BluetoothLEAdvertisementWatcherTrigger *self, WF_TimeSpan *value);
 
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger.get_MinOutOfRangeTimeout() */
 HRESULT wapba_bluetooth_l_e_advertisement_watcher_trigger_get__min_out_of_range_timeout(WAPBA_BluetoothLEAdvertisementWatcherTrigger *self, WF_TimeSpan *value);
 
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger.get_MaxOutOfRangeTimeout() */
 HRESULT wapba_bluetooth_l_e_advertisement_watcher_trigger_get__max_out_of_range_timeout(WAPBA_BluetoothLEAdvertisementWatcherTrigger *self, WF_TimeSpan *value);
 
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger.get_SignalStrengthFilter() */
 HRESULT wapba_bluetooth_l_e_advertisement_watcher_trigger_get__signal_strength_filter(WAPBA_BluetoothLEAdvertisementWatcherTrigger *self, WDEBL_BluetoothSignalStrengthFilter** value);
 
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger.put_SignalStrengthFilter() */
 HRESULT wapba_bluetooth_l_e_advertisement_watcher_trigger_put__signal_strength_filter(WAPBA_BluetoothLEAdvertisementWatcherTrigger *self, WDEBL_BluetoothSignalStrengthFilter* value);
 
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger.get_AdvertisementFilter() */
 HRESULT wapba_bluetooth_l_e_advertisement_watcher_trigger_get__advertisement_filter(WAPBA_BluetoothLEAdvertisementWatcherTrigger *self, WDBA_BluetoothLEAdvertisementFilter** value);
 
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger.put_AdvertisementFilter() */
 HRESULT wapba_bluetooth_l_e_advertisement_watcher_trigger_put__advertisement_filter(WAPBA_BluetoothLEAdvertisementWatcherTrigger *self, WDBA_BluetoothLEAdvertisementFilter* value);
 
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger.get_AllowExtendedAdvertisements() */
 HRESULT wapba_bluetooth_l_e_advertisement_watcher_trigger_get__allow_extended_advertisements(WAPBA_BluetoothLEAdvertisementWatcherTrigger *self, BOOL *value);
 
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger.put_AllowExtendedAdvertisements() */
 HRESULT wapba_bluetooth_l_e_advertisement_watcher_trigger_put__allow_extended_advertisements(WAPBA_BluetoothLEAdvertisementWatcherTrigger *self, BOOL value);
 
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger.get_UseUncoded1MPhy() */
 HRESULT wapba_bluetooth_l_e_advertisement_watcher_trigger_get__use_uncoded1_m_phy(WAPBA_BluetoothLEAdvertisementWatcherTrigger *self, BOOL *value);
 
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger.put_UseUncoded1MPhy() */
 HRESULT wapba_bluetooth_l_e_advertisement_watcher_trigger_put__use_uncoded1_m_phy(WAPBA_BluetoothLEAdvertisementWatcherTrigger *self, BOOL value);
 
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger.get_UseCodedPhy() */
 HRESULT wapba_bluetooth_l_e_advertisement_watcher_trigger_get__use_coded_phy(WAPBA_BluetoothLEAdvertisementWatcherTrigger *self, BOOL *value);
 
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger.put_UseCodedPhy() */
 HRESULT wapba_bluetooth_l_e_advertisement_watcher_trigger_put__use_coded_phy(WAPBA_BluetoothLEAdvertisementWatcherTrigger *self, BOOL value);
 
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger.get_ScanParameters() */
 HRESULT wapba_bluetooth_l_e_advertisement_watcher_trigger_get__scan_parameters(WAPBA_BluetoothLEAdvertisementWatcherTrigger *self, WDBA_BluetoothLEAdvertisementScanParameters** value);
 
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger.put_ScanParameters() */
 HRESULT wapba_bluetooth_l_e_advertisement_watcher_trigger_put__scan_parameters(WAPBA_BluetoothLEAdvertisementWatcherTrigger *self, WDBA_BluetoothLEAdvertisementScanParameters* value);
 
-/* activate Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger */
 HRESULT wapba_bluetooth_l_e_advertisement_publisher_trigger_new(WAPBA_BluetoothLEAdvertisementPublisherTrigger **out);
 
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger */
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger.get_Advertisement() */
 HRESULT wapba_bluetooth_l_e_advertisement_publisher_trigger_get__advertisement(WAPBA_BluetoothLEAdvertisementPublisherTrigger *self, WDBA_BluetoothLEAdvertisement** value);
 
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger.get_PreferredTransmitPowerLevelInDBm() */
 HRESULT wapba_bluetooth_l_e_advertisement_publisher_trigger_get__preferred_transmit_power_level_in_d_bm(WAPBA_BluetoothLEAdvertisementPublisherTrigger *self, int16_t** value);
 
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger.put_PreferredTransmitPowerLevelInDBm() */
 HRESULT wapba_bluetooth_l_e_advertisement_publisher_trigger_put__preferred_transmit_power_level_in_d_bm(WAPBA_BluetoothLEAdvertisementPublisherTrigger *self, int16_t* value);
 
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger.get_UseExtendedFormat() */
 HRESULT wapba_bluetooth_l_e_advertisement_publisher_trigger_get__use_extended_format(WAPBA_BluetoothLEAdvertisementPublisherTrigger *self, BOOL *value);
 
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger.put_UseExtendedFormat() */
 HRESULT wapba_bluetooth_l_e_advertisement_publisher_trigger_put__use_extended_format(WAPBA_BluetoothLEAdvertisementPublisherTrigger *self, BOOL value);
 
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger.get_IsAnonymous() */
 HRESULT wapba_bluetooth_l_e_advertisement_publisher_trigger_get__is_anonymous(WAPBA_BluetoothLEAdvertisementPublisherTrigger *self, BOOL *value);
 
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger.put_IsAnonymous() */
 HRESULT wapba_bluetooth_l_e_advertisement_publisher_trigger_put__is_anonymous(WAPBA_BluetoothLEAdvertisementPublisherTrigger *self, BOOL value);
 
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger.get_IncludeTransmitPowerLevel() */
 HRESULT wapba_bluetooth_l_e_advertisement_publisher_trigger_get__include_transmit_power_level(WAPBA_BluetoothLEAdvertisementPublisherTrigger *self, BOOL *value);
 
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger.put_IncludeTransmitPowerLevel() */
 HRESULT wapba_bluetooth_l_e_advertisement_publisher_trigger_put__include_transmit_power_level(WAPBA_BluetoothLEAdvertisementPublisherTrigger *self, BOOL value);
 
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger.get_PrimaryPhy() */
 HRESULT wapba_bluetooth_l_e_advertisement_publisher_trigger_get__primary_phy(WAPBA_BluetoothLEAdvertisementPublisherTrigger *self, WDBA_BluetoothLEAdvertisementPhyType *value);
 
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger.put_PrimaryPhy() */
 HRESULT wapba_bluetooth_l_e_advertisement_publisher_trigger_put__primary_phy(WAPBA_BluetoothLEAdvertisementPublisherTrigger *self, WDBA_BluetoothLEAdvertisementPhyType value);
 
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger.get_SecondaryPhy() */
 HRESULT wapba_bluetooth_l_e_advertisement_publisher_trigger_get__secondary_phy(WAPBA_BluetoothLEAdvertisementPublisherTrigger *self, WDBA_BluetoothLEAdvertisementPhyType *value);
 
-/* Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger.put_SecondaryPhy() */
 HRESULT wapba_bluetooth_l_e_advertisement_publisher_trigger_put__secondary_phy(WAPBA_BluetoothLEAdvertisementPublisherTrigger *self, WDBA_BluetoothLEAdvertisementPhyType value);
 
-/* activate Windows.ApplicationModel.Background.BackgroundWorkCost */
 HRESULT wapba_background_work_cost_new(WAPBA_BackgroundWorkCost **out);
 
-/* Windows.ApplicationModel.Background.BackgroundWorkCost */
-/* Windows.ApplicationModel.Background.BackgroundWorkCost.get_AppEnergyUseLevel() */
 HRESULT wapba_background_work_cost_get__app_energy_use_level(WAPBA_EnergyUseLevel *value);
 
-/* Windows.ApplicationModel.Background.BackgroundWorkCost.get_AppEnergyUsePrediction() */
 HRESULT wapba_background_work_cost_get__app_energy_use_prediction(WAPBA_EnergyUseLevel *value);
 
-/* Windows.ApplicationModel.Background.BackgroundWorkCost.get_AppLastThrottledInStandbyTimestamp() */
 HRESULT wapba_background_work_cost_get__app_last_throttled_in_standby_timestamp(WF_DateTime *value);
 
-/* Windows.ApplicationModel.Background.BackgroundWorkCost.get_CurrentBackgroundWorkCost() */
 HRESULT wapba_background_work_cost_get__current_background_work_cost(WAPBA_BackgroundWorkCostValue *value);
 
-/* activate Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup */
 HRESULT wapba_background_task_registration_group_new(WAPBA_BackgroundTaskRegistrationGroup **out);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup */
-/* Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup.get_Id() */
 HRESULT wapba_background_task_registration_group_get__id(WAPBA_BackgroundTaskRegistrationGroup *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup.get_Name() */
 HRESULT wapba_background_task_registration_group_get__name(WAPBA_BackgroundTaskRegistrationGroup *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup.get_AllTasks() */
 HRESULT wapba_background_task_registration_group_get__all_tasks(WAPBA_BackgroundTaskRegistrationGroup *self, WFOCO_IMapView_Guid_WAPBA_BackgroundTaskRegistration** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapba_background_task_registration_group_on_background_activated(WAPBA_BackgroundTaskRegistrationGroup *self, cwinrt_event_fn fn, void *ctx);
 void wapba_background_task_registration_group_off_background_activated(WAPBA_BackgroundTaskRegistrationGroup *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Background.BackgroundTaskRegistration */
 HRESULT wapba_background_task_registration_new(WAPBA_BackgroundTaskRegistration **out);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskRegistration */
-/* Windows.ApplicationModel.Background.BackgroundTaskRegistration.get_TaskId() */
 HRESULT wapba_background_task_registration_get__task_id(WAPBA_BackgroundTaskRegistration *self, GUID *value);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskRegistration.get_Name() */
 HRESULT wapba_background_task_registration_get__name(WAPBA_BackgroundTaskRegistration *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskRegistration.Unregister(cancelTask) */
 HRESULT wapba_background_task_registration_unregister(WAPBA_BackgroundTaskRegistration *self, BOOL cancelTask);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskRegistration.get_Trigger() */
 HRESULT wapba_background_task_registration_get__trigger(WAPBA_BackgroundTaskRegistration *self, WAPBA_IBackgroundTrigger** value);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskRegistration.get_TaskGroup() */
 HRESULT wapba_background_task_registration_get__task_group(WAPBA_BackgroundTaskRegistration *self, WAPBA_BackgroundTaskRegistrationGroup** value);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskRegistration.get_TaskLastThrottledInStandbyTimestamp() */
 HRESULT wapba_background_task_registration_get__task_last_throttled_in_standby_timestamp(WAPBA_BackgroundTaskRegistration *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskRegistration.get_AppEnergyUsePredictionContribution() */
 HRESULT wapba_background_task_registration_get__app_energy_use_prediction_contribution(WAPBA_BackgroundTaskRegistration *self, double *value);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskRegistration.get_AllTaskGroups() */
 HRESULT wapba_background_task_registration_get__all_task_groups(WFOCO_IMapView_HSTRING_WAPBA_BackgroundTaskRegistrationGroup** value);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskRegistration.GetTaskGroup(groupId) */
 HRESULT wapba_background_task_registration_get_task_group(cwinrt_hstring groupId, WAPBA_BackgroundTaskRegistrationGroup** out);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskRegistration.get_AllTasks() */
 HRESULT wapba_background_task_registration_get__all_tasks(WFOCO_IMapView_Guid_WAPBA_IBackgroundTaskRegistration** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapba_background_task_registration_on_progress(WAPBA_BackgroundTaskRegistration *self, cwinrt_event_fn fn, void *ctx);
@@ -1744,409 +1492,232 @@ void wapba_background_task_registration_off_progress(WAPBA_BackgroundTaskRegistr
 cwinrt_token wapba_background_task_registration_on_completed(WAPBA_BackgroundTaskRegistration *self, cwinrt_event_fn fn, void *ctx);
 void wapba_background_task_registration_off_completed(WAPBA_BackgroundTaskRegistration *self, cwinrt_token token);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskProgressEventHandler */
-/* Windows.ApplicationModel.Background.BackgroundTaskProgressEventHandler.Invoke(sender, args) */
 HRESULT wapba_background_task_progress_event_handler_invoke(WAPBA_BackgroundTaskProgressEventHandler *self, WAPBA_BackgroundTaskRegistration* sender, WAPBA_BackgroundTaskProgressEventArgs* args);
 
-/* activate Windows.ApplicationModel.Background.BackgroundTaskProgressEventArgs */
 HRESULT wapba_background_task_progress_event_args_new(WAPBA_BackgroundTaskProgressEventArgs **out);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskProgressEventArgs */
-/* Windows.ApplicationModel.Background.BackgroundTaskProgressEventArgs.get_InstanceId() */
 HRESULT wapba_background_task_progress_event_args_get__instance_id(WAPBA_BackgroundTaskProgressEventArgs *self, GUID *value);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskProgressEventArgs.get_Progress() */
 HRESULT wapba_background_task_progress_event_args_get__progress(WAPBA_BackgroundTaskProgressEventArgs *self, uint32_t *value);
 
-/* activate Windows.ApplicationModel.Background.BackgroundTaskDeferral */
 HRESULT wapba_background_task_deferral_new(WAPBA_BackgroundTaskDeferral **out);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskDeferral */
-/* Windows.ApplicationModel.Background.BackgroundTaskDeferral.Complete() */
 HRESULT wapba_background_task_deferral_complete(WAPBA_BackgroundTaskDeferral *self);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskCompletedEventHandler */
-/* Windows.ApplicationModel.Background.BackgroundTaskCompletedEventHandler.Invoke(sender, args) */
 HRESULT wapba_background_task_completed_event_handler_invoke(WAPBA_BackgroundTaskCompletedEventHandler *self, WAPBA_BackgroundTaskRegistration* sender, WAPBA_BackgroundTaskCompletedEventArgs* args);
 
-/* activate Windows.ApplicationModel.Background.BackgroundTaskCompletedEventArgs */
 HRESULT wapba_background_task_completed_event_args_new(WAPBA_BackgroundTaskCompletedEventArgs **out);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskCompletedEventArgs */
-/* Windows.ApplicationModel.Background.BackgroundTaskCompletedEventArgs.get_InstanceId() */
 HRESULT wapba_background_task_completed_event_args_get__instance_id(WAPBA_BackgroundTaskCompletedEventArgs *self, GUID *value);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskCompletedEventArgs.CheckResult() */
 HRESULT wapba_background_task_completed_event_args_check_result(WAPBA_BackgroundTaskCompletedEventArgs *self);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskCanceledEventHandler */
-/* Windows.ApplicationModel.Background.BackgroundTaskCanceledEventHandler.Invoke(sender, reason) */
 HRESULT wapba_background_task_canceled_event_handler_invoke(WAPBA_BackgroundTaskCanceledEventHandler *self, WAPBA_IBackgroundTaskInstance* sender, WAPBA_BackgroundTaskCancellationReason reason);
 
-/* activate Windows.ApplicationModel.Background.BackgroundTaskBuilder */
 HRESULT wapba_background_task_builder_new(WAPBA_BackgroundTaskBuilder **out);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskBuilder */
-/* Windows.ApplicationModel.Background.BackgroundTaskBuilder.put_TaskEntryPoint() */
 HRESULT wapba_background_task_builder_put__task_entry_point(WAPBA_BackgroundTaskBuilder *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskBuilder.get_TaskEntryPoint() */
 HRESULT wapba_background_task_builder_get__task_entry_point(WAPBA_BackgroundTaskBuilder *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskBuilder.SetTrigger(trigger) */
 HRESULT wapba_background_task_builder_set_trigger(WAPBA_BackgroundTaskBuilder *self, WAPBA_IBackgroundTrigger* trigger);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskBuilder.AddCondition(condition) */
 HRESULT wapba_background_task_builder_add_condition(WAPBA_BackgroundTaskBuilder *self, WAPBA_IBackgroundCondition* condition);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskBuilder.put_Name() */
 HRESULT wapba_background_task_builder_put__name(WAPBA_BackgroundTaskBuilder *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskBuilder.get_Name() */
 HRESULT wapba_background_task_builder_get__name(WAPBA_BackgroundTaskBuilder *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskBuilder.Register() */
 HRESULT wapba_background_task_builder_register(WAPBA_BackgroundTaskBuilder *self, WAPBA_BackgroundTaskRegistration** out);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskBuilder.put_CancelOnConditionLoss() */
 HRESULT wapba_background_task_builder_put__cancel_on_condition_loss(WAPBA_BackgroundTaskBuilder *self, BOOL value);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskBuilder.get_CancelOnConditionLoss() */
 HRESULT wapba_background_task_builder_get__cancel_on_condition_loss(WAPBA_BackgroundTaskBuilder *self, BOOL *value);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskBuilder.put_IsNetworkRequested() */
 HRESULT wapba_background_task_builder_put__is_network_requested(WAPBA_BackgroundTaskBuilder *self, BOOL value);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskBuilder.get_IsNetworkRequested() */
 HRESULT wapba_background_task_builder_get__is_network_requested(WAPBA_BackgroundTaskBuilder *self, BOOL *value);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskBuilder.get_TaskGroup() */
 HRESULT wapba_background_task_builder_get__task_group(WAPBA_BackgroundTaskBuilder *self, WAPBA_BackgroundTaskRegistrationGroup** value);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskBuilder.put_TaskGroup() */
 HRESULT wapba_background_task_builder_put__task_group(WAPBA_BackgroundTaskBuilder *self, WAPBA_BackgroundTaskRegistrationGroup* value);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskBuilder.SetTaskEntryPointClsid(TaskEntryPoint) */
 HRESULT wapba_background_task_builder_set_task_entry_point_clsid(WAPBA_BackgroundTaskBuilder *self, GUID TaskEntryPoint);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskBuilder.get_AllowRunningTaskInStandby() */
 HRESULT wapba_background_task_builder_get__allow_running_task_in_standby(WAPBA_BackgroundTaskBuilder *self, BOOL *value);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskBuilder.put_AllowRunningTaskInStandby() */
 HRESULT wapba_background_task_builder_put__allow_running_task_in_standby(WAPBA_BackgroundTaskBuilder *self, BOOL value);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskBuilder.Validate() */
 HRESULT wapba_background_task_builder_validate(WAPBA_BackgroundTaskBuilder *self, BOOL *out);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskBuilder.Register(taskName) */
 HRESULT wapba_background_task_builder_register_str_p(WAPBA_BackgroundTaskBuilder *self, cwinrt_hstring taskName, WAPBA_BackgroundTaskRegistration** out);
 
-/* Windows.ApplicationModel.Background.BackgroundTaskBuilder.get_IsRunningTaskInStandbySupported() */
 HRESULT wapba_background_task_builder_get__is_running_task_in_standby_supported(BOOL *value);
 
-/* activate Windows.ApplicationModel.Background.BackgroundExecutionManager */
 HRESULT wapba_background_execution_manager_new(WAPBA_BackgroundExecutionManager **out);
 
-/* Windows.ApplicationModel.Background.BackgroundExecutionManager */
-/* Windows.ApplicationModel.Background.BackgroundExecutionManager.RequestAccessKindForModernStandbyAsync(requestedAccess, reason) */
 HRESULT wapba_background_execution_manager_request_access_kind_for_modern_standby_async(WAPBA_BackgroundAccessRequestKind requestedAccess, cwinrt_hstring reason, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Background.BackgroundExecutionManager.GetAccessStatusForModernStandby() */
 HRESULT wapba_background_execution_manager_get_access_status_for_modern_standby(WAPBA_BackgroundAccessStatus *out);
 
-/* Windows.ApplicationModel.Background.BackgroundExecutionManager.GetAccessStatusForModernStandby(applicationId) */
 HRESULT wapba_background_execution_manager_get_access_status_for_modern_standby_str_background_access_status(cwinrt_hstring applicationId, WAPBA_BackgroundAccessStatus *out);
 
-/* Windows.ApplicationModel.Background.BackgroundExecutionManager.RequestAccessKindAsync(requestedAccess, reason) */
 HRESULT wapba_background_execution_manager_request_access_kind_async(WAPBA_BackgroundAccessRequestKind requestedAccess, cwinrt_hstring reason, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Background.BackgroundExecutionManager.RequestAccessAsync() */
 HRESULT wapba_background_execution_manager_request_access_async(WF_IAsyncOperation_WAPBA_BackgroundAccessStatus** out);
 
-/* Windows.ApplicationModel.Background.BackgroundExecutionManager.RequestAccessAsync(applicationId) */
 HRESULT wapba_background_execution_manager_request_access_async_str_p(cwinrt_hstring applicationId, WF_IAsyncOperation_WAPBA_BackgroundAccessStatus** out);
 
-/* Windows.ApplicationModel.Background.BackgroundExecutionManager.RemoveAccess() */
 HRESULT wapba_background_execution_manager_remove_access(void);
 
-/* Windows.ApplicationModel.Background.BackgroundExecutionManager.RemoveAccess(applicationId) */
 HRESULT wapba_background_execution_manager_remove_access_str(cwinrt_hstring applicationId);
 
-/* Windows.ApplicationModel.Background.BackgroundExecutionManager.GetAccessStatus() */
 HRESULT wapba_background_execution_manager_get_access_status(WAPBA_BackgroundAccessStatus *out);
 
-/* Windows.ApplicationModel.Background.BackgroundExecutionManager.GetAccessStatus(applicationId) */
 HRESULT wapba_background_execution_manager_get_access_status_str_background_access_status(cwinrt_hstring applicationId, WAPBA_BackgroundAccessStatus *out);
 
-/* activate Windows.ApplicationModel.Background.ApplicationTriggerDetails */
 HRESULT wapba_application_trigger_details_new(WAPBA_ApplicationTriggerDetails **out);
 
-/* Windows.ApplicationModel.Background.ApplicationTriggerDetails */
-/* Windows.ApplicationModel.Background.ApplicationTriggerDetails.get_Arguments() */
 HRESULT wapba_application_trigger_details_get__arguments(WAPBA_ApplicationTriggerDetails *self, WFOCO_ValueSet** value);
 
-/* activate Windows.ApplicationModel.Background.ApplicationTrigger */
 HRESULT wapba_application_trigger_new(WAPBA_ApplicationTrigger **out);
 
-/* Windows.ApplicationModel.Background.ApplicationTrigger */
-/* Windows.ApplicationModel.Background.ApplicationTrigger.RequestAsync() */
 HRESULT wapba_application_trigger_request_async(WAPBA_ApplicationTrigger *self, WF_IAsyncOperation_WAPBA_ApplicationTriggerResult** out);
 
-/* Windows.ApplicationModel.Background.ApplicationTrigger.RequestAsync(arguments) */
 HRESULT wapba_application_trigger_request_async_p_p(WAPBA_ApplicationTrigger *self, WFOCO_ValueSet* arguments, WF_IAsyncOperation_WAPBA_ApplicationTriggerResult** out);
 
-/* activate Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo */
 HRESULT wapba_app_broadcast_trigger_provider_info_new(WAPBA_AppBroadcastTriggerProviderInfo **out);
 
-/* Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo */
-/* Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo.put_DisplayNameResource() */
 HRESULT wapba_app_broadcast_trigger_provider_info_put__display_name_resource(WAPBA_AppBroadcastTriggerProviderInfo *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo.get_DisplayNameResource() */
 HRESULT wapba_app_broadcast_trigger_provider_info_get__display_name_resource(WAPBA_AppBroadcastTriggerProviderInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo.put_LogoResource() */
 HRESULT wapba_app_broadcast_trigger_provider_info_put__logo_resource(WAPBA_AppBroadcastTriggerProviderInfo *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo.get_LogoResource() */
 HRESULT wapba_app_broadcast_trigger_provider_info_get__logo_resource(WAPBA_AppBroadcastTriggerProviderInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo.put_VideoKeyFrameInterval() */
 HRESULT wapba_app_broadcast_trigger_provider_info_put__video_key_frame_interval(WAPBA_AppBroadcastTriggerProviderInfo *self, WF_TimeSpan value);
 
-/* Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo.get_VideoKeyFrameInterval() */
 HRESULT wapba_app_broadcast_trigger_provider_info_get__video_key_frame_interval(WAPBA_AppBroadcastTriggerProviderInfo *self, WF_TimeSpan *value);
 
-/* Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo.put_MaxVideoBitrate() */
 HRESULT wapba_app_broadcast_trigger_provider_info_put__max_video_bitrate(WAPBA_AppBroadcastTriggerProviderInfo *self, uint32_t value);
 
-/* Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo.get_MaxVideoBitrate() */
 HRESULT wapba_app_broadcast_trigger_provider_info_get__max_video_bitrate(WAPBA_AppBroadcastTriggerProviderInfo *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo.put_MaxVideoWidth() */
 HRESULT wapba_app_broadcast_trigger_provider_info_put__max_video_width(WAPBA_AppBroadcastTriggerProviderInfo *self, uint32_t value);
 
-/* Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo.get_MaxVideoWidth() */
 HRESULT wapba_app_broadcast_trigger_provider_info_get__max_video_width(WAPBA_AppBroadcastTriggerProviderInfo *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo.put_MaxVideoHeight() */
 HRESULT wapba_app_broadcast_trigger_provider_info_put__max_video_height(WAPBA_AppBroadcastTriggerProviderInfo *self, uint32_t value);
 
-/* Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo.get_MaxVideoHeight() */
 HRESULT wapba_app_broadcast_trigger_provider_info_get__max_video_height(WAPBA_AppBroadcastTriggerProviderInfo *self, uint32_t *value);
 
-/* activate Windows.ApplicationModel.Background.AppBroadcastTrigger */
 HRESULT wapba_app_broadcast_trigger_new(WAPBA_AppBroadcastTrigger **out);
 
-/* Windows.ApplicationModel.Background.AppBroadcastTrigger */
-/* Windows.ApplicationModel.Background.AppBroadcastTrigger.put_ProviderInfo() */
 HRESULT wapba_app_broadcast_trigger_put__provider_info(WAPBA_AppBroadcastTrigger *self, WAPBA_AppBroadcastTriggerProviderInfo* value);
 
-/* Windows.ApplicationModel.Background.AppBroadcastTrigger.get_ProviderInfo() */
 HRESULT wapba_app_broadcast_trigger_get__provider_info(WAPBA_AppBroadcastTrigger *self, WAPBA_AppBroadcastTriggerProviderInfo** value);
 
-/* activate Windows.ApplicationModel.Background.AlarmApplicationManager */
 HRESULT wapba_alarm_application_manager_new(WAPBA_AlarmApplicationManager **out);
 
-/* Windows.ApplicationModel.Background.AlarmApplicationManager */
-/* Windows.ApplicationModel.Background.AlarmApplicationManager.RequestAccessAsync() */
 HRESULT wapba_alarm_application_manager_request_access_async(WF_IAsyncOperation_WAPBA_AlarmAccessStatus** out);
 
-/* Windows.ApplicationModel.Background.AlarmApplicationManager.GetAccessStatus() */
 HRESULT wapba_alarm_application_manager_get_access_status(WAPBA_AlarmAccessStatus *out);
 
-/* activate Windows.ApplicationModel.Background.ActivitySensorTrigger */
 HRESULT wapba_activity_sensor_trigger_new(WAPBA_ActivitySensorTrigger **out);
 
-/* Windows.ApplicationModel.Background.ActivitySensorTrigger */
-/* Windows.ApplicationModel.Background.ActivitySensorTrigger.get_SubscribedActivities() */
 HRESULT wapba_activity_sensor_trigger_get__subscribed_activities(WAPBA_ActivitySensorTrigger *self, WFOCO_IVector_WDESE_ActivityType** value);
 
-/* Windows.ApplicationModel.Background.ActivitySensorTrigger.get_ReportInterval() */
 HRESULT wapba_activity_sensor_trigger_get__report_interval(WAPBA_ActivitySensorTrigger *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Background.ActivitySensorTrigger.get_SupportedActivities() */
 HRESULT wapba_activity_sensor_trigger_get__supported_activities(WAPBA_ActivitySensorTrigger *self, WFOCO_IVectorView_WDESE_ActivityType** value);
 
-/* Windows.ApplicationModel.Background.ActivitySensorTrigger.get_MinimumReportInterval() */
 HRESULT wapba_activity_sensor_trigger_get__minimum_report_interval(WAPBA_ActivitySensorTrigger *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Background.ILocationTrigger */
-/* Windows.ApplicationModel.Background.IMaintenanceTrigger */
-/* Windows.ApplicationModel.Background.IMediaProcessingTrigger */
-/* Windows.ApplicationModel.Background.INetworkOperatorNotificationTrigger */
-/* Windows.ApplicationModel.Background.IPhoneTrigger */
-/* Windows.ApplicationModel.Background.IRfcommConnectionTrigger */
-/* Windows.ApplicationModel.Background.ISmartCardTrigger */
-/* Windows.ApplicationModel.Background.ISocketActivityTrigger */
-/* Windows.ApplicationModel.Background.ISystemCondition */
-/* Windows.ApplicationModel.Background.ISystemTrigger */
-/* Windows.ApplicationModel.Background.ITimeTrigger */
-/* Windows.ApplicationModel.Background.IBackgroundTaskInstance */
-/* Windows.ApplicationModel.Background.IBackgroundTaskInstance.get_InstanceId() */
 HRESULT wapba_background_task_instance_get__instance_id(WAPBA_IBackgroundTaskInstance *self, GUID *value);
 
-/* Windows.ApplicationModel.Background.IBackgroundTaskInstance.get_Task() */
 HRESULT wapba_background_task_instance_get__task(WAPBA_IBackgroundTaskInstance *self, WAPBA_BackgroundTaskRegistration** value);
 
-/* Windows.ApplicationModel.Background.IBackgroundTaskInstance.get_Progress() */
 HRESULT wapba_background_task_instance_get__progress(WAPBA_IBackgroundTaskInstance *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Background.IBackgroundTaskInstance.put_Progress() */
 HRESULT wapba_background_task_instance_put__progress(WAPBA_IBackgroundTaskInstance *self, uint32_t value);
 
-/* Windows.ApplicationModel.Background.IBackgroundTaskInstance.get_TriggerDetails() */
 HRESULT wapba_background_task_instance_get__trigger_details(WAPBA_IBackgroundTaskInstance *self, IInspectable** value);
 
-/* Windows.ApplicationModel.Background.IBackgroundTaskInstance.get_SuspendedCount() */
 HRESULT wapba_background_task_instance_get__suspended_count(WAPBA_IBackgroundTaskInstance *self, uint32_t *value);
 
-/* Windows.ApplicationModel.Background.IBackgroundTaskInstance.GetDeferral() */
 HRESULT wapba_background_task_instance_get_deferral(WAPBA_IBackgroundTaskInstance *self, WAPBA_BackgroundTaskDeferral** out);
 
-/* Windows.ApplicationModel.Background.IGeovisitTrigger */
-/* Windows.ApplicationModel.Background.IGattServiceProviderTriggerResult */
-/* Windows.ApplicationModel.Background.IGattServiceProviderTrigger */
-/* Windows.ApplicationModel.Background.IGattCharacteristicNotificationTrigger */
-/* Windows.ApplicationModel.Background.IGattCharacteristicNotificationTrigger2 */
-/* Windows.ApplicationModel.Background.IGattCharacteristicNotificationTrigger2.get_EventTriggeringMode() */
 HRESULT wapba_gatt_characteristic_notification_trigger_2_get__event_triggering_mode(WAPBA_IGattCharacteristicNotificationTrigger_2 *self, WDEBLBA_BluetoothEventTriggeringMode *value);
 
-/* Windows.ApplicationModel.Background.IDeviceUseTrigger */
-/* Windows.ApplicationModel.Background.IDeviceServicingTrigger */
-/* Windows.ApplicationModel.Background.IDeviceManufacturerNotificationTrigger */
-/* Windows.ApplicationModel.Background.IDeviceConnectionChangeTrigger */
-/* Windows.ApplicationModel.Background.ICustomSystemEventTrigger */
-/* Windows.ApplicationModel.Background.IContentPrefetchTrigger */
-/* Windows.ApplicationModel.Background.ICachedFileUpdaterTriggerDetails */
-/* Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger */
-/* Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger2 */
-/* Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger2.get_AllowExtendedAdvertisements() */
 HRESULT wapba_bluetooth_l_e_advertisement_watcher_trigger_2_get__allow_extended_advertisements(WAPBA_IBluetoothLEAdvertisementWatcherTrigger_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger2.put_AllowExtendedAdvertisements() */
 HRESULT wapba_bluetooth_l_e_advertisement_watcher_trigger_2_put__allow_extended_advertisements(WAPBA_IBluetoothLEAdvertisementWatcherTrigger_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger3 */
-/* Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger3.get_UseUncoded1MPhy() */
 HRESULT wapba_bluetooth_l_e_advertisement_watcher_trigger_3_get__use_uncoded1_m_phy(WAPBA_IBluetoothLEAdvertisementWatcherTrigger_3 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger3.put_UseUncoded1MPhy() */
 HRESULT wapba_bluetooth_l_e_advertisement_watcher_trigger_3_put__use_uncoded1_m_phy(WAPBA_IBluetoothLEAdvertisementWatcherTrigger_3 *self, BOOL value);
 
-/* Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger3.get_UseCodedPhy() */
 HRESULT wapba_bluetooth_l_e_advertisement_watcher_trigger_3_get__use_coded_phy(WAPBA_IBluetoothLEAdvertisementWatcherTrigger_3 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger3.put_UseCodedPhy() */
 HRESULT wapba_bluetooth_l_e_advertisement_watcher_trigger_3_put__use_coded_phy(WAPBA_IBluetoothLEAdvertisementWatcherTrigger_3 *self, BOOL value);
 
-/* Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger3.get_ScanParameters() */
 HRESULT wapba_bluetooth_l_e_advertisement_watcher_trigger_3_get__scan_parameters(WAPBA_IBluetoothLEAdvertisementWatcherTrigger_3 *self, WDBA_BluetoothLEAdvertisementScanParameters** value);
 
-/* Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger3.put_ScanParameters() */
 HRESULT wapba_bluetooth_l_e_advertisement_watcher_trigger_3_put__scan_parameters(WAPBA_IBluetoothLEAdvertisementWatcherTrigger_3 *self, WDBA_BluetoothLEAdvertisementScanParameters* value);
 
-/* Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger */
-/* Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger2 */
-/* Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger2.get_PreferredTransmitPowerLevelInDBm() */
 HRESULT wapba_bluetooth_l_e_advertisement_publisher_trigger_2_get__preferred_transmit_power_level_in_d_bm(WAPBA_IBluetoothLEAdvertisementPublisherTrigger_2 *self, int16_t** value);
 
-/* Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger2.put_PreferredTransmitPowerLevelInDBm() */
 HRESULT wapba_bluetooth_l_e_advertisement_publisher_trigger_2_put__preferred_transmit_power_level_in_d_bm(WAPBA_IBluetoothLEAdvertisementPublisherTrigger_2 *self, int16_t* value);
 
-/* Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger2.get_UseExtendedFormat() */
 HRESULT wapba_bluetooth_l_e_advertisement_publisher_trigger_2_get__use_extended_format(WAPBA_IBluetoothLEAdvertisementPublisherTrigger_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger2.put_UseExtendedFormat() */
 HRESULT wapba_bluetooth_l_e_advertisement_publisher_trigger_2_put__use_extended_format(WAPBA_IBluetoothLEAdvertisementPublisherTrigger_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger2.get_IsAnonymous() */
 HRESULT wapba_bluetooth_l_e_advertisement_publisher_trigger_2_get__is_anonymous(WAPBA_IBluetoothLEAdvertisementPublisherTrigger_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger2.put_IsAnonymous() */
 HRESULT wapba_bluetooth_l_e_advertisement_publisher_trigger_2_put__is_anonymous(WAPBA_IBluetoothLEAdvertisementPublisherTrigger_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger2.get_IncludeTransmitPowerLevel() */
 HRESULT wapba_bluetooth_l_e_advertisement_publisher_trigger_2_get__include_transmit_power_level(WAPBA_IBluetoothLEAdvertisementPublisherTrigger_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger2.put_IncludeTransmitPowerLevel() */
 HRESULT wapba_bluetooth_l_e_advertisement_publisher_trigger_2_put__include_transmit_power_level(WAPBA_IBluetoothLEAdvertisementPublisherTrigger_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger3 */
-/* Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger3.get_PrimaryPhy() */
 HRESULT wapba_bluetooth_l_e_advertisement_publisher_trigger_3_get__primary_phy(WAPBA_IBluetoothLEAdvertisementPublisherTrigger_3 *self, WDBA_BluetoothLEAdvertisementPhyType *value);
 
-/* Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger3.put_PrimaryPhy() */
 HRESULT wapba_bluetooth_l_e_advertisement_publisher_trigger_3_put__primary_phy(WAPBA_IBluetoothLEAdvertisementPublisherTrigger_3 *self, WDBA_BluetoothLEAdvertisementPhyType value);
 
-/* Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger3.get_SecondaryPhy() */
 HRESULT wapba_bluetooth_l_e_advertisement_publisher_trigger_3_get__secondary_phy(WAPBA_IBluetoothLEAdvertisementPublisherTrigger_3 *self, WDBA_BluetoothLEAdvertisementPhyType *value);
 
-/* Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger3.put_SecondaryPhy() */
 HRESULT wapba_bluetooth_l_e_advertisement_publisher_trigger_3_put__secondary_phy(WAPBA_IBluetoothLEAdvertisementPublisherTrigger_3 *self, WDBA_BluetoothLEAdvertisementPhyType value);
 
-/* Windows.ApplicationModel.Background.IBackgroundTaskRegistrationGroup */
-/* Windows.ApplicationModel.Background.IBackgroundTaskRegistration2 */
-/* Windows.ApplicationModel.Background.IBackgroundTaskRegistration2.get_Trigger() */
 HRESULT wapba_background_task_registration_2_get__trigger(WAPBA_IBackgroundTaskRegistration_2 *self, WAPBA_IBackgroundTrigger** value);
 
-/* Windows.ApplicationModel.Background.IBackgroundTaskRegistration3 */
-/* Windows.ApplicationModel.Background.IBackgroundTaskRegistration3.get_TaskGroup() */
 HRESULT wapba_background_task_registration_3_get__task_group(WAPBA_IBackgroundTaskRegistration_3 *self, WAPBA_BackgroundTaskRegistrationGroup** value);
 
-/* Windows.ApplicationModel.Background.IBackgroundTaskRegistration4 */
-/* Windows.ApplicationModel.Background.IBackgroundTaskRegistration4.get_TaskLastThrottledInStandbyTimestamp() */
 HRESULT wapba_background_task_registration_4_get__task_last_throttled_in_standby_timestamp(WAPBA_IBackgroundTaskRegistration_4 *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Background.IBackgroundTaskRegistration4.get_AppEnergyUsePredictionContribution() */
 HRESULT wapba_background_task_registration_4_get__app_energy_use_prediction_contribution(WAPBA_IBackgroundTaskRegistration_4 *self, double *value);
 
-/* Windows.ApplicationModel.Background.IBackgroundTaskProgressEventArgs */
-/* Windows.ApplicationModel.Background.IBackgroundTaskDeferral */
-/* Windows.ApplicationModel.Background.IBackgroundTaskCompletedEventArgs */
-/* Windows.ApplicationModel.Background.IBackgroundTaskBuilder */
-/* Windows.ApplicationModel.Background.IBackgroundTaskBuilder2 */
-/* Windows.ApplicationModel.Background.IBackgroundTaskBuilder2.put_CancelOnConditionLoss() */
 HRESULT wapba_background_task_builder_2_put__cancel_on_condition_loss(WAPBA_IBackgroundTaskBuilder_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Background.IBackgroundTaskBuilder2.get_CancelOnConditionLoss() */
 HRESULT wapba_background_task_builder_2_get__cancel_on_condition_loss(WAPBA_IBackgroundTaskBuilder_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Background.IBackgroundTaskBuilder3 */
-/* Windows.ApplicationModel.Background.IBackgroundTaskBuilder3.put_IsNetworkRequested() */
 HRESULT wapba_background_task_builder_3_put__is_network_requested(WAPBA_IBackgroundTaskBuilder_3 *self, BOOL value);
 
-/* Windows.ApplicationModel.Background.IBackgroundTaskBuilder3.get_IsNetworkRequested() */
 HRESULT wapba_background_task_builder_3_get__is_network_requested(WAPBA_IBackgroundTaskBuilder_3 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Background.IBackgroundTaskBuilder4 */
-/* Windows.ApplicationModel.Background.IBackgroundTaskBuilder4.get_TaskGroup() */
 HRESULT wapba_background_task_builder_4_get__task_group(WAPBA_IBackgroundTaskBuilder_4 *self, WAPBA_BackgroundTaskRegistrationGroup** value);
 
-/* Windows.ApplicationModel.Background.IBackgroundTaskBuilder4.put_TaskGroup() */
 HRESULT wapba_background_task_builder_4_put__task_group(WAPBA_IBackgroundTaskBuilder_4 *self, WAPBA_BackgroundTaskRegistrationGroup* value);
 
-/* Windows.ApplicationModel.Background.IBackgroundTaskBuilder5 */
-/* Windows.ApplicationModel.Background.IBackgroundTaskBuilder5.SetTaskEntryPointClsid(TaskEntryPoint) */
 HRESULT wapba_background_task_builder_5_set_task_entry_point_clsid(WAPBA_IBackgroundTaskBuilder_5 *self, GUID TaskEntryPoint);
 
-/* Windows.ApplicationModel.Background.IBackgroundTaskBuilder6 */
-/* Windows.ApplicationModel.Background.IBackgroundTaskBuilder6.get_AllowRunningTaskInStandby() */
 HRESULT wapba_background_task_builder_6_get__allow_running_task_in_standby(WAPBA_IBackgroundTaskBuilder_6 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Background.IBackgroundTaskBuilder6.put_AllowRunningTaskInStandby() */
 HRESULT wapba_background_task_builder_6_put__allow_running_task_in_standby(WAPBA_IBackgroundTaskBuilder_6 *self, BOOL value);
 
-/* Windows.ApplicationModel.Background.IBackgroundTaskBuilder6.Validate() */
 HRESULT wapba_background_task_builder_6_validate(WAPBA_IBackgroundTaskBuilder_6 *self, BOOL *out);
 
-/* Windows.ApplicationModel.Background.IBackgroundTaskBuilder6.Register(taskName) */
 HRESULT wapba_background_task_builder_6_register(WAPBA_IBackgroundTaskBuilder_6 *self, cwinrt_hstring taskName, WAPBA_BackgroundTaskRegistration** out);
 
-/* Windows.ApplicationModel.Background.IApplicationTriggerDetails */
-/* Windows.ApplicationModel.Background.IApplicationTrigger */
-/* Windows.ApplicationModel.Background.IAppBroadcastTriggerProviderInfo */
-/* Windows.ApplicationModel.Background.IAppBroadcastTrigger */
-/* Windows.ApplicationModel.Background.IActivitySensorTrigger */
-/* Windows.ApplicationModel.Background.IBackgroundTaskRegistration */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_BACKGROUND_H */

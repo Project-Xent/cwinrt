@@ -13,13 +13,11 @@
 #include <cwinrt/Windows.ApplicationModel.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WS_StorageFolder
 #define CWINRT_FWD_WS_StorageFolder
 typedef struct WS_StorageFolder WS_StorageFolder;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPAP_AppExtension WAPAP_AppExtension;
 typedef struct WAPAP_AppExtensionCatalog WAPAP_AppExtensionCatalog;
 typedef struct WAPAP_AppExtensionPackageInstalledEventArgs WAPAP_AppExtensionPackageInstalledEventArgs;
@@ -39,7 +37,6 @@ typedef struct WAPAP_IAppExtensionPackageUninstallingEventArgs WAPAP_IAppExtensi
 typedef struct WAPAP_IAppExtensionPackageUpdatedEventArgs WAPAP_IAppExtensionPackageUpdatedEventArgs;
 typedef struct WAPAP_IAppExtensionPackageUpdatingEventArgs WAPAP_IAppExtensionPackageUpdatingEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WAM_Package
 #define CWINRT_FWD_WAM_Package
 typedef struct WAM_Package WAM_Package;
@@ -97,7 +94,6 @@ typedef struct WF_TypedEventHandler_WAPAP_AppExtensionCatalog_WAPAP_AppExtension
 typedef struct WFOCO_IVectorView_WAPAP_AppExtension WFOCO_IVectorView_WAPAP_AppExtension;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -146,62 +142,40 @@ static const IID CWINRT_IID_WAPAP_IAppExtensionPackageUpdatedEventArgs CWINRT_MA
 static const IID CWINRT_IID_WAPAP_IAppExtensionPackageUpdatingEventArgs CWINRT_MAYBE_UNUSED = { 0x7ED59329, 0x1A65, 0x4800, { 0xA7, 0x00, 0xB3, 0x21, 0x00, 0x9E, 0x30, 0x6A } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.AppExtensions.AppExtension */
 HRESULT wapap_app_extension_new(WAPAP_AppExtension **out);
 
-/* Windows.ApplicationModel.AppExtensions.AppExtension */
-/* Windows.ApplicationModel.AppExtensions.AppExtension.get_Id() */
 HRESULT wapap_app_extension_get__id(WAPAP_AppExtension *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.AppExtensions.AppExtension.get_DisplayName() */
 HRESULT wapap_app_extension_get__display_name(WAPAP_AppExtension *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.AppExtensions.AppExtension.get_Description() */
 HRESULT wapap_app_extension_get__description(WAPAP_AppExtension *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.AppExtensions.AppExtension.get_Package() */
 HRESULT wapap_app_extension_get__package(WAPAP_AppExtension *self, WAM_Package** value);
 
-/* Windows.ApplicationModel.AppExtensions.AppExtension.get_AppInfo() */
 HRESULT wapap_app_extension_get__app_info(WAPAP_AppExtension *self, WAM_AppInfo** value);
 
-/* Windows.ApplicationModel.AppExtensions.AppExtension.GetExtensionPropertiesAsync() */
 HRESULT wapap_app_extension_get_extension_properties_async(WAPAP_AppExtension *self, WF_IAsyncOperation_WFOCO_IPropertySet** out);
 
-/* Windows.ApplicationModel.AppExtensions.AppExtension.GetPublicFolderAsync() */
 HRESULT wapap_app_extension_get_public_folder_async(WAPAP_AppExtension *self, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.ApplicationModel.AppExtensions.AppExtension.get_AppUserModelId() */
 HRESULT wapap_app_extension_get__app_user_model_id(WAPAP_AppExtension *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.AppExtensions.AppExtension.GetExtensionProperties() */
 HRESULT wapap_app_extension_get_extension_properties(WAPAP_AppExtension *self, WFOCO_IPropertySet** out);
 
-/* Windows.ApplicationModel.AppExtensions.AppExtension.GetPublicPath() */
 HRESULT wapap_app_extension_get_public_path(WAPAP_AppExtension *self, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.AppExtensions.AppExtension.GetPublicFolder() */
 HRESULT wapap_app_extension_get_public_folder(WAPAP_AppExtension *self, WS_StorageFolder** out);
 
-/* activate Windows.ApplicationModel.AppExtensions.AppExtensionCatalog */
 HRESULT wapap_app_extension_catalog_new(WAPAP_AppExtensionCatalog **out);
 
-/* Windows.ApplicationModel.AppExtensions.AppExtensionCatalog */
-/* Windows.ApplicationModel.AppExtensions.AppExtensionCatalog.FindAllAsync() */
 HRESULT wapap_app_extension_catalog_find_all_async(WAPAP_AppExtensionCatalog *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPAP_AppExtension** out);
 
-/* Windows.ApplicationModel.AppExtensions.AppExtensionCatalog.RequestRemovePackageAsync(packageFullName) */
 HRESULT wapap_app_extension_catalog_request_remove_package_async(WAPAP_AppExtensionCatalog *self, cwinrt_hstring packageFullName, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.AppExtensions.AppExtensionCatalog.FindAll() */
 HRESULT wapap_app_extension_catalog_find_all(WAPAP_AppExtensionCatalog *self, WFOCO_IVectorView_WAPAP_AppExtension** out);
 
-/* Windows.ApplicationModel.AppExtensions.AppExtensionCatalog.Open(appExtensionName) */
 HRESULT wapap_app_extension_catalog_open(cwinrt_hstring appExtensionName, WAPAP_AppExtensionCatalog** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapap_app_extension_catalog_on_package_installed(WAPAP_AppExtensionCatalog *self, cwinrt_event_fn fn, void *ctx);
@@ -219,89 +193,50 @@ void wapap_app_extension_catalog_off_package_uninstalling(WAPAP_AppExtensionCata
 cwinrt_token wapap_app_extension_catalog_on_package_status_changed(WAPAP_AppExtensionCatalog *self, cwinrt_event_fn fn, void *ctx);
 void wapap_app_extension_catalog_off_package_status_changed(WAPAP_AppExtensionCatalog *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.AppExtensions.AppExtensionPackageInstalledEventArgs */
 HRESULT wapap_app_extension_package_installed_event_args_new(WAPAP_AppExtensionPackageInstalledEventArgs **out);
 
-/* Windows.ApplicationModel.AppExtensions.AppExtensionPackageInstalledEventArgs */
-/* Windows.ApplicationModel.AppExtensions.AppExtensionPackageInstalledEventArgs.get_AppExtensionName() */
 HRESULT wapap_app_extension_package_installed_event_args_get__app_extension_name(WAPAP_AppExtensionPackageInstalledEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.AppExtensions.AppExtensionPackageInstalledEventArgs.get_Package() */
 HRESULT wapap_app_extension_package_installed_event_args_get__package(WAPAP_AppExtensionPackageInstalledEventArgs *self, WAM_Package** value);
 
-/* Windows.ApplicationModel.AppExtensions.AppExtensionPackageInstalledEventArgs.get_Extensions() */
 HRESULT wapap_app_extension_package_installed_event_args_get__extensions(WAPAP_AppExtensionPackageInstalledEventArgs *self, WFOCO_IVectorView_WAPAP_AppExtension** value);
 
-/* activate Windows.ApplicationModel.AppExtensions.AppExtensionPackageStatusChangedEventArgs */
 HRESULT wapap_app_extension_package_status_changed_event_args_new(WAPAP_AppExtensionPackageStatusChangedEventArgs **out);
 
-/* Windows.ApplicationModel.AppExtensions.AppExtensionPackageStatusChangedEventArgs */
-/* Windows.ApplicationModel.AppExtensions.AppExtensionPackageStatusChangedEventArgs.get_AppExtensionName() */
 HRESULT wapap_app_extension_package_status_changed_event_args_get__app_extension_name(WAPAP_AppExtensionPackageStatusChangedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.AppExtensions.AppExtensionPackageStatusChangedEventArgs.get_Package() */
 HRESULT wapap_app_extension_package_status_changed_event_args_get__package(WAPAP_AppExtensionPackageStatusChangedEventArgs *self, WAM_Package** value);
 
-/* activate Windows.ApplicationModel.AppExtensions.AppExtensionPackageUninstallingEventArgs */
 HRESULT wapap_app_extension_package_uninstalling_event_args_new(WAPAP_AppExtensionPackageUninstallingEventArgs **out);
 
-/* Windows.ApplicationModel.AppExtensions.AppExtensionPackageUninstallingEventArgs */
-/* Windows.ApplicationModel.AppExtensions.AppExtensionPackageUninstallingEventArgs.get_AppExtensionName() */
 HRESULT wapap_app_extension_package_uninstalling_event_args_get__app_extension_name(WAPAP_AppExtensionPackageUninstallingEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.AppExtensions.AppExtensionPackageUninstallingEventArgs.get_Package() */
 HRESULT wapap_app_extension_package_uninstalling_event_args_get__package(WAPAP_AppExtensionPackageUninstallingEventArgs *self, WAM_Package** value);
 
-/* activate Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatedEventArgs */
 HRESULT wapap_app_extension_package_updated_event_args_new(WAPAP_AppExtensionPackageUpdatedEventArgs **out);
 
-/* Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatedEventArgs */
-/* Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatedEventArgs.get_AppExtensionName() */
 HRESULT wapap_app_extension_package_updated_event_args_get__app_extension_name(WAPAP_AppExtensionPackageUpdatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatedEventArgs.get_Package() */
 HRESULT wapap_app_extension_package_updated_event_args_get__package(WAPAP_AppExtensionPackageUpdatedEventArgs *self, WAM_Package** value);
 
-/* Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatedEventArgs.get_Extensions() */
 HRESULT wapap_app_extension_package_updated_event_args_get__extensions(WAPAP_AppExtensionPackageUpdatedEventArgs *self, WFOCO_IVectorView_WAPAP_AppExtension** value);
 
-/* activate Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatingEventArgs */
 HRESULT wapap_app_extension_package_updating_event_args_new(WAPAP_AppExtensionPackageUpdatingEventArgs **out);
 
-/* Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatingEventArgs */
-/* Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatingEventArgs.get_AppExtensionName() */
 HRESULT wapap_app_extension_package_updating_event_args_get__app_extension_name(WAPAP_AppExtensionPackageUpdatingEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatingEventArgs.get_Package() */
 HRESULT wapap_app_extension_package_updating_event_args_get__package(WAPAP_AppExtensionPackageUpdatingEventArgs *self, WAM_Package** value);
 
-/* Windows.ApplicationModel.AppExtensions.IAppExtensionCatalogStatics */
-/* Windows.ApplicationModel.AppExtensions.IAppExtensionCatalogStatics.Open(appExtensionName) */
 HRESULT wapap_app_extension_catalog_statics_open(WAPAP_IAppExtensionCatalogStatics *self, cwinrt_hstring appExtensionName, WAPAP_AppExtensionCatalog** out);
 
-/* Windows.ApplicationModel.AppExtensions.IAppExtension */
-/* Windows.ApplicationModel.AppExtensions.IAppExtension2 */
-/* Windows.ApplicationModel.AppExtensions.IAppExtension2.get_AppUserModelId() */
 HRESULT wapap_app_extension_2_get__app_user_model_id(WAPAP_IAppExtension_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.AppExtensions.IAppExtension3 */
-/* Windows.ApplicationModel.AppExtensions.IAppExtension3.GetExtensionProperties() */
 HRESULT wapap_app_extension_3_get_extension_properties(WAPAP_IAppExtension_3 *self, WFOCO_IPropertySet** out);
 
-/* Windows.ApplicationModel.AppExtensions.IAppExtension3.GetPublicPath() */
 HRESULT wapap_app_extension_3_get_public_path(WAPAP_IAppExtension_3 *self, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.AppExtensions.IAppExtension3.GetPublicFolder() */
 HRESULT wapap_app_extension_3_get_public_folder(WAPAP_IAppExtension_3 *self, WS_StorageFolder** out);
 
-/* Windows.ApplicationModel.AppExtensions.IAppExtensionCatalog */
-/* Windows.ApplicationModel.AppExtensions.IAppExtensionCatalog2 */
-/* Windows.ApplicationModel.AppExtensions.IAppExtensionCatalog2.FindAll() */
 HRESULT wapap_app_extension_catalog_2_find_all(WAPAP_IAppExtensionCatalog_2 *self, WFOCO_IVectorView_WAPAP_AppExtension** out);
 
-/* Windows.ApplicationModel.AppExtensions.IAppExtensionPackageInstalledEventArgs */
-/* Windows.ApplicationModel.AppExtensions.IAppExtensionPackageStatusChangedEventArgs */
-/* Windows.ApplicationModel.AppExtensions.IAppExtensionPackageUninstallingEventArgs */
-/* Windows.ApplicationModel.AppExtensions.IAppExtensionPackageUpdatedEventArgs */
-/* Windows.ApplicationModel.AppExtensions.IAppExtensionPackageUpdatingEventArgs */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_APPEXTENSIONS_H */

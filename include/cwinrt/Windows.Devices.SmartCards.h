@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Security.Cryptography.Core.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
@@ -23,7 +22,6 @@ typedef struct WSTST_IBuffer WSTST_IBuffer;
 typedef struct WSTST_IRandomAccessStreamReference WSTST_IRandomAccessStreamReference;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDESM_CardAddedEventArgs WDESM_CardAddedEventArgs;
 typedef struct WDESM_CardRemovedEventArgs WDESM_CardRemovedEventArgs;
 typedef struct WDESM_IKnownSmartCardAppletIds WDESM_IKnownSmartCardAppletIds;
@@ -108,7 +106,6 @@ typedef struct WDESM_ISmartCardTriggerDetails WDESM_ISmartCardTriggerDetails;
 typedef struct WDESM_ISmartCardTriggerDetails_2 WDESM_ISmartCardTriggerDetails_2;
 typedef struct WDESM_ISmartCardTriggerDetails_3 WDESM_ISmartCardTriggerDetails_3;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
@@ -538,7 +535,6 @@ typedef enum WDESM_SmartCardUnlockPromptingBehavior {
 } WDESM_SmartCardUnlockPromptingBehavior;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -759,563 +755,354 @@ static const IID CWINRT_IID_WDESM_ISmartCardTriggerDetails_2 CWINRT_MAYBE_UNUSED
 static const IID CWINRT_IID_WDESM_ISmartCardTriggerDetails_3 CWINRT_MAYBE_UNUSED = { 0xB3E2C27D, 0x18C6, 0x4BA8, { 0x83, 0x76, 0xEF, 0x03, 0xD4, 0x91, 0x26, 0x66 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Devices.SmartCards.CardAddedEventArgs */
 HRESULT wdesm_card_added_event_args_new(WDESM_CardAddedEventArgs **out);
 
-/* Windows.Devices.SmartCards.CardAddedEventArgs */
-/* Windows.Devices.SmartCards.CardAddedEventArgs.get_SmartCard() */
 HRESULT wdesm_card_added_event_args_get__smart_card(WDESM_CardAddedEventArgs *self, WDESM_SmartCard** value);
 
-/* activate Windows.Devices.SmartCards.CardRemovedEventArgs */
 HRESULT wdesm_card_removed_event_args_new(WDESM_CardRemovedEventArgs **out);
 
-/* Windows.Devices.SmartCards.CardRemovedEventArgs */
-/* Windows.Devices.SmartCards.CardRemovedEventArgs.get_SmartCard() */
 HRESULT wdesm_card_removed_event_args_get__smart_card(WDESM_CardRemovedEventArgs *self, WDESM_SmartCard** value);
 
-/* Windows.Devices.SmartCards.IKnownSmartCardAppletIds */
-/* Windows.Devices.SmartCards.ISmartCardAppletIdGroupFactory */
-/* Windows.Devices.SmartCards.ISmartCardAppletIdGroupFactory.Create(displayName, appletIds, emulationCategory, emulationType) */
 HRESULT wdesm_smart_card_applet_id_group_factory_create(WDESM_ISmartCardAppletIdGroupFactory *self, cwinrt_hstring displayName, WFOCO_IVector_WSTST_IBuffer* appletIds, WDESM_SmartCardEmulationCategory emulationCategory, WDESM_SmartCardEmulationType emulationType, WDESM_SmartCardAppletIdGroup** out);
 
-/* Windows.Devices.SmartCards.ISmartCardAppletIdGroupStatics */
-/* Windows.Devices.SmartCards.ISmartCardAppletIdGroupStatics.get_MaxAppletIds() */
 HRESULT wdesm_smart_card_applet_id_group_statics_get__max_applet_ids(WDESM_ISmartCardAppletIdGroupStatics *self, uint16_t *value);
 
-/* Windows.Devices.SmartCards.ISmartCardAutomaticResponseApduFactory */
-/* Windows.Devices.SmartCards.ISmartCardAutomaticResponseApduFactory.Create(commandApdu, responseApdu) */
 HRESULT wdesm_smart_card_automatic_response_apdu_factory_create(WDESM_ISmartCardAutomaticResponseApduFactory *self, WSTST_IBuffer* commandApdu, WSTST_IBuffer* responseApdu, WDESM_SmartCardAutomaticResponseApdu** out);
 
-/* Windows.Devices.SmartCards.ISmartCardCryptogramGeneratorStatics */
-/* Windows.Devices.SmartCards.ISmartCardCryptogramGeneratorStatics.GetSmartCardCryptogramGeneratorAsync() */
 HRESULT wdesm_smart_card_cryptogram_generator_statics_get_smart_card_cryptogram_generator_async(WDESM_ISmartCardCryptogramGeneratorStatics *self, WF_IAsyncOperation_WDESM_SmartCardCryptogramGenerator** out);
 
-/* Windows.Devices.SmartCards.ISmartCardCryptogramGeneratorStatics2 */
-/* Windows.Devices.SmartCards.ISmartCardCryptogramGeneratorStatics2.IsSupported() */
 HRESULT wdesm_smart_card_cryptogram_generator_statics_2_is_supported(WDESM_ISmartCardCryptogramGeneratorStatics_2 *self, BOOL *out);
 
-/* Windows.Devices.SmartCards.ISmartCardEmulatorStatics */
-/* Windows.Devices.SmartCards.ISmartCardEmulatorStatics.GetDefaultAsync() */
 HRESULT wdesm_smart_card_emulator_statics_get_default_async(WDESM_ISmartCardEmulatorStatics *self, WF_IAsyncOperation_WDESM_SmartCardEmulator** out);
 
-/* Windows.Devices.SmartCards.ISmartCardEmulatorStatics2 */
-/* Windows.Devices.SmartCards.ISmartCardEmulatorStatics2.GetAppletIdGroupRegistrationsAsync() */
 HRESULT wdesm_smart_card_emulator_statics_2_get_applet_id_group_registrations_async(WDESM_ISmartCardEmulatorStatics_2 *self, WF_IAsyncOperation_WFOCO_IVectorView_WDESM_SmartCardAppletIdGroupRegistration** out);
 
-/* Windows.Devices.SmartCards.ISmartCardEmulatorStatics2.RegisterAppletIdGroupAsync(appletIdGroup) */
 HRESULT wdesm_smart_card_emulator_statics_2_register_applet_id_group_async(WDESM_ISmartCardEmulatorStatics_2 *self, WDESM_SmartCardAppletIdGroup* appletIdGroup, WF_IAsyncOperation_WDESM_SmartCardAppletIdGroupRegistration** out);
 
-/* Windows.Devices.SmartCards.ISmartCardEmulatorStatics2.UnregisterAppletIdGroupAsync(registration) */
 HRESULT wdesm_smart_card_emulator_statics_2_unregister_applet_id_group_async(WDESM_ISmartCardEmulatorStatics_2 *self, WDESM_SmartCardAppletIdGroupRegistration* registration, WF_IAsyncAction** out);
 
-/* Windows.Devices.SmartCards.ISmartCardEmulatorStatics2.get_MaxAppletIdGroupRegistrations() */
 HRESULT wdesm_smart_card_emulator_statics_2_get__max_applet_id_group_registrations(WDESM_ISmartCardEmulatorStatics_2 *self, uint16_t *value);
 
-/* Windows.Devices.SmartCards.ISmartCardEmulatorStatics3 */
-/* Windows.Devices.SmartCards.ISmartCardEmulatorStatics3.IsSupported() */
 HRESULT wdesm_smart_card_emulator_statics_3_is_supported(WDESM_ISmartCardEmulatorStatics_3 *self, BOOL *out);
 
-/* Windows.Devices.SmartCards.ISmartCardProvisioningStatics */
-/* Windows.Devices.SmartCards.ISmartCardProvisioningStatics.FromSmartCardAsync(card) */
 HRESULT wdesm_smart_card_provisioning_statics_from_smart_card_async(WDESM_ISmartCardProvisioningStatics *self, WDESM_SmartCard* card, WF_IAsyncOperation_WDESM_SmartCardProvisioning** out);
 
-/* Windows.Devices.SmartCards.ISmartCardProvisioningStatics.RequestVirtualSmartCardCreationAsync(friendlyName, administrativeKey, pinPolicy) */
 HRESULT wdesm_smart_card_provisioning_statics_request_virtual_smart_card_creation_async(WDESM_ISmartCardProvisioningStatics *self, cwinrt_hstring friendlyName, WSTST_IBuffer* administrativeKey, WDESM_SmartCardPinPolicy* pinPolicy, WF_IAsyncOperation_WDESM_SmartCardProvisioning** out);
 
-/* Windows.Devices.SmartCards.ISmartCardProvisioningStatics.RequestVirtualSmartCardCreationAsync(friendlyName, administrativeKey, pinPolicy, cardId) */
 HRESULT wdesm_smart_card_provisioning_statics_request_virtual_smart_card_creation_async_str_p_p_g_u_i_d_p(WDESM_ISmartCardProvisioningStatics *self, cwinrt_hstring friendlyName, WSTST_IBuffer* administrativeKey, WDESM_SmartCardPinPolicy* pinPolicy, GUID cardId, WF_IAsyncOperation_WDESM_SmartCardProvisioning** out);
 
-/* Windows.Devices.SmartCards.ISmartCardProvisioningStatics.RequestVirtualSmartCardDeletionAsync(card) */
 HRESULT wdesm_smart_card_provisioning_statics_request_virtual_smart_card_deletion_async(WDESM_ISmartCardProvisioningStatics *self, WDESM_SmartCard* card, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.SmartCards.ISmartCardProvisioningStatics2 */
-/* Windows.Devices.SmartCards.ISmartCardProvisioningStatics2.RequestAttestedVirtualSmartCardCreationAsync(friendlyName, administrativeKey, pinPolicy) */
 HRESULT wdesm_smart_card_provisioning_statics_2_request_attested_virtual_smart_card_creation_async(WDESM_ISmartCardProvisioningStatics_2 *self, cwinrt_hstring friendlyName, WSTST_IBuffer* administrativeKey, WDESM_SmartCardPinPolicy* pinPolicy, WF_IAsyncOperation_WDESM_SmartCardProvisioning** out);
 
-/* Windows.Devices.SmartCards.ISmartCardProvisioningStatics2.RequestAttestedVirtualSmartCardCreationAsync(friendlyName, administrativeKey, pinPolicy, cardId) */
 HRESULT wdesm_smart_card_provisioning_statics_2_request_attested_virtual_smart_card_creation_async_str_p_p_g_u_i_d_p(WDESM_ISmartCardProvisioningStatics_2 *self, cwinrt_hstring friendlyName, WSTST_IBuffer* administrativeKey, WDESM_SmartCardPinPolicy* pinPolicy, GUID cardId, WF_IAsyncOperation_WDESM_SmartCardProvisioning** out);
 
-/* Windows.Devices.SmartCards.ISmartCardReaderStatics */
-/* Windows.Devices.SmartCards.ISmartCardReaderStatics.GetDeviceSelector() */
 HRESULT wdesm_smart_card_reader_statics_get_device_selector(WDESM_ISmartCardReaderStatics *self, cwinrt_hstring *out);
 
-/* Windows.Devices.SmartCards.ISmartCardReaderStatics.GetDeviceSelector(kind) */
 HRESULT wdesm_smart_card_reader_statics_get_device_selector_smart_card_reader_kind_str(WDESM_ISmartCardReaderStatics *self, WDESM_SmartCardReaderKind kind, cwinrt_hstring *out);
 
-/* Windows.Devices.SmartCards.ISmartCardReaderStatics.FromIdAsync(deviceId) */
 HRESULT wdesm_smart_card_reader_statics_from_id_async(WDESM_ISmartCardReaderStatics *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDESM_SmartCardReader** out);
 
-/* activate Windows.Devices.SmartCards.KnownSmartCardAppletIds */
 HRESULT wdesm_known_smart_card_applet_ids_new(WDESM_KnownSmartCardAppletIds **out);
 
-/* Windows.Devices.SmartCards.KnownSmartCardAppletIds */
-/* Windows.Devices.SmartCards.KnownSmartCardAppletIds.get_PaymentSystemEnvironment() */
 HRESULT wdesm_known_smart_card_applet_ids_get__payment_system_environment(WSTST_IBuffer** value);
 
-/* Windows.Devices.SmartCards.KnownSmartCardAppletIds.get_ProximityPaymentSystemEnvironment() */
 HRESULT wdesm_known_smart_card_applet_ids_get__proximity_payment_system_environment(WSTST_IBuffer** value);
 
-/* activate Windows.Devices.SmartCards.SmartCard */
 HRESULT wdesm_smart_card_new(WDESM_SmartCard **out);
 
-/* Windows.Devices.SmartCards.SmartCard */
-/* Windows.Devices.SmartCards.SmartCard.get_Reader() */
 HRESULT wdesm_smart_card_get__reader(WDESM_SmartCard *self, WDESM_SmartCardReader** value);
 
-/* Windows.Devices.SmartCards.SmartCard.GetStatusAsync() */
 HRESULT wdesm_smart_card_get_status_async(WDESM_SmartCard *self, WF_IAsyncOperation_WDESM_SmartCardStatus** out);
 
-/* Windows.Devices.SmartCards.SmartCard.GetAnswerToResetAsync() */
 HRESULT wdesm_smart_card_get_answer_to_reset_async(WDESM_SmartCard *self, WF_IAsyncOperation_WSTST_IBuffer** out);
 
-/* Windows.Devices.SmartCards.SmartCard.ConnectAsync() */
 HRESULT wdesm_smart_card_connect_async(WDESM_SmartCard *self, WF_IAsyncOperation_WDESM_SmartCardConnection** out);
 
-/* activate Windows.Devices.SmartCards.SmartCardAppletIdGroup */
 HRESULT wdesm_smart_card_applet_id_group_new(WDESM_SmartCardAppletIdGroup **out);
 
-/* Windows.Devices.SmartCards.SmartCardAppletIdGroup */
-/* Windows.Devices.SmartCards.SmartCardAppletIdGroup.get_DisplayName() */
 HRESULT wdesm_smart_card_applet_id_group_get__display_name(WDESM_SmartCardAppletIdGroup *self, cwinrt_hstring *value);
 
-/* Windows.Devices.SmartCards.SmartCardAppletIdGroup.put_DisplayName() */
 HRESULT wdesm_smart_card_applet_id_group_put__display_name(WDESM_SmartCardAppletIdGroup *self, cwinrt_hstring value);
 
-/* Windows.Devices.SmartCards.SmartCardAppletIdGroup.get_AppletIds() */
 HRESULT wdesm_smart_card_applet_id_group_get__applet_ids(WDESM_SmartCardAppletIdGroup *self, WFOCO_IVector_WSTST_IBuffer** value);
 
-/* Windows.Devices.SmartCards.SmartCardAppletIdGroup.get_SmartCardEmulationCategory() */
 HRESULT wdesm_smart_card_applet_id_group_get__smart_card_emulation_category(WDESM_SmartCardAppletIdGroup *self, WDESM_SmartCardEmulationCategory *value);
 
-/* Windows.Devices.SmartCards.SmartCardAppletIdGroup.put_SmartCardEmulationCategory() */
 HRESULT wdesm_smart_card_applet_id_group_put__smart_card_emulation_category(WDESM_SmartCardAppletIdGroup *self, WDESM_SmartCardEmulationCategory value);
 
-/* Windows.Devices.SmartCards.SmartCardAppletIdGroup.get_SmartCardEmulationType() */
 HRESULT wdesm_smart_card_applet_id_group_get__smart_card_emulation_type(WDESM_SmartCardAppletIdGroup *self, WDESM_SmartCardEmulationType *value);
 
-/* Windows.Devices.SmartCards.SmartCardAppletIdGroup.put_SmartCardEmulationType() */
 HRESULT wdesm_smart_card_applet_id_group_put__smart_card_emulation_type(WDESM_SmartCardAppletIdGroup *self, WDESM_SmartCardEmulationType value);
 
-/* Windows.Devices.SmartCards.SmartCardAppletIdGroup.get_AutomaticEnablement() */
 HRESULT wdesm_smart_card_applet_id_group_get__automatic_enablement(WDESM_SmartCardAppletIdGroup *self, BOOL *value);
 
-/* Windows.Devices.SmartCards.SmartCardAppletIdGroup.put_AutomaticEnablement() */
 HRESULT wdesm_smart_card_applet_id_group_put__automatic_enablement(WDESM_SmartCardAppletIdGroup *self, BOOL value);
 
-/* Windows.Devices.SmartCards.SmartCardAppletIdGroup.get_Logo() */
 HRESULT wdesm_smart_card_applet_id_group_get__logo(WDESM_SmartCardAppletIdGroup *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.Devices.SmartCards.SmartCardAppletIdGroup.put_Logo() */
 HRESULT wdesm_smart_card_applet_id_group_put__logo(WDESM_SmartCardAppletIdGroup *self, WSTST_IRandomAccessStreamReference* value);
 
-/* Windows.Devices.SmartCards.SmartCardAppletIdGroup.get_Description() */
 HRESULT wdesm_smart_card_applet_id_group_get__description(WDESM_SmartCardAppletIdGroup *self, cwinrt_hstring *value);
 
-/* Windows.Devices.SmartCards.SmartCardAppletIdGroup.put_Description() */
 HRESULT wdesm_smart_card_applet_id_group_put__description(WDESM_SmartCardAppletIdGroup *self, cwinrt_hstring value);
 
-/* Windows.Devices.SmartCards.SmartCardAppletIdGroup.get_Properties() */
 HRESULT wdesm_smart_card_applet_id_group_get__properties(WDESM_SmartCardAppletIdGroup *self, WFOCO_ValueSet** value);
 
-/* Windows.Devices.SmartCards.SmartCardAppletIdGroup.get_SecureUserAuthenticationRequired() */
 HRESULT wdesm_smart_card_applet_id_group_get__secure_user_authentication_required(WDESM_SmartCardAppletIdGroup *self, BOOL *value);
 
-/* Windows.Devices.SmartCards.SmartCardAppletIdGroup.put_SecureUserAuthenticationRequired() */
 HRESULT wdesm_smart_card_applet_id_group_put__secure_user_authentication_required(WDESM_SmartCardAppletIdGroup *self, BOOL value);
 
-/* Windows.Devices.SmartCards.SmartCardAppletIdGroup.get_MaxAppletIds() */
 HRESULT wdesm_smart_card_applet_id_group_get__max_applet_ids(uint16_t *value);
 
-/* activate Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration */
 HRESULT wdesm_smart_card_applet_id_group_registration_new(WDESM_SmartCardAppletIdGroupRegistration **out);
 
-/* Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration */
-/* Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration.get_ActivationPolicy() */
 HRESULT wdesm_smart_card_applet_id_group_registration_get__activation_policy(WDESM_SmartCardAppletIdGroupRegistration *self, WDESM_SmartCardAppletIdGroupActivationPolicy *value);
 
-/* Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration.get_AppletIdGroup() */
 HRESULT wdesm_smart_card_applet_id_group_registration_get__applet_id_group(WDESM_SmartCardAppletIdGroupRegistration *self, WDESM_SmartCardAppletIdGroup** value);
 
-/* Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration.RequestActivationPolicyChangeAsync(policy) */
 HRESULT wdesm_smart_card_applet_id_group_registration_request_activation_policy_change_async(WDESM_SmartCardAppletIdGroupRegistration *self, WDESM_SmartCardAppletIdGroupActivationPolicy policy, WF_IAsyncOperation_WDESM_SmartCardActivationPolicyChangeResult** out);
 
-/* Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration.get_Id() */
 HRESULT wdesm_smart_card_applet_id_group_registration_get__id(WDESM_SmartCardAppletIdGroupRegistration *self, GUID *value);
 
-/* Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration.SetAutomaticResponseApdusAsync(apdus) */
 HRESULT wdesm_smart_card_applet_id_group_registration_set_automatic_response_apdus_async(WDESM_SmartCardAppletIdGroupRegistration *self, WFOCO_IIterable_WDESM_SmartCardAutomaticResponseApdu* apdus, WF_IAsyncAction** out);
 
-/* Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration.get_SmartCardReaderId() */
 HRESULT wdesm_smart_card_applet_id_group_registration_get__smart_card_reader_id(WDESM_SmartCardAppletIdGroupRegistration *self, cwinrt_hstring *value);
 
-/* Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration.SetPropertiesAsync(props) */
 HRESULT wdesm_smart_card_applet_id_group_registration_set_properties_async(WDESM_SmartCardAppletIdGroupRegistration *self, WFOCO_ValueSet* props, WF_IAsyncAction** out);
 
-/* activate Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu */
 HRESULT wdesm_smart_card_automatic_response_apdu_new(WDESM_SmartCardAutomaticResponseApdu **out);
 
-/* Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu */
-/* Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu.get_CommandApdu() */
 HRESULT wdesm_smart_card_automatic_response_apdu_get__command_apdu(WDESM_SmartCardAutomaticResponseApdu *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu.put_CommandApdu() */
 HRESULT wdesm_smart_card_automatic_response_apdu_put__command_apdu(WDESM_SmartCardAutomaticResponseApdu *self, WSTST_IBuffer* value);
 
-/* Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu.get_CommandApduBitMask() */
 HRESULT wdesm_smart_card_automatic_response_apdu_get__command_apdu_bit_mask(WDESM_SmartCardAutomaticResponseApdu *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu.put_CommandApduBitMask() */
 HRESULT wdesm_smart_card_automatic_response_apdu_put__command_apdu_bit_mask(WDESM_SmartCardAutomaticResponseApdu *self, WSTST_IBuffer* value);
 
-/* Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu.get_ShouldMatchLength() */
 HRESULT wdesm_smart_card_automatic_response_apdu_get__should_match_length(WDESM_SmartCardAutomaticResponseApdu *self, BOOL *value);
 
-/* Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu.put_ShouldMatchLength() */
 HRESULT wdesm_smart_card_automatic_response_apdu_put__should_match_length(WDESM_SmartCardAutomaticResponseApdu *self, BOOL value);
 
-/* Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu.get_AppletId() */
 HRESULT wdesm_smart_card_automatic_response_apdu_get__applet_id(WDESM_SmartCardAutomaticResponseApdu *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu.put_AppletId() */
 HRESULT wdesm_smart_card_automatic_response_apdu_put__applet_id(WDESM_SmartCardAutomaticResponseApdu *self, WSTST_IBuffer* value);
 
-/* Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu.get_ResponseApdu() */
 HRESULT wdesm_smart_card_automatic_response_apdu_get__response_apdu(WDESM_SmartCardAutomaticResponseApdu *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu.put_ResponseApdu() */
 HRESULT wdesm_smart_card_automatic_response_apdu_put__response_apdu(WDESM_SmartCardAutomaticResponseApdu *self, WSTST_IBuffer* value);
 
-/* Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu.get_InputState() */
 HRESULT wdesm_smart_card_automatic_response_apdu_get__input_state(WDESM_SmartCardAutomaticResponseApdu *self, uint32_t** value);
 
-/* Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu.put_InputState() */
 HRESULT wdesm_smart_card_automatic_response_apdu_put__input_state(WDESM_SmartCardAutomaticResponseApdu *self, uint32_t* value);
 
-/* Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu.get_OutputState() */
 HRESULT wdesm_smart_card_automatic_response_apdu_get__output_state(WDESM_SmartCardAutomaticResponseApdu *self, uint32_t** value);
 
-/* Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu.put_OutputState() */
 HRESULT wdesm_smart_card_automatic_response_apdu_put__output_state(WDESM_SmartCardAutomaticResponseApdu *self, uint32_t* value);
 
-/* Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu.get_AllowWhenCryptogramGeneratorNotPrepared() */
 HRESULT wdesm_smart_card_automatic_response_apdu_get__allow_when_cryptogram_generator_not_prepared(WDESM_SmartCardAutomaticResponseApdu *self, BOOL *value);
 
-/* Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu.put_AllowWhenCryptogramGeneratorNotPrepared() */
 HRESULT wdesm_smart_card_automatic_response_apdu_put__allow_when_cryptogram_generator_not_prepared(WDESM_SmartCardAutomaticResponseApdu *self, BOOL value);
 
-/* activate Windows.Devices.SmartCards.SmartCardChallengeContext */
 HRESULT wdesm_smart_card_challenge_context_new(WDESM_SmartCardChallengeContext **out);
 
-/* Windows.Devices.SmartCards.SmartCardChallengeContext */
-/* Windows.Devices.SmartCards.SmartCardChallengeContext.get_Challenge() */
 HRESULT wdesm_smart_card_challenge_context_get__challenge(WDESM_SmartCardChallengeContext *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.SmartCards.SmartCardChallengeContext.VerifyResponseAsync(response) */
 HRESULT wdesm_smart_card_challenge_context_verify_response_async(WDESM_SmartCardChallengeContext *self, WSTST_IBuffer* response, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.SmartCards.SmartCardChallengeContext.ProvisionAsync(response, formatCard) */
 HRESULT wdesm_smart_card_challenge_context_provision_async(WDESM_SmartCardChallengeContext *self, WSTST_IBuffer* response, BOOL formatCard, WF_IAsyncAction** out);
 
-/* Windows.Devices.SmartCards.SmartCardChallengeContext.ProvisionAsync(response, formatCard, newCardId) */
 HRESULT wdesm_smart_card_challenge_context_provision_async_p_b_g_u_i_d_p(WDESM_SmartCardChallengeContext *self, WSTST_IBuffer* response, BOOL formatCard, GUID newCardId, WF_IAsyncAction** out);
 
-/* Windows.Devices.SmartCards.SmartCardChallengeContext.ChangeAdministrativeKeyAsync(response, newAdministrativeKey) */
 HRESULT wdesm_smart_card_challenge_context_change_administrative_key_async(WDESM_SmartCardChallengeContext *self, WSTST_IBuffer* response, WSTST_IBuffer* newAdministrativeKey, WF_IAsyncAction** out);
 
-/* Windows.Devices.SmartCards.SmartCardChallengeContext.Close() */
 HRESULT wdesm_smart_card_challenge_context_close(WDESM_SmartCardChallengeContext *self);
 
-/* activate Windows.Devices.SmartCards.SmartCardConnection */
 HRESULT wdesm_smart_card_connection_new(WDESM_SmartCardConnection **out);
 
-/* Windows.Devices.SmartCards.SmartCardConnection */
-/* Windows.Devices.SmartCards.SmartCardConnection.TransmitAsync(command) */
 HRESULT wdesm_smart_card_connection_transmit_async(WDESM_SmartCardConnection *self, WSTST_IBuffer* command, WF_IAsyncOperation_WSTST_IBuffer** out);
 
-/* Windows.Devices.SmartCards.SmartCardConnection.Close() */
 HRESULT wdesm_smart_card_connection_close(WDESM_SmartCardConnection *self);
 
-/* activate Windows.Devices.SmartCards.SmartCardCryptogramGenerator */
 HRESULT wdesm_smart_card_cryptogram_generator_new(WDESM_SmartCardCryptogramGenerator **out);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramGenerator */
-/* Windows.Devices.SmartCards.SmartCardCryptogramGenerator.get_SupportedCryptogramMaterialTypes() */
 HRESULT wdesm_smart_card_cryptogram_generator_get__supported_cryptogram_material_types(WDESM_SmartCardCryptogramGenerator *self, WFOCO_IVectorView_WDESM_SmartCardCryptogramMaterialType** value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramGenerator.get_SupportedCryptogramAlgorithms() */
 HRESULT wdesm_smart_card_cryptogram_generator_get__supported_cryptogram_algorithms(WDESM_SmartCardCryptogramGenerator *self, WFOCO_IVectorView_WDESM_SmartCardCryptogramAlgorithm** value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramGenerator.get_SupportedCryptogramMaterialPackageFormats() */
 HRESULT wdesm_smart_card_cryptogram_generator_get__supported_cryptogram_material_package_formats(WDESM_SmartCardCryptogramGenerator *self, WFOCO_IVectorView_WDESM_SmartCardCryptogramMaterialPackageFormat** value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramGenerator.get_SupportedCryptogramMaterialPackageConfirmationResponseFormats() */
 HRESULT wdesm_smart_card_cryptogram_generator_get__supported_cryptogram_material_package_confirmation_response_formats(WDESM_SmartCardCryptogramGenerator *self, WFOCO_IVectorView_WDESM_SmartCardCryptogramMaterialPackageConfirmationResponseFormat** value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramGenerator.get_SupportedSmartCardCryptogramStorageKeyCapabilities() */
 HRESULT wdesm_smart_card_cryptogram_generator_get__supported_smart_card_cryptogram_storage_key_capabilities(WDESM_SmartCardCryptogramGenerator *self, WFOCO_IVectorView_WDESM_SmartCardCryptogramStorageKeyCapabilities** value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramGenerator.DeleteCryptogramMaterialStorageKeyAsync(storageKeyName) */
 HRESULT wdesm_smart_card_cryptogram_generator_delete_cryptogram_material_storage_key_async(WDESM_SmartCardCryptogramGenerator *self, cwinrt_hstring storageKeyName, WF_IAsyncOperation_WDESM_SmartCardCryptogramGeneratorOperationStatus** out);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramGenerator.CreateCryptogramMaterialStorageKeyAsync(promptingBehavior, storageKeyName, algorithm, capabilities) */
 HRESULT wdesm_smart_card_cryptogram_generator_create_cryptogram_material_storage_key_async(WDESM_SmartCardCryptogramGenerator *self, WDESM_SmartCardUnlockPromptingBehavior promptingBehavior, cwinrt_hstring storageKeyName, WDESM_SmartCardCryptogramStorageKeyAlgorithm algorithm, WDESM_SmartCardCryptogramStorageKeyCapabilities capabilities, WF_IAsyncOperation_WDESM_SmartCardCryptogramGeneratorOperationStatus** out);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramGenerator.RequestCryptogramMaterialStorageKeyInfoAsync(promptingBehavior, storageKeyName, format) */
 HRESULT wdesm_smart_card_cryptogram_generator_request_cryptogram_material_storage_key_info_async(WDESM_SmartCardCryptogramGenerator *self, WDESM_SmartCardUnlockPromptingBehavior promptingBehavior, cwinrt_hstring storageKeyName, WSECRCO_CryptographicPublicKeyBlobType format, WF_IAsyncOperation_WDESM_SmartCardCryptogramStorageKeyInfo** out);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramGenerator.ImportCryptogramMaterialPackageAsync(format, storageKeyName, materialPackageName, cryptogramMaterialPackage) */
 HRESULT wdesm_smart_card_cryptogram_generator_import_cryptogram_material_package_async(WDESM_SmartCardCryptogramGenerator *self, WDESM_SmartCardCryptogramMaterialPackageFormat format, cwinrt_hstring storageKeyName, cwinrt_hstring materialPackageName, WSTST_IBuffer* cryptogramMaterialPackage, WF_IAsyncOperation_WDESM_SmartCardCryptogramGeneratorOperationStatus** out);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramGenerator.TryProvePossessionOfCryptogramMaterialPackageAsync(promptingBehavior, responseFormat, materialPackageName, materialName, challenge) */
 HRESULT wdesm_smart_card_cryptogram_generator_try_prove_possession_of_cryptogram_material_package_async(WDESM_SmartCardCryptogramGenerator *self, WDESM_SmartCardUnlockPromptingBehavior promptingBehavior, WDESM_SmartCardCryptogramMaterialPackageConfirmationResponseFormat responseFormat, cwinrt_hstring materialPackageName, cwinrt_hstring materialName, WSTST_IBuffer* challenge, WF_IAsyncOperation_WDESM_SmartCardCryptogramMaterialPossessionProof** out);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramGenerator.RequestUnlockCryptogramMaterialForUseAsync(promptingBehavior) */
 HRESULT wdesm_smart_card_cryptogram_generator_request_unlock_cryptogram_material_for_use_async(WDESM_SmartCardCryptogramGenerator *self, WDESM_SmartCardUnlockPromptingBehavior promptingBehavior, WF_IAsyncOperation_WDESM_SmartCardCryptogramGeneratorOperationStatus** out);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramGenerator.DeleteCryptogramMaterialPackageAsync(materialPackageName) */
 HRESULT wdesm_smart_card_cryptogram_generator_delete_cryptogram_material_package_async(WDESM_SmartCardCryptogramGenerator *self, cwinrt_hstring materialPackageName, WF_IAsyncOperation_WDESM_SmartCardCryptogramGeneratorOperationStatus** out);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramGenerator.ValidateRequestApduAsync(promptingBehavior, apduToValidate, cryptogramPlacementSteps) */
 HRESULT wdesm_smart_card_cryptogram_generator_validate_request_apdu_async(WDESM_SmartCardCryptogramGenerator *self, WDESM_SmartCardUnlockPromptingBehavior promptingBehavior, WSTST_IBuffer* apduToValidate, WFOCO_IIterable_WDESM_SmartCardCryptogramPlacementStep* cryptogramPlacementSteps, WF_IAsyncOperation_WDESM_SmartCardCryptogramGeneratorOperationStatus** out);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramGenerator.GetAllCryptogramStorageKeyCharacteristicsAsync() */
 HRESULT wdesm_smart_card_cryptogram_generator_get_all_cryptogram_storage_key_characteristics_async(WDESM_SmartCardCryptogramGenerator *self, WF_IAsyncOperation_WDESM_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult** out);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramGenerator.GetAllCryptogramMaterialPackageCharacteristicsAsync() */
 HRESULT wdesm_smart_card_cryptogram_generator_get_all_cryptogram_material_package_characteristics_async(WDESM_SmartCardCryptogramGenerator *self, WF_IAsyncOperation_WDESM_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult** out);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramGenerator.GetAllCryptogramMaterialPackageCharacteristicsAsync(storageKeyName) */
 HRESULT wdesm_smart_card_cryptogram_generator_get_all_cryptogram_material_package_characteristics_async_str_p(WDESM_SmartCardCryptogramGenerator *self, cwinrt_hstring storageKeyName, WF_IAsyncOperation_WDESM_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult** out);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramGenerator.GetAllCryptogramMaterialCharacteristicsAsync(promptingBehavior, materialPackageName) */
 HRESULT wdesm_smart_card_cryptogram_generator_get_all_cryptogram_material_characteristics_async(WDESM_SmartCardCryptogramGenerator *self, WDESM_SmartCardUnlockPromptingBehavior promptingBehavior, cwinrt_hstring materialPackageName, WF_IAsyncOperation_WDESM_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult** out);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramGenerator.IsSupported() */
 HRESULT wdesm_smart_card_cryptogram_generator_is_supported(BOOL *out);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramGenerator.GetSmartCardCryptogramGeneratorAsync() */
 HRESULT wdesm_smart_card_cryptogram_generator_get_smart_card_cryptogram_generator_async(WF_IAsyncOperation_WDESM_SmartCardCryptogramGenerator** out);
 
-/* activate Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult */
 HRESULT wdesm_smart_card_cryptogram_get_all_cryptogram_material_characteristi_new(WDESM_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult **out);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult */
-/* Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult.get_OperationStatus() */
 HRESULT wdesm_smart_card_cryptogram_get_all_cryptogram_material_characteristi_get__operation_status(WDESM_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult *self, WDESM_SmartCardCryptogramGeneratorOperationStatus *value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult.get_Characteristics() */
 HRESULT wdesm_smart_card_cryptogram_get_all_cryptogram_material_characteristi_get__characteristics(WDESM_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult *self, WFOCO_IVectorView_WDESM_SmartCardCryptogramMaterialCharacteristics** value);
 
-/* activate Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult */
 HRESULT wdesm_smart_card_cryptogram_get_all_cryptogram_material_package_chara_new(WDESM_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult **out);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult */
-/* Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult.get_OperationStatus() */
 HRESULT wdesm_smart_card_cryptogram_get_all_cryptogram_material_package_chara_get__operation_status(WDESM_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult *self, WDESM_SmartCardCryptogramGeneratorOperationStatus *value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult.get_Characteristics() */
 HRESULT wdesm_smart_card_cryptogram_get_all_cryptogram_material_package_chara_get__characteristics(WDESM_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult *self, WFOCO_IVectorView_WDESM_SmartCardCryptogramMaterialPackageCharacteristics** value);
 
-/* activate Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult */
 HRESULT wdesm_smart_card_cryptogram_get_all_cryptogram_storage_key_characteri_new(WDESM_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult **out);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult */
-/* Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult.get_OperationStatus() */
 HRESULT wdesm_smart_card_cryptogram_get_all_cryptogram_storage_key_characteri_get__operation_status(WDESM_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult *self, WDESM_SmartCardCryptogramGeneratorOperationStatus *value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult.get_Characteristics() */
 HRESULT wdesm_smart_card_cryptogram_get_all_cryptogram_storage_key_characteri_get__characteristics(WDESM_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult *self, WFOCO_IVectorView_WDESM_SmartCardCryptogramStorageKeyCharacteristics** value);
 
-/* activate Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics */
 HRESULT wdesm_smart_card_cryptogram_material_characteristics_new(WDESM_SmartCardCryptogramMaterialCharacteristics **out);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics */
-/* Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics.get_MaterialName() */
 HRESULT wdesm_smart_card_cryptogram_material_characteristics_get__material_name(WDESM_SmartCardCryptogramMaterialCharacteristics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics.get_AllowedAlgorithms() */
 HRESULT wdesm_smart_card_cryptogram_material_characteristics_get__allowed_algorithms(WDESM_SmartCardCryptogramMaterialCharacteristics *self, WFOCO_IVectorView_WDESM_SmartCardCryptogramAlgorithm** value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics.get_AllowedProofOfPossessionAlgorithms() */
 HRESULT wdesm_smart_card_cryptogram_material_characteristics_get__allowed_proof_of_possession_algorithms(WDESM_SmartCardCryptogramMaterialCharacteristics *self, WFOCO_IVectorView_WDESM_SmartCardCryptogramMaterialPackageConfirmationResponseFormat** value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics.get_AllowedValidations() */
 HRESULT wdesm_smart_card_cryptogram_material_characteristics_get__allowed_validations(WDESM_SmartCardCryptogramMaterialCharacteristics *self, WFOCO_IVectorView_WDESM_SmartCardCryptogramAlgorithm** value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics.get_MaterialType() */
 HRESULT wdesm_smart_card_cryptogram_material_characteristics_get__material_type(WDESM_SmartCardCryptogramMaterialCharacteristics *self, WDESM_SmartCardCryptogramMaterialType *value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics.get_ProtectionMethod() */
 HRESULT wdesm_smart_card_cryptogram_material_characteristics_get__protection_method(WDESM_SmartCardCryptogramMaterialCharacteristics *self, WDESM_SmartCardCryptogramMaterialProtectionMethod *value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics.get_ProtectionVersion() */
 HRESULT wdesm_smart_card_cryptogram_material_characteristics_get__protection_version(WDESM_SmartCardCryptogramMaterialCharacteristics *self, int32_t *value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics.get_MaterialLength() */
 HRESULT wdesm_smart_card_cryptogram_material_characteristics_get__material_length(WDESM_SmartCardCryptogramMaterialCharacteristics *self, int32_t *value);
 
-/* activate Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics */
 HRESULT wdesm_smart_card_cryptogram_material_package_characteristics_new(WDESM_SmartCardCryptogramMaterialPackageCharacteristics **out);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics */
-/* Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics.get_PackageName() */
 HRESULT wdesm_smart_card_cryptogram_material_package_characteristics_get__package_name(WDESM_SmartCardCryptogramMaterialPackageCharacteristics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics.get_StorageKeyName() */
 HRESULT wdesm_smart_card_cryptogram_material_package_characteristics_get__storage_key_name(WDESM_SmartCardCryptogramMaterialPackageCharacteristics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics.get_DateImported() */
 HRESULT wdesm_smart_card_cryptogram_material_package_characteristics_get__date_imported(WDESM_SmartCardCryptogramMaterialPackageCharacteristics *self, WF_DateTime *value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics.get_PackageFormat() */
 HRESULT wdesm_smart_card_cryptogram_material_package_characteristics_get__package_format(WDESM_SmartCardCryptogramMaterialPackageCharacteristics *self, WDESM_SmartCardCryptogramMaterialPackageFormat *value);
 
-/* activate Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof */
 HRESULT wdesm_smart_card_cryptogram_material_possession_proof_new(WDESM_SmartCardCryptogramMaterialPossessionProof **out);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof */
-/* Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof.get_OperationStatus() */
 HRESULT wdesm_smart_card_cryptogram_material_possession_proof_get__operation_status(WDESM_SmartCardCryptogramMaterialPossessionProof *self, WDESM_SmartCardCryptogramGeneratorOperationStatus *value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof.get_Proof() */
 HRESULT wdesm_smart_card_cryptogram_material_possession_proof_get__proof(WDESM_SmartCardCryptogramMaterialPossessionProof *self, WSTST_IBuffer** value);
 
-/* activate Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep */
 HRESULT wdesm_smart_card_cryptogram_placement_step_new(WDESM_SmartCardCryptogramPlacementStep **out);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep */
-/* Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep.get_Algorithm() */
 HRESULT wdesm_smart_card_cryptogram_placement_step_get__algorithm(WDESM_SmartCardCryptogramPlacementStep *self, WDESM_SmartCardCryptogramAlgorithm *value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep.put_Algorithm() */
 HRESULT wdesm_smart_card_cryptogram_placement_step_put__algorithm(WDESM_SmartCardCryptogramPlacementStep *self, WDESM_SmartCardCryptogramAlgorithm value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep.get_SourceData() */
 HRESULT wdesm_smart_card_cryptogram_placement_step_get__source_data(WDESM_SmartCardCryptogramPlacementStep *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep.put_SourceData() */
 HRESULT wdesm_smart_card_cryptogram_placement_step_put__source_data(WDESM_SmartCardCryptogramPlacementStep *self, WSTST_IBuffer* value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep.get_CryptogramMaterialPackageName() */
 HRESULT wdesm_smart_card_cryptogram_placement_step_get__cryptogram_material_package_name(WDESM_SmartCardCryptogramPlacementStep *self, cwinrt_hstring *value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep.put_CryptogramMaterialPackageName() */
 HRESULT wdesm_smart_card_cryptogram_placement_step_put__cryptogram_material_package_name(WDESM_SmartCardCryptogramPlacementStep *self, cwinrt_hstring value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep.get_CryptogramMaterialName() */
 HRESULT wdesm_smart_card_cryptogram_placement_step_get__cryptogram_material_name(WDESM_SmartCardCryptogramPlacementStep *self, cwinrt_hstring *value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep.put_CryptogramMaterialName() */
 HRESULT wdesm_smart_card_cryptogram_placement_step_put__cryptogram_material_name(WDESM_SmartCardCryptogramPlacementStep *self, cwinrt_hstring value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep.get_TemplateOffset() */
 HRESULT wdesm_smart_card_cryptogram_placement_step_get__template_offset(WDESM_SmartCardCryptogramPlacementStep *self, int32_t *value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep.put_TemplateOffset() */
 HRESULT wdesm_smart_card_cryptogram_placement_step_put__template_offset(WDESM_SmartCardCryptogramPlacementStep *self, int32_t value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep.get_CryptogramOffset() */
 HRESULT wdesm_smart_card_cryptogram_placement_step_get__cryptogram_offset(WDESM_SmartCardCryptogramPlacementStep *self, int32_t *value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep.put_CryptogramOffset() */
 HRESULT wdesm_smart_card_cryptogram_placement_step_put__cryptogram_offset(WDESM_SmartCardCryptogramPlacementStep *self, int32_t value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep.get_CryptogramLength() */
 HRESULT wdesm_smart_card_cryptogram_placement_step_get__cryptogram_length(WDESM_SmartCardCryptogramPlacementStep *self, int32_t *value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep.put_CryptogramLength() */
 HRESULT wdesm_smart_card_cryptogram_placement_step_put__cryptogram_length(WDESM_SmartCardCryptogramPlacementStep *self, int32_t value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep.get_CryptogramPlacementOptions() */
 HRESULT wdesm_smart_card_cryptogram_placement_step_get__cryptogram_placement_options(WDESM_SmartCardCryptogramPlacementStep *self, WDESM_SmartCardCryptogramPlacementOptions *value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep.put_CryptogramPlacementOptions() */
 HRESULT wdesm_smart_card_cryptogram_placement_step_put__cryptogram_placement_options(WDESM_SmartCardCryptogramPlacementStep *self, WDESM_SmartCardCryptogramPlacementOptions value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep.get_ChainedOutputStep() */
 HRESULT wdesm_smart_card_cryptogram_placement_step_get__chained_output_step(WDESM_SmartCardCryptogramPlacementStep *self, WDESM_SmartCardCryptogramPlacementStep** value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep.put_ChainedOutputStep() */
 HRESULT wdesm_smart_card_cryptogram_placement_step_put__chained_output_step(WDESM_SmartCardCryptogramPlacementStep *self, WDESM_SmartCardCryptogramPlacementStep* value);
 
-/* activate Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics */
 HRESULT wdesm_smart_card_cryptogram_storage_key_characteristics_new(WDESM_SmartCardCryptogramStorageKeyCharacteristics **out);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics */
-/* Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics.get_StorageKeyName() */
 HRESULT wdesm_smart_card_cryptogram_storage_key_characteristics_get__storage_key_name(WDESM_SmartCardCryptogramStorageKeyCharacteristics *self, cwinrt_hstring *value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics.get_DateCreated() */
 HRESULT wdesm_smart_card_cryptogram_storage_key_characteristics_get__date_created(WDESM_SmartCardCryptogramStorageKeyCharacteristics *self, WF_DateTime *value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics.get_Algorithm() */
 HRESULT wdesm_smart_card_cryptogram_storage_key_characteristics_get__algorithm(WDESM_SmartCardCryptogramStorageKeyCharacteristics *self, WDESM_SmartCardCryptogramStorageKeyAlgorithm *value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics.get_Capabilities() */
 HRESULT wdesm_smart_card_cryptogram_storage_key_characteristics_get__capabilities(WDESM_SmartCardCryptogramStorageKeyCharacteristics *self, WDESM_SmartCardCryptogramStorageKeyCapabilities *value);
 
-/* activate Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo */
 HRESULT wdesm_smart_card_cryptogram_storage_key_info_new(WDESM_SmartCardCryptogramStorageKeyInfo **out);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo */
-/* Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo.get_OperationStatus() */
 HRESULT wdesm_smart_card_cryptogram_storage_key_info_get__operation_status(WDESM_SmartCardCryptogramStorageKeyInfo *self, WDESM_SmartCardCryptogramGeneratorOperationStatus *value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo.get_PublicKeyBlobType() */
 HRESULT wdesm_smart_card_cryptogram_storage_key_info_get__public_key_blob_type(WDESM_SmartCardCryptogramStorageKeyInfo *self, WSECRCO_CryptographicPublicKeyBlobType *value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo.get_PublicKey() */
 HRESULT wdesm_smart_card_cryptogram_storage_key_info_get__public_key(WDESM_SmartCardCryptogramStorageKeyInfo *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo.get_AttestationStatus() */
 HRESULT wdesm_smart_card_cryptogram_storage_key_info_get__attestation_status(WDESM_SmartCardCryptogramStorageKeyInfo *self, WDESM_SmartCardCryptographicKeyAttestationStatus *value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo.get_Attestation() */
 HRESULT wdesm_smart_card_cryptogram_storage_key_info_get__attestation(WDESM_SmartCardCryptogramStorageKeyInfo *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo.get_AttestationCertificateChain() */
 HRESULT wdesm_smart_card_cryptogram_storage_key_info_get__attestation_certificate_chain(WDESM_SmartCardCryptogramStorageKeyInfo *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo.get_Capabilities() */
 HRESULT wdesm_smart_card_cryptogram_storage_key_info_get__capabilities(WDESM_SmartCardCryptogramStorageKeyInfo *self, WDESM_SmartCardCryptogramStorageKeyCapabilities *value);
 
-/* Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo.get_OperationalRequirements() */
 HRESULT wdesm_smart_card_cryptogram_storage_key_info_get__operational_requirements(WDESM_SmartCardCryptogramStorageKeyInfo *self, cwinrt_hstring *value);
 
-/* activate Windows.Devices.SmartCards.SmartCardEmulator */
 HRESULT wdesm_smart_card_emulator_new(WDESM_SmartCardEmulator **out);
 
-/* Windows.Devices.SmartCards.SmartCardEmulator */
-/* Windows.Devices.SmartCards.SmartCardEmulator.get_EnablementPolicy() */
 HRESULT wdesm_smart_card_emulator_get__enablement_policy(WDESM_SmartCardEmulator *self, WDESM_SmartCardEmulatorEnablementPolicy *value);
 
-/* Windows.Devices.SmartCards.SmartCardEmulator.Start() */
 HRESULT wdesm_smart_card_emulator_start(WDESM_SmartCardEmulator *self);
 
-/* Windows.Devices.SmartCards.SmartCardEmulator.IsHostCardEmulationSupported() */
 HRESULT wdesm_smart_card_emulator_is_host_card_emulation_supported(WDESM_SmartCardEmulator *self, BOOL *out);
 
-/* Windows.Devices.SmartCards.SmartCardEmulator.IsSupported() */
 HRESULT wdesm_smart_card_emulator_is_supported(BOOL *out);
 
-/* Windows.Devices.SmartCards.SmartCardEmulator.GetAppletIdGroupRegistrationsAsync() */
 HRESULT wdesm_smart_card_emulator_get_applet_id_group_registrations_async(WF_IAsyncOperation_WFOCO_IVectorView_WDESM_SmartCardAppletIdGroupRegistration** out);
 
-/* Windows.Devices.SmartCards.SmartCardEmulator.RegisterAppletIdGroupAsync(appletIdGroup) */
 HRESULT wdesm_smart_card_emulator_register_applet_id_group_async(WDESM_SmartCardAppletIdGroup* appletIdGroup, WF_IAsyncOperation_WDESM_SmartCardAppletIdGroupRegistration** out);
 
-/* Windows.Devices.SmartCards.SmartCardEmulator.UnregisterAppletIdGroupAsync(registration) */
 HRESULT wdesm_smart_card_emulator_unregister_applet_id_group_async(WDESM_SmartCardAppletIdGroupRegistration* registration, WF_IAsyncAction** out);
 
-/* Windows.Devices.SmartCards.SmartCardEmulator.get_MaxAppletIdGroupRegistrations() */
 HRESULT wdesm_smart_card_emulator_get__max_applet_id_group_registrations(uint16_t *value);
 
-/* Windows.Devices.SmartCards.SmartCardEmulator.GetDefaultAsync() */
 HRESULT wdesm_smart_card_emulator_get_default_async(WF_IAsyncOperation_WDESM_SmartCardEmulator** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdesm_smart_card_emulator_on_apdu_received(WDESM_SmartCardEmulator *self, cwinrt_event_fn fn, void *ctx);
@@ -1324,193 +1111,124 @@ void wdesm_smart_card_emulator_off_apdu_received(WDESM_SmartCardEmulator *self, 
 cwinrt_token wdesm_smart_card_emulator_on_connection_deactivated(WDESM_SmartCardEmulator *self, cwinrt_event_fn fn, void *ctx);
 void wdesm_smart_card_emulator_off_connection_deactivated(WDESM_SmartCardEmulator *self, cwinrt_token token);
 
-/* activate Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs */
 HRESULT wdesm_smart_card_emulator_apdu_received_event_args_new(WDESM_SmartCardEmulatorApduReceivedEventArgs **out);
 
-/* Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs */
-/* Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs.get_CommandApdu() */
 HRESULT wdesm_smart_card_emulator_apdu_received_event_args_get__command_apdu(WDESM_SmartCardEmulatorApduReceivedEventArgs *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs.get_ConnectionProperties() */
 HRESULT wdesm_smart_card_emulator_apdu_received_event_args_get__connection_properties(WDESM_SmartCardEmulatorApduReceivedEventArgs *self, WDESM_SmartCardEmulatorConnectionProperties** value);
 
-/* Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs.TryRespondAsync(responseApdu) */
 HRESULT wdesm_smart_card_emulator_apdu_received_event_args_try_respond_async(WDESM_SmartCardEmulatorApduReceivedEventArgs *self, WSTST_IBuffer* responseApdu, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs.get_AutomaticResponseStatus() */
 HRESULT wdesm_smart_card_emulator_apdu_received_event_args_get__automatic_response_status(WDESM_SmartCardEmulatorApduReceivedEventArgs *self, WDESM_SmartCardAutomaticResponseStatus *value);
 
-/* Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs.TryRespondWithCryptogramsAsync(responseTemplate, cryptogramPlacementSteps) */
 HRESULT wdesm_smart_card_emulator_apdu_received_event_args_try_respond_with_cryptograms_async(WDESM_SmartCardEmulatorApduReceivedEventArgs *self, WSTST_IBuffer* responseTemplate, WFOCO_IIterable_WDESM_SmartCardCryptogramPlacementStep* cryptogramPlacementSteps, WF_IAsyncOperation_WDESM_SmartCardCryptogramGeneratorOperationStatus** out);
 
-/* Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs.TryRespondWithCryptogramsAsync(responseTemplate, cryptogramPlacementSteps, nextState) */
 HRESULT wdesm_smart_card_emulator_apdu_received_event_args_try_respond_with_cryptograms_async_p_p_p_p(WDESM_SmartCardEmulatorApduReceivedEventArgs *self, WSTST_IBuffer* responseTemplate, WFOCO_IIterable_WDESM_SmartCardCryptogramPlacementStep* cryptogramPlacementSteps, uint32_t* nextState, WF_IAsyncOperation_WDESM_SmartCardCryptogramGeneratorOperationStatus** out);
 
-/* Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs.get_State() */
 HRESULT wdesm_smart_card_emulator_apdu_received_event_args_get__state(WDESM_SmartCardEmulatorApduReceivedEventArgs *self, uint32_t *value);
 
-/* Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs.TryRespondAsync(responseApdu, nextState) */
 HRESULT wdesm_smart_card_emulator_apdu_received_event_args_try_respond_async_p_p_p(WDESM_SmartCardEmulatorApduReceivedEventArgs *self, WSTST_IBuffer* responseApdu, uint32_t* nextState, WF_IAsyncOperation_Bool** out);
 
-/* activate Windows.Devices.SmartCards.SmartCardEmulatorConnectionDeactivatedEventArgs */
 HRESULT wdesm_smart_card_emulator_connection_deactivated_event_args_new(WDESM_SmartCardEmulatorConnectionDeactivatedEventArgs **out);
 
-/* Windows.Devices.SmartCards.SmartCardEmulatorConnectionDeactivatedEventArgs */
-/* Windows.Devices.SmartCards.SmartCardEmulatorConnectionDeactivatedEventArgs.get_ConnectionProperties() */
 HRESULT wdesm_smart_card_emulator_connection_deactivated_event_args_get__connection_properties(WDESM_SmartCardEmulatorConnectionDeactivatedEventArgs *self, WDESM_SmartCardEmulatorConnectionProperties** value);
 
-/* Windows.Devices.SmartCards.SmartCardEmulatorConnectionDeactivatedEventArgs.get_Reason() */
 HRESULT wdesm_smart_card_emulator_connection_deactivated_event_args_get__reason(WDESM_SmartCardEmulatorConnectionDeactivatedEventArgs *self, WDESM_SmartCardEmulatorConnectionDeactivatedReason *value);
 
-/* activate Windows.Devices.SmartCards.SmartCardEmulatorConnectionProperties */
 HRESULT wdesm_smart_card_emulator_connection_properties_new(WDESM_SmartCardEmulatorConnectionProperties **out);
 
-/* Windows.Devices.SmartCards.SmartCardEmulatorConnectionProperties */
-/* Windows.Devices.SmartCards.SmartCardEmulatorConnectionProperties.get_Id() */
 HRESULT wdesm_smart_card_emulator_connection_properties_get__id(WDESM_SmartCardEmulatorConnectionProperties *self, GUID *value);
 
-/* Windows.Devices.SmartCards.SmartCardEmulatorConnectionProperties.get_Source() */
 HRESULT wdesm_smart_card_emulator_connection_properties_get__source(WDESM_SmartCardEmulatorConnectionProperties *self, WDESM_SmartCardEmulatorConnectionSource *value);
 
-/* activate Windows.Devices.SmartCards.SmartCardPinPolicy */
 HRESULT wdesm_smart_card_pin_policy_new(WDESM_SmartCardPinPolicy **out);
 
-/* Windows.Devices.SmartCards.SmartCardPinPolicy */
-/* Windows.Devices.SmartCards.SmartCardPinPolicy.get_MinLength() */
 HRESULT wdesm_smart_card_pin_policy_get__min_length(WDESM_SmartCardPinPolicy *self, uint32_t *value);
 
-/* Windows.Devices.SmartCards.SmartCardPinPolicy.put_MinLength() */
 HRESULT wdesm_smart_card_pin_policy_put__min_length(WDESM_SmartCardPinPolicy *self, uint32_t value);
 
-/* Windows.Devices.SmartCards.SmartCardPinPolicy.get_MaxLength() */
 HRESULT wdesm_smart_card_pin_policy_get__max_length(WDESM_SmartCardPinPolicy *self, uint32_t *value);
 
-/* Windows.Devices.SmartCards.SmartCardPinPolicy.put_MaxLength() */
 HRESULT wdesm_smart_card_pin_policy_put__max_length(WDESM_SmartCardPinPolicy *self, uint32_t value);
 
-/* Windows.Devices.SmartCards.SmartCardPinPolicy.get_UppercaseLetters() */
 HRESULT wdesm_smart_card_pin_policy_get__uppercase_letters(WDESM_SmartCardPinPolicy *self, WDESM_SmartCardPinCharacterPolicyOption *value);
 
-/* Windows.Devices.SmartCards.SmartCardPinPolicy.put_UppercaseLetters() */
 HRESULT wdesm_smart_card_pin_policy_put__uppercase_letters(WDESM_SmartCardPinPolicy *self, WDESM_SmartCardPinCharacterPolicyOption value);
 
-/* Windows.Devices.SmartCards.SmartCardPinPolicy.get_LowercaseLetters() */
 HRESULT wdesm_smart_card_pin_policy_get__lowercase_letters(WDESM_SmartCardPinPolicy *self, WDESM_SmartCardPinCharacterPolicyOption *value);
 
-/* Windows.Devices.SmartCards.SmartCardPinPolicy.put_LowercaseLetters() */
 HRESULT wdesm_smart_card_pin_policy_put__lowercase_letters(WDESM_SmartCardPinPolicy *self, WDESM_SmartCardPinCharacterPolicyOption value);
 
-/* Windows.Devices.SmartCards.SmartCardPinPolicy.get_Digits() */
 HRESULT wdesm_smart_card_pin_policy_get__digits(WDESM_SmartCardPinPolicy *self, WDESM_SmartCardPinCharacterPolicyOption *value);
 
-/* Windows.Devices.SmartCards.SmartCardPinPolicy.put_Digits() */
 HRESULT wdesm_smart_card_pin_policy_put__digits(WDESM_SmartCardPinPolicy *self, WDESM_SmartCardPinCharacterPolicyOption value);
 
-/* Windows.Devices.SmartCards.SmartCardPinPolicy.get_SpecialCharacters() */
 HRESULT wdesm_smart_card_pin_policy_get__special_characters(WDESM_SmartCardPinPolicy *self, WDESM_SmartCardPinCharacterPolicyOption *value);
 
-/* Windows.Devices.SmartCards.SmartCardPinPolicy.put_SpecialCharacters() */
 HRESULT wdesm_smart_card_pin_policy_put__special_characters(WDESM_SmartCardPinPolicy *self, WDESM_SmartCardPinCharacterPolicyOption value);
 
-/* activate Windows.Devices.SmartCards.SmartCardPinResetDeferral */
 HRESULT wdesm_smart_card_pin_reset_deferral_new(WDESM_SmartCardPinResetDeferral **out);
 
-/* Windows.Devices.SmartCards.SmartCardPinResetDeferral */
-/* Windows.Devices.SmartCards.SmartCardPinResetDeferral.Complete() */
 HRESULT wdesm_smart_card_pin_reset_deferral_complete(WDESM_SmartCardPinResetDeferral *self);
 
-/* Windows.Devices.SmartCards.SmartCardPinResetHandler */
-/* Windows.Devices.SmartCards.SmartCardPinResetHandler.Invoke(sender, request) */
 HRESULT wdesm_smart_card_pin_reset_handler_invoke(WDESM_SmartCardPinResetHandler *self, WDESM_SmartCardProvisioning* sender, WDESM_SmartCardPinResetRequest* request);
 
-/* activate Windows.Devices.SmartCards.SmartCardPinResetRequest */
 HRESULT wdesm_smart_card_pin_reset_request_new(WDESM_SmartCardPinResetRequest **out);
 
-/* Windows.Devices.SmartCards.SmartCardPinResetRequest */
-/* Windows.Devices.SmartCards.SmartCardPinResetRequest.get_Challenge() */
 HRESULT wdesm_smart_card_pin_reset_request_get__challenge(WDESM_SmartCardPinResetRequest *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.SmartCards.SmartCardPinResetRequest.get_Deadline() */
 HRESULT wdesm_smart_card_pin_reset_request_get__deadline(WDESM_SmartCardPinResetRequest *self, WF_DateTime *value);
 
-/* Windows.Devices.SmartCards.SmartCardPinResetRequest.GetDeferral() */
 HRESULT wdesm_smart_card_pin_reset_request_get_deferral(WDESM_SmartCardPinResetRequest *self, WDESM_SmartCardPinResetDeferral** out);
 
-/* Windows.Devices.SmartCards.SmartCardPinResetRequest.SetResponse(response) */
 HRESULT wdesm_smart_card_pin_reset_request_set_response(WDESM_SmartCardPinResetRequest *self, WSTST_IBuffer* response);
 
-/* activate Windows.Devices.SmartCards.SmartCardProvisioning */
 HRESULT wdesm_smart_card_provisioning_new(WDESM_SmartCardProvisioning **out);
 
-/* Windows.Devices.SmartCards.SmartCardProvisioning */
-/* Windows.Devices.SmartCards.SmartCardProvisioning.get_SmartCard() */
 HRESULT wdesm_smart_card_provisioning_get__smart_card(WDESM_SmartCardProvisioning *self, WDESM_SmartCard** value);
 
-/* Windows.Devices.SmartCards.SmartCardProvisioning.GetIdAsync() */
 HRESULT wdesm_smart_card_provisioning_get_id_async(WDESM_SmartCardProvisioning *self, WF_IAsyncOperation_Guid** out);
 
-/* Windows.Devices.SmartCards.SmartCardProvisioning.GetNameAsync() */
 HRESULT wdesm_smart_card_provisioning_get_name_async(WDESM_SmartCardProvisioning *self, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Devices.SmartCards.SmartCardProvisioning.GetChallengeContextAsync() */
 HRESULT wdesm_smart_card_provisioning_get_challenge_context_async(WDESM_SmartCardProvisioning *self, WF_IAsyncOperation_WDESM_SmartCardChallengeContext** out);
 
-/* Windows.Devices.SmartCards.SmartCardProvisioning.RequestPinChangeAsync() */
 HRESULT wdesm_smart_card_provisioning_request_pin_change_async(WDESM_SmartCardProvisioning *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.SmartCards.SmartCardProvisioning.RequestPinResetAsync(handler) */
 HRESULT wdesm_smart_card_provisioning_request_pin_reset_async(WDESM_SmartCardProvisioning *self, WDESM_SmartCardPinResetHandler* handler, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.SmartCards.SmartCardProvisioning.GetAuthorityKeyContainerNameAsync() */
 HRESULT wdesm_smart_card_provisioning_get_authority_key_container_name_async(WDESM_SmartCardProvisioning *self, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Devices.SmartCards.SmartCardProvisioning.RequestAttestedVirtualSmartCardCreationAsync(friendlyName, administrativeKey, pinPolicy) */
 HRESULT wdesm_smart_card_provisioning_request_attested_virtual_smart_card_creation_async(cwinrt_hstring friendlyName, WSTST_IBuffer* administrativeKey, WDESM_SmartCardPinPolicy* pinPolicy, WF_IAsyncOperation_WDESM_SmartCardProvisioning** out);
 
-/* Windows.Devices.SmartCards.SmartCardProvisioning.RequestAttestedVirtualSmartCardCreationAsync(friendlyName, administrativeKey, pinPolicy, cardId) */
 HRESULT wdesm_smart_card_provisioning_request_attested_virtual_smart_card_creation_async_str_p_p_g_u_i_d_p(cwinrt_hstring friendlyName, WSTST_IBuffer* administrativeKey, WDESM_SmartCardPinPolicy* pinPolicy, GUID cardId, WF_IAsyncOperation_WDESM_SmartCardProvisioning** out);
 
-/* Windows.Devices.SmartCards.SmartCardProvisioning.FromSmartCardAsync(card) */
 HRESULT wdesm_smart_card_provisioning_from_smart_card_async(WDESM_SmartCard* card, WF_IAsyncOperation_WDESM_SmartCardProvisioning** out);
 
-/* Windows.Devices.SmartCards.SmartCardProvisioning.RequestVirtualSmartCardCreationAsync(friendlyName, administrativeKey, pinPolicy) */
 HRESULT wdesm_smart_card_provisioning_request_virtual_smart_card_creation_async(cwinrt_hstring friendlyName, WSTST_IBuffer* administrativeKey, WDESM_SmartCardPinPolicy* pinPolicy, WF_IAsyncOperation_WDESM_SmartCardProvisioning** out);
 
-/* Windows.Devices.SmartCards.SmartCardProvisioning.RequestVirtualSmartCardCreationAsync(friendlyName, administrativeKey, pinPolicy, cardId) */
 HRESULT wdesm_smart_card_provisioning_request_virtual_smart_card_creation_async_str_p_p_g_u_i_d_p(cwinrt_hstring friendlyName, WSTST_IBuffer* administrativeKey, WDESM_SmartCardPinPolicy* pinPolicy, GUID cardId, WF_IAsyncOperation_WDESM_SmartCardProvisioning** out);
 
-/* Windows.Devices.SmartCards.SmartCardProvisioning.RequestVirtualSmartCardDeletionAsync(card) */
 HRESULT wdesm_smart_card_provisioning_request_virtual_smart_card_deletion_async(WDESM_SmartCard* card, WF_IAsyncOperation_Bool** out);
 
-/* activate Windows.Devices.SmartCards.SmartCardReader */
 HRESULT wdesm_smart_card_reader_new(WDESM_SmartCardReader **out);
 
-/* Windows.Devices.SmartCards.SmartCardReader */
-/* Windows.Devices.SmartCards.SmartCardReader.get_DeviceId() */
 HRESULT wdesm_smart_card_reader_get__device_id(WDESM_SmartCardReader *self, cwinrt_hstring *value);
 
-/* Windows.Devices.SmartCards.SmartCardReader.get_Name() */
 HRESULT wdesm_smart_card_reader_get__name(WDESM_SmartCardReader *self, cwinrt_hstring *value);
 
-/* Windows.Devices.SmartCards.SmartCardReader.get_Kind() */
 HRESULT wdesm_smart_card_reader_get__kind(WDESM_SmartCardReader *self, WDESM_SmartCardReaderKind *value);
 
-/* Windows.Devices.SmartCards.SmartCardReader.GetStatusAsync() */
 HRESULT wdesm_smart_card_reader_get_status_async(WDESM_SmartCardReader *self, WF_IAsyncOperation_WDESM_SmartCardReaderStatus** out);
 
-/* Windows.Devices.SmartCards.SmartCardReader.FindAllCardsAsync() */
 HRESULT wdesm_smart_card_reader_find_all_cards_async(WDESM_SmartCardReader *self, WF_IAsyncOperation_WFOCO_IVectorView_WDESM_SmartCard** out);
 
-/* Windows.Devices.SmartCards.SmartCardReader.GetDeviceSelector() */
 HRESULT wdesm_smart_card_reader_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Devices.SmartCards.SmartCardReader.GetDeviceSelector(kind) */
 HRESULT wdesm_smart_card_reader_get_device_selector_smart_card_reader_kind_str(WDESM_SmartCardReaderKind kind, cwinrt_hstring *out);
 
-/* Windows.Devices.SmartCards.SmartCardReader.FromIdAsync(deviceId) */
 HRESULT wdesm_smart_card_reader_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDESM_SmartCardReader** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdesm_smart_card_reader_on_card_added(WDESM_SmartCardReader *self, cwinrt_event_fn fn, void *ctx);
@@ -1519,169 +1237,86 @@ void wdesm_smart_card_reader_off_card_added(WDESM_SmartCardReader *self, cwinrt_
 cwinrt_token wdesm_smart_card_reader_on_card_removed(WDESM_SmartCardReader *self, cwinrt_event_fn fn, void *ctx);
 void wdesm_smart_card_reader_off_card_removed(WDESM_SmartCardReader *self, cwinrt_token token);
 
-/* activate Windows.Devices.SmartCards.SmartCardTriggerDetails */
 HRESULT wdesm_smart_card_trigger_details_new(WDESM_SmartCardTriggerDetails **out);
 
-/* Windows.Devices.SmartCards.SmartCardTriggerDetails */
-/* Windows.Devices.SmartCards.SmartCardTriggerDetails.get_TriggerType() */
 HRESULT wdesm_smart_card_trigger_details_get__trigger_type(WDESM_SmartCardTriggerDetails *self, WDESM_SmartCardTriggerType *value);
 
-/* Windows.Devices.SmartCards.SmartCardTriggerDetails.get_SourceAppletId() */
 HRESULT wdesm_smart_card_trigger_details_get__source_applet_id(WDESM_SmartCardTriggerDetails *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.SmartCards.SmartCardTriggerDetails.get_TriggerData() */
 HRESULT wdesm_smart_card_trigger_details_get__trigger_data(WDESM_SmartCardTriggerDetails *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.SmartCards.SmartCardTriggerDetails.get_Emulator() */
 HRESULT wdesm_smart_card_trigger_details_get__emulator(WDESM_SmartCardTriggerDetails *self, WDESM_SmartCardEmulator** value);
 
-/* Windows.Devices.SmartCards.SmartCardTriggerDetails.TryLaunchCurrentAppAsync(arguments) */
 HRESULT wdesm_smart_card_trigger_details_try_launch_current_app_async(WDESM_SmartCardTriggerDetails *self, cwinrt_hstring arguments, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.SmartCards.SmartCardTriggerDetails.TryLaunchCurrentAppAsync(arguments, behavior) */
 HRESULT wdesm_smart_card_trigger_details_try_launch_current_app_async_str_smart_card_launch_behavior_p(WDESM_SmartCardTriggerDetails *self, cwinrt_hstring arguments, WDESM_SmartCardLaunchBehavior behavior, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.SmartCards.SmartCardTriggerDetails.get_SmartCard() */
 HRESULT wdesm_smart_card_trigger_details_get__smart_card(WDESM_SmartCardTriggerDetails *self, WDESM_SmartCard** value);
 
-/* Windows.Devices.SmartCards.ICardAddedEventArgs */
-/* Windows.Devices.SmartCards.ICardRemovedEventArgs */
-/* Windows.Devices.SmartCards.ISmartCard */
-/* Windows.Devices.SmartCards.ISmartCardConnect */
-/* Windows.Devices.SmartCards.ISmartCardConnect.ConnectAsync() */
 HRESULT wdesm_smart_card_connect_connect_async(WDESM_ISmartCardConnect *self, WF_IAsyncOperation_WDESM_SmartCardConnection** out);
 
-/* Windows.Devices.SmartCards.ISmartCardAppletIdGroup */
-/* Windows.Devices.SmartCards.ISmartCardAppletIdGroup2 */
-/* Windows.Devices.SmartCards.ISmartCardAppletIdGroup2.get_Logo() */
 HRESULT wdesm_smart_card_applet_id_group_2_get__logo(WDESM_ISmartCardAppletIdGroup_2 *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.Devices.SmartCards.ISmartCardAppletIdGroup2.put_Logo() */
 HRESULT wdesm_smart_card_applet_id_group_2_put__logo(WDESM_ISmartCardAppletIdGroup_2 *self, WSTST_IRandomAccessStreamReference* value);
 
-/* Windows.Devices.SmartCards.ISmartCardAppletIdGroup2.get_Description() */
 HRESULT wdesm_smart_card_applet_id_group_2_get__description(WDESM_ISmartCardAppletIdGroup_2 *self, cwinrt_hstring *value);
 
-/* Windows.Devices.SmartCards.ISmartCardAppletIdGroup2.put_Description() */
 HRESULT wdesm_smart_card_applet_id_group_2_put__description(WDESM_ISmartCardAppletIdGroup_2 *self, cwinrt_hstring value);
 
-/* Windows.Devices.SmartCards.ISmartCardAppletIdGroup2.get_Properties() */
 HRESULT wdesm_smart_card_applet_id_group_2_get__properties(WDESM_ISmartCardAppletIdGroup_2 *self, WFOCO_ValueSet** value);
 
-/* Windows.Devices.SmartCards.ISmartCardAppletIdGroup2.get_SecureUserAuthenticationRequired() */
 HRESULT wdesm_smart_card_applet_id_group_2_get__secure_user_authentication_required(WDESM_ISmartCardAppletIdGroup_2 *self, BOOL *value);
 
-/* Windows.Devices.SmartCards.ISmartCardAppletIdGroup2.put_SecureUserAuthenticationRequired() */
 HRESULT wdesm_smart_card_applet_id_group_2_put__secure_user_authentication_required(WDESM_ISmartCardAppletIdGroup_2 *self, BOOL value);
 
-/* Windows.Devices.SmartCards.ISmartCardAppletIdGroupRegistration */
-/* Windows.Devices.SmartCards.ISmartCardAppletIdGroupRegistration2 */
-/* Windows.Devices.SmartCards.ISmartCardAppletIdGroupRegistration2.get_SmartCardReaderId() */
 HRESULT wdesm_smart_card_applet_id_group_registration_2_get__smart_card_reader_id(WDESM_ISmartCardAppletIdGroupRegistration_2 *self, cwinrt_hstring *value);
 
-/* Windows.Devices.SmartCards.ISmartCardAppletIdGroupRegistration2.SetPropertiesAsync(props) */
 HRESULT wdesm_smart_card_applet_id_group_registration_2_set_properties_async(WDESM_ISmartCardAppletIdGroupRegistration_2 *self, WFOCO_ValueSet* props, WF_IAsyncAction** out);
 
-/* Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu */
-/* Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu2 */
-/* Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu2.get_InputState() */
 HRESULT wdesm_smart_card_automatic_response_apdu_2_get__input_state(WDESM_ISmartCardAutomaticResponseApdu_2 *self, uint32_t** value);
 
-/* Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu2.put_InputState() */
 HRESULT wdesm_smart_card_automatic_response_apdu_2_put__input_state(WDESM_ISmartCardAutomaticResponseApdu_2 *self, uint32_t* value);
 
-/* Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu2.get_OutputState() */
 HRESULT wdesm_smart_card_automatic_response_apdu_2_get__output_state(WDESM_ISmartCardAutomaticResponseApdu_2 *self, uint32_t** value);
 
-/* Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu2.put_OutputState() */
 HRESULT wdesm_smart_card_automatic_response_apdu_2_put__output_state(WDESM_ISmartCardAutomaticResponseApdu_2 *self, uint32_t* value);
 
-/* Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu3 */
-/* Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu3.get_AllowWhenCryptogramGeneratorNotPrepared() */
 HRESULT wdesm_smart_card_automatic_response_apdu_3_get__allow_when_cryptogram_generator_not_prepared(WDESM_ISmartCardAutomaticResponseApdu_3 *self, BOOL *value);
 
-/* Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu3.put_AllowWhenCryptogramGeneratorNotPrepared() */
 HRESULT wdesm_smart_card_automatic_response_apdu_3_put__allow_when_cryptogram_generator_not_prepared(WDESM_ISmartCardAutomaticResponseApdu_3 *self, BOOL value);
 
-/* Windows.Devices.SmartCards.ISmartCardChallengeContext */
-/* Windows.Devices.SmartCards.ISmartCardConnection */
-/* Windows.Devices.SmartCards.ISmartCardCryptogramGenerator */
-/* Windows.Devices.SmartCards.ISmartCardCryptogramGenerator2 */
-/* Windows.Devices.SmartCards.ISmartCardCryptogramGenerator2.ValidateRequestApduAsync(promptingBehavior, apduToValidate, cryptogramPlacementSteps) */
 HRESULT wdesm_smart_card_cryptogram_generator_2_validate_request_apdu_async(WDESM_ISmartCardCryptogramGenerator_2 *self, WDESM_SmartCardUnlockPromptingBehavior promptingBehavior, WSTST_IBuffer* apduToValidate, WFOCO_IIterable_WDESM_SmartCardCryptogramPlacementStep* cryptogramPlacementSteps, WF_IAsyncOperation_WDESM_SmartCardCryptogramGeneratorOperationStatus** out);
 
-/* Windows.Devices.SmartCards.ISmartCardCryptogramGenerator2.GetAllCryptogramStorageKeyCharacteristicsAsync() */
 HRESULT wdesm_smart_card_cryptogram_generator_2_get_all_cryptogram_storage_key_characteristics_async(WDESM_ISmartCardCryptogramGenerator_2 *self, WF_IAsyncOperation_WDESM_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult** out);
 
-/* Windows.Devices.SmartCards.ISmartCardCryptogramGenerator2.GetAllCryptogramMaterialPackageCharacteristicsAsync() */
 HRESULT wdesm_smart_card_cryptogram_generator_2_get_all_cryptogram_material_package_characteristics_async(WDESM_ISmartCardCryptogramGenerator_2 *self, WF_IAsyncOperation_WDESM_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult** out);
 
-/* Windows.Devices.SmartCards.ISmartCardCryptogramGenerator2.GetAllCryptogramMaterialPackageCharacteristicsAsync(storageKeyName) */
 HRESULT wdesm_smart_card_cryptogram_generator_2_get_all_cryptogram_material_package_characteristics_async_str_p(WDESM_ISmartCardCryptogramGenerator_2 *self, cwinrt_hstring storageKeyName, WF_IAsyncOperation_WDESM_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult** out);
 
-/* Windows.Devices.SmartCards.ISmartCardCryptogramGenerator2.GetAllCryptogramMaterialCharacteristicsAsync(promptingBehavior, materialPackageName) */
 HRESULT wdesm_smart_card_cryptogram_generator_2_get_all_cryptogram_material_characteristics_async(WDESM_ISmartCardCryptogramGenerator_2 *self, WDESM_SmartCardUnlockPromptingBehavior promptingBehavior, cwinrt_hstring materialPackageName, WF_IAsyncOperation_WDESM_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult** out);
 
-/* Windows.Devices.SmartCards.ISmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult */
-/* Windows.Devices.SmartCards.ISmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult */
-/* Windows.Devices.SmartCards.ISmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult */
-/* Windows.Devices.SmartCards.ISmartCardCryptogramMaterialCharacteristics */
-/* Windows.Devices.SmartCards.ISmartCardCryptogramMaterialPackageCharacteristics */
-/* Windows.Devices.SmartCards.ISmartCardCryptogramMaterialPossessionProof */
-/* Windows.Devices.SmartCards.ISmartCardCryptogramPlacementStep */
-/* Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyCharacteristics */
-/* Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyInfo */
-/* Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyInfo2 */
-/* Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyInfo2.get_OperationalRequirements() */
 HRESULT wdesm_smart_card_cryptogram_storage_key_info_2_get__operational_requirements(WDESM_ISmartCardCryptogramStorageKeyInfo_2 *self, cwinrt_hstring *value);
 
-/* Windows.Devices.SmartCards.ISmartCardEmulator */
-/* Windows.Devices.SmartCards.ISmartCardEmulator2 */
-/* Windows.Devices.SmartCards.ISmartCardEmulator2.Start() */
 HRESULT wdesm_smart_card_emulator_2_start(WDESM_ISmartCardEmulator_2 *self);
 
-/* Windows.Devices.SmartCards.ISmartCardEmulator2.IsHostCardEmulationSupported() */
 HRESULT wdesm_smart_card_emulator_2_is_host_card_emulation_supported(WDESM_ISmartCardEmulator_2 *self, BOOL *out);
 
-/* Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgs */
-/* Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgsWithCryptograms */
-/* Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgsWithCryptograms.TryRespondWithCryptogramsAsync(responseTemplate, cryptogramPlacementSteps) */
 HRESULT wdesm_smart_card_emulator_apdu_received_event_args_with_cryptograms_try_respond_with_cryptograms_async(WDESM_ISmartCardEmulatorApduReceivedEventArgsWithCryptograms *self, WSTST_IBuffer* responseTemplate, WFOCO_IIterable_WDESM_SmartCardCryptogramPlacementStep* cryptogramPlacementSteps, WF_IAsyncOperation_WDESM_SmartCardCryptogramGeneratorOperationStatus** out);
 
-/* Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgsWithCryptograms.TryRespondWithCryptogramsAsync(responseTemplate, cryptogramPlacementSteps, nextState) */
 HRESULT wdesm_smart_card_emulator_apdu_received_event_args_with_cryptograms_try_respond_with_cryptograms_async_p_p_p_p(WDESM_ISmartCardEmulatorApduReceivedEventArgsWithCryptograms *self, WSTST_IBuffer* responseTemplate, WFOCO_IIterable_WDESM_SmartCardCryptogramPlacementStep* cryptogramPlacementSteps, uint32_t* nextState, WF_IAsyncOperation_WDESM_SmartCardCryptogramGeneratorOperationStatus** out);
 
-/* Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgs2 */
-/* Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgs2.get_State() */
 HRESULT wdesm_smart_card_emulator_apdu_received_event_args_2_get__state(WDESM_ISmartCardEmulatorApduReceivedEventArgs_2 *self, uint32_t *value);
 
-/* Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgs2.TryRespondAsync(responseApdu, nextState) */
 HRESULT wdesm_smart_card_emulator_apdu_received_event_args_2_try_respond_async(WDESM_ISmartCardEmulatorApduReceivedEventArgs_2 *self, WSTST_IBuffer* responseApdu, uint32_t* nextState, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.SmartCards.ISmartCardEmulatorConnectionDeactivatedEventArgs */
-/* Windows.Devices.SmartCards.ISmartCardEmulatorConnectionProperties */
-/* Windows.Devices.SmartCards.ISmartCardPinPolicy */
-/* Windows.Devices.SmartCards.ISmartCardPinResetDeferral */
-/* Windows.Devices.SmartCards.ISmartCardPinResetRequest */
-/* Windows.Devices.SmartCards.ISmartCardProvisioning */
-/* Windows.Devices.SmartCards.ISmartCardProvisioning2 */
-/* Windows.Devices.SmartCards.ISmartCardProvisioning2.GetAuthorityKeyContainerNameAsync() */
 HRESULT wdesm_smart_card_provisioning_2_get_authority_key_container_name_async(WDESM_ISmartCardProvisioning_2 *self, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Devices.SmartCards.ISmartCardReader */
-/* Windows.Devices.SmartCards.ISmartCardTriggerDetails */
-/* Windows.Devices.SmartCards.ISmartCardTriggerDetails2 */
-/* Windows.Devices.SmartCards.ISmartCardTriggerDetails2.get_Emulator() */
 HRESULT wdesm_smart_card_trigger_details_2_get__emulator(WDESM_ISmartCardTriggerDetails_2 *self, WDESM_SmartCardEmulator** value);
 
-/* Windows.Devices.SmartCards.ISmartCardTriggerDetails2.TryLaunchCurrentAppAsync(arguments) */
 HRESULT wdesm_smart_card_trigger_details_2_try_launch_current_app_async(WDESM_ISmartCardTriggerDetails_2 *self, cwinrt_hstring arguments, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.SmartCards.ISmartCardTriggerDetails2.TryLaunchCurrentAppAsync(arguments, behavior) */
 HRESULT wdesm_smart_card_trigger_details_2_try_launch_current_app_async_str_smart_card_launch_behavior_p(WDESM_ISmartCardTriggerDetails_2 *self, cwinrt_hstring arguments, WDESM_SmartCardLaunchBehavior behavior, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.SmartCards.ISmartCardTriggerDetails3 */
-/* Windows.Devices.SmartCards.ISmartCardTriggerDetails3.get_SmartCard() */
 HRESULT wdesm_smart_card_trigger_details_3_get__smart_card(WDESM_ISmartCardTriggerDetails_3 *self, WDESM_SmartCard** value);
 
 #endif /* CWINRT_WINDOWS_DEVICES_SMARTCARDS_H */

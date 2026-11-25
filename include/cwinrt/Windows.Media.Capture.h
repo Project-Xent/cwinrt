@@ -18,7 +18,6 @@
 #include <cwinrt/Windows.Graphics.DirectX.Direct3D11.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStreamWithContentType
 #define CWINRT_FWD_WSTST_IRandomAccessStreamWithContentType
 typedef struct WSTST_IRandomAccessStreamWithContentType WSTST_IRandomAccessStreamWithContentType;
@@ -207,7 +206,6 @@ typedef struct WMECAFR_MediaFrameSourceInfo WMECAFR_MediaFrameSourceInfo;
 typedef struct WMEME_VideoEncodingProperties WMEME_VideoEncodingProperties;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMECA_CameraCaptureUI WMECA_CameraCaptureUI;
 typedef struct WMECA_CameraCaptureUIPhotoCaptureSettings WMECA_CameraCaptureUIPhotoCaptureSettings;
 typedef struct WMECA_CameraCaptureUIVideoCaptureSettings WMECA_CameraCaptureUIVideoCaptureSettings;
@@ -392,7 +390,6 @@ typedef struct WMECA_IAppCaptureSettings_4 WMECA_IAppCaptureSettings_4;
 typedef struct WMECA_IAppCaptureSettings_5 WMECA_IAppCaptureSettings_5;
 typedef struct WMECA_IAppCaptureState WMECA_IAppCaptureState;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WS_StorageFile
 #define CWINRT_FWD_WF_IAsyncOperation_WS_StorageFile
 typedef struct WF_IAsyncOperation_WS_StorageFile WF_IAsyncOperation_WS_StorageFile;
@@ -1522,7 +1519,6 @@ struct WMECA_WhiteBalanceGain {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -1971,237 +1967,152 @@ static const IID CWINRT_IID_WMECA_IAppCaptureSettings_5 CWINRT_MAYBE_UNUSED = { 
 static const IID CWINRT_IID_WMECA_IAppCaptureState CWINRT_MAYBE_UNUSED = { 0x73134372, 0xD4EB, 0x44CE, { 0x95, 0x38, 0x46, 0x5F, 0x50, 0x6A, 0xC4, 0xEA } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Media.Capture.CameraCaptureUI */
 HRESULT wmeca_camera_capture_u_i_new(WMECA_CameraCaptureUI **out);
 
-/* Windows.Media.Capture.CameraCaptureUI */
-/* Windows.Media.Capture.CameraCaptureUI.get_PhotoSettings() */
 HRESULT wmeca_camera_capture_u_i_get__photo_settings(WMECA_CameraCaptureUI *self, WMECA_CameraCaptureUIPhotoCaptureSettings** value);
 
-/* Windows.Media.Capture.CameraCaptureUI.get_VideoSettings() */
 HRESULT wmeca_camera_capture_u_i_get__video_settings(WMECA_CameraCaptureUI *self, WMECA_CameraCaptureUIVideoCaptureSettings** value);
 
-/* Windows.Media.Capture.CameraCaptureUI.CaptureFileAsync(mode) */
 HRESULT wmeca_camera_capture_u_i_capture_file_async(WMECA_CameraCaptureUI *self, WMECA_CameraCaptureUIMode mode, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* activate Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings */
 HRESULT wmeca_camera_capture_u_i_photo_capture_settings_new(WMECA_CameraCaptureUIPhotoCaptureSettings **out);
 
-/* Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings */
-/* Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings.get_Format() */
 HRESULT wmeca_camera_capture_u_i_photo_capture_settings_get__format(WMECA_CameraCaptureUIPhotoCaptureSettings *self, WMECA_CameraCaptureUIPhotoFormat *value);
 
-/* Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings.put_Format() */
 HRESULT wmeca_camera_capture_u_i_photo_capture_settings_put__format(WMECA_CameraCaptureUIPhotoCaptureSettings *self, WMECA_CameraCaptureUIPhotoFormat value);
 
-/* Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings.get_MaxResolution() */
 HRESULT wmeca_camera_capture_u_i_photo_capture_settings_get__max_resolution(WMECA_CameraCaptureUIPhotoCaptureSettings *self, WMECA_CameraCaptureUIMaxPhotoResolution *value);
 
-/* Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings.put_MaxResolution() */
 HRESULT wmeca_camera_capture_u_i_photo_capture_settings_put__max_resolution(WMECA_CameraCaptureUIPhotoCaptureSettings *self, WMECA_CameraCaptureUIMaxPhotoResolution value);
 
-/* Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings.get_CroppedSizeInPixels() */
 HRESULT wmeca_camera_capture_u_i_photo_capture_settings_get__cropped_size_in_pixels(WMECA_CameraCaptureUIPhotoCaptureSettings *self, WF_Size *value);
 
-/* Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings.put_CroppedSizeInPixels() */
 HRESULT wmeca_camera_capture_u_i_photo_capture_settings_put__cropped_size_in_pixels(WMECA_CameraCaptureUIPhotoCaptureSettings *self, WF_Size value);
 
-/* Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings.get_CroppedAspectRatio() */
 HRESULT wmeca_camera_capture_u_i_photo_capture_settings_get__cropped_aspect_ratio(WMECA_CameraCaptureUIPhotoCaptureSettings *self, WF_Size *value);
 
-/* Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings.put_CroppedAspectRatio() */
 HRESULT wmeca_camera_capture_u_i_photo_capture_settings_put__cropped_aspect_ratio(WMECA_CameraCaptureUIPhotoCaptureSettings *self, WF_Size value);
 
-/* Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings.get_AllowCropping() */
 HRESULT wmeca_camera_capture_u_i_photo_capture_settings_get__allow_cropping(WMECA_CameraCaptureUIPhotoCaptureSettings *self, BOOL *value);
 
-/* Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings.put_AllowCropping() */
 HRESULT wmeca_camera_capture_u_i_photo_capture_settings_put__allow_cropping(WMECA_CameraCaptureUIPhotoCaptureSettings *self, BOOL value);
 
-/* activate Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings */
 HRESULT wmeca_camera_capture_u_i_video_capture_settings_new(WMECA_CameraCaptureUIVideoCaptureSettings **out);
 
-/* Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings */
-/* Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings.get_Format() */
 HRESULT wmeca_camera_capture_u_i_video_capture_settings_get__format(WMECA_CameraCaptureUIVideoCaptureSettings *self, WMECA_CameraCaptureUIVideoFormat *value);
 
-/* Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings.put_Format() */
 HRESULT wmeca_camera_capture_u_i_video_capture_settings_put__format(WMECA_CameraCaptureUIVideoCaptureSettings *self, WMECA_CameraCaptureUIVideoFormat value);
 
-/* Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings.get_MaxResolution() */
 HRESULT wmeca_camera_capture_u_i_video_capture_settings_get__max_resolution(WMECA_CameraCaptureUIVideoCaptureSettings *self, WMECA_CameraCaptureUIMaxVideoResolution *value);
 
-/* Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings.put_MaxResolution() */
 HRESULT wmeca_camera_capture_u_i_video_capture_settings_put__max_resolution(WMECA_CameraCaptureUIVideoCaptureSettings *self, WMECA_CameraCaptureUIMaxVideoResolution value);
 
-/* Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings.get_MaxDurationInSeconds() */
 HRESULT wmeca_camera_capture_u_i_video_capture_settings_get__max_duration_in_seconds(WMECA_CameraCaptureUIVideoCaptureSettings *self, float *value);
 
-/* Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings.put_MaxDurationInSeconds() */
 HRESULT wmeca_camera_capture_u_i_video_capture_settings_put__max_duration_in_seconds(WMECA_CameraCaptureUIVideoCaptureSettings *self, float value);
 
-/* Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings.get_AllowTrimming() */
 HRESULT wmeca_camera_capture_u_i_video_capture_settings_get__allow_trimming(WMECA_CameraCaptureUIVideoCaptureSettings *self, BOOL *value);
 
-/* Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings.put_AllowTrimming() */
 HRESULT wmeca_camera_capture_u_i_video_capture_settings_put__allow_trimming(WMECA_CameraCaptureUIVideoCaptureSettings *self, BOOL value);
 
-/* activate Windows.Media.Capture.CameraOptionsUI */
 HRESULT wmeca_camera_options_u_i_new(WMECA_CameraOptionsUI **out);
 
-/* Windows.Media.Capture.CameraOptionsUI */
-/* Windows.Media.Capture.CameraOptionsUI.Show(mediaCapture) */
 HRESULT wmeca_camera_options_u_i_show(WMECA_MediaCapture* mediaCapture);
 
-/* activate Windows.Media.Capture.CapturedFrame */
 HRESULT wmeca_captured_frame_new(WMECA_CapturedFrame **out);
 
-/* Windows.Media.Capture.CapturedFrame */
-/* Windows.Media.Capture.CapturedFrame.get_Width() */
 HRESULT wmeca_captured_frame_get__width(WMECA_CapturedFrame *self, uint32_t *value);
 
-/* Windows.Media.Capture.CapturedFrame.get_Height() */
 HRESULT wmeca_captured_frame_get__height(WMECA_CapturedFrame *self, uint32_t *value);
 
-/* Windows.Media.Capture.CapturedFrame.get_Size() */
 HRESULT wmeca_captured_frame_get__size(WMECA_CapturedFrame *self, uint64_t *value);
 
-/* Windows.Media.Capture.CapturedFrame.put_Size() */
 HRESULT wmeca_captured_frame_put__size(WMECA_CapturedFrame *self, uint64_t value);
 
-/* Windows.Media.Capture.CapturedFrame.GetInputStreamAt(position) */
 HRESULT wmeca_captured_frame_get_input_stream_at(WMECA_CapturedFrame *self, uint64_t position, WSTST_IInputStream** out);
 
-/* Windows.Media.Capture.CapturedFrame.GetOutputStreamAt(position) */
 HRESULT wmeca_captured_frame_get_output_stream_at(WMECA_CapturedFrame *self, uint64_t position, WSTST_IOutputStream** out);
 
-/* Windows.Media.Capture.CapturedFrame.get_Position() */
 HRESULT wmeca_captured_frame_get__position(WMECA_CapturedFrame *self, uint64_t *value);
 
-/* Windows.Media.Capture.CapturedFrame.Seek(position) */
 HRESULT wmeca_captured_frame_seek(WMECA_CapturedFrame *self, uint64_t position);
 
-/* Windows.Media.Capture.CapturedFrame.CloneStream() */
 HRESULT wmeca_captured_frame_clone_stream(WMECA_CapturedFrame *self, WSTST_IRandomAccessStream** out);
 
-/* Windows.Media.Capture.CapturedFrame.get_CanRead() */
 HRESULT wmeca_captured_frame_get__can_read(WMECA_CapturedFrame *self, BOOL *value);
 
-/* Windows.Media.Capture.CapturedFrame.get_CanWrite() */
 HRESULT wmeca_captured_frame_get__can_write(WMECA_CapturedFrame *self, BOOL *value);
 
-/* Windows.Media.Capture.CapturedFrame.Close() */
 HRESULT wmeca_captured_frame_close(WMECA_CapturedFrame *self);
 
-/* Windows.Media.Capture.CapturedFrame.ReadAsync(buffer, count, options) */
 HRESULT wmeca_captured_frame_read_async(WMECA_CapturedFrame *self, WSTST_IBuffer* buffer, uint32_t count, WSTST_InputStreamOptions options, WF_IAsyncOperationWithProgress_WSTST_IBuffer_uint32_t** out);
 
-/* Windows.Media.Capture.CapturedFrame.WriteAsync(buffer) */
 HRESULT wmeca_captured_frame_write_async(WMECA_CapturedFrame *self, WSTST_IBuffer* buffer, WF_IAsyncOperationWithProgress_uint32_t_uint32_t** out);
 
-/* Windows.Media.Capture.CapturedFrame.FlushAsync() */
 HRESULT wmeca_captured_frame_flush_async(WMECA_CapturedFrame *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Media.Capture.CapturedFrame.get_ContentType() */
 HRESULT wmeca_captured_frame_get__content_type(WMECA_CapturedFrame *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.CapturedFrame.get_SoftwareBitmap() */
 HRESULT wmeca_captured_frame_get__software_bitmap(WMECA_CapturedFrame *self, WGRIM_SoftwareBitmap** value);
 
-/* Windows.Media.Capture.CapturedFrame.get_ControlValues() */
 HRESULT wmeca_captured_frame_get__control_values(WMECA_CapturedFrame *self, WMECA_CapturedFrameControlValues** value);
 
-/* Windows.Media.Capture.CapturedFrame.get_BitmapProperties() */
 HRESULT wmeca_captured_frame_get__bitmap_properties(WMECA_CapturedFrame *self, WGRIM_BitmapPropertySet** value);
 
-/* activate Windows.Media.Capture.CapturedFrameControlValues */
 HRESULT wmeca_captured_frame_control_values_new(WMECA_CapturedFrameControlValues **out);
 
-/* Windows.Media.Capture.CapturedFrameControlValues */
-/* Windows.Media.Capture.CapturedFrameControlValues.get_Exposure() */
 HRESULT wmeca_captured_frame_control_values_get__exposure(WMECA_CapturedFrameControlValues *self, WF_TimeSpan** value);
 
-/* Windows.Media.Capture.CapturedFrameControlValues.get_ExposureCompensation() */
 HRESULT wmeca_captured_frame_control_values_get__exposure_compensation(WMECA_CapturedFrameControlValues *self, float** value);
 
-/* Windows.Media.Capture.CapturedFrameControlValues.get_IsoSpeed() */
 HRESULT wmeca_captured_frame_control_values_get__iso_speed(WMECA_CapturedFrameControlValues *self, uint32_t** value);
 
-/* Windows.Media.Capture.CapturedFrameControlValues.get_Focus() */
 HRESULT wmeca_captured_frame_control_values_get__focus(WMECA_CapturedFrameControlValues *self, uint32_t** value);
 
-/* Windows.Media.Capture.CapturedFrameControlValues.get_SceneMode() */
 HRESULT wmeca_captured_frame_control_values_get__scene_mode(WMECA_CapturedFrameControlValues *self, WMEDE_CaptureSceneMode** value);
 
-/* Windows.Media.Capture.CapturedFrameControlValues.get_Flashed() */
 HRESULT wmeca_captured_frame_control_values_get__flashed(WMECA_CapturedFrameControlValues *self, BOOL** value);
 
-/* Windows.Media.Capture.CapturedFrameControlValues.get_FlashPowerPercent() */
 HRESULT wmeca_captured_frame_control_values_get__flash_power_percent(WMECA_CapturedFrameControlValues *self, float** value);
 
-/* Windows.Media.Capture.CapturedFrameControlValues.get_WhiteBalance() */
 HRESULT wmeca_captured_frame_control_values_get__white_balance(WMECA_CapturedFrameControlValues *self, uint32_t** value);
 
-/* Windows.Media.Capture.CapturedFrameControlValues.get_ZoomFactor() */
 HRESULT wmeca_captured_frame_control_values_get__zoom_factor(WMECA_CapturedFrameControlValues *self, float** value);
 
-/* Windows.Media.Capture.CapturedFrameControlValues.get_FocusState() */
 HRESULT wmeca_captured_frame_control_values_get__focus_state(WMECA_CapturedFrameControlValues *self, WMEDE_MediaCaptureFocusState** value);
 
-/* Windows.Media.Capture.CapturedFrameControlValues.get_IsoDigitalGain() */
 HRESULT wmeca_captured_frame_control_values_get__iso_digital_gain(WMECA_CapturedFrameControlValues *self, double** value);
 
-/* Windows.Media.Capture.CapturedFrameControlValues.get_IsoAnalogGain() */
 HRESULT wmeca_captured_frame_control_values_get__iso_analog_gain(WMECA_CapturedFrameControlValues *self, double** value);
 
-/* Windows.Media.Capture.CapturedFrameControlValues.get_SensorFrameRate() */
 HRESULT wmeca_captured_frame_control_values_get__sensor_frame_rate(WMECA_CapturedFrameControlValues *self, WMEME_MediaRatio** value);
 
-/* Windows.Media.Capture.CapturedFrameControlValues.get_WhiteBalanceGain() */
 HRESULT wmeca_captured_frame_control_values_get__white_balance_gain(WMECA_CapturedFrameControlValues *self, WMECA_WhiteBalanceGain** value);
 
-/* activate Windows.Media.Capture.CapturedPhoto */
 HRESULT wmeca_captured_photo_new(WMECA_CapturedPhoto **out);
 
-/* Windows.Media.Capture.CapturedPhoto */
-/* Windows.Media.Capture.CapturedPhoto.get_Frame() */
 HRESULT wmeca_captured_photo_get__frame(WMECA_CapturedPhoto *self, WMECA_CapturedFrame** value);
 
-/* Windows.Media.Capture.CapturedPhoto.get_Thumbnail() */
 HRESULT wmeca_captured_photo_get__thumbnail(WMECA_CapturedPhoto *self, WMECA_CapturedFrame** value);
 
-/* activate Windows.Media.Capture.AdvancedCapturedPhoto */
 HRESULT wmeca_advanced_captured_photo_new(WMECA_AdvancedCapturedPhoto **out);
 
-/* Windows.Media.Capture.AdvancedCapturedPhoto */
-/* Windows.Media.Capture.AdvancedCapturedPhoto.get_Frame() */
 HRESULT wmeca_advanced_captured_photo_get__frame(WMECA_AdvancedCapturedPhoto *self, WMECA_CapturedFrame** value);
 
-/* Windows.Media.Capture.AdvancedCapturedPhoto.get_Mode() */
 HRESULT wmeca_advanced_captured_photo_get__mode(WMECA_AdvancedCapturedPhoto *self, WMEDE_AdvancedPhotoMode *value);
 
-/* Windows.Media.Capture.AdvancedCapturedPhoto.get_Context() */
 HRESULT wmeca_advanced_captured_photo_get__context(WMECA_AdvancedCapturedPhoto *self, IInspectable** value);
 
-/* Windows.Media.Capture.AdvancedCapturedPhoto.get_FrameBoundsRelativeToReferencePhoto() */
 HRESULT wmeca_advanced_captured_photo_get__frame_bounds_relative_to_reference_photo(WMECA_AdvancedCapturedPhoto *self, WF_Rect** value);
 
-/* activate Windows.Media.Capture.AdvancedPhotoCapture */
 HRESULT wmeca_advanced_photo_capture_new(WMECA_AdvancedPhotoCapture **out);
 
-/* Windows.Media.Capture.AdvancedPhotoCapture */
-/* Windows.Media.Capture.AdvancedPhotoCapture.CaptureAsync() */
 HRESULT wmeca_advanced_photo_capture_capture_async(WMECA_AdvancedPhotoCapture *self, WF_IAsyncOperation_WMECA_AdvancedCapturedPhoto** out);
 
-/* Windows.Media.Capture.AdvancedPhotoCapture.CaptureAsync(context) */
 HRESULT wmeca_advanced_photo_capture_capture_async_p_p(WMECA_AdvancedPhotoCapture *self, IInspectable* context, WF_IAsyncOperation_WMECA_AdvancedCapturedPhoto** out);
 
-/* Windows.Media.Capture.AdvancedPhotoCapture.FinishAsync() */
 HRESULT wmeca_advanced_photo_capture_finish_async(WMECA_AdvancedPhotoCapture *self, WF_IAsyncAction** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeca_advanced_photo_capture_on_optional_reference_photo_captured(WMECA_AdvancedPhotoCapture *self, cwinrt_event_fn fn, void *ctx);
@@ -2210,62 +2121,42 @@ void wmeca_advanced_photo_capture_off_optional_reference_photo_captured(WMECA_Ad
 cwinrt_token wmeca_advanced_photo_capture_on_all_photos_captured(WMECA_AdvancedPhotoCapture *self, cwinrt_event_fn fn, void *ctx);
 void wmeca_advanced_photo_capture_off_all_photos_captured(WMECA_AdvancedPhotoCapture *self, cwinrt_token token);
 
-/* activate Windows.Media.Capture.AppBroadcastBackgroundService */
 HRESULT wmeca_app_broadcast_background_service_new(WMECA_AppBroadcastBackgroundService **out);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundService */
-/* Windows.Media.Capture.AppBroadcastBackgroundService.put_PlugInState() */
 HRESULT wmeca_app_broadcast_background_service_put__plug_in_state(WMECA_AppBroadcastBackgroundService *self, WMECA_AppBroadcastPlugInState value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundService.get_PlugInState() */
 HRESULT wmeca_app_broadcast_background_service_get__plug_in_state(WMECA_AppBroadcastBackgroundService *self, WMECA_AppBroadcastPlugInState *value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundService.put_SignInInfo() */
 HRESULT wmeca_app_broadcast_background_service_put__sign_in_info(WMECA_AppBroadcastBackgroundService *self, WMECA_AppBroadcastBackgroundServiceSignInInfo* value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundService.get_SignInInfo() */
 HRESULT wmeca_app_broadcast_background_service_get__sign_in_info(WMECA_AppBroadcastBackgroundService *self, WMECA_AppBroadcastBackgroundServiceSignInInfo** value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundService.put_StreamInfo() */
 HRESULT wmeca_app_broadcast_background_service_put__stream_info(WMECA_AppBroadcastBackgroundService *self, WMECA_AppBroadcastBackgroundServiceStreamInfo* value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundService.get_StreamInfo() */
 HRESULT wmeca_app_broadcast_background_service_get__stream_info(WMECA_AppBroadcastBackgroundService *self, WMECA_AppBroadcastBackgroundServiceStreamInfo** value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundService.get_AppId() */
 HRESULT wmeca_app_broadcast_background_service_get__app_id(WMECA_AppBroadcastBackgroundService *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundService.get_BroadcastTitle() */
 HRESULT wmeca_app_broadcast_background_service_get__broadcast_title(WMECA_AppBroadcastBackgroundService *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundService.put_ViewerCount() */
 HRESULT wmeca_app_broadcast_background_service_put__viewer_count(WMECA_AppBroadcastBackgroundService *self, uint32_t value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundService.get_ViewerCount() */
 HRESULT wmeca_app_broadcast_background_service_get__viewer_count(WMECA_AppBroadcastBackgroundService *self, uint32_t *value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundService.TerminateBroadcast(reason, providerSpecificReason) */
 HRESULT wmeca_app_broadcast_background_service_terminate_broadcast(WMECA_AppBroadcastBackgroundService *self, WMECA_AppBroadcastTerminationReason reason, uint32_t providerSpecificReason);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundService.get_TitleId() */
 HRESULT wmeca_app_broadcast_background_service_get__title_id(WMECA_AppBroadcastBackgroundService *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundService.put_BroadcastTitle() */
 HRESULT wmeca_app_broadcast_background_service_put__broadcast_title(WMECA_AppBroadcastBackgroundService *self, cwinrt_hstring value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundService.get_BroadcastLanguage() */
 HRESULT wmeca_app_broadcast_background_service_get__broadcast_language(WMECA_AppBroadcastBackgroundService *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundService.put_BroadcastLanguage() */
 HRESULT wmeca_app_broadcast_background_service_put__broadcast_language(WMECA_AppBroadcastBackgroundService *self, cwinrt_hstring value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundService.get_BroadcastChannel() */
 HRESULT wmeca_app_broadcast_background_service_get__broadcast_channel(WMECA_AppBroadcastBackgroundService *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundService.put_BroadcastChannel() */
 HRESULT wmeca_app_broadcast_background_service_put__broadcast_channel(WMECA_AppBroadcastBackgroundService *self, cwinrt_hstring value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeca_app_broadcast_background_service_on_heartbeat_requested(WMECA_AppBroadcastBackgroundService *self, cwinrt_event_fn fn, void *ctx);
@@ -2280,35 +2171,24 @@ void wmeca_app_broadcast_background_service_off_broadcast_language_changed(WMECA
 cwinrt_token wmeca_app_broadcast_background_service_on_broadcast_channel_changed(WMECA_AppBroadcastBackgroundService *self, cwinrt_event_fn fn, void *ctx);
 void wmeca_app_broadcast_background_service_off_broadcast_channel_changed(WMECA_AppBroadcastBackgroundService *self, cwinrt_token token);
 
-/* activate Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo */
 HRESULT wmeca_app_broadcast_background_service_sign_in_info_new(WMECA_AppBroadcastBackgroundServiceSignInInfo **out);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo */
-/* Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo.get_SignInState() */
 HRESULT wmeca_app_broadcast_background_service_sign_in_info_get__sign_in_state(WMECA_AppBroadcastBackgroundServiceSignInInfo *self, WMECA_AppBroadcastSignInState *value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo.put_OAuthRequestUri() */
 HRESULT wmeca_app_broadcast_background_service_sign_in_info_put__o_auth_request_uri(WMECA_AppBroadcastBackgroundServiceSignInInfo *self, WF_Uri* value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo.get_OAuthRequestUri() */
 HRESULT wmeca_app_broadcast_background_service_sign_in_info_get__o_auth_request_uri(WMECA_AppBroadcastBackgroundServiceSignInInfo *self, WF_Uri** value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo.put_OAuthCallbackUri() */
 HRESULT wmeca_app_broadcast_background_service_sign_in_info_put__o_auth_callback_uri(WMECA_AppBroadcastBackgroundServiceSignInInfo *self, WF_Uri* value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo.get_OAuthCallbackUri() */
 HRESULT wmeca_app_broadcast_background_service_sign_in_info_get__o_auth_callback_uri(WMECA_AppBroadcastBackgroundServiceSignInInfo *self, WF_Uri** value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo.get_AuthenticationResult() */
 HRESULT wmeca_app_broadcast_background_service_sign_in_info_get__authentication_result(WMECA_AppBroadcastBackgroundServiceSignInInfo *self, WSEAUWE_WebAuthenticationResult** value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo.put_UserName() */
 HRESULT wmeca_app_broadcast_background_service_sign_in_info_put__user_name(WMECA_AppBroadcastBackgroundServiceSignInInfo *self, cwinrt_hstring value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo.get_UserName() */
 HRESULT wmeca_app_broadcast_background_service_sign_in_info_get__user_name(WMECA_AppBroadcastBackgroundServiceSignInInfo *self, cwinrt_hstring *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeca_app_broadcast_background_service_sign_in_info_on_sign_in_state_changed(WMECA_AppBroadcastBackgroundServiceSignInInfo *self, cwinrt_event_fn fn, void *ctx);
@@ -2317,38 +2197,26 @@ void wmeca_app_broadcast_background_service_sign_in_info_off_sign_in_state_chang
 cwinrt_token wmeca_app_broadcast_background_service_sign_in_info_on_user_name_changed(WMECA_AppBroadcastBackgroundServiceSignInInfo *self, cwinrt_event_fn fn, void *ctx);
 void wmeca_app_broadcast_background_service_sign_in_info_off_user_name_changed(WMECA_AppBroadcastBackgroundServiceSignInInfo *self, cwinrt_token token);
 
-/* activate Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo */
 HRESULT wmeca_app_broadcast_background_service_stream_info_new(WMECA_AppBroadcastBackgroundServiceStreamInfo **out);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo */
-/* Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo.get_StreamState() */
 HRESULT wmeca_app_broadcast_background_service_stream_info_get__stream_state(WMECA_AppBroadcastBackgroundServiceStreamInfo *self, WMECA_AppBroadcastStreamState *value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo.put_DesiredVideoEncodingBitrate() */
 HRESULT wmeca_app_broadcast_background_service_stream_info_put__desired_video_encoding_bitrate(WMECA_AppBroadcastBackgroundServiceStreamInfo *self, uint64_t value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo.get_DesiredVideoEncodingBitrate() */
 HRESULT wmeca_app_broadcast_background_service_stream_info_get__desired_video_encoding_bitrate(WMECA_AppBroadcastBackgroundServiceStreamInfo *self, uint64_t *value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo.put_BandwidthTestBitrate() */
 HRESULT wmeca_app_broadcast_background_service_stream_info_put__bandwidth_test_bitrate(WMECA_AppBroadcastBackgroundServiceStreamInfo *self, uint64_t value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo.get_BandwidthTestBitrate() */
 HRESULT wmeca_app_broadcast_background_service_stream_info_get__bandwidth_test_bitrate(WMECA_AppBroadcastBackgroundServiceStreamInfo *self, uint64_t *value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo.put_AudioCodec() */
 HRESULT wmeca_app_broadcast_background_service_stream_info_put__audio_codec(WMECA_AppBroadcastBackgroundServiceStreamInfo *self, cwinrt_hstring value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo.get_AudioCodec() */
 HRESULT wmeca_app_broadcast_background_service_stream_info_get__audio_codec(WMECA_AppBroadcastBackgroundServiceStreamInfo *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo.get_BroadcastStreamReader() */
 HRESULT wmeca_app_broadcast_background_service_stream_info_get__broadcast_stream_reader(WMECA_AppBroadcastBackgroundServiceStreamInfo *self, WMECA_AppBroadcastStreamReader** value);
 
-/* Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo.ReportProblemWithStream() */
 HRESULT wmeca_app_broadcast_background_service_stream_info_report_problem_with_stream(WMECA_AppBroadcastBackgroundServiceStreamInfo *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeca_app_broadcast_background_service_stream_info_on_stream_state_changed(WMECA_AppBroadcastBackgroundServiceStreamInfo *self, cwinrt_event_fn fn, void *ctx);
@@ -2360,438 +2228,284 @@ void wmeca_app_broadcast_background_service_stream_info_off_video_encoding_resol
 cwinrt_token wmeca_app_broadcast_background_service_stream_info_on_video_encoding_bitrate_changed(WMECA_AppBroadcastBackgroundServiceStreamInfo *self, cwinrt_event_fn fn, void *ctx);
 void wmeca_app_broadcast_background_service_stream_info_off_video_encoding_bitrate_changed(WMECA_AppBroadcastBackgroundServiceStreamInfo *self, cwinrt_token token);
 
-/* activate Windows.Media.Capture.AppBroadcastCameraCaptureStateChangedEventArgs */
 HRESULT wmeca_app_broadcast_camera_capture_state_changed_event_args_new(WMECA_AppBroadcastCameraCaptureStateChangedEventArgs **out);
 
-/* Windows.Media.Capture.AppBroadcastCameraCaptureStateChangedEventArgs */
-/* Windows.Media.Capture.AppBroadcastCameraCaptureStateChangedEventArgs.get_State() */
 HRESULT wmeca_app_broadcast_camera_capture_state_changed_event_args_get__state(WMECA_AppBroadcastCameraCaptureStateChangedEventArgs *self, WMECA_AppBroadcastCameraCaptureState *value);
 
-/* Windows.Media.Capture.AppBroadcastCameraCaptureStateChangedEventArgs.get_ErrorCode() */
 HRESULT wmeca_app_broadcast_camera_capture_state_changed_event_args_get__error_code(WMECA_AppBroadcastCameraCaptureStateChangedEventArgs *self, uint32_t *value);
 
-/* activate Windows.Media.Capture.AppBroadcastGlobalSettings */
 HRESULT wmeca_app_broadcast_global_settings_new(WMECA_AppBroadcastGlobalSettings **out);
 
-/* Windows.Media.Capture.AppBroadcastGlobalSettings */
-/* Windows.Media.Capture.AppBroadcastGlobalSettings.get_IsBroadcastEnabled() */
 HRESULT wmeca_app_broadcast_global_settings_get__is_broadcast_enabled(WMECA_AppBroadcastGlobalSettings *self, BOOL *value);
 
-/* Windows.Media.Capture.AppBroadcastGlobalSettings.get_IsDisabledByPolicy() */
 HRESULT wmeca_app_broadcast_global_settings_get__is_disabled_by_policy(WMECA_AppBroadcastGlobalSettings *self, BOOL *value);
 
-/* Windows.Media.Capture.AppBroadcastGlobalSettings.get_IsGpuConstrained() */
 HRESULT wmeca_app_broadcast_global_settings_get__is_gpu_constrained(WMECA_AppBroadcastGlobalSettings *self, BOOL *value);
 
-/* Windows.Media.Capture.AppBroadcastGlobalSettings.get_HasHardwareEncoder() */
 HRESULT wmeca_app_broadcast_global_settings_get__has_hardware_encoder(WMECA_AppBroadcastGlobalSettings *self, BOOL *value);
 
-/* Windows.Media.Capture.AppBroadcastGlobalSettings.put_IsAudioCaptureEnabled() */
 HRESULT wmeca_app_broadcast_global_settings_put__is_audio_capture_enabled(WMECA_AppBroadcastGlobalSettings *self, BOOL value);
 
-/* Windows.Media.Capture.AppBroadcastGlobalSettings.get_IsAudioCaptureEnabled() */
 HRESULT wmeca_app_broadcast_global_settings_get__is_audio_capture_enabled(WMECA_AppBroadcastGlobalSettings *self, BOOL *value);
 
-/* Windows.Media.Capture.AppBroadcastGlobalSettings.put_IsMicrophoneCaptureEnabledByDefault() */
 HRESULT wmeca_app_broadcast_global_settings_put__is_microphone_capture_enabled_by_default(WMECA_AppBroadcastGlobalSettings *self, BOOL value);
 
-/* Windows.Media.Capture.AppBroadcastGlobalSettings.get_IsMicrophoneCaptureEnabledByDefault() */
 HRESULT wmeca_app_broadcast_global_settings_get__is_microphone_capture_enabled_by_default(WMECA_AppBroadcastGlobalSettings *self, BOOL *value);
 
-/* Windows.Media.Capture.AppBroadcastGlobalSettings.put_IsEchoCancellationEnabled() */
 HRESULT wmeca_app_broadcast_global_settings_put__is_echo_cancellation_enabled(WMECA_AppBroadcastGlobalSettings *self, BOOL value);
 
-/* Windows.Media.Capture.AppBroadcastGlobalSettings.get_IsEchoCancellationEnabled() */
 HRESULT wmeca_app_broadcast_global_settings_get__is_echo_cancellation_enabled(WMECA_AppBroadcastGlobalSettings *self, BOOL *value);
 
-/* Windows.Media.Capture.AppBroadcastGlobalSettings.put_SystemAudioGain() */
 HRESULT wmeca_app_broadcast_global_settings_put__system_audio_gain(WMECA_AppBroadcastGlobalSettings *self, double value);
 
-/* Windows.Media.Capture.AppBroadcastGlobalSettings.get_SystemAudioGain() */
 HRESULT wmeca_app_broadcast_global_settings_get__system_audio_gain(WMECA_AppBroadcastGlobalSettings *self, double *value);
 
-/* Windows.Media.Capture.AppBroadcastGlobalSettings.put_MicrophoneGain() */
 HRESULT wmeca_app_broadcast_global_settings_put__microphone_gain(WMECA_AppBroadcastGlobalSettings *self, double value);
 
-/* Windows.Media.Capture.AppBroadcastGlobalSettings.get_MicrophoneGain() */
 HRESULT wmeca_app_broadcast_global_settings_get__microphone_gain(WMECA_AppBroadcastGlobalSettings *self, double *value);
 
-/* Windows.Media.Capture.AppBroadcastGlobalSettings.put_IsCameraCaptureEnabledByDefault() */
 HRESULT wmeca_app_broadcast_global_settings_put__is_camera_capture_enabled_by_default(WMECA_AppBroadcastGlobalSettings *self, BOOL value);
 
-/* Windows.Media.Capture.AppBroadcastGlobalSettings.get_IsCameraCaptureEnabledByDefault() */
 HRESULT wmeca_app_broadcast_global_settings_get__is_camera_capture_enabled_by_default(WMECA_AppBroadcastGlobalSettings *self, BOOL *value);
 
-/* Windows.Media.Capture.AppBroadcastGlobalSettings.put_SelectedCameraId() */
 HRESULT wmeca_app_broadcast_global_settings_put__selected_camera_id(WMECA_AppBroadcastGlobalSettings *self, cwinrt_hstring value);
 
-/* Windows.Media.Capture.AppBroadcastGlobalSettings.get_SelectedCameraId() */
 HRESULT wmeca_app_broadcast_global_settings_get__selected_camera_id(WMECA_AppBroadcastGlobalSettings *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.AppBroadcastGlobalSettings.put_CameraOverlayLocation() */
 HRESULT wmeca_app_broadcast_global_settings_put__camera_overlay_location(WMECA_AppBroadcastGlobalSettings *self, WMECA_AppBroadcastCameraOverlayLocation value);
 
-/* Windows.Media.Capture.AppBroadcastGlobalSettings.get_CameraOverlayLocation() */
 HRESULT wmeca_app_broadcast_global_settings_get__camera_overlay_location(WMECA_AppBroadcastGlobalSettings *self, WMECA_AppBroadcastCameraOverlayLocation *value);
 
-/* Windows.Media.Capture.AppBroadcastGlobalSettings.put_CameraOverlaySize() */
 HRESULT wmeca_app_broadcast_global_settings_put__camera_overlay_size(WMECA_AppBroadcastGlobalSettings *self, WMECA_AppBroadcastCameraOverlaySize value);
 
-/* Windows.Media.Capture.AppBroadcastGlobalSettings.get_CameraOverlaySize() */
 HRESULT wmeca_app_broadcast_global_settings_get__camera_overlay_size(WMECA_AppBroadcastGlobalSettings *self, WMECA_AppBroadcastCameraOverlaySize *value);
 
-/* Windows.Media.Capture.AppBroadcastGlobalSettings.put_IsCursorImageCaptureEnabled() */
 HRESULT wmeca_app_broadcast_global_settings_put__is_cursor_image_capture_enabled(WMECA_AppBroadcastGlobalSettings *self, BOOL value);
 
-/* Windows.Media.Capture.AppBroadcastGlobalSettings.get_IsCursorImageCaptureEnabled() */
 HRESULT wmeca_app_broadcast_global_settings_get__is_cursor_image_capture_enabled(WMECA_AppBroadcastGlobalSettings *self, BOOL *value);
 
-/* activate Windows.Media.Capture.AppBroadcastHeartbeatRequestedEventArgs */
 HRESULT wmeca_app_broadcast_heartbeat_requested_event_args_new(WMECA_AppBroadcastHeartbeatRequestedEventArgs **out);
 
-/* Windows.Media.Capture.AppBroadcastHeartbeatRequestedEventArgs */
-/* Windows.Media.Capture.AppBroadcastHeartbeatRequestedEventArgs.put_Handled() */
 HRESULT wmeca_app_broadcast_heartbeat_requested_event_args_put__handled(WMECA_AppBroadcastHeartbeatRequestedEventArgs *self, BOOL value);
 
-/* Windows.Media.Capture.AppBroadcastHeartbeatRequestedEventArgs.get_Handled() */
 HRESULT wmeca_app_broadcast_heartbeat_requested_event_args_get__handled(WMECA_AppBroadcastHeartbeatRequestedEventArgs *self, BOOL *value);
 
-/* activate Windows.Media.Capture.AppBroadcastManager */
 HRESULT wmeca_app_broadcast_manager_new(WMECA_AppBroadcastManager **out);
 
-/* Windows.Media.Capture.AppBroadcastManager */
-/* Windows.Media.Capture.AppBroadcastManager.GetGlobalSettings() */
 HRESULT wmeca_app_broadcast_manager_get_global_settings(WMECA_AppBroadcastGlobalSettings** out);
 
-/* Windows.Media.Capture.AppBroadcastManager.ApplyGlobalSettings() */
 HRESULT wmeca_app_broadcast_manager_apply_global_settings(WMECA_AppBroadcastGlobalSettings* value);
 
-/* Windows.Media.Capture.AppBroadcastManager.GetProviderSettings() */
 HRESULT wmeca_app_broadcast_manager_get_provider_settings(WMECA_AppBroadcastProviderSettings** out);
 
-/* Windows.Media.Capture.AppBroadcastManager.ApplyProviderSettings() */
 HRESULT wmeca_app_broadcast_manager_apply_provider_settings(WMECA_AppBroadcastProviderSettings* value);
 
-/* activate Windows.Media.Capture.AppBroadcastMicrophoneCaptureStateChangedEventArgs */
 HRESULT wmeca_app_broadcast_microphone_capture_state_changed_event_args_new(WMECA_AppBroadcastMicrophoneCaptureStateChangedEventArgs **out);
 
-/* Windows.Media.Capture.AppBroadcastMicrophoneCaptureStateChangedEventArgs */
-/* Windows.Media.Capture.AppBroadcastMicrophoneCaptureStateChangedEventArgs.get_State() */
 HRESULT wmeca_app_broadcast_microphone_capture_state_changed_event_args_get__state(WMECA_AppBroadcastMicrophoneCaptureStateChangedEventArgs *self, WMECA_AppBroadcastMicrophoneCaptureState *value);
 
-/* Windows.Media.Capture.AppBroadcastMicrophoneCaptureStateChangedEventArgs.get_ErrorCode() */
 HRESULT wmeca_app_broadcast_microphone_capture_state_changed_event_args_get__error_code(WMECA_AppBroadcastMicrophoneCaptureStateChangedEventArgs *self, uint32_t *value);
 
-/* activate Windows.Media.Capture.AppBroadcastPlugIn */
 HRESULT wmeca_app_broadcast_plug_in_new(WMECA_AppBroadcastPlugIn **out);
 
-/* Windows.Media.Capture.AppBroadcastPlugIn */
-/* Windows.Media.Capture.AppBroadcastPlugIn.get_AppId() */
 HRESULT wmeca_app_broadcast_plug_in_get__app_id(WMECA_AppBroadcastPlugIn *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.AppBroadcastPlugIn.get_ProviderSettings() */
 HRESULT wmeca_app_broadcast_plug_in_get__provider_settings(WMECA_AppBroadcastPlugIn *self, WMECA_AppBroadcastProviderSettings** value);
 
-/* Windows.Media.Capture.AppBroadcastPlugIn.get_Logo() */
 HRESULT wmeca_app_broadcast_plug_in_get__logo(WMECA_AppBroadcastPlugIn *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.Media.Capture.AppBroadcastPlugIn.get_DisplayName() */
 HRESULT wmeca_app_broadcast_plug_in_get__display_name(WMECA_AppBroadcastPlugIn *self, cwinrt_hstring *value);
 
-/* activate Windows.Media.Capture.AppBroadcastPlugInManager */
 HRESULT wmeca_app_broadcast_plug_in_manager_new(WMECA_AppBroadcastPlugInManager **out);
 
-/* Windows.Media.Capture.AppBroadcastPlugInManager */
-/* Windows.Media.Capture.AppBroadcastPlugInManager.get_IsBroadcastProviderAvailable() */
 HRESULT wmeca_app_broadcast_plug_in_manager_get__is_broadcast_provider_available(WMECA_AppBroadcastPlugInManager *self, BOOL *value);
 
-/* Windows.Media.Capture.AppBroadcastPlugInManager.get_PlugInList() */
 HRESULT wmeca_app_broadcast_plug_in_manager_get__plug_in_list(WMECA_AppBroadcastPlugInManager *self, WFOCO_IVectorView_WMECA_AppBroadcastPlugIn** value);
 
-/* Windows.Media.Capture.AppBroadcastPlugInManager.get_DefaultPlugIn() */
 HRESULT wmeca_app_broadcast_plug_in_manager_get__default_plug_in(WMECA_AppBroadcastPlugInManager *self, WMECA_AppBroadcastPlugIn** value);
 
-/* Windows.Media.Capture.AppBroadcastPlugInManager.put_DefaultPlugIn() */
 HRESULT wmeca_app_broadcast_plug_in_manager_put__default_plug_in(WMECA_AppBroadcastPlugInManager *self, WMECA_AppBroadcastPlugIn* value);
 
-/* Windows.Media.Capture.AppBroadcastPlugInManager.GetDefault() */
 HRESULT wmeca_app_broadcast_plug_in_manager_get_default(WMECA_AppBroadcastPlugInManager** out);
 
-/* Windows.Media.Capture.AppBroadcastPlugInManager.GetForUser(user) */
 HRESULT wmeca_app_broadcast_plug_in_manager_get_for_user(WSY_User* user, WMECA_AppBroadcastPlugInManager** out);
 
-/* activate Windows.Media.Capture.AppBroadcastPlugInStateChangedEventArgs */
 HRESULT wmeca_app_broadcast_plug_in_state_changed_event_args_new(WMECA_AppBroadcastPlugInStateChangedEventArgs **out);
 
-/* Windows.Media.Capture.AppBroadcastPlugInStateChangedEventArgs */
-/* Windows.Media.Capture.AppBroadcastPlugInStateChangedEventArgs.get_PlugInState() */
 HRESULT wmeca_app_broadcast_plug_in_state_changed_event_args_get__plug_in_state(WMECA_AppBroadcastPlugInStateChangedEventArgs *self, WMECA_AppBroadcastPlugInState *value);
 
-/* activate Windows.Media.Capture.AppBroadcastPreview */
 HRESULT wmeca_app_broadcast_preview_new(WMECA_AppBroadcastPreview **out);
 
-/* Windows.Media.Capture.AppBroadcastPreview */
-/* Windows.Media.Capture.AppBroadcastPreview.StopPreview() */
 HRESULT wmeca_app_broadcast_preview_stop_preview(WMECA_AppBroadcastPreview *self);
 
-/* Windows.Media.Capture.AppBroadcastPreview.get_PreviewState() */
 HRESULT wmeca_app_broadcast_preview_get__preview_state(WMECA_AppBroadcastPreview *self, WMECA_AppBroadcastPreviewState *value);
 
-/* Windows.Media.Capture.AppBroadcastPreview.get_ErrorCode() */
 HRESULT wmeca_app_broadcast_preview_get__error_code(WMECA_AppBroadcastPreview *self, uint32_t** value);
 
-/* Windows.Media.Capture.AppBroadcastPreview.get_PreviewStreamReader() */
 HRESULT wmeca_app_broadcast_preview_get__preview_stream_reader(WMECA_AppBroadcastPreview *self, WMECA_AppBroadcastPreviewStreamReader** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeca_app_broadcast_preview_on_preview_state_changed(WMECA_AppBroadcastPreview *self, cwinrt_event_fn fn, void *ctx);
 void wmeca_app_broadcast_preview_off_preview_state_changed(WMECA_AppBroadcastPreview *self, cwinrt_token token);
 
-/* activate Windows.Media.Capture.AppBroadcastPreviewStateChangedEventArgs */
 HRESULT wmeca_app_broadcast_preview_state_changed_event_args_new(WMECA_AppBroadcastPreviewStateChangedEventArgs **out);
 
-/* Windows.Media.Capture.AppBroadcastPreviewStateChangedEventArgs */
-/* Windows.Media.Capture.AppBroadcastPreviewStateChangedEventArgs.get_PreviewState() */
 HRESULT wmeca_app_broadcast_preview_state_changed_event_args_get__preview_state(WMECA_AppBroadcastPreviewStateChangedEventArgs *self, WMECA_AppBroadcastPreviewState *value);
 
-/* Windows.Media.Capture.AppBroadcastPreviewStateChangedEventArgs.get_ErrorCode() */
 HRESULT wmeca_app_broadcast_preview_state_changed_event_args_get__error_code(WMECA_AppBroadcastPreviewStateChangedEventArgs *self, uint32_t *value);
 
-/* activate Windows.Media.Capture.AppBroadcastPreviewStreamReader */
 HRESULT wmeca_app_broadcast_preview_stream_reader_new(WMECA_AppBroadcastPreviewStreamReader **out);
 
-/* Windows.Media.Capture.AppBroadcastPreviewStreamReader */
-/* Windows.Media.Capture.AppBroadcastPreviewStreamReader.get_VideoWidth() */
 HRESULT wmeca_app_broadcast_preview_stream_reader_get__video_width(WMECA_AppBroadcastPreviewStreamReader *self, uint32_t *value);
 
-/* Windows.Media.Capture.AppBroadcastPreviewStreamReader.get_VideoHeight() */
 HRESULT wmeca_app_broadcast_preview_stream_reader_get__video_height(WMECA_AppBroadcastPreviewStreamReader *self, uint32_t *value);
 
-/* Windows.Media.Capture.AppBroadcastPreviewStreamReader.get_VideoStride() */
 HRESULT wmeca_app_broadcast_preview_stream_reader_get__video_stride(WMECA_AppBroadcastPreviewStreamReader *self, uint32_t *value);
 
-/* Windows.Media.Capture.AppBroadcastPreviewStreamReader.get_VideoBitmapPixelFormat() */
 HRESULT wmeca_app_broadcast_preview_stream_reader_get__video_bitmap_pixel_format(WMECA_AppBroadcastPreviewStreamReader *self, WGRIM_BitmapPixelFormat *value);
 
-/* Windows.Media.Capture.AppBroadcastPreviewStreamReader.get_VideoBitmapAlphaMode() */
 HRESULT wmeca_app_broadcast_preview_stream_reader_get__video_bitmap_alpha_mode(WMECA_AppBroadcastPreviewStreamReader *self, WGRIM_BitmapAlphaMode *value);
 
-/* Windows.Media.Capture.AppBroadcastPreviewStreamReader.TryGetNextVideoFrame() */
 HRESULT wmeca_app_broadcast_preview_stream_reader_try_get_next_video_frame(WMECA_AppBroadcastPreviewStreamReader *self, WMECA_AppBroadcastPreviewStreamVideoFrame** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeca_app_broadcast_preview_stream_reader_on_video_frame_arrived(WMECA_AppBroadcastPreviewStreamReader *self, cwinrt_event_fn fn, void *ctx);
 void wmeca_app_broadcast_preview_stream_reader_off_video_frame_arrived(WMECA_AppBroadcastPreviewStreamReader *self, cwinrt_token token);
 
-/* activate Windows.Media.Capture.AppBroadcastPreviewStreamVideoFrame */
 HRESULT wmeca_app_broadcast_preview_stream_video_frame_new(WMECA_AppBroadcastPreviewStreamVideoFrame **out);
 
-/* Windows.Media.Capture.AppBroadcastPreviewStreamVideoFrame */
-/* Windows.Media.Capture.AppBroadcastPreviewStreamVideoFrame.get_VideoHeader() */
 HRESULT wmeca_app_broadcast_preview_stream_video_frame_get__video_header(WMECA_AppBroadcastPreviewStreamVideoFrame *self, WMECA_AppBroadcastPreviewStreamVideoHeader** value);
 
-/* Windows.Media.Capture.AppBroadcastPreviewStreamVideoFrame.get_VideoBuffer() */
 HRESULT wmeca_app_broadcast_preview_stream_video_frame_get__video_buffer(WMECA_AppBroadcastPreviewStreamVideoFrame *self, WSTST_IBuffer** value);
 
-/* activate Windows.Media.Capture.AppBroadcastPreviewStreamVideoHeader */
 HRESULT wmeca_app_broadcast_preview_stream_video_header_new(WMECA_AppBroadcastPreviewStreamVideoHeader **out);
 
-/* Windows.Media.Capture.AppBroadcastPreviewStreamVideoHeader */
-/* Windows.Media.Capture.AppBroadcastPreviewStreamVideoHeader.get_AbsoluteTimestamp() */
 HRESULT wmeca_app_broadcast_preview_stream_video_header_get__absolute_timestamp(WMECA_AppBroadcastPreviewStreamVideoHeader *self, WF_DateTime *value);
 
-/* Windows.Media.Capture.AppBroadcastPreviewStreamVideoHeader.get_RelativeTimestamp() */
 HRESULT wmeca_app_broadcast_preview_stream_video_header_get__relative_timestamp(WMECA_AppBroadcastPreviewStreamVideoHeader *self, WF_TimeSpan *value);
 
-/* Windows.Media.Capture.AppBroadcastPreviewStreamVideoHeader.get_Duration() */
 HRESULT wmeca_app_broadcast_preview_stream_video_header_get__duration(WMECA_AppBroadcastPreviewStreamVideoHeader *self, WF_TimeSpan *value);
 
-/* Windows.Media.Capture.AppBroadcastPreviewStreamVideoHeader.get_FrameId() */
 HRESULT wmeca_app_broadcast_preview_stream_video_header_get__frame_id(WMECA_AppBroadcastPreviewStreamVideoHeader *self, uint64_t *value);
 
-/* activate Windows.Media.Capture.AppBroadcastProviderSettings */
 HRESULT wmeca_app_broadcast_provider_settings_new(WMECA_AppBroadcastProviderSettings **out);
 
-/* Windows.Media.Capture.AppBroadcastProviderSettings */
-/* Windows.Media.Capture.AppBroadcastProviderSettings.put_DefaultBroadcastTitle() */
 HRESULT wmeca_app_broadcast_provider_settings_put__default_broadcast_title(WMECA_AppBroadcastProviderSettings *self, cwinrt_hstring value);
 
-/* Windows.Media.Capture.AppBroadcastProviderSettings.get_DefaultBroadcastTitle() */
 HRESULT wmeca_app_broadcast_provider_settings_get__default_broadcast_title(WMECA_AppBroadcastProviderSettings *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.AppBroadcastProviderSettings.put_AudioEncodingBitrate() */
 HRESULT wmeca_app_broadcast_provider_settings_put__audio_encoding_bitrate(WMECA_AppBroadcastProviderSettings *self, uint32_t value);
 
-/* Windows.Media.Capture.AppBroadcastProviderSettings.get_AudioEncodingBitrate() */
 HRESULT wmeca_app_broadcast_provider_settings_get__audio_encoding_bitrate(WMECA_AppBroadcastProviderSettings *self, uint32_t *value);
 
-/* Windows.Media.Capture.AppBroadcastProviderSettings.put_CustomVideoEncodingBitrate() */
 HRESULT wmeca_app_broadcast_provider_settings_put__custom_video_encoding_bitrate(WMECA_AppBroadcastProviderSettings *self, uint32_t value);
 
-/* Windows.Media.Capture.AppBroadcastProviderSettings.get_CustomVideoEncodingBitrate() */
 HRESULT wmeca_app_broadcast_provider_settings_get__custom_video_encoding_bitrate(WMECA_AppBroadcastProviderSettings *self, uint32_t *value);
 
-/* Windows.Media.Capture.AppBroadcastProviderSettings.put_CustomVideoEncodingHeight() */
 HRESULT wmeca_app_broadcast_provider_settings_put__custom_video_encoding_height(WMECA_AppBroadcastProviderSettings *self, uint32_t value);
 
-/* Windows.Media.Capture.AppBroadcastProviderSettings.get_CustomVideoEncodingHeight() */
 HRESULT wmeca_app_broadcast_provider_settings_get__custom_video_encoding_height(WMECA_AppBroadcastProviderSettings *self, uint32_t *value);
 
-/* Windows.Media.Capture.AppBroadcastProviderSettings.put_CustomVideoEncodingWidth() */
 HRESULT wmeca_app_broadcast_provider_settings_put__custom_video_encoding_width(WMECA_AppBroadcastProviderSettings *self, uint32_t value);
 
-/* Windows.Media.Capture.AppBroadcastProviderSettings.get_CustomVideoEncodingWidth() */
 HRESULT wmeca_app_broadcast_provider_settings_get__custom_video_encoding_width(WMECA_AppBroadcastProviderSettings *self, uint32_t *value);
 
-/* Windows.Media.Capture.AppBroadcastProviderSettings.put_VideoEncodingBitrateMode() */
 HRESULT wmeca_app_broadcast_provider_settings_put__video_encoding_bitrate_mode(WMECA_AppBroadcastProviderSettings *self, WMECA_AppBroadcastVideoEncodingBitrateMode value);
 
-/* Windows.Media.Capture.AppBroadcastProviderSettings.get_VideoEncodingBitrateMode() */
 HRESULT wmeca_app_broadcast_provider_settings_get__video_encoding_bitrate_mode(WMECA_AppBroadcastProviderSettings *self, WMECA_AppBroadcastVideoEncodingBitrateMode *value);
 
-/* Windows.Media.Capture.AppBroadcastProviderSettings.put_VideoEncodingResolutionMode() */
 HRESULT wmeca_app_broadcast_provider_settings_put__video_encoding_resolution_mode(WMECA_AppBroadcastProviderSettings *self, WMECA_AppBroadcastVideoEncodingResolutionMode value);
 
-/* Windows.Media.Capture.AppBroadcastProviderSettings.get_VideoEncodingResolutionMode() */
 HRESULT wmeca_app_broadcast_provider_settings_get__video_encoding_resolution_mode(WMECA_AppBroadcastProviderSettings *self, WMECA_AppBroadcastVideoEncodingResolutionMode *value);
 
-/* activate Windows.Media.Capture.AppBroadcastServices */
 HRESULT wmeca_app_broadcast_services_new(WMECA_AppBroadcastServices **out);
 
-/* Windows.Media.Capture.AppBroadcastServices */
-/* Windows.Media.Capture.AppBroadcastServices.get_CaptureTargetType() */
 HRESULT wmeca_app_broadcast_services_get__capture_target_type(WMECA_AppBroadcastServices *self, WMECA_AppBroadcastCaptureTargetType *value);
 
-/* Windows.Media.Capture.AppBroadcastServices.put_CaptureTargetType() */
 HRESULT wmeca_app_broadcast_services_put__capture_target_type(WMECA_AppBroadcastServices *self, WMECA_AppBroadcastCaptureTargetType value);
 
-/* Windows.Media.Capture.AppBroadcastServices.get_BroadcastTitle() */
 HRESULT wmeca_app_broadcast_services_get__broadcast_title(WMECA_AppBroadcastServices *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.AppBroadcastServices.put_BroadcastTitle() */
 HRESULT wmeca_app_broadcast_services_put__broadcast_title(WMECA_AppBroadcastServices *self, cwinrt_hstring value);
 
-/* Windows.Media.Capture.AppBroadcastServices.get_BroadcastLanguage() */
 HRESULT wmeca_app_broadcast_services_get__broadcast_language(WMECA_AppBroadcastServices *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.AppBroadcastServices.put_BroadcastLanguage() */
 HRESULT wmeca_app_broadcast_services_put__broadcast_language(WMECA_AppBroadcastServices *self, cwinrt_hstring value);
 
-/* Windows.Media.Capture.AppBroadcastServices.get_UserName() */
 HRESULT wmeca_app_broadcast_services_get__user_name(WMECA_AppBroadcastServices *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.AppBroadcastServices.get_CanCapture() */
 HRESULT wmeca_app_broadcast_services_get__can_capture(WMECA_AppBroadcastServices *self, BOOL *value);
 
-/* Windows.Media.Capture.AppBroadcastServices.EnterBroadcastModeAsync(plugIn) */
 HRESULT wmeca_app_broadcast_services_enter_broadcast_mode_async(WMECA_AppBroadcastServices *self, WMECA_AppBroadcastPlugIn* plugIn, WF_IAsyncOperation_uint32_t** out);
 
-/* Windows.Media.Capture.AppBroadcastServices.ExitBroadcastMode(reason) */
 HRESULT wmeca_app_broadcast_services_exit_broadcast_mode(WMECA_AppBroadcastServices *self, WMECA_AppBroadcastExitBroadcastModeReason reason);
 
-/* Windows.Media.Capture.AppBroadcastServices.StartBroadcast() */
 HRESULT wmeca_app_broadcast_services_start_broadcast(WMECA_AppBroadcastServices *self);
 
-/* Windows.Media.Capture.AppBroadcastServices.PauseBroadcast() */
 HRESULT wmeca_app_broadcast_services_pause_broadcast(WMECA_AppBroadcastServices *self);
 
-/* Windows.Media.Capture.AppBroadcastServices.ResumeBroadcast() */
 HRESULT wmeca_app_broadcast_services_resume_broadcast(WMECA_AppBroadcastServices *self);
 
-/* Windows.Media.Capture.AppBroadcastServices.StartPreview(desiredSize) */
 HRESULT wmeca_app_broadcast_services_start_preview(WMECA_AppBroadcastServices *self, WF_Size desiredSize, WMECA_AppBroadcastPreview** out);
 
-/* Windows.Media.Capture.AppBroadcastServices.get_State() */
 HRESULT wmeca_app_broadcast_services_get__state(WMECA_AppBroadcastServices *self, WMECA_AppBroadcastState** value);
 
-/* activate Windows.Media.Capture.AppBroadcastSignInStateChangedEventArgs */
 HRESULT wmeca_app_broadcast_sign_in_state_changed_event_args_new(WMECA_AppBroadcastSignInStateChangedEventArgs **out);
 
-/* Windows.Media.Capture.AppBroadcastSignInStateChangedEventArgs */
-/* Windows.Media.Capture.AppBroadcastSignInStateChangedEventArgs.get_SignInState() */
 HRESULT wmeca_app_broadcast_sign_in_state_changed_event_args_get__sign_in_state(WMECA_AppBroadcastSignInStateChangedEventArgs *self, WMECA_AppBroadcastSignInState *value);
 
-/* Windows.Media.Capture.AppBroadcastSignInStateChangedEventArgs.get_Result() */
 HRESULT wmeca_app_broadcast_sign_in_state_changed_event_args_get__result(WMECA_AppBroadcastSignInStateChangedEventArgs *self, WMECA_AppBroadcastSignInResult *value);
 
-/* activate Windows.Media.Capture.AppBroadcastState */
 HRESULT wmeca_app_broadcast_state_new(WMECA_AppBroadcastState **out);
 
-/* Windows.Media.Capture.AppBroadcastState */
-/* Windows.Media.Capture.AppBroadcastState.get_IsCaptureTargetRunning() */
 HRESULT wmeca_app_broadcast_state_get__is_capture_target_running(WMECA_AppBroadcastState *self, BOOL *value);
 
-/* Windows.Media.Capture.AppBroadcastState.get_ViewerCount() */
 HRESULT wmeca_app_broadcast_state_get__viewer_count(WMECA_AppBroadcastState *self, uint32_t *value);
 
-/* Windows.Media.Capture.AppBroadcastState.get_ShouldCaptureMicrophone() */
 HRESULT wmeca_app_broadcast_state_get__should_capture_microphone(WMECA_AppBroadcastState *self, BOOL *value);
 
-/* Windows.Media.Capture.AppBroadcastState.put_ShouldCaptureMicrophone() */
 HRESULT wmeca_app_broadcast_state_put__should_capture_microphone(WMECA_AppBroadcastState *self, BOOL value);
 
-/* Windows.Media.Capture.AppBroadcastState.RestartMicrophoneCapture() */
 HRESULT wmeca_app_broadcast_state_restart_microphone_capture(WMECA_AppBroadcastState *self);
 
-/* Windows.Media.Capture.AppBroadcastState.get_ShouldCaptureCamera() */
 HRESULT wmeca_app_broadcast_state_get__should_capture_camera(WMECA_AppBroadcastState *self, BOOL *value);
 
-/* Windows.Media.Capture.AppBroadcastState.put_ShouldCaptureCamera() */
 HRESULT wmeca_app_broadcast_state_put__should_capture_camera(WMECA_AppBroadcastState *self, BOOL value);
 
-/* Windows.Media.Capture.AppBroadcastState.RestartCameraCapture() */
 HRESULT wmeca_app_broadcast_state_restart_camera_capture(WMECA_AppBroadcastState *self);
 
-/* Windows.Media.Capture.AppBroadcastState.get_EncodedVideoSize() */
 HRESULT wmeca_app_broadcast_state_get__encoded_video_size(WMECA_AppBroadcastState *self, WF_Size *value);
 
-/* Windows.Media.Capture.AppBroadcastState.get_MicrophoneCaptureState() */
 HRESULT wmeca_app_broadcast_state_get__microphone_capture_state(WMECA_AppBroadcastState *self, WMECA_AppBroadcastMicrophoneCaptureState *value);
 
-/* Windows.Media.Capture.AppBroadcastState.get_MicrophoneCaptureError() */
 HRESULT wmeca_app_broadcast_state_get__microphone_capture_error(WMECA_AppBroadcastState *self, uint32_t *value);
 
-/* Windows.Media.Capture.AppBroadcastState.get_CameraCaptureState() */
 HRESULT wmeca_app_broadcast_state_get__camera_capture_state(WMECA_AppBroadcastState *self, WMECA_AppBroadcastCameraCaptureState *value);
 
-/* Windows.Media.Capture.AppBroadcastState.get_CameraCaptureError() */
 HRESULT wmeca_app_broadcast_state_get__camera_capture_error(WMECA_AppBroadcastState *self, uint32_t *value);
 
-/* Windows.Media.Capture.AppBroadcastState.get_StreamState() */
 HRESULT wmeca_app_broadcast_state_get__stream_state(WMECA_AppBroadcastState *self, WMECA_AppBroadcastStreamState *value);
 
-/* Windows.Media.Capture.AppBroadcastState.get_PlugInState() */
 HRESULT wmeca_app_broadcast_state_get__plug_in_state(WMECA_AppBroadcastState *self, WMECA_AppBroadcastPlugInState *value);
 
-/* Windows.Media.Capture.AppBroadcastState.get_OAuthRequestUri() */
 HRESULT wmeca_app_broadcast_state_get__o_auth_request_uri(WMECA_AppBroadcastState *self, WF_Uri** value);
 
-/* Windows.Media.Capture.AppBroadcastState.get_OAuthCallbackUri() */
 HRESULT wmeca_app_broadcast_state_get__o_auth_callback_uri(WMECA_AppBroadcastState *self, WF_Uri** value);
 
-/* Windows.Media.Capture.AppBroadcastState.get_AuthenticationResult() */
 HRESULT wmeca_app_broadcast_state_get__authentication_result(WMECA_AppBroadcastState *self, WSEAUWE_WebAuthenticationResult** value);
 
-/* Windows.Media.Capture.AppBroadcastState.put_AuthenticationResult() */
 HRESULT wmeca_app_broadcast_state_put__authentication_result(WMECA_AppBroadcastState *self, WSEAUWE_WebAuthenticationResult* value);
 
-/* Windows.Media.Capture.AppBroadcastState.put_SignInState() */
 HRESULT wmeca_app_broadcast_state_put__sign_in_state(WMECA_AppBroadcastState *self, WMECA_AppBroadcastSignInState value);
 
-/* Windows.Media.Capture.AppBroadcastState.get_SignInState() */
 HRESULT wmeca_app_broadcast_state_get__sign_in_state(WMECA_AppBroadcastState *self, WMECA_AppBroadcastSignInState *value);
 
-/* Windows.Media.Capture.AppBroadcastState.get_TerminationReason() */
 HRESULT wmeca_app_broadcast_state_get__termination_reason(WMECA_AppBroadcastState *self, WMECA_AppBroadcastTerminationReason *value);
 
-/* Windows.Media.Capture.AppBroadcastState.get_TerminationReasonPlugInSpecific() */
 HRESULT wmeca_app_broadcast_state_get__termination_reason_plug_in_specific(WMECA_AppBroadcastState *self, uint32_t *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeca_app_broadcast_state_on_viewer_count_changed(WMECA_AppBroadcastState *self, cwinrt_event_fn fn, void *ctx);
@@ -2812,67 +2526,44 @@ void wmeca_app_broadcast_state_off_stream_state_changed(WMECA_AppBroadcastState 
 cwinrt_token wmeca_app_broadcast_state_on_capture_target_closed(WMECA_AppBroadcastState *self, cwinrt_event_fn fn, void *ctx);
 void wmeca_app_broadcast_state_off_capture_target_closed(WMECA_AppBroadcastState *self, cwinrt_token token);
 
-/* activate Windows.Media.Capture.AppBroadcastStreamAudioFrame */
 HRESULT wmeca_app_broadcast_stream_audio_frame_new(WMECA_AppBroadcastStreamAudioFrame **out);
 
-/* Windows.Media.Capture.AppBroadcastStreamAudioFrame */
-/* Windows.Media.Capture.AppBroadcastStreamAudioFrame.get_AudioHeader() */
 HRESULT wmeca_app_broadcast_stream_audio_frame_get__audio_header(WMECA_AppBroadcastStreamAudioFrame *self, WMECA_AppBroadcastStreamAudioHeader** value);
 
-/* Windows.Media.Capture.AppBroadcastStreamAudioFrame.get_AudioBuffer() */
 HRESULT wmeca_app_broadcast_stream_audio_frame_get__audio_buffer(WMECA_AppBroadcastStreamAudioFrame *self, WSTST_IBuffer** value);
 
-/* activate Windows.Media.Capture.AppBroadcastStreamAudioHeader */
 HRESULT wmeca_app_broadcast_stream_audio_header_new(WMECA_AppBroadcastStreamAudioHeader **out);
 
-/* Windows.Media.Capture.AppBroadcastStreamAudioHeader */
-/* Windows.Media.Capture.AppBroadcastStreamAudioHeader.get_AbsoluteTimestamp() */
 HRESULT wmeca_app_broadcast_stream_audio_header_get__absolute_timestamp(WMECA_AppBroadcastStreamAudioHeader *self, WF_DateTime *value);
 
-/* Windows.Media.Capture.AppBroadcastStreamAudioHeader.get_RelativeTimestamp() */
 HRESULT wmeca_app_broadcast_stream_audio_header_get__relative_timestamp(WMECA_AppBroadcastStreamAudioHeader *self, WF_TimeSpan *value);
 
-/* Windows.Media.Capture.AppBroadcastStreamAudioHeader.get_Duration() */
 HRESULT wmeca_app_broadcast_stream_audio_header_get__duration(WMECA_AppBroadcastStreamAudioHeader *self, WF_TimeSpan *value);
 
-/* Windows.Media.Capture.AppBroadcastStreamAudioHeader.get_HasDiscontinuity() */
 HRESULT wmeca_app_broadcast_stream_audio_header_get__has_discontinuity(WMECA_AppBroadcastStreamAudioHeader *self, BOOL *value);
 
-/* Windows.Media.Capture.AppBroadcastStreamAudioHeader.get_FrameId() */
 HRESULT wmeca_app_broadcast_stream_audio_header_get__frame_id(WMECA_AppBroadcastStreamAudioHeader *self, uint64_t *value);
 
-/* activate Windows.Media.Capture.AppBroadcastStreamReader */
 HRESULT wmeca_app_broadcast_stream_reader_new(WMECA_AppBroadcastStreamReader **out);
 
-/* Windows.Media.Capture.AppBroadcastStreamReader */
-/* Windows.Media.Capture.AppBroadcastStreamReader.get_AudioChannels() */
 HRESULT wmeca_app_broadcast_stream_reader_get__audio_channels(WMECA_AppBroadcastStreamReader *self, uint32_t *value);
 
-/* Windows.Media.Capture.AppBroadcastStreamReader.get_AudioSampleRate() */
 HRESULT wmeca_app_broadcast_stream_reader_get__audio_sample_rate(WMECA_AppBroadcastStreamReader *self, uint32_t *value);
 
-/* Windows.Media.Capture.AppBroadcastStreamReader.get_AudioAacSequence() */
 HRESULT wmeca_app_broadcast_stream_reader_get__audio_aac_sequence(WMECA_AppBroadcastStreamReader *self, WSTST_IBuffer** value);
 
-/* Windows.Media.Capture.AppBroadcastStreamReader.get_AudioBitrate() */
 HRESULT wmeca_app_broadcast_stream_reader_get__audio_bitrate(WMECA_AppBroadcastStreamReader *self, uint32_t *value);
 
-/* Windows.Media.Capture.AppBroadcastStreamReader.TryGetNextAudioFrame() */
 HRESULT wmeca_app_broadcast_stream_reader_try_get_next_audio_frame(WMECA_AppBroadcastStreamReader *self, WMECA_AppBroadcastStreamAudioFrame** out);
 
-/* Windows.Media.Capture.AppBroadcastStreamReader.get_VideoWidth() */
 HRESULT wmeca_app_broadcast_stream_reader_get__video_width(WMECA_AppBroadcastStreamReader *self, uint32_t *value);
 
-/* Windows.Media.Capture.AppBroadcastStreamReader.get_VideoHeight() */
 HRESULT wmeca_app_broadcast_stream_reader_get__video_height(WMECA_AppBroadcastStreamReader *self, uint32_t *value);
 
-/* Windows.Media.Capture.AppBroadcastStreamReader.get_VideoBitrate() */
 HRESULT wmeca_app_broadcast_stream_reader_get__video_bitrate(WMECA_AppBroadcastStreamReader *self, uint32_t *value);
 
-/* Windows.Media.Capture.AppBroadcastStreamReader.TryGetNextVideoFrame() */
 HRESULT wmeca_app_broadcast_stream_reader_try_get_next_video_frame(WMECA_AppBroadcastStreamReader *self, WMECA_AppBroadcastStreamVideoFrame** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeca_app_broadcast_stream_reader_on_audio_frame_arrived(WMECA_AppBroadcastStreamReader *self, cwinrt_event_fn fn, void *ctx);
@@ -2881,278 +2572,180 @@ void wmeca_app_broadcast_stream_reader_off_audio_frame_arrived(WMECA_AppBroadcas
 cwinrt_token wmeca_app_broadcast_stream_reader_on_video_frame_arrived(WMECA_AppBroadcastStreamReader *self, cwinrt_event_fn fn, void *ctx);
 void wmeca_app_broadcast_stream_reader_off_video_frame_arrived(WMECA_AppBroadcastStreamReader *self, cwinrt_token token);
 
-/* activate Windows.Media.Capture.AppBroadcastStreamStateChangedEventArgs */
 HRESULT wmeca_app_broadcast_stream_state_changed_event_args_new(WMECA_AppBroadcastStreamStateChangedEventArgs **out);
 
-/* Windows.Media.Capture.AppBroadcastStreamStateChangedEventArgs */
-/* Windows.Media.Capture.AppBroadcastStreamStateChangedEventArgs.get_StreamState() */
 HRESULT wmeca_app_broadcast_stream_state_changed_event_args_get__stream_state(WMECA_AppBroadcastStreamStateChangedEventArgs *self, WMECA_AppBroadcastStreamState *value);
 
-/* activate Windows.Media.Capture.AppBroadcastStreamVideoFrame */
 HRESULT wmeca_app_broadcast_stream_video_frame_new(WMECA_AppBroadcastStreamVideoFrame **out);
 
-/* Windows.Media.Capture.AppBroadcastStreamVideoFrame */
-/* Windows.Media.Capture.AppBroadcastStreamVideoFrame.get_VideoHeader() */
 HRESULT wmeca_app_broadcast_stream_video_frame_get__video_header(WMECA_AppBroadcastStreamVideoFrame *self, WMECA_AppBroadcastStreamVideoHeader** value);
 
-/* Windows.Media.Capture.AppBroadcastStreamVideoFrame.get_VideoBuffer() */
 HRESULT wmeca_app_broadcast_stream_video_frame_get__video_buffer(WMECA_AppBroadcastStreamVideoFrame *self, WSTST_IBuffer** value);
 
-/* activate Windows.Media.Capture.AppBroadcastStreamVideoHeader */
 HRESULT wmeca_app_broadcast_stream_video_header_new(WMECA_AppBroadcastStreamVideoHeader **out);
 
-/* Windows.Media.Capture.AppBroadcastStreamVideoHeader */
-/* Windows.Media.Capture.AppBroadcastStreamVideoHeader.get_AbsoluteTimestamp() */
 HRESULT wmeca_app_broadcast_stream_video_header_get__absolute_timestamp(WMECA_AppBroadcastStreamVideoHeader *self, WF_DateTime *value);
 
-/* Windows.Media.Capture.AppBroadcastStreamVideoHeader.get_RelativeTimestamp() */
 HRESULT wmeca_app_broadcast_stream_video_header_get__relative_timestamp(WMECA_AppBroadcastStreamVideoHeader *self, WF_TimeSpan *value);
 
-/* Windows.Media.Capture.AppBroadcastStreamVideoHeader.get_Duration() */
 HRESULT wmeca_app_broadcast_stream_video_header_get__duration(WMECA_AppBroadcastStreamVideoHeader *self, WF_TimeSpan *value);
 
-/* Windows.Media.Capture.AppBroadcastStreamVideoHeader.get_IsKeyFrame() */
 HRESULT wmeca_app_broadcast_stream_video_header_get__is_key_frame(WMECA_AppBroadcastStreamVideoHeader *self, BOOL *value);
 
-/* Windows.Media.Capture.AppBroadcastStreamVideoHeader.get_HasDiscontinuity() */
 HRESULT wmeca_app_broadcast_stream_video_header_get__has_discontinuity(WMECA_AppBroadcastStreamVideoHeader *self, BOOL *value);
 
-/* Windows.Media.Capture.AppBroadcastStreamVideoHeader.get_FrameId() */
 HRESULT wmeca_app_broadcast_stream_video_header_get__frame_id(WMECA_AppBroadcastStreamVideoHeader *self, uint64_t *value);
 
-/* activate Windows.Media.Capture.AppBroadcastTriggerDetails */
 HRESULT wmeca_app_broadcast_trigger_details_new(WMECA_AppBroadcastTriggerDetails **out);
 
-/* Windows.Media.Capture.AppBroadcastTriggerDetails */
-/* Windows.Media.Capture.AppBroadcastTriggerDetails.get_BackgroundService() */
 HRESULT wmeca_app_broadcast_trigger_details_get__background_service(WMECA_AppBroadcastTriggerDetails *self, WMECA_AppBroadcastBackgroundService** value);
 
-/* activate Windows.Media.Capture.AppBroadcastViewerCountChangedEventArgs */
 HRESULT wmeca_app_broadcast_viewer_count_changed_event_args_new(WMECA_AppBroadcastViewerCountChangedEventArgs **out);
 
-/* Windows.Media.Capture.AppBroadcastViewerCountChangedEventArgs */
-/* Windows.Media.Capture.AppBroadcastViewerCountChangedEventArgs.get_ViewerCount() */
 HRESULT wmeca_app_broadcast_viewer_count_changed_event_args_get__viewer_count(WMECA_AppBroadcastViewerCountChangedEventArgs *self, uint32_t *value);
 
-/* activate Windows.Media.Capture.AppCapture */
 HRESULT wmeca_app_capture_new(WMECA_AppCapture **out);
 
-/* Windows.Media.Capture.AppCapture */
-/* Windows.Media.Capture.AppCapture.get_IsCapturingAudio() */
 HRESULT wmeca_app_capture_get__is_capturing_audio(WMECA_AppCapture *self, BOOL *value);
 
-/* Windows.Media.Capture.AppCapture.get_IsCapturingVideo() */
 HRESULT wmeca_app_capture_get__is_capturing_video(WMECA_AppCapture *self, BOOL *value);
 
-/* Windows.Media.Capture.AppCapture.SetAllowedAsync(allowed) */
 HRESULT wmeca_app_capture_set_allowed_async(BOOL allowed, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.AppCapture.GetForCurrentView() */
 HRESULT wmeca_app_capture_get_for_current_view(WMECA_AppCapture** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeca_app_capture_on_capturing_changed(WMECA_AppCapture *self, cwinrt_event_fn fn, void *ctx);
 void wmeca_app_capture_off_capturing_changed(WMECA_AppCapture *self, cwinrt_token token);
 
-/* activate Windows.Media.Capture.AppCaptureAlternateShortcutKeys */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_new(WMECA_AppCaptureAlternateShortcutKeys **out);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys */
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.put_ToggleGameBarKey() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_put__toggle_game_bar_key(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKey value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.get_ToggleGameBarKey() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_get__toggle_game_bar_key(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKey *value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.put_ToggleGameBarKeyModifiers() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_put__toggle_game_bar_key_modifiers(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKeyModifiers value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.get_ToggleGameBarKeyModifiers() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_get__toggle_game_bar_key_modifiers(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKeyModifiers *value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.put_SaveHistoricalVideoKey() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_put__save_historical_video_key(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKey value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.get_SaveHistoricalVideoKey() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_get__save_historical_video_key(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKey *value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.put_SaveHistoricalVideoKeyModifiers() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_put__save_historical_video_key_modifiers(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKeyModifiers value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.get_SaveHistoricalVideoKeyModifiers() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_get__save_historical_video_key_modifiers(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKeyModifiers *value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.put_ToggleRecordingKey() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_put__toggle_recording_key(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKey value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.get_ToggleRecordingKey() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_get__toggle_recording_key(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKey *value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.put_ToggleRecordingKeyModifiers() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_put__toggle_recording_key_modifiers(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKeyModifiers value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.get_ToggleRecordingKeyModifiers() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_get__toggle_recording_key_modifiers(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKeyModifiers *value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.put_TakeScreenshotKey() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_put__take_screenshot_key(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKey value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.get_TakeScreenshotKey() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_get__take_screenshot_key(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKey *value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.put_TakeScreenshotKeyModifiers() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_put__take_screenshot_key_modifiers(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKeyModifiers value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.get_TakeScreenshotKeyModifiers() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_get__take_screenshot_key_modifiers(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKeyModifiers *value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.put_ToggleRecordingIndicatorKey() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_put__toggle_recording_indicator_key(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKey value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.get_ToggleRecordingIndicatorKey() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_get__toggle_recording_indicator_key(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKey *value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.put_ToggleRecordingIndicatorKeyModifiers() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_put__toggle_recording_indicator_key_modifiers(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKeyModifiers value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.get_ToggleRecordingIndicatorKeyModifiers() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_get__toggle_recording_indicator_key_modifiers(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKeyModifiers *value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.put_ToggleMicrophoneCaptureKey() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_put__toggle_microphone_capture_key(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKey value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.get_ToggleMicrophoneCaptureKey() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_get__toggle_microphone_capture_key(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKey *value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.put_ToggleMicrophoneCaptureKeyModifiers() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_put__toggle_microphone_capture_key_modifiers(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKeyModifiers value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.get_ToggleMicrophoneCaptureKeyModifiers() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_get__toggle_microphone_capture_key_modifiers(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKeyModifiers *value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.put_ToggleCameraCaptureKey() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_put__toggle_camera_capture_key(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKey value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.get_ToggleCameraCaptureKey() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_get__toggle_camera_capture_key(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKey *value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.put_ToggleCameraCaptureKeyModifiers() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_put__toggle_camera_capture_key_modifiers(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKeyModifiers value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.get_ToggleCameraCaptureKeyModifiers() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_get__toggle_camera_capture_key_modifiers(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKeyModifiers *value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.put_ToggleBroadcastKey() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_put__toggle_broadcast_key(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKey value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.get_ToggleBroadcastKey() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_get__toggle_broadcast_key(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKey *value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.put_ToggleBroadcastKeyModifiers() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_put__toggle_broadcast_key_modifiers(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKeyModifiers value);
 
-/* Windows.Media.Capture.AppCaptureAlternateShortcutKeys.get_ToggleBroadcastKeyModifiers() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_get__toggle_broadcast_key_modifiers(WMECA_AppCaptureAlternateShortcutKeys *self, WSY_VirtualKeyModifiers *value);
 
-/* activate Windows.Media.Capture.AppCaptureDurationGeneratedEventArgs */
 HRESULT wmeca_app_capture_duration_generated_event_args_new(WMECA_AppCaptureDurationGeneratedEventArgs **out);
 
-/* Windows.Media.Capture.AppCaptureDurationGeneratedEventArgs */
-/* Windows.Media.Capture.AppCaptureDurationGeneratedEventArgs.get_Duration() */
 HRESULT wmeca_app_capture_duration_generated_event_args_get__duration(WMECA_AppCaptureDurationGeneratedEventArgs *self, WF_TimeSpan *value);
 
-/* activate Windows.Media.Capture.AppCaptureFileGeneratedEventArgs */
 HRESULT wmeca_app_capture_file_generated_event_args_new(WMECA_AppCaptureFileGeneratedEventArgs **out);
 
-/* Windows.Media.Capture.AppCaptureFileGeneratedEventArgs */
-/* Windows.Media.Capture.AppCaptureFileGeneratedEventArgs.get_File() */
 HRESULT wmeca_app_capture_file_generated_event_args_get__file(WMECA_AppCaptureFileGeneratedEventArgs *self, WS_StorageFile** value);
 
-/* activate Windows.Media.Capture.AppCaptureManager */
 HRESULT wmeca_app_capture_manager_new(WMECA_AppCaptureManager **out);
 
-/* Windows.Media.Capture.AppCaptureManager */
-/* Windows.Media.Capture.AppCaptureManager.GetCurrentSettings() */
 HRESULT wmeca_app_capture_manager_get_current_settings(WMECA_AppCaptureSettings** out);
 
-/* Windows.Media.Capture.AppCaptureManager.ApplySettings(appCaptureSettings) */
 HRESULT wmeca_app_capture_manager_apply_settings(WMECA_AppCaptureSettings* appCaptureSettings);
 
-/* activate Windows.Media.Capture.AppCaptureMetadataWriter */
 HRESULT wmeca_app_capture_metadata_writer_new(WMECA_AppCaptureMetadataWriter **out);
 
-/* Windows.Media.Capture.AppCaptureMetadataWriter */
-/* Windows.Media.Capture.AppCaptureMetadataWriter.AddStringEvent(name, priority) */
 HRESULT wmeca_app_capture_metadata_writer_add_string_event(WMECA_AppCaptureMetadataWriter *self, cwinrt_hstring name, cwinrt_hstring value, WMECA_AppCaptureMetadataPriority priority);
 
-/* Windows.Media.Capture.AppCaptureMetadataWriter.AddInt32Event(name, priority) */
 HRESULT wmeca_app_capture_metadata_writer_add_int32_event(WMECA_AppCaptureMetadataWriter *self, cwinrt_hstring name, int32_t value, WMECA_AppCaptureMetadataPriority priority);
 
-/* Windows.Media.Capture.AppCaptureMetadataWriter.AddDoubleEvent(name, priority) */
 HRESULT wmeca_app_capture_metadata_writer_add_double_event(WMECA_AppCaptureMetadataWriter *self, cwinrt_hstring name, double value, WMECA_AppCaptureMetadataPriority priority);
 
-/* Windows.Media.Capture.AppCaptureMetadataWriter.StartStringState(name, priority) */
 HRESULT wmeca_app_capture_metadata_writer_start_string_state(WMECA_AppCaptureMetadataWriter *self, cwinrt_hstring name, cwinrt_hstring value, WMECA_AppCaptureMetadataPriority priority);
 
-/* Windows.Media.Capture.AppCaptureMetadataWriter.StartInt32State(name, priority) */
 HRESULT wmeca_app_capture_metadata_writer_start_int32_state(WMECA_AppCaptureMetadataWriter *self, cwinrt_hstring name, int32_t value, WMECA_AppCaptureMetadataPriority priority);
 
-/* Windows.Media.Capture.AppCaptureMetadataWriter.StartDoubleState(name, priority) */
 HRESULT wmeca_app_capture_metadata_writer_start_double_state(WMECA_AppCaptureMetadataWriter *self, cwinrt_hstring name, double value, WMECA_AppCaptureMetadataPriority priority);
 
-/* Windows.Media.Capture.AppCaptureMetadataWriter.StopState(name) */
 HRESULT wmeca_app_capture_metadata_writer_stop_state(WMECA_AppCaptureMetadataWriter *self, cwinrt_hstring name);
 
-/* Windows.Media.Capture.AppCaptureMetadataWriter.StopAllStates() */
 HRESULT wmeca_app_capture_metadata_writer_stop_all_states(WMECA_AppCaptureMetadataWriter *self);
 
-/* Windows.Media.Capture.AppCaptureMetadataWriter.get_RemainingStorageBytesAvailable() */
 HRESULT wmeca_app_capture_metadata_writer_get__remaining_storage_bytes_available(WMECA_AppCaptureMetadataWriter *self, uint64_t *value);
 
-/* Windows.Media.Capture.AppCaptureMetadataWriter.Close() */
 HRESULT wmeca_app_capture_metadata_writer_close(WMECA_AppCaptureMetadataWriter *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeca_app_capture_metadata_writer_on_metadata_purged(WMECA_AppCaptureMetadataWriter *self, cwinrt_event_fn fn, void *ctx);
 void wmeca_app_capture_metadata_writer_off_metadata_purged(WMECA_AppCaptureMetadataWriter *self, cwinrt_token token);
 
-/* activate Windows.Media.Capture.AppCaptureMicrophoneCaptureStateChangedEventArgs */
 HRESULT wmeca_app_capture_microphone_capture_state_changed_event_args_new(WMECA_AppCaptureMicrophoneCaptureStateChangedEventArgs **out);
 
-/* Windows.Media.Capture.AppCaptureMicrophoneCaptureStateChangedEventArgs */
-/* Windows.Media.Capture.AppCaptureMicrophoneCaptureStateChangedEventArgs.get_State() */
 HRESULT wmeca_app_capture_microphone_capture_state_changed_event_args_get__state(WMECA_AppCaptureMicrophoneCaptureStateChangedEventArgs *self, WMECA_AppCaptureMicrophoneCaptureState *value);
 
-/* Windows.Media.Capture.AppCaptureMicrophoneCaptureStateChangedEventArgs.get_ErrorCode() */
 HRESULT wmeca_app_capture_microphone_capture_state_changed_event_args_get__error_code(WMECA_AppCaptureMicrophoneCaptureStateChangedEventArgs *self, uint32_t *value);
 
-/* activate Windows.Media.Capture.AppCaptureRecordOperation */
 HRESULT wmeca_app_capture_record_operation_new(WMECA_AppCaptureRecordOperation **out);
 
-/* Windows.Media.Capture.AppCaptureRecordOperation */
-/* Windows.Media.Capture.AppCaptureRecordOperation.StopRecording() */
 HRESULT wmeca_app_capture_record_operation_stop_recording(WMECA_AppCaptureRecordOperation *self);
 
-/* Windows.Media.Capture.AppCaptureRecordOperation.get_State() */
 HRESULT wmeca_app_capture_record_operation_get__state(WMECA_AppCaptureRecordOperation *self, WMECA_AppCaptureRecordingState *value);
 
-/* Windows.Media.Capture.AppCaptureRecordOperation.get_ErrorCode() */
 HRESULT wmeca_app_capture_record_operation_get__error_code(WMECA_AppCaptureRecordOperation *self, uint32_t** value);
 
-/* Windows.Media.Capture.AppCaptureRecordOperation.get_Duration() */
 HRESULT wmeca_app_capture_record_operation_get__duration(WMECA_AppCaptureRecordOperation *self, WF_TimeSpan** value);
 
-/* Windows.Media.Capture.AppCaptureRecordOperation.get_File() */
 HRESULT wmeca_app_capture_record_operation_get__file(WMECA_AppCaptureRecordOperation *self, WS_StorageFile** value);
 
-/* Windows.Media.Capture.AppCaptureRecordOperation.get_IsFileTruncated() */
 HRESULT wmeca_app_capture_record_operation_get__is_file_truncated(WMECA_AppCaptureRecordOperation *self, BOOL** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeca_app_capture_record_operation_on_state_changed(WMECA_AppCaptureRecordOperation *self, cwinrt_event_fn fn, void *ctx);
@@ -3164,379 +2757,245 @@ void wmeca_app_capture_record_operation_off_duration_generated(WMECA_AppCaptureR
 cwinrt_token wmeca_app_capture_record_operation_on_file_generated(WMECA_AppCaptureRecordOperation *self, cwinrt_event_fn fn, void *ctx);
 void wmeca_app_capture_record_operation_off_file_generated(WMECA_AppCaptureRecordOperation *self, cwinrt_token token);
 
-/* activate Windows.Media.Capture.AppCaptureRecordingStateChangedEventArgs */
 HRESULT wmeca_app_capture_recording_state_changed_event_args_new(WMECA_AppCaptureRecordingStateChangedEventArgs **out);
 
-/* Windows.Media.Capture.AppCaptureRecordingStateChangedEventArgs */
-/* Windows.Media.Capture.AppCaptureRecordingStateChangedEventArgs.get_State() */
 HRESULT wmeca_app_capture_recording_state_changed_event_args_get__state(WMECA_AppCaptureRecordingStateChangedEventArgs *self, WMECA_AppCaptureRecordingState *value);
 
-/* Windows.Media.Capture.AppCaptureRecordingStateChangedEventArgs.get_ErrorCode() */
 HRESULT wmeca_app_capture_recording_state_changed_event_args_get__error_code(WMECA_AppCaptureRecordingStateChangedEventArgs *self, uint32_t *value);
 
-/* activate Windows.Media.Capture.GameBarServices */
 HRESULT wmeca_game_bar_services_new(WMECA_GameBarServices **out);
 
-/* Windows.Media.Capture.GameBarServices */
-/* Windows.Media.Capture.GameBarServices.get_TargetCapturePolicy() */
 HRESULT wmeca_game_bar_services_get__target_capture_policy(WMECA_GameBarServices *self, WMECA_GameBarTargetCapturePolicy *value);
 
-/* Windows.Media.Capture.GameBarServices.EnableCapture() */
 HRESULT wmeca_game_bar_services_enable_capture(WMECA_GameBarServices *self);
 
-/* Windows.Media.Capture.GameBarServices.DisableCapture() */
 HRESULT wmeca_game_bar_services_disable_capture(WMECA_GameBarServices *self);
 
-/* Windows.Media.Capture.GameBarServices.get_TargetInfo() */
 HRESULT wmeca_game_bar_services_get__target_info(WMECA_GameBarServices *self, WMECA_GameBarServicesTargetInfo** value);
 
-/* Windows.Media.Capture.GameBarServices.get_SessionId() */
 HRESULT wmeca_game_bar_services_get__session_id(WMECA_GameBarServices *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.GameBarServices.get_AppBroadcastServices() */
 HRESULT wmeca_game_bar_services_get__app_broadcast_services(WMECA_GameBarServices *self, WMECA_AppBroadcastServices** value);
 
-/* Windows.Media.Capture.GameBarServices.get_AppCaptureServices() */
 HRESULT wmeca_game_bar_services_get__app_capture_services(WMECA_GameBarServices *self, WMECA_AppCaptureServices** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeca_game_bar_services_on_command_received(WMECA_GameBarServices *self, cwinrt_event_fn fn, void *ctx);
 void wmeca_game_bar_services_off_command_received(WMECA_GameBarServices *self, cwinrt_token token);
 
-/* activate Windows.Media.Capture.GameBarServicesCommandEventArgs */
 HRESULT wmeca_game_bar_services_command_event_args_new(WMECA_GameBarServicesCommandEventArgs **out);
 
-/* Windows.Media.Capture.GameBarServicesCommandEventArgs */
-/* Windows.Media.Capture.GameBarServicesCommandEventArgs.get_Command() */
 HRESULT wmeca_game_bar_services_command_event_args_get__command(WMECA_GameBarServicesCommandEventArgs *self, WMECA_GameBarCommand *value);
 
-/* Windows.Media.Capture.GameBarServicesCommandEventArgs.get_Origin() */
 HRESULT wmeca_game_bar_services_command_event_args_get__origin(WMECA_GameBarServicesCommandEventArgs *self, WMECA_GameBarCommandOrigin *value);
 
-/* activate Windows.Media.Capture.GameBarServicesManager */
 HRESULT wmeca_game_bar_services_manager_new(WMECA_GameBarServicesManager **out);
 
-/* Windows.Media.Capture.GameBarServicesManager */
-/* Windows.Media.Capture.GameBarServicesManager.GetDefault() */
 HRESULT wmeca_game_bar_services_manager_get_default(WMECA_GameBarServicesManager** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeca_game_bar_services_manager_on_game_bar_services_created(WMECA_GameBarServicesManager *self, cwinrt_event_fn fn, void *ctx);
 void wmeca_game_bar_services_manager_off_game_bar_services_created(WMECA_GameBarServicesManager *self, cwinrt_token token);
 
-/* activate Windows.Media.Capture.GameBarServicesManagerGameBarServicesCreatedEventArgs */
 HRESULT wmeca_game_bar_services_manager_game_bar_services_created_event_args_new(WMECA_GameBarServicesManagerGameBarServicesCreatedEventArgs **out);
 
-/* Windows.Media.Capture.GameBarServicesManagerGameBarServicesCreatedEventArgs */
-/* Windows.Media.Capture.GameBarServicesManagerGameBarServicesCreatedEventArgs.get_GameBarServices() */
 HRESULT wmeca_game_bar_services_manager_game_bar_services_created_event_args_get__game_bar_services(WMECA_GameBarServicesManagerGameBarServicesCreatedEventArgs *self, WMECA_GameBarServices** value);
 
-/* activate Windows.Media.Capture.GameBarServicesTargetInfo */
 HRESULT wmeca_game_bar_services_target_info_new(WMECA_GameBarServicesTargetInfo **out);
 
-/* Windows.Media.Capture.GameBarServicesTargetInfo */
-/* Windows.Media.Capture.GameBarServicesTargetInfo.get_DisplayName() */
 HRESULT wmeca_game_bar_services_target_info_get__display_name(WMECA_GameBarServicesTargetInfo *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.GameBarServicesTargetInfo.get_AppId() */
 HRESULT wmeca_game_bar_services_target_info_get__app_id(WMECA_GameBarServicesTargetInfo *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.GameBarServicesTargetInfo.get_TitleId() */
 HRESULT wmeca_game_bar_services_target_info_get__title_id(WMECA_GameBarServicesTargetInfo *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.GameBarServicesTargetInfo.get_DisplayMode() */
 HRESULT wmeca_game_bar_services_target_info_get__display_mode(WMECA_GameBarServicesTargetInfo *self, WMECA_GameBarServicesDisplayMode *value);
 
-/* Windows.Media.Capture.IAppBroadcastManagerStatics */
-/* Windows.Media.Capture.IAppBroadcastManagerStatics.GetGlobalSettings() */
 HRESULT wmeca_app_broadcast_manager_statics_get_global_settings(WMECA_IAppBroadcastManagerStatics *self, WMECA_AppBroadcastGlobalSettings** out);
 
-/* Windows.Media.Capture.IAppBroadcastManagerStatics.ApplyGlobalSettings() */
 HRESULT wmeca_app_broadcast_manager_statics_apply_global_settings(WMECA_IAppBroadcastManagerStatics *self, WMECA_AppBroadcastGlobalSettings* value);
 
-/* Windows.Media.Capture.IAppBroadcastManagerStatics.GetProviderSettings() */
 HRESULT wmeca_app_broadcast_manager_statics_get_provider_settings(WMECA_IAppBroadcastManagerStatics *self, WMECA_AppBroadcastProviderSettings** out);
 
-/* Windows.Media.Capture.IAppBroadcastManagerStatics.ApplyProviderSettings() */
 HRESULT wmeca_app_broadcast_manager_statics_apply_provider_settings(WMECA_IAppBroadcastManagerStatics *self, WMECA_AppBroadcastProviderSettings* value);
 
-/* Windows.Media.Capture.IAppBroadcastPlugInManagerStatics */
-/* Windows.Media.Capture.IAppBroadcastPlugInManagerStatics.GetDefault() */
 HRESULT wmeca_app_broadcast_plug_in_manager_statics_get_default(WMECA_IAppBroadcastPlugInManagerStatics *self, WMECA_AppBroadcastPlugInManager** out);
 
-/* Windows.Media.Capture.IAppBroadcastPlugInManagerStatics.GetForUser(user) */
 HRESULT wmeca_app_broadcast_plug_in_manager_statics_get_for_user(WMECA_IAppBroadcastPlugInManagerStatics *self, WSY_User* user, WMECA_AppBroadcastPlugInManager** out);
 
-/* Windows.Media.Capture.IAppCaptureManagerStatics */
-/* Windows.Media.Capture.IAppCaptureManagerStatics.GetCurrentSettings() */
 HRESULT wmeca_app_capture_manager_statics_get_current_settings(WMECA_IAppCaptureManagerStatics *self, WMECA_AppCaptureSettings** out);
 
-/* Windows.Media.Capture.IAppCaptureManagerStatics.ApplySettings(appCaptureSettings) */
 HRESULT wmeca_app_capture_manager_statics_apply_settings(WMECA_IAppCaptureManagerStatics *self, WMECA_AppCaptureSettings* appCaptureSettings);
 
-/* Windows.Media.Capture.IAppCaptureStatics */
-/* Windows.Media.Capture.IAppCaptureStatics.GetForCurrentView() */
 HRESULT wmeca_app_capture_statics_get_for_current_view(WMECA_IAppCaptureStatics *self, WMECA_AppCapture** out);
 
-/* Windows.Media.Capture.IAppCaptureStatics2 */
-/* Windows.Media.Capture.IAppCaptureStatics2.SetAllowedAsync(allowed) */
 HRESULT wmeca_app_capture_statics_2_set_allowed_async(WMECA_IAppCaptureStatics_2 *self, BOOL allowed, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.ICameraOptionsUIStatics */
-/* Windows.Media.Capture.ICameraOptionsUIStatics.Show(mediaCapture) */
 HRESULT wmeca_camera_options_u_i_statics_show(WMECA_ICameraOptionsUIStatics *self, WMECA_MediaCapture* mediaCapture);
 
-/* Windows.Media.Capture.IGameBarServicesManagerStatics */
-/* Windows.Media.Capture.IGameBarServicesManagerStatics.GetDefault() */
 HRESULT wmeca_game_bar_services_manager_statics_get_default(WMECA_IGameBarServicesManagerStatics *self, WMECA_GameBarServicesManager** out);
 
-/* Windows.Media.Capture.IMediaCaptureStatics */
-/* Windows.Media.Capture.IMediaCaptureStatics.IsVideoProfileSupported(videoDeviceId) */
 HRESULT wmeca_media_capture_statics_is_video_profile_supported(WMECA_IMediaCaptureStatics *self, cwinrt_hstring videoDeviceId, BOOL *out);
 
-/* Windows.Media.Capture.IMediaCaptureStatics.FindAllVideoProfiles(videoDeviceId) */
 HRESULT wmeca_media_capture_statics_find_all_video_profiles(WMECA_IMediaCaptureStatics *self, cwinrt_hstring videoDeviceId, WFOCO_IVectorView_WMECA_MediaCaptureVideoProfile** out);
 
-/* Windows.Media.Capture.IMediaCaptureStatics.FindConcurrentProfiles(videoDeviceId) */
 HRESULT wmeca_media_capture_statics_find_concurrent_profiles(WMECA_IMediaCaptureStatics *self, cwinrt_hstring videoDeviceId, WFOCO_IVectorView_WMECA_MediaCaptureVideoProfile** out);
 
-/* Windows.Media.Capture.IMediaCaptureStatics.FindKnownVideoProfiles(videoDeviceId, name) */
 HRESULT wmeca_media_capture_statics_find_known_video_profiles(WMECA_IMediaCaptureStatics *self, cwinrt_hstring videoDeviceId, WMECA_KnownVideoProfile name, WFOCO_IVectorView_WMECA_MediaCaptureVideoProfile** out);
 
-/* activate Windows.Media.Capture.LowLagMediaRecording */
 HRESULT wmeca_low_lag_media_recording_new(WMECA_LowLagMediaRecording **out);
 
-/* Windows.Media.Capture.LowLagMediaRecording */
-/* Windows.Media.Capture.LowLagMediaRecording.StartAsync() */
 HRESULT wmeca_low_lag_media_recording_start_async(WMECA_LowLagMediaRecording *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.LowLagMediaRecording.StopAsync() */
 HRESULT wmeca_low_lag_media_recording_stop_async(WMECA_LowLagMediaRecording *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.LowLagMediaRecording.FinishAsync() */
 HRESULT wmeca_low_lag_media_recording_finish_async(WMECA_LowLagMediaRecording *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.LowLagMediaRecording.PauseAsync(behavior) */
 HRESULT wmeca_low_lag_media_recording_pause_async(WMECA_LowLagMediaRecording *self, WMEDE_MediaCapturePauseBehavior behavior, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.LowLagMediaRecording.ResumeAsync() */
 HRESULT wmeca_low_lag_media_recording_resume_async(WMECA_LowLagMediaRecording *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.LowLagMediaRecording.PauseWithResultAsync(behavior) */
 HRESULT wmeca_low_lag_media_recording_pause_with_result_async(WMECA_LowLagMediaRecording *self, WMEDE_MediaCapturePauseBehavior behavior, WF_IAsyncOperation_WMECA_MediaCapturePauseResult** out);
 
-/* Windows.Media.Capture.LowLagMediaRecording.StopWithResultAsync() */
 HRESULT wmeca_low_lag_media_recording_stop_with_result_async(WMECA_LowLagMediaRecording *self, WF_IAsyncOperation_WMECA_MediaCaptureStopResult** out);
 
-/* activate Windows.Media.Capture.LowLagPhotoCapture */
 HRESULT wmeca_low_lag_photo_capture_new(WMECA_LowLagPhotoCapture **out);
 
-/* Windows.Media.Capture.LowLagPhotoCapture */
-/* Windows.Media.Capture.LowLagPhotoCapture.CaptureAsync() */
 HRESULT wmeca_low_lag_photo_capture_capture_async(WMECA_LowLagPhotoCapture *self, WF_IAsyncOperation_WMECA_CapturedPhoto** out);
 
-/* Windows.Media.Capture.LowLagPhotoCapture.FinishAsync() */
 HRESULT wmeca_low_lag_photo_capture_finish_async(WMECA_LowLagPhotoCapture *self, WF_IAsyncAction** out);
 
-/* activate Windows.Media.Capture.LowLagPhotoSequenceCapture */
 HRESULT wmeca_low_lag_photo_sequence_capture_new(WMECA_LowLagPhotoSequenceCapture **out);
 
-/* Windows.Media.Capture.LowLagPhotoSequenceCapture */
-/* Windows.Media.Capture.LowLagPhotoSequenceCapture.StartAsync() */
 HRESULT wmeca_low_lag_photo_sequence_capture_start_async(WMECA_LowLagPhotoSequenceCapture *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.LowLagPhotoSequenceCapture.StopAsync() */
 HRESULT wmeca_low_lag_photo_sequence_capture_stop_async(WMECA_LowLagPhotoSequenceCapture *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.LowLagPhotoSequenceCapture.FinishAsync() */
 HRESULT wmeca_low_lag_photo_sequence_capture_finish_async(WMECA_LowLagPhotoSequenceCapture *self, WF_IAsyncAction** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeca_low_lag_photo_sequence_capture_on_photo_captured(WMECA_LowLagPhotoSequenceCapture *self, cwinrt_event_fn fn, void *ctx);
 void wmeca_low_lag_photo_sequence_capture_off_photo_captured(WMECA_LowLagPhotoSequenceCapture *self, cwinrt_token token);
 
-/* activate Windows.Media.Capture.MediaCapture */
 HRESULT wmeca_media_capture_new(WMECA_MediaCapture **out);
 
-/* Windows.Media.Capture.MediaCapture */
-/* Windows.Media.Capture.MediaCapture.InitializeAsync() */
 HRESULT wmeca_media_capture_initialize_async(WMECA_MediaCapture *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.MediaCapture.InitializeAsync(mediaCaptureInitializationSettings) */
 HRESULT wmeca_media_capture_initialize_async_p_p(WMECA_MediaCapture *self, WMECA_MediaCaptureInitializationSettings* mediaCaptureInitializationSettings, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.MediaCapture.StartRecordToStorageFileAsync(encodingProfile, file) */
 HRESULT wmeca_media_capture_start_record_to_storage_file_async(WMECA_MediaCapture *self, WMEME_MediaEncodingProfile* encodingProfile, WS_IStorageFile* file, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.MediaCapture.StartRecordToStreamAsync(encodingProfile, stream) */
 HRESULT wmeca_media_capture_start_record_to_stream_async(WMECA_MediaCapture *self, WMEME_MediaEncodingProfile* encodingProfile, WSTST_IRandomAccessStream* stream, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.MediaCapture.StartRecordToCustomSinkAsync(encodingProfile, customMediaSink) */
 HRESULT wmeca_media_capture_start_record_to_custom_sink_async(WMECA_MediaCapture *self, WMEME_MediaEncodingProfile* encodingProfile, WME_IMediaExtension* customMediaSink, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.MediaCapture.StartRecordToCustomSinkAsync(encodingProfile, customSinkActivationId, customSinkSettings) */
 HRESULT wmeca_media_capture_start_record_to_custom_sink_async_p_str_p_p(WMECA_MediaCapture *self, WMEME_MediaEncodingProfile* encodingProfile, cwinrt_hstring customSinkActivationId, WFOCO_IPropertySet* customSinkSettings, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.MediaCapture.StopRecordAsync() */
 HRESULT wmeca_media_capture_stop_record_async(WMECA_MediaCapture *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.MediaCapture.CapturePhotoToStorageFileAsync(file) */
 HRESULT wmeca_media_capture_capture_photo_to_storage_file_async(WMECA_MediaCapture *self, WMEME_ImageEncodingProperties* type_, WS_IStorageFile* file, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.MediaCapture.CapturePhotoToStreamAsync(stream) */
 HRESULT wmeca_media_capture_capture_photo_to_stream_async(WMECA_MediaCapture *self, WMEME_ImageEncodingProperties* type_, WSTST_IRandomAccessStream* stream, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.MediaCapture.AddEffectAsync(mediaStreamType, effectActivationID, effectSettings) */
 HRESULT wmeca_media_capture_add_effect_async(WMECA_MediaCapture *self, WMECA_MediaStreamType mediaStreamType, cwinrt_hstring effectActivationID, WFOCO_IPropertySet* effectSettings, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.MediaCapture.ClearEffectsAsync(mediaStreamType) */
 HRESULT wmeca_media_capture_clear_effects_async(WMECA_MediaCapture *self, WMECA_MediaStreamType mediaStreamType, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.MediaCapture.SetEncoderProperty(mediaStreamType, propertyId, propertyValue) */
 HRESULT wmeca_media_capture_set_encoder_property(WMECA_MediaCapture *self, WMECA_MediaStreamType mediaStreamType, GUID propertyId, IInspectable* propertyValue);
 
-/* Windows.Media.Capture.MediaCapture.GetEncoderProperty(mediaStreamType, propertyId) */
 HRESULT wmeca_media_capture_get_encoder_property(WMECA_MediaCapture *self, WMECA_MediaStreamType mediaStreamType, GUID propertyId, IInspectable** out);
 
-/* Windows.Media.Capture.MediaCapture.get_MediaCaptureSettings() */
 HRESULT wmeca_media_capture_get__media_capture_settings(WMECA_MediaCapture *self, WMECA_MediaCaptureSettings** value);
 
-/* Windows.Media.Capture.MediaCapture.get_AudioDeviceController() */
 HRESULT wmeca_media_capture_get__audio_device_controller(WMECA_MediaCapture *self, WMEDE_AudioDeviceController** value);
 
-/* Windows.Media.Capture.MediaCapture.get_VideoDeviceController() */
 HRESULT wmeca_media_capture_get__video_device_controller(WMECA_MediaCapture *self, WMEDE_VideoDeviceController** value);
 
-/* Windows.Media.Capture.MediaCapture.SetPreviewMirroring() */
 HRESULT wmeca_media_capture_set_preview_mirroring(WMECA_MediaCapture *self, BOOL value);
 
-/* Windows.Media.Capture.MediaCapture.GetPreviewMirroring() */
 HRESULT wmeca_media_capture_get_preview_mirroring(WMECA_MediaCapture *self, BOOL *out);
 
-/* Windows.Media.Capture.MediaCapture.SetPreviewRotation() */
 HRESULT wmeca_media_capture_set_preview_rotation(WMECA_MediaCapture *self, WMECA_VideoRotation value);
 
-/* Windows.Media.Capture.MediaCapture.GetPreviewRotation() */
 HRESULT wmeca_media_capture_get_preview_rotation(WMECA_MediaCapture *self, WMECA_VideoRotation *out);
 
-/* Windows.Media.Capture.MediaCapture.SetRecordRotation() */
 HRESULT wmeca_media_capture_set_record_rotation(WMECA_MediaCapture *self, WMECA_VideoRotation value);
 
-/* Windows.Media.Capture.MediaCapture.GetRecordRotation() */
 HRESULT wmeca_media_capture_get_record_rotation(WMECA_MediaCapture *self, WMECA_VideoRotation *out);
 
-/* Windows.Media.Capture.MediaCapture.StartPreviewAsync() */
 HRESULT wmeca_media_capture_start_preview_async(WMECA_MediaCapture *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.MediaCapture.StartPreviewToCustomSinkAsync(encodingProfile, customMediaSink) */
 HRESULT wmeca_media_capture_start_preview_to_custom_sink_async(WMECA_MediaCapture *self, WMEME_MediaEncodingProfile* encodingProfile, WME_IMediaExtension* customMediaSink, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.MediaCapture.StartPreviewToCustomSinkAsync(encodingProfile, customSinkActivationId, customSinkSettings) */
 HRESULT wmeca_media_capture_start_preview_to_custom_sink_async_p_str_p_p(WMECA_MediaCapture *self, WMEME_MediaEncodingProfile* encodingProfile, cwinrt_hstring customSinkActivationId, WFOCO_IPropertySet* customSinkSettings, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.MediaCapture.StopPreviewAsync() */
 HRESULT wmeca_media_capture_stop_preview_async(WMECA_MediaCapture *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.MediaCapture.PrepareLowLagRecordToStorageFileAsync(encodingProfile, file) */
 HRESULT wmeca_media_capture_prepare_low_lag_record_to_storage_file_async(WMECA_MediaCapture *self, WMEME_MediaEncodingProfile* encodingProfile, WS_IStorageFile* file, WF_IAsyncOperation_WMECA_LowLagMediaRecording** out);
 
-/* Windows.Media.Capture.MediaCapture.PrepareLowLagRecordToStreamAsync(encodingProfile, stream) */
 HRESULT wmeca_media_capture_prepare_low_lag_record_to_stream_async(WMECA_MediaCapture *self, WMEME_MediaEncodingProfile* encodingProfile, WSTST_IRandomAccessStream* stream, WF_IAsyncOperation_WMECA_LowLagMediaRecording** out);
 
-/* Windows.Media.Capture.MediaCapture.PrepareLowLagRecordToCustomSinkAsync(encodingProfile, customMediaSink) */
 HRESULT wmeca_media_capture_prepare_low_lag_record_to_custom_sink_async(WMECA_MediaCapture *self, WMEME_MediaEncodingProfile* encodingProfile, WME_IMediaExtension* customMediaSink, WF_IAsyncOperation_WMECA_LowLagMediaRecording** out);
 
-/* Windows.Media.Capture.MediaCapture.PrepareLowLagRecordToCustomSinkAsync(encodingProfile, customSinkActivationId, customSinkSettings) */
 HRESULT wmeca_media_capture_prepare_low_lag_record_to_custom_sink_async_p_str_p_p(WMECA_MediaCapture *self, WMEME_MediaEncodingProfile* encodingProfile, cwinrt_hstring customSinkActivationId, WFOCO_IPropertySet* customSinkSettings, WF_IAsyncOperation_WMECA_LowLagMediaRecording** out);
 
-/* Windows.Media.Capture.MediaCapture.PrepareLowLagPhotoCaptureAsync() */
 HRESULT wmeca_media_capture_prepare_low_lag_photo_capture_async(WMECA_MediaCapture *self, WMEME_ImageEncodingProperties* type_, WF_IAsyncOperation_WMECA_LowLagPhotoCapture** out);
 
-/* Windows.Media.Capture.MediaCapture.PrepareLowLagPhotoSequenceCaptureAsync() */
 HRESULT wmeca_media_capture_prepare_low_lag_photo_sequence_capture_async(WMECA_MediaCapture *self, WMEME_ImageEncodingProperties* type_, WF_IAsyncOperation_WMECA_LowLagPhotoSequenceCapture** out);
 
-/* Windows.Media.Capture.MediaCapture.SetEncodingPropertiesAsync(mediaStreamType, mediaEncodingProperties, encoderProperties) */
 HRESULT wmeca_media_capture_set_encoding_properties_async(WMECA_MediaCapture *self, WMECA_MediaStreamType mediaStreamType, WMEME_IMediaEncodingProperties* mediaEncodingProperties, WMEME_MediaPropertySet* encoderProperties, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.MediaCapture.Close() */
 HRESULT wmeca_media_capture_close(WMECA_MediaCapture *self);
 
-/* Windows.Media.Capture.MediaCapture.PrepareVariablePhotoSequenceCaptureAsync() */
 HRESULT wmeca_media_capture_prepare_variable_photo_sequence_capture_async(WMECA_MediaCapture *self, WMEME_ImageEncodingProperties* type_, WF_IAsyncOperation_WMECACO_VariablePhotoSequenceCapture** out);
 
-/* Windows.Media.Capture.MediaCapture.AddAudioEffectAsync(definition) */
 HRESULT wmeca_media_capture_add_audio_effect_async(WMECA_MediaCapture *self, WMEEF_IAudioEffectDefinition* definition, WF_IAsyncOperation_WME_IMediaExtension** out);
 
-/* Windows.Media.Capture.MediaCapture.AddVideoEffectAsync(definition, mediaStreamType) */
 HRESULT wmeca_media_capture_add_video_effect_async(WMECA_MediaCapture *self, WMEEF_IVideoEffectDefinition* definition, WMECA_MediaStreamType mediaStreamType, WF_IAsyncOperation_WME_IMediaExtension** out);
 
-/* Windows.Media.Capture.MediaCapture.PauseRecordAsync(behavior) */
 HRESULT wmeca_media_capture_pause_record_async(WMECA_MediaCapture *self, WMEDE_MediaCapturePauseBehavior behavior, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.MediaCapture.ResumeRecordAsync() */
 HRESULT wmeca_media_capture_resume_record_async(WMECA_MediaCapture *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.MediaCapture.get_CameraStreamState() */
 HRESULT wmeca_media_capture_get__camera_stream_state(WMECA_MediaCapture *self, WMEDE_CameraStreamState *value);
 
-/* Windows.Media.Capture.MediaCapture.GetPreviewFrameAsync() */
 HRESULT wmeca_media_capture_get_preview_frame_async(WMECA_MediaCapture *self, WF_IAsyncOperation_WME_VideoFrame** out);
 
-/* Windows.Media.Capture.MediaCapture.GetPreviewFrameAsync(destination) */
 HRESULT wmeca_media_capture_get_preview_frame_async_p_p(WMECA_MediaCapture *self, WME_VideoFrame* destination, WF_IAsyncOperation_WME_VideoFrame** out);
 
-/* Windows.Media.Capture.MediaCapture.get_ThermalStatus() */
 HRESULT wmeca_media_capture_get__thermal_status(WMECA_MediaCapture *self, WMECA_MediaCaptureThermalStatus *value);
 
-/* Windows.Media.Capture.MediaCapture.PrepareAdvancedPhotoCaptureAsync(encodingProperties) */
 HRESULT wmeca_media_capture_prepare_advanced_photo_capture_async(WMECA_MediaCapture *self, WMEME_ImageEncodingProperties* encodingProperties, WF_IAsyncOperation_WMECA_AdvancedPhotoCapture** out);
 
-/* Windows.Media.Capture.MediaCapture.RemoveEffectAsync(effect) */
 HRESULT wmeca_media_capture_remove_effect_async(WMECA_MediaCapture *self, WME_IMediaExtension* effect, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.MediaCapture.PauseRecordWithResultAsync(behavior) */
 HRESULT wmeca_media_capture_pause_record_with_result_async(WMECA_MediaCapture *self, WMEDE_MediaCapturePauseBehavior behavior, WF_IAsyncOperation_WMECA_MediaCapturePauseResult** out);
 
-/* Windows.Media.Capture.MediaCapture.StopRecordWithResultAsync() */
 HRESULT wmeca_media_capture_stop_record_with_result_async(WMECA_MediaCapture *self, WF_IAsyncOperation_WMECA_MediaCaptureStopResult** out);
 
-/* Windows.Media.Capture.MediaCapture.get_FrameSources() */
 HRESULT wmeca_media_capture_get__frame_sources(WMECA_MediaCapture *self, WFOCO_IMapView_HSTRING_WMECAFR_MediaFrameSource** value);
 
-/* Windows.Media.Capture.MediaCapture.CreateFrameReaderAsync(inputSource) */
 HRESULT wmeca_media_capture_create_frame_reader_async(WMECA_MediaCapture *self, WMECAFR_MediaFrameSource* inputSource, WF_IAsyncOperation_WMECAFR_MediaFrameReader** out);
 
-/* Windows.Media.Capture.MediaCapture.CreateFrameReaderAsync(inputSource, outputSubtype) */
 HRESULT wmeca_media_capture_create_frame_reader_async_p_str_p(WMECA_MediaCapture *self, WMECAFR_MediaFrameSource* inputSource, cwinrt_hstring outputSubtype, WF_IAsyncOperation_WMECAFR_MediaFrameReader** out);
 
-/* Windows.Media.Capture.MediaCapture.CreateFrameReaderAsync(inputSource, outputSubtype, outputSize) */
 HRESULT wmeca_media_capture_create_frame_reader_async_p_str_bitmap_size_p(WMECA_MediaCapture *self, WMECAFR_MediaFrameSource* inputSource, cwinrt_hstring outputSubtype, WGRIM_BitmapSize outputSize, WF_IAsyncOperation_WMECAFR_MediaFrameReader** out);
 
-/* Windows.Media.Capture.MediaCapture.CreateMultiSourceFrameReaderAsync(inputSources) */
 HRESULT wmeca_media_capture_create_multi_source_frame_reader_async(WMECA_MediaCapture *self, WFOCO_IIterable_WMECAFR_MediaFrameSource* inputSources, WF_IAsyncOperation_WMECAFR_MultiSourceMediaFrameReader** out);
 
-/* Windows.Media.Capture.MediaCapture.CreateRelativePanelWatcher(captureMode, displayRegion) */
 HRESULT wmeca_media_capture_create_relative_panel_watcher(WMECA_MediaCapture *self, WMECA_StreamingCaptureMode captureMode, WUIWI_DisplayRegion* displayRegion, WMECA_MediaCaptureRelativePanelWatcher** out);
 
-/* Windows.Media.Capture.MediaCapture.IsVideoProfileSupported(videoDeviceId) */
 HRESULT wmeca_media_capture_is_video_profile_supported(cwinrt_hstring videoDeviceId, BOOL *out);
 
-/* Windows.Media.Capture.MediaCapture.FindAllVideoProfiles(videoDeviceId) */
 HRESULT wmeca_media_capture_find_all_video_profiles(cwinrt_hstring videoDeviceId, WFOCO_IVectorView_WMECA_MediaCaptureVideoProfile** out);
 
-/* Windows.Media.Capture.MediaCapture.FindConcurrentProfiles(videoDeviceId) */
 HRESULT wmeca_media_capture_find_concurrent_profiles(cwinrt_hstring videoDeviceId, WFOCO_IVectorView_WMECA_MediaCaptureVideoProfile** out);
 
-/* Windows.Media.Capture.MediaCapture.FindKnownVideoProfiles(videoDeviceId, name) */
 HRESULT wmeca_media_capture_find_known_video_profiles(cwinrt_hstring videoDeviceId, WMECA_KnownVideoProfile name, WFOCO_IVectorView_WMECA_MediaCaptureVideoProfile** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeca_media_capture_on_failed(WMECA_MediaCapture *self, cwinrt_event_fn fn, void *ctx);
@@ -3560,545 +3019,353 @@ void wmeca_media_capture_off_thermal_status_changed(WMECA_MediaCapture *self, cw
 cwinrt_token wmeca_media_capture_on_capture_device_exclusive_control_status_changed(WMECA_MediaCapture *self, cwinrt_event_fn fn, void *ctx);
 void wmeca_media_capture_off_capture_device_exclusive_control_status_changed(WMECA_MediaCapture *self, cwinrt_token token);
 
-/* activate Windows.Media.Capture.MediaCaptureDeviceExclusiveControlStatusChangedEventArgs */
 HRESULT wmeca_media_capture_device_exclusive_control_status_changed_event_arg_new(WMECA_MediaCaptureDeviceExclusiveControlStatusChangedEventArgs **out);
 
-/* Windows.Media.Capture.MediaCaptureDeviceExclusiveControlStatusChangedEventArgs */
-/* Windows.Media.Capture.MediaCaptureDeviceExclusiveControlStatusChangedEventArgs.get_DeviceId() */
 HRESULT wmeca_media_capture_device_exclusive_control_status_changed_event_arg_get__device_id(WMECA_MediaCaptureDeviceExclusiveControlStatusChangedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.MediaCaptureDeviceExclusiveControlStatusChangedEventArgs.get_Status() */
 HRESULT wmeca_media_capture_device_exclusive_control_status_changed_event_arg_get__status(WMECA_MediaCaptureDeviceExclusiveControlStatusChangedEventArgs *self, WMECA_MediaCaptureDeviceExclusiveControlStatus *value);
 
-/* activate Windows.Media.Capture.MediaCaptureFailedEventArgs */
 HRESULT wmeca_media_capture_failed_event_args_new(WMECA_MediaCaptureFailedEventArgs **out);
 
-/* Windows.Media.Capture.MediaCaptureFailedEventArgs */
-/* Windows.Media.Capture.MediaCaptureFailedEventArgs.get_Message() */
 HRESULT wmeca_media_capture_failed_event_args_get__message(WMECA_MediaCaptureFailedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.MediaCaptureFailedEventArgs.get_Code() */
 HRESULT wmeca_media_capture_failed_event_args_get__code(WMECA_MediaCaptureFailedEventArgs *self, uint32_t *value);
 
-/* Windows.Media.Capture.MediaCaptureFailedEventHandler */
-/* Windows.Media.Capture.MediaCaptureFailedEventHandler.Invoke(sender, errorEventArgs) */
 HRESULT wmeca_media_capture_failed_event_handler_invoke(WMECA_MediaCaptureFailedEventHandler *self, WMECA_MediaCapture* sender, WMECA_MediaCaptureFailedEventArgs* errorEventArgs);
 
-/* activate Windows.Media.Capture.MediaCaptureFocusChangedEventArgs */
 HRESULT wmeca_media_capture_focus_changed_event_args_new(WMECA_MediaCaptureFocusChangedEventArgs **out);
 
-/* Windows.Media.Capture.MediaCaptureFocusChangedEventArgs */
-/* Windows.Media.Capture.MediaCaptureFocusChangedEventArgs.get_FocusState() */
 HRESULT wmeca_media_capture_focus_changed_event_args_get__focus_state(WMECA_MediaCaptureFocusChangedEventArgs *self, WMEDE_MediaCaptureFocusState *value);
 
-/* activate Windows.Media.Capture.MediaCaptureInitializationSettings */
 HRESULT wmeca_media_capture_initialization_settings_new(WMECA_MediaCaptureInitializationSettings **out);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings */
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.put_AudioDeviceId() */
 HRESULT wmeca_media_capture_initialization_settings_put__audio_device_id(WMECA_MediaCaptureInitializationSettings *self, cwinrt_hstring value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.get_AudioDeviceId() */
 HRESULT wmeca_media_capture_initialization_settings_get__audio_device_id(WMECA_MediaCaptureInitializationSettings *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.put_VideoDeviceId() */
 HRESULT wmeca_media_capture_initialization_settings_put__video_device_id(WMECA_MediaCaptureInitializationSettings *self, cwinrt_hstring value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.get_VideoDeviceId() */
 HRESULT wmeca_media_capture_initialization_settings_get__video_device_id(WMECA_MediaCaptureInitializationSettings *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.put_StreamingCaptureMode() */
 HRESULT wmeca_media_capture_initialization_settings_put__streaming_capture_mode(WMECA_MediaCaptureInitializationSettings *self, WMECA_StreamingCaptureMode value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.get_StreamingCaptureMode() */
 HRESULT wmeca_media_capture_initialization_settings_get__streaming_capture_mode(WMECA_MediaCaptureInitializationSettings *self, WMECA_StreamingCaptureMode *value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.put_PhotoCaptureSource() */
 HRESULT wmeca_media_capture_initialization_settings_put__photo_capture_source(WMECA_MediaCaptureInitializationSettings *self, WMECA_PhotoCaptureSource value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.get_PhotoCaptureSource() */
 HRESULT wmeca_media_capture_initialization_settings_get__photo_capture_source(WMECA_MediaCaptureInitializationSettings *self, WMECA_PhotoCaptureSource *value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.put_MediaCategory() */
 HRESULT wmeca_media_capture_initialization_settings_put__media_category(WMECA_MediaCaptureInitializationSettings *self, WMECA_MediaCategory value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.get_MediaCategory() */
 HRESULT wmeca_media_capture_initialization_settings_get__media_category(WMECA_MediaCaptureInitializationSettings *self, WMECA_MediaCategory *value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.put_AudioProcessing() */
 HRESULT wmeca_media_capture_initialization_settings_put__audio_processing(WMECA_MediaCaptureInitializationSettings *self, WME_AudioProcessing value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.get_AudioProcessing() */
 HRESULT wmeca_media_capture_initialization_settings_get__audio_processing(WMECA_MediaCaptureInitializationSettings *self, WME_AudioProcessing *value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.put_AudioSource() */
 HRESULT wmeca_media_capture_initialization_settings_put__audio_source(WMECA_MediaCaptureInitializationSettings *self, WMECO_IMediaSource* value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.get_AudioSource() */
 HRESULT wmeca_media_capture_initialization_settings_get__audio_source(WMECA_MediaCaptureInitializationSettings *self, WMECO_IMediaSource** value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.put_VideoSource() */
 HRESULT wmeca_media_capture_initialization_settings_put__video_source(WMECA_MediaCaptureInitializationSettings *self, WMECO_IMediaSource* value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.get_VideoSource() */
 HRESULT wmeca_media_capture_initialization_settings_get__video_source(WMECA_MediaCaptureInitializationSettings *self, WMECO_IMediaSource** value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.get_VideoProfile() */
 HRESULT wmeca_media_capture_initialization_settings_get__video_profile(WMECA_MediaCaptureInitializationSettings *self, WMECA_MediaCaptureVideoProfile** value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.put_VideoProfile() */
 HRESULT wmeca_media_capture_initialization_settings_put__video_profile(WMECA_MediaCaptureInitializationSettings *self, WMECA_MediaCaptureVideoProfile* value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.get_PreviewMediaDescription() */
 HRESULT wmeca_media_capture_initialization_settings_get__preview_media_description(WMECA_MediaCaptureInitializationSettings *self, WMECA_MediaCaptureVideoProfileMediaDescription** value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.put_PreviewMediaDescription() */
 HRESULT wmeca_media_capture_initialization_settings_put__preview_media_description(WMECA_MediaCaptureInitializationSettings *self, WMECA_MediaCaptureVideoProfileMediaDescription* value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.get_RecordMediaDescription() */
 HRESULT wmeca_media_capture_initialization_settings_get__record_media_description(WMECA_MediaCaptureInitializationSettings *self, WMECA_MediaCaptureVideoProfileMediaDescription** value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.put_RecordMediaDescription() */
 HRESULT wmeca_media_capture_initialization_settings_put__record_media_description(WMECA_MediaCaptureInitializationSettings *self, WMECA_MediaCaptureVideoProfileMediaDescription* value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.get_PhotoMediaDescription() */
 HRESULT wmeca_media_capture_initialization_settings_get__photo_media_description(WMECA_MediaCaptureInitializationSettings *self, WMECA_MediaCaptureVideoProfileMediaDescription** value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.put_PhotoMediaDescription() */
 HRESULT wmeca_media_capture_initialization_settings_put__photo_media_description(WMECA_MediaCaptureInitializationSettings *self, WMECA_MediaCaptureVideoProfileMediaDescription* value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.get_SourceGroup() */
 HRESULT wmeca_media_capture_initialization_settings_get__source_group(WMECA_MediaCaptureInitializationSettings *self, WMECAFR_MediaFrameSourceGroup** value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.put_SourceGroup() */
 HRESULT wmeca_media_capture_initialization_settings_put__source_group(WMECA_MediaCaptureInitializationSettings *self, WMECAFR_MediaFrameSourceGroup* value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.get_SharingMode() */
 HRESULT wmeca_media_capture_initialization_settings_get__sharing_mode(WMECA_MediaCaptureInitializationSettings *self, WMECA_MediaCaptureSharingMode *value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.put_SharingMode() */
 HRESULT wmeca_media_capture_initialization_settings_put__sharing_mode(WMECA_MediaCaptureInitializationSettings *self, WMECA_MediaCaptureSharingMode value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.get_MemoryPreference() */
 HRESULT wmeca_media_capture_initialization_settings_get__memory_preference(WMECA_MediaCaptureInitializationSettings *self, WMECA_MediaCaptureMemoryPreference *value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.put_MemoryPreference() */
 HRESULT wmeca_media_capture_initialization_settings_put__memory_preference(WMECA_MediaCaptureInitializationSettings *self, WMECA_MediaCaptureMemoryPreference value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.get_AlwaysPlaySystemShutterSound() */
 HRESULT wmeca_media_capture_initialization_settings_get__always_play_system_shutter_sound(WMECA_MediaCaptureInitializationSettings *self, BOOL *value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.put_AlwaysPlaySystemShutterSound() */
 HRESULT wmeca_media_capture_initialization_settings_put__always_play_system_shutter_sound(WMECA_MediaCaptureInitializationSettings *self, BOOL value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.get_DeviceUriPasswordCredential() */
 HRESULT wmeca_media_capture_initialization_settings_get__device_uri_password_credential(WMECA_MediaCaptureInitializationSettings *self, WSECR_PasswordCredential** value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.put_DeviceUriPasswordCredential() */
 HRESULT wmeca_media_capture_initialization_settings_put__device_uri_password_credential(WMECA_MediaCaptureInitializationSettings *self, WSECR_PasswordCredential* value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.get_DeviceUri() */
 HRESULT wmeca_media_capture_initialization_settings_get__device_uri(WMECA_MediaCaptureInitializationSettings *self, WF_Uri** value);
 
-/* Windows.Media.Capture.MediaCaptureInitializationSettings.put_DeviceUri() */
 HRESULT wmeca_media_capture_initialization_settings_put__device_uri(WMECA_MediaCaptureInitializationSettings *self, WF_Uri* value);
 
-/* activate Windows.Media.Capture.MediaCapturePauseResult */
 HRESULT wmeca_media_capture_pause_result_new(WMECA_MediaCapturePauseResult **out);
 
-/* Windows.Media.Capture.MediaCapturePauseResult */
-/* Windows.Media.Capture.MediaCapturePauseResult.get_LastFrame() */
 HRESULT wmeca_media_capture_pause_result_get__last_frame(WMECA_MediaCapturePauseResult *self, WME_VideoFrame** value);
 
-/* Windows.Media.Capture.MediaCapturePauseResult.get_RecordDuration() */
 HRESULT wmeca_media_capture_pause_result_get__record_duration(WMECA_MediaCapturePauseResult *self, WF_TimeSpan *value);
 
-/* Windows.Media.Capture.MediaCapturePauseResult.Close() */
 HRESULT wmeca_media_capture_pause_result_close(WMECA_MediaCapturePauseResult *self);
 
-/* activate Windows.Media.Capture.MediaCaptureRelativePanelWatcher */
 HRESULT wmeca_media_capture_relative_panel_watcher_new(WMECA_MediaCaptureRelativePanelWatcher **out);
 
-/* Windows.Media.Capture.MediaCaptureRelativePanelWatcher */
-/* Windows.Media.Capture.MediaCaptureRelativePanelWatcher.get_RelativePanel() */
 HRESULT wmeca_media_capture_relative_panel_watcher_get__relative_panel(WMECA_MediaCaptureRelativePanelWatcher *self, WDEEN_Panel *value);
 
-/* Windows.Media.Capture.MediaCaptureRelativePanelWatcher.Start() */
 HRESULT wmeca_media_capture_relative_panel_watcher_start(WMECA_MediaCaptureRelativePanelWatcher *self);
 
-/* Windows.Media.Capture.MediaCaptureRelativePanelWatcher.Stop() */
 HRESULT wmeca_media_capture_relative_panel_watcher_stop(WMECA_MediaCaptureRelativePanelWatcher *self);
 
-/* Windows.Media.Capture.MediaCaptureRelativePanelWatcher.Close() */
 HRESULT wmeca_media_capture_relative_panel_watcher_close(WMECA_MediaCaptureRelativePanelWatcher *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeca_media_capture_relative_panel_watcher_on_changed(WMECA_MediaCaptureRelativePanelWatcher *self, cwinrt_event_fn fn, void *ctx);
 void wmeca_media_capture_relative_panel_watcher_off_changed(WMECA_MediaCaptureRelativePanelWatcher *self, cwinrt_token token);
 
-/* activate Windows.Media.Capture.MediaCaptureSettings */
 HRESULT wmeca_media_capture_settings_new(WMECA_MediaCaptureSettings **out);
 
-/* Windows.Media.Capture.MediaCaptureSettings */
-/* Windows.Media.Capture.MediaCaptureSettings.get_AudioDeviceId() */
 HRESULT wmeca_media_capture_settings_get__audio_device_id(WMECA_MediaCaptureSettings *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.MediaCaptureSettings.get_VideoDeviceId() */
 HRESULT wmeca_media_capture_settings_get__video_device_id(WMECA_MediaCaptureSettings *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.MediaCaptureSettings.get_StreamingCaptureMode() */
 HRESULT wmeca_media_capture_settings_get__streaming_capture_mode(WMECA_MediaCaptureSettings *self, WMECA_StreamingCaptureMode *value);
 
-/* Windows.Media.Capture.MediaCaptureSettings.get_PhotoCaptureSource() */
 HRESULT wmeca_media_capture_settings_get__photo_capture_source(WMECA_MediaCaptureSettings *self, WMECA_PhotoCaptureSource *value);
 
-/* Windows.Media.Capture.MediaCaptureSettings.get_VideoDeviceCharacteristic() */
 HRESULT wmeca_media_capture_settings_get__video_device_characteristic(WMECA_MediaCaptureSettings *self, WMECA_VideoDeviceCharacteristic *value);
 
-/* Windows.Media.Capture.MediaCaptureSettings.get_ConcurrentRecordAndPhotoSupported() */
 HRESULT wmeca_media_capture_settings_get__concurrent_record_and_photo_supported(WMECA_MediaCaptureSettings *self, BOOL *value);
 
-/* Windows.Media.Capture.MediaCaptureSettings.get_ConcurrentRecordAndPhotoSequenceSupported() */
 HRESULT wmeca_media_capture_settings_get__concurrent_record_and_photo_sequence_supported(WMECA_MediaCaptureSettings *self, BOOL *value);
 
-/* Windows.Media.Capture.MediaCaptureSettings.get_CameraSoundRequiredForRegion() */
 HRESULT wmeca_media_capture_settings_get__camera_sound_required_for_region(WMECA_MediaCaptureSettings *self, BOOL *value);
 
-/* Windows.Media.Capture.MediaCaptureSettings.get_Horizontal35mmEquivalentFocalLength() */
 HRESULT wmeca_media_capture_settings_get__horizontal35mm_equivalent_focal_length(WMECA_MediaCaptureSettings *self, uint32_t** value);
 
-/* Windows.Media.Capture.MediaCaptureSettings.get_PitchOffsetDegrees() */
 HRESULT wmeca_media_capture_settings_get__pitch_offset_degrees(WMECA_MediaCaptureSettings *self, int32_t** value);
 
-/* Windows.Media.Capture.MediaCaptureSettings.get_Vertical35mmEquivalentFocalLength() */
 HRESULT wmeca_media_capture_settings_get__vertical35mm_equivalent_focal_length(WMECA_MediaCaptureSettings *self, uint32_t** value);
 
-/* Windows.Media.Capture.MediaCaptureSettings.get_MediaCategory() */
 HRESULT wmeca_media_capture_settings_get__media_category(WMECA_MediaCaptureSettings *self, WMECA_MediaCategory *value);
 
-/* Windows.Media.Capture.MediaCaptureSettings.get_AudioProcessing() */
 HRESULT wmeca_media_capture_settings_get__audio_processing(WMECA_MediaCaptureSettings *self, WME_AudioProcessing *value);
 
-/* Windows.Media.Capture.MediaCaptureSettings.get_Direct3D11Device() */
 HRESULT wmeca_media_capture_settings_get__direct3_d11_device(WMECA_MediaCaptureSettings *self, WGRDIDI_IDirect3DDevice** value);
 
-/* activate Windows.Media.Capture.MediaCaptureStopResult */
 HRESULT wmeca_media_capture_stop_result_new(WMECA_MediaCaptureStopResult **out);
 
-/* Windows.Media.Capture.MediaCaptureStopResult */
-/* Windows.Media.Capture.MediaCaptureStopResult.get_LastFrame() */
 HRESULT wmeca_media_capture_stop_result_get__last_frame(WMECA_MediaCaptureStopResult *self, WME_VideoFrame** value);
 
-/* Windows.Media.Capture.MediaCaptureStopResult.get_RecordDuration() */
 HRESULT wmeca_media_capture_stop_result_get__record_duration(WMECA_MediaCaptureStopResult *self, WF_TimeSpan *value);
 
-/* Windows.Media.Capture.MediaCaptureStopResult.Close() */
 HRESULT wmeca_media_capture_stop_result_close(WMECA_MediaCaptureStopResult *self);
 
-/* activate Windows.Media.Capture.MediaCaptureVideoProfile */
 HRESULT wmeca_media_capture_video_profile_new(WMECA_MediaCaptureVideoProfile **out);
 
-/* Windows.Media.Capture.MediaCaptureVideoProfile */
-/* Windows.Media.Capture.MediaCaptureVideoProfile.get_Id() */
 HRESULT wmeca_media_capture_video_profile_get__id(WMECA_MediaCaptureVideoProfile *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.MediaCaptureVideoProfile.get_VideoDeviceId() */
 HRESULT wmeca_media_capture_video_profile_get__video_device_id(WMECA_MediaCaptureVideoProfile *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.MediaCaptureVideoProfile.get_SupportedPreviewMediaDescription() */
 HRESULT wmeca_media_capture_video_profile_get__supported_preview_media_description(WMECA_MediaCaptureVideoProfile *self, WFOCO_IVectorView_WMECA_MediaCaptureVideoProfileMediaDescription** value);
 
-/* Windows.Media.Capture.MediaCaptureVideoProfile.get_SupportedRecordMediaDescription() */
 HRESULT wmeca_media_capture_video_profile_get__supported_record_media_description(WMECA_MediaCaptureVideoProfile *self, WFOCO_IVectorView_WMECA_MediaCaptureVideoProfileMediaDescription** value);
 
-/* Windows.Media.Capture.MediaCaptureVideoProfile.get_SupportedPhotoMediaDescription() */
 HRESULT wmeca_media_capture_video_profile_get__supported_photo_media_description(WMECA_MediaCaptureVideoProfile *self, WFOCO_IVectorView_WMECA_MediaCaptureVideoProfileMediaDescription** value);
 
-/* Windows.Media.Capture.MediaCaptureVideoProfile.GetConcurrency() */
 HRESULT wmeca_media_capture_video_profile_get_concurrency(WMECA_MediaCaptureVideoProfile *self, WFOCO_IVectorView_WMECA_MediaCaptureVideoProfile** out);
 
-/* Windows.Media.Capture.MediaCaptureVideoProfile.get_FrameSourceInfos() */
 HRESULT wmeca_media_capture_video_profile_get__frame_source_infos(WMECA_MediaCaptureVideoProfile *self, WFOCO_IVectorView_WMECAFR_MediaFrameSourceInfo** value);
 
-/* Windows.Media.Capture.MediaCaptureVideoProfile.get_Properties() */
 HRESULT wmeca_media_capture_video_profile_get__properties(WMECA_MediaCaptureVideoProfile *self, WFOCO_IMapView_Guid_Object** value);
 
-/* activate Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription */
 HRESULT wmeca_media_capture_video_profile_media_description_new(WMECA_MediaCaptureVideoProfileMediaDescription **out);
 
-/* Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription */
-/* Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription.get_Width() */
 HRESULT wmeca_media_capture_video_profile_media_description_get__width(WMECA_MediaCaptureVideoProfileMediaDescription *self, uint32_t *value);
 
-/* Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription.get_Height() */
 HRESULT wmeca_media_capture_video_profile_media_description_get__height(WMECA_MediaCaptureVideoProfileMediaDescription *self, uint32_t *value);
 
-/* Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription.get_FrameRate() */
 HRESULT wmeca_media_capture_video_profile_media_description_get__frame_rate(WMECA_MediaCaptureVideoProfileMediaDescription *self, double *value);
 
-/* Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription.get_IsVariablePhotoSequenceSupported() */
 HRESULT wmeca_media_capture_video_profile_media_description_get__is_variable_photo_sequence_supported(WMECA_MediaCaptureVideoProfileMediaDescription *self, BOOL *value);
 
-/* Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription.get_IsHdrVideoSupported() */
 HRESULT wmeca_media_capture_video_profile_media_description_get__is_hdr_video_supported(WMECA_MediaCaptureVideoProfileMediaDescription *self, BOOL *value);
 
-/* Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription.get_Subtype() */
 HRESULT wmeca_media_capture_video_profile_media_description_get__subtype(WMECA_MediaCaptureVideoProfileMediaDescription *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription.get_Properties() */
 HRESULT wmeca_media_capture_video_profile_media_description_get__properties(WMECA_MediaCaptureVideoProfileMediaDescription *self, WFOCO_IMapView_Guid_Object** value);
 
-/* activate Windows.Media.Capture.OptionalReferencePhotoCapturedEventArgs */
 HRESULT wmeca_optional_reference_photo_captured_event_args_new(WMECA_OptionalReferencePhotoCapturedEventArgs **out);
 
-/* Windows.Media.Capture.OptionalReferencePhotoCapturedEventArgs */
-/* Windows.Media.Capture.OptionalReferencePhotoCapturedEventArgs.get_Frame() */
 HRESULT wmeca_optional_reference_photo_captured_event_args_get__frame(WMECA_OptionalReferencePhotoCapturedEventArgs *self, WMECA_CapturedFrame** value);
 
-/* Windows.Media.Capture.OptionalReferencePhotoCapturedEventArgs.get_Context() */
 HRESULT wmeca_optional_reference_photo_captured_event_args_get__context(WMECA_OptionalReferencePhotoCapturedEventArgs *self, IInspectable** value);
 
-/* activate Windows.Media.Capture.PhotoCapturedEventArgs */
 HRESULT wmeca_photo_captured_event_args_new(WMECA_PhotoCapturedEventArgs **out);
 
-/* Windows.Media.Capture.PhotoCapturedEventArgs */
-/* Windows.Media.Capture.PhotoCapturedEventArgs.get_Frame() */
 HRESULT wmeca_photo_captured_event_args_get__frame(WMECA_PhotoCapturedEventArgs *self, WMECA_CapturedFrame** value);
 
-/* Windows.Media.Capture.PhotoCapturedEventArgs.get_Thumbnail() */
 HRESULT wmeca_photo_captured_event_args_get__thumbnail(WMECA_PhotoCapturedEventArgs *self, WMECA_CapturedFrame** value);
 
-/* Windows.Media.Capture.PhotoCapturedEventArgs.get_CaptureTimeOffset() */
 HRESULT wmeca_photo_captured_event_args_get__capture_time_offset(WMECA_PhotoCapturedEventArgs *self, WF_TimeSpan *value);
 
-/* activate Windows.Media.Capture.PhotoConfirmationCapturedEventArgs */
 HRESULT wmeca_photo_confirmation_captured_event_args_new(WMECA_PhotoConfirmationCapturedEventArgs **out);
 
-/* Windows.Media.Capture.PhotoConfirmationCapturedEventArgs */
-/* Windows.Media.Capture.PhotoConfirmationCapturedEventArgs.get_Frame() */
 HRESULT wmeca_photo_confirmation_captured_event_args_get__frame(WMECA_PhotoConfirmationCapturedEventArgs *self, WMECA_CapturedFrame** value);
 
-/* Windows.Media.Capture.PhotoConfirmationCapturedEventArgs.get_CaptureTimeOffset() */
 HRESULT wmeca_photo_confirmation_captured_event_args_get__capture_time_offset(WMECA_PhotoConfirmationCapturedEventArgs *self, WF_TimeSpan *value);
 
-/* Windows.Media.Capture.RecordLimitationExceededEventHandler */
-/* Windows.Media.Capture.RecordLimitationExceededEventHandler.Invoke(sender) */
 HRESULT wmeca_record_limitation_exceeded_event_handler_invoke(WMECA_RecordLimitationExceededEventHandler *self, WMECA_MediaCapture* sender);
 
-/* activate Windows.Media.Capture.VideoStreamConfiguration */
 HRESULT wmeca_video_stream_configuration_new(WMECA_VideoStreamConfiguration **out);
 
-/* Windows.Media.Capture.VideoStreamConfiguration */
-/* Windows.Media.Capture.VideoStreamConfiguration.get_InputProperties() */
 HRESULT wmeca_video_stream_configuration_get__input_properties(WMECA_VideoStreamConfiguration *self, WMEME_VideoEncodingProperties** value);
 
-/* Windows.Media.Capture.VideoStreamConfiguration.get_OutputProperties() */
 HRESULT wmeca_video_stream_configuration_get__output_properties(WMECA_VideoStreamConfiguration *self, WMEME_VideoEncodingProperties** value);
 
-/* activate Windows.Media.Capture.AppCaptureServices */
 HRESULT wmeca_app_capture_services_new(WMECA_AppCaptureServices **out);
 
-/* Windows.Media.Capture.AppCaptureServices */
-/* Windows.Media.Capture.AppCaptureServices.Record() */
 HRESULT wmeca_app_capture_services_record(WMECA_AppCaptureServices *self, WMECA_AppCaptureRecordOperation** out);
 
-/* Windows.Media.Capture.AppCaptureServices.RecordTimeSpan(startTime, duration) */
 HRESULT wmeca_app_capture_services_record_time_span(WMECA_AppCaptureServices *self, WF_DateTime startTime, WF_TimeSpan duration, WMECA_AppCaptureRecordOperation** out);
 
-/* Windows.Media.Capture.AppCaptureServices.get_CanCapture() */
 HRESULT wmeca_app_capture_services_get__can_capture(WMECA_AppCaptureServices *self, BOOL *value);
 
-/* Windows.Media.Capture.AppCaptureServices.get_State() */
 HRESULT wmeca_app_capture_services_get__state(WMECA_AppCaptureServices *self, WMECA_AppCaptureState** value);
 
-/* activate Windows.Media.Capture.AppCaptureSettings */
 HRESULT wmeca_app_capture_settings_new(WMECA_AppCaptureSettings **out);
 
-/* Windows.Media.Capture.AppCaptureSettings */
-/* Windows.Media.Capture.AppCaptureSettings.put_AppCaptureDestinationFolder() */
 HRESULT wmeca_app_capture_settings_put__app_capture_destination_folder(WMECA_AppCaptureSettings *self, WS_StorageFolder* value);
 
-/* Windows.Media.Capture.AppCaptureSettings.get_AppCaptureDestinationFolder() */
 HRESULT wmeca_app_capture_settings_get__app_capture_destination_folder(WMECA_AppCaptureSettings *self, WS_StorageFolder** value);
 
-/* Windows.Media.Capture.AppCaptureSettings.put_AudioEncodingBitrate() */
 HRESULT wmeca_app_capture_settings_put__audio_encoding_bitrate(WMECA_AppCaptureSettings *self, uint32_t value);
 
-/* Windows.Media.Capture.AppCaptureSettings.get_AudioEncodingBitrate() */
 HRESULT wmeca_app_capture_settings_get__audio_encoding_bitrate(WMECA_AppCaptureSettings *self, uint32_t *value);
 
-/* Windows.Media.Capture.AppCaptureSettings.put_IsAudioCaptureEnabled() */
 HRESULT wmeca_app_capture_settings_put__is_audio_capture_enabled(WMECA_AppCaptureSettings *self, BOOL value);
 
-/* Windows.Media.Capture.AppCaptureSettings.get_IsAudioCaptureEnabled() */
 HRESULT wmeca_app_capture_settings_get__is_audio_capture_enabled(WMECA_AppCaptureSettings *self, BOOL *value);
 
-/* Windows.Media.Capture.AppCaptureSettings.put_CustomVideoEncodingBitrate() */
 HRESULT wmeca_app_capture_settings_put__custom_video_encoding_bitrate(WMECA_AppCaptureSettings *self, uint32_t value);
 
-/* Windows.Media.Capture.AppCaptureSettings.get_CustomVideoEncodingBitrate() */
 HRESULT wmeca_app_capture_settings_get__custom_video_encoding_bitrate(WMECA_AppCaptureSettings *self, uint32_t *value);
 
-/* Windows.Media.Capture.AppCaptureSettings.put_CustomVideoEncodingHeight() */
 HRESULT wmeca_app_capture_settings_put__custom_video_encoding_height(WMECA_AppCaptureSettings *self, uint32_t value);
 
-/* Windows.Media.Capture.AppCaptureSettings.get_CustomVideoEncodingHeight() */
 HRESULT wmeca_app_capture_settings_get__custom_video_encoding_height(WMECA_AppCaptureSettings *self, uint32_t *value);
 
-/* Windows.Media.Capture.AppCaptureSettings.put_CustomVideoEncodingWidth() */
 HRESULT wmeca_app_capture_settings_put__custom_video_encoding_width(WMECA_AppCaptureSettings *self, uint32_t value);
 
-/* Windows.Media.Capture.AppCaptureSettings.get_CustomVideoEncodingWidth() */
 HRESULT wmeca_app_capture_settings_get__custom_video_encoding_width(WMECA_AppCaptureSettings *self, uint32_t *value);
 
-/* Windows.Media.Capture.AppCaptureSettings.put_HistoricalBufferLength() */
 HRESULT wmeca_app_capture_settings_put__historical_buffer_length(WMECA_AppCaptureSettings *self, uint32_t value);
 
-/* Windows.Media.Capture.AppCaptureSettings.get_HistoricalBufferLength() */
 HRESULT wmeca_app_capture_settings_get__historical_buffer_length(WMECA_AppCaptureSettings *self, uint32_t *value);
 
-/* Windows.Media.Capture.AppCaptureSettings.put_HistoricalBufferLengthUnit() */
 HRESULT wmeca_app_capture_settings_put__historical_buffer_length_unit(WMECA_AppCaptureSettings *self, WMECA_AppCaptureHistoricalBufferLengthUnit value);
 
-/* Windows.Media.Capture.AppCaptureSettings.get_HistoricalBufferLengthUnit() */
 HRESULT wmeca_app_capture_settings_get__historical_buffer_length_unit(WMECA_AppCaptureSettings *self, WMECA_AppCaptureHistoricalBufferLengthUnit *value);
 
-/* Windows.Media.Capture.AppCaptureSettings.put_IsHistoricalCaptureEnabled() */
 HRESULT wmeca_app_capture_settings_put__is_historical_capture_enabled(WMECA_AppCaptureSettings *self, BOOL value);
 
-/* Windows.Media.Capture.AppCaptureSettings.get_IsHistoricalCaptureEnabled() */
 HRESULT wmeca_app_capture_settings_get__is_historical_capture_enabled(WMECA_AppCaptureSettings *self, BOOL *value);
 
-/* Windows.Media.Capture.AppCaptureSettings.put_IsHistoricalCaptureOnBatteryAllowed() */
 HRESULT wmeca_app_capture_settings_put__is_historical_capture_on_battery_allowed(WMECA_AppCaptureSettings *self, BOOL value);
 
-/* Windows.Media.Capture.AppCaptureSettings.get_IsHistoricalCaptureOnBatteryAllowed() */
 HRESULT wmeca_app_capture_settings_get__is_historical_capture_on_battery_allowed(WMECA_AppCaptureSettings *self, BOOL *value);
 
-/* Windows.Media.Capture.AppCaptureSettings.put_IsHistoricalCaptureOnWirelessDisplayAllowed() */
 HRESULT wmeca_app_capture_settings_put__is_historical_capture_on_wireless_display_allowed(WMECA_AppCaptureSettings *self, BOOL value);
 
-/* Windows.Media.Capture.AppCaptureSettings.get_IsHistoricalCaptureOnWirelessDisplayAllowed() */
 HRESULT wmeca_app_capture_settings_get__is_historical_capture_on_wireless_display_allowed(WMECA_AppCaptureSettings *self, BOOL *value);
 
-/* Windows.Media.Capture.AppCaptureSettings.put_MaximumRecordLength() */
 HRESULT wmeca_app_capture_settings_put__maximum_record_length(WMECA_AppCaptureSettings *self, WF_TimeSpan value);
 
-/* Windows.Media.Capture.AppCaptureSettings.get_MaximumRecordLength() */
 HRESULT wmeca_app_capture_settings_get__maximum_record_length(WMECA_AppCaptureSettings *self, WF_TimeSpan *value);
 
-/* Windows.Media.Capture.AppCaptureSettings.put_ScreenshotDestinationFolder() */
 HRESULT wmeca_app_capture_settings_put__screenshot_destination_folder(WMECA_AppCaptureSettings *self, WS_StorageFolder* value);
 
-/* Windows.Media.Capture.AppCaptureSettings.get_ScreenshotDestinationFolder() */
 HRESULT wmeca_app_capture_settings_get__screenshot_destination_folder(WMECA_AppCaptureSettings *self, WS_StorageFolder** value);
 
-/* Windows.Media.Capture.AppCaptureSettings.put_VideoEncodingBitrateMode() */
 HRESULT wmeca_app_capture_settings_put__video_encoding_bitrate_mode(WMECA_AppCaptureSettings *self, WMECA_AppCaptureVideoEncodingBitrateMode value);
 
-/* Windows.Media.Capture.AppCaptureSettings.get_VideoEncodingBitrateMode() */
 HRESULT wmeca_app_capture_settings_get__video_encoding_bitrate_mode(WMECA_AppCaptureSettings *self, WMECA_AppCaptureVideoEncodingBitrateMode *value);
 
-/* Windows.Media.Capture.AppCaptureSettings.put_VideoEncodingResolutionMode() */
 HRESULT wmeca_app_capture_settings_put__video_encoding_resolution_mode(WMECA_AppCaptureSettings *self, WMECA_AppCaptureVideoEncodingResolutionMode value);
 
-/* Windows.Media.Capture.AppCaptureSettings.get_VideoEncodingResolutionMode() */
 HRESULT wmeca_app_capture_settings_get__video_encoding_resolution_mode(WMECA_AppCaptureSettings *self, WMECA_AppCaptureVideoEncodingResolutionMode *value);
 
-/* Windows.Media.Capture.AppCaptureSettings.put_IsAppCaptureEnabled() */
 HRESULT wmeca_app_capture_settings_put__is_app_capture_enabled(WMECA_AppCaptureSettings *self, BOOL value);
 
-/* Windows.Media.Capture.AppCaptureSettings.get_IsAppCaptureEnabled() */
 HRESULT wmeca_app_capture_settings_get__is_app_capture_enabled(WMECA_AppCaptureSettings *self, BOOL *value);
 
-/* Windows.Media.Capture.AppCaptureSettings.get_IsCpuConstrained() */
 HRESULT wmeca_app_capture_settings_get__is_cpu_constrained(WMECA_AppCaptureSettings *self, BOOL *value);
 
-/* Windows.Media.Capture.AppCaptureSettings.get_IsDisabledByPolicy() */
 HRESULT wmeca_app_capture_settings_get__is_disabled_by_policy(WMECA_AppCaptureSettings *self, BOOL *value);
 
-/* Windows.Media.Capture.AppCaptureSettings.get_IsMemoryConstrained() */
 HRESULT wmeca_app_capture_settings_get__is_memory_constrained(WMECA_AppCaptureSettings *self, BOOL *value);
 
-/* Windows.Media.Capture.AppCaptureSettings.get_HasHardwareEncoder() */
 HRESULT wmeca_app_capture_settings_get__has_hardware_encoder(WMECA_AppCaptureSettings *self, BOOL *value);
 
-/* Windows.Media.Capture.AppCaptureSettings.get_IsGpuConstrained() */
 HRESULT wmeca_app_capture_settings_get__is_gpu_constrained(WMECA_AppCaptureSettings *self, BOOL *value);
 
-/* Windows.Media.Capture.AppCaptureSettings.get_AlternateShortcutKeys() */
 HRESULT wmeca_app_capture_settings_get__alternate_shortcut_keys(WMECA_AppCaptureSettings *self, WMECA_AppCaptureAlternateShortcutKeys** value);
 
-/* Windows.Media.Capture.AppCaptureSettings.put_IsMicrophoneCaptureEnabled() */
 HRESULT wmeca_app_capture_settings_put__is_microphone_capture_enabled(WMECA_AppCaptureSettings *self, BOOL value);
 
-/* Windows.Media.Capture.AppCaptureSettings.get_IsMicrophoneCaptureEnabled() */
 HRESULT wmeca_app_capture_settings_get__is_microphone_capture_enabled(WMECA_AppCaptureSettings *self, BOOL *value);
 
-/* Windows.Media.Capture.AppCaptureSettings.put_IsMicrophoneCaptureEnabledByDefault() */
 HRESULT wmeca_app_capture_settings_put__is_microphone_capture_enabled_by_default(WMECA_AppCaptureSettings *self, BOOL value);
 
-/* Windows.Media.Capture.AppCaptureSettings.get_IsMicrophoneCaptureEnabledByDefault() */
 HRESULT wmeca_app_capture_settings_get__is_microphone_capture_enabled_by_default(WMECA_AppCaptureSettings *self, BOOL *value);
 
-/* Windows.Media.Capture.AppCaptureSettings.put_SystemAudioGain() */
 HRESULT wmeca_app_capture_settings_put__system_audio_gain(WMECA_AppCaptureSettings *self, double value);
 
-/* Windows.Media.Capture.AppCaptureSettings.get_SystemAudioGain() */
 HRESULT wmeca_app_capture_settings_get__system_audio_gain(WMECA_AppCaptureSettings *self, double *value);
 
-/* Windows.Media.Capture.AppCaptureSettings.put_MicrophoneGain() */
 HRESULT wmeca_app_capture_settings_put__microphone_gain(WMECA_AppCaptureSettings *self, double value);
 
-/* Windows.Media.Capture.AppCaptureSettings.get_MicrophoneGain() */
 HRESULT wmeca_app_capture_settings_get__microphone_gain(WMECA_AppCaptureSettings *self, double *value);
 
-/* Windows.Media.Capture.AppCaptureSettings.put_VideoEncodingFrameRateMode() */
 HRESULT wmeca_app_capture_settings_put__video_encoding_frame_rate_mode(WMECA_AppCaptureSettings *self, WMECA_AppCaptureVideoEncodingFrameRateMode value);
 
-/* Windows.Media.Capture.AppCaptureSettings.get_VideoEncodingFrameRateMode() */
 HRESULT wmeca_app_capture_settings_get__video_encoding_frame_rate_mode(WMECA_AppCaptureSettings *self, WMECA_AppCaptureVideoEncodingFrameRateMode *value);
 
-/* Windows.Media.Capture.AppCaptureSettings.put_IsEchoCancellationEnabled() */
 HRESULT wmeca_app_capture_settings_put__is_echo_cancellation_enabled(WMECA_AppCaptureSettings *self, BOOL value);
 
-/* Windows.Media.Capture.AppCaptureSettings.get_IsEchoCancellationEnabled() */
 HRESULT wmeca_app_capture_settings_get__is_echo_cancellation_enabled(WMECA_AppCaptureSettings *self, BOOL *value);
 
-/* Windows.Media.Capture.AppCaptureSettings.put_IsCursorImageCaptureEnabled() */
 HRESULT wmeca_app_capture_settings_put__is_cursor_image_capture_enabled(WMECA_AppCaptureSettings *self, BOOL value);
 
-/* Windows.Media.Capture.AppCaptureSettings.get_IsCursorImageCaptureEnabled() */
 HRESULT wmeca_app_capture_settings_get__is_cursor_image_capture_enabled(WMECA_AppCaptureSettings *self, BOOL *value);
 
-/* activate Windows.Media.Capture.AppCaptureState */
 HRESULT wmeca_app_capture_state_new(WMECA_AppCaptureState **out);
 
-/* Windows.Media.Capture.AppCaptureState */
-/* Windows.Media.Capture.AppCaptureState.get_IsTargetRunning() */
 HRESULT wmeca_app_capture_state_get__is_target_running(WMECA_AppCaptureState *self, BOOL *value);
 
-/* Windows.Media.Capture.AppCaptureState.get_IsHistoricalCaptureEnabled() */
 HRESULT wmeca_app_capture_state_get__is_historical_capture_enabled(WMECA_AppCaptureState *self, BOOL *value);
 
-/* Windows.Media.Capture.AppCaptureState.get_ShouldCaptureMicrophone() */
 HRESULT wmeca_app_capture_state_get__should_capture_microphone(WMECA_AppCaptureState *self, BOOL *value);
 
-/* Windows.Media.Capture.AppCaptureState.put_ShouldCaptureMicrophone() */
 HRESULT wmeca_app_capture_state_put__should_capture_microphone(WMECA_AppCaptureState *self, BOOL value);
 
-/* Windows.Media.Capture.AppCaptureState.RestartMicrophoneCapture() */
 HRESULT wmeca_app_capture_state_restart_microphone_capture(WMECA_AppCaptureState *self);
 
-/* Windows.Media.Capture.AppCaptureState.get_MicrophoneCaptureState() */
 HRESULT wmeca_app_capture_state_get__microphone_capture_state(WMECA_AppCaptureState *self, WMECA_AppCaptureMicrophoneCaptureState *value);
 
-/* Windows.Media.Capture.AppCaptureState.get_MicrophoneCaptureError() */
 HRESULT wmeca_app_capture_state_get__microphone_capture_error(WMECA_AppCaptureState *self, uint32_t *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeca_app_capture_state_on_microphone_capture_state_changed(WMECA_AppCaptureState *self, cwinrt_event_fn fn, void *ctx);
@@ -4107,459 +3374,240 @@ void wmeca_app_capture_state_off_microphone_capture_state_changed(WMECA_AppCaptu
 cwinrt_token wmeca_app_capture_state_on_capture_target_closed(WMECA_AppCaptureState *self, cwinrt_event_fn fn, void *ctx);
 void wmeca_app_capture_state_off_capture_target_closed(WMECA_AppCaptureState *self, cwinrt_token token);
 
-/* Windows.Media.Capture.ICameraCaptureUI */
-/* Windows.Media.Capture.ICameraCaptureUIPhotoCaptureSettings */
-/* Windows.Media.Capture.ICameraCaptureUIVideoCaptureSettings */
-/* Windows.Media.Capture.ICapturedFrame */
-/* Windows.Media.Capture.ICapturedFrameWithSoftwareBitmap */
-/* Windows.Media.Capture.ICapturedFrameWithSoftwareBitmap.get_SoftwareBitmap() */
 HRESULT wmeca_captured_frame_with_software_bitmap_get__software_bitmap(WMECA_ICapturedFrameWithSoftwareBitmap *self, WGRIM_SoftwareBitmap** value);
 
-/* Windows.Media.Capture.ICapturedFrame2 */
-/* Windows.Media.Capture.ICapturedFrame2.get_ControlValues() */
 HRESULT wmeca_captured_frame_2_get__control_values(WMECA_ICapturedFrame_2 *self, WMECA_CapturedFrameControlValues** value);
 
-/* Windows.Media.Capture.ICapturedFrame2.get_BitmapProperties() */
 HRESULT wmeca_captured_frame_2_get__bitmap_properties(WMECA_ICapturedFrame_2 *self, WGRIM_BitmapPropertySet** value);
 
-/* Windows.Media.Capture.ICapturedFrameControlValues */
-/* Windows.Media.Capture.ICapturedFrameControlValues2 */
-/* Windows.Media.Capture.ICapturedFrameControlValues2.get_FocusState() */
 HRESULT wmeca_captured_frame_control_values_2_get__focus_state(WMECA_ICapturedFrameControlValues_2 *self, WMEDE_MediaCaptureFocusState** value);
 
-/* Windows.Media.Capture.ICapturedFrameControlValues2.get_IsoDigitalGain() */
 HRESULT wmeca_captured_frame_control_values_2_get__iso_digital_gain(WMECA_ICapturedFrameControlValues_2 *self, double** value);
 
-/* Windows.Media.Capture.ICapturedFrameControlValues2.get_IsoAnalogGain() */
 HRESULT wmeca_captured_frame_control_values_2_get__iso_analog_gain(WMECA_ICapturedFrameControlValues_2 *self, double** value);
 
-/* Windows.Media.Capture.ICapturedFrameControlValues2.get_SensorFrameRate() */
 HRESULT wmeca_captured_frame_control_values_2_get__sensor_frame_rate(WMECA_ICapturedFrameControlValues_2 *self, WMEME_MediaRatio** value);
 
-/* Windows.Media.Capture.ICapturedFrameControlValues2.get_WhiteBalanceGain() */
 HRESULT wmeca_captured_frame_control_values_2_get__white_balance_gain(WMECA_ICapturedFrameControlValues_2 *self, WMECA_WhiteBalanceGain** value);
 
-/* Windows.Media.Capture.ICapturedPhoto */
-/* Windows.Media.Capture.IAdvancedCapturedPhoto */
-/* Windows.Media.Capture.IAdvancedCapturedPhoto2 */
-/* Windows.Media.Capture.IAdvancedCapturedPhoto2.get_FrameBoundsRelativeToReferencePhoto() */
 HRESULT wmeca_advanced_captured_photo_2_get__frame_bounds_relative_to_reference_photo(WMECA_IAdvancedCapturedPhoto_2 *self, WF_Rect** value);
 
-/* Windows.Media.Capture.IAdvancedPhotoCapture */
-/* Windows.Media.Capture.IAppBroadcastBackgroundService */
-/* Windows.Media.Capture.IAppBroadcastBackgroundService2 */
-/* Windows.Media.Capture.IAppBroadcastBackgroundService2.put_BroadcastTitle() */
 HRESULT wmeca_app_broadcast_background_service_2_put__broadcast_title(WMECA_IAppBroadcastBackgroundService_2 *self, cwinrt_hstring value);
 
-/* Windows.Media.Capture.IAppBroadcastBackgroundService2.get_BroadcastLanguage() */
 HRESULT wmeca_app_broadcast_background_service_2_get__broadcast_language(WMECA_IAppBroadcastBackgroundService_2 *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.IAppBroadcastBackgroundService2.put_BroadcastLanguage() */
 HRESULT wmeca_app_broadcast_background_service_2_put__broadcast_language(WMECA_IAppBroadcastBackgroundService_2 *self, cwinrt_hstring value);
 
-/* Windows.Media.Capture.IAppBroadcastBackgroundService2.get_BroadcastChannel() */
 HRESULT wmeca_app_broadcast_background_service_2_get__broadcast_channel(WMECA_IAppBroadcastBackgroundService_2 *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.IAppBroadcastBackgroundService2.put_BroadcastChannel() */
 HRESULT wmeca_app_broadcast_background_service_2_put__broadcast_channel(WMECA_IAppBroadcastBackgroundService_2 *self, cwinrt_hstring value);
 
-/* Windows.Media.Capture.IAppBroadcastBackgroundServiceSignInInfo */
-/* Windows.Media.Capture.IAppBroadcastBackgroundServiceSignInInfo2 */
-/* Windows.Media.Capture.IAppBroadcastBackgroundServiceStreamInfo */
-/* Windows.Media.Capture.IAppBroadcastBackgroundServiceStreamInfo2 */
-/* Windows.Media.Capture.IAppBroadcastBackgroundServiceStreamInfo2.ReportProblemWithStream() */
 HRESULT wmeca_app_broadcast_background_service_stream_info_2_report_problem_with_stream(WMECA_IAppBroadcastBackgroundServiceStreamInfo_2 *self);
 
-/* Windows.Media.Capture.IAppBroadcastCameraCaptureStateChangedEventArgs */
-/* Windows.Media.Capture.IAppBroadcastGlobalSettings */
-/* Windows.Media.Capture.IAppBroadcastHeartbeatRequestedEventArgs */
-/* Windows.Media.Capture.IAppBroadcastMicrophoneCaptureStateChangedEventArgs */
-/* Windows.Media.Capture.IAppBroadcastPlugIn */
-/* Windows.Media.Capture.IAppBroadcastPlugInManager */
-/* Windows.Media.Capture.IAppBroadcastPlugInStateChangedEventArgs */
-/* Windows.Media.Capture.IAppBroadcastPreview */
-/* Windows.Media.Capture.IAppBroadcastPreviewStateChangedEventArgs */
-/* Windows.Media.Capture.IAppBroadcastPreviewStreamReader */
-/* Windows.Media.Capture.IAppBroadcastPreviewStreamVideoFrame */
-/* Windows.Media.Capture.IAppBroadcastPreviewStreamVideoHeader */
-/* Windows.Media.Capture.IAppBroadcastProviderSettings */
-/* Windows.Media.Capture.IAppBroadcastServices */
-/* Windows.Media.Capture.IAppBroadcastSignInStateChangedEventArgs */
-/* Windows.Media.Capture.IAppBroadcastState */
-/* Windows.Media.Capture.IAppBroadcastStreamAudioFrame */
-/* Windows.Media.Capture.IAppBroadcastStreamAudioHeader */
-/* Windows.Media.Capture.IAppBroadcastStreamReader */
-/* Windows.Media.Capture.IAppBroadcastStreamStateChangedEventArgs */
-/* Windows.Media.Capture.IAppBroadcastStreamVideoFrame */
-/* Windows.Media.Capture.IAppBroadcastStreamVideoHeader */
-/* Windows.Media.Capture.IAppBroadcastTriggerDetails */
-/* Windows.Media.Capture.IAppBroadcastViewerCountChangedEventArgs */
-/* Windows.Media.Capture.IAppCapture */
-/* Windows.Media.Capture.IAppCaptureAlternateShortcutKeys */
-/* Windows.Media.Capture.IAppCaptureAlternateShortcutKeys2 */
-/* Windows.Media.Capture.IAppCaptureAlternateShortcutKeys2.put_ToggleMicrophoneCaptureKey() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_2_put__toggle_microphone_capture_key(WMECA_IAppCaptureAlternateShortcutKeys_2 *self, WSY_VirtualKey value);
 
-/* Windows.Media.Capture.IAppCaptureAlternateShortcutKeys2.get_ToggleMicrophoneCaptureKey() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_2_get__toggle_microphone_capture_key(WMECA_IAppCaptureAlternateShortcutKeys_2 *self, WSY_VirtualKey *value);
 
-/* Windows.Media.Capture.IAppCaptureAlternateShortcutKeys2.put_ToggleMicrophoneCaptureKeyModifiers() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_2_put__toggle_microphone_capture_key_modifiers(WMECA_IAppCaptureAlternateShortcutKeys_2 *self, WSY_VirtualKeyModifiers value);
 
-/* Windows.Media.Capture.IAppCaptureAlternateShortcutKeys2.get_ToggleMicrophoneCaptureKeyModifiers() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_2_get__toggle_microphone_capture_key_modifiers(WMECA_IAppCaptureAlternateShortcutKeys_2 *self, WSY_VirtualKeyModifiers *value);
 
-/* Windows.Media.Capture.IAppCaptureAlternateShortcutKeys3 */
-/* Windows.Media.Capture.IAppCaptureAlternateShortcutKeys3.put_ToggleCameraCaptureKey() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_3_put__toggle_camera_capture_key(WMECA_IAppCaptureAlternateShortcutKeys_3 *self, WSY_VirtualKey value);
 
-/* Windows.Media.Capture.IAppCaptureAlternateShortcutKeys3.get_ToggleCameraCaptureKey() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_3_get__toggle_camera_capture_key(WMECA_IAppCaptureAlternateShortcutKeys_3 *self, WSY_VirtualKey *value);
 
-/* Windows.Media.Capture.IAppCaptureAlternateShortcutKeys3.put_ToggleCameraCaptureKeyModifiers() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_3_put__toggle_camera_capture_key_modifiers(WMECA_IAppCaptureAlternateShortcutKeys_3 *self, WSY_VirtualKeyModifiers value);
 
-/* Windows.Media.Capture.IAppCaptureAlternateShortcutKeys3.get_ToggleCameraCaptureKeyModifiers() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_3_get__toggle_camera_capture_key_modifiers(WMECA_IAppCaptureAlternateShortcutKeys_3 *self, WSY_VirtualKeyModifiers *value);
 
-/* Windows.Media.Capture.IAppCaptureAlternateShortcutKeys3.put_ToggleBroadcastKey() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_3_put__toggle_broadcast_key(WMECA_IAppCaptureAlternateShortcutKeys_3 *self, WSY_VirtualKey value);
 
-/* Windows.Media.Capture.IAppCaptureAlternateShortcutKeys3.get_ToggleBroadcastKey() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_3_get__toggle_broadcast_key(WMECA_IAppCaptureAlternateShortcutKeys_3 *self, WSY_VirtualKey *value);
 
-/* Windows.Media.Capture.IAppCaptureAlternateShortcutKeys3.put_ToggleBroadcastKeyModifiers() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_3_put__toggle_broadcast_key_modifiers(WMECA_IAppCaptureAlternateShortcutKeys_3 *self, WSY_VirtualKeyModifiers value);
 
-/* Windows.Media.Capture.IAppCaptureAlternateShortcutKeys3.get_ToggleBroadcastKeyModifiers() */
 HRESULT wmeca_app_capture_alternate_shortcut_keys_3_get__toggle_broadcast_key_modifiers(WMECA_IAppCaptureAlternateShortcutKeys_3 *self, WSY_VirtualKeyModifiers *value);
 
-/* Windows.Media.Capture.IAppCaptureDurationGeneratedEventArgs */
-/* Windows.Media.Capture.IAppCaptureFileGeneratedEventArgs */
-/* Windows.Media.Capture.IAppCaptureMetadataWriter */
-/* Windows.Media.Capture.IAppCaptureMicrophoneCaptureStateChangedEventArgs */
-/* Windows.Media.Capture.IAppCaptureRecordOperation */
-/* Windows.Media.Capture.IAppCaptureRecordingStateChangedEventArgs */
-/* Windows.Media.Capture.IGameBarServices */
-/* Windows.Media.Capture.IGameBarServicesCommandEventArgs */
-/* Windows.Media.Capture.IGameBarServicesManager */
-/* Windows.Media.Capture.IGameBarServicesManagerGameBarServicesCreatedEventArgs */
-/* Windows.Media.Capture.IGameBarServicesTargetInfo */
-/* Windows.Media.Capture.ILowLagMediaRecording */
-/* Windows.Media.Capture.ILowLagMediaRecording2 */
-/* Windows.Media.Capture.ILowLagMediaRecording2.PauseAsync(behavior) */
 HRESULT wmeca_low_lag_media_recording_2_pause_async(WMECA_ILowLagMediaRecording_2 *self, WMEDE_MediaCapturePauseBehavior behavior, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.ILowLagMediaRecording2.ResumeAsync() */
 HRESULT wmeca_low_lag_media_recording_2_resume_async(WMECA_ILowLagMediaRecording_2 *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.ILowLagMediaRecording3 */
-/* Windows.Media.Capture.ILowLagMediaRecording3.PauseWithResultAsync(behavior) */
 HRESULT wmeca_low_lag_media_recording_3_pause_with_result_async(WMECA_ILowLagMediaRecording_3 *self, WMEDE_MediaCapturePauseBehavior behavior, WF_IAsyncOperation_WMECA_MediaCapturePauseResult** out);
 
-/* Windows.Media.Capture.ILowLagMediaRecording3.StopWithResultAsync() */
 HRESULT wmeca_low_lag_media_recording_3_stop_with_result_async(WMECA_ILowLagMediaRecording_3 *self, WF_IAsyncOperation_WMECA_MediaCaptureStopResult** out);
 
-/* Windows.Media.Capture.ILowLagPhotoCapture */
-/* Windows.Media.Capture.ILowLagPhotoSequenceCapture */
-/* Windows.Media.Capture.IMediaCapture */
-/* Windows.Media.Capture.IMediaCaptureVideoPreview */
-/* Windows.Media.Capture.IMediaCaptureVideoPreview.StartPreviewAsync() */
 HRESULT wmeca_media_capture_video_preview_start_preview_async(WMECA_IMediaCaptureVideoPreview *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.IMediaCaptureVideoPreview.StartPreviewToCustomSinkAsync(encodingProfile, customMediaSink) */
 HRESULT wmeca_media_capture_video_preview_start_preview_to_custom_sink_async(WMECA_IMediaCaptureVideoPreview *self, WMEME_MediaEncodingProfile* encodingProfile, WME_IMediaExtension* customMediaSink, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.IMediaCaptureVideoPreview.StartPreviewToCustomSinkAsync(encodingProfile, customSinkActivationId, customSinkSettings) */
 HRESULT wmeca_media_capture_video_preview_start_preview_to_custom_sink_async_p_str_p_p(WMECA_IMediaCaptureVideoPreview *self, WMEME_MediaEncodingProfile* encodingProfile, cwinrt_hstring customSinkActivationId, WFOCO_IPropertySet* customSinkSettings, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.IMediaCaptureVideoPreview.StopPreviewAsync() */
 HRESULT wmeca_media_capture_video_preview_stop_preview_async(WMECA_IMediaCaptureVideoPreview *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.IMediaCapture2 */
-/* Windows.Media.Capture.IMediaCapture2.PrepareLowLagRecordToStorageFileAsync(encodingProfile, file) */
 HRESULT wmeca_media_capture_2_prepare_low_lag_record_to_storage_file_async(WMECA_IMediaCapture_2 *self, WMEME_MediaEncodingProfile* encodingProfile, WS_IStorageFile* file, WF_IAsyncOperation_WMECA_LowLagMediaRecording** out);
 
-/* Windows.Media.Capture.IMediaCapture2.PrepareLowLagRecordToStreamAsync(encodingProfile, stream) */
 HRESULT wmeca_media_capture_2_prepare_low_lag_record_to_stream_async(WMECA_IMediaCapture_2 *self, WMEME_MediaEncodingProfile* encodingProfile, WSTST_IRandomAccessStream* stream, WF_IAsyncOperation_WMECA_LowLagMediaRecording** out);
 
-/* Windows.Media.Capture.IMediaCapture2.PrepareLowLagRecordToCustomSinkAsync(encodingProfile, customMediaSink) */
 HRESULT wmeca_media_capture_2_prepare_low_lag_record_to_custom_sink_async(WMECA_IMediaCapture_2 *self, WMEME_MediaEncodingProfile* encodingProfile, WME_IMediaExtension* customMediaSink, WF_IAsyncOperation_WMECA_LowLagMediaRecording** out);
 
-/* Windows.Media.Capture.IMediaCapture2.PrepareLowLagRecordToCustomSinkAsync(encodingProfile, customSinkActivationId, customSinkSettings) */
 HRESULT wmeca_media_capture_2_prepare_low_lag_record_to_custom_sink_async_p_str_p_p(WMECA_IMediaCapture_2 *self, WMEME_MediaEncodingProfile* encodingProfile, cwinrt_hstring customSinkActivationId, WFOCO_IPropertySet* customSinkSettings, WF_IAsyncOperation_WMECA_LowLagMediaRecording** out);
 
-/* Windows.Media.Capture.IMediaCapture2.PrepareLowLagPhotoCaptureAsync() */
 HRESULT wmeca_media_capture_2_prepare_low_lag_photo_capture_async(WMECA_IMediaCapture_2 *self, WMEME_ImageEncodingProperties* type_, WF_IAsyncOperation_WMECA_LowLagPhotoCapture** out);
 
-/* Windows.Media.Capture.IMediaCapture2.PrepareLowLagPhotoSequenceCaptureAsync() */
 HRESULT wmeca_media_capture_2_prepare_low_lag_photo_sequence_capture_async(WMECA_IMediaCapture_2 *self, WMEME_ImageEncodingProperties* type_, WF_IAsyncOperation_WMECA_LowLagPhotoSequenceCapture** out);
 
-/* Windows.Media.Capture.IMediaCapture2.SetEncodingPropertiesAsync(mediaStreamType, mediaEncodingProperties, encoderProperties) */
 HRESULT wmeca_media_capture_2_set_encoding_properties_async(WMECA_IMediaCapture_2 *self, WMECA_MediaStreamType mediaStreamType, WMEME_IMediaEncodingProperties* mediaEncodingProperties, WMEME_MediaPropertySet* encoderProperties, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.IMediaCapture3 */
-/* Windows.Media.Capture.IMediaCapture3.PrepareVariablePhotoSequenceCaptureAsync() */
 HRESULT wmeca_media_capture_3_prepare_variable_photo_sequence_capture_async(WMECA_IMediaCapture_3 *self, WMEME_ImageEncodingProperties* type_, WF_IAsyncOperation_WMECACO_VariablePhotoSequenceCapture** out);
 
-/* Windows.Media.Capture.IMediaCapture4 */
-/* Windows.Media.Capture.IMediaCapture4.AddAudioEffectAsync(definition) */
 HRESULT wmeca_media_capture_4_add_audio_effect_async(WMECA_IMediaCapture_4 *self, WMEEF_IAudioEffectDefinition* definition, WF_IAsyncOperation_WME_IMediaExtension** out);
 
-/* Windows.Media.Capture.IMediaCapture4.AddVideoEffectAsync(definition, mediaStreamType) */
 HRESULT wmeca_media_capture_4_add_video_effect_async(WMECA_IMediaCapture_4 *self, WMEEF_IVideoEffectDefinition* definition, WMECA_MediaStreamType mediaStreamType, WF_IAsyncOperation_WME_IMediaExtension** out);
 
-/* Windows.Media.Capture.IMediaCapture4.PauseRecordAsync(behavior) */
 HRESULT wmeca_media_capture_4_pause_record_async(WMECA_IMediaCapture_4 *self, WMEDE_MediaCapturePauseBehavior behavior, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.IMediaCapture4.ResumeRecordAsync() */
 HRESULT wmeca_media_capture_4_resume_record_async(WMECA_IMediaCapture_4 *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.IMediaCapture4.get_CameraStreamState() */
 HRESULT wmeca_media_capture_4_get__camera_stream_state(WMECA_IMediaCapture_4 *self, WMEDE_CameraStreamState *value);
 
-/* Windows.Media.Capture.IMediaCapture4.GetPreviewFrameAsync() */
 HRESULT wmeca_media_capture_4_get_preview_frame_async(WMECA_IMediaCapture_4 *self, WF_IAsyncOperation_WME_VideoFrame** out);
 
-/* Windows.Media.Capture.IMediaCapture4.GetPreviewFrameAsync(destination) */
 HRESULT wmeca_media_capture_4_get_preview_frame_async_p_p(WMECA_IMediaCapture_4 *self, WME_VideoFrame* destination, WF_IAsyncOperation_WME_VideoFrame** out);
 
-/* Windows.Media.Capture.IMediaCapture4.get_ThermalStatus() */
 HRESULT wmeca_media_capture_4_get__thermal_status(WMECA_IMediaCapture_4 *self, WMECA_MediaCaptureThermalStatus *value);
 
-/* Windows.Media.Capture.IMediaCapture4.PrepareAdvancedPhotoCaptureAsync(encodingProperties) */
 HRESULT wmeca_media_capture_4_prepare_advanced_photo_capture_async(WMECA_IMediaCapture_4 *self, WMEME_ImageEncodingProperties* encodingProperties, WF_IAsyncOperation_WMECA_AdvancedPhotoCapture** out);
 
-/* Windows.Media.Capture.IMediaCapture5 */
-/* Windows.Media.Capture.IMediaCapture5.RemoveEffectAsync(effect) */
 HRESULT wmeca_media_capture_5_remove_effect_async(WMECA_IMediaCapture_5 *self, WME_IMediaExtension* effect, WF_IAsyncAction** out);
 
-/* Windows.Media.Capture.IMediaCapture5.PauseRecordWithResultAsync(behavior) */
 HRESULT wmeca_media_capture_5_pause_record_with_result_async(WMECA_IMediaCapture_5 *self, WMEDE_MediaCapturePauseBehavior behavior, WF_IAsyncOperation_WMECA_MediaCapturePauseResult** out);
 
-/* Windows.Media.Capture.IMediaCapture5.StopRecordWithResultAsync() */
 HRESULT wmeca_media_capture_5_stop_record_with_result_async(WMECA_IMediaCapture_5 *self, WF_IAsyncOperation_WMECA_MediaCaptureStopResult** out);
 
-/* Windows.Media.Capture.IMediaCapture5.get_FrameSources() */
 HRESULT wmeca_media_capture_5_get__frame_sources(WMECA_IMediaCapture_5 *self, WFOCO_IMapView_HSTRING_WMECAFR_MediaFrameSource** value);
 
-/* Windows.Media.Capture.IMediaCapture5.CreateFrameReaderAsync(inputSource) */
 HRESULT wmeca_media_capture_5_create_frame_reader_async(WMECA_IMediaCapture_5 *self, WMECAFR_MediaFrameSource* inputSource, WF_IAsyncOperation_WMECAFR_MediaFrameReader** out);
 
-/* Windows.Media.Capture.IMediaCapture5.CreateFrameReaderAsync(inputSource, outputSubtype) */
 HRESULT wmeca_media_capture_5_create_frame_reader_async_p_str_p(WMECA_IMediaCapture_5 *self, WMECAFR_MediaFrameSource* inputSource, cwinrt_hstring outputSubtype, WF_IAsyncOperation_WMECAFR_MediaFrameReader** out);
 
-/* Windows.Media.Capture.IMediaCapture5.CreateFrameReaderAsync(inputSource, outputSubtype, outputSize) */
 HRESULT wmeca_media_capture_5_create_frame_reader_async_p_str_bitmap_size_p(WMECA_IMediaCapture_5 *self, WMECAFR_MediaFrameSource* inputSource, cwinrt_hstring outputSubtype, WGRIM_BitmapSize outputSize, WF_IAsyncOperation_WMECAFR_MediaFrameReader** out);
 
-/* Windows.Media.Capture.IMediaCapture6 */
-/* Windows.Media.Capture.IMediaCapture6.CreateMultiSourceFrameReaderAsync(inputSources) */
 HRESULT wmeca_media_capture_6_create_multi_source_frame_reader_async(WMECA_IMediaCapture_6 *self, WFOCO_IIterable_WMECAFR_MediaFrameSource* inputSources, WF_IAsyncOperation_WMECAFR_MultiSourceMediaFrameReader** out);
 
-/* Windows.Media.Capture.IMediaCapture7 */
-/* Windows.Media.Capture.IMediaCapture7.CreateRelativePanelWatcher(captureMode, displayRegion) */
 HRESULT wmeca_media_capture_7_create_relative_panel_watcher(WMECA_IMediaCapture_7 *self, WMECA_StreamingCaptureMode captureMode, WUIWI_DisplayRegion* displayRegion, WMECA_MediaCaptureRelativePanelWatcher** out);
 
-/* Windows.Media.Capture.IMediaCaptureDeviceExclusiveControlStatusChangedEventArgs */
-/* Windows.Media.Capture.IMediaCaptureFailedEventArgs */
-/* Windows.Media.Capture.IMediaCaptureFocusChangedEventArgs */
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings */
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings2 */
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings2.put_MediaCategory() */
 HRESULT wmeca_media_capture_initialization_settings_2_put__media_category(WMECA_IMediaCaptureInitializationSettings_2 *self, WMECA_MediaCategory value);
 
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings2.get_MediaCategory() */
 HRESULT wmeca_media_capture_initialization_settings_2_get__media_category(WMECA_IMediaCaptureInitializationSettings_2 *self, WMECA_MediaCategory *value);
 
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings2.put_AudioProcessing() */
 HRESULT wmeca_media_capture_initialization_settings_2_put__audio_processing(WMECA_IMediaCaptureInitializationSettings_2 *self, WME_AudioProcessing value);
 
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings2.get_AudioProcessing() */
 HRESULT wmeca_media_capture_initialization_settings_2_get__audio_processing(WMECA_IMediaCaptureInitializationSettings_2 *self, WME_AudioProcessing *value);
 
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings3 */
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings3.put_AudioSource() */
 HRESULT wmeca_media_capture_initialization_settings_3_put__audio_source(WMECA_IMediaCaptureInitializationSettings_3 *self, WMECO_IMediaSource* value);
 
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings3.get_AudioSource() */
 HRESULT wmeca_media_capture_initialization_settings_3_get__audio_source(WMECA_IMediaCaptureInitializationSettings_3 *self, WMECO_IMediaSource** value);
 
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings3.put_VideoSource() */
 HRESULT wmeca_media_capture_initialization_settings_3_put__video_source(WMECA_IMediaCaptureInitializationSettings_3 *self, WMECO_IMediaSource* value);
 
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings3.get_VideoSource() */
 HRESULT wmeca_media_capture_initialization_settings_3_get__video_source(WMECA_IMediaCaptureInitializationSettings_3 *self, WMECO_IMediaSource** value);
 
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings4 */
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings4.get_VideoProfile() */
 HRESULT wmeca_media_capture_initialization_settings_4_get__video_profile(WMECA_IMediaCaptureInitializationSettings_4 *self, WMECA_MediaCaptureVideoProfile** value);
 
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings4.put_VideoProfile() */
 HRESULT wmeca_media_capture_initialization_settings_4_put__video_profile(WMECA_IMediaCaptureInitializationSettings_4 *self, WMECA_MediaCaptureVideoProfile* value);
 
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings4.get_PreviewMediaDescription() */
 HRESULT wmeca_media_capture_initialization_settings_4_get__preview_media_description(WMECA_IMediaCaptureInitializationSettings_4 *self, WMECA_MediaCaptureVideoProfileMediaDescription** value);
 
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings4.put_PreviewMediaDescription() */
 HRESULT wmeca_media_capture_initialization_settings_4_put__preview_media_description(WMECA_IMediaCaptureInitializationSettings_4 *self, WMECA_MediaCaptureVideoProfileMediaDescription* value);
 
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings4.get_RecordMediaDescription() */
 HRESULT wmeca_media_capture_initialization_settings_4_get__record_media_description(WMECA_IMediaCaptureInitializationSettings_4 *self, WMECA_MediaCaptureVideoProfileMediaDescription** value);
 
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings4.put_RecordMediaDescription() */
 HRESULT wmeca_media_capture_initialization_settings_4_put__record_media_description(WMECA_IMediaCaptureInitializationSettings_4 *self, WMECA_MediaCaptureVideoProfileMediaDescription* value);
 
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings4.get_PhotoMediaDescription() */
 HRESULT wmeca_media_capture_initialization_settings_4_get__photo_media_description(WMECA_IMediaCaptureInitializationSettings_4 *self, WMECA_MediaCaptureVideoProfileMediaDescription** value);
 
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings4.put_PhotoMediaDescription() */
 HRESULT wmeca_media_capture_initialization_settings_4_put__photo_media_description(WMECA_IMediaCaptureInitializationSettings_4 *self, WMECA_MediaCaptureVideoProfileMediaDescription* value);
 
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings5 */
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings5.get_SourceGroup() */
 HRESULT wmeca_media_capture_initialization_settings_5_get__source_group(WMECA_IMediaCaptureInitializationSettings_5 *self, WMECAFR_MediaFrameSourceGroup** value);
 
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings5.put_SourceGroup() */
 HRESULT wmeca_media_capture_initialization_settings_5_put__source_group(WMECA_IMediaCaptureInitializationSettings_5 *self, WMECAFR_MediaFrameSourceGroup* value);
 
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings5.get_SharingMode() */
 HRESULT wmeca_media_capture_initialization_settings_5_get__sharing_mode(WMECA_IMediaCaptureInitializationSettings_5 *self, WMECA_MediaCaptureSharingMode *value);
 
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings5.put_SharingMode() */
 HRESULT wmeca_media_capture_initialization_settings_5_put__sharing_mode(WMECA_IMediaCaptureInitializationSettings_5 *self, WMECA_MediaCaptureSharingMode value);
 
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings5.get_MemoryPreference() */
 HRESULT wmeca_media_capture_initialization_settings_5_get__memory_preference(WMECA_IMediaCaptureInitializationSettings_5 *self, WMECA_MediaCaptureMemoryPreference *value);
 
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings5.put_MemoryPreference() */
 HRESULT wmeca_media_capture_initialization_settings_5_put__memory_preference(WMECA_IMediaCaptureInitializationSettings_5 *self, WMECA_MediaCaptureMemoryPreference value);
 
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings6 */
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings6.get_AlwaysPlaySystemShutterSound() */
 HRESULT wmeca_media_capture_initialization_settings_6_get__always_play_system_shutter_sound(WMECA_IMediaCaptureInitializationSettings_6 *self, BOOL *value);
 
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings6.put_AlwaysPlaySystemShutterSound() */
 HRESULT wmeca_media_capture_initialization_settings_6_put__always_play_system_shutter_sound(WMECA_IMediaCaptureInitializationSettings_6 *self, BOOL value);
 
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings7 */
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings7.get_DeviceUriPasswordCredential() */
 HRESULT wmeca_media_capture_initialization_settings_7_get__device_uri_password_credential(WMECA_IMediaCaptureInitializationSettings_7 *self, WSECR_PasswordCredential** value);
 
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings7.put_DeviceUriPasswordCredential() */
 HRESULT wmeca_media_capture_initialization_settings_7_put__device_uri_password_credential(WMECA_IMediaCaptureInitializationSettings_7 *self, WSECR_PasswordCredential* value);
 
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings7.get_DeviceUri() */
 HRESULT wmeca_media_capture_initialization_settings_7_get__device_uri(WMECA_IMediaCaptureInitializationSettings_7 *self, WF_Uri** value);
 
-/* Windows.Media.Capture.IMediaCaptureInitializationSettings7.put_DeviceUri() */
 HRESULT wmeca_media_capture_initialization_settings_7_put__device_uri(WMECA_IMediaCaptureInitializationSettings_7 *self, WF_Uri* value);
 
-/* Windows.Media.Capture.IMediaCapturePauseResult */
-/* Windows.Media.Capture.IMediaCaptureRelativePanelWatcher */
-/* Windows.Media.Capture.IMediaCaptureSettings */
-/* Windows.Media.Capture.IMediaCaptureSettings2 */
-/* Windows.Media.Capture.IMediaCaptureSettings2.get_ConcurrentRecordAndPhotoSupported() */
 HRESULT wmeca_media_capture_settings_2_get__concurrent_record_and_photo_supported(WMECA_IMediaCaptureSettings_2 *self, BOOL *value);
 
-/* Windows.Media.Capture.IMediaCaptureSettings2.get_ConcurrentRecordAndPhotoSequenceSupported() */
 HRESULT wmeca_media_capture_settings_2_get__concurrent_record_and_photo_sequence_supported(WMECA_IMediaCaptureSettings_2 *self, BOOL *value);
 
-/* Windows.Media.Capture.IMediaCaptureSettings2.get_CameraSoundRequiredForRegion() */
 HRESULT wmeca_media_capture_settings_2_get__camera_sound_required_for_region(WMECA_IMediaCaptureSettings_2 *self, BOOL *value);
 
-/* Windows.Media.Capture.IMediaCaptureSettings2.get_Horizontal35mmEquivalentFocalLength() */
 HRESULT wmeca_media_capture_settings_2_get__horizontal35mm_equivalent_focal_length(WMECA_IMediaCaptureSettings_2 *self, uint32_t** value);
 
-/* Windows.Media.Capture.IMediaCaptureSettings2.get_PitchOffsetDegrees() */
 HRESULT wmeca_media_capture_settings_2_get__pitch_offset_degrees(WMECA_IMediaCaptureSettings_2 *self, int32_t** value);
 
-/* Windows.Media.Capture.IMediaCaptureSettings2.get_Vertical35mmEquivalentFocalLength() */
 HRESULT wmeca_media_capture_settings_2_get__vertical35mm_equivalent_focal_length(WMECA_IMediaCaptureSettings_2 *self, uint32_t** value);
 
-/* Windows.Media.Capture.IMediaCaptureSettings2.get_MediaCategory() */
 HRESULT wmeca_media_capture_settings_2_get__media_category(WMECA_IMediaCaptureSettings_2 *self, WMECA_MediaCategory *value);
 
-/* Windows.Media.Capture.IMediaCaptureSettings2.get_AudioProcessing() */
 HRESULT wmeca_media_capture_settings_2_get__audio_processing(WMECA_IMediaCaptureSettings_2 *self, WME_AudioProcessing *value);
 
-/* Windows.Media.Capture.IMediaCaptureSettings3 */
-/* Windows.Media.Capture.IMediaCaptureSettings3.get_Direct3D11Device() */
 HRESULT wmeca_media_capture_settings_3_get__direct3_d11_device(WMECA_IMediaCaptureSettings_3 *self, WGRDIDI_IDirect3DDevice** value);
 
-/* Windows.Media.Capture.IMediaCaptureStopResult */
-/* Windows.Media.Capture.IMediaCaptureVideoProfile */
-/* Windows.Media.Capture.IMediaCaptureVideoProfile2 */
-/* Windows.Media.Capture.IMediaCaptureVideoProfile2.get_FrameSourceInfos() */
 HRESULT wmeca_media_capture_video_profile_2_get__frame_source_infos(WMECA_IMediaCaptureVideoProfile_2 *self, WFOCO_IVectorView_WMECAFR_MediaFrameSourceInfo** value);
 
-/* Windows.Media.Capture.IMediaCaptureVideoProfile2.get_Properties() */
 HRESULT wmeca_media_capture_video_profile_2_get__properties(WMECA_IMediaCaptureVideoProfile_2 *self, WFOCO_IMapView_Guid_Object** value);
 
-/* Windows.Media.Capture.IMediaCaptureVideoProfileMediaDescription */
-/* Windows.Media.Capture.IMediaCaptureVideoProfileMediaDescription2 */
-/* Windows.Media.Capture.IMediaCaptureVideoProfileMediaDescription2.get_Subtype() */
 HRESULT wmeca_media_capture_video_profile_media_description_2_get__subtype(WMECA_IMediaCaptureVideoProfileMediaDescription_2 *self, cwinrt_hstring *value);
 
-/* Windows.Media.Capture.IMediaCaptureVideoProfileMediaDescription2.get_Properties() */
 HRESULT wmeca_media_capture_video_profile_media_description_2_get__properties(WMECA_IMediaCaptureVideoProfileMediaDescription_2 *self, WFOCO_IMapView_Guid_Object** value);
 
-/* Windows.Media.Capture.IOptionalReferencePhotoCapturedEventArgs */
-/* Windows.Media.Capture.IPhotoCapturedEventArgs */
-/* Windows.Media.Capture.IPhotoConfirmationCapturedEventArgs */
-/* Windows.Media.Capture.IVideoStreamConfiguration */
-/* Windows.Media.Capture.IAppCaptureServices */
-/* Windows.Media.Capture.IAppCaptureSettings */
-/* Windows.Media.Capture.IAppCaptureSettings2 */
-/* Windows.Media.Capture.IAppCaptureSettings2.get_IsGpuConstrained() */
 HRESULT wmeca_app_capture_settings_2_get__is_gpu_constrained(WMECA_IAppCaptureSettings_2 *self, BOOL *value);
 
-/* Windows.Media.Capture.IAppCaptureSettings2.get_AlternateShortcutKeys() */
 HRESULT wmeca_app_capture_settings_2_get__alternate_shortcut_keys(WMECA_IAppCaptureSettings_2 *self, WMECA_AppCaptureAlternateShortcutKeys** value);
 
-/* Windows.Media.Capture.IAppCaptureSettings3 */
-/* Windows.Media.Capture.IAppCaptureSettings3.put_IsMicrophoneCaptureEnabled() */
 HRESULT wmeca_app_capture_settings_3_put__is_microphone_capture_enabled(WMECA_IAppCaptureSettings_3 *self, BOOL value);
 
-/* Windows.Media.Capture.IAppCaptureSettings3.get_IsMicrophoneCaptureEnabled() */
 HRESULT wmeca_app_capture_settings_3_get__is_microphone_capture_enabled(WMECA_IAppCaptureSettings_3 *self, BOOL *value);
 
-/* Windows.Media.Capture.IAppCaptureSettings4 */
-/* Windows.Media.Capture.IAppCaptureSettings4.put_IsMicrophoneCaptureEnabledByDefault() */
 HRESULT wmeca_app_capture_settings_4_put__is_microphone_capture_enabled_by_default(WMECA_IAppCaptureSettings_4 *self, BOOL value);
 
-/* Windows.Media.Capture.IAppCaptureSettings4.get_IsMicrophoneCaptureEnabledByDefault() */
 HRESULT wmeca_app_capture_settings_4_get__is_microphone_capture_enabled_by_default(WMECA_IAppCaptureSettings_4 *self, BOOL *value);
 
-/* Windows.Media.Capture.IAppCaptureSettings4.put_SystemAudioGain() */
 HRESULT wmeca_app_capture_settings_4_put__system_audio_gain(WMECA_IAppCaptureSettings_4 *self, double value);
 
-/* Windows.Media.Capture.IAppCaptureSettings4.get_SystemAudioGain() */
 HRESULT wmeca_app_capture_settings_4_get__system_audio_gain(WMECA_IAppCaptureSettings_4 *self, double *value);
 
-/* Windows.Media.Capture.IAppCaptureSettings4.put_MicrophoneGain() */
 HRESULT wmeca_app_capture_settings_4_put__microphone_gain(WMECA_IAppCaptureSettings_4 *self, double value);
 
-/* Windows.Media.Capture.IAppCaptureSettings4.get_MicrophoneGain() */
 HRESULT wmeca_app_capture_settings_4_get__microphone_gain(WMECA_IAppCaptureSettings_4 *self, double *value);
 
-/* Windows.Media.Capture.IAppCaptureSettings4.put_VideoEncodingFrameRateMode() */
 HRESULT wmeca_app_capture_settings_4_put__video_encoding_frame_rate_mode(WMECA_IAppCaptureSettings_4 *self, WMECA_AppCaptureVideoEncodingFrameRateMode value);
 
-/* Windows.Media.Capture.IAppCaptureSettings4.get_VideoEncodingFrameRateMode() */
 HRESULT wmeca_app_capture_settings_4_get__video_encoding_frame_rate_mode(WMECA_IAppCaptureSettings_4 *self, WMECA_AppCaptureVideoEncodingFrameRateMode *value);
 
-/* Windows.Media.Capture.IAppCaptureSettings5 */
-/* Windows.Media.Capture.IAppCaptureSettings5.put_IsEchoCancellationEnabled() */
 HRESULT wmeca_app_capture_settings_5_put__is_echo_cancellation_enabled(WMECA_IAppCaptureSettings_5 *self, BOOL value);
 
-/* Windows.Media.Capture.IAppCaptureSettings5.get_IsEchoCancellationEnabled() */
 HRESULT wmeca_app_capture_settings_5_get__is_echo_cancellation_enabled(WMECA_IAppCaptureSettings_5 *self, BOOL *value);
 
-/* Windows.Media.Capture.IAppCaptureSettings5.put_IsCursorImageCaptureEnabled() */
 HRESULT wmeca_app_capture_settings_5_put__is_cursor_image_capture_enabled(WMECA_IAppCaptureSettings_5 *self, BOOL value);
 
-/* Windows.Media.Capture.IAppCaptureSettings5.get_IsCursorImageCaptureEnabled() */
 HRESULT wmeca_app_capture_settings_5_get__is_cursor_image_capture_enabled(WMECA_IAppCaptureSettings_5 *self, BOOL *value);
 
-/* Windows.Media.Capture.IAppCaptureState */
 #endif /* CWINRT_WINDOWS_MEDIA_CAPTURE_H */

@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Networking.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WAPAC_IActivatedEventArgs
 #define CWINRT_FWD_WAPAC_IActivatedEventArgs
 typedef struct WAPAC_IActivatedEventArgs WAPAC_IActivatedEventArgs;
@@ -118,7 +117,6 @@ typedef struct WAPAC_SplashScreen WAPAC_SplashScreen;
 typedef struct WSY_User WSY_User;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WNEVP_IVpnAppIdFactory WNEVP_IVpnAppIdFactory;
 typedef struct WNEVP_IVpnChannelStatics WNEVP_IVpnChannelStatics;
 typedef struct WNEVP_IVpnDomainNameInfoFactory WNEVP_IVpnDomainNameInfoFactory;
@@ -210,7 +208,6 @@ typedef struct WNEVP_IVpnCustomPromptElement WNEVP_IVpnCustomPromptElement;
 typedef struct WNEVP_IVpnCustomPrompt WNEVP_IVpnCustomPrompt;
 typedef struct WNEVP_IVpnProfile WNEVP_IVpnProfile;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IIterable_WNE_HostName
 #define CWINRT_FWD_WFOCO_IIterable_WNE_HostName
 typedef struct WFOCO_IIterable_WNE_HostName WFOCO_IIterable_WNE_HostName;
@@ -546,7 +543,6 @@ typedef enum WNEVP_VpnRoutingPolicyType {
 } WNEVP_VpnRoutingPolicyType;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -779,202 +775,126 @@ static const IID CWINRT_IID_WNEVP_IVpnCustomPrompt CWINRT_MAYBE_UNUSED = { 0x9B2
 static const IID CWINRT_IID_WNEVP_IVpnProfile CWINRT_MAYBE_UNUSED = { 0x7875B751, 0xB0D7, 0x43DB, { 0x8A, 0x93, 0xD3, 0xFE, 0x24, 0x79, 0xE5, 0x6A } };
 #endif
 
-/* Methods */
-
-/* Windows.Networking.Vpn.IVpnAppIdFactory */
-/* Windows.Networking.Vpn.IVpnAppIdFactory.Create() */
 HRESULT wnevp_vpn_app_id_factory_create(WNEVP_IVpnAppIdFactory *self, WNEVP_VpnAppIdType type_, cwinrt_hstring value, WNEVP_VpnAppId** out);
 
-/* Windows.Networking.Vpn.IVpnChannelStatics */
-/* Windows.Networking.Vpn.IVpnChannelStatics.ProcessEventAsync(thirdPartyPlugIn, event) */
 HRESULT wnevp_vpn_channel_statics_process_event_async(WNEVP_IVpnChannelStatics *self, IInspectable* thirdPartyPlugIn, IInspectable* event);
 
-/* Windows.Networking.Vpn.IVpnDomainNameInfoFactory */
-/* Windows.Networking.Vpn.IVpnDomainNameInfoFactory.CreateVpnDomainNameInfo(name, nameType, dnsServerList, proxyServerList) */
 HRESULT wnevp_vpn_domain_name_info_factory_create_vpn_domain_name_info(WNEVP_IVpnDomainNameInfoFactory *self, cwinrt_hstring name, WNEVP_VpnDomainNameType nameType, WFOCO_IIterable_WNE_HostName* dnsServerList, WFOCO_IIterable_WNE_HostName* proxyServerList, WNEVP_VpnDomainNameInfo** out);
 
-/* Windows.Networking.Vpn.IVpnInterfaceIdFactory */
-/* Windows.Networking.Vpn.IVpnInterfaceIdFactory.CreateVpnInterfaceId(address) */
 HRESULT wnevp_vpn_interface_id_factory_create_vpn_interface_id(WNEVP_IVpnInterfaceIdFactory *self, uint8_t *address, uint32_t address_len, WNEVP_VpnInterfaceId** out);
 
-/* Windows.Networking.Vpn.IVpnNamespaceInfoFactory */
-/* Windows.Networking.Vpn.IVpnNamespaceInfoFactory.CreateVpnNamespaceInfo(name, dnsServerList, proxyServerList) */
 HRESULT wnevp_vpn_namespace_info_factory_create_vpn_namespace_info(WNEVP_IVpnNamespaceInfoFactory *self, cwinrt_hstring name, WFOCO_IVector_WNE_HostName* dnsServerList, WFOCO_IVector_WNE_HostName* proxyServerList, WNEVP_VpnNamespaceInfo** out);
 
-/* Windows.Networking.Vpn.IVpnPacketBufferFactory */
-/* Windows.Networking.Vpn.IVpnPacketBufferFactory.CreateVpnPacketBuffer(parentBuffer, offset, length) */
 HRESULT wnevp_vpn_packet_buffer_factory_create_vpn_packet_buffer(WNEVP_IVpnPacketBufferFactory *self, WNEVP_VpnPacketBuffer* parentBuffer, uint32_t offset, uint32_t length, WNEVP_VpnPacketBuffer** out);
 
-/* Windows.Networking.Vpn.IVpnPacketBufferList2 */
-/* Windows.Networking.Vpn.IVpnPacketBufferList2.AddLeadingPacket(nextVpnPacketBuffer) */
 HRESULT wnevp_vpn_packet_buffer_list_2_add_leading_packet(WNEVP_IVpnPacketBufferList_2 *self, WNEVP_VpnPacketBuffer* nextVpnPacketBuffer);
 
-/* Windows.Networking.Vpn.IVpnPacketBufferList2.RemoveLeadingPacket() */
 HRESULT wnevp_vpn_packet_buffer_list_2_remove_leading_packet(WNEVP_IVpnPacketBufferList_2 *self, WNEVP_VpnPacketBuffer** out);
 
-/* Windows.Networking.Vpn.IVpnPacketBufferList2.AddTrailingPacket(nextVpnPacketBuffer) */
 HRESULT wnevp_vpn_packet_buffer_list_2_add_trailing_packet(WNEVP_IVpnPacketBufferList_2 *self, WNEVP_VpnPacketBuffer* nextVpnPacketBuffer);
 
-/* Windows.Networking.Vpn.IVpnPacketBufferList2.RemoveTrailingPacket() */
 HRESULT wnevp_vpn_packet_buffer_list_2_remove_trailing_packet(WNEVP_IVpnPacketBufferList_2 *self, WNEVP_VpnPacketBuffer** out);
 
-/* Windows.Networking.Vpn.IVpnPlugIn */
-/* Windows.Networking.Vpn.IVpnPlugIn.Connect(channel) */
 HRESULT wnevp_vpn_plug_in_connect(WNEVP_IVpnPlugIn *self, WNEVP_VpnChannel* channel);
 
-/* Windows.Networking.Vpn.IVpnPlugIn.Disconnect(channel) */
 HRESULT wnevp_vpn_plug_in_disconnect(WNEVP_IVpnPlugIn *self, WNEVP_VpnChannel* channel);
 
-/* Windows.Networking.Vpn.IVpnPlugIn.GetKeepAlivePayload(channel, keepAlivePacket) */
 HRESULT wnevp_vpn_plug_in_get_keep_alive_payload(WNEVP_IVpnPlugIn *self, WNEVP_VpnChannel* channel, WNEVP_VpnPacketBuffer* keepAlivePacket);
 
-/* Windows.Networking.Vpn.IVpnPlugIn.Encapsulate(channel, packets, encapulatedPackets) */
 HRESULT wnevp_vpn_plug_in_encapsulate(WNEVP_IVpnPlugIn *self, WNEVP_VpnChannel* channel, WNEVP_VpnPacketBufferList* packets, WNEVP_VpnPacketBufferList* encapulatedPackets);
 
-/* Windows.Networking.Vpn.IVpnPlugIn.Decapsulate(channel, encapBuffer, decapsulatedPackets, controlPacketsToSend) */
 HRESULT wnevp_vpn_plug_in_decapsulate(WNEVP_IVpnPlugIn *self, WNEVP_VpnChannel* channel, WNEVP_VpnPacketBuffer* encapBuffer, WNEVP_VpnPacketBufferList* decapsulatedPackets, WNEVP_VpnPacketBufferList* controlPacketsToSend);
 
-/* Windows.Networking.Vpn.IVpnPlugInReconnectTransport */
-/* Windows.Networking.Vpn.IVpnPlugInReconnectTransport.ReconnectTransport(channel, context) */
 HRESULT wnevp_vpn_plug_in_reconnect_transport_reconnect_transport(WNEVP_IVpnPlugInReconnectTransport *self, WNEVP_VpnChannel* channel, IInspectable* context);
 
-/* Windows.Networking.Vpn.IVpnRouteFactory */
-/* Windows.Networking.Vpn.IVpnRouteFactory.CreateVpnRoute(address, prefixSize) */
 HRESULT wnevp_vpn_route_factory_create_vpn_route(WNEVP_IVpnRouteFactory *self, WNE_HostName* address, uint8_t prefixSize, WNEVP_VpnRoute** out);
 
-/* Windows.Networking.Vpn.IVpnTrafficFilterFactory */
-/* Windows.Networking.Vpn.IVpnTrafficFilterFactory.Create(appId) */
 HRESULT wnevp_vpn_traffic_filter_factory_create(WNEVP_IVpnTrafficFilterFactory *self, WNEVP_VpnAppId* appId, WNEVP_VpnTrafficFilter** out);
 
-/* activate Windows.Networking.Vpn.VpnAppId */
 HRESULT wnevp_vpn_app_id_new(WNEVP_VpnAppId **out);
 
-/* Windows.Networking.Vpn.VpnAppId */
-/* Windows.Networking.Vpn.VpnAppId.get_Type() */
 HRESULT wnevp_vpn_app_id_get__type(WNEVP_VpnAppId *self, WNEVP_VpnAppIdType *value);
 
-/* Windows.Networking.Vpn.VpnAppId.put_Type() */
 HRESULT wnevp_vpn_app_id_put__type(WNEVP_VpnAppId *self, WNEVP_VpnAppIdType value);
 
-/* Windows.Networking.Vpn.VpnAppId.get_Value() */
 HRESULT wnevp_vpn_app_id_get__value(WNEVP_VpnAppId *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.VpnAppId.put_Value() */
 HRESULT wnevp_vpn_app_id_put__value(WNEVP_VpnAppId *self, cwinrt_hstring value);
 
-/* activate Windows.Networking.Vpn.VpnChannel */
 HRESULT wnevp_vpn_channel_new(WNEVP_VpnChannel **out);
 
-/* Windows.Networking.Vpn.VpnChannel */
-/* Windows.Networking.Vpn.VpnChannel.AssociateTransport(mainOuterTunnelTransport, optionalOuterTunnelTransport) */
 HRESULT wnevp_vpn_channel_associate_transport(WNEVP_VpnChannel *self, IInspectable* mainOuterTunnelTransport, IInspectable* optionalOuterTunnelTransport);
 
-/* Windows.Networking.Vpn.VpnChannel.Start(assignedClientIPv4list, assignedClientIPv6list, vpnInterfaceId, routeScope, namespaceScope, mtuSize, maxFrameSize, optimizeForLowCostNetwork, mainOuterTunnelTransport, optionalOuterTunnelTransport) */
 HRESULT wnevp_vpn_channel_start(WNEVP_VpnChannel *self, WFOCO_IVectorView_WNE_HostName* assignedClientIPv4list, WFOCO_IVectorView_WNE_HostName* assignedClientIPv6list, WNEVP_VpnInterfaceId* vpnInterfaceId, WNEVP_VpnRouteAssignment* routeScope, WNEVP_VpnNamespaceAssignment* namespaceScope, uint32_t mtuSize, uint32_t maxFrameSize, BOOL optimizeForLowCostNetwork, IInspectable* mainOuterTunnelTransport, IInspectable* optionalOuterTunnelTransport);
 
-/* Windows.Networking.Vpn.VpnChannel.Stop() */
 HRESULT wnevp_vpn_channel_stop(WNEVP_VpnChannel *self);
 
-/* Windows.Networking.Vpn.VpnChannel.RequestCredentials(credType, isRetry, isSingleSignOnCredential, certificate) */
 HRESULT wnevp_vpn_channel_request_credentials(WNEVP_VpnChannel *self, WNEVP_VpnCredentialType credType, BOOL isRetry, BOOL isSingleSignOnCredential, WSECRCE_Certificate* certificate, WNEVP_VpnPickedCredential** out);
 
-/* Windows.Networking.Vpn.VpnChannel.RequestVpnPacketBuffer(vpnPacketBuffer) */
 HRESULT wnevp_vpn_channel_request_vpn_packet_buffer(WNEVP_VpnChannel *self, WNEVP_VpnDataPathType type_, WNEVP_VpnPacketBuffer* vpnPacketBuffer);
 
-/* Windows.Networking.Vpn.VpnChannel.LogDiagnosticMessage(message) */
 HRESULT wnevp_vpn_channel_log_diagnostic_message(WNEVP_VpnChannel *self, cwinrt_hstring message);
 
-/* Windows.Networking.Vpn.VpnChannel.get_Id() */
 HRESULT wnevp_vpn_channel_get__id(WNEVP_VpnChannel *self, uint32_t *value);
 
-/* Windows.Networking.Vpn.VpnChannel.get_Configuration() */
 HRESULT wnevp_vpn_channel_get__configuration(WNEVP_VpnChannel *self, WNEVP_VpnChannelConfiguration** value);
 
-/* Windows.Networking.Vpn.VpnChannel.put_PlugInContext() */
 HRESULT wnevp_vpn_channel_put__plug_in_context(WNEVP_VpnChannel *self, IInspectable* value);
 
-/* Windows.Networking.Vpn.VpnChannel.get_PlugInContext() */
 HRESULT wnevp_vpn_channel_get__plug_in_context(WNEVP_VpnChannel *self, IInspectable** value);
 
-/* Windows.Networking.Vpn.VpnChannel.get_SystemHealth() */
 HRESULT wnevp_vpn_channel_get__system_health(WNEVP_VpnChannel *self, WNEVP_VpnSystemHealth** value);
 
-/* Windows.Networking.Vpn.VpnChannel.RequestCustomPrompt(customPrompt) */
 HRESULT wnevp_vpn_channel_request_custom_prompt(WNEVP_VpnChannel *self, WFOCO_IVectorView_WNEVP_IVpnCustomPrompt* customPrompt);
 
-/* Windows.Networking.Vpn.VpnChannel.SetErrorMessage(message) */
 HRESULT wnevp_vpn_channel_set_error_message(WNEVP_VpnChannel *self, cwinrt_hstring message);
 
-/* Windows.Networking.Vpn.VpnChannel.SetAllowedSslTlsVersions(tunnelTransport, useTls12) */
 HRESULT wnevp_vpn_channel_set_allowed_ssl_tls_versions(WNEVP_VpnChannel *self, IInspectable* tunnelTransport, BOOL useTls12);
 
-/* Windows.Networking.Vpn.VpnChannel.StartWithMainTransport(assignedClientIPv4list, assignedClientIPv6list, vpnInterfaceId, assignedRoutes, assignedDomainName, mtuSize, maxFrameSize, Reserved, mainOuterTunnelTransport) */
 HRESULT wnevp_vpn_channel_start_with_main_transport(WNEVP_VpnChannel *self, WFOCO_IVectorView_WNE_HostName* assignedClientIPv4list, WFOCO_IVectorView_WNE_HostName* assignedClientIPv6list, WNEVP_VpnInterfaceId* vpnInterfaceId, WNEVP_VpnRouteAssignment* assignedRoutes, WNEVP_VpnDomainNameAssignment* assignedDomainName, uint32_t mtuSize, uint32_t maxFrameSize, BOOL Reserved, IInspectable* mainOuterTunnelTransport);
 
-/* Windows.Networking.Vpn.VpnChannel.StartExistingTransports(assignedClientIPv4list, assignedClientIPv6list, vpnInterfaceId, assignedRoutes, assignedDomainName, mtuSize, maxFrameSize, Reserved) */
 HRESULT wnevp_vpn_channel_start_existing_transports(WNEVP_VpnChannel *self, WFOCO_IVectorView_WNE_HostName* assignedClientIPv4list, WFOCO_IVectorView_WNE_HostName* assignedClientIPv6list, WNEVP_VpnInterfaceId* vpnInterfaceId, WNEVP_VpnRouteAssignment* assignedRoutes, WNEVP_VpnDomainNameAssignment* assignedDomainName, uint32_t mtuSize, uint32_t maxFrameSize, BOOL Reserved);
 
-/* Windows.Networking.Vpn.VpnChannel.GetVpnSendPacketBuffer() */
 HRESULT wnevp_vpn_channel_get_vpn_send_packet_buffer(WNEVP_VpnChannel *self, WNEVP_VpnPacketBuffer** out);
 
-/* Windows.Networking.Vpn.VpnChannel.GetVpnReceivePacketBuffer() */
 HRESULT wnevp_vpn_channel_get_vpn_receive_packet_buffer(WNEVP_VpnChannel *self, WNEVP_VpnPacketBuffer** out);
 
-/* Windows.Networking.Vpn.VpnChannel.RequestCustomPromptAsync(customPromptElement) */
 HRESULT wnevp_vpn_channel_request_custom_prompt_async(WNEVP_VpnChannel *self, WFOCO_IVectorView_WNEVP_IVpnCustomPromptElement* customPromptElement, WF_IAsyncAction** out);
 
-/* Windows.Networking.Vpn.VpnChannel.RequestCredentialsAsync(credType, credOptions, certificate) */
 HRESULT wnevp_vpn_channel_request_credentials_async_vpn_credential_type_u32_p_p(WNEVP_VpnChannel *self, WNEVP_VpnCredentialType credType, uint32_t credOptions, WSECRCE_Certificate* certificate, WF_IAsyncOperation_WNEVP_VpnCredential** out);
 
-/* Windows.Networking.Vpn.VpnChannel.RequestCredentialsAsync(credType, credOptions) */
 HRESULT wnevp_vpn_channel_request_credentials_async_vpn_credential_type_u32_p(WNEVP_VpnChannel *self, WNEVP_VpnCredentialType credType, uint32_t credOptions, WF_IAsyncOperation_WNEVP_VpnCredential** out);
 
-/* Windows.Networking.Vpn.VpnChannel.RequestCredentialsAsync(credType) */
 HRESULT wnevp_vpn_channel_request_credentials_async(WNEVP_VpnChannel *self, WNEVP_VpnCredentialType credType, WF_IAsyncOperation_WNEVP_VpnCredential** out);
 
-/* Windows.Networking.Vpn.VpnChannel.TerminateConnection(message) */
 HRESULT wnevp_vpn_channel_terminate_connection(WNEVP_VpnChannel *self, cwinrt_hstring message);
 
-/* Windows.Networking.Vpn.VpnChannel.StartWithTrafficFilter(assignedClientIpv4List, assignedClientIpv6List, vpnInterfaceId, assignedRoutes, assignedNamespace, mtuSize, maxFrameSize, reserved, mainOuterTunnelTransport, optionalOuterTunnelTransport, assignedTrafficFilters) */
 HRESULT wnevp_vpn_channel_start_with_traffic_filter_p_p_p_p_p_u32_u32_b_p_p_p(WNEVP_VpnChannel *self, WFOCO_IVectorView_WNE_HostName* assignedClientIpv4List, WFOCO_IVectorView_WNE_HostName* assignedClientIpv6List, WNEVP_VpnInterfaceId* vpnInterfaceId, WNEVP_VpnRouteAssignment* assignedRoutes, WNEVP_VpnDomainNameAssignment* assignedNamespace, uint32_t mtuSize, uint32_t maxFrameSize, BOOL reserved, IInspectable* mainOuterTunnelTransport, IInspectable* optionalOuterTunnelTransport, WNEVP_VpnTrafficFilterAssignment* assignedTrafficFilters);
 
-/* Windows.Networking.Vpn.VpnChannel.AddAndAssociateTransport(transport, context) */
 HRESULT wnevp_vpn_channel_add_and_associate_transport(WNEVP_VpnChannel *self, IInspectable* transport, IInspectable* context);
 
-/* Windows.Networking.Vpn.VpnChannel.StartWithTrafficFilter(assignedClientIpv4Addresses, assignedClientIpv6Addresses, vpninterfaceId, assignedRoutes, assignedNamespace, mtuSize, maxFrameSize, reserved, transports, assignedTrafficFilters) */
 HRESULT wnevp_vpn_channel_start_with_traffic_filter(WNEVP_VpnChannel *self, WFOCO_IIterable_WNE_HostName* assignedClientIpv4Addresses, WFOCO_IIterable_WNE_HostName* assignedClientIpv6Addresses, WNEVP_VpnInterfaceId* vpninterfaceId, WNEVP_VpnRouteAssignment* assignedRoutes, WNEVP_VpnDomainNameAssignment* assignedNamespace, uint32_t mtuSize, uint32_t maxFrameSize, BOOL reserved, WFOCO_IIterable_Object* transports, WNEVP_VpnTrafficFilterAssignment* assignedTrafficFilters);
 
-/* Windows.Networking.Vpn.VpnChannel.ReplaceAndAssociateTransport(transport, context) */
 HRESULT wnevp_vpn_channel_replace_and_associate_transport(WNEVP_VpnChannel *self, IInspectable* transport, IInspectable* context);
 
-/* Windows.Networking.Vpn.VpnChannel.StartReconnectingTransport(transport, context) */
 HRESULT wnevp_vpn_channel_start_reconnecting_transport(WNEVP_VpnChannel *self, IInspectable* transport, IInspectable* context);
 
-/* Windows.Networking.Vpn.VpnChannel.GetSlotTypeForTransportContext(context) */
 HRESULT wnevp_vpn_channel_get_slot_type_for_transport_context(WNEVP_VpnChannel *self, IInspectable* context, WNESO_ControlChannelTriggerStatus *out);
 
-/* Windows.Networking.Vpn.VpnChannel.get_CurrentRequestTransportContext() */
 HRESULT wnevp_vpn_channel_get__current_request_transport_context(WNEVP_VpnChannel *self, IInspectable** value);
 
-/* Windows.Networking.Vpn.VpnChannel.AppendVpnReceivePacketBuffer(decapsulatedPacketBuffer) */
 HRESULT wnevp_vpn_channel_append_vpn_receive_packet_buffer(WNEVP_VpnChannel *self, WNEVP_VpnPacketBuffer* decapsulatedPacketBuffer);
 
-/* Windows.Networking.Vpn.VpnChannel.AppendVpnSendPacketBuffer(encapsulatedPacketBuffer) */
 HRESULT wnevp_vpn_channel_append_vpn_send_packet_buffer(WNEVP_VpnChannel *self, WNEVP_VpnPacketBuffer* encapsulatedPacketBuffer);
 
-/* Windows.Networking.Vpn.VpnChannel.FlushVpnReceivePacketBuffers() */
 HRESULT wnevp_vpn_channel_flush_vpn_receive_packet_buffers(WNEVP_VpnChannel *self);
 
-/* Windows.Networking.Vpn.VpnChannel.FlushVpnSendPacketBuffers() */
 HRESULT wnevp_vpn_channel_flush_vpn_send_packet_buffers(WNEVP_VpnChannel *self);
 
-/* Windows.Networking.Vpn.VpnChannel.ActivateForeground(packageRelativeAppId, sharedContext) */
 HRESULT wnevp_vpn_channel_activate_foreground(WNEVP_VpnChannel *self, cwinrt_hstring packageRelativeAppId, WFOCO_ValueSet* sharedContext, WFOCO_ValueSet** out);
 
-/* Windows.Networking.Vpn.VpnChannel.ProcessEventAsync(thirdPartyPlugIn, event) */
 HRESULT wnevp_vpn_channel_process_event_async(IInspectable* thirdPartyPlugIn, IInspectable* event);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wnevp_vpn_channel_on_activity_change(WNEVP_VpnChannel *self, cwinrt_event_fn fn, void *ctx);
@@ -983,995 +903,614 @@ void wnevp_vpn_channel_off_activity_change(WNEVP_VpnChannel *self, cwinrt_token 
 cwinrt_token wnevp_vpn_channel_on_activity_state_change(WNEVP_VpnChannel *self, cwinrt_event_fn fn, void *ctx);
 void wnevp_vpn_channel_off_activity_state_change(WNEVP_VpnChannel *self, cwinrt_token token);
 
-/* activate Windows.Networking.Vpn.VpnChannelActivityEventArgs */
 HRESULT wnevp_vpn_channel_activity_event_args_new(WNEVP_VpnChannelActivityEventArgs **out);
 
-/* Windows.Networking.Vpn.VpnChannelActivityEventArgs */
-/* Windows.Networking.Vpn.VpnChannelActivityEventArgs.get_Type() */
 HRESULT wnevp_vpn_channel_activity_event_args_get__type(WNEVP_VpnChannelActivityEventArgs *self, WNEVP_VpnChannelActivityEventType *value);
 
-/* activate Windows.Networking.Vpn.VpnChannelActivityStateChangedArgs */
 HRESULT wnevp_vpn_channel_activity_state_changed_args_new(WNEVP_VpnChannelActivityStateChangedArgs **out);
 
-/* Windows.Networking.Vpn.VpnChannelActivityStateChangedArgs */
-/* Windows.Networking.Vpn.VpnChannelActivityStateChangedArgs.get_ActivityState() */
 HRESULT wnevp_vpn_channel_activity_state_changed_args_get__activity_state(WNEVP_VpnChannelActivityStateChangedArgs *self, WNEVP_VpnChannelActivityEventType *value);
 
-/* activate Windows.Networking.Vpn.VpnChannelConfiguration */
 HRESULT wnevp_vpn_channel_configuration_new(WNEVP_VpnChannelConfiguration **out);
 
-/* Windows.Networking.Vpn.VpnChannelConfiguration */
-/* Windows.Networking.Vpn.VpnChannelConfiguration.get_ServerServiceName() */
 HRESULT wnevp_vpn_channel_configuration_get__server_service_name(WNEVP_VpnChannelConfiguration *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.VpnChannelConfiguration.get_ServerHostNameList() */
 HRESULT wnevp_vpn_channel_configuration_get__server_host_name_list(WNEVP_VpnChannelConfiguration *self, WFOCO_IVectorView_WNE_HostName** value);
 
-/* Windows.Networking.Vpn.VpnChannelConfiguration.get_CustomField() */
 HRESULT wnevp_vpn_channel_configuration_get__custom_field(WNEVP_VpnChannelConfiguration *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.VpnChannelConfiguration.get_ServerUris() */
 HRESULT wnevp_vpn_channel_configuration_get__server_uris(WNEVP_VpnChannelConfiguration *self, WFOCO_IVectorView_WF_Uri** value);
 
-/* activate Windows.Networking.Vpn.VpnCredential */
 HRESULT wnevp_vpn_credential_new(WNEVP_VpnCredential **out);
 
-/* Windows.Networking.Vpn.VpnCredential */
-/* Windows.Networking.Vpn.VpnCredential.get_PasskeyCredential() */
 HRESULT wnevp_vpn_credential_get__passkey_credential(WNEVP_VpnCredential *self, WSECR_PasswordCredential** value);
 
-/* Windows.Networking.Vpn.VpnCredential.get_CertificateCredential() */
 HRESULT wnevp_vpn_credential_get__certificate_credential(WNEVP_VpnCredential *self, WSECRCE_Certificate** value);
 
-/* Windows.Networking.Vpn.VpnCredential.get_AdditionalPin() */
 HRESULT wnevp_vpn_credential_get__additional_pin(WNEVP_VpnCredential *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.VpnCredential.get_OldPasswordCredential() */
 HRESULT wnevp_vpn_credential_get__old_password_credential(WNEVP_VpnCredential *self, WSECR_PasswordCredential** value);
 
-/* activate Windows.Networking.Vpn.VpnCustomCheckBox */
 HRESULT wnevp_vpn_custom_check_box_new(WNEVP_VpnCustomCheckBox **out);
 
-/* Windows.Networking.Vpn.VpnCustomCheckBox */
-/* Windows.Networking.Vpn.VpnCustomCheckBox.put_InitialCheckState() */
 HRESULT wnevp_vpn_custom_check_box_put__initial_check_state(WNEVP_VpnCustomCheckBox *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnCustomCheckBox.get_InitialCheckState() */
 HRESULT wnevp_vpn_custom_check_box_get__initial_check_state(WNEVP_VpnCustomCheckBox *self, BOOL *value);
 
-/* Windows.Networking.Vpn.VpnCustomCheckBox.get_Checked() */
 HRESULT wnevp_vpn_custom_check_box_get__checked(WNEVP_VpnCustomCheckBox *self, BOOL *value);
 
-/* Windows.Networking.Vpn.VpnCustomCheckBox.put_Label() */
 HRESULT wnevp_vpn_custom_check_box_put__label(WNEVP_VpnCustomCheckBox *self, cwinrt_hstring value);
 
-/* Windows.Networking.Vpn.VpnCustomCheckBox.get_Label() */
 HRESULT wnevp_vpn_custom_check_box_get__label(WNEVP_VpnCustomCheckBox *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.VpnCustomCheckBox.put_Compulsory() */
 HRESULT wnevp_vpn_custom_check_box_put__compulsory(WNEVP_VpnCustomCheckBox *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnCustomCheckBox.get_Compulsory() */
 HRESULT wnevp_vpn_custom_check_box_get__compulsory(WNEVP_VpnCustomCheckBox *self, BOOL *value);
 
-/* Windows.Networking.Vpn.VpnCustomCheckBox.put_Bordered() */
 HRESULT wnevp_vpn_custom_check_box_put__bordered(WNEVP_VpnCustomCheckBox *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnCustomCheckBox.get_Bordered() */
 HRESULT wnevp_vpn_custom_check_box_get__bordered(WNEVP_VpnCustomCheckBox *self, BOOL *value);
 
-/* activate Windows.Networking.Vpn.VpnCustomComboBox */
 HRESULT wnevp_vpn_custom_combo_box_new(WNEVP_VpnCustomComboBox **out);
 
-/* Windows.Networking.Vpn.VpnCustomComboBox */
-/* Windows.Networking.Vpn.VpnCustomComboBox.put_OptionsText() */
 HRESULT wnevp_vpn_custom_combo_box_put__options_text(WNEVP_VpnCustomComboBox *self, WFOCO_IVectorView_HSTRING* value);
 
-/* Windows.Networking.Vpn.VpnCustomComboBox.get_OptionsText() */
 HRESULT wnevp_vpn_custom_combo_box_get__options_text(WNEVP_VpnCustomComboBox *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Networking.Vpn.VpnCustomComboBox.get_Selected() */
 HRESULT wnevp_vpn_custom_combo_box_get__selected(WNEVP_VpnCustomComboBox *self, uint32_t *value);
 
-/* Windows.Networking.Vpn.VpnCustomComboBox.put_Label() */
 HRESULT wnevp_vpn_custom_combo_box_put__label(WNEVP_VpnCustomComboBox *self, cwinrt_hstring value);
 
-/* Windows.Networking.Vpn.VpnCustomComboBox.get_Label() */
 HRESULT wnevp_vpn_custom_combo_box_get__label(WNEVP_VpnCustomComboBox *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.VpnCustomComboBox.put_Compulsory() */
 HRESULT wnevp_vpn_custom_combo_box_put__compulsory(WNEVP_VpnCustomComboBox *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnCustomComboBox.get_Compulsory() */
 HRESULT wnevp_vpn_custom_combo_box_get__compulsory(WNEVP_VpnCustomComboBox *self, BOOL *value);
 
-/* Windows.Networking.Vpn.VpnCustomComboBox.put_Bordered() */
 HRESULT wnevp_vpn_custom_combo_box_put__bordered(WNEVP_VpnCustomComboBox *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnCustomComboBox.get_Bordered() */
 HRESULT wnevp_vpn_custom_combo_box_get__bordered(WNEVP_VpnCustomComboBox *self, BOOL *value);
 
-/* activate Windows.Networking.Vpn.VpnCustomEditBox */
 HRESULT wnevp_vpn_custom_edit_box_new(WNEVP_VpnCustomEditBox **out);
 
-/* Windows.Networking.Vpn.VpnCustomEditBox */
-/* Windows.Networking.Vpn.VpnCustomEditBox.put_DefaultText() */
 HRESULT wnevp_vpn_custom_edit_box_put__default_text(WNEVP_VpnCustomEditBox *self, cwinrt_hstring value);
 
-/* Windows.Networking.Vpn.VpnCustomEditBox.get_DefaultText() */
 HRESULT wnevp_vpn_custom_edit_box_get__default_text(WNEVP_VpnCustomEditBox *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.VpnCustomEditBox.put_NoEcho() */
 HRESULT wnevp_vpn_custom_edit_box_put__no_echo(WNEVP_VpnCustomEditBox *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnCustomEditBox.get_NoEcho() */
 HRESULT wnevp_vpn_custom_edit_box_get__no_echo(WNEVP_VpnCustomEditBox *self, BOOL *value);
 
-/* Windows.Networking.Vpn.VpnCustomEditBox.get_Text() */
 HRESULT wnevp_vpn_custom_edit_box_get__text(WNEVP_VpnCustomEditBox *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.VpnCustomEditBox.put_Label() */
 HRESULT wnevp_vpn_custom_edit_box_put__label(WNEVP_VpnCustomEditBox *self, cwinrt_hstring value);
 
-/* Windows.Networking.Vpn.VpnCustomEditBox.get_Label() */
 HRESULT wnevp_vpn_custom_edit_box_get__label(WNEVP_VpnCustomEditBox *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.VpnCustomEditBox.put_Compulsory() */
 HRESULT wnevp_vpn_custom_edit_box_put__compulsory(WNEVP_VpnCustomEditBox *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnCustomEditBox.get_Compulsory() */
 HRESULT wnevp_vpn_custom_edit_box_get__compulsory(WNEVP_VpnCustomEditBox *self, BOOL *value);
 
-/* Windows.Networking.Vpn.VpnCustomEditBox.put_Bordered() */
 HRESULT wnevp_vpn_custom_edit_box_put__bordered(WNEVP_VpnCustomEditBox *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnCustomEditBox.get_Bordered() */
 HRESULT wnevp_vpn_custom_edit_box_get__bordered(WNEVP_VpnCustomEditBox *self, BOOL *value);
 
-/* activate Windows.Networking.Vpn.VpnCustomErrorBox */
 HRESULT wnevp_vpn_custom_error_box_new(WNEVP_VpnCustomErrorBox **out);
 
-/* Windows.Networking.Vpn.VpnCustomErrorBox */
-/* Windows.Networking.Vpn.VpnCustomErrorBox.put_Label() */
 HRESULT wnevp_vpn_custom_error_box_put__label(WNEVP_VpnCustomErrorBox *self, cwinrt_hstring value);
 
-/* Windows.Networking.Vpn.VpnCustomErrorBox.get_Label() */
 HRESULT wnevp_vpn_custom_error_box_get__label(WNEVP_VpnCustomErrorBox *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.VpnCustomErrorBox.put_Compulsory() */
 HRESULT wnevp_vpn_custom_error_box_put__compulsory(WNEVP_VpnCustomErrorBox *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnCustomErrorBox.get_Compulsory() */
 HRESULT wnevp_vpn_custom_error_box_get__compulsory(WNEVP_VpnCustomErrorBox *self, BOOL *value);
 
-/* Windows.Networking.Vpn.VpnCustomErrorBox.put_Bordered() */
 HRESULT wnevp_vpn_custom_error_box_put__bordered(WNEVP_VpnCustomErrorBox *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnCustomErrorBox.get_Bordered() */
 HRESULT wnevp_vpn_custom_error_box_get__bordered(WNEVP_VpnCustomErrorBox *self, BOOL *value);
 
-/* activate Windows.Networking.Vpn.VpnCustomPromptBooleanInput */
 HRESULT wnevp_vpn_custom_prompt_boolean_input_new(WNEVP_VpnCustomPromptBooleanInput **out);
 
-/* Windows.Networking.Vpn.VpnCustomPromptBooleanInput */
-/* Windows.Networking.Vpn.VpnCustomPromptBooleanInput.put_InitialValue() */
 HRESULT wnevp_vpn_custom_prompt_boolean_input_put__initial_value(WNEVP_VpnCustomPromptBooleanInput *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptBooleanInput.get_InitialValue() */
 HRESULT wnevp_vpn_custom_prompt_boolean_input_get__initial_value(WNEVP_VpnCustomPromptBooleanInput *self, BOOL *value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptBooleanInput.get_Value() */
 HRESULT wnevp_vpn_custom_prompt_boolean_input_get__value(WNEVP_VpnCustomPromptBooleanInput *self, BOOL *value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptBooleanInput.put_DisplayName() */
 HRESULT wnevp_vpn_custom_prompt_boolean_input_put__display_name(WNEVP_VpnCustomPromptBooleanInput *self, cwinrt_hstring value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptBooleanInput.get_DisplayName() */
 HRESULT wnevp_vpn_custom_prompt_boolean_input_get__display_name(WNEVP_VpnCustomPromptBooleanInput *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptBooleanInput.put_Compulsory() */
 HRESULT wnevp_vpn_custom_prompt_boolean_input_put__compulsory(WNEVP_VpnCustomPromptBooleanInput *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptBooleanInput.get_Compulsory() */
 HRESULT wnevp_vpn_custom_prompt_boolean_input_get__compulsory(WNEVP_VpnCustomPromptBooleanInput *self, BOOL *value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptBooleanInput.put_Emphasized() */
 HRESULT wnevp_vpn_custom_prompt_boolean_input_put__emphasized(WNEVP_VpnCustomPromptBooleanInput *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptBooleanInput.get_Emphasized() */
 HRESULT wnevp_vpn_custom_prompt_boolean_input_get__emphasized(WNEVP_VpnCustomPromptBooleanInput *self, BOOL *value);
 
-/* activate Windows.Networking.Vpn.VpnCustomPromptOptionSelector */
 HRESULT wnevp_vpn_custom_prompt_option_selector_new(WNEVP_VpnCustomPromptOptionSelector **out);
 
-/* Windows.Networking.Vpn.VpnCustomPromptOptionSelector */
-/* Windows.Networking.Vpn.VpnCustomPromptOptionSelector.get_Options() */
 HRESULT wnevp_vpn_custom_prompt_option_selector_get__options(WNEVP_VpnCustomPromptOptionSelector *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptOptionSelector.get_SelectedIndex() */
 HRESULT wnevp_vpn_custom_prompt_option_selector_get__selected_index(WNEVP_VpnCustomPromptOptionSelector *self, uint32_t *value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptOptionSelector.put_DisplayName() */
 HRESULT wnevp_vpn_custom_prompt_option_selector_put__display_name(WNEVP_VpnCustomPromptOptionSelector *self, cwinrt_hstring value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptOptionSelector.get_DisplayName() */
 HRESULT wnevp_vpn_custom_prompt_option_selector_get__display_name(WNEVP_VpnCustomPromptOptionSelector *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptOptionSelector.put_Compulsory() */
 HRESULT wnevp_vpn_custom_prompt_option_selector_put__compulsory(WNEVP_VpnCustomPromptOptionSelector *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptOptionSelector.get_Compulsory() */
 HRESULT wnevp_vpn_custom_prompt_option_selector_get__compulsory(WNEVP_VpnCustomPromptOptionSelector *self, BOOL *value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptOptionSelector.put_Emphasized() */
 HRESULT wnevp_vpn_custom_prompt_option_selector_put__emphasized(WNEVP_VpnCustomPromptOptionSelector *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptOptionSelector.get_Emphasized() */
 HRESULT wnevp_vpn_custom_prompt_option_selector_get__emphasized(WNEVP_VpnCustomPromptOptionSelector *self, BOOL *value);
 
-/* activate Windows.Networking.Vpn.VpnCustomPromptText */
 HRESULT wnevp_vpn_custom_prompt_text_new(WNEVP_VpnCustomPromptText **out);
 
-/* Windows.Networking.Vpn.VpnCustomPromptText */
-/* Windows.Networking.Vpn.VpnCustomPromptText.put_Text() */
 HRESULT wnevp_vpn_custom_prompt_text_put__text(WNEVP_VpnCustomPromptText *self, cwinrt_hstring value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptText.get_Text() */
 HRESULT wnevp_vpn_custom_prompt_text_get__text(WNEVP_VpnCustomPromptText *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptText.put_DisplayName() */
 HRESULT wnevp_vpn_custom_prompt_text_put__display_name(WNEVP_VpnCustomPromptText *self, cwinrt_hstring value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptText.get_DisplayName() */
 HRESULT wnevp_vpn_custom_prompt_text_get__display_name(WNEVP_VpnCustomPromptText *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptText.put_Compulsory() */
 HRESULT wnevp_vpn_custom_prompt_text_put__compulsory(WNEVP_VpnCustomPromptText *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptText.get_Compulsory() */
 HRESULT wnevp_vpn_custom_prompt_text_get__compulsory(WNEVP_VpnCustomPromptText *self, BOOL *value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptText.put_Emphasized() */
 HRESULT wnevp_vpn_custom_prompt_text_put__emphasized(WNEVP_VpnCustomPromptText *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptText.get_Emphasized() */
 HRESULT wnevp_vpn_custom_prompt_text_get__emphasized(WNEVP_VpnCustomPromptText *self, BOOL *value);
 
-/* activate Windows.Networking.Vpn.VpnCustomPromptTextInput */
 HRESULT wnevp_vpn_custom_prompt_text_input_new(WNEVP_VpnCustomPromptTextInput **out);
 
-/* Windows.Networking.Vpn.VpnCustomPromptTextInput */
-/* Windows.Networking.Vpn.VpnCustomPromptTextInput.put_PlaceholderText() */
 HRESULT wnevp_vpn_custom_prompt_text_input_put__placeholder_text(WNEVP_VpnCustomPromptTextInput *self, cwinrt_hstring value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptTextInput.get_PlaceholderText() */
 HRESULT wnevp_vpn_custom_prompt_text_input_get__placeholder_text(WNEVP_VpnCustomPromptTextInput *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptTextInput.put_IsTextHidden() */
 HRESULT wnevp_vpn_custom_prompt_text_input_put__is_text_hidden(WNEVP_VpnCustomPromptTextInput *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptTextInput.get_IsTextHidden() */
 HRESULT wnevp_vpn_custom_prompt_text_input_get__is_text_hidden(WNEVP_VpnCustomPromptTextInput *self, BOOL *value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptTextInput.get_Text() */
 HRESULT wnevp_vpn_custom_prompt_text_input_get__text(WNEVP_VpnCustomPromptTextInput *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptTextInput.put_DisplayName() */
 HRESULT wnevp_vpn_custom_prompt_text_input_put__display_name(WNEVP_VpnCustomPromptTextInput *self, cwinrt_hstring value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptTextInput.get_DisplayName() */
 HRESULT wnevp_vpn_custom_prompt_text_input_get__display_name(WNEVP_VpnCustomPromptTextInput *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptTextInput.put_Compulsory() */
 HRESULT wnevp_vpn_custom_prompt_text_input_put__compulsory(WNEVP_VpnCustomPromptTextInput *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptTextInput.get_Compulsory() */
 HRESULT wnevp_vpn_custom_prompt_text_input_get__compulsory(WNEVP_VpnCustomPromptTextInput *self, BOOL *value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptTextInput.put_Emphasized() */
 HRESULT wnevp_vpn_custom_prompt_text_input_put__emphasized(WNEVP_VpnCustomPromptTextInput *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnCustomPromptTextInput.get_Emphasized() */
 HRESULT wnevp_vpn_custom_prompt_text_input_get__emphasized(WNEVP_VpnCustomPromptTextInput *self, BOOL *value);
 
-/* activate Windows.Networking.Vpn.VpnCustomTextBox */
 HRESULT wnevp_vpn_custom_text_box_new(WNEVP_VpnCustomTextBox **out);
 
-/* Windows.Networking.Vpn.VpnCustomTextBox */
-/* Windows.Networking.Vpn.VpnCustomTextBox.put_DisplayText() */
 HRESULT wnevp_vpn_custom_text_box_put__display_text(WNEVP_VpnCustomTextBox *self, cwinrt_hstring value);
 
-/* Windows.Networking.Vpn.VpnCustomTextBox.get_DisplayText() */
 HRESULT wnevp_vpn_custom_text_box_get__display_text(WNEVP_VpnCustomTextBox *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.VpnCustomTextBox.put_Label() */
 HRESULT wnevp_vpn_custom_text_box_put__label(WNEVP_VpnCustomTextBox *self, cwinrt_hstring value);
 
-/* Windows.Networking.Vpn.VpnCustomTextBox.get_Label() */
 HRESULT wnevp_vpn_custom_text_box_get__label(WNEVP_VpnCustomTextBox *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.VpnCustomTextBox.put_Compulsory() */
 HRESULT wnevp_vpn_custom_text_box_put__compulsory(WNEVP_VpnCustomTextBox *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnCustomTextBox.get_Compulsory() */
 HRESULT wnevp_vpn_custom_text_box_get__compulsory(WNEVP_VpnCustomTextBox *self, BOOL *value);
 
-/* Windows.Networking.Vpn.VpnCustomTextBox.put_Bordered() */
 HRESULT wnevp_vpn_custom_text_box_put__bordered(WNEVP_VpnCustomTextBox *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnCustomTextBox.get_Bordered() */
 HRESULT wnevp_vpn_custom_text_box_get__bordered(WNEVP_VpnCustomTextBox *self, BOOL *value);
 
-/* activate Windows.Networking.Vpn.VpnDomainNameAssignment */
 HRESULT wnevp_vpn_domain_name_assignment_new(WNEVP_VpnDomainNameAssignment **out);
 
-/* Windows.Networking.Vpn.VpnDomainNameAssignment */
-/* Windows.Networking.Vpn.VpnDomainNameAssignment.get_DomainNameList() */
 HRESULT wnevp_vpn_domain_name_assignment_get__domain_name_list(WNEVP_VpnDomainNameAssignment *self, WFOCO_IVector_WNEVP_VpnDomainNameInfo** value);
 
-/* Windows.Networking.Vpn.VpnDomainNameAssignment.put_ProxyAutoConfigurationUri() */
 HRESULT wnevp_vpn_domain_name_assignment_put__proxy_auto_configuration_uri(WNEVP_VpnDomainNameAssignment *self, WF_Uri* value);
 
-/* Windows.Networking.Vpn.VpnDomainNameAssignment.get_ProxyAutoConfigurationUri() */
 HRESULT wnevp_vpn_domain_name_assignment_get__proxy_auto_configuration_uri(WNEVP_VpnDomainNameAssignment *self, WF_Uri** value);
 
-/* activate Windows.Networking.Vpn.VpnDomainNameInfo */
 HRESULT wnevp_vpn_domain_name_info_new(WNEVP_VpnDomainNameInfo **out);
 
-/* Windows.Networking.Vpn.VpnDomainNameInfo */
-/* Windows.Networking.Vpn.VpnDomainNameInfo.put_DomainName() */
 HRESULT wnevp_vpn_domain_name_info_put__domain_name(WNEVP_VpnDomainNameInfo *self, WNE_HostName* value);
 
-/* Windows.Networking.Vpn.VpnDomainNameInfo.get_DomainName() */
 HRESULT wnevp_vpn_domain_name_info_get__domain_name(WNEVP_VpnDomainNameInfo *self, WNE_HostName** value);
 
-/* Windows.Networking.Vpn.VpnDomainNameInfo.put_DomainNameType() */
 HRESULT wnevp_vpn_domain_name_info_put__domain_name_type(WNEVP_VpnDomainNameInfo *self, WNEVP_VpnDomainNameType value);
 
-/* Windows.Networking.Vpn.VpnDomainNameInfo.get_DomainNameType() */
 HRESULT wnevp_vpn_domain_name_info_get__domain_name_type(WNEVP_VpnDomainNameInfo *self, WNEVP_VpnDomainNameType *value);
 
-/* Windows.Networking.Vpn.VpnDomainNameInfo.get_DnsServers() */
 HRESULT wnevp_vpn_domain_name_info_get__dns_servers(WNEVP_VpnDomainNameInfo *self, WFOCO_IVector_WNE_HostName** value);
 
-/* Windows.Networking.Vpn.VpnDomainNameInfo.get_WebProxyServers() */
 HRESULT wnevp_vpn_domain_name_info_get__web_proxy_servers(WNEVP_VpnDomainNameInfo *self, WFOCO_IVector_WNE_HostName** value);
 
-/* Windows.Networking.Vpn.VpnDomainNameInfo.get_WebProxyUris() */
 HRESULT wnevp_vpn_domain_name_info_get__web_proxy_uris(WNEVP_VpnDomainNameInfo *self, WFOCO_IVector_WF_Uri** value);
 
-/* activate Windows.Networking.Vpn.VpnForegroundActivatedEventArgs */
 HRESULT wnevp_vpn_foreground_activated_event_args_new(WNEVP_VpnForegroundActivatedEventArgs **out);
 
-/* Windows.Networking.Vpn.VpnForegroundActivatedEventArgs */
-/* Windows.Networking.Vpn.VpnForegroundActivatedEventArgs.get_ProfileName() */
 HRESULT wnevp_vpn_foreground_activated_event_args_get__profile_name(WNEVP_VpnForegroundActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.VpnForegroundActivatedEventArgs.get_SharedContext() */
 HRESULT wnevp_vpn_foreground_activated_event_args_get__shared_context(WNEVP_VpnForegroundActivatedEventArgs *self, WFOCO_ValueSet** value);
 
-/* Windows.Networking.Vpn.VpnForegroundActivatedEventArgs.get_ActivationOperation() */
 HRESULT wnevp_vpn_foreground_activated_event_args_get__activation_operation(WNEVP_VpnForegroundActivatedEventArgs *self, WNEVP_VpnForegroundActivationOperation** value);
 
-/* Windows.Networking.Vpn.VpnForegroundActivatedEventArgs.get_Kind() */
 HRESULT wnevp_vpn_foreground_activated_event_args_get__kind(WNEVP_VpnForegroundActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.Networking.Vpn.VpnForegroundActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wnevp_vpn_foreground_activated_event_args_get__previous_execution_state(WNEVP_VpnForegroundActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.Networking.Vpn.VpnForegroundActivatedEventArgs.get_SplashScreen() */
 HRESULT wnevp_vpn_foreground_activated_event_args_get__splash_screen(WNEVP_VpnForegroundActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.Networking.Vpn.VpnForegroundActivatedEventArgs.get_User() */
 HRESULT wnevp_vpn_foreground_activated_event_args_get__user(WNEVP_VpnForegroundActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.Networking.Vpn.VpnForegroundActivationOperation */
 HRESULT wnevp_vpn_foreground_activation_operation_new(WNEVP_VpnForegroundActivationOperation **out);
 
-/* Windows.Networking.Vpn.VpnForegroundActivationOperation */
-/* Windows.Networking.Vpn.VpnForegroundActivationOperation.Complete(result) */
 HRESULT wnevp_vpn_foreground_activation_operation_complete(WNEVP_VpnForegroundActivationOperation *self, WFOCO_ValueSet* result);
 
-/* activate Windows.Networking.Vpn.VpnInterfaceId */
 HRESULT wnevp_vpn_interface_id_new(WNEVP_VpnInterfaceId **out);
 
-/* Windows.Networking.Vpn.VpnInterfaceId */
-/* Windows.Networking.Vpn.VpnInterfaceId.GetAddressInfo(id) */
 HRESULT wnevp_vpn_interface_id_get_address_info(WNEVP_VpnInterfaceId *self, uint8_t *id, uint32_t id_len);
 
-/* activate Windows.Networking.Vpn.VpnManagementAgent */
 HRESULT wnevp_vpn_management_agent_new(WNEVP_VpnManagementAgent **out);
 
-/* Windows.Networking.Vpn.VpnManagementAgent */
-/* Windows.Networking.Vpn.VpnManagementAgent.AddProfileFromXmlAsync(xml) */
 HRESULT wnevp_vpn_management_agent_add_profile_from_xml_async(WNEVP_VpnManagementAgent *self, cwinrt_hstring xml, WF_IAsyncOperation_WNEVP_VpnManagementErrorStatus** out);
 
-/* Windows.Networking.Vpn.VpnManagementAgent.AddProfileFromObjectAsync(profile) */
 HRESULT wnevp_vpn_management_agent_add_profile_from_object_async(WNEVP_VpnManagementAgent *self, WNEVP_IVpnProfile* profile, WF_IAsyncOperation_WNEVP_VpnManagementErrorStatus** out);
 
-/* Windows.Networking.Vpn.VpnManagementAgent.UpdateProfileFromXmlAsync(xml) */
 HRESULT wnevp_vpn_management_agent_update_profile_from_xml_async(WNEVP_VpnManagementAgent *self, cwinrt_hstring xml, WF_IAsyncOperation_WNEVP_VpnManagementErrorStatus** out);
 
-/* Windows.Networking.Vpn.VpnManagementAgent.UpdateProfileFromObjectAsync(profile) */
 HRESULT wnevp_vpn_management_agent_update_profile_from_object_async(WNEVP_VpnManagementAgent *self, WNEVP_IVpnProfile* profile, WF_IAsyncOperation_WNEVP_VpnManagementErrorStatus** out);
 
-/* Windows.Networking.Vpn.VpnManagementAgent.GetProfilesAsync() */
 HRESULT wnevp_vpn_management_agent_get_profiles_async(WNEVP_VpnManagementAgent *self, WF_IAsyncOperation_WFOCO_IVectorView_WNEVP_IVpnProfile** out);
 
-/* Windows.Networking.Vpn.VpnManagementAgent.DeleteProfileAsync(profile) */
 HRESULT wnevp_vpn_management_agent_delete_profile_async(WNEVP_VpnManagementAgent *self, WNEVP_IVpnProfile* profile, WF_IAsyncOperation_WNEVP_VpnManagementErrorStatus** out);
 
-/* Windows.Networking.Vpn.VpnManagementAgent.ConnectProfileAsync(profile) */
 HRESULT wnevp_vpn_management_agent_connect_profile_async(WNEVP_VpnManagementAgent *self, WNEVP_IVpnProfile* profile, WF_IAsyncOperation_WNEVP_VpnManagementErrorStatus** out);
 
-/* Windows.Networking.Vpn.VpnManagementAgent.ConnectProfileWithPasswordCredentialAsync(profile, passwordCredential) */
 HRESULT wnevp_vpn_management_agent_connect_profile_with_password_credential_async(WNEVP_VpnManagementAgent *self, WNEVP_IVpnProfile* profile, WSECR_PasswordCredential* passwordCredential, WF_IAsyncOperation_WNEVP_VpnManagementErrorStatus** out);
 
-/* Windows.Networking.Vpn.VpnManagementAgent.DisconnectProfileAsync(profile) */
 HRESULT wnevp_vpn_management_agent_disconnect_profile_async(WNEVP_VpnManagementAgent *self, WNEVP_IVpnProfile* profile, WF_IAsyncOperation_WNEVP_VpnManagementErrorStatus** out);
 
-/* activate Windows.Networking.Vpn.VpnNamespaceAssignment */
 HRESULT wnevp_vpn_namespace_assignment_new(WNEVP_VpnNamespaceAssignment **out);
 
-/* Windows.Networking.Vpn.VpnNamespaceAssignment */
-/* Windows.Networking.Vpn.VpnNamespaceAssignment.put_NamespaceList() */
 HRESULT wnevp_vpn_namespace_assignment_put__namespace_list(WNEVP_VpnNamespaceAssignment *self, WFOCO_IVector_WNEVP_VpnNamespaceInfo* value);
 
-/* Windows.Networking.Vpn.VpnNamespaceAssignment.get_NamespaceList() */
 HRESULT wnevp_vpn_namespace_assignment_get__namespace_list(WNEVP_VpnNamespaceAssignment *self, WFOCO_IVector_WNEVP_VpnNamespaceInfo** value);
 
-/* Windows.Networking.Vpn.VpnNamespaceAssignment.put_ProxyAutoConfigUri() */
 HRESULT wnevp_vpn_namespace_assignment_put__proxy_auto_config_uri(WNEVP_VpnNamespaceAssignment *self, WF_Uri* value);
 
-/* Windows.Networking.Vpn.VpnNamespaceAssignment.get_ProxyAutoConfigUri() */
 HRESULT wnevp_vpn_namespace_assignment_get__proxy_auto_config_uri(WNEVP_VpnNamespaceAssignment *self, WF_Uri** value);
 
-/* activate Windows.Networking.Vpn.VpnNamespaceInfo */
 HRESULT wnevp_vpn_namespace_info_new(WNEVP_VpnNamespaceInfo **out);
 
-/* Windows.Networking.Vpn.VpnNamespaceInfo */
-/* Windows.Networking.Vpn.VpnNamespaceInfo.put_Namespace() */
 HRESULT wnevp_vpn_namespace_info_put__namespace(WNEVP_VpnNamespaceInfo *self, cwinrt_hstring value);
 
-/* Windows.Networking.Vpn.VpnNamespaceInfo.get_Namespace() */
 HRESULT wnevp_vpn_namespace_info_get__namespace(WNEVP_VpnNamespaceInfo *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.VpnNamespaceInfo.put_DnsServers() */
 HRESULT wnevp_vpn_namespace_info_put__dns_servers(WNEVP_VpnNamespaceInfo *self, WFOCO_IVector_WNE_HostName* value);
 
-/* Windows.Networking.Vpn.VpnNamespaceInfo.get_DnsServers() */
 HRESULT wnevp_vpn_namespace_info_get__dns_servers(WNEVP_VpnNamespaceInfo *self, WFOCO_IVector_WNE_HostName** value);
 
-/* Windows.Networking.Vpn.VpnNamespaceInfo.put_WebProxyServers() */
 HRESULT wnevp_vpn_namespace_info_put__web_proxy_servers(WNEVP_VpnNamespaceInfo *self, WFOCO_IVector_WNE_HostName* value);
 
-/* Windows.Networking.Vpn.VpnNamespaceInfo.get_WebProxyServers() */
 HRESULT wnevp_vpn_namespace_info_get__web_proxy_servers(WNEVP_VpnNamespaceInfo *self, WFOCO_IVector_WNE_HostName** value);
 
-/* activate Windows.Networking.Vpn.VpnNativeProfile */
 HRESULT wnevp_vpn_native_profile_new(WNEVP_VpnNativeProfile **out);
 
-/* Windows.Networking.Vpn.VpnNativeProfile */
-/* Windows.Networking.Vpn.VpnNativeProfile.get_Servers() */
 HRESULT wnevp_vpn_native_profile_get__servers(WNEVP_VpnNativeProfile *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Networking.Vpn.VpnNativeProfile.get_RoutingPolicyType() */
 HRESULT wnevp_vpn_native_profile_get__routing_policy_type(WNEVP_VpnNativeProfile *self, WNEVP_VpnRoutingPolicyType *value);
 
-/* Windows.Networking.Vpn.VpnNativeProfile.put_RoutingPolicyType() */
 HRESULT wnevp_vpn_native_profile_put__routing_policy_type(WNEVP_VpnNativeProfile *self, WNEVP_VpnRoutingPolicyType value);
 
-/* Windows.Networking.Vpn.VpnNativeProfile.get_NativeProtocolType() */
 HRESULT wnevp_vpn_native_profile_get__native_protocol_type(WNEVP_VpnNativeProfile *self, WNEVP_VpnNativeProtocolType *value);
 
-/* Windows.Networking.Vpn.VpnNativeProfile.put_NativeProtocolType() */
 HRESULT wnevp_vpn_native_profile_put__native_protocol_type(WNEVP_VpnNativeProfile *self, WNEVP_VpnNativeProtocolType value);
 
-/* Windows.Networking.Vpn.VpnNativeProfile.get_UserAuthenticationMethod() */
 HRESULT wnevp_vpn_native_profile_get__user_authentication_method(WNEVP_VpnNativeProfile *self, WNEVP_VpnAuthenticationMethod *value);
 
-/* Windows.Networking.Vpn.VpnNativeProfile.put_UserAuthenticationMethod() */
 HRESULT wnevp_vpn_native_profile_put__user_authentication_method(WNEVP_VpnNativeProfile *self, WNEVP_VpnAuthenticationMethod value);
 
-/* Windows.Networking.Vpn.VpnNativeProfile.get_TunnelAuthenticationMethod() */
 HRESULT wnevp_vpn_native_profile_get__tunnel_authentication_method(WNEVP_VpnNativeProfile *self, WNEVP_VpnAuthenticationMethod *value);
 
-/* Windows.Networking.Vpn.VpnNativeProfile.put_TunnelAuthenticationMethod() */
 HRESULT wnevp_vpn_native_profile_put__tunnel_authentication_method(WNEVP_VpnNativeProfile *self, WNEVP_VpnAuthenticationMethod value);
 
-/* Windows.Networking.Vpn.VpnNativeProfile.get_EapConfiguration() */
 HRESULT wnevp_vpn_native_profile_get__eap_configuration(WNEVP_VpnNativeProfile *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.VpnNativeProfile.put_EapConfiguration() */
 HRESULT wnevp_vpn_native_profile_put__eap_configuration(WNEVP_VpnNativeProfile *self, cwinrt_hstring value);
 
-/* Windows.Networking.Vpn.VpnNativeProfile.get_ProfileName() */
 HRESULT wnevp_vpn_native_profile_get__profile_name(WNEVP_VpnNativeProfile *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.VpnNativeProfile.put_ProfileName() */
 HRESULT wnevp_vpn_native_profile_put__profile_name(WNEVP_VpnNativeProfile *self, cwinrt_hstring value);
 
-/* Windows.Networking.Vpn.VpnNativeProfile.get_AppTriggers() */
 HRESULT wnevp_vpn_native_profile_get__app_triggers(WNEVP_VpnNativeProfile *self, WFOCO_IVector_WNEVP_VpnAppId** value);
 
-/* Windows.Networking.Vpn.VpnNativeProfile.get_Routes() */
 HRESULT wnevp_vpn_native_profile_get__routes(WNEVP_VpnNativeProfile *self, WFOCO_IVector_WNEVP_VpnRoute** value);
 
-/* Windows.Networking.Vpn.VpnNativeProfile.get_DomainNameInfoList() */
 HRESULT wnevp_vpn_native_profile_get__domain_name_info_list(WNEVP_VpnNativeProfile *self, WFOCO_IVector_WNEVP_VpnDomainNameInfo** value);
 
-/* Windows.Networking.Vpn.VpnNativeProfile.get_TrafficFilters() */
 HRESULT wnevp_vpn_native_profile_get__traffic_filters(WNEVP_VpnNativeProfile *self, WFOCO_IVector_WNEVP_VpnTrafficFilter** value);
 
-/* Windows.Networking.Vpn.VpnNativeProfile.get_RememberCredentials() */
 HRESULT wnevp_vpn_native_profile_get__remember_credentials(WNEVP_VpnNativeProfile *self, BOOL *value);
 
-/* Windows.Networking.Vpn.VpnNativeProfile.put_RememberCredentials() */
 HRESULT wnevp_vpn_native_profile_put__remember_credentials(WNEVP_VpnNativeProfile *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnNativeProfile.get_AlwaysOn() */
 HRESULT wnevp_vpn_native_profile_get__always_on(WNEVP_VpnNativeProfile *self, BOOL *value);
 
-/* Windows.Networking.Vpn.VpnNativeProfile.put_AlwaysOn() */
 HRESULT wnevp_vpn_native_profile_put__always_on(WNEVP_VpnNativeProfile *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnNativeProfile.get_RequireVpnClientAppUI() */
 HRESULT wnevp_vpn_native_profile_get__require_vpn_client_app_u_i(WNEVP_VpnNativeProfile *self, BOOL *value);
 
-/* Windows.Networking.Vpn.VpnNativeProfile.put_RequireVpnClientAppUI() */
 HRESULT wnevp_vpn_native_profile_put__require_vpn_client_app_u_i(WNEVP_VpnNativeProfile *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnNativeProfile.get_ConnectionStatus() */
 HRESULT wnevp_vpn_native_profile_get__connection_status(WNEVP_VpnNativeProfile *self, WNEVP_VpnManagementConnectionStatus *value);
 
-/* activate Windows.Networking.Vpn.VpnPacketBuffer */
 HRESULT wnevp_vpn_packet_buffer_new(WNEVP_VpnPacketBuffer **out);
 
-/* Windows.Networking.Vpn.VpnPacketBuffer */
-/* Windows.Networking.Vpn.VpnPacketBuffer.get_Buffer() */
 HRESULT wnevp_vpn_packet_buffer_get__buffer(WNEVP_VpnPacketBuffer *self, WSTST_Buffer** value);
 
-/* Windows.Networking.Vpn.VpnPacketBuffer.put_Status() */
 HRESULT wnevp_vpn_packet_buffer_put__status(WNEVP_VpnPacketBuffer *self, WNEVP_VpnPacketBufferStatus value);
 
-/* Windows.Networking.Vpn.VpnPacketBuffer.get_Status() */
 HRESULT wnevp_vpn_packet_buffer_get__status(WNEVP_VpnPacketBuffer *self, WNEVP_VpnPacketBufferStatus *value);
 
-/* Windows.Networking.Vpn.VpnPacketBuffer.put_TransportAffinity() */
 HRESULT wnevp_vpn_packet_buffer_put__transport_affinity(WNEVP_VpnPacketBuffer *self, uint32_t value);
 
-/* Windows.Networking.Vpn.VpnPacketBuffer.get_TransportAffinity() */
 HRESULT wnevp_vpn_packet_buffer_get__transport_affinity(WNEVP_VpnPacketBuffer *self, uint32_t *value);
 
-/* Windows.Networking.Vpn.VpnPacketBuffer.get_AppId() */
 HRESULT wnevp_vpn_packet_buffer_get__app_id(WNEVP_VpnPacketBuffer *self, WNEVP_VpnAppId** value);
 
-/* Windows.Networking.Vpn.VpnPacketBuffer.put_TransportContext() */
 HRESULT wnevp_vpn_packet_buffer_put__transport_context(WNEVP_VpnPacketBuffer *self, IInspectable* value);
 
-/* Windows.Networking.Vpn.VpnPacketBuffer.get_TransportContext() */
 HRESULT wnevp_vpn_packet_buffer_get__transport_context(WNEVP_VpnPacketBuffer *self, IInspectable** value);
 
-/* activate Windows.Networking.Vpn.VpnPacketBufferList */
 HRESULT wnevp_vpn_packet_buffer_list_new(WNEVP_VpnPacketBufferList **out);
 
-/* Windows.Networking.Vpn.VpnPacketBufferList */
-/* Windows.Networking.Vpn.VpnPacketBufferList.Append(nextVpnPacketBuffer) */
 HRESULT wnevp_vpn_packet_buffer_list_append(WNEVP_VpnPacketBufferList *self, WNEVP_VpnPacketBuffer* nextVpnPacketBuffer);
 
-/* Windows.Networking.Vpn.VpnPacketBufferList.AddAtBegin(nextVpnPacketBuffer) */
 HRESULT wnevp_vpn_packet_buffer_list_add_at_begin(WNEVP_VpnPacketBufferList *self, WNEVP_VpnPacketBuffer* nextVpnPacketBuffer);
 
-/* Windows.Networking.Vpn.VpnPacketBufferList.RemoveAtEnd() */
 HRESULT wnevp_vpn_packet_buffer_list_remove_at_end(WNEVP_VpnPacketBufferList *self, WNEVP_VpnPacketBuffer** out);
 
-/* Windows.Networking.Vpn.VpnPacketBufferList.RemoveAtBegin() */
 HRESULT wnevp_vpn_packet_buffer_list_remove_at_begin(WNEVP_VpnPacketBufferList *self, WNEVP_VpnPacketBuffer** out);
 
-/* Windows.Networking.Vpn.VpnPacketBufferList.Clear() */
 HRESULT wnevp_vpn_packet_buffer_list_clear(WNEVP_VpnPacketBufferList *self);
 
-/* Windows.Networking.Vpn.VpnPacketBufferList.put_Status() */
 HRESULT wnevp_vpn_packet_buffer_list_put__status(WNEVP_VpnPacketBufferList *self, WNEVP_VpnPacketBufferStatus value);
 
-/* Windows.Networking.Vpn.VpnPacketBufferList.get_Status() */
 HRESULT wnevp_vpn_packet_buffer_list_get__status(WNEVP_VpnPacketBufferList *self, WNEVP_VpnPacketBufferStatus *value);
 
-/* Windows.Networking.Vpn.VpnPacketBufferList.get_Size() */
 HRESULT wnevp_vpn_packet_buffer_list_get__size(WNEVP_VpnPacketBufferList *self, uint32_t *value);
 
-/* Windows.Networking.Vpn.VpnPacketBufferList.First() */
 HRESULT wnevp_vpn_packet_buffer_list_first(WNEVP_VpnPacketBufferList *self, WFOCO_IIterator_WNEVP_VpnPacketBuffer** out);
 
-/* activate Windows.Networking.Vpn.VpnPickedCredential */
 HRESULT wnevp_vpn_picked_credential_new(WNEVP_VpnPickedCredential **out);
 
-/* Windows.Networking.Vpn.VpnPickedCredential */
-/* Windows.Networking.Vpn.VpnPickedCredential.get_PasskeyCredential() */
 HRESULT wnevp_vpn_picked_credential_get__passkey_credential(WNEVP_VpnPickedCredential *self, WSECR_PasswordCredential** value);
 
-/* Windows.Networking.Vpn.VpnPickedCredential.get_AdditionalPin() */
 HRESULT wnevp_vpn_picked_credential_get__additional_pin(WNEVP_VpnPickedCredential *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.VpnPickedCredential.get_OldPasswordCredential() */
 HRESULT wnevp_vpn_picked_credential_get__old_password_credential(WNEVP_VpnPickedCredential *self, WSECR_PasswordCredential** value);
 
-/* activate Windows.Networking.Vpn.VpnPlugInProfile */
 HRESULT wnevp_vpn_plug_in_profile_new(WNEVP_VpnPlugInProfile **out);
 
-/* Windows.Networking.Vpn.VpnPlugInProfile */
-/* Windows.Networking.Vpn.VpnPlugInProfile.get_ServerUris() */
 HRESULT wnevp_vpn_plug_in_profile_get__server_uris(WNEVP_VpnPlugInProfile *self, WFOCO_IVector_WF_Uri** value);
 
-/* Windows.Networking.Vpn.VpnPlugInProfile.get_CustomConfiguration() */
 HRESULT wnevp_vpn_plug_in_profile_get__custom_configuration(WNEVP_VpnPlugInProfile *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.VpnPlugInProfile.put_CustomConfiguration() */
 HRESULT wnevp_vpn_plug_in_profile_put__custom_configuration(WNEVP_VpnPlugInProfile *self, cwinrt_hstring value);
 
-/* Windows.Networking.Vpn.VpnPlugInProfile.get_VpnPluginPackageFamilyName() */
 HRESULT wnevp_vpn_plug_in_profile_get__vpn_plugin_package_family_name(WNEVP_VpnPlugInProfile *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.VpnPlugInProfile.put_VpnPluginPackageFamilyName() */
 HRESULT wnevp_vpn_plug_in_profile_put__vpn_plugin_package_family_name(WNEVP_VpnPlugInProfile *self, cwinrt_hstring value);
 
-/* Windows.Networking.Vpn.VpnPlugInProfile.get_ProfileName() */
 HRESULT wnevp_vpn_plug_in_profile_get__profile_name(WNEVP_VpnPlugInProfile *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.VpnPlugInProfile.put_ProfileName() */
 HRESULT wnevp_vpn_plug_in_profile_put__profile_name(WNEVP_VpnPlugInProfile *self, cwinrt_hstring value);
 
-/* Windows.Networking.Vpn.VpnPlugInProfile.get_AppTriggers() */
 HRESULT wnevp_vpn_plug_in_profile_get__app_triggers(WNEVP_VpnPlugInProfile *self, WFOCO_IVector_WNEVP_VpnAppId** value);
 
-/* Windows.Networking.Vpn.VpnPlugInProfile.get_Routes() */
 HRESULT wnevp_vpn_plug_in_profile_get__routes(WNEVP_VpnPlugInProfile *self, WFOCO_IVector_WNEVP_VpnRoute** value);
 
-/* Windows.Networking.Vpn.VpnPlugInProfile.get_DomainNameInfoList() */
 HRESULT wnevp_vpn_plug_in_profile_get__domain_name_info_list(WNEVP_VpnPlugInProfile *self, WFOCO_IVector_WNEVP_VpnDomainNameInfo** value);
 
-/* Windows.Networking.Vpn.VpnPlugInProfile.get_TrafficFilters() */
 HRESULT wnevp_vpn_plug_in_profile_get__traffic_filters(WNEVP_VpnPlugInProfile *self, WFOCO_IVector_WNEVP_VpnTrafficFilter** value);
 
-/* Windows.Networking.Vpn.VpnPlugInProfile.get_RememberCredentials() */
 HRESULT wnevp_vpn_plug_in_profile_get__remember_credentials(WNEVP_VpnPlugInProfile *self, BOOL *value);
 
-/* Windows.Networking.Vpn.VpnPlugInProfile.put_RememberCredentials() */
 HRESULT wnevp_vpn_plug_in_profile_put__remember_credentials(WNEVP_VpnPlugInProfile *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnPlugInProfile.get_AlwaysOn() */
 HRESULT wnevp_vpn_plug_in_profile_get__always_on(WNEVP_VpnPlugInProfile *self, BOOL *value);
 
-/* Windows.Networking.Vpn.VpnPlugInProfile.put_AlwaysOn() */
 HRESULT wnevp_vpn_plug_in_profile_put__always_on(WNEVP_VpnPlugInProfile *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnPlugInProfile.get_RequireVpnClientAppUI() */
 HRESULT wnevp_vpn_plug_in_profile_get__require_vpn_client_app_u_i(WNEVP_VpnPlugInProfile *self, BOOL *value);
 
-/* Windows.Networking.Vpn.VpnPlugInProfile.put_RequireVpnClientAppUI() */
 HRESULT wnevp_vpn_plug_in_profile_put__require_vpn_client_app_u_i(WNEVP_VpnPlugInProfile *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnPlugInProfile.get_ConnectionStatus() */
 HRESULT wnevp_vpn_plug_in_profile_get__connection_status(WNEVP_VpnPlugInProfile *self, WNEVP_VpnManagementConnectionStatus *value);
 
-/* activate Windows.Networking.Vpn.VpnRoute */
 HRESULT wnevp_vpn_route_new(WNEVP_VpnRoute **out);
 
-/* Windows.Networking.Vpn.VpnRoute */
-/* Windows.Networking.Vpn.VpnRoute.put_Address() */
 HRESULT wnevp_vpn_route_put__address(WNEVP_VpnRoute *self, WNE_HostName* value);
 
-/* Windows.Networking.Vpn.VpnRoute.get_Address() */
 HRESULT wnevp_vpn_route_get__address(WNEVP_VpnRoute *self, WNE_HostName** value);
 
-/* Windows.Networking.Vpn.VpnRoute.put_PrefixSize() */
 HRESULT wnevp_vpn_route_put__prefix_size(WNEVP_VpnRoute *self, uint8_t value);
 
-/* Windows.Networking.Vpn.VpnRoute.get_PrefixSize() */
 HRESULT wnevp_vpn_route_get__prefix_size(WNEVP_VpnRoute *self, uint8_t *value);
 
-/* activate Windows.Networking.Vpn.VpnRouteAssignment */
 HRESULT wnevp_vpn_route_assignment_new(WNEVP_VpnRouteAssignment **out);
 
-/* Windows.Networking.Vpn.VpnRouteAssignment */
-/* Windows.Networking.Vpn.VpnRouteAssignment.put_Ipv4InclusionRoutes() */
 HRESULT wnevp_vpn_route_assignment_put__ipv4_inclusion_routes(WNEVP_VpnRouteAssignment *self, WFOCO_IVector_WNEVP_VpnRoute* value);
 
-/* Windows.Networking.Vpn.VpnRouteAssignment.put_Ipv6InclusionRoutes() */
 HRESULT wnevp_vpn_route_assignment_put__ipv6_inclusion_routes(WNEVP_VpnRouteAssignment *self, WFOCO_IVector_WNEVP_VpnRoute* value);
 
-/* Windows.Networking.Vpn.VpnRouteAssignment.get_Ipv4InclusionRoutes() */
 HRESULT wnevp_vpn_route_assignment_get__ipv4_inclusion_routes(WNEVP_VpnRouteAssignment *self, WFOCO_IVector_WNEVP_VpnRoute** value);
 
-/* Windows.Networking.Vpn.VpnRouteAssignment.get_Ipv6InclusionRoutes() */
 HRESULT wnevp_vpn_route_assignment_get__ipv6_inclusion_routes(WNEVP_VpnRouteAssignment *self, WFOCO_IVector_WNEVP_VpnRoute** value);
 
-/* Windows.Networking.Vpn.VpnRouteAssignment.put_Ipv4ExclusionRoutes() */
 HRESULT wnevp_vpn_route_assignment_put__ipv4_exclusion_routes(WNEVP_VpnRouteAssignment *self, WFOCO_IVector_WNEVP_VpnRoute* value);
 
-/* Windows.Networking.Vpn.VpnRouteAssignment.put_Ipv6ExclusionRoutes() */
 HRESULT wnevp_vpn_route_assignment_put__ipv6_exclusion_routes(WNEVP_VpnRouteAssignment *self, WFOCO_IVector_WNEVP_VpnRoute* value);
 
-/* Windows.Networking.Vpn.VpnRouteAssignment.get_Ipv4ExclusionRoutes() */
 HRESULT wnevp_vpn_route_assignment_get__ipv4_exclusion_routes(WNEVP_VpnRouteAssignment *self, WFOCO_IVector_WNEVP_VpnRoute** value);
 
-/* Windows.Networking.Vpn.VpnRouteAssignment.get_Ipv6ExclusionRoutes() */
 HRESULT wnevp_vpn_route_assignment_get__ipv6_exclusion_routes(WNEVP_VpnRouteAssignment *self, WFOCO_IVector_WNEVP_VpnRoute** value);
 
-/* Windows.Networking.Vpn.VpnRouteAssignment.put_ExcludeLocalSubnets() */
 HRESULT wnevp_vpn_route_assignment_put__exclude_local_subnets(WNEVP_VpnRouteAssignment *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnRouteAssignment.get_ExcludeLocalSubnets() */
 HRESULT wnevp_vpn_route_assignment_get__exclude_local_subnets(WNEVP_VpnRouteAssignment *self, BOOL *value);
 
-/* activate Windows.Networking.Vpn.VpnSystemHealth */
 HRESULT wnevp_vpn_system_health_new(WNEVP_VpnSystemHealth **out);
 
-/* Windows.Networking.Vpn.VpnSystemHealth */
-/* Windows.Networking.Vpn.VpnSystemHealth.get_StatementOfHealth() */
 HRESULT wnevp_vpn_system_health_get__statement_of_health(WNEVP_VpnSystemHealth *self, WSTST_Buffer** value);
 
-/* activate Windows.Networking.Vpn.VpnTrafficFilter */
 HRESULT wnevp_vpn_traffic_filter_new(WNEVP_VpnTrafficFilter **out);
 
-/* Windows.Networking.Vpn.VpnTrafficFilter */
-/* Windows.Networking.Vpn.VpnTrafficFilter.get_AppId() */
 HRESULT wnevp_vpn_traffic_filter_get__app_id(WNEVP_VpnTrafficFilter *self, WNEVP_VpnAppId** value);
 
-/* Windows.Networking.Vpn.VpnTrafficFilter.put_AppId() */
 HRESULT wnevp_vpn_traffic_filter_put__app_id(WNEVP_VpnTrafficFilter *self, WNEVP_VpnAppId* value);
 
-/* Windows.Networking.Vpn.VpnTrafficFilter.get_AppClaims() */
 HRESULT wnevp_vpn_traffic_filter_get__app_claims(WNEVP_VpnTrafficFilter *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Networking.Vpn.VpnTrafficFilter.get_Protocol() */
 HRESULT wnevp_vpn_traffic_filter_get__protocol(WNEVP_VpnTrafficFilter *self, WNEVP_VpnIPProtocol *value);
 
-/* Windows.Networking.Vpn.VpnTrafficFilter.put_Protocol() */
 HRESULT wnevp_vpn_traffic_filter_put__protocol(WNEVP_VpnTrafficFilter *self, WNEVP_VpnIPProtocol value);
 
-/* Windows.Networking.Vpn.VpnTrafficFilter.get_LocalPortRanges() */
 HRESULT wnevp_vpn_traffic_filter_get__local_port_ranges(WNEVP_VpnTrafficFilter *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Networking.Vpn.VpnTrafficFilter.get_RemotePortRanges() */
 HRESULT wnevp_vpn_traffic_filter_get__remote_port_ranges(WNEVP_VpnTrafficFilter *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Networking.Vpn.VpnTrafficFilter.get_LocalAddressRanges() */
 HRESULT wnevp_vpn_traffic_filter_get__local_address_ranges(WNEVP_VpnTrafficFilter *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Networking.Vpn.VpnTrafficFilter.get_RemoteAddressRanges() */
 HRESULT wnevp_vpn_traffic_filter_get__remote_address_ranges(WNEVP_VpnTrafficFilter *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Networking.Vpn.VpnTrafficFilter.get_RoutingPolicyType() */
 HRESULT wnevp_vpn_traffic_filter_get__routing_policy_type(WNEVP_VpnTrafficFilter *self, WNEVP_VpnRoutingPolicyType *value);
 
-/* Windows.Networking.Vpn.VpnTrafficFilter.put_RoutingPolicyType() */
 HRESULT wnevp_vpn_traffic_filter_put__routing_policy_type(WNEVP_VpnTrafficFilter *self, WNEVP_VpnRoutingPolicyType value);
 
-/* activate Windows.Networking.Vpn.VpnTrafficFilterAssignment */
 HRESULT wnevp_vpn_traffic_filter_assignment_new(WNEVP_VpnTrafficFilterAssignment **out);
 
-/* Windows.Networking.Vpn.VpnTrafficFilterAssignment */
-/* Windows.Networking.Vpn.VpnTrafficFilterAssignment.get_TrafficFilterList() */
 HRESULT wnevp_vpn_traffic_filter_assignment_get__traffic_filter_list(WNEVP_VpnTrafficFilterAssignment *self, WFOCO_IVector_WNEVP_VpnTrafficFilter** value);
 
-/* Windows.Networking.Vpn.VpnTrafficFilterAssignment.get_AllowOutbound() */
 HRESULT wnevp_vpn_traffic_filter_assignment_get__allow_outbound(WNEVP_VpnTrafficFilterAssignment *self, BOOL *value);
 
-/* Windows.Networking.Vpn.VpnTrafficFilterAssignment.put_AllowOutbound() */
 HRESULT wnevp_vpn_traffic_filter_assignment_put__allow_outbound(WNEVP_VpnTrafficFilterAssignment *self, BOOL value);
 
-/* Windows.Networking.Vpn.VpnTrafficFilterAssignment.get_AllowInbound() */
 HRESULT wnevp_vpn_traffic_filter_assignment_get__allow_inbound(WNEVP_VpnTrafficFilterAssignment *self, BOOL *value);
 
-/* Windows.Networking.Vpn.VpnTrafficFilterAssignment.put_AllowInbound() */
 HRESULT wnevp_vpn_traffic_filter_assignment_put__allow_inbound(WNEVP_VpnTrafficFilterAssignment *self, BOOL value);
 
-/* Windows.Networking.Vpn.IVpnAppId */
-/* Windows.Networking.Vpn.IVpnChannel */
-/* Windows.Networking.Vpn.IVpnChannel2 */
-/* Windows.Networking.Vpn.IVpnChannel2.StartWithMainTransport(assignedClientIPv4list, assignedClientIPv6list, vpnInterfaceId, assignedRoutes, assignedDomainName, mtuSize, maxFrameSize, Reserved, mainOuterTunnelTransport) */
 HRESULT wnevp_vpn_channel_2_start_with_main_transport(WNEVP_IVpnChannel_2 *self, WFOCO_IVectorView_WNE_HostName* assignedClientIPv4list, WFOCO_IVectorView_WNE_HostName* assignedClientIPv6list, WNEVP_VpnInterfaceId* vpnInterfaceId, WNEVP_VpnRouteAssignment* assignedRoutes, WNEVP_VpnDomainNameAssignment* assignedDomainName, uint32_t mtuSize, uint32_t maxFrameSize, BOOL Reserved, IInspectable* mainOuterTunnelTransport);
 
-/* Windows.Networking.Vpn.IVpnChannel2.StartExistingTransports(assignedClientIPv4list, assignedClientIPv6list, vpnInterfaceId, assignedRoutes, assignedDomainName, mtuSize, maxFrameSize, Reserved) */
 HRESULT wnevp_vpn_channel_2_start_existing_transports(WNEVP_IVpnChannel_2 *self, WFOCO_IVectorView_WNE_HostName* assignedClientIPv4list, WFOCO_IVectorView_WNE_HostName* assignedClientIPv6list, WNEVP_VpnInterfaceId* vpnInterfaceId, WNEVP_VpnRouteAssignment* assignedRoutes, WNEVP_VpnDomainNameAssignment* assignedDomainName, uint32_t mtuSize, uint32_t maxFrameSize, BOOL Reserved);
 
-/* Windows.Networking.Vpn.IVpnChannel2.GetVpnSendPacketBuffer() */
 HRESULT wnevp_vpn_channel_2_get_vpn_send_packet_buffer(WNEVP_IVpnChannel_2 *self, WNEVP_VpnPacketBuffer** out);
 
-/* Windows.Networking.Vpn.IVpnChannel2.GetVpnReceivePacketBuffer() */
 HRESULT wnevp_vpn_channel_2_get_vpn_receive_packet_buffer(WNEVP_IVpnChannel_2 *self, WNEVP_VpnPacketBuffer** out);
 
-/* Windows.Networking.Vpn.IVpnChannel2.RequestCustomPromptAsync(customPromptElement) */
 HRESULT wnevp_vpn_channel_2_request_custom_prompt_async(WNEVP_IVpnChannel_2 *self, WFOCO_IVectorView_WNEVP_IVpnCustomPromptElement* customPromptElement, WF_IAsyncAction** out);
 
-/* Windows.Networking.Vpn.IVpnChannel2.RequestCredentialsAsync(credType, credOptions, certificate) */
 HRESULT wnevp_vpn_channel_2_request_credentials_async_vpn_credential_type_u32_p_p(WNEVP_IVpnChannel_2 *self, WNEVP_VpnCredentialType credType, uint32_t credOptions, WSECRCE_Certificate* certificate, WF_IAsyncOperation_WNEVP_VpnCredential** out);
 
-/* Windows.Networking.Vpn.IVpnChannel2.RequestCredentialsAsync(credType, credOptions) */
 HRESULT wnevp_vpn_channel_2_request_credentials_async_vpn_credential_type_u32_p(WNEVP_IVpnChannel_2 *self, WNEVP_VpnCredentialType credType, uint32_t credOptions, WF_IAsyncOperation_WNEVP_VpnCredential** out);
 
-/* Windows.Networking.Vpn.IVpnChannel2.RequestCredentialsAsync(credType) */
 HRESULT wnevp_vpn_channel_2_request_credentials_async(WNEVP_IVpnChannel_2 *self, WNEVP_VpnCredentialType credType, WF_IAsyncOperation_WNEVP_VpnCredential** out);
 
-/* Windows.Networking.Vpn.IVpnChannel2.TerminateConnection(message) */
 HRESULT wnevp_vpn_channel_2_terminate_connection(WNEVP_IVpnChannel_2 *self, cwinrt_hstring message);
 
-/* Windows.Networking.Vpn.IVpnChannel2.StartWithTrafficFilter(assignedClientIpv4List, assignedClientIpv6List, vpnInterfaceId, assignedRoutes, assignedNamespace, mtuSize, maxFrameSize, reserved, mainOuterTunnelTransport, optionalOuterTunnelTransport, assignedTrafficFilters) */
 HRESULT wnevp_vpn_channel_2_start_with_traffic_filter(WNEVP_IVpnChannel_2 *self, WFOCO_IVectorView_WNE_HostName* assignedClientIpv4List, WFOCO_IVectorView_WNE_HostName* assignedClientIpv6List, WNEVP_VpnInterfaceId* vpnInterfaceId, WNEVP_VpnRouteAssignment* assignedRoutes, WNEVP_VpnDomainNameAssignment* assignedNamespace, uint32_t mtuSize, uint32_t maxFrameSize, BOOL reserved, IInspectable* mainOuterTunnelTransport, IInspectable* optionalOuterTunnelTransport, WNEVP_VpnTrafficFilterAssignment* assignedTrafficFilters);
 
-/* Windows.Networking.Vpn.IVpnChannel4 */
-/* Windows.Networking.Vpn.IVpnChannel4.AddAndAssociateTransport(transport, context) */
 HRESULT wnevp_vpn_channel_4_add_and_associate_transport(WNEVP_IVpnChannel_4 *self, IInspectable* transport, IInspectable* context);
 
-/* Windows.Networking.Vpn.IVpnChannel4.StartWithTrafficFilter(assignedClientIpv4Addresses, assignedClientIpv6Addresses, vpninterfaceId, assignedRoutes, assignedNamespace, mtuSize, maxFrameSize, reserved, transports, assignedTrafficFilters) */
 HRESULT wnevp_vpn_channel_4_start_with_traffic_filter(WNEVP_IVpnChannel_4 *self, WFOCO_IIterable_WNE_HostName* assignedClientIpv4Addresses, WFOCO_IIterable_WNE_HostName* assignedClientIpv6Addresses, WNEVP_VpnInterfaceId* vpninterfaceId, WNEVP_VpnRouteAssignment* assignedRoutes, WNEVP_VpnDomainNameAssignment* assignedNamespace, uint32_t mtuSize, uint32_t maxFrameSize, BOOL reserved, WFOCO_IIterable_Object* transports, WNEVP_VpnTrafficFilterAssignment* assignedTrafficFilters);
 
-/* Windows.Networking.Vpn.IVpnChannel4.ReplaceAndAssociateTransport(transport, context) */
 HRESULT wnevp_vpn_channel_4_replace_and_associate_transport(WNEVP_IVpnChannel_4 *self, IInspectable* transport, IInspectable* context);
 
-/* Windows.Networking.Vpn.IVpnChannel4.StartReconnectingTransport(transport, context) */
 HRESULT wnevp_vpn_channel_4_start_reconnecting_transport(WNEVP_IVpnChannel_4 *self, IInspectable* transport, IInspectable* context);
 
-/* Windows.Networking.Vpn.IVpnChannel4.GetSlotTypeForTransportContext(context) */
 HRESULT wnevp_vpn_channel_4_get_slot_type_for_transport_context(WNEVP_IVpnChannel_4 *self, IInspectable* context, WNESO_ControlChannelTriggerStatus *out);
 
-/* Windows.Networking.Vpn.IVpnChannel4.get_CurrentRequestTransportContext() */
 HRESULT wnevp_vpn_channel_4_get__current_request_transport_context(WNEVP_IVpnChannel_4 *self, IInspectable** value);
 
-/* Windows.Networking.Vpn.IVpnChannel5 */
-/* Windows.Networking.Vpn.IVpnChannel5.AppendVpnReceivePacketBuffer(decapsulatedPacketBuffer) */
 HRESULT wnevp_vpn_channel_5_append_vpn_receive_packet_buffer(WNEVP_IVpnChannel_5 *self, WNEVP_VpnPacketBuffer* decapsulatedPacketBuffer);
 
-/* Windows.Networking.Vpn.IVpnChannel5.AppendVpnSendPacketBuffer(encapsulatedPacketBuffer) */
 HRESULT wnevp_vpn_channel_5_append_vpn_send_packet_buffer(WNEVP_IVpnChannel_5 *self, WNEVP_VpnPacketBuffer* encapsulatedPacketBuffer);
 
-/* Windows.Networking.Vpn.IVpnChannel5.FlushVpnReceivePacketBuffers() */
 HRESULT wnevp_vpn_channel_5_flush_vpn_receive_packet_buffers(WNEVP_IVpnChannel_5 *self);
 
-/* Windows.Networking.Vpn.IVpnChannel5.FlushVpnSendPacketBuffers() */
 HRESULT wnevp_vpn_channel_5_flush_vpn_send_packet_buffers(WNEVP_IVpnChannel_5 *self);
 
-/* Windows.Networking.Vpn.IVpnChannel6 */
-/* Windows.Networking.Vpn.IVpnChannel6.ActivateForeground(packageRelativeAppId, sharedContext) */
 HRESULT wnevp_vpn_channel_6_activate_foreground(WNEVP_IVpnChannel_6 *self, cwinrt_hstring packageRelativeAppId, WFOCO_ValueSet* sharedContext, WFOCO_ValueSet** out);
 
-/* Windows.Networking.Vpn.IVpnChannelActivityEventArgs */
-/* Windows.Networking.Vpn.IVpnChannelActivityStateChangedArgs */
-/* Windows.Networking.Vpn.IVpnChannelConfiguration */
-/* Windows.Networking.Vpn.IVpnChannelConfiguration2 */
-/* Windows.Networking.Vpn.IVpnChannelConfiguration2.get_ServerUris() */
 HRESULT wnevp_vpn_channel_configuration_2_get__server_uris(WNEVP_IVpnChannelConfiguration_2 *self, WFOCO_IVectorView_WF_Uri** value);
 
-/* Windows.Networking.Vpn.IVpnCredential */
-/* Windows.Networking.Vpn.IVpnCustomCheckBox */
-/* Windows.Networking.Vpn.IVpnCustomComboBox */
-/* Windows.Networking.Vpn.IVpnCustomEditBox */
-/* Windows.Networking.Vpn.IVpnCustomPromptBooleanInput */
-/* Windows.Networking.Vpn.IVpnCustomPromptOptionSelector */
-/* Windows.Networking.Vpn.IVpnCustomPromptText */
-/* Windows.Networking.Vpn.IVpnCustomPromptTextInput */
-/* Windows.Networking.Vpn.IVpnCustomTextBox */
-/* Windows.Networking.Vpn.IVpnDomainNameAssignment */
-/* Windows.Networking.Vpn.IVpnDomainNameInfo */
-/* Windows.Networking.Vpn.IVpnDomainNameInfo2 */
-/* Windows.Networking.Vpn.IVpnDomainNameInfo2.get_WebProxyUris() */
 HRESULT wnevp_vpn_domain_name_info_2_get__web_proxy_uris(WNEVP_IVpnDomainNameInfo_2 *self, WFOCO_IVector_WF_Uri** value);
 
-/* Windows.Networking.Vpn.IVpnForegroundActivatedEventArgs */
-/* Windows.Networking.Vpn.IVpnForegroundActivationOperation */
-/* Windows.Networking.Vpn.IVpnInterfaceId */
-/* Windows.Networking.Vpn.IVpnManagementAgent */
-/* Windows.Networking.Vpn.IVpnNamespaceAssignment */
-/* Windows.Networking.Vpn.IVpnNamespaceInfo */
-/* Windows.Networking.Vpn.IVpnNativeProfile */
-/* Windows.Networking.Vpn.IVpnNativeProfile2 */
-/* Windows.Networking.Vpn.IVpnNativeProfile2.get_RequireVpnClientAppUI() */
 HRESULT wnevp_vpn_native_profile_2_get__require_vpn_client_app_u_i(WNEVP_IVpnNativeProfile_2 *self, BOOL *value);
 
-/* Windows.Networking.Vpn.IVpnNativeProfile2.put_RequireVpnClientAppUI() */
 HRESULT wnevp_vpn_native_profile_2_put__require_vpn_client_app_u_i(WNEVP_IVpnNativeProfile_2 *self, BOOL value);
 
-/* Windows.Networking.Vpn.IVpnNativeProfile2.get_ConnectionStatus() */
 HRESULT wnevp_vpn_native_profile_2_get__connection_status(WNEVP_IVpnNativeProfile_2 *self, WNEVP_VpnManagementConnectionStatus *value);
 
-/* Windows.Networking.Vpn.IVpnPacketBuffer */
-/* Windows.Networking.Vpn.IVpnPacketBuffer2 */
-/* Windows.Networking.Vpn.IVpnPacketBuffer2.get_AppId() */
 HRESULT wnevp_vpn_packet_buffer_2_get__app_id(WNEVP_IVpnPacketBuffer_2 *self, WNEVP_VpnAppId** value);
 
-/* Windows.Networking.Vpn.IVpnPacketBuffer3 */
-/* Windows.Networking.Vpn.IVpnPacketBuffer3.put_TransportContext() */
 HRESULT wnevp_vpn_packet_buffer_3_put__transport_context(WNEVP_IVpnPacketBuffer_3 *self, IInspectable* value);
 
-/* Windows.Networking.Vpn.IVpnPacketBuffer3.get_TransportContext() */
 HRESULT wnevp_vpn_packet_buffer_3_get__transport_context(WNEVP_IVpnPacketBuffer_3 *self, IInspectable** value);
 
-/* Windows.Networking.Vpn.IVpnPacketBufferList */
-/* Windows.Networking.Vpn.IVpnPickedCredential */
-/* Windows.Networking.Vpn.IVpnPlugInProfile */
-/* Windows.Networking.Vpn.IVpnPlugInProfile2 */
-/* Windows.Networking.Vpn.IVpnPlugInProfile2.get_RequireVpnClientAppUI() */
 HRESULT wnevp_vpn_plug_in_profile_2_get__require_vpn_client_app_u_i(WNEVP_IVpnPlugInProfile_2 *self, BOOL *value);
 
-/* Windows.Networking.Vpn.IVpnPlugInProfile2.put_RequireVpnClientAppUI() */
 HRESULT wnevp_vpn_plug_in_profile_2_put__require_vpn_client_app_u_i(WNEVP_IVpnPlugInProfile_2 *self, BOOL value);
 
-/* Windows.Networking.Vpn.IVpnPlugInProfile2.get_ConnectionStatus() */
 HRESULT wnevp_vpn_plug_in_profile_2_get__connection_status(WNEVP_IVpnPlugInProfile_2 *self, WNEVP_VpnManagementConnectionStatus *value);
 
-/* Windows.Networking.Vpn.IVpnRoute */
-/* Windows.Networking.Vpn.IVpnRouteAssignment */
-/* Windows.Networking.Vpn.IVpnSystemHealth */
-/* Windows.Networking.Vpn.IVpnTrafficFilter */
-/* Windows.Networking.Vpn.IVpnTrafficFilterAssignment */
-/* Windows.Networking.Vpn.IVpnCustomPromptElement */
-/* Windows.Networking.Vpn.IVpnCustomPromptElement.put_DisplayName() */
 HRESULT wnevp_vpn_custom_prompt_element_put__display_name(WNEVP_IVpnCustomPromptElement *self, cwinrt_hstring value);
 
-/* Windows.Networking.Vpn.IVpnCustomPromptElement.get_DisplayName() */
 HRESULT wnevp_vpn_custom_prompt_element_get__display_name(WNEVP_IVpnCustomPromptElement *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.IVpnCustomPromptElement.put_Compulsory() */
 HRESULT wnevp_vpn_custom_prompt_element_put__compulsory(WNEVP_IVpnCustomPromptElement *self, BOOL value);
 
-/* Windows.Networking.Vpn.IVpnCustomPromptElement.get_Compulsory() */
 HRESULT wnevp_vpn_custom_prompt_element_get__compulsory(WNEVP_IVpnCustomPromptElement *self, BOOL *value);
 
-/* Windows.Networking.Vpn.IVpnCustomPromptElement.put_Emphasized() */
 HRESULT wnevp_vpn_custom_prompt_element_put__emphasized(WNEVP_IVpnCustomPromptElement *self, BOOL value);
 
-/* Windows.Networking.Vpn.IVpnCustomPromptElement.get_Emphasized() */
 HRESULT wnevp_vpn_custom_prompt_element_get__emphasized(WNEVP_IVpnCustomPromptElement *self, BOOL *value);
 
-/* Windows.Networking.Vpn.IVpnCustomPrompt */
-/* Windows.Networking.Vpn.IVpnCustomPrompt.put_Label() */
 HRESULT wnevp_vpn_custom_prompt_put__label(WNEVP_IVpnCustomPrompt *self, cwinrt_hstring value);
 
-/* Windows.Networking.Vpn.IVpnCustomPrompt.get_Label() */
 HRESULT wnevp_vpn_custom_prompt_get__label(WNEVP_IVpnCustomPrompt *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.IVpnCustomPrompt.put_Compulsory() */
 HRESULT wnevp_vpn_custom_prompt_put__compulsory(WNEVP_IVpnCustomPrompt *self, BOOL value);
 
-/* Windows.Networking.Vpn.IVpnCustomPrompt.get_Compulsory() */
 HRESULT wnevp_vpn_custom_prompt_get__compulsory(WNEVP_IVpnCustomPrompt *self, BOOL *value);
 
-/* Windows.Networking.Vpn.IVpnCustomPrompt.put_Bordered() */
 HRESULT wnevp_vpn_custom_prompt_put__bordered(WNEVP_IVpnCustomPrompt *self, BOOL value);
 
-/* Windows.Networking.Vpn.IVpnCustomPrompt.get_Bordered() */
 HRESULT wnevp_vpn_custom_prompt_get__bordered(WNEVP_IVpnCustomPrompt *self, BOOL *value);
 
-/* Windows.Networking.Vpn.IVpnProfile */
-/* Windows.Networking.Vpn.IVpnProfile.get_ProfileName() */
 HRESULT wnevp_vpn_profile_get__profile_name(WNEVP_IVpnProfile *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Vpn.IVpnProfile.put_ProfileName() */
 HRESULT wnevp_vpn_profile_put__profile_name(WNEVP_IVpnProfile *self, cwinrt_hstring value);
 
-/* Windows.Networking.Vpn.IVpnProfile.get_AppTriggers() */
 HRESULT wnevp_vpn_profile_get__app_triggers(WNEVP_IVpnProfile *self, WFOCO_IVector_WNEVP_VpnAppId** value);
 
-/* Windows.Networking.Vpn.IVpnProfile.get_Routes() */
 HRESULT wnevp_vpn_profile_get__routes(WNEVP_IVpnProfile *self, WFOCO_IVector_WNEVP_VpnRoute** value);
 
-/* Windows.Networking.Vpn.IVpnProfile.get_DomainNameInfoList() */
 HRESULT wnevp_vpn_profile_get__domain_name_info_list(WNEVP_IVpnProfile *self, WFOCO_IVector_WNEVP_VpnDomainNameInfo** value);
 
-/* Windows.Networking.Vpn.IVpnProfile.get_TrafficFilters() */
 HRESULT wnevp_vpn_profile_get__traffic_filters(WNEVP_IVpnProfile *self, WFOCO_IVector_WNEVP_VpnTrafficFilter** value);
 
-/* Windows.Networking.Vpn.IVpnProfile.get_RememberCredentials() */
 HRESULT wnevp_vpn_profile_get__remember_credentials(WNEVP_IVpnProfile *self, BOOL *value);
 
-/* Windows.Networking.Vpn.IVpnProfile.put_RememberCredentials() */
 HRESULT wnevp_vpn_profile_put__remember_credentials(WNEVP_IVpnProfile *self, BOOL value);
 
-/* Windows.Networking.Vpn.IVpnProfile.get_AlwaysOn() */
 HRESULT wnevp_vpn_profile_get__always_on(WNEVP_IVpnProfile *self, BOOL *value);
 
-/* Windows.Networking.Vpn.IVpnProfile.put_AlwaysOn() */
 HRESULT wnevp_vpn_profile_put__always_on(WNEVP_IVpnProfile *self, BOOL value);
 
 #endif /* CWINRT_WINDOWS_NETWORKING_VPN_H */

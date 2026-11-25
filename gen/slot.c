@@ -127,9 +127,6 @@ static uint32_t collect_class_ifaces(cwinrt_raw_db const *raw, cwinrt_raw_type c
 	return n;
 }
 
-/* Find the interface (in the class's transitive interface set) that declares
-   `m`, returning its per-interface slot + token via out params. Prefers an exact
-   arg-type match (disambiguates overloads), else the first name match. */
 static bool find_declaring_iface(
   cwinrt_raw_db const *raw, cwinrt_raw_method const *m, uint32_t const *ifaces, uint32_t iface_n, uint32_t *out_slot,
   uint32_t *out_tok
@@ -204,8 +201,6 @@ static void assign_static_serving_ifaces(cwinrt_raw_db *raw, cwinrt_raw_type con
 	}
 }
 
-/* Pick the lowest-ranked static interface that already holds an assigned slot
-   for this static method overload; report its slot/dispatch via out params. */
 static bool find_best_static_slot(
   cwinrt_raw_db *raw, cwinrt_raw_type const *cls, cwinrt_raw_method const *m, uint32_t *out_slot, uint32_t *out_tok
 ) {
@@ -342,8 +337,6 @@ static uint32_t gather_iface_methods(cwinrt_raw_db const *raw, uint32_t type_tok
 	return n;
 }
 
-/* Validate one interface's contiguous slot numbering. Returns violation count
-   and accumulates ok/bad counters; -1 on allocation failure. */
 static int check_iface(
   cwinrt_raw_db const *raw, cwinrt_raw_type const *t, uint32_t *inout_ok, uint32_t *inout_bad
 ) {

@@ -16,7 +16,6 @@
 #include <cwinrt/Windows.UI.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSY_DispatcherQueue
 #define CWINRT_FWD_WSY_DispatcherQueue
 typedef struct WSY_DispatcherQueue WSY_DispatcherQueue;
@@ -37,7 +36,6 @@ typedef enum WSEAUAP_AppCapabilityAccessStatus {
 typedef struct WUC_Visual WUC_Visual;
 #endif
 
-/* Windows.Graphics integer value types (ABI layout) */
 #ifndef CWINRT_ABI_WG_SIZEINT32
 #define CWINRT_ABI_WG_SIZEINT32
 typedef struct WG_SizeInt32 { int32_t Width; int32_t Height; } WG_SizeInt32;
@@ -51,7 +49,6 @@ typedef struct WG_PointInt32 { int32_t X; int32_t Y; } WG_PointInt32;
 typedef struct WG_RectInt32 { int32_t X; int32_t Y; int32_t Width; int32_t Height; } WG_RectInt32;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WGC_GraphicsCapturePicker WGC_GraphicsCapturePicker;
 typedef struct WGC_GraphicsCaptureSession WGC_GraphicsCaptureSession;
 typedef struct WGC_IDirect3D11CaptureFramePoolStatics WGC_IDirect3D11CaptureFramePoolStatics;
@@ -79,7 +76,6 @@ typedef struct WGC_IDirect3D11CaptureFrame WGC_IDirect3D11CaptureFrame;
 typedef struct WGC_IDirect3D11CaptureFrame_2 WGC_IDirect3D11CaptureFrame_2;
 typedef struct WGC_IDirect3D11CaptureFrame_3 WGC_IDirect3D11CaptureFrame_3;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WGC_GraphicsCaptureItem
 #define CWINRT_FWD_WF_IAsyncOperation_WGC_GraphicsCaptureItem
 typedef struct WF_IAsyncOperation_WGC_GraphicsCaptureItem WF_IAsyncOperation_WGC_GraphicsCaptureItem;
@@ -281,7 +277,6 @@ typedef enum WGC_GraphicsCaptureAccessKind {
 } WGC_GraphicsCaptureAccessKind;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -366,236 +361,142 @@ static const IID CWINRT_IID_WGC_IDirect3D11CaptureFrame_2 CWINRT_MAYBE_UNUSED = 
 static const IID CWINRT_IID_WGC_IDirect3D11CaptureFrame_3 CWINRT_MAYBE_UNUSED = { 0x71616DC8, 0xFEA5, 0x5741, { 0xA3, 0xD8, 0x59, 0x1A, 0xCC, 0x39, 0xA9, 0xEE } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Graphics.Capture.GraphicsCapturePicker */
 HRESULT wgc_graphics_capture_picker_new(WGC_GraphicsCapturePicker **out);
 
-/* Windows.Graphics.Capture.GraphicsCapturePicker */
-/* Windows.Graphics.Capture.GraphicsCapturePicker.PickSingleItemAsync() */
 HRESULT wgc_graphics_capture_picker_pick_single_item_async(WGC_GraphicsCapturePicker *self, WF_IAsyncOperation_WGC_GraphicsCaptureItem** out);
 
-/* activate Windows.Graphics.Capture.GraphicsCaptureSession */
 HRESULT wgc_graphics_capture_session_new(WGC_GraphicsCaptureSession **out);
 
-/* Windows.Graphics.Capture.GraphicsCaptureSession */
-/* Windows.Graphics.Capture.GraphicsCaptureSession.StartCapture() */
 HRESULT wgc_graphics_capture_session_start_capture(WGC_GraphicsCaptureSession *self);
 
-/* Windows.Graphics.Capture.GraphicsCaptureSession.get_IsCursorCaptureEnabled() */
 HRESULT wgc_graphics_capture_session_get__is_cursor_capture_enabled(WGC_GraphicsCaptureSession *self, BOOL *value);
 
-/* Windows.Graphics.Capture.GraphicsCaptureSession.put_IsCursorCaptureEnabled() */
 HRESULT wgc_graphics_capture_session_put__is_cursor_capture_enabled(WGC_GraphicsCaptureSession *self, BOOL value);
 
-/* Windows.Graphics.Capture.GraphicsCaptureSession.get_IsBorderRequired() */
 HRESULT wgc_graphics_capture_session_get__is_border_required(WGC_GraphicsCaptureSession *self, BOOL *value);
 
-/* Windows.Graphics.Capture.GraphicsCaptureSession.put_IsBorderRequired() */
 HRESULT wgc_graphics_capture_session_put__is_border_required(WGC_GraphicsCaptureSession *self, BOOL value);
 
-/* Windows.Graphics.Capture.GraphicsCaptureSession.get_DirtyRegionMode() */
 HRESULT wgc_graphics_capture_session_get__dirty_region_mode(WGC_GraphicsCaptureSession *self, WGC_GraphicsCaptureDirtyRegionMode *value);
 
-/* Windows.Graphics.Capture.GraphicsCaptureSession.put_DirtyRegionMode() */
 HRESULT wgc_graphics_capture_session_put__dirty_region_mode(WGC_GraphicsCaptureSession *self, WGC_GraphicsCaptureDirtyRegionMode value);
 
-/* Windows.Graphics.Capture.GraphicsCaptureSession.get_MinUpdateInterval() */
 HRESULT wgc_graphics_capture_session_get__min_update_interval(WGC_GraphicsCaptureSession *self, WF_TimeSpan *value);
 
-/* Windows.Graphics.Capture.GraphicsCaptureSession.put_MinUpdateInterval() */
 HRESULT wgc_graphics_capture_session_put__min_update_interval(WGC_GraphicsCaptureSession *self, WF_TimeSpan value);
 
-/* Windows.Graphics.Capture.GraphicsCaptureSession.get_IncludeSecondaryWindows() */
 HRESULT wgc_graphics_capture_session_get__include_secondary_windows(WGC_GraphicsCaptureSession *self, BOOL *value);
 
-/* Windows.Graphics.Capture.GraphicsCaptureSession.put_IncludeSecondaryWindows() */
 HRESULT wgc_graphics_capture_session_put__include_secondary_windows(WGC_GraphicsCaptureSession *self, BOOL value);
 
-/* Windows.Graphics.Capture.GraphicsCaptureSession.get_ConfigurationIteration() */
 HRESULT wgc_graphics_capture_session_get__configuration_iteration(WGC_GraphicsCaptureSession *self, uint64_t *value);
 
-/* Windows.Graphics.Capture.GraphicsCaptureSession.Close() */
 HRESULT wgc_graphics_capture_session_close(WGC_GraphicsCaptureSession *self);
 
-/* Windows.Graphics.Capture.GraphicsCaptureSession.IsSupported() */
 HRESULT wgc_graphics_capture_session_is_supported(BOOL *out);
 
-/* Windows.Graphics.Capture.IDirect3D11CaptureFramePoolStatics */
-/* Windows.Graphics.Capture.IDirect3D11CaptureFramePoolStatics.Create(device, pixelFormat, numberOfBuffers, size) */
 HRESULT wgc_direct3_d11_capture_frame_pool_statics_create(WGC_IDirect3D11CaptureFramePoolStatics *self, WGRDIDI_IDirect3DDevice* device, WGRDI_DirectXPixelFormat pixelFormat, int32_t numberOfBuffers, WG_SizeInt32 size, WGC_Direct3D11CaptureFramePool** out);
 
-/* Windows.Graphics.Capture.IDirect3D11CaptureFramePoolStatics2 */
-/* Windows.Graphics.Capture.IDirect3D11CaptureFramePoolStatics2.CreateFreeThreaded(device, pixelFormat, numberOfBuffers, size) */
 HRESULT wgc_direct3_d11_capture_frame_pool_statics_2_create_free_threaded(WGC_IDirect3D11CaptureFramePoolStatics_2 *self, WGRDIDI_IDirect3DDevice* device, WGRDI_DirectXPixelFormat pixelFormat, int32_t numberOfBuffers, WG_SizeInt32 size, WGC_Direct3D11CaptureFramePool** out);
 
-/* Windows.Graphics.Capture.IDisplayGraphicsCaptureSession */
-/* Windows.Graphics.Capture.IDisplayGraphicsCaptureSession.SetWindowExclusionList(excludedWindows) */
 HRESULT wgc_display_graphics_capture_session_set_window_exclusion_list(WGC_IDisplayGraphicsCaptureSession *self, WFOCO_IIterable_WUI_WindowId* excludedWindows, uint64_t *out);
 
-/* Windows.Graphics.Capture.IDisplayGraphicsCaptureSession.GetWindowExclusionList() */
 HRESULT wgc_display_graphics_capture_session_get_window_exclusion_list(WGC_IDisplayGraphicsCaptureSession *self, WFOCO_IVectorView_WUI_WindowId** out);
 
-/* Windows.Graphics.Capture.IGraphicsCaptureAccessStatics */
-/* Windows.Graphics.Capture.IGraphicsCaptureAccessStatics.RequestAccessAsync(request) */
 HRESULT wgc_graphics_capture_access_statics_request_access_async(WGC_IGraphicsCaptureAccessStatics *self, WGC_GraphicsCaptureAccessKind request, WF_IAsyncOperation_WSEAUAP_AppCapabilityAccessStatus** out);
 
-/* Windows.Graphics.Capture.IGraphicsCaptureItemStatics */
-/* Windows.Graphics.Capture.IGraphicsCaptureItemStatics.CreateFromVisual(visual) */
 HRESULT wgc_graphics_capture_item_statics_create_from_visual(WGC_IGraphicsCaptureItemStatics *self, WUC_Visual* visual, WGC_GraphicsCaptureItem** out);
 
-/* Windows.Graphics.Capture.IGraphicsCaptureItemStatics2 */
-/* Windows.Graphics.Capture.IGraphicsCaptureItemStatics2.TryCreateFromWindowId(windowId) */
 HRESULT wgc_graphics_capture_item_statics_2_try_create_from_window_id(WGC_IGraphicsCaptureItemStatics_2 *self, WUI_WindowId windowId, WGC_GraphicsCaptureItem** out);
 
-/* Windows.Graphics.Capture.IGraphicsCaptureItemStatics2.TryCreateFromDisplayId(displayId) */
 HRESULT wgc_graphics_capture_item_statics_2_try_create_from_display_id(WGC_IGraphicsCaptureItemStatics_2 *self, WG_DisplayId displayId, WGC_GraphicsCaptureItem** out);
 
-/* Windows.Graphics.Capture.IGraphicsCaptureSessionStatics */
-/* Windows.Graphics.Capture.IGraphicsCaptureSessionStatics.IsSupported() */
 HRESULT wgc_graphics_capture_session_statics_is_supported(WGC_IGraphicsCaptureSessionStatics *self, BOOL *out);
 
-/* activate Windows.Graphics.Capture.GraphicsCaptureItem */
 HRESULT wgc_graphics_capture_item_new(WGC_GraphicsCaptureItem **out);
 
-/* Windows.Graphics.Capture.GraphicsCaptureItem */
-/* Windows.Graphics.Capture.GraphicsCaptureItem.get_DisplayName() */
 HRESULT wgc_graphics_capture_item_get__display_name(WGC_GraphicsCaptureItem *self, cwinrt_hstring *value);
 
-/* Windows.Graphics.Capture.GraphicsCaptureItem.get_Size() */
 HRESULT wgc_graphics_capture_item_get__size(WGC_GraphicsCaptureItem *self, WG_SizeInt32 *value);
 
-/* Windows.Graphics.Capture.GraphicsCaptureItem.TryCreateFromWindowId(windowId) */
 HRESULT wgc_graphics_capture_item_try_create_from_window_id(WUI_WindowId windowId, WGC_GraphicsCaptureItem** out);
 
-/* Windows.Graphics.Capture.GraphicsCaptureItem.TryCreateFromDisplayId(displayId) */
 HRESULT wgc_graphics_capture_item_try_create_from_display_id(WG_DisplayId displayId, WGC_GraphicsCaptureItem** out);
 
-/* Windows.Graphics.Capture.GraphicsCaptureItem.CreateFromVisual(visual) */
 HRESULT wgc_graphics_capture_item_create_from_visual(WUC_Visual* visual, WGC_GraphicsCaptureItem** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wgc_graphics_capture_item_on_closed(WGC_GraphicsCaptureItem *self, cwinrt_event_fn fn, void *ctx);
 void wgc_graphics_capture_item_off_closed(WGC_GraphicsCaptureItem *self, cwinrt_token token);
 
-/* activate Windows.Graphics.Capture.GraphicsCaptureAccess */
 HRESULT wgc_graphics_capture_access_new(WGC_GraphicsCaptureAccess **out);
 
-/* Windows.Graphics.Capture.GraphicsCaptureAccess */
-/* Windows.Graphics.Capture.GraphicsCaptureAccess.RequestAccessAsync(request) */
 HRESULT wgc_graphics_capture_access_request_access_async(WGC_GraphicsCaptureAccessKind request, WF_IAsyncOperation_WSEAUAP_AppCapabilityAccessStatus** out);
 
-/* activate Windows.Graphics.Capture.Direct3D11CaptureFramePool */
 HRESULT wgc_direct3_d11_capture_frame_pool_new(WGC_Direct3D11CaptureFramePool **out);
 
-/* Windows.Graphics.Capture.Direct3D11CaptureFramePool */
-/* Windows.Graphics.Capture.Direct3D11CaptureFramePool.Recreate(device, pixelFormat, numberOfBuffers, size) */
 HRESULT wgc_direct3_d11_capture_frame_pool_recreate(WGC_Direct3D11CaptureFramePool *self, WGRDIDI_IDirect3DDevice* device, WGRDI_DirectXPixelFormat pixelFormat, int32_t numberOfBuffers, WG_SizeInt32 size);
 
-/* Windows.Graphics.Capture.Direct3D11CaptureFramePool.TryGetNextFrame() */
 HRESULT wgc_direct3_d11_capture_frame_pool_try_get_next_frame(WGC_Direct3D11CaptureFramePool *self, WGC_Direct3D11CaptureFrame** out);
 
-/* Windows.Graphics.Capture.Direct3D11CaptureFramePool.CreateCaptureSession(item) */
 HRESULT wgc_direct3_d11_capture_frame_pool_create_capture_session(WGC_Direct3D11CaptureFramePool *self, WGC_GraphicsCaptureItem* item, WGC_GraphicsCaptureSession** out);
 
-/* Windows.Graphics.Capture.Direct3D11CaptureFramePool.get_DispatcherQueue() */
 HRESULT wgc_direct3_d11_capture_frame_pool_get__dispatcher_queue(WGC_Direct3D11CaptureFramePool *self, WSY_DispatcherQueue** value);
 
-/* Windows.Graphics.Capture.Direct3D11CaptureFramePool.Close() */
 HRESULT wgc_direct3_d11_capture_frame_pool_close(WGC_Direct3D11CaptureFramePool *self);
 
-/* Windows.Graphics.Capture.Direct3D11CaptureFramePool.CreateFreeThreaded(device, pixelFormat, numberOfBuffers, size) */
 HRESULT wgc_direct3_d11_capture_frame_pool_create_free_threaded(WGRDIDI_IDirect3DDevice* device, WGRDI_DirectXPixelFormat pixelFormat, int32_t numberOfBuffers, WG_SizeInt32 size, WGC_Direct3D11CaptureFramePool** out);
 
-/* Windows.Graphics.Capture.Direct3D11CaptureFramePool.Create(device, pixelFormat, numberOfBuffers, size) */
 HRESULT wgc_direct3_d11_capture_frame_pool_create(WGRDIDI_IDirect3DDevice* device, WGRDI_DirectXPixelFormat pixelFormat, int32_t numberOfBuffers, WG_SizeInt32 size, WGC_Direct3D11CaptureFramePool** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wgc_direct3_d11_capture_frame_pool_on_frame_arrived(WGC_Direct3D11CaptureFramePool *self, cwinrt_event_fn fn, void *ctx);
 void wgc_direct3_d11_capture_frame_pool_off_frame_arrived(WGC_Direct3D11CaptureFramePool *self, cwinrt_token token);
 
-/* activate Windows.Graphics.Capture.Direct3D11CaptureFrame */
 HRESULT wgc_direct3_d11_capture_frame_new(WGC_Direct3D11CaptureFrame **out);
 
-/* Windows.Graphics.Capture.Direct3D11CaptureFrame */
-/* Windows.Graphics.Capture.Direct3D11CaptureFrame.get_Surface() */
 HRESULT wgc_direct3_d11_capture_frame_get__surface(WGC_Direct3D11CaptureFrame *self, WGRDIDI_IDirect3DSurface** value);
 
-/* Windows.Graphics.Capture.Direct3D11CaptureFrame.get_SystemRelativeTime() */
 HRESULT wgc_direct3_d11_capture_frame_get__system_relative_time(WGC_Direct3D11CaptureFrame *self, WF_TimeSpan *value);
 
-/* Windows.Graphics.Capture.Direct3D11CaptureFrame.get_ContentSize() */
 HRESULT wgc_direct3_d11_capture_frame_get__content_size(WGC_Direct3D11CaptureFrame *self, WG_SizeInt32 *value);
 
-/* Windows.Graphics.Capture.Direct3D11CaptureFrame.get_DirtyRegions() */
 HRESULT wgc_direct3_d11_capture_frame_get__dirty_regions(WGC_Direct3D11CaptureFrame *self, WFOCO_IVectorView_WG_RectInt32** value);
 
-/* Windows.Graphics.Capture.Direct3D11CaptureFrame.get_DirtyRegionMode() */
 HRESULT wgc_direct3_d11_capture_frame_get__dirty_region_mode(WGC_Direct3D11CaptureFrame *self, WGC_GraphicsCaptureDirtyRegionMode *value);
 
-/* Windows.Graphics.Capture.Direct3D11CaptureFrame.get_ConfigurationIteration() */
 HRESULT wgc_direct3_d11_capture_frame_get__configuration_iteration(WGC_Direct3D11CaptureFrame *self, uint64_t *value);
 
-/* Windows.Graphics.Capture.Direct3D11CaptureFrame.Close() */
 HRESULT wgc_direct3_d11_capture_frame_close(WGC_Direct3D11CaptureFrame *self);
 
-/* Windows.Graphics.Capture.IGraphicsCapturePicker */
-/* Windows.Graphics.Capture.IGraphicsCaptureSession */
-/* Windows.Graphics.Capture.IGraphicsCaptureSession2 */
-/* Windows.Graphics.Capture.IGraphicsCaptureSession2.get_IsCursorCaptureEnabled() */
 HRESULT wgc_graphics_capture_session_2_get__is_cursor_capture_enabled(WGC_IGraphicsCaptureSession_2 *self, BOOL *value);
 
-/* Windows.Graphics.Capture.IGraphicsCaptureSession2.put_IsCursorCaptureEnabled() */
 HRESULT wgc_graphics_capture_session_2_put__is_cursor_capture_enabled(WGC_IGraphicsCaptureSession_2 *self, BOOL value);
 
-/* Windows.Graphics.Capture.IGraphicsCaptureSession3 */
-/* Windows.Graphics.Capture.IGraphicsCaptureSession3.get_IsBorderRequired() */
 HRESULT wgc_graphics_capture_session_3_get__is_border_required(WGC_IGraphicsCaptureSession_3 *self, BOOL *value);
 
-/* Windows.Graphics.Capture.IGraphicsCaptureSession3.put_IsBorderRequired() */
 HRESULT wgc_graphics_capture_session_3_put__is_border_required(WGC_IGraphicsCaptureSession_3 *self, BOOL value);
 
-/* Windows.Graphics.Capture.IGraphicsCaptureSession4 */
-/* Windows.Graphics.Capture.IGraphicsCaptureSession4.get_DirtyRegionMode() */
 HRESULT wgc_graphics_capture_session_4_get__dirty_region_mode(WGC_IGraphicsCaptureSession_4 *self, WGC_GraphicsCaptureDirtyRegionMode *value);
 
-/* Windows.Graphics.Capture.IGraphicsCaptureSession4.put_DirtyRegionMode() */
 HRESULT wgc_graphics_capture_session_4_put__dirty_region_mode(WGC_IGraphicsCaptureSession_4 *self, WGC_GraphicsCaptureDirtyRegionMode value);
 
-/* Windows.Graphics.Capture.IGraphicsCaptureSession5 */
-/* Windows.Graphics.Capture.IGraphicsCaptureSession5.get_MinUpdateInterval() */
 HRESULT wgc_graphics_capture_session_5_get__min_update_interval(WGC_IGraphicsCaptureSession_5 *self, WF_TimeSpan *value);
 
-/* Windows.Graphics.Capture.IGraphicsCaptureSession5.put_MinUpdateInterval() */
 HRESULT wgc_graphics_capture_session_5_put__min_update_interval(WGC_IGraphicsCaptureSession_5 *self, WF_TimeSpan value);
 
-/* Windows.Graphics.Capture.IGraphicsCaptureSession6 */
-/* Windows.Graphics.Capture.IGraphicsCaptureSession6.get_IncludeSecondaryWindows() */
 HRESULT wgc_graphics_capture_session_6_get__include_secondary_windows(WGC_IGraphicsCaptureSession_6 *self, BOOL *value);
 
-/* Windows.Graphics.Capture.IGraphicsCaptureSession6.put_IncludeSecondaryWindows() */
 HRESULT wgc_graphics_capture_session_6_put__include_secondary_windows(WGC_IGraphicsCaptureSession_6 *self, BOOL value);
 
-/* Windows.Graphics.Capture.IGraphicsCaptureSession7 */
-/* Windows.Graphics.Capture.IGraphicsCaptureSession7.get_ConfigurationIteration() */
 HRESULT wgc_graphics_capture_session_7_get__configuration_iteration(WGC_IGraphicsCaptureSession_7 *self, uint64_t *value);
 
-/* Windows.Graphics.Capture.IGraphicsCaptureItem */
-/* Windows.Graphics.Capture.IDirect3D11CaptureFramePool */
-/* Windows.Graphics.Capture.IDirect3D11CaptureFrame */
-/* Windows.Graphics.Capture.IDirect3D11CaptureFrame2 */
-/* Windows.Graphics.Capture.IDirect3D11CaptureFrame2.get_DirtyRegions() */
 HRESULT wgc_direct3_d11_capture_frame_2_get__dirty_regions(WGC_IDirect3D11CaptureFrame_2 *self, WFOCO_IVectorView_WG_RectInt32** value);
 
-/* Windows.Graphics.Capture.IDirect3D11CaptureFrame2.get_DirtyRegionMode() */
 HRESULT wgc_direct3_d11_capture_frame_2_get__dirty_region_mode(WGC_IDirect3D11CaptureFrame_2 *self, WGC_GraphicsCaptureDirtyRegionMode *value);
 
-/* Windows.Graphics.Capture.IDirect3D11CaptureFrame3 */
-/* Windows.Graphics.Capture.IDirect3D11CaptureFrame3.get_ConfigurationIteration() */
 HRESULT wgc_direct3_d11_capture_frame_3_get__configuration_iteration(WGC_IDirect3D11CaptureFrame_3 *self, uint64_t *value);
 
 #endif /* CWINRT_WINDOWS_GRAPHICS_CAPTURE_H */

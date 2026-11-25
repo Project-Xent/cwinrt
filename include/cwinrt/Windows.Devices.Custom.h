@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IInputStream
 #define CWINRT_FWD_WSTST_IInputStream
 typedef struct WSTST_IInputStream WSTST_IInputStream;
@@ -26,7 +25,6 @@ typedef struct WSTST_IOutputStream WSTST_IOutputStream;
 typedef struct WSTST_IBuffer WSTST_IBuffer;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDECU_IIOControlCodeFactory WDECU_IIOControlCodeFactory;
 typedef struct WDECU_IKnownDeviceTypesStatics WDECU_IKnownDeviceTypesStatics;
 typedef struct WDECU_IOControlCode WDECU_IOControlCode;
@@ -36,7 +34,6 @@ typedef struct WDECU_ICustomDeviceStatics WDECU_ICustomDeviceStatics;
 typedef struct WDECU_IIOControlCode WDECU_IIOControlCode;
 typedef struct WDECU_ICustomDevice WDECU_ICustomDevice;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSTST_IInputStream
 #define CWINRT_FWD_WSTST_IInputStream
 typedef struct WSTST_IInputStream WSTST_IInputStream;
@@ -99,7 +96,6 @@ typedef enum WDECU_DeviceAccessMode {
 } WDECU_DeviceAccessMode;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -124,71 +120,42 @@ static const IID CWINRT_IID_WDECU_IIOControlCode CWINRT_MAYBE_UNUSED = { 0x0E955
 static const IID CWINRT_IID_WDECU_ICustomDevice CWINRT_MAYBE_UNUSED = { 0xDD30251F, 0xC48B, 0x43BD, { 0xBC, 0xB1, 0xDE, 0xC8, 0x8F, 0x15, 0x14, 0x3E } };
 #endif
 
-/* Methods */
-
-/* Windows.Devices.Custom.IIOControlCodeFactory */
-/* Windows.Devices.Custom.IIOControlCodeFactory.CreateIOControlCode(deviceType, function, accessMode, bufferingMethod) */
 HRESULT wdecu_o_control_code_factory_create_i_o_control_code(WDECU_IIOControlCodeFactory *self, uint16_t deviceType, uint16_t function, WDECU_IOControlAccessMode accessMode, WDECU_IOControlBufferingMethod bufferingMethod, WDECU_IOControlCode** out);
 
-/* Windows.Devices.Custom.IKnownDeviceTypesStatics */
-/* Windows.Devices.Custom.IKnownDeviceTypesStatics.get_Unknown() */
 HRESULT wdecu_known_device_types_statics_get__unknown(WDECU_IKnownDeviceTypesStatics *self, uint16_t *value);
 
-/* activate Windows.Devices.Custom.IOControlCode */
 HRESULT wdecu_o_control_code_new(WDECU_IOControlCode **out);
 
-/* Windows.Devices.Custom.IOControlCode */
-/* Windows.Devices.Custom.IOControlCode.get_AccessMode() */
 HRESULT wdecu_o_control_code_get__access_mode(WDECU_IOControlCode *self, WDECU_IOControlAccessMode *value);
 
-/* Windows.Devices.Custom.IOControlCode.get_BufferingMethod() */
 HRESULT wdecu_o_control_code_get__buffering_method(WDECU_IOControlCode *self, WDECU_IOControlBufferingMethod *value);
 
-/* Windows.Devices.Custom.IOControlCode.get_Function() */
 HRESULT wdecu_o_control_code_get__function(WDECU_IOControlCode *self, uint16_t *value);
 
-/* Windows.Devices.Custom.IOControlCode.get_DeviceType() */
 HRESULT wdecu_o_control_code_get__device_type(WDECU_IOControlCode *self, uint16_t *value);
 
-/* Windows.Devices.Custom.IOControlCode.get_ControlCode() */
 HRESULT wdecu_o_control_code_get__control_code(WDECU_IOControlCode *self, uint32_t *value);
 
-/* activate Windows.Devices.Custom.KnownDeviceTypes */
 HRESULT wdecu_known_device_types_new(WDECU_KnownDeviceTypes **out);
 
-/* Windows.Devices.Custom.KnownDeviceTypes */
-/* Windows.Devices.Custom.KnownDeviceTypes.get_Unknown() */
 HRESULT wdecu_known_device_types_get__unknown(uint16_t *value);
 
-/* activate Windows.Devices.Custom.CustomDevice */
 HRESULT wdecu_custom_device_new(WDECU_CustomDevice **out);
 
-/* Windows.Devices.Custom.CustomDevice */
-/* Windows.Devices.Custom.CustomDevice.get_InputStream() */
 HRESULT wdecu_custom_device_get__input_stream(WDECU_CustomDevice *self, WSTST_IInputStream** value);
 
-/* Windows.Devices.Custom.CustomDevice.get_OutputStream() */
 HRESULT wdecu_custom_device_get__output_stream(WDECU_CustomDevice *self, WSTST_IOutputStream** value);
 
-/* Windows.Devices.Custom.CustomDevice.SendIOControlAsync(ioControlCode, inputBuffer, outputBuffer) */
 HRESULT wdecu_custom_device_send_i_o_control_async(WDECU_CustomDevice *self, WDECU_IIOControlCode* ioControlCode, WSTST_IBuffer* inputBuffer, WSTST_IBuffer* outputBuffer, WF_IAsyncOperation_uint32_t** out);
 
-/* Windows.Devices.Custom.CustomDevice.TrySendIOControlAsync(ioControlCode, inputBuffer, outputBuffer) */
 HRESULT wdecu_custom_device_try_send_i_o_control_async(WDECU_CustomDevice *self, WDECU_IIOControlCode* ioControlCode, WSTST_IBuffer* inputBuffer, WSTST_IBuffer* outputBuffer, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.Custom.CustomDevice.GetDeviceSelector(classGuid) */
 HRESULT wdecu_custom_device_get_device_selector(GUID classGuid, cwinrt_hstring *out);
 
-/* Windows.Devices.Custom.CustomDevice.FromIdAsync(deviceId, desiredAccess, sharingMode) */
 HRESULT wdecu_custom_device_from_id_async(cwinrt_hstring deviceId, WDECU_DeviceAccessMode desiredAccess, WDECU_DeviceSharingMode sharingMode, WF_IAsyncOperation_WDECU_CustomDevice** out);
 
-/* Windows.Devices.Custom.ICustomDeviceStatics */
-/* Windows.Devices.Custom.ICustomDeviceStatics.GetDeviceSelector(classGuid) */
 HRESULT wdecu_custom_device_statics_get_device_selector(WDECU_ICustomDeviceStatics *self, GUID classGuid, cwinrt_hstring *out);
 
-/* Windows.Devices.Custom.ICustomDeviceStatics.FromIdAsync(deviceId, desiredAccess, sharingMode) */
 HRESULT wdecu_custom_device_statics_from_id_async(WDECU_ICustomDeviceStatics *self, cwinrt_hstring deviceId, WDECU_DeviceAccessMode desiredAccess, WDECU_DeviceSharingMode sharingMode, WF_IAsyncOperation_WDECU_CustomDevice** out);
 
-/* Windows.Devices.Custom.IIOControlCode */
-/* Windows.Devices.Custom.ICustomDevice */
 #endif /* CWINRT_WINDOWS_DEVICES_CUSTOM_H */

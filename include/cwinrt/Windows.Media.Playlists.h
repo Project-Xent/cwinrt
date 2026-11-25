@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Storage.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WS_StorageFile
 #define CWINRT_FWD_WS_StorageFile
 typedef struct WS_StorageFile WS_StorageFile;
@@ -27,12 +26,10 @@ typedef struct WS_IStorageFolder WS_IStorageFolder;
 typedef struct WS_IStorageFile WS_IStorageFile;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMEPL_Playlist WMEPL_Playlist;
 typedef struct WMEPL_IPlaylistStatics WMEPL_IPlaylistStatics;
 typedef struct WMEPL_IPlaylist WMEPL_IPlaylist;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IVector_WS_StorageFile
 #define CWINRT_FWD_WFOCO_IVector_WS_StorageFile
 typedef struct WFOCO_IVector_WS_StorageFile WFOCO_IVector_WS_StorageFile;
@@ -76,7 +73,6 @@ typedef enum WMEPL_PlaylistFormat {
 } WMEPL_PlaylistFormat;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -89,30 +85,18 @@ static const IID CWINRT_IID_WMEPL_IPlaylistStatics CWINRT_MAYBE_UNUSED = { 0xC5C
 static const IID CWINRT_IID_WMEPL_IPlaylist CWINRT_MAYBE_UNUSED = { 0x803736F5, 0xCF44, 0x4D97, { 0x83, 0xB3, 0x7A, 0x08, 0x9E, 0x9A, 0xB6, 0x63 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Media.Playlists.Playlist */
 HRESULT wmepl_playlist_new(WMEPL_Playlist **out);
 
-/* Windows.Media.Playlists.Playlist */
-/* Windows.Media.Playlists.Playlist.get_Files() */
 HRESULT wmepl_playlist_get__files(WMEPL_Playlist *self, WFOCO_IVector_WS_StorageFile** value);
 
-/* Windows.Media.Playlists.Playlist.SaveAsync() */
 HRESULT wmepl_playlist_save_async(WMEPL_Playlist *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Playlists.Playlist.SaveAsAsync(saveLocation, desiredName, option) */
 HRESULT wmepl_playlist_save_as_async(WMEPL_Playlist *self, WS_IStorageFolder* saveLocation, cwinrt_hstring desiredName, WS_NameCollisionOption option, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Media.Playlists.Playlist.SaveAsAsync(saveLocation, desiredName, option, playlistFormat) */
 HRESULT wmepl_playlist_save_as_async_p_str_name_collision_option_playlist_ac52f840(WMEPL_Playlist *self, WS_IStorageFolder* saveLocation, cwinrt_hstring desiredName, WS_NameCollisionOption option, WMEPL_PlaylistFormat playlistFormat, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Media.Playlists.Playlist.LoadAsync(file) */
 HRESULT wmepl_playlist_load_async(WS_IStorageFile* file, WF_IAsyncOperation_WMEPL_Playlist** out);
 
-/* Windows.Media.Playlists.IPlaylistStatics */
-/* Windows.Media.Playlists.IPlaylistStatics.LoadAsync(file) */
 HRESULT wmepl_playlist_statics_load_async(WMEPL_IPlaylistStatics *self, WS_IStorageFile* file, WF_IAsyncOperation_WMEPL_Playlist** out);
 
-/* Windows.Media.Playlists.IPlaylist */
 #endif /* CWINRT_WINDOWS_MEDIA_PLAYLISTS_H */

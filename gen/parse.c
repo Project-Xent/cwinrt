@@ -50,7 +50,6 @@ static bool ns_has_prefix(char const *ns, char const *prefix) {
 	return ns [plen] == '\0' || ns [plen] == '.';
 }
 
-/* One header per WinRT namespace: exact match on TypeDef namespace column. */
 static bool ns_matches(char const *ns, char const *filter) {
 	if (!filter || !*filter) return true;
 	if (!ns) return false;
@@ -280,8 +279,6 @@ static int ref_push(int arena, cwinrt_raw_type *t, uint32_t coded, cwinrt_raw_ty
 	return 0;
 }
 
-/* Shared context for the enrich pass: the arena, the database being populated, the
-   metadata handle, the namespace filter, and the full type list (for ref lookups). */
 typedef struct enrich_ctx {
 	int                    arena;
 	cwinrt_raw_db         *db;
@@ -443,7 +440,6 @@ static int parse_copy_type_row(int arena, winmd_db const *wm, winmd_row_typedef 
 	return 0;
 }
 
-/* Shared context for the type-copy pass: the destination buffer and its capacity. */
 typedef struct copy_ctx {
 	int              arena;
 	winmd_db const  *wm;
@@ -507,7 +503,6 @@ static int parse_copy_types(
 	return 0;
 }
 
-/* Shared context for the method-copy pass. */
 typedef struct method_ctx {
 	int              arena;
 	winmd_db        *wm;

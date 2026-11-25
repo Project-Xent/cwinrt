@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WMA_IMdmSessionManagerStatics WMA_IMdmSessionManagerStatics;
 typedef struct WMA_MdmSession WMA_MdmSession;
 typedef struct WMA_MdmSessionManager WMA_MdmSessionManager;
@@ -20,7 +19,6 @@ typedef struct WMA_MdmAlert WMA_MdmAlert;
 typedef struct WMA_IMdmSession WMA_IMdmSession;
 typedef struct WMA_IMdmAlert WMA_IMdmAlert;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IVectorView_HSTRING
 #define CWINRT_FWD_WFOCO_IVectorView_HSTRING
 typedef struct WFOCO_IVectorView_HSTRING WFOCO_IVectorView_HSTRING;
@@ -72,7 +70,6 @@ typedef enum WMA_MdmSessionState {
 } WMA_MdmSessionState;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -89,108 +86,68 @@ static const IID CWINRT_IID_WMA_IMdmSession CWINRT_MAYBE_UNUSED = { 0xFE89314C, 
 static const IID CWINRT_IID_WMA_IMdmAlert CWINRT_MAYBE_UNUSED = { 0xB0FBC327, 0x28C1, 0x4B52, { 0xA5, 0x48, 0xC5, 0x80, 0x7C, 0xAF, 0x70, 0xB6 } };
 #endif
 
-/* Methods */
-
-/* Windows.Management.IMdmSessionManagerStatics */
-/* Windows.Management.IMdmSessionManagerStatics.get_SessionIds() */
 HRESULT wma_mdm_session_manager_statics_get__session_ids(WMA_IMdmSessionManagerStatics *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Management.IMdmSessionManagerStatics.TryCreateSession() */
 HRESULT wma_mdm_session_manager_statics_try_create_session(WMA_IMdmSessionManagerStatics *self, WMA_MdmSession** out);
 
-/* Windows.Management.IMdmSessionManagerStatics.DeleteSessionById(sessionId) */
 HRESULT wma_mdm_session_manager_statics_delete_session_by_id(WMA_IMdmSessionManagerStatics *self, cwinrt_hstring sessionId);
 
-/* Windows.Management.IMdmSessionManagerStatics.GetSessionById(sessionId) */
 HRESULT wma_mdm_session_manager_statics_get_session_by_id(WMA_IMdmSessionManagerStatics *self, cwinrt_hstring sessionId, WMA_MdmSession** out);
 
-/* activate Windows.Management.MdmSession */
 HRESULT wma_mdm_session_new(WMA_MdmSession **out);
 
-/* Windows.Management.MdmSession */
-/* Windows.Management.MdmSession.get_Alerts() */
 HRESULT wma_mdm_session_get__alerts(WMA_MdmSession *self, WFOCO_IVectorView_WMA_MdmAlert** value);
 
-/* Windows.Management.MdmSession.get_ExtendedError() */
 HRESULT wma_mdm_session_get__extended_error(WMA_MdmSession *self, HRESULT *value);
 
-/* Windows.Management.MdmSession.get_Id() */
 HRESULT wma_mdm_session_get__id(WMA_MdmSession *self, cwinrt_hstring *value);
 
-/* Windows.Management.MdmSession.get_State() */
 HRESULT wma_mdm_session_get__state(WMA_MdmSession *self, WMA_MdmSessionState *value);
 
-/* Windows.Management.MdmSession.AttachAsync() */
 HRESULT wma_mdm_session_attach_async(WMA_MdmSession *self, WF_IAsyncAction** out);
 
-/* Windows.Management.MdmSession.Delete() */
 HRESULT wma_mdm_session_delete(WMA_MdmSession *self);
 
-/* Windows.Management.MdmSession.StartAsync() */
 HRESULT wma_mdm_session_start_async(WMA_MdmSession *self, WF_IAsyncAction** out);
 
-/* Windows.Management.MdmSession.StartAsync(alerts) */
 HRESULT wma_mdm_session_start_async_p_p(WMA_MdmSession *self, WFOCO_IIterable_WMA_MdmAlert* alerts, WF_IAsyncAction** out);
 
-/* activate Windows.Management.MdmSessionManager */
 HRESULT wma_mdm_session_manager_new(WMA_MdmSessionManager **out);
 
-/* Windows.Management.MdmSessionManager */
-/* Windows.Management.MdmSessionManager.get_SessionIds() */
 HRESULT wma_mdm_session_manager_get__session_ids(WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Management.MdmSessionManager.TryCreateSession() */
 HRESULT wma_mdm_session_manager_try_create_session(WMA_MdmSession** out);
 
-/* Windows.Management.MdmSessionManager.DeleteSessionById(sessionId) */
 HRESULT wma_mdm_session_manager_delete_session_by_id(cwinrt_hstring sessionId);
 
-/* Windows.Management.MdmSessionManager.GetSessionById(sessionId) */
 HRESULT wma_mdm_session_manager_get_session_by_id(cwinrt_hstring sessionId, WMA_MdmSession** out);
 
-/* activate Windows.Management.MdmAlert */
 HRESULT wma_mdm_alert_new(WMA_MdmAlert **out);
 
-/* Windows.Management.MdmAlert */
-/* Windows.Management.MdmAlert.get_Data() */
 HRESULT wma_mdm_alert_get__data(WMA_MdmAlert *self, cwinrt_hstring *value);
 
-/* Windows.Management.MdmAlert.put_Data() */
 HRESULT wma_mdm_alert_put__data(WMA_MdmAlert *self, cwinrt_hstring value);
 
-/* Windows.Management.MdmAlert.get_Format() */
 HRESULT wma_mdm_alert_get__format(WMA_MdmAlert *self, WMA_MdmAlertDataType *value);
 
-/* Windows.Management.MdmAlert.put_Format() */
 HRESULT wma_mdm_alert_put__format(WMA_MdmAlert *self, WMA_MdmAlertDataType value);
 
-/* Windows.Management.MdmAlert.get_Mark() */
 HRESULT wma_mdm_alert_get__mark(WMA_MdmAlert *self, WMA_MdmAlertMark *value);
 
-/* Windows.Management.MdmAlert.put_Mark() */
 HRESULT wma_mdm_alert_put__mark(WMA_MdmAlert *self, WMA_MdmAlertMark value);
 
-/* Windows.Management.MdmAlert.get_Source() */
 HRESULT wma_mdm_alert_get__source(WMA_MdmAlert *self, cwinrt_hstring *value);
 
-/* Windows.Management.MdmAlert.put_Source() */
 HRESULT wma_mdm_alert_put__source(WMA_MdmAlert *self, cwinrt_hstring value);
 
-/* Windows.Management.MdmAlert.get_Status() */
 HRESULT wma_mdm_alert_get__status(WMA_MdmAlert *self, uint32_t *value);
 
-/* Windows.Management.MdmAlert.get_Target() */
 HRESULT wma_mdm_alert_get__target(WMA_MdmAlert *self, cwinrt_hstring *value);
 
-/* Windows.Management.MdmAlert.put_Target() */
 HRESULT wma_mdm_alert_put__target(WMA_MdmAlert *self, cwinrt_hstring value);
 
-/* Windows.Management.MdmAlert.get_Type() */
 HRESULT wma_mdm_alert_get__type(WMA_MdmAlert *self, cwinrt_hstring *value);
 
-/* Windows.Management.MdmAlert.put_Type() */
 HRESULT wma_mdm_alert_put__type(WMA_MdmAlert *self, cwinrt_hstring value);
 
-/* Windows.Management.IMdmSession */
-/* Windows.Management.IMdmAlert */
 #endif /* CWINRT_WINDOWS_MANAGEMENT_H */

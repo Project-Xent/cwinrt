@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
@@ -34,7 +33,6 @@ typedef struct WUINO_TileNotification WUINO_TileNotification;
 typedef struct WUINO_BadgeNotification WUINO_BadgeNotification;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WNEPU_IPushNotificationChannelManagerStatics WNEPU_IPushNotificationChannelManagerStatics;
 typedef struct WNEPU_IPushNotificationChannelManagerStatics_2 WNEPU_IPushNotificationChannelManagerStatics_2;
 typedef struct WNEPU_IPushNotificationChannelManagerStatics_3 WNEPU_IPushNotificationChannelManagerStatics_3;
@@ -54,7 +52,6 @@ typedef struct WNEPU_IRawNotification WNEPU_IRawNotification;
 typedef struct WNEPU_IRawNotification_2 WNEPU_IRawNotification_2;
 typedef struct WNEPU_IRawNotification_3 WNEPU_IRawNotification_3;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WNEPU_PushNotificationChannel
 #define CWINRT_FWD_WF_IAsyncOperation_WNEPU_PushNotificationChannel
 typedef struct WF_IAsyncOperation_WNEPU_PushNotificationChannel WF_IAsyncOperation_WNEPU_PushNotificationChannel;
@@ -107,7 +104,6 @@ typedef enum WNEPU_PushNotificationType {
 } WNEPU_PushNotificationType;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -160,154 +156,94 @@ static const IID CWINRT_IID_WNEPU_IRawNotification_2 CWINRT_MAYBE_UNUSED = { 0xE
 static const IID CWINRT_IID_WNEPU_IRawNotification_3 CWINRT_MAYBE_UNUSED = { 0x62737DDE, 0x8A73, 0x424C, { 0xAB, 0x44, 0x56, 0x35, 0xF4, 0x0A, 0x96, 0xE5 } };
 #endif
 
-/* Methods */
-
-/* Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics */
-/* Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics.CreatePushNotificationChannelForApplicationAsync() */
 HRESULT wnepu_push_notification_channel_manager_statics_create_push_notification_channel_for_application_async(WNEPU_IPushNotificationChannelManagerStatics *self, WF_IAsyncOperation_WNEPU_PushNotificationChannel** out);
 
-/* Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics.CreatePushNotificationChannelForApplicationAsync(applicationId) */
 HRESULT wnepu_push_notification_channel_manager_statics_create_push_notification_channel_for_application_async_str_p(WNEPU_IPushNotificationChannelManagerStatics *self, cwinrt_hstring applicationId, WF_IAsyncOperation_WNEPU_PushNotificationChannel** out);
 
-/* Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics.CreatePushNotificationChannelForSecondaryTileAsync(tileId) */
 HRESULT wnepu_push_notification_channel_manager_statics_create_push_notification_channel_for_secondary_tile_async(WNEPU_IPushNotificationChannelManagerStatics *self, cwinrt_hstring tileId, WF_IAsyncOperation_WNEPU_PushNotificationChannel** out);
 
-/* Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics2 */
-/* Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics2.GetForUser(user) */
 HRESULT wnepu_push_notification_channel_manager_statics_2_get_for_user(WNEPU_IPushNotificationChannelManagerStatics_2 *self, WSY_User* user, WNEPU_PushNotificationChannelManagerForUser** out);
 
-/* Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics3 */
-/* Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics3.GetDefault() */
 HRESULT wnepu_push_notification_channel_manager_statics_3_get_default(WNEPU_IPushNotificationChannelManagerStatics_3 *self, WNEPU_PushNotificationChannelManagerForUser** out);
 
-/* Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics4 */
-/* activate Windows.Networking.PushNotifications.PushNotificationChannel */
 HRESULT wnepu_push_notification_channel_new(WNEPU_PushNotificationChannel **out);
 
-/* Windows.Networking.PushNotifications.PushNotificationChannel */
-/* Windows.Networking.PushNotifications.PushNotificationChannel.get_Uri() */
 HRESULT wnepu_push_notification_channel_get__uri(WNEPU_PushNotificationChannel *self, cwinrt_hstring *value);
 
-/* Windows.Networking.PushNotifications.PushNotificationChannel.get_ExpirationTime() */
 HRESULT wnepu_push_notification_channel_get__expiration_time(WNEPU_PushNotificationChannel *self, WF_DateTime *value);
 
-/* Windows.Networking.PushNotifications.PushNotificationChannel.Close() */
 HRESULT wnepu_push_notification_channel_close(WNEPU_PushNotificationChannel *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wnepu_push_notification_channel_on_push_notification_received(WNEPU_PushNotificationChannel *self, cwinrt_event_fn fn, void *ctx);
 void wnepu_push_notification_channel_off_push_notification_received(WNEPU_PushNotificationChannel *self, cwinrt_token token);
 
-/* activate Windows.Networking.PushNotifications.PushNotificationChannelManager */
 HRESULT wnepu_push_notification_channel_manager_new(WNEPU_PushNotificationChannelManager **out);
 
-/* Windows.Networking.PushNotifications.PushNotificationChannelManager */
-/* Windows.Networking.PushNotifications.PushNotificationChannelManager.GetDefault() */
 HRESULT wnepu_push_notification_channel_manager_get_default(WNEPU_PushNotificationChannelManagerForUser** out);
 
-/* Windows.Networking.PushNotifications.PushNotificationChannelManager.GetForUser(user) */
 HRESULT wnepu_push_notification_channel_manager_get_for_user(WSY_User* user, WNEPU_PushNotificationChannelManagerForUser** out);
 
-/* Windows.Networking.PushNotifications.PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync() */
 HRESULT wnepu_push_notification_channel_manager_create_push_notification_channel_for_application_async(WF_IAsyncOperation_WNEPU_PushNotificationChannel** out);
 
-/* Windows.Networking.PushNotifications.PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync(applicationId) */
 HRESULT wnepu_push_notification_channel_manager_create_push_notification_channel_for_application_async_str_p(cwinrt_hstring applicationId, WF_IAsyncOperation_WNEPU_PushNotificationChannel** out);
 
-/* Windows.Networking.PushNotifications.PushNotificationChannelManager.CreatePushNotificationChannelForSecondaryTileAsync(tileId) */
 HRESULT wnepu_push_notification_channel_manager_create_push_notification_channel_for_secondary_tile_async(cwinrt_hstring tileId, WF_IAsyncOperation_WNEPU_PushNotificationChannel** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wnepu_push_notification_channel_manager_on_channels_revoked(WNEPU_PushNotificationChannelManager *self, cwinrt_event_fn fn, void *ctx);
 void wnepu_push_notification_channel_manager_off_channels_revoked(WNEPU_PushNotificationChannelManager *self, cwinrt_token token);
 
-/* activate Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser */
 HRESULT wnepu_push_notification_channel_manager_for_user_new(WNEPU_PushNotificationChannelManagerForUser **out);
 
-/* Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser */
-/* Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser.CreatePushNotificationChannelForApplicationAsync() */
 HRESULT wnepu_push_notification_channel_manager_for_user_create_push_notification_channel_for_application_async(WNEPU_PushNotificationChannelManagerForUser *self, WF_IAsyncOperation_WNEPU_PushNotificationChannel** out);
 
-/* Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser.CreatePushNotificationChannelForApplicationAsync(applicationId) */
 HRESULT wnepu_push_notification_channel_manager_for_user_create_push_notification_channel_for_application_async_str_p(WNEPU_PushNotificationChannelManagerForUser *self, cwinrt_hstring applicationId, WF_IAsyncOperation_WNEPU_PushNotificationChannel** out);
 
-/* Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser.CreatePushNotificationChannelForSecondaryTileAsync(tileId) */
 HRESULT wnepu_push_notification_channel_manager_for_user_create_push_notification_channel_for_secondary_tile_async(WNEPU_PushNotificationChannelManagerForUser *self, cwinrt_hstring tileId, WF_IAsyncOperation_WNEPU_PushNotificationChannel** out);
 
-/* Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser.get_User() */
 HRESULT wnepu_push_notification_channel_manager_for_user_get__user(WNEPU_PushNotificationChannelManagerForUser *self, WSY_User** value);
 
-/* Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser.CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(appServerKey, channelId) */
 HRESULT wnepu_push_notification_channel_manager_for_user_create_raw_push_notification_channel_with_alternate_key_for_application_async(WNEPU_PushNotificationChannelManagerForUser *self, WSTST_IBuffer* appServerKey, cwinrt_hstring channelId, WF_IAsyncOperation_WNEPU_PushNotificationChannel** out);
 
-/* Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser.CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(appServerKey, channelId, appId) */
 HRESULT wnepu_push_notification_channel_manager_for_user_create_raw_push_notification_channel_with_alternate_key_for_application_async_p_str_str_p(WNEPU_PushNotificationChannelManagerForUser *self, WSTST_IBuffer* appServerKey, cwinrt_hstring channelId, cwinrt_hstring appId, WF_IAsyncOperation_WNEPU_PushNotificationChannel** out);
 
-/* activate Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs */
 HRESULT wnepu_push_notification_received_event_args_new(WNEPU_PushNotificationReceivedEventArgs **out);
 
-/* Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs */
-/* Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs.put_Cancel() */
 HRESULT wnepu_push_notification_received_event_args_put__cancel(WNEPU_PushNotificationReceivedEventArgs *self, BOOL value);
 
-/* Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs.get_Cancel() */
 HRESULT wnepu_push_notification_received_event_args_get__cancel(WNEPU_PushNotificationReceivedEventArgs *self, BOOL *value);
 
-/* Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs.get_NotificationType() */
 HRESULT wnepu_push_notification_received_event_args_get__notification_type(WNEPU_PushNotificationReceivedEventArgs *self, WNEPU_PushNotificationType *value);
 
-/* Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs.get_ToastNotification() */
 HRESULT wnepu_push_notification_received_event_args_get__toast_notification(WNEPU_PushNotificationReceivedEventArgs *self, WUINO_ToastNotification** value);
 
-/* Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs.get_TileNotification() */
 HRESULT wnepu_push_notification_received_event_args_get__tile_notification(WNEPU_PushNotificationReceivedEventArgs *self, WUINO_TileNotification** value);
 
-/* Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs.get_BadgeNotification() */
 HRESULT wnepu_push_notification_received_event_args_get__badge_notification(WNEPU_PushNotificationReceivedEventArgs *self, WUINO_BadgeNotification** value);
 
-/* Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs.get_RawNotification() */
 HRESULT wnepu_push_notification_received_event_args_get__raw_notification(WNEPU_PushNotificationReceivedEventArgs *self, WNEPU_RawNotification** value);
 
-/* activate Windows.Networking.PushNotifications.RawNotification */
 HRESULT wnepu_raw_notification_new(WNEPU_RawNotification **out);
 
-/* Windows.Networking.PushNotifications.RawNotification */
-/* Windows.Networking.PushNotifications.RawNotification.get_Content() */
 HRESULT wnepu_raw_notification_get__content(WNEPU_RawNotification *self, cwinrt_hstring *value);
 
-/* Windows.Networking.PushNotifications.RawNotification.get_Headers() */
 HRESULT wnepu_raw_notification_get__headers(WNEPU_RawNotification *self, WFOCO_IMapView_HSTRING_HSTRING** value);
 
-/* Windows.Networking.PushNotifications.RawNotification.get_ChannelId() */
 HRESULT wnepu_raw_notification_get__channel_id(WNEPU_RawNotification *self, cwinrt_hstring *value);
 
-/* Windows.Networking.PushNotifications.RawNotification.get_ContentBytes() */
 HRESULT wnepu_raw_notification_get__content_bytes(WNEPU_RawNotification *self, WSTST_IBuffer** value);
 
-/* Windows.Networking.PushNotifications.IPushNotificationChannel */
-/* Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser */
-/* Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser2 */
-/* Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser2.CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(appServerKey, channelId) */
 HRESULT wnepu_push_notification_channel_manager_for_user_2_create_raw_push_notification_channel_with_alternate_key_for_application_async(WNEPU_IPushNotificationChannelManagerForUser_2 *self, WSTST_IBuffer* appServerKey, cwinrt_hstring channelId, WF_IAsyncOperation_WNEPU_PushNotificationChannel** out);
 
-/* Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser2.CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(appServerKey, channelId, appId) */
 HRESULT wnepu_push_notification_channel_manager_for_user_2_create_raw_push_notification_channel_with_alternate_key_for_application_async_p_str_str_p(WNEPU_IPushNotificationChannelManagerForUser_2 *self, WSTST_IBuffer* appServerKey, cwinrt_hstring channelId, cwinrt_hstring appId, WF_IAsyncOperation_WNEPU_PushNotificationChannel** out);
 
-/* Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs */
-/* Windows.Networking.PushNotifications.IRawNotification */
-/* Windows.Networking.PushNotifications.IRawNotification2 */
-/* Windows.Networking.PushNotifications.IRawNotification2.get_Headers() */
 HRESULT wnepu_raw_notification_2_get__headers(WNEPU_IRawNotification_2 *self, WFOCO_IMapView_HSTRING_HSTRING** value);
 
-/* Windows.Networking.PushNotifications.IRawNotification2.get_ChannelId() */
 HRESULT wnepu_raw_notification_2_get__channel_id(WNEPU_IRawNotification_2 *self, cwinrt_hstring *value);
 
-/* Windows.Networking.PushNotifications.IRawNotification3 */
-/* Windows.Networking.PushNotifications.IRawNotification3.get_ContentBytes() */
 HRESULT wnepu_raw_notification_3_get__content_bytes(WNEPU_IRawNotification_3 *self, WSTST_IBuffer** value);
 
 #endif /* CWINRT_WINDOWS_NETWORKING_PUSHNOTIFICATIONS_H */

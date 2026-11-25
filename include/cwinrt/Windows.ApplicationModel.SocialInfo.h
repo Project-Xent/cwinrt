@@ -13,13 +13,11 @@
 #include <cwinrt/Windows.Graphics.Imaging.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IInputStream
 #define CWINRT_FWD_WSTST_IInputStream
 typedef struct WSTST_IInputStream WSTST_IInputStream;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPSO_SocialUserInfo WAPSO_SocialUserInfo;
 typedef struct WAPSO_SocialFeedChildItem WAPSO_SocialFeedChildItem;
 typedef struct WAPSO_SocialFeedContent WAPSO_SocialFeedContent;
@@ -33,7 +31,6 @@ typedef struct WAPSO_ISocialFeedItem WAPSO_ISocialFeedItem;
 typedef struct WAPSO_ISocialFeedSharedItem WAPSO_ISocialFeedSharedItem;
 typedef struct WAPSO_ISocialItemThumbnail WAPSO_ISocialItemThumbnail;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_Uri
 #define CWINRT_FWD_WF_Uri
 typedef struct WF_Uri WF_Uri;
@@ -93,7 +90,6 @@ typedef enum WAPSO_SocialItemBadgeStyle {
 } WAPSO_SocialItemBadgeStyle;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -122,216 +118,136 @@ static const IID CWINRT_IID_WAPSO_ISocialFeedSharedItem CWINRT_MAYBE_UNUSED = { 
 static const IID CWINRT_IID_WAPSO_ISocialItemThumbnail CWINRT_MAYBE_UNUSED = { 0x5CBF831A, 0x3F08, 0x497F, { 0x91, 0x7F, 0x57, 0xE0, 0x9D, 0x84, 0xB1, 0x41 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.SocialInfo.SocialUserInfo */
 HRESULT wapso_social_user_info_new(WAPSO_SocialUserInfo **out);
 
-/* Windows.ApplicationModel.SocialInfo.SocialUserInfo */
-/* Windows.ApplicationModel.SocialInfo.SocialUserInfo.get_DisplayName() */
 HRESULT wapso_social_user_info_get__display_name(WAPSO_SocialUserInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialUserInfo.put_DisplayName() */
 HRESULT wapso_social_user_info_put__display_name(WAPSO_SocialUserInfo *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialUserInfo.get_UserName() */
 HRESULT wapso_social_user_info_get__user_name(WAPSO_SocialUserInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialUserInfo.put_UserName() */
 HRESULT wapso_social_user_info_put__user_name(WAPSO_SocialUserInfo *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialUserInfo.get_RemoteId() */
 HRESULT wapso_social_user_info_get__remote_id(WAPSO_SocialUserInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialUserInfo.put_RemoteId() */
 HRESULT wapso_social_user_info_put__remote_id(WAPSO_SocialUserInfo *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialUserInfo.get_TargetUri() */
 HRESULT wapso_social_user_info_get__target_uri(WAPSO_SocialUserInfo *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialUserInfo.put_TargetUri() */
 HRESULT wapso_social_user_info_put__target_uri(WAPSO_SocialUserInfo *self, WF_Uri* value);
 
-/* activate Windows.ApplicationModel.SocialInfo.SocialFeedChildItem */
 HRESULT wapso_social_feed_child_item_new(WAPSO_SocialFeedChildItem **out);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedChildItem */
-/* Windows.ApplicationModel.SocialInfo.SocialFeedChildItem.get_Author() */
 HRESULT wapso_social_feed_child_item_get__author(WAPSO_SocialFeedChildItem *self, WAPSO_SocialUserInfo** value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedChildItem.get_PrimaryContent() */
 HRESULT wapso_social_feed_child_item_get__primary_content(WAPSO_SocialFeedChildItem *self, WAPSO_SocialFeedContent** value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedChildItem.get_SecondaryContent() */
 HRESULT wapso_social_feed_child_item_get__secondary_content(WAPSO_SocialFeedChildItem *self, WAPSO_SocialFeedContent** value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedChildItem.get_Timestamp() */
 HRESULT wapso_social_feed_child_item_get__timestamp(WAPSO_SocialFeedChildItem *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedChildItem.put_Timestamp() */
 HRESULT wapso_social_feed_child_item_put__timestamp(WAPSO_SocialFeedChildItem *self, WF_DateTime value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedChildItem.get_TargetUri() */
 HRESULT wapso_social_feed_child_item_get__target_uri(WAPSO_SocialFeedChildItem *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedChildItem.put_TargetUri() */
 HRESULT wapso_social_feed_child_item_put__target_uri(WAPSO_SocialFeedChildItem *self, WF_Uri* value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedChildItem.get_Thumbnails() */
 HRESULT wapso_social_feed_child_item_get__thumbnails(WAPSO_SocialFeedChildItem *self, WFOCO_IVector_WAPSO_SocialItemThumbnail** value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedChildItem.get_SharedItem() */
 HRESULT wapso_social_feed_child_item_get__shared_item(WAPSO_SocialFeedChildItem *self, WAPSO_SocialFeedSharedItem** value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedChildItem.put_SharedItem() */
 HRESULT wapso_social_feed_child_item_put__shared_item(WAPSO_SocialFeedChildItem *self, WAPSO_SocialFeedSharedItem* value);
 
-/* activate Windows.ApplicationModel.SocialInfo.SocialFeedContent */
 HRESULT wapso_social_feed_content_new(WAPSO_SocialFeedContent **out);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedContent */
-/* Windows.ApplicationModel.SocialInfo.SocialFeedContent.get_Title() */
 HRESULT wapso_social_feed_content_get__title(WAPSO_SocialFeedContent *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedContent.put_Title() */
 HRESULT wapso_social_feed_content_put__title(WAPSO_SocialFeedContent *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedContent.get_Message() */
 HRESULT wapso_social_feed_content_get__message(WAPSO_SocialFeedContent *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedContent.put_Message() */
 HRESULT wapso_social_feed_content_put__message(WAPSO_SocialFeedContent *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedContent.get_TargetUri() */
 HRESULT wapso_social_feed_content_get__target_uri(WAPSO_SocialFeedContent *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedContent.put_TargetUri() */
 HRESULT wapso_social_feed_content_put__target_uri(WAPSO_SocialFeedContent *self, WF_Uri* value);
 
-/* activate Windows.ApplicationModel.SocialInfo.SocialFeedItem */
 HRESULT wapso_social_feed_item_new(WAPSO_SocialFeedItem **out);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedItem */
-/* Windows.ApplicationModel.SocialInfo.SocialFeedItem.get_Author() */
 HRESULT wapso_social_feed_item_get__author(WAPSO_SocialFeedItem *self, WAPSO_SocialUserInfo** value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedItem.get_PrimaryContent() */
 HRESULT wapso_social_feed_item_get__primary_content(WAPSO_SocialFeedItem *self, WAPSO_SocialFeedContent** value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedItem.get_SecondaryContent() */
 HRESULT wapso_social_feed_item_get__secondary_content(WAPSO_SocialFeedItem *self, WAPSO_SocialFeedContent** value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedItem.get_Timestamp() */
 HRESULT wapso_social_feed_item_get__timestamp(WAPSO_SocialFeedItem *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedItem.put_Timestamp() */
 HRESULT wapso_social_feed_item_put__timestamp(WAPSO_SocialFeedItem *self, WF_DateTime value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedItem.get_TargetUri() */
 HRESULT wapso_social_feed_item_get__target_uri(WAPSO_SocialFeedItem *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedItem.put_TargetUri() */
 HRESULT wapso_social_feed_item_put__target_uri(WAPSO_SocialFeedItem *self, WF_Uri* value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedItem.get_Thumbnails() */
 HRESULT wapso_social_feed_item_get__thumbnails(WAPSO_SocialFeedItem *self, WFOCO_IVector_WAPSO_SocialItemThumbnail** value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedItem.get_SharedItem() */
 HRESULT wapso_social_feed_item_get__shared_item(WAPSO_SocialFeedItem *self, WAPSO_SocialFeedSharedItem** value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedItem.put_SharedItem() */
 HRESULT wapso_social_feed_item_put__shared_item(WAPSO_SocialFeedItem *self, WAPSO_SocialFeedSharedItem* value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedItem.get_BadgeStyle() */
 HRESULT wapso_social_feed_item_get__badge_style(WAPSO_SocialFeedItem *self, WAPSO_SocialItemBadgeStyle *value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedItem.put_BadgeStyle() */
 HRESULT wapso_social_feed_item_put__badge_style(WAPSO_SocialFeedItem *self, WAPSO_SocialItemBadgeStyle value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedItem.get_BadgeCountValue() */
 HRESULT wapso_social_feed_item_get__badge_count_value(WAPSO_SocialFeedItem *self, int32_t *value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedItem.put_BadgeCountValue() */
 HRESULT wapso_social_feed_item_put__badge_count_value(WAPSO_SocialFeedItem *self, int32_t value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedItem.get_RemoteId() */
 HRESULT wapso_social_feed_item_get__remote_id(WAPSO_SocialFeedItem *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedItem.put_RemoteId() */
 HRESULT wapso_social_feed_item_put__remote_id(WAPSO_SocialFeedItem *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedItem.get_ChildItem() */
 HRESULT wapso_social_feed_item_get__child_item(WAPSO_SocialFeedItem *self, WAPSO_SocialFeedChildItem** value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedItem.put_ChildItem() */
 HRESULT wapso_social_feed_item_put__child_item(WAPSO_SocialFeedItem *self, WAPSO_SocialFeedChildItem* value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedItem.get_Style() */
 HRESULT wapso_social_feed_item_get__style(WAPSO_SocialFeedItem *self, WAPSO_SocialFeedItemStyle *value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedItem.put_Style() */
 HRESULT wapso_social_feed_item_put__style(WAPSO_SocialFeedItem *self, WAPSO_SocialFeedItemStyle value);
 
-/* activate Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem */
 HRESULT wapso_social_feed_shared_item_new(WAPSO_SocialFeedSharedItem **out);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem */
-/* Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem.get_OriginalSource() */
 HRESULT wapso_social_feed_shared_item_get__original_source(WAPSO_SocialFeedSharedItem *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem.put_OriginalSource() */
 HRESULT wapso_social_feed_shared_item_put__original_source(WAPSO_SocialFeedSharedItem *self, WF_Uri* value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem.get_Content() */
 HRESULT wapso_social_feed_shared_item_get__content(WAPSO_SocialFeedSharedItem *self, WAPSO_SocialFeedContent** value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem.get_Timestamp() */
 HRESULT wapso_social_feed_shared_item_get__timestamp(WAPSO_SocialFeedSharedItem *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem.put_Timestamp() */
 HRESULT wapso_social_feed_shared_item_put__timestamp(WAPSO_SocialFeedSharedItem *self, WF_DateTime value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem.get_TargetUri() */
 HRESULT wapso_social_feed_shared_item_get__target_uri(WAPSO_SocialFeedSharedItem *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem.put_TargetUri() */
 HRESULT wapso_social_feed_shared_item_put__target_uri(WAPSO_SocialFeedSharedItem *self, WF_Uri* value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem.put_Thumbnail() */
 HRESULT wapso_social_feed_shared_item_put__thumbnail(WAPSO_SocialFeedSharedItem *self, WAPSO_SocialItemThumbnail* value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem.get_Thumbnail() */
 HRESULT wapso_social_feed_shared_item_get__thumbnail(WAPSO_SocialFeedSharedItem *self, WAPSO_SocialItemThumbnail** value);
 
-/* activate Windows.ApplicationModel.SocialInfo.SocialItemThumbnail */
 HRESULT wapso_social_item_thumbnail_new(WAPSO_SocialItemThumbnail **out);
 
-/* Windows.ApplicationModel.SocialInfo.SocialItemThumbnail */
-/* Windows.ApplicationModel.SocialInfo.SocialItemThumbnail.get_TargetUri() */
 HRESULT wapso_social_item_thumbnail_get__target_uri(WAPSO_SocialItemThumbnail *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialItemThumbnail.put_TargetUri() */
 HRESULT wapso_social_item_thumbnail_put__target_uri(WAPSO_SocialItemThumbnail *self, WF_Uri* value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialItemThumbnail.get_ImageUri() */
 HRESULT wapso_social_item_thumbnail_get__image_uri(WAPSO_SocialItemThumbnail *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialItemThumbnail.put_ImageUri() */
 HRESULT wapso_social_item_thumbnail_put__image_uri(WAPSO_SocialItemThumbnail *self, WF_Uri* value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialItemThumbnail.get_BitmapSize() */
 HRESULT wapso_social_item_thumbnail_get__bitmap_size(WAPSO_SocialItemThumbnail *self, WGRIM_BitmapSize *value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialItemThumbnail.put_BitmapSize() */
 HRESULT wapso_social_item_thumbnail_put__bitmap_size(WAPSO_SocialItemThumbnail *self, WGRIM_BitmapSize value);
 
-/* Windows.ApplicationModel.SocialInfo.SocialItemThumbnail.SetImageAsync(image) */
 HRESULT wapso_social_item_thumbnail_set_image_async(WAPSO_SocialItemThumbnail *self, WSTST_IInputStream* image, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.SocialInfo.ISocialUserInfo */
-/* Windows.ApplicationModel.SocialInfo.ISocialFeedChildItem */
-/* Windows.ApplicationModel.SocialInfo.ISocialFeedContent */
-/* Windows.ApplicationModel.SocialInfo.ISocialFeedItem */
-/* Windows.ApplicationModel.SocialInfo.ISocialFeedSharedItem */
-/* Windows.ApplicationModel.SocialInfo.ISocialItemThumbnail */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_SOCIALINFO_H */

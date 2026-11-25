@@ -13,13 +13,11 @@
 #include <cwinrt/Windows.Networking.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WNEXB_IXboxLiveDeviceAddressStatics WNEXB_IXboxLiveDeviceAddressStatics;
 typedef struct WNEXB_IXboxLiveEndpointPairStatics WNEXB_IXboxLiveEndpointPairStatics;
 typedef struct WNEXB_IXboxLiveEndpointPairTemplateStatics WNEXB_IXboxLiveEndpointPairTemplateStatics;
@@ -43,7 +41,6 @@ typedef struct WNEXB_IXboxLiveQualityOfServiceMeasurement WNEXB_IXboxLiveQuality
 typedef struct WNEXB_IXboxLiveQualityOfServiceMetricResult WNEXB_IXboxLiveQualityOfServiceMetricResult;
 typedef struct WNEXB_IXboxLiveQualityOfServicePrivatePayloadResult WNEXB_IXboxLiveQualityOfServicePrivatePayloadResult;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
@@ -184,7 +181,6 @@ typedef enum WNEXB_XboxLiveSocketKind {
 } WNEXB_XboxLiveSocketKind;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -241,367 +237,233 @@ static const IID CWINRT_IID_WNEXB_IXboxLiveQualityOfServiceMetricResult CWINRT_M
 static const IID CWINRT_IID_WNEXB_IXboxLiveQualityOfServicePrivatePayloadResult CWINRT_MAYBE_UNUSED = { 0x5A6302AE, 0x6F38, 0x41C0, { 0x9F, 0xCC, 0xEA, 0x6C, 0xB9, 0x78, 0xCA, 0xFC } };
 #endif
 
-/* Methods */
-
-/* Windows.Networking.XboxLive.IXboxLiveDeviceAddressStatics */
-/* Windows.Networking.XboxLive.IXboxLiveDeviceAddressStatics.CreateFromSnapshotBase64(base64) */
 HRESULT wnexb_xbox_live_device_address_statics_create_from_snapshot_base64(WNEXB_IXboxLiveDeviceAddressStatics *self, cwinrt_hstring base64, WNEXB_XboxLiveDeviceAddress** out);
 
-/* Windows.Networking.XboxLive.IXboxLiveDeviceAddressStatics.CreateFromSnapshotBuffer(buffer) */
 HRESULT wnexb_xbox_live_device_address_statics_create_from_snapshot_buffer(WNEXB_IXboxLiveDeviceAddressStatics *self, WSTST_IBuffer* buffer, WNEXB_XboxLiveDeviceAddress** out);
 
-/* Windows.Networking.XboxLive.IXboxLiveDeviceAddressStatics.CreateFromSnapshotBytes(buffer) */
 HRESULT wnexb_xbox_live_device_address_statics_create_from_snapshot_bytes(WNEXB_IXboxLiveDeviceAddressStatics *self, uint8_t *buffer, uint32_t buffer_len, WNEXB_XboxLiveDeviceAddress** out);
 
-/* Windows.Networking.XboxLive.IXboxLiveDeviceAddressStatics.GetLocal() */
 HRESULT wnexb_xbox_live_device_address_statics_get_local(WNEXB_IXboxLiveDeviceAddressStatics *self, WNEXB_XboxLiveDeviceAddress** out);
 
-/* Windows.Networking.XboxLive.IXboxLiveDeviceAddressStatics.get_MaxSnapshotBytesSize() */
 HRESULT wnexb_xbox_live_device_address_statics_get__max_snapshot_bytes_size(WNEXB_IXboxLiveDeviceAddressStatics *self, uint32_t *value);
 
-/* Windows.Networking.XboxLive.IXboxLiveEndpointPairStatics */
-/* Windows.Networking.XboxLive.IXboxLiveEndpointPairStatics.FindEndpointPairBySocketAddressBytes(localSocketAddress, remoteSocketAddress) */
 HRESULT wnexb_xbox_live_endpoint_pair_statics_find_endpoint_pair_by_socket_address_bytes(WNEXB_IXboxLiveEndpointPairStatics *self, uint8_t *localSocketAddress, uint32_t localSocketAddress_len, uint8_t *remoteSocketAddress, uint32_t remoteSocketAddress_len, WNEXB_XboxLiveEndpointPair** out);
 
-/* Windows.Networking.XboxLive.IXboxLiveEndpointPairStatics.FindEndpointPairByHostNamesAndPorts(localHostName, localPort, remoteHostName, remotePort) */
 HRESULT wnexb_xbox_live_endpoint_pair_statics_find_endpoint_pair_by_host_names_and_ports(WNEXB_IXboxLiveEndpointPairStatics *self, WNE_HostName* localHostName, cwinrt_hstring localPort, WNE_HostName* remoteHostName, cwinrt_hstring remotePort, WNEXB_XboxLiveEndpointPair** out);
 
-/* Windows.Networking.XboxLive.IXboxLiveEndpointPairTemplateStatics */
-/* Windows.Networking.XboxLive.IXboxLiveEndpointPairTemplateStatics.GetTemplateByName(name) */
 HRESULT wnexb_xbox_live_endpoint_pair_template_statics_get_template_by_name(WNEXB_IXboxLiveEndpointPairTemplateStatics *self, cwinrt_hstring name, WNEXB_XboxLiveEndpointPairTemplate** out);
 
-/* Windows.Networking.XboxLive.IXboxLiveEndpointPairTemplateStatics.get_Templates() */
 HRESULT wnexb_xbox_live_endpoint_pair_template_statics_get__templates(WNEXB_IXboxLiveEndpointPairTemplateStatics *self, WFOCO_IVectorView_WNEXB_XboxLiveEndpointPairTemplate** value);
 
-/* Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurementStatics */
-/* Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurementStatics.PublishPrivatePayloadBytes(payload) */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_statics_publish_private_payload_bytes(WNEXB_IXboxLiveQualityOfServiceMeasurementStatics *self, uint8_t *payload, uint32_t payload_len);
 
-/* Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurementStatics.ClearPrivatePayload() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_statics_clear_private_payload(WNEXB_IXboxLiveQualityOfServiceMeasurementStatics *self);
 
-/* Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurementStatics.get_MaxSimultaneousProbeConnections() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_statics_get__max_simultaneous_probe_connections(WNEXB_IXboxLiveQualityOfServiceMeasurementStatics *self, uint32_t *value);
 
-/* Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurementStatics.put_MaxSimultaneousProbeConnections() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_statics_put__max_simultaneous_probe_connections(WNEXB_IXboxLiveQualityOfServiceMeasurementStatics *self, uint32_t value);
 
-/* Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurementStatics.get_IsSystemOutboundBandwidthConstrained() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_statics_get__is_system_outbound_bandwidth_constrained(WNEXB_IXboxLiveQualityOfServiceMeasurementStatics *self, BOOL *value);
 
-/* Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurementStatics.put_IsSystemOutboundBandwidthConstrained() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_statics_put__is_system_outbound_bandwidth_constrained(WNEXB_IXboxLiveQualityOfServiceMeasurementStatics *self, BOOL value);
 
-/* Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurementStatics.get_IsSystemInboundBandwidthConstrained() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_statics_get__is_system_inbound_bandwidth_constrained(WNEXB_IXboxLiveQualityOfServiceMeasurementStatics *self, BOOL *value);
 
-/* Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurementStatics.put_IsSystemInboundBandwidthConstrained() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_statics_put__is_system_inbound_bandwidth_constrained(WNEXB_IXboxLiveQualityOfServiceMeasurementStatics *self, BOOL value);
 
-/* Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurementStatics.get_PublishedPrivatePayload() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_statics_get__published_private_payload(WNEXB_IXboxLiveQualityOfServiceMeasurementStatics *self, WSTST_IBuffer** value);
 
-/* Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurementStatics.put_PublishedPrivatePayload() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_statics_put__published_private_payload(WNEXB_IXboxLiveQualityOfServiceMeasurementStatics *self, WSTST_IBuffer* value);
 
-/* Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurementStatics.get_MaxPrivatePayloadSize() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_statics_get__max_private_payload_size(WNEXB_IXboxLiveQualityOfServiceMeasurementStatics *self, uint32_t *value);
 
-/* activate Windows.Networking.XboxLive.XboxLiveDeviceAddress */
 HRESULT wnexb_xbox_live_device_address_new(WNEXB_XboxLiveDeviceAddress **out);
 
-/* Windows.Networking.XboxLive.XboxLiveDeviceAddress */
-/* Windows.Networking.XboxLive.XboxLiveDeviceAddress.GetSnapshotAsBase64() */
 HRESULT wnexb_xbox_live_device_address_get_snapshot_as_base64(WNEXB_XboxLiveDeviceAddress *self, cwinrt_hstring *out);
 
-/* Windows.Networking.XboxLive.XboxLiveDeviceAddress.GetSnapshotAsBuffer() */
 HRESULT wnexb_xbox_live_device_address_get_snapshot_as_buffer(WNEXB_XboxLiveDeviceAddress *self, WSTST_IBuffer** out);
 
-/* Windows.Networking.XboxLive.XboxLiveDeviceAddress.GetSnapshotAsBytes(buffer, bytesWritten) */
 HRESULT wnexb_xbox_live_device_address_get_snapshot_as_bytes(WNEXB_XboxLiveDeviceAddress *self, uint8_t *buffer, uint32_t buffer_len, uint32_t bytesWritten);
 
-/* Windows.Networking.XboxLive.XboxLiveDeviceAddress.Compare(otherDeviceAddress) */
 HRESULT wnexb_xbox_live_device_address_compare(WNEXB_XboxLiveDeviceAddress *self, WNEXB_XboxLiveDeviceAddress* otherDeviceAddress, int32_t *out);
 
-/* Windows.Networking.XboxLive.XboxLiveDeviceAddress.get_IsValid() */
 HRESULT wnexb_xbox_live_device_address_get__is_valid(WNEXB_XboxLiveDeviceAddress *self, BOOL *value);
 
-/* Windows.Networking.XboxLive.XboxLiveDeviceAddress.get_IsLocal() */
 HRESULT wnexb_xbox_live_device_address_get__is_local(WNEXB_XboxLiveDeviceAddress *self, BOOL *value);
 
-/* Windows.Networking.XboxLive.XboxLiveDeviceAddress.get_NetworkAccessKind() */
 HRESULT wnexb_xbox_live_device_address_get__network_access_kind(WNEXB_XboxLiveDeviceAddress *self, WNEXB_XboxLiveNetworkAccessKind *value);
 
-/* Windows.Networking.XboxLive.XboxLiveDeviceAddress.CreateFromSnapshotBase64(base64) */
 HRESULT wnexb_xbox_live_device_address_create_from_snapshot_base64(cwinrt_hstring base64, WNEXB_XboxLiveDeviceAddress** out);
 
-/* Windows.Networking.XboxLive.XboxLiveDeviceAddress.CreateFromSnapshotBuffer(buffer) */
 HRESULT wnexb_xbox_live_device_address_create_from_snapshot_buffer(WSTST_IBuffer* buffer, WNEXB_XboxLiveDeviceAddress** out);
 
-/* Windows.Networking.XboxLive.XboxLiveDeviceAddress.CreateFromSnapshotBytes(buffer) */
 HRESULT wnexb_xbox_live_device_address_create_from_snapshot_bytes(uint8_t *buffer, uint32_t buffer_len, WNEXB_XboxLiveDeviceAddress** out);
 
-/* Windows.Networking.XboxLive.XboxLiveDeviceAddress.GetLocal() */
 HRESULT wnexb_xbox_live_device_address_get_local(WNEXB_XboxLiveDeviceAddress** out);
 
-/* Windows.Networking.XboxLive.XboxLiveDeviceAddress.get_MaxSnapshotBytesSize() */
 HRESULT wnexb_xbox_live_device_address_get__max_snapshot_bytes_size(uint32_t *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wnexb_xbox_live_device_address_on_snapshot_changed(WNEXB_XboxLiveDeviceAddress *self, cwinrt_event_fn fn, void *ctx);
 void wnexb_xbox_live_device_address_off_snapshot_changed(WNEXB_XboxLiveDeviceAddress *self, cwinrt_token token);
 
-/* activate Windows.Networking.XboxLive.XboxLiveEndpointPair */
 HRESULT wnexb_xbox_live_endpoint_pair_new(WNEXB_XboxLiveEndpointPair **out);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPair */
-/* Windows.Networking.XboxLive.XboxLiveEndpointPair.DeleteAsync() */
 HRESULT wnexb_xbox_live_endpoint_pair_delete_async(WNEXB_XboxLiveEndpointPair *self, WF_IAsyncAction** out);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPair.GetRemoteSocketAddressBytes(socketAddress) */
 HRESULT wnexb_xbox_live_endpoint_pair_get_remote_socket_address_bytes(WNEXB_XboxLiveEndpointPair *self, uint8_t *socketAddress, uint32_t socketAddress_len);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPair.GetLocalSocketAddressBytes(socketAddress) */
 HRESULT wnexb_xbox_live_endpoint_pair_get_local_socket_address_bytes(WNEXB_XboxLiveEndpointPair *self, uint8_t *socketAddress, uint32_t socketAddress_len);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPair.get_State() */
 HRESULT wnexb_xbox_live_endpoint_pair_get__state(WNEXB_XboxLiveEndpointPair *self, WNEXB_XboxLiveEndpointPairState *value);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPair.get_Template() */
 HRESULT wnexb_xbox_live_endpoint_pair_get__template(WNEXB_XboxLiveEndpointPair *self, WNEXB_XboxLiveEndpointPairTemplate** value);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPair.get_RemoteDeviceAddress() */
 HRESULT wnexb_xbox_live_endpoint_pair_get__remote_device_address(WNEXB_XboxLiveEndpointPair *self, WNEXB_XboxLiveDeviceAddress** value);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPair.get_RemoteHostName() */
 HRESULT wnexb_xbox_live_endpoint_pair_get__remote_host_name(WNEXB_XboxLiveEndpointPair *self, WNE_HostName** value);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPair.get_RemotePort() */
 HRESULT wnexb_xbox_live_endpoint_pair_get__remote_port(WNEXB_XboxLiveEndpointPair *self, cwinrt_hstring *value);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPair.get_LocalHostName() */
 HRESULT wnexb_xbox_live_endpoint_pair_get__local_host_name(WNEXB_XboxLiveEndpointPair *self, WNE_HostName** value);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPair.get_LocalPort() */
 HRESULT wnexb_xbox_live_endpoint_pair_get__local_port(WNEXB_XboxLiveEndpointPair *self, cwinrt_hstring *value);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPair.FindEndpointPairBySocketAddressBytes(localSocketAddress, remoteSocketAddress) */
 HRESULT wnexb_xbox_live_endpoint_pair_find_endpoint_pair_by_socket_address_bytes(uint8_t *localSocketAddress, uint32_t localSocketAddress_len, uint8_t *remoteSocketAddress, uint32_t remoteSocketAddress_len, WNEXB_XboxLiveEndpointPair** out);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPair.FindEndpointPairByHostNamesAndPorts(localHostName, localPort, remoteHostName, remotePort) */
 HRESULT wnexb_xbox_live_endpoint_pair_find_endpoint_pair_by_host_names_and_ports(WNE_HostName* localHostName, cwinrt_hstring localPort, WNE_HostName* remoteHostName, cwinrt_hstring remotePort, WNEXB_XboxLiveEndpointPair** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wnexb_xbox_live_endpoint_pair_on_state_changed(WNEXB_XboxLiveEndpointPair *self, cwinrt_event_fn fn, void *ctx);
 void wnexb_xbox_live_endpoint_pair_off_state_changed(WNEXB_XboxLiveEndpointPair *self, cwinrt_token token);
 
-/* activate Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult */
 HRESULT wnexb_xbox_live_endpoint_pair_creation_result_new(WNEXB_XboxLiveEndpointPairCreationResult **out);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult */
-/* Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult.get_DeviceAddress() */
 HRESULT wnexb_xbox_live_endpoint_pair_creation_result_get__device_address(WNEXB_XboxLiveEndpointPairCreationResult *self, WNEXB_XboxLiveDeviceAddress** value);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult.get_Status() */
 HRESULT wnexb_xbox_live_endpoint_pair_creation_result_get__status(WNEXB_XboxLiveEndpointPairCreationResult *self, WNEXB_XboxLiveEndpointPairCreationStatus *value);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult.get_IsExistingPathEvaluation() */
 HRESULT wnexb_xbox_live_endpoint_pair_creation_result_get__is_existing_path_evaluation(WNEXB_XboxLiveEndpointPairCreationResult *self, BOOL *value);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult.get_EndpointPair() */
 HRESULT wnexb_xbox_live_endpoint_pair_creation_result_get__endpoint_pair(WNEXB_XboxLiveEndpointPairCreationResult *self, WNEXB_XboxLiveEndpointPair** value);
 
-/* activate Windows.Networking.XboxLive.XboxLiveEndpointPairStateChangedEventArgs */
 HRESULT wnexb_xbox_live_endpoint_pair_state_changed_event_args_new(WNEXB_XboxLiveEndpointPairStateChangedEventArgs **out);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPairStateChangedEventArgs */
-/* Windows.Networking.XboxLive.XboxLiveEndpointPairStateChangedEventArgs.get_OldState() */
 HRESULT wnexb_xbox_live_endpoint_pair_state_changed_event_args_get__old_state(WNEXB_XboxLiveEndpointPairStateChangedEventArgs *self, WNEXB_XboxLiveEndpointPairState *value);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPairStateChangedEventArgs.get_NewState() */
 HRESULT wnexb_xbox_live_endpoint_pair_state_changed_event_args_get__new_state(WNEXB_XboxLiveEndpointPairStateChangedEventArgs *self, WNEXB_XboxLiveEndpointPairState *value);
 
-/* activate Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate */
 HRESULT wnexb_xbox_live_endpoint_pair_template_new(WNEXB_XboxLiveEndpointPairTemplate **out);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate */
-/* Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate.CreateEndpointPairAsync(deviceAddress) */
 HRESULT wnexb_xbox_live_endpoint_pair_template_create_endpoint_pair_async(WNEXB_XboxLiveEndpointPairTemplate *self, WNEXB_XboxLiveDeviceAddress* deviceAddress, WF_IAsyncOperation_WNEXB_XboxLiveEndpointPairCreationResult** out);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate.CreateEndpointPairAsync(deviceAddress, behaviors) */
 HRESULT wnexb_xbox_live_endpoint_pair_template_create_endpoint_pair_async_p_xbox_live_endpoint_pair_creation_b_568b4c3c(WNEXB_XboxLiveEndpointPairTemplate *self, WNEXB_XboxLiveDeviceAddress* deviceAddress, WNEXB_XboxLiveEndpointPairCreationBehaviors behaviors, WF_IAsyncOperation_WNEXB_XboxLiveEndpointPairCreationResult** out);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate.CreateEndpointPairForPortsAsync(deviceAddress, initiatorPort, acceptorPort) */
 HRESULT wnexb_xbox_live_endpoint_pair_template_create_endpoint_pair_for_ports_async(WNEXB_XboxLiveEndpointPairTemplate *self, WNEXB_XboxLiveDeviceAddress* deviceAddress, cwinrt_hstring initiatorPort, cwinrt_hstring acceptorPort, WF_IAsyncOperation_WNEXB_XboxLiveEndpointPairCreationResult** out);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate.CreateEndpointPairForPortsAsync(deviceAddress, initiatorPort, acceptorPort, behaviors) */
 HRESULT wnexb_xbox_live_endpoint_pair_template_create_endpoint_pair_for_ports_async_p_str_str_xbox_live_endpoint_pair_cr_2127ab9c(WNEXB_XboxLiveEndpointPairTemplate *self, WNEXB_XboxLiveDeviceAddress* deviceAddress, cwinrt_hstring initiatorPort, cwinrt_hstring acceptorPort, WNEXB_XboxLiveEndpointPairCreationBehaviors behaviors, WF_IAsyncOperation_WNEXB_XboxLiveEndpointPairCreationResult** out);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate.get_Name() */
 HRESULT wnexb_xbox_live_endpoint_pair_template_get__name(WNEXB_XboxLiveEndpointPairTemplate *self, cwinrt_hstring *value);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate.get_SocketKind() */
 HRESULT wnexb_xbox_live_endpoint_pair_template_get__socket_kind(WNEXB_XboxLiveEndpointPairTemplate *self, WNEXB_XboxLiveSocketKind *value);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate.get_InitiatorBoundPortRangeLower() */
 HRESULT wnexb_xbox_live_endpoint_pair_template_get__initiator_bound_port_range_lower(WNEXB_XboxLiveEndpointPairTemplate *self, uint16_t *value);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate.get_InitiatorBoundPortRangeUpper() */
 HRESULT wnexb_xbox_live_endpoint_pair_template_get__initiator_bound_port_range_upper(WNEXB_XboxLiveEndpointPairTemplate *self, uint16_t *value);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate.get_AcceptorBoundPortRangeLower() */
 HRESULT wnexb_xbox_live_endpoint_pair_template_get__acceptor_bound_port_range_lower(WNEXB_XboxLiveEndpointPairTemplate *self, uint16_t *value);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate.get_AcceptorBoundPortRangeUpper() */
 HRESULT wnexb_xbox_live_endpoint_pair_template_get__acceptor_bound_port_range_upper(WNEXB_XboxLiveEndpointPairTemplate *self, uint16_t *value);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate.get_EndpointPairs() */
 HRESULT wnexb_xbox_live_endpoint_pair_template_get__endpoint_pairs(WNEXB_XboxLiveEndpointPairTemplate *self, WFOCO_IVectorView_WNEXB_XboxLiveEndpointPair** value);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate.GetTemplateByName(name) */
 HRESULT wnexb_xbox_live_endpoint_pair_template_get_template_by_name(cwinrt_hstring name, WNEXB_XboxLiveEndpointPairTemplate** out);
 
-/* Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate.get_Templates() */
 HRESULT wnexb_xbox_live_endpoint_pair_template_get__templates(WFOCO_IVectorView_WNEXB_XboxLiveEndpointPairTemplate** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wnexb_xbox_live_endpoint_pair_template_on_inbound_endpoint_pair_created(WNEXB_XboxLiveEndpointPairTemplate *self, cwinrt_event_fn fn, void *ctx);
 void wnexb_xbox_live_endpoint_pair_template_off_inbound_endpoint_pair_created(WNEXB_XboxLiveEndpointPairTemplate *self, cwinrt_token token);
 
-/* activate Windows.Networking.XboxLive.XboxLiveInboundEndpointPairCreatedEventArgs */
 HRESULT wnexb_xbox_live_inbound_endpoint_pair_created_event_args_new(WNEXB_XboxLiveInboundEndpointPairCreatedEventArgs **out);
 
-/* Windows.Networking.XboxLive.XboxLiveInboundEndpointPairCreatedEventArgs */
-/* Windows.Networking.XboxLive.XboxLiveInboundEndpointPairCreatedEventArgs.get_EndpointPair() */
 HRESULT wnexb_xbox_live_inbound_endpoint_pair_created_event_args_get__endpoint_pair(WNEXB_XboxLiveInboundEndpointPairCreatedEventArgs *self, WNEXB_XboxLiveEndpointPair** value);
 
-/* activate Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_new(WNEXB_XboxLiveQualityOfServiceMeasurement **out);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement */
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement.MeasureAsync() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_measure_async(WNEXB_XboxLiveQualityOfServiceMeasurement *self, WF_IAsyncAction** out);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement.GetMetricResultsForDevice(deviceAddress) */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_get_metric_results_for_device(WNEXB_XboxLiveQualityOfServiceMeasurement *self, WNEXB_XboxLiveDeviceAddress* deviceAddress, WFOCO_IVectorView_WNEXB_XboxLiveQualityOfServiceMetricResult** out);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement.GetMetricResultsForMetric(metric) */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_get_metric_results_for_metric(WNEXB_XboxLiveQualityOfServiceMeasurement *self, WNEXB_XboxLiveQualityOfServiceMetric metric, WFOCO_IVectorView_WNEXB_XboxLiveQualityOfServiceMetricResult** out);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement.GetMetricResult(deviceAddress, metric) */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_get_metric_result(WNEXB_XboxLiveQualityOfServiceMeasurement *self, WNEXB_XboxLiveDeviceAddress* deviceAddress, WNEXB_XboxLiveQualityOfServiceMetric metric, WNEXB_XboxLiveQualityOfServiceMetricResult** out);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement.GetPrivatePayloadResult(deviceAddress) */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_get_private_payload_result(WNEXB_XboxLiveQualityOfServiceMeasurement *self, WNEXB_XboxLiveDeviceAddress* deviceAddress, WNEXB_XboxLiveQualityOfServicePrivatePayloadResult** out);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement.get_Metrics() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_get__metrics(WNEXB_XboxLiveQualityOfServiceMeasurement *self, WFOCO_IVector_WNEXB_XboxLiveQualityOfServiceMetric** value);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement.get_DeviceAddresses() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_get__device_addresses(WNEXB_XboxLiveQualityOfServiceMeasurement *self, WFOCO_IVector_WNEXB_XboxLiveDeviceAddress** value);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement.get_ShouldRequestPrivatePayloads() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_get__should_request_private_payloads(WNEXB_XboxLiveQualityOfServiceMeasurement *self, BOOL *value);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement.put_ShouldRequestPrivatePayloads() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_put__should_request_private_payloads(WNEXB_XboxLiveQualityOfServiceMeasurement *self, BOOL value);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement.get_TimeoutInMilliseconds() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_get__timeout_in_milliseconds(WNEXB_XboxLiveQualityOfServiceMeasurement *self, uint32_t *value);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement.put_TimeoutInMilliseconds() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_put__timeout_in_milliseconds(WNEXB_XboxLiveQualityOfServiceMeasurement *self, uint32_t value);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement.get_NumberOfProbesToAttempt() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_get__number_of_probes_to_attempt(WNEXB_XboxLiveQualityOfServiceMeasurement *self, uint32_t *value);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement.put_NumberOfProbesToAttempt() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_put__number_of_probes_to_attempt(WNEXB_XboxLiveQualityOfServiceMeasurement *self, uint32_t value);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement.get_NumberOfResultsPending() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_get__number_of_results_pending(WNEXB_XboxLiveQualityOfServiceMeasurement *self, uint32_t *value);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement.get_MetricResults() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_get__metric_results(WNEXB_XboxLiveQualityOfServiceMeasurement *self, WFOCO_IVectorView_WNEXB_XboxLiveQualityOfServiceMetricResult** value);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement.get_PrivatePayloadResults() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_get__private_payload_results(WNEXB_XboxLiveQualityOfServiceMeasurement *self, WFOCO_IVectorView_WNEXB_XboxLiveQualityOfServicePrivatePayloadResult** value);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement.PublishPrivatePayloadBytes(payload) */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_publish_private_payload_bytes(uint8_t *payload, uint32_t payload_len);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement.ClearPrivatePayload() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_clear_private_payload(void);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement.get_MaxSimultaneousProbeConnections() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_get__max_simultaneous_probe_connections(uint32_t *value);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement.put_MaxSimultaneousProbeConnections() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_put__max_simultaneous_probe_connections(uint32_t value);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement.get_IsSystemOutboundBandwidthConstrained() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_get__is_system_outbound_bandwidth_constrained(BOOL *value);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement.put_IsSystemOutboundBandwidthConstrained() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_put__is_system_outbound_bandwidth_constrained(BOOL value);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement.get_IsSystemInboundBandwidthConstrained() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_get__is_system_inbound_bandwidth_constrained(BOOL *value);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement.put_IsSystemInboundBandwidthConstrained() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_put__is_system_inbound_bandwidth_constrained(BOOL value);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement.get_PublishedPrivatePayload() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_get__published_private_payload(WSTST_IBuffer** value);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement.put_PublishedPrivatePayload() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_put__published_private_payload(WSTST_IBuffer* value);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement.get_MaxPrivatePayloadSize() */
 HRESULT wnexb_xbox_live_quality_of_service_measurement_get__max_private_payload_size(uint32_t *value);
 
-/* activate Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult */
 HRESULT wnexb_xbox_live_quality_of_service_metric_result_new(WNEXB_XboxLiveQualityOfServiceMetricResult **out);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult */
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult.get_Status() */
 HRESULT wnexb_xbox_live_quality_of_service_metric_result_get__status(WNEXB_XboxLiveQualityOfServiceMetricResult *self, WNEXB_XboxLiveQualityOfServiceMeasurementStatus *value);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult.get_DeviceAddress() */
 HRESULT wnexb_xbox_live_quality_of_service_metric_result_get__device_address(WNEXB_XboxLiveQualityOfServiceMetricResult *self, WNEXB_XboxLiveDeviceAddress** value);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult.get_Metric() */
 HRESULT wnexb_xbox_live_quality_of_service_metric_result_get__metric(WNEXB_XboxLiveQualityOfServiceMetricResult *self, WNEXB_XboxLiveQualityOfServiceMetric *value);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult.get_Value() */
 HRESULT wnexb_xbox_live_quality_of_service_metric_result_get__value(WNEXB_XboxLiveQualityOfServiceMetricResult *self, uint64_t *value);
 
-/* activate Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult */
 HRESULT wnexb_xbox_live_quality_of_service_private_payload_result_new(WNEXB_XboxLiveQualityOfServicePrivatePayloadResult **out);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult */
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult.get_Status() */
 HRESULT wnexb_xbox_live_quality_of_service_private_payload_result_get__status(WNEXB_XboxLiveQualityOfServicePrivatePayloadResult *self, WNEXB_XboxLiveQualityOfServiceMeasurementStatus *value);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult.get_DeviceAddress() */
 HRESULT wnexb_xbox_live_quality_of_service_private_payload_result_get__device_address(WNEXB_XboxLiveQualityOfServicePrivatePayloadResult *self, WNEXB_XboxLiveDeviceAddress** value);
 
-/* Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult.get_Value() */
 HRESULT wnexb_xbox_live_quality_of_service_private_payload_result_get__value(WNEXB_XboxLiveQualityOfServicePrivatePayloadResult *self, WSTST_IBuffer** value);
 
-/* Windows.Networking.XboxLive.IXboxLiveDeviceAddress */
-/* Windows.Networking.XboxLive.IXboxLiveEndpointPair */
-/* Windows.Networking.XboxLive.IXboxLiveEndpointPairCreationResult */
-/* Windows.Networking.XboxLive.IXboxLiveEndpointPairStateChangedEventArgs */
-/* Windows.Networking.XboxLive.IXboxLiveEndpointPairTemplate */
-/* Windows.Networking.XboxLive.IXboxLiveInboundEndpointPairCreatedEventArgs */
-/* Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurement */
-/* Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMetricResult */
-/* Windows.Networking.XboxLive.IXboxLiveQualityOfServicePrivatePayloadResult */
 #endif /* CWINRT_WINDOWS_NETWORKING_XBOXLIVE_H */

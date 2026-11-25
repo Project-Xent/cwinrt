@@ -12,13 +12,11 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WDEADPR_IAdcProvider
 #define CWINRT_FWD_WDEADPR_IAdcProvider
 typedef struct WDEADPR_IAdcProvider WDEADPR_IAdcProvider;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDEAD_IAdcControllerStatics_2 WDEAD_IAdcControllerStatics_2;
 typedef struct WDEAD_AdcChannel WDEAD_AdcChannel;
 typedef struct WDEAD_IAdcControllerStatics WDEAD_IAdcControllerStatics;
@@ -26,7 +24,6 @@ typedef struct WDEAD_AdcController WDEAD_AdcController;
 typedef struct WDEAD_IAdcChannel WDEAD_IAdcChannel;
 typedef struct WDEAD_IAdcController WDEAD_IAdcController;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WDEAD_AdcController
 #define CWINRT_FWD_WF_IAsyncOperation_WDEAD_AdcController
 typedef struct WF_IAsyncOperation_WDEAD_AdcController WF_IAsyncOperation_WDEAD_AdcController;
@@ -48,7 +45,6 @@ typedef enum WDEAD_AdcChannelMode {
 } WDEAD_AdcChannelMode;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -69,66 +65,40 @@ static const IID CWINRT_IID_WDEAD_IAdcChannel CWINRT_MAYBE_UNUSED = { 0x040BF414
 static const IID CWINRT_IID_WDEAD_IAdcController CWINRT_MAYBE_UNUSED = { 0x2A76E4B0, 0xA896, 0x4219, { 0x86, 0xB6, 0xEA, 0x8C, 0xDC, 0xE9, 0x8F, 0x56 } };
 #endif
 
-/* Methods */
-
-/* Windows.Devices.Adc.IAdcControllerStatics2 */
-/* Windows.Devices.Adc.IAdcControllerStatics2.GetDefaultAsync() */
 HRESULT wdead_adc_controller_statics_2_get_default_async(WDEAD_IAdcControllerStatics_2 *self, WF_IAsyncOperation_WDEAD_AdcController** out);
 
-/* activate Windows.Devices.Adc.AdcChannel */
 HRESULT wdead_adc_channel_new(WDEAD_AdcChannel **out);
 
-/* Windows.Devices.Adc.AdcChannel */
-/* Windows.Devices.Adc.AdcChannel.get_Controller() */
 HRESULT wdead_adc_channel_get__controller(WDEAD_AdcChannel *self, WDEAD_AdcController** value);
 
-/* Windows.Devices.Adc.AdcChannel.ReadValue() */
 HRESULT wdead_adc_channel_read_value(WDEAD_AdcChannel *self, int32_t *out);
 
-/* Windows.Devices.Adc.AdcChannel.ReadRatio() */
 HRESULT wdead_adc_channel_read_ratio(WDEAD_AdcChannel *self, double *out);
 
-/* Windows.Devices.Adc.AdcChannel.Close() */
 HRESULT wdead_adc_channel_close(WDEAD_AdcChannel *self);
 
-/* Windows.Devices.Adc.IAdcControllerStatics */
-/* Windows.Devices.Adc.IAdcControllerStatics.GetControllersAsync(provider) */
 HRESULT wdead_adc_controller_statics_get_controllers_async(WDEAD_IAdcControllerStatics *self, WDEADPR_IAdcProvider* provider, WF_IAsyncOperation_WFOCO_IVectorView_WDEAD_AdcController** out);
 
-/* activate Windows.Devices.Adc.AdcController */
 HRESULT wdead_adc_controller_new(WDEAD_AdcController **out);
 
-/* Windows.Devices.Adc.AdcController */
-/* Windows.Devices.Adc.AdcController.get_ChannelCount() */
 HRESULT wdead_adc_controller_get__channel_count(WDEAD_AdcController *self, int32_t *value);
 
-/* Windows.Devices.Adc.AdcController.get_ResolutionInBits() */
 HRESULT wdead_adc_controller_get__resolution_in_bits(WDEAD_AdcController *self, int32_t *value);
 
-/* Windows.Devices.Adc.AdcController.get_MinValue() */
 HRESULT wdead_adc_controller_get__min_value(WDEAD_AdcController *self, int32_t *value);
 
-/* Windows.Devices.Adc.AdcController.get_MaxValue() */
 HRESULT wdead_adc_controller_get__max_value(WDEAD_AdcController *self, int32_t *value);
 
-/* Windows.Devices.Adc.AdcController.get_ChannelMode() */
 HRESULT wdead_adc_controller_get__channel_mode(WDEAD_AdcController *self, WDEAD_AdcChannelMode *value);
 
-/* Windows.Devices.Adc.AdcController.put_ChannelMode() */
 HRESULT wdead_adc_controller_put__channel_mode(WDEAD_AdcController *self, WDEAD_AdcChannelMode value);
 
-/* Windows.Devices.Adc.AdcController.IsChannelModeSupported(channelMode) */
 HRESULT wdead_adc_controller_is_channel_mode_supported(WDEAD_AdcController *self, WDEAD_AdcChannelMode channelMode, BOOL *out);
 
-/* Windows.Devices.Adc.AdcController.OpenChannel(channelNumber) */
 HRESULT wdead_adc_controller_open_channel(WDEAD_AdcController *self, int32_t channelNumber, WDEAD_AdcChannel** out);
 
-/* Windows.Devices.Adc.AdcController.GetDefaultAsync() */
 HRESULT wdead_adc_controller_get_default_async(WF_IAsyncOperation_WDEAD_AdcController** out);
 
-/* Windows.Devices.Adc.AdcController.GetControllersAsync(provider) */
 HRESULT wdead_adc_controller_get_controllers_async(WDEADPR_IAdcProvider* provider, WF_IAsyncOperation_WFOCO_IVectorView_WDEAD_AdcController** out);
 
-/* Windows.Devices.Adc.IAdcChannel */
-/* Windows.Devices.Adc.IAdcController */
 #endif /* CWINRT_WINDOWS_DEVICES_ADC_H */

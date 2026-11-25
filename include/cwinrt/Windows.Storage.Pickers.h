@@ -13,13 +13,11 @@
 #include <cwinrt/Windows.Storage.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSTPI_IFolderPickerStatics WSTPI_IFolderPickerStatics;
 typedef struct WSTPI_FileOpenPicker WSTPI_FileOpenPicker;
 typedef struct WSTPI_FilePickerFileTypesOrderedMap WSTPI_FilePickerFileTypesOrderedMap;
@@ -42,7 +40,6 @@ typedef struct WSTPI_IFolderPicker_2 WSTPI_IFolderPicker_2;
 typedef struct WSTPI_IFolderPicker WSTPI_IFolderPicker;
 typedef struct WSTPI_IFolderPicker_3 WSTPI_IFolderPicker_3;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
@@ -120,7 +117,6 @@ typedef enum WSTPI_PickerLocationId {
 } WSTPI_PickerLocationId;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -185,330 +181,206 @@ static const IID CWINRT_IID_WSTPI_IFolderPicker CWINRT_MAYBE_UNUSED = { 0x084F77
 static const IID CWINRT_IID_WSTPI_IFolderPicker_3 CWINRT_MAYBE_UNUSED = { 0x673B1E29, 0xD326, 0x53C0, { 0xBD, 0x24, 0xA2, 0x5C, 0x71, 0x4C, 0xEE, 0x36 } };
 #endif
 
-/* Methods */
-
-/* Windows.Storage.Pickers.IFolderPickerStatics */
-/* Windows.Storage.Pickers.IFolderPickerStatics.CreateForUser(user) */
 HRESULT wstpi_folder_picker_statics_create_for_user(WSTPI_IFolderPickerStatics *self, WSY_User* user, WSTPI_FolderPicker** out);
 
-/* activate Windows.Storage.Pickers.FileOpenPicker */
 HRESULT wstpi_file_open_picker_new(WSTPI_FileOpenPicker **out);
 
-/* Windows.Storage.Pickers.FileOpenPicker */
-/* Windows.Storage.Pickers.FileOpenPicker.get_ContinuationData() */
 HRESULT wstpi_file_open_picker_get__continuation_data(WSTPI_FileOpenPicker *self, WFOCO_ValueSet** value);
 
-/* Windows.Storage.Pickers.FileOpenPicker.PickSingleFileAndContinue() */
 HRESULT wstpi_file_open_picker_pick_single_file_and_continue(WSTPI_FileOpenPicker *self);
 
-/* Windows.Storage.Pickers.FileOpenPicker.PickMultipleFilesAndContinue() */
 HRESULT wstpi_file_open_picker_pick_multiple_files_and_continue(WSTPI_FileOpenPicker *self);
 
-/* Windows.Storage.Pickers.FileOpenPicker.PickSingleFileAsync(pickerOperationId) */
 HRESULT wstpi_file_open_picker_pick_single_file_async_str_p(WSTPI_FileOpenPicker *self, cwinrt_hstring pickerOperationId, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.Pickers.FileOpenPicker.get_ViewMode() */
 HRESULT wstpi_file_open_picker_get__view_mode(WSTPI_FileOpenPicker *self, WSTPI_PickerViewMode *value);
 
-/* Windows.Storage.Pickers.FileOpenPicker.put_ViewMode() */
 HRESULT wstpi_file_open_picker_put__view_mode(WSTPI_FileOpenPicker *self, WSTPI_PickerViewMode value);
 
-/* Windows.Storage.Pickers.FileOpenPicker.get_SettingsIdentifier() */
 HRESULT wstpi_file_open_picker_get__settings_identifier(WSTPI_FileOpenPicker *self, cwinrt_hstring *value);
 
-/* Windows.Storage.Pickers.FileOpenPicker.put_SettingsIdentifier() */
 HRESULT wstpi_file_open_picker_put__settings_identifier(WSTPI_FileOpenPicker *self, cwinrt_hstring value);
 
-/* Windows.Storage.Pickers.FileOpenPicker.get_SuggestedStartLocation() */
 HRESULT wstpi_file_open_picker_get__suggested_start_location(WSTPI_FileOpenPicker *self, WSTPI_PickerLocationId *value);
 
-/* Windows.Storage.Pickers.FileOpenPicker.put_SuggestedStartLocation() */
 HRESULT wstpi_file_open_picker_put__suggested_start_location(WSTPI_FileOpenPicker *self, WSTPI_PickerLocationId value);
 
-/* Windows.Storage.Pickers.FileOpenPicker.get_CommitButtonText() */
 HRESULT wstpi_file_open_picker_get__commit_button_text(WSTPI_FileOpenPicker *self, cwinrt_hstring *value);
 
-/* Windows.Storage.Pickers.FileOpenPicker.put_CommitButtonText() */
 HRESULT wstpi_file_open_picker_put__commit_button_text(WSTPI_FileOpenPicker *self, cwinrt_hstring value);
 
-/* Windows.Storage.Pickers.FileOpenPicker.get_FileTypeFilter() */
 HRESULT wstpi_file_open_picker_get__file_type_filter(WSTPI_FileOpenPicker *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Storage.Pickers.FileOpenPicker.PickSingleFileAsync() */
 HRESULT wstpi_file_open_picker_pick_single_file_async(WSTPI_FileOpenPicker *self, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.Pickers.FileOpenPicker.PickMultipleFilesAsync() */
 HRESULT wstpi_file_open_picker_pick_multiple_files_async(WSTPI_FileOpenPicker *self, WF_IAsyncOperation_WFOCO_IVectorView_WS_StorageFile** out);
 
-/* Windows.Storage.Pickers.FileOpenPicker.get_User() */
 HRESULT wstpi_file_open_picker_get__user(WSTPI_FileOpenPicker *self, WSY_User** value);
 
-/* Windows.Storage.Pickers.FileOpenPicker.CreateForUser(user) */
 HRESULT wstpi_file_open_picker_create_for_user(WSY_User* user, WSTPI_FileOpenPicker** out);
 
-/* Windows.Storage.Pickers.FileOpenPicker.ResumePickSingleFileAsync() */
 HRESULT wstpi_file_open_picker_resume_pick_single_file_async(WF_IAsyncOperation_WS_StorageFile** out);
 
-/* activate Windows.Storage.Pickers.FilePickerFileTypesOrderedMap */
 HRESULT wstpi_file_picker_file_types_ordered_map_new(WSTPI_FilePickerFileTypesOrderedMap **out);
 
-/* Windows.Storage.Pickers.FilePickerFileTypesOrderedMap */
-/* Windows.Storage.Pickers.FilePickerFileTypesOrderedMap.Lookup(key) */
 HRESULT wstpi_file_picker_file_types_ordered_map_lookup(WSTPI_FilePickerFileTypesOrderedMap *self, cwinrt_hstring key, WFOCO_IVector_HSTRING** out);
 
-/* Windows.Storage.Pickers.FilePickerFileTypesOrderedMap.get_Size() */
 HRESULT wstpi_file_picker_file_types_ordered_map_get__size(WSTPI_FilePickerFileTypesOrderedMap *self, uint32_t *value);
 
-/* Windows.Storage.Pickers.FilePickerFileTypesOrderedMap.HasKey(key) */
 HRESULT wstpi_file_picker_file_types_ordered_map_has_key(WSTPI_FilePickerFileTypesOrderedMap *self, cwinrt_hstring key, BOOL *out);
 
-/* Windows.Storage.Pickers.FilePickerFileTypesOrderedMap.GetView() */
 HRESULT wstpi_file_picker_file_types_ordered_map_get_view(WSTPI_FilePickerFileTypesOrderedMap *self, WFOCO_IMapView_HSTRING_WFOCO_IVector_HSTRING** out);
 
-/* Windows.Storage.Pickers.FilePickerFileTypesOrderedMap.Insert(key) */
 HRESULT wstpi_file_picker_file_types_ordered_map_insert(WSTPI_FilePickerFileTypesOrderedMap *self, cwinrt_hstring key, WFOCO_IVector_HSTRING* value, BOOL *out);
 
-/* Windows.Storage.Pickers.FilePickerFileTypesOrderedMap.Remove(key) */
 HRESULT wstpi_file_picker_file_types_ordered_map_remove(WSTPI_FilePickerFileTypesOrderedMap *self, cwinrt_hstring key);
 
-/* Windows.Storage.Pickers.FilePickerFileTypesOrderedMap.Clear() */
 HRESULT wstpi_file_picker_file_types_ordered_map_clear(WSTPI_FilePickerFileTypesOrderedMap *self);
 
-/* Windows.Storage.Pickers.FilePickerFileTypesOrderedMap.First() */
 HRESULT wstpi_file_picker_file_types_ordered_map_first(WSTPI_FilePickerFileTypesOrderedMap *self, WFOCO_IIterator_WFOCO_IKeyValuePair_HSTRING_WFOCO_IVector_HSTRING** out);
 
-/* activate Windows.Storage.Pickers.FilePickerSelectedFilesArray */
 HRESULT wstpi_file_picker_selected_files_array_new(WSTPI_FilePickerSelectedFilesArray **out);
 
-/* Windows.Storage.Pickers.FilePickerSelectedFilesArray */
-/* Windows.Storage.Pickers.FilePickerSelectedFilesArray.GetAt(index) */
 HRESULT wstpi_file_picker_selected_files_array_get_at(WSTPI_FilePickerSelectedFilesArray *self, uint32_t index, WS_StorageFile** out);
 
-/* Windows.Storage.Pickers.FilePickerSelectedFilesArray.get_Size() */
 HRESULT wstpi_file_picker_selected_files_array_get__size(WSTPI_FilePickerSelectedFilesArray *self, uint32_t *value);
 
-/* Windows.Storage.Pickers.FilePickerSelectedFilesArray.IndexOf(index) */
 HRESULT wstpi_file_picker_selected_files_array_index_of(WSTPI_FilePickerSelectedFilesArray *self, WS_StorageFile* value, uint32_t index, BOOL *out);
 
-/* Windows.Storage.Pickers.FilePickerSelectedFilesArray.GetMany(startIndex, items) */
 HRESULT wstpi_file_picker_selected_files_array_get_many(WSTPI_FilePickerSelectedFilesArray *self, uint32_t startIndex, WS_StorageFile *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Storage.Pickers.FilePickerSelectedFilesArray.First() */
 HRESULT wstpi_file_picker_selected_files_array_first(WSTPI_FilePickerSelectedFilesArray *self, WFOCO_IIterator_WS_StorageFile** out);
 
-/* activate Windows.Storage.Pickers.FileSavePicker */
 HRESULT wstpi_file_save_picker_new(WSTPI_FileSavePicker **out);
 
-/* Windows.Storage.Pickers.FileSavePicker */
-/* Windows.Storage.Pickers.FileSavePicker.get_ContinuationData() */
 HRESULT wstpi_file_save_picker_get__continuation_data(WSTPI_FileSavePicker *self, WFOCO_ValueSet** value);
 
-/* Windows.Storage.Pickers.FileSavePicker.PickSaveFileAndContinue() */
 HRESULT wstpi_file_save_picker_pick_save_file_and_continue(WSTPI_FileSavePicker *self);
 
-/* Windows.Storage.Pickers.FileSavePicker.get_EnterpriseId() */
 HRESULT wstpi_file_save_picker_get__enterprise_id(WSTPI_FileSavePicker *self, cwinrt_hstring *value);
 
-/* Windows.Storage.Pickers.FileSavePicker.put_EnterpriseId() */
 HRESULT wstpi_file_save_picker_put__enterprise_id(WSTPI_FileSavePicker *self, cwinrt_hstring value);
 
-/* Windows.Storage.Pickers.FileSavePicker.get_SettingsIdentifier() */
 HRESULT wstpi_file_save_picker_get__settings_identifier(WSTPI_FileSavePicker *self, cwinrt_hstring *value);
 
-/* Windows.Storage.Pickers.FileSavePicker.put_SettingsIdentifier() */
 HRESULT wstpi_file_save_picker_put__settings_identifier(WSTPI_FileSavePicker *self, cwinrt_hstring value);
 
-/* Windows.Storage.Pickers.FileSavePicker.get_SuggestedStartLocation() */
 HRESULT wstpi_file_save_picker_get__suggested_start_location(WSTPI_FileSavePicker *self, WSTPI_PickerLocationId *value);
 
-/* Windows.Storage.Pickers.FileSavePicker.put_SuggestedStartLocation() */
 HRESULT wstpi_file_save_picker_put__suggested_start_location(WSTPI_FileSavePicker *self, WSTPI_PickerLocationId value);
 
-/* Windows.Storage.Pickers.FileSavePicker.get_CommitButtonText() */
 HRESULT wstpi_file_save_picker_get__commit_button_text(WSTPI_FileSavePicker *self, cwinrt_hstring *value);
 
-/* Windows.Storage.Pickers.FileSavePicker.put_CommitButtonText() */
 HRESULT wstpi_file_save_picker_put__commit_button_text(WSTPI_FileSavePicker *self, cwinrt_hstring value);
 
-/* Windows.Storage.Pickers.FileSavePicker.get_FileTypeChoices() */
 HRESULT wstpi_file_save_picker_get__file_type_choices(WSTPI_FileSavePicker *self, WFOCO_IMap_HSTRING_WFOCO_IVector_HSTRING** value);
 
-/* Windows.Storage.Pickers.FileSavePicker.get_DefaultFileExtension() */
 HRESULT wstpi_file_save_picker_get__default_file_extension(WSTPI_FileSavePicker *self, cwinrt_hstring *value);
 
-/* Windows.Storage.Pickers.FileSavePicker.put_DefaultFileExtension() */
 HRESULT wstpi_file_save_picker_put__default_file_extension(WSTPI_FileSavePicker *self, cwinrt_hstring value);
 
-/* Windows.Storage.Pickers.FileSavePicker.get_SuggestedSaveFile() */
 HRESULT wstpi_file_save_picker_get__suggested_save_file(WSTPI_FileSavePicker *self, WS_StorageFile** value);
 
-/* Windows.Storage.Pickers.FileSavePicker.put_SuggestedSaveFile() */
 HRESULT wstpi_file_save_picker_put__suggested_save_file(WSTPI_FileSavePicker *self, WS_StorageFile* value);
 
-/* Windows.Storage.Pickers.FileSavePicker.get_SuggestedFileName() */
 HRESULT wstpi_file_save_picker_get__suggested_file_name(WSTPI_FileSavePicker *self, cwinrt_hstring *value);
 
-/* Windows.Storage.Pickers.FileSavePicker.put_SuggestedFileName() */
 HRESULT wstpi_file_save_picker_put__suggested_file_name(WSTPI_FileSavePicker *self, cwinrt_hstring value);
 
-/* Windows.Storage.Pickers.FileSavePicker.PickSaveFileAsync() */
 HRESULT wstpi_file_save_picker_pick_save_file_async(WSTPI_FileSavePicker *self, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.Pickers.FileSavePicker.get_User() */
 HRESULT wstpi_file_save_picker_get__user(WSTPI_FileSavePicker *self, WSY_User** value);
 
-/* Windows.Storage.Pickers.FileSavePicker.CreateForUser(user) */
 HRESULT wstpi_file_save_picker_create_for_user(WSY_User* user, WSTPI_FileSavePicker** out);
 
-/* activate Windows.Storage.Pickers.FolderPicker */
 HRESULT wstpi_folder_picker_new(WSTPI_FolderPicker **out);
 
-/* Windows.Storage.Pickers.FolderPicker */
-/* Windows.Storage.Pickers.FolderPicker.get_ContinuationData() */
 HRESULT wstpi_folder_picker_get__continuation_data(WSTPI_FolderPicker *self, WFOCO_ValueSet** value);
 
-/* Windows.Storage.Pickers.FolderPicker.PickFolderAndContinue() */
 HRESULT wstpi_folder_picker_pick_folder_and_continue(WSTPI_FolderPicker *self);
 
-/* Windows.Storage.Pickers.FolderPicker.get_ViewMode() */
 HRESULT wstpi_folder_picker_get__view_mode(WSTPI_FolderPicker *self, WSTPI_PickerViewMode *value);
 
-/* Windows.Storage.Pickers.FolderPicker.put_ViewMode() */
 HRESULT wstpi_folder_picker_put__view_mode(WSTPI_FolderPicker *self, WSTPI_PickerViewMode value);
 
-/* Windows.Storage.Pickers.FolderPicker.get_SettingsIdentifier() */
 HRESULT wstpi_folder_picker_get__settings_identifier(WSTPI_FolderPicker *self, cwinrt_hstring *value);
 
-/* Windows.Storage.Pickers.FolderPicker.put_SettingsIdentifier() */
 HRESULT wstpi_folder_picker_put__settings_identifier(WSTPI_FolderPicker *self, cwinrt_hstring value);
 
-/* Windows.Storage.Pickers.FolderPicker.get_SuggestedStartLocation() */
 HRESULT wstpi_folder_picker_get__suggested_start_location(WSTPI_FolderPicker *self, WSTPI_PickerLocationId *value);
 
-/* Windows.Storage.Pickers.FolderPicker.put_SuggestedStartLocation() */
 HRESULT wstpi_folder_picker_put__suggested_start_location(WSTPI_FolderPicker *self, WSTPI_PickerLocationId value);
 
-/* Windows.Storage.Pickers.FolderPicker.get_CommitButtonText() */
 HRESULT wstpi_folder_picker_get__commit_button_text(WSTPI_FolderPicker *self, cwinrt_hstring *value);
 
-/* Windows.Storage.Pickers.FolderPicker.put_CommitButtonText() */
 HRESULT wstpi_folder_picker_put__commit_button_text(WSTPI_FolderPicker *self, cwinrt_hstring value);
 
-/* Windows.Storage.Pickers.FolderPicker.get_FileTypeFilter() */
 HRESULT wstpi_folder_picker_get__file_type_filter(WSTPI_FolderPicker *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Storage.Pickers.FolderPicker.PickSingleFolderAsync() */
 HRESULT wstpi_folder_picker_pick_single_folder_async(WSTPI_FolderPicker *self, WF_IAsyncOperation_WS_StorageFolder** out);
 
-/* Windows.Storage.Pickers.FolderPicker.get_User() */
 HRESULT wstpi_folder_picker_get__user(WSTPI_FolderPicker *self, WSY_User** value);
 
-/* Windows.Storage.Pickers.FolderPicker.CreateForUser(user) */
 HRESULT wstpi_folder_picker_create_for_user(WSY_User* user, WSTPI_FolderPicker** out);
 
-/* Windows.Storage.Pickers.IFileOpenPickerStatics */
-/* Windows.Storage.Pickers.IFileOpenPickerStatics.ResumePickSingleFileAsync() */
 HRESULT wstpi_file_open_picker_statics_resume_pick_single_file_async(WSTPI_IFileOpenPickerStatics *self, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.Pickers.IFileOpenPickerStatics2 */
-/* Windows.Storage.Pickers.IFileOpenPickerStatics2.CreateForUser(user) */
 HRESULT wstpi_file_open_picker_statics_2_create_for_user(WSTPI_IFileOpenPickerStatics_2 *self, WSY_User* user, WSTPI_FileOpenPicker** out);
 
-/* Windows.Storage.Pickers.IFileSavePickerStatics */
-/* Windows.Storage.Pickers.IFileSavePickerStatics.CreateForUser(user) */
 HRESULT wstpi_file_save_picker_statics_create_for_user(WSTPI_IFileSavePickerStatics *self, WSY_User* user, WSTPI_FileSavePicker** out);
 
-/* activate Windows.Storage.Pickers.FileExtensionVector */
 HRESULT wstpi_file_extension_vector_new(WSTPI_FileExtensionVector **out);
 
-/* Windows.Storage.Pickers.FileExtensionVector */
-/* Windows.Storage.Pickers.FileExtensionVector.GetAt(index) */
 HRESULT wstpi_file_extension_vector_get_at(WSTPI_FileExtensionVector *self, uint32_t index, cwinrt_hstring *out);
 
-/* Windows.Storage.Pickers.FileExtensionVector.get_Size() */
 HRESULT wstpi_file_extension_vector_get__size(WSTPI_FileExtensionVector *self, uint32_t *value);
 
-/* Windows.Storage.Pickers.FileExtensionVector.GetView() */
 HRESULT wstpi_file_extension_vector_get_view(WSTPI_FileExtensionVector *self, WFOCO_IVectorView_HSTRING** out);
 
-/* Windows.Storage.Pickers.FileExtensionVector.IndexOf(index) */
 HRESULT wstpi_file_extension_vector_index_of(WSTPI_FileExtensionVector *self, cwinrt_hstring value, uint32_t index, BOOL *out);
 
-/* Windows.Storage.Pickers.FileExtensionVector.SetAt(index) */
 HRESULT wstpi_file_extension_vector_set_at(WSTPI_FileExtensionVector *self, uint32_t index, cwinrt_hstring value);
 
-/* Windows.Storage.Pickers.FileExtensionVector.InsertAt(index) */
 HRESULT wstpi_file_extension_vector_insert_at(WSTPI_FileExtensionVector *self, uint32_t index, cwinrt_hstring value);
 
-/* Windows.Storage.Pickers.FileExtensionVector.RemoveAt(index) */
 HRESULT wstpi_file_extension_vector_remove_at(WSTPI_FileExtensionVector *self, uint32_t index);
 
-/* Windows.Storage.Pickers.FileExtensionVector.Append() */
 HRESULT wstpi_file_extension_vector_append(WSTPI_FileExtensionVector *self, cwinrt_hstring value);
 
-/* Windows.Storage.Pickers.FileExtensionVector.RemoveAtEnd() */
 HRESULT wstpi_file_extension_vector_remove_at_end(WSTPI_FileExtensionVector *self);
 
-/* Windows.Storage.Pickers.FileExtensionVector.Clear() */
 HRESULT wstpi_file_extension_vector_clear(WSTPI_FileExtensionVector *self);
 
-/* Windows.Storage.Pickers.FileExtensionVector.GetMany(startIndex, items) */
 HRESULT wstpi_file_extension_vector_get_many(WSTPI_FileExtensionVector *self, uint32_t startIndex, cwinrt_hstring *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Storage.Pickers.FileExtensionVector.ReplaceAll(items) */
 HRESULT wstpi_file_extension_vector_replace_all(WSTPI_FileExtensionVector *self, cwinrt_hstring *items, uint32_t items_len);
 
-/* Windows.Storage.Pickers.FileExtensionVector.First() */
 HRESULT wstpi_file_extension_vector_first(WSTPI_FileExtensionVector *self, WFOCO_IIterator_HSTRING** out);
 
-/* Windows.Storage.Pickers.IFileOpenPicker2 */
-/* Windows.Storage.Pickers.IFileOpenPicker2.get_ContinuationData() */
 HRESULT wstpi_file_open_picker_2_get__continuation_data(WSTPI_IFileOpenPicker_2 *self, WFOCO_ValueSet** value);
 
-/* Windows.Storage.Pickers.IFileOpenPicker2.PickSingleFileAndContinue() */
 HRESULT wstpi_file_open_picker_2_pick_single_file_and_continue(WSTPI_IFileOpenPicker_2 *self);
 
-/* Windows.Storage.Pickers.IFileOpenPicker2.PickMultipleFilesAndContinue() */
 HRESULT wstpi_file_open_picker_2_pick_multiple_files_and_continue(WSTPI_IFileOpenPicker_2 *self);
 
-/* Windows.Storage.Pickers.IFileOpenPickerWithOperationId */
-/* Windows.Storage.Pickers.IFileOpenPickerWithOperationId.PickSingleFileAsync(pickerOperationId) */
 HRESULT wstpi_file_open_picker_with_operation_id_pick_single_file_async(WSTPI_IFileOpenPickerWithOperationId *self, cwinrt_hstring pickerOperationId, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.Storage.Pickers.IFileOpenPicker */
-/* Windows.Storage.Pickers.IFileOpenPicker3 */
-/* Windows.Storage.Pickers.IFileOpenPicker3.get_User() */
 HRESULT wstpi_file_open_picker_3_get__user(WSTPI_IFileOpenPicker_3 *self, WSY_User** value);
 
-/* Windows.Storage.Pickers.IFileSavePicker2 */
-/* Windows.Storage.Pickers.IFileSavePicker2.get_ContinuationData() */
 HRESULT wstpi_file_save_picker_2_get__continuation_data(WSTPI_IFileSavePicker_2 *self, WFOCO_ValueSet** value);
 
-/* Windows.Storage.Pickers.IFileSavePicker2.PickSaveFileAndContinue() */
 HRESULT wstpi_file_save_picker_2_pick_save_file_and_continue(WSTPI_IFileSavePicker_2 *self);
 
-/* Windows.Storage.Pickers.IFileSavePicker3 */
-/* Windows.Storage.Pickers.IFileSavePicker3.get_EnterpriseId() */
 HRESULT wstpi_file_save_picker_3_get__enterprise_id(WSTPI_IFileSavePicker_3 *self, cwinrt_hstring *value);
 
-/* Windows.Storage.Pickers.IFileSavePicker3.put_EnterpriseId() */
 HRESULT wstpi_file_save_picker_3_put__enterprise_id(WSTPI_IFileSavePicker_3 *self, cwinrt_hstring value);
 
-/* Windows.Storage.Pickers.IFileSavePicker */
-/* Windows.Storage.Pickers.IFileSavePicker4 */
-/* Windows.Storage.Pickers.IFileSavePicker4.get_User() */
 HRESULT wstpi_file_save_picker_4_get__user(WSTPI_IFileSavePicker_4 *self, WSY_User** value);
 
-/* Windows.Storage.Pickers.IFolderPicker2 */
-/* Windows.Storage.Pickers.IFolderPicker2.get_ContinuationData() */
 HRESULT wstpi_folder_picker_2_get__continuation_data(WSTPI_IFolderPicker_2 *self, WFOCO_ValueSet** value);
 
-/* Windows.Storage.Pickers.IFolderPicker2.PickFolderAndContinue() */
 HRESULT wstpi_folder_picker_2_pick_folder_and_continue(WSTPI_IFolderPicker_2 *self);
 
-/* Windows.Storage.Pickers.IFolderPicker */
-/* Windows.Storage.Pickers.IFolderPicker3 */
-/* Windows.Storage.Pickers.IFolderPicker3.get_User() */
 HRESULT wstpi_folder_picker_3_get__user(WSTPI_IFolderPicker_3 *self, WSY_User** value);
 
 #endif /* CWINRT_WINDOWS_STORAGE_PICKERS_H */

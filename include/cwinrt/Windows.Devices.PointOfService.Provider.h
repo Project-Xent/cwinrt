@@ -14,13 +14,11 @@
 #include <cwinrt/Windows.Graphics.Imaging.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDEPOPR_BarcodeScannerProviderConnection WDEPOPR_BarcodeScannerProviderConnection;
 typedef struct WDEPOPR_BarcodeScannerProviderTriggerDetails WDEPOPR_BarcodeScannerProviderTriggerDetails;
 typedef struct WDEPOPR_BarcodeScannerSetActiveSymbologiesRequest WDEPOPR_BarcodeScannerSetActiveSymbologiesRequest;
@@ -75,7 +73,6 @@ typedef struct WDEPOPR_IBarcodeScannerDisableScannerRequest WDEPOPR_IBarcodeScan
 typedef struct WDEPOPR_IBarcodeScannerDisableScannerRequest_2 WDEPOPR_IBarcodeScannerDisableScannerRequest_2;
 typedef struct WDEPOPR_IBarcodeScannerHideVideoPreviewRequestEventArgs WDEPOPR_IBarcodeScannerHideVideoPreviewRequestEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IVector_uint32_t
 #define CWINRT_FWD_WFOCO_IVector_uint32_t
 typedef struct WFOCO_IVector_uint32_t WFOCO_IVector_uint32_t;
@@ -184,7 +181,6 @@ typedef enum WDEPOPR_BarcodeScannerTriggerState {
 } WDEPOPR_BarcodeScannerTriggerState;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -313,67 +309,44 @@ static const IID CWINRT_IID_WDEPOPR_IBarcodeScannerDisableScannerRequest_2 CWINR
 static const IID CWINRT_IID_WDEPOPR_IBarcodeScannerHideVideoPreviewRequestEventArgs CWINRT_MAYBE_UNUSED = { 0x16A281FC, 0xD6BE, 0x4BC7, { 0x9D, 0xF1, 0x33, 0x74, 0x1F, 0x3E, 0xAD, 0xEA } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection */
 HRESULT wdepopr_barcode_scanner_provider_connection_new(WDEPOPR_BarcodeScannerProviderConnection **out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection */
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection.get_Id() */
 HRESULT wdepopr_barcode_scanner_provider_connection_get__id(WDEPOPR_BarcodeScannerProviderConnection *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection.get_VideoDeviceId() */
 HRESULT wdepopr_barcode_scanner_provider_connection_get__video_device_id(WDEPOPR_BarcodeScannerProviderConnection *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection.get_SupportedSymbologies() */
 HRESULT wdepopr_barcode_scanner_provider_connection_get__supported_symbologies(WDEPOPR_BarcodeScannerProviderConnection *self, WFOCO_IVector_uint32_t** value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection.get_CompanyName() */
 HRESULT wdepopr_barcode_scanner_provider_connection_get__company_name(WDEPOPR_BarcodeScannerProviderConnection *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection.put_CompanyName() */
 HRESULT wdepopr_barcode_scanner_provider_connection_put__company_name(WDEPOPR_BarcodeScannerProviderConnection *self, cwinrt_hstring value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection.get_Name() */
 HRESULT wdepopr_barcode_scanner_provider_connection_get__name(WDEPOPR_BarcodeScannerProviderConnection *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection.put_Name() */
 HRESULT wdepopr_barcode_scanner_provider_connection_put__name(WDEPOPR_BarcodeScannerProviderConnection *self, cwinrt_hstring value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection.get_Version() */
 HRESULT wdepopr_barcode_scanner_provider_connection_get__version(WDEPOPR_BarcodeScannerProviderConnection *self, cwinrt_hstring *value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection.put_Version() */
 HRESULT wdepopr_barcode_scanner_provider_connection_put__version(WDEPOPR_BarcodeScannerProviderConnection *self, cwinrt_hstring value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection.Start() */
 HRESULT wdepopr_barcode_scanner_provider_connection_start(WDEPOPR_BarcodeScannerProviderConnection *self);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection.ReportScannedDataAsync(report) */
 HRESULT wdepopr_barcode_scanner_provider_connection_report_scanned_data_async(WDEPOPR_BarcodeScannerProviderConnection *self, WDEPO_BarcodeScannerReport* report, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection.ReportTriggerStateAsync(state) */
 HRESULT wdepopr_barcode_scanner_provider_connection_report_trigger_state_async(WDEPOPR_BarcodeScannerProviderConnection *self, WDEPOPR_BarcodeScannerTriggerState state, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection.ReportErrorAsync(errorData) */
 HRESULT wdepopr_barcode_scanner_provider_connection_report_error_async(WDEPOPR_BarcodeScannerProviderConnection *self, WDEPO_UnifiedPosErrorData* errorData, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection.ReportErrorAsync(errorData, isRetriable, scanReport) */
 HRESULT wdepopr_barcode_scanner_provider_connection_report_error_async_p_b_p_p(WDEPOPR_BarcodeScannerProviderConnection *self, WDEPO_UnifiedPosErrorData* errorData, BOOL isRetriable, WDEPO_BarcodeScannerReport* scanReport, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection.CreateFrameReaderAsync() */
 HRESULT wdepopr_barcode_scanner_provider_connection_create_frame_reader_async(WDEPOPR_BarcodeScannerProviderConnection *self, WF_IAsyncOperation_WDEPOPR_BarcodeScannerFrameReader** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection.CreateFrameReaderAsync(preferredFormat) */
 HRESULT wdepopr_barcode_scanner_provider_connection_create_frame_reader_async_bitmap_pixel_format_p(WDEPOPR_BarcodeScannerProviderConnection *self, WGRIM_BitmapPixelFormat preferredFormat, WF_IAsyncOperation_WDEPOPR_BarcodeScannerFrameReader** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection.CreateFrameReaderAsync(preferredFormat, preferredSize) */
 HRESULT wdepopr_barcode_scanner_provider_connection_create_frame_reader_async_bitmap_pixel_format_bitmap_size_p(WDEPOPR_BarcodeScannerProviderConnection *self, WGRIM_BitmapPixelFormat preferredFormat, WGRIM_BitmapSize preferredSize, WF_IAsyncOperation_WDEPOPR_BarcodeScannerFrameReader** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection.Close() */
 HRESULT wdepopr_barcode_scanner_provider_connection_close(WDEPOPR_BarcodeScannerProviderConnection *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdepopr_barcode_scanner_provider_connection_on_enable_scanner_requested(WDEPOPR_BarcodeScannerProviderConnection *self, cwinrt_event_fn fn, void *ctx);
@@ -400,395 +373,231 @@ void wdepopr_barcode_scanner_provider_connection_off_set_barcode_symbology_attri
 cwinrt_token wdepopr_barcode_scanner_provider_connection_on_hide_video_preview_requested(WDEPOPR_BarcodeScannerProviderConnection *self, cwinrt_event_fn fn, void *ctx);
 void wdepopr_barcode_scanner_provider_connection_off_hide_video_preview_requested(WDEPOPR_BarcodeScannerProviderConnection *self, cwinrt_token token);
 
-/* activate Windows.Devices.PointOfService.Provider.BarcodeScannerProviderTriggerDetails */
 HRESULT wdepopr_barcode_scanner_provider_trigger_details_new(WDEPOPR_BarcodeScannerProviderTriggerDetails **out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerProviderTriggerDetails */
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerProviderTriggerDetails.get_Connection() */
 HRESULT wdepopr_barcode_scanner_provider_trigger_details_get__connection(WDEPOPR_BarcodeScannerProviderTriggerDetails *self, WDEPOPR_BarcodeScannerProviderConnection** value);
 
-/* activate Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest */
 HRESULT wdepopr_barcode_scanner_set_active_symbologies_request_new(WDEPOPR_BarcodeScannerSetActiveSymbologiesRequest **out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest */
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest.get_Symbologies() */
 HRESULT wdepopr_barcode_scanner_set_active_symbologies_request_get__symbologies(WDEPOPR_BarcodeScannerSetActiveSymbologiesRequest *self, WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest.ReportCompletedAsync() */
 HRESULT wdepopr_barcode_scanner_set_active_symbologies_request_report_completed_async(WDEPOPR_BarcodeScannerSetActiveSymbologiesRequest *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest.ReportFailedAsync() */
 HRESULT wdepopr_barcode_scanner_set_active_symbologies_request_report_failed_async(WDEPOPR_BarcodeScannerSetActiveSymbologiesRequest *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest.ReportFailedAsync(reason) */
 HRESULT wdepopr_barcode_scanner_set_active_symbologies_request_report_failed_async_i32_p(WDEPOPR_BarcodeScannerSetActiveSymbologiesRequest *self, int32_t reason, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest.ReportFailedAsync(reason, failedReasonDescription) */
 HRESULT wdepopr_barcode_scanner_set_active_symbologies_request_report_failed_async_i32_str_p(WDEPOPR_BarcodeScannerSetActiveSymbologiesRequest *self, int32_t reason, cwinrt_hstring failedReasonDescription, WF_IAsyncAction** out);
 
-/* activate Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequestEventArgs */
 HRESULT wdepopr_barcode_scanner_set_active_symbologies_request_event_args_new(WDEPOPR_BarcodeScannerSetActiveSymbologiesRequestEventArgs **out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequestEventArgs */
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequestEventArgs.get_Request() */
 HRESULT wdepopr_barcode_scanner_set_active_symbologies_request_event_args_get__request(WDEPOPR_BarcodeScannerSetActiveSymbologiesRequestEventArgs *self, WDEPOPR_BarcodeScannerSetActiveSymbologiesRequest** value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequestEventArgs.GetDeferral() */
 HRESULT wdepopr_barcode_scanner_set_active_symbologies_request_event_args_get_deferral(WDEPOPR_BarcodeScannerSetActiveSymbologiesRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest */
 HRESULT wdepopr_barcode_scanner_set_symbology_attributes_request_new(WDEPOPR_BarcodeScannerSetSymbologyAttributesRequest **out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest */
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest.get_Symbology() */
 HRESULT wdepopr_barcode_scanner_set_symbology_attributes_request_get__symbology(WDEPOPR_BarcodeScannerSetSymbologyAttributesRequest *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest.get_Attributes() */
 HRESULT wdepopr_barcode_scanner_set_symbology_attributes_request_get__attributes(WDEPOPR_BarcodeScannerSetSymbologyAttributesRequest *self, WDEPO_BarcodeSymbologyAttributes** value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest.ReportCompletedAsync() */
 HRESULT wdepopr_barcode_scanner_set_symbology_attributes_request_report_completed_async(WDEPOPR_BarcodeScannerSetSymbologyAttributesRequest *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest.ReportFailedAsync() */
 HRESULT wdepopr_barcode_scanner_set_symbology_attributes_request_report_failed_async(WDEPOPR_BarcodeScannerSetSymbologyAttributesRequest *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest.ReportFailedAsync(reason) */
 HRESULT wdepopr_barcode_scanner_set_symbology_attributes_request_report_failed_async_i32_p(WDEPOPR_BarcodeScannerSetSymbologyAttributesRequest *self, int32_t reason, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest.ReportFailedAsync(reason, failedReasonDescription) */
 HRESULT wdepopr_barcode_scanner_set_symbology_attributes_request_report_failed_async_i32_str_p(WDEPOPR_BarcodeScannerSetSymbologyAttributesRequest *self, int32_t reason, cwinrt_hstring failedReasonDescription, WF_IAsyncAction** out);
 
-/* activate Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequestEventArgs */
 HRESULT wdepopr_barcode_scanner_set_symbology_attributes_request_event_args_new(WDEPOPR_BarcodeScannerSetSymbologyAttributesRequestEventArgs **out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequestEventArgs */
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequestEventArgs.get_Request() */
 HRESULT wdepopr_barcode_scanner_set_symbology_attributes_request_event_args_get__request(WDEPOPR_BarcodeScannerSetSymbologyAttributesRequestEventArgs *self, WDEPOPR_BarcodeScannerSetSymbologyAttributesRequest** value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequestEventArgs.GetDeferral() */
 HRESULT wdepopr_barcode_scanner_set_symbology_attributes_request_event_args_get_deferral(WDEPOPR_BarcodeScannerSetSymbologyAttributesRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequest */
 HRESULT wdepopr_barcode_scanner_start_software_trigger_request_new(WDEPOPR_BarcodeScannerStartSoftwareTriggerRequest **out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequest */
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequest.ReportCompletedAsync() */
 HRESULT wdepopr_barcode_scanner_start_software_trigger_request_report_completed_async(WDEPOPR_BarcodeScannerStartSoftwareTriggerRequest *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequest.ReportFailedAsync() */
 HRESULT wdepopr_barcode_scanner_start_software_trigger_request_report_failed_async(WDEPOPR_BarcodeScannerStartSoftwareTriggerRequest *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequest.ReportFailedAsync(reason) */
 HRESULT wdepopr_barcode_scanner_start_software_trigger_request_report_failed_async_i32_p(WDEPOPR_BarcodeScannerStartSoftwareTriggerRequest *self, int32_t reason, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequest.ReportFailedAsync(reason, failedReasonDescription) */
 HRESULT wdepopr_barcode_scanner_start_software_trigger_request_report_failed_async_i32_str_p(WDEPOPR_BarcodeScannerStartSoftwareTriggerRequest *self, int32_t reason, cwinrt_hstring failedReasonDescription, WF_IAsyncAction** out);
 
-/* activate Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequestEventArgs */
 HRESULT wdepopr_barcode_scanner_start_software_trigger_request_event_args_new(WDEPOPR_BarcodeScannerStartSoftwareTriggerRequestEventArgs **out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequestEventArgs */
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequestEventArgs.get_Request() */
 HRESULT wdepopr_barcode_scanner_start_software_trigger_request_event_args_get__request(WDEPOPR_BarcodeScannerStartSoftwareTriggerRequestEventArgs *self, WDEPOPR_BarcodeScannerStartSoftwareTriggerRequest** value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequestEventArgs.GetDeferral() */
 HRESULT wdepopr_barcode_scanner_start_software_trigger_request_event_args_get_deferral(WDEPOPR_BarcodeScannerStartSoftwareTriggerRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequest */
 HRESULT wdepopr_barcode_scanner_stop_software_trigger_request_new(WDEPOPR_BarcodeScannerStopSoftwareTriggerRequest **out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequest */
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequest.ReportCompletedAsync() */
 HRESULT wdepopr_barcode_scanner_stop_software_trigger_request_report_completed_async(WDEPOPR_BarcodeScannerStopSoftwareTriggerRequest *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequest.ReportFailedAsync() */
 HRESULT wdepopr_barcode_scanner_stop_software_trigger_request_report_failed_async(WDEPOPR_BarcodeScannerStopSoftwareTriggerRequest *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequest.ReportFailedAsync(reason) */
 HRESULT wdepopr_barcode_scanner_stop_software_trigger_request_report_failed_async_i32_p(WDEPOPR_BarcodeScannerStopSoftwareTriggerRequest *self, int32_t reason, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequest.ReportFailedAsync(reason, failedReasonDescription) */
 HRESULT wdepopr_barcode_scanner_stop_software_trigger_request_report_failed_async_i32_str_p(WDEPOPR_BarcodeScannerStopSoftwareTriggerRequest *self, int32_t reason, cwinrt_hstring failedReasonDescription, WF_IAsyncAction** out);
 
-/* activate Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequestEventArgs */
 HRESULT wdepopr_barcode_scanner_stop_software_trigger_request_event_args_new(WDEPOPR_BarcodeScannerStopSoftwareTriggerRequestEventArgs **out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequestEventArgs */
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequestEventArgs.get_Request() */
 HRESULT wdepopr_barcode_scanner_stop_software_trigger_request_event_args_get__request(WDEPOPR_BarcodeScannerStopSoftwareTriggerRequestEventArgs *self, WDEPOPR_BarcodeScannerStopSoftwareTriggerRequest** value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequestEventArgs.GetDeferral() */
 HRESULT wdepopr_barcode_scanner_stop_software_trigger_request_event_args_get_deferral(WDEPOPR_BarcodeScannerStopSoftwareTriggerRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Devices.PointOfService.Provider.BarcodeScannerVideoFrame */
 HRESULT wdepopr_barcode_scanner_video_frame_new(WDEPOPR_BarcodeScannerVideoFrame **out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerVideoFrame */
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerVideoFrame.get_Format() */
 HRESULT wdepopr_barcode_scanner_video_frame_get__format(WDEPOPR_BarcodeScannerVideoFrame *self, WGRIM_BitmapPixelFormat *value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerVideoFrame.get_Width() */
 HRESULT wdepopr_barcode_scanner_video_frame_get__width(WDEPOPR_BarcodeScannerVideoFrame *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerVideoFrame.get_Height() */
 HRESULT wdepopr_barcode_scanner_video_frame_get__height(WDEPOPR_BarcodeScannerVideoFrame *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerVideoFrame.get_PixelData() */
 HRESULT wdepopr_barcode_scanner_video_frame_get__pixel_data(WDEPOPR_BarcodeScannerVideoFrame *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerVideoFrame.Close() */
 HRESULT wdepopr_barcode_scanner_video_frame_close(WDEPOPR_BarcodeScannerVideoFrame *self);
 
-/* activate Windows.Devices.PointOfService.Provider.BarcodeSymbologyAttributesBuilder */
 HRESULT wdepopr_barcode_symbology_attributes_builder_new(WDEPOPR_BarcodeSymbologyAttributesBuilder **out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeSymbologyAttributesBuilder */
-/* Windows.Devices.PointOfService.Provider.BarcodeSymbologyAttributesBuilder.get_IsCheckDigitValidationSupported() */
 HRESULT wdepopr_barcode_symbology_attributes_builder_get__is_check_digit_validation_supported(WDEPOPR_BarcodeSymbologyAttributesBuilder *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeSymbologyAttributesBuilder.put_IsCheckDigitValidationSupported() */
 HRESULT wdepopr_barcode_symbology_attributes_builder_put__is_check_digit_validation_supported(WDEPOPR_BarcodeSymbologyAttributesBuilder *self, BOOL value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeSymbologyAttributesBuilder.get_IsCheckDigitTransmissionSupported() */
 HRESULT wdepopr_barcode_symbology_attributes_builder_get__is_check_digit_transmission_supported(WDEPOPR_BarcodeSymbologyAttributesBuilder *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeSymbologyAttributesBuilder.put_IsCheckDigitTransmissionSupported() */
 HRESULT wdepopr_barcode_symbology_attributes_builder_put__is_check_digit_transmission_supported(WDEPOPR_BarcodeSymbologyAttributesBuilder *self, BOOL value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeSymbologyAttributesBuilder.get_IsDecodeLengthSupported() */
 HRESULT wdepopr_barcode_symbology_attributes_builder_get__is_decode_length_supported(WDEPOPR_BarcodeSymbologyAttributesBuilder *self, BOOL *value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeSymbologyAttributesBuilder.put_IsDecodeLengthSupported() */
 HRESULT wdepopr_barcode_symbology_attributes_builder_put__is_decode_length_supported(WDEPOPR_BarcodeSymbologyAttributesBuilder *self, BOOL value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeSymbologyAttributesBuilder.CreateAttributes() */
 HRESULT wdepopr_barcode_symbology_attributes_builder_create_attributes(WDEPOPR_BarcodeSymbologyAttributesBuilder *self, WDEPO_BarcodeSymbologyAttributes** out);
 
-/* activate Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequest */
 HRESULT wdepopr_barcode_scanner_hide_video_preview_request_new(WDEPOPR_BarcodeScannerHideVideoPreviewRequest **out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequest */
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequest.ReportCompletedAsync() */
 HRESULT wdepopr_barcode_scanner_hide_video_preview_request_report_completed_async(WDEPOPR_BarcodeScannerHideVideoPreviewRequest *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequest.ReportFailedAsync() */
 HRESULT wdepopr_barcode_scanner_hide_video_preview_request_report_failed_async(WDEPOPR_BarcodeScannerHideVideoPreviewRequest *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequest.ReportFailedAsync(reason) */
 HRESULT wdepopr_barcode_scanner_hide_video_preview_request_report_failed_async_i32_p(WDEPOPR_BarcodeScannerHideVideoPreviewRequest *self, int32_t reason, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequest.ReportFailedAsync(reason, failedReasonDescription) */
 HRESULT wdepopr_barcode_scanner_hide_video_preview_request_report_failed_async_i32_str_p(WDEPOPR_BarcodeScannerHideVideoPreviewRequest *self, int32_t reason, cwinrt_hstring failedReasonDescription, WF_IAsyncAction** out);
 
-/* activate Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequestEventArgs */
 HRESULT wdepopr_barcode_scanner_get_symbology_attributes_request_event_args_new(WDEPOPR_BarcodeScannerGetSymbologyAttributesRequestEventArgs **out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequestEventArgs */
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequestEventArgs.get_Request() */
 HRESULT wdepopr_barcode_scanner_get_symbology_attributes_request_event_args_get__request(WDEPOPR_BarcodeScannerGetSymbologyAttributesRequestEventArgs *self, WDEPOPR_BarcodeScannerGetSymbologyAttributesRequest** value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequestEventArgs.GetDeferral() */
 HRESULT wdepopr_barcode_scanner_get_symbology_attributes_request_event_args_get_deferral(WDEPOPR_BarcodeScannerGetSymbologyAttributesRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest */
 HRESULT wdepopr_barcode_scanner_get_symbology_attributes_request_new(WDEPOPR_BarcodeScannerGetSymbologyAttributesRequest **out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest */
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest.get_Symbology() */
 HRESULT wdepopr_barcode_scanner_get_symbology_attributes_request_get__symbology(WDEPOPR_BarcodeScannerGetSymbologyAttributesRequest *self, uint32_t *value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest.ReportCompletedAsync(attributes) */
 HRESULT wdepopr_barcode_scanner_get_symbology_attributes_request_report_completed_async(WDEPOPR_BarcodeScannerGetSymbologyAttributesRequest *self, WDEPO_BarcodeSymbologyAttributes* attributes, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest.ReportFailedAsync() */
 HRESULT wdepopr_barcode_scanner_get_symbology_attributes_request_report_failed_async(WDEPOPR_BarcodeScannerGetSymbologyAttributesRequest *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest.ReportFailedAsync(reason) */
 HRESULT wdepopr_barcode_scanner_get_symbology_attributes_request_report_failed_async_i32_p(WDEPOPR_BarcodeScannerGetSymbologyAttributesRequest *self, int32_t reason, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest.ReportFailedAsync(reason, failedReasonDescription) */
 HRESULT wdepopr_barcode_scanner_get_symbology_attributes_request_report_failed_async_i32_str_p(WDEPOPR_BarcodeScannerGetSymbologyAttributesRequest *self, int32_t reason, cwinrt_hstring failedReasonDescription, WF_IAsyncAction** out);
 
-/* activate Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReaderFrameArrivedEventArgs */
 HRESULT wdepopr_barcode_scanner_frame_reader_frame_arrived_event_args_new(WDEPOPR_BarcodeScannerFrameReaderFrameArrivedEventArgs **out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReaderFrameArrivedEventArgs */
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReaderFrameArrivedEventArgs.GetDeferral() */
 HRESULT wdepopr_barcode_scanner_frame_reader_frame_arrived_event_args_get_deferral(WDEPOPR_BarcodeScannerFrameReaderFrameArrivedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader */
 HRESULT wdepopr_barcode_scanner_frame_reader_new(WDEPOPR_BarcodeScannerFrameReader **out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader */
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader.StartAsync() */
 HRESULT wdepopr_barcode_scanner_frame_reader_start_async(WDEPOPR_BarcodeScannerFrameReader *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader.StopAsync() */
 HRESULT wdepopr_barcode_scanner_frame_reader_stop_async(WDEPOPR_BarcodeScannerFrameReader *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader.TryAcquireLatestFrameAsync() */
 HRESULT wdepopr_barcode_scanner_frame_reader_try_acquire_latest_frame_async(WDEPOPR_BarcodeScannerFrameReader *self, WF_IAsyncOperation_WDEPOPR_BarcodeScannerVideoFrame** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader.get_Connection() */
 HRESULT wdepopr_barcode_scanner_frame_reader_get__connection(WDEPOPR_BarcodeScannerFrameReader *self, WDEPOPR_BarcodeScannerProviderConnection** value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader.Close() */
 HRESULT wdepopr_barcode_scanner_frame_reader_close(WDEPOPR_BarcodeScannerFrameReader *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdepopr_barcode_scanner_frame_reader_on_frame_arrived(WDEPOPR_BarcodeScannerFrameReader *self, cwinrt_event_fn fn, void *ctx);
 void wdepopr_barcode_scanner_frame_reader_off_frame_arrived(WDEPOPR_BarcodeScannerFrameReader *self, cwinrt_token token);
 
-/* activate Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequestEventArgs */
 HRESULT wdepopr_barcode_scanner_enable_scanner_request_event_args_new(WDEPOPR_BarcodeScannerEnableScannerRequestEventArgs **out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequestEventArgs */
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequestEventArgs.get_Request() */
 HRESULT wdepopr_barcode_scanner_enable_scanner_request_event_args_get__request(WDEPOPR_BarcodeScannerEnableScannerRequestEventArgs *self, WDEPOPR_BarcodeScannerEnableScannerRequest** value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequestEventArgs.GetDeferral() */
 HRESULT wdepopr_barcode_scanner_enable_scanner_request_event_args_get_deferral(WDEPOPR_BarcodeScannerEnableScannerRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequest */
 HRESULT wdepopr_barcode_scanner_enable_scanner_request_new(WDEPOPR_BarcodeScannerEnableScannerRequest **out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequest */
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequest.ReportCompletedAsync() */
 HRESULT wdepopr_barcode_scanner_enable_scanner_request_report_completed_async(WDEPOPR_BarcodeScannerEnableScannerRequest *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequest.ReportFailedAsync() */
 HRESULT wdepopr_barcode_scanner_enable_scanner_request_report_failed_async(WDEPOPR_BarcodeScannerEnableScannerRequest *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequest.ReportFailedAsync(reason) */
 HRESULT wdepopr_barcode_scanner_enable_scanner_request_report_failed_async_i32_p(WDEPOPR_BarcodeScannerEnableScannerRequest *self, int32_t reason, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequest.ReportFailedAsync(reason, failedReasonDescription) */
 HRESULT wdepopr_barcode_scanner_enable_scanner_request_report_failed_async_i32_str_p(WDEPOPR_BarcodeScannerEnableScannerRequest *self, int32_t reason, cwinrt_hstring failedReasonDescription, WF_IAsyncAction** out);
 
-/* activate Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequestEventArgs */
 HRESULT wdepopr_barcode_scanner_disable_scanner_request_event_args_new(WDEPOPR_BarcodeScannerDisableScannerRequestEventArgs **out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequestEventArgs */
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequestEventArgs.get_Request() */
 HRESULT wdepopr_barcode_scanner_disable_scanner_request_event_args_get__request(WDEPOPR_BarcodeScannerDisableScannerRequestEventArgs *self, WDEPOPR_BarcodeScannerDisableScannerRequest** value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequestEventArgs.GetDeferral() */
 HRESULT wdepopr_barcode_scanner_disable_scanner_request_event_args_get_deferral(WDEPOPR_BarcodeScannerDisableScannerRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequest */
 HRESULT wdepopr_barcode_scanner_disable_scanner_request_new(WDEPOPR_BarcodeScannerDisableScannerRequest **out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequest */
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequest.ReportCompletedAsync() */
 HRESULT wdepopr_barcode_scanner_disable_scanner_request_report_completed_async(WDEPOPR_BarcodeScannerDisableScannerRequest *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequest.ReportFailedAsync() */
 HRESULT wdepopr_barcode_scanner_disable_scanner_request_report_failed_async(WDEPOPR_BarcodeScannerDisableScannerRequest *self, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequest.ReportFailedAsync(reason) */
 HRESULT wdepopr_barcode_scanner_disable_scanner_request_report_failed_async_i32_p(WDEPOPR_BarcodeScannerDisableScannerRequest *self, int32_t reason, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequest.ReportFailedAsync(reason, failedReasonDescription) */
 HRESULT wdepopr_barcode_scanner_disable_scanner_request_report_failed_async_i32_str_p(WDEPOPR_BarcodeScannerDisableScannerRequest *self, int32_t reason, cwinrt_hstring failedReasonDescription, WF_IAsyncAction** out);
 
-/* activate Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequestEventArgs */
 HRESULT wdepopr_barcode_scanner_hide_video_preview_request_event_args_new(WDEPOPR_BarcodeScannerHideVideoPreviewRequestEventArgs **out);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequestEventArgs */
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequestEventArgs.get_Request() */
 HRESULT wdepopr_barcode_scanner_hide_video_preview_request_event_args_get__request(WDEPOPR_BarcodeScannerHideVideoPreviewRequestEventArgs *self, WDEPOPR_BarcodeScannerHideVideoPreviewRequest** value);
 
-/* Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequestEventArgs.GetDeferral() */
 HRESULT wdepopr_barcode_scanner_hide_video_preview_request_event_args_get_deferral(WDEPOPR_BarcodeScannerHideVideoPreviewRequestEventArgs *self, WF_Deferral** out);
 
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection */
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection2 */
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection2.CreateFrameReaderAsync() */
 HRESULT wdepopr_barcode_scanner_provider_connection_2_create_frame_reader_async(WDEPOPR_IBarcodeScannerProviderConnection_2 *self, WF_IAsyncOperation_WDEPOPR_BarcodeScannerFrameReader** out);
 
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection2.CreateFrameReaderAsync(preferredFormat) */
 HRESULT wdepopr_barcode_scanner_provider_connection_2_create_frame_reader_async_bitmap_pixel_format_p(WDEPOPR_IBarcodeScannerProviderConnection_2 *self, WGRIM_BitmapPixelFormat preferredFormat, WF_IAsyncOperation_WDEPOPR_BarcodeScannerFrameReader** out);
 
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection2.CreateFrameReaderAsync(preferredFormat, preferredSize) */
 HRESULT wdepopr_barcode_scanner_provider_connection_2_create_frame_reader_async_bitmap_pixel_format_bitmap_size_p(WDEPOPR_IBarcodeScannerProviderConnection_2 *self, WGRIM_BitmapPixelFormat preferredFormat, WGRIM_BitmapSize preferredSize, WF_IAsyncOperation_WDEPOPR_BarcodeScannerFrameReader** out);
 
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderTriggerDetails */
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequest */
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequest2 */
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequest2.ReportFailedAsync(reason) */
 HRESULT wdepopr_barcode_scanner_set_active_symbologies_request_2_report_failed_async(WDEPOPR_IBarcodeScannerSetActiveSymbologiesRequest_2 *self, int32_t reason, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequest2.ReportFailedAsync(reason, failedReasonDescription) */
 HRESULT wdepopr_barcode_scanner_set_active_symbologies_request_2_report_failed_async_i32_str_p(WDEPOPR_IBarcodeScannerSetActiveSymbologiesRequest_2 *self, int32_t reason, cwinrt_hstring failedReasonDescription, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequestEventArgs */
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequest */
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequest2 */
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequest2.ReportFailedAsync(reason) */
 HRESULT wdepopr_barcode_scanner_set_symbology_attributes_request_2_report_failed_async(WDEPOPR_IBarcodeScannerSetSymbologyAttributesRequest_2 *self, int32_t reason, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequest2.ReportFailedAsync(reason, failedReasonDescription) */
 HRESULT wdepopr_barcode_scanner_set_symbology_attributes_request_2_report_failed_async_i32_str_p(WDEPOPR_IBarcodeScannerSetSymbologyAttributesRequest_2 *self, int32_t reason, cwinrt_hstring failedReasonDescription, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequestEventArgs */
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerStartSoftwareTriggerRequest */
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerStartSoftwareTriggerRequest2 */
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerStartSoftwareTriggerRequest2.ReportFailedAsync(reason) */
 HRESULT wdepopr_barcode_scanner_start_software_trigger_request_2_report_failed_async(WDEPOPR_IBarcodeScannerStartSoftwareTriggerRequest_2 *self, int32_t reason, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerStartSoftwareTriggerRequest2.ReportFailedAsync(reason, failedReasonDescription) */
 HRESULT wdepopr_barcode_scanner_start_software_trigger_request_2_report_failed_async_i32_str_p(WDEPOPR_IBarcodeScannerStartSoftwareTriggerRequest_2 *self, int32_t reason, cwinrt_hstring failedReasonDescription, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerStartSoftwareTriggerRequestEventArgs */
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerStopSoftwareTriggerRequest */
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerStopSoftwareTriggerRequest2 */
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerStopSoftwareTriggerRequest2.ReportFailedAsync(reason) */
 HRESULT wdepopr_barcode_scanner_stop_software_trigger_request_2_report_failed_async(WDEPOPR_IBarcodeScannerStopSoftwareTriggerRequest_2 *self, int32_t reason, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerStopSoftwareTriggerRequest2.ReportFailedAsync(reason, failedReasonDescription) */
 HRESULT wdepopr_barcode_scanner_stop_software_trigger_request_2_report_failed_async_i32_str_p(WDEPOPR_IBarcodeScannerStopSoftwareTriggerRequest_2 *self, int32_t reason, cwinrt_hstring failedReasonDescription, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerStopSoftwareTriggerRequestEventArgs */
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerVideoFrame */
-/* Windows.Devices.PointOfService.Provider.IBarcodeSymbologyAttributesBuilder */
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerHideVideoPreviewRequest */
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerHideVideoPreviewRequest2 */
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerHideVideoPreviewRequest2.ReportFailedAsync(reason) */
 HRESULT wdepopr_barcode_scanner_hide_video_preview_request_2_report_failed_async(WDEPOPR_IBarcodeScannerHideVideoPreviewRequest_2 *self, int32_t reason, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerHideVideoPreviewRequest2.ReportFailedAsync(reason, failedReasonDescription) */
 HRESULT wdepopr_barcode_scanner_hide_video_preview_request_2_report_failed_async_i32_str_p(WDEPOPR_IBarcodeScannerHideVideoPreviewRequest_2 *self, int32_t reason, cwinrt_hstring failedReasonDescription, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequestEventArgs */
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequest */
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequest2 */
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequest2.ReportFailedAsync(reason) */
 HRESULT wdepopr_barcode_scanner_get_symbology_attributes_request_2_report_failed_async(WDEPOPR_IBarcodeScannerGetSymbologyAttributesRequest_2 *self, int32_t reason, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequest2.ReportFailedAsync(reason, failedReasonDescription) */
 HRESULT wdepopr_barcode_scanner_get_symbology_attributes_request_2_report_failed_async_i32_str_p(WDEPOPR_IBarcodeScannerGetSymbologyAttributesRequest_2 *self, int32_t reason, cwinrt_hstring failedReasonDescription, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerFrameReaderFrameArrivedEventArgs */
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerFrameReader */
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerEnableScannerRequestEventArgs */
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerEnableScannerRequest */
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerEnableScannerRequest2 */
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerEnableScannerRequest2.ReportFailedAsync(reason) */
 HRESULT wdepopr_barcode_scanner_enable_scanner_request_2_report_failed_async(WDEPOPR_IBarcodeScannerEnableScannerRequest_2 *self, int32_t reason, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerEnableScannerRequest2.ReportFailedAsync(reason, failedReasonDescription) */
 HRESULT wdepopr_barcode_scanner_enable_scanner_request_2_report_failed_async_i32_str_p(WDEPOPR_IBarcodeScannerEnableScannerRequest_2 *self, int32_t reason, cwinrt_hstring failedReasonDescription, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerDisableScannerRequestEventArgs */
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerDisableScannerRequest */
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerDisableScannerRequest2 */
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerDisableScannerRequest2.ReportFailedAsync(reason) */
 HRESULT wdepopr_barcode_scanner_disable_scanner_request_2_report_failed_async(WDEPOPR_IBarcodeScannerDisableScannerRequest_2 *self, int32_t reason, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerDisableScannerRequest2.ReportFailedAsync(reason, failedReasonDescription) */
 HRESULT wdepopr_barcode_scanner_disable_scanner_request_2_report_failed_async_i32_str_p(WDEPOPR_IBarcodeScannerDisableScannerRequest_2 *self, int32_t reason, cwinrt_hstring failedReasonDescription, WF_IAsyncAction** out);
 
-/* Windows.Devices.PointOfService.Provider.IBarcodeScannerHideVideoPreviewRequestEventArgs */
 #endif /* CWINRT_WINDOWS_DEVICES_POINTOFSERVICE_PROVIDER_H */

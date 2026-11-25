@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Media.Protection.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WMECO_MediaStreamSource
 #define CWINRT_FWD_WMECO_MediaStreamSource
 typedef struct WMECO_MediaStreamSource WMECO_MediaStreamSource;
@@ -39,7 +38,6 @@ typedef struct WMECO_VideoStreamDescriptor WMECO_VideoStreamDescriptor;
 typedef struct WMECO_MediaStreamSample WMECO_MediaStreamSample;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMEPRPL_IPlayReadyContentHeaderFactory WMEPRPL_IPlayReadyContentHeaderFactory;
 typedef struct WMEPRPL_IPlayReadyContentHeaderFactory_2 WMEPRPL_IPlayReadyContentHeaderFactory_2;
 typedef struct WMEPRPL_IPlayReadyContentResolver WMEPRPL_IPlayReadyContentResolver;
@@ -124,7 +122,6 @@ typedef struct WMEPRPL_IPlayReadyLicenseAcquisitionServiceRequest WMEPRPL_IPlayR
 typedef struct WMEPRPL_IPlayReadyStatics WMEPRPL_IPlayReadyStatics;
 typedef struct WMEPRPL_IPlayReadyServiceRequest WMEPRPL_IPlayReadyServiceRequest;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_Uri
 #define CWINRT_FWD_WF_Uri
 typedef struct WF_Uri WF_Uri;
@@ -352,7 +349,6 @@ typedef enum WMEPRPL_PlayReadyITADataFormat {
 } WMEPRPL_PlayReadyITADataFormat;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -573,74 +569,42 @@ static const IID CWINRT_IID_WMEPRPL_IPlayReadyStatics CWINRT_MAYBE_UNUSED = { 0x
 static const IID CWINRT_IID_WMEPRPL_IPlayReadyServiceRequest CWINRT_MAYBE_UNUSED = { 0x8BAD2836, 0xA703, 0x45A6, { 0xA1, 0x80, 0x76, 0xF3, 0x56, 0x5A, 0xA7, 0x25 } };
 #endif
 
-/* Methods */
-
-/* Windows.Media.Protection.PlayReady.IPlayReadyContentHeaderFactory */
-/* Windows.Media.Protection.PlayReady.IPlayReadyContentHeaderFactory.CreateInstanceFromWindowsMediaDrmHeader(headerBytes, licenseAcquisitionUrl, licenseAcquisitionUserInterfaceUrl, customAttributes, domainServiceId) */
 HRESULT wmeprpl_play_ready_content_header_factory_create_instance_from_windows_media_drm_header(WMEPRPL_IPlayReadyContentHeaderFactory *self, uint8_t *headerBytes, uint32_t headerBytes_len, WF_Uri* licenseAcquisitionUrl, WF_Uri* licenseAcquisitionUserInterfaceUrl, cwinrt_hstring customAttributes, GUID domainServiceId, WMEPRPL_PlayReadyContentHeader** out);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyContentHeaderFactory.CreateInstanceFromComponents(contentKeyId, contentKeyIdString, contentEncryptionAlgorithm, licenseAcquisitionUrl, licenseAcquisitionUserInterfaceUrl, customAttributes, domainServiceId) */
 HRESULT wmeprpl_play_ready_content_header_factory_create_instance_from_components(WMEPRPL_IPlayReadyContentHeaderFactory *self, GUID contentKeyId, cwinrt_hstring contentKeyIdString, WMEPRPL_PlayReadyEncryptionAlgorithm contentEncryptionAlgorithm, WF_Uri* licenseAcquisitionUrl, WF_Uri* licenseAcquisitionUserInterfaceUrl, cwinrt_hstring customAttributes, GUID domainServiceId, WMEPRPL_PlayReadyContentHeader** out);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyContentHeaderFactory.CreateInstanceFromPlayReadyHeader(headerBytes) */
 HRESULT wmeprpl_play_ready_content_header_factory_create_instance_from_play_ready_header(WMEPRPL_IPlayReadyContentHeaderFactory *self, uint8_t *headerBytes, uint32_t headerBytes_len, WMEPRPL_PlayReadyContentHeader** out);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyContentHeaderFactory2 */
-/* Windows.Media.Protection.PlayReady.IPlayReadyContentHeaderFactory2.CreateInstanceFromComponents2(dwFlags, contentKeyIds, contentKeyIdStrings, contentEncryptionAlgorithm, licenseAcquisitionUrl, licenseAcquisitionUserInterfaceUrl, customAttributes, domainServiceId) */
 HRESULT wmeprpl_play_ready_content_header_factory_2_create_instance_from_components2(WMEPRPL_IPlayReadyContentHeaderFactory_2 *self, uint32_t dwFlags, GUID *contentKeyIds, uint32_t contentKeyIds_len, cwinrt_hstring *contentKeyIdStrings, uint32_t contentKeyIdStrings_len, WMEPRPL_PlayReadyEncryptionAlgorithm contentEncryptionAlgorithm, WF_Uri* licenseAcquisitionUrl, WF_Uri* licenseAcquisitionUserInterfaceUrl, cwinrt_hstring customAttributes, GUID domainServiceId, WMEPRPL_PlayReadyContentHeader** out);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyContentResolver */
-/* Windows.Media.Protection.PlayReady.IPlayReadyDomainIterableFactory */
-/* Windows.Media.Protection.PlayReady.IPlayReadyDomainIterableFactory.CreateInstance(domainAccountId) */
 HRESULT wmeprpl_play_ready_domain_iterable_factory_create_instance(WMEPRPL_IPlayReadyDomainIterableFactory *self, GUID domainAccountId, WMEPRPL_PlayReadyDomainIterable** out);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyLicenseIterableFactory */
-/* Windows.Media.Protection.PlayReady.IPlayReadyLicenseIterableFactory.CreateInstance(contentHeader, fullyEvaluated) */
 HRESULT wmeprpl_play_ready_license_iterable_factory_create_instance(WMEPRPL_IPlayReadyLicenseIterableFactory *self, WMEPRPL_PlayReadyContentHeader* contentHeader, BOOL fullyEvaluated, WMEPRPL_PlayReadyLicenseIterable** out);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyLicenseManagement */
-/* Windows.Media.Protection.PlayReady.IPlayReadyLicenseSessionFactory */
-/* Windows.Media.Protection.PlayReady.IPlayReadyLicenseSessionFactory.CreateInstance(configuration) */
 HRESULT wmeprpl_play_ready_license_session_factory_create_instance(WMEPRPL_IPlayReadyLicenseSessionFactory *self, WFOCO_IPropertySet* configuration, WMEPRPL_PlayReadyLicenseSession** out);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadySecureStopIterableFactory */
-/* Windows.Media.Protection.PlayReady.IPlayReadySecureStopIterableFactory.CreateInstance(publisherCertBytes) */
 HRESULT wmeprpl_play_ready_secure_stop_iterable_factory_create_instance(WMEPRPL_IPlayReadySecureStopIterableFactory *self, uint8_t *publisherCertBytes, uint32_t publisherCertBytes_len, WMEPRPL_PlayReadySecureStopIterable** out);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadySecureStopServiceRequestFactory */
-/* Windows.Media.Protection.PlayReady.IPlayReadySecureStopServiceRequestFactory.CreateInstance(publisherCertBytes) */
 HRESULT wmeprpl_play_ready_secure_stop_service_request_factory_create_instance(WMEPRPL_IPlayReadySecureStopServiceRequestFactory *self, uint8_t *publisherCertBytes, uint32_t publisherCertBytes_len, WMEPRPL_PlayReadySecureStopServiceRequest** out);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadySecureStopServiceRequestFactory.CreateInstanceFromSessionID(sessionID, publisherCertBytes) */
 HRESULT wmeprpl_play_ready_secure_stop_service_request_factory_create_instance_from_session_i_d(WMEPRPL_IPlayReadySecureStopServiceRequestFactory *self, GUID sessionID, uint8_t *publisherCertBytes, uint32_t publisherCertBytes_len, WMEPRPL_PlayReadySecureStopServiceRequest** out);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyStatics5 */
-/* Windows.Media.Protection.PlayReady.IPlayReadyStatics5.get_HardwareDRMDisabledAtTime() */
 HRESULT wmeprpl_play_ready_statics_5_get__hardware_d_r_m_disabled_at_time(WMEPRPL_IPlayReadyStatics_5 *self, WF_DateTime** value);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyStatics5.get_HardwareDRMDisabledUntilTime() */
 HRESULT wmeprpl_play_ready_statics_5_get__hardware_d_r_m_disabled_until_time(WMEPRPL_IPlayReadyStatics_5 *self, WF_DateTime** value);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyStatics5.ResetHardwareDRMDisabled() */
 HRESULT wmeprpl_play_ready_statics_5_reset_hardware_d_r_m_disabled(WMEPRPL_IPlayReadyStatics_5 *self);
 
-/* activate Windows.Media.Protection.PlayReady.NDClient */
 HRESULT wmeprpl_n_d_client_new(WMEPRPL_NDClient **out);
 
-/* Windows.Media.Protection.PlayReady.NDClient */
-/* Windows.Media.Protection.PlayReady.NDClient.StartAsync(contentUrl, startAsyncOptions, registrationCustomData, licenseFetchDescriptor) */
 HRESULT wmeprpl_n_d_client_start_async(WMEPRPL_NDClient *self, WF_Uri* contentUrl, uint32_t startAsyncOptions, WMEPRPL_INDCustomData* registrationCustomData, WMEPRPL_INDLicenseFetchDescriptor* licenseFetchDescriptor, WF_IAsyncOperation_WMEPRPL_INDStartResult** out);
 
-/* Windows.Media.Protection.PlayReady.NDClient.LicenseFetchAsync(licenseFetchDescriptor) */
 HRESULT wmeprpl_n_d_client_license_fetch_async(WMEPRPL_NDClient *self, WMEPRPL_INDLicenseFetchDescriptor* licenseFetchDescriptor, WF_IAsyncOperation_WMEPRPL_INDLicenseFetchResult** out);
 
-/* Windows.Media.Protection.PlayReady.NDClient.ReRegistrationAsync(registrationCustomData) */
 HRESULT wmeprpl_n_d_client_re_registration_async(WMEPRPL_NDClient *self, WMEPRPL_INDCustomData* registrationCustomData, WF_IAsyncAction** out);
 
-/* Windows.Media.Protection.PlayReady.NDClient.Close() */
 HRESULT wmeprpl_n_d_client_close(WMEPRPL_NDClient *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeprpl_n_d_client_on_registration_completed(WMEPRPL_NDClient *self, cwinrt_event_fn fn, void *ctx);
@@ -658,926 +622,572 @@ void wmeprpl_n_d_client_off_re_registration_needed(WMEPRPL_NDClient *self, cwinr
 cwinrt_token wmeprpl_n_d_client_on_closed_caption_data_received(WMEPRPL_NDClient *self, cwinrt_event_fn fn, void *ctx);
 void wmeprpl_n_d_client_off_closed_caption_data_received(WMEPRPL_NDClient *self, cwinrt_token token);
 
-/* activate Windows.Media.Protection.PlayReady.NDCustomData */
 HRESULT wmeprpl_n_d_custom_data_new(WMEPRPL_NDCustomData **out);
 
-/* Windows.Media.Protection.PlayReady.NDCustomData */
-/* Windows.Media.Protection.PlayReady.NDCustomData.get_CustomDataTypeID() */
 HRESULT wmeprpl_n_d_custom_data_get__custom_data_type_i_d(WMEPRPL_NDCustomData *self, uint8_t **value, uint32_t *value_len);
 
-/* Windows.Media.Protection.PlayReady.NDCustomData.get_CustomData() */
 HRESULT wmeprpl_n_d_custom_data_get__custom_data(WMEPRPL_NDCustomData *self, uint8_t **value, uint32_t *value_len);
 
-/* activate Windows.Media.Protection.PlayReady.NDDownloadEngineNotifier */
 HRESULT wmeprpl_n_d_download_engine_notifier_new(WMEPRPL_NDDownloadEngineNotifier **out);
 
-/* Windows.Media.Protection.PlayReady.NDDownloadEngineNotifier */
-/* Windows.Media.Protection.PlayReady.NDDownloadEngineNotifier.OnStreamOpened() */
 HRESULT wmeprpl_n_d_download_engine_notifier_handle_stream_opened(WMEPRPL_NDDownloadEngineNotifier *self);
 
-/* Windows.Media.Protection.PlayReady.NDDownloadEngineNotifier.OnPlayReadyObjectReceived(dataBytes) */
 HRESULT wmeprpl_n_d_download_engine_notifier_handle_play_ready_object_received(WMEPRPL_NDDownloadEngineNotifier *self, uint8_t *dataBytes, uint32_t dataBytes_len);
 
-/* Windows.Media.Protection.PlayReady.NDDownloadEngineNotifier.OnContentIDReceived(licenseFetchDescriptor) */
 HRESULT wmeprpl_n_d_download_engine_notifier_handle_content_i_d_received(WMEPRPL_NDDownloadEngineNotifier *self, WMEPRPL_INDLicenseFetchDescriptor* licenseFetchDescriptor);
 
-/* Windows.Media.Protection.PlayReady.NDDownloadEngineNotifier.OnDataReceived(dataBytes, bytesReceived) */
 HRESULT wmeprpl_n_d_download_engine_notifier_handle_data_received(WMEPRPL_NDDownloadEngineNotifier *self, uint8_t *dataBytes, uint32_t dataBytes_len, uint32_t bytesReceived);
 
-/* Windows.Media.Protection.PlayReady.NDDownloadEngineNotifier.OnEndOfStream() */
 HRESULT wmeprpl_n_d_download_engine_notifier_handle_end_of_stream(WMEPRPL_NDDownloadEngineNotifier *self);
 
-/* Windows.Media.Protection.PlayReady.NDDownloadEngineNotifier.OnNetworkError() */
 HRESULT wmeprpl_n_d_download_engine_notifier_handle_network_error(WMEPRPL_NDDownloadEngineNotifier *self);
 
-/* activate Windows.Media.Protection.PlayReady.NDLicenseFetchDescriptor */
 HRESULT wmeprpl_n_d_license_fetch_descriptor_new(WMEPRPL_NDLicenseFetchDescriptor **out);
 
-/* Windows.Media.Protection.PlayReady.NDLicenseFetchDescriptor */
-/* Windows.Media.Protection.PlayReady.NDLicenseFetchDescriptor.get_ContentIDType() */
 HRESULT wmeprpl_n_d_license_fetch_descriptor_get__content_i_d_type(WMEPRPL_NDLicenseFetchDescriptor *self, WMEPRPL_NDContentIDType *value);
 
-/* Windows.Media.Protection.PlayReady.NDLicenseFetchDescriptor.get_ContentID() */
 HRESULT wmeprpl_n_d_license_fetch_descriptor_get__content_i_d(WMEPRPL_NDLicenseFetchDescriptor *self, uint8_t **value, uint32_t *value_len);
 
-/* Windows.Media.Protection.PlayReady.NDLicenseFetchDescriptor.get_LicenseFetchChallengeCustomData() */
 HRESULT wmeprpl_n_d_license_fetch_descriptor_get__license_fetch_challenge_custom_data(WMEPRPL_NDLicenseFetchDescriptor *self, WMEPRPL_INDCustomData** value);
 
-/* Windows.Media.Protection.PlayReady.NDLicenseFetchDescriptor.put_LicenseFetchChallengeCustomData(licenseFetchChallengeCustomData) */
 HRESULT wmeprpl_n_d_license_fetch_descriptor_put__license_fetch_challenge_custom_data(WMEPRPL_NDLicenseFetchDescriptor *self, WMEPRPL_INDCustomData* licenseFetchChallengeCustomData);
 
-/* activate Windows.Media.Protection.PlayReady.NDStorageFileHelper */
 HRESULT wmeprpl_n_d_storage_file_helper_new(WMEPRPL_NDStorageFileHelper **out);
 
-/* Windows.Media.Protection.PlayReady.NDStorageFileHelper */
-/* Windows.Media.Protection.PlayReady.NDStorageFileHelper.GetFileURLs(file) */
 HRESULT wmeprpl_n_d_storage_file_helper_get_file_u_r_ls(WMEPRPL_NDStorageFileHelper *self, WS_IStorageFile* file, WFOCO_IVector_HSTRING** out);
 
-/* activate Windows.Media.Protection.PlayReady.NDStreamParserNotifier */
 HRESULT wmeprpl_n_d_stream_parser_notifier_new(WMEPRPL_NDStreamParserNotifier **out);
 
-/* Windows.Media.Protection.PlayReady.NDStreamParserNotifier */
-/* Windows.Media.Protection.PlayReady.NDStreamParserNotifier.OnContentIDReceived(licenseFetchDescriptor) */
 HRESULT wmeprpl_n_d_stream_parser_notifier_handle_content_i_d_received(WMEPRPL_NDStreamParserNotifier *self, WMEPRPL_INDLicenseFetchDescriptor* licenseFetchDescriptor);
 
-/* Windows.Media.Protection.PlayReady.NDStreamParserNotifier.OnMediaStreamDescriptorCreated(audioStreamDescriptors, videoStreamDescriptors) */
 HRESULT wmeprpl_n_d_stream_parser_notifier_handle_media_stream_descriptor_created(WMEPRPL_NDStreamParserNotifier *self, WFOCO_IVector_WMECO_AudioStreamDescriptor* audioStreamDescriptors, WFOCO_IVector_WMECO_VideoStreamDescriptor* videoStreamDescriptors);
 
-/* Windows.Media.Protection.PlayReady.NDStreamParserNotifier.OnSampleParsed(streamID, streamType, streamSample, pts, ccFormat, ccDataBytes) */
 HRESULT wmeprpl_n_d_stream_parser_notifier_handle_sample_parsed(WMEPRPL_NDStreamParserNotifier *self, uint32_t streamID, WMEPRPL_NDMediaStreamType streamType, WMECO_MediaStreamSample* streamSample, int64_t pts, WMEPRPL_NDClosedCaptionFormat ccFormat, uint8_t *ccDataBytes, uint32_t ccDataBytes_len);
 
-/* Windows.Media.Protection.PlayReady.NDStreamParserNotifier.OnBeginSetupDecryptor(descriptor, keyID, proBytes) */
 HRESULT wmeprpl_n_d_stream_parser_notifier_handle_begin_setup_decryptor(WMEPRPL_NDStreamParserNotifier *self, WMECO_IMediaStreamDescriptor* descriptor, GUID keyID, uint8_t *proBytes, uint32_t proBytes_len);
 
-/* activate Windows.Media.Protection.PlayReady.NDTCPMessenger */
 HRESULT wmeprpl_n_d_t_c_p_messenger_new(WMEPRPL_NDTCPMessenger **out);
 
-/* Windows.Media.Protection.PlayReady.NDTCPMessenger */
-/* Windows.Media.Protection.PlayReady.NDTCPMessenger.SendRegistrationRequestAsync(sessionIDBytes, challengeDataBytes) */
 HRESULT wmeprpl_n_d_t_c_p_messenger_send_registration_request_async(WMEPRPL_NDTCPMessenger *self, uint8_t *sessionIDBytes, uint32_t sessionIDBytes_len, uint8_t *challengeDataBytes, uint32_t challengeDataBytes_len, WF_IAsyncOperation_WMEPRPL_INDSendResult** out);
 
-/* Windows.Media.Protection.PlayReady.NDTCPMessenger.SendProximityDetectionStartAsync(pdType, transmitterChannelBytes, sessionIDBytes, challengeDataBytes) */
 HRESULT wmeprpl_n_d_t_c_p_messenger_send_proximity_detection_start_async(WMEPRPL_NDTCPMessenger *self, WMEPRPL_NDProximityDetectionType pdType, uint8_t *transmitterChannelBytes, uint32_t transmitterChannelBytes_len, uint8_t *sessionIDBytes, uint32_t sessionIDBytes_len, uint8_t *challengeDataBytes, uint32_t challengeDataBytes_len, WF_IAsyncOperation_WMEPRPL_INDSendResult** out);
 
-/* Windows.Media.Protection.PlayReady.NDTCPMessenger.SendProximityDetectionResponseAsync(pdType, transmitterChannelBytes, sessionIDBytes, responseDataBytes) */
 HRESULT wmeprpl_n_d_t_c_p_messenger_send_proximity_detection_response_async(WMEPRPL_NDTCPMessenger *self, WMEPRPL_NDProximityDetectionType pdType, uint8_t *transmitterChannelBytes, uint32_t transmitterChannelBytes_len, uint8_t *sessionIDBytes, uint32_t sessionIDBytes_len, uint8_t *responseDataBytes, uint32_t responseDataBytes_len, WF_IAsyncOperation_WMEPRPL_INDSendResult** out);
 
-/* Windows.Media.Protection.PlayReady.NDTCPMessenger.SendLicenseFetchRequestAsync(sessionIDBytes, challengeDataBytes) */
 HRESULT wmeprpl_n_d_t_c_p_messenger_send_license_fetch_request_async(WMEPRPL_NDTCPMessenger *self, uint8_t *sessionIDBytes, uint32_t sessionIDBytes_len, uint8_t *challengeDataBytes, uint32_t challengeDataBytes_len, WF_IAsyncOperation_WMEPRPL_INDSendResult** out);
 
-/* activate Windows.Media.Protection.PlayReady.PlayReadyContentHeader */
 HRESULT wmeprpl_play_ready_content_header_new(WMEPRPL_PlayReadyContentHeader **out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyContentHeader */
-/* Windows.Media.Protection.PlayReady.PlayReadyContentHeader.get_KeyId() */
 HRESULT wmeprpl_play_ready_content_header_get__key_id(WMEPRPL_PlayReadyContentHeader *self, GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyContentHeader.get_KeyIdString() */
 HRESULT wmeprpl_play_ready_content_header_get__key_id_string(WMEPRPL_PlayReadyContentHeader *self, cwinrt_hstring *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyContentHeader.get_LicenseAcquisitionUrl() */
 HRESULT wmeprpl_play_ready_content_header_get__license_acquisition_url(WMEPRPL_PlayReadyContentHeader *self, WF_Uri** value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyContentHeader.get_LicenseAcquisitionUserInterfaceUrl() */
 HRESULT wmeprpl_play_ready_content_header_get__license_acquisition_user_interface_url(WMEPRPL_PlayReadyContentHeader *self, WF_Uri** value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyContentHeader.get_DomainServiceId() */
 HRESULT wmeprpl_play_ready_content_header_get__domain_service_id(WMEPRPL_PlayReadyContentHeader *self, GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyContentHeader.get_EncryptionType() */
 HRESULT wmeprpl_play_ready_content_header_get__encryption_type(WMEPRPL_PlayReadyContentHeader *self, WMEPRPL_PlayReadyEncryptionAlgorithm *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyContentHeader.get_CustomAttributes() */
 HRESULT wmeprpl_play_ready_content_header_get__custom_attributes(WMEPRPL_PlayReadyContentHeader *self, cwinrt_hstring *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyContentHeader.get_DecryptorSetup() */
 HRESULT wmeprpl_play_ready_content_header_get__decryptor_setup(WMEPRPL_PlayReadyContentHeader *self, WMEPRPL_PlayReadyDecryptorSetup *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyContentHeader.GetSerializedHeader() */
 HRESULT wmeprpl_play_ready_content_header_get_serialized_header(WMEPRPL_PlayReadyContentHeader *self, uint8_t **out, uint32_t *out_len);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyContentHeader.get_HeaderWithEmbeddedUpdates() */
 HRESULT wmeprpl_play_ready_content_header_get__header_with_embedded_updates(WMEPRPL_PlayReadyContentHeader *self, WMEPRPL_PlayReadyContentHeader** value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyContentHeader.get_KeyIds() */
 HRESULT wmeprpl_play_ready_content_header_get__key_ids(WMEPRPL_PlayReadyContentHeader *self, GUID **value, uint32_t *value_len);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyContentHeader.get_KeyIdStrings() */
 HRESULT wmeprpl_play_ready_content_header_get__key_id_strings(WMEPRPL_PlayReadyContentHeader *self, cwinrt_hstring **value, uint32_t *value_len);
 
-/* activate Windows.Media.Protection.PlayReady.PlayReadyContentResolver */
 HRESULT wmeprpl_play_ready_content_resolver_new(WMEPRPL_PlayReadyContentResolver **out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyContentResolver */
-/* Windows.Media.Protection.PlayReady.PlayReadyContentResolver.ServiceRequest(contentHeader) */
 HRESULT wmeprpl_play_ready_content_resolver_service_request(WMEPRPL_PlayReadyContentHeader* contentHeader, WMEPRPL_IPlayReadyServiceRequest** out);
 
-/* activate Windows.Media.Protection.PlayReady.PlayReadyDomain */
 HRESULT wmeprpl_play_ready_domain_new(WMEPRPL_PlayReadyDomain **out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomain */
-/* Windows.Media.Protection.PlayReady.PlayReadyDomain.get_AccountId() */
 HRESULT wmeprpl_play_ready_domain_get__account_id(WMEPRPL_PlayReadyDomain *self, GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomain.get_ServiceId() */
 HRESULT wmeprpl_play_ready_domain_get__service_id(WMEPRPL_PlayReadyDomain *self, GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomain.get_Revision() */
 HRESULT wmeprpl_play_ready_domain_get__revision(WMEPRPL_PlayReadyDomain *self, uint32_t *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomain.get_FriendlyName() */
 HRESULT wmeprpl_play_ready_domain_get__friendly_name(WMEPRPL_PlayReadyDomain *self, cwinrt_hstring *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomain.get_DomainJoinUrl() */
 HRESULT wmeprpl_play_ready_domain_get__domain_join_url(WMEPRPL_PlayReadyDomain *self, WF_Uri** value);
 
-/* activate Windows.Media.Protection.PlayReady.PlayReadyDomainIterable */
 HRESULT wmeprpl_play_ready_domain_iterable_new(WMEPRPL_PlayReadyDomainIterable **out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainIterable */
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainIterable.First() */
 HRESULT wmeprpl_play_ready_domain_iterable_first(WMEPRPL_PlayReadyDomainIterable *self, WFOCO_IIterator_WMEPRPL_IPlayReadyDomain** out);
 
-/* activate Windows.Media.Protection.PlayReady.PlayReadyDomainIterator */
 HRESULT wmeprpl_play_ready_domain_iterator_new(WMEPRPL_PlayReadyDomainIterator **out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainIterator */
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainIterator.get_Current() */
 HRESULT wmeprpl_play_ready_domain_iterator_get__current(WMEPRPL_PlayReadyDomainIterator *self, WMEPRPL_IPlayReadyDomain** value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainIterator.get_HasCurrent() */
 HRESULT wmeprpl_play_ready_domain_iterator_get__has_current(WMEPRPL_PlayReadyDomainIterator *self, BOOL *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainIterator.MoveNext() */
 HRESULT wmeprpl_play_ready_domain_iterator_move_next(WMEPRPL_PlayReadyDomainIterator *self, BOOL *out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainIterator.GetMany(items) */
 HRESULT wmeprpl_play_ready_domain_iterator_get_many(WMEPRPL_PlayReadyDomainIterator *self, WMEPRPL_IPlayReadyDomain *items, uint32_t items_len, uint32_t *out);
 
-/* activate Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest */
 HRESULT wmeprpl_play_ready_domain_join_service_request_new(WMEPRPL_PlayReadyDomainJoinServiceRequest **out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest */
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest.get_DomainAccountId() */
 HRESULT wmeprpl_play_ready_domain_join_service_request_get__domain_account_id(WMEPRPL_PlayReadyDomainJoinServiceRequest *self, GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest.put_DomainAccountId() */
 HRESULT wmeprpl_play_ready_domain_join_service_request_put__domain_account_id(WMEPRPL_PlayReadyDomainJoinServiceRequest *self, GUID value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest.get_DomainFriendlyName() */
 HRESULT wmeprpl_play_ready_domain_join_service_request_get__domain_friendly_name(WMEPRPL_PlayReadyDomainJoinServiceRequest *self, cwinrt_hstring *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest.put_DomainFriendlyName() */
 HRESULT wmeprpl_play_ready_domain_join_service_request_put__domain_friendly_name(WMEPRPL_PlayReadyDomainJoinServiceRequest *self, cwinrt_hstring value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest.get_DomainServiceId() */
 HRESULT wmeprpl_play_ready_domain_join_service_request_get__domain_service_id(WMEPRPL_PlayReadyDomainJoinServiceRequest *self, GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest.put_DomainServiceId() */
 HRESULT wmeprpl_play_ready_domain_join_service_request_put__domain_service_id(WMEPRPL_PlayReadyDomainJoinServiceRequest *self, GUID value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest.get_Uri() */
 HRESULT wmeprpl_play_ready_domain_join_service_request_get__uri(WMEPRPL_PlayReadyDomainJoinServiceRequest *self, WF_Uri** value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest.put_Uri() */
 HRESULT wmeprpl_play_ready_domain_join_service_request_put__uri(WMEPRPL_PlayReadyDomainJoinServiceRequest *self, WF_Uri* value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest.get_ResponseCustomData() */
 HRESULT wmeprpl_play_ready_domain_join_service_request_get__response_custom_data(WMEPRPL_PlayReadyDomainJoinServiceRequest *self, cwinrt_hstring *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest.get_ChallengeCustomData() */
 HRESULT wmeprpl_play_ready_domain_join_service_request_get__challenge_custom_data(WMEPRPL_PlayReadyDomainJoinServiceRequest *self, cwinrt_hstring *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest.put_ChallengeCustomData() */
 HRESULT wmeprpl_play_ready_domain_join_service_request_put__challenge_custom_data(WMEPRPL_PlayReadyDomainJoinServiceRequest *self, cwinrt_hstring value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest.BeginServiceRequest() */
 HRESULT wmeprpl_play_ready_domain_join_service_request_begin_service_request(WMEPRPL_PlayReadyDomainJoinServiceRequest *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest.NextServiceRequest() */
 HRESULT wmeprpl_play_ready_domain_join_service_request_next_service_request(WMEPRPL_PlayReadyDomainJoinServiceRequest *self, WMEPRPL_IPlayReadyServiceRequest** out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest.GenerateManualEnablingChallenge() */
 HRESULT wmeprpl_play_ready_domain_join_service_request_generate_manual_enabling_challenge(WMEPRPL_PlayReadyDomainJoinServiceRequest *self, WMEPRPL_PlayReadySoapMessage** out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest.ProcessManualEnablingResponse(responseBytes) */
 HRESULT wmeprpl_play_ready_domain_join_service_request_process_manual_enabling_response(WMEPRPL_PlayReadyDomainJoinServiceRequest *self, uint8_t *responseBytes, uint32_t responseBytes_len, HRESULT *out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest.get_ProtectionSystem() */
 HRESULT wmeprpl_play_ready_domain_join_service_request_get__protection_system(WMEPRPL_PlayReadyDomainJoinServiceRequest *self, GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest.get_Type() */
 HRESULT wmeprpl_play_ready_domain_join_service_request_get__type(WMEPRPL_PlayReadyDomainJoinServiceRequest *self, GUID *value);
 
-/* activate Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest */
 HRESULT wmeprpl_play_ready_domain_leave_service_request_new(WMEPRPL_PlayReadyDomainLeaveServiceRequest **out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest */
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest.get_DomainAccountId() */
 HRESULT wmeprpl_play_ready_domain_leave_service_request_get__domain_account_id(WMEPRPL_PlayReadyDomainLeaveServiceRequest *self, GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest.put_DomainAccountId() */
 HRESULT wmeprpl_play_ready_domain_leave_service_request_put__domain_account_id(WMEPRPL_PlayReadyDomainLeaveServiceRequest *self, GUID value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest.get_DomainServiceId() */
 HRESULT wmeprpl_play_ready_domain_leave_service_request_get__domain_service_id(WMEPRPL_PlayReadyDomainLeaveServiceRequest *self, GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest.put_DomainServiceId() */
 HRESULT wmeprpl_play_ready_domain_leave_service_request_put__domain_service_id(WMEPRPL_PlayReadyDomainLeaveServiceRequest *self, GUID value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest.get_Uri() */
 HRESULT wmeprpl_play_ready_domain_leave_service_request_get__uri(WMEPRPL_PlayReadyDomainLeaveServiceRequest *self, WF_Uri** value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest.put_Uri() */
 HRESULT wmeprpl_play_ready_domain_leave_service_request_put__uri(WMEPRPL_PlayReadyDomainLeaveServiceRequest *self, WF_Uri* value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest.get_ResponseCustomData() */
 HRESULT wmeprpl_play_ready_domain_leave_service_request_get__response_custom_data(WMEPRPL_PlayReadyDomainLeaveServiceRequest *self, cwinrt_hstring *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest.get_ChallengeCustomData() */
 HRESULT wmeprpl_play_ready_domain_leave_service_request_get__challenge_custom_data(WMEPRPL_PlayReadyDomainLeaveServiceRequest *self, cwinrt_hstring *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest.put_ChallengeCustomData() */
 HRESULT wmeprpl_play_ready_domain_leave_service_request_put__challenge_custom_data(WMEPRPL_PlayReadyDomainLeaveServiceRequest *self, cwinrt_hstring value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest.BeginServiceRequest() */
 HRESULT wmeprpl_play_ready_domain_leave_service_request_begin_service_request(WMEPRPL_PlayReadyDomainLeaveServiceRequest *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest.NextServiceRequest() */
 HRESULT wmeprpl_play_ready_domain_leave_service_request_next_service_request(WMEPRPL_PlayReadyDomainLeaveServiceRequest *self, WMEPRPL_IPlayReadyServiceRequest** out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest.GenerateManualEnablingChallenge() */
 HRESULT wmeprpl_play_ready_domain_leave_service_request_generate_manual_enabling_challenge(WMEPRPL_PlayReadyDomainLeaveServiceRequest *self, WMEPRPL_PlayReadySoapMessage** out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest.ProcessManualEnablingResponse(responseBytes) */
 HRESULT wmeprpl_play_ready_domain_leave_service_request_process_manual_enabling_response(WMEPRPL_PlayReadyDomainLeaveServiceRequest *self, uint8_t *responseBytes, uint32_t responseBytes_len, HRESULT *out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest.get_ProtectionSystem() */
 HRESULT wmeprpl_play_ready_domain_leave_service_request_get__protection_system(WMEPRPL_PlayReadyDomainLeaveServiceRequest *self, GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest.get_Type() */
 HRESULT wmeprpl_play_ready_domain_leave_service_request_get__type(WMEPRPL_PlayReadyDomainLeaveServiceRequest *self, GUID *value);
 
-/* activate Windows.Media.Protection.PlayReady.PlayReadyITADataGenerator */
 HRESULT wmeprpl_play_ready_i_t_a_data_generator_new(WMEPRPL_PlayReadyITADataGenerator **out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyITADataGenerator */
-/* Windows.Media.Protection.PlayReady.PlayReadyITADataGenerator.GenerateData(guidCPSystemId, countOfStreams, configuration, format) */
 HRESULT wmeprpl_play_ready_i_t_a_data_generator_generate_data(WMEPRPL_PlayReadyITADataGenerator *self, GUID guidCPSystemId, uint32_t countOfStreams, WFOCO_IPropertySet* configuration, WMEPRPL_PlayReadyITADataFormat format, uint8_t **out, uint32_t *out_len);
 
-/* activate Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest */
 HRESULT wmeprpl_play_ready_individualization_service_request_new(WMEPRPL_PlayReadyIndividualizationServiceRequest **out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest */
-/* Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest.get_Uri() */
 HRESULT wmeprpl_play_ready_individualization_service_request_get__uri(WMEPRPL_PlayReadyIndividualizationServiceRequest *self, WF_Uri** value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest.put_Uri() */
 HRESULT wmeprpl_play_ready_individualization_service_request_put__uri(WMEPRPL_PlayReadyIndividualizationServiceRequest *self, WF_Uri* value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest.get_ResponseCustomData() */
 HRESULT wmeprpl_play_ready_individualization_service_request_get__response_custom_data(WMEPRPL_PlayReadyIndividualizationServiceRequest *self, cwinrt_hstring *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest.get_ChallengeCustomData() */
 HRESULT wmeprpl_play_ready_individualization_service_request_get__challenge_custom_data(WMEPRPL_PlayReadyIndividualizationServiceRequest *self, cwinrt_hstring *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest.put_ChallengeCustomData() */
 HRESULT wmeprpl_play_ready_individualization_service_request_put__challenge_custom_data(WMEPRPL_PlayReadyIndividualizationServiceRequest *self, cwinrt_hstring value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest.BeginServiceRequest() */
 HRESULT wmeprpl_play_ready_individualization_service_request_begin_service_request(WMEPRPL_PlayReadyIndividualizationServiceRequest *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest.NextServiceRequest() */
 HRESULT wmeprpl_play_ready_individualization_service_request_next_service_request(WMEPRPL_PlayReadyIndividualizationServiceRequest *self, WMEPRPL_IPlayReadyServiceRequest** out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest.GenerateManualEnablingChallenge() */
 HRESULT wmeprpl_play_ready_individualization_service_request_generate_manual_enabling_challenge(WMEPRPL_PlayReadyIndividualizationServiceRequest *self, WMEPRPL_PlayReadySoapMessage** out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest.ProcessManualEnablingResponse(responseBytes) */
 HRESULT wmeprpl_play_ready_individualization_service_request_process_manual_enabling_response(WMEPRPL_PlayReadyIndividualizationServiceRequest *self, uint8_t *responseBytes, uint32_t responseBytes_len, HRESULT *out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest.get_ProtectionSystem() */
 HRESULT wmeprpl_play_ready_individualization_service_request_get__protection_system(WMEPRPL_PlayReadyIndividualizationServiceRequest *self, GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest.get_Type() */
 HRESULT wmeprpl_play_ready_individualization_service_request_get__type(WMEPRPL_PlayReadyIndividualizationServiceRequest *self, GUID *value);
 
-/* activate Windows.Media.Protection.PlayReady.PlayReadyLicense */
 HRESULT wmeprpl_play_ready_license_new(WMEPRPL_PlayReadyLicense **out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicense */
-/* Windows.Media.Protection.PlayReady.PlayReadyLicense.get_FullyEvaluated() */
 HRESULT wmeprpl_play_ready_license_get__fully_evaluated(WMEPRPL_PlayReadyLicense *self, BOOL *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicense.get_UsableForPlay() */
 HRESULT wmeprpl_play_ready_license_get__usable_for_play(WMEPRPL_PlayReadyLicense *self, BOOL *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicense.get_ExpirationDate() */
 HRESULT wmeprpl_play_ready_license_get__expiration_date(WMEPRPL_PlayReadyLicense *self, WF_DateTime** value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicense.get_ExpireAfterFirstPlay() */
 HRESULT wmeprpl_play_ready_license_get__expire_after_first_play(WMEPRPL_PlayReadyLicense *self, uint32_t *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicense.get_DomainAccountID() */
 HRESULT wmeprpl_play_ready_license_get__domain_account_i_d(WMEPRPL_PlayReadyLicense *self, GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicense.get_ChainDepth() */
 HRESULT wmeprpl_play_ready_license_get__chain_depth(WMEPRPL_PlayReadyLicense *self, uint32_t *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicense.GetKIDAtChainDepth(chainDepth) */
 HRESULT wmeprpl_play_ready_license_get_k_i_d_at_chain_depth(WMEPRPL_PlayReadyLicense *self, uint32_t chainDepth, GUID *out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicense.get_SecureStopId() */
 HRESULT wmeprpl_play_ready_license_get__secure_stop_id(WMEPRPL_PlayReadyLicense *self, GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicense.get_SecurityLevel() */
 HRESULT wmeprpl_play_ready_license_get__security_level(WMEPRPL_PlayReadyLicense *self, uint32_t *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicense.get_InMemoryOnly() */
 HRESULT wmeprpl_play_ready_license_get__in_memory_only(WMEPRPL_PlayReadyLicense *self, BOOL *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicense.get_ExpiresInRealTime() */
 HRESULT wmeprpl_play_ready_license_get__expires_in_real_time(WMEPRPL_PlayReadyLicense *self, BOOL *value);
 
-/* activate Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest */
 HRESULT wmeprpl_play_ready_license_acquisition_service_request_new(WMEPRPL_PlayReadyLicenseAcquisitionServiceRequest **out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest */
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest.get_ContentHeader() */
 HRESULT wmeprpl_play_ready_license_acquisition_service_request_get__content_header(WMEPRPL_PlayReadyLicenseAcquisitionServiceRequest *self, WMEPRPL_PlayReadyContentHeader** value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest.put_ContentHeader() */
 HRESULT wmeprpl_play_ready_license_acquisition_service_request_put__content_header(WMEPRPL_PlayReadyLicenseAcquisitionServiceRequest *self, WMEPRPL_PlayReadyContentHeader* value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest.get_DomainServiceId() */
 HRESULT wmeprpl_play_ready_license_acquisition_service_request_get__domain_service_id(WMEPRPL_PlayReadyLicenseAcquisitionServiceRequest *self, GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest.put_DomainServiceId() */
 HRESULT wmeprpl_play_ready_license_acquisition_service_request_put__domain_service_id(WMEPRPL_PlayReadyLicenseAcquisitionServiceRequest *self, GUID value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest.get_Uri() */
 HRESULT wmeprpl_play_ready_license_acquisition_service_request_get__uri(WMEPRPL_PlayReadyLicenseAcquisitionServiceRequest *self, WF_Uri** value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest.put_Uri() */
 HRESULT wmeprpl_play_ready_license_acquisition_service_request_put__uri(WMEPRPL_PlayReadyLicenseAcquisitionServiceRequest *self, WF_Uri* value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest.get_ResponseCustomData() */
 HRESULT wmeprpl_play_ready_license_acquisition_service_request_get__response_custom_data(WMEPRPL_PlayReadyLicenseAcquisitionServiceRequest *self, cwinrt_hstring *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest.get_ChallengeCustomData() */
 HRESULT wmeprpl_play_ready_license_acquisition_service_request_get__challenge_custom_data(WMEPRPL_PlayReadyLicenseAcquisitionServiceRequest *self, cwinrt_hstring *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest.put_ChallengeCustomData() */
 HRESULT wmeprpl_play_ready_license_acquisition_service_request_put__challenge_custom_data(WMEPRPL_PlayReadyLicenseAcquisitionServiceRequest *self, cwinrt_hstring value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest.BeginServiceRequest() */
 HRESULT wmeprpl_play_ready_license_acquisition_service_request_begin_service_request(WMEPRPL_PlayReadyLicenseAcquisitionServiceRequest *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest.NextServiceRequest() */
 HRESULT wmeprpl_play_ready_license_acquisition_service_request_next_service_request(WMEPRPL_PlayReadyLicenseAcquisitionServiceRequest *self, WMEPRPL_IPlayReadyServiceRequest** out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest.GenerateManualEnablingChallenge() */
 HRESULT wmeprpl_play_ready_license_acquisition_service_request_generate_manual_enabling_challenge(WMEPRPL_PlayReadyLicenseAcquisitionServiceRequest *self, WMEPRPL_PlayReadySoapMessage** out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest.ProcessManualEnablingResponse(responseBytes) */
 HRESULT wmeprpl_play_ready_license_acquisition_service_request_process_manual_enabling_response(WMEPRPL_PlayReadyLicenseAcquisitionServiceRequest *self, uint8_t *responseBytes, uint32_t responseBytes_len, HRESULT *out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest.get_ProtectionSystem() */
 HRESULT wmeprpl_play_ready_license_acquisition_service_request_get__protection_system(WMEPRPL_PlayReadyLicenseAcquisitionServiceRequest *self, GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest.get_Type() */
 HRESULT wmeprpl_play_ready_license_acquisition_service_request_get__type(WMEPRPL_PlayReadyLicenseAcquisitionServiceRequest *self, GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest.get_SessionId() */
 HRESULT wmeprpl_play_ready_license_acquisition_service_request_get__session_id(WMEPRPL_PlayReadyLicenseAcquisitionServiceRequest *self, GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest.CreateLicenseIterable(contentHeader, fullyEvaluated) */
 HRESULT wmeprpl_play_ready_license_acquisition_service_request_create_license_iterable(WMEPRPL_PlayReadyLicenseAcquisitionServiceRequest *self, WMEPRPL_PlayReadyContentHeader* contentHeader, BOOL fullyEvaluated, WMEPRPL_PlayReadyLicenseIterable** out);
 
-/* activate Windows.Media.Protection.PlayReady.PlayReadyLicenseIterable */
 HRESULT wmeprpl_play_ready_license_iterable_new(WMEPRPL_PlayReadyLicenseIterable **out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseIterable */
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseIterable.First() */
 HRESULT wmeprpl_play_ready_license_iterable_first(WMEPRPL_PlayReadyLicenseIterable *self, WFOCO_IIterator_WMEPRPL_IPlayReadyLicense** out);
 
-/* activate Windows.Media.Protection.PlayReady.PlayReadyLicenseIterator */
 HRESULT wmeprpl_play_ready_license_iterator_new(WMEPRPL_PlayReadyLicenseIterator **out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseIterator */
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseIterator.get_Current() */
 HRESULT wmeprpl_play_ready_license_iterator_get__current(WMEPRPL_PlayReadyLicenseIterator *self, WMEPRPL_IPlayReadyLicense** value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseIterator.get_HasCurrent() */
 HRESULT wmeprpl_play_ready_license_iterator_get__has_current(WMEPRPL_PlayReadyLicenseIterator *self, BOOL *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseIterator.MoveNext() */
 HRESULT wmeprpl_play_ready_license_iterator_move_next(WMEPRPL_PlayReadyLicenseIterator *self, BOOL *out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseIterator.GetMany(items) */
 HRESULT wmeprpl_play_ready_license_iterator_get_many(WMEPRPL_PlayReadyLicenseIterator *self, WMEPRPL_IPlayReadyLicense *items, uint32_t items_len, uint32_t *out);
 
-/* activate Windows.Media.Protection.PlayReady.PlayReadyLicenseManagement */
 HRESULT wmeprpl_play_ready_license_management_new(WMEPRPL_PlayReadyLicenseManagement **out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseManagement */
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseManagement.DeleteLicenses(contentHeader) */
 HRESULT wmeprpl_play_ready_license_management_delete_licenses(WMEPRPL_PlayReadyContentHeader* contentHeader, WF_IAsyncAction** out);
 
-/* activate Windows.Media.Protection.PlayReady.PlayReadyLicenseSession */
 HRESULT wmeprpl_play_ready_license_session_new(WMEPRPL_PlayReadyLicenseSession **out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseSession */
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseSession.CreateLAServiceRequest() */
 HRESULT wmeprpl_play_ready_license_session_create_l_a_service_request(WMEPRPL_PlayReadyLicenseSession *self, WMEPRPL_IPlayReadyLicenseAcquisitionServiceRequest** out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseSession.ConfigureMediaProtectionManager(mpm) */
 HRESULT wmeprpl_play_ready_license_session_configure_media_protection_manager(WMEPRPL_PlayReadyLicenseSession *self, WMEPR_MediaProtectionManager* mpm);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyLicenseSession.CreateLicenseIterable(contentHeader, fullyEvaluated) */
 HRESULT wmeprpl_play_ready_license_session_create_license_iterable(WMEPRPL_PlayReadyLicenseSession *self, WMEPRPL_PlayReadyContentHeader* contentHeader, BOOL fullyEvaluated, WMEPRPL_PlayReadyLicenseIterable** out);
 
-/* activate Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest */
 HRESULT wmeprpl_play_ready_metering_report_service_request_new(WMEPRPL_PlayReadyMeteringReportServiceRequest **out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest */
-/* Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest.get_MeteringCertificate() */
 HRESULT wmeprpl_play_ready_metering_report_service_request_get__metering_certificate(WMEPRPL_PlayReadyMeteringReportServiceRequest *self, uint8_t **value, uint32_t *value_len);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest.put_MeteringCertificate(meteringCertBytes) */
 HRESULT wmeprpl_play_ready_metering_report_service_request_put__metering_certificate(WMEPRPL_PlayReadyMeteringReportServiceRequest *self, uint8_t *meteringCertBytes, uint32_t meteringCertBytes_len);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest.get_Uri() */
 HRESULT wmeprpl_play_ready_metering_report_service_request_get__uri(WMEPRPL_PlayReadyMeteringReportServiceRequest *self, WF_Uri** value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest.put_Uri() */
 HRESULT wmeprpl_play_ready_metering_report_service_request_put__uri(WMEPRPL_PlayReadyMeteringReportServiceRequest *self, WF_Uri* value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest.get_ResponseCustomData() */
 HRESULT wmeprpl_play_ready_metering_report_service_request_get__response_custom_data(WMEPRPL_PlayReadyMeteringReportServiceRequest *self, cwinrt_hstring *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest.get_ChallengeCustomData() */
 HRESULT wmeprpl_play_ready_metering_report_service_request_get__challenge_custom_data(WMEPRPL_PlayReadyMeteringReportServiceRequest *self, cwinrt_hstring *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest.put_ChallengeCustomData() */
 HRESULT wmeprpl_play_ready_metering_report_service_request_put__challenge_custom_data(WMEPRPL_PlayReadyMeteringReportServiceRequest *self, cwinrt_hstring value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest.BeginServiceRequest() */
 HRESULT wmeprpl_play_ready_metering_report_service_request_begin_service_request(WMEPRPL_PlayReadyMeteringReportServiceRequest *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest.NextServiceRequest() */
 HRESULT wmeprpl_play_ready_metering_report_service_request_next_service_request(WMEPRPL_PlayReadyMeteringReportServiceRequest *self, WMEPRPL_IPlayReadyServiceRequest** out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest.GenerateManualEnablingChallenge() */
 HRESULT wmeprpl_play_ready_metering_report_service_request_generate_manual_enabling_challenge(WMEPRPL_PlayReadyMeteringReportServiceRequest *self, WMEPRPL_PlayReadySoapMessage** out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest.ProcessManualEnablingResponse(responseBytes) */
 HRESULT wmeprpl_play_ready_metering_report_service_request_process_manual_enabling_response(WMEPRPL_PlayReadyMeteringReportServiceRequest *self, uint8_t *responseBytes, uint32_t responseBytes_len, HRESULT *out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest.get_ProtectionSystem() */
 HRESULT wmeprpl_play_ready_metering_report_service_request_get__protection_system(WMEPRPL_PlayReadyMeteringReportServiceRequest *self, GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest.get_Type() */
 HRESULT wmeprpl_play_ready_metering_report_service_request_get__type(WMEPRPL_PlayReadyMeteringReportServiceRequest *self, GUID *value);
 
-/* activate Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest */
 HRESULT wmeprpl_play_ready_revocation_service_request_new(WMEPRPL_PlayReadyRevocationServiceRequest **out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest */
-/* Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest.get_Uri() */
 HRESULT wmeprpl_play_ready_revocation_service_request_get__uri(WMEPRPL_PlayReadyRevocationServiceRequest *self, WF_Uri** value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest.put_Uri() */
 HRESULT wmeprpl_play_ready_revocation_service_request_put__uri(WMEPRPL_PlayReadyRevocationServiceRequest *self, WF_Uri* value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest.get_ResponseCustomData() */
 HRESULT wmeprpl_play_ready_revocation_service_request_get__response_custom_data(WMEPRPL_PlayReadyRevocationServiceRequest *self, cwinrt_hstring *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest.get_ChallengeCustomData() */
 HRESULT wmeprpl_play_ready_revocation_service_request_get__challenge_custom_data(WMEPRPL_PlayReadyRevocationServiceRequest *self, cwinrt_hstring *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest.put_ChallengeCustomData() */
 HRESULT wmeprpl_play_ready_revocation_service_request_put__challenge_custom_data(WMEPRPL_PlayReadyRevocationServiceRequest *self, cwinrt_hstring value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest.BeginServiceRequest() */
 HRESULT wmeprpl_play_ready_revocation_service_request_begin_service_request(WMEPRPL_PlayReadyRevocationServiceRequest *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest.NextServiceRequest() */
 HRESULT wmeprpl_play_ready_revocation_service_request_next_service_request(WMEPRPL_PlayReadyRevocationServiceRequest *self, WMEPRPL_IPlayReadyServiceRequest** out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest.GenerateManualEnablingChallenge() */
 HRESULT wmeprpl_play_ready_revocation_service_request_generate_manual_enabling_challenge(WMEPRPL_PlayReadyRevocationServiceRequest *self, WMEPRPL_PlayReadySoapMessage** out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest.ProcessManualEnablingResponse(responseBytes) */
 HRESULT wmeprpl_play_ready_revocation_service_request_process_manual_enabling_response(WMEPRPL_PlayReadyRevocationServiceRequest *self, uint8_t *responseBytes, uint32_t responseBytes_len, HRESULT *out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest.get_ProtectionSystem() */
 HRESULT wmeprpl_play_ready_revocation_service_request_get__protection_system(WMEPRPL_PlayReadyRevocationServiceRequest *self, GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest.get_Type() */
 HRESULT wmeprpl_play_ready_revocation_service_request_get__type(WMEPRPL_PlayReadyRevocationServiceRequest *self, GUID *value);
 
-/* activate Windows.Media.Protection.PlayReady.PlayReadySecureStopIterable */
 HRESULT wmeprpl_play_ready_secure_stop_iterable_new(WMEPRPL_PlayReadySecureStopIterable **out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadySecureStopIterable */
-/* Windows.Media.Protection.PlayReady.PlayReadySecureStopIterable.First() */
 HRESULT wmeprpl_play_ready_secure_stop_iterable_first(WMEPRPL_PlayReadySecureStopIterable *self, WFOCO_IIterator_WMEPRPL_IPlayReadySecureStopServiceRequest** out);
 
-/* activate Windows.Media.Protection.PlayReady.PlayReadySecureStopIterator */
 HRESULT wmeprpl_play_ready_secure_stop_iterator_new(WMEPRPL_PlayReadySecureStopIterator **out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadySecureStopIterator */
-/* Windows.Media.Protection.PlayReady.PlayReadySecureStopIterator.get_Current() */
 HRESULT wmeprpl_play_ready_secure_stop_iterator_get__current(WMEPRPL_PlayReadySecureStopIterator *self, WMEPRPL_IPlayReadySecureStopServiceRequest** value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadySecureStopIterator.get_HasCurrent() */
 HRESULT wmeprpl_play_ready_secure_stop_iterator_get__has_current(WMEPRPL_PlayReadySecureStopIterator *self, BOOL *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadySecureStopIterator.MoveNext() */
 HRESULT wmeprpl_play_ready_secure_stop_iterator_move_next(WMEPRPL_PlayReadySecureStopIterator *self, BOOL *out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadySecureStopIterator.GetMany(items) */
 HRESULT wmeprpl_play_ready_secure_stop_iterator_get_many(WMEPRPL_PlayReadySecureStopIterator *self, WMEPRPL_IPlayReadySecureStopServiceRequest *items, uint32_t items_len, uint32_t *out);
 
-/* activate Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest */
 HRESULT wmeprpl_play_ready_secure_stop_service_request_new(WMEPRPL_PlayReadySecureStopServiceRequest **out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest */
-/* Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest.get_SessionID() */
 HRESULT wmeprpl_play_ready_secure_stop_service_request_get__session_i_d(WMEPRPL_PlayReadySecureStopServiceRequest *self, GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest.get_StartTime() */
 HRESULT wmeprpl_play_ready_secure_stop_service_request_get__start_time(WMEPRPL_PlayReadySecureStopServiceRequest *self, WF_DateTime *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest.get_UpdateTime() */
 HRESULT wmeprpl_play_ready_secure_stop_service_request_get__update_time(WMEPRPL_PlayReadySecureStopServiceRequest *self, WF_DateTime *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest.get_Stopped() */
 HRESULT wmeprpl_play_ready_secure_stop_service_request_get__stopped(WMEPRPL_PlayReadySecureStopServiceRequest *self, BOOL *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest.get_PublisherCertificate() */
 HRESULT wmeprpl_play_ready_secure_stop_service_request_get__publisher_certificate(WMEPRPL_PlayReadySecureStopServiceRequest *self, uint8_t **value, uint32_t *value_len);
 
-/* Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest.get_Uri() */
 HRESULT wmeprpl_play_ready_secure_stop_service_request_get__uri(WMEPRPL_PlayReadySecureStopServiceRequest *self, WF_Uri** value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest.put_Uri() */
 HRESULT wmeprpl_play_ready_secure_stop_service_request_put__uri(WMEPRPL_PlayReadySecureStopServiceRequest *self, WF_Uri* value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest.get_ResponseCustomData() */
 HRESULT wmeprpl_play_ready_secure_stop_service_request_get__response_custom_data(WMEPRPL_PlayReadySecureStopServiceRequest *self, cwinrt_hstring *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest.get_ChallengeCustomData() */
 HRESULT wmeprpl_play_ready_secure_stop_service_request_get__challenge_custom_data(WMEPRPL_PlayReadySecureStopServiceRequest *self, cwinrt_hstring *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest.put_ChallengeCustomData() */
 HRESULT wmeprpl_play_ready_secure_stop_service_request_put__challenge_custom_data(WMEPRPL_PlayReadySecureStopServiceRequest *self, cwinrt_hstring value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest.BeginServiceRequest() */
 HRESULT wmeprpl_play_ready_secure_stop_service_request_begin_service_request(WMEPRPL_PlayReadySecureStopServiceRequest *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest.NextServiceRequest() */
 HRESULT wmeprpl_play_ready_secure_stop_service_request_next_service_request(WMEPRPL_PlayReadySecureStopServiceRequest *self, WMEPRPL_IPlayReadyServiceRequest** out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest.GenerateManualEnablingChallenge() */
 HRESULT wmeprpl_play_ready_secure_stop_service_request_generate_manual_enabling_challenge(WMEPRPL_PlayReadySecureStopServiceRequest *self, WMEPRPL_PlayReadySoapMessage** out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest.ProcessManualEnablingResponse(responseBytes) */
 HRESULT wmeprpl_play_ready_secure_stop_service_request_process_manual_enabling_response(WMEPRPL_PlayReadySecureStopServiceRequest *self, uint8_t *responseBytes, uint32_t responseBytes_len, HRESULT *out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest.get_ProtectionSystem() */
 HRESULT wmeprpl_play_ready_secure_stop_service_request_get__protection_system(WMEPRPL_PlayReadySecureStopServiceRequest *self, GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest.get_Type() */
 HRESULT wmeprpl_play_ready_secure_stop_service_request_get__type(WMEPRPL_PlayReadySecureStopServiceRequest *self, GUID *value);
 
-/* activate Windows.Media.Protection.PlayReady.PlayReadySoapMessage */
 HRESULT wmeprpl_play_ready_soap_message_new(WMEPRPL_PlayReadySoapMessage **out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadySoapMessage */
-/* Windows.Media.Protection.PlayReady.PlayReadySoapMessage.GetMessageBody() */
 HRESULT wmeprpl_play_ready_soap_message_get_message_body(WMEPRPL_PlayReadySoapMessage *self, uint8_t **out, uint32_t *out_len);
 
-/* Windows.Media.Protection.PlayReady.PlayReadySoapMessage.get_MessageHeaders() */
 HRESULT wmeprpl_play_ready_soap_message_get__message_headers(WMEPRPL_PlayReadySoapMessage *self, WFOCO_IPropertySet** value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadySoapMessage.get_Uri() */
 HRESULT wmeprpl_play_ready_soap_message_get__uri(WMEPRPL_PlayReadySoapMessage *self, WF_Uri** value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyStatics */
-/* Windows.Media.Protection.PlayReady.PlayReadyStatics.get_HardwareDRMDisabledAtTime() */
 HRESULT wmeprpl_play_ready_statics_get__hardware_d_r_m_disabled_at_time(WF_DateTime** value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyStatics.get_HardwareDRMDisabledUntilTime() */
 HRESULT wmeprpl_play_ready_statics_get__hardware_d_r_m_disabled_until_time(WF_DateTime** value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyStatics.ResetHardwareDRMDisabled() */
 HRESULT wmeprpl_play_ready_statics_reset_hardware_d_r_m_disabled(void);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyStatics.get_InputTrustAuthorityToCreate() */
 HRESULT wmeprpl_play_ready_statics_get__input_trust_authority_to_create(cwinrt_hstring *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyStatics.get_ProtectionSystemId() */
 HRESULT wmeprpl_play_ready_statics_get__protection_system_id(GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyStatics.get_SecureStopServiceRequestType() */
 HRESULT wmeprpl_play_ready_statics_get__secure_stop_service_request_type(GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyStatics.CheckSupportedHardware(hwdrmFeature) */
 HRESULT wmeprpl_play_ready_statics_check_supported_hardware(WMEPRPL_PlayReadyHardwareDRMFeatures hwdrmFeature, BOOL *out);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyStatics.get_PlayReadyCertificateSecurityLevel() */
 HRESULT wmeprpl_play_ready_statics_get__play_ready_certificate_security_level(uint32_t *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyStatics.get_DomainJoinServiceRequestType() */
 HRESULT wmeprpl_play_ready_statics_get__domain_join_service_request_type(GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyStatics.get_DomainLeaveServiceRequestType() */
 HRESULT wmeprpl_play_ready_statics_get__domain_leave_service_request_type(GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyStatics.get_IndividualizationServiceRequestType() */
 HRESULT wmeprpl_play_ready_statics_get__individualization_service_request_type(GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyStatics.get_LicenseAcquirerServiceRequestType() */
 HRESULT wmeprpl_play_ready_statics_get__license_acquirer_service_request_type(GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyStatics.get_MeteringReportServiceRequestType() */
 HRESULT wmeprpl_play_ready_statics_get__metering_report_service_request_type(GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyStatics.get_RevocationServiceRequestType() */
 HRESULT wmeprpl_play_ready_statics_get__revocation_service_request_type(GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyStatics.get_MediaProtectionSystemId() */
 HRESULT wmeprpl_play_ready_statics_get__media_protection_system_id(GUID *value);
 
-/* Windows.Media.Protection.PlayReady.PlayReadyStatics.get_PlayReadySecurityVersion() */
 HRESULT wmeprpl_play_ready_statics_get__play_ready_security_version(uint32_t *value);
 
-/* Windows.Media.Protection.PlayReady.INDTransmitterProperties */
-/* Windows.Media.Protection.PlayReady.INDTransmitterProperties.get_CertificateType() */
 HRESULT wmeprpl_n_d_transmitter_properties_get__certificate_type(WMEPRPL_INDTransmitterProperties *self, WMEPRPL_NDCertificateType *value);
 
-/* Windows.Media.Protection.PlayReady.INDTransmitterProperties.get_PlatformIdentifier() */
 HRESULT wmeprpl_n_d_transmitter_properties_get__platform_identifier(WMEPRPL_INDTransmitterProperties *self, WMEPRPL_NDCertificatePlatformID *value);
 
-/* Windows.Media.Protection.PlayReady.INDTransmitterProperties.get_SupportedFeatures() */
 HRESULT wmeprpl_n_d_transmitter_properties_get__supported_features(WMEPRPL_INDTransmitterProperties *self, WMEPRPL_NDCertificateFeature **value, uint32_t *value_len);
 
-/* Windows.Media.Protection.PlayReady.INDTransmitterProperties.get_SecurityLevel() */
 HRESULT wmeprpl_n_d_transmitter_properties_get__security_level(WMEPRPL_INDTransmitterProperties *self, uint32_t *value);
 
-/* Windows.Media.Protection.PlayReady.INDTransmitterProperties.get_SecurityVersion() */
 HRESULT wmeprpl_n_d_transmitter_properties_get__security_version(WMEPRPL_INDTransmitterProperties *self, uint32_t *value);
 
-/* Windows.Media.Protection.PlayReady.INDTransmitterProperties.get_ExpirationDate() */
 HRESULT wmeprpl_n_d_transmitter_properties_get__expiration_date(WMEPRPL_INDTransmitterProperties *self, WF_DateTime *value);
 
-/* Windows.Media.Protection.PlayReady.INDTransmitterProperties.get_ClientID() */
 HRESULT wmeprpl_n_d_transmitter_properties_get__client_i_d(WMEPRPL_INDTransmitterProperties *self, uint8_t **value, uint32_t *value_len);
 
-/* Windows.Media.Protection.PlayReady.INDTransmitterProperties.get_ModelDigest() */
 HRESULT wmeprpl_n_d_transmitter_properties_get__model_digest(WMEPRPL_INDTransmitterProperties *self, uint8_t **value, uint32_t *value_len);
 
-/* Windows.Media.Protection.PlayReady.INDTransmitterProperties.get_ModelManufacturerName() */
 HRESULT wmeprpl_n_d_transmitter_properties_get__model_manufacturer_name(WMEPRPL_INDTransmitterProperties *self, cwinrt_hstring *value);
 
-/* Windows.Media.Protection.PlayReady.INDTransmitterProperties.get_ModelName() */
 HRESULT wmeprpl_n_d_transmitter_properties_get__model_name(WMEPRPL_INDTransmitterProperties *self, cwinrt_hstring *value);
 
-/* Windows.Media.Protection.PlayReady.INDTransmitterProperties.get_ModelNumber() */
 HRESULT wmeprpl_n_d_transmitter_properties_get__model_number(WMEPRPL_INDTransmitterProperties *self, cwinrt_hstring *value);
 
-/* Windows.Media.Protection.PlayReady.INDTCPMessengerFactory */
-/* Windows.Media.Protection.PlayReady.INDTCPMessengerFactory.CreateInstance(remoteHostName, remoteHostPort) */
 HRESULT wmeprpl_n_d_t_c_p_messenger_factory_create_instance(WMEPRPL_INDTCPMessengerFactory *self, cwinrt_hstring remoteHostName, uint32_t remoteHostPort, WMEPRPL_NDTCPMessenger** out);
 
-/* Windows.Media.Protection.PlayReady.INDStreamParser */
-/* Windows.Media.Protection.PlayReady.INDStreamParser.ParseData(dataBytes) */
 HRESULT wmeprpl_n_d_stream_parser_parse_data(WMEPRPL_INDStreamParser *self, uint8_t *dataBytes, uint32_t dataBytes_len);
 
-/* Windows.Media.Protection.PlayReady.INDStreamParser.GetStreamInformation(descriptor, streamType) */
 HRESULT wmeprpl_n_d_stream_parser_get_stream_information(WMEPRPL_INDStreamParser *self, WMECO_IMediaStreamDescriptor* descriptor, WMEPRPL_NDMediaStreamType streamType, uint32_t *out);
 
-/* Windows.Media.Protection.PlayReady.INDStreamParser.BeginOfStream() */
 HRESULT wmeprpl_n_d_stream_parser_begin_of_stream(WMEPRPL_INDStreamParser *self);
 
-/* Windows.Media.Protection.PlayReady.INDStreamParser.EndOfStream() */
 HRESULT wmeprpl_n_d_stream_parser_end_of_stream(WMEPRPL_INDStreamParser *self);
 
-/* Windows.Media.Protection.PlayReady.INDStreamParser.get_Notifier() */
 HRESULT wmeprpl_n_d_stream_parser_get__notifier(WMEPRPL_INDStreamParser *self, WMEPRPL_NDStreamParserNotifier** value);
 
-/* Windows.Media.Protection.PlayReady.INDStartResult */
-/* Windows.Media.Protection.PlayReady.INDStartResult.get_MediaStreamSource() */
 HRESULT wmeprpl_n_d_start_result_get__media_stream_source(WMEPRPL_INDStartResult *self, WMECO_MediaStreamSource** value);
 
-/* Windows.Media.Protection.PlayReady.INDSendResult */
-/* Windows.Media.Protection.PlayReady.INDSendResult.get_Response() */
 HRESULT wmeprpl_n_d_send_result_get__response(WMEPRPL_INDSendResult *self, uint8_t **value, uint32_t *value_len);
 
-/* Windows.Media.Protection.PlayReady.INDRegistrationCompletedEventArgs */
-/* Windows.Media.Protection.PlayReady.INDRegistrationCompletedEventArgs.get_ResponseCustomData() */
 HRESULT wmeprpl_n_d_registration_completed_event_args_get__response_custom_data(WMEPRPL_INDRegistrationCompletedEventArgs *self, WMEPRPL_INDCustomData** value);
 
-/* Windows.Media.Protection.PlayReady.INDRegistrationCompletedEventArgs.get_TransmitterProperties() */
 HRESULT wmeprpl_n_d_registration_completed_event_args_get__transmitter_properties(WMEPRPL_INDRegistrationCompletedEventArgs *self, WMEPRPL_INDTransmitterProperties** value);
 
-/* Windows.Media.Protection.PlayReady.INDRegistrationCompletedEventArgs.get_TransmitterCertificateAccepted() */
 HRESULT wmeprpl_n_d_registration_completed_event_args_get__transmitter_certificate_accepted(WMEPRPL_INDRegistrationCompletedEventArgs *self, BOOL *value);
 
-/* Windows.Media.Protection.PlayReady.INDRegistrationCompletedEventArgs.put_TransmitterCertificateAccepted(accept) */
 HRESULT wmeprpl_n_d_registration_completed_event_args_put__transmitter_certificate_accepted(WMEPRPL_INDRegistrationCompletedEventArgs *self, BOOL accept);
 
-/* Windows.Media.Protection.PlayReady.INDProximityDetectionCompletedEventArgs */
-/* Windows.Media.Protection.PlayReady.INDProximityDetectionCompletedEventArgs.get_ProximityDetectionRetryCount() */
 HRESULT wmeprpl_n_d_proximity_detection_completed_event_args_get__proximity_detection_retry_count(WMEPRPL_INDProximityDetectionCompletedEventArgs *self, uint32_t *value);
 
-/* Windows.Media.Protection.PlayReady.INDLicenseFetchResult */
-/* Windows.Media.Protection.PlayReady.INDLicenseFetchResult.get_ResponseCustomData() */
 HRESULT wmeprpl_n_d_license_fetch_result_get__response_custom_data(WMEPRPL_INDLicenseFetchResult *self, WMEPRPL_INDCustomData** value);
 
-/* Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptorFactory */
-/* Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptorFactory.CreateInstance(contentIDType, contentIDBytes, licenseFetchChallengeCustomData) */
 HRESULT wmeprpl_n_d_license_fetch_descriptor_factory_create_instance(WMEPRPL_INDLicenseFetchDescriptorFactory *self, WMEPRPL_NDContentIDType contentIDType, uint8_t *contentIDBytes, uint32_t contentIDBytes_len, WMEPRPL_INDCustomData* licenseFetchChallengeCustomData, WMEPRPL_NDLicenseFetchDescriptor** out);
 
-/* Windows.Media.Protection.PlayReady.INDLicenseFetchCompletedEventArgs */
-/* Windows.Media.Protection.PlayReady.INDLicenseFetchCompletedEventArgs.get_ResponseCustomData() */
 HRESULT wmeprpl_n_d_license_fetch_completed_event_args_get__response_custom_data(WMEPRPL_INDLicenseFetchCompletedEventArgs *self, WMEPRPL_INDCustomData** value);
 
-/* Windows.Media.Protection.PlayReady.INDDownloadEngine */
-/* Windows.Media.Protection.PlayReady.INDDownloadEngine.Open(uri, sessionIDBytes) */
 HRESULT wmeprpl_n_d_download_engine_open(WMEPRPL_INDDownloadEngine *self, WF_Uri* uri, uint8_t *sessionIDBytes, uint32_t sessionIDBytes_len);
 
-/* Windows.Media.Protection.PlayReady.INDDownloadEngine.Pause() */
 HRESULT wmeprpl_n_d_download_engine_pause(WMEPRPL_INDDownloadEngine *self);
 
-/* Windows.Media.Protection.PlayReady.INDDownloadEngine.Resume() */
 HRESULT wmeprpl_n_d_download_engine_resume(WMEPRPL_INDDownloadEngine *self);
 
-/* Windows.Media.Protection.PlayReady.INDDownloadEngine.Close() */
 HRESULT wmeprpl_n_d_download_engine_close(WMEPRPL_INDDownloadEngine *self);
 
-/* Windows.Media.Protection.PlayReady.INDDownloadEngine.Seek(startPosition) */
 HRESULT wmeprpl_n_d_download_engine_seek(WMEPRPL_INDDownloadEngine *self, WF_TimeSpan startPosition);
 
-/* Windows.Media.Protection.PlayReady.INDDownloadEngine.get_CanSeek() */
 HRESULT wmeprpl_n_d_download_engine_get__can_seek(WMEPRPL_INDDownloadEngine *self, BOOL *value);
 
-/* Windows.Media.Protection.PlayReady.INDDownloadEngine.get_BufferFullMinThresholdInSamples() */
 HRESULT wmeprpl_n_d_download_engine_get__buffer_full_min_threshold_in_samples(WMEPRPL_INDDownloadEngine *self, uint32_t *value);
 
-/* Windows.Media.Protection.PlayReady.INDDownloadEngine.get_BufferFullMaxThresholdInSamples() */
 HRESULT wmeprpl_n_d_download_engine_get__buffer_full_max_threshold_in_samples(WMEPRPL_INDDownloadEngine *self, uint32_t *value);
 
-/* Windows.Media.Protection.PlayReady.INDDownloadEngine.get_Notifier() */
 HRESULT wmeprpl_n_d_download_engine_get__notifier(WMEPRPL_INDDownloadEngine *self, WMEPRPL_NDDownloadEngineNotifier** value);
 
-/* Windows.Media.Protection.PlayReady.INDCustomDataFactory */
-/* Windows.Media.Protection.PlayReady.INDCustomDataFactory.CreateInstance(customDataTypeIDBytes, customDataBytes) */
 HRESULT wmeprpl_n_d_custom_data_factory_create_instance(WMEPRPL_INDCustomDataFactory *self, uint8_t *customDataTypeIDBytes, uint32_t customDataTypeIDBytes_len, uint8_t *customDataBytes, uint32_t customDataBytes_len, WMEPRPL_NDCustomData** out);
 
-/* Windows.Media.Protection.PlayReady.INDClosedCaptionDataReceivedEventArgs */
-/* Windows.Media.Protection.PlayReady.INDClosedCaptionDataReceivedEventArgs.get_ClosedCaptionDataFormat() */
 HRESULT wmeprpl_n_d_closed_caption_data_received_event_args_get__closed_caption_data_format(WMEPRPL_INDClosedCaptionDataReceivedEventArgs *self, WMEPRPL_NDClosedCaptionFormat *value);
 
-/* Windows.Media.Protection.PlayReady.INDClosedCaptionDataReceivedEventArgs.get_PresentationTimestamp() */
 HRESULT wmeprpl_n_d_closed_caption_data_received_event_args_get__presentation_timestamp(WMEPRPL_INDClosedCaptionDataReceivedEventArgs *self, int64_t *value);
 
-/* Windows.Media.Protection.PlayReady.INDClosedCaptionDataReceivedEventArgs.get_ClosedCaptionData() */
 HRESULT wmeprpl_n_d_closed_caption_data_received_event_args_get__closed_caption_data(WMEPRPL_INDClosedCaptionDataReceivedEventArgs *self, uint8_t **value, uint32_t *value_len);
 
-/* Windows.Media.Protection.PlayReady.INDClientFactory */
-/* Windows.Media.Protection.PlayReady.INDClientFactory.CreateInstance(downloadEngine, streamParser, pMessenger) */
 HRESULT wmeprpl_n_d_client_factory_create_instance(WMEPRPL_INDClientFactory *self, WMEPRPL_INDDownloadEngine* downloadEngine, WMEPRPL_INDStreamParser* streamParser, WMEPRPL_INDMessenger* pMessenger, WMEPRPL_NDClient** out);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyStatics4 */
-/* Windows.Media.Protection.PlayReady.IPlayReadyStatics4.get_InputTrustAuthorityToCreate() */
 HRESULT wmeprpl_play_ready_statics_4_get__input_trust_authority_to_create(WMEPRPL_IPlayReadyStatics_4 *self, cwinrt_hstring *value);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyStatics4.get_ProtectionSystemId() */
 HRESULT wmeprpl_play_ready_statics_4_get__protection_system_id(WMEPRPL_IPlayReadyStatics_4 *self, GUID *value);
 
-/* Windows.Media.Protection.PlayReady.INDClient */
-/* Windows.Media.Protection.PlayReady.INDCustomData */
-/* Windows.Media.Protection.PlayReady.INDDownloadEngineNotifier */
-/* Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptor */
-/* Windows.Media.Protection.PlayReady.INDStorageFileHelper */
-/* Windows.Media.Protection.PlayReady.INDStreamParserNotifier */
-/* Windows.Media.Protection.PlayReady.INDMessenger */
-/* Windows.Media.Protection.PlayReady.INDMessenger.SendRegistrationRequestAsync(sessionIDBytes, challengeDataBytes) */
 HRESULT wmeprpl_n_d_messenger_send_registration_request_async(WMEPRPL_INDMessenger *self, uint8_t *sessionIDBytes, uint32_t sessionIDBytes_len, uint8_t *challengeDataBytes, uint32_t challengeDataBytes_len, WF_IAsyncOperation_WMEPRPL_INDSendResult** out);
 
-/* Windows.Media.Protection.PlayReady.INDMessenger.SendProximityDetectionStartAsync(pdType, transmitterChannelBytes, sessionIDBytes, challengeDataBytes) */
 HRESULT wmeprpl_n_d_messenger_send_proximity_detection_start_async(WMEPRPL_INDMessenger *self, WMEPRPL_NDProximityDetectionType pdType, uint8_t *transmitterChannelBytes, uint32_t transmitterChannelBytes_len, uint8_t *sessionIDBytes, uint32_t sessionIDBytes_len, uint8_t *challengeDataBytes, uint32_t challengeDataBytes_len, WF_IAsyncOperation_WMEPRPL_INDSendResult** out);
 
-/* Windows.Media.Protection.PlayReady.INDMessenger.SendProximityDetectionResponseAsync(pdType, transmitterChannelBytes, sessionIDBytes, responseDataBytes) */
 HRESULT wmeprpl_n_d_messenger_send_proximity_detection_response_async(WMEPRPL_INDMessenger *self, WMEPRPL_NDProximityDetectionType pdType, uint8_t *transmitterChannelBytes, uint32_t transmitterChannelBytes_len, uint8_t *sessionIDBytes, uint32_t sessionIDBytes_len, uint8_t *responseDataBytes, uint32_t responseDataBytes_len, WF_IAsyncOperation_WMEPRPL_INDSendResult** out);
 
-/* Windows.Media.Protection.PlayReady.INDMessenger.SendLicenseFetchRequestAsync(sessionIDBytes, challengeDataBytes) */
 HRESULT wmeprpl_n_d_messenger_send_license_fetch_request_async(WMEPRPL_INDMessenger *self, uint8_t *sessionIDBytes, uint32_t sessionIDBytes_len, uint8_t *challengeDataBytes, uint32_t challengeDataBytes_len, WF_IAsyncOperation_WMEPRPL_INDSendResult** out);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyContentHeader2 */
-/* Windows.Media.Protection.PlayReady.IPlayReadyContentHeader2.get_KeyIds() */
 HRESULT wmeprpl_play_ready_content_header_2_get__key_ids(WMEPRPL_IPlayReadyContentHeader_2 *self, GUID **value, uint32_t *value_len);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyContentHeader2.get_KeyIdStrings() */
 HRESULT wmeprpl_play_ready_content_header_2_get__key_id_strings(WMEPRPL_IPlayReadyContentHeader_2 *self, cwinrt_hstring **value, uint32_t *value_len);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyDomain */
-/* Windows.Media.Protection.PlayReady.IPlayReadyDomainJoinServiceRequest */
-/* Windows.Media.Protection.PlayReady.IPlayReadyDomainLeaveServiceRequest */
-/* Windows.Media.Protection.PlayReady.IPlayReadyITADataGenerator */
-/* Windows.Media.Protection.PlayReady.IPlayReadyLicense2 */
-/* Windows.Media.Protection.PlayReady.IPlayReadyLicense2.get_SecureStopId() */
 HRESULT wmeprpl_play_ready_license_2_get__secure_stop_id(WMEPRPL_IPlayReadyLicense_2 *self, GUID *value);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyLicense2.get_SecurityLevel() */
 HRESULT wmeprpl_play_ready_license_2_get__security_level(WMEPRPL_IPlayReadyLicense_2 *self, uint32_t *value);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyLicense2.get_InMemoryOnly() */
 HRESULT wmeprpl_play_ready_license_2_get__in_memory_only(WMEPRPL_IPlayReadyLicense_2 *self, BOOL *value);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyLicense2.get_ExpiresInRealTime() */
 HRESULT wmeprpl_play_ready_license_2_get__expires_in_real_time(WMEPRPL_IPlayReadyLicense_2 *self, BOOL *value);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest3 */
-/* Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest3.CreateLicenseIterable(contentHeader, fullyEvaluated) */
 HRESULT wmeprpl_play_ready_license_acquisition_service_request_3_create_license_iterable(WMEPRPL_IPlayReadyLicenseAcquisitionServiceRequest_3 *self, WMEPRPL_PlayReadyContentHeader* contentHeader, BOOL fullyEvaluated, WMEPRPL_PlayReadyLicenseIterable** out);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession2 */
-/* Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession2.CreateLicenseIterable(contentHeader, fullyEvaluated) */
 HRESULT wmeprpl_play_ready_license_session_2_create_license_iterable(WMEPRPL_IPlayReadyLicenseSession_2 *self, WMEPRPL_PlayReadyContentHeader* contentHeader, BOOL fullyEvaluated, WMEPRPL_PlayReadyLicenseIterable** out);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyMeteringReportServiceRequest */
-/* Windows.Media.Protection.PlayReady.IPlayReadySecureStopServiceRequest */
-/* Windows.Media.Protection.PlayReady.IPlayReadySoapMessage */
-/* Windows.Media.Protection.PlayReady.IPlayReadyStatics3 */
-/* Windows.Media.Protection.PlayReady.IPlayReadyStatics3.get_SecureStopServiceRequestType() */
 HRESULT wmeprpl_play_ready_statics_3_get__secure_stop_service_request_type(WMEPRPL_IPlayReadyStatics_3 *self, GUID *value);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyStatics3.CheckSupportedHardware(hwdrmFeature) */
 HRESULT wmeprpl_play_ready_statics_3_check_supported_hardware(WMEPRPL_IPlayReadyStatics_3 *self, WMEPRPL_PlayReadyHardwareDRMFeatures hwdrmFeature, BOOL *out);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyContentHeader */
-/* Windows.Media.Protection.PlayReady.IPlayReadyLicense */
-/* Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest2 */
-/* Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest2.get_SessionId() */
 HRESULT wmeprpl_play_ready_license_acquisition_service_request_2_get__session_id(WMEPRPL_IPlayReadyLicenseAcquisitionServiceRequest_2 *self, GUID *value);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession */
-/* Windows.Media.Protection.PlayReady.IPlayReadyStatics2 */
-/* Windows.Media.Protection.PlayReady.IPlayReadyStatics2.get_PlayReadyCertificateSecurityLevel() */
 HRESULT wmeprpl_play_ready_statics_2_get__play_ready_certificate_security_level(WMEPRPL_IPlayReadyStatics_2 *self, uint32_t *value);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest */
-/* Windows.Media.Protection.PlayReady.IPlayReadyStatics */
-/* Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest */
-/* Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest.get_Uri() */
 HRESULT wmeprpl_play_ready_service_request_get__uri(WMEPRPL_IPlayReadyServiceRequest *self, WF_Uri** value);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest.put_Uri() */
 HRESULT wmeprpl_play_ready_service_request_put__uri(WMEPRPL_IPlayReadyServiceRequest *self, WF_Uri* value);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest.get_ResponseCustomData() */
 HRESULT wmeprpl_play_ready_service_request_get__response_custom_data(WMEPRPL_IPlayReadyServiceRequest *self, cwinrt_hstring *value);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest.get_ChallengeCustomData() */
 HRESULT wmeprpl_play_ready_service_request_get__challenge_custom_data(WMEPRPL_IPlayReadyServiceRequest *self, cwinrt_hstring *value);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest.put_ChallengeCustomData() */
 HRESULT wmeprpl_play_ready_service_request_put__challenge_custom_data(WMEPRPL_IPlayReadyServiceRequest *self, cwinrt_hstring value);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest.BeginServiceRequest() */
 HRESULT wmeprpl_play_ready_service_request_begin_service_request(WMEPRPL_IPlayReadyServiceRequest *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest.NextServiceRequest() */
 HRESULT wmeprpl_play_ready_service_request_next_service_request(WMEPRPL_IPlayReadyServiceRequest *self, WMEPRPL_IPlayReadyServiceRequest** out);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest.GenerateManualEnablingChallenge() */
 HRESULT wmeprpl_play_ready_service_request_generate_manual_enabling_challenge(WMEPRPL_IPlayReadyServiceRequest *self, WMEPRPL_PlayReadySoapMessage** out);
 
-/* Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest.ProcessManualEnablingResponse(responseBytes) */
 HRESULT wmeprpl_play_ready_service_request_process_manual_enabling_response(WMEPRPL_IPlayReadyServiceRequest *self, uint8_t *responseBytes, uint32_t responseBytes_len, HRESULT *out);
 
 #endif /* CWINRT_WINDOWS_MEDIA_PROTECTION_PLAYREADY_H */

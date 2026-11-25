@@ -13,10 +13,8 @@ typedef struct cwinrt_typedef_ns_index {
 	int       arena;
 } cwinrt_typedef_ns_index;
 
-/* Parse .winmd (ECMA-335, pure C) into cwinrt_raw_db. filter_ns may be NULL. */
 int cwinrt_parse_winmd(char const *path, char const *filter_ns, cwinrt_raw_db *out);
 
-/* Parse one namespace from an already-open winmd (no disk reload). td_ix may be NULL. */
 int cwinrt_parse_winmd_db(
   winmd_db const *wm, cwinrt_typedef_ns_index const *td_ix, char const *filter_ns, cwinrt_raw_db *out
 );

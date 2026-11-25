@@ -13,18 +13,15 @@
 #include <cwinrt/Windows.Foundation.Numerics.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WPESP_SpatialCoordinateSystem
 #define CWINRT_FWD_WPESP_SpatialCoordinateSystem
 typedef struct WPESP_SpatialCoordinateSystem WPESP_SpatialCoordinateSystem;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPHO_IHolographicKeyboardStatics WAPHO_IHolographicKeyboardStatics;
 typedef struct WAPHO_HolographicKeyboard WAPHO_HolographicKeyboard;
 typedef struct WAPHO_IHolographicKeyboard WAPHO_IHolographicKeyboard;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WPESP_SpatialCoordinateSystem
 #define CWINRT_FWD_WPESP_SpatialCoordinateSystem
 typedef struct WPESP_SpatialCoordinateSystem WPESP_SpatialCoordinateSystem;
@@ -42,7 +39,6 @@ typedef struct WFN_Quaternion WFN_Quaternion;
 typedef struct WFN_Vector_2 WFN_Vector_2;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -55,27 +51,16 @@ static const IID CWINRT_IID_WAPHO_IHolographicKeyboardStatics CWINRT_MAYBE_UNUSE
 static const IID CWINRT_IID_WAPHO_IHolographicKeyboard CWINRT_MAYBE_UNUSED = { 0x07DD0893, 0xAA21, 0x5E6F, { 0xA9, 0x1B, 0x11, 0xB2, 0xB3, 0xFD, 0x7B, 0xE3 } };
 #endif
 
-/* Methods */
-
-/* Windows.ApplicationModel.Holographic.IHolographicKeyboardStatics */
-/* Windows.ApplicationModel.Holographic.IHolographicKeyboardStatics.GetDefault() */
 HRESULT wapho_holographic_keyboard_statics_get_default(WAPHO_IHolographicKeyboardStatics *self, WAPHO_HolographicKeyboard** out);
 
-/* activate Windows.ApplicationModel.Holographic.HolographicKeyboard */
 HRESULT wapho_holographic_keyboard_new(WAPHO_HolographicKeyboard **out);
 
-/* Windows.ApplicationModel.Holographic.HolographicKeyboard */
-/* Windows.ApplicationModel.Holographic.HolographicKeyboard.SetPlacementOverride(coordinateSystem, topCenterPosition, orientation) */
 HRESULT wapho_holographic_keyboard_set_placement_override(WAPHO_HolographicKeyboard *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WFN_Vector_3 topCenterPosition, WFN_Quaternion orientation);
 
-/* Windows.ApplicationModel.Holographic.HolographicKeyboard.SetPlacementOverride(coordinateSystem, topCenterPosition, orientation, maxSize) */
 HRESULT wapho_holographic_keyboard_set_placement_override_p_3_quaternion_2(WAPHO_HolographicKeyboard *self, WPESP_SpatialCoordinateSystem* coordinateSystem, WFN_Vector_3 topCenterPosition, WFN_Quaternion orientation, WFN_Vector_2 maxSize);
 
-/* Windows.ApplicationModel.Holographic.HolographicKeyboard.ResetPlacementOverride() */
 HRESULT wapho_holographic_keyboard_reset_placement_override(WAPHO_HolographicKeyboard *self);
 
-/* Windows.ApplicationModel.Holographic.HolographicKeyboard.GetDefault() */
 HRESULT wapho_holographic_keyboard_get_default(WAPHO_HolographicKeyboard** out);
 
-/* Windows.ApplicationModel.Holographic.IHolographicKeyboard */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_HOLOGRAPHIC_H */

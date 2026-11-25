@@ -12,8 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
-
 #ifndef CWINRT_FWD_WMERE_AudioRenderCategory
 #define CWINRT_FWD_WMERE_AudioRenderCategory
 typedef enum WMERE_AudioRenderCategory {
@@ -31,7 +29,5 @@ typedef enum WMERE_AudioRenderCategory {
     WMERE_AudioRenderCategory_Media = 11
 } WMERE_AudioRenderCategory;
 #endif
-
-/* Methods */
 
 #endif /* CWINRT_WINDOWS_MEDIA_RENDER_H */

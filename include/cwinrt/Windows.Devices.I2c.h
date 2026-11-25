@@ -12,13 +12,11 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WDEI2PR_II2cProvider
 #define CWINRT_FWD_WDEI2PR_II2cProvider
 typedef struct WDEI2PR_II2cProvider WDEI2PR_II2cProvider;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDEI2_II2cConnectionSettingsFactory WDEI2_II2cConnectionSettingsFactory;
 typedef struct WDEI2_II2cControllerStatics WDEI2_II2cControllerStatics;
 typedef struct WDEI2_II2cDeviceStatics WDEI2_II2cDeviceStatics;
@@ -29,7 +27,6 @@ typedef struct WDEI2_II2cConnectionSettings WDEI2_II2cConnectionSettings;
 typedef struct WDEI2_II2cController WDEI2_II2cController;
 typedef struct WDEI2_II2cDevice WDEI2_II2cDevice;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WDEI2PR_II2cProvider
 #define CWINRT_FWD_WDEI2PR_II2cProvider
 typedef struct WDEI2PR_II2cProvider WDEI2PR_II2cProvider;
@@ -86,7 +83,6 @@ struct WDEI2_I2cTransferResult {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -115,105 +111,64 @@ static const IID CWINRT_IID_WDEI2_II2cController CWINRT_MAYBE_UNUSED = { 0xC48AB
 static const IID CWINRT_IID_WDEI2_II2cDevice CWINRT_MAYBE_UNUSED = { 0x8636C136, 0xB9C5, 0x4F70, { 0x94, 0x49, 0xCC, 0x46, 0xDC, 0x6F, 0x57, 0xEB } };
 #endif
 
-/* Methods */
-
-/* Windows.Devices.I2c.II2cConnectionSettingsFactory */
-/* Windows.Devices.I2c.II2cConnectionSettingsFactory.Create(slaveAddress) */
 HRESULT wdei2_i2c_connection_settings_factory_create(WDEI2_II2cConnectionSettingsFactory *self, int32_t slaveAddress, WDEI2_I2cConnectionSettings** out);
 
-/* Windows.Devices.I2c.II2cControllerStatics */
-/* Windows.Devices.I2c.II2cControllerStatics.GetControllersAsync(provider) */
 HRESULT wdei2_i2c_controller_statics_get_controllers_async(WDEI2_II2cControllerStatics *self, WDEI2PR_II2cProvider* provider, WF_IAsyncOperation_WFOCO_IVectorView_WDEI2_I2cController** out);
 
-/* Windows.Devices.I2c.II2cControllerStatics.GetDefaultAsync() */
 HRESULT wdei2_i2c_controller_statics_get_default_async(WDEI2_II2cControllerStatics *self, WF_IAsyncOperation_WDEI2_I2cController** out);
 
-/* Windows.Devices.I2c.II2cDeviceStatics */
-/* Windows.Devices.I2c.II2cDeviceStatics.GetDeviceSelector() */
 HRESULT wdei2_i2c_device_statics_get_device_selector(WDEI2_II2cDeviceStatics *self, cwinrt_hstring *out);
 
-/* Windows.Devices.I2c.II2cDeviceStatics.GetDeviceSelector(friendlyName) */
 HRESULT wdei2_i2c_device_statics_get_device_selector_str_str(WDEI2_II2cDeviceStatics *self, cwinrt_hstring friendlyName, cwinrt_hstring *out);
 
-/* Windows.Devices.I2c.II2cDeviceStatics.FromIdAsync(deviceId, settings) */
 HRESULT wdei2_i2c_device_statics_from_id_async(WDEI2_II2cDeviceStatics *self, cwinrt_hstring deviceId, WDEI2_I2cConnectionSettings* settings, WF_IAsyncOperation_WDEI2_I2cDevice** out);
 
-/* activate Windows.Devices.I2c.I2cConnectionSettings */
 HRESULT wdei2_i2c_connection_settings_new(WDEI2_I2cConnectionSettings **out);
 
-/* Windows.Devices.I2c.I2cConnectionSettings */
-/* Windows.Devices.I2c.I2cConnectionSettings.get_SlaveAddress() */
 HRESULT wdei2_i2c_connection_settings_get__slave_address(WDEI2_I2cConnectionSettings *self, int32_t *value);
 
-/* Windows.Devices.I2c.I2cConnectionSettings.put_SlaveAddress() */
 HRESULT wdei2_i2c_connection_settings_put__slave_address(WDEI2_I2cConnectionSettings *self, int32_t value);
 
-/* Windows.Devices.I2c.I2cConnectionSettings.get_BusSpeed() */
 HRESULT wdei2_i2c_connection_settings_get__bus_speed(WDEI2_I2cConnectionSettings *self, WDEI2_I2cBusSpeed *value);
 
-/* Windows.Devices.I2c.I2cConnectionSettings.put_BusSpeed() */
 HRESULT wdei2_i2c_connection_settings_put__bus_speed(WDEI2_I2cConnectionSettings *self, WDEI2_I2cBusSpeed value);
 
-/* Windows.Devices.I2c.I2cConnectionSettings.get_SharingMode() */
 HRESULT wdei2_i2c_connection_settings_get__sharing_mode(WDEI2_I2cConnectionSettings *self, WDEI2_I2cSharingMode *value);
 
-/* Windows.Devices.I2c.I2cConnectionSettings.put_SharingMode() */
 HRESULT wdei2_i2c_connection_settings_put__sharing_mode(WDEI2_I2cConnectionSettings *self, WDEI2_I2cSharingMode value);
 
-/* activate Windows.Devices.I2c.I2cController */
 HRESULT wdei2_i2c_controller_new(WDEI2_I2cController **out);
 
-/* Windows.Devices.I2c.I2cController */
-/* Windows.Devices.I2c.I2cController.GetDevice(settings) */
 HRESULT wdei2_i2c_controller_get_device(WDEI2_I2cController *self, WDEI2_I2cConnectionSettings* settings, WDEI2_I2cDevice** out);
 
-/* Windows.Devices.I2c.I2cController.GetControllersAsync(provider) */
 HRESULT wdei2_i2c_controller_get_controllers_async(WDEI2PR_II2cProvider* provider, WF_IAsyncOperation_WFOCO_IVectorView_WDEI2_I2cController** out);
 
-/* Windows.Devices.I2c.I2cController.GetDefaultAsync() */
 HRESULT wdei2_i2c_controller_get_default_async(WF_IAsyncOperation_WDEI2_I2cController** out);
 
-/* activate Windows.Devices.I2c.I2cDevice */
 HRESULT wdei2_i2c_device_new(WDEI2_I2cDevice **out);
 
-/* Windows.Devices.I2c.I2cDevice */
-/* Windows.Devices.I2c.I2cDevice.get_DeviceId() */
 HRESULT wdei2_i2c_device_get__device_id(WDEI2_I2cDevice *self, cwinrt_hstring *value);
 
-/* Windows.Devices.I2c.I2cDevice.get_ConnectionSettings() */
 HRESULT wdei2_i2c_device_get__connection_settings(WDEI2_I2cDevice *self, WDEI2_I2cConnectionSettings** value);
 
-/* Windows.Devices.I2c.I2cDevice.Write(buffer) */
 HRESULT wdei2_i2c_device_write(WDEI2_I2cDevice *self, uint8_t *buffer, uint32_t buffer_len);
 
-/* Windows.Devices.I2c.I2cDevice.WritePartial(buffer) */
 HRESULT wdei2_i2c_device_write_partial(WDEI2_I2cDevice *self, uint8_t *buffer, uint32_t buffer_len, WDEI2_I2cTransferResult *out);
 
-/* Windows.Devices.I2c.I2cDevice.Read(buffer) */
 HRESULT wdei2_i2c_device_read(WDEI2_I2cDevice *self, uint8_t *buffer, uint32_t buffer_len);
 
-/* Windows.Devices.I2c.I2cDevice.ReadPartial(buffer) */
 HRESULT wdei2_i2c_device_read_partial(WDEI2_I2cDevice *self, uint8_t *buffer, uint32_t buffer_len, WDEI2_I2cTransferResult *out);
 
-/* Windows.Devices.I2c.I2cDevice.WriteRead(writeBuffer, readBuffer) */
 HRESULT wdei2_i2c_device_write_read(WDEI2_I2cDevice *self, uint8_t *writeBuffer, uint32_t writeBuffer_len, uint8_t *readBuffer, uint32_t readBuffer_len);
 
-/* Windows.Devices.I2c.I2cDevice.WriteReadPartial(writeBuffer, readBuffer) */
 HRESULT wdei2_i2c_device_write_read_partial(WDEI2_I2cDevice *self, uint8_t *writeBuffer, uint32_t writeBuffer_len, uint8_t *readBuffer, uint32_t readBuffer_len, WDEI2_I2cTransferResult *out);
 
-/* Windows.Devices.I2c.I2cDevice.Close() */
 HRESULT wdei2_i2c_device_close(WDEI2_I2cDevice *self);
 
-/* Windows.Devices.I2c.I2cDevice.GetDeviceSelector() */
 HRESULT wdei2_i2c_device_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Devices.I2c.I2cDevice.GetDeviceSelector(friendlyName) */
 HRESULT wdei2_i2c_device_get_device_selector_str_str(cwinrt_hstring friendlyName, cwinrt_hstring *out);
 
-/* Windows.Devices.I2c.I2cDevice.FromIdAsync(deviceId, settings) */
 HRESULT wdei2_i2c_device_from_id_async(cwinrt_hstring deviceId, WDEI2_I2cConnectionSettings* settings, WF_IAsyncOperation_WDEI2_I2cDevice** out);
 
-/* Windows.Devices.I2c.II2cConnectionSettings */
-/* Windows.Devices.I2c.II2cController */
-/* Windows.Devices.I2c.II2cDevice */
 #endif /* CWINRT_WINDOWS_DEVICES_I2C_H */

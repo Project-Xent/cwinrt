@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WAPAPAP_AddAppointmentOperation
 #define CWINRT_FWD_WAPAPAP_AddAppointmentOperation
 typedef struct WAPAPAP_AddAppointmentOperation WAPAPAP_AddAppointmentOperation;
@@ -141,7 +140,6 @@ typedef struct WSEAUWEPR_IWebAccountProviderOperation WSEAUWEPR_IWebAccountProvi
 typedef struct WSEAUWE_WebAuthenticationResult WSEAUWE_WebAuthenticationResult;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPAC_RestrictedLaunchActivatedEventArgs WAPAC_RestrictedLaunchActivatedEventArgs;
 typedef struct WAPAC_SearchActivatedEventArgs WAPAC_SearchActivatedEventArgs;
 typedef struct WAPAC_ShareTargetActivatedEventArgs WAPAC_ShareTargetActivatedEventArgs;
@@ -256,7 +254,6 @@ typedef struct WAPAC_IAppointmentsProviderActivatedEventArgs WAPAC_IAppointments
 typedef struct WAPAC_ILaunchActivatedEventArgs WAPAC_ILaunchActivatedEventArgs;
 typedef struct WAPAC_IActivatedEventArgs WAPAC_IActivatedEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
@@ -475,7 +472,6 @@ typedef enum WAPAC_ActivationKind {
 } WAPAC_ActivationKind;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -736,1190 +732,719 @@ static const IID CWINRT_IID_WAPAC_ILaunchActivatedEventArgs CWINRT_MAYBE_UNUSED 
 static const IID CWINRT_IID_WAPAC_IActivatedEventArgs CWINRT_MAYBE_UNUSED = { 0xCF651713, 0xCD08, 0x4FD8, { 0xB6, 0x97, 0xA2, 0x81, 0xB6, 0x54, 0x4E, 0x2E } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.Activation.RestrictedLaunchActivatedEventArgs */
 HRESULT wapac_restricted_launch_activated_event_args_new(WAPAC_RestrictedLaunchActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.RestrictedLaunchActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.RestrictedLaunchActivatedEventArgs.get_SharedContext() */
 HRESULT wapac_restricted_launch_activated_event_args_get__shared_context(WAPAC_RestrictedLaunchActivatedEventArgs *self, IInspectable** value);
 
-/* Windows.ApplicationModel.Activation.RestrictedLaunchActivatedEventArgs.get_Kind() */
 HRESULT wapac_restricted_launch_activated_event_args_get__kind(WAPAC_RestrictedLaunchActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.RestrictedLaunchActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_restricted_launch_activated_event_args_get__previous_execution_state(WAPAC_RestrictedLaunchActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.RestrictedLaunchActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_restricted_launch_activated_event_args_get__splash_screen(WAPAC_RestrictedLaunchActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.RestrictedLaunchActivatedEventArgs.get_User() */
 HRESULT wapac_restricted_launch_activated_event_args_get__user(WAPAC_RestrictedLaunchActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Activation.SearchActivatedEventArgs */
 HRESULT wapac_search_activated_event_args_new(WAPAC_SearchActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.SearchActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.SearchActivatedEventArgs.get_QueryText() */
 HRESULT wapac_search_activated_event_args_get__query_text(WAPAC_SearchActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.SearchActivatedEventArgs.get_Language() */
 HRESULT wapac_search_activated_event_args_get__language(WAPAC_SearchActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.SearchActivatedEventArgs.get_Kind() */
 HRESULT wapac_search_activated_event_args_get__kind(WAPAC_SearchActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.SearchActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_search_activated_event_args_get__previous_execution_state(WAPAC_SearchActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.SearchActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_search_activated_event_args_get__splash_screen(WAPAC_SearchActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.SearchActivatedEventArgs.get_CurrentlyShownApplicationViewId() */
 HRESULT wapac_search_activated_event_args_get__currently_shown_application_view_id(WAPAC_SearchActivatedEventArgs *self, int32_t *value);
 
-/* Windows.ApplicationModel.Activation.SearchActivatedEventArgs.get_LinguisticDetails() */
 HRESULT wapac_search_activated_event_args_get__linguistic_details(WAPAC_SearchActivatedEventArgs *self, WAPSE_SearchPaneQueryLinguisticDetails** value);
 
-/* Windows.ApplicationModel.Activation.SearchActivatedEventArgs.get_ViewSwitcher() */
 HRESULT wapac_search_activated_event_args_get__view_switcher(WAPAC_SearchActivatedEventArgs *self, WUIVI_ActivationViewSwitcher** value);
 
-/* Windows.ApplicationModel.Activation.SearchActivatedEventArgs.get_User() */
 HRESULT wapac_search_activated_event_args_get__user(WAPAC_SearchActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs */
 HRESULT wapac_share_target_activated_event_args_new(WAPAC_ShareTargetActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs.get_ShareOperation() */
 HRESULT wapac_share_target_activated_event_args_get__share_operation(WAPAC_ShareTargetActivatedEventArgs *self, WAPDASH_ShareOperation** value);
 
-/* Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs.get_Kind() */
 HRESULT wapac_share_target_activated_event_args_get__kind(WAPAC_ShareTargetActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_share_target_activated_event_args_get__previous_execution_state(WAPAC_ShareTargetActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_share_target_activated_event_args_get__splash_screen(WAPAC_ShareTargetActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs.get_User() */
 HRESULT wapac_share_target_activated_event_args_get__user(WAPAC_ShareTargetActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Activation.SplashScreen */
 HRESULT wapac_splash_screen_new(WAPAC_SplashScreen **out);
 
-/* Windows.ApplicationModel.Activation.SplashScreen */
-/* Windows.ApplicationModel.Activation.SplashScreen.get_ImageLocation() */
 HRESULT wapac_splash_screen_get__image_location(WAPAC_SplashScreen *self, WF_Rect *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapac_splash_screen_on_dismissed(WAPAC_SplashScreen *self, cwinrt_event_fn fn, void *ctx);
 void wapac_splash_screen_off_dismissed(WAPAC_SplashScreen *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Activation.StartupTaskActivatedEventArgs */
 HRESULT wapac_startup_task_activated_event_args_new(WAPAC_StartupTaskActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.StartupTaskActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.StartupTaskActivatedEventArgs.get_TaskId() */
 HRESULT wapac_startup_task_activated_event_args_get__task_id(WAPAC_StartupTaskActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.StartupTaskActivatedEventArgs.get_Kind() */
 HRESULT wapac_startup_task_activated_event_args_get__kind(WAPAC_StartupTaskActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.StartupTaskActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_startup_task_activated_event_args_get__previous_execution_state(WAPAC_StartupTaskActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.StartupTaskActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_startup_task_activated_event_args_get__splash_screen(WAPAC_StartupTaskActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.StartupTaskActivatedEventArgs.get_User() */
 HRESULT wapac_startup_task_activated_event_args_get__user(WAPAC_StartupTaskActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Activation.TileActivatedInfo */
 HRESULT wapac_tile_activated_info_new(WAPAC_TileActivatedInfo **out);
 
-/* Windows.ApplicationModel.Activation.TileActivatedInfo */
-/* Windows.ApplicationModel.Activation.TileActivatedInfo.get_RecentlyShownNotifications() */
 HRESULT wapac_tile_activated_info_get__recently_shown_notifications(WAPAC_TileActivatedInfo *self, WFOCO_IVectorView_WUINO_ShownTileNotification** value);
 
-/* activate Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs */
 HRESULT wapac_toast_notification_activated_event_args_new(WAPAC_ToastNotificationActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs.get_Argument() */
 HRESULT wapac_toast_notification_activated_event_args_get__argument(WAPAC_ToastNotificationActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs.get_UserInput() */
 HRESULT wapac_toast_notification_activated_event_args_get__user_input(WAPAC_ToastNotificationActivatedEventArgs *self, WFOCO_ValueSet** value);
 
-/* Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs.get_Kind() */
 HRESULT wapac_toast_notification_activated_event_args_get__kind(WAPAC_ToastNotificationActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_toast_notification_activated_event_args_get__previous_execution_state(WAPAC_ToastNotificationActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_toast_notification_activated_event_args_get__splash_screen(WAPAC_ToastNotificationActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs.get_User() */
 HRESULT wapac_toast_notification_activated_event_args_get__user(WAPAC_ToastNotificationActivatedEventArgs *self, WSY_User** value);
 
-/* Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs.get_CurrentlyShownApplicationViewId() */
 HRESULT wapac_toast_notification_activated_event_args_get__currently_shown_application_view_id(WAPAC_ToastNotificationActivatedEventArgs *self, int32_t *value);
 
-/* activate Windows.ApplicationModel.Activation.UserDataAccountProviderActivatedEventArgs */
 HRESULT wapac_user_data_account_provider_activated_event_args_new(WAPAC_UserDataAccountProviderActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.UserDataAccountProviderActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.UserDataAccountProviderActivatedEventArgs.get_Operation() */
 HRESULT wapac_user_data_account_provider_activated_event_args_get__operation(WAPAC_UserDataAccountProviderActivatedEventArgs *self, WAPUSPR_IUserDataAccountProviderOperation** value);
 
-/* Windows.ApplicationModel.Activation.UserDataAccountProviderActivatedEventArgs.get_Kind() */
 HRESULT wapac_user_data_account_provider_activated_event_args_get__kind(WAPAC_UserDataAccountProviderActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.UserDataAccountProviderActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_user_data_account_provider_activated_event_args_get__previous_execution_state(WAPAC_UserDataAccountProviderActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.UserDataAccountProviderActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_user_data_account_provider_activated_event_args_get__splash_screen(WAPAC_UserDataAccountProviderActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* activate Windows.ApplicationModel.Activation.VoiceCommandActivatedEventArgs */
 HRESULT wapac_voice_command_activated_event_args_new(WAPAC_VoiceCommandActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.VoiceCommandActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.VoiceCommandActivatedEventArgs.get_Result() */
 HRESULT wapac_voice_command_activated_event_args_get__result(WAPAC_VoiceCommandActivatedEventArgs *self, WMESP_SpeechRecognitionResult** value);
 
-/* Windows.ApplicationModel.Activation.VoiceCommandActivatedEventArgs.get_Kind() */
 HRESULT wapac_voice_command_activated_event_args_get__kind(WAPAC_VoiceCommandActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.VoiceCommandActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_voice_command_activated_event_args_get__previous_execution_state(WAPAC_VoiceCommandActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.VoiceCommandActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_voice_command_activated_event_args_get__splash_screen(WAPAC_VoiceCommandActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.VoiceCommandActivatedEventArgs.get_User() */
 HRESULT wapac_voice_command_activated_event_args_get__user(WAPAC_VoiceCommandActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs */
 HRESULT wapac_wallet_action_activated_event_args_new(WAPAC_WalletActionActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.get_ItemId() */
 HRESULT wapac_wallet_action_activated_event_args_get__item_id(WAPAC_WalletActionActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.get_ActionKind() */
 HRESULT wapac_wallet_action_activated_event_args_get__action_kind(WAPAC_WalletActionActivatedEventArgs *self, WAPWA_WalletActionKind *value);
 
-/* Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.get_ActionId() */
 HRESULT wapac_wallet_action_activated_event_args_get__action_id(WAPAC_WalletActionActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.get_Kind() */
 HRESULT wapac_wallet_action_activated_event_args_get__kind(WAPAC_WalletActionActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_wallet_action_activated_event_args_get__previous_execution_state(WAPAC_WalletActionActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_wallet_action_activated_event_args_get__splash_screen(WAPAC_WalletActionActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* activate Windows.ApplicationModel.Activation.WebAccountProviderActivatedEventArgs */
 HRESULT wapac_web_account_provider_activated_event_args_new(WAPAC_WebAccountProviderActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.WebAccountProviderActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.WebAccountProviderActivatedEventArgs.get_Operation() */
 HRESULT wapac_web_account_provider_activated_event_args_get__operation(WAPAC_WebAccountProviderActivatedEventArgs *self, WSEAUWEPR_IWebAccountProviderOperation** value);
 
-/* Windows.ApplicationModel.Activation.WebAccountProviderActivatedEventArgs.get_Kind() */
 HRESULT wapac_web_account_provider_activated_event_args_get__kind(WAPAC_WebAccountProviderActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.WebAccountProviderActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_web_account_provider_activated_event_args_get__previous_execution_state(WAPAC_WebAccountProviderActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.WebAccountProviderActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_web_account_provider_activated_event_args_get__splash_screen(WAPAC_WebAccountProviderActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.WebAccountProviderActivatedEventArgs.get_User() */
 HRESULT wapac_web_account_provider_activated_event_args_get__user(WAPAC_WebAccountProviderActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Activation.WebAuthenticationBrokerContinuationEventArgs */
 HRESULT wapac_web_authentication_broker_continuation_event_args_new(WAPAC_WebAuthenticationBrokerContinuationEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.WebAuthenticationBrokerContinuationEventArgs */
-/* Windows.ApplicationModel.Activation.WebAuthenticationBrokerContinuationEventArgs.get_WebAuthenticationResult() */
 HRESULT wapac_web_authentication_broker_continuation_event_args_get__web_authentication_result(WAPAC_WebAuthenticationBrokerContinuationEventArgs *self, WSEAUWE_WebAuthenticationResult** value);
 
-/* Windows.ApplicationModel.Activation.WebAuthenticationBrokerContinuationEventArgs.get_ContinuationData() */
 HRESULT wapac_web_authentication_broker_continuation_event_args_get__continuation_data(WAPAC_WebAuthenticationBrokerContinuationEventArgs *self, WFOCO_ValueSet** value);
 
-/* Windows.ApplicationModel.Activation.WebAuthenticationBrokerContinuationEventArgs.get_Kind() */
 HRESULT wapac_web_authentication_broker_continuation_event_args_get__kind(WAPAC_WebAuthenticationBrokerContinuationEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.WebAuthenticationBrokerContinuationEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_web_authentication_broker_continuation_event_args_get__previous_execution_state(WAPAC_WebAuthenticationBrokerContinuationEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.WebAuthenticationBrokerContinuationEventArgs.get_SplashScreen() */
 HRESULT wapac_web_authentication_broker_continuation_event_args_get__splash_screen(WAPAC_WebAuthenticationBrokerContinuationEventArgs *self, WAPAC_SplashScreen** value);
 
-/* activate Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs */
 HRESULT wapac_protocol_for_results_activated_event_args_new(WAPAC_ProtocolForResultsActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs.get_ProtocolForResultsOperation() */
 HRESULT wapac_protocol_for_results_activated_event_args_get__protocol_for_results_operation(WAPAC_ProtocolForResultsActivatedEventArgs *self, WSY_ProtocolForResultsOperation** value);
 
-/* Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs.get_Kind() */
 HRESULT wapac_protocol_for_results_activated_event_args_get__kind(WAPAC_ProtocolForResultsActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_protocol_for_results_activated_event_args_get__previous_execution_state(WAPAC_ProtocolForResultsActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_protocol_for_results_activated_event_args_get__splash_screen(WAPAC_ProtocolForResultsActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs.get_Uri() */
 HRESULT wapac_protocol_for_results_activated_event_args_get__uri(WAPAC_ProtocolForResultsActivatedEventArgs *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs.get_CallerPackageFamilyName() */
 HRESULT wapac_protocol_for_results_activated_event_args_get__caller_package_family_name(WAPAC_ProtocolForResultsActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs.get_Data() */
 HRESULT wapac_protocol_for_results_activated_event_args_get__data(WAPAC_ProtocolForResultsActivatedEventArgs *self, WFOCO_ValueSet** value);
 
-/* Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs.get_CurrentlyShownApplicationViewId() */
 HRESULT wapac_protocol_for_results_activated_event_args_get__currently_shown_application_view_id(WAPAC_ProtocolForResultsActivatedEventArgs *self, int32_t *value);
 
-/* Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs.get_ViewSwitcher() */
 HRESULT wapac_protocol_for_results_activated_event_args_get__view_switcher(WAPAC_ProtocolForResultsActivatedEventArgs *self, WUIVI_ActivationViewSwitcher** value);
 
-/* Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs.get_User() */
 HRESULT wapac_protocol_for_results_activated_event_args_get__user(WAPAC_ProtocolForResultsActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs */
 HRESULT wapac_protocol_activated_event_args_new(WAPAC_ProtocolActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs.get_Uri() */
 HRESULT wapac_protocol_activated_event_args_get__uri(WAPAC_ProtocolActivatedEventArgs *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs.get_Kind() */
 HRESULT wapac_protocol_activated_event_args_get__kind(WAPAC_ProtocolActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_protocol_activated_event_args_get__previous_execution_state(WAPAC_ProtocolActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_protocol_activated_event_args_get__splash_screen(WAPAC_ProtocolActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs.get_CallerPackageFamilyName() */
 HRESULT wapac_protocol_activated_event_args_get__caller_package_family_name(WAPAC_ProtocolActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs.get_Data() */
 HRESULT wapac_protocol_activated_event_args_get__data(WAPAC_ProtocolActivatedEventArgs *self, WFOCO_ValueSet** value);
 
-/* Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs.get_CurrentlyShownApplicationViewId() */
 HRESULT wapac_protocol_activated_event_args_get__currently_shown_application_view_id(WAPAC_ProtocolActivatedEventArgs *self, int32_t *value);
 
-/* Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs.get_ViewSwitcher() */
 HRESULT wapac_protocol_activated_event_args_get__view_switcher(WAPAC_ProtocolActivatedEventArgs *self, WUIVI_ActivationViewSwitcher** value);
 
-/* Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs.get_User() */
 HRESULT wapac_protocol_activated_event_args_get__user(WAPAC_ProtocolActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs */
 HRESULT wapac_print_task_settings_activated_event_args_new(WAPAC_PrintTaskSettingsActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs.get_Configuration() */
 HRESULT wapac_print_task_settings_activated_event_args_get__configuration(WAPAC_PrintTaskSettingsActivatedEventArgs *self, WDEPREX_PrintTaskConfiguration** value);
 
-/* Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs.get_Kind() */
 HRESULT wapac_print_task_settings_activated_event_args_get__kind(WAPAC_PrintTaskSettingsActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_print_task_settings_activated_event_args_get__previous_execution_state(WAPAC_PrintTaskSettingsActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_print_task_settings_activated_event_args_get__splash_screen(WAPAC_PrintTaskSettingsActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* activate Windows.ApplicationModel.Activation.LaunchActivatedEventArgs */
 HRESULT wapac_launch_activated_event_args_new(WAPAC_LaunchActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.LaunchActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.LaunchActivatedEventArgs.get_Arguments() */
 HRESULT wapac_launch_activated_event_args_get__arguments(WAPAC_LaunchActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.LaunchActivatedEventArgs.get_TileId() */
 HRESULT wapac_launch_activated_event_args_get__tile_id(WAPAC_LaunchActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.LaunchActivatedEventArgs.get_Kind() */
 HRESULT wapac_launch_activated_event_args_get__kind(WAPAC_LaunchActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.LaunchActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_launch_activated_event_args_get__previous_execution_state(WAPAC_LaunchActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.LaunchActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_launch_activated_event_args_get__splash_screen(WAPAC_LaunchActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.LaunchActivatedEventArgs.get_CurrentlyShownApplicationViewId() */
 HRESULT wapac_launch_activated_event_args_get__currently_shown_application_view_id(WAPAC_LaunchActivatedEventArgs *self, int32_t *value);
 
-/* Windows.ApplicationModel.Activation.LaunchActivatedEventArgs.get_PrelaunchActivated() */
 HRESULT wapac_launch_activated_event_args_get__prelaunch_activated(WAPAC_LaunchActivatedEventArgs *self, BOOL *value);
 
-/* Windows.ApplicationModel.Activation.LaunchActivatedEventArgs.get_ViewSwitcher() */
 HRESULT wapac_launch_activated_event_args_get__view_switcher(WAPAC_LaunchActivatedEventArgs *self, WUIVI_ActivationViewSwitcher** value);
 
-/* Windows.ApplicationModel.Activation.LaunchActivatedEventArgs.get_TileActivatedInfo() */
 HRESULT wapac_launch_activated_event_args_get__tile_activated_info(WAPAC_LaunchActivatedEventArgs *self, WAPAC_TileActivatedInfo** value);
 
-/* Windows.ApplicationModel.Activation.LaunchActivatedEventArgs.get_User() */
 HRESULT wapac_launch_activated_event_args_get__user(WAPAC_LaunchActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Activation.Print3DWorkflowActivatedEventArgs */
 HRESULT wapac_print3_d_workflow_activated_event_args_new(WAPAC_Print3DWorkflowActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.Print3DWorkflowActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.Print3DWorkflowActivatedEventArgs.get_Workflow() */
 HRESULT wapac_print3_d_workflow_activated_event_args_get__workflow(WAPAC_Print3DWorkflowActivatedEventArgs *self, WDEPREX_Print3DWorkflow** value);
 
-/* Windows.ApplicationModel.Activation.Print3DWorkflowActivatedEventArgs.get_Kind() */
 HRESULT wapac_print3_d_workflow_activated_event_args_get__kind(WAPAC_Print3DWorkflowActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.Print3DWorkflowActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_print3_d_workflow_activated_event_args_get__previous_execution_state(WAPAC_Print3DWorkflowActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.Print3DWorkflowActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_print3_d_workflow_activated_event_args_get__splash_screen(WAPAC_Print3DWorkflowActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* activate Windows.ApplicationModel.Activation.PickerReturnedActivatedEventArgs */
 HRESULT wapac_picker_returned_activated_event_args_new(WAPAC_PickerReturnedActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.PickerReturnedActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.PickerReturnedActivatedEventArgs.get_PickerOperationId() */
 HRESULT wapac_picker_returned_activated_event_args_get__picker_operation_id(WAPAC_PickerReturnedActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.PickerReturnedActivatedEventArgs.get_Kind() */
 HRESULT wapac_picker_returned_activated_event_args_get__kind(WAPAC_PickerReturnedActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.PickerReturnedActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_picker_returned_activated_event_args_get__previous_execution_state(WAPAC_PickerReturnedActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.PickerReturnedActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_picker_returned_activated_event_args_get__splash_screen(WAPAC_PickerReturnedActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* activate Windows.ApplicationModel.Activation.PhoneCallActivatedEventArgs */
 HRESULT wapac_phone_call_activated_event_args_new(WAPAC_PhoneCallActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.PhoneCallActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.PhoneCallActivatedEventArgs.get_LineId() */
 HRESULT wapac_phone_call_activated_event_args_get__line_id(WAPAC_PhoneCallActivatedEventArgs *self, GUID *value);
 
-/* Windows.ApplicationModel.Activation.PhoneCallActivatedEventArgs.get_Kind() */
 HRESULT wapac_phone_call_activated_event_args_get__kind(WAPAC_PhoneCallActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.PhoneCallActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_phone_call_activated_event_args_get__previous_execution_state(WAPAC_PhoneCallActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.PhoneCallActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_phone_call_activated_event_args_get__splash_screen(WAPAC_PhoneCallActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.PhoneCallActivatedEventArgs.get_User() */
 HRESULT wapac_phone_call_activated_event_args_get__user(WAPAC_PhoneCallActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Activation.LockScreenComponentActivatedEventArgs */
 HRESULT wapac_lock_screen_component_activated_event_args_new(WAPAC_LockScreenComponentActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.LockScreenComponentActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.LockScreenComponentActivatedEventArgs.get_Kind() */
 HRESULT wapac_lock_screen_component_activated_event_args_get__kind(WAPAC_LockScreenComponentActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.LockScreenComponentActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_lock_screen_component_activated_event_args_get__previous_execution_state(WAPAC_LockScreenComponentActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.LockScreenComponentActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_lock_screen_component_activated_event_args_get__splash_screen(WAPAC_LockScreenComponentActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.IContactsProviderActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IContactsProviderActivatedEventArgs.get_Verb() */
 HRESULT wapac_contacts_provider_activated_event_args_get__verb(WAPAC_IContactsProviderActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs */
 HRESULT wapac_folder_picker_continuation_event_args_new(WAPAC_FolderPickerContinuationEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs */
-/* Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs.get_Folder() */
 HRESULT wapac_folder_picker_continuation_event_args_get__folder(WAPAC_FolderPickerContinuationEventArgs *self, WS_StorageFolder** value);
 
-/* Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs.get_ContinuationData() */
 HRESULT wapac_folder_picker_continuation_event_args_get__continuation_data(WAPAC_FolderPickerContinuationEventArgs *self, WFOCO_ValueSet** value);
 
-/* Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs.get_Kind() */
 HRESULT wapac_folder_picker_continuation_event_args_get__kind(WAPAC_FolderPickerContinuationEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_folder_picker_continuation_event_args_get__previous_execution_state(WAPAC_FolderPickerContinuationEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs.get_SplashScreen() */
 HRESULT wapac_folder_picker_continuation_event_args_get__splash_screen(WAPAC_FolderPickerContinuationEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs.get_User() */
 HRESULT wapac_folder_picker_continuation_event_args_get__user(WAPAC_FolderPickerContinuationEventArgs *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs */
 HRESULT wapac_file_save_picker_continuation_event_args_new(WAPAC_FileSavePickerContinuationEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs */
-/* Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs.get_File() */
 HRESULT wapac_file_save_picker_continuation_event_args_get__file(WAPAC_FileSavePickerContinuationEventArgs *self, WS_StorageFile** value);
 
-/* Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs.get_ContinuationData() */
 HRESULT wapac_file_save_picker_continuation_event_args_get__continuation_data(WAPAC_FileSavePickerContinuationEventArgs *self, WFOCO_ValueSet** value);
 
-/* Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs.get_Kind() */
 HRESULT wapac_file_save_picker_continuation_event_args_get__kind(WAPAC_FileSavePickerContinuationEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_file_save_picker_continuation_event_args_get__previous_execution_state(WAPAC_FileSavePickerContinuationEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs.get_SplashScreen() */
 HRESULT wapac_file_save_picker_continuation_event_args_get__splash_screen(WAPAC_FileSavePickerContinuationEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs.get_User() */
 HRESULT wapac_file_save_picker_continuation_event_args_get__user(WAPAC_FileSavePickerContinuationEventArgs *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs */
 HRESULT wapac_file_save_picker_activated_event_args_new(WAPAC_FileSavePickerActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs.get_FileSavePickerUI() */
 HRESULT wapac_file_save_picker_activated_event_args_get__file_save_picker_u_i(WAPAC_FileSavePickerActivatedEventArgs *self, WSTPIPR_FileSavePickerUI** value);
 
-/* Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs.get_Kind() */
 HRESULT wapac_file_save_picker_activated_event_args_get__kind(WAPAC_FileSavePickerActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_file_save_picker_activated_event_args_get__previous_execution_state(WAPAC_FileSavePickerActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_file_save_picker_activated_event_args_get__splash_screen(WAPAC_FileSavePickerActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs.get_CallerPackageFamilyName() */
 HRESULT wapac_file_save_picker_activated_event_args_get__caller_package_family_name(WAPAC_FileSavePickerActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs.get_EnterpriseId() */
 HRESULT wapac_file_save_picker_activated_event_args_get__enterprise_id(WAPAC_FileSavePickerActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs.get_User() */
 HRESULT wapac_file_save_picker_activated_event_args_get__user(WAPAC_FileSavePickerActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs */
 HRESULT wapac_file_open_picker_continuation_event_args_new(WAPAC_FileOpenPickerContinuationEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs */
-/* Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs.get_Files() */
 HRESULT wapac_file_open_picker_continuation_event_args_get__files(WAPAC_FileOpenPickerContinuationEventArgs *self, WFOCO_IVectorView_WS_StorageFile** value);
 
-/* Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs.get_ContinuationData() */
 HRESULT wapac_file_open_picker_continuation_event_args_get__continuation_data(WAPAC_FileOpenPickerContinuationEventArgs *self, WFOCO_ValueSet** value);
 
-/* Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs.get_Kind() */
 HRESULT wapac_file_open_picker_continuation_event_args_get__kind(WAPAC_FileOpenPickerContinuationEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_file_open_picker_continuation_event_args_get__previous_execution_state(WAPAC_FileOpenPickerContinuationEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs.get_SplashScreen() */
 HRESULT wapac_file_open_picker_continuation_event_args_get__splash_screen(WAPAC_FileOpenPickerContinuationEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs.get_User() */
 HRESULT wapac_file_open_picker_continuation_event_args_get__user(WAPAC_FileOpenPickerContinuationEventArgs *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs */
 HRESULT wapac_file_open_picker_activated_event_args_new(WAPAC_FileOpenPickerActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs.get_FileOpenPickerUI() */
 HRESULT wapac_file_open_picker_activated_event_args_get__file_open_picker_u_i(WAPAC_FileOpenPickerActivatedEventArgs *self, WSTPIPR_FileOpenPickerUI** value);
 
-/* Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs.get_Kind() */
 HRESULT wapac_file_open_picker_activated_event_args_get__kind(WAPAC_FileOpenPickerActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_file_open_picker_activated_event_args_get__previous_execution_state(WAPAC_FileOpenPickerActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_file_open_picker_activated_event_args_get__splash_screen(WAPAC_FileOpenPickerActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs.get_CallerPackageFamilyName() */
 HRESULT wapac_file_open_picker_activated_event_args_get__caller_package_family_name(WAPAC_FileOpenPickerActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs.get_User() */
 HRESULT wapac_file_open_picker_activated_event_args_get__user(WAPAC_FileOpenPickerActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Activation.FileActivatedEventArgs */
 HRESULT wapac_file_activated_event_args_new(WAPAC_FileActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.FileActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.FileActivatedEventArgs.get_Files() */
 HRESULT wapac_file_activated_event_args_get__files(WAPAC_FileActivatedEventArgs *self, WFOCO_IVectorView_WS_IStorageItem** value);
 
-/* Windows.ApplicationModel.Activation.FileActivatedEventArgs.get_Verb() */
 HRESULT wapac_file_activated_event_args_get__verb(WAPAC_FileActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.FileActivatedEventArgs.get_Kind() */
 HRESULT wapac_file_activated_event_args_get__kind(WAPAC_FileActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.FileActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_file_activated_event_args_get__previous_execution_state(WAPAC_FileActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.FileActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_file_activated_event_args_get__splash_screen(WAPAC_FileActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.FileActivatedEventArgs.get_NeighboringFilesQuery() */
 HRESULT wapac_file_activated_event_args_get__neighboring_files_query(WAPAC_FileActivatedEventArgs *self, WSTSE_StorageFileQueryResult** value);
 
-/* Windows.ApplicationModel.Activation.FileActivatedEventArgs.get_CallerPackageFamilyName() */
 HRESULT wapac_file_activated_event_args_get__caller_package_family_name(WAPAC_FileActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.FileActivatedEventArgs.get_CurrentlyShownApplicationViewId() */
 HRESULT wapac_file_activated_event_args_get__currently_shown_application_view_id(WAPAC_FileActivatedEventArgs *self, int32_t *value);
 
-/* Windows.ApplicationModel.Activation.FileActivatedEventArgs.get_ViewSwitcher() */
 HRESULT wapac_file_activated_event_args_get__view_switcher(WAPAC_FileActivatedEventArgs *self, WUIVI_ActivationViewSwitcher** value);
 
-/* Windows.ApplicationModel.Activation.FileActivatedEventArgs.get_User() */
 HRESULT wapac_file_activated_event_args_get__user(WAPAC_FileActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs */
 HRESULT wapac_dial_receiver_activated_event_args_new(WAPAC_DialReceiverActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs.get_AppName() */
 HRESULT wapac_dial_receiver_activated_event_args_get__app_name(WAPAC_DialReceiverActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs.get_Arguments() */
 HRESULT wapac_dial_receiver_activated_event_args_get__arguments(WAPAC_DialReceiverActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs.get_TileId() */
 HRESULT wapac_dial_receiver_activated_event_args_get__tile_id(WAPAC_DialReceiverActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs.get_Kind() */
 HRESULT wapac_dial_receiver_activated_event_args_get__kind(WAPAC_DialReceiverActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_dial_receiver_activated_event_args_get__previous_execution_state(WAPAC_DialReceiverActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_dial_receiver_activated_event_args_get__splash_screen(WAPAC_DialReceiverActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs.get_CurrentlyShownApplicationViewId() */
 HRESULT wapac_dial_receiver_activated_event_args_get__currently_shown_application_view_id(WAPAC_DialReceiverActivatedEventArgs *self, int32_t *value);
 
-/* Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs.get_ViewSwitcher() */
 HRESULT wapac_dial_receiver_activated_event_args_get__view_switcher(WAPAC_DialReceiverActivatedEventArgs *self, WUIVI_ActivationViewSwitcher** value);
 
-/* Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs.get_User() */
 HRESULT wapac_dial_receiver_activated_event_args_get__user(WAPAC_DialReceiverActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Activation.DevicePairingActivatedEventArgs */
 HRESULT wapac_device_pairing_activated_event_args_new(WAPAC_DevicePairingActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.DevicePairingActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.DevicePairingActivatedEventArgs.get_DeviceInformation() */
 HRESULT wapac_device_pairing_activated_event_args_get__device_information(WAPAC_DevicePairingActivatedEventArgs *self, WDEEN_DeviceInformation** value);
 
-/* Windows.ApplicationModel.Activation.DevicePairingActivatedEventArgs.get_Kind() */
 HRESULT wapac_device_pairing_activated_event_args_get__kind(WAPAC_DevicePairingActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.DevicePairingActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_device_pairing_activated_event_args_get__previous_execution_state(WAPAC_DevicePairingActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.DevicePairingActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_device_pairing_activated_event_args_get__splash_screen(WAPAC_DevicePairingActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.DevicePairingActivatedEventArgs.get_User() */
 HRESULT wapac_device_pairing_activated_event_args_get__user(WAPAC_DevicePairingActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Activation.DeviceActivatedEventArgs */
 HRESULT wapac_device_activated_event_args_new(WAPAC_DeviceActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.DeviceActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.DeviceActivatedEventArgs.get_DeviceInformationId() */
 HRESULT wapac_device_activated_event_args_get__device_information_id(WAPAC_DeviceActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.DeviceActivatedEventArgs.get_Verb() */
 HRESULT wapac_device_activated_event_args_get__verb(WAPAC_DeviceActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.DeviceActivatedEventArgs.get_Kind() */
 HRESULT wapac_device_activated_event_args_get__kind(WAPAC_DeviceActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.DeviceActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_device_activated_event_args_get__previous_execution_state(WAPAC_DeviceActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.DeviceActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_device_activated_event_args_get__splash_screen(WAPAC_DeviceActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.DeviceActivatedEventArgs.get_CurrentlyShownApplicationViewId() */
 HRESULT wapac_device_activated_event_args_get__currently_shown_application_view_id(WAPAC_DeviceActivatedEventArgs *self, int32_t *value);
 
-/* Windows.ApplicationModel.Activation.DeviceActivatedEventArgs.get_ViewSwitcher() */
 HRESULT wapac_device_activated_event_args_get__view_switcher(WAPAC_DeviceActivatedEventArgs *self, WUIVI_ActivationViewSwitcher** value);
 
-/* Windows.ApplicationModel.Activation.DeviceActivatedEventArgs.get_User() */
 HRESULT wapac_device_activated_event_args_get__user(WAPAC_DeviceActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs */
 HRESULT wapac_contact_video_call_activated_event_args_new(WAPAC_ContactVideoCallActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.get_ServiceId() */
 HRESULT wapac_contact_video_call_activated_event_args_get__service_id(WAPAC_ContactVideoCallActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.get_ServiceUserId() */
 HRESULT wapac_contact_video_call_activated_event_args_get__service_user_id(WAPAC_ContactVideoCallActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.get_Contact() */
 HRESULT wapac_contact_video_call_activated_event_args_get__contact(WAPAC_ContactVideoCallActivatedEventArgs *self, WAPCO_Contact** value);
 
-/* Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.get_Verb() */
 HRESULT wapac_contact_video_call_activated_event_args_get__verb(WAPAC_ContactVideoCallActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.get_Kind() */
 HRESULT wapac_contact_video_call_activated_event_args_get__kind(WAPAC_ContactVideoCallActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_contact_video_call_activated_event_args_get__previous_execution_state(WAPAC_ContactVideoCallActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_contact_video_call_activated_event_args_get__splash_screen(WAPAC_ContactVideoCallActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* activate Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs */
 HRESULT wapac_contact_post_activated_event_args_new(WAPAC_ContactPostActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.get_ServiceId() */
 HRESULT wapac_contact_post_activated_event_args_get__service_id(WAPAC_ContactPostActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.get_ServiceUserId() */
 HRESULT wapac_contact_post_activated_event_args_get__service_user_id(WAPAC_ContactPostActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.get_Contact() */
 HRESULT wapac_contact_post_activated_event_args_get__contact(WAPAC_ContactPostActivatedEventArgs *self, WAPCO_Contact** value);
 
-/* Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.get_Verb() */
 HRESULT wapac_contact_post_activated_event_args_get__verb(WAPAC_ContactPostActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.get_Kind() */
 HRESULT wapac_contact_post_activated_event_args_get__kind(WAPAC_ContactPostActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_contact_post_activated_event_args_get__previous_execution_state(WAPAC_ContactPostActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_contact_post_activated_event_args_get__splash_screen(WAPAC_ContactPostActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* activate Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs */
 HRESULT wapac_contact_picker_activated_event_args_new(WAPAC_ContactPickerActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.get_ContactPickerUI() */
 HRESULT wapac_contact_picker_activated_event_args_get__contact_picker_u_i(WAPAC_ContactPickerActivatedEventArgs *self, WAPCOPR_ContactPickerUI** value);
 
-/* Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.get_Kind() */
 HRESULT wapac_contact_picker_activated_event_args_get__kind(WAPAC_ContactPickerActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_contact_picker_activated_event_args_get__previous_execution_state(WAPAC_ContactPickerActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_contact_picker_activated_event_args_get__splash_screen(WAPAC_ContactPickerActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* activate Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs */
 HRESULT wapac_contact_panel_activated_event_args_new(WAPAC_ContactPanelActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs.get_ContactPanel() */
 HRESULT wapac_contact_panel_activated_event_args_get__contact_panel(WAPAC_ContactPanelActivatedEventArgs *self, WAPCO_ContactPanel** value);
 
-/* Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs.get_Contact() */
 HRESULT wapac_contact_panel_activated_event_args_get__contact(WAPAC_ContactPanelActivatedEventArgs *self, WAPCO_Contact** value);
 
-/* Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs.get_Kind() */
 HRESULT wapac_contact_panel_activated_event_args_get__kind(WAPAC_ContactPanelActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_contact_panel_activated_event_args_get__previous_execution_state(WAPAC_ContactPanelActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_contact_panel_activated_event_args_get__splash_screen(WAPAC_ContactPanelActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs.get_User() */
 HRESULT wapac_contact_panel_activated_event_args_get__user(WAPAC_ContactPanelActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs */
 HRESULT wapac_contact_message_activated_event_args_new(WAPAC_ContactMessageActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.get_ServiceId() */
 HRESULT wapac_contact_message_activated_event_args_get__service_id(WAPAC_ContactMessageActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.get_ServiceUserId() */
 HRESULT wapac_contact_message_activated_event_args_get__service_user_id(WAPAC_ContactMessageActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.get_Contact() */
 HRESULT wapac_contact_message_activated_event_args_get__contact(WAPAC_ContactMessageActivatedEventArgs *self, WAPCO_Contact** value);
 
-/* Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.get_Verb() */
 HRESULT wapac_contact_message_activated_event_args_get__verb(WAPAC_ContactMessageActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.get_Kind() */
 HRESULT wapac_contact_message_activated_event_args_get__kind(WAPAC_ContactMessageActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_contact_message_activated_event_args_get__previous_execution_state(WAPAC_ContactMessageActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_contact_message_activated_event_args_get__splash_screen(WAPAC_ContactMessageActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* activate Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs */
 HRESULT wapac_contact_map_activated_event_args_new(WAPAC_ContactMapActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.get_Address() */
 HRESULT wapac_contact_map_activated_event_args_get__address(WAPAC_ContactMapActivatedEventArgs *self, WAPCO_ContactAddress** value);
 
-/* Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.get_Contact() */
 HRESULT wapac_contact_map_activated_event_args_get__contact(WAPAC_ContactMapActivatedEventArgs *self, WAPCO_Contact** value);
 
-/* Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.get_Verb() */
 HRESULT wapac_contact_map_activated_event_args_get__verb(WAPAC_ContactMapActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.get_Kind() */
 HRESULT wapac_contact_map_activated_event_args_get__kind(WAPAC_ContactMapActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_contact_map_activated_event_args_get__previous_execution_state(WAPAC_ContactMapActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_contact_map_activated_event_args_get__splash_screen(WAPAC_ContactMapActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* activate Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs */
 HRESULT wapac_contact_call_activated_event_args_new(WAPAC_ContactCallActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.get_ServiceId() */
 HRESULT wapac_contact_call_activated_event_args_get__service_id(WAPAC_ContactCallActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.get_ServiceUserId() */
 HRESULT wapac_contact_call_activated_event_args_get__service_user_id(WAPAC_ContactCallActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.get_Contact() */
 HRESULT wapac_contact_call_activated_event_args_get__contact(WAPAC_ContactCallActivatedEventArgs *self, WAPCO_Contact** value);
 
-/* Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.get_Verb() */
 HRESULT wapac_contact_call_activated_event_args_get__verb(WAPAC_ContactCallActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.get_Kind() */
 HRESULT wapac_contact_call_activated_event_args_get__kind(WAPAC_ContactCallActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_contact_call_activated_event_args_get__previous_execution_state(WAPAC_ContactCallActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_contact_call_activated_event_args_get__splash_screen(WAPAC_ContactCallActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* activate Windows.ApplicationModel.Activation.CommandLineActivationOperation */
 HRESULT wapac_command_line_activation_operation_new(WAPAC_CommandLineActivationOperation **out);
 
-/* Windows.ApplicationModel.Activation.CommandLineActivationOperation */
-/* Windows.ApplicationModel.Activation.CommandLineActivationOperation.get_Arguments() */
 HRESULT wapac_command_line_activation_operation_get__arguments(WAPAC_CommandLineActivationOperation *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.CommandLineActivationOperation.get_CurrentDirectoryPath() */
 HRESULT wapac_command_line_activation_operation_get__current_directory_path(WAPAC_CommandLineActivationOperation *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.CommandLineActivationOperation.put_ExitCode() */
 HRESULT wapac_command_line_activation_operation_put__exit_code(WAPAC_CommandLineActivationOperation *self, int32_t value);
 
-/* Windows.ApplicationModel.Activation.CommandLineActivationOperation.get_ExitCode() */
 HRESULT wapac_command_line_activation_operation_get__exit_code(WAPAC_CommandLineActivationOperation *self, int32_t *value);
 
-/* Windows.ApplicationModel.Activation.CommandLineActivationOperation.GetDeferral() */
 HRESULT wapac_command_line_activation_operation_get_deferral(WAPAC_CommandLineActivationOperation *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.Activation.CommandLineActivatedEventArgs */
 HRESULT wapac_command_line_activated_event_args_new(WAPAC_CommandLineActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.CommandLineActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.CommandLineActivatedEventArgs.get_Operation() */
 HRESULT wapac_command_line_activated_event_args_get__operation(WAPAC_CommandLineActivatedEventArgs *self, WAPAC_CommandLineActivationOperation** value);
 
-/* Windows.ApplicationModel.Activation.CommandLineActivatedEventArgs.get_Kind() */
 HRESULT wapac_command_line_activated_event_args_get__kind(WAPAC_CommandLineActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.CommandLineActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_command_line_activated_event_args_get__previous_execution_state(WAPAC_CommandLineActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.CommandLineActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_command_line_activated_event_args_get__splash_screen(WAPAC_CommandLineActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.CommandLineActivatedEventArgs.get_User() */
 HRESULT wapac_command_line_activated_event_args_get__user(WAPAC_CommandLineActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs */
 HRESULT wapac_camera_settings_activated_event_args_new(WAPAC_CameraSettingsActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs.get_VideoDeviceController() */
 HRESULT wapac_camera_settings_activated_event_args_get__video_device_controller(WAPAC_CameraSettingsActivatedEventArgs *self, IInspectable** value);
 
-/* Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs.get_VideoDeviceExtension() */
 HRESULT wapac_camera_settings_activated_event_args_get__video_device_extension(WAPAC_CameraSettingsActivatedEventArgs *self, IInspectable** value);
 
-/* Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs.get_Kind() */
 HRESULT wapac_camera_settings_activated_event_args_get__kind(WAPAC_CameraSettingsActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_camera_settings_activated_event_args_get__previous_execution_state(WAPAC_CameraSettingsActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_camera_settings_activated_event_args_get__splash_screen(WAPAC_CameraSettingsActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* activate Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs */
 HRESULT wapac_cached_file_updater_activated_event_args_new(WAPAC_CachedFileUpdaterActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs.get_CachedFileUpdaterUI() */
 HRESULT wapac_cached_file_updater_activated_event_args_get__cached_file_updater_u_i(WAPAC_CachedFileUpdaterActivatedEventArgs *self, WSTPR_CachedFileUpdaterUI** value);
 
-/* Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs.get_Kind() */
 HRESULT wapac_cached_file_updater_activated_event_args_get__kind(WAPAC_CachedFileUpdaterActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_cached_file_updater_activated_event_args_get__previous_execution_state(WAPAC_CachedFileUpdaterActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_cached_file_updater_activated_event_args_get__splash_screen(WAPAC_CachedFileUpdaterActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs.get_User() */
 HRESULT wapac_cached_file_updater_activated_event_args_get__user(WAPAC_CachedFileUpdaterActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Activation.BarcodeScannerPreviewActivatedEventArgs */
 HRESULT wapac_barcode_scanner_preview_activated_event_args_new(WAPAC_BarcodeScannerPreviewActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.BarcodeScannerPreviewActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.BarcodeScannerPreviewActivatedEventArgs.get_ConnectionId() */
 HRESULT wapac_barcode_scanner_preview_activated_event_args_get__connection_id(WAPAC_BarcodeScannerPreviewActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.BarcodeScannerPreviewActivatedEventArgs.get_Kind() */
 HRESULT wapac_barcode_scanner_preview_activated_event_args_get__kind(WAPAC_BarcodeScannerPreviewActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.BarcodeScannerPreviewActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_barcode_scanner_preview_activated_event_args_get__previous_execution_state(WAPAC_BarcodeScannerPreviewActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.BarcodeScannerPreviewActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_barcode_scanner_preview_activated_event_args_get__splash_screen(WAPAC_BarcodeScannerPreviewActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.BarcodeScannerPreviewActivatedEventArgs.get_User() */
 HRESULT wapac_barcode_scanner_preview_activated_event_args_get__user(WAPAC_BarcodeScannerPreviewActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Activation.BackgroundActivatedEventArgs */
 HRESULT wapac_background_activated_event_args_new(WAPAC_BackgroundActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.BackgroundActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.BackgroundActivatedEventArgs.get_TaskInstance() */
 HRESULT wapac_background_activated_event_args_get__task_instance(WAPAC_BackgroundActivatedEventArgs *self, WAPBA_IBackgroundTaskInstance** value);
 
-/* activate Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs */
 HRESULT wapac_appointments_provider_show_time_frame_activated_event_args_new(WAPAC_AppointmentsProviderShowTimeFrameActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs.get_TimeToShow() */
 HRESULT wapac_appointments_provider_show_time_frame_activated_event_args_get__time_to_show(WAPAC_AppointmentsProviderShowTimeFrameActivatedEventArgs *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs.get_Duration() */
 HRESULT wapac_appointments_provider_show_time_frame_activated_event_args_get__duration(WAPAC_AppointmentsProviderShowTimeFrameActivatedEventArgs *self, WF_TimeSpan *value);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs.get_Verb() */
 HRESULT wapac_appointments_provider_show_time_frame_activated_event_args_get__verb(WAPAC_AppointmentsProviderShowTimeFrameActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs.get_Kind() */
 HRESULT wapac_appointments_provider_show_time_frame_activated_event_args_get__kind(WAPAC_AppointmentsProviderShowTimeFrameActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_appointments_provider_show_time_frame_activated_event_args_get__previous_execution_state(WAPAC_AppointmentsProviderShowTimeFrameActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_appointments_provider_show_time_frame_activated_event_args_get__splash_screen(WAPAC_AppointmentsProviderShowTimeFrameActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs.get_User() */
 HRESULT wapac_appointments_provider_show_time_frame_activated_event_args_get__user(WAPAC_AppointmentsProviderShowTimeFrameActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs */
 HRESULT wapac_appointments_provider_show_appointment_details_activated_event_a_new(WAPAC_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs.get_InstanceStartDate() */
 HRESULT wapac_appointments_provider_show_appointment_details_activated_event_a_get__instance_start_date(WAPAC_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs *self, WF_DateTime** value);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs.get_LocalId() */
 HRESULT wapac_appointments_provider_show_appointment_details_activated_event_a_get__local_id(WAPAC_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs.get_RoamingId() */
 HRESULT wapac_appointments_provider_show_appointment_details_activated_event_a_get__roaming_id(WAPAC_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs.get_Verb() */
 HRESULT wapac_appointments_provider_show_appointment_details_activated_event_a_get__verb(WAPAC_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs.get_Kind() */
 HRESULT wapac_appointments_provider_show_appointment_details_activated_event_a_get__kind(WAPAC_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_appointments_provider_show_appointment_details_activated_event_a_get__previous_execution_state(WAPAC_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_appointments_provider_show_appointment_details_activated_event_a_get__splash_screen(WAPAC_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs.get_User() */
 HRESULT wapac_appointments_provider_show_appointment_details_activated_event_a_get__user(WAPAC_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs */
 HRESULT wapac_appointments_provider_replace_appointment_activated_event_args_new(WAPAC_AppointmentsProviderReplaceAppointmentActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs.get_ReplaceAppointmentOperation() */
 HRESULT wapac_appointments_provider_replace_appointment_activated_event_args_get__replace_appointment_operation(WAPAC_AppointmentsProviderReplaceAppointmentActivatedEventArgs *self, WAPAPAP_ReplaceAppointmentOperation** value);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs.get_Verb() */
 HRESULT wapac_appointments_provider_replace_appointment_activated_event_args_get__verb(WAPAC_AppointmentsProviderReplaceAppointmentActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs.get_Kind() */
 HRESULT wapac_appointments_provider_replace_appointment_activated_event_args_get__kind(WAPAC_AppointmentsProviderReplaceAppointmentActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_appointments_provider_replace_appointment_activated_event_args_get__previous_execution_state(WAPAC_AppointmentsProviderReplaceAppointmentActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_appointments_provider_replace_appointment_activated_event_args_get__splash_screen(WAPAC_AppointmentsProviderReplaceAppointmentActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs.get_User() */
 HRESULT wapac_appointments_provider_replace_appointment_activated_event_args_get__user(WAPAC_AppointmentsProviderReplaceAppointmentActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs */
 HRESULT wapac_appointments_provider_remove_appointment_activated_event_args_new(WAPAC_AppointmentsProviderRemoveAppointmentActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs.get_RemoveAppointmentOperation() */
 HRESULT wapac_appointments_provider_remove_appointment_activated_event_args_get__remove_appointment_operation(WAPAC_AppointmentsProviderRemoveAppointmentActivatedEventArgs *self, WAPAPAP_RemoveAppointmentOperation** value);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs.get_Verb() */
 HRESULT wapac_appointments_provider_remove_appointment_activated_event_args_get__verb(WAPAC_AppointmentsProviderRemoveAppointmentActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs.get_Kind() */
 HRESULT wapac_appointments_provider_remove_appointment_activated_event_args_get__kind(WAPAC_AppointmentsProviderRemoveAppointmentActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_appointments_provider_remove_appointment_activated_event_args_get__previous_execution_state(WAPAC_AppointmentsProviderRemoveAppointmentActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_appointments_provider_remove_appointment_activated_event_args_get__splash_screen(WAPAC_AppointmentsProviderRemoveAppointmentActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs.get_User() */
 HRESULT wapac_appointments_provider_remove_appointment_activated_event_args_get__user(WAPAC_AppointmentsProviderRemoveAppointmentActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs */
 HRESULT wapac_appointments_provider_add_appointment_activated_event_args_new(WAPAC_AppointmentsProviderAddAppointmentActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs.get_AddAppointmentOperation() */
 HRESULT wapac_appointments_provider_add_appointment_activated_event_args_get__add_appointment_operation(WAPAC_AppointmentsProviderAddAppointmentActivatedEventArgs *self, WAPAPAP_AddAppointmentOperation** value);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs.get_Verb() */
 HRESULT wapac_appointments_provider_add_appointment_activated_event_args_get__verb(WAPAC_AppointmentsProviderAddAppointmentActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs.get_Kind() */
 HRESULT wapac_appointments_provider_add_appointment_activated_event_args_get__kind(WAPAC_AppointmentsProviderAddAppointmentActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_appointments_provider_add_appointment_activated_event_args_get__previous_execution_state(WAPAC_AppointmentsProviderAddAppointmentActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_appointments_provider_add_appointment_activated_event_args_get__splash_screen(WAPAC_AppointmentsProviderAddAppointmentActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs.get_User() */
 HRESULT wapac_appointments_provider_add_appointment_activated_event_args_get__user(WAPAC_AppointmentsProviderAddAppointmentActivatedEventArgs *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs */
 HRESULT wapac_lock_screen_call_activated_event_args_new(WAPAC_LockScreenCallActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.get_CallUI() */
 HRESULT wapac_lock_screen_call_activated_event_args_get__call_u_i(WAPAC_LockScreenCallActivatedEventArgs *self, WAPCA_LockScreenCallUI** value);
 
-/* Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.get_Arguments() */
 HRESULT wapac_lock_screen_call_activated_event_args_get__arguments(WAPAC_LockScreenCallActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.get_TileId() */
 HRESULT wapac_lock_screen_call_activated_event_args_get__tile_id(WAPAC_LockScreenCallActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.get_Kind() */
 HRESULT wapac_lock_screen_call_activated_event_args_get__kind(WAPAC_LockScreenCallActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_lock_screen_call_activated_event_args_get__previous_execution_state(WAPAC_LockScreenCallActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_lock_screen_call_activated_event_args_get__splash_screen(WAPAC_LockScreenCallActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.get_CurrentlyShownApplicationViewId() */
 HRESULT wapac_lock_screen_call_activated_event_args_get__currently_shown_application_view_id(WAPAC_LockScreenCallActivatedEventArgs *self, int32_t *value);
 
-/* Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.get_ViewSwitcher() */
 HRESULT wapac_lock_screen_call_activated_event_args_get__view_switcher(WAPAC_LockScreenCallActivatedEventArgs *self, WUIVI_ActivationViewSwitcher** value);
 
-/* activate Windows.ApplicationModel.Activation.LockScreenActivatedEventArgs */
 HRESULT wapac_lock_screen_activated_event_args_new(WAPAC_LockScreenActivatedEventArgs **out);
 
-/* Windows.ApplicationModel.Activation.LockScreenActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.LockScreenActivatedEventArgs.get_Info() */
 HRESULT wapac_lock_screen_activated_event_args_get__info(WAPAC_LockScreenActivatedEventArgs *self, IInspectable** value);
 
-/* Windows.ApplicationModel.Activation.LockScreenActivatedEventArgs.get_Kind() */
 HRESULT wapac_lock_screen_activated_event_args_get__kind(WAPAC_LockScreenActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.LockScreenActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_lock_screen_activated_event_args_get__previous_execution_state(WAPAC_LockScreenActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.LockScreenActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_lock_screen_activated_event_args_get__splash_screen(WAPAC_LockScreenActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
-/* Windows.ApplicationModel.Activation.LockScreenActivatedEventArgs.get_User() */
 HRESULT wapac_lock_screen_activated_event_args_get__user(WAPAC_LockScreenActivatedEventArgs *self, WSY_User** value);
 
-/* Windows.ApplicationModel.Activation.IRestrictedLaunchActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.ISearchActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.ISearchActivatedEventArgsWithLinguisticDetails */
-/* Windows.ApplicationModel.Activation.ISearchActivatedEventArgsWithLinguisticDetails.get_LinguisticDetails() */
 HRESULT wapac_search_activated_event_args_with_linguistic_details_get__linguistic_details(WAPAC_ISearchActivatedEventArgsWithLinguisticDetails *self, WAPSE_SearchPaneQueryLinguisticDetails** value);
 
-/* Windows.ApplicationModel.Activation.IShareTargetActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.ISplashScreen */
-/* Windows.ApplicationModel.Activation.IStartupTaskActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.ITileActivatedInfo */
-/* Windows.ApplicationModel.Activation.IToastNotificationActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IUserDataAccountProviderActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IVoiceCommandActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IWebAccountProviderActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IWebAuthenticationBrokerContinuationEventArgs */
-/* Windows.ApplicationModel.Activation.IProtocolForResultsActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IProtocolActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData */
-/* Windows.ApplicationModel.Activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData.get_CallerPackageFamilyName() */
 HRESULT wapac_protocol_activated_event_args_with_caller_package_family_name_a_get__caller_package_family_name(WAPAC_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData.get_Data() */
 HRESULT wapac_protocol_activated_event_args_with_caller_package_family_name_a_get__data(WAPAC_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData *self, WFOCO_ValueSet** value);
 
-/* Windows.ApplicationModel.Activation.IPrintTaskSettingsActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IPrelaunchActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IPrelaunchActivatedEventArgs.get_PrelaunchActivated() */
 HRESULT wapac_prelaunch_activated_event_args_get__prelaunch_activated(WAPAC_IPrelaunchActivatedEventArgs *self, BOOL *value);
 
-/* Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs2 */
-/* Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs2.get_TileActivatedInfo() */
 HRESULT wapac_launch_activated_event_args_2_get__tile_activated_info(WAPAC_ILaunchActivatedEventArgs_2 *self, WAPAC_TileActivatedInfo** value);
 
-/* Windows.ApplicationModel.Activation.IPrint3DWorkflowActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IPickerReturnedActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IPhoneCallActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IFolderPickerContinuationEventArgs */
-/* Windows.ApplicationModel.Activation.IFileSavePickerContinuationEventArgs */
-/* Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs2 */
-/* Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs2.get_CallerPackageFamilyName() */
 HRESULT wapac_file_save_picker_activated_event_args_2_get__caller_package_family_name(WAPAC_IFileSavePickerActivatedEventArgs_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs2.get_EnterpriseId() */
 HRESULT wapac_file_save_picker_activated_event_args_2_get__enterprise_id(WAPAC_IFileSavePickerActivatedEventArgs_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.IFileOpenPickerContinuationEventArgs */
-/* Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs2 */
-/* Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs2.get_CallerPackageFamilyName() */
 HRESULT wapac_file_open_picker_activated_event_args_2_get__caller_package_family_name(WAPAC_IFileOpenPickerActivatedEventArgs_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.IFileActivatedEventArgsWithNeighboringFiles */
-/* Windows.ApplicationModel.Activation.IFileActivatedEventArgsWithNeighboringFiles.get_NeighboringFilesQuery() */
 HRESULT wapac_file_activated_event_args_with_neighboring_files_get__neighboring_files_query(WAPAC_IFileActivatedEventArgsWithNeighboringFiles *self, WSTSE_StorageFileQueryResult** value);
 
-/* Windows.ApplicationModel.Activation.IFileActivatedEventArgsWithCallerPackageFamilyName */
-/* Windows.ApplicationModel.Activation.IFileActivatedEventArgsWithCallerPackageFamilyName.get_CallerPackageFamilyName() */
 HRESULT wapac_file_activated_event_args_with_caller_package_family_name_get__caller_package_family_name(WAPAC_IFileActivatedEventArgsWithCallerPackageFamilyName *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.IDialReceiverActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IDevicePairingActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IDeviceActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IContactPickerActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IContactPanelActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.ICommandLineActivationOperation */
-/* Windows.ApplicationModel.Activation.ICommandLineActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.ICameraSettingsActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.ICachedFileUpdaterActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IBarcodeScannerPreviewActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IBackgroundActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IAppointmentsProviderShowTimeFrameActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IAppointmentsProviderReplaceAppointmentActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IAppointmentsProviderRemoveAppointmentActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IAppointmentsProviderAddAppointmentActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.ILockScreenCallActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IApplicationViewActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IApplicationViewActivatedEventArgs.get_CurrentlyShownApplicationViewId() */
 HRESULT wapac_application_view_activated_event_args_get__currently_shown_application_view_id(WAPAC_IApplicationViewActivatedEventArgs *self, int32_t *value);
 
-/* Windows.ApplicationModel.Activation.IViewSwitcherProvider */
-/* Windows.ApplicationModel.Activation.IViewSwitcherProvider.get_ViewSwitcher() */
 HRESULT wapac_view_switcher_provider_get__view_switcher(WAPAC_IViewSwitcherProvider *self, WUIVI_ActivationViewSwitcher** value);
 
-/* Windows.ApplicationModel.Activation.ILockScreenActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser */
-/* Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser.get_User() */
 HRESULT wapac_activated_event_args_with_user_get__user(WAPAC_IActivatedEventArgsWithUser *self, WSY_User** value);
 
-/* Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs.get_ContinuationData() */
 HRESULT wapac_continuation_activated_event_args_get__continuation_data(WAPAC_IContinuationActivatedEventArgs *self, WFOCO_ValueSet** value);
 
-/* Windows.ApplicationModel.Activation.IFileActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IContactActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IContactActivatedEventArgs.get_Verb() */
 HRESULT wapac_contact_activated_event_args_get__verb(WAPAC_IContactActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs.get_Verb() */
 HRESULT wapac_appointments_provider_activated_event_args_get__verb(WAPAC_IAppointmentsProviderActivatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IActivatedEventArgs */
-/* Windows.ApplicationModel.Activation.IActivatedEventArgs.get_Kind() */
 HRESULT wapac_activated_event_args_get__kind(WAPAC_IActivatedEventArgs *self, WAPAC_ActivationKind *value);
 
-/* Windows.ApplicationModel.Activation.IActivatedEventArgs.get_PreviousExecutionState() */
 HRESULT wapac_activated_event_args_get__previous_execution_state(WAPAC_IActivatedEventArgs *self, WAPAC_ApplicationExecutionState *value);
 
-/* Windows.ApplicationModel.Activation.IActivatedEventArgs.get_SplashScreen() */
 HRESULT wapac_activated_event_args_get__splash_screen(WAPAC_IActivatedEventArgs *self, WAPAC_SplashScreen** value);
 
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_ACTIVATION_H */

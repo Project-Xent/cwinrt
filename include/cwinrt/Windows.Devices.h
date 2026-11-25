@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WDEADPR_IAdcControllerProvider
 #define CWINRT_FWD_WDEADPR_IAdcControllerProvider
 typedef struct WDEADPR_IAdcControllerProvider WDEADPR_IAdcControllerProvider;
@@ -34,7 +33,6 @@ typedef struct WDEI2PR_II2cControllerProvider WDEI2PR_II2cControllerProvider;
 typedef struct WDESPPR_ISpiControllerProvider WDESPPR_ISpiControllerProvider;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDE_ILowLevelDevicesAggregateProviderFactory WDE_ILowLevelDevicesAggregateProviderFactory;
 typedef struct WDE_ILowLevelDevicesControllerStatics WDE_ILowLevelDevicesControllerStatics;
 typedef struct WDE_LowLevelDevicesAggregateProvider WDE_LowLevelDevicesAggregateProvider;
@@ -42,7 +40,6 @@ typedef struct WDE_LowLevelDevicesController WDE_LowLevelDevicesController;
 typedef struct WDE_ILowLevelDevicesAggregateProvider WDE_ILowLevelDevicesAggregateProvider;
 typedef struct WDE_ILowLevelDevicesController WDE_ILowLevelDevicesController;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WDEADPR_IAdcControllerProvider
 #define CWINRT_FWD_WDEADPR_IAdcControllerProvider
 typedef struct WDEADPR_IAdcControllerProvider WDEADPR_IAdcControllerProvider;
@@ -64,7 +61,6 @@ typedef struct WDEI2PR_II2cControllerProvider WDEI2PR_II2cControllerProvider;
 typedef struct WDESPPR_ISpiControllerProvider WDESPPR_ISpiControllerProvider;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -85,47 +81,28 @@ static const IID CWINRT_IID_WDE_ILowLevelDevicesAggregateProvider CWINRT_MAYBE_U
 static const IID CWINRT_IID_WDE_ILowLevelDevicesController CWINRT_MAYBE_UNUSED = { 0x2EC23DD4, 0x179B, 0x45DE, { 0x9B, 0x39, 0x3A, 0xE0, 0x25, 0x27, 0xDE, 0x52 } };
 #endif
 
-/* Methods */
-
-/* Windows.Devices.ILowLevelDevicesAggregateProviderFactory */
-/* Windows.Devices.ILowLevelDevicesAggregateProviderFactory.Create(adc, pwm, gpio, i2c, spi) */
 HRESULT wde_low_level_devices_aggregate_provider_factory_create(WDE_ILowLevelDevicesAggregateProviderFactory *self, WDEADPR_IAdcControllerProvider* adc, WDEPWPR_IPwmControllerProvider* pwm, WDEGPPR_IGpioControllerProvider* gpio, WDEI2PR_II2cControllerProvider* i2c, WDESPPR_ISpiControllerProvider* spi, WDE_LowLevelDevicesAggregateProvider** out);
 
-/* Windows.Devices.ILowLevelDevicesControllerStatics */
-/* Windows.Devices.ILowLevelDevicesControllerStatics.get_DefaultProvider() */
 HRESULT wde_low_level_devices_controller_statics_get__default_provider(WDE_ILowLevelDevicesControllerStatics *self, WDE_ILowLevelDevicesAggregateProvider** value);
 
-/* Windows.Devices.ILowLevelDevicesControllerStatics.put_DefaultProvider() */
 HRESULT wde_low_level_devices_controller_statics_put__default_provider(WDE_ILowLevelDevicesControllerStatics *self, WDE_ILowLevelDevicesAggregateProvider* value);
 
-/* activate Windows.Devices.LowLevelDevicesAggregateProvider */
 HRESULT wde_low_level_devices_aggregate_provider_new(WDE_LowLevelDevicesAggregateProvider **out);
 
-/* Windows.Devices.LowLevelDevicesAggregateProvider */
-/* Windows.Devices.LowLevelDevicesAggregateProvider.get_AdcControllerProvider() */
 HRESULT wde_low_level_devices_aggregate_provider_get__adc_controller_provider(WDE_LowLevelDevicesAggregateProvider *self, WDEADPR_IAdcControllerProvider** value);
 
-/* Windows.Devices.LowLevelDevicesAggregateProvider.get_PwmControllerProvider() */
 HRESULT wde_low_level_devices_aggregate_provider_get__pwm_controller_provider(WDE_LowLevelDevicesAggregateProvider *self, WDEPWPR_IPwmControllerProvider** value);
 
-/* Windows.Devices.LowLevelDevicesAggregateProvider.get_GpioControllerProvider() */
 HRESULT wde_low_level_devices_aggregate_provider_get__gpio_controller_provider(WDE_LowLevelDevicesAggregateProvider *self, WDEGPPR_IGpioControllerProvider** value);
 
-/* Windows.Devices.LowLevelDevicesAggregateProvider.get_I2cControllerProvider() */
 HRESULT wde_low_level_devices_aggregate_provider_get__i2c_controller_provider(WDE_LowLevelDevicesAggregateProvider *self, WDEI2PR_II2cControllerProvider** value);
 
-/* Windows.Devices.LowLevelDevicesAggregateProvider.get_SpiControllerProvider() */
 HRESULT wde_low_level_devices_aggregate_provider_get__spi_controller_provider(WDE_LowLevelDevicesAggregateProvider *self, WDESPPR_ISpiControllerProvider** value);
 
-/* activate Windows.Devices.LowLevelDevicesController */
 HRESULT wde_low_level_devices_controller_new(WDE_LowLevelDevicesController **out);
 
-/* Windows.Devices.LowLevelDevicesController */
-/* Windows.Devices.LowLevelDevicesController.get_DefaultProvider() */
 HRESULT wde_low_level_devices_controller_get__default_provider(WDE_ILowLevelDevicesAggregateProvider** value);
 
-/* Windows.Devices.LowLevelDevicesController.put_DefaultProvider() */
 HRESULT wde_low_level_devices_controller_put__default_provider(WDE_ILowLevelDevicesAggregateProvider* value);
 
-/* Windows.Devices.ILowLevelDevicesAggregateProvider */
 #endif /* CWINRT_WINDOWS_DEVICES_H */

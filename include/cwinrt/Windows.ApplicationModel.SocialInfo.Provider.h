@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.ApplicationModel.SocialInfo.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WAPSOPR_SocialDashboardItemUpdater WAPSOPR_SocialDashboardItemUpdater;
 typedef struct WAPSOPR_ISocialInfoProviderManagerStatics WAPSOPR_ISocialInfoProviderManagerStatics;
 typedef struct WAPSOPR_SocialFeedUpdater WAPSOPR_SocialFeedUpdater;
@@ -21,7 +20,6 @@ typedef struct WAPSOPR_SocialInfoProviderManager WAPSOPR_SocialInfoProviderManag
 typedef struct WAPSOPR_ISocialDashboardItemUpdater WAPSOPR_ISocialDashboardItemUpdater;
 typedef struct WAPSOPR_ISocialFeedUpdater WAPSOPR_ISocialFeedUpdater;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WAPSO_SocialFeedContent
 #define CWINRT_FWD_WAPSO_SocialFeedContent
 typedef struct WAPSO_SocialFeedContent WAPSO_SocialFeedContent;
@@ -76,7 +74,6 @@ typedef struct WF_IAsyncOperation_Bool WF_IAsyncOperation_Bool;
 typedef struct WFOCO_IVector_WAPSO_SocialFeedItem WFOCO_IVector_WAPSO_SocialFeedItem;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -93,96 +90,60 @@ static const IID CWINRT_IID_WAPSOPR_ISocialDashboardItemUpdater CWINRT_MAYBE_UNU
 static const IID CWINRT_IID_WAPSOPR_ISocialFeedUpdater CWINRT_MAYBE_UNUSED = { 0x7A0C0AA7, 0xED89, 0x4BD5, { 0xA8, 0xD9, 0x15, 0xF4, 0xD9, 0x86, 0x1C, 0x10 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater */
 HRESULT wapsopr_social_dashboard_item_updater_new(WAPSOPR_SocialDashboardItemUpdater **out);
 
-/* Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater */
-/* Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater.get_OwnerRemoteId() */
 HRESULT wapsopr_social_dashboard_item_updater_get__owner_remote_id(WAPSOPR_SocialDashboardItemUpdater *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater.get_Content() */
 HRESULT wapsopr_social_dashboard_item_updater_get__content(WAPSOPR_SocialDashboardItemUpdater *self, WAPSO_SocialFeedContent** value);
 
-/* Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater.get_Timestamp() */
 HRESULT wapsopr_social_dashboard_item_updater_get__timestamp(WAPSOPR_SocialDashboardItemUpdater *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater.put_Timestamp() */
 HRESULT wapsopr_social_dashboard_item_updater_put__timestamp(WAPSOPR_SocialDashboardItemUpdater *self, WF_DateTime value);
 
-/* Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater.put_Thumbnail() */
 HRESULT wapsopr_social_dashboard_item_updater_put__thumbnail(WAPSOPR_SocialDashboardItemUpdater *self, WAPSO_SocialItemThumbnail* value);
 
-/* Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater.get_Thumbnail() */
 HRESULT wapsopr_social_dashboard_item_updater_get__thumbnail(WAPSOPR_SocialDashboardItemUpdater *self, WAPSO_SocialItemThumbnail** value);
 
-/* Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater.CommitAsync() */
 HRESULT wapsopr_social_dashboard_item_updater_commit_async(WAPSOPR_SocialDashboardItemUpdater *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater.get_TargetUri() */
 HRESULT wapsopr_social_dashboard_item_updater_get__target_uri(WAPSOPR_SocialDashboardItemUpdater *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater.put_TargetUri() */
 HRESULT wapsopr_social_dashboard_item_updater_put__target_uri(WAPSOPR_SocialDashboardItemUpdater *self, WF_Uri* value);
 
-/* Windows.ApplicationModel.SocialInfo.Provider.ISocialInfoProviderManagerStatics */
-/* Windows.ApplicationModel.SocialInfo.Provider.ISocialInfoProviderManagerStatics.CreateSocialFeedUpdaterAsync(kind, mode, ownerRemoteId) */
 HRESULT wapsopr_social_info_provider_manager_statics_create_social_feed_updater_async(WAPSOPR_ISocialInfoProviderManagerStatics *self, WAPSO_SocialFeedKind kind, WAPSO_SocialFeedUpdateMode mode, cwinrt_hstring ownerRemoteId, WF_IAsyncOperation_WAPSOPR_SocialFeedUpdater** out);
 
-/* Windows.ApplicationModel.SocialInfo.Provider.ISocialInfoProviderManagerStatics.CreateDashboardItemUpdaterAsync(ownerRemoteId) */
 HRESULT wapsopr_social_info_provider_manager_statics_create_dashboard_item_updater_async(WAPSOPR_ISocialInfoProviderManagerStatics *self, cwinrt_hstring ownerRemoteId, WF_IAsyncOperation_WAPSOPR_SocialDashboardItemUpdater** out);
 
-/* Windows.ApplicationModel.SocialInfo.Provider.ISocialInfoProviderManagerStatics.UpdateBadgeCountValue(itemRemoteId, newCount) */
 HRESULT wapsopr_social_info_provider_manager_statics_update_badge_count_value(WAPSOPR_ISocialInfoProviderManagerStatics *self, cwinrt_hstring itemRemoteId, int32_t newCount);
 
-/* Windows.ApplicationModel.SocialInfo.Provider.ISocialInfoProviderManagerStatics.ReportNewContentAvailable(contactRemoteId, kind) */
 HRESULT wapsopr_social_info_provider_manager_statics_report_new_content_available(WAPSOPR_ISocialInfoProviderManagerStatics *self, cwinrt_hstring contactRemoteId, WAPSO_SocialFeedKind kind);
 
-/* Windows.ApplicationModel.SocialInfo.Provider.ISocialInfoProviderManagerStatics.ProvisionAsync() */
 HRESULT wapsopr_social_info_provider_manager_statics_provision_async(WAPSOPR_ISocialInfoProviderManagerStatics *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.SocialInfo.Provider.ISocialInfoProviderManagerStatics.DeprovisionAsync() */
 HRESULT wapsopr_social_info_provider_manager_statics_deprovision_async(WAPSOPR_ISocialInfoProviderManagerStatics *self, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.SocialInfo.Provider.SocialFeedUpdater */
 HRESULT wapsopr_social_feed_updater_new(WAPSOPR_SocialFeedUpdater **out);
 
-/* Windows.ApplicationModel.SocialInfo.Provider.SocialFeedUpdater */
-/* Windows.ApplicationModel.SocialInfo.Provider.SocialFeedUpdater.get_OwnerRemoteId() */
 HRESULT wapsopr_social_feed_updater_get__owner_remote_id(WAPSOPR_SocialFeedUpdater *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.SocialInfo.Provider.SocialFeedUpdater.get_Kind() */
 HRESULT wapsopr_social_feed_updater_get__kind(WAPSOPR_SocialFeedUpdater *self, WAPSO_SocialFeedKind *value);
 
-/* Windows.ApplicationModel.SocialInfo.Provider.SocialFeedUpdater.get_Items() */
 HRESULT wapsopr_social_feed_updater_get__items(WAPSOPR_SocialFeedUpdater *self, WFOCO_IVector_WAPSO_SocialFeedItem** value);
 
-/* Windows.ApplicationModel.SocialInfo.Provider.SocialFeedUpdater.CommitAsync() */
 HRESULT wapsopr_social_feed_updater_commit_async(WAPSOPR_SocialFeedUpdater *self, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager */
 HRESULT wapsopr_social_info_provider_manager_new(WAPSOPR_SocialInfoProviderManager **out);
 
-/* Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager */
-/* Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager.CreateSocialFeedUpdaterAsync(kind, mode, ownerRemoteId) */
 HRESULT wapsopr_social_info_provider_manager_create_social_feed_updater_async(WAPSO_SocialFeedKind kind, WAPSO_SocialFeedUpdateMode mode, cwinrt_hstring ownerRemoteId, WF_IAsyncOperation_WAPSOPR_SocialFeedUpdater** out);
 
-/* Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager.CreateDashboardItemUpdaterAsync(ownerRemoteId) */
 HRESULT wapsopr_social_info_provider_manager_create_dashboard_item_updater_async(cwinrt_hstring ownerRemoteId, WF_IAsyncOperation_WAPSOPR_SocialDashboardItemUpdater** out);
 
-/* Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager.UpdateBadgeCountValue(itemRemoteId, newCount) */
 HRESULT wapsopr_social_info_provider_manager_update_badge_count_value(cwinrt_hstring itemRemoteId, int32_t newCount);
 
-/* Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager.ReportNewContentAvailable(contactRemoteId, kind) */
 HRESULT wapsopr_social_info_provider_manager_report_new_content_available(cwinrt_hstring contactRemoteId, WAPSO_SocialFeedKind kind);
 
-/* Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager.ProvisionAsync() */
 HRESULT wapsopr_social_info_provider_manager_provision_async(WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager.DeprovisionAsync() */
 HRESULT wapsopr_social_info_provider_manager_deprovision_async(WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.SocialInfo.Provider.ISocialDashboardItemUpdater */
-/* Windows.ApplicationModel.SocialInfo.Provider.ISocialFeedUpdater */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_SOCIALINFO_PROVIDER_H */

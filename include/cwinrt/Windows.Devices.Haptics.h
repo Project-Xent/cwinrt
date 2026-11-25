@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WDEHA_IKnownSimpleHapticsControllerWaveformsStatics_3 WDEHA_IKnownSimpleHapticsControllerWaveformsStatics_3;
 typedef struct WDEHA_IVibrationDeviceStatics WDEHA_IVibrationDeviceStatics;
 typedef struct WDEHA_InputHapticsManager WDEHA_InputHapticsManager;
@@ -28,7 +27,6 @@ typedef struct WDEHA_ISimpleHapticsController WDEHA_ISimpleHapticsController;
 typedef struct WDEHA_ISimpleHapticsControllerFeedback WDEHA_ISimpleHapticsControllerFeedback;
 typedef struct WDEHA_IVibrationDevice WDEHA_IVibrationDevice;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WDEHA_VibrationAccessStatus
 #define CWINRT_FWD_WF_IAsyncOperation_WDEHA_VibrationAccessStatus
 typedef struct WF_IAsyncOperation_WDEHA_VibrationAccessStatus WF_IAsyncOperation_WDEHA_VibrationAccessStatus;
@@ -82,7 +80,6 @@ struct WDEHA_HapticsControllerOverrideToken {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -123,278 +120,176 @@ static const IID CWINRT_IID_WDEHA_ISimpleHapticsControllerFeedback CWINRT_MAYBE_
 static const IID CWINRT_IID_WDEHA_IVibrationDevice CWINRT_MAYBE_UNUSED = { 0x40F21A3E, 0x8844, 0x47FF, { 0xB3, 0x12, 0x06, 0x18, 0x5A, 0x38, 0x44, 0xDA } };
 #endif
 
-/* Methods */
-
-/* Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics3 */
-/* Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics3.get_Collide() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_statics_3_get__collide(WDEHA_IKnownSimpleHapticsControllerWaveformsStatics_3 *self, uint16_t *value);
 
-/* Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics3.get_Align() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_statics_3_get__align(WDEHA_IKnownSimpleHapticsControllerWaveformsStatics_3 *self, uint16_t *value);
 
-/* Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics3.get_Step() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_statics_3_get__step(WDEHA_IKnownSimpleHapticsControllerWaveformsStatics_3 *self, uint16_t *value);
 
-/* Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics3.get_Grow() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_statics_3_get__grow(WDEHA_IKnownSimpleHapticsControllerWaveformsStatics_3 *self, uint16_t *value);
 
-/* Windows.Devices.Haptics.IVibrationDeviceStatics */
-/* Windows.Devices.Haptics.IVibrationDeviceStatics.RequestAccessAsync() */
 HRESULT wdeha_vibration_device_statics_request_access_async(WDEHA_IVibrationDeviceStatics *self, WF_IAsyncOperation_WDEHA_VibrationAccessStatus** out);
 
-/* Windows.Devices.Haptics.IVibrationDeviceStatics.GetDeviceSelector() */
 HRESULT wdeha_vibration_device_statics_get_device_selector(WDEHA_IVibrationDeviceStatics *self, cwinrt_hstring *out);
 
-/* Windows.Devices.Haptics.IVibrationDeviceStatics.FromIdAsync(deviceId) */
 HRESULT wdeha_vibration_device_statics_from_id_async(WDEHA_IVibrationDeviceStatics *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDEHA_VibrationDevice** out);
 
-/* Windows.Devices.Haptics.IVibrationDeviceStatics.GetDefaultAsync() */
 HRESULT wdeha_vibration_device_statics_get_default_async(WDEHA_IVibrationDeviceStatics *self, WF_IAsyncOperation_WDEHA_VibrationDevice** out);
 
-/* Windows.Devices.Haptics.IVibrationDeviceStatics.FindAllAsync() */
 HRESULT wdeha_vibration_device_statics_find_all_async(WDEHA_IVibrationDeviceStatics *self, WF_IAsyncOperation_WFOCO_IVectorView_WDEHA_VibrationDevice** out);
 
-/* activate Windows.Devices.Haptics.InputHapticsManager */
 HRESULT wdeha_input_haptics_manager_new(WDEHA_InputHapticsManager **out);
 
-/* Windows.Devices.Haptics.InputHapticsManager */
-/* Windows.Devices.Haptics.InputHapticsManager.get_ThreadId() */
 HRESULT wdeha_input_haptics_manager_get__thread_id(WDEHA_InputHapticsManager *self, uint32_t *value);
 
-/* Windows.Devices.Haptics.InputHapticsManager.get_CurrentHapticsControllerDeviceType() */
 HRESULT wdeha_input_haptics_manager_get__current_haptics_controller_device_type(WDEHA_InputHapticsManager *self, WDEHA_HapticDeviceType *value);
 
-/* Windows.Devices.Haptics.InputHapticsManager.get_CurrentHapticsController() */
 HRESULT wdeha_input_haptics_manager_get__current_haptics_controller(WDEHA_InputHapticsManager *self, WDEHA_SimpleHapticsController** value);
 
-/* Windows.Devices.Haptics.InputHapticsManager.TrySendHapticWaveform(waveform, waveformFallback) */
 HRESULT wdeha_input_haptics_manager_try_send_haptic_waveform(WDEHA_InputHapticsManager *self, uint16_t waveform, uint16_t waveformFallback, BOOL *out);
 
-/* Windows.Devices.Haptics.InputHapticsManager.TrySendHapticWaveform(waveform, waveformFallback, intensity) */
 HRESULT wdeha_input_haptics_manager_try_send_haptic_waveform_u16_u16_f64_b(WDEHA_InputHapticsManager *self, uint16_t waveform, uint16_t waveformFallback, double intensity, BOOL *out);
 
-/* Windows.Devices.Haptics.InputHapticsManager.TrySendHapticWaveformForDuration(waveform, waveformFallback, intensity, playDuration) */
 HRESULT wdeha_input_haptics_manager_try_send_haptic_waveform_for_duration(WDEHA_InputHapticsManager *self, uint16_t waveform, uint16_t waveformFallback, double intensity, WF_TimeSpan playDuration, BOOL *out);
 
-/* Windows.Devices.Haptics.InputHapticsManager.TrySendHapticWaveformForPlayCount(waveform, waveformFallback, intensity, playCount, replayPauseInterval) */
 HRESULT wdeha_input_haptics_manager_try_send_haptic_waveform_for_play_count(WDEHA_InputHapticsManager *self, uint16_t waveform, uint16_t waveformFallback, double intensity, int32_t playCount, WF_TimeSpan replayPauseInterval, BOOL *out);
 
-/* Windows.Devices.Haptics.InputHapticsManager.TryStopFeedback() */
 HRESULT wdeha_input_haptics_manager_try_stop_feedback(WDEHA_InputHapticsManager *self, BOOL *out);
 
-/* Windows.Devices.Haptics.InputHapticsManager.SetOverrideHapticsController(deviceType, controller) */
 HRESULT wdeha_input_haptics_manager_set_override_haptics_controller(WDEHA_InputHapticsManager *self, WDEHA_HapticDeviceType deviceType, WDEHA_SimpleHapticsController* controller, WDEHA_HapticsControllerOverrideToken *out);
 
-/* Windows.Devices.Haptics.InputHapticsManager.ClearOverrideHapticsController(token) */
 HRESULT wdeha_input_haptics_manager_clear_override_haptics_controller(WDEHA_InputHapticsManager *self, WDEHA_HapticsControllerOverrideToken token);
 
-/* Windows.Devices.Haptics.InputHapticsManager.IsSupported() */
 HRESULT wdeha_input_haptics_manager_is_supported(BOOL *out);
 
-/* Windows.Devices.Haptics.InputHapticsManager.IsHapticDevicePresent() */
 HRESULT wdeha_input_haptics_manager_is_haptic_device_present(BOOL *out);
 
-/* Windows.Devices.Haptics.InputHapticsManager.GetForCurrentThread() */
 HRESULT wdeha_input_haptics_manager_get_for_current_thread(WDEHA_InputHapticsManager** out);
 
-/* Windows.Devices.Haptics.InputHapticsManager.TryGetForThread(ThreadId) */
 HRESULT wdeha_input_haptics_manager_try_get_for_thread(uint32_t ThreadId, WDEHA_InputHapticsManager** out);
 
-/* activate Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_new(WDEHA_KnownSimpleHapticsControllerWaveforms **out);
 
-/* Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms */
-/* Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms.get_Collide() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_get__collide(uint16_t *value);
 
-/* Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms.get_Align() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_get__align(uint16_t *value);
 
-/* Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms.get_Step() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_get__step(uint16_t *value);
 
-/* Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms.get_Grow() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_get__grow(uint16_t *value);
 
-/* Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms.get_BrushContinuous() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_get__brush_continuous(uint16_t *value);
 
-/* Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms.get_ChiselMarkerContinuous() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_get__chisel_marker_continuous(uint16_t *value);
 
-/* Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms.get_EraserContinuous() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_get__eraser_continuous(uint16_t *value);
 
-/* Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms.get_Error() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_get__error(uint16_t *value);
 
-/* Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms.get_GalaxyPenContinuous() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_get__galaxy_pen_continuous(uint16_t *value);
 
-/* Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms.get_Hover() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_get__hover(uint16_t *value);
 
-/* Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms.get_InkContinuous() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_get__ink_continuous(uint16_t *value);
 
-/* Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms.get_MarkerContinuous() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_get__marker_continuous(uint16_t *value);
 
-/* Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms.get_PencilContinuous() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_get__pencil_continuous(uint16_t *value);
 
-/* Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms.get_Success() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_get__success(uint16_t *value);
 
-/* Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms.get_Click() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_get__click(uint16_t *value);
 
-/* Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms.get_BuzzContinuous() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_get__buzz_continuous(uint16_t *value);
 
-/* Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms.get_RumbleContinuous() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_get__rumble_continuous(uint16_t *value);
 
-/* Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms.get_Press() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_get__press(uint16_t *value);
 
-/* Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms.get_Release() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_get__release(uint16_t *value);
 
-/* activate Windows.Devices.Haptics.SimpleHapticsController */
 HRESULT wdeha_simple_haptics_controller_new(WDEHA_SimpleHapticsController **out);
 
-/* Windows.Devices.Haptics.SimpleHapticsController */
-/* Windows.Devices.Haptics.SimpleHapticsController.get_Id() */
 HRESULT wdeha_simple_haptics_controller_get__id(WDEHA_SimpleHapticsController *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Haptics.SimpleHapticsController.get_SupportedFeedback() */
 HRESULT wdeha_simple_haptics_controller_get__supported_feedback(WDEHA_SimpleHapticsController *self, WFOCO_IVectorView_WDEHA_SimpleHapticsControllerFeedback** value);
 
-/* Windows.Devices.Haptics.SimpleHapticsController.get_IsIntensitySupported() */
 HRESULT wdeha_simple_haptics_controller_get__is_intensity_supported(WDEHA_SimpleHapticsController *self, BOOL *value);
 
-/* Windows.Devices.Haptics.SimpleHapticsController.get_IsPlayCountSupported() */
 HRESULT wdeha_simple_haptics_controller_get__is_play_count_supported(WDEHA_SimpleHapticsController *self, BOOL *value);
 
-/* Windows.Devices.Haptics.SimpleHapticsController.get_IsPlayDurationSupported() */
 HRESULT wdeha_simple_haptics_controller_get__is_play_duration_supported(WDEHA_SimpleHapticsController *self, BOOL *value);
 
-/* Windows.Devices.Haptics.SimpleHapticsController.get_IsReplayPauseIntervalSupported() */
 HRESULT wdeha_simple_haptics_controller_get__is_replay_pause_interval_supported(WDEHA_SimpleHapticsController *self, BOOL *value);
 
-/* Windows.Devices.Haptics.SimpleHapticsController.StopFeedback() */
 HRESULT wdeha_simple_haptics_controller_stop_feedback(WDEHA_SimpleHapticsController *self);
 
-/* Windows.Devices.Haptics.SimpleHapticsController.SendHapticFeedback(feedback) */
 HRESULT wdeha_simple_haptics_controller_send_haptic_feedback(WDEHA_SimpleHapticsController *self, WDEHA_SimpleHapticsControllerFeedback* feedback);
 
-/* Windows.Devices.Haptics.SimpleHapticsController.SendHapticFeedback(feedback, intensity) */
 HRESULT wdeha_simple_haptics_controller_send_haptic_feedback_p_f64(WDEHA_SimpleHapticsController *self, WDEHA_SimpleHapticsControllerFeedback* feedback, double intensity);
 
-/* Windows.Devices.Haptics.SimpleHapticsController.SendHapticFeedbackForDuration(feedback, intensity, playDuration) */
 HRESULT wdeha_simple_haptics_controller_send_haptic_feedback_for_duration(WDEHA_SimpleHapticsController *self, WDEHA_SimpleHapticsControllerFeedback* feedback, double intensity, WF_TimeSpan playDuration);
 
-/* Windows.Devices.Haptics.SimpleHapticsController.SendHapticFeedbackForPlayCount(feedback, intensity, playCount, replayPauseInterval) */
 HRESULT wdeha_simple_haptics_controller_send_haptic_feedback_for_play_count(WDEHA_SimpleHapticsController *self, WDEHA_SimpleHapticsControllerFeedback* feedback, double intensity, int32_t playCount, WF_TimeSpan replayPauseInterval);
 
-/* activate Windows.Devices.Haptics.SimpleHapticsControllerFeedback */
 HRESULT wdeha_simple_haptics_controller_feedback_new(WDEHA_SimpleHapticsControllerFeedback **out);
 
-/* Windows.Devices.Haptics.SimpleHapticsControllerFeedback */
-/* Windows.Devices.Haptics.SimpleHapticsControllerFeedback.get_Waveform() */
 HRESULT wdeha_simple_haptics_controller_feedback_get__waveform(WDEHA_SimpleHapticsControllerFeedback *self, uint16_t *value);
 
-/* Windows.Devices.Haptics.SimpleHapticsControllerFeedback.get_Duration() */
 HRESULT wdeha_simple_haptics_controller_feedback_get__duration(WDEHA_SimpleHapticsControllerFeedback *self, WF_TimeSpan *value);
 
-/* activate Windows.Devices.Haptics.VibrationDevice */
 HRESULT wdeha_vibration_device_new(WDEHA_VibrationDevice **out);
 
-/* Windows.Devices.Haptics.VibrationDevice */
-/* Windows.Devices.Haptics.VibrationDevice.get_Id() */
 HRESULT wdeha_vibration_device_get__id(WDEHA_VibrationDevice *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Haptics.VibrationDevice.get_SimpleHapticsController() */
 HRESULT wdeha_vibration_device_get__simple_haptics_controller(WDEHA_VibrationDevice *self, WDEHA_SimpleHapticsController** value);
 
-/* Windows.Devices.Haptics.VibrationDevice.RequestAccessAsync() */
 HRESULT wdeha_vibration_device_request_access_async(WF_IAsyncOperation_WDEHA_VibrationAccessStatus** out);
 
-/* Windows.Devices.Haptics.VibrationDevice.GetDeviceSelector() */
 HRESULT wdeha_vibration_device_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Devices.Haptics.VibrationDevice.FromIdAsync(deviceId) */
 HRESULT wdeha_vibration_device_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDEHA_VibrationDevice** out);
 
-/* Windows.Devices.Haptics.VibrationDevice.GetDefaultAsync() */
 HRESULT wdeha_vibration_device_get_default_async(WF_IAsyncOperation_WDEHA_VibrationDevice** out);
 
-/* Windows.Devices.Haptics.VibrationDevice.FindAllAsync() */
 HRESULT wdeha_vibration_device_find_all_async(WF_IAsyncOperation_WFOCO_IVectorView_WDEHA_VibrationDevice** out);
 
-/* Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics */
-/* Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics.get_Click() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_statics_get__click(WDEHA_IKnownSimpleHapticsControllerWaveformsStatics *self, uint16_t *value);
 
-/* Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics.get_BuzzContinuous() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_statics_get__buzz_continuous(WDEHA_IKnownSimpleHapticsControllerWaveformsStatics *self, uint16_t *value);
 
-/* Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics.get_RumbleContinuous() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_statics_get__rumble_continuous(WDEHA_IKnownSimpleHapticsControllerWaveformsStatics *self, uint16_t *value);
 
-/* Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics.get_Press() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_statics_get__press(WDEHA_IKnownSimpleHapticsControllerWaveformsStatics *self, uint16_t *value);
 
-/* Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics.get_Release() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_statics_get__release(WDEHA_IKnownSimpleHapticsControllerWaveformsStatics *self, uint16_t *value);
 
-/* Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2 */
-/* Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2.get_BrushContinuous() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_statics_2_get__brush_continuous(WDEHA_IKnownSimpleHapticsControllerWaveformsStatics_2 *self, uint16_t *value);
 
-/* Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2.get_ChiselMarkerContinuous() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_statics_2_get__chisel_marker_continuous(WDEHA_IKnownSimpleHapticsControllerWaveformsStatics_2 *self, uint16_t *value);
 
-/* Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2.get_EraserContinuous() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_statics_2_get__eraser_continuous(WDEHA_IKnownSimpleHapticsControllerWaveformsStatics_2 *self, uint16_t *value);
 
-/* Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2.get_Error() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_statics_2_get__error(WDEHA_IKnownSimpleHapticsControllerWaveformsStatics_2 *self, uint16_t *value);
 
-/* Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2.get_GalaxyPenContinuous() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_statics_2_get__galaxy_pen_continuous(WDEHA_IKnownSimpleHapticsControllerWaveformsStatics_2 *self, uint16_t *value);
 
-/* Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2.get_Hover() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_statics_2_get__hover(WDEHA_IKnownSimpleHapticsControllerWaveformsStatics_2 *self, uint16_t *value);
 
-/* Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2.get_InkContinuous() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_statics_2_get__ink_continuous(WDEHA_IKnownSimpleHapticsControllerWaveformsStatics_2 *self, uint16_t *value);
 
-/* Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2.get_MarkerContinuous() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_statics_2_get__marker_continuous(WDEHA_IKnownSimpleHapticsControllerWaveformsStatics_2 *self, uint16_t *value);
 
-/* Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2.get_PencilContinuous() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_statics_2_get__pencil_continuous(WDEHA_IKnownSimpleHapticsControllerWaveformsStatics_2 *self, uint16_t *value);
 
-/* Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2.get_Success() */
 HRESULT wdeha_known_simple_haptics_controller_waveforms_statics_2_get__success(WDEHA_IKnownSimpleHapticsControllerWaveformsStatics_2 *self, uint16_t *value);
 
-/* Windows.Devices.Haptics.IInputHapticsManagerStatics */
-/* Windows.Devices.Haptics.IInputHapticsManagerStatics.IsSupported() */
 HRESULT wdeha_input_haptics_manager_statics_is_supported(WDEHA_IInputHapticsManagerStatics *self, BOOL *out);
 
-/* Windows.Devices.Haptics.IInputHapticsManagerStatics.IsHapticDevicePresent() */
 HRESULT wdeha_input_haptics_manager_statics_is_haptic_device_present(WDEHA_IInputHapticsManagerStatics *self, BOOL *out);
 
-/* Windows.Devices.Haptics.IInputHapticsManagerStatics.GetForCurrentThread() */
 HRESULT wdeha_input_haptics_manager_statics_get_for_current_thread(WDEHA_IInputHapticsManagerStatics *self, WDEHA_InputHapticsManager** out);
 
-/* Windows.Devices.Haptics.IInputHapticsManagerStatics.TryGetForThread(ThreadId) */
 HRESULT wdeha_input_haptics_manager_statics_try_get_for_thread(WDEHA_IInputHapticsManagerStatics *self, uint32_t ThreadId, WDEHA_InputHapticsManager** out);
 
-/* Windows.Devices.Haptics.IInputHapticsManager */
-/* Windows.Devices.Haptics.ISimpleHapticsController */
-/* Windows.Devices.Haptics.ISimpleHapticsControllerFeedback */
-/* Windows.Devices.Haptics.IVibrationDevice */
 #endif /* CWINRT_WINDOWS_DEVICES_HAPTICS_H */

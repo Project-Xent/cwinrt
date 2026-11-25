@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IInputStream
 #define CWINRT_FWD_WSTST_IInputStream
 typedef struct WSTST_IInputStream WSTST_IInputStream;
@@ -26,7 +25,6 @@ typedef struct WMEAU_AudioDeviceInputNode WMEAU_AudioDeviceInputNode;
 typedef struct WMEAU_AudioGraph WMEAU_AudioGraph;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPCO_IConversationalAgentSessionStatics WAPCO_IConversationalAgentSessionStatics;
 typedef struct WAPCO_IConversationalAgentDetectorManagerStatics WAPCO_IConversationalAgentDetectorManagerStatics;
 typedef struct WAPCO_DetectionConfigurationAvailabilityInfo WAPCO_DetectionConfigurationAvailabilityInfo;
@@ -58,7 +56,6 @@ typedef struct WAPCO_IActivationSignalDetectionConfigurationCreationResult WAPCO
 typedef struct WAPCO_IActivationSignalDetectionConfiguration WAPCO_IActivationSignalDetectionConfiguration;
 typedef struct WAPCO_IActivationSignalDetectionConfiguration_2 WAPCO_IActivationSignalDetectionConfiguration_2;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WAPCO_ConversationalAgentSession
 #define CWINRT_FWD_WF_IAsyncOperation_WAPCO_ConversationalAgentSession
 typedef struct WF_IAsyncOperation_WAPCO_ConversationalAgentSession WF_IAsyncOperation_WAPCO_ConversationalAgentSession;
@@ -407,7 +404,6 @@ typedef enum WAPCO_SignalDetectorResourceKind {
 } WAPCO_SignalDetectorResourceKind;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -488,214 +484,138 @@ static const IID CWINRT_IID_WAPCO_IActivationSignalDetectionConfiguration CWINRT
 static const IID CWINRT_IID_WAPCO_IActivationSignalDetectionConfiguration_2 CWINRT_MAYBE_UNUSED = { 0x71D9B022, 0x562C, 0x57CE, { 0xA7, 0x8B, 0x8B, 0x4F, 0xF0, 0x14, 0x5B, 0xAB } };
 #endif
 
-/* Methods */
-
-/* Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSessionStatics */
-/* Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSessionStatics.GetCurrentSessionAsync() */
 HRESULT wapco_conversational_agent_session_statics_get_current_session_async(WAPCO_IConversationalAgentSessionStatics *self, WF_IAsyncOperation_WAPCO_ConversationalAgentSession** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSessionStatics.GetCurrentSessionSync() */
 HRESULT wapco_conversational_agent_session_statics_get_current_session_sync(WAPCO_IConversationalAgentSessionStatics *self, WAPCO_ConversationalAgentSession** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManagerStatics */
-/* Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManagerStatics.get_Default() */
 HRESULT wapco_conversational_agent_detector_manager_statics_get__default(WAPCO_IConversationalAgentDetectorManagerStatics *self, WAPCO_ConversationalAgentDetectorManager** value);
 
-/* activate Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityInfo */
 HRESULT wapco_detection_configuration_availability_info_new(WAPCO_DetectionConfigurationAvailabilityInfo **out);
 
-/* Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityInfo */
-/* Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityInfo.get_IsEnabled() */
 HRESULT wapco_detection_configuration_availability_info_get__is_enabled(WAPCO_DetectionConfigurationAvailabilityInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityInfo.get_HasSystemResourceAccess() */
 HRESULT wapco_detection_configuration_availability_info_get__has_system_resource_access(WAPCO_DetectionConfigurationAvailabilityInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityInfo.get_HasPermission() */
 HRESULT wapco_detection_configuration_availability_info_get__has_permission(WAPCO_DetectionConfigurationAvailabilityInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityInfo.get_HasLockScreenPermission() */
 HRESULT wapco_detection_configuration_availability_info_get__has_lock_screen_permission(WAPCO_DetectionConfigurationAvailabilityInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityInfo.get_UnavailableSystemResources() */
 HRESULT wapco_detection_configuration_availability_info_get__unavailable_system_resources(WAPCO_DetectionConfigurationAvailabilityInfo *self, WFOCO_IVectorView_WAPCO_SignalDetectorResourceKind** value);
 
-/* activate Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangedEventArgs */
 HRESULT wapco_detection_configuration_availability_changed_event_args_new(WAPCO_DetectionConfigurationAvailabilityChangedEventArgs **out);
 
-/* Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangedEventArgs */
-/* Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangedEventArgs.get_Kind() */
 HRESULT wapco_detection_configuration_availability_changed_event_args_get__kind(WAPCO_DetectionConfigurationAvailabilityChangedEventArgs *self, WAPCO_DetectionConfigurationAvailabilityChangeKind *value);
 
-/* activate Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangedEventArgs */
 HRESULT wapco_conversational_agent_system_state_changed_event_args_new(WAPCO_ConversationalAgentSystemStateChangedEventArgs **out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangedEventArgs */
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangedEventArgs.get_SystemStateChangeType() */
 HRESULT wapco_conversational_agent_system_state_changed_event_args_get__system_state_change_type(WAPCO_ConversationalAgentSystemStateChangedEventArgs *self, WAPCO_ConversationalAgentSystemStateChangeType *value);
 
-/* activate Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal */
 HRESULT wapco_conversational_agent_signal_new(WAPCO_ConversationalAgentSignal **out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal */
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal.get_IsSignalVerificationRequired() */
 HRESULT wapco_conversational_agent_signal_get__is_signal_verification_required(WAPCO_ConversationalAgentSignal *self, BOOL *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal.put_IsSignalVerificationRequired() */
 HRESULT wapco_conversational_agent_signal_put__is_signal_verification_required(WAPCO_ConversationalAgentSignal *self, BOOL value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal.get_SignalId() */
 HRESULT wapco_conversational_agent_signal_get__signal_id(WAPCO_ConversationalAgentSignal *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal.put_SignalId() */
 HRESULT wapco_conversational_agent_signal_put__signal_id(WAPCO_ConversationalAgentSignal *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal.get_SignalName() */
 HRESULT wapco_conversational_agent_signal_get__signal_name(WAPCO_ConversationalAgentSignal *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal.put_SignalName() */
 HRESULT wapco_conversational_agent_signal_put__signal_name(WAPCO_ConversationalAgentSignal *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal.get_SignalContext() */
 HRESULT wapco_conversational_agent_signal_get__signal_context(WAPCO_ConversationalAgentSignal *self, IInspectable** value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal.put_SignalContext() */
 HRESULT wapco_conversational_agent_signal_put__signal_context(WAPCO_ConversationalAgentSignal *self, IInspectable* value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal.get_SignalStart() */
 HRESULT wapco_conversational_agent_signal_get__signal_start(WAPCO_ConversationalAgentSignal *self, WF_TimeSpan *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal.put_SignalStart() */
 HRESULT wapco_conversational_agent_signal_put__signal_start(WAPCO_ConversationalAgentSignal *self, WF_TimeSpan value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal.get_SignalEnd() */
 HRESULT wapco_conversational_agent_signal_get__signal_end(WAPCO_ConversationalAgentSignal *self, WF_TimeSpan *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal.put_SignalEnd() */
 HRESULT wapco_conversational_agent_signal_put__signal_end(WAPCO_ConversationalAgentSignal *self, WF_TimeSpan value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal.get_DetectorId() */
 HRESULT wapco_conversational_agent_signal_get__detector_id(WAPCO_ConversationalAgentSignal *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal.get_DetectorKind() */
 HRESULT wapco_conversational_agent_signal_get__detector_kind(WAPCO_ConversationalAgentSignal *self, WAPCO_ActivationSignalDetectorKind *value);
 
-/* activate Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession */
 HRESULT wapco_conversational_agent_session_new(WAPCO_ConversationalAgentSession **out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession */
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.get_AgentState() */
 HRESULT wapco_conversational_agent_session_get__agent_state(WAPCO_ConversationalAgentSession *self, WAPCO_ConversationalAgentState *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.get_Signal() */
 HRESULT wapco_conversational_agent_session_get__signal(WAPCO_ConversationalAgentSession *self, WAPCO_ConversationalAgentSignal** value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.get_IsIndicatorLightAvailable() */
 HRESULT wapco_conversational_agent_session_get__is_indicator_light_available(WAPCO_ConversationalAgentSession *self, BOOL *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.get_IsScreenAvailable() */
 HRESULT wapco_conversational_agent_session_get__is_screen_available(WAPCO_ConversationalAgentSession *self, BOOL *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.get_IsUserAuthenticated() */
 HRESULT wapco_conversational_agent_session_get__is_user_authenticated(WAPCO_ConversationalAgentSession *self, BOOL *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.get_IsVoiceActivationAvailable() */
 HRESULT wapco_conversational_agent_session_get__is_voice_activation_available(WAPCO_ConversationalAgentSession *self, BOOL *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.get_IsInterruptible() */
 HRESULT wapco_conversational_agent_session_get__is_interruptible(WAPCO_ConversationalAgentSession *self, BOOL *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.get_IsInterrupted() */
 HRESULT wapco_conversational_agent_session_get__is_interrupted(WAPCO_ConversationalAgentSession *self, BOOL *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.RequestInterruptibleAsync(interruptible) */
 HRESULT wapco_conversational_agent_session_request_interruptible_async(WAPCO_ConversationalAgentSession *self, BOOL interruptible, WF_IAsyncOperation_WAPCO_ConversationalAgentSessionUpdateResponse** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.RequestInterruptible(interruptible) */
 HRESULT wapco_conversational_agent_session_request_interruptible(WAPCO_ConversationalAgentSession *self, BOOL interruptible, WAPCO_ConversationalAgentSessionUpdateResponse *out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.RequestAgentStateChangeAsync(state) */
 HRESULT wapco_conversational_agent_session_request_agent_state_change_async(WAPCO_ConversationalAgentSession *self, WAPCO_ConversationalAgentState state, WF_IAsyncOperation_WAPCO_ConversationalAgentSessionUpdateResponse** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.RequestAgentStateChange(state) */
 HRESULT wapco_conversational_agent_session_request_agent_state_change(WAPCO_ConversationalAgentSession *self, WAPCO_ConversationalAgentState state, WAPCO_ConversationalAgentSessionUpdateResponse *out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.RequestForegroundActivationAsync() */
 HRESULT wapco_conversational_agent_session_request_foreground_activation_async(WAPCO_ConversationalAgentSession *self, WF_IAsyncOperation_WAPCO_ConversationalAgentSessionUpdateResponse** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.RequestForegroundActivation() */
 HRESULT wapco_conversational_agent_session_request_foreground_activation(WAPCO_ConversationalAgentSession *self, WAPCO_ConversationalAgentSessionUpdateResponse *out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.GetAudioClientAsync() */
 HRESULT wapco_conversational_agent_session_get_audio_client_async(WAPCO_ConversationalAgentSession *self, WF_IAsyncOperation_Object** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.GetAudioClient() */
 HRESULT wapco_conversational_agent_session_get_audio_client(WAPCO_ConversationalAgentSession *self, IInspectable** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.CreateAudioDeviceInputNodeAsync(graph) */
 HRESULT wapco_conversational_agent_session_create_audio_device_input_node_async(WAPCO_ConversationalAgentSession *self, WMEAU_AudioGraph* graph, WF_IAsyncOperation_WMEAU_AudioDeviceInputNode** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.CreateAudioDeviceInputNode(graph) */
 HRESULT wapco_conversational_agent_session_create_audio_device_input_node(WAPCO_ConversationalAgentSession *self, WMEAU_AudioGraph* graph, WMEAU_AudioDeviceInputNode** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.GetAudioCaptureDeviceIdAsync() */
 HRESULT wapco_conversational_agent_session_get_audio_capture_device_id_async(WAPCO_ConversationalAgentSession *self, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.GetAudioCaptureDeviceId() */
 HRESULT wapco_conversational_agent_session_get_audio_capture_device_id(WAPCO_ConversationalAgentSession *self, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.GetAudioRenderDeviceIdAsync() */
 HRESULT wapco_conversational_agent_session_get_audio_render_device_id_async(WAPCO_ConversationalAgentSession *self, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.GetAudioRenderDeviceId() */
 HRESULT wapco_conversational_agent_session_get_audio_render_device_id(WAPCO_ConversationalAgentSession *self, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.GetSignalModelIdAsync() */
 HRESULT wapco_conversational_agent_session_get_signal_model_id_async(WAPCO_ConversationalAgentSession *self, WF_IAsyncOperation_uint32_t** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.GetSignalModelId() */
 HRESULT wapco_conversational_agent_session_get_signal_model_id(WAPCO_ConversationalAgentSession *self, uint32_t *out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.SetSignalModelIdAsync(signalModelId) */
 HRESULT wapco_conversational_agent_session_set_signal_model_id_async(WAPCO_ConversationalAgentSession *self, uint32_t signalModelId, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.SetSignalModelId(signalModelId) */
 HRESULT wapco_conversational_agent_session_set_signal_model_id(WAPCO_ConversationalAgentSession *self, uint32_t signalModelId, BOOL *out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.GetSupportedSignalModelIdsAsync() */
 HRESULT wapco_conversational_agent_session_get_supported_signal_model_ids_async(WAPCO_ConversationalAgentSession *self, WF_IAsyncOperation_WFOCO_IVectorView_uint32_t** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.GetSupportedSignalModelIds() */
 HRESULT wapco_conversational_agent_session_get_supported_signal_model_ids(WAPCO_ConversationalAgentSession *self, WFOCO_IVectorView_uint32_t** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.RequestActivationAsync(activationKind) */
 HRESULT wapco_conversational_agent_session_request_activation_async(WAPCO_ConversationalAgentSession *self, WAPCO_ConversationalAgentActivationKind activationKind, WF_IAsyncOperation_WAPCO_ConversationalAgentActivationResult** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.RequestActivation(activationKind) */
 HRESULT wapco_conversational_agent_session_request_activation(WAPCO_ConversationalAgentSession *self, WAPCO_ConversationalAgentActivationKind activationKind, WAPCO_ConversationalAgentActivationResult *out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.SetSupportLockScreenActivationAsync(lockScreenActivationSupported) */
 HRESULT wapco_conversational_agent_session_set_support_lock_screen_activation_async(WAPCO_ConversationalAgentSession *self, BOOL lockScreenActivationSupported, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.SetSupportLockScreenActivation(lockScreenActivationSupported) */
 HRESULT wapco_conversational_agent_session_set_support_lock_screen_activation(WAPCO_ConversationalAgentSession *self, BOOL lockScreenActivationSupported);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.GetMissingPrerequisites() */
 HRESULT wapco_conversational_agent_session_get_missing_prerequisites(WAPCO_ConversationalAgentSession *self, WFOCO_IVectorView_WAPCO_ConversationalAgentVoiceActivationPrerequisiteKind** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.GetMissingPrerequisitesAsync() */
 HRESULT wapco_conversational_agent_session_get_missing_prerequisites_async(WAPCO_ConversationalAgentSession *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPCO_ConversationalAgentVoiceActivationPrerequisiteKind** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.Close() */
 HRESULT wapco_conversational_agent_session_close(WAPCO_ConversationalAgentSession *self);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.GetCurrentSessionAsync() */
 HRESULT wapco_conversational_agent_session_get_current_session_async(WF_IAsyncOperation_WAPCO_ConversationalAgentSession** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession.GetCurrentSessionSync() */
 HRESULT wapco_conversational_agent_session_get_current_session_sync(WAPCO_ConversationalAgentSession** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapco_conversational_agent_session_on_session_interrupted(WAPCO_ConversationalAgentSession *self, cwinrt_event_fn fn, void *ctx);
@@ -707,290 +627,183 @@ void wapco_conversational_agent_session_off_signal_detected(WAPCO_Conversational
 cwinrt_token wapco_conversational_agent_session_on_system_state_changed(WAPCO_ConversationalAgentSession *self, cwinrt_event_fn fn, void *ctx);
 void wapco_conversational_agent_session_off_system_state_changed(WAPCO_ConversationalAgentSession *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager */
 HRESULT wapco_conversational_agent_detector_manager_new(WAPCO_ConversationalAgentDetectorManager **out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager */
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager.GetAllActivationSignalDetectors() */
 HRESULT wapco_conversational_agent_detector_manager_get_all_activation_signal_detectors(WAPCO_ConversationalAgentDetectorManager *self, WFOCO_IVectorView_WAPCO_ActivationSignalDetector** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager.GetAllActivationSignalDetectorsAsync() */
 HRESULT wapco_conversational_agent_detector_manager_get_all_activation_signal_detectors_async(WAPCO_ConversationalAgentDetectorManager *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPCO_ActivationSignalDetector** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager.GetActivationSignalDetectors(kind) */
 HRESULT wapco_conversational_agent_detector_manager_get_activation_signal_detectors(WAPCO_ConversationalAgentDetectorManager *self, WAPCO_ActivationSignalDetectorKind kind, WFOCO_IVectorView_WAPCO_ActivationSignalDetector** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager.GetActivationSignalDetectorsAsync(kind) */
 HRESULT wapco_conversational_agent_detector_manager_get_activation_signal_detectors_async(WAPCO_ConversationalAgentDetectorManager *self, WAPCO_ActivationSignalDetectorKind kind, WF_IAsyncOperation_WFOCO_IVectorView_WAPCO_ActivationSignalDetector** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager.GetActivationSignalDetectorFromId(detectorId) */
 HRESULT wapco_conversational_agent_detector_manager_get_activation_signal_detector_from_id(WAPCO_ConversationalAgentDetectorManager *self, cwinrt_hstring detectorId, WAPCO_ActivationSignalDetector** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager.GetActivationSignalDetectorFromIdAsync(detectorId) */
 HRESULT wapco_conversational_agent_detector_manager_get_activation_signal_detector_from_id_async(WAPCO_ConversationalAgentDetectorManager *self, cwinrt_hstring detectorId, WF_IAsyncOperation_WAPCO_ActivationSignalDetector** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager.get_Default() */
 HRESULT wapco_conversational_agent_detector_manager_get__default(WAPCO_ConversationalAgentDetectorManager** value);
 
-/* activate Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector */
 HRESULT wapco_activation_signal_detector_new(WAPCO_ActivationSignalDetector **out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector */
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector.get_ProviderId() */
 HRESULT wapco_activation_signal_detector_get__provider_id(WAPCO_ActivationSignalDetector *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector.get_Kind() */
 HRESULT wapco_activation_signal_detector_get__kind(WAPCO_ActivationSignalDetector *self, WAPCO_ActivationSignalDetectorKind *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector.get_CanCreateConfigurations() */
 HRESULT wapco_activation_signal_detector_get__can_create_configurations(WAPCO_ActivationSignalDetector *self, BOOL *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector.get_SupportedModelDataTypes() */
 HRESULT wapco_activation_signal_detector_get__supported_model_data_types(WAPCO_ActivationSignalDetector *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector.get_SupportedTrainingDataFormats() */
 HRESULT wapco_activation_signal_detector_get__supported_training_data_formats(WAPCO_ActivationSignalDetector *self, WFOCO_IVectorView_WAPCO_ActivationSignalDetectionTrainingDataFormat** value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector.get_SupportedPowerStates() */
 HRESULT wapco_activation_signal_detector_get__supported_power_states(WAPCO_ActivationSignalDetector *self, WFOCO_IVectorView_WAPCO_ActivationSignalDetectorPowerState** value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector.GetSupportedModelIdsForSignalId(signalId) */
 HRESULT wapco_activation_signal_detector_get_supported_model_ids_for_signal_id(WAPCO_ActivationSignalDetector *self, cwinrt_hstring signalId, WFOCO_IVectorView_HSTRING** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector.GetSupportedModelIdsForSignalIdAsync(signalId) */
 HRESULT wapco_activation_signal_detector_get_supported_model_ids_for_signal_id_async(WAPCO_ActivationSignalDetector *self, cwinrt_hstring signalId, WF_IAsyncOperation_WFOCO_IVectorView_HSTRING** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector.CreateConfiguration(signalId, modelId, displayName) */
 HRESULT wapco_activation_signal_detector_create_configuration(WAPCO_ActivationSignalDetector *self, cwinrt_hstring signalId, cwinrt_hstring modelId, cwinrt_hstring displayName);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector.CreateConfigurationAsync(signalId, modelId, displayName) */
 HRESULT wapco_activation_signal_detector_create_configuration_async(WAPCO_ActivationSignalDetector *self, cwinrt_hstring signalId, cwinrt_hstring modelId, cwinrt_hstring displayName, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector.GetConfigurations() */
 HRESULT wapco_activation_signal_detector_get_configurations(WAPCO_ActivationSignalDetector *self, WFOCO_IVectorView_WAPCO_ActivationSignalDetectionConfiguration** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector.GetConfigurationsAsync() */
 HRESULT wapco_activation_signal_detector_get_configurations_async(WAPCO_ActivationSignalDetector *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPCO_ActivationSignalDetectionConfiguration** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector.GetConfiguration(signalId, modelId) */
 HRESULT wapco_activation_signal_detector_get_configuration(WAPCO_ActivationSignalDetector *self, cwinrt_hstring signalId, cwinrt_hstring modelId, WAPCO_ActivationSignalDetectionConfiguration** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector.GetConfigurationAsync(signalId, modelId) */
 HRESULT wapco_activation_signal_detector_get_configuration_async(WAPCO_ActivationSignalDetector *self, cwinrt_hstring signalId, cwinrt_hstring modelId, WF_IAsyncOperation_WAPCO_ActivationSignalDetectionConfiguration** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector.RemoveConfiguration(signalId, modelId) */
 HRESULT wapco_activation_signal_detector_remove_configuration(WAPCO_ActivationSignalDetector *self, cwinrt_hstring signalId, cwinrt_hstring modelId);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector.RemoveConfigurationAsync(signalId, modelId) */
 HRESULT wapco_activation_signal_detector_remove_configuration_async(WAPCO_ActivationSignalDetector *self, cwinrt_hstring signalId, cwinrt_hstring modelId, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector.GetAvailableModelIdsForSignalIdAsync(signalId) */
 HRESULT wapco_activation_signal_detector_get_available_model_ids_for_signal_id_async(WAPCO_ActivationSignalDetector *self, cwinrt_hstring signalId, WF_IAsyncOperation_WFOCO_IVector_HSTRING** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector.GetAvailableModelIdsForSignalId(signalId) */
 HRESULT wapco_activation_signal_detector_get_available_model_ids_for_signal_id(WAPCO_ActivationSignalDetector *self, cwinrt_hstring signalId, WFOCO_IVector_HSTRING** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector.CreateConfigurationWithResultAsync(signalId, modelId, displayName) */
 HRESULT wapco_activation_signal_detector_create_configuration_with_result_async(WAPCO_ActivationSignalDetector *self, cwinrt_hstring signalId, cwinrt_hstring modelId, cwinrt_hstring displayName, WF_IAsyncOperation_WAPCO_ActivationSignalDetectionConfigurationCreationResult** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector.CreateConfigurationWithResult(signalId, modelId, displayName) */
 HRESULT wapco_activation_signal_detector_create_configuration_with_result(WAPCO_ActivationSignalDetector *self, cwinrt_hstring signalId, cwinrt_hstring modelId, cwinrt_hstring displayName, WAPCO_ActivationSignalDetectionConfigurationCreationResult** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector.RemoveConfigurationWithResultAsync(signalId, modelId) */
 HRESULT wapco_activation_signal_detector_remove_configuration_with_result_async(WAPCO_ActivationSignalDetector *self, cwinrt_hstring signalId, cwinrt_hstring modelId, WF_IAsyncOperation_WAPCO_ActivationSignalDetectionConfigurationRemovalResult** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector.RemoveConfigurationWithResult(signalId, modelId) */
 HRESULT wapco_activation_signal_detector_remove_configuration_with_result(WAPCO_ActivationSignalDetector *self, cwinrt_hstring signalId, cwinrt_hstring modelId, WAPCO_ActivationSignalDetectionConfigurationRemovalResult *out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector.get_DetectorId() */
 HRESULT wapco_activation_signal_detector_get__detector_id(WAPCO_ActivationSignalDetector *self, cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult */
 HRESULT wapco_activation_signal_detection_configuration_creation_result_new(WAPCO_ActivationSignalDetectionConfigurationCreationResult **out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult */
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult.get_Status() */
 HRESULT wapco_activation_signal_detection_configuration_creation_result_get__status(WAPCO_ActivationSignalDetectionConfigurationCreationResult *self, WAPCO_ActivationSignalDetectionConfigurationCreationStatus *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult.get_Configuration() */
 HRESULT wapco_activation_signal_detection_configuration_creation_result_get__configuration(WAPCO_ActivationSignalDetectionConfigurationCreationResult *self, WAPCO_ActivationSignalDetectionConfiguration** value);
 
-/* activate Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration */
 HRESULT wapco_activation_signal_detection_configuration_new(WAPCO_ActivationSignalDetectionConfiguration **out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration */
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration.get_SignalId() */
 HRESULT wapco_activation_signal_detection_configuration_get__signal_id(WAPCO_ActivationSignalDetectionConfiguration *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration.get_ModelId() */
 HRESULT wapco_activation_signal_detection_configuration_get__model_id(WAPCO_ActivationSignalDetectionConfiguration *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration.get_DisplayName() */
 HRESULT wapco_activation_signal_detection_configuration_get__display_name(WAPCO_ActivationSignalDetectionConfiguration *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration.get_IsActive() */
 HRESULT wapco_activation_signal_detection_configuration_get__is_active(WAPCO_ActivationSignalDetectionConfiguration *self, BOOL *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration.SetEnabled() */
 HRESULT wapco_activation_signal_detection_configuration_set_enabled(WAPCO_ActivationSignalDetectionConfiguration *self, BOOL value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration.SetEnabledAsync() */
 HRESULT wapco_activation_signal_detection_configuration_set_enabled_async(WAPCO_ActivationSignalDetectionConfiguration *self, BOOL value, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration.get_AvailabilityInfo() */
 HRESULT wapco_activation_signal_detection_configuration_get__availability_info(WAPCO_ActivationSignalDetectionConfiguration *self, WAPCO_DetectionConfigurationAvailabilityInfo** value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration.SetModelData(dataType, data) */
 HRESULT wapco_activation_signal_detection_configuration_set_model_data(WAPCO_ActivationSignalDetectionConfiguration *self, cwinrt_hstring dataType, WSTST_IInputStream* data);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration.SetModelDataAsync(dataType, data) */
 HRESULT wapco_activation_signal_detection_configuration_set_model_data_async(WAPCO_ActivationSignalDetectionConfiguration *self, cwinrt_hstring dataType, WSTST_IInputStream* data, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration.GetModelDataType() */
 HRESULT wapco_activation_signal_detection_configuration_get_model_data_type(WAPCO_ActivationSignalDetectionConfiguration *self, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration.GetModelDataTypeAsync() */
 HRESULT wapco_activation_signal_detection_configuration_get_model_data_type_async(WAPCO_ActivationSignalDetectionConfiguration *self, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration.GetModelData() */
 HRESULT wapco_activation_signal_detection_configuration_get_model_data(WAPCO_ActivationSignalDetectionConfiguration *self, WSTST_IInputStream** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration.GetModelDataAsync() */
 HRESULT wapco_activation_signal_detection_configuration_get_model_data_async(WAPCO_ActivationSignalDetectionConfiguration *self, WF_IAsyncOperation_WSTST_IInputStream** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration.ClearModelData() */
 HRESULT wapco_activation_signal_detection_configuration_clear_model_data(WAPCO_ActivationSignalDetectionConfiguration *self);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration.ClearModelDataAsync() */
 HRESULT wapco_activation_signal_detection_configuration_clear_model_data_async(WAPCO_ActivationSignalDetectionConfiguration *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration.get_TrainingStepsCompleted() */
 HRESULT wapco_activation_signal_detection_configuration_get__training_steps_completed(WAPCO_ActivationSignalDetectionConfiguration *self, uint32_t *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration.get_TrainingStepsRemaining() */
 HRESULT wapco_activation_signal_detection_configuration_get__training_steps_remaining(WAPCO_ActivationSignalDetectionConfiguration *self, uint32_t *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration.get_TrainingDataFormat() */
 HRESULT wapco_activation_signal_detection_configuration_get__training_data_format(WAPCO_ActivationSignalDetectionConfiguration *self, WAPCO_ActivationSignalDetectionTrainingDataFormat *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration.ApplyTrainingData(trainingDataFormat, trainingData) */
 HRESULT wapco_activation_signal_detection_configuration_apply_training_data(WAPCO_ActivationSignalDetectionConfiguration *self, WAPCO_ActivationSignalDetectionTrainingDataFormat trainingDataFormat, WSTST_IInputStream* trainingData, WAPCO_DetectionConfigurationTrainingStatus *out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration.ApplyTrainingDataAsync(trainingDataFormat, trainingData) */
 HRESULT wapco_activation_signal_detection_configuration_apply_training_data_async(WAPCO_ActivationSignalDetectionConfiguration *self, WAPCO_ActivationSignalDetectionTrainingDataFormat trainingDataFormat, WSTST_IInputStream* trainingData, WF_IAsyncOperation_WAPCO_DetectionConfigurationTrainingStatus** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration.ClearTrainingData() */
 HRESULT wapco_activation_signal_detection_configuration_clear_training_data(WAPCO_ActivationSignalDetectionConfiguration *self);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration.ClearTrainingDataAsync() */
 HRESULT wapco_activation_signal_detection_configuration_clear_training_data_async(WAPCO_ActivationSignalDetectionConfiguration *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration.Close() */
 HRESULT wapco_activation_signal_detection_configuration_close(WAPCO_ActivationSignalDetectionConfiguration *self);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration.SetModelDataWithResult(dataType, data) */
 HRESULT wapco_activation_signal_detection_configuration_set_model_data_with_result(WAPCO_ActivationSignalDetectionConfiguration *self, cwinrt_hstring dataType, WSTST_IInputStream* data, WAPCO_ActivationSignalDetectionConfigurationSetModelDataResult *out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration.SetModelDataWithResultAsync(dataType, data) */
 HRESULT wapco_activation_signal_detection_configuration_set_model_data_with_result_async(WAPCO_ActivationSignalDetectionConfiguration *self, cwinrt_hstring dataType, WSTST_IInputStream* data, WF_IAsyncOperation_WAPCO_ActivationSignalDetectionConfigurationSetModelDataResult** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration.SetEnabledWithResultAsync() */
 HRESULT wapco_activation_signal_detection_configuration_set_enabled_with_result_async(WAPCO_ActivationSignalDetectionConfiguration *self, BOOL value, WF_IAsyncOperation_WAPCO_ActivationSignalDetectionConfigurationStateChangeResult** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration.SetEnabledWithResult() */
 HRESULT wapco_activation_signal_detection_configuration_set_enabled_with_result(WAPCO_ActivationSignalDetectionConfiguration *self, BOOL value, WAPCO_ActivationSignalDetectionConfigurationStateChangeResult *out);
 
-/* Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration.get_TrainingStepCompletionMaxAllowedTime() */
 HRESULT wapco_activation_signal_detection_configuration_get__training_step_completion_max_allowed_time(WAPCO_ActivationSignalDetectionConfiguration *self, uint32_t *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapco_activation_signal_detection_configuration_on_availability_changed(WAPCO_ActivationSignalDetectionConfiguration *self, cwinrt_event_fn fn, void *ctx);
 void wapco_activation_signal_detection_configuration_off_availability_changed(WAPCO_ActivationSignalDetectionConfiguration *self, cwinrt_token token);
 
-/* Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo */
-/* Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo2 */
-/* Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo2.get_UnavailableSystemResources() */
 HRESULT wapco_detection_configuration_availability_info_2_get__unavailable_system_resources(WAPCO_IDetectionConfigurationAvailabilityInfo_2 *self, WFOCO_IVectorView_WAPCO_SignalDetectorResourceKind** value);
 
-/* Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityChangedEventArgs */
-/* Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSystemStateChangedEventArgs */
-/* Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal */
-/* Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal2 */
-/* Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal2.get_DetectorId() */
 HRESULT wapco_conversational_agent_signal_2_get__detector_id(WAPCO_IConversationalAgentSignal_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal2.get_DetectorKind() */
 HRESULT wapco_conversational_agent_signal_2_get__detector_kind(WAPCO_IConversationalAgentSignal_2 *self, WAPCO_ActivationSignalDetectorKind *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession */
-/* Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2 */
-/* Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2.RequestActivationAsync(activationKind) */
 HRESULT wapco_conversational_agent_session_2_request_activation_async(WAPCO_IConversationalAgentSession_2 *self, WAPCO_ConversationalAgentActivationKind activationKind, WF_IAsyncOperation_WAPCO_ConversationalAgentActivationResult** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2.RequestActivation(activationKind) */
 HRESULT wapco_conversational_agent_session_2_request_activation(WAPCO_IConversationalAgentSession_2 *self, WAPCO_ConversationalAgentActivationKind activationKind, WAPCO_ConversationalAgentActivationResult *out);
 
-/* Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2.SetSupportLockScreenActivationAsync(lockScreenActivationSupported) */
 HRESULT wapco_conversational_agent_session_2_set_support_lock_screen_activation_async(WAPCO_IConversationalAgentSession_2 *self, BOOL lockScreenActivationSupported, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2.SetSupportLockScreenActivation(lockScreenActivationSupported) */
 HRESULT wapco_conversational_agent_session_2_set_support_lock_screen_activation(WAPCO_IConversationalAgentSession_2 *self, BOOL lockScreenActivationSupported);
 
-/* Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2.GetMissingPrerequisites() */
 HRESULT wapco_conversational_agent_session_2_get_missing_prerequisites(WAPCO_IConversationalAgentSession_2 *self, WFOCO_IVectorView_WAPCO_ConversationalAgentVoiceActivationPrerequisiteKind** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2.GetMissingPrerequisitesAsync() */
 HRESULT wapco_conversational_agent_session_2_get_missing_prerequisites_async(WAPCO_IConversationalAgentSession_2 *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPCO_ConversationalAgentVoiceActivationPrerequisiteKind** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager */
-/* Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager2 */
-/* Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager2.GetActivationSignalDetectorFromId(detectorId) */
 HRESULT wapco_conversational_agent_detector_manager_2_get_activation_signal_detector_from_id(WAPCO_IConversationalAgentDetectorManager_2 *self, cwinrt_hstring detectorId, WAPCO_ActivationSignalDetector** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager2.GetActivationSignalDetectorFromIdAsync(detectorId) */
 HRESULT wapco_conversational_agent_detector_manager_2_get_activation_signal_detector_from_id_async(WAPCO_IConversationalAgentDetectorManager_2 *self, cwinrt_hstring detectorId, WF_IAsyncOperation_WAPCO_ActivationSignalDetector** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector */
-/* Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2 */
-/* Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2.GetAvailableModelIdsForSignalIdAsync(signalId) */
 HRESULT wapco_activation_signal_detector_2_get_available_model_ids_for_signal_id_async(WAPCO_IActivationSignalDetector_2 *self, cwinrt_hstring signalId, WF_IAsyncOperation_WFOCO_IVector_HSTRING** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2.GetAvailableModelIdsForSignalId(signalId) */
 HRESULT wapco_activation_signal_detector_2_get_available_model_ids_for_signal_id(WAPCO_IActivationSignalDetector_2 *self, cwinrt_hstring signalId, WFOCO_IVector_HSTRING** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2.CreateConfigurationWithResultAsync(signalId, modelId, displayName) */
 HRESULT wapco_activation_signal_detector_2_create_configuration_with_result_async(WAPCO_IActivationSignalDetector_2 *self, cwinrt_hstring signalId, cwinrt_hstring modelId, cwinrt_hstring displayName, WF_IAsyncOperation_WAPCO_ActivationSignalDetectionConfigurationCreationResult** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2.CreateConfigurationWithResult(signalId, modelId, displayName) */
 HRESULT wapco_activation_signal_detector_2_create_configuration_with_result(WAPCO_IActivationSignalDetector_2 *self, cwinrt_hstring signalId, cwinrt_hstring modelId, cwinrt_hstring displayName, WAPCO_ActivationSignalDetectionConfigurationCreationResult** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2.RemoveConfigurationWithResultAsync(signalId, modelId) */
 HRESULT wapco_activation_signal_detector_2_remove_configuration_with_result_async(WAPCO_IActivationSignalDetector_2 *self, cwinrt_hstring signalId, cwinrt_hstring modelId, WF_IAsyncOperation_WAPCO_ActivationSignalDetectionConfigurationRemovalResult** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2.RemoveConfigurationWithResult(signalId, modelId) */
 HRESULT wapco_activation_signal_detector_2_remove_configuration_with_result(WAPCO_IActivationSignalDetector_2 *self, cwinrt_hstring signalId, cwinrt_hstring modelId, WAPCO_ActivationSignalDetectionConfigurationRemovalResult *out);
 
-/* Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2.get_DetectorId() */
 HRESULT wapco_activation_signal_detector_2_get__detector_id(WAPCO_IActivationSignalDetector_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfigurationCreationResult */
-/* Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration */
-/* Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration2 */
-/* Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration2.SetModelDataWithResult(dataType, data) */
 HRESULT wapco_activation_signal_detection_configuration_2_set_model_data_with_result(WAPCO_IActivationSignalDetectionConfiguration_2 *self, cwinrt_hstring dataType, WSTST_IInputStream* data, WAPCO_ActivationSignalDetectionConfigurationSetModelDataResult *out);
 
-/* Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration2.SetModelDataWithResultAsync(dataType, data) */
 HRESULT wapco_activation_signal_detection_configuration_2_set_model_data_with_result_async(WAPCO_IActivationSignalDetectionConfiguration_2 *self, cwinrt_hstring dataType, WSTST_IInputStream* data, WF_IAsyncOperation_WAPCO_ActivationSignalDetectionConfigurationSetModelDataResult** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration2.SetEnabledWithResultAsync() */
 HRESULT wapco_activation_signal_detection_configuration_2_set_enabled_with_result_async(WAPCO_IActivationSignalDetectionConfiguration_2 *self, BOOL value, WF_IAsyncOperation_WAPCO_ActivationSignalDetectionConfigurationStateChangeResult** out);
 
-/* Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration2.SetEnabledWithResult() */
 HRESULT wapco_activation_signal_detection_configuration_2_set_enabled_with_result(WAPCO_IActivationSignalDetectionConfiguration_2 *self, BOOL value, WAPCO_ActivationSignalDetectionConfigurationStateChangeResult *out);
 
-/* Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration2.get_TrainingStepCompletionMaxAllowedTime() */
 HRESULT wapco_activation_signal_detection_configuration_2_get__training_step_completion_max_allowed_time(WAPCO_IActivationSignalDetectionConfiguration_2 *self, uint32_t *value);
 
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_CONVERSATIONALAGENT_H */

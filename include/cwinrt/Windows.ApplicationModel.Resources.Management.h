@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WAPREMA_ResourceIndexer WAPREMA_ResourceIndexer;
 typedef struct WAPREMA_IndexedResourceCandidate WAPREMA_IndexedResourceCandidate;
 typedef struct WAPREMA_IResourceIndexerFactory_2 WAPREMA_IResourceIndexerFactory_2;
@@ -22,7 +21,6 @@ typedef struct WAPREMA_IResourceIndexer WAPREMA_IResourceIndexer;
 typedef struct WAPREMA_IIndexedResourceCandidate WAPREMA_IIndexedResourceCandidate;
 typedef struct WAPREMA_IIndexedResourceQualifier WAPREMA_IIndexedResourceQualifier;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_Uri
 #define CWINRT_FWD_WF_Uri
 typedef struct WF_Uri WF_Uri;
@@ -49,7 +47,6 @@ typedef enum WAPREMA_IndexedResourceType {
 } WAPREMA_IndexedResourceType;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -74,59 +71,34 @@ static const IID CWINRT_IID_WAPREMA_IIndexedResourceCandidate CWINRT_MAYBE_UNUSE
 static const IID CWINRT_IID_WAPREMA_IIndexedResourceQualifier CWINRT_MAYBE_UNUSED = { 0xDAE3BB9B, 0xD304, 0x497F, { 0xA1, 0x68, 0xA3, 0x40, 0x04, 0x2C, 0x8A, 0xDB } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.Resources.Management.ResourceIndexer */
 HRESULT waprema_resource_indexer_new(WAPREMA_ResourceIndexer **out);
 
-/* Windows.ApplicationModel.Resources.Management.ResourceIndexer */
-/* Windows.ApplicationModel.Resources.Management.ResourceIndexer.IndexFilePath(filePath) */
 HRESULT waprema_resource_indexer_index_file_path(WAPREMA_ResourceIndexer *self, WF_Uri* filePath, WAPREMA_IndexedResourceCandidate** out);
 
-/* Windows.ApplicationModel.Resources.Management.ResourceIndexer.IndexFileContentsAsync(file) */
 HRESULT waprema_resource_indexer_index_file_contents_async(WAPREMA_ResourceIndexer *self, WF_Uri* file, WF_IAsyncOperation_WFOCO_IVectorView_WAPREMA_IndexedResourceCandidate** out);
 
-/* activate Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate */
 HRESULT waprema_indexed_resource_candidate_new(WAPREMA_IndexedResourceCandidate **out);
 
-/* Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate */
-/* Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate.get_Type() */
 HRESULT waprema_indexed_resource_candidate_get__type(WAPREMA_IndexedResourceCandidate *self, WAPREMA_IndexedResourceType *value);
 
-/* Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate.get_Uri() */
 HRESULT waprema_indexed_resource_candidate_get__uri(WAPREMA_IndexedResourceCandidate *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate.get_Metadata() */
 HRESULT waprema_indexed_resource_candidate_get__metadata(WAPREMA_IndexedResourceCandidate *self, WFOCO_IMapView_HSTRING_HSTRING** value);
 
-/* Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate.get_Qualifiers() */
 HRESULT waprema_indexed_resource_candidate_get__qualifiers(WAPREMA_IndexedResourceCandidate *self, WFOCO_IVectorView_WAPREMA_IndexedResourceQualifier** value);
 
-/* Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate.get_ValueAsString() */
 HRESULT waprema_indexed_resource_candidate_get__value_as_string(WAPREMA_IndexedResourceCandidate *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate.GetQualifierValue(qualifierName) */
 HRESULT waprema_indexed_resource_candidate_get_qualifier_value(WAPREMA_IndexedResourceCandidate *self, cwinrt_hstring qualifierName, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.Resources.Management.IResourceIndexerFactory2 */
-/* Windows.ApplicationModel.Resources.Management.IResourceIndexerFactory2.CreateResourceIndexerWithExtension(projectRoot, extensionDllPath) */
 HRESULT waprema_resource_indexer_factory_2_create_resource_indexer_with_extension(WAPREMA_IResourceIndexerFactory_2 *self, WF_Uri* projectRoot, WF_Uri* extensionDllPath, WAPREMA_ResourceIndexer** out);
 
-/* Windows.ApplicationModel.Resources.Management.IResourceIndexerFactory */
-/* Windows.ApplicationModel.Resources.Management.IResourceIndexerFactory.CreateResourceIndexer(projectRoot) */
 HRESULT waprema_resource_indexer_factory_create_resource_indexer(WAPREMA_IResourceIndexerFactory *self, WF_Uri* projectRoot, WAPREMA_ResourceIndexer** out);
 
-/* activate Windows.ApplicationModel.Resources.Management.IndexedResourceQualifier */
 HRESULT waprema_indexed_resource_qualifier_new(WAPREMA_IndexedResourceQualifier **out);
 
-/* Windows.ApplicationModel.Resources.Management.IndexedResourceQualifier */
-/* Windows.ApplicationModel.Resources.Management.IndexedResourceQualifier.get_QualifierName() */
 HRESULT waprema_indexed_resource_qualifier_get__qualifier_name(WAPREMA_IndexedResourceQualifier *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Resources.Management.IndexedResourceQualifier.get_QualifierValue() */
 HRESULT waprema_indexed_resource_qualifier_get__qualifier_value(WAPREMA_IndexedResourceQualifier *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Resources.Management.IResourceIndexer */
-/* Windows.ApplicationModel.Resources.Management.IIndexedResourceCandidate */
-/* Windows.ApplicationModel.Resources.Management.IIndexedResourceQualifier */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_RESOURCES_MANAGEMENT_H */

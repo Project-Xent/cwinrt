@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WMAWO_IMdmPolicyStatics_2 WMAWO_IMdmPolicyStatics_2;
 typedef struct WMAWO_IWorkplaceSettingsStatics WMAWO_IWorkplaceSettingsStatics;
 typedef struct WMAWO_MdmPolicy WMAWO_MdmPolicy;
@@ -28,7 +27,6 @@ typedef enum WMAWO_MessagingSyncPolicy {
 } WMAWO_MessagingSyncPolicy;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -45,53 +43,32 @@ static const IID CWINRT_IID_WMAWO_IWorkplaceSettingsStatics CWINRT_MAYBE_UNUSED 
 static const IID CWINRT_IID_WMAWO_IMdmAllowPolicyStatics CWINRT_MAYBE_UNUSED = { 0xC39709E7, 0x741C, 0x41F2, { 0xA4, 0xB6, 0x31, 0x4C, 0x31, 0x50, 0x25, 0x86 } };
 #endif
 
-/* Methods */
-
-/* Windows.Management.Workplace.IMdmPolicyStatics2 */
-/* Windows.Management.Workplace.IMdmPolicyStatics2.GetMessagingSyncPolicy() */
 HRESULT wmawo_mdm_policy_statics_2_get_messaging_sync_policy(WMAWO_IMdmPolicyStatics_2 *self, WMAWO_MessagingSyncPolicy *out);
 
-/* Windows.Management.Workplace.IWorkplaceSettingsStatics */
-/* Windows.Management.Workplace.IWorkplaceSettingsStatics.get_IsMicrosoftAccountOptional() */
 HRESULT wmawo_workplace_settings_statics_get__is_microsoft_account_optional(WMAWO_IWorkplaceSettingsStatics *self, BOOL *value);
 
-/* activate Windows.Management.Workplace.MdmPolicy */
 HRESULT wmawo_mdm_policy_new(WMAWO_MdmPolicy **out);
 
-/* Windows.Management.Workplace.MdmPolicy */
-/* Windows.Management.Workplace.MdmPolicy.GetMessagingSyncPolicy() */
 HRESULT wmawo_mdm_policy_get_messaging_sync_policy(WMAWO_MessagingSyncPolicy *out);
 
-/* Windows.Management.Workplace.MdmPolicy.IsBrowserAllowed() */
 HRESULT wmawo_mdm_policy_is_browser_allowed(BOOL *out);
 
-/* Windows.Management.Workplace.MdmPolicy.IsCameraAllowed() */
 HRESULT wmawo_mdm_policy_is_camera_allowed(BOOL *out);
 
-/* Windows.Management.Workplace.MdmPolicy.IsMicrosoftAccountAllowed() */
 HRESULT wmawo_mdm_policy_is_microsoft_account_allowed(BOOL *out);
 
-/* Windows.Management.Workplace.MdmPolicy.IsStoreAllowed() */
 HRESULT wmawo_mdm_policy_is_store_allowed(BOOL *out);
 
-/* activate Windows.Management.Workplace.WorkplaceSettings */
 HRESULT wmawo_workplace_settings_new(WMAWO_WorkplaceSettings **out);
 
-/* Windows.Management.Workplace.WorkplaceSettings */
-/* Windows.Management.Workplace.WorkplaceSettings.get_IsMicrosoftAccountOptional() */
 HRESULT wmawo_workplace_settings_get__is_microsoft_account_optional(BOOL *value);
 
-/* Windows.Management.Workplace.IMdmAllowPolicyStatics */
-/* Windows.Management.Workplace.IMdmAllowPolicyStatics.IsBrowserAllowed() */
 HRESULT wmawo_mdm_allow_policy_statics_is_browser_allowed(WMAWO_IMdmAllowPolicyStatics *self, BOOL *out);
 
-/* Windows.Management.Workplace.IMdmAllowPolicyStatics.IsCameraAllowed() */
 HRESULT wmawo_mdm_allow_policy_statics_is_camera_allowed(WMAWO_IMdmAllowPolicyStatics *self, BOOL *out);
 
-/* Windows.Management.Workplace.IMdmAllowPolicyStatics.IsMicrosoftAccountAllowed() */
 HRESULT wmawo_mdm_allow_policy_statics_is_microsoft_account_allowed(WMAWO_IMdmAllowPolicyStatics *self, BOOL *out);
 
-/* Windows.Management.Workplace.IMdmAllowPolicyStatics.IsStoreAllowed() */
 HRESULT wmawo_mdm_allow_policy_statics_is_store_allowed(WMAWO_IMdmAllowPolicyStatics *self, BOOL *out);
 
 #endif /* CWINRT_WINDOWS_MANAGEMENT_WORKPLACE_H */

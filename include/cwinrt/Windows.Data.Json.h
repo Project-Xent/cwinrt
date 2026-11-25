@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WDAJS_IJsonArrayStatics WDAJS_IJsonArrayStatics;
 typedef struct WDAJS_IJsonErrorStatics_2 WDAJS_IJsonErrorStatics_2;
 typedef struct WDAJS_IJsonObjectStatics WDAJS_IJsonObjectStatics;
@@ -27,7 +26,6 @@ typedef struct WDAJS_IJsonObjectWithDefaultValues WDAJS_IJsonObjectWithDefaultVa
 typedef struct WDAJS_IJsonObject WDAJS_IJsonObject;
 typedef struct WDAJS_IJsonValue WDAJS_IJsonValue;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IVectorView_WDAJS_IJsonValue
 #define CWINRT_FWD_WFOCO_IVectorView_WDAJS_IJsonValue
 typedef struct WFOCO_IVectorView_WDAJS_IJsonValue WFOCO_IVectorView_WDAJS_IJsonValue;
@@ -68,7 +66,6 @@ typedef enum WDAJS_JsonValueType {
 } WDAJS_JsonValueType;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -109,304 +106,194 @@ static const IID CWINRT_IID_WDAJS_IJsonObject CWINRT_MAYBE_UNUSED = { 0x064E24DD
 static const IID CWINRT_IID_WDAJS_IJsonValue CWINRT_MAYBE_UNUSED = { 0xA3219ECB, 0xF0B3, 0x4DCD, { 0xBE, 0xEE, 0x19, 0xD4, 0x8C, 0xD3, 0xED, 0x1E } };
 #endif
 
-/* Methods */
-
-/* Windows.Data.Json.IJsonArrayStatics */
-/* Windows.Data.Json.IJsonArrayStatics.Parse(input) */
 HRESULT wdajs_json_array_statics_parse(WDAJS_IJsonArrayStatics *self, cwinrt_hstring input, WDAJS_JsonArray** out);
 
-/* Windows.Data.Json.IJsonArrayStatics.TryParse(input, result) */
 HRESULT wdajs_json_array_statics_try_parse(WDAJS_IJsonArrayStatics *self, cwinrt_hstring input, WDAJS_JsonArray* result, BOOL *out);
 
-/* Windows.Data.Json.IJsonErrorStatics2 */
-/* Windows.Data.Json.IJsonErrorStatics2.GetJsonStatus(hresult) */
 HRESULT wdajs_json_error_statics_2_get_json_status(WDAJS_IJsonErrorStatics_2 *self, int32_t hresult, WDAJS_JsonErrorStatus *out);
 
-/* Windows.Data.Json.IJsonObjectStatics */
-/* Windows.Data.Json.IJsonObjectStatics.Parse(input) */
 HRESULT wdajs_json_object_statics_parse(WDAJS_IJsonObjectStatics *self, cwinrt_hstring input, WDAJS_JsonObject** out);
 
-/* Windows.Data.Json.IJsonObjectStatics.TryParse(input, result) */
 HRESULT wdajs_json_object_statics_try_parse(WDAJS_IJsonObjectStatics *self, cwinrt_hstring input, WDAJS_JsonObject* result, BOOL *out);
 
-/* Windows.Data.Json.IJsonValueStatics */
-/* Windows.Data.Json.IJsonValueStatics.Parse(input) */
 HRESULT wdajs_json_value_statics_parse(WDAJS_IJsonValueStatics *self, cwinrt_hstring input, WDAJS_JsonValue** out);
 
-/* Windows.Data.Json.IJsonValueStatics.TryParse(input, result) */
 HRESULT wdajs_json_value_statics_try_parse(WDAJS_IJsonValueStatics *self, cwinrt_hstring input, WDAJS_JsonValue* result, BOOL *out);
 
-/* Windows.Data.Json.IJsonValueStatics.CreateBooleanValue(input) */
 HRESULT wdajs_json_value_statics_create_boolean_value(WDAJS_IJsonValueStatics *self, BOOL input, WDAJS_JsonValue** out);
 
-/* Windows.Data.Json.IJsonValueStatics.CreateNumberValue(input) */
 HRESULT wdajs_json_value_statics_create_number_value(WDAJS_IJsonValueStatics *self, double input, WDAJS_JsonValue** out);
 
-/* Windows.Data.Json.IJsonValueStatics.CreateStringValue(input) */
 HRESULT wdajs_json_value_statics_create_string_value(WDAJS_IJsonValueStatics *self, cwinrt_hstring input, WDAJS_JsonValue** out);
 
-/* Windows.Data.Json.IJsonValueStatics2 */
-/* Windows.Data.Json.IJsonValueStatics2.CreateNullValue() */
 HRESULT wdajs_json_value_statics_2_create_null_value(WDAJS_IJsonValueStatics_2 *self, WDAJS_JsonValue** out);
 
-/* activate Windows.Data.Json.JsonArray */
 HRESULT wdajs_json_array_new(WDAJS_JsonArray **out);
 
-/* Windows.Data.Json.JsonArray */
-/* Windows.Data.Json.JsonArray.GetObjectAt(index) */
 HRESULT wdajs_json_array_get_object_at(WDAJS_JsonArray *self, uint32_t index, WDAJS_JsonObject** out);
 
-/* Windows.Data.Json.JsonArray.GetArrayAt(index) */
 HRESULT wdajs_json_array_get_array_at(WDAJS_JsonArray *self, uint32_t index, WDAJS_JsonArray** out);
 
-/* Windows.Data.Json.JsonArray.GetStringAt(index) */
 HRESULT wdajs_json_array_get_string_at(WDAJS_JsonArray *self, uint32_t index, cwinrt_hstring *out);
 
-/* Windows.Data.Json.JsonArray.GetNumberAt(index) */
 HRESULT wdajs_json_array_get_number_at(WDAJS_JsonArray *self, uint32_t index, double *out);
 
-/* Windows.Data.Json.JsonArray.GetBooleanAt(index) */
 HRESULT wdajs_json_array_get_boolean_at(WDAJS_JsonArray *self, uint32_t index, BOOL *out);
 
-/* Windows.Data.Json.JsonArray.get_ValueType() */
 HRESULT wdajs_json_array_get__value_type(WDAJS_JsonArray *self, WDAJS_JsonValueType *value);
 
-/* Windows.Data.Json.JsonArray.Stringify() */
 HRESULT wdajs_json_array_stringify(WDAJS_JsonArray *self, cwinrt_hstring *out);
 
-/* Windows.Data.Json.JsonArray.GetString() */
 HRESULT wdajs_json_array_get_string(WDAJS_JsonArray *self, cwinrt_hstring *out);
 
-/* Windows.Data.Json.JsonArray.GetNumber() */
 HRESULT wdajs_json_array_get_number(WDAJS_JsonArray *self, double *out);
 
-/* Windows.Data.Json.JsonArray.GetBoolean() */
 HRESULT wdajs_json_array_get_boolean(WDAJS_JsonArray *self, BOOL *out);
 
-/* Windows.Data.Json.JsonArray.GetArray() */
 HRESULT wdajs_json_array_get_array(WDAJS_JsonArray *self, WDAJS_JsonArray** out);
 
-/* Windows.Data.Json.JsonArray.GetObject() */
 HRESULT wdajs_json_array_get_object(WDAJS_JsonArray *self, WDAJS_JsonObject** out);
 
-/* Windows.Data.Json.JsonArray.GetAt(index) */
 HRESULT wdajs_json_array_get_at(WDAJS_JsonArray *self, uint32_t index, WDAJS_IJsonValue** out);
 
-/* Windows.Data.Json.JsonArray.get_Size() */
 HRESULT wdajs_json_array_get__size(WDAJS_JsonArray *self, uint32_t *value);
 
-/* Windows.Data.Json.JsonArray.GetView() */
 HRESULT wdajs_json_array_get_view(WDAJS_JsonArray *self, WFOCO_IVectorView_WDAJS_IJsonValue** out);
 
-/* Windows.Data.Json.JsonArray.IndexOf(index) */
 HRESULT wdajs_json_array_index_of(WDAJS_JsonArray *self, WDAJS_IJsonValue* value, uint32_t index, BOOL *out);
 
-/* Windows.Data.Json.JsonArray.SetAt(index) */
 HRESULT wdajs_json_array_set_at(WDAJS_JsonArray *self, uint32_t index, WDAJS_IJsonValue* value);
 
-/* Windows.Data.Json.JsonArray.InsertAt(index) */
 HRESULT wdajs_json_array_insert_at(WDAJS_JsonArray *self, uint32_t index, WDAJS_IJsonValue* value);
 
-/* Windows.Data.Json.JsonArray.RemoveAt(index) */
 HRESULT wdajs_json_array_remove_at(WDAJS_JsonArray *self, uint32_t index);
 
-/* Windows.Data.Json.JsonArray.Append() */
 HRESULT wdajs_json_array_append(WDAJS_JsonArray *self, WDAJS_IJsonValue* value);
 
-/* Windows.Data.Json.JsonArray.RemoveAtEnd() */
 HRESULT wdajs_json_array_remove_at_end(WDAJS_JsonArray *self);
 
-/* Windows.Data.Json.JsonArray.Clear() */
 HRESULT wdajs_json_array_clear(WDAJS_JsonArray *self);
 
-/* Windows.Data.Json.JsonArray.GetMany(startIndex, items) */
 HRESULT wdajs_json_array_get_many(WDAJS_JsonArray *self, uint32_t startIndex, WDAJS_IJsonValue *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Data.Json.JsonArray.ReplaceAll(items) */
 HRESULT wdajs_json_array_replace_all(WDAJS_JsonArray *self, WDAJS_IJsonValue *items, uint32_t items_len);
 
-/* Windows.Data.Json.JsonArray.First() */
 HRESULT wdajs_json_array_first(WDAJS_JsonArray *self, WFOCO_IIterator_WDAJS_IJsonValue** out);
 
-/* Windows.Data.Json.JsonArray.ToString() */
 HRESULT wdajs_json_array_to_string(WDAJS_JsonArray *self, cwinrt_hstring *out);
 
-/* Windows.Data.Json.JsonArray.Parse(input) */
 HRESULT wdajs_json_array_parse(cwinrt_hstring input, WDAJS_JsonArray** out);
 
-/* Windows.Data.Json.JsonArray.TryParse(input, result) */
 HRESULT wdajs_json_array_try_parse(cwinrt_hstring input, WDAJS_JsonArray* result, BOOL *out);
 
-/* activate Windows.Data.Json.JsonError */
 HRESULT wdajs_json_error_new(WDAJS_JsonError **out);
 
-/* Windows.Data.Json.JsonError */
-/* Windows.Data.Json.JsonError.GetJsonStatus(hresult) */
 HRESULT wdajs_json_error_get_json_status(int32_t hresult, WDAJS_JsonErrorStatus *out);
 
-/* activate Windows.Data.Json.JsonObject */
 HRESULT wdajs_json_object_new(WDAJS_JsonObject **out);
 
-/* Windows.Data.Json.JsonObject */
-/* Windows.Data.Json.JsonObject.GetNamedValue(name) */
 HRESULT wdajs_json_object_get_named_value(WDAJS_JsonObject *self, cwinrt_hstring name, WDAJS_JsonValue** out);
 
-/* Windows.Data.Json.JsonObject.SetNamedValue(name) */
 HRESULT wdajs_json_object_set_named_value(WDAJS_JsonObject *self, cwinrt_hstring name, WDAJS_IJsonValue* value);
 
-/* Windows.Data.Json.JsonObject.GetNamedObject(name) */
 HRESULT wdajs_json_object_get_named_object(WDAJS_JsonObject *self, cwinrt_hstring name, WDAJS_JsonObject** out);
 
-/* Windows.Data.Json.JsonObject.GetNamedArray(name) */
 HRESULT wdajs_json_object_get_named_array(WDAJS_JsonObject *self, cwinrt_hstring name, WDAJS_JsonArray** out);
 
-/* Windows.Data.Json.JsonObject.GetNamedString(name) */
 HRESULT wdajs_json_object_get_named_string(WDAJS_JsonObject *self, cwinrt_hstring name, cwinrt_hstring *out);
 
-/* Windows.Data.Json.JsonObject.GetNamedNumber(name) */
 HRESULT wdajs_json_object_get_named_number(WDAJS_JsonObject *self, cwinrt_hstring name, double *out);
 
-/* Windows.Data.Json.JsonObject.GetNamedBoolean(name) */
 HRESULT wdajs_json_object_get_named_boolean(WDAJS_JsonObject *self, cwinrt_hstring name, BOOL *out);
 
-/* Windows.Data.Json.JsonObject.get_ValueType() */
 HRESULT wdajs_json_object_get__value_type(WDAJS_JsonObject *self, WDAJS_JsonValueType *value);
 
-/* Windows.Data.Json.JsonObject.Stringify() */
 HRESULT wdajs_json_object_stringify(WDAJS_JsonObject *self, cwinrt_hstring *out);
 
-/* Windows.Data.Json.JsonObject.GetString() */
 HRESULT wdajs_json_object_get_string(WDAJS_JsonObject *self, cwinrt_hstring *out);
 
-/* Windows.Data.Json.JsonObject.GetNumber() */
 HRESULT wdajs_json_object_get_number(WDAJS_JsonObject *self, double *out);
 
-/* Windows.Data.Json.JsonObject.GetBoolean() */
 HRESULT wdajs_json_object_get_boolean(WDAJS_JsonObject *self, BOOL *out);
 
-/* Windows.Data.Json.JsonObject.GetArray() */
 HRESULT wdajs_json_object_get_array(WDAJS_JsonObject *self, WDAJS_JsonArray** out);
 
-/* Windows.Data.Json.JsonObject.GetObject() */
 HRESULT wdajs_json_object_get_object(WDAJS_JsonObject *self, WDAJS_JsonObject** out);
 
-/* Windows.Data.Json.JsonObject.Lookup(key) */
 HRESULT wdajs_json_object_lookup(WDAJS_JsonObject *self, cwinrt_hstring key, WDAJS_IJsonValue** out);
 
-/* Windows.Data.Json.JsonObject.get_Size() */
 HRESULT wdajs_json_object_get__size(WDAJS_JsonObject *self, uint32_t *value);
 
-/* Windows.Data.Json.JsonObject.HasKey(key) */
 HRESULT wdajs_json_object_has_key(WDAJS_JsonObject *self, cwinrt_hstring key, BOOL *out);
 
-/* Windows.Data.Json.JsonObject.GetView() */
 HRESULT wdajs_json_object_get_view(WDAJS_JsonObject *self, WFOCO_IMapView_HSTRING_WDAJS_IJsonValue** out);
 
-/* Windows.Data.Json.JsonObject.Insert(key) */
 HRESULT wdajs_json_object_insert(WDAJS_JsonObject *self, cwinrt_hstring key, WDAJS_IJsonValue* value, BOOL *out);
 
-/* Windows.Data.Json.JsonObject.Remove(key) */
 HRESULT wdajs_json_object_remove(WDAJS_JsonObject *self, cwinrt_hstring key);
 
-/* Windows.Data.Json.JsonObject.Clear() */
 HRESULT wdajs_json_object_clear(WDAJS_JsonObject *self);
 
-/* Windows.Data.Json.JsonObject.First() */
 HRESULT wdajs_json_object_first(WDAJS_JsonObject *self, WFOCO_IIterator_WFOCO_IKeyValuePair_HSTRING_WDAJS_IJsonValue** out);
 
-/* Windows.Data.Json.JsonObject.GetNamedValue(name, defaultValue) */
 HRESULT wdajs_json_object_get_named_value_str_p_p(WDAJS_JsonObject *self, cwinrt_hstring name, WDAJS_JsonValue* defaultValue, WDAJS_JsonValue** out);
 
-/* Windows.Data.Json.JsonObject.GetNamedObject(name, defaultValue) */
 HRESULT wdajs_json_object_get_named_object_str_p_p(WDAJS_JsonObject *self, cwinrt_hstring name, WDAJS_JsonObject* defaultValue, WDAJS_JsonObject** out);
 
-/* Windows.Data.Json.JsonObject.GetNamedString(name, defaultValue) */
 HRESULT wdajs_json_object_get_named_string_str_str_str(WDAJS_JsonObject *self, cwinrt_hstring name, cwinrt_hstring defaultValue, cwinrt_hstring *out);
 
-/* Windows.Data.Json.JsonObject.GetNamedArray(name, defaultValue) */
 HRESULT wdajs_json_object_get_named_array_str_p_p(WDAJS_JsonObject *self, cwinrt_hstring name, WDAJS_JsonArray* defaultValue, WDAJS_JsonArray** out);
 
-/* Windows.Data.Json.JsonObject.GetNamedNumber(name, defaultValue) */
 HRESULT wdajs_json_object_get_named_number_str_f64_f64(WDAJS_JsonObject *self, cwinrt_hstring name, double defaultValue, double *out);
 
-/* Windows.Data.Json.JsonObject.GetNamedBoolean(name, defaultValue) */
 HRESULT wdajs_json_object_get_named_boolean_str_b_b(WDAJS_JsonObject *self, cwinrt_hstring name, BOOL defaultValue, BOOL *out);
 
-/* Windows.Data.Json.JsonObject.ToString() */
 HRESULT wdajs_json_object_to_string(WDAJS_JsonObject *self, cwinrt_hstring *out);
 
-/* Windows.Data.Json.JsonObject.Parse(input) */
 HRESULT wdajs_json_object_parse(cwinrt_hstring input, WDAJS_JsonObject** out);
 
-/* Windows.Data.Json.JsonObject.TryParse(input, result) */
 HRESULT wdajs_json_object_try_parse(cwinrt_hstring input, WDAJS_JsonObject* result, BOOL *out);
 
-/* activate Windows.Data.Json.JsonValue */
 HRESULT wdajs_json_value_new(WDAJS_JsonValue **out);
 
-/* Windows.Data.Json.JsonValue */
-/* Windows.Data.Json.JsonValue.get_ValueType() */
 HRESULT wdajs_json_value_get__value_type(WDAJS_JsonValue *self, WDAJS_JsonValueType *value);
 
-/* Windows.Data.Json.JsonValue.Stringify() */
 HRESULT wdajs_json_value_stringify(WDAJS_JsonValue *self, cwinrt_hstring *out);
 
-/* Windows.Data.Json.JsonValue.GetString() */
 HRESULT wdajs_json_value_get_string(WDAJS_JsonValue *self, cwinrt_hstring *out);
 
-/* Windows.Data.Json.JsonValue.GetNumber() */
 HRESULT wdajs_json_value_get_number(WDAJS_JsonValue *self, double *out);
 
-/* Windows.Data.Json.JsonValue.GetBoolean() */
 HRESULT wdajs_json_value_get_boolean(WDAJS_JsonValue *self, BOOL *out);
 
-/* Windows.Data.Json.JsonValue.GetArray() */
 HRESULT wdajs_json_value_get_array(WDAJS_JsonValue *self, WDAJS_JsonArray** out);
 
-/* Windows.Data.Json.JsonValue.GetObject() */
 HRESULT wdajs_json_value_get_object(WDAJS_JsonValue *self, WDAJS_JsonObject** out);
 
-/* Windows.Data.Json.JsonValue.ToString() */
 HRESULT wdajs_json_value_to_string(WDAJS_JsonValue *self, cwinrt_hstring *out);
 
-/* Windows.Data.Json.JsonValue.CreateNullValue() */
 HRESULT wdajs_json_value_create_null_value(WDAJS_JsonValue** out);
 
-/* Windows.Data.Json.JsonValue.Parse(input) */
 HRESULT wdajs_json_value_parse(cwinrt_hstring input, WDAJS_JsonValue** out);
 
-/* Windows.Data.Json.JsonValue.TryParse(input, result) */
 HRESULT wdajs_json_value_try_parse(cwinrt_hstring input, WDAJS_JsonValue* result, BOOL *out);
 
-/* Windows.Data.Json.JsonValue.CreateBooleanValue(input) */
 HRESULT wdajs_json_value_create_boolean_value(BOOL input, WDAJS_JsonValue** out);
 
-/* Windows.Data.Json.JsonValue.CreateNumberValue(input) */
 HRESULT wdajs_json_value_create_number_value(double input, WDAJS_JsonValue** out);
 
-/* Windows.Data.Json.JsonValue.CreateStringValue(input) */
 HRESULT wdajs_json_value_create_string_value(cwinrt_hstring input, WDAJS_JsonValue** out);
 
-/* Windows.Data.Json.IJsonArray */
-/* Windows.Data.Json.IJsonObjectWithDefaultValues */
-/* Windows.Data.Json.IJsonObjectWithDefaultValues.GetNamedValue(name, defaultValue) */
 HRESULT wdajs_json_object_with_default_values_get_named_value(WDAJS_IJsonObjectWithDefaultValues *self, cwinrt_hstring name, WDAJS_JsonValue* defaultValue, WDAJS_JsonValue** out);
 
-/* Windows.Data.Json.IJsonObjectWithDefaultValues.GetNamedObject(name, defaultValue) */
 HRESULT wdajs_json_object_with_default_values_get_named_object(WDAJS_IJsonObjectWithDefaultValues *self, cwinrt_hstring name, WDAJS_JsonObject* defaultValue, WDAJS_JsonObject** out);
 
-/* Windows.Data.Json.IJsonObjectWithDefaultValues.GetNamedString(name, defaultValue) */
 HRESULT wdajs_json_object_with_default_values_get_named_string(WDAJS_IJsonObjectWithDefaultValues *self, cwinrt_hstring name, cwinrt_hstring defaultValue, cwinrt_hstring *out);
 
-/* Windows.Data.Json.IJsonObjectWithDefaultValues.GetNamedArray(name, defaultValue) */
 HRESULT wdajs_json_object_with_default_values_get_named_array(WDAJS_IJsonObjectWithDefaultValues *self, cwinrt_hstring name, WDAJS_JsonArray* defaultValue, WDAJS_JsonArray** out);
 
-/* Windows.Data.Json.IJsonObjectWithDefaultValues.GetNamedNumber(name, defaultValue) */
 HRESULT wdajs_json_object_with_default_values_get_named_number(WDAJS_IJsonObjectWithDefaultValues *self, cwinrt_hstring name, double defaultValue, double *out);
 
-/* Windows.Data.Json.IJsonObjectWithDefaultValues.GetNamedBoolean(name, defaultValue) */
 HRESULT wdajs_json_object_with_default_values_get_named_boolean(WDAJS_IJsonObjectWithDefaultValues *self, cwinrt_hstring name, BOOL defaultValue, BOOL *out);
 
-/* Windows.Data.Json.IJsonObject */
-/* Windows.Data.Json.IJsonValue */
 #endif /* CWINRT_WINDOWS_DATA_JSON_H */

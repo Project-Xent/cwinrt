@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Devices.Enumeration.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WDEENPN_PnpObjectUpdate WDEENPN_PnpObjectUpdate;
 typedef struct WDEENPN_PnpObjectWatcher WDEENPN_PnpObjectWatcher;
 typedef struct WDEENPN_PnpObject WDEENPN_PnpObject;
@@ -23,7 +22,6 @@ typedef struct WDEENPN_IPnpObjectUpdate WDEENPN_IPnpObjectUpdate;
 typedef struct WDEENPN_IPnpObjectWatcher WDEENPN_IPnpObjectWatcher;
 typedef struct WDEENPN_IPnpObject WDEENPN_IPnpObject;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IMapView_HSTRING_Object
 #define CWINRT_FWD_WFOCO_IMapView_HSTRING_Object
 typedef struct WFOCO_IMapView_HSTRING_Object WFOCO_IMapView_HSTRING_Object;
@@ -85,7 +83,6 @@ typedef enum WDEENPN_PnpObjectType {
 } WDEENPN_PnpObjectType;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -106,35 +103,22 @@ static const IID CWINRT_IID_WDEENPN_IPnpObjectWatcher CWINRT_MAYBE_UNUSED = { 0x
 static const IID CWINRT_IID_WDEENPN_IPnpObject CWINRT_MAYBE_UNUSED = { 0x95C66258, 0x733B, 0x4A8F, { 0x93, 0xA3, 0xDB, 0x07, 0x8A, 0xC8, 0x70, 0xC1 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Devices.Enumeration.Pnp.PnpObjectUpdate */
 HRESULT wdeenpn_pnp_object_update_new(WDEENPN_PnpObjectUpdate **out);
 
-/* Windows.Devices.Enumeration.Pnp.PnpObjectUpdate */
-/* Windows.Devices.Enumeration.Pnp.PnpObjectUpdate.get_Type() */
 HRESULT wdeenpn_pnp_object_update_get__type(WDEENPN_PnpObjectUpdate *self, WDEENPN_PnpObjectType *value);
 
-/* Windows.Devices.Enumeration.Pnp.PnpObjectUpdate.get_Id() */
 HRESULT wdeenpn_pnp_object_update_get__id(WDEENPN_PnpObjectUpdate *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Enumeration.Pnp.PnpObjectUpdate.get_Properties() */
 HRESULT wdeenpn_pnp_object_update_get__properties(WDEENPN_PnpObjectUpdate *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* activate Windows.Devices.Enumeration.Pnp.PnpObjectWatcher */
 HRESULT wdeenpn_pnp_object_watcher_new(WDEENPN_PnpObjectWatcher **out);
 
-/* Windows.Devices.Enumeration.Pnp.PnpObjectWatcher */
-/* Windows.Devices.Enumeration.Pnp.PnpObjectWatcher.get_Status() */
 HRESULT wdeenpn_pnp_object_watcher_get__status(WDEENPN_PnpObjectWatcher *self, WDEEN_DeviceWatcherStatus *value);
 
-/* Windows.Devices.Enumeration.Pnp.PnpObjectWatcher.Start() */
 HRESULT wdeenpn_pnp_object_watcher_start(WDEENPN_PnpObjectWatcher *self);
 
-/* Windows.Devices.Enumeration.Pnp.PnpObjectWatcher.Stop() */
 HRESULT wdeenpn_pnp_object_watcher_stop(WDEENPN_PnpObjectWatcher *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdeenpn_pnp_object_watcher_on_added(WDEENPN_PnpObjectWatcher *self, cwinrt_event_fn fn, void *ctx);
@@ -152,73 +136,46 @@ void wdeenpn_pnp_object_watcher_off_enumeration_completed(WDEENPN_PnpObjectWatch
 cwinrt_token wdeenpn_pnp_object_watcher_on_stopped(WDEENPN_PnpObjectWatcher *self, cwinrt_event_fn fn, void *ctx);
 void wdeenpn_pnp_object_watcher_off_stopped(WDEENPN_PnpObjectWatcher *self, cwinrt_token token);
 
-/* activate Windows.Devices.Enumeration.Pnp.PnpObject */
 HRESULT wdeenpn_pnp_object_new(WDEENPN_PnpObject **out);
 
-/* Windows.Devices.Enumeration.Pnp.PnpObject */
-/* Windows.Devices.Enumeration.Pnp.PnpObject.get_Type() */
 HRESULT wdeenpn_pnp_object_get__type(WDEENPN_PnpObject *self, WDEENPN_PnpObjectType *value);
 
-/* Windows.Devices.Enumeration.Pnp.PnpObject.get_Id() */
 HRESULT wdeenpn_pnp_object_get__id(WDEENPN_PnpObject *self, cwinrt_hstring *value);
 
-/* Windows.Devices.Enumeration.Pnp.PnpObject.get_Properties() */
 HRESULT wdeenpn_pnp_object_get__properties(WDEENPN_PnpObject *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* Windows.Devices.Enumeration.Pnp.PnpObject.Update(updateInfo) */
 HRESULT wdeenpn_pnp_object_update(WDEENPN_PnpObject *self, WDEENPN_PnpObjectUpdate* updateInfo);
 
-/* Windows.Devices.Enumeration.Pnp.PnpObject.CreateFromIdAsync(id, requestedProperties) */
 HRESULT wdeenpn_pnp_object_create_from_id_async(WDEENPN_PnpObjectType type_, cwinrt_hstring id, WFOCO_IIterable_HSTRING* requestedProperties, WF_IAsyncOperation_WDEENPN_PnpObject** out);
 
-/* Windows.Devices.Enumeration.Pnp.PnpObject.FindAllAsync(requestedProperties) */
 HRESULT wdeenpn_pnp_object_find_all_async(WDEENPN_PnpObjectType type_, WFOCO_IIterable_HSTRING* requestedProperties, WF_IAsyncOperation_WDEENPN_PnpObjectCollection** out);
 
-/* Windows.Devices.Enumeration.Pnp.PnpObject.FindAllAsync(requestedProperties, aqsFilter) */
 HRESULT wdeenpn_pnp_object_find_all_async_pnp_object_type_p_str_p(WDEENPN_PnpObjectType type_, WFOCO_IIterable_HSTRING* requestedProperties, cwinrt_hstring aqsFilter, WF_IAsyncOperation_WDEENPN_PnpObjectCollection** out);
 
-/* Windows.Devices.Enumeration.Pnp.PnpObject.CreateWatcher(requestedProperties) */
 HRESULT wdeenpn_pnp_object_create_watcher(WDEENPN_PnpObjectType type_, WFOCO_IIterable_HSTRING* requestedProperties, WDEENPN_PnpObjectWatcher** out);
 
-/* Windows.Devices.Enumeration.Pnp.PnpObject.CreateWatcher(requestedProperties, aqsFilter) */
 HRESULT wdeenpn_pnp_object_create_watcher_pnp_object_type_p_str_p(WDEENPN_PnpObjectType type_, WFOCO_IIterable_HSTRING* requestedProperties, cwinrt_hstring aqsFilter, WDEENPN_PnpObjectWatcher** out);
 
-/* activate Windows.Devices.Enumeration.Pnp.PnpObjectCollection */
 HRESULT wdeenpn_pnp_object_collection_new(WDEENPN_PnpObjectCollection **out);
 
-/* Windows.Devices.Enumeration.Pnp.PnpObjectCollection */
-/* Windows.Devices.Enumeration.Pnp.PnpObjectCollection.GetAt(index) */
 HRESULT wdeenpn_pnp_object_collection_get_at(WDEENPN_PnpObjectCollection *self, uint32_t index, WDEENPN_PnpObject** out);
 
-/* Windows.Devices.Enumeration.Pnp.PnpObjectCollection.get_Size() */
 HRESULT wdeenpn_pnp_object_collection_get__size(WDEENPN_PnpObjectCollection *self, uint32_t *value);
 
-/* Windows.Devices.Enumeration.Pnp.PnpObjectCollection.IndexOf(index) */
 HRESULT wdeenpn_pnp_object_collection_index_of(WDEENPN_PnpObjectCollection *self, WDEENPN_PnpObject* value, uint32_t index, BOOL *out);
 
-/* Windows.Devices.Enumeration.Pnp.PnpObjectCollection.GetMany(startIndex, items) */
 HRESULT wdeenpn_pnp_object_collection_get_many(WDEENPN_PnpObjectCollection *self, uint32_t startIndex, WDEENPN_PnpObject *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Devices.Enumeration.Pnp.PnpObjectCollection.First() */
 HRESULT wdeenpn_pnp_object_collection_first(WDEENPN_PnpObjectCollection *self, WFOCO_IIterator_WDEENPN_PnpObject** out);
 
-/* Windows.Devices.Enumeration.Pnp.IPnpObjectStatics */
-/* Windows.Devices.Enumeration.Pnp.IPnpObjectStatics.CreateFromIdAsync(id, requestedProperties) */
 HRESULT wdeenpn_pnp_object_statics_create_from_id_async(WDEENPN_IPnpObjectStatics *self, WDEENPN_PnpObjectType type_, cwinrt_hstring id, WFOCO_IIterable_HSTRING* requestedProperties, WF_IAsyncOperation_WDEENPN_PnpObject** out);
 
-/* Windows.Devices.Enumeration.Pnp.IPnpObjectStatics.FindAllAsync(requestedProperties) */
 HRESULT wdeenpn_pnp_object_statics_find_all_async(WDEENPN_IPnpObjectStatics *self, WDEENPN_PnpObjectType type_, WFOCO_IIterable_HSTRING* requestedProperties, WF_IAsyncOperation_WDEENPN_PnpObjectCollection** out);
 
-/* Windows.Devices.Enumeration.Pnp.IPnpObjectStatics.FindAllAsync(requestedProperties, aqsFilter) */
 HRESULT wdeenpn_pnp_object_statics_find_all_async_pnp_object_type_p_str_p(WDEENPN_IPnpObjectStatics *self, WDEENPN_PnpObjectType type_, WFOCO_IIterable_HSTRING* requestedProperties, cwinrt_hstring aqsFilter, WF_IAsyncOperation_WDEENPN_PnpObjectCollection** out);
 
-/* Windows.Devices.Enumeration.Pnp.IPnpObjectStatics.CreateWatcher(requestedProperties) */
 HRESULT wdeenpn_pnp_object_statics_create_watcher(WDEENPN_IPnpObjectStatics *self, WDEENPN_PnpObjectType type_, WFOCO_IIterable_HSTRING* requestedProperties, WDEENPN_PnpObjectWatcher** out);
 
-/* Windows.Devices.Enumeration.Pnp.IPnpObjectStatics.CreateWatcher(requestedProperties, aqsFilter) */
 HRESULT wdeenpn_pnp_object_statics_create_watcher_pnp_object_type_p_str_p(WDEENPN_IPnpObjectStatics *self, WDEENPN_PnpObjectType type_, WFOCO_IIterable_HSTRING* requestedProperties, cwinrt_hstring aqsFilter, WDEENPN_PnpObjectWatcher** out);
 
-/* Windows.Devices.Enumeration.Pnp.IPnpObjectUpdate */
-/* Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher */
-/* Windows.Devices.Enumeration.Pnp.IPnpObject */
 #endif /* CWINRT_WINDOWS_DEVICES_ENUMERATION_PNP_H */

@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Gaming.Input.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WGAINCU_IGameControllerProvider
 #define CWINRT_FWD_WGAINCU_IGameControllerProvider
 typedef struct WGAINCU_IGameControllerProvider WGAINCU_IGameControllerProvider;
@@ -23,14 +22,12 @@ typedef struct WGAINCU_IGameControllerProvider WGAINCU_IGameControllerProvider;
 typedef struct WSY_User WSY_User;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WGAINPR_IGameControllerProviderInfoStatics WGAINPR_IGameControllerProviderInfoStatics;
 typedef struct WGAINPR_ILegacyGipGameControllerProviderStatics WGAINPR_ILegacyGipGameControllerProviderStatics;
 typedef struct WGAINPR_LegacyGipGameControllerProvider WGAINPR_LegacyGipGameControllerProvider;
 typedef struct WGAINPR_GameControllerProviderInfo WGAINPR_GameControllerProviderInfo;
 typedef struct WGAINPR_ILegacyGipGameControllerProvider WGAINPR_ILegacyGipGameControllerProvider;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WGAINCU_IGameControllerProvider
 #define CWINRT_FWD_WGAINCU_IGameControllerProvider
 typedef struct WGAINCU_IGameControllerProvider WGAINCU_IGameControllerProvider;
@@ -158,7 +155,6 @@ struct WGAINPR_HeadsetGeqGains {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -175,113 +171,72 @@ static const IID CWINRT_IID_WGAINPR_ILegacyGipGameControllerProviderStatics CWIN
 static const IID CWINRT_IID_WGAINPR_ILegacyGipGameControllerProvider CWINRT_MAYBE_UNUSED = { 0x2DA3ED52, 0xFFD9, 0x43E2, { 0x82, 0x5C, 0x1D, 0x27, 0x90, 0xE0, 0x4D, 0x14 } };
 #endif
 
-/* Methods */
-
-/* Windows.Gaming.Input.Preview.IGameControllerProviderInfoStatics */
-/* Windows.Gaming.Input.Preview.IGameControllerProviderInfoStatics.GetParentProviderId(provider) */
 HRESULT wgainpr_game_controller_provider_info_statics_get_parent_provider_id(WGAINPR_IGameControllerProviderInfoStatics *self, WGAINCU_IGameControllerProvider* provider, cwinrt_hstring *out);
 
-/* Windows.Gaming.Input.Preview.IGameControllerProviderInfoStatics.GetProviderId(provider) */
 HRESULT wgainpr_game_controller_provider_info_statics_get_provider_id(WGAINPR_IGameControllerProviderInfoStatics *self, WGAINCU_IGameControllerProvider* provider, cwinrt_hstring *out);
 
-/* Windows.Gaming.Input.Preview.ILegacyGipGameControllerProviderStatics */
-/* Windows.Gaming.Input.Preview.ILegacyGipGameControllerProviderStatics.FromGameController(controller) */
 HRESULT wgainpr_legacy_gip_game_controller_provider_statics_from_game_controller(WGAINPR_ILegacyGipGameControllerProviderStatics *self, WGAIN_IGameController* controller, WGAINPR_LegacyGipGameControllerProvider** out);
 
-/* Windows.Gaming.Input.Preview.ILegacyGipGameControllerProviderStatics.FromGameControllerProvider(provider) */
 HRESULT wgainpr_legacy_gip_game_controller_provider_statics_from_game_controller_provider(WGAINPR_ILegacyGipGameControllerProviderStatics *self, WGAINCU_IGameControllerProvider* provider, WGAINPR_LegacyGipGameControllerProvider** out);
 
-/* Windows.Gaming.Input.Preview.ILegacyGipGameControllerProviderStatics.PairPilotToCopilot(user, pilotControllerProviderId, copilotControllerProviderId) */
 HRESULT wgainpr_legacy_gip_game_controller_provider_statics_pair_pilot_to_copilot(WGAINPR_ILegacyGipGameControllerProviderStatics *self, WSY_User* user, cwinrt_hstring pilotControllerProviderId, cwinrt_hstring copilotControllerProviderId);
 
-/* Windows.Gaming.Input.Preview.ILegacyGipGameControllerProviderStatics.ClearPairing(user, controllerProviderId) */
 HRESULT wgainpr_legacy_gip_game_controller_provider_statics_clear_pairing(WGAINPR_ILegacyGipGameControllerProviderStatics *self, WSY_User* user, cwinrt_hstring controllerProviderId);
 
-/* Windows.Gaming.Input.Preview.ILegacyGipGameControllerProviderStatics.IsPilot(user, controllerProviderId) */
 HRESULT wgainpr_legacy_gip_game_controller_provider_statics_is_pilot(WGAINPR_ILegacyGipGameControllerProviderStatics *self, WSY_User* user, cwinrt_hstring controllerProviderId, cwinrt_hstring *out);
 
-/* Windows.Gaming.Input.Preview.ILegacyGipGameControllerProviderStatics.IsCopilot(user, controllerProviderId) */
 HRESULT wgainpr_legacy_gip_game_controller_provider_statics_is_copilot(WGAINPR_ILegacyGipGameControllerProviderStatics *self, WSY_User* user, cwinrt_hstring controllerProviderId, cwinrt_hstring *out);
 
-/* activate Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider */
 HRESULT wgainpr_legacy_gip_game_controller_provider_new(WGAINPR_LegacyGipGameControllerProvider **out);
 
-/* Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider */
-/* Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider.get_BatteryChargingState() */
 HRESULT wgainpr_legacy_gip_game_controller_provider_get__battery_charging_state(WGAINPR_LegacyGipGameControllerProvider *self, WGAINPR_GameControllerBatteryChargingState *value);
 
-/* Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider.get_BatteryKind() */
 HRESULT wgainpr_legacy_gip_game_controller_provider_get__battery_kind(WGAINPR_LegacyGipGameControllerProvider *self, WGAINPR_GameControllerBatteryKind *value);
 
-/* Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider.get_BatteryLevel() */
 HRESULT wgainpr_legacy_gip_game_controller_provider_get__battery_level(WGAINPR_LegacyGipGameControllerProvider *self, WGAINPR_GameControllerBatteryLevel *value);
 
-/* Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider.GetDeviceFirmwareCorruptionState() */
 HRESULT wgainpr_legacy_gip_game_controller_provider_get_device_firmware_corruption_state(WGAINPR_LegacyGipGameControllerProvider *self, WGAINPR_GameControllerFirmwareCorruptReason *out);
 
-/* Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider.get_IsFirmwareCorrupted() */
 HRESULT wgainpr_legacy_gip_game_controller_provider_get__is_firmware_corrupted(WGAINPR_LegacyGipGameControllerProvider *self, BOOL *value);
 
-/* Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider.IsInterfaceSupported(interfaceId) */
 HRESULT wgainpr_legacy_gip_game_controller_provider_is_interface_supported(WGAINPR_LegacyGipGameControllerProvider *self, GUID interfaceId, BOOL *out);
 
-/* Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider.get_IsSyntheticDevice() */
 HRESULT wgainpr_legacy_gip_game_controller_provider_get__is_synthetic_device(WGAINPR_LegacyGipGameControllerProvider *self, BOOL *value);
 
-/* Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider.get_PreferredTypes() */
 HRESULT wgainpr_legacy_gip_game_controller_provider_get__preferred_types(WGAINPR_LegacyGipGameControllerProvider *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider.ExecuteCommand(command) */
 HRESULT wgainpr_legacy_gip_game_controller_provider_execute_command(WGAINPR_LegacyGipGameControllerProvider *self, WGAINPR_DeviceCommand command);
 
-/* Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider.SetHomeLedIntensity(intensity) */
 HRESULT wgainpr_legacy_gip_game_controller_provider_set_home_led_intensity(WGAINPR_LegacyGipGameControllerProvider *self, uint8_t intensity);
 
-/* Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider.GetExtendedDeviceInfo() */
 HRESULT wgainpr_legacy_gip_game_controller_provider_get_extended_device_info(WGAINPR_LegacyGipGameControllerProvider *self, uint8_t **out, uint32_t *out_len);
 
-/* Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider.SetHeadsetOperation(operation, buffer) */
 HRESULT wgainpr_legacy_gip_game_controller_provider_set_headset_operation(WGAINPR_LegacyGipGameControllerProvider *self, WGAINPR_HeadsetOperation operation, uint8_t *buffer, uint32_t buffer_len);
 
-/* Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider.GetHeadsetOperation(operation) */
 HRESULT wgainpr_legacy_gip_game_controller_provider_get_headset_operation(WGAINPR_LegacyGipGameControllerProvider *self, WGAINPR_HeadsetOperation operation, uint8_t **out, uint32_t *out_len);
 
-/* Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider.get_AppCompatVersion() */
 HRESULT wgainpr_legacy_gip_game_controller_provider_get__app_compat_version(WGAINPR_LegacyGipGameControllerProvider *self, uint32_t *value);
 
-/* Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider.SetStandardControllerButtonRemapping(user, previous, remapping) */
 HRESULT wgainpr_legacy_gip_game_controller_provider_set_standard_controller_button_remapping(WGAINPR_LegacyGipGameControllerProvider *self, WSY_User* user, BOOL previous, WFOCO_IMapView_WGAINPR_RemappingButtonCategory_Object* remapping);
 
-/* Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider.GetStandardControllerButtonRemapping(user, previous) */
 HRESULT wgainpr_legacy_gip_game_controller_provider_get_standard_controller_button_remapping(WGAINPR_LegacyGipGameControllerProvider *self, WSY_User* user, BOOL previous, WFOCO_IMapView_WGAINPR_RemappingButtonCategory_Object** out);
 
-/* Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider.FromGameController(controller) */
 HRESULT wgainpr_legacy_gip_game_controller_provider_from_game_controller(WGAIN_IGameController* controller, WGAINPR_LegacyGipGameControllerProvider** out);
 
-/* Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider.FromGameControllerProvider(provider) */
 HRESULT wgainpr_legacy_gip_game_controller_provider_from_game_controller_provider(WGAINCU_IGameControllerProvider* provider, WGAINPR_LegacyGipGameControllerProvider** out);
 
-/* Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider.PairPilotToCopilot(user, pilotControllerProviderId, copilotControllerProviderId) */
 HRESULT wgainpr_legacy_gip_game_controller_provider_pair_pilot_to_copilot(WSY_User* user, cwinrt_hstring pilotControllerProviderId, cwinrt_hstring copilotControllerProviderId);
 
-/* Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider.ClearPairing(user, controllerProviderId) */
 HRESULT wgainpr_legacy_gip_game_controller_provider_clear_pairing(WSY_User* user, cwinrt_hstring controllerProviderId);
 
-/* Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider.IsPilot(user, controllerProviderId) */
 HRESULT wgainpr_legacy_gip_game_controller_provider_is_pilot(WSY_User* user, cwinrt_hstring controllerProviderId, cwinrt_hstring *out);
 
-/* Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider.IsCopilot(user, controllerProviderId) */
 HRESULT wgainpr_legacy_gip_game_controller_provider_is_copilot(WSY_User* user, cwinrt_hstring controllerProviderId, cwinrt_hstring *out);
 
-/* activate Windows.Gaming.Input.Preview.GameControllerProviderInfo */
 HRESULT wgainpr_game_controller_provider_info_new(WGAINPR_GameControllerProviderInfo **out);
 
-/* Windows.Gaming.Input.Preview.GameControllerProviderInfo */
-/* Windows.Gaming.Input.Preview.GameControllerProviderInfo.GetParentProviderId(provider) */
 HRESULT wgainpr_game_controller_provider_info_get_parent_provider_id(WGAINCU_IGameControllerProvider* provider, cwinrt_hstring *out);
 
-/* Windows.Gaming.Input.Preview.GameControllerProviderInfo.GetProviderId(provider) */
 HRESULT wgainpr_game_controller_provider_info_get_provider_id(WGAINCU_IGameControllerProvider* provider, cwinrt_hstring *out);
 
-/* Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider */
 #endif /* CWINRT_WINDOWS_GAMING_INPUT_PREVIEW_H */

@@ -14,7 +14,6 @@
 #include <windows.h>
 #endif
 
-/* Print a computed PIID in canonical form. */
 static void print_piid(char const *name, uint8_t const *g) {
 	printf("%s %02X%02X%02X%02X-%02X%02X-%02X%02X-%02X%02X-%02X%02X%02X%02X%02X%02X\n", name, g [3], g [2], g [1], g [0],
 	       g [5], g [4], g [7], g [6], g [8], g [9], g [10], g [11], g [12], g [13], g [14], g [15]);
@@ -31,8 +30,6 @@ static int open_generic_guid(winmd_db const *wm, char const *full_name, uint8_t 
 	return winmd_typedef_uuid(wm->meta, row, out);
 }
 
-/* Compute PIIDs for a curated set of generic instantiations for the system
-   differential check. */
 #define PI1(disp, type, a0)                                                                                            \
 	do {                                                                                                              \
 		char const *args [] = {a0};                                                                                 \
@@ -165,7 +162,6 @@ static int piid_name_is_ident(char const *s) {
 	return 1;
 }
 
-/* Growable parallel arrays of mangled C names and their 16-byte PIIDs. */
 typedef struct piid_set {
 	char   **names;
 	uint8_t *piids;
@@ -180,7 +176,6 @@ static int piid_set_has(piid_set const *s, char const *cname) {
 	return 0;
 }
 
-/* Append (cname, piid); returns 0, or -1 on allocation failure. */
 static int piid_set_add(piid_set *s, char const *cname, uint8_t const piid [16]) {
 	if (s->n >= s->cap) {
 		uint32_t nc = s->cap ? s->cap * 2 : 512;
@@ -281,7 +276,6 @@ static int piid_write_impl(int bc, piid_set const *s) {
 	return 0;
 }
 
-/* Write the PIID header + definition unit. Returns 0, or -1 on output failure. */
 static int piid_set_write(piid_set const *s, char const *out_dir, char const *impl_dir) {
 	char     hpath [1024];
 	char     cpath [1024];
@@ -329,7 +323,6 @@ static int piid_set_write(piid_set const *s, char const *out_dir, char const *im
 	return 0;
 }
 
-/* Collect PIIDs from the TypeSpec table and write the header + definition unit. */
 int gen_emit_piids(char const *winmd_path, char const *out_dir, char const *impl_dir) {
 	winmd_db wm;
 	piid_set s;
@@ -360,7 +353,6 @@ static int str_set_has(str_set const *s, char const *v) {
 	return 0;
 }
 
-/* Append a copy of v; returns 0, or -1 if the backing array can't grow. */
 static int str_set_add(str_set *s, char const *v) {
 	if (s->n >= s->cap) {
 		uint32_t nc = s->cap ? s->cap * 2 : 256;
@@ -407,7 +399,6 @@ int gen_dump_piids(char const *winmd_path) {
 	return 0;
 }
 
-/* Print classification, default-iface token, and built signature for one type. */
 int gen_dump_sig(char const *winmd_path, char const *type_name) {
 	winmd_db wm;
 	uint32_t row;

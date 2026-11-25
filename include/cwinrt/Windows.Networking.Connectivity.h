@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Networking.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStreamReference
 #define CWINRT_FWD_WSTST_IRandomAccessStreamReference
 typedef struct WSTST_IRandomAccessStreamReference WSTST_IRandomAccessStreamReference;
@@ -23,7 +22,6 @@ typedef struct WSTST_IRandomAccessStreamReference WSTST_IRandomAccessStreamRefer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WNECO_DataPlanStatus WNECO_DataPlanStatus;
 typedef struct WNECO_DataPlanUsage WNECO_DataPlanUsage;
 typedef struct WNECO_DataUsage WNECO_DataUsage;
@@ -89,7 +87,6 @@ typedef struct WNECO_ICellularApnContext WNECO_ICellularApnContext;
 typedef struct WNECO_ICellularApnContext_2 WNECO_ICellularApnContext_2;
 typedef struct WNECO_IAttributedNetworkUsage WNECO_IAttributedNetworkUsage;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_DateTime
 #define CWINRT_FWD_WF_DateTime
 typedef struct WF_DateTime WF_DateTime;
@@ -396,7 +393,6 @@ struct WNECO_NetworkUsageStates {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -557,676 +553,409 @@ static const IID CWINRT_IID_WNECO_ICellularApnContext_2 CWINRT_MAYBE_UNUSED = { 
 static const IID CWINRT_IID_WNECO_IAttributedNetworkUsage CWINRT_MAYBE_UNUSED = { 0xF769B039, 0xECA2, 0x45EB, { 0xAD, 0xE1, 0xB0, 0x36, 0x8B, 0x75, 0x6C, 0x49 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Networking.Connectivity.DataPlanStatus */
 HRESULT wneco_data_plan_status_new(WNECO_DataPlanStatus **out);
 
-/* Windows.Networking.Connectivity.DataPlanStatus */
-/* Windows.Networking.Connectivity.DataPlanStatus.get_DataPlanUsage() */
 HRESULT wneco_data_plan_status_get__data_plan_usage(WNECO_DataPlanStatus *self, WNECO_DataPlanUsage** value);
 
-/* Windows.Networking.Connectivity.DataPlanStatus.get_DataLimitInMegabytes() */
 HRESULT wneco_data_plan_status_get__data_limit_in_megabytes(WNECO_DataPlanStatus *self, uint32_t** value);
 
-/* Windows.Networking.Connectivity.DataPlanStatus.get_InboundBitsPerSecond() */
 HRESULT wneco_data_plan_status_get__inbound_bits_per_second(WNECO_DataPlanStatus *self, uint64_t** value);
 
-/* Windows.Networking.Connectivity.DataPlanStatus.get_OutboundBitsPerSecond() */
 HRESULT wneco_data_plan_status_get__outbound_bits_per_second(WNECO_DataPlanStatus *self, uint64_t** value);
 
-/* Windows.Networking.Connectivity.DataPlanStatus.get_NextBillingCycle() */
 HRESULT wneco_data_plan_status_get__next_billing_cycle(WNECO_DataPlanStatus *self, WF_DateTime** value);
 
-/* Windows.Networking.Connectivity.DataPlanStatus.get_MaxTransferSizeInMegabytes() */
 HRESULT wneco_data_plan_status_get__max_transfer_size_in_megabytes(WNECO_DataPlanStatus *self, uint32_t** value);
 
-/* activate Windows.Networking.Connectivity.DataPlanUsage */
 HRESULT wneco_data_plan_usage_new(WNECO_DataPlanUsage **out);
 
-/* Windows.Networking.Connectivity.DataPlanUsage */
-/* Windows.Networking.Connectivity.DataPlanUsage.get_MegabytesUsed() */
 HRESULT wneco_data_plan_usage_get__megabytes_used(WNECO_DataPlanUsage *self, uint32_t *value);
 
-/* Windows.Networking.Connectivity.DataPlanUsage.get_LastSyncTime() */
 HRESULT wneco_data_plan_usage_get__last_sync_time(WNECO_DataPlanUsage *self, WF_DateTime *value);
 
-/* activate Windows.Networking.Connectivity.DataUsage */
 HRESULT wneco_data_usage_new(WNECO_DataUsage **out);
 
-/* Windows.Networking.Connectivity.DataUsage */
-/* Windows.Networking.Connectivity.DataUsage.get_BytesSent() */
 HRESULT wneco_data_usage_get__bytes_sent(WNECO_DataUsage *self, uint64_t *value);
 
-/* Windows.Networking.Connectivity.DataUsage.get_BytesReceived() */
 HRESULT wneco_data_usage_get__bytes_received(WNECO_DataUsage *self, uint64_t *value);
 
-/* activate Windows.Networking.Connectivity.ConnectivityManager */
 HRESULT wneco_connectivity_manager_new(WNECO_ConnectivityManager **out);
 
-/* Windows.Networking.Connectivity.ConnectivityManager */
-/* Windows.Networking.Connectivity.ConnectivityManager.AcquireConnectionAsync(cellularApnContext) */
 HRESULT wneco_connectivity_manager_acquire_connection_async(WNECO_CellularApnContext* cellularApnContext, WF_IAsyncOperation_WNECO_ConnectionSession** out);
 
-/* Windows.Networking.Connectivity.ConnectivityManager.AddHttpRoutePolicy(routePolicy) */
 HRESULT wneco_connectivity_manager_add_http_route_policy(WNECO_RoutePolicy* routePolicy);
 
-/* Windows.Networking.Connectivity.ConnectivityManager.RemoveHttpRoutePolicy(routePolicy) */
 HRESULT wneco_connectivity_manager_remove_http_route_policy(WNECO_RoutePolicy* routePolicy);
 
-/* Windows.Networking.Connectivity.IConnectivityManagerStatics */
-/* Windows.Networking.Connectivity.IConnectivityManagerStatics.AcquireConnectionAsync(cellularApnContext) */
 HRESULT wneco_connectivity_manager_statics_acquire_connection_async(WNECO_IConnectivityManagerStatics *self, WNECO_CellularApnContext* cellularApnContext, WF_IAsyncOperation_WNECO_ConnectionSession** out);
 
-/* Windows.Networking.Connectivity.IConnectivityManagerStatics.AddHttpRoutePolicy(routePolicy) */
 HRESULT wneco_connectivity_manager_statics_add_http_route_policy(WNECO_IConnectivityManagerStatics *self, WNECO_RoutePolicy* routePolicy);
 
-/* Windows.Networking.Connectivity.IConnectivityManagerStatics.RemoveHttpRoutePolicy(routePolicy) */
 HRESULT wneco_connectivity_manager_statics_remove_http_route_policy(WNECO_IConnectivityManagerStatics *self, WNECO_RoutePolicy* routePolicy);
 
-/* Windows.Networking.Connectivity.INetworkInformationStatics */
-/* Windows.Networking.Connectivity.INetworkInformationStatics.GetConnectionProfiles() */
 HRESULT wneco_network_information_statics_get_connection_profiles(WNECO_INetworkInformationStatics *self, WFOCO_IVectorView_WNECO_ConnectionProfile** out);
 
-/* Windows.Networking.Connectivity.INetworkInformationStatics.GetInternetConnectionProfile() */
 HRESULT wneco_network_information_statics_get_internet_connection_profile(WNECO_INetworkInformationStatics *self, WNECO_ConnectionProfile** out);
 
-/* Windows.Networking.Connectivity.INetworkInformationStatics.GetLanIdentifiers() */
 HRESULT wneco_network_information_statics_get_lan_identifiers(WNECO_INetworkInformationStatics *self, WFOCO_IVectorView_WNECO_LanIdentifier** out);
 
-/* Windows.Networking.Connectivity.INetworkInformationStatics.GetHostNames() */
 HRESULT wneco_network_information_statics_get_host_names(WNECO_INetworkInformationStatics *self, WFOCO_IVectorView_WNE_HostName** out);
 
-/* Windows.Networking.Connectivity.INetworkInformationStatics.GetProxyConfigurationAsync(uri) */
 HRESULT wneco_network_information_statics_get_proxy_configuration_async(WNECO_INetworkInformationStatics *self, WF_Uri* uri, WF_IAsyncOperation_WNECO_ProxyConfiguration** out);
 
-/* Windows.Networking.Connectivity.INetworkInformationStatics.GetSortedEndpointPairs(destinationList, sortOptions) */
 HRESULT wneco_network_information_statics_get_sorted_endpoint_pairs(WNECO_INetworkInformationStatics *self, WFOCO_IIterable_WNE_EndpointPair* destinationList, WNE_HostNameSortOptions sortOptions, WFOCO_IVectorView_WNE_EndpointPair** out);
 
-/* Windows.Networking.Connectivity.INetworkInformationStatics2 */
-/* Windows.Networking.Connectivity.INetworkInformationStatics2.FindConnectionProfilesAsync(pProfileFilter) */
 HRESULT wneco_network_information_statics_2_find_connection_profiles_async(WNECO_INetworkInformationStatics_2 *self, WNECO_ConnectionProfileFilter* pProfileFilter, WF_IAsyncOperation_WFOCO_IVectorView_WNECO_ConnectionProfile** out);
 
-/* activate Windows.Networking.Connectivity.IPInformation */
 HRESULT wneco_p_information_new(WNECO_IPInformation **out);
 
-/* Windows.Networking.Connectivity.IPInformation */
-/* Windows.Networking.Connectivity.IPInformation.get_NetworkAdapter() */
 HRESULT wneco_p_information_get__network_adapter(WNECO_IPInformation *self, WNECO_NetworkAdapter** value);
 
-/* Windows.Networking.Connectivity.IPInformation.get_PrefixLength() */
 HRESULT wneco_p_information_get__prefix_length(WNECO_IPInformation *self, uint8_t** value);
 
-/* Windows.Networking.Connectivity.IRoutePolicyFactory */
-/* Windows.Networking.Connectivity.IRoutePolicyFactory.CreateRoutePolicy(connectionProfile, hostName) */
 HRESULT wneco_route_policy_factory_create_route_policy(WNECO_IRoutePolicyFactory *self, WNECO_ConnectionProfile* connectionProfile, WNE_HostName* hostName, WNE_DomainNameType type_, WNECO_RoutePolicy** out);
 
-/* activate Windows.Networking.Connectivity.LanIdentifier */
 HRESULT wneco_lan_identifier_new(WNECO_LanIdentifier **out);
 
-/* Windows.Networking.Connectivity.LanIdentifier */
-/* Windows.Networking.Connectivity.LanIdentifier.get_InfrastructureId() */
 HRESULT wneco_lan_identifier_get__infrastructure_id(WNECO_LanIdentifier *self, WNECO_LanIdentifierData** value);
 
-/* Windows.Networking.Connectivity.LanIdentifier.get_PortId() */
 HRESULT wneco_lan_identifier_get__port_id(WNECO_LanIdentifier *self, WNECO_LanIdentifierData** value);
 
-/* Windows.Networking.Connectivity.LanIdentifier.get_NetworkAdapterId() */
 HRESULT wneco_lan_identifier_get__network_adapter_id(WNECO_LanIdentifier *self, GUID *value);
 
-/* activate Windows.Networking.Connectivity.LanIdentifierData */
 HRESULT wneco_lan_identifier_data_new(WNECO_LanIdentifierData **out);
 
-/* Windows.Networking.Connectivity.LanIdentifierData */
-/* Windows.Networking.Connectivity.LanIdentifierData.get_Type() */
 HRESULT wneco_lan_identifier_data_get__type(WNECO_LanIdentifierData *self, uint32_t *value);
 
-/* Windows.Networking.Connectivity.LanIdentifierData.get_Value() */
 HRESULT wneco_lan_identifier_data_get__value(WNECO_LanIdentifierData *self, WFOCO_IVectorView_uint8_t** value);
 
-/* activate Windows.Networking.Connectivity.NetworkAdapter */
 HRESULT wneco_network_adapter_new(WNECO_NetworkAdapter **out);
 
-/* Windows.Networking.Connectivity.NetworkAdapter */
-/* Windows.Networking.Connectivity.NetworkAdapter.get_OutboundMaxBitsPerSecond() */
 HRESULT wneco_network_adapter_get__outbound_max_bits_per_second(WNECO_NetworkAdapter *self, uint64_t *value);
 
-/* Windows.Networking.Connectivity.NetworkAdapter.get_InboundMaxBitsPerSecond() */
 HRESULT wneco_network_adapter_get__inbound_max_bits_per_second(WNECO_NetworkAdapter *self, uint64_t *value);
 
-/* Windows.Networking.Connectivity.NetworkAdapter.get_IanaInterfaceType() */
 HRESULT wneco_network_adapter_get__iana_interface_type(WNECO_NetworkAdapter *self, uint32_t *value);
 
-/* Windows.Networking.Connectivity.NetworkAdapter.get_NetworkItem() */
 HRESULT wneco_network_adapter_get__network_item(WNECO_NetworkAdapter *self, WNECO_NetworkItem** value);
 
-/* Windows.Networking.Connectivity.NetworkAdapter.get_NetworkAdapterId() */
 HRESULT wneco_network_adapter_get__network_adapter_id(WNECO_NetworkAdapter *self, GUID *value);
 
-/* Windows.Networking.Connectivity.NetworkAdapter.GetConnectedProfileAsync() */
 HRESULT wneco_network_adapter_get_connected_profile_async(WNECO_NetworkAdapter *self, WF_IAsyncOperation_WNECO_ConnectionProfile** out);
 
-/* activate Windows.Networking.Connectivity.NetworkInformation */
 HRESULT wneco_network_information_new(WNECO_NetworkInformation **out);
 
-/* Windows.Networking.Connectivity.NetworkInformation */
-/* Windows.Networking.Connectivity.NetworkInformation.FindConnectionProfilesAsync(pProfileFilter) */
 HRESULT wneco_network_information_find_connection_profiles_async(WNECO_ConnectionProfileFilter* pProfileFilter, WF_IAsyncOperation_WFOCO_IVectorView_WNECO_ConnectionProfile** out);
 
-/* Windows.Networking.Connectivity.NetworkInformation.GetConnectionProfiles() */
 HRESULT wneco_network_information_get_connection_profiles(WFOCO_IVectorView_WNECO_ConnectionProfile** out);
 
-/* Windows.Networking.Connectivity.NetworkInformation.GetInternetConnectionProfile() */
 HRESULT wneco_network_information_get_internet_connection_profile(WNECO_ConnectionProfile** out);
 
-/* Windows.Networking.Connectivity.NetworkInformation.GetLanIdentifiers() */
 HRESULT wneco_network_information_get_lan_identifiers(WFOCO_IVectorView_WNECO_LanIdentifier** out);
 
-/* Windows.Networking.Connectivity.NetworkInformation.GetHostNames() */
 HRESULT wneco_network_information_get_host_names(WFOCO_IVectorView_WNE_HostName** out);
 
-/* Windows.Networking.Connectivity.NetworkInformation.GetProxyConfigurationAsync(uri) */
 HRESULT wneco_network_information_get_proxy_configuration_async(WF_Uri* uri, WF_IAsyncOperation_WNECO_ProxyConfiguration** out);
 
-/* Windows.Networking.Connectivity.NetworkInformation.GetSortedEndpointPairs(destinationList, sortOptions) */
 HRESULT wneco_network_information_get_sorted_endpoint_pairs(WFOCO_IIterable_WNE_EndpointPair* destinationList, WNE_HostNameSortOptions sortOptions, WFOCO_IVectorView_WNE_EndpointPair** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wneco_network_information_on_network_status_changed(WNECO_NetworkInformation *self, cwinrt_event_fn fn, void *ctx);
 void wneco_network_information_off_network_status_changed(WNECO_NetworkInformation *self, cwinrt_token token);
 
-/* activate Windows.Networking.Connectivity.NetworkItem */
 HRESULT wneco_network_item_new(WNECO_NetworkItem **out);
 
-/* Windows.Networking.Connectivity.NetworkItem */
-/* Windows.Networking.Connectivity.NetworkItem.get_NetworkId() */
 HRESULT wneco_network_item_get__network_id(WNECO_NetworkItem *self, GUID *value);
 
-/* Windows.Networking.Connectivity.NetworkItem.GetNetworkTypes() */
 HRESULT wneco_network_item_get_network_types(WNECO_NetworkItem *self, WNECO_NetworkTypes *out);
 
-/* activate Windows.Networking.Connectivity.NetworkSecuritySettings */
 HRESULT wneco_network_security_settings_new(WNECO_NetworkSecuritySettings **out);
 
-/* Windows.Networking.Connectivity.NetworkSecuritySettings */
-/* Windows.Networking.Connectivity.NetworkSecuritySettings.get_NetworkAuthenticationType() */
 HRESULT wneco_network_security_settings_get__network_authentication_type(WNECO_NetworkSecuritySettings *self, WNECO_NetworkAuthenticationType *value);
 
-/* Windows.Networking.Connectivity.NetworkSecuritySettings.get_NetworkEncryptionType() */
 HRESULT wneco_network_security_settings_get__network_encryption_type(WNECO_NetworkSecuritySettings *self, WNECO_NetworkEncryptionType *value);
 
-/* activate Windows.Networking.Connectivity.NetworkStateChangeEventDetails */
 HRESULT wneco_network_state_change_event_details_new(WNECO_NetworkStateChangeEventDetails **out);
 
-/* Windows.Networking.Connectivity.NetworkStateChangeEventDetails */
-/* Windows.Networking.Connectivity.NetworkStateChangeEventDetails.get_HasNewInternetConnectionProfile() */
 HRESULT wneco_network_state_change_event_details_get__has_new_internet_connection_profile(WNECO_NetworkStateChangeEventDetails *self, BOOL *value);
 
-/* Windows.Networking.Connectivity.NetworkStateChangeEventDetails.get_HasNewConnectionCost() */
 HRESULT wneco_network_state_change_event_details_get__has_new_connection_cost(WNECO_NetworkStateChangeEventDetails *self, BOOL *value);
 
-/* Windows.Networking.Connectivity.NetworkStateChangeEventDetails.get_HasNewNetworkConnectivityLevel() */
 HRESULT wneco_network_state_change_event_details_get__has_new_network_connectivity_level(WNECO_NetworkStateChangeEventDetails *self, BOOL *value);
 
-/* Windows.Networking.Connectivity.NetworkStateChangeEventDetails.get_HasNewDomainConnectivityLevel() */
 HRESULT wneco_network_state_change_event_details_get__has_new_domain_connectivity_level(WNECO_NetworkStateChangeEventDetails *self, BOOL *value);
 
-/* Windows.Networking.Connectivity.NetworkStateChangeEventDetails.get_HasNewHostNameList() */
 HRESULT wneco_network_state_change_event_details_get__has_new_host_name_list(WNECO_NetworkStateChangeEventDetails *self, BOOL *value);
 
-/* Windows.Networking.Connectivity.NetworkStateChangeEventDetails.get_HasNewWwanRegistrationState() */
 HRESULT wneco_network_state_change_event_details_get__has_new_wwan_registration_state(WNECO_NetworkStateChangeEventDetails *self, BOOL *value);
 
-/* Windows.Networking.Connectivity.NetworkStateChangeEventDetails.get_HasNewTetheringOperationalState() */
 HRESULT wneco_network_state_change_event_details_get__has_new_tethering_operational_state(WNECO_NetworkStateChangeEventDetails *self, BOOL *value);
 
-/* Windows.Networking.Connectivity.NetworkStateChangeEventDetails.get_HasNewTetheringClientCount() */
 HRESULT wneco_network_state_change_event_details_get__has_new_tethering_client_count(WNECO_NetworkStateChangeEventDetails *self, BOOL *value);
 
-/* Windows.Networking.Connectivity.NetworkStatusChangedEventHandler */
-/* Windows.Networking.Connectivity.NetworkStatusChangedEventHandler.Invoke(sender) */
 HRESULT wneco_network_status_changed_event_handler_invoke(WNECO_NetworkStatusChangedEventHandler *self, IInspectable* sender);
 
-/* activate Windows.Networking.Connectivity.NetworkUsage */
 HRESULT wneco_network_usage_new(WNECO_NetworkUsage **out);
 
-/* Windows.Networking.Connectivity.NetworkUsage */
-/* Windows.Networking.Connectivity.NetworkUsage.get_BytesSent() */
 HRESULT wneco_network_usage_get__bytes_sent(WNECO_NetworkUsage *self, uint64_t *value);
 
-/* Windows.Networking.Connectivity.NetworkUsage.get_BytesReceived() */
 HRESULT wneco_network_usage_get__bytes_received(WNECO_NetworkUsage *self, uint64_t *value);
 
-/* Windows.Networking.Connectivity.NetworkUsage.get_ConnectionDuration() */
 HRESULT wneco_network_usage_get__connection_duration(WNECO_NetworkUsage *self, WF_TimeSpan *value);
 
-/* activate Windows.Networking.Connectivity.ProviderNetworkUsage */
 HRESULT wneco_provider_network_usage_new(WNECO_ProviderNetworkUsage **out);
 
-/* Windows.Networking.Connectivity.ProviderNetworkUsage */
-/* Windows.Networking.Connectivity.ProviderNetworkUsage.get_BytesSent() */
 HRESULT wneco_provider_network_usage_get__bytes_sent(WNECO_ProviderNetworkUsage *self, uint64_t *value);
 
-/* Windows.Networking.Connectivity.ProviderNetworkUsage.get_BytesReceived() */
 HRESULT wneco_provider_network_usage_get__bytes_received(WNECO_ProviderNetworkUsage *self, uint64_t *value);
 
-/* Windows.Networking.Connectivity.ProviderNetworkUsage.get_ProviderId() */
 HRESULT wneco_provider_network_usage_get__provider_id(WNECO_ProviderNetworkUsage *self, cwinrt_hstring *value);
 
-/* activate Windows.Networking.Connectivity.ProxyConfiguration */
 HRESULT wneco_proxy_configuration_new(WNECO_ProxyConfiguration **out);
 
-/* Windows.Networking.Connectivity.ProxyConfiguration */
-/* Windows.Networking.Connectivity.ProxyConfiguration.get_ProxyUris() */
 HRESULT wneco_proxy_configuration_get__proxy_uris(WNECO_ProxyConfiguration *self, WFOCO_IVectorView_WF_Uri** value);
 
-/* Windows.Networking.Connectivity.ProxyConfiguration.get_CanConnectDirectly() */
 HRESULT wneco_proxy_configuration_get__can_connect_directly(WNECO_ProxyConfiguration *self, BOOL *value);
 
-/* activate Windows.Networking.Connectivity.RoutePolicy */
 HRESULT wneco_route_policy_new(WNECO_RoutePolicy **out);
 
-/* Windows.Networking.Connectivity.RoutePolicy */
-/* Windows.Networking.Connectivity.RoutePolicy.get_ConnectionProfile() */
 HRESULT wneco_route_policy_get__connection_profile(WNECO_RoutePolicy *self, WNECO_ConnectionProfile** value);
 
-/* Windows.Networking.Connectivity.RoutePolicy.get_HostName() */
 HRESULT wneco_route_policy_get__host_name(WNECO_RoutePolicy *self, WNE_HostName** value);
 
-/* Windows.Networking.Connectivity.RoutePolicy.get_HostNameType() */
 HRESULT wneco_route_policy_get__host_name_type(WNECO_RoutePolicy *self, WNE_DomainNameType *value);
 
-/* activate Windows.Networking.Connectivity.WlanConnectionProfileDetails */
 HRESULT wneco_wlan_connection_profile_details_new(WNECO_WlanConnectionProfileDetails **out);
 
-/* Windows.Networking.Connectivity.WlanConnectionProfileDetails */
-/* Windows.Networking.Connectivity.WlanConnectionProfileDetails.GetConnectedSsid() */
 HRESULT wneco_wlan_connection_profile_details_get_connected_ssid(WNECO_WlanConnectionProfileDetails *self, cwinrt_hstring *out);
 
-/* activate Windows.Networking.Connectivity.WwanConnectionProfileDetails */
 HRESULT wneco_wwan_connection_profile_details_new(WNECO_WwanConnectionProfileDetails **out);
 
-/* Windows.Networking.Connectivity.WwanConnectionProfileDetails */
-/* Windows.Networking.Connectivity.WwanConnectionProfileDetails.get_HomeProviderId() */
 HRESULT wneco_wwan_connection_profile_details_get__home_provider_id(WNECO_WwanConnectionProfileDetails *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Connectivity.WwanConnectionProfileDetails.get_AccessPointName() */
 HRESULT wneco_wwan_connection_profile_details_get__access_point_name(WNECO_WwanConnectionProfileDetails *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Connectivity.WwanConnectionProfileDetails.GetNetworkRegistrationState() */
 HRESULT wneco_wwan_connection_profile_details_get_network_registration_state(WNECO_WwanConnectionProfileDetails *self, WNECO_WwanNetworkRegistrationState *out);
 
-/* Windows.Networking.Connectivity.WwanConnectionProfileDetails.GetCurrentDataClass() */
 HRESULT wneco_wwan_connection_profile_details_get_current_data_class(WNECO_WwanConnectionProfileDetails *self, WNECO_WwanDataClass *out);
 
-/* Windows.Networking.Connectivity.WwanConnectionProfileDetails.get_IPKind() */
 HRESULT wneco_wwan_connection_profile_details_get__i_p_kind(WNECO_WwanConnectionProfileDetails *self, WNECO_WwanNetworkIPKind *value);
 
-/* Windows.Networking.Connectivity.WwanConnectionProfileDetails.get_PurposeGuids() */
 HRESULT wneco_wwan_connection_profile_details_get__purpose_guids(WNECO_WwanConnectionProfileDetails *self, WFOCO_IVectorView_Guid** value);
 
-/* activate Windows.Networking.Connectivity.ConnectivityInterval */
 HRESULT wneco_connectivity_interval_new(WNECO_ConnectivityInterval **out);
 
-/* Windows.Networking.Connectivity.ConnectivityInterval */
-/* Windows.Networking.Connectivity.ConnectivityInterval.get_StartTime() */
 HRESULT wneco_connectivity_interval_get__start_time(WNECO_ConnectivityInterval *self, WF_DateTime *value);
 
-/* Windows.Networking.Connectivity.ConnectivityInterval.get_ConnectionDuration() */
 HRESULT wneco_connectivity_interval_get__connection_duration(WNECO_ConnectivityInterval *self, WF_TimeSpan *value);
 
-/* activate Windows.Networking.Connectivity.ConnectionSession */
 HRESULT wneco_connection_session_new(WNECO_ConnectionSession **out);
 
-/* Windows.Networking.Connectivity.ConnectionSession */
-/* Windows.Networking.Connectivity.ConnectionSession.get_ConnectionProfile() */
 HRESULT wneco_connection_session_get__connection_profile(WNECO_ConnectionSession *self, WNECO_ConnectionProfile** value);
 
-/* Windows.Networking.Connectivity.ConnectionSession.Close() */
 HRESULT wneco_connection_session_close(WNECO_ConnectionSession *self);
 
-/* activate Windows.Networking.Connectivity.ConnectionProfileFilter */
 HRESULT wneco_connection_profile_filter_new(WNECO_ConnectionProfileFilter **out);
 
-/* Windows.Networking.Connectivity.ConnectionProfileFilter */
-/* Windows.Networking.Connectivity.ConnectionProfileFilter.put_IsConnected() */
 HRESULT wneco_connection_profile_filter_put__is_connected(WNECO_ConnectionProfileFilter *self, BOOL value);
 
-/* Windows.Networking.Connectivity.ConnectionProfileFilter.get_IsConnected() */
 HRESULT wneco_connection_profile_filter_get__is_connected(WNECO_ConnectionProfileFilter *self, BOOL *value);
 
-/* Windows.Networking.Connectivity.ConnectionProfileFilter.put_IsWwanConnectionProfile() */
 HRESULT wneco_connection_profile_filter_put__is_wwan_connection_profile(WNECO_ConnectionProfileFilter *self, BOOL value);
 
-/* Windows.Networking.Connectivity.ConnectionProfileFilter.get_IsWwanConnectionProfile() */
 HRESULT wneco_connection_profile_filter_get__is_wwan_connection_profile(WNECO_ConnectionProfileFilter *self, BOOL *value);
 
-/* Windows.Networking.Connectivity.ConnectionProfileFilter.put_IsWlanConnectionProfile() */
 HRESULT wneco_connection_profile_filter_put__is_wlan_connection_profile(WNECO_ConnectionProfileFilter *self, BOOL value);
 
-/* Windows.Networking.Connectivity.ConnectionProfileFilter.get_IsWlanConnectionProfile() */
 HRESULT wneco_connection_profile_filter_get__is_wlan_connection_profile(WNECO_ConnectionProfileFilter *self, BOOL *value);
 
-/* Windows.Networking.Connectivity.ConnectionProfileFilter.put_NetworkCostType() */
 HRESULT wneco_connection_profile_filter_put__network_cost_type(WNECO_ConnectionProfileFilter *self, WNECO_NetworkCostType value);
 
-/* Windows.Networking.Connectivity.ConnectionProfileFilter.get_NetworkCostType() */
 HRESULT wneco_connection_profile_filter_get__network_cost_type(WNECO_ConnectionProfileFilter *self, WNECO_NetworkCostType *value);
 
-/* Windows.Networking.Connectivity.ConnectionProfileFilter.put_ServiceProviderGuid() */
 HRESULT wneco_connection_profile_filter_put__service_provider_guid(WNECO_ConnectionProfileFilter *self, GUID* value);
 
-/* Windows.Networking.Connectivity.ConnectionProfileFilter.get_ServiceProviderGuid() */
 HRESULT wneco_connection_profile_filter_get__service_provider_guid(WNECO_ConnectionProfileFilter *self, GUID** value);
 
-/* Windows.Networking.Connectivity.ConnectionProfileFilter.put_IsRoaming() */
 HRESULT wneco_connection_profile_filter_put__is_roaming(WNECO_ConnectionProfileFilter *self, BOOL* value);
 
-/* Windows.Networking.Connectivity.ConnectionProfileFilter.get_IsRoaming() */
 HRESULT wneco_connection_profile_filter_get__is_roaming(WNECO_ConnectionProfileFilter *self, BOOL** value);
 
-/* Windows.Networking.Connectivity.ConnectionProfileFilter.put_IsOverDataLimit() */
 HRESULT wneco_connection_profile_filter_put__is_over_data_limit(WNECO_ConnectionProfileFilter *self, BOOL* value);
 
-/* Windows.Networking.Connectivity.ConnectionProfileFilter.get_IsOverDataLimit() */
 HRESULT wneco_connection_profile_filter_get__is_over_data_limit(WNECO_ConnectionProfileFilter *self, BOOL** value);
 
-/* Windows.Networking.Connectivity.ConnectionProfileFilter.put_IsBackgroundDataUsageRestricted() */
 HRESULT wneco_connection_profile_filter_put__is_background_data_usage_restricted(WNECO_ConnectionProfileFilter *self, BOOL* value);
 
-/* Windows.Networking.Connectivity.ConnectionProfileFilter.get_IsBackgroundDataUsageRestricted() */
 HRESULT wneco_connection_profile_filter_get__is_background_data_usage_restricted(WNECO_ConnectionProfileFilter *self, BOOL** value);
 
-/* Windows.Networking.Connectivity.ConnectionProfileFilter.get_RawData() */
 HRESULT wneco_connection_profile_filter_get__raw_data(WNECO_ConnectionProfileFilter *self, WSTST_IBuffer** value);
 
-/* Windows.Networking.Connectivity.ConnectionProfileFilter.put_PurposeGuid() */
 HRESULT wneco_connection_profile_filter_put__purpose_guid(WNECO_ConnectionProfileFilter *self, GUID* value);
 
-/* Windows.Networking.Connectivity.ConnectionProfileFilter.get_PurposeGuid() */
 HRESULT wneco_connection_profile_filter_get__purpose_guid(WNECO_ConnectionProfileFilter *self, GUID** value);
 
-/* activate Windows.Networking.Connectivity.ConnectionProfile */
 HRESULT wneco_connection_profile_new(WNECO_ConnectionProfile **out);
 
-/* Windows.Networking.Connectivity.ConnectionProfile */
-/* Windows.Networking.Connectivity.ConnectionProfile.get_ProfileName() */
 HRESULT wneco_connection_profile_get__profile_name(WNECO_ConnectionProfile *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Connectivity.ConnectionProfile.GetNetworkConnectivityLevel() */
 HRESULT wneco_connection_profile_get_network_connectivity_level(WNECO_ConnectionProfile *self, WNECO_NetworkConnectivityLevel *out);
 
-/* Windows.Networking.Connectivity.ConnectionProfile.GetNetworkNames() */
 HRESULT wneco_connection_profile_get_network_names(WNECO_ConnectionProfile *self, WFOCO_IVectorView_HSTRING** out);
 
-/* Windows.Networking.Connectivity.ConnectionProfile.GetConnectionCost() */
 HRESULT wneco_connection_profile_get_connection_cost(WNECO_ConnectionProfile *self, WNECO_ConnectionCost** out);
 
-/* Windows.Networking.Connectivity.ConnectionProfile.GetDataPlanStatus() */
 HRESULT wneco_connection_profile_get_data_plan_status(WNECO_ConnectionProfile *self, WNECO_DataPlanStatus** out);
 
-/* Windows.Networking.Connectivity.ConnectionProfile.get_NetworkAdapter() */
 HRESULT wneco_connection_profile_get__network_adapter(WNECO_ConnectionProfile *self, WNECO_NetworkAdapter** value);
 
-/* Windows.Networking.Connectivity.ConnectionProfile.GetLocalUsage(StartTime, EndTime) */
 HRESULT wneco_connection_profile_get_local_usage(WNECO_ConnectionProfile *self, WF_DateTime StartTime, WF_DateTime EndTime, WNECO_DataUsage** out);
 
-/* Windows.Networking.Connectivity.ConnectionProfile.GetLocalUsage(StartTime, EndTime, States) */
 HRESULT wneco_connection_profile_get_local_usage_date_time_date_time_roaming_states_p(WNECO_ConnectionProfile *self, WF_DateTime StartTime, WF_DateTime EndTime, WNECO_RoamingStates States, WNECO_DataUsage** out);
 
-/* Windows.Networking.Connectivity.ConnectionProfile.get_NetworkSecuritySettings() */
 HRESULT wneco_connection_profile_get__network_security_settings(WNECO_ConnectionProfile *self, WNECO_NetworkSecuritySettings** value);
 
-/* Windows.Networking.Connectivity.ConnectionProfile.get_IsWwanConnectionProfile() */
 HRESULT wneco_connection_profile_get__is_wwan_connection_profile(WNECO_ConnectionProfile *self, BOOL *value);
 
-/* Windows.Networking.Connectivity.ConnectionProfile.get_IsWlanConnectionProfile() */
 HRESULT wneco_connection_profile_get__is_wlan_connection_profile(WNECO_ConnectionProfile *self, BOOL *value);
 
-/* Windows.Networking.Connectivity.ConnectionProfile.get_WwanConnectionProfileDetails() */
 HRESULT wneco_connection_profile_get__wwan_connection_profile_details(WNECO_ConnectionProfile *self, WNECO_WwanConnectionProfileDetails** value);
 
-/* Windows.Networking.Connectivity.ConnectionProfile.get_WlanConnectionProfileDetails() */
 HRESULT wneco_connection_profile_get__wlan_connection_profile_details(WNECO_ConnectionProfile *self, WNECO_WlanConnectionProfileDetails** value);
 
-/* Windows.Networking.Connectivity.ConnectionProfile.get_ServiceProviderGuid() */
 HRESULT wneco_connection_profile_get__service_provider_guid(WNECO_ConnectionProfile *self, GUID** value);
 
-/* Windows.Networking.Connectivity.ConnectionProfile.GetSignalBars() */
 HRESULT wneco_connection_profile_get_signal_bars(WNECO_ConnectionProfile *self, uint8_t** out);
 
-/* Windows.Networking.Connectivity.ConnectionProfile.GetDomainConnectivityLevel() */
 HRESULT wneco_connection_profile_get_domain_connectivity_level(WNECO_ConnectionProfile *self, WNECO_DomainConnectivityLevel *out);
 
-/* Windows.Networking.Connectivity.ConnectionProfile.GetNetworkUsageAsync(startTime, endTime, granularity, states) */
 HRESULT wneco_connection_profile_get_network_usage_async(WNECO_ConnectionProfile *self, WF_DateTime startTime, WF_DateTime endTime, WNECO_DataUsageGranularity granularity, WNECO_NetworkUsageStates states, WF_IAsyncOperation_WFOCO_IVectorView_WNECO_NetworkUsage** out);
 
-/* Windows.Networking.Connectivity.ConnectionProfile.GetConnectivityIntervalsAsync(startTime, endTime, states) */
 HRESULT wneco_connection_profile_get_connectivity_intervals_async(WNECO_ConnectionProfile *self, WF_DateTime startTime, WF_DateTime endTime, WNECO_NetworkUsageStates states, WF_IAsyncOperation_WFOCO_IVectorView_WNECO_ConnectivityInterval** out);
 
-/* Windows.Networking.Connectivity.ConnectionProfile.GetAttributedNetworkUsageAsync(startTime, endTime, states) */
 HRESULT wneco_connection_profile_get_attributed_network_usage_async(WNECO_ConnectionProfile *self, WF_DateTime startTime, WF_DateTime endTime, WNECO_NetworkUsageStates states, WF_IAsyncOperation_WFOCO_IVectorView_WNECO_AttributedNetworkUsage** out);
 
-/* Windows.Networking.Connectivity.ConnectionProfile.GetProviderNetworkUsageAsync(startTime, endTime, states) */
 HRESULT wneco_connection_profile_get_provider_network_usage_async(WNECO_ConnectionProfile *self, WF_DateTime startTime, WF_DateTime endTime, WNECO_NetworkUsageStates states, WF_IAsyncOperation_WFOCO_IVectorView_WNECO_ProviderNetworkUsage** out);
 
-/* Windows.Networking.Connectivity.ConnectionProfile.get_CanDelete() */
 HRESULT wneco_connection_profile_get__can_delete(WNECO_ConnectionProfile *self, BOOL *value);
 
-/* Windows.Networking.Connectivity.ConnectionProfile.TryDeleteAsync() */
 HRESULT wneco_connection_profile_try_delete_async(WNECO_ConnectionProfile *self, WF_IAsyncOperation_WNECO_ConnectionProfileDeleteStatus** out);
 
-/* Windows.Networking.Connectivity.ConnectionProfile.IsDomainAuthenticatedBy(kind) */
 HRESULT wneco_connection_profile_is_domain_authenticated_by(WNECO_ConnectionProfile *self, WNECO_DomainAuthenticationKind kind, BOOL *out);
 
-/* activate Windows.Networking.Connectivity.ConnectionCost */
 HRESULT wneco_connection_cost_new(WNECO_ConnectionCost **out);
 
-/* Windows.Networking.Connectivity.ConnectionCost */
-/* Windows.Networking.Connectivity.ConnectionCost.get_NetworkCostType() */
 HRESULT wneco_connection_cost_get__network_cost_type(WNECO_ConnectionCost *self, WNECO_NetworkCostType *value);
 
-/* Windows.Networking.Connectivity.ConnectionCost.get_Roaming() */
 HRESULT wneco_connection_cost_get__roaming(WNECO_ConnectionCost *self, BOOL *value);
 
-/* Windows.Networking.Connectivity.ConnectionCost.get_OverDataLimit() */
 HRESULT wneco_connection_cost_get__over_data_limit(WNECO_ConnectionCost *self, BOOL *value);
 
-/* Windows.Networking.Connectivity.ConnectionCost.get_ApproachingDataLimit() */
 HRESULT wneco_connection_cost_get__approaching_data_limit(WNECO_ConnectionCost *self, BOOL *value);
 
-/* Windows.Networking.Connectivity.ConnectionCost.get_BackgroundDataUsageRestricted() */
 HRESULT wneco_connection_cost_get__background_data_usage_restricted(WNECO_ConnectionCost *self, BOOL *value);
 
-/* activate Windows.Networking.Connectivity.CellularApnContext */
 HRESULT wneco_cellular_apn_context_new(WNECO_CellularApnContext **out);
 
-/* Windows.Networking.Connectivity.CellularApnContext */
-/* Windows.Networking.Connectivity.CellularApnContext.get_ProviderId() */
 HRESULT wneco_cellular_apn_context_get__provider_id(WNECO_CellularApnContext *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Connectivity.CellularApnContext.put_ProviderId() */
 HRESULT wneco_cellular_apn_context_put__provider_id(WNECO_CellularApnContext *self, cwinrt_hstring value);
 
-/* Windows.Networking.Connectivity.CellularApnContext.get_AccessPointName() */
 HRESULT wneco_cellular_apn_context_get__access_point_name(WNECO_CellularApnContext *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Connectivity.CellularApnContext.put_AccessPointName() */
 HRESULT wneco_cellular_apn_context_put__access_point_name(WNECO_CellularApnContext *self, cwinrt_hstring value);
 
-/* Windows.Networking.Connectivity.CellularApnContext.get_UserName() */
 HRESULT wneco_cellular_apn_context_get__user_name(WNECO_CellularApnContext *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Connectivity.CellularApnContext.put_UserName() */
 HRESULT wneco_cellular_apn_context_put__user_name(WNECO_CellularApnContext *self, cwinrt_hstring value);
 
-/* Windows.Networking.Connectivity.CellularApnContext.get_Password() */
 HRESULT wneco_cellular_apn_context_get__password(WNECO_CellularApnContext *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Connectivity.CellularApnContext.put_Password() */
 HRESULT wneco_cellular_apn_context_put__password(WNECO_CellularApnContext *self, cwinrt_hstring value);
 
-/* Windows.Networking.Connectivity.CellularApnContext.get_IsCompressionEnabled() */
 HRESULT wneco_cellular_apn_context_get__is_compression_enabled(WNECO_CellularApnContext *self, BOOL *value);
 
-/* Windows.Networking.Connectivity.CellularApnContext.put_IsCompressionEnabled() */
 HRESULT wneco_cellular_apn_context_put__is_compression_enabled(WNECO_CellularApnContext *self, BOOL value);
 
-/* Windows.Networking.Connectivity.CellularApnContext.get_AuthenticationType() */
 HRESULT wneco_cellular_apn_context_get__authentication_type(WNECO_CellularApnContext *self, WNECO_CellularApnAuthenticationType *value);
 
-/* Windows.Networking.Connectivity.CellularApnContext.put_AuthenticationType() */
 HRESULT wneco_cellular_apn_context_put__authentication_type(WNECO_CellularApnContext *self, WNECO_CellularApnAuthenticationType value);
 
-/* Windows.Networking.Connectivity.CellularApnContext.get_ProfileName() */
 HRESULT wneco_cellular_apn_context_get__profile_name(WNECO_CellularApnContext *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Connectivity.CellularApnContext.put_ProfileName() */
 HRESULT wneco_cellular_apn_context_put__profile_name(WNECO_CellularApnContext *self, cwinrt_hstring value);
 
-/* activate Windows.Networking.Connectivity.AttributedNetworkUsage */
 HRESULT wneco_attributed_network_usage_new(WNECO_AttributedNetworkUsage **out);
 
-/* Windows.Networking.Connectivity.AttributedNetworkUsage */
-/* Windows.Networking.Connectivity.AttributedNetworkUsage.get_BytesSent() */
 HRESULT wneco_attributed_network_usage_get__bytes_sent(WNECO_AttributedNetworkUsage *self, uint64_t *value);
 
-/* Windows.Networking.Connectivity.AttributedNetworkUsage.get_BytesReceived() */
 HRESULT wneco_attributed_network_usage_get__bytes_received(WNECO_AttributedNetworkUsage *self, uint64_t *value);
 
-/* Windows.Networking.Connectivity.AttributedNetworkUsage.get_AttributionId() */
 HRESULT wneco_attributed_network_usage_get__attribution_id(WNECO_AttributedNetworkUsage *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Connectivity.AttributedNetworkUsage.get_AttributionName() */
 HRESULT wneco_attributed_network_usage_get__attribution_name(WNECO_AttributedNetworkUsage *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Connectivity.AttributedNetworkUsage.get_AttributionThumbnail() */
 HRESULT wneco_attributed_network_usage_get__attribution_thumbnail(WNECO_AttributedNetworkUsage *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.Networking.Connectivity.IDataPlanStatus */
-/* Windows.Networking.Connectivity.IDataPlanUsage */
-/* Windows.Networking.Connectivity.IDataUsage */
-/* Windows.Networking.Connectivity.IIPInformation */
-/* Windows.Networking.Connectivity.ILanIdentifier */
-/* Windows.Networking.Connectivity.ILanIdentifierData */
-/* Windows.Networking.Connectivity.INetworkAdapter */
-/* Windows.Networking.Connectivity.INetworkItem */
-/* Windows.Networking.Connectivity.INetworkSecuritySettings */
-/* Windows.Networking.Connectivity.INetworkStateChangeEventDetails */
-/* Windows.Networking.Connectivity.INetworkStateChangeEventDetails2 */
-/* Windows.Networking.Connectivity.INetworkStateChangeEventDetails2.get_HasNewTetheringOperationalState() */
 HRESULT wneco_network_state_change_event_details_2_get__has_new_tethering_operational_state(WNECO_INetworkStateChangeEventDetails_2 *self, BOOL *value);
 
-/* Windows.Networking.Connectivity.INetworkStateChangeEventDetails2.get_HasNewTetheringClientCount() */
 HRESULT wneco_network_state_change_event_details_2_get__has_new_tethering_client_count(WNECO_INetworkStateChangeEventDetails_2 *self, BOOL *value);
 
-/* Windows.Networking.Connectivity.INetworkUsage */
-/* Windows.Networking.Connectivity.IProviderNetworkUsage */
-/* Windows.Networking.Connectivity.IProxyConfiguration */
-/* Windows.Networking.Connectivity.IRoutePolicy */
-/* Windows.Networking.Connectivity.IWlanConnectionProfileDetails */
-/* Windows.Networking.Connectivity.IWwanConnectionProfileDetails */
-/* Windows.Networking.Connectivity.IWwanConnectionProfileDetails2 */
-/* Windows.Networking.Connectivity.IWwanConnectionProfileDetails2.get_IPKind() */
 HRESULT wneco_wwan_connection_profile_details_2_get__i_p_kind(WNECO_IWwanConnectionProfileDetails_2 *self, WNECO_WwanNetworkIPKind *value);
 
-/* Windows.Networking.Connectivity.IWwanConnectionProfileDetails2.get_PurposeGuids() */
 HRESULT wneco_wwan_connection_profile_details_2_get__purpose_guids(WNECO_IWwanConnectionProfileDetails_2 *self, WFOCO_IVectorView_Guid** value);
 
-/* Windows.Networking.Connectivity.IConnectivityInterval */
-/* Windows.Networking.Connectivity.IConnectionSession */
-/* Windows.Networking.Connectivity.IConnectionProfileFilter */
-/* Windows.Networking.Connectivity.IConnectionProfileFilter2 */
-/* Windows.Networking.Connectivity.IConnectionProfileFilter2.put_IsRoaming() */
 HRESULT wneco_connection_profile_filter_2_put__is_roaming(WNECO_IConnectionProfileFilter_2 *self, BOOL* value);
 
-/* Windows.Networking.Connectivity.IConnectionProfileFilter2.get_IsRoaming() */
 HRESULT wneco_connection_profile_filter_2_get__is_roaming(WNECO_IConnectionProfileFilter_2 *self, BOOL** value);
 
-/* Windows.Networking.Connectivity.IConnectionProfileFilter2.put_IsOverDataLimit() */
 HRESULT wneco_connection_profile_filter_2_put__is_over_data_limit(WNECO_IConnectionProfileFilter_2 *self, BOOL* value);
 
-/* Windows.Networking.Connectivity.IConnectionProfileFilter2.get_IsOverDataLimit() */
 HRESULT wneco_connection_profile_filter_2_get__is_over_data_limit(WNECO_IConnectionProfileFilter_2 *self, BOOL** value);
 
-/* Windows.Networking.Connectivity.IConnectionProfileFilter2.put_IsBackgroundDataUsageRestricted() */
 HRESULT wneco_connection_profile_filter_2_put__is_background_data_usage_restricted(WNECO_IConnectionProfileFilter_2 *self, BOOL* value);
 
-/* Windows.Networking.Connectivity.IConnectionProfileFilter2.get_IsBackgroundDataUsageRestricted() */
 HRESULT wneco_connection_profile_filter_2_get__is_background_data_usage_restricted(WNECO_IConnectionProfileFilter_2 *self, BOOL** value);
 
-/* Windows.Networking.Connectivity.IConnectionProfileFilter2.get_RawData() */
 HRESULT wneco_connection_profile_filter_2_get__raw_data(WNECO_IConnectionProfileFilter_2 *self, WSTST_IBuffer** value);
 
-/* Windows.Networking.Connectivity.IConnectionProfileFilter3 */
-/* Windows.Networking.Connectivity.IConnectionProfileFilter3.put_PurposeGuid() */
 HRESULT wneco_connection_profile_filter_3_put__purpose_guid(WNECO_IConnectionProfileFilter_3 *self, GUID* value);
 
-/* Windows.Networking.Connectivity.IConnectionProfileFilter3.get_PurposeGuid() */
 HRESULT wneco_connection_profile_filter_3_get__purpose_guid(WNECO_IConnectionProfileFilter_3 *self, GUID** value);
 
-/* Windows.Networking.Connectivity.IConnectionProfile */
-/* Windows.Networking.Connectivity.IConnectionProfile2 */
-/* Windows.Networking.Connectivity.IConnectionProfile2.get_IsWwanConnectionProfile() */
 HRESULT wneco_connection_profile_2_get__is_wwan_connection_profile(WNECO_IConnectionProfile_2 *self, BOOL *value);
 
-/* Windows.Networking.Connectivity.IConnectionProfile2.get_IsWlanConnectionProfile() */
 HRESULT wneco_connection_profile_2_get__is_wlan_connection_profile(WNECO_IConnectionProfile_2 *self, BOOL *value);
 
-/* Windows.Networking.Connectivity.IConnectionProfile2.get_WwanConnectionProfileDetails() */
 HRESULT wneco_connection_profile_2_get__wwan_connection_profile_details(WNECO_IConnectionProfile_2 *self, WNECO_WwanConnectionProfileDetails** value);
 
-/* Windows.Networking.Connectivity.IConnectionProfile2.get_WlanConnectionProfileDetails() */
 HRESULT wneco_connection_profile_2_get__wlan_connection_profile_details(WNECO_IConnectionProfile_2 *self, WNECO_WlanConnectionProfileDetails** value);
 
-/* Windows.Networking.Connectivity.IConnectionProfile2.get_ServiceProviderGuid() */
 HRESULT wneco_connection_profile_2_get__service_provider_guid(WNECO_IConnectionProfile_2 *self, GUID** value);
 
-/* Windows.Networking.Connectivity.IConnectionProfile2.GetSignalBars() */
 HRESULT wneco_connection_profile_2_get_signal_bars(WNECO_IConnectionProfile_2 *self, uint8_t** out);
 
-/* Windows.Networking.Connectivity.IConnectionProfile2.GetDomainConnectivityLevel() */
 HRESULT wneco_connection_profile_2_get_domain_connectivity_level(WNECO_IConnectionProfile_2 *self, WNECO_DomainConnectivityLevel *out);
 
-/* Windows.Networking.Connectivity.IConnectionProfile2.GetNetworkUsageAsync(startTime, endTime, granularity, states) */
 HRESULT wneco_connection_profile_2_get_network_usage_async(WNECO_IConnectionProfile_2 *self, WF_DateTime startTime, WF_DateTime endTime, WNECO_DataUsageGranularity granularity, WNECO_NetworkUsageStates states, WF_IAsyncOperation_WFOCO_IVectorView_WNECO_NetworkUsage** out);
 
-/* Windows.Networking.Connectivity.IConnectionProfile2.GetConnectivityIntervalsAsync(startTime, endTime, states) */
 HRESULT wneco_connection_profile_2_get_connectivity_intervals_async(WNECO_IConnectionProfile_2 *self, WF_DateTime startTime, WF_DateTime endTime, WNECO_NetworkUsageStates states, WF_IAsyncOperation_WFOCO_IVectorView_WNECO_ConnectivityInterval** out);
 
-/* Windows.Networking.Connectivity.IConnectionProfile3 */
-/* Windows.Networking.Connectivity.IConnectionProfile3.GetAttributedNetworkUsageAsync(startTime, endTime, states) */
 HRESULT wneco_connection_profile_3_get_attributed_network_usage_async(WNECO_IConnectionProfile_3 *self, WF_DateTime startTime, WF_DateTime endTime, WNECO_NetworkUsageStates states, WF_IAsyncOperation_WFOCO_IVectorView_WNECO_AttributedNetworkUsage** out);
 
-/* Windows.Networking.Connectivity.IConnectionProfile4 */
-/* Windows.Networking.Connectivity.IConnectionProfile4.GetProviderNetworkUsageAsync(startTime, endTime, states) */
 HRESULT wneco_connection_profile_4_get_provider_network_usage_async(WNECO_IConnectionProfile_4 *self, WF_DateTime startTime, WF_DateTime endTime, WNECO_NetworkUsageStates states, WF_IAsyncOperation_WFOCO_IVectorView_WNECO_ProviderNetworkUsage** out);
 
-/* Windows.Networking.Connectivity.IConnectionProfile5 */
-/* Windows.Networking.Connectivity.IConnectionProfile5.get_CanDelete() */
 HRESULT wneco_connection_profile_5_get__can_delete(WNECO_IConnectionProfile_5 *self, BOOL *value);
 
-/* Windows.Networking.Connectivity.IConnectionProfile5.TryDeleteAsync() */
 HRESULT wneco_connection_profile_5_try_delete_async(WNECO_IConnectionProfile_5 *self, WF_IAsyncOperation_WNECO_ConnectionProfileDeleteStatus** out);
 
-/* Windows.Networking.Connectivity.IConnectionProfile6 */
-/* Windows.Networking.Connectivity.IConnectionProfile6.IsDomainAuthenticatedBy(kind) */
 HRESULT wneco_connection_profile_6_is_domain_authenticated_by(WNECO_IConnectionProfile_6 *self, WNECO_DomainAuthenticationKind kind, BOOL *out);
 
-/* Windows.Networking.Connectivity.IConnectionCost */
-/* Windows.Networking.Connectivity.IConnectionCost2 */
-/* Windows.Networking.Connectivity.IConnectionCost2.get_BackgroundDataUsageRestricted() */
 HRESULT wneco_connection_cost_2_get__background_data_usage_restricted(WNECO_IConnectionCost_2 *self, BOOL *value);
 
-/* Windows.Networking.Connectivity.ICellularApnContext */
-/* Windows.Networking.Connectivity.ICellularApnContext2 */
-/* Windows.Networking.Connectivity.ICellularApnContext2.get_ProfileName() */
 HRESULT wneco_cellular_apn_context_2_get__profile_name(WNECO_ICellularApnContext_2 *self, cwinrt_hstring *value);
 
-/* Windows.Networking.Connectivity.ICellularApnContext2.put_ProfileName() */
 HRESULT wneco_cellular_apn_context_2_put__profile_name(WNECO_ICellularApnContext_2 *self, cwinrt_hstring value);
 
-/* Windows.Networking.Connectivity.IAttributedNetworkUsage */
 #endif /* CWINRT_WINDOWS_NETWORKING_CONNECTIVITY_H */

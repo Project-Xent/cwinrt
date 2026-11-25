@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.UI.Popups.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStreamReference
 #define CWINRT_FWD_WSTST_IRandomAccessStreamReference
 typedef struct WSTST_IRandomAccessStreamReference WSTST_IRandomAccessStreamReference;
@@ -27,7 +26,6 @@ typedef struct WDEEN_DeviceInformation WDEEN_DeviceInformation;
 typedef struct WDEEN_DevicePickerAppearance WDEEN_DevicePickerAppearance;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMEDI_IDialDeviceStatics WMEDI_IDialDeviceStatics;
 typedef struct WMEDI_IDialReceiverAppStatics WMEDI_IDialReceiverAppStatics;
 typedef struct WMEDI_DialDisconnectButtonClickedEventArgs WMEDI_DialDisconnectButtonClickedEventArgs;
@@ -49,7 +47,6 @@ typedef struct WMEDI_IDialReceiverApp WMEDI_IDialReceiverApp;
 typedef struct WMEDI_IDialReceiverApp_2 WMEDI_IDialReceiverApp_2;
 typedef struct WMEDI_IDialDevicePicker WMEDI_IDialDevicePicker;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WMEDI_DialDevice
 #define CWINRT_FWD_WF_IAsyncOperation_WMEDI_DialDevice
 typedef struct WF_IAsyncOperation_WMEDI_DialDevice WF_IAsyncOperation_WMEDI_DialDevice;
@@ -168,7 +165,6 @@ typedef enum WMEDI_DialAppStopResult {
 } WMEDI_DialAppStopResult;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -221,139 +217,86 @@ static const IID CWINRT_IID_WMEDI_IDialReceiverApp_2 CWINRT_MAYBE_UNUSED = { 0x5
 static const IID CWINRT_IID_WMEDI_IDialDevicePicker CWINRT_MAYBE_UNUSED = { 0xBA7E520A, 0xFF59, 0x4F4B, { 0xBD, 0xAC, 0xD8, 0x9F, 0x49, 0x5A, 0xD6, 0xE1 } };
 #endif
 
-/* Methods */
-
-/* Windows.Media.DialProtocol.IDialDeviceStatics */
-/* Windows.Media.DialProtocol.IDialDeviceStatics.GetDeviceSelector(appName) */
 HRESULT wmedi_dial_device_statics_get_device_selector(WMEDI_IDialDeviceStatics *self, cwinrt_hstring appName, cwinrt_hstring *out);
 
-/* Windows.Media.DialProtocol.IDialDeviceStatics.FromIdAsync() */
 HRESULT wmedi_dial_device_statics_from_id_async(WMEDI_IDialDeviceStatics *self, cwinrt_hstring value, WF_IAsyncOperation_WMEDI_DialDevice** out);
 
-/* Windows.Media.DialProtocol.IDialDeviceStatics.DeviceInfoSupportsDialAsync(device) */
 HRESULT wmedi_dial_device_statics_device_info_supports_dial_async(WMEDI_IDialDeviceStatics *self, WDEEN_DeviceInformation* device, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Media.DialProtocol.IDialReceiverAppStatics */
-/* Windows.Media.DialProtocol.IDialReceiverAppStatics.get_Current() */
 HRESULT wmedi_dial_receiver_app_statics_get__current(WMEDI_IDialReceiverAppStatics *self, WMEDI_DialReceiverApp** value);
 
-/* activate Windows.Media.DialProtocol.DialDisconnectButtonClickedEventArgs */
 HRESULT wmedi_dial_disconnect_button_clicked_event_args_new(WMEDI_DialDisconnectButtonClickedEventArgs **out);
 
-/* Windows.Media.DialProtocol.DialDisconnectButtonClickedEventArgs */
-/* Windows.Media.DialProtocol.DialDisconnectButtonClickedEventArgs.get_Device() */
 HRESULT wmedi_dial_disconnect_button_clicked_event_args_get__device(WMEDI_DialDisconnectButtonClickedEventArgs *self, WMEDI_DialDevice** value);
 
-/* activate Windows.Media.DialProtocol.DialDeviceSelectedEventArgs */
 HRESULT wmedi_dial_device_selected_event_args_new(WMEDI_DialDeviceSelectedEventArgs **out);
 
-/* Windows.Media.DialProtocol.DialDeviceSelectedEventArgs */
-/* Windows.Media.DialProtocol.DialDeviceSelectedEventArgs.get_SelectedDialDevice() */
 HRESULT wmedi_dial_device_selected_event_args_get__selected_dial_device(WMEDI_DialDeviceSelectedEventArgs *self, WMEDI_DialDevice** value);
 
-/* activate Windows.Media.DialProtocol.DialDevicePickerFilter */
 HRESULT wmedi_dial_device_picker_filter_new(WMEDI_DialDevicePickerFilter **out);
 
-/* Windows.Media.DialProtocol.DialDevicePickerFilter */
-/* Windows.Media.DialProtocol.DialDevicePickerFilter.get_SupportedAppNames() */
 HRESULT wmedi_dial_device_picker_filter_get__supported_app_names(WMEDI_DialDevicePickerFilter *self, WFOCO_IVector_HSTRING** value);
 
-/* activate Windows.Media.DialProtocol.DialApp */
 HRESULT wmedi_dial_app_new(WMEDI_DialApp **out);
 
-/* Windows.Media.DialProtocol.DialApp */
-/* Windows.Media.DialProtocol.DialApp.get_AppName() */
 HRESULT wmedi_dial_app_get__app_name(WMEDI_DialApp *self, cwinrt_hstring *value);
 
-/* Windows.Media.DialProtocol.DialApp.RequestLaunchAsync(appArgument) */
 HRESULT wmedi_dial_app_request_launch_async(WMEDI_DialApp *self, cwinrt_hstring appArgument, WF_IAsyncOperation_WMEDI_DialAppLaunchResult** out);
 
-/* Windows.Media.DialProtocol.DialApp.StopAsync() */
 HRESULT wmedi_dial_app_stop_async(WMEDI_DialApp *self, WF_IAsyncOperation_WMEDI_DialAppStopResult** out);
 
-/* Windows.Media.DialProtocol.DialApp.GetAppStateAsync() */
 HRESULT wmedi_dial_app_get_app_state_async(WMEDI_DialApp *self, WF_IAsyncOperation_WMEDI_DialAppStateDetails** out);
 
-/* activate Windows.Media.DialProtocol.DialAppStateDetails */
 HRESULT wmedi_dial_app_state_details_new(WMEDI_DialAppStateDetails **out);
 
-/* Windows.Media.DialProtocol.DialAppStateDetails */
-/* Windows.Media.DialProtocol.DialAppStateDetails.get_State() */
 HRESULT wmedi_dial_app_state_details_get__state(WMEDI_DialAppStateDetails *self, WMEDI_DialAppState *value);
 
-/* Windows.Media.DialProtocol.DialAppStateDetails.get_FullXml() */
 HRESULT wmedi_dial_app_state_details_get__full_xml(WMEDI_DialAppStateDetails *self, cwinrt_hstring *value);
 
-/* activate Windows.Media.DialProtocol.DialDevice */
 HRESULT wmedi_dial_device_new(WMEDI_DialDevice **out);
 
-/* Windows.Media.DialProtocol.DialDevice */
-/* Windows.Media.DialProtocol.DialDevice.get_Id() */
 HRESULT wmedi_dial_device_get__id(WMEDI_DialDevice *self, cwinrt_hstring *value);
 
-/* Windows.Media.DialProtocol.DialDevice.GetDialApp(appName) */
 HRESULT wmedi_dial_device_get_dial_app(WMEDI_DialDevice *self, cwinrt_hstring appName, WMEDI_DialApp** out);
 
-/* Windows.Media.DialProtocol.DialDevice.get_FriendlyName() */
 HRESULT wmedi_dial_device_get__friendly_name(WMEDI_DialDevice *self, cwinrt_hstring *value);
 
-/* Windows.Media.DialProtocol.DialDevice.get_Thumbnail() */
 HRESULT wmedi_dial_device_get__thumbnail(WMEDI_DialDevice *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.Media.DialProtocol.DialDevice.GetDeviceSelector(appName) */
 HRESULT wmedi_dial_device_get_device_selector(cwinrt_hstring appName, cwinrt_hstring *out);
 
-/* Windows.Media.DialProtocol.DialDevice.FromIdAsync() */
 HRESULT wmedi_dial_device_from_id_async(cwinrt_hstring value, WF_IAsyncOperation_WMEDI_DialDevice** out);
 
-/* Windows.Media.DialProtocol.DialDevice.DeviceInfoSupportsDialAsync(device) */
 HRESULT wmedi_dial_device_device_info_supports_dial_async(WDEEN_DeviceInformation* device, WF_IAsyncOperation_Bool** out);
 
-/* activate Windows.Media.DialProtocol.DialReceiverApp */
 HRESULT wmedi_dial_receiver_app_new(WMEDI_DialReceiverApp **out);
 
-/* Windows.Media.DialProtocol.DialReceiverApp */
-/* Windows.Media.DialProtocol.DialReceiverApp.GetAdditionalDataAsync() */
 HRESULT wmedi_dial_receiver_app_get_additional_data_async(WMEDI_DialReceiverApp *self, WF_IAsyncOperation_WFOCO_IMap_HSTRING_HSTRING** out);
 
-/* Windows.Media.DialProtocol.DialReceiverApp.SetAdditionalDataAsync(additionalData) */
 HRESULT wmedi_dial_receiver_app_set_additional_data_async(WMEDI_DialReceiverApp *self, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_HSTRING* additionalData, WF_IAsyncAction** out);
 
-/* Windows.Media.DialProtocol.DialReceiverApp.GetUniqueDeviceNameAsync() */
 HRESULT wmedi_dial_receiver_app_get_unique_device_name_async(WMEDI_DialReceiverApp *self, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Media.DialProtocol.DialReceiverApp.get_Current() */
 HRESULT wmedi_dial_receiver_app_get__current(WMEDI_DialReceiverApp** value);
 
-/* activate Windows.Media.DialProtocol.DialDevicePicker */
 HRESULT wmedi_dial_device_picker_new(WMEDI_DialDevicePicker **out);
 
-/* Windows.Media.DialProtocol.DialDevicePicker */
-/* Windows.Media.DialProtocol.DialDevicePicker.get_Filter() */
 HRESULT wmedi_dial_device_picker_get__filter(WMEDI_DialDevicePicker *self, WMEDI_DialDevicePickerFilter** value);
 
-/* Windows.Media.DialProtocol.DialDevicePicker.get_Appearance() */
 HRESULT wmedi_dial_device_picker_get__appearance(WMEDI_DialDevicePicker *self, WDEEN_DevicePickerAppearance** value);
 
-/* Windows.Media.DialProtocol.DialDevicePicker.Show(selection) */
 HRESULT wmedi_dial_device_picker_show(WMEDI_DialDevicePicker *self, WF_Rect selection);
 
-/* Windows.Media.DialProtocol.DialDevicePicker.Show(selection, preferredPlacement) */
 HRESULT wmedi_dial_device_picker_show_rect_placement(WMEDI_DialDevicePicker *self, WF_Rect selection, WUIPO_Placement preferredPlacement);
 
-/* Windows.Media.DialProtocol.DialDevicePicker.PickSingleDialDeviceAsync(selection) */
 HRESULT wmedi_dial_device_picker_pick_single_dial_device_async(WMEDI_DialDevicePicker *self, WF_Rect selection, WF_IAsyncOperation_WMEDI_DialDevice** out);
 
-/* Windows.Media.DialProtocol.DialDevicePicker.PickSingleDialDeviceAsync(selection, preferredPlacement) */
 HRESULT wmedi_dial_device_picker_pick_single_dial_device_async_rect_placement_p(WMEDI_DialDevicePicker *self, WF_Rect selection, WUIPO_Placement preferredPlacement, WF_IAsyncOperation_WMEDI_DialDevice** out);
 
-/* Windows.Media.DialProtocol.DialDevicePicker.Hide() */
 HRESULT wmedi_dial_device_picker_hide(WMEDI_DialDevicePicker *self);
 
-/* Windows.Media.DialProtocol.DialDevicePicker.SetDisplayStatus(device, status) */
 HRESULT wmedi_dial_device_picker_set_display_status(WMEDI_DialDevicePicker *self, WMEDI_DialDevice* device, WMEDI_DialDeviceDisplayStatus status);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmedi_dial_device_picker_on_dial_device_selected(WMEDI_DialDevicePicker *self, cwinrt_event_fn fn, void *ctx);
@@ -365,23 +308,10 @@ void wmedi_dial_device_picker_off_disconnect_button_clicked(WMEDI_DialDevicePick
 cwinrt_token wmedi_dial_device_picker_on_dial_device_picker_dismissed(WMEDI_DialDevicePicker *self, cwinrt_event_fn fn, void *ctx);
 void wmedi_dial_device_picker_off_dial_device_picker_dismissed(WMEDI_DialDevicePicker *self, cwinrt_token token);
 
-/* Windows.Media.DialProtocol.IDialDisconnectButtonClickedEventArgs */
-/* Windows.Media.DialProtocol.IDialDeviceSelectedEventArgs */
-/* Windows.Media.DialProtocol.IDialDevicePickerFilter */
-/* Windows.Media.DialProtocol.IDialApp */
-/* Windows.Media.DialProtocol.IDialAppStateDetails */
-/* Windows.Media.DialProtocol.IDialDevice */
-/* Windows.Media.DialProtocol.IDialDevice2 */
-/* Windows.Media.DialProtocol.IDialDevice2.get_FriendlyName() */
 HRESULT wmedi_dial_device_2_get__friendly_name(WMEDI_IDialDevice_2 *self, cwinrt_hstring *value);
 
-/* Windows.Media.DialProtocol.IDialDevice2.get_Thumbnail() */
 HRESULT wmedi_dial_device_2_get__thumbnail(WMEDI_IDialDevice_2 *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.Media.DialProtocol.IDialReceiverApp */
-/* Windows.Media.DialProtocol.IDialReceiverApp2 */
-/* Windows.Media.DialProtocol.IDialReceiverApp2.GetUniqueDeviceNameAsync() */
 HRESULT wmedi_dial_receiver_app_2_get_unique_device_name_async(WMEDI_IDialReceiverApp_2 *self, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Media.DialProtocol.IDialDevicePicker */
 #endif /* CWINRT_WINDOWS_MEDIA_DIALPROTOCOL_H */

@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WDEGE_Geopoint
 #define CWINRT_FWD_WDEGE_Geopoint
 typedef struct WDEGE_Geopoint WDEGE_Geopoint;
@@ -26,7 +25,6 @@ typedef struct WDEGE_GeoboundingBox WDEGE_GeoboundingBox;
 typedef struct WDEGE_Geocircle WDEGE_Geocircle;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSEMAOF_OfflineMapPackage WSEMAOF_OfflineMapPackage;
 typedef struct WSEMAOF_OfflineMapPackageQueryResult WSEMAOF_OfflineMapPackageQueryResult;
 typedef struct WSEMAOF_OfflineMapPackageStartDownloadResult WSEMAOF_OfflineMapPackageStartDownloadResult;
@@ -35,7 +33,6 @@ typedef struct WSEMAOF_IOfflineMapPackage WSEMAOF_IOfflineMapPackage;
 typedef struct WSEMAOF_IOfflineMapPackageQueryResult WSEMAOF_IOfflineMapPackageQueryResult;
 typedef struct WSEMAOF_IOfflineMapPackageStartDownloadResult WSEMAOF_IOfflineMapPackageStartDownloadResult;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_TypedEventHandler_WSEMAOF_OfflineMapPackage_Object
 #define CWINRT_FWD_WF_TypedEventHandler_WSEMAOF_OfflineMapPackage_Object
 typedef struct WF_TypedEventHandler_WSEMAOF_OfflineMapPackage_Object WF_TypedEventHandler_WSEMAOF_OfflineMapPackage_Object;
@@ -95,7 +92,6 @@ typedef enum WSEMAOF_OfflineMapPackageStatus {
 } WSEMAOF_OfflineMapPackageStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -116,70 +112,43 @@ static const IID CWINRT_IID_WSEMAOF_IOfflineMapPackageQueryResult CWINRT_MAYBE_U
 static const IID CWINRT_IID_WSEMAOF_IOfflineMapPackageStartDownloadResult CWINRT_MAYBE_UNUSED = { 0xD965B918, 0xD4D6, 0x4AFE, { 0x93, 0x78, 0x3E, 0xC7, 0x1E, 0xF1, 0x1C, 0x3D } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Services.Maps.OfflineMaps.OfflineMapPackage */
 HRESULT wsemaof_offline_map_package_new(WSEMAOF_OfflineMapPackage **out);
 
-/* Windows.Services.Maps.OfflineMaps.OfflineMapPackage */
-/* Windows.Services.Maps.OfflineMaps.OfflineMapPackage.get_Status() */
 HRESULT wsemaof_offline_map_package_get__status(WSEMAOF_OfflineMapPackage *self, WSEMAOF_OfflineMapPackageStatus *value);
 
-/* Windows.Services.Maps.OfflineMaps.OfflineMapPackage.get_DisplayName() */
 HRESULT wsemaof_offline_map_package_get__display_name(WSEMAOF_OfflineMapPackage *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.OfflineMaps.OfflineMapPackage.get_EnclosingRegionName() */
 HRESULT wsemaof_offline_map_package_get__enclosing_region_name(WSEMAOF_OfflineMapPackage *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.OfflineMaps.OfflineMapPackage.get_EstimatedSizeInBytes() */
 HRESULT wsemaof_offline_map_package_get__estimated_size_in_bytes(WSEMAOF_OfflineMapPackage *self, uint64_t *value);
 
-/* Windows.Services.Maps.OfflineMaps.OfflineMapPackage.RequestStartDownloadAsync() */
 HRESULT wsemaof_offline_map_package_request_start_download_async(WSEMAOF_OfflineMapPackage *self, WF_IAsyncOperation_WSEMAOF_OfflineMapPackageStartDownloadResult** out);
 
-/* Windows.Services.Maps.OfflineMaps.OfflineMapPackage.FindPackagesAsync(queryPoint) */
 HRESULT wsemaof_offline_map_package_find_packages_async(WDEGE_Geopoint* queryPoint, WF_IAsyncOperation_WSEMAOF_OfflineMapPackageQueryResult** out);
 
-/* Windows.Services.Maps.OfflineMaps.OfflineMapPackage.FindPackagesInBoundingBoxAsync(queryBoundingBox) */
 HRESULT wsemaof_offline_map_package_find_packages_in_bounding_box_async(WDEGE_GeoboundingBox* queryBoundingBox, WF_IAsyncOperation_WSEMAOF_OfflineMapPackageQueryResult** out);
 
-/* Windows.Services.Maps.OfflineMaps.OfflineMapPackage.FindPackagesInGeocircleAsync(queryCircle) */
 HRESULT wsemaof_offline_map_package_find_packages_in_geocircle_async(WDEGE_Geocircle* queryCircle, WF_IAsyncOperation_WSEMAOF_OfflineMapPackageQueryResult** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsemaof_offline_map_package_on_status_changed(WSEMAOF_OfflineMapPackage *self, cwinrt_event_fn fn, void *ctx);
 void wsemaof_offline_map_package_off_status_changed(WSEMAOF_OfflineMapPackage *self, cwinrt_token token);
 
-/* activate Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult */
 HRESULT wsemaof_offline_map_package_query_result_new(WSEMAOF_OfflineMapPackageQueryResult **out);
 
-/* Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult */
-/* Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult.get_Status() */
 HRESULT wsemaof_offline_map_package_query_result_get__status(WSEMAOF_OfflineMapPackageQueryResult *self, WSEMAOF_OfflineMapPackageQueryStatus *value);
 
-/* Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult.get_Packages() */
 HRESULT wsemaof_offline_map_package_query_result_get__packages(WSEMAOF_OfflineMapPackageQueryResult *self, WFOCO_IVectorView_WSEMAOF_OfflineMapPackage** value);
 
-/* activate Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadResult */
 HRESULT wsemaof_offline_map_package_start_download_result_new(WSEMAOF_OfflineMapPackageStartDownloadResult **out);
 
-/* Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadResult */
-/* Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadResult.get_Status() */
 HRESULT wsemaof_offline_map_package_start_download_result_get__status(WSEMAOF_OfflineMapPackageStartDownloadResult *self, WSEMAOF_OfflineMapPackageStartDownloadStatus *value);
 
-/* Windows.Services.Maps.OfflineMaps.IOfflineMapPackageStatics */
-/* Windows.Services.Maps.OfflineMaps.IOfflineMapPackageStatics.FindPackagesAsync(queryPoint) */
 HRESULT wsemaof_offline_map_package_statics_find_packages_async(WSEMAOF_IOfflineMapPackageStatics *self, WDEGE_Geopoint* queryPoint, WF_IAsyncOperation_WSEMAOF_OfflineMapPackageQueryResult** out);
 
-/* Windows.Services.Maps.OfflineMaps.IOfflineMapPackageStatics.FindPackagesInBoundingBoxAsync(queryBoundingBox) */
 HRESULT wsemaof_offline_map_package_statics_find_packages_in_bounding_box_async(WSEMAOF_IOfflineMapPackageStatics *self, WDEGE_GeoboundingBox* queryBoundingBox, WF_IAsyncOperation_WSEMAOF_OfflineMapPackageQueryResult** out);
 
-/* Windows.Services.Maps.OfflineMaps.IOfflineMapPackageStatics.FindPackagesInGeocircleAsync(queryCircle) */
 HRESULT wsemaof_offline_map_package_statics_find_packages_in_geocircle_async(WSEMAOF_IOfflineMapPackageStatics *self, WDEGE_Geocircle* queryCircle, WF_IAsyncOperation_WSEMAOF_OfflineMapPackageQueryResult** out);
 
-/* Windows.Services.Maps.OfflineMaps.IOfflineMapPackage */
-/* Windows.Services.Maps.OfflineMaps.IOfflineMapPackageQueryResult */
-/* Windows.Services.Maps.OfflineMaps.IOfflineMapPackageStartDownloadResult */
 #endif /* CWINRT_WINDOWS_SERVICES_MAPS_OFFLINEMAPS_H */

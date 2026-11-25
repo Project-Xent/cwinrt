@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WGRDICO_IHdmiDisplayInformationStatics WGRDICO_IHdmiDisplayInformationStatics;
 typedef struct WGRDICO_HdmiDisplayMode WGRDICO_HdmiDisplayMode;
 typedef struct WGRDICO_HdmiDisplayInformation WGRDICO_HdmiDisplayInformation;
@@ -20,7 +19,6 @@ typedef struct WGRDICO_IHdmiDisplayMode WGRDICO_IHdmiDisplayMode;
 typedef struct WGRDICO_IHdmiDisplayMode_2 WGRDICO_IHdmiDisplayMode_2;
 typedef struct WGRDICO_IHdmiDisplayInformation WGRDICO_IHdmiDisplayInformation;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IVectorView_WGRDICO_HdmiDisplayMode
 #define CWINRT_FWD_WFOCO_IVectorView_WGRDICO_HdmiDisplayMode
 typedef struct WFOCO_IVectorView_WGRDICO_HdmiDisplayMode WFOCO_IVectorView_WGRDICO_HdmiDisplayMode;
@@ -90,7 +88,6 @@ struct WGRDICO_HdmiDisplayHdr2086Metadata {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -111,87 +108,55 @@ static const IID CWINRT_IID_WGRDICO_IHdmiDisplayMode_2 CWINRT_MAYBE_UNUSED = { 0
 static const IID CWINRT_IID_WGRDICO_IHdmiDisplayInformation CWINRT_MAYBE_UNUSED = { 0x130B3C0A, 0xF565, 0x476E, { 0xAB, 0xD5, 0xEA, 0x05, 0xAE, 0xE7, 0x4C, 0x69 } };
 #endif
 
-/* Methods */
-
-/* Windows.Graphics.Display.Core.IHdmiDisplayInformationStatics */
-/* Windows.Graphics.Display.Core.IHdmiDisplayInformationStatics.GetForCurrentView() */
 HRESULT wgrdico_hdmi_display_information_statics_get_for_current_view(WGRDICO_IHdmiDisplayInformationStatics *self, WGRDICO_HdmiDisplayInformation** out);
 
-/* activate Windows.Graphics.Display.Core.HdmiDisplayMode */
 HRESULT wgrdico_hdmi_display_mode_new(WGRDICO_HdmiDisplayMode **out);
 
-/* Windows.Graphics.Display.Core.HdmiDisplayMode */
-/* Windows.Graphics.Display.Core.HdmiDisplayMode.get_ResolutionWidthInRawPixels() */
 HRESULT wgrdico_hdmi_display_mode_get__resolution_width_in_raw_pixels(WGRDICO_HdmiDisplayMode *self, uint32_t *value);
 
-/* Windows.Graphics.Display.Core.HdmiDisplayMode.get_ResolutionHeightInRawPixels() */
 HRESULT wgrdico_hdmi_display_mode_get__resolution_height_in_raw_pixels(WGRDICO_HdmiDisplayMode *self, uint32_t *value);
 
-/* Windows.Graphics.Display.Core.HdmiDisplayMode.get_RefreshRate() */
 HRESULT wgrdico_hdmi_display_mode_get__refresh_rate(WGRDICO_HdmiDisplayMode *self, double *value);
 
-/* Windows.Graphics.Display.Core.HdmiDisplayMode.get_StereoEnabled() */
 HRESULT wgrdico_hdmi_display_mode_get__stereo_enabled(WGRDICO_HdmiDisplayMode *self, BOOL *value);
 
-/* Windows.Graphics.Display.Core.HdmiDisplayMode.get_BitsPerPixel() */
 HRESULT wgrdico_hdmi_display_mode_get__bits_per_pixel(WGRDICO_HdmiDisplayMode *self, uint16_t *value);
 
-/* Windows.Graphics.Display.Core.HdmiDisplayMode.IsEqual(mode) */
 HRESULT wgrdico_hdmi_display_mode_is_equal(WGRDICO_HdmiDisplayMode *self, WGRDICO_HdmiDisplayMode* mode, BOOL *out);
 
-/* Windows.Graphics.Display.Core.HdmiDisplayMode.get_ColorSpace() */
 HRESULT wgrdico_hdmi_display_mode_get__color_space(WGRDICO_HdmiDisplayMode *self, WGRDICO_HdmiDisplayColorSpace *value);
 
-/* Windows.Graphics.Display.Core.HdmiDisplayMode.get_PixelEncoding() */
 HRESULT wgrdico_hdmi_display_mode_get__pixel_encoding(WGRDICO_HdmiDisplayMode *self, WGRDICO_HdmiDisplayPixelEncoding *value);
 
-/* Windows.Graphics.Display.Core.HdmiDisplayMode.get_IsSdrLuminanceSupported() */
 HRESULT wgrdico_hdmi_display_mode_get__is_sdr_luminance_supported(WGRDICO_HdmiDisplayMode *self, BOOL *value);
 
-/* Windows.Graphics.Display.Core.HdmiDisplayMode.get_IsSmpte2084Supported() */
 HRESULT wgrdico_hdmi_display_mode_get__is_smpte2084_supported(WGRDICO_HdmiDisplayMode *self, BOOL *value);
 
-/* Windows.Graphics.Display.Core.HdmiDisplayMode.get_Is2086MetadataSupported() */
 HRESULT wgrdico_hdmi_display_mode_get__is2086_metadata_supported(WGRDICO_HdmiDisplayMode *self, BOOL *value);
 
-/* Windows.Graphics.Display.Core.HdmiDisplayMode.get_IsDolbyVisionLowLatencySupported() */
 HRESULT wgrdico_hdmi_display_mode_get__is_dolby_vision_low_latency_supported(WGRDICO_HdmiDisplayMode *self, BOOL *value);
 
-/* activate Windows.Graphics.Display.Core.HdmiDisplayInformation */
 HRESULT wgrdico_hdmi_display_information_new(WGRDICO_HdmiDisplayInformation **out);
 
-/* Windows.Graphics.Display.Core.HdmiDisplayInformation */
-/* Windows.Graphics.Display.Core.HdmiDisplayInformation.GetSupportedDisplayModes() */
 HRESULT wgrdico_hdmi_display_information_get_supported_display_modes(WGRDICO_HdmiDisplayInformation *self, WFOCO_IVectorView_WGRDICO_HdmiDisplayMode** out);
 
-/* Windows.Graphics.Display.Core.HdmiDisplayInformation.GetCurrentDisplayMode() */
 HRESULT wgrdico_hdmi_display_information_get_current_display_mode(WGRDICO_HdmiDisplayInformation *self, WGRDICO_HdmiDisplayMode** out);
 
-/* Windows.Graphics.Display.Core.HdmiDisplayInformation.SetDefaultDisplayModeAsync() */
 HRESULT wgrdico_hdmi_display_information_set_default_display_mode_async(WGRDICO_HdmiDisplayInformation *self, WF_IAsyncAction** out);
 
-/* Windows.Graphics.Display.Core.HdmiDisplayInformation.RequestSetCurrentDisplayModeAsync(mode) */
 HRESULT wgrdico_hdmi_display_information_request_set_current_display_mode_async(WGRDICO_HdmiDisplayInformation *self, WGRDICO_HdmiDisplayMode* mode, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Graphics.Display.Core.HdmiDisplayInformation.RequestSetCurrentDisplayModeAsync(mode, hdrOption) */
 HRESULT wgrdico_hdmi_display_information_request_set_current_display_mode_async_p_hdmi_display_hdr_option_p(WGRDICO_HdmiDisplayInformation *self, WGRDICO_HdmiDisplayMode* mode, WGRDICO_HdmiDisplayHdrOption hdrOption, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Graphics.Display.Core.HdmiDisplayInformation.RequestSetCurrentDisplayModeAsync(mode, hdrOption, hdrMetadata) */
 HRESULT wgrdico_hdmi_display_information_request_set_current_display_mode_async_p_hdmi_display_hdr_option_hdmi_displ_1c740240(WGRDICO_HdmiDisplayInformation *self, WGRDICO_HdmiDisplayMode* mode, WGRDICO_HdmiDisplayHdrOption hdrOption, WGRDICO_HdmiDisplayHdr2086Metadata hdrMetadata, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Graphics.Display.Core.HdmiDisplayInformation.GetForCurrentView() */
 HRESULT wgrdico_hdmi_display_information_get_for_current_view(WGRDICO_HdmiDisplayInformation** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wgrdico_hdmi_display_information_on_display_modes_changed(WGRDICO_HdmiDisplayInformation *self, cwinrt_event_fn fn, void *ctx);
 void wgrdico_hdmi_display_information_off_display_modes_changed(WGRDICO_HdmiDisplayInformation *self, cwinrt_token token);
 
-/* Windows.Graphics.Display.Core.IHdmiDisplayMode */
-/* Windows.Graphics.Display.Core.IHdmiDisplayMode2 */
-/* Windows.Graphics.Display.Core.IHdmiDisplayMode2.get_IsDolbyVisionLowLatencySupported() */
 HRESULT wgrdico_hdmi_display_mode_2_get__is_dolby_vision_low_latency_supported(WGRDICO_IHdmiDisplayMode_2 *self, BOOL *value);
 
-/* Windows.Graphics.Display.Core.IHdmiDisplayInformation */
 #endif /* CWINRT_WINDOWS_GRAPHICS_DISPLAY_CORE_H */

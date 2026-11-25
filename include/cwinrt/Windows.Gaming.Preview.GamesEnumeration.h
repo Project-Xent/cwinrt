@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WAM_AppDisplayInfo
 #define CWINRT_FWD_WAM_AppDisplayInfo
 typedef struct WAM_AppDisplayInfo WAM_AppDisplayInfo;
@@ -22,7 +21,6 @@ typedef struct WAM_AppDisplayInfo WAM_AppDisplayInfo;
 typedef struct WS_IStorageFile WS_IStorageFile;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WGAPRGA_GameListChangedEventHandler WGAPRGA_GameListChangedEventHandler;
 typedef struct WGAPRGA_GameListEntry WGAPRGA_GameListEntry;
 typedef struct WGAPRGA_GameListRemovedEventHandler WGAPRGA_GameListRemovedEventHandler;
@@ -37,7 +35,6 @@ typedef struct WGAPRGA_IGameModeConfiguration WGAPRGA_IGameModeConfiguration;
 typedef struct WGAPRGA_IGameModeUserConfiguration WGAPRGA_IGameModeUserConfiguration;
 typedef struct WGAPRGA_IGameListEntry WGAPRGA_IGameListEntry;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WAM_AppDisplayInfo
 #define CWINRT_FWD_WAM_AppDisplayInfo
 typedef struct WAM_AppDisplayInfo WAM_AppDisplayInfo;
@@ -90,7 +87,6 @@ typedef enum WGAPRGA_GameListEntryLaunchableState {
 } WGAPRGA_GameListEntryLaunchableState;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -131,165 +127,104 @@ static const IID CWINRT_IID_WGAPRGA_IGameModeUserConfiguration CWINRT_MAYBE_UNUS
 static const IID CWINRT_IID_WGAPRGA_IGameListEntry CWINRT_MAYBE_UNUSED = { 0x735924D3, 0x811F, 0x4494, { 0xB6, 0x9C, 0xC6, 0x41, 0xA0, 0xC6, 0x15, 0x43 } };
 #endif
 
-/* Methods */
-
-/* Windows.Gaming.Preview.GamesEnumeration.GameListChangedEventHandler */
-/* Windows.Gaming.Preview.GamesEnumeration.GameListChangedEventHandler.Invoke(game) */
 HRESULT wgaprga_game_list_changed_event_handler_invoke(WGAPRGA_GameListChangedEventHandler *self, WGAPRGA_GameListEntry* game);
 
-/* activate Windows.Gaming.Preview.GamesEnumeration.GameListEntry */
 HRESULT wgaprga_game_list_entry_new(WGAPRGA_GameListEntry **out);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameListEntry */
-/* Windows.Gaming.Preview.GamesEnumeration.GameListEntry.get_DisplayInfo() */
 HRESULT wgaprga_game_list_entry_get__display_info(WGAPRGA_GameListEntry *self, WAM_AppDisplayInfo** value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameListEntry.LaunchAsync() */
 HRESULT wgaprga_game_list_entry_launch_async(WGAPRGA_GameListEntry *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameListEntry.get_Category() */
 HRESULT wgaprga_game_list_entry_get__category(WGAPRGA_GameListEntry *self, WGAPRGA_GameListCategory *value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameListEntry.get_Properties() */
 HRESULT wgaprga_game_list_entry_get__properties(WGAPRGA_GameListEntry *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameListEntry.SetCategoryAsync() */
 HRESULT wgaprga_game_list_entry_set_category_async(WGAPRGA_GameListEntry *self, WGAPRGA_GameListCategory value, WF_IAsyncAction** out);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameListEntry.get_LaunchableState() */
 HRESULT wgaprga_game_list_entry_get__launchable_state(WGAPRGA_GameListEntry *self, WGAPRGA_GameListEntryLaunchableState *value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameListEntry.get_LauncherExecutable() */
 HRESULT wgaprga_game_list_entry_get__launcher_executable(WGAPRGA_GameListEntry *self, WS_IStorageFile** value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameListEntry.get_LaunchParameters() */
 HRESULT wgaprga_game_list_entry_get__launch_parameters(WGAPRGA_GameListEntry *self, cwinrt_hstring *value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameListEntry.SetLauncherExecutableFileAsync(executableFile) */
 HRESULT wgaprga_game_list_entry_set_launcher_executable_file_async(WGAPRGA_GameListEntry *self, WS_IStorageFile* executableFile, WF_IAsyncAction** out);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameListEntry.SetLauncherExecutableFileAsync(executableFile, launchParams) */
 HRESULT wgaprga_game_list_entry_set_launcher_executable_file_async_p_str_p(WGAPRGA_GameListEntry *self, WS_IStorageFile* executableFile, cwinrt_hstring launchParams, WF_IAsyncAction** out);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameListEntry.get_TitleId() */
 HRESULT wgaprga_game_list_entry_get__title_id(WGAPRGA_GameListEntry *self, cwinrt_hstring *value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameListEntry.SetTitleIdAsync(id) */
 HRESULT wgaprga_game_list_entry_set_title_id_async(WGAPRGA_GameListEntry *self, cwinrt_hstring id, WF_IAsyncAction** out);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameListEntry.get_GameModeConfiguration() */
 HRESULT wgaprga_game_list_entry_get__game_mode_configuration(WGAPRGA_GameListEntry *self, WGAPRGA_GameModeConfiguration** value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameListRemovedEventHandler */
-/* Windows.Gaming.Preview.GamesEnumeration.GameListRemovedEventHandler.Invoke(identifier) */
 HRESULT wgaprga_game_list_removed_event_handler_invoke(WGAPRGA_GameListRemovedEventHandler *self, cwinrt_hstring identifier);
 
-/* activate Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration */
 HRESULT wgaprga_game_mode_configuration_new(WGAPRGA_GameModeConfiguration **out);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration */
-/* Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration.get_IsEnabled() */
 HRESULT wgaprga_game_mode_configuration_get__is_enabled(WGAPRGA_GameModeConfiguration *self, BOOL *value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration.put_IsEnabled() */
 HRESULT wgaprga_game_mode_configuration_put__is_enabled(WGAPRGA_GameModeConfiguration *self, BOOL value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration.get_RelatedProcessNames() */
 HRESULT wgaprga_game_mode_configuration_get__related_process_names(WGAPRGA_GameModeConfiguration *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration.get_PercentGpuTimeAllocatedToGame() */
 HRESULT wgaprga_game_mode_configuration_get__percent_gpu_time_allocated_to_game(WGAPRGA_GameModeConfiguration *self, int32_t** value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration.put_PercentGpuTimeAllocatedToGame() */
 HRESULT wgaprga_game_mode_configuration_put__percent_gpu_time_allocated_to_game(WGAPRGA_GameModeConfiguration *self, int32_t* value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration.get_PercentGpuMemoryAllocatedToGame() */
 HRESULT wgaprga_game_mode_configuration_get__percent_gpu_memory_allocated_to_game(WGAPRGA_GameModeConfiguration *self, int32_t** value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration.put_PercentGpuMemoryAllocatedToGame() */
 HRESULT wgaprga_game_mode_configuration_put__percent_gpu_memory_allocated_to_game(WGAPRGA_GameModeConfiguration *self, int32_t* value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration.get_PercentGpuMemoryAllocatedToSystemCompositor() */
 HRESULT wgaprga_game_mode_configuration_get__percent_gpu_memory_allocated_to_system_compositor(WGAPRGA_GameModeConfiguration *self, int32_t** value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration.put_PercentGpuMemoryAllocatedToSystemCompositor() */
 HRESULT wgaprga_game_mode_configuration_put__percent_gpu_memory_allocated_to_system_compositor(WGAPRGA_GameModeConfiguration *self, int32_t* value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration.get_MaxCpuCount() */
 HRESULT wgaprga_game_mode_configuration_get__max_cpu_count(WGAPRGA_GameModeConfiguration *self, int32_t** value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration.put_MaxCpuCount() */
 HRESULT wgaprga_game_mode_configuration_put__max_cpu_count(WGAPRGA_GameModeConfiguration *self, int32_t* value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration.get_CpuExclusivityMaskLow() */
 HRESULT wgaprga_game_mode_configuration_get__cpu_exclusivity_mask_low(WGAPRGA_GameModeConfiguration *self, int32_t** value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration.put_CpuExclusivityMaskLow() */
 HRESULT wgaprga_game_mode_configuration_put__cpu_exclusivity_mask_low(WGAPRGA_GameModeConfiguration *self, int32_t* value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration.get_CpuExclusivityMaskHigh() */
 HRESULT wgaprga_game_mode_configuration_get__cpu_exclusivity_mask_high(WGAPRGA_GameModeConfiguration *self, int32_t** value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration.put_CpuExclusivityMaskHigh() */
 HRESULT wgaprga_game_mode_configuration_put__cpu_exclusivity_mask_high(WGAPRGA_GameModeConfiguration *self, int32_t* value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration.get_AffinitizeToExclusiveCpus() */
 HRESULT wgaprga_game_mode_configuration_get__affinitize_to_exclusive_cpus(WGAPRGA_GameModeConfiguration *self, BOOL *value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration.put_AffinitizeToExclusiveCpus() */
 HRESULT wgaprga_game_mode_configuration_put__affinitize_to_exclusive_cpus(WGAPRGA_GameModeConfiguration *self, BOOL value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration.SaveAsync() */
 HRESULT wgaprga_game_mode_configuration_save_async(WGAPRGA_GameModeConfiguration *self, WF_IAsyncAction** out);
 
-/* activate Windows.Gaming.Preview.GamesEnumeration.GameModeUserConfiguration */
 HRESULT wgaprga_game_mode_user_configuration_new(WGAPRGA_GameModeUserConfiguration **out);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameModeUserConfiguration */
-/* Windows.Gaming.Preview.GamesEnumeration.GameModeUserConfiguration.get_GamingRelatedProcessNames() */
 HRESULT wgaprga_game_mode_user_configuration_get__gaming_related_process_names(WGAPRGA_GameModeUserConfiguration *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameModeUserConfiguration.SaveAsync() */
 HRESULT wgaprga_game_mode_user_configuration_save_async(WGAPRGA_GameModeUserConfiguration *self, WF_IAsyncAction** out);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameModeUserConfiguration.GetDefault() */
 HRESULT wgaprga_game_mode_user_configuration_get_default(WGAPRGA_GameModeUserConfiguration** out);
 
-/* Windows.Gaming.Preview.GamesEnumeration.IGameListStatics */
-/* Windows.Gaming.Preview.GamesEnumeration.IGameListStatics.FindAllAsync() */
 HRESULT wgaprga_game_list_statics_find_all_async(WGAPRGA_IGameListStatics *self, WF_IAsyncOperation_WFOCO_IVectorView_WGAPRGA_GameListEntry** out);
 
-/* Windows.Gaming.Preview.GamesEnumeration.IGameListStatics.FindAllAsync(packageFamilyName) */
 HRESULT wgaprga_game_list_statics_find_all_async_str_p(WGAPRGA_IGameListStatics *self, cwinrt_hstring packageFamilyName, WF_IAsyncOperation_WFOCO_IVectorView_WGAPRGA_GameListEntry** out);
 
-/* Windows.Gaming.Preview.GamesEnumeration.IGameListStatics2 */
-/* Windows.Gaming.Preview.GamesEnumeration.IGameListStatics2.MergeEntriesAsync(left, right) */
 HRESULT wgaprga_game_list_statics_2_merge_entries_async(WGAPRGA_IGameListStatics_2 *self, WGAPRGA_GameListEntry* left, WGAPRGA_GameListEntry* right, WF_IAsyncOperation_WGAPRGA_GameListEntry** out);
 
-/* Windows.Gaming.Preview.GamesEnumeration.IGameListStatics2.UnmergeEntryAsync(mergedEntry) */
 HRESULT wgaprga_game_list_statics_2_unmerge_entry_async(WGAPRGA_IGameListStatics_2 *self, WGAPRGA_GameListEntry* mergedEntry, WF_IAsyncOperation_WFOCO_IVectorView_WGAPRGA_GameListEntry** out);
 
-/* Windows.Gaming.Preview.GamesEnumeration.IGameModeUserConfigurationStatics */
-/* Windows.Gaming.Preview.GamesEnumeration.IGameModeUserConfigurationStatics.GetDefault() */
 HRESULT wgaprga_game_mode_user_configuration_statics_get_default(WGAPRGA_IGameModeUserConfigurationStatics *self, WGAPRGA_GameModeUserConfiguration** out);
 
-/* activate Windows.Gaming.Preview.GamesEnumeration.GameList */
 HRESULT wgaprga_game_list_new(WGAPRGA_GameList **out);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameList */
-/* Windows.Gaming.Preview.GamesEnumeration.GameList.MergeEntriesAsync(left, right) */
 HRESULT wgaprga_game_list_merge_entries_async(WGAPRGA_GameListEntry* left, WGAPRGA_GameListEntry* right, WF_IAsyncOperation_WGAPRGA_GameListEntry** out);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameList.UnmergeEntryAsync(mergedEntry) */
 HRESULT wgaprga_game_list_unmerge_entry_async(WGAPRGA_GameListEntry* mergedEntry, WF_IAsyncOperation_WFOCO_IVectorView_WGAPRGA_GameListEntry** out);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameList.FindAllAsync() */
 HRESULT wgaprga_game_list_find_all_async(WF_IAsyncOperation_WFOCO_IVectorView_WGAPRGA_GameListEntry** out);
 
-/* Windows.Gaming.Preview.GamesEnumeration.GameList.FindAllAsync(packageFamilyName) */
 HRESULT wgaprga_game_list_find_all_async_str_p(cwinrt_hstring packageFamilyName, WF_IAsyncOperation_WFOCO_IVectorView_WGAPRGA_GameListEntry** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wgaprga_game_list_on_game_added(WGAPRGA_GameList *self, cwinrt_event_fn fn, void *ctx);
@@ -301,32 +236,20 @@ void wgaprga_game_list_off_game_removed(WGAPRGA_GameList *self, cwinrt_token tok
 cwinrt_token wgaprga_game_list_on_game_updated(WGAPRGA_GameList *self, cwinrt_event_fn fn, void *ctx);
 void wgaprga_game_list_off_game_updated(WGAPRGA_GameList *self, cwinrt_token token);
 
-/* Windows.Gaming.Preview.GamesEnumeration.IGameListEntry2 */
-/* Windows.Gaming.Preview.GamesEnumeration.IGameListEntry2.get_LaunchableState() */
 HRESULT wgaprga_game_list_entry_2_get__launchable_state(WGAPRGA_IGameListEntry_2 *self, WGAPRGA_GameListEntryLaunchableState *value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.IGameListEntry2.get_LauncherExecutable() */
 HRESULT wgaprga_game_list_entry_2_get__launcher_executable(WGAPRGA_IGameListEntry_2 *self, WS_IStorageFile** value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.IGameListEntry2.get_LaunchParameters() */
 HRESULT wgaprga_game_list_entry_2_get__launch_parameters(WGAPRGA_IGameListEntry_2 *self, cwinrt_hstring *value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.IGameListEntry2.SetLauncherExecutableFileAsync(executableFile) */
 HRESULT wgaprga_game_list_entry_2_set_launcher_executable_file_async(WGAPRGA_IGameListEntry_2 *self, WS_IStorageFile* executableFile, WF_IAsyncAction** out);
 
-/* Windows.Gaming.Preview.GamesEnumeration.IGameListEntry2.SetLauncherExecutableFileAsync(executableFile, launchParams) */
 HRESULT wgaprga_game_list_entry_2_set_launcher_executable_file_async_p_str_p(WGAPRGA_IGameListEntry_2 *self, WS_IStorageFile* executableFile, cwinrt_hstring launchParams, WF_IAsyncAction** out);
 
-/* Windows.Gaming.Preview.GamesEnumeration.IGameListEntry2.get_TitleId() */
 HRESULT wgaprga_game_list_entry_2_get__title_id(WGAPRGA_IGameListEntry_2 *self, cwinrt_hstring *value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.IGameListEntry2.SetTitleIdAsync(id) */
 HRESULT wgaprga_game_list_entry_2_set_title_id_async(WGAPRGA_IGameListEntry_2 *self, cwinrt_hstring id, WF_IAsyncAction** out);
 
-/* Windows.Gaming.Preview.GamesEnumeration.IGameListEntry2.get_GameModeConfiguration() */
 HRESULT wgaprga_game_list_entry_2_get__game_mode_configuration(WGAPRGA_IGameListEntry_2 *self, WGAPRGA_GameModeConfiguration** value);
 
-/* Windows.Gaming.Preview.GamesEnumeration.IGameModeConfiguration */
-/* Windows.Gaming.Preview.GamesEnumeration.IGameModeUserConfiguration */
-/* Windows.Gaming.Preview.GamesEnumeration.IGameListEntry */
 #endif /* CWINRT_WINDOWS_GAMING_PREVIEW_GAMESENUMERATION_H */

@@ -13,13 +13,11 @@
 #include <cwinrt/Windows.Storage.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSTST_IBufferFactory WSTST_IBufferFactory;
 typedef struct WSTST_IBufferStatics WSTST_IBufferStatics;
 typedef struct WSTST_IDataReaderFactory WSTST_IDataReaderFactory;
@@ -54,7 +52,6 @@ typedef struct WSTST_IBuffer WSTST_IBuffer;
 typedef struct WSTST_IInputStream WSTST_IInputStream;
 typedef struct WSTST_IOutputStream WSTST_IOutputStream;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IMemoryBuffer
 #define CWINRT_FWD_WF_IMemoryBuffer
 typedef struct WF_IMemoryBuffer WF_IMemoryBuffer;
@@ -188,7 +185,6 @@ typedef enum WSTST_ByteOrder {
 } WSTST_ByteOrder;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -269,611 +265,386 @@ static const IID CWINRT_IID_WSTST_IInputStream CWINRT_MAYBE_UNUSED = { 0x905A0FE
 static const IID CWINRT_IID_WSTST_IOutputStream CWINRT_MAYBE_UNUSED = { 0x905A0FE6, 0xBC53, 0x11DF, { 0x8C, 0x49, 0x00, 0x1E, 0x4F, 0xC6, 0x86, 0xDA } };
 #endif
 
-/* Methods */
-
-/* Windows.Storage.Streams.IBufferFactory */
-/* Windows.Storage.Streams.IBufferFactory.Create(capacity) */
 HRESULT wstst_buffer_factory_create(WSTST_IBufferFactory *self, uint32_t capacity, WSTST_Buffer** out);
 
-/* Windows.Storage.Streams.IBufferStatics */
-/* Windows.Storage.Streams.IBufferStatics.CreateCopyFromMemoryBuffer(input) */
 HRESULT wstst_buffer_statics_create_copy_from_memory_buffer(WSTST_IBufferStatics *self, WF_IMemoryBuffer* input, WSTST_Buffer** out);
 
-/* Windows.Storage.Streams.IBufferStatics.CreateMemoryBufferOverIBuffer(input) */
 HRESULT wstst_buffer_statics_create_memory_buffer_over_i_buffer(WSTST_IBufferStatics *self, WSTST_IBuffer* input, WF_MemoryBuffer** out);
 
-/* Windows.Storage.Streams.IDataReaderFactory */
-/* Windows.Storage.Streams.IDataReaderFactory.CreateDataReader(inputStream) */
 HRESULT wstst_data_reader_factory_create_data_reader(WSTST_IDataReaderFactory *self, WSTST_IInputStream* inputStream, WSTST_DataReader** out);
 
-/* Windows.Storage.Streams.IDataReaderStatics */
-/* Windows.Storage.Streams.IDataReaderStatics.FromBuffer(buffer) */
 HRESULT wstst_data_reader_statics_from_buffer(WSTST_IDataReaderStatics *self, WSTST_IBuffer* buffer, WSTST_DataReader** out);
 
-/* Windows.Storage.Streams.IDataWriterFactory */
-/* Windows.Storage.Streams.IDataWriterFactory.CreateDataWriter(outputStream) */
 HRESULT wstst_data_writer_factory_create_data_writer(WSTST_IDataWriterFactory *self, WSTST_IOutputStream* outputStream, WSTST_DataWriter** out);
 
-/* Windows.Storage.Streams.IFileRandomAccessStreamStatics */
-/* Windows.Storage.Streams.IFileRandomAccessStreamStatics.OpenAsync(filePath, accessMode) */
 HRESULT wstst_file_random_access_stream_statics_open_async(WSTST_IFileRandomAccessStreamStatics *self, cwinrt_hstring filePath, WS_FileAccessMode accessMode, WF_IAsyncOperation_WSTST_IRandomAccessStream** out);
 
-/* Windows.Storage.Streams.IFileRandomAccessStreamStatics.OpenAsync(filePath, accessMode, sharingOptions, openDisposition) */
 HRESULT wstst_file_random_access_stream_statics_open_async_str_file_access_mode_storage_open_op_6dedce59(WSTST_IFileRandomAccessStreamStatics *self, cwinrt_hstring filePath, WS_FileAccessMode accessMode, WS_StorageOpenOptions sharingOptions, WSTST_FileOpenDisposition openDisposition, WF_IAsyncOperation_WSTST_IRandomAccessStream** out);
 
-/* Windows.Storage.Streams.IFileRandomAccessStreamStatics.OpenTransactedWriteAsync(filePath) */
 HRESULT wstst_file_random_access_stream_statics_open_transacted_write_async(WSTST_IFileRandomAccessStreamStatics *self, cwinrt_hstring filePath, WF_IAsyncOperation_WS_StorageStreamTransaction** out);
 
-/* Windows.Storage.Streams.IFileRandomAccessStreamStatics.OpenTransactedWriteAsync(filePath, openOptions, openDisposition) */
 HRESULT wstst_file_random_access_stream_statics_open_transacted_write_async_str_storage_open_options_file_open_d_a8200e85(WSTST_IFileRandomAccessStreamStatics *self, cwinrt_hstring filePath, WS_StorageOpenOptions openOptions, WSTST_FileOpenDisposition openDisposition, WF_IAsyncOperation_WS_StorageStreamTransaction** out);
 
-/* Windows.Storage.Streams.IFileRandomAccessStreamStatics.OpenForUserAsync(user, filePath, accessMode) */
 HRESULT wstst_file_random_access_stream_statics_open_for_user_async(WSTST_IFileRandomAccessStreamStatics *self, WSY_User* user, cwinrt_hstring filePath, WS_FileAccessMode accessMode, WF_IAsyncOperation_WSTST_IRandomAccessStream** out);
 
-/* Windows.Storage.Streams.IFileRandomAccessStreamStatics.OpenForUserAsync(user, filePath, accessMode, sharingOptions, openDisposition) */
 HRESULT wstst_file_random_access_stream_statics_open_for_user_async_p_str_file_access_mode_storage_open__7c85b2fe(WSTST_IFileRandomAccessStreamStatics *self, WSY_User* user, cwinrt_hstring filePath, WS_FileAccessMode accessMode, WS_StorageOpenOptions sharingOptions, WSTST_FileOpenDisposition openDisposition, WF_IAsyncOperation_WSTST_IRandomAccessStream** out);
 
-/* Windows.Storage.Streams.IFileRandomAccessStreamStatics.OpenTransactedWriteForUserAsync(user, filePath) */
 HRESULT wstst_file_random_access_stream_statics_open_transacted_write_for_user_async(WSTST_IFileRandomAccessStreamStatics *self, WSY_User* user, cwinrt_hstring filePath, WF_IAsyncOperation_WS_StorageStreamTransaction** out);
 
-/* Windows.Storage.Streams.IFileRandomAccessStreamStatics.OpenTransactedWriteForUserAsync(user, filePath, openOptions, openDisposition) */
 HRESULT wstst_file_random_access_stream_statics_open_transacted_write_for_user_async_p_str_storage_open_options_file_open_003bd29c(WSTST_IFileRandomAccessStreamStatics *self, WSY_User* user, cwinrt_hstring filePath, WS_StorageOpenOptions openOptions, WSTST_FileOpenDisposition openDisposition, WF_IAsyncOperation_WS_StorageStreamTransaction** out);
 
-/* Windows.Storage.Streams.IInputStreamReference */
-/* Windows.Storage.Streams.IInputStreamReference.OpenSequentialReadAsync() */
 HRESULT wstst_input_stream_reference_open_sequential_read_async(WSTST_IInputStreamReference *self, WF_IAsyncOperation_WSTST_IInputStream** out);
 
-/* Windows.Storage.Streams.IPropertySetSerializer */
-/* Windows.Storage.Streams.IPropertySetSerializer.Serialize(propertySet) */
 HRESULT wstst_property_set_serializer_serialize(WSTST_IPropertySetSerializer *self, WFOCO_IPropertySet* propertySet, WSTST_IBuffer** out);
 
-/* Windows.Storage.Streams.IPropertySetSerializer.Deserialize(propertySet, buffer) */
 HRESULT wstst_property_set_serializer_deserialize(WSTST_IPropertySetSerializer *self, WFOCO_IPropertySet* propertySet, WSTST_IBuffer* buffer);
 
-/* Windows.Storage.Streams.IRandomAccessStreamReferenceStatics */
-/* Windows.Storage.Streams.IRandomAccessStreamReferenceStatics.CreateFromFile(file) */
 HRESULT wstst_random_access_stream_reference_statics_create_from_file(WSTST_IRandomAccessStreamReferenceStatics *self, WS_IStorageFile* file, WSTST_RandomAccessStreamReference** out);
 
-/* Windows.Storage.Streams.IRandomAccessStreamReferenceStatics.CreateFromUri(uri) */
 HRESULT wstst_random_access_stream_reference_statics_create_from_uri(WSTST_IRandomAccessStreamReferenceStatics *self, WF_Uri* uri, WSTST_RandomAccessStreamReference** out);
 
-/* Windows.Storage.Streams.IRandomAccessStreamReferenceStatics.CreateFromStream(stream) */
 HRESULT wstst_random_access_stream_reference_statics_create_from_stream(WSTST_IRandomAccessStreamReferenceStatics *self, WSTST_IRandomAccessStream* stream, WSTST_RandomAccessStreamReference** out);
 
-/* Windows.Storage.Streams.IRandomAccessStreamStatics */
-/* Windows.Storage.Streams.IRandomAccessStreamStatics.CopyAsync(source, destination) */
 HRESULT wstst_random_access_stream_statics_copy_async(WSTST_IRandomAccessStreamStatics *self, WSTST_IInputStream* source, WSTST_IOutputStream* destination, WF_IAsyncOperationWithProgress_uint64_t_uint64_t** out);
 
-/* Windows.Storage.Streams.IRandomAccessStreamStatics.CopyAsync(source, destination, bytesToCopy) */
 HRESULT wstst_random_access_stream_statics_copy_async_p_p_u64_p(WSTST_IRandomAccessStreamStatics *self, WSTST_IInputStream* source, WSTST_IOutputStream* destination, uint64_t bytesToCopy, WF_IAsyncOperationWithProgress_uint64_t_uint64_t** out);
 
-/* Windows.Storage.Streams.IRandomAccessStreamStatics.CopyAndCloseAsync(source, destination) */
 HRESULT wstst_random_access_stream_statics_copy_and_close_async(WSTST_IRandomAccessStreamStatics *self, WSTST_IInputStream* source, WSTST_IOutputStream* destination, WF_IAsyncOperationWithProgress_uint64_t_uint64_t** out);
 
-/* activate Windows.Storage.Streams.InMemoryRandomAccessStream */
 HRESULT wstst_in_memory_random_access_stream_new(WSTST_InMemoryRandomAccessStream **out);
 
-/* Windows.Storage.Streams.InMemoryRandomAccessStream */
-/* Windows.Storage.Streams.InMemoryRandomAccessStream.get_Size() */
 HRESULT wstst_in_memory_random_access_stream_get__size(WSTST_InMemoryRandomAccessStream *self, uint64_t *value);
 
-/* Windows.Storage.Streams.InMemoryRandomAccessStream.put_Size() */
 HRESULT wstst_in_memory_random_access_stream_put__size(WSTST_InMemoryRandomAccessStream *self, uint64_t value);
 
-/* Windows.Storage.Streams.InMemoryRandomAccessStream.GetInputStreamAt(position) */
 HRESULT wstst_in_memory_random_access_stream_get_input_stream_at(WSTST_InMemoryRandomAccessStream *self, uint64_t position, WSTST_IInputStream** out);
 
-/* Windows.Storage.Streams.InMemoryRandomAccessStream.GetOutputStreamAt(position) */
 HRESULT wstst_in_memory_random_access_stream_get_output_stream_at(WSTST_InMemoryRandomAccessStream *self, uint64_t position, WSTST_IOutputStream** out);
 
-/* Windows.Storage.Streams.InMemoryRandomAccessStream.get_Position() */
 HRESULT wstst_in_memory_random_access_stream_get__position(WSTST_InMemoryRandomAccessStream *self, uint64_t *value);
 
-/* Windows.Storage.Streams.InMemoryRandomAccessStream.Seek(position) */
 HRESULT wstst_in_memory_random_access_stream_seek(WSTST_InMemoryRandomAccessStream *self, uint64_t position);
 
-/* Windows.Storage.Streams.InMemoryRandomAccessStream.CloneStream() */
 HRESULT wstst_in_memory_random_access_stream_clone_stream(WSTST_InMemoryRandomAccessStream *self, WSTST_IRandomAccessStream** out);
 
-/* Windows.Storage.Streams.InMemoryRandomAccessStream.get_CanRead() */
 HRESULT wstst_in_memory_random_access_stream_get__can_read(WSTST_InMemoryRandomAccessStream *self, BOOL *value);
 
-/* Windows.Storage.Streams.InMemoryRandomAccessStream.get_CanWrite() */
 HRESULT wstst_in_memory_random_access_stream_get__can_write(WSTST_InMemoryRandomAccessStream *self, BOOL *value);
 
-/* Windows.Storage.Streams.InMemoryRandomAccessStream.Close() */
 HRESULT wstst_in_memory_random_access_stream_close(WSTST_InMemoryRandomAccessStream *self);
 
-/* Windows.Storage.Streams.InMemoryRandomAccessStream.ReadAsync(buffer, count, options) */
 HRESULT wstst_in_memory_random_access_stream_read_async(WSTST_InMemoryRandomAccessStream *self, WSTST_IBuffer* buffer, uint32_t count, WSTST_InputStreamOptions options, WF_IAsyncOperationWithProgress_WSTST_IBuffer_uint32_t** out);
 
-/* Windows.Storage.Streams.InMemoryRandomAccessStream.WriteAsync(buffer) */
 HRESULT wstst_in_memory_random_access_stream_write_async(WSTST_InMemoryRandomAccessStream *self, WSTST_IBuffer* buffer, WF_IAsyncOperationWithProgress_uint32_t_uint32_t** out);
 
-/* Windows.Storage.Streams.InMemoryRandomAccessStream.FlushAsync() */
 HRESULT wstst_in_memory_random_access_stream_flush_async(WSTST_InMemoryRandomAccessStream *self, WF_IAsyncOperation_Bool** out);
 
-/* activate Windows.Storage.Streams.InputStreamOverStream */
 HRESULT wstst_input_stream_over_stream_new(WSTST_InputStreamOverStream **out);
 
-/* Windows.Storage.Streams.InputStreamOverStream */
-/* Windows.Storage.Streams.InputStreamOverStream.ReadAsync(buffer, count, options) */
 HRESULT wstst_input_stream_over_stream_read_async(WSTST_InputStreamOverStream *self, WSTST_IBuffer* buffer, uint32_t count, WSTST_InputStreamOptions options, WF_IAsyncOperationWithProgress_WSTST_IBuffer_uint32_t** out);
 
-/* Windows.Storage.Streams.InputStreamOverStream.Close() */
 HRESULT wstst_input_stream_over_stream_close(WSTST_InputStreamOverStream *self);
 
-/* activate Windows.Storage.Streams.OutputStreamOverStream */
 HRESULT wstst_output_stream_over_stream_new(WSTST_OutputStreamOverStream **out);
 
-/* Windows.Storage.Streams.OutputStreamOverStream */
-/* Windows.Storage.Streams.OutputStreamOverStream.WriteAsync(buffer) */
 HRESULT wstst_output_stream_over_stream_write_async(WSTST_OutputStreamOverStream *self, WSTST_IBuffer* buffer, WF_IAsyncOperationWithProgress_uint32_t_uint32_t** out);
 
-/* Windows.Storage.Streams.OutputStreamOverStream.FlushAsync() */
 HRESULT wstst_output_stream_over_stream_flush_async(WSTST_OutputStreamOverStream *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Storage.Streams.OutputStreamOverStream.Close() */
 HRESULT wstst_output_stream_over_stream_close(WSTST_OutputStreamOverStream *self);
 
-/* activate Windows.Storage.Streams.RandomAccessStream */
 HRESULT wstst_random_access_stream_new(WSTST_RandomAccessStream **out);
 
-/* Windows.Storage.Streams.RandomAccessStream */
-/* Windows.Storage.Streams.RandomAccessStream.CopyAsync(source, destination) */
 HRESULT wstst_random_access_stream_copy_async(WSTST_IInputStream* source, WSTST_IOutputStream* destination, WF_IAsyncOperationWithProgress_uint64_t_uint64_t** out);
 
-/* Windows.Storage.Streams.RandomAccessStream.CopyAsync(source, destination, bytesToCopy) */
 HRESULT wstst_random_access_stream_copy_async_p_p_u64_p(WSTST_IInputStream* source, WSTST_IOutputStream* destination, uint64_t bytesToCopy, WF_IAsyncOperationWithProgress_uint64_t_uint64_t** out);
 
-/* Windows.Storage.Streams.RandomAccessStream.CopyAndCloseAsync(source, destination) */
 HRESULT wstst_random_access_stream_copy_and_close_async(WSTST_IInputStream* source, WSTST_IOutputStream* destination, WF_IAsyncOperationWithProgress_uint64_t_uint64_t** out);
 
-/* activate Windows.Storage.Streams.RandomAccessStreamOverStream */
 HRESULT wstst_random_access_stream_over_stream_new(WSTST_RandomAccessStreamOverStream **out);
 
-/* Windows.Storage.Streams.RandomAccessStreamOverStream */
-/* Windows.Storage.Streams.RandomAccessStreamOverStream.get_Size() */
 HRESULT wstst_random_access_stream_over_stream_get__size(WSTST_RandomAccessStreamOverStream *self, uint64_t *value);
 
-/* Windows.Storage.Streams.RandomAccessStreamOverStream.put_Size() */
 HRESULT wstst_random_access_stream_over_stream_put__size(WSTST_RandomAccessStreamOverStream *self, uint64_t value);
 
-/* Windows.Storage.Streams.RandomAccessStreamOverStream.GetInputStreamAt(position) */
 HRESULT wstst_random_access_stream_over_stream_get_input_stream_at(WSTST_RandomAccessStreamOverStream *self, uint64_t position, WSTST_IInputStream** out);
 
-/* Windows.Storage.Streams.RandomAccessStreamOverStream.GetOutputStreamAt(position) */
 HRESULT wstst_random_access_stream_over_stream_get_output_stream_at(WSTST_RandomAccessStreamOverStream *self, uint64_t position, WSTST_IOutputStream** out);
 
-/* Windows.Storage.Streams.RandomAccessStreamOverStream.get_Position() */
 HRESULT wstst_random_access_stream_over_stream_get__position(WSTST_RandomAccessStreamOverStream *self, uint64_t *value);
 
-/* Windows.Storage.Streams.RandomAccessStreamOverStream.Seek(position) */
 HRESULT wstst_random_access_stream_over_stream_seek(WSTST_RandomAccessStreamOverStream *self, uint64_t position);
 
-/* Windows.Storage.Streams.RandomAccessStreamOverStream.CloneStream() */
 HRESULT wstst_random_access_stream_over_stream_clone_stream(WSTST_RandomAccessStreamOverStream *self, WSTST_IRandomAccessStream** out);
 
-/* Windows.Storage.Streams.RandomAccessStreamOverStream.get_CanRead() */
 HRESULT wstst_random_access_stream_over_stream_get__can_read(WSTST_RandomAccessStreamOverStream *self, BOOL *value);
 
-/* Windows.Storage.Streams.RandomAccessStreamOverStream.get_CanWrite() */
 HRESULT wstst_random_access_stream_over_stream_get__can_write(WSTST_RandomAccessStreamOverStream *self, BOOL *value);
 
-/* Windows.Storage.Streams.RandomAccessStreamOverStream.Close() */
 HRESULT wstst_random_access_stream_over_stream_close(WSTST_RandomAccessStreamOverStream *self);
 
-/* Windows.Storage.Streams.RandomAccessStreamOverStream.ReadAsync(buffer, count, options) */
 HRESULT wstst_random_access_stream_over_stream_read_async(WSTST_RandomAccessStreamOverStream *self, WSTST_IBuffer* buffer, uint32_t count, WSTST_InputStreamOptions options, WF_IAsyncOperationWithProgress_WSTST_IBuffer_uint32_t** out);
 
-/* Windows.Storage.Streams.RandomAccessStreamOverStream.WriteAsync(buffer) */
 HRESULT wstst_random_access_stream_over_stream_write_async(WSTST_RandomAccessStreamOverStream *self, WSTST_IBuffer* buffer, WF_IAsyncOperationWithProgress_uint32_t_uint32_t** out);
 
-/* Windows.Storage.Streams.RandomAccessStreamOverStream.FlushAsync() */
 HRESULT wstst_random_access_stream_over_stream_flush_async(WSTST_RandomAccessStreamOverStream *self, WF_IAsyncOperation_Bool** out);
 
-/* activate Windows.Storage.Streams.RandomAccessStreamReference */
 HRESULT wstst_random_access_stream_reference_new(WSTST_RandomAccessStreamReference **out);
 
-/* Windows.Storage.Streams.RandomAccessStreamReference */
-/* Windows.Storage.Streams.RandomAccessStreamReference.OpenReadAsync() */
 HRESULT wstst_random_access_stream_reference_open_read_async(WSTST_RandomAccessStreamReference *self, WF_IAsyncOperation_WSTST_IRandomAccessStreamWithContentType** out);
 
-/* Windows.Storage.Streams.RandomAccessStreamReference.CreateFromFile(file) */
 HRESULT wstst_random_access_stream_reference_create_from_file(WS_IStorageFile* file, WSTST_RandomAccessStreamReference** out);
 
-/* Windows.Storage.Streams.RandomAccessStreamReference.CreateFromUri(uri) */
 HRESULT wstst_random_access_stream_reference_create_from_uri(WF_Uri* uri, WSTST_RandomAccessStreamReference** out);
 
-/* Windows.Storage.Streams.RandomAccessStreamReference.CreateFromStream(stream) */
 HRESULT wstst_random_access_stream_reference_create_from_stream(WSTST_IRandomAccessStream* stream, WSTST_RandomAccessStreamReference** out);
 
-/* activate Windows.Storage.Streams.FileRandomAccessStream */
 HRESULT wstst_file_random_access_stream_new(WSTST_FileRandomAccessStream **out);
 
-/* Windows.Storage.Streams.FileRandomAccessStream */
-/* Windows.Storage.Streams.FileRandomAccessStream.get_Size() */
 HRESULT wstst_file_random_access_stream_get__size(WSTST_FileRandomAccessStream *self, uint64_t *value);
 
-/* Windows.Storage.Streams.FileRandomAccessStream.put_Size() */
 HRESULT wstst_file_random_access_stream_put__size(WSTST_FileRandomAccessStream *self, uint64_t value);
 
-/* Windows.Storage.Streams.FileRandomAccessStream.GetInputStreamAt(position) */
 HRESULT wstst_file_random_access_stream_get_input_stream_at(WSTST_FileRandomAccessStream *self, uint64_t position, WSTST_IInputStream** out);
 
-/* Windows.Storage.Streams.FileRandomAccessStream.GetOutputStreamAt(position) */
 HRESULT wstst_file_random_access_stream_get_output_stream_at(WSTST_FileRandomAccessStream *self, uint64_t position, WSTST_IOutputStream** out);
 
-/* Windows.Storage.Streams.FileRandomAccessStream.get_Position() */
 HRESULT wstst_file_random_access_stream_get__position(WSTST_FileRandomAccessStream *self, uint64_t *value);
 
-/* Windows.Storage.Streams.FileRandomAccessStream.Seek(position) */
 HRESULT wstst_file_random_access_stream_seek(WSTST_FileRandomAccessStream *self, uint64_t position);
 
-/* Windows.Storage.Streams.FileRandomAccessStream.CloneStream() */
 HRESULT wstst_file_random_access_stream_clone_stream(WSTST_FileRandomAccessStream *self, WSTST_IRandomAccessStream** out);
 
-/* Windows.Storage.Streams.FileRandomAccessStream.get_CanRead() */
 HRESULT wstst_file_random_access_stream_get__can_read(WSTST_FileRandomAccessStream *self, BOOL *value);
 
-/* Windows.Storage.Streams.FileRandomAccessStream.get_CanWrite() */
 HRESULT wstst_file_random_access_stream_get__can_write(WSTST_FileRandomAccessStream *self, BOOL *value);
 
-/* Windows.Storage.Streams.FileRandomAccessStream.Close() */
 HRESULT wstst_file_random_access_stream_close(WSTST_FileRandomAccessStream *self);
 
-/* Windows.Storage.Streams.FileRandomAccessStream.ReadAsync(buffer, count, options) */
 HRESULT wstst_file_random_access_stream_read_async(WSTST_FileRandomAccessStream *self, WSTST_IBuffer* buffer, uint32_t count, WSTST_InputStreamOptions options, WF_IAsyncOperationWithProgress_WSTST_IBuffer_uint32_t** out);
 
-/* Windows.Storage.Streams.FileRandomAccessStream.WriteAsync(buffer) */
 HRESULT wstst_file_random_access_stream_write_async(WSTST_FileRandomAccessStream *self, WSTST_IBuffer* buffer, WF_IAsyncOperationWithProgress_uint32_t_uint32_t** out);
 
-/* Windows.Storage.Streams.FileRandomAccessStream.FlushAsync() */
 HRESULT wstst_file_random_access_stream_flush_async(WSTST_FileRandomAccessStream *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Storage.Streams.FileRandomAccessStream.OpenAsync(filePath, accessMode) */
 HRESULT wstst_file_random_access_stream_open_async(cwinrt_hstring filePath, WS_FileAccessMode accessMode, WF_IAsyncOperation_WSTST_IRandomAccessStream** out);
 
-/* Windows.Storage.Streams.FileRandomAccessStream.OpenAsync(filePath, accessMode, sharingOptions, openDisposition) */
 HRESULT wstst_file_random_access_stream_open_async_str_file_access_mode_storage_open_op_6dedce59(cwinrt_hstring filePath, WS_FileAccessMode accessMode, WS_StorageOpenOptions sharingOptions, WSTST_FileOpenDisposition openDisposition, WF_IAsyncOperation_WSTST_IRandomAccessStream** out);
 
-/* Windows.Storage.Streams.FileRandomAccessStream.OpenTransactedWriteAsync(filePath) */
 HRESULT wstst_file_random_access_stream_open_transacted_write_async(cwinrt_hstring filePath, WF_IAsyncOperation_WS_StorageStreamTransaction** out);
 
-/* Windows.Storage.Streams.FileRandomAccessStream.OpenTransactedWriteAsync(filePath, openOptions, openDisposition) */
 HRESULT wstst_file_random_access_stream_open_transacted_write_async_str_storage_open_options_file_open_d_a8200e85(cwinrt_hstring filePath, WS_StorageOpenOptions openOptions, WSTST_FileOpenDisposition openDisposition, WF_IAsyncOperation_WS_StorageStreamTransaction** out);
 
-/* Windows.Storage.Streams.FileRandomAccessStream.OpenForUserAsync(user, filePath, accessMode) */
 HRESULT wstst_file_random_access_stream_open_for_user_async(WSY_User* user, cwinrt_hstring filePath, WS_FileAccessMode accessMode, WF_IAsyncOperation_WSTST_IRandomAccessStream** out);
 
-/* Windows.Storage.Streams.FileRandomAccessStream.OpenForUserAsync(user, filePath, accessMode, sharingOptions, openDisposition) */
 HRESULT wstst_file_random_access_stream_open_for_user_async_p_str_file_access_mode_storage_open__7c85b2fe(WSY_User* user, cwinrt_hstring filePath, WS_FileAccessMode accessMode, WS_StorageOpenOptions sharingOptions, WSTST_FileOpenDisposition openDisposition, WF_IAsyncOperation_WSTST_IRandomAccessStream** out);
 
-/* Windows.Storage.Streams.FileRandomAccessStream.OpenTransactedWriteForUserAsync(user, filePath) */
 HRESULT wstst_file_random_access_stream_open_transacted_write_for_user_async(WSY_User* user, cwinrt_hstring filePath, WF_IAsyncOperation_WS_StorageStreamTransaction** out);
 
-/* Windows.Storage.Streams.FileRandomAccessStream.OpenTransactedWriteForUserAsync(user, filePath, openOptions, openDisposition) */
 HRESULT wstst_file_random_access_stream_open_transacted_write_for_user_async_p_str_storage_open_options_file_open_003bd29c(WSY_User* user, cwinrt_hstring filePath, WS_StorageOpenOptions openOptions, WSTST_FileOpenDisposition openDisposition, WF_IAsyncOperation_WS_StorageStreamTransaction** out);
 
-/* activate Windows.Storage.Streams.FileOutputStream */
 HRESULT wstst_file_output_stream_new(WSTST_FileOutputStream **out);
 
-/* Windows.Storage.Streams.FileOutputStream */
-/* Windows.Storage.Streams.FileOutputStream.WriteAsync(buffer) */
 HRESULT wstst_file_output_stream_write_async(WSTST_FileOutputStream *self, WSTST_IBuffer* buffer, WF_IAsyncOperationWithProgress_uint32_t_uint32_t** out);
 
-/* Windows.Storage.Streams.FileOutputStream.FlushAsync() */
 HRESULT wstst_file_output_stream_flush_async(WSTST_FileOutputStream *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Storage.Streams.FileOutputStream.Close() */
 HRESULT wstst_file_output_stream_close(WSTST_FileOutputStream *self);
 
-/* activate Windows.Storage.Streams.FileInputStream */
 HRESULT wstst_file_input_stream_new(WSTST_FileInputStream **out);
 
-/* Windows.Storage.Streams.FileInputStream */
-/* Windows.Storage.Streams.FileInputStream.ReadAsync(buffer, count, options) */
 HRESULT wstst_file_input_stream_read_async(WSTST_FileInputStream *self, WSTST_IBuffer* buffer, uint32_t count, WSTST_InputStreamOptions options, WF_IAsyncOperationWithProgress_WSTST_IBuffer_uint32_t** out);
 
-/* Windows.Storage.Streams.FileInputStream.Close() */
 HRESULT wstst_file_input_stream_close(WSTST_FileInputStream *self);
 
-/* activate Windows.Storage.Streams.DataWriterStoreOperation */
 HRESULT wstst_data_writer_store_operation_new(WSTST_DataWriterStoreOperation **out);
 
-/* Windows.Storage.Streams.DataWriterStoreOperation */
-/* Windows.Storage.Streams.DataWriterStoreOperation.put_Completed(handler) */
 HRESULT wstst_data_writer_store_operation_put__completed(WSTST_DataWriterStoreOperation *self, WF_AsyncOperationCompletedHandler_uint32_t* handler);
 
-/* Windows.Storage.Streams.DataWriterStoreOperation.get_Completed() */
 HRESULT wstst_data_writer_store_operation_get__completed(WSTST_DataWriterStoreOperation *self, WF_AsyncOperationCompletedHandler_uint32_t** value);
 
-/* Windows.Storage.Streams.DataWriterStoreOperation.GetResults() */
 HRESULT wstst_data_writer_store_operation_get_results(WSTST_DataWriterStoreOperation *self, uint32_t *out);
 
-/* Windows.Storage.Streams.DataWriterStoreOperation.get_Id() */
 HRESULT wstst_data_writer_store_operation_get__id(WSTST_DataWriterStoreOperation *self, uint32_t *value);
 
-/* Windows.Storage.Streams.DataWriterStoreOperation.get_Status() */
 HRESULT wstst_data_writer_store_operation_get__status(WSTST_DataWriterStoreOperation *self, WF_AsyncStatus *value);
 
-/* Windows.Storage.Streams.DataWriterStoreOperation.get_ErrorCode() */
 HRESULT wstst_data_writer_store_operation_get__error_code(WSTST_DataWriterStoreOperation *self, HRESULT *value);
 
-/* Windows.Storage.Streams.DataWriterStoreOperation.Cancel() */
 HRESULT wstst_data_writer_store_operation_cancel(WSTST_DataWriterStoreOperation *self);
 
-/* Windows.Storage.Streams.DataWriterStoreOperation.Close() */
 HRESULT wstst_data_writer_store_operation_close(WSTST_DataWriterStoreOperation *self);
 
-/* activate Windows.Storage.Streams.DataWriter */
 HRESULT wstst_data_writer_new(WSTST_DataWriter **out);
 
-/* Windows.Storage.Streams.DataWriter */
-/* Windows.Storage.Streams.DataWriter.get_UnstoredBufferLength() */
 HRESULT wstst_data_writer_get__unstored_buffer_length(WSTST_DataWriter *self, uint32_t *value);
 
-/* Windows.Storage.Streams.DataWriter.get_UnicodeEncoding() */
 HRESULT wstst_data_writer_get__unicode_encoding(WSTST_DataWriter *self, WSTST_UnicodeEncoding *value);
 
-/* Windows.Storage.Streams.DataWriter.put_UnicodeEncoding() */
 HRESULT wstst_data_writer_put__unicode_encoding(WSTST_DataWriter *self, WSTST_UnicodeEncoding value);
 
-/* Windows.Storage.Streams.DataWriter.get_ByteOrder() */
 HRESULT wstst_data_writer_get__byte_order(WSTST_DataWriter *self, WSTST_ByteOrder *value);
 
-/* Windows.Storage.Streams.DataWriter.put_ByteOrder() */
 HRESULT wstst_data_writer_put__byte_order(WSTST_DataWriter *self, WSTST_ByteOrder value);
 
-/* Windows.Storage.Streams.DataWriter.WriteByte() */
 HRESULT wstst_data_writer_write_byte(WSTST_DataWriter *self, uint8_t value);
 
-/* Windows.Storage.Streams.DataWriter.WriteBytes() */
 HRESULT wstst_data_writer_write_bytes(WSTST_DataWriter *self, uint8_t *value, uint32_t value_len);
 
-/* Windows.Storage.Streams.DataWriter.WriteBuffer(buffer) */
 HRESULT wstst_data_writer_write_buffer(WSTST_DataWriter *self, WSTST_IBuffer* buffer);
 
-/* Windows.Storage.Streams.DataWriter.WriteBuffer(buffer, start, count) */
 HRESULT wstst_data_writer_write_buffer_p_u32_u32(WSTST_DataWriter *self, WSTST_IBuffer* buffer, uint32_t start, uint32_t count);
 
-/* Windows.Storage.Streams.DataWriter.WriteBoolean() */
 HRESULT wstst_data_writer_write_boolean(WSTST_DataWriter *self, BOOL value);
 
-/* Windows.Storage.Streams.DataWriter.WriteGuid() */
 HRESULT wstst_data_writer_write_guid(WSTST_DataWriter *self, GUID value);
 
-/* Windows.Storage.Streams.DataWriter.WriteInt16() */
 HRESULT wstst_data_writer_write_int16(WSTST_DataWriter *self, int16_t value);
 
-/* Windows.Storage.Streams.DataWriter.WriteInt32() */
 HRESULT wstst_data_writer_write_int32(WSTST_DataWriter *self, int32_t value);
 
-/* Windows.Storage.Streams.DataWriter.WriteInt64() */
 HRESULT wstst_data_writer_write_int64(WSTST_DataWriter *self, int64_t value);
 
-/* Windows.Storage.Streams.DataWriter.WriteUInt16() */
 HRESULT wstst_data_writer_write_u_int16(WSTST_DataWriter *self, uint16_t value);
 
-/* Windows.Storage.Streams.DataWriter.WriteUInt32() */
 HRESULT wstst_data_writer_write_u_int32(WSTST_DataWriter *self, uint32_t value);
 
-/* Windows.Storage.Streams.DataWriter.WriteUInt64() */
 HRESULT wstst_data_writer_write_u_int64(WSTST_DataWriter *self, uint64_t value);
 
-/* Windows.Storage.Streams.DataWriter.WriteSingle() */
 HRESULT wstst_data_writer_write_single(WSTST_DataWriter *self, float value);
 
-/* Windows.Storage.Streams.DataWriter.WriteDouble() */
 HRESULT wstst_data_writer_write_double(WSTST_DataWriter *self, double value);
 
-/* Windows.Storage.Streams.DataWriter.WriteDateTime() */
 HRESULT wstst_data_writer_write_date_time(WSTST_DataWriter *self, WF_DateTime value);
 
-/* Windows.Storage.Streams.DataWriter.WriteTimeSpan() */
 HRESULT wstst_data_writer_write_time_span(WSTST_DataWriter *self, WF_TimeSpan value);
 
-/* Windows.Storage.Streams.DataWriter.WriteString() */
 HRESULT wstst_data_writer_write_string(WSTST_DataWriter *self, cwinrt_hstring value, uint32_t *out);
 
-/* Windows.Storage.Streams.DataWriter.MeasureString() */
 HRESULT wstst_data_writer_measure_string(WSTST_DataWriter *self, cwinrt_hstring value, uint32_t *out);
 
-/* Windows.Storage.Streams.DataWriter.StoreAsync() */
 HRESULT wstst_data_writer_store_async(WSTST_DataWriter *self, WSTST_DataWriterStoreOperation** out);
 
-/* Windows.Storage.Streams.DataWriter.FlushAsync() */
 HRESULT wstst_data_writer_flush_async(WSTST_DataWriter *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Storage.Streams.DataWriter.DetachBuffer() */
 HRESULT wstst_data_writer_detach_buffer(WSTST_DataWriter *self, WSTST_IBuffer** out);
 
-/* Windows.Storage.Streams.DataWriter.DetachStream() */
 HRESULT wstst_data_writer_detach_stream(WSTST_DataWriter *self, WSTST_IOutputStream** out);
 
-/* Windows.Storage.Streams.DataWriter.Close() */
 HRESULT wstst_data_writer_close(WSTST_DataWriter *self);
 
-/* activate Windows.Storage.Streams.DataReaderLoadOperation */
 HRESULT wstst_data_reader_load_operation_new(WSTST_DataReaderLoadOperation **out);
 
-/* Windows.Storage.Streams.DataReaderLoadOperation */
-/* Windows.Storage.Streams.DataReaderLoadOperation.put_Completed(handler) */
 HRESULT wstst_data_reader_load_operation_put__completed(WSTST_DataReaderLoadOperation *self, WF_AsyncOperationCompletedHandler_uint32_t* handler);
 
-/* Windows.Storage.Streams.DataReaderLoadOperation.get_Completed() */
 HRESULT wstst_data_reader_load_operation_get__completed(WSTST_DataReaderLoadOperation *self, WF_AsyncOperationCompletedHandler_uint32_t** value);
 
-/* Windows.Storage.Streams.DataReaderLoadOperation.GetResults() */
 HRESULT wstst_data_reader_load_operation_get_results(WSTST_DataReaderLoadOperation *self, uint32_t *out);
 
-/* Windows.Storage.Streams.DataReaderLoadOperation.get_Id() */
 HRESULT wstst_data_reader_load_operation_get__id(WSTST_DataReaderLoadOperation *self, uint32_t *value);
 
-/* Windows.Storage.Streams.DataReaderLoadOperation.get_Status() */
 HRESULT wstst_data_reader_load_operation_get__status(WSTST_DataReaderLoadOperation *self, WF_AsyncStatus *value);
 
-/* Windows.Storage.Streams.DataReaderLoadOperation.get_ErrorCode() */
 HRESULT wstst_data_reader_load_operation_get__error_code(WSTST_DataReaderLoadOperation *self, HRESULT *value);
 
-/* Windows.Storage.Streams.DataReaderLoadOperation.Cancel() */
 HRESULT wstst_data_reader_load_operation_cancel(WSTST_DataReaderLoadOperation *self);
 
-/* Windows.Storage.Streams.DataReaderLoadOperation.Close() */
 HRESULT wstst_data_reader_load_operation_close(WSTST_DataReaderLoadOperation *self);
 
-/* activate Windows.Storage.Streams.DataReader */
 HRESULT wstst_data_reader_new(WSTST_DataReader **out);
 
-/* Windows.Storage.Streams.DataReader */
-/* Windows.Storage.Streams.DataReader.get_UnconsumedBufferLength() */
 HRESULT wstst_data_reader_get__unconsumed_buffer_length(WSTST_DataReader *self, uint32_t *value);
 
-/* Windows.Storage.Streams.DataReader.get_UnicodeEncoding() */
 HRESULT wstst_data_reader_get__unicode_encoding(WSTST_DataReader *self, WSTST_UnicodeEncoding *value);
 
-/* Windows.Storage.Streams.DataReader.put_UnicodeEncoding() */
 HRESULT wstst_data_reader_put__unicode_encoding(WSTST_DataReader *self, WSTST_UnicodeEncoding value);
 
-/* Windows.Storage.Streams.DataReader.get_ByteOrder() */
 HRESULT wstst_data_reader_get__byte_order(WSTST_DataReader *self, WSTST_ByteOrder *value);
 
-/* Windows.Storage.Streams.DataReader.put_ByteOrder() */
 HRESULT wstst_data_reader_put__byte_order(WSTST_DataReader *self, WSTST_ByteOrder value);
 
-/* Windows.Storage.Streams.DataReader.get_InputStreamOptions() */
 HRESULT wstst_data_reader_get__input_stream_options(WSTST_DataReader *self, WSTST_InputStreamOptions *value);
 
-/* Windows.Storage.Streams.DataReader.put_InputStreamOptions() */
 HRESULT wstst_data_reader_put__input_stream_options(WSTST_DataReader *self, WSTST_InputStreamOptions value);
 
-/* Windows.Storage.Streams.DataReader.ReadByte() */
 HRESULT wstst_data_reader_read_byte(WSTST_DataReader *self, uint8_t *out);
 
-/* Windows.Storage.Streams.DataReader.ReadBytes() */
 HRESULT wstst_data_reader_read_bytes(WSTST_DataReader *self, uint8_t *value, uint32_t value_len);
 
-/* Windows.Storage.Streams.DataReader.ReadBuffer(length) */
 HRESULT wstst_data_reader_read_buffer(WSTST_DataReader *self, uint32_t length, WSTST_IBuffer** out);
 
-/* Windows.Storage.Streams.DataReader.ReadBoolean() */
 HRESULT wstst_data_reader_read_boolean(WSTST_DataReader *self, BOOL *out);
 
-/* Windows.Storage.Streams.DataReader.ReadGuid() */
 HRESULT wstst_data_reader_read_guid(WSTST_DataReader *self, GUID *out);
 
-/* Windows.Storage.Streams.DataReader.ReadInt16() */
 HRESULT wstst_data_reader_read_int16(WSTST_DataReader *self, int16_t *out);
 
-/* Windows.Storage.Streams.DataReader.ReadInt32() */
 HRESULT wstst_data_reader_read_int32(WSTST_DataReader *self, int32_t *out);
 
-/* Windows.Storage.Streams.DataReader.ReadInt64() */
 HRESULT wstst_data_reader_read_int64(WSTST_DataReader *self, int64_t *out);
 
-/* Windows.Storage.Streams.DataReader.ReadUInt16() */
 HRESULT wstst_data_reader_read_u_int16(WSTST_DataReader *self, uint16_t *out);
 
-/* Windows.Storage.Streams.DataReader.ReadUInt32() */
 HRESULT wstst_data_reader_read_u_int32(WSTST_DataReader *self, uint32_t *out);
 
-/* Windows.Storage.Streams.DataReader.ReadUInt64() */
 HRESULT wstst_data_reader_read_u_int64(WSTST_DataReader *self, uint64_t *out);
 
-/* Windows.Storage.Streams.DataReader.ReadSingle() */
 HRESULT wstst_data_reader_read_single(WSTST_DataReader *self, float *out);
 
-/* Windows.Storage.Streams.DataReader.ReadDouble() */
 HRESULT wstst_data_reader_read_double(WSTST_DataReader *self, double *out);
 
-/* Windows.Storage.Streams.DataReader.ReadString(codeUnitCount) */
 HRESULT wstst_data_reader_read_string(WSTST_DataReader *self, uint32_t codeUnitCount, cwinrt_hstring *out);
 
-/* Windows.Storage.Streams.DataReader.ReadDateTime() */
 HRESULT wstst_data_reader_read_date_time(WSTST_DataReader *self, WF_DateTime *out);
 
-/* Windows.Storage.Streams.DataReader.ReadTimeSpan() */
 HRESULT wstst_data_reader_read_time_span(WSTST_DataReader *self, WF_TimeSpan *out);
 
-/* Windows.Storage.Streams.DataReader.LoadAsync(count) */
 HRESULT wstst_data_reader_load_async(WSTST_DataReader *self, uint32_t count, WSTST_DataReaderLoadOperation** out);
 
-/* Windows.Storage.Streams.DataReader.DetachBuffer() */
 HRESULT wstst_data_reader_detach_buffer(WSTST_DataReader *self, WSTST_IBuffer** out);
 
-/* Windows.Storage.Streams.DataReader.DetachStream() */
 HRESULT wstst_data_reader_detach_stream(WSTST_DataReader *self, WSTST_IInputStream** out);
 
-/* Windows.Storage.Streams.DataReader.Close() */
 HRESULT wstst_data_reader_close(WSTST_DataReader *self);
 
-/* Windows.Storage.Streams.DataReader.FromBuffer(buffer) */
 HRESULT wstst_data_reader_from_buffer(WSTST_IBuffer* buffer, WSTST_DataReader** out);
 
-/* activate Windows.Storage.Streams.Buffer */
 HRESULT wstst_buffer_new(WSTST_Buffer **out);
 
-/* Windows.Storage.Streams.Buffer */
-/* Windows.Storage.Streams.Buffer.get_Capacity() */
 HRESULT wstst_buffer_get__capacity(WSTST_Buffer *self, uint32_t *value);
 
-/* Windows.Storage.Streams.Buffer.get_Length() */
 HRESULT wstst_buffer_get__length(WSTST_Buffer *self, uint32_t *value);
 
-/* Windows.Storage.Streams.Buffer.put_Length() */
 HRESULT wstst_buffer_put__length(WSTST_Buffer *self, uint32_t value);
 
-/* Windows.Storage.Streams.Buffer.CreateCopyFromMemoryBuffer(input) */
 HRESULT wstst_buffer_create_copy_from_memory_buffer(WF_IMemoryBuffer* input, WSTST_Buffer** out);
 
-/* Windows.Storage.Streams.Buffer.CreateMemoryBufferOverIBuffer(input) */
 HRESULT wstst_buffer_create_memory_buffer_over_i_buffer(WSTST_IBuffer* input, WF_MemoryBuffer** out);
 
-/* Windows.Storage.Streams.IContentTypeProvider */
-/* Windows.Storage.Streams.IContentTypeProvider.get_ContentType() */
 HRESULT wstst_content_type_provider_get__content_type(WSTST_IContentTypeProvider *self, cwinrt_hstring *value);
 
-/* Windows.Storage.Streams.IRandomAccessStreamReference */
-/* Windows.Storage.Streams.IRandomAccessStream */
-/* Windows.Storage.Streams.IRandomAccessStream.get_Size() */
 HRESULT wstst_random_access_stream_get__size(WSTST_IRandomAccessStream *self, uint64_t *value);
 
-/* Windows.Storage.Streams.IRandomAccessStream.put_Size() */
 HRESULT wstst_random_access_stream_put__size(WSTST_IRandomAccessStream *self, uint64_t value);
 
-/* Windows.Storage.Streams.IRandomAccessStream.GetInputStreamAt(position) */
 HRESULT wstst_random_access_stream_get_input_stream_at(WSTST_IRandomAccessStream *self, uint64_t position, WSTST_IInputStream** out);
 
-/* Windows.Storage.Streams.IRandomAccessStream.GetOutputStreamAt(position) */
 HRESULT wstst_random_access_stream_get_output_stream_at(WSTST_IRandomAccessStream *self, uint64_t position, WSTST_IOutputStream** out);
 
-/* Windows.Storage.Streams.IRandomAccessStream.get_Position() */
 HRESULT wstst_random_access_stream_get__position(WSTST_IRandomAccessStream *self, uint64_t *value);
 
-/* Windows.Storage.Streams.IRandomAccessStream.Seek(position) */
 HRESULT wstst_random_access_stream_seek(WSTST_IRandomAccessStream *self, uint64_t position);
 
-/* Windows.Storage.Streams.IRandomAccessStream.CloneStream() */
 HRESULT wstst_random_access_stream_clone_stream(WSTST_IRandomAccessStream *self, WSTST_IRandomAccessStream** out);
 
-/* Windows.Storage.Streams.IRandomAccessStream.get_CanRead() */
 HRESULT wstst_random_access_stream_get__can_read(WSTST_IRandomAccessStream *self, BOOL *value);
 
-/* Windows.Storage.Streams.IRandomAccessStream.get_CanWrite() */
 HRESULT wstst_random_access_stream_get__can_write(WSTST_IRandomAccessStream *self, BOOL *value);
 
-/* Windows.Storage.Streams.IDataWriter */
-/* Windows.Storage.Streams.IDataReader */
-/* Windows.Storage.Streams.IBuffer */
-/* Windows.Storage.Streams.IInputStream */
-/* Windows.Storage.Streams.IInputStream.ReadAsync(buffer, count, options) */
 HRESULT wstst_input_stream_read_async(WSTST_IInputStream *self, WSTST_IBuffer* buffer, uint32_t count, WSTST_InputStreamOptions options, WF_IAsyncOperationWithProgress_WSTST_IBuffer_uint32_t** out);
 
-/* Windows.Storage.Streams.IOutputStream */
-/* Windows.Storage.Streams.IOutputStream.WriteAsync(buffer) */
 HRESULT wstst_output_stream_write_async(WSTST_IOutputStream *self, WSTST_IBuffer* buffer, WF_IAsyncOperationWithProgress_uint32_t_uint32_t** out);
 
-/* Windows.Storage.Streams.IOutputStream.FlushAsync() */
 HRESULT wstst_output_stream_flush_async(WSTST_IOutputStream *self, WF_IAsyncOperation_Bool** out);
 
 #endif /* CWINRT_WINDOWS_STORAGE_STREAMS_H */

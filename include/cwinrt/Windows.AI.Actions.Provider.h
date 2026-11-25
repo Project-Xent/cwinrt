@@ -13,11 +13,9 @@
 #include <cwinrt/Windows.AI.Actions.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WAIACPR_IActionFeedbackHandler WAIACPR_IActionFeedbackHandler;
 typedef struct WAIACPR_IActionProvider WAIACPR_IActionProvider;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WAIAC_ActionInvocationContext
 #define CWINRT_FWD_WAIAC_ActionInvocationContext
 typedef struct WAIAC_ActionInvocationContext WAIAC_ActionInvocationContext;
@@ -31,7 +29,6 @@ typedef struct WAIAC_ActionFeedback WAIAC_ActionFeedback;
 typedef struct WF_IAsyncAction WF_IAsyncAction;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -44,14 +41,8 @@ static const IID CWINRT_IID_WAIACPR_IActionFeedbackHandler CWINRT_MAYBE_UNUSED =
 static const IID CWINRT_IID_WAIACPR_IActionProvider CWINRT_MAYBE_UNUSED = { 0x62906C47, 0x3D07, 0x55F1, { 0xAE, 0xFA, 0x15, 0x22, 0x50, 0x5A, 0xFB, 0xBE } };
 #endif
 
-/* Methods */
-
-/* Windows.AI.Actions.Provider.IActionFeedbackHandler */
-/* Windows.AI.Actions.Provider.IActionFeedbackHandler.ProcessFeedbackAsync(context, feedback) */
 HRESULT waiacpr_action_feedback_handler_process_feedback_async(WAIACPR_IActionFeedbackHandler *self, WAIAC_ActionInvocationContext* context, WAIAC_ActionFeedback* feedback, WF_IAsyncAction** out);
 
-/* Windows.AI.Actions.Provider.IActionProvider */
-/* Windows.AI.Actions.Provider.IActionProvider.InvokeAsync(context) */
 HRESULT waiacpr_action_provider_invoke_async(WAIACPR_IActionProvider *self, WAIAC_ActionInvocationContext* context, WF_IAsyncAction** out);
 
 #endif /* CWINRT_WINDOWS_AI_ACTIONS_PROVIDER_H */

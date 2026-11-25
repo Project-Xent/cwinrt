@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
@@ -34,7 +33,6 @@ typedef struct WNESO_StreamSocketListener WNESO_StreamSocketListener;
 typedef struct WNESO_DatagramSocket WNESO_DatagramSocket;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDEWISE_WiFiDirectServiceProvisioningInfo WDEWISE_WiFiDirectServiceProvisioningInfo;
 typedef struct WDEWISE_WiFiDirectServiceRemotePortAddedEventArgs WDEWISE_WiFiDirectServiceRemotePortAddedEventArgs;
 typedef struct WDEWISE_WiFiDirectServiceSession WDEWISE_WiFiDirectServiceSession;
@@ -56,7 +54,6 @@ typedef struct WDEWISE_IWiFiDirectServiceAutoAcceptSessionConnectedEventArgs WDE
 typedef struct WDEWISE_IWiFiDirectServiceAdvertiser WDEWISE_IWiFiDirectServiceAdvertiser;
 typedef struct WDEWISE_IWiFiDirectService WDEWISE_IWiFiDirectService;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IVectorView_WNE_EndpointPair
 #define CWINRT_FWD_WFOCO_IVectorView_WNE_EndpointPair
 typedef struct WFOCO_IVectorView_WNE_EndpointPair WFOCO_IVectorView_WNE_EndpointPair;
@@ -199,7 +196,6 @@ typedef enum WDEWISE_WiFiDirectServiceError {
 } WDEWISE_WiFiDirectServiceError;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -248,66 +244,42 @@ static const IID CWINRT_IID_WDEWISE_IWiFiDirectServiceAdvertiser CWINRT_MAYBE_UN
 static const IID CWINRT_IID_WDEWISE_IWiFiDirectService CWINRT_MAYBE_UNUSED = { 0x50AABBB8, 0x5F71, 0x45EC, { 0x84, 0xF1, 0xA1, 0xE4, 0xFC, 0x78, 0x79, 0xA3 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Devices.WiFiDirect.Services.WiFiDirectServiceProvisioningInfo */
 HRESULT wdewise_wi_fi_direct_service_provisioning_info_new(WDEWISE_WiFiDirectServiceProvisioningInfo **out);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceProvisioningInfo */
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceProvisioningInfo.get_SelectedConfigurationMethod() */
 HRESULT wdewise_wi_fi_direct_service_provisioning_info_get__selected_configuration_method(WDEWISE_WiFiDirectServiceProvisioningInfo *self, WDEWISE_WiFiDirectServiceConfigurationMethod *value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceProvisioningInfo.get_IsGroupFormationNeeded() */
 HRESULT wdewise_wi_fi_direct_service_provisioning_info_get__is_group_formation_needed(WDEWISE_WiFiDirectServiceProvisioningInfo *self, BOOL *value);
 
-/* activate Windows.Devices.WiFiDirect.Services.WiFiDirectServiceRemotePortAddedEventArgs */
 HRESULT wdewise_wi_fi_direct_service_remote_port_added_event_args_new(WDEWISE_WiFiDirectServiceRemotePortAddedEventArgs **out);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceRemotePortAddedEventArgs */
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceRemotePortAddedEventArgs.get_EndpointPairs() */
 HRESULT wdewise_wi_fi_direct_service_remote_port_added_event_args_get__endpoint_pairs(WDEWISE_WiFiDirectServiceRemotePortAddedEventArgs *self, WFOCO_IVectorView_WNE_EndpointPair** value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceRemotePortAddedEventArgs.get_Protocol() */
 HRESULT wdewise_wi_fi_direct_service_remote_port_added_event_args_get__protocol(WDEWISE_WiFiDirectServiceRemotePortAddedEventArgs *self, WDEWISE_WiFiDirectServiceIPProtocol *value);
 
-/* activate Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession */
 HRESULT wdewise_wi_fi_direct_service_session_new(WDEWISE_WiFiDirectServiceSession **out);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession */
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession.get_ServiceName() */
 HRESULT wdewise_wi_fi_direct_service_session_get__service_name(WDEWISE_WiFiDirectServiceSession *self, cwinrt_hstring *value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession.get_Status() */
 HRESULT wdewise_wi_fi_direct_service_session_get__status(WDEWISE_WiFiDirectServiceSession *self, WDEWISE_WiFiDirectServiceSessionStatus *value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession.get_ErrorStatus() */
 HRESULT wdewise_wi_fi_direct_service_session_get__error_status(WDEWISE_WiFiDirectServiceSession *self, WDEWISE_WiFiDirectServiceSessionErrorStatus *value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession.get_SessionId() */
 HRESULT wdewise_wi_fi_direct_service_session_get__session_id(WDEWISE_WiFiDirectServiceSession *self, uint32_t *value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession.get_AdvertisementId() */
 HRESULT wdewise_wi_fi_direct_service_session_get__advertisement_id(WDEWISE_WiFiDirectServiceSession *self, uint32_t *value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession.get_ServiceAddress() */
 HRESULT wdewise_wi_fi_direct_service_session_get__service_address(WDEWISE_WiFiDirectServiceSession *self, cwinrt_hstring *value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession.get_SessionAddress() */
 HRESULT wdewise_wi_fi_direct_service_session_get__session_address(WDEWISE_WiFiDirectServiceSession *self, cwinrt_hstring *value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession.GetConnectionEndpointPairs() */
 HRESULT wdewise_wi_fi_direct_service_session_get_connection_endpoint_pairs(WDEWISE_WiFiDirectServiceSession *self, WFOCO_IVectorView_WNE_EndpointPair** out);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession.AddStreamSocketListenerAsync() */
 HRESULT wdewise_wi_fi_direct_service_session_add_stream_socket_listener_async(WDEWISE_WiFiDirectServiceSession *self, WNESO_StreamSocketListener* value, WF_IAsyncAction** out);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession.AddDatagramSocketAsync() */
 HRESULT wdewise_wi_fi_direct_service_session_add_datagram_socket_async(WDEWISE_WiFiDirectServiceSession *self, WNESO_DatagramSocket* value, WF_IAsyncAction** out);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession.Close() */
 HRESULT wdewise_wi_fi_direct_service_session_close(WDEWISE_WiFiDirectServiceSession *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdewise_wi_fi_direct_service_session_on_session_status_changed(WDEWISE_WiFiDirectServiceSession *self, cwinrt_event_fn fn, void *ctx);
@@ -316,114 +288,74 @@ void wdewise_wi_fi_direct_service_session_off_session_status_changed(WDEWISE_WiF
 cwinrt_token wdewise_wi_fi_direct_service_session_on_remote_port_added(WDEWISE_WiFiDirectServiceSession *self, cwinrt_event_fn fn, void *ctx);
 void wdewise_wi_fi_direct_service_session_off_remote_port_added(WDEWISE_WiFiDirectServiceSession *self, cwinrt_token token);
 
-/* activate Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionDeferredEventArgs */
 HRESULT wdewise_wi_fi_direct_service_session_deferred_event_args_new(WDEWISE_WiFiDirectServiceSessionDeferredEventArgs **out);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionDeferredEventArgs */
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionDeferredEventArgs.get_DeferredSessionInfo() */
 HRESULT wdewise_wi_fi_direct_service_session_deferred_event_args_get__deferred_session_info(WDEWISE_WiFiDirectServiceSessionDeferredEventArgs *self, WSTST_IBuffer** value);
 
-/* activate Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequest */
 HRESULT wdewise_wi_fi_direct_service_session_request_new(WDEWISE_WiFiDirectServiceSessionRequest **out);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequest */
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequest.get_DeviceInformation() */
 HRESULT wdewise_wi_fi_direct_service_session_request_get__device_information(WDEWISE_WiFiDirectServiceSessionRequest *self, WDEEN_DeviceInformation** value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequest.get_ProvisioningInfo() */
 HRESULT wdewise_wi_fi_direct_service_session_request_get__provisioning_info(WDEWISE_WiFiDirectServiceSessionRequest *self, WDEWISE_WiFiDirectServiceProvisioningInfo** value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequest.get_SessionInfo() */
 HRESULT wdewise_wi_fi_direct_service_session_request_get__session_info(WDEWISE_WiFiDirectServiceSessionRequest *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequest.Close() */
 HRESULT wdewise_wi_fi_direct_service_session_request_close(WDEWISE_WiFiDirectServiceSessionRequest *self);
 
-/* activate Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequestedEventArgs */
 HRESULT wdewise_wi_fi_direct_service_session_requested_event_args_new(WDEWISE_WiFiDirectServiceSessionRequestedEventArgs **out);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequestedEventArgs */
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequestedEventArgs.GetSessionRequest() */
 HRESULT wdewise_wi_fi_direct_service_session_requested_event_args_get_session_request(WDEWISE_WiFiDirectServiceSessionRequestedEventArgs *self, WDEWISE_WiFiDirectServiceSessionRequest** out);
 
-/* activate Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAutoAcceptSessionConnectedEventArgs */
 HRESULT wdewise_wi_fi_direct_service_auto_accept_session_connected_event_args_new(WDEWISE_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs **out);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAutoAcceptSessionConnectedEventArgs */
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAutoAcceptSessionConnectedEventArgs.get_Session() */
 HRESULT wdewise_wi_fi_direct_service_auto_accept_session_connected_event_args_get__session(WDEWISE_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs *self, WDEWISE_WiFiDirectServiceSession** value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAutoAcceptSessionConnectedEventArgs.get_SessionInfo() */
 HRESULT wdewise_wi_fi_direct_service_auto_accept_session_connected_event_args_get__session_info(WDEWISE_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs *self, WSTST_IBuffer** value);
 
-/* activate Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser */
 HRESULT wdewise_wi_fi_direct_service_advertiser_new(WDEWISE_WiFiDirectServiceAdvertiser **out);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser */
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser.get_ServiceName() */
 HRESULT wdewise_wi_fi_direct_service_advertiser_get__service_name(WDEWISE_WiFiDirectServiceAdvertiser *self, cwinrt_hstring *value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser.get_ServiceNamePrefixes() */
 HRESULT wdewise_wi_fi_direct_service_advertiser_get__service_name_prefixes(WDEWISE_WiFiDirectServiceAdvertiser *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser.get_ServiceInfo() */
 HRESULT wdewise_wi_fi_direct_service_advertiser_get__service_info(WDEWISE_WiFiDirectServiceAdvertiser *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser.put_ServiceInfo() */
 HRESULT wdewise_wi_fi_direct_service_advertiser_put__service_info(WDEWISE_WiFiDirectServiceAdvertiser *self, WSTST_IBuffer* value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser.get_AutoAcceptSession() */
 HRESULT wdewise_wi_fi_direct_service_advertiser_get__auto_accept_session(WDEWISE_WiFiDirectServiceAdvertiser *self, BOOL *value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser.put_AutoAcceptSession() */
 HRESULT wdewise_wi_fi_direct_service_advertiser_put__auto_accept_session(WDEWISE_WiFiDirectServiceAdvertiser *self, BOOL value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser.get_PreferGroupOwnerMode() */
 HRESULT wdewise_wi_fi_direct_service_advertiser_get__prefer_group_owner_mode(WDEWISE_WiFiDirectServiceAdvertiser *self, BOOL *value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser.put_PreferGroupOwnerMode() */
 HRESULT wdewise_wi_fi_direct_service_advertiser_put__prefer_group_owner_mode(WDEWISE_WiFiDirectServiceAdvertiser *self, BOOL value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser.get_PreferredConfigurationMethods() */
 HRESULT wdewise_wi_fi_direct_service_advertiser_get__preferred_configuration_methods(WDEWISE_WiFiDirectServiceAdvertiser *self, WFOCO_IVector_WDEWISE_WiFiDirectServiceConfigurationMethod** value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser.get_ServiceStatus() */
 HRESULT wdewise_wi_fi_direct_service_advertiser_get__service_status(WDEWISE_WiFiDirectServiceAdvertiser *self, WDEWISE_WiFiDirectServiceStatus *value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser.put_ServiceStatus() */
 HRESULT wdewise_wi_fi_direct_service_advertiser_put__service_status(WDEWISE_WiFiDirectServiceAdvertiser *self, WDEWISE_WiFiDirectServiceStatus value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser.get_CustomServiceStatusCode() */
 HRESULT wdewise_wi_fi_direct_service_advertiser_get__custom_service_status_code(WDEWISE_WiFiDirectServiceAdvertiser *self, uint32_t *value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser.put_CustomServiceStatusCode() */
 HRESULT wdewise_wi_fi_direct_service_advertiser_put__custom_service_status_code(WDEWISE_WiFiDirectServiceAdvertiser *self, uint32_t value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser.get_DeferredSessionInfo() */
 HRESULT wdewise_wi_fi_direct_service_advertiser_get__deferred_session_info(WDEWISE_WiFiDirectServiceAdvertiser *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser.put_DeferredSessionInfo() */
 HRESULT wdewise_wi_fi_direct_service_advertiser_put__deferred_session_info(WDEWISE_WiFiDirectServiceAdvertiser *self, WSTST_IBuffer* value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser.get_AdvertisementStatus() */
 HRESULT wdewise_wi_fi_direct_service_advertiser_get__advertisement_status(WDEWISE_WiFiDirectServiceAdvertiser *self, WDEWISE_WiFiDirectServiceAdvertisementStatus *value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser.get_ServiceError() */
 HRESULT wdewise_wi_fi_direct_service_advertiser_get__service_error(WDEWISE_WiFiDirectServiceAdvertiser *self, WDEWISE_WiFiDirectServiceError *value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser.ConnectAsync(deviceInfo) */
 HRESULT wdewise_wi_fi_direct_service_advertiser_connect_async(WDEWISE_WiFiDirectServiceAdvertiser *self, WDEEN_DeviceInformation* deviceInfo, WF_IAsyncOperation_WDEWISE_WiFiDirectServiceSession** out);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser.ConnectAsync(deviceInfo, pin) */
 HRESULT wdewise_wi_fi_direct_service_advertiser_connect_async_p_str_p(WDEWISE_WiFiDirectServiceAdvertiser *self, WDEEN_DeviceInformation* deviceInfo, cwinrt_hstring pin, WF_IAsyncOperation_WDEWISE_WiFiDirectServiceSession** out);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser.Start() */
 HRESULT wdewise_wi_fi_direct_service_advertiser_start(WDEWISE_WiFiDirectServiceAdvertiser *self);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser.Stop() */
 HRESULT wdewise_wi_fi_direct_service_advertiser_stop(WDEWISE_WiFiDirectServiceAdvertiser *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdewise_wi_fi_direct_service_advertiser_on_session_requested(WDEWISE_WiFiDirectServiceAdvertiser *self, cwinrt_event_fn fn, void *ctx);
@@ -435,76 +367,45 @@ void wdewise_wi_fi_direct_service_advertiser_off_auto_accept_session_connected(W
 cwinrt_token wdewise_wi_fi_direct_service_advertiser_on_advertisement_status_changed(WDEWISE_WiFiDirectServiceAdvertiser *self, cwinrt_event_fn fn, void *ctx);
 void wdewise_wi_fi_direct_service_advertiser_off_advertisement_status_changed(WDEWISE_WiFiDirectServiceAdvertiser *self, cwinrt_token token);
 
-/* activate Windows.Devices.WiFiDirect.Services.WiFiDirectService */
 HRESULT wdewise_wi_fi_direct_service_new(WDEWISE_WiFiDirectService **out);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectService */
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectService.get_RemoteServiceInfo() */
 HRESULT wdewise_wi_fi_direct_service_get__remote_service_info(WDEWISE_WiFiDirectService *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectService.get_SupportedConfigurationMethods() */
 HRESULT wdewise_wi_fi_direct_service_get__supported_configuration_methods(WDEWISE_WiFiDirectService *self, WFOCO_IVectorView_WDEWISE_WiFiDirectServiceConfigurationMethod** value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectService.get_PreferGroupOwnerMode() */
 HRESULT wdewise_wi_fi_direct_service_get__prefer_group_owner_mode(WDEWISE_WiFiDirectService *self, BOOL *value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectService.put_PreferGroupOwnerMode() */
 HRESULT wdewise_wi_fi_direct_service_put__prefer_group_owner_mode(WDEWISE_WiFiDirectService *self, BOOL value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectService.get_SessionInfo() */
 HRESULT wdewise_wi_fi_direct_service_get__session_info(WDEWISE_WiFiDirectService *self, WSTST_IBuffer** value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectService.put_SessionInfo() */
 HRESULT wdewise_wi_fi_direct_service_put__session_info(WDEWISE_WiFiDirectService *self, WSTST_IBuffer* value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectService.get_ServiceError() */
 HRESULT wdewise_wi_fi_direct_service_get__service_error(WDEWISE_WiFiDirectService *self, WDEWISE_WiFiDirectServiceError *value);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectService.GetProvisioningInfoAsync(selectedConfigurationMethod) */
 HRESULT wdewise_wi_fi_direct_service_get_provisioning_info_async(WDEWISE_WiFiDirectService *self, WDEWISE_WiFiDirectServiceConfigurationMethod selectedConfigurationMethod, WF_IAsyncOperation_WDEWISE_WiFiDirectServiceProvisioningInfo** out);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectService.ConnectAsync() */
 HRESULT wdewise_wi_fi_direct_service_connect_async(WDEWISE_WiFiDirectService *self, WF_IAsyncOperation_WDEWISE_WiFiDirectServiceSession** out);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectService.ConnectAsync(pin) */
 HRESULT wdewise_wi_fi_direct_service_connect_async_str_p(WDEWISE_WiFiDirectService *self, cwinrt_hstring pin, WF_IAsyncOperation_WDEWISE_WiFiDirectServiceSession** out);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectService.GetSelector(serviceName) */
 HRESULT wdewise_wi_fi_direct_service_get_selector(cwinrt_hstring serviceName, cwinrt_hstring *out);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectService.GetSelector(serviceName, serviceInfoFilter) */
 HRESULT wdewise_wi_fi_direct_service_get_selector_str_p_str(cwinrt_hstring serviceName, WSTST_IBuffer* serviceInfoFilter, cwinrt_hstring *out);
 
-/* Windows.Devices.WiFiDirect.Services.WiFiDirectService.FromIdAsync(deviceId) */
 HRESULT wdewise_wi_fi_direct_service_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDEWISE_WiFiDirectService** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdewise_wi_fi_direct_service_on_session_deferred(WDEWISE_WiFiDirectService *self, cwinrt_event_fn fn, void *ctx);
 void wdewise_wi_fi_direct_service_off_session_deferred(WDEWISE_WiFiDirectService *self, cwinrt_token token);
 
-/* Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceStatics */
-/* Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceStatics.GetSelector(serviceName) */
 HRESULT wdewise_wi_fi_direct_service_statics_get_selector(WDEWISE_IWiFiDirectServiceStatics *self, cwinrt_hstring serviceName, cwinrt_hstring *out);
 
-/* Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceStatics.GetSelector(serviceName, serviceInfoFilter) */
 HRESULT wdewise_wi_fi_direct_service_statics_get_selector_str_p_str(WDEWISE_IWiFiDirectServiceStatics *self, cwinrt_hstring serviceName, WSTST_IBuffer* serviceInfoFilter, cwinrt_hstring *out);
 
-/* Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceStatics.FromIdAsync(deviceId) */
 HRESULT wdewise_wi_fi_direct_service_statics_from_id_async(WDEWISE_IWiFiDirectServiceStatics *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDEWISE_WiFiDirectService** out);
 
-/* Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiserFactory */
-/* Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiserFactory.CreateWiFiDirectServiceAdvertiser(serviceName) */
 HRESULT wdewise_wi_fi_direct_service_advertiser_factory_create_wi_fi_direct_service_advertiser(WDEWISE_IWiFiDirectServiceAdvertiserFactory *self, cwinrt_hstring serviceName, WDEWISE_WiFiDirectServiceAdvertiser** out);
 
-/* Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceProvisioningInfo */
-/* Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceRemotePortAddedEventArgs */
-/* Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession */
-/* Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSessionDeferredEventArgs */
-/* Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSessionRequest */
-/* Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSessionRequestedEventArgs */
-/* Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAutoAcceptSessionConnectedEventArgs */
-/* Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser */
-/* Windows.Devices.WiFiDirect.Services.IWiFiDirectService */
 #endif /* CWINRT_WINDOWS_DEVICES_WIFIDIRECT_SERVICES_H */

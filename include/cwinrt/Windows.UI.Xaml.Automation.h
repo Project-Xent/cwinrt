@@ -14,7 +14,6 @@
 #include <cwinrt/Windows.UI.Xaml.Automation.Peers.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WUIXAAU_AutomationElementIdentifiers WUIXAAU_AutomationElementIdentifiers;
 typedef struct WUIXAAU_AutomationProperties WUIXAAU_AutomationProperties;
 typedef struct WUIXAAU_AutomationProperty WUIXAAU_AutomationProperty;
@@ -106,7 +105,6 @@ typedef struct WUIXAAU_ISelectionItemPatternIdentifiers WUIXAAU_ISelectionItemPa
 typedef struct WUIXAAU_IScrollPatternIdentifiers WUIXAAU_IScrollPatternIdentifiers;
 typedef struct WUIXAAU_IRangeValuePatternIdentifiers WUIXAAU_IRangeValuePatternIdentifiers;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WUIXA_DependencyProperty
 #define CWINRT_FWD_WUIXA_DependencyProperty
 typedef struct WUIXA_DependencyProperty WUIXA_DependencyProperty;
@@ -487,7 +485,6 @@ typedef enum WUIXAAU_RowOrColumnMajor {
 } WUIXAAU_RowOrColumnMajor;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -752,1313 +749,832 @@ static const IID CWINRT_IID_WUIXAAU_IScrollPatternIdentifiers CWINRT_MAYBE_UNUSE
 static const IID CWINRT_IID_WUIXAAU_IRangeValuePatternIdentifiers CWINRT_MAYBE_UNUSED = { 0xF8760F45, 0x33C9, 0x467D, { 0xBC, 0x9E, 0xD1, 0x51, 0x52, 0x63, 0xAC, 0xE1 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.UI.Xaml.Automation.AutomationElementIdentifiers */
 HRESULT wuixaau_automation_element_identifiers_new(WUIXAAU_AutomationElementIdentifiers **out);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers */
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_IsDialogProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__is_dialog_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_HeadingLevelProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__heading_level_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_CultureProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__culture_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_IsPeripheralProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__is_peripheral_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_IsDataValidForFormProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__is_data_valid_for_form_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_FullDescriptionProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__full_description_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_DescribedByProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__described_by_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_FlowsToProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__flows_to_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_FlowsFromProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__flows_from_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_LandmarkTypeProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__landmark_type_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_LocalizedLandmarkTypeProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__localized_landmark_type_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_PositionInSetProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__position_in_set_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_SizeOfSetProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__size_of_set_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_LevelProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__level_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_AnnotationsProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__annotations_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_ControlledPeersProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__controlled_peers_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_AcceleratorKeyProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__accelerator_key_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_AccessKeyProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__access_key_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_AutomationIdProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__automation_id_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_BoundingRectangleProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__bounding_rectangle_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_ClassNameProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__class_name_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_ClickablePointProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__clickable_point_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_ControlTypeProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__control_type_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_HasKeyboardFocusProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__has_keyboard_focus_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_HelpTextProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__help_text_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_IsContentElementProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__is_content_element_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_IsControlElementProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__is_control_element_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_IsEnabledProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__is_enabled_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_IsKeyboardFocusableProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__is_keyboard_focusable_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_IsOffscreenProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__is_offscreen_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_IsPasswordProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__is_password_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_IsRequiredForFormProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__is_required_for_form_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_ItemStatusProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__item_status_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_ItemTypeProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__item_type_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_LabeledByProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__labeled_by_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_LocalizedControlTypeProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__localized_control_type_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_NameProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__name_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_OrientationProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__orientation_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationElementIdentifiers.get_LiveSettingProperty() */
 HRESULT wuixaau_automation_element_identifiers_get__live_setting_property(WUIXAAU_AutomationProperty** value);
 
-/* activate Windows.UI.Xaml.Automation.AutomationProperties */
 HRESULT wuixaau_automation_properties_new(WUIXAAU_AutomationProperties **out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties */
-/* Windows.UI.Xaml.Automation.AutomationProperties.get_AutomationControlTypeProperty() */
 HRESULT wuixaau_automation_properties_get__automation_control_type_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.GetAutomationControlType(element) */
 HRESULT wuixaau_automation_properties_get_automation_control_type(WUIXA_UIElement* element, WUIXAAUPE_AutomationControlType *out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.SetAutomationControlType(element) */
 HRESULT wuixaau_automation_properties_set_automation_control_type(WUIXA_UIElement* element, WUIXAAUPE_AutomationControlType value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.get_IsDialogProperty() */
 HRESULT wuixaau_automation_properties_get__is_dialog_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.GetIsDialog(element) */
 HRESULT wuixaau_automation_properties_get_is_dialog(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.SetIsDialog(element) */
 HRESULT wuixaau_automation_properties_set_is_dialog(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.get_HeadingLevelProperty() */
 HRESULT wuixaau_automation_properties_get__heading_level_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.GetHeadingLevel(element) */
 HRESULT wuixaau_automation_properties_get_heading_level(WUIXA_DependencyObject* element, WUIXAAUPE_AutomationHeadingLevel *out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.SetHeadingLevel(element) */
 HRESULT wuixaau_automation_properties_set_heading_level(WUIXA_DependencyObject* element, WUIXAAUPE_AutomationHeadingLevel value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.get_CultureProperty() */
 HRESULT wuixaau_automation_properties_get__culture_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.GetCulture(element) */
 HRESULT wuixaau_automation_properties_get_culture(WUIXA_DependencyObject* element, int32_t *out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.SetCulture(element) */
 HRESULT wuixaau_automation_properties_set_culture(WUIXA_DependencyObject* element, int32_t value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.get_IsPeripheralProperty() */
 HRESULT wuixaau_automation_properties_get__is_peripheral_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.GetIsPeripheral(element) */
 HRESULT wuixaau_automation_properties_get_is_peripheral(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.SetIsPeripheral(element) */
 HRESULT wuixaau_automation_properties_set_is_peripheral(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.get_IsDataValidForFormProperty() */
 HRESULT wuixaau_automation_properties_get__is_data_valid_for_form_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.GetIsDataValidForForm(element) */
 HRESULT wuixaau_automation_properties_get_is_data_valid_for_form(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.SetIsDataValidForForm(element) */
 HRESULT wuixaau_automation_properties_set_is_data_valid_for_form(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.get_FullDescriptionProperty() */
 HRESULT wuixaau_automation_properties_get__full_description_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.GetFullDescription(element) */
 HRESULT wuixaau_automation_properties_get_full_description(WUIXA_DependencyObject* element, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.SetFullDescription(element) */
 HRESULT wuixaau_automation_properties_set_full_description(WUIXA_DependencyObject* element, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.get_LocalizedControlTypeProperty() */
 HRESULT wuixaau_automation_properties_get__localized_control_type_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.GetLocalizedControlType(element) */
 HRESULT wuixaau_automation_properties_get_localized_control_type(WUIXA_DependencyObject* element, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.SetLocalizedControlType(element) */
 HRESULT wuixaau_automation_properties_set_localized_control_type(WUIXA_DependencyObject* element, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.get_DescribedByProperty() */
 HRESULT wuixaau_automation_properties_get__described_by_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.GetDescribedBy(element) */
 HRESULT wuixaau_automation_properties_get_described_by(WUIXA_DependencyObject* element, WFOCO_IVector_WUIXA_DependencyObject** out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.get_FlowsToProperty() */
 HRESULT wuixaau_automation_properties_get__flows_to_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.GetFlowsTo(element) */
 HRESULT wuixaau_automation_properties_get_flows_to(WUIXA_DependencyObject* element, WFOCO_IVector_WUIXA_DependencyObject** out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.get_FlowsFromProperty() */
 HRESULT wuixaau_automation_properties_get__flows_from_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.GetFlowsFrom(element) */
 HRESULT wuixaau_automation_properties_get_flows_from(WUIXA_DependencyObject* element, WFOCO_IVector_WUIXA_DependencyObject** out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.get_LandmarkTypeProperty() */
 HRESULT wuixaau_automation_properties_get__landmark_type_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.GetLandmarkType(element) */
 HRESULT wuixaau_automation_properties_get_landmark_type(WUIXA_DependencyObject* element, WUIXAAUPE_AutomationLandmarkType *out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.SetLandmarkType(element) */
 HRESULT wuixaau_automation_properties_set_landmark_type(WUIXA_DependencyObject* element, WUIXAAUPE_AutomationLandmarkType value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.get_LocalizedLandmarkTypeProperty() */
 HRESULT wuixaau_automation_properties_get__localized_landmark_type_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.GetLocalizedLandmarkType(element) */
 HRESULT wuixaau_automation_properties_get_localized_landmark_type(WUIXA_DependencyObject* element, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.SetLocalizedLandmarkType(element) */
 HRESULT wuixaau_automation_properties_set_localized_landmark_type(WUIXA_DependencyObject* element, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.get_PositionInSetProperty() */
 HRESULT wuixaau_automation_properties_get__position_in_set_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.GetPositionInSet(element) */
 HRESULT wuixaau_automation_properties_get_position_in_set(WUIXA_DependencyObject* element, int32_t *out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.SetPositionInSet(element) */
 HRESULT wuixaau_automation_properties_set_position_in_set(WUIXA_DependencyObject* element, int32_t value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.get_SizeOfSetProperty() */
 HRESULT wuixaau_automation_properties_get__size_of_set_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.GetSizeOfSet(element) */
 HRESULT wuixaau_automation_properties_get_size_of_set(WUIXA_DependencyObject* element, int32_t *out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.SetSizeOfSet(element) */
 HRESULT wuixaau_automation_properties_set_size_of_set(WUIXA_DependencyObject* element, int32_t value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.get_LevelProperty() */
 HRESULT wuixaau_automation_properties_get__level_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.GetLevel(element) */
 HRESULT wuixaau_automation_properties_get_level(WUIXA_DependencyObject* element, int32_t *out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.SetLevel(element) */
 HRESULT wuixaau_automation_properties_set_level(WUIXA_DependencyObject* element, int32_t value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.get_AnnotationsProperty() */
 HRESULT wuixaau_automation_properties_get__annotations_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.GetAnnotations(element) */
 HRESULT wuixaau_automation_properties_get_annotations(WUIXA_DependencyObject* element, WFOCO_IVector_WUIXAAU_AutomationAnnotation** out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.get_AccessibilityViewProperty() */
 HRESULT wuixaau_automation_properties_get__accessibility_view_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.GetAccessibilityView(element) */
 HRESULT wuixaau_automation_properties_get_accessibility_view(WUIXA_DependencyObject* element, WUIXAAUPE_AccessibilityView *out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.SetAccessibilityView(element) */
 HRESULT wuixaau_automation_properties_set_accessibility_view(WUIXA_DependencyObject* element, WUIXAAUPE_AccessibilityView value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.get_ControlledPeersProperty() */
 HRESULT wuixaau_automation_properties_get__controlled_peers_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.GetControlledPeers(element) */
 HRESULT wuixaau_automation_properties_get_controlled_peers(WUIXA_DependencyObject* element, WFOCO_IVector_WUIXA_UIElement** out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.get_AcceleratorKeyProperty() */
 HRESULT wuixaau_automation_properties_get__accelerator_key_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.GetAcceleratorKey(element) */
 HRESULT wuixaau_automation_properties_get_accelerator_key(WUIXA_DependencyObject* element, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.SetAcceleratorKey(element) */
 HRESULT wuixaau_automation_properties_set_accelerator_key(WUIXA_DependencyObject* element, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.get_AccessKeyProperty() */
 HRESULT wuixaau_automation_properties_get__access_key_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.GetAccessKey(element) */
 HRESULT wuixaau_automation_properties_get_access_key(WUIXA_DependencyObject* element, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.SetAccessKey(element) */
 HRESULT wuixaau_automation_properties_set_access_key(WUIXA_DependencyObject* element, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.get_AutomationIdProperty() */
 HRESULT wuixaau_automation_properties_get__automation_id_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.GetAutomationId(element) */
 HRESULT wuixaau_automation_properties_get_automation_id(WUIXA_DependencyObject* element, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.SetAutomationId(element) */
 HRESULT wuixaau_automation_properties_set_automation_id(WUIXA_DependencyObject* element, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.get_HelpTextProperty() */
 HRESULT wuixaau_automation_properties_get__help_text_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.GetHelpText(element) */
 HRESULT wuixaau_automation_properties_get_help_text(WUIXA_DependencyObject* element, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.SetHelpText(element) */
 HRESULT wuixaau_automation_properties_set_help_text(WUIXA_DependencyObject* element, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.get_IsRequiredForFormProperty() */
 HRESULT wuixaau_automation_properties_get__is_required_for_form_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.GetIsRequiredForForm(element) */
 HRESULT wuixaau_automation_properties_get_is_required_for_form(WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.SetIsRequiredForForm(element) */
 HRESULT wuixaau_automation_properties_set_is_required_for_form(WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.get_ItemStatusProperty() */
 HRESULT wuixaau_automation_properties_get__item_status_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.GetItemStatus(element) */
 HRESULT wuixaau_automation_properties_get_item_status(WUIXA_DependencyObject* element, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.SetItemStatus(element) */
 HRESULT wuixaau_automation_properties_set_item_status(WUIXA_DependencyObject* element, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.get_ItemTypeProperty() */
 HRESULT wuixaau_automation_properties_get__item_type_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.GetItemType(element) */
 HRESULT wuixaau_automation_properties_get_item_type(WUIXA_DependencyObject* element, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.SetItemType(element) */
 HRESULT wuixaau_automation_properties_set_item_type(WUIXA_DependencyObject* element, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.get_LabeledByProperty() */
 HRESULT wuixaau_automation_properties_get__labeled_by_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.GetLabeledBy(element) */
 HRESULT wuixaau_automation_properties_get_labeled_by(WUIXA_DependencyObject* element, WUIXA_UIElement** out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.SetLabeledBy(element) */
 HRESULT wuixaau_automation_properties_set_labeled_by(WUIXA_DependencyObject* element, WUIXA_UIElement* value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.get_NameProperty() */
 HRESULT wuixaau_automation_properties_get__name_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.GetName(element) */
 HRESULT wuixaau_automation_properties_get_name(WUIXA_DependencyObject* element, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.SetName(element) */
 HRESULT wuixaau_automation_properties_set_name(WUIXA_DependencyObject* element, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.get_LiveSettingProperty() */
 HRESULT wuixaau_automation_properties_get__live_setting_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.GetLiveSetting(element) */
 HRESULT wuixaau_automation_properties_get_live_setting(WUIXA_DependencyObject* element, WUIXAAUPE_AutomationLiveSetting *out);
 
-/* Windows.UI.Xaml.Automation.AutomationProperties.SetLiveSetting(element) */
 HRESULT wuixaau_automation_properties_set_live_setting(WUIXA_DependencyObject* element, WUIXAAUPE_AutomationLiveSetting value);
 
-/* activate Windows.UI.Xaml.Automation.DockPatternIdentifiers */
 HRESULT wuixaau_dock_pattern_identifiers_new(WUIXAAU_DockPatternIdentifiers **out);
 
-/* Windows.UI.Xaml.Automation.DockPatternIdentifiers */
-/* Windows.UI.Xaml.Automation.DockPatternIdentifiers.get_DockPositionProperty() */
 HRESULT wuixaau_dock_pattern_identifiers_get__dock_position_property(WUIXAAU_AutomationProperty** value);
 
-/* activate Windows.UI.Xaml.Automation.DragPatternIdentifiers */
 HRESULT wuixaau_drag_pattern_identifiers_new(WUIXAAU_DragPatternIdentifiers **out);
 
-/* Windows.UI.Xaml.Automation.DragPatternIdentifiers */
-/* Windows.UI.Xaml.Automation.DragPatternIdentifiers.get_DropEffectProperty() */
 HRESULT wuixaau_drag_pattern_identifiers_get__drop_effect_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.DragPatternIdentifiers.get_DropEffectsProperty() */
 HRESULT wuixaau_drag_pattern_identifiers_get__drop_effects_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.DragPatternIdentifiers.get_GrabbedItemsProperty() */
 HRESULT wuixaau_drag_pattern_identifiers_get__grabbed_items_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.DragPatternIdentifiers.get_IsGrabbedProperty() */
 HRESULT wuixaau_drag_pattern_identifiers_get__is_grabbed_property(WUIXAAU_AutomationProperty** value);
 
-/* activate Windows.UI.Xaml.Automation.DropTargetPatternIdentifiers */
 HRESULT wuixaau_drop_target_pattern_identifiers_new(WUIXAAU_DropTargetPatternIdentifiers **out);
 
-/* Windows.UI.Xaml.Automation.DropTargetPatternIdentifiers */
-/* Windows.UI.Xaml.Automation.DropTargetPatternIdentifiers.get_DropTargetEffectProperty() */
 HRESULT wuixaau_drop_target_pattern_identifiers_get__drop_target_effect_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.DropTargetPatternIdentifiers.get_DropTargetEffectsProperty() */
 HRESULT wuixaau_drop_target_pattern_identifiers_get__drop_target_effects_property(WUIXAAU_AutomationProperty** value);
 
-/* activate Windows.UI.Xaml.Automation.ExpandCollapsePatternIdentifiers */
 HRESULT wuixaau_expand_collapse_pattern_identifiers_new(WUIXAAU_ExpandCollapsePatternIdentifiers **out);
 
-/* Windows.UI.Xaml.Automation.ExpandCollapsePatternIdentifiers */
-/* Windows.UI.Xaml.Automation.ExpandCollapsePatternIdentifiers.get_ExpandCollapseStateProperty() */
 HRESULT wuixaau_expand_collapse_pattern_identifiers_get__expand_collapse_state_property(WUIXAAU_AutomationProperty** value);
 
-/* activate Windows.UI.Xaml.Automation.GridItemPatternIdentifiers */
 HRESULT wuixaau_grid_item_pattern_identifiers_new(WUIXAAU_GridItemPatternIdentifiers **out);
 
-/* Windows.UI.Xaml.Automation.GridItemPatternIdentifiers */
-/* Windows.UI.Xaml.Automation.GridItemPatternIdentifiers.get_ColumnProperty() */
 HRESULT wuixaau_grid_item_pattern_identifiers_get__column_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.GridItemPatternIdentifiers.get_ColumnSpanProperty() */
 HRESULT wuixaau_grid_item_pattern_identifiers_get__column_span_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.GridItemPatternIdentifiers.get_ContainingGridProperty() */
 HRESULT wuixaau_grid_item_pattern_identifiers_get__containing_grid_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.GridItemPatternIdentifiers.get_RowProperty() */
 HRESULT wuixaau_grid_item_pattern_identifiers_get__row_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.GridItemPatternIdentifiers.get_RowSpanProperty() */
 HRESULT wuixaau_grid_item_pattern_identifiers_get__row_span_property(WUIXAAU_AutomationProperty** value);
 
-/* activate Windows.UI.Xaml.Automation.GridPatternIdentifiers */
 HRESULT wuixaau_grid_pattern_identifiers_new(WUIXAAU_GridPatternIdentifiers **out);
 
-/* Windows.UI.Xaml.Automation.GridPatternIdentifiers */
-/* Windows.UI.Xaml.Automation.GridPatternIdentifiers.get_ColumnCountProperty() */
 HRESULT wuixaau_grid_pattern_identifiers_get__column_count_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.GridPatternIdentifiers.get_RowCountProperty() */
 HRESULT wuixaau_grid_pattern_identifiers_get__row_count_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAnnotationPatternIdentifiersStatics */
-/* Windows.UI.Xaml.Automation.IAnnotationPatternIdentifiersStatics.get_AnnotationTypeIdProperty() */
 HRESULT wuixaau_annotation_pattern_identifiers_statics_get__annotation_type_id_property(WUIXAAU_IAnnotationPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAnnotationPatternIdentifiersStatics.get_AnnotationTypeNameProperty() */
 HRESULT wuixaau_annotation_pattern_identifiers_statics_get__annotation_type_name_property(WUIXAAU_IAnnotationPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAnnotationPatternIdentifiersStatics.get_AuthorProperty() */
 HRESULT wuixaau_annotation_pattern_identifiers_statics_get__author_property(WUIXAAU_IAnnotationPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAnnotationPatternIdentifiersStatics.get_DateTimeProperty() */
 HRESULT wuixaau_annotation_pattern_identifiers_statics_get__date_time_property(WUIXAAU_IAnnotationPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAnnotationPatternIdentifiersStatics.get_TargetProperty() */
 HRESULT wuixaau_annotation_pattern_identifiers_statics_get__target_property(WUIXAAU_IAnnotationPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationAnnotationFactory */
-/* Windows.UI.Xaml.Automation.IAutomationAnnotationFactory.CreateInstance() */
 HRESULT wuixaau_automation_annotation_factory_create_instance(WUIXAAU_IAutomationAnnotationFactory *self, WUIXAAU_AnnotationType type_, WUIXAAU_AutomationAnnotation** out);
 
-/* Windows.UI.Xaml.Automation.IAutomationAnnotationFactory.CreateWithElementParameter(element) */
 HRESULT wuixaau_automation_annotation_factory_create_with_element_parameter(WUIXAAU_IAutomationAnnotationFactory *self, WUIXAAU_AnnotationType type_, WUIXA_UIElement* element, WUIXAAU_AutomationAnnotation** out);
 
-/* Windows.UI.Xaml.Automation.IAutomationAnnotationStatics */
-/* Windows.UI.Xaml.Automation.IAutomationAnnotationStatics.get_TypeProperty() */
 HRESULT wuixaau_automation_annotation_statics_get__type_property(WUIXAAU_IAutomationAnnotationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationAnnotationStatics.get_ElementProperty() */
 HRESULT wuixaau_automation_annotation_statics_get__element_property(WUIXAAU_IAutomationAnnotationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics */
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics.get_AcceleratorKeyProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_get__accelerator_key_property(WUIXAAU_IAutomationElementIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics.get_AccessKeyProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_get__access_key_property(WUIXAAU_IAutomationElementIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics.get_AutomationIdProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_get__automation_id_property(WUIXAAU_IAutomationElementIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics.get_BoundingRectangleProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_get__bounding_rectangle_property(WUIXAAU_IAutomationElementIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics.get_ClassNameProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_get__class_name_property(WUIXAAU_IAutomationElementIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics.get_ClickablePointProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_get__clickable_point_property(WUIXAAU_IAutomationElementIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics.get_ControlTypeProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_get__control_type_property(WUIXAAU_IAutomationElementIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics.get_HasKeyboardFocusProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_get__has_keyboard_focus_property(WUIXAAU_IAutomationElementIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics.get_HelpTextProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_get__help_text_property(WUIXAAU_IAutomationElementIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics.get_IsContentElementProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_get__is_content_element_property(WUIXAAU_IAutomationElementIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics.get_IsControlElementProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_get__is_control_element_property(WUIXAAU_IAutomationElementIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics.get_IsEnabledProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_get__is_enabled_property(WUIXAAU_IAutomationElementIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics.get_IsKeyboardFocusableProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_get__is_keyboard_focusable_property(WUIXAAU_IAutomationElementIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics.get_IsOffscreenProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_get__is_offscreen_property(WUIXAAU_IAutomationElementIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics.get_IsPasswordProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_get__is_password_property(WUIXAAU_IAutomationElementIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics.get_IsRequiredForFormProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_get__is_required_for_form_property(WUIXAAU_IAutomationElementIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics.get_ItemStatusProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_get__item_status_property(WUIXAAU_IAutomationElementIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics.get_ItemTypeProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_get__item_type_property(WUIXAAU_IAutomationElementIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics.get_LabeledByProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_get__labeled_by_property(WUIXAAU_IAutomationElementIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics.get_LocalizedControlTypeProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_get__localized_control_type_property(WUIXAAU_IAutomationElementIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics.get_NameProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_get__name_property(WUIXAAU_IAutomationElementIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics.get_OrientationProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_get__orientation_property(WUIXAAU_IAutomationElementIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics.get_LiveSettingProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_get__live_setting_property(WUIXAAU_IAutomationElementIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics2 */
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics2.get_ControlledPeersProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_2_get__controlled_peers_property(WUIXAAU_IAutomationElementIdentifiersStatics_2 *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics3 */
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics3.get_PositionInSetProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_3_get__position_in_set_property(WUIXAAU_IAutomationElementIdentifiersStatics_3 *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics3.get_SizeOfSetProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_3_get__size_of_set_property(WUIXAAU_IAutomationElementIdentifiersStatics_3 *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics3.get_LevelProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_3_get__level_property(WUIXAAU_IAutomationElementIdentifiersStatics_3 *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics3.get_AnnotationsProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_3_get__annotations_property(WUIXAAU_IAutomationElementIdentifiersStatics_3 *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics4 */
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics4.get_LandmarkTypeProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_4_get__landmark_type_property(WUIXAAU_IAutomationElementIdentifiersStatics_4 *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics4.get_LocalizedLandmarkTypeProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_4_get__localized_landmark_type_property(WUIXAAU_IAutomationElementIdentifiersStatics_4 *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics5 */
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics5.get_IsPeripheralProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_5_get__is_peripheral_property(WUIXAAU_IAutomationElementIdentifiersStatics_5 *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics5.get_IsDataValidForFormProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_5_get__is_data_valid_for_form_property(WUIXAAU_IAutomationElementIdentifiersStatics_5 *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics5.get_FullDescriptionProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_5_get__full_description_property(WUIXAAU_IAutomationElementIdentifiersStatics_5 *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics5.get_DescribedByProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_5_get__described_by_property(WUIXAAU_IAutomationElementIdentifiersStatics_5 *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics5.get_FlowsToProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_5_get__flows_to_property(WUIXAAU_IAutomationElementIdentifiersStatics_5 *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics5.get_FlowsFromProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_5_get__flows_from_property(WUIXAAU_IAutomationElementIdentifiersStatics_5 *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics6 */
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics6.get_CultureProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_6_get__culture_property(WUIXAAU_IAutomationElementIdentifiersStatics_6 *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics7 */
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics7.get_HeadingLevelProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_7_get__heading_level_property(WUIXAAU_IAutomationElementIdentifiersStatics_7 *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics8 */
-/* Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics8.get_IsDialogProperty() */
 HRESULT wuixaau_automation_element_identifiers_statics_8_get__is_dialog_property(WUIXAAU_IAutomationElementIdentifiersStatics_8 *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics */
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.get_AcceleratorKeyProperty() */
 HRESULT wuixaau_automation_properties_statics_get__accelerator_key_property(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.GetAcceleratorKey(element) */
 HRESULT wuixaau_automation_properties_statics_get_accelerator_key(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyObject* element, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.SetAcceleratorKey(element) */
 HRESULT wuixaau_automation_properties_statics_set_accelerator_key(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyObject* element, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.get_AccessKeyProperty() */
 HRESULT wuixaau_automation_properties_statics_get__access_key_property(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.GetAccessKey(element) */
 HRESULT wuixaau_automation_properties_statics_get_access_key(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyObject* element, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.SetAccessKey(element) */
 HRESULT wuixaau_automation_properties_statics_set_access_key(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyObject* element, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.get_AutomationIdProperty() */
 HRESULT wuixaau_automation_properties_statics_get__automation_id_property(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.GetAutomationId(element) */
 HRESULT wuixaau_automation_properties_statics_get_automation_id(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyObject* element, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.SetAutomationId(element) */
 HRESULT wuixaau_automation_properties_statics_set_automation_id(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyObject* element, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.get_HelpTextProperty() */
 HRESULT wuixaau_automation_properties_statics_get__help_text_property(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.GetHelpText(element) */
 HRESULT wuixaau_automation_properties_statics_get_help_text(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyObject* element, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.SetHelpText(element) */
 HRESULT wuixaau_automation_properties_statics_set_help_text(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyObject* element, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.get_IsRequiredForFormProperty() */
 HRESULT wuixaau_automation_properties_statics_get__is_required_for_form_property(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.GetIsRequiredForForm(element) */
 HRESULT wuixaau_automation_properties_statics_get_is_required_for_form(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.SetIsRequiredForForm(element) */
 HRESULT wuixaau_automation_properties_statics_set_is_required_for_form(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.get_ItemStatusProperty() */
 HRESULT wuixaau_automation_properties_statics_get__item_status_property(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.GetItemStatus(element) */
 HRESULT wuixaau_automation_properties_statics_get_item_status(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyObject* element, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.SetItemStatus(element) */
 HRESULT wuixaau_automation_properties_statics_set_item_status(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyObject* element, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.get_ItemTypeProperty() */
 HRESULT wuixaau_automation_properties_statics_get__item_type_property(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.GetItemType(element) */
 HRESULT wuixaau_automation_properties_statics_get_item_type(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyObject* element, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.SetItemType(element) */
 HRESULT wuixaau_automation_properties_statics_set_item_type(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyObject* element, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.get_LabeledByProperty() */
 HRESULT wuixaau_automation_properties_statics_get__labeled_by_property(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.GetLabeledBy(element) */
 HRESULT wuixaau_automation_properties_statics_get_labeled_by(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyObject* element, WUIXA_UIElement** out);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.SetLabeledBy(element) */
 HRESULT wuixaau_automation_properties_statics_set_labeled_by(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyObject* element, WUIXA_UIElement* value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.get_NameProperty() */
 HRESULT wuixaau_automation_properties_statics_get__name_property(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.GetName(element) */
 HRESULT wuixaau_automation_properties_statics_get_name(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyObject* element, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.SetName(element) */
 HRESULT wuixaau_automation_properties_statics_set_name(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyObject* element, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.get_LiveSettingProperty() */
 HRESULT wuixaau_automation_properties_statics_get__live_setting_property(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.GetLiveSetting(element) */
 HRESULT wuixaau_automation_properties_statics_get_live_setting(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyObject* element, WUIXAAUPE_AutomationLiveSetting *out);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics.SetLiveSetting(element) */
 HRESULT wuixaau_automation_properties_statics_set_live_setting(WUIXAAU_IAutomationPropertiesStatics *self, WUIXA_DependencyObject* element, WUIXAAUPE_AutomationLiveSetting value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics2 */
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics2.get_AccessibilityViewProperty() */
 HRESULT wuixaau_automation_properties_statics_2_get__accessibility_view_property(WUIXAAU_IAutomationPropertiesStatics_2 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics2.GetAccessibilityView(element) */
 HRESULT wuixaau_automation_properties_statics_2_get_accessibility_view(WUIXAAU_IAutomationPropertiesStatics_2 *self, WUIXA_DependencyObject* element, WUIXAAUPE_AccessibilityView *out);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics2.SetAccessibilityView(element) */
 HRESULT wuixaau_automation_properties_statics_2_set_accessibility_view(WUIXAAU_IAutomationPropertiesStatics_2 *self, WUIXA_DependencyObject* element, WUIXAAUPE_AccessibilityView value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics2.get_ControlledPeersProperty() */
 HRESULT wuixaau_automation_properties_statics_2_get__controlled_peers_property(WUIXAAU_IAutomationPropertiesStatics_2 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics2.GetControlledPeers(element) */
 HRESULT wuixaau_automation_properties_statics_2_get_controlled_peers(WUIXAAU_IAutomationPropertiesStatics_2 *self, WUIXA_DependencyObject* element, WFOCO_IVector_WUIXA_UIElement** out);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics3 */
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics3.get_PositionInSetProperty() */
 HRESULT wuixaau_automation_properties_statics_3_get__position_in_set_property(WUIXAAU_IAutomationPropertiesStatics_3 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics3.GetPositionInSet(element) */
 HRESULT wuixaau_automation_properties_statics_3_get_position_in_set(WUIXAAU_IAutomationPropertiesStatics_3 *self, WUIXA_DependencyObject* element, int32_t *out);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics3.SetPositionInSet(element) */
 HRESULT wuixaau_automation_properties_statics_3_set_position_in_set(WUIXAAU_IAutomationPropertiesStatics_3 *self, WUIXA_DependencyObject* element, int32_t value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics3.get_SizeOfSetProperty() */
 HRESULT wuixaau_automation_properties_statics_3_get__size_of_set_property(WUIXAAU_IAutomationPropertiesStatics_3 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics3.GetSizeOfSet(element) */
 HRESULT wuixaau_automation_properties_statics_3_get_size_of_set(WUIXAAU_IAutomationPropertiesStatics_3 *self, WUIXA_DependencyObject* element, int32_t *out);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics3.SetSizeOfSet(element) */
 HRESULT wuixaau_automation_properties_statics_3_set_size_of_set(WUIXAAU_IAutomationPropertiesStatics_3 *self, WUIXA_DependencyObject* element, int32_t value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics3.get_LevelProperty() */
 HRESULT wuixaau_automation_properties_statics_3_get__level_property(WUIXAAU_IAutomationPropertiesStatics_3 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics3.GetLevel(element) */
 HRESULT wuixaau_automation_properties_statics_3_get_level(WUIXAAU_IAutomationPropertiesStatics_3 *self, WUIXA_DependencyObject* element, int32_t *out);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics3.SetLevel(element) */
 HRESULT wuixaau_automation_properties_statics_3_set_level(WUIXAAU_IAutomationPropertiesStatics_3 *self, WUIXA_DependencyObject* element, int32_t value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics3.get_AnnotationsProperty() */
 HRESULT wuixaau_automation_properties_statics_3_get__annotations_property(WUIXAAU_IAutomationPropertiesStatics_3 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics3.GetAnnotations(element) */
 HRESULT wuixaau_automation_properties_statics_3_get_annotations(WUIXAAU_IAutomationPropertiesStatics_3 *self, WUIXA_DependencyObject* element, WFOCO_IVector_WUIXAAU_AutomationAnnotation** out);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics4 */
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics4.get_LandmarkTypeProperty() */
 HRESULT wuixaau_automation_properties_statics_4_get__landmark_type_property(WUIXAAU_IAutomationPropertiesStatics_4 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics4.GetLandmarkType(element) */
 HRESULT wuixaau_automation_properties_statics_4_get_landmark_type(WUIXAAU_IAutomationPropertiesStatics_4 *self, WUIXA_DependencyObject* element, WUIXAAUPE_AutomationLandmarkType *out);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics4.SetLandmarkType(element) */
 HRESULT wuixaau_automation_properties_statics_4_set_landmark_type(WUIXAAU_IAutomationPropertiesStatics_4 *self, WUIXA_DependencyObject* element, WUIXAAUPE_AutomationLandmarkType value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics4.get_LocalizedLandmarkTypeProperty() */
 HRESULT wuixaau_automation_properties_statics_4_get__localized_landmark_type_property(WUIXAAU_IAutomationPropertiesStatics_4 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics4.GetLocalizedLandmarkType(element) */
 HRESULT wuixaau_automation_properties_statics_4_get_localized_landmark_type(WUIXAAU_IAutomationPropertiesStatics_4 *self, WUIXA_DependencyObject* element, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics4.SetLocalizedLandmarkType(element) */
 HRESULT wuixaau_automation_properties_statics_4_set_localized_landmark_type(WUIXAAU_IAutomationPropertiesStatics_4 *self, WUIXA_DependencyObject* element, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5 */
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5.get_IsPeripheralProperty() */
 HRESULT wuixaau_automation_properties_statics_5_get__is_peripheral_property(WUIXAAU_IAutomationPropertiesStatics_5 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5.GetIsPeripheral(element) */
 HRESULT wuixaau_automation_properties_statics_5_get_is_peripheral(WUIXAAU_IAutomationPropertiesStatics_5 *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5.SetIsPeripheral(element) */
 HRESULT wuixaau_automation_properties_statics_5_set_is_peripheral(WUIXAAU_IAutomationPropertiesStatics_5 *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5.get_IsDataValidForFormProperty() */
 HRESULT wuixaau_automation_properties_statics_5_get__is_data_valid_for_form_property(WUIXAAU_IAutomationPropertiesStatics_5 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5.GetIsDataValidForForm(element) */
 HRESULT wuixaau_automation_properties_statics_5_get_is_data_valid_for_form(WUIXAAU_IAutomationPropertiesStatics_5 *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5.SetIsDataValidForForm(element) */
 HRESULT wuixaau_automation_properties_statics_5_set_is_data_valid_for_form(WUIXAAU_IAutomationPropertiesStatics_5 *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5.get_FullDescriptionProperty() */
 HRESULT wuixaau_automation_properties_statics_5_get__full_description_property(WUIXAAU_IAutomationPropertiesStatics_5 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5.GetFullDescription(element) */
 HRESULT wuixaau_automation_properties_statics_5_get_full_description(WUIXAAU_IAutomationPropertiesStatics_5 *self, WUIXA_DependencyObject* element, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5.SetFullDescription(element) */
 HRESULT wuixaau_automation_properties_statics_5_set_full_description(WUIXAAU_IAutomationPropertiesStatics_5 *self, WUIXA_DependencyObject* element, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5.get_LocalizedControlTypeProperty() */
 HRESULT wuixaau_automation_properties_statics_5_get__localized_control_type_property(WUIXAAU_IAutomationPropertiesStatics_5 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5.GetLocalizedControlType(element) */
 HRESULT wuixaau_automation_properties_statics_5_get_localized_control_type(WUIXAAU_IAutomationPropertiesStatics_5 *self, WUIXA_DependencyObject* element, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5.SetLocalizedControlType(element) */
 HRESULT wuixaau_automation_properties_statics_5_set_localized_control_type(WUIXAAU_IAutomationPropertiesStatics_5 *self, WUIXA_DependencyObject* element, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5.get_DescribedByProperty() */
 HRESULT wuixaau_automation_properties_statics_5_get__described_by_property(WUIXAAU_IAutomationPropertiesStatics_5 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5.GetDescribedBy(element) */
 HRESULT wuixaau_automation_properties_statics_5_get_described_by(WUIXAAU_IAutomationPropertiesStatics_5 *self, WUIXA_DependencyObject* element, WFOCO_IVector_WUIXA_DependencyObject** out);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5.get_FlowsToProperty() */
 HRESULT wuixaau_automation_properties_statics_5_get__flows_to_property(WUIXAAU_IAutomationPropertiesStatics_5 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5.GetFlowsTo(element) */
 HRESULT wuixaau_automation_properties_statics_5_get_flows_to(WUIXAAU_IAutomationPropertiesStatics_5 *self, WUIXA_DependencyObject* element, WFOCO_IVector_WUIXA_DependencyObject** out);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5.get_FlowsFromProperty() */
 HRESULT wuixaau_automation_properties_statics_5_get__flows_from_property(WUIXAAU_IAutomationPropertiesStatics_5 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5.GetFlowsFrom(element) */
 HRESULT wuixaau_automation_properties_statics_5_get_flows_from(WUIXAAU_IAutomationPropertiesStatics_5 *self, WUIXA_DependencyObject* element, WFOCO_IVector_WUIXA_DependencyObject** out);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics6 */
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics6.get_CultureProperty() */
 HRESULT wuixaau_automation_properties_statics_6_get__culture_property(WUIXAAU_IAutomationPropertiesStatics_6 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics6.GetCulture(element) */
 HRESULT wuixaau_automation_properties_statics_6_get_culture(WUIXAAU_IAutomationPropertiesStatics_6 *self, WUIXA_DependencyObject* element, int32_t *out);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics6.SetCulture(element) */
 HRESULT wuixaau_automation_properties_statics_6_set_culture(WUIXAAU_IAutomationPropertiesStatics_6 *self, WUIXA_DependencyObject* element, int32_t value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics7 */
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics7.get_HeadingLevelProperty() */
 HRESULT wuixaau_automation_properties_statics_7_get__heading_level_property(WUIXAAU_IAutomationPropertiesStatics_7 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics7.GetHeadingLevel(element) */
 HRESULT wuixaau_automation_properties_statics_7_get_heading_level(WUIXAAU_IAutomationPropertiesStatics_7 *self, WUIXA_DependencyObject* element, WUIXAAUPE_AutomationHeadingLevel *out);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics7.SetHeadingLevel(element) */
 HRESULT wuixaau_automation_properties_statics_7_set_heading_level(WUIXAAU_IAutomationPropertiesStatics_7 *self, WUIXA_DependencyObject* element, WUIXAAUPE_AutomationHeadingLevel value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics8 */
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics8.get_IsDialogProperty() */
 HRESULT wuixaau_automation_properties_statics_8_get__is_dialog_property(WUIXAAU_IAutomationPropertiesStatics_8 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics8.GetIsDialog(element) */
 HRESULT wuixaau_automation_properties_statics_8_get_is_dialog(WUIXAAU_IAutomationPropertiesStatics_8 *self, WUIXA_DependencyObject* element, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics8.SetIsDialog(element) */
 HRESULT wuixaau_automation_properties_statics_8_set_is_dialog(WUIXAAU_IAutomationPropertiesStatics_8 *self, WUIXA_DependencyObject* element, BOOL value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics9 */
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics9.get_AutomationControlTypeProperty() */
 HRESULT wuixaau_automation_properties_statics_9_get__automation_control_type_property(WUIXAAU_IAutomationPropertiesStatics_9 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics9.GetAutomationControlType(element) */
 HRESULT wuixaau_automation_properties_statics_9_get_automation_control_type(WUIXAAU_IAutomationPropertiesStatics_9 *self, WUIXA_UIElement* element, WUIXAAUPE_AutomationControlType *out);
 
-/* Windows.UI.Xaml.Automation.IAutomationPropertiesStatics9.SetAutomationControlType(element) */
 HRESULT wuixaau_automation_properties_statics_9_set_automation_control_type(WUIXAAU_IAutomationPropertiesStatics_9 *self, WUIXA_UIElement* element, WUIXAAUPE_AutomationControlType value);
 
-/* Windows.UI.Xaml.Automation.IDockPatternIdentifiersStatics */
-/* Windows.UI.Xaml.Automation.IDockPatternIdentifiersStatics.get_DockPositionProperty() */
 HRESULT wuixaau_dock_pattern_identifiers_statics_get__dock_position_property(WUIXAAU_IDockPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IDragPatternIdentifiersStatics */
-/* Windows.UI.Xaml.Automation.IDragPatternIdentifiersStatics.get_DropEffectProperty() */
 HRESULT wuixaau_drag_pattern_identifiers_statics_get__drop_effect_property(WUIXAAU_IDragPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IDragPatternIdentifiersStatics.get_DropEffectsProperty() */
 HRESULT wuixaau_drag_pattern_identifiers_statics_get__drop_effects_property(WUIXAAU_IDragPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IDragPatternIdentifiersStatics.get_GrabbedItemsProperty() */
 HRESULT wuixaau_drag_pattern_identifiers_statics_get__grabbed_items_property(WUIXAAU_IDragPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IDragPatternIdentifiersStatics.get_IsGrabbedProperty() */
 HRESULT wuixaau_drag_pattern_identifiers_statics_get__is_grabbed_property(WUIXAAU_IDragPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IDropTargetPatternIdentifiersStatics */
-/* Windows.UI.Xaml.Automation.IDropTargetPatternIdentifiersStatics.get_DropTargetEffectProperty() */
 HRESULT wuixaau_drop_target_pattern_identifiers_statics_get__drop_target_effect_property(WUIXAAU_IDropTargetPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IDropTargetPatternIdentifiersStatics.get_DropTargetEffectsProperty() */
 HRESULT wuixaau_drop_target_pattern_identifiers_statics_get__drop_target_effects_property(WUIXAAU_IDropTargetPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IExpandCollapsePatternIdentifiersStatics */
-/* Windows.UI.Xaml.Automation.IExpandCollapsePatternIdentifiersStatics.get_ExpandCollapseStateProperty() */
 HRESULT wuixaau_expand_collapse_pattern_identifiers_statics_get__expand_collapse_state_property(WUIXAAU_IExpandCollapsePatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IGridItemPatternIdentifiersStatics */
-/* Windows.UI.Xaml.Automation.IGridItemPatternIdentifiersStatics.get_ColumnProperty() */
 HRESULT wuixaau_grid_item_pattern_identifiers_statics_get__column_property(WUIXAAU_IGridItemPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IGridItemPatternIdentifiersStatics.get_ColumnSpanProperty() */
 HRESULT wuixaau_grid_item_pattern_identifiers_statics_get__column_span_property(WUIXAAU_IGridItemPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IGridItemPatternIdentifiersStatics.get_ContainingGridProperty() */
 HRESULT wuixaau_grid_item_pattern_identifiers_statics_get__containing_grid_property(WUIXAAU_IGridItemPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IGridItemPatternIdentifiersStatics.get_RowProperty() */
 HRESULT wuixaau_grid_item_pattern_identifiers_statics_get__row_property(WUIXAAU_IGridItemPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IGridItemPatternIdentifiersStatics.get_RowSpanProperty() */
 HRESULT wuixaau_grid_item_pattern_identifiers_statics_get__row_span_property(WUIXAAU_IGridItemPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IGridPatternIdentifiersStatics */
-/* Windows.UI.Xaml.Automation.IGridPatternIdentifiersStatics.get_ColumnCountProperty() */
 HRESULT wuixaau_grid_pattern_identifiers_statics_get__column_count_property(WUIXAAU_IGridPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IGridPatternIdentifiersStatics.get_RowCountProperty() */
 HRESULT wuixaau_grid_pattern_identifiers_statics_get__row_count_property(WUIXAAU_IGridPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IMultipleViewPatternIdentifiersStatics */
-/* Windows.UI.Xaml.Automation.IMultipleViewPatternIdentifiersStatics.get_CurrentViewProperty() */
 HRESULT wuixaau_multiple_view_pattern_identifiers_statics_get__current_view_property(WUIXAAU_IMultipleViewPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IMultipleViewPatternIdentifiersStatics.get_SupportedViewsProperty() */
 HRESULT wuixaau_multiple_view_pattern_identifiers_statics_get__supported_views_property(WUIXAAU_IMultipleViewPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IRangeValuePatternIdentifiersStatics */
-/* Windows.UI.Xaml.Automation.IRangeValuePatternIdentifiersStatics.get_IsReadOnlyProperty() */
 HRESULT wuixaau_range_value_pattern_identifiers_statics_get__is_read_only_property(WUIXAAU_IRangeValuePatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IRangeValuePatternIdentifiersStatics.get_LargeChangeProperty() */
 HRESULT wuixaau_range_value_pattern_identifiers_statics_get__large_change_property(WUIXAAU_IRangeValuePatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IRangeValuePatternIdentifiersStatics.get_MaximumProperty() */
 HRESULT wuixaau_range_value_pattern_identifiers_statics_get__maximum_property(WUIXAAU_IRangeValuePatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IRangeValuePatternIdentifiersStatics.get_MinimumProperty() */
 HRESULT wuixaau_range_value_pattern_identifiers_statics_get__minimum_property(WUIXAAU_IRangeValuePatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IRangeValuePatternIdentifiersStatics.get_SmallChangeProperty() */
 HRESULT wuixaau_range_value_pattern_identifiers_statics_get__small_change_property(WUIXAAU_IRangeValuePatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IRangeValuePatternIdentifiersStatics.get_ValueProperty() */
 HRESULT wuixaau_range_value_pattern_identifiers_statics_get__value_property(WUIXAAU_IRangeValuePatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IScrollPatternIdentifiersStatics */
-/* Windows.UI.Xaml.Automation.IScrollPatternIdentifiersStatics.get_HorizontallyScrollableProperty() */
 HRESULT wuixaau_scroll_pattern_identifiers_statics_get__horizontally_scrollable_property(WUIXAAU_IScrollPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IScrollPatternIdentifiersStatics.get_HorizontalScrollPercentProperty() */
 HRESULT wuixaau_scroll_pattern_identifiers_statics_get__horizontal_scroll_percent_property(WUIXAAU_IScrollPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IScrollPatternIdentifiersStatics.get_HorizontalViewSizeProperty() */
 HRESULT wuixaau_scroll_pattern_identifiers_statics_get__horizontal_view_size_property(WUIXAAU_IScrollPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IScrollPatternIdentifiersStatics.get_NoScroll() */
 HRESULT wuixaau_scroll_pattern_identifiers_statics_get__no_scroll(WUIXAAU_IScrollPatternIdentifiersStatics *self, double *value);
 
-/* Windows.UI.Xaml.Automation.IScrollPatternIdentifiersStatics.get_VerticallyScrollableProperty() */
 HRESULT wuixaau_scroll_pattern_identifiers_statics_get__vertically_scrollable_property(WUIXAAU_IScrollPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IScrollPatternIdentifiersStatics.get_VerticalScrollPercentProperty() */
 HRESULT wuixaau_scroll_pattern_identifiers_statics_get__vertical_scroll_percent_property(WUIXAAU_IScrollPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IScrollPatternIdentifiersStatics.get_VerticalViewSizeProperty() */
 HRESULT wuixaau_scroll_pattern_identifiers_statics_get__vertical_view_size_property(WUIXAAU_IScrollPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.ISelectionItemPatternIdentifiersStatics */
-/* Windows.UI.Xaml.Automation.ISelectionItemPatternIdentifiersStatics.get_IsSelectedProperty() */
 HRESULT wuixaau_selection_item_pattern_identifiers_statics_get__is_selected_property(WUIXAAU_ISelectionItemPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.ISelectionItemPatternIdentifiersStatics.get_SelectionContainerProperty() */
 HRESULT wuixaau_selection_item_pattern_identifiers_statics_get__selection_container_property(WUIXAAU_ISelectionItemPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.ISelectionPatternIdentifiersStatics */
-/* Windows.UI.Xaml.Automation.ISelectionPatternIdentifiersStatics.get_CanSelectMultipleProperty() */
 HRESULT wuixaau_selection_pattern_identifiers_statics_get__can_select_multiple_property(WUIXAAU_ISelectionPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.ISelectionPatternIdentifiersStatics.get_IsSelectionRequiredProperty() */
 HRESULT wuixaau_selection_pattern_identifiers_statics_get__is_selection_required_property(WUIXAAU_ISelectionPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.ISelectionPatternIdentifiersStatics.get_SelectionProperty() */
 HRESULT wuixaau_selection_pattern_identifiers_statics_get__selection_property(WUIXAAU_ISelectionPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.ISpreadsheetItemPatternIdentifiersStatics */
-/* Windows.UI.Xaml.Automation.ISpreadsheetItemPatternIdentifiersStatics.get_FormulaProperty() */
 HRESULT wuixaau_spreadsheet_item_pattern_identifiers_statics_get__formula_property(WUIXAAU_ISpreadsheetItemPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IStylesPatternIdentifiersStatics */
-/* Windows.UI.Xaml.Automation.IStylesPatternIdentifiersStatics.get_ExtendedPropertiesProperty() */
 HRESULT wuixaau_styles_pattern_identifiers_statics_get__extended_properties_property(WUIXAAU_IStylesPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IStylesPatternIdentifiersStatics.get_FillColorProperty() */
 HRESULT wuixaau_styles_pattern_identifiers_statics_get__fill_color_property(WUIXAAU_IStylesPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IStylesPatternIdentifiersStatics.get_FillPatternColorProperty() */
 HRESULT wuixaau_styles_pattern_identifiers_statics_get__fill_pattern_color_property(WUIXAAU_IStylesPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IStylesPatternIdentifiersStatics.get_FillPatternStyleProperty() */
 HRESULT wuixaau_styles_pattern_identifiers_statics_get__fill_pattern_style_property(WUIXAAU_IStylesPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IStylesPatternIdentifiersStatics.get_ShapeProperty() */
 HRESULT wuixaau_styles_pattern_identifiers_statics_get__shape_property(WUIXAAU_IStylesPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IStylesPatternIdentifiersStatics.get_StyleIdProperty() */
 HRESULT wuixaau_styles_pattern_identifiers_statics_get__style_id_property(WUIXAAU_IStylesPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IStylesPatternIdentifiersStatics.get_StyleNameProperty() */
 HRESULT wuixaau_styles_pattern_identifiers_statics_get__style_name_property(WUIXAAU_IStylesPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.ITableItemPatternIdentifiersStatics */
-/* Windows.UI.Xaml.Automation.ITableItemPatternIdentifiersStatics.get_ColumnHeaderItemsProperty() */
 HRESULT wuixaau_table_item_pattern_identifiers_statics_get__column_header_items_property(WUIXAAU_ITableItemPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.ITableItemPatternIdentifiersStatics.get_RowHeaderItemsProperty() */
 HRESULT wuixaau_table_item_pattern_identifiers_statics_get__row_header_items_property(WUIXAAU_ITableItemPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.ITablePatternIdentifiersStatics */
-/* Windows.UI.Xaml.Automation.ITablePatternIdentifiersStatics.get_ColumnHeadersProperty() */
 HRESULT wuixaau_table_pattern_identifiers_statics_get__column_headers_property(WUIXAAU_ITablePatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.ITablePatternIdentifiersStatics.get_RowHeadersProperty() */
 HRESULT wuixaau_table_pattern_identifiers_statics_get__row_headers_property(WUIXAAU_ITablePatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.ITablePatternIdentifiersStatics.get_RowOrColumnMajorProperty() */
 HRESULT wuixaau_table_pattern_identifiers_statics_get__row_or_column_major_property(WUIXAAU_ITablePatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.ITogglePatternIdentifiersStatics */
-/* Windows.UI.Xaml.Automation.ITogglePatternIdentifiersStatics.get_ToggleStateProperty() */
 HRESULT wuixaau_toggle_pattern_identifiers_statics_get__toggle_state_property(WUIXAAU_ITogglePatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.ITransformPattern2IdentifiersStatics */
-/* Windows.UI.Xaml.Automation.ITransformPattern2IdentifiersStatics.get_CanZoomProperty() */
 HRESULT wuixaau_transform_pattern2_identifiers_statics_get__can_zoom_property(WUIXAAU_ITransformPattern2IdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.ITransformPattern2IdentifiersStatics.get_ZoomLevelProperty() */
 HRESULT wuixaau_transform_pattern2_identifiers_statics_get__zoom_level_property(WUIXAAU_ITransformPattern2IdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.ITransformPattern2IdentifiersStatics.get_MaxZoomProperty() */
 HRESULT wuixaau_transform_pattern2_identifiers_statics_get__max_zoom_property(WUIXAAU_ITransformPattern2IdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.ITransformPattern2IdentifiersStatics.get_MinZoomProperty() */
 HRESULT wuixaau_transform_pattern2_identifiers_statics_get__min_zoom_property(WUIXAAU_ITransformPattern2IdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.ITransformPatternIdentifiersStatics */
-/* Windows.UI.Xaml.Automation.ITransformPatternIdentifiersStatics.get_CanMoveProperty() */
 HRESULT wuixaau_transform_pattern_identifiers_statics_get__can_move_property(WUIXAAU_ITransformPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.ITransformPatternIdentifiersStatics.get_CanResizeProperty() */
 HRESULT wuixaau_transform_pattern_identifiers_statics_get__can_resize_property(WUIXAAU_ITransformPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.ITransformPatternIdentifiersStatics.get_CanRotateProperty() */
 HRESULT wuixaau_transform_pattern_identifiers_statics_get__can_rotate_property(WUIXAAU_ITransformPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IValuePatternIdentifiersStatics */
-/* Windows.UI.Xaml.Automation.IValuePatternIdentifiersStatics.get_IsReadOnlyProperty() */
 HRESULT wuixaau_value_pattern_identifiers_statics_get__is_read_only_property(WUIXAAU_IValuePatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IValuePatternIdentifiersStatics.get_ValueProperty() */
 HRESULT wuixaau_value_pattern_identifiers_statics_get__value_property(WUIXAAU_IValuePatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IWindowPatternIdentifiersStatics */
-/* Windows.UI.Xaml.Automation.IWindowPatternIdentifiersStatics.get_CanMaximizeProperty() */
 HRESULT wuixaau_window_pattern_identifiers_statics_get__can_maximize_property(WUIXAAU_IWindowPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IWindowPatternIdentifiersStatics.get_CanMinimizeProperty() */
 HRESULT wuixaau_window_pattern_identifiers_statics_get__can_minimize_property(WUIXAAU_IWindowPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IWindowPatternIdentifiersStatics.get_IsModalProperty() */
 HRESULT wuixaau_window_pattern_identifiers_statics_get__is_modal_property(WUIXAAU_IWindowPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IWindowPatternIdentifiersStatics.get_IsTopmostProperty() */
 HRESULT wuixaau_window_pattern_identifiers_statics_get__is_topmost_property(WUIXAAU_IWindowPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IWindowPatternIdentifiersStatics.get_WindowInteractionStateProperty() */
 HRESULT wuixaau_window_pattern_identifiers_statics_get__window_interaction_state_property(WUIXAAU_IWindowPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IWindowPatternIdentifiersStatics.get_WindowVisualStateProperty() */
 HRESULT wuixaau_window_pattern_identifiers_statics_get__window_visual_state_property(WUIXAAU_IWindowPatternIdentifiersStatics *self, WUIXAAU_AutomationProperty** value);
 
-/* activate Windows.UI.Xaml.Automation.MultipleViewPatternIdentifiers */
 HRESULT wuixaau_multiple_view_pattern_identifiers_new(WUIXAAU_MultipleViewPatternIdentifiers **out);
 
-/* Windows.UI.Xaml.Automation.MultipleViewPatternIdentifiers */
-/* Windows.UI.Xaml.Automation.MultipleViewPatternIdentifiers.get_CurrentViewProperty() */
 HRESULT wuixaau_multiple_view_pattern_identifiers_get__current_view_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.MultipleViewPatternIdentifiers.get_SupportedViewsProperty() */
 HRESULT wuixaau_multiple_view_pattern_identifiers_get__supported_views_property(WUIXAAU_AutomationProperty** value);
 
-/* activate Windows.UI.Xaml.Automation.AutomationAnnotation */
 HRESULT wuixaau_automation_annotation_new(WUIXAAU_AutomationAnnotation **out);
 
-/* Windows.UI.Xaml.Automation.AutomationAnnotation */
-/* Windows.UI.Xaml.Automation.AutomationAnnotation.get_Type() */
 HRESULT wuixaau_automation_annotation_get__type(WUIXAAU_AutomationAnnotation *self, WUIXAAU_AnnotationType *value);
 
-/* Windows.UI.Xaml.Automation.AutomationAnnotation.put_Type() */
 HRESULT wuixaau_automation_annotation_put__type(WUIXAAU_AutomationAnnotation *self, WUIXAAU_AnnotationType value);
 
-/* Windows.UI.Xaml.Automation.AutomationAnnotation.get_Element() */
 HRESULT wuixaau_automation_annotation_get__element(WUIXAAU_AutomationAnnotation *self, WUIXA_UIElement** value);
 
-/* Windows.UI.Xaml.Automation.AutomationAnnotation.put_Element() */
 HRESULT wuixaau_automation_annotation_put__element(WUIXAAU_AutomationAnnotation *self, WUIXA_UIElement* value);
 
-/* Windows.UI.Xaml.Automation.AutomationAnnotation.get_TypeProperty() */
 HRESULT wuixaau_automation_annotation_get__type_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.AutomationAnnotation.get_ElementProperty() */
 HRESULT wuixaau_automation_annotation_get__element_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Automation.AnnotationPatternIdentifiers */
 HRESULT wuixaau_annotation_pattern_identifiers_new(WUIXAAU_AnnotationPatternIdentifiers **out);
 
-/* Windows.UI.Xaml.Automation.AnnotationPatternIdentifiers */
-/* Windows.UI.Xaml.Automation.AnnotationPatternIdentifiers.get_AnnotationTypeIdProperty() */
 HRESULT wuixaau_annotation_pattern_identifiers_get__annotation_type_id_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AnnotationPatternIdentifiers.get_AnnotationTypeNameProperty() */
 HRESULT wuixaau_annotation_pattern_identifiers_get__annotation_type_name_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AnnotationPatternIdentifiers.get_AuthorProperty() */
 HRESULT wuixaau_annotation_pattern_identifiers_get__author_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AnnotationPatternIdentifiers.get_DateTimeProperty() */
 HRESULT wuixaau_annotation_pattern_identifiers_get__date_time_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.AnnotationPatternIdentifiers.get_TargetProperty() */
 HRESULT wuixaau_annotation_pattern_identifiers_get__target_property(WUIXAAU_AutomationProperty** value);
 
-/* activate Windows.UI.Xaml.Automation.WindowPatternIdentifiers */
 HRESULT wuixaau_window_pattern_identifiers_new(WUIXAAU_WindowPatternIdentifiers **out);
 
-/* Windows.UI.Xaml.Automation.WindowPatternIdentifiers */
-/* Windows.UI.Xaml.Automation.WindowPatternIdentifiers.get_CanMaximizeProperty() */
 HRESULT wuixaau_window_pattern_identifiers_get__can_maximize_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.WindowPatternIdentifiers.get_CanMinimizeProperty() */
 HRESULT wuixaau_window_pattern_identifiers_get__can_minimize_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.WindowPatternIdentifiers.get_IsModalProperty() */
 HRESULT wuixaau_window_pattern_identifiers_get__is_modal_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.WindowPatternIdentifiers.get_IsTopmostProperty() */
 HRESULT wuixaau_window_pattern_identifiers_get__is_topmost_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.WindowPatternIdentifiers.get_WindowInteractionStateProperty() */
 HRESULT wuixaau_window_pattern_identifiers_get__window_interaction_state_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.WindowPatternIdentifiers.get_WindowVisualStateProperty() */
 HRESULT wuixaau_window_pattern_identifiers_get__window_visual_state_property(WUIXAAU_AutomationProperty** value);
 
-/* activate Windows.UI.Xaml.Automation.ValuePatternIdentifiers */
 HRESULT wuixaau_value_pattern_identifiers_new(WUIXAAU_ValuePatternIdentifiers **out);
 
-/* Windows.UI.Xaml.Automation.ValuePatternIdentifiers */
-/* Windows.UI.Xaml.Automation.ValuePatternIdentifiers.get_IsReadOnlyProperty() */
 HRESULT wuixaau_value_pattern_identifiers_get__is_read_only_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.ValuePatternIdentifiers.get_ValueProperty() */
 HRESULT wuixaau_value_pattern_identifiers_get__value_property(WUIXAAU_AutomationProperty** value);
 
-/* activate Windows.UI.Xaml.Automation.TransformPatternIdentifiers */
 HRESULT wuixaau_transform_pattern_identifiers_new(WUIXAAU_TransformPatternIdentifiers **out);
 
-/* Windows.UI.Xaml.Automation.TransformPatternIdentifiers */
-/* Windows.UI.Xaml.Automation.TransformPatternIdentifiers.get_CanMoveProperty() */
 HRESULT wuixaau_transform_pattern_identifiers_get__can_move_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.TransformPatternIdentifiers.get_CanResizeProperty() */
 HRESULT wuixaau_transform_pattern_identifiers_get__can_resize_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.TransformPatternIdentifiers.get_CanRotateProperty() */
 HRESULT wuixaau_transform_pattern_identifiers_get__can_rotate_property(WUIXAAU_AutomationProperty** value);
 
-/* activate Windows.UI.Xaml.Automation.TransformPattern2Identifiers */
 HRESULT wuixaau_transform_pattern2_identifiers_new(WUIXAAU_TransformPattern2Identifiers **out);
 
-/* Windows.UI.Xaml.Automation.TransformPattern2Identifiers */
-/* Windows.UI.Xaml.Automation.TransformPattern2Identifiers.get_CanZoomProperty() */
 HRESULT wuixaau_transform_pattern2_identifiers_get__can_zoom_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.TransformPattern2Identifiers.get_ZoomLevelProperty() */
 HRESULT wuixaau_transform_pattern2_identifiers_get__zoom_level_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.TransformPattern2Identifiers.get_MaxZoomProperty() */
 HRESULT wuixaau_transform_pattern2_identifiers_get__max_zoom_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.TransformPattern2Identifiers.get_MinZoomProperty() */
 HRESULT wuixaau_transform_pattern2_identifiers_get__min_zoom_property(WUIXAAU_AutomationProperty** value);
 
-/* activate Windows.UI.Xaml.Automation.TogglePatternIdentifiers */
 HRESULT wuixaau_toggle_pattern_identifiers_new(WUIXAAU_TogglePatternIdentifiers **out);
 
-/* Windows.UI.Xaml.Automation.TogglePatternIdentifiers */
-/* Windows.UI.Xaml.Automation.TogglePatternIdentifiers.get_ToggleStateProperty() */
 HRESULT wuixaau_toggle_pattern_identifiers_get__toggle_state_property(WUIXAAU_AutomationProperty** value);
 
-/* activate Windows.UI.Xaml.Automation.TablePatternIdentifiers */
 HRESULT wuixaau_table_pattern_identifiers_new(WUIXAAU_TablePatternIdentifiers **out);
 
-/* Windows.UI.Xaml.Automation.TablePatternIdentifiers */
-/* Windows.UI.Xaml.Automation.TablePatternIdentifiers.get_ColumnHeadersProperty() */
 HRESULT wuixaau_table_pattern_identifiers_get__column_headers_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.TablePatternIdentifiers.get_RowHeadersProperty() */
 HRESULT wuixaau_table_pattern_identifiers_get__row_headers_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.TablePatternIdentifiers.get_RowOrColumnMajorProperty() */
 HRESULT wuixaau_table_pattern_identifiers_get__row_or_column_major_property(WUIXAAU_AutomationProperty** value);
 
-/* activate Windows.UI.Xaml.Automation.TableItemPatternIdentifiers */
 HRESULT wuixaau_table_item_pattern_identifiers_new(WUIXAAU_TableItemPatternIdentifiers **out);
 
-/* Windows.UI.Xaml.Automation.TableItemPatternIdentifiers */
-/* Windows.UI.Xaml.Automation.TableItemPatternIdentifiers.get_ColumnHeaderItemsProperty() */
 HRESULT wuixaau_table_item_pattern_identifiers_get__column_header_items_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.TableItemPatternIdentifiers.get_RowHeaderItemsProperty() */
 HRESULT wuixaau_table_item_pattern_identifiers_get__row_header_items_property(WUIXAAU_AutomationProperty** value);
 
-/* activate Windows.UI.Xaml.Automation.StylesPatternIdentifiers */
 HRESULT wuixaau_styles_pattern_identifiers_new(WUIXAAU_StylesPatternIdentifiers **out);
 
-/* Windows.UI.Xaml.Automation.StylesPatternIdentifiers */
-/* Windows.UI.Xaml.Automation.StylesPatternIdentifiers.get_ExtendedPropertiesProperty() */
 HRESULT wuixaau_styles_pattern_identifiers_get__extended_properties_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.StylesPatternIdentifiers.get_FillColorProperty() */
 HRESULT wuixaau_styles_pattern_identifiers_get__fill_color_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.StylesPatternIdentifiers.get_FillPatternColorProperty() */
 HRESULT wuixaau_styles_pattern_identifiers_get__fill_pattern_color_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.StylesPatternIdentifiers.get_FillPatternStyleProperty() */
 HRESULT wuixaau_styles_pattern_identifiers_get__fill_pattern_style_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.StylesPatternIdentifiers.get_ShapeProperty() */
 HRESULT wuixaau_styles_pattern_identifiers_get__shape_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.StylesPatternIdentifiers.get_StyleIdProperty() */
 HRESULT wuixaau_styles_pattern_identifiers_get__style_id_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.StylesPatternIdentifiers.get_StyleNameProperty() */
 HRESULT wuixaau_styles_pattern_identifiers_get__style_name_property(WUIXAAU_AutomationProperty** value);
 
-/* activate Windows.UI.Xaml.Automation.SpreadsheetItemPatternIdentifiers */
 HRESULT wuixaau_spreadsheet_item_pattern_identifiers_new(WUIXAAU_SpreadsheetItemPatternIdentifiers **out);
 
-/* Windows.UI.Xaml.Automation.SpreadsheetItemPatternIdentifiers */
-/* Windows.UI.Xaml.Automation.SpreadsheetItemPatternIdentifiers.get_FormulaProperty() */
 HRESULT wuixaau_spreadsheet_item_pattern_identifiers_get__formula_property(WUIXAAU_AutomationProperty** value);
 
-/* activate Windows.UI.Xaml.Automation.SelectionPatternIdentifiers */
 HRESULT wuixaau_selection_pattern_identifiers_new(WUIXAAU_SelectionPatternIdentifiers **out);
 
-/* Windows.UI.Xaml.Automation.SelectionPatternIdentifiers */
-/* Windows.UI.Xaml.Automation.SelectionPatternIdentifiers.get_CanSelectMultipleProperty() */
 HRESULT wuixaau_selection_pattern_identifiers_get__can_select_multiple_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.SelectionPatternIdentifiers.get_IsSelectionRequiredProperty() */
 HRESULT wuixaau_selection_pattern_identifiers_get__is_selection_required_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.SelectionPatternIdentifiers.get_SelectionProperty() */
 HRESULT wuixaau_selection_pattern_identifiers_get__selection_property(WUIXAAU_AutomationProperty** value);
 
-/* activate Windows.UI.Xaml.Automation.SelectionItemPatternIdentifiers */
 HRESULT wuixaau_selection_item_pattern_identifiers_new(WUIXAAU_SelectionItemPatternIdentifiers **out);
 
-/* Windows.UI.Xaml.Automation.SelectionItemPatternIdentifiers */
-/* Windows.UI.Xaml.Automation.SelectionItemPatternIdentifiers.get_IsSelectedProperty() */
 HRESULT wuixaau_selection_item_pattern_identifiers_get__is_selected_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.SelectionItemPatternIdentifiers.get_SelectionContainerProperty() */
 HRESULT wuixaau_selection_item_pattern_identifiers_get__selection_container_property(WUIXAAU_AutomationProperty** value);
 
-/* activate Windows.UI.Xaml.Automation.ScrollPatternIdentifiers */
 HRESULT wuixaau_scroll_pattern_identifiers_new(WUIXAAU_ScrollPatternIdentifiers **out);
 
-/* Windows.UI.Xaml.Automation.ScrollPatternIdentifiers */
-/* Windows.UI.Xaml.Automation.ScrollPatternIdentifiers.get_HorizontallyScrollableProperty() */
 HRESULT wuixaau_scroll_pattern_identifiers_get__horizontally_scrollable_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.ScrollPatternIdentifiers.get_HorizontalScrollPercentProperty() */
 HRESULT wuixaau_scroll_pattern_identifiers_get__horizontal_scroll_percent_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.ScrollPatternIdentifiers.get_HorizontalViewSizeProperty() */
 HRESULT wuixaau_scroll_pattern_identifiers_get__horizontal_view_size_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.ScrollPatternIdentifiers.get_NoScroll() */
 HRESULT wuixaau_scroll_pattern_identifiers_get__no_scroll(double *value);
 
-/* Windows.UI.Xaml.Automation.ScrollPatternIdentifiers.get_VerticallyScrollableProperty() */
 HRESULT wuixaau_scroll_pattern_identifiers_get__vertically_scrollable_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.ScrollPatternIdentifiers.get_VerticalScrollPercentProperty() */
 HRESULT wuixaau_scroll_pattern_identifiers_get__vertical_scroll_percent_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.ScrollPatternIdentifiers.get_VerticalViewSizeProperty() */
 HRESULT wuixaau_scroll_pattern_identifiers_get__vertical_view_size_property(WUIXAAU_AutomationProperty** value);
 
-/* activate Windows.UI.Xaml.Automation.RangeValuePatternIdentifiers */
 HRESULT wuixaau_range_value_pattern_identifiers_new(WUIXAAU_RangeValuePatternIdentifiers **out);
 
-/* Windows.UI.Xaml.Automation.RangeValuePatternIdentifiers */
-/* Windows.UI.Xaml.Automation.RangeValuePatternIdentifiers.get_IsReadOnlyProperty() */
 HRESULT wuixaau_range_value_pattern_identifiers_get__is_read_only_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.RangeValuePatternIdentifiers.get_LargeChangeProperty() */
 HRESULT wuixaau_range_value_pattern_identifiers_get__large_change_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.RangeValuePatternIdentifiers.get_MaximumProperty() */
 HRESULT wuixaau_range_value_pattern_identifiers_get__maximum_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.RangeValuePatternIdentifiers.get_MinimumProperty() */
 HRESULT wuixaau_range_value_pattern_identifiers_get__minimum_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.RangeValuePatternIdentifiers.get_SmallChangeProperty() */
 HRESULT wuixaau_range_value_pattern_identifiers_get__small_change_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.RangeValuePatternIdentifiers.get_ValueProperty() */
 HRESULT wuixaau_range_value_pattern_identifiers_get__value_property(WUIXAAU_AutomationProperty** value);
 
-/* Windows.UI.Xaml.Automation.IAutomationAnnotation */
 #endif /* CWINRT_WINDOWS_UI_XAML_AUTOMATION_H */

@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.ApplicationModel.UserDataAccounts.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WAPUSPR_UserDataAccountProviderResolveErrorsOperation WAPUSPR_UserDataAccountProviderResolveErrorsOperation;
 typedef struct WAPUSPR_UserDataAccountProviderSettingsOperation WAPUSPR_UserDataAccountProviderSettingsOperation;
 typedef struct WAPUSPR_UserDataAccountPartnerAccountInfo WAPUSPR_UserDataAccountPartnerAccountInfo;
@@ -24,7 +23,6 @@ typedef struct WAPUSPR_IUserDataAccountPartnerAccountInfo WAPUSPR_IUserDataAccou
 typedef struct WAPUSPR_IUserDataAccountProviderAddAccountOperation WAPUSPR_IUserDataAccountProviderAddAccountOperation;
 typedef struct WAPUSPR_IUserDataAccountProviderOperation WAPUSPR_IUserDataAccountProviderOperation;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WAPUS_UserDataAccountContentKinds
 #define CWINRT_FWD_WAPUS_UserDataAccountContentKinds
 typedef enum WAPUS_UserDataAccountContentKinds {
@@ -56,7 +54,6 @@ typedef enum WAPUSPR_UserDataAccountProviderOperationKind {
 } WAPUSPR_UserDataAccountProviderOperationKind;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -81,69 +78,40 @@ static const IID CWINRT_IID_WAPUSPR_IUserDataAccountProviderAddAccountOperation 
 static const IID CWINRT_IID_WAPUSPR_IUserDataAccountProviderOperation CWINRT_MAYBE_UNUSED = { 0xA20AAD63, 0x888C, 0x4A62, { 0xA3, 0xDD, 0x34, 0xD0, 0x7A, 0x80, 0x2B, 0x2B } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderResolveErrorsOperation */
 HRESULT wapuspr_user_data_account_provider_resolve_errors_operation_new(WAPUSPR_UserDataAccountProviderResolveErrorsOperation **out);
 
-/* Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderResolveErrorsOperation */
-/* Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderResolveErrorsOperation.get_UserDataAccountId() */
 HRESULT wapuspr_user_data_account_provider_resolve_errors_operation_get__user_data_account_id(WAPUSPR_UserDataAccountProviderResolveErrorsOperation *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderResolveErrorsOperation.ReportCompleted() */
 HRESULT wapuspr_user_data_account_provider_resolve_errors_operation_report_completed(WAPUSPR_UserDataAccountProviderResolveErrorsOperation *self);
 
-/* Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderResolveErrorsOperation.get_Kind() */
 HRESULT wapuspr_user_data_account_provider_resolve_errors_operation_get__kind(WAPUSPR_UserDataAccountProviderResolveErrorsOperation *self, WAPUSPR_UserDataAccountProviderOperationKind *value);
 
-/* activate Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderSettingsOperation */
 HRESULT wapuspr_user_data_account_provider_settings_operation_new(WAPUSPR_UserDataAccountProviderSettingsOperation **out);
 
-/* Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderSettingsOperation */
-/* Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderSettingsOperation.get_UserDataAccountId() */
 HRESULT wapuspr_user_data_account_provider_settings_operation_get__user_data_account_id(WAPUSPR_UserDataAccountProviderSettingsOperation *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderSettingsOperation.ReportCompleted() */
 HRESULT wapuspr_user_data_account_provider_settings_operation_report_completed(WAPUSPR_UserDataAccountProviderSettingsOperation *self);
 
-/* Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderSettingsOperation.get_Kind() */
 HRESULT wapuspr_user_data_account_provider_settings_operation_get__kind(WAPUSPR_UserDataAccountProviderSettingsOperation *self, WAPUSPR_UserDataAccountProviderOperationKind *value);
 
-/* activate Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo */
 HRESULT wapuspr_user_data_account_partner_account_info_new(WAPUSPR_UserDataAccountPartnerAccountInfo **out);
 
-/* Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo */
-/* Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo.get_DisplayName() */
 HRESULT wapuspr_user_data_account_partner_account_info_get__display_name(WAPUSPR_UserDataAccountPartnerAccountInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo.get_Priority() */
 HRESULT wapuspr_user_data_account_partner_account_info_get__priority(WAPUSPR_UserDataAccountPartnerAccountInfo *self, uint32_t *value);
 
-/* Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo.get_AccountKind() */
 HRESULT wapuspr_user_data_account_partner_account_info_get__account_kind(WAPUSPR_UserDataAccountPartnerAccountInfo *self, WAPUSPR_UserDataAccountProviderPartnerAccountKind *value);
 
-/* activate Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderAddAccountOperation */
 HRESULT wapuspr_user_data_account_provider_add_account_operation_new(WAPUSPR_UserDataAccountProviderAddAccountOperation **out);
 
-/* Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderAddAccountOperation */
-/* Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderAddAccountOperation.get_ContentKinds() */
 HRESULT wapuspr_user_data_account_provider_add_account_operation_get__content_kinds(WAPUSPR_UserDataAccountProviderAddAccountOperation *self, WAPUS_UserDataAccountContentKinds *value);
 
-/* Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderAddAccountOperation.get_PartnerAccountInfos() */
 HRESULT wapuspr_user_data_account_provider_add_account_operation_get__partner_account_infos(WAPUSPR_UserDataAccountProviderAddAccountOperation *self, WFOCO_IVectorView_WAPUSPR_UserDataAccountPartnerAccountInfo** value);
 
-/* Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderAddAccountOperation.ReportCompleted(userDataAccountId) */
 HRESULT wapuspr_user_data_account_provider_add_account_operation_report_completed(WAPUSPR_UserDataAccountProviderAddAccountOperation *self, cwinrt_hstring userDataAccountId);
 
-/* Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderAddAccountOperation.get_Kind() */
 HRESULT wapuspr_user_data_account_provider_add_account_operation_get__kind(WAPUSPR_UserDataAccountProviderAddAccountOperation *self, WAPUSPR_UserDataAccountProviderOperationKind *value);
 
-/* Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderResolveErrorsOperation */
-/* Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderSettingsOperation */
-/* Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountPartnerAccountInfo */
-/* Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderAddAccountOperation */
-/* Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderOperation */
-/* Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderOperation.get_Kind() */
 HRESULT wapuspr_user_data_account_provider_operation_get__kind(WAPUSPR_IUserDataAccountProviderOperation *self, WAPUSPR_UserDataAccountProviderOperationKind *value);
 
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_USERDATAACCOUNTS_PROVIDER_H */

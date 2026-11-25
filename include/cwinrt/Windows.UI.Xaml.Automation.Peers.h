@@ -14,7 +14,6 @@
 #include <cwinrt/Windows.UI.Xaml.Automation.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WUIXAAUPR_IExpandCollapseProvider
 #define CWINRT_FWD_WUIXAAUPR_IExpandCollapseProvider
 typedef struct WUIXAAUPR_IExpandCollapseProvider WUIXAAUPR_IExpandCollapseProvider;
@@ -360,7 +359,6 @@ typedef struct WUIXACO_TreeViewItem WUIXACO_TreeViewItem;
 typedef struct WUIXACO_TreeViewList WUIXACO_TreeViewList;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUIXAAUPE_IMediaTransportControlsAutomationPeerFactory WUIXAAUPE_IMediaTransportControlsAutomationPeerFactory;
 typedef struct WUIXAAUPE_IMediaPlayerElementAutomationPeerFactory WUIXAAUPE_IMediaPlayerElementAutomationPeerFactory;
 typedef struct WUIXAAUPE_IMediaElementAutomationPeerFactory WUIXAAUPE_IMediaElementAutomationPeerFactory;
@@ -646,7 +644,6 @@ typedef struct WUIXAAUPE_IListBoxAutomationPeer WUIXAAUPE_IListBoxAutomationPeer
 typedef struct WUIXAAUPE_IInkToolbarAutomationPeer WUIXAAUPE_IInkToolbarAutomationPeer;
 typedef struct WUIXAAUPE_IImageAutomationPeer WUIXAAUPE_IImageAutomationPeer;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WUIXACO_MediaTransportControls
 #define CWINRT_FWD_WUIXACO_MediaTransportControls
 typedef struct WUIXACO_MediaTransportControls WUIXACO_MediaTransportControls;
@@ -1303,7 +1300,6 @@ struct WUIXAAUPE_RawElementProviderRuntimeId {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -2084,1471 +2080,884 @@ static const IID CWINRT_IID_WUIXAAUPE_IInkToolbarAutomationPeer CWINRT_MAYBE_UNU
 static const IID CWINRT_IID_WUIXAAUPE_IImageAutomationPeer CWINRT_MAYBE_UNUSED = { 0x9B0BBF8C, 0x60A2, 0x48BF, { 0xAB, 0x2C, 0x1A, 0x52, 0xA4, 0x51, 0xD2, 0xD4 } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.Xaml.Automation.Peers.IMediaTransportControlsAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IMediaTransportControlsAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_media_transport_controls_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IMediaTransportControlsAutomationPeerFactory *self, WUIXACO_MediaTransportControls* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_MediaTransportControlsAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IMediaPlayerElementAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IMediaPlayerElementAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_media_player_element_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IMediaPlayerElementAutomationPeerFactory *self, WUIXACO_MediaPlayerElement* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_MediaPlayerElementAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IMediaElementAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IMediaElementAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_media_element_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IMediaElementAutomationPeerFactory *self, WUIXACO_MediaElement* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_MediaElementAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IListViewItemDataAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IListViewItemDataAutomationPeerFactory.CreateInstanceWithParentAndItem(item, parent, baseInterface, innerInterface) */
 HRESULT wuixaaupe_list_view_item_data_automation_peer_factory_create_instance_with_parent_and_item(WUIXAAUPE_IListViewItemDataAutomationPeerFactory *self, IInspectable* item, WUIXAAUPE_ListViewBaseAutomationPeer* parent, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_ListViewItemDataAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IListViewItemAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IListViewItemAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_list_view_item_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IListViewItemAutomationPeerFactory *self, WUIXACO_ListViewItem* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_ListViewItemAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IListViewHeaderItemAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IListViewHeaderItemAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_list_view_header_item_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IListViewHeaderItemAutomationPeerFactory *self, WUIXACO_ListViewHeaderItem* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_ListViewHeaderItemAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IMenuBarAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IMenuBarAutomationPeerFactory.CreateInstance(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_menu_bar_automation_peer_factory_create_instance(WUIXAAUPE_IMenuBarAutomationPeerFactory *self, WUIXACO_MenuBar* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_MenuBarAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IMenuBarItemAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IMenuBarItemAutomationPeerFactory.CreateInstance(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_menu_bar_item_automation_peer_factory_create_instance(WUIXAAUPE_IMenuBarItemAutomationPeerFactory *self, WUIXACO_MenuBarItem* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_MenuBarItemAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IMenuFlyoutItemAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IMenuFlyoutItemAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_menu_flyout_item_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IMenuFlyoutItemAutomationPeerFactory *self, WUIXACO_MenuFlyoutItem* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_MenuFlyoutItemAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IMenuFlyoutPresenterAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IMenuFlyoutPresenterAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_menu_flyout_presenter_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IMenuFlyoutPresenterAutomationPeerFactory *self, WUIXACO_MenuFlyoutPresenter* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_MenuFlyoutPresenterAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.INavigationViewItemAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.INavigationViewItemAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_navigation_view_item_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_INavigationViewItemAutomationPeerFactory *self, WUIXACO_NavigationViewItem* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_NavigationViewItemAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IPasswordBoxAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IPasswordBoxAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_password_box_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IPasswordBoxAutomationPeerFactory *self, WUIXACO_PasswordBox* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_PasswordBoxAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IListViewBaseHeaderItemAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IListViewBaseHeaderItemAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_list_view_base_header_item_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IListViewBaseHeaderItemAutomationPeerFactory *self, WUIXACO_ListViewBaseHeaderItem* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_ListViewBaseHeaderItemAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IPersonPictureAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IPersonPictureAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_person_picture_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IPersonPictureAutomationPeerFactory *self, WUIXACO_PersonPicture* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_PersonPictureAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IPivotAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IPivotAutomationPeerFactory.CreateInstanceWithOwner(owner) */
 HRESULT wuixaaupe_pivot_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IPivotAutomationPeerFactory *self, WUIXACO_Pivot* owner, WUIXAAUPE_PivotAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IPivotItemAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IPivotItemAutomationPeerFactory.CreateInstanceWithOwner(owner) */
 HRESULT wuixaaupe_pivot_item_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IPivotItemAutomationPeerFactory *self, WUIXACO_PivotItem* owner, WUIXAAUPE_PivotItemAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IPivotItemDataAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IPivotItemDataAutomationPeerFactory.CreateInstanceWithParentAndItem(item, parent) */
 HRESULT wuixaaupe_pivot_item_data_automation_peer_factory_create_instance_with_parent_and_item(WUIXAAUPE_IPivotItemDataAutomationPeerFactory *self, IInspectable* item, WUIXAAUPE_PivotAutomationPeer* parent, WUIXAAUPE_PivotItemDataAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IRichEditBoxAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IRichEditBoxAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_rich_edit_box_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IRichEditBoxAutomationPeerFactory *self, WUIXACO_RichEditBox* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_RichEditBoxAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IRepeatButtonAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IRepeatButtonAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_repeat_button_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IRepeatButtonAutomationPeerFactory *self, WUIXACOPR_RepeatButton* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_RepeatButtonAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IRatingControlAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IRatingControlAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_rating_control_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IRatingControlAutomationPeerFactory *self, WUIXACO_RatingControl* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_RatingControlAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IRangeBaseAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IRangeBaseAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_range_base_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IRangeBaseAutomationPeerFactory *self, WUIXACOPR_RangeBase* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_RangeBaseAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IRadioButtonAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IRadioButtonAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_radio_button_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IRadioButtonAutomationPeerFactory *self, WUIXACO_RadioButton* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_RadioButtonAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IListViewBaseAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IListViewBaseAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_list_view_base_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IListViewBaseAutomationPeerFactory *self, WUIXACO_ListViewBase* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_ListViewBaseAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IProgressRingAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IProgressRingAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_progress_ring_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IProgressRingAutomationPeerFactory *self, WUIXACO_ProgressRing* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_ProgressRingAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IListViewAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IListViewAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_list_view_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IListViewAutomationPeerFactory *self, WUIXACO_ListView* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_ListViewAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.TreeViewItemAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.TreeViewItemAutomationPeer.get_ExpandCollapseState() */
 HRESULT wuixaaupe_tree_view_item_automation_peer_get__expand_collapse_state(WUIXAAUPE_TreeViewItemAutomationPeer *self, WUIXAAU_ExpandCollapseState *value);
 
-/* Windows.UI.Xaml.Automation.Peers.TreeViewItemAutomationPeer.Collapse() */
 HRESULT wuixaaupe_tree_view_item_automation_peer_collapse(WUIXAAUPE_TreeViewItemAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.TreeViewItemAutomationPeer.Expand() */
 HRESULT wuixaaupe_tree_view_item_automation_peer_expand(WUIXAAUPE_TreeViewItemAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.IListBoxItemDataAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IListBoxItemDataAutomationPeerFactory.CreateInstanceWithParentAndItem(item, parent, baseInterface, innerInterface) */
 HRESULT wuixaaupe_list_box_item_data_automation_peer_factory_create_instance_with_parent_and_item(WUIXAAUPE_IListBoxItemDataAutomationPeerFactory *self, IInspectable* item, WUIXAAUPE_ListBoxAutomationPeer* parent, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_ListBoxItemDataAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IListBoxItemAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IListBoxItemAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_list_box_item_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IListBoxItemAutomationPeerFactory *self, WUIXACO_ListBoxItem* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_ListBoxItemAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.ToggleSwitchAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.ToggleSwitchAutomationPeer.get_ToggleState() */
 HRESULT wuixaaupe_toggle_switch_automation_peer_get__toggle_state(WUIXAAUPE_ToggleSwitchAutomationPeer *self, WUIXAAU_ToggleState *value);
 
-/* Windows.UI.Xaml.Automation.Peers.ToggleSwitchAutomationPeer.Toggle() */
 HRESULT wuixaaupe_toggle_switch_automation_peer_toggle(WUIXAAUPE_ToggleSwitchAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.IListBoxAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IListBoxAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_list_box_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IListBoxAutomationPeerFactory *self, WUIXACO_ListBox* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_ListBoxAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IItemsControlAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IItemsControlAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_items_control_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IItemsControlAutomationPeerFactory *self, WUIXACO_ItemsControl* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_ItemsControlAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IItemAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IItemAutomationPeerFactory.CreateInstanceWithParentAndItem(item, parent, baseInterface, innerInterface) */
 HRESULT wuixaaupe_item_automation_peer_factory_create_instance_with_parent_and_item(WUIXAAUPE_IItemAutomationPeerFactory *self, IInspectable* item, WUIXAAUPE_ItemsControlAutomationPeer* parent, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_ItemAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IImageAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IImageAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_image_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IImageAutomationPeerFactory *self, WUIXACO_Image* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_ImageAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IHyperlinkButtonAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IHyperlinkButtonAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_hyperlink_button_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IHyperlinkButtonAutomationPeerFactory *self, WUIXACO_HyperlinkButton* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_HyperlinkButtonAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IHubSectionAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IHubSectionAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_hub_section_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IHubSectionAutomationPeerFactory *self, WUIXACO_HubSection* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_HubSectionAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IHubAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IHubAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_hub_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IHubAutomationPeerFactory *self, WUIXACO_Hub* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_HubAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IGroupItemAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IGroupItemAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_group_item_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IGroupItemAutomationPeerFactory *self, WUIXACO_GroupItem* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_GroupItemAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IGridViewItemDataAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IGridViewItemDataAutomationPeerFactory.CreateInstanceWithParentAndItem(item, parent, baseInterface, innerInterface) */
 HRESULT wuixaaupe_grid_view_item_data_automation_peer_factory_create_instance_with_parent_and_item(WUIXAAUPE_IGridViewItemDataAutomationPeerFactory *self, IInspectable* item, WUIXAAUPE_GridViewAutomationPeer* parent, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_GridViewItemDataAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IGridViewItemAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IGridViewItemAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_grid_view_item_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IGridViewItemAutomationPeerFactory *self, WUIXACO_GridViewItem* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_GridViewItemAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IGridViewHeaderItemAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IGridViewHeaderItemAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_grid_view_header_item_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IGridViewHeaderItemAutomationPeerFactory *self, WUIXACO_GridViewHeaderItem* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_GridViewHeaderItemAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IGridViewAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IGridViewAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_grid_view_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IGridViewAutomationPeerFactory *self, WUIXACO_GridView* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_GridViewAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IFrameworkElementAutomationPeerStatics */
-/* Windows.UI.Xaml.Automation.Peers.IFrameworkElementAutomationPeerStatics.FromElement(element) */
 HRESULT wuixaaupe_framework_element_automation_peer_statics_from_element(WUIXAAUPE_IFrameworkElementAutomationPeerStatics *self, WUIXA_UIElement* element, WUIXAAUPE_AutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IFrameworkElementAutomationPeerStatics.CreatePeerForElement(element) */
 HRESULT wuixaaupe_framework_element_automation_peer_statics_create_peer_for_element(WUIXAAUPE_IFrameworkElementAutomationPeerStatics *self, WUIXA_UIElement* element, WUIXAAUPE_AutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IFrameworkElementAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IFrameworkElementAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_framework_element_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IFrameworkElementAutomationPeerFactory *self, WUIXA_FrameworkElement* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_FrameworkElementAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.ToggleMenuFlyoutItemAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.ToggleMenuFlyoutItemAutomationPeer.get_ToggleState() */
 HRESULT wuixaaupe_toggle_menu_flyout_item_automation_peer_get__toggle_state(WUIXAAUPE_ToggleMenuFlyoutItemAutomationPeer *self, WUIXAAU_ToggleState *value);
 
-/* Windows.UI.Xaml.Automation.Peers.ToggleMenuFlyoutItemAutomationPeer.Toggle() */
 HRESULT wuixaaupe_toggle_menu_flyout_item_automation_peer_toggle(WUIXAAUPE_ToggleMenuFlyoutItemAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.IFlyoutPresenterAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IFlyoutPresenterAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_flyout_presenter_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IFlyoutPresenterAutomationPeerFactory *self, WUIXACO_FlyoutPresenter* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_FlyoutPresenterAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IFlipViewItemDataAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IFlipViewItemDataAutomationPeerFactory.CreateInstanceWithParentAndItem(item, parent, baseInterface, innerInterface) */
 HRESULT wuixaaupe_flip_view_item_data_automation_peer_factory_create_instance_with_parent_and_item(WUIXAAUPE_IFlipViewItemDataAutomationPeerFactory *self, IInspectable* item, WUIXAAUPE_FlipViewAutomationPeer* parent, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_FlipViewItemDataAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IFlipViewItemAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IFlipViewItemAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_flip_view_item_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IFlipViewItemAutomationPeerFactory *self, WUIXACO_FlipViewItem* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_FlipViewItemAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IFlipViewAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IFlipViewAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_flip_view_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IFlipViewAutomationPeerFactory *self, WUIXACO_FlipView* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_FlipViewAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IDatePickerAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IDatePickerAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_date_picker_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IDatePickerAutomationPeerFactory *self, WUIXACO_DatePicker* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_DatePickerAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IComboBoxItemDataAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IComboBoxItemDataAutomationPeerFactory.CreateInstanceWithParentAndItem(item, parent, baseInterface, innerInterface) */
 HRESULT wuixaaupe_combo_box_item_data_automation_peer_factory_create_instance_with_parent_and_item(WUIXAAUPE_IComboBoxItemDataAutomationPeerFactory *self, IInspectable* item, WUIXAAUPE_ComboBoxAutomationPeer* parent, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_ComboBoxItemDataAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IComboBoxItemAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IComboBoxItemAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_combo_box_item_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IComboBoxItemAutomationPeerFactory *self, WUIXACO_ComboBoxItem* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_ComboBoxItemAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IComboBoxAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IComboBoxAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_combo_box_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IComboBoxAutomationPeerFactory *self, WUIXACO_ComboBox* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_ComboBoxAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IColorSpectrumAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IColorSpectrumAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_color_spectrum_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IColorSpectrumAutomationPeerFactory *self, WUIXACOPR_ColorSpectrum* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_ColorSpectrumAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IColorPickerSliderAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IColorPickerSliderAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_color_picker_slider_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IColorPickerSliderAutomationPeerFactory *self, WUIXACOPR_ColorPickerSlider* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_ColorPickerSliderAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.ICheckBoxAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.ICheckBoxAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_check_box_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_ICheckBoxAutomationPeerFactory *self, WUIXACO_CheckBox* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_CheckBoxAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.ICaptureElementAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.ICaptureElementAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_capture_element_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_ICaptureElementAutomationPeerFactory *self, WUIXACO_CaptureElement* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_CaptureElementAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.ICalendarDatePickerAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.ICalendarDatePickerAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_calendar_date_picker_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_ICalendarDatePickerAutomationPeerFactory *self, WUIXACO_CalendarDatePicker* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_CalendarDatePickerAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IButtonBaseAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IButtonBaseAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_button_base_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IButtonBaseAutomationPeerFactory *self, WUIXACOPR_ButtonBase* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_ButtonBaseAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IButtonAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IButtonAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_button_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IButtonAutomationPeerFactory *self, WUIXACO_Button* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_ButtonAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerStatics3 */
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerStatics3.GenerateRawElementProviderRuntimeId() */
 HRESULT wuixaaupe_automation_peer_statics_3_generate_raw_element_provider_runtime_id(WUIXAAUPE_IAutomationPeerStatics_3 *self, WUIXAAUPE_RawElementProviderRuntimeId *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerStatics */
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerStatics.ListenerExists(eventId) */
 HRESULT wuixaaupe_automation_peer_statics_listener_exists(WUIXAAUPE_IAutomationPeerStatics *self, WUIXAAUPE_AutomationEvents eventId, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixaaupe_automation_peer_factory_create_instance(WUIXAAUPE_IAutomationPeerFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_AutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerAnnotationStatics */
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerAnnotationStatics.get_TypeProperty() */
 HRESULT wuixaaupe_automation_peer_annotation_statics_get__type_property(WUIXAAUPE_IAutomationPeerAnnotationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerAnnotationStatics.get_PeerProperty() */
 HRESULT wuixaaupe_automation_peer_annotation_statics_get__peer_property(WUIXAAUPE_IAutomationPeerAnnotationStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerAnnotationFactory */
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerAnnotationFactory.CreateInstance() */
 HRESULT wuixaaupe_automation_peer_annotation_factory_create_instance(WUIXAAUPE_IAutomationPeerAnnotationFactory *self, WUIXAAU_AnnotationType type_, WUIXAAUPE_AutomationPeerAnnotation** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerAnnotationFactory.CreateWithPeerParameter(peer) */
 HRESULT wuixaaupe_automation_peer_annotation_factory_create_with_peer_parameter(WUIXAAUPE_IAutomationPeerAnnotationFactory *self, WUIXAAU_AnnotationType type_, WUIXAAUPE_AutomationPeer* peer, WUIXAAUPE_AutomationPeerAnnotation** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutoSuggestBoxAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IAutoSuggestBoxAutomationPeerFactory.CreateInstanceWithOwner(owner) */
 HRESULT wuixaaupe_auto_suggest_box_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IAutoSuggestBoxAutomationPeerFactory *self, WUIXACO_AutoSuggestBox* owner, WUIXAAUPE_AutoSuggestBoxAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAppBarToggleButtonAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IAppBarToggleButtonAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_app_bar_toggle_button_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IAppBarToggleButtonAutomationPeerFactory *self, WUIXACO_AppBarToggleButton* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_AppBarToggleButtonAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAppBarButtonAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IAppBarButtonAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_app_bar_button_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IAppBarButtonAutomationPeerFactory *self, WUIXACO_AppBarButton* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_AppBarButtonAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAppBarAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IAppBarAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_app_bar_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IAppBarAutomationPeerFactory *self, WUIXACO_AppBar* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_AppBarAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.HyperlinkButtonAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.HyperlinkButtonAutomationPeer.Invoke() */
 HRESULT wuixaaupe_hyperlink_button_automation_peer_invoke(WUIXAAUPE_HyperlinkButtonAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.HubSectionAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.HubSectionAutomationPeer.ScrollIntoView() */
 HRESULT wuixaaupe_hub_section_automation_peer_scroll_into_view(WUIXAAUPE_HubSectionAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.GridViewItemDataAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.GridViewItemDataAutomationPeer.ScrollIntoView() */
 HRESULT wuixaaupe_grid_view_item_data_automation_peer_scroll_into_view(WUIXAAUPE_GridViewItemDataAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.ListViewBaseAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.ListViewBaseAutomationPeer.get_DropEffect() */
 HRESULT wuixaaupe_list_view_base_automation_peer_get__drop_effect(WUIXAAUPE_ListViewBaseAutomationPeer *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Automation.Peers.ListViewBaseAutomationPeer.get_DropEffects() */
 HRESULT wuixaaupe_list_view_base_automation_peer_get__drop_effects(WUIXAAUPE_ListViewBaseAutomationPeer *self, cwinrt_hstring **value, uint32_t *value_len);
 
-/* Windows.UI.Xaml.Automation.Peers.FlipViewItemDataAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.FlipViewItemDataAutomationPeer.ScrollIntoView() */
 HRESULT wuixaaupe_flip_view_item_data_automation_peer_scroll_into_view(WUIXAAUPE_FlipViewItemDataAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.ComboBoxItemDataAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.ComboBoxItemDataAutomationPeer.ScrollIntoView() */
 HRESULT wuixaaupe_combo_box_item_data_automation_peer_scroll_into_view(WUIXAAUPE_ComboBoxItemDataAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.SelectorItemAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.SelectorItemAutomationPeer.get_IsSelected() */
 HRESULT wuixaaupe_selector_item_automation_peer_get__is_selected(WUIXAAUPE_SelectorItemAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.SelectorItemAutomationPeer.get_SelectionContainer() */
 HRESULT wuixaaupe_selector_item_automation_peer_get__selection_container(WUIXAAUPE_SelectorItemAutomationPeer *self, WUIXAAUPR_IRawElementProviderSimple** value);
 
-/* Windows.UI.Xaml.Automation.Peers.SelectorItemAutomationPeer.AddToSelection() */
 HRESULT wuixaaupe_selector_item_automation_peer_add_to_selection(WUIXAAUPE_SelectorItemAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.SelectorItemAutomationPeer.RemoveFromSelection() */
 HRESULT wuixaaupe_selector_item_automation_peer_remove_from_selection(WUIXAAUPE_SelectorItemAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.SelectorItemAutomationPeer.Select() */
 HRESULT wuixaaupe_selector_item_automation_peer_select(WUIXAAUPE_SelectorItemAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.ItemAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.ItemAutomationPeer.get_Item() */
 HRESULT wuixaaupe_item_automation_peer_get__item(WUIXAAUPE_ItemAutomationPeer *self, IInspectable** value);
 
-/* Windows.UI.Xaml.Automation.Peers.ItemAutomationPeer.get_ItemsControlAutomationPeer() */
 HRESULT wuixaaupe_item_automation_peer_get__items_control_automation_peer(WUIXAAUPE_ItemAutomationPeer *self, WUIXAAUPE_ItemsControlAutomationPeer** value);
 
-/* Windows.UI.Xaml.Automation.Peers.ItemAutomationPeer.Realize() */
 HRESULT wuixaaupe_item_automation_peer_realize(WUIXAAUPE_ItemAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer.get_IsReadOnly() */
 HRESULT wuixaaupe_combo_box_automation_peer_get__is_read_only(WUIXAAUPE_ComboBoxAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer.get_Value() */
 HRESULT wuixaaupe_combo_box_automation_peer_get__value(WUIXAAUPE_ComboBoxAutomationPeer *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer.SetValue() */
 HRESULT wuixaaupe_combo_box_automation_peer_set_value(WUIXAAUPE_ComboBoxAutomationPeer *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer.get_ExpandCollapseState() */
 HRESULT wuixaaupe_combo_box_automation_peer_get__expand_collapse_state(WUIXAAUPE_ComboBoxAutomationPeer *self, WUIXAAU_ExpandCollapseState *value);
 
-/* Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer.Collapse() */
 HRESULT wuixaaupe_combo_box_automation_peer_collapse(WUIXAAUPE_ComboBoxAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer.Expand() */
 HRESULT wuixaaupe_combo_box_automation_peer_expand(WUIXAAUPE_ComboBoxAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer.get_IsModal() */
 HRESULT wuixaaupe_combo_box_automation_peer_get__is_modal(WUIXAAUPE_ComboBoxAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer.get_IsTopmost() */
 HRESULT wuixaaupe_combo_box_automation_peer_get__is_topmost(WUIXAAUPE_ComboBoxAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer.get_Maximizable() */
 HRESULT wuixaaupe_combo_box_automation_peer_get__maximizable(WUIXAAUPE_ComboBoxAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer.get_Minimizable() */
 HRESULT wuixaaupe_combo_box_automation_peer_get__minimizable(WUIXAAUPE_ComboBoxAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer.get_InteractionState() */
 HRESULT wuixaaupe_combo_box_automation_peer_get__interaction_state(WUIXAAUPE_ComboBoxAutomationPeer *self, WUIXAAU_WindowInteractionState *value);
 
-/* Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer.get_VisualState() */
 HRESULT wuixaaupe_combo_box_automation_peer_get__visual_state(WUIXAAUPE_ComboBoxAutomationPeer *self, WUIXAAU_WindowVisualState *value);
 
-/* Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer.Close() */
 HRESULT wuixaaupe_combo_box_automation_peer_close(WUIXAAUPE_ComboBoxAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer.SetVisualState(state) */
 HRESULT wuixaaupe_combo_box_automation_peer_set_visual_state(WUIXAAUPE_ComboBoxAutomationPeer *self, WUIXAAU_WindowVisualState state);
 
-/* Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer.WaitForInputIdle(milliseconds) */
 HRESULT wuixaaupe_combo_box_automation_peer_wait_for_input_idle(WUIXAAUPE_ComboBoxAutomationPeer *self, int32_t milliseconds, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.SelectorAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.SelectorAutomationPeer.get_CanSelectMultiple() */
 HRESULT wuixaaupe_selector_automation_peer_get__can_select_multiple(WUIXAAUPE_SelectorAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.SelectorAutomationPeer.get_IsSelectionRequired() */
 HRESULT wuixaaupe_selector_automation_peer_get__is_selection_required(WUIXAAUPE_SelectorAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.SelectorAutomationPeer.GetSelection() */
 HRESULT wuixaaupe_selector_automation_peer_get_selection(WUIXAAUPE_SelectorAutomationPeer *self, WUIXAAUPR_IRawElementProviderSimple **out, uint32_t *out_len);
 
-/* Windows.UI.Xaml.Automation.Peers.ItemsControlAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.ItemsControlAutomationPeer.CreateItemAutomationPeer(item) */
 HRESULT wuixaaupe_items_control_automation_peer_create_item_automation_peer(WUIXAAUPE_ItemsControlAutomationPeer *self, IInspectable* item, WUIXAAUPE_ItemAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.ItemsControlAutomationPeer.OnCreateItemAutomationPeer(item) */
 HRESULT wuixaaupe_items_control_automation_peer_handle_create_item_automation_peer(WUIXAAUPE_ItemsControlAutomationPeer *self, IInspectable* item, WUIXAAUPE_ItemAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.ItemsControlAutomationPeer.FindItemByProperty(startAfter, automationProperty) */
 HRESULT wuixaaupe_items_control_automation_peer_find_item_by_property(WUIXAAUPE_ItemsControlAutomationPeer *self, WUIXAAUPR_IRawElementProviderSimple* startAfter, WUIXAAU_AutomationProperty* automationProperty, IInspectable* value, WUIXAAUPR_IRawElementProviderSimple** out);
 
-/* Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer.get_IsReadOnly() */
 HRESULT wuixaaupe_range_base_automation_peer_get__is_read_only(WUIXAAUPE_RangeBaseAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer.get_LargeChange() */
 HRESULT wuixaaupe_range_base_automation_peer_get__large_change(WUIXAAUPE_RangeBaseAutomationPeer *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer.get_Maximum() */
 HRESULT wuixaaupe_range_base_automation_peer_get__maximum(WUIXAAUPE_RangeBaseAutomationPeer *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer.get_Minimum() */
 HRESULT wuixaaupe_range_base_automation_peer_get__minimum(WUIXAAUPE_RangeBaseAutomationPeer *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer.get_SmallChange() */
 HRESULT wuixaaupe_range_base_automation_peer_get__small_change(WUIXAAUPE_RangeBaseAutomationPeer *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer.get_Value() */
 HRESULT wuixaaupe_range_base_automation_peer_get__value(WUIXAAUPE_RangeBaseAutomationPeer *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer.SetValue() */
 HRESULT wuixaaupe_range_base_automation_peer_set_value(WUIXAAUPE_RangeBaseAutomationPeer *self, double value);
 
-/* Windows.UI.Xaml.Automation.Peers.CalendarDatePickerAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.CalendarDatePickerAutomationPeer.Invoke() */
 HRESULT wuixaaupe_calendar_date_picker_automation_peer_invoke(WUIXAAUPE_CalendarDatePickerAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.CalendarDatePickerAutomationPeer.get_IsReadOnly() */
 HRESULT wuixaaupe_calendar_date_picker_automation_peer_get__is_read_only(WUIXAAUPE_CalendarDatePickerAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.CalendarDatePickerAutomationPeer.get_Value() */
 HRESULT wuixaaupe_calendar_date_picker_automation_peer_get__value(WUIXAAUPE_CalendarDatePickerAutomationPeer *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Automation.Peers.CalendarDatePickerAutomationPeer.SetValue() */
 HRESULT wuixaaupe_calendar_date_picker_automation_peer_set_value(WUIXAAUPE_CalendarDatePickerAutomationPeer *self, cwinrt_hstring value);
 
-/* activate Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation */
 HRESULT wuixaaupe_automation_peer_annotation_new(WUIXAAUPE_AutomationPeerAnnotation **out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation */
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation.get_Type() */
 HRESULT wuixaaupe_automation_peer_annotation_get__type(WUIXAAUPE_AutomationPeerAnnotation *self, WUIXAAU_AnnotationType *value);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation.put_Type() */
 HRESULT wuixaaupe_automation_peer_annotation_put__type(WUIXAAUPE_AutomationPeerAnnotation *self, WUIXAAU_AnnotationType value);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation.get_Peer() */
 HRESULT wuixaaupe_automation_peer_annotation_get__peer(WUIXAAUPE_AutomationPeerAnnotation *self, WUIXAAUPE_AutomationPeer** value);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation.put_Peer() */
 HRESULT wuixaaupe_automation_peer_annotation_put__peer(WUIXAAUPE_AutomationPeerAnnotation *self, WUIXAAUPE_AutomationPeer* value);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation.get_TypeProperty() */
 HRESULT wuixaaupe_automation_peer_annotation_get__type_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation.get_PeerProperty() */
 HRESULT wuixaaupe_automation_peer_annotation_get__peer_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Automation.Peers.AutoSuggestBoxAutomationPeer */
 HRESULT wuixaaupe_auto_suggest_box_automation_peer_new(WUIXAAUPE_AutoSuggestBoxAutomationPeer **out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutoSuggestBoxAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.AutoSuggestBoxAutomationPeer.Invoke() */
 HRESULT wuixaaupe_auto_suggest_box_automation_peer_invoke(WUIXAAUPE_AutoSuggestBoxAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.ToggleButtonAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.ToggleButtonAutomationPeer.get_ToggleState() */
 HRESULT wuixaaupe_toggle_button_automation_peer_get__toggle_state(WUIXAAUPE_ToggleButtonAutomationPeer *self, WUIXAAU_ToggleState *value);
 
-/* Windows.UI.Xaml.Automation.Peers.ToggleButtonAutomationPeer.Toggle() */
 HRESULT wuixaaupe_toggle_button_automation_peer_toggle(WUIXAAUPE_ToggleButtonAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.AppBarButtonAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.AppBarButtonAutomationPeer.get_ExpandCollapseState() */
 HRESULT wuixaaupe_app_bar_button_automation_peer_get__expand_collapse_state(WUIXAAUPE_AppBarButtonAutomationPeer *self, WUIXAAU_ExpandCollapseState *value);
 
-/* Windows.UI.Xaml.Automation.Peers.AppBarButtonAutomationPeer.Collapse() */
 HRESULT wuixaaupe_app_bar_button_automation_peer_collapse(WUIXAAUPE_AppBarButtonAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.AppBarButtonAutomationPeer.Expand() */
 HRESULT wuixaaupe_app_bar_button_automation_peer_expand(WUIXAAUPE_AppBarButtonAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.ButtonAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.ButtonAutomationPeer.Invoke() */
 HRESULT wuixaaupe_button_automation_peer_invoke(WUIXAAUPE_ButtonAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer.get_ToggleState() */
 HRESULT wuixaaupe_app_bar_automation_peer_get__toggle_state(WUIXAAUPE_AppBarAutomationPeer *self, WUIXAAU_ToggleState *value);
 
-/* Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer.Toggle() */
 HRESULT wuixaaupe_app_bar_automation_peer_toggle(WUIXAAUPE_AppBarAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer.get_ExpandCollapseState() */
 HRESULT wuixaaupe_app_bar_automation_peer_get__expand_collapse_state(WUIXAAUPE_AppBarAutomationPeer *self, WUIXAAU_ExpandCollapseState *value);
 
-/* Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer.Collapse() */
 HRESULT wuixaaupe_app_bar_automation_peer_collapse(WUIXAAUPE_AppBarAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer.Expand() */
 HRESULT wuixaaupe_app_bar_automation_peer_expand(WUIXAAUPE_AppBarAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer.get_IsModal() */
 HRESULT wuixaaupe_app_bar_automation_peer_get__is_modal(WUIXAAUPE_AppBarAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer.get_IsTopmost() */
 HRESULT wuixaaupe_app_bar_automation_peer_get__is_topmost(WUIXAAUPE_AppBarAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer.get_Maximizable() */
 HRESULT wuixaaupe_app_bar_automation_peer_get__maximizable(WUIXAAUPE_AppBarAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer.get_Minimizable() */
 HRESULT wuixaaupe_app_bar_automation_peer_get__minimizable(WUIXAAUPE_AppBarAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer.get_InteractionState() */
 HRESULT wuixaaupe_app_bar_automation_peer_get__interaction_state(WUIXAAUPE_AppBarAutomationPeer *self, WUIXAAU_WindowInteractionState *value);
 
-/* Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer.get_VisualState() */
 HRESULT wuixaaupe_app_bar_automation_peer_get__visual_state(WUIXAAUPE_AppBarAutomationPeer *self, WUIXAAU_WindowVisualState *value);
 
-/* Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer.Close() */
 HRESULT wuixaaupe_app_bar_automation_peer_close(WUIXAAUPE_AppBarAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer.SetVisualState(state) */
 HRESULT wuixaaupe_app_bar_automation_peer_set_visual_state(WUIXAAUPE_AppBarAutomationPeer *self, WUIXAAU_WindowVisualState state);
 
-/* Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer.WaitForInputIdle(milliseconds) */
 HRESULT wuixaaupe_app_bar_automation_peer_wait_for_input_idle(WUIXAAUPE_AppBarAutomationPeer *self, int32_t milliseconds, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer.get_Owner() */
 HRESULT wuixaaupe_framework_element_automation_peer_get__owner(WUIXAAUPE_FrameworkElementAutomationPeer *self, WUIXA_UIElement** value);
 
-/* Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer.FromElement(element) */
 HRESULT wuixaaupe_framework_element_automation_peer_from_element(WUIXA_UIElement* element, WUIXAAUPE_AutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer.CreatePeerForElement(element) */
 HRESULT wuixaaupe_framework_element_automation_peer_create_peer_for_element(WUIXA_UIElement* element, WUIXAAUPE_AutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.get_EventsSource() */
 HRESULT wuixaaupe_automation_peer_get__events_source(WUIXAAUPE_AutomationPeer *self, WUIXAAUPE_AutomationPeer** value);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.put_EventsSource() */
 HRESULT wuixaaupe_automation_peer_put__events_source(WUIXAAUPE_AutomationPeer *self, WUIXAAUPE_AutomationPeer* value);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetPattern(patternInterface) */
 HRESULT wuixaaupe_automation_peer_get_pattern(WUIXAAUPE_AutomationPeer *self, WUIXAAUPE_PatternInterface patternInterface, IInspectable** out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.RaiseAutomationEvent(eventId) */
 HRESULT wuixaaupe_automation_peer_raise_automation_event(WUIXAAUPE_AutomationPeer *self, WUIXAAUPE_AutomationEvents eventId);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.RaisePropertyChangedEvent(automationProperty, oldValue, newValue) */
 HRESULT wuixaaupe_automation_peer_raise_property_changed_event(WUIXAAUPE_AutomationPeer *self, WUIXAAU_AutomationProperty* automationProperty, IInspectable* oldValue, IInspectable* newValue);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetAcceleratorKey() */
 HRESULT wuixaaupe_automation_peer_get_accelerator_key(WUIXAAUPE_AutomationPeer *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetAccessKey() */
 HRESULT wuixaaupe_automation_peer_get_access_key(WUIXAAUPE_AutomationPeer *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetAutomationControlType() */
 HRESULT wuixaaupe_automation_peer_get_automation_control_type(WUIXAAUPE_AutomationPeer *self, WUIXAAUPE_AutomationControlType *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetAutomationId() */
 HRESULT wuixaaupe_automation_peer_get_automation_id(WUIXAAUPE_AutomationPeer *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetBoundingRectangle() */
 HRESULT wuixaaupe_automation_peer_get_bounding_rectangle(WUIXAAUPE_AutomationPeer *self, WF_Rect *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetChildren() */
 HRESULT wuixaaupe_automation_peer_get_children(WUIXAAUPE_AutomationPeer *self, WFOCO_IVector_WUIXAAUPE_AutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetClassName() */
 HRESULT wuixaaupe_automation_peer_get_class_name(WUIXAAUPE_AutomationPeer *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetClickablePoint() */
 HRESULT wuixaaupe_automation_peer_get_clickable_point(WUIXAAUPE_AutomationPeer *self, WF_Point *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetHelpText() */
 HRESULT wuixaaupe_automation_peer_get_help_text(WUIXAAUPE_AutomationPeer *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetItemStatus() */
 HRESULT wuixaaupe_automation_peer_get_item_status(WUIXAAUPE_AutomationPeer *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetItemType() */
 HRESULT wuixaaupe_automation_peer_get_item_type(WUIXAAUPE_AutomationPeer *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetLabeledBy() */
 HRESULT wuixaaupe_automation_peer_get_labeled_by(WUIXAAUPE_AutomationPeer *self, WUIXAAUPE_AutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetLocalizedControlType() */
 HRESULT wuixaaupe_automation_peer_get_localized_control_type(WUIXAAUPE_AutomationPeer *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetName() */
 HRESULT wuixaaupe_automation_peer_get_name(WUIXAAUPE_AutomationPeer *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetOrientation() */
 HRESULT wuixaaupe_automation_peer_get_orientation(WUIXAAUPE_AutomationPeer *self, WUIXAAUPE_AutomationOrientation *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.HasKeyboardFocus() */
 HRESULT wuixaaupe_automation_peer_has_keyboard_focus(WUIXAAUPE_AutomationPeer *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.IsContentElement() */
 HRESULT wuixaaupe_automation_peer_is_content_element(WUIXAAUPE_AutomationPeer *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.IsControlElement() */
 HRESULT wuixaaupe_automation_peer_is_control_element(WUIXAAUPE_AutomationPeer *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.IsEnabled() */
 HRESULT wuixaaupe_automation_peer_is_enabled(WUIXAAUPE_AutomationPeer *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.IsKeyboardFocusable() */
 HRESULT wuixaaupe_automation_peer_is_keyboard_focusable(WUIXAAUPE_AutomationPeer *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.IsOffscreen() */
 HRESULT wuixaaupe_automation_peer_is_offscreen(WUIXAAUPE_AutomationPeer *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.IsPassword() */
 HRESULT wuixaaupe_automation_peer_is_password(WUIXAAUPE_AutomationPeer *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.IsRequiredForForm() */
 HRESULT wuixaaupe_automation_peer_is_required_for_form(WUIXAAUPE_AutomationPeer *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.SetFocus() */
 HRESULT wuixaaupe_automation_peer_set_focus(WUIXAAUPE_AutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetParent() */
 HRESULT wuixaaupe_automation_peer_get_parent(WUIXAAUPE_AutomationPeer *self, WUIXAAUPE_AutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.InvalidatePeer() */
 HRESULT wuixaaupe_automation_peer_invalidate_peer(WUIXAAUPE_AutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetPeerFromPoint(point) */
 HRESULT wuixaaupe_automation_peer_get_peer_from_point(WUIXAAUPE_AutomationPeer *self, WF_Point point, WUIXAAUPE_AutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetLiveSetting() */
 HRESULT wuixaaupe_automation_peer_get_live_setting(WUIXAAUPE_AutomationPeer *self, WUIXAAUPE_AutomationLiveSetting *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.Navigate(direction) */
 HRESULT wuixaaupe_automation_peer_navigate(WUIXAAUPE_AutomationPeer *self, WUIXAAUPE_AutomationNavigationDirection direction, IInspectable** out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetElementFromPoint(pointInWindowCoordinates) */
 HRESULT wuixaaupe_automation_peer_get_element_from_point(WUIXAAUPE_AutomationPeer *self, WF_Point pointInWindowCoordinates, IInspectable** out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetFocusedElement() */
 HRESULT wuixaaupe_automation_peer_get_focused_element(WUIXAAUPE_AutomationPeer *self, IInspectable** out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.ShowContextMenu() */
 HRESULT wuixaaupe_automation_peer_show_context_menu(WUIXAAUPE_AutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetControlledPeers() */
 HRESULT wuixaaupe_automation_peer_get_controlled_peers(WUIXAAUPE_AutomationPeer *self, WFOCO_IVectorView_WUIXAAUPE_AutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetAnnotations() */
 HRESULT wuixaaupe_automation_peer_get_annotations(WUIXAAUPE_AutomationPeer *self, WFOCO_IVector_WUIXAAUPE_AutomationPeerAnnotation** out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.SetParent(peer) */
 HRESULT wuixaaupe_automation_peer_set_parent(WUIXAAUPE_AutomationPeer *self, WUIXAAUPE_AutomationPeer* peer);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.RaiseTextEditTextChangedEvent(automationTextEditChangeType, changedData) */
 HRESULT wuixaaupe_automation_peer_raise_text_edit_text_changed_event(WUIXAAUPE_AutomationPeer *self, WUIXAAU_AutomationTextEditChangeType automationTextEditChangeType, WFOCO_IVectorView_HSTRING* changedData);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetPositionInSet() */
 HRESULT wuixaaupe_automation_peer_get_position_in_set(WUIXAAUPE_AutomationPeer *self, int32_t *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetSizeOfSet() */
 HRESULT wuixaaupe_automation_peer_get_size_of_set(WUIXAAUPE_AutomationPeer *self, int32_t *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetLevel() */
 HRESULT wuixaaupe_automation_peer_get_level(WUIXAAUPE_AutomationPeer *self, int32_t *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.RaiseStructureChangedEvent(structureChangeType, child) */
 HRESULT wuixaaupe_automation_peer_raise_structure_changed_event(WUIXAAUPE_AutomationPeer *self, WUIXAAUPE_AutomationStructureChangeType structureChangeType, WUIXAAUPE_AutomationPeer* child);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetLandmarkType() */
 HRESULT wuixaaupe_automation_peer_get_landmark_type(WUIXAAUPE_AutomationPeer *self, WUIXAAUPE_AutomationLandmarkType *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetLocalizedLandmarkType() */
 HRESULT wuixaaupe_automation_peer_get_localized_landmark_type(WUIXAAUPE_AutomationPeer *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.IsPeripheral() */
 HRESULT wuixaaupe_automation_peer_is_peripheral(WUIXAAUPE_AutomationPeer *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.IsDataValidForForm() */
 HRESULT wuixaaupe_automation_peer_is_data_valid_for_form(WUIXAAUPE_AutomationPeer *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetFullDescription() */
 HRESULT wuixaaupe_automation_peer_get_full_description(WUIXAAUPE_AutomationPeer *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetCulture() */
 HRESULT wuixaaupe_automation_peer_get_culture(WUIXAAUPE_AutomationPeer *self, int32_t *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.RaiseNotificationEvent(notificationKind, notificationProcessing, displayString, activityId) */
 HRESULT wuixaaupe_automation_peer_raise_notification_event(WUIXAAUPE_AutomationPeer *self, WUIXAAUPE_AutomationNotificationKind notificationKind, WUIXAAUPE_AutomationNotificationProcessing notificationProcessing, cwinrt_hstring displayString, cwinrt_hstring activityId);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetHeadingLevel() */
 HRESULT wuixaaupe_automation_peer_get_heading_level(WUIXAAUPE_AutomationPeer *self, WUIXAAUPE_AutomationHeadingLevel *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.IsDialog() */
 HRESULT wuixaaupe_automation_peer_is_dialog(WUIXAAUPE_AutomationPeer *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.PeerFromProvider(provider) */
 HRESULT wuixaaupe_automation_peer_peer_from_provider(WUIXAAUPE_AutomationPeer *self, WUIXAAUPR_IRawElementProviderSimple* provider, WUIXAAUPE_AutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.ProviderFromPeer(peer) */
 HRESULT wuixaaupe_automation_peer_provider_from_peer(WUIXAAUPE_AutomationPeer *self, WUIXAAUPE_AutomationPeer* peer, WUIXAAUPR_IRawElementProviderSimple** out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetPatternCore(patternInterface) */
 HRESULT wuixaaupe_automation_peer_get_pattern_core(WUIXAAUPE_AutomationPeer *self, WUIXAAUPE_PatternInterface patternInterface, IInspectable** out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetAcceleratorKeyCore() */
 HRESULT wuixaaupe_automation_peer_get_accelerator_key_core(WUIXAAUPE_AutomationPeer *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetAccessKeyCore() */
 HRESULT wuixaaupe_automation_peer_get_access_key_core(WUIXAAUPE_AutomationPeer *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetAutomationControlTypeCore() */
 HRESULT wuixaaupe_automation_peer_get_automation_control_type_core(WUIXAAUPE_AutomationPeer *self, WUIXAAUPE_AutomationControlType *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetAutomationIdCore() */
 HRESULT wuixaaupe_automation_peer_get_automation_id_core(WUIXAAUPE_AutomationPeer *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetBoundingRectangleCore() */
 HRESULT wuixaaupe_automation_peer_get_bounding_rectangle_core(WUIXAAUPE_AutomationPeer *self, WF_Rect *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetChildrenCore() */
 HRESULT wuixaaupe_automation_peer_get_children_core(WUIXAAUPE_AutomationPeer *self, WFOCO_IVector_WUIXAAUPE_AutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetClassNameCore() */
 HRESULT wuixaaupe_automation_peer_get_class_name_core(WUIXAAUPE_AutomationPeer *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetClickablePointCore() */
 HRESULT wuixaaupe_automation_peer_get_clickable_point_core(WUIXAAUPE_AutomationPeer *self, WF_Point *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetHelpTextCore() */
 HRESULT wuixaaupe_automation_peer_get_help_text_core(WUIXAAUPE_AutomationPeer *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetItemStatusCore() */
 HRESULT wuixaaupe_automation_peer_get_item_status_core(WUIXAAUPE_AutomationPeer *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetItemTypeCore() */
 HRESULT wuixaaupe_automation_peer_get_item_type_core(WUIXAAUPE_AutomationPeer *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetLabeledByCore() */
 HRESULT wuixaaupe_automation_peer_get_labeled_by_core(WUIXAAUPE_AutomationPeer *self, WUIXAAUPE_AutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetLocalizedControlTypeCore() */
 HRESULT wuixaaupe_automation_peer_get_localized_control_type_core(WUIXAAUPE_AutomationPeer *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetNameCore() */
 HRESULT wuixaaupe_automation_peer_get_name_core(WUIXAAUPE_AutomationPeer *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetOrientationCore() */
 HRESULT wuixaaupe_automation_peer_get_orientation_core(WUIXAAUPE_AutomationPeer *self, WUIXAAUPE_AutomationOrientation *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.HasKeyboardFocusCore() */
 HRESULT wuixaaupe_automation_peer_has_keyboard_focus_core(WUIXAAUPE_AutomationPeer *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.IsContentElementCore() */
 HRESULT wuixaaupe_automation_peer_is_content_element_core(WUIXAAUPE_AutomationPeer *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.IsControlElementCore() */
 HRESULT wuixaaupe_automation_peer_is_control_element_core(WUIXAAUPE_AutomationPeer *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.IsEnabledCore() */
 HRESULT wuixaaupe_automation_peer_is_enabled_core(WUIXAAUPE_AutomationPeer *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.IsKeyboardFocusableCore() */
 HRESULT wuixaaupe_automation_peer_is_keyboard_focusable_core(WUIXAAUPE_AutomationPeer *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.IsOffscreenCore() */
 HRESULT wuixaaupe_automation_peer_is_offscreen_core(WUIXAAUPE_AutomationPeer *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.IsPasswordCore() */
 HRESULT wuixaaupe_automation_peer_is_password_core(WUIXAAUPE_AutomationPeer *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.IsRequiredForFormCore() */
 HRESULT wuixaaupe_automation_peer_is_required_for_form_core(WUIXAAUPE_AutomationPeer *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.SetFocusCore() */
 HRESULT wuixaaupe_automation_peer_set_focus_core(WUIXAAUPE_AutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetPeerFromPointCore(point) */
 HRESULT wuixaaupe_automation_peer_get_peer_from_point_core(WUIXAAUPE_AutomationPeer *self, WF_Point point, WUIXAAUPE_AutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetLiveSettingCore() */
 HRESULT wuixaaupe_automation_peer_get_live_setting_core(WUIXAAUPE_AutomationPeer *self, WUIXAAUPE_AutomationLiveSetting *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.ShowContextMenuCore() */
 HRESULT wuixaaupe_automation_peer_show_context_menu_core(WUIXAAUPE_AutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetControlledPeersCore() */
 HRESULT wuixaaupe_automation_peer_get_controlled_peers_core(WUIXAAUPE_AutomationPeer *self, WFOCO_IVectorView_WUIXAAUPE_AutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.NavigateCore(direction) */
 HRESULT wuixaaupe_automation_peer_navigate_core(WUIXAAUPE_AutomationPeer *self, WUIXAAUPE_AutomationNavigationDirection direction, IInspectable** out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetElementFromPointCore(pointInWindowCoordinates) */
 HRESULT wuixaaupe_automation_peer_get_element_from_point_core(WUIXAAUPE_AutomationPeer *self, WF_Point pointInWindowCoordinates, IInspectable** out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetFocusedElementCore() */
 HRESULT wuixaaupe_automation_peer_get_focused_element_core(WUIXAAUPE_AutomationPeer *self, IInspectable** out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetAnnotationsCore() */
 HRESULT wuixaaupe_automation_peer_get_annotations_core(WUIXAAUPE_AutomationPeer *self, WFOCO_IVector_WUIXAAUPE_AutomationPeerAnnotation** out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetPositionInSetCore() */
 HRESULT wuixaaupe_automation_peer_get_position_in_set_core(WUIXAAUPE_AutomationPeer *self, int32_t *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetSizeOfSetCore() */
 HRESULT wuixaaupe_automation_peer_get_size_of_set_core(WUIXAAUPE_AutomationPeer *self, int32_t *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetLevelCore() */
 HRESULT wuixaaupe_automation_peer_get_level_core(WUIXAAUPE_AutomationPeer *self, int32_t *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetLandmarkTypeCore() */
 HRESULT wuixaaupe_automation_peer_get_landmark_type_core(WUIXAAUPE_AutomationPeer *self, WUIXAAUPE_AutomationLandmarkType *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetLocalizedLandmarkTypeCore() */
 HRESULT wuixaaupe_automation_peer_get_localized_landmark_type_core(WUIXAAUPE_AutomationPeer *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.IsPeripheralCore() */
 HRESULT wuixaaupe_automation_peer_is_peripheral_core(WUIXAAUPE_AutomationPeer *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.IsDataValidForFormCore() */
 HRESULT wuixaaupe_automation_peer_is_data_valid_for_form_core(WUIXAAUPE_AutomationPeer *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetFullDescriptionCore() */
 HRESULT wuixaaupe_automation_peer_get_full_description_core(WUIXAAUPE_AutomationPeer *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetDescribedByCore() */
 HRESULT wuixaaupe_automation_peer_get_described_by_core(WUIXAAUPE_AutomationPeer *self, WFOCO_IIterable_WUIXAAUPE_AutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetFlowsToCore() */
 HRESULT wuixaaupe_automation_peer_get_flows_to_core(WUIXAAUPE_AutomationPeer *self, WFOCO_IIterable_WUIXAAUPE_AutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetFlowsFromCore() */
 HRESULT wuixaaupe_automation_peer_get_flows_from_core(WUIXAAUPE_AutomationPeer *self, WFOCO_IIterable_WUIXAAUPE_AutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetCultureCore() */
 HRESULT wuixaaupe_automation_peer_get_culture_core(WUIXAAUPE_AutomationPeer *self, int32_t *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GetHeadingLevelCore() */
 HRESULT wuixaaupe_automation_peer_get_heading_level_core(WUIXAAUPE_AutomationPeer *self, WUIXAAUPE_AutomationHeadingLevel *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.IsDialogCore() */
 HRESULT wuixaaupe_automation_peer_is_dialog_core(WUIXAAUPE_AutomationPeer *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.GenerateRawElementProviderRuntimeId() */
 HRESULT wuixaaupe_automation_peer_generate_raw_element_provider_runtime_id(WUIXAAUPE_RawElementProviderRuntimeId *out);
 
-/* Windows.UI.Xaml.Automation.Peers.AutomationPeer.ListenerExists(eventId) */
 HRESULT wuixaaupe_automation_peer_listener_exists(WUIXAAUPE_AutomationEvents eventId, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.SemanticZoomAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.SemanticZoomAutomationPeer.get_ToggleState() */
 HRESULT wuixaaupe_semantic_zoom_automation_peer_get__toggle_state(WUIXAAUPE_SemanticZoomAutomationPeer *self, WUIXAAU_ToggleState *value);
 
-/* Windows.UI.Xaml.Automation.Peers.SemanticZoomAutomationPeer.Toggle() */
 HRESULT wuixaaupe_semantic_zoom_automation_peer_toggle(WUIXAAUPE_SemanticZoomAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer.get_HorizontallyScrollable() */
 HRESULT wuixaaupe_scroll_viewer_automation_peer_get__horizontally_scrollable(WUIXAAUPE_ScrollViewerAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer.get_HorizontalScrollPercent() */
 HRESULT wuixaaupe_scroll_viewer_automation_peer_get__horizontal_scroll_percent(WUIXAAUPE_ScrollViewerAutomationPeer *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer.get_HorizontalViewSize() */
 HRESULT wuixaaupe_scroll_viewer_automation_peer_get__horizontal_view_size(WUIXAAUPE_ScrollViewerAutomationPeer *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer.get_VerticallyScrollable() */
 HRESULT wuixaaupe_scroll_viewer_automation_peer_get__vertically_scrollable(WUIXAAUPE_ScrollViewerAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer.get_VerticalScrollPercent() */
 HRESULT wuixaaupe_scroll_viewer_automation_peer_get__vertical_scroll_percent(WUIXAAUPE_ScrollViewerAutomationPeer *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer.get_VerticalViewSize() */
 HRESULT wuixaaupe_scroll_viewer_automation_peer_get__vertical_view_size(WUIXAAUPE_ScrollViewerAutomationPeer *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer.Scroll(horizontalAmount, verticalAmount) */
 HRESULT wuixaaupe_scroll_viewer_automation_peer_scroll(WUIXAAUPE_ScrollViewerAutomationPeer *self, WUIXAAU_ScrollAmount horizontalAmount, WUIXAAU_ScrollAmount verticalAmount);
 
-/* Windows.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer.SetScrollPercent(horizontalPercent, verticalPercent) */
 HRESULT wuixaaupe_scroll_viewer_automation_peer_set_scroll_percent(WUIXAAUPE_ScrollViewerAutomationPeer *self, double horizontalPercent, double verticalPercent);
 
-/* Windows.UI.Xaml.Automation.Peers.RepeatButtonAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.RepeatButtonAutomationPeer.Invoke() */
 HRESULT wuixaaupe_repeat_button_automation_peer_invoke(WUIXAAUPE_RepeatButtonAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.RadioButtonAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.RadioButtonAutomationPeer.get_IsSelected() */
 HRESULT wuixaaupe_radio_button_automation_peer_get__is_selected(WUIXAAUPE_RadioButtonAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.RadioButtonAutomationPeer.get_SelectionContainer() */
 HRESULT wuixaaupe_radio_button_automation_peer_get__selection_container(WUIXAAUPE_RadioButtonAutomationPeer *self, WUIXAAUPR_IRawElementProviderSimple** value);
 
-/* Windows.UI.Xaml.Automation.Peers.RadioButtonAutomationPeer.AddToSelection() */
 HRESULT wuixaaupe_radio_button_automation_peer_add_to_selection(WUIXAAUPE_RadioButtonAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.RadioButtonAutomationPeer.RemoveFromSelection() */
 HRESULT wuixaaupe_radio_button_automation_peer_remove_from_selection(WUIXAAUPE_RadioButtonAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.RadioButtonAutomationPeer.Select() */
 HRESULT wuixaaupe_radio_button_automation_peer_select(WUIXAAUPE_RadioButtonAutomationPeer *self);
 
-/* activate Windows.UI.Xaml.Automation.Peers.PivotItemDataAutomationPeer */
 HRESULT wuixaaupe_pivot_item_data_automation_peer_new(WUIXAAUPE_PivotItemDataAutomationPeer **out);
 
-/* Windows.UI.Xaml.Automation.Peers.PivotItemDataAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.PivotItemDataAutomationPeer.ScrollIntoView() */
 HRESULT wuixaaupe_pivot_item_data_automation_peer_scroll_into_view(WUIXAAUPE_PivotItemDataAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.PivotItemDataAutomationPeer.get_IsSelected() */
 HRESULT wuixaaupe_pivot_item_data_automation_peer_get__is_selected(WUIXAAUPE_PivotItemDataAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.PivotItemDataAutomationPeer.get_SelectionContainer() */
 HRESULT wuixaaupe_pivot_item_data_automation_peer_get__selection_container(WUIXAAUPE_PivotItemDataAutomationPeer *self, WUIXAAUPR_IRawElementProviderSimple** value);
 
-/* Windows.UI.Xaml.Automation.Peers.PivotItemDataAutomationPeer.AddToSelection() */
 HRESULT wuixaaupe_pivot_item_data_automation_peer_add_to_selection(WUIXAAUPE_PivotItemDataAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.PivotItemDataAutomationPeer.RemoveFromSelection() */
 HRESULT wuixaaupe_pivot_item_data_automation_peer_remove_from_selection(WUIXAAUPE_PivotItemDataAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.PivotItemDataAutomationPeer.Select() */
 HRESULT wuixaaupe_pivot_item_data_automation_peer_select(WUIXAAUPE_PivotItemDataAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.PivotItemDataAutomationPeer.Realize() */
 HRESULT wuixaaupe_pivot_item_data_automation_peer_realize(WUIXAAUPE_PivotItemDataAutomationPeer *self);
 
-/* activate Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer */
 HRESULT wuixaaupe_pivot_automation_peer_new(WUIXAAUPE_PivotAutomationPeer **out);
 
-/* Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer.get_CanSelectMultiple() */
 HRESULT wuixaaupe_pivot_automation_peer_get__can_select_multiple(WUIXAAUPE_PivotAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer.get_IsSelectionRequired() */
 HRESULT wuixaaupe_pivot_automation_peer_get__is_selection_required(WUIXAAUPE_PivotAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer.GetSelection() */
 HRESULT wuixaaupe_pivot_automation_peer_get_selection(WUIXAAUPE_PivotAutomationPeer *self, WUIXAAUPR_IRawElementProviderSimple **out, uint32_t *out_len);
 
-/* Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer.get_HorizontallyScrollable() */
 HRESULT wuixaaupe_pivot_automation_peer_get__horizontally_scrollable(WUIXAAUPE_PivotAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer.get_HorizontalScrollPercent() */
 HRESULT wuixaaupe_pivot_automation_peer_get__horizontal_scroll_percent(WUIXAAUPE_PivotAutomationPeer *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer.get_HorizontalViewSize() */
 HRESULT wuixaaupe_pivot_automation_peer_get__horizontal_view_size(WUIXAAUPE_PivotAutomationPeer *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer.get_VerticallyScrollable() */
 HRESULT wuixaaupe_pivot_automation_peer_get__vertically_scrollable(WUIXAAUPE_PivotAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer.get_VerticalScrollPercent() */
 HRESULT wuixaaupe_pivot_automation_peer_get__vertical_scroll_percent(WUIXAAUPE_PivotAutomationPeer *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer.get_VerticalViewSize() */
 HRESULT wuixaaupe_pivot_automation_peer_get__vertical_view_size(WUIXAAUPE_PivotAutomationPeer *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer.Scroll(horizontalAmount, verticalAmount) */
 HRESULT wuixaaupe_pivot_automation_peer_scroll(WUIXAAUPE_PivotAutomationPeer *self, WUIXAAU_ScrollAmount horizontalAmount, WUIXAAU_ScrollAmount verticalAmount);
 
-/* Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer.SetScrollPercent(horizontalPercent, verticalPercent) */
 HRESULT wuixaaupe_pivot_automation_peer_set_scroll_percent(WUIXAAUPE_PivotAutomationPeer *self, double horizontalPercent, double verticalPercent);
 
-/* Windows.UI.Xaml.Automation.Peers.MenuFlyoutItemAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.MenuFlyoutItemAutomationPeer.Invoke() */
 HRESULT wuixaaupe_menu_flyout_item_automation_peer_invoke(WUIXAAUPE_MenuFlyoutItemAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.MenuBarItemAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.MenuBarItemAutomationPeer.get_ExpandCollapseState() */
 HRESULT wuixaaupe_menu_bar_item_automation_peer_get__expand_collapse_state(WUIXAAUPE_MenuBarItemAutomationPeer *self, WUIXAAU_ExpandCollapseState *value);
 
-/* Windows.UI.Xaml.Automation.Peers.MenuBarItemAutomationPeer.Collapse() */
 HRESULT wuixaaupe_menu_bar_item_automation_peer_collapse(WUIXAAUPE_MenuBarItemAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.MenuBarItemAutomationPeer.Expand() */
 HRESULT wuixaaupe_menu_bar_item_automation_peer_expand(WUIXAAUPE_MenuBarItemAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.MenuBarItemAutomationPeer.Invoke() */
 HRESULT wuixaaupe_menu_bar_item_automation_peer_invoke(WUIXAAUPE_MenuBarItemAutomationPeer *self);
 
-/* activate Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer */
 HRESULT wuixaaupe_map_control_automation_peer_new(WUIXAAUPE_MapControlAutomationPeer **out);
 
-/* Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer.get_HorizontallyScrollable() */
 HRESULT wuixaaupe_map_control_automation_peer_get__horizontally_scrollable(WUIXAAUPE_MapControlAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer.get_HorizontalScrollPercent() */
 HRESULT wuixaaupe_map_control_automation_peer_get__horizontal_scroll_percent(WUIXAAUPE_MapControlAutomationPeer *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer.get_HorizontalViewSize() */
 HRESULT wuixaaupe_map_control_automation_peer_get__horizontal_view_size(WUIXAAUPE_MapControlAutomationPeer *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer.get_VerticallyScrollable() */
 HRESULT wuixaaupe_map_control_automation_peer_get__vertically_scrollable(WUIXAAUPE_MapControlAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer.get_VerticalScrollPercent() */
 HRESULT wuixaaupe_map_control_automation_peer_get__vertical_scroll_percent(WUIXAAUPE_MapControlAutomationPeer *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer.get_VerticalViewSize() */
 HRESULT wuixaaupe_map_control_automation_peer_get__vertical_view_size(WUIXAAUPE_MapControlAutomationPeer *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer.Scroll(horizontalAmount, verticalAmount) */
 HRESULT wuixaaupe_map_control_automation_peer_scroll(WUIXAAUPE_MapControlAutomationPeer *self, WUIXAAU_ScrollAmount horizontalAmount, WUIXAAU_ScrollAmount verticalAmount);
 
-/* Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer.SetScrollPercent(horizontalPercent, verticalPercent) */
 HRESULT wuixaaupe_map_control_automation_peer_set_scroll_percent(WUIXAAUPE_MapControlAutomationPeer *self, double horizontalPercent, double verticalPercent);
 
-/* Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer.get_CanZoom() */
 HRESULT wuixaaupe_map_control_automation_peer_get__can_zoom(WUIXAAUPE_MapControlAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer.get_ZoomLevel() */
 HRESULT wuixaaupe_map_control_automation_peer_get__zoom_level(WUIXAAUPE_MapControlAutomationPeer *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer.get_MaxZoom() */
 HRESULT wuixaaupe_map_control_automation_peer_get__max_zoom(WUIXAAUPE_MapControlAutomationPeer *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer.get_MinZoom() */
 HRESULT wuixaaupe_map_control_automation_peer_get__min_zoom(WUIXAAUPE_MapControlAutomationPeer *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer.Zoom(zoom) */
 HRESULT wuixaaupe_map_control_automation_peer_zoom(WUIXAAUPE_MapControlAutomationPeer *self, double zoom);
 
-/* Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer.ZoomByUnit(zoomUnit) */
 HRESULT wuixaaupe_map_control_automation_peer_zoom_by_unit(WUIXAAUPE_MapControlAutomationPeer *self, WUIXAAU_ZoomUnit zoomUnit);
 
-/* Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer.get_CanMove() */
 HRESULT wuixaaupe_map_control_automation_peer_get__can_move(WUIXAAUPE_MapControlAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer.get_CanResize() */
 HRESULT wuixaaupe_map_control_automation_peer_get__can_resize(WUIXAAUPE_MapControlAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer.get_CanRotate() */
 HRESULT wuixaaupe_map_control_automation_peer_get__can_rotate(WUIXAAUPE_MapControlAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer.Move(x, y) */
 HRESULT wuixaaupe_map_control_automation_peer_move(WUIXAAUPE_MapControlAutomationPeer *self, double x, double y);
 
-/* Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer.Resize(width, height) */
 HRESULT wuixaaupe_map_control_automation_peer_resize(WUIXAAUPE_MapControlAutomationPeer *self, double width, double height);
 
-/* Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer.Rotate(degrees) */
 HRESULT wuixaaupe_map_control_automation_peer_rotate(WUIXAAUPE_MapControlAutomationPeer *self, double degrees);
 
-/* activate Windows.UI.Xaml.Automation.Peers.LoopingSelectorItemDataAutomationPeer */
 HRESULT wuixaaupe_looping_selector_item_data_automation_peer_new(WUIXAAUPE_LoopingSelectorItemDataAutomationPeer **out);
 
-/* Windows.UI.Xaml.Automation.Peers.LoopingSelectorItemDataAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.LoopingSelectorItemDataAutomationPeer.Realize() */
 HRESULT wuixaaupe_looping_selector_item_data_automation_peer_realize(WUIXAAUPE_LoopingSelectorItemDataAutomationPeer *self);
 
-/* activate Windows.UI.Xaml.Automation.Peers.LoopingSelectorItemAutomationPeer */
 HRESULT wuixaaupe_looping_selector_item_automation_peer_new(WUIXAAUPE_LoopingSelectorItemAutomationPeer **out);
 
-/* Windows.UI.Xaml.Automation.Peers.LoopingSelectorItemAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.LoopingSelectorItemAutomationPeer.ScrollIntoView() */
 HRESULT wuixaaupe_looping_selector_item_automation_peer_scroll_into_view(WUIXAAUPE_LoopingSelectorItemAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.LoopingSelectorItemAutomationPeer.get_IsSelected() */
 HRESULT wuixaaupe_looping_selector_item_automation_peer_get__is_selected(WUIXAAUPE_LoopingSelectorItemAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.LoopingSelectorItemAutomationPeer.get_SelectionContainer() */
 HRESULT wuixaaupe_looping_selector_item_automation_peer_get__selection_container(WUIXAAUPE_LoopingSelectorItemAutomationPeer *self, WUIXAAUPR_IRawElementProviderSimple** value);
 
-/* Windows.UI.Xaml.Automation.Peers.LoopingSelectorItemAutomationPeer.AddToSelection() */
 HRESULT wuixaaupe_looping_selector_item_automation_peer_add_to_selection(WUIXAAUPE_LoopingSelectorItemAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.LoopingSelectorItemAutomationPeer.RemoveFromSelection() */
 HRESULT wuixaaupe_looping_selector_item_automation_peer_remove_from_selection(WUIXAAUPE_LoopingSelectorItemAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.LoopingSelectorItemAutomationPeer.Select() */
 HRESULT wuixaaupe_looping_selector_item_automation_peer_select(WUIXAAUPE_LoopingSelectorItemAutomationPeer *self);
 
-/* activate Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer */
 HRESULT wuixaaupe_looping_selector_automation_peer_new(WUIXAAUPE_LoopingSelectorAutomationPeer **out);
 
-/* Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer.get_CanSelectMultiple() */
 HRESULT wuixaaupe_looping_selector_automation_peer_get__can_select_multiple(WUIXAAUPE_LoopingSelectorAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer.get_IsSelectionRequired() */
 HRESULT wuixaaupe_looping_selector_automation_peer_get__is_selection_required(WUIXAAUPE_LoopingSelectorAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer.GetSelection() */
 HRESULT wuixaaupe_looping_selector_automation_peer_get_selection(WUIXAAUPE_LoopingSelectorAutomationPeer *self, WUIXAAUPR_IRawElementProviderSimple **out, uint32_t *out_len);
 
-/* Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer.FindItemByProperty(startAfter, automationProperty) */
 HRESULT wuixaaupe_looping_selector_automation_peer_find_item_by_property(WUIXAAUPE_LoopingSelectorAutomationPeer *self, WUIXAAUPR_IRawElementProviderSimple* startAfter, WUIXAAU_AutomationProperty* automationProperty, IInspectable* value, WUIXAAUPR_IRawElementProviderSimple** out);
 
-/* Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer.get_ExpandCollapseState() */
 HRESULT wuixaaupe_looping_selector_automation_peer_get__expand_collapse_state(WUIXAAUPE_LoopingSelectorAutomationPeer *self, WUIXAAU_ExpandCollapseState *value);
 
-/* Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer.Collapse() */
 HRESULT wuixaaupe_looping_selector_automation_peer_collapse(WUIXAAUPE_LoopingSelectorAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer.Expand() */
 HRESULT wuixaaupe_looping_selector_automation_peer_expand(WUIXAAUPE_LoopingSelectorAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer.get_HorizontallyScrollable() */
 HRESULT wuixaaupe_looping_selector_automation_peer_get__horizontally_scrollable(WUIXAAUPE_LoopingSelectorAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer.get_HorizontalScrollPercent() */
 HRESULT wuixaaupe_looping_selector_automation_peer_get__horizontal_scroll_percent(WUIXAAUPE_LoopingSelectorAutomationPeer *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer.get_HorizontalViewSize() */
 HRESULT wuixaaupe_looping_selector_automation_peer_get__horizontal_view_size(WUIXAAUPE_LoopingSelectorAutomationPeer *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer.get_VerticallyScrollable() */
 HRESULT wuixaaupe_looping_selector_automation_peer_get__vertically_scrollable(WUIXAAUPE_LoopingSelectorAutomationPeer *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer.get_VerticalScrollPercent() */
 HRESULT wuixaaupe_looping_selector_automation_peer_get__vertical_scroll_percent(WUIXAAUPE_LoopingSelectorAutomationPeer *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer.get_VerticalViewSize() */
 HRESULT wuixaaupe_looping_selector_automation_peer_get__vertical_view_size(WUIXAAUPE_LoopingSelectorAutomationPeer *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer.Scroll(horizontalAmount, verticalAmount) */
 HRESULT wuixaaupe_looping_selector_automation_peer_scroll(WUIXAAUPE_LoopingSelectorAutomationPeer *self, WUIXAAU_ScrollAmount horizontalAmount, WUIXAAU_ScrollAmount verticalAmount);
 
-/* Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer.SetScrollPercent(horizontalPercent, verticalPercent) */
 HRESULT wuixaaupe_looping_selector_automation_peer_set_scroll_percent(WUIXAAUPE_LoopingSelectorAutomationPeer *self, double horizontalPercent, double verticalPercent);
 
-/* Windows.UI.Xaml.Automation.Peers.ListViewItemDataAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.ListViewItemDataAutomationPeer.ScrollIntoView() */
 HRESULT wuixaaupe_list_view_item_data_automation_peer_scroll_into_view(WUIXAAUPE_ListViewItemDataAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.ListBoxItemDataAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.ListBoxItemDataAutomationPeer.ScrollIntoView() */
 HRESULT wuixaaupe_list_box_item_data_automation_peer_scroll_into_view(WUIXAAUPE_ListBoxItemDataAutomationPeer *self);
 
-/* Windows.UI.Xaml.Automation.Peers.ITreeViewListAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.ITreeViewListAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_tree_view_list_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_ITreeViewListAutomationPeerFactory *self, WUIXACO_TreeViewList* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_TreeViewListAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.ITreeViewItemAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.ITreeViewItemAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_tree_view_item_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_ITreeViewItemAutomationPeerFactory *self, WUIXACO_TreeViewItem* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_TreeViewItemAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IToggleSwitchAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IToggleSwitchAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_toggle_switch_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IToggleSwitchAutomationPeerFactory *self, WUIXACO_ToggleSwitch* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_ToggleSwitchAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IToggleMenuFlyoutItemAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IToggleMenuFlyoutItemAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_toggle_menu_flyout_item_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IToggleMenuFlyoutItemAutomationPeerFactory *self, WUIXACO_ToggleMenuFlyoutItem* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_ToggleMenuFlyoutItemAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IToggleButtonAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IToggleButtonAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_toggle_button_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IToggleButtonAutomationPeerFactory *self, WUIXACOPR_ToggleButton* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_ToggleButtonAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.ITimePickerAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.ITimePickerAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_time_picker_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_ITimePickerAutomationPeerFactory *self, WUIXACO_TimePicker* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_TimePickerAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IThumbAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IThumbAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_thumb_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IThumbAutomationPeerFactory *self, WUIXACOPR_Thumb* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_ThumbAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.ITextBoxAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.ITextBoxAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_text_box_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_ITextBoxAutomationPeerFactory *self, WUIXACO_TextBox* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_TextBoxAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.ITextBlockAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.ITextBlockAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_text_block_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_ITextBlockAutomationPeerFactory *self, WUIXACO_TextBlock* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_TextBlockAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.ISliderAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.ISliderAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_slider_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_ISliderAutomationPeerFactory *self, WUIXACO_Slider* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_SliderAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.ISettingsFlyoutAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.ISettingsFlyoutAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_settings_flyout_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_ISettingsFlyoutAutomationPeerFactory *self, WUIXACO_SettingsFlyout* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_SettingsFlyoutAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.ISemanticZoomAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.ISemanticZoomAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_semantic_zoom_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_ISemanticZoomAutomationPeerFactory *self, WUIXACO_SemanticZoom* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_SemanticZoomAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.ISelectorItemAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.ISelectorItemAutomationPeerFactory.CreateInstanceWithParentAndItem(item, parent, baseInterface, innerInterface) */
 HRESULT wuixaaupe_selector_item_automation_peer_factory_create_instance_with_parent_and_item(WUIXAAUPE_ISelectorItemAutomationPeerFactory *self, IInspectable* item, WUIXAAUPE_SelectorAutomationPeer* parent, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_SelectorItemAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.ISelectorAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.ISelectorAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_selector_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_ISelectorAutomationPeerFactory *self, WUIXACOPR_Selector* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_SelectorAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.ISearchBoxAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.ISearchBoxAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_search_box_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_ISearchBoxAutomationPeerFactory *self, WUIXACO_SearchBox* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_SearchBoxAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IScrollViewerAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IScrollViewerAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_scroll_viewer_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IScrollViewerAutomationPeerFactory *self, WUIXACO_ScrollViewer* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_ScrollViewerAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IScrollBarAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IScrollBarAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_scroll_bar_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IScrollBarAutomationPeerFactory *self, WUIXACOPR_ScrollBar* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_ScrollBarAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IRichTextBlockOverflowAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IRichTextBlockOverflowAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_rich_text_block_overflow_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IRichTextBlockOverflowAutomationPeerFactory *self, WUIXACO_RichTextBlockOverflow* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_RichTextBlockOverflowAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IRichTextBlockAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IRichTextBlockAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_rich_text_block_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IRichTextBlockAutomationPeerFactory *self, WUIXACO_RichTextBlock* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_RichTextBlockAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IProgressBarAutomationPeerFactory */
-/* Windows.UI.Xaml.Automation.Peers.IProgressBarAutomationPeerFactory.CreateInstanceWithOwner(owner, baseInterface, innerInterface) */
 HRESULT wuixaaupe_progress_bar_automation_peer_factory_create_instance_with_owner(WUIXAAUPE_IProgressBarAutomationPeerFactory *self, WUIXACO_ProgressBar* owner, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAAUPE_ProgressBarAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IItemAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.IItemsControlAutomationPeer2 */
-/* Windows.UI.Xaml.Automation.Peers.IItemsControlAutomationPeer2.CreateItemAutomationPeer(item) */
 HRESULT wuixaaupe_items_control_automation_peer_2_create_item_automation_peer(WUIXAAUPE_IItemsControlAutomationPeer_2 *self, IInspectable* item, WUIXAAUPE_ItemAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IItemsControlAutomationPeerOverrides2 */
-/* Windows.UI.Xaml.Automation.Peers.IItemsControlAutomationPeerOverrides2.OnCreateItemAutomationPeer(item) */
 HRESULT wuixaaupe_items_control_automation_peer_overrides_2_handle_create_item_automation_peer(WUIXAAUPE_IItemsControlAutomationPeerOverrides_2 *self, IInspectable* item, WUIXAAUPE_ItemAutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerAnnotation */
-/* Windows.UI.Xaml.Automation.Peers.IFrameworkElementAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeer */
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeer3 */
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeer3.Navigate(direction) */
 HRESULT wuixaaupe_automation_peer_3_navigate(WUIXAAUPE_IAutomationPeer_3 *self, WUIXAAUPE_AutomationNavigationDirection direction, IInspectable** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeer3.GetElementFromPoint(pointInWindowCoordinates) */
 HRESULT wuixaaupe_automation_peer_3_get_element_from_point(WUIXAAUPE_IAutomationPeer_3 *self, WF_Point pointInWindowCoordinates, IInspectable** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeer3.GetFocusedElement() */
 HRESULT wuixaaupe_automation_peer_3_get_focused_element(WUIXAAUPE_IAutomationPeer_3 *self, IInspectable** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeer3.ShowContextMenu() */
 HRESULT wuixaaupe_automation_peer_3_show_context_menu(WUIXAAUPE_IAutomationPeer_3 *self);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeer3.GetControlledPeers() */
 HRESULT wuixaaupe_automation_peer_3_get_controlled_peers(WUIXAAUPE_IAutomationPeer_3 *self, WFOCO_IVectorView_WUIXAAUPE_AutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeer3.GetAnnotations() */
 HRESULT wuixaaupe_automation_peer_3_get_annotations(WUIXAAUPE_IAutomationPeer_3 *self, WFOCO_IVector_WUIXAAUPE_AutomationPeerAnnotation** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeer3.SetParent(peer) */
 HRESULT wuixaaupe_automation_peer_3_set_parent(WUIXAAUPE_IAutomationPeer_3 *self, WUIXAAUPE_AutomationPeer* peer);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeer3.RaiseTextEditTextChangedEvent(automationTextEditChangeType, changedData) */
 HRESULT wuixaaupe_automation_peer_3_raise_text_edit_text_changed_event(WUIXAAUPE_IAutomationPeer_3 *self, WUIXAAU_AutomationTextEditChangeType automationTextEditChangeType, WFOCO_IVectorView_HSTRING* changedData);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeer3.GetPositionInSet() */
 HRESULT wuixaaupe_automation_peer_3_get_position_in_set(WUIXAAUPE_IAutomationPeer_3 *self, int32_t *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeer3.GetSizeOfSet() */
 HRESULT wuixaaupe_automation_peer_3_get_size_of_set(WUIXAAUPE_IAutomationPeer_3 *self, int32_t *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeer3.GetLevel() */
 HRESULT wuixaaupe_automation_peer_3_get_level(WUIXAAUPE_IAutomationPeer_3 *self, int32_t *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeer3.RaiseStructureChangedEvent(structureChangeType, child) */
 HRESULT wuixaaupe_automation_peer_3_raise_structure_changed_event(WUIXAAUPE_IAutomationPeer_3 *self, WUIXAAUPE_AutomationStructureChangeType structureChangeType, WUIXAAUPE_AutomationPeer* child);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeer4 */
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeer4.GetLandmarkType() */
 HRESULT wuixaaupe_automation_peer_4_get_landmark_type(WUIXAAUPE_IAutomationPeer_4 *self, WUIXAAUPE_AutomationLandmarkType *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeer4.GetLocalizedLandmarkType() */
 HRESULT wuixaaupe_automation_peer_4_get_localized_landmark_type(WUIXAAUPE_IAutomationPeer_4 *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeer5 */
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeer5.IsPeripheral() */
 HRESULT wuixaaupe_automation_peer_5_is_peripheral(WUIXAAUPE_IAutomationPeer_5 *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeer5.IsDataValidForForm() */
 HRESULT wuixaaupe_automation_peer_5_is_data_valid_for_form(WUIXAAUPE_IAutomationPeer_5 *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeer5.GetFullDescription() */
 HRESULT wuixaaupe_automation_peer_5_get_full_description(WUIXAAUPE_IAutomationPeer_5 *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeer6 */
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeer6.GetCulture() */
 HRESULT wuixaaupe_automation_peer_6_get_culture(WUIXAAUPE_IAutomationPeer_6 *self, int32_t *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeer7 */
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeer7.RaiseNotificationEvent(notificationKind, notificationProcessing, displayString, activityId) */
 HRESULT wuixaaupe_automation_peer_7_raise_notification_event(WUIXAAUPE_IAutomationPeer_7 *self, WUIXAAUPE_AutomationNotificationKind notificationKind, WUIXAAUPE_AutomationNotificationProcessing notificationProcessing, cwinrt_hstring displayString, cwinrt_hstring activityId);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeer8 */
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeer8.GetHeadingLevel() */
 HRESULT wuixaaupe_automation_peer_8_get_heading_level(WUIXAAUPE_IAutomationPeer_8 *self, WUIXAAUPE_AutomationHeadingLevel *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeer9 */
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeer9.IsDialog() */
 HRESULT wuixaaupe_automation_peer_9_is_dialog(WUIXAAUPE_IAutomationPeer_9 *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerProtected */
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerProtected.PeerFromProvider(provider) */
 HRESULT wuixaaupe_automation_peer_protected_peer_from_provider(WUIXAAUPE_IAutomationPeerProtected *self, WUIXAAUPR_IRawElementProviderSimple* provider, WUIXAAUPE_AutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerProtected.ProviderFromPeer(peer) */
 HRESULT wuixaaupe_automation_peer_protected_provider_from_peer(WUIXAAUPE_IAutomationPeerProtected *self, WUIXAAUPE_AutomationPeer* peer, WUIXAAUPR_IRawElementProviderSimple** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides */
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides.GetPatternCore(patternInterface) */
 HRESULT wuixaaupe_automation_peer_overrides_get_pattern_core(WUIXAAUPE_IAutomationPeerOverrides *self, WUIXAAUPE_PatternInterface patternInterface, IInspectable** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides.GetAcceleratorKeyCore() */
 HRESULT wuixaaupe_automation_peer_overrides_get_accelerator_key_core(WUIXAAUPE_IAutomationPeerOverrides *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides.GetAccessKeyCore() */
 HRESULT wuixaaupe_automation_peer_overrides_get_access_key_core(WUIXAAUPE_IAutomationPeerOverrides *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides.GetAutomationControlTypeCore() */
 HRESULT wuixaaupe_automation_peer_overrides_get_automation_control_type_core(WUIXAAUPE_IAutomationPeerOverrides *self, WUIXAAUPE_AutomationControlType *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides.GetAutomationIdCore() */
 HRESULT wuixaaupe_automation_peer_overrides_get_automation_id_core(WUIXAAUPE_IAutomationPeerOverrides *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides.GetBoundingRectangleCore() */
 HRESULT wuixaaupe_automation_peer_overrides_get_bounding_rectangle_core(WUIXAAUPE_IAutomationPeerOverrides *self, WF_Rect *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides.GetChildrenCore() */
 HRESULT wuixaaupe_automation_peer_overrides_get_children_core(WUIXAAUPE_IAutomationPeerOverrides *self, WFOCO_IVector_WUIXAAUPE_AutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides.GetClassNameCore() */
 HRESULT wuixaaupe_automation_peer_overrides_get_class_name_core(WUIXAAUPE_IAutomationPeerOverrides *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides.GetClickablePointCore() */
 HRESULT wuixaaupe_automation_peer_overrides_get_clickable_point_core(WUIXAAUPE_IAutomationPeerOverrides *self, WF_Point *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides.GetHelpTextCore() */
 HRESULT wuixaaupe_automation_peer_overrides_get_help_text_core(WUIXAAUPE_IAutomationPeerOverrides *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides.GetItemStatusCore() */
 HRESULT wuixaaupe_automation_peer_overrides_get_item_status_core(WUIXAAUPE_IAutomationPeerOverrides *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides.GetItemTypeCore() */
 HRESULT wuixaaupe_automation_peer_overrides_get_item_type_core(WUIXAAUPE_IAutomationPeerOverrides *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides.GetLabeledByCore() */
 HRESULT wuixaaupe_automation_peer_overrides_get_labeled_by_core(WUIXAAUPE_IAutomationPeerOverrides *self, WUIXAAUPE_AutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides.GetLocalizedControlTypeCore() */
 HRESULT wuixaaupe_automation_peer_overrides_get_localized_control_type_core(WUIXAAUPE_IAutomationPeerOverrides *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides.GetNameCore() */
 HRESULT wuixaaupe_automation_peer_overrides_get_name_core(WUIXAAUPE_IAutomationPeerOverrides *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides.GetOrientationCore() */
 HRESULT wuixaaupe_automation_peer_overrides_get_orientation_core(WUIXAAUPE_IAutomationPeerOverrides *self, WUIXAAUPE_AutomationOrientation *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides.HasKeyboardFocusCore() */
 HRESULT wuixaaupe_automation_peer_overrides_has_keyboard_focus_core(WUIXAAUPE_IAutomationPeerOverrides *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides.IsContentElementCore() */
 HRESULT wuixaaupe_automation_peer_overrides_is_content_element_core(WUIXAAUPE_IAutomationPeerOverrides *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides.IsControlElementCore() */
 HRESULT wuixaaupe_automation_peer_overrides_is_control_element_core(WUIXAAUPE_IAutomationPeerOverrides *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides.IsEnabledCore() */
 HRESULT wuixaaupe_automation_peer_overrides_is_enabled_core(WUIXAAUPE_IAutomationPeerOverrides *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides.IsKeyboardFocusableCore() */
 HRESULT wuixaaupe_automation_peer_overrides_is_keyboard_focusable_core(WUIXAAUPE_IAutomationPeerOverrides *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides.IsOffscreenCore() */
 HRESULT wuixaaupe_automation_peer_overrides_is_offscreen_core(WUIXAAUPE_IAutomationPeerOverrides *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides.IsPasswordCore() */
 HRESULT wuixaaupe_automation_peer_overrides_is_password_core(WUIXAAUPE_IAutomationPeerOverrides *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides.IsRequiredForFormCore() */
 HRESULT wuixaaupe_automation_peer_overrides_is_required_for_form_core(WUIXAAUPE_IAutomationPeerOverrides *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides.SetFocusCore() */
 HRESULT wuixaaupe_automation_peer_overrides_set_focus_core(WUIXAAUPE_IAutomationPeerOverrides *self);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides.GetPeerFromPointCore(point) */
 HRESULT wuixaaupe_automation_peer_overrides_get_peer_from_point_core(WUIXAAUPE_IAutomationPeerOverrides *self, WF_Point point, WUIXAAUPE_AutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides.GetLiveSettingCore() */
 HRESULT wuixaaupe_automation_peer_overrides_get_live_setting_core(WUIXAAUPE_IAutomationPeerOverrides *self, WUIXAAUPE_AutomationLiveSetting *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides2 */
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides2.ShowContextMenuCore() */
 HRESULT wuixaaupe_automation_peer_overrides_2_show_context_menu_core(WUIXAAUPE_IAutomationPeerOverrides_2 *self);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides2.GetControlledPeersCore() */
 HRESULT wuixaaupe_automation_peer_overrides_2_get_controlled_peers_core(WUIXAAUPE_IAutomationPeerOverrides_2 *self, WFOCO_IVectorView_WUIXAAUPE_AutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides3 */
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides3.NavigateCore(direction) */
 HRESULT wuixaaupe_automation_peer_overrides_3_navigate_core(WUIXAAUPE_IAutomationPeerOverrides_3 *self, WUIXAAUPE_AutomationNavigationDirection direction, IInspectable** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides3.GetElementFromPointCore(pointInWindowCoordinates) */
 HRESULT wuixaaupe_automation_peer_overrides_3_get_element_from_point_core(WUIXAAUPE_IAutomationPeerOverrides_3 *self, WF_Point pointInWindowCoordinates, IInspectable** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides3.GetFocusedElementCore() */
 HRESULT wuixaaupe_automation_peer_overrides_3_get_focused_element_core(WUIXAAUPE_IAutomationPeerOverrides_3 *self, IInspectable** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides3.GetAnnotationsCore() */
 HRESULT wuixaaupe_automation_peer_overrides_3_get_annotations_core(WUIXAAUPE_IAutomationPeerOverrides_3 *self, WFOCO_IVector_WUIXAAUPE_AutomationPeerAnnotation** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides3.GetPositionInSetCore() */
 HRESULT wuixaaupe_automation_peer_overrides_3_get_position_in_set_core(WUIXAAUPE_IAutomationPeerOverrides_3 *self, int32_t *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides3.GetSizeOfSetCore() */
 HRESULT wuixaaupe_automation_peer_overrides_3_get_size_of_set_core(WUIXAAUPE_IAutomationPeerOverrides_3 *self, int32_t *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides3.GetLevelCore() */
 HRESULT wuixaaupe_automation_peer_overrides_3_get_level_core(WUIXAAUPE_IAutomationPeerOverrides_3 *self, int32_t *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides4 */
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides4.GetLandmarkTypeCore() */
 HRESULT wuixaaupe_automation_peer_overrides_4_get_landmark_type_core(WUIXAAUPE_IAutomationPeerOverrides_4 *self, WUIXAAUPE_AutomationLandmarkType *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides4.GetLocalizedLandmarkTypeCore() */
 HRESULT wuixaaupe_automation_peer_overrides_4_get_localized_landmark_type_core(WUIXAAUPE_IAutomationPeerOverrides_4 *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides5 */
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides5.IsPeripheralCore() */
 HRESULT wuixaaupe_automation_peer_overrides_5_is_peripheral_core(WUIXAAUPE_IAutomationPeerOverrides_5 *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides5.IsDataValidForFormCore() */
 HRESULT wuixaaupe_automation_peer_overrides_5_is_data_valid_for_form_core(WUIXAAUPE_IAutomationPeerOverrides_5 *self, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides5.GetFullDescriptionCore() */
 HRESULT wuixaaupe_automation_peer_overrides_5_get_full_description_core(WUIXAAUPE_IAutomationPeerOverrides_5 *self, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides5.GetDescribedByCore() */
 HRESULT wuixaaupe_automation_peer_overrides_5_get_described_by_core(WUIXAAUPE_IAutomationPeerOverrides_5 *self, WFOCO_IIterable_WUIXAAUPE_AutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides5.GetFlowsToCore() */
 HRESULT wuixaaupe_automation_peer_overrides_5_get_flows_to_core(WUIXAAUPE_IAutomationPeerOverrides_5 *self, WFOCO_IIterable_WUIXAAUPE_AutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides5.GetFlowsFromCore() */
 HRESULT wuixaaupe_automation_peer_overrides_5_get_flows_from_core(WUIXAAUPE_IAutomationPeerOverrides_5 *self, WFOCO_IIterable_WUIXAAUPE_AutomationPeer** out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides6 */
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides6.GetCultureCore() */
 HRESULT wuixaaupe_automation_peer_overrides_6_get_culture_core(WUIXAAUPE_IAutomationPeerOverrides_6 *self, int32_t *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides8 */
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides8.GetHeadingLevelCore() */
 HRESULT wuixaaupe_automation_peer_overrides_8_get_heading_level_core(WUIXAAUPE_IAutomationPeerOverrides_8 *self, WUIXAAUPE_AutomationHeadingLevel *out);
 
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides9 */
-/* Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides9.IsDialogCore() */
 HRESULT wuixaaupe_automation_peer_overrides_9_is_dialog_core(WUIXAAUPE_IAutomationPeerOverrides_9 *self, BOOL *out);
 
 #endif /* CWINRT_WINDOWS_UI_XAML_AUTOMATION_PEERS_H */

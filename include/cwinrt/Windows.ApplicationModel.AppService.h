@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.ApplicationModel.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSYRE_RemoteSystemConnectionRequest
 #define CWINRT_FWD_WSYRE_RemoteSystemConnectionRequest
 typedef struct WSYRE_RemoteSystemConnectionRequest WSYRE_RemoteSystemConnectionRequest;
@@ -23,7 +22,6 @@ typedef struct WSYRE_RemoteSystemConnectionRequest WSYRE_RemoteSystemConnectionR
 typedef struct WSY_User WSY_User;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPAP_StatelessAppServiceResponse WAPAP_StatelessAppServiceResponse;
 typedef struct WAPAP_IAppServiceConnectionStatics WAPAP_IAppServiceConnectionStatics;
 typedef struct WAPAP_IAppServiceCatalogStatics WAPAP_IAppServiceCatalogStatics;
@@ -48,7 +46,6 @@ typedef struct WAPAP_IAppServiceConnection WAPAP_IAppServiceConnection;
 typedef struct WAPAP_IAppServiceConnection_2 WAPAP_IAppServiceConnection_2;
 typedef struct WAPAP_IAppServiceClosedEventArgs WAPAP_IAppServiceClosedEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_ValueSet
 #define CWINRT_FWD_WFOCO_ValueSet
 typedef struct WFOCO_ValueSet WFOCO_ValueSet;
@@ -160,7 +157,6 @@ typedef enum WAPAP_AppServiceClosedStatus {
 } WAPAP_AppServiceClosedStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -221,123 +217,76 @@ static const IID CWINRT_IID_WAPAP_IAppServiceConnection_2 CWINRT_MAYBE_UNUSED = 
 static const IID CWINRT_IID_WAPAP_IAppServiceClosedEventArgs CWINRT_MAYBE_UNUSED = { 0xDE6016F6, 0xCB03, 0x4D35, { 0xAC, 0x8D, 0xCC, 0x63, 0x03, 0x23, 0x97, 0x31 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.AppService.StatelessAppServiceResponse */
 HRESULT wapap_stateless_app_service_response_new(WAPAP_StatelessAppServiceResponse **out);
 
-/* Windows.ApplicationModel.AppService.StatelessAppServiceResponse */
-/* Windows.ApplicationModel.AppService.StatelessAppServiceResponse.get_Message() */
 HRESULT wapap_stateless_app_service_response_get__message(WAPAP_StatelessAppServiceResponse *self, WFOCO_ValueSet** value);
 
-/* Windows.ApplicationModel.AppService.StatelessAppServiceResponse.get_Status() */
 HRESULT wapap_stateless_app_service_response_get__status(WAPAP_StatelessAppServiceResponse *self, WAPAP_StatelessAppServiceResponseStatus *value);
 
-/* Windows.ApplicationModel.AppService.IAppServiceConnectionStatics */
-/* Windows.ApplicationModel.AppService.IAppServiceConnectionStatics.SendStatelessMessageAsync(connection, connectionRequest, message) */
 HRESULT wapap_app_service_connection_statics_send_stateless_message_async(WAPAP_IAppServiceConnectionStatics *self, WAPAP_AppServiceConnection* connection, WSYRE_RemoteSystemConnectionRequest* connectionRequest, WFOCO_ValueSet* message, WF_IAsyncOperation_WAPAP_StatelessAppServiceResponse** out);
 
-/* Windows.ApplicationModel.AppService.IAppServiceCatalogStatics */
-/* Windows.ApplicationModel.AppService.IAppServiceCatalogStatics.FindAppServiceProvidersAsync(appServiceName) */
 HRESULT wapap_app_service_catalog_statics_find_app_service_providers_async(WAPAP_IAppServiceCatalogStatics *self, cwinrt_hstring appServiceName, WF_IAsyncOperation_WFOCO_IVectorView_WAM_AppInfo** out);
 
-/* activate Windows.ApplicationModel.AppService.AppServiceTriggerDetails */
 HRESULT wapap_app_service_trigger_details_new(WAPAP_AppServiceTriggerDetails **out);
 
-/* Windows.ApplicationModel.AppService.AppServiceTriggerDetails */
-/* Windows.ApplicationModel.AppService.AppServiceTriggerDetails.get_Name() */
 HRESULT wapap_app_service_trigger_details_get__name(WAPAP_AppServiceTriggerDetails *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.AppService.AppServiceTriggerDetails.get_CallerPackageFamilyName() */
 HRESULT wapap_app_service_trigger_details_get__caller_package_family_name(WAPAP_AppServiceTriggerDetails *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.AppService.AppServiceTriggerDetails.get_AppServiceConnection() */
 HRESULT wapap_app_service_trigger_details_get__app_service_connection(WAPAP_AppServiceTriggerDetails *self, WAPAP_AppServiceConnection** value);
 
-/* Windows.ApplicationModel.AppService.AppServiceTriggerDetails.get_IsRemoteSystemConnection() */
 HRESULT wapap_app_service_trigger_details_get__is_remote_system_connection(WAPAP_AppServiceTriggerDetails *self, BOOL *value);
 
-/* Windows.ApplicationModel.AppService.AppServiceTriggerDetails.CheckCallerForCapabilityAsync(capabilityName) */
 HRESULT wapap_app_service_trigger_details_check_caller_for_capability_async(WAPAP_AppServiceTriggerDetails *self, cwinrt_hstring capabilityName, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.AppService.AppServiceTriggerDetails.get_CallerRemoteConnectionToken() */
 HRESULT wapap_app_service_trigger_details_get__caller_remote_connection_token(WAPAP_AppServiceTriggerDetails *self, cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.AppService.AppServiceResponse */
 HRESULT wapap_app_service_response_new(WAPAP_AppServiceResponse **out);
 
-/* Windows.ApplicationModel.AppService.AppServiceResponse */
-/* Windows.ApplicationModel.AppService.AppServiceResponse.get_Message() */
 HRESULT wapap_app_service_response_get__message(WAPAP_AppServiceResponse *self, WFOCO_ValueSet** value);
 
-/* Windows.ApplicationModel.AppService.AppServiceResponse.get_Status() */
 HRESULT wapap_app_service_response_get__status(WAPAP_AppServiceResponse *self, WAPAP_AppServiceResponseStatus *value);
 
-/* activate Windows.ApplicationModel.AppService.AppServiceRequestReceivedEventArgs */
 HRESULT wapap_app_service_request_received_event_args_new(WAPAP_AppServiceRequestReceivedEventArgs **out);
 
-/* Windows.ApplicationModel.AppService.AppServiceRequestReceivedEventArgs */
-/* Windows.ApplicationModel.AppService.AppServiceRequestReceivedEventArgs.get_Request() */
 HRESULT wapap_app_service_request_received_event_args_get__request(WAPAP_AppServiceRequestReceivedEventArgs *self, WAPAP_AppServiceRequest** value);
 
-/* Windows.ApplicationModel.AppService.AppServiceRequestReceivedEventArgs.GetDeferral() */
 HRESULT wapap_app_service_request_received_event_args_get_deferral(WAPAP_AppServiceRequestReceivedEventArgs *self, WAPAP_AppServiceDeferral** out);
 
-/* activate Windows.ApplicationModel.AppService.AppServiceRequest */
 HRESULT wapap_app_service_request_new(WAPAP_AppServiceRequest **out);
 
-/* Windows.ApplicationModel.AppService.AppServiceRequest */
-/* Windows.ApplicationModel.AppService.AppServiceRequest.get_Message() */
 HRESULT wapap_app_service_request_get__message(WAPAP_AppServiceRequest *self, WFOCO_ValueSet** value);
 
-/* Windows.ApplicationModel.AppService.AppServiceRequest.SendResponseAsync(message) */
 HRESULT wapap_app_service_request_send_response_async(WAPAP_AppServiceRequest *self, WFOCO_ValueSet* message, WF_IAsyncOperation_WAPAP_AppServiceResponseStatus** out);
 
-/* activate Windows.ApplicationModel.AppService.AppServiceDeferral */
 HRESULT wapap_app_service_deferral_new(WAPAP_AppServiceDeferral **out);
 
-/* Windows.ApplicationModel.AppService.AppServiceDeferral */
-/* Windows.ApplicationModel.AppService.AppServiceDeferral.Complete() */
 HRESULT wapap_app_service_deferral_complete(WAPAP_AppServiceDeferral *self);
 
-/* activate Windows.ApplicationModel.AppService.AppServiceConnection */
 HRESULT wapap_app_service_connection_new(WAPAP_AppServiceConnection **out);
 
-/* Windows.ApplicationModel.AppService.AppServiceConnection */
-/* Windows.ApplicationModel.AppService.AppServiceConnection.get_AppServiceName() */
 HRESULT wapap_app_service_connection_get__app_service_name(WAPAP_AppServiceConnection *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.AppService.AppServiceConnection.put_AppServiceName() */
 HRESULT wapap_app_service_connection_put__app_service_name(WAPAP_AppServiceConnection *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.AppService.AppServiceConnection.get_PackageFamilyName() */
 HRESULT wapap_app_service_connection_get__package_family_name(WAPAP_AppServiceConnection *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.AppService.AppServiceConnection.put_PackageFamilyName() */
 HRESULT wapap_app_service_connection_put__package_family_name(WAPAP_AppServiceConnection *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.AppService.AppServiceConnection.OpenAsync() */
 HRESULT wapap_app_service_connection_open_async(WAPAP_AppServiceConnection *self, WF_IAsyncOperation_WAPAP_AppServiceConnectionStatus** out);
 
-/* Windows.ApplicationModel.AppService.AppServiceConnection.SendMessageAsync(message) */
 HRESULT wapap_app_service_connection_send_message_async(WAPAP_AppServiceConnection *self, WFOCO_ValueSet* message, WF_IAsyncOperation_WAPAP_AppServiceResponse** out);
 
-/* Windows.ApplicationModel.AppService.AppServiceConnection.OpenRemoteAsync(remoteSystemConnectionRequest) */
 HRESULT wapap_app_service_connection_open_remote_async(WAPAP_AppServiceConnection *self, WSYRE_RemoteSystemConnectionRequest* remoteSystemConnectionRequest, WF_IAsyncOperation_WAPAP_AppServiceConnectionStatus** out);
 
-/* Windows.ApplicationModel.AppService.AppServiceConnection.get_User() */
 HRESULT wapap_app_service_connection_get__user(WAPAP_AppServiceConnection *self, WSY_User** value);
 
-/* Windows.ApplicationModel.AppService.AppServiceConnection.put_User() */
 HRESULT wapap_app_service_connection_put__user(WAPAP_AppServiceConnection *self, WSY_User* value);
 
-/* Windows.ApplicationModel.AppService.AppServiceConnection.Close() */
 HRESULT wapap_app_service_connection_close(WAPAP_AppServiceConnection *self);
 
-/* Windows.ApplicationModel.AppService.AppServiceConnection.SendStatelessMessageAsync(connection, connectionRequest, message) */
 HRESULT wapap_app_service_connection_send_stateless_message_async(WAPAP_AppServiceConnection* connection, WSYRE_RemoteSystemConnectionRequest* connectionRequest, WFOCO_ValueSet* message, WF_IAsyncOperation_WAPAP_StatelessAppServiceResponse** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapap_app_service_connection_on_request_received(WAPAP_AppServiceConnection *self, cwinrt_event_fn fn, void *ctx);
@@ -346,48 +295,24 @@ void wapap_app_service_connection_off_request_received(WAPAP_AppServiceConnectio
 cwinrt_token wapap_app_service_connection_on_service_closed(WAPAP_AppServiceConnection *self, cwinrt_event_fn fn, void *ctx);
 void wapap_app_service_connection_off_service_closed(WAPAP_AppServiceConnection *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.AppService.AppServiceClosedEventArgs */
 HRESULT wapap_app_service_closed_event_args_new(WAPAP_AppServiceClosedEventArgs **out);
 
-/* Windows.ApplicationModel.AppService.AppServiceClosedEventArgs */
-/* Windows.ApplicationModel.AppService.AppServiceClosedEventArgs.get_Status() */
 HRESULT wapap_app_service_closed_event_args_get__status(WAPAP_AppServiceClosedEventArgs *self, WAPAP_AppServiceClosedStatus *value);
 
-/* activate Windows.ApplicationModel.AppService.AppServiceCatalog */
 HRESULT wapap_app_service_catalog_new(WAPAP_AppServiceCatalog **out);
 
-/* Windows.ApplicationModel.AppService.AppServiceCatalog */
-/* Windows.ApplicationModel.AppService.AppServiceCatalog.FindAppServiceProvidersAsync(appServiceName) */
 HRESULT wapap_app_service_catalog_find_app_service_providers_async(cwinrt_hstring appServiceName, WF_IAsyncOperation_WFOCO_IVectorView_WAM_AppInfo** out);
 
-/* Windows.ApplicationModel.AppService.IStatelessAppServiceResponse */
-/* Windows.ApplicationModel.AppService.IAppServiceTriggerDetails */
-/* Windows.ApplicationModel.AppService.IAppServiceTriggerDetails2 */
-/* Windows.ApplicationModel.AppService.IAppServiceTriggerDetails2.get_IsRemoteSystemConnection() */
 HRESULT wapap_app_service_trigger_details_2_get__is_remote_system_connection(WAPAP_IAppServiceTriggerDetails_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.AppService.IAppServiceTriggerDetails3 */
-/* Windows.ApplicationModel.AppService.IAppServiceTriggerDetails3.CheckCallerForCapabilityAsync(capabilityName) */
 HRESULT wapap_app_service_trigger_details_3_check_caller_for_capability_async(WAPAP_IAppServiceTriggerDetails_3 *self, cwinrt_hstring capabilityName, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.AppService.IAppServiceTriggerDetails4 */
-/* Windows.ApplicationModel.AppService.IAppServiceTriggerDetails4.get_CallerRemoteConnectionToken() */
 HRESULT wapap_app_service_trigger_details_4_get__caller_remote_connection_token(WAPAP_IAppServiceTriggerDetails_4 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.AppService.IAppServiceResponse */
-/* Windows.ApplicationModel.AppService.IAppServiceRequestReceivedEventArgs */
-/* Windows.ApplicationModel.AppService.IAppServiceRequest */
-/* Windows.ApplicationModel.AppService.IAppServiceDeferral */
-/* Windows.ApplicationModel.AppService.IAppServiceConnection */
-/* Windows.ApplicationModel.AppService.IAppServiceConnection2 */
-/* Windows.ApplicationModel.AppService.IAppServiceConnection2.OpenRemoteAsync(remoteSystemConnectionRequest) */
 HRESULT wapap_app_service_connection_2_open_remote_async(WAPAP_IAppServiceConnection_2 *self, WSYRE_RemoteSystemConnectionRequest* remoteSystemConnectionRequest, WF_IAsyncOperation_WAPAP_AppServiceConnectionStatus** out);
 
-/* Windows.ApplicationModel.AppService.IAppServiceConnection2.get_User() */
 HRESULT wapap_app_service_connection_2_get__user(WAPAP_IAppServiceConnection_2 *self, WSY_User** value);
 
-/* Windows.ApplicationModel.AppService.IAppServiceConnection2.put_User() */
 HRESULT wapap_app_service_connection_2_put__user(WAPAP_IAppServiceConnection_2 *self, WSY_User* value);
 
-/* Windows.ApplicationModel.AppService.IAppServiceClosedEventArgs */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_APPSERVICE_H */

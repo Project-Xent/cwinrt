@@ -16,7 +16,6 @@
 #include <cwinrt/Windows.UI.Text.Core.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WUICO_CorePhysicalKeyStatus
 #define CWINRT_FWD_WUICO_CorePhysicalKeyStatus
 typedef struct WUICO_CorePhysicalKeyStatus WUICO_CorePhysicalKeyStatus;
@@ -95,7 +94,6 @@ typedef enum WUITECO_CoreTextInputScope {
 } WUITECO_CoreTextInputScope;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUIINPRTE_TextBoxInfoChangedEventArgs WUIINPRTE_TextBoxInfoChangedEventArgs;
 typedef struct WUIINPRTE_TextComposition WUIINPRTE_TextComposition;
 typedef struct WUIINPRTE_TextCompositionSegment WUIINPRTE_TextCompositionSegment;
@@ -126,7 +124,6 @@ typedef struct WUIINPRTE_IInputDelegationModeChangedEventArgs WUIINPRTE_IInputDe
 typedef struct WUIINPRTE_IConversionModeChangedEventArgs WUIINPRTE_IConversionModeChangedEventArgs;
 typedef struct WUIINPRTE_IFocusEnteredEventArgs WUIINPRTE_IFocusEnteredEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WUITECO_CoreTextRange
 #define CWINRT_FWD_WUITECO_CoreTextRange
 typedef struct WUITECO_CoreTextRange WUITECO_CoreTextRange;
@@ -594,7 +591,6 @@ struct WUIINPRTE_TextBoxId {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -659,167 +655,108 @@ static const IID CWINRT_IID_WUIINPRTE_IConversionModeChangedEventArgs CWINRT_MAY
 static const IID CWINRT_IID_WUIINPRTE_IFocusEnteredEventArgs CWINRT_MAYBE_UNUSED = { 0xCA4DC200, 0x875F, 0x501D, { 0xAF, 0x14, 0x41, 0x3A, 0x0A, 0xA1, 0xED, 0x5F } };
 #endif
 
-/* Methods */
-
-/* activate Windows.UI.Input.Preview.Text.TextBoxInfoChangedEventArgs */
 HRESULT wuiinprte_text_box_info_changed_event_args_new(WUIINPRTE_TextBoxInfoChangedEventArgs **out);
 
-/* Windows.UI.Input.Preview.Text.TextBoxInfoChangedEventArgs */
-/* Windows.UI.Input.Preview.Text.TextBoxInfoChangedEventArgs.get_TextBoxInfo() */
 HRESULT wuiinprte_text_box_info_changed_event_args_get__text_box_info(WUIINPRTE_TextBoxInfoChangedEventArgs *self, WUIINPRTE_TextBoxInfo** value);
 
-/* activate Windows.UI.Input.Preview.Text.TextComposition */
 HRESULT wuiinprte_text_composition_new(WUIINPRTE_TextComposition **out);
 
-/* Windows.UI.Input.Preview.Text.TextComposition */
-/* Windows.UI.Input.Preview.Text.TextComposition.get_Text() */
 HRESULT wuiinprte_text_composition_get__text(WUIINPRTE_TextComposition *self, cwinrt_hstring *value);
 
-/* Windows.UI.Input.Preview.Text.TextComposition.get_FirstSegment() */
 HRESULT wuiinprte_text_composition_get__first_segment(WUIINPRTE_TextComposition *self, WUIINPRTE_TextCompositionSegment** value);
 
-/* Windows.UI.Input.Preview.Text.TextComposition.get_SelectedSegment() */
 HRESULT wuiinprte_text_composition_get__selected_segment(WUIINPRTE_TextComposition *self, WUIINPRTE_TextCompositionSegment** value);
 
-/* Windows.UI.Input.Preview.Text.TextComposition.get_CaretPosition() */
 HRESULT wuiinprte_text_composition_get__caret_position(WUIINPRTE_TextComposition *self, uint32_t *value);
 
-/* Windows.UI.Input.Preview.Text.TextComposition.put_CaretPosition() */
 HRESULT wuiinprte_text_composition_put__caret_position(WUIINPRTE_TextComposition *self, uint32_t value);
 
-/* Windows.UI.Input.Preview.Text.TextComposition.InsertText(text) */
 HRESULT wuiinprte_text_composition_insert_text(WUIINPRTE_TextComposition *self, cwinrt_hstring text, WUIINPRTE_TextCompositionSegment** out);
 
-/* Windows.UI.Input.Preview.Text.TextComposition.Complete() */
 HRESULT wuiinprte_text_composition_complete(WUIINPRTE_TextComposition *self);
 
-/* Windows.UI.Input.Preview.Text.TextComposition.CompleteUnconverted() */
 HRESULT wuiinprte_text_composition_complete_unconverted(WUIINPRTE_TextComposition *self);
 
-/* Windows.UI.Input.Preview.Text.TextComposition.CompleteFirstSegment() */
 HRESULT wuiinprte_text_composition_complete_first_segment(WUIINPRTE_TextComposition *self);
 
-/* activate Windows.UI.Input.Preview.Text.TextCompositionSegment */
 HRESULT wuiinprte_text_composition_segment_new(WUIINPRTE_TextCompositionSegment **out);
 
-/* Windows.UI.Input.Preview.Text.TextCompositionSegment */
-/* Windows.UI.Input.Preview.Text.TextCompositionSegment.get_Text() */
 HRESULT wuiinprte_text_composition_segment_get__text(WUIINPRTE_TextCompositionSegment *self, cwinrt_hstring *value);
 
-/* Windows.UI.Input.Preview.Text.TextCompositionSegment.put_Text() */
 HRESULT wuiinprte_text_composition_segment_put__text(WUIINPRTE_TextCompositionSegment *self, cwinrt_hstring value);
 
-/* Windows.UI.Input.Preview.Text.TextCompositionSegment.get_ConvertedText() */
 HRESULT wuiinprte_text_composition_segment_get__converted_text(WUIINPRTE_TextCompositionSegment *self, cwinrt_hstring *value);
 
-/* Windows.UI.Input.Preview.Text.TextCompositionSegment.put_ConvertedText() */
 HRESULT wuiinprte_text_composition_segment_put__converted_text(WUIINPRTE_TextCompositionSegment *self, cwinrt_hstring value);
 
-/* Windows.UI.Input.Preview.Text.TextCompositionSegment.get_UnconvertedText() */
 HRESULT wuiinprte_text_composition_segment_get__unconverted_text(WUIINPRTE_TextCompositionSegment *self, cwinrt_hstring *value);
 
-/* Windows.UI.Input.Preview.Text.TextCompositionSegment.put_UnconvertedText() */
 HRESULT wuiinprte_text_composition_segment_put__unconverted_text(WUIINPRTE_TextCompositionSegment *self, cwinrt_hstring value);
 
-/* Windows.UI.Input.Preview.Text.TextCompositionSegment.get_Range() */
 HRESULT wuiinprte_text_composition_segment_get__range(WUIINPRTE_TextCompositionSegment *self, WUITECO_CoreTextRange *value);
 
-/* Windows.UI.Input.Preview.Text.TextCompositionSegment.get_ConversionState() */
 HRESULT wuiinprte_text_composition_segment_get__conversion_state(WUIINPRTE_TextCompositionSegment *self, WUITECO_CoreTextFormatUpdatingReason *value);
 
-/* Windows.UI.Input.Preview.Text.TextCompositionSegment.put_ConversionState() */
 HRESULT wuiinprte_text_composition_segment_put__conversion_state(WUIINPRTE_TextCompositionSegment *self, WUITECO_CoreTextFormatUpdatingReason value);
 
-/* Windows.UI.Input.Preview.Text.TextCompositionSegment.get_Next() */
 HRESULT wuiinprte_text_composition_segment_get__next(WUIINPRTE_TextCompositionSegment *self, WUIINPRTE_TextCompositionSegment** value);
 
-/* Windows.UI.Input.Preview.Text.TextCompositionSegment.get_Previous() */
 HRESULT wuiinprte_text_composition_segment_get__previous(WUIINPRTE_TextCompositionSegment *self, WUIINPRTE_TextCompositionSegment** value);
 
-/* Windows.UI.Input.Preview.Text.TextCompositionSegment.GetTextStyle() */
 HRESULT wuiinprte_text_composition_segment_get_text_style(WUIINPRTE_TextCompositionSegment *self, WUIINPRTE_TextStyle *out);
 
-/* Windows.UI.Input.Preview.Text.TextCompositionSegment.SetTextStyle() */
 HRESULT wuiinprte_text_composition_segment_set_text_style(WUIINPRTE_TextCompositionSegment *self, WUIINPRTE_TextStyle value);
 
-/* activate Windows.UI.Input.Preview.Text.TextEditSession */
 HRESULT wuiinprte_text_edit_session_new(WUIINPRTE_TextEditSession **out);
 
-/* Windows.UI.Input.Preview.Text.TextEditSession */
-/* Windows.UI.Input.Preview.Text.TextEditSession.get_TextBoxId() */
 HRESULT wuiinprte_text_edit_session_get__text_box_id(WUIINPRTE_TextEditSession *self, WUIINPRTE_TextBoxId *value);
 
-/* Windows.UI.Input.Preview.Text.TextEditSession.get_TextLength() */
 HRESULT wuiinprte_text_edit_session_get__text_length(WUIINPRTE_TextEditSession *self, int32_t *value);
 
-/* Windows.UI.Input.Preview.Text.TextEditSession.get_PopulatedRange() */
 HRESULT wuiinprte_text_edit_session_get__populated_range(WUIINPRTE_TextEditSession *self, WUITECO_CoreTextRange *value);
 
-/* Windows.UI.Input.Preview.Text.TextEditSession.PopulateAsync(range) */
 HRESULT wuiinprte_text_edit_session_populate_async(WUIINPRTE_TextEditSession *self, WUITECO_CoreTextRange range, WF_IAsyncAction** out);
 
-/* Windows.UI.Input.Preview.Text.TextEditSession.GetText(range) */
 HRESULT wuiinprte_text_edit_session_get_text(WUIINPRTE_TextEditSession *self, WUITECO_CoreTextRange range, cwinrt_hstring *out);
 
-/* Windows.UI.Input.Preview.Text.TextEditSession.GetSelectedRange() */
 HRESULT wuiinprte_text_edit_session_get_selected_range(WUIINPRTE_TextEditSession *self, WUITECO_CoreTextRange *out);
 
-/* Windows.UI.Input.Preview.Text.TextEditSession.SetSelectedRange() */
 HRESULT wuiinprte_text_edit_session_set_selected_range(WUIINPRTE_TextEditSession *self, WUITECO_CoreTextRange value);
 
-/* Windows.UI.Input.Preview.Text.TextEditSession.ReplaceText(replaceRange, text) */
 HRESULT wuiinprte_text_edit_session_replace_text(WUIINPRTE_TextEditSession *self, WUITECO_CoreTextRange replaceRange, cwinrt_hstring text, WUITECO_CoreTextRange *out);
 
-/* Windows.UI.Input.Preview.Text.TextEditSession.get_Composition() */
 HRESULT wuiinprte_text_edit_session_get__composition(WUIINPRTE_TextEditSession *self, WUIINPRTE_TextComposition** value);
 
-/* Windows.UI.Input.Preview.Text.TextEditSession.StartComposition() */
 HRESULT wuiinprte_text_edit_session_start_composition(WUIINPRTE_TextEditSession *self, WUIINPRTE_TextComposition** out);
 
-/* Windows.UI.Input.Preview.Text.TextEditSession.StartReconversion(range) */
 HRESULT wuiinprte_text_edit_session_start_reconversion(WUIINPRTE_TextEditSession *self, WUITECO_CoreTextRange range, WUIINPRTE_TextComposition** out);
 
-/* Windows.UI.Input.Preview.Text.TextEditSession.SubmitPayload() */
 HRESULT wuiinprte_text_edit_session_submit_payload(WUIINPRTE_TextEditSession *self, BOOL *out);
 
-/* Windows.UI.Input.Preview.Text.TextEditSession.SubmitPayloadAsync() */
 HRESULT wuiinprte_text_edit_session_submit_payload_async(WUIINPRTE_TextEditSession *self, WF_IAsyncOperation_WUIINPRTE_PayloadResult** out);
 
-/* activate Windows.UI.Input.Preview.Text.TextInputProvider */
 HRESULT wuiinprte_text_input_provider_new(WUIINPRTE_TextInputProvider **out);
 
-/* Windows.UI.Input.Preview.Text.TextInputProvider */
-/* Windows.UI.Input.Preview.Text.TextInputProvider.GetSubscription() */
 HRESULT wuiinprte_text_input_provider_get_subscription(WUIINPRTE_TextInputProvider *self, WUIINPRTE_TextInputServiceSubscription *out);
 
-/* Windows.UI.Input.Preview.Text.TextInputProvider.SetSubscription(subscription) */
 HRESULT wuiinprte_text_input_provider_set_subscription(WUIINPRTE_TextInputProvider *self, WUIINPRTE_TextInputServiceSubscription subscription);
 
-/* Windows.UI.Input.Preview.Text.TextInputProvider.get_HasFocusedTextBox() */
 HRESULT wuiinprte_text_input_provider_get__has_focused_text_box(WUIINPRTE_TextInputProvider *self, BOOL *value);
 
-/* Windows.UI.Input.Preview.Text.TextInputProvider.get_FocusedTextBoxId() */
 HRESULT wuiinprte_text_input_provider_get__focused_text_box_id(WUIINPRTE_TextInputProvider *self, WUIINPRTE_TextBoxId *value);
 
-/* Windows.UI.Input.Preview.Text.TextInputProvider.get_FocusedTextBoxInfo() */
 HRESULT wuiinprte_text_input_provider_get__focused_text_box_info(WUIINPRTE_TextInputProvider *self, WUIINPRTE_TextBoxInfo** value);
 
-/* Windows.UI.Input.Preview.Text.TextInputProvider.get_FocusedTextBoxBounds() */
 HRESULT wuiinprte_text_input_provider_get__focused_text_box_bounds(WUIINPRTE_TextInputProvider *self, WF_Rect** value);
 
-/* Windows.UI.Input.Preview.Text.TextInputProvider.get_SelectionBounds() */
 HRESULT wuiinprte_text_input_provider_get__selection_bounds(WUIINPRTE_TextInputProvider *self, WF_Rect** value);
 
-/* Windows.UI.Input.Preview.Text.TextInputProvider.CreateEditSession() */
 HRESULT wuiinprte_text_input_provider_create_edit_session(WUIINPRTE_TextInputProvider *self, WUIINPRTE_TextEditSession** out);
 
-/* Windows.UI.Input.Preview.Text.TextInputProvider.TryStartDelegation() */
 HRESULT wuiinprte_text_input_provider_try_start_delegation(WUIINPRTE_TextInputProvider *self, BOOL *out);
 
-/* Windows.UI.Input.Preview.Text.TextInputProvider.StopDelegation() */
 HRESULT wuiinprte_text_input_provider_stop_delegation(WUIINPRTE_TextInputProvider *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiinprte_text_input_provider_on_focus_entered(WUIINPRTE_TextInputProvider *self, cwinrt_event_fn fn, void *ctx);
@@ -843,99 +780,64 @@ void wuiinprte_text_input_provider_off_reconversion_requested(WUIINPRTE_TextInpu
 cwinrt_token wuiinprte_text_input_provider_on_input_delegation_mode_changed(WUIINPRTE_TextInputProvider *self, cwinrt_event_fn fn, void *ctx);
 void wuiinprte_text_input_provider_off_input_delegation_mode_changed(WUIINPRTE_TextInputProvider *self, cwinrt_token token);
 
-/* activate Windows.UI.Input.Preview.Text.TextInputService */
 HRESULT wuiinprte_text_input_service_new(WUIINPRTE_TextInputService **out);
 
-/* Windows.UI.Input.Preview.Text.TextInputService */
-/* Windows.UI.Input.Preview.Text.TextInputService.CreateKeyboardInputProcessor(inputProfile) */
 HRESULT wuiinprte_text_input_service_create_keyboard_input_processor(WUIINPRTE_TextInputService *self, cwinrt_hstring inputProfile, WUIINPRTE_KeyboardInputProcessor** out);
 
-/* Windows.UI.Input.Preview.Text.TextInputService.CreateTextInputProvider(inputProfile) */
 HRESULT wuiinprte_text_input_service_create_text_input_provider(WUIINPRTE_TextInputService *self, cwinrt_hstring inputProfile, WUIINPRTE_TextInputProvider** out);
 
-/* Windows.UI.Input.Preview.Text.TextInputService.GetForCurrentThread() */
 HRESULT wuiinprte_text_input_service_get_for_current_thread(WUIINPRTE_TextInputService** out);
 
-/* activate Windows.UI.Input.Preview.Text.TextBoxInfo */
 HRESULT wuiinprte_text_box_info_new(WUIINPRTE_TextBoxInfo **out);
 
-/* Windows.UI.Input.Preview.Text.TextBoxInfo */
-/* Windows.UI.Input.Preview.Text.TextBoxInfo.get_Id() */
 HRESULT wuiinprte_text_box_info_get__id(WUIINPRTE_TextBoxInfo *self, WUIINPRTE_TextBoxId *value);
 
-/* Windows.UI.Input.Preview.Text.TextBoxInfo.get_InputScope() */
 HRESULT wuiinprte_text_box_info_get__input_scope(WUIINPRTE_TextBoxInfo *self, WUITECO_CoreTextInputScope *value);
 
-/* Windows.UI.Input.Preview.Text.TextBoxInfo.get_AppName() */
 HRESULT wuiinprte_text_box_info_get__app_name(WUIINPRTE_TextBoxInfo *self, cwinrt_hstring *value);
 
-/* Windows.UI.Input.Preview.Text.TextBoxInfo.get_Url() */
 HRESULT wuiinprte_text_box_info_get__url(WUIINPRTE_TextBoxInfo *self, cwinrt_hstring *value);
 
-/* Windows.UI.Input.Preview.Text.TextBoxInfo.get_Settings() */
 HRESULT wuiinprte_text_box_info_get__settings(WUIINPRTE_TextBoxInfo *self, WUIINPRTE_TextBoxSettings *value);
 
-/* Windows.UI.Input.Preview.Text.TextBoxInfo.get_DisabledFeatures() */
 HRESULT wuiinprte_text_box_info_get__disabled_features(WUIINPRTE_TextBoxInfo *self, WUIINPRTE_TextBoxFeatures *value);
 
-/* activate Windows.UI.Input.Preview.Text.TextBoxContentChangedEventArgs */
 HRESULT wuiinprte_text_box_content_changed_event_args_new(WUIINPRTE_TextBoxContentChangedEventArgs **out);
 
-/* Windows.UI.Input.Preview.Text.TextBoxContentChangedEventArgs */
-/* Windows.UI.Input.Preview.Text.TextBoxContentChangedEventArgs.get_TextBoxId() */
 HRESULT wuiinprte_text_box_content_changed_event_args_get__text_box_id(WUIINPRTE_TextBoxContentChangedEventArgs *self, WUIINPRTE_TextBoxId *value);
 
-/* Windows.UI.Input.Preview.Text.TextBoxContentChangedEventArgs.get_Source() */
 HRESULT wuiinprte_text_box_content_changed_event_args_get__source(WUIINPRTE_TextBoxContentChangedEventArgs *self, WUIINPRTE_TextChangeSource *value);
 
-/* Windows.UI.Input.Preview.Text.TextBoxContentChangedEventArgs.get_SelectionBounds() */
 HRESULT wuiinprte_text_box_content_changed_event_args_get__selection_bounds(WUIINPRTE_TextBoxContentChangedEventArgs *self, WF_Rect *value);
 
-/* Windows.UI.Input.Preview.Text.TextBoxContentChangedEventArgs.IsContentAttributeChanged() */
 HRESULT wuiinprte_text_box_content_changed_event_args_is_content_attribute_changed(WUIINPRTE_TextBoxContentChangedEventArgs *self, WUIINPRTE_TextBoxContentAttribute value, BOOL *out);
 
-/* activate Windows.UI.Input.Preview.Text.ReconversionRequestedEventArgs */
 HRESULT wuiinprte_reconversion_requested_event_args_new(WUIINPRTE_ReconversionRequestedEventArgs **out);
 
-/* Windows.UI.Input.Preview.Text.ReconversionRequestedEventArgs */
-/* Windows.UI.Input.Preview.Text.ReconversionRequestedEventArgs.get_Range() */
 HRESULT wuiinprte_reconversion_requested_event_args_get__range(WUIINPRTE_ReconversionRequestedEventArgs *self, WUITECO_CoreTextRange *value);
 
-/* activate Windows.UI.Input.Preview.Text.KeyboardInputProcessor */
 HRESULT wuiinprte_keyboard_input_processor_new(WUIINPRTE_KeyboardInputProcessor **out);
 
-/* Windows.UI.Input.Preview.Text.KeyboardInputProcessor */
-/* Windows.UI.Input.Preview.Text.KeyboardInputProcessor.get_InputProfile() */
 HRESULT wuiinprte_keyboard_input_processor_get__input_profile(WUIINPRTE_KeyboardInputProcessor *self, cwinrt_hstring *value);
 
-/* Windows.UI.Input.Preview.Text.KeyboardInputProcessor.get_IsActive() */
 HRESULT wuiinprte_keyboard_input_processor_get__is_active(WUIINPRTE_KeyboardInputProcessor *self, BOOL *value);
 
-/* Windows.UI.Input.Preview.Text.KeyboardInputProcessor.get_HasFocusedTextBox() */
 HRESULT wuiinprte_keyboard_input_processor_get__has_focused_text_box(WUIINPRTE_KeyboardInputProcessor *self, BOOL *value);
 
-/* Windows.UI.Input.Preview.Text.KeyboardInputProcessor.get_FocusedTextBoxId() */
 HRESULT wuiinprte_keyboard_input_processor_get__focused_text_box_id(WUIINPRTE_KeyboardInputProcessor *self, WUIINPRTE_TextBoxId *value);
 
-/* Windows.UI.Input.Preview.Text.KeyboardInputProcessor.get_FocusedTextBoxInfo() */
 HRESULT wuiinprte_keyboard_input_processor_get__focused_text_box_info(WUIINPRTE_KeyboardInputProcessor *self, WUIINPRTE_TextBoxInfo** value);
 
-/* Windows.UI.Input.Preview.Text.KeyboardInputProcessor.get_FocusedTextBoxBounds() */
 HRESULT wuiinprte_keyboard_input_processor_get__focused_text_box_bounds(WUIINPRTE_KeyboardInputProcessor *self, WF_Rect** value);
 
-/* Windows.UI.Input.Preview.Text.KeyboardInputProcessor.get_SelectionBounds() */
 HRESULT wuiinprte_keyboard_input_processor_get__selection_bounds(WUIINPRTE_KeyboardInputProcessor *self, WF_Rect** value);
 
-/* Windows.UI.Input.Preview.Text.KeyboardInputProcessor.get_ConversionMode() */
 HRESULT wuiinprte_keyboard_input_processor_get__conversion_mode(WUIINPRTE_KeyboardInputProcessor *self, WUIINPRTE_TextConversionMode *value);
 
-/* Windows.UI.Input.Preview.Text.KeyboardInputProcessor.put_ConversionMode() */
 HRESULT wuiinprte_keyboard_input_processor_put__conversion_mode(WUIINPRTE_KeyboardInputProcessor *self, WUIINPRTE_TextConversionMode value);
 
-/* Windows.UI.Input.Preview.Text.KeyboardInputProcessor.CreateEditSession() */
 HRESULT wuiinprte_keyboard_input_processor_create_edit_session(WUIINPRTE_KeyboardInputProcessor *self, WUIINPRTE_TextEditSession** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiinprte_keyboard_input_processor_on_activated(WUIINPRTE_KeyboardInputProcessor *self, cwinrt_event_fn fn, void *ctx);
@@ -968,74 +870,38 @@ void wuiinprte_keyboard_input_processor_off_composition_terminated(WUIINPRTE_Key
 cwinrt_token wuiinprte_keyboard_input_processor_on_reconversion_requested(WUIINPRTE_KeyboardInputProcessor *self, cwinrt_event_fn fn, void *ctx);
 void wuiinprte_keyboard_input_processor_off_reconversion_requested(WUIINPRTE_KeyboardInputProcessor *self, cwinrt_token token);
 
-/* activate Windows.UI.Input.Preview.Text.KeyEventReceivedEventArgs */
 HRESULT wuiinprte_key_event_received_event_args_new(WUIINPRTE_KeyEventReceivedEventArgs **out);
 
-/* Windows.UI.Input.Preview.Text.KeyEventReceivedEventArgs */
-/* Windows.UI.Input.Preview.Text.KeyEventReceivedEventArgs.get_VirtualKey() */
 HRESULT wuiinprte_key_event_received_event_args_get__virtual_key(WUIINPRTE_KeyEventReceivedEventArgs *self, WSY_VirtualKey *value);
 
-/* Windows.UI.Input.Preview.Text.KeyEventReceivedEventArgs.get_KeyStatus() */
 HRESULT wuiinprte_key_event_received_event_args_get__key_status(WUIINPRTE_KeyEventReceivedEventArgs *self, WUICO_CorePhysicalKeyStatus *value);
 
-/* Windows.UI.Input.Preview.Text.KeyEventReceivedEventArgs.get_Unicode() */
 HRESULT wuiinprte_key_event_received_event_args_get__unicode(WUIINPRTE_KeyEventReceivedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.Input.Preview.Text.KeyEventReceivedEventArgs.get_Source() */
 HRESULT wuiinprte_key_event_received_event_args_get__source(WUIINPRTE_KeyEventReceivedEventArgs *self, WUIINPRTE_KeyEventDeviceType *value);
 
-/* Windows.UI.Input.Preview.Text.KeyEventReceivedEventArgs.IsKeyPressed(vkey) */
 HRESULT wuiinprte_key_event_received_event_args_is_key_pressed(WUIINPRTE_KeyEventReceivedEventArgs *self, WSY_VirtualKey vkey, BOOL *out);
 
-/* Windows.UI.Input.Preview.Text.KeyEventReceivedEventArgs.IsToggleKeyOn(vkey) */
 HRESULT wuiinprte_key_event_received_event_args_is_toggle_key_on(WUIINPRTE_KeyEventReceivedEventArgs *self, WSY_VirtualKey vkey, BOOL *out);
 
-/* Windows.UI.Input.Preview.Text.KeyEventReceivedEventArgs.get_EditSession() */
 HRESULT wuiinprte_key_event_received_event_args_get__edit_session(WUIINPRTE_KeyEventReceivedEventArgs *self, WUIINPRTE_TextEditSession** value);
 
-/* Windows.UI.Input.Preview.Text.KeyEventReceivedEventArgs.get_Handled() */
 HRESULT wuiinprte_key_event_received_event_args_get__handled(WUIINPRTE_KeyEventReceivedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Input.Preview.Text.KeyEventReceivedEventArgs.put_Handled() */
 HRESULT wuiinprte_key_event_received_event_args_put__handled(WUIINPRTE_KeyEventReceivedEventArgs *self, BOOL value);
 
-/* activate Windows.UI.Input.Preview.Text.InputDelegationModeChangedEventArgs */
 HRESULT wuiinprte_input_delegation_mode_changed_event_args_new(WUIINPRTE_InputDelegationModeChangedEventArgs **out);
 
-/* Windows.UI.Input.Preview.Text.InputDelegationModeChangedEventArgs */
-/* Windows.UI.Input.Preview.Text.InputDelegationModeChangedEventArgs.get_DelegationOn() */
 HRESULT wuiinprte_input_delegation_mode_changed_event_args_get__delegation_on(WUIINPRTE_InputDelegationModeChangedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Input.Preview.Text.ITextInputServiceStatics */
-/* Windows.UI.Input.Preview.Text.ITextInputServiceStatics.GetForCurrentThread() */
 HRESULT wuiinprte_text_input_service_statics_get_for_current_thread(WUIINPRTE_ITextInputServiceStatics *self, WUIINPRTE_TextInputService** out);
 
-/* activate Windows.UI.Input.Preview.Text.ConversionModeChangedEventArgs */
 HRESULT wuiinprte_conversion_mode_changed_event_args_new(WUIINPRTE_ConversionModeChangedEventArgs **out);
 
-/* Windows.UI.Input.Preview.Text.ConversionModeChangedEventArgs */
-/* Windows.UI.Input.Preview.Text.ConversionModeChangedEventArgs.get_NewConversionMode() */
 HRESULT wuiinprte_conversion_mode_changed_event_args_get__new_conversion_mode(WUIINPRTE_ConversionModeChangedEventArgs *self, WUIINPRTE_TextConversionMode *value);
 
-/* activate Windows.UI.Input.Preview.Text.FocusEnteredEventArgs */
 HRESULT wuiinprte_focus_entered_event_args_new(WUIINPRTE_FocusEnteredEventArgs **out);
 
-/* Windows.UI.Input.Preview.Text.FocusEnteredEventArgs */
-/* Windows.UI.Input.Preview.Text.FocusEnteredEventArgs.get_FocusedTextBoxInfo() */
 HRESULT wuiinprte_focus_entered_event_args_get__focused_text_box_info(WUIINPRTE_FocusEnteredEventArgs *self, WUIINPRTE_TextBoxInfo** value);
 
-/* Windows.UI.Input.Preview.Text.ITextBoxInfoChangedEventArgs */
-/* Windows.UI.Input.Preview.Text.ITextComposition */
-/* Windows.UI.Input.Preview.Text.ITextCompositionSegment */
-/* Windows.UI.Input.Preview.Text.ITextEditSession */
-/* Windows.UI.Input.Preview.Text.ITextInputProvider */
-/* Windows.UI.Input.Preview.Text.ITextInputService */
-/* Windows.UI.Input.Preview.Text.ITextBoxInfo */
-/* Windows.UI.Input.Preview.Text.ITextBoxContentChangedEventArgs */
-/* Windows.UI.Input.Preview.Text.IReconversionRequestedEventArgs */
-/* Windows.UI.Input.Preview.Text.IKeyboardInputProcessor */
-/* Windows.UI.Input.Preview.Text.IKeyEventReceivedEventArgs */
-/* Windows.UI.Input.Preview.Text.IInputDelegationModeChangedEventArgs */
-/* Windows.UI.Input.Preview.Text.IConversionModeChangedEventArgs */
-/* Windows.UI.Input.Preview.Text.IFocusEnteredEventArgs */
 #endif /* CWINRT_WINDOWS_UI_INPUT_PREVIEW_TEXT_H */

@@ -14,7 +14,6 @@
 #include <cwinrt/Windows.UI.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSY_DispatcherQueue
 #define CWINRT_FWD_WSY_DispatcherQueue
 typedef struct WSY_DispatcherQueue WSY_DispatcherQueue;
@@ -51,7 +50,6 @@ typedef enum WSY_VirtualKeyModifiers {
 } WSY_VirtualKeyModifiers;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUICO_WindowActivatedEventArgs WUICO_WindowActivatedEventArgs;
 typedef struct WUICO_VisibilityChangedEventArgs WUICO_VisibilityChangedEventArgs;
 typedef struct WUICO_TouchHitTestingEventArgs WUICO_TouchHitTestingEventArgs;
@@ -133,7 +131,6 @@ typedef struct WUICO_ICoreAcceleratorKeys WUICO_ICoreAcceleratorKeys;
 typedef struct WUICO_ICorePointerInputSource WUICO_ICorePointerInputSource;
 typedef struct WUICO_ICoreWindowEventArgs WUICO_ICoreWindowEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_EventHandler_WUICO_BackRequestedEventArgs
 #define CWINRT_FWD_WF_EventHandler_WUICO_BackRequestedEventArgs
 typedef struct WF_EventHandler_WUICO_BackRequestedEventArgs WF_EventHandler_WUICO_BackRequestedEventArgs;
@@ -624,7 +621,6 @@ struct WUICO_CoreProximityEvaluation {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -845,193 +841,124 @@ static const IID CWINRT_IID_WUICO_ICorePointerInputSource CWINRT_MAYBE_UNUSED = 
 static const IID CWINRT_IID_WUICO_ICoreWindowEventArgs CWINRT_MAYBE_UNUSED = { 0x272B1EF3, 0xC633, 0x4DA5, { 0xA2, 0x6C, 0xC6, 0xD0, 0xF5, 0x6B, 0x29, 0xDA } };
 #endif
 
-/* Methods */
-
-/* activate Windows.UI.Core.WindowActivatedEventArgs */
 HRESULT wuico_window_activated_event_args_new(WUICO_WindowActivatedEventArgs **out);
 
-/* Windows.UI.Core.WindowActivatedEventArgs */
-/* Windows.UI.Core.WindowActivatedEventArgs.get_WindowActivationState() */
 HRESULT wuico_window_activated_event_args_get__window_activation_state(WUICO_WindowActivatedEventArgs *self, WUICO_CoreWindowActivationState *value);
 
-/* Windows.UI.Core.WindowActivatedEventArgs.get_Handled() */
 HRESULT wuico_window_activated_event_args_get__handled(WUICO_WindowActivatedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Core.WindowActivatedEventArgs.put_Handled() */
 HRESULT wuico_window_activated_event_args_put__handled(WUICO_WindowActivatedEventArgs *self, BOOL value);
 
-/* activate Windows.UI.Core.VisibilityChangedEventArgs */
 HRESULT wuico_visibility_changed_event_args_new(WUICO_VisibilityChangedEventArgs **out);
 
-/* Windows.UI.Core.VisibilityChangedEventArgs */
-/* Windows.UI.Core.VisibilityChangedEventArgs.get_Visible() */
 HRESULT wuico_visibility_changed_event_args_get__visible(WUICO_VisibilityChangedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Core.VisibilityChangedEventArgs.get_Handled() */
 HRESULT wuico_visibility_changed_event_args_get__handled(WUICO_VisibilityChangedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Core.VisibilityChangedEventArgs.put_Handled() */
 HRESULT wuico_visibility_changed_event_args_put__handled(WUICO_VisibilityChangedEventArgs *self, BOOL value);
 
-/* activate Windows.UI.Core.TouchHitTestingEventArgs */
 HRESULT wuico_touch_hit_testing_event_args_new(WUICO_TouchHitTestingEventArgs **out);
 
-/* Windows.UI.Core.TouchHitTestingEventArgs */
-/* Windows.UI.Core.TouchHitTestingEventArgs.get_ProximityEvaluation() */
 HRESULT wuico_touch_hit_testing_event_args_get__proximity_evaluation(WUICO_TouchHitTestingEventArgs *self, WUICO_CoreProximityEvaluation *value);
 
-/* Windows.UI.Core.TouchHitTestingEventArgs.put_ProximityEvaluation() */
 HRESULT wuico_touch_hit_testing_event_args_put__proximity_evaluation(WUICO_TouchHitTestingEventArgs *self, WUICO_CoreProximityEvaluation value);
 
-/* Windows.UI.Core.TouchHitTestingEventArgs.get_Point() */
 HRESULT wuico_touch_hit_testing_event_args_get__point(WUICO_TouchHitTestingEventArgs *self, WF_Point *value);
 
-/* Windows.UI.Core.TouchHitTestingEventArgs.get_BoundingBox() */
 HRESULT wuico_touch_hit_testing_event_args_get__bounding_box(WUICO_TouchHitTestingEventArgs *self, WF_Rect *value);
 
-/* Windows.UI.Core.TouchHitTestingEventArgs.EvaluateProximity(controlBoundingBox) */
 HRESULT wuico_touch_hit_testing_event_args_evaluate_proximity(WUICO_TouchHitTestingEventArgs *self, WF_Rect controlBoundingBox, WUICO_CoreProximityEvaluation *out);
 
-/* Windows.UI.Core.TouchHitTestingEventArgs.EvaluateProximity(controlVertices) */
 HRESULT wuico_touch_hit_testing_event_args_evaluate_proximity_point_u32_core_proximity_evaluation(WUICO_TouchHitTestingEventArgs *self, WF_Point *controlVertices, uint32_t controlVertices_len, WUICO_CoreProximityEvaluation *out);
 
-/* Windows.UI.Core.TouchHitTestingEventArgs.get_Handled() */
 HRESULT wuico_touch_hit_testing_event_args_get__handled(WUICO_TouchHitTestingEventArgs *self, BOOL *value);
 
-/* Windows.UI.Core.TouchHitTestingEventArgs.put_Handled() */
 HRESULT wuico_touch_hit_testing_event_args_put__handled(WUICO_TouchHitTestingEventArgs *self, BOOL value);
 
-/* activate Windows.UI.Core.SystemNavigationManager */
 HRESULT wuico_system_navigation_manager_new(WUICO_SystemNavigationManager **out);
 
-/* Windows.UI.Core.SystemNavigationManager */
-/* Windows.UI.Core.SystemNavigationManager.get_AppViewBackButtonVisibility() */
 HRESULT wuico_system_navigation_manager_get__app_view_back_button_visibility(WUICO_SystemNavigationManager *self, WUICO_AppViewBackButtonVisibility *value);
 
-/* Windows.UI.Core.SystemNavigationManager.put_AppViewBackButtonVisibility() */
 HRESULT wuico_system_navigation_manager_put__app_view_back_button_visibility(WUICO_SystemNavigationManager *self, WUICO_AppViewBackButtonVisibility value);
 
-/* Windows.UI.Core.SystemNavigationManager.GetForCurrentView() */
 HRESULT wuico_system_navigation_manager_get_for_current_view(WUICO_SystemNavigationManager** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuico_system_navigation_manager_on_back_requested(WUICO_SystemNavigationManager *self, cwinrt_event_fn fn, void *ctx);
 void wuico_system_navigation_manager_off_back_requested(WUICO_SystemNavigationManager *self, cwinrt_token token);
 
-/* activate Windows.UI.Core.AutomationProviderRequestedEventArgs */
 HRESULT wuico_automation_provider_requested_event_args_new(WUICO_AutomationProviderRequestedEventArgs **out);
 
-/* Windows.UI.Core.AutomationProviderRequestedEventArgs */
-/* Windows.UI.Core.AutomationProviderRequestedEventArgs.get_AutomationProvider() */
 HRESULT wuico_automation_provider_requested_event_args_get__automation_provider(WUICO_AutomationProviderRequestedEventArgs *self, IInspectable** value);
 
-/* Windows.UI.Core.AutomationProviderRequestedEventArgs.put_AutomationProvider() */
 HRESULT wuico_automation_provider_requested_event_args_put__automation_provider(WUICO_AutomationProviderRequestedEventArgs *self, IInspectable* value);
 
-/* Windows.UI.Core.AutomationProviderRequestedEventArgs.get_Handled() */
 HRESULT wuico_automation_provider_requested_event_args_get__handled(WUICO_AutomationProviderRequestedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Core.AutomationProviderRequestedEventArgs.put_Handled() */
 HRESULT wuico_automation_provider_requested_event_args_put__handled(WUICO_AutomationProviderRequestedEventArgs *self, BOOL value);
 
-/* activate Windows.UI.Core.BackRequestedEventArgs */
 HRESULT wuico_back_requested_event_args_new(WUICO_BackRequestedEventArgs **out);
 
-/* Windows.UI.Core.BackRequestedEventArgs */
-/* Windows.UI.Core.BackRequestedEventArgs.get_Handled() */
 HRESULT wuico_back_requested_event_args_get__handled(WUICO_BackRequestedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Core.BackRequestedEventArgs.put_Handled() */
 HRESULT wuico_back_requested_event_args_put__handled(WUICO_BackRequestedEventArgs *self, BOOL value);
 
-/* activate Windows.UI.Core.CharacterReceivedEventArgs */
 HRESULT wuico_character_received_event_args_new(WUICO_CharacterReceivedEventArgs **out);
 
-/* Windows.UI.Core.CharacterReceivedEventArgs */
-/* Windows.UI.Core.CharacterReceivedEventArgs.get_KeyCode() */
 HRESULT wuico_character_received_event_args_get__key_code(WUICO_CharacterReceivedEventArgs *self, uint32_t *value);
 
-/* Windows.UI.Core.CharacterReceivedEventArgs.get_KeyStatus() */
 HRESULT wuico_character_received_event_args_get__key_status(WUICO_CharacterReceivedEventArgs *self, WUICO_CorePhysicalKeyStatus *value);
 
-/* Windows.UI.Core.CharacterReceivedEventArgs.get_Handled() */
 HRESULT wuico_character_received_event_args_get__handled(WUICO_CharacterReceivedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Core.CharacterReceivedEventArgs.put_Handled() */
 HRESULT wuico_character_received_event_args_put__handled(WUICO_CharacterReceivedEventArgs *self, BOOL value);
 
-/* activate Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs */
 HRESULT wuico_closest_interactive_bounds_requested_event_args_new(WUICO_ClosestInteractiveBoundsRequestedEventArgs **out);
 
-/* Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs */
-/* Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs.get_PointerPosition() */
 HRESULT wuico_closest_interactive_bounds_requested_event_args_get__pointer_position(WUICO_ClosestInteractiveBoundsRequestedEventArgs *self, WF_Point *value);
 
-/* Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs.get_SearchBounds() */
 HRESULT wuico_closest_interactive_bounds_requested_event_args_get__search_bounds(WUICO_ClosestInteractiveBoundsRequestedEventArgs *self, WF_Rect *value);
 
-/* Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs.get_ClosestInteractiveBounds() */
 HRESULT wuico_closest_interactive_bounds_requested_event_args_get__closest_interactive_bounds(WUICO_ClosestInteractiveBoundsRequestedEventArgs *self, WF_Rect *value);
 
-/* Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs.put_ClosestInteractiveBounds() */
 HRESULT wuico_closest_interactive_bounds_requested_event_args_put__closest_interactive_bounds(WUICO_ClosestInteractiveBoundsRequestedEventArgs *self, WF_Rect value);
 
-/* activate Windows.UI.Core.CoreAcceleratorKeys */
 HRESULT wuico_core_accelerator_keys_new(WUICO_CoreAcceleratorKeys **out);
 
-/* Windows.UI.Core.CoreAcceleratorKeys */
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuico_core_accelerator_keys_on_accelerator_key_activated(WUICO_CoreAcceleratorKeys *self, cwinrt_event_fn fn, void *ctx);
 void wuico_core_accelerator_keys_off_accelerator_key_activated(WUICO_CoreAcceleratorKeys *self, cwinrt_token token);
 
-/* activate Windows.UI.Core.CoreComponentInputSource */
 HRESULT wuico_core_component_input_source_new(WUICO_CoreComponentInputSource **out);
 
-/* Windows.UI.Core.CoreComponentInputSource */
-/* Windows.UI.Core.CoreComponentInputSource.get_Dispatcher() */
 HRESULT wuico_core_component_input_source_get__dispatcher(WUICO_CoreComponentInputSource *self, WUICO_CoreDispatcher** value);
 
-/* Windows.UI.Core.CoreComponentInputSource.get_IsInputEnabled() */
 HRESULT wuico_core_component_input_source_get__is_input_enabled(WUICO_CoreComponentInputSource *self, BOOL *value);
 
-/* Windows.UI.Core.CoreComponentInputSource.put_IsInputEnabled() */
 HRESULT wuico_core_component_input_source_put__is_input_enabled(WUICO_CoreComponentInputSource *self, BOOL value);
 
-/* Windows.UI.Core.CoreComponentInputSource.ReleasePointerCapture() */
 HRESULT wuico_core_component_input_source_release_pointer_capture(WUICO_CoreComponentInputSource *self);
 
-/* Windows.UI.Core.CoreComponentInputSource.SetPointerCapture() */
 HRESULT wuico_core_component_input_source_set_pointer_capture(WUICO_CoreComponentInputSource *self);
 
-/* Windows.UI.Core.CoreComponentInputSource.get_HasCapture() */
 HRESULT wuico_core_component_input_source_get__has_capture(WUICO_CoreComponentInputSource *self, BOOL *value);
 
-/* Windows.UI.Core.CoreComponentInputSource.get_PointerPosition() */
 HRESULT wuico_core_component_input_source_get__pointer_position(WUICO_CoreComponentInputSource *self, WF_Point *value);
 
-/* Windows.UI.Core.CoreComponentInputSource.get_PointerCursor() */
 HRESULT wuico_core_component_input_source_get__pointer_cursor(WUICO_CoreComponentInputSource *self, WUICO_CoreCursor** value);
 
-/* Windows.UI.Core.CoreComponentInputSource.put_PointerCursor() */
 HRESULT wuico_core_component_input_source_put__pointer_cursor(WUICO_CoreComponentInputSource *self, WUICO_CoreCursor* value);
 
-/* Windows.UI.Core.CoreComponentInputSource.GetCurrentKeyState(virtualKey) */
 HRESULT wuico_core_component_input_source_get_current_key_state(WUICO_CoreComponentInputSource *self, WSY_VirtualKey virtualKey, WUICO_CoreVirtualKeyStates *out);
 
-/* Windows.UI.Core.CoreComponentInputSource.get_HasFocus() */
 HRESULT wuico_core_component_input_source_get__has_focus(WUICO_CoreComponentInputSource *self, BOOL *value);
 
-/* Windows.UI.Core.CoreComponentInputSource.GetCurrentKeyEventDeviceId() */
 HRESULT wuico_core_component_input_source_get_current_key_event_device_id(WUICO_CoreComponentInputSource *self, cwinrt_hstring *out);
 
-/* Windows.UI.Core.CoreComponentInputSource.get_DispatcherQueue() */
 HRESULT wuico_core_component_input_source_get__dispatcher_queue(WUICO_CoreComponentInputSource *self, WSY_DispatcherQueue** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuico_core_component_input_source_on_input_enabled(WUICO_CoreComponentInputSource *self, cwinrt_event_fn fn, void *ctx);
@@ -1079,94 +1006,63 @@ void wuico_core_component_input_source_off_touch_hit_testing(WUICO_CoreComponent
 cwinrt_token wuico_core_component_input_source_on_closest_interactive_bounds_requested(WUICO_CoreComponentInputSource *self, cwinrt_event_fn fn, void *ctx);
 void wuico_core_component_input_source_off_closest_interactive_bounds_requested(WUICO_CoreComponentInputSource *self, cwinrt_token token);
 
-/* activate Windows.UI.Core.CoreCursor */
 HRESULT wuico_core_cursor_new(WUICO_CoreCursor **out);
 
-/* Windows.UI.Core.CoreCursor */
-/* Windows.UI.Core.CoreCursor.get_Id() */
 HRESULT wuico_core_cursor_get__id(WUICO_CoreCursor *self, uint32_t *value);
 
-/* Windows.UI.Core.CoreCursor.get_Type() */
 HRESULT wuico_core_cursor_get__type(WUICO_CoreCursor *self, WUICO_CoreCursorType *value);
 
-/* activate Windows.UI.Core.CoreDispatcher */
 HRESULT wuico_core_dispatcher_new(WUICO_CoreDispatcher **out);
 
-/* Windows.UI.Core.CoreDispatcher */
-/* Windows.UI.Core.CoreDispatcher.get_HasThreadAccess() */
 HRESULT wuico_core_dispatcher_get__has_thread_access(WUICO_CoreDispatcher *self, BOOL *value);
 
-/* Windows.UI.Core.CoreDispatcher.ProcessEvents(options) */
 HRESULT wuico_core_dispatcher_process_events(WUICO_CoreDispatcher *self, WUICO_CoreProcessEventsOption options);
 
-/* Windows.UI.Core.CoreDispatcher.RunAsync(priority, agileCallback) */
 HRESULT wuico_core_dispatcher_run_async(WUICO_CoreDispatcher *self, WUICO_CoreDispatcherPriority priority, WUICO_DispatchedHandler* agileCallback, WF_IAsyncAction** out);
 
-/* Windows.UI.Core.CoreDispatcher.RunIdleAsync(agileCallback) */
 HRESULT wuico_core_dispatcher_run_idle_async(WUICO_CoreDispatcher *self, WUICO_IdleDispatchedHandler* agileCallback, WF_IAsyncAction** out);
 
-/* Windows.UI.Core.CoreDispatcher.get_CurrentPriority() */
 HRESULT wuico_core_dispatcher_get__current_priority(WUICO_CoreDispatcher *self, WUICO_CoreDispatcherPriority *value);
 
-/* Windows.UI.Core.CoreDispatcher.put_CurrentPriority() */
 HRESULT wuico_core_dispatcher_put__current_priority(WUICO_CoreDispatcher *self, WUICO_CoreDispatcherPriority value);
 
-/* Windows.UI.Core.CoreDispatcher.ShouldYield() */
 HRESULT wuico_core_dispatcher_should_yield(WUICO_CoreDispatcher *self, BOOL *out);
 
-/* Windows.UI.Core.CoreDispatcher.ShouldYield(priority) */
 HRESULT wuico_core_dispatcher_should_yield_core_dispatcher_priority_b(WUICO_CoreDispatcher *self, WUICO_CoreDispatcherPriority priority, BOOL *out);
 
-/* Windows.UI.Core.CoreDispatcher.StopProcessEvents() */
 HRESULT wuico_core_dispatcher_stop_process_events(WUICO_CoreDispatcher *self);
 
-/* Windows.UI.Core.CoreDispatcher.TryRunAsync(priority, agileCallback) */
 HRESULT wuico_core_dispatcher_try_run_async(WUICO_CoreDispatcher *self, WUICO_CoreDispatcherPriority priority, WUICO_DispatchedHandler* agileCallback, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Core.CoreDispatcher.TryRunIdleAsync(agileCallback) */
 HRESULT wuico_core_dispatcher_try_run_idle_async(WUICO_CoreDispatcher *self, WUICO_IdleDispatchedHandler* agileCallback, WF_IAsyncOperation_Bool** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuico_core_dispatcher_on_accelerator_key_activated(WUICO_CoreDispatcher *self, cwinrt_event_fn fn, void *ctx);
 void wuico_core_dispatcher_off_accelerator_key_activated(WUICO_CoreDispatcher *self, cwinrt_token token);
 
-/* activate Windows.UI.Core.CoreIndependentInputSource */
 HRESULT wuico_core_independent_input_source_new(WUICO_CoreIndependentInputSource **out);
 
-/* Windows.UI.Core.CoreIndependentInputSource */
-/* Windows.UI.Core.CoreIndependentInputSource.get_Dispatcher() */
 HRESULT wuico_core_independent_input_source_get__dispatcher(WUICO_CoreIndependentInputSource *self, WUICO_CoreDispatcher** value);
 
-/* Windows.UI.Core.CoreIndependentInputSource.get_IsInputEnabled() */
 HRESULT wuico_core_independent_input_source_get__is_input_enabled(WUICO_CoreIndependentInputSource *self, BOOL *value);
 
-/* Windows.UI.Core.CoreIndependentInputSource.put_IsInputEnabled() */
 HRESULT wuico_core_independent_input_source_put__is_input_enabled(WUICO_CoreIndependentInputSource *self, BOOL value);
 
-/* Windows.UI.Core.CoreIndependentInputSource.ReleasePointerCapture() */
 HRESULT wuico_core_independent_input_source_release_pointer_capture(WUICO_CoreIndependentInputSource *self);
 
-/* Windows.UI.Core.CoreIndependentInputSource.SetPointerCapture() */
 HRESULT wuico_core_independent_input_source_set_pointer_capture(WUICO_CoreIndependentInputSource *self);
 
-/* Windows.UI.Core.CoreIndependentInputSource.get_HasCapture() */
 HRESULT wuico_core_independent_input_source_get__has_capture(WUICO_CoreIndependentInputSource *self, BOOL *value);
 
-/* Windows.UI.Core.CoreIndependentInputSource.get_PointerPosition() */
 HRESULT wuico_core_independent_input_source_get__pointer_position(WUICO_CoreIndependentInputSource *self, WF_Point *value);
 
-/* Windows.UI.Core.CoreIndependentInputSource.get_PointerCursor() */
 HRESULT wuico_core_independent_input_source_get__pointer_cursor(WUICO_CoreIndependentInputSource *self, WUICO_CoreCursor** value);
 
-/* Windows.UI.Core.CoreIndependentInputSource.put_PointerCursor() */
 HRESULT wuico_core_independent_input_source_put__pointer_cursor(WUICO_CoreIndependentInputSource *self, WUICO_CoreCursor* value);
 
-/* Windows.UI.Core.CoreIndependentInputSource.get_DispatcherQueue() */
 HRESULT wuico_core_independent_input_source_get__dispatcher_queue(WUICO_CoreIndependentInputSource *self, WSY_DispatcherQueue** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuico_core_independent_input_source_on_input_enabled(WUICO_CoreIndependentInputSource *self, cwinrt_event_fn fn, void *ctx);
@@ -1202,117 +1098,78 @@ void wuico_core_independent_input_source_off_pointer_routed_to(WUICO_CoreIndepen
 cwinrt_token wuico_core_independent_input_source_on_pointer_routed_released(WUICO_CoreIndependentInputSource *self, cwinrt_event_fn fn, void *ctx);
 void wuico_core_independent_input_source_off_pointer_routed_released(WUICO_CoreIndependentInputSource *self, cwinrt_token token);
 
-/* activate Windows.UI.Core.CoreIndependentInputSourceController */
 HRESULT wuico_core_independent_input_source_controller_new(WUICO_CoreIndependentInputSourceController **out);
 
-/* Windows.UI.Core.CoreIndependentInputSourceController */
-/* Windows.UI.Core.CoreIndependentInputSourceController.get_IsTransparentForUncontrolledInput() */
 HRESULT wuico_core_independent_input_source_controller_get__is_transparent_for_uncontrolled_input(WUICO_CoreIndependentInputSourceController *self, BOOL *value);
 
-/* Windows.UI.Core.CoreIndependentInputSourceController.put_IsTransparentForUncontrolledInput() */
 HRESULT wuico_core_independent_input_source_controller_put__is_transparent_for_uncontrolled_input(WUICO_CoreIndependentInputSourceController *self, BOOL value);
 
-/* Windows.UI.Core.CoreIndependentInputSourceController.get_IsPalmRejectionEnabled() */
 HRESULT wuico_core_independent_input_source_controller_get__is_palm_rejection_enabled(WUICO_CoreIndependentInputSourceController *self, BOOL *value);
 
-/* Windows.UI.Core.CoreIndependentInputSourceController.put_IsPalmRejectionEnabled() */
 HRESULT wuico_core_independent_input_source_controller_put__is_palm_rejection_enabled(WUICO_CoreIndependentInputSourceController *self, BOOL value);
 
-/* Windows.UI.Core.CoreIndependentInputSourceController.get_Source() */
 HRESULT wuico_core_independent_input_source_controller_get__source(WUICO_CoreIndependentInputSourceController *self, WUICO_CoreIndependentInputSource** value);
 
-/* Windows.UI.Core.CoreIndependentInputSourceController.SetControlledInput(inputTypes) */
 HRESULT wuico_core_independent_input_source_controller_set_controlled_input(WUICO_CoreIndependentInputSourceController *self, WUICO_CoreInputDeviceTypes inputTypes);
 
-/* Windows.UI.Core.CoreIndependentInputSourceController.SetControlledInput(inputTypes, required, excluded) */
 HRESULT wuico_core_independent_input_source_controller_set_controlled_input_core_input_device_types_core_indepen_5a938076(WUICO_CoreIndependentInputSourceController *self, WUICO_CoreInputDeviceTypes inputTypes, WUICO_CoreIndependentInputFilters required, WUICO_CoreIndependentInputFilters excluded);
 
-/* Windows.UI.Core.CoreIndependentInputSourceController.Close() */
 HRESULT wuico_core_independent_input_source_controller_close(WUICO_CoreIndependentInputSourceController *self);
 
-/* Windows.UI.Core.CoreIndependentInputSourceController.CreateForVisual(visual) */
 HRESULT wuico_core_independent_input_source_controller_create_for_visual(WUC_Visual* visual, WUICO_CoreIndependentInputSourceController** out);
 
-/* Windows.UI.Core.CoreIndependentInputSourceController.CreateForIVisualElement(visualElement) */
 HRESULT wuico_core_independent_input_source_controller_create_for_i_visual_element(WUC_IVisualElement* visualElement, WUICO_CoreIndependentInputSourceController** out);
 
-/* activate Windows.UI.Core.CoreWindow */
 HRESULT wuico_core_window_new(WUICO_CoreWindow **out);
 
-/* Windows.UI.Core.CoreWindow */
-/* Windows.UI.Core.CoreWindow.get_AutomationHostProvider() */
 HRESULT wuico_core_window_get__automation_host_provider(WUICO_CoreWindow *self, IInspectable** value);
 
-/* Windows.UI.Core.CoreWindow.get_Bounds() */
 HRESULT wuico_core_window_get__bounds(WUICO_CoreWindow *self, WF_Rect *value);
 
-/* Windows.UI.Core.CoreWindow.get_CustomProperties() */
 HRESULT wuico_core_window_get__custom_properties(WUICO_CoreWindow *self, WFOCO_IPropertySet** value);
 
-/* Windows.UI.Core.CoreWindow.get_Dispatcher() */
 HRESULT wuico_core_window_get__dispatcher(WUICO_CoreWindow *self, WUICO_CoreDispatcher** value);
 
-/* Windows.UI.Core.CoreWindow.get_FlowDirection() */
 HRESULT wuico_core_window_get__flow_direction(WUICO_CoreWindow *self, WUICO_CoreWindowFlowDirection *value);
 
-/* Windows.UI.Core.CoreWindow.put_FlowDirection() */
 HRESULT wuico_core_window_put__flow_direction(WUICO_CoreWindow *self, WUICO_CoreWindowFlowDirection value);
 
-/* Windows.UI.Core.CoreWindow.get_IsInputEnabled() */
 HRESULT wuico_core_window_get__is_input_enabled(WUICO_CoreWindow *self, BOOL *value);
 
-/* Windows.UI.Core.CoreWindow.put_IsInputEnabled() */
 HRESULT wuico_core_window_put__is_input_enabled(WUICO_CoreWindow *self, BOOL value);
 
-/* Windows.UI.Core.CoreWindow.get_PointerCursor() */
 HRESULT wuico_core_window_get__pointer_cursor(WUICO_CoreWindow *self, WUICO_CoreCursor** value);
 
-/* Windows.UI.Core.CoreWindow.put_PointerCursor() */
 HRESULT wuico_core_window_put__pointer_cursor(WUICO_CoreWindow *self, WUICO_CoreCursor* value);
 
-/* Windows.UI.Core.CoreWindow.get_PointerPosition() */
 HRESULT wuico_core_window_get__pointer_position(WUICO_CoreWindow *self, WF_Point *value);
 
-/* Windows.UI.Core.CoreWindow.get_Visible() */
 HRESULT wuico_core_window_get__visible(WUICO_CoreWindow *self, BOOL *value);
 
-/* Windows.UI.Core.CoreWindow.Activate() */
 HRESULT wuico_core_window_activate(WUICO_CoreWindow *self);
 
-/* Windows.UI.Core.CoreWindow.Close() */
 HRESULT wuico_core_window_close(WUICO_CoreWindow *self);
 
-/* Windows.UI.Core.CoreWindow.GetAsyncKeyState(virtualKey) */
 HRESULT wuico_core_window_get_async_key_state(WUICO_CoreWindow *self, WSY_VirtualKey virtualKey, WUICO_CoreVirtualKeyStates *out);
 
-/* Windows.UI.Core.CoreWindow.GetKeyState(virtualKey) */
 HRESULT wuico_core_window_get_key_state(WUICO_CoreWindow *self, WSY_VirtualKey virtualKey, WUICO_CoreVirtualKeyStates *out);
 
-/* Windows.UI.Core.CoreWindow.ReleasePointerCapture() */
 HRESULT wuico_core_window_release_pointer_capture(WUICO_CoreWindow *self);
 
-/* Windows.UI.Core.CoreWindow.SetPointerCapture() */
 HRESULT wuico_core_window_set_pointer_capture(WUICO_CoreWindow *self);
 
-/* Windows.UI.Core.CoreWindow.put_PointerPosition() */
 HRESULT wuico_core_window_put__pointer_position(WUICO_CoreWindow *self, WF_Point value);
 
-/* Windows.UI.Core.CoreWindow.GetCurrentKeyEventDeviceId() */
 HRESULT wuico_core_window_get_current_key_event_device_id(WUICO_CoreWindow *self, cwinrt_hstring *out);
 
-/* Windows.UI.Core.CoreWindow.get_DispatcherQueue() */
 HRESULT wuico_core_window_get__dispatcher_queue(WUICO_CoreWindow *self, WSY_DispatcherQueue** value);
 
-/* Windows.UI.Core.CoreWindow.get_ActivationMode() */
 HRESULT wuico_core_window_get__activation_mode(WUICO_CoreWindow *self, WUICO_CoreWindowActivationMode *value);
 
-/* Windows.UI.Core.CoreWindow.get_UIContext() */
 HRESULT wuico_core_window_get__u_i_context(WUICO_CoreWindow *self, WUI_UIContext** value);
 
-/* Windows.UI.Core.CoreWindow.GetForCurrentThread() */
 HRESULT wuico_core_window_get_for_current_thread(WUICO_CoreWindow** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuico_core_window_on_activated(WUICO_CoreWindow *self, cwinrt_event_fn fn, void *ctx);
@@ -1384,411 +1241,234 @@ void wuico_core_window_off_resize_started(WUICO_CoreWindow *self, cwinrt_token t
 cwinrt_token wuico_core_window_on_resize_completed(WUICO_CoreWindow *self, cwinrt_event_fn fn, void *ctx);
 void wuico_core_window_off_resize_completed(WUICO_CoreWindow *self, cwinrt_token token);
 
-/* activate Windows.UI.Core.CoreWindowDialog */
 HRESULT wuico_core_window_dialog_new(WUICO_CoreWindowDialog **out);
 
-/* Windows.UI.Core.CoreWindowDialog */
-/* Windows.UI.Core.CoreWindowDialog.get_MaxSize() */
 HRESULT wuico_core_window_dialog_get__max_size(WUICO_CoreWindowDialog *self, WF_Size *value);
 
-/* Windows.UI.Core.CoreWindowDialog.get_MinSize() */
 HRESULT wuico_core_window_dialog_get__min_size(WUICO_CoreWindowDialog *self, WF_Size *value);
 
-/* Windows.UI.Core.CoreWindowDialog.get_Title() */
 HRESULT wuico_core_window_dialog_get__title(WUICO_CoreWindowDialog *self, cwinrt_hstring *value);
 
-/* Windows.UI.Core.CoreWindowDialog.put_Title() */
 HRESULT wuico_core_window_dialog_put__title(WUICO_CoreWindowDialog *self, cwinrt_hstring value);
 
-/* Windows.UI.Core.CoreWindowDialog.get_IsInteractionDelayed() */
 HRESULT wuico_core_window_dialog_get__is_interaction_delayed(WUICO_CoreWindowDialog *self, int32_t *value);
 
-/* Windows.UI.Core.CoreWindowDialog.put_IsInteractionDelayed() */
 HRESULT wuico_core_window_dialog_put__is_interaction_delayed(WUICO_CoreWindowDialog *self, int32_t value);
 
-/* Windows.UI.Core.CoreWindowDialog.get_Commands() */
 HRESULT wuico_core_window_dialog_get__commands(WUICO_CoreWindowDialog *self, WFOCO_IVector_WUIPO_IUICommand** value);
 
-/* Windows.UI.Core.CoreWindowDialog.get_DefaultCommandIndex() */
 HRESULT wuico_core_window_dialog_get__default_command_index(WUICO_CoreWindowDialog *self, uint32_t *value);
 
-/* Windows.UI.Core.CoreWindowDialog.put_DefaultCommandIndex() */
 HRESULT wuico_core_window_dialog_put__default_command_index(WUICO_CoreWindowDialog *self, uint32_t value);
 
-/* Windows.UI.Core.CoreWindowDialog.get_CancelCommandIndex() */
 HRESULT wuico_core_window_dialog_get__cancel_command_index(WUICO_CoreWindowDialog *self, uint32_t *value);
 
-/* Windows.UI.Core.CoreWindowDialog.put_CancelCommandIndex() */
 HRESULT wuico_core_window_dialog_put__cancel_command_index(WUICO_CoreWindowDialog *self, uint32_t value);
 
-/* Windows.UI.Core.CoreWindowDialog.get_BackButtonCommand() */
 HRESULT wuico_core_window_dialog_get__back_button_command(WUICO_CoreWindowDialog *self, WUIPO_UICommandInvokedHandler** value);
 
-/* Windows.UI.Core.CoreWindowDialog.put_BackButtonCommand() */
 HRESULT wuico_core_window_dialog_put__back_button_command(WUICO_CoreWindowDialog *self, WUIPO_UICommandInvokedHandler* value);
 
-/* Windows.UI.Core.CoreWindowDialog.ShowAsync() */
 HRESULT wuico_core_window_dialog_show_async(WUICO_CoreWindowDialog *self, WF_IAsyncOperation_WUIPO_IUICommand** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuico_core_window_dialog_on_showing(WUICO_CoreWindowDialog *self, cwinrt_event_fn fn, void *ctx);
 void wuico_core_window_dialog_off_showing(WUICO_CoreWindowDialog *self, cwinrt_token token);
 
-/* activate Windows.UI.Core.CoreWindowEventArgs */
 HRESULT wuico_core_window_event_args_new(WUICO_CoreWindowEventArgs **out);
 
-/* Windows.UI.Core.CoreWindowEventArgs */
-/* Windows.UI.Core.CoreWindowEventArgs.get_Handled() */
 HRESULT wuico_core_window_event_args_get__handled(WUICO_CoreWindowEventArgs *self, BOOL *value);
 
-/* Windows.UI.Core.CoreWindowEventArgs.put_Handled() */
 HRESULT wuico_core_window_event_args_put__handled(WUICO_CoreWindowEventArgs *self, BOOL value);
 
-/* activate Windows.UI.Core.CoreWindowFlyout */
 HRESULT wuico_core_window_flyout_new(WUICO_CoreWindowFlyout **out);
 
-/* Windows.UI.Core.CoreWindowFlyout */
-/* Windows.UI.Core.CoreWindowFlyout.get_MaxSize() */
 HRESULT wuico_core_window_flyout_get__max_size(WUICO_CoreWindowFlyout *self, WF_Size *value);
 
-/* Windows.UI.Core.CoreWindowFlyout.get_MinSize() */
 HRESULT wuico_core_window_flyout_get__min_size(WUICO_CoreWindowFlyout *self, WF_Size *value);
 
-/* Windows.UI.Core.CoreWindowFlyout.get_Title() */
 HRESULT wuico_core_window_flyout_get__title(WUICO_CoreWindowFlyout *self, cwinrt_hstring *value);
 
-/* Windows.UI.Core.CoreWindowFlyout.put_Title() */
 HRESULT wuico_core_window_flyout_put__title(WUICO_CoreWindowFlyout *self, cwinrt_hstring value);
 
-/* Windows.UI.Core.CoreWindowFlyout.get_IsInteractionDelayed() */
 HRESULT wuico_core_window_flyout_get__is_interaction_delayed(WUICO_CoreWindowFlyout *self, int32_t *value);
 
-/* Windows.UI.Core.CoreWindowFlyout.put_IsInteractionDelayed() */
 HRESULT wuico_core_window_flyout_put__is_interaction_delayed(WUICO_CoreWindowFlyout *self, int32_t value);
 
-/* Windows.UI.Core.CoreWindowFlyout.get_Commands() */
 HRESULT wuico_core_window_flyout_get__commands(WUICO_CoreWindowFlyout *self, WFOCO_IVector_WUIPO_IUICommand** value);
 
-/* Windows.UI.Core.CoreWindowFlyout.get_DefaultCommandIndex() */
 HRESULT wuico_core_window_flyout_get__default_command_index(WUICO_CoreWindowFlyout *self, uint32_t *value);
 
-/* Windows.UI.Core.CoreWindowFlyout.put_DefaultCommandIndex() */
 HRESULT wuico_core_window_flyout_put__default_command_index(WUICO_CoreWindowFlyout *self, uint32_t value);
 
-/* Windows.UI.Core.CoreWindowFlyout.get_BackButtonCommand() */
 HRESULT wuico_core_window_flyout_get__back_button_command(WUICO_CoreWindowFlyout *self, WUIPO_UICommandInvokedHandler** value);
 
-/* Windows.UI.Core.CoreWindowFlyout.put_BackButtonCommand() */
 HRESULT wuico_core_window_flyout_put__back_button_command(WUICO_CoreWindowFlyout *self, WUIPO_UICommandInvokedHandler* value);
 
-/* Windows.UI.Core.CoreWindowFlyout.ShowAsync() */
 HRESULT wuico_core_window_flyout_show_async(WUICO_CoreWindowFlyout *self, WF_IAsyncOperation_WUIPO_IUICommand** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuico_core_window_flyout_on_showing(WUICO_CoreWindowFlyout *self, cwinrt_event_fn fn, void *ctx);
 void wuico_core_window_flyout_off_showing(WUICO_CoreWindowFlyout *self, cwinrt_token token);
 
-/* activate Windows.UI.Core.CoreWindowPopupShowingEventArgs */
 HRESULT wuico_core_window_popup_showing_event_args_new(WUICO_CoreWindowPopupShowingEventArgs **out);
 
-/* Windows.UI.Core.CoreWindowPopupShowingEventArgs */
-/* Windows.UI.Core.CoreWindowPopupShowingEventArgs.SetDesiredSize() */
 HRESULT wuico_core_window_popup_showing_event_args_set_desired_size(WUICO_CoreWindowPopupShowingEventArgs *self, WF_Size value);
 
-/* activate Windows.UI.Core.CoreWindowResizeManager */
 HRESULT wuico_core_window_resize_manager_new(WUICO_CoreWindowResizeManager **out);
 
-/* Windows.UI.Core.CoreWindowResizeManager */
-/* Windows.UI.Core.CoreWindowResizeManager.NotifyLayoutCompleted() */
 HRESULT wuico_core_window_resize_manager_notify_layout_completed(WUICO_CoreWindowResizeManager *self);
 
-/* Windows.UI.Core.CoreWindowResizeManager.put_ShouldWaitForLayoutCompletion() */
 HRESULT wuico_core_window_resize_manager_put__should_wait_for_layout_completion(WUICO_CoreWindowResizeManager *self, BOOL value);
 
-/* Windows.UI.Core.CoreWindowResizeManager.get_ShouldWaitForLayoutCompletion() */
 HRESULT wuico_core_window_resize_manager_get__should_wait_for_layout_completion(WUICO_CoreWindowResizeManager *self, BOOL *value);
 
-/* Windows.UI.Core.CoreWindowResizeManager.GetForCurrentView() */
 HRESULT wuico_core_window_resize_manager_get_for_current_view(WUICO_CoreWindowResizeManager** out);
 
-/* Windows.UI.Core.DispatchedHandler */
-/* Windows.UI.Core.DispatchedHandler.Invoke() */
 HRESULT wuico_dispatched_handler_invoke(WUICO_DispatchedHandler *self);
 
-/* Windows.UI.Core.ICoreCursorFactory */
-/* Windows.UI.Core.ICoreCursorFactory.CreateCursor(id) */
 HRESULT wuico_core_cursor_factory_create_cursor(WUICO_ICoreCursorFactory *self, WUICO_CoreCursorType type_, uint32_t id, WUICO_CoreCursor** out);
 
-/* Windows.UI.Core.ICoreIndependentInputSourceControllerStatics */
-/* Windows.UI.Core.ICoreIndependentInputSourceControllerStatics.CreateForVisual(visual) */
 HRESULT wuico_core_independent_input_source_controller_statics_create_for_visual(WUICO_ICoreIndependentInputSourceControllerStatics *self, WUC_Visual* visual, WUICO_CoreIndependentInputSourceController** out);
 
-/* Windows.UI.Core.ICoreIndependentInputSourceControllerStatics.CreateForIVisualElement(visualElement) */
 HRESULT wuico_core_independent_input_source_controller_statics_create_for_i_visual_element(WUICO_ICoreIndependentInputSourceControllerStatics *self, WUC_IVisualElement* visualElement, WUICO_CoreIndependentInputSourceController** out);
 
-/* Windows.UI.Core.ICoreWindowDialogFactory */
-/* Windows.UI.Core.ICoreWindowDialogFactory.CreateWithTitle(title) */
 HRESULT wuico_core_window_dialog_factory_create_with_title(WUICO_ICoreWindowDialogFactory *self, cwinrt_hstring title, WUICO_CoreWindowDialog** out);
 
-/* activate Windows.UI.Core.AcceleratorKeyEventArgs */
 HRESULT wuico_accelerator_key_event_args_new(WUICO_AcceleratorKeyEventArgs **out);
 
-/* Windows.UI.Core.AcceleratorKeyEventArgs */
-/* Windows.UI.Core.AcceleratorKeyEventArgs.get_EventType() */
 HRESULT wuico_accelerator_key_event_args_get__event_type(WUICO_AcceleratorKeyEventArgs *self, WUICO_CoreAcceleratorKeyEventType *value);
 
-/* Windows.UI.Core.AcceleratorKeyEventArgs.get_VirtualKey() */
 HRESULT wuico_accelerator_key_event_args_get__virtual_key(WUICO_AcceleratorKeyEventArgs *self, WSY_VirtualKey *value);
 
-/* Windows.UI.Core.AcceleratorKeyEventArgs.get_KeyStatus() */
 HRESULT wuico_accelerator_key_event_args_get__key_status(WUICO_AcceleratorKeyEventArgs *self, WUICO_CorePhysicalKeyStatus *value);
 
-/* Windows.UI.Core.AcceleratorKeyEventArgs.get_Handled() */
 HRESULT wuico_accelerator_key_event_args_get__handled(WUICO_AcceleratorKeyEventArgs *self, BOOL *value);
 
-/* Windows.UI.Core.AcceleratorKeyEventArgs.put_Handled() */
 HRESULT wuico_accelerator_key_event_args_put__handled(WUICO_AcceleratorKeyEventArgs *self, BOOL value);
 
-/* Windows.UI.Core.AcceleratorKeyEventArgs.get_DeviceId() */
 HRESULT wuico_accelerator_key_event_args_get__device_id(WUICO_AcceleratorKeyEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.Core.ICoreWindowFlyoutFactory */
-/* Windows.UI.Core.ICoreWindowFlyoutFactory.Create(position) */
 HRESULT wuico_core_window_flyout_factory_create(WUICO_ICoreWindowFlyoutFactory *self, WF_Point position, WUICO_CoreWindowFlyout** out);
 
-/* Windows.UI.Core.ICoreWindowFlyoutFactory.CreateWithTitle(position, title) */
 HRESULT wuico_core_window_flyout_factory_create_with_title(WUICO_ICoreWindowFlyoutFactory *self, WF_Point position, cwinrt_hstring title, WUICO_CoreWindowFlyout** out);
 
-/* Windows.UI.Core.ICoreWindowResizeManagerStatics */
-/* Windows.UI.Core.ICoreWindowResizeManagerStatics.GetForCurrentView() */
 HRESULT wuico_core_window_resize_manager_statics_get_for_current_view(WUICO_ICoreWindowResizeManagerStatics *self, WUICO_CoreWindowResizeManager** out);
 
-/* Windows.UI.Core.ICoreWindowStatic */
-/* Windows.UI.Core.ICoreWindowStatic.GetForCurrentThread() */
 HRESULT wuico_core_window_static_get_for_current_thread(WUICO_ICoreWindowStatic *self, WUICO_CoreWindow** out);
 
-/* Windows.UI.Core.IInitializeWithCoreWindow */
-/* Windows.UI.Core.IInitializeWithCoreWindow.Initialize(window) */
 HRESULT wuico_initialize_with_core_window_initialize(WUICO_IInitializeWithCoreWindow *self, WUICO_CoreWindow* window);
 
-/* Windows.UI.Core.ISystemNavigationManagerStatics */
-/* Windows.UI.Core.ISystemNavigationManagerStatics.GetForCurrentView() */
 HRESULT wuico_system_navigation_manager_statics_get_for_current_view(WUICO_ISystemNavigationManagerStatics *self, WUICO_SystemNavigationManager** out);
 
-/* Windows.UI.Core.IdleDispatchedHandler */
-/* Windows.UI.Core.IdleDispatchedHandler.Invoke(e) */
 HRESULT wuico_idle_dispatched_handler_invoke(WUICO_IdleDispatchedHandler *self, WUICO_IdleDispatchedHandlerArgs* e);
 
-/* activate Windows.UI.Core.IdleDispatchedHandlerArgs */
 HRESULT wuico_idle_dispatched_handler_args_new(WUICO_IdleDispatchedHandlerArgs **out);
 
-/* Windows.UI.Core.IdleDispatchedHandlerArgs */
-/* Windows.UI.Core.IdleDispatchedHandlerArgs.get_IsDispatcherIdle() */
 HRESULT wuico_idle_dispatched_handler_args_get__is_dispatcher_idle(WUICO_IdleDispatchedHandlerArgs *self, BOOL *value);
 
-/* activate Windows.UI.Core.InputEnabledEventArgs */
 HRESULT wuico_input_enabled_event_args_new(WUICO_InputEnabledEventArgs **out);
 
-/* Windows.UI.Core.InputEnabledEventArgs */
-/* Windows.UI.Core.InputEnabledEventArgs.get_InputEnabled() */
 HRESULT wuico_input_enabled_event_args_get__input_enabled(WUICO_InputEnabledEventArgs *self, BOOL *value);
 
-/* Windows.UI.Core.InputEnabledEventArgs.get_Handled() */
 HRESULT wuico_input_enabled_event_args_get__handled(WUICO_InputEnabledEventArgs *self, BOOL *value);
 
-/* Windows.UI.Core.InputEnabledEventArgs.put_Handled() */
 HRESULT wuico_input_enabled_event_args_put__handled(WUICO_InputEnabledEventArgs *self, BOOL value);
 
-/* activate Windows.UI.Core.KeyEventArgs */
 HRESULT wuico_key_event_args_new(WUICO_KeyEventArgs **out);
 
-/* Windows.UI.Core.KeyEventArgs */
-/* Windows.UI.Core.KeyEventArgs.get_VirtualKey() */
 HRESULT wuico_key_event_args_get__virtual_key(WUICO_KeyEventArgs *self, WSY_VirtualKey *value);
 
-/* Windows.UI.Core.KeyEventArgs.get_KeyStatus() */
 HRESULT wuico_key_event_args_get__key_status(WUICO_KeyEventArgs *self, WUICO_CorePhysicalKeyStatus *value);
 
-/* Windows.UI.Core.KeyEventArgs.get_Handled() */
 HRESULT wuico_key_event_args_get__handled(WUICO_KeyEventArgs *self, BOOL *value);
 
-/* Windows.UI.Core.KeyEventArgs.put_Handled() */
 HRESULT wuico_key_event_args_put__handled(WUICO_KeyEventArgs *self, BOOL value);
 
-/* Windows.UI.Core.KeyEventArgs.get_DeviceId() */
 HRESULT wuico_key_event_args_get__device_id(WUICO_KeyEventArgs *self, cwinrt_hstring *value);
 
-/* activate Windows.UI.Core.PointerEventArgs */
 HRESULT wuico_pointer_event_args_new(WUICO_PointerEventArgs **out);
 
-/* Windows.UI.Core.PointerEventArgs */
-/* Windows.UI.Core.PointerEventArgs.get_CurrentPoint() */
 HRESULT wuico_pointer_event_args_get__current_point(WUICO_PointerEventArgs *self, WUIIN_PointerPoint** value);
 
-/* Windows.UI.Core.PointerEventArgs.get_KeyModifiers() */
 HRESULT wuico_pointer_event_args_get__key_modifiers(WUICO_PointerEventArgs *self, WSY_VirtualKeyModifiers *value);
 
-/* Windows.UI.Core.PointerEventArgs.GetIntermediatePoints() */
 HRESULT wuico_pointer_event_args_get_intermediate_points(WUICO_PointerEventArgs *self, WFOCO_IVector_WUIIN_PointerPoint** out);
 
-/* Windows.UI.Core.PointerEventArgs.get_Handled() */
 HRESULT wuico_pointer_event_args_get__handled(WUICO_PointerEventArgs *self, BOOL *value);
 
-/* Windows.UI.Core.PointerEventArgs.put_Handled() */
 HRESULT wuico_pointer_event_args_put__handled(WUICO_PointerEventArgs *self, BOOL value);
 
-/* activate Windows.UI.Core.WindowSizeChangedEventArgs */
 HRESULT wuico_window_size_changed_event_args_new(WUICO_WindowSizeChangedEventArgs **out);
 
-/* Windows.UI.Core.WindowSizeChangedEventArgs */
-/* Windows.UI.Core.WindowSizeChangedEventArgs.get_Size() */
 HRESULT wuico_window_size_changed_event_args_get__size(WUICO_WindowSizeChangedEventArgs *self, WF_Size *value);
 
-/* Windows.UI.Core.WindowSizeChangedEventArgs.get_Handled() */
 HRESULT wuico_window_size_changed_event_args_get__handled(WUICO_WindowSizeChangedEventArgs *self, BOOL *value);
 
-/* Windows.UI.Core.WindowSizeChangedEventArgs.put_Handled() */
 HRESULT wuico_window_size_changed_event_args_put__handled(WUICO_WindowSizeChangedEventArgs *self, BOOL value);
 
-/* Windows.UI.Core.IWindowActivatedEventArgs */
-/* Windows.UI.Core.IVisibilityChangedEventArgs */
-/* Windows.UI.Core.ITouchHitTestingEventArgs */
-/* Windows.UI.Core.ISystemNavigationManager */
-/* Windows.UI.Core.ISystemNavigationManager2 */
-/* Windows.UI.Core.ISystemNavigationManager2.get_AppViewBackButtonVisibility() */
 HRESULT wuico_system_navigation_manager_2_get__app_view_back_button_visibility(WUICO_ISystemNavigationManager_2 *self, WUICO_AppViewBackButtonVisibility *value);
 
-/* Windows.UI.Core.ISystemNavigationManager2.put_AppViewBackButtonVisibility() */
 HRESULT wuico_system_navigation_manager_2_put__app_view_back_button_visibility(WUICO_ISystemNavigationManager_2 *self, WUICO_AppViewBackButtonVisibility value);
 
-/* Windows.UI.Core.IAutomationProviderRequestedEventArgs */
-/* Windows.UI.Core.IBackRequestedEventArgs */
-/* Windows.UI.Core.ICharacterReceivedEventArgs */
-/* Windows.UI.Core.IClosestInteractiveBoundsRequestedEventArgs */
-/* Windows.UI.Core.ICoreKeyboardInputSource */
-/* Windows.UI.Core.ICoreKeyboardInputSource.GetCurrentKeyState(virtualKey) */
 HRESULT wuico_core_keyboard_input_source_get_current_key_state(WUICO_ICoreKeyboardInputSource *self, WSY_VirtualKey virtualKey, WUICO_CoreVirtualKeyStates *out);
 
-/* Windows.UI.Core.ICoreComponentFocusable */
-/* Windows.UI.Core.ICoreComponentFocusable.get_HasFocus() */
 HRESULT wuico_core_component_focusable_get__has_focus(WUICO_ICoreComponentFocusable *self, BOOL *value);
 
-/* Windows.UI.Core.ICoreTouchHitTesting */
-/* Windows.UI.Core.ICoreClosestInteractiveBoundsRequested */
-/* Windows.UI.Core.ICoreKeyboardInputSource2 */
-/* Windows.UI.Core.ICoreKeyboardInputSource2.GetCurrentKeyEventDeviceId() */
 HRESULT wuico_core_keyboard_input_source_2_get_current_key_event_device_id(WUICO_ICoreKeyboardInputSource_2 *self, cwinrt_hstring *out);
 
-/* Windows.UI.Core.ICoreCursor */
-/* Windows.UI.Core.ICoreDispatcher */
-/* Windows.UI.Core.ICoreDispatcherWithTaskPriority */
-/* Windows.UI.Core.ICoreDispatcherWithTaskPriority.get_CurrentPriority() */
 HRESULT wuico_core_dispatcher_with_task_priority_get__current_priority(WUICO_ICoreDispatcherWithTaskPriority *self, WUICO_CoreDispatcherPriority *value);
 
-/* Windows.UI.Core.ICoreDispatcherWithTaskPriority.put_CurrentPriority() */
 HRESULT wuico_core_dispatcher_with_task_priority_put__current_priority(WUICO_ICoreDispatcherWithTaskPriority *self, WUICO_CoreDispatcherPriority value);
 
-/* Windows.UI.Core.ICoreDispatcherWithTaskPriority.ShouldYield() */
 HRESULT wuico_core_dispatcher_with_task_priority_should_yield(WUICO_ICoreDispatcherWithTaskPriority *self, BOOL *out);
 
-/* Windows.UI.Core.ICoreDispatcherWithTaskPriority.ShouldYield(priority) */
 HRESULT wuico_core_dispatcher_with_task_priority_should_yield_core_dispatcher_priority_b(WUICO_ICoreDispatcherWithTaskPriority *self, WUICO_CoreDispatcherPriority priority, BOOL *out);
 
-/* Windows.UI.Core.ICoreDispatcherWithTaskPriority.StopProcessEvents() */
 HRESULT wuico_core_dispatcher_with_task_priority_stop_process_events(WUICO_ICoreDispatcherWithTaskPriority *self);
 
-/* Windows.UI.Core.ICoreDispatcher2 */
-/* Windows.UI.Core.ICoreDispatcher2.TryRunAsync(priority, agileCallback) */
 HRESULT wuico_core_dispatcher_2_try_run_async(WUICO_ICoreDispatcher_2 *self, WUICO_CoreDispatcherPriority priority, WUICO_DispatchedHandler* agileCallback, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Core.ICoreDispatcher2.TryRunIdleAsync(agileCallback) */
 HRESULT wuico_core_dispatcher_2_try_run_idle_async(WUICO_ICoreDispatcher_2 *self, WUICO_IdleDispatchedHandler* agileCallback, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Core.ICoreInputSourceBase */
-/* Windows.UI.Core.ICoreInputSourceBase.get_Dispatcher() */
 HRESULT wuico_core_input_source_base_get__dispatcher(WUICO_ICoreInputSourceBase *self, WUICO_CoreDispatcher** value);
 
-/* Windows.UI.Core.ICoreInputSourceBase.get_IsInputEnabled() */
 HRESULT wuico_core_input_source_base_get__is_input_enabled(WUICO_ICoreInputSourceBase *self, BOOL *value);
 
-/* Windows.UI.Core.ICoreInputSourceBase.put_IsInputEnabled() */
 HRESULT wuico_core_input_source_base_put__is_input_enabled(WUICO_ICoreInputSourceBase *self, BOOL value);
 
-/* Windows.UI.Core.ICorePointerInputSource2 */
-/* Windows.UI.Core.ICorePointerInputSource2.get_DispatcherQueue() */
 HRESULT wuico_core_pointer_input_source_2_get__dispatcher_queue(WUICO_ICorePointerInputSource_2 *self, WSY_DispatcherQueue** value);
 
-/* Windows.UI.Core.ICoreIndependentInputSourceController */
-/* Windows.UI.Core.ICoreWindow */
-/* Windows.UI.Core.ICoreWindow2 */
-/* Windows.UI.Core.ICoreWindow2.put_PointerPosition() */
 HRESULT wuico_core_window_2_put__pointer_position(WUICO_ICoreWindow_2 *self, WF_Point value);
 
-/* Windows.UI.Core.ICorePointerRedirector */
-/* Windows.UI.Core.ICoreWindow3 */
-/* Windows.UI.Core.ICoreWindow3.GetCurrentKeyEventDeviceId() */
 HRESULT wuico_core_window_3_get_current_key_event_device_id(WUICO_ICoreWindow_3 *self, cwinrt_hstring *out);
 
-/* Windows.UI.Core.ICoreWindow4 */
-/* Windows.UI.Core.ICoreWindow5 */
-/* Windows.UI.Core.ICoreWindow5.get_DispatcherQueue() */
 HRESULT wuico_core_window_5_get__dispatcher_queue(WUICO_ICoreWindow_5 *self, WSY_DispatcherQueue** value);
 
-/* Windows.UI.Core.ICoreWindow5.get_ActivationMode() */
 HRESULT wuico_core_window_5_get__activation_mode(WUICO_ICoreWindow_5 *self, WUICO_CoreWindowActivationMode *value);
 
-/* Windows.UI.Core.ICoreWindowWithContext */
-/* Windows.UI.Core.ICoreWindowWithContext.get_UIContext() */
 HRESULT wuico_core_window_with_context_get__u_i_context(WUICO_ICoreWindowWithContext *self, WUI_UIContext** value);
 
-/* Windows.UI.Core.ICoreWindowDialog */
-/* Windows.UI.Core.ICoreWindowFlyout */
-/* Windows.UI.Core.ICoreWindowPopupShowingEventArgs */
-/* Windows.UI.Core.ICoreWindowResizeManager */
-/* Windows.UI.Core.ICoreWindowResizeManagerLayoutCapability */
-/* Windows.UI.Core.ICoreWindowResizeManagerLayoutCapability.put_ShouldWaitForLayoutCompletion() */
 HRESULT wuico_core_window_resize_manager_layout_capability_put__should_wait_for_layout_completion(WUICO_ICoreWindowResizeManagerLayoutCapability *self, BOOL value);
 
-/* Windows.UI.Core.ICoreWindowResizeManagerLayoutCapability.get_ShouldWaitForLayoutCompletion() */
 HRESULT wuico_core_window_resize_manager_layout_capability_get__should_wait_for_layout_completion(WUICO_ICoreWindowResizeManagerLayoutCapability *self, BOOL *value);
 
-/* Windows.UI.Core.IAcceleratorKeyEventArgs */
-/* Windows.UI.Core.IAcceleratorKeyEventArgs2 */
-/* Windows.UI.Core.IAcceleratorKeyEventArgs2.get_DeviceId() */
 HRESULT wuico_accelerator_key_event_args_2_get__device_id(WUICO_IAcceleratorKeyEventArgs_2 *self, cwinrt_hstring *value);
 
-/* Windows.UI.Core.IIdleDispatchedHandlerArgs */
-/* Windows.UI.Core.IInputEnabledEventArgs */
-/* Windows.UI.Core.IKeyEventArgs */
-/* Windows.UI.Core.IKeyEventArgs2 */
-/* Windows.UI.Core.IKeyEventArgs2.get_DeviceId() */
 HRESULT wuico_key_event_args_2_get__device_id(WUICO_IKeyEventArgs_2 *self, cwinrt_hstring *value);
 
-/* Windows.UI.Core.IPointerEventArgs */
-/* Windows.UI.Core.IWindowSizeChangedEventArgs */
-/* Windows.UI.Core.ICoreAcceleratorKeys */
-/* Windows.UI.Core.ICorePointerInputSource */
-/* Windows.UI.Core.ICorePointerInputSource.ReleasePointerCapture() */
 HRESULT wuico_core_pointer_input_source_release_pointer_capture(WUICO_ICorePointerInputSource *self);
 
-/* Windows.UI.Core.ICorePointerInputSource.SetPointerCapture() */
 HRESULT wuico_core_pointer_input_source_set_pointer_capture(WUICO_ICorePointerInputSource *self);
 
-/* Windows.UI.Core.ICorePointerInputSource.get_HasCapture() */
 HRESULT wuico_core_pointer_input_source_get__has_capture(WUICO_ICorePointerInputSource *self, BOOL *value);
 
-/* Windows.UI.Core.ICorePointerInputSource.get_PointerPosition() */
 HRESULT wuico_core_pointer_input_source_get__pointer_position(WUICO_ICorePointerInputSource *self, WF_Point *value);
 
-/* Windows.UI.Core.ICorePointerInputSource.get_PointerCursor() */
 HRESULT wuico_core_pointer_input_source_get__pointer_cursor(WUICO_ICorePointerInputSource *self, WUICO_CoreCursor** value);
 
-/* Windows.UI.Core.ICorePointerInputSource.put_PointerCursor() */
 HRESULT wuico_core_pointer_input_source_put__pointer_cursor(WUICO_ICorePointerInputSource *self, WUICO_CoreCursor* value);
 
-/* Windows.UI.Core.ICoreWindowEventArgs */
 #endif /* CWINRT_WINDOWS_UI_CORE_H */

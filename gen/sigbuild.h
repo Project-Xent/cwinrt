@@ -21,17 +21,10 @@
  * "pinterface(...)" string (see piid.h).
  */
 
-/* Build the signature of the TypeDef at row1 (non-generic kinds). Returns 0 on
-   success, -1 on error/overflow. */
 int cwinrt_sigbuild_typedef(winmd_db const *db, uint32_t typedef_row1, char *out, size_t cap);
 
-/* Build the signature of a single Type read from a metadata blob region
-   [*p, end). On success advances *p past the consumed type and returns 0. */
 int cwinrt_sigbuild_type(winmd_db const *db, uint8_t const **p, uint8_t const *end, char *out, size_t cap);
 
-/* Build the signature of a TypeSpec (generic instantiation) blob — i.e. the
-   "pinterface(...)" string. Returns 0 on success. Also returns the WinRT display
-   name (e.g. "...IVector`1<String>") in `name` if non-NULL. */
 int cwinrt_sigbuild_typespec(
   winmd_db const *db, uint32_t typespec_row1, char *sig, size_t sig_cap, char *name, size_t name_cap
 );

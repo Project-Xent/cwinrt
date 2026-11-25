@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WMECO_AudioStreamDescriptor
 #define CWINRT_FWD_WMECO_AudioStreamDescriptor
 typedef struct WMECO_AudioStreamDescriptor WMECO_AudioStreamDescriptor;
@@ -34,7 +33,6 @@ typedef struct WS_IStorageFile WS_IStorageFile;
 typedef struct WSTST_IRandomAccessStream WSTST_IRandomAccessStream;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMEME_IImageEncodingPropertiesStatics WMEME_IImageEncodingPropertiesStatics;
 typedef struct WMEME_IImageEncodingPropertiesStatics_2 WMEME_IImageEncodingPropertiesStatics_2;
 typedef struct WMEME_IImageEncodingPropertiesStatics_3 WMEME_IImageEncodingPropertiesStatics_3;
@@ -94,7 +92,6 @@ typedef struct WMEME_IAudioEncodingProperties_2 WMEME_IAudioEncodingProperties_2
 typedef struct WMEME_IAudioEncodingProperties_3 WMEME_IAudioEncodingProperties_3;
 typedef struct WMEME_IMediaEncodingProperties WMEME_IMediaEncodingProperties;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WS_IStorageFile
 #define CWINRT_FWD_WS_IStorageFile
 typedef struct WS_IStorageFile WS_IStorageFile;
@@ -220,7 +217,6 @@ typedef enum WMEME_AudioEncodingQuality {
 } WMEME_AudioEncodingQuality;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -401,1266 +397,806 @@ static const IID CWINRT_IID_WMEME_IAudioEncodingProperties_3 CWINRT_MAYBE_UNUSED
 static const IID CWINRT_IID_WMEME_IMediaEncodingProperties CWINRT_MAYBE_UNUSED = { 0xB4002AF6, 0xACD4, 0x4E5A, { 0xA2, 0x4B, 0x5D, 0x74, 0x98, 0xA8, 0xB8, 0xC4 } };
 #endif
 
-/* Methods */
-
-/* Windows.Media.MediaProperties.IImageEncodingPropertiesStatics */
-/* Windows.Media.MediaProperties.IImageEncodingPropertiesStatics.CreateJpeg() */
 HRESULT wmeme_image_encoding_properties_statics_create_jpeg(WMEME_IImageEncodingPropertiesStatics *self, WMEME_ImageEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.IImageEncodingPropertiesStatics.CreatePng() */
 HRESULT wmeme_image_encoding_properties_statics_create_png(WMEME_IImageEncodingPropertiesStatics *self, WMEME_ImageEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.IImageEncodingPropertiesStatics.CreateJpegXR() */
 HRESULT wmeme_image_encoding_properties_statics_create_jpeg_x_r(WMEME_IImageEncodingPropertiesStatics *self, WMEME_ImageEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.IImageEncodingPropertiesStatics2 */
-/* Windows.Media.MediaProperties.IImageEncodingPropertiesStatics2.CreateUncompressed(format) */
 HRESULT wmeme_image_encoding_properties_statics_2_create_uncompressed(WMEME_IImageEncodingPropertiesStatics_2 *self, WMEME_MediaPixelFormat format, WMEME_ImageEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.IImageEncodingPropertiesStatics2.CreateBmp() */
 HRESULT wmeme_image_encoding_properties_statics_2_create_bmp(WMEME_IImageEncodingPropertiesStatics_2 *self, WMEME_ImageEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.IImageEncodingPropertiesStatics3 */
-/* Windows.Media.MediaProperties.IImageEncodingPropertiesStatics3.CreateHeif() */
 HRESULT wmeme_image_encoding_properties_statics_3_create_heif(WMEME_IImageEncodingPropertiesStatics_3 *self, WMEME_ImageEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.IMediaEncodingProfileStatics */
-/* Windows.Media.MediaProperties.IMediaEncodingProfileStatics.CreateM4a(quality) */
 HRESULT wmeme_media_encoding_profile_statics_create_m4a(WMEME_IMediaEncodingProfileStatics *self, WMEME_AudioEncodingQuality quality, WMEME_MediaEncodingProfile** out);
 
-/* Windows.Media.MediaProperties.IMediaEncodingProfileStatics.CreateMp3(quality) */
 HRESULT wmeme_media_encoding_profile_statics_create_mp3(WMEME_IMediaEncodingProfileStatics *self, WMEME_AudioEncodingQuality quality, WMEME_MediaEncodingProfile** out);
 
-/* Windows.Media.MediaProperties.IMediaEncodingProfileStatics.CreateWma(quality) */
 HRESULT wmeme_media_encoding_profile_statics_create_wma(WMEME_IMediaEncodingProfileStatics *self, WMEME_AudioEncodingQuality quality, WMEME_MediaEncodingProfile** out);
 
-/* Windows.Media.MediaProperties.IMediaEncodingProfileStatics.CreateMp4(quality) */
 HRESULT wmeme_media_encoding_profile_statics_create_mp4(WMEME_IMediaEncodingProfileStatics *self, WMEME_VideoEncodingQuality quality, WMEME_MediaEncodingProfile** out);
 
-/* Windows.Media.MediaProperties.IMediaEncodingProfileStatics.CreateWmv(quality) */
 HRESULT wmeme_media_encoding_profile_statics_create_wmv(WMEME_IMediaEncodingProfileStatics *self, WMEME_VideoEncodingQuality quality, WMEME_MediaEncodingProfile** out);
 
-/* Windows.Media.MediaProperties.IMediaEncodingProfileStatics.CreateFromFileAsync(file) */
 HRESULT wmeme_media_encoding_profile_statics_create_from_file_async(WMEME_IMediaEncodingProfileStatics *self, WS_IStorageFile* file, WF_IAsyncOperation_WMEME_MediaEncodingProfile** out);
 
-/* Windows.Media.MediaProperties.IMediaEncodingProfileStatics.CreateFromStreamAsync(stream) */
 HRESULT wmeme_media_encoding_profile_statics_create_from_stream_async(WMEME_IMediaEncodingProfileStatics *self, WSTST_IRandomAccessStream* stream, WF_IAsyncOperation_WMEME_MediaEncodingProfile** out);
 
-/* Windows.Media.MediaProperties.IMediaEncodingProfileStatics2 */
-/* Windows.Media.MediaProperties.IMediaEncodingProfileStatics2.CreateWav(quality) */
 HRESULT wmeme_media_encoding_profile_statics_2_create_wav(WMEME_IMediaEncodingProfileStatics_2 *self, WMEME_AudioEncodingQuality quality, WMEME_MediaEncodingProfile** out);
 
-/* Windows.Media.MediaProperties.IMediaEncodingProfileStatics2.CreateAvi(quality) */
 HRESULT wmeme_media_encoding_profile_statics_2_create_avi(WMEME_IMediaEncodingProfileStatics_2 *self, WMEME_VideoEncodingQuality quality, WMEME_MediaEncodingProfile** out);
 
-/* Windows.Media.MediaProperties.IMediaEncodingProfileStatics3 */
-/* Windows.Media.MediaProperties.IMediaEncodingProfileStatics3.CreateAlac(quality) */
 HRESULT wmeme_media_encoding_profile_statics_3_create_alac(WMEME_IMediaEncodingProfileStatics_3 *self, WMEME_AudioEncodingQuality quality, WMEME_MediaEncodingProfile** out);
 
-/* Windows.Media.MediaProperties.IMediaEncodingProfileStatics3.CreateFlac(quality) */
 HRESULT wmeme_media_encoding_profile_statics_3_create_flac(WMEME_IMediaEncodingProfileStatics_3 *self, WMEME_AudioEncodingQuality quality, WMEME_MediaEncodingProfile** out);
 
-/* Windows.Media.MediaProperties.IMediaEncodingProfileStatics3.CreateHevc(quality) */
 HRESULT wmeme_media_encoding_profile_statics_3_create_hevc(WMEME_IMediaEncodingProfileStatics_3 *self, WMEME_VideoEncodingQuality quality, WMEME_MediaEncodingProfile** out);
 
-/* Windows.Media.MediaProperties.IMediaEncodingProfileStatics4 */
-/* Windows.Media.MediaProperties.IMediaEncodingProfileStatics4.CreateVp9(quality) */
 HRESULT wmeme_media_encoding_profile_statics_4_create_vp9(WMEME_IMediaEncodingProfileStatics_4 *self, WMEME_VideoEncodingQuality quality, WMEME_MediaEncodingProfile** out);
 
-/* Windows.Media.MediaProperties.IMediaEncodingProfileStatics4.CreateAv1(quality) */
 HRESULT wmeme_media_encoding_profile_statics_4_create_av1(WMEME_IMediaEncodingProfileStatics_4 *self, WMEME_VideoEncodingQuality quality, WMEME_MediaEncodingProfile** out);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics */
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Aac() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__aac(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_AacAdts() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__aac_adts(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Ac3() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__ac3(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_AmrNb() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__amr_nb(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_AmrWb() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__amr_wb(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Argb32() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__argb32(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Asf() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__asf(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Avi() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__avi(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Bgra8() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__bgra8(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Bmp() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__bmp(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Eac3() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__eac3(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Float() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__float(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Gif() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__gif(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_H263() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__h263(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_H264() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__h264(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_H264Es() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__h264_es(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Hevc() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__hevc(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_HevcEs() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__hevc_es(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Iyuv() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__iyuv(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Jpeg() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__jpeg(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_JpegXr() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__jpeg_xr(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Mjpg() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__mjpg(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Mpeg() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__mpeg(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Mpeg1() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__mpeg1(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Mpeg2() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__mpeg2(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Mp3() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__mp3(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Mpeg4() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__mpeg4(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Nv12() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__nv12(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Pcm() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__pcm(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Png() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__png(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Rgb24() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__rgb24(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Rgb32() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__rgb32(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Tiff() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__tiff(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Wave() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__wave(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Wma8() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__wma8(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Wma9() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__wma9(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Wmv3() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__wmv3(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Wvc1() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__wvc1(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Yuy2() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__yuy2(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics.get_Yv12() */
 HRESULT wmeme_media_encoding_subtypes_statics_get__yv12(WMEME_IMediaEncodingSubtypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics2 */
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics2.get_Vp9() */
 HRESULT wmeme_media_encoding_subtypes_statics_2_get__vp9(WMEME_IMediaEncodingSubtypesStatics_2 *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics2.get_L8() */
 HRESULT wmeme_media_encoding_subtypes_statics_2_get__l8(WMEME_IMediaEncodingSubtypesStatics_2 *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics2.get_L16() */
 HRESULT wmeme_media_encoding_subtypes_statics_2_get__l16(WMEME_IMediaEncodingSubtypesStatics_2 *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics2.get_D16() */
 HRESULT wmeme_media_encoding_subtypes_statics_2_get__d16(WMEME_IMediaEncodingSubtypesStatics_2 *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics3 */
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics3.get_Alac() */
 HRESULT wmeme_media_encoding_subtypes_statics_3_get__alac(WMEME_IMediaEncodingSubtypesStatics_3 *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics3.get_Flac() */
 HRESULT wmeme_media_encoding_subtypes_statics_3_get__flac(WMEME_IMediaEncodingSubtypesStatics_3 *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics4 */
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics4.get_P010() */
 HRESULT wmeme_media_encoding_subtypes_statics_4_get__p010(WMEME_IMediaEncodingSubtypesStatics_4 *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics5 */
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics5.get_Heif() */
 HRESULT wmeme_media_encoding_subtypes_statics_5_get__heif(WMEME_IMediaEncodingSubtypesStatics_5 *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics6 */
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics6.get_Pgs() */
 HRESULT wmeme_media_encoding_subtypes_statics_6_get__pgs(WMEME_IMediaEncodingSubtypesStatics_6 *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics6.get_Srt() */
 HRESULT wmeme_media_encoding_subtypes_statics_6_get__srt(WMEME_IMediaEncodingSubtypesStatics_6 *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics6.get_Ssa() */
 HRESULT wmeme_media_encoding_subtypes_statics_6_get__ssa(WMEME_IMediaEncodingSubtypesStatics_6 *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics6.get_VobSub() */
 HRESULT wmeme_media_encoding_subtypes_statics_6_get__vob_sub(WMEME_IMediaEncodingSubtypesStatics_6 *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics7 */
-/* Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics7.get_Av1() */
 HRESULT wmeme_media_encoding_subtypes_statics_7_get__av1(WMEME_IMediaEncodingSubtypesStatics_7 *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMpeg2ProfileIdsStatics */
-/* Windows.Media.MediaProperties.IMpeg2ProfileIdsStatics.get_Simple() */
 HRESULT wmeme_mpeg2_profile_ids_statics_get__simple(WMEME_IMpeg2ProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IMpeg2ProfileIdsStatics.get_Main() */
 HRESULT wmeme_mpeg2_profile_ids_statics_get__main(WMEME_IMpeg2ProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IMpeg2ProfileIdsStatics.get_SignalNoiseRatioScalable() */
 HRESULT wmeme_mpeg2_profile_ids_statics_get__signal_noise_ratio_scalable(WMEME_IMpeg2ProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IMpeg2ProfileIdsStatics.get_SpatiallyScalable() */
 HRESULT wmeme_mpeg2_profile_ids_statics_get__spatially_scalable(WMEME_IMpeg2ProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IMpeg2ProfileIdsStatics.get_High() */
 HRESULT wmeme_mpeg2_profile_ids_statics_get__high(WMEME_IMpeg2ProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.ITimedMetadataEncodingPropertiesStatics */
-/* Windows.Media.MediaProperties.ITimedMetadataEncodingPropertiesStatics.CreatePgs() */
 HRESULT wmeme_timed_metadata_encoding_properties_statics_create_pgs(WMEME_ITimedMetadataEncodingPropertiesStatics *self, WMEME_TimedMetadataEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.ITimedMetadataEncodingPropertiesStatics.CreateSrt() */
 HRESULT wmeme_timed_metadata_encoding_properties_statics_create_srt(WMEME_ITimedMetadataEncodingPropertiesStatics *self, WMEME_TimedMetadataEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.ITimedMetadataEncodingPropertiesStatics.CreateSsa(formatUserData) */
 HRESULT wmeme_timed_metadata_encoding_properties_statics_create_ssa(WMEME_ITimedMetadataEncodingPropertiesStatics *self, uint8_t *formatUserData, uint32_t formatUserData_len, WMEME_TimedMetadataEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.ITimedMetadataEncodingPropertiesStatics.CreateVobSub(formatUserData) */
 HRESULT wmeme_timed_metadata_encoding_properties_statics_create_vob_sub(WMEME_ITimedMetadataEncodingPropertiesStatics *self, uint8_t *formatUserData, uint32_t formatUserData_len, WMEME_TimedMetadataEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics */
-/* Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics.CreateH264() */
 HRESULT wmeme_video_encoding_properties_statics_create_h264(WMEME_IVideoEncodingPropertiesStatics *self, WMEME_VideoEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics.CreateMpeg2() */
 HRESULT wmeme_video_encoding_properties_statics_create_mpeg2(WMEME_IVideoEncodingPropertiesStatics *self, WMEME_VideoEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics.CreateUncompressed(subtype, width, height) */
 HRESULT wmeme_video_encoding_properties_statics_create_uncompressed(WMEME_IVideoEncodingPropertiesStatics *self, cwinrt_hstring subtype, uint32_t width, uint32_t height, WMEME_VideoEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics2 */
-/* Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics2.CreateHevc() */
 HRESULT wmeme_video_encoding_properties_statics_2_create_hevc(WMEME_IVideoEncodingPropertiesStatics_2 *self, WMEME_VideoEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics3 */
-/* Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics3.CreateVp9() */
 HRESULT wmeme_video_encoding_properties_statics_3_create_vp9(WMEME_IVideoEncodingPropertiesStatics_3 *self, WMEME_VideoEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics3.CreateAv1() */
 HRESULT wmeme_video_encoding_properties_statics_3_create_av1(WMEME_IVideoEncodingPropertiesStatics_3 *self, WMEME_VideoEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.IVp9ProfileIdsStatics */
-/* Windows.Media.MediaProperties.IVp9ProfileIdsStatics.get_Profile0ChromaSubsampling420BitDepth8() */
 HRESULT wmeme_vp9_profile_ids_statics_get__profile0_chroma_subsampling420_bit_depth8(WMEME_IVp9ProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IVp9ProfileIdsStatics.get_Profile2ChromaSubsampling420BitDepth10() */
 HRESULT wmeme_vp9_profile_ids_statics_get__profile2_chroma_subsampling420_bit_depth10(WMEME_IVp9ProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IVp9ProfileIdsStatics.get_Profile2ChromaSubsampling420BitDepth12() */
 HRESULT wmeme_vp9_profile_ids_statics_get__profile2_chroma_subsampling420_bit_depth12(WMEME_IVp9ProfileIdsStatics *self, int32_t *value);
 
-/* activate Windows.Media.MediaProperties.ImageEncodingProperties */
 HRESULT wmeme_image_encoding_properties_new(WMEME_ImageEncodingProperties **out);
 
-/* Windows.Media.MediaProperties.ImageEncodingProperties */
-/* Windows.Media.MediaProperties.ImageEncodingProperties.put_Width() */
 HRESULT wmeme_image_encoding_properties_put__width(WMEME_ImageEncodingProperties *self, uint32_t value);
 
-/* Windows.Media.MediaProperties.ImageEncodingProperties.get_Width() */
 HRESULT wmeme_image_encoding_properties_get__width(WMEME_ImageEncodingProperties *self, uint32_t *value);
 
-/* Windows.Media.MediaProperties.ImageEncodingProperties.put_Height() */
 HRESULT wmeme_image_encoding_properties_put__height(WMEME_ImageEncodingProperties *self, uint32_t value);
 
-/* Windows.Media.MediaProperties.ImageEncodingProperties.get_Height() */
 HRESULT wmeme_image_encoding_properties_get__height(WMEME_ImageEncodingProperties *self, uint32_t *value);
 
-/* Windows.Media.MediaProperties.ImageEncodingProperties.get_Properties() */
 HRESULT wmeme_image_encoding_properties_get__properties(WMEME_ImageEncodingProperties *self, WMEME_MediaPropertySet** value);
 
-/* Windows.Media.MediaProperties.ImageEncodingProperties.get_Type() */
 HRESULT wmeme_image_encoding_properties_get__type(WMEME_ImageEncodingProperties *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.ImageEncodingProperties.put_Subtype() */
 HRESULT wmeme_image_encoding_properties_put__subtype(WMEME_ImageEncodingProperties *self, cwinrt_hstring value);
 
-/* Windows.Media.MediaProperties.ImageEncodingProperties.get_Subtype() */
 HRESULT wmeme_image_encoding_properties_get__subtype(WMEME_ImageEncodingProperties *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.ImageEncodingProperties.Copy() */
 HRESULT wmeme_image_encoding_properties_copy(WMEME_ImageEncodingProperties *self, WMEME_ImageEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.ImageEncodingProperties.CreateHeif() */
 HRESULT wmeme_image_encoding_properties_create_heif(WMEME_ImageEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.ImageEncodingProperties.CreateUncompressed(format) */
 HRESULT wmeme_image_encoding_properties_create_uncompressed(WMEME_MediaPixelFormat format, WMEME_ImageEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.ImageEncodingProperties.CreateBmp() */
 HRESULT wmeme_image_encoding_properties_create_bmp(WMEME_ImageEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.ImageEncodingProperties.CreateJpeg() */
 HRESULT wmeme_image_encoding_properties_create_jpeg(WMEME_ImageEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.ImageEncodingProperties.CreatePng() */
 HRESULT wmeme_image_encoding_properties_create_png(WMEME_ImageEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.ImageEncodingProperties.CreateJpegXR() */
 HRESULT wmeme_image_encoding_properties_create_jpeg_x_r(WMEME_ImageEncodingProperties** out);
 
-/* activate Windows.Media.MediaProperties.MediaEncodingProfile */
 HRESULT wmeme_media_encoding_profile_new(WMEME_MediaEncodingProfile **out);
 
-/* Windows.Media.MediaProperties.MediaEncodingProfile */
-/* Windows.Media.MediaProperties.MediaEncodingProfile.put_Audio() */
 HRESULT wmeme_media_encoding_profile_put__audio(WMEME_MediaEncodingProfile *self, WMEME_AudioEncodingProperties* value);
 
-/* Windows.Media.MediaProperties.MediaEncodingProfile.get_Audio() */
 HRESULT wmeme_media_encoding_profile_get__audio(WMEME_MediaEncodingProfile *self, WMEME_AudioEncodingProperties** value);
 
-/* Windows.Media.MediaProperties.MediaEncodingProfile.put_Video() */
 HRESULT wmeme_media_encoding_profile_put__video(WMEME_MediaEncodingProfile *self, WMEME_VideoEncodingProperties* value);
 
-/* Windows.Media.MediaProperties.MediaEncodingProfile.get_Video() */
 HRESULT wmeme_media_encoding_profile_get__video(WMEME_MediaEncodingProfile *self, WMEME_VideoEncodingProperties** value);
 
-/* Windows.Media.MediaProperties.MediaEncodingProfile.put_Container() */
 HRESULT wmeme_media_encoding_profile_put__container(WMEME_MediaEncodingProfile *self, WMEME_ContainerEncodingProperties* value);
 
-/* Windows.Media.MediaProperties.MediaEncodingProfile.get_Container() */
 HRESULT wmeme_media_encoding_profile_get__container(WMEME_MediaEncodingProfile *self, WMEME_ContainerEncodingProperties** value);
 
-/* Windows.Media.MediaProperties.MediaEncodingProfile.SetAudioTracks() */
 HRESULT wmeme_media_encoding_profile_set_audio_tracks(WMEME_MediaEncodingProfile *self, WFOCO_IIterable_WMECO_AudioStreamDescriptor* value);
 
-/* Windows.Media.MediaProperties.MediaEncodingProfile.GetAudioTracks() */
 HRESULT wmeme_media_encoding_profile_get_audio_tracks(WMEME_MediaEncodingProfile *self, WFOCO_IVector_WMECO_AudioStreamDescriptor** out);
 
-/* Windows.Media.MediaProperties.MediaEncodingProfile.SetVideoTracks() */
 HRESULT wmeme_media_encoding_profile_set_video_tracks(WMEME_MediaEncodingProfile *self, WFOCO_IIterable_WMECO_VideoStreamDescriptor* value);
 
-/* Windows.Media.MediaProperties.MediaEncodingProfile.GetVideoTracks() */
 HRESULT wmeme_media_encoding_profile_get_video_tracks(WMEME_MediaEncodingProfile *self, WFOCO_IVector_WMECO_VideoStreamDescriptor** out);
 
-/* Windows.Media.MediaProperties.MediaEncodingProfile.SetTimedMetadataTracks() */
 HRESULT wmeme_media_encoding_profile_set_timed_metadata_tracks(WMEME_MediaEncodingProfile *self, WFOCO_IIterable_WMECO_TimedMetadataStreamDescriptor* value);
 
-/* Windows.Media.MediaProperties.MediaEncodingProfile.GetTimedMetadataTracks() */
 HRESULT wmeme_media_encoding_profile_get_timed_metadata_tracks(WMEME_MediaEncodingProfile *self, WFOCO_IVector_WMECO_TimedMetadataStreamDescriptor** out);
 
-/* Windows.Media.MediaProperties.MediaEncodingProfile.CreateVp9(quality) */
 HRESULT wmeme_media_encoding_profile_create_vp9(WMEME_VideoEncodingQuality quality, WMEME_MediaEncodingProfile** out);
 
-/* Windows.Media.MediaProperties.MediaEncodingProfile.CreateAv1(quality) */
 HRESULT wmeme_media_encoding_profile_create_av1(WMEME_VideoEncodingQuality quality, WMEME_MediaEncodingProfile** out);
 
-/* Windows.Media.MediaProperties.MediaEncodingProfile.CreateAlac(quality) */
 HRESULT wmeme_media_encoding_profile_create_alac(WMEME_AudioEncodingQuality quality, WMEME_MediaEncodingProfile** out);
 
-/* Windows.Media.MediaProperties.MediaEncodingProfile.CreateFlac(quality) */
 HRESULT wmeme_media_encoding_profile_create_flac(WMEME_AudioEncodingQuality quality, WMEME_MediaEncodingProfile** out);
 
-/* Windows.Media.MediaProperties.MediaEncodingProfile.CreateHevc(quality) */
 HRESULT wmeme_media_encoding_profile_create_hevc(WMEME_VideoEncodingQuality quality, WMEME_MediaEncodingProfile** out);
 
-/* Windows.Media.MediaProperties.MediaEncodingProfile.CreateWav(quality) */
 HRESULT wmeme_media_encoding_profile_create_wav(WMEME_AudioEncodingQuality quality, WMEME_MediaEncodingProfile** out);
 
-/* Windows.Media.MediaProperties.MediaEncodingProfile.CreateAvi(quality) */
 HRESULT wmeme_media_encoding_profile_create_avi(WMEME_VideoEncodingQuality quality, WMEME_MediaEncodingProfile** out);
 
-/* Windows.Media.MediaProperties.MediaEncodingProfile.CreateM4a(quality) */
 HRESULT wmeme_media_encoding_profile_create_m4a(WMEME_AudioEncodingQuality quality, WMEME_MediaEncodingProfile** out);
 
-/* Windows.Media.MediaProperties.MediaEncodingProfile.CreateMp3(quality) */
 HRESULT wmeme_media_encoding_profile_create_mp3(WMEME_AudioEncodingQuality quality, WMEME_MediaEncodingProfile** out);
 
-/* Windows.Media.MediaProperties.MediaEncodingProfile.CreateWma(quality) */
 HRESULT wmeme_media_encoding_profile_create_wma(WMEME_AudioEncodingQuality quality, WMEME_MediaEncodingProfile** out);
 
-/* Windows.Media.MediaProperties.MediaEncodingProfile.CreateMp4(quality) */
 HRESULT wmeme_media_encoding_profile_create_mp4(WMEME_VideoEncodingQuality quality, WMEME_MediaEncodingProfile** out);
 
-/* Windows.Media.MediaProperties.MediaEncodingProfile.CreateWmv(quality) */
 HRESULT wmeme_media_encoding_profile_create_wmv(WMEME_VideoEncodingQuality quality, WMEME_MediaEncodingProfile** out);
 
-/* Windows.Media.MediaProperties.MediaEncodingProfile.CreateFromFileAsync(file) */
 HRESULT wmeme_media_encoding_profile_create_from_file_async(WS_IStorageFile* file, WF_IAsyncOperation_WMEME_MediaEncodingProfile** out);
 
-/* Windows.Media.MediaProperties.MediaEncodingProfile.CreateFromStreamAsync(stream) */
 HRESULT wmeme_media_encoding_profile_create_from_stream_async(WSTST_IRandomAccessStream* stream, WF_IAsyncOperation_WMEME_MediaEncodingProfile** out);
 
-/* activate Windows.Media.MediaProperties.MediaEncodingSubtypes */
 HRESULT wmeme_media_encoding_subtypes_new(WMEME_MediaEncodingSubtypes **out);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes */
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Av1() */
 HRESULT wmeme_media_encoding_subtypes_get__av1(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Pgs() */
 HRESULT wmeme_media_encoding_subtypes_get__pgs(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Srt() */
 HRESULT wmeme_media_encoding_subtypes_get__srt(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Ssa() */
 HRESULT wmeme_media_encoding_subtypes_get__ssa(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_VobSub() */
 HRESULT wmeme_media_encoding_subtypes_get__vob_sub(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Heif() */
 HRESULT wmeme_media_encoding_subtypes_get__heif(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_P010() */
 HRESULT wmeme_media_encoding_subtypes_get__p010(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Alac() */
 HRESULT wmeme_media_encoding_subtypes_get__alac(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Flac() */
 HRESULT wmeme_media_encoding_subtypes_get__flac(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Vp9() */
 HRESULT wmeme_media_encoding_subtypes_get__vp9(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_L8() */
 HRESULT wmeme_media_encoding_subtypes_get__l8(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_L16() */
 HRESULT wmeme_media_encoding_subtypes_get__l16(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_D16() */
 HRESULT wmeme_media_encoding_subtypes_get__d16(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Aac() */
 HRESULT wmeme_media_encoding_subtypes_get__aac(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_AacAdts() */
 HRESULT wmeme_media_encoding_subtypes_get__aac_adts(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Ac3() */
 HRESULT wmeme_media_encoding_subtypes_get__ac3(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_AmrNb() */
 HRESULT wmeme_media_encoding_subtypes_get__amr_nb(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_AmrWb() */
 HRESULT wmeme_media_encoding_subtypes_get__amr_wb(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Argb32() */
 HRESULT wmeme_media_encoding_subtypes_get__argb32(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Asf() */
 HRESULT wmeme_media_encoding_subtypes_get__asf(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Avi() */
 HRESULT wmeme_media_encoding_subtypes_get__avi(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Bgra8() */
 HRESULT wmeme_media_encoding_subtypes_get__bgra8(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Bmp() */
 HRESULT wmeme_media_encoding_subtypes_get__bmp(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Eac3() */
 HRESULT wmeme_media_encoding_subtypes_get__eac3(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Float() */
 HRESULT wmeme_media_encoding_subtypes_get__float(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Gif() */
 HRESULT wmeme_media_encoding_subtypes_get__gif(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_H263() */
 HRESULT wmeme_media_encoding_subtypes_get__h263(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_H264() */
 HRESULT wmeme_media_encoding_subtypes_get__h264(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_H264Es() */
 HRESULT wmeme_media_encoding_subtypes_get__h264_es(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Hevc() */
 HRESULT wmeme_media_encoding_subtypes_get__hevc(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_HevcEs() */
 HRESULT wmeme_media_encoding_subtypes_get__hevc_es(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Iyuv() */
 HRESULT wmeme_media_encoding_subtypes_get__iyuv(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Jpeg() */
 HRESULT wmeme_media_encoding_subtypes_get__jpeg(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_JpegXr() */
 HRESULT wmeme_media_encoding_subtypes_get__jpeg_xr(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Mjpg() */
 HRESULT wmeme_media_encoding_subtypes_get__mjpg(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Mpeg() */
 HRESULT wmeme_media_encoding_subtypes_get__mpeg(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Mpeg1() */
 HRESULT wmeme_media_encoding_subtypes_get__mpeg1(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Mpeg2() */
 HRESULT wmeme_media_encoding_subtypes_get__mpeg2(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Mp3() */
 HRESULT wmeme_media_encoding_subtypes_get__mp3(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Mpeg4() */
 HRESULT wmeme_media_encoding_subtypes_get__mpeg4(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Nv12() */
 HRESULT wmeme_media_encoding_subtypes_get__nv12(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Pcm() */
 HRESULT wmeme_media_encoding_subtypes_get__pcm(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Png() */
 HRESULT wmeme_media_encoding_subtypes_get__png(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Rgb24() */
 HRESULT wmeme_media_encoding_subtypes_get__rgb24(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Rgb32() */
 HRESULT wmeme_media_encoding_subtypes_get__rgb32(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Tiff() */
 HRESULT wmeme_media_encoding_subtypes_get__tiff(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Wave() */
 HRESULT wmeme_media_encoding_subtypes_get__wave(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Wma8() */
 HRESULT wmeme_media_encoding_subtypes_get__wma8(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Wma9() */
 HRESULT wmeme_media_encoding_subtypes_get__wma9(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Wmv3() */
 HRESULT wmeme_media_encoding_subtypes_get__wmv3(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Wvc1() */
 HRESULT wmeme_media_encoding_subtypes_get__wvc1(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Yuy2() */
 HRESULT wmeme_media_encoding_subtypes_get__yuy2(cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.MediaEncodingSubtypes.get_Yv12() */
 HRESULT wmeme_media_encoding_subtypes_get__yv12(cwinrt_hstring *value);
 
-/* activate Windows.Media.MediaProperties.MediaPropertySet */
 HRESULT wmeme_media_property_set_new(WMEME_MediaPropertySet **out);
 
-/* Windows.Media.MediaProperties.MediaPropertySet */
-/* Windows.Media.MediaProperties.MediaPropertySet.Lookup(key) */
 HRESULT wmeme_media_property_set_lookup(WMEME_MediaPropertySet *self, GUID key, IInspectable** out);
 
-/* Windows.Media.MediaProperties.MediaPropertySet.get_Size() */
 HRESULT wmeme_media_property_set_get__size(WMEME_MediaPropertySet *self, uint32_t *value);
 
-/* Windows.Media.MediaProperties.MediaPropertySet.HasKey(key) */
 HRESULT wmeme_media_property_set_has_key(WMEME_MediaPropertySet *self, GUID key, BOOL *out);
 
-/* Windows.Media.MediaProperties.MediaPropertySet.GetView() */
 HRESULT wmeme_media_property_set_get_view(WMEME_MediaPropertySet *self, WFOCO_IMapView_Guid_Object** out);
 
-/* Windows.Media.MediaProperties.MediaPropertySet.Insert(key) */
 HRESULT wmeme_media_property_set_insert(WMEME_MediaPropertySet *self, GUID key, IInspectable* value, BOOL *out);
 
-/* Windows.Media.MediaProperties.MediaPropertySet.Remove(key) */
 HRESULT wmeme_media_property_set_remove(WMEME_MediaPropertySet *self, GUID key);
 
-/* Windows.Media.MediaProperties.MediaPropertySet.Clear() */
 HRESULT wmeme_media_property_set_clear(WMEME_MediaPropertySet *self);
 
-/* Windows.Media.MediaProperties.MediaPropertySet.First() */
 HRESULT wmeme_media_property_set_first(WMEME_MediaPropertySet *self, WFOCO_IIterator_WFOCO_IKeyValuePair_Guid_Object** out);
 
-/* activate Windows.Media.MediaProperties.MediaRatio */
 HRESULT wmeme_media_ratio_new(WMEME_MediaRatio **out);
 
-/* Windows.Media.MediaProperties.MediaRatio */
-/* Windows.Media.MediaProperties.MediaRatio.put_Numerator() */
 HRESULT wmeme_media_ratio_put__numerator(WMEME_MediaRatio *self, uint32_t value);
 
-/* Windows.Media.MediaProperties.MediaRatio.get_Numerator() */
 HRESULT wmeme_media_ratio_get__numerator(WMEME_MediaRatio *self, uint32_t *value);
 
-/* Windows.Media.MediaProperties.MediaRatio.put_Denominator() */
 HRESULT wmeme_media_ratio_put__denominator(WMEME_MediaRatio *self, uint32_t value);
 
-/* Windows.Media.MediaProperties.MediaRatio.get_Denominator() */
 HRESULT wmeme_media_ratio_get__denominator(WMEME_MediaRatio *self, uint32_t *value);
 
-/* activate Windows.Media.MediaProperties.Mpeg2ProfileIds */
 HRESULT wmeme_mpeg2_profile_ids_new(WMEME_Mpeg2ProfileIds **out);
 
-/* Windows.Media.MediaProperties.Mpeg2ProfileIds */
-/* Windows.Media.MediaProperties.Mpeg2ProfileIds.get_Simple() */
 HRESULT wmeme_mpeg2_profile_ids_get__simple(int32_t *value);
 
-/* Windows.Media.MediaProperties.Mpeg2ProfileIds.get_Main() */
 HRESULT wmeme_mpeg2_profile_ids_get__main(int32_t *value);
 
-/* Windows.Media.MediaProperties.Mpeg2ProfileIds.get_SignalNoiseRatioScalable() */
 HRESULT wmeme_mpeg2_profile_ids_get__signal_noise_ratio_scalable(int32_t *value);
 
-/* Windows.Media.MediaProperties.Mpeg2ProfileIds.get_SpatiallyScalable() */
 HRESULT wmeme_mpeg2_profile_ids_get__spatially_scalable(int32_t *value);
 
-/* Windows.Media.MediaProperties.Mpeg2ProfileIds.get_High() */
 HRESULT wmeme_mpeg2_profile_ids_get__high(int32_t *value);
 
-/* activate Windows.Media.MediaProperties.TimedMetadataEncodingProperties */
 HRESULT wmeme_timed_metadata_encoding_properties_new(WMEME_TimedMetadataEncodingProperties **out);
 
-/* Windows.Media.MediaProperties.TimedMetadataEncodingProperties */
-/* Windows.Media.MediaProperties.TimedMetadataEncodingProperties.SetFormatUserData() */
 HRESULT wmeme_timed_metadata_encoding_properties_set_format_user_data(WMEME_TimedMetadataEncodingProperties *self, uint8_t *value, uint32_t value_len);
 
-/* Windows.Media.MediaProperties.TimedMetadataEncodingProperties.GetFormatUserData() */
 HRESULT wmeme_timed_metadata_encoding_properties_get_format_user_data(WMEME_TimedMetadataEncodingProperties *self, uint8_t *value, uint32_t value_len);
 
-/* Windows.Media.MediaProperties.TimedMetadataEncodingProperties.Copy() */
 HRESULT wmeme_timed_metadata_encoding_properties_copy(WMEME_TimedMetadataEncodingProperties *self, WMEME_TimedMetadataEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.TimedMetadataEncodingProperties.get_Properties() */
 HRESULT wmeme_timed_metadata_encoding_properties_get__properties(WMEME_TimedMetadataEncodingProperties *self, WMEME_MediaPropertySet** value);
 
-/* Windows.Media.MediaProperties.TimedMetadataEncodingProperties.get_Type() */
 HRESULT wmeme_timed_metadata_encoding_properties_get__type(WMEME_TimedMetadataEncodingProperties *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.TimedMetadataEncodingProperties.put_Subtype() */
 HRESULT wmeme_timed_metadata_encoding_properties_put__subtype(WMEME_TimedMetadataEncodingProperties *self, cwinrt_hstring value);
 
-/* Windows.Media.MediaProperties.TimedMetadataEncodingProperties.get_Subtype() */
 HRESULT wmeme_timed_metadata_encoding_properties_get__subtype(WMEME_TimedMetadataEncodingProperties *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.TimedMetadataEncodingProperties.CreatePgs() */
 HRESULT wmeme_timed_metadata_encoding_properties_create_pgs(WMEME_TimedMetadataEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.TimedMetadataEncodingProperties.CreateSrt() */
 HRESULT wmeme_timed_metadata_encoding_properties_create_srt(WMEME_TimedMetadataEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.TimedMetadataEncodingProperties.CreateSsa(formatUserData) */
 HRESULT wmeme_timed_metadata_encoding_properties_create_ssa(uint8_t *formatUserData, uint32_t formatUserData_len, WMEME_TimedMetadataEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.TimedMetadataEncodingProperties.CreateVobSub(formatUserData) */
 HRESULT wmeme_timed_metadata_encoding_properties_create_vob_sub(uint8_t *formatUserData, uint32_t formatUserData_len, WMEME_TimedMetadataEncodingProperties** out);
 
-/* activate Windows.Media.MediaProperties.VideoEncodingProperties */
 HRESULT wmeme_video_encoding_properties_new(WMEME_VideoEncodingProperties **out);
 
-/* Windows.Media.MediaProperties.VideoEncodingProperties */
-/* Windows.Media.MediaProperties.VideoEncodingProperties.put_Bitrate() */
 HRESULT wmeme_video_encoding_properties_put__bitrate(WMEME_VideoEncodingProperties *self, uint32_t value);
 
-/* Windows.Media.MediaProperties.VideoEncodingProperties.get_Bitrate() */
 HRESULT wmeme_video_encoding_properties_get__bitrate(WMEME_VideoEncodingProperties *self, uint32_t *value);
 
-/* Windows.Media.MediaProperties.VideoEncodingProperties.put_Width() */
 HRESULT wmeme_video_encoding_properties_put__width(WMEME_VideoEncodingProperties *self, uint32_t value);
 
-/* Windows.Media.MediaProperties.VideoEncodingProperties.get_Width() */
 HRESULT wmeme_video_encoding_properties_get__width(WMEME_VideoEncodingProperties *self, uint32_t *value);
 
-/* Windows.Media.MediaProperties.VideoEncodingProperties.put_Height() */
 HRESULT wmeme_video_encoding_properties_put__height(WMEME_VideoEncodingProperties *self, uint32_t value);
 
-/* Windows.Media.MediaProperties.VideoEncodingProperties.get_Height() */
 HRESULT wmeme_video_encoding_properties_get__height(WMEME_VideoEncodingProperties *self, uint32_t *value);
 
-/* Windows.Media.MediaProperties.VideoEncodingProperties.get_FrameRate() */
 HRESULT wmeme_video_encoding_properties_get__frame_rate(WMEME_VideoEncodingProperties *self, WMEME_MediaRatio** value);
 
-/* Windows.Media.MediaProperties.VideoEncodingProperties.get_PixelAspectRatio() */
 HRESULT wmeme_video_encoding_properties_get__pixel_aspect_ratio(WMEME_VideoEncodingProperties *self, WMEME_MediaRatio** value);
 
-/* Windows.Media.MediaProperties.VideoEncodingProperties.get_Properties() */
 HRESULT wmeme_video_encoding_properties_get__properties(WMEME_VideoEncodingProperties *self, WMEME_MediaPropertySet** value);
 
-/* Windows.Media.MediaProperties.VideoEncodingProperties.get_Type() */
 HRESULT wmeme_video_encoding_properties_get__type(WMEME_VideoEncodingProperties *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.VideoEncodingProperties.put_Subtype() */
 HRESULT wmeme_video_encoding_properties_put__subtype(WMEME_VideoEncodingProperties *self, cwinrt_hstring value);
 
-/* Windows.Media.MediaProperties.VideoEncodingProperties.get_Subtype() */
 HRESULT wmeme_video_encoding_properties_get__subtype(WMEME_VideoEncodingProperties *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.VideoEncodingProperties.SetFormatUserData() */
 HRESULT wmeme_video_encoding_properties_set_format_user_data(WMEME_VideoEncodingProperties *self, uint8_t *value, uint32_t value_len);
 
-/* Windows.Media.MediaProperties.VideoEncodingProperties.GetFormatUserData() */
 HRESULT wmeme_video_encoding_properties_get_format_user_data(WMEME_VideoEncodingProperties *self, uint8_t *value, uint32_t value_len);
 
-/* Windows.Media.MediaProperties.VideoEncodingProperties.put_ProfileId() */
 HRESULT wmeme_video_encoding_properties_put__profile_id(WMEME_VideoEncodingProperties *self, int32_t value);
 
-/* Windows.Media.MediaProperties.VideoEncodingProperties.get_ProfileId() */
 HRESULT wmeme_video_encoding_properties_get__profile_id(WMEME_VideoEncodingProperties *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.VideoEncodingProperties.get_StereoscopicVideoPackingMode() */
 HRESULT wmeme_video_encoding_properties_get__stereoscopic_video_packing_mode(WMEME_VideoEncodingProperties *self, WMEME_StereoscopicVideoPackingMode *value);
 
-/* Windows.Media.MediaProperties.VideoEncodingProperties.get_SphericalVideoFrameFormat() */
 HRESULT wmeme_video_encoding_properties_get__spherical_video_frame_format(WMEME_VideoEncodingProperties *self, WMEME_SphericalVideoFrameFormat *value);
 
-/* Windows.Media.MediaProperties.VideoEncodingProperties.Copy() */
 HRESULT wmeme_video_encoding_properties_copy(WMEME_VideoEncodingProperties *self, WMEME_VideoEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.VideoEncodingProperties.CreateVp9() */
 HRESULT wmeme_video_encoding_properties_create_vp9(WMEME_VideoEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.VideoEncodingProperties.CreateAv1() */
 HRESULT wmeme_video_encoding_properties_create_av1(WMEME_VideoEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.VideoEncodingProperties.CreateHevc() */
 HRESULT wmeme_video_encoding_properties_create_hevc(WMEME_VideoEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.VideoEncodingProperties.CreateH264() */
 HRESULT wmeme_video_encoding_properties_create_h264(WMEME_VideoEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.VideoEncodingProperties.CreateMpeg2() */
 HRESULT wmeme_video_encoding_properties_create_mpeg2(WMEME_VideoEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.VideoEncodingProperties.CreateUncompressed(subtype, width, height) */
 HRESULT wmeme_video_encoding_properties_create_uncompressed(cwinrt_hstring subtype, uint32_t width, uint32_t height, WMEME_VideoEncodingProperties** out);
 
-/* activate Windows.Media.MediaProperties.Vp9ProfileIds */
 HRESULT wmeme_vp9_profile_ids_new(WMEME_Vp9ProfileIds **out);
 
-/* Windows.Media.MediaProperties.Vp9ProfileIds */
-/* Windows.Media.MediaProperties.Vp9ProfileIds.get_Profile0ChromaSubsampling420BitDepth8() */
 HRESULT wmeme_vp9_profile_ids_get__profile0_chroma_subsampling420_bit_depth8(int32_t *value);
 
-/* Windows.Media.MediaProperties.Vp9ProfileIds.get_Profile2ChromaSubsampling420BitDepth10() */
 HRESULT wmeme_vp9_profile_ids_get__profile2_chroma_subsampling420_bit_depth10(int32_t *value);
 
-/* Windows.Media.MediaProperties.Vp9ProfileIds.get_Profile2ChromaSubsampling420BitDepth12() */
 HRESULT wmeme_vp9_profile_ids_get__profile2_chroma_subsampling420_bit_depth12(int32_t *value);
 
-/* Windows.Media.MediaProperties.IHevcProfileIdsStatics */
-/* Windows.Media.MediaProperties.IHevcProfileIdsStatics.get_MainChromaSubsampling420BitDepth8() */
 HRESULT wmeme_hevc_profile_ids_statics_get__main_chroma_subsampling420_bit_depth8(WMEME_IHevcProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IHevcProfileIdsStatics.get_MainChromaSubsampling420BitDepth10() */
 HRESULT wmeme_hevc_profile_ids_statics_get__main_chroma_subsampling420_bit_depth10(WMEME_IHevcProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IHevcProfileIdsStatics.get_MainChromaSubsampling420BitDepth12() */
 HRESULT wmeme_hevc_profile_ids_statics_get__main_chroma_subsampling420_bit_depth12(WMEME_IHevcProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IHevcProfileIdsStatics.get_MainChromaSubsampling422BitDepth10() */
 HRESULT wmeme_hevc_profile_ids_statics_get__main_chroma_subsampling422_bit_depth10(WMEME_IHevcProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IHevcProfileIdsStatics.get_MainChromaSubsampling422BitDepth12() */
 HRESULT wmeme_hevc_profile_ids_statics_get__main_chroma_subsampling422_bit_depth12(WMEME_IHevcProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IHevcProfileIdsStatics.get_MainChromaSubsampling444BitDepth8() */
 HRESULT wmeme_hevc_profile_ids_statics_get__main_chroma_subsampling444_bit_depth8(WMEME_IHevcProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IHevcProfileIdsStatics.get_MainChromaSubsampling444BitDepth10() */
 HRESULT wmeme_hevc_profile_ids_statics_get__main_chroma_subsampling444_bit_depth10(WMEME_IHevcProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IHevcProfileIdsStatics.get_MainChromaSubsampling444BitDepth12() */
 HRESULT wmeme_hevc_profile_ids_statics_get__main_chroma_subsampling444_bit_depth12(WMEME_IHevcProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IHevcProfileIdsStatics.get_MonochromeBitDepth12() */
 HRESULT wmeme_hevc_profile_ids_statics_get__monochrome_bit_depth12(WMEME_IHevcProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IHevcProfileIdsStatics.get_MonochromeBitDepth16() */
 HRESULT wmeme_hevc_profile_ids_statics_get__monochrome_bit_depth16(WMEME_IHevcProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IHevcProfileIdsStatics.get_MainIntraChromaSubsampling420BitDepth8() */
 HRESULT wmeme_hevc_profile_ids_statics_get__main_intra_chroma_subsampling420_bit_depth8(WMEME_IHevcProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IHevcProfileIdsStatics.get_MainIntraChromaSubsampling420BitDepth10() */
 HRESULT wmeme_hevc_profile_ids_statics_get__main_intra_chroma_subsampling420_bit_depth10(WMEME_IHevcProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IHevcProfileIdsStatics.get_MainIntraChromaSubsampling420BitDepth12() */
 HRESULT wmeme_hevc_profile_ids_statics_get__main_intra_chroma_subsampling420_bit_depth12(WMEME_IHevcProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IHevcProfileIdsStatics.get_MainIntraChromaSubsampling422BitDepth10() */
 HRESULT wmeme_hevc_profile_ids_statics_get__main_intra_chroma_subsampling422_bit_depth10(WMEME_IHevcProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IHevcProfileIdsStatics.get_MainIntraChromaSubsampling422BitDepth12() */
 HRESULT wmeme_hevc_profile_ids_statics_get__main_intra_chroma_subsampling422_bit_depth12(WMEME_IHevcProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IHevcProfileIdsStatics.get_MainIntraChromaSubsampling444BitDepth8() */
 HRESULT wmeme_hevc_profile_ids_statics_get__main_intra_chroma_subsampling444_bit_depth8(WMEME_IHevcProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IHevcProfileIdsStatics.get_MainIntraChromaSubsampling444BitDepth10() */
 HRESULT wmeme_hevc_profile_ids_statics_get__main_intra_chroma_subsampling444_bit_depth10(WMEME_IHevcProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IHevcProfileIdsStatics.get_MainIntraChromaSubsampling444BitDepth12() */
 HRESULT wmeme_hevc_profile_ids_statics_get__main_intra_chroma_subsampling444_bit_depth12(WMEME_IHevcProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IHevcProfileIdsStatics.get_MainIntraChromaSubsampling444BitDepth16() */
 HRESULT wmeme_hevc_profile_ids_statics_get__main_intra_chroma_subsampling444_bit_depth16(WMEME_IHevcProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IHevcProfileIdsStatics.get_MainStillChromaSubsampling420BitDepth8() */
 HRESULT wmeme_hevc_profile_ids_statics_get__main_still_chroma_subsampling420_bit_depth8(WMEME_IHevcProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IHevcProfileIdsStatics.get_MainStillChromaSubsampling444BitDepth8() */
 HRESULT wmeme_hevc_profile_ids_statics_get__main_still_chroma_subsampling444_bit_depth8(WMEME_IHevcProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IHevcProfileIdsStatics.get_MainStillChromaSubsampling444BitDepth16() */
 HRESULT wmeme_hevc_profile_ids_statics_get__main_still_chroma_subsampling444_bit_depth16(WMEME_IHevcProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IH264ProfileIdsStatics */
-/* Windows.Media.MediaProperties.IH264ProfileIdsStatics.get_ConstrainedBaseline() */
 HRESULT wmeme_h264_profile_ids_statics_get__constrained_baseline(WMEME_IH264ProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IH264ProfileIdsStatics.get_Baseline() */
 HRESULT wmeme_h264_profile_ids_statics_get__baseline(WMEME_IH264ProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IH264ProfileIdsStatics.get_Extended() */
 HRESULT wmeme_h264_profile_ids_statics_get__extended(WMEME_IH264ProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IH264ProfileIdsStatics.get_Main() */
 HRESULT wmeme_h264_profile_ids_statics_get__main(WMEME_IH264ProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IH264ProfileIdsStatics.get_High() */
 HRESULT wmeme_h264_profile_ids_statics_get__high(WMEME_IH264ProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IH264ProfileIdsStatics.get_High10() */
 HRESULT wmeme_h264_profile_ids_statics_get__high10(WMEME_IH264ProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IH264ProfileIdsStatics.get_High422() */
 HRESULT wmeme_h264_profile_ids_statics_get__high422(WMEME_IH264ProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IH264ProfileIdsStatics.get_High444() */
 HRESULT wmeme_h264_profile_ids_statics_get__high444(WMEME_IH264ProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IH264ProfileIdsStatics.get_StereoHigh() */
 HRESULT wmeme_h264_profile_ids_statics_get__stereo_high(WMEME_IH264ProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IH264ProfileIdsStatics.get_MultiviewHigh() */
 HRESULT wmeme_h264_profile_ids_statics_get__multiview_high(WMEME_IH264ProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IAv1ProfileIdsStatics */
-/* Windows.Media.MediaProperties.IAv1ProfileIdsStatics.get_MainChromaSubsampling420BitDepth8() */
 HRESULT wmeme_av1_profile_ids_statics_get__main_chroma_subsampling420_bit_depth8(WMEME_IAv1ProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IAv1ProfileIdsStatics.get_MainChromaSubsampling420BitDepth10() */
 HRESULT wmeme_av1_profile_ids_statics_get__main_chroma_subsampling420_bit_depth10(WMEME_IAv1ProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IAv1ProfileIdsStatics.get_MainChromaSubsampling400BitDepth8() */
 HRESULT wmeme_av1_profile_ids_statics_get__main_chroma_subsampling400_bit_depth8(WMEME_IAv1ProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IAv1ProfileIdsStatics.get_MainChromaSubsampling400BitDepth10() */
 HRESULT wmeme_av1_profile_ids_statics_get__main_chroma_subsampling400_bit_depth10(WMEME_IAv1ProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IAv1ProfileIdsStatics.get_HighChromaSubsampling444BitDepth8() */
 HRESULT wmeme_av1_profile_ids_statics_get__high_chroma_subsampling444_bit_depth8(WMEME_IAv1ProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IAv1ProfileIdsStatics.get_HighChromaSubsampling444BitDepth10() */
 HRESULT wmeme_av1_profile_ids_statics_get__high_chroma_subsampling444_bit_depth10(WMEME_IAv1ProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IAv1ProfileIdsStatics.get_ProfessionalChromaSubsampling420BitDepth12() */
 HRESULT wmeme_av1_profile_ids_statics_get__professional_chroma_subsampling420_bit_depth12(WMEME_IAv1ProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IAv1ProfileIdsStatics.get_ProfessionalChromaSubsampling400BitDepth12() */
 HRESULT wmeme_av1_profile_ids_statics_get__professional_chroma_subsampling400_bit_depth12(WMEME_IAv1ProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IAv1ProfileIdsStatics.get_ProfessionalChromaSubsampling444BitDepth12() */
 HRESULT wmeme_av1_profile_ids_statics_get__professional_chroma_subsampling444_bit_depth12(WMEME_IAv1ProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IAv1ProfileIdsStatics.get_ProfessionalChromaSubsampling422BitDepth8() */
 HRESULT wmeme_av1_profile_ids_statics_get__professional_chroma_subsampling422_bit_depth8(WMEME_IAv1ProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IAv1ProfileIdsStatics.get_ProfessionalChromaSubsampling422BitDepth10() */
 HRESULT wmeme_av1_profile_ids_statics_get__professional_chroma_subsampling422_bit_depth10(WMEME_IAv1ProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IAv1ProfileIdsStatics.get_ProfessionalChromaSubsampling422BitDepth12() */
 HRESULT wmeme_av1_profile_ids_statics_get__professional_chroma_subsampling422_bit_depth12(WMEME_IAv1ProfileIdsStatics *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics2 */
-/* Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics2.CreateAlac(sampleRate, channelCount, bitsPerSample) */
 HRESULT wmeme_audio_encoding_properties_statics_2_create_alac(WMEME_IAudioEncodingPropertiesStatics_2 *self, uint32_t sampleRate, uint32_t channelCount, uint32_t bitsPerSample, WMEME_AudioEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics2.CreateFlac(sampleRate, channelCount, bitsPerSample) */
 HRESULT wmeme_audio_encoding_properties_statics_2_create_flac(WMEME_IAudioEncodingPropertiesStatics_2 *self, uint32_t sampleRate, uint32_t channelCount, uint32_t bitsPerSample, WMEME_AudioEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics */
-/* Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics.CreateAac(sampleRate, channelCount, bitrate) */
 HRESULT wmeme_audio_encoding_properties_statics_create_aac(WMEME_IAudioEncodingPropertiesStatics *self, uint32_t sampleRate, uint32_t channelCount, uint32_t bitrate, WMEME_AudioEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics.CreateAacAdts(sampleRate, channelCount, bitrate) */
 HRESULT wmeme_audio_encoding_properties_statics_create_aac_adts(WMEME_IAudioEncodingPropertiesStatics *self, uint32_t sampleRate, uint32_t channelCount, uint32_t bitrate, WMEME_AudioEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics.CreateMp3(sampleRate, channelCount, bitrate) */
 HRESULT wmeme_audio_encoding_properties_statics_create_mp3(WMEME_IAudioEncodingPropertiesStatics *self, uint32_t sampleRate, uint32_t channelCount, uint32_t bitrate, WMEME_AudioEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics.CreatePcm(sampleRate, channelCount, bitsPerSample) */
 HRESULT wmeme_audio_encoding_properties_statics_create_pcm(WMEME_IAudioEncodingPropertiesStatics *self, uint32_t sampleRate, uint32_t channelCount, uint32_t bitsPerSample, WMEME_AudioEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics.CreateWma(sampleRate, channelCount, bitrate) */
 HRESULT wmeme_audio_encoding_properties_statics_create_wma(WMEME_IAudioEncodingPropertiesStatics *self, uint32_t sampleRate, uint32_t channelCount, uint32_t bitrate, WMEME_AudioEncodingProperties** out);
 
-/* activate Windows.Media.MediaProperties.HevcProfileIds */
 HRESULT wmeme_hevc_profile_ids_new(WMEME_HevcProfileIds **out);
 
-/* Windows.Media.MediaProperties.HevcProfileIds */
-/* Windows.Media.MediaProperties.HevcProfileIds.get_MainChromaSubsampling420BitDepth8() */
 HRESULT wmeme_hevc_profile_ids_get__main_chroma_subsampling420_bit_depth8(int32_t *value);
 
-/* Windows.Media.MediaProperties.HevcProfileIds.get_MainChromaSubsampling420BitDepth10() */
 HRESULT wmeme_hevc_profile_ids_get__main_chroma_subsampling420_bit_depth10(int32_t *value);
 
-/* Windows.Media.MediaProperties.HevcProfileIds.get_MainChromaSubsampling420BitDepth12() */
 HRESULT wmeme_hevc_profile_ids_get__main_chroma_subsampling420_bit_depth12(int32_t *value);
 
-/* Windows.Media.MediaProperties.HevcProfileIds.get_MainChromaSubsampling422BitDepth10() */
 HRESULT wmeme_hevc_profile_ids_get__main_chroma_subsampling422_bit_depth10(int32_t *value);
 
-/* Windows.Media.MediaProperties.HevcProfileIds.get_MainChromaSubsampling422BitDepth12() */
 HRESULT wmeme_hevc_profile_ids_get__main_chroma_subsampling422_bit_depth12(int32_t *value);
 
-/* Windows.Media.MediaProperties.HevcProfileIds.get_MainChromaSubsampling444BitDepth8() */
 HRESULT wmeme_hevc_profile_ids_get__main_chroma_subsampling444_bit_depth8(int32_t *value);
 
-/* Windows.Media.MediaProperties.HevcProfileIds.get_MainChromaSubsampling444BitDepth10() */
 HRESULT wmeme_hevc_profile_ids_get__main_chroma_subsampling444_bit_depth10(int32_t *value);
 
-/* Windows.Media.MediaProperties.HevcProfileIds.get_MainChromaSubsampling444BitDepth12() */
 HRESULT wmeme_hevc_profile_ids_get__main_chroma_subsampling444_bit_depth12(int32_t *value);
 
-/* Windows.Media.MediaProperties.HevcProfileIds.get_MonochromeBitDepth12() */
 HRESULT wmeme_hevc_profile_ids_get__monochrome_bit_depth12(int32_t *value);
 
-/* Windows.Media.MediaProperties.HevcProfileIds.get_MonochromeBitDepth16() */
 HRESULT wmeme_hevc_profile_ids_get__monochrome_bit_depth16(int32_t *value);
 
-/* Windows.Media.MediaProperties.HevcProfileIds.get_MainIntraChromaSubsampling420BitDepth8() */
 HRESULT wmeme_hevc_profile_ids_get__main_intra_chroma_subsampling420_bit_depth8(int32_t *value);
 
-/* Windows.Media.MediaProperties.HevcProfileIds.get_MainIntraChromaSubsampling420BitDepth10() */
 HRESULT wmeme_hevc_profile_ids_get__main_intra_chroma_subsampling420_bit_depth10(int32_t *value);
 
-/* Windows.Media.MediaProperties.HevcProfileIds.get_MainIntraChromaSubsampling420BitDepth12() */
 HRESULT wmeme_hevc_profile_ids_get__main_intra_chroma_subsampling420_bit_depth12(int32_t *value);
 
-/* Windows.Media.MediaProperties.HevcProfileIds.get_MainIntraChromaSubsampling422BitDepth10() */
 HRESULT wmeme_hevc_profile_ids_get__main_intra_chroma_subsampling422_bit_depth10(int32_t *value);
 
-/* Windows.Media.MediaProperties.HevcProfileIds.get_MainIntraChromaSubsampling422BitDepth12() */
 HRESULT wmeme_hevc_profile_ids_get__main_intra_chroma_subsampling422_bit_depth12(int32_t *value);
 
-/* Windows.Media.MediaProperties.HevcProfileIds.get_MainIntraChromaSubsampling444BitDepth8() */
 HRESULT wmeme_hevc_profile_ids_get__main_intra_chroma_subsampling444_bit_depth8(int32_t *value);
 
-/* Windows.Media.MediaProperties.HevcProfileIds.get_MainIntraChromaSubsampling444BitDepth10() */
 HRESULT wmeme_hevc_profile_ids_get__main_intra_chroma_subsampling444_bit_depth10(int32_t *value);
 
-/* Windows.Media.MediaProperties.HevcProfileIds.get_MainIntraChromaSubsampling444BitDepth12() */
 HRESULT wmeme_hevc_profile_ids_get__main_intra_chroma_subsampling444_bit_depth12(int32_t *value);
 
-/* Windows.Media.MediaProperties.HevcProfileIds.get_MainIntraChromaSubsampling444BitDepth16() */
 HRESULT wmeme_hevc_profile_ids_get__main_intra_chroma_subsampling444_bit_depth16(int32_t *value);
 
-/* Windows.Media.MediaProperties.HevcProfileIds.get_MainStillChromaSubsampling420BitDepth8() */
 HRESULT wmeme_hevc_profile_ids_get__main_still_chroma_subsampling420_bit_depth8(int32_t *value);
 
-/* Windows.Media.MediaProperties.HevcProfileIds.get_MainStillChromaSubsampling444BitDepth8() */
 HRESULT wmeme_hevc_profile_ids_get__main_still_chroma_subsampling444_bit_depth8(int32_t *value);
 
-/* Windows.Media.MediaProperties.HevcProfileIds.get_MainStillChromaSubsampling444BitDepth16() */
 HRESULT wmeme_hevc_profile_ids_get__main_still_chroma_subsampling444_bit_depth16(int32_t *value);
 
-/* activate Windows.Media.MediaProperties.H264ProfileIds */
 HRESULT wmeme_h264_profile_ids_new(WMEME_H264ProfileIds **out);
 
-/* Windows.Media.MediaProperties.H264ProfileIds */
-/* Windows.Media.MediaProperties.H264ProfileIds.get_ConstrainedBaseline() */
 HRESULT wmeme_h264_profile_ids_get__constrained_baseline(int32_t *value);
 
-/* Windows.Media.MediaProperties.H264ProfileIds.get_Baseline() */
 HRESULT wmeme_h264_profile_ids_get__baseline(int32_t *value);
 
-/* Windows.Media.MediaProperties.H264ProfileIds.get_Extended() */
 HRESULT wmeme_h264_profile_ids_get__extended(int32_t *value);
 
-/* Windows.Media.MediaProperties.H264ProfileIds.get_Main() */
 HRESULT wmeme_h264_profile_ids_get__main(int32_t *value);
 
-/* Windows.Media.MediaProperties.H264ProfileIds.get_High() */
 HRESULT wmeme_h264_profile_ids_get__high(int32_t *value);
 
-/* Windows.Media.MediaProperties.H264ProfileIds.get_High10() */
 HRESULT wmeme_h264_profile_ids_get__high10(int32_t *value);
 
-/* Windows.Media.MediaProperties.H264ProfileIds.get_High422() */
 HRESULT wmeme_h264_profile_ids_get__high422(int32_t *value);
 
-/* Windows.Media.MediaProperties.H264ProfileIds.get_High444() */
 HRESULT wmeme_h264_profile_ids_get__high444(int32_t *value);
 
-/* Windows.Media.MediaProperties.H264ProfileIds.get_StereoHigh() */
 HRESULT wmeme_h264_profile_ids_get__stereo_high(int32_t *value);
 
-/* Windows.Media.MediaProperties.H264ProfileIds.get_MultiviewHigh() */
 HRESULT wmeme_h264_profile_ids_get__multiview_high(int32_t *value);
 
-/* activate Windows.Media.MediaProperties.ContainerEncodingProperties */
 HRESULT wmeme_container_encoding_properties_new(WMEME_ContainerEncodingProperties **out);
 
-/* Windows.Media.MediaProperties.ContainerEncodingProperties */
-/* Windows.Media.MediaProperties.ContainerEncodingProperties.get_Properties() */
 HRESULT wmeme_container_encoding_properties_get__properties(WMEME_ContainerEncodingProperties *self, WMEME_MediaPropertySet** value);
 
-/* Windows.Media.MediaProperties.ContainerEncodingProperties.get_Type() */
 HRESULT wmeme_container_encoding_properties_get__type(WMEME_ContainerEncodingProperties *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.ContainerEncodingProperties.put_Subtype() */
 HRESULT wmeme_container_encoding_properties_put__subtype(WMEME_ContainerEncodingProperties *self, cwinrt_hstring value);
 
-/* Windows.Media.MediaProperties.ContainerEncodingProperties.get_Subtype() */
 HRESULT wmeme_container_encoding_properties_get__subtype(WMEME_ContainerEncodingProperties *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.ContainerEncodingProperties.Copy() */
 HRESULT wmeme_container_encoding_properties_copy(WMEME_ContainerEncodingProperties *self, WMEME_ContainerEncodingProperties** out);
 
-/* activate Windows.Media.MediaProperties.Av1ProfileIds */
 HRESULT wmeme_av1_profile_ids_new(WMEME_Av1ProfileIds **out);
 
-/* Windows.Media.MediaProperties.Av1ProfileIds */
-/* Windows.Media.MediaProperties.Av1ProfileIds.get_MainChromaSubsampling420BitDepth8() */
 HRESULT wmeme_av1_profile_ids_get__main_chroma_subsampling420_bit_depth8(int32_t *value);
 
-/* Windows.Media.MediaProperties.Av1ProfileIds.get_MainChromaSubsampling420BitDepth10() */
 HRESULT wmeme_av1_profile_ids_get__main_chroma_subsampling420_bit_depth10(int32_t *value);
 
-/* Windows.Media.MediaProperties.Av1ProfileIds.get_MainChromaSubsampling400BitDepth8() */
 HRESULT wmeme_av1_profile_ids_get__main_chroma_subsampling400_bit_depth8(int32_t *value);
 
-/* Windows.Media.MediaProperties.Av1ProfileIds.get_MainChromaSubsampling400BitDepth10() */
 HRESULT wmeme_av1_profile_ids_get__main_chroma_subsampling400_bit_depth10(int32_t *value);
 
-/* Windows.Media.MediaProperties.Av1ProfileIds.get_HighChromaSubsampling444BitDepth8() */
 HRESULT wmeme_av1_profile_ids_get__high_chroma_subsampling444_bit_depth8(int32_t *value);
 
-/* Windows.Media.MediaProperties.Av1ProfileIds.get_HighChromaSubsampling444BitDepth10() */
 HRESULT wmeme_av1_profile_ids_get__high_chroma_subsampling444_bit_depth10(int32_t *value);
 
-/* Windows.Media.MediaProperties.Av1ProfileIds.get_ProfessionalChromaSubsampling420BitDepth12() */
 HRESULT wmeme_av1_profile_ids_get__professional_chroma_subsampling420_bit_depth12(int32_t *value);
 
-/* Windows.Media.MediaProperties.Av1ProfileIds.get_ProfessionalChromaSubsampling400BitDepth12() */
 HRESULT wmeme_av1_profile_ids_get__professional_chroma_subsampling400_bit_depth12(int32_t *value);
 
-/* Windows.Media.MediaProperties.Av1ProfileIds.get_ProfessionalChromaSubsampling444BitDepth12() */
 HRESULT wmeme_av1_profile_ids_get__professional_chroma_subsampling444_bit_depth12(int32_t *value);
 
-/* Windows.Media.MediaProperties.Av1ProfileIds.get_ProfessionalChromaSubsampling422BitDepth8() */
 HRESULT wmeme_av1_profile_ids_get__professional_chroma_subsampling422_bit_depth8(int32_t *value);
 
-/* Windows.Media.MediaProperties.Av1ProfileIds.get_ProfessionalChromaSubsampling422BitDepth10() */
 HRESULT wmeme_av1_profile_ids_get__professional_chroma_subsampling422_bit_depth10(int32_t *value);
 
-/* Windows.Media.MediaProperties.Av1ProfileIds.get_ProfessionalChromaSubsampling422BitDepth12() */
 HRESULT wmeme_av1_profile_ids_get__professional_chroma_subsampling422_bit_depth12(int32_t *value);
 
-/* activate Windows.Media.MediaProperties.AudioEncodingProperties */
 HRESULT wmeme_audio_encoding_properties_new(WMEME_AudioEncodingProperties **out);
 
-/* Windows.Media.MediaProperties.AudioEncodingProperties */
-/* Windows.Media.MediaProperties.AudioEncodingProperties.put_Bitrate() */
 HRESULT wmeme_audio_encoding_properties_put__bitrate(WMEME_AudioEncodingProperties *self, uint32_t value);
 
-/* Windows.Media.MediaProperties.AudioEncodingProperties.get_Bitrate() */
 HRESULT wmeme_audio_encoding_properties_get__bitrate(WMEME_AudioEncodingProperties *self, uint32_t *value);
 
-/* Windows.Media.MediaProperties.AudioEncodingProperties.put_ChannelCount() */
 HRESULT wmeme_audio_encoding_properties_put__channel_count(WMEME_AudioEncodingProperties *self, uint32_t value);
 
-/* Windows.Media.MediaProperties.AudioEncodingProperties.get_ChannelCount() */
 HRESULT wmeme_audio_encoding_properties_get__channel_count(WMEME_AudioEncodingProperties *self, uint32_t *value);
 
-/* Windows.Media.MediaProperties.AudioEncodingProperties.put_SampleRate() */
 HRESULT wmeme_audio_encoding_properties_put__sample_rate(WMEME_AudioEncodingProperties *self, uint32_t value);
 
-/* Windows.Media.MediaProperties.AudioEncodingProperties.get_SampleRate() */
 HRESULT wmeme_audio_encoding_properties_get__sample_rate(WMEME_AudioEncodingProperties *self, uint32_t *value);
 
-/* Windows.Media.MediaProperties.AudioEncodingProperties.put_BitsPerSample() */
 HRESULT wmeme_audio_encoding_properties_put__bits_per_sample(WMEME_AudioEncodingProperties *self, uint32_t value);
 
-/* Windows.Media.MediaProperties.AudioEncodingProperties.get_BitsPerSample() */
 HRESULT wmeme_audio_encoding_properties_get__bits_per_sample(WMEME_AudioEncodingProperties *self, uint32_t *value);
 
-/* Windows.Media.MediaProperties.AudioEncodingProperties.get_Properties() */
 HRESULT wmeme_audio_encoding_properties_get__properties(WMEME_AudioEncodingProperties *self, WMEME_MediaPropertySet** value);
 
-/* Windows.Media.MediaProperties.AudioEncodingProperties.get_Type() */
 HRESULT wmeme_audio_encoding_properties_get__type(WMEME_AudioEncodingProperties *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.AudioEncodingProperties.put_Subtype() */
 HRESULT wmeme_audio_encoding_properties_put__subtype(WMEME_AudioEncodingProperties *self, cwinrt_hstring value);
 
-/* Windows.Media.MediaProperties.AudioEncodingProperties.get_Subtype() */
 HRESULT wmeme_audio_encoding_properties_get__subtype(WMEME_AudioEncodingProperties *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.AudioEncodingProperties.SetFormatUserData() */
 HRESULT wmeme_audio_encoding_properties_set_format_user_data(WMEME_AudioEncodingProperties *self, uint8_t *value, uint32_t value_len);
 
-/* Windows.Media.MediaProperties.AudioEncodingProperties.GetFormatUserData() */
 HRESULT wmeme_audio_encoding_properties_get_format_user_data(WMEME_AudioEncodingProperties *self, uint8_t *value, uint32_t value_len);
 
-/* Windows.Media.MediaProperties.AudioEncodingProperties.get_IsSpatial() */
 HRESULT wmeme_audio_encoding_properties_get__is_spatial(WMEME_AudioEncodingProperties *self, BOOL *value);
 
-/* Windows.Media.MediaProperties.AudioEncodingProperties.Copy() */
 HRESULT wmeme_audio_encoding_properties_copy(WMEME_AudioEncodingProperties *self, WMEME_AudioEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.AudioEncodingProperties.CreateAlac(sampleRate, channelCount, bitsPerSample) */
 HRESULT wmeme_audio_encoding_properties_create_alac(uint32_t sampleRate, uint32_t channelCount, uint32_t bitsPerSample, WMEME_AudioEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.AudioEncodingProperties.CreateFlac(sampleRate, channelCount, bitsPerSample) */
 HRESULT wmeme_audio_encoding_properties_create_flac(uint32_t sampleRate, uint32_t channelCount, uint32_t bitsPerSample, WMEME_AudioEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.AudioEncodingProperties.CreateAac(sampleRate, channelCount, bitrate) */
 HRESULT wmeme_audio_encoding_properties_create_aac(uint32_t sampleRate, uint32_t channelCount, uint32_t bitrate, WMEME_AudioEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.AudioEncodingProperties.CreateAacAdts(sampleRate, channelCount, bitrate) */
 HRESULT wmeme_audio_encoding_properties_create_aac_adts(uint32_t sampleRate, uint32_t channelCount, uint32_t bitrate, WMEME_AudioEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.AudioEncodingProperties.CreateMp3(sampleRate, channelCount, bitrate) */
 HRESULT wmeme_audio_encoding_properties_create_mp3(uint32_t sampleRate, uint32_t channelCount, uint32_t bitrate, WMEME_AudioEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.AudioEncodingProperties.CreatePcm(sampleRate, channelCount, bitsPerSample) */
 HRESULT wmeme_audio_encoding_properties_create_pcm(uint32_t sampleRate, uint32_t channelCount, uint32_t bitsPerSample, WMEME_AudioEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.AudioEncodingProperties.CreateWma(sampleRate, channelCount, bitrate) */
 HRESULT wmeme_audio_encoding_properties_create_wma(uint32_t sampleRate, uint32_t channelCount, uint32_t bitrate, WMEME_AudioEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.IImageEncodingProperties */
-/* Windows.Media.MediaProperties.IImageEncodingProperties2 */
-/* Windows.Media.MediaProperties.IImageEncodingProperties2.Copy() */
 HRESULT wmeme_image_encoding_properties_2_copy(WMEME_IImageEncodingProperties_2 *self, WMEME_ImageEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.IMediaEncodingProfile */
-/* Windows.Media.MediaProperties.IMediaEncodingProfile2 */
-/* Windows.Media.MediaProperties.IMediaEncodingProfile2.SetAudioTracks() */
 HRESULT wmeme_media_encoding_profile_2_set_audio_tracks(WMEME_IMediaEncodingProfile_2 *self, WFOCO_IIterable_WMECO_AudioStreamDescriptor* value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingProfile2.GetAudioTracks() */
 HRESULT wmeme_media_encoding_profile_2_get_audio_tracks(WMEME_IMediaEncodingProfile_2 *self, WFOCO_IVector_WMECO_AudioStreamDescriptor** out);
 
-/* Windows.Media.MediaProperties.IMediaEncodingProfile2.SetVideoTracks() */
 HRESULT wmeme_media_encoding_profile_2_set_video_tracks(WMEME_IMediaEncodingProfile_2 *self, WFOCO_IIterable_WMECO_VideoStreamDescriptor* value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingProfile2.GetVideoTracks() */
 HRESULT wmeme_media_encoding_profile_2_get_video_tracks(WMEME_IMediaEncodingProfile_2 *self, WFOCO_IVector_WMECO_VideoStreamDescriptor** out);
 
-/* Windows.Media.MediaProperties.IMediaEncodingProfile3 */
-/* Windows.Media.MediaProperties.IMediaEncodingProfile3.SetTimedMetadataTracks() */
 HRESULT wmeme_media_encoding_profile_3_set_timed_metadata_tracks(WMEME_IMediaEncodingProfile_3 *self, WFOCO_IIterable_WMECO_TimedMetadataStreamDescriptor* value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingProfile3.GetTimedMetadataTracks() */
 HRESULT wmeme_media_encoding_profile_3_get_timed_metadata_tracks(WMEME_IMediaEncodingProfile_3 *self, WFOCO_IVector_WMECO_TimedMetadataStreamDescriptor** out);
 
-/* Windows.Media.MediaProperties.IMediaRatio */
-/* Windows.Media.MediaProperties.ITimedMetadataEncodingProperties */
-/* Windows.Media.MediaProperties.IVideoEncodingProperties */
-/* Windows.Media.MediaProperties.IVideoEncodingProperties2 */
-/* Windows.Media.MediaProperties.IVideoEncodingProperties2.SetFormatUserData() */
 HRESULT wmeme_video_encoding_properties_2_set_format_user_data(WMEME_IVideoEncodingProperties_2 *self, uint8_t *value, uint32_t value_len);
 
-/* Windows.Media.MediaProperties.IVideoEncodingProperties2.GetFormatUserData() */
 HRESULT wmeme_video_encoding_properties_2_get_format_user_data(WMEME_IVideoEncodingProperties_2 *self, uint8_t *value, uint32_t value_len);
 
-/* Windows.Media.MediaProperties.IVideoEncodingProperties2.put_ProfileId() */
 HRESULT wmeme_video_encoding_properties_2_put__profile_id(WMEME_IVideoEncodingProperties_2 *self, int32_t value);
 
-/* Windows.Media.MediaProperties.IVideoEncodingProperties2.get_ProfileId() */
 HRESULT wmeme_video_encoding_properties_2_get__profile_id(WMEME_IVideoEncodingProperties_2 *self, int32_t *value);
 
-/* Windows.Media.MediaProperties.IVideoEncodingProperties3 */
-/* Windows.Media.MediaProperties.IVideoEncodingProperties3.get_StereoscopicVideoPackingMode() */
 HRESULT wmeme_video_encoding_properties_3_get__stereoscopic_video_packing_mode(WMEME_IVideoEncodingProperties_3 *self, WMEME_StereoscopicVideoPackingMode *value);
 
-/* Windows.Media.MediaProperties.IVideoEncodingProperties4 */
-/* Windows.Media.MediaProperties.IVideoEncodingProperties4.get_SphericalVideoFrameFormat() */
 HRESULT wmeme_video_encoding_properties_4_get__spherical_video_frame_format(WMEME_IVideoEncodingProperties_4 *self, WMEME_SphericalVideoFrameFormat *value);
 
-/* Windows.Media.MediaProperties.IVideoEncodingProperties5 */
-/* Windows.Media.MediaProperties.IVideoEncodingProperties5.Copy() */
 HRESULT wmeme_video_encoding_properties_5_copy(WMEME_IVideoEncodingProperties_5 *self, WMEME_VideoEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.IContainerEncodingProperties2 */
-/* Windows.Media.MediaProperties.IContainerEncodingProperties2.Copy() */
 HRESULT wmeme_container_encoding_properties_2_copy(WMEME_IContainerEncodingProperties_2 *self, WMEME_ContainerEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.IAudioEncodingProperties */
-/* Windows.Media.MediaProperties.IAudioEncodingPropertiesWithFormatUserData */
-/* Windows.Media.MediaProperties.IAudioEncodingPropertiesWithFormatUserData.SetFormatUserData() */
 HRESULT wmeme_audio_encoding_properties_with_format_user_data_set_format_user_data(WMEME_IAudioEncodingPropertiesWithFormatUserData *self, uint8_t *value, uint32_t value_len);
 
-/* Windows.Media.MediaProperties.IAudioEncodingPropertiesWithFormatUserData.GetFormatUserData() */
 HRESULT wmeme_audio_encoding_properties_with_format_user_data_get_format_user_data(WMEME_IAudioEncodingPropertiesWithFormatUserData *self, uint8_t *value, uint32_t value_len);
 
-/* Windows.Media.MediaProperties.IAudioEncodingProperties2 */
-/* Windows.Media.MediaProperties.IAudioEncodingProperties2.get_IsSpatial() */
 HRESULT wmeme_audio_encoding_properties_2_get__is_spatial(WMEME_IAudioEncodingProperties_2 *self, BOOL *value);
 
-/* Windows.Media.MediaProperties.IAudioEncodingProperties3 */
-/* Windows.Media.MediaProperties.IAudioEncodingProperties3.Copy() */
 HRESULT wmeme_audio_encoding_properties_3_copy(WMEME_IAudioEncodingProperties_3 *self, WMEME_AudioEncodingProperties** out);
 
-/* Windows.Media.MediaProperties.IMediaEncodingProperties */
-/* Windows.Media.MediaProperties.IMediaEncodingProperties.get_Properties() */
 HRESULT wmeme_media_encoding_properties_get__properties(WMEME_IMediaEncodingProperties *self, WMEME_MediaPropertySet** value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingProperties.get_Type() */
 HRESULT wmeme_media_encoding_properties_get__type(WMEME_IMediaEncodingProperties *self, cwinrt_hstring *value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingProperties.put_Subtype() */
 HRESULT wmeme_media_encoding_properties_put__subtype(WMEME_IMediaEncodingProperties *self, cwinrt_hstring value);
 
-/* Windows.Media.MediaProperties.IMediaEncodingProperties.get_Subtype() */
 HRESULT wmeme_media_encoding_properties_get__subtype(WMEME_IMediaEncodingProperties *self, cwinrt_hstring *value);
 
 #endif /* CWINRT_WINDOWS_MEDIA_MEDIAPROPERTIES_H */

@@ -7,7 +7,6 @@ enum
 	CWINRT_VTBL_SLOT_FIRST = 6,
 };
 
-/* Fill vtable_slot + dispatch_token on raw methods (0 = unknown). */
 int cwinrt_slot_assign(cwinrt_raw_db *raw);
 
 /* Independently validate assigned slots against the WinRT ABI rule:

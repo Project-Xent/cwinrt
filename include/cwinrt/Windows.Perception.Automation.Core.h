@@ -12,17 +12,14 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WPEAUCO_ICorePerceptionAutomationStatics WPEAUCO_ICorePerceptionAutomationStatics;
 typedef struct WPEAUCO_CorePerceptionAutomation WPEAUCO_CorePerceptionAutomation;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IGetActivationFactory
 #define CWINRT_FWD_WF_IGetActivationFactory
 typedef struct WF_IGetActivationFactory WF_IGetActivationFactory;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -31,17 +28,10 @@ typedef struct WF_IGetActivationFactory WF_IGetActivationFactory;
 static const IID CWINRT_IID_WPEAUCO_ICorePerceptionAutomationStatics CWINRT_MAYBE_UNUSED = { 0x0BB04541, 0x4CE2, 0x4923, { 0x9A, 0x76, 0x81, 0x87, 0xEC, 0xC5, 0x91, 0x12 } };
 #endif
 
-/* Methods */
-
-/* Windows.Perception.Automation.Core.ICorePerceptionAutomationStatics */
-/* Windows.Perception.Automation.Core.ICorePerceptionAutomationStatics.SetActivationFactoryProvider(provider) */
 HRESULT wpeauco_core_perception_automation_statics_set_activation_factory_provider(WPEAUCO_ICorePerceptionAutomationStatics *self, WF_IGetActivationFactory* provider);
 
-/* activate Windows.Perception.Automation.Core.CorePerceptionAutomation */
 HRESULT wpeauco_core_perception_automation_new(WPEAUCO_CorePerceptionAutomation **out);
 
-/* Windows.Perception.Automation.Core.CorePerceptionAutomation */
-/* Windows.Perception.Automation.Core.CorePerceptionAutomation.SetActivationFactoryProvider(provider) */
 HRESULT wpeauco_core_perception_automation_set_activation_factory_provider(WF_IGetActivationFactory* provider);
 
 #endif /* CWINRT_WINDOWS_PERCEPTION_AUTOMATION_CORE_H */

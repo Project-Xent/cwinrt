@@ -59,7 +59,6 @@ static int collect_read_type(sig_reader *r, winmd_meta const *m, sig_tokset *ts)
 	return 0;
 }
 
-/* Read `count` consecutive types, collecting their tokens. */
 static int collect_read_n(sig_reader *r, winmd_meta const *m, sig_tokset *ts, uint32_t count) {
 	uint32_t i;
 	for (i = 0; i < count; i++)

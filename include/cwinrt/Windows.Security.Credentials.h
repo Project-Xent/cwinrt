@@ -14,7 +14,6 @@
 #include <cwinrt/Windows.UI.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
@@ -28,7 +27,6 @@ typedef struct WSTST_IRandomAccessStream WSTST_IRandomAccessStream;
 typedef struct WSY_User WSY_User;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSECR_AttestationChallengeHandler WSECR_AttestationChallengeHandler;
 typedef struct WSECR_ICredentialFactory WSECR_ICredentialFactory;
 typedef struct WSECR_IKeyCredentialCacheConfigurationFactory WSECR_IKeyCredentialCacheConfigurationFactory;
@@ -64,7 +62,6 @@ typedef struct WSECR_IWebAccountProvider_2 WSECR_IWebAccountProvider_2;
 typedef struct WSECR_IWebAccount WSECR_IWebAccount;
 typedef struct WSECR_IWebAccountProvider WSECR_IWebAccountProvider;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSTST_IBuffer
 #define CWINRT_FWD_WSTST_IBuffer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
@@ -211,7 +208,6 @@ typedef enum WSECR_WebAccountState {
 } WSECR_WebAccountState;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -308,349 +304,211 @@ static const IID CWINRT_IID_WSECR_IWebAccount CWINRT_MAYBE_UNUSED = { 0x69473EB2
 static const IID CWINRT_IID_WSECR_IWebAccountProvider CWINRT_MAYBE_UNUSED = { 0x29DCC8C3, 0x7AB9, 0x4A7C, { 0xA3, 0x36, 0xB9, 0x42, 0xF9, 0xDB, 0xF7, 0xC7 } };
 #endif
 
-/* Methods */
-
-/* Windows.Security.Credentials.AttestationChallengeHandler */
-/* Windows.Security.Credentials.AttestationChallengeHandler.Invoke(challenge) */
 HRESULT wsecr_attestation_challenge_handler_invoke(WSECR_AttestationChallengeHandler *self, WSTST_IBuffer* challenge, WSTST_IBuffer** out);
 
-/* Windows.Security.Credentials.ICredentialFactory */
-/* Windows.Security.Credentials.ICredentialFactory.CreatePasswordCredential(resource, userName, password) */
 HRESULT wsecr_credential_factory_create_password_credential(WSECR_ICredentialFactory *self, cwinrt_hstring resource, cwinrt_hstring userName, cwinrt_hstring password, WSECR_PasswordCredential** out);
 
-/* Windows.Security.Credentials.IKeyCredentialCacheConfigurationFactory */
-/* Windows.Security.Credentials.IKeyCredentialCacheConfigurationFactory.CreateInstance(cacheOption, timeout, usageCount) */
 HRESULT wsecr_key_credential_cache_configuration_factory_create_instance(WSECR_IKeyCredentialCacheConfigurationFactory *self, WSECR_KeyCredentialCacheOption cacheOption, WF_TimeSpan timeout, uint32_t usageCount, WSECR_KeyCredentialCacheConfiguration** out);
 
-/* Windows.Security.Credentials.IKeyCredentialManagerCreateWithWindowStatics */
-/* Windows.Security.Credentials.IKeyCredentialManagerCreateWithWindowStatics.RequestCreateForWindowAsync(window, name, option) */
 HRESULT wsecr_key_credential_manager_create_with_window_statics_request_create_for_window_async(WSECR_IKeyCredentialManagerCreateWithWindowStatics *self, WUI_WindowId window, cwinrt_hstring name, WSECR_KeyCredentialCreationOption option, WF_IAsyncOperation_WSECR_KeyCredentialRetrievalResult** out);
 
-/* Windows.Security.Credentials.IKeyCredentialManagerStatics2 */
-/* Windows.Security.Credentials.IKeyCredentialManagerStatics2.RequestCreateAsync(name, option, algorithm, message, cacheConfiguration, windowId, callbackType, attestationCallback) */
 HRESULT wsecr_key_credential_manager_statics_2_request_create_async(WSECR_IKeyCredentialManagerStatics_2 *self, cwinrt_hstring name, WSECR_KeyCredentialCreationOption option, cwinrt_hstring algorithm, cwinrt_hstring message, WSECR_KeyCredentialCacheConfiguration* cacheConfiguration, WUI_WindowId windowId, WSECR_ChallengeResponseKind callbackType, WSECR_AttestationChallengeHandler* attestationCallback, WF_IAsyncOperation_WSECR_KeyCredentialRetrievalResult** out);
 
-/* Windows.Security.Credentials.IKeyCredentialManagerStatics2.OpenAsync(name, callbackType, attestationCallback) */
 HRESULT wsecr_key_credential_manager_statics_2_open_async(WSECR_IKeyCredentialManagerStatics_2 *self, cwinrt_hstring name, WSECR_ChallengeResponseKind callbackType, WSECR_AttestationChallengeHandler* attestationCallback, WF_IAsyncOperation_WSECR_KeyCredentialRetrievalResult** out);
 
-/* Windows.Security.Credentials.IKeyCredentialManagerStatics2.GetSecureId() */
 HRESULT wsecr_key_credential_manager_statics_2_get_secure_id(WSECR_IKeyCredentialManagerStatics_2 *self, WSTST_IBuffer** out);
 
-/* Windows.Security.Credentials.IWebAccountFactory */
-/* Windows.Security.Credentials.IWebAccountFactory.CreateWebAccount(webAccountProvider, userName, state) */
 HRESULT wsecr_web_account_factory_create_web_account(WSECR_IWebAccountFactory *self, WSECR_WebAccountProvider* webAccountProvider, cwinrt_hstring userName, WSECR_WebAccountState state, WSECR_WebAccount** out);
 
-/* Windows.Security.Credentials.IWebAccountProviderFactory */
-/* Windows.Security.Credentials.IWebAccountProviderFactory.CreateWebAccountProvider(id, displayName, iconUri) */
 HRESULT wsecr_web_account_provider_factory_create_web_account_provider(WSECR_IWebAccountProviderFactory *self, cwinrt_hstring id, cwinrt_hstring displayName, WF_Uri* iconUri, WSECR_WebAccountProvider** out);
 
-/* activate Windows.Security.Credentials.KeyCredential */
 HRESULT wsecr_key_credential_new(WSECR_KeyCredential **out);
 
-/* Windows.Security.Credentials.KeyCredential */
-/* Windows.Security.Credentials.KeyCredential.get_Name() */
 HRESULT wsecr_key_credential_get__name(WSECR_KeyCredential *self, cwinrt_hstring *value);
 
-/* Windows.Security.Credentials.KeyCredential.RetrievePublicKey() */
 HRESULT wsecr_key_credential_retrieve_public_key(WSECR_KeyCredential *self, WSTST_IBuffer** out);
 
-/* Windows.Security.Credentials.KeyCredential.RetrievePublicKey(blobType) */
 HRESULT wsecr_key_credential_retrieve_public_key_cryptographic_public_key_blob_type_p(WSECR_KeyCredential *self, WSECRCO_CryptographicPublicKeyBlobType blobType, WSTST_IBuffer** out);
 
-/* Windows.Security.Credentials.KeyCredential.RequestSignAsync(data) */
 HRESULT wsecr_key_credential_request_sign_async(WSECR_KeyCredential *self, WSTST_IBuffer* data, WF_IAsyncOperation_WSECR_KeyCredentialOperationResult** out);
 
-/* Windows.Security.Credentials.KeyCredential.GetAttestationAsync() */
 HRESULT wsecr_key_credential_get_attestation_async(WSECR_KeyCredential *self, WF_IAsyncOperation_WSECR_KeyCredentialAttestationResult** out);
 
-/* Windows.Security.Credentials.KeyCredential.RequestDeriveSharedSecretAsync(windowId, message, encryptedRequest) */
 HRESULT wsecr_key_credential_request_derive_shared_secret_async(WSECR_KeyCredential *self, WUI_WindowId windowId, cwinrt_hstring message, WSTST_IBuffer* encryptedRequest, WF_IAsyncOperation_WSECR_KeyCredentialOperationResult** out);
 
-/* Windows.Security.Credentials.KeyCredential.RetrieveAuthorizationContext(encryptedRequest) */
 HRESULT wsecr_key_credential_retrieve_authorization_context(WSECR_KeyCredential *self, WSTST_IBuffer* encryptedRequest, WSTST_IBuffer** out);
 
-/* Windows.Security.Credentials.KeyCredential.RequestSignForWindowAsync(window, data) */
 HRESULT wsecr_key_credential_request_sign_for_window_async(WSECR_KeyCredential *self, WUI_WindowId window, WSTST_IBuffer* data, WF_IAsyncOperation_WSECR_KeyCredentialOperationResult** out);
 
-/* activate Windows.Security.Credentials.KeyCredentialAttestationResult */
 HRESULT wsecr_key_credential_attestation_result_new(WSECR_KeyCredentialAttestationResult **out);
 
-/* Windows.Security.Credentials.KeyCredentialAttestationResult */
-/* Windows.Security.Credentials.KeyCredentialAttestationResult.get_CertificateChainBuffer() */
 HRESULT wsecr_key_credential_attestation_result_get__certificate_chain_buffer(WSECR_KeyCredentialAttestationResult *self, WSTST_IBuffer** value);
 
-/* Windows.Security.Credentials.KeyCredentialAttestationResult.get_AttestationBuffer() */
 HRESULT wsecr_key_credential_attestation_result_get__attestation_buffer(WSECR_KeyCredentialAttestationResult *self, WSTST_IBuffer** value);
 
-/* Windows.Security.Credentials.KeyCredentialAttestationResult.get_Status() */
 HRESULT wsecr_key_credential_attestation_result_get__status(WSECR_KeyCredentialAttestationResult *self, WSECR_KeyCredentialAttestationStatus *value);
 
-/* activate Windows.Security.Credentials.KeyCredentialCacheConfiguration */
 HRESULT wsecr_key_credential_cache_configuration_new(WSECR_KeyCredentialCacheConfiguration **out);
 
-/* Windows.Security.Credentials.KeyCredentialCacheConfiguration */
-/* Windows.Security.Credentials.KeyCredentialCacheConfiguration.get_CacheOption() */
 HRESULT wsecr_key_credential_cache_configuration_get__cache_option(WSECR_KeyCredentialCacheConfiguration *self, WSECR_KeyCredentialCacheOption *value);
 
-/* Windows.Security.Credentials.KeyCredentialCacheConfiguration.get_Timeout() */
 HRESULT wsecr_key_credential_cache_configuration_get__timeout(WSECR_KeyCredentialCacheConfiguration *self, WF_TimeSpan *value);
 
-/* Windows.Security.Credentials.KeyCredentialCacheConfiguration.get_UsageCount() */
 HRESULT wsecr_key_credential_cache_configuration_get__usage_count(WSECR_KeyCredentialCacheConfiguration *self, uint32_t *value);
 
-/* activate Windows.Security.Credentials.KeyCredentialManager */
 HRESULT wsecr_key_credential_manager_new(WSECR_KeyCredentialManager **out);
 
-/* Windows.Security.Credentials.KeyCredentialManager */
-/* Windows.Security.Credentials.KeyCredentialManager.RequestCreateForWindowAsync(window, name, option) */
 HRESULT wsecr_key_credential_manager_request_create_for_window_async(WUI_WindowId window, cwinrt_hstring name, WSECR_KeyCredentialCreationOption option, WF_IAsyncOperation_WSECR_KeyCredentialRetrievalResult** out);
 
-/* Windows.Security.Credentials.KeyCredentialManager.RequestCreateAsync(name, option, algorithm, message, cacheConfiguration, windowId, callbackType, attestationCallback) */
 HRESULT wsecr_key_credential_manager_request_create_async_str_key_credential_creation_option_s_60317ce3(cwinrt_hstring name, WSECR_KeyCredentialCreationOption option, cwinrt_hstring algorithm, cwinrt_hstring message, WSECR_KeyCredentialCacheConfiguration* cacheConfiguration, WUI_WindowId windowId, WSECR_ChallengeResponseKind callbackType, WSECR_AttestationChallengeHandler* attestationCallback, WF_IAsyncOperation_WSECR_KeyCredentialRetrievalResult** out);
 
-/* Windows.Security.Credentials.KeyCredentialManager.OpenAsync(name, callbackType, attestationCallback) */
 HRESULT wsecr_key_credential_manager_open_async_str_challenge_response_kind_p_p(cwinrt_hstring name, WSECR_ChallengeResponseKind callbackType, WSECR_AttestationChallengeHandler* attestationCallback, WF_IAsyncOperation_WSECR_KeyCredentialRetrievalResult** out);
 
-/* Windows.Security.Credentials.KeyCredentialManager.GetSecureId() */
 HRESULT wsecr_key_credential_manager_get_secure_id(WSTST_IBuffer** out);
 
-/* Windows.Security.Credentials.KeyCredentialManager.IsSupportedAsync() */
 HRESULT wsecr_key_credential_manager_is_supported_async(WF_IAsyncOperation_Bool** out);
 
-/* Windows.Security.Credentials.KeyCredentialManager.RenewAttestationAsync() */
 HRESULT wsecr_key_credential_manager_renew_attestation_async(WF_IAsyncAction** out);
 
-/* Windows.Security.Credentials.KeyCredentialManager.RequestCreateAsync(name, option) */
 HRESULT wsecr_key_credential_manager_request_create_async(cwinrt_hstring name, WSECR_KeyCredentialCreationOption option, WF_IAsyncOperation_WSECR_KeyCredentialRetrievalResult** out);
 
-/* Windows.Security.Credentials.KeyCredentialManager.OpenAsync(name) */
 HRESULT wsecr_key_credential_manager_open_async(cwinrt_hstring name, WF_IAsyncOperation_WSECR_KeyCredentialRetrievalResult** out);
 
-/* Windows.Security.Credentials.KeyCredentialManager.DeleteAsync(name) */
 HRESULT wsecr_key_credential_manager_delete_async(cwinrt_hstring name, WF_IAsyncAction** out);
 
-/* activate Windows.Security.Credentials.KeyCredentialOperationResult */
 HRESULT wsecr_key_credential_operation_result_new(WSECR_KeyCredentialOperationResult **out);
 
-/* Windows.Security.Credentials.KeyCredentialOperationResult */
-/* Windows.Security.Credentials.KeyCredentialOperationResult.get_Result() */
 HRESULT wsecr_key_credential_operation_result_get__result(WSECR_KeyCredentialOperationResult *self, WSTST_IBuffer** value);
 
-/* Windows.Security.Credentials.KeyCredentialOperationResult.get_Status() */
 HRESULT wsecr_key_credential_operation_result_get__status(WSECR_KeyCredentialOperationResult *self, WSECR_KeyCredentialStatus *value);
 
-/* activate Windows.Security.Credentials.KeyCredentialRetrievalResult */
 HRESULT wsecr_key_credential_retrieval_result_new(WSECR_KeyCredentialRetrievalResult **out);
 
-/* Windows.Security.Credentials.KeyCredentialRetrievalResult */
-/* Windows.Security.Credentials.KeyCredentialRetrievalResult.get_Credential() */
 HRESULT wsecr_key_credential_retrieval_result_get__credential(WSECR_KeyCredentialRetrievalResult *self, WSECR_KeyCredential** value);
 
-/* Windows.Security.Credentials.KeyCredentialRetrievalResult.get_Status() */
 HRESULT wsecr_key_credential_retrieval_result_get__status(WSECR_KeyCredentialRetrievalResult *self, WSECR_KeyCredentialStatus *value);
 
-/* activate Windows.Security.Credentials.PasswordCredential */
 HRESULT wsecr_password_credential_new(WSECR_PasswordCredential **out);
 
-/* Windows.Security.Credentials.PasswordCredential */
-/* Windows.Security.Credentials.PasswordCredential.get_Resource() */
 HRESULT wsecr_password_credential_get__resource(WSECR_PasswordCredential *self, cwinrt_hstring *value);
 
-/* Windows.Security.Credentials.PasswordCredential.put_Resource(resource) */
 HRESULT wsecr_password_credential_put__resource(WSECR_PasswordCredential *self, cwinrt_hstring resource);
 
-/* Windows.Security.Credentials.PasswordCredential.get_UserName() */
 HRESULT wsecr_password_credential_get__user_name(WSECR_PasswordCredential *self, cwinrt_hstring *value);
 
-/* Windows.Security.Credentials.PasswordCredential.put_UserName(userName) */
 HRESULT wsecr_password_credential_put__user_name(WSECR_PasswordCredential *self, cwinrt_hstring userName);
 
-/* Windows.Security.Credentials.PasswordCredential.get_Password() */
 HRESULT wsecr_password_credential_get__password(WSECR_PasswordCredential *self, cwinrt_hstring *value);
 
-/* Windows.Security.Credentials.PasswordCredential.put_Password(password) */
 HRESULT wsecr_password_credential_put__password(WSECR_PasswordCredential *self, cwinrt_hstring password);
 
-/* Windows.Security.Credentials.PasswordCredential.RetrievePassword() */
 HRESULT wsecr_password_credential_retrieve_password(WSECR_PasswordCredential *self);
 
-/* Windows.Security.Credentials.PasswordCredential.get_Properties() */
 HRESULT wsecr_password_credential_get__properties(WSECR_PasswordCredential *self, WFOCO_IPropertySet** value);
 
-/* activate Windows.Security.Credentials.PasswordCredentialPropertyStore */
 HRESULT wsecr_password_credential_property_store_new(WSECR_PasswordCredentialPropertyStore **out);
 
-/* Windows.Security.Credentials.PasswordCredentialPropertyStore */
-/* Windows.Security.Credentials.PasswordCredentialPropertyStore.Lookup(key) */
 HRESULT wsecr_password_credential_property_store_lookup(WSECR_PasswordCredentialPropertyStore *self, cwinrt_hstring key, IInspectable** out);
 
-/* Windows.Security.Credentials.PasswordCredentialPropertyStore.get_Size() */
 HRESULT wsecr_password_credential_property_store_get__size(WSECR_PasswordCredentialPropertyStore *self, uint32_t *value);
 
-/* Windows.Security.Credentials.PasswordCredentialPropertyStore.HasKey(key) */
 HRESULT wsecr_password_credential_property_store_has_key(WSECR_PasswordCredentialPropertyStore *self, cwinrt_hstring key, BOOL *out);
 
-/* Windows.Security.Credentials.PasswordCredentialPropertyStore.GetView() */
 HRESULT wsecr_password_credential_property_store_get_view(WSECR_PasswordCredentialPropertyStore *self, WFOCO_IMapView_HSTRING_Object** out);
 
-/* Windows.Security.Credentials.PasswordCredentialPropertyStore.Insert(key) */
 HRESULT wsecr_password_credential_property_store_insert(WSECR_PasswordCredentialPropertyStore *self, cwinrt_hstring key, IInspectable* value, BOOL *out);
 
-/* Windows.Security.Credentials.PasswordCredentialPropertyStore.Remove(key) */
 HRESULT wsecr_password_credential_property_store_remove(WSECR_PasswordCredentialPropertyStore *self, cwinrt_hstring key);
 
-/* Windows.Security.Credentials.PasswordCredentialPropertyStore.Clear() */
 HRESULT wsecr_password_credential_property_store_clear(WSECR_PasswordCredentialPropertyStore *self);
 
-/* Windows.Security.Credentials.PasswordCredentialPropertyStore.First() */
 HRESULT wsecr_password_credential_property_store_first(WSECR_PasswordCredentialPropertyStore *self, WFOCO_IIterator_WFOCO_IKeyValuePair_HSTRING_Object** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsecr_password_credential_property_store_on_map_changed(WSECR_PasswordCredentialPropertyStore *self, cwinrt_event_fn fn, void *ctx);
 void wsecr_password_credential_property_store_off_map_changed(WSECR_PasswordCredentialPropertyStore *self, cwinrt_token token);
 
-/* activate Windows.Security.Credentials.PasswordVault */
 HRESULT wsecr_password_vault_new(WSECR_PasswordVault **out);
 
-/* Windows.Security.Credentials.PasswordVault */
-/* Windows.Security.Credentials.PasswordVault.Add(credential) */
 HRESULT wsecr_password_vault_add(WSECR_PasswordVault *self, WSECR_PasswordCredential* credential);
 
-/* Windows.Security.Credentials.PasswordVault.Remove(credential) */
 HRESULT wsecr_password_vault_remove(WSECR_PasswordVault *self, WSECR_PasswordCredential* credential);
 
-/* Windows.Security.Credentials.PasswordVault.Retrieve(resource, userName) */
 HRESULT wsecr_password_vault_retrieve(WSECR_PasswordVault *self, cwinrt_hstring resource, cwinrt_hstring userName, WSECR_PasswordCredential** out);
 
-/* Windows.Security.Credentials.PasswordVault.FindAllByResource(resource) */
 HRESULT wsecr_password_vault_find_all_by_resource(WSECR_PasswordVault *self, cwinrt_hstring resource, WFOCO_IVectorView_WSECR_PasswordCredential** out);
 
-/* Windows.Security.Credentials.PasswordVault.FindAllByUserName(userName) */
 HRESULT wsecr_password_vault_find_all_by_user_name(WSECR_PasswordVault *self, cwinrt_hstring userName, WFOCO_IVectorView_WSECR_PasswordCredential** out);
 
-/* Windows.Security.Credentials.PasswordVault.RetrieveAll() */
 HRESULT wsecr_password_vault_retrieve_all(WSECR_PasswordVault *self, WFOCO_IVectorView_WSECR_PasswordCredential** out);
 
-/* activate Windows.Security.Credentials.WebAccountProvider */
 HRESULT wsecr_web_account_provider_new(WSECR_WebAccountProvider **out);
 
-/* Windows.Security.Credentials.WebAccountProvider */
-/* Windows.Security.Credentials.WebAccountProvider.get_Id() */
 HRESULT wsecr_web_account_provider_get__id(WSECR_WebAccountProvider *self, cwinrt_hstring *value);
 
-/* Windows.Security.Credentials.WebAccountProvider.get_DisplayName() */
 HRESULT wsecr_web_account_provider_get__display_name(WSECR_WebAccountProvider *self, cwinrt_hstring *value);
 
-/* Windows.Security.Credentials.WebAccountProvider.get_IconUri() */
 HRESULT wsecr_web_account_provider_get__icon_uri(WSECR_WebAccountProvider *self, WF_Uri** value);
 
-/* Windows.Security.Credentials.WebAccountProvider.get_DisplayPurpose() */
 HRESULT wsecr_web_account_provider_get__display_purpose(WSECR_WebAccountProvider *self, cwinrt_hstring *value);
 
-/* Windows.Security.Credentials.WebAccountProvider.get_Authority() */
 HRESULT wsecr_web_account_provider_get__authority(WSECR_WebAccountProvider *self, cwinrt_hstring *value);
 
-/* Windows.Security.Credentials.WebAccountProvider.get_User() */
 HRESULT wsecr_web_account_provider_get__user(WSECR_WebAccountProvider *self, WSY_User** value);
 
-/* Windows.Security.Credentials.WebAccountProvider.get_IsSystemProvider() */
 HRESULT wsecr_web_account_provider_get__is_system_provider(WSECR_WebAccountProvider *self, BOOL *value);
 
-/* activate Windows.Security.Credentials.WebAccount */
 HRESULT wsecr_web_account_new(WSECR_WebAccount **out);
 
-/* Windows.Security.Credentials.WebAccount */
-/* Windows.Security.Credentials.WebAccount.get_WebAccountProvider() */
 HRESULT wsecr_web_account_get__web_account_provider(WSECR_WebAccount *self, WSECR_WebAccountProvider** value);
 
-/* Windows.Security.Credentials.WebAccount.get_UserName() */
 HRESULT wsecr_web_account_get__user_name(WSECR_WebAccount *self, cwinrt_hstring *value);
 
-/* Windows.Security.Credentials.WebAccount.get_State() */
 HRESULT wsecr_web_account_get__state(WSECR_WebAccount *self, WSECR_WebAccountState *value);
 
-/* Windows.Security.Credentials.WebAccount.get_Id() */
 HRESULT wsecr_web_account_get__id(WSECR_WebAccount *self, cwinrt_hstring *value);
 
-/* Windows.Security.Credentials.WebAccount.get_Properties() */
 HRESULT wsecr_web_account_get__properties(WSECR_WebAccount *self, WFOCO_IMapView_HSTRING_HSTRING** value);
 
-/* Windows.Security.Credentials.WebAccount.GetPictureAsync(desizedSize) */
 HRESULT wsecr_web_account_get_picture_async(WSECR_WebAccount *self, WSECR_WebAccountPictureSize desizedSize, WF_IAsyncOperation_WSTST_IRandomAccessStream** out);
 
-/* Windows.Security.Credentials.WebAccount.SignOutAsync() */
 HRESULT wsecr_web_account_sign_out_async(WSECR_WebAccount *self, WF_IAsyncAction** out);
 
-/* Windows.Security.Credentials.WebAccount.SignOutAsync(clientId) */
 HRESULT wsecr_web_account_sign_out_async_str_p(WSECR_WebAccount *self, cwinrt_hstring clientId, WF_IAsyncAction** out);
 
-/* Windows.Security.Credentials.IKeyCredentialManagerStatics */
-/* Windows.Security.Credentials.IKeyCredentialManagerStatics.IsSupportedAsync() */
 HRESULT wsecr_key_credential_manager_statics_is_supported_async(WSECR_IKeyCredentialManagerStatics *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Security.Credentials.IKeyCredentialManagerStatics.RenewAttestationAsync() */
 HRESULT wsecr_key_credential_manager_statics_renew_attestation_async(WSECR_IKeyCredentialManagerStatics *self, WF_IAsyncAction** out);
 
-/* Windows.Security.Credentials.IKeyCredentialManagerStatics.RequestCreateAsync(name, option) */
 HRESULT wsecr_key_credential_manager_statics_request_create_async(WSECR_IKeyCredentialManagerStatics *self, cwinrt_hstring name, WSECR_KeyCredentialCreationOption option, WF_IAsyncOperation_WSECR_KeyCredentialRetrievalResult** out);
 
-/* Windows.Security.Credentials.IKeyCredentialManagerStatics.OpenAsync(name) */
 HRESULT wsecr_key_credential_manager_statics_open_async(WSECR_IKeyCredentialManagerStatics *self, cwinrt_hstring name, WF_IAsyncOperation_WSECR_KeyCredentialRetrievalResult** out);
 
-/* Windows.Security.Credentials.IKeyCredentialManagerStatics.DeleteAsync(name) */
 HRESULT wsecr_key_credential_manager_statics_delete_async(WSECR_IKeyCredentialManagerStatics *self, cwinrt_hstring name, WF_IAsyncAction** out);
 
-/* Windows.Security.Credentials.IKeyCredential */
-/* Windows.Security.Credentials.IKeyCredential2 */
-/* Windows.Security.Credentials.IKeyCredential2.RequestDeriveSharedSecretAsync(windowId, message, encryptedRequest) */
 HRESULT wsecr_key_credential_2_request_derive_shared_secret_async(WSECR_IKeyCredential_2 *self, WUI_WindowId windowId, cwinrt_hstring message, WSTST_IBuffer* encryptedRequest, WF_IAsyncOperation_WSECR_KeyCredentialOperationResult** out);
 
-/* Windows.Security.Credentials.IKeyCredential2.RetrieveAuthorizationContext(encryptedRequest) */
 HRESULT wsecr_key_credential_2_retrieve_authorization_context(WSECR_IKeyCredential_2 *self, WSTST_IBuffer* encryptedRequest, WSTST_IBuffer** out);
 
-/* Windows.Security.Credentials.IKeyCredentialWithWindow */
-/* Windows.Security.Credentials.IKeyCredentialWithWindow.RequestSignForWindowAsync(window, data) */
 HRESULT wsecr_key_credential_with_window_request_sign_for_window_async(WSECR_IKeyCredentialWithWindow *self, WUI_WindowId window, WSTST_IBuffer* data, WF_IAsyncOperation_WSECR_KeyCredentialOperationResult** out);
 
-/* Windows.Security.Credentials.IKeyCredentialAttestationResult */
-/* Windows.Security.Credentials.IKeyCredentialCacheConfiguration */
-/* Windows.Security.Credentials.IKeyCredentialOperationResult */
-/* Windows.Security.Credentials.IKeyCredentialRetrievalResult */
-/* Windows.Security.Credentials.IPasswordCredential */
-/* Windows.Security.Credentials.IPasswordVault */
-/* Windows.Security.Credentials.IWebAccountProvider3 */
-/* Windows.Security.Credentials.IWebAccountProvider3.get_User() */
 HRESULT wsecr_web_account_provider_3_get__user(WSECR_IWebAccountProvider_3 *self, WSY_User** value);
 
-/* Windows.Security.Credentials.IWebAccountProvider4 */
-/* Windows.Security.Credentials.IWebAccountProvider4.get_IsSystemProvider() */
 HRESULT wsecr_web_account_provider_4_get__is_system_provider(WSECR_IWebAccountProvider_4 *self, BOOL *value);
 
-/* Windows.Security.Credentials.IWebAccount2 */
-/* Windows.Security.Credentials.IWebAccount2.get_Id() */
 HRESULT wsecr_web_account_2_get__id(WSECR_IWebAccount_2 *self, cwinrt_hstring *value);
 
-/* Windows.Security.Credentials.IWebAccount2.get_Properties() */
 HRESULT wsecr_web_account_2_get__properties(WSECR_IWebAccount_2 *self, WFOCO_IMapView_HSTRING_HSTRING** value);
 
-/* Windows.Security.Credentials.IWebAccount2.GetPictureAsync(desizedSize) */
 HRESULT wsecr_web_account_2_get_picture_async(WSECR_IWebAccount_2 *self, WSECR_WebAccountPictureSize desizedSize, WF_IAsyncOperation_WSTST_IRandomAccessStream** out);
 
-/* Windows.Security.Credentials.IWebAccount2.SignOutAsync() */
 HRESULT wsecr_web_account_2_sign_out_async(WSECR_IWebAccount_2 *self, WF_IAsyncAction** out);
 
-/* Windows.Security.Credentials.IWebAccount2.SignOutAsync(clientId) */
 HRESULT wsecr_web_account_2_sign_out_async_str_p(WSECR_IWebAccount_2 *self, cwinrt_hstring clientId, WF_IAsyncAction** out);
 
-/* Windows.Security.Credentials.IWebAccountProvider2 */
-/* Windows.Security.Credentials.IWebAccountProvider2.get_DisplayPurpose() */
 HRESULT wsecr_web_account_provider_2_get__display_purpose(WSECR_IWebAccountProvider_2 *self, cwinrt_hstring *value);
 
-/* Windows.Security.Credentials.IWebAccountProvider2.get_Authority() */
 HRESULT wsecr_web_account_provider_2_get__authority(WSECR_IWebAccountProvider_2 *self, cwinrt_hstring *value);
 
-/* Windows.Security.Credentials.IWebAccount */
-/* Windows.Security.Credentials.IWebAccountProvider */
 #endif /* CWINRT_WINDOWS_SECURITY_CREDENTIALS_H */

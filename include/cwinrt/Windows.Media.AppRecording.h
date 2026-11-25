@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WS_StorageFile
 #define CWINRT_FWD_WS_StorageFile
 typedef struct WS_StorageFile WS_StorageFile;
@@ -22,7 +21,6 @@ typedef struct WS_StorageFile WS_StorageFile;
 typedef struct WS_StorageFolder WS_StorageFolder;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMEAP_AppRecordingResult WMEAP_AppRecordingResult;
 typedef struct WMEAP_AppRecordingSaveScreenshotResult WMEAP_AppRecordingSaveScreenshotResult;
 typedef struct WMEAP_AppRecordingSavedScreenshotInfo WMEAP_AppRecordingSavedScreenshotInfo;
@@ -37,7 +35,6 @@ typedef struct WMEAP_IAppRecordingStatus WMEAP_IAppRecordingStatus;
 typedef struct WMEAP_IAppRecordingStatusDetails WMEAP_IAppRecordingStatusDetails;
 typedef struct WMEAP_IAppRecordingManager WMEAP_IAppRecordingManager;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_TimeSpan
 #define CWINRT_FWD_WF_TimeSpan
 typedef struct WF_TimeSpan WF_TimeSpan;
@@ -83,7 +80,6 @@ typedef enum WMEAP_AppRecordingSaveScreenshotOption {
 } WMEAP_AppRecordingSaveScreenshotOption;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -116,124 +112,74 @@ static const IID CWINRT_IID_WMEAP_IAppRecordingStatusDetails CWINRT_MAYBE_UNUSED
 static const IID CWINRT_IID_WMEAP_IAppRecordingManager CWINRT_MAYBE_UNUSED = { 0xE7E26076, 0xA044, 0x48E2, { 0xA5, 0x12, 0x30, 0x94, 0xD5, 0x74, 0xC7, 0xCC } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Media.AppRecording.AppRecordingResult */
 HRESULT wmeap_app_recording_result_new(WMEAP_AppRecordingResult **out);
 
-/* Windows.Media.AppRecording.AppRecordingResult */
-/* Windows.Media.AppRecording.AppRecordingResult.get_Succeeded() */
 HRESULT wmeap_app_recording_result_get__succeeded(WMEAP_AppRecordingResult *self, BOOL *value);
 
-/* Windows.Media.AppRecording.AppRecordingResult.get_ExtendedError() */
 HRESULT wmeap_app_recording_result_get__extended_error(WMEAP_AppRecordingResult *self, HRESULT *value);
 
-/* Windows.Media.AppRecording.AppRecordingResult.get_Duration() */
 HRESULT wmeap_app_recording_result_get__duration(WMEAP_AppRecordingResult *self, WF_TimeSpan *value);
 
-/* Windows.Media.AppRecording.AppRecordingResult.get_IsFileTruncated() */
 HRESULT wmeap_app_recording_result_get__is_file_truncated(WMEAP_AppRecordingResult *self, BOOL *value);
 
-/* activate Windows.Media.AppRecording.AppRecordingSaveScreenshotResult */
 HRESULT wmeap_app_recording_save_screenshot_result_new(WMEAP_AppRecordingSaveScreenshotResult **out);
 
-/* Windows.Media.AppRecording.AppRecordingSaveScreenshotResult */
-/* Windows.Media.AppRecording.AppRecordingSaveScreenshotResult.get_Succeeded() */
 HRESULT wmeap_app_recording_save_screenshot_result_get__succeeded(WMEAP_AppRecordingSaveScreenshotResult *self, BOOL *value);
 
-/* Windows.Media.AppRecording.AppRecordingSaveScreenshotResult.get_ExtendedError() */
 HRESULT wmeap_app_recording_save_screenshot_result_get__extended_error(WMEAP_AppRecordingSaveScreenshotResult *self, HRESULT *value);
 
-/* Windows.Media.AppRecording.AppRecordingSaveScreenshotResult.get_SavedScreenshotInfos() */
 HRESULT wmeap_app_recording_save_screenshot_result_get__saved_screenshot_infos(WMEAP_AppRecordingSaveScreenshotResult *self, WFOCO_IVectorView_WMEAP_AppRecordingSavedScreenshotInfo** value);
 
-/* activate Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo */
 HRESULT wmeap_app_recording_saved_screenshot_info_new(WMEAP_AppRecordingSavedScreenshotInfo **out);
 
-/* Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo */
-/* Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo.get_File() */
 HRESULT wmeap_app_recording_saved_screenshot_info_get__file(WMEAP_AppRecordingSavedScreenshotInfo *self, WS_StorageFile** value);
 
-/* Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo.get_MediaEncodingSubtype() */
 HRESULT wmeap_app_recording_saved_screenshot_info_get__media_encoding_subtype(WMEAP_AppRecordingSavedScreenshotInfo *self, cwinrt_hstring *value);
 
-/* activate Windows.Media.AppRecording.AppRecordingStatus */
 HRESULT wmeap_app_recording_status_new(WMEAP_AppRecordingStatus **out);
 
-/* Windows.Media.AppRecording.AppRecordingStatus */
-/* Windows.Media.AppRecording.AppRecordingStatus.get_CanRecord() */
 HRESULT wmeap_app_recording_status_get__can_record(WMEAP_AppRecordingStatus *self, BOOL *value);
 
-/* Windows.Media.AppRecording.AppRecordingStatus.get_CanRecordTimeSpan() */
 HRESULT wmeap_app_recording_status_get__can_record_time_span(WMEAP_AppRecordingStatus *self, BOOL *value);
 
-/* Windows.Media.AppRecording.AppRecordingStatus.get_HistoricalBufferDuration() */
 HRESULT wmeap_app_recording_status_get__historical_buffer_duration(WMEAP_AppRecordingStatus *self, WF_TimeSpan *value);
 
-/* Windows.Media.AppRecording.AppRecordingStatus.get_Details() */
 HRESULT wmeap_app_recording_status_get__details(WMEAP_AppRecordingStatus *self, WMEAP_AppRecordingStatusDetails** value);
 
-/* activate Windows.Media.AppRecording.AppRecordingStatusDetails */
 HRESULT wmeap_app_recording_status_details_new(WMEAP_AppRecordingStatusDetails **out);
 
-/* Windows.Media.AppRecording.AppRecordingStatusDetails */
-/* Windows.Media.AppRecording.AppRecordingStatusDetails.get_IsAnyAppBroadcasting() */
 HRESULT wmeap_app_recording_status_details_get__is_any_app_broadcasting(WMEAP_AppRecordingStatusDetails *self, BOOL *value);
 
-/* Windows.Media.AppRecording.AppRecordingStatusDetails.get_IsCaptureResourceUnavailable() */
 HRESULT wmeap_app_recording_status_details_get__is_capture_resource_unavailable(WMEAP_AppRecordingStatusDetails *self, BOOL *value);
 
-/* Windows.Media.AppRecording.AppRecordingStatusDetails.get_IsGameStreamInProgress() */
 HRESULT wmeap_app_recording_status_details_get__is_game_stream_in_progress(WMEAP_AppRecordingStatusDetails *self, BOOL *value);
 
-/* Windows.Media.AppRecording.AppRecordingStatusDetails.get_IsTimeSpanRecordingDisabled() */
 HRESULT wmeap_app_recording_status_details_get__is_time_span_recording_disabled(WMEAP_AppRecordingStatusDetails *self, BOOL *value);
 
-/* Windows.Media.AppRecording.AppRecordingStatusDetails.get_IsGpuConstrained() */
 HRESULT wmeap_app_recording_status_details_get__is_gpu_constrained(WMEAP_AppRecordingStatusDetails *self, BOOL *value);
 
-/* Windows.Media.AppRecording.AppRecordingStatusDetails.get_IsAppInactive() */
 HRESULT wmeap_app_recording_status_details_get__is_app_inactive(WMEAP_AppRecordingStatusDetails *self, BOOL *value);
 
-/* Windows.Media.AppRecording.AppRecordingStatusDetails.get_IsBlockedForApp() */
 HRESULT wmeap_app_recording_status_details_get__is_blocked_for_app(WMEAP_AppRecordingStatusDetails *self, BOOL *value);
 
-/* Windows.Media.AppRecording.AppRecordingStatusDetails.get_IsDisabledByUser() */
 HRESULT wmeap_app_recording_status_details_get__is_disabled_by_user(WMEAP_AppRecordingStatusDetails *self, BOOL *value);
 
-/* Windows.Media.AppRecording.AppRecordingStatusDetails.get_IsDisabledBySystem() */
 HRESULT wmeap_app_recording_status_details_get__is_disabled_by_system(WMEAP_AppRecordingStatusDetails *self, BOOL *value);
 
-/* Windows.Media.AppRecording.IAppRecordingManagerStatics */
-/* Windows.Media.AppRecording.IAppRecordingManagerStatics.GetDefault() */
 HRESULT wmeap_app_recording_manager_statics_get_default(WMEAP_IAppRecordingManagerStatics *self, WMEAP_AppRecordingManager** out);
 
-/* activate Windows.Media.AppRecording.AppRecordingManager */
 HRESULT wmeap_app_recording_manager_new(WMEAP_AppRecordingManager **out);
 
-/* Windows.Media.AppRecording.AppRecordingManager */
-/* Windows.Media.AppRecording.AppRecordingManager.GetStatus() */
 HRESULT wmeap_app_recording_manager_get_status(WMEAP_AppRecordingManager *self, WMEAP_AppRecordingStatus** out);
 
-/* Windows.Media.AppRecording.AppRecordingManager.StartRecordingToFileAsync(file) */
 HRESULT wmeap_app_recording_manager_start_recording_to_file_async(WMEAP_AppRecordingManager *self, WS_StorageFile* file, WF_IAsyncOperation_WMEAP_AppRecordingResult** out);
 
-/* Windows.Media.AppRecording.AppRecordingManager.RecordTimeSpanToFileAsync(startTime, duration, file) */
 HRESULT wmeap_app_recording_manager_record_time_span_to_file_async(WMEAP_AppRecordingManager *self, WF_DateTime startTime, WF_TimeSpan duration, WS_StorageFile* file, WF_IAsyncOperation_WMEAP_AppRecordingResult** out);
 
-/* Windows.Media.AppRecording.AppRecordingManager.get_SupportedScreenshotMediaEncodingSubtypes() */
 HRESULT wmeap_app_recording_manager_get__supported_screenshot_media_encoding_subtypes(WMEAP_AppRecordingManager *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Media.AppRecording.AppRecordingManager.SaveScreenshotToFilesAsync(folder, filenamePrefix, option, requestedFormats) */
 HRESULT wmeap_app_recording_manager_save_screenshot_to_files_async(WMEAP_AppRecordingManager *self, WS_StorageFolder* folder, cwinrt_hstring filenamePrefix, WMEAP_AppRecordingSaveScreenshotOption option, WFOCO_IIterable_HSTRING* requestedFormats, WF_IAsyncOperation_WMEAP_AppRecordingSaveScreenshotResult** out);
 
-/* Windows.Media.AppRecording.AppRecordingManager.GetDefault() */
 HRESULT wmeap_app_recording_manager_get_default(WMEAP_AppRecordingManager** out);
 
-/* Windows.Media.AppRecording.IAppRecordingResult */
-/* Windows.Media.AppRecording.IAppRecordingSaveScreenshotResult */
-/* Windows.Media.AppRecording.IAppRecordingSavedScreenshotInfo */
-/* Windows.Media.AppRecording.IAppRecordingStatus */
-/* Windows.Media.AppRecording.IAppRecordingStatusDetails */
-/* Windows.Media.AppRecording.IAppRecordingManager */
 #endif /* CWINRT_WINDOWS_MEDIA_APPRECORDING_H */

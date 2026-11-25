@@ -12,14 +12,12 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WAPPR_IStartupAppsManagerPreviewStatics WAPPR_IStartupAppsManagerPreviewStatics;
 typedef struct WAPPR_StartupAppsManagerPreview WAPPR_StartupAppsManagerPreview;
 typedef struct WAPPR_StartupAppInfoPreview WAPPR_StartupAppInfoPreview;
 typedef struct WAPPR_IStartupAppsManagerPreview WAPPR_IStartupAppsManagerPreview;
 typedef struct WAPPR_IStartupAppInfoPreview WAPPR_IStartupAppInfoPreview;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IVectorView_WAPPR_StartupAppInfoPreview
 #define CWINRT_FWD_WFOCO_IVectorView_WAPPR_StartupAppInfoPreview
 typedef struct WFOCO_IVectorView_WAPPR_StartupAppInfoPreview WFOCO_IVectorView_WAPPR_StartupAppInfoPreview;
@@ -36,7 +34,6 @@ typedef enum WAPPR_StartupAppImpactPreview {
 } WAPPR_StartupAppImpactPreview;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -53,41 +50,24 @@ static const IID CWINRT_IID_WAPPR_IStartupAppsManagerPreview CWINRT_MAYBE_UNUSED
 static const IID CWINRT_IID_WAPPR_IStartupAppInfoPreview CWINRT_MAYBE_UNUSED = { 0xC3A147DB, 0x09FA, 0x5AA5, { 0xB3, 0xBD, 0x11, 0x9A, 0x09, 0x96, 0x3D, 0x58 } };
 #endif
 
-/* Methods */
-
-/* Windows.ApplicationModel.Preview.IStartupAppsManagerPreviewStatics */
-/* Windows.ApplicationModel.Preview.IStartupAppsManagerPreviewStatics.GetDefault() */
 HRESULT wappr_startup_apps_manager_preview_statics_get_default(WAPPR_IStartupAppsManagerPreviewStatics *self, WAPPR_StartupAppsManagerPreview** out);
 
-/* activate Windows.ApplicationModel.Preview.StartupAppsManagerPreview */
 HRESULT wappr_startup_apps_manager_preview_new(WAPPR_StartupAppsManagerPreview **out);
 
-/* Windows.ApplicationModel.Preview.StartupAppsManagerPreview */
-/* Windows.ApplicationModel.Preview.StartupAppsManagerPreview.GetStartupAppInfos() */
 HRESULT wappr_startup_apps_manager_preview_get_startup_app_infos(WAPPR_StartupAppsManagerPreview *self, WFOCO_IVectorView_WAPPR_StartupAppInfoPreview** out);
 
-/* Windows.ApplicationModel.Preview.StartupAppsManagerPreview.GetDefault() */
 HRESULT wappr_startup_apps_manager_preview_get_default(WAPPR_StartupAppsManagerPreview** out);
 
-/* activate Windows.ApplicationModel.Preview.StartupAppInfoPreview */
 HRESULT wappr_startup_app_info_preview_new(WAPPR_StartupAppInfoPreview **out);
 
-/* Windows.ApplicationModel.Preview.StartupAppInfoPreview */
-/* Windows.ApplicationModel.Preview.StartupAppInfoPreview.get_DisplayName() */
 HRESULT wappr_startup_app_info_preview_get__display_name(WAPPR_StartupAppInfoPreview *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Preview.StartupAppInfoPreview.get_Publisher() */
 HRESULT wappr_startup_app_info_preview_get__publisher(WAPPR_StartupAppInfoPreview *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Preview.StartupAppInfoPreview.get_IsEnabled() */
 HRESULT wappr_startup_app_info_preview_get__is_enabled(WAPPR_StartupAppInfoPreview *self, BOOL *value);
 
-/* Windows.ApplicationModel.Preview.StartupAppInfoPreview.get_Impact() */
 HRESULT wappr_startup_app_info_preview_get__impact(WAPPR_StartupAppInfoPreview *self, WAPPR_StartupAppImpactPreview *value);
 
-/* Windows.ApplicationModel.Preview.StartupAppInfoPreview.get_ExecutablePath() */
 HRESULT wappr_startup_app_info_preview_get__executable_path(WAPPR_StartupAppInfoPreview *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Preview.IStartupAppsManagerPreview */
-/* Windows.ApplicationModel.Preview.IStartupAppInfoPreview */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_PREVIEW_H */

@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.System.Threading.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WSYTHCO_ISignalNotifierStatics WSYTHCO_ISignalNotifierStatics;
 typedef struct WSYTHCO_IPreallocatedWorkItemFactory WSYTHCO_IPreallocatedWorkItemFactory;
 typedef struct WSYTHCO_SignalHandler WSYTHCO_SignalHandler;
@@ -22,7 +21,6 @@ typedef struct WSYTHCO_PreallocatedWorkItem WSYTHCO_PreallocatedWorkItem;
 typedef struct WSYTHCO_ISignalNotifier WSYTHCO_ISignalNotifier;
 typedef struct WSYTHCO_IPreallocatedWorkItem WSYTHCO_IPreallocatedWorkItem;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_TimeSpan
 #define CWINRT_FWD_WF_TimeSpan
 typedef struct WF_TimeSpan WF_TimeSpan;
@@ -53,7 +51,6 @@ typedef enum WSYTH_WorkItemOptions {
 typedef struct WF_IAsyncAction WF_IAsyncAction;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -78,64 +75,38 @@ static const IID CWINRT_IID_WSYTHCO_ISignalNotifier CWINRT_MAYBE_UNUSED = { 0x14
 static const IID CWINRT_IID_WSYTHCO_IPreallocatedWorkItem CWINRT_MAYBE_UNUSED = { 0xB6DAA9FC, 0xBC5B, 0x401A, { 0xA8, 0xB2, 0x6E, 0x75, 0x4D, 0x14, 0xDA, 0xA6 } };
 #endif
 
-/* Methods */
-
-/* Windows.System.Threading.Core.ISignalNotifierStatics */
-/* Windows.System.Threading.Core.ISignalNotifierStatics.AttachToEvent(name, handler) */
 HRESULT wsythco_signal_notifier_statics_attach_to_event(WSYTHCO_ISignalNotifierStatics *self, cwinrt_hstring name, WSYTHCO_SignalHandler* handler, WSYTHCO_SignalNotifier** out);
 
-/* Windows.System.Threading.Core.ISignalNotifierStatics.AttachToEvent(name, handler, timeout) */
 HRESULT wsythco_signal_notifier_statics_attach_to_event_str_p_time_span_p(WSYTHCO_ISignalNotifierStatics *self, cwinrt_hstring name, WSYTHCO_SignalHandler* handler, WF_TimeSpan timeout, WSYTHCO_SignalNotifier** out);
 
-/* Windows.System.Threading.Core.ISignalNotifierStatics.AttachToSemaphore(name, handler) */
 HRESULT wsythco_signal_notifier_statics_attach_to_semaphore(WSYTHCO_ISignalNotifierStatics *self, cwinrt_hstring name, WSYTHCO_SignalHandler* handler, WSYTHCO_SignalNotifier** out);
 
-/* Windows.System.Threading.Core.ISignalNotifierStatics.AttachToSemaphore(name, handler, timeout) */
 HRESULT wsythco_signal_notifier_statics_attach_to_semaphore_str_p_time_span_p(WSYTHCO_ISignalNotifierStatics *self, cwinrt_hstring name, WSYTHCO_SignalHandler* handler, WF_TimeSpan timeout, WSYTHCO_SignalNotifier** out);
 
-/* Windows.System.Threading.Core.IPreallocatedWorkItemFactory */
-/* Windows.System.Threading.Core.IPreallocatedWorkItemFactory.CreateWorkItem(handler) */
 HRESULT wsythco_preallocated_work_item_factory_create_work_item(WSYTHCO_IPreallocatedWorkItemFactory *self, WSYTH_WorkItemHandler* handler, WSYTHCO_PreallocatedWorkItem** out);
 
-/* Windows.System.Threading.Core.IPreallocatedWorkItemFactory.CreateWorkItemWithPriority(handler, priority) */
 HRESULT wsythco_preallocated_work_item_factory_create_work_item_with_priority(WSYTHCO_IPreallocatedWorkItemFactory *self, WSYTH_WorkItemHandler* handler, WSYTH_WorkItemPriority priority, WSYTHCO_PreallocatedWorkItem** out);
 
-/* Windows.System.Threading.Core.IPreallocatedWorkItemFactory.CreateWorkItemWithPriorityAndOptions(handler, priority, options) */
 HRESULT wsythco_preallocated_work_item_factory_create_work_item_with_priority_and_options(WSYTHCO_IPreallocatedWorkItemFactory *self, WSYTH_WorkItemHandler* handler, WSYTH_WorkItemPriority priority, WSYTH_WorkItemOptions options, WSYTHCO_PreallocatedWorkItem** out);
 
-/* Windows.System.Threading.Core.SignalHandler */
-/* Windows.System.Threading.Core.SignalHandler.Invoke(signalNotifier, timedOut) */
 HRESULT wsythco_signal_handler_invoke(WSYTHCO_SignalHandler *self, WSYTHCO_SignalNotifier* signalNotifier, BOOL timedOut);
 
-/* activate Windows.System.Threading.Core.SignalNotifier */
 HRESULT wsythco_signal_notifier_new(WSYTHCO_SignalNotifier **out);
 
-/* Windows.System.Threading.Core.SignalNotifier */
-/* Windows.System.Threading.Core.SignalNotifier.Enable() */
 HRESULT wsythco_signal_notifier_enable(WSYTHCO_SignalNotifier *self);
 
-/* Windows.System.Threading.Core.SignalNotifier.Terminate() */
 HRESULT wsythco_signal_notifier_terminate(WSYTHCO_SignalNotifier *self);
 
-/* Windows.System.Threading.Core.SignalNotifier.AttachToEvent(name, handler) */
 HRESULT wsythco_signal_notifier_attach_to_event(cwinrt_hstring name, WSYTHCO_SignalHandler* handler, WSYTHCO_SignalNotifier** out);
 
-/* Windows.System.Threading.Core.SignalNotifier.AttachToEvent(name, handler, timeout) */
 HRESULT wsythco_signal_notifier_attach_to_event_str_p_time_span_p(cwinrt_hstring name, WSYTHCO_SignalHandler* handler, WF_TimeSpan timeout, WSYTHCO_SignalNotifier** out);
 
-/* Windows.System.Threading.Core.SignalNotifier.AttachToSemaphore(name, handler) */
 HRESULT wsythco_signal_notifier_attach_to_semaphore(cwinrt_hstring name, WSYTHCO_SignalHandler* handler, WSYTHCO_SignalNotifier** out);
 
-/* Windows.System.Threading.Core.SignalNotifier.AttachToSemaphore(name, handler, timeout) */
 HRESULT wsythco_signal_notifier_attach_to_semaphore_str_p_time_span_p(cwinrt_hstring name, WSYTHCO_SignalHandler* handler, WF_TimeSpan timeout, WSYTHCO_SignalNotifier** out);
 
-/* activate Windows.System.Threading.Core.PreallocatedWorkItem */
 HRESULT wsythco_preallocated_work_item_new(WSYTHCO_PreallocatedWorkItem **out);
 
-/* Windows.System.Threading.Core.PreallocatedWorkItem */
-/* Windows.System.Threading.Core.PreallocatedWorkItem.RunAsync() */
 HRESULT wsythco_preallocated_work_item_run_async(WSYTHCO_PreallocatedWorkItem *self, WF_IAsyncAction** out);
 
-/* Windows.System.Threading.Core.ISignalNotifier */
-/* Windows.System.Threading.Core.IPreallocatedWorkItem */
 #endif /* CWINRT_WINDOWS_SYSTEM_THREADING_CORE_H */

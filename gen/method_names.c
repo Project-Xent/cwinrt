@@ -14,8 +14,6 @@ static void sanitize_ident(char *s) {
 	}
 }
 
-/* Append src to dst (capacity cap) converting CamelCase to snake_case, starting
-   the snake run at offset di. Returns the new length. */
 static size_t snake_into(char *dst, size_t cap, size_t di, char const *src) {
 	size_t i;
 	for (i = 0; src [i] && di + 2 < cap; i++) {
@@ -62,8 +60,6 @@ static bool suffix_strip_self(char *buf) {
 	return true;
 }
 
-/* Return the trailing parameter's name within buf (the token after the last
-   space of the last segment), or NULL when no usable name is present. */
 static char const *suffix_param_name(char *buf) {
 	char *last_comma;
 	char const *seg;
@@ -103,7 +99,6 @@ static void suffix_from_params(char const *params_c, char *dst, size_t cap) {
 	if (snake [0]) snprintf(dst, cap, "%s", snake);
 }
 
-/* Map one C parameter type to a short, stable mangling token. */
 static void params_type_token(char const *type, char *dst, size_t cap) {
 	static struct {
 		char const *type;
@@ -130,8 +125,6 @@ static void params_type_token(char const *type, char *dst, size_t cap) {
 	snake_append(dst, cap, p ? p + 1 : type);
 }
 
-/* Drop the WinRT [out] retval (** retval/value) and a leading "*self" from a
-   copy of a C parameter list, leaving only the real call parameters. */
 static void strip_self_and_retval(char *buf) {
 	char *p = strstr(buf, "** retval");
 	if (!p) p = strstr(buf, "** value");
@@ -148,9 +141,6 @@ static void strip_self_and_retval(char *buf) {
 	}
 }
 
-/* Append one comma-delimited parameter segment's type token to acc. The type is
-   everything up to the last space (which precedes the param name). Returns 1 when
-   a token was emitted (a non-empty type), else 0, so the caller can sum arity. */
 static uint32_t mangle_one_seg(char *acc, size_t acccap, char const *p, size_t n) {
 	char   seg [128];
 	char   tok [64];
@@ -172,8 +162,6 @@ static uint32_t mangle_one_seg(char *acc, size_t acccap, char const *p, size_t n
 	return 1;
 }
 
-/* Build the readable type mangle (e.g. "i32_p") into acc from the stripped call
-   parameter list buf, returning the parameter arity. */
 static uint32_t mangle_param_types(char *buf, char *acc, size_t acccap) {
 	char    *p;
 	uint32_t arity = 0;
@@ -260,7 +248,6 @@ static void method_name_snake(char const *method_name, char *meth_snake, size_t 
 	sanitize_ident(meth_snake);
 }
 
-/* Like snake_into but first folds the WinRT type punctuation (`<>,) to '_'. */
 static void type_short_snake(char *dst, char const *src) {
 	size_t di = 0;
 	size_t i;
@@ -309,9 +296,6 @@ static bool param_name_reserved(char const *name) {
 	    || cwinrt_name_is_c_keyword(name);
 }
 
-/* Pick the base overload (keeps the clean, unsuffixed name): the [default]
-   overload if any, else the one with the fewest declared params (ties broken by
-   fewest call params). Order-independent so a new SDK overload never renames it. */
 static uint32_t group_pick_base(cwinrt_raw_db *db, uint32_t const *group, uint32_t gn) {
 	uint32_t base_ix = 0;
 	uint32_t gi;
@@ -330,9 +314,6 @@ static uint32_t group_pick_base(cwinrt_raw_db *db, uint32_t const *group, uint32
 	return base_ix;
 }
 
-/* Assign each overload's c_name: base keeps the clean name; others prefer the
-   WinRT [Overload] attribute name, else a deterministic param-type mangle.
-   No ordinal _1/_2, so insertions never renumber existing symbols. */
 static void
 group_assign_names(cwinrt_raw_db *db, char const *ns_prefix, cwinrt_raw_type const *rt, uint32_t const *group,
 				   uint32_t gn, uint32_t base_ix) {
@@ -354,9 +335,6 @@ group_assign_names(cwinrt_raw_db *db, char const *ns_prefix, cwinrt_raw_type con
 	}
 }
 
-/* Safety net: if two names still collide (same [Overload] name, or identical
-   mangle), append the type mangle (and the static/instance kind) to the second.
-   Still order-independent -- derived from the signature, not the group position. */
 static void
 group_resolve_collisions(cwinrt_raw_db *db, char const *ns_prefix, cwinrt_raw_type const *rt, uint32_t const *group,
 						 uint32_t gn) {
@@ -393,8 +371,6 @@ assign_method_group(cwinrt_raw_db *db, char const *ns_prefix, cwinrt_raw_type co
 	group_resolve_collisions(db, ns_prefix, rt, group, gn);
 }
 
-/* Gather the still-unnamed methods of type rt that share rm's name, starting at
-   index mi, into group (cap 64). Returns the group size. */
 static uint32_t
 collect_same_name_group(cwinrt_raw_db *db, cwinrt_raw_type const *rt, uint32_t mi, uint32_t *group) {
 	cwinrt_raw_method *rm = &db->methods [mi];
@@ -411,7 +387,6 @@ collect_same_name_group(cwinrt_raw_db *db, cwinrt_raw_type const *rt, uint32_t m
 	return gn;
 }
 
-/* Name every method of rt by grouping same-named overloads together. */
 static void assign_type_groups(cwinrt_raw_db *db, cwinrt_raw_type const *rt) {
 	char const *ns_prefix = cwinrt_name_ns_prefix(rt->ns);
 	uint32_t    mi;
@@ -434,7 +409,6 @@ static cwinrt_raw_type const *find_type_by_token(cwinrt_raw_db *db, uint32_t tok
 	return NULL;
 }
 
-/* Fallback for any method left unnamed (its type produced no group). */
 static void assign_orphan_method(cwinrt_raw_db *db, cwinrt_raw_method *rm) {
 	cwinrt_raw_type const *rt;
 	if (rm->c_name) return;

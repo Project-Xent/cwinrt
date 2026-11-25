@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
@@ -22,13 +21,11 @@ typedef struct WSY_User WSY_User;
 typedef struct WSTST_IBuffer WSTST_IBuffer;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMAPO_INamedPolicyStatics WMAPO_INamedPolicyStatics;
 typedef struct WMAPO_NamedPolicy WMAPO_NamedPolicy;
 typedef struct WMAPO_NamedPolicyData WMAPO_NamedPolicyData;
 typedef struct WMAPO_INamedPolicyData WMAPO_INamedPolicyData;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
@@ -54,7 +51,6 @@ typedef enum WMAPO_NamedPolicyKind {
 } WMAPO_NamedPolicyKind;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -67,67 +63,43 @@ static const IID CWINRT_IID_WMAPO_INamedPolicyStatics CWINRT_MAYBE_UNUSED = { 0x
 static const IID CWINRT_IID_WMAPO_INamedPolicyData CWINRT_MAYBE_UNUSED = { 0x38DCB198, 0x95AC, 0x4077, { 0xA6, 0x43, 0x80, 0x78, 0xCA, 0xE2, 0x64, 0x00 } };
 #endif
 
-/* Methods */
-
-/* Windows.Management.Policies.INamedPolicyStatics */
-/* Windows.Management.Policies.INamedPolicyStatics.GetPolicyFromPath(area, name) */
 HRESULT wmapo_named_policy_statics_get_policy_from_path(WMAPO_INamedPolicyStatics *self, cwinrt_hstring area, cwinrt_hstring name, WMAPO_NamedPolicyData** out);
 
-/* Windows.Management.Policies.INamedPolicyStatics.GetPolicyFromPathForUser(user, area, name) */
 HRESULT wmapo_named_policy_statics_get_policy_from_path_for_user(WMAPO_INamedPolicyStatics *self, WSY_User* user, cwinrt_hstring area, cwinrt_hstring name, WMAPO_NamedPolicyData** out);
 
-/* activate Windows.Management.Policies.NamedPolicy */
 HRESULT wmapo_named_policy_new(WMAPO_NamedPolicy **out);
 
-/* Windows.Management.Policies.NamedPolicy */
-/* Windows.Management.Policies.NamedPolicy.GetPolicyFromPath(area, name) */
 HRESULT wmapo_named_policy_get_policy_from_path(cwinrt_hstring area, cwinrt_hstring name, WMAPO_NamedPolicyData** out);
 
-/* Windows.Management.Policies.NamedPolicy.GetPolicyFromPathForUser(user, area, name) */
 HRESULT wmapo_named_policy_get_policy_from_path_for_user(WSY_User* user, cwinrt_hstring area, cwinrt_hstring name, WMAPO_NamedPolicyData** out);
 
-/* activate Windows.Management.Policies.NamedPolicyData */
 HRESULT wmapo_named_policy_data_new(WMAPO_NamedPolicyData **out);
 
-/* Windows.Management.Policies.NamedPolicyData */
-/* Windows.Management.Policies.NamedPolicyData.get_Area() */
 HRESULT wmapo_named_policy_data_get__area(WMAPO_NamedPolicyData *self, cwinrt_hstring *value);
 
-/* Windows.Management.Policies.NamedPolicyData.get_Name() */
 HRESULT wmapo_named_policy_data_get__name(WMAPO_NamedPolicyData *self, cwinrt_hstring *value);
 
-/* Windows.Management.Policies.NamedPolicyData.get_Kind() */
 HRESULT wmapo_named_policy_data_get__kind(WMAPO_NamedPolicyData *self, WMAPO_NamedPolicyKind *value);
 
-/* Windows.Management.Policies.NamedPolicyData.get_IsManaged() */
 HRESULT wmapo_named_policy_data_get__is_managed(WMAPO_NamedPolicyData *self, BOOL *value);
 
-/* Windows.Management.Policies.NamedPolicyData.get_IsUserPolicy() */
 HRESULT wmapo_named_policy_data_get__is_user_policy(WMAPO_NamedPolicyData *self, BOOL *value);
 
-/* Windows.Management.Policies.NamedPolicyData.get_User() */
 HRESULT wmapo_named_policy_data_get__user(WMAPO_NamedPolicyData *self, WSY_User** value);
 
-/* Windows.Management.Policies.NamedPolicyData.GetBoolean() */
 HRESULT wmapo_named_policy_data_get_boolean(WMAPO_NamedPolicyData *self, BOOL *out);
 
-/* Windows.Management.Policies.NamedPolicyData.GetBinary() */
 HRESULT wmapo_named_policy_data_get_binary(WMAPO_NamedPolicyData *self, WSTST_IBuffer** out);
 
-/* Windows.Management.Policies.NamedPolicyData.GetInt32() */
 HRESULT wmapo_named_policy_data_get_int32(WMAPO_NamedPolicyData *self, int32_t *out);
 
-/* Windows.Management.Policies.NamedPolicyData.GetInt64() */
 HRESULT wmapo_named_policy_data_get_int64(WMAPO_NamedPolicyData *self, int64_t *out);
 
-/* Windows.Management.Policies.NamedPolicyData.GetString() */
 HRESULT wmapo_named_policy_data_get_string(WMAPO_NamedPolicyData *self, cwinrt_hstring *out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmapo_named_policy_data_on_changed(WMAPO_NamedPolicyData *self, cwinrt_event_fn fn, void *ctx);
 void wmapo_named_policy_data_off_changed(WMAPO_NamedPolicyData *self, cwinrt_token token);
 
-/* Windows.Management.Policies.INamedPolicyData */
 #endif /* CWINRT_WINDOWS_MANAGEMENT_POLICIES_H */

@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WUIPO_IUICommand
 #define CWINRT_FWD_WUIPO_IUICommand
 typedef struct WUIPO_IUICommand WUIPO_IUICommand;
@@ -38,7 +37,6 @@ typedef struct WSECR_WebAccount WSECR_WebAccount;
 typedef struct WSECR_WebAccountProvider WSECR_WebAccountProvider;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUIAP_ICredentialCommandFactory WUIAP_ICredentialCommandFactory;
 typedef struct WUIAP_ISettingsCommandFactory WUIAP_ISettingsCommandFactory;
 typedef struct WUIAP_ISettingsCommandStatics WUIAP_ISettingsCommandStatics;
@@ -74,7 +72,6 @@ typedef struct WUIAP_IAccountsSettingsPaneCommandsRequestedEventArgs_2 WUIAP_IAc
 typedef struct WUIAP_IAccountsSettingsPaneEventDeferral WUIAP_IAccountsSettingsPaneEventDeferral;
 typedef struct WUIAP_ICredentialCommand WUIAP_ICredentialCommand;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSECR_PasswordCredential
 #define CWINRT_FWD_WSECR_PasswordCredential
 typedef struct WSECR_PasswordCredential WSECR_PasswordCredential;
@@ -155,7 +152,6 @@ typedef enum WUIAP_WebAccountAction {
 } WUIAP_WebAccountAction;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -252,247 +248,144 @@ static const IID CWINRT_IID_WUIAP_IAccountsSettingsPaneEventDeferral CWINRT_MAYB
 static const IID CWINRT_IID_WUIAP_ICredentialCommand CWINRT_MAYBE_UNUSED = { 0xA5F665E6, 0x6143, 0x4A7A, { 0xA9, 0x71, 0xB0, 0x17, 0xBA, 0x97, 0x8C, 0xE2 } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.ApplicationSettings.ICredentialCommandFactory */
-/* Windows.UI.ApplicationSettings.ICredentialCommandFactory.CreateCredentialCommand(passwordCredential) */
 HRESULT wuiap_credential_command_factory_create_credential_command(WUIAP_ICredentialCommandFactory *self, WSECR_PasswordCredential* passwordCredential, WUIAP_CredentialCommand** out);
 
-/* Windows.UI.ApplicationSettings.ICredentialCommandFactory.CreateCredentialCommandWithHandler(passwordCredential, deleted) */
 HRESULT wuiap_credential_command_factory_create_credential_command_with_handler(WUIAP_ICredentialCommandFactory *self, WSECR_PasswordCredential* passwordCredential, WUIAP_CredentialCommandCredentialDeletedHandler* deleted, WUIAP_CredentialCommand** out);
 
-/* Windows.UI.ApplicationSettings.ISettingsCommandFactory */
-/* Windows.UI.ApplicationSettings.ISettingsCommandFactory.CreateSettingsCommand(settingsCommandId, label, handler) */
 HRESULT wuiap_settings_command_factory_create_settings_command(WUIAP_ISettingsCommandFactory *self, IInspectable* settingsCommandId, cwinrt_hstring label, WUIPO_UICommandInvokedHandler* handler, WUIAP_SettingsCommand** out);
 
-/* Windows.UI.ApplicationSettings.ISettingsCommandStatics */
-/* Windows.UI.ApplicationSettings.ISettingsCommandStatics.get_AccountsCommand() */
 HRESULT wuiap_settings_command_statics_get__accounts_command(WUIAP_ISettingsCommandStatics *self, WUIAP_SettingsCommand** value);
 
-/* Windows.UI.ApplicationSettings.ISettingsPaneStatics */
-/* Windows.UI.ApplicationSettings.ISettingsPaneStatics.GetForCurrentView() */
 HRESULT wuiap_settings_pane_statics_get_for_current_view(WUIAP_ISettingsPaneStatics *self, WUIAP_SettingsPane** out);
 
-/* Windows.UI.ApplicationSettings.ISettingsPaneStatics.Show() */
 HRESULT wuiap_settings_pane_statics_show(WUIAP_ISettingsPaneStatics *self);
 
-/* Windows.UI.ApplicationSettings.ISettingsPaneStatics.get_Edge() */
 HRESULT wuiap_settings_pane_statics_get__edge(WUIAP_ISettingsPaneStatics *self, WUIAP_SettingsEdgeLocation *value);
 
-/* Windows.UI.ApplicationSettings.IWebAccountCommandFactory */
-/* Windows.UI.ApplicationSettings.IWebAccountCommandFactory.CreateWebAccountCommand(webAccount, invoked, actions) */
 HRESULT wuiap_web_account_command_factory_create_web_account_command(WUIAP_IWebAccountCommandFactory *self, WSECR_WebAccount* webAccount, WUIAP_WebAccountCommandInvokedHandler* invoked, WUIAP_SupportedWebAccountActions actions, WUIAP_WebAccountCommand** out);
 
-/* Windows.UI.ApplicationSettings.IWebAccountProviderCommandFactory */
-/* Windows.UI.ApplicationSettings.IWebAccountProviderCommandFactory.CreateWebAccountProviderCommand(webAccountProvider, invoked) */
 HRESULT wuiap_web_account_provider_command_factory_create_web_account_provider_command(WUIAP_IWebAccountProviderCommandFactory *self, WSECR_WebAccountProvider* webAccountProvider, WUIAP_WebAccountProviderCommandInvokedHandler* invoked, WUIAP_WebAccountProviderCommand** out);
 
-/* Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics3 */
-/* Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics3.ShowManageAccountsForUserAsync(user) */
 HRESULT wuiap_accounts_settings_pane_statics_3_show_manage_accounts_for_user_async(WUIAP_IAccountsSettingsPaneStatics_3 *self, WSY_User* user, WF_IAsyncAction** out);
 
-/* Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics3.ShowAddAccountForUserAsync(user) */
 HRESULT wuiap_accounts_settings_pane_statics_3_show_add_account_for_user_async(WUIAP_IAccountsSettingsPaneStatics_3 *self, WSY_User* user, WF_IAsyncAction** out);
 
-/* activate Windows.UI.ApplicationSettings.SettingsPane */
 HRESULT wuiap_settings_pane_new(WUIAP_SettingsPane **out);
 
-/* Windows.UI.ApplicationSettings.SettingsPane */
-/* Windows.UI.ApplicationSettings.SettingsPane.GetForCurrentView() */
 HRESULT wuiap_settings_pane_get_for_current_view(WUIAP_SettingsPane** out);
 
-/* Windows.UI.ApplicationSettings.SettingsPane.Show() */
 HRESULT wuiap_settings_pane_show(void);
 
-/* Windows.UI.ApplicationSettings.SettingsPane.get_Edge() */
 HRESULT wuiap_settings_pane_get__edge(WUIAP_SettingsEdgeLocation *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiap_settings_pane_on_commands_requested(WUIAP_SettingsPane *self, cwinrt_event_fn fn, void *ctx);
 void wuiap_settings_pane_off_commands_requested(WUIAP_SettingsPane *self, cwinrt_token token);
 
-/* activate Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest */
 HRESULT wuiap_settings_pane_commands_request_new(WUIAP_SettingsPaneCommandsRequest **out);
 
-/* Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest */
-/* Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest.get_ApplicationCommands() */
 HRESULT wuiap_settings_pane_commands_request_get__application_commands(WUIAP_SettingsPaneCommandsRequest *self, WFOCO_IVector_WUIAP_SettingsCommand** value);
 
-/* activate Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs */
 HRESULT wuiap_settings_pane_commands_requested_event_args_new(WUIAP_SettingsPaneCommandsRequestedEventArgs **out);
 
-/* Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs */
-/* Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs.get_Request() */
 HRESULT wuiap_settings_pane_commands_requested_event_args_get__request(WUIAP_SettingsPaneCommandsRequestedEventArgs *self, WUIAP_SettingsPaneCommandsRequest** value);
 
-/* activate Windows.UI.ApplicationSettings.WebAccountCommand */
 HRESULT wuiap_web_account_command_new(WUIAP_WebAccountCommand **out);
 
-/* Windows.UI.ApplicationSettings.WebAccountCommand */
-/* Windows.UI.ApplicationSettings.WebAccountCommand.get_WebAccount() */
 HRESULT wuiap_web_account_command_get__web_account(WUIAP_WebAccountCommand *self, WSECR_WebAccount** value);
 
-/* Windows.UI.ApplicationSettings.WebAccountCommand.get_Invoked() */
 HRESULT wuiap_web_account_command_get__invoked(WUIAP_WebAccountCommand *self, WUIAP_WebAccountCommandInvokedHandler** value);
 
-/* Windows.UI.ApplicationSettings.WebAccountCommand.get_Actions() */
 HRESULT wuiap_web_account_command_get__actions(WUIAP_WebAccountCommand *self, WUIAP_SupportedWebAccountActions *value);
 
-/* Windows.UI.ApplicationSettings.WebAccountCommandInvokedHandler */
-/* Windows.UI.ApplicationSettings.WebAccountCommandInvokedHandler.Invoke(command, args) */
 HRESULT wuiap_web_account_command_invoked_handler_invoke(WUIAP_WebAccountCommandInvokedHandler *self, WUIAP_WebAccountCommand* command, WUIAP_WebAccountInvokedArgs* args);
 
-/* activate Windows.UI.ApplicationSettings.WebAccountInvokedArgs */
 HRESULT wuiap_web_account_invoked_args_new(WUIAP_WebAccountInvokedArgs **out);
 
-/* Windows.UI.ApplicationSettings.WebAccountInvokedArgs */
-/* Windows.UI.ApplicationSettings.WebAccountInvokedArgs.get_Action() */
 HRESULT wuiap_web_account_invoked_args_get__action(WUIAP_WebAccountInvokedArgs *self, WUIAP_WebAccountAction *value);
 
-/* activate Windows.UI.ApplicationSettings.WebAccountProviderCommand */
 HRESULT wuiap_web_account_provider_command_new(WUIAP_WebAccountProviderCommand **out);
 
-/* Windows.UI.ApplicationSettings.WebAccountProviderCommand */
-/* Windows.UI.ApplicationSettings.WebAccountProviderCommand.get_WebAccountProvider() */
 HRESULT wuiap_web_account_provider_command_get__web_account_provider(WUIAP_WebAccountProviderCommand *self, WSECR_WebAccountProvider** value);
 
-/* Windows.UI.ApplicationSettings.WebAccountProviderCommand.get_Invoked() */
 HRESULT wuiap_web_account_provider_command_get__invoked(WUIAP_WebAccountProviderCommand *self, WUIAP_WebAccountProviderCommandInvokedHandler** value);
 
-/* Windows.UI.ApplicationSettings.WebAccountProviderCommandInvokedHandler */
-/* Windows.UI.ApplicationSettings.WebAccountProviderCommandInvokedHandler.Invoke(command) */
 HRESULT wuiap_web_account_provider_command_invoked_handler_invoke(WUIAP_WebAccountProviderCommandInvokedHandler *self, WUIAP_WebAccountProviderCommand* command);
 
-/* Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics2 */
-/* Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics2.ShowManageAccountsAsync() */
 HRESULT wuiap_accounts_settings_pane_statics_2_show_manage_accounts_async(WUIAP_IAccountsSettingsPaneStatics_2 *self, WF_IAsyncAction** out);
 
-/* Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics2.ShowAddAccountAsync() */
 HRESULT wuiap_accounts_settings_pane_statics_2_show_add_account_async(WUIAP_IAccountsSettingsPaneStatics_2 *self, WF_IAsyncAction** out);
 
-/* activate Windows.UI.ApplicationSettings.SettingsCommand */
 HRESULT wuiap_settings_command_new(WUIAP_SettingsCommand **out);
 
-/* Windows.UI.ApplicationSettings.SettingsCommand */
-/* Windows.UI.ApplicationSettings.SettingsCommand.get_Label() */
 HRESULT wuiap_settings_command_get__label(WUIAP_SettingsCommand *self, cwinrt_hstring *value);
 
-/* Windows.UI.ApplicationSettings.SettingsCommand.put_Label() */
 HRESULT wuiap_settings_command_put__label(WUIAP_SettingsCommand *self, cwinrt_hstring value);
 
-/* Windows.UI.ApplicationSettings.SettingsCommand.get_Invoked() */
 HRESULT wuiap_settings_command_get__invoked(WUIAP_SettingsCommand *self, WUIPO_UICommandInvokedHandler** value);
 
-/* Windows.UI.ApplicationSettings.SettingsCommand.put_Invoked() */
 HRESULT wuiap_settings_command_put__invoked(WUIAP_SettingsCommand *self, WUIPO_UICommandInvokedHandler* value);
 
-/* Windows.UI.ApplicationSettings.SettingsCommand.get_Id() */
 HRESULT wuiap_settings_command_get__id(WUIAP_SettingsCommand *self, IInspectable** value);
 
-/* Windows.UI.ApplicationSettings.SettingsCommand.put_Id() */
 HRESULT wuiap_settings_command_put__id(WUIAP_SettingsCommand *self, IInspectable* value);
 
-/* Windows.UI.ApplicationSettings.SettingsCommand.get_AccountsCommand() */
 HRESULT wuiap_settings_command_get__accounts_command(WUIAP_SettingsCommand** value);
 
-/* activate Windows.UI.ApplicationSettings.AccountsSettingsPane */
 HRESULT wuiap_accounts_settings_pane_new(WUIAP_AccountsSettingsPane **out);
 
-/* Windows.UI.ApplicationSettings.AccountsSettingsPane */
-/* Windows.UI.ApplicationSettings.AccountsSettingsPane.ShowManageAccountsForUserAsync(user) */
 HRESULT wuiap_accounts_settings_pane_show_manage_accounts_for_user_async(WSY_User* user, WF_IAsyncAction** out);
 
-/* Windows.UI.ApplicationSettings.AccountsSettingsPane.ShowAddAccountForUserAsync(user) */
 HRESULT wuiap_accounts_settings_pane_show_add_account_for_user_async(WSY_User* user, WF_IAsyncAction** out);
 
-/* Windows.UI.ApplicationSettings.AccountsSettingsPane.ShowManageAccountsAsync() */
 HRESULT wuiap_accounts_settings_pane_show_manage_accounts_async(WF_IAsyncAction** out);
 
-/* Windows.UI.ApplicationSettings.AccountsSettingsPane.ShowAddAccountAsync() */
 HRESULT wuiap_accounts_settings_pane_show_add_account_async(WF_IAsyncAction** out);
 
-/* Windows.UI.ApplicationSettings.AccountsSettingsPane.GetForCurrentView() */
 HRESULT wuiap_accounts_settings_pane_get_for_current_view(WUIAP_AccountsSettingsPane** out);
 
-/* Windows.UI.ApplicationSettings.AccountsSettingsPane.Show() */
 HRESULT wuiap_accounts_settings_pane_show(void);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuiap_accounts_settings_pane_on_account_commands_requested(WUIAP_AccountsSettingsPane *self, cwinrt_event_fn fn, void *ctx);
 void wuiap_accounts_settings_pane_off_account_commands_requested(WUIAP_AccountsSettingsPane *self, cwinrt_token token);
 
-/* activate Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs */
 HRESULT wuiap_accounts_settings_pane_commands_requested_event_args_new(WUIAP_AccountsSettingsPaneCommandsRequestedEventArgs **out);
 
-/* Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs */
-/* Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs.get_WebAccountProviderCommands() */
 HRESULT wuiap_accounts_settings_pane_commands_requested_event_args_get__web_account_provider_commands(WUIAP_AccountsSettingsPaneCommandsRequestedEventArgs *self, WFOCO_IVector_WUIAP_WebAccountProviderCommand** value);
 
-/* Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs.get_WebAccountCommands() */
 HRESULT wuiap_accounts_settings_pane_commands_requested_event_args_get__web_account_commands(WUIAP_AccountsSettingsPaneCommandsRequestedEventArgs *self, WFOCO_IVector_WUIAP_WebAccountCommand** value);
 
-/* Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs.get_CredentialCommands() */
 HRESULT wuiap_accounts_settings_pane_commands_requested_event_args_get__credential_commands(WUIAP_AccountsSettingsPaneCommandsRequestedEventArgs *self, WFOCO_IVector_WUIAP_CredentialCommand** value);
 
-/* Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs.get_Commands() */
 HRESULT wuiap_accounts_settings_pane_commands_requested_event_args_get__commands(WUIAP_AccountsSettingsPaneCommandsRequestedEventArgs *self, WFOCO_IVector_WUIAP_SettingsCommand** value);
 
-/* Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs.get_HeaderText() */
 HRESULT wuiap_accounts_settings_pane_commands_requested_event_args_get__header_text(WUIAP_AccountsSettingsPaneCommandsRequestedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs.put_HeaderText() */
 HRESULT wuiap_accounts_settings_pane_commands_requested_event_args_put__header_text(WUIAP_AccountsSettingsPaneCommandsRequestedEventArgs *self, cwinrt_hstring value);
 
-/* Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs.GetDeferral() */
 HRESULT wuiap_accounts_settings_pane_commands_requested_event_args_get_deferral(WUIAP_AccountsSettingsPaneCommandsRequestedEventArgs *self, WUIAP_AccountsSettingsPaneEventDeferral** out);
 
-/* Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs.get_User() */
 HRESULT wuiap_accounts_settings_pane_commands_requested_event_args_get__user(WUIAP_AccountsSettingsPaneCommandsRequestedEventArgs *self, WSY_User** value);
 
-/* activate Windows.UI.ApplicationSettings.AccountsSettingsPaneEventDeferral */
 HRESULT wuiap_accounts_settings_pane_event_deferral_new(WUIAP_AccountsSettingsPaneEventDeferral **out);
 
-/* Windows.UI.ApplicationSettings.AccountsSettingsPaneEventDeferral */
-/* Windows.UI.ApplicationSettings.AccountsSettingsPaneEventDeferral.Complete() */
 HRESULT wuiap_accounts_settings_pane_event_deferral_complete(WUIAP_AccountsSettingsPaneEventDeferral *self);
 
-/* activate Windows.UI.ApplicationSettings.CredentialCommand */
 HRESULT wuiap_credential_command_new(WUIAP_CredentialCommand **out);
 
-/* Windows.UI.ApplicationSettings.CredentialCommand */
-/* Windows.UI.ApplicationSettings.CredentialCommand.get_PasswordCredential() */
 HRESULT wuiap_credential_command_get__password_credential(WUIAP_CredentialCommand *self, WSECR_PasswordCredential** value);
 
-/* Windows.UI.ApplicationSettings.CredentialCommand.get_CredentialDeleted() */
 HRESULT wuiap_credential_command_get__credential_deleted(WUIAP_CredentialCommand *self, WUIAP_CredentialCommandCredentialDeletedHandler** value);
 
-/* Windows.UI.ApplicationSettings.CredentialCommandCredentialDeletedHandler */
-/* Windows.UI.ApplicationSettings.CredentialCommandCredentialDeletedHandler.Invoke(command) */
 HRESULT wuiap_credential_command_credential_deleted_handler_invoke(WUIAP_CredentialCommandCredentialDeletedHandler *self, WUIAP_CredentialCommand* command);
 
-/* Windows.UI.ApplicationSettings.ISettingsPane */
-/* Windows.UI.ApplicationSettings.ISettingsPaneCommandsRequest */
-/* Windows.UI.ApplicationSettings.ISettingsPaneCommandsRequestedEventArgs */
-/* Windows.UI.ApplicationSettings.IWebAccountCommand */
-/* Windows.UI.ApplicationSettings.IWebAccountInvokedArgs */
-/* Windows.UI.ApplicationSettings.IWebAccountProviderCommand */
-/* Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics */
-/* Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics.GetForCurrentView() */
 HRESULT wuiap_accounts_settings_pane_statics_get_for_current_view(WUIAP_IAccountsSettingsPaneStatics *self, WUIAP_AccountsSettingsPane** out);
 
-/* Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics.Show() */
 HRESULT wuiap_accounts_settings_pane_statics_show(WUIAP_IAccountsSettingsPaneStatics *self);
 
-/* Windows.UI.ApplicationSettings.IAccountsSettingsPane */
-/* Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs */
-/* Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs2 */
-/* Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs2.get_User() */
 HRESULT wuiap_accounts_settings_pane_commands_requested_event_args_2_get__user(WUIAP_IAccountsSettingsPaneCommandsRequestedEventArgs_2 *self, WSY_User** value);
 
-/* Windows.UI.ApplicationSettings.IAccountsSettingsPaneEventDeferral */
-/* Windows.UI.ApplicationSettings.ICredentialCommand */
 #endif /* CWINRT_WINDOWS_UI_APPLICATIONSETTINGS_H */

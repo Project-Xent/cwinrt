@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.ApplicationModel.UserDataTasks.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WAPUSDA_UserDataTaskListSyncManagerSyncRequestEventArgs WAPUSDA_UserDataTaskListSyncManagerSyncRequestEventArgs;
 typedef struct WAPUSDA_UserDataTaskListSyncManagerSyncRequest WAPUSDA_UserDataTaskListSyncManagerSyncRequest;
 typedef struct WAPUSDA_UserDataTaskListSkipOccurrenceRequestEventArgs WAPUSDA_UserDataTaskListSkipOccurrenceRequestEventArgs;
@@ -39,7 +38,6 @@ typedef struct WAPUSDA_IUserDataTaskDataProviderTriggerDetails WAPUSDA_IUserData
 typedef struct WAPUSDA_IUserDataTaskDataProviderConnection WAPUSDA_IUserDataTaskDataProviderConnection;
 typedef struct WAPUSDA_IUserDataTaskListDeleteTaskRequestEventArgs WAPUSDA_IUserDataTaskListDeleteTaskRequestEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_Deferral
 #define CWINRT_FWD_WF_Deferral
 typedef struct WF_Deferral WF_Deferral;
@@ -73,7 +71,6 @@ typedef struct WF_TypedEventHandler_WAPUSDA_UserDataTaskDataProviderConnection_W
 typedef struct WF_TypedEventHandler_WAPUSDA_UserDataTaskDataProviderConnection_WAPUSDA_UserDataTaskListDeleteTaskRequestEventArgs WF_TypedEventHandler_WAPUSDA_UserDataTaskDataProviderConnection_WAPUSDA_UserDataTaskListDeleteTaskRequestEventArgs;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -126,140 +123,86 @@ static const IID CWINRT_IID_WAPUSDA_IUserDataTaskDataProviderConnection CWINRT_M
 static const IID CWINRT_IID_WAPUSDA_IUserDataTaskListDeleteTaskRequestEventArgs CWINRT_MAYBE_UNUSED = { 0x6063DAD9, 0xF562, 0x4145, { 0x8E, 0xFE, 0xD5, 0x00, 0x78, 0xC9, 0x2B, 0x7F } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequestEventArgs */
 HRESULT wapusda_user_data_task_list_sync_manager_sync_request_event_args_new(WAPUSDA_UserDataTaskListSyncManagerSyncRequestEventArgs **out);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequestEventArgs */
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequestEventArgs.get_Request() */
 HRESULT wapusda_user_data_task_list_sync_manager_sync_request_event_args_get__request(WAPUSDA_UserDataTaskListSyncManagerSyncRequestEventArgs *self, WAPUSDA_UserDataTaskListSyncManagerSyncRequest** value);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequestEventArgs.GetDeferral() */
 HRESULT wapusda_user_data_task_list_sync_manager_sync_request_event_args_get_deferral(WAPUSDA_UserDataTaskListSyncManagerSyncRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequest */
 HRESULT wapusda_user_data_task_list_sync_manager_sync_request_new(WAPUSDA_UserDataTaskListSyncManagerSyncRequest **out);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequest */
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequest.get_TaskListId() */
 HRESULT wapusda_user_data_task_list_sync_manager_sync_request_get__task_list_id(WAPUSDA_UserDataTaskListSyncManagerSyncRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequest.ReportCompletedAsync() */
 HRESULT wapusda_user_data_task_list_sync_manager_sync_request_report_completed_async(WAPUSDA_UserDataTaskListSyncManagerSyncRequest *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequest.ReportFailedAsync() */
 HRESULT wapusda_user_data_task_list_sync_manager_sync_request_report_failed_async(WAPUSDA_UserDataTaskListSyncManagerSyncRequest *self, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequestEventArgs */
 HRESULT wapusda_user_data_task_list_skip_occurrence_request_event_args_new(WAPUSDA_UserDataTaskListSkipOccurrenceRequestEventArgs **out);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequestEventArgs */
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequestEventArgs.get_Request() */
 HRESULT wapusda_user_data_task_list_skip_occurrence_request_event_args_get__request(WAPUSDA_UserDataTaskListSkipOccurrenceRequestEventArgs *self, WAPUSDA_UserDataTaskListSkipOccurrenceRequest** value);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequestEventArgs.GetDeferral() */
 HRESULT wapusda_user_data_task_list_skip_occurrence_request_event_args_get_deferral(WAPUSDA_UserDataTaskListSkipOccurrenceRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequest */
 HRESULT wapusda_user_data_task_list_skip_occurrence_request_new(WAPUSDA_UserDataTaskListSkipOccurrenceRequest **out);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequest */
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequest.get_TaskListId() */
 HRESULT wapusda_user_data_task_list_skip_occurrence_request_get__task_list_id(WAPUSDA_UserDataTaskListSkipOccurrenceRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequest.get_TaskId() */
 HRESULT wapusda_user_data_task_list_skip_occurrence_request_get__task_id(WAPUSDA_UserDataTaskListSkipOccurrenceRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequest.ReportCompletedAsync() */
 HRESULT wapusda_user_data_task_list_skip_occurrence_request_report_completed_async(WAPUSDA_UserDataTaskListSkipOccurrenceRequest *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequest.ReportFailedAsync() */
 HRESULT wapusda_user_data_task_list_skip_occurrence_request_report_failed_async(WAPUSDA_UserDataTaskListSkipOccurrenceRequest *self, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequest */
 HRESULT wapusda_user_data_task_list_delete_task_request_new(WAPUSDA_UserDataTaskListDeleteTaskRequest **out);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequest */
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequest.get_TaskListId() */
 HRESULT wapusda_user_data_task_list_delete_task_request_get__task_list_id(WAPUSDA_UserDataTaskListDeleteTaskRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequest.get_TaskId() */
 HRESULT wapusda_user_data_task_list_delete_task_request_get__task_id(WAPUSDA_UserDataTaskListDeleteTaskRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequest.ReportCompletedAsync() */
 HRESULT wapusda_user_data_task_list_delete_task_request_report_completed_async(WAPUSDA_UserDataTaskListDeleteTaskRequest *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequest.ReportFailedAsync() */
 HRESULT wapusda_user_data_task_list_delete_task_request_report_failed_async(WAPUSDA_UserDataTaskListDeleteTaskRequest *self, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequestEventArgs */
 HRESULT wapusda_user_data_task_list_create_or_update_task_request_event_args_new(WAPUSDA_UserDataTaskListCreateOrUpdateTaskRequestEventArgs **out);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequestEventArgs */
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequestEventArgs.get_Request() */
 HRESULT wapusda_user_data_task_list_create_or_update_task_request_event_args_get__request(WAPUSDA_UserDataTaskListCreateOrUpdateTaskRequestEventArgs *self, WAPUSDA_UserDataTaskListCreateOrUpdateTaskRequest** value);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequestEventArgs.GetDeferral() */
 HRESULT wapusda_user_data_task_list_create_or_update_task_request_event_args_get_deferral(WAPUSDA_UserDataTaskListCreateOrUpdateTaskRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequest */
 HRESULT wapusda_user_data_task_list_create_or_update_task_request_new(WAPUSDA_UserDataTaskListCreateOrUpdateTaskRequest **out);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequest */
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequest.get_TaskListId() */
 HRESULT wapusda_user_data_task_list_create_or_update_task_request_get__task_list_id(WAPUSDA_UserDataTaskListCreateOrUpdateTaskRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequest.get_Task() */
 HRESULT wapusda_user_data_task_list_create_or_update_task_request_get__task(WAPUSDA_UserDataTaskListCreateOrUpdateTaskRequest *self, WAPUS_UserDataTask** value);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequest.ReportCompletedAsync(createdOrUpdatedUserDataTask) */
 HRESULT wapusda_user_data_task_list_create_or_update_task_request_report_completed_async(WAPUSDA_UserDataTaskListCreateOrUpdateTaskRequest *self, WAPUS_UserDataTask* createdOrUpdatedUserDataTask, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequest.ReportFailedAsync() */
 HRESULT wapusda_user_data_task_list_create_or_update_task_request_report_failed_async(WAPUSDA_UserDataTaskListCreateOrUpdateTaskRequest *self, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequestEventArgs */
 HRESULT wapusda_user_data_task_list_complete_task_request_event_args_new(WAPUSDA_UserDataTaskListCompleteTaskRequestEventArgs **out);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequestEventArgs */
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequestEventArgs.get_Request() */
 HRESULT wapusda_user_data_task_list_complete_task_request_event_args_get__request(WAPUSDA_UserDataTaskListCompleteTaskRequestEventArgs *self, WAPUSDA_UserDataTaskListCompleteTaskRequest** value);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequestEventArgs.GetDeferral() */
 HRESULT wapusda_user_data_task_list_complete_task_request_event_args_get_deferral(WAPUSDA_UserDataTaskListCompleteTaskRequestEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequest */
 HRESULT wapusda_user_data_task_list_complete_task_request_new(WAPUSDA_UserDataTaskListCompleteTaskRequest **out);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequest */
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequest.get_TaskListId() */
 HRESULT wapusda_user_data_task_list_complete_task_request_get__task_list_id(WAPUSDA_UserDataTaskListCompleteTaskRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequest.get_TaskId() */
 HRESULT wapusda_user_data_task_list_complete_task_request_get__task_id(WAPUSDA_UserDataTaskListCompleteTaskRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequest.ReportCompletedAsync(completedTaskId) */
 HRESULT wapusda_user_data_task_list_complete_task_request_report_completed_async(WAPUSDA_UserDataTaskListCompleteTaskRequest *self, cwinrt_hstring completedTaskId, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequest.ReportFailedAsync() */
 HRESULT wapusda_user_data_task_list_complete_task_request_report_failed_async(WAPUSDA_UserDataTaskListCompleteTaskRequest *self, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderTriggerDetails */
 HRESULT wapusda_user_data_task_data_provider_trigger_details_new(WAPUSDA_UserDataTaskDataProviderTriggerDetails **out);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderTriggerDetails */
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderTriggerDetails.get_Connection() */
 HRESULT wapusda_user_data_task_data_provider_trigger_details_get__connection(WAPUSDA_UserDataTaskDataProviderTriggerDetails *self, WAPUSDA_UserDataTaskDataProviderConnection** value);
 
-/* activate Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection */
 HRESULT wapusda_user_data_task_data_provider_connection_new(WAPUSDA_UserDataTaskDataProviderConnection **out);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection */
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection.Start() */
 HRESULT wapusda_user_data_task_data_provider_connection_start(WAPUSDA_UserDataTaskDataProviderConnection *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapusda_user_data_task_data_provider_connection_on_create_or_update_task_requested(WAPUSDA_UserDataTaskDataProviderConnection *self, cwinrt_event_fn fn, void *ctx);
@@ -277,26 +220,10 @@ void wapusda_user_data_task_data_provider_connection_off_complete_task_requested
 cwinrt_token wapusda_user_data_task_data_provider_connection_on_delete_task_requested(WAPUSDA_UserDataTaskDataProviderConnection *self, cwinrt_event_fn fn, void *ctx);
 void wapusda_user_data_task_data_provider_connection_off_delete_task_requested(WAPUSDA_UserDataTaskDataProviderConnection *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequestEventArgs */
 HRESULT wapusda_user_data_task_list_delete_task_request_event_args_new(WAPUSDA_UserDataTaskListDeleteTaskRequestEventArgs **out);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequestEventArgs */
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequestEventArgs.get_Request() */
 HRESULT wapusda_user_data_task_list_delete_task_request_event_args_get__request(WAPUSDA_UserDataTaskListDeleteTaskRequestEventArgs *self, WAPUSDA_UserDataTaskListDeleteTaskRequest** value);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequestEventArgs.GetDeferral() */
 HRESULT wapusda_user_data_task_list_delete_task_request_event_args_get_deferral(WAPUSDA_UserDataTaskListDeleteTaskRequestEventArgs *self, WF_Deferral** out);
 
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSyncManagerSyncRequestEventArgs */
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSyncManagerSyncRequest */
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequestEventArgs */
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequest */
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequest */
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequestEventArgs */
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequest */
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequestEventArgs */
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequest */
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderTriggerDetails */
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection */
-/* Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequestEventArgs */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_USERDATATASKS_DATAPROVIDER_H */

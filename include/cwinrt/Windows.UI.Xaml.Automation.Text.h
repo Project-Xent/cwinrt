@@ -12,8 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
-
 #ifndef CWINRT_FWD_WUIXAAUTE_TextPatternRangeEndpoint
 #define CWINRT_FWD_WUIXAAUTE_TextPatternRangeEndpoint
 typedef enum WUIXAAUTE_TextPatternRangeEndpoint {
@@ -34,7 +32,5 @@ typedef enum WUIXAAUTE_TextUnit {
     WUIXAAUTE_TextUnit_Document = 6
 } WUIXAAUTE_TextUnit;
 #endif
-
-/* Methods */
 
 #endif /* CWINRT_WINDOWS_UI_XAML_AUTOMATION_TEXT_H */

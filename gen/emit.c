@@ -27,7 +27,6 @@ static int emit_includes(int bd, cwinrt_mapped_unit const *u) {
 	return emit_write_str(bd, "\n");
 }
 
-/* Membership test against a NULL-terminated string table. */
 static bool emit_name_in_table(char const *name, char const *const *table) {
 	int i;
 	for (i = 0; table [i]; i++)
@@ -84,7 +83,6 @@ static bool emit_has_extern_forward(cwinrt_mapped_unit const *u) {
 static int emit_extern_forwards(int bd, cwinrt_mapped_unit const *u) {
 	uint32_t i;
 	if (!u->extern_forward_count || !emit_has_extern_forward(u)) return 0;
-	if (emit_write_str(bd, "/* External types (forward declarations) */\n") != 0) return -1;
 	for (i = 0; i < u->extern_forward_count; i++) {
 		if (emit_skip_extern_forward(u->extern_forwards [i])) continue;
 		if (emit_referenced_type_decl(bd, u, u->extern_forwards [i]) != 0) return -1;
@@ -119,7 +117,6 @@ static int emit_foundation_supplemental_types(int bd, cwinrt_mapped_unit const *
 }
 
 static int emit_wellknown_value_types(int bd) {
-	if (emit_write_str(bd, "/* Well-known value types (ABI layout) */\n") != 0) return -1;
 	if (emit_write_str(bd, "typedef struct WF_Size { float Width; float Height; } WF_Size;\n") != 0) return -1;
 	if (emit_write_str(bd, "typedef struct WF_Point { float X; float Y; } WF_Point;\n") != 0) return -1;
 	if (emit_write_str(bd, "typedef struct WF_Rect { float X; float Y; float Width; float Height; } WF_Rect;\n") != 0)
@@ -156,7 +153,6 @@ static bool emit_unit_needs_wg_value_types(cwinrt_mapped_unit const *u) {
 }
 
 static int emit_wellknown_wg_value_types(int bd) {
-	if (emit_write_str(bd, "/* Windows.Graphics integer value types (ABI layout) */\n") != 0) return -1;
 	if (emit_write_str(
 		  bd,
 		  "#ifndef CWINRT_ABI_WG_SIZEINT32\n" "#define CWINRT_ABI_WG_SIZEINT32\n" "typedef struct WG_SizeInt32 { "
@@ -196,7 +192,6 @@ static bool emit_skip_forward_decl(cwinrt_mapped_unit const *u, cwinrt_mapped_ty
 
 static int emit_forward_decls(int bd, cwinrt_mapped_unit const *u) {
 	uint32_t ti;
-	if (emit_write_str(bd, "/* Types (forward declarations) */\n") != 0) return -1;
 	for (ti = 0; ti < u->type_count; ti++) {
 		cwinrt_mapped_type const *t = &u->types [ti];
 		if (emit_skip_forward_decl(u, t)) continue;
@@ -269,14 +264,12 @@ static bool emit_token_char(char c) {
 	return c == '_' || (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9');
 }
 
-/* Length of the type-token starting at p (already known to begin one), or 0. */
 static size_t emit_token_len(char const *p) {
 	size_t n = 0;
 	while (p [n] && emit_token_char(p [n])) n++;
 	return n;
 }
 
-/* Record the type token of length `len` at p (if a usable, unknown, unseen name). */
 static void emit_record_sig_token(
   cwinrt_mapped_unit const *u, char const *p, size_t len, char names [][128], uint32_t *n
 ) {
@@ -288,7 +281,6 @@ static void emit_record_sig_token(
 		emit_extra_name_add(names, n, u, tok);
 }
 
-/* Scan one params_c string, collecting unknown signature-referenced type names. */
 static void emit_collect_sig_tokens(
   cwinrt_mapped_unit const *u, char const *p, char names [][128], uint32_t *n
 ) {
@@ -310,7 +302,6 @@ static void emit_collect_sig_tokens(
 static int emit_sig_forward_block(int bd, cwinrt_mapped_unit const *u, char names [][128], uint32_t count) {
 	uint32_t i;
 	if (!count) return 0;
-	if (emit_write_str(bd, "/* Signature-referenced types */\n") != 0) return -1;
 	for (i = 0; i < count; i++) {
 		if (emit_type_is_enum(u, names [i]) || emit_is_wellknown_abi_name(names [i])) continue;
 		if (emit_referenced_type_decl(bd, u, names [i]) != 0) return -1;
@@ -395,7 +386,6 @@ static int emit_one_struct(int bd, cwinrt_mapped_type const *t) {
 	return 0;
 }
 
-/* Find the struct type in this unit whose c_typedef equals `cname`, or -1. */
 static int emit_struct_index_by_name(cwinrt_mapped_unit const *u, char const *cname) {
 	uint32_t ti;
 	if (!cname) return -1;
@@ -410,7 +400,6 @@ static int emit_struct_index_by_name(cwinrt_mapped_unit const *u, char const *cn
    state: 0=unvisited, 1=on stack, 2=emitted. By-value containment is acyclic. */
 static int emit_struct_dfs(int bd, cwinrt_mapped_unit const *u, uint32_t ti, uint8_t *state);
 
-/* Emit field `fi`'s same-unit by-value dependency first, if not yet visited. */
 static int emit_struct_visit_dep(int bd, cwinrt_mapped_unit const *u, cwinrt_mapped_type const *t,
 								 uint32_t fi, uint8_t *state) {
 	int dep = emit_struct_index_by_name(u, t->fields [fi].c_type);
@@ -431,9 +420,6 @@ static int emit_struct_dfs(int bd, cwinrt_mapped_unit const *u, uint32_t ti, uin
 	return 0;
 }
 
-/* Pre-mark non-struct, empty, and well-known-ABI types as emitted (state 2) so
-   the DFS skips them. WF_Size/Point/Rect, WFN_Vector*, WG_* have hand-written
-   ABI definitions (emit_wellknown_value_types) and must not be re-derived. */
 static void emit_structs_init_state(cwinrt_mapped_unit const *u, uint8_t *state) {
 	uint32_t ti;
 	for (ti = 0; ti < u->type_count; ti++) {
@@ -464,7 +450,7 @@ static int emit_structs(int bd, cwinrt_mapped_unit const *u) {
 static int emit_activate_new(int bd, cwinrt_mapped_type const *t) {
 	if (!t->is_activatable || !t->activate_c_name || !t->c_typedef) return 0;
 	if (t->kind == CWINRT_MAP_CLASS && !t->method_count) return 0;
-	return bprint(bd, "/* activate %s */\nHRESULT %s(%s **out);\n\n", t->winrt_name, t->activate_c_name, t->c_typedef)
+	return bprint(bd, "HRESULT %s(%s **out);\n\n", t->activate_c_name, t->c_typedef)
 	         < 0
 	       ? -1
 	       : 0;
@@ -499,7 +485,6 @@ static void emit_event_snake(char const *core, char *dst, size_t cap) {
 	dst [di] = '\0';
 }
 
-/* Locate the remove_ method whose core name matches `core`, or NULL. */
 static cwinrt_mapped_method const *emit_find_remove(cwinrt_mapped_type const *t, char const *core) {
 	uint32_t mj;
 	for (mj = 0; mj < t->method_count; mj++) {
@@ -527,11 +512,9 @@ static int emit_one_event_wrapper(int bd, cwinrt_mapped_unit const *u, cwinrt_ma
 }
 
 static int emit_event_section_hdr(int bd) {
-	if (emit_write_str(bd, "/* Event subscriptions (on_/off_) */\n") != 0) return -1;
 	return emit_write_str(bd, "#include <cwinrt/event.h>\n\n");
 }
 
-/* True if method `mi` of `t` is an add_X with a matching remove_X and both slots. */
 static bool emit_is_event_pair(cwinrt_mapped_type const *t, uint32_t mi, char *core, size_t cap) {
 	cwinrt_mapped_method const *add_m = &t->methods [mi];
 	cwinrt_mapped_method const *rem_m;
@@ -541,15 +524,12 @@ static bool emit_is_event_pair(cwinrt_mapped_type const *t, uint32_t mi, char *c
 	return rem_m && add_m->vtable_slot && rem_m->vtable_slot;
 }
 
-/* Short type name abbreviation used in the on_/off_ wrapper symbol prefix. */
 static char const *emit_type_abbrev(cwinrt_mapped_unit const *u, cwinrt_mapped_type const *t) {
 	char const *dot    = t->winrt_name ? strrchr(t->winrt_name, '.') : NULL;
 	char const *shortn = dot ? dot + 1 : "";
 	return cwinrt_name_type_abbrev(u->filter_ns, shortn);
 }
 
-/* Emit the on_/off_ wrappers for event pair `mi`, writing the section header
-   once on the first pair (*wrote_hdr tracks this across calls). */
 static int emit_event_pair(int bd, cwinrt_mapped_unit const *u, cwinrt_mapped_type const *t,
 						   uint32_t mi, bool *wrote_hdr) {
 	char core [128];
@@ -571,8 +551,6 @@ static int emit_event_wrappers(int bd, cwinrt_mapped_unit const *u, cwinrt_mappe
 	return 0;
 }
 
-/* Emit a per-interface IID constant for every interface in the unit. Consumers
-   QI with &CWINRT_IID_<name> instead of the runtime's blind GetIids()+QI scan. */
 static int emit_iid_block(int bd, cwinrt_mapped_unit const *u) {
 	uint32_t ti;
 	bool     any = false;
@@ -587,8 +565,7 @@ static int emit_iid_block(int bd, cwinrt_mapped_unit const *u) {
 		   so tag them [[maybe_unused]] (C23) to stay clean under -Wall -Wextra. */
 		if (!any
 		    && emit_write_str(
-		         bd, "/* Interface IIDs */\n"
-		             "#ifndef CWINRT_MAYBE_UNUSED\n"
+		         bd, "#ifndef CWINRT_MAYBE_UNUSED\n"
 		             "#  define CWINRT_MAYBE_UNUSED [[maybe_unused]]\n"
 		             "#endif\n"
 		       ) != 0)
@@ -619,7 +596,6 @@ static bool emit_skip_method(cwinrt_mapped_unit const *u, cwinrt_mapped_type con
 }
 
 static int emit_one_method(int bd, cwinrt_mapped_method const *m) {
-	if (bprint(bd, "/* %s */\n", m->comment ? m->comment : "") < 0) return -1;
 	if (emit_write_str(bd, m->c_sig) != 0) return -1;
 	return emit_write_str(bd, ";\n\n");
 }
@@ -628,7 +604,6 @@ static int emit_type_methods(int bd, cwinrt_mapped_unit const *u, cwinrt_mapped_
 	uint32_t mi;
 	if (emit_activate_new(bd, t) != 0) return -1;
 	if (!t->method_count) return 0;
-	if (bprint(bd, "/* %s */\n", t->winrt_name) < 0) return -1;
 	for (mi = 0; mi < t->method_count; mi++) {
 		cwinrt_mapped_method const *m = &t->methods [mi];
 		if (emit_skip_method(u, t, m)) continue;
@@ -639,7 +614,6 @@ static int emit_type_methods(int bd, cwinrt_mapped_unit const *u, cwinrt_mapped_
 
 static int emit_methods(int bd, cwinrt_mapped_unit const *u) {
 	uint32_t ti;
-	if (emit_write_str(bd, "/* Methods */\n\n") != 0) return -1;
 	for (ti = 0; ti < u->type_count; ti++)
 		if (emit_type_methods(bd, u, &u->types [ti]) != 0) return -1;
 	return 0;
@@ -649,8 +623,6 @@ static int emit_guard_close(int bd, cwinrt_mapped_unit const *u) {
 	return bprint(bd, "#endif /* %s */\n", u->include_guard) < 0 ? -1 : 0;
 }
 
-/* Uniform (bd,unit) wrappers for the two conditional value-type sections so the
-   whole header body can run through one ordered dispatch table. */
 static int emit_wellknown_value_types_section(int bd, cwinrt_mapped_unit const *u) {
 	return emit_is_foundation_ns(u) ? emit_wellknown_value_types(bd) : 0;
 }
@@ -659,7 +631,6 @@ static int emit_wellknown_wg_value_types_section(int bd, cwinrt_mapped_unit cons
 	return emit_unit_needs_wg_value_types(u) ? emit_wellknown_wg_value_types(bd) : 0;
 }
 
-/* Emit the full header body in order; returns 0 on success, -1 on any write error. */
 static int emit_header_body(int bd, cwinrt_mapped_unit const *unit) {
 	static int (*const sections []) (int, cwinrt_mapped_unit const *) = {
 	  emit_guard_open,

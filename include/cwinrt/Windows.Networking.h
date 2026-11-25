@@ -12,13 +12,11 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WNECO_IPInformation
 #define CWINRT_FWD_WNECO_IPInformation
 typedef struct WNECO_IPInformation WNECO_IPInformation;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WNE_IHostNameFactory WNE_IHostNameFactory;
 typedef struct WNE_IEndpointPairFactory WNE_IEndpointPairFactory;
 typedef struct WNE_HostName WNE_HostName;
@@ -27,7 +25,6 @@ typedef struct WNE_IHostNameStatics WNE_IHostNameStatics;
 typedef struct WNE_IHostName WNE_IHostName;
 typedef struct WNE_IEndpointPair WNE_IEndpointPair;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WNECO_IPInformation
 #define CWINRT_FWD_WNECO_IPInformation
 typedef struct WNECO_IPInformation WNECO_IPInformation;
@@ -59,7 +56,6 @@ typedef enum WNE_DomainNameType {
 } WNE_DomainNameType;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -84,76 +80,46 @@ static const IID CWINRT_IID_WNE_IHostName CWINRT_MAYBE_UNUSED = { 0xBF8ECAAD, 0x
 static const IID CWINRT_IID_WNE_IEndpointPair CWINRT_MAYBE_UNUSED = { 0x33A0AA36, 0xF8FA, 0x4B30, { 0xB8, 0x56, 0x76, 0x51, 0x7C, 0x3B, 0xD0, 0x6D } };
 #endif
 
-/* Methods */
-
-/* Windows.Networking.IHostNameFactory */
-/* Windows.Networking.IHostNameFactory.CreateHostName(hostName) */
 HRESULT wne_host_name_factory_create_host_name(WNE_IHostNameFactory *self, cwinrt_hstring hostName, WNE_HostName** out);
 
-/* Windows.Networking.IEndpointPairFactory */
-/* Windows.Networking.IEndpointPairFactory.CreateEndpointPair(localHostName, localServiceName, remoteHostName, remoteServiceName) */
 HRESULT wne_endpoint_pair_factory_create_endpoint_pair(WNE_IEndpointPairFactory *self, WNE_HostName* localHostName, cwinrt_hstring localServiceName, WNE_HostName* remoteHostName, cwinrt_hstring remoteServiceName, WNE_EndpointPair** out);
 
-/* activate Windows.Networking.HostName */
 HRESULT wne_host_name_new(WNE_HostName **out);
 
-/* Windows.Networking.HostName */
-/* Windows.Networking.HostName.get_IPInformation() */
 HRESULT wne_host_name_get__i_p_information(WNE_HostName *self, WNECO_IPInformation** value);
 
-/* Windows.Networking.HostName.get_RawName() */
 HRESULT wne_host_name_get__raw_name(WNE_HostName *self, cwinrt_hstring *value);
 
-/* Windows.Networking.HostName.get_DisplayName() */
 HRESULT wne_host_name_get__display_name(WNE_HostName *self, cwinrt_hstring *value);
 
-/* Windows.Networking.HostName.get_CanonicalName() */
 HRESULT wne_host_name_get__canonical_name(WNE_HostName *self, cwinrt_hstring *value);
 
-/* Windows.Networking.HostName.get_Type() */
 HRESULT wne_host_name_get__type(WNE_HostName *self, WNE_HostNameType *value);
 
-/* Windows.Networking.HostName.IsEqual(hostName) */
 HRESULT wne_host_name_is_equal(WNE_HostName *self, WNE_HostName* hostName, BOOL *out);
 
-/* Windows.Networking.HostName.ToString() */
 HRESULT wne_host_name_to_string(WNE_HostName *self, cwinrt_hstring *out);
 
-/* Windows.Networking.HostName.Compare(value1, value2) */
 HRESULT wne_host_name_compare(cwinrt_hstring value1, cwinrt_hstring value2, int32_t *out);
 
-/* activate Windows.Networking.EndpointPair */
 HRESULT wne_endpoint_pair_new(WNE_EndpointPair **out);
 
-/* Windows.Networking.EndpointPair */
-/* Windows.Networking.EndpointPair.get_LocalHostName() */
 HRESULT wne_endpoint_pair_get__local_host_name(WNE_EndpointPair *self, WNE_HostName** value);
 
-/* Windows.Networking.EndpointPair.put_LocalHostName() */
 HRESULT wne_endpoint_pair_put__local_host_name(WNE_EndpointPair *self, WNE_HostName* value);
 
-/* Windows.Networking.EndpointPair.get_LocalServiceName() */
 HRESULT wne_endpoint_pair_get__local_service_name(WNE_EndpointPair *self, cwinrt_hstring *value);
 
-/* Windows.Networking.EndpointPair.put_LocalServiceName() */
 HRESULT wne_endpoint_pair_put__local_service_name(WNE_EndpointPair *self, cwinrt_hstring value);
 
-/* Windows.Networking.EndpointPair.get_RemoteHostName() */
 HRESULT wne_endpoint_pair_get__remote_host_name(WNE_EndpointPair *self, WNE_HostName** value);
 
-/* Windows.Networking.EndpointPair.put_RemoteHostName() */
 HRESULT wne_endpoint_pair_put__remote_host_name(WNE_EndpointPair *self, WNE_HostName* value);
 
-/* Windows.Networking.EndpointPair.get_RemoteServiceName() */
 HRESULT wne_endpoint_pair_get__remote_service_name(WNE_EndpointPair *self, cwinrt_hstring *value);
 
-/* Windows.Networking.EndpointPair.put_RemoteServiceName() */
 HRESULT wne_endpoint_pair_put__remote_service_name(WNE_EndpointPair *self, cwinrt_hstring value);
 
-/* Windows.Networking.IHostNameStatics */
-/* Windows.Networking.IHostNameStatics.Compare(value1, value2) */
 HRESULT wne_host_name_statics_compare(WNE_IHostNameStatics *self, cwinrt_hstring value1, cwinrt_hstring value2, int32_t *out);
 
-/* Windows.Networking.IHostName */
-/* Windows.Networking.IEndpointPair */
 #endif /* CWINRT_WINDOWS_NETWORKING_H */

@@ -15,7 +15,6 @@
 #include <cwinrt/Windows.Graphics.DirectX.Direct3D11.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WME_VideoFrame
 #define CWINRT_FWD_WME_VideoFrame
 typedef struct WME_VideoFrame WME_VideoFrame;
@@ -33,7 +32,6 @@ typedef struct WSTST_IRandomAccessStreamReference WSTST_IRandomAccessStreamRefer
 typedef struct WSTST_IBuffer WSTST_IBuffer;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAIMA_IImageFeatureValueStatics WAIMA_IImageFeatureValueStatics;
 typedef struct WAIMA_ILearningModelBindingFactory WAIMA_ILearningModelBindingFactory;
 typedef struct WAIMA_ILearningModelDeviceFactory WAIMA_ILearningModelDeviceFactory;
@@ -123,7 +121,6 @@ typedef struct WAIMA_ITensorUInt8Bit WAIMA_ITensorUInt8Bit;
 typedef struct WAIMA_ITensor WAIMA_ITensor;
 typedef struct WAIMA_ILearningModelFeatureValue WAIMA_ILearningModelFeatureValue;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WME_VideoFrame
 #define CWINRT_FWD_WME_VideoFrame
 typedef struct WME_VideoFrame WME_VideoFrame;
@@ -349,7 +346,6 @@ typedef enum WAIMA_TensorKind {
 } WAIMA_TensorKind;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -610,1161 +606,716 @@ static const IID CWINRT_IID_WAIMA_ITensor CWINRT_MAYBE_UNUSED = { 0x05489593, 0x
 static const IID CWINRT_IID_WAIMA_ILearningModelFeatureValue CWINRT_MAYBE_UNUSED = { 0xF51005DB, 0x4085, 0x4DFE, { 0x9F, 0xED, 0x95, 0xEB, 0x0C, 0x0C, 0xF7, 0x5C } };
 #endif
 
-/* Methods */
-
-/* Windows.AI.MachineLearning.IImageFeatureValueStatics */
-/* Windows.AI.MachineLearning.IImageFeatureValueStatics.CreateFromVideoFrame(image) */
 HRESULT waima_image_feature_value_statics_create_from_video_frame(WAIMA_IImageFeatureValueStatics *self, WME_VideoFrame* image, WAIMA_ImageFeatureValue** out);
 
-/* Windows.AI.MachineLearning.ILearningModelBindingFactory */
-/* Windows.AI.MachineLearning.ILearningModelBindingFactory.CreateFromSession(session) */
 HRESULT waima_learning_model_binding_factory_create_from_session(WAIMA_ILearningModelBindingFactory *self, WAIMA_LearningModelSession* session, WAIMA_LearningModelBinding** out);
 
-/* Windows.AI.MachineLearning.ILearningModelDeviceFactory */
-/* Windows.AI.MachineLearning.ILearningModelDeviceFactory.Create(deviceKind) */
 HRESULT waima_learning_model_device_factory_create(WAIMA_ILearningModelDeviceFactory *self, WAIMA_LearningModelDeviceKind deviceKind, WAIMA_LearningModelDevice** out);
 
-/* Windows.AI.MachineLearning.ILearningModelDeviceStatics */
-/* Windows.AI.MachineLearning.ILearningModelDeviceStatics.CreateFromDirect3D11Device(device) */
 HRESULT waima_learning_model_device_statics_create_from_direct3_d11_device(WAIMA_ILearningModelDeviceStatics *self, WGRDIDI_IDirect3DDevice* device, WAIMA_LearningModelDevice** out);
 
-/* Windows.AI.MachineLearning.ILearningModelSessionFactory */
-/* Windows.AI.MachineLearning.ILearningModelSessionFactory.CreateFromModel(model) */
 HRESULT waima_learning_model_session_factory_create_from_model(WAIMA_ILearningModelSessionFactory *self, WAIMA_LearningModel* model, WAIMA_LearningModelSession** out);
 
-/* Windows.AI.MachineLearning.ILearningModelSessionFactory.CreateFromModelOnDevice(model, deviceToRunOn) */
 HRESULT waima_learning_model_session_factory_create_from_model_on_device(WAIMA_ILearningModelSessionFactory *self, WAIMA_LearningModel* model, WAIMA_LearningModelDevice* deviceToRunOn, WAIMA_LearningModelSession** out);
 
-/* Windows.AI.MachineLearning.ILearningModelSessionFactory2 */
-/* Windows.AI.MachineLearning.ILearningModelSessionFactory2.CreateFromModelOnDeviceWithSessionOptions(model, deviceToRunOn, learningModelSessionOptions) */
 HRESULT waima_learning_model_session_factory_2_create_from_model_on_device_with_session_options(WAIMA_ILearningModelSessionFactory_2 *self, WAIMA_LearningModel* model, WAIMA_LearningModelDevice* deviceToRunOn, WAIMA_LearningModelSessionOptions* learningModelSessionOptions, WAIMA_LearningModelSession** out);
 
-/* Windows.AI.MachineLearning.ILearningModelStatics */
-/* Windows.AI.MachineLearning.ILearningModelStatics.LoadFromStorageFileAsync(modelFile) */
 HRESULT waima_learning_model_statics_load_from_storage_file_async(WAIMA_ILearningModelStatics *self, WS_IStorageFile* modelFile, WF_IAsyncOperation_WAIMA_LearningModel** out);
 
-/* Windows.AI.MachineLearning.ILearningModelStatics.LoadFromStreamAsync(modelStream) */
 HRESULT waima_learning_model_statics_load_from_stream_async(WAIMA_ILearningModelStatics *self, WSTST_IRandomAccessStreamReference* modelStream, WF_IAsyncOperation_WAIMA_LearningModel** out);
 
-/* Windows.AI.MachineLearning.ILearningModelStatics.LoadFromFilePath(filePath) */
 HRESULT waima_learning_model_statics_load_from_file_path(WAIMA_ILearningModelStatics *self, cwinrt_hstring filePath, WAIMA_LearningModel** out);
 
-/* Windows.AI.MachineLearning.ILearningModelStatics.LoadFromStream(modelStream) */
 HRESULT waima_learning_model_statics_load_from_stream(WAIMA_ILearningModelStatics *self, WSTST_IRandomAccessStreamReference* modelStream, WAIMA_LearningModel** out);
 
-/* Windows.AI.MachineLearning.ILearningModelStatics.LoadFromStorageFileAsync(modelFile, operatorProvider) */
 HRESULT waima_learning_model_statics_load_from_storage_file_async_p_p_p(WAIMA_ILearningModelStatics *self, WS_IStorageFile* modelFile, WAIMA_ILearningModelOperatorProvider* operatorProvider, WF_IAsyncOperation_WAIMA_LearningModel** out);
 
-/* Windows.AI.MachineLearning.ILearningModelStatics.LoadFromStreamAsync(modelStream, operatorProvider) */
 HRESULT waima_learning_model_statics_load_from_stream_async_p_p_p(WAIMA_ILearningModelStatics *self, WSTST_IRandomAccessStreamReference* modelStream, WAIMA_ILearningModelOperatorProvider* operatorProvider, WF_IAsyncOperation_WAIMA_LearningModel** out);
 
-/* Windows.AI.MachineLearning.ILearningModelStatics.LoadFromFilePath(filePath, operatorProvider) */
 HRESULT waima_learning_model_statics_load_from_file_path_str_p_p(WAIMA_ILearningModelStatics *self, cwinrt_hstring filePath, WAIMA_ILearningModelOperatorProvider* operatorProvider, WAIMA_LearningModel** out);
 
-/* Windows.AI.MachineLearning.ILearningModelStatics.LoadFromStream(modelStream, operatorProvider) */
 HRESULT waima_learning_model_statics_load_from_stream_p_p_p(WAIMA_ILearningModelStatics *self, WSTST_IRandomAccessStreamReference* modelStream, WAIMA_ILearningModelOperatorProvider* operatorProvider, WAIMA_LearningModel** out);
 
-/* Windows.AI.MachineLearning.ITensorBooleanStatics */
-/* Windows.AI.MachineLearning.ITensorBooleanStatics.Create() */
 HRESULT waima_tensor_boolean_statics_create(WAIMA_ITensorBooleanStatics *self, WAIMA_TensorBoolean** out);
 
-/* Windows.AI.MachineLearning.ITensorBooleanStatics.Create(shape) */
 HRESULT waima_tensor_boolean_statics_create_p_p(WAIMA_ITensorBooleanStatics *self, WFOCO_IIterable_int64_t* shape, WAIMA_TensorBoolean** out);
 
-/* Windows.AI.MachineLearning.ITensorBooleanStatics.CreateFromArray(shape, data) */
 HRESULT waima_tensor_boolean_statics_create_from_array(WAIMA_ITensorBooleanStatics *self, WFOCO_IIterable_int64_t* shape, BOOL *data, uint32_t data_len, WAIMA_TensorBoolean** out);
 
-/* Windows.AI.MachineLearning.ITensorBooleanStatics.CreateFromIterable(shape, data) */
 HRESULT waima_tensor_boolean_statics_create_from_iterable(WAIMA_ITensorBooleanStatics *self, WFOCO_IIterable_int64_t* shape, WFOCO_IIterable_Bool* data, WAIMA_TensorBoolean** out);
 
-/* Windows.AI.MachineLearning.ITensorBooleanStatics2 */
-/* Windows.AI.MachineLearning.ITensorBooleanStatics2.CreateFromShapeArrayAndDataArray(shape, data) */
 HRESULT waima_tensor_boolean_statics_2_create_from_shape_array_and_data_array(WAIMA_ITensorBooleanStatics_2 *self, int64_t *shape, uint32_t shape_len, BOOL *data, uint32_t data_len, WAIMA_TensorBoolean** out);
 
-/* Windows.AI.MachineLearning.ITensorBooleanStatics2.CreateFromBuffer(shape, buffer) */
 HRESULT waima_tensor_boolean_statics_2_create_from_buffer(WAIMA_ITensorBooleanStatics_2 *self, int64_t *shape, uint32_t shape_len, WSTST_IBuffer* buffer, WAIMA_TensorBoolean** out);
 
-/* Windows.AI.MachineLearning.ITensorDoubleStatics */
-/* Windows.AI.MachineLearning.ITensorDoubleStatics.Create() */
 HRESULT waima_tensor_double_statics_create(WAIMA_ITensorDoubleStatics *self, WAIMA_TensorDouble** out);
 
-/* Windows.AI.MachineLearning.ITensorDoubleStatics.Create(shape) */
 HRESULT waima_tensor_double_statics_create_p_p(WAIMA_ITensorDoubleStatics *self, WFOCO_IIterable_int64_t* shape, WAIMA_TensorDouble** out);
 
-/* Windows.AI.MachineLearning.ITensorDoubleStatics.CreateFromArray(shape, data) */
 HRESULT waima_tensor_double_statics_create_from_array(WAIMA_ITensorDoubleStatics *self, WFOCO_IIterable_int64_t* shape, double *data, uint32_t data_len, WAIMA_TensorDouble** out);
 
-/* Windows.AI.MachineLearning.ITensorDoubleStatics.CreateFromIterable(shape, data) */
 HRESULT waima_tensor_double_statics_create_from_iterable(WAIMA_ITensorDoubleStatics *self, WFOCO_IIterable_int64_t* shape, WFOCO_IIterable_F64* data, WAIMA_TensorDouble** out);
 
-/* Windows.AI.MachineLearning.ITensorDoubleStatics2 */
-/* Windows.AI.MachineLearning.ITensorDoubleStatics2.CreateFromShapeArrayAndDataArray(shape, data) */
 HRESULT waima_tensor_double_statics_2_create_from_shape_array_and_data_array(WAIMA_ITensorDoubleStatics_2 *self, int64_t *shape, uint32_t shape_len, double *data, uint32_t data_len, WAIMA_TensorDouble** out);
 
-/* Windows.AI.MachineLearning.ITensorDoubleStatics2.CreateFromBuffer(shape, buffer) */
 HRESULT waima_tensor_double_statics_2_create_from_buffer(WAIMA_ITensorDoubleStatics_2 *self, int64_t *shape, uint32_t shape_len, WSTST_IBuffer* buffer, WAIMA_TensorDouble** out);
 
-/* Windows.AI.MachineLearning.ITensorFloat16BitStatics */
-/* Windows.AI.MachineLearning.ITensorFloat16BitStatics.Create() */
 HRESULT waima_tensor_float16_bit_statics_create(WAIMA_ITensorFloat16BitStatics *self, WAIMA_TensorFloat16Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorFloat16BitStatics.Create(shape) */
 HRESULT waima_tensor_float16_bit_statics_create_p_p(WAIMA_ITensorFloat16BitStatics *self, WFOCO_IIterable_int64_t* shape, WAIMA_TensorFloat16Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorFloat16BitStatics.CreateFromArray(shape, data) */
 HRESULT waima_tensor_float16_bit_statics_create_from_array(WAIMA_ITensorFloat16BitStatics *self, WFOCO_IIterable_int64_t* shape, float *data, uint32_t data_len, WAIMA_TensorFloat16Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorFloat16BitStatics.CreateFromIterable(shape, data) */
 HRESULT waima_tensor_float16_bit_statics_create_from_iterable(WAIMA_ITensorFloat16BitStatics *self, WFOCO_IIterable_int64_t* shape, WFOCO_IIterable_F32* data, WAIMA_TensorFloat16Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorFloat16BitStatics2 */
-/* Windows.AI.MachineLearning.ITensorFloat16BitStatics2.CreateFromShapeArrayAndDataArray(shape, data) */
 HRESULT waima_tensor_float16_bit_statics_2_create_from_shape_array_and_data_array(WAIMA_ITensorFloat16BitStatics_2 *self, int64_t *shape, uint32_t shape_len, float *data, uint32_t data_len, WAIMA_TensorFloat16Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorFloat16BitStatics2.CreateFromBuffer(shape, buffer) */
 HRESULT waima_tensor_float16_bit_statics_2_create_from_buffer(WAIMA_ITensorFloat16BitStatics_2 *self, int64_t *shape, uint32_t shape_len, WSTST_IBuffer* buffer, WAIMA_TensorFloat16Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorFloatStatics */
-/* Windows.AI.MachineLearning.ITensorFloatStatics.Create() */
 HRESULT waima_tensor_float_statics_create(WAIMA_ITensorFloatStatics *self, WAIMA_TensorFloat** out);
 
-/* Windows.AI.MachineLearning.ITensorFloatStatics.Create(shape) */
 HRESULT waima_tensor_float_statics_create_p_p(WAIMA_ITensorFloatStatics *self, WFOCO_IIterable_int64_t* shape, WAIMA_TensorFloat** out);
 
-/* Windows.AI.MachineLearning.ITensorFloatStatics.CreateFromArray(shape, data) */
 HRESULT waima_tensor_float_statics_create_from_array(WAIMA_ITensorFloatStatics *self, WFOCO_IIterable_int64_t* shape, float *data, uint32_t data_len, WAIMA_TensorFloat** out);
 
-/* Windows.AI.MachineLearning.ITensorFloatStatics.CreateFromIterable(shape, data) */
 HRESULT waima_tensor_float_statics_create_from_iterable(WAIMA_ITensorFloatStatics *self, WFOCO_IIterable_int64_t* shape, WFOCO_IIterable_F32* data, WAIMA_TensorFloat** out);
 
-/* Windows.AI.MachineLearning.ITensorFloatStatics2 */
-/* Windows.AI.MachineLearning.ITensorFloatStatics2.CreateFromShapeArrayAndDataArray(shape, data) */
 HRESULT waima_tensor_float_statics_2_create_from_shape_array_and_data_array(WAIMA_ITensorFloatStatics_2 *self, int64_t *shape, uint32_t shape_len, float *data, uint32_t data_len, WAIMA_TensorFloat** out);
 
-/* Windows.AI.MachineLearning.ITensorFloatStatics2.CreateFromBuffer(shape, buffer) */
 HRESULT waima_tensor_float_statics_2_create_from_buffer(WAIMA_ITensorFloatStatics_2 *self, int64_t *shape, uint32_t shape_len, WSTST_IBuffer* buffer, WAIMA_TensorFloat** out);
 
-/* Windows.AI.MachineLearning.ITensorInt16BitStatics */
-/* Windows.AI.MachineLearning.ITensorInt16BitStatics.Create() */
 HRESULT waima_tensor_int16_bit_statics_create(WAIMA_ITensorInt16BitStatics *self, WAIMA_TensorInt16Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorInt16BitStatics.Create(shape) */
 HRESULT waima_tensor_int16_bit_statics_create_p_p(WAIMA_ITensorInt16BitStatics *self, WFOCO_IIterable_int64_t* shape, WAIMA_TensorInt16Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorInt16BitStatics.CreateFromArray(shape, data) */
 HRESULT waima_tensor_int16_bit_statics_create_from_array(WAIMA_ITensorInt16BitStatics *self, WFOCO_IIterable_int64_t* shape, int16_t *data, uint32_t data_len, WAIMA_TensorInt16Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorInt16BitStatics.CreateFromIterable(shape, data) */
 HRESULT waima_tensor_int16_bit_statics_create_from_iterable(WAIMA_ITensorInt16BitStatics *self, WFOCO_IIterable_int64_t* shape, WFOCO_IIterable_int16_t* data, WAIMA_TensorInt16Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorInt16BitStatics2 */
-/* Windows.AI.MachineLearning.ITensorInt16BitStatics2.CreateFromShapeArrayAndDataArray(shape, data) */
 HRESULT waima_tensor_int16_bit_statics_2_create_from_shape_array_and_data_array(WAIMA_ITensorInt16BitStatics_2 *self, int64_t *shape, uint32_t shape_len, int16_t *data, uint32_t data_len, WAIMA_TensorInt16Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorInt16BitStatics2.CreateFromBuffer(shape, buffer) */
 HRESULT waima_tensor_int16_bit_statics_2_create_from_buffer(WAIMA_ITensorInt16BitStatics_2 *self, int64_t *shape, uint32_t shape_len, WSTST_IBuffer* buffer, WAIMA_TensorInt16Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorInt32BitStatics */
-/* Windows.AI.MachineLearning.ITensorInt32BitStatics.Create() */
 HRESULT waima_tensor_int32_bit_statics_create(WAIMA_ITensorInt32BitStatics *self, WAIMA_TensorInt32Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorInt32BitStatics.Create(shape) */
 HRESULT waima_tensor_int32_bit_statics_create_p_p(WAIMA_ITensorInt32BitStatics *self, WFOCO_IIterable_int64_t* shape, WAIMA_TensorInt32Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorInt32BitStatics.CreateFromArray(shape, data) */
 HRESULT waima_tensor_int32_bit_statics_create_from_array(WAIMA_ITensorInt32BitStatics *self, WFOCO_IIterable_int64_t* shape, int32_t *data, uint32_t data_len, WAIMA_TensorInt32Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorInt32BitStatics.CreateFromIterable(shape, data) */
 HRESULT waima_tensor_int32_bit_statics_create_from_iterable(WAIMA_ITensorInt32BitStatics *self, WFOCO_IIterable_int64_t* shape, WFOCO_IIterable_int32_t* data, WAIMA_TensorInt32Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorInt32BitStatics2 */
-/* Windows.AI.MachineLearning.ITensorInt32BitStatics2.CreateFromShapeArrayAndDataArray(shape, data) */
 HRESULT waima_tensor_int32_bit_statics_2_create_from_shape_array_and_data_array(WAIMA_ITensorInt32BitStatics_2 *self, int64_t *shape, uint32_t shape_len, int32_t *data, uint32_t data_len, WAIMA_TensorInt32Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorInt32BitStatics2.CreateFromBuffer(shape, buffer) */
 HRESULT waima_tensor_int32_bit_statics_2_create_from_buffer(WAIMA_ITensorInt32BitStatics_2 *self, int64_t *shape, uint32_t shape_len, WSTST_IBuffer* buffer, WAIMA_TensorInt32Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorInt64BitStatics */
-/* Windows.AI.MachineLearning.ITensorInt64BitStatics.Create() */
 HRESULT waima_tensor_int64_bit_statics_create(WAIMA_ITensorInt64BitStatics *self, WAIMA_TensorInt64Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorInt64BitStatics.Create(shape) */
 HRESULT waima_tensor_int64_bit_statics_create_p_p(WAIMA_ITensorInt64BitStatics *self, WFOCO_IIterable_int64_t* shape, WAIMA_TensorInt64Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorInt64BitStatics.CreateFromArray(shape, data) */
 HRESULT waima_tensor_int64_bit_statics_create_from_array(WAIMA_ITensorInt64BitStatics *self, WFOCO_IIterable_int64_t* shape, int64_t *data, uint32_t data_len, WAIMA_TensorInt64Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorInt64BitStatics.CreateFromIterable(shape, data) */
 HRESULT waima_tensor_int64_bit_statics_create_from_iterable(WAIMA_ITensorInt64BitStatics *self, WFOCO_IIterable_int64_t* shape, WFOCO_IIterable_int64_t* data, WAIMA_TensorInt64Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorInt64BitStatics2 */
-/* Windows.AI.MachineLearning.ITensorInt64BitStatics2.CreateFromShapeArrayAndDataArray(shape, data) */
 HRESULT waima_tensor_int64_bit_statics_2_create_from_shape_array_and_data_array(WAIMA_ITensorInt64BitStatics_2 *self, int64_t *shape, uint32_t shape_len, int64_t *data, uint32_t data_len, WAIMA_TensorInt64Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorInt64BitStatics2.CreateFromBuffer(shape, buffer) */
 HRESULT waima_tensor_int64_bit_statics_2_create_from_buffer(WAIMA_ITensorInt64BitStatics_2 *self, int64_t *shape, uint32_t shape_len, WSTST_IBuffer* buffer, WAIMA_TensorInt64Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorInt8BitStatics */
-/* Windows.AI.MachineLearning.ITensorInt8BitStatics.Create() */
 HRESULT waima_tensor_int8_bit_statics_create(WAIMA_ITensorInt8BitStatics *self, WAIMA_TensorInt8Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorInt8BitStatics.Create(shape) */
 HRESULT waima_tensor_int8_bit_statics_create_p_p(WAIMA_ITensorInt8BitStatics *self, WFOCO_IIterable_int64_t* shape, WAIMA_TensorInt8Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorInt8BitStatics.CreateFromArray(shape, data) */
 HRESULT waima_tensor_int8_bit_statics_create_from_array(WAIMA_ITensorInt8BitStatics *self, WFOCO_IIterable_int64_t* shape, uint8_t *data, uint32_t data_len, WAIMA_TensorInt8Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorInt8BitStatics.CreateFromIterable(shape, data) */
 HRESULT waima_tensor_int8_bit_statics_create_from_iterable(WAIMA_ITensorInt8BitStatics *self, WFOCO_IIterable_int64_t* shape, WFOCO_IIterable_uint8_t* data, WAIMA_TensorInt8Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorInt8BitStatics2 */
-/* Windows.AI.MachineLearning.ITensorInt8BitStatics2.CreateFromShapeArrayAndDataArray(shape, data) */
 HRESULT waima_tensor_int8_bit_statics_2_create_from_shape_array_and_data_array(WAIMA_ITensorInt8BitStatics_2 *self, int64_t *shape, uint32_t shape_len, uint8_t *data, uint32_t data_len, WAIMA_TensorInt8Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorInt8BitStatics2.CreateFromBuffer(shape, buffer) */
 HRESULT waima_tensor_int8_bit_statics_2_create_from_buffer(WAIMA_ITensorInt8BitStatics_2 *self, int64_t *shape, uint32_t shape_len, WSTST_IBuffer* buffer, WAIMA_TensorInt8Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorStringStatics */
-/* Windows.AI.MachineLearning.ITensorStringStatics.Create() */
 HRESULT waima_tensor_string_statics_create(WAIMA_ITensorStringStatics *self, WAIMA_TensorString** out);
 
-/* Windows.AI.MachineLearning.ITensorStringStatics.Create(shape) */
 HRESULT waima_tensor_string_statics_create_p_p(WAIMA_ITensorStringStatics *self, WFOCO_IIterable_int64_t* shape, WAIMA_TensorString** out);
 
-/* Windows.AI.MachineLearning.ITensorStringStatics.CreateFromArray(shape, data) */
 HRESULT waima_tensor_string_statics_create_from_array(WAIMA_ITensorStringStatics *self, WFOCO_IIterable_int64_t* shape, cwinrt_hstring *data, uint32_t data_len, WAIMA_TensorString** out);
 
-/* Windows.AI.MachineLearning.ITensorStringStatics.CreateFromIterable(shape, data) */
 HRESULT waima_tensor_string_statics_create_from_iterable(WAIMA_ITensorStringStatics *self, WFOCO_IIterable_int64_t* shape, WFOCO_IIterable_HSTRING* data, WAIMA_TensorString** out);
 
-/* Windows.AI.MachineLearning.ITensorStringStatics2 */
-/* Windows.AI.MachineLearning.ITensorStringStatics2.CreateFromShapeArrayAndDataArray(shape, data) */
 HRESULT waima_tensor_string_statics_2_create_from_shape_array_and_data_array(WAIMA_ITensorStringStatics_2 *self, int64_t *shape, uint32_t shape_len, cwinrt_hstring *data, uint32_t data_len, WAIMA_TensorString** out);
 
-/* Windows.AI.MachineLearning.ITensorUInt16BitStatics */
-/* Windows.AI.MachineLearning.ITensorUInt16BitStatics.Create() */
 HRESULT waima_tensor_u_int16_bit_statics_create(WAIMA_ITensorUInt16BitStatics *self, WAIMA_TensorUInt16Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorUInt16BitStatics.Create(shape) */
 HRESULT waima_tensor_u_int16_bit_statics_create_p_p(WAIMA_ITensorUInt16BitStatics *self, WFOCO_IIterable_int64_t* shape, WAIMA_TensorUInt16Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorUInt16BitStatics.CreateFromArray(shape, data) */
 HRESULT waima_tensor_u_int16_bit_statics_create_from_array(WAIMA_ITensorUInt16BitStatics *self, WFOCO_IIterable_int64_t* shape, uint16_t *data, uint32_t data_len, WAIMA_TensorUInt16Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorUInt16BitStatics.CreateFromIterable(shape, data) */
 HRESULT waima_tensor_u_int16_bit_statics_create_from_iterable(WAIMA_ITensorUInt16BitStatics *self, WFOCO_IIterable_int64_t* shape, WFOCO_IIterable_uint16_t* data, WAIMA_TensorUInt16Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorUInt16BitStatics2 */
-/* Windows.AI.MachineLearning.ITensorUInt16BitStatics2.CreateFromShapeArrayAndDataArray(shape, data) */
 HRESULT waima_tensor_u_int16_bit_statics_2_create_from_shape_array_and_data_array(WAIMA_ITensorUInt16BitStatics_2 *self, int64_t *shape, uint32_t shape_len, uint16_t *data, uint32_t data_len, WAIMA_TensorUInt16Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorUInt16BitStatics2.CreateFromBuffer(shape, buffer) */
 HRESULT waima_tensor_u_int16_bit_statics_2_create_from_buffer(WAIMA_ITensorUInt16BitStatics_2 *self, int64_t *shape, uint32_t shape_len, WSTST_IBuffer* buffer, WAIMA_TensorUInt16Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorUInt32BitStatics */
-/* Windows.AI.MachineLearning.ITensorUInt32BitStatics.Create() */
 HRESULT waima_tensor_u_int32_bit_statics_create(WAIMA_ITensorUInt32BitStatics *self, WAIMA_TensorUInt32Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorUInt32BitStatics.Create(shape) */
 HRESULT waima_tensor_u_int32_bit_statics_create_p_p(WAIMA_ITensorUInt32BitStatics *self, WFOCO_IIterable_int64_t* shape, WAIMA_TensorUInt32Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorUInt32BitStatics.CreateFromArray(shape, data) */
 HRESULT waima_tensor_u_int32_bit_statics_create_from_array(WAIMA_ITensorUInt32BitStatics *self, WFOCO_IIterable_int64_t* shape, uint32_t *data, uint32_t data_len, WAIMA_TensorUInt32Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorUInt32BitStatics.CreateFromIterable(shape, data) */
 HRESULT waima_tensor_u_int32_bit_statics_create_from_iterable(WAIMA_ITensorUInt32BitStatics *self, WFOCO_IIterable_int64_t* shape, WFOCO_IIterable_uint32_t* data, WAIMA_TensorUInt32Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorUInt32BitStatics2 */
-/* Windows.AI.MachineLearning.ITensorUInt32BitStatics2.CreateFromShapeArrayAndDataArray(shape, data) */
 HRESULT waima_tensor_u_int32_bit_statics_2_create_from_shape_array_and_data_array(WAIMA_ITensorUInt32BitStatics_2 *self, int64_t *shape, uint32_t shape_len, uint32_t *data, uint32_t data_len, WAIMA_TensorUInt32Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorUInt32BitStatics2.CreateFromBuffer(shape, buffer) */
 HRESULT waima_tensor_u_int32_bit_statics_2_create_from_buffer(WAIMA_ITensorUInt32BitStatics_2 *self, int64_t *shape, uint32_t shape_len, WSTST_IBuffer* buffer, WAIMA_TensorUInt32Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorUInt64BitStatics */
-/* Windows.AI.MachineLearning.ITensorUInt64BitStatics.Create() */
 HRESULT waima_tensor_u_int64_bit_statics_create(WAIMA_ITensorUInt64BitStatics *self, WAIMA_TensorUInt64Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorUInt64BitStatics.Create(shape) */
 HRESULT waima_tensor_u_int64_bit_statics_create_p_p(WAIMA_ITensorUInt64BitStatics *self, WFOCO_IIterable_int64_t* shape, WAIMA_TensorUInt64Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorUInt64BitStatics.CreateFromArray(shape, data) */
 HRESULT waima_tensor_u_int64_bit_statics_create_from_array(WAIMA_ITensorUInt64BitStatics *self, WFOCO_IIterable_int64_t* shape, uint64_t *data, uint32_t data_len, WAIMA_TensorUInt64Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorUInt64BitStatics.CreateFromIterable(shape, data) */
 HRESULT waima_tensor_u_int64_bit_statics_create_from_iterable(WAIMA_ITensorUInt64BitStatics *self, WFOCO_IIterable_int64_t* shape, WFOCO_IIterable_uint64_t* data, WAIMA_TensorUInt64Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorUInt64BitStatics2 */
-/* Windows.AI.MachineLearning.ITensorUInt64BitStatics2.CreateFromShapeArrayAndDataArray(shape, data) */
 HRESULT waima_tensor_u_int64_bit_statics_2_create_from_shape_array_and_data_array(WAIMA_ITensorUInt64BitStatics_2 *self, int64_t *shape, uint32_t shape_len, uint64_t *data, uint32_t data_len, WAIMA_TensorUInt64Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorUInt64BitStatics2.CreateFromBuffer(shape, buffer) */
 HRESULT waima_tensor_u_int64_bit_statics_2_create_from_buffer(WAIMA_ITensorUInt64BitStatics_2 *self, int64_t *shape, uint32_t shape_len, WSTST_IBuffer* buffer, WAIMA_TensorUInt64Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorUInt8BitStatics */
-/* Windows.AI.MachineLearning.ITensorUInt8BitStatics.Create() */
 HRESULT waima_tensor_u_int8_bit_statics_create(WAIMA_ITensorUInt8BitStatics *self, WAIMA_TensorUInt8Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorUInt8BitStatics.Create(shape) */
 HRESULT waima_tensor_u_int8_bit_statics_create_p_p(WAIMA_ITensorUInt8BitStatics *self, WFOCO_IIterable_int64_t* shape, WAIMA_TensorUInt8Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorUInt8BitStatics.CreateFromArray(shape, data) */
 HRESULT waima_tensor_u_int8_bit_statics_create_from_array(WAIMA_ITensorUInt8BitStatics *self, WFOCO_IIterable_int64_t* shape, uint8_t *data, uint32_t data_len, WAIMA_TensorUInt8Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorUInt8BitStatics.CreateFromIterable(shape, data) */
 HRESULT waima_tensor_u_int8_bit_statics_create_from_iterable(WAIMA_ITensorUInt8BitStatics *self, WFOCO_IIterable_int64_t* shape, WFOCO_IIterable_uint8_t* data, WAIMA_TensorUInt8Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorUInt8BitStatics2 */
-/* Windows.AI.MachineLearning.ITensorUInt8BitStatics2.CreateFromShapeArrayAndDataArray(shape, data) */
 HRESULT waima_tensor_u_int8_bit_statics_2_create_from_shape_array_and_data_array(WAIMA_ITensorUInt8BitStatics_2 *self, int64_t *shape, uint32_t shape_len, uint8_t *data, uint32_t data_len, WAIMA_TensorUInt8Bit** out);
 
-/* Windows.AI.MachineLearning.ITensorUInt8BitStatics2.CreateFromBuffer(shape, buffer) */
 HRESULT waima_tensor_u_int8_bit_statics_2_create_from_buffer(WAIMA_ITensorUInt8BitStatics_2 *self, int64_t *shape, uint32_t shape_len, WSTST_IBuffer* buffer, WAIMA_TensorUInt8Bit** out);
 
-/* activate Windows.AI.MachineLearning.ImageFeatureDescriptor */
 HRESULT waima_image_feature_descriptor_new(WAIMA_ImageFeatureDescriptor **out);
 
-/* Windows.AI.MachineLearning.ImageFeatureDescriptor */
-/* Windows.AI.MachineLearning.ImageFeatureDescriptor.get_BitmapPixelFormat() */
 HRESULT waima_image_feature_descriptor_get__bitmap_pixel_format(WAIMA_ImageFeatureDescriptor *self, WGRIM_BitmapPixelFormat *value);
 
-/* Windows.AI.MachineLearning.ImageFeatureDescriptor.get_BitmapAlphaMode() */
 HRESULT waima_image_feature_descriptor_get__bitmap_alpha_mode(WAIMA_ImageFeatureDescriptor *self, WGRIM_BitmapAlphaMode *value);
 
-/* Windows.AI.MachineLearning.ImageFeatureDescriptor.get_Width() */
 HRESULT waima_image_feature_descriptor_get__width(WAIMA_ImageFeatureDescriptor *self, uint32_t *value);
 
-/* Windows.AI.MachineLearning.ImageFeatureDescriptor.get_Height() */
 HRESULT waima_image_feature_descriptor_get__height(WAIMA_ImageFeatureDescriptor *self, uint32_t *value);
 
-/* Windows.AI.MachineLearning.ImageFeatureDescriptor.get_PixelRange() */
 HRESULT waima_image_feature_descriptor_get__pixel_range(WAIMA_ImageFeatureDescriptor *self, WAIMA_LearningModelPixelRange *value);
 
-/* Windows.AI.MachineLearning.ImageFeatureDescriptor.get_Name() */
 HRESULT waima_image_feature_descriptor_get__name(WAIMA_ImageFeatureDescriptor *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.ImageFeatureDescriptor.get_Description() */
 HRESULT waima_image_feature_descriptor_get__description(WAIMA_ImageFeatureDescriptor *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.ImageFeatureDescriptor.get_Kind() */
 HRESULT waima_image_feature_descriptor_get__kind(WAIMA_ImageFeatureDescriptor *self, WAIMA_LearningModelFeatureKind *value);
 
-/* Windows.AI.MachineLearning.ImageFeatureDescriptor.get_IsRequired() */
 HRESULT waima_image_feature_descriptor_get__is_required(WAIMA_ImageFeatureDescriptor *self, BOOL *value);
 
-/* activate Windows.AI.MachineLearning.ImageFeatureValue */
 HRESULT waima_image_feature_value_new(WAIMA_ImageFeatureValue **out);
 
-/* Windows.AI.MachineLearning.ImageFeatureValue */
-/* Windows.AI.MachineLearning.ImageFeatureValue.get_VideoFrame() */
 HRESULT waima_image_feature_value_get__video_frame(WAIMA_ImageFeatureValue *self, WME_VideoFrame** value);
 
-/* Windows.AI.MachineLearning.ImageFeatureValue.get_Kind() */
 HRESULT waima_image_feature_value_get__kind(WAIMA_ImageFeatureValue *self, WAIMA_LearningModelFeatureKind *value);
 
-/* Windows.AI.MachineLearning.ImageFeatureValue.CreateFromVideoFrame(image) */
 HRESULT waima_image_feature_value_create_from_video_frame(WME_VideoFrame* image, WAIMA_ImageFeatureValue** out);
 
-/* activate Windows.AI.MachineLearning.LearningModel */
 HRESULT waima_learning_model_new(WAIMA_LearningModel **out);
 
-/* Windows.AI.MachineLearning.LearningModel */
-/* Windows.AI.MachineLearning.LearningModel.get_Author() */
 HRESULT waima_learning_model_get__author(WAIMA_LearningModel *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.LearningModel.get_Name() */
 HRESULT waima_learning_model_get__name(WAIMA_LearningModel *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.LearningModel.get_Domain() */
 HRESULT waima_learning_model_get__domain(WAIMA_LearningModel *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.LearningModel.get_Description() */
 HRESULT waima_learning_model_get__description(WAIMA_LearningModel *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.LearningModel.get_Version() */
 HRESULT waima_learning_model_get__version(WAIMA_LearningModel *self, int64_t *value);
 
-/* Windows.AI.MachineLearning.LearningModel.get_Metadata() */
 HRESULT waima_learning_model_get__metadata(WAIMA_LearningModel *self, WFOCO_IMapView_HSTRING_HSTRING** value);
 
-/* Windows.AI.MachineLearning.LearningModel.get_InputFeatures() */
 HRESULT waima_learning_model_get__input_features(WAIMA_LearningModel *self, WFOCO_IVectorView_WAIMA_ILearningModelFeatureDescriptor** value);
 
-/* Windows.AI.MachineLearning.LearningModel.get_OutputFeatures() */
 HRESULT waima_learning_model_get__output_features(WAIMA_LearningModel *self, WFOCO_IVectorView_WAIMA_ILearningModelFeatureDescriptor** value);
 
-/* Windows.AI.MachineLearning.LearningModel.Close() */
 HRESULT waima_learning_model_close(WAIMA_LearningModel *self);
 
-/* Windows.AI.MachineLearning.LearningModel.LoadFromStorageFileAsync(modelFile) */
 HRESULT waima_learning_model_load_from_storage_file_async(WS_IStorageFile* modelFile, WF_IAsyncOperation_WAIMA_LearningModel** out);
 
-/* Windows.AI.MachineLearning.LearningModel.LoadFromStreamAsync(modelStream) */
 HRESULT waima_learning_model_load_from_stream_async(WSTST_IRandomAccessStreamReference* modelStream, WF_IAsyncOperation_WAIMA_LearningModel** out);
 
-/* Windows.AI.MachineLearning.LearningModel.LoadFromFilePath(filePath) */
 HRESULT waima_learning_model_load_from_file_path(cwinrt_hstring filePath, WAIMA_LearningModel** out);
 
-/* Windows.AI.MachineLearning.LearningModel.LoadFromStream(modelStream) */
 HRESULT waima_learning_model_load_from_stream(WSTST_IRandomAccessStreamReference* modelStream, WAIMA_LearningModel** out);
 
-/* Windows.AI.MachineLearning.LearningModel.LoadFromStorageFileAsync(modelFile, operatorProvider) */
 HRESULT waima_learning_model_load_from_storage_file_async_p_p_p(WS_IStorageFile* modelFile, WAIMA_ILearningModelOperatorProvider* operatorProvider, WF_IAsyncOperation_WAIMA_LearningModel** out);
 
-/* Windows.AI.MachineLearning.LearningModel.LoadFromStreamAsync(modelStream, operatorProvider) */
 HRESULT waima_learning_model_load_from_stream_async_p_p_p(WSTST_IRandomAccessStreamReference* modelStream, WAIMA_ILearningModelOperatorProvider* operatorProvider, WF_IAsyncOperation_WAIMA_LearningModel** out);
 
-/* Windows.AI.MachineLearning.LearningModel.LoadFromFilePath(filePath, operatorProvider) */
 HRESULT waima_learning_model_load_from_file_path_str_p_p(cwinrt_hstring filePath, WAIMA_ILearningModelOperatorProvider* operatorProvider, WAIMA_LearningModel** out);
 
-/* Windows.AI.MachineLearning.LearningModel.LoadFromStream(modelStream, operatorProvider) */
 HRESULT waima_learning_model_load_from_stream_p_p_p(WSTST_IRandomAccessStreamReference* modelStream, WAIMA_ILearningModelOperatorProvider* operatorProvider, WAIMA_LearningModel** out);
 
-/* activate Windows.AI.MachineLearning.LearningModelBinding */
 HRESULT waima_learning_model_binding_new(WAIMA_LearningModelBinding **out);
 
-/* Windows.AI.MachineLearning.LearningModelBinding */
-/* Windows.AI.MachineLearning.LearningModelBinding.Bind(name) */
 HRESULT waima_learning_model_binding_bind(WAIMA_LearningModelBinding *self, cwinrt_hstring name, IInspectable* value);
 
-/* Windows.AI.MachineLearning.LearningModelBinding.Bind(name, props) */
 HRESULT waima_learning_model_binding_bind_str_p_p(WAIMA_LearningModelBinding *self, cwinrt_hstring name, IInspectable* value, WFOCO_IPropertySet* props);
 
-/* Windows.AI.MachineLearning.LearningModelBinding.Clear() */
 HRESULT waima_learning_model_binding_clear(WAIMA_LearningModelBinding *self);
 
-/* Windows.AI.MachineLearning.LearningModelBinding.Lookup(key) */
 HRESULT waima_learning_model_binding_lookup(WAIMA_LearningModelBinding *self, cwinrt_hstring key, IInspectable** out);
 
-/* Windows.AI.MachineLearning.LearningModelBinding.get_Size() */
 HRESULT waima_learning_model_binding_get__size(WAIMA_LearningModelBinding *self, uint32_t *value);
 
-/* Windows.AI.MachineLearning.LearningModelBinding.HasKey(key) */
 HRESULT waima_learning_model_binding_has_key(WAIMA_LearningModelBinding *self, cwinrt_hstring key, BOOL *out);
 
-/* Windows.AI.MachineLearning.LearningModelBinding.Split(first, second) */
 HRESULT waima_learning_model_binding_split(WAIMA_LearningModelBinding *self, WFOCO_IMapView_HSTRING_Object* first, WFOCO_IMapView_HSTRING_Object* second);
 
-/* Windows.AI.MachineLearning.LearningModelBinding.First() */
 HRESULT waima_learning_model_binding_first(WAIMA_LearningModelBinding *self, WFOCO_IIterator_WFOCO_IKeyValuePair_HSTRING_Object** out);
 
-/* activate Windows.AI.MachineLearning.LearningModelDevice */
 HRESULT waima_learning_model_device_new(WAIMA_LearningModelDevice **out);
 
-/* Windows.AI.MachineLearning.LearningModelDevice */
-/* Windows.AI.MachineLearning.LearningModelDevice.get_AdapterId() */
 HRESULT waima_learning_model_device_get__adapter_id(WAIMA_LearningModelDevice *self, WG_DisplayAdapterId *value);
 
-/* Windows.AI.MachineLearning.LearningModelDevice.get_Direct3D11Device() */
 HRESULT waima_learning_model_device_get__direct3_d11_device(WAIMA_LearningModelDevice *self, WGRDIDI_IDirect3DDevice** value);
 
-/* Windows.AI.MachineLearning.LearningModelDevice.CreateFromDirect3D11Device(device) */
 HRESULT waima_learning_model_device_create_from_direct3_d11_device(WGRDIDI_IDirect3DDevice* device, WAIMA_LearningModelDevice** out);
 
-/* activate Windows.AI.MachineLearning.LearningModelEvaluationResult */
 HRESULT waima_learning_model_evaluation_result_new(WAIMA_LearningModelEvaluationResult **out);
 
-/* Windows.AI.MachineLearning.LearningModelEvaluationResult */
-/* Windows.AI.MachineLearning.LearningModelEvaluationResult.get_CorrelationId() */
 HRESULT waima_learning_model_evaluation_result_get__correlation_id(WAIMA_LearningModelEvaluationResult *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.LearningModelEvaluationResult.get_ErrorStatus() */
 HRESULT waima_learning_model_evaluation_result_get__error_status(WAIMA_LearningModelEvaluationResult *self, int32_t *value);
 
-/* Windows.AI.MachineLearning.LearningModelEvaluationResult.get_Succeeded() */
 HRESULT waima_learning_model_evaluation_result_get__succeeded(WAIMA_LearningModelEvaluationResult *self, BOOL *value);
 
-/* Windows.AI.MachineLearning.LearningModelEvaluationResult.get_Outputs() */
 HRESULT waima_learning_model_evaluation_result_get__outputs(WAIMA_LearningModelEvaluationResult *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* activate Windows.AI.MachineLearning.LearningModelSession */
 HRESULT waima_learning_model_session_new(WAIMA_LearningModelSession **out);
 
-/* Windows.AI.MachineLearning.LearningModelSession */
-/* Windows.AI.MachineLearning.LearningModelSession.get_Model() */
 HRESULT waima_learning_model_session_get__model(WAIMA_LearningModelSession *self, WAIMA_LearningModel** value);
 
-/* Windows.AI.MachineLearning.LearningModelSession.get_Device() */
 HRESULT waima_learning_model_session_get__device(WAIMA_LearningModelSession *self, WAIMA_LearningModelDevice** value);
 
-/* Windows.AI.MachineLearning.LearningModelSession.get_EvaluationProperties() */
 HRESULT waima_learning_model_session_get__evaluation_properties(WAIMA_LearningModelSession *self, WFOCO_IPropertySet** value);
 
-/* Windows.AI.MachineLearning.LearningModelSession.EvaluateAsync(bindings, correlationId) */
 HRESULT waima_learning_model_session_evaluate_async(WAIMA_LearningModelSession *self, WAIMA_LearningModelBinding* bindings, cwinrt_hstring correlationId, WF_IAsyncOperation_WAIMA_LearningModelEvaluationResult** out);
 
-/* Windows.AI.MachineLearning.LearningModelSession.EvaluateFeaturesAsync(features, correlationId) */
 HRESULT waima_learning_model_session_evaluate_features_async(WAIMA_LearningModelSession *self, WFOCO_IMap_HSTRING_Object* features, cwinrt_hstring correlationId, WF_IAsyncOperation_WAIMA_LearningModelEvaluationResult** out);
 
-/* Windows.AI.MachineLearning.LearningModelSession.Evaluate(bindings, correlationId) */
 HRESULT waima_learning_model_session_evaluate(WAIMA_LearningModelSession *self, WAIMA_LearningModelBinding* bindings, cwinrt_hstring correlationId, WAIMA_LearningModelEvaluationResult** out);
 
-/* Windows.AI.MachineLearning.LearningModelSession.EvaluateFeatures(features, correlationId) */
 HRESULT waima_learning_model_session_evaluate_features(WAIMA_LearningModelSession *self, WFOCO_IMap_HSTRING_Object* features, cwinrt_hstring correlationId, WAIMA_LearningModelEvaluationResult** out);
 
-/* Windows.AI.MachineLearning.LearningModelSession.Close() */
 HRESULT waima_learning_model_session_close(WAIMA_LearningModelSession *self);
 
-/* activate Windows.AI.MachineLearning.LearningModelSessionOptions */
 HRESULT waima_learning_model_session_options_new(WAIMA_LearningModelSessionOptions **out);
 
-/* Windows.AI.MachineLearning.LearningModelSessionOptions */
-/* Windows.AI.MachineLearning.LearningModelSessionOptions.get_BatchSizeOverride() */
 HRESULT waima_learning_model_session_options_get__batch_size_override(WAIMA_LearningModelSessionOptions *self, uint32_t *value);
 
-/* Windows.AI.MachineLearning.LearningModelSessionOptions.put_BatchSizeOverride() */
 HRESULT waima_learning_model_session_options_put__batch_size_override(WAIMA_LearningModelSessionOptions *self, uint32_t value);
 
-/* Windows.AI.MachineLearning.LearningModelSessionOptions.get_CloseModelOnSessionCreation() */
 HRESULT waima_learning_model_session_options_get__close_model_on_session_creation(WAIMA_LearningModelSessionOptions *self, BOOL *value);
 
-/* Windows.AI.MachineLearning.LearningModelSessionOptions.put_CloseModelOnSessionCreation() */
 HRESULT waima_learning_model_session_options_put__close_model_on_session_creation(WAIMA_LearningModelSessionOptions *self, BOOL value);
 
-/* Windows.AI.MachineLearning.LearningModelSessionOptions.OverrideNamedDimension(name, dimension) */
 HRESULT waima_learning_model_session_options_override_named_dimension(WAIMA_LearningModelSessionOptions *self, cwinrt_hstring name, uint32_t dimension);
 
-/* activate Windows.AI.MachineLearning.MapFeatureDescriptor */
 HRESULT waima_map_feature_descriptor_new(WAIMA_MapFeatureDescriptor **out);
 
-/* Windows.AI.MachineLearning.MapFeatureDescriptor */
-/* Windows.AI.MachineLearning.MapFeatureDescriptor.get_KeyKind() */
 HRESULT waima_map_feature_descriptor_get__key_kind(WAIMA_MapFeatureDescriptor *self, WAIMA_TensorKind *value);
 
-/* Windows.AI.MachineLearning.MapFeatureDescriptor.get_ValueDescriptor() */
 HRESULT waima_map_feature_descriptor_get__value_descriptor(WAIMA_MapFeatureDescriptor *self, WAIMA_ILearningModelFeatureDescriptor** value);
 
-/* Windows.AI.MachineLearning.MapFeatureDescriptor.get_Name() */
 HRESULT waima_map_feature_descriptor_get__name(WAIMA_MapFeatureDescriptor *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.MapFeatureDescriptor.get_Description() */
 HRESULT waima_map_feature_descriptor_get__description(WAIMA_MapFeatureDescriptor *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.MapFeatureDescriptor.get_Kind() */
 HRESULT waima_map_feature_descriptor_get__kind(WAIMA_MapFeatureDescriptor *self, WAIMA_LearningModelFeatureKind *value);
 
-/* Windows.AI.MachineLearning.MapFeatureDescriptor.get_IsRequired() */
 HRESULT waima_map_feature_descriptor_get__is_required(WAIMA_MapFeatureDescriptor *self, BOOL *value);
 
-/* activate Windows.AI.MachineLearning.TensorUInt64Bit */
 HRESULT waima_tensor_u_int64_bit_new(WAIMA_TensorUInt64Bit **out);
 
-/* Windows.AI.MachineLearning.TensorUInt64Bit */
-/* Windows.AI.MachineLearning.TensorUInt64Bit.GetAsVectorView() */
 HRESULT waima_tensor_u_int64_bit_get_as_vector_view(WAIMA_TensorUInt64Bit *self, WFOCO_IVectorView_uint64_t** out);
 
-/* Windows.AI.MachineLearning.TensorUInt64Bit.get_TensorKind() */
 HRESULT waima_tensor_u_int64_bit_get__tensor_kind(WAIMA_TensorUInt64Bit *self, WAIMA_TensorKind *value);
 
-/* Windows.AI.MachineLearning.TensorUInt64Bit.get_Shape() */
 HRESULT waima_tensor_u_int64_bit_get__shape(WAIMA_TensorUInt64Bit *self, WFOCO_IVectorView_int64_t** value);
 
-/* Windows.AI.MachineLearning.TensorUInt64Bit.get_Kind() */
 HRESULT waima_tensor_u_int64_bit_get__kind(WAIMA_TensorUInt64Bit *self, WAIMA_LearningModelFeatureKind *value);
 
-/* Windows.AI.MachineLearning.TensorUInt64Bit.CreateReference() */
 HRESULT waima_tensor_u_int64_bit_create_reference(WAIMA_TensorUInt64Bit *self, WF_IMemoryBufferReference** out);
 
-/* Windows.AI.MachineLearning.TensorUInt64Bit.Close() */
 HRESULT waima_tensor_u_int64_bit_close(WAIMA_TensorUInt64Bit *self);
 
-/* Windows.AI.MachineLearning.TensorUInt64Bit.CreateFromShapeArrayAndDataArray(shape, data) */
 HRESULT waima_tensor_u_int64_bit_create_from_shape_array_and_data_array(int64_t *shape, uint32_t shape_len, uint64_t *data, uint32_t data_len, WAIMA_TensorUInt64Bit** out);
 
-/* Windows.AI.MachineLearning.TensorUInt64Bit.CreateFromBuffer(shape, buffer) */
 HRESULT waima_tensor_u_int64_bit_create_from_buffer(int64_t *shape, uint32_t shape_len, WSTST_IBuffer* buffer, WAIMA_TensorUInt64Bit** out);
 
-/* Windows.AI.MachineLearning.TensorUInt64Bit.Create() */
 HRESULT waima_tensor_u_int64_bit_create(WAIMA_TensorUInt64Bit** out);
 
-/* Windows.AI.MachineLearning.TensorUInt64Bit.Create(shape) */
 HRESULT waima_tensor_u_int64_bit_create_p_p(WFOCO_IIterable_int64_t* shape, WAIMA_TensorUInt64Bit** out);
 
-/* Windows.AI.MachineLearning.TensorUInt64Bit.CreateFromArray(shape, data) */
 HRESULT waima_tensor_u_int64_bit_create_from_array(WFOCO_IIterable_int64_t* shape, uint64_t *data, uint32_t data_len, WAIMA_TensorUInt64Bit** out);
 
-/* Windows.AI.MachineLearning.TensorUInt64Bit.CreateFromIterable(shape, data) */
 HRESULT waima_tensor_u_int64_bit_create_from_iterable(WFOCO_IIterable_int64_t* shape, WFOCO_IIterable_uint64_t* data, WAIMA_TensorUInt64Bit** out);
 
-/* activate Windows.AI.MachineLearning.TensorUInt32Bit */
 HRESULT waima_tensor_u_int32_bit_new(WAIMA_TensorUInt32Bit **out);
 
-/* Windows.AI.MachineLearning.TensorUInt32Bit */
-/* Windows.AI.MachineLearning.TensorUInt32Bit.GetAsVectorView() */
 HRESULT waima_tensor_u_int32_bit_get_as_vector_view(WAIMA_TensorUInt32Bit *self, WFOCO_IVectorView_uint32_t** out);
 
-/* Windows.AI.MachineLearning.TensorUInt32Bit.get_TensorKind() */
 HRESULT waima_tensor_u_int32_bit_get__tensor_kind(WAIMA_TensorUInt32Bit *self, WAIMA_TensorKind *value);
 
-/* Windows.AI.MachineLearning.TensorUInt32Bit.get_Shape() */
 HRESULT waima_tensor_u_int32_bit_get__shape(WAIMA_TensorUInt32Bit *self, WFOCO_IVectorView_int64_t** value);
 
-/* Windows.AI.MachineLearning.TensorUInt32Bit.get_Kind() */
 HRESULT waima_tensor_u_int32_bit_get__kind(WAIMA_TensorUInt32Bit *self, WAIMA_LearningModelFeatureKind *value);
 
-/* Windows.AI.MachineLearning.TensorUInt32Bit.CreateReference() */
 HRESULT waima_tensor_u_int32_bit_create_reference(WAIMA_TensorUInt32Bit *self, WF_IMemoryBufferReference** out);
 
-/* Windows.AI.MachineLearning.TensorUInt32Bit.Close() */
 HRESULT waima_tensor_u_int32_bit_close(WAIMA_TensorUInt32Bit *self);
 
-/* Windows.AI.MachineLearning.TensorUInt32Bit.CreateFromShapeArrayAndDataArray(shape, data) */
 HRESULT waima_tensor_u_int32_bit_create_from_shape_array_and_data_array(int64_t *shape, uint32_t shape_len, uint32_t *data, uint32_t data_len, WAIMA_TensorUInt32Bit** out);
 
-/* Windows.AI.MachineLearning.TensorUInt32Bit.CreateFromBuffer(shape, buffer) */
 HRESULT waima_tensor_u_int32_bit_create_from_buffer(int64_t *shape, uint32_t shape_len, WSTST_IBuffer* buffer, WAIMA_TensorUInt32Bit** out);
 
-/* Windows.AI.MachineLearning.TensorUInt32Bit.Create() */
 HRESULT waima_tensor_u_int32_bit_create(WAIMA_TensorUInt32Bit** out);
 
-/* Windows.AI.MachineLearning.TensorUInt32Bit.Create(shape) */
 HRESULT waima_tensor_u_int32_bit_create_p_p(WFOCO_IIterable_int64_t* shape, WAIMA_TensorUInt32Bit** out);
 
-/* Windows.AI.MachineLearning.TensorUInt32Bit.CreateFromArray(shape, data) */
 HRESULT waima_tensor_u_int32_bit_create_from_array(WFOCO_IIterable_int64_t* shape, uint32_t *data, uint32_t data_len, WAIMA_TensorUInt32Bit** out);
 
-/* Windows.AI.MachineLearning.TensorUInt32Bit.CreateFromIterable(shape, data) */
 HRESULT waima_tensor_u_int32_bit_create_from_iterable(WFOCO_IIterable_int64_t* shape, WFOCO_IIterable_uint32_t* data, WAIMA_TensorUInt32Bit** out);
 
-/* activate Windows.AI.MachineLearning.TensorUInt16Bit */
 HRESULT waima_tensor_u_int16_bit_new(WAIMA_TensorUInt16Bit **out);
 
-/* Windows.AI.MachineLearning.TensorUInt16Bit */
-/* Windows.AI.MachineLearning.TensorUInt16Bit.GetAsVectorView() */
 HRESULT waima_tensor_u_int16_bit_get_as_vector_view(WAIMA_TensorUInt16Bit *self, WFOCO_IVectorView_uint16_t** out);
 
-/* Windows.AI.MachineLearning.TensorUInt16Bit.get_TensorKind() */
 HRESULT waima_tensor_u_int16_bit_get__tensor_kind(WAIMA_TensorUInt16Bit *self, WAIMA_TensorKind *value);
 
-/* Windows.AI.MachineLearning.TensorUInt16Bit.get_Shape() */
 HRESULT waima_tensor_u_int16_bit_get__shape(WAIMA_TensorUInt16Bit *self, WFOCO_IVectorView_int64_t** value);
 
-/* Windows.AI.MachineLearning.TensorUInt16Bit.get_Kind() */
 HRESULT waima_tensor_u_int16_bit_get__kind(WAIMA_TensorUInt16Bit *self, WAIMA_LearningModelFeatureKind *value);
 
-/* Windows.AI.MachineLearning.TensorUInt16Bit.CreateReference() */
 HRESULT waima_tensor_u_int16_bit_create_reference(WAIMA_TensorUInt16Bit *self, WF_IMemoryBufferReference** out);
 
-/* Windows.AI.MachineLearning.TensorUInt16Bit.Close() */
 HRESULT waima_tensor_u_int16_bit_close(WAIMA_TensorUInt16Bit *self);
 
-/* Windows.AI.MachineLearning.TensorUInt16Bit.CreateFromShapeArrayAndDataArray(shape, data) */
 HRESULT waima_tensor_u_int16_bit_create_from_shape_array_and_data_array(int64_t *shape, uint32_t shape_len, uint16_t *data, uint32_t data_len, WAIMA_TensorUInt16Bit** out);
 
-/* Windows.AI.MachineLearning.TensorUInt16Bit.CreateFromBuffer(shape, buffer) */
 HRESULT waima_tensor_u_int16_bit_create_from_buffer(int64_t *shape, uint32_t shape_len, WSTST_IBuffer* buffer, WAIMA_TensorUInt16Bit** out);
 
-/* Windows.AI.MachineLearning.TensorUInt16Bit.Create() */
 HRESULT waima_tensor_u_int16_bit_create(WAIMA_TensorUInt16Bit** out);
 
-/* Windows.AI.MachineLearning.TensorUInt16Bit.Create(shape) */
 HRESULT waima_tensor_u_int16_bit_create_p_p(WFOCO_IIterable_int64_t* shape, WAIMA_TensorUInt16Bit** out);
 
-/* Windows.AI.MachineLearning.TensorUInt16Bit.CreateFromArray(shape, data) */
 HRESULT waima_tensor_u_int16_bit_create_from_array(WFOCO_IIterable_int64_t* shape, uint16_t *data, uint32_t data_len, WAIMA_TensorUInt16Bit** out);
 
-/* Windows.AI.MachineLearning.TensorUInt16Bit.CreateFromIterable(shape, data) */
 HRESULT waima_tensor_u_int16_bit_create_from_iterable(WFOCO_IIterable_int64_t* shape, WFOCO_IIterable_uint16_t* data, WAIMA_TensorUInt16Bit** out);
 
-/* activate Windows.AI.MachineLearning.TensorString */
 HRESULT waima_tensor_string_new(WAIMA_TensorString **out);
 
-/* Windows.AI.MachineLearning.TensorString */
-/* Windows.AI.MachineLearning.TensorString.GetAsVectorView() */
 HRESULT waima_tensor_string_get_as_vector_view(WAIMA_TensorString *self, WFOCO_IVectorView_HSTRING** out);
 
-/* Windows.AI.MachineLearning.TensorString.get_TensorKind() */
 HRESULT waima_tensor_string_get__tensor_kind(WAIMA_TensorString *self, WAIMA_TensorKind *value);
 
-/* Windows.AI.MachineLearning.TensorString.get_Shape() */
 HRESULT waima_tensor_string_get__shape(WAIMA_TensorString *self, WFOCO_IVectorView_int64_t** value);
 
-/* Windows.AI.MachineLearning.TensorString.get_Kind() */
 HRESULT waima_tensor_string_get__kind(WAIMA_TensorString *self, WAIMA_LearningModelFeatureKind *value);
 
-/* Windows.AI.MachineLearning.TensorString.CreateReference() */
 HRESULT waima_tensor_string_create_reference(WAIMA_TensorString *self, WF_IMemoryBufferReference** out);
 
-/* Windows.AI.MachineLearning.TensorString.Close() */
 HRESULT waima_tensor_string_close(WAIMA_TensorString *self);
 
-/* Windows.AI.MachineLearning.TensorString.CreateFromShapeArrayAndDataArray(shape, data) */
 HRESULT waima_tensor_string_create_from_shape_array_and_data_array(int64_t *shape, uint32_t shape_len, cwinrt_hstring *data, uint32_t data_len, WAIMA_TensorString** out);
 
-/* Windows.AI.MachineLearning.TensorString.Create() */
 HRESULT waima_tensor_string_create(WAIMA_TensorString** out);
 
-/* Windows.AI.MachineLearning.TensorString.Create(shape) */
 HRESULT waima_tensor_string_create_p_p(WFOCO_IIterable_int64_t* shape, WAIMA_TensorString** out);
 
-/* Windows.AI.MachineLearning.TensorString.CreateFromArray(shape, data) */
 HRESULT waima_tensor_string_create_from_array(WFOCO_IIterable_int64_t* shape, cwinrt_hstring *data, uint32_t data_len, WAIMA_TensorString** out);
 
-/* Windows.AI.MachineLearning.TensorString.CreateFromIterable(shape, data) */
 HRESULT waima_tensor_string_create_from_iterable(WFOCO_IIterable_int64_t* shape, WFOCO_IIterable_HSTRING* data, WAIMA_TensorString** out);
 
-/* activate Windows.AI.MachineLearning.TensorInt8Bit */
 HRESULT waima_tensor_int8_bit_new(WAIMA_TensorInt8Bit **out);
 
-/* Windows.AI.MachineLearning.TensorInt8Bit */
-/* Windows.AI.MachineLearning.TensorInt8Bit.GetAsVectorView() */
 HRESULT waima_tensor_int8_bit_get_as_vector_view(WAIMA_TensorInt8Bit *self, WFOCO_IVectorView_uint8_t** out);
 
-/* Windows.AI.MachineLearning.TensorInt8Bit.get_TensorKind() */
 HRESULT waima_tensor_int8_bit_get__tensor_kind(WAIMA_TensorInt8Bit *self, WAIMA_TensorKind *value);
 
-/* Windows.AI.MachineLearning.TensorInt8Bit.get_Shape() */
 HRESULT waima_tensor_int8_bit_get__shape(WAIMA_TensorInt8Bit *self, WFOCO_IVectorView_int64_t** value);
 
-/* Windows.AI.MachineLearning.TensorInt8Bit.get_Kind() */
 HRESULT waima_tensor_int8_bit_get__kind(WAIMA_TensorInt8Bit *self, WAIMA_LearningModelFeatureKind *value);
 
-/* Windows.AI.MachineLearning.TensorInt8Bit.CreateReference() */
 HRESULT waima_tensor_int8_bit_create_reference(WAIMA_TensorInt8Bit *self, WF_IMemoryBufferReference** out);
 
-/* Windows.AI.MachineLearning.TensorInt8Bit.Close() */
 HRESULT waima_tensor_int8_bit_close(WAIMA_TensorInt8Bit *self);
 
-/* Windows.AI.MachineLearning.TensorInt8Bit.CreateFromShapeArrayAndDataArray(shape, data) */
 HRESULT waima_tensor_int8_bit_create_from_shape_array_and_data_array(int64_t *shape, uint32_t shape_len, uint8_t *data, uint32_t data_len, WAIMA_TensorInt8Bit** out);
 
-/* Windows.AI.MachineLearning.TensorInt8Bit.CreateFromBuffer(shape, buffer) */
 HRESULT waima_tensor_int8_bit_create_from_buffer(int64_t *shape, uint32_t shape_len, WSTST_IBuffer* buffer, WAIMA_TensorInt8Bit** out);
 
-/* Windows.AI.MachineLearning.TensorInt8Bit.Create() */
 HRESULT waima_tensor_int8_bit_create(WAIMA_TensorInt8Bit** out);
 
-/* Windows.AI.MachineLearning.TensorInt8Bit.Create(shape) */
 HRESULT waima_tensor_int8_bit_create_p_p(WFOCO_IIterable_int64_t* shape, WAIMA_TensorInt8Bit** out);
 
-/* Windows.AI.MachineLearning.TensorInt8Bit.CreateFromArray(shape, data) */
 HRESULT waima_tensor_int8_bit_create_from_array(WFOCO_IIterable_int64_t* shape, uint8_t *data, uint32_t data_len, WAIMA_TensorInt8Bit** out);
 
-/* Windows.AI.MachineLearning.TensorInt8Bit.CreateFromIterable(shape, data) */
 HRESULT waima_tensor_int8_bit_create_from_iterable(WFOCO_IIterable_int64_t* shape, WFOCO_IIterable_uint8_t* data, WAIMA_TensorInt8Bit** out);
 
-/* activate Windows.AI.MachineLearning.TensorInt64Bit */
 HRESULT waima_tensor_int64_bit_new(WAIMA_TensorInt64Bit **out);
 
-/* Windows.AI.MachineLearning.TensorInt64Bit */
-/* Windows.AI.MachineLearning.TensorInt64Bit.GetAsVectorView() */
 HRESULT waima_tensor_int64_bit_get_as_vector_view(WAIMA_TensorInt64Bit *self, WFOCO_IVectorView_int64_t** out);
 
-/* Windows.AI.MachineLearning.TensorInt64Bit.get_TensorKind() */
 HRESULT waima_tensor_int64_bit_get__tensor_kind(WAIMA_TensorInt64Bit *self, WAIMA_TensorKind *value);
 
-/* Windows.AI.MachineLearning.TensorInt64Bit.get_Shape() */
 HRESULT waima_tensor_int64_bit_get__shape(WAIMA_TensorInt64Bit *self, WFOCO_IVectorView_int64_t** value);
 
-/* Windows.AI.MachineLearning.TensorInt64Bit.get_Kind() */
 HRESULT waima_tensor_int64_bit_get__kind(WAIMA_TensorInt64Bit *self, WAIMA_LearningModelFeatureKind *value);
 
-/* Windows.AI.MachineLearning.TensorInt64Bit.CreateReference() */
 HRESULT waima_tensor_int64_bit_create_reference(WAIMA_TensorInt64Bit *self, WF_IMemoryBufferReference** out);
 
-/* Windows.AI.MachineLearning.TensorInt64Bit.Close() */
 HRESULT waima_tensor_int64_bit_close(WAIMA_TensorInt64Bit *self);
 
-/* Windows.AI.MachineLearning.TensorInt64Bit.CreateFromShapeArrayAndDataArray(shape, data) */
 HRESULT waima_tensor_int64_bit_create_from_shape_array_and_data_array(int64_t *shape, uint32_t shape_len, int64_t *data, uint32_t data_len, WAIMA_TensorInt64Bit** out);
 
-/* Windows.AI.MachineLearning.TensorInt64Bit.CreateFromBuffer(shape, buffer) */
 HRESULT waima_tensor_int64_bit_create_from_buffer(int64_t *shape, uint32_t shape_len, WSTST_IBuffer* buffer, WAIMA_TensorInt64Bit** out);
 
-/* Windows.AI.MachineLearning.TensorInt64Bit.Create() */
 HRESULT waima_tensor_int64_bit_create(WAIMA_TensorInt64Bit** out);
 
-/* Windows.AI.MachineLearning.TensorInt64Bit.Create(shape) */
 HRESULT waima_tensor_int64_bit_create_p_p(WFOCO_IIterable_int64_t* shape, WAIMA_TensorInt64Bit** out);
 
-/* Windows.AI.MachineLearning.TensorInt64Bit.CreateFromArray(shape, data) */
 HRESULT waima_tensor_int64_bit_create_from_array(WFOCO_IIterable_int64_t* shape, int64_t *data, uint32_t data_len, WAIMA_TensorInt64Bit** out);
 
-/* Windows.AI.MachineLearning.TensorInt64Bit.CreateFromIterable(shape, data) */
 HRESULT waima_tensor_int64_bit_create_from_iterable(WFOCO_IIterable_int64_t* shape, WFOCO_IIterable_int64_t* data, WAIMA_TensorInt64Bit** out);
 
-/* activate Windows.AI.MachineLearning.TensorInt32Bit */
 HRESULT waima_tensor_int32_bit_new(WAIMA_TensorInt32Bit **out);
 
-/* Windows.AI.MachineLearning.TensorInt32Bit */
-/* Windows.AI.MachineLearning.TensorInt32Bit.GetAsVectorView() */
 HRESULT waima_tensor_int32_bit_get_as_vector_view(WAIMA_TensorInt32Bit *self, WFOCO_IVectorView_int32_t** out);
 
-/* Windows.AI.MachineLearning.TensorInt32Bit.get_TensorKind() */
 HRESULT waima_tensor_int32_bit_get__tensor_kind(WAIMA_TensorInt32Bit *self, WAIMA_TensorKind *value);
 
-/* Windows.AI.MachineLearning.TensorInt32Bit.get_Shape() */
 HRESULT waima_tensor_int32_bit_get__shape(WAIMA_TensorInt32Bit *self, WFOCO_IVectorView_int64_t** value);
 
-/* Windows.AI.MachineLearning.TensorInt32Bit.get_Kind() */
 HRESULT waima_tensor_int32_bit_get__kind(WAIMA_TensorInt32Bit *self, WAIMA_LearningModelFeatureKind *value);
 
-/* Windows.AI.MachineLearning.TensorInt32Bit.CreateReference() */
 HRESULT waima_tensor_int32_bit_create_reference(WAIMA_TensorInt32Bit *self, WF_IMemoryBufferReference** out);
 
-/* Windows.AI.MachineLearning.TensorInt32Bit.Close() */
 HRESULT waima_tensor_int32_bit_close(WAIMA_TensorInt32Bit *self);
 
-/* Windows.AI.MachineLearning.TensorInt32Bit.CreateFromShapeArrayAndDataArray(shape, data) */
 HRESULT waima_tensor_int32_bit_create_from_shape_array_and_data_array(int64_t *shape, uint32_t shape_len, int32_t *data, uint32_t data_len, WAIMA_TensorInt32Bit** out);
 
-/* Windows.AI.MachineLearning.TensorInt32Bit.CreateFromBuffer(shape, buffer) */
 HRESULT waima_tensor_int32_bit_create_from_buffer(int64_t *shape, uint32_t shape_len, WSTST_IBuffer* buffer, WAIMA_TensorInt32Bit** out);
 
-/* Windows.AI.MachineLearning.TensorInt32Bit.Create() */
 HRESULT waima_tensor_int32_bit_create(WAIMA_TensorInt32Bit** out);
 
-/* Windows.AI.MachineLearning.TensorInt32Bit.Create(shape) */
 HRESULT waima_tensor_int32_bit_create_p_p(WFOCO_IIterable_int64_t* shape, WAIMA_TensorInt32Bit** out);
 
-/* Windows.AI.MachineLearning.TensorInt32Bit.CreateFromArray(shape, data) */
 HRESULT waima_tensor_int32_bit_create_from_array(WFOCO_IIterable_int64_t* shape, int32_t *data, uint32_t data_len, WAIMA_TensorInt32Bit** out);
 
-/* Windows.AI.MachineLearning.TensorInt32Bit.CreateFromIterable(shape, data) */
 HRESULT waima_tensor_int32_bit_create_from_iterable(WFOCO_IIterable_int64_t* shape, WFOCO_IIterable_int32_t* data, WAIMA_TensorInt32Bit** out);
 
-/* activate Windows.AI.MachineLearning.TensorInt16Bit */
 HRESULT waima_tensor_int16_bit_new(WAIMA_TensorInt16Bit **out);
 
-/* Windows.AI.MachineLearning.TensorInt16Bit */
-/* Windows.AI.MachineLearning.TensorInt16Bit.GetAsVectorView() */
 HRESULT waima_tensor_int16_bit_get_as_vector_view(WAIMA_TensorInt16Bit *self, WFOCO_IVectorView_int16_t** out);
 
-/* Windows.AI.MachineLearning.TensorInt16Bit.get_TensorKind() */
 HRESULT waima_tensor_int16_bit_get__tensor_kind(WAIMA_TensorInt16Bit *self, WAIMA_TensorKind *value);
 
-/* Windows.AI.MachineLearning.TensorInt16Bit.get_Shape() */
 HRESULT waima_tensor_int16_bit_get__shape(WAIMA_TensorInt16Bit *self, WFOCO_IVectorView_int64_t** value);
 
-/* Windows.AI.MachineLearning.TensorInt16Bit.get_Kind() */
 HRESULT waima_tensor_int16_bit_get__kind(WAIMA_TensorInt16Bit *self, WAIMA_LearningModelFeatureKind *value);
 
-/* Windows.AI.MachineLearning.TensorInt16Bit.CreateReference() */
 HRESULT waima_tensor_int16_bit_create_reference(WAIMA_TensorInt16Bit *self, WF_IMemoryBufferReference** out);
 
-/* Windows.AI.MachineLearning.TensorInt16Bit.Close() */
 HRESULT waima_tensor_int16_bit_close(WAIMA_TensorInt16Bit *self);
 
-/* Windows.AI.MachineLearning.TensorInt16Bit.CreateFromShapeArrayAndDataArray(shape, data) */
 HRESULT waima_tensor_int16_bit_create_from_shape_array_and_data_array(int64_t *shape, uint32_t shape_len, int16_t *data, uint32_t data_len, WAIMA_TensorInt16Bit** out);
 
-/* Windows.AI.MachineLearning.TensorInt16Bit.CreateFromBuffer(shape, buffer) */
 HRESULT waima_tensor_int16_bit_create_from_buffer(int64_t *shape, uint32_t shape_len, WSTST_IBuffer* buffer, WAIMA_TensorInt16Bit** out);
 
-/* Windows.AI.MachineLearning.TensorInt16Bit.Create() */
 HRESULT waima_tensor_int16_bit_create(WAIMA_TensorInt16Bit** out);
 
-/* Windows.AI.MachineLearning.TensorInt16Bit.Create(shape) */
 HRESULT waima_tensor_int16_bit_create_p_p(WFOCO_IIterable_int64_t* shape, WAIMA_TensorInt16Bit** out);
 
-/* Windows.AI.MachineLearning.TensorInt16Bit.CreateFromArray(shape, data) */
 HRESULT waima_tensor_int16_bit_create_from_array(WFOCO_IIterable_int64_t* shape, int16_t *data, uint32_t data_len, WAIMA_TensorInt16Bit** out);
 
-/* Windows.AI.MachineLearning.TensorInt16Bit.CreateFromIterable(shape, data) */
 HRESULT waima_tensor_int16_bit_create_from_iterable(WFOCO_IIterable_int64_t* shape, WFOCO_IIterable_int16_t* data, WAIMA_TensorInt16Bit** out);
 
-/* activate Windows.AI.MachineLearning.TensorFloat16Bit */
 HRESULT waima_tensor_float16_bit_new(WAIMA_TensorFloat16Bit **out);
 
-/* Windows.AI.MachineLearning.TensorFloat16Bit */
-/* Windows.AI.MachineLearning.TensorFloat16Bit.GetAsVectorView() */
 HRESULT waima_tensor_float16_bit_get_as_vector_view(WAIMA_TensorFloat16Bit *self, WFOCO_IVectorView_F32** out);
 
-/* Windows.AI.MachineLearning.TensorFloat16Bit.get_TensorKind() */
 HRESULT waima_tensor_float16_bit_get__tensor_kind(WAIMA_TensorFloat16Bit *self, WAIMA_TensorKind *value);
 
-/* Windows.AI.MachineLearning.TensorFloat16Bit.get_Shape() */
 HRESULT waima_tensor_float16_bit_get__shape(WAIMA_TensorFloat16Bit *self, WFOCO_IVectorView_int64_t** value);
 
-/* Windows.AI.MachineLearning.TensorFloat16Bit.get_Kind() */
 HRESULT waima_tensor_float16_bit_get__kind(WAIMA_TensorFloat16Bit *self, WAIMA_LearningModelFeatureKind *value);
 
-/* Windows.AI.MachineLearning.TensorFloat16Bit.CreateReference() */
 HRESULT waima_tensor_float16_bit_create_reference(WAIMA_TensorFloat16Bit *self, WF_IMemoryBufferReference** out);
 
-/* Windows.AI.MachineLearning.TensorFloat16Bit.Close() */
 HRESULT waima_tensor_float16_bit_close(WAIMA_TensorFloat16Bit *self);
 
-/* Windows.AI.MachineLearning.TensorFloat16Bit.CreateFromShapeArrayAndDataArray(shape, data) */
 HRESULT waima_tensor_float16_bit_create_from_shape_array_and_data_array(int64_t *shape, uint32_t shape_len, float *data, uint32_t data_len, WAIMA_TensorFloat16Bit** out);
 
-/* Windows.AI.MachineLearning.TensorFloat16Bit.CreateFromBuffer(shape, buffer) */
 HRESULT waima_tensor_float16_bit_create_from_buffer(int64_t *shape, uint32_t shape_len, WSTST_IBuffer* buffer, WAIMA_TensorFloat16Bit** out);
 
-/* Windows.AI.MachineLearning.TensorFloat16Bit.Create() */
 HRESULT waima_tensor_float16_bit_create(WAIMA_TensorFloat16Bit** out);
 
-/* Windows.AI.MachineLearning.TensorFloat16Bit.Create(shape) */
 HRESULT waima_tensor_float16_bit_create_p_p(WFOCO_IIterable_int64_t* shape, WAIMA_TensorFloat16Bit** out);
 
-/* Windows.AI.MachineLearning.TensorFloat16Bit.CreateFromArray(shape, data) */
 HRESULT waima_tensor_float16_bit_create_from_array(WFOCO_IIterable_int64_t* shape, float *data, uint32_t data_len, WAIMA_TensorFloat16Bit** out);
 
-/* Windows.AI.MachineLearning.TensorFloat16Bit.CreateFromIterable(shape, data) */
 HRESULT waima_tensor_float16_bit_create_from_iterable(WFOCO_IIterable_int64_t* shape, WFOCO_IIterable_F32* data, WAIMA_TensorFloat16Bit** out);
 
-/* activate Windows.AI.MachineLearning.TensorFloat */
 HRESULT waima_tensor_float_new(WAIMA_TensorFloat **out);
 
-/* Windows.AI.MachineLearning.TensorFloat */
-/* Windows.AI.MachineLearning.TensorFloat.GetAsVectorView() */
 HRESULT waima_tensor_float_get_as_vector_view(WAIMA_TensorFloat *self, WFOCO_IVectorView_F32** out);
 
-/* Windows.AI.MachineLearning.TensorFloat.get_TensorKind() */
 HRESULT waima_tensor_float_get__tensor_kind(WAIMA_TensorFloat *self, WAIMA_TensorKind *value);
 
-/* Windows.AI.MachineLearning.TensorFloat.get_Shape() */
 HRESULT waima_tensor_float_get__shape(WAIMA_TensorFloat *self, WFOCO_IVectorView_int64_t** value);
 
-/* Windows.AI.MachineLearning.TensorFloat.get_Kind() */
 HRESULT waima_tensor_float_get__kind(WAIMA_TensorFloat *self, WAIMA_LearningModelFeatureKind *value);
 
-/* Windows.AI.MachineLearning.TensorFloat.CreateReference() */
 HRESULT waima_tensor_float_create_reference(WAIMA_TensorFloat *self, WF_IMemoryBufferReference** out);
 
-/* Windows.AI.MachineLearning.TensorFloat.Close() */
 HRESULT waima_tensor_float_close(WAIMA_TensorFloat *self);
 
-/* Windows.AI.MachineLearning.TensorFloat.CreateFromShapeArrayAndDataArray(shape, data) */
 HRESULT waima_tensor_float_create_from_shape_array_and_data_array(int64_t *shape, uint32_t shape_len, float *data, uint32_t data_len, WAIMA_TensorFloat** out);
 
-/* Windows.AI.MachineLearning.TensorFloat.CreateFromBuffer(shape, buffer) */
 HRESULT waima_tensor_float_create_from_buffer(int64_t *shape, uint32_t shape_len, WSTST_IBuffer* buffer, WAIMA_TensorFloat** out);
 
-/* Windows.AI.MachineLearning.TensorFloat.Create() */
 HRESULT waima_tensor_float_create(WAIMA_TensorFloat** out);
 
-/* Windows.AI.MachineLearning.TensorFloat.Create(shape) */
 HRESULT waima_tensor_float_create_p_p(WFOCO_IIterable_int64_t* shape, WAIMA_TensorFloat** out);
 
-/* Windows.AI.MachineLearning.TensorFloat.CreateFromArray(shape, data) */
 HRESULT waima_tensor_float_create_from_array(WFOCO_IIterable_int64_t* shape, float *data, uint32_t data_len, WAIMA_TensorFloat** out);
 
-/* Windows.AI.MachineLearning.TensorFloat.CreateFromIterable(shape, data) */
 HRESULT waima_tensor_float_create_from_iterable(WFOCO_IIterable_int64_t* shape, WFOCO_IIterable_F32* data, WAIMA_TensorFloat** out);
 
-/* activate Windows.AI.MachineLearning.TensorFeatureDescriptor */
 HRESULT waima_tensor_feature_descriptor_new(WAIMA_TensorFeatureDescriptor **out);
 
-/* Windows.AI.MachineLearning.TensorFeatureDescriptor */
-/* Windows.AI.MachineLearning.TensorFeatureDescriptor.get_TensorKind() */
 HRESULT waima_tensor_feature_descriptor_get__tensor_kind(WAIMA_TensorFeatureDescriptor *self, WAIMA_TensorKind *value);
 
-/* Windows.AI.MachineLearning.TensorFeatureDescriptor.get_Shape() */
 HRESULT waima_tensor_feature_descriptor_get__shape(WAIMA_TensorFeatureDescriptor *self, WFOCO_IVectorView_int64_t** value);
 
-/* Windows.AI.MachineLearning.TensorFeatureDescriptor.get_Name() */
 HRESULT waima_tensor_feature_descriptor_get__name(WAIMA_TensorFeatureDescriptor *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.TensorFeatureDescriptor.get_Description() */
 HRESULT waima_tensor_feature_descriptor_get__description(WAIMA_TensorFeatureDescriptor *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.TensorFeatureDescriptor.get_Kind() */
 HRESULT waima_tensor_feature_descriptor_get__kind(WAIMA_TensorFeatureDescriptor *self, WAIMA_LearningModelFeatureKind *value);
 
-/* Windows.AI.MachineLearning.TensorFeatureDescriptor.get_IsRequired() */
 HRESULT waima_tensor_feature_descriptor_get__is_required(WAIMA_TensorFeatureDescriptor *self, BOOL *value);
 
-/* activate Windows.AI.MachineLearning.TensorDouble */
 HRESULT waima_tensor_double_new(WAIMA_TensorDouble **out);
 
-/* Windows.AI.MachineLearning.TensorDouble */
-/* Windows.AI.MachineLearning.TensorDouble.GetAsVectorView() */
 HRESULT waima_tensor_double_get_as_vector_view(WAIMA_TensorDouble *self, WFOCO_IVectorView_F64** out);
 
-/* Windows.AI.MachineLearning.TensorDouble.get_TensorKind() */
 HRESULT waima_tensor_double_get__tensor_kind(WAIMA_TensorDouble *self, WAIMA_TensorKind *value);
 
-/* Windows.AI.MachineLearning.TensorDouble.get_Shape() */
 HRESULT waima_tensor_double_get__shape(WAIMA_TensorDouble *self, WFOCO_IVectorView_int64_t** value);
 
-/* Windows.AI.MachineLearning.TensorDouble.get_Kind() */
 HRESULT waima_tensor_double_get__kind(WAIMA_TensorDouble *self, WAIMA_LearningModelFeatureKind *value);
 
-/* Windows.AI.MachineLearning.TensorDouble.CreateReference() */
 HRESULT waima_tensor_double_create_reference(WAIMA_TensorDouble *self, WF_IMemoryBufferReference** out);
 
-/* Windows.AI.MachineLearning.TensorDouble.Close() */
 HRESULT waima_tensor_double_close(WAIMA_TensorDouble *self);
 
-/* Windows.AI.MachineLearning.TensorDouble.CreateFromShapeArrayAndDataArray(shape, data) */
 HRESULT waima_tensor_double_create_from_shape_array_and_data_array(int64_t *shape, uint32_t shape_len, double *data, uint32_t data_len, WAIMA_TensorDouble** out);
 
-/* Windows.AI.MachineLearning.TensorDouble.CreateFromBuffer(shape, buffer) */
 HRESULT waima_tensor_double_create_from_buffer(int64_t *shape, uint32_t shape_len, WSTST_IBuffer* buffer, WAIMA_TensorDouble** out);
 
-/* Windows.AI.MachineLearning.TensorDouble.Create() */
 HRESULT waima_tensor_double_create(WAIMA_TensorDouble** out);
 
-/* Windows.AI.MachineLearning.TensorDouble.Create(shape) */
 HRESULT waima_tensor_double_create_p_p(WFOCO_IIterable_int64_t* shape, WAIMA_TensorDouble** out);
 
-/* Windows.AI.MachineLearning.TensorDouble.CreateFromArray(shape, data) */
 HRESULT waima_tensor_double_create_from_array(WFOCO_IIterable_int64_t* shape, double *data, uint32_t data_len, WAIMA_TensorDouble** out);
 
-/* Windows.AI.MachineLearning.TensorDouble.CreateFromIterable(shape, data) */
 HRESULT waima_tensor_double_create_from_iterable(WFOCO_IIterable_int64_t* shape, WFOCO_IIterable_F64* data, WAIMA_TensorDouble** out);
 
-/* activate Windows.AI.MachineLearning.TensorBoolean */
 HRESULT waima_tensor_boolean_new(WAIMA_TensorBoolean **out);
 
-/* Windows.AI.MachineLearning.TensorBoolean */
-/* Windows.AI.MachineLearning.TensorBoolean.GetAsVectorView() */
 HRESULT waima_tensor_boolean_get_as_vector_view(WAIMA_TensorBoolean *self, WFOCO_IVectorView_Bool** out);
 
-/* Windows.AI.MachineLearning.TensorBoolean.get_TensorKind() */
 HRESULT waima_tensor_boolean_get__tensor_kind(WAIMA_TensorBoolean *self, WAIMA_TensorKind *value);
 
-/* Windows.AI.MachineLearning.TensorBoolean.get_Shape() */
 HRESULT waima_tensor_boolean_get__shape(WAIMA_TensorBoolean *self, WFOCO_IVectorView_int64_t** value);
 
-/* Windows.AI.MachineLearning.TensorBoolean.get_Kind() */
 HRESULT waima_tensor_boolean_get__kind(WAIMA_TensorBoolean *self, WAIMA_LearningModelFeatureKind *value);
 
-/* Windows.AI.MachineLearning.TensorBoolean.CreateReference() */
 HRESULT waima_tensor_boolean_create_reference(WAIMA_TensorBoolean *self, WF_IMemoryBufferReference** out);
 
-/* Windows.AI.MachineLearning.TensorBoolean.Close() */
 HRESULT waima_tensor_boolean_close(WAIMA_TensorBoolean *self);
 
-/* Windows.AI.MachineLearning.TensorBoolean.CreateFromShapeArrayAndDataArray(shape, data) */
 HRESULT waima_tensor_boolean_create_from_shape_array_and_data_array(int64_t *shape, uint32_t shape_len, BOOL *data, uint32_t data_len, WAIMA_TensorBoolean** out);
 
-/* Windows.AI.MachineLearning.TensorBoolean.CreateFromBuffer(shape, buffer) */
 HRESULT waima_tensor_boolean_create_from_buffer(int64_t *shape, uint32_t shape_len, WSTST_IBuffer* buffer, WAIMA_TensorBoolean** out);
 
-/* Windows.AI.MachineLearning.TensorBoolean.Create() */
 HRESULT waima_tensor_boolean_create(WAIMA_TensorBoolean** out);
 
-/* Windows.AI.MachineLearning.TensorBoolean.Create(shape) */
 HRESULT waima_tensor_boolean_create_p_p(WFOCO_IIterable_int64_t* shape, WAIMA_TensorBoolean** out);
 
-/* Windows.AI.MachineLearning.TensorBoolean.CreateFromArray(shape, data) */
 HRESULT waima_tensor_boolean_create_from_array(WFOCO_IIterable_int64_t* shape, BOOL *data, uint32_t data_len, WAIMA_TensorBoolean** out);
 
-/* Windows.AI.MachineLearning.TensorBoolean.CreateFromIterable(shape, data) */
 HRESULT waima_tensor_boolean_create_from_iterable(WFOCO_IIterable_int64_t* shape, WFOCO_IIterable_Bool* data, WAIMA_TensorBoolean** out);
 
-/* activate Windows.AI.MachineLearning.SequenceFeatureDescriptor */
 HRESULT waima_sequence_feature_descriptor_new(WAIMA_SequenceFeatureDescriptor **out);
 
-/* Windows.AI.MachineLearning.SequenceFeatureDescriptor */
-/* Windows.AI.MachineLearning.SequenceFeatureDescriptor.get_ElementDescriptor() */
 HRESULT waima_sequence_feature_descriptor_get__element_descriptor(WAIMA_SequenceFeatureDescriptor *self, WAIMA_ILearningModelFeatureDescriptor** value);
 
-/* Windows.AI.MachineLearning.SequenceFeatureDescriptor.get_Name() */
 HRESULT waima_sequence_feature_descriptor_get__name(WAIMA_SequenceFeatureDescriptor *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.SequenceFeatureDescriptor.get_Description() */
 HRESULT waima_sequence_feature_descriptor_get__description(WAIMA_SequenceFeatureDescriptor *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.SequenceFeatureDescriptor.get_Kind() */
 HRESULT waima_sequence_feature_descriptor_get__kind(WAIMA_SequenceFeatureDescriptor *self, WAIMA_LearningModelFeatureKind *value);
 
-/* Windows.AI.MachineLearning.SequenceFeatureDescriptor.get_IsRequired() */
 HRESULT waima_sequence_feature_descriptor_get__is_required(WAIMA_SequenceFeatureDescriptor *self, BOOL *value);
 
-/* activate Windows.AI.MachineLearning.TensorUInt8Bit */
 HRESULT waima_tensor_u_int8_bit_new(WAIMA_TensorUInt8Bit **out);
 
-/* Windows.AI.MachineLearning.TensorUInt8Bit */
-/* Windows.AI.MachineLearning.TensorUInt8Bit.GetAsVectorView() */
 HRESULT waima_tensor_u_int8_bit_get_as_vector_view(WAIMA_TensorUInt8Bit *self, WFOCO_IVectorView_uint8_t** out);
 
-/* Windows.AI.MachineLearning.TensorUInt8Bit.get_TensorKind() */
 HRESULT waima_tensor_u_int8_bit_get__tensor_kind(WAIMA_TensorUInt8Bit *self, WAIMA_TensorKind *value);
 
-/* Windows.AI.MachineLearning.TensorUInt8Bit.get_Shape() */
 HRESULT waima_tensor_u_int8_bit_get__shape(WAIMA_TensorUInt8Bit *self, WFOCO_IVectorView_int64_t** value);
 
-/* Windows.AI.MachineLearning.TensorUInt8Bit.get_Kind() */
 HRESULT waima_tensor_u_int8_bit_get__kind(WAIMA_TensorUInt8Bit *self, WAIMA_LearningModelFeatureKind *value);
 
-/* Windows.AI.MachineLearning.TensorUInt8Bit.CreateReference() */
 HRESULT waima_tensor_u_int8_bit_create_reference(WAIMA_TensorUInt8Bit *self, WF_IMemoryBufferReference** out);
 
-/* Windows.AI.MachineLearning.TensorUInt8Bit.Close() */
 HRESULT waima_tensor_u_int8_bit_close(WAIMA_TensorUInt8Bit *self);
 
-/* Windows.AI.MachineLearning.TensorUInt8Bit.CreateFromShapeArrayAndDataArray(shape, data) */
 HRESULT waima_tensor_u_int8_bit_create_from_shape_array_and_data_array(int64_t *shape, uint32_t shape_len, uint8_t *data, uint32_t data_len, WAIMA_TensorUInt8Bit** out);
 
-/* Windows.AI.MachineLearning.TensorUInt8Bit.CreateFromBuffer(shape, buffer) */
 HRESULT waima_tensor_u_int8_bit_create_from_buffer(int64_t *shape, uint32_t shape_len, WSTST_IBuffer* buffer, WAIMA_TensorUInt8Bit** out);
 
-/* Windows.AI.MachineLearning.TensorUInt8Bit.Create() */
 HRESULT waima_tensor_u_int8_bit_create(WAIMA_TensorUInt8Bit** out);
 
-/* Windows.AI.MachineLearning.TensorUInt8Bit.Create(shape) */
 HRESULT waima_tensor_u_int8_bit_create_p_p(WFOCO_IIterable_int64_t* shape, WAIMA_TensorUInt8Bit** out);
 
-/* Windows.AI.MachineLearning.TensorUInt8Bit.CreateFromArray(shape, data) */
 HRESULT waima_tensor_u_int8_bit_create_from_array(WFOCO_IIterable_int64_t* shape, uint8_t *data, uint32_t data_len, WAIMA_TensorUInt8Bit** out);
 
-/* Windows.AI.MachineLearning.TensorUInt8Bit.CreateFromIterable(shape, data) */
 HRESULT waima_tensor_u_int8_bit_create_from_iterable(WFOCO_IIterable_int64_t* shape, WFOCO_IIterable_uint8_t* data, WAIMA_TensorUInt8Bit** out);
 
-/* Windows.AI.MachineLearning.IImageFeatureDescriptor */
-/* Windows.AI.MachineLearning.IImageFeatureDescriptor2 */
-/* Windows.AI.MachineLearning.IImageFeatureDescriptor2.get_PixelRange() */
 HRESULT waima_image_feature_descriptor_2_get__pixel_range(WAIMA_IImageFeatureDescriptor_2 *self, WAIMA_LearningModelPixelRange *value);
 
-/* Windows.AI.MachineLearning.IImageFeatureValue */
-/* Windows.AI.MachineLearning.ILearningModel */
-/* Windows.AI.MachineLearning.ILearningModelBinding */
-/* Windows.AI.MachineLearning.ILearningModelDevice */
-/* Windows.AI.MachineLearning.ILearningModelEvaluationResult */
-/* Windows.AI.MachineLearning.ILearningModelSession */
-/* Windows.AI.MachineLearning.ILearningModelSessionOptions */
-/* Windows.AI.MachineLearning.ILearningModelSessionOptions2 */
-/* Windows.AI.MachineLearning.ILearningModelSessionOptions2.get_CloseModelOnSessionCreation() */
 HRESULT waima_learning_model_session_options_2_get__close_model_on_session_creation(WAIMA_ILearningModelSessionOptions_2 *self, BOOL *value);
 
-/* Windows.AI.MachineLearning.ILearningModelSessionOptions2.put_CloseModelOnSessionCreation() */
 HRESULT waima_learning_model_session_options_2_put__close_model_on_session_creation(WAIMA_ILearningModelSessionOptions_2 *self, BOOL value);
 
-/* Windows.AI.MachineLearning.ILearningModelSessionOptions3 */
-/* Windows.AI.MachineLearning.ILearningModelSessionOptions3.OverrideNamedDimension(name, dimension) */
 HRESULT waima_learning_model_session_options_3_override_named_dimension(WAIMA_ILearningModelSessionOptions_3 *self, cwinrt_hstring name, uint32_t dimension);
 
-/* Windows.AI.MachineLearning.IMapFeatureDescriptor */
-/* Windows.AI.MachineLearning.ITensorUInt64Bit */
-/* Windows.AI.MachineLearning.ITensorUInt32Bit */
-/* Windows.AI.MachineLearning.ITensorUInt16Bit */
-/* Windows.AI.MachineLearning.ITensorString */
-/* Windows.AI.MachineLearning.ITensorInt8Bit */
-/* Windows.AI.MachineLearning.ITensorInt64Bit */
-/* Windows.AI.MachineLearning.ITensorInt32Bit */
-/* Windows.AI.MachineLearning.ITensorInt16Bit */
-/* Windows.AI.MachineLearning.ITensorFloat16Bit */
-/* Windows.AI.MachineLearning.ITensorFloat */
-/* Windows.AI.MachineLearning.ITensorFeatureDescriptor */
-/* Windows.AI.MachineLearning.ITensorDouble */
-/* Windows.AI.MachineLearning.ITensorBoolean */
-/* Windows.AI.MachineLearning.ISequenceFeatureDescriptor */
-/* Windows.AI.MachineLearning.ILearningModelFeatureDescriptor */
-/* Windows.AI.MachineLearning.ILearningModelFeatureDescriptor.get_Name() */
 HRESULT waima_learning_model_feature_descriptor_get__name(WAIMA_ILearningModelFeatureDescriptor *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.ILearningModelFeatureDescriptor.get_Description() */
 HRESULT waima_learning_model_feature_descriptor_get__description(WAIMA_ILearningModelFeatureDescriptor *self, cwinrt_hstring *value);
 
-/* Windows.AI.MachineLearning.ILearningModelFeatureDescriptor.get_Kind() */
 HRESULT waima_learning_model_feature_descriptor_get__kind(WAIMA_ILearningModelFeatureDescriptor *self, WAIMA_LearningModelFeatureKind *value);
 
-/* Windows.AI.MachineLearning.ILearningModelFeatureDescriptor.get_IsRequired() */
 HRESULT waima_learning_model_feature_descriptor_get__is_required(WAIMA_ILearningModelFeatureDescriptor *self, BOOL *value);
 
-/* Windows.AI.MachineLearning.ITensorUInt8Bit */
-/* Windows.AI.MachineLearning.ITensor */
-/* Windows.AI.MachineLearning.ITensor.get_TensorKind() */
 HRESULT waima_tensor_get__tensor_kind(WAIMA_ITensor *self, WAIMA_TensorKind *value);
 
-/* Windows.AI.MachineLearning.ITensor.get_Shape() */
 HRESULT waima_tensor_get__shape(WAIMA_ITensor *self, WFOCO_IVectorView_int64_t** value);
 
-/* Windows.AI.MachineLearning.ILearningModelFeatureValue */
-/* Windows.AI.MachineLearning.ILearningModelFeatureValue.get_Kind() */
 HRESULT waima_learning_model_feature_value_get__kind(WAIMA_ILearningModelFeatureValue *self, WAIMA_LearningModelFeatureKind *value);
 
 #endif /* CWINRT_WINDOWS_AI_MACHINELEARNING_H */

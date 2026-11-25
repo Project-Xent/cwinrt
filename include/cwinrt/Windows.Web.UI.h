@@ -14,7 +14,6 @@
 #include <cwinrt/Windows.Web.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WWEHT_HttpRequestMessage
 #define CWINRT_FWD_WWEHT_HttpRequestMessage
 typedef struct WWEHT_HttpRequestMessage WWEHT_HttpRequestMessage;
@@ -32,7 +31,6 @@ typedef struct WAPDA_DataPackage WAPDA_DataPackage;
 typedef struct WWEHT_HttpResponseMessage WWEHT_HttpResponseMessage;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WWEUI_IWebViewControl_2 WWEUI_IWebViewControl_2;
 typedef struct WWEUI_IWebViewControl WWEUI_IWebViewControl;
 typedef struct WWEUI_WebViewControlWebResourceRequestedEventArgs WWEUI_WebViewControlWebResourceRequestedEventArgs;
@@ -65,7 +63,6 @@ typedef struct WWEUI_IWebViewControlContentLoadingEventArgs WWEUI_IWebViewContro
 typedef struct WWEUI_IWebViewControlDOMContentLoadedEventArgs WWEUI_IWebViewControlDOMContentLoadedEventArgs;
 typedef struct WWEUI_IWebViewControlDeferredPermissionRequest WWEUI_IWebViewControlDeferredPermissionRequest;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_Uri
 #define CWINRT_FWD_WF_Uri
 typedef struct WF_Uri WF_Uri;
@@ -251,7 +248,6 @@ typedef enum WWEUI_WebViewControlPermissionState {
 } WWEUI_WebViewControlPermissionState;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -324,307 +320,184 @@ static const IID CWINRT_IID_WWEUI_IWebViewControlDOMContentLoadedEventArgs CWINR
 static const IID CWINRT_IID_WWEUI_IWebViewControlDeferredPermissionRequest CWINRT_MAYBE_UNUSED = { 0x2CE349E0, 0xD759, 0x445C, { 0x99, 0x26, 0x89, 0x95, 0x29, 0x8F, 0x15, 0x2B } };
 #endif
 
-/* Methods */
-
-/* Windows.Web.UI.IWebViewControl2 */
-/* Windows.Web.UI.IWebViewControl2.AddInitializeScript(script) */
 HRESULT wweui_web_view_control_2_add_initialize_script(WWEUI_IWebViewControl_2 *self, cwinrt_hstring script);
 
-/* Windows.Web.UI.IWebViewControl */
-/* Windows.Web.UI.IWebViewControl.get_Source() */
 HRESULT wweui_web_view_control_get__source(WWEUI_IWebViewControl *self, WF_Uri** value);
 
-/* Windows.Web.UI.IWebViewControl.put_Source(source) */
 HRESULT wweui_web_view_control_put__source(WWEUI_IWebViewControl *self, WF_Uri* source);
 
-/* Windows.Web.UI.IWebViewControl.get_DocumentTitle() */
 HRESULT wweui_web_view_control_get__document_title(WWEUI_IWebViewControl *self, cwinrt_hstring *value);
 
-/* Windows.Web.UI.IWebViewControl.get_CanGoBack() */
 HRESULT wweui_web_view_control_get__can_go_back(WWEUI_IWebViewControl *self, BOOL *value);
 
-/* Windows.Web.UI.IWebViewControl.get_CanGoForward() */
 HRESULT wweui_web_view_control_get__can_go_forward(WWEUI_IWebViewControl *self, BOOL *value);
 
-/* Windows.Web.UI.IWebViewControl.put_DefaultBackgroundColor() */
 HRESULT wweui_web_view_control_put__default_background_color(WWEUI_IWebViewControl *self, WUI_Color value);
 
-/* Windows.Web.UI.IWebViewControl.get_DefaultBackgroundColor() */
 HRESULT wweui_web_view_control_get__default_background_color(WWEUI_IWebViewControl *self, WUI_Color *value);
 
-/* Windows.Web.UI.IWebViewControl.get_ContainsFullScreenElement() */
 HRESULT wweui_web_view_control_get__contains_full_screen_element(WWEUI_IWebViewControl *self, BOOL *value);
 
-/* Windows.Web.UI.IWebViewControl.get_Settings() */
 HRESULT wweui_web_view_control_get__settings(WWEUI_IWebViewControl *self, WWEUI_WebViewControlSettings** value);
 
-/* Windows.Web.UI.IWebViewControl.get_DeferredPermissionRequests() */
 HRESULT wweui_web_view_control_get__deferred_permission_requests(WWEUI_IWebViewControl *self, WFOCO_IVectorView_WWEUI_WebViewControlDeferredPermissionRequest** value);
 
-/* Windows.Web.UI.IWebViewControl.GoForward() */
 HRESULT wweui_web_view_control_go_forward(WWEUI_IWebViewControl *self);
 
-/* Windows.Web.UI.IWebViewControl.GoBack() */
 HRESULT wweui_web_view_control_go_back(WWEUI_IWebViewControl *self);
 
-/* Windows.Web.UI.IWebViewControl.Refresh() */
 HRESULT wweui_web_view_control_refresh(WWEUI_IWebViewControl *self);
 
-/* Windows.Web.UI.IWebViewControl.Stop() */
 HRESULT wweui_web_view_control_stop(WWEUI_IWebViewControl *self);
 
-/* Windows.Web.UI.IWebViewControl.Navigate(source) */
 HRESULT wweui_web_view_control_navigate(WWEUI_IWebViewControl *self, WF_Uri* source);
 
-/* Windows.Web.UI.IWebViewControl.NavigateToString(text) */
 HRESULT wweui_web_view_control_navigate_to_string(WWEUI_IWebViewControl *self, cwinrt_hstring text);
 
-/* Windows.Web.UI.IWebViewControl.NavigateToLocalStreamUri(source, streamResolver) */
 HRESULT wweui_web_view_control_navigate_to_local_stream_uri(WWEUI_IWebViewControl *self, WF_Uri* source, WWE_IUriToStreamResolver* streamResolver);
 
-/* Windows.Web.UI.IWebViewControl.NavigateWithHttpRequestMessage(requestMessage) */
 HRESULT wweui_web_view_control_navigate_with_http_request_message(WWEUI_IWebViewControl *self, WWEHT_HttpRequestMessage* requestMessage);
 
-/* Windows.Web.UI.IWebViewControl.InvokeScriptAsync(scriptName, arguments) */
 HRESULT wweui_web_view_control_invoke_script_async(WWEUI_IWebViewControl *self, cwinrt_hstring scriptName, WFOCO_IIterable_HSTRING* arguments, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.Web.UI.IWebViewControl.CapturePreviewToStreamAsync(stream) */
 HRESULT wweui_web_view_control_capture_preview_to_stream_async(WWEUI_IWebViewControl *self, WSTST_IRandomAccessStream* stream, WF_IAsyncAction** out);
 
-/* Windows.Web.UI.IWebViewControl.CaptureSelectedContentToDataPackageAsync() */
 HRESULT wweui_web_view_control_capture_selected_content_to_data_package_async(WWEUI_IWebViewControl *self, WF_IAsyncOperation_WAPDA_DataPackage** out);
 
-/* Windows.Web.UI.IWebViewControl.BuildLocalStreamUri(contentIdentifier, relativePath) */
 HRESULT wweui_web_view_control_build_local_stream_uri(WWEUI_IWebViewControl *self, cwinrt_hstring contentIdentifier, cwinrt_hstring relativePath, WF_Uri** out);
 
-/* Windows.Web.UI.IWebViewControl.GetDeferredPermissionRequestById(id, result) */
 HRESULT wweui_web_view_control_get_deferred_permission_request_by_id(WWEUI_IWebViewControl *self, uint32_t id, WWEUI_WebViewControlDeferredPermissionRequest* result);
 
-/* activate Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs */
 HRESULT wweui_web_view_control_web_resource_requested_event_args_new(WWEUI_WebViewControlWebResourceRequestedEventArgs **out);
 
-/* Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs */
-/* Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs.GetDeferral() */
 HRESULT wweui_web_view_control_web_resource_requested_event_args_get_deferral(WWEUI_WebViewControlWebResourceRequestedEventArgs *self, WF_Deferral** out);
 
-/* Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs.get_Request() */
 HRESULT wweui_web_view_control_web_resource_requested_event_args_get__request(WWEUI_WebViewControlWebResourceRequestedEventArgs *self, WWEHT_HttpRequestMessage** value);
 
-/* Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs.put_Response() */
 HRESULT wweui_web_view_control_web_resource_requested_event_args_put__response(WWEUI_WebViewControlWebResourceRequestedEventArgs *self, WWEHT_HttpResponseMessage* value);
 
-/* Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs.get_Response() */
 HRESULT wweui_web_view_control_web_resource_requested_event_args_get__response(WWEUI_WebViewControlWebResourceRequestedEventArgs *self, WWEHT_HttpResponseMessage** value);
 
-/* activate Windows.Web.UI.WebViewControlUnviewableContentIdentifiedEventArgs */
 HRESULT wweui_web_view_control_unviewable_content_identified_event_args_new(WWEUI_WebViewControlUnviewableContentIdentifiedEventArgs **out);
 
-/* Windows.Web.UI.WebViewControlUnviewableContentIdentifiedEventArgs */
-/* Windows.Web.UI.WebViewControlUnviewableContentIdentifiedEventArgs.get_Uri() */
 HRESULT wweui_web_view_control_unviewable_content_identified_event_args_get__uri(WWEUI_WebViewControlUnviewableContentIdentifiedEventArgs *self, WF_Uri** value);
 
-/* Windows.Web.UI.WebViewControlUnviewableContentIdentifiedEventArgs.get_Referrer() */
 HRESULT wweui_web_view_control_unviewable_content_identified_event_args_get__referrer(WWEUI_WebViewControlUnviewableContentIdentifiedEventArgs *self, WF_Uri** value);
 
-/* Windows.Web.UI.WebViewControlUnviewableContentIdentifiedEventArgs.get_MediaType() */
 HRESULT wweui_web_view_control_unviewable_content_identified_event_args_get__media_type(WWEUI_WebViewControlUnviewableContentIdentifiedEventArgs *self, cwinrt_hstring *value);
 
-/* activate Windows.Web.UI.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs */
 HRESULT wweui_web_view_control_unsupported_uri_scheme_identified_event_args_new(WWEUI_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs **out);
 
-/* Windows.Web.UI.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs */
-/* Windows.Web.UI.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs.get_Uri() */
 HRESULT wweui_web_view_control_unsupported_uri_scheme_identified_event_args_get__uri(WWEUI_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs *self, WF_Uri** value);
 
-/* Windows.Web.UI.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs.get_Handled() */
 HRESULT wweui_web_view_control_unsupported_uri_scheme_identified_event_args_get__handled(WWEUI_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs *self, BOOL *value);
 
-/* Windows.Web.UI.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs.put_Handled() */
 HRESULT wweui_web_view_control_unsupported_uri_scheme_identified_event_args_put__handled(WWEUI_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs *self, BOOL value);
 
-/* activate Windows.Web.UI.WebViewControlSettings */
 HRESULT wweui_web_view_control_settings_new(WWEUI_WebViewControlSettings **out);
 
-/* Windows.Web.UI.WebViewControlSettings */
-/* Windows.Web.UI.WebViewControlSettings.put_IsJavaScriptEnabled() */
 HRESULT wweui_web_view_control_settings_put__is_java_script_enabled(WWEUI_WebViewControlSettings *self, BOOL value);
 
-/* Windows.Web.UI.WebViewControlSettings.get_IsJavaScriptEnabled() */
 HRESULT wweui_web_view_control_settings_get__is_java_script_enabled(WWEUI_WebViewControlSettings *self, BOOL *value);
 
-/* Windows.Web.UI.WebViewControlSettings.put_IsIndexedDBEnabled() */
 HRESULT wweui_web_view_control_settings_put__is_indexed_d_b_enabled(WWEUI_WebViewControlSettings *self, BOOL value);
 
-/* Windows.Web.UI.WebViewControlSettings.get_IsIndexedDBEnabled() */
 HRESULT wweui_web_view_control_settings_get__is_indexed_d_b_enabled(WWEUI_WebViewControlSettings *self, BOOL *value);
 
-/* Windows.Web.UI.WebViewControlSettings.put_IsScriptNotifyAllowed() */
 HRESULT wweui_web_view_control_settings_put__is_script_notify_allowed(WWEUI_WebViewControlSettings *self, BOOL value);
 
-/* Windows.Web.UI.WebViewControlSettings.get_IsScriptNotifyAllowed() */
 HRESULT wweui_web_view_control_settings_get__is_script_notify_allowed(WWEUI_WebViewControlSettings *self, BOOL *value);
 
-/* activate Windows.Web.UI.WebViewControlScriptNotifyEventArgs */
 HRESULT wweui_web_view_control_script_notify_event_args_new(WWEUI_WebViewControlScriptNotifyEventArgs **out);
 
-/* Windows.Web.UI.WebViewControlScriptNotifyEventArgs */
-/* Windows.Web.UI.WebViewControlScriptNotifyEventArgs.get_Uri() */
 HRESULT wweui_web_view_control_script_notify_event_args_get__uri(WWEUI_WebViewControlScriptNotifyEventArgs *self, WF_Uri** value);
 
-/* Windows.Web.UI.WebViewControlScriptNotifyEventArgs.get_Value() */
 HRESULT wweui_web_view_control_script_notify_event_args_get__value(WWEUI_WebViewControlScriptNotifyEventArgs *self, cwinrt_hstring *value);
 
-/* activate Windows.Web.UI.WebViewControlPermissionRequestedEventArgs */
 HRESULT wweui_web_view_control_permission_requested_event_args_new(WWEUI_WebViewControlPermissionRequestedEventArgs **out);
 
-/* Windows.Web.UI.WebViewControlPermissionRequestedEventArgs */
-/* Windows.Web.UI.WebViewControlPermissionRequestedEventArgs.get_PermissionRequest() */
 HRESULT wweui_web_view_control_permission_requested_event_args_get__permission_request(WWEUI_WebViewControlPermissionRequestedEventArgs *self, WWEUI_WebViewControlPermissionRequest** value);
 
-/* activate Windows.Web.UI.WebViewControlPermissionRequest */
 HRESULT wweui_web_view_control_permission_request_new(WWEUI_WebViewControlPermissionRequest **out);
 
-/* Windows.Web.UI.WebViewControlPermissionRequest */
-/* Windows.Web.UI.WebViewControlPermissionRequest.get_Id() */
 HRESULT wweui_web_view_control_permission_request_get__id(WWEUI_WebViewControlPermissionRequest *self, uint32_t *value);
 
-/* Windows.Web.UI.WebViewControlPermissionRequest.get_Uri() */
 HRESULT wweui_web_view_control_permission_request_get__uri(WWEUI_WebViewControlPermissionRequest *self, WF_Uri** value);
 
-/* Windows.Web.UI.WebViewControlPermissionRequest.get_PermissionType() */
 HRESULT wweui_web_view_control_permission_request_get__permission_type(WWEUI_WebViewControlPermissionRequest *self, WWEUI_WebViewControlPermissionType *value);
 
-/* Windows.Web.UI.WebViewControlPermissionRequest.get_State() */
 HRESULT wweui_web_view_control_permission_request_get__state(WWEUI_WebViewControlPermissionRequest *self, WWEUI_WebViewControlPermissionState *value);
 
-/* Windows.Web.UI.WebViewControlPermissionRequest.Defer() */
 HRESULT wweui_web_view_control_permission_request_defer(WWEUI_WebViewControlPermissionRequest *self);
 
-/* Windows.Web.UI.WebViewControlPermissionRequest.Allow() */
 HRESULT wweui_web_view_control_permission_request_allow(WWEUI_WebViewControlPermissionRequest *self);
 
-/* Windows.Web.UI.WebViewControlPermissionRequest.Deny() */
 HRESULT wweui_web_view_control_permission_request_deny(WWEUI_WebViewControlPermissionRequest *self);
 
-/* activate Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs */
 HRESULT wweui_web_view_control_new_window_requested_event_args_new(WWEUI_WebViewControlNewWindowRequestedEventArgs **out);
 
-/* Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs */
-/* Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs.get_Uri() */
 HRESULT wweui_web_view_control_new_window_requested_event_args_get__uri(WWEUI_WebViewControlNewWindowRequestedEventArgs *self, WF_Uri** value);
 
-/* Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs.get_Referrer() */
 HRESULT wweui_web_view_control_new_window_requested_event_args_get__referrer(WWEUI_WebViewControlNewWindowRequestedEventArgs *self, WF_Uri** value);
 
-/* Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs.get_Handled() */
 HRESULT wweui_web_view_control_new_window_requested_event_args_get__handled(WWEUI_WebViewControlNewWindowRequestedEventArgs *self, BOOL *value);
 
-/* Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs.put_Handled() */
 HRESULT wweui_web_view_control_new_window_requested_event_args_put__handled(WWEUI_WebViewControlNewWindowRequestedEventArgs *self, BOOL value);
 
-/* Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs.get_NewWindow() */
 HRESULT wweui_web_view_control_new_window_requested_event_args_get__new_window(WWEUI_WebViewControlNewWindowRequestedEventArgs *self, WWEUI_IWebViewControl** value);
 
-/* Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs.put_NewWindow() */
 HRESULT wweui_web_view_control_new_window_requested_event_args_put__new_window(WWEUI_WebViewControlNewWindowRequestedEventArgs *self, WWEUI_IWebViewControl* value);
 
-/* Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs.GetDeferral() */
 HRESULT wweui_web_view_control_new_window_requested_event_args_get_deferral(WWEUI_WebViewControlNewWindowRequestedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Web.UI.WebViewControlNavigationStartingEventArgs */
 HRESULT wweui_web_view_control_navigation_starting_event_args_new(WWEUI_WebViewControlNavigationStartingEventArgs **out);
 
-/* Windows.Web.UI.WebViewControlNavigationStartingEventArgs */
-/* Windows.Web.UI.WebViewControlNavigationStartingEventArgs.get_Uri() */
 HRESULT wweui_web_view_control_navigation_starting_event_args_get__uri(WWEUI_WebViewControlNavigationStartingEventArgs *self, WF_Uri** value);
 
-/* Windows.Web.UI.WebViewControlNavigationStartingEventArgs.get_Cancel() */
 HRESULT wweui_web_view_control_navigation_starting_event_args_get__cancel(WWEUI_WebViewControlNavigationStartingEventArgs *self, BOOL *value);
 
-/* Windows.Web.UI.WebViewControlNavigationStartingEventArgs.put_Cancel() */
 HRESULT wweui_web_view_control_navigation_starting_event_args_put__cancel(WWEUI_WebViewControlNavigationStartingEventArgs *self, BOOL value);
 
-/* activate Windows.Web.UI.WebViewControlNavigationCompletedEventArgs */
 HRESULT wweui_web_view_control_navigation_completed_event_args_new(WWEUI_WebViewControlNavigationCompletedEventArgs **out);
 
-/* Windows.Web.UI.WebViewControlNavigationCompletedEventArgs */
-/* Windows.Web.UI.WebViewControlNavigationCompletedEventArgs.get_Uri() */
 HRESULT wweui_web_view_control_navigation_completed_event_args_get__uri(WWEUI_WebViewControlNavigationCompletedEventArgs *self, WF_Uri** value);
 
-/* Windows.Web.UI.WebViewControlNavigationCompletedEventArgs.get_IsSuccess() */
 HRESULT wweui_web_view_control_navigation_completed_event_args_get__is_success(WWEUI_WebViewControlNavigationCompletedEventArgs *self, BOOL *value);
 
-/* Windows.Web.UI.WebViewControlNavigationCompletedEventArgs.get_WebErrorStatus() */
 HRESULT wweui_web_view_control_navigation_completed_event_args_get__web_error_status(WWEUI_WebViewControlNavigationCompletedEventArgs *self, WWE_WebErrorStatus *value);
 
-/* activate Windows.Web.UI.WebViewControlLongRunningScriptDetectedEventArgs */
 HRESULT wweui_web_view_control_long_running_script_detected_event_args_new(WWEUI_WebViewControlLongRunningScriptDetectedEventArgs **out);
 
-/* Windows.Web.UI.WebViewControlLongRunningScriptDetectedEventArgs */
-/* Windows.Web.UI.WebViewControlLongRunningScriptDetectedEventArgs.get_ExecutionTime() */
 HRESULT wweui_web_view_control_long_running_script_detected_event_args_get__execution_time(WWEUI_WebViewControlLongRunningScriptDetectedEventArgs *self, WF_TimeSpan *value);
 
-/* Windows.Web.UI.WebViewControlLongRunningScriptDetectedEventArgs.get_StopPageScriptExecution() */
 HRESULT wweui_web_view_control_long_running_script_detected_event_args_get__stop_page_script_execution(WWEUI_WebViewControlLongRunningScriptDetectedEventArgs *self, BOOL *value);
 
-/* Windows.Web.UI.WebViewControlLongRunningScriptDetectedEventArgs.put_StopPageScriptExecution() */
 HRESULT wweui_web_view_control_long_running_script_detected_event_args_put__stop_page_script_execution(WWEUI_WebViewControlLongRunningScriptDetectedEventArgs *self, BOOL value);
 
-/* activate Windows.Web.UI.WebViewControlContentLoadingEventArgs */
 HRESULT wweui_web_view_control_content_loading_event_args_new(WWEUI_WebViewControlContentLoadingEventArgs **out);
 
-/* Windows.Web.UI.WebViewControlContentLoadingEventArgs */
-/* Windows.Web.UI.WebViewControlContentLoadingEventArgs.get_Uri() */
 HRESULT wweui_web_view_control_content_loading_event_args_get__uri(WWEUI_WebViewControlContentLoadingEventArgs *self, WF_Uri** value);
 
-/* activate Windows.Web.UI.WebViewControlDOMContentLoadedEventArgs */
 HRESULT wweui_web_view_control_d_o_m_content_loaded_event_args_new(WWEUI_WebViewControlDOMContentLoadedEventArgs **out);
 
-/* Windows.Web.UI.WebViewControlDOMContentLoadedEventArgs */
-/* Windows.Web.UI.WebViewControlDOMContentLoadedEventArgs.get_Uri() */
 HRESULT wweui_web_view_control_d_o_m_content_loaded_event_args_get__uri(WWEUI_WebViewControlDOMContentLoadedEventArgs *self, WF_Uri** value);
 
-/* activate Windows.Web.UI.WebViewControlDeferredPermissionRequest */
 HRESULT wweui_web_view_control_deferred_permission_request_new(WWEUI_WebViewControlDeferredPermissionRequest **out);
 
-/* Windows.Web.UI.WebViewControlDeferredPermissionRequest */
-/* Windows.Web.UI.WebViewControlDeferredPermissionRequest.get_Id() */
 HRESULT wweui_web_view_control_deferred_permission_request_get__id(WWEUI_WebViewControlDeferredPermissionRequest *self, uint32_t *value);
 
-/* Windows.Web.UI.WebViewControlDeferredPermissionRequest.get_Uri() */
 HRESULT wweui_web_view_control_deferred_permission_request_get__uri(WWEUI_WebViewControlDeferredPermissionRequest *self, WF_Uri** value);
 
-/* Windows.Web.UI.WebViewControlDeferredPermissionRequest.get_PermissionType() */
 HRESULT wweui_web_view_control_deferred_permission_request_get__permission_type(WWEUI_WebViewControlDeferredPermissionRequest *self, WWEUI_WebViewControlPermissionType *value);
 
-/* Windows.Web.UI.WebViewControlDeferredPermissionRequest.Allow() */
 HRESULT wweui_web_view_control_deferred_permission_request_allow(WWEUI_WebViewControlDeferredPermissionRequest *self);
 
-/* Windows.Web.UI.WebViewControlDeferredPermissionRequest.Deny() */
 HRESULT wweui_web_view_control_deferred_permission_request_deny(WWEUI_WebViewControlDeferredPermissionRequest *self);
 
-/* Windows.Web.UI.IWebViewControlWebResourceRequestedEventArgs */
-/* Windows.Web.UI.IWebViewControlUnviewableContentIdentifiedEventArgs */
-/* Windows.Web.UI.IWebViewControlUnsupportedUriSchemeIdentifiedEventArgs */
-/* Windows.Web.UI.IWebViewControlSettings */
-/* Windows.Web.UI.IWebViewControlScriptNotifyEventArgs */
-/* Windows.Web.UI.IWebViewControlPermissionRequestedEventArgs */
-/* Windows.Web.UI.IWebViewControlPermissionRequest */
-/* Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs */
-/* Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs2 */
-/* Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs2.get_NewWindow() */
 HRESULT wweui_web_view_control_new_window_requested_event_args_2_get__new_window(WWEUI_IWebViewControlNewWindowRequestedEventArgs_2 *self, WWEUI_IWebViewControl** value);
 
-/* Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs2.put_NewWindow() */
 HRESULT wweui_web_view_control_new_window_requested_event_args_2_put__new_window(WWEUI_IWebViewControlNewWindowRequestedEventArgs_2 *self, WWEUI_IWebViewControl* value);
 
-/* Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs2.GetDeferral() */
 HRESULT wweui_web_view_control_new_window_requested_event_args_2_get_deferral(WWEUI_IWebViewControlNewWindowRequestedEventArgs_2 *self, WF_Deferral** out);
 
-/* Windows.Web.UI.IWebViewControlNavigationStartingEventArgs */
-/* Windows.Web.UI.IWebViewControlNavigationCompletedEventArgs */
-/* Windows.Web.UI.IWebViewControlLongRunningScriptDetectedEventArgs */
-/* Windows.Web.UI.IWebViewControlContentLoadingEventArgs */
-/* Windows.Web.UI.IWebViewControlDOMContentLoadedEventArgs */
-/* Windows.Web.UI.IWebViewControlDeferredPermissionRequest */
 #endif /* CWINRT_WINDOWS_WEB_UI_H */

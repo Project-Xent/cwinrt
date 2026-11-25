@@ -12,24 +12,20 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WUC_Visual
 #define CWINRT_FWD_WUC_Visual
 typedef struct WUC_Visual WUC_Visual;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUIININPR_IPalmRejectionDelayZonePreviewStatics WUIININPR_IPalmRejectionDelayZonePreviewStatics;
 typedef struct WUIININPR_PalmRejectionDelayZonePreview WUIININPR_PalmRejectionDelayZonePreview;
 typedef struct WUIININPR_IPalmRejectionDelayZonePreview WUIININPR_IPalmRejectionDelayZonePreview;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WUC_Visual
 #define CWINRT_FWD_WUC_Visual
 typedef struct WUC_Visual WUC_Visual;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -42,26 +38,16 @@ static const IID CWINRT_IID_WUIININPR_IPalmRejectionDelayZonePreviewStatics CWIN
 static const IID CWINRT_IID_WUIININPR_IPalmRejectionDelayZonePreview CWINRT_MAYBE_UNUSED = { 0x62B496CB, 0x539D, 0x5343, { 0xA6, 0x5F, 0x41, 0xF5, 0x30, 0x0E, 0xC7, 0x0C } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.Input.Inking.Preview.IPalmRejectionDelayZonePreviewStatics */
-/* Windows.UI.Input.Inking.Preview.IPalmRejectionDelayZonePreviewStatics.CreateForVisual(inputPanelVisual, inputPanelRect) */
 HRESULT wuiininpr_palm_rejection_delay_zone_preview_statics_create_for_visual(WUIININPR_IPalmRejectionDelayZonePreviewStatics *self, WUC_Visual* inputPanelVisual, WF_Rect inputPanelRect, WUIININPR_PalmRejectionDelayZonePreview** out);
 
-/* Windows.UI.Input.Inking.Preview.IPalmRejectionDelayZonePreviewStatics.CreateForVisual(inputPanelVisual, inputPanelRect, viewportVisual, viewportRect) */
 HRESULT wuiininpr_palm_rejection_delay_zone_preview_statics_create_for_visual_p_rect_p_rect_p(WUIININPR_IPalmRejectionDelayZonePreviewStatics *self, WUC_Visual* inputPanelVisual, WF_Rect inputPanelRect, WUC_Visual* viewportVisual, WF_Rect viewportRect, WUIININPR_PalmRejectionDelayZonePreview** out);
 
-/* activate Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview */
 HRESULT wuiininpr_palm_rejection_delay_zone_preview_new(WUIININPR_PalmRejectionDelayZonePreview **out);
 
-/* Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview */
-/* Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview.Close() */
 HRESULT wuiininpr_palm_rejection_delay_zone_preview_close(WUIININPR_PalmRejectionDelayZonePreview *self);
 
-/* Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview.CreateForVisual(inputPanelVisual, inputPanelRect) */
 HRESULT wuiininpr_palm_rejection_delay_zone_preview_create_for_visual(WUC_Visual* inputPanelVisual, WF_Rect inputPanelRect, WUIININPR_PalmRejectionDelayZonePreview** out);
 
-/* Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview.CreateForVisual(inputPanelVisual, inputPanelRect, viewportVisual, viewportRect) */
 HRESULT wuiininpr_palm_rejection_delay_zone_preview_create_for_visual_p_rect_p_rect_p(WUC_Visual* inputPanelVisual, WF_Rect inputPanelRect, WUC_Visual* viewportVisual, WF_Rect viewportRect, WUIININPR_PalmRejectionDelayZonePreview** out);
 
 #endif /* CWINRT_WINDOWS_UI_INPUT_INKING_PREVIEW_H */

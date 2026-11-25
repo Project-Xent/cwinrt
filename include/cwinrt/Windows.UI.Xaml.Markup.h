@@ -14,13 +14,11 @@
 #include <cwinrt/Windows.UI.Xaml.Interop.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStream
 #define CWINRT_FWD_WSTST_IRandomAccessStream
 typedef struct WSTST_IRandomAccessStream WSTST_IRandomAccessStream;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUIXAMA_IXamlType_2 WUIXAMA_IXamlType_2;
 typedef struct WUIXAMA_IXamlReaderStatics WUIXAMA_IXamlReaderStatics;
 typedef struct WUIXAMA_IXamlMetadataProvider WUIXAMA_IXamlMetadataProvider;
@@ -49,7 +47,6 @@ typedef struct WUIXAMA_IXamlBindingHelper WUIXAMA_IXamlBindingHelper;
 typedef struct WUIXAMA_IXamlMarkupHelper WUIXAMA_IXamlMarkupHelper;
 typedef struct WUIXAMA_IXamlReader WUIXAMA_IXamlReader;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WUIXAIN_TypeName
 #define CWINRT_FWD_WUIXAIN_TypeName
 typedef struct WUIXAIN_TypeName WUIXAIN_TypeName;
@@ -108,7 +105,6 @@ struct WUIXAMA_XmlnsDefinition {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -189,313 +185,196 @@ static const IID CWINRT_IID_WUIXAMA_IXamlMarkupHelper CWINRT_MAYBE_UNUSED = { 0x
 static const IID CWINRT_IID_WUIXAMA_IXamlReader CWINRT_MAYBE_UNUSED = { 0x24374CF1, 0xCCEB, 0x48BF, { 0xA5, 0x14, 0x41, 0xB0, 0x18, 0x6F, 0x84, 0xC2 } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.Xaml.Markup.IXamlType2 */
-/* Windows.UI.Xaml.Markup.IXamlType2.get_BoxedType() */
 HRESULT wuixama_xaml_type_2_get__boxed_type(WUIXAMA_IXamlType_2 *self, WUIXAMA_IXamlType** value);
 
-/* Windows.UI.Xaml.Markup.IXamlReaderStatics */
-/* Windows.UI.Xaml.Markup.IXamlReaderStatics.Load(xaml) */
 HRESULT wuixama_xaml_reader_statics_load(WUIXAMA_IXamlReaderStatics *self, cwinrt_hstring xaml, IInspectable** out);
 
-/* Windows.UI.Xaml.Markup.IXamlReaderStatics.LoadWithInitialTemplateValidation(xaml) */
 HRESULT wuixama_xaml_reader_statics_load_with_initial_template_validation(WUIXAMA_IXamlReaderStatics *self, cwinrt_hstring xaml, IInspectable** out);
 
-/* Windows.UI.Xaml.Markup.IXamlMetadataProvider */
-/* Windows.UI.Xaml.Markup.IXamlMetadataProvider.GetXamlType() */
 HRESULT wuixama_xaml_metadata_provider_get_xaml_type(WUIXAMA_IXamlMetadataProvider *self, WUIXAIN_TypeName type_, WUIXAMA_IXamlType** out);
 
-/* Windows.UI.Xaml.Markup.IXamlMetadataProvider.GetXamlType(fullName) */
 HRESULT wuixama_xaml_metadata_provider_get_xaml_type_str_p(WUIXAMA_IXamlMetadataProvider *self, cwinrt_hstring fullName, WUIXAMA_IXamlType** out);
 
-/* Windows.UI.Xaml.Markup.IXamlMetadataProvider.GetXmlnsDefinitions() */
 HRESULT wuixama_xaml_metadata_provider_get_xmlns_definitions(WUIXAMA_IXamlMetadataProvider *self, WUIXAMA_XmlnsDefinition **out, uint32_t *out_len);
 
-/* Windows.UI.Xaml.Markup.IXamlMember */
-/* Windows.UI.Xaml.Markup.IXamlMember.get_IsAttachable() */
 HRESULT wuixama_xaml_member_get__is_attachable(WUIXAMA_IXamlMember *self, BOOL *value);
 
-/* Windows.UI.Xaml.Markup.IXamlMember.get_IsDependencyProperty() */
 HRESULT wuixama_xaml_member_get__is_dependency_property(WUIXAMA_IXamlMember *self, BOOL *value);
 
-/* Windows.UI.Xaml.Markup.IXamlMember.get_IsReadOnly() */
 HRESULT wuixama_xaml_member_get__is_read_only(WUIXAMA_IXamlMember *self, BOOL *value);
 
-/* Windows.UI.Xaml.Markup.IXamlMember.get_Name() */
 HRESULT wuixama_xaml_member_get__name(WUIXAMA_IXamlMember *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Markup.IXamlMember.get_TargetType() */
 HRESULT wuixama_xaml_member_get__target_type(WUIXAMA_IXamlMember *self, WUIXAMA_IXamlType** value);
 
-/* Windows.UI.Xaml.Markup.IXamlMember.get_Type() */
 HRESULT wuixama_xaml_member_get__type(WUIXAMA_IXamlMember *self, WUIXAMA_IXamlType** value);
 
-/* Windows.UI.Xaml.Markup.IXamlMember.GetValue(instance) */
 HRESULT wuixama_xaml_member_get_value(WUIXAMA_IXamlMember *self, IInspectable* instance, IInspectable** out);
 
-/* Windows.UI.Xaml.Markup.IXamlMember.SetValue(instance) */
 HRESULT wuixama_xaml_member_set_value(WUIXAMA_IXamlMember *self, IInspectable* instance, IInspectable* value);
 
-/* Windows.UI.Xaml.Markup.IXamlMarkupHelperStatics */
-/* Windows.UI.Xaml.Markup.IXamlMarkupHelperStatics.UnloadObject(element) */
 HRESULT wuixama_xaml_markup_helper_statics_unload_object(WUIXAMA_IXamlMarkupHelperStatics *self, WUIXA_DependencyObject* element);
 
-/* Windows.UI.Xaml.Markup.MarkupExtension */
-/* Windows.UI.Xaml.Markup.MarkupExtension.ProvideValue() */
 HRESULT wuixama_markup_extension_provide_value(WUIXAMA_MarkupExtension *self, IInspectable** out);
 
-/* Windows.UI.Xaml.Markup.IXamlBindingHelperStatics */
-/* Windows.UI.Xaml.Markup.IXamlBindingHelperStatics.get_DataTemplateComponentProperty() */
 HRESULT wuixama_xaml_binding_helper_statics_get__data_template_component_property(WUIXAMA_IXamlBindingHelperStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Markup.IXamlBindingHelperStatics.GetDataTemplateComponent(element) */
 HRESULT wuixama_xaml_binding_helper_statics_get_data_template_component(WUIXAMA_IXamlBindingHelperStatics *self, WUIXA_DependencyObject* element, WUIXAMA_IDataTemplateComponent** out);
 
-/* Windows.UI.Xaml.Markup.IXamlBindingHelperStatics.SetDataTemplateComponent(element) */
 HRESULT wuixama_xaml_binding_helper_statics_set_data_template_component(WUIXAMA_IXamlBindingHelperStatics *self, WUIXA_DependencyObject* element, WUIXAMA_IDataTemplateComponent* value);
 
-/* Windows.UI.Xaml.Markup.IXamlBindingHelperStatics.SuspendRendering(target) */
 HRESULT wuixama_xaml_binding_helper_statics_suspend_rendering(WUIXAMA_IXamlBindingHelperStatics *self, WUIXA_UIElement* target);
 
-/* Windows.UI.Xaml.Markup.IXamlBindingHelperStatics.ResumeRendering(target) */
 HRESULT wuixama_xaml_binding_helper_statics_resume_rendering(WUIXAMA_IXamlBindingHelperStatics *self, WUIXA_UIElement* target);
 
-/* Windows.UI.Xaml.Markup.IXamlBindingHelperStatics.ConvertValue() */
 HRESULT wuixama_xaml_binding_helper_statics_convert_value(WUIXAMA_IXamlBindingHelperStatics *self, WUIXAIN_TypeName type_, IInspectable* value, IInspectable** out);
 
-/* Windows.UI.Xaml.Markup.IXamlBindingHelperStatics.SetPropertyFromString(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_statics_set_property_from_string(WUIXAMA_IXamlBindingHelperStatics *self, IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Markup.IXamlBindingHelperStatics.SetPropertyFromBoolean(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_statics_set_property_from_boolean(WUIXAMA_IXamlBindingHelperStatics *self, IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, BOOL value);
 
-/* Windows.UI.Xaml.Markup.IXamlBindingHelperStatics.SetPropertyFromChar16(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_statics_set_property_from_char16(WUIXAMA_IXamlBindingHelperStatics *self, IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, WCHAR value);
 
-/* Windows.UI.Xaml.Markup.IXamlBindingHelperStatics.SetPropertyFromDateTime(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_statics_set_property_from_date_time(WUIXAMA_IXamlBindingHelperStatics *self, IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, WF_DateTime value);
 
-/* Windows.UI.Xaml.Markup.IXamlBindingHelperStatics.SetPropertyFromDouble(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_statics_set_property_from_double(WUIXAMA_IXamlBindingHelperStatics *self, IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, double value);
 
-/* Windows.UI.Xaml.Markup.IXamlBindingHelperStatics.SetPropertyFromInt32(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_statics_set_property_from_int32(WUIXAMA_IXamlBindingHelperStatics *self, IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, int32_t value);
 
-/* Windows.UI.Xaml.Markup.IXamlBindingHelperStatics.SetPropertyFromUInt32(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_statics_set_property_from_u_int32(WUIXAMA_IXamlBindingHelperStatics *self, IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, uint32_t value);
 
-/* Windows.UI.Xaml.Markup.IXamlBindingHelperStatics.SetPropertyFromInt64(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_statics_set_property_from_int64(WUIXAMA_IXamlBindingHelperStatics *self, IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, int64_t value);
 
-/* Windows.UI.Xaml.Markup.IXamlBindingHelperStatics.SetPropertyFromUInt64(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_statics_set_property_from_u_int64(WUIXAMA_IXamlBindingHelperStatics *self, IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, uint64_t value);
 
-/* Windows.UI.Xaml.Markup.IXamlBindingHelperStatics.SetPropertyFromSingle(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_statics_set_property_from_single(WUIXAMA_IXamlBindingHelperStatics *self, IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, float value);
 
-/* Windows.UI.Xaml.Markup.IXamlBindingHelperStatics.SetPropertyFromPoint(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_statics_set_property_from_point(WUIXAMA_IXamlBindingHelperStatics *self, IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, WF_Point value);
 
-/* Windows.UI.Xaml.Markup.IXamlBindingHelperStatics.SetPropertyFromRect(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_statics_set_property_from_rect(WUIXAMA_IXamlBindingHelperStatics *self, IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, WF_Rect value);
 
-/* Windows.UI.Xaml.Markup.IXamlBindingHelperStatics.SetPropertyFromSize(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_statics_set_property_from_size(WUIXAMA_IXamlBindingHelperStatics *self, IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, WF_Size value);
 
-/* Windows.UI.Xaml.Markup.IXamlBindingHelperStatics.SetPropertyFromTimeSpan(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_statics_set_property_from_time_span(WUIXAMA_IXamlBindingHelperStatics *self, IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, WF_TimeSpan value);
 
-/* Windows.UI.Xaml.Markup.IXamlBindingHelperStatics.SetPropertyFromByte(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_statics_set_property_from_byte(WUIXAMA_IXamlBindingHelperStatics *self, IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, uint8_t value);
 
-/* Windows.UI.Xaml.Markup.IXamlBindingHelperStatics.SetPropertyFromUri(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_statics_set_property_from_uri(WUIXAMA_IXamlBindingHelperStatics *self, IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, WF_Uri* value);
 
-/* Windows.UI.Xaml.Markup.IXamlBindingHelperStatics.SetPropertyFromObject(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_statics_set_property_from_object(WUIXAMA_IXamlBindingHelperStatics *self, IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, IInspectable* value);
 
-/* Windows.UI.Xaml.Markup.IXamlBindScopeDiagnostics */
-/* Windows.UI.Xaml.Markup.IXamlBindScopeDiagnostics.Disable(lineNumber, columnNumber) */
 HRESULT wuixama_xaml_bind_scope_diagnostics_disable(WUIXAMA_IXamlBindScopeDiagnostics *self, int32_t lineNumber, int32_t columnNumber);
 
-/* Windows.UI.Xaml.Markup.IXamlBinaryWriterStatics */
-/* Windows.UI.Xaml.Markup.IXamlBinaryWriterStatics.Write(inputStreams, outputStreams, xamlMetadataProvider) */
 HRESULT wuixama_xaml_binary_writer_statics_write(WUIXAMA_IXamlBinaryWriterStatics *self, WFOCO_IVector_WSTST_IRandomAccessStream* inputStreams, WFOCO_IVector_WSTST_IRandomAccessStream* outputStreams, WUIXAMA_IXamlMetadataProvider* xamlMetadataProvider, WUIXAMA_XamlBinaryWriterErrorInformation *out);
 
-/* Windows.UI.Xaml.Markup.IMarkupExtensionFactory */
-/* Windows.UI.Xaml.Markup.IMarkupExtensionFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixama_markup_extension_factory_create_instance(WUIXAMA_IMarkupExtensionFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAMA_MarkupExtension** out);
 
-/* Windows.UI.Xaml.Markup.IDataTemplateComponent */
-/* Windows.UI.Xaml.Markup.IDataTemplateComponent.Recycle() */
 HRESULT wuixama_data_template_component_recycle(WUIXAMA_IDataTemplateComponent *self);
 
-/* Windows.UI.Xaml.Markup.IDataTemplateComponent.ProcessBindings(item, itemIndex, phase, nextPhase) */
 HRESULT wuixama_data_template_component_process_bindings(WUIXAMA_IDataTemplateComponent *self, IInspectable* item, int32_t itemIndex, int32_t phase, int32_t nextPhase);
 
-/* Windows.UI.Xaml.Markup.IComponentConnector2 */
-/* Windows.UI.Xaml.Markup.IComponentConnector2.GetBindingConnector(connectionId, target) */
 HRESULT wuixama_component_connector_2_get_binding_connector(WUIXAMA_IComponentConnector_2 *self, int32_t connectionId, IInspectable* target, WUIXAMA_IComponentConnector** out);
 
-/* Windows.UI.Xaml.Markup.IComponentConnector */
-/* Windows.UI.Xaml.Markup.IComponentConnector.Connect(connectionId, target) */
 HRESULT wuixama_component_connector_connect(WUIXAMA_IComponentConnector *self, int32_t connectionId, IInspectable* target);
 
-/* activate Windows.UI.Xaml.Markup.XamlBinaryWriter */
 HRESULT wuixama_xaml_binary_writer_new(WUIXAMA_XamlBinaryWriter **out);
 
-/* Windows.UI.Xaml.Markup.XamlBinaryWriter */
-/* Windows.UI.Xaml.Markup.XamlBinaryWriter.Write(inputStreams, outputStreams, xamlMetadataProvider) */
 HRESULT wuixama_xaml_binary_writer_write(WFOCO_IVector_WSTST_IRandomAccessStream* inputStreams, WFOCO_IVector_WSTST_IRandomAccessStream* outputStreams, WUIXAMA_IXamlMetadataProvider* xamlMetadataProvider, WUIXAMA_XamlBinaryWriterErrorInformation *out);
 
-/* activate Windows.UI.Xaml.Markup.XamlBindingHelper */
 HRESULT wuixama_xaml_binding_helper_new(WUIXAMA_XamlBindingHelper **out);
 
-/* Windows.UI.Xaml.Markup.XamlBindingHelper */
-/* Windows.UI.Xaml.Markup.XamlBindingHelper.get_DataTemplateComponentProperty() */
 HRESULT wuixama_xaml_binding_helper_get__data_template_component_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Markup.XamlBindingHelper.GetDataTemplateComponent(element) */
 HRESULT wuixama_xaml_binding_helper_get_data_template_component(WUIXA_DependencyObject* element, WUIXAMA_IDataTemplateComponent** out);
 
-/* Windows.UI.Xaml.Markup.XamlBindingHelper.SetDataTemplateComponent(element) */
 HRESULT wuixama_xaml_binding_helper_set_data_template_component(WUIXA_DependencyObject* element, WUIXAMA_IDataTemplateComponent* value);
 
-/* Windows.UI.Xaml.Markup.XamlBindingHelper.SuspendRendering(target) */
 HRESULT wuixama_xaml_binding_helper_suspend_rendering(WUIXA_UIElement* target);
 
-/* Windows.UI.Xaml.Markup.XamlBindingHelper.ResumeRendering(target) */
 HRESULT wuixama_xaml_binding_helper_resume_rendering(WUIXA_UIElement* target);
 
-/* Windows.UI.Xaml.Markup.XamlBindingHelper.ConvertValue() */
 HRESULT wuixama_xaml_binding_helper_convert_value(WUIXAIN_TypeName type_, IInspectable* value, IInspectable** out);
 
-/* Windows.UI.Xaml.Markup.XamlBindingHelper.SetPropertyFromString(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_set_property_from_string(IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Markup.XamlBindingHelper.SetPropertyFromBoolean(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_set_property_from_boolean(IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, BOOL value);
 
-/* Windows.UI.Xaml.Markup.XamlBindingHelper.SetPropertyFromChar16(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_set_property_from_char16(IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, WCHAR value);
 
-/* Windows.UI.Xaml.Markup.XamlBindingHelper.SetPropertyFromDateTime(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_set_property_from_date_time(IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, WF_DateTime value);
 
-/* Windows.UI.Xaml.Markup.XamlBindingHelper.SetPropertyFromDouble(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_set_property_from_double(IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, double value);
 
-/* Windows.UI.Xaml.Markup.XamlBindingHelper.SetPropertyFromInt32(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_set_property_from_int32(IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, int32_t value);
 
-/* Windows.UI.Xaml.Markup.XamlBindingHelper.SetPropertyFromUInt32(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_set_property_from_u_int32(IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, uint32_t value);
 
-/* Windows.UI.Xaml.Markup.XamlBindingHelper.SetPropertyFromInt64(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_set_property_from_int64(IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, int64_t value);
 
-/* Windows.UI.Xaml.Markup.XamlBindingHelper.SetPropertyFromUInt64(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_set_property_from_u_int64(IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, uint64_t value);
 
-/* Windows.UI.Xaml.Markup.XamlBindingHelper.SetPropertyFromSingle(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_set_property_from_single(IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, float value);
 
-/* Windows.UI.Xaml.Markup.XamlBindingHelper.SetPropertyFromPoint(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_set_property_from_point(IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, WF_Point value);
 
-/* Windows.UI.Xaml.Markup.XamlBindingHelper.SetPropertyFromRect(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_set_property_from_rect(IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, WF_Rect value);
 
-/* Windows.UI.Xaml.Markup.XamlBindingHelper.SetPropertyFromSize(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_set_property_from_size(IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, WF_Size value);
 
-/* Windows.UI.Xaml.Markup.XamlBindingHelper.SetPropertyFromTimeSpan(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_set_property_from_time_span(IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, WF_TimeSpan value);
 
-/* Windows.UI.Xaml.Markup.XamlBindingHelper.SetPropertyFromByte(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_set_property_from_byte(IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, uint8_t value);
 
-/* Windows.UI.Xaml.Markup.XamlBindingHelper.SetPropertyFromUri(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_set_property_from_uri(IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, WF_Uri* value);
 
-/* Windows.UI.Xaml.Markup.XamlBindingHelper.SetPropertyFromObject(dependencyObject, propertyToSet) */
 HRESULT wuixama_xaml_binding_helper_set_property_from_object(IInspectable* dependencyObject, WUIXA_DependencyProperty* propertyToSet, IInspectable* value);
 
-/* activate Windows.UI.Xaml.Markup.XamlMarkupHelper */
 HRESULT wuixama_xaml_markup_helper_new(WUIXAMA_XamlMarkupHelper **out);
 
-/* Windows.UI.Xaml.Markup.XamlMarkupHelper */
-/* Windows.UI.Xaml.Markup.XamlMarkupHelper.UnloadObject(element) */
 HRESULT wuixama_xaml_markup_helper_unload_object(WUIXA_DependencyObject* element);
 
-/* activate Windows.UI.Xaml.Markup.XamlReader */
 HRESULT wuixama_xaml_reader_new(WUIXAMA_XamlReader **out);
 
-/* Windows.UI.Xaml.Markup.XamlReader */
-/* Windows.UI.Xaml.Markup.XamlReader.Load(xaml) */
 HRESULT wuixama_xaml_reader_load(cwinrt_hstring xaml, IInspectable** out);
 
-/* Windows.UI.Xaml.Markup.XamlReader.LoadWithInitialTemplateValidation(xaml) */
 HRESULT wuixama_xaml_reader_load_with_initial_template_validation(cwinrt_hstring xaml, IInspectable** out);
 
-/* Windows.UI.Xaml.Markup.IXamlType */
-/* Windows.UI.Xaml.Markup.IXamlType.get_BaseType() */
 HRESULT wuixama_xaml_type_get__base_type(WUIXAMA_IXamlType *self, WUIXAMA_IXamlType** value);
 
-/* Windows.UI.Xaml.Markup.IXamlType.get_ContentProperty() */
 HRESULT wuixama_xaml_type_get__content_property(WUIXAMA_IXamlType *self, WUIXAMA_IXamlMember** value);
 
-/* Windows.UI.Xaml.Markup.IXamlType.get_FullName() */
 HRESULT wuixama_xaml_type_get__full_name(WUIXAMA_IXamlType *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Markup.IXamlType.get_IsArray() */
 HRESULT wuixama_xaml_type_get__is_array(WUIXAMA_IXamlType *self, BOOL *value);
 
-/* Windows.UI.Xaml.Markup.IXamlType.get_IsCollection() */
 HRESULT wuixama_xaml_type_get__is_collection(WUIXAMA_IXamlType *self, BOOL *value);
 
-/* Windows.UI.Xaml.Markup.IXamlType.get_IsConstructible() */
 HRESULT wuixama_xaml_type_get__is_constructible(WUIXAMA_IXamlType *self, BOOL *value);
 
-/* Windows.UI.Xaml.Markup.IXamlType.get_IsDictionary() */
 HRESULT wuixama_xaml_type_get__is_dictionary(WUIXAMA_IXamlType *self, BOOL *value);
 
-/* Windows.UI.Xaml.Markup.IXamlType.get_IsMarkupExtension() */
 HRESULT wuixama_xaml_type_get__is_markup_extension(WUIXAMA_IXamlType *self, BOOL *value);
 
-/* Windows.UI.Xaml.Markup.IXamlType.get_IsBindable() */
 HRESULT wuixama_xaml_type_get__is_bindable(WUIXAMA_IXamlType *self, BOOL *value);
 
-/* Windows.UI.Xaml.Markup.IXamlType.get_ItemType() */
 HRESULT wuixama_xaml_type_get__item_type(WUIXAMA_IXamlType *self, WUIXAMA_IXamlType** value);
 
-/* Windows.UI.Xaml.Markup.IXamlType.get_KeyType() */
 HRESULT wuixama_xaml_type_get__key_type(WUIXAMA_IXamlType *self, WUIXAMA_IXamlType** value);
 
-/* Windows.UI.Xaml.Markup.IXamlType.get_UnderlyingType() */
 HRESULT wuixama_xaml_type_get__underlying_type(WUIXAMA_IXamlType *self, WUIXAIN_TypeName *value);
 
-/* Windows.UI.Xaml.Markup.IXamlType.ActivateInstance() */
 HRESULT wuixama_xaml_type_activate_instance(WUIXAMA_IXamlType *self, IInspectable** out);
 
-/* Windows.UI.Xaml.Markup.IXamlType.CreateFromString() */
 HRESULT wuixama_xaml_type_create_from_string(WUIXAMA_IXamlType *self, cwinrt_hstring value, IInspectable** out);
 
-/* Windows.UI.Xaml.Markup.IXamlType.GetMember(name) */
 HRESULT wuixama_xaml_type_get_member(WUIXAMA_IXamlType *self, cwinrt_hstring name, WUIXAMA_IXamlMember** out);
 
-/* Windows.UI.Xaml.Markup.IXamlType.AddToVector(instance) */
 HRESULT wuixama_xaml_type_add_to_vector(WUIXAMA_IXamlType *self, IInspectable* instance, IInspectable* value);
 
-/* Windows.UI.Xaml.Markup.IXamlType.AddToMap(instance, key) */
 HRESULT wuixama_xaml_type_add_to_map(WUIXAMA_IXamlType *self, IInspectable* instance, IInspectable* key, IInspectable* value);
 
-/* Windows.UI.Xaml.Markup.IXamlType.RunInitializer() */
 HRESULT wuixama_xaml_type_run_initializer(WUIXAMA_IXamlType *self);
 
-/* Windows.UI.Xaml.Markup.IMarkupExtensionOverrides */
-/* Windows.UI.Xaml.Markup.IMarkupExtensionOverrides.ProvideValue() */
 HRESULT wuixama_markup_extension_overrides_provide_value(WUIXAMA_IMarkupExtensionOverrides *self, IInspectable** out);
 
 #endif /* CWINRT_WINDOWS_UI_XAML_MARKUP_H */

@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.ApplicationModel.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
@@ -39,7 +38,6 @@ typedef struct WUICO_CoreDispatcher WUICO_CoreDispatcher;
 typedef struct WSY_DispatcherQueue WSY_DispatcherQueue;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPCO_IFrameworkView WAPCO_IFrameworkView;
 typedef struct WAPCO_ICoreImmersiveApplication WAPCO_ICoreImmersiveApplication;
 typedef struct WAPCO_ICoreApplication_2 WAPCO_ICoreApplication_2;
@@ -72,7 +70,6 @@ typedef struct WAPCO_IAppListEntry_4 WAPCO_IAppListEntry_4;
 typedef struct WAPCO_IUnhandledErrorDetectedEventArgs WAPCO_IUnhandledErrorDetectedEventArgs;
 typedef struct WAPCO_IUnhandledError WAPCO_IUnhandledError;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WUICO_CoreWindow
 #define CWINRT_FWD_WUICO_CoreWindow
 typedef struct WUICO_CoreWindow WUICO_CoreWindow;
@@ -168,7 +165,6 @@ typedef enum WAPCO_AppRestartFailureReason {
 } WAPCO_AppRestartFailureReason;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -269,88 +265,52 @@ static const IID CWINRT_IID_WAPCO_IUnhandledErrorDetectedEventArgs CWINRT_MAYBE_
 static const IID CWINRT_IID_WAPCO_IUnhandledError CWINRT_MAYBE_UNUSED = { 0x9459B726, 0x53B5, 0x4686, { 0x9E, 0xAF, 0xFA, 0x81, 0x62, 0xDC, 0x39, 0x80 } };
 #endif
 
-/* Methods */
-
-/* Windows.ApplicationModel.Core.IFrameworkView */
-/* Windows.ApplicationModel.Core.IFrameworkView.Initialize(applicationView) */
 HRESULT wapco_framework_view_initialize(WAPCO_IFrameworkView *self, WAPCO_CoreApplicationView* applicationView);
 
-/* Windows.ApplicationModel.Core.IFrameworkView.SetWindow(window) */
 HRESULT wapco_framework_view_set_window(WAPCO_IFrameworkView *self, WUICO_CoreWindow* window);
 
-/* Windows.ApplicationModel.Core.IFrameworkView.Load(entryPoint) */
 HRESULT wapco_framework_view_load(WAPCO_IFrameworkView *self, cwinrt_hstring entryPoint);
 
-/* Windows.ApplicationModel.Core.IFrameworkView.Run() */
 HRESULT wapco_framework_view_run(WAPCO_IFrameworkView *self);
 
-/* Windows.ApplicationModel.Core.IFrameworkView.Uninitialize() */
 HRESULT wapco_framework_view_uninitialize(WAPCO_IFrameworkView *self);
 
-/* Windows.ApplicationModel.Core.ICoreImmersiveApplication */
-/* Windows.ApplicationModel.Core.ICoreImmersiveApplication.get_Views() */
 HRESULT wapco_core_immersive_application_get__views(WAPCO_ICoreImmersiveApplication *self, WFOCO_IVectorView_WAPCO_CoreApplicationView** value);
 
-/* Windows.ApplicationModel.Core.ICoreImmersiveApplication.CreateNewView(runtimeType, entryPoint) */
 HRESULT wapco_core_immersive_application_create_new_view(WAPCO_ICoreImmersiveApplication *self, cwinrt_hstring runtimeType, cwinrt_hstring entryPoint, WAPCO_CoreApplicationView** out);
 
-/* Windows.ApplicationModel.Core.ICoreImmersiveApplication.get_MainView() */
 HRESULT wapco_core_immersive_application_get__main_view(WAPCO_ICoreImmersiveApplication *self, WAPCO_CoreApplicationView** value);
 
-/* Windows.ApplicationModel.Core.ICoreApplication2 */
-/* Windows.ApplicationModel.Core.ICoreApplication2.EnablePrelaunch() */
 HRESULT wapco_core_application_2_enable_prelaunch(WAPCO_ICoreApplication_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Core.ICoreApplication3 */
-/* Windows.ApplicationModel.Core.ICoreApplication3.RequestRestartAsync(launchArguments) */
 HRESULT wapco_core_application_3_request_restart_async(WAPCO_ICoreApplication_3 *self, cwinrt_hstring launchArguments, WF_IAsyncOperation_WAPCO_AppRestartFailureReason** out);
 
-/* Windows.ApplicationModel.Core.ICoreApplication3.RequestRestartForUserAsync(user, launchArguments) */
 HRESULT wapco_core_application_3_request_restart_for_user_async(WAPCO_ICoreApplication_3 *self, WSY_User* user, cwinrt_hstring launchArguments, WF_IAsyncOperation_WAPCO_AppRestartFailureReason** out);
 
-/* Windows.ApplicationModel.Core.ICoreApplicationExit */
-/* Windows.ApplicationModel.Core.ICoreApplicationExit.Exit() */
 HRESULT wapco_core_application_exit_exit(WAPCO_ICoreApplicationExit *self);
 
-/* Windows.ApplicationModel.Core.ICoreApplicationUnhandledError */
-/* Windows.ApplicationModel.Core.ICoreApplicationUseCount */
-/* Windows.ApplicationModel.Core.ICoreApplicationUseCount.IncrementApplicationUseCount() */
 HRESULT wapco_core_application_use_count_increment_application_use_count(WAPCO_ICoreApplicationUseCount *self);
 
-/* Windows.ApplicationModel.Core.ICoreApplicationUseCount.DecrementApplicationUseCount() */
 HRESULT wapco_core_application_use_count_decrement_application_use_count(WAPCO_ICoreApplicationUseCount *self);
 
-/* Windows.ApplicationModel.Core.ICoreApplication */
-/* activate Windows.ApplicationModel.Core.HostedViewClosingEventArgs */
 HRESULT wapco_hosted_view_closing_event_args_new(WAPCO_HostedViewClosingEventArgs **out);
 
-/* Windows.ApplicationModel.Core.HostedViewClosingEventArgs */
-/* Windows.ApplicationModel.Core.HostedViewClosingEventArgs.GetDeferral() */
 HRESULT wapco_hosted_view_closing_event_args_get_deferral(WAPCO_HostedViewClosingEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.Core.CoreApplicationViewTitleBar */
 HRESULT wapco_core_application_view_title_bar_new(WAPCO_CoreApplicationViewTitleBar **out);
 
-/* Windows.ApplicationModel.Core.CoreApplicationViewTitleBar */
-/* Windows.ApplicationModel.Core.CoreApplicationViewTitleBar.put_ExtendViewIntoTitleBar() */
 HRESULT wapco_core_application_view_title_bar_put__extend_view_into_title_bar(WAPCO_CoreApplicationViewTitleBar *self, BOOL value);
 
-/* Windows.ApplicationModel.Core.CoreApplicationViewTitleBar.get_ExtendViewIntoTitleBar() */
 HRESULT wapco_core_application_view_title_bar_get__extend_view_into_title_bar(WAPCO_CoreApplicationViewTitleBar *self, BOOL *value);
 
-/* Windows.ApplicationModel.Core.CoreApplicationViewTitleBar.get_SystemOverlayLeftInset() */
 HRESULT wapco_core_application_view_title_bar_get__system_overlay_left_inset(WAPCO_CoreApplicationViewTitleBar *self, double *value);
 
-/* Windows.ApplicationModel.Core.CoreApplicationViewTitleBar.get_SystemOverlayRightInset() */
 HRESULT wapco_core_application_view_title_bar_get__system_overlay_right_inset(WAPCO_CoreApplicationViewTitleBar *self, double *value);
 
-/* Windows.ApplicationModel.Core.CoreApplicationViewTitleBar.get_Height() */
 HRESULT wapco_core_application_view_title_bar_get__height(WAPCO_CoreApplicationViewTitleBar *self, double *value);
 
-/* Windows.ApplicationModel.Core.CoreApplicationViewTitleBar.get_IsVisible() */
 HRESULT wapco_core_application_view_title_bar_get__is_visible(WAPCO_CoreApplicationViewTitleBar *self, BOOL *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapco_core_application_view_title_bar_on_layout_metrics_changed(WAPCO_CoreApplicationViewTitleBar *self, cwinrt_event_fn fn, void *ctx);
@@ -359,35 +319,24 @@ void wapco_core_application_view_title_bar_off_layout_metrics_changed(WAPCO_Core
 cwinrt_token wapco_core_application_view_title_bar_on_is_visible_changed(WAPCO_CoreApplicationViewTitleBar *self, cwinrt_event_fn fn, void *ctx);
 void wapco_core_application_view_title_bar_off_is_visible_changed(WAPCO_CoreApplicationViewTitleBar *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Core.CoreApplicationView */
 HRESULT wapco_core_application_view_new(WAPCO_CoreApplicationView **out);
 
-/* Windows.ApplicationModel.Core.CoreApplicationView */
-/* Windows.ApplicationModel.Core.CoreApplicationView.get_CoreWindow() */
 HRESULT wapco_core_application_view_get__core_window(WAPCO_CoreApplicationView *self, WUICO_CoreWindow** value);
 
-/* Windows.ApplicationModel.Core.CoreApplicationView.get_IsMain() */
 HRESULT wapco_core_application_view_get__is_main(WAPCO_CoreApplicationView *self, BOOL *value);
 
-/* Windows.ApplicationModel.Core.CoreApplicationView.get_IsHosted() */
 HRESULT wapco_core_application_view_get__is_hosted(WAPCO_CoreApplicationView *self, BOOL *value);
 
-/* Windows.ApplicationModel.Core.CoreApplicationView.get_Dispatcher() */
 HRESULT wapco_core_application_view_get__dispatcher(WAPCO_CoreApplicationView *self, WUICO_CoreDispatcher** value);
 
-/* Windows.ApplicationModel.Core.CoreApplicationView.get_IsComponent() */
 HRESULT wapco_core_application_view_get__is_component(WAPCO_CoreApplicationView *self, BOOL *value);
 
-/* Windows.ApplicationModel.Core.CoreApplicationView.get_TitleBar() */
 HRESULT wapco_core_application_view_get__title_bar(WAPCO_CoreApplicationView *self, WAPCO_CoreApplicationViewTitleBar** value);
 
-/* Windows.ApplicationModel.Core.CoreApplicationView.get_Properties() */
 HRESULT wapco_core_application_view_get__properties(WAPCO_CoreApplicationView *self, WFOCO_IPropertySet** value);
 
-/* Windows.ApplicationModel.Core.CoreApplicationView.get_DispatcherQueue() */
 HRESULT wapco_core_application_view_get__dispatcher_queue(WAPCO_CoreApplicationView *self, WSY_DispatcherQueue** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapco_core_application_view_on_activated(WAPCO_CoreApplicationView *self, cwinrt_event_fn fn, void *ctx);
@@ -396,59 +345,40 @@ void wapco_core_application_view_off_activated(WAPCO_CoreApplicationView *self, 
 cwinrt_token wapco_core_application_view_on_hosted_view_closing(WAPCO_CoreApplicationView *self, cwinrt_event_fn fn, void *ctx);
 void wapco_core_application_view_off_hosted_view_closing(WAPCO_CoreApplicationView *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Core.CoreApplication */
 HRESULT wapco_core_application_new(WAPCO_CoreApplication **out);
 
-/* Windows.ApplicationModel.Core.CoreApplication */
-/* Windows.ApplicationModel.Core.CoreApplication.CreateNewView(viewSource) */
 HRESULT wapco_core_application_create_new_view_p_p(WAPCO_IFrameworkViewSource* viewSource, WAPCO_CoreApplicationView** out);
 
-/* Windows.ApplicationModel.Core.CoreApplication.CreateNewView() */
 HRESULT wapco_core_application_create_new_view_p(WAPCO_CoreApplicationView** out);
 
-/* Windows.ApplicationModel.Core.CoreApplication.IncrementApplicationUseCount() */
 HRESULT wapco_core_application_increment_application_use_count(void);
 
-/* Windows.ApplicationModel.Core.CoreApplication.DecrementApplicationUseCount() */
 HRESULT wapco_core_application_decrement_application_use_count(void);
 
-/* Windows.ApplicationModel.Core.CoreApplication.get_Views() */
 HRESULT wapco_core_application_get__views(WFOCO_IVectorView_WAPCO_CoreApplicationView** value);
 
-/* Windows.ApplicationModel.Core.CoreApplication.CreateNewView(runtimeType, entryPoint) */
 HRESULT wapco_core_application_create_new_view(cwinrt_hstring runtimeType, cwinrt_hstring entryPoint, WAPCO_CoreApplicationView** out);
 
-/* Windows.ApplicationModel.Core.CoreApplication.get_MainView() */
 HRESULT wapco_core_application_get__main_view(WAPCO_CoreApplicationView** value);
 
-/* Windows.ApplicationModel.Core.CoreApplication.Exit() */
 HRESULT wapco_core_application_exit(void);
 
-/* Windows.ApplicationModel.Core.CoreApplication.RequestRestartAsync(launchArguments) */
 HRESULT wapco_core_application_request_restart_async(cwinrt_hstring launchArguments, WF_IAsyncOperation_WAPCO_AppRestartFailureReason** out);
 
-/* Windows.ApplicationModel.Core.CoreApplication.RequestRestartForUserAsync(user, launchArguments) */
 HRESULT wapco_core_application_request_restart_for_user_async(WSY_User* user, cwinrt_hstring launchArguments, WF_IAsyncOperation_WAPCO_AppRestartFailureReason** out);
 
-/* Windows.ApplicationModel.Core.CoreApplication.EnablePrelaunch() */
 HRESULT wapco_core_application_enable_prelaunch(BOOL value);
 
-/* Windows.ApplicationModel.Core.CoreApplication.get_Id() */
 HRESULT wapco_core_application_get__id(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Core.CoreApplication.get_Properties() */
 HRESULT wapco_core_application_get__properties(WFOCO_IPropertySet** value);
 
-/* Windows.ApplicationModel.Core.CoreApplication.GetCurrentView() */
 HRESULT wapco_core_application_get_current_view(WAPCO_CoreApplicationView** out);
 
-/* Windows.ApplicationModel.Core.CoreApplication.Run(viewSource) */
 HRESULT wapco_core_application_run(WAPCO_IFrameworkViewSource* viewSource);
 
-/* Windows.ApplicationModel.Core.CoreApplication.RunWithActivationFactories(activationFactoryCallback) */
 HRESULT wapco_core_application_run_with_activation_factories(WF_IGetActivationFactory* activationFactoryCallback);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapco_core_application_on_unhandled_error_detected(WAPCO_CoreApplication *self, cwinrt_event_fn fn, void *ctx);
@@ -472,89 +402,48 @@ void wapco_core_application_off_suspending(WAPCO_CoreApplication *self, cwinrt_t
 cwinrt_token wapco_core_application_on_resuming(WAPCO_CoreApplication *self, cwinrt_event_fn fn, void *ctx);
 void wapco_core_application_off_resuming(WAPCO_CoreApplication *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Core.AppListEntry */
 HRESULT wapco_app_list_entry_new(WAPCO_AppListEntry **out);
 
-/* Windows.ApplicationModel.Core.AppListEntry */
-/* Windows.ApplicationModel.Core.AppListEntry.get_DisplayInfo() */
 HRESULT wapco_app_list_entry_get__display_info(WAPCO_AppListEntry *self, WAM_AppDisplayInfo** value);
 
-/* Windows.ApplicationModel.Core.AppListEntry.LaunchAsync() */
 HRESULT wapco_app_list_entry_launch_async(WAPCO_AppListEntry *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Core.AppListEntry.get_AppUserModelId() */
 HRESULT wapco_app_list_entry_get__app_user_model_id(WAPCO_AppListEntry *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Core.AppListEntry.LaunchForUserAsync(user) */
 HRESULT wapco_app_list_entry_launch_for_user_async(WAPCO_AppListEntry *self, WSY_User* user, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Core.AppListEntry.get_AppInfo() */
 HRESULT wapco_app_list_entry_get__app_info(WAPCO_AppListEntry *self, WAM_AppInfo** value);
 
-/* Windows.ApplicationModel.Core.ICoreImmersiveApplication2 */
-/* Windows.ApplicationModel.Core.ICoreImmersiveApplication2.CreateNewView() */
 HRESULT wapco_core_immersive_application_2_create_new_view(WAPCO_ICoreImmersiveApplication_2 *self, WAPCO_CoreApplicationView** out);
 
-/* Windows.ApplicationModel.Core.ICoreImmersiveApplication3 */
-/* Windows.ApplicationModel.Core.ICoreImmersiveApplication3.CreateNewView(viewSource) */
 HRESULT wapco_core_immersive_application_3_create_new_view(WAPCO_ICoreImmersiveApplication_3 *self, WAPCO_IFrameworkViewSource* viewSource, WAPCO_CoreApplicationView** out);
 
-/* activate Windows.ApplicationModel.Core.UnhandledErrorDetectedEventArgs */
 HRESULT wapco_unhandled_error_detected_event_args_new(WAPCO_UnhandledErrorDetectedEventArgs **out);
 
-/* Windows.ApplicationModel.Core.UnhandledErrorDetectedEventArgs */
-/* Windows.ApplicationModel.Core.UnhandledErrorDetectedEventArgs.get_UnhandledError() */
 HRESULT wapco_unhandled_error_detected_event_args_get__unhandled_error(WAPCO_UnhandledErrorDetectedEventArgs *self, WAPCO_UnhandledError** value);
 
-/* activate Windows.ApplicationModel.Core.UnhandledError */
 HRESULT wapco_unhandled_error_new(WAPCO_UnhandledError **out);
 
-/* Windows.ApplicationModel.Core.UnhandledError */
-/* Windows.ApplicationModel.Core.UnhandledError.get_Handled() */
 HRESULT wapco_unhandled_error_get__handled(WAPCO_UnhandledError *self, BOOL *value);
 
-/* Windows.ApplicationModel.Core.UnhandledError.Propagate() */
 HRESULT wapco_unhandled_error_propagate(WAPCO_UnhandledError *self);
 
-/* Windows.ApplicationModel.Core.IFrameworkViewSource */
-/* Windows.ApplicationModel.Core.IFrameworkViewSource.CreateView() */
 HRESULT wapco_framework_view_source_create_view(WAPCO_IFrameworkViewSource *self, WAPCO_IFrameworkView** out);
 
-/* Windows.ApplicationModel.Core.IHostedViewClosingEventArgs */
-/* Windows.ApplicationModel.Core.ICoreApplicationViewTitleBar */
-/* Windows.ApplicationModel.Core.ICoreApplicationView */
-/* Windows.ApplicationModel.Core.ICoreApplicationView2 */
-/* Windows.ApplicationModel.Core.ICoreApplicationView2.get_Dispatcher() */
 HRESULT wapco_core_application_view_2_get__dispatcher(WAPCO_ICoreApplicationView_2 *self, WUICO_CoreDispatcher** value);
 
-/* Windows.ApplicationModel.Core.ICoreApplicationView3 */
-/* Windows.ApplicationModel.Core.ICoreApplicationView3.get_IsComponent() */
 HRESULT wapco_core_application_view_3_get__is_component(WAPCO_ICoreApplicationView_3 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Core.ICoreApplicationView3.get_TitleBar() */
 HRESULT wapco_core_application_view_3_get__title_bar(WAPCO_ICoreApplicationView_3 *self, WAPCO_CoreApplicationViewTitleBar** value);
 
-/* Windows.ApplicationModel.Core.ICoreApplicationView5 */
-/* Windows.ApplicationModel.Core.ICoreApplicationView5.get_Properties() */
 HRESULT wapco_core_application_view_5_get__properties(WAPCO_ICoreApplicationView_5 *self, WFOCO_IPropertySet** value);
 
-/* Windows.ApplicationModel.Core.ICoreApplicationView6 */
-/* Windows.ApplicationModel.Core.ICoreApplicationView6.get_DispatcherQueue() */
 HRESULT wapco_core_application_view_6_get__dispatcher_queue(WAPCO_ICoreApplicationView_6 *self, WSY_DispatcherQueue** value);
 
-/* Windows.ApplicationModel.Core.IAppListEntry */
-/* Windows.ApplicationModel.Core.IAppListEntry2 */
-/* Windows.ApplicationModel.Core.IAppListEntry2.get_AppUserModelId() */
 HRESULT wapco_app_list_entry_2_get__app_user_model_id(WAPCO_IAppListEntry_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Core.IAppListEntry3 */
-/* Windows.ApplicationModel.Core.IAppListEntry3.LaunchForUserAsync(user) */
 HRESULT wapco_app_list_entry_3_launch_for_user_async(WAPCO_IAppListEntry_3 *self, WSY_User* user, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Core.IAppListEntry4 */
-/* Windows.ApplicationModel.Core.IAppListEntry4.get_AppInfo() */
 HRESULT wapco_app_list_entry_4_get__app_info(WAPCO_IAppListEntry_4 *self, WAM_AppInfo** value);
 
-/* Windows.ApplicationModel.Core.IUnhandledErrorDetectedEventArgs */
-/* Windows.ApplicationModel.Core.IUnhandledError */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_CORE_H */

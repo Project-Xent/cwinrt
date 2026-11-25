@@ -15,7 +15,6 @@
 #include <cwinrt/Windows.Services.Maps.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WDEGE_Geopoint
 #define CWINRT_FWD_WDEGE_Geopoint
 typedef struct WDEGE_Geopoint WDEGE_Geopoint;
@@ -33,7 +32,6 @@ typedef struct WDEGE_Geopath WDEGE_Geopath;
 typedef struct WDEGE_GeoboundingBox WDEGE_GeoboundingBox;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSEMAGU_IGuidanceTelemetryCollectorStatics WSEMAGU_IGuidanceTelemetryCollectorStatics;
 typedef struct WSEMAGU_IGuidanceRouteStatics WSEMAGU_IGuidanceRouteStatics;
 typedef struct WSEMAGU_IGuidanceNavigatorStatics_2 WSEMAGU_IGuidanceNavigatorStatics_2;
@@ -63,7 +61,6 @@ typedef struct WSEMAGU_IGuidanceManeuver WSEMAGU_IGuidanceManeuver;
 typedef struct WSEMAGU_IGuidanceLaneInfo WSEMAGU_IGuidanceLaneInfo;
 typedef struct WSEMAGU_IGuidanceAudioNotificationRequestedEventArgs WSEMAGU_IGuidanceAudioNotificationRequestedEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSEMA_MapRoute
 #define CWINRT_FWD_WSEMA_MapRoute
 typedef struct WSEMA_MapRoute WSEMA_MapRoute;
@@ -244,7 +241,6 @@ typedef enum WSEMAGU_GuidanceAudioMeasurementSystem {
 } WSEMAGU_GuidanceAudioMeasurementSystem;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -317,251 +313,160 @@ static const IID CWINRT_IID_WSEMAGU_IGuidanceLaneInfo CWINRT_MAYBE_UNUSED = { 0x
 static const IID CWINRT_IID_WSEMAGU_IGuidanceAudioNotificationRequestedEventArgs CWINRT_MAYBE_UNUSED = { 0xCA2AA24A, 0xC7C2, 0x4D4C, { 0x9D, 0x7C, 0x49, 0x95, 0x76, 0xBC, 0xED, 0xDB } };
 #endif
 
-/* Methods */
-
-/* Windows.Services.Maps.Guidance.IGuidanceTelemetryCollectorStatics */
-/* Windows.Services.Maps.Guidance.IGuidanceTelemetryCollectorStatics.GetCurrent() */
 HRESULT wsemagu_guidance_telemetry_collector_statics_get_current(WSEMAGU_IGuidanceTelemetryCollectorStatics *self, WSEMAGU_GuidanceTelemetryCollector** out);
 
-/* Windows.Services.Maps.Guidance.IGuidanceRouteStatics */
-/* Windows.Services.Maps.Guidance.IGuidanceRouteStatics.CanCreateFromMapRoute(mapRoute) */
 HRESULT wsemagu_guidance_route_statics_can_create_from_map_route(WSEMAGU_IGuidanceRouteStatics *self, WSEMA_MapRoute* mapRoute, BOOL *out);
 
-/* Windows.Services.Maps.Guidance.IGuidanceRouteStatics.TryCreateFromMapRoute(mapRoute) */
 HRESULT wsemagu_guidance_route_statics_try_create_from_map_route(WSEMAGU_IGuidanceRouteStatics *self, WSEMA_MapRoute* mapRoute, WSEMAGU_GuidanceRoute** out);
 
-/* Windows.Services.Maps.Guidance.IGuidanceNavigatorStatics2 */
-/* Windows.Services.Maps.Guidance.IGuidanceNavigatorStatics2.get_UseAppProvidedVoice() */
 HRESULT wsemagu_guidance_navigator_statics_2_get__use_app_provided_voice(WSEMAGU_IGuidanceNavigatorStatics_2 *self, BOOL *value);
 
-/* Windows.Services.Maps.Guidance.IGuidanceNavigatorStatics */
-/* Windows.Services.Maps.Guidance.IGuidanceNavigatorStatics.GetCurrent() */
 HRESULT wsemagu_guidance_navigator_statics_get_current(WSEMAGU_IGuidanceNavigatorStatics *self, WSEMAGU_GuidanceNavigator** out);
 
-/* activate Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs */
 HRESULT wsemagu_guidance_updated_event_args_new(WSEMAGU_GuidanceUpdatedEventArgs **out);
 
-/* Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs */
-/* Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.get_Mode() */
 HRESULT wsemagu_guidance_updated_event_args_get__mode(WSEMAGU_GuidanceUpdatedEventArgs *self, WSEMAGU_GuidanceMode *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.get_NextManeuver() */
 HRESULT wsemagu_guidance_updated_event_args_get__next_maneuver(WSEMAGU_GuidanceUpdatedEventArgs *self, WSEMAGU_GuidanceManeuver** value);
 
-/* Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.get_NextManeuverDistance() */
 HRESULT wsemagu_guidance_updated_event_args_get__next_maneuver_distance(WSEMAGU_GuidanceUpdatedEventArgs *self, int32_t *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.get_AfterNextManeuver() */
 HRESULT wsemagu_guidance_updated_event_args_get__after_next_maneuver(WSEMAGU_GuidanceUpdatedEventArgs *self, WSEMAGU_GuidanceManeuver** value);
 
-/* Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.get_AfterNextManeuverDistance() */
 HRESULT wsemagu_guidance_updated_event_args_get__after_next_maneuver_distance(WSEMAGU_GuidanceUpdatedEventArgs *self, int32_t *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.get_DistanceToDestination() */
 HRESULT wsemagu_guidance_updated_event_args_get__distance_to_destination(WSEMAGU_GuidanceUpdatedEventArgs *self, int32_t *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.get_ElapsedDistance() */
 HRESULT wsemagu_guidance_updated_event_args_get__elapsed_distance(WSEMAGU_GuidanceUpdatedEventArgs *self, int32_t *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.get_ElapsedTime() */
 HRESULT wsemagu_guidance_updated_event_args_get__elapsed_time(WSEMAGU_GuidanceUpdatedEventArgs *self, WF_TimeSpan *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.get_TimeToDestination() */
 HRESULT wsemagu_guidance_updated_event_args_get__time_to_destination(WSEMAGU_GuidanceUpdatedEventArgs *self, WF_TimeSpan *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.get_RoadName() */
 HRESULT wsemagu_guidance_updated_event_args_get__road_name(WSEMAGU_GuidanceUpdatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.get_Route() */
 HRESULT wsemagu_guidance_updated_event_args_get__route(WSEMAGU_GuidanceUpdatedEventArgs *self, WSEMAGU_GuidanceRoute** value);
 
-/* Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.get_CurrentLocation() */
 HRESULT wsemagu_guidance_updated_event_args_get__current_location(WSEMAGU_GuidanceUpdatedEventArgs *self, WSEMAGU_GuidanceMapMatchedCoordinate** value);
 
-/* Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.get_IsNewManeuver() */
 HRESULT wsemagu_guidance_updated_event_args_get__is_new_maneuver(WSEMAGU_GuidanceUpdatedEventArgs *self, BOOL *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs.get_LaneInfo() */
 HRESULT wsemagu_guidance_updated_event_args_get__lane_info(WSEMAGU_GuidanceUpdatedEventArgs *self, WFOCO_IVectorView_WSEMAGU_GuidanceLaneInfo** value);
 
-/* activate Windows.Services.Maps.Guidance.GuidanceTelemetryCollector */
 HRESULT wsemagu_guidance_telemetry_collector_new(WSEMAGU_GuidanceTelemetryCollector **out);
 
-/* Windows.Services.Maps.Guidance.GuidanceTelemetryCollector */
-/* Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.get_Enabled() */
 HRESULT wsemagu_guidance_telemetry_collector_get__enabled(WSEMAGU_GuidanceTelemetryCollector *self, BOOL *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.put_Enabled() */
 HRESULT wsemagu_guidance_telemetry_collector_put__enabled(WSEMAGU_GuidanceTelemetryCollector *self, BOOL value);
 
-/* Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.ClearLocalData() */
 HRESULT wsemagu_guidance_telemetry_collector_clear_local_data(WSEMAGU_GuidanceTelemetryCollector *self);
 
-/* Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.get_SpeedTrigger() */
 HRESULT wsemagu_guidance_telemetry_collector_get__speed_trigger(WSEMAGU_GuidanceTelemetryCollector *self, double *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.put_SpeedTrigger() */
 HRESULT wsemagu_guidance_telemetry_collector_put__speed_trigger(WSEMAGU_GuidanceTelemetryCollector *self, double value);
 
-/* Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.get_UploadFrequency() */
 HRESULT wsemagu_guidance_telemetry_collector_get__upload_frequency(WSEMAGU_GuidanceTelemetryCollector *self, int32_t *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.put_UploadFrequency() */
 HRESULT wsemagu_guidance_telemetry_collector_put__upload_frequency(WSEMAGU_GuidanceTelemetryCollector *self, int32_t value);
 
-/* Windows.Services.Maps.Guidance.GuidanceTelemetryCollector.GetCurrent() */
 HRESULT wsemagu_guidance_telemetry_collector_get_current(WSEMAGU_GuidanceTelemetryCollector** out);
 
-/* activate Windows.Services.Maps.Guidance.GuidanceRoute */
 HRESULT wsemagu_guidance_route_new(WSEMAGU_GuidanceRoute **out);
 
-/* Windows.Services.Maps.Guidance.GuidanceRoute */
-/* Windows.Services.Maps.Guidance.GuidanceRoute.get_Duration() */
 HRESULT wsemagu_guidance_route_get__duration(WSEMAGU_GuidanceRoute *self, WF_TimeSpan *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceRoute.get_Distance() */
 HRESULT wsemagu_guidance_route_get__distance(WSEMAGU_GuidanceRoute *self, int32_t *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceRoute.get_Maneuvers() */
 HRESULT wsemagu_guidance_route_get__maneuvers(WSEMAGU_GuidanceRoute *self, WFOCO_IVectorView_WSEMAGU_GuidanceManeuver** value);
 
-/* Windows.Services.Maps.Guidance.GuidanceRoute.get_BoundingBox() */
 HRESULT wsemagu_guidance_route_get__bounding_box(WSEMAGU_GuidanceRoute *self, WDEGE_GeoboundingBox** value);
 
-/* Windows.Services.Maps.Guidance.GuidanceRoute.get_Path() */
 HRESULT wsemagu_guidance_route_get__path(WSEMAGU_GuidanceRoute *self, WDEGE_Geopath** value);
 
-/* Windows.Services.Maps.Guidance.GuidanceRoute.get_RoadSegments() */
 HRESULT wsemagu_guidance_route_get__road_segments(WSEMAGU_GuidanceRoute *self, WFOCO_IVectorView_WSEMAGU_GuidanceRoadSegment** value);
 
-/* Windows.Services.Maps.Guidance.GuidanceRoute.ConvertToMapRoute() */
 HRESULT wsemagu_guidance_route_convert_to_map_route(WSEMAGU_GuidanceRoute *self, WSEMA_MapRoute** out);
 
-/* Windows.Services.Maps.Guidance.GuidanceRoute.CanCreateFromMapRoute(mapRoute) */
 HRESULT wsemagu_guidance_route_can_create_from_map_route(WSEMA_MapRoute* mapRoute, BOOL *out);
 
-/* Windows.Services.Maps.Guidance.GuidanceRoute.TryCreateFromMapRoute(mapRoute) */
 HRESULT wsemagu_guidance_route_try_create_from_map_route(WSEMA_MapRoute* mapRoute, WSEMAGU_GuidanceRoute** out);
 
-/* activate Windows.Services.Maps.Guidance.GuidanceRoadSignpost */
 HRESULT wsemagu_guidance_road_signpost_new(WSEMAGU_GuidanceRoadSignpost **out);
 
-/* Windows.Services.Maps.Guidance.GuidanceRoadSignpost */
-/* Windows.Services.Maps.Guidance.GuidanceRoadSignpost.get_ExitNumber() */
 HRESULT wsemagu_guidance_road_signpost_get__exit_number(WSEMAGU_GuidanceRoadSignpost *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceRoadSignpost.get_Exit() */
 HRESULT wsemagu_guidance_road_signpost_get__exit(WSEMAGU_GuidanceRoadSignpost *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceRoadSignpost.get_BackgroundColor() */
 HRESULT wsemagu_guidance_road_signpost_get__background_color(WSEMAGU_GuidanceRoadSignpost *self, WUI_Color *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceRoadSignpost.get_ForegroundColor() */
 HRESULT wsemagu_guidance_road_signpost_get__foreground_color(WSEMAGU_GuidanceRoadSignpost *self, WUI_Color *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceRoadSignpost.get_ExitDirections() */
 HRESULT wsemagu_guidance_road_signpost_get__exit_directions(WSEMAGU_GuidanceRoadSignpost *self, WFOCO_IVectorView_HSTRING** value);
 
-/* activate Windows.Services.Maps.Guidance.GuidanceRoadSegment */
 HRESULT wsemagu_guidance_road_segment_new(WSEMAGU_GuidanceRoadSegment **out);
 
-/* Windows.Services.Maps.Guidance.GuidanceRoadSegment */
-/* Windows.Services.Maps.Guidance.GuidanceRoadSegment.get_RoadName() */
 HRESULT wsemagu_guidance_road_segment_get__road_name(WSEMAGU_GuidanceRoadSegment *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceRoadSegment.get_ShortRoadName() */
 HRESULT wsemagu_guidance_road_segment_get__short_road_name(WSEMAGU_GuidanceRoadSegment *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceRoadSegment.get_SpeedLimit() */
 HRESULT wsemagu_guidance_road_segment_get__speed_limit(WSEMAGU_GuidanceRoadSegment *self, double *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceRoadSegment.get_TravelTime() */
 HRESULT wsemagu_guidance_road_segment_get__travel_time(WSEMAGU_GuidanceRoadSegment *self, WF_TimeSpan *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceRoadSegment.get_Path() */
 HRESULT wsemagu_guidance_road_segment_get__path(WSEMAGU_GuidanceRoadSegment *self, WDEGE_Geopath** value);
 
-/* Windows.Services.Maps.Guidance.GuidanceRoadSegment.get_Id() */
 HRESULT wsemagu_guidance_road_segment_get__id(WSEMAGU_GuidanceRoadSegment *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceRoadSegment.get_IsHighway() */
 HRESULT wsemagu_guidance_road_segment_get__is_highway(WSEMAGU_GuidanceRoadSegment *self, BOOL *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceRoadSegment.get_IsTunnel() */
 HRESULT wsemagu_guidance_road_segment_get__is_tunnel(WSEMAGU_GuidanceRoadSegment *self, BOOL *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceRoadSegment.get_IsTollRoad() */
 HRESULT wsemagu_guidance_road_segment_get__is_toll_road(WSEMAGU_GuidanceRoadSegment *self, BOOL *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceRoadSegment.get_IsScenic() */
 HRESULT wsemagu_guidance_road_segment_get__is_scenic(WSEMAGU_GuidanceRoadSegment *self, BOOL *value);
 
-/* activate Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs */
 HRESULT wsemagu_guidance_rerouted_event_args_new(WSEMAGU_GuidanceReroutedEventArgs **out);
 
-/* Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs */
-/* Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs.get_Route() */
 HRESULT wsemagu_guidance_rerouted_event_args_get__route(WSEMAGU_GuidanceReroutedEventArgs *self, WSEMAGU_GuidanceRoute** value);
 
-/* activate Windows.Services.Maps.Guidance.GuidanceNavigator */
 HRESULT wsemagu_guidance_navigator_new(WSEMAGU_GuidanceNavigator **out);
 
-/* Windows.Services.Maps.Guidance.GuidanceNavigator */
-/* Windows.Services.Maps.Guidance.GuidanceNavigator.StartNavigating(route) */
 HRESULT wsemagu_guidance_navigator_start_navigating(WSEMAGU_GuidanceNavigator *self, WSEMAGU_GuidanceRoute* route);
 
-/* Windows.Services.Maps.Guidance.GuidanceNavigator.StartSimulating(route, speedInMetersPerSecond) */
 HRESULT wsemagu_guidance_navigator_start_simulating(WSEMAGU_GuidanceNavigator *self, WSEMAGU_GuidanceRoute* route, int32_t speedInMetersPerSecond);
 
-/* Windows.Services.Maps.Guidance.GuidanceNavigator.StartTracking() */
 HRESULT wsemagu_guidance_navigator_start_tracking(WSEMAGU_GuidanceNavigator *self);
 
-/* Windows.Services.Maps.Guidance.GuidanceNavigator.Pause() */
 HRESULT wsemagu_guidance_navigator_pause(WSEMAGU_GuidanceNavigator *self);
 
-/* Windows.Services.Maps.Guidance.GuidanceNavigator.Resume() */
 HRESULT wsemagu_guidance_navigator_resume(WSEMAGU_GuidanceNavigator *self);
 
-/* Windows.Services.Maps.Guidance.GuidanceNavigator.Stop() */
 HRESULT wsemagu_guidance_navigator_stop(WSEMAGU_GuidanceNavigator *self);
 
-/* Windows.Services.Maps.Guidance.GuidanceNavigator.RepeatLastAudioNotification() */
 HRESULT wsemagu_guidance_navigator_repeat_last_audio_notification(WSEMAGU_GuidanceNavigator *self);
 
-/* Windows.Services.Maps.Guidance.GuidanceNavigator.get_AudioMeasurementSystem() */
 HRESULT wsemagu_guidance_navigator_get__audio_measurement_system(WSEMAGU_GuidanceNavigator *self, WSEMAGU_GuidanceAudioMeasurementSystem *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceNavigator.put_AudioMeasurementSystem() */
 HRESULT wsemagu_guidance_navigator_put__audio_measurement_system(WSEMAGU_GuidanceNavigator *self, WSEMAGU_GuidanceAudioMeasurementSystem value);
 
-/* Windows.Services.Maps.Guidance.GuidanceNavigator.get_AudioNotifications() */
 HRESULT wsemagu_guidance_navigator_get__audio_notifications(WSEMAGU_GuidanceNavigator *self, WSEMAGU_GuidanceAudioNotifications *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceNavigator.put_AudioNotifications() */
 HRESULT wsemagu_guidance_navigator_put__audio_notifications(WSEMAGU_GuidanceNavigator *self, WSEMAGU_GuidanceAudioNotifications value);
 
-/* Windows.Services.Maps.Guidance.GuidanceNavigator.SetGuidanceVoice(voiceId, voiceFolder) */
 HRESULT wsemagu_guidance_navigator_set_guidance_voice(WSEMAGU_GuidanceNavigator *self, int32_t voiceId, cwinrt_hstring voiceFolder);
 
-/* Windows.Services.Maps.Guidance.GuidanceNavigator.UpdateUserLocation(userLocation) */
 HRESULT wsemagu_guidance_navigator_update_user_location(WSEMAGU_GuidanceNavigator *self, WDEGE_Geocoordinate* userLocation);
 
-/* Windows.Services.Maps.Guidance.GuidanceNavigator.UpdateUserLocation(userLocation, positionOverride) */
 HRESULT wsemagu_guidance_navigator_update_user_location_p_basic_geoposition(WSEMAGU_GuidanceNavigator *self, WDEGE_Geocoordinate* userLocation, WDEGE_BasicGeoposition positionOverride);
 
-/* Windows.Services.Maps.Guidance.GuidanceNavigator.get_IsGuidanceAudioMuted() */
 HRESULT wsemagu_guidance_navigator_get__is_guidance_audio_muted(WSEMAGU_GuidanceNavigator *self, BOOL *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceNavigator.put_IsGuidanceAudioMuted() */
 HRESULT wsemagu_guidance_navigator_put__is_guidance_audio_muted(WSEMAGU_GuidanceNavigator *self, BOOL value);
 
-/* Windows.Services.Maps.Guidance.GuidanceNavigator.get_UseAppProvidedVoice() */
 HRESULT wsemagu_guidance_navigator_get__use_app_provided_voice(BOOL *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceNavigator.GetCurrent() */
 HRESULT wsemagu_guidance_navigator_get_current(WSEMAGU_GuidanceNavigator** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsemagu_guidance_navigator_on_guidance_updated(WSEMAGU_GuidanceNavigator *self, cwinrt_event_fn fn, void *ctx);
@@ -588,108 +493,62 @@ void wsemagu_guidance_navigator_off_user_location_restored(WSEMAGU_GuidanceNavig
 cwinrt_token wsemagu_guidance_navigator_on_audio_notification_requested(WSEMAGU_GuidanceNavigator *self, cwinrt_event_fn fn, void *ctx);
 void wsemagu_guidance_navigator_off_audio_notification_requested(WSEMAGU_GuidanceNavigator *self, cwinrt_token token);
 
-/* activate Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate */
 HRESULT wsemagu_guidance_map_matched_coordinate_new(WSEMAGU_GuidanceMapMatchedCoordinate **out);
 
-/* Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate */
-/* Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.get_Location() */
 HRESULT wsemagu_guidance_map_matched_coordinate_get__location(WSEMAGU_GuidanceMapMatchedCoordinate *self, WDEGE_Geopoint** value);
 
-/* Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.get_CurrentHeading() */
 HRESULT wsemagu_guidance_map_matched_coordinate_get__current_heading(WSEMAGU_GuidanceMapMatchedCoordinate *self, double *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.get_CurrentSpeed() */
 HRESULT wsemagu_guidance_map_matched_coordinate_get__current_speed(WSEMAGU_GuidanceMapMatchedCoordinate *self, double *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.get_IsOnStreet() */
 HRESULT wsemagu_guidance_map_matched_coordinate_get__is_on_street(WSEMAGU_GuidanceMapMatchedCoordinate *self, BOOL *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate.get_Road() */
 HRESULT wsemagu_guidance_map_matched_coordinate_get__road(WSEMAGU_GuidanceMapMatchedCoordinate *self, WSEMAGU_GuidanceRoadSegment** value);
 
-/* activate Windows.Services.Maps.Guidance.GuidanceManeuver */
 HRESULT wsemagu_guidance_maneuver_new(WSEMAGU_GuidanceManeuver **out);
 
-/* Windows.Services.Maps.Guidance.GuidanceManeuver */
-/* Windows.Services.Maps.Guidance.GuidanceManeuver.get_StartLocation() */
 HRESULT wsemagu_guidance_maneuver_get__start_location(WSEMAGU_GuidanceManeuver *self, WDEGE_Geopoint** value);
 
-/* Windows.Services.Maps.Guidance.GuidanceManeuver.get_DistanceFromRouteStart() */
 HRESULT wsemagu_guidance_maneuver_get__distance_from_route_start(WSEMAGU_GuidanceManeuver *self, int32_t *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceManeuver.get_DistanceFromPreviousManeuver() */
 HRESULT wsemagu_guidance_maneuver_get__distance_from_previous_maneuver(WSEMAGU_GuidanceManeuver *self, int32_t *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceManeuver.get_DepartureRoadName() */
 HRESULT wsemagu_guidance_maneuver_get__departure_road_name(WSEMAGU_GuidanceManeuver *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceManeuver.get_NextRoadName() */
 HRESULT wsemagu_guidance_maneuver_get__next_road_name(WSEMAGU_GuidanceManeuver *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceManeuver.get_DepartureShortRoadName() */
 HRESULT wsemagu_guidance_maneuver_get__departure_short_road_name(WSEMAGU_GuidanceManeuver *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceManeuver.get_NextShortRoadName() */
 HRESULT wsemagu_guidance_maneuver_get__next_short_road_name(WSEMAGU_GuidanceManeuver *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceManeuver.get_Kind() */
 HRESULT wsemagu_guidance_maneuver_get__kind(WSEMAGU_GuidanceManeuver *self, WSEMAGU_GuidanceManeuverKind *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceManeuver.get_StartAngle() */
 HRESULT wsemagu_guidance_maneuver_get__start_angle(WSEMAGU_GuidanceManeuver *self, int32_t *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceManeuver.get_EndAngle() */
 HRESULT wsemagu_guidance_maneuver_get__end_angle(WSEMAGU_GuidanceManeuver *self, int32_t *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceManeuver.get_RoadSignpost() */
 HRESULT wsemagu_guidance_maneuver_get__road_signpost(WSEMAGU_GuidanceManeuver *self, WSEMAGU_GuidanceRoadSignpost** value);
 
-/* Windows.Services.Maps.Guidance.GuidanceManeuver.get_InstructionText() */
 HRESULT wsemagu_guidance_maneuver_get__instruction_text(WSEMAGU_GuidanceManeuver *self, cwinrt_hstring *value);
 
-/* activate Windows.Services.Maps.Guidance.GuidanceLaneInfo */
 HRESULT wsemagu_guidance_lane_info_new(WSEMAGU_GuidanceLaneInfo **out);
 
-/* Windows.Services.Maps.Guidance.GuidanceLaneInfo */
-/* Windows.Services.Maps.Guidance.GuidanceLaneInfo.get_LaneMarkers() */
 HRESULT wsemagu_guidance_lane_info_get__lane_markers(WSEMAGU_GuidanceLaneInfo *self, WSEMAGU_GuidanceLaneMarkers *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceLaneInfo.get_IsOnRoute() */
 HRESULT wsemagu_guidance_lane_info_get__is_on_route(WSEMAGU_GuidanceLaneInfo *self, BOOL *value);
 
-/* activate Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs */
 HRESULT wsemagu_guidance_audio_notification_requested_event_args_new(WSEMAGU_GuidanceAudioNotificationRequestedEventArgs **out);
 
-/* Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs */
-/* Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs.get_AudioNotification() */
 HRESULT wsemagu_guidance_audio_notification_requested_event_args_get__audio_notification(WSEMAGU_GuidanceAudioNotificationRequestedEventArgs *self, WSEMAGU_GuidanceAudioNotificationKind *value);
 
-/* Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs.get_AudioFilePaths() */
 HRESULT wsemagu_guidance_audio_notification_requested_event_args_get__audio_file_paths(WSEMAGU_GuidanceAudioNotificationRequestedEventArgs *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs.get_AudioText() */
 HRESULT wsemagu_guidance_audio_notification_requested_event_args_get__audio_text(WSEMAGU_GuidanceAudioNotificationRequestedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Services.Maps.Guidance.IGuidanceUpdatedEventArgs */
-/* Windows.Services.Maps.Guidance.IGuidanceTelemetryCollector */
-/* Windows.Services.Maps.Guidance.IGuidanceRoute */
-/* Windows.Services.Maps.Guidance.IGuidanceRoadSignpost */
-/* Windows.Services.Maps.Guidance.IGuidanceRoadSegment */
-/* Windows.Services.Maps.Guidance.IGuidanceRoadSegment2 */
-/* Windows.Services.Maps.Guidance.IGuidanceRoadSegment2.get_IsScenic() */
 HRESULT wsemagu_guidance_road_segment_2_get__is_scenic(WSEMAGU_IGuidanceRoadSegment_2 *self, BOOL *value);
 
-/* Windows.Services.Maps.Guidance.IGuidanceReroutedEventArgs */
-/* Windows.Services.Maps.Guidance.IGuidanceNavigator */
-/* Windows.Services.Maps.Guidance.IGuidanceNavigator2 */
-/* Windows.Services.Maps.Guidance.IGuidanceNavigator2.get_IsGuidanceAudioMuted() */
 HRESULT wsemagu_guidance_navigator_2_get__is_guidance_audio_muted(WSEMAGU_IGuidanceNavigator_2 *self, BOOL *value);
 
-/* Windows.Services.Maps.Guidance.IGuidanceNavigator2.put_IsGuidanceAudioMuted() */
 HRESULT wsemagu_guidance_navigator_2_put__is_guidance_audio_muted(WSEMAGU_IGuidanceNavigator_2 *self, BOOL value);
 
-/* Windows.Services.Maps.Guidance.IGuidanceMapMatchedCoordinate */
-/* Windows.Services.Maps.Guidance.IGuidanceManeuver */
-/* Windows.Services.Maps.Guidance.IGuidanceLaneInfo */
-/* Windows.Services.Maps.Guidance.IGuidanceAudioNotificationRequestedEventArgs */
 #endif /* CWINRT_WINDOWS_SERVICES_MAPS_GUIDANCE_H */

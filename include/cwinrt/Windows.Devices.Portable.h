@@ -12,19 +12,16 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WS_StorageFolder
 #define CWINRT_FWD_WS_StorageFolder
 typedef struct WS_StorageFolder WS_StorageFolder;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDEPO_IStorageDeviceStatics WDEPO_IStorageDeviceStatics;
 typedef struct WDEPO_ServiceDevice WDEPO_ServiceDevice;
 typedef struct WDEPO_StorageDevice WDEPO_StorageDevice;
 typedef struct WDEPO_IServiceDeviceStatics WDEPO_IServiceDeviceStatics;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WS_StorageFolder
 #define CWINRT_FWD_WS_StorageFolder
 typedef struct WS_StorageFolder WS_StorageFolder;
@@ -43,7 +40,6 @@ typedef enum WDEPO_ServiceDeviceType {
 } WDEPO_ServiceDeviceType;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -56,40 +52,24 @@ static const IID CWINRT_IID_WDEPO_IStorageDeviceStatics CWINRT_MAYBE_UNUSED = { 
 static const IID CWINRT_IID_WDEPO_IServiceDeviceStatics CWINRT_MAYBE_UNUSED = { 0xA88214E1, 0x59C7, 0x4A20, { 0xAB, 0xA6, 0x9F, 0x67, 0x07, 0x93, 0x72, 0x30 } };
 #endif
 
-/* Methods */
-
-/* Windows.Devices.Portable.IStorageDeviceStatics */
-/* Windows.Devices.Portable.IStorageDeviceStatics.FromId(deviceId) */
 HRESULT wdepo_storage_device_statics_from_id(WDEPO_IStorageDeviceStatics *self, cwinrt_hstring deviceId, WS_StorageFolder** out);
 
-/* Windows.Devices.Portable.IStorageDeviceStatics.GetDeviceSelector() */
 HRESULT wdepo_storage_device_statics_get_device_selector(WDEPO_IStorageDeviceStatics *self, cwinrt_hstring *out);
 
-/* activate Windows.Devices.Portable.ServiceDevice */
 HRESULT wdepo_service_device_new(WDEPO_ServiceDevice **out);
 
-/* Windows.Devices.Portable.ServiceDevice */
-/* Windows.Devices.Portable.ServiceDevice.GetDeviceSelector(serviceType) */
 HRESULT wdepo_service_device_get_device_selector(WDEPO_ServiceDeviceType serviceType, cwinrt_hstring *out);
 
-/* Windows.Devices.Portable.ServiceDevice.GetDeviceSelectorFromServiceId(serviceId) */
 HRESULT wdepo_service_device_get_device_selector_from_service_id(GUID serviceId, cwinrt_hstring *out);
 
-/* activate Windows.Devices.Portable.StorageDevice */
 HRESULT wdepo_storage_device_new(WDEPO_StorageDevice **out);
 
-/* Windows.Devices.Portable.StorageDevice */
-/* Windows.Devices.Portable.StorageDevice.FromId(deviceId) */
 HRESULT wdepo_storage_device_from_id(cwinrt_hstring deviceId, WS_StorageFolder** out);
 
-/* Windows.Devices.Portable.StorageDevice.GetDeviceSelector() */
 HRESULT wdepo_storage_device_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Devices.Portable.IServiceDeviceStatics */
-/* Windows.Devices.Portable.IServiceDeviceStatics.GetDeviceSelector(serviceType) */
 HRESULT wdepo_service_device_statics_get_device_selector(WDEPO_IServiceDeviceStatics *self, WDEPO_ServiceDeviceType serviceType, cwinrt_hstring *out);
 
-/* Windows.Devices.Portable.IServiceDeviceStatics.GetDeviceSelectorFromServiceId(serviceId) */
 HRESULT wdepo_service_device_statics_get_device_selector_from_service_id(WDEPO_IServiceDeviceStatics *self, GUID serviceId, cwinrt_hstring *out);
 
 #endif /* CWINRT_WINDOWS_DEVICES_PORTABLE_H */

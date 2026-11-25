@@ -14,7 +14,6 @@
 #include <cwinrt/Windows.Storage.Streams.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStreamWithContentType
 #define CWINRT_FWD_WSTST_IRandomAccessStreamWithContentType
 typedef struct WSTST_IRandomAccessStreamWithContentType WSTST_IRandomAccessStreamWithContentType;
@@ -48,7 +47,6 @@ typedef struct WDEGE_Geolocator WDEGE_Geolocator;
 typedef struct WSTST_IBuffer WSTST_IBuffer;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSTFI_StorageItemContentProperties WSTFI_StorageItemContentProperties;
 typedef struct WSTFI_MusicProperties WSTFI_MusicProperties;
 typedef struct WSTFI_ImageProperties WSTFI_ImageProperties;
@@ -67,7 +65,6 @@ typedef struct WSTFI_IBasicProperties WSTFI_IBasicProperties;
 typedef struct WSTFI_IVideoProperties WSTFI_IVideoProperties;
 typedef struct WSTFI_IStorageItemExtraProperties WSTFI_IStorageItemExtraProperties;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WSTFI_MusicProperties
 #define CWINRT_FWD_WF_IAsyncOperation_WSTFI_MusicProperties
 typedef struct WF_IAsyncOperation_WSTFI_MusicProperties WF_IAsyncOperation_WSTFI_MusicProperties;
@@ -237,7 +234,6 @@ typedef enum WSTFI_VideoOrientation {
 } WSTFI_VideoOrientation;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -278,422 +274,270 @@ static const IID CWINRT_IID_WSTFI_IVideoProperties CWINRT_MAYBE_UNUSED = { 0x719
 static const IID CWINRT_IID_WSTFI_IStorageItemExtraProperties CWINRT_MAYBE_UNUSED = { 0xC54361B2, 0x54CD, 0x432B, { 0xBD, 0xBC, 0x4B, 0x19, 0xC4, 0xB4, 0x70, 0xD7 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Storage.FileProperties.StorageItemContentProperties */
 HRESULT wstfi_storage_item_content_properties_new(WSTFI_StorageItemContentProperties **out);
 
-/* Windows.Storage.FileProperties.StorageItemContentProperties */
-/* Windows.Storage.FileProperties.StorageItemContentProperties.GetMusicPropertiesAsync() */
 HRESULT wstfi_storage_item_content_properties_get_music_properties_async(WSTFI_StorageItemContentProperties *self, WF_IAsyncOperation_WSTFI_MusicProperties** out);
 
-/* Windows.Storage.FileProperties.StorageItemContentProperties.GetVideoPropertiesAsync() */
 HRESULT wstfi_storage_item_content_properties_get_video_properties_async(WSTFI_StorageItemContentProperties *self, WF_IAsyncOperation_WSTFI_VideoProperties** out);
 
-/* Windows.Storage.FileProperties.StorageItemContentProperties.GetImagePropertiesAsync() */
 HRESULT wstfi_storage_item_content_properties_get_image_properties_async(WSTFI_StorageItemContentProperties *self, WF_IAsyncOperation_WSTFI_ImageProperties** out);
 
-/* Windows.Storage.FileProperties.StorageItemContentProperties.GetDocumentPropertiesAsync() */
 HRESULT wstfi_storage_item_content_properties_get_document_properties_async(WSTFI_StorageItemContentProperties *self, WF_IAsyncOperation_WSTFI_DocumentProperties** out);
 
-/* Windows.Storage.FileProperties.StorageItemContentProperties.RetrievePropertiesAsync(propertiesToRetrieve) */
 HRESULT wstfi_storage_item_content_properties_retrieve_properties_async(WSTFI_StorageItemContentProperties *self, WFOCO_IIterable_HSTRING* propertiesToRetrieve, WF_IAsyncOperation_WFOCO_IMap_HSTRING_Object** out);
 
-/* Windows.Storage.FileProperties.StorageItemContentProperties.SavePropertiesAsync(propertiesToSave) */
 HRESULT wstfi_storage_item_content_properties_save_properties_async_p_p(WSTFI_StorageItemContentProperties *self, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_Object* propertiesToSave, WF_IAsyncAction** out);
 
-/* Windows.Storage.FileProperties.StorageItemContentProperties.SavePropertiesAsync() */
 HRESULT wstfi_storage_item_content_properties_save_properties_async(WSTFI_StorageItemContentProperties *self, WF_IAsyncAction** out);
 
-/* activate Windows.Storage.FileProperties.MusicProperties */
 HRESULT wstfi_music_properties_new(WSTFI_MusicProperties **out);
 
-/* Windows.Storage.FileProperties.MusicProperties */
-/* Windows.Storage.FileProperties.MusicProperties.get_Album() */
 HRESULT wstfi_music_properties_get__album(WSTFI_MusicProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.FileProperties.MusicProperties.put_Album() */
 HRESULT wstfi_music_properties_put__album(WSTFI_MusicProperties *self, cwinrt_hstring value);
 
-/* Windows.Storage.FileProperties.MusicProperties.get_Artist() */
 HRESULT wstfi_music_properties_get__artist(WSTFI_MusicProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.FileProperties.MusicProperties.put_Artist() */
 HRESULT wstfi_music_properties_put__artist(WSTFI_MusicProperties *self, cwinrt_hstring value);
 
-/* Windows.Storage.FileProperties.MusicProperties.get_Genre() */
 HRESULT wstfi_music_properties_get__genre(WSTFI_MusicProperties *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Storage.FileProperties.MusicProperties.get_TrackNumber() */
 HRESULT wstfi_music_properties_get__track_number(WSTFI_MusicProperties *self, uint32_t *value);
 
-/* Windows.Storage.FileProperties.MusicProperties.put_TrackNumber() */
 HRESULT wstfi_music_properties_put__track_number(WSTFI_MusicProperties *self, uint32_t value);
 
-/* Windows.Storage.FileProperties.MusicProperties.get_Title() */
 HRESULT wstfi_music_properties_get__title(WSTFI_MusicProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.FileProperties.MusicProperties.put_Title() */
 HRESULT wstfi_music_properties_put__title(WSTFI_MusicProperties *self, cwinrt_hstring value);
 
-/* Windows.Storage.FileProperties.MusicProperties.get_Rating() */
 HRESULT wstfi_music_properties_get__rating(WSTFI_MusicProperties *self, uint32_t *value);
 
-/* Windows.Storage.FileProperties.MusicProperties.put_Rating() */
 HRESULT wstfi_music_properties_put__rating(WSTFI_MusicProperties *self, uint32_t value);
 
-/* Windows.Storage.FileProperties.MusicProperties.get_Duration() */
 HRESULT wstfi_music_properties_get__duration(WSTFI_MusicProperties *self, WF_TimeSpan *value);
 
-/* Windows.Storage.FileProperties.MusicProperties.get_Bitrate() */
 HRESULT wstfi_music_properties_get__bitrate(WSTFI_MusicProperties *self, uint32_t *value);
 
-/* Windows.Storage.FileProperties.MusicProperties.get_AlbumArtist() */
 HRESULT wstfi_music_properties_get__album_artist(WSTFI_MusicProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.FileProperties.MusicProperties.put_AlbumArtist() */
 HRESULT wstfi_music_properties_put__album_artist(WSTFI_MusicProperties *self, cwinrt_hstring value);
 
-/* Windows.Storage.FileProperties.MusicProperties.get_Composers() */
 HRESULT wstfi_music_properties_get__composers(WSTFI_MusicProperties *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Storage.FileProperties.MusicProperties.get_Conductors() */
 HRESULT wstfi_music_properties_get__conductors(WSTFI_MusicProperties *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Storage.FileProperties.MusicProperties.get_Subtitle() */
 HRESULT wstfi_music_properties_get__subtitle(WSTFI_MusicProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.FileProperties.MusicProperties.put_Subtitle() */
 HRESULT wstfi_music_properties_put__subtitle(WSTFI_MusicProperties *self, cwinrt_hstring value);
 
-/* Windows.Storage.FileProperties.MusicProperties.get_Producers() */
 HRESULT wstfi_music_properties_get__producers(WSTFI_MusicProperties *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Storage.FileProperties.MusicProperties.get_Publisher() */
 HRESULT wstfi_music_properties_get__publisher(WSTFI_MusicProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.FileProperties.MusicProperties.put_Publisher() */
 HRESULT wstfi_music_properties_put__publisher(WSTFI_MusicProperties *self, cwinrt_hstring value);
 
-/* Windows.Storage.FileProperties.MusicProperties.get_Writers() */
 HRESULT wstfi_music_properties_get__writers(WSTFI_MusicProperties *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Storage.FileProperties.MusicProperties.get_Year() */
 HRESULT wstfi_music_properties_get__year(WSTFI_MusicProperties *self, uint32_t *value);
 
-/* Windows.Storage.FileProperties.MusicProperties.put_Year() */
 HRESULT wstfi_music_properties_put__year(WSTFI_MusicProperties *self, uint32_t value);
 
-/* Windows.Storage.FileProperties.MusicProperties.RetrievePropertiesAsync(propertiesToRetrieve) */
 HRESULT wstfi_music_properties_retrieve_properties_async(WSTFI_MusicProperties *self, WFOCO_IIterable_HSTRING* propertiesToRetrieve, WF_IAsyncOperation_WFOCO_IMap_HSTRING_Object** out);
 
-/* Windows.Storage.FileProperties.MusicProperties.SavePropertiesAsync(propertiesToSave) */
 HRESULT wstfi_music_properties_save_properties_async_p_p(WSTFI_MusicProperties *self, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_Object* propertiesToSave, WF_IAsyncAction** out);
 
-/* Windows.Storage.FileProperties.MusicProperties.SavePropertiesAsync() */
 HRESULT wstfi_music_properties_save_properties_async(WSTFI_MusicProperties *self, WF_IAsyncAction** out);
 
-/* activate Windows.Storage.FileProperties.ImageProperties */
 HRESULT wstfi_image_properties_new(WSTFI_ImageProperties **out);
 
-/* Windows.Storage.FileProperties.ImageProperties */
-/* Windows.Storage.FileProperties.ImageProperties.get_Rating() */
 HRESULT wstfi_image_properties_get__rating(WSTFI_ImageProperties *self, uint32_t *value);
 
-/* Windows.Storage.FileProperties.ImageProperties.put_Rating() */
 HRESULT wstfi_image_properties_put__rating(WSTFI_ImageProperties *self, uint32_t value);
 
-/* Windows.Storage.FileProperties.ImageProperties.get_Keywords() */
 HRESULT wstfi_image_properties_get__keywords(WSTFI_ImageProperties *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Storage.FileProperties.ImageProperties.get_DateTaken() */
 HRESULT wstfi_image_properties_get__date_taken(WSTFI_ImageProperties *self, WF_DateTime *value);
 
-/* Windows.Storage.FileProperties.ImageProperties.put_DateTaken() */
 HRESULT wstfi_image_properties_put__date_taken(WSTFI_ImageProperties *self, WF_DateTime value);
 
-/* Windows.Storage.FileProperties.ImageProperties.get_Width() */
 HRESULT wstfi_image_properties_get__width(WSTFI_ImageProperties *self, uint32_t *value);
 
-/* Windows.Storage.FileProperties.ImageProperties.get_Height() */
 HRESULT wstfi_image_properties_get__height(WSTFI_ImageProperties *self, uint32_t *value);
 
-/* Windows.Storage.FileProperties.ImageProperties.get_Title() */
 HRESULT wstfi_image_properties_get__title(WSTFI_ImageProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.FileProperties.ImageProperties.put_Title() */
 HRESULT wstfi_image_properties_put__title(WSTFI_ImageProperties *self, cwinrt_hstring value);
 
-/* Windows.Storage.FileProperties.ImageProperties.get_Latitude() */
 HRESULT wstfi_image_properties_get__latitude(WSTFI_ImageProperties *self, double** value);
 
-/* Windows.Storage.FileProperties.ImageProperties.get_Longitude() */
 HRESULT wstfi_image_properties_get__longitude(WSTFI_ImageProperties *self, double** value);
 
-/* Windows.Storage.FileProperties.ImageProperties.get_CameraManufacturer() */
 HRESULT wstfi_image_properties_get__camera_manufacturer(WSTFI_ImageProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.FileProperties.ImageProperties.put_CameraManufacturer() */
 HRESULT wstfi_image_properties_put__camera_manufacturer(WSTFI_ImageProperties *self, cwinrt_hstring value);
 
-/* Windows.Storage.FileProperties.ImageProperties.get_CameraModel() */
 HRESULT wstfi_image_properties_get__camera_model(WSTFI_ImageProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.FileProperties.ImageProperties.put_CameraModel() */
 HRESULT wstfi_image_properties_put__camera_model(WSTFI_ImageProperties *self, cwinrt_hstring value);
 
-/* Windows.Storage.FileProperties.ImageProperties.get_Orientation() */
 HRESULT wstfi_image_properties_get__orientation(WSTFI_ImageProperties *self, WSTFI_PhotoOrientation *value);
 
-/* Windows.Storage.FileProperties.ImageProperties.get_PeopleNames() */
 HRESULT wstfi_image_properties_get__people_names(WSTFI_ImageProperties *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Storage.FileProperties.ImageProperties.RetrievePropertiesAsync(propertiesToRetrieve) */
 HRESULT wstfi_image_properties_retrieve_properties_async(WSTFI_ImageProperties *self, WFOCO_IIterable_HSTRING* propertiesToRetrieve, WF_IAsyncOperation_WFOCO_IMap_HSTRING_Object** out);
 
-/* Windows.Storage.FileProperties.ImageProperties.SavePropertiesAsync(propertiesToSave) */
 HRESULT wstfi_image_properties_save_properties_async_p_p(WSTFI_ImageProperties *self, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_Object* propertiesToSave, WF_IAsyncAction** out);
 
-/* Windows.Storage.FileProperties.ImageProperties.SavePropertiesAsync() */
 HRESULT wstfi_image_properties_save_properties_async(WSTFI_ImageProperties *self, WF_IAsyncAction** out);
 
-/* activate Windows.Storage.FileProperties.DocumentProperties */
 HRESULT wstfi_document_properties_new(WSTFI_DocumentProperties **out);
 
-/* Windows.Storage.FileProperties.DocumentProperties */
-/* Windows.Storage.FileProperties.DocumentProperties.get_Author() */
 HRESULT wstfi_document_properties_get__author(WSTFI_DocumentProperties *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Storage.FileProperties.DocumentProperties.get_Title() */
 HRESULT wstfi_document_properties_get__title(WSTFI_DocumentProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.FileProperties.DocumentProperties.put_Title() */
 HRESULT wstfi_document_properties_put__title(WSTFI_DocumentProperties *self, cwinrt_hstring value);
 
-/* Windows.Storage.FileProperties.DocumentProperties.get_Keywords() */
 HRESULT wstfi_document_properties_get__keywords(WSTFI_DocumentProperties *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Storage.FileProperties.DocumentProperties.get_Comment() */
 HRESULT wstfi_document_properties_get__comment(WSTFI_DocumentProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.FileProperties.DocumentProperties.put_Comment() */
 HRESULT wstfi_document_properties_put__comment(WSTFI_DocumentProperties *self, cwinrt_hstring value);
 
-/* Windows.Storage.FileProperties.DocumentProperties.RetrievePropertiesAsync(propertiesToRetrieve) */
 HRESULT wstfi_document_properties_retrieve_properties_async(WSTFI_DocumentProperties *self, WFOCO_IIterable_HSTRING* propertiesToRetrieve, WF_IAsyncOperation_WFOCO_IMap_HSTRING_Object** out);
 
-/* Windows.Storage.FileProperties.DocumentProperties.SavePropertiesAsync(propertiesToSave) */
 HRESULT wstfi_document_properties_save_properties_async_p_p(WSTFI_DocumentProperties *self, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_Object* propertiesToSave, WF_IAsyncAction** out);
 
-/* Windows.Storage.FileProperties.DocumentProperties.SavePropertiesAsync() */
 HRESULT wstfi_document_properties_save_properties_async(WSTFI_DocumentProperties *self, WF_IAsyncAction** out);
 
-/* activate Windows.Storage.FileProperties.GeotagHelper */
 HRESULT wstfi_geotag_helper_new(WSTFI_GeotagHelper **out);
 
-/* Windows.Storage.FileProperties.GeotagHelper */
-/* Windows.Storage.FileProperties.GeotagHelper.GetGeotagAsync(file) */
 HRESULT wstfi_geotag_helper_get_geotag_async(WS_IStorageFile* file, WF_IAsyncOperation_WDEGE_Geopoint** out);
 
-/* Windows.Storage.FileProperties.GeotagHelper.SetGeotagFromGeolocatorAsync(file, geolocator) */
 HRESULT wstfi_geotag_helper_set_geotag_from_geolocator_async(WS_IStorageFile* file, WDEGE_Geolocator* geolocator, WF_IAsyncAction** out);
 
-/* Windows.Storage.FileProperties.GeotagHelper.SetGeotagAsync(file, geopoint) */
 HRESULT wstfi_geotag_helper_set_geotag_async(WS_IStorageFile* file, WDEGE_Geopoint* geopoint, WF_IAsyncAction** out);
 
-/* Windows.Storage.FileProperties.IGeotagHelperStatics */
-/* Windows.Storage.FileProperties.IGeotagHelperStatics.GetGeotagAsync(file) */
 HRESULT wstfi_geotag_helper_statics_get_geotag_async(WSTFI_IGeotagHelperStatics *self, WS_IStorageFile* file, WF_IAsyncOperation_WDEGE_Geopoint** out);
 
-/* Windows.Storage.FileProperties.IGeotagHelperStatics.SetGeotagFromGeolocatorAsync(file, geolocator) */
 HRESULT wstfi_geotag_helper_statics_set_geotag_from_geolocator_async(WSTFI_IGeotagHelperStatics *self, WS_IStorageFile* file, WDEGE_Geolocator* geolocator, WF_IAsyncAction** out);
 
-/* Windows.Storage.FileProperties.IGeotagHelperStatics.SetGeotagAsync(file, geopoint) */
 HRESULT wstfi_geotag_helper_statics_set_geotag_async(WSTFI_IGeotagHelperStatics *self, WS_IStorageFile* file, WDEGE_Geopoint* geopoint, WF_IAsyncAction** out);
 
-/* activate Windows.Storage.FileProperties.StorageItemThumbnail */
 HRESULT wstfi_storage_item_thumbnail_new(WSTFI_StorageItemThumbnail **out);
 
-/* Windows.Storage.FileProperties.StorageItemThumbnail */
-/* Windows.Storage.FileProperties.StorageItemThumbnail.get_Size() */
 HRESULT wstfi_storage_item_thumbnail_get__size(WSTFI_StorageItemThumbnail *self, uint64_t *value);
 
-/* Windows.Storage.FileProperties.StorageItemThumbnail.put_Size() */
 HRESULT wstfi_storage_item_thumbnail_put__size(WSTFI_StorageItemThumbnail *self, uint64_t value);
 
-/* Windows.Storage.FileProperties.StorageItemThumbnail.GetInputStreamAt(position) */
 HRESULT wstfi_storage_item_thumbnail_get_input_stream_at(WSTFI_StorageItemThumbnail *self, uint64_t position, WSTST_IInputStream** out);
 
-/* Windows.Storage.FileProperties.StorageItemThumbnail.GetOutputStreamAt(position) */
 HRESULT wstfi_storage_item_thumbnail_get_output_stream_at(WSTFI_StorageItemThumbnail *self, uint64_t position, WSTST_IOutputStream** out);
 
-/* Windows.Storage.FileProperties.StorageItemThumbnail.get_Position() */
 HRESULT wstfi_storage_item_thumbnail_get__position(WSTFI_StorageItemThumbnail *self, uint64_t *value);
 
-/* Windows.Storage.FileProperties.StorageItemThumbnail.Seek(position) */
 HRESULT wstfi_storage_item_thumbnail_seek(WSTFI_StorageItemThumbnail *self, uint64_t position);
 
-/* Windows.Storage.FileProperties.StorageItemThumbnail.CloneStream() */
 HRESULT wstfi_storage_item_thumbnail_clone_stream(WSTFI_StorageItemThumbnail *self, WSTST_IRandomAccessStream** out);
 
-/* Windows.Storage.FileProperties.StorageItemThumbnail.get_CanRead() */
 HRESULT wstfi_storage_item_thumbnail_get__can_read(WSTFI_StorageItemThumbnail *self, BOOL *value);
 
-/* Windows.Storage.FileProperties.StorageItemThumbnail.get_CanWrite() */
 HRESULT wstfi_storage_item_thumbnail_get__can_write(WSTFI_StorageItemThumbnail *self, BOOL *value);
 
-/* Windows.Storage.FileProperties.StorageItemThumbnail.Close() */
 HRESULT wstfi_storage_item_thumbnail_close(WSTFI_StorageItemThumbnail *self);
 
-/* Windows.Storage.FileProperties.StorageItemThumbnail.ReadAsync(buffer, count, options) */
 HRESULT wstfi_storage_item_thumbnail_read_async(WSTFI_StorageItemThumbnail *self, WSTST_IBuffer* buffer, uint32_t count, WSTST_InputStreamOptions options, WF_IAsyncOperationWithProgress_WSTST_IBuffer_uint32_t** out);
 
-/* Windows.Storage.FileProperties.StorageItemThumbnail.WriteAsync(buffer) */
 HRESULT wstfi_storage_item_thumbnail_write_async(WSTFI_StorageItemThumbnail *self, WSTST_IBuffer* buffer, WF_IAsyncOperationWithProgress_uint32_t_uint32_t** out);
 
-/* Windows.Storage.FileProperties.StorageItemThumbnail.FlushAsync() */
 HRESULT wstfi_storage_item_thumbnail_flush_async(WSTFI_StorageItemThumbnail *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Storage.FileProperties.StorageItemThumbnail.get_ContentType() */
 HRESULT wstfi_storage_item_thumbnail_get__content_type(WSTFI_StorageItemThumbnail *self, cwinrt_hstring *value);
 
-/* Windows.Storage.FileProperties.StorageItemThumbnail.get_OriginalWidth() */
 HRESULT wstfi_storage_item_thumbnail_get__original_width(WSTFI_StorageItemThumbnail *self, uint32_t *value);
 
-/* Windows.Storage.FileProperties.StorageItemThumbnail.get_OriginalHeight() */
 HRESULT wstfi_storage_item_thumbnail_get__original_height(WSTFI_StorageItemThumbnail *self, uint32_t *value);
 
-/* Windows.Storage.FileProperties.StorageItemThumbnail.get_ReturnedSmallerCachedSize() */
 HRESULT wstfi_storage_item_thumbnail_get__returned_smaller_cached_size(WSTFI_StorageItemThumbnail *self, BOOL *value);
 
-/* Windows.Storage.FileProperties.StorageItemThumbnail.get_Type() */
 HRESULT wstfi_storage_item_thumbnail_get__type(WSTFI_StorageItemThumbnail *self, WSTFI_ThumbnailType *value);
 
-/* activate Windows.Storage.FileProperties.BasicProperties */
 HRESULT wstfi_basic_properties_new(WSTFI_BasicProperties **out);
 
-/* Windows.Storage.FileProperties.BasicProperties */
-/* Windows.Storage.FileProperties.BasicProperties.get_Size() */
 HRESULT wstfi_basic_properties_get__size(WSTFI_BasicProperties *self, uint64_t *value);
 
-/* Windows.Storage.FileProperties.BasicProperties.get_DateModified() */
 HRESULT wstfi_basic_properties_get__date_modified(WSTFI_BasicProperties *self, WF_DateTime *value);
 
-/* Windows.Storage.FileProperties.BasicProperties.get_ItemDate() */
 HRESULT wstfi_basic_properties_get__item_date(WSTFI_BasicProperties *self, WF_DateTime *value);
 
-/* Windows.Storage.FileProperties.BasicProperties.RetrievePropertiesAsync(propertiesToRetrieve) */
 HRESULT wstfi_basic_properties_retrieve_properties_async(WSTFI_BasicProperties *self, WFOCO_IIterable_HSTRING* propertiesToRetrieve, WF_IAsyncOperation_WFOCO_IMap_HSTRING_Object** out);
 
-/* Windows.Storage.FileProperties.BasicProperties.SavePropertiesAsync(propertiesToSave) */
 HRESULT wstfi_basic_properties_save_properties_async_p_p(WSTFI_BasicProperties *self, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_Object* propertiesToSave, WF_IAsyncAction** out);
 
-/* Windows.Storage.FileProperties.BasicProperties.SavePropertiesAsync() */
 HRESULT wstfi_basic_properties_save_properties_async(WSTFI_BasicProperties *self, WF_IAsyncAction** out);
 
-/* activate Windows.Storage.FileProperties.VideoProperties */
 HRESULT wstfi_video_properties_new(WSTFI_VideoProperties **out);
 
-/* Windows.Storage.FileProperties.VideoProperties */
-/* Windows.Storage.FileProperties.VideoProperties.get_Rating() */
 HRESULT wstfi_video_properties_get__rating(WSTFI_VideoProperties *self, uint32_t *value);
 
-/* Windows.Storage.FileProperties.VideoProperties.put_Rating() */
 HRESULT wstfi_video_properties_put__rating(WSTFI_VideoProperties *self, uint32_t value);
 
-/* Windows.Storage.FileProperties.VideoProperties.get_Keywords() */
 HRESULT wstfi_video_properties_get__keywords(WSTFI_VideoProperties *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Storage.FileProperties.VideoProperties.get_Width() */
 HRESULT wstfi_video_properties_get__width(WSTFI_VideoProperties *self, uint32_t *value);
 
-/* Windows.Storage.FileProperties.VideoProperties.get_Height() */
 HRESULT wstfi_video_properties_get__height(WSTFI_VideoProperties *self, uint32_t *value);
 
-/* Windows.Storage.FileProperties.VideoProperties.get_Duration() */
 HRESULT wstfi_video_properties_get__duration(WSTFI_VideoProperties *self, WF_TimeSpan *value);
 
-/* Windows.Storage.FileProperties.VideoProperties.get_Latitude() */
 HRESULT wstfi_video_properties_get__latitude(WSTFI_VideoProperties *self, double** value);
 
-/* Windows.Storage.FileProperties.VideoProperties.get_Longitude() */
 HRESULT wstfi_video_properties_get__longitude(WSTFI_VideoProperties *self, double** value);
 
-/* Windows.Storage.FileProperties.VideoProperties.get_Title() */
 HRESULT wstfi_video_properties_get__title(WSTFI_VideoProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.FileProperties.VideoProperties.put_Title() */
 HRESULT wstfi_video_properties_put__title(WSTFI_VideoProperties *self, cwinrt_hstring value);
 
-/* Windows.Storage.FileProperties.VideoProperties.get_Subtitle() */
 HRESULT wstfi_video_properties_get__subtitle(WSTFI_VideoProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.FileProperties.VideoProperties.put_Subtitle() */
 HRESULT wstfi_video_properties_put__subtitle(WSTFI_VideoProperties *self, cwinrt_hstring value);
 
-/* Windows.Storage.FileProperties.VideoProperties.get_Producers() */
 HRESULT wstfi_video_properties_get__producers(WSTFI_VideoProperties *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Storage.FileProperties.VideoProperties.get_Publisher() */
 HRESULT wstfi_video_properties_get__publisher(WSTFI_VideoProperties *self, cwinrt_hstring *value);
 
-/* Windows.Storage.FileProperties.VideoProperties.put_Publisher() */
 HRESULT wstfi_video_properties_put__publisher(WSTFI_VideoProperties *self, cwinrt_hstring value);
 
-/* Windows.Storage.FileProperties.VideoProperties.get_Writers() */
 HRESULT wstfi_video_properties_get__writers(WSTFI_VideoProperties *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Storage.FileProperties.VideoProperties.get_Year() */
 HRESULT wstfi_video_properties_get__year(WSTFI_VideoProperties *self, uint32_t *value);
 
-/* Windows.Storage.FileProperties.VideoProperties.put_Year() */
 HRESULT wstfi_video_properties_put__year(WSTFI_VideoProperties *self, uint32_t value);
 
-/* Windows.Storage.FileProperties.VideoProperties.get_Bitrate() */
 HRESULT wstfi_video_properties_get__bitrate(WSTFI_VideoProperties *self, uint32_t *value);
 
-/* Windows.Storage.FileProperties.VideoProperties.get_Directors() */
 HRESULT wstfi_video_properties_get__directors(WSTFI_VideoProperties *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Storage.FileProperties.VideoProperties.get_Orientation() */
 HRESULT wstfi_video_properties_get__orientation(WSTFI_VideoProperties *self, WSTFI_VideoOrientation *value);
 
-/* Windows.Storage.FileProperties.VideoProperties.RetrievePropertiesAsync(propertiesToRetrieve) */
 HRESULT wstfi_video_properties_retrieve_properties_async(WSTFI_VideoProperties *self, WFOCO_IIterable_HSTRING* propertiesToRetrieve, WF_IAsyncOperation_WFOCO_IMap_HSTRING_Object** out);
 
-/* Windows.Storage.FileProperties.VideoProperties.SavePropertiesAsync(propertiesToSave) */
 HRESULT wstfi_video_properties_save_properties_async_p_p(WSTFI_VideoProperties *self, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_Object* propertiesToSave, WF_IAsyncAction** out);
 
-/* Windows.Storage.FileProperties.VideoProperties.SavePropertiesAsync() */
 HRESULT wstfi_video_properties_save_properties_async(WSTFI_VideoProperties *self, WF_IAsyncAction** out);
 
-/* Windows.Storage.FileProperties.IStorageItemContentProperties */
-/* Windows.Storage.FileProperties.IMusicProperties */
-/* Windows.Storage.FileProperties.IImageProperties */
-/* Windows.Storage.FileProperties.IDocumentProperties */
-/* Windows.Storage.FileProperties.IThumbnailProperties */
-/* Windows.Storage.FileProperties.IThumbnailProperties.get_OriginalWidth() */
 HRESULT wstfi_thumbnail_properties_get__original_width(WSTFI_IThumbnailProperties *self, uint32_t *value);
 
-/* Windows.Storage.FileProperties.IThumbnailProperties.get_OriginalHeight() */
 HRESULT wstfi_thumbnail_properties_get__original_height(WSTFI_IThumbnailProperties *self, uint32_t *value);
 
-/* Windows.Storage.FileProperties.IThumbnailProperties.get_ReturnedSmallerCachedSize() */
 HRESULT wstfi_thumbnail_properties_get__returned_smaller_cached_size(WSTFI_IThumbnailProperties *self, BOOL *value);
 
-/* Windows.Storage.FileProperties.IThumbnailProperties.get_Type() */
 HRESULT wstfi_thumbnail_properties_get__type(WSTFI_IThumbnailProperties *self, WSTFI_ThumbnailType *value);
 
-/* Windows.Storage.FileProperties.IBasicProperties */
-/* Windows.Storage.FileProperties.IVideoProperties */
-/* Windows.Storage.FileProperties.IStorageItemExtraProperties */
-/* Windows.Storage.FileProperties.IStorageItemExtraProperties.RetrievePropertiesAsync(propertiesToRetrieve) */
 HRESULT wstfi_storage_item_extra_properties_retrieve_properties_async(WSTFI_IStorageItemExtraProperties *self, WFOCO_IIterable_HSTRING* propertiesToRetrieve, WF_IAsyncOperation_WFOCO_IMap_HSTRING_Object** out);
 
-/* Windows.Storage.FileProperties.IStorageItemExtraProperties.SavePropertiesAsync(propertiesToSave) */
 HRESULT wstfi_storage_item_extra_properties_save_properties_async_p_p(WSTFI_IStorageItemExtraProperties *self, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_Object* propertiesToSave, WF_IAsyncAction** out);
 
-/* Windows.Storage.FileProperties.IStorageItemExtraProperties.SavePropertiesAsync() */
 HRESULT wstfi_storage_item_extra_properties_save_properties_async(WSTFI_IStorageItemExtraProperties *self, WF_IAsyncAction** out);
 
 #endif /* CWINRT_WINDOWS_STORAGE_FILEPROPERTIES_H */

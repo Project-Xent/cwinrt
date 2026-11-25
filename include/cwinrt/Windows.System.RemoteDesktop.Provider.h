@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.UI.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WSYREPR_IRemoteDesktopRegistrarStatics WSYREPR_IRemoteDesktopRegistrarStatics;
 typedef struct WSYREPR_PerformLocalActionRequestedEventArgs WSYREPR_PerformLocalActionRequestedEventArgs;
 typedef struct WSYREPR_IRemoteDesktopConnectionRemoteInfoStatics WSYREPR_IRemoteDesktopConnectionRemoteInfoStatics;
@@ -29,7 +28,6 @@ typedef struct WSYREPR_IRemoteDesktopConnectionInfo_2 WSYREPR_IRemoteDesktopConn
 typedef struct WSYREPR_IRemoteDesktopConnectionRemoteInfo WSYREPR_IRemoteDesktopConnectionRemoteInfo;
 typedef struct WSYREPR_IRemoteDesktopInfo WSYREPR_IRemoteDesktopInfo;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IVector_WSYREPR_RemoteDesktopInfo
 #define CWINRT_FWD_WFOCO_IVector_WSYREPR_RemoteDesktopInfo
 typedef struct WFOCO_IVector_WSYREPR_RemoteDesktopInfo WFOCO_IVector_WSYREPR_RemoteDesktopInfo;
@@ -72,7 +70,6 @@ typedef enum WSYREPR_RemoteDesktopLocalAction {
 } WSYREPR_RemoteDesktopLocalAction;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -113,62 +110,38 @@ static const IID CWINRT_IID_WSYREPR_IRemoteDesktopConnectionRemoteInfo CWINRT_MA
 static const IID CWINRT_IID_WSYREPR_IRemoteDesktopInfo CWINRT_MAYBE_UNUSED = { 0xD185BB25, 0x2F1E, 0x5098, { 0xB9, 0xE0, 0xF4, 0x6D, 0x63, 0x58, 0xC5, 0xC4 } };
 #endif
 
-/* Methods */
-
-/* Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics */
-/* Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics.get_DesktopInfos() */
 HRESULT wsyrepr_remote_desktop_registrar_statics_get__desktop_infos(WSYREPR_IRemoteDesktopRegistrarStatics *self, WFOCO_IVector_WSYREPR_RemoteDesktopInfo** value);
 
-/* Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics.IsSwitchToLocalSessionEnabled() */
 HRESULT wsyrepr_remote_desktop_registrar_statics_is_switch_to_local_session_enabled(WSYREPR_IRemoteDesktopRegistrarStatics *self, BOOL *out);
 
-/* activate Windows.System.RemoteDesktop.Provider.PerformLocalActionRequestedEventArgs */
 HRESULT wsyrepr_perform_local_action_requested_event_args_new(WSYREPR_PerformLocalActionRequestedEventArgs **out);
 
-/* Windows.System.RemoteDesktop.Provider.PerformLocalActionRequestedEventArgs */
-/* Windows.System.RemoteDesktop.Provider.PerformLocalActionRequestedEventArgs.get_Action() */
 HRESULT wsyrepr_perform_local_action_requested_event_args_get__action(WSYREPR_PerformLocalActionRequestedEventArgs *self, WSYREPR_RemoteDesktopLocalAction *value);
 
-/* Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfoStatics */
-/* Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfoStatics.IsSwitchSupported() */
 HRESULT wsyrepr_remote_desktop_connection_remote_info_statics_is_switch_supported(WSYREPR_IRemoteDesktopConnectionRemoteInfoStatics *self, BOOL *out);
 
-/* Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfoStatics.GetForLaunchUri(launchUri) */
 HRESULT wsyrepr_remote_desktop_connection_remote_info_statics_get_for_launch_uri(WSYREPR_IRemoteDesktopConnectionRemoteInfoStatics *self, WF_Uri* launchUri, WSYREPR_RemoteDesktopConnectionRemoteInfo** out);
 
-/* activate Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionInfo */
 HRESULT wsyrepr_remote_desktop_connection_info_new(WSYREPR_RemoteDesktopConnectionInfo **out);
 
-/* Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionInfo */
-/* Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionInfo.SetConnectionStatus() */
 HRESULT wsyrepr_remote_desktop_connection_info_set_connection_status(WSYREPR_RemoteDesktopConnectionInfo *self, WSYREPR_RemoteDesktopConnectionStatus value);
 
-/* Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionInfo.SwitchToLocalSession() */
 HRESULT wsyrepr_remote_desktop_connection_info_switch_to_local_session(WSYREPR_RemoteDesktopConnectionInfo *self);
 
-/* Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionInfo.PerformLocalActionFromRemote(action) */
 HRESULT wsyrepr_remote_desktop_connection_info_perform_local_action_from_remote(WSYREPR_RemoteDesktopConnectionInfo *self, WSYREPR_RemoteDesktopLocalAction action);
 
-/* Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionInfo.GetForLaunchUri(launchUri, windowId) */
 HRESULT wsyrepr_remote_desktop_connection_info_get_for_launch_uri(WF_Uri* launchUri, WUI_WindowId windowId, WSYREPR_RemoteDesktopConnectionInfo** out);
 
-/* activate Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo */
 HRESULT wsyrepr_remote_desktop_connection_remote_info_new(WSYREPR_RemoteDesktopConnectionRemoteInfo **out);
 
-/* Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo */
-/* Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo.ReportSwitched() */
 HRESULT wsyrepr_remote_desktop_connection_remote_info_report_switched(WSYREPR_RemoteDesktopConnectionRemoteInfo *self);
 
-/* Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo.Close() */
 HRESULT wsyrepr_remote_desktop_connection_remote_info_close(WSYREPR_RemoteDesktopConnectionRemoteInfo *self);
 
-/* Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo.IsSwitchSupported() */
 HRESULT wsyrepr_remote_desktop_connection_remote_info_is_switch_supported(BOOL *out);
 
-/* Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo.GetForLaunchUri(launchUri) */
 HRESULT wsyrepr_remote_desktop_connection_remote_info_get_for_launch_uri(WF_Uri* launchUri, WSYREPR_RemoteDesktopConnectionRemoteInfo** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsyrepr_remote_desktop_connection_remote_info_on_switch_to_local_session_requested(WSYREPR_RemoteDesktopConnectionRemoteInfo *self, cwinrt_event_fn fn, void *ctx);
@@ -177,40 +150,22 @@ void wsyrepr_remote_desktop_connection_remote_info_off_switch_to_local_session_r
 cwinrt_token wsyrepr_remote_desktop_connection_remote_info_on_perform_local_action_requested(WSYREPR_RemoteDesktopConnectionRemoteInfo *self, cwinrt_event_fn fn, void *ctx);
 void wsyrepr_remote_desktop_connection_remote_info_off_perform_local_action_requested(WSYREPR_RemoteDesktopConnectionRemoteInfo *self, cwinrt_token token);
 
-/* activate Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo */
 HRESULT wsyrepr_remote_desktop_info_new(WSYREPR_RemoteDesktopInfo **out);
 
-/* Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo */
-/* Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo.get_DisplayName() */
 HRESULT wsyrepr_remote_desktop_info_get__display_name(WSYREPR_RemoteDesktopInfo *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo.get_Id() */
 HRESULT wsyrepr_remote_desktop_info_get__id(WSYREPR_RemoteDesktopInfo *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfoStatics */
-/* Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfoStatics.GetForLaunchUri(launchUri, windowId) */
 HRESULT wsyrepr_remote_desktop_connection_info_statics_get_for_launch_uri(WSYREPR_IRemoteDesktopConnectionInfoStatics *self, WF_Uri* launchUri, WUI_WindowId windowId, WSYREPR_RemoteDesktopConnectionInfo** out);
 
-/* activate Windows.System.RemoteDesktop.Provider.RemoteDesktopRegistrar */
 HRESULT wsyrepr_remote_desktop_registrar_new(WSYREPR_RemoteDesktopRegistrar **out);
 
-/* Windows.System.RemoteDesktop.Provider.RemoteDesktopRegistrar */
-/* Windows.System.RemoteDesktop.Provider.RemoteDesktopRegistrar.get_DesktopInfos() */
 HRESULT wsyrepr_remote_desktop_registrar_get__desktop_infos(WFOCO_IVector_WSYREPR_RemoteDesktopInfo** value);
 
-/* Windows.System.RemoteDesktop.Provider.RemoteDesktopRegistrar.IsSwitchToLocalSessionEnabled() */
 HRESULT wsyrepr_remote_desktop_registrar_is_switch_to_local_session_enabled(BOOL *out);
 
-/* Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfoFactory */
-/* Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfoFactory.CreateInstance(id, displayName) */
 HRESULT wsyrepr_remote_desktop_info_factory_create_instance(WSYREPR_IRemoteDesktopInfoFactory *self, cwinrt_hstring id, cwinrt_hstring displayName, WSYREPR_RemoteDesktopInfo** out);
 
-/* Windows.System.RemoteDesktop.Provider.IPerformLocalActionRequestedEventArgs */
-/* Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfo */
-/* Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfo2 */
-/* Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfo2.PerformLocalActionFromRemote(action) */
 HRESULT wsyrepr_remote_desktop_connection_info_2_perform_local_action_from_remote(WSYREPR_IRemoteDesktopConnectionInfo_2 *self, WSYREPR_RemoteDesktopLocalAction action);
 
-/* Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo */
-/* Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfo */
 #endif /* CWINRT_WINDOWS_SYSTEM_REMOTEDESKTOP_PROVIDER_H */

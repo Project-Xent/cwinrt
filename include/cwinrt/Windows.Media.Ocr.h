@@ -13,13 +13,11 @@
 #include <cwinrt/Windows.Graphics.Imaging.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WGL_Language
 #define CWINRT_FWD_WGL_Language
 typedef struct WGL_Language WGL_Language;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMEOC_OcrEngine WMEOC_OcrEngine;
 typedef struct WMEOC_OcrLine WMEOC_OcrLine;
 typedef struct WMEOC_OcrResult WMEOC_OcrResult;
@@ -30,7 +28,6 @@ typedef struct WMEOC_IOcrLine WMEOC_IOcrLine;
 typedef struct WMEOC_IOcrResult WMEOC_IOcrResult;
 typedef struct WMEOC_IOcrWord WMEOC_IOcrWord;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WGRIM_SoftwareBitmap
 #define CWINRT_FWD_WGRIM_SoftwareBitmap
 typedef struct WGRIM_SoftwareBitmap WGRIM_SoftwareBitmap;
@@ -56,7 +53,6 @@ typedef struct WFOCO_IVectorView_WMEOC_OcrWord WFOCO_IVectorView_WMEOC_OcrWord;
 typedef struct WFOCO_IVectorView_WMEOC_OcrLine WFOCO_IVectorView_WMEOC_OcrLine;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -81,84 +77,50 @@ static const IID CWINRT_IID_WMEOC_IOcrResult CWINRT_MAYBE_UNUSED = { 0x9BD235B2,
 static const IID CWINRT_IID_WMEOC_IOcrWord CWINRT_MAYBE_UNUSED = { 0x3C2A477A, 0x5CD9, 0x3525, { 0xBA, 0x2A, 0x23, 0xD1, 0xE0, 0xA6, 0x8A, 0x1D } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Media.Ocr.OcrEngine */
 HRESULT wmeoc_ocr_engine_new(WMEOC_OcrEngine **out);
 
-/* Windows.Media.Ocr.OcrEngine */
-/* Windows.Media.Ocr.OcrEngine.RecognizeAsync(bitmap) */
 HRESULT wmeoc_ocr_engine_recognize_async(WMEOC_OcrEngine *self, WGRIM_SoftwareBitmap* bitmap, WF_IAsyncOperation_WMEOC_OcrResult** out);
 
-/* Windows.Media.Ocr.OcrEngine.get_RecognizerLanguage() */
 HRESULT wmeoc_ocr_engine_get__recognizer_language(WMEOC_OcrEngine *self, WGL_Language** value);
 
-/* Windows.Media.Ocr.OcrEngine.get_MaxImageDimension() */
 HRESULT wmeoc_ocr_engine_get__max_image_dimension(uint32_t *value);
 
-/* Windows.Media.Ocr.OcrEngine.get_AvailableRecognizerLanguages() */
 HRESULT wmeoc_ocr_engine_get__available_recognizer_languages(WFOCO_IVectorView_WGL_Language** value);
 
-/* Windows.Media.Ocr.OcrEngine.IsLanguageSupported(language) */
 HRESULT wmeoc_ocr_engine_is_language_supported(WGL_Language* language, BOOL *out);
 
-/* Windows.Media.Ocr.OcrEngine.TryCreateFromLanguage(language) */
 HRESULT wmeoc_ocr_engine_try_create_from_language(WGL_Language* language, WMEOC_OcrEngine** out);
 
-/* Windows.Media.Ocr.OcrEngine.TryCreateFromUserProfileLanguages() */
 HRESULT wmeoc_ocr_engine_try_create_from_user_profile_languages(WMEOC_OcrEngine** out);
 
-/* activate Windows.Media.Ocr.OcrLine */
 HRESULT wmeoc_ocr_line_new(WMEOC_OcrLine **out);
 
-/* Windows.Media.Ocr.OcrLine */
-/* Windows.Media.Ocr.OcrLine.get_Words() */
 HRESULT wmeoc_ocr_line_get__words(WMEOC_OcrLine *self, WFOCO_IVectorView_WMEOC_OcrWord** value);
 
-/* Windows.Media.Ocr.OcrLine.get_Text() */
 HRESULT wmeoc_ocr_line_get__text(WMEOC_OcrLine *self, cwinrt_hstring *value);
 
-/* activate Windows.Media.Ocr.OcrResult */
 HRESULT wmeoc_ocr_result_new(WMEOC_OcrResult **out);
 
-/* Windows.Media.Ocr.OcrResult */
-/* Windows.Media.Ocr.OcrResult.get_Lines() */
 HRESULT wmeoc_ocr_result_get__lines(WMEOC_OcrResult *self, WFOCO_IVectorView_WMEOC_OcrLine** value);
 
-/* Windows.Media.Ocr.OcrResult.get_TextAngle() */
 HRESULT wmeoc_ocr_result_get__text_angle(WMEOC_OcrResult *self, double** value);
 
-/* Windows.Media.Ocr.OcrResult.get_Text() */
 HRESULT wmeoc_ocr_result_get__text(WMEOC_OcrResult *self, cwinrt_hstring *value);
 
-/* activate Windows.Media.Ocr.OcrWord */
 HRESULT wmeoc_ocr_word_new(WMEOC_OcrWord **out);
 
-/* Windows.Media.Ocr.OcrWord */
-/* Windows.Media.Ocr.OcrWord.get_BoundingRect() */
 HRESULT wmeoc_ocr_word_get__bounding_rect(WMEOC_OcrWord *self, WF_Rect *value);
 
-/* Windows.Media.Ocr.OcrWord.get_Text() */
 HRESULT wmeoc_ocr_word_get__text(WMEOC_OcrWord *self, cwinrt_hstring *value);
 
-/* Windows.Media.Ocr.IOcrEngineStatics */
-/* Windows.Media.Ocr.IOcrEngineStatics.get_MaxImageDimension() */
 HRESULT wmeoc_ocr_engine_statics_get__max_image_dimension(WMEOC_IOcrEngineStatics *self, uint32_t *value);
 
-/* Windows.Media.Ocr.IOcrEngineStatics.get_AvailableRecognizerLanguages() */
 HRESULT wmeoc_ocr_engine_statics_get__available_recognizer_languages(WMEOC_IOcrEngineStatics *self, WFOCO_IVectorView_WGL_Language** value);
 
-/* Windows.Media.Ocr.IOcrEngineStatics.IsLanguageSupported(language) */
 HRESULT wmeoc_ocr_engine_statics_is_language_supported(WMEOC_IOcrEngineStatics *self, WGL_Language* language, BOOL *out);
 
-/* Windows.Media.Ocr.IOcrEngineStatics.TryCreateFromLanguage(language) */
 HRESULT wmeoc_ocr_engine_statics_try_create_from_language(WMEOC_IOcrEngineStatics *self, WGL_Language* language, WMEOC_OcrEngine** out);
 
-/* Windows.Media.Ocr.IOcrEngineStatics.TryCreateFromUserProfileLanguages() */
 HRESULT wmeoc_ocr_engine_statics_try_create_from_user_profile_languages(WMEOC_IOcrEngineStatics *self, WMEOC_OcrEngine** out);
 
-/* Windows.Media.Ocr.IOcrEngine */
-/* Windows.Media.Ocr.IOcrLine */
-/* Windows.Media.Ocr.IOcrResult */
-/* Windows.Media.Ocr.IOcrWord */
 #endif /* CWINRT_WINDOWS_MEDIA_OCR_H */

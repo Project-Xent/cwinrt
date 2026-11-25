@@ -12,14 +12,12 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WUIXARE_ICustomXamlResourceLoaderFactory WUIXARE_ICustomXamlResourceLoaderFactory;
 typedef struct WUIXARE_CustomXamlResourceLoader WUIXARE_CustomXamlResourceLoader;
 typedef struct WUIXARE_ICustomXamlResourceLoaderStatics WUIXARE_ICustomXamlResourceLoaderStatics;
 typedef struct WUIXARE_ICustomXamlResourceLoader WUIXARE_ICustomXamlResourceLoader;
 typedef struct WUIXARE_ICustomXamlResourceLoaderOverrides WUIXARE_ICustomXamlResourceLoaderOverrides;
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -40,31 +38,18 @@ static const IID CWINRT_IID_WUIXARE_ICustomXamlResourceLoader CWINRT_MAYBE_UNUSE
 static const IID CWINRT_IID_WUIXARE_ICustomXamlResourceLoaderOverrides CWINRT_MAYBE_UNUSED = { 0xF851E991, 0xAF02, 0x46E8, { 0x9A, 0xF8, 0x42, 0x7B, 0x7E, 0xBF, 0xE9, 0xF8 } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.Xaml.Resources.ICustomXamlResourceLoaderFactory */
-/* Windows.UI.Xaml.Resources.ICustomXamlResourceLoaderFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixare_custom_xaml_resource_loader_factory_create_instance(WUIXARE_ICustomXamlResourceLoaderFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXARE_CustomXamlResourceLoader** out);
 
-/* Windows.UI.Xaml.Resources.CustomXamlResourceLoader */
-/* Windows.UI.Xaml.Resources.CustomXamlResourceLoader.GetResource(resourceId, objectType, propertyName, propertyType) */
 HRESULT wuixare_custom_xaml_resource_loader_get_resource(WUIXARE_CustomXamlResourceLoader *self, cwinrt_hstring resourceId, cwinrt_hstring objectType, cwinrt_hstring propertyName, cwinrt_hstring propertyType, IInspectable** out);
 
-/* Windows.UI.Xaml.Resources.CustomXamlResourceLoader.get_Current() */
 HRESULT wuixare_custom_xaml_resource_loader_get__current(WUIXARE_CustomXamlResourceLoader** value);
 
-/* Windows.UI.Xaml.Resources.CustomXamlResourceLoader.put_Current() */
 HRESULT wuixare_custom_xaml_resource_loader_put__current(WUIXARE_CustomXamlResourceLoader* value);
 
-/* Windows.UI.Xaml.Resources.ICustomXamlResourceLoaderStatics */
-/* Windows.UI.Xaml.Resources.ICustomXamlResourceLoaderStatics.get_Current() */
 HRESULT wuixare_custom_xaml_resource_loader_statics_get__current(WUIXARE_ICustomXamlResourceLoaderStatics *self, WUIXARE_CustomXamlResourceLoader** value);
 
-/* Windows.UI.Xaml.Resources.ICustomXamlResourceLoaderStatics.put_Current() */
 HRESULT wuixare_custom_xaml_resource_loader_statics_put__current(WUIXARE_ICustomXamlResourceLoaderStatics *self, WUIXARE_CustomXamlResourceLoader* value);
 
-/* Windows.UI.Xaml.Resources.ICustomXamlResourceLoaderOverrides */
-/* Windows.UI.Xaml.Resources.ICustomXamlResourceLoaderOverrides.GetResource(resourceId, objectType, propertyName, propertyType) */
 HRESULT wuixare_custom_xaml_resource_loader_overrides_get_resource(WUIXARE_ICustomXamlResourceLoaderOverrides *self, cwinrt_hstring resourceId, cwinrt_hstring objectType, cwinrt_hstring propertyName, cwinrt_hstring propertyType, IInspectable** out);
 
 #endif /* CWINRT_WINDOWS_UI_XAML_RESOURCES_H */

@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.UI.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_RandomAccessStreamReference
 #define CWINRT_FWD_WSTST_RandomAccessStreamReference
 typedef struct WSTST_RandomAccessStreamReference WSTST_RandomAccessStreamReference;
@@ -44,7 +43,6 @@ typedef struct WS_IStorageFile WS_IStorageFile;
 typedef struct WS_StorageFile WS_StorageFile;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPDA_ShareProvidersRequestedEventArgs WAPDA_ShareProvidersRequestedEventArgs;
 typedef struct WAPDA_ShareProviderOperation WAPDA_ShareProviderOperation;
 typedef struct WAPDA_ShareProviderHandler WAPDA_ShareProviderHandler;
@@ -135,7 +133,6 @@ typedef struct WAPDA_IDataRequestedEventArgs WAPDA_IDataRequestedEventArgs;
 typedef struct WAPDA_IDataRequestDeferral WAPDA_IDataRequestDeferral;
 typedef struct WAPDA_IDataRequest WAPDA_IDataRequest;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IVector_WAPDA_ShareProvider
 #define CWINRT_FWD_WFOCO_IVector_WAPDA_ShareProvider
 typedef struct WFOCO_IVector_WAPDA_ShareProvider WFOCO_IVector_WAPDA_ShareProvider;
@@ -327,7 +324,6 @@ typedef enum WAPDA_DataPackageOperation {
 } WAPDA_DataPackageOperation;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -564,213 +560,132 @@ static const IID CWINRT_IID_WAPDA_IDataRequestDeferral CWINRT_MAYBE_UNUSED = { 0
 static const IID CWINRT_IID_WAPDA_IDataRequest CWINRT_MAYBE_UNUSED = { 0x4341AE3B, 0xFC12, 0x4E53, { 0x8C, 0x02, 0xAC, 0x71, 0x4C, 0x41, 0x5A, 0x27 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.DataTransfer.ShareProvidersRequestedEventArgs */
 HRESULT wapda_share_providers_requested_event_args_new(WAPDA_ShareProvidersRequestedEventArgs **out);
 
-/* Windows.ApplicationModel.DataTransfer.ShareProvidersRequestedEventArgs */
-/* Windows.ApplicationModel.DataTransfer.ShareProvidersRequestedEventArgs.get_Providers() */
 HRESULT wapda_share_providers_requested_event_args_get__providers(WAPDA_ShareProvidersRequestedEventArgs *self, WFOCO_IVector_WAPDA_ShareProvider** value);
 
-/* Windows.ApplicationModel.DataTransfer.ShareProvidersRequestedEventArgs.get_Data() */
 HRESULT wapda_share_providers_requested_event_args_get__data(WAPDA_ShareProvidersRequestedEventArgs *self, WAPDA_DataPackageView** value);
 
-/* Windows.ApplicationModel.DataTransfer.ShareProvidersRequestedEventArgs.GetDeferral() */
 HRESULT wapda_share_providers_requested_event_args_get_deferral(WAPDA_ShareProvidersRequestedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.ApplicationModel.DataTransfer.ShareProviderOperation */
 HRESULT wapda_share_provider_operation_new(WAPDA_ShareProviderOperation **out);
 
-/* Windows.ApplicationModel.DataTransfer.ShareProviderOperation */
-/* Windows.ApplicationModel.DataTransfer.ShareProviderOperation.get_Data() */
 HRESULT wapda_share_provider_operation_get__data(WAPDA_ShareProviderOperation *self, WAPDA_DataPackageView** value);
 
-/* Windows.ApplicationModel.DataTransfer.ShareProviderOperation.get_Provider() */
 HRESULT wapda_share_provider_operation_get__provider(WAPDA_ShareProviderOperation *self, WAPDA_ShareProvider** value);
 
-/* Windows.ApplicationModel.DataTransfer.ShareProviderOperation.ReportCompleted() */
 HRESULT wapda_share_provider_operation_report_completed(WAPDA_ShareProviderOperation *self);
 
-/* Windows.ApplicationModel.DataTransfer.ShareProviderHandler */
-/* Windows.ApplicationModel.DataTransfer.ShareProviderHandler.Invoke(operation) */
 HRESULT wapda_share_provider_handler_invoke(WAPDA_ShareProviderHandler *self, WAPDA_ShareProviderOperation* operation);
 
-/* activate Windows.ApplicationModel.DataTransfer.ShareProvider */
 HRESULT wapda_share_provider_new(WAPDA_ShareProvider **out);
 
-/* Windows.ApplicationModel.DataTransfer.ShareProvider */
-/* Windows.ApplicationModel.DataTransfer.ShareProvider.get_Title() */
 HRESULT wapda_share_provider_get__title(WAPDA_ShareProvider *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.ShareProvider.get_DisplayIcon() */
 HRESULT wapda_share_provider_get__display_icon(WAPDA_ShareProvider *self, WSTST_RandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.DataTransfer.ShareProvider.get_BackgroundColor() */
 HRESULT wapda_share_provider_get__background_color(WAPDA_ShareProvider *self, WUI_Color *value);
 
-/* Windows.ApplicationModel.DataTransfer.ShareProvider.get_Tag() */
 HRESULT wapda_share_provider_get__tag(WAPDA_ShareProvider *self, IInspectable** value);
 
-/* Windows.ApplicationModel.DataTransfer.ShareProvider.put_Tag() */
 HRESULT wapda_share_provider_put__tag(WAPDA_ShareProvider *self, IInspectable* value);
 
-/* activate Windows.ApplicationModel.DataTransfer.ShareCompletedEventArgs */
 HRESULT wapda_share_completed_event_args_new(WAPDA_ShareCompletedEventArgs **out);
 
-/* Windows.ApplicationModel.DataTransfer.ShareCompletedEventArgs */
-/* Windows.ApplicationModel.DataTransfer.ShareCompletedEventArgs.get_ShareTarget() */
 HRESULT wapda_share_completed_event_args_get__share_target(WAPDA_ShareCompletedEventArgs *self, WAPDA_ShareTargetInfo** value);
 
-/* activate Windows.ApplicationModel.DataTransfer.ShareTargetInfo */
 HRESULT wapda_share_target_info_new(WAPDA_ShareTargetInfo **out);
 
-/* Windows.ApplicationModel.DataTransfer.ShareTargetInfo */
-/* Windows.ApplicationModel.DataTransfer.ShareTargetInfo.get_AppUserModelId() */
 HRESULT wapda_share_target_info_get__app_user_model_id(WAPDA_ShareTargetInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.ShareTargetInfo.get_ShareProvider() */
 HRESULT wapda_share_target_info_get__share_provider(WAPDA_ShareTargetInfo *self, WAPDA_ShareProvider** value);
 
-/* activate Windows.ApplicationModel.DataTransfer.ShareUIOptions */
 HRESULT wapda_share_u_i_options_new(WAPDA_ShareUIOptions **out);
 
-/* Windows.ApplicationModel.DataTransfer.ShareUIOptions */
-/* Windows.ApplicationModel.DataTransfer.ShareUIOptions.get_Theme() */
 HRESULT wapda_share_u_i_options_get__theme(WAPDA_ShareUIOptions *self, WAPDA_ShareUITheme *value);
 
-/* Windows.ApplicationModel.DataTransfer.ShareUIOptions.put_Theme() */
 HRESULT wapda_share_u_i_options_put__theme(WAPDA_ShareUIOptions *self, WAPDA_ShareUITheme value);
 
-/* Windows.ApplicationModel.DataTransfer.ShareUIOptions.get_SelectionRect() */
 HRESULT wapda_share_u_i_options_get__selection_rect(WAPDA_ShareUIOptions *self, WF_Rect** value);
 
-/* Windows.ApplicationModel.DataTransfer.ShareUIOptions.put_SelectionRect() */
 HRESULT wapda_share_u_i_options_put__selection_rect(WAPDA_ShareUIOptions *self, WF_Rect* value);
 
-/* activate Windows.ApplicationModel.DataTransfer.SharedStorageAccessManager */
 HRESULT wapda_shared_storage_access_manager_new(WAPDA_SharedStorageAccessManager **out);
 
-/* Windows.ApplicationModel.DataTransfer.SharedStorageAccessManager */
-/* Windows.ApplicationModel.DataTransfer.SharedStorageAccessManager.AddFile(file) */
 HRESULT wapda_shared_storage_access_manager_add_file(WS_IStorageFile* file, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.DataTransfer.SharedStorageAccessManager.RedeemTokenForFileAsync(token) */
 HRESULT wapda_shared_storage_access_manager_redeem_token_for_file_async(cwinrt_hstring token, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.ApplicationModel.DataTransfer.SharedStorageAccessManager.RemoveFile(token) */
 HRESULT wapda_shared_storage_access_manager_remove_file(cwinrt_hstring token);
 
-/* activate Windows.ApplicationModel.DataTransfer.StandardDataFormats */
 HRESULT wapda_standard_data_formats_new(WAPDA_StandardDataFormats **out);
 
-/* Windows.ApplicationModel.DataTransfer.StandardDataFormats */
-/* Windows.ApplicationModel.DataTransfer.StandardDataFormats.get_UserActivityJsonArray() */
 HRESULT wapda_standard_data_formats_get__user_activity_json_array(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.StandardDataFormats.get_WebLink() */
 HRESULT wapda_standard_data_formats_get__web_link(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.StandardDataFormats.get_ApplicationLink() */
 HRESULT wapda_standard_data_formats_get__application_link(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.StandardDataFormats.get_Text() */
 HRESULT wapda_standard_data_formats_get__text(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.StandardDataFormats.get_Uri() */
 HRESULT wapda_standard_data_formats_get__uri(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.StandardDataFormats.get_Html() */
 HRESULT wapda_standard_data_formats_get__html(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.StandardDataFormats.get_Rtf() */
 HRESULT wapda_standard_data_formats_get__rtf(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.StandardDataFormats.get_Bitmap() */
 HRESULT wapda_standard_data_formats_get__bitmap(cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.StandardDataFormats.get_StorageItems() */
 HRESULT wapda_standard_data_formats_get__storage_items(cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.DataTransfer.TargetApplicationChosenEventArgs */
 HRESULT wapda_target_application_chosen_event_args_new(WAPDA_TargetApplicationChosenEventArgs **out);
 
-/* Windows.ApplicationModel.DataTransfer.TargetApplicationChosenEventArgs */
-/* Windows.ApplicationModel.DataTransfer.TargetApplicationChosenEventArgs.get_ApplicationName() */
 HRESULT wapda_target_application_chosen_event_args_get__application_name(WAPDA_TargetApplicationChosenEventArgs *self, cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.DataTransfer.TransferTarget */
 HRESULT wapda_transfer_target_new(WAPDA_TransferTarget **out);
 
-/* Windows.ApplicationModel.DataTransfer.TransferTarget */
-/* Windows.ApplicationModel.DataTransfer.TransferTarget.get_Id() */
 HRESULT wapda_transfer_target_get__id(WAPDA_TransferTarget *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.TransferTarget.get_Label() */
 HRESULT wapda_transfer_target_get__label(WAPDA_TransferTarget *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.TransferTarget.get_DisplayIcon() */
 HRESULT wapda_transfer_target_get__display_icon(WAPDA_TransferTarget *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.DataTransfer.TransferTarget.get_IsEnabled() */
 HRESULT wapda_transfer_target_get__is_enabled(WAPDA_TransferTarget *self, BOOL *value);
 
-/* Windows.ApplicationModel.DataTransfer.TransferTarget.CreateWatcher(options) */
 HRESULT wapda_transfer_target_create_watcher(WAPDA_TransferTargetDiscoveryOptions* options, WAPDA_TransferTargetWatcher** out);
 
-/* activate Windows.ApplicationModel.DataTransfer.TransferTargetChangedEventArgs */
 HRESULT wapda_transfer_target_changed_event_args_new(WAPDA_TransferTargetChangedEventArgs **out);
 
-/* Windows.ApplicationModel.DataTransfer.TransferTargetChangedEventArgs */
-/* Windows.ApplicationModel.DataTransfer.TransferTargetChangedEventArgs.get_Target() */
 HRESULT wapda_transfer_target_changed_event_args_get__target(WAPDA_TransferTargetChangedEventArgs *self, WAPDA_TransferTarget** value);
 
-/* activate Windows.ApplicationModel.DataTransfer.TransferTargetDiscoveryOptions */
 HRESULT wapda_transfer_target_discovery_options_new(WAPDA_TransferTargetDiscoveryOptions **out);
 
-/* Windows.ApplicationModel.DataTransfer.TransferTargetDiscoveryOptions */
-/* Windows.ApplicationModel.DataTransfer.TransferTargetDiscoveryOptions.get_DataPackage() */
 HRESULT wapda_transfer_target_discovery_options_get__data_package(WAPDA_TransferTargetDiscoveryOptions *self, WAPDA_DataPackageView** value);
 
-/* Windows.ApplicationModel.DataTransfer.TransferTargetDiscoveryOptions.get_MaxAppTargets() */
 HRESULT wapda_transfer_target_discovery_options_get__max_app_targets(WAPDA_TransferTargetDiscoveryOptions *self, int32_t *value);
 
-/* Windows.ApplicationModel.DataTransfer.TransferTargetDiscoveryOptions.put_MaxAppTargets() */
 HRESULT wapda_transfer_target_discovery_options_put__max_app_targets(WAPDA_TransferTargetDiscoveryOptions *self, int32_t value);
 
-/* Windows.ApplicationModel.DataTransfer.TransferTargetDiscoveryOptions.get_AllowedTargetAppIds() */
 HRESULT wapda_transfer_target_discovery_options_get__allowed_target_app_ids(WAPDA_TransferTargetDiscoveryOptions *self, cwinrt_hstring **value, uint32_t *value_len);
 
-/* Windows.ApplicationModel.DataTransfer.TransferTargetDiscoveryOptions.put_AllowedTargetAppIds() */
 HRESULT wapda_transfer_target_discovery_options_put__allowed_target_app_ids(WAPDA_TransferTargetDiscoveryOptions *self, cwinrt_hstring *value, uint32_t value_len);
 
-/* activate Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult */
 HRESULT wapda_transfer_target_invoke_result_new(WAPDA_TransferTargetInvokeResult **out);
 
-/* Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult */
-/* Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult.get_Succeeded() */
 HRESULT wapda_transfer_target_invoke_result_get__succeeded(WAPDA_TransferTargetInvokeResult *self, BOOL *value);
 
-/* Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult.get_ExtendedError() */
 HRESULT wapda_transfer_target_invoke_result_get__extended_error(WAPDA_TransferTargetInvokeResult *self, HRESULT *value);
 
-/* activate Windows.ApplicationModel.DataTransfer.TransferTargetWatcher */
 HRESULT wapda_transfer_target_watcher_new(WAPDA_TransferTargetWatcher **out);
 
-/* Windows.ApplicationModel.DataTransfer.TransferTargetWatcher */
-/* Windows.ApplicationModel.DataTransfer.TransferTargetWatcher.Start() */
 HRESULT wapda_transfer_target_watcher_start(WAPDA_TransferTargetWatcher *self);
 
-/* Windows.ApplicationModel.DataTransfer.TransferTargetWatcher.Stop() */
 HRESULT wapda_transfer_target_watcher_stop(WAPDA_TransferTargetWatcher *self);
 
-/* Windows.ApplicationModel.DataTransfer.TransferTargetWatcher.TransferToAsync(target, parentWindowHandle) */
 HRESULT wapda_transfer_target_watcher_transfer_to_async(WAPDA_TransferTargetWatcher *self, WAPDA_TransferTarget* target, WUI_WindowId parentWindowHandle, WF_IAsyncOperationWithProgress_WAPDA_TransferTargetInvokeResult_F64** out);
 
-/* Windows.ApplicationModel.DataTransfer.TransferTargetWatcher.IsSupported(dataPackage) */
 HRESULT wapda_transfer_target_watcher_is_supported(WAPDA_DataPackageView* dataPackage, BOOL *out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapda_transfer_target_watcher_on_added(WAPDA_TransferTargetWatcher *self, cwinrt_event_fn fn, void *ctx);
@@ -788,110 +703,70 @@ void wapda_transfer_target_watcher_off_enumeration_completed(WAPDA_TransferTarge
 cwinrt_token wapda_transfer_target_watcher_on_stopped(WAPDA_TransferTargetWatcher *self, cwinrt_event_fn fn, void *ctx);
 void wapda_transfer_target_watcher_off_stopped(WAPDA_TransferTargetWatcher *self, cwinrt_token token);
 
-/* Windows.ApplicationModel.DataTransfer.IDataTransferManagerStatics2 */
-/* Windows.ApplicationModel.DataTransfer.IDataTransferManagerStatics2.IsSupported() */
 HRESULT wapda_data_transfer_manager_statics_2_is_supported(WAPDA_IDataTransferManagerStatics_2 *self, BOOL *out);
 
-/* Windows.ApplicationModel.DataTransfer.IDataTransferManagerStatics */
-/* Windows.ApplicationModel.DataTransfer.IDataTransferManagerStatics.ShowShareUI() */
 HRESULT wapda_data_transfer_manager_statics_show_share_u_i(WAPDA_IDataTransferManagerStatics *self);
 
-/* Windows.ApplicationModel.DataTransfer.IDataTransferManagerStatics.GetForCurrentView() */
 HRESULT wapda_data_transfer_manager_statics_get_for_current_view(WAPDA_IDataTransferManagerStatics *self, WAPDA_DataTransferManager** out);
 
-/* activate Windows.ApplicationModel.DataTransfer.OperationCompletedEventArgs */
 HRESULT wapda_operation_completed_event_args_new(WAPDA_OperationCompletedEventArgs **out);
 
-/* Windows.ApplicationModel.DataTransfer.OperationCompletedEventArgs */
-/* Windows.ApplicationModel.DataTransfer.OperationCompletedEventArgs.get_Operation() */
 HRESULT wapda_operation_completed_event_args_get__operation(WAPDA_OperationCompletedEventArgs *self, WAPDA_DataPackageOperation *value);
 
-/* Windows.ApplicationModel.DataTransfer.OperationCompletedEventArgs.get_AcceptedFormatId() */
 HRESULT wapda_operation_completed_event_args_get__accepted_format_id(WAPDA_OperationCompletedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.IClipboardStatics2 */
-/* Windows.ApplicationModel.DataTransfer.IClipboardStatics2.GetHistoryItemsAsync() */
 HRESULT wapda_clipboard_statics_2_get_history_items_async(WAPDA_IClipboardStatics_2 *self, WF_IAsyncOperation_WAPDA_ClipboardHistoryItemsResult** out);
 
-/* Windows.ApplicationModel.DataTransfer.IClipboardStatics2.ClearHistory() */
 HRESULT wapda_clipboard_statics_2_clear_history(WAPDA_IClipboardStatics_2 *self, BOOL *out);
 
-/* Windows.ApplicationModel.DataTransfer.IClipboardStatics2.DeleteItemFromHistory(item) */
 HRESULT wapda_clipboard_statics_2_delete_item_from_history(WAPDA_IClipboardStatics_2 *self, WAPDA_ClipboardHistoryItem* item, BOOL *out);
 
-/* Windows.ApplicationModel.DataTransfer.IClipboardStatics2.SetHistoryItemAsContent(item) */
 HRESULT wapda_clipboard_statics_2_set_history_item_as_content(WAPDA_IClipboardStatics_2 *self, WAPDA_ClipboardHistoryItem* item, WAPDA_SetHistoryItemAsContentStatus *out);
 
-/* Windows.ApplicationModel.DataTransfer.IClipboardStatics2.IsHistoryEnabled() */
 HRESULT wapda_clipboard_statics_2_is_history_enabled(WAPDA_IClipboardStatics_2 *self, BOOL *out);
 
-/* Windows.ApplicationModel.DataTransfer.IClipboardStatics2.IsRoamingEnabled() */
 HRESULT wapda_clipboard_statics_2_is_roaming_enabled(WAPDA_IClipboardStatics_2 *self, BOOL *out);
 
-/* Windows.ApplicationModel.DataTransfer.IClipboardStatics2.SetContentWithOptions(content, options) */
 HRESULT wapda_clipboard_statics_2_set_content_with_options(WAPDA_IClipboardStatics_2 *self, WAPDA_DataPackage* content, WAPDA_ClipboardContentOptions* options, BOOL *out);
 
-/* Windows.ApplicationModel.DataTransfer.IClipboardStatics */
-/* Windows.ApplicationModel.DataTransfer.IClipboardStatics.GetContent() */
 HRESULT wapda_clipboard_statics_get_content(WAPDA_IClipboardStatics *self, WAPDA_DataPackageView** out);
 
-/* Windows.ApplicationModel.DataTransfer.IClipboardStatics.SetContent(content) */
 HRESULT wapda_clipboard_statics_set_content(WAPDA_IClipboardStatics *self, WAPDA_DataPackage* content);
 
-/* Windows.ApplicationModel.DataTransfer.IClipboardStatics.Flush() */
 HRESULT wapda_clipboard_statics_flush(WAPDA_IClipboardStatics *self);
 
-/* Windows.ApplicationModel.DataTransfer.IClipboardStatics.Clear() */
 HRESULT wapda_clipboard_statics_clear(WAPDA_IClipboardStatics *self);
 
-/* activate Windows.ApplicationModel.DataTransfer.HtmlFormatHelper */
 HRESULT wapda_html_format_helper_new(WAPDA_HtmlFormatHelper **out);
 
-/* Windows.ApplicationModel.DataTransfer.HtmlFormatHelper */
-/* Windows.ApplicationModel.DataTransfer.HtmlFormatHelper.GetStaticFragment(htmlFormat) */
 HRESULT wapda_html_format_helper_get_static_fragment(cwinrt_hstring htmlFormat, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.DataTransfer.HtmlFormatHelper.CreateHtmlFormat(htmlFragment) */
 HRESULT wapda_html_format_helper_create_html_format(cwinrt_hstring htmlFragment, cwinrt_hstring *out);
 
-/* activate Windows.ApplicationModel.DataTransfer.Clipboard */
 HRESULT wapda_clipboard_new(WAPDA_Clipboard **out);
 
-/* Windows.ApplicationModel.DataTransfer.Clipboard */
-/* Windows.ApplicationModel.DataTransfer.Clipboard.GetHistoryItemsAsync() */
 HRESULT wapda_clipboard_get_history_items_async(WF_IAsyncOperation_WAPDA_ClipboardHistoryItemsResult** out);
 
-/* Windows.ApplicationModel.DataTransfer.Clipboard.ClearHistory() */
 HRESULT wapda_clipboard_clear_history(BOOL *out);
 
-/* Windows.ApplicationModel.DataTransfer.Clipboard.DeleteItemFromHistory(item) */
 HRESULT wapda_clipboard_delete_item_from_history(WAPDA_ClipboardHistoryItem* item, BOOL *out);
 
-/* Windows.ApplicationModel.DataTransfer.Clipboard.SetHistoryItemAsContent(item) */
 HRESULT wapda_clipboard_set_history_item_as_content(WAPDA_ClipboardHistoryItem* item, WAPDA_SetHistoryItemAsContentStatus *out);
 
-/* Windows.ApplicationModel.DataTransfer.Clipboard.IsHistoryEnabled() */
 HRESULT wapda_clipboard_is_history_enabled(BOOL *out);
 
-/* Windows.ApplicationModel.DataTransfer.Clipboard.IsRoamingEnabled() */
 HRESULT wapda_clipboard_is_roaming_enabled(BOOL *out);
 
-/* Windows.ApplicationModel.DataTransfer.Clipboard.SetContentWithOptions(content, options) */
 HRESULT wapda_clipboard_set_content_with_options(WAPDA_DataPackage* content, WAPDA_ClipboardContentOptions* options, BOOL *out);
 
-/* Windows.ApplicationModel.DataTransfer.Clipboard.GetContent() */
 HRESULT wapda_clipboard_get_content(WAPDA_DataPackageView** out);
 
-/* Windows.ApplicationModel.DataTransfer.Clipboard.SetContent(content) */
 HRESULT wapda_clipboard_set_content(WAPDA_DataPackage* content);
 
-/* Windows.ApplicationModel.DataTransfer.Clipboard.Flush() */
 HRESULT wapda_clipboard_flush(void);
 
-/* Windows.ApplicationModel.DataTransfer.Clipboard.Clear() */
 HRESULT wapda_clipboard_clear(void);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapda_clipboard_on_history_changed(WAPDA_Clipboard *self, cwinrt_event_fn fn, void *ctx);
@@ -906,104 +781,68 @@ void wapda_clipboard_off_history_enabled_changed(WAPDA_Clipboard *self, cwinrt_t
 cwinrt_token wapda_clipboard_on_content_changed(WAPDA_Clipboard *self, cwinrt_event_fn fn, void *ctx);
 void wapda_clipboard_off_content_changed(WAPDA_Clipboard *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.DataTransfer.ClipboardContentOptions */
 HRESULT wapda_clipboard_content_options_new(WAPDA_ClipboardContentOptions **out);
 
-/* Windows.ApplicationModel.DataTransfer.ClipboardContentOptions */
-/* Windows.ApplicationModel.DataTransfer.ClipboardContentOptions.get_IsRoamable() */
 HRESULT wapda_clipboard_content_options_get__is_roamable(WAPDA_ClipboardContentOptions *self, BOOL *value);
 
-/* Windows.ApplicationModel.DataTransfer.ClipboardContentOptions.put_IsRoamable() */
 HRESULT wapda_clipboard_content_options_put__is_roamable(WAPDA_ClipboardContentOptions *self, BOOL value);
 
-/* Windows.ApplicationModel.DataTransfer.ClipboardContentOptions.get_IsAllowedInHistory() */
 HRESULT wapda_clipboard_content_options_get__is_allowed_in_history(WAPDA_ClipboardContentOptions *self, BOOL *value);
 
-/* Windows.ApplicationModel.DataTransfer.ClipboardContentOptions.put_IsAllowedInHistory() */
 HRESULT wapda_clipboard_content_options_put__is_allowed_in_history(WAPDA_ClipboardContentOptions *self, BOOL value);
 
-/* Windows.ApplicationModel.DataTransfer.ClipboardContentOptions.get_RoamingFormats() */
 HRESULT wapda_clipboard_content_options_get__roaming_formats(WAPDA_ClipboardContentOptions *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.ApplicationModel.DataTransfer.ClipboardContentOptions.get_HistoryFormats() */
 HRESULT wapda_clipboard_content_options_get__history_formats(WAPDA_ClipboardContentOptions *self, WFOCO_IVector_HSTRING** value);
 
-/* activate Windows.ApplicationModel.DataTransfer.ClipboardHistoryItem */
 HRESULT wapda_clipboard_history_item_new(WAPDA_ClipboardHistoryItem **out);
 
-/* Windows.ApplicationModel.DataTransfer.ClipboardHistoryItem */
-/* Windows.ApplicationModel.DataTransfer.ClipboardHistoryItem.get_Id() */
 HRESULT wapda_clipboard_history_item_get__id(WAPDA_ClipboardHistoryItem *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.ClipboardHistoryItem.get_Timestamp() */
 HRESULT wapda_clipboard_history_item_get__timestamp(WAPDA_ClipboardHistoryItem *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.DataTransfer.ClipboardHistoryItem.get_Content() */
 HRESULT wapda_clipboard_history_item_get__content(WAPDA_ClipboardHistoryItem *self, WAPDA_DataPackageView** value);
 
-/* activate Windows.ApplicationModel.DataTransfer.ClipboardHistoryItemsResult */
 HRESULT wapda_clipboard_history_items_result_new(WAPDA_ClipboardHistoryItemsResult **out);
 
-/* Windows.ApplicationModel.DataTransfer.ClipboardHistoryItemsResult */
-/* Windows.ApplicationModel.DataTransfer.ClipboardHistoryItemsResult.get_Status() */
 HRESULT wapda_clipboard_history_items_result_get__status(WAPDA_ClipboardHistoryItemsResult *self, WAPDA_ClipboardHistoryItemsResultStatus *value);
 
-/* Windows.ApplicationModel.DataTransfer.ClipboardHistoryItemsResult.get_Items() */
 HRESULT wapda_clipboard_history_items_result_get__items(WAPDA_ClipboardHistoryItemsResult *self, WFOCO_IVectorView_WAPDA_ClipboardHistoryItem** value);
 
-/* activate Windows.ApplicationModel.DataTransfer.DataPackage */
 HRESULT wapda_data_package_new(WAPDA_DataPackage **out);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackage */
-/* Windows.ApplicationModel.DataTransfer.DataPackage.GetView() */
 HRESULT wapda_data_package_get_view(WAPDA_DataPackage *self, WAPDA_DataPackageView** out);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackage.get_Properties() */
 HRESULT wapda_data_package_get__properties(WAPDA_DataPackage *self, WAPDA_DataPackagePropertySet** value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackage.get_RequestedOperation() */
 HRESULT wapda_data_package_get__requested_operation(WAPDA_DataPackage *self, WAPDA_DataPackageOperation *value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackage.put_RequestedOperation() */
 HRESULT wapda_data_package_put__requested_operation(WAPDA_DataPackage *self, WAPDA_DataPackageOperation value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackage.SetData(formatId) */
 HRESULT wapda_data_package_set_data(WAPDA_DataPackage *self, cwinrt_hstring formatId, IInspectable* value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackage.SetDataProvider(formatId, delayRenderer) */
 HRESULT wapda_data_package_set_data_provider(WAPDA_DataPackage *self, cwinrt_hstring formatId, WAPDA_DataProviderHandler* delayRenderer);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackage.SetText() */
 HRESULT wapda_data_package_set_text(WAPDA_DataPackage *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackage.SetUri() */
 HRESULT wapda_data_package_set_uri(WAPDA_DataPackage *self, WF_Uri* value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackage.SetHtmlFormat() */
 HRESULT wapda_data_package_set_html_format(WAPDA_DataPackage *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackage.get_ResourceMap() */
 HRESULT wapda_data_package_get__resource_map(WAPDA_DataPackage *self, WFOCO_IMap_HSTRING_WSTST_RandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackage.SetRtf() */
 HRESULT wapda_data_package_set_rtf(WAPDA_DataPackage *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackage.SetBitmap() */
 HRESULT wapda_data_package_set_bitmap(WAPDA_DataPackage *self, WSTST_RandomAccessStreamReference* value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackage.SetStorageItems() */
 HRESULT wapda_data_package_set_storage_items(WAPDA_DataPackage *self, WFOCO_IIterable_WS_IStorageItem* value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackage.SetStorageItems(readOnly) */
 HRESULT wapda_data_package_set_storage_items_p_b(WAPDA_DataPackage *self, WFOCO_IIterable_WS_IStorageItem* value, BOOL readOnly);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackage.SetApplicationLink() */
 HRESULT wapda_data_package_set_application_link(WAPDA_DataPackage *self, WF_Uri* value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackage.SetWebLink() */
 HRESULT wapda_data_package_set_web_link(WAPDA_DataPackage *self, WF_Uri* value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapda_data_package_on_operation_completed(WAPDA_DataPackage *self, cwinrt_event_fn fn, void *ctx);
@@ -1018,282 +857,184 @@ void wapda_data_package_off_share_completed(WAPDA_DataPackage *self, cwinrt_toke
 cwinrt_token wapda_data_package_on_share_canceled(WAPDA_DataPackage *self, cwinrt_event_fn fn, void *ctx);
 void wapda_data_package_off_share_canceled(WAPDA_DataPackage *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.DataTransfer.DataPackagePropertySet */
 HRESULT wapda_data_package_property_set_new(WAPDA_DataPackagePropertySet **out);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet */
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.get_Title() */
 HRESULT wapda_data_package_property_set_get__title(WAPDA_DataPackagePropertySet *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.put_Title() */
 HRESULT wapda_data_package_property_set_put__title(WAPDA_DataPackagePropertySet *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.get_Description() */
 HRESULT wapda_data_package_property_set_get__description(WAPDA_DataPackagePropertySet *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.put_Description() */
 HRESULT wapda_data_package_property_set_put__description(WAPDA_DataPackagePropertySet *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.get_Thumbnail() */
 HRESULT wapda_data_package_property_set_get__thumbnail(WAPDA_DataPackagePropertySet *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.put_Thumbnail() */
 HRESULT wapda_data_package_property_set_put__thumbnail(WAPDA_DataPackagePropertySet *self, WSTST_IRandomAccessStreamReference* value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.get_FileTypes() */
 HRESULT wapda_data_package_property_set_get__file_types(WAPDA_DataPackagePropertySet *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.get_ApplicationName() */
 HRESULT wapda_data_package_property_set_get__application_name(WAPDA_DataPackagePropertySet *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.put_ApplicationName() */
 HRESULT wapda_data_package_property_set_put__application_name(WAPDA_DataPackagePropertySet *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.get_ApplicationListingUri() */
 HRESULT wapda_data_package_property_set_get__application_listing_uri(WAPDA_DataPackagePropertySet *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.put_ApplicationListingUri() */
 HRESULT wapda_data_package_property_set_put__application_listing_uri(WAPDA_DataPackagePropertySet *self, WF_Uri* value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.Lookup(key) */
 HRESULT wapda_data_package_property_set_lookup(WAPDA_DataPackagePropertySet *self, cwinrt_hstring key, IInspectable** out);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.get_Size() */
 HRESULT wapda_data_package_property_set_get__size(WAPDA_DataPackagePropertySet *self, uint32_t *value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.HasKey(key) */
 HRESULT wapda_data_package_property_set_has_key(WAPDA_DataPackagePropertySet *self, cwinrt_hstring key, BOOL *out);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.GetView() */
 HRESULT wapda_data_package_property_set_get_view(WAPDA_DataPackagePropertySet *self, WFOCO_IMapView_HSTRING_Object** out);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.Insert(key) */
 HRESULT wapda_data_package_property_set_insert(WAPDA_DataPackagePropertySet *self, cwinrt_hstring key, IInspectable* value, BOOL *out);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.Remove(key) */
 HRESULT wapda_data_package_property_set_remove(WAPDA_DataPackagePropertySet *self, cwinrt_hstring key);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.Clear() */
 HRESULT wapda_data_package_property_set_clear(WAPDA_DataPackagePropertySet *self);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.First() */
 HRESULT wapda_data_package_property_set_first(WAPDA_DataPackagePropertySet *self, WFOCO_IIterator_WFOCO_IKeyValuePair_HSTRING_Object** out);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.get_ContentSourceWebLink() */
 HRESULT wapda_data_package_property_set_get__content_source_web_link(WAPDA_DataPackagePropertySet *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.put_ContentSourceWebLink() */
 HRESULT wapda_data_package_property_set_put__content_source_web_link(WAPDA_DataPackagePropertySet *self, WF_Uri* value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.get_ContentSourceApplicationLink() */
 HRESULT wapda_data_package_property_set_get__content_source_application_link(WAPDA_DataPackagePropertySet *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.put_ContentSourceApplicationLink() */
 HRESULT wapda_data_package_property_set_put__content_source_application_link(WAPDA_DataPackagePropertySet *self, WF_Uri* value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.get_PackageFamilyName() */
 HRESULT wapda_data_package_property_set_get__package_family_name(WAPDA_DataPackagePropertySet *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.put_PackageFamilyName() */
 HRESULT wapda_data_package_property_set_put__package_family_name(WAPDA_DataPackagePropertySet *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.get_Square30x30Logo() */
 HRESULT wapda_data_package_property_set_get__square30x30_logo(WAPDA_DataPackagePropertySet *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.put_Square30x30Logo() */
 HRESULT wapda_data_package_property_set_put__square30x30_logo(WAPDA_DataPackagePropertySet *self, WSTST_IRandomAccessStreamReference* value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.get_LogoBackgroundColor() */
 HRESULT wapda_data_package_property_set_get__logo_background_color(WAPDA_DataPackagePropertySet *self, WUI_Color *value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.put_LogoBackgroundColor() */
 HRESULT wapda_data_package_property_set_put__logo_background_color(WAPDA_DataPackagePropertySet *self, WUI_Color value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.get_EnterpriseId() */
 HRESULT wapda_data_package_property_set_get__enterprise_id(WAPDA_DataPackagePropertySet *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.put_EnterpriseId() */
 HRESULT wapda_data_package_property_set_put__enterprise_id(WAPDA_DataPackagePropertySet *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.get_ContentSourceUserActivityJson() */
 HRESULT wapda_data_package_property_set_get__content_source_user_activity_json(WAPDA_DataPackagePropertySet *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySet.put_ContentSourceUserActivityJson() */
 HRESULT wapda_data_package_property_set_put__content_source_user_activity_json(WAPDA_DataPackagePropertySet *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.DataTransfer.ITransferTargetWatcherStatics */
-/* Windows.ApplicationModel.DataTransfer.ITransferTargetWatcherStatics.IsSupported(dataPackage) */
 HRESULT wapda_transfer_target_watcher_statics_is_supported(WAPDA_ITransferTargetWatcherStatics *self, WAPDA_DataPackageView* dataPackage, BOOL *out);
 
-/* activate Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView */
 HRESULT wapda_data_package_property_set_view_new(WAPDA_DataPackagePropertySetView **out);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView */
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView.get_Title() */
 HRESULT wapda_data_package_property_set_view_get__title(WAPDA_DataPackagePropertySetView *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView.get_Description() */
 HRESULT wapda_data_package_property_set_view_get__description(WAPDA_DataPackagePropertySetView *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView.get_Thumbnail() */
 HRESULT wapda_data_package_property_set_view_get__thumbnail(WAPDA_DataPackagePropertySetView *self, WSTST_RandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView.get_FileTypes() */
 HRESULT wapda_data_package_property_set_view_get__file_types(WAPDA_DataPackagePropertySetView *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView.get_ApplicationName() */
 HRESULT wapda_data_package_property_set_view_get__application_name(WAPDA_DataPackagePropertySetView *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView.get_ApplicationListingUri() */
 HRESULT wapda_data_package_property_set_view_get__application_listing_uri(WAPDA_DataPackagePropertySetView *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView.get_PackageFamilyName() */
 HRESULT wapda_data_package_property_set_view_get__package_family_name(WAPDA_DataPackagePropertySetView *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView.get_ContentSourceWebLink() */
 HRESULT wapda_data_package_property_set_view_get__content_source_web_link(WAPDA_DataPackagePropertySetView *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView.get_ContentSourceApplicationLink() */
 HRESULT wapda_data_package_property_set_view_get__content_source_application_link(WAPDA_DataPackagePropertySetView *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView.get_Square30x30Logo() */
 HRESULT wapda_data_package_property_set_view_get__square30x30_logo(WAPDA_DataPackagePropertySetView *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView.get_LogoBackgroundColor() */
 HRESULT wapda_data_package_property_set_view_get__logo_background_color(WAPDA_DataPackagePropertySetView *self, WUI_Color *value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView.get_EnterpriseId() */
 HRESULT wapda_data_package_property_set_view_get__enterprise_id(WAPDA_DataPackagePropertySetView *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView.get_ContentSourceUserActivityJson() */
 HRESULT wapda_data_package_property_set_view_get__content_source_user_activity_json(WAPDA_DataPackagePropertySetView *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView.get_IsFromRoamingClipboard() */
 HRESULT wapda_data_package_property_set_view_get__is_from_roaming_clipboard(WAPDA_DataPackagePropertySetView *self, BOOL *value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView.Lookup(key) */
 HRESULT wapda_data_package_property_set_view_lookup(WAPDA_DataPackagePropertySetView *self, cwinrt_hstring key, IInspectable** out);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView.get_Size() */
 HRESULT wapda_data_package_property_set_view_get__size(WAPDA_DataPackagePropertySetView *self, uint32_t *value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView.HasKey(key) */
 HRESULT wapda_data_package_property_set_view_has_key(WAPDA_DataPackagePropertySetView *self, cwinrt_hstring key, BOOL *out);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView.Split(first, second) */
 HRESULT wapda_data_package_property_set_view_split(WAPDA_DataPackagePropertySetView *self, WFOCO_IMapView_HSTRING_Object* first, WFOCO_IMapView_HSTRING_Object* second);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView.First() */
 HRESULT wapda_data_package_property_set_view_first(WAPDA_DataPackagePropertySetView *self, WFOCO_IIterator_WFOCO_IKeyValuePair_HSTRING_Object** out);
 
-/* activate Windows.ApplicationModel.DataTransfer.DataPackageView */
 HRESULT wapda_data_package_view_new(WAPDA_DataPackageView **out);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackageView */
-/* Windows.ApplicationModel.DataTransfer.DataPackageView.get_Properties() */
 HRESULT wapda_data_package_view_get__properties(WAPDA_DataPackageView *self, WAPDA_DataPackagePropertySetView** value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackageView.get_RequestedOperation() */
 HRESULT wapda_data_package_view_get__requested_operation(WAPDA_DataPackageView *self, WAPDA_DataPackageOperation *value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackageView.ReportOperationCompleted() */
 HRESULT wapda_data_package_view_report_operation_completed(WAPDA_DataPackageView *self, WAPDA_DataPackageOperation value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackageView.get_AvailableFormats() */
 HRESULT wapda_data_package_view_get__available_formats(WAPDA_DataPackageView *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackageView.Contains(formatId) */
 HRESULT wapda_data_package_view_contains(WAPDA_DataPackageView *self, cwinrt_hstring formatId, BOOL *out);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackageView.GetDataAsync(formatId) */
 HRESULT wapda_data_package_view_get_data_async(WAPDA_DataPackageView *self, cwinrt_hstring formatId, WF_IAsyncOperation_Object** out);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackageView.GetTextAsync() */
 HRESULT wapda_data_package_view_get_text_async(WAPDA_DataPackageView *self, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackageView.GetTextAsync(formatId) */
 HRESULT wapda_data_package_view_get_text_async_str_p(WAPDA_DataPackageView *self, cwinrt_hstring formatId, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackageView.GetUriAsync() */
 HRESULT wapda_data_package_view_get_uri_async(WAPDA_DataPackageView *self, WF_IAsyncOperation_WF_Uri** out);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackageView.GetHtmlFormatAsync() */
 HRESULT wapda_data_package_view_get_html_format_async(WAPDA_DataPackageView *self, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackageView.GetResourceMapAsync() */
 HRESULT wapda_data_package_view_get_resource_map_async(WAPDA_DataPackageView *self, WF_IAsyncOperation_WFOCO_IMapView_HSTRING_WSTST_RandomAccessStreamReference** out);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackageView.GetRtfAsync() */
 HRESULT wapda_data_package_view_get_rtf_async(WAPDA_DataPackageView *self, WF_IAsyncOperation_HSTRING** out);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackageView.GetBitmapAsync() */
 HRESULT wapda_data_package_view_get_bitmap_async(WAPDA_DataPackageView *self, WF_IAsyncOperation_WSTST_RandomAccessStreamReference** out);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackageView.GetStorageItemsAsync() */
 HRESULT wapda_data_package_view_get_storage_items_async(WAPDA_DataPackageView *self, WF_IAsyncOperation_WFOCO_IVectorView_WS_IStorageItem** out);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackageView.GetApplicationLinkAsync() */
 HRESULT wapda_data_package_view_get_application_link_async(WAPDA_DataPackageView *self, WF_IAsyncOperation_WF_Uri** out);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackageView.GetWebLinkAsync() */
 HRESULT wapda_data_package_view_get_web_link_async(WAPDA_DataPackageView *self, WF_IAsyncOperation_WF_Uri** out);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackageView.RequestAccessAsync() */
 HRESULT wapda_data_package_view_request_access_async(WAPDA_DataPackageView *self, WF_IAsyncOperation_WSEEN_ProtectionPolicyEvaluationResult** out);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackageView.RequestAccessAsync(enterpriseId) */
 HRESULT wapda_data_package_view_request_access_async_str_p(WAPDA_DataPackageView *self, cwinrt_hstring enterpriseId, WF_IAsyncOperation_WSEEN_ProtectionPolicyEvaluationResult** out);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackageView.UnlockAndAssumeEnterpriseIdentity() */
 HRESULT wapda_data_package_view_unlock_and_assume_enterprise_identity(WAPDA_DataPackageView *self, WSEEN_ProtectionPolicyEvaluationResult *out);
 
-/* Windows.ApplicationModel.DataTransfer.DataPackageView.SetAcceptedFormatId(formatId) */
 HRESULT wapda_data_package_view_set_accepted_format_id(WAPDA_DataPackageView *self, cwinrt_hstring formatId);
 
-/* activate Windows.ApplicationModel.DataTransfer.DataProviderDeferral */
 HRESULT wapda_data_provider_deferral_new(WAPDA_DataProviderDeferral **out);
 
-/* Windows.ApplicationModel.DataTransfer.DataProviderDeferral */
-/* Windows.ApplicationModel.DataTransfer.DataProviderDeferral.Complete() */
 HRESULT wapda_data_provider_deferral_complete(WAPDA_DataProviderDeferral *self);
 
-/* Windows.ApplicationModel.DataTransfer.DataProviderHandler */
-/* Windows.ApplicationModel.DataTransfer.DataProviderHandler.Invoke(request) */
 HRESULT wapda_data_provider_handler_invoke(WAPDA_DataProviderHandler *self, WAPDA_DataProviderRequest* request);
 
-/* activate Windows.ApplicationModel.DataTransfer.DataProviderRequest */
 HRESULT wapda_data_provider_request_new(WAPDA_DataProviderRequest **out);
 
-/* Windows.ApplicationModel.DataTransfer.DataProviderRequest */
-/* Windows.ApplicationModel.DataTransfer.DataProviderRequest.get_FormatId() */
 HRESULT wapda_data_provider_request_get__format_id(WAPDA_DataProviderRequest *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.DataProviderRequest.get_Deadline() */
 HRESULT wapda_data_provider_request_get__deadline(WAPDA_DataProviderRequest *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.DataTransfer.DataProviderRequest.GetDeferral() */
 HRESULT wapda_data_provider_request_get_deferral(WAPDA_DataProviderRequest *self, WAPDA_DataProviderDeferral** out);
 
-/* Windows.ApplicationModel.DataTransfer.DataProviderRequest.SetData() */
 HRESULT wapda_data_provider_request_set_data(WAPDA_DataProviderRequest *self, IInspectable* value);
 
-/* activate Windows.ApplicationModel.DataTransfer.DataTransferManager */
 HRESULT wapda_data_transfer_manager_new(WAPDA_DataTransferManager **out);
 
-/* Windows.ApplicationModel.DataTransfer.DataTransferManager */
-/* Windows.ApplicationModel.DataTransfer.DataTransferManager.ShowShareUI(options) */
 HRESULT wapda_data_transfer_manager_show_share_u_i_p(WAPDA_ShareUIOptions* options);
 
-/* Windows.ApplicationModel.DataTransfer.DataTransferManager.IsSupported() */
 HRESULT wapda_data_transfer_manager_is_supported(BOOL *out);
 
-/* Windows.ApplicationModel.DataTransfer.DataTransferManager.ShowShareUI() */
 HRESULT wapda_data_transfer_manager_show_share_u_i(void);
 
-/* Windows.ApplicationModel.DataTransfer.DataTransferManager.GetForCurrentView() */
 HRESULT wapda_data_transfer_manager_get_for_current_view(WAPDA_DataTransferManager** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapda_data_transfer_manager_on_data_requested(WAPDA_DataTransferManager *self, cwinrt_event_fn fn, void *ctx);
@@ -1305,234 +1046,122 @@ void wapda_data_transfer_manager_off_target_application_chosen(WAPDA_DataTransfe
 cwinrt_token wapda_data_transfer_manager_on_share_providers_requested(WAPDA_DataTransferManager *self, cwinrt_event_fn fn, void *ctx);
 void wapda_data_transfer_manager_off_share_providers_requested(WAPDA_DataTransferManager *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.DataTransfer.DataRequestedEventArgs */
 HRESULT wapda_data_requested_event_args_new(WAPDA_DataRequestedEventArgs **out);
 
-/* Windows.ApplicationModel.DataTransfer.DataRequestedEventArgs */
-/* Windows.ApplicationModel.DataTransfer.DataRequestedEventArgs.get_Request() */
 HRESULT wapda_data_requested_event_args_get__request(WAPDA_DataRequestedEventArgs *self, WAPDA_DataRequest** value);
 
-/* activate Windows.ApplicationModel.DataTransfer.DataRequestDeferral */
 HRESULT wapda_data_request_deferral_new(WAPDA_DataRequestDeferral **out);
 
-/* Windows.ApplicationModel.DataTransfer.DataRequestDeferral */
-/* Windows.ApplicationModel.DataTransfer.DataRequestDeferral.Complete() */
 HRESULT wapda_data_request_deferral_complete(WAPDA_DataRequestDeferral *self);
 
-/* activate Windows.ApplicationModel.DataTransfer.DataRequest */
 HRESULT wapda_data_request_new(WAPDA_DataRequest **out);
 
-/* Windows.ApplicationModel.DataTransfer.DataRequest */
-/* Windows.ApplicationModel.DataTransfer.DataRequest.get_Data() */
 HRESULT wapda_data_request_get__data(WAPDA_DataRequest *self, WAPDA_DataPackage** value);
 
-/* Windows.ApplicationModel.DataTransfer.DataRequest.put_Data() */
 HRESULT wapda_data_request_put__data(WAPDA_DataRequest *self, WAPDA_DataPackage* value);
 
-/* Windows.ApplicationModel.DataTransfer.DataRequest.get_Deadline() */
 HRESULT wapda_data_request_get__deadline(WAPDA_DataRequest *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.DataTransfer.DataRequest.FailWithDisplayText() */
 HRESULT wapda_data_request_fail_with_display_text(WAPDA_DataRequest *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.DataTransfer.DataRequest.GetDeferral() */
 HRESULT wapda_data_request_get_deferral(WAPDA_DataRequest *self, WAPDA_DataRequestDeferral** out);
 
-/* Windows.ApplicationModel.DataTransfer.ITransferTargetStatics */
-/* Windows.ApplicationModel.DataTransfer.ITransferTargetStatics.CreateWatcher(options) */
 HRESULT wapda_transfer_target_statics_create_watcher(WAPDA_ITransferTargetStatics *self, WAPDA_TransferTargetDiscoveryOptions* options, WAPDA_TransferTargetWatcher** out);
 
-/* Windows.ApplicationModel.DataTransfer.ITransferTargetDiscoveryOptionsFactory */
-/* Windows.ApplicationModel.DataTransfer.ITransferTargetDiscoveryOptionsFactory.CreateInstance(dataPackage) */
 HRESULT wapda_transfer_target_discovery_options_factory_create_instance(WAPDA_ITransferTargetDiscoveryOptionsFactory *self, WAPDA_DataPackageView* dataPackage, WAPDA_TransferTargetDiscoveryOptions** out);
 
-/* Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics3 */
-/* Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics3.get_UserActivityJsonArray() */
 HRESULT wapda_standard_data_formats_statics_3_get__user_activity_json_array(WAPDA_IStandardDataFormatsStatics_3 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics2 */
-/* Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics2.get_WebLink() */
 HRESULT wapda_standard_data_formats_statics_2_get__web_link(WAPDA_IStandardDataFormatsStatics_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics2.get_ApplicationLink() */
 HRESULT wapda_standard_data_formats_statics_2_get__application_link(WAPDA_IStandardDataFormatsStatics_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics */
-/* Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics.get_Text() */
 HRESULT wapda_standard_data_formats_statics_get__text(WAPDA_IStandardDataFormatsStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics.get_Uri() */
 HRESULT wapda_standard_data_formats_statics_get__uri(WAPDA_IStandardDataFormatsStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics.get_Html() */
 HRESULT wapda_standard_data_formats_statics_get__html(WAPDA_IStandardDataFormatsStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics.get_Rtf() */
 HRESULT wapda_standard_data_formats_statics_get__rtf(WAPDA_IStandardDataFormatsStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics.get_Bitmap() */
 HRESULT wapda_standard_data_formats_statics_get__bitmap(WAPDA_IStandardDataFormatsStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics.get_StorageItems() */
 HRESULT wapda_standard_data_formats_statics_get__storage_items(WAPDA_IStandardDataFormatsStatics *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.ISharedStorageAccessManagerStatics */
-/* Windows.ApplicationModel.DataTransfer.ISharedStorageAccessManagerStatics.AddFile(file) */
 HRESULT wapda_shared_storage_access_manager_statics_add_file(WAPDA_ISharedStorageAccessManagerStatics *self, WS_IStorageFile* file, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.DataTransfer.ISharedStorageAccessManagerStatics.RedeemTokenForFileAsync(token) */
 HRESULT wapda_shared_storage_access_manager_statics_redeem_token_for_file_async(WAPDA_ISharedStorageAccessManagerStatics *self, cwinrt_hstring token, WF_IAsyncOperation_WS_StorageFile** out);
 
-/* Windows.ApplicationModel.DataTransfer.ISharedStorageAccessManagerStatics.RemoveFile(token) */
 HRESULT wapda_shared_storage_access_manager_statics_remove_file(WAPDA_ISharedStorageAccessManagerStatics *self, cwinrt_hstring token);
 
-/* Windows.ApplicationModel.DataTransfer.IShareProviderFactory */
-/* Windows.ApplicationModel.DataTransfer.IShareProviderFactory.Create(title, displayIcon, backgroundColor, handler) */
 HRESULT wapda_share_provider_factory_create(WAPDA_IShareProviderFactory *self, cwinrt_hstring title, WSTST_RandomAccessStreamReference* displayIcon, WUI_Color backgroundColor, WAPDA_ShareProviderHandler* handler, WAPDA_ShareProvider** out);
 
-/* Windows.ApplicationModel.DataTransfer.IHtmlFormatHelperStatics */
-/* Windows.ApplicationModel.DataTransfer.IHtmlFormatHelperStatics.GetStaticFragment(htmlFormat) */
 HRESULT wapda_html_format_helper_statics_get_static_fragment(WAPDA_IHtmlFormatHelperStatics *self, cwinrt_hstring htmlFormat, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.DataTransfer.IHtmlFormatHelperStatics.CreateHtmlFormat(htmlFragment) */
 HRESULT wapda_html_format_helper_statics_create_html_format(WAPDA_IHtmlFormatHelperStatics *self, cwinrt_hstring htmlFragment, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.DataTransfer.IDataTransferManagerStatics3 */
-/* Windows.ApplicationModel.DataTransfer.IDataTransferManagerStatics3.ShowShareUI(options) */
 HRESULT wapda_data_transfer_manager_statics_3_show_share_u_i(WAPDA_IDataTransferManagerStatics_3 *self, WAPDA_ShareUIOptions* options);
 
-/* Windows.ApplicationModel.DataTransfer.IShareProvidersRequestedEventArgs */
-/* Windows.ApplicationModel.DataTransfer.IShareProviderOperation */
-/* Windows.ApplicationModel.DataTransfer.IShareProvider */
-/* Windows.ApplicationModel.DataTransfer.IShareCompletedEventArgs */
-/* Windows.ApplicationModel.DataTransfer.IShareTargetInfo */
-/* Windows.ApplicationModel.DataTransfer.IShareUIOptions */
-/* Windows.ApplicationModel.DataTransfer.ITargetApplicationChosenEventArgs */
-/* Windows.ApplicationModel.DataTransfer.ITransferTarget */
-/* Windows.ApplicationModel.DataTransfer.ITransferTargetChangedEventArgs */
-/* Windows.ApplicationModel.DataTransfer.ITransferTargetDiscoveryOptions */
-/* Windows.ApplicationModel.DataTransfer.ITransferTargetInvokeResult */
-/* Windows.ApplicationModel.DataTransfer.ITransferTargetWatcher */
-/* Windows.ApplicationModel.DataTransfer.IOperationCompletedEventArgs */
-/* Windows.ApplicationModel.DataTransfer.IOperationCompletedEventArgs2 */
-/* Windows.ApplicationModel.DataTransfer.IOperationCompletedEventArgs2.get_AcceptedFormatId() */
 HRESULT wapda_operation_completed_event_args_2_get__accepted_format_id(WAPDA_IOperationCompletedEventArgs_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.IClipboardContentOptions */
-/* Windows.ApplicationModel.DataTransfer.IClipboardHistoryItem */
-/* Windows.ApplicationModel.DataTransfer.IClipboardHistoryItemsResult */
-/* Windows.ApplicationModel.DataTransfer.IDataPackage */
-/* Windows.ApplicationModel.DataTransfer.IDataPackage2 */
-/* Windows.ApplicationModel.DataTransfer.IDataPackage2.SetApplicationLink() */
 HRESULT wapda_data_package_2_set_application_link(WAPDA_IDataPackage_2 *self, WF_Uri* value);
 
-/* Windows.ApplicationModel.DataTransfer.IDataPackage2.SetWebLink() */
 HRESULT wapda_data_package_2_set_web_link(WAPDA_IDataPackage_2 *self, WF_Uri* value);
 
-/* Windows.ApplicationModel.DataTransfer.IDataPackage3 */
-/* Windows.ApplicationModel.DataTransfer.IDataPackage4 */
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet */
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2 */
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2.get_ContentSourceWebLink() */
 HRESULT wapda_data_package_property_set_2_get__content_source_web_link(WAPDA_IDataPackagePropertySet_2 *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2.put_ContentSourceWebLink() */
 HRESULT wapda_data_package_property_set_2_put__content_source_web_link(WAPDA_IDataPackagePropertySet_2 *self, WF_Uri* value);
 
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2.get_ContentSourceApplicationLink() */
 HRESULT wapda_data_package_property_set_2_get__content_source_application_link(WAPDA_IDataPackagePropertySet_2 *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2.put_ContentSourceApplicationLink() */
 HRESULT wapda_data_package_property_set_2_put__content_source_application_link(WAPDA_IDataPackagePropertySet_2 *self, WF_Uri* value);
 
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2.get_PackageFamilyName() */
 HRESULT wapda_data_package_property_set_2_get__package_family_name(WAPDA_IDataPackagePropertySet_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2.put_PackageFamilyName() */
 HRESULT wapda_data_package_property_set_2_put__package_family_name(WAPDA_IDataPackagePropertySet_2 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2.get_Square30x30Logo() */
 HRESULT wapda_data_package_property_set_2_get__square30x30_logo(WAPDA_IDataPackagePropertySet_2 *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2.put_Square30x30Logo() */
 HRESULT wapda_data_package_property_set_2_put__square30x30_logo(WAPDA_IDataPackagePropertySet_2 *self, WSTST_IRandomAccessStreamReference* value);
 
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2.get_LogoBackgroundColor() */
 HRESULT wapda_data_package_property_set_2_get__logo_background_color(WAPDA_IDataPackagePropertySet_2 *self, WUI_Color *value);
 
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2.put_LogoBackgroundColor() */
 HRESULT wapda_data_package_property_set_2_put__logo_background_color(WAPDA_IDataPackagePropertySet_2 *self, WUI_Color value);
 
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet3 */
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet3.get_EnterpriseId() */
 HRESULT wapda_data_package_property_set_3_get__enterprise_id(WAPDA_IDataPackagePropertySet_3 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet3.put_EnterpriseId() */
 HRESULT wapda_data_package_property_set_3_put__enterprise_id(WAPDA_IDataPackagePropertySet_3 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet4 */
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet4.get_ContentSourceUserActivityJson() */
 HRESULT wapda_data_package_property_set_4_get__content_source_user_activity_json(WAPDA_IDataPackagePropertySet_4 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet4.put_ContentSourceUserActivityJson() */
 HRESULT wapda_data_package_property_set_4_put__content_source_user_activity_json(WAPDA_IDataPackagePropertySet_4 *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView */
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView2 */
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView2.get_PackageFamilyName() */
 HRESULT wapda_data_package_property_set_view_2_get__package_family_name(WAPDA_IDataPackagePropertySetView_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView2.get_ContentSourceWebLink() */
 HRESULT wapda_data_package_property_set_view_2_get__content_source_web_link(WAPDA_IDataPackagePropertySetView_2 *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView2.get_ContentSourceApplicationLink() */
 HRESULT wapda_data_package_property_set_view_2_get__content_source_application_link(WAPDA_IDataPackagePropertySetView_2 *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView2.get_Square30x30Logo() */
 HRESULT wapda_data_package_property_set_view_2_get__square30x30_logo(WAPDA_IDataPackagePropertySetView_2 *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView2.get_LogoBackgroundColor() */
 HRESULT wapda_data_package_property_set_view_2_get__logo_background_color(WAPDA_IDataPackagePropertySetView_2 *self, WUI_Color *value);
 
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView3 */
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView3.get_EnterpriseId() */
 HRESULT wapda_data_package_property_set_view_3_get__enterprise_id(WAPDA_IDataPackagePropertySetView_3 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView4 */
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView4.get_ContentSourceUserActivityJson() */
 HRESULT wapda_data_package_property_set_view_4_get__content_source_user_activity_json(WAPDA_IDataPackagePropertySetView_4 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView5 */
-/* Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView5.get_IsFromRoamingClipboard() */
 HRESULT wapda_data_package_property_set_view_5_get__is_from_roaming_clipboard(WAPDA_IDataPackagePropertySetView_5 *self, BOOL *value);
 
-/* Windows.ApplicationModel.DataTransfer.IDataPackageView */
-/* Windows.ApplicationModel.DataTransfer.IDataPackageView2 */
-/* Windows.ApplicationModel.DataTransfer.IDataPackageView2.GetApplicationLinkAsync() */
 HRESULT wapda_data_package_view_2_get_application_link_async(WAPDA_IDataPackageView_2 *self, WF_IAsyncOperation_WF_Uri** out);
 
-/* Windows.ApplicationModel.DataTransfer.IDataPackageView2.GetWebLinkAsync() */
 HRESULT wapda_data_package_view_2_get_web_link_async(WAPDA_IDataPackageView_2 *self, WF_IAsyncOperation_WF_Uri** out);
 
-/* Windows.ApplicationModel.DataTransfer.IDataPackageView3 */
-/* Windows.ApplicationModel.DataTransfer.IDataPackageView3.RequestAccessAsync() */
 HRESULT wapda_data_package_view_3_request_access_async(WAPDA_IDataPackageView_3 *self, WF_IAsyncOperation_WSEEN_ProtectionPolicyEvaluationResult** out);
 
-/* Windows.ApplicationModel.DataTransfer.IDataPackageView3.RequestAccessAsync(enterpriseId) */
 HRESULT wapda_data_package_view_3_request_access_async_str_p(WAPDA_IDataPackageView_3 *self, cwinrt_hstring enterpriseId, WF_IAsyncOperation_WSEEN_ProtectionPolicyEvaluationResult** out);
 
-/* Windows.ApplicationModel.DataTransfer.IDataPackageView3.UnlockAndAssumeEnterpriseIdentity() */
 HRESULT wapda_data_package_view_3_unlock_and_assume_enterprise_identity(WAPDA_IDataPackageView_3 *self, WSEEN_ProtectionPolicyEvaluationResult *out);
 
-/* Windows.ApplicationModel.DataTransfer.IDataPackageView4 */
-/* Windows.ApplicationModel.DataTransfer.IDataPackageView4.SetAcceptedFormatId(formatId) */
 HRESULT wapda_data_package_view_4_set_accepted_format_id(WAPDA_IDataPackageView_4 *self, cwinrt_hstring formatId);
 
-/* Windows.ApplicationModel.DataTransfer.IDataProviderDeferral */
-/* Windows.ApplicationModel.DataTransfer.IDataProviderRequest */
-/* Windows.ApplicationModel.DataTransfer.IDataTransferManager */
-/* Windows.ApplicationModel.DataTransfer.IDataTransferManager2 */
-/* Windows.ApplicationModel.DataTransfer.IDataRequestedEventArgs */
-/* Windows.ApplicationModel.DataTransfer.IDataRequestDeferral */
-/* Windows.ApplicationModel.DataTransfer.IDataRequest */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_DATATRANSFER_H */

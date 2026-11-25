@@ -15,7 +15,6 @@
 #include <cwinrt/Windows.Graphics.Imaging.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStream
 #define CWINRT_FWD_WSTST_IRandomAccessStream
 typedef struct WSTST_IRandomAccessStream WSTST_IRandomAccessStream;
@@ -29,7 +28,6 @@ typedef struct WSTST_IBuffer WSTST_IBuffer;
 typedef struct WAPBA_IBackgroundTaskInstance WAPBA_IBackgroundTaskInstance;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUIXAMEIM_XamlRenderingBackgroundTask WUIXAMEIM_XamlRenderingBackgroundTask;
 typedef struct WUIXAMEIM_VirtualSurfaceImageSource WUIXAMEIM_VirtualSurfaceImageSource;
 typedef struct WUIXAMEIM_WriteableBitmap WUIXAMEIM_WriteableBitmap;
@@ -72,7 +70,6 @@ typedef struct WUIXAMEIM_IRenderTargetBitmap WUIXAMEIM_IRenderTargetBitmap;
 typedef struct WUIXAMEIM_ISoftwareBitmapSource WUIXAMEIM_ISoftwareBitmapSource;
 typedef struct WUIXAMEIM_ISurfaceImageSource WUIXAMEIM_ISurfaceImageSource;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WAPBA_IBackgroundTaskInstance
 #define CWINRT_FWD_WAPBA_IBackgroundTaskInstance
 typedef struct WAPBA_IBackgroundTaskInstance WAPBA_IBackgroundTaskInstance;
@@ -156,7 +153,6 @@ typedef enum WUIXAMEIM_DecodePixelType {
 } WUIXAMEIM_DecodePixelType;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -277,125 +273,80 @@ static const IID CWINRT_IID_WUIXAMEIM_ISoftwareBitmapSource CWINRT_MAYBE_UNUSED 
 static const IID CWINRT_IID_WUIXAMEIM_ISurfaceImageSource CWINRT_MAYBE_UNUSED = { 0x62F7D416, 0xC714, 0x4C4C, { 0x82, 0x73, 0xF8, 0x39, 0xBC, 0x58, 0x13, 0x5C } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.Xaml.Media.Imaging.XamlRenderingBackgroundTask */
-/* Windows.UI.Xaml.Media.Imaging.XamlRenderingBackgroundTask.OnRun(taskInstance) */
 HRESULT wuixameim_xaml_rendering_background_task_handle_run(WUIXAMEIM_XamlRenderingBackgroundTask *self, WAPBA_IBackgroundTaskInstance* taskInstance);
 
-/* activate Windows.UI.Xaml.Media.Imaging.WriteableBitmap */
 HRESULT wuixameim_writeable_bitmap_new(WUIXAMEIM_WriteableBitmap **out);
 
-/* Windows.UI.Xaml.Media.Imaging.WriteableBitmap */
-/* Windows.UI.Xaml.Media.Imaging.WriteableBitmap.get_PixelBuffer() */
 HRESULT wuixameim_writeable_bitmap_get__pixel_buffer(WUIXAMEIM_WriteableBitmap *self, WSTST_IBuffer** value);
 
-/* Windows.UI.Xaml.Media.Imaging.WriteableBitmap.Invalidate() */
 HRESULT wuixameim_writeable_bitmap_invalidate(WUIXAMEIM_WriteableBitmap *self);
 
-/* activate Windows.UI.Xaml.Media.Imaging.SvgImageSourceFailedEventArgs */
 HRESULT wuixameim_svg_image_source_failed_event_args_new(WUIXAMEIM_SvgImageSourceFailedEventArgs **out);
 
-/* Windows.UI.Xaml.Media.Imaging.SvgImageSourceFailedEventArgs */
-/* Windows.UI.Xaml.Media.Imaging.SvgImageSourceFailedEventArgs.get_Status() */
 HRESULT wuixameim_svg_image_source_failed_event_args_get__status(WUIXAMEIM_SvgImageSourceFailedEventArgs *self, WUIXAMEIM_SvgImageSourceLoadStatus *value);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapSource */
-/* Windows.UI.Xaml.Media.Imaging.BitmapSource.get_PixelWidth() */
 HRESULT wuixameim_bitmap_source_get__pixel_width(WUIXAMEIM_BitmapSource *self, int32_t *value);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapSource.get_PixelHeight() */
 HRESULT wuixameim_bitmap_source_get__pixel_height(WUIXAMEIM_BitmapSource *self, int32_t *value);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapSource.SetSource(streamSource) */
 HRESULT wuixameim_bitmap_source_set_source(WUIXAMEIM_BitmapSource *self, WSTST_IRandomAccessStream* streamSource);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapSource.SetSourceAsync(streamSource) */
 HRESULT wuixameim_bitmap_source_set_source_async(WUIXAMEIM_BitmapSource *self, WSTST_IRandomAccessStream* streamSource, WF_IAsyncAction** out);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapSource.get_PixelWidthProperty() */
 HRESULT wuixameim_bitmap_source_get__pixel_width_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapSource.get_PixelHeightProperty() */
 HRESULT wuixameim_bitmap_source_get__pixel_height_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Imaging.BitmapImage */
 HRESULT wuixameim_bitmap_image_new(WUIXAMEIM_BitmapImage **out);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapImage */
-/* Windows.UI.Xaml.Media.Imaging.BitmapImage.get_CreateOptions() */
 HRESULT wuixameim_bitmap_image_get__create_options(WUIXAMEIM_BitmapImage *self, WUIXAMEIM_BitmapCreateOptions *value);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapImage.put_CreateOptions() */
 HRESULT wuixameim_bitmap_image_put__create_options(WUIXAMEIM_BitmapImage *self, WUIXAMEIM_BitmapCreateOptions value);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapImage.get_UriSource() */
 HRESULT wuixameim_bitmap_image_get__uri_source(WUIXAMEIM_BitmapImage *self, WF_Uri** value);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapImage.put_UriSource() */
 HRESULT wuixameim_bitmap_image_put__uri_source(WUIXAMEIM_BitmapImage *self, WF_Uri* value);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapImage.get_DecodePixelWidth() */
 HRESULT wuixameim_bitmap_image_get__decode_pixel_width(WUIXAMEIM_BitmapImage *self, int32_t *value);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapImage.put_DecodePixelWidth() */
 HRESULT wuixameim_bitmap_image_put__decode_pixel_width(WUIXAMEIM_BitmapImage *self, int32_t value);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapImage.get_DecodePixelHeight() */
 HRESULT wuixameim_bitmap_image_get__decode_pixel_height(WUIXAMEIM_BitmapImage *self, int32_t *value);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapImage.put_DecodePixelHeight() */
 HRESULT wuixameim_bitmap_image_put__decode_pixel_height(WUIXAMEIM_BitmapImage *self, int32_t value);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapImage.get_DecodePixelType() */
 HRESULT wuixameim_bitmap_image_get__decode_pixel_type(WUIXAMEIM_BitmapImage *self, WUIXAMEIM_DecodePixelType *value);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapImage.put_DecodePixelType() */
 HRESULT wuixameim_bitmap_image_put__decode_pixel_type(WUIXAMEIM_BitmapImage *self, WUIXAMEIM_DecodePixelType value);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapImage.get_IsAnimatedBitmap() */
 HRESULT wuixameim_bitmap_image_get__is_animated_bitmap(WUIXAMEIM_BitmapImage *self, BOOL *value);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapImage.get_IsPlaying() */
 HRESULT wuixameim_bitmap_image_get__is_playing(WUIXAMEIM_BitmapImage *self, BOOL *value);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapImage.get_AutoPlay() */
 HRESULT wuixameim_bitmap_image_get__auto_play(WUIXAMEIM_BitmapImage *self, BOOL *value);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapImage.put_AutoPlay() */
 HRESULT wuixameim_bitmap_image_put__auto_play(WUIXAMEIM_BitmapImage *self, BOOL value);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapImage.Play() */
 HRESULT wuixameim_bitmap_image_play(WUIXAMEIM_BitmapImage *self);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapImage.Stop() */
 HRESULT wuixameim_bitmap_image_stop(WUIXAMEIM_BitmapImage *self);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapImage.get_IsAnimatedBitmapProperty() */
 HRESULT wuixameim_bitmap_image_get__is_animated_bitmap_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapImage.get_IsPlayingProperty() */
 HRESULT wuixameim_bitmap_image_get__is_playing_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapImage.get_AutoPlayProperty() */
 HRESULT wuixameim_bitmap_image_get__auto_play_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapImage.get_DecodePixelTypeProperty() */
 HRESULT wuixameim_bitmap_image_get__decode_pixel_type_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapImage.get_CreateOptionsProperty() */
 HRESULT wuixameim_bitmap_image_get__create_options_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapImage.get_UriSourceProperty() */
 HRESULT wuixameim_bitmap_image_get__uri_source_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapImage.get_DecodePixelWidthProperty() */
 HRESULT wuixameim_bitmap_image_get__decode_pixel_width_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Imaging.BitmapImage.get_DecodePixelHeightProperty() */
 HRESULT wuixameim_bitmap_image_get__decode_pixel_height_property(WUIXA_DependencyProperty** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixameim_bitmap_image_on_download_progress(WUIXAMEIM_BitmapImage *self, cwinrt_event_fn fn, void *ctx);
@@ -407,108 +358,66 @@ void wuixameim_bitmap_image_off_image_opened(WUIXAMEIM_BitmapImage *self, cwinrt
 cwinrt_token wuixameim_bitmap_image_on_image_failed(WUIXAMEIM_BitmapImage *self, cwinrt_event_fn fn, void *ctx);
 void wuixameim_bitmap_image_off_image_failed(WUIXAMEIM_BitmapImage *self, cwinrt_token token);
 
-/* activate Windows.UI.Xaml.Media.Imaging.DownloadProgressEventArgs */
 HRESULT wuixameim_download_progress_event_args_new(WUIXAMEIM_DownloadProgressEventArgs **out);
 
-/* Windows.UI.Xaml.Media.Imaging.DownloadProgressEventArgs */
-/* Windows.UI.Xaml.Media.Imaging.DownloadProgressEventArgs.get_Progress() */
 HRESULT wuixameim_download_progress_event_args_get__progress(WUIXAMEIM_DownloadProgressEventArgs *self, int32_t *value);
 
-/* Windows.UI.Xaml.Media.Imaging.DownloadProgressEventArgs.put_Progress() */
 HRESULT wuixameim_download_progress_event_args_put__progress(WUIXAMEIM_DownloadProgressEventArgs *self, int32_t value);
 
-/* Windows.UI.Xaml.Media.Imaging.DownloadProgressEventHandler */
-/* Windows.UI.Xaml.Media.Imaging.DownloadProgressEventHandler.Invoke(sender, e) */
 HRESULT wuixameim_download_progress_event_handler_invoke(WUIXAMEIM_DownloadProgressEventHandler *self, IInspectable* sender, WUIXAMEIM_DownloadProgressEventArgs* e);
 
-/* Windows.UI.Xaml.Media.Imaging.IBitmapImageFactory */
-/* Windows.UI.Xaml.Media.Imaging.IBitmapImageFactory.CreateInstanceWithUriSource(uriSource) */
 HRESULT wuixameim_bitmap_image_factory_create_instance_with_uri_source(WUIXAMEIM_IBitmapImageFactory *self, WF_Uri* uriSource, WUIXAMEIM_BitmapImage** out);
 
-/* Windows.UI.Xaml.Media.Imaging.IBitmapImageStatics */
-/* Windows.UI.Xaml.Media.Imaging.IBitmapImageStatics.get_CreateOptionsProperty() */
 HRESULT wuixameim_bitmap_image_statics_get__create_options_property(WUIXAMEIM_IBitmapImageStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Imaging.IBitmapImageStatics.get_UriSourceProperty() */
 HRESULT wuixameim_bitmap_image_statics_get__uri_source_property(WUIXAMEIM_IBitmapImageStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Imaging.IBitmapImageStatics.get_DecodePixelWidthProperty() */
 HRESULT wuixameim_bitmap_image_statics_get__decode_pixel_width_property(WUIXAMEIM_IBitmapImageStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Imaging.IBitmapImageStatics.get_DecodePixelHeightProperty() */
 HRESULT wuixameim_bitmap_image_statics_get__decode_pixel_height_property(WUIXAMEIM_IBitmapImageStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Imaging.IBitmapImageStatics2 */
-/* Windows.UI.Xaml.Media.Imaging.IBitmapImageStatics2.get_DecodePixelTypeProperty() */
 HRESULT wuixameim_bitmap_image_statics_2_get__decode_pixel_type_property(WUIXAMEIM_IBitmapImageStatics_2 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Imaging.IBitmapImageStatics3 */
-/* Windows.UI.Xaml.Media.Imaging.IBitmapImageStatics3.get_IsAnimatedBitmapProperty() */
 HRESULT wuixameim_bitmap_image_statics_3_get__is_animated_bitmap_property(WUIXAMEIM_IBitmapImageStatics_3 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Imaging.IBitmapImageStatics3.get_IsPlayingProperty() */
 HRESULT wuixameim_bitmap_image_statics_3_get__is_playing_property(WUIXAMEIM_IBitmapImageStatics_3 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Imaging.IBitmapImageStatics3.get_AutoPlayProperty() */
 HRESULT wuixameim_bitmap_image_statics_3_get__auto_play_property(WUIXAMEIM_IBitmapImageStatics_3 *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Imaging.IBitmapSourceFactory */
-/* Windows.UI.Xaml.Media.Imaging.IBitmapSourceFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixameim_bitmap_source_factory_create_instance(WUIXAMEIM_IBitmapSourceFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAMEIM_BitmapSource** out);
 
-/* Windows.UI.Xaml.Media.Imaging.IBitmapSourceStatics */
-/* Windows.UI.Xaml.Media.Imaging.IBitmapSourceStatics.get_PixelWidthProperty() */
 HRESULT wuixameim_bitmap_source_statics_get__pixel_width_property(WUIXAMEIM_IBitmapSourceStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Imaging.IBitmapSourceStatics.get_PixelHeightProperty() */
 HRESULT wuixameim_bitmap_source_statics_get__pixel_height_property(WUIXAMEIM_IBitmapSourceStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Imaging.IRenderTargetBitmapStatics */
-/* Windows.UI.Xaml.Media.Imaging.IRenderTargetBitmapStatics.get_PixelWidthProperty() */
 HRESULT wuixameim_render_target_bitmap_statics_get__pixel_width_property(WUIXAMEIM_IRenderTargetBitmapStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Imaging.IRenderTargetBitmapStatics.get_PixelHeightProperty() */
 HRESULT wuixameim_render_target_bitmap_statics_get__pixel_height_property(WUIXAMEIM_IRenderTargetBitmapStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Imaging.ISurfaceImageSourceFactory */
-/* Windows.UI.Xaml.Media.Imaging.ISurfaceImageSourceFactory.CreateInstanceWithDimensions(pixelWidth, pixelHeight, baseInterface, innerInterface) */
 HRESULT wuixameim_surface_image_source_factory_create_instance_with_dimensions(WUIXAMEIM_ISurfaceImageSourceFactory *self, int32_t pixelWidth, int32_t pixelHeight, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAMEIM_SurfaceImageSource** out);
 
-/* Windows.UI.Xaml.Media.Imaging.ISurfaceImageSourceFactory.CreateInstanceWithDimensionsAndOpacity(pixelWidth, pixelHeight, isOpaque, baseInterface, innerInterface) */
 HRESULT wuixameim_surface_image_source_factory_create_instance_with_dimensions_and_opacity(WUIXAMEIM_ISurfaceImageSourceFactory *self, int32_t pixelWidth, int32_t pixelHeight, BOOL isOpaque, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAMEIM_SurfaceImageSource** out);
 
-/* Windows.UI.Xaml.Media.Imaging.SvgImageSource */
-/* Windows.UI.Xaml.Media.Imaging.SvgImageSource.get_UriSource() */
 HRESULT wuixameim_svg_image_source_get__uri_source(WUIXAMEIM_SvgImageSource *self, WF_Uri** value);
 
-/* Windows.UI.Xaml.Media.Imaging.SvgImageSource.put_UriSource() */
 HRESULT wuixameim_svg_image_source_put__uri_source(WUIXAMEIM_SvgImageSource *self, WF_Uri* value);
 
-/* Windows.UI.Xaml.Media.Imaging.SvgImageSource.get_RasterizePixelWidth() */
 HRESULT wuixameim_svg_image_source_get__rasterize_pixel_width(WUIXAMEIM_SvgImageSource *self, double *value);
 
-/* Windows.UI.Xaml.Media.Imaging.SvgImageSource.put_RasterizePixelWidth() */
 HRESULT wuixameim_svg_image_source_put__rasterize_pixel_width(WUIXAMEIM_SvgImageSource *self, double value);
 
-/* Windows.UI.Xaml.Media.Imaging.SvgImageSource.get_RasterizePixelHeight() */
 HRESULT wuixameim_svg_image_source_get__rasterize_pixel_height(WUIXAMEIM_SvgImageSource *self, double *value);
 
-/* Windows.UI.Xaml.Media.Imaging.SvgImageSource.put_RasterizePixelHeight() */
 HRESULT wuixameim_svg_image_source_put__rasterize_pixel_height(WUIXAMEIM_SvgImageSource *self, double value);
 
-/* Windows.UI.Xaml.Media.Imaging.SvgImageSource.SetSourceAsync(streamSource) */
 HRESULT wuixameim_svg_image_source_set_source_async(WUIXAMEIM_SvgImageSource *self, WSTST_IRandomAccessStream* streamSource, WF_IAsyncOperation_WUIXAMEIM_SvgImageSourceLoadStatus** out);
 
-/* Windows.UI.Xaml.Media.Imaging.SvgImageSource.get_UriSourceProperty() */
 HRESULT wuixameim_svg_image_source_get__uri_source_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Imaging.SvgImageSource.get_RasterizePixelWidthProperty() */
 HRESULT wuixameim_svg_image_source_get__rasterize_pixel_width_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Imaging.SvgImageSource.get_RasterizePixelHeightProperty() */
 HRESULT wuixameim_svg_image_source_get__rasterize_pixel_height_property(WUIXA_DependencyProperty** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuixameim_svg_image_source_on_opened(WUIXAMEIM_SvgImageSource *self, cwinrt_event_fn fn, void *ctx);
@@ -517,109 +426,62 @@ void wuixameim_svg_image_source_off_opened(WUIXAMEIM_SvgImageSource *self, cwinr
 cwinrt_token wuixameim_svg_image_source_on_open_failed(WUIXAMEIM_SvgImageSource *self, cwinrt_event_fn fn, void *ctx);
 void wuixameim_svg_image_source_off_open_failed(WUIXAMEIM_SvgImageSource *self, cwinrt_token token);
 
-/* Windows.UI.Xaml.Media.Imaging.ISvgImageSourceFactory */
-/* Windows.UI.Xaml.Media.Imaging.ISvgImageSourceFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixameim_svg_image_source_factory_create_instance(WUIXAMEIM_ISvgImageSourceFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAMEIM_SvgImageSource** out);
 
-/* Windows.UI.Xaml.Media.Imaging.ISvgImageSourceFactory.CreateInstanceWithUriSource(uriSource, baseInterface, innerInterface) */
 HRESULT wuixameim_svg_image_source_factory_create_instance_with_uri_source(WUIXAMEIM_ISvgImageSourceFactory *self, WF_Uri* uriSource, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAMEIM_SvgImageSource** out);
 
-/* Windows.UI.Xaml.Media.Imaging.ISvgImageSourceStatics */
-/* Windows.UI.Xaml.Media.Imaging.ISvgImageSourceStatics.get_UriSourceProperty() */
 HRESULT wuixameim_svg_image_source_statics_get__uri_source_property(WUIXAMEIM_ISvgImageSourceStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Imaging.ISvgImageSourceStatics.get_RasterizePixelWidthProperty() */
 HRESULT wuixameim_svg_image_source_statics_get__rasterize_pixel_width_property(WUIXAMEIM_ISvgImageSourceStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Imaging.ISvgImageSourceStatics.get_RasterizePixelHeightProperty() */
 HRESULT wuixameim_svg_image_source_statics_get__rasterize_pixel_height_property(WUIXAMEIM_ISvgImageSourceStatics *self, WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Imaging.IVirtualSurfaceImageSourceFactory */
-/* Windows.UI.Xaml.Media.Imaging.IVirtualSurfaceImageSourceFactory.CreateInstanceWithDimensions(pixelWidth, pixelHeight) */
 HRESULT wuixameim_virtual_surface_image_source_factory_create_instance_with_dimensions(WUIXAMEIM_IVirtualSurfaceImageSourceFactory *self, int32_t pixelWidth, int32_t pixelHeight, WUIXAMEIM_VirtualSurfaceImageSource** out);
 
-/* Windows.UI.Xaml.Media.Imaging.IVirtualSurfaceImageSourceFactory.CreateInstanceWithDimensionsAndOpacity(pixelWidth, pixelHeight, isOpaque) */
 HRESULT wuixameim_virtual_surface_image_source_factory_create_instance_with_dimensions_and_opacity(WUIXAMEIM_IVirtualSurfaceImageSourceFactory *self, int32_t pixelWidth, int32_t pixelHeight, BOOL isOpaque, WUIXAMEIM_VirtualSurfaceImageSource** out);
 
-/* Windows.UI.Xaml.Media.Imaging.IWriteableBitmapFactory */
-/* Windows.UI.Xaml.Media.Imaging.IWriteableBitmapFactory.CreateInstanceWithDimensions(pixelWidth, pixelHeight) */
 HRESULT wuixameim_writeable_bitmap_factory_create_instance_with_dimensions(WUIXAMEIM_IWriteableBitmapFactory *self, int32_t pixelWidth, int32_t pixelHeight, WUIXAMEIM_WriteableBitmap** out);
 
-/* Windows.UI.Xaml.Media.Imaging.IXamlRenderingBackgroundTaskFactory */
-/* Windows.UI.Xaml.Media.Imaging.IXamlRenderingBackgroundTaskFactory.CreateInstance(baseInterface, innerInterface) */
 HRESULT wuixameim_xaml_rendering_background_task_factory_create_instance(WUIXAMEIM_IXamlRenderingBackgroundTaskFactory *self, IInspectable* baseInterface, IInspectable* innerInterface, WUIXAMEIM_XamlRenderingBackgroundTask** out);
 
-/* activate Windows.UI.Xaml.Media.Imaging.RenderTargetBitmap */
 HRESULT wuixameim_render_target_bitmap_new(WUIXAMEIM_RenderTargetBitmap **out);
 
-/* Windows.UI.Xaml.Media.Imaging.RenderTargetBitmap */
-/* Windows.UI.Xaml.Media.Imaging.RenderTargetBitmap.get_PixelWidth() */
 HRESULT wuixameim_render_target_bitmap_get__pixel_width(WUIXAMEIM_RenderTargetBitmap *self, int32_t *value);
 
-/* Windows.UI.Xaml.Media.Imaging.RenderTargetBitmap.get_PixelHeight() */
 HRESULT wuixameim_render_target_bitmap_get__pixel_height(WUIXAMEIM_RenderTargetBitmap *self, int32_t *value);
 
-/* Windows.UI.Xaml.Media.Imaging.RenderTargetBitmap.RenderAsync(element) */
 HRESULT wuixameim_render_target_bitmap_render_async(WUIXAMEIM_RenderTargetBitmap *self, WUIXA_UIElement* element, WF_IAsyncAction** out);
 
-/* Windows.UI.Xaml.Media.Imaging.RenderTargetBitmap.RenderAsync(element, scaledWidth, scaledHeight) */
 HRESULT wuixameim_render_target_bitmap_render_async_p_i32_i32_p(WUIXAMEIM_RenderTargetBitmap *self, WUIXA_UIElement* element, int32_t scaledWidth, int32_t scaledHeight, WF_IAsyncAction** out);
 
-/* Windows.UI.Xaml.Media.Imaging.RenderTargetBitmap.GetPixelsAsync() */
 HRESULT wuixameim_render_target_bitmap_get_pixels_async(WUIXAMEIM_RenderTargetBitmap *self, WF_IAsyncOperation_WSTST_IBuffer** out);
 
-/* Windows.UI.Xaml.Media.Imaging.RenderTargetBitmap.get_PixelWidthProperty() */
 HRESULT wuixameim_render_target_bitmap_get__pixel_width_property(WUIXA_DependencyProperty** value);
 
-/* Windows.UI.Xaml.Media.Imaging.RenderTargetBitmap.get_PixelHeightProperty() */
 HRESULT wuixameim_render_target_bitmap_get__pixel_height_property(WUIXA_DependencyProperty** value);
 
-/* activate Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource */
 HRESULT wuixameim_software_bitmap_source_new(WUIXAMEIM_SoftwareBitmapSource **out);
 
-/* Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource */
-/* Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource.SetBitmapAsync(softwareBitmap) */
 HRESULT wuixameim_software_bitmap_source_set_bitmap_async(WUIXAMEIM_SoftwareBitmapSource *self, WGRIM_SoftwareBitmap* softwareBitmap, WF_IAsyncAction** out);
 
-/* Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource.Close() */
 HRESULT wuixameim_software_bitmap_source_close(WUIXAMEIM_SoftwareBitmapSource *self);
 
-/* Windows.UI.Xaml.Media.Imaging.IXamlRenderingBackgroundTaskOverrides */
-/* Windows.UI.Xaml.Media.Imaging.IXamlRenderingBackgroundTaskOverrides.OnRun(taskInstance) */
 HRESULT wuixameim_xaml_rendering_background_task_overrides_handle_run(WUIXAMEIM_IXamlRenderingBackgroundTaskOverrides *self, WAPBA_IBackgroundTaskInstance* taskInstance);
 
-/* Windows.UI.Xaml.Media.Imaging.IWriteableBitmap */
-/* Windows.UI.Xaml.Media.Imaging.ISvgImageSourceFailedEventArgs */
-/* Windows.UI.Xaml.Media.Imaging.IBitmapSource */
-/* Windows.UI.Xaml.Media.Imaging.IBitmapImage */
-/* Windows.UI.Xaml.Media.Imaging.IBitmapImage2 */
-/* Windows.UI.Xaml.Media.Imaging.IBitmapImage2.get_DecodePixelType() */
 HRESULT wuixameim_bitmap_image_2_get__decode_pixel_type(WUIXAMEIM_IBitmapImage_2 *self, WUIXAMEIM_DecodePixelType *value);
 
-/* Windows.UI.Xaml.Media.Imaging.IBitmapImage2.put_DecodePixelType() */
 HRESULT wuixameim_bitmap_image_2_put__decode_pixel_type(WUIXAMEIM_IBitmapImage_2 *self, WUIXAMEIM_DecodePixelType value);
 
-/* Windows.UI.Xaml.Media.Imaging.IBitmapImage3 */
-/* Windows.UI.Xaml.Media.Imaging.IBitmapImage3.get_IsAnimatedBitmap() */
 HRESULT wuixameim_bitmap_image_3_get__is_animated_bitmap(WUIXAMEIM_IBitmapImage_3 *self, BOOL *value);
 
-/* Windows.UI.Xaml.Media.Imaging.IBitmapImage3.get_IsPlaying() */
 HRESULT wuixameim_bitmap_image_3_get__is_playing(WUIXAMEIM_IBitmapImage_3 *self, BOOL *value);
 
-/* Windows.UI.Xaml.Media.Imaging.IBitmapImage3.get_AutoPlay() */
 HRESULT wuixameim_bitmap_image_3_get__auto_play(WUIXAMEIM_IBitmapImage_3 *self, BOOL *value);
 
-/* Windows.UI.Xaml.Media.Imaging.IBitmapImage3.put_AutoPlay() */
 HRESULT wuixameim_bitmap_image_3_put__auto_play(WUIXAMEIM_IBitmapImage_3 *self, BOOL value);
 
-/* Windows.UI.Xaml.Media.Imaging.IBitmapImage3.Play() */
 HRESULT wuixameim_bitmap_image_3_play(WUIXAMEIM_IBitmapImage_3 *self);
 
-/* Windows.UI.Xaml.Media.Imaging.IBitmapImage3.Stop() */
 HRESULT wuixameim_bitmap_image_3_stop(WUIXAMEIM_IBitmapImage_3 *self);
 
-/* Windows.UI.Xaml.Media.Imaging.IDownloadProgressEventArgs */
-/* Windows.UI.Xaml.Media.Imaging.ISvgImageSource */
-/* Windows.UI.Xaml.Media.Imaging.IRenderTargetBitmap */
-/* Windows.UI.Xaml.Media.Imaging.ISoftwareBitmapSource */
 #endif /* CWINRT_WINDOWS_UI_XAML_MEDIA_IMAGING_H */

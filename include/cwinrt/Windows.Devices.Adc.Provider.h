@@ -12,11 +12,9 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WDEADPR_IAdcProvider WDEADPR_IAdcProvider;
 typedef struct WDEADPR_IAdcControllerProvider WDEADPR_IAdcControllerProvider;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IVectorView_WDEADPR_IAdcControllerProvider
 #define CWINRT_FWD_WFOCO_IVectorView_WDEADPR_IAdcControllerProvider
 typedef struct WFOCO_IVectorView_WDEADPR_IAdcControllerProvider WFOCO_IVectorView_WDEADPR_IAdcControllerProvider;
@@ -30,7 +28,6 @@ typedef enum WDEADPR_ProviderAdcChannelMode {
 } WDEADPR_ProviderAdcChannelMode;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -43,41 +40,26 @@ static const IID CWINRT_IID_WDEADPR_IAdcProvider CWINRT_MAYBE_UNUSED = { 0x28953
 static const IID CWINRT_IID_WDEADPR_IAdcControllerProvider CWINRT_MAYBE_UNUSED = { 0xBE545828, 0x816D, 0x4DE5, { 0xA0, 0x48, 0xAB, 0xA0, 0x69, 0x58, 0xAA, 0xA8 } };
 #endif
 
-/* Methods */
-
-/* Windows.Devices.Adc.Provider.IAdcProvider */
-/* Windows.Devices.Adc.Provider.IAdcProvider.GetControllers() */
 HRESULT wdeadpr_adc_provider_get_controllers(WDEADPR_IAdcProvider *self, WFOCO_IVectorView_WDEADPR_IAdcControllerProvider** out);
 
-/* Windows.Devices.Adc.Provider.IAdcControllerProvider */
-/* Windows.Devices.Adc.Provider.IAdcControllerProvider.get_ChannelCount() */
 HRESULT wdeadpr_adc_controller_provider_get__channel_count(WDEADPR_IAdcControllerProvider *self, int32_t *value);
 
-/* Windows.Devices.Adc.Provider.IAdcControllerProvider.get_ResolutionInBits() */
 HRESULT wdeadpr_adc_controller_provider_get__resolution_in_bits(WDEADPR_IAdcControllerProvider *self, int32_t *value);
 
-/* Windows.Devices.Adc.Provider.IAdcControllerProvider.get_MinValue() */
 HRESULT wdeadpr_adc_controller_provider_get__min_value(WDEADPR_IAdcControllerProvider *self, int32_t *value);
 
-/* Windows.Devices.Adc.Provider.IAdcControllerProvider.get_MaxValue() */
 HRESULT wdeadpr_adc_controller_provider_get__max_value(WDEADPR_IAdcControllerProvider *self, int32_t *value);
 
-/* Windows.Devices.Adc.Provider.IAdcControllerProvider.get_ChannelMode() */
 HRESULT wdeadpr_adc_controller_provider_get__channel_mode(WDEADPR_IAdcControllerProvider *self, WDEADPR_ProviderAdcChannelMode *value);
 
-/* Windows.Devices.Adc.Provider.IAdcControllerProvider.put_ChannelMode() */
 HRESULT wdeadpr_adc_controller_provider_put__channel_mode(WDEADPR_IAdcControllerProvider *self, WDEADPR_ProviderAdcChannelMode value);
 
-/* Windows.Devices.Adc.Provider.IAdcControllerProvider.IsChannelModeSupported(channelMode) */
 HRESULT wdeadpr_adc_controller_provider_is_channel_mode_supported(WDEADPR_IAdcControllerProvider *self, WDEADPR_ProviderAdcChannelMode channelMode, BOOL *out);
 
-/* Windows.Devices.Adc.Provider.IAdcControllerProvider.AcquireChannel(channel) */
 HRESULT wdeadpr_adc_controller_provider_acquire_channel(WDEADPR_IAdcControllerProvider *self, int32_t channel);
 
-/* Windows.Devices.Adc.Provider.IAdcControllerProvider.ReleaseChannel(channel) */
 HRESULT wdeadpr_adc_controller_provider_release_channel(WDEADPR_IAdcControllerProvider *self, int32_t channel);
 
-/* Windows.Devices.Adc.Provider.IAdcControllerProvider.ReadValue(channelNumber) */
 HRESULT wdeadpr_adc_controller_provider_read_value(WDEADPR_IAdcControllerProvider *self, int32_t channelNumber, int32_t *out);
 
 #endif /* CWINRT_WINDOWS_DEVICES_ADC_PROVIDER_H */

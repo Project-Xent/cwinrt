@@ -13,13 +13,11 @@
 #include <cwinrt/Windows.Web.Http.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSYDI_ProcessDiagnosticInfo
 #define CWINRT_FWD_WSYDI_ProcessDiagnosticInfo
 typedef struct WSYDI_ProcessDiagnosticInfo WSYDI_ProcessDiagnosticInfo;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WWEHTDI_HttpDiagnosticProviderResponseReceivedEventArgs WWEHTDI_HttpDiagnosticProviderResponseReceivedEventArgs;
 typedef struct WWEHTDI_HttpDiagnosticProvider WWEHTDI_HttpDiagnosticProvider;
 typedef struct WWEHTDI_HttpDiagnosticProviderRequestResponseCompletedEventArgs WWEHTDI_HttpDiagnosticProviderRequestResponseCompletedEventArgs;
@@ -34,7 +32,6 @@ typedef struct WWEHTDI_IHttpDiagnosticProviderRequestResponseTimestamps WWEHTDI_
 typedef struct WWEHTDI_IHttpDiagnosticSourceLocation WWEHTDI_IHttpDiagnosticSourceLocation;
 typedef struct WWEHTDI_IHttpDiagnosticProviderRequestSentEventArgs WWEHTDI_IHttpDiagnosticProviderRequestSentEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_DateTime
 #define CWINRT_FWD_WF_DateTime
 typedef struct WF_DateTime WF_DateTime;
@@ -91,7 +88,6 @@ typedef enum WWEHTDI_HttpDiagnosticRequestInitiator {
 } WWEHTDI_HttpDiagnosticRequestInitiator;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -124,35 +120,22 @@ static const IID CWINRT_IID_WWEHTDI_IHttpDiagnosticSourceLocation CWINRT_MAYBE_U
 static const IID CWINRT_IID_WWEHTDI_IHttpDiagnosticProviderRequestSentEventArgs CWINRT_MAYBE_UNUSED = { 0x3F5196D0, 0x4C1F, 0x4EBE, { 0xA5, 0x7A, 0x06, 0x93, 0x07, 0x71, 0xC5, 0x0D } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs */
 HRESULT wwehtdi_http_diagnostic_provider_response_received_event_args_new(WWEHTDI_HttpDiagnosticProviderResponseReceivedEventArgs **out);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs */
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs.get_Timestamp() */
 HRESULT wwehtdi_http_diagnostic_provider_response_received_event_args_get__timestamp(WWEHTDI_HttpDiagnosticProviderResponseReceivedEventArgs *self, WF_DateTime *value);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs.get_ActivityId() */
 HRESULT wwehtdi_http_diagnostic_provider_response_received_event_args_get__activity_id(WWEHTDI_HttpDiagnosticProviderResponseReceivedEventArgs *self, GUID *value);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs.get_Message() */
 HRESULT wwehtdi_http_diagnostic_provider_response_received_event_args_get__message(WWEHTDI_HttpDiagnosticProviderResponseReceivedEventArgs *self, WWEHT_HttpResponseMessage** value);
 
-/* activate Windows.Web.Http.Diagnostics.HttpDiagnosticProvider */
 HRESULT wwehtdi_http_diagnostic_provider_new(WWEHTDI_HttpDiagnosticProvider **out);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProvider */
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.Start() */
 HRESULT wwehtdi_http_diagnostic_provider_start(WWEHTDI_HttpDiagnosticProvider *self);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.Stop() */
 HRESULT wwehtdi_http_diagnostic_provider_stop(WWEHTDI_HttpDiagnosticProvider *self);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProvider.CreateFromProcessDiagnosticInfo(processDiagnosticInfo) */
 HRESULT wwehtdi_http_diagnostic_provider_create_from_process_diagnostic_info(WSYDI_ProcessDiagnosticInfo* processDiagnosticInfo, WWEHTDI_HttpDiagnosticProvider** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wwehtdi_http_diagnostic_provider_on_request_sent(WWEHTDI_HttpDiagnosticProvider *self, cwinrt_event_fn fn, void *ctx);
@@ -164,108 +147,66 @@ void wwehtdi_http_diagnostic_provider_off_response_received(WWEHTDI_HttpDiagnost
 cwinrt_token wwehtdi_http_diagnostic_provider_on_request_response_completed(WWEHTDI_HttpDiagnosticProvider *self, cwinrt_event_fn fn, void *ctx);
 void wwehtdi_http_diagnostic_provider_off_request_response_completed(WWEHTDI_HttpDiagnosticProvider *self, cwinrt_token token);
 
-/* activate Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs */
 HRESULT wwehtdi_http_diagnostic_provider_request_response_completed_event_args_new(WWEHTDI_HttpDiagnosticProviderRequestResponseCompletedEventArgs **out);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs */
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.get_ActivityId() */
 HRESULT wwehtdi_http_diagnostic_provider_request_response_completed_event_args_get__activity_id(WWEHTDI_HttpDiagnosticProviderRequestResponseCompletedEventArgs *self, GUID *value);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.get_Timestamps() */
 HRESULT wwehtdi_http_diagnostic_provider_request_response_completed_event_args_get__timestamps(WWEHTDI_HttpDiagnosticProviderRequestResponseCompletedEventArgs *self, WWEHTDI_HttpDiagnosticProviderRequestResponseTimestamps** value);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.get_RequestedUri() */
 HRESULT wwehtdi_http_diagnostic_provider_request_response_completed_event_args_get__requested_uri(WWEHTDI_HttpDiagnosticProviderRequestResponseCompletedEventArgs *self, WF_Uri** value);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.get_ProcessId() */
 HRESULT wwehtdi_http_diagnostic_provider_request_response_completed_event_args_get__process_id(WWEHTDI_HttpDiagnosticProviderRequestResponseCompletedEventArgs *self, uint32_t *value);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.get_ThreadId() */
 HRESULT wwehtdi_http_diagnostic_provider_request_response_completed_event_args_get__thread_id(WWEHTDI_HttpDiagnosticProviderRequestResponseCompletedEventArgs *self, uint32_t *value);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.get_Initiator() */
 HRESULT wwehtdi_http_diagnostic_provider_request_response_completed_event_args_get__initiator(WWEHTDI_HttpDiagnosticProviderRequestResponseCompletedEventArgs *self, WWEHTDI_HttpDiagnosticRequestInitiator *value);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs.get_SourceLocations() */
 HRESULT wwehtdi_http_diagnostic_provider_request_response_completed_event_args_get__source_locations(WWEHTDI_HttpDiagnosticProviderRequestResponseCompletedEventArgs *self, WFOCO_IVectorView_WWEHTDI_HttpDiagnosticSourceLocation** value);
 
-/* activate Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps */
 HRESULT wwehtdi_http_diagnostic_provider_request_response_timestamps_new(WWEHTDI_HttpDiagnosticProviderRequestResponseTimestamps **out);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps */
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.get_CacheCheckedTimestamp() */
 HRESULT wwehtdi_http_diagnostic_provider_request_response_timestamps_get__cache_checked_timestamp(WWEHTDI_HttpDiagnosticProviderRequestResponseTimestamps *self, WF_DateTime** value);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.get_ConnectionInitiatedTimestamp() */
 HRESULT wwehtdi_http_diagnostic_provider_request_response_timestamps_get__connection_initiated_timestamp(WWEHTDI_HttpDiagnosticProviderRequestResponseTimestamps *self, WF_DateTime** value);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.get_NameResolvedTimestamp() */
 HRESULT wwehtdi_http_diagnostic_provider_request_response_timestamps_get__name_resolved_timestamp(WWEHTDI_HttpDiagnosticProviderRequestResponseTimestamps *self, WF_DateTime** value);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.get_SslNegotiatedTimestamp() */
 HRESULT wwehtdi_http_diagnostic_provider_request_response_timestamps_get__ssl_negotiated_timestamp(WWEHTDI_HttpDiagnosticProviderRequestResponseTimestamps *self, WF_DateTime** value);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.get_ConnectionCompletedTimestamp() */
 HRESULT wwehtdi_http_diagnostic_provider_request_response_timestamps_get__connection_completed_timestamp(WWEHTDI_HttpDiagnosticProviderRequestResponseTimestamps *self, WF_DateTime** value);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.get_RequestSentTimestamp() */
 HRESULT wwehtdi_http_diagnostic_provider_request_response_timestamps_get__request_sent_timestamp(WWEHTDI_HttpDiagnosticProviderRequestResponseTimestamps *self, WF_DateTime** value);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.get_RequestCompletedTimestamp() */
 HRESULT wwehtdi_http_diagnostic_provider_request_response_timestamps_get__request_completed_timestamp(WWEHTDI_HttpDiagnosticProviderRequestResponseTimestamps *self, WF_DateTime** value);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.get_ResponseReceivedTimestamp() */
 HRESULT wwehtdi_http_diagnostic_provider_request_response_timestamps_get__response_received_timestamp(WWEHTDI_HttpDiagnosticProviderRequestResponseTimestamps *self, WF_DateTime** value);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps.get_ResponseCompletedTimestamp() */
 HRESULT wwehtdi_http_diagnostic_provider_request_response_timestamps_get__response_completed_timestamp(WWEHTDI_HttpDiagnosticProviderRequestResponseTimestamps *self, WF_DateTime** value);
 
-/* activate Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation */
 HRESULT wwehtdi_http_diagnostic_source_location_new(WWEHTDI_HttpDiagnosticSourceLocation **out);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation */
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation.get_SourceUri() */
 HRESULT wwehtdi_http_diagnostic_source_location_get__source_uri(WWEHTDI_HttpDiagnosticSourceLocation *self, WF_Uri** value);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation.get_LineNumber() */
 HRESULT wwehtdi_http_diagnostic_source_location_get__line_number(WWEHTDI_HttpDiagnosticSourceLocation *self, uint64_t *value);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation.get_ColumnNumber() */
 HRESULT wwehtdi_http_diagnostic_source_location_get__column_number(WWEHTDI_HttpDiagnosticSourceLocation *self, uint64_t *value);
 
-/* Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderStatics */
-/* Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderStatics.CreateFromProcessDiagnosticInfo(processDiagnosticInfo) */
 HRESULT wwehtdi_http_diagnostic_provider_statics_create_from_process_diagnostic_info(WWEHTDI_IHttpDiagnosticProviderStatics *self, WSYDI_ProcessDiagnosticInfo* processDiagnosticInfo, WWEHTDI_HttpDiagnosticProvider** out);
 
-/* activate Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs */
 HRESULT wwehtdi_http_diagnostic_provider_request_sent_event_args_new(WWEHTDI_HttpDiagnosticProviderRequestSentEventArgs **out);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs */
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.get_Timestamp() */
 HRESULT wwehtdi_http_diagnostic_provider_request_sent_event_args_get__timestamp(WWEHTDI_HttpDiagnosticProviderRequestSentEventArgs *self, WF_DateTime *value);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.get_ActivityId() */
 HRESULT wwehtdi_http_diagnostic_provider_request_sent_event_args_get__activity_id(WWEHTDI_HttpDiagnosticProviderRequestSentEventArgs *self, GUID *value);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.get_Message() */
 HRESULT wwehtdi_http_diagnostic_provider_request_sent_event_args_get__message(WWEHTDI_HttpDiagnosticProviderRequestSentEventArgs *self, WWEHT_HttpRequestMessage** value);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.get_ProcessId() */
 HRESULT wwehtdi_http_diagnostic_provider_request_sent_event_args_get__process_id(WWEHTDI_HttpDiagnosticProviderRequestSentEventArgs *self, uint32_t *value);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.get_ThreadId() */
 HRESULT wwehtdi_http_diagnostic_provider_request_sent_event_args_get__thread_id(WWEHTDI_HttpDiagnosticProviderRequestSentEventArgs *self, uint32_t *value);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.get_Initiator() */
 HRESULT wwehtdi_http_diagnostic_provider_request_sent_event_args_get__initiator(WWEHTDI_HttpDiagnosticProviderRequestSentEventArgs *self, WWEHTDI_HttpDiagnosticRequestInitiator *value);
 
-/* Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs.get_SourceLocations() */
 HRESULT wwehtdi_http_diagnostic_provider_request_sent_event_args_get__source_locations(WWEHTDI_HttpDiagnosticProviderRequestSentEventArgs *self, WFOCO_IVectorView_WWEHTDI_HttpDiagnosticSourceLocation** value);
 
-/* Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderResponseReceivedEventArgs */
-/* Windows.Web.Http.Diagnostics.IHttpDiagnosticProvider */
-/* Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestResponseCompletedEventArgs */
-/* Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestResponseTimestamps */
-/* Windows.Web.Http.Diagnostics.IHttpDiagnosticSourceLocation */
-/* Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestSentEventArgs */
 #endif /* CWINRT_WINDOWS_WEB_HTTP_DIAGNOSTICS_H */

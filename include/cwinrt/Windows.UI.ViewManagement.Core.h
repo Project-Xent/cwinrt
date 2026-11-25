@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.UI.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WUIVICO_UISettingsController WUIVICO_UISettingsController;
 typedef struct WUIVICO_IUISettingsControllerStatics WUIVICO_IUISettingsControllerStatics;
 typedef struct WUIVICO_ICoreInputViewStatics_2 WUIVICO_ICoreInputViewStatics_2;
@@ -45,7 +44,6 @@ typedef struct WUIVICO_ICoreFrameworkInputViewOcclusionsChangedEventArgs WUIVICO
 typedef struct WUIVICO_ICoreFrameworkInputViewAnimationStartingEventArgs WUIVICO_ICoreFrameworkInputViewAnimationStartingEventArgs;
 typedef struct WUIVICO_ICoreFrameworkInputView WUIVICO_ICoreFrameworkInputView;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WUIVICO_UISettingsController
 #define CWINRT_FWD_WF_IAsyncOperation_WUIVICO_UISettingsController
 typedef struct WF_IAsyncOperation_WUIVICO_UISettingsController WF_IAsyncOperation_WUIVICO_UISettingsController;
@@ -128,7 +126,6 @@ typedef enum WUIVICO_CoreInputViewKind {
 } WUIVICO_CoreInputViewKind;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -209,159 +206,98 @@ static const IID CWINRT_IID_WUIVICO_ICoreFrameworkInputViewAnimationStartingEven
 static const IID CWINRT_IID_WUIVICO_ICoreFrameworkInputView CWINRT_MAYBE_UNUSED = { 0xD77C94AE, 0x46B8, 0x5D4A, { 0x94, 0x89, 0x8D, 0xDE, 0xC3, 0xD6, 0x39, 0xA6 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.UI.ViewManagement.Core.UISettingsController */
 HRESULT wuivico_u_i_settings_controller_new(WUIVICO_UISettingsController **out);
 
-/* Windows.UI.ViewManagement.Core.UISettingsController */
-/* Windows.UI.ViewManagement.Core.UISettingsController.SetAdvancedEffectsEnabled() */
 HRESULT wuivico_u_i_settings_controller_set_advanced_effects_enabled(WUIVICO_UISettingsController *self, BOOL value);
 
-/* Windows.UI.ViewManagement.Core.UISettingsController.SetAnimationsEnabled() */
 HRESULT wuivico_u_i_settings_controller_set_animations_enabled(WUIVICO_UISettingsController *self, BOOL value);
 
-/* Windows.UI.ViewManagement.Core.UISettingsController.SetAutoHideScrollBars() */
 HRESULT wuivico_u_i_settings_controller_set_auto_hide_scroll_bars(WUIVICO_UISettingsController *self, BOOL value);
 
-/* Windows.UI.ViewManagement.Core.UISettingsController.SetMessageDuration() */
 HRESULT wuivico_u_i_settings_controller_set_message_duration(WUIVICO_UISettingsController *self, uint32_t value);
 
-/* Windows.UI.ViewManagement.Core.UISettingsController.SetTextScaleFactor() */
 HRESULT wuivico_u_i_settings_controller_set_text_scale_factor(WUIVICO_UISettingsController *self, double value);
 
-/* Windows.UI.ViewManagement.Core.UISettingsController.RequestDefaultAsync() */
 HRESULT wuivico_u_i_settings_controller_request_default_async(WF_IAsyncOperation_WUIVICO_UISettingsController** out);
 
-/* Windows.UI.ViewManagement.Core.IUISettingsControllerStatics */
-/* Windows.UI.ViewManagement.Core.IUISettingsControllerStatics.RequestDefaultAsync() */
 HRESULT wuivico_u_i_settings_controller_statics_request_default_async(WUIVICO_IUISettingsControllerStatics *self, WF_IAsyncOperation_WUIVICO_UISettingsController** out);
 
-/* Windows.UI.ViewManagement.Core.ICoreInputViewStatics2 */
-/* Windows.UI.ViewManagement.Core.ICoreInputViewStatics2.GetForUIContext(context) */
 HRESULT wuivico_core_input_view_statics_2_get_for_u_i_context(WUIVICO_ICoreInputViewStatics_2 *self, WUI_UIContext* context, WUIVICO_CoreInputView** out);
 
-/* Windows.UI.ViewManagement.Core.ICoreInputViewStatics */
-/* Windows.UI.ViewManagement.Core.ICoreInputViewStatics.GetForCurrentView() */
 HRESULT wuivico_core_input_view_statics_get_for_current_view(WUIVICO_ICoreInputViewStatics *self, WUIVICO_CoreInputView** out);
 
-/* Windows.UI.ViewManagement.Core.ICoreFrameworkInputViewStatics */
-/* Windows.UI.ViewManagement.Core.ICoreFrameworkInputViewStatics.GetForUIContext(context) */
 HRESULT wuivico_core_framework_input_view_statics_get_for_u_i_context(WUIVICO_ICoreFrameworkInputViewStatics *self, WUI_UIContext* context, WUIVICO_CoreFrameworkInputView** out);
 
-/* Windows.UI.ViewManagement.Core.ICoreFrameworkInputViewStatics.GetForCurrentView() */
 HRESULT wuivico_core_framework_input_view_statics_get_for_current_view(WUIVICO_ICoreFrameworkInputViewStatics *self, WUIVICO_CoreFrameworkInputView** out);
 
-/* activate Windows.UI.ViewManagement.Core.CoreInputViewTransferringXYFocusEventArgs */
 HRESULT wuivico_core_input_view_transferring_x_y_focus_event_args_new(WUIVICO_CoreInputViewTransferringXYFocusEventArgs **out);
 
-/* Windows.UI.ViewManagement.Core.CoreInputViewTransferringXYFocusEventArgs */
-/* Windows.UI.ViewManagement.Core.CoreInputViewTransferringXYFocusEventArgs.get_Origin() */
 HRESULT wuivico_core_input_view_transferring_x_y_focus_event_args_get__origin(WUIVICO_CoreInputViewTransferringXYFocusEventArgs *self, WF_Rect *value);
 
-/* Windows.UI.ViewManagement.Core.CoreInputViewTransferringXYFocusEventArgs.get_Direction() */
 HRESULT wuivico_core_input_view_transferring_x_y_focus_event_args_get__direction(WUIVICO_CoreInputViewTransferringXYFocusEventArgs *self, WUIVICO_CoreInputViewXYFocusTransferDirection *value);
 
-/* Windows.UI.ViewManagement.Core.CoreInputViewTransferringXYFocusEventArgs.put_TransferHandled() */
 HRESULT wuivico_core_input_view_transferring_x_y_focus_event_args_put__transfer_handled(WUIVICO_CoreInputViewTransferringXYFocusEventArgs *self, BOOL value);
 
-/* Windows.UI.ViewManagement.Core.CoreInputViewTransferringXYFocusEventArgs.get_TransferHandled() */
 HRESULT wuivico_core_input_view_transferring_x_y_focus_event_args_get__transfer_handled(WUIVICO_CoreInputViewTransferringXYFocusEventArgs *self, BOOL *value);
 
-/* Windows.UI.ViewManagement.Core.CoreInputViewTransferringXYFocusEventArgs.put_KeepPrimaryViewVisible() */
 HRESULT wuivico_core_input_view_transferring_x_y_focus_event_args_put__keep_primary_view_visible(WUIVICO_CoreInputViewTransferringXYFocusEventArgs *self, BOOL value);
 
-/* Windows.UI.ViewManagement.Core.CoreInputViewTransferringXYFocusEventArgs.get_KeepPrimaryViewVisible() */
 HRESULT wuivico_core_input_view_transferring_x_y_focus_event_args_get__keep_primary_view_visible(WUIVICO_CoreInputViewTransferringXYFocusEventArgs *self, BOOL *value);
 
-/* activate Windows.UI.ViewManagement.Core.CoreInputViewShowingEventArgs */
 HRESULT wuivico_core_input_view_showing_event_args_new(WUIVICO_CoreInputViewShowingEventArgs **out);
 
-/* Windows.UI.ViewManagement.Core.CoreInputViewShowingEventArgs */
-/* Windows.UI.ViewManagement.Core.CoreInputViewShowingEventArgs.TryCancel() */
 HRESULT wuivico_core_input_view_showing_event_args_try_cancel(WUIVICO_CoreInputViewShowingEventArgs *self, BOOL *out);
 
-/* activate Windows.UI.ViewManagement.Core.CoreInputViewOcclusionsChangedEventArgs */
 HRESULT wuivico_core_input_view_occlusions_changed_event_args_new(WUIVICO_CoreInputViewOcclusionsChangedEventArgs **out);
 
-/* Windows.UI.ViewManagement.Core.CoreInputViewOcclusionsChangedEventArgs */
-/* Windows.UI.ViewManagement.Core.CoreInputViewOcclusionsChangedEventArgs.get_Occlusions() */
 HRESULT wuivico_core_input_view_occlusions_changed_event_args_get__occlusions(WUIVICO_CoreInputViewOcclusionsChangedEventArgs *self, WFOCO_IVectorView_WUIVICO_CoreInputViewOcclusion** value);
 
-/* Windows.UI.ViewManagement.Core.CoreInputViewOcclusionsChangedEventArgs.get_Handled() */
 HRESULT wuivico_core_input_view_occlusions_changed_event_args_get__handled(WUIVICO_CoreInputViewOcclusionsChangedEventArgs *self, BOOL *value);
 
-/* Windows.UI.ViewManagement.Core.CoreInputViewOcclusionsChangedEventArgs.put_Handled() */
 HRESULT wuivico_core_input_view_occlusions_changed_event_args_put__handled(WUIVICO_CoreInputViewOcclusionsChangedEventArgs *self, BOOL value);
 
-/* activate Windows.UI.ViewManagement.Core.CoreInputViewOcclusion */
 HRESULT wuivico_core_input_view_occlusion_new(WUIVICO_CoreInputViewOcclusion **out);
 
-/* Windows.UI.ViewManagement.Core.CoreInputViewOcclusion */
-/* Windows.UI.ViewManagement.Core.CoreInputViewOcclusion.get_OccludingRect() */
 HRESULT wuivico_core_input_view_occlusion_get__occluding_rect(WUIVICO_CoreInputViewOcclusion *self, WF_Rect *value);
 
-/* Windows.UI.ViewManagement.Core.CoreInputViewOcclusion.get_OcclusionKind() */
 HRESULT wuivico_core_input_view_occlusion_get__occlusion_kind(WUIVICO_CoreInputViewOcclusion *self, WUIVICO_CoreInputViewOcclusionKind *value);
 
-/* activate Windows.UI.ViewManagement.Core.CoreInputViewHidingEventArgs */
 HRESULT wuivico_core_input_view_hiding_event_args_new(WUIVICO_CoreInputViewHidingEventArgs **out);
 
-/* Windows.UI.ViewManagement.Core.CoreInputViewHidingEventArgs */
-/* Windows.UI.ViewManagement.Core.CoreInputViewHidingEventArgs.TryCancel() */
 HRESULT wuivico_core_input_view_hiding_event_args_try_cancel(WUIVICO_CoreInputViewHidingEventArgs *self, BOOL *out);
 
-/* activate Windows.UI.ViewManagement.Core.CoreInputViewAnimationStartingEventArgs */
 HRESULT wuivico_core_input_view_animation_starting_event_args_new(WUIVICO_CoreInputViewAnimationStartingEventArgs **out);
 
-/* Windows.UI.ViewManagement.Core.CoreInputViewAnimationStartingEventArgs */
-/* Windows.UI.ViewManagement.Core.CoreInputViewAnimationStartingEventArgs.get_Occlusions() */
 HRESULT wuivico_core_input_view_animation_starting_event_args_get__occlusions(WUIVICO_CoreInputViewAnimationStartingEventArgs *self, WFOCO_IVectorView_WUIVICO_CoreInputViewOcclusion** value);
 
-/* Windows.UI.ViewManagement.Core.CoreInputViewAnimationStartingEventArgs.get_Handled() */
 HRESULT wuivico_core_input_view_animation_starting_event_args_get__handled(WUIVICO_CoreInputViewAnimationStartingEventArgs *self, BOOL *value);
 
-/* Windows.UI.ViewManagement.Core.CoreInputViewAnimationStartingEventArgs.put_Handled() */
 HRESULT wuivico_core_input_view_animation_starting_event_args_put__handled(WUIVICO_CoreInputViewAnimationStartingEventArgs *self, BOOL value);
 
-/* Windows.UI.ViewManagement.Core.CoreInputViewAnimationStartingEventArgs.get_AnimationDuration() */
 HRESULT wuivico_core_input_view_animation_starting_event_args_get__animation_duration(WUIVICO_CoreInputViewAnimationStartingEventArgs *self, WF_TimeSpan *value);
 
-/* activate Windows.UI.ViewManagement.Core.CoreInputView */
 HRESULT wuivico_core_input_view_new(WUIVICO_CoreInputView **out);
 
-/* Windows.UI.ViewManagement.Core.CoreInputView */
-/* Windows.UI.ViewManagement.Core.CoreInputView.GetCoreInputViewOcclusions() */
 HRESULT wuivico_core_input_view_get_core_input_view_occlusions(WUIVICO_CoreInputView *self, WFOCO_IVectorView_WUIVICO_CoreInputViewOcclusion** out);
 
-/* Windows.UI.ViewManagement.Core.CoreInputView.TryShowPrimaryView() */
 HRESULT wuivico_core_input_view_try_show_primary_view(WUIVICO_CoreInputView *self, BOOL *out);
 
-/* Windows.UI.ViewManagement.Core.CoreInputView.TryHidePrimaryView() */
 HRESULT wuivico_core_input_view_try_hide_primary_view(WUIVICO_CoreInputView *self, BOOL *out);
 
-/* Windows.UI.ViewManagement.Core.CoreInputView.TryTransferXYFocusToPrimaryView(origin, direction) */
 HRESULT wuivico_core_input_view_try_transfer_x_y_focus_to_primary_view(WUIVICO_CoreInputView *self, WF_Rect origin, WUIVICO_CoreInputViewXYFocusTransferDirection direction, BOOL *out);
 
-/* Windows.UI.ViewManagement.Core.CoreInputView.TryShow() */
 HRESULT wuivico_core_input_view_try_show(WUIVICO_CoreInputView *self, BOOL *out);
 
-/* Windows.UI.ViewManagement.Core.CoreInputView.TryShow() */
 HRESULT wuivico_core_input_view_try_show_core_input_view_kind_b(WUIVICO_CoreInputView *self, WUIVICO_CoreInputViewKind type_, BOOL *out);
 
-/* Windows.UI.ViewManagement.Core.CoreInputView.TryHide() */
 HRESULT wuivico_core_input_view_try_hide(WUIVICO_CoreInputView *self, BOOL *out);
 
-/* Windows.UI.ViewManagement.Core.CoreInputView.IsKindSupported() */
 HRESULT wuivico_core_input_view_is_kind_supported(WUIVICO_CoreInputView *self, WUIVICO_CoreInputViewKind type_, BOOL *out);
 
-/* Windows.UI.ViewManagement.Core.CoreInputView.GetForUIContext(context) */
 HRESULT wuivico_core_input_view_get_for_u_i_context(WUI_UIContext* context, WUIVICO_CoreInputView** out);
 
-/* Windows.UI.ViewManagement.Core.CoreInputView.GetForCurrentView() */
 HRESULT wuivico_core_input_view_get_for_current_view(WUIVICO_CoreInputView** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuivico_core_input_view_on_occlusions_changed(WUIVICO_CoreInputView *self, cwinrt_event_fn fn, void *ctx);
@@ -385,40 +321,26 @@ void wuivico_core_input_view_off_supported_kinds_changed(WUIVICO_CoreInputView *
 cwinrt_token wuivico_core_input_view_on_primary_view_animation_starting(WUIVICO_CoreInputView *self, cwinrt_event_fn fn, void *ctx);
 void wuivico_core_input_view_off_primary_view_animation_starting(WUIVICO_CoreInputView *self, cwinrt_token token);
 
-/* activate Windows.UI.ViewManagement.Core.CoreFrameworkInputViewOcclusionsChangedEventArgs */
 HRESULT wuivico_core_framework_input_view_occlusions_changed_event_args_new(WUIVICO_CoreFrameworkInputViewOcclusionsChangedEventArgs **out);
 
-/* Windows.UI.ViewManagement.Core.CoreFrameworkInputViewOcclusionsChangedEventArgs */
-/* Windows.UI.ViewManagement.Core.CoreFrameworkInputViewOcclusionsChangedEventArgs.get_Occlusions() */
 HRESULT wuivico_core_framework_input_view_occlusions_changed_event_args_get__occlusions(WUIVICO_CoreFrameworkInputViewOcclusionsChangedEventArgs *self, WFOCO_IVectorView_WUIVICO_CoreInputViewOcclusion** value);
 
-/* Windows.UI.ViewManagement.Core.CoreFrameworkInputViewOcclusionsChangedEventArgs.get_Handled() */
 HRESULT wuivico_core_framework_input_view_occlusions_changed_event_args_get__handled(WUIVICO_CoreFrameworkInputViewOcclusionsChangedEventArgs *self, BOOL *value);
 
-/* activate Windows.UI.ViewManagement.Core.CoreFrameworkInputViewAnimationStartingEventArgs */
 HRESULT wuivico_core_framework_input_view_animation_starting_event_args_new(WUIVICO_CoreFrameworkInputViewAnimationStartingEventArgs **out);
 
-/* Windows.UI.ViewManagement.Core.CoreFrameworkInputViewAnimationStartingEventArgs */
-/* Windows.UI.ViewManagement.Core.CoreFrameworkInputViewAnimationStartingEventArgs.get_Occlusions() */
 HRESULT wuivico_core_framework_input_view_animation_starting_event_args_get__occlusions(WUIVICO_CoreFrameworkInputViewAnimationStartingEventArgs *self, WFOCO_IVectorView_WUIVICO_CoreInputViewOcclusion** value);
 
-/* Windows.UI.ViewManagement.Core.CoreFrameworkInputViewAnimationStartingEventArgs.get_FrameworkAnimationRecommended() */
 HRESULT wuivico_core_framework_input_view_animation_starting_event_args_get__framework_animation_recommended(WUIVICO_CoreFrameworkInputViewAnimationStartingEventArgs *self, BOOL *value);
 
-/* Windows.UI.ViewManagement.Core.CoreFrameworkInputViewAnimationStartingEventArgs.get_AnimationDuration() */
 HRESULT wuivico_core_framework_input_view_animation_starting_event_args_get__animation_duration(WUIVICO_CoreFrameworkInputViewAnimationStartingEventArgs *self, WF_TimeSpan *value);
 
-/* activate Windows.UI.ViewManagement.Core.CoreFrameworkInputView */
 HRESULT wuivico_core_framework_input_view_new(WUIVICO_CoreFrameworkInputView **out);
 
-/* Windows.UI.ViewManagement.Core.CoreFrameworkInputView */
-/* Windows.UI.ViewManagement.Core.CoreFrameworkInputView.GetForUIContext(context) */
 HRESULT wuivico_core_framework_input_view_get_for_u_i_context(WUI_UIContext* context, WUIVICO_CoreFrameworkInputView** out);
 
-/* Windows.UI.ViewManagement.Core.CoreFrameworkInputView.GetForCurrentView() */
 HRESULT wuivico_core_framework_input_view_get_for_current_view(WUIVICO_CoreFrameworkInputView** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuivico_core_framework_input_view_on_primary_view_animation_starting(WUIVICO_CoreFrameworkInputView *self, cwinrt_event_fn fn, void *ctx);
@@ -427,34 +349,14 @@ void wuivico_core_framework_input_view_off_primary_view_animation_starting(WUIVI
 cwinrt_token wuivico_core_framework_input_view_on_occlusions_changed(WUIVICO_CoreFrameworkInputView *self, cwinrt_event_fn fn, void *ctx);
 void wuivico_core_framework_input_view_off_occlusions_changed(WUIVICO_CoreFrameworkInputView *self, cwinrt_token token);
 
-/* Windows.UI.ViewManagement.Core.IUISettingsController */
-/* Windows.UI.ViewManagement.Core.ICoreInputViewTransferringXYFocusEventArgs */
-/* Windows.UI.ViewManagement.Core.ICoreInputViewShowingEventArgs */
-/* Windows.UI.ViewManagement.Core.ICoreInputViewOcclusionsChangedEventArgs */
-/* Windows.UI.ViewManagement.Core.ICoreInputViewOcclusion */
-/* Windows.UI.ViewManagement.Core.ICoreInputViewHidingEventArgs */
-/* Windows.UI.ViewManagement.Core.ICoreInputViewAnimationStartingEventArgs */
-/* Windows.UI.ViewManagement.Core.ICoreInputView */
-/* Windows.UI.ViewManagement.Core.ICoreInputView2 */
-/* Windows.UI.ViewManagement.Core.ICoreInputView2.TryTransferXYFocusToPrimaryView(origin, direction) */
 HRESULT wuivico_core_input_view_2_try_transfer_x_y_focus_to_primary_view(WUIVICO_ICoreInputView_2 *self, WF_Rect origin, WUIVICO_CoreInputViewXYFocusTransferDirection direction, BOOL *out);
 
-/* Windows.UI.ViewManagement.Core.ICoreInputView3 */
-/* Windows.UI.ViewManagement.Core.ICoreInputView3.TryShow() */
 HRESULT wuivico_core_input_view_3_try_show(WUIVICO_ICoreInputView_3 *self, BOOL *out);
 
-/* Windows.UI.ViewManagement.Core.ICoreInputView3.TryShow() */
 HRESULT wuivico_core_input_view_3_try_show_core_input_view_kind_b(WUIVICO_ICoreInputView_3 *self, WUIVICO_CoreInputViewKind type_, BOOL *out);
 
-/* Windows.UI.ViewManagement.Core.ICoreInputView3.TryHide() */
 HRESULT wuivico_core_input_view_3_try_hide(WUIVICO_ICoreInputView_3 *self, BOOL *out);
 
-/* Windows.UI.ViewManagement.Core.ICoreInputView4 */
-/* Windows.UI.ViewManagement.Core.ICoreInputView5 */
-/* Windows.UI.ViewManagement.Core.ICoreInputView5.IsKindSupported() */
 HRESULT wuivico_core_input_view_5_is_kind_supported(WUIVICO_ICoreInputView_5 *self, WUIVICO_CoreInputViewKind type_, BOOL *out);
 
-/* Windows.UI.ViewManagement.Core.ICoreFrameworkInputViewOcclusionsChangedEventArgs */
-/* Windows.UI.ViewManagement.Core.ICoreFrameworkInputViewAnimationStartingEventArgs */
-/* Windows.UI.ViewManagement.Core.ICoreFrameworkInputView */
 #endif /* CWINRT_WINDOWS_UI_VIEWMANAGEMENT_CORE_H */

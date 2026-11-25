@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.ApplicationModel.Contacts.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WAPCOPR_ContactPickerUI WAPCOPR_ContactPickerUI;
 typedef struct WAPCOPR_ContactRemovedEventArgs WAPCOPR_ContactRemovedEventArgs;
 typedef struct WAPCOPR_IContactProvider WAPCOPR_IContactProvider;
@@ -21,7 +20,6 @@ typedef struct WAPCOPR_IContactPickerUI WAPCOPR_IContactPickerUI;
 typedef struct WAPCOPR_IContactPickerUI_2 WAPCOPR_IContactPickerUI_2;
 typedef struct WAPCOPR_IContactRemovedEventArgs WAPCOPR_IContactRemovedEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WAPCO_Contact
 #define CWINRT_FWD_WAPCO_Contact
 typedef struct WAPCO_Contact WAPCO_Contact;
@@ -60,7 +58,6 @@ typedef enum WAPCOPR_AddContactResult {
 } WAPCOPR_AddContactResult;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -81,60 +78,37 @@ static const IID CWINRT_IID_WAPCOPR_IContactPickerUI_2 CWINRT_MAYBE_UNUSED = { 0
 static const IID CWINRT_IID_WAPCOPR_IContactRemovedEventArgs CWINRT_MAYBE_UNUSED = { 0x6F354338, 0x3302, 0x4D13, { 0xAD, 0x8D, 0xAD, 0xCC, 0x0F, 0xF9, 0xE4, 0x7C } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.Contacts.Provider.ContactPickerUI */
 HRESULT wapcopr_contact_picker_u_i_new(WAPCOPR_ContactPickerUI **out);
 
-/* Windows.ApplicationModel.Contacts.Provider.ContactPickerUI */
-/* Windows.ApplicationModel.Contacts.Provider.ContactPickerUI.AddContact(id, contact) */
 HRESULT wapcopr_contact_picker_u_i_add_contact_str_p_add_contact_result(WAPCOPR_ContactPickerUI *self, cwinrt_hstring id, WAPCO_Contact* contact, WAPCOPR_AddContactResult *out);
 
-/* Windows.ApplicationModel.Contacts.Provider.ContactPickerUI.RemoveContact(id) */
 HRESULT wapcopr_contact_picker_u_i_remove_contact(WAPCOPR_ContactPickerUI *self, cwinrt_hstring id);
 
-/* Windows.ApplicationModel.Contacts.Provider.ContactPickerUI.ContainsContact(id) */
 HRESULT wapcopr_contact_picker_u_i_contains_contact(WAPCOPR_ContactPickerUI *self, cwinrt_hstring id, BOOL *out);
 
-/* Windows.ApplicationModel.Contacts.Provider.ContactPickerUI.get_DesiredFields() */
 HRESULT wapcopr_contact_picker_u_i_get__desired_fields(WAPCOPR_ContactPickerUI *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.ApplicationModel.Contacts.Provider.ContactPickerUI.get_SelectionMode() */
 HRESULT wapcopr_contact_picker_u_i_get__selection_mode(WAPCOPR_ContactPickerUI *self, WAPCO_ContactSelectionMode *value);
 
-/* Windows.ApplicationModel.Contacts.Provider.ContactPickerUI.AddContact(contact) */
 HRESULT wapcopr_contact_picker_u_i_add_contact(WAPCOPR_ContactPickerUI *self, WAPCO_Contact* contact, WAPCOPR_AddContactResult *out);
 
-/* Windows.ApplicationModel.Contacts.Provider.ContactPickerUI.get_DesiredFieldsWithContactFieldType() */
 HRESULT wapcopr_contact_picker_u_i_get__desired_fields_with_contact_field_type(WAPCOPR_ContactPickerUI *self, WFOCO_IVector_WAPCO_ContactFieldType** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapcopr_contact_picker_u_i_on_contact_removed(WAPCOPR_ContactPickerUI *self, cwinrt_event_fn fn, void *ctx);
 void wapcopr_contact_picker_u_i_off_contact_removed(WAPCOPR_ContactPickerUI *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs */
 HRESULT wapcopr_contact_removed_event_args_new(WAPCOPR_ContactRemovedEventArgs **out);
 
-/* Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs */
-/* Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs.get_Id() */
 HRESULT wapcopr_contact_removed_event_args_get__id(WAPCOPR_ContactRemovedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.Provider.IContactProvider */
-/* Windows.ApplicationModel.Contacts.Provider.IContactProvider.GetContactFromRemoteIdAsync(contactRemoteId) */
 HRESULT wapcopr_contact_provider_get_contact_from_remote_id_async(WAPCOPR_IContactProvider *self, cwinrt_hstring contactRemoteId, WF_IAsyncOperation_WAPCO_Contact** out);
 
-/* Windows.ApplicationModel.Contacts.Provider.IContactProvider.get_ContactListId() */
 HRESULT wapcopr_contact_provider_get__contact_list_id(WAPCOPR_IContactProvider *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Contacts.Provider.IContactPickerUI */
-/* Windows.ApplicationModel.Contacts.Provider.IContactPickerUI2 */
-/* Windows.ApplicationModel.Contacts.Provider.IContactPickerUI2.AddContact(contact) */
 HRESULT wapcopr_contact_picker_u_i_2_add_contact(WAPCOPR_IContactPickerUI_2 *self, WAPCO_Contact* contact, WAPCOPR_AddContactResult *out);
 
-/* Windows.ApplicationModel.Contacts.Provider.IContactPickerUI2.get_DesiredFieldsWithContactFieldType() */
 HRESULT wapcopr_contact_picker_u_i_2_get__desired_fields_with_contact_field_type(WAPCOPR_IContactPickerUI_2 *self, WFOCO_IVector_WAPCO_ContactFieldType** value);
 
-/* Windows.ApplicationModel.Contacts.Provider.IContactRemovedEventArgs */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_CONTACTS_PROVIDER_H */

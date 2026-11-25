@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStreamWithContentType
 #define CWINRT_FWD_WSTST_IRandomAccessStreamWithContentType
 typedef struct WSTST_IRandomAccessStreamWithContentType WSTST_IRandomAccessStreamWithContentType;
@@ -22,7 +21,6 @@ typedef struct WSTST_IRandomAccessStreamWithContentType WSTST_IRandomAccessStrea
 typedef struct WSTST_IRandomAccessStreamReference WSTST_IRandomAccessStreamReference;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMEPL_MuteChangeRequestedEventArgs WMEPL_MuteChangeRequestedEventArgs;
 typedef struct WMEPL_PlayToConnection WMEPL_PlayToConnection;
 typedef struct WMEPL_PlayToConnectionErrorEventArgs WMEPL_PlayToConnectionErrorEventArgs;
@@ -58,7 +56,6 @@ typedef struct WMEPL_IVolumeChangeRequestedEventArgs WMEPL_IVolumeChangeRequeste
 typedef struct WMEPL_ICurrentTimeChangeRequestedEventArgs WMEPL_ICurrentTimeChangeRequestedEventArgs;
 typedef struct WMEPL_IPlayToConnectionTransferredEventArgs WMEPL_IPlayToConnectionTransferredEventArgs;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_TypedEventHandler_WMEPL_PlayToConnection_WMEPL_PlayToConnectionStateChangedEventArgs
 #define CWINRT_FWD_WF_TypedEventHandler_WMEPL_PlayToConnection_WMEPL_PlayToConnectionStateChangedEventArgs
 typedef struct WF_TypedEventHandler_WMEPL_PlayToConnection_WMEPL_PlayToConnectionStateChangedEventArgs WF_TypedEventHandler_WMEPL_PlayToConnection_WMEPL_PlayToConnectionStateChangedEventArgs;
@@ -156,7 +153,6 @@ typedef enum WMEPL_PlayToConnectionState {
 } WMEPL_PlayToConnectionState;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -233,23 +229,14 @@ static const IID CWINRT_IID_WMEPL_ICurrentTimeChangeRequestedEventArgs CWINRT_MA
 static const IID CWINRT_IID_WMEPL_IPlayToConnectionTransferredEventArgs CWINRT_MAYBE_UNUSED = { 0xFAE3193A, 0x0683, 0x47D9, { 0x8D, 0xF0, 0x18, 0xCB, 0xB4, 0x89, 0x84, 0xD8 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Media.PlayTo.MuteChangeRequestedEventArgs */
 HRESULT wmepl_mute_change_requested_event_args_new(WMEPL_MuteChangeRequestedEventArgs **out);
 
-/* Windows.Media.PlayTo.MuteChangeRequestedEventArgs */
-/* Windows.Media.PlayTo.MuteChangeRequestedEventArgs.get_Mute() */
 HRESULT wmepl_mute_change_requested_event_args_get__mute(WMEPL_MuteChangeRequestedEventArgs *self, BOOL *value);
 
-/* activate Windows.Media.PlayTo.PlayToConnection */
 HRESULT wmepl_play_to_connection_new(WMEPL_PlayToConnection **out);
 
-/* Windows.Media.PlayTo.PlayToConnection */
-/* Windows.Media.PlayTo.PlayToConnection.get_State() */
 HRESULT wmepl_play_to_connection_get__state(WMEPL_PlayToConnection *self, WMEPL_PlayToConnectionState *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmepl_play_to_connection_on_state_changed(WMEPL_PlayToConnection *self, cwinrt_event_fn fn, void *ctx);
@@ -261,43 +248,28 @@ void wmepl_play_to_connection_off_transferred(WMEPL_PlayToConnection *self, cwin
 cwinrt_token wmepl_play_to_connection_on_error(WMEPL_PlayToConnection *self, cwinrt_event_fn fn, void *ctx);
 void wmepl_play_to_connection_off_error(WMEPL_PlayToConnection *self, cwinrt_token token);
 
-/* activate Windows.Media.PlayTo.PlayToConnectionErrorEventArgs */
 HRESULT wmepl_play_to_connection_error_event_args_new(WMEPL_PlayToConnectionErrorEventArgs **out);
 
-/* Windows.Media.PlayTo.PlayToConnectionErrorEventArgs */
-/* Windows.Media.PlayTo.PlayToConnectionErrorEventArgs.get_Code() */
 HRESULT wmepl_play_to_connection_error_event_args_get__code(WMEPL_PlayToConnectionErrorEventArgs *self, WMEPL_PlayToConnectionError *value);
 
-/* Windows.Media.PlayTo.PlayToConnectionErrorEventArgs.get_Message() */
 HRESULT wmepl_play_to_connection_error_event_args_get__message(WMEPL_PlayToConnectionErrorEventArgs *self, cwinrt_hstring *value);
 
-/* activate Windows.Media.PlayTo.PlayToConnectionStateChangedEventArgs */
 HRESULT wmepl_play_to_connection_state_changed_event_args_new(WMEPL_PlayToConnectionStateChangedEventArgs **out);
 
-/* Windows.Media.PlayTo.PlayToConnectionStateChangedEventArgs */
-/* Windows.Media.PlayTo.PlayToConnectionStateChangedEventArgs.get_PreviousState() */
 HRESULT wmepl_play_to_connection_state_changed_event_args_get__previous_state(WMEPL_PlayToConnectionStateChangedEventArgs *self, WMEPL_PlayToConnectionState *value);
 
-/* Windows.Media.PlayTo.PlayToConnectionStateChangedEventArgs.get_CurrentState() */
 HRESULT wmepl_play_to_connection_state_changed_event_args_get__current_state(WMEPL_PlayToConnectionStateChangedEventArgs *self, WMEPL_PlayToConnectionState *value);
 
-/* activate Windows.Media.PlayTo.PlayToManager */
 HRESULT wmepl_play_to_manager_new(WMEPL_PlayToManager **out);
 
-/* Windows.Media.PlayTo.PlayToManager */
-/* Windows.Media.PlayTo.PlayToManager.put_DefaultSourceSelection() */
 HRESULT wmepl_play_to_manager_put__default_source_selection(WMEPL_PlayToManager *self, BOOL value);
 
-/* Windows.Media.PlayTo.PlayToManager.get_DefaultSourceSelection() */
 HRESULT wmepl_play_to_manager_get__default_source_selection(WMEPL_PlayToManager *self, BOOL *value);
 
-/* Windows.Media.PlayTo.PlayToManager.GetForCurrentView() */
 HRESULT wmepl_play_to_manager_get_for_current_view(WMEPL_PlayToManager** out);
 
-/* Windows.Media.PlayTo.PlayToManager.ShowPlayToUI() */
 HRESULT wmepl_play_to_manager_show_play_to_u_i(void);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmepl_play_to_manager_on_source_requested(WMEPL_PlayToManager *self, cwinrt_event_fn fn, void *ctx);
@@ -306,80 +278,54 @@ void wmepl_play_to_manager_off_source_requested(WMEPL_PlayToManager *self, cwinr
 cwinrt_token wmepl_play_to_manager_on_source_selected(WMEPL_PlayToManager *self, cwinrt_event_fn fn, void *ctx);
 void wmepl_play_to_manager_off_source_selected(WMEPL_PlayToManager *self, cwinrt_token token);
 
-/* activate Windows.Media.PlayTo.PlayToReceiver */
 HRESULT wmepl_play_to_receiver_new(WMEPL_PlayToReceiver **out);
 
-/* Windows.Media.PlayTo.PlayToReceiver */
-/* Windows.Media.PlayTo.PlayToReceiver.NotifyVolumeChange(volume, mute) */
 HRESULT wmepl_play_to_receiver_notify_volume_change(WMEPL_PlayToReceiver *self, double volume, BOOL mute);
 
-/* Windows.Media.PlayTo.PlayToReceiver.NotifyRateChange(rate) */
 HRESULT wmepl_play_to_receiver_notify_rate_change(WMEPL_PlayToReceiver *self, double rate);
 
-/* Windows.Media.PlayTo.PlayToReceiver.NotifyLoadedMetadata() */
 HRESULT wmepl_play_to_receiver_notify_loaded_metadata(WMEPL_PlayToReceiver *self);
 
-/* Windows.Media.PlayTo.PlayToReceiver.NotifyTimeUpdate(currentTime) */
 HRESULT wmepl_play_to_receiver_notify_time_update(WMEPL_PlayToReceiver *self, WF_TimeSpan currentTime);
 
-/* Windows.Media.PlayTo.PlayToReceiver.NotifyDurationChange(duration) */
 HRESULT wmepl_play_to_receiver_notify_duration_change(WMEPL_PlayToReceiver *self, WF_TimeSpan duration);
 
-/* Windows.Media.PlayTo.PlayToReceiver.NotifySeeking() */
 HRESULT wmepl_play_to_receiver_notify_seeking(WMEPL_PlayToReceiver *self);
 
-/* Windows.Media.PlayTo.PlayToReceiver.NotifySeeked() */
 HRESULT wmepl_play_to_receiver_notify_seeked(WMEPL_PlayToReceiver *self);
 
-/* Windows.Media.PlayTo.PlayToReceiver.NotifyPaused() */
 HRESULT wmepl_play_to_receiver_notify_paused(WMEPL_PlayToReceiver *self);
 
-/* Windows.Media.PlayTo.PlayToReceiver.NotifyPlaying() */
 HRESULT wmepl_play_to_receiver_notify_playing(WMEPL_PlayToReceiver *self);
 
-/* Windows.Media.PlayTo.PlayToReceiver.NotifyEnded() */
 HRESULT wmepl_play_to_receiver_notify_ended(WMEPL_PlayToReceiver *self);
 
-/* Windows.Media.PlayTo.PlayToReceiver.NotifyError() */
 HRESULT wmepl_play_to_receiver_notify_error(WMEPL_PlayToReceiver *self);
 
-/* Windows.Media.PlayTo.PlayToReceiver.NotifyStopped() */
 HRESULT wmepl_play_to_receiver_notify_stopped(WMEPL_PlayToReceiver *self);
 
-/* Windows.Media.PlayTo.PlayToReceiver.get_FriendlyName() */
 HRESULT wmepl_play_to_receiver_get__friendly_name(WMEPL_PlayToReceiver *self, cwinrt_hstring *value);
 
-/* Windows.Media.PlayTo.PlayToReceiver.put_FriendlyName() */
 HRESULT wmepl_play_to_receiver_put__friendly_name(WMEPL_PlayToReceiver *self, cwinrt_hstring value);
 
-/* Windows.Media.PlayTo.PlayToReceiver.put_SupportsImage() */
 HRESULT wmepl_play_to_receiver_put__supports_image(WMEPL_PlayToReceiver *self, BOOL value);
 
-/* Windows.Media.PlayTo.PlayToReceiver.get_SupportsImage() */
 HRESULT wmepl_play_to_receiver_get__supports_image(WMEPL_PlayToReceiver *self, BOOL *value);
 
-/* Windows.Media.PlayTo.PlayToReceiver.put_SupportsAudio() */
 HRESULT wmepl_play_to_receiver_put__supports_audio(WMEPL_PlayToReceiver *self, BOOL value);
 
-/* Windows.Media.PlayTo.PlayToReceiver.get_SupportsAudio() */
 HRESULT wmepl_play_to_receiver_get__supports_audio(WMEPL_PlayToReceiver *self, BOOL *value);
 
-/* Windows.Media.PlayTo.PlayToReceiver.put_SupportsVideo() */
 HRESULT wmepl_play_to_receiver_put__supports_video(WMEPL_PlayToReceiver *self, BOOL value);
 
-/* Windows.Media.PlayTo.PlayToReceiver.get_SupportsVideo() */
 HRESULT wmepl_play_to_receiver_get__supports_video(WMEPL_PlayToReceiver *self, BOOL *value);
 
-/* Windows.Media.PlayTo.PlayToReceiver.get_Properties() */
 HRESULT wmepl_play_to_receiver_get__properties(WMEPL_PlayToReceiver *self, WFOCO_IPropertySet** value);
 
-/* Windows.Media.PlayTo.PlayToReceiver.StartAsync() */
 HRESULT wmepl_play_to_receiver_start_async(WMEPL_PlayToReceiver *self, WF_IAsyncAction** out);
 
-/* Windows.Media.PlayTo.PlayToReceiver.StopAsync() */
 HRESULT wmepl_play_to_receiver_stop_async(WMEPL_PlayToReceiver *self, WF_IAsyncAction** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmepl_play_to_receiver_on_play_requested(WMEPL_PlayToReceiver *self, cwinrt_event_fn fn, void *ctx);
@@ -409,170 +355,96 @@ void wmepl_play_to_receiver_off_time_update_requested(WMEPL_PlayToReceiver *self
 cwinrt_token wmepl_play_to_receiver_on_stop_requested(WMEPL_PlayToReceiver *self, cwinrt_event_fn fn, void *ctx);
 void wmepl_play_to_receiver_off_stop_requested(WMEPL_PlayToReceiver *self, cwinrt_token token);
 
-/* activate Windows.Media.PlayTo.PlayToSource */
 HRESULT wmepl_play_to_source_new(WMEPL_PlayToSource **out);
 
-/* Windows.Media.PlayTo.PlayToSource */
-/* Windows.Media.PlayTo.PlayToSource.get_Connection() */
 HRESULT wmepl_play_to_source_get__connection(WMEPL_PlayToSource *self, WMEPL_PlayToConnection** value);
 
-/* Windows.Media.PlayTo.PlayToSource.get_Next() */
 HRESULT wmepl_play_to_source_get__next(WMEPL_PlayToSource *self, WMEPL_PlayToSource** value);
 
-/* Windows.Media.PlayTo.PlayToSource.put_Next() */
 HRESULT wmepl_play_to_source_put__next(WMEPL_PlayToSource *self, WMEPL_PlayToSource* value);
 
-/* Windows.Media.PlayTo.PlayToSource.PlayNext() */
 HRESULT wmepl_play_to_source_play_next(WMEPL_PlayToSource *self);
 
-/* Windows.Media.PlayTo.PlayToSource.get_PreferredSourceUri() */
 HRESULT wmepl_play_to_source_get__preferred_source_uri(WMEPL_PlayToSource *self, WF_Uri** value);
 
-/* Windows.Media.PlayTo.PlayToSource.put_PreferredSourceUri() */
 HRESULT wmepl_play_to_source_put__preferred_source_uri(WMEPL_PlayToSource *self, WF_Uri* value);
 
-/* activate Windows.Media.PlayTo.PlayToSourceDeferral */
 HRESULT wmepl_play_to_source_deferral_new(WMEPL_PlayToSourceDeferral **out);
 
-/* Windows.Media.PlayTo.PlayToSourceDeferral */
-/* Windows.Media.PlayTo.PlayToSourceDeferral.Complete() */
 HRESULT wmepl_play_to_source_deferral_complete(WMEPL_PlayToSourceDeferral *self);
 
-/* activate Windows.Media.PlayTo.PlayToSourceRequest */
 HRESULT wmepl_play_to_source_request_new(WMEPL_PlayToSourceRequest **out);
 
-/* Windows.Media.PlayTo.PlayToSourceRequest */
-/* Windows.Media.PlayTo.PlayToSourceRequest.get_Deadline() */
 HRESULT wmepl_play_to_source_request_get__deadline(WMEPL_PlayToSourceRequest *self, WF_DateTime *value);
 
-/* Windows.Media.PlayTo.PlayToSourceRequest.DisplayErrorString(errorString) */
 HRESULT wmepl_play_to_source_request_display_error_string(WMEPL_PlayToSourceRequest *self, cwinrt_hstring errorString);
 
-/* Windows.Media.PlayTo.PlayToSourceRequest.GetDeferral() */
 HRESULT wmepl_play_to_source_request_get_deferral(WMEPL_PlayToSourceRequest *self, WMEPL_PlayToSourceDeferral** out);
 
-/* Windows.Media.PlayTo.PlayToSourceRequest.SetSource() */
 HRESULT wmepl_play_to_source_request_set_source(WMEPL_PlayToSourceRequest *self, WMEPL_PlayToSource* value);
 
-/* activate Windows.Media.PlayTo.PlayToSourceRequestedEventArgs */
 HRESULT wmepl_play_to_source_requested_event_args_new(WMEPL_PlayToSourceRequestedEventArgs **out);
 
-/* Windows.Media.PlayTo.PlayToSourceRequestedEventArgs */
-/* Windows.Media.PlayTo.PlayToSourceRequestedEventArgs.get_SourceRequest() */
 HRESULT wmepl_play_to_source_requested_event_args_get__source_request(WMEPL_PlayToSourceRequestedEventArgs *self, WMEPL_PlayToSourceRequest** value);
 
-/* activate Windows.Media.PlayTo.PlayToSourceSelectedEventArgs */
 HRESULT wmepl_play_to_source_selected_event_args_new(WMEPL_PlayToSourceSelectedEventArgs **out);
 
-/* Windows.Media.PlayTo.PlayToSourceSelectedEventArgs */
-/* Windows.Media.PlayTo.PlayToSourceSelectedEventArgs.get_FriendlyName() */
 HRESULT wmepl_play_to_source_selected_event_args_get__friendly_name(WMEPL_PlayToSourceSelectedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Media.PlayTo.PlayToSourceSelectedEventArgs.get_Icon() */
 HRESULT wmepl_play_to_source_selected_event_args_get__icon(WMEPL_PlayToSourceSelectedEventArgs *self, WSTST_IRandomAccessStreamWithContentType** value);
 
-/* Windows.Media.PlayTo.PlayToSourceSelectedEventArgs.get_SupportsImage() */
 HRESULT wmepl_play_to_source_selected_event_args_get__supports_image(WMEPL_PlayToSourceSelectedEventArgs *self, BOOL *value);
 
-/* Windows.Media.PlayTo.PlayToSourceSelectedEventArgs.get_SupportsAudio() */
 HRESULT wmepl_play_to_source_selected_event_args_get__supports_audio(WMEPL_PlayToSourceSelectedEventArgs *self, BOOL *value);
 
-/* Windows.Media.PlayTo.PlayToSourceSelectedEventArgs.get_SupportsVideo() */
 HRESULT wmepl_play_to_source_selected_event_args_get__supports_video(WMEPL_PlayToSourceSelectedEventArgs *self, BOOL *value);
 
-/* activate Windows.Media.PlayTo.PlaybackRateChangeRequestedEventArgs */
 HRESULT wmepl_playback_rate_change_requested_event_args_new(WMEPL_PlaybackRateChangeRequestedEventArgs **out);
 
-/* Windows.Media.PlayTo.PlaybackRateChangeRequestedEventArgs */
-/* Windows.Media.PlayTo.PlaybackRateChangeRequestedEventArgs.get_Rate() */
 HRESULT wmepl_playback_rate_change_requested_event_args_get__rate(WMEPL_PlaybackRateChangeRequestedEventArgs *self, double *value);
 
-/* activate Windows.Media.PlayTo.SourceChangeRequestedEventArgs */
 HRESULT wmepl_source_change_requested_event_args_new(WMEPL_SourceChangeRequestedEventArgs **out);
 
-/* Windows.Media.PlayTo.SourceChangeRequestedEventArgs */
-/* Windows.Media.PlayTo.SourceChangeRequestedEventArgs.get_Stream() */
 HRESULT wmepl_source_change_requested_event_args_get__stream(WMEPL_SourceChangeRequestedEventArgs *self, WSTST_IRandomAccessStreamWithContentType** value);
 
-/* Windows.Media.PlayTo.SourceChangeRequestedEventArgs.get_Title() */
 HRESULT wmepl_source_change_requested_event_args_get__title(WMEPL_SourceChangeRequestedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Media.PlayTo.SourceChangeRequestedEventArgs.get_Author() */
 HRESULT wmepl_source_change_requested_event_args_get__author(WMEPL_SourceChangeRequestedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Media.PlayTo.SourceChangeRequestedEventArgs.get_Album() */
 HRESULT wmepl_source_change_requested_event_args_get__album(WMEPL_SourceChangeRequestedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Media.PlayTo.SourceChangeRequestedEventArgs.get_Genre() */
 HRESULT wmepl_source_change_requested_event_args_get__genre(WMEPL_SourceChangeRequestedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Media.PlayTo.SourceChangeRequestedEventArgs.get_Description() */
 HRESULT wmepl_source_change_requested_event_args_get__description(WMEPL_SourceChangeRequestedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Media.PlayTo.SourceChangeRequestedEventArgs.get_Date() */
 HRESULT wmepl_source_change_requested_event_args_get__date(WMEPL_SourceChangeRequestedEventArgs *self, WF_DateTime** value);
 
-/* Windows.Media.PlayTo.SourceChangeRequestedEventArgs.get_Thumbnail() */
 HRESULT wmepl_source_change_requested_event_args_get__thumbnail(WMEPL_SourceChangeRequestedEventArgs *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.Media.PlayTo.SourceChangeRequestedEventArgs.get_Rating() */
 HRESULT wmepl_source_change_requested_event_args_get__rating(WMEPL_SourceChangeRequestedEventArgs *self, uint32_t** value);
 
-/* Windows.Media.PlayTo.SourceChangeRequestedEventArgs.get_Properties() */
 HRESULT wmepl_source_change_requested_event_args_get__properties(WMEPL_SourceChangeRequestedEventArgs *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* activate Windows.Media.PlayTo.VolumeChangeRequestedEventArgs */
 HRESULT wmepl_volume_change_requested_event_args_new(WMEPL_VolumeChangeRequestedEventArgs **out);
 
-/* Windows.Media.PlayTo.VolumeChangeRequestedEventArgs */
-/* Windows.Media.PlayTo.VolumeChangeRequestedEventArgs.get_Volume() */
 HRESULT wmepl_volume_change_requested_event_args_get__volume(WMEPL_VolumeChangeRequestedEventArgs *self, double *value);
 
-/* activate Windows.Media.PlayTo.CurrentTimeChangeRequestedEventArgs */
 HRESULT wmepl_current_time_change_requested_event_args_new(WMEPL_CurrentTimeChangeRequestedEventArgs **out);
 
-/* Windows.Media.PlayTo.CurrentTimeChangeRequestedEventArgs */
-/* Windows.Media.PlayTo.CurrentTimeChangeRequestedEventArgs.get_Time() */
 HRESULT wmepl_current_time_change_requested_event_args_get__time(WMEPL_CurrentTimeChangeRequestedEventArgs *self, WF_TimeSpan *value);
 
-/* Windows.Media.PlayTo.IPlayToManagerStatics */
-/* Windows.Media.PlayTo.IPlayToManagerStatics.GetForCurrentView() */
 HRESULT wmepl_play_to_manager_statics_get_for_current_view(WMEPL_IPlayToManagerStatics *self, WMEPL_PlayToManager** out);
 
-/* Windows.Media.PlayTo.IPlayToManagerStatics.ShowPlayToUI() */
 HRESULT wmepl_play_to_manager_statics_show_play_to_u_i(WMEPL_IPlayToManagerStatics *self);
 
-/* activate Windows.Media.PlayTo.PlayToConnectionTransferredEventArgs */
 HRESULT wmepl_play_to_connection_transferred_event_args_new(WMEPL_PlayToConnectionTransferredEventArgs **out);
 
-/* Windows.Media.PlayTo.PlayToConnectionTransferredEventArgs */
-/* Windows.Media.PlayTo.PlayToConnectionTransferredEventArgs.get_PreviousSource() */
 HRESULT wmepl_play_to_connection_transferred_event_args_get__previous_source(WMEPL_PlayToConnectionTransferredEventArgs *self, WMEPL_PlayToSource** value);
 
-/* Windows.Media.PlayTo.PlayToConnectionTransferredEventArgs.get_CurrentSource() */
 HRESULT wmepl_play_to_connection_transferred_event_args_get__current_source(WMEPL_PlayToConnectionTransferredEventArgs *self, WMEPL_PlayToSource** value);
 
-/* Windows.Media.PlayTo.IMuteChangeRequestedEventArgs */
-/* Windows.Media.PlayTo.IPlayToConnection */
-/* Windows.Media.PlayTo.IPlayToConnectionErrorEventArgs */
-/* Windows.Media.PlayTo.IPlayToConnectionStateChangedEventArgs */
-/* Windows.Media.PlayTo.IPlayToManager */
-/* Windows.Media.PlayTo.IPlayToReceiver */
-/* Windows.Media.PlayTo.IPlayToSource */
-/* Windows.Media.PlayTo.IPlayToSourceWithPreferredSourceUri */
-/* Windows.Media.PlayTo.IPlayToSourceWithPreferredSourceUri.get_PreferredSourceUri() */
 HRESULT wmepl_play_to_source_with_preferred_source_uri_get__preferred_source_uri(WMEPL_IPlayToSourceWithPreferredSourceUri *self, WF_Uri** value);
 
-/* Windows.Media.PlayTo.IPlayToSourceWithPreferredSourceUri.put_PreferredSourceUri() */
 HRESULT wmepl_play_to_source_with_preferred_source_uri_put__preferred_source_uri(WMEPL_IPlayToSourceWithPreferredSourceUri *self, WF_Uri* value);
 
-/* Windows.Media.PlayTo.IPlayToSourceDeferral */
-/* Windows.Media.PlayTo.IPlayToSourceRequest */
-/* Windows.Media.PlayTo.IPlayToSourceRequestedEventArgs */
-/* Windows.Media.PlayTo.IPlayToSourceSelectedEventArgs */
-/* Windows.Media.PlayTo.IPlaybackRateChangeRequestedEventArgs */
-/* Windows.Media.PlayTo.ISourceChangeRequestedEventArgs */
-/* Windows.Media.PlayTo.IVolumeChangeRequestedEventArgs */
-/* Windows.Media.PlayTo.ICurrentTimeChangeRequestedEventArgs */
-/* Windows.Media.PlayTo.IPlayToConnectionTransferredEventArgs */
 #endif /* CWINRT_WINDOWS_MEDIA_PLAYTO_H */

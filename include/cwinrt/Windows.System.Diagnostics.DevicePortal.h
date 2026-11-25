@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Networking.Sockets.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WNESO_ServerMessageWebSocket
 #define CWINRT_FWD_WNESO_ServerMessageWebSocket
 typedef struct WNESO_ServerMessageWebSocket WNESO_ServerMessageWebSocket;
@@ -35,7 +34,6 @@ typedef struct WAPAP_AppServiceConnection WAPAP_AppServiceConnection;
 typedef struct WWEHT_HttpResponseMessage WWEHT_HttpResponseMessage;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSYDIDE_DevicePortalConnectionRequestReceivedEventArgs WSYDIDE_DevicePortalConnectionRequestReceivedEventArgs;
 typedef struct WSYDIDE_DevicePortalConnectionClosedEventArgs WSYDIDE_DevicePortalConnectionClosedEventArgs;
 typedef struct WSYDIDE_DevicePortalConnection WSYDIDE_DevicePortalConnection;
@@ -46,7 +44,6 @@ typedef struct WSYDIDE_IDevicePortalConnectionClosedEventArgs WSYDIDE_IDevicePor
 typedef struct WSYDIDE_IDevicePortalConnection WSYDIDE_IDevicePortalConnection;
 typedef struct WSYDIDE_IDevicePortalWebSocketConnection WSYDIDE_IDevicePortalWebSocketConnection;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WWEHT_HttpRequestMessage
 #define CWINRT_FWD_WWEHT_HttpRequestMessage
 typedef struct WWEHT_HttpRequestMessage WWEHT_HttpRequestMessage;
@@ -112,7 +109,6 @@ typedef enum WSYDIDE_DevicePortalConnectionClosedReason {
 } WSYDIDE_DevicePortalConnectionClosedReason;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -141,57 +137,36 @@ static const IID CWINRT_IID_WSYDIDE_IDevicePortalConnection CWINRT_MAYBE_UNUSED 
 static const IID CWINRT_IID_WSYDIDE_IDevicePortalWebSocketConnection CWINRT_MAYBE_UNUSED = { 0x67657920, 0xD65A, 0x42F0, { 0xAE, 0xF4, 0x78, 0x78, 0x08, 0x09, 0x8B, 0x7B } };
 #endif
 
-/* Methods */
-
-/* activate Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionRequestReceivedEventArgs */
 HRESULT wsydide_device_portal_connection_request_received_event_args_new(WSYDIDE_DevicePortalConnectionRequestReceivedEventArgs **out);
 
-/* Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionRequestReceivedEventArgs */
-/* Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionRequestReceivedEventArgs.get_RequestMessage() */
 HRESULT wsydide_device_portal_connection_request_received_event_args_get__request_message(WSYDIDE_DevicePortalConnectionRequestReceivedEventArgs *self, WWEHT_HttpRequestMessage** value);
 
-/* Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionRequestReceivedEventArgs.get_ResponseMessage() */
 HRESULT wsydide_device_portal_connection_request_received_event_args_get__response_message(WSYDIDE_DevicePortalConnectionRequestReceivedEventArgs *self, WWEHT_HttpResponseMessage** value);
 
-/* Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionRequestReceivedEventArgs.get_IsWebSocketUpgradeRequest() */
 HRESULT wsydide_device_portal_connection_request_received_event_args_get__is_web_socket_upgrade_request(WSYDIDE_DevicePortalConnectionRequestReceivedEventArgs *self, BOOL *value);
 
-/* Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionRequestReceivedEventArgs.get_WebSocketProtocolsRequested() */
 HRESULT wsydide_device_portal_connection_request_received_event_args_get__web_socket_protocols_requested(WSYDIDE_DevicePortalConnectionRequestReceivedEventArgs *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionRequestReceivedEventArgs.GetDeferral() */
 HRESULT wsydide_device_portal_connection_request_received_event_args_get_deferral(WSYDIDE_DevicePortalConnectionRequestReceivedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionClosedEventArgs */
 HRESULT wsydide_device_portal_connection_closed_event_args_new(WSYDIDE_DevicePortalConnectionClosedEventArgs **out);
 
-/* Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionClosedEventArgs */
-/* Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionClosedEventArgs.get_Reason() */
 HRESULT wsydide_device_portal_connection_closed_event_args_get__reason(WSYDIDE_DevicePortalConnectionClosedEventArgs *self, WSYDIDE_DevicePortalConnectionClosedReason *value);
 
-/* activate Windows.System.Diagnostics.DevicePortal.DevicePortalConnection */
 HRESULT wsydide_device_portal_connection_new(WSYDIDE_DevicePortalConnection **out);
 
-/* Windows.System.Diagnostics.DevicePortal.DevicePortalConnection */
-/* Windows.System.Diagnostics.DevicePortal.DevicePortalConnection.GetServerMessageWebSocketForRequest(request) */
 HRESULT wsydide_device_portal_connection_get_server_message_web_socket_for_request(WSYDIDE_DevicePortalConnection *self, WWEHT_HttpRequestMessage* request, WNESO_ServerMessageWebSocket** out);
 
-/* Windows.System.Diagnostics.DevicePortal.DevicePortalConnection.GetServerMessageWebSocketForRequest(request, messageType, protocol) */
 HRESULT wsydide_device_portal_connection_get_server_message_web_socket_for_request_p_socket_message_type_str_p(WSYDIDE_DevicePortalConnection *self, WWEHT_HttpRequestMessage* request, WNESO_SocketMessageType messageType, cwinrt_hstring protocol, WNESO_ServerMessageWebSocket** out);
 
-/* Windows.System.Diagnostics.DevicePortal.DevicePortalConnection.GetServerMessageWebSocketForRequest(request, messageType, protocol, outboundBufferSizeInBytes, maxMessageSize, receiveMode) */
 HRESULT wsydide_device_portal_connection_get_server_message_web_socket_for_request_p_socket_message_type_str_u32_u32_me_53cdbb4c(WSYDIDE_DevicePortalConnection *self, WWEHT_HttpRequestMessage* request, WNESO_SocketMessageType messageType, cwinrt_hstring protocol, uint32_t outboundBufferSizeInBytes, uint32_t maxMessageSize, WNESO_MessageWebSocketReceiveMode receiveMode, WNESO_ServerMessageWebSocket** out);
 
-/* Windows.System.Diagnostics.DevicePortal.DevicePortalConnection.GetServerStreamWebSocketForRequest(request) */
 HRESULT wsydide_device_portal_connection_get_server_stream_web_socket_for_request(WSYDIDE_DevicePortalConnection *self, WWEHT_HttpRequestMessage* request, WNESO_ServerStreamWebSocket** out);
 
-/* Windows.System.Diagnostics.DevicePortal.DevicePortalConnection.GetServerStreamWebSocketForRequest(request, protocol, outboundBufferSizeInBytes, noDelay) */
 HRESULT wsydide_device_portal_connection_get_server_stream_web_socket_for_request_p_str_u32_b_p(WSYDIDE_DevicePortalConnection *self, WWEHT_HttpRequestMessage* request, cwinrt_hstring protocol, uint32_t outboundBufferSizeInBytes, BOOL noDelay, WNESO_ServerStreamWebSocket** out);
 
-/* Windows.System.Diagnostics.DevicePortal.DevicePortalConnection.GetForAppServiceConnection(appServiceConnection) */
 HRESULT wsydide_device_portal_connection_get_for_app_service_connection(WAPAP_AppServiceConnection* appServiceConnection, WSYDIDE_DevicePortalConnection** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsydide_device_portal_connection_on_closed(WSYDIDE_DevicePortalConnection *self, cwinrt_event_fn fn, void *ctx);
@@ -200,37 +175,22 @@ void wsydide_device_portal_connection_off_closed(WSYDIDE_DevicePortalConnection 
 cwinrt_token wsydide_device_portal_connection_on_request_received(WSYDIDE_DevicePortalConnection *self, cwinrt_event_fn fn, void *ctx);
 void wsydide_device_portal_connection_off_request_received(WSYDIDE_DevicePortalConnection *self, cwinrt_token token);
 
-/* Windows.System.Diagnostics.DevicePortal.IDevicePortalConnectionStatics */
-/* Windows.System.Diagnostics.DevicePortal.IDevicePortalConnectionStatics.GetForAppServiceConnection(appServiceConnection) */
 HRESULT wsydide_device_portal_connection_statics_get_for_app_service_connection(WSYDIDE_IDevicePortalConnectionStatics *self, WAPAP_AppServiceConnection* appServiceConnection, WSYDIDE_DevicePortalConnection** out);
 
-/* Windows.System.Diagnostics.DevicePortal.IDevicePortalConnectionRequestReceivedEventArgs */
-/* Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnectionRequestReceivedEventArgs */
-/* Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnectionRequestReceivedEventArgs.get_IsWebSocketUpgradeRequest() */
 HRESULT wsydide_device_portal_web_socket_connection_request_received_event_args_get__is_web_socket_upgrade_request(WSYDIDE_IDevicePortalWebSocketConnectionRequestReceivedEventArgs *self, BOOL *value);
 
-/* Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnectionRequestReceivedEventArgs.get_WebSocketProtocolsRequested() */
 HRESULT wsydide_device_portal_web_socket_connection_request_received_event_args_get__web_socket_protocols_requested(WSYDIDE_IDevicePortalWebSocketConnectionRequestReceivedEventArgs *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnectionRequestReceivedEventArgs.GetDeferral() */
 HRESULT wsydide_device_portal_web_socket_connection_request_received_event_args_get_deferral(WSYDIDE_IDevicePortalWebSocketConnectionRequestReceivedEventArgs *self, WF_Deferral** out);
 
-/* Windows.System.Diagnostics.DevicePortal.IDevicePortalConnectionClosedEventArgs */
-/* Windows.System.Diagnostics.DevicePortal.IDevicePortalConnection */
-/* Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnection */
-/* Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnection.GetServerMessageWebSocketForRequest(request) */
 HRESULT wsydide_device_portal_web_socket_connection_get_server_message_web_socket_for_request(WSYDIDE_IDevicePortalWebSocketConnection *self, WWEHT_HttpRequestMessage* request, WNESO_ServerMessageWebSocket** out);
 
-/* Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnection.GetServerMessageWebSocketForRequest(request, messageType, protocol) */
 HRESULT wsydide_device_portal_web_socket_connection_get_server_message_web_socket_for_request_p_socket_message_type_str_p(WSYDIDE_IDevicePortalWebSocketConnection *self, WWEHT_HttpRequestMessage* request, WNESO_SocketMessageType messageType, cwinrt_hstring protocol, WNESO_ServerMessageWebSocket** out);
 
-/* Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnection.GetServerMessageWebSocketForRequest(request, messageType, protocol, outboundBufferSizeInBytes, maxMessageSize, receiveMode) */
 HRESULT wsydide_device_portal_web_socket_connection_get_server_message_web_socket_for_request_p_socket_message_type_str_u32_u32_me_53cdbb4c(WSYDIDE_IDevicePortalWebSocketConnection *self, WWEHT_HttpRequestMessage* request, WNESO_SocketMessageType messageType, cwinrt_hstring protocol, uint32_t outboundBufferSizeInBytes, uint32_t maxMessageSize, WNESO_MessageWebSocketReceiveMode receiveMode, WNESO_ServerMessageWebSocket** out);
 
-/* Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnection.GetServerStreamWebSocketForRequest(request) */
 HRESULT wsydide_device_portal_web_socket_connection_get_server_stream_web_socket_for_request(WSYDIDE_IDevicePortalWebSocketConnection *self, WWEHT_HttpRequestMessage* request, WNESO_ServerStreamWebSocket** out);
 
-/* Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnection.GetServerStreamWebSocketForRequest(request, protocol, outboundBufferSizeInBytes, noDelay) */
 HRESULT wsydide_device_portal_web_socket_connection_get_server_stream_web_socket_for_request_p_str_u32_b_p(WSYDIDE_IDevicePortalWebSocketConnection *self, WWEHT_HttpRequestMessage* request, cwinrt_hstring protocol, uint32_t outboundBufferSizeInBytes, BOOL noDelay, WNESO_ServerStreamWebSocket** out);
 
 #endif /* CWINRT_WINDOWS_SYSTEM_DIAGNOSTICS_DEVICEPORTAL_H */

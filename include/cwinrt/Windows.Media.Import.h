@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStreamReference
 #define CWINRT_FWD_WSTST_IRandomAccessStreamReference
 typedef struct WSTST_IRandomAccessStreamReference WSTST_IRandomAccessStreamReference;
@@ -22,7 +21,6 @@ typedef struct WSTST_IRandomAccessStreamReference WSTST_IRandomAccessStreamRefer
 typedef struct WS_IStorageFolder WS_IStorageFolder;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMEIM_PhotoImportManager WMEIM_PhotoImportManager;
 typedef struct WMEIM_PhotoImportOperation WMEIM_PhotoImportOperation;
 typedef struct WMEIM_PhotoImportSelectionChangedEventArgs WMEIM_PhotoImportSelectionChangedEventArgs;
@@ -54,7 +52,6 @@ typedef struct WMEIM_IPhotoImportDeleteImportedItemsFromSourceResult WMEIM_IPhot
 typedef struct WMEIM_IPhotoImportItem WMEIM_IPhotoImportItem;
 typedef struct WMEIM_IPhotoImportItem_2 WMEIM_IPhotoImportItem_2;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_Bool
 #define CWINRT_FWD_WF_IAsyncOperation_Bool
 typedef struct WF_IAsyncOperation_Bool WF_IAsyncOperation_Bool;
@@ -264,7 +261,6 @@ struct WMEIM_PhotoImportProgress {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -337,368 +333,238 @@ static const IID CWINRT_IID_WMEIM_IPhotoImportItem CWINRT_MAYBE_UNUSED = { 0xA9D
 static const IID CWINRT_IID_WMEIM_IPhotoImportItem_2 CWINRT_MAYBE_UNUSED = { 0xF1053505, 0xF53B, 0x46A3, { 0x9E, 0x30, 0x36, 0x10, 0x79, 0x1A, 0x91, 0x10 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Media.Import.PhotoImportManager */
 HRESULT wmeim_photo_import_manager_new(WMEIM_PhotoImportManager **out);
 
-/* Windows.Media.Import.PhotoImportManager */
-/* Windows.Media.Import.PhotoImportManager.IsSupportedAsync() */
 HRESULT wmeim_photo_import_manager_is_supported_async(WF_IAsyncOperation_Bool** out);
 
-/* Windows.Media.Import.PhotoImportManager.FindAllSourcesAsync() */
 HRESULT wmeim_photo_import_manager_find_all_sources_async(WF_IAsyncOperation_WFOCO_IVectorView_WMEIM_PhotoImportSource** out);
 
-/* Windows.Media.Import.PhotoImportManager.GetPendingOperations() */
 HRESULT wmeim_photo_import_manager_get_pending_operations(WFOCO_IVectorView_WMEIM_PhotoImportOperation** out);
 
-/* activate Windows.Media.Import.PhotoImportOperation */
 HRESULT wmeim_photo_import_operation_new(WMEIM_PhotoImportOperation **out);
 
-/* Windows.Media.Import.PhotoImportOperation */
-/* Windows.Media.Import.PhotoImportOperation.get_Stage() */
 HRESULT wmeim_photo_import_operation_get__stage(WMEIM_PhotoImportOperation *self, WMEIM_PhotoImportStage *value);
 
-/* Windows.Media.Import.PhotoImportOperation.get_Session() */
 HRESULT wmeim_photo_import_operation_get__session(WMEIM_PhotoImportOperation *self, WMEIM_PhotoImportSession** value);
 
-/* Windows.Media.Import.PhotoImportOperation.get_ContinueFindingItemsAsync() */
 HRESULT wmeim_photo_import_operation_get__continue_finding_items_async(WMEIM_PhotoImportOperation *self, WF_IAsyncOperationWithProgress_WMEIM_PhotoImportFindItemsResult_uint32_t** value);
 
-/* Windows.Media.Import.PhotoImportOperation.get_ContinueImportingItemsAsync() */
 HRESULT wmeim_photo_import_operation_get__continue_importing_items_async(WMEIM_PhotoImportOperation *self, WF_IAsyncOperationWithProgress_WMEIM_PhotoImportImportItemsResult_WMEIM_PhotoImportProgress** value);
 
-/* Windows.Media.Import.PhotoImportOperation.get_ContinueDeletingImportedItemsFromSourceAsync() */
 HRESULT wmeim_photo_import_operation_get__continue_deleting_imported_items_from_source_async(WMEIM_PhotoImportOperation *self, WF_IAsyncOperationWithProgress_WMEIM_PhotoImportDeleteImportedItemsFromSourceResult_F64** value);
 
-/* activate Windows.Media.Import.PhotoImportSelectionChangedEventArgs */
 HRESULT wmeim_photo_import_selection_changed_event_args_new(WMEIM_PhotoImportSelectionChangedEventArgs **out);
 
-/* Windows.Media.Import.PhotoImportSelectionChangedEventArgs */
-/* Windows.Media.Import.PhotoImportSelectionChangedEventArgs.get_IsSelectionEmpty() */
 HRESULT wmeim_photo_import_selection_changed_event_args_get__is_selection_empty(WMEIM_PhotoImportSelectionChangedEventArgs *self, BOOL *value);
 
-/* activate Windows.Media.Import.PhotoImportSession */
 HRESULT wmeim_photo_import_session_new(WMEIM_PhotoImportSession **out);
 
-/* Windows.Media.Import.PhotoImportSession */
-/* Windows.Media.Import.PhotoImportSession.get_Source() */
 HRESULT wmeim_photo_import_session_get__source(WMEIM_PhotoImportSession *self, WMEIM_PhotoImportSource** value);
 
-/* Windows.Media.Import.PhotoImportSession.get_SessionId() */
 HRESULT wmeim_photo_import_session_get__session_id(WMEIM_PhotoImportSession *self, GUID *value);
 
-/* Windows.Media.Import.PhotoImportSession.put_DestinationFolder() */
 HRESULT wmeim_photo_import_session_put__destination_folder(WMEIM_PhotoImportSession *self, WS_IStorageFolder* value);
 
-/* Windows.Media.Import.PhotoImportSession.get_DestinationFolder() */
 HRESULT wmeim_photo_import_session_get__destination_folder(WMEIM_PhotoImportSession *self, WS_IStorageFolder** value);
 
-/* Windows.Media.Import.PhotoImportSession.put_AppendSessionDateToDestinationFolder() */
 HRESULT wmeim_photo_import_session_put__append_session_date_to_destination_folder(WMEIM_PhotoImportSession *self, BOOL value);
 
-/* Windows.Media.Import.PhotoImportSession.get_AppendSessionDateToDestinationFolder() */
 HRESULT wmeim_photo_import_session_get__append_session_date_to_destination_folder(WMEIM_PhotoImportSession *self, BOOL *value);
 
-/* Windows.Media.Import.PhotoImportSession.put_SubfolderCreationMode() */
 HRESULT wmeim_photo_import_session_put__subfolder_creation_mode(WMEIM_PhotoImportSession *self, WMEIM_PhotoImportSubfolderCreationMode value);
 
-/* Windows.Media.Import.PhotoImportSession.get_SubfolderCreationMode() */
 HRESULT wmeim_photo_import_session_get__subfolder_creation_mode(WMEIM_PhotoImportSession *self, WMEIM_PhotoImportSubfolderCreationMode *value);
 
-/* Windows.Media.Import.PhotoImportSession.put_DestinationFileNamePrefix() */
 HRESULT wmeim_photo_import_session_put__destination_file_name_prefix(WMEIM_PhotoImportSession *self, cwinrt_hstring value);
 
-/* Windows.Media.Import.PhotoImportSession.get_DestinationFileNamePrefix() */
 HRESULT wmeim_photo_import_session_get__destination_file_name_prefix(WMEIM_PhotoImportSession *self, cwinrt_hstring *value);
 
-/* Windows.Media.Import.PhotoImportSession.FindItemsAsync(contentTypeFilter, itemSelectionMode) */
 HRESULT wmeim_photo_import_session_find_items_async(WMEIM_PhotoImportSession *self, WMEIM_PhotoImportContentTypeFilter contentTypeFilter, WMEIM_PhotoImportItemSelectionMode itemSelectionMode, WF_IAsyncOperationWithProgress_WMEIM_PhotoImportFindItemsResult_uint32_t** out);
 
-/* Windows.Media.Import.PhotoImportSession.Close() */
 HRESULT wmeim_photo_import_session_close(WMEIM_PhotoImportSession *self);
 
-/* Windows.Media.Import.PhotoImportSession.put_SubfolderDateFormat() */
 HRESULT wmeim_photo_import_session_put__subfolder_date_format(WMEIM_PhotoImportSession *self, WMEIM_PhotoImportSubfolderDateFormat value);
 
-/* Windows.Media.Import.PhotoImportSession.get_SubfolderDateFormat() */
 HRESULT wmeim_photo_import_session_get__subfolder_date_format(WMEIM_PhotoImportSession *self, WMEIM_PhotoImportSubfolderDateFormat *value);
 
-/* Windows.Media.Import.PhotoImportSession.put_RememberDeselectedItems() */
 HRESULT wmeim_photo_import_session_put__remember_deselected_items(WMEIM_PhotoImportSession *self, BOOL value);
 
-/* Windows.Media.Import.PhotoImportSession.get_RememberDeselectedItems() */
 HRESULT wmeim_photo_import_session_get__remember_deselected_items(WMEIM_PhotoImportSession *self, BOOL *value);
 
-/* activate Windows.Media.Import.PhotoImportSidecar */
 HRESULT wmeim_photo_import_sidecar_new(WMEIM_PhotoImportSidecar **out);
 
-/* Windows.Media.Import.PhotoImportSidecar */
-/* Windows.Media.Import.PhotoImportSidecar.get_Name() */
 HRESULT wmeim_photo_import_sidecar_get__name(WMEIM_PhotoImportSidecar *self, cwinrt_hstring *value);
 
-/* Windows.Media.Import.PhotoImportSidecar.get_SizeInBytes() */
 HRESULT wmeim_photo_import_sidecar_get__size_in_bytes(WMEIM_PhotoImportSidecar *self, uint64_t *value);
 
-/* Windows.Media.Import.PhotoImportSidecar.get_Date() */
 HRESULT wmeim_photo_import_sidecar_get__date(WMEIM_PhotoImportSidecar *self, WF_DateTime *value);
 
-/* activate Windows.Media.Import.PhotoImportSource */
 HRESULT wmeim_photo_import_source_new(WMEIM_PhotoImportSource **out);
 
-/* Windows.Media.Import.PhotoImportSource */
-/* Windows.Media.Import.PhotoImportSource.get_Id() */
 HRESULT wmeim_photo_import_source_get__id(WMEIM_PhotoImportSource *self, cwinrt_hstring *value);
 
-/* Windows.Media.Import.PhotoImportSource.get_DisplayName() */
 HRESULT wmeim_photo_import_source_get__display_name(WMEIM_PhotoImportSource *self, cwinrt_hstring *value);
 
-/* Windows.Media.Import.PhotoImportSource.get_Description() */
 HRESULT wmeim_photo_import_source_get__description(WMEIM_PhotoImportSource *self, cwinrt_hstring *value);
 
-/* Windows.Media.Import.PhotoImportSource.get_Manufacturer() */
 HRESULT wmeim_photo_import_source_get__manufacturer(WMEIM_PhotoImportSource *self, cwinrt_hstring *value);
 
-/* Windows.Media.Import.PhotoImportSource.get_Model() */
 HRESULT wmeim_photo_import_source_get__model(WMEIM_PhotoImportSource *self, cwinrt_hstring *value);
 
-/* Windows.Media.Import.PhotoImportSource.get_SerialNumber() */
 HRESULT wmeim_photo_import_source_get__serial_number(WMEIM_PhotoImportSource *self, cwinrt_hstring *value);
 
-/* Windows.Media.Import.PhotoImportSource.get_ConnectionProtocol() */
 HRESULT wmeim_photo_import_source_get__connection_protocol(WMEIM_PhotoImportSource *self, cwinrt_hstring *value);
 
-/* Windows.Media.Import.PhotoImportSource.get_ConnectionTransport() */
 HRESULT wmeim_photo_import_source_get__connection_transport(WMEIM_PhotoImportSource *self, WMEIM_PhotoImportConnectionTransport *value);
 
-/* Windows.Media.Import.PhotoImportSource.get_Type() */
 HRESULT wmeim_photo_import_source_get__type(WMEIM_PhotoImportSource *self, WMEIM_PhotoImportSourceType *value);
 
-/* Windows.Media.Import.PhotoImportSource.get_PowerSource() */
 HRESULT wmeim_photo_import_source_get__power_source(WMEIM_PhotoImportSource *self, WMEIM_PhotoImportPowerSource *value);
 
-/* Windows.Media.Import.PhotoImportSource.get_BatteryLevelPercent() */
 HRESULT wmeim_photo_import_source_get__battery_level_percent(WMEIM_PhotoImportSource *self, uint32_t** value);
 
-/* Windows.Media.Import.PhotoImportSource.get_DateTime() */
 HRESULT wmeim_photo_import_source_get__date_time(WMEIM_PhotoImportSource *self, WF_DateTime** value);
 
-/* Windows.Media.Import.PhotoImportSource.get_StorageMedia() */
 HRESULT wmeim_photo_import_source_get__storage_media(WMEIM_PhotoImportSource *self, WFOCO_IVectorView_WMEIM_PhotoImportStorageMedium** value);
 
-/* Windows.Media.Import.PhotoImportSource.get_IsLocked() */
 HRESULT wmeim_photo_import_source_get__is_locked(WMEIM_PhotoImportSource *self, BOOL** value);
 
-/* Windows.Media.Import.PhotoImportSource.get_IsMassStorage() */
 HRESULT wmeim_photo_import_source_get__is_mass_storage(WMEIM_PhotoImportSource *self, BOOL *value);
 
-/* Windows.Media.Import.PhotoImportSource.get_Thumbnail() */
 HRESULT wmeim_photo_import_source_get__thumbnail(WMEIM_PhotoImportSource *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.Media.Import.PhotoImportSource.CreateImportSession() */
 HRESULT wmeim_photo_import_source_create_import_session(WMEIM_PhotoImportSource *self, WMEIM_PhotoImportSession** out);
 
-/* Windows.Media.Import.PhotoImportSource.FromIdAsync(sourceId) */
 HRESULT wmeim_photo_import_source_from_id_async(cwinrt_hstring sourceId, WF_IAsyncOperation_WMEIM_PhotoImportSource** out);
 
-/* Windows.Media.Import.PhotoImportSource.FromFolderAsync(sourceRootFolder) */
 HRESULT wmeim_photo_import_source_from_folder_async(WS_IStorageFolder* sourceRootFolder, WF_IAsyncOperation_WMEIM_PhotoImportSource** out);
 
-/* activate Windows.Media.Import.PhotoImportStorageMedium */
 HRESULT wmeim_photo_import_storage_medium_new(WMEIM_PhotoImportStorageMedium **out);
 
-/* Windows.Media.Import.PhotoImportStorageMedium */
-/* Windows.Media.Import.PhotoImportStorageMedium.get_Name() */
 HRESULT wmeim_photo_import_storage_medium_get__name(WMEIM_PhotoImportStorageMedium *self, cwinrt_hstring *value);
 
-/* Windows.Media.Import.PhotoImportStorageMedium.get_Description() */
 HRESULT wmeim_photo_import_storage_medium_get__description(WMEIM_PhotoImportStorageMedium *self, cwinrt_hstring *value);
 
-/* Windows.Media.Import.PhotoImportStorageMedium.get_SerialNumber() */
 HRESULT wmeim_photo_import_storage_medium_get__serial_number(WMEIM_PhotoImportStorageMedium *self, cwinrt_hstring *value);
 
-/* Windows.Media.Import.PhotoImportStorageMedium.get_StorageMediumType() */
 HRESULT wmeim_photo_import_storage_medium_get__storage_medium_type(WMEIM_PhotoImportStorageMedium *self, WMEIM_PhotoImportStorageMediumType *value);
 
-/* Windows.Media.Import.PhotoImportStorageMedium.get_SupportedAccessMode() */
 HRESULT wmeim_photo_import_storage_medium_get__supported_access_mode(WMEIM_PhotoImportStorageMedium *self, WMEIM_PhotoImportAccessMode *value);
 
-/* Windows.Media.Import.PhotoImportStorageMedium.get_CapacityInBytes() */
 HRESULT wmeim_photo_import_storage_medium_get__capacity_in_bytes(WMEIM_PhotoImportStorageMedium *self, uint64_t *value);
 
-/* Windows.Media.Import.PhotoImportStorageMedium.get_AvailableSpaceInBytes() */
 HRESULT wmeim_photo_import_storage_medium_get__available_space_in_bytes(WMEIM_PhotoImportStorageMedium *self, uint64_t *value);
 
-/* Windows.Media.Import.PhotoImportStorageMedium.Refresh() */
 HRESULT wmeim_photo_import_storage_medium_refresh(WMEIM_PhotoImportStorageMedium *self);
 
-/* activate Windows.Media.Import.PhotoImportVideoSegment */
 HRESULT wmeim_photo_import_video_segment_new(WMEIM_PhotoImportVideoSegment **out);
 
-/* Windows.Media.Import.PhotoImportVideoSegment */
-/* Windows.Media.Import.PhotoImportVideoSegment.get_Name() */
 HRESULT wmeim_photo_import_video_segment_get__name(WMEIM_PhotoImportVideoSegment *self, cwinrt_hstring *value);
 
-/* Windows.Media.Import.PhotoImportVideoSegment.get_SizeInBytes() */
 HRESULT wmeim_photo_import_video_segment_get__size_in_bytes(WMEIM_PhotoImportVideoSegment *self, uint64_t *value);
 
-/* Windows.Media.Import.PhotoImportVideoSegment.get_Date() */
 HRESULT wmeim_photo_import_video_segment_get__date(WMEIM_PhotoImportVideoSegment *self, WF_DateTime *value);
 
-/* Windows.Media.Import.PhotoImportVideoSegment.get_Sibling() */
 HRESULT wmeim_photo_import_video_segment_get__sibling(WMEIM_PhotoImportVideoSegment *self, WMEIM_PhotoImportSidecar** value);
 
-/* Windows.Media.Import.PhotoImportVideoSegment.get_Sidecars() */
 HRESULT wmeim_photo_import_video_segment_get__sidecars(WMEIM_PhotoImportVideoSegment *self, WFOCO_IVectorView_WMEIM_PhotoImportSidecar** value);
 
-/* activate Windows.Media.Import.PhotoImportItemImportedEventArgs */
 HRESULT wmeim_photo_import_item_imported_event_args_new(WMEIM_PhotoImportItemImportedEventArgs **out);
 
-/* Windows.Media.Import.PhotoImportItemImportedEventArgs */
-/* Windows.Media.Import.PhotoImportItemImportedEventArgs.get_ImportedItem() */
 HRESULT wmeim_photo_import_item_imported_event_args_get__imported_item(WMEIM_PhotoImportItemImportedEventArgs *self, WMEIM_PhotoImportItem** value);
 
-/* activate Windows.Media.Import.PhotoImportImportItemsResult */
 HRESULT wmeim_photo_import_import_items_result_new(WMEIM_PhotoImportImportItemsResult **out);
 
-/* Windows.Media.Import.PhotoImportImportItemsResult */
-/* Windows.Media.Import.PhotoImportImportItemsResult.get_Session() */
 HRESULT wmeim_photo_import_import_items_result_get__session(WMEIM_PhotoImportImportItemsResult *self, WMEIM_PhotoImportSession** value);
 
-/* Windows.Media.Import.PhotoImportImportItemsResult.get_HasSucceeded() */
 HRESULT wmeim_photo_import_import_items_result_get__has_succeeded(WMEIM_PhotoImportImportItemsResult *self, BOOL *value);
 
-/* Windows.Media.Import.PhotoImportImportItemsResult.get_ImportedItems() */
 HRESULT wmeim_photo_import_import_items_result_get__imported_items(WMEIM_PhotoImportImportItemsResult *self, WFOCO_IVectorView_WMEIM_PhotoImportItem** value);
 
-/* Windows.Media.Import.PhotoImportImportItemsResult.get_PhotosCount() */
 HRESULT wmeim_photo_import_import_items_result_get__photos_count(WMEIM_PhotoImportImportItemsResult *self, uint32_t *value);
 
-/* Windows.Media.Import.PhotoImportImportItemsResult.get_PhotosSizeInBytes() */
 HRESULT wmeim_photo_import_import_items_result_get__photos_size_in_bytes(WMEIM_PhotoImportImportItemsResult *self, uint64_t *value);
 
-/* Windows.Media.Import.PhotoImportImportItemsResult.get_VideosCount() */
 HRESULT wmeim_photo_import_import_items_result_get__videos_count(WMEIM_PhotoImportImportItemsResult *self, uint32_t *value);
 
-/* Windows.Media.Import.PhotoImportImportItemsResult.get_VideosSizeInBytes() */
 HRESULT wmeim_photo_import_import_items_result_get__videos_size_in_bytes(WMEIM_PhotoImportImportItemsResult *self, uint64_t *value);
 
-/* Windows.Media.Import.PhotoImportImportItemsResult.get_SidecarsCount() */
 HRESULT wmeim_photo_import_import_items_result_get__sidecars_count(WMEIM_PhotoImportImportItemsResult *self, uint32_t *value);
 
-/* Windows.Media.Import.PhotoImportImportItemsResult.get_SidecarsSizeInBytes() */
 HRESULT wmeim_photo_import_import_items_result_get__sidecars_size_in_bytes(WMEIM_PhotoImportImportItemsResult *self, uint64_t *value);
 
-/* Windows.Media.Import.PhotoImportImportItemsResult.get_SiblingsCount() */
 HRESULT wmeim_photo_import_import_items_result_get__siblings_count(WMEIM_PhotoImportImportItemsResult *self, uint32_t *value);
 
-/* Windows.Media.Import.PhotoImportImportItemsResult.get_SiblingsSizeInBytes() */
 HRESULT wmeim_photo_import_import_items_result_get__siblings_size_in_bytes(WMEIM_PhotoImportImportItemsResult *self, uint64_t *value);
 
-/* Windows.Media.Import.PhotoImportImportItemsResult.get_TotalCount() */
 HRESULT wmeim_photo_import_import_items_result_get__total_count(WMEIM_PhotoImportImportItemsResult *self, uint32_t *value);
 
-/* Windows.Media.Import.PhotoImportImportItemsResult.get_TotalSizeInBytes() */
 HRESULT wmeim_photo_import_import_items_result_get__total_size_in_bytes(WMEIM_PhotoImportImportItemsResult *self, uint64_t *value);
 
-/* Windows.Media.Import.PhotoImportImportItemsResult.DeleteImportedItemsFromSourceAsync() */
 HRESULT wmeim_photo_import_import_items_result_delete_imported_items_from_source_async(WMEIM_PhotoImportImportItemsResult *self, WF_IAsyncOperationWithProgress_WMEIM_PhotoImportDeleteImportedItemsFromSourceResult_F64** out);
 
-/* activate Windows.Media.Import.PhotoImportFindItemsResult */
 HRESULT wmeim_photo_import_find_items_result_new(WMEIM_PhotoImportFindItemsResult **out);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult */
-/* Windows.Media.Import.PhotoImportFindItemsResult.get_Session() */
 HRESULT wmeim_photo_import_find_items_result_get__session(WMEIM_PhotoImportFindItemsResult *self, WMEIM_PhotoImportSession** value);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult.get_HasSucceeded() */
 HRESULT wmeim_photo_import_find_items_result_get__has_succeeded(WMEIM_PhotoImportFindItemsResult *self, BOOL *value);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult.get_FoundItems() */
 HRESULT wmeim_photo_import_find_items_result_get__found_items(WMEIM_PhotoImportFindItemsResult *self, WFOCO_IVectorView_WMEIM_PhotoImportItem** value);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult.get_PhotosCount() */
 HRESULT wmeim_photo_import_find_items_result_get__photos_count(WMEIM_PhotoImportFindItemsResult *self, uint32_t *value);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult.get_PhotosSizeInBytes() */
 HRESULT wmeim_photo_import_find_items_result_get__photos_size_in_bytes(WMEIM_PhotoImportFindItemsResult *self, uint64_t *value);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult.get_VideosCount() */
 HRESULT wmeim_photo_import_find_items_result_get__videos_count(WMEIM_PhotoImportFindItemsResult *self, uint32_t *value);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult.get_VideosSizeInBytes() */
 HRESULT wmeim_photo_import_find_items_result_get__videos_size_in_bytes(WMEIM_PhotoImportFindItemsResult *self, uint64_t *value);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult.get_SidecarsCount() */
 HRESULT wmeim_photo_import_find_items_result_get__sidecars_count(WMEIM_PhotoImportFindItemsResult *self, uint32_t *value);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult.get_SidecarsSizeInBytes() */
 HRESULT wmeim_photo_import_find_items_result_get__sidecars_size_in_bytes(WMEIM_PhotoImportFindItemsResult *self, uint64_t *value);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult.get_SiblingsCount() */
 HRESULT wmeim_photo_import_find_items_result_get__siblings_count(WMEIM_PhotoImportFindItemsResult *self, uint32_t *value);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult.get_SiblingsSizeInBytes() */
 HRESULT wmeim_photo_import_find_items_result_get__siblings_size_in_bytes(WMEIM_PhotoImportFindItemsResult *self, uint64_t *value);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult.get_TotalCount() */
 HRESULT wmeim_photo_import_find_items_result_get__total_count(WMEIM_PhotoImportFindItemsResult *self, uint32_t *value);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult.get_TotalSizeInBytes() */
 HRESULT wmeim_photo_import_find_items_result_get__total_size_in_bytes(WMEIM_PhotoImportFindItemsResult *self, uint64_t *value);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult.SelectAll() */
 HRESULT wmeim_photo_import_find_items_result_select_all(WMEIM_PhotoImportFindItemsResult *self);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult.SelectNone() */
 HRESULT wmeim_photo_import_find_items_result_select_none(WMEIM_PhotoImportFindItemsResult *self);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult.SelectNewAsync() */
 HRESULT wmeim_photo_import_find_items_result_select_new_async(WMEIM_PhotoImportFindItemsResult *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult.SetImportMode() */
 HRESULT wmeim_photo_import_find_items_result_set_import_mode(WMEIM_PhotoImportFindItemsResult *self, WMEIM_PhotoImportImportMode value);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult.get_ImportMode() */
 HRESULT wmeim_photo_import_find_items_result_get__import_mode(WMEIM_PhotoImportFindItemsResult *self, WMEIM_PhotoImportImportMode *value);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult.get_SelectedPhotosCount() */
 HRESULT wmeim_photo_import_find_items_result_get__selected_photos_count(WMEIM_PhotoImportFindItemsResult *self, uint32_t *value);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult.get_SelectedPhotosSizeInBytes() */
 HRESULT wmeim_photo_import_find_items_result_get__selected_photos_size_in_bytes(WMEIM_PhotoImportFindItemsResult *self, uint64_t *value);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult.get_SelectedVideosCount() */
 HRESULT wmeim_photo_import_find_items_result_get__selected_videos_count(WMEIM_PhotoImportFindItemsResult *self, uint32_t *value);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult.get_SelectedVideosSizeInBytes() */
 HRESULT wmeim_photo_import_find_items_result_get__selected_videos_size_in_bytes(WMEIM_PhotoImportFindItemsResult *self, uint64_t *value);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult.get_SelectedSidecarsCount() */
 HRESULT wmeim_photo_import_find_items_result_get__selected_sidecars_count(WMEIM_PhotoImportFindItemsResult *self, uint32_t *value);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult.get_SelectedSidecarsSizeInBytes() */
 HRESULT wmeim_photo_import_find_items_result_get__selected_sidecars_size_in_bytes(WMEIM_PhotoImportFindItemsResult *self, uint64_t *value);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult.get_SelectedSiblingsCount() */
 HRESULT wmeim_photo_import_find_items_result_get__selected_siblings_count(WMEIM_PhotoImportFindItemsResult *self, uint32_t *value);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult.get_SelectedSiblingsSizeInBytes() */
 HRESULT wmeim_photo_import_find_items_result_get__selected_siblings_size_in_bytes(WMEIM_PhotoImportFindItemsResult *self, uint64_t *value);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult.get_SelectedTotalCount() */
 HRESULT wmeim_photo_import_find_items_result_get__selected_total_count(WMEIM_PhotoImportFindItemsResult *self, uint32_t *value);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult.get_SelectedTotalSizeInBytes() */
 HRESULT wmeim_photo_import_find_items_result_get__selected_total_size_in_bytes(WMEIM_PhotoImportFindItemsResult *self, uint64_t *value);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult.ImportItemsAsync() */
 HRESULT wmeim_photo_import_find_items_result_import_items_async(WMEIM_PhotoImportFindItemsResult *self, WF_IAsyncOperationWithProgress_WMEIM_PhotoImportImportItemsResult_WMEIM_PhotoImportProgress** out);
 
-/* Windows.Media.Import.PhotoImportFindItemsResult.AddItemsInDateRangeToSelection(rangeStart, rangeLength) */
 HRESULT wmeim_photo_import_find_items_result_add_items_in_date_range_to_selection(WMEIM_PhotoImportFindItemsResult *self, WF_DateTime rangeStart, WF_TimeSpan rangeLength);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeim_photo_import_find_items_result_on_selection_changed(WMEIM_PhotoImportFindItemsResult *self, cwinrt_event_fn fn, void *ctx);
@@ -707,143 +573,84 @@ void wmeim_photo_import_find_items_result_off_selection_changed(WMEIM_PhotoImpor
 cwinrt_token wmeim_photo_import_find_items_result_on_item_imported(WMEIM_PhotoImportFindItemsResult *self, cwinrt_event_fn fn, void *ctx);
 void wmeim_photo_import_find_items_result_off_item_imported(WMEIM_PhotoImportFindItemsResult *self, cwinrt_token token);
 
-/* activate Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult */
 HRESULT wmeim_photo_import_delete_imported_items_from_source_result_new(WMEIM_PhotoImportDeleteImportedItemsFromSourceResult **out);
 
-/* Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult */
-/* Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult.get_Session() */
 HRESULT wmeim_photo_import_delete_imported_items_from_source_result_get__session(WMEIM_PhotoImportDeleteImportedItemsFromSourceResult *self, WMEIM_PhotoImportSession** value);
 
-/* Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult.get_HasSucceeded() */
 HRESULT wmeim_photo_import_delete_imported_items_from_source_result_get__has_succeeded(WMEIM_PhotoImportDeleteImportedItemsFromSourceResult *self, BOOL *value);
 
-/* Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult.get_DeletedItems() */
 HRESULT wmeim_photo_import_delete_imported_items_from_source_result_get__deleted_items(WMEIM_PhotoImportDeleteImportedItemsFromSourceResult *self, WFOCO_IVectorView_WMEIM_PhotoImportItem** value);
 
-/* Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult.get_PhotosCount() */
 HRESULT wmeim_photo_import_delete_imported_items_from_source_result_get__photos_count(WMEIM_PhotoImportDeleteImportedItemsFromSourceResult *self, uint32_t *value);
 
-/* Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult.get_PhotosSizeInBytes() */
 HRESULT wmeim_photo_import_delete_imported_items_from_source_result_get__photos_size_in_bytes(WMEIM_PhotoImportDeleteImportedItemsFromSourceResult *self, uint64_t *value);
 
-/* Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult.get_VideosCount() */
 HRESULT wmeim_photo_import_delete_imported_items_from_source_result_get__videos_count(WMEIM_PhotoImportDeleteImportedItemsFromSourceResult *self, uint32_t *value);
 
-/* Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult.get_VideosSizeInBytes() */
 HRESULT wmeim_photo_import_delete_imported_items_from_source_result_get__videos_size_in_bytes(WMEIM_PhotoImportDeleteImportedItemsFromSourceResult *self, uint64_t *value);
 
-/* Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult.get_SidecarsCount() */
 HRESULT wmeim_photo_import_delete_imported_items_from_source_result_get__sidecars_count(WMEIM_PhotoImportDeleteImportedItemsFromSourceResult *self, uint32_t *value);
 
-/* Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult.get_SidecarsSizeInBytes() */
 HRESULT wmeim_photo_import_delete_imported_items_from_source_result_get__sidecars_size_in_bytes(WMEIM_PhotoImportDeleteImportedItemsFromSourceResult *self, uint64_t *value);
 
-/* Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult.get_SiblingsCount() */
 HRESULT wmeim_photo_import_delete_imported_items_from_source_result_get__siblings_count(WMEIM_PhotoImportDeleteImportedItemsFromSourceResult *self, uint32_t *value);
 
-/* Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult.get_SiblingsSizeInBytes() */
 HRESULT wmeim_photo_import_delete_imported_items_from_source_result_get__siblings_size_in_bytes(WMEIM_PhotoImportDeleteImportedItemsFromSourceResult *self, uint64_t *value);
 
-/* Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult.get_TotalCount() */
 HRESULT wmeim_photo_import_delete_imported_items_from_source_result_get__total_count(WMEIM_PhotoImportDeleteImportedItemsFromSourceResult *self, uint32_t *value);
 
-/* Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult.get_TotalSizeInBytes() */
 HRESULT wmeim_photo_import_delete_imported_items_from_source_result_get__total_size_in_bytes(WMEIM_PhotoImportDeleteImportedItemsFromSourceResult *self, uint64_t *value);
 
-/* Windows.Media.Import.IPhotoImportSourceStatics */
-/* Windows.Media.Import.IPhotoImportSourceStatics.FromIdAsync(sourceId) */
 HRESULT wmeim_photo_import_source_statics_from_id_async(WMEIM_IPhotoImportSourceStatics *self, cwinrt_hstring sourceId, WF_IAsyncOperation_WMEIM_PhotoImportSource** out);
 
-/* Windows.Media.Import.IPhotoImportSourceStatics.FromFolderAsync(sourceRootFolder) */
 HRESULT wmeim_photo_import_source_statics_from_folder_async(WMEIM_IPhotoImportSourceStatics *self, WS_IStorageFolder* sourceRootFolder, WF_IAsyncOperation_WMEIM_PhotoImportSource** out);
 
-/* Windows.Media.Import.IPhotoImportManagerStatics */
-/* Windows.Media.Import.IPhotoImportManagerStatics.IsSupportedAsync() */
 HRESULT wmeim_photo_import_manager_statics_is_supported_async(WMEIM_IPhotoImportManagerStatics *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Media.Import.IPhotoImportManagerStatics.FindAllSourcesAsync() */
 HRESULT wmeim_photo_import_manager_statics_find_all_sources_async(WMEIM_IPhotoImportManagerStatics *self, WF_IAsyncOperation_WFOCO_IVectorView_WMEIM_PhotoImportSource** out);
 
-/* Windows.Media.Import.IPhotoImportManagerStatics.GetPendingOperations() */
 HRESULT wmeim_photo_import_manager_statics_get_pending_operations(WMEIM_IPhotoImportManagerStatics *self, WFOCO_IVectorView_WMEIM_PhotoImportOperation** out);
 
-/* activate Windows.Media.Import.PhotoImportItem */
 HRESULT wmeim_photo_import_item_new(WMEIM_PhotoImportItem **out);
 
-/* Windows.Media.Import.PhotoImportItem */
-/* Windows.Media.Import.PhotoImportItem.get_Name() */
 HRESULT wmeim_photo_import_item_get__name(WMEIM_PhotoImportItem *self, cwinrt_hstring *value);
 
-/* Windows.Media.Import.PhotoImportItem.get_ItemKey() */
 HRESULT wmeim_photo_import_item_get__item_key(WMEIM_PhotoImportItem *self, uint64_t *value);
 
-/* Windows.Media.Import.PhotoImportItem.get_ContentType() */
 HRESULT wmeim_photo_import_item_get__content_type(WMEIM_PhotoImportItem *self, WMEIM_PhotoImportContentType *value);
 
-/* Windows.Media.Import.PhotoImportItem.get_SizeInBytes() */
 HRESULT wmeim_photo_import_item_get__size_in_bytes(WMEIM_PhotoImportItem *self, uint64_t *value);
 
-/* Windows.Media.Import.PhotoImportItem.get_Date() */
 HRESULT wmeim_photo_import_item_get__date(WMEIM_PhotoImportItem *self, WF_DateTime *value);
 
-/* Windows.Media.Import.PhotoImportItem.get_Sibling() */
 HRESULT wmeim_photo_import_item_get__sibling(WMEIM_PhotoImportItem *self, WMEIM_PhotoImportSidecar** value);
 
-/* Windows.Media.Import.PhotoImportItem.get_Sidecars() */
 HRESULT wmeim_photo_import_item_get__sidecars(WMEIM_PhotoImportItem *self, WFOCO_IVectorView_WMEIM_PhotoImportSidecar** value);
 
-/* Windows.Media.Import.PhotoImportItem.get_VideoSegments() */
 HRESULT wmeim_photo_import_item_get__video_segments(WMEIM_PhotoImportItem *self, WFOCO_IVectorView_WMEIM_PhotoImportVideoSegment** value);
 
-/* Windows.Media.Import.PhotoImportItem.get_IsSelected() */
 HRESULT wmeim_photo_import_item_get__is_selected(WMEIM_PhotoImportItem *self, BOOL *value);
 
-/* Windows.Media.Import.PhotoImportItem.put_IsSelected() */
 HRESULT wmeim_photo_import_item_put__is_selected(WMEIM_PhotoImportItem *self, BOOL value);
 
-/* Windows.Media.Import.PhotoImportItem.get_Thumbnail() */
 HRESULT wmeim_photo_import_item_get__thumbnail(WMEIM_PhotoImportItem *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.Media.Import.PhotoImportItem.get_ImportedFileNames() */
 HRESULT wmeim_photo_import_item_get__imported_file_names(WMEIM_PhotoImportItem *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Media.Import.PhotoImportItem.get_DeletedFileNames() */
 HRESULT wmeim_photo_import_item_get__deleted_file_names(WMEIM_PhotoImportItem *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Media.Import.PhotoImportItem.get_Path() */
 HRESULT wmeim_photo_import_item_get__path(WMEIM_PhotoImportItem *self, cwinrt_hstring *value);
 
-/* Windows.Media.Import.IPhotoImportOperation */
-/* Windows.Media.Import.IPhotoImportSelectionChangedEventArgs */
-/* Windows.Media.Import.IPhotoImportSession */
-/* Windows.Media.Import.IPhotoImportSession2 */
-/* Windows.Media.Import.IPhotoImportSession2.put_SubfolderDateFormat() */
 HRESULT wmeim_photo_import_session_2_put__subfolder_date_format(WMEIM_IPhotoImportSession_2 *self, WMEIM_PhotoImportSubfolderDateFormat value);
 
-/* Windows.Media.Import.IPhotoImportSession2.get_SubfolderDateFormat() */
 HRESULT wmeim_photo_import_session_2_get__subfolder_date_format(WMEIM_IPhotoImportSession_2 *self, WMEIM_PhotoImportSubfolderDateFormat *value);
 
-/* Windows.Media.Import.IPhotoImportSession2.put_RememberDeselectedItems() */
 HRESULT wmeim_photo_import_session_2_put__remember_deselected_items(WMEIM_IPhotoImportSession_2 *self, BOOL value);
 
-/* Windows.Media.Import.IPhotoImportSession2.get_RememberDeselectedItems() */
 HRESULT wmeim_photo_import_session_2_get__remember_deselected_items(WMEIM_IPhotoImportSession_2 *self, BOOL *value);
 
-/* Windows.Media.Import.IPhotoImportSidecar */
-/* Windows.Media.Import.IPhotoImportSource */
-/* Windows.Media.Import.IPhotoImportStorageMedium */
-/* Windows.Media.Import.IPhotoImportVideoSegment */
-/* Windows.Media.Import.IPhotoImportItemImportedEventArgs */
-/* Windows.Media.Import.IPhotoImportImportItemsResult */
-/* Windows.Media.Import.IPhotoImportFindItemsResult */
-/* Windows.Media.Import.IPhotoImportFindItemsResult2 */
-/* Windows.Media.Import.IPhotoImportFindItemsResult2.AddItemsInDateRangeToSelection(rangeStart, rangeLength) */
 HRESULT wmeim_photo_import_find_items_result_2_add_items_in_date_range_to_selection(WMEIM_IPhotoImportFindItemsResult_2 *self, WF_DateTime rangeStart, WF_TimeSpan rangeLength);
 
-/* Windows.Media.Import.IPhotoImportDeleteImportedItemsFromSourceResult */
-/* Windows.Media.Import.IPhotoImportItem */
-/* Windows.Media.Import.IPhotoImportItem2 */
-/* Windows.Media.Import.IPhotoImportItem2.get_Path() */
 HRESULT wmeim_photo_import_item_2_get__path(WMEIM_IPhotoImportItem_2 *self, cwinrt_hstring *value);
 
 #endif /* CWINRT_WINDOWS_MEDIA_IMPORT_H */

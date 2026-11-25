@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IInputStream
 #define CWINRT_FWD_WSTST_IInputStream
 typedef struct WSTST_IInputStream WSTST_IInputStream;
@@ -22,7 +21,6 @@ typedef struct WSTST_IInputStream WSTST_IInputStream;
 typedef struct WSTST_IOutputStream WSTST_IOutputStream;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDESE_ErrorReceivedEventArgs WDESE_ErrorReceivedEventArgs;
 typedef struct WDESE_ISerialDeviceStatics WDESE_ISerialDeviceStatics;
 typedef struct WDESE_PinChangedEventArgs WDESE_PinChangedEventArgs;
@@ -31,7 +29,6 @@ typedef struct WDESE_IErrorReceivedEventArgs WDESE_IErrorReceivedEventArgs;
 typedef struct WDESE_IPinChangedEventArgs WDESE_IPinChangedEventArgs;
 typedef struct WDESE_ISerialDevice WDESE_ISerialDevice;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WDESE_SerialDevice
 #define CWINRT_FWD_WF_IAsyncOperation_WDESE_SerialDevice
 typedef struct WF_IAsyncOperation_WDESE_SerialDevice WF_IAsyncOperation_WDESE_SerialDevice;
@@ -109,7 +106,6 @@ typedef enum WDESE_SerialStopBitCount {
 } WDESE_SerialStopBitCount;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -130,142 +126,92 @@ static const IID CWINRT_IID_WDESE_IPinChangedEventArgs CWINRT_MAYBE_UNUSED = { 0
 static const IID CWINRT_IID_WDESE_ISerialDevice CWINRT_MAYBE_UNUSED = { 0xE187CCC6, 0x2210, 0x414F, { 0xB6, 0x5A, 0xF5, 0x55, 0x3A, 0x03, 0x37, 0x2A } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Devices.SerialCommunication.ErrorReceivedEventArgs */
 HRESULT wdese_error_received_event_args_new(WDESE_ErrorReceivedEventArgs **out);
 
-/* Windows.Devices.SerialCommunication.ErrorReceivedEventArgs */
-/* Windows.Devices.SerialCommunication.ErrorReceivedEventArgs.get_Error() */
 HRESULT wdese_error_received_event_args_get__error(WDESE_ErrorReceivedEventArgs *self, WDESE_SerialError *value);
 
-/* Windows.Devices.SerialCommunication.ISerialDeviceStatics */
-/* Windows.Devices.SerialCommunication.ISerialDeviceStatics.GetDeviceSelector() */
 HRESULT wdese_serial_device_statics_get_device_selector(WDESE_ISerialDeviceStatics *self, cwinrt_hstring *out);
 
-/* Windows.Devices.SerialCommunication.ISerialDeviceStatics.GetDeviceSelector(portName) */
 HRESULT wdese_serial_device_statics_get_device_selector_str_str(WDESE_ISerialDeviceStatics *self, cwinrt_hstring portName, cwinrt_hstring *out);
 
-/* Windows.Devices.SerialCommunication.ISerialDeviceStatics.GetDeviceSelectorFromUsbVidPid(vendorId, productId) */
 HRESULT wdese_serial_device_statics_get_device_selector_from_usb_vid_pid(WDESE_ISerialDeviceStatics *self, uint16_t vendorId, uint16_t productId, cwinrt_hstring *out);
 
-/* Windows.Devices.SerialCommunication.ISerialDeviceStatics.FromIdAsync(deviceId) */
 HRESULT wdese_serial_device_statics_from_id_async(WDESE_ISerialDeviceStatics *self, cwinrt_hstring deviceId, WF_IAsyncOperation_WDESE_SerialDevice** out);
 
-/* activate Windows.Devices.SerialCommunication.PinChangedEventArgs */
 HRESULT wdese_pin_changed_event_args_new(WDESE_PinChangedEventArgs **out);
 
-/* Windows.Devices.SerialCommunication.PinChangedEventArgs */
-/* Windows.Devices.SerialCommunication.PinChangedEventArgs.get_PinChange() */
 HRESULT wdese_pin_changed_event_args_get__pin_change(WDESE_PinChangedEventArgs *self, WDESE_SerialPinChange *value);
 
-/* activate Windows.Devices.SerialCommunication.SerialDevice */
 HRESULT wdese_serial_device_new(WDESE_SerialDevice **out);
 
-/* Windows.Devices.SerialCommunication.SerialDevice */
-/* Windows.Devices.SerialCommunication.SerialDevice.get_BaudRate() */
 HRESULT wdese_serial_device_get__baud_rate(WDESE_SerialDevice *self, uint32_t *value);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.put_BaudRate() */
 HRESULT wdese_serial_device_put__baud_rate(WDESE_SerialDevice *self, uint32_t value);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.get_BreakSignalState() */
 HRESULT wdese_serial_device_get__break_signal_state(WDESE_SerialDevice *self, BOOL *value);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.put_BreakSignalState() */
 HRESULT wdese_serial_device_put__break_signal_state(WDESE_SerialDevice *self, BOOL value);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.get_BytesReceived() */
 HRESULT wdese_serial_device_get__bytes_received(WDESE_SerialDevice *self, uint32_t *value);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.get_CarrierDetectState() */
 HRESULT wdese_serial_device_get__carrier_detect_state(WDESE_SerialDevice *self, BOOL *value);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.get_ClearToSendState() */
 HRESULT wdese_serial_device_get__clear_to_send_state(WDESE_SerialDevice *self, BOOL *value);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.get_DataBits() */
 HRESULT wdese_serial_device_get__data_bits(WDESE_SerialDevice *self, uint16_t *value);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.put_DataBits() */
 HRESULT wdese_serial_device_put__data_bits(WDESE_SerialDevice *self, uint16_t value);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.get_DataSetReadyState() */
 HRESULT wdese_serial_device_get__data_set_ready_state(WDESE_SerialDevice *self, BOOL *value);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.get_Handshake() */
 HRESULT wdese_serial_device_get__handshake(WDESE_SerialDevice *self, WDESE_SerialHandshake *value);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.put_Handshake() */
 HRESULT wdese_serial_device_put__handshake(WDESE_SerialDevice *self, WDESE_SerialHandshake value);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.get_IsDataTerminalReadyEnabled() */
 HRESULT wdese_serial_device_get__is_data_terminal_ready_enabled(WDESE_SerialDevice *self, BOOL *value);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.put_IsDataTerminalReadyEnabled() */
 HRESULT wdese_serial_device_put__is_data_terminal_ready_enabled(WDESE_SerialDevice *self, BOOL value);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.get_IsRequestToSendEnabled() */
 HRESULT wdese_serial_device_get__is_request_to_send_enabled(WDESE_SerialDevice *self, BOOL *value);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.put_IsRequestToSendEnabled() */
 HRESULT wdese_serial_device_put__is_request_to_send_enabled(WDESE_SerialDevice *self, BOOL value);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.get_Parity() */
 HRESULT wdese_serial_device_get__parity(WDESE_SerialDevice *self, WDESE_SerialParity *value);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.put_Parity() */
 HRESULT wdese_serial_device_put__parity(WDESE_SerialDevice *self, WDESE_SerialParity value);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.get_PortName() */
 HRESULT wdese_serial_device_get__port_name(WDESE_SerialDevice *self, cwinrt_hstring *value);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.get_ReadTimeout() */
 HRESULT wdese_serial_device_get__read_timeout(WDESE_SerialDevice *self, WF_TimeSpan *value);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.put_ReadTimeout() */
 HRESULT wdese_serial_device_put__read_timeout(WDESE_SerialDevice *self, WF_TimeSpan value);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.get_StopBits() */
 HRESULT wdese_serial_device_get__stop_bits(WDESE_SerialDevice *self, WDESE_SerialStopBitCount *value);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.put_StopBits() */
 HRESULT wdese_serial_device_put__stop_bits(WDESE_SerialDevice *self, WDESE_SerialStopBitCount value);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.get_UsbVendorId() */
 HRESULT wdese_serial_device_get__usb_vendor_id(WDESE_SerialDevice *self, uint16_t *value);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.get_UsbProductId() */
 HRESULT wdese_serial_device_get__usb_product_id(WDESE_SerialDevice *self, uint16_t *value);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.get_WriteTimeout() */
 HRESULT wdese_serial_device_get__write_timeout(WDESE_SerialDevice *self, WF_TimeSpan *value);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.put_WriteTimeout() */
 HRESULT wdese_serial_device_put__write_timeout(WDESE_SerialDevice *self, WF_TimeSpan value);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.get_InputStream() */
 HRESULT wdese_serial_device_get__input_stream(WDESE_SerialDevice *self, WSTST_IInputStream** value);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.get_OutputStream() */
 HRESULT wdese_serial_device_get__output_stream(WDESE_SerialDevice *self, WSTST_IOutputStream** value);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.Close() */
 HRESULT wdese_serial_device_close(WDESE_SerialDevice *self);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.GetDeviceSelector() */
 HRESULT wdese_serial_device_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.GetDeviceSelector(portName) */
 HRESULT wdese_serial_device_get_device_selector_str_str(cwinrt_hstring portName, cwinrt_hstring *out);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.GetDeviceSelectorFromUsbVidPid(vendorId, productId) */
 HRESULT wdese_serial_device_get_device_selector_from_usb_vid_pid(uint16_t vendorId, uint16_t productId, cwinrt_hstring *out);
 
-/* Windows.Devices.SerialCommunication.SerialDevice.FromIdAsync(deviceId) */
 HRESULT wdese_serial_device_from_id_async(cwinrt_hstring deviceId, WF_IAsyncOperation_WDESE_SerialDevice** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdese_serial_device_on_error_received(WDESE_SerialDevice *self, cwinrt_event_fn fn, void *ctx);
@@ -274,7 +220,4 @@ void wdese_serial_device_off_error_received(WDESE_SerialDevice *self, cwinrt_tok
 cwinrt_token wdese_serial_device_on_pin_changed(WDESE_SerialDevice *self, cwinrt_event_fn fn, void *ctx);
 void wdese_serial_device_off_pin_changed(WDESE_SerialDevice *self, cwinrt_token token);
 
-/* Windows.Devices.SerialCommunication.IErrorReceivedEventArgs */
-/* Windows.Devices.SerialCommunication.IPinChangedEventArgs */
-/* Windows.Devices.SerialCommunication.ISerialDevice */
 #endif /* CWINRT_WINDOWS_DEVICES_SERIALCOMMUNICATION_H */

@@ -12,13 +12,11 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStreamReference
 #define CWINRT_FWD_WSTST_IRandomAccessStreamReference
 typedef struct WSTST_IRandomAccessStreamReference WSTST_IRandomAccessStreamReference;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMECO_ContentRestrictionsBrowsePolicy WMECO_ContentRestrictionsBrowsePolicy;
 typedef struct WMECO_IRatedContentDescriptionFactory WMECO_IRatedContentDescriptionFactory;
 typedef struct WMECO_IRatedContentRestrictionsFactory WMECO_IRatedContentRestrictionsFactory;
@@ -28,7 +26,6 @@ typedef struct WMECO_IContentRestrictionsBrowsePolicy WMECO_IContentRestrictions
 typedef struct WMECO_IRatedContentDescription WMECO_IRatedContentDescription;
 typedef struct WMECO_IRatedContentRestrictions WMECO_IRatedContentRestrictions;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStreamReference
 #define CWINRT_FWD_WSTST_IRandomAccessStreamReference
 typedef struct WSTST_IRandomAccessStreamReference WSTST_IRandomAccessStreamReference;
@@ -76,7 +73,6 @@ typedef enum WMECO_RatedContentCategory {
 } WMECO_RatedContentCategory;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -101,83 +97,51 @@ static const IID CWINRT_IID_WMECO_IRatedContentDescription CWINRT_MAYBE_UNUSED =
 static const IID CWINRT_IID_WMECO_IRatedContentRestrictions CWINRT_MAYBE_UNUSED = { 0x3F7F23CB, 0xBA07, 0x4401, { 0xA4, 0x9D, 0x8B, 0x92, 0x22, 0x20, 0x57, 0x23 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Media.ContentRestrictions.ContentRestrictionsBrowsePolicy */
 HRESULT wmeco_content_restrictions_browse_policy_new(WMECO_ContentRestrictionsBrowsePolicy **out);
 
-/* Windows.Media.ContentRestrictions.ContentRestrictionsBrowsePolicy */
-/* Windows.Media.ContentRestrictions.ContentRestrictionsBrowsePolicy.get_GeographicRegion() */
 HRESULT wmeco_content_restrictions_browse_policy_get__geographic_region(WMECO_ContentRestrictionsBrowsePolicy *self, cwinrt_hstring *value);
 
-/* Windows.Media.ContentRestrictions.ContentRestrictionsBrowsePolicy.get_MaxBrowsableAgeRating() */
 HRESULT wmeco_content_restrictions_browse_policy_get__max_browsable_age_rating(WMECO_ContentRestrictionsBrowsePolicy *self, uint32_t** value);
 
-/* Windows.Media.ContentRestrictions.ContentRestrictionsBrowsePolicy.get_PreferredAgeRating() */
 HRESULT wmeco_content_restrictions_browse_policy_get__preferred_age_rating(WMECO_ContentRestrictionsBrowsePolicy *self, uint32_t** value);
 
-/* Windows.Media.ContentRestrictions.IRatedContentDescriptionFactory */
-/* Windows.Media.ContentRestrictions.IRatedContentDescriptionFactory.Create(id, title, category) */
 HRESULT wmeco_rated_content_description_factory_create(WMECO_IRatedContentDescriptionFactory *self, cwinrt_hstring id, cwinrt_hstring title, WMECO_RatedContentCategory category, WMECO_RatedContentDescription** out);
 
-/* Windows.Media.ContentRestrictions.IRatedContentRestrictionsFactory */
-/* Windows.Media.ContentRestrictions.IRatedContentRestrictionsFactory.CreateWithMaxAgeRating(maxAgeRating) */
 HRESULT wmeco_rated_content_restrictions_factory_create_with_max_age_rating(WMECO_IRatedContentRestrictionsFactory *self, uint32_t maxAgeRating, WMECO_RatedContentRestrictions** out);
 
-/* activate Windows.Media.ContentRestrictions.RatedContentDescription */
 HRESULT wmeco_rated_content_description_new(WMECO_RatedContentDescription **out);
 
-/* Windows.Media.ContentRestrictions.RatedContentDescription */
-/* Windows.Media.ContentRestrictions.RatedContentDescription.get_Id() */
 HRESULT wmeco_rated_content_description_get__id(WMECO_RatedContentDescription *self, cwinrt_hstring *value);
 
-/* Windows.Media.ContentRestrictions.RatedContentDescription.put_Id() */
 HRESULT wmeco_rated_content_description_put__id(WMECO_RatedContentDescription *self, cwinrt_hstring value);
 
-/* Windows.Media.ContentRestrictions.RatedContentDescription.get_Title() */
 HRESULT wmeco_rated_content_description_get__title(WMECO_RatedContentDescription *self, cwinrt_hstring *value);
 
-/* Windows.Media.ContentRestrictions.RatedContentDescription.put_Title() */
 HRESULT wmeco_rated_content_description_put__title(WMECO_RatedContentDescription *self, cwinrt_hstring value);
 
-/* Windows.Media.ContentRestrictions.RatedContentDescription.get_Image() */
 HRESULT wmeco_rated_content_description_get__image(WMECO_RatedContentDescription *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.Media.ContentRestrictions.RatedContentDescription.put_Image() */
 HRESULT wmeco_rated_content_description_put__image(WMECO_RatedContentDescription *self, WSTST_IRandomAccessStreamReference* value);
 
-/* Windows.Media.ContentRestrictions.RatedContentDescription.get_Category() */
 HRESULT wmeco_rated_content_description_get__category(WMECO_RatedContentDescription *self, WMECO_RatedContentCategory *value);
 
-/* Windows.Media.ContentRestrictions.RatedContentDescription.put_Category() */
 HRESULT wmeco_rated_content_description_put__category(WMECO_RatedContentDescription *self, WMECO_RatedContentCategory value);
 
-/* Windows.Media.ContentRestrictions.RatedContentDescription.get_Ratings() */
 HRESULT wmeco_rated_content_description_get__ratings(WMECO_RatedContentDescription *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Media.ContentRestrictions.RatedContentDescription.put_Ratings() */
 HRESULT wmeco_rated_content_description_put__ratings(WMECO_RatedContentDescription *self, WFOCO_IVector_HSTRING* value);
 
-/* activate Windows.Media.ContentRestrictions.RatedContentRestrictions */
 HRESULT wmeco_rated_content_restrictions_new(WMECO_RatedContentRestrictions **out);
 
-/* Windows.Media.ContentRestrictions.RatedContentRestrictions */
-/* Windows.Media.ContentRestrictions.RatedContentRestrictions.GetBrowsePolicyAsync() */
 HRESULT wmeco_rated_content_restrictions_get_browse_policy_async(WMECO_RatedContentRestrictions *self, WF_IAsyncOperation_WMECO_ContentRestrictionsBrowsePolicy** out);
 
-/* Windows.Media.ContentRestrictions.RatedContentRestrictions.GetRestrictionLevelAsync(RatedContentDescription) */
 HRESULT wmeco_rated_content_restrictions_get_restriction_level_async(WMECO_RatedContentRestrictions *self, WMECO_RatedContentDescription* RatedContentDescription, WF_IAsyncOperation_WMECO_ContentAccessRestrictionLevel** out);
 
-/* Windows.Media.ContentRestrictions.RatedContentRestrictions.RequestContentAccessAsync(RatedContentDescription) */
 HRESULT wmeco_rated_content_restrictions_request_content_access_async(WMECO_RatedContentRestrictions *self, WMECO_RatedContentDescription* RatedContentDescription, WF_IAsyncOperation_Bool** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmeco_rated_content_restrictions_on_restrictions_changed(WMECO_RatedContentRestrictions *self, cwinrt_event_fn fn, void *ctx);
 void wmeco_rated_content_restrictions_off_restrictions_changed(WMECO_RatedContentRestrictions *self, cwinrt_token token);
 
-/* Windows.Media.ContentRestrictions.IContentRestrictionsBrowsePolicy */
-/* Windows.Media.ContentRestrictions.IRatedContentDescription */
-/* Windows.Media.ContentRestrictions.IRatedContentRestrictions */
 #endif /* CWINRT_WINDOWS_MEDIA_CONTENTRESTRICTIONS_H */

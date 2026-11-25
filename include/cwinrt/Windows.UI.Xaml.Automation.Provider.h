@@ -17,7 +17,6 @@
 #include <cwinrt/Windows.UI.Xaml.Automation.Text.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WUIXAAUPR_IAnnotationProvider WUIXAAUPR_IAnnotationProvider;
 typedef struct WUIXAAUPR_IDockProvider WUIXAAUPR_IDockProvider;
 typedef struct WUIXAAUPR_IDragProvider WUIXAAUPR_IDragProvider;
@@ -56,7 +55,6 @@ typedef struct WUIXAAUPR_ITextProvider WUIXAAUPR_ITextProvider;
 typedef struct WUIXAAUPR_ITextRangeProvider WUIXAAUPR_ITextRangeProvider;
 typedef struct WUIXAAUPR_ITransformProvider WUIXAAUPR_ITransformProvider;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WUIXAAU_DockPosition
 #define CWINRT_FWD_WUIXAAU_DockPosition
 typedef enum WUIXAAU_DockPosition {
@@ -230,7 +228,6 @@ typedef enum WUIXAAUTE_TextUnit {
 } WUIXAAUTE_TextUnit;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -379,437 +376,268 @@ static const IID CWINRT_IID_WUIXAAUPR_ITextRangeProvider CWINRT_MAYBE_UNUSED = {
 static const IID CWINRT_IID_WUIXAAUPR_ITransformProvider CWINRT_MAYBE_UNUSED = { 0x79670FDD, 0xF6A9, 0x4A65, { 0xAF, 0x17, 0x86, 0x1D, 0xB7, 0x99, 0xA2, 0xDA } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.Xaml.Automation.Provider.IAnnotationProvider */
-/* Windows.UI.Xaml.Automation.Provider.IAnnotationProvider.get_AnnotationTypeId() */
 HRESULT wuixaaupr_annotation_provider_get__annotation_type_id(WUIXAAUPR_IAnnotationProvider *self, int32_t *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IAnnotationProvider.get_AnnotationTypeName() */
 HRESULT wuixaaupr_annotation_provider_get__annotation_type_name(WUIXAAUPR_IAnnotationProvider *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IAnnotationProvider.get_Author() */
 HRESULT wuixaaupr_annotation_provider_get__author(WUIXAAUPR_IAnnotationProvider *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IAnnotationProvider.get_DateTime() */
 HRESULT wuixaaupr_annotation_provider_get__date_time(WUIXAAUPR_IAnnotationProvider *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IAnnotationProvider.get_Target() */
 HRESULT wuixaaupr_annotation_provider_get__target(WUIXAAUPR_IAnnotationProvider *self, WUIXAAUPR_IRawElementProviderSimple** value);
 
-/* Windows.UI.Xaml.Automation.Provider.IDockProvider */
-/* Windows.UI.Xaml.Automation.Provider.IDockProvider.get_DockPosition() */
 HRESULT wuixaaupr_dock_provider_get__dock_position(WUIXAAUPR_IDockProvider *self, WUIXAAU_DockPosition *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IDockProvider.SetDockPosition(dockPosition) */
 HRESULT wuixaaupr_dock_provider_set_dock_position(WUIXAAUPR_IDockProvider *self, WUIXAAU_DockPosition dockPosition);
 
-/* Windows.UI.Xaml.Automation.Provider.IDragProvider */
-/* Windows.UI.Xaml.Automation.Provider.IDragProvider.get_IsGrabbed() */
 HRESULT wuixaaupr_drag_provider_get__is_grabbed(WUIXAAUPR_IDragProvider *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IDragProvider.get_DropEffect() */
 HRESULT wuixaaupr_drag_provider_get__drop_effect(WUIXAAUPR_IDragProvider *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IDragProvider.get_DropEffects() */
 HRESULT wuixaaupr_drag_provider_get__drop_effects(WUIXAAUPR_IDragProvider *self, cwinrt_hstring **value, uint32_t *value_len);
 
-/* Windows.UI.Xaml.Automation.Provider.IDragProvider.GetGrabbedItems() */
 HRESULT wuixaaupr_drag_provider_get_grabbed_items(WUIXAAUPR_IDragProvider *self, WUIXAAUPR_IRawElementProviderSimple **out, uint32_t *out_len);
 
-/* Windows.UI.Xaml.Automation.Provider.IDropTargetProvider */
-/* Windows.UI.Xaml.Automation.Provider.IDropTargetProvider.get_DropEffect() */
 HRESULT wuixaaupr_drop_target_provider_get__drop_effect(WUIXAAUPR_IDropTargetProvider *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IDropTargetProvider.get_DropEffects() */
 HRESULT wuixaaupr_drop_target_provider_get__drop_effects(WUIXAAUPR_IDropTargetProvider *self, cwinrt_hstring **value, uint32_t *value_len);
 
-/* Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider */
-/* Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider.get_ExpandCollapseState() */
 HRESULT wuixaaupr_expand_collapse_provider_get__expand_collapse_state(WUIXAAUPR_IExpandCollapseProvider *self, WUIXAAU_ExpandCollapseState *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider.Collapse() */
 HRESULT wuixaaupr_expand_collapse_provider_collapse(WUIXAAUPR_IExpandCollapseProvider *self);
 
-/* Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider.Expand() */
 HRESULT wuixaaupr_expand_collapse_provider_expand(WUIXAAUPR_IExpandCollapseProvider *self);
 
-/* Windows.UI.Xaml.Automation.Provider.IGridItemProvider */
-/* Windows.UI.Xaml.Automation.Provider.IGridItemProvider.get_Column() */
 HRESULT wuixaaupr_grid_item_provider_get__column(WUIXAAUPR_IGridItemProvider *self, int32_t *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IGridItemProvider.get_ColumnSpan() */
 HRESULT wuixaaupr_grid_item_provider_get__column_span(WUIXAAUPR_IGridItemProvider *self, int32_t *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IGridItemProvider.get_ContainingGrid() */
 HRESULT wuixaaupr_grid_item_provider_get__containing_grid(WUIXAAUPR_IGridItemProvider *self, WUIXAAUPR_IRawElementProviderSimple** value);
 
-/* Windows.UI.Xaml.Automation.Provider.IGridItemProvider.get_Row() */
 HRESULT wuixaaupr_grid_item_provider_get__row(WUIXAAUPR_IGridItemProvider *self, int32_t *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IGridItemProvider.get_RowSpan() */
 HRESULT wuixaaupr_grid_item_provider_get__row_span(WUIXAAUPR_IGridItemProvider *self, int32_t *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IGridProvider */
-/* Windows.UI.Xaml.Automation.Provider.IGridProvider.get_ColumnCount() */
 HRESULT wuixaaupr_grid_provider_get__column_count(WUIXAAUPR_IGridProvider *self, int32_t *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IGridProvider.get_RowCount() */
 HRESULT wuixaaupr_grid_provider_get__row_count(WUIXAAUPR_IGridProvider *self, int32_t *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IGridProvider.GetItem(row, column) */
 HRESULT wuixaaupr_grid_provider_get_item(WUIXAAUPR_IGridProvider *self, int32_t row, int32_t column, WUIXAAUPR_IRawElementProviderSimple** out);
 
-/* Windows.UI.Xaml.Automation.Provider.IInvokeProvider */
-/* Windows.UI.Xaml.Automation.Provider.IInvokeProvider.Invoke() */
 HRESULT wuixaaupr_invoke_provider_invoke(WUIXAAUPR_IInvokeProvider *self);
 
-/* Windows.UI.Xaml.Automation.Provider.IItemContainerProvider */
-/* Windows.UI.Xaml.Automation.Provider.IItemContainerProvider.FindItemByProperty(startAfter, automationProperty) */
 HRESULT wuixaaupr_item_container_provider_find_item_by_property(WUIXAAUPR_IItemContainerProvider *self, WUIXAAUPR_IRawElementProviderSimple* startAfter, WUIXAAU_AutomationProperty* automationProperty, IInspectable* value, WUIXAAUPR_IRawElementProviderSimple** out);
 
-/* Windows.UI.Xaml.Automation.Provider.IMultipleViewProvider */
-/* Windows.UI.Xaml.Automation.Provider.IMultipleViewProvider.get_CurrentView() */
 HRESULT wuixaaupr_multiple_view_provider_get__current_view(WUIXAAUPR_IMultipleViewProvider *self, int32_t *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IMultipleViewProvider.GetSupportedViews() */
 HRESULT wuixaaupr_multiple_view_provider_get_supported_views(WUIXAAUPR_IMultipleViewProvider *self, int32_t **out, uint32_t *out_len);
 
-/* Windows.UI.Xaml.Automation.Provider.IMultipleViewProvider.GetViewName(viewId) */
 HRESULT wuixaaupr_multiple_view_provider_get_view_name(WUIXAAUPR_IMultipleViewProvider *self, int32_t viewId, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Provider.IMultipleViewProvider.SetCurrentView(viewId) */
 HRESULT wuixaaupr_multiple_view_provider_set_current_view(WUIXAAUPR_IMultipleViewProvider *self, int32_t viewId);
 
-/* Windows.UI.Xaml.Automation.Provider.IObjectModelProvider */
-/* Windows.UI.Xaml.Automation.Provider.IObjectModelProvider.GetUnderlyingObjectModel() */
 HRESULT wuixaaupr_object_model_provider_get_underlying_object_model(WUIXAAUPR_IObjectModelProvider *self, IInspectable** out);
 
-/* Windows.UI.Xaml.Automation.Provider.IRangeValueProvider */
-/* Windows.UI.Xaml.Automation.Provider.IRangeValueProvider.get_IsReadOnly() */
 HRESULT wuixaaupr_range_value_provider_get__is_read_only(WUIXAAUPR_IRangeValueProvider *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IRangeValueProvider.get_LargeChange() */
 HRESULT wuixaaupr_range_value_provider_get__large_change(WUIXAAUPR_IRangeValueProvider *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IRangeValueProvider.get_Maximum() */
 HRESULT wuixaaupr_range_value_provider_get__maximum(WUIXAAUPR_IRangeValueProvider *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IRangeValueProvider.get_Minimum() */
 HRESULT wuixaaupr_range_value_provider_get__minimum(WUIXAAUPR_IRangeValueProvider *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IRangeValueProvider.get_SmallChange() */
 HRESULT wuixaaupr_range_value_provider_get__small_change(WUIXAAUPR_IRangeValueProvider *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IRangeValueProvider.get_Value() */
 HRESULT wuixaaupr_range_value_provider_get__value(WUIXAAUPR_IRangeValueProvider *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IRangeValueProvider.SetValue() */
 HRESULT wuixaaupr_range_value_provider_set_value(WUIXAAUPR_IRangeValueProvider *self, double value);
 
-/* Windows.UI.Xaml.Automation.Provider.IScrollItemProvider */
-/* Windows.UI.Xaml.Automation.Provider.IScrollItemProvider.ScrollIntoView() */
 HRESULT wuixaaupr_scroll_item_provider_scroll_into_view(WUIXAAUPR_IScrollItemProvider *self);
 
-/* Windows.UI.Xaml.Automation.Provider.IScrollProvider */
-/* Windows.UI.Xaml.Automation.Provider.IScrollProvider.get_HorizontallyScrollable() */
 HRESULT wuixaaupr_scroll_provider_get__horizontally_scrollable(WUIXAAUPR_IScrollProvider *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IScrollProvider.get_HorizontalScrollPercent() */
 HRESULT wuixaaupr_scroll_provider_get__horizontal_scroll_percent(WUIXAAUPR_IScrollProvider *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IScrollProvider.get_HorizontalViewSize() */
 HRESULT wuixaaupr_scroll_provider_get__horizontal_view_size(WUIXAAUPR_IScrollProvider *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IScrollProvider.get_VerticallyScrollable() */
 HRESULT wuixaaupr_scroll_provider_get__vertically_scrollable(WUIXAAUPR_IScrollProvider *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IScrollProvider.get_VerticalScrollPercent() */
 HRESULT wuixaaupr_scroll_provider_get__vertical_scroll_percent(WUIXAAUPR_IScrollProvider *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IScrollProvider.get_VerticalViewSize() */
 HRESULT wuixaaupr_scroll_provider_get__vertical_view_size(WUIXAAUPR_IScrollProvider *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IScrollProvider.Scroll(horizontalAmount, verticalAmount) */
 HRESULT wuixaaupr_scroll_provider_scroll(WUIXAAUPR_IScrollProvider *self, WUIXAAU_ScrollAmount horizontalAmount, WUIXAAU_ScrollAmount verticalAmount);
 
-/* Windows.UI.Xaml.Automation.Provider.IScrollProvider.SetScrollPercent(horizontalPercent, verticalPercent) */
 HRESULT wuixaaupr_scroll_provider_set_scroll_percent(WUIXAAUPR_IScrollProvider *self, double horizontalPercent, double verticalPercent);
 
-/* Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider */
-/* Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider.get_IsSelected() */
 HRESULT wuixaaupr_selection_item_provider_get__is_selected(WUIXAAUPR_ISelectionItemProvider *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider.get_SelectionContainer() */
 HRESULT wuixaaupr_selection_item_provider_get__selection_container(WUIXAAUPR_ISelectionItemProvider *self, WUIXAAUPR_IRawElementProviderSimple** value);
 
-/* Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider.AddToSelection() */
 HRESULT wuixaaupr_selection_item_provider_add_to_selection(WUIXAAUPR_ISelectionItemProvider *self);
 
-/* Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider.RemoveFromSelection() */
 HRESULT wuixaaupr_selection_item_provider_remove_from_selection(WUIXAAUPR_ISelectionItemProvider *self);
 
-/* Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider.Select() */
 HRESULT wuixaaupr_selection_item_provider_select(WUIXAAUPR_ISelectionItemProvider *self);
 
-/* Windows.UI.Xaml.Automation.Provider.ISelectionProvider */
-/* Windows.UI.Xaml.Automation.Provider.ISelectionProvider.get_CanSelectMultiple() */
 HRESULT wuixaaupr_selection_provider_get__can_select_multiple(WUIXAAUPR_ISelectionProvider *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Provider.ISelectionProvider.get_IsSelectionRequired() */
 HRESULT wuixaaupr_selection_provider_get__is_selection_required(WUIXAAUPR_ISelectionProvider *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Provider.ISelectionProvider.GetSelection() */
 HRESULT wuixaaupr_selection_provider_get_selection(WUIXAAUPR_ISelectionProvider *self, WUIXAAUPR_IRawElementProviderSimple **out, uint32_t *out_len);
 
-/* Windows.UI.Xaml.Automation.Provider.ISpreadsheetItemProvider */
-/* Windows.UI.Xaml.Automation.Provider.ISpreadsheetItemProvider.get_Formula() */
 HRESULT wuixaaupr_spreadsheet_item_provider_get__formula(WUIXAAUPR_ISpreadsheetItemProvider *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Automation.Provider.ISpreadsheetItemProvider.GetAnnotationObjects() */
 HRESULT wuixaaupr_spreadsheet_item_provider_get_annotation_objects(WUIXAAUPR_ISpreadsheetItemProvider *self, WUIXAAUPR_IRawElementProviderSimple **out, uint32_t *out_len);
 
-/* Windows.UI.Xaml.Automation.Provider.ISpreadsheetItemProvider.GetAnnotationTypes() */
 HRESULT wuixaaupr_spreadsheet_item_provider_get_annotation_types(WUIXAAUPR_ISpreadsheetItemProvider *self, WUIXAAU_AnnotationType **out, uint32_t *out_len);
 
-/* Windows.UI.Xaml.Automation.Provider.ISpreadsheetProvider */
-/* Windows.UI.Xaml.Automation.Provider.ISpreadsheetProvider.GetItemByName(name) */
 HRESULT wuixaaupr_spreadsheet_provider_get_item_by_name(WUIXAAUPR_ISpreadsheetProvider *self, cwinrt_hstring name, WUIXAAUPR_IRawElementProviderSimple** out);
 
-/* Windows.UI.Xaml.Automation.Provider.IStylesProvider */
-/* Windows.UI.Xaml.Automation.Provider.IStylesProvider.get_ExtendedProperties() */
 HRESULT wuixaaupr_styles_provider_get__extended_properties(WUIXAAUPR_IStylesProvider *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IStylesProvider.get_FillColor() */
 HRESULT wuixaaupr_styles_provider_get__fill_color(WUIXAAUPR_IStylesProvider *self, WUI_Color *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IStylesProvider.get_FillPatternColor() */
 HRESULT wuixaaupr_styles_provider_get__fill_pattern_color(WUIXAAUPR_IStylesProvider *self, WUI_Color *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IStylesProvider.get_FillPatternStyle() */
 HRESULT wuixaaupr_styles_provider_get__fill_pattern_style(WUIXAAUPR_IStylesProvider *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IStylesProvider.get_Shape() */
 HRESULT wuixaaupr_styles_provider_get__shape(WUIXAAUPR_IStylesProvider *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IStylesProvider.get_StyleId() */
 HRESULT wuixaaupr_styles_provider_get__style_id(WUIXAAUPR_IStylesProvider *self, int32_t *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IStylesProvider.get_StyleName() */
 HRESULT wuixaaupr_styles_provider_get__style_name(WUIXAAUPR_IStylesProvider *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Automation.Provider.ISynchronizedInputProvider */
-/* Windows.UI.Xaml.Automation.Provider.ISynchronizedInputProvider.Cancel() */
 HRESULT wuixaaupr_synchronized_input_provider_cancel(WUIXAAUPR_ISynchronizedInputProvider *self);
 
-/* Windows.UI.Xaml.Automation.Provider.ISynchronizedInputProvider.StartListening(inputType) */
 HRESULT wuixaaupr_synchronized_input_provider_start_listening(WUIXAAUPR_ISynchronizedInputProvider *self, WUIXAAU_SynchronizedInputType inputType);
 
-/* Windows.UI.Xaml.Automation.Provider.ITableItemProvider */
-/* Windows.UI.Xaml.Automation.Provider.ITableItemProvider.GetColumnHeaderItems() */
 HRESULT wuixaaupr_table_item_provider_get_column_header_items(WUIXAAUPR_ITableItemProvider *self, WUIXAAUPR_IRawElementProviderSimple **out, uint32_t *out_len);
 
-/* Windows.UI.Xaml.Automation.Provider.ITableItemProvider.GetRowHeaderItems() */
 HRESULT wuixaaupr_table_item_provider_get_row_header_items(WUIXAAUPR_ITableItemProvider *self, WUIXAAUPR_IRawElementProviderSimple **out, uint32_t *out_len);
 
-/* Windows.UI.Xaml.Automation.Provider.ITableProvider */
-/* Windows.UI.Xaml.Automation.Provider.ITableProvider.get_RowOrColumnMajor() */
 HRESULT wuixaaupr_table_provider_get__row_or_column_major(WUIXAAUPR_ITableProvider *self, WUIXAAU_RowOrColumnMajor *value);
 
-/* Windows.UI.Xaml.Automation.Provider.ITableProvider.GetColumnHeaders() */
 HRESULT wuixaaupr_table_provider_get_column_headers(WUIXAAUPR_ITableProvider *self, WUIXAAUPR_IRawElementProviderSimple **out, uint32_t *out_len);
 
-/* Windows.UI.Xaml.Automation.Provider.ITableProvider.GetRowHeaders() */
 HRESULT wuixaaupr_table_provider_get_row_headers(WUIXAAUPR_ITableProvider *self, WUIXAAUPR_IRawElementProviderSimple **out, uint32_t *out_len);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextChildProvider */
-/* Windows.UI.Xaml.Automation.Provider.ITextChildProvider.get_TextContainer() */
 HRESULT wuixaaupr_text_child_provider_get__text_container(WUIXAAUPR_ITextChildProvider *self, WUIXAAUPR_IRawElementProviderSimple** value);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextChildProvider.get_TextRange() */
 HRESULT wuixaaupr_text_child_provider_get__text_range(WUIXAAUPR_ITextChildProvider *self, WUIXAAUPR_ITextRangeProvider** value);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextEditProvider */
-/* Windows.UI.Xaml.Automation.Provider.ITextEditProvider.GetActiveComposition() */
 HRESULT wuixaaupr_text_edit_provider_get_active_composition(WUIXAAUPR_ITextEditProvider *self, WUIXAAUPR_ITextRangeProvider** out);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextEditProvider.GetConversionTarget() */
 HRESULT wuixaaupr_text_edit_provider_get_conversion_target(WUIXAAUPR_ITextEditProvider *self, WUIXAAUPR_ITextRangeProvider** out);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextProvider2 */
-/* Windows.UI.Xaml.Automation.Provider.ITextProvider2.RangeFromAnnotation(annotationElement) */
 HRESULT wuixaaupr_text_provider_2_range_from_annotation(WUIXAAUPR_ITextProvider_2 *self, WUIXAAUPR_IRawElementProviderSimple* annotationElement, WUIXAAUPR_ITextRangeProvider** out);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextProvider2.GetCaretRange(isActive) */
 HRESULT wuixaaupr_text_provider_2_get_caret_range(WUIXAAUPR_ITextProvider_2 *self, BOOL isActive, WUIXAAUPR_ITextRangeProvider** out);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextRangeProvider2 */
-/* Windows.UI.Xaml.Automation.Provider.ITextRangeProvider2.ShowContextMenu() */
 HRESULT wuixaaupr_text_range_provider_2_show_context_menu(WUIXAAUPR_ITextRangeProvider_2 *self);
 
-/* Windows.UI.Xaml.Automation.Provider.IToggleProvider */
-/* Windows.UI.Xaml.Automation.Provider.IToggleProvider.get_ToggleState() */
 HRESULT wuixaaupr_toggle_provider_get__toggle_state(WUIXAAUPR_IToggleProvider *self, WUIXAAU_ToggleState *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IToggleProvider.Toggle() */
 HRESULT wuixaaupr_toggle_provider_toggle(WUIXAAUPR_IToggleProvider *self);
 
-/* Windows.UI.Xaml.Automation.Provider.ITransformProvider2 */
-/* Windows.UI.Xaml.Automation.Provider.ITransformProvider2.get_CanZoom() */
 HRESULT wuixaaupr_transform_provider_2_get__can_zoom(WUIXAAUPR_ITransformProvider_2 *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Provider.ITransformProvider2.get_ZoomLevel() */
 HRESULT wuixaaupr_transform_provider_2_get__zoom_level(WUIXAAUPR_ITransformProvider_2 *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Provider.ITransformProvider2.get_MaxZoom() */
 HRESULT wuixaaupr_transform_provider_2_get__max_zoom(WUIXAAUPR_ITransformProvider_2 *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Provider.ITransformProvider2.get_MinZoom() */
 HRESULT wuixaaupr_transform_provider_2_get__min_zoom(WUIXAAUPR_ITransformProvider_2 *self, double *value);
 
-/* Windows.UI.Xaml.Automation.Provider.ITransformProvider2.Zoom(zoom) */
 HRESULT wuixaaupr_transform_provider_2_zoom(WUIXAAUPR_ITransformProvider_2 *self, double zoom);
 
-/* Windows.UI.Xaml.Automation.Provider.ITransformProvider2.ZoomByUnit(zoomUnit) */
 HRESULT wuixaaupr_transform_provider_2_zoom_by_unit(WUIXAAUPR_ITransformProvider_2 *self, WUIXAAU_ZoomUnit zoomUnit);
 
-/* Windows.UI.Xaml.Automation.Provider.IValueProvider */
-/* Windows.UI.Xaml.Automation.Provider.IValueProvider.get_IsReadOnly() */
 HRESULT wuixaaupr_value_provider_get__is_read_only(WUIXAAUPR_IValueProvider *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IValueProvider.get_Value() */
 HRESULT wuixaaupr_value_provider_get__value(WUIXAAUPR_IValueProvider *self, cwinrt_hstring *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IValueProvider.SetValue() */
 HRESULT wuixaaupr_value_provider_set_value(WUIXAAUPR_IValueProvider *self, cwinrt_hstring value);
 
-/* Windows.UI.Xaml.Automation.Provider.IVirtualizedItemProvider */
-/* Windows.UI.Xaml.Automation.Provider.IVirtualizedItemProvider.Realize() */
 HRESULT wuixaaupr_virtualized_item_provider_realize(WUIXAAUPR_IVirtualizedItemProvider *self);
 
-/* Windows.UI.Xaml.Automation.Provider.IWindowProvider */
-/* Windows.UI.Xaml.Automation.Provider.IWindowProvider.get_IsModal() */
 HRESULT wuixaaupr_window_provider_get__is_modal(WUIXAAUPR_IWindowProvider *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IWindowProvider.get_IsTopmost() */
 HRESULT wuixaaupr_window_provider_get__is_topmost(WUIXAAUPR_IWindowProvider *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IWindowProvider.get_Maximizable() */
 HRESULT wuixaaupr_window_provider_get__maximizable(WUIXAAUPR_IWindowProvider *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IWindowProvider.get_Minimizable() */
 HRESULT wuixaaupr_window_provider_get__minimizable(WUIXAAUPR_IWindowProvider *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IWindowProvider.get_InteractionState() */
 HRESULT wuixaaupr_window_provider_get__interaction_state(WUIXAAUPR_IWindowProvider *self, WUIXAAU_WindowInteractionState *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IWindowProvider.get_VisualState() */
 HRESULT wuixaaupr_window_provider_get__visual_state(WUIXAAUPR_IWindowProvider *self, WUIXAAU_WindowVisualState *value);
 
-/* Windows.UI.Xaml.Automation.Provider.IWindowProvider.Close() */
 HRESULT wuixaaupr_window_provider_close(WUIXAAUPR_IWindowProvider *self);
 
-/* Windows.UI.Xaml.Automation.Provider.IWindowProvider.SetVisualState(state) */
 HRESULT wuixaaupr_window_provider_set_visual_state(WUIXAAUPR_IWindowProvider *self, WUIXAAU_WindowVisualState state);
 
-/* Windows.UI.Xaml.Automation.Provider.IWindowProvider.WaitForInputIdle(milliseconds) */
 HRESULT wuixaaupr_window_provider_wait_for_input_idle(WUIXAAUPR_IWindowProvider *self, int32_t milliseconds, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Provider.ICustomNavigationProvider */
-/* Windows.UI.Xaml.Automation.Provider.ICustomNavigationProvider.NavigateCustom(direction) */
 HRESULT wuixaaupr_custom_navigation_provider_navigate_custom(WUIXAAUPR_ICustomNavigationProvider *self, WUIXAAUPE_AutomationNavigationDirection direction, IInspectable** out);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextProvider */
-/* Windows.UI.Xaml.Automation.Provider.ITextProvider.get_DocumentRange() */
 HRESULT wuixaaupr_text_provider_get__document_range(WUIXAAUPR_ITextProvider *self, WUIXAAUPR_ITextRangeProvider** value);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextProvider.get_SupportedTextSelection() */
 HRESULT wuixaaupr_text_provider_get__supported_text_selection(WUIXAAUPR_ITextProvider *self, WUIXAAU_SupportedTextSelection *value);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextProvider.GetSelection() */
 HRESULT wuixaaupr_text_provider_get_selection(WUIXAAUPR_ITextProvider *self, WUIXAAUPR_ITextRangeProvider **out, uint32_t *out_len);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextProvider.GetVisibleRanges() */
 HRESULT wuixaaupr_text_provider_get_visible_ranges(WUIXAAUPR_ITextProvider *self, WUIXAAUPR_ITextRangeProvider **out, uint32_t *out_len);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextProvider.RangeFromChild(childElement) */
 HRESULT wuixaaupr_text_provider_range_from_child(WUIXAAUPR_ITextProvider *self, WUIXAAUPR_IRawElementProviderSimple* childElement, WUIXAAUPR_ITextRangeProvider** out);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextProvider.RangeFromPoint(screenLocation) */
 HRESULT wuixaaupr_text_provider_range_from_point(WUIXAAUPR_ITextProvider *self, WF_Point screenLocation, WUIXAAUPR_ITextRangeProvider** out);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextRangeProvider */
-/* Windows.UI.Xaml.Automation.Provider.ITextRangeProvider.Clone() */
 HRESULT wuixaaupr_text_range_provider_clone(WUIXAAUPR_ITextRangeProvider *self, WUIXAAUPR_ITextRangeProvider** out);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextRangeProvider.Compare(textRangeProvider) */
 HRESULT wuixaaupr_text_range_provider_compare(WUIXAAUPR_ITextRangeProvider *self, WUIXAAUPR_ITextRangeProvider* textRangeProvider, BOOL *out);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextRangeProvider.CompareEndpoints(endpoint, textRangeProvider, targetEndpoint) */
 HRESULT wuixaaupr_text_range_provider_compare_endpoints(WUIXAAUPR_ITextRangeProvider *self, WUIXAAUTE_TextPatternRangeEndpoint endpoint, WUIXAAUPR_ITextRangeProvider* textRangeProvider, WUIXAAUTE_TextPatternRangeEndpoint targetEndpoint, int32_t *out);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextRangeProvider.ExpandToEnclosingUnit(unit) */
 HRESULT wuixaaupr_text_range_provider_expand_to_enclosing_unit(WUIXAAUPR_ITextRangeProvider *self, WUIXAAUTE_TextUnit unit);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextRangeProvider.FindAttribute(attributeId, backward) */
 HRESULT wuixaaupr_text_range_provider_find_attribute(WUIXAAUPR_ITextRangeProvider *self, int32_t attributeId, IInspectable* value, BOOL backward, WUIXAAUPR_ITextRangeProvider** out);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextRangeProvider.FindText(text, backward, ignoreCase) */
 HRESULT wuixaaupr_text_range_provider_find_text(WUIXAAUPR_ITextRangeProvider *self, cwinrt_hstring text, BOOL backward, BOOL ignoreCase, WUIXAAUPR_ITextRangeProvider** out);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextRangeProvider.GetAttributeValue(attributeId) */
 HRESULT wuixaaupr_text_range_provider_get_attribute_value(WUIXAAUPR_ITextRangeProvider *self, int32_t attributeId, IInspectable** out);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextRangeProvider.GetBoundingRectangles(returnValue) */
 HRESULT wuixaaupr_text_range_provider_get_bounding_rectangles(WUIXAAUPR_ITextRangeProvider *self, double *returnValue, uint32_t returnValue_len);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextRangeProvider.GetEnclosingElement() */
 HRESULT wuixaaupr_text_range_provider_get_enclosing_element(WUIXAAUPR_ITextRangeProvider *self, WUIXAAUPR_IRawElementProviderSimple** out);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextRangeProvider.GetText(maxLength) */
 HRESULT wuixaaupr_text_range_provider_get_text(WUIXAAUPR_ITextRangeProvider *self, int32_t maxLength, cwinrt_hstring *out);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextRangeProvider.Move(unit, count) */
 HRESULT wuixaaupr_text_range_provider_move(WUIXAAUPR_ITextRangeProvider *self, WUIXAAUTE_TextUnit unit, int32_t count, int32_t *out);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextRangeProvider.MoveEndpointByUnit(endpoint, unit, count) */
 HRESULT wuixaaupr_text_range_provider_move_endpoint_by_unit(WUIXAAUPR_ITextRangeProvider *self, WUIXAAUTE_TextPatternRangeEndpoint endpoint, WUIXAAUTE_TextUnit unit, int32_t count, int32_t *out);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextRangeProvider.MoveEndpointByRange(endpoint, textRangeProvider, targetEndpoint) */
 HRESULT wuixaaupr_text_range_provider_move_endpoint_by_range(WUIXAAUPR_ITextRangeProvider *self, WUIXAAUTE_TextPatternRangeEndpoint endpoint, WUIXAAUPR_ITextRangeProvider* textRangeProvider, WUIXAAUTE_TextPatternRangeEndpoint targetEndpoint);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextRangeProvider.Select() */
 HRESULT wuixaaupr_text_range_provider_select(WUIXAAUPR_ITextRangeProvider *self);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextRangeProvider.AddToSelection() */
 HRESULT wuixaaupr_text_range_provider_add_to_selection(WUIXAAUPR_ITextRangeProvider *self);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextRangeProvider.RemoveFromSelection() */
 HRESULT wuixaaupr_text_range_provider_remove_from_selection(WUIXAAUPR_ITextRangeProvider *self);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextRangeProvider.ScrollIntoView(alignToTop) */
 HRESULT wuixaaupr_text_range_provider_scroll_into_view(WUIXAAUPR_ITextRangeProvider *self, BOOL alignToTop);
 
-/* Windows.UI.Xaml.Automation.Provider.ITextRangeProvider.GetChildren() */
 HRESULT wuixaaupr_text_range_provider_get_children(WUIXAAUPR_ITextRangeProvider *self, WUIXAAUPR_IRawElementProviderSimple **out, uint32_t *out_len);
 
-/* Windows.UI.Xaml.Automation.Provider.ITransformProvider */
-/* Windows.UI.Xaml.Automation.Provider.ITransformProvider.get_CanMove() */
 HRESULT wuixaaupr_transform_provider_get__can_move(WUIXAAUPR_ITransformProvider *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Provider.ITransformProvider.get_CanResize() */
 HRESULT wuixaaupr_transform_provider_get__can_resize(WUIXAAUPR_ITransformProvider *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Provider.ITransformProvider.get_CanRotate() */
 HRESULT wuixaaupr_transform_provider_get__can_rotate(WUIXAAUPR_ITransformProvider *self, BOOL *value);
 
-/* Windows.UI.Xaml.Automation.Provider.ITransformProvider.Move(x, y) */
 HRESULT wuixaaupr_transform_provider_move(WUIXAAUPR_ITransformProvider *self, double x, double y);
 
-/* Windows.UI.Xaml.Automation.Provider.ITransformProvider.Resize(width, height) */
 HRESULT wuixaaupr_transform_provider_resize(WUIXAAUPR_ITransformProvider *self, double width, double height);
 
-/* Windows.UI.Xaml.Automation.Provider.ITransformProvider.Rotate(degrees) */
 HRESULT wuixaaupr_transform_provider_rotate(WUIXAAUPR_ITransformProvider *self, double degrees);
 
 #endif /* CWINRT_WINDOWS_UI_XAML_AUTOMATION_PROVIDER_H */

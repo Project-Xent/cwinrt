@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WMESP_SpeechRecognitionResult
 #define CWINRT_FWD_WMESP_SpeechRecognitionResult
 typedef struct WMESP_SpeechRecognitionResult WMESP_SpeechRecognitionResult;
@@ -34,7 +33,6 @@ typedef struct WGL_Language WGL_Language;
 typedef struct WAPAP_AppServiceTriggerDetails WAPAP_AppServiceTriggerDetails;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPVO_IVoiceCommandDefinitionManagerStatics WAPVO_IVoiceCommandDefinitionManagerStatics;
 typedef struct WAPVO_IVoiceCommandResponseStatics WAPVO_IVoiceCommandResponseStatics;
 typedef struct WAPVO_IVoiceCommandServiceConnectionStatics WAPVO_IVoiceCommandServiceConnectionStatics;
@@ -58,7 +56,6 @@ typedef struct WAPVO_IVoiceCommandResponse WAPVO_IVoiceCommandResponse;
 typedef struct WAPVO_IVoiceCommandServiceConnection WAPVO_IVoiceCommandServiceConnection;
 typedef struct WAPVO_IVoiceCommandUserMessage WAPVO_IVoiceCommandUserMessage;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WS_StorageFile
 #define CWINRT_FWD_WS_StorageFile
 typedef struct WS_StorageFile WS_StorageFile;
@@ -147,7 +144,6 @@ typedef enum WAPVO_VoiceCommandContentTileType {
 } WAPVO_VoiceCommandContentTileType;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -200,244 +196,149 @@ static const IID CWINRT_IID_WAPVO_IVoiceCommandServiceConnection CWINRT_MAYBE_UN
 static const IID CWINRT_IID_WAPVO_IVoiceCommandUserMessage CWINRT_MAYBE_UNUSED = { 0x674EB3C0, 0x44F6, 0x4F07, { 0xB9, 0x79, 0x4C, 0x72, 0x3F, 0xC0, 0x85, 0x97 } };
 #endif
 
-/* Methods */
-
-/* Windows.ApplicationModel.VoiceCommands.IVoiceCommandDefinitionManagerStatics */
-/* Windows.ApplicationModel.VoiceCommands.IVoiceCommandDefinitionManagerStatics.InstallCommandDefinitionsFromStorageFileAsync(file) */
 HRESULT wapvo_voice_command_definition_manager_statics_install_command_definitions_from_storage_file_async(WAPVO_IVoiceCommandDefinitionManagerStatics *self, WS_StorageFile* file, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.VoiceCommands.IVoiceCommandDefinitionManagerStatics.get_InstalledCommandDefinitions() */
 HRESULT wapvo_voice_command_definition_manager_statics_get__installed_command_definitions(WAPVO_IVoiceCommandDefinitionManagerStatics *self, WFOCO_IMapView_HSTRING_WAPVO_VoiceCommandDefinition** value);
 
-/* Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponseStatics */
-/* Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponseStatics.get_MaxSupportedVoiceCommandContentTiles() */
 HRESULT wapvo_voice_command_response_statics_get__max_supported_voice_command_content_tiles(WAPVO_IVoiceCommandResponseStatics *self, uint32_t *value);
 
-/* Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponseStatics.CreateResponse(userMessage) */
 HRESULT wapvo_voice_command_response_statics_create_response(WAPVO_IVoiceCommandResponseStatics *self, WAPVO_VoiceCommandUserMessage* userMessage, WAPVO_VoiceCommandResponse** out);
 
-/* Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponseStatics.CreateResponse(message, contentTiles) */
 HRESULT wapvo_voice_command_response_statics_create_response_p_p_p(WAPVO_IVoiceCommandResponseStatics *self, WAPVO_VoiceCommandUserMessage* message, WFOCO_IIterable_WAPVO_VoiceCommandContentTile* contentTiles, WAPVO_VoiceCommandResponse** out);
 
-/* Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponseStatics.CreateResponseForPrompt(message, repeatMessage) */
 HRESULT wapvo_voice_command_response_statics_create_response_for_prompt(WAPVO_IVoiceCommandResponseStatics *self, WAPVO_VoiceCommandUserMessage* message, WAPVO_VoiceCommandUserMessage* repeatMessage, WAPVO_VoiceCommandResponse** out);
 
-/* Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponseStatics.CreateResponseForPrompt(message, repeatMessage, contentTiles) */
 HRESULT wapvo_voice_command_response_statics_create_response_for_prompt_p_p_p_p(WAPVO_IVoiceCommandResponseStatics *self, WAPVO_VoiceCommandUserMessage* message, WAPVO_VoiceCommandUserMessage* repeatMessage, WFOCO_IIterable_WAPVO_VoiceCommandContentTile* contentTiles, WAPVO_VoiceCommandResponse** out);
 
-/* Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnectionStatics */
-/* Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnectionStatics.FromAppServiceTriggerDetails(triggerDetails) */
 HRESULT wapvo_voice_command_service_connection_statics_from_app_service_trigger_details(WAPVO_IVoiceCommandServiceConnectionStatics *self, WAPAP_AppServiceTriggerDetails* triggerDetails, WAPVO_VoiceCommandServiceConnection** out);
 
-/* activate Windows.ApplicationModel.VoiceCommands.VoiceCommand */
 HRESULT wapvo_voice_command_new(WAPVO_VoiceCommand **out);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommand */
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommand.get_CommandName() */
 HRESULT wapvo_voice_command_get__command_name(WAPVO_VoiceCommand *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommand.get_Properties() */
 HRESULT wapvo_voice_command_get__properties(WAPVO_VoiceCommand *self, WFOCO_IMapView_HSTRING_WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommand.get_SpeechRecognitionResult() */
 HRESULT wapvo_voice_command_get__speech_recognition_result(WAPVO_VoiceCommand *self, WMESP_SpeechRecognitionResult** value);
 
-/* activate Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletedEventArgs */
 HRESULT wapvo_voice_command_completed_event_args_new(WAPVO_VoiceCommandCompletedEventArgs **out);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletedEventArgs */
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletedEventArgs.get_Reason() */
 HRESULT wapvo_voice_command_completed_event_args_get__reason(WAPVO_VoiceCommandCompletedEventArgs *self, WAPVO_VoiceCommandCompletionReason *value);
 
-/* activate Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult */
 HRESULT wapvo_voice_command_confirmation_result_new(WAPVO_VoiceCommandConfirmationResult **out);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult */
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult.get_Confirmed() */
 HRESULT wapvo_voice_command_confirmation_result_get__confirmed(WAPVO_VoiceCommandConfirmationResult *self, BOOL *value);
 
-/* activate Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile */
 HRESULT wapvo_voice_command_content_tile_new(WAPVO_VoiceCommandContentTile **out);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile */
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile.get_Title() */
 HRESULT wapvo_voice_command_content_tile_get__title(WAPVO_VoiceCommandContentTile *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile.put_Title() */
 HRESULT wapvo_voice_command_content_tile_put__title(WAPVO_VoiceCommandContentTile *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile.get_TextLine1() */
 HRESULT wapvo_voice_command_content_tile_get__text_line1(WAPVO_VoiceCommandContentTile *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile.put_TextLine1() */
 HRESULT wapvo_voice_command_content_tile_put__text_line1(WAPVO_VoiceCommandContentTile *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile.get_TextLine2() */
 HRESULT wapvo_voice_command_content_tile_get__text_line2(WAPVO_VoiceCommandContentTile *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile.put_TextLine2() */
 HRESULT wapvo_voice_command_content_tile_put__text_line2(WAPVO_VoiceCommandContentTile *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile.get_TextLine3() */
 HRESULT wapvo_voice_command_content_tile_get__text_line3(WAPVO_VoiceCommandContentTile *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile.put_TextLine3() */
 HRESULT wapvo_voice_command_content_tile_put__text_line3(WAPVO_VoiceCommandContentTile *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile.get_Image() */
 HRESULT wapvo_voice_command_content_tile_get__image(WAPVO_VoiceCommandContentTile *self, WS_IStorageFile** value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile.put_Image() */
 HRESULT wapvo_voice_command_content_tile_put__image(WAPVO_VoiceCommandContentTile *self, WS_IStorageFile* value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile.get_AppContext() */
 HRESULT wapvo_voice_command_content_tile_get__app_context(WAPVO_VoiceCommandContentTile *self, IInspectable** value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile.put_AppContext() */
 HRESULT wapvo_voice_command_content_tile_put__app_context(WAPVO_VoiceCommandContentTile *self, IInspectable* value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile.get_AppLaunchArgument() */
 HRESULT wapvo_voice_command_content_tile_get__app_launch_argument(WAPVO_VoiceCommandContentTile *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile.put_AppLaunchArgument() */
 HRESULT wapvo_voice_command_content_tile_put__app_launch_argument(WAPVO_VoiceCommandContentTile *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile.get_ContentTileType() */
 HRESULT wapvo_voice_command_content_tile_get__content_tile_type(WAPVO_VoiceCommandContentTile *self, WAPVO_VoiceCommandContentTileType *value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile.put_ContentTileType() */
 HRESULT wapvo_voice_command_content_tile_put__content_tile_type(WAPVO_VoiceCommandContentTile *self, WAPVO_VoiceCommandContentTileType value);
 
-/* activate Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition */
 HRESULT wapvo_voice_command_definition_new(WAPVO_VoiceCommandDefinition **out);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition */
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition.get_Language() */
 HRESULT wapvo_voice_command_definition_get__language(WAPVO_VoiceCommandDefinition *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition.get_Name() */
 HRESULT wapvo_voice_command_definition_get__name(WAPVO_VoiceCommandDefinition *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition.SetPhraseListAsync(phraseListName, phraseList) */
 HRESULT wapvo_voice_command_definition_set_phrase_list_async(WAPVO_VoiceCommandDefinition *self, cwinrt_hstring phraseListName, WFOCO_IIterable_HSTRING* phraseList, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager */
 HRESULT wapvo_voice_command_definition_manager_new(WAPVO_VoiceCommandDefinitionManager **out);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager */
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager.InstallCommandDefinitionsFromStorageFileAsync(file) */
 HRESULT wapvo_voice_command_definition_manager_install_command_definitions_from_storage_file_async(WS_StorageFile* file, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager.get_InstalledCommandDefinitions() */
 HRESULT wapvo_voice_command_definition_manager_get__installed_command_definitions(WFOCO_IMapView_HSTRING_WAPVO_VoiceCommandDefinition** value);
 
-/* activate Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult */
 HRESULT wapvo_voice_command_disambiguation_result_new(WAPVO_VoiceCommandDisambiguationResult **out);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult */
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult.get_SelectedItem() */
 HRESULT wapvo_voice_command_disambiguation_result_get__selected_item(WAPVO_VoiceCommandDisambiguationResult *self, WAPVO_VoiceCommandContentTile** value);
 
-/* activate Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse */
 HRESULT wapvo_voice_command_response_new(WAPVO_VoiceCommandResponse **out);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse */
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse.get_Message() */
 HRESULT wapvo_voice_command_response_get__message(WAPVO_VoiceCommandResponse *self, WAPVO_VoiceCommandUserMessage** value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse.put_Message() */
 HRESULT wapvo_voice_command_response_put__message(WAPVO_VoiceCommandResponse *self, WAPVO_VoiceCommandUserMessage* value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse.get_RepeatMessage() */
 HRESULT wapvo_voice_command_response_get__repeat_message(WAPVO_VoiceCommandResponse *self, WAPVO_VoiceCommandUserMessage** value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse.put_RepeatMessage() */
 HRESULT wapvo_voice_command_response_put__repeat_message(WAPVO_VoiceCommandResponse *self, WAPVO_VoiceCommandUserMessage* value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse.get_AppLaunchArgument() */
 HRESULT wapvo_voice_command_response_get__app_launch_argument(WAPVO_VoiceCommandResponse *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse.put_AppLaunchArgument() */
 HRESULT wapvo_voice_command_response_put__app_launch_argument(WAPVO_VoiceCommandResponse *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse.get_VoiceCommandContentTiles() */
 HRESULT wapvo_voice_command_response_get__voice_command_content_tiles(WAPVO_VoiceCommandResponse *self, WFOCO_IVector_WAPVO_VoiceCommandContentTile** value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse.get_MaxSupportedVoiceCommandContentTiles() */
 HRESULT wapvo_voice_command_response_get__max_supported_voice_command_content_tiles(uint32_t *value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse.CreateResponse(userMessage) */
 HRESULT wapvo_voice_command_response_create_response(WAPVO_VoiceCommandUserMessage* userMessage, WAPVO_VoiceCommandResponse** out);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse.CreateResponse(message, contentTiles) */
 HRESULT wapvo_voice_command_response_create_response_p_p_p(WAPVO_VoiceCommandUserMessage* message, WFOCO_IIterable_WAPVO_VoiceCommandContentTile* contentTiles, WAPVO_VoiceCommandResponse** out);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse.CreateResponseForPrompt(message, repeatMessage) */
 HRESULT wapvo_voice_command_response_create_response_for_prompt(WAPVO_VoiceCommandUserMessage* message, WAPVO_VoiceCommandUserMessage* repeatMessage, WAPVO_VoiceCommandResponse** out);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse.CreateResponseForPrompt(message, repeatMessage, contentTiles) */
 HRESULT wapvo_voice_command_response_create_response_for_prompt_p_p_p_p(WAPVO_VoiceCommandUserMessage* message, WAPVO_VoiceCommandUserMessage* repeatMessage, WFOCO_IIterable_WAPVO_VoiceCommandContentTile* contentTiles, WAPVO_VoiceCommandResponse** out);
 
-/* activate Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection */
 HRESULT wapvo_voice_command_service_connection_new(WAPVO_VoiceCommandServiceConnection **out);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection */
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection.GetVoiceCommandAsync() */
 HRESULT wapvo_voice_command_service_connection_get_voice_command_async(WAPVO_VoiceCommandServiceConnection *self, WF_IAsyncOperation_WAPVO_VoiceCommand** out);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection.RequestConfirmationAsync(response) */
 HRESULT wapvo_voice_command_service_connection_request_confirmation_async(WAPVO_VoiceCommandServiceConnection *self, WAPVO_VoiceCommandResponse* response, WF_IAsyncOperation_WAPVO_VoiceCommandConfirmationResult** out);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection.RequestDisambiguationAsync(response) */
 HRESULT wapvo_voice_command_service_connection_request_disambiguation_async(WAPVO_VoiceCommandServiceConnection *self, WAPVO_VoiceCommandResponse* response, WF_IAsyncOperation_WAPVO_VoiceCommandDisambiguationResult** out);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection.ReportProgressAsync(response) */
 HRESULT wapvo_voice_command_service_connection_report_progress_async(WAPVO_VoiceCommandServiceConnection *self, WAPVO_VoiceCommandResponse* response, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection.ReportSuccessAsync(response) */
 HRESULT wapvo_voice_command_service_connection_report_success_async(WAPVO_VoiceCommandServiceConnection *self, WAPVO_VoiceCommandResponse* response, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection.ReportFailureAsync(response) */
 HRESULT wapvo_voice_command_service_connection_report_failure_async(WAPVO_VoiceCommandServiceConnection *self, WAPVO_VoiceCommandResponse* response, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection.RequestAppLaunchAsync(response) */
 HRESULT wapvo_voice_command_service_connection_request_app_launch_async(WAPVO_VoiceCommandServiceConnection *self, WAPVO_VoiceCommandResponse* response, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection.get_Language() */
 HRESULT wapvo_voice_command_service_connection_get__language(WAPVO_VoiceCommandServiceConnection *self, WGL_Language** value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection.FromAppServiceTriggerDetails(triggerDetails) */
 HRESULT wapvo_voice_command_service_connection_from_app_service_trigger_details(WAPAP_AppServiceTriggerDetails* triggerDetails, WAPVO_VoiceCommandServiceConnection** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapvo_voice_command_service_connection_on_voice_command_completed(WAPVO_VoiceCommandServiceConnection *self, cwinrt_event_fn fn, void *ctx);
 void wapvo_voice_command_service_connection_off_voice_command_completed(WAPVO_VoiceCommandServiceConnection *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage */
 HRESULT wapvo_voice_command_user_message_new(WAPVO_VoiceCommandUserMessage **out);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage */
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage.get_DisplayMessage() */
 HRESULT wapvo_voice_command_user_message_get__display_message(WAPVO_VoiceCommandUserMessage *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage.put_DisplayMessage() */
 HRESULT wapvo_voice_command_user_message_put__display_message(WAPVO_VoiceCommandUserMessage *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage.get_SpokenMessage() */
 HRESULT wapvo_voice_command_user_message_get__spoken_message(WAPVO_VoiceCommandUserMessage *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage.put_SpokenMessage() */
 HRESULT wapvo_voice_command_user_message_put__spoken_message(WAPVO_VoiceCommandUserMessage *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.VoiceCommands.IVoiceCommand */
-/* Windows.ApplicationModel.VoiceCommands.IVoiceCommandCompletedEventArgs */
-/* Windows.ApplicationModel.VoiceCommands.IVoiceCommandConfirmationResult */
-/* Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile */
-/* Windows.ApplicationModel.VoiceCommands.IVoiceCommandDefinition */
-/* Windows.ApplicationModel.VoiceCommands.IVoiceCommandDisambiguationResult */
-/* Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponse */
-/* Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection */
-/* Windows.ApplicationModel.VoiceCommands.IVoiceCommandUserMessage */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_VOICECOMMANDS_H */

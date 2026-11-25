@@ -15,7 +15,6 @@
 #include <cwinrt/Windows.Graphics.DirectX.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WAPAP_AppServiceConnection
 #define CWINRT_FWD_WAPAP_AppServiceConnection
 typedef struct WAPAP_AppServiceConnection WAPAP_AppServiceConnection;
@@ -29,7 +28,6 @@ typedef struct WSTST_RandomAccessStreamReference WSTST_RandomAccessStreamReferen
 typedef struct WS_StorageFile WS_StorageFile;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WME_IAudioFrameFactory WME_IAudioFrameFactory;
 typedef struct WME_IMediaControl WME_IMediaControl;
 typedef struct WME_IMediaExtension WME_IMediaExtension;
@@ -90,7 +88,6 @@ typedef struct WME_IAudioBuffer WME_IAudioBuffer;
 typedef struct WME_IMediaExtensionManager WME_IMediaExtensionManager;
 typedef struct WME_IMediaFrame WME_IMediaFrame;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_EventHandler_Object
 #define CWINRT_FWD_WF_EventHandler_Object
 typedef struct WF_EventHandler_Object WF_EventHandler_Object;
@@ -445,7 +442,6 @@ struct WME_MediaTimeRange {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -598,111 +594,66 @@ static const IID CWINRT_IID_WME_IMediaExtensionManager CWINRT_MAYBE_UNUSED = { 0
 static const IID CWINRT_IID_WME_IMediaFrame CWINRT_MAYBE_UNUSED = { 0xBFB52F8C, 0x5943, 0x47D8, { 0x8E, 0x10, 0x05, 0x30, 0x8A, 0xA5, 0xFB, 0xD0 } };
 #endif
 
-/* Methods */
-
-/* Windows.Media.IAudioFrameFactory */
-/* Windows.Media.IAudioFrameFactory.Create(capacity) */
 HRESULT wme_audio_frame_factory_create(WME_IAudioFrameFactory *self, uint32_t capacity, WME_AudioFrame** out);
 
-/* Windows.Media.IMediaControl */
-/* Windows.Media.IMediaExtension */
-/* Windows.Media.IMediaExtension.SetProperties(configuration) */
 HRESULT wme_media_extension_set_properties(WME_IMediaExtension *self, WFOCO_IPropertySet* configuration);
 
-/* Windows.Media.IMediaMarker */
-/* Windows.Media.IMediaMarker.get_Time() */
 HRESULT wme_media_marker_get__time(WME_IMediaMarker *self, WF_TimeSpan *value);
 
-/* Windows.Media.IMediaMarker.get_MediaMarkerType() */
 HRESULT wme_media_marker_get__media_marker_type(WME_IMediaMarker *self, cwinrt_hstring *value);
 
-/* Windows.Media.IMediaMarker.get_Text() */
 HRESULT wme_media_marker_get__text(WME_IMediaMarker *self, cwinrt_hstring *value);
 
-/* Windows.Media.IMediaMarkerTypesStatics */
-/* Windows.Media.IMediaMarkerTypesStatics.get_Bookmark() */
 HRESULT wme_media_marker_types_statics_get__bookmark(WME_IMediaMarkerTypesStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.IMediaMarkers */
-/* Windows.Media.IMediaMarkers.get_Markers() */
 HRESULT wme_media_markers_get__markers(WME_IMediaMarkers *self, WFOCO_IVectorView_WME_IMediaMarker** value);
 
-/* Windows.Media.ISystemMediaTransportControlsStatics */
-/* Windows.Media.ISystemMediaTransportControlsStatics.GetForCurrentView() */
 HRESULT wme_system_media_transport_controls_statics_get_for_current_view(WME_ISystemMediaTransportControlsStatics *self, WME_SystemMediaTransportControls** out);
 
-/* Windows.Media.IVideoEffectsStatics */
-/* Windows.Media.IVideoEffectsStatics.get_VideoStabilization() */
 HRESULT wme_video_effects_statics_get__video_stabilization(WME_IVideoEffectsStatics *self, cwinrt_hstring *value);
 
-/* Windows.Media.IVideoFrameFactory */
-/* Windows.Media.IVideoFrameFactory.Create(format, width, height) */
 HRESULT wme_video_frame_factory_create(WME_IVideoFrameFactory *self, WGRIM_BitmapPixelFormat format, int32_t width, int32_t height, WME_VideoFrame** out);
 
-/* Windows.Media.IVideoFrameFactory.CreateWithAlpha(format, width, height, alpha) */
 HRESULT wme_video_frame_factory_create_with_alpha(WME_IVideoFrameFactory *self, WGRIM_BitmapPixelFormat format, int32_t width, int32_t height, WGRIM_BitmapAlphaMode alpha, WME_VideoFrame** out);
 
-/* Windows.Media.IVideoFrameStatics */
-/* Windows.Media.IVideoFrameStatics.CreateAsDirect3D11SurfaceBacked(format, width, height) */
 HRESULT wme_video_frame_statics_create_as_direct3_d11_surface_backed(WME_IVideoFrameStatics *self, WGRDI_DirectXPixelFormat format, int32_t width, int32_t height, WME_VideoFrame** out);
 
-/* Windows.Media.IVideoFrameStatics.CreateAsDirect3D11SurfaceBacked(format, width, height, device) */
 HRESULT wme_video_frame_statics_create_as_direct3_d11_surface_backed_direct_x_pixel_format_i32_i32_p_p(WME_IVideoFrameStatics *self, WGRDI_DirectXPixelFormat format, int32_t width, int32_t height, WGRDIDI_IDirect3DDevice* device, WME_VideoFrame** out);
 
-/* Windows.Media.IVideoFrameStatics.CreateWithSoftwareBitmap(bitmap) */
 HRESULT wme_video_frame_statics_create_with_software_bitmap(WME_IVideoFrameStatics *self, WGRIM_SoftwareBitmap* bitmap, WME_VideoFrame** out);
 
-/* Windows.Media.IVideoFrameStatics.CreateWithDirect3D11Surface(surface) */
 HRESULT wme_video_frame_statics_create_with_direct3_d11_surface(WME_IVideoFrameStatics *self, WGRDIDI_IDirect3DSurface* surface, WME_VideoFrame** out);
 
-/* activate Windows.Media.ImageDisplayProperties */
 HRESULT wme_image_display_properties_new(WME_ImageDisplayProperties **out);
 
-/* Windows.Media.ImageDisplayProperties */
-/* Windows.Media.ImageDisplayProperties.get_Title() */
 HRESULT wme_image_display_properties_get__title(WME_ImageDisplayProperties *self, cwinrt_hstring *value);
 
-/* Windows.Media.ImageDisplayProperties.put_Title() */
 HRESULT wme_image_display_properties_put__title(WME_ImageDisplayProperties *self, cwinrt_hstring value);
 
-/* Windows.Media.ImageDisplayProperties.get_Subtitle() */
 HRESULT wme_image_display_properties_get__subtitle(WME_ImageDisplayProperties *self, cwinrt_hstring *value);
 
-/* Windows.Media.ImageDisplayProperties.put_Subtitle() */
 HRESULT wme_image_display_properties_put__subtitle(WME_ImageDisplayProperties *self, cwinrt_hstring value);
 
-/* activate Windows.Media.MediaControl */
 HRESULT wme_media_control_new(WME_MediaControl **out);
 
-/* Windows.Media.MediaControl */
-/* Windows.Media.MediaControl.get_SoundLevel() */
 HRESULT wme_media_control_get__sound_level(WME_SoundLevel *value);
 
-/* Windows.Media.MediaControl.put_TrackName() */
 HRESULT wme_media_control_put__track_name(cwinrt_hstring value);
 
-/* Windows.Media.MediaControl.get_TrackName() */
 HRESULT wme_media_control_get__track_name(cwinrt_hstring *value);
 
-/* Windows.Media.MediaControl.put_ArtistName() */
 HRESULT wme_media_control_put__artist_name(cwinrt_hstring value);
 
-/* Windows.Media.MediaControl.get_ArtistName() */
 HRESULT wme_media_control_get__artist_name(cwinrt_hstring *value);
 
-/* Windows.Media.MediaControl.put_IsPlaying() */
 HRESULT wme_media_control_put__is_playing(BOOL value);
 
-/* Windows.Media.MediaControl.get_IsPlaying() */
 HRESULT wme_media_control_get__is_playing(BOOL *value);
 
-/* Windows.Media.MediaControl.put_AlbumArt() */
 HRESULT wme_media_control_put__album_art(WF_Uri* value);
 
-/* Windows.Media.MediaControl.get_AlbumArt() */
 HRESULT wme_media_control_get__album_art(WF_Uri** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wme_media_control_on_sound_level_changed(WME_MediaControl *self, cwinrt_event_fn fn, void *ctx);
@@ -741,104 +692,68 @@ void wme_media_control_off_channel_up_pressed(WME_MediaControl *self, cwinrt_tok
 cwinrt_token wme_media_control_on_channel_down_pressed(WME_MediaControl *self, cwinrt_event_fn fn, void *ctx);
 void wme_media_control_off_channel_down_pressed(WME_MediaControl *self, cwinrt_token token);
 
-/* activate Windows.Media.MediaExtensionManager */
 HRESULT wme_media_extension_manager_new(WME_MediaExtensionManager **out);
 
-/* Windows.Media.MediaExtensionManager */
-/* Windows.Media.MediaExtensionManager.RegisterSchemeHandler(activatableClassId, scheme) */
 HRESULT wme_media_extension_manager_register_scheme_handler(WME_MediaExtensionManager *self, cwinrt_hstring activatableClassId, cwinrt_hstring scheme);
 
-/* Windows.Media.MediaExtensionManager.RegisterSchemeHandler(activatableClassId, scheme, configuration) */
 HRESULT wme_media_extension_manager_register_scheme_handler_str_str_p(WME_MediaExtensionManager *self, cwinrt_hstring activatableClassId, cwinrt_hstring scheme, WFOCO_IPropertySet* configuration);
 
-/* Windows.Media.MediaExtensionManager.RegisterByteStreamHandler(activatableClassId, fileExtension, mimeType) */
 HRESULT wme_media_extension_manager_register_byte_stream_handler(WME_MediaExtensionManager *self, cwinrt_hstring activatableClassId, cwinrt_hstring fileExtension, cwinrt_hstring mimeType);
 
-/* Windows.Media.MediaExtensionManager.RegisterByteStreamHandler(activatableClassId, fileExtension, mimeType, configuration) */
 HRESULT wme_media_extension_manager_register_byte_stream_handler_str_str_str_p(WME_MediaExtensionManager *self, cwinrt_hstring activatableClassId, cwinrt_hstring fileExtension, cwinrt_hstring mimeType, WFOCO_IPropertySet* configuration);
 
-/* Windows.Media.MediaExtensionManager.RegisterAudioDecoder(activatableClassId, inputSubtype, outputSubtype) */
 HRESULT wme_media_extension_manager_register_audio_decoder(WME_MediaExtensionManager *self, cwinrt_hstring activatableClassId, GUID inputSubtype, GUID outputSubtype);
 
-/* Windows.Media.MediaExtensionManager.RegisterAudioDecoder(activatableClassId, inputSubtype, outputSubtype, configuration) */
 HRESULT wme_media_extension_manager_register_audio_decoder_str_g_u_i_d_g_u_i_d_p(WME_MediaExtensionManager *self, cwinrt_hstring activatableClassId, GUID inputSubtype, GUID outputSubtype, WFOCO_IPropertySet* configuration);
 
-/* Windows.Media.MediaExtensionManager.RegisterAudioEncoder(activatableClassId, inputSubtype, outputSubtype) */
 HRESULT wme_media_extension_manager_register_audio_encoder(WME_MediaExtensionManager *self, cwinrt_hstring activatableClassId, GUID inputSubtype, GUID outputSubtype);
 
-/* Windows.Media.MediaExtensionManager.RegisterAudioEncoder(activatableClassId, inputSubtype, outputSubtype, configuration) */
 HRESULT wme_media_extension_manager_register_audio_encoder_str_g_u_i_d_g_u_i_d_p(WME_MediaExtensionManager *self, cwinrt_hstring activatableClassId, GUID inputSubtype, GUID outputSubtype, WFOCO_IPropertySet* configuration);
 
-/* Windows.Media.MediaExtensionManager.RegisterVideoDecoder(activatableClassId, inputSubtype, outputSubtype) */
 HRESULT wme_media_extension_manager_register_video_decoder(WME_MediaExtensionManager *self, cwinrt_hstring activatableClassId, GUID inputSubtype, GUID outputSubtype);
 
-/* Windows.Media.MediaExtensionManager.RegisterVideoDecoder(activatableClassId, inputSubtype, outputSubtype, configuration) */
 HRESULT wme_media_extension_manager_register_video_decoder_str_g_u_i_d_g_u_i_d_p(WME_MediaExtensionManager *self, cwinrt_hstring activatableClassId, GUID inputSubtype, GUID outputSubtype, WFOCO_IPropertySet* configuration);
 
-/* Windows.Media.MediaExtensionManager.RegisterVideoEncoder(activatableClassId, inputSubtype, outputSubtype) */
 HRESULT wme_media_extension_manager_register_video_encoder(WME_MediaExtensionManager *self, cwinrt_hstring activatableClassId, GUID inputSubtype, GUID outputSubtype);
 
-/* Windows.Media.MediaExtensionManager.RegisterVideoEncoder(activatableClassId, inputSubtype, outputSubtype, configuration) */
 HRESULT wme_media_extension_manager_register_video_encoder_str_g_u_i_d_g_u_i_d_p(WME_MediaExtensionManager *self, cwinrt_hstring activatableClassId, GUID inputSubtype, GUID outputSubtype, WFOCO_IPropertySet* configuration);
 
-/* Windows.Media.MediaExtensionManager.RegisterMediaExtensionForAppService(extension, connection) */
 HRESULT wme_media_extension_manager_register_media_extension_for_app_service(WME_MediaExtensionManager *self, WME_IMediaExtension* extension, WAPAP_AppServiceConnection* connection);
 
-/* activate Windows.Media.MediaMarkerTypes */
 HRESULT wme_media_marker_types_new(WME_MediaMarkerTypes **out);
 
-/* Windows.Media.MediaMarkerTypes */
-/* Windows.Media.MediaMarkerTypes.get_Bookmark() */
 HRESULT wme_media_marker_types_get__bookmark(cwinrt_hstring *value);
 
-/* activate Windows.Media.MediaProcessingTriggerDetails */
 HRESULT wme_media_processing_trigger_details_new(WME_MediaProcessingTriggerDetails **out);
 
-/* Windows.Media.MediaProcessingTriggerDetails */
-/* Windows.Media.MediaProcessingTriggerDetails.get_Arguments() */
 HRESULT wme_media_processing_trigger_details_get__arguments(WME_MediaProcessingTriggerDetails *self, WFOCO_ValueSet** value);
 
-/* activate Windows.Media.MediaTimelineController */
 HRESULT wme_media_timeline_controller_new(WME_MediaTimelineController **out);
 
-/* Windows.Media.MediaTimelineController */
-/* Windows.Media.MediaTimelineController.Start() */
 HRESULT wme_media_timeline_controller_start(WME_MediaTimelineController *self);
 
-/* Windows.Media.MediaTimelineController.Resume() */
 HRESULT wme_media_timeline_controller_resume(WME_MediaTimelineController *self);
 
-/* Windows.Media.MediaTimelineController.Pause() */
 HRESULT wme_media_timeline_controller_pause(WME_MediaTimelineController *self);
 
-/* Windows.Media.MediaTimelineController.get_Position() */
 HRESULT wme_media_timeline_controller_get__position(WME_MediaTimelineController *self, WF_TimeSpan *value);
 
-/* Windows.Media.MediaTimelineController.put_Position() */
 HRESULT wme_media_timeline_controller_put__position(WME_MediaTimelineController *self, WF_TimeSpan value);
 
-/* Windows.Media.MediaTimelineController.get_ClockRate() */
 HRESULT wme_media_timeline_controller_get__clock_rate(WME_MediaTimelineController *self, double *value);
 
-/* Windows.Media.MediaTimelineController.put_ClockRate() */
 HRESULT wme_media_timeline_controller_put__clock_rate(WME_MediaTimelineController *self, double value);
 
-/* Windows.Media.MediaTimelineController.get_State() */
 HRESULT wme_media_timeline_controller_get__state(WME_MediaTimelineController *self, WME_MediaTimelineControllerState *value);
 
-/* Windows.Media.MediaTimelineController.get_Duration() */
 HRESULT wme_media_timeline_controller_get__duration(WME_MediaTimelineController *self, WF_TimeSpan** value);
 
-/* Windows.Media.MediaTimelineController.put_Duration() */
 HRESULT wme_media_timeline_controller_put__duration(WME_MediaTimelineController *self, WF_TimeSpan* value);
 
-/* Windows.Media.MediaTimelineController.get_IsLoopingEnabled() */
 HRESULT wme_media_timeline_controller_get__is_looping_enabled(WME_MediaTimelineController *self, BOOL *value);
 
-/* Windows.Media.MediaTimelineController.put_IsLoopingEnabled() */
 HRESULT wme_media_timeline_controller_put__is_looping_enabled(WME_MediaTimelineController *self, BOOL value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wme_media_timeline_controller_on_position_changed(WME_MediaTimelineController *self, cwinrt_event_fn fn, void *ctx);
@@ -853,184 +768,120 @@ void wme_media_timeline_controller_off_failed(WME_MediaTimelineController *self,
 cwinrt_token wme_media_timeline_controller_on_ended(WME_MediaTimelineController *self, cwinrt_event_fn fn, void *ctx);
 void wme_media_timeline_controller_off_ended(WME_MediaTimelineController *self, cwinrt_token token);
 
-/* activate Windows.Media.MediaTimelineControllerFailedEventArgs */
 HRESULT wme_media_timeline_controller_failed_event_args_new(WME_MediaTimelineControllerFailedEventArgs **out);
 
-/* Windows.Media.MediaTimelineControllerFailedEventArgs */
-/* Windows.Media.MediaTimelineControllerFailedEventArgs.get_ExtendedError() */
 HRESULT wme_media_timeline_controller_failed_event_args_get__extended_error(WME_MediaTimelineControllerFailedEventArgs *self, HRESULT *value);
 
-/* activate Windows.Media.MusicDisplayProperties */
 HRESULT wme_music_display_properties_new(WME_MusicDisplayProperties **out);
 
-/* Windows.Media.MusicDisplayProperties */
-/* Windows.Media.MusicDisplayProperties.get_Title() */
 HRESULT wme_music_display_properties_get__title(WME_MusicDisplayProperties *self, cwinrt_hstring *value);
 
-/* Windows.Media.MusicDisplayProperties.put_Title() */
 HRESULT wme_music_display_properties_put__title(WME_MusicDisplayProperties *self, cwinrt_hstring value);
 
-/* Windows.Media.MusicDisplayProperties.get_AlbumArtist() */
 HRESULT wme_music_display_properties_get__album_artist(WME_MusicDisplayProperties *self, cwinrt_hstring *value);
 
-/* Windows.Media.MusicDisplayProperties.put_AlbumArtist() */
 HRESULT wme_music_display_properties_put__album_artist(WME_MusicDisplayProperties *self, cwinrt_hstring value);
 
-/* Windows.Media.MusicDisplayProperties.get_Artist() */
 HRESULT wme_music_display_properties_get__artist(WME_MusicDisplayProperties *self, cwinrt_hstring *value);
 
-/* Windows.Media.MusicDisplayProperties.put_Artist() */
 HRESULT wme_music_display_properties_put__artist(WME_MusicDisplayProperties *self, cwinrt_hstring value);
 
-/* Windows.Media.MusicDisplayProperties.get_AlbumTitle() */
 HRESULT wme_music_display_properties_get__album_title(WME_MusicDisplayProperties *self, cwinrt_hstring *value);
 
-/* Windows.Media.MusicDisplayProperties.put_AlbumTitle() */
 HRESULT wme_music_display_properties_put__album_title(WME_MusicDisplayProperties *self, cwinrt_hstring value);
 
-/* Windows.Media.MusicDisplayProperties.get_TrackNumber() */
 HRESULT wme_music_display_properties_get__track_number(WME_MusicDisplayProperties *self, uint32_t *value);
 
-/* Windows.Media.MusicDisplayProperties.put_TrackNumber() */
 HRESULT wme_music_display_properties_put__track_number(WME_MusicDisplayProperties *self, uint32_t value);
 
-/* Windows.Media.MusicDisplayProperties.get_Genres() */
 HRESULT wme_music_display_properties_get__genres(WME_MusicDisplayProperties *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Media.MusicDisplayProperties.get_AlbumTrackCount() */
 HRESULT wme_music_display_properties_get__album_track_count(WME_MusicDisplayProperties *self, uint32_t *value);
 
-/* Windows.Media.MusicDisplayProperties.put_AlbumTrackCount() */
 HRESULT wme_music_display_properties_put__album_track_count(WME_MusicDisplayProperties *self, uint32_t value);
 
-/* activate Windows.Media.PlaybackPositionChangeRequestedEventArgs */
 HRESULT wme_playback_position_change_requested_event_args_new(WME_PlaybackPositionChangeRequestedEventArgs **out);
 
-/* Windows.Media.PlaybackPositionChangeRequestedEventArgs */
-/* Windows.Media.PlaybackPositionChangeRequestedEventArgs.get_RequestedPlaybackPosition() */
 HRESULT wme_playback_position_change_requested_event_args_get__requested_playback_position(WME_PlaybackPositionChangeRequestedEventArgs *self, WF_TimeSpan *value);
 
-/* activate Windows.Media.PlaybackRateChangeRequestedEventArgs */
 HRESULT wme_playback_rate_change_requested_event_args_new(WME_PlaybackRateChangeRequestedEventArgs **out);
 
-/* Windows.Media.PlaybackRateChangeRequestedEventArgs */
-/* Windows.Media.PlaybackRateChangeRequestedEventArgs.get_RequestedPlaybackRate() */
 HRESULT wme_playback_rate_change_requested_event_args_get__requested_playback_rate(WME_PlaybackRateChangeRequestedEventArgs *self, double *value);
 
-/* activate Windows.Media.ShuffleEnabledChangeRequestedEventArgs */
 HRESULT wme_shuffle_enabled_change_requested_event_args_new(WME_ShuffleEnabledChangeRequestedEventArgs **out);
 
-/* Windows.Media.ShuffleEnabledChangeRequestedEventArgs */
-/* Windows.Media.ShuffleEnabledChangeRequestedEventArgs.get_RequestedShuffleEnabled() */
 HRESULT wme_shuffle_enabled_change_requested_event_args_get__requested_shuffle_enabled(WME_ShuffleEnabledChangeRequestedEventArgs *self, BOOL *value);
 
-/* activate Windows.Media.SystemMediaTransportControls */
 HRESULT wme_system_media_transport_controls_new(WME_SystemMediaTransportControls **out);
 
-/* Windows.Media.SystemMediaTransportControls */
-/* Windows.Media.SystemMediaTransportControls.get_PlaybackStatus() */
 HRESULT wme_system_media_transport_controls_get__playback_status(WME_SystemMediaTransportControls *self, WME_MediaPlaybackStatus *value);
 
-/* Windows.Media.SystemMediaTransportControls.put_PlaybackStatus() */
 HRESULT wme_system_media_transport_controls_put__playback_status(WME_SystemMediaTransportControls *self, WME_MediaPlaybackStatus value);
 
-/* Windows.Media.SystemMediaTransportControls.get_DisplayUpdater() */
 HRESULT wme_system_media_transport_controls_get__display_updater(WME_SystemMediaTransportControls *self, WME_SystemMediaTransportControlsDisplayUpdater** value);
 
-/* Windows.Media.SystemMediaTransportControls.get_SoundLevel() */
 HRESULT wme_system_media_transport_controls_get__sound_level(WME_SystemMediaTransportControls *self, WME_SoundLevel *value);
 
-/* Windows.Media.SystemMediaTransportControls.get_IsEnabled() */
 HRESULT wme_system_media_transport_controls_get__is_enabled(WME_SystemMediaTransportControls *self, BOOL *value);
 
-/* Windows.Media.SystemMediaTransportControls.put_IsEnabled() */
 HRESULT wme_system_media_transport_controls_put__is_enabled(WME_SystemMediaTransportControls *self, BOOL value);
 
-/* Windows.Media.SystemMediaTransportControls.get_IsPlayEnabled() */
 HRESULT wme_system_media_transport_controls_get__is_play_enabled(WME_SystemMediaTransportControls *self, BOOL *value);
 
-/* Windows.Media.SystemMediaTransportControls.put_IsPlayEnabled() */
 HRESULT wme_system_media_transport_controls_put__is_play_enabled(WME_SystemMediaTransportControls *self, BOOL value);
 
-/* Windows.Media.SystemMediaTransportControls.get_IsStopEnabled() */
 HRESULT wme_system_media_transport_controls_get__is_stop_enabled(WME_SystemMediaTransportControls *self, BOOL *value);
 
-/* Windows.Media.SystemMediaTransportControls.put_IsStopEnabled() */
 HRESULT wme_system_media_transport_controls_put__is_stop_enabled(WME_SystemMediaTransportControls *self, BOOL value);
 
-/* Windows.Media.SystemMediaTransportControls.get_IsPauseEnabled() */
 HRESULT wme_system_media_transport_controls_get__is_pause_enabled(WME_SystemMediaTransportControls *self, BOOL *value);
 
-/* Windows.Media.SystemMediaTransportControls.put_IsPauseEnabled() */
 HRESULT wme_system_media_transport_controls_put__is_pause_enabled(WME_SystemMediaTransportControls *self, BOOL value);
 
-/* Windows.Media.SystemMediaTransportControls.get_IsRecordEnabled() */
 HRESULT wme_system_media_transport_controls_get__is_record_enabled(WME_SystemMediaTransportControls *self, BOOL *value);
 
-/* Windows.Media.SystemMediaTransportControls.put_IsRecordEnabled() */
 HRESULT wme_system_media_transport_controls_put__is_record_enabled(WME_SystemMediaTransportControls *self, BOOL value);
 
-/* Windows.Media.SystemMediaTransportControls.get_IsFastForwardEnabled() */
 HRESULT wme_system_media_transport_controls_get__is_fast_forward_enabled(WME_SystemMediaTransportControls *self, BOOL *value);
 
-/* Windows.Media.SystemMediaTransportControls.put_IsFastForwardEnabled() */
 HRESULT wme_system_media_transport_controls_put__is_fast_forward_enabled(WME_SystemMediaTransportControls *self, BOOL value);
 
-/* Windows.Media.SystemMediaTransportControls.get_IsRewindEnabled() */
 HRESULT wme_system_media_transport_controls_get__is_rewind_enabled(WME_SystemMediaTransportControls *self, BOOL *value);
 
-/* Windows.Media.SystemMediaTransportControls.put_IsRewindEnabled() */
 HRESULT wme_system_media_transport_controls_put__is_rewind_enabled(WME_SystemMediaTransportControls *self, BOOL value);
 
-/* Windows.Media.SystemMediaTransportControls.get_IsPreviousEnabled() */
 HRESULT wme_system_media_transport_controls_get__is_previous_enabled(WME_SystemMediaTransportControls *self, BOOL *value);
 
-/* Windows.Media.SystemMediaTransportControls.put_IsPreviousEnabled() */
 HRESULT wme_system_media_transport_controls_put__is_previous_enabled(WME_SystemMediaTransportControls *self, BOOL value);
 
-/* Windows.Media.SystemMediaTransportControls.get_IsNextEnabled() */
 HRESULT wme_system_media_transport_controls_get__is_next_enabled(WME_SystemMediaTransportControls *self, BOOL *value);
 
-/* Windows.Media.SystemMediaTransportControls.put_IsNextEnabled() */
 HRESULT wme_system_media_transport_controls_put__is_next_enabled(WME_SystemMediaTransportControls *self, BOOL value);
 
-/* Windows.Media.SystemMediaTransportControls.get_IsChannelUpEnabled() */
 HRESULT wme_system_media_transport_controls_get__is_channel_up_enabled(WME_SystemMediaTransportControls *self, BOOL *value);
 
-/* Windows.Media.SystemMediaTransportControls.put_IsChannelUpEnabled() */
 HRESULT wme_system_media_transport_controls_put__is_channel_up_enabled(WME_SystemMediaTransportControls *self, BOOL value);
 
-/* Windows.Media.SystemMediaTransportControls.get_IsChannelDownEnabled() */
 HRESULT wme_system_media_transport_controls_get__is_channel_down_enabled(WME_SystemMediaTransportControls *self, BOOL *value);
 
-/* Windows.Media.SystemMediaTransportControls.put_IsChannelDownEnabled() */
 HRESULT wme_system_media_transport_controls_put__is_channel_down_enabled(WME_SystemMediaTransportControls *self, BOOL value);
 
-/* Windows.Media.SystemMediaTransportControls.get_AutoRepeatMode() */
 HRESULT wme_system_media_transport_controls_get__auto_repeat_mode(WME_SystemMediaTransportControls *self, WME_MediaPlaybackAutoRepeatMode *value);
 
-/* Windows.Media.SystemMediaTransportControls.put_AutoRepeatMode() */
 HRESULT wme_system_media_transport_controls_put__auto_repeat_mode(WME_SystemMediaTransportControls *self, WME_MediaPlaybackAutoRepeatMode value);
 
-/* Windows.Media.SystemMediaTransportControls.get_ShuffleEnabled() */
 HRESULT wme_system_media_transport_controls_get__shuffle_enabled(WME_SystemMediaTransportControls *self, BOOL *value);
 
-/* Windows.Media.SystemMediaTransportControls.put_ShuffleEnabled() */
 HRESULT wme_system_media_transport_controls_put__shuffle_enabled(WME_SystemMediaTransportControls *self, BOOL value);
 
-/* Windows.Media.SystemMediaTransportControls.get_PlaybackRate() */
 HRESULT wme_system_media_transport_controls_get__playback_rate(WME_SystemMediaTransportControls *self, double *value);
 
-/* Windows.Media.SystemMediaTransportControls.put_PlaybackRate() */
 HRESULT wme_system_media_transport_controls_put__playback_rate(WME_SystemMediaTransportControls *self, double value);
 
-/* Windows.Media.SystemMediaTransportControls.UpdateTimelineProperties(timelineProperties) */
 HRESULT wme_system_media_transport_controls_update_timeline_properties(WME_SystemMediaTransportControls *self, WME_SystemMediaTransportControlsTimelineProperties* timelineProperties);
 
-/* Windows.Media.SystemMediaTransportControls.GetForCurrentView() */
 HRESULT wme_system_media_transport_controls_get_for_current_view(WME_SystemMediaTransportControls** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wme_system_media_transport_controls_on_button_pressed(WME_SystemMediaTransportControls *self, cwinrt_event_fn fn, void *ctx);
@@ -1051,374 +902,226 @@ void wme_system_media_transport_controls_off_shuffle_enabled_change_requested(WM
 cwinrt_token wme_system_media_transport_controls_on_auto_repeat_mode_change_requested(WME_SystemMediaTransportControls *self, cwinrt_event_fn fn, void *ctx);
 void wme_system_media_transport_controls_off_auto_repeat_mode_change_requested(WME_SystemMediaTransportControls *self, cwinrt_token token);
 
-/* activate Windows.Media.SystemMediaTransportControlsButtonPressedEventArgs */
 HRESULT wme_system_media_transport_controls_button_pressed_event_args_new(WME_SystemMediaTransportControlsButtonPressedEventArgs **out);
 
-/* Windows.Media.SystemMediaTransportControlsButtonPressedEventArgs */
-/* Windows.Media.SystemMediaTransportControlsButtonPressedEventArgs.get_Button() */
 HRESULT wme_system_media_transport_controls_button_pressed_event_args_get__button(WME_SystemMediaTransportControlsButtonPressedEventArgs *self, WME_SystemMediaTransportControlsButton *value);
 
-/* activate Windows.Media.SystemMediaTransportControlsDisplayUpdater */
 HRESULT wme_system_media_transport_controls_display_updater_new(WME_SystemMediaTransportControlsDisplayUpdater **out);
 
-/* Windows.Media.SystemMediaTransportControlsDisplayUpdater */
-/* Windows.Media.SystemMediaTransportControlsDisplayUpdater.get_Type() */
 HRESULT wme_system_media_transport_controls_display_updater_get__type(WME_SystemMediaTransportControlsDisplayUpdater *self, WME_MediaPlaybackType *value);
 
-/* Windows.Media.SystemMediaTransportControlsDisplayUpdater.put_Type() */
 HRESULT wme_system_media_transport_controls_display_updater_put__type(WME_SystemMediaTransportControlsDisplayUpdater *self, WME_MediaPlaybackType value);
 
-/* Windows.Media.SystemMediaTransportControlsDisplayUpdater.get_AppMediaId() */
 HRESULT wme_system_media_transport_controls_display_updater_get__app_media_id(WME_SystemMediaTransportControlsDisplayUpdater *self, cwinrt_hstring *value);
 
-/* Windows.Media.SystemMediaTransportControlsDisplayUpdater.put_AppMediaId() */
 HRESULT wme_system_media_transport_controls_display_updater_put__app_media_id(WME_SystemMediaTransportControlsDisplayUpdater *self, cwinrt_hstring value);
 
-/* Windows.Media.SystemMediaTransportControlsDisplayUpdater.get_Thumbnail() */
 HRESULT wme_system_media_transport_controls_display_updater_get__thumbnail(WME_SystemMediaTransportControlsDisplayUpdater *self, WSTST_RandomAccessStreamReference** value);
 
-/* Windows.Media.SystemMediaTransportControlsDisplayUpdater.put_Thumbnail() */
 HRESULT wme_system_media_transport_controls_display_updater_put__thumbnail(WME_SystemMediaTransportControlsDisplayUpdater *self, WSTST_RandomAccessStreamReference* value);
 
-/* Windows.Media.SystemMediaTransportControlsDisplayUpdater.get_MusicProperties() */
 HRESULT wme_system_media_transport_controls_display_updater_get__music_properties(WME_SystemMediaTransportControlsDisplayUpdater *self, WME_MusicDisplayProperties** value);
 
-/* Windows.Media.SystemMediaTransportControlsDisplayUpdater.get_VideoProperties() */
 HRESULT wme_system_media_transport_controls_display_updater_get__video_properties(WME_SystemMediaTransportControlsDisplayUpdater *self, WME_VideoDisplayProperties** value);
 
-/* Windows.Media.SystemMediaTransportControlsDisplayUpdater.get_ImageProperties() */
 HRESULT wme_system_media_transport_controls_display_updater_get__image_properties(WME_SystemMediaTransportControlsDisplayUpdater *self, WME_ImageDisplayProperties** value);
 
-/* Windows.Media.SystemMediaTransportControlsDisplayUpdater.CopyFromFileAsync(source) */
 HRESULT wme_system_media_transport_controls_display_updater_copy_from_file_async(WME_SystemMediaTransportControlsDisplayUpdater *self, WME_MediaPlaybackType type_, WS_StorageFile* source, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Media.SystemMediaTransportControlsDisplayUpdater.ClearAll() */
 HRESULT wme_system_media_transport_controls_display_updater_clear_all(WME_SystemMediaTransportControlsDisplayUpdater *self);
 
-/* Windows.Media.SystemMediaTransportControlsDisplayUpdater.Update() */
 HRESULT wme_system_media_transport_controls_display_updater_update(WME_SystemMediaTransportControlsDisplayUpdater *self);
 
-/* activate Windows.Media.SystemMediaTransportControlsPropertyChangedEventArgs */
 HRESULT wme_system_media_transport_controls_property_changed_event_args_new(WME_SystemMediaTransportControlsPropertyChangedEventArgs **out);
 
-/* Windows.Media.SystemMediaTransportControlsPropertyChangedEventArgs */
-/* Windows.Media.SystemMediaTransportControlsPropertyChangedEventArgs.get_Property() */
 HRESULT wme_system_media_transport_controls_property_changed_event_args_get__property(WME_SystemMediaTransportControlsPropertyChangedEventArgs *self, WME_SystemMediaTransportControlsProperty *value);
 
-/* activate Windows.Media.SystemMediaTransportControlsTimelineProperties */
 HRESULT wme_system_media_transport_controls_timeline_properties_new(WME_SystemMediaTransportControlsTimelineProperties **out);
 
-/* Windows.Media.SystemMediaTransportControlsTimelineProperties */
-/* Windows.Media.SystemMediaTransportControlsTimelineProperties.get_StartTime() */
 HRESULT wme_system_media_transport_controls_timeline_properties_get__start_time(WME_SystemMediaTransportControlsTimelineProperties *self, WF_TimeSpan *value);
 
-/* Windows.Media.SystemMediaTransportControlsTimelineProperties.put_StartTime() */
 HRESULT wme_system_media_transport_controls_timeline_properties_put__start_time(WME_SystemMediaTransportControlsTimelineProperties *self, WF_TimeSpan value);
 
-/* Windows.Media.SystemMediaTransportControlsTimelineProperties.get_EndTime() */
 HRESULT wme_system_media_transport_controls_timeline_properties_get__end_time(WME_SystemMediaTransportControlsTimelineProperties *self, WF_TimeSpan *value);
 
-/* Windows.Media.SystemMediaTransportControlsTimelineProperties.put_EndTime() */
 HRESULT wme_system_media_transport_controls_timeline_properties_put__end_time(WME_SystemMediaTransportControlsTimelineProperties *self, WF_TimeSpan value);
 
-/* Windows.Media.SystemMediaTransportControlsTimelineProperties.get_MinSeekTime() */
 HRESULT wme_system_media_transport_controls_timeline_properties_get__min_seek_time(WME_SystemMediaTransportControlsTimelineProperties *self, WF_TimeSpan *value);
 
-/* Windows.Media.SystemMediaTransportControlsTimelineProperties.put_MinSeekTime() */
 HRESULT wme_system_media_transport_controls_timeline_properties_put__min_seek_time(WME_SystemMediaTransportControlsTimelineProperties *self, WF_TimeSpan value);
 
-/* Windows.Media.SystemMediaTransportControlsTimelineProperties.get_MaxSeekTime() */
 HRESULT wme_system_media_transport_controls_timeline_properties_get__max_seek_time(WME_SystemMediaTransportControlsTimelineProperties *self, WF_TimeSpan *value);
 
-/* Windows.Media.SystemMediaTransportControlsTimelineProperties.put_MaxSeekTime() */
 HRESULT wme_system_media_transport_controls_timeline_properties_put__max_seek_time(WME_SystemMediaTransportControlsTimelineProperties *self, WF_TimeSpan value);
 
-/* Windows.Media.SystemMediaTransportControlsTimelineProperties.get_Position() */
 HRESULT wme_system_media_transport_controls_timeline_properties_get__position(WME_SystemMediaTransportControlsTimelineProperties *self, WF_TimeSpan *value);
 
-/* Windows.Media.SystemMediaTransportControlsTimelineProperties.put_Position() */
 HRESULT wme_system_media_transport_controls_timeline_properties_put__position(WME_SystemMediaTransportControlsTimelineProperties *self, WF_TimeSpan value);
 
-/* activate Windows.Media.VideoDisplayProperties */
 HRESULT wme_video_display_properties_new(WME_VideoDisplayProperties **out);
 
-/* Windows.Media.VideoDisplayProperties */
-/* Windows.Media.VideoDisplayProperties.get_Title() */
 HRESULT wme_video_display_properties_get__title(WME_VideoDisplayProperties *self, cwinrt_hstring *value);
 
-/* Windows.Media.VideoDisplayProperties.put_Title() */
 HRESULT wme_video_display_properties_put__title(WME_VideoDisplayProperties *self, cwinrt_hstring value);
 
-/* Windows.Media.VideoDisplayProperties.get_Subtitle() */
 HRESULT wme_video_display_properties_get__subtitle(WME_VideoDisplayProperties *self, cwinrt_hstring *value);
 
-/* Windows.Media.VideoDisplayProperties.put_Subtitle() */
 HRESULT wme_video_display_properties_put__subtitle(WME_VideoDisplayProperties *self, cwinrt_hstring value);
 
-/* Windows.Media.VideoDisplayProperties.get_Genres() */
 HRESULT wme_video_display_properties_get__genres(WME_VideoDisplayProperties *self, WFOCO_IVector_HSTRING** value);
 
-/* activate Windows.Media.VideoEffects */
 HRESULT wme_video_effects_new(WME_VideoEffects **out);
 
-/* Windows.Media.VideoEffects */
-/* Windows.Media.VideoEffects.get_VideoStabilization() */
 HRESULT wme_video_effects_get__video_stabilization(cwinrt_hstring *value);
 
-/* activate Windows.Media.VideoFrame */
 HRESULT wme_video_frame_new(WME_VideoFrame **out);
 
-/* Windows.Media.VideoFrame */
-/* Windows.Media.VideoFrame.get_SoftwareBitmap() */
 HRESULT wme_video_frame_get__software_bitmap(WME_VideoFrame *self, WGRIM_SoftwareBitmap** value);
 
-/* Windows.Media.VideoFrame.CopyToAsync(frame) */
 HRESULT wme_video_frame_copy_to_async(WME_VideoFrame *self, WME_VideoFrame* frame, WF_IAsyncAction** out);
 
-/* Windows.Media.VideoFrame.get_Direct3DSurface() */
 HRESULT wme_video_frame_get__direct3_d_surface(WME_VideoFrame *self, WGRDIDI_IDirect3DSurface** value);
 
-/* Windows.Media.VideoFrame.get_Type() */
 HRESULT wme_video_frame_get__type(WME_VideoFrame *self, cwinrt_hstring *value);
 
-/* Windows.Media.VideoFrame.get_IsReadOnly() */
 HRESULT wme_video_frame_get__is_read_only(WME_VideoFrame *self, BOOL *value);
 
-/* Windows.Media.VideoFrame.put_RelativeTime() */
 HRESULT wme_video_frame_put__relative_time(WME_VideoFrame *self, WF_TimeSpan* value);
 
-/* Windows.Media.VideoFrame.get_RelativeTime() */
 HRESULT wme_video_frame_get__relative_time(WME_VideoFrame *self, WF_TimeSpan** value);
 
-/* Windows.Media.VideoFrame.put_SystemRelativeTime() */
 HRESULT wme_video_frame_put__system_relative_time(WME_VideoFrame *self, WF_TimeSpan* value);
 
-/* Windows.Media.VideoFrame.get_SystemRelativeTime() */
 HRESULT wme_video_frame_get__system_relative_time(WME_VideoFrame *self, WF_TimeSpan** value);
 
-/* Windows.Media.VideoFrame.put_Duration() */
 HRESULT wme_video_frame_put__duration(WME_VideoFrame *self, WF_TimeSpan* value);
 
-/* Windows.Media.VideoFrame.get_Duration() */
 HRESULT wme_video_frame_get__duration(WME_VideoFrame *self, WF_TimeSpan** value);
 
-/* Windows.Media.VideoFrame.put_IsDiscontinuous() */
 HRESULT wme_video_frame_put__is_discontinuous(WME_VideoFrame *self, BOOL value);
 
-/* Windows.Media.VideoFrame.get_IsDiscontinuous() */
 HRESULT wme_video_frame_get__is_discontinuous(WME_VideoFrame *self, BOOL *value);
 
-/* Windows.Media.VideoFrame.get_ExtendedProperties() */
 HRESULT wme_video_frame_get__extended_properties(WME_VideoFrame *self, WFOCO_IPropertySet** value);
 
-/* Windows.Media.VideoFrame.Close() */
 HRESULT wme_video_frame_close(WME_VideoFrame *self);
 
-/* Windows.Media.VideoFrame.CopyToAsync(frame, sourceBounds, destinationBounds) */
 HRESULT wme_video_frame_copy_to_async_p_p_p_p(WME_VideoFrame *self, WME_VideoFrame* frame, WGRIM_BitmapBounds* sourceBounds, WGRIM_BitmapBounds* destinationBounds, WF_IAsyncAction** out);
 
-/* Windows.Media.VideoFrame.CreateAsDirect3D11SurfaceBacked(format, width, height) */
 HRESULT wme_video_frame_create_as_direct3_d11_surface_backed(WGRDI_DirectXPixelFormat format, int32_t width, int32_t height, WME_VideoFrame** out);
 
-/* Windows.Media.VideoFrame.CreateAsDirect3D11SurfaceBacked(format, width, height, device) */
 HRESULT wme_video_frame_create_as_direct3_d11_surface_backed_direct_x_pixel_format_i32_i32_p_p(WGRDI_DirectXPixelFormat format, int32_t width, int32_t height, WGRDIDI_IDirect3DDevice* device, WME_VideoFrame** out);
 
-/* Windows.Media.VideoFrame.CreateWithSoftwareBitmap(bitmap) */
 HRESULT wme_video_frame_create_with_software_bitmap(WGRIM_SoftwareBitmap* bitmap, WME_VideoFrame** out);
 
-/* Windows.Media.VideoFrame.CreateWithDirect3D11Surface(surface) */
 HRESULT wme_video_frame_create_with_direct3_d11_surface(WGRDIDI_IDirect3DSurface* surface, WME_VideoFrame** out);
 
-/* activate Windows.Media.AutoRepeatModeChangeRequestedEventArgs */
 HRESULT wme_auto_repeat_mode_change_requested_event_args_new(WME_AutoRepeatModeChangeRequestedEventArgs **out);
 
-/* Windows.Media.AutoRepeatModeChangeRequestedEventArgs */
-/* Windows.Media.AutoRepeatModeChangeRequestedEventArgs.get_RequestedAutoRepeatMode() */
 HRESULT wme_auto_repeat_mode_change_requested_event_args_get__requested_auto_repeat_mode(WME_AutoRepeatModeChangeRequestedEventArgs *self, WME_MediaPlaybackAutoRepeatMode *value);
 
-/* activate Windows.Media.AudioFrame */
 HRESULT wme_audio_frame_new(WME_AudioFrame **out);
 
-/* Windows.Media.AudioFrame */
-/* Windows.Media.AudioFrame.LockBuffer(mode) */
 HRESULT wme_audio_frame_lock_buffer(WME_AudioFrame *self, WME_AudioBufferAccessMode mode, WME_AudioBuffer** out);
 
-/* Windows.Media.AudioFrame.get_Type() */
 HRESULT wme_audio_frame_get__type(WME_AudioFrame *self, cwinrt_hstring *value);
 
-/* Windows.Media.AudioFrame.get_IsReadOnly() */
 HRESULT wme_audio_frame_get__is_read_only(WME_AudioFrame *self, BOOL *value);
 
-/* Windows.Media.AudioFrame.put_RelativeTime() */
 HRESULT wme_audio_frame_put__relative_time(WME_AudioFrame *self, WF_TimeSpan* value);
 
-/* Windows.Media.AudioFrame.get_RelativeTime() */
 HRESULT wme_audio_frame_get__relative_time(WME_AudioFrame *self, WF_TimeSpan** value);
 
-/* Windows.Media.AudioFrame.put_SystemRelativeTime() */
 HRESULT wme_audio_frame_put__system_relative_time(WME_AudioFrame *self, WF_TimeSpan* value);
 
-/* Windows.Media.AudioFrame.get_SystemRelativeTime() */
 HRESULT wme_audio_frame_get__system_relative_time(WME_AudioFrame *self, WF_TimeSpan** value);
 
-/* Windows.Media.AudioFrame.put_Duration() */
 HRESULT wme_audio_frame_put__duration(WME_AudioFrame *self, WF_TimeSpan* value);
 
-/* Windows.Media.AudioFrame.get_Duration() */
 HRESULT wme_audio_frame_get__duration(WME_AudioFrame *self, WF_TimeSpan** value);
 
-/* Windows.Media.AudioFrame.put_IsDiscontinuous() */
 HRESULT wme_audio_frame_put__is_discontinuous(WME_AudioFrame *self, BOOL value);
 
-/* Windows.Media.AudioFrame.get_IsDiscontinuous() */
 HRESULT wme_audio_frame_get__is_discontinuous(WME_AudioFrame *self, BOOL *value);
 
-/* Windows.Media.AudioFrame.get_ExtendedProperties() */
 HRESULT wme_audio_frame_get__extended_properties(WME_AudioFrame *self, WFOCO_IPropertySet** value);
 
-/* Windows.Media.AudioFrame.Close() */
 HRESULT wme_audio_frame_close(WME_AudioFrame *self);
 
-/* activate Windows.Media.AudioBuffer */
 HRESULT wme_audio_buffer_new(WME_AudioBuffer **out);
 
-/* Windows.Media.AudioBuffer */
-/* Windows.Media.AudioBuffer.get_Capacity() */
 HRESULT wme_audio_buffer_get__capacity(WME_AudioBuffer *self, uint32_t *value);
 
-/* Windows.Media.AudioBuffer.get_Length() */
 HRESULT wme_audio_buffer_get__length(WME_AudioBuffer *self, uint32_t *value);
 
-/* Windows.Media.AudioBuffer.put_Length() */
 HRESULT wme_audio_buffer_put__length(WME_AudioBuffer *self, uint32_t value);
 
-/* Windows.Media.AudioBuffer.CreateReference() */
 HRESULT wme_audio_buffer_create_reference(WME_AudioBuffer *self, WF_IMemoryBufferReference** out);
 
-/* Windows.Media.AudioBuffer.Close() */
 HRESULT wme_audio_buffer_close(WME_AudioBuffer *self);
 
-/* Windows.Media.IImageDisplayProperties */
-/* Windows.Media.IMediaExtensionManager2 */
-/* Windows.Media.IMediaExtensionManager2.RegisterMediaExtensionForAppService(extension, connection) */
 HRESULT wme_media_extension_manager_2_register_media_extension_for_app_service(WME_IMediaExtensionManager_2 *self, WME_IMediaExtension* extension, WAPAP_AppServiceConnection* connection);
 
-/* Windows.Media.IMediaProcessingTriggerDetails */
-/* Windows.Media.IMediaTimelineController */
-/* Windows.Media.IMediaTimelineController2 */
-/* Windows.Media.IMediaTimelineController2.get_Duration() */
 HRESULT wme_media_timeline_controller_2_get__duration(WME_IMediaTimelineController_2 *self, WF_TimeSpan** value);
 
-/* Windows.Media.IMediaTimelineController2.put_Duration() */
 HRESULT wme_media_timeline_controller_2_put__duration(WME_IMediaTimelineController_2 *self, WF_TimeSpan* value);
 
-/* Windows.Media.IMediaTimelineController2.get_IsLoopingEnabled() */
 HRESULT wme_media_timeline_controller_2_get__is_looping_enabled(WME_IMediaTimelineController_2 *self, BOOL *value);
 
-/* Windows.Media.IMediaTimelineController2.put_IsLoopingEnabled() */
 HRESULT wme_media_timeline_controller_2_put__is_looping_enabled(WME_IMediaTimelineController_2 *self, BOOL value);
 
-/* Windows.Media.IMediaTimelineControllerFailedEventArgs */
-/* Windows.Media.IMusicDisplayProperties */
-/* Windows.Media.IMusicDisplayProperties2 */
-/* Windows.Media.IMusicDisplayProperties2.get_AlbumTitle() */
 HRESULT wme_music_display_properties_2_get__album_title(WME_IMusicDisplayProperties_2 *self, cwinrt_hstring *value);
 
-/* Windows.Media.IMusicDisplayProperties2.put_AlbumTitle() */
 HRESULT wme_music_display_properties_2_put__album_title(WME_IMusicDisplayProperties_2 *self, cwinrt_hstring value);
 
-/* Windows.Media.IMusicDisplayProperties2.get_TrackNumber() */
 HRESULT wme_music_display_properties_2_get__track_number(WME_IMusicDisplayProperties_2 *self, uint32_t *value);
 
-/* Windows.Media.IMusicDisplayProperties2.put_TrackNumber() */
 HRESULT wme_music_display_properties_2_put__track_number(WME_IMusicDisplayProperties_2 *self, uint32_t value);
 
-/* Windows.Media.IMusicDisplayProperties2.get_Genres() */
 HRESULT wme_music_display_properties_2_get__genres(WME_IMusicDisplayProperties_2 *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Media.IMusicDisplayProperties3 */
-/* Windows.Media.IMusicDisplayProperties3.get_AlbumTrackCount() */
 HRESULT wme_music_display_properties_3_get__album_track_count(WME_IMusicDisplayProperties_3 *self, uint32_t *value);
 
-/* Windows.Media.IMusicDisplayProperties3.put_AlbumTrackCount() */
 HRESULT wme_music_display_properties_3_put__album_track_count(WME_IMusicDisplayProperties_3 *self, uint32_t value);
 
-/* Windows.Media.IPlaybackPositionChangeRequestedEventArgs */
-/* Windows.Media.IPlaybackRateChangeRequestedEventArgs */
-/* Windows.Media.IShuffleEnabledChangeRequestedEventArgs */
-/* Windows.Media.ISystemMediaTransportControls */
-/* Windows.Media.ISystemMediaTransportControls2 */
-/* Windows.Media.ISystemMediaTransportControls2.get_AutoRepeatMode() */
 HRESULT wme_system_media_transport_controls_2_get__auto_repeat_mode(WME_ISystemMediaTransportControls_2 *self, WME_MediaPlaybackAutoRepeatMode *value);
 
-/* Windows.Media.ISystemMediaTransportControls2.put_AutoRepeatMode() */
 HRESULT wme_system_media_transport_controls_2_put__auto_repeat_mode(WME_ISystemMediaTransportControls_2 *self, WME_MediaPlaybackAutoRepeatMode value);
 
-/* Windows.Media.ISystemMediaTransportControls2.get_ShuffleEnabled() */
 HRESULT wme_system_media_transport_controls_2_get__shuffle_enabled(WME_ISystemMediaTransportControls_2 *self, BOOL *value);
 
-/* Windows.Media.ISystemMediaTransportControls2.put_ShuffleEnabled() */
 HRESULT wme_system_media_transport_controls_2_put__shuffle_enabled(WME_ISystemMediaTransportControls_2 *self, BOOL value);
 
-/* Windows.Media.ISystemMediaTransportControls2.get_PlaybackRate() */
 HRESULT wme_system_media_transport_controls_2_get__playback_rate(WME_ISystemMediaTransportControls_2 *self, double *value);
 
-/* Windows.Media.ISystemMediaTransportControls2.put_PlaybackRate() */
 HRESULT wme_system_media_transport_controls_2_put__playback_rate(WME_ISystemMediaTransportControls_2 *self, double value);
 
-/* Windows.Media.ISystemMediaTransportControls2.UpdateTimelineProperties(timelineProperties) */
 HRESULT wme_system_media_transport_controls_2_update_timeline_properties(WME_ISystemMediaTransportControls_2 *self, WME_SystemMediaTransportControlsTimelineProperties* timelineProperties);
 
-/* Windows.Media.ISystemMediaTransportControlsButtonPressedEventArgs */
-/* Windows.Media.ISystemMediaTransportControlsDisplayUpdater */
-/* Windows.Media.ISystemMediaTransportControlsPropertyChangedEventArgs */
-/* Windows.Media.ISystemMediaTransportControlsTimelineProperties */
-/* Windows.Media.IVideoDisplayProperties */
-/* Windows.Media.IVideoDisplayProperties2 */
-/* Windows.Media.IVideoDisplayProperties2.get_Genres() */
 HRESULT wme_video_display_properties_2_get__genres(WME_IVideoDisplayProperties_2 *self, WFOCO_IVector_HSTRING** value);
 
-/* Windows.Media.IVideoFrame */
-/* Windows.Media.IVideoFrame2 */
-/* Windows.Media.IVideoFrame2.CopyToAsync(frame, sourceBounds, destinationBounds) */
 HRESULT wme_video_frame_2_copy_to_async(WME_IVideoFrame_2 *self, WME_VideoFrame* frame, WGRIM_BitmapBounds* sourceBounds, WGRIM_BitmapBounds* destinationBounds, WF_IAsyncAction** out);
 
-/* Windows.Media.IAutoRepeatModeChangeRequestedEventArgs */
-/* Windows.Media.IAudioFrame */
-/* Windows.Media.IAudioBuffer */
-/* Windows.Media.IMediaExtensionManager */
-/* Windows.Media.IMediaFrame */
-/* Windows.Media.IMediaFrame.get_Type() */
 HRESULT wme_media_frame_get__type(WME_IMediaFrame *self, cwinrt_hstring *value);
 
-/* Windows.Media.IMediaFrame.get_IsReadOnly() */
 HRESULT wme_media_frame_get__is_read_only(WME_IMediaFrame *self, BOOL *value);
 
-/* Windows.Media.IMediaFrame.put_RelativeTime() */
 HRESULT wme_media_frame_put__relative_time(WME_IMediaFrame *self, WF_TimeSpan* value);
 
-/* Windows.Media.IMediaFrame.get_RelativeTime() */
 HRESULT wme_media_frame_get__relative_time(WME_IMediaFrame *self, WF_TimeSpan** value);
 
-/* Windows.Media.IMediaFrame.put_SystemRelativeTime() */
 HRESULT wme_media_frame_put__system_relative_time(WME_IMediaFrame *self, WF_TimeSpan* value);
 
-/* Windows.Media.IMediaFrame.get_SystemRelativeTime() */
 HRESULT wme_media_frame_get__system_relative_time(WME_IMediaFrame *self, WF_TimeSpan** value);
 
-/* Windows.Media.IMediaFrame.put_Duration() */
 HRESULT wme_media_frame_put__duration(WME_IMediaFrame *self, WF_TimeSpan* value);
 
-/* Windows.Media.IMediaFrame.get_Duration() */
 HRESULT wme_media_frame_get__duration(WME_IMediaFrame *self, WF_TimeSpan** value);
 
-/* Windows.Media.IMediaFrame.put_IsDiscontinuous() */
 HRESULT wme_media_frame_put__is_discontinuous(WME_IMediaFrame *self, BOOL value);
 
-/* Windows.Media.IMediaFrame.get_IsDiscontinuous() */
 HRESULT wme_media_frame_get__is_discontinuous(WME_IMediaFrame *self, BOOL *value);
 
-/* Windows.Media.IMediaFrame.get_ExtendedProperties() */
 HRESULT wme_media_frame_get__extended_properties(WME_IMediaFrame *self, WFOCO_IPropertySet** value);
 
 #endif /* CWINRT_WINDOWS_MEDIA_H */

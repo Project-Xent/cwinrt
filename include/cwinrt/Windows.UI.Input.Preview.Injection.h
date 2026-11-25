@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Gaming.Input.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WUIINPRIN_InputInjector WUIINPRIN_InputInjector;
 typedef struct WUIINPRIN_IInjectedInputGamepadInfoFactory WUIINPRIN_IInjectedInputGamepadInfoFactory;
 typedef struct WUIINPRIN_IInputInjectorStatics_2 WUIINPRIN_IInputInjectorStatics_2;
@@ -31,7 +30,6 @@ typedef struct WUIINPRIN_IInjectedInputPenInfo WUIINPRIN_IInjectedInputPenInfo;
 typedef struct WUIINPRIN_IInjectedInputTouchInfo WUIINPRIN_IInjectedInputTouchInfo;
 typedef struct WUIINPRIN_IInputInjector WUIINPRIN_IInputInjector;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IIterable_WUIINPRIN_InjectedInputKeyboardInfo
 #define CWINRT_FWD_WFOCO_IIterable_WUIINPRIN_InjectedInputKeyboardInfo
 typedef struct WFOCO_IIterable_WUIINPRIN_InjectedInputKeyboardInfo WFOCO_IIterable_WUIINPRIN_InjectedInputKeyboardInfo;
@@ -232,7 +230,6 @@ struct WUIINPRIN_InjectedInputRectangle {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -277,262 +274,164 @@ static const IID CWINRT_IID_WUIINPRIN_IInjectedInputTouchInfo CWINRT_MAYBE_UNUSE
 static const IID CWINRT_IID_WUIINPRIN_IInputInjector CWINRT_MAYBE_UNUSED = { 0x8EC26F84, 0x0B02, 0x4BD2, { 0xAD, 0x7A, 0x3D, 0x46, 0x58, 0xBE, 0x3E, 0x18 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.UI.Input.Preview.Injection.InputInjector */
 HRESULT wuiinprin_input_injector_new(WUIINPRIN_InputInjector **out);
 
-/* Windows.UI.Input.Preview.Injection.InputInjector */
-/* Windows.UI.Input.Preview.Injection.InputInjector.InjectKeyboardInput(input) */
 HRESULT wuiinprin_input_injector_inject_keyboard_input(WUIINPRIN_InputInjector *self, WFOCO_IIterable_WUIINPRIN_InjectedInputKeyboardInfo* input);
 
-/* Windows.UI.Input.Preview.Injection.InputInjector.InjectMouseInput(input) */
 HRESULT wuiinprin_input_injector_inject_mouse_input(WUIINPRIN_InputInjector *self, WFOCO_IIterable_WUIINPRIN_InjectedInputMouseInfo* input);
 
-/* Windows.UI.Input.Preview.Injection.InputInjector.InitializeTouchInjection(visualMode) */
 HRESULT wuiinprin_input_injector_initialize_touch_injection(WUIINPRIN_InputInjector *self, WUIINPRIN_InjectedInputVisualizationMode visualMode);
 
-/* Windows.UI.Input.Preview.Injection.InputInjector.InjectTouchInput(input) */
 HRESULT wuiinprin_input_injector_inject_touch_input(WUIINPRIN_InputInjector *self, WFOCO_IIterable_WUIINPRIN_InjectedInputTouchInfo* input);
 
-/* Windows.UI.Input.Preview.Injection.InputInjector.UninitializeTouchInjection() */
 HRESULT wuiinprin_input_injector_uninitialize_touch_injection(WUIINPRIN_InputInjector *self);
 
-/* Windows.UI.Input.Preview.Injection.InputInjector.InitializePenInjection(visualMode) */
 HRESULT wuiinprin_input_injector_initialize_pen_injection(WUIINPRIN_InputInjector *self, WUIINPRIN_InjectedInputVisualizationMode visualMode);
 
-/* Windows.UI.Input.Preview.Injection.InputInjector.InjectPenInput(input) */
 HRESULT wuiinprin_input_injector_inject_pen_input(WUIINPRIN_InputInjector *self, WUIINPRIN_InjectedInputPenInfo* input);
 
-/* Windows.UI.Input.Preview.Injection.InputInjector.UninitializePenInjection() */
 HRESULT wuiinprin_input_injector_uninitialize_pen_injection(WUIINPRIN_InputInjector *self);
 
-/* Windows.UI.Input.Preview.Injection.InputInjector.InjectShortcut(shortcut) */
 HRESULT wuiinprin_input_injector_inject_shortcut(WUIINPRIN_InputInjector *self, WUIINPRIN_InjectedInputShortcut shortcut);
 
-/* Windows.UI.Input.Preview.Injection.InputInjector.InitializeGamepadInjection() */
 HRESULT wuiinprin_input_injector_initialize_gamepad_injection(WUIINPRIN_InputInjector *self);
 
-/* Windows.UI.Input.Preview.Injection.InputInjector.InjectGamepadInput(input) */
 HRESULT wuiinprin_input_injector_inject_gamepad_input(WUIINPRIN_InputInjector *self, WUIINPRIN_InjectedInputGamepadInfo* input);
 
-/* Windows.UI.Input.Preview.Injection.InputInjector.UninitializeGamepadInjection() */
 HRESULT wuiinprin_input_injector_uninitialize_gamepad_injection(WUIINPRIN_InputInjector *self);
 
-/* Windows.UI.Input.Preview.Injection.InputInjector.TryCreateForAppBroadcastOnly() */
 HRESULT wuiinprin_input_injector_try_create_for_app_broadcast_only(WUIINPRIN_InputInjector** out);
 
-/* Windows.UI.Input.Preview.Injection.InputInjector.TryCreate() */
 HRESULT wuiinprin_input_injector_try_create(WUIINPRIN_InputInjector** out);
 
-/* Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfoFactory */
-/* Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfoFactory.CreateInstance(reading) */
 HRESULT wuiinprin_injected_input_gamepad_info_factory_create_instance(WUIINPRIN_IInjectedInputGamepadInfoFactory *self, WGAIN_GamepadReading reading, WUIINPRIN_InjectedInputGamepadInfo** out);
 
-/* Windows.UI.Input.Preview.Injection.IInputInjectorStatics2 */
-/* Windows.UI.Input.Preview.Injection.IInputInjectorStatics2.TryCreateForAppBroadcastOnly() */
 HRESULT wuiinprin_input_injector_statics_2_try_create_for_app_broadcast_only(WUIINPRIN_IInputInjectorStatics_2 *self, WUIINPRIN_InputInjector** out);
 
-/* activate Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo */
 HRESULT wuiinprin_injected_input_gamepad_info_new(WUIINPRIN_InjectedInputGamepadInfo **out);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo */
-/* Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo.get_Buttons() */
 HRESULT wuiinprin_injected_input_gamepad_info_get__buttons(WUIINPRIN_InjectedInputGamepadInfo *self, WGAIN_GamepadButtons *value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo.put_Buttons() */
 HRESULT wuiinprin_injected_input_gamepad_info_put__buttons(WUIINPRIN_InjectedInputGamepadInfo *self, WGAIN_GamepadButtons value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo.get_LeftThumbstickX() */
 HRESULT wuiinprin_injected_input_gamepad_info_get__left_thumbstick_x(WUIINPRIN_InjectedInputGamepadInfo *self, double *value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo.put_LeftThumbstickX() */
 HRESULT wuiinprin_injected_input_gamepad_info_put__left_thumbstick_x(WUIINPRIN_InjectedInputGamepadInfo *self, double value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo.get_LeftThumbstickY() */
 HRESULT wuiinprin_injected_input_gamepad_info_get__left_thumbstick_y(WUIINPRIN_InjectedInputGamepadInfo *self, double *value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo.put_LeftThumbstickY() */
 HRESULT wuiinprin_injected_input_gamepad_info_put__left_thumbstick_y(WUIINPRIN_InjectedInputGamepadInfo *self, double value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo.get_LeftTrigger() */
 HRESULT wuiinprin_injected_input_gamepad_info_get__left_trigger(WUIINPRIN_InjectedInputGamepadInfo *self, double *value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo.put_LeftTrigger() */
 HRESULT wuiinprin_injected_input_gamepad_info_put__left_trigger(WUIINPRIN_InjectedInputGamepadInfo *self, double value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo.get_RightThumbstickX() */
 HRESULT wuiinprin_injected_input_gamepad_info_get__right_thumbstick_x(WUIINPRIN_InjectedInputGamepadInfo *self, double *value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo.put_RightThumbstickX() */
 HRESULT wuiinprin_injected_input_gamepad_info_put__right_thumbstick_x(WUIINPRIN_InjectedInputGamepadInfo *self, double value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo.get_RightThumbstickY() */
 HRESULT wuiinprin_injected_input_gamepad_info_get__right_thumbstick_y(WUIINPRIN_InjectedInputGamepadInfo *self, double *value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo.put_RightThumbstickY() */
 HRESULT wuiinprin_injected_input_gamepad_info_put__right_thumbstick_y(WUIINPRIN_InjectedInputGamepadInfo *self, double value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo.get_RightTrigger() */
 HRESULT wuiinprin_injected_input_gamepad_info_get__right_trigger(WUIINPRIN_InjectedInputGamepadInfo *self, double *value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo.put_RightTrigger() */
 HRESULT wuiinprin_injected_input_gamepad_info_put__right_trigger(WUIINPRIN_InjectedInputGamepadInfo *self, double value);
 
-/* activate Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo */
 HRESULT wuiinprin_injected_input_keyboard_info_new(WUIINPRIN_InjectedInputKeyboardInfo **out);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo */
-/* Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo.get_KeyOptions() */
 HRESULT wuiinprin_injected_input_keyboard_info_get__key_options(WUIINPRIN_InjectedInputKeyboardInfo *self, WUIINPRIN_InjectedInputKeyOptions *value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo.put_KeyOptions() */
 HRESULT wuiinprin_injected_input_keyboard_info_put__key_options(WUIINPRIN_InjectedInputKeyboardInfo *self, WUIINPRIN_InjectedInputKeyOptions value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo.get_ScanCode() */
 HRESULT wuiinprin_injected_input_keyboard_info_get__scan_code(WUIINPRIN_InjectedInputKeyboardInfo *self, uint16_t *value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo.put_ScanCode() */
 HRESULT wuiinprin_injected_input_keyboard_info_put__scan_code(WUIINPRIN_InjectedInputKeyboardInfo *self, uint16_t value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo.get_VirtualKey() */
 HRESULT wuiinprin_injected_input_keyboard_info_get__virtual_key(WUIINPRIN_InjectedInputKeyboardInfo *self, uint16_t *value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo.put_VirtualKey() */
 HRESULT wuiinprin_injected_input_keyboard_info_put__virtual_key(WUIINPRIN_InjectedInputKeyboardInfo *self, uint16_t value);
 
-/* activate Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo */
 HRESULT wuiinprin_injected_input_mouse_info_new(WUIINPRIN_InjectedInputMouseInfo **out);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo */
-/* Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo.get_MouseOptions() */
 HRESULT wuiinprin_injected_input_mouse_info_get__mouse_options(WUIINPRIN_InjectedInputMouseInfo *self, WUIINPRIN_InjectedInputMouseOptions *value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo.put_MouseOptions() */
 HRESULT wuiinprin_injected_input_mouse_info_put__mouse_options(WUIINPRIN_InjectedInputMouseInfo *self, WUIINPRIN_InjectedInputMouseOptions value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo.get_MouseData() */
 HRESULT wuiinprin_injected_input_mouse_info_get__mouse_data(WUIINPRIN_InjectedInputMouseInfo *self, uint32_t *value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo.put_MouseData() */
 HRESULT wuiinprin_injected_input_mouse_info_put__mouse_data(WUIINPRIN_InjectedInputMouseInfo *self, uint32_t value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo.get_DeltaY() */
 HRESULT wuiinprin_injected_input_mouse_info_get__delta_y(WUIINPRIN_InjectedInputMouseInfo *self, int32_t *value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo.put_DeltaY() */
 HRESULT wuiinprin_injected_input_mouse_info_put__delta_y(WUIINPRIN_InjectedInputMouseInfo *self, int32_t value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo.get_DeltaX() */
 HRESULT wuiinprin_injected_input_mouse_info_get__delta_x(WUIINPRIN_InjectedInputMouseInfo *self, int32_t *value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo.put_DeltaX() */
 HRESULT wuiinprin_injected_input_mouse_info_put__delta_x(WUIINPRIN_InjectedInputMouseInfo *self, int32_t value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo.get_TimeOffsetInMilliseconds() */
 HRESULT wuiinprin_injected_input_mouse_info_get__time_offset_in_milliseconds(WUIINPRIN_InjectedInputMouseInfo *self, uint32_t *value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo.put_TimeOffsetInMilliseconds() */
 HRESULT wuiinprin_injected_input_mouse_info_put__time_offset_in_milliseconds(WUIINPRIN_InjectedInputMouseInfo *self, uint32_t value);
 
-/* activate Windows.UI.Input.Preview.Injection.InjectedInputPenInfo */
 HRESULT wuiinprin_injected_input_pen_info_new(WUIINPRIN_InjectedInputPenInfo **out);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputPenInfo */
-/* Windows.UI.Input.Preview.Injection.InjectedInputPenInfo.get_PointerInfo() */
 HRESULT wuiinprin_injected_input_pen_info_get__pointer_info(WUIINPRIN_InjectedInputPenInfo *self, WUIINPRIN_InjectedInputPointerInfo *value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputPenInfo.put_PointerInfo() */
 HRESULT wuiinprin_injected_input_pen_info_put__pointer_info(WUIINPRIN_InjectedInputPenInfo *self, WUIINPRIN_InjectedInputPointerInfo value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputPenInfo.get_PenButtons() */
 HRESULT wuiinprin_injected_input_pen_info_get__pen_buttons(WUIINPRIN_InjectedInputPenInfo *self, WUIINPRIN_InjectedInputPenButtons *value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputPenInfo.put_PenButtons() */
 HRESULT wuiinprin_injected_input_pen_info_put__pen_buttons(WUIINPRIN_InjectedInputPenInfo *self, WUIINPRIN_InjectedInputPenButtons value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputPenInfo.get_PenParameters() */
 HRESULT wuiinprin_injected_input_pen_info_get__pen_parameters(WUIINPRIN_InjectedInputPenInfo *self, WUIINPRIN_InjectedInputPenParameters *value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputPenInfo.put_PenParameters() */
 HRESULT wuiinprin_injected_input_pen_info_put__pen_parameters(WUIINPRIN_InjectedInputPenInfo *self, WUIINPRIN_InjectedInputPenParameters value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputPenInfo.get_Pressure() */
 HRESULT wuiinprin_injected_input_pen_info_get__pressure(WUIINPRIN_InjectedInputPenInfo *self, double *value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputPenInfo.put_Pressure() */
 HRESULT wuiinprin_injected_input_pen_info_put__pressure(WUIINPRIN_InjectedInputPenInfo *self, double value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputPenInfo.get_Rotation() */
 HRESULT wuiinprin_injected_input_pen_info_get__rotation(WUIINPRIN_InjectedInputPenInfo *self, double *value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputPenInfo.put_Rotation() */
 HRESULT wuiinprin_injected_input_pen_info_put__rotation(WUIINPRIN_InjectedInputPenInfo *self, double value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputPenInfo.get_TiltX() */
 HRESULT wuiinprin_injected_input_pen_info_get__tilt_x(WUIINPRIN_InjectedInputPenInfo *self, int32_t *value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputPenInfo.put_TiltX() */
 HRESULT wuiinprin_injected_input_pen_info_put__tilt_x(WUIINPRIN_InjectedInputPenInfo *self, int32_t value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputPenInfo.get_TiltY() */
 HRESULT wuiinprin_injected_input_pen_info_get__tilt_y(WUIINPRIN_InjectedInputPenInfo *self, int32_t *value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputPenInfo.put_TiltY() */
 HRESULT wuiinprin_injected_input_pen_info_put__tilt_y(WUIINPRIN_InjectedInputPenInfo *self, int32_t value);
 
-/* activate Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo */
 HRESULT wuiinprin_injected_input_touch_info_new(WUIINPRIN_InjectedInputTouchInfo **out);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo */
-/* Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo.get_Contact() */
 HRESULT wuiinprin_injected_input_touch_info_get__contact(WUIINPRIN_InjectedInputTouchInfo *self, WUIINPRIN_InjectedInputRectangle *value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo.put_Contact() */
 HRESULT wuiinprin_injected_input_touch_info_put__contact(WUIINPRIN_InjectedInputTouchInfo *self, WUIINPRIN_InjectedInputRectangle value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo.get_Orientation() */
 HRESULT wuiinprin_injected_input_touch_info_get__orientation(WUIINPRIN_InjectedInputTouchInfo *self, int32_t *value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo.put_Orientation() */
 HRESULT wuiinprin_injected_input_touch_info_put__orientation(WUIINPRIN_InjectedInputTouchInfo *self, int32_t value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo.get_PointerInfo() */
 HRESULT wuiinprin_injected_input_touch_info_get__pointer_info(WUIINPRIN_InjectedInputTouchInfo *self, WUIINPRIN_InjectedInputPointerInfo *value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo.put_PointerInfo() */
 HRESULT wuiinprin_injected_input_touch_info_put__pointer_info(WUIINPRIN_InjectedInputTouchInfo *self, WUIINPRIN_InjectedInputPointerInfo value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo.get_Pressure() */
 HRESULT wuiinprin_injected_input_touch_info_get__pressure(WUIINPRIN_InjectedInputTouchInfo *self, double *value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo.put_Pressure() */
 HRESULT wuiinprin_injected_input_touch_info_put__pressure(WUIINPRIN_InjectedInputTouchInfo *self, double value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo.get_TouchParameters() */
 HRESULT wuiinprin_injected_input_touch_info_get__touch_parameters(WUIINPRIN_InjectedInputTouchInfo *self, WUIINPRIN_InjectedInputTouchParameters *value);
 
-/* Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo.put_TouchParameters() */
 HRESULT wuiinprin_injected_input_touch_info_put__touch_parameters(WUIINPRIN_InjectedInputTouchInfo *self, WUIINPRIN_InjectedInputTouchParameters value);
 
-/* Windows.UI.Input.Preview.Injection.IInputInjector2 */
-/* Windows.UI.Input.Preview.Injection.IInputInjector2.InitializeGamepadInjection() */
 HRESULT wuiinprin_input_injector_2_initialize_gamepad_injection(WUIINPRIN_IInputInjector_2 *self);
 
-/* Windows.UI.Input.Preview.Injection.IInputInjector2.InjectGamepadInput(input) */
 HRESULT wuiinprin_input_injector_2_inject_gamepad_input(WUIINPRIN_IInputInjector_2 *self, WUIINPRIN_InjectedInputGamepadInfo* input);
 
-/* Windows.UI.Input.Preview.Injection.IInputInjector2.UninitializeGamepadInjection() */
 HRESULT wuiinprin_input_injector_2_uninitialize_gamepad_injection(WUIINPRIN_IInputInjector_2 *self);
 
-/* Windows.UI.Input.Preview.Injection.IInputInjectorStatics */
-/* Windows.UI.Input.Preview.Injection.IInputInjectorStatics.TryCreate() */
 HRESULT wuiinprin_input_injector_statics_try_create(WUIINPRIN_IInputInjectorStatics *self, WUIINPRIN_InputInjector** out);
 
-/* Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfo */
-/* Windows.UI.Input.Preview.Injection.IInjectedInputKeyboardInfo */
-/* Windows.UI.Input.Preview.Injection.IInjectedInputMouseInfo */
-/* Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo */
-/* Windows.UI.Input.Preview.Injection.IInjectedInputTouchInfo */
-/* Windows.UI.Input.Preview.Injection.IInputInjector */
 #endif /* CWINRT_WINDOWS_UI_INPUT_PREVIEW_INJECTION_H */

@@ -12,13 +12,11 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WDEGPPR_IGpioProvider
 #define CWINRT_FWD_WDEGPPR_IGpioProvider
 typedef struct WDEGPPR_IGpioProvider WDEGPPR_IGpioProvider;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WDEGP_GpioPin WDEGP_GpioPin;
 typedef struct WDEGP_GpioPinValueChangedEventArgs WDEGP_GpioPinValueChangedEventArgs;
 typedef struct WDEGP_GpioController WDEGP_GpioController;
@@ -34,7 +32,6 @@ typedef struct WDEGP_IGpioController WDEGP_IGpioController;
 typedef struct WDEGP_IGpioChangeReader WDEGP_IGpioChangeReader;
 typedef struct WDEGP_IGpioChangeCounter WDEGP_IGpioChangeCounter;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_TypedEventHandler_WDEGP_GpioPin_WDEGP_GpioPinValueChangedEventArgs
 #define CWINRT_FWD_WF_TypedEventHandler_WDEGP_GpioPin_WDEGP_GpioPinValueChangedEventArgs
 typedef struct WF_TypedEventHandler_WDEGP_GpioPin_WDEGP_GpioPinValueChangedEventArgs WF_TypedEventHandler_WDEGP_GpioPin_WDEGP_GpioPinValueChangedEventArgs;
@@ -146,7 +143,6 @@ struct WDEGP_GpioChangeCount {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -187,182 +183,113 @@ static const IID CWINRT_IID_WDEGP_IGpioChangeReader CWINRT_MAYBE_UNUSED = { 0x0A
 static const IID CWINRT_IID_WDEGP_IGpioChangeCounter CWINRT_MAYBE_UNUSED = { 0xCB5EC0DE, 0x6801, 0x43FF, { 0x80, 0x3D, 0x45, 0x76, 0x62, 0x8A, 0x8B, 0x26 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Devices.Gpio.GpioPin */
 HRESULT wdegp_gpio_pin_new(WDEGP_GpioPin **out);
 
-/* Windows.Devices.Gpio.GpioPin */
-/* Windows.Devices.Gpio.GpioPin.get_DebounceTimeout() */
 HRESULT wdegp_gpio_pin_get__debounce_timeout(WDEGP_GpioPin *self, WF_TimeSpan *value);
 
-/* Windows.Devices.Gpio.GpioPin.put_DebounceTimeout() */
 HRESULT wdegp_gpio_pin_put__debounce_timeout(WDEGP_GpioPin *self, WF_TimeSpan value);
 
-/* Windows.Devices.Gpio.GpioPin.get_PinNumber() */
 HRESULT wdegp_gpio_pin_get__pin_number(WDEGP_GpioPin *self, int32_t *value);
 
-/* Windows.Devices.Gpio.GpioPin.get_SharingMode() */
 HRESULT wdegp_gpio_pin_get__sharing_mode(WDEGP_GpioPin *self, WDEGP_GpioSharingMode *value);
 
-/* Windows.Devices.Gpio.GpioPin.IsDriveModeSupported(driveMode) */
 HRESULT wdegp_gpio_pin_is_drive_mode_supported(WDEGP_GpioPin *self, WDEGP_GpioPinDriveMode driveMode, BOOL *out);
 
-/* Windows.Devices.Gpio.GpioPin.GetDriveMode() */
 HRESULT wdegp_gpio_pin_get_drive_mode(WDEGP_GpioPin *self, WDEGP_GpioPinDriveMode *out);
 
-/* Windows.Devices.Gpio.GpioPin.SetDriveMode() */
 HRESULT wdegp_gpio_pin_set_drive_mode(WDEGP_GpioPin *self, WDEGP_GpioPinDriveMode value);
 
-/* Windows.Devices.Gpio.GpioPin.Write() */
 HRESULT wdegp_gpio_pin_write(WDEGP_GpioPin *self, WDEGP_GpioPinValue value);
 
-/* Windows.Devices.Gpio.GpioPin.Read() */
 HRESULT wdegp_gpio_pin_read(WDEGP_GpioPin *self, WDEGP_GpioPinValue *out);
 
-/* Windows.Devices.Gpio.GpioPin.Close() */
 HRESULT wdegp_gpio_pin_close(WDEGP_GpioPin *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wdegp_gpio_pin_on_value_changed(WDEGP_GpioPin *self, cwinrt_event_fn fn, void *ctx);
 void wdegp_gpio_pin_off_value_changed(WDEGP_GpioPin *self, cwinrt_token token);
 
-/* activate Windows.Devices.Gpio.GpioPinValueChangedEventArgs */
 HRESULT wdegp_gpio_pin_value_changed_event_args_new(WDEGP_GpioPinValueChangedEventArgs **out);
 
-/* Windows.Devices.Gpio.GpioPinValueChangedEventArgs */
-/* Windows.Devices.Gpio.GpioPinValueChangedEventArgs.get_Edge() */
 HRESULT wdegp_gpio_pin_value_changed_event_args_get__edge(WDEGP_GpioPinValueChangedEventArgs *self, WDEGP_GpioPinEdge *value);
 
-/* activate Windows.Devices.Gpio.GpioController */
 HRESULT wdegp_gpio_controller_new(WDEGP_GpioController **out);
 
-/* Windows.Devices.Gpio.GpioController */
-/* Windows.Devices.Gpio.GpioController.get_PinCount() */
 HRESULT wdegp_gpio_controller_get__pin_count(WDEGP_GpioController *self, int32_t *value);
 
-/* Windows.Devices.Gpio.GpioController.OpenPin(pinNumber) */
 HRESULT wdegp_gpio_controller_open_pin(WDEGP_GpioController *self, int32_t pinNumber, WDEGP_GpioPin** out);
 
-/* Windows.Devices.Gpio.GpioController.OpenPin(pinNumber, sharingMode) */
 HRESULT wdegp_gpio_controller_open_pin_i32_gpio_sharing_mode_p(WDEGP_GpioController *self, int32_t pinNumber, WDEGP_GpioSharingMode sharingMode, WDEGP_GpioPin** out);
 
-/* Windows.Devices.Gpio.GpioController.TryOpenPin(pinNumber, sharingMode, pin, openStatus) */
 HRESULT wdegp_gpio_controller_try_open_pin(WDEGP_GpioController *self, int32_t pinNumber, WDEGP_GpioSharingMode sharingMode, WDEGP_GpioPin* pin, WDEGP_GpioOpenStatus openStatus, BOOL *out);
 
-/* Windows.Devices.Gpio.GpioController.GetControllersAsync(provider) */
 HRESULT wdegp_gpio_controller_get_controllers_async(WDEGPPR_IGpioProvider* provider, WF_IAsyncOperation_WFOCO_IVectorView_WDEGP_GpioController** out);
 
-/* Windows.Devices.Gpio.GpioController.GetDefaultAsync() */
 HRESULT wdegp_gpio_controller_get_default_async(WF_IAsyncOperation_WDEGP_GpioController** out);
 
-/* Windows.Devices.Gpio.GpioController.GetDefault() */
 HRESULT wdegp_gpio_controller_get_default(WDEGP_GpioController** out);
 
-/* Windows.Devices.Gpio.IGpioChangeReaderFactory */
-/* Windows.Devices.Gpio.IGpioChangeReaderFactory.Create(pin) */
 HRESULT wdegp_gpio_change_reader_factory_create(WDEGP_IGpioChangeReaderFactory *self, WDEGP_GpioPin* pin, WDEGP_GpioChangeReader** out);
 
-/* Windows.Devices.Gpio.IGpioChangeReaderFactory.CreateWithCapacity(pin, minCapacity) */
 HRESULT wdegp_gpio_change_reader_factory_create_with_capacity(WDEGP_IGpioChangeReaderFactory *self, WDEGP_GpioPin* pin, int32_t minCapacity, WDEGP_GpioChangeReader** out);
 
-/* Windows.Devices.Gpio.IGpioControllerStatics */
-/* Windows.Devices.Gpio.IGpioControllerStatics.GetDefault() */
 HRESULT wdegp_gpio_controller_statics_get_default(WDEGP_IGpioControllerStatics *self, WDEGP_GpioController** out);
 
-/* Windows.Devices.Gpio.IGpioControllerStatics2 */
-/* Windows.Devices.Gpio.IGpioControllerStatics2.GetControllersAsync(provider) */
 HRESULT wdegp_gpio_controller_statics_2_get_controllers_async(WDEGP_IGpioControllerStatics_2 *self, WDEGPPR_IGpioProvider* provider, WF_IAsyncOperation_WFOCO_IVectorView_WDEGP_GpioController** out);
 
-/* Windows.Devices.Gpio.IGpioControllerStatics2.GetDefaultAsync() */
 HRESULT wdegp_gpio_controller_statics_2_get_default_async(WDEGP_IGpioControllerStatics_2 *self, WF_IAsyncOperation_WDEGP_GpioController** out);
 
-/* activate Windows.Devices.Gpio.GpioChangeReader */
 HRESULT wdegp_gpio_change_reader_new(WDEGP_GpioChangeReader **out);
 
-/* Windows.Devices.Gpio.GpioChangeReader */
-/* Windows.Devices.Gpio.GpioChangeReader.get_Capacity() */
 HRESULT wdegp_gpio_change_reader_get__capacity(WDEGP_GpioChangeReader *self, int32_t *value);
 
-/* Windows.Devices.Gpio.GpioChangeReader.get_Length() */
 HRESULT wdegp_gpio_change_reader_get__length(WDEGP_GpioChangeReader *self, int32_t *value);
 
-/* Windows.Devices.Gpio.GpioChangeReader.get_IsEmpty() */
 HRESULT wdegp_gpio_change_reader_get__is_empty(WDEGP_GpioChangeReader *self, BOOL *value);
 
-/* Windows.Devices.Gpio.GpioChangeReader.get_IsOverflowed() */
 HRESULT wdegp_gpio_change_reader_get__is_overflowed(WDEGP_GpioChangeReader *self, BOOL *value);
 
-/* Windows.Devices.Gpio.GpioChangeReader.put_Polarity() */
 HRESULT wdegp_gpio_change_reader_put__polarity(WDEGP_GpioChangeReader *self, WDEGP_GpioChangePolarity value);
 
-/* Windows.Devices.Gpio.GpioChangeReader.get_Polarity() */
 HRESULT wdegp_gpio_change_reader_get__polarity(WDEGP_GpioChangeReader *self, WDEGP_GpioChangePolarity *value);
 
-/* Windows.Devices.Gpio.GpioChangeReader.get_IsStarted() */
 HRESULT wdegp_gpio_change_reader_get__is_started(WDEGP_GpioChangeReader *self, BOOL *value);
 
-/* Windows.Devices.Gpio.GpioChangeReader.Start() */
 HRESULT wdegp_gpio_change_reader_start(WDEGP_GpioChangeReader *self);
 
-/* Windows.Devices.Gpio.GpioChangeReader.Stop() */
 HRESULT wdegp_gpio_change_reader_stop(WDEGP_GpioChangeReader *self);
 
-/* Windows.Devices.Gpio.GpioChangeReader.Clear() */
 HRESULT wdegp_gpio_change_reader_clear(WDEGP_GpioChangeReader *self);
 
-/* Windows.Devices.Gpio.GpioChangeReader.GetNextItem() */
 HRESULT wdegp_gpio_change_reader_get_next_item(WDEGP_GpioChangeReader *self, WDEGP_GpioChangeRecord *out);
 
-/* Windows.Devices.Gpio.GpioChangeReader.PeekNextItem() */
 HRESULT wdegp_gpio_change_reader_peek_next_item(WDEGP_GpioChangeReader *self, WDEGP_GpioChangeRecord *out);
 
-/* Windows.Devices.Gpio.GpioChangeReader.GetAllItems() */
 HRESULT wdegp_gpio_change_reader_get_all_items(WDEGP_GpioChangeReader *self, WFOCO_IVector_WDEGP_GpioChangeRecord** out);
 
-/* Windows.Devices.Gpio.GpioChangeReader.WaitForItemsAsync(count) */
 HRESULT wdegp_gpio_change_reader_wait_for_items_async(WDEGP_GpioChangeReader *self, int32_t count, WF_IAsyncAction** out);
 
-/* Windows.Devices.Gpio.GpioChangeReader.Close() */
 HRESULT wdegp_gpio_change_reader_close(WDEGP_GpioChangeReader *self);
 
-/* activate Windows.Devices.Gpio.GpioChangeCounter */
 HRESULT wdegp_gpio_change_counter_new(WDEGP_GpioChangeCounter **out);
 
-/* Windows.Devices.Gpio.GpioChangeCounter */
-/* Windows.Devices.Gpio.GpioChangeCounter.put_Polarity() */
 HRESULT wdegp_gpio_change_counter_put__polarity(WDEGP_GpioChangeCounter *self, WDEGP_GpioChangePolarity value);
 
-/* Windows.Devices.Gpio.GpioChangeCounter.get_Polarity() */
 HRESULT wdegp_gpio_change_counter_get__polarity(WDEGP_GpioChangeCounter *self, WDEGP_GpioChangePolarity *value);
 
-/* Windows.Devices.Gpio.GpioChangeCounter.get_IsStarted() */
 HRESULT wdegp_gpio_change_counter_get__is_started(WDEGP_GpioChangeCounter *self, BOOL *value);
 
-/* Windows.Devices.Gpio.GpioChangeCounter.Start() */
 HRESULT wdegp_gpio_change_counter_start(WDEGP_GpioChangeCounter *self);
 
-/* Windows.Devices.Gpio.GpioChangeCounter.Stop() */
 HRESULT wdegp_gpio_change_counter_stop(WDEGP_GpioChangeCounter *self);
 
-/* Windows.Devices.Gpio.GpioChangeCounter.Read() */
 HRESULT wdegp_gpio_change_counter_read(WDEGP_GpioChangeCounter *self, WDEGP_GpioChangeCount *out);
 
-/* Windows.Devices.Gpio.GpioChangeCounter.Reset() */
 HRESULT wdegp_gpio_change_counter_reset(WDEGP_GpioChangeCounter *self, WDEGP_GpioChangeCount *out);
 
-/* Windows.Devices.Gpio.GpioChangeCounter.Close() */
 HRESULT wdegp_gpio_change_counter_close(WDEGP_GpioChangeCounter *self);
 
-/* Windows.Devices.Gpio.IGpioChangeCounterFactory */
-/* Windows.Devices.Gpio.IGpioChangeCounterFactory.Create(pin) */
 HRESULT wdegp_gpio_change_counter_factory_create(WDEGP_IGpioChangeCounterFactory *self, WDEGP_GpioPin* pin, WDEGP_GpioChangeCounter** out);
 
-/* Windows.Devices.Gpio.IGpioPin */
-/* Windows.Devices.Gpio.IGpioPinValueChangedEventArgs */
-/* Windows.Devices.Gpio.IGpioController */
-/* Windows.Devices.Gpio.IGpioChangeReader */
-/* Windows.Devices.Gpio.IGpioChangeCounter */
 #endif /* CWINRT_WINDOWS_DEVICES_GPIO_H */

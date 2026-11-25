@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WS_IStorageFile
 #define CWINRT_FWD_WS_IStorageFile
 typedef struct WS_IStorageFile WS_IStorageFile;
@@ -30,14 +29,12 @@ typedef struct WSTST_IRandomAccessStream WSTST_IRandomAccessStream;
 typedef struct WMECO_IMediaSource WMECO_IMediaSource;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMETR_PrepareTranscodeResult WMETR_PrepareTranscodeResult;
 typedef struct WMETR_MediaTranscoder WMETR_MediaTranscoder;
 typedef struct WMETR_IPrepareTranscodeResult WMETR_IPrepareTranscodeResult;
 typedef struct WMETR_IMediaTranscoder WMETR_IMediaTranscoder;
 typedef struct WMETR_IMediaTranscoder_2 WMETR_IMediaTranscoder_2;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncActionWithProgress_F64
 #define CWINRT_FWD_WF_IAsyncActionWithProgress_F64
 typedef struct WF_IAsyncActionWithProgress_F64 WF_IAsyncActionWithProgress_F64;
@@ -89,7 +86,6 @@ typedef enum WMETR_TranscodeFailureReason {
 } WMETR_TranscodeFailureReason;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -106,89 +102,56 @@ static const IID CWINRT_IID_WMETR_IMediaTranscoder CWINRT_MAYBE_UNUSED = { 0x190
 static const IID CWINRT_IID_WMETR_IMediaTranscoder_2 CWINRT_MAYBE_UNUSED = { 0x40531D74, 0x35E0, 0x4F04, { 0x85, 0x74, 0xCA, 0x8B, 0xC4, 0xE5, 0xA0, 0x82 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Media.Transcoding.PrepareTranscodeResult */
 HRESULT wmetr_prepare_transcode_result_new(WMETR_PrepareTranscodeResult **out);
 
-/* Windows.Media.Transcoding.PrepareTranscodeResult */
-/* Windows.Media.Transcoding.PrepareTranscodeResult.get_CanTranscode() */
 HRESULT wmetr_prepare_transcode_result_get__can_transcode(WMETR_PrepareTranscodeResult *self, BOOL *value);
 
-/* Windows.Media.Transcoding.PrepareTranscodeResult.get_FailureReason() */
 HRESULT wmetr_prepare_transcode_result_get__failure_reason(WMETR_PrepareTranscodeResult *self, WMETR_TranscodeFailureReason *value);
 
-/* Windows.Media.Transcoding.PrepareTranscodeResult.TranscodeAsync() */
 HRESULT wmetr_prepare_transcode_result_transcode_async(WMETR_PrepareTranscodeResult *self, WF_IAsyncActionWithProgress_F64** out);
 
-/* activate Windows.Media.Transcoding.MediaTranscoder */
 HRESULT wmetr_media_transcoder_new(WMETR_MediaTranscoder **out);
 
-/* Windows.Media.Transcoding.MediaTranscoder */
-/* Windows.Media.Transcoding.MediaTranscoder.put_TrimStartTime() */
 HRESULT wmetr_media_transcoder_put__trim_start_time(WMETR_MediaTranscoder *self, WF_TimeSpan value);
 
-/* Windows.Media.Transcoding.MediaTranscoder.get_TrimStartTime() */
 HRESULT wmetr_media_transcoder_get__trim_start_time(WMETR_MediaTranscoder *self, WF_TimeSpan *value);
 
-/* Windows.Media.Transcoding.MediaTranscoder.put_TrimStopTime() */
 HRESULT wmetr_media_transcoder_put__trim_stop_time(WMETR_MediaTranscoder *self, WF_TimeSpan value);
 
-/* Windows.Media.Transcoding.MediaTranscoder.get_TrimStopTime() */
 HRESULT wmetr_media_transcoder_get__trim_stop_time(WMETR_MediaTranscoder *self, WF_TimeSpan *value);
 
-/* Windows.Media.Transcoding.MediaTranscoder.put_AlwaysReencode() */
 HRESULT wmetr_media_transcoder_put__always_reencode(WMETR_MediaTranscoder *self, BOOL value);
 
-/* Windows.Media.Transcoding.MediaTranscoder.get_AlwaysReencode() */
 HRESULT wmetr_media_transcoder_get__always_reencode(WMETR_MediaTranscoder *self, BOOL *value);
 
-/* Windows.Media.Transcoding.MediaTranscoder.put_HardwareAccelerationEnabled() */
 HRESULT wmetr_media_transcoder_put__hardware_acceleration_enabled(WMETR_MediaTranscoder *self, BOOL value);
 
-/* Windows.Media.Transcoding.MediaTranscoder.get_HardwareAccelerationEnabled() */
 HRESULT wmetr_media_transcoder_get__hardware_acceleration_enabled(WMETR_MediaTranscoder *self, BOOL *value);
 
-/* Windows.Media.Transcoding.MediaTranscoder.AddAudioEffect(activatableClassId) */
 HRESULT wmetr_media_transcoder_add_audio_effect(WMETR_MediaTranscoder *self, cwinrt_hstring activatableClassId);
 
-/* Windows.Media.Transcoding.MediaTranscoder.AddAudioEffect(activatableClassId, effectRequired, configuration) */
 HRESULT wmetr_media_transcoder_add_audio_effect_str_b_p(WMETR_MediaTranscoder *self, cwinrt_hstring activatableClassId, BOOL effectRequired, WFOCO_IPropertySet* configuration);
 
-/* Windows.Media.Transcoding.MediaTranscoder.AddVideoEffect(activatableClassId) */
 HRESULT wmetr_media_transcoder_add_video_effect(WMETR_MediaTranscoder *self, cwinrt_hstring activatableClassId);
 
-/* Windows.Media.Transcoding.MediaTranscoder.AddVideoEffect(activatableClassId, effectRequired, configuration) */
 HRESULT wmetr_media_transcoder_add_video_effect_str_b_p(WMETR_MediaTranscoder *self, cwinrt_hstring activatableClassId, BOOL effectRequired, WFOCO_IPropertySet* configuration);
 
-/* Windows.Media.Transcoding.MediaTranscoder.ClearEffects() */
 HRESULT wmetr_media_transcoder_clear_effects(WMETR_MediaTranscoder *self);
 
-/* Windows.Media.Transcoding.MediaTranscoder.PrepareFileTranscodeAsync(source, destination, profile) */
 HRESULT wmetr_media_transcoder_prepare_file_transcode_async(WMETR_MediaTranscoder *self, WS_IStorageFile* source, WS_IStorageFile* destination, WMEME_MediaEncodingProfile* profile, WF_IAsyncOperation_WMETR_PrepareTranscodeResult** out);
 
-/* Windows.Media.Transcoding.MediaTranscoder.PrepareStreamTranscodeAsync(source, destination, profile) */
 HRESULT wmetr_media_transcoder_prepare_stream_transcode_async(WMETR_MediaTranscoder *self, WSTST_IRandomAccessStream* source, WSTST_IRandomAccessStream* destination, WMEME_MediaEncodingProfile* profile, WF_IAsyncOperation_WMETR_PrepareTranscodeResult** out);
 
-/* Windows.Media.Transcoding.MediaTranscoder.PrepareMediaStreamSourceTranscodeAsync(source, destination, profile) */
 HRESULT wmetr_media_transcoder_prepare_media_stream_source_transcode_async(WMETR_MediaTranscoder *self, WMECO_IMediaSource* source, WSTST_IRandomAccessStream* destination, WMEME_MediaEncodingProfile* profile, WF_IAsyncOperation_WMETR_PrepareTranscodeResult** out);
 
-/* Windows.Media.Transcoding.MediaTranscoder.put_VideoProcessingAlgorithm() */
 HRESULT wmetr_media_transcoder_put__video_processing_algorithm(WMETR_MediaTranscoder *self, WMETR_MediaVideoProcessingAlgorithm value);
 
-/* Windows.Media.Transcoding.MediaTranscoder.get_VideoProcessingAlgorithm() */
 HRESULT wmetr_media_transcoder_get__video_processing_algorithm(WMETR_MediaTranscoder *self, WMETR_MediaVideoProcessingAlgorithm *value);
 
-/* Windows.Media.Transcoding.IPrepareTranscodeResult */
-/* Windows.Media.Transcoding.IMediaTranscoder */
-/* Windows.Media.Transcoding.IMediaTranscoder2 */
-/* Windows.Media.Transcoding.IMediaTranscoder2.PrepareMediaStreamSourceTranscodeAsync(source, destination, profile) */
 HRESULT wmetr_media_transcoder_2_prepare_media_stream_source_transcode_async(WMETR_IMediaTranscoder_2 *self, WMECO_IMediaSource* source, WSTST_IRandomAccessStream* destination, WMEME_MediaEncodingProfile* profile, WF_IAsyncOperation_WMETR_PrepareTranscodeResult** out);
 
-/* Windows.Media.Transcoding.IMediaTranscoder2.put_VideoProcessingAlgorithm() */
 HRESULT wmetr_media_transcoder_2_put__video_processing_algorithm(WMETR_IMediaTranscoder_2 *self, WMETR_MediaVideoProcessingAlgorithm value);
 
-/* Windows.Media.Transcoding.IMediaTranscoder2.get_VideoProcessingAlgorithm() */
 HRESULT wmetr_media_transcoder_2_get__video_processing_algorithm(WMETR_IMediaTranscoder_2 *self, WMETR_MediaVideoProcessingAlgorithm *value);
 
 #endif /* CWINRT_WINDOWS_MEDIA_TRANSCODING_H */

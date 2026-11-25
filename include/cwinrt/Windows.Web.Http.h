@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Storage.Streams.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WWEHTHE_HttpContentHeaderCollection
 #define CWINRT_FWD_WWEHTHE_HttpContentHeaderCollection
 typedef struct WWEHTHE_HttpContentHeaderCollection WWEHTHE_HttpContentHeaderCollection;
@@ -76,7 +75,6 @@ typedef enum WSECRCE_ChainValidationResult {
 typedef struct WWEHTFI_IHttpFilter WWEHTFI_IHttpFilter;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WWEHT_HttpMethod WWEHT_HttpMethod;
 typedef struct WWEHT_IHttpStringContentFactory WWEHT_IHttpStringContentFactory;
 typedef struct WWEHT_IHttpStreamContentFactory WWEHT_IHttpStreamContentFactory;
@@ -125,7 +123,6 @@ typedef struct WWEHT_IHttpClient_2 WWEHT_IHttpClient_2;
 typedef struct WWEHT_IHttpClient_3 WWEHT_IHttpClient_3;
 typedef struct WWEHT_IHttpContent WWEHT_IHttpContent;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSTST_UnicodeEncoding
 #define CWINRT_FWD_WSTST_UnicodeEncoding
 typedef enum WSTST_UnicodeEncoding {
@@ -380,7 +377,6 @@ struct WWEHT_HttpProgress {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -501,767 +497,480 @@ static const IID CWINRT_IID_WWEHT_IHttpClient_3 CWINRT_MAYBE_UNUSED = { 0x1172FD
 static const IID CWINRT_IID_WWEHT_IHttpContent CWINRT_MAYBE_UNUSED = { 0x6B14A441, 0xFBA7, 0x4BD2, { 0xAF, 0x0A, 0x83, 0x9D, 0xE7, 0xC2, 0x95, 0xDA } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Web.Http.HttpMethod */
 HRESULT wweht_http_method_new(WWEHT_HttpMethod **out);
 
-/* Windows.Web.Http.HttpMethod */
-/* Windows.Web.Http.HttpMethod.get_Method() */
 HRESULT wweht_http_method_get__method(WWEHT_HttpMethod *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.HttpMethod.ToString() */
 HRESULT wweht_http_method_to_string(WWEHT_HttpMethod *self, cwinrt_hstring *out);
 
-/* Windows.Web.Http.HttpMethod.get_Delete() */
 HRESULT wweht_http_method_get__delete(WWEHT_HttpMethod** value);
 
-/* Windows.Web.Http.HttpMethod.get_Get() */
 HRESULT wweht_http_method_get__get(WWEHT_HttpMethod** value);
 
-/* Windows.Web.Http.HttpMethod.get_Head() */
 HRESULT wweht_http_method_get__head(WWEHT_HttpMethod** value);
 
-/* Windows.Web.Http.HttpMethod.get_Options() */
 HRESULT wweht_http_method_get__options(WWEHT_HttpMethod** value);
 
-/* Windows.Web.Http.HttpMethod.get_Patch() */
 HRESULT wweht_http_method_get__patch(WWEHT_HttpMethod** value);
 
-/* Windows.Web.Http.HttpMethod.get_Post() */
 HRESULT wweht_http_method_get__post(WWEHT_HttpMethod** value);
 
-/* Windows.Web.Http.HttpMethod.get_Put() */
 HRESULT wweht_http_method_get__put(WWEHT_HttpMethod** value);
 
-/* Windows.Web.Http.IHttpStringContentFactory */
-/* Windows.Web.Http.IHttpStringContentFactory.CreateFromString(content) */
 HRESULT wweht_http_string_content_factory_create_from_string(WWEHT_IHttpStringContentFactory *self, cwinrt_hstring content, WWEHT_HttpStringContent** out);
 
-/* Windows.Web.Http.IHttpStringContentFactory.CreateFromStringWithEncoding(content, encoding) */
 HRESULT wweht_http_string_content_factory_create_from_string_with_encoding(WWEHT_IHttpStringContentFactory *self, cwinrt_hstring content, WSTST_UnicodeEncoding encoding, WWEHT_HttpStringContent** out);
 
-/* Windows.Web.Http.IHttpStringContentFactory.CreateFromStringWithEncodingAndMediaType(content, encoding, mediaType) */
 HRESULT wweht_http_string_content_factory_create_from_string_with_encoding_and_media_type(WWEHT_IHttpStringContentFactory *self, cwinrt_hstring content, WSTST_UnicodeEncoding encoding, cwinrt_hstring mediaType, WWEHT_HttpStringContent** out);
 
-/* Windows.Web.Http.IHttpStreamContentFactory */
-/* Windows.Web.Http.IHttpStreamContentFactory.CreateFromInputStream(content) */
 HRESULT wweht_http_stream_content_factory_create_from_input_stream(WWEHT_IHttpStreamContentFactory *self, WSTST_IInputStream* content, WWEHT_HttpStreamContent** out);
 
-/* Windows.Web.Http.IHttpResponseMessageFactory */
-/* Windows.Web.Http.IHttpResponseMessageFactory.Create(statusCode) */
 HRESULT wweht_http_response_message_factory_create(WWEHT_IHttpResponseMessageFactory *self, WWEHT_HttpStatusCode statusCode, WWEHT_HttpResponseMessage** out);
 
-/* Windows.Web.Http.IHttpRequestMessageFactory */
-/* Windows.Web.Http.IHttpRequestMessageFactory.Create(method, uri) */
 HRESULT wweht_http_request_message_factory_create(WWEHT_IHttpRequestMessageFactory *self, WWEHT_HttpMethod* method, WF_Uri* uri, WWEHT_HttpRequestMessage** out);
 
-/* Windows.Web.Http.IHttpMultipartFormDataContentFactory */
-/* Windows.Web.Http.IHttpMultipartFormDataContentFactory.CreateWithBoundary(boundary) */
 HRESULT wweht_http_multipart_form_data_content_factory_create_with_boundary(WWEHT_IHttpMultipartFormDataContentFactory *self, cwinrt_hstring boundary, WWEHT_HttpMultipartFormDataContent** out);
 
-/* Windows.Web.Http.IHttpMultipartContentFactory */
-/* Windows.Web.Http.IHttpMultipartContentFactory.CreateWithSubtype(subtype) */
 HRESULT wweht_http_multipart_content_factory_create_with_subtype(WWEHT_IHttpMultipartContentFactory *self, cwinrt_hstring subtype, WWEHT_HttpMultipartContent** out);
 
-/* Windows.Web.Http.IHttpMultipartContentFactory.CreateWithSubtypeAndBoundary(subtype, boundary) */
 HRESULT wweht_http_multipart_content_factory_create_with_subtype_and_boundary(WWEHT_IHttpMultipartContentFactory *self, cwinrt_hstring subtype, cwinrt_hstring boundary, WWEHT_HttpMultipartContent** out);
 
-/* Windows.Web.Http.IHttpMethodStatics */
-/* Windows.Web.Http.IHttpMethodStatics.get_Delete() */
 HRESULT wweht_http_method_statics_get__delete(WWEHT_IHttpMethodStatics *self, WWEHT_HttpMethod** value);
 
-/* Windows.Web.Http.IHttpMethodStatics.get_Get() */
 HRESULT wweht_http_method_statics_get__get(WWEHT_IHttpMethodStatics *self, WWEHT_HttpMethod** value);
 
-/* Windows.Web.Http.IHttpMethodStatics.get_Head() */
 HRESULT wweht_http_method_statics_get__head(WWEHT_IHttpMethodStatics *self, WWEHT_HttpMethod** value);
 
-/* Windows.Web.Http.IHttpMethodStatics.get_Options() */
 HRESULT wweht_http_method_statics_get__options(WWEHT_IHttpMethodStatics *self, WWEHT_HttpMethod** value);
 
-/* Windows.Web.Http.IHttpMethodStatics.get_Patch() */
 HRESULT wweht_http_method_statics_get__patch(WWEHT_IHttpMethodStatics *self, WWEHT_HttpMethod** value);
 
-/* Windows.Web.Http.IHttpMethodStatics.get_Post() */
 HRESULT wweht_http_method_statics_get__post(WWEHT_IHttpMethodStatics *self, WWEHT_HttpMethod** value);
 
-/* Windows.Web.Http.IHttpMethodStatics.get_Put() */
 HRESULT wweht_http_method_statics_get__put(WWEHT_IHttpMethodStatics *self, WWEHT_HttpMethod** value);
 
-/* Windows.Web.Http.IHttpMethodFactory */
-/* Windows.Web.Http.IHttpMethodFactory.Create(method) */
 HRESULT wweht_http_method_factory_create(WWEHT_IHttpMethodFactory *self, cwinrt_hstring method, WWEHT_HttpMethod** out);
 
-/* Windows.Web.Http.IHttpFormUrlEncodedContentFactory */
-/* Windows.Web.Http.IHttpFormUrlEncodedContentFactory.Create(content) */
 HRESULT wweht_http_form_url_encoded_content_factory_create(WWEHT_IHttpFormUrlEncodedContentFactory *self, WFOCO_IIterable_WFOCO_IKeyValuePair_HSTRING_HSTRING* content, WWEHT_HttpFormUrlEncodedContent** out);
 
-/* Windows.Web.Http.IHttpCookieFactory */
-/* Windows.Web.Http.IHttpCookieFactory.Create(name, domain, path) */
 HRESULT wweht_http_cookie_factory_create(WWEHT_IHttpCookieFactory *self, cwinrt_hstring name, cwinrt_hstring domain, cwinrt_hstring path, WWEHT_HttpCookie** out);
 
-/* Windows.Web.Http.IHttpClientFactory */
-/* Windows.Web.Http.IHttpClientFactory.Create(filter) */
 HRESULT wweht_http_client_factory_create(WWEHT_IHttpClientFactory *self, WWEHTFI_IHttpFilter* filter, WWEHT_HttpClient** out);
 
-/* Windows.Web.Http.IHttpBufferContentFactory */
-/* Windows.Web.Http.IHttpBufferContentFactory.CreateFromBuffer(content) */
 HRESULT wweht_http_buffer_content_factory_create_from_buffer(WWEHT_IHttpBufferContentFactory *self, WSTST_IBuffer* content, WWEHT_HttpBufferContent** out);
 
-/* Windows.Web.Http.IHttpBufferContentFactory.CreateFromBufferWithOffset(content, offset, count) */
 HRESULT wweht_http_buffer_content_factory_create_from_buffer_with_offset(WWEHT_IHttpBufferContentFactory *self, WSTST_IBuffer* content, uint32_t offset, uint32_t count, WWEHT_HttpBufferContent** out);
 
-/* activate Windows.Web.Http.HttpTransportInformation */
 HRESULT wweht_http_transport_information_new(WWEHT_HttpTransportInformation **out);
 
-/* Windows.Web.Http.HttpTransportInformation */
-/* Windows.Web.Http.HttpTransportInformation.get_ServerCertificate() */
 HRESULT wweht_http_transport_information_get__server_certificate(WWEHT_HttpTransportInformation *self, WSECRCE_Certificate** value);
 
-/* Windows.Web.Http.HttpTransportInformation.get_ServerCertificateErrorSeverity() */
 HRESULT wweht_http_transport_information_get__server_certificate_error_severity(WWEHT_HttpTransportInformation *self, WNESO_SocketSslErrorSeverity *value);
 
-/* Windows.Web.Http.HttpTransportInformation.get_ServerCertificateErrors() */
 HRESULT wweht_http_transport_information_get__server_certificate_errors(WWEHT_HttpTransportInformation *self, WFOCO_IVectorView_WSECRCE_ChainValidationResult** value);
 
-/* Windows.Web.Http.HttpTransportInformation.get_ServerIntermediateCertificates() */
 HRESULT wweht_http_transport_information_get__server_intermediate_certificates(WWEHT_HttpTransportInformation *self, WFOCO_IVectorView_WSECRCE_Certificate** value);
 
-/* Windows.Web.Http.HttpTransportInformation.ToString() */
 HRESULT wweht_http_transport_information_to_string(WWEHT_HttpTransportInformation *self, cwinrt_hstring *out);
 
-/* activate Windows.Web.Http.HttpStringContent */
 HRESULT wweht_http_string_content_new(WWEHT_HttpStringContent **out);
 
-/* Windows.Web.Http.HttpStringContent */
-/* Windows.Web.Http.HttpStringContent.get_Headers() */
 HRESULT wweht_http_string_content_get__headers(WWEHT_HttpStringContent *self, WWEHTHE_HttpContentHeaderCollection** value);
 
-/* Windows.Web.Http.HttpStringContent.BufferAllAsync() */
 HRESULT wweht_http_string_content_buffer_all_async(WWEHT_HttpStringContent *self, WF_IAsyncOperationWithProgress_uint64_t_uint64_t** out);
 
-/* Windows.Web.Http.HttpStringContent.ReadAsBufferAsync() */
 HRESULT wweht_http_string_content_read_as_buffer_async(WWEHT_HttpStringContent *self, WF_IAsyncOperationWithProgress_WSTST_IBuffer_uint64_t** out);
 
-/* Windows.Web.Http.HttpStringContent.ReadAsInputStreamAsync() */
 HRESULT wweht_http_string_content_read_as_input_stream_async(WWEHT_HttpStringContent *self, WF_IAsyncOperationWithProgress_WSTST_IInputStream_uint64_t** out);
 
-/* Windows.Web.Http.HttpStringContent.ReadAsStringAsync() */
 HRESULT wweht_http_string_content_read_as_string_async(WWEHT_HttpStringContent *self, WF_IAsyncOperationWithProgress_HSTRING_uint64_t** out);
 
-/* Windows.Web.Http.HttpStringContent.TryComputeLength(length) */
 HRESULT wweht_http_string_content_try_compute_length(WWEHT_HttpStringContent *self, uint64_t length, BOOL *out);
 
-/* Windows.Web.Http.HttpStringContent.WriteToStreamAsync(outputStream) */
 HRESULT wweht_http_string_content_write_to_stream_async(WWEHT_HttpStringContent *self, WSTST_IOutputStream* outputStream, WF_IAsyncOperationWithProgress_uint64_t_uint64_t** out);
 
-/* Windows.Web.Http.HttpStringContent.Close() */
 HRESULT wweht_http_string_content_close(WWEHT_HttpStringContent *self);
 
-/* Windows.Web.Http.HttpStringContent.ToString() */
 HRESULT wweht_http_string_content_to_string(WWEHT_HttpStringContent *self, cwinrt_hstring *out);
 
-/* activate Windows.Web.Http.HttpStreamContent */
 HRESULT wweht_http_stream_content_new(WWEHT_HttpStreamContent **out);
 
-/* Windows.Web.Http.HttpStreamContent */
-/* Windows.Web.Http.HttpStreamContent.get_Headers() */
 HRESULT wweht_http_stream_content_get__headers(WWEHT_HttpStreamContent *self, WWEHTHE_HttpContentHeaderCollection** value);
 
-/* Windows.Web.Http.HttpStreamContent.BufferAllAsync() */
 HRESULT wweht_http_stream_content_buffer_all_async(WWEHT_HttpStreamContent *self, WF_IAsyncOperationWithProgress_uint64_t_uint64_t** out);
 
-/* Windows.Web.Http.HttpStreamContent.ReadAsBufferAsync() */
 HRESULT wweht_http_stream_content_read_as_buffer_async(WWEHT_HttpStreamContent *self, WF_IAsyncOperationWithProgress_WSTST_IBuffer_uint64_t** out);
 
-/* Windows.Web.Http.HttpStreamContent.ReadAsInputStreamAsync() */
 HRESULT wweht_http_stream_content_read_as_input_stream_async(WWEHT_HttpStreamContent *self, WF_IAsyncOperationWithProgress_WSTST_IInputStream_uint64_t** out);
 
-/* Windows.Web.Http.HttpStreamContent.ReadAsStringAsync() */
 HRESULT wweht_http_stream_content_read_as_string_async(WWEHT_HttpStreamContent *self, WF_IAsyncOperationWithProgress_HSTRING_uint64_t** out);
 
-/* Windows.Web.Http.HttpStreamContent.TryComputeLength(length) */
 HRESULT wweht_http_stream_content_try_compute_length(WWEHT_HttpStreamContent *self, uint64_t length, BOOL *out);
 
-/* Windows.Web.Http.HttpStreamContent.WriteToStreamAsync(outputStream) */
 HRESULT wweht_http_stream_content_write_to_stream_async(WWEHT_HttpStreamContent *self, WSTST_IOutputStream* outputStream, WF_IAsyncOperationWithProgress_uint64_t_uint64_t** out);
 
-/* Windows.Web.Http.HttpStreamContent.Close() */
 HRESULT wweht_http_stream_content_close(WWEHT_HttpStreamContent *self);
 
-/* Windows.Web.Http.HttpStreamContent.ToString() */
 HRESULT wweht_http_stream_content_to_string(WWEHT_HttpStreamContent *self, cwinrt_hstring *out);
 
-/* activate Windows.Web.Http.HttpResponseMessage */
 HRESULT wweht_http_response_message_new(WWEHT_HttpResponseMessage **out);
 
-/* Windows.Web.Http.HttpResponseMessage */
-/* Windows.Web.Http.HttpResponseMessage.get_Content() */
 HRESULT wweht_http_response_message_get__content(WWEHT_HttpResponseMessage *self, WWEHT_IHttpContent** value);
 
-/* Windows.Web.Http.HttpResponseMessage.put_Content() */
 HRESULT wweht_http_response_message_put__content(WWEHT_HttpResponseMessage *self, WWEHT_IHttpContent* value);
 
-/* Windows.Web.Http.HttpResponseMessage.get_Headers() */
 HRESULT wweht_http_response_message_get__headers(WWEHT_HttpResponseMessage *self, WWEHTHE_HttpResponseHeaderCollection** value);
 
-/* Windows.Web.Http.HttpResponseMessage.get_IsSuccessStatusCode() */
 HRESULT wweht_http_response_message_get__is_success_status_code(WWEHT_HttpResponseMessage *self, BOOL *value);
 
-/* Windows.Web.Http.HttpResponseMessage.get_ReasonPhrase() */
 HRESULT wweht_http_response_message_get__reason_phrase(WWEHT_HttpResponseMessage *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.HttpResponseMessage.put_ReasonPhrase() */
 HRESULT wweht_http_response_message_put__reason_phrase(WWEHT_HttpResponseMessage *self, cwinrt_hstring value);
 
-/* Windows.Web.Http.HttpResponseMessage.get_RequestMessage() */
 HRESULT wweht_http_response_message_get__request_message(WWEHT_HttpResponseMessage *self, WWEHT_HttpRequestMessage** value);
 
-/* Windows.Web.Http.HttpResponseMessage.put_RequestMessage() */
 HRESULT wweht_http_response_message_put__request_message(WWEHT_HttpResponseMessage *self, WWEHT_HttpRequestMessage* value);
 
-/* Windows.Web.Http.HttpResponseMessage.get_Source() */
 HRESULT wweht_http_response_message_get__source(WWEHT_HttpResponseMessage *self, WWEHT_HttpResponseMessageSource *value);
 
-/* Windows.Web.Http.HttpResponseMessage.put_Source() */
 HRESULT wweht_http_response_message_put__source(WWEHT_HttpResponseMessage *self, WWEHT_HttpResponseMessageSource value);
 
-/* Windows.Web.Http.HttpResponseMessage.get_StatusCode() */
 HRESULT wweht_http_response_message_get__status_code(WWEHT_HttpResponseMessage *self, WWEHT_HttpStatusCode *value);
 
-/* Windows.Web.Http.HttpResponseMessage.put_StatusCode() */
 HRESULT wweht_http_response_message_put__status_code(WWEHT_HttpResponseMessage *self, WWEHT_HttpStatusCode value);
 
-/* Windows.Web.Http.HttpResponseMessage.get_Version() */
 HRESULT wweht_http_response_message_get__version(WWEHT_HttpResponseMessage *self, WWEHT_HttpVersion *value);
 
-/* Windows.Web.Http.HttpResponseMessage.put_Version() */
 HRESULT wweht_http_response_message_put__version(WWEHT_HttpResponseMessage *self, WWEHT_HttpVersion value);
 
-/* Windows.Web.Http.HttpResponseMessage.EnsureSuccessStatusCode() */
 HRESULT wweht_http_response_message_ensure_success_status_code(WWEHT_HttpResponseMessage *self, WWEHT_HttpResponseMessage** out);
 
-/* Windows.Web.Http.HttpResponseMessage.Close() */
 HRESULT wweht_http_response_message_close(WWEHT_HttpResponseMessage *self);
 
-/* Windows.Web.Http.HttpResponseMessage.ToString() */
 HRESULT wweht_http_response_message_to_string(WWEHT_HttpResponseMessage *self, cwinrt_hstring *out);
 
-/* activate Windows.Web.Http.HttpRequestResult */
 HRESULT wweht_http_request_result_new(WWEHT_HttpRequestResult **out);
 
-/* Windows.Web.Http.HttpRequestResult */
-/* Windows.Web.Http.HttpRequestResult.get_ExtendedError() */
 HRESULT wweht_http_request_result_get__extended_error(WWEHT_HttpRequestResult *self, HRESULT *value);
 
-/* Windows.Web.Http.HttpRequestResult.get_RequestMessage() */
 HRESULT wweht_http_request_result_get__request_message(WWEHT_HttpRequestResult *self, WWEHT_HttpRequestMessage** value);
 
-/* Windows.Web.Http.HttpRequestResult.get_ResponseMessage() */
 HRESULT wweht_http_request_result_get__response_message(WWEHT_HttpRequestResult *self, WWEHT_HttpResponseMessage** value);
 
-/* Windows.Web.Http.HttpRequestResult.get_Succeeded() */
 HRESULT wweht_http_request_result_get__succeeded(WWEHT_HttpRequestResult *self, BOOL *value);
 
-/* Windows.Web.Http.HttpRequestResult.Close() */
 HRESULT wweht_http_request_result_close(WWEHT_HttpRequestResult *self);
 
-/* Windows.Web.Http.HttpRequestResult.ToString() */
 HRESULT wweht_http_request_result_to_string(WWEHT_HttpRequestResult *self, cwinrt_hstring *out);
 
-/* activate Windows.Web.Http.HttpRequestMessage */
 HRESULT wweht_http_request_message_new(WWEHT_HttpRequestMessage **out);
 
-/* Windows.Web.Http.HttpRequestMessage */
-/* Windows.Web.Http.HttpRequestMessage.get_Content() */
 HRESULT wweht_http_request_message_get__content(WWEHT_HttpRequestMessage *self, WWEHT_IHttpContent** value);
 
-/* Windows.Web.Http.HttpRequestMessage.put_Content() */
 HRESULT wweht_http_request_message_put__content(WWEHT_HttpRequestMessage *self, WWEHT_IHttpContent* value);
 
-/* Windows.Web.Http.HttpRequestMessage.get_Headers() */
 HRESULT wweht_http_request_message_get__headers(WWEHT_HttpRequestMessage *self, WWEHTHE_HttpRequestHeaderCollection** value);
 
-/* Windows.Web.Http.HttpRequestMessage.get_Method() */
 HRESULT wweht_http_request_message_get__method(WWEHT_HttpRequestMessage *self, WWEHT_HttpMethod** value);
 
-/* Windows.Web.Http.HttpRequestMessage.put_Method() */
 HRESULT wweht_http_request_message_put__method(WWEHT_HttpRequestMessage *self, WWEHT_HttpMethod* value);
 
-/* Windows.Web.Http.HttpRequestMessage.get_Properties() */
 HRESULT wweht_http_request_message_get__properties(WWEHT_HttpRequestMessage *self, WFOCO_IMap_HSTRING_Object** value);
 
-/* Windows.Web.Http.HttpRequestMessage.get_RequestUri() */
 HRESULT wweht_http_request_message_get__request_uri(WWEHT_HttpRequestMessage *self, WF_Uri** value);
 
-/* Windows.Web.Http.HttpRequestMessage.put_RequestUri() */
 HRESULT wweht_http_request_message_put__request_uri(WWEHT_HttpRequestMessage *self, WF_Uri* value);
 
-/* Windows.Web.Http.HttpRequestMessage.get_TransportInformation() */
 HRESULT wweht_http_request_message_get__transport_information(WWEHT_HttpRequestMessage *self, WWEHT_HttpTransportInformation** value);
 
-/* Windows.Web.Http.HttpRequestMessage.get_PrivacyAnnotation() */
 HRESULT wweht_http_request_message_get__privacy_annotation(WWEHT_HttpRequestMessage *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.HttpRequestMessage.put_PrivacyAnnotation() */
 HRESULT wweht_http_request_message_put__privacy_annotation(WWEHT_HttpRequestMessage *self, cwinrt_hstring value);
 
-/* Windows.Web.Http.HttpRequestMessage.Close() */
 HRESULT wweht_http_request_message_close(WWEHT_HttpRequestMessage *self);
 
-/* Windows.Web.Http.HttpRequestMessage.ToString() */
 HRESULT wweht_http_request_message_to_string(WWEHT_HttpRequestMessage *self, cwinrt_hstring *out);
 
-/* activate Windows.Web.Http.HttpMultipartFormDataContent */
 HRESULT wweht_http_multipart_form_data_content_new(WWEHT_HttpMultipartFormDataContent **out);
 
-/* Windows.Web.Http.HttpMultipartFormDataContent */
-/* Windows.Web.Http.HttpMultipartFormDataContent.Add(content) */
 HRESULT wweht_http_multipart_form_data_content_add(WWEHT_HttpMultipartFormDataContent *self, WWEHT_IHttpContent* content);
 
-/* Windows.Web.Http.HttpMultipartFormDataContent.Add(content, name) */
 HRESULT wweht_http_multipart_form_data_content_add_p_str(WWEHT_HttpMultipartFormDataContent *self, WWEHT_IHttpContent* content, cwinrt_hstring name);
 
-/* Windows.Web.Http.HttpMultipartFormDataContent.Add(content, name, fileName) */
 HRESULT wweht_http_multipart_form_data_content_add_p_str_str(WWEHT_HttpMultipartFormDataContent *self, WWEHT_IHttpContent* content, cwinrt_hstring name, cwinrt_hstring fileName);
 
-/* Windows.Web.Http.HttpMultipartFormDataContent.get_Headers() */
 HRESULT wweht_http_multipart_form_data_content_get__headers(WWEHT_HttpMultipartFormDataContent *self, WWEHTHE_HttpContentHeaderCollection** value);
 
-/* Windows.Web.Http.HttpMultipartFormDataContent.BufferAllAsync() */
 HRESULT wweht_http_multipart_form_data_content_buffer_all_async(WWEHT_HttpMultipartFormDataContent *self, WF_IAsyncOperationWithProgress_uint64_t_uint64_t** out);
 
-/* Windows.Web.Http.HttpMultipartFormDataContent.ReadAsBufferAsync() */
 HRESULT wweht_http_multipart_form_data_content_read_as_buffer_async(WWEHT_HttpMultipartFormDataContent *self, WF_IAsyncOperationWithProgress_WSTST_IBuffer_uint64_t** out);
 
-/* Windows.Web.Http.HttpMultipartFormDataContent.ReadAsInputStreamAsync() */
 HRESULT wweht_http_multipart_form_data_content_read_as_input_stream_async(WWEHT_HttpMultipartFormDataContent *self, WF_IAsyncOperationWithProgress_WSTST_IInputStream_uint64_t** out);
 
-/* Windows.Web.Http.HttpMultipartFormDataContent.ReadAsStringAsync() */
 HRESULT wweht_http_multipart_form_data_content_read_as_string_async(WWEHT_HttpMultipartFormDataContent *self, WF_IAsyncOperationWithProgress_HSTRING_uint64_t** out);
 
-/* Windows.Web.Http.HttpMultipartFormDataContent.TryComputeLength(length) */
 HRESULT wweht_http_multipart_form_data_content_try_compute_length(WWEHT_HttpMultipartFormDataContent *self, uint64_t length, BOOL *out);
 
-/* Windows.Web.Http.HttpMultipartFormDataContent.WriteToStreamAsync(outputStream) */
 HRESULT wweht_http_multipart_form_data_content_write_to_stream_async(WWEHT_HttpMultipartFormDataContent *self, WSTST_IOutputStream* outputStream, WF_IAsyncOperationWithProgress_uint64_t_uint64_t** out);
 
-/* Windows.Web.Http.HttpMultipartFormDataContent.Close() */
 HRESULT wweht_http_multipart_form_data_content_close(WWEHT_HttpMultipartFormDataContent *self);
 
-/* Windows.Web.Http.HttpMultipartFormDataContent.First() */
 HRESULT wweht_http_multipart_form_data_content_first(WWEHT_HttpMultipartFormDataContent *self, WFOCO_IIterator_WWEHT_IHttpContent** out);
 
-/* Windows.Web.Http.HttpMultipartFormDataContent.ToString() */
 HRESULT wweht_http_multipart_form_data_content_to_string(WWEHT_HttpMultipartFormDataContent *self, cwinrt_hstring *out);
 
-/* activate Windows.Web.Http.HttpMultipartContent */
 HRESULT wweht_http_multipart_content_new(WWEHT_HttpMultipartContent **out);
 
-/* Windows.Web.Http.HttpMultipartContent */
-/* Windows.Web.Http.HttpMultipartContent.Add(content) */
 HRESULT wweht_http_multipart_content_add(WWEHT_HttpMultipartContent *self, WWEHT_IHttpContent* content);
 
-/* Windows.Web.Http.HttpMultipartContent.get_Headers() */
 HRESULT wweht_http_multipart_content_get__headers(WWEHT_HttpMultipartContent *self, WWEHTHE_HttpContentHeaderCollection** value);
 
-/* Windows.Web.Http.HttpMultipartContent.BufferAllAsync() */
 HRESULT wweht_http_multipart_content_buffer_all_async(WWEHT_HttpMultipartContent *self, WF_IAsyncOperationWithProgress_uint64_t_uint64_t** out);
 
-/* Windows.Web.Http.HttpMultipartContent.ReadAsBufferAsync() */
 HRESULT wweht_http_multipart_content_read_as_buffer_async(WWEHT_HttpMultipartContent *self, WF_IAsyncOperationWithProgress_WSTST_IBuffer_uint64_t** out);
 
-/* Windows.Web.Http.HttpMultipartContent.ReadAsInputStreamAsync() */
 HRESULT wweht_http_multipart_content_read_as_input_stream_async(WWEHT_HttpMultipartContent *self, WF_IAsyncOperationWithProgress_WSTST_IInputStream_uint64_t** out);
 
-/* Windows.Web.Http.HttpMultipartContent.ReadAsStringAsync() */
 HRESULT wweht_http_multipart_content_read_as_string_async(WWEHT_HttpMultipartContent *self, WF_IAsyncOperationWithProgress_HSTRING_uint64_t** out);
 
-/* Windows.Web.Http.HttpMultipartContent.TryComputeLength(length) */
 HRESULT wweht_http_multipart_content_try_compute_length(WWEHT_HttpMultipartContent *self, uint64_t length, BOOL *out);
 
-/* Windows.Web.Http.HttpMultipartContent.WriteToStreamAsync(outputStream) */
 HRESULT wweht_http_multipart_content_write_to_stream_async(WWEHT_HttpMultipartContent *self, WSTST_IOutputStream* outputStream, WF_IAsyncOperationWithProgress_uint64_t_uint64_t** out);
 
-/* Windows.Web.Http.HttpMultipartContent.Close() */
 HRESULT wweht_http_multipart_content_close(WWEHT_HttpMultipartContent *self);
 
-/* Windows.Web.Http.HttpMultipartContent.First() */
 HRESULT wweht_http_multipart_content_first(WWEHT_HttpMultipartContent *self, WFOCO_IIterator_WWEHT_IHttpContent** out);
 
-/* Windows.Web.Http.HttpMultipartContent.ToString() */
 HRESULT wweht_http_multipart_content_to_string(WWEHT_HttpMultipartContent *self, cwinrt_hstring *out);
 
-/* activate Windows.Web.Http.HttpCookie */
 HRESULT wweht_http_cookie_new(WWEHT_HttpCookie **out);
 
-/* Windows.Web.Http.HttpCookie */
-/* Windows.Web.Http.HttpCookie.get_Name() */
 HRESULT wweht_http_cookie_get__name(WWEHT_HttpCookie *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.HttpCookie.get_Domain() */
 HRESULT wweht_http_cookie_get__domain(WWEHT_HttpCookie *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.HttpCookie.get_Path() */
 HRESULT wweht_http_cookie_get__path(WWEHT_HttpCookie *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.HttpCookie.get_Expires() */
 HRESULT wweht_http_cookie_get__expires(WWEHT_HttpCookie *self, WF_DateTime** value);
 
-/* Windows.Web.Http.HttpCookie.put_Expires() */
 HRESULT wweht_http_cookie_put__expires(WWEHT_HttpCookie *self, WF_DateTime* value);
 
-/* Windows.Web.Http.HttpCookie.get_HttpOnly() */
 HRESULT wweht_http_cookie_get__http_only(WWEHT_HttpCookie *self, BOOL *value);
 
-/* Windows.Web.Http.HttpCookie.put_HttpOnly() */
 HRESULT wweht_http_cookie_put__http_only(WWEHT_HttpCookie *self, BOOL value);
 
-/* Windows.Web.Http.HttpCookie.get_Secure() */
 HRESULT wweht_http_cookie_get__secure(WWEHT_HttpCookie *self, BOOL *value);
 
-/* Windows.Web.Http.HttpCookie.put_Secure() */
 HRESULT wweht_http_cookie_put__secure(WWEHT_HttpCookie *self, BOOL value);
 
-/* Windows.Web.Http.HttpCookie.get_Value() */
 HRESULT wweht_http_cookie_get__value(WWEHT_HttpCookie *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.HttpCookie.put_Value() */
 HRESULT wweht_http_cookie_put__value(WWEHT_HttpCookie *self, cwinrt_hstring value);
 
-/* Windows.Web.Http.HttpCookie.ToString() */
 HRESULT wweht_http_cookie_to_string(WWEHT_HttpCookie *self, cwinrt_hstring *out);
 
-/* activate Windows.Web.Http.HttpGetStringResult */
 HRESULT wweht_http_get_string_result_new(WWEHT_HttpGetStringResult **out);
 
-/* Windows.Web.Http.HttpGetStringResult */
-/* Windows.Web.Http.HttpGetStringResult.get_ExtendedError() */
 HRESULT wweht_http_get_string_result_get__extended_error(WWEHT_HttpGetStringResult *self, HRESULT *value);
 
-/* Windows.Web.Http.HttpGetStringResult.get_RequestMessage() */
 HRESULT wweht_http_get_string_result_get__request_message(WWEHT_HttpGetStringResult *self, WWEHT_HttpRequestMessage** value);
 
-/* Windows.Web.Http.HttpGetStringResult.get_ResponseMessage() */
 HRESULT wweht_http_get_string_result_get__response_message(WWEHT_HttpGetStringResult *self, WWEHT_HttpResponseMessage** value);
 
-/* Windows.Web.Http.HttpGetStringResult.get_Succeeded() */
 HRESULT wweht_http_get_string_result_get__succeeded(WWEHT_HttpGetStringResult *self, BOOL *value);
 
-/* Windows.Web.Http.HttpGetStringResult.get_Value() */
 HRESULT wweht_http_get_string_result_get__value(WWEHT_HttpGetStringResult *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.HttpGetStringResult.Close() */
 HRESULT wweht_http_get_string_result_close(WWEHT_HttpGetStringResult *self);
 
-/* Windows.Web.Http.HttpGetStringResult.ToString() */
 HRESULT wweht_http_get_string_result_to_string(WWEHT_HttpGetStringResult *self, cwinrt_hstring *out);
 
-/* activate Windows.Web.Http.HttpGetInputStreamResult */
 HRESULT wweht_http_get_input_stream_result_new(WWEHT_HttpGetInputStreamResult **out);
 
-/* Windows.Web.Http.HttpGetInputStreamResult */
-/* Windows.Web.Http.HttpGetInputStreamResult.get_ExtendedError() */
 HRESULT wweht_http_get_input_stream_result_get__extended_error(WWEHT_HttpGetInputStreamResult *self, HRESULT *value);
 
-/* Windows.Web.Http.HttpGetInputStreamResult.get_RequestMessage() */
 HRESULT wweht_http_get_input_stream_result_get__request_message(WWEHT_HttpGetInputStreamResult *self, WWEHT_HttpRequestMessage** value);
 
-/* Windows.Web.Http.HttpGetInputStreamResult.get_ResponseMessage() */
 HRESULT wweht_http_get_input_stream_result_get__response_message(WWEHT_HttpGetInputStreamResult *self, WWEHT_HttpResponseMessage** value);
 
-/* Windows.Web.Http.HttpGetInputStreamResult.get_Succeeded() */
 HRESULT wweht_http_get_input_stream_result_get__succeeded(WWEHT_HttpGetInputStreamResult *self, BOOL *value);
 
-/* Windows.Web.Http.HttpGetInputStreamResult.get_Value() */
 HRESULT wweht_http_get_input_stream_result_get__value(WWEHT_HttpGetInputStreamResult *self, WSTST_IInputStream** value);
 
-/* Windows.Web.Http.HttpGetInputStreamResult.Close() */
 HRESULT wweht_http_get_input_stream_result_close(WWEHT_HttpGetInputStreamResult *self);
 
-/* Windows.Web.Http.HttpGetInputStreamResult.ToString() */
 HRESULT wweht_http_get_input_stream_result_to_string(WWEHT_HttpGetInputStreamResult *self, cwinrt_hstring *out);
 
-/* activate Windows.Web.Http.HttpGetBufferResult */
 HRESULT wweht_http_get_buffer_result_new(WWEHT_HttpGetBufferResult **out);
 
-/* Windows.Web.Http.HttpGetBufferResult */
-/* Windows.Web.Http.HttpGetBufferResult.get_ExtendedError() */
 HRESULT wweht_http_get_buffer_result_get__extended_error(WWEHT_HttpGetBufferResult *self, HRESULT *value);
 
-/* Windows.Web.Http.HttpGetBufferResult.get_RequestMessage() */
 HRESULT wweht_http_get_buffer_result_get__request_message(WWEHT_HttpGetBufferResult *self, WWEHT_HttpRequestMessage** value);
 
-/* Windows.Web.Http.HttpGetBufferResult.get_ResponseMessage() */
 HRESULT wweht_http_get_buffer_result_get__response_message(WWEHT_HttpGetBufferResult *self, WWEHT_HttpResponseMessage** value);
 
-/* Windows.Web.Http.HttpGetBufferResult.get_Succeeded() */
 HRESULT wweht_http_get_buffer_result_get__succeeded(WWEHT_HttpGetBufferResult *self, BOOL *value);
 
-/* Windows.Web.Http.HttpGetBufferResult.get_Value() */
 HRESULT wweht_http_get_buffer_result_get__value(WWEHT_HttpGetBufferResult *self, WSTST_IBuffer** value);
 
-/* Windows.Web.Http.HttpGetBufferResult.Close() */
 HRESULT wweht_http_get_buffer_result_close(WWEHT_HttpGetBufferResult *self);
 
-/* Windows.Web.Http.HttpGetBufferResult.ToString() */
 HRESULT wweht_http_get_buffer_result_to_string(WWEHT_HttpGetBufferResult *self, cwinrt_hstring *out);
 
-/* activate Windows.Web.Http.HttpFormUrlEncodedContent */
 HRESULT wweht_http_form_url_encoded_content_new(WWEHT_HttpFormUrlEncodedContent **out);
 
-/* Windows.Web.Http.HttpFormUrlEncodedContent */
-/* Windows.Web.Http.HttpFormUrlEncodedContent.get_Headers() */
 HRESULT wweht_http_form_url_encoded_content_get__headers(WWEHT_HttpFormUrlEncodedContent *self, WWEHTHE_HttpContentHeaderCollection** value);
 
-/* Windows.Web.Http.HttpFormUrlEncodedContent.BufferAllAsync() */
 HRESULT wweht_http_form_url_encoded_content_buffer_all_async(WWEHT_HttpFormUrlEncodedContent *self, WF_IAsyncOperationWithProgress_uint64_t_uint64_t** out);
 
-/* Windows.Web.Http.HttpFormUrlEncodedContent.ReadAsBufferAsync() */
 HRESULT wweht_http_form_url_encoded_content_read_as_buffer_async(WWEHT_HttpFormUrlEncodedContent *self, WF_IAsyncOperationWithProgress_WSTST_IBuffer_uint64_t** out);
 
-/* Windows.Web.Http.HttpFormUrlEncodedContent.ReadAsInputStreamAsync() */
 HRESULT wweht_http_form_url_encoded_content_read_as_input_stream_async(WWEHT_HttpFormUrlEncodedContent *self, WF_IAsyncOperationWithProgress_WSTST_IInputStream_uint64_t** out);
 
-/* Windows.Web.Http.HttpFormUrlEncodedContent.ReadAsStringAsync() */
 HRESULT wweht_http_form_url_encoded_content_read_as_string_async(WWEHT_HttpFormUrlEncodedContent *self, WF_IAsyncOperationWithProgress_HSTRING_uint64_t** out);
 
-/* Windows.Web.Http.HttpFormUrlEncodedContent.TryComputeLength(length) */
 HRESULT wweht_http_form_url_encoded_content_try_compute_length(WWEHT_HttpFormUrlEncodedContent *self, uint64_t length, BOOL *out);
 
-/* Windows.Web.Http.HttpFormUrlEncodedContent.WriteToStreamAsync(outputStream) */
 HRESULT wweht_http_form_url_encoded_content_write_to_stream_async(WWEHT_HttpFormUrlEncodedContent *self, WSTST_IOutputStream* outputStream, WF_IAsyncOperationWithProgress_uint64_t_uint64_t** out);
 
-/* Windows.Web.Http.HttpFormUrlEncodedContent.Close() */
 HRESULT wweht_http_form_url_encoded_content_close(WWEHT_HttpFormUrlEncodedContent *self);
 
-/* Windows.Web.Http.HttpFormUrlEncodedContent.ToString() */
 HRESULT wweht_http_form_url_encoded_content_to_string(WWEHT_HttpFormUrlEncodedContent *self, cwinrt_hstring *out);
 
-/* activate Windows.Web.Http.HttpCookieManager */
 HRESULT wweht_http_cookie_manager_new(WWEHT_HttpCookieManager **out);
 
-/* Windows.Web.Http.HttpCookieManager */
-/* Windows.Web.Http.HttpCookieManager.SetCookie(cookie) */
 HRESULT wweht_http_cookie_manager_set_cookie(WWEHT_HttpCookieManager *self, WWEHT_HttpCookie* cookie, BOOL *out);
 
-/* Windows.Web.Http.HttpCookieManager.SetCookie(cookie, thirdParty) */
 HRESULT wweht_http_cookie_manager_set_cookie_p_b_b(WWEHT_HttpCookieManager *self, WWEHT_HttpCookie* cookie, BOOL thirdParty, BOOL *out);
 
-/* Windows.Web.Http.HttpCookieManager.DeleteCookie(cookie) */
 HRESULT wweht_http_cookie_manager_delete_cookie(WWEHT_HttpCookieManager *self, WWEHT_HttpCookie* cookie);
 
-/* Windows.Web.Http.HttpCookieManager.GetCookies(uri) */
 HRESULT wweht_http_cookie_manager_get_cookies(WWEHT_HttpCookieManager *self, WF_Uri* uri, WWEHT_HttpCookieCollection** out);
 
-/* activate Windows.Web.Http.HttpCookieCollection */
 HRESULT wweht_http_cookie_collection_new(WWEHT_HttpCookieCollection **out);
 
-/* Windows.Web.Http.HttpCookieCollection */
-/* Windows.Web.Http.HttpCookieCollection.GetAt(index) */
 HRESULT wweht_http_cookie_collection_get_at(WWEHT_HttpCookieCollection *self, uint32_t index, WWEHT_HttpCookie** out);
 
-/* Windows.Web.Http.HttpCookieCollection.get_Size() */
 HRESULT wweht_http_cookie_collection_get__size(WWEHT_HttpCookieCollection *self, uint32_t *value);
 
-/* Windows.Web.Http.HttpCookieCollection.IndexOf(index) */
 HRESULT wweht_http_cookie_collection_index_of(WWEHT_HttpCookieCollection *self, WWEHT_HttpCookie* value, uint32_t index, BOOL *out);
 
-/* Windows.Web.Http.HttpCookieCollection.GetMany(startIndex, items) */
 HRESULT wweht_http_cookie_collection_get_many(WWEHT_HttpCookieCollection *self, uint32_t startIndex, WWEHT_HttpCookie *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.Web.Http.HttpCookieCollection.First() */
 HRESULT wweht_http_cookie_collection_first(WWEHT_HttpCookieCollection *self, WFOCO_IIterator_WWEHT_HttpCookie** out);
 
-/* activate Windows.Web.Http.HttpClient */
 HRESULT wweht_http_client_new(WWEHT_HttpClient **out);
 
-/* Windows.Web.Http.HttpClient */
-/* Windows.Web.Http.HttpClient.DeleteAsync(uri) */
 HRESULT wweht_http_client_delete_async(WWEHT_HttpClient *self, WF_Uri* uri, WF_IAsyncOperationWithProgress_WWEHT_HttpResponseMessage_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.HttpClient.GetAsync(uri) */
 HRESULT wweht_http_client_get_async(WWEHT_HttpClient *self, WF_Uri* uri, WF_IAsyncOperationWithProgress_WWEHT_HttpResponseMessage_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.HttpClient.GetAsync(uri, completionOption) */
 HRESULT wweht_http_client_get_async_p_http_completion_option_p(WWEHT_HttpClient *self, WF_Uri* uri, WWEHT_HttpCompletionOption completionOption, WF_IAsyncOperationWithProgress_WWEHT_HttpResponseMessage_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.HttpClient.GetBufferAsync(uri) */
 HRESULT wweht_http_client_get_buffer_async(WWEHT_HttpClient *self, WF_Uri* uri, WF_IAsyncOperationWithProgress_WSTST_IBuffer_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.HttpClient.GetInputStreamAsync(uri) */
 HRESULT wweht_http_client_get_input_stream_async(WWEHT_HttpClient *self, WF_Uri* uri, WF_IAsyncOperationWithProgress_WSTST_IInputStream_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.HttpClient.GetStringAsync(uri) */
 HRESULT wweht_http_client_get_string_async(WWEHT_HttpClient *self, WF_Uri* uri, WF_IAsyncOperationWithProgress_HSTRING_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.HttpClient.PostAsync(uri, content) */
 HRESULT wweht_http_client_post_async(WWEHT_HttpClient *self, WF_Uri* uri, WWEHT_IHttpContent* content, WF_IAsyncOperationWithProgress_WWEHT_HttpResponseMessage_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.HttpClient.PutAsync(uri, content) */
 HRESULT wweht_http_client_put_async(WWEHT_HttpClient *self, WF_Uri* uri, WWEHT_IHttpContent* content, WF_IAsyncOperationWithProgress_WWEHT_HttpResponseMessage_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.HttpClient.SendRequestAsync(request) */
 HRESULT wweht_http_client_send_request_async(WWEHT_HttpClient *self, WWEHT_HttpRequestMessage* request, WF_IAsyncOperationWithProgress_WWEHT_HttpResponseMessage_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.HttpClient.SendRequestAsync(request, completionOption) */
 HRESULT wweht_http_client_send_request_async_p_http_completion_option_p(WWEHT_HttpClient *self, WWEHT_HttpRequestMessage* request, WWEHT_HttpCompletionOption completionOption, WF_IAsyncOperationWithProgress_WWEHT_HttpResponseMessage_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.HttpClient.get_DefaultRequestHeaders() */
 HRESULT wweht_http_client_get__default_request_headers(WWEHT_HttpClient *self, WWEHTHE_HttpRequestHeaderCollection** value);
 
-/* Windows.Web.Http.HttpClient.TryDeleteAsync(uri) */
 HRESULT wweht_http_client_try_delete_async(WWEHT_HttpClient *self, WF_Uri* uri, WF_IAsyncOperationWithProgress_WWEHT_HttpRequestResult_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.HttpClient.TryGetAsync(uri) */
 HRESULT wweht_http_client_try_get_async(WWEHT_HttpClient *self, WF_Uri* uri, WF_IAsyncOperationWithProgress_WWEHT_HttpRequestResult_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.HttpClient.TryGetAsync(uri, completionOption) */
 HRESULT wweht_http_client_try_get_async_p_http_completion_option_p(WWEHT_HttpClient *self, WF_Uri* uri, WWEHT_HttpCompletionOption completionOption, WF_IAsyncOperationWithProgress_WWEHT_HttpRequestResult_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.HttpClient.TryGetBufferAsync(uri) */
 HRESULT wweht_http_client_try_get_buffer_async(WWEHT_HttpClient *self, WF_Uri* uri, WF_IAsyncOperationWithProgress_WWEHT_HttpGetBufferResult_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.HttpClient.TryGetInputStreamAsync(uri) */
 HRESULT wweht_http_client_try_get_input_stream_async(WWEHT_HttpClient *self, WF_Uri* uri, WF_IAsyncOperationWithProgress_WWEHT_HttpGetInputStreamResult_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.HttpClient.TryGetStringAsync(uri) */
 HRESULT wweht_http_client_try_get_string_async(WWEHT_HttpClient *self, WF_Uri* uri, WF_IAsyncOperationWithProgress_WWEHT_HttpGetStringResult_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.HttpClient.TryPostAsync(uri, content) */
 HRESULT wweht_http_client_try_post_async(WWEHT_HttpClient *self, WF_Uri* uri, WWEHT_IHttpContent* content, WF_IAsyncOperationWithProgress_WWEHT_HttpRequestResult_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.HttpClient.TryPutAsync(uri, content) */
 HRESULT wweht_http_client_try_put_async(WWEHT_HttpClient *self, WF_Uri* uri, WWEHT_IHttpContent* content, WF_IAsyncOperationWithProgress_WWEHT_HttpRequestResult_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.HttpClient.TrySendRequestAsync(request) */
 HRESULT wweht_http_client_try_send_request_async(WWEHT_HttpClient *self, WWEHT_HttpRequestMessage* request, WF_IAsyncOperationWithProgress_WWEHT_HttpRequestResult_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.HttpClient.TrySendRequestAsync(request, completionOption) */
 HRESULT wweht_http_client_try_send_request_async_p_http_completion_option_p(WWEHT_HttpClient *self, WWEHT_HttpRequestMessage* request, WWEHT_HttpCompletionOption completionOption, WF_IAsyncOperationWithProgress_WWEHT_HttpRequestResult_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.HttpClient.get_DefaultPrivacyAnnotation() */
 HRESULT wweht_http_client_get__default_privacy_annotation(WWEHT_HttpClient *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.HttpClient.put_DefaultPrivacyAnnotation() */
 HRESULT wweht_http_client_put__default_privacy_annotation(WWEHT_HttpClient *self, cwinrt_hstring value);
 
-/* Windows.Web.Http.HttpClient.Close() */
 HRESULT wweht_http_client_close(WWEHT_HttpClient *self);
 
-/* Windows.Web.Http.HttpClient.ToString() */
 HRESULT wweht_http_client_to_string(WWEHT_HttpClient *self, cwinrt_hstring *out);
 
-/* activate Windows.Web.Http.HttpBufferContent */
 HRESULT wweht_http_buffer_content_new(WWEHT_HttpBufferContent **out);
 
-/* Windows.Web.Http.HttpBufferContent */
-/* Windows.Web.Http.HttpBufferContent.get_Headers() */
 HRESULT wweht_http_buffer_content_get__headers(WWEHT_HttpBufferContent *self, WWEHTHE_HttpContentHeaderCollection** value);
 
-/* Windows.Web.Http.HttpBufferContent.BufferAllAsync() */
 HRESULT wweht_http_buffer_content_buffer_all_async(WWEHT_HttpBufferContent *self, WF_IAsyncOperationWithProgress_uint64_t_uint64_t** out);
 
-/* Windows.Web.Http.HttpBufferContent.ReadAsBufferAsync() */
 HRESULT wweht_http_buffer_content_read_as_buffer_async(WWEHT_HttpBufferContent *self, WF_IAsyncOperationWithProgress_WSTST_IBuffer_uint64_t** out);
 
-/* Windows.Web.Http.HttpBufferContent.ReadAsInputStreamAsync() */
 HRESULT wweht_http_buffer_content_read_as_input_stream_async(WWEHT_HttpBufferContent *self, WF_IAsyncOperationWithProgress_WSTST_IInputStream_uint64_t** out);
 
-/* Windows.Web.Http.HttpBufferContent.ReadAsStringAsync() */
 HRESULT wweht_http_buffer_content_read_as_string_async(WWEHT_HttpBufferContent *self, WF_IAsyncOperationWithProgress_HSTRING_uint64_t** out);
 
-/* Windows.Web.Http.HttpBufferContent.TryComputeLength(length) */
 HRESULT wweht_http_buffer_content_try_compute_length(WWEHT_HttpBufferContent *self, uint64_t length, BOOL *out);
 
-/* Windows.Web.Http.HttpBufferContent.WriteToStreamAsync(outputStream) */
 HRESULT wweht_http_buffer_content_write_to_stream_async(WWEHT_HttpBufferContent *self, WSTST_IOutputStream* outputStream, WF_IAsyncOperationWithProgress_uint64_t_uint64_t** out);
 
-/* Windows.Web.Http.HttpBufferContent.Close() */
 HRESULT wweht_http_buffer_content_close(WWEHT_HttpBufferContent *self);
 
-/* Windows.Web.Http.HttpBufferContent.ToString() */
 HRESULT wweht_http_buffer_content_to_string(WWEHT_HttpBufferContent *self, cwinrt_hstring *out);
 
-/* Windows.Web.Http.IHttpMethod */
-/* Windows.Web.Http.IHttpTransportInformation */
-/* Windows.Web.Http.IHttpResponseMessage */
-/* Windows.Web.Http.IHttpRequestResult */
-/* Windows.Web.Http.IHttpRequestMessage */
-/* Windows.Web.Http.IHttpRequestMessage2 */
-/* Windows.Web.Http.IHttpRequestMessage2.get_PrivacyAnnotation() */
 HRESULT wweht_http_request_message_2_get__privacy_annotation(WWEHT_IHttpRequestMessage_2 *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.IHttpRequestMessage2.put_PrivacyAnnotation() */
 HRESULT wweht_http_request_message_2_put__privacy_annotation(WWEHT_IHttpRequestMessage_2 *self, cwinrt_hstring value);
 
-/* Windows.Web.Http.IHttpMultipartFormDataContent */
-/* Windows.Web.Http.IHttpMultipartContent */
-/* Windows.Web.Http.IHttpCookie */
-/* Windows.Web.Http.IHttpGetStringResult */
-/* Windows.Web.Http.IHttpGetInputStreamResult */
-/* Windows.Web.Http.IHttpGetBufferResult */
-/* Windows.Web.Http.IHttpCookieManager */
-/* Windows.Web.Http.IHttpClient */
-/* Windows.Web.Http.IHttpClient2 */
-/* Windows.Web.Http.IHttpClient2.TryDeleteAsync(uri) */
 HRESULT wweht_http_client_2_try_delete_async(WWEHT_IHttpClient_2 *self, WF_Uri* uri, WF_IAsyncOperationWithProgress_WWEHT_HttpRequestResult_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.IHttpClient2.TryGetAsync(uri) */
 HRESULT wweht_http_client_2_try_get_async(WWEHT_IHttpClient_2 *self, WF_Uri* uri, WF_IAsyncOperationWithProgress_WWEHT_HttpRequestResult_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.IHttpClient2.TryGetAsync(uri, completionOption) */
 HRESULT wweht_http_client_2_try_get_async_p_http_completion_option_p(WWEHT_IHttpClient_2 *self, WF_Uri* uri, WWEHT_HttpCompletionOption completionOption, WF_IAsyncOperationWithProgress_WWEHT_HttpRequestResult_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.IHttpClient2.TryGetBufferAsync(uri) */
 HRESULT wweht_http_client_2_try_get_buffer_async(WWEHT_IHttpClient_2 *self, WF_Uri* uri, WF_IAsyncOperationWithProgress_WWEHT_HttpGetBufferResult_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.IHttpClient2.TryGetInputStreamAsync(uri) */
 HRESULT wweht_http_client_2_try_get_input_stream_async(WWEHT_IHttpClient_2 *self, WF_Uri* uri, WF_IAsyncOperationWithProgress_WWEHT_HttpGetInputStreamResult_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.IHttpClient2.TryGetStringAsync(uri) */
 HRESULT wweht_http_client_2_try_get_string_async(WWEHT_IHttpClient_2 *self, WF_Uri* uri, WF_IAsyncOperationWithProgress_WWEHT_HttpGetStringResult_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.IHttpClient2.TryPostAsync(uri, content) */
 HRESULT wweht_http_client_2_try_post_async(WWEHT_IHttpClient_2 *self, WF_Uri* uri, WWEHT_IHttpContent* content, WF_IAsyncOperationWithProgress_WWEHT_HttpRequestResult_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.IHttpClient2.TryPutAsync(uri, content) */
 HRESULT wweht_http_client_2_try_put_async(WWEHT_IHttpClient_2 *self, WF_Uri* uri, WWEHT_IHttpContent* content, WF_IAsyncOperationWithProgress_WWEHT_HttpRequestResult_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.IHttpClient2.TrySendRequestAsync(request) */
 HRESULT wweht_http_client_2_try_send_request_async(WWEHT_IHttpClient_2 *self, WWEHT_HttpRequestMessage* request, WF_IAsyncOperationWithProgress_WWEHT_HttpRequestResult_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.IHttpClient2.TrySendRequestAsync(request, completionOption) */
 HRESULT wweht_http_client_2_try_send_request_async_p_http_completion_option_p(WWEHT_IHttpClient_2 *self, WWEHT_HttpRequestMessage* request, WWEHT_HttpCompletionOption completionOption, WF_IAsyncOperationWithProgress_WWEHT_HttpRequestResult_WWEHT_HttpProgress** out);
 
-/* Windows.Web.Http.IHttpClient3 */
-/* Windows.Web.Http.IHttpClient3.get_DefaultPrivacyAnnotation() */
 HRESULT wweht_http_client_3_get__default_privacy_annotation(WWEHT_IHttpClient_3 *self, cwinrt_hstring *value);
 
-/* Windows.Web.Http.IHttpClient3.put_DefaultPrivacyAnnotation() */
 HRESULT wweht_http_client_3_put__default_privacy_annotation(WWEHT_IHttpClient_3 *self, cwinrt_hstring value);
 
-/* Windows.Web.Http.IHttpContent */
-/* Windows.Web.Http.IHttpContent.get_Headers() */
 HRESULT wweht_http_content_get__headers(WWEHT_IHttpContent *self, WWEHTHE_HttpContentHeaderCollection** value);
 
-/* Windows.Web.Http.IHttpContent.BufferAllAsync() */
 HRESULT wweht_http_content_buffer_all_async(WWEHT_IHttpContent *self, WF_IAsyncOperationWithProgress_uint64_t_uint64_t** out);
 
-/* Windows.Web.Http.IHttpContent.ReadAsBufferAsync() */
 HRESULT wweht_http_content_read_as_buffer_async(WWEHT_IHttpContent *self, WF_IAsyncOperationWithProgress_WSTST_IBuffer_uint64_t** out);
 
-/* Windows.Web.Http.IHttpContent.ReadAsInputStreamAsync() */
 HRESULT wweht_http_content_read_as_input_stream_async(WWEHT_IHttpContent *self, WF_IAsyncOperationWithProgress_WSTST_IInputStream_uint64_t** out);
 
-/* Windows.Web.Http.IHttpContent.ReadAsStringAsync() */
 HRESULT wweht_http_content_read_as_string_async(WWEHT_IHttpContent *self, WF_IAsyncOperationWithProgress_HSTRING_uint64_t** out);
 
-/* Windows.Web.Http.IHttpContent.TryComputeLength(length) */
 HRESULT wweht_http_content_try_compute_length(WWEHT_IHttpContent *self, uint64_t length, BOOL *out);
 
-/* Windows.Web.Http.IHttpContent.WriteToStreamAsync(outputStream) */
 HRESULT wweht_http_content_write_to_stream_async(WWEHT_IHttpContent *self, WSTST_IOutputStream* outputStream, WF_IAsyncOperationWithProgress_uint64_t_uint64_t** out);
 
 #endif /* CWINRT_WINDOWS_WEB_HTTP_H */

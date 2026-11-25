@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Graphics.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WAPCO_CoreApplicationView
 #define CWINRT_FWD_WAPCO_CoreApplicationView
 typedef struct WAPCO_CoreApplicationView WAPCO_CoreApplicationView;
@@ -27,7 +26,6 @@ typedef struct WSTST_IRandomAccessStreamWithContentType WSTST_IRandomAccessStrea
 typedef struct WMECO_MediaSource WMECO_MediaSource;
 #endif
 
-/* Windows.Graphics integer value types (ABI layout) */
 #ifndef CWINRT_ABI_WG_SIZEINT32
 #define CWINRT_ABI_WG_SIZEINT32
 typedef struct WG_SizeInt32 { int32_t Width; int32_t Height; } WG_SizeInt32;
@@ -41,7 +39,6 @@ typedef struct WG_PointInt32 { int32_t X; int32_t Y; } WG_PointInt32;
 typedef struct WG_RectInt32 { int32_t X; int32_t Y; int32_t Width; int32_t Height; } WG_RectInt32;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WMEMI_MiracastReceiver WMEMI_MiracastReceiver;
 typedef struct WMEMI_MiracastReceiverApplySettingsResult WMEMI_MiracastReceiverApplySettingsResult;
 typedef struct WMEMI_MiracastReceiverConnection WMEMI_MiracastReceiverConnection;
@@ -79,7 +76,6 @@ typedef struct WMEMI_IMiracastReceiverStreamControl WMEMI_IMiracastReceiverStrea
 typedef struct WMEMI_IMiracastReceiverVideoStreamSettings WMEMI_IMiracastReceiverVideoStreamSettings;
 typedef struct WMEMI_IMiracastTransmitter WMEMI_IMiracastTransmitter;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_IAsyncOperation_WMEMI_MiracastReceiverSettings
 #define CWINRT_FWD_WF_IAsyncOperation_WMEMI_MiracastReceiverSettings
 typedef struct WF_IAsyncOperation_WMEMI_MiracastReceiverSettings WF_IAsyncOperation_WMEMI_MiracastReceiverSettings;
@@ -253,7 +249,6 @@ typedef enum WMEMI_MiracastTransmitterAuthorizationStatus {
 } WMEMI_MiracastTransmitterAuthorizationStatus;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -330,128 +325,83 @@ static const IID CWINRT_IID_WMEMI_IMiracastReceiverVideoStreamSettings CWINRT_MA
 static const IID CWINRT_IID_WMEMI_IMiracastTransmitter CWINRT_MAYBE_UNUSED = { 0x342D79FD, 0x2E64, 0x5508, { 0x8A, 0x30, 0x83, 0x3D, 0x1E, 0xAC, 0x70, 0xD0 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Media.Miracast.MiracastReceiver */
 HRESULT wmemi_miracast_receiver_new(WMEMI_MiracastReceiver **out);
 
-/* Windows.Media.Miracast.MiracastReceiver */
-/* Windows.Media.Miracast.MiracastReceiver.GetDefaultSettings() */
 HRESULT wmemi_miracast_receiver_get_default_settings(WMEMI_MiracastReceiver *self, WMEMI_MiracastReceiverSettings** out);
 
-/* Windows.Media.Miracast.MiracastReceiver.GetCurrentSettings() */
 HRESULT wmemi_miracast_receiver_get_current_settings(WMEMI_MiracastReceiver *self, WMEMI_MiracastReceiverSettings** out);
 
-/* Windows.Media.Miracast.MiracastReceiver.GetCurrentSettingsAsync() */
 HRESULT wmemi_miracast_receiver_get_current_settings_async(WMEMI_MiracastReceiver *self, WF_IAsyncOperation_WMEMI_MiracastReceiverSettings** out);
 
-/* Windows.Media.Miracast.MiracastReceiver.DisconnectAllAndApplySettings(settings) */
 HRESULT wmemi_miracast_receiver_disconnect_all_and_apply_settings(WMEMI_MiracastReceiver *self, WMEMI_MiracastReceiverSettings* settings, WMEMI_MiracastReceiverApplySettingsResult** out);
 
-/* Windows.Media.Miracast.MiracastReceiver.DisconnectAllAndApplySettingsAsync(settings) */
 HRESULT wmemi_miracast_receiver_disconnect_all_and_apply_settings_async(WMEMI_MiracastReceiver *self, WMEMI_MiracastReceiverSettings* settings, WF_IAsyncOperation_WMEMI_MiracastReceiverApplySettingsResult** out);
 
-/* Windows.Media.Miracast.MiracastReceiver.GetStatus() */
 HRESULT wmemi_miracast_receiver_get_status(WMEMI_MiracastReceiver *self, WMEMI_MiracastReceiverStatus** out);
 
-/* Windows.Media.Miracast.MiracastReceiver.GetStatusAsync() */
 HRESULT wmemi_miracast_receiver_get_status_async(WMEMI_MiracastReceiver *self, WF_IAsyncOperation_WMEMI_MiracastReceiverStatus** out);
 
-/* Windows.Media.Miracast.MiracastReceiver.CreateSession(view) */
 HRESULT wmemi_miracast_receiver_create_session(WMEMI_MiracastReceiver *self, WAPCO_CoreApplicationView* view, WMEMI_MiracastReceiverSession** out);
 
-/* Windows.Media.Miracast.MiracastReceiver.CreateSessionAsync(view) */
 HRESULT wmemi_miracast_receiver_create_session_async(WMEMI_MiracastReceiver *self, WAPCO_CoreApplicationView* view, WF_IAsyncOperation_WMEMI_MiracastReceiverSession** out);
 
-/* Windows.Media.Miracast.MiracastReceiver.ClearKnownTransmitters() */
 HRESULT wmemi_miracast_receiver_clear_known_transmitters(WMEMI_MiracastReceiver *self);
 
-/* Windows.Media.Miracast.MiracastReceiver.RemoveKnownTransmitter(transmitter) */
 HRESULT wmemi_miracast_receiver_remove_known_transmitter(WMEMI_MiracastReceiver *self, WMEMI_MiracastTransmitter* transmitter);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmemi_miracast_receiver_on_status_changed(WMEMI_MiracastReceiver *self, cwinrt_event_fn fn, void *ctx);
 void wmemi_miracast_receiver_off_status_changed(WMEMI_MiracastReceiver *self, cwinrt_token token);
 
-/* activate Windows.Media.Miracast.MiracastReceiverApplySettingsResult */
 HRESULT wmemi_miracast_receiver_apply_settings_result_new(WMEMI_MiracastReceiverApplySettingsResult **out);
 
-/* Windows.Media.Miracast.MiracastReceiverApplySettingsResult */
-/* Windows.Media.Miracast.MiracastReceiverApplySettingsResult.get_Status() */
 HRESULT wmemi_miracast_receiver_apply_settings_result_get__status(WMEMI_MiracastReceiverApplySettingsResult *self, WMEMI_MiracastReceiverApplySettingsStatus *value);
 
-/* Windows.Media.Miracast.MiracastReceiverApplySettingsResult.get_ExtendedError() */
 HRESULT wmemi_miracast_receiver_apply_settings_result_get__extended_error(WMEMI_MiracastReceiverApplySettingsResult *self, HRESULT *value);
 
-/* activate Windows.Media.Miracast.MiracastReceiverConnection */
 HRESULT wmemi_miracast_receiver_connection_new(WMEMI_MiracastReceiverConnection **out);
 
-/* Windows.Media.Miracast.MiracastReceiverConnection */
-/* Windows.Media.Miracast.MiracastReceiverConnection.Disconnect(reason) */
 HRESULT wmemi_miracast_receiver_connection_disconnect(WMEMI_MiracastReceiverConnection *self, WMEMI_MiracastReceiverDisconnectReason reason);
 
-/* Windows.Media.Miracast.MiracastReceiverConnection.Disconnect(reason, message) */
 HRESULT wmemi_miracast_receiver_connection_disconnect_miracast_receiver_disconnect_reason_str(WMEMI_MiracastReceiverConnection *self, WMEMI_MiracastReceiverDisconnectReason reason, cwinrt_hstring message);
 
-/* Windows.Media.Miracast.MiracastReceiverConnection.Pause() */
 HRESULT wmemi_miracast_receiver_connection_pause(WMEMI_MiracastReceiverConnection *self);
 
-/* Windows.Media.Miracast.MiracastReceiverConnection.PauseAsync() */
 HRESULT wmemi_miracast_receiver_connection_pause_async(WMEMI_MiracastReceiverConnection *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Miracast.MiracastReceiverConnection.Resume() */
 HRESULT wmemi_miracast_receiver_connection_resume(WMEMI_MiracastReceiverConnection *self);
 
-/* Windows.Media.Miracast.MiracastReceiverConnection.ResumeAsync() */
 HRESULT wmemi_miracast_receiver_connection_resume_async(WMEMI_MiracastReceiverConnection *self, WF_IAsyncAction** out);
 
-/* Windows.Media.Miracast.MiracastReceiverConnection.get_Transmitter() */
 HRESULT wmemi_miracast_receiver_connection_get__transmitter(WMEMI_MiracastReceiverConnection *self, WMEMI_MiracastTransmitter** value);
 
-/* Windows.Media.Miracast.MiracastReceiverConnection.get_InputDevices() */
 HRESULT wmemi_miracast_receiver_connection_get__input_devices(WMEMI_MiracastReceiverConnection *self, WMEMI_MiracastReceiverInputDevices** value);
 
-/* Windows.Media.Miracast.MiracastReceiverConnection.get_CursorImageChannel() */
 HRESULT wmemi_miracast_receiver_connection_get__cursor_image_channel(WMEMI_MiracastReceiverConnection *self, WMEMI_MiracastReceiverCursorImageChannel** value);
 
-/* Windows.Media.Miracast.MiracastReceiverConnection.get_StreamControl() */
 HRESULT wmemi_miracast_receiver_connection_get__stream_control(WMEMI_MiracastReceiverConnection *self, WMEMI_MiracastReceiverStreamControl** value);
 
-/* Windows.Media.Miracast.MiracastReceiverConnection.Close() */
 HRESULT wmemi_miracast_receiver_connection_close(WMEMI_MiracastReceiverConnection *self);
 
-/* activate Windows.Media.Miracast.MiracastReceiverConnectionCreatedEventArgs */
 HRESULT wmemi_miracast_receiver_connection_created_event_args_new(WMEMI_MiracastReceiverConnectionCreatedEventArgs **out);
 
-/* Windows.Media.Miracast.MiracastReceiverConnectionCreatedEventArgs */
-/* Windows.Media.Miracast.MiracastReceiverConnectionCreatedEventArgs.get_Connection() */
 HRESULT wmemi_miracast_receiver_connection_created_event_args_get__connection(WMEMI_MiracastReceiverConnectionCreatedEventArgs *self, WMEMI_MiracastReceiverConnection** value);
 
-/* Windows.Media.Miracast.MiracastReceiverConnectionCreatedEventArgs.get_Pin() */
 HRESULT wmemi_miracast_receiver_connection_created_event_args_get__pin(WMEMI_MiracastReceiverConnectionCreatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Media.Miracast.MiracastReceiverConnectionCreatedEventArgs.GetDeferral() */
 HRESULT wmemi_miracast_receiver_connection_created_event_args_get_deferral(WMEMI_MiracastReceiverConnectionCreatedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Media.Miracast.MiracastReceiverCursorImageChannel */
 HRESULT wmemi_miracast_receiver_cursor_image_channel_new(WMEMI_MiracastReceiverCursorImageChannel **out);
 
-/* Windows.Media.Miracast.MiracastReceiverCursorImageChannel */
-/* Windows.Media.Miracast.MiracastReceiverCursorImageChannel.get_IsEnabled() */
 HRESULT wmemi_miracast_receiver_cursor_image_channel_get__is_enabled(WMEMI_MiracastReceiverCursorImageChannel *self, BOOL *value);
 
-/* Windows.Media.Miracast.MiracastReceiverCursorImageChannel.get_MaxImageSize() */
 HRESULT wmemi_miracast_receiver_cursor_image_channel_get__max_image_size(WMEMI_MiracastReceiverCursorImageChannel *self, WG_SizeInt32 *value);
 
-/* Windows.Media.Miracast.MiracastReceiverCursorImageChannel.get_Position() */
 HRESULT wmemi_miracast_receiver_cursor_image_channel_get__position(WMEMI_MiracastReceiverCursorImageChannel *self, WG_PointInt32 *value);
 
-/* Windows.Media.Miracast.MiracastReceiverCursorImageChannel.get_ImageStream() */
 HRESULT wmemi_miracast_receiver_cursor_image_channel_get__image_stream(WMEMI_MiracastReceiverCursorImageChannel *self, WSTST_IRandomAccessStreamWithContentType** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmemi_miracast_receiver_cursor_image_channel_on_image_stream_changed(WMEMI_MiracastReceiverCursorImageChannel *self, cwinrt_event_fn fn, void *ctx);
@@ -460,131 +410,86 @@ void wmemi_miracast_receiver_cursor_image_channel_off_image_stream_changed(WMEMI
 cwinrt_token wmemi_miracast_receiver_cursor_image_channel_on_position_changed(WMEMI_MiracastReceiverCursorImageChannel *self, cwinrt_event_fn fn, void *ctx);
 void wmemi_miracast_receiver_cursor_image_channel_off_position_changed(WMEMI_MiracastReceiverCursorImageChannel *self, cwinrt_token token);
 
-/* activate Windows.Media.Miracast.MiracastReceiverCursorImageChannelSettings */
 HRESULT wmemi_miracast_receiver_cursor_image_channel_settings_new(WMEMI_MiracastReceiverCursorImageChannelSettings **out);
 
-/* Windows.Media.Miracast.MiracastReceiverCursorImageChannelSettings */
-/* Windows.Media.Miracast.MiracastReceiverCursorImageChannelSettings.get_IsEnabled() */
 HRESULT wmemi_miracast_receiver_cursor_image_channel_settings_get__is_enabled(WMEMI_MiracastReceiverCursorImageChannelSettings *self, BOOL *value);
 
-/* Windows.Media.Miracast.MiracastReceiverCursorImageChannelSettings.put_IsEnabled() */
 HRESULT wmemi_miracast_receiver_cursor_image_channel_settings_put__is_enabled(WMEMI_MiracastReceiverCursorImageChannelSettings *self, BOOL value);
 
-/* Windows.Media.Miracast.MiracastReceiverCursorImageChannelSettings.get_MaxImageSize() */
 HRESULT wmemi_miracast_receiver_cursor_image_channel_settings_get__max_image_size(WMEMI_MiracastReceiverCursorImageChannelSettings *self, WG_SizeInt32 *value);
 
-/* Windows.Media.Miracast.MiracastReceiverCursorImageChannelSettings.put_MaxImageSize() */
 HRESULT wmemi_miracast_receiver_cursor_image_channel_settings_put__max_image_size(WMEMI_MiracastReceiverCursorImageChannelSettings *self, WG_SizeInt32 value);
 
-/* activate Windows.Media.Miracast.MiracastReceiverDisconnectedEventArgs */
 HRESULT wmemi_miracast_receiver_disconnected_event_args_new(WMEMI_MiracastReceiverDisconnectedEventArgs **out);
 
-/* Windows.Media.Miracast.MiracastReceiverDisconnectedEventArgs */
-/* Windows.Media.Miracast.MiracastReceiverDisconnectedEventArgs.get_Connection() */
 HRESULT wmemi_miracast_receiver_disconnected_event_args_get__connection(WMEMI_MiracastReceiverDisconnectedEventArgs *self, WMEMI_MiracastReceiverConnection** value);
 
-/* activate Windows.Media.Miracast.MiracastReceiverGameControllerDevice */
 HRESULT wmemi_miracast_receiver_game_controller_device_new(WMEMI_MiracastReceiverGameControllerDevice **out);
 
-/* Windows.Media.Miracast.MiracastReceiverGameControllerDevice */
-/* Windows.Media.Miracast.MiracastReceiverGameControllerDevice.get_TransmitInput() */
 HRESULT wmemi_miracast_receiver_game_controller_device_get__transmit_input(WMEMI_MiracastReceiverGameControllerDevice *self, BOOL *value);
 
-/* Windows.Media.Miracast.MiracastReceiverGameControllerDevice.put_TransmitInput() */
 HRESULT wmemi_miracast_receiver_game_controller_device_put__transmit_input(WMEMI_MiracastReceiverGameControllerDevice *self, BOOL value);
 
-/* Windows.Media.Miracast.MiracastReceiverGameControllerDevice.get_IsRequestedByTransmitter() */
 HRESULT wmemi_miracast_receiver_game_controller_device_get__is_requested_by_transmitter(WMEMI_MiracastReceiverGameControllerDevice *self, BOOL *value);
 
-/* Windows.Media.Miracast.MiracastReceiverGameControllerDevice.get_IsTransmittingInput() */
 HRESULT wmemi_miracast_receiver_game_controller_device_get__is_transmitting_input(WMEMI_MiracastReceiverGameControllerDevice *self, BOOL *value);
 
-/* Windows.Media.Miracast.MiracastReceiverGameControllerDevice.get_Mode() */
 HRESULT wmemi_miracast_receiver_game_controller_device_get__mode(WMEMI_MiracastReceiverGameControllerDevice *self, WMEMI_MiracastReceiverGameControllerDeviceUsageMode *value);
 
-/* Windows.Media.Miracast.MiracastReceiverGameControllerDevice.put_Mode() */
 HRESULT wmemi_miracast_receiver_game_controller_device_put__mode(WMEMI_MiracastReceiverGameControllerDevice *self, WMEMI_MiracastReceiverGameControllerDeviceUsageMode value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmemi_miracast_receiver_game_controller_device_on_changed(WMEMI_MiracastReceiverGameControllerDevice *self, cwinrt_event_fn fn, void *ctx);
 void wmemi_miracast_receiver_game_controller_device_off_changed(WMEMI_MiracastReceiverGameControllerDevice *self, cwinrt_token token);
 
-/* activate Windows.Media.Miracast.MiracastReceiverInputDevices */
 HRESULT wmemi_miracast_receiver_input_devices_new(WMEMI_MiracastReceiverInputDevices **out);
 
-/* Windows.Media.Miracast.MiracastReceiverInputDevices */
-/* Windows.Media.Miracast.MiracastReceiverInputDevices.get_Keyboard() */
 HRESULT wmemi_miracast_receiver_input_devices_get__keyboard(WMEMI_MiracastReceiverInputDevices *self, WMEMI_MiracastReceiverKeyboardDevice** value);
 
-/* Windows.Media.Miracast.MiracastReceiverInputDevices.get_GameController() */
 HRESULT wmemi_miracast_receiver_input_devices_get__game_controller(WMEMI_MiracastReceiverInputDevices *self, WMEMI_MiracastReceiverGameControllerDevice** value);
 
-/* activate Windows.Media.Miracast.MiracastReceiverKeyboardDevice */
 HRESULT wmemi_miracast_receiver_keyboard_device_new(WMEMI_MiracastReceiverKeyboardDevice **out);
 
-/* Windows.Media.Miracast.MiracastReceiverKeyboardDevice */
-/* Windows.Media.Miracast.MiracastReceiverKeyboardDevice.get_TransmitInput() */
 HRESULT wmemi_miracast_receiver_keyboard_device_get__transmit_input(WMEMI_MiracastReceiverKeyboardDevice *self, BOOL *value);
 
-/* Windows.Media.Miracast.MiracastReceiverKeyboardDevice.put_TransmitInput() */
 HRESULT wmemi_miracast_receiver_keyboard_device_put__transmit_input(WMEMI_MiracastReceiverKeyboardDevice *self, BOOL value);
 
-/* Windows.Media.Miracast.MiracastReceiverKeyboardDevice.get_IsRequestedByTransmitter() */
 HRESULT wmemi_miracast_receiver_keyboard_device_get__is_requested_by_transmitter(WMEMI_MiracastReceiverKeyboardDevice *self, BOOL *value);
 
-/* Windows.Media.Miracast.MiracastReceiverKeyboardDevice.get_IsTransmittingInput() */
 HRESULT wmemi_miracast_receiver_keyboard_device_get__is_transmitting_input(WMEMI_MiracastReceiverKeyboardDevice *self, BOOL *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmemi_miracast_receiver_keyboard_device_on_changed(WMEMI_MiracastReceiverKeyboardDevice *self, cwinrt_event_fn fn, void *ctx);
 void wmemi_miracast_receiver_keyboard_device_off_changed(WMEMI_MiracastReceiverKeyboardDevice *self, cwinrt_token token);
 
-/* activate Windows.Media.Miracast.MiracastReceiverMediaSourceCreatedEventArgs */
 HRESULT wmemi_miracast_receiver_media_source_created_event_args_new(WMEMI_MiracastReceiverMediaSourceCreatedEventArgs **out);
 
-/* Windows.Media.Miracast.MiracastReceiverMediaSourceCreatedEventArgs */
-/* Windows.Media.Miracast.MiracastReceiverMediaSourceCreatedEventArgs.get_Connection() */
 HRESULT wmemi_miracast_receiver_media_source_created_event_args_get__connection(WMEMI_MiracastReceiverMediaSourceCreatedEventArgs *self, WMEMI_MiracastReceiverConnection** value);
 
-/* Windows.Media.Miracast.MiracastReceiverMediaSourceCreatedEventArgs.get_MediaSource() */
 HRESULT wmemi_miracast_receiver_media_source_created_event_args_get__media_source(WMEMI_MiracastReceiverMediaSourceCreatedEventArgs *self, WMECO_MediaSource** value);
 
-/* Windows.Media.Miracast.MiracastReceiverMediaSourceCreatedEventArgs.get_CursorImageChannelSettings() */
 HRESULT wmemi_miracast_receiver_media_source_created_event_args_get__cursor_image_channel_settings(WMEMI_MiracastReceiverMediaSourceCreatedEventArgs *self, WMEMI_MiracastReceiverCursorImageChannelSettings** value);
 
-/* Windows.Media.Miracast.MiracastReceiverMediaSourceCreatedEventArgs.GetDeferral() */
 HRESULT wmemi_miracast_receiver_media_source_created_event_args_get_deferral(WMEMI_MiracastReceiverMediaSourceCreatedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.Media.Miracast.MiracastReceiverSession */
 HRESULT wmemi_miracast_receiver_session_new(WMEMI_MiracastReceiverSession **out);
 
-/* Windows.Media.Miracast.MiracastReceiverSession */
-/* Windows.Media.Miracast.MiracastReceiverSession.get_AllowConnectionTakeover() */
 HRESULT wmemi_miracast_receiver_session_get__allow_connection_takeover(WMEMI_MiracastReceiverSession *self, BOOL *value);
 
-/* Windows.Media.Miracast.MiracastReceiverSession.put_AllowConnectionTakeover() */
 HRESULT wmemi_miracast_receiver_session_put__allow_connection_takeover(WMEMI_MiracastReceiverSession *self, BOOL value);
 
-/* Windows.Media.Miracast.MiracastReceiverSession.get_MaxSimultaneousConnections() */
 HRESULT wmemi_miracast_receiver_session_get__max_simultaneous_connections(WMEMI_MiracastReceiverSession *self, int32_t *value);
 
-/* Windows.Media.Miracast.MiracastReceiverSession.put_MaxSimultaneousConnections() */
 HRESULT wmemi_miracast_receiver_session_put__max_simultaneous_connections(WMEMI_MiracastReceiverSession *self, int32_t value);
 
-/* Windows.Media.Miracast.MiracastReceiverSession.Start() */
 HRESULT wmemi_miracast_receiver_session_start(WMEMI_MiracastReceiverSession *self, WMEMI_MiracastReceiverSessionStartResult** out);
 
-/* Windows.Media.Miracast.MiracastReceiverSession.StartAsync() */
 HRESULT wmemi_miracast_receiver_session_start_async(WMEMI_MiracastReceiverSession *self, WF_IAsyncOperation_WMEMI_MiracastReceiverSessionStartResult** out);
 
-/* Windows.Media.Miracast.MiracastReceiverSession.Close() */
 HRESULT wmemi_miracast_receiver_session_close(WMEMI_MiracastReceiverSession *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wmemi_miracast_receiver_session_on_connection_created(WMEMI_MiracastReceiverSession *self, cwinrt_event_fn fn, void *ctx);
@@ -596,148 +501,84 @@ void wmemi_miracast_receiver_session_off_media_source_created(WMEMI_MiracastRece
 cwinrt_token wmemi_miracast_receiver_session_on_disconnected(WMEMI_MiracastReceiverSession *self, cwinrt_event_fn fn, void *ctx);
 void wmemi_miracast_receiver_session_off_disconnected(WMEMI_MiracastReceiverSession *self, cwinrt_token token);
 
-/* activate Windows.Media.Miracast.MiracastReceiverSessionStartResult */
 HRESULT wmemi_miracast_receiver_session_start_result_new(WMEMI_MiracastReceiverSessionStartResult **out);
 
-/* Windows.Media.Miracast.MiracastReceiverSessionStartResult */
-/* Windows.Media.Miracast.MiracastReceiverSessionStartResult.get_Status() */
 HRESULT wmemi_miracast_receiver_session_start_result_get__status(WMEMI_MiracastReceiverSessionStartResult *self, WMEMI_MiracastReceiverSessionStartStatus *value);
 
-/* Windows.Media.Miracast.MiracastReceiverSessionStartResult.get_ExtendedError() */
 HRESULT wmemi_miracast_receiver_session_start_result_get__extended_error(WMEMI_MiracastReceiverSessionStartResult *self, HRESULT *value);
 
-/* activate Windows.Media.Miracast.MiracastReceiverSettings */
 HRESULT wmemi_miracast_receiver_settings_new(WMEMI_MiracastReceiverSettings **out);
 
-/* Windows.Media.Miracast.MiracastReceiverSettings */
-/* Windows.Media.Miracast.MiracastReceiverSettings.get_FriendlyName() */
 HRESULT wmemi_miracast_receiver_settings_get__friendly_name(WMEMI_MiracastReceiverSettings *self, cwinrt_hstring *value);
 
-/* Windows.Media.Miracast.MiracastReceiverSettings.put_FriendlyName() */
 HRESULT wmemi_miracast_receiver_settings_put__friendly_name(WMEMI_MiracastReceiverSettings *self, cwinrt_hstring value);
 
-/* Windows.Media.Miracast.MiracastReceiverSettings.get_ModelName() */
 HRESULT wmemi_miracast_receiver_settings_get__model_name(WMEMI_MiracastReceiverSettings *self, cwinrt_hstring *value);
 
-/* Windows.Media.Miracast.MiracastReceiverSettings.put_ModelName() */
 HRESULT wmemi_miracast_receiver_settings_put__model_name(WMEMI_MiracastReceiverSettings *self, cwinrt_hstring value);
 
-/* Windows.Media.Miracast.MiracastReceiverSettings.get_ModelNumber() */
 HRESULT wmemi_miracast_receiver_settings_get__model_number(WMEMI_MiracastReceiverSettings *self, cwinrt_hstring *value);
 
-/* Windows.Media.Miracast.MiracastReceiverSettings.put_ModelNumber() */
 HRESULT wmemi_miracast_receiver_settings_put__model_number(WMEMI_MiracastReceiverSettings *self, cwinrt_hstring value);
 
-/* Windows.Media.Miracast.MiracastReceiverSettings.get_AuthorizationMethod() */
 HRESULT wmemi_miracast_receiver_settings_get__authorization_method(WMEMI_MiracastReceiverSettings *self, WMEMI_MiracastReceiverAuthorizationMethod *value);
 
-/* Windows.Media.Miracast.MiracastReceiverSettings.put_AuthorizationMethod() */
 HRESULT wmemi_miracast_receiver_settings_put__authorization_method(WMEMI_MiracastReceiverSettings *self, WMEMI_MiracastReceiverAuthorizationMethod value);
 
-/* Windows.Media.Miracast.MiracastReceiverSettings.get_RequireAuthorizationFromKnownTransmitters() */
 HRESULT wmemi_miracast_receiver_settings_get__require_authorization_from_known_transmitters(WMEMI_MiracastReceiverSettings *self, BOOL *value);
 
-/* Windows.Media.Miracast.MiracastReceiverSettings.put_RequireAuthorizationFromKnownTransmitters() */
 HRESULT wmemi_miracast_receiver_settings_put__require_authorization_from_known_transmitters(WMEMI_MiracastReceiverSettings *self, BOOL value);
 
-/* activate Windows.Media.Miracast.MiracastReceiverStatus */
 HRESULT wmemi_miracast_receiver_status_new(WMEMI_MiracastReceiverStatus **out);
 
-/* Windows.Media.Miracast.MiracastReceiverStatus */
-/* Windows.Media.Miracast.MiracastReceiverStatus.get_ListeningStatus() */
 HRESULT wmemi_miracast_receiver_status_get__listening_status(WMEMI_MiracastReceiverStatus *self, WMEMI_MiracastReceiverListeningStatus *value);
 
-/* Windows.Media.Miracast.MiracastReceiverStatus.get_WiFiStatus() */
 HRESULT wmemi_miracast_receiver_status_get__wi_fi_status(WMEMI_MiracastReceiverStatus *self, WMEMI_MiracastReceiverWiFiStatus *value);
 
-/* Windows.Media.Miracast.MiracastReceiverStatus.get_IsConnectionTakeoverSupported() */
 HRESULT wmemi_miracast_receiver_status_get__is_connection_takeover_supported(WMEMI_MiracastReceiverStatus *self, BOOL *value);
 
-/* Windows.Media.Miracast.MiracastReceiverStatus.get_MaxSimultaneousConnections() */
 HRESULT wmemi_miracast_receiver_status_get__max_simultaneous_connections(WMEMI_MiracastReceiverStatus *self, int32_t *value);
 
-/* Windows.Media.Miracast.MiracastReceiverStatus.get_KnownTransmitters() */
 HRESULT wmemi_miracast_receiver_status_get__known_transmitters(WMEMI_MiracastReceiverStatus *self, WFOCO_IVectorView_WMEMI_MiracastTransmitter** value);
 
-/* activate Windows.Media.Miracast.MiracastReceiverStreamControl */
 HRESULT wmemi_miracast_receiver_stream_control_new(WMEMI_MiracastReceiverStreamControl **out);
 
-/* Windows.Media.Miracast.MiracastReceiverStreamControl */
-/* Windows.Media.Miracast.MiracastReceiverStreamControl.GetVideoStreamSettings() */
 HRESULT wmemi_miracast_receiver_stream_control_get_video_stream_settings(WMEMI_MiracastReceiverStreamControl *self, WMEMI_MiracastReceiverVideoStreamSettings** out);
 
-/* Windows.Media.Miracast.MiracastReceiverStreamControl.GetVideoStreamSettingsAsync() */
 HRESULT wmemi_miracast_receiver_stream_control_get_video_stream_settings_async(WMEMI_MiracastReceiverStreamControl *self, WF_IAsyncOperation_WMEMI_MiracastReceiverVideoStreamSettings** out);
 
-/* Windows.Media.Miracast.MiracastReceiverStreamControl.SuggestVideoStreamSettings(settings) */
 HRESULT wmemi_miracast_receiver_stream_control_suggest_video_stream_settings(WMEMI_MiracastReceiverStreamControl *self, WMEMI_MiracastReceiverVideoStreamSettings* settings);
 
-/* Windows.Media.Miracast.MiracastReceiverStreamControl.SuggestVideoStreamSettingsAsync(settings) */
 HRESULT wmemi_miracast_receiver_stream_control_suggest_video_stream_settings_async(WMEMI_MiracastReceiverStreamControl *self, WMEMI_MiracastReceiverVideoStreamSettings* settings, WF_IAsyncAction** out);
 
-/* Windows.Media.Miracast.MiracastReceiverStreamControl.get_MuteAudio() */
 HRESULT wmemi_miracast_receiver_stream_control_get__mute_audio(WMEMI_MiracastReceiverStreamControl *self, BOOL *value);
 
-/* Windows.Media.Miracast.MiracastReceiverStreamControl.put_MuteAudio() */
 HRESULT wmemi_miracast_receiver_stream_control_put__mute_audio(WMEMI_MiracastReceiverStreamControl *self, BOOL value);
 
-/* activate Windows.Media.Miracast.MiracastReceiverVideoStreamSettings */
 HRESULT wmemi_miracast_receiver_video_stream_settings_new(WMEMI_MiracastReceiverVideoStreamSettings **out);
 
-/* Windows.Media.Miracast.MiracastReceiverVideoStreamSettings */
-/* Windows.Media.Miracast.MiracastReceiverVideoStreamSettings.get_Size() */
 HRESULT wmemi_miracast_receiver_video_stream_settings_get__size(WMEMI_MiracastReceiverVideoStreamSettings *self, WG_SizeInt32 *value);
 
-/* Windows.Media.Miracast.MiracastReceiverVideoStreamSettings.put_Size() */
 HRESULT wmemi_miracast_receiver_video_stream_settings_put__size(WMEMI_MiracastReceiverVideoStreamSettings *self, WG_SizeInt32 value);
 
-/* Windows.Media.Miracast.MiracastReceiverVideoStreamSettings.get_Bitrate() */
 HRESULT wmemi_miracast_receiver_video_stream_settings_get__bitrate(WMEMI_MiracastReceiverVideoStreamSettings *self, int32_t *value);
 
-/* Windows.Media.Miracast.MiracastReceiverVideoStreamSettings.put_Bitrate() */
 HRESULT wmemi_miracast_receiver_video_stream_settings_put__bitrate(WMEMI_MiracastReceiverVideoStreamSettings *self, int32_t value);
 
-/* activate Windows.Media.Miracast.MiracastTransmitter */
 HRESULT wmemi_miracast_transmitter_new(WMEMI_MiracastTransmitter **out);
 
-/* Windows.Media.Miracast.MiracastTransmitter */
-/* Windows.Media.Miracast.MiracastTransmitter.get_Name() */
 HRESULT wmemi_miracast_transmitter_get__name(WMEMI_MiracastTransmitter *self, cwinrt_hstring *value);
 
-/* Windows.Media.Miracast.MiracastTransmitter.put_Name() */
 HRESULT wmemi_miracast_transmitter_put__name(WMEMI_MiracastTransmitter *self, cwinrt_hstring value);
 
-/* Windows.Media.Miracast.MiracastTransmitter.get_AuthorizationStatus() */
 HRESULT wmemi_miracast_transmitter_get__authorization_status(WMEMI_MiracastTransmitter *self, WMEMI_MiracastTransmitterAuthorizationStatus *value);
 
-/* Windows.Media.Miracast.MiracastTransmitter.put_AuthorizationStatus() */
 HRESULT wmemi_miracast_transmitter_put__authorization_status(WMEMI_MiracastTransmitter *self, WMEMI_MiracastTransmitterAuthorizationStatus value);
 
-/* Windows.Media.Miracast.MiracastTransmitter.GetConnections() */
 HRESULT wmemi_miracast_transmitter_get_connections(WMEMI_MiracastTransmitter *self, WFOCO_IVectorView_WMEMI_MiracastReceiverConnection** out);
 
-/* Windows.Media.Miracast.MiracastTransmitter.get_MacAddress() */
 HRESULT wmemi_miracast_transmitter_get__mac_address(WMEMI_MiracastTransmitter *self, cwinrt_hstring *value);
 
-/* Windows.Media.Miracast.MiracastTransmitter.get_LastConnectionTime() */
 HRESULT wmemi_miracast_transmitter_get__last_connection_time(WMEMI_MiracastTransmitter *self, WF_DateTime *value);
 
-/* Windows.Media.Miracast.IMiracastReceiver */
-/* Windows.Media.Miracast.IMiracastReceiverApplySettingsResult */
-/* Windows.Media.Miracast.IMiracastReceiverConnection */
-/* Windows.Media.Miracast.IMiracastReceiverConnectionCreatedEventArgs */
-/* Windows.Media.Miracast.IMiracastReceiverCursorImageChannel */
-/* Windows.Media.Miracast.IMiracastReceiverCursorImageChannelSettings */
-/* Windows.Media.Miracast.IMiracastReceiverDisconnectedEventArgs */
-/* Windows.Media.Miracast.IMiracastReceiverGameControllerDevice */
-/* Windows.Media.Miracast.IMiracastReceiverInputDevices */
-/* Windows.Media.Miracast.IMiracastReceiverKeyboardDevice */
-/* Windows.Media.Miracast.IMiracastReceiverMediaSourceCreatedEventArgs */
-/* Windows.Media.Miracast.IMiracastReceiverSession */
-/* Windows.Media.Miracast.IMiracastReceiverSessionStartResult */
-/* Windows.Media.Miracast.IMiracastReceiverSettings */
-/* Windows.Media.Miracast.IMiracastReceiverStatus */
-/* Windows.Media.Miracast.IMiracastReceiverStreamControl */
-/* Windows.Media.Miracast.IMiracastReceiverVideoStreamSettings */
-/* Windows.Media.Miracast.IMiracastTransmitter */
 #endif /* CWINRT_WINDOWS_MEDIA_MIRACAST_H */

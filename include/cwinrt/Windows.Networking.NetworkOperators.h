@@ -14,7 +14,6 @@
 #include <cwinrt/Windows.Networking.Connectivity.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSTST_IRandomAccessStreamReference
 #define CWINRT_FWD_WSTST_IRandomAccessStreamReference
 typedef struct WSTST_IRandomAccessStreamReference WSTST_IRandomAccessStreamReference;
@@ -49,7 +48,6 @@ typedef struct WSTST_IBuffer WSTST_IBuffer;
 typedef struct WDESM_ISmsMessage WDESM_ISmsMessage;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WNENE_ESim WNENE_ESim;
 typedef struct WNENE_ESimAddedEventArgs WNENE_ESimAddedEventArgs;
 typedef struct WNENE_ESimDiscoverEvent WNENE_ESimDiscoverEvent;
@@ -252,7 +250,6 @@ typedef struct WNENE_IUssdMessage WNENE_IUssdMessage;
 typedef struct WNENE_IUssdReply WNENE_IUssdReply;
 typedef struct WNENE_IUssdSession WNENE_IUssdSession;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IVectorView_WNENE_ESimProfile
 #define CWINRT_FWD_WFOCO_IVectorView_WNENE_ESimProfile
 typedef struct WFOCO_IVectorView_WNENE_ESimProfile WFOCO_IVectorView_WNENE_ESimProfile;
@@ -987,7 +984,6 @@ struct WNENE_ProfileUsage {
 };
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -1464,267 +1460,171 @@ static const IID CWINRT_IID_WNENE_IUssdReply CWINRT_MAYBE_UNUSED = { 0x2F9ACF82,
 static const IID CWINRT_IID_WNENE_IUssdSession CWINRT_MAYBE_UNUSED = { 0x2F9ACF82, 0x2002, 0x4D5D, { 0xBF, 0x81, 0x2A, 0xBA, 0x1B, 0x4B, 0xE4, 0xA8 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Networking.NetworkOperators.ESim */
 HRESULT wnene_e_sim_new(WNENE_ESim **out);
 
-/* Windows.Networking.NetworkOperators.ESim */
-/* Windows.Networking.NetworkOperators.ESim.get_AvailableMemoryInBytes() */
 HRESULT wnene_e_sim_get__available_memory_in_bytes(WNENE_ESim *self, int32_t** value);
 
-/* Windows.Networking.NetworkOperators.ESim.get_Eid() */
 HRESULT wnene_e_sim_get__eid(WNENE_ESim *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.ESim.get_FirmwareVersion() */
 HRESULT wnene_e_sim_get__firmware_version(WNENE_ESim *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.ESim.get_MobileBroadbandModemDeviceId() */
 HRESULT wnene_e_sim_get__mobile_broadband_modem_device_id(WNENE_ESim *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.ESim.get_Policy() */
 HRESULT wnene_e_sim_get__policy(WNENE_ESim *self, WNENE_ESimPolicy** value);
 
-/* Windows.Networking.NetworkOperators.ESim.get_State() */
 HRESULT wnene_e_sim_get__state(WNENE_ESim *self, WNENE_ESimState *value);
 
-/* Windows.Networking.NetworkOperators.ESim.GetProfiles() */
 HRESULT wnene_e_sim_get_profiles(WNENE_ESim *self, WFOCO_IVectorView_WNENE_ESimProfile** out);
 
-/* Windows.Networking.NetworkOperators.ESim.DeleteProfileAsync(profileId) */
 HRESULT wnene_e_sim_delete_profile_async(WNENE_ESim *self, cwinrt_hstring profileId, WF_IAsyncOperation_WNENE_ESimOperationResult** out);
 
-/* Windows.Networking.NetworkOperators.ESim.DownloadProfileMetadataAsync(activationCode) */
 HRESULT wnene_e_sim_download_profile_metadata_async(WNENE_ESim *self, cwinrt_hstring activationCode, WF_IAsyncOperation_WNENE_ESimDownloadProfileMetadataResult** out);
 
-/* Windows.Networking.NetworkOperators.ESim.ResetAsync() */
 HRESULT wnene_e_sim_reset_async(WNENE_ESim *self, WF_IAsyncOperation_WNENE_ESimOperationResult** out);
 
-/* Windows.Networking.NetworkOperators.ESim.Discover() */
 HRESULT wnene_e_sim_discover(WNENE_ESim *self, WNENE_ESimDiscoverResult** out);
 
-/* Windows.Networking.NetworkOperators.ESim.Discover(serverAddress, matchingId) */
 HRESULT wnene_e_sim_discover_str_str_p(WNENE_ESim *self, cwinrt_hstring serverAddress, cwinrt_hstring matchingId, WNENE_ESimDiscoverResult** out);
 
-/* Windows.Networking.NetworkOperators.ESim.DiscoverAsync() */
 HRESULT wnene_e_sim_discover_async(WNENE_ESim *self, WF_IAsyncOperation_WNENE_ESimDiscoverResult** out);
 
-/* Windows.Networking.NetworkOperators.ESim.DiscoverAsync(serverAddress, matchingId) */
 HRESULT wnene_e_sim_discover_async_str_str_p(WNENE_ESim *self, cwinrt_hstring serverAddress, cwinrt_hstring matchingId, WF_IAsyncOperation_WNENE_ESimDiscoverResult** out);
 
-/* Windows.Networking.NetworkOperators.ESim.get_SlotIndex() */
 HRESULT wnene_e_sim_get__slot_index(WNENE_ESim *self, int32_t** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wnene_e_sim_on_profile_changed(WNENE_ESim *self, cwinrt_event_fn fn, void *ctx);
 void wnene_e_sim_off_profile_changed(WNENE_ESim *self, cwinrt_token token);
 
-/* activate Windows.Networking.NetworkOperators.ESimAddedEventArgs */
 HRESULT wnene_e_sim_added_event_args_new(WNENE_ESimAddedEventArgs **out);
 
-/* Windows.Networking.NetworkOperators.ESimAddedEventArgs */
-/* Windows.Networking.NetworkOperators.ESimAddedEventArgs.get_ESim() */
 HRESULT wnene_e_sim_added_event_args_get__e_sim(WNENE_ESimAddedEventArgs *self, WNENE_ESim** value);
 
-/* activate Windows.Networking.NetworkOperators.ESimDiscoverEvent */
 HRESULT wnene_e_sim_discover_event_new(WNENE_ESimDiscoverEvent **out);
 
-/* Windows.Networking.NetworkOperators.ESimDiscoverEvent */
-/* Windows.Networking.NetworkOperators.ESimDiscoverEvent.get_MatchingId() */
 HRESULT wnene_e_sim_discover_event_get__matching_id(WNENE_ESimDiscoverEvent *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.ESimDiscoverEvent.get_RspServerAddress() */
 HRESULT wnene_e_sim_discover_event_get__rsp_server_address(WNENE_ESimDiscoverEvent *self, cwinrt_hstring *value);
 
-/* activate Windows.Networking.NetworkOperators.ESimDiscoverResult */
 HRESULT wnene_e_sim_discover_result_new(WNENE_ESimDiscoverResult **out);
 
-/* Windows.Networking.NetworkOperators.ESimDiscoverResult */
-/* Windows.Networking.NetworkOperators.ESimDiscoverResult.get_Events() */
 HRESULT wnene_e_sim_discover_result_get__events(WNENE_ESimDiscoverResult *self, WFOCO_IVectorView_WNENE_ESimDiscoverEvent** value);
 
-/* Windows.Networking.NetworkOperators.ESimDiscoverResult.get_Kind() */
 HRESULT wnene_e_sim_discover_result_get__kind(WNENE_ESimDiscoverResult *self, WNENE_ESimDiscoverResultKind *value);
 
-/* Windows.Networking.NetworkOperators.ESimDiscoverResult.get_ProfileMetadata() */
 HRESULT wnene_e_sim_discover_result_get__profile_metadata(WNENE_ESimDiscoverResult *self, WNENE_ESimProfileMetadata** value);
 
-/* Windows.Networking.NetworkOperators.ESimDiscoverResult.get_Result() */
 HRESULT wnene_e_sim_discover_result_get__result(WNENE_ESimDiscoverResult *self, WNENE_ESimOperationResult** value);
 
-/* activate Windows.Networking.NetworkOperators.ESimDownloadProfileMetadataResult */
 HRESULT wnene_e_sim_download_profile_metadata_result_new(WNENE_ESimDownloadProfileMetadataResult **out);
 
-/* Windows.Networking.NetworkOperators.ESimDownloadProfileMetadataResult */
-/* Windows.Networking.NetworkOperators.ESimDownloadProfileMetadataResult.get_Result() */
 HRESULT wnene_e_sim_download_profile_metadata_result_get__result(WNENE_ESimDownloadProfileMetadataResult *self, WNENE_ESimOperationResult** value);
 
-/* Windows.Networking.NetworkOperators.ESimDownloadProfileMetadataResult.get_ProfileMetadata() */
 HRESULT wnene_e_sim_download_profile_metadata_result_get__profile_metadata(WNENE_ESimDownloadProfileMetadataResult *self, WNENE_ESimProfileMetadata** value);
 
-/* activate Windows.Networking.NetworkOperators.ESimManager */
 HRESULT wnene_e_sim_manager_new(WNENE_ESimManager **out);
 
-/* Windows.Networking.NetworkOperators.ESimManager */
-/* Windows.Networking.NetworkOperators.ESimManager.get_ServiceInfo() */
 HRESULT wnene_e_sim_manager_get__service_info(WNENE_ESimServiceInfo** value);
 
-/* Windows.Networking.NetworkOperators.ESimManager.TryCreateESimWatcher() */
 HRESULT wnene_e_sim_manager_try_create_e_sim_watcher(WNENE_ESimWatcher** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wnene_e_sim_manager_on_service_info_changed(WNENE_ESimManager *self, cwinrt_event_fn fn, void *ctx);
 void wnene_e_sim_manager_off_service_info_changed(WNENE_ESimManager *self, cwinrt_token token);
 
-/* activate Windows.Networking.NetworkOperators.ESimOperationResult */
 HRESULT wnene_e_sim_operation_result_new(WNENE_ESimOperationResult **out);
 
-/* Windows.Networking.NetworkOperators.ESimOperationResult */
-/* Windows.Networking.NetworkOperators.ESimOperationResult.get_Status() */
 HRESULT wnene_e_sim_operation_result_get__status(WNENE_ESimOperationResult *self, WNENE_ESimOperationStatus *value);
 
-/* activate Windows.Networking.NetworkOperators.ESimPolicy */
 HRESULT wnene_e_sim_policy_new(WNENE_ESimPolicy **out);
 
-/* Windows.Networking.NetworkOperators.ESimPolicy */
-/* Windows.Networking.NetworkOperators.ESimPolicy.get_ShouldEnableManagingUi() */
 HRESULT wnene_e_sim_policy_get__should_enable_managing_ui(WNENE_ESimPolicy *self, BOOL *value);
 
-/* activate Windows.Networking.NetworkOperators.ESimProfile */
 HRESULT wnene_e_sim_profile_new(WNENE_ESimProfile **out);
 
-/* Windows.Networking.NetworkOperators.ESimProfile */
-/* Windows.Networking.NetworkOperators.ESimProfile.get_Class() */
 HRESULT wnene_e_sim_profile_get__class(WNENE_ESimProfile *self, WNENE_ESimProfileClass *value);
 
-/* Windows.Networking.NetworkOperators.ESimProfile.get_Nickname() */
 HRESULT wnene_e_sim_profile_get__nickname(WNENE_ESimProfile *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.ESimProfile.get_Policy() */
 HRESULT wnene_e_sim_profile_get__policy(WNENE_ESimProfile *self, WNENE_ESimProfilePolicy** value);
 
-/* Windows.Networking.NetworkOperators.ESimProfile.get_Id() */
 HRESULT wnene_e_sim_profile_get__id(WNENE_ESimProfile *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.ESimProfile.get_ProviderIcon() */
 HRESULT wnene_e_sim_profile_get__provider_icon(WNENE_ESimProfile *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.Networking.NetworkOperators.ESimProfile.get_ProviderId() */
 HRESULT wnene_e_sim_profile_get__provider_id(WNENE_ESimProfile *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.ESimProfile.get_ProviderName() */
 HRESULT wnene_e_sim_profile_get__provider_name(WNENE_ESimProfile *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.ESimProfile.get_State() */
 HRESULT wnene_e_sim_profile_get__state(WNENE_ESimProfile *self, WNENE_ESimProfileState *value);
 
-/* Windows.Networking.NetworkOperators.ESimProfile.DisableAsync() */
 HRESULT wnene_e_sim_profile_disable_async(WNENE_ESimProfile *self, WF_IAsyncOperation_WNENE_ESimOperationResult** out);
 
-/* Windows.Networking.NetworkOperators.ESimProfile.EnableAsync() */
 HRESULT wnene_e_sim_profile_enable_async(WNENE_ESimProfile *self, WF_IAsyncOperation_WNENE_ESimOperationResult** out);
 
-/* Windows.Networking.NetworkOperators.ESimProfile.SetNicknameAsync(newNickname) */
 HRESULT wnene_e_sim_profile_set_nickname_async(WNENE_ESimProfile *self, cwinrt_hstring newNickname, WF_IAsyncOperation_WNENE_ESimOperationResult** out);
 
-/* activate Windows.Networking.NetworkOperators.ESimProfileMetadata */
 HRESULT wnene_e_sim_profile_metadata_new(WNENE_ESimProfileMetadata **out);
 
-/* Windows.Networking.NetworkOperators.ESimProfileMetadata */
-/* Windows.Networking.NetworkOperators.ESimProfileMetadata.get_IsConfirmationCodeRequired() */
 HRESULT wnene_e_sim_profile_metadata_get__is_confirmation_code_required(WNENE_ESimProfileMetadata *self, BOOL *value);
 
-/* Windows.Networking.NetworkOperators.ESimProfileMetadata.get_Policy() */
 HRESULT wnene_e_sim_profile_metadata_get__policy(WNENE_ESimProfileMetadata *self, WNENE_ESimProfilePolicy** value);
 
-/* Windows.Networking.NetworkOperators.ESimProfileMetadata.get_Id() */
 HRESULT wnene_e_sim_profile_metadata_get__id(WNENE_ESimProfileMetadata *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.ESimProfileMetadata.get_ProviderIcon() */
 HRESULT wnene_e_sim_profile_metadata_get__provider_icon(WNENE_ESimProfileMetadata *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.Networking.NetworkOperators.ESimProfileMetadata.get_ProviderId() */
 HRESULT wnene_e_sim_profile_metadata_get__provider_id(WNENE_ESimProfileMetadata *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.ESimProfileMetadata.get_ProviderName() */
 HRESULT wnene_e_sim_profile_metadata_get__provider_name(WNENE_ESimProfileMetadata *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.ESimProfileMetadata.get_State() */
 HRESULT wnene_e_sim_profile_metadata_get__state(WNENE_ESimProfileMetadata *self, WNENE_ESimProfileMetadataState *value);
 
-/* Windows.Networking.NetworkOperators.ESimProfileMetadata.DenyInstallAsync() */
 HRESULT wnene_e_sim_profile_metadata_deny_install_async(WNENE_ESimProfileMetadata *self, WF_IAsyncOperation_WNENE_ESimOperationResult** out);
 
-/* Windows.Networking.NetworkOperators.ESimProfileMetadata.ConfirmInstallAsync() */
 HRESULT wnene_e_sim_profile_metadata_confirm_install_async(WNENE_ESimProfileMetadata *self, WF_IAsyncOperationWithProgress_WNENE_ESimOperationResult_WNENE_ESimProfileInstallProgress** out);
 
-/* Windows.Networking.NetworkOperators.ESimProfileMetadata.ConfirmInstallAsync(confirmationCode) */
 HRESULT wnene_e_sim_profile_metadata_confirm_install_async_str_p(WNENE_ESimProfileMetadata *self, cwinrt_hstring confirmationCode, WF_IAsyncOperationWithProgress_WNENE_ESimOperationResult_WNENE_ESimProfileInstallProgress** out);
 
-/* Windows.Networking.NetworkOperators.ESimProfileMetadata.PostponeInstallAsync() */
 HRESULT wnene_e_sim_profile_metadata_postpone_install_async(WNENE_ESimProfileMetadata *self, WF_IAsyncOperation_WNENE_ESimOperationResult** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wnene_e_sim_profile_metadata_on_state_changed(WNENE_ESimProfileMetadata *self, cwinrt_event_fn fn, void *ctx);
 void wnene_e_sim_profile_metadata_off_state_changed(WNENE_ESimProfileMetadata *self, cwinrt_token token);
 
-/* activate Windows.Networking.NetworkOperators.ESimProfilePolicy */
 HRESULT wnene_e_sim_profile_policy_new(WNENE_ESimProfilePolicy **out);
 
-/* Windows.Networking.NetworkOperators.ESimProfilePolicy */
-/* Windows.Networking.NetworkOperators.ESimProfilePolicy.get_CanDelete() */
 HRESULT wnene_e_sim_profile_policy_get__can_delete(WNENE_ESimProfilePolicy *self, BOOL *value);
 
-/* Windows.Networking.NetworkOperators.ESimProfilePolicy.get_CanDisable() */
 HRESULT wnene_e_sim_profile_policy_get__can_disable(WNENE_ESimProfilePolicy *self, BOOL *value);
 
-/* Windows.Networking.NetworkOperators.ESimProfilePolicy.get_IsManagedByEnterprise() */
 HRESULT wnene_e_sim_profile_policy_get__is_managed_by_enterprise(WNENE_ESimProfilePolicy *self, BOOL *value);
 
-/* activate Windows.Networking.NetworkOperators.ESimRemovedEventArgs */
 HRESULT wnene_e_sim_removed_event_args_new(WNENE_ESimRemovedEventArgs **out);
 
-/* Windows.Networking.NetworkOperators.ESimRemovedEventArgs */
-/* Windows.Networking.NetworkOperators.ESimRemovedEventArgs.get_ESim() */
 HRESULT wnene_e_sim_removed_event_args_get__e_sim(WNENE_ESimRemovedEventArgs *self, WNENE_ESim** value);
 
-/* activate Windows.Networking.NetworkOperators.ESimServiceInfo */
 HRESULT wnene_e_sim_service_info_new(WNENE_ESimServiceInfo **out);
 
-/* Windows.Networking.NetworkOperators.ESimServiceInfo */
-/* Windows.Networking.NetworkOperators.ESimServiceInfo.get_AuthenticationPreference() */
 HRESULT wnene_e_sim_service_info_get__authentication_preference(WNENE_ESimServiceInfo *self, WNENE_ESimAuthenticationPreference *value);
 
-/* Windows.Networking.NetworkOperators.ESimServiceInfo.get_IsESimUiEnabled() */
 HRESULT wnene_e_sim_service_info_get__is_e_sim_ui_enabled(WNENE_ESimServiceInfo *self, BOOL *value);
 
-/* activate Windows.Networking.NetworkOperators.ESimUpdatedEventArgs */
 HRESULT wnene_e_sim_updated_event_args_new(WNENE_ESimUpdatedEventArgs **out);
 
-/* Windows.Networking.NetworkOperators.ESimUpdatedEventArgs */
-/* Windows.Networking.NetworkOperators.ESimUpdatedEventArgs.get_ESim() */
 HRESULT wnene_e_sim_updated_event_args_get__e_sim(WNENE_ESimUpdatedEventArgs *self, WNENE_ESim** value);
 
-/* activate Windows.Networking.NetworkOperators.ESimWatcher */
 HRESULT wnene_e_sim_watcher_new(WNENE_ESimWatcher **out);
 
-/* Windows.Networking.NetworkOperators.ESimWatcher */
-/* Windows.Networking.NetworkOperators.ESimWatcher.get_Status() */
 HRESULT wnene_e_sim_watcher_get__status(WNENE_ESimWatcher *self, WNENE_ESimWatcherStatus *value);
 
-/* Windows.Networking.NetworkOperators.ESimWatcher.Start() */
 HRESULT wnene_e_sim_watcher_start(WNENE_ESimWatcher *self);
 
-/* Windows.Networking.NetworkOperators.ESimWatcher.Stop() */
 HRESULT wnene_e_sim_watcher_stop(WNENE_ESimWatcher *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wnene_e_sim_watcher_on_added(WNENE_ESimWatcher *self, cwinrt_event_fn fn, void *ctx);
@@ -1742,326 +1642,200 @@ void wnene_e_sim_watcher_off_stopped(WNENE_ESimWatcher *self, cwinrt_token token
 cwinrt_token wnene_e_sim_watcher_on_updated(WNENE_ESimWatcher *self, cwinrt_event_fn fn, void *ctx);
 void wnene_e_sim_watcher_off_updated(WNENE_ESimWatcher *self, cwinrt_token token);
 
-/* activate Windows.Networking.NetworkOperators.HotspotAuthenticationContext */
 HRESULT wnene_hotspot_authentication_context_new(WNENE_HotspotAuthenticationContext **out);
 
-/* Windows.Networking.NetworkOperators.HotspotAuthenticationContext */
-/* Windows.Networking.NetworkOperators.HotspotAuthenticationContext.get_WirelessNetworkId() */
 HRESULT wnene_hotspot_authentication_context_get__wireless_network_id(WNENE_HotspotAuthenticationContext *self, uint8_t **value, uint32_t *value_len);
 
-/* Windows.Networking.NetworkOperators.HotspotAuthenticationContext.get_NetworkAdapter() */
 HRESULT wnene_hotspot_authentication_context_get__network_adapter(WNENE_HotspotAuthenticationContext *self, WNECO_NetworkAdapter** value);
 
-/* Windows.Networking.NetworkOperators.HotspotAuthenticationContext.get_RedirectMessageUrl() */
 HRESULT wnene_hotspot_authentication_context_get__redirect_message_url(WNENE_HotspotAuthenticationContext *self, WF_Uri** value);
 
-/* Windows.Networking.NetworkOperators.HotspotAuthenticationContext.get_RedirectMessageXml() */
 HRESULT wnene_hotspot_authentication_context_get__redirect_message_xml(WNENE_HotspotAuthenticationContext *self, WDAXMDO_XmlDocument** value);
 
-/* Windows.Networking.NetworkOperators.HotspotAuthenticationContext.get_AuthenticationUrl() */
 HRESULT wnene_hotspot_authentication_context_get__authentication_url(WNENE_HotspotAuthenticationContext *self, WF_Uri** value);
 
-/* Windows.Networking.NetworkOperators.HotspotAuthenticationContext.IssueCredentials(userName, password, extraParameters, markAsManualConnectOnFailure) */
 HRESULT wnene_hotspot_authentication_context_issue_credentials(WNENE_HotspotAuthenticationContext *self, cwinrt_hstring userName, cwinrt_hstring password, cwinrt_hstring extraParameters, BOOL markAsManualConnectOnFailure);
 
-/* Windows.Networking.NetworkOperators.HotspotAuthenticationContext.AbortAuthentication(markAsManual) */
 HRESULT wnene_hotspot_authentication_context_abort_authentication(WNENE_HotspotAuthenticationContext *self, BOOL markAsManual);
 
-/* Windows.Networking.NetworkOperators.HotspotAuthenticationContext.SkipAuthentication() */
 HRESULT wnene_hotspot_authentication_context_skip_authentication(WNENE_HotspotAuthenticationContext *self);
 
-/* Windows.Networking.NetworkOperators.HotspotAuthenticationContext.TriggerAttentionRequired(packageRelativeApplicationId, applicationParameters) */
 HRESULT wnene_hotspot_authentication_context_trigger_attention_required(WNENE_HotspotAuthenticationContext *self, cwinrt_hstring packageRelativeApplicationId, cwinrt_hstring applicationParameters);
 
-/* Windows.Networking.NetworkOperators.HotspotAuthenticationContext.IssueCredentialsAsync(userName, password, extraParameters, markAsManualConnectOnFailure) */
 HRESULT wnene_hotspot_authentication_context_issue_credentials_async(WNENE_HotspotAuthenticationContext *self, cwinrt_hstring userName, cwinrt_hstring password, cwinrt_hstring extraParameters, BOOL markAsManualConnectOnFailure, WF_IAsyncOperation_WNENE_HotspotCredentialsAuthenticationResult** out);
 
-/* Windows.Networking.NetworkOperators.HotspotAuthenticationContext.TryGetAuthenticationContext(evenToken, context) */
 HRESULT wnene_hotspot_authentication_context_try_get_authentication_context(cwinrt_hstring evenToken, WNENE_HotspotAuthenticationContext* context, BOOL *out);
 
-/* activate Windows.Networking.NetworkOperators.HotspotAuthenticationEventDetails */
 HRESULT wnene_hotspot_authentication_event_details_new(WNENE_HotspotAuthenticationEventDetails **out);
 
-/* Windows.Networking.NetworkOperators.HotspotAuthenticationEventDetails */
-/* Windows.Networking.NetworkOperators.HotspotAuthenticationEventDetails.get_EventToken() */
 HRESULT wnene_hotspot_authentication_event_details_get__event_token(WNENE_HotspotAuthenticationEventDetails *self, cwinrt_hstring *value);
 
-/* activate Windows.Networking.NetworkOperators.HotspotCredentialsAuthenticationResult */
 HRESULT wnene_hotspot_credentials_authentication_result_new(WNENE_HotspotCredentialsAuthenticationResult **out);
 
-/* Windows.Networking.NetworkOperators.HotspotCredentialsAuthenticationResult */
-/* Windows.Networking.NetworkOperators.HotspotCredentialsAuthenticationResult.get_HasNetworkErrorOccurred() */
 HRESULT wnene_hotspot_credentials_authentication_result_get__has_network_error_occurred(WNENE_HotspotCredentialsAuthenticationResult *self, BOOL *value);
 
-/* Windows.Networking.NetworkOperators.HotspotCredentialsAuthenticationResult.get_ResponseCode() */
 HRESULT wnene_hotspot_credentials_authentication_result_get__response_code(WNENE_HotspotCredentialsAuthenticationResult *self, WNENE_HotspotAuthenticationResponseCode *value);
 
-/* Windows.Networking.NetworkOperators.HotspotCredentialsAuthenticationResult.get_LogoffUrl() */
 HRESULT wnene_hotspot_credentials_authentication_result_get__logoff_url(WNENE_HotspotCredentialsAuthenticationResult *self, WF_Uri** value);
 
-/* Windows.Networking.NetworkOperators.HotspotCredentialsAuthenticationResult.get_AuthenticationReplyXml() */
 HRESULT wnene_hotspot_credentials_authentication_result_get__authentication_reply_xml(WNENE_HotspotCredentialsAuthenticationResult *self, WDAXMDO_XmlDocument** value);
 
-/* Windows.Networking.NetworkOperators.IESimManagerStatics */
-/* Windows.Networking.NetworkOperators.IESimManagerStatics.get_ServiceInfo() */
 HRESULT wnene_e_sim_manager_statics_get__service_info(WNENE_IESimManagerStatics *self, WNENE_ESimServiceInfo** value);
 
-/* Windows.Networking.NetworkOperators.IESimManagerStatics.TryCreateESimWatcher() */
 HRESULT wnene_e_sim_manager_statics_try_create_e_sim_watcher(WNENE_IESimManagerStatics *self, WNENE_ESimWatcher** out);
 
-/* Windows.Networking.NetworkOperators.IHotspotAuthenticationContextStatics */
-/* Windows.Networking.NetworkOperators.IHotspotAuthenticationContextStatics.TryGetAuthenticationContext(evenToken, context) */
 HRESULT wnene_hotspot_authentication_context_statics_try_get_authentication_context(WNENE_IHotspotAuthenticationContextStatics *self, cwinrt_hstring evenToken, WNENE_HotspotAuthenticationContext* context, BOOL *out);
 
-/* Windows.Networking.NetworkOperators.IKnownCSimFilePathsStatics */
-/* Windows.Networking.NetworkOperators.IKnownCSimFilePathsStatics.get_EFSpn() */
 HRESULT wnene_known_c_sim_file_paths_statics_get__e_f_spn(WNENE_IKnownCSimFilePathsStatics *self, WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Networking.NetworkOperators.IKnownCSimFilePathsStatics.get_Gid1() */
 HRESULT wnene_known_c_sim_file_paths_statics_get__gid1(WNENE_IKnownCSimFilePathsStatics *self, WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Networking.NetworkOperators.IKnownCSimFilePathsStatics.get_Gid2() */
 HRESULT wnene_known_c_sim_file_paths_statics_get__gid2(WNENE_IKnownCSimFilePathsStatics *self, WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Networking.NetworkOperators.IKnownRuimFilePathsStatics */
-/* Windows.Networking.NetworkOperators.IKnownRuimFilePathsStatics.get_EFSpn() */
 HRESULT wnene_known_ruim_file_paths_statics_get__e_f_spn(WNENE_IKnownRuimFilePathsStatics *self, WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Networking.NetworkOperators.IKnownRuimFilePathsStatics.get_Gid1() */
 HRESULT wnene_known_ruim_file_paths_statics_get__gid1(WNENE_IKnownRuimFilePathsStatics *self, WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Networking.NetworkOperators.IKnownRuimFilePathsStatics.get_Gid2() */
 HRESULT wnene_known_ruim_file_paths_statics_get__gid2(WNENE_IKnownRuimFilePathsStatics *self, WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Networking.NetworkOperators.IKnownSimFilePathsStatics */
-/* Windows.Networking.NetworkOperators.IKnownSimFilePathsStatics.get_EFOns() */
 HRESULT wnene_known_sim_file_paths_statics_get__e_f_ons(WNENE_IKnownSimFilePathsStatics *self, WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Networking.NetworkOperators.IKnownSimFilePathsStatics.get_EFSpn() */
 HRESULT wnene_known_sim_file_paths_statics_get__e_f_spn(WNENE_IKnownSimFilePathsStatics *self, WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Networking.NetworkOperators.IKnownSimFilePathsStatics.get_Gid1() */
 HRESULT wnene_known_sim_file_paths_statics_get__gid1(WNENE_IKnownSimFilePathsStatics *self, WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Networking.NetworkOperators.IKnownSimFilePathsStatics.get_Gid2() */
 HRESULT wnene_known_sim_file_paths_statics_get__gid2(WNENE_IKnownSimFilePathsStatics *self, WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Networking.NetworkOperators.IKnownUSimFilePathsStatics */
-/* Windows.Networking.NetworkOperators.IKnownUSimFilePathsStatics.get_EFSpn() */
 HRESULT wnene_known_u_sim_file_paths_statics_get__e_f_spn(WNENE_IKnownUSimFilePathsStatics *self, WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Networking.NetworkOperators.IKnownUSimFilePathsStatics.get_EFOpl() */
 HRESULT wnene_known_u_sim_file_paths_statics_get__e_f_opl(WNENE_IKnownUSimFilePathsStatics *self, WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Networking.NetworkOperators.IKnownUSimFilePathsStatics.get_EFPnn() */
 HRESULT wnene_known_u_sim_file_paths_statics_get__e_f_pnn(WNENE_IKnownUSimFilePathsStatics *self, WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Networking.NetworkOperators.IKnownUSimFilePathsStatics.get_Gid1() */
 HRESULT wnene_known_u_sim_file_paths_statics_get__gid1(WNENE_IKnownUSimFilePathsStatics *self, WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Networking.NetworkOperators.IKnownUSimFilePathsStatics.get_Gid2() */
 HRESULT wnene_known_u_sim_file_paths_statics_get__gid2(WNENE_IKnownUSimFilePathsStatics *self, WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandAccountStatics */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandAccountStatics.get_AvailableNetworkAccountIds() */
 HRESULT wnene_mobile_broadband_account_statics_get__available_network_account_ids(WNENE_IMobileBroadbandAccountStatics *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandAccountStatics.CreateFromNetworkAccountId(networkAccountId) */
 HRESULT wnene_mobile_broadband_account_statics_create_from_network_account_id(WNENE_IMobileBroadbandAccountStatics *self, cwinrt_hstring networkAccountId, WNENE_MobileBroadbandAccount** out);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandAntennaSarFactory */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandAntennaSarFactory.CreateWithIndex(antennaIndex, sarBackoffIndex) */
 HRESULT wnene_mobile_broadband_antenna_sar_factory_create_with_index(WNENE_IMobileBroadbandAntennaSarFactory *self, int32_t antennaIndex, int32_t sarBackoffIndex, WNENE_MobileBroadbandAntennaSar** out);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandModemIsolationFactory */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandModemIsolationFactory.Create(modemDeviceId, ruleGroupId) */
 HRESULT wnene_mobile_broadband_modem_isolation_factory_create(WNENE_IMobileBroadbandModemIsolationFactory *self, cwinrt_hstring modemDeviceId, cwinrt_hstring ruleGroupId, WNENE_MobileBroadbandModemIsolation** out);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandModemStatics */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandModemStatics.GetDeviceSelector() */
 HRESULT wnene_mobile_broadband_modem_statics_get_device_selector(WNENE_IMobileBroadbandModemStatics *self, cwinrt_hstring *out);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandModemStatics.FromId(deviceId) */
 HRESULT wnene_mobile_broadband_modem_statics_from_id(WNENE_IMobileBroadbandModemStatics *self, cwinrt_hstring deviceId, WNENE_MobileBroadbandModem** out);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandModemStatics.GetDefault() */
 HRESULT wnene_mobile_broadband_modem_statics_get_default(WNENE_IMobileBroadbandModemStatics *self, WNENE_MobileBroadbandModem** out);
 
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics */
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics.GetTetheringCapability(networkAccountId) */
 HRESULT wnene_network_operator_tethering_manager_statics_get_tethering_capability(WNENE_INetworkOperatorTetheringManagerStatics *self, cwinrt_hstring networkAccountId, WNENE_TetheringCapability *out);
 
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics.CreateFromNetworkAccountId(networkAccountId) */
 HRESULT wnene_network_operator_tethering_manager_statics_create_from_network_account_id(WNENE_INetworkOperatorTetheringManagerStatics *self, cwinrt_hstring networkAccountId, WNENE_NetworkOperatorTetheringManager** out);
 
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics2 */
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics2.GetTetheringCapabilityFromConnectionProfile(profile) */
 HRESULT wnene_network_operator_tethering_manager_statics_2_get_tethering_capability_from_connection_profile(WNENE_INetworkOperatorTetheringManagerStatics_2 *self, WNECO_ConnectionProfile* profile, WNENE_TetheringCapability *out);
 
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics2.CreateFromConnectionProfile(profile) */
 HRESULT wnene_network_operator_tethering_manager_statics_2_create_from_connection_profile(WNENE_INetworkOperatorTetheringManagerStatics_2 *self, WNECO_ConnectionProfile* profile, WNENE_NetworkOperatorTetheringManager** out);
 
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics3 */
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics3.CreateFromConnectionProfile(profile, adapter) */
 HRESULT wnene_network_operator_tethering_manager_statics_3_create_from_connection_profile(WNENE_INetworkOperatorTetheringManagerStatics_3 *self, WNECO_ConnectionProfile* profile, WNECO_NetworkAdapter* adapter, WNENE_NetworkOperatorTetheringManager** out);
 
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics4 */
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics4.IsNoConnectionsTimeoutEnabled() */
 HRESULT wnene_network_operator_tethering_manager_statics_4_is_no_connections_timeout_enabled(WNENE_INetworkOperatorTetheringManagerStatics_4 *self, BOOL *out);
 
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics4.EnableNoConnectionsTimeout() */
 HRESULT wnene_network_operator_tethering_manager_statics_4_enable_no_connections_timeout(WNENE_INetworkOperatorTetheringManagerStatics_4 *self);
 
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics4.EnableNoConnectionsTimeoutAsync() */
 HRESULT wnene_network_operator_tethering_manager_statics_4_enable_no_connections_timeout_async(WNENE_INetworkOperatorTetheringManagerStatics_4 *self, WF_IAsyncAction** out);
 
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics4.DisableNoConnectionsTimeout() */
 HRESULT wnene_network_operator_tethering_manager_statics_4_disable_no_connections_timeout(WNENE_INetworkOperatorTetheringManagerStatics_4 *self);
 
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics4.DisableNoConnectionsTimeoutAsync() */
 HRESULT wnene_network_operator_tethering_manager_statics_4_disable_no_connections_timeout_async(WNENE_INetworkOperatorTetheringManagerStatics_4 *self, WF_IAsyncAction** out);
 
-/* Windows.Networking.NetworkOperators.IProvisioningAgentStaticMethods */
-/* Windows.Networking.NetworkOperators.IProvisioningAgentStaticMethods.CreateFromNetworkAccountId(networkAccountId) */
 HRESULT wnene_provisioning_agent_static_methods_create_from_network_account_id(WNENE_IProvisioningAgentStaticMethods *self, cwinrt_hstring networkAccountId, WNENE_ProvisioningAgent** out);
 
-/* Windows.Networking.NetworkOperators.IUssdMessageFactory */
-/* Windows.Networking.NetworkOperators.IUssdMessageFactory.CreateMessage(messageText) */
 HRESULT wnene_ussd_message_factory_create_message(WNENE_IUssdMessageFactory *self, cwinrt_hstring messageText, WNENE_UssdMessage** out);
 
-/* Windows.Networking.NetworkOperators.IUssdSessionStatics */
-/* Windows.Networking.NetworkOperators.IUssdSessionStatics.CreateFromNetworkAccountId(networkAccountId) */
 HRESULT wnene_ussd_session_statics_create_from_network_account_id(WNENE_IUssdSessionStatics *self, cwinrt_hstring networkAccountId, WNENE_UssdSession** out);
 
-/* Windows.Networking.NetworkOperators.IUssdSessionStatics.CreateFromNetworkInterfaceId(networkInterfaceId) */
 HRESULT wnene_ussd_session_statics_create_from_network_interface_id(WNENE_IUssdSessionStatics *self, cwinrt_hstring networkInterfaceId, WNENE_UssdSession** out);
 
-/* activate Windows.Networking.NetworkOperators.KnownCSimFilePaths */
 HRESULT wnene_known_c_sim_file_paths_new(WNENE_KnownCSimFilePaths **out);
 
-/* Windows.Networking.NetworkOperators.KnownCSimFilePaths */
-/* Windows.Networking.NetworkOperators.KnownCSimFilePaths.get_EFSpn() */
 HRESULT wnene_known_c_sim_file_paths_get__e_f_spn(WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Networking.NetworkOperators.KnownCSimFilePaths.get_Gid1() */
 HRESULT wnene_known_c_sim_file_paths_get__gid1(WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Networking.NetworkOperators.KnownCSimFilePaths.get_Gid2() */
 HRESULT wnene_known_c_sim_file_paths_get__gid2(WFOCO_IVectorView_uint32_t** value);
 
-/* activate Windows.Networking.NetworkOperators.KnownRuimFilePaths */
 HRESULT wnene_known_ruim_file_paths_new(WNENE_KnownRuimFilePaths **out);
 
-/* Windows.Networking.NetworkOperators.KnownRuimFilePaths */
-/* Windows.Networking.NetworkOperators.KnownRuimFilePaths.get_EFSpn() */
 HRESULT wnene_known_ruim_file_paths_get__e_f_spn(WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Networking.NetworkOperators.KnownRuimFilePaths.get_Gid1() */
 HRESULT wnene_known_ruim_file_paths_get__gid1(WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Networking.NetworkOperators.KnownRuimFilePaths.get_Gid2() */
 HRESULT wnene_known_ruim_file_paths_get__gid2(WFOCO_IVectorView_uint32_t** value);
 
-/* activate Windows.Networking.NetworkOperators.KnownSimFilePaths */
 HRESULT wnene_known_sim_file_paths_new(WNENE_KnownSimFilePaths **out);
 
-/* Windows.Networking.NetworkOperators.KnownSimFilePaths */
-/* Windows.Networking.NetworkOperators.KnownSimFilePaths.get_EFOns() */
 HRESULT wnene_known_sim_file_paths_get__e_f_ons(WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Networking.NetworkOperators.KnownSimFilePaths.get_EFSpn() */
 HRESULT wnene_known_sim_file_paths_get__e_f_spn(WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Networking.NetworkOperators.KnownSimFilePaths.get_Gid1() */
 HRESULT wnene_known_sim_file_paths_get__gid1(WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Networking.NetworkOperators.KnownSimFilePaths.get_Gid2() */
 HRESULT wnene_known_sim_file_paths_get__gid2(WFOCO_IVectorView_uint32_t** value);
 
-/* activate Windows.Networking.NetworkOperators.KnownUSimFilePaths */
 HRESULT wnene_known_u_sim_file_paths_new(WNENE_KnownUSimFilePaths **out);
 
-/* Windows.Networking.NetworkOperators.KnownUSimFilePaths */
-/* Windows.Networking.NetworkOperators.KnownUSimFilePaths.get_EFSpn() */
 HRESULT wnene_known_u_sim_file_paths_get__e_f_spn(WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Networking.NetworkOperators.KnownUSimFilePaths.get_EFOpl() */
 HRESULT wnene_known_u_sim_file_paths_get__e_f_opl(WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Networking.NetworkOperators.KnownUSimFilePaths.get_EFPnn() */
 HRESULT wnene_known_u_sim_file_paths_get__e_f_pnn(WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Networking.NetworkOperators.KnownUSimFilePaths.get_Gid1() */
 HRESULT wnene_known_u_sim_file_paths_get__gid1(WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Networking.NetworkOperators.KnownUSimFilePaths.get_Gid2() */
 HRESULT wnene_known_u_sim_file_paths_get__gid2(WFOCO_IVectorView_uint32_t** value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandAccount */
 HRESULT wnene_mobile_broadband_account_new(WNENE_MobileBroadbandAccount **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandAccount */
-/* Windows.Networking.NetworkOperators.MobileBroadbandAccount.get_NetworkAccountId() */
 HRESULT wnene_mobile_broadband_account_get__network_account_id(WNENE_MobileBroadbandAccount *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandAccount.get_ServiceProviderGuid() */
 HRESULT wnene_mobile_broadband_account_get__service_provider_guid(WNENE_MobileBroadbandAccount *self, GUID *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandAccount.get_ServiceProviderName() */
 HRESULT wnene_mobile_broadband_account_get__service_provider_name(WNENE_MobileBroadbandAccount *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandAccount.get_CurrentNetwork() */
 HRESULT wnene_mobile_broadband_account_get__current_network(WNENE_MobileBroadbandAccount *self, WNENE_MobileBroadbandNetwork** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandAccount.get_CurrentDeviceInformation() */
 HRESULT wnene_mobile_broadband_account_get__current_device_information(WNENE_MobileBroadbandAccount *self, WNENE_MobileBroadbandDeviceInformation** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandAccount.GetConnectionProfiles() */
 HRESULT wnene_mobile_broadband_account_get_connection_profiles(WNENE_MobileBroadbandAccount *self, WFOCO_IVectorView_WNECO_ConnectionProfile** out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandAccount.get_AccountExperienceUrl() */
 HRESULT wnene_mobile_broadband_account_get__account_experience_url(WNENE_MobileBroadbandAccount *self, WF_Uri** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandAccount.get_AvailableNetworkAccountIds() */
 HRESULT wnene_mobile_broadband_account_get__available_network_account_ids(WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandAccount.CreateFromNetworkAccountId(networkAccountId) */
 HRESULT wnene_mobile_broadband_account_create_from_network_account_id(cwinrt_hstring networkAccountId, WNENE_MobileBroadbandAccount** out);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandAccountEventArgs */
 HRESULT wnene_mobile_broadband_account_event_args_new(WNENE_MobileBroadbandAccountEventArgs **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandAccountEventArgs */
-/* Windows.Networking.NetworkOperators.MobileBroadbandAccountEventArgs.get_NetworkAccountId() */
 HRESULT wnene_mobile_broadband_account_event_args_get__network_account_id(WNENE_MobileBroadbandAccountEventArgs *self, cwinrt_hstring *value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandAccountUpdatedEventArgs */
 HRESULT wnene_mobile_broadband_account_updated_event_args_new(WNENE_MobileBroadbandAccountUpdatedEventArgs **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandAccountUpdatedEventArgs */
-/* Windows.Networking.NetworkOperators.MobileBroadbandAccountUpdatedEventArgs.get_NetworkAccountId() */
 HRESULT wnene_mobile_broadband_account_updated_event_args_get__network_account_id(WNENE_MobileBroadbandAccountUpdatedEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandAccountUpdatedEventArgs.get_HasDeviceInformationChanged() */
 HRESULT wnene_mobile_broadband_account_updated_event_args_get__has_device_information_changed(WNENE_MobileBroadbandAccountUpdatedEventArgs *self, BOOL *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandAccountUpdatedEventArgs.get_HasNetworkChanged() */
 HRESULT wnene_mobile_broadband_account_updated_event_args_get__has_network_changed(WNENE_MobileBroadbandAccountUpdatedEventArgs *self, BOOL *value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher */
 HRESULT wnene_mobile_broadband_account_watcher_new(WNENE_MobileBroadbandAccountWatcher **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher */
-/* Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher.get_Status() */
 HRESULT wnene_mobile_broadband_account_watcher_get__status(WNENE_MobileBroadbandAccountWatcher *self, WNENE_MobileBroadbandAccountWatcherStatus *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher.Start() */
 HRESULT wnene_mobile_broadband_account_watcher_start(WNENE_MobileBroadbandAccountWatcher *self);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher.Stop() */
 HRESULT wnene_mobile_broadband_account_watcher_stop(WNENE_MobileBroadbandAccountWatcher *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wnene_mobile_broadband_account_watcher_on_account_added(WNENE_MobileBroadbandAccountWatcher *self, cwinrt_event_fn fn, void *ctx);
@@ -2079,779 +1853,500 @@ void wnene_mobile_broadband_account_watcher_off_enumeration_completed(WNENE_Mobi
 cwinrt_token wnene_mobile_broadband_account_watcher_on_stopped(WNENE_MobileBroadbandAccountWatcher *self, cwinrt_event_fn fn, void *ctx);
 void wnene_mobile_broadband_account_watcher_off_stopped(WNENE_MobileBroadbandAccountWatcher *self, cwinrt_token token);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandAntennaSar */
 HRESULT wnene_mobile_broadband_antenna_sar_new(WNENE_MobileBroadbandAntennaSar **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandAntennaSar */
-/* Windows.Networking.NetworkOperators.MobileBroadbandAntennaSar.get_AntennaIndex() */
 HRESULT wnene_mobile_broadband_antenna_sar_get__antenna_index(WNENE_MobileBroadbandAntennaSar *self, int32_t *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandAntennaSar.get_SarBackoffIndex() */
 HRESULT wnene_mobile_broadband_antenna_sar_get__sar_backoff_index(WNENE_MobileBroadbandAntennaSar *self, int32_t *value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandCellCdma */
 HRESULT wnene_mobile_broadband_cell_cdma_new(WNENE_MobileBroadbandCellCdma **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellCdma */
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellCdma.get_BaseStationId() */
 HRESULT wnene_mobile_broadband_cell_cdma_get__base_station_id(WNENE_MobileBroadbandCellCdma *self, int32_t** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellCdma.get_BaseStationPNCode() */
 HRESULT wnene_mobile_broadband_cell_cdma_get__base_station_p_n_code(WNENE_MobileBroadbandCellCdma *self, int32_t** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellCdma.get_BaseStationLatitude() */
 HRESULT wnene_mobile_broadband_cell_cdma_get__base_station_latitude(WNENE_MobileBroadbandCellCdma *self, double** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellCdma.get_BaseStationLongitude() */
 HRESULT wnene_mobile_broadband_cell_cdma_get__base_station_longitude(WNENE_MobileBroadbandCellCdma *self, double** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellCdma.get_BaseStationLastBroadcastGpsTime() */
 HRESULT wnene_mobile_broadband_cell_cdma_get__base_station_last_broadcast_gps_time(WNENE_MobileBroadbandCellCdma *self, WF_TimeSpan** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellCdma.get_NetworkId() */
 HRESULT wnene_mobile_broadband_cell_cdma_get__network_id(WNENE_MobileBroadbandCellCdma *self, int32_t** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellCdma.get_PilotSignalStrengthInDB() */
 HRESULT wnene_mobile_broadband_cell_cdma_get__pilot_signal_strength_in_d_b(WNENE_MobileBroadbandCellCdma *self, double** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellCdma.get_SystemId() */
 HRESULT wnene_mobile_broadband_cell_cdma_get__system_id(WNENE_MobileBroadbandCellCdma *self, int32_t** value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandCellGsm */
 HRESULT wnene_mobile_broadband_cell_gsm_new(WNENE_MobileBroadbandCellGsm **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellGsm */
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellGsm.get_BaseStationId() */
 HRESULT wnene_mobile_broadband_cell_gsm_get__base_station_id(WNENE_MobileBroadbandCellGsm *self, int32_t** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellGsm.get_CellId() */
 HRESULT wnene_mobile_broadband_cell_gsm_get__cell_id(WNENE_MobileBroadbandCellGsm *self, int32_t** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellGsm.get_ChannelNumber() */
 HRESULT wnene_mobile_broadband_cell_gsm_get__channel_number(WNENE_MobileBroadbandCellGsm *self, int32_t** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellGsm.get_LocationAreaCode() */
 HRESULT wnene_mobile_broadband_cell_gsm_get__location_area_code(WNENE_MobileBroadbandCellGsm *self, int32_t** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellGsm.get_ProviderId() */
 HRESULT wnene_mobile_broadband_cell_gsm_get__provider_id(WNENE_MobileBroadbandCellGsm *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellGsm.get_ReceivedSignalStrengthInDBm() */
 HRESULT wnene_mobile_broadband_cell_gsm_get__received_signal_strength_in_d_bm(WNENE_MobileBroadbandCellGsm *self, double** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellGsm.get_TimingAdvanceInBitPeriods() */
 HRESULT wnene_mobile_broadband_cell_gsm_get__timing_advance_in_bit_periods(WNENE_MobileBroadbandCellGsm *self, int32_t** value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandCellLte */
 HRESULT wnene_mobile_broadband_cell_lte_new(WNENE_MobileBroadbandCellLte **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellLte */
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellLte.get_CellId() */
 HRESULT wnene_mobile_broadband_cell_lte_get__cell_id(WNENE_MobileBroadbandCellLte *self, int32_t** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellLte.get_ChannelNumber() */
 HRESULT wnene_mobile_broadband_cell_lte_get__channel_number(WNENE_MobileBroadbandCellLte *self, int32_t** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellLte.get_PhysicalCellId() */
 HRESULT wnene_mobile_broadband_cell_lte_get__physical_cell_id(WNENE_MobileBroadbandCellLte *self, int32_t** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellLte.get_ProviderId() */
 HRESULT wnene_mobile_broadband_cell_lte_get__provider_id(WNENE_MobileBroadbandCellLte *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellLte.get_ReferenceSignalReceivedPowerInDBm() */
 HRESULT wnene_mobile_broadband_cell_lte_get__reference_signal_received_power_in_d_bm(WNENE_MobileBroadbandCellLte *self, double** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellLte.get_ReferenceSignalReceivedQualityInDBm() */
 HRESULT wnene_mobile_broadband_cell_lte_get__reference_signal_received_quality_in_d_bm(WNENE_MobileBroadbandCellLte *self, double** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellLte.get_TimingAdvanceInBitPeriods() */
 HRESULT wnene_mobile_broadband_cell_lte_get__timing_advance_in_bit_periods(WNENE_MobileBroadbandCellLte *self, int32_t** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellLte.get_TrackingAreaCode() */
 HRESULT wnene_mobile_broadband_cell_lte_get__tracking_area_code(WNENE_MobileBroadbandCellLte *self, int32_t** value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandCellNR */
 HRESULT wnene_mobile_broadband_cell_n_r_new(WNENE_MobileBroadbandCellNR **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellNR */
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellNR.get_CellId() */
 HRESULT wnene_mobile_broadband_cell_n_r_get__cell_id(WNENE_MobileBroadbandCellNR *self, int64_t** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellNR.get_ChannelNumber() */
 HRESULT wnene_mobile_broadband_cell_n_r_get__channel_number(WNENE_MobileBroadbandCellNR *self, int32_t** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellNR.get_PhysicalCellId() */
 HRESULT wnene_mobile_broadband_cell_n_r_get__physical_cell_id(WNENE_MobileBroadbandCellNR *self, int32_t** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellNR.get_ProviderId() */
 HRESULT wnene_mobile_broadband_cell_n_r_get__provider_id(WNENE_MobileBroadbandCellNR *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellNR.get_ReferenceSignalReceivedPowerInDBm() */
 HRESULT wnene_mobile_broadband_cell_n_r_get__reference_signal_received_power_in_d_bm(WNENE_MobileBroadbandCellNR *self, double** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellNR.get_ReferenceSignalReceivedQualityInDBm() */
 HRESULT wnene_mobile_broadband_cell_n_r_get__reference_signal_received_quality_in_d_bm(WNENE_MobileBroadbandCellNR *self, double** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellNR.get_TimingAdvanceInNanoseconds() */
 HRESULT wnene_mobile_broadband_cell_n_r_get__timing_advance_in_nanoseconds(WNENE_MobileBroadbandCellNR *self, int32_t** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellNR.get_TrackingAreaCode() */
 HRESULT wnene_mobile_broadband_cell_n_r_get__tracking_area_code(WNENE_MobileBroadbandCellNR *self, int32_t** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellNR.get_SignalToNoiseRatioInDB() */
 HRESULT wnene_mobile_broadband_cell_n_r_get__signal_to_noise_ratio_in_d_b(WNENE_MobileBroadbandCellNR *self, double** value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma */
 HRESULT wnene_mobile_broadband_cell_tdscdma_new(WNENE_MobileBroadbandCellTdscdma **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma */
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma.get_CellId() */
 HRESULT wnene_mobile_broadband_cell_tdscdma_get__cell_id(WNENE_MobileBroadbandCellTdscdma *self, int32_t** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma.get_CellParameterId() */
 HRESULT wnene_mobile_broadband_cell_tdscdma_get__cell_parameter_id(WNENE_MobileBroadbandCellTdscdma *self, int32_t** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma.get_ChannelNumber() */
 HRESULT wnene_mobile_broadband_cell_tdscdma_get__channel_number(WNENE_MobileBroadbandCellTdscdma *self, int32_t** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma.get_LocationAreaCode() */
 HRESULT wnene_mobile_broadband_cell_tdscdma_get__location_area_code(WNENE_MobileBroadbandCellTdscdma *self, int32_t** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma.get_PathLossInDB() */
 HRESULT wnene_mobile_broadband_cell_tdscdma_get__path_loss_in_d_b(WNENE_MobileBroadbandCellTdscdma *self, double** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma.get_ProviderId() */
 HRESULT wnene_mobile_broadband_cell_tdscdma_get__provider_id(WNENE_MobileBroadbandCellTdscdma *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma.get_ReceivedSignalCodePowerInDBm() */
 HRESULT wnene_mobile_broadband_cell_tdscdma_get__received_signal_code_power_in_d_bm(WNENE_MobileBroadbandCellTdscdma *self, double** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma.get_TimingAdvanceInBitPeriods() */
 HRESULT wnene_mobile_broadband_cell_tdscdma_get__timing_advance_in_bit_periods(WNENE_MobileBroadbandCellTdscdma *self, int32_t** value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandCellUmts */
 HRESULT wnene_mobile_broadband_cell_umts_new(WNENE_MobileBroadbandCellUmts **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellUmts */
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellUmts.get_CellId() */
 HRESULT wnene_mobile_broadband_cell_umts_get__cell_id(WNENE_MobileBroadbandCellUmts *self, int32_t** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellUmts.get_ChannelNumber() */
 HRESULT wnene_mobile_broadband_cell_umts_get__channel_number(WNENE_MobileBroadbandCellUmts *self, int32_t** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellUmts.get_LocationAreaCode() */
 HRESULT wnene_mobile_broadband_cell_umts_get__location_area_code(WNENE_MobileBroadbandCellUmts *self, int32_t** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellUmts.get_PathLossInDB() */
 HRESULT wnene_mobile_broadband_cell_umts_get__path_loss_in_d_b(WNENE_MobileBroadbandCellUmts *self, double** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellUmts.get_PrimaryScramblingCode() */
 HRESULT wnene_mobile_broadband_cell_umts_get__primary_scrambling_code(WNENE_MobileBroadbandCellUmts *self, int32_t** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellUmts.get_ProviderId() */
 HRESULT wnene_mobile_broadband_cell_umts_get__provider_id(WNENE_MobileBroadbandCellUmts *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellUmts.get_ReceivedSignalCodePowerInDBm() */
 HRESULT wnene_mobile_broadband_cell_umts_get__received_signal_code_power_in_d_bm(WNENE_MobileBroadbandCellUmts *self, double** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellUmts.get_SignalToNoiseRatioInDB() */
 HRESULT wnene_mobile_broadband_cell_umts_get__signal_to_noise_ratio_in_d_b(WNENE_MobileBroadbandCellUmts *self, double** value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo */
 HRESULT wnene_mobile_broadband_cells_info_new(WNENE_MobileBroadbandCellsInfo **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo */
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo.get_NeighboringCellsCdma() */
 HRESULT wnene_mobile_broadband_cells_info_get__neighboring_cells_cdma(WNENE_MobileBroadbandCellsInfo *self, WFOCO_IVectorView_WNENE_MobileBroadbandCellCdma** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo.get_NeighboringCellsGsm() */
 HRESULT wnene_mobile_broadband_cells_info_get__neighboring_cells_gsm(WNENE_MobileBroadbandCellsInfo *self, WFOCO_IVectorView_WNENE_MobileBroadbandCellGsm** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo.get_NeighboringCellsLte() */
 HRESULT wnene_mobile_broadband_cells_info_get__neighboring_cells_lte(WNENE_MobileBroadbandCellsInfo *self, WFOCO_IVectorView_WNENE_MobileBroadbandCellLte** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo.get_NeighboringCellsTdscdma() */
 HRESULT wnene_mobile_broadband_cells_info_get__neighboring_cells_tdscdma(WNENE_MobileBroadbandCellsInfo *self, WFOCO_IVectorView_WNENE_MobileBroadbandCellTdscdma** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo.get_NeighboringCellsUmts() */
 HRESULT wnene_mobile_broadband_cells_info_get__neighboring_cells_umts(WNENE_MobileBroadbandCellsInfo *self, WFOCO_IVectorView_WNENE_MobileBroadbandCellUmts** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo.get_ServingCellsCdma() */
 HRESULT wnene_mobile_broadband_cells_info_get__serving_cells_cdma(WNENE_MobileBroadbandCellsInfo *self, WFOCO_IVectorView_WNENE_MobileBroadbandCellCdma** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo.get_ServingCellsGsm() */
 HRESULT wnene_mobile_broadband_cells_info_get__serving_cells_gsm(WNENE_MobileBroadbandCellsInfo *self, WFOCO_IVectorView_WNENE_MobileBroadbandCellGsm** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo.get_ServingCellsLte() */
 HRESULT wnene_mobile_broadband_cells_info_get__serving_cells_lte(WNENE_MobileBroadbandCellsInfo *self, WFOCO_IVectorView_WNENE_MobileBroadbandCellLte** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo.get_ServingCellsTdscdma() */
 HRESULT wnene_mobile_broadband_cells_info_get__serving_cells_tdscdma(WNENE_MobileBroadbandCellsInfo *self, WFOCO_IVectorView_WNENE_MobileBroadbandCellTdscdma** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo.get_ServingCellsUmts() */
 HRESULT wnene_mobile_broadband_cells_info_get__serving_cells_umts(WNENE_MobileBroadbandCellsInfo *self, WFOCO_IVectorView_WNENE_MobileBroadbandCellUmts** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo.get_NeighboringCellsNR() */
 HRESULT wnene_mobile_broadband_cells_info_get__neighboring_cells_n_r(WNENE_MobileBroadbandCellsInfo *self, WFOCO_IVectorView_WNENE_MobileBroadbandCellNR** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo.get_ServingCellsNR() */
 HRESULT wnene_mobile_broadband_cells_info_get__serving_cells_n_r(WNENE_MobileBroadbandCellsInfo *self, WFOCO_IVectorView_WNENE_MobileBroadbandCellNR** value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandCurrentSlotIndexChangedEventArgs */
 HRESULT wnene_mobile_broadband_current_slot_index_changed_event_args_new(WNENE_MobileBroadbandCurrentSlotIndexChangedEventArgs **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandCurrentSlotIndexChangedEventArgs */
-/* Windows.Networking.NetworkOperators.MobileBroadbandCurrentSlotIndexChangedEventArgs.get_CurrentSlotIndex() */
 HRESULT wnene_mobile_broadband_current_slot_index_changed_event_args_get__current_slot_index(WNENE_MobileBroadbandCurrentSlotIndexChangedEventArgs *self, int32_t *value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation */
 HRESULT wnene_mobile_broadband_device_information_new(WNENE_MobileBroadbandDeviceInformation **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation */
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation.get_NetworkDeviceStatus() */
 HRESULT wnene_mobile_broadband_device_information_get__network_device_status(WNENE_MobileBroadbandDeviceInformation *self, WNENE_NetworkDeviceStatus *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation.get_Manufacturer() */
 HRESULT wnene_mobile_broadband_device_information_get__manufacturer(WNENE_MobileBroadbandDeviceInformation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation.get_Model() */
 HRESULT wnene_mobile_broadband_device_information_get__model(WNENE_MobileBroadbandDeviceInformation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation.get_FirmwareInformation() */
 HRESULT wnene_mobile_broadband_device_information_get__firmware_information(WNENE_MobileBroadbandDeviceInformation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation.get_CellularClass() */
 HRESULT wnene_mobile_broadband_device_information_get__cellular_class(WNENE_MobileBroadbandDeviceInformation *self, WDESM_CellularClass *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation.get_DataClasses() */
 HRESULT wnene_mobile_broadband_device_information_get__data_classes(WNENE_MobileBroadbandDeviceInformation *self, WNENE_DataClasses *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation.get_CustomDataClass() */
 HRESULT wnene_mobile_broadband_device_information_get__custom_data_class(WNENE_MobileBroadbandDeviceInformation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation.get_MobileEquipmentId() */
 HRESULT wnene_mobile_broadband_device_information_get__mobile_equipment_id(WNENE_MobileBroadbandDeviceInformation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation.get_TelephoneNumbers() */
 HRESULT wnene_mobile_broadband_device_information_get__telephone_numbers(WNENE_MobileBroadbandDeviceInformation *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation.get_SubscriberId() */
 HRESULT wnene_mobile_broadband_device_information_get__subscriber_id(WNENE_MobileBroadbandDeviceInformation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation.get_SimIccId() */
 HRESULT wnene_mobile_broadband_device_information_get__sim_icc_id(WNENE_MobileBroadbandDeviceInformation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation.get_DeviceType() */
 HRESULT wnene_mobile_broadband_device_information_get__device_type(WNENE_MobileBroadbandDeviceInformation *self, WNENE_MobileBroadbandDeviceType *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation.get_DeviceId() */
 HRESULT wnene_mobile_broadband_device_information_get__device_id(WNENE_MobileBroadbandDeviceInformation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation.get_CurrentRadioState() */
 HRESULT wnene_mobile_broadband_device_information_get__current_radio_state(WNENE_MobileBroadbandDeviceInformation *self, WNENE_MobileBroadbandRadioState *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation.get_PinManager() */
 HRESULT wnene_mobile_broadband_device_information_get__pin_manager(WNENE_MobileBroadbandDeviceInformation *self, WNENE_MobileBroadbandPinManager** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation.get_Revision() */
 HRESULT wnene_mobile_broadband_device_information_get__revision(WNENE_MobileBroadbandDeviceInformation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation.get_SerialNumber() */
 HRESULT wnene_mobile_broadband_device_information_get__serial_number(WNENE_MobileBroadbandDeviceInformation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation.get_SimSpn() */
 HRESULT wnene_mobile_broadband_device_information_get__sim_spn(WNENE_MobileBroadbandDeviceInformation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation.get_SimPnn() */
 HRESULT wnene_mobile_broadband_device_information_get__sim_pnn(WNENE_MobileBroadbandDeviceInformation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation.get_SimGid1() */
 HRESULT wnene_mobile_broadband_device_information_get__sim_gid1(WNENE_MobileBroadbandDeviceInformation *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation.get_SlotManager() */
 HRESULT wnene_mobile_broadband_device_information_get__slot_manager(WNENE_MobileBroadbandDeviceInformation *self, WNENE_MobileBroadbandSlotManager** value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandDeviceService */
 HRESULT wnene_mobile_broadband_device_service_new(WNENE_MobileBroadbandDeviceService **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceService */
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceService.get_DeviceServiceId() */
 HRESULT wnene_mobile_broadband_device_service_get__device_service_id(WNENE_MobileBroadbandDeviceService *self, GUID *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceService.get_SupportedCommands() */
 HRESULT wnene_mobile_broadband_device_service_get__supported_commands(WNENE_MobileBroadbandDeviceService *self, WFOCO_IVectorView_uint32_t** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceService.OpenDataSession() */
 HRESULT wnene_mobile_broadband_device_service_open_data_session(WNENE_MobileBroadbandDeviceService *self, WNENE_MobileBroadbandDeviceServiceDataSession** out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceService.OpenCommandSession() */
 HRESULT wnene_mobile_broadband_device_service_open_command_session(WNENE_MobileBroadbandDeviceService *self, WNENE_MobileBroadbandDeviceServiceCommandSession** out);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandEventArgs */
 HRESULT wnene_mobile_broadband_device_service_command_event_args_new(WNENE_MobileBroadbandDeviceServiceCommandEventArgs **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandEventArgs */
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandEventArgs.get_DeviceId() */
 HRESULT wnene_mobile_broadband_device_service_command_event_args_get__device_id(WNENE_MobileBroadbandDeviceServiceCommandEventArgs *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandEventArgs.get_DeviceServiceId() */
 HRESULT wnene_mobile_broadband_device_service_command_event_args_get__device_service_id(WNENE_MobileBroadbandDeviceServiceCommandEventArgs *self, GUID *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandEventArgs.get_EventId() */
 HRESULT wnene_mobile_broadband_device_service_command_event_args_get__event_id(WNENE_MobileBroadbandDeviceServiceCommandEventArgs *self, uint32_t *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandEventArgs.get_ReceivedData() */
 HRESULT wnene_mobile_broadband_device_service_command_event_args_get__received_data(WNENE_MobileBroadbandDeviceServiceCommandEventArgs *self, WSTST_IBuffer** value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandResult */
 HRESULT wnene_mobile_broadband_device_service_command_result_new(WNENE_MobileBroadbandDeviceServiceCommandResult **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandResult */
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandResult.get_StatusCode() */
 HRESULT wnene_mobile_broadband_device_service_command_result_get__status_code(WNENE_MobileBroadbandDeviceServiceCommandResult *self, uint32_t *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandResult.get_ResponseData() */
 HRESULT wnene_mobile_broadband_device_service_command_result_get__response_data(WNENE_MobileBroadbandDeviceServiceCommandResult *self, WSTST_IBuffer** value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSession */
 HRESULT wnene_mobile_broadband_device_service_command_session_new(WNENE_MobileBroadbandDeviceServiceCommandSession **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSession */
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSession.SendQueryCommandAsync(commandId, data) */
 HRESULT wnene_mobile_broadband_device_service_command_session_send_query_command_async(WNENE_MobileBroadbandDeviceServiceCommandSession *self, uint32_t commandId, WSTST_IBuffer* data, WF_IAsyncOperation_WNENE_MobileBroadbandDeviceServiceCommandResult** out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSession.SendSetCommandAsync(commandId, data) */
 HRESULT wnene_mobile_broadband_device_service_command_session_send_set_command_async(WNENE_MobileBroadbandDeviceServiceCommandSession *self, uint32_t commandId, WSTST_IBuffer* data, WF_IAsyncOperation_WNENE_MobileBroadbandDeviceServiceCommandResult** out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSession.CloseSession() */
 HRESULT wnene_mobile_broadband_device_service_command_session_close_session(WNENE_MobileBroadbandDeviceServiceCommandSession *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wnene_mobile_broadband_device_service_command_session_on_command_received(WNENE_MobileBroadbandDeviceServiceCommandSession *self, cwinrt_event_fn fn, void *ctx);
 void wnene_mobile_broadband_device_service_command_session_off_command_received(WNENE_MobileBroadbandDeviceServiceCommandSession *self, cwinrt_token token);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataReceivedEventArgs */
 HRESULT wnene_mobile_broadband_device_service_data_received_event_args_new(WNENE_MobileBroadbandDeviceServiceDataReceivedEventArgs **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataReceivedEventArgs */
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataReceivedEventArgs.get_ReceivedData() */
 HRESULT wnene_mobile_broadband_device_service_data_received_event_args_get__received_data(WNENE_MobileBroadbandDeviceServiceDataReceivedEventArgs *self, WSTST_IBuffer** value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataSession */
 HRESULT wnene_mobile_broadband_device_service_data_session_new(WNENE_MobileBroadbandDeviceServiceDataSession **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataSession */
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataSession.WriteDataAsync() */
 HRESULT wnene_mobile_broadband_device_service_data_session_write_data_async(WNENE_MobileBroadbandDeviceServiceDataSession *self, WSTST_IBuffer* value, WF_IAsyncAction** out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataSession.CloseSession() */
 HRESULT wnene_mobile_broadband_device_service_data_session_close_session(WNENE_MobileBroadbandDeviceServiceDataSession *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wnene_mobile_broadband_device_service_data_session_on_data_received(WNENE_MobileBroadbandDeviceServiceDataSession *self, cwinrt_event_fn fn, void *ctx);
 void wnene_mobile_broadband_device_service_data_session_off_data_received(WNENE_MobileBroadbandDeviceServiceDataSession *self, cwinrt_token token);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceInformation */
 HRESULT wnene_mobile_broadband_device_service_information_new(WNENE_MobileBroadbandDeviceServiceInformation **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceInformation */
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceInformation.get_DeviceServiceId() */
 HRESULT wnene_mobile_broadband_device_service_information_get__device_service_id(WNENE_MobileBroadbandDeviceServiceInformation *self, GUID *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceInformation.get_IsDataReadSupported() */
 HRESULT wnene_mobile_broadband_device_service_information_get__is_data_read_supported(WNENE_MobileBroadbandDeviceServiceInformation *self, BOOL *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceInformation.get_IsDataWriteSupported() */
 HRESULT wnene_mobile_broadband_device_service_information_get__is_data_write_supported(WNENE_MobileBroadbandDeviceServiceInformation *self, BOOL *value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceTriggerDetails */
 HRESULT wnene_mobile_broadband_device_service_trigger_details_new(WNENE_MobileBroadbandDeviceServiceTriggerDetails **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceTriggerDetails */
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceTriggerDetails.get_DeviceId() */
 HRESULT wnene_mobile_broadband_device_service_trigger_details_get__device_id(WNENE_MobileBroadbandDeviceServiceTriggerDetails *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceTriggerDetails.get_DeviceServiceId() */
 HRESULT wnene_mobile_broadband_device_service_trigger_details_get__device_service_id(WNENE_MobileBroadbandDeviceServiceTriggerDetails *self, GUID *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceTriggerDetails.get_ReceivedData() */
 HRESULT wnene_mobile_broadband_device_service_trigger_details_get__received_data(WNENE_MobileBroadbandDeviceServiceTriggerDetails *self, WSTST_IBuffer** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceTriggerDetails.get_EventId() */
 HRESULT wnene_mobile_broadband_device_service_trigger_details_get__event_id(WNENE_MobileBroadbandDeviceServiceTriggerDetails *self, uint32_t *value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandModem */
 HRESULT wnene_mobile_broadband_modem_new(WNENE_MobileBroadbandModem **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandModem */
-/* Windows.Networking.NetworkOperators.MobileBroadbandModem.get_CurrentAccount() */
 HRESULT wnene_mobile_broadband_modem_get__current_account(WNENE_MobileBroadbandModem *self, WNENE_MobileBroadbandAccount** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandModem.get_DeviceInformation() */
 HRESULT wnene_mobile_broadband_modem_get__device_information(WNENE_MobileBroadbandModem *self, WNENE_MobileBroadbandDeviceInformation** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandModem.get_MaxDeviceServiceCommandSizeInBytes() */
 HRESULT wnene_mobile_broadband_modem_get__max_device_service_command_size_in_bytes(WNENE_MobileBroadbandModem *self, uint32_t *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandModem.get_MaxDeviceServiceDataSizeInBytes() */
 HRESULT wnene_mobile_broadband_modem_get__max_device_service_data_size_in_bytes(WNENE_MobileBroadbandModem *self, uint32_t *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandModem.get_DeviceServices() */
 HRESULT wnene_mobile_broadband_modem_get__device_services(WNENE_MobileBroadbandModem *self, WFOCO_IVectorView_WNENE_MobileBroadbandDeviceServiceInformation** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandModem.GetDeviceService(deviceServiceId) */
 HRESULT wnene_mobile_broadband_modem_get_device_service(WNENE_MobileBroadbandModem *self, GUID deviceServiceId, WNENE_MobileBroadbandDeviceService** out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandModem.get_IsResetSupported() */
 HRESULT wnene_mobile_broadband_modem_get__is_reset_supported(WNENE_MobileBroadbandModem *self, BOOL *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandModem.ResetAsync() */
 HRESULT wnene_mobile_broadband_modem_reset_async(WNENE_MobileBroadbandModem *self, WF_IAsyncAction** out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandModem.GetCurrentConfigurationAsync() */
 HRESULT wnene_mobile_broadband_modem_get_current_configuration_async(WNENE_MobileBroadbandModem *self, WF_IAsyncOperation_WNENE_MobileBroadbandModemConfiguration** out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandModem.get_CurrentNetwork() */
 HRESULT wnene_mobile_broadband_modem_get__current_network(WNENE_MobileBroadbandModem *self, WNENE_MobileBroadbandNetwork** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandModem.GetIsPassthroughEnabledAsync() */
 HRESULT wnene_mobile_broadband_modem_get_is_passthrough_enabled_async(WNENE_MobileBroadbandModem *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandModem.SetIsPassthroughEnabledAsync() */
 HRESULT wnene_mobile_broadband_modem_set_is_passthrough_enabled_async(WNENE_MobileBroadbandModem *self, BOOL value, WF_IAsyncOperation_WNENE_MobileBroadbandModemStatus** out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandModem.TryGetPcoAsync() */
 HRESULT wnene_mobile_broadband_modem_try_get_pco_async(WNENE_MobileBroadbandModem *self, WF_IAsyncOperation_WNENE_MobileBroadbandPco** out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandModem.get_IsInEmergencyCallMode() */
 HRESULT wnene_mobile_broadband_modem_get__is_in_emergency_call_mode(WNENE_MobileBroadbandModem *self, BOOL *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandModem.SetIsPassthroughEnabledAsync(slotindex) */
 HRESULT wnene_mobile_broadband_modem_set_is_passthrough_enabled_async_b_i32_p(WNENE_MobileBroadbandModem *self, BOOL value, int32_t slotindex, WF_IAsyncOperation_WNENE_MobileBroadbandModemStatus** out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandModem.GetIsPassthroughEnabledAsync(slotindex) */
 HRESULT wnene_mobile_broadband_modem_get_is_passthrough_enabled_async_i32_p(WNENE_MobileBroadbandModem *self, int32_t slotindex, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandModem.SetIsPassthroughEnabled(slotindex) */
 HRESULT wnene_mobile_broadband_modem_set_is_passthrough_enabled(WNENE_MobileBroadbandModem *self, BOOL value, int32_t slotindex, WNENE_MobileBroadbandModemStatus *out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandModem.GetIsPassthroughEnabled(slotindex) */
 HRESULT wnene_mobile_broadband_modem_get_is_passthrough_enabled(WNENE_MobileBroadbandModem *self, int32_t slotindex, BOOL *out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandModem.GetDeviceSelector() */
 HRESULT wnene_mobile_broadband_modem_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandModem.FromId(deviceId) */
 HRESULT wnene_mobile_broadband_modem_from_id(cwinrt_hstring deviceId, WNENE_MobileBroadbandModem** out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandModem.GetDefault() */
 HRESULT wnene_mobile_broadband_modem_get_default(WNENE_MobileBroadbandModem** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wnene_mobile_broadband_modem_on_is_in_emergency_call_mode_changed(WNENE_MobileBroadbandModem *self, cwinrt_event_fn fn, void *ctx);
 void wnene_mobile_broadband_modem_off_is_in_emergency_call_mode_changed(WNENE_MobileBroadbandModem *self, cwinrt_token token);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandModemConfiguration */
 HRESULT wnene_mobile_broadband_modem_configuration_new(WNENE_MobileBroadbandModemConfiguration **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandModemConfiguration */
-/* Windows.Networking.NetworkOperators.MobileBroadbandModemConfiguration.get_Uicc() */
 HRESULT wnene_mobile_broadband_modem_configuration_get__uicc(WNENE_MobileBroadbandModemConfiguration *self, WNENE_MobileBroadbandUicc** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandModemConfiguration.get_HomeProviderId() */
 HRESULT wnene_mobile_broadband_modem_configuration_get__home_provider_id(WNENE_MobileBroadbandModemConfiguration *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandModemConfiguration.get_HomeProviderName() */
 HRESULT wnene_mobile_broadband_modem_configuration_get__home_provider_name(WNENE_MobileBroadbandModemConfiguration *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandModemConfiguration.get_SarManager() */
 HRESULT wnene_mobile_broadband_modem_configuration_get__sar_manager(WNENE_MobileBroadbandModemConfiguration *self, WNENE_MobileBroadbandSarManager** value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandModemIsolation */
 HRESULT wnene_mobile_broadband_modem_isolation_new(WNENE_MobileBroadbandModemIsolation **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandModemIsolation */
-/* Windows.Networking.NetworkOperators.MobileBroadbandModemIsolation.AddAllowedHost(host) */
 HRESULT wnene_mobile_broadband_modem_isolation_add_allowed_host(WNENE_MobileBroadbandModemIsolation *self, WNE_HostName* host);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandModemIsolation.AddAllowedHostRange(first, last) */
 HRESULT wnene_mobile_broadband_modem_isolation_add_allowed_host_range(WNENE_MobileBroadbandModemIsolation *self, WNE_HostName* first, WNE_HostName* last);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandModemIsolation.ApplyConfigurationAsync() */
 HRESULT wnene_mobile_broadband_modem_isolation_apply_configuration_async(WNENE_MobileBroadbandModemIsolation *self, WF_IAsyncAction** out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandModemIsolation.ClearConfigurationAsync() */
 HRESULT wnene_mobile_broadband_modem_isolation_clear_configuration_async(WNENE_MobileBroadbandModemIsolation *self, WF_IAsyncAction** out);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandNetwork */
 HRESULT wnene_mobile_broadband_network_new(WNENE_MobileBroadbandNetwork **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandNetwork */
-/* Windows.Networking.NetworkOperators.MobileBroadbandNetwork.get_NetworkAdapter() */
 HRESULT wnene_mobile_broadband_network_get__network_adapter(WNENE_MobileBroadbandNetwork *self, WNECO_NetworkAdapter** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandNetwork.get_NetworkRegistrationState() */
 HRESULT wnene_mobile_broadband_network_get__network_registration_state(WNENE_MobileBroadbandNetwork *self, WNENE_NetworkRegistrationState *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandNetwork.get_RegistrationNetworkError() */
 HRESULT wnene_mobile_broadband_network_get__registration_network_error(WNENE_MobileBroadbandNetwork *self, uint32_t *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandNetwork.get_PacketAttachNetworkError() */
 HRESULT wnene_mobile_broadband_network_get__packet_attach_network_error(WNENE_MobileBroadbandNetwork *self, uint32_t *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandNetwork.get_ActivationNetworkError() */
 HRESULT wnene_mobile_broadband_network_get__activation_network_error(WNENE_MobileBroadbandNetwork *self, uint32_t *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandNetwork.get_AccessPointName() */
 HRESULT wnene_mobile_broadband_network_get__access_point_name(WNENE_MobileBroadbandNetwork *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandNetwork.get_RegisteredDataClass() */
 HRESULT wnene_mobile_broadband_network_get__registered_data_class(WNENE_MobileBroadbandNetwork *self, WNENE_DataClasses *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandNetwork.get_RegisteredProviderId() */
 HRESULT wnene_mobile_broadband_network_get__registered_provider_id(WNENE_MobileBroadbandNetwork *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandNetwork.get_RegisteredProviderName() */
 HRESULT wnene_mobile_broadband_network_get__registered_provider_name(WNENE_MobileBroadbandNetwork *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandNetwork.ShowConnectionUI() */
 HRESULT wnene_mobile_broadband_network_show_connection_u_i(WNENE_MobileBroadbandNetwork *self);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandNetwork.GetVoiceCallSupportAsync() */
 HRESULT wnene_mobile_broadband_network_get_voice_call_support_async(WNENE_MobileBroadbandNetwork *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandNetwork.get_RegistrationUiccApps() */
 HRESULT wnene_mobile_broadband_network_get__registration_uicc_apps(WNENE_MobileBroadbandNetwork *self, WFOCO_IVectorView_WNENE_MobileBroadbandUiccApp** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandNetwork.GetCellsInfoAsync() */
 HRESULT wnene_mobile_broadband_network_get_cells_info_async(WNENE_MobileBroadbandNetwork *self, WF_IAsyncOperation_WNENE_MobileBroadbandCellsInfo** out);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChange */
 HRESULT wnene_mobile_broadband_network_registration_state_change_new(WNENE_MobileBroadbandNetworkRegistrationStateChange **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChange */
-/* Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChange.get_DeviceId() */
 HRESULT wnene_mobile_broadband_network_registration_state_change_get__device_id(WNENE_MobileBroadbandNetworkRegistrationStateChange *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChange.get_Network() */
 HRESULT wnene_mobile_broadband_network_registration_state_change_get__network(WNENE_MobileBroadbandNetworkRegistrationStateChange *self, WNENE_MobileBroadbandNetwork** value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChangeTriggerDetails */
 HRESULT wnene_mobile_broadband_network_registration_state_change_trigger_deta_new(WNENE_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChangeTriggerDetails */
-/* Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChangeTriggerDetails.get_NetworkRegistrationStateChanges() */
 HRESULT wnene_mobile_broadband_network_registration_state_change_trigger_deta_get__network_registration_state_changes(WNENE_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails *self, WFOCO_IVectorView_WNENE_MobileBroadbandNetworkRegistrationStateChange** value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandPco */
 HRESULT wnene_mobile_broadband_pco_new(WNENE_MobileBroadbandPco **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandPco */
-/* Windows.Networking.NetworkOperators.MobileBroadbandPco.get_Data() */
 HRESULT wnene_mobile_broadband_pco_get__data(WNENE_MobileBroadbandPco *self, WSTST_IBuffer** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandPco.get_IsComplete() */
 HRESULT wnene_mobile_broadband_pco_get__is_complete(WNENE_MobileBroadbandPco *self, BOOL *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandPco.get_DeviceId() */
 HRESULT wnene_mobile_broadband_pco_get__device_id(WNENE_MobileBroadbandPco *self, cwinrt_hstring *value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandPcoDataChangeTriggerDetails */
 HRESULT wnene_mobile_broadband_pco_data_change_trigger_details_new(WNENE_MobileBroadbandPcoDataChangeTriggerDetails **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandPcoDataChangeTriggerDetails */
-/* Windows.Networking.NetworkOperators.MobileBroadbandPcoDataChangeTriggerDetails.get_UpdatedData() */
 HRESULT wnene_mobile_broadband_pco_data_change_trigger_details_get__updated_data(WNENE_MobileBroadbandPcoDataChangeTriggerDetails *self, WNENE_MobileBroadbandPco** value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandPin */
 HRESULT wnene_mobile_broadband_pin_new(WNENE_MobileBroadbandPin **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandPin */
-/* Windows.Networking.NetworkOperators.MobileBroadbandPin.get_Type() */
 HRESULT wnene_mobile_broadband_pin_get__type(WNENE_MobileBroadbandPin *self, WNENE_MobileBroadbandPinType *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandPin.get_LockState() */
 HRESULT wnene_mobile_broadband_pin_get__lock_state(WNENE_MobileBroadbandPin *self, WNENE_MobileBroadbandPinLockState *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandPin.get_Format() */
 HRESULT wnene_mobile_broadband_pin_get__format(WNENE_MobileBroadbandPin *self, WNENE_MobileBroadbandPinFormat *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandPin.get_Enabled() */
 HRESULT wnene_mobile_broadband_pin_get__enabled(WNENE_MobileBroadbandPin *self, BOOL *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandPin.get_MaxLength() */
 HRESULT wnene_mobile_broadband_pin_get__max_length(WNENE_MobileBroadbandPin *self, uint32_t *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandPin.get_MinLength() */
 HRESULT wnene_mobile_broadband_pin_get__min_length(WNENE_MobileBroadbandPin *self, uint32_t *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandPin.get_AttemptsRemaining() */
 HRESULT wnene_mobile_broadband_pin_get__attempts_remaining(WNENE_MobileBroadbandPin *self, uint32_t *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandPin.EnableAsync(currentPin) */
 HRESULT wnene_mobile_broadband_pin_enable_async(WNENE_MobileBroadbandPin *self, cwinrt_hstring currentPin, WF_IAsyncOperation_WNENE_MobileBroadbandPinOperationResult** out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandPin.DisableAsync(currentPin) */
 HRESULT wnene_mobile_broadband_pin_disable_async(WNENE_MobileBroadbandPin *self, cwinrt_hstring currentPin, WF_IAsyncOperation_WNENE_MobileBroadbandPinOperationResult** out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandPin.EnterAsync(currentPin) */
 HRESULT wnene_mobile_broadband_pin_enter_async(WNENE_MobileBroadbandPin *self, cwinrt_hstring currentPin, WF_IAsyncOperation_WNENE_MobileBroadbandPinOperationResult** out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandPin.ChangeAsync(currentPin, newPin) */
 HRESULT wnene_mobile_broadband_pin_change_async(WNENE_MobileBroadbandPin *self, cwinrt_hstring currentPin, cwinrt_hstring newPin, WF_IAsyncOperation_WNENE_MobileBroadbandPinOperationResult** out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandPin.UnblockAsync(pinUnblockKey, newPin) */
 HRESULT wnene_mobile_broadband_pin_unblock_async(WNENE_MobileBroadbandPin *self, cwinrt_hstring pinUnblockKey, cwinrt_hstring newPin, WF_IAsyncOperation_WNENE_MobileBroadbandPinOperationResult** out);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChange */
 HRESULT wnene_mobile_broadband_pin_lock_state_change_new(WNENE_MobileBroadbandPinLockStateChange **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChange */
-/* Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChange.get_DeviceId() */
 HRESULT wnene_mobile_broadband_pin_lock_state_change_get__device_id(WNENE_MobileBroadbandPinLockStateChange *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChange.get_PinType() */
 HRESULT wnene_mobile_broadband_pin_lock_state_change_get__pin_type(WNENE_MobileBroadbandPinLockStateChange *self, WNENE_MobileBroadbandPinType *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChange.get_PinLockState() */
 HRESULT wnene_mobile_broadband_pin_lock_state_change_get__pin_lock_state(WNENE_MobileBroadbandPinLockStateChange *self, WNENE_MobileBroadbandPinLockState *value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChangeTriggerDetails */
 HRESULT wnene_mobile_broadband_pin_lock_state_change_trigger_details_new(WNENE_MobileBroadbandPinLockStateChangeTriggerDetails **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChangeTriggerDetails */
-/* Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChangeTriggerDetails.get_PinLockStateChanges() */
 HRESULT wnene_mobile_broadband_pin_lock_state_change_trigger_details_get__pin_lock_state_changes(WNENE_MobileBroadbandPinLockStateChangeTriggerDetails *self, WFOCO_IVectorView_WNENE_MobileBroadbandPinLockStateChange** value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandPinManager */
 HRESULT wnene_mobile_broadband_pin_manager_new(WNENE_MobileBroadbandPinManager **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandPinManager */
-/* Windows.Networking.NetworkOperators.MobileBroadbandPinManager.get_SupportedPins() */
 HRESULT wnene_mobile_broadband_pin_manager_get__supported_pins(WNENE_MobileBroadbandPinManager *self, WFOCO_IVectorView_WNENE_MobileBroadbandPinType** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandPinManager.GetPin(pinType) */
 HRESULT wnene_mobile_broadband_pin_manager_get_pin(WNENE_MobileBroadbandPinManager *self, WNENE_MobileBroadbandPinType pinType, WNENE_MobileBroadbandPin** out);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandPinOperationResult */
 HRESULT wnene_mobile_broadband_pin_operation_result_new(WNENE_MobileBroadbandPinOperationResult **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandPinOperationResult */
-/* Windows.Networking.NetworkOperators.MobileBroadbandPinOperationResult.get_IsSuccessful() */
 HRESULT wnene_mobile_broadband_pin_operation_result_get__is_successful(WNENE_MobileBroadbandPinOperationResult *self, BOOL *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandPinOperationResult.get_AttemptsRemaining() */
 HRESULT wnene_mobile_broadband_pin_operation_result_get__attempts_remaining(WNENE_MobileBroadbandPinOperationResult *self, uint32_t *value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChange */
 HRESULT wnene_mobile_broadband_radio_state_change_new(WNENE_MobileBroadbandRadioStateChange **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChange */
-/* Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChange.get_DeviceId() */
 HRESULT wnene_mobile_broadband_radio_state_change_get__device_id(WNENE_MobileBroadbandRadioStateChange *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChange.get_RadioState() */
 HRESULT wnene_mobile_broadband_radio_state_change_get__radio_state(WNENE_MobileBroadbandRadioStateChange *self, WNENE_MobileBroadbandRadioState *value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChangeTriggerDetails */
 HRESULT wnene_mobile_broadband_radio_state_change_trigger_details_new(WNENE_MobileBroadbandRadioStateChangeTriggerDetails **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChangeTriggerDetails */
-/* Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChangeTriggerDetails.get_RadioStateChanges() */
 HRESULT wnene_mobile_broadband_radio_state_change_trigger_details_get__radio_state_changes(WNENE_MobileBroadbandRadioStateChangeTriggerDetails *self, WFOCO_IVectorView_WNENE_MobileBroadbandRadioStateChange** value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandSarManager */
 HRESULT wnene_mobile_broadband_sar_manager_new(WNENE_MobileBroadbandSarManager **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandSarManager */
-/* Windows.Networking.NetworkOperators.MobileBroadbandSarManager.get_IsBackoffEnabled() */
 HRESULT wnene_mobile_broadband_sar_manager_get__is_backoff_enabled(WNENE_MobileBroadbandSarManager *self, BOOL *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandSarManager.get_IsWiFiHardwareIntegrated() */
 HRESULT wnene_mobile_broadband_sar_manager_get__is_wi_fi_hardware_integrated(WNENE_MobileBroadbandSarManager *self, BOOL *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandSarManager.get_IsSarControlledByHardware() */
 HRESULT wnene_mobile_broadband_sar_manager_get__is_sar_controlled_by_hardware(WNENE_MobileBroadbandSarManager *self, BOOL *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandSarManager.get_Antennas() */
 HRESULT wnene_mobile_broadband_sar_manager_get__antennas(WNENE_MobileBroadbandSarManager *self, WFOCO_IVectorView_WNENE_MobileBroadbandAntennaSar** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandSarManager.get_HysteresisTimerPeriod() */
 HRESULT wnene_mobile_broadband_sar_manager_get__hysteresis_timer_period(WNENE_MobileBroadbandSarManager *self, WF_TimeSpan *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandSarManager.EnableBackoffAsync() */
 HRESULT wnene_mobile_broadband_sar_manager_enable_backoff_async(WNENE_MobileBroadbandSarManager *self, WF_IAsyncAction** out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandSarManager.DisableBackoffAsync() */
 HRESULT wnene_mobile_broadband_sar_manager_disable_backoff_async(WNENE_MobileBroadbandSarManager *self, WF_IAsyncAction** out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandSarManager.SetConfigurationAsync(antennas) */
 HRESULT wnene_mobile_broadband_sar_manager_set_configuration_async(WNENE_MobileBroadbandSarManager *self, WFOCO_IIterable_WNENE_MobileBroadbandAntennaSar* antennas, WF_IAsyncAction** out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandSarManager.RevertSarToHardwareControlAsync() */
 HRESULT wnene_mobile_broadband_sar_manager_revert_sar_to_hardware_control_async(WNENE_MobileBroadbandSarManager *self, WF_IAsyncAction** out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandSarManager.SetTransmissionStateChangedHysteresisAsync(timerPeriod) */
 HRESULT wnene_mobile_broadband_sar_manager_set_transmission_state_changed_hysteresis_async(WNENE_MobileBroadbandSarManager *self, WF_TimeSpan timerPeriod, WF_IAsyncAction** out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandSarManager.GetIsTransmittingAsync() */
 HRESULT wnene_mobile_broadband_sar_manager_get_is_transmitting_async(WNENE_MobileBroadbandSarManager *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandSarManager.StartTransmissionStateMonitoring() */
 HRESULT wnene_mobile_broadband_sar_manager_start_transmission_state_monitoring(WNENE_MobileBroadbandSarManager *self);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandSarManager.StopTransmissionStateMonitoring() */
 HRESULT wnene_mobile_broadband_sar_manager_stop_transmission_state_monitoring(WNENE_MobileBroadbandSarManager *self);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wnene_mobile_broadband_sar_manager_on_transmission_state_changed(WNENE_MobileBroadbandSarManager *self, cwinrt_event_fn fn, void *ctx);
 void wnene_mobile_broadband_sar_manager_off_transmission_state_changed(WNENE_MobileBroadbandSarManager *self, cwinrt_token token);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandSlotInfo */
 HRESULT wnene_mobile_broadband_slot_info_new(WNENE_MobileBroadbandSlotInfo **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandSlotInfo */
-/* Windows.Networking.NetworkOperators.MobileBroadbandSlotInfo.get_Index() */
 HRESULT wnene_mobile_broadband_slot_info_get__index(WNENE_MobileBroadbandSlotInfo *self, int32_t *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandSlotInfo.get_State() */
 HRESULT wnene_mobile_broadband_slot_info_get__state(WNENE_MobileBroadbandSlotInfo *self, WNENE_MobileBroadbandSlotState *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandSlotInfo.get_IccId() */
 HRESULT wnene_mobile_broadband_slot_info_get__icc_id(WNENE_MobileBroadbandSlotInfo *self, cwinrt_hstring *value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandSlotInfoChangedEventArgs */
 HRESULT wnene_mobile_broadband_slot_info_changed_event_args_new(WNENE_MobileBroadbandSlotInfoChangedEventArgs **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandSlotInfoChangedEventArgs */
-/* Windows.Networking.NetworkOperators.MobileBroadbandSlotInfoChangedEventArgs.get_SlotInfo() */
 HRESULT wnene_mobile_broadband_slot_info_changed_event_args_get__slot_info(WNENE_MobileBroadbandSlotInfoChangedEventArgs *self, WNENE_MobileBroadbandSlotInfo** value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandSlotManager */
 HRESULT wnene_mobile_broadband_slot_manager_new(WNENE_MobileBroadbandSlotManager **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandSlotManager */
-/* Windows.Networking.NetworkOperators.MobileBroadbandSlotManager.get_SlotInfos() */
 HRESULT wnene_mobile_broadband_slot_manager_get__slot_infos(WNENE_MobileBroadbandSlotManager *self, WFOCO_IVectorView_WNENE_MobileBroadbandSlotInfo** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandSlotManager.get_CurrentSlotIndex() */
 HRESULT wnene_mobile_broadband_slot_manager_get__current_slot_index(WNENE_MobileBroadbandSlotManager *self, int32_t *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandSlotManager.SetCurrentSlot(slotIndex) */
 HRESULT wnene_mobile_broadband_slot_manager_set_current_slot(WNENE_MobileBroadbandSlotManager *self, int32_t slotIndex, WNENE_MobileBroadbandModemStatus *out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandSlotManager.SetCurrentSlotAsync(slotIndex) */
 HRESULT wnene_mobile_broadband_slot_manager_set_current_slot_async(WNENE_MobileBroadbandSlotManager *self, int32_t slotIndex, WF_IAsyncOperation_WNENE_MobileBroadbandModemStatus** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wnene_mobile_broadband_slot_manager_on_slot_info_changed(WNENE_MobileBroadbandSlotManager *self, cwinrt_event_fn fn, void *ctx);
@@ -2860,599 +2355,320 @@ void wnene_mobile_broadband_slot_manager_off_slot_info_changed(WNENE_MobileBroad
 cwinrt_token wnene_mobile_broadband_slot_manager_on_current_slot_index_changed(WNENE_MobileBroadbandSlotManager *self, cwinrt_event_fn fn, void *ctx);
 void wnene_mobile_broadband_slot_manager_off_current_slot_index_changed(WNENE_MobileBroadbandSlotManager *self, cwinrt_token token);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandTransmissionStateChangedEventArgs */
 HRESULT wnene_mobile_broadband_transmission_state_changed_event_args_new(WNENE_MobileBroadbandTransmissionStateChangedEventArgs **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandTransmissionStateChangedEventArgs */
-/* Windows.Networking.NetworkOperators.MobileBroadbandTransmissionStateChangedEventArgs.get_IsTransmitting() */
 HRESULT wnene_mobile_broadband_transmission_state_changed_event_args_get__is_transmitting(WNENE_MobileBroadbandTransmissionStateChangedEventArgs *self, BOOL *value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandUicc */
 HRESULT wnene_mobile_broadband_uicc_new(WNENE_MobileBroadbandUicc **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandUicc */
-/* Windows.Networking.NetworkOperators.MobileBroadbandUicc.get_SimIccId() */
 HRESULT wnene_mobile_broadband_uicc_get__sim_icc_id(WNENE_MobileBroadbandUicc *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandUicc.GetUiccAppsAsync() */
 HRESULT wnene_mobile_broadband_uicc_get_uicc_apps_async(WNENE_MobileBroadbandUicc *self, WF_IAsyncOperation_WNENE_MobileBroadbandUiccAppsResult** out);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandUiccApp */
 HRESULT wnene_mobile_broadband_uicc_app_new(WNENE_MobileBroadbandUiccApp **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandUiccApp */
-/* Windows.Networking.NetworkOperators.MobileBroadbandUiccApp.get_Id() */
 HRESULT wnene_mobile_broadband_uicc_app_get__id(WNENE_MobileBroadbandUiccApp *self, WSTST_IBuffer** value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandUiccApp.get_Kind() */
 HRESULT wnene_mobile_broadband_uicc_app_get__kind(WNENE_MobileBroadbandUiccApp *self, WNENE_UiccAppKind *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandUiccApp.GetRecordDetailsAsync(uiccFilePath) */
 HRESULT wnene_mobile_broadband_uicc_app_get_record_details_async(WNENE_MobileBroadbandUiccApp *self, WFOCO_IIterable_uint32_t* uiccFilePath, WF_IAsyncOperation_WNENE_MobileBroadbandUiccAppRecordDetailsResult** out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandUiccApp.ReadRecordAsync(uiccFilePath, recordIndex) */
 HRESULT wnene_mobile_broadband_uicc_app_read_record_async(WNENE_MobileBroadbandUiccApp *self, WFOCO_IIterable_uint32_t* uiccFilePath, int32_t recordIndex, WF_IAsyncOperation_WNENE_MobileBroadbandUiccAppReadRecordResult** out);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandUiccAppReadRecordResult */
 HRESULT wnene_mobile_broadband_uicc_app_read_record_result_new(WNENE_MobileBroadbandUiccAppReadRecordResult **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandUiccAppReadRecordResult */
-/* Windows.Networking.NetworkOperators.MobileBroadbandUiccAppReadRecordResult.get_Status() */
 HRESULT wnene_mobile_broadband_uicc_app_read_record_result_get__status(WNENE_MobileBroadbandUiccAppReadRecordResult *self, WNENE_MobileBroadbandUiccAppOperationStatus *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandUiccAppReadRecordResult.get_Data() */
 HRESULT wnene_mobile_broadband_uicc_app_read_record_result_get__data(WNENE_MobileBroadbandUiccAppReadRecordResult *self, WSTST_IBuffer** value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandUiccAppRecordDetailsResult */
 HRESULT wnene_mobile_broadband_uicc_app_record_details_result_new(WNENE_MobileBroadbandUiccAppRecordDetailsResult **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandUiccAppRecordDetailsResult */
-/* Windows.Networking.NetworkOperators.MobileBroadbandUiccAppRecordDetailsResult.get_Status() */
 HRESULT wnene_mobile_broadband_uicc_app_record_details_result_get__status(WNENE_MobileBroadbandUiccAppRecordDetailsResult *self, WNENE_MobileBroadbandUiccAppOperationStatus *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandUiccAppRecordDetailsResult.get_Kind() */
 HRESULT wnene_mobile_broadband_uicc_app_record_details_result_get__kind(WNENE_MobileBroadbandUiccAppRecordDetailsResult *self, WNENE_UiccAppRecordKind *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandUiccAppRecordDetailsResult.get_RecordCount() */
 HRESULT wnene_mobile_broadband_uicc_app_record_details_result_get__record_count(WNENE_MobileBroadbandUiccAppRecordDetailsResult *self, int32_t *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandUiccAppRecordDetailsResult.get_RecordSize() */
 HRESULT wnene_mobile_broadband_uicc_app_record_details_result_get__record_size(WNENE_MobileBroadbandUiccAppRecordDetailsResult *self, int32_t *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandUiccAppRecordDetailsResult.get_ReadAccessCondition() */
 HRESULT wnene_mobile_broadband_uicc_app_record_details_result_get__read_access_condition(WNENE_MobileBroadbandUiccAppRecordDetailsResult *self, WNENE_UiccAccessCondition *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandUiccAppRecordDetailsResult.get_WriteAccessCondition() */
 HRESULT wnene_mobile_broadband_uicc_app_record_details_result_get__write_access_condition(WNENE_MobileBroadbandUiccAppRecordDetailsResult *self, WNENE_UiccAccessCondition *value);
 
-/* activate Windows.Networking.NetworkOperators.MobileBroadbandUiccAppsResult */
 HRESULT wnene_mobile_broadband_uicc_apps_result_new(WNENE_MobileBroadbandUiccAppsResult **out);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandUiccAppsResult */
-/* Windows.Networking.NetworkOperators.MobileBroadbandUiccAppsResult.get_Status() */
 HRESULT wnene_mobile_broadband_uicc_apps_result_get__status(WNENE_MobileBroadbandUiccAppsResult *self, WNENE_MobileBroadbandUiccAppOperationStatus *value);
 
-/* Windows.Networking.NetworkOperators.MobileBroadbandUiccAppsResult.get_UiccApps() */
 HRESULT wnene_mobile_broadband_uicc_apps_result_get__uicc_apps(WNENE_MobileBroadbandUiccAppsResult *self, WFOCO_IVectorView_WNENE_MobileBroadbandUiccApp** value);
 
-/* activate Windows.Networking.NetworkOperators.NetworkOperatorDataUsageTriggerDetails */
 HRESULT wnene_network_operator_data_usage_trigger_details_new(WNENE_NetworkOperatorDataUsageTriggerDetails **out);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorDataUsageTriggerDetails */
-/* Windows.Networking.NetworkOperators.NetworkOperatorDataUsageTriggerDetails.get_NotificationKind() */
 HRESULT wnene_network_operator_data_usage_trigger_details_get__notification_kind(WNENE_NetworkOperatorDataUsageTriggerDetails *self, WNENE_NetworkOperatorDataUsageNotificationKind *value);
 
-/* activate Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails */
 HRESULT wnene_network_operator_notification_event_details_new(WNENE_NetworkOperatorNotificationEventDetails **out);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails */
-/* Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.get_NotificationType() */
 HRESULT wnene_network_operator_notification_event_details_get__notification_type(WNENE_NetworkOperatorNotificationEventDetails *self, WNENE_NetworkOperatorEventMessageType *value);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.get_NetworkAccountId() */
 HRESULT wnene_network_operator_notification_event_details_get__network_account_id(WNENE_NetworkOperatorNotificationEventDetails *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.get_EncodingType() */
 HRESULT wnene_network_operator_notification_event_details_get__encoding_type(WNENE_NetworkOperatorNotificationEventDetails *self, uint8_t *value);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.get_Message() */
 HRESULT wnene_network_operator_notification_event_details_get__message(WNENE_NetworkOperatorNotificationEventDetails *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.get_RuleId() */
 HRESULT wnene_network_operator_notification_event_details_get__rule_id(WNENE_NetworkOperatorNotificationEventDetails *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.get_SmsMessage() */
 HRESULT wnene_network_operator_notification_event_details_get__sms_message(WNENE_NetworkOperatorNotificationEventDetails *self, WDESM_ISmsMessage** value);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.AuthorizeTethering(allow, entitlementFailureReason) */
 HRESULT wnene_network_operator_notification_event_details_authorize_tethering(WNENE_NetworkOperatorNotificationEventDetails *self, BOOL allow, cwinrt_hstring entitlementFailureReason);
 
-/* activate Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration */
 HRESULT wnene_network_operator_tethering_access_point_configuration_new(WNENE_NetworkOperatorTetheringAccessPointConfiguration **out);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration */
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration.get_Ssid() */
 HRESULT wnene_network_operator_tethering_access_point_configuration_get__ssid(WNENE_NetworkOperatorTetheringAccessPointConfiguration *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration.put_Ssid() */
 HRESULT wnene_network_operator_tethering_access_point_configuration_put__ssid(WNENE_NetworkOperatorTetheringAccessPointConfiguration *self, cwinrt_hstring value);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration.get_Passphrase() */
 HRESULT wnene_network_operator_tethering_access_point_configuration_get__passphrase(WNENE_NetworkOperatorTetheringAccessPointConfiguration *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration.put_Passphrase() */
 HRESULT wnene_network_operator_tethering_access_point_configuration_put__passphrase(WNENE_NetworkOperatorTetheringAccessPointConfiguration *self, cwinrt_hstring value);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration.IsBandSupported(band) */
 HRESULT wnene_network_operator_tethering_access_point_configuration_is_band_supported(WNENE_NetworkOperatorTetheringAccessPointConfiguration *self, WNENE_TetheringWiFiBand band, BOOL *out);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration.IsBandSupportedAsync(band) */
 HRESULT wnene_network_operator_tethering_access_point_configuration_is_band_supported_async(WNENE_NetworkOperatorTetheringAccessPointConfiguration *self, WNENE_TetheringWiFiBand band, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration.get_Band() */
 HRESULT wnene_network_operator_tethering_access_point_configuration_get__band(WNENE_NetworkOperatorTetheringAccessPointConfiguration *self, WNENE_TetheringWiFiBand *value);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration.put_Band() */
 HRESULT wnene_network_operator_tethering_access_point_configuration_put__band(WNENE_NetworkOperatorTetheringAccessPointConfiguration *self, WNENE_TetheringWiFiBand value);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration.IsAuthenticationKindSupported(authenticationKind) */
 HRESULT wnene_network_operator_tethering_access_point_configuration_is_authentication_kind_supported(WNENE_NetworkOperatorTetheringAccessPointConfiguration *self, WNENE_TetheringWiFiAuthenticationKind authenticationKind, BOOL *out);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration.IsAuthenticationKindSupportedAsync(authenticationKind) */
 HRESULT wnene_network_operator_tethering_access_point_configuration_is_authentication_kind_supported_async(WNENE_NetworkOperatorTetheringAccessPointConfiguration *self, WNENE_TetheringWiFiAuthenticationKind authenticationKind, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration.get_AuthenticationKind() */
 HRESULT wnene_network_operator_tethering_access_point_configuration_get__authentication_kind(WNENE_NetworkOperatorTetheringAccessPointConfiguration *self, WNENE_TetheringWiFiAuthenticationKind *value);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration.put_AuthenticationKind() */
 HRESULT wnene_network_operator_tethering_access_point_configuration_put__authentication_kind(WNENE_NetworkOperatorTetheringAccessPointConfiguration *self, WNENE_TetheringWiFiAuthenticationKind value);
 
-/* activate Windows.Networking.NetworkOperators.NetworkOperatorTetheringClient */
 HRESULT wnene_network_operator_tethering_client_new(WNENE_NetworkOperatorTetheringClient **out);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringClient */
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringClient.get_MacAddress() */
 HRESULT wnene_network_operator_tethering_client_get__mac_address(WNENE_NetworkOperatorTetheringClient *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringClient.get_HostNames() */
 HRESULT wnene_network_operator_tethering_client_get__host_names(WNENE_NetworkOperatorTetheringClient *self, WFOCO_IVectorView_WNE_HostName** value);
 
-/* activate Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager */
 HRESULT wnene_network_operator_tethering_manager_new(WNENE_NetworkOperatorTetheringManager **out);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager */
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager.get_MaxClientCount() */
 HRESULT wnene_network_operator_tethering_manager_get__max_client_count(WNENE_NetworkOperatorTetheringManager *self, uint32_t *value);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager.get_ClientCount() */
 HRESULT wnene_network_operator_tethering_manager_get__client_count(WNENE_NetworkOperatorTetheringManager *self, uint32_t *value);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager.get_TetheringOperationalState() */
 HRESULT wnene_network_operator_tethering_manager_get__tethering_operational_state(WNENE_NetworkOperatorTetheringManager *self, WNENE_TetheringOperationalState *value);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager.GetCurrentAccessPointConfiguration() */
 HRESULT wnene_network_operator_tethering_manager_get_current_access_point_configuration(WNENE_NetworkOperatorTetheringManager *self, WNENE_NetworkOperatorTetheringAccessPointConfiguration** out);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager.ConfigureAccessPointAsync(configuration) */
 HRESULT wnene_network_operator_tethering_manager_configure_access_point_async(WNENE_NetworkOperatorTetheringManager *self, WNENE_NetworkOperatorTetheringAccessPointConfiguration* configuration, WF_IAsyncAction** out);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager.StartTetheringAsync() */
 HRESULT wnene_network_operator_tethering_manager_start_tethering_async(WNENE_NetworkOperatorTetheringManager *self, WF_IAsyncOperation_WNENE_NetworkOperatorTetheringOperationResult** out);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager.StopTetheringAsync() */
 HRESULT wnene_network_operator_tethering_manager_stop_tethering_async(WNENE_NetworkOperatorTetheringManager *self, WF_IAsyncOperation_WNENE_NetworkOperatorTetheringOperationResult** out);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager.GetTetheringClients() */
 HRESULT wnene_network_operator_tethering_manager_get_tethering_clients(WNENE_NetworkOperatorTetheringManager *self, WFOCO_IVectorView_WNENE_NetworkOperatorTetheringClient** out);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager.StartTetheringAsync(configuration) */
 HRESULT wnene_network_operator_tethering_manager_start_tethering_async_p_p(WNENE_NetworkOperatorTetheringManager *self, WNENE_NetworkOperatorTetheringSessionAccessPointConfiguration* configuration, WF_IAsyncOperation_WNENE_NetworkOperatorTetheringOperationResult** out);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager.IsNoConnectionsTimeoutEnabled() */
 HRESULT wnene_network_operator_tethering_manager_is_no_connections_timeout_enabled(BOOL *out);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager.EnableNoConnectionsTimeout() */
 HRESULT wnene_network_operator_tethering_manager_enable_no_connections_timeout(void);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager.EnableNoConnectionsTimeoutAsync() */
 HRESULT wnene_network_operator_tethering_manager_enable_no_connections_timeout_async(WF_IAsyncAction** out);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager.DisableNoConnectionsTimeout() */
 HRESULT wnene_network_operator_tethering_manager_disable_no_connections_timeout(void);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager.DisableNoConnectionsTimeoutAsync() */
 HRESULT wnene_network_operator_tethering_manager_disable_no_connections_timeout_async(WF_IAsyncAction** out);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager.CreateFromConnectionProfile(profile, adapter) */
 HRESULT wnene_network_operator_tethering_manager_create_from_connection_profile_p_p_p(WNECO_ConnectionProfile* profile, WNECO_NetworkAdapter* adapter, WNENE_NetworkOperatorTetheringManager** out);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager.GetTetheringCapabilityFromConnectionProfile(profile) */
 HRESULT wnene_network_operator_tethering_manager_get_tethering_capability_from_connection_profile(WNECO_ConnectionProfile* profile, WNENE_TetheringCapability *out);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager.CreateFromConnectionProfile(profile) */
 HRESULT wnene_network_operator_tethering_manager_create_from_connection_profile(WNECO_ConnectionProfile* profile, WNENE_NetworkOperatorTetheringManager** out);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager.GetTetheringCapability(networkAccountId) */
 HRESULT wnene_network_operator_tethering_manager_get_tethering_capability(cwinrt_hstring networkAccountId, WNENE_TetheringCapability *out);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager.CreateFromNetworkAccountId(networkAccountId) */
 HRESULT wnene_network_operator_tethering_manager_create_from_network_account_id(cwinrt_hstring networkAccountId, WNENE_NetworkOperatorTetheringManager** out);
 
-/* activate Windows.Networking.NetworkOperators.NetworkOperatorTetheringOperationResult */
 HRESULT wnene_network_operator_tethering_operation_result_new(WNENE_NetworkOperatorTetheringOperationResult **out);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringOperationResult */
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringOperationResult.get_Status() */
 HRESULT wnene_network_operator_tethering_operation_result_get__status(WNENE_NetworkOperatorTetheringOperationResult *self, WNENE_TetheringOperationStatus *value);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringOperationResult.get_AdditionalErrorMessage() */
 HRESULT wnene_network_operator_tethering_operation_result_get__additional_error_message(WNENE_NetworkOperatorTetheringOperationResult *self, cwinrt_hstring *value);
 
-/* activate Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration */
 HRESULT wnene_network_operator_tethering_session_access_point_configuration_new(WNENE_NetworkOperatorTetheringSessionAccessPointConfiguration **out);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration */
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration.get_Ssid() */
 HRESULT wnene_network_operator_tethering_session_access_point_configuration_get__ssid(WNENE_NetworkOperatorTetheringSessionAccessPointConfiguration *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration.put_Ssid() */
 HRESULT wnene_network_operator_tethering_session_access_point_configuration_put__ssid(WNENE_NetworkOperatorTetheringSessionAccessPointConfiguration *self, cwinrt_hstring value);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration.get_Passphrase() */
 HRESULT wnene_network_operator_tethering_session_access_point_configuration_get__passphrase(WNENE_NetworkOperatorTetheringSessionAccessPointConfiguration *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration.put_Passphrase() */
 HRESULT wnene_network_operator_tethering_session_access_point_configuration_put__passphrase(WNENE_NetworkOperatorTetheringSessionAccessPointConfiguration *self, cwinrt_hstring value);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration.IsBandSupported(band) */
 HRESULT wnene_network_operator_tethering_session_access_point_configuration_is_band_supported(WNENE_NetworkOperatorTetheringSessionAccessPointConfiguration *self, WNENE_TetheringWiFiBand band, BOOL *out);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration.IsBandSupportedAsync(band) */
 HRESULT wnene_network_operator_tethering_session_access_point_configuration_is_band_supported_async(WNENE_NetworkOperatorTetheringSessionAccessPointConfiguration *self, WNENE_TetheringWiFiBand band, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration.get_Band() */
 HRESULT wnene_network_operator_tethering_session_access_point_configuration_get__band(WNENE_NetworkOperatorTetheringSessionAccessPointConfiguration *self, WNENE_TetheringWiFiBand *value);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration.put_Band() */
 HRESULT wnene_network_operator_tethering_session_access_point_configuration_put__band(WNENE_NetworkOperatorTetheringSessionAccessPointConfiguration *self, WNENE_TetheringWiFiBand value);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration.IsAuthenticationKindSupported(authenticationKind) */
 HRESULT wnene_network_operator_tethering_session_access_point_configuration_is_authentication_kind_supported(WNENE_NetworkOperatorTetheringSessionAccessPointConfiguration *self, WNENE_TetheringWiFiAuthenticationKind authenticationKind, BOOL *out);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration.IsAuthenticationKindSupportedAsync(authenticationKind) */
 HRESULT wnene_network_operator_tethering_session_access_point_configuration_is_authentication_kind_supported_async(WNENE_NetworkOperatorTetheringSessionAccessPointConfiguration *self, WNENE_TetheringWiFiAuthenticationKind authenticationKind, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration.get_AuthenticationKind() */
 HRESULT wnene_network_operator_tethering_session_access_point_configuration_get__authentication_kind(WNENE_NetworkOperatorTetheringSessionAccessPointConfiguration *self, WNENE_TetheringWiFiAuthenticationKind *value);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration.put_AuthenticationKind() */
 HRESULT wnene_network_operator_tethering_session_access_point_configuration_put__authentication_kind(WNENE_NetworkOperatorTetheringSessionAccessPointConfiguration *self, WNENE_TetheringWiFiAuthenticationKind value);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration.get_PerformancePriority() */
 HRESULT wnene_network_operator_tethering_session_access_point_configuration_get__performance_priority(WNENE_NetworkOperatorTetheringSessionAccessPointConfiguration *self, WNENE_TetheringWiFiPerformancePriority *value);
 
-/* Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration.put_PerformancePriority() */
 HRESULT wnene_network_operator_tethering_session_access_point_configuration_put__performance_priority(WNENE_NetworkOperatorTetheringSessionAccessPointConfiguration *self, WNENE_TetheringWiFiPerformancePriority value);
 
-/* activate Windows.Networking.NetworkOperators.ProvisionFromXmlDocumentResults */
 HRESULT wnene_provision_from_xml_document_results_new(WNENE_ProvisionFromXmlDocumentResults **out);
 
-/* Windows.Networking.NetworkOperators.ProvisionFromXmlDocumentResults */
-/* Windows.Networking.NetworkOperators.ProvisionFromXmlDocumentResults.get_AllElementsProvisioned() */
 HRESULT wnene_provision_from_xml_document_results_get__all_elements_provisioned(WNENE_ProvisionFromXmlDocumentResults *self, BOOL *value);
 
-/* Windows.Networking.NetworkOperators.ProvisionFromXmlDocumentResults.get_ProvisionResultsXml() */
 HRESULT wnene_provision_from_xml_document_results_get__provision_results_xml(WNENE_ProvisionFromXmlDocumentResults *self, cwinrt_hstring *value);
 
-/* activate Windows.Networking.NetworkOperators.ProvisionedProfile */
 HRESULT wnene_provisioned_profile_new(WNENE_ProvisionedProfile **out);
 
-/* Windows.Networking.NetworkOperators.ProvisionedProfile */
-/* Windows.Networking.NetworkOperators.ProvisionedProfile.UpdateCost() */
 HRESULT wnene_provisioned_profile_update_cost(WNENE_ProvisionedProfile *self, WNECO_NetworkCostType value);
 
-/* Windows.Networking.NetworkOperators.ProvisionedProfile.UpdateUsage() */
 HRESULT wnene_provisioned_profile_update_usage(WNENE_ProvisionedProfile *self, WNENE_ProfileUsage value);
 
-/* activate Windows.Networking.NetworkOperators.ProvisioningAgent */
 HRESULT wnene_provisioning_agent_new(WNENE_ProvisioningAgent **out);
 
-/* Windows.Networking.NetworkOperators.ProvisioningAgent */
-/* Windows.Networking.NetworkOperators.ProvisioningAgent.ProvisionFromXmlDocumentAsync(provisioningXmlDocument) */
 HRESULT wnene_provisioning_agent_provision_from_xml_document_async(WNENE_ProvisioningAgent *self, cwinrt_hstring provisioningXmlDocument, WF_IAsyncOperation_WNENE_ProvisionFromXmlDocumentResults** out);
 
-/* Windows.Networking.NetworkOperators.ProvisioningAgent.GetProvisionedProfile(mediaType, profileName) */
 HRESULT wnene_provisioning_agent_get_provisioned_profile(WNENE_ProvisioningAgent *self, WNENE_ProfileMediaType mediaType, cwinrt_hstring profileName, WNENE_ProvisionedProfile** out);
 
-/* Windows.Networking.NetworkOperators.ProvisioningAgent.CreateFromNetworkAccountId(networkAccountId) */
 HRESULT wnene_provisioning_agent_create_from_network_account_id(cwinrt_hstring networkAccountId, WNENE_ProvisioningAgent** out);
 
-/* activate Windows.Networking.NetworkOperators.TetheringEntitlementCheckTriggerDetails */
 HRESULT wnene_tethering_entitlement_check_trigger_details_new(WNENE_TetheringEntitlementCheckTriggerDetails **out);
 
-/* Windows.Networking.NetworkOperators.TetheringEntitlementCheckTriggerDetails */
-/* Windows.Networking.NetworkOperators.TetheringEntitlementCheckTriggerDetails.get_NetworkAccountId() */
 HRESULT wnene_tethering_entitlement_check_trigger_details_get__network_account_id(WNENE_TetheringEntitlementCheckTriggerDetails *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.TetheringEntitlementCheckTriggerDetails.AllowTethering() */
 HRESULT wnene_tethering_entitlement_check_trigger_details_allow_tethering(WNENE_TetheringEntitlementCheckTriggerDetails *self);
 
-/* Windows.Networking.NetworkOperators.TetheringEntitlementCheckTriggerDetails.DenyTethering(entitlementFailureReason) */
 HRESULT wnene_tethering_entitlement_check_trigger_details_deny_tethering(WNENE_TetheringEntitlementCheckTriggerDetails *self, cwinrt_hstring entitlementFailureReason);
 
-/* activate Windows.Networking.NetworkOperators.UssdMessage */
 HRESULT wnene_ussd_message_new(WNENE_UssdMessage **out);
 
-/* Windows.Networking.NetworkOperators.UssdMessage */
-/* Windows.Networking.NetworkOperators.UssdMessage.get_DataCodingScheme() */
 HRESULT wnene_ussd_message_get__data_coding_scheme(WNENE_UssdMessage *self, uint8_t *value);
 
-/* Windows.Networking.NetworkOperators.UssdMessage.put_DataCodingScheme() */
 HRESULT wnene_ussd_message_put__data_coding_scheme(WNENE_UssdMessage *self, uint8_t value);
 
-/* Windows.Networking.NetworkOperators.UssdMessage.GetPayload() */
 HRESULT wnene_ussd_message_get_payload(WNENE_UssdMessage *self, uint8_t **out, uint32_t *out_len);
 
-/* Windows.Networking.NetworkOperators.UssdMessage.SetPayload() */
 HRESULT wnene_ussd_message_set_payload(WNENE_UssdMessage *self, uint8_t *value, uint32_t value_len);
 
-/* Windows.Networking.NetworkOperators.UssdMessage.get_PayloadAsText() */
 HRESULT wnene_ussd_message_get__payload_as_text(WNENE_UssdMessage *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.UssdMessage.put_PayloadAsText() */
 HRESULT wnene_ussd_message_put__payload_as_text(WNENE_UssdMessage *self, cwinrt_hstring value);
 
-/* activate Windows.Networking.NetworkOperators.UssdReply */
 HRESULT wnene_ussd_reply_new(WNENE_UssdReply **out);
 
-/* Windows.Networking.NetworkOperators.UssdReply */
-/* Windows.Networking.NetworkOperators.UssdReply.get_ResultCode() */
 HRESULT wnene_ussd_reply_get__result_code(WNENE_UssdReply *self, WNENE_UssdResultCode *value);
 
-/* Windows.Networking.NetworkOperators.UssdReply.get_Message() */
 HRESULT wnene_ussd_reply_get__message(WNENE_UssdReply *self, WNENE_UssdMessage** value);
 
-/* activate Windows.Networking.NetworkOperators.UssdSession */
 HRESULT wnene_ussd_session_new(WNENE_UssdSession **out);
 
-/* Windows.Networking.NetworkOperators.UssdSession */
-/* Windows.Networking.NetworkOperators.UssdSession.SendMessageAndGetReplyAsync(message) */
 HRESULT wnene_ussd_session_send_message_and_get_reply_async(WNENE_UssdSession *self, WNENE_UssdMessage* message, WF_IAsyncOperation_WNENE_UssdReply** out);
 
-/* Windows.Networking.NetworkOperators.UssdSession.Close() */
 HRESULT wnene_ussd_session_close(WNENE_UssdSession *self);
 
-/* Windows.Networking.NetworkOperators.UssdSession.CreateFromNetworkAccountId(networkAccountId) */
 HRESULT wnene_ussd_session_create_from_network_account_id(cwinrt_hstring networkAccountId, WNENE_UssdSession** out);
 
-/* Windows.Networking.NetworkOperators.UssdSession.CreateFromNetworkInterfaceId(networkInterfaceId) */
 HRESULT wnene_ussd_session_create_from_network_interface_id(cwinrt_hstring networkInterfaceId, WNENE_UssdSession** out);
 
-/* Windows.Networking.NetworkOperators.IESim */
-/* Windows.Networking.NetworkOperators.IESim2 */
-/* Windows.Networking.NetworkOperators.IESim2.Discover() */
 HRESULT wnene_e_sim_2_discover(WNENE_IESim_2 *self, WNENE_ESimDiscoverResult** out);
 
-/* Windows.Networking.NetworkOperators.IESim2.Discover(serverAddress, matchingId) */
 HRESULT wnene_e_sim_2_discover_str_str_p(WNENE_IESim_2 *self, cwinrt_hstring serverAddress, cwinrt_hstring matchingId, WNENE_ESimDiscoverResult** out);
 
-/* Windows.Networking.NetworkOperators.IESim2.DiscoverAsync() */
 HRESULT wnene_e_sim_2_discover_async(WNENE_IESim_2 *self, WF_IAsyncOperation_WNENE_ESimDiscoverResult** out);
 
-/* Windows.Networking.NetworkOperators.IESim2.DiscoverAsync(serverAddress, matchingId) */
 HRESULT wnene_e_sim_2_discover_async_str_str_p(WNENE_IESim_2 *self, cwinrt_hstring serverAddress, cwinrt_hstring matchingId, WF_IAsyncOperation_WNENE_ESimDiscoverResult** out);
 
-/* Windows.Networking.NetworkOperators.IESim3 */
-/* Windows.Networking.NetworkOperators.IESim3.get_SlotIndex() */
 HRESULT wnene_e_sim_3_get__slot_index(WNENE_IESim_3 *self, int32_t** value);
 
-/* Windows.Networking.NetworkOperators.IESimAddedEventArgs */
-/* Windows.Networking.NetworkOperators.IESimDiscoverEvent */
-/* Windows.Networking.NetworkOperators.IESimDiscoverResult */
-/* Windows.Networking.NetworkOperators.IESimDownloadProfileMetadataResult */
-/* Windows.Networking.NetworkOperators.IESimOperationResult */
-/* Windows.Networking.NetworkOperators.IESimPolicy */
-/* Windows.Networking.NetworkOperators.IESimProfile */
-/* Windows.Networking.NetworkOperators.IESimProfileMetadata */
-/* Windows.Networking.NetworkOperators.IESimProfilePolicy */
-/* Windows.Networking.NetworkOperators.IESimRemovedEventArgs */
-/* Windows.Networking.NetworkOperators.IESimServiceInfo */
-/* Windows.Networking.NetworkOperators.IESimUpdatedEventArgs */
-/* Windows.Networking.NetworkOperators.IESimWatcher */
-/* Windows.Networking.NetworkOperators.IHotspotAuthenticationContext */
-/* Windows.Networking.NetworkOperators.IHotspotAuthenticationContext2 */
-/* Windows.Networking.NetworkOperators.IHotspotAuthenticationContext2.IssueCredentialsAsync(userName, password, extraParameters, markAsManualConnectOnFailure) */
 HRESULT wnene_hotspot_authentication_context_2_issue_credentials_async(WNENE_IHotspotAuthenticationContext_2 *self, cwinrt_hstring userName, cwinrt_hstring password, cwinrt_hstring extraParameters, BOOL markAsManualConnectOnFailure, WF_IAsyncOperation_WNENE_HotspotCredentialsAuthenticationResult** out);
 
-/* Windows.Networking.NetworkOperators.IHotspotAuthenticationEventDetails */
-/* Windows.Networking.NetworkOperators.IHotspotCredentialsAuthenticationResult */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandAccount */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandAccount2 */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandAccount2.GetConnectionProfiles() */
 HRESULT wnene_mobile_broadband_account_2_get_connection_profiles(WNENE_IMobileBroadbandAccount_2 *self, WFOCO_IVectorView_WNECO_ConnectionProfile** out);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandAccount3 */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandAccount3.get_AccountExperienceUrl() */
 HRESULT wnene_mobile_broadband_account_3_get__account_experience_url(WNENE_IMobileBroadbandAccount_3 *self, WF_Uri** value);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandAccountEventArgs */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandAccountUpdatedEventArgs */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandAccountWatcher */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandAntennaSar */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandCellCdma */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandCellGsm */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandCellLte */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandCellNR */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandCellTdscdma */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandCellUmts */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandCellsInfo */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandCellsInfo2 */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandCellsInfo2.get_NeighboringCellsNR() */
 HRESULT wnene_mobile_broadband_cells_info_2_get__neighboring_cells_n_r(WNENE_IMobileBroadbandCellsInfo_2 *self, WFOCO_IVectorView_WNENE_MobileBroadbandCellNR** value);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandCellsInfo2.get_ServingCellsNR() */
 HRESULT wnene_mobile_broadband_cells_info_2_get__serving_cells_n_r(WNENE_IMobileBroadbandCellsInfo_2 *self, WFOCO_IVectorView_WNENE_MobileBroadbandCellNR** value);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandCurrentSlotIndexChangedEventArgs */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandDeviceInformation */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandDeviceInformation2 */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandDeviceInformation2.get_PinManager() */
 HRESULT wnene_mobile_broadband_device_information_2_get__pin_manager(WNENE_IMobileBroadbandDeviceInformation_2 *self, WNENE_MobileBroadbandPinManager** value);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandDeviceInformation2.get_Revision() */
 HRESULT wnene_mobile_broadband_device_information_2_get__revision(WNENE_IMobileBroadbandDeviceInformation_2 *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandDeviceInformation2.get_SerialNumber() */
 HRESULT wnene_mobile_broadband_device_information_2_get__serial_number(WNENE_IMobileBroadbandDeviceInformation_2 *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandDeviceInformation3 */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandDeviceInformation3.get_SimSpn() */
 HRESULT wnene_mobile_broadband_device_information_3_get__sim_spn(WNENE_IMobileBroadbandDeviceInformation_3 *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandDeviceInformation3.get_SimPnn() */
 HRESULT wnene_mobile_broadband_device_information_3_get__sim_pnn(WNENE_IMobileBroadbandDeviceInformation_3 *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandDeviceInformation3.get_SimGid1() */
 HRESULT wnene_mobile_broadband_device_information_3_get__sim_gid1(WNENE_IMobileBroadbandDeviceInformation_3 *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandDeviceInformation4 */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandDeviceInformation4.get_SlotManager() */
 HRESULT wnene_mobile_broadband_device_information_4_get__slot_manager(WNENE_IMobileBroadbandDeviceInformation_4 *self, WNENE_MobileBroadbandSlotManager** value);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandDeviceService */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandEventArgs */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandResult */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandSession */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandSession2 */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceDataReceivedEventArgs */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceDataSession */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceInformation */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceTriggerDetails */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceTriggerDetails2 */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceTriggerDetails2.get_EventId() */
 HRESULT wnene_mobile_broadband_device_service_trigger_details_2_get__event_id(WNENE_IMobileBroadbandDeviceServiceTriggerDetails_2 *self, uint32_t *value);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandModem */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandModem2 */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandModem2.GetIsPassthroughEnabledAsync() */
 HRESULT wnene_mobile_broadband_modem_2_get_is_passthrough_enabled_async(WNENE_IMobileBroadbandModem_2 *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandModem2.SetIsPassthroughEnabledAsync() */
 HRESULT wnene_mobile_broadband_modem_2_set_is_passthrough_enabled_async(WNENE_IMobileBroadbandModem_2 *self, BOOL value, WF_IAsyncOperation_WNENE_MobileBroadbandModemStatus** out);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandModem3 */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandModem3.TryGetPcoAsync() */
 HRESULT wnene_mobile_broadband_modem_3_try_get_pco_async(WNENE_IMobileBroadbandModem_3 *self, WF_IAsyncOperation_WNENE_MobileBroadbandPco** out);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandModem3.get_IsInEmergencyCallMode() */
 HRESULT wnene_mobile_broadband_modem_3_get__is_in_emergency_call_mode(WNENE_IMobileBroadbandModem_3 *self, BOOL *value);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandModem4 */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandModem4.SetIsPassthroughEnabledAsync(slotindex) */
 HRESULT wnene_mobile_broadband_modem_4_set_is_passthrough_enabled_async(WNENE_IMobileBroadbandModem_4 *self, BOOL value, int32_t slotindex, WF_IAsyncOperation_WNENE_MobileBroadbandModemStatus** out);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandModem4.GetIsPassthroughEnabledAsync(slotindex) */
 HRESULT wnene_mobile_broadband_modem_4_get_is_passthrough_enabled_async(WNENE_IMobileBroadbandModem_4 *self, int32_t slotindex, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandModem4.SetIsPassthroughEnabled(slotindex) */
 HRESULT wnene_mobile_broadband_modem_4_set_is_passthrough_enabled(WNENE_IMobileBroadbandModem_4 *self, BOOL value, int32_t slotindex, WNENE_MobileBroadbandModemStatus *out);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandModem4.GetIsPassthroughEnabled(slotindex) */
 HRESULT wnene_mobile_broadband_modem_4_get_is_passthrough_enabled(WNENE_IMobileBroadbandModem_4 *self, int32_t slotindex, BOOL *out);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandModemConfiguration */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandModemConfiguration2 */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandModemConfiguration2.get_SarManager() */
 HRESULT wnene_mobile_broadband_modem_configuration_2_get__sar_manager(WNENE_IMobileBroadbandModemConfiguration_2 *self, WNENE_MobileBroadbandSarManager** value);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandModemIsolation */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandNetwork */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandNetwork2 */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandNetwork2.GetVoiceCallSupportAsync() */
 HRESULT wnene_mobile_broadband_network_2_get_voice_call_support_async(WNENE_IMobileBroadbandNetwork_2 *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandNetwork2.get_RegistrationUiccApps() */
 HRESULT wnene_mobile_broadband_network_2_get__registration_uicc_apps(WNENE_IMobileBroadbandNetwork_2 *self, WFOCO_IVectorView_WNENE_MobileBroadbandUiccApp** value);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandNetwork3 */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandNetwork3.GetCellsInfoAsync() */
 HRESULT wnene_mobile_broadband_network_3_get_cells_info_async(WNENE_IMobileBroadbandNetwork_3 *self, WF_IAsyncOperation_WNENE_MobileBroadbandCellsInfo** out);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandNetworkRegistrationStateChange */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandNetworkRegistrationStateChangeTriggerDetails */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandPco */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandPcoDataChangeTriggerDetails */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandPin */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandPinLockStateChange */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandPinLockStateChangeTriggerDetails */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandPinManager */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandPinOperationResult */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandRadioStateChange */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandRadioStateChangeTriggerDetails */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandSarManager */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandSlotInfo */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandSlotInfo2 */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandSlotInfo2.get_IccId() */
 HRESULT wnene_mobile_broadband_slot_info_2_get__icc_id(WNENE_IMobileBroadbandSlotInfo_2 *self, cwinrt_hstring *value);
 
-/* Windows.Networking.NetworkOperators.IMobileBroadbandSlotInfoChangedEventArgs */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandSlotManager */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandTransmissionStateChangedEventArgs */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandUicc */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandUiccApp */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandUiccAppReadRecordResult */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandUiccAppRecordDetailsResult */
-/* Windows.Networking.NetworkOperators.IMobileBroadbandUiccAppsResult */
-/* Windows.Networking.NetworkOperators.INetworkOperatorDataUsageTriggerDetails */
-/* Windows.Networking.NetworkOperators.INetworkOperatorNotificationEventDetails */
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringEntitlementCheck */
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringEntitlementCheck.AuthorizeTethering(allow, entitlementFailureReason) */
 HRESULT wnene_network_operator_tethering_entitlement_check_authorize_tethering(WNENE_INetworkOperatorTetheringEntitlementCheck *self, BOOL allow, cwinrt_hstring entitlementFailureReason);
 
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringAccessPointConfiguration */
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringAccessPointConfiguration2 */
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringAccessPointConfiguration2.IsBandSupported(band) */
 HRESULT wnene_network_operator_tethering_access_point_configuration_2_is_band_supported(WNENE_INetworkOperatorTetheringAccessPointConfiguration_2 *self, WNENE_TetheringWiFiBand band, BOOL *out);
 
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringAccessPointConfiguration2.IsBandSupportedAsync(band) */
 HRESULT wnene_network_operator_tethering_access_point_configuration_2_is_band_supported_async(WNENE_INetworkOperatorTetheringAccessPointConfiguration_2 *self, WNENE_TetheringWiFiBand band, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringAccessPointConfiguration2.get_Band() */
 HRESULT wnene_network_operator_tethering_access_point_configuration_2_get__band(WNENE_INetworkOperatorTetheringAccessPointConfiguration_2 *self, WNENE_TetheringWiFiBand *value);
 
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringAccessPointConfiguration2.put_Band() */
 HRESULT wnene_network_operator_tethering_access_point_configuration_2_put__band(WNENE_INetworkOperatorTetheringAccessPointConfiguration_2 *self, WNENE_TetheringWiFiBand value);
 
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringAccessPointConfiguration3 */
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringAccessPointConfiguration3.IsAuthenticationKindSupported(authenticationKind) */
 HRESULT wnene_network_operator_tethering_access_point_configuration_3_is_authentication_kind_supported(WNENE_INetworkOperatorTetheringAccessPointConfiguration_3 *self, WNENE_TetheringWiFiAuthenticationKind authenticationKind, BOOL *out);
 
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringAccessPointConfiguration3.IsAuthenticationKindSupportedAsync(authenticationKind) */
 HRESULT wnene_network_operator_tethering_access_point_configuration_3_is_authentication_kind_supported_async(WNENE_INetworkOperatorTetheringAccessPointConfiguration_3 *self, WNENE_TetheringWiFiAuthenticationKind authenticationKind, WF_IAsyncOperation_Bool** out);
 
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringAccessPointConfiguration3.get_AuthenticationKind() */
 HRESULT wnene_network_operator_tethering_access_point_configuration_3_get__authentication_kind(WNENE_INetworkOperatorTetheringAccessPointConfiguration_3 *self, WNENE_TetheringWiFiAuthenticationKind *value);
 
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringAccessPointConfiguration3.put_AuthenticationKind() */
 HRESULT wnene_network_operator_tethering_access_point_configuration_3_put__authentication_kind(WNENE_INetworkOperatorTetheringAccessPointConfiguration_3 *self, WNENE_TetheringWiFiAuthenticationKind value);
 
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringClient */
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringManager */
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringClientManager */
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringClientManager.GetTetheringClients() */
 HRESULT wnene_network_operator_tethering_client_manager_get_tethering_clients(WNENE_INetworkOperatorTetheringClientManager *self, WFOCO_IVectorView_WNENE_NetworkOperatorTetheringClient** out);
 
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringManager2 */
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringManager2.StartTetheringAsync(configuration) */
 HRESULT wnene_network_operator_tethering_manager_2_start_tethering_async(WNENE_INetworkOperatorTetheringManager_2 *self, WNENE_NetworkOperatorTetheringSessionAccessPointConfiguration* configuration, WF_IAsyncOperation_WNENE_NetworkOperatorTetheringOperationResult** out);
 
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringOperationResult */
-/* Windows.Networking.NetworkOperators.INetworkOperatorTetheringSessionAccessPointConfiguration */
-/* Windows.Networking.NetworkOperators.IProvisionFromXmlDocumentResults */
-/* Windows.Networking.NetworkOperators.IProvisionedProfile */
-/* Windows.Networking.NetworkOperators.IProvisioningAgent */
-/* Windows.Networking.NetworkOperators.ITetheringEntitlementCheckTriggerDetails */
-/* Windows.Networking.NetworkOperators.IUssdMessage */
-/* Windows.Networking.NetworkOperators.IUssdReply */
-/* Windows.Networking.NetworkOperators.IUssdSession */
 #endif /* CWINRT_WINDOWS_NETWORKING_NETWORKOPERATORS_H */

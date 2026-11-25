@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.Web.Syndication.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WWESY_ISyndicationNode
 #define CWINRT_FWD_WWESY_ISyndicationNode
 typedef struct WWESY_ISyndicationNode WWESY_ISyndicationNode;
@@ -63,7 +62,6 @@ typedef struct WWESY_SyndicationAttribute WWESY_SyndicationAttribute;
 typedef struct WDAXMDO_XmlDocument WDAXMDO_XmlDocument;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WWEAT_ServiceDocument WWEAT_ServiceDocument;
 typedef struct WWEAT_Workspace WWEAT_Workspace;
 typedef struct WWEAT_IAtomPubClientFactory WWEAT_IAtomPubClientFactory;
@@ -74,7 +72,6 @@ typedef struct WWEAT_IWorkspace WWEAT_IWorkspace;
 typedef struct WWEAT_IResourceCollection WWEAT_IResourceCollection;
 typedef struct WWEAT_IAtomPubClient WWEAT_IAtomPubClient;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WFOCO_IVectorView_WWEAT_Workspace
 #define CWINRT_FWD_WFOCO_IVectorView_WWEAT_Workspace
 typedef struct WFOCO_IVectorView_WWEAT_Workspace WFOCO_IVectorView_WWEAT_Workspace;
@@ -160,7 +157,6 @@ typedef struct WF_IAsyncActionWithProgress_WWESY_TransferProgress WF_IAsyncActio
 typedef struct WF_IAsyncOperationWithProgress_WWESY_SyndicationFeed_WWESY_RetrievalProgress WF_IAsyncOperationWithProgress_WWESY_SyndicationFeed_WWESY_RetrievalProgress;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -185,237 +181,152 @@ static const IID CWINRT_IID_WWEAT_IResourceCollection CWINRT_MAYBE_UNUSED = { 0x
 static const IID CWINRT_IID_WWEAT_IAtomPubClient CWINRT_MAYBE_UNUSED = { 0x35392C38, 0xCDED, 0x4D4C, { 0x96, 0x37, 0x05, 0xF1, 0x5C, 0x1C, 0x94, 0x06 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.Web.AtomPub.ServiceDocument */
 HRESULT wweat_service_document_new(WWEAT_ServiceDocument **out);
 
-/* Windows.Web.AtomPub.ServiceDocument */
-/* Windows.Web.AtomPub.ServiceDocument.get_Workspaces() */
 HRESULT wweat_service_document_get__workspaces(WWEAT_ServiceDocument *self, WFOCO_IVectorView_WWEAT_Workspace** value);
 
-/* Windows.Web.AtomPub.ServiceDocument.get_NodeName() */
 HRESULT wweat_service_document_get__node_name(WWEAT_ServiceDocument *self, cwinrt_hstring *value);
 
-/* Windows.Web.AtomPub.ServiceDocument.put_NodeName() */
 HRESULT wweat_service_document_put__node_name(WWEAT_ServiceDocument *self, cwinrt_hstring value);
 
-/* Windows.Web.AtomPub.ServiceDocument.get_NodeNamespace() */
 HRESULT wweat_service_document_get__node_namespace(WWEAT_ServiceDocument *self, cwinrt_hstring *value);
 
-/* Windows.Web.AtomPub.ServiceDocument.put_NodeNamespace() */
 HRESULT wweat_service_document_put__node_namespace(WWEAT_ServiceDocument *self, cwinrt_hstring value);
 
-/* Windows.Web.AtomPub.ServiceDocument.get_NodeValue() */
 HRESULT wweat_service_document_get__node_value(WWEAT_ServiceDocument *self, cwinrt_hstring *value);
 
-/* Windows.Web.AtomPub.ServiceDocument.put_NodeValue() */
 HRESULT wweat_service_document_put__node_value(WWEAT_ServiceDocument *self, cwinrt_hstring value);
 
-/* Windows.Web.AtomPub.ServiceDocument.get_Language() */
 HRESULT wweat_service_document_get__language(WWEAT_ServiceDocument *self, cwinrt_hstring *value);
 
-/* Windows.Web.AtomPub.ServiceDocument.put_Language() */
 HRESULT wweat_service_document_put__language(WWEAT_ServiceDocument *self, cwinrt_hstring value);
 
-/* Windows.Web.AtomPub.ServiceDocument.get_BaseUri() */
 HRESULT wweat_service_document_get__base_uri(WWEAT_ServiceDocument *self, WF_Uri** value);
 
-/* Windows.Web.AtomPub.ServiceDocument.put_BaseUri() */
 HRESULT wweat_service_document_put__base_uri(WWEAT_ServiceDocument *self, WF_Uri* value);
 
-/* Windows.Web.AtomPub.ServiceDocument.get_AttributeExtensions() */
 HRESULT wweat_service_document_get__attribute_extensions(WWEAT_ServiceDocument *self, WFOCO_IVector_WWESY_SyndicationAttribute** value);
 
-/* Windows.Web.AtomPub.ServiceDocument.get_ElementExtensions() */
 HRESULT wweat_service_document_get__element_extensions(WWEAT_ServiceDocument *self, WFOCO_IVector_WWESY_ISyndicationNode** value);
 
-/* Windows.Web.AtomPub.ServiceDocument.GetXmlDocument(format) */
 HRESULT wweat_service_document_get_xml_document(WWEAT_ServiceDocument *self, WWESY_SyndicationFormat format, WDAXMDO_XmlDocument** out);
 
-/* activate Windows.Web.AtomPub.Workspace */
 HRESULT wweat_workspace_new(WWEAT_Workspace **out);
 
-/* Windows.Web.AtomPub.Workspace */
-/* Windows.Web.AtomPub.Workspace.get_Title() */
 HRESULT wweat_workspace_get__title(WWEAT_Workspace *self, WWESY_ISyndicationText** value);
 
-/* Windows.Web.AtomPub.Workspace.get_Collections() */
 HRESULT wweat_workspace_get__collections(WWEAT_Workspace *self, WFOCO_IVectorView_WWEAT_ResourceCollection** value);
 
-/* Windows.Web.AtomPub.Workspace.get_NodeName() */
 HRESULT wweat_workspace_get__node_name(WWEAT_Workspace *self, cwinrt_hstring *value);
 
-/* Windows.Web.AtomPub.Workspace.put_NodeName() */
 HRESULT wweat_workspace_put__node_name(WWEAT_Workspace *self, cwinrt_hstring value);
 
-/* Windows.Web.AtomPub.Workspace.get_NodeNamespace() */
 HRESULT wweat_workspace_get__node_namespace(WWEAT_Workspace *self, cwinrt_hstring *value);
 
-/* Windows.Web.AtomPub.Workspace.put_NodeNamespace() */
 HRESULT wweat_workspace_put__node_namespace(WWEAT_Workspace *self, cwinrt_hstring value);
 
-/* Windows.Web.AtomPub.Workspace.get_NodeValue() */
 HRESULT wweat_workspace_get__node_value(WWEAT_Workspace *self, cwinrt_hstring *value);
 
-/* Windows.Web.AtomPub.Workspace.put_NodeValue() */
 HRESULT wweat_workspace_put__node_value(WWEAT_Workspace *self, cwinrt_hstring value);
 
-/* Windows.Web.AtomPub.Workspace.get_Language() */
 HRESULT wweat_workspace_get__language(WWEAT_Workspace *self, cwinrt_hstring *value);
 
-/* Windows.Web.AtomPub.Workspace.put_Language() */
 HRESULT wweat_workspace_put__language(WWEAT_Workspace *self, cwinrt_hstring value);
 
-/* Windows.Web.AtomPub.Workspace.get_BaseUri() */
 HRESULT wweat_workspace_get__base_uri(WWEAT_Workspace *self, WF_Uri** value);
 
-/* Windows.Web.AtomPub.Workspace.put_BaseUri() */
 HRESULT wweat_workspace_put__base_uri(WWEAT_Workspace *self, WF_Uri* value);
 
-/* Windows.Web.AtomPub.Workspace.get_AttributeExtensions() */
 HRESULT wweat_workspace_get__attribute_extensions(WWEAT_Workspace *self, WFOCO_IVector_WWESY_SyndicationAttribute** value);
 
-/* Windows.Web.AtomPub.Workspace.get_ElementExtensions() */
 HRESULT wweat_workspace_get__element_extensions(WWEAT_Workspace *self, WFOCO_IVector_WWESY_ISyndicationNode** value);
 
-/* Windows.Web.AtomPub.Workspace.GetXmlDocument(format) */
 HRESULT wweat_workspace_get_xml_document(WWEAT_Workspace *self, WWESY_SyndicationFormat format, WDAXMDO_XmlDocument** out);
 
-/* Windows.Web.AtomPub.IAtomPubClientFactory */
-/* Windows.Web.AtomPub.IAtomPubClientFactory.CreateAtomPubClientWithCredentials(serverCredential) */
 HRESULT wweat_atom_pub_client_factory_create_atom_pub_client_with_credentials(WWEAT_IAtomPubClientFactory *self, WSECR_PasswordCredential* serverCredential, WWEAT_AtomPubClient** out);
 
-/* activate Windows.Web.AtomPub.ResourceCollection */
 HRESULT wweat_resource_collection_new(WWEAT_ResourceCollection **out);
 
-/* Windows.Web.AtomPub.ResourceCollection */
-/* Windows.Web.AtomPub.ResourceCollection.get_Title() */
 HRESULT wweat_resource_collection_get__title(WWEAT_ResourceCollection *self, WWESY_ISyndicationText** value);
 
-/* Windows.Web.AtomPub.ResourceCollection.get_Uri() */
 HRESULT wweat_resource_collection_get__uri(WWEAT_ResourceCollection *self, WF_Uri** value);
 
-/* Windows.Web.AtomPub.ResourceCollection.get_Categories() */
 HRESULT wweat_resource_collection_get__categories(WWEAT_ResourceCollection *self, WFOCO_IVectorView_WWESY_SyndicationCategory** value);
 
-/* Windows.Web.AtomPub.ResourceCollection.get_Accepts() */
 HRESULT wweat_resource_collection_get__accepts(WWEAT_ResourceCollection *self, WFOCO_IVectorView_HSTRING** value);
 
-/* Windows.Web.AtomPub.ResourceCollection.get_NodeName() */
 HRESULT wweat_resource_collection_get__node_name(WWEAT_ResourceCollection *self, cwinrt_hstring *value);
 
-/* Windows.Web.AtomPub.ResourceCollection.put_NodeName() */
 HRESULT wweat_resource_collection_put__node_name(WWEAT_ResourceCollection *self, cwinrt_hstring value);
 
-/* Windows.Web.AtomPub.ResourceCollection.get_NodeNamespace() */
 HRESULT wweat_resource_collection_get__node_namespace(WWEAT_ResourceCollection *self, cwinrt_hstring *value);
 
-/* Windows.Web.AtomPub.ResourceCollection.put_NodeNamespace() */
 HRESULT wweat_resource_collection_put__node_namespace(WWEAT_ResourceCollection *self, cwinrt_hstring value);
 
-/* Windows.Web.AtomPub.ResourceCollection.get_NodeValue() */
 HRESULT wweat_resource_collection_get__node_value(WWEAT_ResourceCollection *self, cwinrt_hstring *value);
 
-/* Windows.Web.AtomPub.ResourceCollection.put_NodeValue() */
 HRESULT wweat_resource_collection_put__node_value(WWEAT_ResourceCollection *self, cwinrt_hstring value);
 
-/* Windows.Web.AtomPub.ResourceCollection.get_Language() */
 HRESULT wweat_resource_collection_get__language(WWEAT_ResourceCollection *self, cwinrt_hstring *value);
 
-/* Windows.Web.AtomPub.ResourceCollection.put_Language() */
 HRESULT wweat_resource_collection_put__language(WWEAT_ResourceCollection *self, cwinrt_hstring value);
 
-/* Windows.Web.AtomPub.ResourceCollection.get_BaseUri() */
 HRESULT wweat_resource_collection_get__base_uri(WWEAT_ResourceCollection *self, WF_Uri** value);
 
-/* Windows.Web.AtomPub.ResourceCollection.put_BaseUri() */
 HRESULT wweat_resource_collection_put__base_uri(WWEAT_ResourceCollection *self, WF_Uri* value);
 
-/* Windows.Web.AtomPub.ResourceCollection.get_AttributeExtensions() */
 HRESULT wweat_resource_collection_get__attribute_extensions(WWEAT_ResourceCollection *self, WFOCO_IVector_WWESY_SyndicationAttribute** value);
 
-/* Windows.Web.AtomPub.ResourceCollection.get_ElementExtensions() */
 HRESULT wweat_resource_collection_get__element_extensions(WWEAT_ResourceCollection *self, WFOCO_IVector_WWESY_ISyndicationNode** value);
 
-/* Windows.Web.AtomPub.ResourceCollection.GetXmlDocument(format) */
 HRESULT wweat_resource_collection_get_xml_document(WWEAT_ResourceCollection *self, WWESY_SyndicationFormat format, WDAXMDO_XmlDocument** out);
 
-/* activate Windows.Web.AtomPub.AtomPubClient */
 HRESULT wweat_atom_pub_client_new(WWEAT_AtomPubClient **out);
 
-/* Windows.Web.AtomPub.AtomPubClient */
-/* Windows.Web.AtomPub.AtomPubClient.RetrieveServiceDocumentAsync(uri) */
 HRESULT wweat_atom_pub_client_retrieve_service_document_async(WWEAT_AtomPubClient *self, WF_Uri* uri, WF_IAsyncOperationWithProgress_WWEAT_ServiceDocument_WWESY_RetrievalProgress** out);
 
-/* Windows.Web.AtomPub.AtomPubClient.RetrieveMediaResourceAsync(uri) */
 HRESULT wweat_atom_pub_client_retrieve_media_resource_async(WWEAT_AtomPubClient *self, WF_Uri* uri, WF_IAsyncOperationWithProgress_WSTST_IInputStream_WWESY_RetrievalProgress** out);
 
-/* Windows.Web.AtomPub.AtomPubClient.RetrieveResourceAsync(uri) */
 HRESULT wweat_atom_pub_client_retrieve_resource_async(WWEAT_AtomPubClient *self, WF_Uri* uri, WF_IAsyncOperationWithProgress_WWESY_SyndicationItem_WWESY_RetrievalProgress** out);
 
-/* Windows.Web.AtomPub.AtomPubClient.CreateResourceAsync(uri, description, item) */
 HRESULT wweat_atom_pub_client_create_resource_async(WWEAT_AtomPubClient *self, WF_Uri* uri, cwinrt_hstring description, WWESY_SyndicationItem* item, WF_IAsyncOperationWithProgress_WWESY_SyndicationItem_WWESY_TransferProgress** out);
 
-/* Windows.Web.AtomPub.AtomPubClient.CreateMediaResourceAsync(uri, mediaType, description, mediaStream) */
 HRESULT wweat_atom_pub_client_create_media_resource_async(WWEAT_AtomPubClient *self, WF_Uri* uri, cwinrt_hstring mediaType, cwinrt_hstring description, WSTST_IInputStream* mediaStream, WF_IAsyncOperationWithProgress_WWESY_SyndicationItem_WWESY_TransferProgress** out);
 
-/* Windows.Web.AtomPub.AtomPubClient.UpdateMediaResourceAsync(uri, mediaType, mediaStream) */
 HRESULT wweat_atom_pub_client_update_media_resource_async(WWEAT_AtomPubClient *self, WF_Uri* uri, cwinrt_hstring mediaType, WSTST_IInputStream* mediaStream, WF_IAsyncActionWithProgress_WWESY_TransferProgress** out);
 
-/* Windows.Web.AtomPub.AtomPubClient.UpdateResourceAsync(uri, item) */
 HRESULT wweat_atom_pub_client_update_resource_async(WWEAT_AtomPubClient *self, WF_Uri* uri, WWESY_SyndicationItem* item, WF_IAsyncActionWithProgress_WWESY_TransferProgress** out);
 
-/* Windows.Web.AtomPub.AtomPubClient.UpdateResourceItemAsync(item) */
 HRESULT wweat_atom_pub_client_update_resource_item_async(WWEAT_AtomPubClient *self, WWESY_SyndicationItem* item, WF_IAsyncActionWithProgress_WWESY_TransferProgress** out);
 
-/* Windows.Web.AtomPub.AtomPubClient.DeleteResourceAsync(uri) */
 HRESULT wweat_atom_pub_client_delete_resource_async(WWEAT_AtomPubClient *self, WF_Uri* uri, WF_IAsyncActionWithProgress_WWESY_TransferProgress** out);
 
-/* Windows.Web.AtomPub.AtomPubClient.DeleteResourceItemAsync(item) */
 HRESULT wweat_atom_pub_client_delete_resource_item_async(WWEAT_AtomPubClient *self, WWESY_SyndicationItem* item, WF_IAsyncActionWithProgress_WWESY_TransferProgress** out);
 
-/* Windows.Web.AtomPub.AtomPubClient.CancelAsyncOperations() */
 HRESULT wweat_atom_pub_client_cancel_async_operations(WWEAT_AtomPubClient *self);
 
-/* Windows.Web.AtomPub.AtomPubClient.get_ServerCredential() */
 HRESULT wweat_atom_pub_client_get__server_credential(WWEAT_AtomPubClient *self, WSECR_PasswordCredential** value);
 
-/* Windows.Web.AtomPub.AtomPubClient.put_ServerCredential() */
 HRESULT wweat_atom_pub_client_put__server_credential(WWEAT_AtomPubClient *self, WSECR_PasswordCredential* value);
 
-/* Windows.Web.AtomPub.AtomPubClient.get_ProxyCredential() */
 HRESULT wweat_atom_pub_client_get__proxy_credential(WWEAT_AtomPubClient *self, WSECR_PasswordCredential** value);
 
-/* Windows.Web.AtomPub.AtomPubClient.put_ProxyCredential() */
 HRESULT wweat_atom_pub_client_put__proxy_credential(WWEAT_AtomPubClient *self, WSECR_PasswordCredential* value);
 
-/* Windows.Web.AtomPub.AtomPubClient.get_MaxResponseBufferSize() */
 HRESULT wweat_atom_pub_client_get__max_response_buffer_size(WWEAT_AtomPubClient *self, uint32_t *value);
 
-/* Windows.Web.AtomPub.AtomPubClient.put_MaxResponseBufferSize() */
 HRESULT wweat_atom_pub_client_put__max_response_buffer_size(WWEAT_AtomPubClient *self, uint32_t value);
 
-/* Windows.Web.AtomPub.AtomPubClient.get_Timeout() */
 HRESULT wweat_atom_pub_client_get__timeout(WWEAT_AtomPubClient *self, uint32_t *value);
 
-/* Windows.Web.AtomPub.AtomPubClient.put_Timeout() */
 HRESULT wweat_atom_pub_client_put__timeout(WWEAT_AtomPubClient *self, uint32_t value);
 
-/* Windows.Web.AtomPub.AtomPubClient.get_BypassCacheOnRetrieve() */
 HRESULT wweat_atom_pub_client_get__bypass_cache_on_retrieve(WWEAT_AtomPubClient *self, BOOL *value);
 
-/* Windows.Web.AtomPub.AtomPubClient.put_BypassCacheOnRetrieve() */
 HRESULT wweat_atom_pub_client_put__bypass_cache_on_retrieve(WWEAT_AtomPubClient *self, BOOL value);
 
-/* Windows.Web.AtomPub.AtomPubClient.SetRequestHeader(name) */
 HRESULT wweat_atom_pub_client_set_request_header(WWEAT_AtomPubClient *self, cwinrt_hstring name, cwinrt_hstring value);
 
-/* Windows.Web.AtomPub.AtomPubClient.RetrieveFeedAsync(uri) */
 HRESULT wweat_atom_pub_client_retrieve_feed_async(WWEAT_AtomPubClient *self, WF_Uri* uri, WF_IAsyncOperationWithProgress_WWESY_SyndicationFeed_WWESY_RetrievalProgress** out);
 
-/* Windows.Web.AtomPub.IServiceDocument */
-/* Windows.Web.AtomPub.IWorkspace */
-/* Windows.Web.AtomPub.IResourceCollection */
-/* Windows.Web.AtomPub.IAtomPubClient */
 #endif /* CWINRT_WINDOWS_WEB_ATOMPUB_H */

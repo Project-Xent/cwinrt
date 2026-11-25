@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.UI.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
@@ -37,7 +36,6 @@ typedef enum WDEEN_DeviceAccessStatus {
 } WDEEN_DeviceAccessStatus;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WAPCA_PhoneCallHistoryEntry WAPCA_PhoneCallHistoryEntry;
 typedef struct WAPCA_PhoneCallHistoryEntryAddress WAPCA_PhoneCallHistoryEntryAddress;
 typedef struct WAPCA_PhoneCallHistoryEntryQueryOptions WAPCA_PhoneCallHistoryEntryQueryOptions;
@@ -136,7 +134,6 @@ typedef struct WAPCA_IVoipCallCoordinator WAPCA_IVoipCallCoordinator;
 typedef struct WAPCA_IVoipPhoneCall_2 WAPCA_IVoipPhoneCall_2;
 typedef struct WAPCA_IVoipPhoneCall WAPCA_IVoipPhoneCall;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_TimeSpan
 #define CWINRT_FWD_WF_TimeSpan
 typedef struct WF_TimeSpan WF_TimeSpan;
@@ -579,7 +576,6 @@ typedef enum WAPCA_PhoneCallAudioDevice {
 } WAPCA_PhoneCallAudioDevice;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -824,511 +820,330 @@ static const IID CWINRT_IID_WAPCA_IVoipPhoneCall_2 CWINRT_MAYBE_UNUSED = { 0x741
 static const IID CWINRT_IID_WAPCA_IVoipPhoneCall CWINRT_MAYBE_UNUSED = { 0x6CF1F19A, 0x7794, 0x4A5A, { 0x8C, 0x68, 0xAE, 0x87, 0x94, 0x7A, 0x69, 0x90 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.ApplicationModel.Calls.PhoneCallHistoryEntry */
 HRESULT wapca_phone_call_history_entry_new(WAPCA_PhoneCallHistoryEntry **out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry */
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.get_Id() */
 HRESULT wapca_phone_call_history_entry_get__id(WAPCA_PhoneCallHistoryEntry *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.get_Address() */
 HRESULT wapca_phone_call_history_entry_get__address(WAPCA_PhoneCallHistoryEntry *self, WAPCA_PhoneCallHistoryEntryAddress** value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.put_Address() */
 HRESULT wapca_phone_call_history_entry_put__address(WAPCA_PhoneCallHistoryEntry *self, WAPCA_PhoneCallHistoryEntryAddress* value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.get_Duration() */
 HRESULT wapca_phone_call_history_entry_get__duration(WAPCA_PhoneCallHistoryEntry *self, WF_TimeSpan** value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.put_Duration() */
 HRESULT wapca_phone_call_history_entry_put__duration(WAPCA_PhoneCallHistoryEntry *self, WF_TimeSpan* value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.get_IsCallerIdBlocked() */
 HRESULT wapca_phone_call_history_entry_get__is_caller_id_blocked(WAPCA_PhoneCallHistoryEntry *self, BOOL *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.put_IsCallerIdBlocked() */
 HRESULT wapca_phone_call_history_entry_put__is_caller_id_blocked(WAPCA_PhoneCallHistoryEntry *self, BOOL value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.get_IsEmergency() */
 HRESULT wapca_phone_call_history_entry_get__is_emergency(WAPCA_PhoneCallHistoryEntry *self, BOOL *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.put_IsEmergency() */
 HRESULT wapca_phone_call_history_entry_put__is_emergency(WAPCA_PhoneCallHistoryEntry *self, BOOL value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.get_IsIncoming() */
 HRESULT wapca_phone_call_history_entry_get__is_incoming(WAPCA_PhoneCallHistoryEntry *self, BOOL *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.put_IsIncoming() */
 HRESULT wapca_phone_call_history_entry_put__is_incoming(WAPCA_PhoneCallHistoryEntry *self, BOOL value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.get_IsMissed() */
 HRESULT wapca_phone_call_history_entry_get__is_missed(WAPCA_PhoneCallHistoryEntry *self, BOOL *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.put_IsMissed() */
 HRESULT wapca_phone_call_history_entry_put__is_missed(WAPCA_PhoneCallHistoryEntry *self, BOOL value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.get_IsRinging() */
 HRESULT wapca_phone_call_history_entry_get__is_ringing(WAPCA_PhoneCallHistoryEntry *self, BOOL *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.put_IsRinging() */
 HRESULT wapca_phone_call_history_entry_put__is_ringing(WAPCA_PhoneCallHistoryEntry *self, BOOL value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.get_IsSeen() */
 HRESULT wapca_phone_call_history_entry_get__is_seen(WAPCA_PhoneCallHistoryEntry *self, BOOL *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.put_IsSeen() */
 HRESULT wapca_phone_call_history_entry_put__is_seen(WAPCA_PhoneCallHistoryEntry *self, BOOL value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.get_IsSuppressed() */
 HRESULT wapca_phone_call_history_entry_get__is_suppressed(WAPCA_PhoneCallHistoryEntry *self, BOOL *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.put_IsSuppressed() */
 HRESULT wapca_phone_call_history_entry_put__is_suppressed(WAPCA_PhoneCallHistoryEntry *self, BOOL value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.get_IsVoicemail() */
 HRESULT wapca_phone_call_history_entry_get__is_voicemail(WAPCA_PhoneCallHistoryEntry *self, BOOL *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.put_IsVoicemail() */
 HRESULT wapca_phone_call_history_entry_put__is_voicemail(WAPCA_PhoneCallHistoryEntry *self, BOOL value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.get_Media() */
 HRESULT wapca_phone_call_history_entry_get__media(WAPCA_PhoneCallHistoryEntry *self, WAPCA_PhoneCallHistoryEntryMedia *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.put_Media() */
 HRESULT wapca_phone_call_history_entry_put__media(WAPCA_PhoneCallHistoryEntry *self, WAPCA_PhoneCallHistoryEntryMedia value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.get_OtherAppReadAccess() */
 HRESULT wapca_phone_call_history_entry_get__other_app_read_access(WAPCA_PhoneCallHistoryEntry *self, WAPCA_PhoneCallHistoryEntryOtherAppReadAccess *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.put_OtherAppReadAccess() */
 HRESULT wapca_phone_call_history_entry_put__other_app_read_access(WAPCA_PhoneCallHistoryEntry *self, WAPCA_PhoneCallHistoryEntryOtherAppReadAccess value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.get_RemoteId() */
 HRESULT wapca_phone_call_history_entry_get__remote_id(WAPCA_PhoneCallHistoryEntry *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.put_RemoteId() */
 HRESULT wapca_phone_call_history_entry_put__remote_id(WAPCA_PhoneCallHistoryEntry *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.get_SourceDisplayName() */
 HRESULT wapca_phone_call_history_entry_get__source_display_name(WAPCA_PhoneCallHistoryEntry *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.get_SourceId() */
 HRESULT wapca_phone_call_history_entry_get__source_id(WAPCA_PhoneCallHistoryEntry *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.put_SourceId() */
 HRESULT wapca_phone_call_history_entry_put__source_id(WAPCA_PhoneCallHistoryEntry *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.get_SourceIdKind() */
 HRESULT wapca_phone_call_history_entry_get__source_id_kind(WAPCA_PhoneCallHistoryEntry *self, WAPCA_PhoneCallHistorySourceIdKind *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.put_SourceIdKind() */
 HRESULT wapca_phone_call_history_entry_put__source_id_kind(WAPCA_PhoneCallHistoryEntry *self, WAPCA_PhoneCallHistorySourceIdKind value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.get_StartTime() */
 HRESULT wapca_phone_call_history_entry_get__start_time(WAPCA_PhoneCallHistoryEntry *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntry.put_StartTime() */
 HRESULT wapca_phone_call_history_entry_put__start_time(WAPCA_PhoneCallHistoryEntry *self, WF_DateTime value);
 
-/* activate Windows.ApplicationModel.Calls.PhoneCallHistoryEntryAddress */
 HRESULT wapca_phone_call_history_entry_address_new(WAPCA_PhoneCallHistoryEntryAddress **out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntryAddress */
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntryAddress.get_ContactId() */
 HRESULT wapca_phone_call_history_entry_address_get__contact_id(WAPCA_PhoneCallHistoryEntryAddress *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntryAddress.put_ContactId() */
 HRESULT wapca_phone_call_history_entry_address_put__contact_id(WAPCA_PhoneCallHistoryEntryAddress *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntryAddress.get_DisplayName() */
 HRESULT wapca_phone_call_history_entry_address_get__display_name(WAPCA_PhoneCallHistoryEntryAddress *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntryAddress.put_DisplayName() */
 HRESULT wapca_phone_call_history_entry_address_put__display_name(WAPCA_PhoneCallHistoryEntryAddress *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntryAddress.get_RawAddress() */
 HRESULT wapca_phone_call_history_entry_address_get__raw_address(WAPCA_PhoneCallHistoryEntryAddress *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntryAddress.put_RawAddress() */
 HRESULT wapca_phone_call_history_entry_address_put__raw_address(WAPCA_PhoneCallHistoryEntryAddress *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntryAddress.get_RawAddressKind() */
 HRESULT wapca_phone_call_history_entry_address_get__raw_address_kind(WAPCA_PhoneCallHistoryEntryAddress *self, WAPCA_PhoneCallHistoryEntryRawAddressKind *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntryAddress.put_RawAddressKind() */
 HRESULT wapca_phone_call_history_entry_address_put__raw_address_kind(WAPCA_PhoneCallHistoryEntryAddress *self, WAPCA_PhoneCallHistoryEntryRawAddressKind value);
 
-/* activate Windows.ApplicationModel.Calls.PhoneCallHistoryEntryQueryOptions */
 HRESULT wapca_phone_call_history_entry_query_options_new(WAPCA_PhoneCallHistoryEntryQueryOptions **out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntryQueryOptions */
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntryQueryOptions.get_DesiredMedia() */
 HRESULT wapca_phone_call_history_entry_query_options_get__desired_media(WAPCA_PhoneCallHistoryEntryQueryOptions *self, WAPCA_PhoneCallHistoryEntryQueryDesiredMedia *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntryQueryOptions.put_DesiredMedia() */
 HRESULT wapca_phone_call_history_entry_query_options_put__desired_media(WAPCA_PhoneCallHistoryEntryQueryOptions *self, WAPCA_PhoneCallHistoryEntryQueryDesiredMedia value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntryQueryOptions.get_SourceIds() */
 HRESULT wapca_phone_call_history_entry_query_options_get__source_ids(WAPCA_PhoneCallHistoryEntryQueryOptions *self, WFOCO_IVector_HSTRING** value);
 
-/* activate Windows.ApplicationModel.Calls.PhoneCallHistoryEntryReader */
 HRESULT wapca_phone_call_history_entry_reader_new(WAPCA_PhoneCallHistoryEntryReader **out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntryReader */
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryEntryReader.ReadBatchAsync() */
 HRESULT wapca_phone_call_history_entry_reader_read_batch_async(WAPCA_PhoneCallHistoryEntryReader *self, WF_IAsyncOperation_WFOCO_IVectorView_WAPCA_PhoneCallHistoryEntry** out);
 
-/* activate Windows.ApplicationModel.Calls.PhoneCallHistoryManager */
 HRESULT wapca_phone_call_history_manager_new(WAPCA_PhoneCallHistoryManager **out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryManager */
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryManager.GetForUser(user) */
 HRESULT wapca_phone_call_history_manager_get_for_user(WSY_User* user, WAPCA_PhoneCallHistoryManagerForUser** out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryManager.RequestStoreAsync(accessType) */
 HRESULT wapca_phone_call_history_manager_request_store_async(WAPCA_PhoneCallHistoryStoreAccessType accessType, WF_IAsyncOperation_WAPCA_PhoneCallHistoryStore** out);
 
-/* activate Windows.ApplicationModel.Calls.PhoneCallHistoryManagerForUser */
 HRESULT wapca_phone_call_history_manager_for_user_new(WAPCA_PhoneCallHistoryManagerForUser **out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryManagerForUser */
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryManagerForUser.RequestStoreAsync(accessType) */
 HRESULT wapca_phone_call_history_manager_for_user_request_store_async(WAPCA_PhoneCallHistoryManagerForUser *self, WAPCA_PhoneCallHistoryStoreAccessType accessType, WF_IAsyncOperation_WAPCA_PhoneCallHistoryStore** out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryManagerForUser.get_User() */
 HRESULT wapca_phone_call_history_manager_for_user_get__user(WAPCA_PhoneCallHistoryManagerForUser *self, WSY_User** value);
 
-/* activate Windows.ApplicationModel.Calls.PhoneCallHistoryStore */
 HRESULT wapca_phone_call_history_store_new(WAPCA_PhoneCallHistoryStore **out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryStore */
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryStore.GetEntryAsync(callHistoryEntryId) */
 HRESULT wapca_phone_call_history_store_get_entry_async(WAPCA_PhoneCallHistoryStore *self, cwinrt_hstring callHistoryEntryId, WF_IAsyncOperation_WAPCA_PhoneCallHistoryEntry** out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryStore.GetEntryReader() */
 HRESULT wapca_phone_call_history_store_get_entry_reader(WAPCA_PhoneCallHistoryStore *self, WAPCA_PhoneCallHistoryEntryReader** out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryStore.GetEntryReader(queryOptions) */
 HRESULT wapca_phone_call_history_store_get_entry_reader_p_p(WAPCA_PhoneCallHistoryStore *self, WAPCA_PhoneCallHistoryEntryQueryOptions* queryOptions, WAPCA_PhoneCallHistoryEntryReader** out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryStore.SaveEntryAsync(callHistoryEntry) */
 HRESULT wapca_phone_call_history_store_save_entry_async(WAPCA_PhoneCallHistoryStore *self, WAPCA_PhoneCallHistoryEntry* callHistoryEntry, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryStore.DeleteEntryAsync(callHistoryEntry) */
 HRESULT wapca_phone_call_history_store_delete_entry_async(WAPCA_PhoneCallHistoryStore *self, WAPCA_PhoneCallHistoryEntry* callHistoryEntry, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryStore.DeleteEntriesAsync(callHistoryEntries) */
 HRESULT wapca_phone_call_history_store_delete_entries_async(WAPCA_PhoneCallHistoryStore *self, WFOCO_IIterable_WAPCA_PhoneCallHistoryEntry* callHistoryEntries, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryStore.MarkEntryAsSeenAsync(callHistoryEntry) */
 HRESULT wapca_phone_call_history_store_mark_entry_as_seen_async(WAPCA_PhoneCallHistoryStore *self, WAPCA_PhoneCallHistoryEntry* callHistoryEntry, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryStore.MarkEntriesAsSeenAsync(callHistoryEntries) */
 HRESULT wapca_phone_call_history_store_mark_entries_as_seen_async(WAPCA_PhoneCallHistoryStore *self, WFOCO_IIterable_WAPCA_PhoneCallHistoryEntry* callHistoryEntries, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryStore.GetUnseenCountAsync() */
 HRESULT wapca_phone_call_history_store_get_unseen_count_async(WAPCA_PhoneCallHistoryStore *self, WF_IAsyncOperation_uint32_t** out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryStore.MarkAllAsSeenAsync() */
 HRESULT wapca_phone_call_history_store_mark_all_as_seen_async(WAPCA_PhoneCallHistoryStore *self, WF_IAsyncAction** out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryStore.GetSourcesUnseenCountAsync(sourceIds) */
 HRESULT wapca_phone_call_history_store_get_sources_unseen_count_async(WAPCA_PhoneCallHistoryStore *self, WFOCO_IIterable_HSTRING* sourceIds, WF_IAsyncOperation_uint32_t** out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallHistoryStore.MarkSourcesAsSeenAsync(sourceIds) */
 HRESULT wapca_phone_call_history_store_mark_sources_as_seen_async(WAPCA_PhoneCallHistoryStore *self, WFOCO_IIterable_HSTRING* sourceIds, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Calls.PhoneCallInfo */
 HRESULT wapca_phone_call_info_new(WAPCA_PhoneCallInfo **out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallInfo */
-/* Windows.ApplicationModel.Calls.PhoneCallInfo.get_LineId() */
 HRESULT wapca_phone_call_info_get__line_id(WAPCA_PhoneCallInfo *self, GUID *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallInfo.get_IsHoldSupported() */
 HRESULT wapca_phone_call_info_get__is_hold_supported(WAPCA_PhoneCallInfo *self, BOOL *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallInfo.get_StartTime() */
 HRESULT wapca_phone_call_info_get__start_time(WAPCA_PhoneCallInfo *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallInfo.get_PhoneNumber() */
 HRESULT wapca_phone_call_info_get__phone_number(WAPCA_PhoneCallInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallInfo.get_DisplayName() */
 HRESULT wapca_phone_call_info_get__display_name(WAPCA_PhoneCallInfo *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallInfo.get_CallDirection() */
 HRESULT wapca_phone_call_info_get__call_direction(WAPCA_PhoneCallInfo *self, WAPCA_PhoneCallDirection *value);
 
-/* activate Windows.ApplicationModel.Calls.PhoneCallManager */
 HRESULT wapca_phone_call_manager_new(WAPCA_PhoneCallManager **out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallManager */
-/* Windows.ApplicationModel.Calls.PhoneCallManager.get_IsCallActive() */
 HRESULT wapca_phone_call_manager_get__is_call_active(BOOL *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallManager.get_IsCallIncoming() */
 HRESULT wapca_phone_call_manager_get__is_call_incoming(BOOL *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallManager.ShowPhoneCallSettingsUI() */
 HRESULT wapca_phone_call_manager_show_phone_call_settings_u_i(void);
 
-/* Windows.ApplicationModel.Calls.PhoneCallManager.RequestStoreAsync() */
 HRESULT wapca_phone_call_manager_request_store_async(WF_IAsyncOperation_WAPCA_PhoneCallStore** out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallManager.ShowPhoneCallUI(phoneNumber, displayName) */
 HRESULT wapca_phone_call_manager_show_phone_call_u_i(cwinrt_hstring phoneNumber, cwinrt_hstring displayName);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapca_phone_call_manager_on_call_state_changed(WAPCA_PhoneCallManager *self, cwinrt_event_fn fn, void *ctx);
 void wapca_phone_call_manager_off_call_state_changed(WAPCA_PhoneCallManager *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Calls.PhoneCallStore */
 HRESULT wapca_phone_call_store_new(WAPCA_PhoneCallStore **out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallStore */
-/* Windows.ApplicationModel.Calls.PhoneCallStore.IsEmergencyPhoneNumberAsync(number) */
 HRESULT wapca_phone_call_store_is_emergency_phone_number_async(WAPCA_PhoneCallStore *self, cwinrt_hstring number, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallStore.GetDefaultLineAsync() */
 HRESULT wapca_phone_call_store_get_default_line_async(WAPCA_PhoneCallStore *self, WF_IAsyncOperation_Guid** out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallStore.RequestLineWatcher() */
 HRESULT wapca_phone_call_store_request_line_watcher(WAPCA_PhoneCallStore *self, WAPCA_PhoneLineWatcher** out);
 
-/* activate Windows.ApplicationModel.Calls.PhoneCallVideoCapabilities */
 HRESULT wapca_phone_call_video_capabilities_new(WAPCA_PhoneCallVideoCapabilities **out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallVideoCapabilities */
-/* Windows.ApplicationModel.Calls.PhoneCallVideoCapabilities.get_IsVideoCallingCapable() */
 HRESULT wapca_phone_call_video_capabilities_get__is_video_calling_capable(WAPCA_PhoneCallVideoCapabilities *self, BOOL *value);
 
-/* activate Windows.ApplicationModel.Calls.PhoneCallVideoCapabilitiesManager */
 HRESULT wapca_phone_call_video_capabilities_manager_new(WAPCA_PhoneCallVideoCapabilitiesManager **out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallVideoCapabilitiesManager */
-/* Windows.ApplicationModel.Calls.PhoneCallVideoCapabilitiesManager.GetCapabilitiesAsync(phoneNumber) */
 HRESULT wapca_phone_call_video_capabilities_manager_get_capabilities_async(cwinrt_hstring phoneNumber, WF_IAsyncOperation_WAPCA_PhoneCallVideoCapabilities** out);
 
-/* activate Windows.ApplicationModel.Calls.PhoneCallsResult */
 HRESULT wapca_phone_calls_result_new(WAPCA_PhoneCallsResult **out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallsResult */
-/* Windows.ApplicationModel.Calls.PhoneCallsResult.get_OperationStatus() */
 HRESULT wapca_phone_calls_result_get__operation_status(WAPCA_PhoneCallsResult *self, WAPCA_PhoneLineOperationStatus *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallsResult.get_AllActivePhoneCalls() */
 HRESULT wapca_phone_calls_result_get__all_active_phone_calls(WAPCA_PhoneCallsResult *self, WFOCO_IVectorView_WAPCA_PhoneCall** value);
 
-/* activate Windows.ApplicationModel.Calls.PhoneDialOptions */
 HRESULT wapca_phone_dial_options_new(WAPCA_PhoneDialOptions **out);
 
-/* Windows.ApplicationModel.Calls.PhoneDialOptions */
-/* Windows.ApplicationModel.Calls.PhoneDialOptions.get_Number() */
 HRESULT wapca_phone_dial_options_get__number(WAPCA_PhoneDialOptions *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.PhoneDialOptions.put_Number() */
 HRESULT wapca_phone_dial_options_put__number(WAPCA_PhoneDialOptions *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.PhoneDialOptions.get_DisplayName() */
 HRESULT wapca_phone_dial_options_get__display_name(WAPCA_PhoneDialOptions *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.PhoneDialOptions.put_DisplayName() */
 HRESULT wapca_phone_dial_options_put__display_name(WAPCA_PhoneDialOptions *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.PhoneDialOptions.get_Contact() */
 HRESULT wapca_phone_dial_options_get__contact(WAPCA_PhoneDialOptions *self, WAPCO_Contact** value);
 
-/* Windows.ApplicationModel.Calls.PhoneDialOptions.put_Contact() */
 HRESULT wapca_phone_dial_options_put__contact(WAPCA_PhoneDialOptions *self, WAPCO_Contact* value);
 
-/* Windows.ApplicationModel.Calls.PhoneDialOptions.get_ContactPhone() */
 HRESULT wapca_phone_dial_options_get__contact_phone(WAPCA_PhoneDialOptions *self, WAPCO_ContactPhone** value);
 
-/* Windows.ApplicationModel.Calls.PhoneDialOptions.put_ContactPhone() */
 HRESULT wapca_phone_dial_options_put__contact_phone(WAPCA_PhoneDialOptions *self, WAPCO_ContactPhone* value);
 
-/* Windows.ApplicationModel.Calls.PhoneDialOptions.get_Media() */
 HRESULT wapca_phone_dial_options_get__media(WAPCA_PhoneDialOptions *self, WAPCA_PhoneCallMedia *value);
 
-/* Windows.ApplicationModel.Calls.PhoneDialOptions.put_Media() */
 HRESULT wapca_phone_dial_options_put__media(WAPCA_PhoneDialOptions *self, WAPCA_PhoneCallMedia value);
 
-/* Windows.ApplicationModel.Calls.PhoneDialOptions.get_AudioEndpoint() */
 HRESULT wapca_phone_dial_options_get__audio_endpoint(WAPCA_PhoneDialOptions *self, WAPCA_PhoneAudioRoutingEndpoint *value);
 
-/* Windows.ApplicationModel.Calls.PhoneDialOptions.put_AudioEndpoint() */
 HRESULT wapca_phone_dial_options_put__audio_endpoint(WAPCA_PhoneDialOptions *self, WAPCA_PhoneAudioRoutingEndpoint value);
 
-/* activate Windows.ApplicationModel.Calls.PhoneLine */
 HRESULT wapca_phone_line_new(WAPCA_PhoneLine **out);
 
-/* Windows.ApplicationModel.Calls.PhoneLine */
-/* Windows.ApplicationModel.Calls.PhoneLine.get_Id() */
 HRESULT wapca_phone_line_get__id(WAPCA_PhoneLine *self, GUID *value);
 
-/* Windows.ApplicationModel.Calls.PhoneLine.get_DisplayColor() */
 HRESULT wapca_phone_line_get__display_color(WAPCA_PhoneLine *self, WUI_Color *value);
 
-/* Windows.ApplicationModel.Calls.PhoneLine.get_NetworkState() */
 HRESULT wapca_phone_line_get__network_state(WAPCA_PhoneLine *self, WAPCA_PhoneNetworkState *value);
 
-/* Windows.ApplicationModel.Calls.PhoneLine.get_DisplayName() */
 HRESULT wapca_phone_line_get__display_name(WAPCA_PhoneLine *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.PhoneLine.get_Voicemail() */
 HRESULT wapca_phone_line_get__voicemail(WAPCA_PhoneLine *self, WAPCA_PhoneVoicemail** value);
 
-/* Windows.ApplicationModel.Calls.PhoneLine.get_NetworkName() */
 HRESULT wapca_phone_line_get__network_name(WAPCA_PhoneLine *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.PhoneLine.get_CellularDetails() */
 HRESULT wapca_phone_line_get__cellular_details(WAPCA_PhoneLine *self, WAPCA_PhoneLineCellularDetails** value);
 
-/* Windows.ApplicationModel.Calls.PhoneLine.get_Transport() */
 HRESULT wapca_phone_line_get__transport(WAPCA_PhoneLine *self, WAPCA_PhoneLineTransport *value);
 
-/* Windows.ApplicationModel.Calls.PhoneLine.get_CanDial() */
 HRESULT wapca_phone_line_get__can_dial(WAPCA_PhoneLine *self, BOOL *value);
 
-/* Windows.ApplicationModel.Calls.PhoneLine.get_SupportsTile() */
 HRESULT wapca_phone_line_get__supports_tile(WAPCA_PhoneLine *self, BOOL *value);
 
-/* Windows.ApplicationModel.Calls.PhoneLine.get_VideoCallingCapabilities() */
 HRESULT wapca_phone_line_get__video_calling_capabilities(WAPCA_PhoneLine *self, WAPCA_PhoneCallVideoCapabilities** value);
 
-/* Windows.ApplicationModel.Calls.PhoneLine.get_LineConfiguration() */
 HRESULT wapca_phone_line_get__line_configuration(WAPCA_PhoneLine *self, WAPCA_PhoneLineConfiguration** value);
 
-/* Windows.ApplicationModel.Calls.PhoneLine.IsImmediateDialNumberAsync(number) */
 HRESULT wapca_phone_line_is_immediate_dial_number_async(WAPCA_PhoneLine *self, cwinrt_hstring number, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Calls.PhoneLine.Dial(number, displayName) */
 HRESULT wapca_phone_line_dial(WAPCA_PhoneLine *self, cwinrt_hstring number, cwinrt_hstring displayName);
 
-/* Windows.ApplicationModel.Calls.PhoneLine.DialWithOptions(options) */
 HRESULT wapca_phone_line_dial_with_options(WAPCA_PhoneLine *self, WAPCA_PhoneDialOptions* options);
 
-/* Windows.ApplicationModel.Calls.PhoneLine.EnableTextReply() */
 HRESULT wapca_phone_line_enable_text_reply(WAPCA_PhoneLine *self, BOOL value);
 
-/* Windows.ApplicationModel.Calls.PhoneLine.get_TransportDeviceId() */
 HRESULT wapca_phone_line_get__transport_device_id(WAPCA_PhoneLine *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.PhoneLine.DialWithResult(number, displayName) */
 HRESULT wapca_phone_line_dial_with_result(WAPCA_PhoneLine *self, cwinrt_hstring number, cwinrt_hstring displayName, WAPCA_PhoneLineDialResult** out);
 
-/* Windows.ApplicationModel.Calls.PhoneLine.DialWithResultAsync(number, displayName) */
 HRESULT wapca_phone_line_dial_with_result_async(WAPCA_PhoneLine *self, cwinrt_hstring number, cwinrt_hstring displayName, WF_IAsyncOperation_WAPCA_PhoneLineDialResult** out);
 
-/* Windows.ApplicationModel.Calls.PhoneLine.GetAllActivePhoneCalls() */
 HRESULT wapca_phone_line_get_all_active_phone_calls(WAPCA_PhoneLine *self, WAPCA_PhoneCallsResult** out);
 
-/* Windows.ApplicationModel.Calls.PhoneLine.GetAllActivePhoneCallsAsync() */
 HRESULT wapca_phone_line_get_all_active_phone_calls_async(WAPCA_PhoneLine *self, WF_IAsyncOperation_WAPCA_PhoneCallsResult** out);
 
-/* Windows.ApplicationModel.Calls.PhoneLine.FromIdAsync(lineId) */
 HRESULT wapca_phone_line_from_id_async(GUID lineId, WF_IAsyncOperation_WAPCA_PhoneLine** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapca_phone_line_on_line_changed(WAPCA_PhoneLine *self, cwinrt_event_fn fn, void *ctx);
 void wapca_phone_line_off_line_changed(WAPCA_PhoneLine *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Calls.PhoneLineCellularDetails */
 HRESULT wapca_phone_line_cellular_details_new(WAPCA_PhoneLineCellularDetails **out);
 
-/* Windows.ApplicationModel.Calls.PhoneLineCellularDetails */
-/* Windows.ApplicationModel.Calls.PhoneLineCellularDetails.get_SimState() */
 HRESULT wapca_phone_line_cellular_details_get__sim_state(WAPCA_PhoneLineCellularDetails *self, WAPCA_PhoneSimState *value);
 
-/* Windows.ApplicationModel.Calls.PhoneLineCellularDetails.get_SimSlotIndex() */
 HRESULT wapca_phone_line_cellular_details_get__sim_slot_index(WAPCA_PhoneLineCellularDetails *self, int32_t *value);
 
-/* Windows.ApplicationModel.Calls.PhoneLineCellularDetails.get_IsModemOn() */
 HRESULT wapca_phone_line_cellular_details_get__is_modem_on(WAPCA_PhoneLineCellularDetails *self, BOOL *value);
 
-/* Windows.ApplicationModel.Calls.PhoneLineCellularDetails.get_RegistrationRejectCode() */
 HRESULT wapca_phone_line_cellular_details_get__registration_reject_code(WAPCA_PhoneLineCellularDetails *self, int32_t *value);
 
-/* Windows.ApplicationModel.Calls.PhoneLineCellularDetails.GetNetworkOperatorDisplayText(location) */
 HRESULT wapca_phone_line_cellular_details_get_network_operator_display_text(WAPCA_PhoneLineCellularDetails *self, WAPCA_PhoneLineNetworkOperatorDisplayTextLocation location, cwinrt_hstring *out);
 
-/* activate Windows.ApplicationModel.Calls.PhoneLineConfiguration */
 HRESULT wapca_phone_line_configuration_new(WAPCA_PhoneLineConfiguration **out);
 
-/* Windows.ApplicationModel.Calls.PhoneLineConfiguration */
-/* Windows.ApplicationModel.Calls.PhoneLineConfiguration.get_IsVideoCallingEnabled() */
 HRESULT wapca_phone_line_configuration_get__is_video_calling_enabled(WAPCA_PhoneLineConfiguration *self, BOOL *value);
 
-/* Windows.ApplicationModel.Calls.PhoneLineConfiguration.get_ExtendedProperties() */
 HRESULT wapca_phone_line_configuration_get__extended_properties(WAPCA_PhoneLineConfiguration *self, WFOCO_IMapView_HSTRING_Object** value);
 
-/* activate Windows.ApplicationModel.Calls.PhoneLineDialResult */
 HRESULT wapca_phone_line_dial_result_new(WAPCA_PhoneLineDialResult **out);
 
-/* Windows.ApplicationModel.Calls.PhoneLineDialResult */
-/* Windows.ApplicationModel.Calls.PhoneLineDialResult.get_DialCallStatus() */
 HRESULT wapca_phone_line_dial_result_get__dial_call_status(WAPCA_PhoneLineDialResult *self, WAPCA_PhoneCallOperationStatus *value);
 
-/* Windows.ApplicationModel.Calls.PhoneLineDialResult.get_DialedCall() */
 HRESULT wapca_phone_line_dial_result_get__dialed_call(WAPCA_PhoneLineDialResult *self, WAPCA_PhoneCall** value);
 
-/* activate Windows.ApplicationModel.Calls.PhoneLineTransportDevice */
 HRESULT wapca_phone_line_transport_device_new(WAPCA_PhoneLineTransportDevice **out);
 
-/* Windows.ApplicationModel.Calls.PhoneLineTransportDevice */
-/* Windows.ApplicationModel.Calls.PhoneLineTransportDevice.get_DeviceId() */
 HRESULT wapca_phone_line_transport_device_get__device_id(WAPCA_PhoneLineTransportDevice *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.PhoneLineTransportDevice.get_Transport() */
 HRESULT wapca_phone_line_transport_device_get__transport(WAPCA_PhoneLineTransportDevice *self, WAPCA_PhoneLineTransport *value);
 
-/* Windows.ApplicationModel.Calls.PhoneLineTransportDevice.RequestAccessAsync() */
 HRESULT wapca_phone_line_transport_device_request_access_async(WAPCA_PhoneLineTransportDevice *self, WF_IAsyncOperation_WDEEN_DeviceAccessStatus** out);
 
-/* Windows.ApplicationModel.Calls.PhoneLineTransportDevice.RegisterApp() */
 HRESULT wapca_phone_line_transport_device_register_app(WAPCA_PhoneLineTransportDevice *self);
 
-/* Windows.ApplicationModel.Calls.PhoneLineTransportDevice.RegisterAppForUser(user) */
 HRESULT wapca_phone_line_transport_device_register_app_for_user(WAPCA_PhoneLineTransportDevice *self, WSY_User* user);
 
-/* Windows.ApplicationModel.Calls.PhoneLineTransportDevice.UnregisterApp() */
 HRESULT wapca_phone_line_transport_device_unregister_app(WAPCA_PhoneLineTransportDevice *self);
 
-/* Windows.ApplicationModel.Calls.PhoneLineTransportDevice.UnregisterAppForUser(user) */
 HRESULT wapca_phone_line_transport_device_unregister_app_for_user(WAPCA_PhoneLineTransportDevice *self, WSY_User* user);
 
-/* Windows.ApplicationModel.Calls.PhoneLineTransportDevice.IsRegistered() */
 HRESULT wapca_phone_line_transport_device_is_registered(WAPCA_PhoneLineTransportDevice *self, BOOL *out);
 
-/* Windows.ApplicationModel.Calls.PhoneLineTransportDevice.Connect() */
 HRESULT wapca_phone_line_transport_device_connect(WAPCA_PhoneLineTransportDevice *self, BOOL *out);
 
-/* Windows.ApplicationModel.Calls.PhoneLineTransportDevice.ConnectAsync() */
 HRESULT wapca_phone_line_transport_device_connect_async(WAPCA_PhoneLineTransportDevice *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Calls.PhoneLineTransportDevice.get_AudioRoutingStatus() */
 HRESULT wapca_phone_line_transport_device_get__audio_routing_status(WAPCA_PhoneLineTransportDevice *self, WAPCA_TransportDeviceAudioRoutingStatus *value);
 
-/* Windows.ApplicationModel.Calls.PhoneLineTransportDevice.get_InBandRingingEnabled() */
 HRESULT wapca_phone_line_transport_device_get__in_band_ringing_enabled(WAPCA_PhoneLineTransportDevice *self, BOOL *value);
 
-/* Windows.ApplicationModel.Calls.PhoneLineTransportDevice.FromId(id) */
 HRESULT wapca_phone_line_transport_device_from_id(cwinrt_hstring id, WAPCA_PhoneLineTransportDevice** out);
 
-/* Windows.ApplicationModel.Calls.PhoneLineTransportDevice.GetDeviceSelector() */
 HRESULT wapca_phone_line_transport_device_get_device_selector(cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.Calls.PhoneLineTransportDevice.GetDeviceSelector(transport) */
 HRESULT wapca_phone_line_transport_device_get_device_selector_phone_line_transport_str(WAPCA_PhoneLineTransport transport, cwinrt_hstring *out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapca_phone_line_transport_device_on_audio_routing_status_changed(WAPCA_PhoneLineTransportDevice *self, cwinrt_event_fn fn, void *ctx);
@@ -1337,20 +1152,14 @@ void wapca_phone_line_transport_device_off_audio_routing_status_changed(WAPCA_Ph
 cwinrt_token wapca_phone_line_transport_device_on_in_band_ringing_enabled_changed(WAPCA_PhoneLineTransportDevice *self, cwinrt_event_fn fn, void *ctx);
 void wapca_phone_line_transport_device_off_in_band_ringing_enabled_changed(WAPCA_PhoneLineTransportDevice *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Calls.PhoneLineWatcher */
 HRESULT wapca_phone_line_watcher_new(WAPCA_PhoneLineWatcher **out);
 
-/* Windows.ApplicationModel.Calls.PhoneLineWatcher */
-/* Windows.ApplicationModel.Calls.PhoneLineWatcher.Start() */
 HRESULT wapca_phone_line_watcher_start(WAPCA_PhoneLineWatcher *self);
 
-/* Windows.ApplicationModel.Calls.PhoneLineWatcher.Stop() */
 HRESULT wapca_phone_line_watcher_stop(WAPCA_PhoneLineWatcher *self);
 
-/* Windows.ApplicationModel.Calls.PhoneLineWatcher.get_Status() */
 HRESULT wapca_phone_line_watcher_get__status(WAPCA_PhoneLineWatcher *self, WAPCA_PhoneLineWatcherStatus *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapca_phone_line_watcher_on_line_added(WAPCA_PhoneLineWatcher *self, cwinrt_event_fn fn, void *ctx);
@@ -1368,256 +1177,167 @@ void wapca_phone_line_watcher_off_enumeration_completed(WAPCA_PhoneLineWatcher *
 cwinrt_token wapca_phone_line_watcher_on_stopped(WAPCA_PhoneLineWatcher *self, cwinrt_event_fn fn, void *ctx);
 void wapca_phone_line_watcher_off_stopped(WAPCA_PhoneLineWatcher *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Calls.PhoneLineWatcherEventArgs */
 HRESULT wapca_phone_line_watcher_event_args_new(WAPCA_PhoneLineWatcherEventArgs **out);
 
-/* Windows.ApplicationModel.Calls.PhoneLineWatcherEventArgs */
-/* Windows.ApplicationModel.Calls.PhoneLineWatcherEventArgs.get_LineId() */
 HRESULT wapca_phone_line_watcher_event_args_get__line_id(WAPCA_PhoneLineWatcherEventArgs *self, GUID *value);
 
-/* activate Windows.ApplicationModel.Calls.PhoneVoicemail */
 HRESULT wapca_phone_voicemail_new(WAPCA_PhoneVoicemail **out);
 
-/* Windows.ApplicationModel.Calls.PhoneVoicemail */
-/* Windows.ApplicationModel.Calls.PhoneVoicemail.get_Number() */
 HRESULT wapca_phone_voicemail_get__number(WAPCA_PhoneVoicemail *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.PhoneVoicemail.get_MessageCount() */
 HRESULT wapca_phone_voicemail_get__message_count(WAPCA_PhoneVoicemail *self, int32_t *value);
 
-/* Windows.ApplicationModel.Calls.PhoneVoicemail.get_Type() */
 HRESULT wapca_phone_voicemail_get__type(WAPCA_PhoneVoicemail *self, WAPCA_PhoneVoicemailType *value);
 
-/* Windows.ApplicationModel.Calls.PhoneVoicemail.DialVoicemailAsync() */
 HRESULT wapca_phone_voicemail_dial_voicemail_async(WAPCA_PhoneVoicemail *self, WF_IAsyncAction** out);
 
-/* activate Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions */
 HRESULT wapca_accepted_voip_phone_call_options_new(WAPCA_AcceptedVoipPhoneCallOptions **out);
 
-/* Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions */
-/* Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions.get_Context() */
 HRESULT wapca_accepted_voip_phone_call_options_get__context(WAPCA_AcceptedVoipPhoneCallOptions *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions.put_Context() */
 HRESULT wapca_accepted_voip_phone_call_options_put__context(WAPCA_AcceptedVoipPhoneCallOptions *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions.get_ContactName() */
 HRESULT wapca_accepted_voip_phone_call_options_get__contact_name(WAPCA_AcceptedVoipPhoneCallOptions *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions.put_ContactName() */
 HRESULT wapca_accepted_voip_phone_call_options_put__contact_name(WAPCA_AcceptedVoipPhoneCallOptions *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions.get_ContactNumber() */
 HRESULT wapca_accepted_voip_phone_call_options_get__contact_number(WAPCA_AcceptedVoipPhoneCallOptions *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions.put_ContactNumber() */
 HRESULT wapca_accepted_voip_phone_call_options_put__contact_number(WAPCA_AcceptedVoipPhoneCallOptions *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions.get_ServiceName() */
 HRESULT wapca_accepted_voip_phone_call_options_get__service_name(WAPCA_AcceptedVoipPhoneCallOptions *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions.put_ServiceName() */
 HRESULT wapca_accepted_voip_phone_call_options_put__service_name(WAPCA_AcceptedVoipPhoneCallOptions *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions.get_Media() */
 HRESULT wapca_accepted_voip_phone_call_options_get__media(WAPCA_AcceptedVoipPhoneCallOptions *self, WAPCA_VoipPhoneCallMedia *value);
 
-/* Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions.put_Media() */
 HRESULT wapca_accepted_voip_phone_call_options_put__media(WAPCA_AcceptedVoipPhoneCallOptions *self, WAPCA_VoipPhoneCallMedia value);
 
-/* Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions.get_AssociatedDeviceIds() */
 HRESULT wapca_accepted_voip_phone_call_options_get__associated_device_ids(WAPCA_AcceptedVoipPhoneCallOptions *self, WFOCO_IVector_HSTRING** value);
 
-/* activate Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions */
 HRESULT wapca_app_initiated_voip_phone_call_options_new(WAPCA_AppInitiatedVoipPhoneCallOptions **out);
 
-/* Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions */
-/* Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions.get_Context() */
 HRESULT wapca_app_initiated_voip_phone_call_options_get__context(WAPCA_AppInitiatedVoipPhoneCallOptions *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions.put_Context() */
 HRESULT wapca_app_initiated_voip_phone_call_options_put__context(WAPCA_AppInitiatedVoipPhoneCallOptions *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions.get_ContactName() */
 HRESULT wapca_app_initiated_voip_phone_call_options_get__contact_name(WAPCA_AppInitiatedVoipPhoneCallOptions *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions.put_ContactName() */
 HRESULT wapca_app_initiated_voip_phone_call_options_put__contact_name(WAPCA_AppInitiatedVoipPhoneCallOptions *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions.get_ContactNumber() */
 HRESULT wapca_app_initiated_voip_phone_call_options_get__contact_number(WAPCA_AppInitiatedVoipPhoneCallOptions *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions.put_ContactNumber() */
 HRESULT wapca_app_initiated_voip_phone_call_options_put__contact_number(WAPCA_AppInitiatedVoipPhoneCallOptions *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions.get_ServiceName() */
 HRESULT wapca_app_initiated_voip_phone_call_options_get__service_name(WAPCA_AppInitiatedVoipPhoneCallOptions *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions.put_ServiceName() */
 HRESULT wapca_app_initiated_voip_phone_call_options_put__service_name(WAPCA_AppInitiatedVoipPhoneCallOptions *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions.get_Media() */
 HRESULT wapca_app_initiated_voip_phone_call_options_get__media(WAPCA_AppInitiatedVoipPhoneCallOptions *self, WAPCA_VoipPhoneCallMedia *value);
 
-/* Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions.put_Media() */
 HRESULT wapca_app_initiated_voip_phone_call_options_put__media(WAPCA_AppInitiatedVoipPhoneCallOptions *self, WAPCA_VoipPhoneCallMedia value);
 
-/* Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions.get_AssociatedDeviceIds() */
 HRESULT wapca_app_initiated_voip_phone_call_options_get__associated_device_ids(WAPCA_AppInitiatedVoipPhoneCallOptions *self, WFOCO_IVector_HSTRING** value);
 
-/* activate Windows.ApplicationModel.Calls.CallAnswerEventArgs */
 HRESULT wapca_call_answer_event_args_new(WAPCA_CallAnswerEventArgs **out);
 
-/* Windows.ApplicationModel.Calls.CallAnswerEventArgs */
-/* Windows.ApplicationModel.Calls.CallAnswerEventArgs.get_AcceptedMedia() */
 HRESULT wapca_call_answer_event_args_get__accepted_media(WAPCA_CallAnswerEventArgs *self, WAPCA_VoipPhoneCallMedia *value);
 
-/* Windows.ApplicationModel.Calls.CallAnswerEventArgs.get_SourceDeviceId() */
 HRESULT wapca_call_answer_event_args_get__source_device_id(WAPCA_CallAnswerEventArgs *self, cwinrt_hstring *value);
 
-/* activate Windows.ApplicationModel.Calls.CallRejectEventArgs */
 HRESULT wapca_call_reject_event_args_new(WAPCA_CallRejectEventArgs **out);
 
-/* Windows.ApplicationModel.Calls.CallRejectEventArgs */
-/* Windows.ApplicationModel.Calls.CallRejectEventArgs.get_RejectReason() */
 HRESULT wapca_call_reject_event_args_get__reject_reason(WAPCA_CallRejectEventArgs *self, WAPCA_VoipPhoneCallRejectReason *value);
 
-/* activate Windows.ApplicationModel.Calls.CallStateChangeEventArgs */
 HRESULT wapca_call_state_change_event_args_new(WAPCA_CallStateChangeEventArgs **out);
 
-/* Windows.ApplicationModel.Calls.CallStateChangeEventArgs */
-/* Windows.ApplicationModel.Calls.CallStateChangeEventArgs.get_State() */
 HRESULT wapca_call_state_change_event_args_get__state(WAPCA_CallStateChangeEventArgs *self, WAPCA_VoipPhoneCallState *value);
 
-/* activate Windows.ApplicationModel.Calls.VoipCallCoordinator */
 HRESULT wapca_voip_call_coordinator_new(WAPCA_VoipCallCoordinator **out);
 
-/* Windows.ApplicationModel.Calls.VoipCallCoordinator */
-/* Windows.ApplicationModel.Calls.VoipCallCoordinator.ReserveCallResourcesAsync(taskEntryPoint) */
 HRESULT wapca_voip_call_coordinator_reserve_call_resources_async_str_p(WAPCA_VoipCallCoordinator *self, cwinrt_hstring taskEntryPoint, WF_IAsyncOperation_WAPCA_VoipPhoneCallResourceReservationStatus** out);
 
-/* Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestNewIncomingCall(context, contactName, contactNumber, contactImage, serviceName, brandingImage, callDetails, ringtone, media, ringTimeout) */
 HRESULT wapca_voip_call_coordinator_request_new_incoming_call(WAPCA_VoipCallCoordinator *self, cwinrt_hstring context, cwinrt_hstring contactName, cwinrt_hstring contactNumber, WF_Uri* contactImage, cwinrt_hstring serviceName, WF_Uri* brandingImage, cwinrt_hstring callDetails, WF_Uri* ringtone, WAPCA_VoipPhoneCallMedia media, WF_TimeSpan ringTimeout, WAPCA_VoipPhoneCall** out);
 
-/* Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestNewOutgoingCall(context, contactName, serviceName, media) */
 HRESULT wapca_voip_call_coordinator_request_new_outgoing_call(WAPCA_VoipCallCoordinator *self, cwinrt_hstring context, cwinrt_hstring contactName, cwinrt_hstring serviceName, WAPCA_VoipPhoneCallMedia media, WAPCA_VoipPhoneCall** out);
 
-/* Windows.ApplicationModel.Calls.VoipCallCoordinator.NotifyMuted() */
 HRESULT wapca_voip_call_coordinator_notify_muted(WAPCA_VoipCallCoordinator *self);
 
-/* Windows.ApplicationModel.Calls.VoipCallCoordinator.NotifyUnmuted() */
 HRESULT wapca_voip_call_coordinator_notify_unmuted(WAPCA_VoipCallCoordinator *self);
 
-/* Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestOutgoingUpgradeToVideoCall(callUpgradeGuid, context, contactName, serviceName) */
 HRESULT wapca_voip_call_coordinator_request_outgoing_upgrade_to_video_call(WAPCA_VoipCallCoordinator *self, GUID callUpgradeGuid, cwinrt_hstring context, cwinrt_hstring contactName, cwinrt_hstring serviceName, WAPCA_VoipPhoneCall** out);
 
-/* Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestIncomingUpgradeToVideoCall(context, contactName, contactNumber, contactImage, serviceName, brandingImage, callDetails, ringtone, ringTimeout) */
 HRESULT wapca_voip_call_coordinator_request_incoming_upgrade_to_video_call(WAPCA_VoipCallCoordinator *self, cwinrt_hstring context, cwinrt_hstring contactName, cwinrt_hstring contactNumber, WF_Uri* contactImage, cwinrt_hstring serviceName, WF_Uri* brandingImage, cwinrt_hstring callDetails, WF_Uri* ringtone, WF_TimeSpan ringTimeout, WAPCA_VoipPhoneCall** out);
 
-/* Windows.ApplicationModel.Calls.VoipCallCoordinator.TerminateCellularCall(callUpgradeGuid) */
 HRESULT wapca_voip_call_coordinator_terminate_cellular_call(WAPCA_VoipCallCoordinator *self, GUID callUpgradeGuid);
 
-/* Windows.ApplicationModel.Calls.VoipCallCoordinator.CancelUpgrade(callUpgradeGuid) */
 HRESULT wapca_voip_call_coordinator_cancel_upgrade(WAPCA_VoipCallCoordinator *self, GUID callUpgradeGuid);
 
-/* Windows.ApplicationModel.Calls.VoipCallCoordinator.SetupNewAcceptedCall(context, contactName, contactNumber, serviceName, media) */
 HRESULT wapca_voip_call_coordinator_setup_new_accepted_call(WAPCA_VoipCallCoordinator *self, cwinrt_hstring context, cwinrt_hstring contactName, cwinrt_hstring contactNumber, cwinrt_hstring serviceName, WAPCA_VoipPhoneCallMedia media, WAPCA_VoipPhoneCall** out);
 
-/* Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestNewAppInitiatedCall(context, contactName, contactNumber, serviceName, media) */
 HRESULT wapca_voip_call_coordinator_request_new_app_initiated_call(WAPCA_VoipCallCoordinator *self, cwinrt_hstring context, cwinrt_hstring contactName, cwinrt_hstring contactNumber, cwinrt_hstring serviceName, WAPCA_VoipPhoneCallMedia media, WAPCA_VoipPhoneCall** out);
 
-/* Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestNewIncomingCall(context, contactName, contactNumber, contactImage, serviceName, brandingImage, callDetails, ringtone, media, ringTimeout, contactRemoteId) */
 HRESULT wapca_voip_call_coordinator_request_new_incoming_call_str_str_str_p_str_p_str_p_voip_phone_4824326f(WAPCA_VoipCallCoordinator *self, cwinrt_hstring context, cwinrt_hstring contactName, cwinrt_hstring contactNumber, WF_Uri* contactImage, cwinrt_hstring serviceName, WF_Uri* brandingImage, cwinrt_hstring callDetails, WF_Uri* ringtone, WAPCA_VoipPhoneCallMedia media, WF_TimeSpan ringTimeout, cwinrt_hstring contactRemoteId, WAPCA_VoipPhoneCall** out);
 
-/* Windows.ApplicationModel.Calls.VoipCallCoordinator.ReserveCallResourcesAsync() */
 HRESULT wapca_voip_call_coordinator_reserve_call_resources_async(WAPCA_VoipCallCoordinator *self, WF_IAsyncOperation_WAPCA_VoipPhoneCallResourceReservationStatus** out);
 
-/* Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestNewIncomingCallWithOptions(callOptions) */
 HRESULT wapca_voip_call_coordinator_request_new_incoming_call_with_options(WAPCA_VoipCallCoordinator *self, WAPCA_IncomingVoipPhoneCallOptions* callOptions, WAPCA_VoipPhoneCall** out);
 
-/* Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestNewOutgoingCallWithOptions(callOptions) */
 HRESULT wapca_voip_call_coordinator_request_new_outgoing_call_with_options(WAPCA_VoipCallCoordinator *self, WAPCA_OutgoingVoipPhoneCallOptions* callOptions, WAPCA_VoipPhoneCall** out);
 
-/* Windows.ApplicationModel.Calls.VoipCallCoordinator.SetupNewAcceptedCallWithOptions(callOptions) */
 HRESULT wapca_voip_call_coordinator_setup_new_accepted_call_with_options(WAPCA_VoipCallCoordinator *self, WAPCA_AcceptedVoipPhoneCallOptions* callOptions, WAPCA_VoipPhoneCall** out);
 
-/* Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestNewAppInitiatedCallWithOptions(callOptions) */
 HRESULT wapca_voip_call_coordinator_request_new_app_initiated_call_with_options(WAPCA_VoipCallCoordinator *self, WAPCA_AppInitiatedVoipPhoneCallOptions* callOptions, WAPCA_VoipPhoneCall** out);
 
-/* Windows.ApplicationModel.Calls.VoipCallCoordinator.IsCallControlDeviceKindSupportedForAssociation(kind) */
 HRESULT wapca_voip_call_coordinator_is_call_control_device_kind_supported_for_association(WAPCA_VoipCallControlDeviceKind kind, BOOL *out);
 
-/* Windows.ApplicationModel.Calls.VoipCallCoordinator.GetDeviceSelectorForCallControl() */
 HRESULT wapca_voip_call_coordinator_get_device_selector_for_call_control(cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.Calls.VoipCallCoordinator.GetDefault() */
 HRESULT wapca_voip_call_coordinator_get_default(WAPCA_VoipCallCoordinator** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapca_voip_call_coordinator_on_mute_state_changed(WAPCA_VoipCallCoordinator *self, cwinrt_event_fn fn, void *ctx);
 void wapca_voip_call_coordinator_off_mute_state_changed(WAPCA_VoipCallCoordinator *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Calls.VoipPhoneCall */
 HRESULT wapca_voip_phone_call_new(WAPCA_VoipPhoneCall **out);
 
-/* Windows.ApplicationModel.Calls.VoipPhoneCall */
-/* Windows.ApplicationModel.Calls.VoipPhoneCall.NotifyCallHeld() */
 HRESULT wapca_voip_phone_call_notify_call_held(WAPCA_VoipPhoneCall *self);
 
-/* Windows.ApplicationModel.Calls.VoipPhoneCall.NotifyCallActive() */
 HRESULT wapca_voip_phone_call_notify_call_active(WAPCA_VoipPhoneCall *self);
 
-/* Windows.ApplicationModel.Calls.VoipPhoneCall.NotifyCallEnded() */
 HRESULT wapca_voip_phone_call_notify_call_ended(WAPCA_VoipPhoneCall *self);
 
-/* Windows.ApplicationModel.Calls.VoipPhoneCall.get_ContactName() */
 HRESULT wapca_voip_phone_call_get__contact_name(WAPCA_VoipPhoneCall *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.VoipPhoneCall.put_ContactName() */
 HRESULT wapca_voip_phone_call_put__contact_name(WAPCA_VoipPhoneCall *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.VoipPhoneCall.get_StartTime() */
 HRESULT wapca_voip_phone_call_get__start_time(WAPCA_VoipPhoneCall *self, WF_DateTime *value);
 
-/* Windows.ApplicationModel.Calls.VoipPhoneCall.put_StartTime() */
 HRESULT wapca_voip_phone_call_put__start_time(WAPCA_VoipPhoneCall *self, WF_DateTime value);
 
-/* Windows.ApplicationModel.Calls.VoipPhoneCall.get_CallMedia() */
 HRESULT wapca_voip_phone_call_get__call_media(WAPCA_VoipPhoneCall *self, WAPCA_VoipPhoneCallMedia *value);
 
-/* Windows.ApplicationModel.Calls.VoipPhoneCall.put_CallMedia() */
 HRESULT wapca_voip_phone_call_put__call_media(WAPCA_VoipPhoneCall *self, WAPCA_VoipPhoneCallMedia value);
 
-/* Windows.ApplicationModel.Calls.VoipPhoneCall.NotifyCallReady() */
 HRESULT wapca_voip_phone_call_notify_call_ready(WAPCA_VoipPhoneCall *self);
 
-/* Windows.ApplicationModel.Calls.VoipPhoneCall.TryShowAppUI() */
 HRESULT wapca_voip_phone_call_try_show_app_u_i(WAPCA_VoipPhoneCall *self);
 
-/* Windows.ApplicationModel.Calls.VoipPhoneCall.NotifyCallAccepted(media) */
 HRESULT wapca_voip_phone_call_notify_call_accepted(WAPCA_VoipPhoneCall *self, WAPCA_VoipPhoneCallMedia media);
 
-/* Windows.ApplicationModel.Calls.VoipPhoneCall.get_IsUsingAssociatedDevicesList() */
 HRESULT wapca_voip_phone_call_get__is_using_associated_devices_list(WAPCA_VoipPhoneCall *self, BOOL *value);
 
-/* Windows.ApplicationModel.Calls.VoipPhoneCall.NotifyCallActive(associatedDeviceIds) */
 HRESULT wapca_voip_phone_call_notify_call_active_p(WAPCA_VoipPhoneCall *self, WFOCO_IIterable_HSTRING* associatedDeviceIds);
 
-/* Windows.ApplicationModel.Calls.VoipPhoneCall.AddAssociatedCallControlDevice(deviceId) */
 HRESULT wapca_voip_phone_call_add_associated_call_control_device(WAPCA_VoipPhoneCall *self, cwinrt_hstring deviceId);
 
-/* Windows.ApplicationModel.Calls.VoipPhoneCall.RemoveAssociatedCallControlDevice(deviceId) */
 HRESULT wapca_voip_phone_call_remove_associated_call_control_device(WAPCA_VoipPhoneCall *self, cwinrt_hstring deviceId);
 
-/* Windows.ApplicationModel.Calls.VoipPhoneCall.SetAssociatedCallControlDevices(associatedDeviceIds) */
 HRESULT wapca_voip_phone_call_set_associated_call_control_devices(WAPCA_VoipPhoneCall *self, WFOCO_IIterable_HSTRING* associatedDeviceIds);
 
-/* Windows.ApplicationModel.Calls.VoipPhoneCall.GetAssociatedCallControlDevices() */
 HRESULT wapca_voip_phone_call_get_associated_call_control_devices(WAPCA_VoipPhoneCall *self, WFOCO_IVectorView_HSTRING** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapca_voip_phone_call_on_end_requested(WAPCA_VoipPhoneCall *self, cwinrt_event_fn fn, void *ctx);
@@ -1635,219 +1355,134 @@ void wapca_voip_phone_call_off_answer_requested(WAPCA_VoipPhoneCall *self, cwinr
 cwinrt_token wapca_voip_phone_call_on_reject_requested(WAPCA_VoipPhoneCall *self, cwinrt_event_fn fn, void *ctx);
 void wapca_voip_phone_call_off_reject_requested(WAPCA_VoipPhoneCall *self, cwinrt_token token);
 
-/* Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptionsFactory */
-/* Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptionsFactory.CreateInstance(associatedDeviceIds) */
 HRESULT wapca_accepted_voip_phone_call_options_factory_create_instance(WAPCA_IAcceptedVoipPhoneCallOptionsFactory *self, WFOCO_IIterable_HSTRING* associatedDeviceIds, WAPCA_AcceptedVoipPhoneCallOptions** out);
 
-/* Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptionsFactory */
-/* Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptionsFactory.CreateInstance(associatedDeviceIds) */
 HRESULT wapca_app_initiated_voip_phone_call_options_factory_create_instance(WAPCA_IAppInitiatedVoipPhoneCallOptionsFactory *self, WFOCO_IIterable_HSTRING* associatedDeviceIds, WAPCA_AppInitiatedVoipPhoneCallOptions** out);
 
-/* Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptionsFactory */
-/* Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptionsFactory.CreateInstance(associatedDeviceIds) */
 HRESULT wapca_incoming_voip_phone_call_options_factory_create_instance(WAPCA_IIncomingVoipPhoneCallOptionsFactory *self, WFOCO_IIterable_HSTRING* associatedDeviceIds, WAPCA_IncomingVoipPhoneCallOptions** out);
 
-/* Windows.ApplicationModel.Calls.IOutgoingVoipPhoneCallOptionsFactory */
-/* Windows.ApplicationModel.Calls.IOutgoingVoipPhoneCallOptionsFactory.CreateInstance(associatedDeviceIds) */
 HRESULT wapca_outgoing_voip_phone_call_options_factory_create_instance(WAPCA_IOutgoingVoipPhoneCallOptionsFactory *self, WFOCO_IIterable_HSTRING* associatedDeviceIds, WAPCA_OutgoingVoipPhoneCallOptions** out);
 
-/* Windows.ApplicationModel.Calls.IPhoneCallBlockingStatics */
-/* Windows.ApplicationModel.Calls.IPhoneCallBlockingStatics.get_BlockUnknownNumbers() */
 HRESULT wapca_phone_call_blocking_statics_get__block_unknown_numbers(WAPCA_IPhoneCallBlockingStatics *self, BOOL *value);
 
-/* Windows.ApplicationModel.Calls.IPhoneCallBlockingStatics.put_BlockUnknownNumbers() */
 HRESULT wapca_phone_call_blocking_statics_put__block_unknown_numbers(WAPCA_IPhoneCallBlockingStatics *self, BOOL value);
 
-/* Windows.ApplicationModel.Calls.IPhoneCallBlockingStatics.get_BlockPrivateNumbers() */
 HRESULT wapca_phone_call_blocking_statics_get__block_private_numbers(WAPCA_IPhoneCallBlockingStatics *self, BOOL *value);
 
-/* Windows.ApplicationModel.Calls.IPhoneCallBlockingStatics.put_BlockPrivateNumbers() */
 HRESULT wapca_phone_call_blocking_statics_put__block_private_numbers(WAPCA_IPhoneCallBlockingStatics *self, BOOL value);
 
-/* Windows.ApplicationModel.Calls.IPhoneCallBlockingStatics.SetCallBlockingListAsync(phoneNumberList) */
 HRESULT wapca_phone_call_blocking_statics_set_call_blocking_list_async(WAPCA_IPhoneCallBlockingStatics *self, WFOCO_IIterable_HSTRING* phoneNumberList, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryAddressFactory */
-/* Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryAddressFactory.Create(rawAddress, rawAddressKind) */
 HRESULT wapca_phone_call_history_entry_address_factory_create(WAPCA_IPhoneCallHistoryEntryAddressFactory *self, cwinrt_hstring rawAddress, WAPCA_PhoneCallHistoryEntryRawAddressKind rawAddressKind, WAPCA_PhoneCallHistoryEntryAddress** out);
 
-/* Windows.ApplicationModel.Calls.IPhoneCallHistoryManagerStatics */
-/* Windows.ApplicationModel.Calls.IPhoneCallHistoryManagerStatics.RequestStoreAsync(accessType) */
 HRESULT wapca_phone_call_history_manager_statics_request_store_async(WAPCA_IPhoneCallHistoryManagerStatics *self, WAPCA_PhoneCallHistoryStoreAccessType accessType, WF_IAsyncOperation_WAPCA_PhoneCallHistoryStore** out);
 
-/* Windows.ApplicationModel.Calls.IPhoneCallHistoryManagerStatics2 */
-/* Windows.ApplicationModel.Calls.IPhoneCallHistoryManagerStatics2.GetForUser(user) */
 HRESULT wapca_phone_call_history_manager_statics_2_get_for_user(WAPCA_IPhoneCallHistoryManagerStatics_2 *self, WSY_User* user, WAPCA_PhoneCallHistoryManagerForUser** out);
 
-/* Windows.ApplicationModel.Calls.IPhoneCallManagerStatics2 */
-/* Windows.ApplicationModel.Calls.IPhoneCallManagerStatics2.get_IsCallActive() */
 HRESULT wapca_phone_call_manager_statics_2_get__is_call_active(WAPCA_IPhoneCallManagerStatics_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Calls.IPhoneCallManagerStatics2.get_IsCallIncoming() */
 HRESULT wapca_phone_call_manager_statics_2_get__is_call_incoming(WAPCA_IPhoneCallManagerStatics_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Calls.IPhoneCallManagerStatics2.ShowPhoneCallSettingsUI() */
 HRESULT wapca_phone_call_manager_statics_2_show_phone_call_settings_u_i(WAPCA_IPhoneCallManagerStatics_2 *self);
 
-/* Windows.ApplicationModel.Calls.IPhoneCallManagerStatics2.RequestStoreAsync() */
 HRESULT wapca_phone_call_manager_statics_2_request_store_async(WAPCA_IPhoneCallManagerStatics_2 *self, WF_IAsyncOperation_WAPCA_PhoneCallStore** out);
 
-/* Windows.ApplicationModel.Calls.IPhoneCallStatics */
-/* Windows.ApplicationModel.Calls.IPhoneCallStatics.GetFromId(callId) */
 HRESULT wapca_phone_call_statics_get_from_id(WAPCA_IPhoneCallStatics *self, cwinrt_hstring callId, WAPCA_PhoneCall** out);
 
-/* Windows.ApplicationModel.Calls.IPhoneCallVideoCapabilitiesManagerStatics */
-/* Windows.ApplicationModel.Calls.IPhoneCallVideoCapabilitiesManagerStatics.GetCapabilitiesAsync(phoneNumber) */
 HRESULT wapca_phone_call_video_capabilities_manager_statics_get_capabilities_async(WAPCA_IPhoneCallVideoCapabilitiesManagerStatics *self, cwinrt_hstring phoneNumber, WF_IAsyncOperation_WAPCA_PhoneCallVideoCapabilities** out);
 
-/* Windows.ApplicationModel.Calls.IPhoneLineStatics */
-/* Windows.ApplicationModel.Calls.IPhoneLineStatics.FromIdAsync(lineId) */
 HRESULT wapca_phone_line_statics_from_id_async(WAPCA_IPhoneLineStatics *self, GUID lineId, WF_IAsyncOperation_WAPCA_PhoneLine** out);
 
-/* Windows.ApplicationModel.Calls.IPhoneLineTransportDeviceStatics */
-/* Windows.ApplicationModel.Calls.IPhoneLineTransportDeviceStatics.FromId(id) */
 HRESULT wapca_phone_line_transport_device_statics_from_id(WAPCA_IPhoneLineTransportDeviceStatics *self, cwinrt_hstring id, WAPCA_PhoneLineTransportDevice** out);
 
-/* Windows.ApplicationModel.Calls.IPhoneLineTransportDeviceStatics.GetDeviceSelector() */
 HRESULT wapca_phone_line_transport_device_statics_get_device_selector(WAPCA_IPhoneLineTransportDeviceStatics *self, cwinrt_hstring *out);
 
-/* Windows.ApplicationModel.Calls.IPhoneLineTransportDeviceStatics.GetDeviceSelector(transport) */
 HRESULT wapca_phone_line_transport_device_statics_get_device_selector_phone_line_transport_str(WAPCA_IPhoneLineTransportDeviceStatics *self, WAPCA_PhoneLineTransport transport, cwinrt_hstring *out);
 
-/* activate Windows.ApplicationModel.Calls.PhoneCallBlocking */
 HRESULT wapca_phone_call_blocking_new(WAPCA_PhoneCallBlocking **out);
 
-/* Windows.ApplicationModel.Calls.PhoneCallBlocking */
-/* Windows.ApplicationModel.Calls.PhoneCallBlocking.get_BlockUnknownNumbers() */
 HRESULT wapca_phone_call_blocking_get__block_unknown_numbers(BOOL *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallBlocking.put_BlockUnknownNumbers() */
 HRESULT wapca_phone_call_blocking_put__block_unknown_numbers(BOOL value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallBlocking.get_BlockPrivateNumbers() */
 HRESULT wapca_phone_call_blocking_get__block_private_numbers(BOOL *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallBlocking.put_BlockPrivateNumbers() */
 HRESULT wapca_phone_call_blocking_put__block_private_numbers(BOOL value);
 
-/* Windows.ApplicationModel.Calls.PhoneCallBlocking.SetCallBlockingListAsync(phoneNumberList) */
 HRESULT wapca_phone_call_blocking_set_call_blocking_list_async(WFOCO_IIterable_HSTRING* phoneNumberList, WF_IAsyncOperation_Bool** out);
 
-/* Windows.ApplicationModel.Calls.IVoipCallCoordinatorStatics */
-/* Windows.ApplicationModel.Calls.IVoipCallCoordinatorStatics.GetDefault() */
 HRESULT wapca_voip_call_coordinator_statics_get_default(WAPCA_IVoipCallCoordinatorStatics *self, WAPCA_VoipCallCoordinator** out);
 
-/* Windows.ApplicationModel.Calls.IVoipCallCoordinatorStatics2 */
-/* Windows.ApplicationModel.Calls.IVoipCallCoordinatorStatics2.IsCallControlDeviceKindSupportedForAssociation(kind) */
 HRESULT wapca_voip_call_coordinator_statics_2_is_call_control_device_kind_supported_for_association(WAPCA_IVoipCallCoordinatorStatics_2 *self, WAPCA_VoipCallControlDeviceKind kind, BOOL *out);
 
-/* Windows.ApplicationModel.Calls.IVoipCallCoordinatorStatics2.GetDeviceSelectorForCallControl() */
 HRESULT wapca_voip_call_coordinator_statics_2_get_device_selector_for_call_control(WAPCA_IVoipCallCoordinatorStatics_2 *self, cwinrt_hstring *out);
 
-/* activate Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions */
 HRESULT wapca_incoming_voip_phone_call_options_new(WAPCA_IncomingVoipPhoneCallOptions **out);
 
-/* Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions */
-/* Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions.get_Context() */
 HRESULT wapca_incoming_voip_phone_call_options_get__context(WAPCA_IncomingVoipPhoneCallOptions *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions.put_Context() */
 HRESULT wapca_incoming_voip_phone_call_options_put__context(WAPCA_IncomingVoipPhoneCallOptions *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions.get_ContactName() */
 HRESULT wapca_incoming_voip_phone_call_options_get__contact_name(WAPCA_IncomingVoipPhoneCallOptions *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions.put_ContactName() */
 HRESULT wapca_incoming_voip_phone_call_options_put__contact_name(WAPCA_IncomingVoipPhoneCallOptions *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions.get_ContactNumber() */
 HRESULT wapca_incoming_voip_phone_call_options_get__contact_number(WAPCA_IncomingVoipPhoneCallOptions *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions.put_ContactNumber() */
 HRESULT wapca_incoming_voip_phone_call_options_put__contact_number(WAPCA_IncomingVoipPhoneCallOptions *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions.get_ContactImage() */
 HRESULT wapca_incoming_voip_phone_call_options_get__contact_image(WAPCA_IncomingVoipPhoneCallOptions *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions.put_ContactImage() */
 HRESULT wapca_incoming_voip_phone_call_options_put__contact_image(WAPCA_IncomingVoipPhoneCallOptions *self, WF_Uri* value);
 
-/* Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions.get_ServiceName() */
 HRESULT wapca_incoming_voip_phone_call_options_get__service_name(WAPCA_IncomingVoipPhoneCallOptions *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions.put_ServiceName() */
 HRESULT wapca_incoming_voip_phone_call_options_put__service_name(WAPCA_IncomingVoipPhoneCallOptions *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions.get_BrandingImage() */
 HRESULT wapca_incoming_voip_phone_call_options_get__branding_image(WAPCA_IncomingVoipPhoneCallOptions *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions.put_BrandingImage() */
 HRESULT wapca_incoming_voip_phone_call_options_put__branding_image(WAPCA_IncomingVoipPhoneCallOptions *self, WF_Uri* value);
 
-/* Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions.get_CallDetails() */
 HRESULT wapca_incoming_voip_phone_call_options_get__call_details(WAPCA_IncomingVoipPhoneCallOptions *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions.put_CallDetails() */
 HRESULT wapca_incoming_voip_phone_call_options_put__call_details(WAPCA_IncomingVoipPhoneCallOptions *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions.get_Ringtone() */
 HRESULT wapca_incoming_voip_phone_call_options_get__ringtone(WAPCA_IncomingVoipPhoneCallOptions *self, WF_Uri** value);
 
-/* Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions.put_Ringtone() */
 HRESULT wapca_incoming_voip_phone_call_options_put__ringtone(WAPCA_IncomingVoipPhoneCallOptions *self, WF_Uri* value);
 
-/* Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions.get_Media() */
 HRESULT wapca_incoming_voip_phone_call_options_get__media(WAPCA_IncomingVoipPhoneCallOptions *self, WAPCA_VoipPhoneCallMedia *value);
 
-/* Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions.put_Media() */
 HRESULT wapca_incoming_voip_phone_call_options_put__media(WAPCA_IncomingVoipPhoneCallOptions *self, WAPCA_VoipPhoneCallMedia value);
 
-/* Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions.get_RingTimeout() */
 HRESULT wapca_incoming_voip_phone_call_options_get__ring_timeout(WAPCA_IncomingVoipPhoneCallOptions *self, WF_TimeSpan *value);
 
-/* Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions.put_RingTimeout() */
 HRESULT wapca_incoming_voip_phone_call_options_put__ring_timeout(WAPCA_IncomingVoipPhoneCallOptions *self, WF_TimeSpan value);
 
-/* Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions.get_ContactRemoteId() */
 HRESULT wapca_incoming_voip_phone_call_options_get__contact_remote_id(WAPCA_IncomingVoipPhoneCallOptions *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions.put_ContactRemoteId() */
 HRESULT wapca_incoming_voip_phone_call_options_put__contact_remote_id(WAPCA_IncomingVoipPhoneCallOptions *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions.get_AssociatedDeviceIds() */
 HRESULT wapca_incoming_voip_phone_call_options_get__associated_device_ids(WAPCA_IncomingVoipPhoneCallOptions *self, WFOCO_IVector_HSTRING** value);
 
-/* activate Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral */
 HRESULT wapca_lock_screen_call_end_call_deferral_new(WAPCA_LockScreenCallEndCallDeferral **out);
 
-/* Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral */
-/* Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral.Complete() */
 HRESULT wapca_lock_screen_call_end_call_deferral_complete(WAPCA_LockScreenCallEndCallDeferral *self);
 
-/* activate Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs */
 HRESULT wapca_lock_screen_call_end_requested_event_args_new(WAPCA_LockScreenCallEndRequestedEventArgs **out);
 
-/* Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs */
-/* Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs.GetDeferral() */
 HRESULT wapca_lock_screen_call_end_requested_event_args_get_deferral(WAPCA_LockScreenCallEndRequestedEventArgs *self, WAPCA_LockScreenCallEndCallDeferral** out);
 
-/* Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs.get_Deadline() */
 HRESULT wapca_lock_screen_call_end_requested_event_args_get__deadline(WAPCA_LockScreenCallEndRequestedEventArgs *self, WF_DateTime *value);
 
-/* activate Windows.ApplicationModel.Calls.LockScreenCallUI */
 HRESULT wapca_lock_screen_call_u_i_new(WAPCA_LockScreenCallUI **out);
 
-/* Windows.ApplicationModel.Calls.LockScreenCallUI */
-/* Windows.ApplicationModel.Calls.LockScreenCallUI.Dismiss() */
 HRESULT wapca_lock_screen_call_u_i_dismiss(WAPCA_LockScreenCallUI *self);
 
-/* Windows.ApplicationModel.Calls.LockScreenCallUI.get_CallTitle() */
 HRESULT wapca_lock_screen_call_u_i_get__call_title(WAPCA_LockScreenCallUI *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.LockScreenCallUI.put_CallTitle() */
 HRESULT wapca_lock_screen_call_u_i_put__call_title(WAPCA_LockScreenCallUI *self, cwinrt_hstring value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapca_lock_screen_call_u_i_on_end_requested(WAPCA_LockScreenCallUI *self, cwinrt_event_fn fn, void *ctx);
@@ -1856,124 +1491,82 @@ void wapca_lock_screen_call_u_i_off_end_requested(WAPCA_LockScreenCallUI *self, 
 cwinrt_token wapca_lock_screen_call_u_i_on_closed(WAPCA_LockScreenCallUI *self, cwinrt_event_fn fn, void *ctx);
 void wapca_lock_screen_call_u_i_off_closed(WAPCA_LockScreenCallUI *self, cwinrt_token token);
 
-/* activate Windows.ApplicationModel.Calls.MuteChangeEventArgs */
 HRESULT wapca_mute_change_event_args_new(WAPCA_MuteChangeEventArgs **out);
 
-/* Windows.ApplicationModel.Calls.MuteChangeEventArgs */
-/* Windows.ApplicationModel.Calls.MuteChangeEventArgs.get_Muted() */
 HRESULT wapca_mute_change_event_args_get__muted(WAPCA_MuteChangeEventArgs *self, BOOL *value);
 
-/* activate Windows.ApplicationModel.Calls.OutgoingVoipPhoneCallOptions */
 HRESULT wapca_outgoing_voip_phone_call_options_new(WAPCA_OutgoingVoipPhoneCallOptions **out);
 
-/* Windows.ApplicationModel.Calls.OutgoingVoipPhoneCallOptions */
-/* Windows.ApplicationModel.Calls.OutgoingVoipPhoneCallOptions.get_Context() */
 HRESULT wapca_outgoing_voip_phone_call_options_get__context(WAPCA_OutgoingVoipPhoneCallOptions *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.OutgoingVoipPhoneCallOptions.put_Context() */
 HRESULT wapca_outgoing_voip_phone_call_options_put__context(WAPCA_OutgoingVoipPhoneCallOptions *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.OutgoingVoipPhoneCallOptions.get_ContactName() */
 HRESULT wapca_outgoing_voip_phone_call_options_get__contact_name(WAPCA_OutgoingVoipPhoneCallOptions *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.OutgoingVoipPhoneCallOptions.put_ContactName() */
 HRESULT wapca_outgoing_voip_phone_call_options_put__contact_name(WAPCA_OutgoingVoipPhoneCallOptions *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.OutgoingVoipPhoneCallOptions.get_ServiceName() */
 HRESULT wapca_outgoing_voip_phone_call_options_get__service_name(WAPCA_OutgoingVoipPhoneCallOptions *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.OutgoingVoipPhoneCallOptions.put_ServiceName() */
 HRESULT wapca_outgoing_voip_phone_call_options_put__service_name(WAPCA_OutgoingVoipPhoneCallOptions *self, cwinrt_hstring value);
 
-/* Windows.ApplicationModel.Calls.OutgoingVoipPhoneCallOptions.get_Media() */
 HRESULT wapca_outgoing_voip_phone_call_options_get__media(WAPCA_OutgoingVoipPhoneCallOptions *self, WAPCA_VoipPhoneCallMedia *value);
 
-/* Windows.ApplicationModel.Calls.OutgoingVoipPhoneCallOptions.put_Media() */
 HRESULT wapca_outgoing_voip_phone_call_options_put__media(WAPCA_OutgoingVoipPhoneCallOptions *self, WAPCA_VoipPhoneCallMedia value);
 
-/* Windows.ApplicationModel.Calls.OutgoingVoipPhoneCallOptions.get_AssociatedDeviceIds() */
 HRESULT wapca_outgoing_voip_phone_call_options_get__associated_device_ids(WAPCA_OutgoingVoipPhoneCallOptions *self, WFOCO_IVector_HSTRING** value);
 
-/* activate Windows.ApplicationModel.Calls.PhoneCall */
 HRESULT wapca_phone_call_new(WAPCA_PhoneCall **out);
 
-/* Windows.ApplicationModel.Calls.PhoneCall */
-/* Windows.ApplicationModel.Calls.PhoneCall.get_CallId() */
 HRESULT wapca_phone_call_get__call_id(WAPCA_PhoneCall *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCall.get_IsMuted() */
 HRESULT wapca_phone_call_get__is_muted(WAPCA_PhoneCall *self, BOOL *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCall.get_Status() */
 HRESULT wapca_phone_call_get__status(WAPCA_PhoneCall *self, WAPCA_PhoneCallStatus *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCall.get_AudioDevice() */
 HRESULT wapca_phone_call_get__audio_device(WAPCA_PhoneCall *self, WAPCA_PhoneCallAudioDevice *value);
 
-/* Windows.ApplicationModel.Calls.PhoneCall.GetPhoneCallInfo() */
 HRESULT wapca_phone_call_get_phone_call_info(WAPCA_PhoneCall *self, WAPCA_PhoneCallInfo** out);
 
-/* Windows.ApplicationModel.Calls.PhoneCall.GetPhoneCallInfoAsync() */
 HRESULT wapca_phone_call_get_phone_call_info_async(WAPCA_PhoneCall *self, WF_IAsyncOperation_WAPCA_PhoneCallInfo** out);
 
-/* Windows.ApplicationModel.Calls.PhoneCall.End() */
 HRESULT wapca_phone_call_end(WAPCA_PhoneCall *self, WAPCA_PhoneCallOperationStatus *out);
 
-/* Windows.ApplicationModel.Calls.PhoneCall.EndAsync() */
 HRESULT wapca_phone_call_end_async(WAPCA_PhoneCall *self, WF_IAsyncOperation_WAPCA_PhoneCallOperationStatus** out);
 
-/* Windows.ApplicationModel.Calls.PhoneCall.SendDtmfKey(key, dtmfToneAudioPlayback) */
 HRESULT wapca_phone_call_send_dtmf_key(WAPCA_PhoneCall *self, WAPCA_DtmfKey key, WAPCA_DtmfToneAudioPlayback dtmfToneAudioPlayback, WAPCA_PhoneCallOperationStatus *out);
 
-/* Windows.ApplicationModel.Calls.PhoneCall.SendDtmfKeyAsync(key, dtmfToneAudioPlayback) */
 HRESULT wapca_phone_call_send_dtmf_key_async(WAPCA_PhoneCall *self, WAPCA_DtmfKey key, WAPCA_DtmfToneAudioPlayback dtmfToneAudioPlayback, WF_IAsyncOperation_WAPCA_PhoneCallOperationStatus** out);
 
-/* Windows.ApplicationModel.Calls.PhoneCall.AcceptIncoming() */
 HRESULT wapca_phone_call_accept_incoming(WAPCA_PhoneCall *self, WAPCA_PhoneCallOperationStatus *out);
 
-/* Windows.ApplicationModel.Calls.PhoneCall.AcceptIncomingAsync() */
 HRESULT wapca_phone_call_accept_incoming_async(WAPCA_PhoneCall *self, WF_IAsyncOperation_WAPCA_PhoneCallOperationStatus** out);
 
-/* Windows.ApplicationModel.Calls.PhoneCall.Hold() */
 HRESULT wapca_phone_call_hold(WAPCA_PhoneCall *self, WAPCA_PhoneCallOperationStatus *out);
 
-/* Windows.ApplicationModel.Calls.PhoneCall.HoldAsync() */
 HRESULT wapca_phone_call_hold_async(WAPCA_PhoneCall *self, WF_IAsyncOperation_WAPCA_PhoneCallOperationStatus** out);
 
-/* Windows.ApplicationModel.Calls.PhoneCall.ResumeFromHold() */
 HRESULT wapca_phone_call_resume_from_hold(WAPCA_PhoneCall *self, WAPCA_PhoneCallOperationStatus *out);
 
-/* Windows.ApplicationModel.Calls.PhoneCall.ResumeFromHoldAsync() */
 HRESULT wapca_phone_call_resume_from_hold_async(WAPCA_PhoneCall *self, WF_IAsyncOperation_WAPCA_PhoneCallOperationStatus** out);
 
-/* Windows.ApplicationModel.Calls.PhoneCall.Mute() */
 HRESULT wapca_phone_call_mute(WAPCA_PhoneCall *self, WAPCA_PhoneCallOperationStatus *out);
 
-/* Windows.ApplicationModel.Calls.PhoneCall.MuteAsync() */
 HRESULT wapca_phone_call_mute_async(WAPCA_PhoneCall *self, WF_IAsyncOperation_WAPCA_PhoneCallOperationStatus** out);
 
-/* Windows.ApplicationModel.Calls.PhoneCall.Unmute() */
 HRESULT wapca_phone_call_unmute(WAPCA_PhoneCall *self, WAPCA_PhoneCallOperationStatus *out);
 
-/* Windows.ApplicationModel.Calls.PhoneCall.UnmuteAsync() */
 HRESULT wapca_phone_call_unmute_async(WAPCA_PhoneCall *self, WF_IAsyncOperation_WAPCA_PhoneCallOperationStatus** out);
 
-/* Windows.ApplicationModel.Calls.PhoneCall.RejectIncoming() */
 HRESULT wapca_phone_call_reject_incoming(WAPCA_PhoneCall *self, WAPCA_PhoneCallOperationStatus *out);
 
-/* Windows.ApplicationModel.Calls.PhoneCall.RejectIncomingAsync() */
 HRESULT wapca_phone_call_reject_incoming_async(WAPCA_PhoneCall *self, WF_IAsyncOperation_WAPCA_PhoneCallOperationStatus** out);
 
-/* Windows.ApplicationModel.Calls.PhoneCall.ChangeAudioDevice(endpoint) */
 HRESULT wapca_phone_call_change_audio_device(WAPCA_PhoneCall *self, WAPCA_PhoneCallAudioDevice endpoint, WAPCA_PhoneCallOperationStatus *out);
 
-/* Windows.ApplicationModel.Calls.PhoneCall.ChangeAudioDeviceAsync(endpoint) */
 HRESULT wapca_phone_call_change_audio_device_async(WAPCA_PhoneCall *self, WAPCA_PhoneCallAudioDevice endpoint, WF_IAsyncOperation_WAPCA_PhoneCallOperationStatus** out);
 
-/* Windows.ApplicationModel.Calls.PhoneCall.GetFromId(callId) */
 HRESULT wapca_phone_call_get_from_id(cwinrt_hstring callId, WAPCA_PhoneCall** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wapca_phone_call_on_status_changed(WAPCA_PhoneCall *self, cwinrt_event_fn fn, void *ctx);
@@ -1985,127 +1578,56 @@ void wapca_phone_call_off_audio_device_changed(WAPCA_PhoneCall *self, cwinrt_tok
 cwinrt_token wapca_phone_call_on_is_muted_changed(WAPCA_PhoneCall *self, cwinrt_event_fn fn, void *ctx);
 void wapca_phone_call_off_is_muted_changed(WAPCA_PhoneCall *self, cwinrt_token token);
 
-/* Windows.ApplicationModel.Calls.IPhoneCallManagerStatics */
-/* Windows.ApplicationModel.Calls.IPhoneCallManagerStatics.ShowPhoneCallUI(phoneNumber, displayName) */
 HRESULT wapca_phone_call_manager_statics_show_phone_call_u_i(WAPCA_IPhoneCallManagerStatics *self, cwinrt_hstring phoneNumber, cwinrt_hstring displayName);
 
-/* Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry */
-/* Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryAddress */
-/* Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryQueryOptions */
-/* Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryReader */
-/* Windows.ApplicationModel.Calls.IPhoneCallHistoryManagerForUser */
-/* Windows.ApplicationModel.Calls.IPhoneCallHistoryStore */
-/* Windows.ApplicationModel.Calls.IPhoneCallInfo */
-/* Windows.ApplicationModel.Calls.IPhoneCallStore */
-/* Windows.ApplicationModel.Calls.IPhoneCallVideoCapabilities */
-/* Windows.ApplicationModel.Calls.IPhoneCallsResult */
-/* Windows.ApplicationModel.Calls.IPhoneDialOptions */
-/* Windows.ApplicationModel.Calls.IPhoneLine */
-/* Windows.ApplicationModel.Calls.IPhoneLine2 */
-/* Windows.ApplicationModel.Calls.IPhoneLine2.EnableTextReply() */
 HRESULT wapca_phone_line_2_enable_text_reply(WAPCA_IPhoneLine_2 *self, BOOL value);
 
-/* Windows.ApplicationModel.Calls.IPhoneLine2.get_TransportDeviceId() */
 HRESULT wapca_phone_line_2_get__transport_device_id(WAPCA_IPhoneLine_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.IPhoneLine3 */
-/* Windows.ApplicationModel.Calls.IPhoneLine3.DialWithResult(number, displayName) */
 HRESULT wapca_phone_line_3_dial_with_result(WAPCA_IPhoneLine_3 *self, cwinrt_hstring number, cwinrt_hstring displayName, WAPCA_PhoneLineDialResult** out);
 
-/* Windows.ApplicationModel.Calls.IPhoneLine3.DialWithResultAsync(number, displayName) */
 HRESULT wapca_phone_line_3_dial_with_result_async(WAPCA_IPhoneLine_3 *self, cwinrt_hstring number, cwinrt_hstring displayName, WF_IAsyncOperation_WAPCA_PhoneLineDialResult** out);
 
-/* Windows.ApplicationModel.Calls.IPhoneLine3.GetAllActivePhoneCalls() */
 HRESULT wapca_phone_line_3_get_all_active_phone_calls(WAPCA_IPhoneLine_3 *self, WAPCA_PhoneCallsResult** out);
 
-/* Windows.ApplicationModel.Calls.IPhoneLine3.GetAllActivePhoneCallsAsync() */
 HRESULT wapca_phone_line_3_get_all_active_phone_calls_async(WAPCA_IPhoneLine_3 *self, WF_IAsyncOperation_WAPCA_PhoneCallsResult** out);
 
-/* Windows.ApplicationModel.Calls.IPhoneLineCellularDetails */
-/* Windows.ApplicationModel.Calls.IPhoneLineConfiguration */
-/* Windows.ApplicationModel.Calls.IPhoneLineDialResult */
-/* Windows.ApplicationModel.Calls.IPhoneLineTransportDevice */
-/* Windows.ApplicationModel.Calls.IPhoneLineTransportDevice2 */
-/* Windows.ApplicationModel.Calls.IPhoneLineTransportDevice2.get_AudioRoutingStatus() */
 HRESULT wapca_phone_line_transport_device_2_get__audio_routing_status(WAPCA_IPhoneLineTransportDevice_2 *self, WAPCA_TransportDeviceAudioRoutingStatus *value);
 
-/* Windows.ApplicationModel.Calls.IPhoneLineTransportDevice2.get_InBandRingingEnabled() */
 HRESULT wapca_phone_line_transport_device_2_get__in_band_ringing_enabled(WAPCA_IPhoneLineTransportDevice_2 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Calls.IPhoneLineWatcher */
-/* Windows.ApplicationModel.Calls.IPhoneLineWatcherEventArgs */
-/* Windows.ApplicationModel.Calls.IPhoneVoicemail */
-/* Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptions */
-/* Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptions */
-/* Windows.ApplicationModel.Calls.ICallAnswerEventArgs */
-/* Windows.ApplicationModel.Calls.ICallAnswerEventArgs2 */
-/* Windows.ApplicationModel.Calls.ICallAnswerEventArgs2.get_SourceDeviceId() */
 HRESULT wapca_call_answer_event_args_2_get__source_device_id(WAPCA_ICallAnswerEventArgs_2 *self, cwinrt_hstring *value);
 
-/* Windows.ApplicationModel.Calls.ICallRejectEventArgs */
-/* Windows.ApplicationModel.Calls.ICallStateChangeEventArgs */
-/* Windows.ApplicationModel.Calls.IVoipCallCoordinator2 */
-/* Windows.ApplicationModel.Calls.IVoipCallCoordinator2.SetupNewAcceptedCall(context, contactName, contactNumber, serviceName, media) */
 HRESULT wapca_voip_call_coordinator_2_setup_new_accepted_call(WAPCA_IVoipCallCoordinator_2 *self, cwinrt_hstring context, cwinrt_hstring contactName, cwinrt_hstring contactNumber, cwinrt_hstring serviceName, WAPCA_VoipPhoneCallMedia media, WAPCA_VoipPhoneCall** out);
 
-/* Windows.ApplicationModel.Calls.IVoipCallCoordinator3 */
-/* Windows.ApplicationModel.Calls.IVoipCallCoordinator3.RequestNewAppInitiatedCall(context, contactName, contactNumber, serviceName, media) */
 HRESULT wapca_voip_call_coordinator_3_request_new_app_initiated_call(WAPCA_IVoipCallCoordinator_3 *self, cwinrt_hstring context, cwinrt_hstring contactName, cwinrt_hstring contactNumber, cwinrt_hstring serviceName, WAPCA_VoipPhoneCallMedia media, WAPCA_VoipPhoneCall** out);
 
-/* Windows.ApplicationModel.Calls.IVoipCallCoordinator3.RequestNewIncomingCall(context, contactName, contactNumber, contactImage, serviceName, brandingImage, callDetails, ringtone, media, ringTimeout, contactRemoteId) */
 HRESULT wapca_voip_call_coordinator_3_request_new_incoming_call(WAPCA_IVoipCallCoordinator_3 *self, cwinrt_hstring context, cwinrt_hstring contactName, cwinrt_hstring contactNumber, WF_Uri* contactImage, cwinrt_hstring serviceName, WF_Uri* brandingImage, cwinrt_hstring callDetails, WF_Uri* ringtone, WAPCA_VoipPhoneCallMedia media, WF_TimeSpan ringTimeout, cwinrt_hstring contactRemoteId, WAPCA_VoipPhoneCall** out);
 
-/* Windows.ApplicationModel.Calls.IVoipCallCoordinator4 */
-/* Windows.ApplicationModel.Calls.IVoipCallCoordinator4.ReserveCallResourcesAsync() */
 HRESULT wapca_voip_call_coordinator_4_reserve_call_resources_async(WAPCA_IVoipCallCoordinator_4 *self, WF_IAsyncOperation_WAPCA_VoipPhoneCallResourceReservationStatus** out);
 
-/* Windows.ApplicationModel.Calls.IVoipCallCoordinator5 */
-/* Windows.ApplicationModel.Calls.IVoipCallCoordinator5.RequestNewIncomingCallWithOptions(callOptions) */
 HRESULT wapca_voip_call_coordinator_5_request_new_incoming_call_with_options(WAPCA_IVoipCallCoordinator_5 *self, WAPCA_IncomingVoipPhoneCallOptions* callOptions, WAPCA_VoipPhoneCall** out);
 
-/* Windows.ApplicationModel.Calls.IVoipCallCoordinator5.RequestNewOutgoingCallWithOptions(callOptions) */
 HRESULT wapca_voip_call_coordinator_5_request_new_outgoing_call_with_options(WAPCA_IVoipCallCoordinator_5 *self, WAPCA_OutgoingVoipPhoneCallOptions* callOptions, WAPCA_VoipPhoneCall** out);
 
-/* Windows.ApplicationModel.Calls.IVoipCallCoordinator5.SetupNewAcceptedCallWithOptions(callOptions) */
 HRESULT wapca_voip_call_coordinator_5_setup_new_accepted_call_with_options(WAPCA_IVoipCallCoordinator_5 *self, WAPCA_AcceptedVoipPhoneCallOptions* callOptions, WAPCA_VoipPhoneCall** out);
 
-/* Windows.ApplicationModel.Calls.IVoipCallCoordinator5.RequestNewAppInitiatedCallWithOptions(callOptions) */
 HRESULT wapca_voip_call_coordinator_5_request_new_app_initiated_call_with_options(WAPCA_IVoipCallCoordinator_5 *self, WAPCA_AppInitiatedVoipPhoneCallOptions* callOptions, WAPCA_VoipPhoneCall** out);
 
-/* Windows.ApplicationModel.Calls.IVoipPhoneCall3 */
-/* Windows.ApplicationModel.Calls.IVoipPhoneCall3.NotifyCallAccepted(media) */
 HRESULT wapca_voip_phone_call_3_notify_call_accepted(WAPCA_IVoipPhoneCall_3 *self, WAPCA_VoipPhoneCallMedia media);
 
-/* Windows.ApplicationModel.Calls.IVoipPhoneCall4 */
-/* Windows.ApplicationModel.Calls.IVoipPhoneCall4.get_IsUsingAssociatedDevicesList() */
 HRESULT wapca_voip_phone_call_4_get__is_using_associated_devices_list(WAPCA_IVoipPhoneCall_4 *self, BOOL *value);
 
-/* Windows.ApplicationModel.Calls.IVoipPhoneCall4.NotifyCallActive(associatedDeviceIds) */
 HRESULT wapca_voip_phone_call_4_notify_call_active(WAPCA_IVoipPhoneCall_4 *self, WFOCO_IIterable_HSTRING* associatedDeviceIds);
 
-/* Windows.ApplicationModel.Calls.IVoipPhoneCall4.AddAssociatedCallControlDevice(deviceId) */
 HRESULT wapca_voip_phone_call_4_add_associated_call_control_device(WAPCA_IVoipPhoneCall_4 *self, cwinrt_hstring deviceId);
 
-/* Windows.ApplicationModel.Calls.IVoipPhoneCall4.RemoveAssociatedCallControlDevice(deviceId) */
 HRESULT wapca_voip_phone_call_4_remove_associated_call_control_device(WAPCA_IVoipPhoneCall_4 *self, cwinrt_hstring deviceId);
 
-/* Windows.ApplicationModel.Calls.IVoipPhoneCall4.SetAssociatedCallControlDevices(associatedDeviceIds) */
 HRESULT wapca_voip_phone_call_4_set_associated_call_control_devices(WAPCA_IVoipPhoneCall_4 *self, WFOCO_IIterable_HSTRING* associatedDeviceIds);
 
-/* Windows.ApplicationModel.Calls.IVoipPhoneCall4.GetAssociatedCallControlDevices() */
 HRESULT wapca_voip_phone_call_4_get_associated_call_control_devices(WAPCA_IVoipPhoneCall_4 *self, WFOCO_IVectorView_HSTRING** out);
 
-/* Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions */
-/* Windows.ApplicationModel.Calls.ILockScreenCallEndCallDeferral */
-/* Windows.ApplicationModel.Calls.ILockScreenCallEndRequestedEventArgs */
-/* Windows.ApplicationModel.Calls.ILockScreenCallUI */
-/* Windows.ApplicationModel.Calls.IMuteChangeEventArgs */
-/* Windows.ApplicationModel.Calls.IOutgoingVoipPhoneCallOptions */
-/* Windows.ApplicationModel.Calls.IPhoneCall */
-/* Windows.ApplicationModel.Calls.IVoipCallCoordinator */
-/* Windows.ApplicationModel.Calls.IVoipPhoneCall2 */
-/* Windows.ApplicationModel.Calls.IVoipPhoneCall2.TryShowAppUI() */
 HRESULT wapca_voip_phone_call_2_try_show_app_u_i(WAPCA_IVoipPhoneCall_2 *self);
 
-/* Windows.ApplicationModel.Calls.IVoipPhoneCall */
 #endif /* CWINRT_WINDOWS_APPLICATIONMODEL_CALLS_H */

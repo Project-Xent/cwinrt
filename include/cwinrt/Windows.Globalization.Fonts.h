@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WUITE_FontWeight
 #define CWINRT_FWD_WUITE_FontWeight
 typedef struct WUITE_FontWeight WUITE_FontWeight;
@@ -43,14 +42,12 @@ typedef enum WUITE_FontStyle {
 } WUITE_FontStyle;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WGLFO_ILanguageFontGroupFactory WGLFO_ILanguageFontGroupFactory;
 typedef struct WGLFO_LanguageFont WGLFO_LanguageFont;
 typedef struct WGLFO_LanguageFontGroup WGLFO_LanguageFontGroup;
 typedef struct WGLFO_ILanguageFont WGLFO_ILanguageFont;
 typedef struct WGLFO_ILanguageFontGroup WGLFO_ILanguageFontGroup;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WUITE_FontWeight
 #define CWINRT_FWD_WUITE_FontWeight
 typedef struct WUITE_FontWeight WUITE_FontWeight;
@@ -81,7 +78,6 @@ typedef enum WUITE_FontStyle {
 } WUITE_FontStyle;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -98,68 +94,42 @@ static const IID CWINRT_IID_WGLFO_ILanguageFont CWINRT_MAYBE_UNUSED = { 0xB12E5C
 static const IID CWINRT_IID_WGLFO_ILanguageFontGroup CWINRT_MAYBE_UNUSED = { 0xF33A7FC3, 0x3A5C, 0x4AEA, { 0xB9, 0xFF, 0xB3, 0x9F, 0xB2, 0x42, 0xF7, 0xF6 } };
 #endif
 
-/* Methods */
-
-/* Windows.Globalization.Fonts.ILanguageFontGroupFactory */
-/* Windows.Globalization.Fonts.ILanguageFontGroupFactory.CreateLanguageFontGroup(languageTag) */
 HRESULT wglfo_language_font_group_factory_create_language_font_group(WGLFO_ILanguageFontGroupFactory *self, cwinrt_hstring languageTag, WGLFO_LanguageFontGroup** out);
 
-/* activate Windows.Globalization.Fonts.LanguageFont */
 HRESULT wglfo_language_font_new(WGLFO_LanguageFont **out);
 
-/* Windows.Globalization.Fonts.LanguageFont */
-/* Windows.Globalization.Fonts.LanguageFont.get_FontFamily() */
 HRESULT wglfo_language_font_get__font_family(WGLFO_LanguageFont *self, cwinrt_hstring *value);
 
-/* Windows.Globalization.Fonts.LanguageFont.get_FontWeight() */
 HRESULT wglfo_language_font_get__font_weight(WGLFO_LanguageFont *self, WUITE_FontWeight *value);
 
-/* Windows.Globalization.Fonts.LanguageFont.get_FontStretch() */
 HRESULT wglfo_language_font_get__font_stretch(WGLFO_LanguageFont *self, WUITE_FontStretch *value);
 
-/* Windows.Globalization.Fonts.LanguageFont.get_FontStyle() */
 HRESULT wglfo_language_font_get__font_style(WGLFO_LanguageFont *self, WUITE_FontStyle *value);
 
-/* Windows.Globalization.Fonts.LanguageFont.get_ScaleFactor() */
 HRESULT wglfo_language_font_get__scale_factor(WGLFO_LanguageFont *self, double *value);
 
-/* activate Windows.Globalization.Fonts.LanguageFontGroup */
 HRESULT wglfo_language_font_group_new(WGLFO_LanguageFontGroup **out);
 
-/* Windows.Globalization.Fonts.LanguageFontGroup */
-/* Windows.Globalization.Fonts.LanguageFontGroup.get_UITextFont() */
 HRESULT wglfo_language_font_group_get__u_i_text_font(WGLFO_LanguageFontGroup *self, WGLFO_LanguageFont** value);
 
-/* Windows.Globalization.Fonts.LanguageFontGroup.get_UIHeadingFont() */
 HRESULT wglfo_language_font_group_get__u_i_heading_font(WGLFO_LanguageFontGroup *self, WGLFO_LanguageFont** value);
 
-/* Windows.Globalization.Fonts.LanguageFontGroup.get_UITitleFont() */
 HRESULT wglfo_language_font_group_get__u_i_title_font(WGLFO_LanguageFontGroup *self, WGLFO_LanguageFont** value);
 
-/* Windows.Globalization.Fonts.LanguageFontGroup.get_UICaptionFont() */
 HRESULT wglfo_language_font_group_get__u_i_caption_font(WGLFO_LanguageFontGroup *self, WGLFO_LanguageFont** value);
 
-/* Windows.Globalization.Fonts.LanguageFontGroup.get_UINotificationHeadingFont() */
 HRESULT wglfo_language_font_group_get__u_i_notification_heading_font(WGLFO_LanguageFontGroup *self, WGLFO_LanguageFont** value);
 
-/* Windows.Globalization.Fonts.LanguageFontGroup.get_TraditionalDocumentFont() */
 HRESULT wglfo_language_font_group_get__traditional_document_font(WGLFO_LanguageFontGroup *self, WGLFO_LanguageFont** value);
 
-/* Windows.Globalization.Fonts.LanguageFontGroup.get_ModernDocumentFont() */
 HRESULT wglfo_language_font_group_get__modern_document_font(WGLFO_LanguageFontGroup *self, WGLFO_LanguageFont** value);
 
-/* Windows.Globalization.Fonts.LanguageFontGroup.get_DocumentHeadingFont() */
 HRESULT wglfo_language_font_group_get__document_heading_font(WGLFO_LanguageFontGroup *self, WGLFO_LanguageFont** value);
 
-/* Windows.Globalization.Fonts.LanguageFontGroup.get_FixedWidthTextFont() */
 HRESULT wglfo_language_font_group_get__fixed_width_text_font(WGLFO_LanguageFontGroup *self, WGLFO_LanguageFont** value);
 
-/* Windows.Globalization.Fonts.LanguageFontGroup.get_DocumentAlternate1Font() */
 HRESULT wglfo_language_font_group_get__document_alternate1_font(WGLFO_LanguageFontGroup *self, WGLFO_LanguageFont** value);
 
-/* Windows.Globalization.Fonts.LanguageFontGroup.get_DocumentAlternate2Font() */
 HRESULT wglfo_language_font_group_get__document_alternate2_font(WGLFO_LanguageFontGroup *self, WGLFO_LanguageFont** value);
 
-/* Windows.Globalization.Fonts.ILanguageFont */
-/* Windows.Globalization.Fonts.ILanguageFontGroup */
 #endif /* CWINRT_WINDOWS_GLOBALIZATION_FONTS_H */

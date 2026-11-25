@@ -12,7 +12,6 @@
 #include <cwinrt/Windows.Foundation.Collections.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WUIUI_AutomationConnectionBoundObject WUIUI_AutomationConnectionBoundObject;
 typedef struct WUIUI_AutomationConnection WUIUI_AutomationConnection;
 typedef struct WUIUI_AutomationTextRange WUIUI_AutomationTextRange;
@@ -22,7 +21,6 @@ typedef struct WUIUI_IAutomationConnection WUIUI_IAutomationConnection;
 typedef struct WUIUI_IAutomationTextRange WUIUI_IAutomationTextRange;
 typedef struct WUIUI_IAutomationElement WUIUI_IAutomationElement;
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -43,42 +41,24 @@ static const IID CWINRT_IID_WUIUI_IAutomationTextRange CWINRT_MAYBE_UNUSED = { 0
 static const IID CWINRT_IID_WUIUI_IAutomationElement CWINRT_MAYBE_UNUSED = { 0xA1898370, 0x2C07, 0x56FD, { 0x99, 0x3F, 0x61, 0xA7, 0x2A, 0x08, 0x05, 0x8C } };
 #endif
 
-/* Methods */
-
-/* activate Windows.UI.UIAutomation.AutomationConnectionBoundObject */
 HRESULT wuiui_automation_connection_bound_object_new(WUIUI_AutomationConnectionBoundObject **out);
 
-/* Windows.UI.UIAutomation.AutomationConnectionBoundObject */
-/* Windows.UI.UIAutomation.AutomationConnectionBoundObject.get_Connection() */
 HRESULT wuiui_automation_connection_bound_object_get__connection(WUIUI_AutomationConnectionBoundObject *self, WUIUI_AutomationConnection** value);
 
-/* activate Windows.UI.UIAutomation.AutomationConnection */
 HRESULT wuiui_automation_connection_new(WUIUI_AutomationConnection **out);
 
-/* Windows.UI.UIAutomation.AutomationConnection */
-/* Windows.UI.UIAutomation.AutomationConnection.get_IsRemoteSystem() */
 HRESULT wuiui_automation_connection_get__is_remote_system(WUIUI_AutomationConnection *self, BOOL *value);
 
-/* Windows.UI.UIAutomation.AutomationConnection.get_AppUserModelId() */
 HRESULT wuiui_automation_connection_get__app_user_model_id(WUIUI_AutomationConnection *self, cwinrt_hstring *value);
 
-/* Windows.UI.UIAutomation.AutomationConnection.get_ExecutableFileName() */
 HRESULT wuiui_automation_connection_get__executable_file_name(WUIUI_AutomationConnection *self, cwinrt_hstring *value);
 
-/* activate Windows.UI.UIAutomation.AutomationElement */
 HRESULT wuiui_automation_element_new(WUIUI_AutomationElement **out);
 
-/* Windows.UI.UIAutomation.AutomationElement */
-/* Windows.UI.UIAutomation.AutomationElement.get_IsRemoteSystem() */
 HRESULT wuiui_automation_element_get__is_remote_system(WUIUI_AutomationElement *self, BOOL *value);
 
-/* Windows.UI.UIAutomation.AutomationElement.get_AppUserModelId() */
 HRESULT wuiui_automation_element_get__app_user_model_id(WUIUI_AutomationElement *self, cwinrt_hstring *value);
 
-/* Windows.UI.UIAutomation.AutomationElement.get_ExecutableFileName() */
 HRESULT wuiui_automation_element_get__executable_file_name(WUIUI_AutomationElement *self, cwinrt_hstring *value);
 
-/* Windows.UI.UIAutomation.IAutomationConnectionBoundObject */
-/* Windows.UI.UIAutomation.IAutomationConnection */
-/* Windows.UI.UIAutomation.IAutomationElement */
 #endif /* CWINRT_WINDOWS_UI_UIAUTOMATION_H */

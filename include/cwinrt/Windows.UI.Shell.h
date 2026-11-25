@@ -14,7 +14,6 @@
 #include <cwinrt/Windows.Graphics.Imaging.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WAPCO_AppListEntry
 #define CWINRT_FWD_WAPCO_AppListEntry
 typedef struct WAPCO_AppListEntry WAPCO_AppListEntry;
@@ -28,7 +27,6 @@ typedef struct WUIST_SecondaryTile WUIST_SecondaryTile;
 typedef struct WSTST_IRandomAccessStreamReference WSTST_IRandomAccessStreamReference;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUISH_WindowTabGroup WUISH_WindowTabGroup;
 typedef struct WUISH_WindowTabIcon WUISH_WindowTabIcon;
 typedef struct WUISH_WindowTabManager WUISH_WindowTabManager;
@@ -70,7 +68,6 @@ typedef struct WUISH_ITaskbarManager_2 WUISH_ITaskbarManager_2;
 typedef struct WUISH_IWindowTab WUISH_IWindowTab;
 typedef struct WUISH_ITaskbarManager WUISH_ITaskbarManager;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WF_Uri
 #define CWINRT_FWD_WF_Uri
 typedef struct WF_Uri WF_Uri;
@@ -174,7 +171,6 @@ typedef enum WUISH_ShareWindowCommand {
 } WUISH_ShareWindowCommand;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -275,57 +271,36 @@ static const IID CWINRT_IID_WUISH_IWindowTab CWINRT_MAYBE_UNUSED = { 0x551E776A,
 static const IID CWINRT_IID_WUISH_ITaskbarManager CWINRT_MAYBE_UNUSED = { 0x87490A19, 0x1AD9, 0x49F4, { 0xB2, 0xE8, 0x86, 0x73, 0x8D, 0xC5, 0xAC, 0x40 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.UI.Shell.WindowTabGroup */
 HRESULT wuish_window_tab_group_new(WUISH_WindowTabGroup **out);
 
-/* Windows.UI.Shell.WindowTabGroup */
-/* Windows.UI.Shell.WindowTabGroup.get_Title() */
 HRESULT wuish_window_tab_group_get__title(WUISH_WindowTabGroup *self, cwinrt_hstring *value);
 
-/* Windows.UI.Shell.WindowTabGroup.put_Title() */
 HRESULT wuish_window_tab_group_put__title(WUISH_WindowTabGroup *self, cwinrt_hstring value);
 
-/* Windows.UI.Shell.WindowTabGroup.get_Icon() */
 HRESULT wuish_window_tab_group_get__icon(WUISH_WindowTabGroup *self, WUISH_WindowTabIcon** value);
 
-/* Windows.UI.Shell.WindowTabGroup.put_Icon() */
 HRESULT wuish_window_tab_group_put__icon(WUISH_WindowTabGroup *self, WUISH_WindowTabIcon* value);
 
-/* activate Windows.UI.Shell.WindowTabIcon */
 HRESULT wuish_window_tab_icon_new(WUISH_WindowTabIcon **out);
 
-/* Windows.UI.Shell.WindowTabIcon */
-/* Windows.UI.Shell.WindowTabIcon.CreateFromFontGlyph(glyph, fontFamily) */
 HRESULT wuish_window_tab_icon_create_from_font_glyph(cwinrt_hstring glyph, cwinrt_hstring fontFamily, WUISH_WindowTabIcon** out);
 
-/* Windows.UI.Shell.WindowTabIcon.CreateFromFontGlyph(glyph, fontFamily, fontUri) */
 HRESULT wuish_window_tab_icon_create_from_font_glyph_str_str_p_p(cwinrt_hstring glyph, cwinrt_hstring fontFamily, WF_Uri* fontUri, WUISH_WindowTabIcon** out);
 
-/* Windows.UI.Shell.WindowTabIcon.CreateFromImage(image) */
 HRESULT wuish_window_tab_icon_create_from_image(WSTST_IRandomAccessStreamReference* image, WUISH_WindowTabIcon** out);
 
-/* activate Windows.UI.Shell.WindowTabManager */
 HRESULT wuish_window_tab_manager_new(WUISH_WindowTabManager **out);
 
-/* Windows.UI.Shell.WindowTabManager */
-/* Windows.UI.Shell.WindowTabManager.get_Tabs() */
 HRESULT wuish_window_tab_manager_get__tabs(WUISH_WindowTabManager *self, WUISH_WindowTabCollection** value);
 
-/* Windows.UI.Shell.WindowTabManager.SetActiveTab(tab) */
 HRESULT wuish_window_tab_manager_set_active_tab(WUISH_WindowTabManager *self, WUISH_WindowTab* tab);
 
-/* Windows.UI.Shell.WindowTabManager.GetForWindow(id) */
 HRESULT wuish_window_tab_manager_get_for_window(WUI_WindowId id, WUISH_WindowTabManager** out);
 
-/* Windows.UI.Shell.WindowTabManager.IsSupported() */
 HRESULT wuish_window_tab_manager_is_supported(BOOL *out);
 
-/* Windows.UI.Shell.WindowTabManager.IsTabTearOutSupported() */
 HRESULT wuish_window_tab_manager_is_tab_tear_out_supported(BOOL *out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuish_window_tab_manager_on_tab_switch_requested(WUISH_WindowTabManager *self, cwinrt_event_fn fn, void *ctx);
@@ -340,238 +315,149 @@ void wuish_window_tab_manager_off_tab_tear_out_requested(WUISH_WindowTabManager 
 cwinrt_token wuish_window_tab_manager_on_tab_thumbnail_requested(WUISH_WindowTabManager *self, cwinrt_event_fn fn, void *ctx);
 void wuish_window_tab_manager_off_tab_thumbnail_requested(WUISH_WindowTabManager *self, cwinrt_token token);
 
-/* activate Windows.UI.Shell.WindowTabCollection */
 HRESULT wuish_window_tab_collection_new(WUISH_WindowTabCollection **out);
 
-/* Windows.UI.Shell.WindowTabCollection */
-/* Windows.UI.Shell.WindowTabCollection.MoveTab(tab, index) */
 HRESULT wuish_window_tab_collection_move_tab(WUISH_WindowTabCollection *self, WUISH_WindowTab* tab, uint32_t index);
 
-/* Windows.UI.Shell.WindowTabCollection.GetAt(index) */
 HRESULT wuish_window_tab_collection_get_at(WUISH_WindowTabCollection *self, uint32_t index, WUISH_WindowTab** out);
 
-/* Windows.UI.Shell.WindowTabCollection.get_Size() */
 HRESULT wuish_window_tab_collection_get__size(WUISH_WindowTabCollection *self, uint32_t *value);
 
-/* Windows.UI.Shell.WindowTabCollection.GetView() */
 HRESULT wuish_window_tab_collection_get_view(WUISH_WindowTabCollection *self, WFOCO_IVectorView_WUISH_WindowTab** out);
 
-/* Windows.UI.Shell.WindowTabCollection.IndexOf(index) */
 HRESULT wuish_window_tab_collection_index_of(WUISH_WindowTabCollection *self, WUISH_WindowTab* value, uint32_t index, BOOL *out);
 
-/* Windows.UI.Shell.WindowTabCollection.SetAt(index) */
 HRESULT wuish_window_tab_collection_set_at(WUISH_WindowTabCollection *self, uint32_t index, WUISH_WindowTab* value);
 
-/* Windows.UI.Shell.WindowTabCollection.InsertAt(index) */
 HRESULT wuish_window_tab_collection_insert_at(WUISH_WindowTabCollection *self, uint32_t index, WUISH_WindowTab* value);
 
-/* Windows.UI.Shell.WindowTabCollection.RemoveAt(index) */
 HRESULT wuish_window_tab_collection_remove_at(WUISH_WindowTabCollection *self, uint32_t index);
 
-/* Windows.UI.Shell.WindowTabCollection.Append() */
 HRESULT wuish_window_tab_collection_append(WUISH_WindowTabCollection *self, WUISH_WindowTab* value);
 
-/* Windows.UI.Shell.WindowTabCollection.RemoveAtEnd() */
 HRESULT wuish_window_tab_collection_remove_at_end(WUISH_WindowTabCollection *self);
 
-/* Windows.UI.Shell.WindowTabCollection.Clear() */
 HRESULT wuish_window_tab_collection_clear(WUISH_WindowTabCollection *self);
 
-/* Windows.UI.Shell.WindowTabCollection.GetMany(startIndex, items) */
 HRESULT wuish_window_tab_collection_get_many(WUISH_WindowTabCollection *self, uint32_t startIndex, WUISH_WindowTab *items, uint32_t items_len, uint32_t *out);
 
-/* Windows.UI.Shell.WindowTabCollection.ReplaceAll(items) */
 HRESULT wuish_window_tab_collection_replace_all(WUISH_WindowTabCollection *self, WUISH_WindowTab *items, uint32_t items_len);
 
-/* Windows.UI.Shell.WindowTabCollection.First() */
 HRESULT wuish_window_tab_collection_first(WUISH_WindowTabCollection *self, WFOCO_IIterator_WUISH_WindowTab** out);
 
-/* activate Windows.UI.Shell.WindowTabSwitchRequestedEventArgs */
 HRESULT wuish_window_tab_switch_requested_event_args_new(WUISH_WindowTabSwitchRequestedEventArgs **out);
 
-/* Windows.UI.Shell.WindowTabSwitchRequestedEventArgs */
-/* Windows.UI.Shell.WindowTabSwitchRequestedEventArgs.get_Tab() */
 HRESULT wuish_window_tab_switch_requested_event_args_get__tab(WUISH_WindowTabSwitchRequestedEventArgs *self, WUISH_WindowTab** value);
 
-/* activate Windows.UI.Shell.WindowTabTearOutRequestedEventArgs */
 HRESULT wuish_window_tab_tear_out_requested_event_args_new(WUISH_WindowTabTearOutRequestedEventArgs **out);
 
-/* Windows.UI.Shell.WindowTabTearOutRequestedEventArgs */
-/* Windows.UI.Shell.WindowTabTearOutRequestedEventArgs.get_Tab() */
 HRESULT wuish_window_tab_tear_out_requested_event_args_get__tab(WUISH_WindowTabTearOutRequestedEventArgs *self, WUISH_WindowTab** value);
 
-/* Windows.UI.Shell.WindowTabTearOutRequestedEventArgs.get_WindowId() */
 HRESULT wuish_window_tab_tear_out_requested_event_args_get__window_id(WUISH_WindowTabTearOutRequestedEventArgs *self, uint64_t *value);
 
-/* Windows.UI.Shell.WindowTabTearOutRequestedEventArgs.put_WindowId() */
 HRESULT wuish_window_tab_tear_out_requested_event_args_put__window_id(WUISH_WindowTabTearOutRequestedEventArgs *self, uint64_t value);
 
-/* Windows.UI.Shell.WindowTabTearOutRequestedEventArgs.GetDeferral() */
 HRESULT wuish_window_tab_tear_out_requested_event_args_get_deferral(WUISH_WindowTabTearOutRequestedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs */
 HRESULT wuish_window_tab_thumbnail_requested_event_args_new(WUISH_WindowTabThumbnailRequestedEventArgs **out);
 
-/* Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs */
-/* Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs.get_Tab() */
 HRESULT wuish_window_tab_thumbnail_requested_event_args_get__tab(WUISH_WindowTabThumbnailRequestedEventArgs *self, WUISH_WindowTab** value);
 
-/* Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs.get_RequestedSize() */
 HRESULT wuish_window_tab_thumbnail_requested_event_args_get__requested_size(WUISH_WindowTabThumbnailRequestedEventArgs *self, WGRIM_BitmapSize *value);
 
-/* Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs.get_Image() */
 HRESULT wuish_window_tab_thumbnail_requested_event_args_get__image(WUISH_WindowTabThumbnailRequestedEventArgs *self, WSTST_IRandomAccessStreamReference** value);
 
-/* Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs.put_Image() */
 HRESULT wuish_window_tab_thumbnail_requested_event_args_put__image(WUISH_WindowTabThumbnailRequestedEventArgs *self, WSTST_IRandomAccessStreamReference* value);
 
-/* Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs.GetDeferral() */
 HRESULT wuish_window_tab_thumbnail_requested_event_args_get_deferral(WUISH_WindowTabThumbnailRequestedEventArgs *self, WF_Deferral** out);
 
-/* Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs.get_IsCompositedOnWindow() */
 HRESULT wuish_window_tab_thumbnail_requested_event_args_get__is_composited_on_window(WUISH_WindowTabThumbnailRequestedEventArgs *self, BOOL *value);
 
-/* activate Windows.UI.Shell.FocusSession */
 HRESULT wuish_focus_session_new(WUISH_FocusSession **out);
 
-/* Windows.UI.Shell.FocusSession */
-/* Windows.UI.Shell.FocusSession.get_Id() */
 HRESULT wuish_focus_session_get__id(WUISH_FocusSession *self, cwinrt_hstring *value);
 
-/* Windows.UI.Shell.FocusSession.End() */
 HRESULT wuish_focus_session_end(WUISH_FocusSession *self);
 
-/* activate Windows.UI.Shell.FocusSessionManager */
 HRESULT wuish_focus_session_manager_new(WUISH_FocusSessionManager **out);
 
-/* Windows.UI.Shell.FocusSessionManager */
-/* Windows.UI.Shell.FocusSessionManager.get_IsFocusActive() */
 HRESULT wuish_focus_session_manager_get__is_focus_active(WUISH_FocusSessionManager *self, BOOL *value);
 
-/* Windows.UI.Shell.FocusSessionManager.GetSession(id) */
 HRESULT wuish_focus_session_manager_get_session(WUISH_FocusSessionManager *self, cwinrt_hstring id, WUISH_FocusSession** out);
 
-/* Windows.UI.Shell.FocusSessionManager.TryStartFocusSession() */
 HRESULT wuish_focus_session_manager_try_start_focus_session(WUISH_FocusSessionManager *self, WUISH_FocusSession** out);
 
-/* Windows.UI.Shell.FocusSessionManager.TryStartFocusSession(endTime) */
 HRESULT wuish_focus_session_manager_try_start_focus_session_date_time_p(WUISH_FocusSessionManager *self, WF_DateTime endTime, WUISH_FocusSession** out);
 
-/* Windows.UI.Shell.FocusSessionManager.DeactivateFocus() */
 HRESULT wuish_focus_session_manager_deactivate_focus(WUISH_FocusSessionManager *self);
 
-/* Windows.UI.Shell.FocusSessionManager.GetDefault() */
 HRESULT wuish_focus_session_manager_get_default(WUISH_FocusSessionManager** out);
 
-/* Windows.UI.Shell.FocusSessionManager.get_IsSupported() */
 HRESULT wuish_focus_session_manager_get__is_supported(BOOL *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuish_focus_session_manager_on_is_focus_active_changed(WUISH_FocusSessionManager *self, cwinrt_event_fn fn, void *ctx);
 void wuish_focus_session_manager_off_is_focus_active_changed(WUISH_FocusSessionManager *self, cwinrt_token token);
 
-/* Windows.UI.Shell.IAdaptiveCard */
-/* Windows.UI.Shell.IAdaptiveCard.ToJson() */
 HRESULT wuish_adaptive_card_to_json(WUISH_IAdaptiveCard *self, cwinrt_hstring *out);
 
-/* Windows.UI.Shell.IAdaptiveCardBuilderStatics */
-/* Windows.UI.Shell.IAdaptiveCardBuilderStatics.CreateAdaptiveCardFromJson() */
 HRESULT wuish_adaptive_card_builder_statics_create_adaptive_card_from_json(WUISH_IAdaptiveCardBuilderStatics *self, cwinrt_hstring value, WUISH_IAdaptiveCard** out);
 
-/* activate Windows.UI.Shell.WindowTabCloseRequestedEventArgs */
 HRESULT wuish_window_tab_close_requested_event_args_new(WUISH_WindowTabCloseRequestedEventArgs **out);
 
-/* Windows.UI.Shell.WindowTabCloseRequestedEventArgs */
-/* Windows.UI.Shell.WindowTabCloseRequestedEventArgs.get_Tab() */
 HRESULT wuish_window_tab_close_requested_event_args_get__tab(WUISH_WindowTabCloseRequestedEventArgs *self, WUISH_WindowTab** value);
 
-/* Windows.UI.Shell.IFocusSessionManagerStatics */
-/* Windows.UI.Shell.IFocusSessionManagerStatics.GetDefault() */
 HRESULT wuish_focus_session_manager_statics_get_default(WUISH_IFocusSessionManagerStatics *self, WUISH_FocusSessionManager** out);
 
-/* Windows.UI.Shell.IFocusSessionManagerStatics.get_IsSupported() */
 HRESULT wuish_focus_session_manager_statics_get__is_supported(WUISH_IFocusSessionManagerStatics *self, BOOL *value);
 
-/* activate Windows.UI.Shell.AdaptiveCardBuilder */
 HRESULT wuish_adaptive_card_builder_new(WUISH_AdaptiveCardBuilder **out);
 
-/* Windows.UI.Shell.AdaptiveCardBuilder */
-/* Windows.UI.Shell.AdaptiveCardBuilder.CreateAdaptiveCardFromJson() */
 HRESULT wuish_adaptive_card_builder_create_adaptive_card_from_json(cwinrt_hstring value, WUISH_IAdaptiveCard** out);
 
-/* Windows.UI.Shell.IShareWindowCommandSourceStatics */
-/* Windows.UI.Shell.IShareWindowCommandSourceStatics.GetForCurrentView() */
 HRESULT wuish_share_window_command_source_statics_get_for_current_view(WUISH_IShareWindowCommandSourceStatics *self, WUISH_ShareWindowCommandSource** out);
 
-/* Windows.UI.Shell.ITaskbarManagerStatics */
-/* Windows.UI.Shell.ITaskbarManagerStatics.GetDefault() */
 HRESULT wuish_taskbar_manager_statics_get_default(WUISH_ITaskbarManagerStatics *self, WUISH_TaskbarManager** out);
 
-/* Windows.UI.Shell.IWindowTabIconStatics */
-/* Windows.UI.Shell.IWindowTabIconStatics.CreateFromFontGlyph(glyph, fontFamily) */
 HRESULT wuish_window_tab_icon_statics_create_from_font_glyph(WUISH_IWindowTabIconStatics *self, cwinrt_hstring glyph, cwinrt_hstring fontFamily, WUISH_WindowTabIcon** out);
 
-/* Windows.UI.Shell.IWindowTabIconStatics.CreateFromFontGlyph(glyph, fontFamily, fontUri) */
 HRESULT wuish_window_tab_icon_statics_create_from_font_glyph_str_str_p_p(WUISH_IWindowTabIconStatics *self, cwinrt_hstring glyph, cwinrt_hstring fontFamily, WF_Uri* fontUri, WUISH_WindowTabIcon** out);
 
-/* Windows.UI.Shell.IWindowTabIconStatics.CreateFromImage(image) */
 HRESULT wuish_window_tab_icon_statics_create_from_image(WUISH_IWindowTabIconStatics *self, WSTST_IRandomAccessStreamReference* image, WUISH_WindowTabIcon** out);
 
-/* Windows.UI.Shell.IWindowTabManagerStatics */
-/* Windows.UI.Shell.IWindowTabManagerStatics.GetForWindow(id) */
 HRESULT wuish_window_tab_manager_statics_get_for_window(WUISH_IWindowTabManagerStatics *self, WUI_WindowId id, WUISH_WindowTabManager** out);
 
-/* Windows.UI.Shell.IWindowTabManagerStatics.IsSupported() */
 HRESULT wuish_window_tab_manager_statics_is_supported(WUISH_IWindowTabManagerStatics *self, BOOL *out);
 
-/* Windows.UI.Shell.IWindowTabManagerStatics.IsTabTearOutSupported() */
 HRESULT wuish_window_tab_manager_statics_is_tab_tear_out_supported(WUISH_IWindowTabManagerStatics *self, BOOL *out);
 
-/* activate Windows.UI.Shell.SecurityAppManager */
 HRESULT wuish_security_app_manager_new(WUISH_SecurityAppManager **out);
 
-/* Windows.UI.Shell.SecurityAppManager */
-/* Windows.UI.Shell.SecurityAppManager.Register(kind, displayName, detailsUri, registerPerUser) */
 HRESULT wuish_security_app_manager_register(WUISH_SecurityAppManager *self, WUISH_SecurityAppKind kind, cwinrt_hstring displayName, WF_Uri* detailsUri, BOOL registerPerUser, GUID *out);
 
-/* Windows.UI.Shell.SecurityAppManager.Unregister(kind, guidRegistration) */
 HRESULT wuish_security_app_manager_unregister(WUISH_SecurityAppManager *self, WUISH_SecurityAppKind kind, GUID guidRegistration);
 
-/* Windows.UI.Shell.SecurityAppManager.UpdateState(kind, guidRegistration, state, substatus, detailsUri) */
 HRESULT wuish_security_app_manager_update_state(WUISH_SecurityAppManager *self, WUISH_SecurityAppKind kind, GUID guidRegistration, WUISH_SecurityAppState state, WUISH_SecurityAppSubstatus substatus, WF_Uri* detailsUri);
 
-/* activate Windows.UI.Shell.ShareWindowCommandEventArgs */
 HRESULT wuish_share_window_command_event_args_new(WUISH_ShareWindowCommandEventArgs **out);
 
-/* Windows.UI.Shell.ShareWindowCommandEventArgs */
-/* Windows.UI.Shell.ShareWindowCommandEventArgs.get_WindowId() */
 HRESULT wuish_share_window_command_event_args_get__window_id(WUISH_ShareWindowCommandEventArgs *self, WUI_WindowId *value);
 
-/* Windows.UI.Shell.ShareWindowCommandEventArgs.get_Command() */
 HRESULT wuish_share_window_command_event_args_get__command(WUISH_ShareWindowCommandEventArgs *self, WUISH_ShareWindowCommand *value);
 
-/* Windows.UI.Shell.ShareWindowCommandEventArgs.put_Command() */
 HRESULT wuish_share_window_command_event_args_put__command(WUISH_ShareWindowCommandEventArgs *self, WUISH_ShareWindowCommand value);
 
-/* activate Windows.UI.Shell.ShareWindowCommandSource */
 HRESULT wuish_share_window_command_source_new(WUISH_ShareWindowCommandSource **out);
 
-/* Windows.UI.Shell.ShareWindowCommandSource */
-/* Windows.UI.Shell.ShareWindowCommandSource.Start() */
 HRESULT wuish_share_window_command_source_start(WUISH_ShareWindowCommandSource *self);
 
-/* Windows.UI.Shell.ShareWindowCommandSource.Stop() */
 HRESULT wuish_share_window_command_source_stop(WUISH_ShareWindowCommandSource *self);
 
-/* Windows.UI.Shell.ShareWindowCommandSource.ReportCommandChanged() */
 HRESULT wuish_share_window_command_source_report_command_changed(WUISH_ShareWindowCommandSource *self);
 
-/* Windows.UI.Shell.ShareWindowCommandSource.GetForCurrentView() */
 HRESULT wuish_share_window_command_source_get_for_current_view(WUISH_ShareWindowCommandSource** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wuish_share_window_command_source_on_command_requested(WUISH_ShareWindowCommandSource *self, cwinrt_event_fn fn, void *ctx);
@@ -580,99 +466,56 @@ void wuish_share_window_command_source_off_command_requested(WUISH_ShareWindowCo
 cwinrt_token wuish_share_window_command_source_on_command_invoked(WUISH_ShareWindowCommandSource *self, cwinrt_event_fn fn, void *ctx);
 void wuish_share_window_command_source_off_command_invoked(WUISH_ShareWindowCommandSource *self, cwinrt_token token);
 
-/* activate Windows.UI.Shell.TaskbarManager */
 HRESULT wuish_taskbar_manager_new(WUISH_TaskbarManager **out);
 
-/* Windows.UI.Shell.TaskbarManager */
-/* Windows.UI.Shell.TaskbarManager.get_IsSupported() */
 HRESULT wuish_taskbar_manager_get__is_supported(WUISH_TaskbarManager *self, BOOL *value);
 
-/* Windows.UI.Shell.TaskbarManager.get_IsPinningAllowed() */
 HRESULT wuish_taskbar_manager_get__is_pinning_allowed(WUISH_TaskbarManager *self, BOOL *value);
 
-/* Windows.UI.Shell.TaskbarManager.IsCurrentAppPinnedAsync() */
 HRESULT wuish_taskbar_manager_is_current_app_pinned_async(WUISH_TaskbarManager *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Shell.TaskbarManager.IsAppListEntryPinnedAsync(appListEntry) */
 HRESULT wuish_taskbar_manager_is_app_list_entry_pinned_async(WUISH_TaskbarManager *self, WAPCO_AppListEntry* appListEntry, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Shell.TaskbarManager.RequestPinCurrentAppAsync() */
 HRESULT wuish_taskbar_manager_request_pin_current_app_async(WUISH_TaskbarManager *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Shell.TaskbarManager.RequestPinAppListEntryAsync(appListEntry) */
 HRESULT wuish_taskbar_manager_request_pin_app_list_entry_async(WUISH_TaskbarManager *self, WAPCO_AppListEntry* appListEntry, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Shell.TaskbarManager.IsSecondaryTilePinnedAsync(tileId) */
 HRESULT wuish_taskbar_manager_is_secondary_tile_pinned_async(WUISH_TaskbarManager *self, cwinrt_hstring tileId, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Shell.TaskbarManager.RequestPinSecondaryTileAsync(secondaryTile) */
 HRESULT wuish_taskbar_manager_request_pin_secondary_tile_async(WUISH_TaskbarManager *self, WUIST_SecondaryTile* secondaryTile, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Shell.TaskbarManager.TryUnpinSecondaryTileAsync(tileId) */
 HRESULT wuish_taskbar_manager_try_unpin_secondary_tile_async(WUISH_TaskbarManager *self, cwinrt_hstring tileId, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Shell.TaskbarManager.GetDefault() */
 HRESULT wuish_taskbar_manager_get_default(WUISH_TaskbarManager** out);
 
-/* activate Windows.UI.Shell.WindowTab */
 HRESULT wuish_window_tab_new(WUISH_WindowTab **out);
 
-/* Windows.UI.Shell.WindowTab */
-/* Windows.UI.Shell.WindowTab.get_Tag() */
 HRESULT wuish_window_tab_get__tag(WUISH_WindowTab *self, IInspectable** value);
 
-/* Windows.UI.Shell.WindowTab.put_Tag() */
 HRESULT wuish_window_tab_put__tag(WUISH_WindowTab *self, IInspectable* value);
 
-/* Windows.UI.Shell.WindowTab.get_Title() */
 HRESULT wuish_window_tab_get__title(WUISH_WindowTab *self, cwinrt_hstring *value);
 
-/* Windows.UI.Shell.WindowTab.put_Title() */
 HRESULT wuish_window_tab_put__title(WUISH_WindowTab *self, cwinrt_hstring value);
 
-/* Windows.UI.Shell.WindowTab.get_Icon() */
 HRESULT wuish_window_tab_get__icon(WUISH_WindowTab *self, WUISH_WindowTabIcon** value);
 
-/* Windows.UI.Shell.WindowTab.put_Icon() */
 HRESULT wuish_window_tab_put__icon(WUISH_WindowTab *self, WUISH_WindowTabIcon* value);
 
-/* Windows.UI.Shell.WindowTab.get_TreatAsSecondaryTileId() */
 HRESULT wuish_window_tab_get__treat_as_secondary_tile_id(WUISH_WindowTab *self, cwinrt_hstring *value);
 
-/* Windows.UI.Shell.WindowTab.put_TreatAsSecondaryTileId() */
 HRESULT wuish_window_tab_put__treat_as_secondary_tile_id(WUISH_WindowTab *self, cwinrt_hstring value);
 
-/* Windows.UI.Shell.WindowTab.get_Group() */
 HRESULT wuish_window_tab_get__group(WUISH_WindowTab *self, WUISH_WindowTabGroup** value);
 
-/* Windows.UI.Shell.WindowTab.put_Group() */
 HRESULT wuish_window_tab_put__group(WUISH_WindowTab *self, WUISH_WindowTabGroup* value);
 
-/* Windows.UI.Shell.WindowTab.ReportThumbnailAvailable() */
 HRESULT wuish_window_tab_report_thumbnail_available(WUISH_WindowTab *self);
 
-/* Windows.UI.Shell.IWindowTabGroup */
-/* Windows.UI.Shell.IWindowTabManager */
-/* Windows.UI.Shell.IWindowTabCollection */
-/* Windows.UI.Shell.IWindowTabSwitchRequestedEventArgs */
-/* Windows.UI.Shell.IWindowTabTearOutRequestedEventArgs */
-/* Windows.UI.Shell.IWindowTabThumbnailRequestedEventArgs */
-/* Windows.UI.Shell.IFocusSession */
-/* Windows.UI.Shell.IFocusSessionManager */
-/* Windows.UI.Shell.IWindowTabCloseRequestedEventArgs */
-/* Windows.UI.Shell.ISecurityAppManager */
-/* Windows.UI.Shell.IShareWindowCommandEventArgs */
-/* Windows.UI.Shell.IShareWindowCommandSource */
-/* Windows.UI.Shell.ITaskbarManager2 */
-/* Windows.UI.Shell.ITaskbarManager2.IsSecondaryTilePinnedAsync(tileId) */
 HRESULT wuish_taskbar_manager_2_is_secondary_tile_pinned_async(WUISH_ITaskbarManager_2 *self, cwinrt_hstring tileId, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Shell.ITaskbarManager2.RequestPinSecondaryTileAsync(secondaryTile) */
 HRESULT wuish_taskbar_manager_2_request_pin_secondary_tile_async(WUISH_ITaskbarManager_2 *self, WUIST_SecondaryTile* secondaryTile, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Shell.ITaskbarManager2.TryUnpinSecondaryTileAsync(tileId) */
 HRESULT wuish_taskbar_manager_2_try_unpin_secondary_tile_async(WUISH_ITaskbarManager_2 *self, cwinrt_hstring tileId, WF_IAsyncOperation_Bool** out);
 
-/* Windows.UI.Shell.IWindowTab */
-/* Windows.UI.Shell.ITaskbarManager */
 #endif /* CWINRT_WINDOWS_UI_SHELL_H */

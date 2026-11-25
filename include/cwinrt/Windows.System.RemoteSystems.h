@@ -13,7 +13,6 @@
 #include <cwinrt/Windows.System.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WAPAP_AppServiceConnection
 #define CWINRT_FWD_WAPAP_AppServiceConnection
 typedef struct WAPAP_AppServiceConnection WAPAP_AppServiceConnection;
@@ -27,7 +26,6 @@ typedef struct WNE_HostName WNE_HostName;
 typedef struct WSECR_WebAccount WSECR_WebAccount;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WSYRE_IRemoteSystemConnectionRequestStatics_2 WSYRE_IRemoteSystemConnectionRequestStatics_2;
 typedef struct WSYRE_IRemoteSystemDiscoveryTypeFilterFactory WSYRE_IRemoteSystemDiscoveryTypeFilterFactory;
 typedef struct WSYRE_IRemoteSystemKindFilterFactory WSYRE_IRemoteSystemKindFilterFactory;
@@ -137,7 +135,6 @@ typedef struct WSYRE_IRemoteSystemWebAccountFilter WSYRE_IRemoteSystemWebAccount
 typedef struct WSYRE_IRemoteSystemFilter WSYRE_IRemoteSystemFilter;
 typedef struct WSYRE_IRemoteSystemSessionInvitation WSYRE_IRemoteSystemSessionInvitation;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WSY_User
 #define CWINRT_FWD_WSY_User
 typedef struct WSY_User WSY_User;
@@ -403,7 +400,6 @@ typedef enum WSYRE_RemoteSystemWatcherError {
 } WSYRE_RemoteSystemWatcherError;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -680,520 +676,322 @@ static const IID CWINRT_IID_WSYRE_IRemoteSystemFilter CWINRT_MAYBE_UNUSED = { 0x
 static const IID CWINRT_IID_WSYRE_IRemoteSystemSessionInvitation CWINRT_MAYBE_UNUSED = { 0x3E32CC91, 0x51D7, 0x4766, { 0xA1, 0x21, 0x25, 0x51, 0x6C, 0x3B, 0x82, 0x94 } };
 #endif
 
-/* Methods */
-
-/* Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics2 */
-/* Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics2.CreateFromConnectionToken(connectionToken) */
 HRESULT wsyre_remote_system_connection_request_statics_2_create_from_connection_token(WSYRE_IRemoteSystemConnectionRequestStatics_2 *self, cwinrt_hstring connectionToken, WSYRE_RemoteSystemConnectionRequest** out);
 
-/* Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics2.CreateFromConnectionTokenForUser(user, connectionToken) */
 HRESULT wsyre_remote_system_connection_request_statics_2_create_from_connection_token_for_user(WSYRE_IRemoteSystemConnectionRequestStatics_2 *self, WSY_User* user, cwinrt_hstring connectionToken, WSYRE_RemoteSystemConnectionRequest** out);
 
-/* Windows.System.RemoteSystems.IRemoteSystemDiscoveryTypeFilterFactory */
-/* Windows.System.RemoteSystems.IRemoteSystemDiscoveryTypeFilterFactory.Create(discoveryType) */
 HRESULT wsyre_remote_system_discovery_type_filter_factory_create(WSYRE_IRemoteSystemDiscoveryTypeFilterFactory *self, WSYRE_RemoteSystemDiscoveryType discoveryType, WSYRE_RemoteSystemDiscoveryTypeFilter** out);
 
-/* Windows.System.RemoteSystems.IRemoteSystemKindFilterFactory */
-/* Windows.System.RemoteSystems.IRemoteSystemKindFilterFactory.Create(remoteSystemKinds) */
 HRESULT wsyre_remote_system_kind_filter_factory_create(WSYRE_IRemoteSystemKindFilterFactory *self, WFOCO_IIterable_HSTRING* remoteSystemKinds, WSYRE_RemoteSystemKindFilter** out);
 
-/* Windows.System.RemoteSystems.IRemoteSystemKindStatics */
-/* Windows.System.RemoteSystems.IRemoteSystemKindStatics.get_Phone() */
 HRESULT wsyre_remote_system_kind_statics_get__phone(WSYRE_IRemoteSystemKindStatics *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.IRemoteSystemKindStatics.get_Hub() */
 HRESULT wsyre_remote_system_kind_statics_get__hub(WSYRE_IRemoteSystemKindStatics *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.IRemoteSystemKindStatics.get_Holographic() */
 HRESULT wsyre_remote_system_kind_statics_get__holographic(WSYRE_IRemoteSystemKindStatics *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.IRemoteSystemKindStatics.get_Desktop() */
 HRESULT wsyre_remote_system_kind_statics_get__desktop(WSYRE_IRemoteSystemKindStatics *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.IRemoteSystemKindStatics.get_Xbox() */
 HRESULT wsyre_remote_system_kind_statics_get__xbox(WSYRE_IRemoteSystemKindStatics *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.IRemoteSystemKindStatics2 */
-/* Windows.System.RemoteSystems.IRemoteSystemKindStatics2.get_Iot() */
 HRESULT wsyre_remote_system_kind_statics_2_get__iot(WSYRE_IRemoteSystemKindStatics_2 *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.IRemoteSystemKindStatics2.get_Tablet() */
 HRESULT wsyre_remote_system_kind_statics_2_get__tablet(WSYRE_IRemoteSystemKindStatics_2 *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.IRemoteSystemKindStatics2.get_Laptop() */
 HRESULT wsyre_remote_system_kind_statics_2_get__laptop(WSYRE_IRemoteSystemKindStatics_2 *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.IRemoteSystemSessionControllerFactory */
-/* Windows.System.RemoteSystems.IRemoteSystemSessionControllerFactory.CreateController(displayName) */
 HRESULT wsyre_remote_system_session_controller_factory_create_controller(WSYRE_IRemoteSystemSessionControllerFactory *self, cwinrt_hstring displayName, WSYRE_RemoteSystemSessionController** out);
 
-/* Windows.System.RemoteSystems.IRemoteSystemSessionControllerFactory.CreateController(displayName, options) */
 HRESULT wsyre_remote_system_session_controller_factory_create_controller_str_p_p(WSYRE_IRemoteSystemSessionControllerFactory *self, cwinrt_hstring displayName, WSYRE_RemoteSystemSessionOptions* options, WSYRE_RemoteSystemSessionController** out);
 
-/* Windows.System.RemoteSystems.IRemoteSystemSessionMessageChannelFactory */
-/* Windows.System.RemoteSystems.IRemoteSystemSessionMessageChannelFactory.Create(session, channelName) */
 HRESULT wsyre_remote_system_session_message_channel_factory_create(WSYRE_IRemoteSystemSessionMessageChannelFactory *self, WSYRE_RemoteSystemSession* session, cwinrt_hstring channelName, WSYRE_RemoteSystemSessionMessageChannel** out);
 
-/* Windows.System.RemoteSystems.IRemoteSystemSessionMessageChannelFactory.Create(session, channelName, reliability) */
 HRESULT wsyre_remote_system_session_message_channel_factory_create_p_str_remote_system_session_message__ac0d7b75(WSYRE_IRemoteSystemSessionMessageChannelFactory *self, WSYRE_RemoteSystemSession* session, cwinrt_hstring channelName, WSYRE_RemoteSystemSessionMessageChannelReliability reliability, WSYRE_RemoteSystemSessionMessageChannel** out);
 
-/* Windows.System.RemoteSystems.IRemoteSystemSessionStatics */
-/* Windows.System.RemoteSystems.IRemoteSystemSessionStatics.CreateWatcher() */
 HRESULT wsyre_remote_system_session_statics_create_watcher(WSYRE_IRemoteSystemSessionStatics *self, WSYRE_RemoteSystemSessionWatcher** out);
 
-/* Windows.System.RemoteSystems.IRemoteSystemStatics */
-/* Windows.System.RemoteSystems.IRemoteSystemStatics.FindByHostNameAsync(hostName) */
 HRESULT wsyre_remote_system_statics_find_by_host_name_async(WSYRE_IRemoteSystemStatics *self, WNE_HostName* hostName, WF_IAsyncOperation_WSYRE_RemoteSystem** out);
 
-/* Windows.System.RemoteSystems.IRemoteSystemStatics.CreateWatcher() */
 HRESULT wsyre_remote_system_statics_create_watcher(WSYRE_IRemoteSystemStatics *self, WSYRE_RemoteSystemWatcher** out);
 
-/* Windows.System.RemoteSystems.IRemoteSystemStatics.CreateWatcher(filters) */
 HRESULT wsyre_remote_system_statics_create_watcher_p_p(WSYRE_IRemoteSystemStatics *self, WFOCO_IIterable_WSYRE_IRemoteSystemFilter* filters, WSYRE_RemoteSystemWatcher** out);
 
-/* Windows.System.RemoteSystems.IRemoteSystemStatics.RequestAccessAsync() */
 HRESULT wsyre_remote_system_statics_request_access_async(WSYRE_IRemoteSystemStatics *self, WF_IAsyncOperation_WSYRE_RemoteSystemAccessStatus** out);
 
-/* Windows.System.RemoteSystems.IRemoteSystemStatics2 */
-/* Windows.System.RemoteSystems.IRemoteSystemStatics2.IsAuthorizationKindEnabled(kind) */
 HRESULT wsyre_remote_system_statics_2_is_authorization_kind_enabled(WSYRE_IRemoteSystemStatics_2 *self, WSYRE_RemoteSystemAuthorizationKind kind, BOOL *out);
 
-/* Windows.System.RemoteSystems.IRemoteSystemStatics3 */
-/* Windows.System.RemoteSystems.IRemoteSystemStatics3.CreateWatcherForUser(user) */
 HRESULT wsyre_remote_system_statics_3_create_watcher_for_user(WSYRE_IRemoteSystemStatics_3 *self, WSY_User* user, WSYRE_RemoteSystemWatcher** out);
 
-/* Windows.System.RemoteSystems.IRemoteSystemStatics3.CreateWatcherForUser(user, filters) */
 HRESULT wsyre_remote_system_statics_3_create_watcher_for_user_p_p_p(WSYRE_IRemoteSystemStatics_3 *self, WSY_User* user, WFOCO_IIterable_WSYRE_IRemoteSystemFilter* filters, WSYRE_RemoteSystemWatcher** out);
 
-/* Windows.System.RemoteSystems.IRemoteSystemStatusTypeFilterFactory */
-/* Windows.System.RemoteSystems.IRemoteSystemStatusTypeFilterFactory.Create(remoteSystemStatusType) */
 HRESULT wsyre_remote_system_status_type_filter_factory_create(WSYRE_IRemoteSystemStatusTypeFilterFactory *self, WSYRE_RemoteSystemStatusType remoteSystemStatusType, WSYRE_RemoteSystemStatusTypeFilter** out);
 
-/* Windows.System.RemoteSystems.IRemoteSystemWebAccountFilterFactory */
-/* Windows.System.RemoteSystems.IRemoteSystemWebAccountFilterFactory.Create(account) */
 HRESULT wsyre_remote_system_web_account_filter_factory_create(WSYRE_IRemoteSystemWebAccountFilterFactory *self, WSECR_WebAccount* account, WSYRE_RemoteSystemWebAccountFilter** out);
 
-/* activate Windows.System.RemoteSystems.KnownRemoteSystemCapabilities */
 HRESULT wsyre_known_remote_system_capabilities_new(WSYRE_KnownRemoteSystemCapabilities **out);
 
-/* Windows.System.RemoteSystems.KnownRemoteSystemCapabilities */
-/* Windows.System.RemoteSystems.KnownRemoteSystemCapabilities.get_AppService() */
 HRESULT wsyre_known_remote_system_capabilities_get__app_service(cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.KnownRemoteSystemCapabilities.get_LaunchUri() */
 HRESULT wsyre_known_remote_system_capabilities_get__launch_uri(cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.KnownRemoteSystemCapabilities.get_RemoteSession() */
 HRESULT wsyre_known_remote_system_capabilities_get__remote_session(cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.KnownRemoteSystemCapabilities.get_SpatialEntity() */
 HRESULT wsyre_known_remote_system_capabilities_get__spatial_entity(cwinrt_hstring *value);
 
-/* activate Windows.System.RemoteSystems.RemoteSystem */
 HRESULT wsyre_remote_system_new(WSYRE_RemoteSystem **out);
 
-/* Windows.System.RemoteSystems.RemoteSystem */
-/* Windows.System.RemoteSystems.RemoteSystem.get_DisplayName() */
 HRESULT wsyre_remote_system_get__display_name(WSYRE_RemoteSystem *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.RemoteSystem.get_Id() */
 HRESULT wsyre_remote_system_get__id(WSYRE_RemoteSystem *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.RemoteSystem.get_Kind() */
 HRESULT wsyre_remote_system_get__kind(WSYRE_RemoteSystem *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.RemoteSystem.get_Status() */
 HRESULT wsyre_remote_system_get__status(WSYRE_RemoteSystem *self, WSYRE_RemoteSystemStatus *value);
 
-/* Windows.System.RemoteSystems.RemoteSystem.get_IsAvailableByProximity() */
 HRESULT wsyre_remote_system_get__is_available_by_proximity(WSYRE_RemoteSystem *self, BOOL *value);
 
-/* Windows.System.RemoteSystems.RemoteSystem.get_IsAvailableBySpatialProximity() */
 HRESULT wsyre_remote_system_get__is_available_by_spatial_proximity(WSYRE_RemoteSystem *self, BOOL *value);
 
-/* Windows.System.RemoteSystems.RemoteSystem.GetCapabilitySupportedAsync(capabilityName) */
 HRESULT wsyre_remote_system_get_capability_supported_async(WSYRE_RemoteSystem *self, cwinrt_hstring capabilityName, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.RemoteSystems.RemoteSystem.get_ManufacturerDisplayName() */
 HRESULT wsyre_remote_system_get__manufacturer_display_name(WSYRE_RemoteSystem *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.RemoteSystem.get_ModelDisplayName() */
 HRESULT wsyre_remote_system_get__model_display_name(WSYRE_RemoteSystem *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.RemoteSystem.get_Platform() */
 HRESULT wsyre_remote_system_get__platform(WSYRE_RemoteSystem *self, WSYRE_RemoteSystemPlatform *value);
 
-/* Windows.System.RemoteSystems.RemoteSystem.get_Apps() */
 HRESULT wsyre_remote_system_get__apps(WSYRE_RemoteSystem *self, WFOCO_IVectorView_WSYRE_RemoteSystemApp** value);
 
-/* Windows.System.RemoteSystems.RemoteSystem.get_User() */
 HRESULT wsyre_remote_system_get__user(WSYRE_RemoteSystem *self, WSY_User** value);
 
-/* Windows.System.RemoteSystems.RemoteSystem.CreateWatcherForUser(user) */
 HRESULT wsyre_remote_system_create_watcher_for_user(WSY_User* user, WSYRE_RemoteSystemWatcher** out);
 
-/* Windows.System.RemoteSystems.RemoteSystem.CreateWatcherForUser(user, filters) */
 HRESULT wsyre_remote_system_create_watcher_for_user_p_p_p(WSY_User* user, WFOCO_IIterable_WSYRE_IRemoteSystemFilter* filters, WSYRE_RemoteSystemWatcher** out);
 
-/* Windows.System.RemoteSystems.RemoteSystem.IsAuthorizationKindEnabled(kind) */
 HRESULT wsyre_remote_system_is_authorization_kind_enabled(WSYRE_RemoteSystemAuthorizationKind kind, BOOL *out);
 
-/* Windows.System.RemoteSystems.RemoteSystem.FindByHostNameAsync(hostName) */
 HRESULT wsyre_remote_system_find_by_host_name_async(WNE_HostName* hostName, WF_IAsyncOperation_WSYRE_RemoteSystem** out);
 
-/* Windows.System.RemoteSystems.RemoteSystem.CreateWatcher() */
 HRESULT wsyre_remote_system_create_watcher(WSYRE_RemoteSystemWatcher** out);
 
-/* Windows.System.RemoteSystems.RemoteSystem.CreateWatcher(filters) */
 HRESULT wsyre_remote_system_create_watcher_p_p(WFOCO_IIterable_WSYRE_IRemoteSystemFilter* filters, WSYRE_RemoteSystemWatcher** out);
 
-/* Windows.System.RemoteSystems.RemoteSystem.RequestAccessAsync() */
 HRESULT wsyre_remote_system_request_access_async(WF_IAsyncOperation_WSYRE_RemoteSystemAccessStatus** out);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemAddedEventArgs */
 HRESULT wsyre_remote_system_added_event_args_new(WSYRE_RemoteSystemAddedEventArgs **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemAddedEventArgs */
-/* Windows.System.RemoteSystems.RemoteSystemAddedEventArgs.get_RemoteSystem() */
 HRESULT wsyre_remote_system_added_event_args_get__remote_system(WSYRE_RemoteSystemAddedEventArgs *self, WSYRE_RemoteSystem** value);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemApp */
 HRESULT wsyre_remote_system_app_new(WSYRE_RemoteSystemApp **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemApp */
-/* Windows.System.RemoteSystems.RemoteSystemApp.get_Id() */
 HRESULT wsyre_remote_system_app_get__id(WSYRE_RemoteSystemApp *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.RemoteSystemApp.get_DisplayName() */
 HRESULT wsyre_remote_system_app_get__display_name(WSYRE_RemoteSystemApp *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.RemoteSystemApp.get_IsAvailableByProximity() */
 HRESULT wsyre_remote_system_app_get__is_available_by_proximity(WSYRE_RemoteSystemApp *self, BOOL *value);
 
-/* Windows.System.RemoteSystems.RemoteSystemApp.get_IsAvailableBySpatialProximity() */
 HRESULT wsyre_remote_system_app_get__is_available_by_spatial_proximity(WSYRE_RemoteSystemApp *self, BOOL *value);
 
-/* Windows.System.RemoteSystems.RemoteSystemApp.get_Attributes() */
 HRESULT wsyre_remote_system_app_get__attributes(WSYRE_RemoteSystemApp *self, WFOCO_IMapView_HSTRING_HSTRING** value);
 
-/* Windows.System.RemoteSystems.RemoteSystemApp.get_User() */
 HRESULT wsyre_remote_system_app_get__user(WSYRE_RemoteSystemApp *self, WSY_User** value);
 
-/* Windows.System.RemoteSystems.RemoteSystemApp.get_ConnectionToken() */
 HRESULT wsyre_remote_system_app_get__connection_token(WSYRE_RemoteSystemApp *self, cwinrt_hstring *value);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemAppRegistration */
 HRESULT wsyre_remote_system_app_registration_new(WSYRE_RemoteSystemAppRegistration **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemAppRegistration */
-/* Windows.System.RemoteSystems.RemoteSystemAppRegistration.get_User() */
 HRESULT wsyre_remote_system_app_registration_get__user(WSYRE_RemoteSystemAppRegistration *self, WSY_User** value);
 
-/* Windows.System.RemoteSystems.RemoteSystemAppRegistration.get_Attributes() */
 HRESULT wsyre_remote_system_app_registration_get__attributes(WSYRE_RemoteSystemAppRegistration *self, WFOCO_IMap_HSTRING_HSTRING** value);
 
-/* Windows.System.RemoteSystems.RemoteSystemAppRegistration.SaveAsync() */
 HRESULT wsyre_remote_system_app_registration_save_async(WSYRE_RemoteSystemAppRegistration *self, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.RemoteSystems.RemoteSystemAppRegistration.GetDefault() */
 HRESULT wsyre_remote_system_app_registration_get_default(WSYRE_RemoteSystemAppRegistration** out);
 
-/* Windows.System.RemoteSystems.RemoteSystemAppRegistration.GetForUser(user) */
 HRESULT wsyre_remote_system_app_registration_get_for_user(WSY_User* user, WSYRE_RemoteSystemAppRegistration** out);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemAuthorizationKindFilter */
 HRESULT wsyre_remote_system_authorization_kind_filter_new(WSYRE_RemoteSystemAuthorizationKindFilter **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemAuthorizationKindFilter */
-/* Windows.System.RemoteSystems.RemoteSystemAuthorizationKindFilter.get_RemoteSystemAuthorizationKind() */
 HRESULT wsyre_remote_system_authorization_kind_filter_get__remote_system_authorization_kind(WSYRE_RemoteSystemAuthorizationKindFilter *self, WSYRE_RemoteSystemAuthorizationKind *value);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemConnectionInfo */
 HRESULT wsyre_remote_system_connection_info_new(WSYRE_RemoteSystemConnectionInfo **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemConnectionInfo */
-/* Windows.System.RemoteSystems.RemoteSystemConnectionInfo.get_IsProximal() */
 HRESULT wsyre_remote_system_connection_info_get__is_proximal(WSYRE_RemoteSystemConnectionInfo *self, BOOL *value);
 
-/* Windows.System.RemoteSystems.RemoteSystemConnectionInfo.TryCreateFromAppServiceConnection(connection) */
 HRESULT wsyre_remote_system_connection_info_try_create_from_app_service_connection(WAPAP_AppServiceConnection* connection, WSYRE_RemoteSystemConnectionInfo** out);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemConnectionRequest */
 HRESULT wsyre_remote_system_connection_request_new(WSYRE_RemoteSystemConnectionRequest **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemConnectionRequest */
-/* Windows.System.RemoteSystems.RemoteSystemConnectionRequest.get_RemoteSystem() */
 HRESULT wsyre_remote_system_connection_request_get__remote_system(WSYRE_RemoteSystemConnectionRequest *self, WSYRE_RemoteSystem** value);
 
-/* Windows.System.RemoteSystems.RemoteSystemConnectionRequest.get_RemoteSystemApp() */
 HRESULT wsyre_remote_system_connection_request_get__remote_system_app(WSYRE_RemoteSystemConnectionRequest *self, WSYRE_RemoteSystemApp** value);
 
-/* Windows.System.RemoteSystems.RemoteSystemConnectionRequest.get_ConnectionToken() */
 HRESULT wsyre_remote_system_connection_request_get__connection_token(WSYRE_RemoteSystemConnectionRequest *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.RemoteSystemConnectionRequest.CreateFromConnectionToken(connectionToken) */
 HRESULT wsyre_remote_system_connection_request_create_from_connection_token(cwinrt_hstring connectionToken, WSYRE_RemoteSystemConnectionRequest** out);
 
-/* Windows.System.RemoteSystems.RemoteSystemConnectionRequest.CreateFromConnectionTokenForUser(user, connectionToken) */
 HRESULT wsyre_remote_system_connection_request_create_from_connection_token_for_user(WSY_User* user, cwinrt_hstring connectionToken, WSYRE_RemoteSystemConnectionRequest** out);
 
-/* Windows.System.RemoteSystems.RemoteSystemConnectionRequest.CreateForApp(remoteSystemApp) */
 HRESULT wsyre_remote_system_connection_request_create_for_app(WSYRE_RemoteSystemApp* remoteSystemApp, WSYRE_RemoteSystemConnectionRequest** out);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemDiscoveryTypeFilter */
 HRESULT wsyre_remote_system_discovery_type_filter_new(WSYRE_RemoteSystemDiscoveryTypeFilter **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemDiscoveryTypeFilter */
-/* Windows.System.RemoteSystems.RemoteSystemDiscoveryTypeFilter.get_RemoteSystemDiscoveryType() */
 HRESULT wsyre_remote_system_discovery_type_filter_get__remote_system_discovery_type(WSYRE_RemoteSystemDiscoveryTypeFilter *self, WSYRE_RemoteSystemDiscoveryType *value);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemKindFilter */
 HRESULT wsyre_remote_system_kind_filter_new(WSYRE_RemoteSystemKindFilter **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemKindFilter */
-/* Windows.System.RemoteSystems.RemoteSystemKindFilter.get_RemoteSystemKinds() */
 HRESULT wsyre_remote_system_kind_filter_get__remote_system_kinds(WSYRE_RemoteSystemKindFilter *self, WFOCO_IVectorView_HSTRING** value);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemKinds */
 HRESULT wsyre_remote_system_kinds_new(WSYRE_RemoteSystemKinds **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemKinds */
-/* Windows.System.RemoteSystems.RemoteSystemKinds.get_Iot() */
 HRESULT wsyre_remote_system_kinds_get__iot(cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.RemoteSystemKinds.get_Tablet() */
 HRESULT wsyre_remote_system_kinds_get__tablet(cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.RemoteSystemKinds.get_Laptop() */
 HRESULT wsyre_remote_system_kinds_get__laptop(cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.RemoteSystemKinds.get_Phone() */
 HRESULT wsyre_remote_system_kinds_get__phone(cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.RemoteSystemKinds.get_Hub() */
 HRESULT wsyre_remote_system_kinds_get__hub(cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.RemoteSystemKinds.get_Holographic() */
 HRESULT wsyre_remote_system_kinds_get__holographic(cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.RemoteSystemKinds.get_Desktop() */
 HRESULT wsyre_remote_system_kinds_get__desktop(cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.RemoteSystemKinds.get_Xbox() */
 HRESULT wsyre_remote_system_kinds_get__xbox(cwinrt_hstring *value);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemRemovedEventArgs */
 HRESULT wsyre_remote_system_removed_event_args_new(WSYRE_RemoteSystemRemovedEventArgs **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemRemovedEventArgs */
-/* Windows.System.RemoteSystems.RemoteSystemRemovedEventArgs.get_RemoteSystemId() */
 HRESULT wsyre_remote_system_removed_event_args_get__remote_system_id(WSYRE_RemoteSystemRemovedEventArgs *self, cwinrt_hstring *value);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemSession */
 HRESULT wsyre_remote_system_session_new(WSYRE_RemoteSystemSession **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemSession */
-/* Windows.System.RemoteSystems.RemoteSystemSession.get_Id() */
 HRESULT wsyre_remote_system_session_get__id(WSYRE_RemoteSystemSession *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.RemoteSystemSession.get_DisplayName() */
 HRESULT wsyre_remote_system_session_get__display_name(WSYRE_RemoteSystemSession *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.RemoteSystemSession.get_ControllerDisplayName() */
 HRESULT wsyre_remote_system_session_get__controller_display_name(WSYRE_RemoteSystemSession *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.RemoteSystemSession.CreateParticipantWatcher() */
 HRESULT wsyre_remote_system_session_create_participant_watcher(WSYRE_RemoteSystemSession *self, WSYRE_RemoteSystemSessionParticipantWatcher** out);
 
-/* Windows.System.RemoteSystems.RemoteSystemSession.SendInvitationAsync(invitee) */
 HRESULT wsyre_remote_system_session_send_invitation_async(WSYRE_RemoteSystemSession *self, WSYRE_RemoteSystem* invitee, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.RemoteSystems.RemoteSystemSession.Close() */
 HRESULT wsyre_remote_system_session_close(WSYRE_RemoteSystemSession *self);
 
-/* Windows.System.RemoteSystems.RemoteSystemSession.CreateWatcher() */
 HRESULT wsyre_remote_system_session_create_watcher(WSYRE_RemoteSystemSessionWatcher** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsyre_remote_system_session_on_disconnected(WSYRE_RemoteSystemSession *self, cwinrt_event_fn fn, void *ctx);
 void wsyre_remote_system_session_off_disconnected(WSYRE_RemoteSystemSession *self, cwinrt_token token);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemSessionAddedEventArgs */
 HRESULT wsyre_remote_system_session_added_event_args_new(WSYRE_RemoteSystemSessionAddedEventArgs **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionAddedEventArgs */
-/* Windows.System.RemoteSystems.RemoteSystemSessionAddedEventArgs.get_SessionInfo() */
 HRESULT wsyre_remote_system_session_added_event_args_get__session_info(WSYRE_RemoteSystemSessionAddedEventArgs *self, WSYRE_RemoteSystemSessionInfo** value);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemSessionController */
 HRESULT wsyre_remote_system_session_controller_new(WSYRE_RemoteSystemSessionController **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionController */
-/* Windows.System.RemoteSystems.RemoteSystemSessionController.RemoveParticipantAsync(pParticipant) */
 HRESULT wsyre_remote_system_session_controller_remove_participant_async(WSYRE_RemoteSystemSessionController *self, WSYRE_RemoteSystemSessionParticipant* pParticipant, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionController.CreateSessionAsync() */
 HRESULT wsyre_remote_system_session_controller_create_session_async(WSYRE_RemoteSystemSessionController *self, WF_IAsyncOperation_WSYRE_RemoteSystemSessionCreationResult** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsyre_remote_system_session_controller_on_join_requested(WSYRE_RemoteSystemSessionController *self, cwinrt_event_fn fn, void *ctx);
 void wsyre_remote_system_session_controller_off_join_requested(WSYRE_RemoteSystemSessionController *self, cwinrt_token token);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemSessionCreationResult */
 HRESULT wsyre_remote_system_session_creation_result_new(WSYRE_RemoteSystemSessionCreationResult **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionCreationResult */
-/* Windows.System.RemoteSystems.RemoteSystemSessionCreationResult.get_Status() */
 HRESULT wsyre_remote_system_session_creation_result_get__status(WSYRE_RemoteSystemSessionCreationResult *self, WSYRE_RemoteSystemSessionCreationStatus *value);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionCreationResult.get_Session() */
 HRESULT wsyre_remote_system_session_creation_result_get__session(WSYRE_RemoteSystemSessionCreationResult *self, WSYRE_RemoteSystemSession** value);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemSessionDisconnectedEventArgs */
 HRESULT wsyre_remote_system_session_disconnected_event_args_new(WSYRE_RemoteSystemSessionDisconnectedEventArgs **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionDisconnectedEventArgs */
-/* Windows.System.RemoteSystems.RemoteSystemSessionDisconnectedEventArgs.get_Reason() */
 HRESULT wsyre_remote_system_session_disconnected_event_args_get__reason(WSYRE_RemoteSystemSessionDisconnectedEventArgs *self, WSYRE_RemoteSystemSessionDisconnectedReason *value);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemSessionInfo */
 HRESULT wsyre_remote_system_session_info_new(WSYRE_RemoteSystemSessionInfo **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionInfo */
-/* Windows.System.RemoteSystems.RemoteSystemSessionInfo.get_DisplayName() */
 HRESULT wsyre_remote_system_session_info_get__display_name(WSYRE_RemoteSystemSessionInfo *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionInfo.get_ControllerDisplayName() */
 HRESULT wsyre_remote_system_session_info_get__controller_display_name(WSYRE_RemoteSystemSessionInfo *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionInfo.JoinAsync() */
 HRESULT wsyre_remote_system_session_info_join_async(WSYRE_RemoteSystemSessionInfo *self, WF_IAsyncOperation_WSYRE_RemoteSystemSessionJoinResult** out);
 
-/* Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics */
-/* Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics.CreateForApp(remoteSystemApp) */
 HRESULT wsyre_remote_system_connection_request_statics_create_for_app(WSYRE_IRemoteSystemConnectionRequestStatics *self, WSYRE_RemoteSystemApp* remoteSystemApp, WSYRE_RemoteSystemConnectionRequest** out);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemSessionInvitationListener */
 HRESULT wsyre_remote_system_session_invitation_listener_new(WSYRE_RemoteSystemSessionInvitationListener **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionInvitationListener */
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsyre_remote_system_session_invitation_listener_on_invitation_received(WSYRE_RemoteSystemSessionInvitationListener *self, cwinrt_event_fn fn, void *ctx);
 void wsyre_remote_system_session_invitation_listener_off_invitation_received(WSYRE_RemoteSystemSessionInvitationListener *self, cwinrt_token token);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemSessionInvitationReceivedEventArgs */
 HRESULT wsyre_remote_system_session_invitation_received_event_args_new(WSYRE_RemoteSystemSessionInvitationReceivedEventArgs **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionInvitationReceivedEventArgs */
-/* Windows.System.RemoteSystems.RemoteSystemSessionInvitationReceivedEventArgs.get_Invitation() */
 HRESULT wsyre_remote_system_session_invitation_received_event_args_get__invitation(WSYRE_RemoteSystemSessionInvitationReceivedEventArgs *self, WSYRE_RemoteSystemSessionInvitation** value);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemSessionJoinRequest */
 HRESULT wsyre_remote_system_session_join_request_new(WSYRE_RemoteSystemSessionJoinRequest **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionJoinRequest */
-/* Windows.System.RemoteSystems.RemoteSystemSessionJoinRequest.get_Participant() */
 HRESULT wsyre_remote_system_session_join_request_get__participant(WSYRE_RemoteSystemSessionJoinRequest *self, WSYRE_RemoteSystemSessionParticipant** value);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionJoinRequest.Accept() */
 HRESULT wsyre_remote_system_session_join_request_accept(WSYRE_RemoteSystemSessionJoinRequest *self);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemSessionJoinRequestedEventArgs */
 HRESULT wsyre_remote_system_session_join_requested_event_args_new(WSYRE_RemoteSystemSessionJoinRequestedEventArgs **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionJoinRequestedEventArgs */
-/* Windows.System.RemoteSystems.RemoteSystemSessionJoinRequestedEventArgs.get_JoinRequest() */
 HRESULT wsyre_remote_system_session_join_requested_event_args_get__join_request(WSYRE_RemoteSystemSessionJoinRequestedEventArgs *self, WSYRE_RemoteSystemSessionJoinRequest** value);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionJoinRequestedEventArgs.GetDeferral() */
 HRESULT wsyre_remote_system_session_join_requested_event_args_get_deferral(WSYRE_RemoteSystemSessionJoinRequestedEventArgs *self, WF_Deferral** out);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemSessionJoinResult */
 HRESULT wsyre_remote_system_session_join_result_new(WSYRE_RemoteSystemSessionJoinResult **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionJoinResult */
-/* Windows.System.RemoteSystems.RemoteSystemSessionJoinResult.get_Status() */
 HRESULT wsyre_remote_system_session_join_result_get__status(WSYRE_RemoteSystemSessionJoinResult *self, WSYRE_RemoteSystemSessionJoinStatus *value);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionJoinResult.get_Session() */
 HRESULT wsyre_remote_system_session_join_result_get__session(WSYRE_RemoteSystemSessionJoinResult *self, WSYRE_RemoteSystemSession** value);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel */
 HRESULT wsyre_remote_system_session_message_channel_new(WSYRE_RemoteSystemSessionMessageChannel **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel */
-/* Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel.get_Session() */
 HRESULT wsyre_remote_system_session_message_channel_get__session(WSYRE_RemoteSystemSessionMessageChannel *self, WSYRE_RemoteSystemSession** value);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel.BroadcastValueSetAsync(messageData) */
 HRESULT wsyre_remote_system_session_message_channel_broadcast_value_set_async(WSYRE_RemoteSystemSessionMessageChannel *self, WFOCO_ValueSet* messageData, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel.SendValueSetAsync(messageData, participant) */
 HRESULT wsyre_remote_system_session_message_channel_send_value_set_async(WSYRE_RemoteSystemSessionMessageChannel *self, WFOCO_ValueSet* messageData, WSYRE_RemoteSystemSessionParticipant* participant, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel.SendValueSetToParticipantsAsync(messageData, participants) */
 HRESULT wsyre_remote_system_session_message_channel_send_value_set_to_participants_async(WSYRE_RemoteSystemSessionMessageChannel *self, WFOCO_ValueSet* messageData, WFOCO_IIterable_WSYRE_RemoteSystemSessionParticipant* participants, WF_IAsyncOperation_Bool** out);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsyre_remote_system_session_message_channel_on_value_set_received(WSYRE_RemoteSystemSessionMessageChannel *self, cwinrt_event_fn fn, void *ctx);
 void wsyre_remote_system_session_message_channel_off_value_set_received(WSYRE_RemoteSystemSessionMessageChannel *self, cwinrt_token token);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemSessionOptions */
 HRESULT wsyre_remote_system_session_options_new(WSYRE_RemoteSystemSessionOptions **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionOptions */
-/* Windows.System.RemoteSystems.RemoteSystemSessionOptions.get_IsInviteOnly() */
 HRESULT wsyre_remote_system_session_options_get__is_invite_only(WSYRE_RemoteSystemSessionOptions *self, BOOL *value);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionOptions.put_IsInviteOnly() */
 HRESULT wsyre_remote_system_session_options_put__is_invite_only(WSYRE_RemoteSystemSessionOptions *self, BOOL value);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemSessionParticipant */
 HRESULT wsyre_remote_system_session_participant_new(WSYRE_RemoteSystemSessionParticipant **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionParticipant */
-/* Windows.System.RemoteSystems.RemoteSystemSessionParticipant.get_RemoteSystem() */
 HRESULT wsyre_remote_system_session_participant_get__remote_system(WSYRE_RemoteSystemSessionParticipant *self, WSYRE_RemoteSystem** value);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionParticipant.GetHostNames() */
 HRESULT wsyre_remote_system_session_participant_get_host_names(WSYRE_RemoteSystemSessionParticipant *self, WFOCO_IVectorView_WNE_HostName** out);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemSessionParticipantAddedEventArgs */
 HRESULT wsyre_remote_system_session_participant_added_event_args_new(WSYRE_RemoteSystemSessionParticipantAddedEventArgs **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionParticipantAddedEventArgs */
-/* Windows.System.RemoteSystems.RemoteSystemSessionParticipantAddedEventArgs.get_Participant() */
 HRESULT wsyre_remote_system_session_participant_added_event_args_get__participant(WSYRE_RemoteSystemSessionParticipantAddedEventArgs *self, WSYRE_RemoteSystemSessionParticipant** value);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemSessionParticipantRemovedEventArgs */
 HRESULT wsyre_remote_system_session_participant_removed_event_args_new(WSYRE_RemoteSystemSessionParticipantRemovedEventArgs **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionParticipantRemovedEventArgs */
-/* Windows.System.RemoteSystems.RemoteSystemSessionParticipantRemovedEventArgs.get_Participant() */
 HRESULT wsyre_remote_system_session_participant_removed_event_args_get__participant(WSYRE_RemoteSystemSessionParticipantRemovedEventArgs *self, WSYRE_RemoteSystemSessionParticipant** value);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher */
 HRESULT wsyre_remote_system_session_participant_watcher_new(WSYRE_RemoteSystemSessionParticipantWatcher **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher */
-/* Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher.Start() */
 HRESULT wsyre_remote_system_session_participant_watcher_start(WSYRE_RemoteSystemSessionParticipantWatcher *self);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher.Stop() */
 HRESULT wsyre_remote_system_session_participant_watcher_stop(WSYRE_RemoteSystemSessionParticipantWatcher *self);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher.get_Status() */
 HRESULT wsyre_remote_system_session_participant_watcher_get__status(WSYRE_RemoteSystemSessionParticipantWatcher *self, WSYRE_RemoteSystemSessionParticipantWatcherStatus *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsyre_remote_system_session_participant_watcher_on_added(WSYRE_RemoteSystemSessionParticipantWatcher *self, cwinrt_event_fn fn, void *ctx);
@@ -1205,44 +1003,28 @@ void wsyre_remote_system_session_participant_watcher_off_removed(WSYRE_RemoteSys
 cwinrt_token wsyre_remote_system_session_participant_watcher_on_enumeration_completed(WSYRE_RemoteSystemSessionParticipantWatcher *self, cwinrt_event_fn fn, void *ctx);
 void wsyre_remote_system_session_participant_watcher_off_enumeration_completed(WSYRE_RemoteSystemSessionParticipantWatcher *self, cwinrt_token token);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemSessionRemovedEventArgs */
 HRESULT wsyre_remote_system_session_removed_event_args_new(WSYRE_RemoteSystemSessionRemovedEventArgs **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionRemovedEventArgs */
-/* Windows.System.RemoteSystems.RemoteSystemSessionRemovedEventArgs.get_SessionInfo() */
 HRESULT wsyre_remote_system_session_removed_event_args_get__session_info(WSYRE_RemoteSystemSessionRemovedEventArgs *self, WSYRE_RemoteSystemSessionInfo** value);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemSessionUpdatedEventArgs */
 HRESULT wsyre_remote_system_session_updated_event_args_new(WSYRE_RemoteSystemSessionUpdatedEventArgs **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionUpdatedEventArgs */
-/* Windows.System.RemoteSystems.RemoteSystemSessionUpdatedEventArgs.get_SessionInfo() */
 HRESULT wsyre_remote_system_session_updated_event_args_get__session_info(WSYRE_RemoteSystemSessionUpdatedEventArgs *self, WSYRE_RemoteSystemSessionInfo** value);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemSessionValueSetReceivedEventArgs */
 HRESULT wsyre_remote_system_session_value_set_received_event_args_new(WSYRE_RemoteSystemSessionValueSetReceivedEventArgs **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionValueSetReceivedEventArgs */
-/* Windows.System.RemoteSystems.RemoteSystemSessionValueSetReceivedEventArgs.get_Sender() */
 HRESULT wsyre_remote_system_session_value_set_received_event_args_get__sender(WSYRE_RemoteSystemSessionValueSetReceivedEventArgs *self, WSYRE_RemoteSystemSessionParticipant** value);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionValueSetReceivedEventArgs.get_Message() */
 HRESULT wsyre_remote_system_session_value_set_received_event_args_get__message(WSYRE_RemoteSystemSessionValueSetReceivedEventArgs *self, WFOCO_ValueSet** value);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemSessionWatcher */
 HRESULT wsyre_remote_system_session_watcher_new(WSYRE_RemoteSystemSessionWatcher **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionWatcher */
-/* Windows.System.RemoteSystems.RemoteSystemSessionWatcher.Start() */
 HRESULT wsyre_remote_system_session_watcher_start(WSYRE_RemoteSystemSessionWatcher *self);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionWatcher.Stop() */
 HRESULT wsyre_remote_system_session_watcher_stop(WSYRE_RemoteSystemSessionWatcher *self);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionWatcher.get_Status() */
 HRESULT wsyre_remote_system_session_watcher_get__status(WSYRE_RemoteSystemSessionWatcher *self, WSYRE_RemoteSystemSessionWatcherStatus *value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsyre_remote_system_session_watcher_on_added(WSYRE_RemoteSystemSessionWatcher *self, cwinrt_event_fn fn, void *ctx);
@@ -1254,34 +1036,22 @@ void wsyre_remote_system_session_watcher_off_updated(WSYRE_RemoteSystemSessionWa
 cwinrt_token wsyre_remote_system_session_watcher_on_removed(WSYRE_RemoteSystemSessionWatcher *self, cwinrt_event_fn fn, void *ctx);
 void wsyre_remote_system_session_watcher_off_removed(WSYRE_RemoteSystemSessionWatcher *self, cwinrt_token token);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemStatusTypeFilter */
 HRESULT wsyre_remote_system_status_type_filter_new(WSYRE_RemoteSystemStatusTypeFilter **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemStatusTypeFilter */
-/* Windows.System.RemoteSystems.RemoteSystemStatusTypeFilter.get_RemoteSystemStatusType() */
 HRESULT wsyre_remote_system_status_type_filter_get__remote_system_status_type(WSYRE_RemoteSystemStatusTypeFilter *self, WSYRE_RemoteSystemStatusType *value);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemUpdatedEventArgs */
 HRESULT wsyre_remote_system_updated_event_args_new(WSYRE_RemoteSystemUpdatedEventArgs **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemUpdatedEventArgs */
-/* Windows.System.RemoteSystems.RemoteSystemUpdatedEventArgs.get_RemoteSystem() */
 HRESULT wsyre_remote_system_updated_event_args_get__remote_system(WSYRE_RemoteSystemUpdatedEventArgs *self, WSYRE_RemoteSystem** value);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemWatcher */
 HRESULT wsyre_remote_system_watcher_new(WSYRE_RemoteSystemWatcher **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemWatcher */
-/* Windows.System.RemoteSystems.RemoteSystemWatcher.Start() */
 HRESULT wsyre_remote_system_watcher_start(WSYRE_RemoteSystemWatcher *self);
 
-/* Windows.System.RemoteSystems.RemoteSystemWatcher.Stop() */
 HRESULT wsyre_remote_system_watcher_stop(WSYRE_RemoteSystemWatcher *self);
 
-/* Windows.System.RemoteSystems.RemoteSystemWatcher.get_User() */
 HRESULT wsyre_remote_system_watcher_get__user(WSYRE_RemoteSystemWatcher *self, WSY_User** value);
 
-/* Event subscriptions (on_/off_) */
 #include <cwinrt/event.h>
 
 cwinrt_token wsyre_remote_system_watcher_on_remote_system_added(WSYRE_RemoteSystemWatcher *self, cwinrt_event_fn fn, void *ctx);
@@ -1299,143 +1069,60 @@ void wsyre_remote_system_watcher_off_enumeration_completed(WSYRE_RemoteSystemWat
 cwinrt_token wsyre_remote_system_watcher_on_error_occurred(WSYRE_RemoteSystemWatcher *self, cwinrt_event_fn fn, void *ctx);
 void wsyre_remote_system_watcher_off_error_occurred(WSYRE_RemoteSystemWatcher *self, cwinrt_token token);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemWatcherErrorOccurredEventArgs */
 HRESULT wsyre_remote_system_watcher_error_occurred_event_args_new(WSYRE_RemoteSystemWatcherErrorOccurredEventArgs **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemWatcherErrorOccurredEventArgs */
-/* Windows.System.RemoteSystems.RemoteSystemWatcherErrorOccurredEventArgs.get_Error() */
 HRESULT wsyre_remote_system_watcher_error_occurred_event_args_get__error(WSYRE_RemoteSystemWatcherErrorOccurredEventArgs *self, WSYRE_RemoteSystemWatcherError *value);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemWebAccountFilter */
 HRESULT wsyre_remote_system_web_account_filter_new(WSYRE_RemoteSystemWebAccountFilter **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemWebAccountFilter */
-/* Windows.System.RemoteSystems.RemoteSystemWebAccountFilter.get_Account() */
 HRESULT wsyre_remote_system_web_account_filter_get__account(WSYRE_RemoteSystemWebAccountFilter *self, WSECR_WebAccount** value);
 
-/* Windows.System.RemoteSystems.IRemoteSystemConnectionRequestFactory */
-/* Windows.System.RemoteSystems.IRemoteSystemConnectionRequestFactory.Create(remoteSystem) */
 HRESULT wsyre_remote_system_connection_request_factory_create(WSYRE_IRemoteSystemConnectionRequestFactory *self, WSYRE_RemoteSystem* remoteSystem, WSYRE_RemoteSystemConnectionRequest** out);
 
-/* Windows.System.RemoteSystems.IKnownRemoteSystemCapabilitiesStatics */
-/* Windows.System.RemoteSystems.IKnownRemoteSystemCapabilitiesStatics.get_AppService() */
 HRESULT wsyre_known_remote_system_capabilities_statics_get__app_service(WSYRE_IKnownRemoteSystemCapabilitiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.IKnownRemoteSystemCapabilitiesStatics.get_LaunchUri() */
 HRESULT wsyre_known_remote_system_capabilities_statics_get__launch_uri(WSYRE_IKnownRemoteSystemCapabilitiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.IKnownRemoteSystemCapabilitiesStatics.get_RemoteSession() */
 HRESULT wsyre_known_remote_system_capabilities_statics_get__remote_session(WSYRE_IKnownRemoteSystemCapabilitiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.IKnownRemoteSystemCapabilitiesStatics.get_SpatialEntity() */
 HRESULT wsyre_known_remote_system_capabilities_statics_get__spatial_entity(WSYRE_IKnownRemoteSystemCapabilitiesStatics *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.IRemoteSystemAppRegistrationStatics */
-/* Windows.System.RemoteSystems.IRemoteSystemAppRegistrationStatics.GetDefault() */
 HRESULT wsyre_remote_system_app_registration_statics_get_default(WSYRE_IRemoteSystemAppRegistrationStatics *self, WSYRE_RemoteSystemAppRegistration** out);
 
-/* Windows.System.RemoteSystems.IRemoteSystemAppRegistrationStatics.GetForUser(user) */
 HRESULT wsyre_remote_system_app_registration_statics_get_for_user(WSYRE_IRemoteSystemAppRegistrationStatics *self, WSY_User* user, WSYRE_RemoteSystemAppRegistration** out);
 
-/* Windows.System.RemoteSystems.IRemoteSystemAuthorizationKindFilterFactory */
-/* Windows.System.RemoteSystems.IRemoteSystemAuthorizationKindFilterFactory.Create(remoteSystemAuthorizationKind) */
 HRESULT wsyre_remote_system_authorization_kind_filter_factory_create(WSYRE_IRemoteSystemAuthorizationKindFilterFactory *self, WSYRE_RemoteSystemAuthorizationKind remoteSystemAuthorizationKind, WSYRE_RemoteSystemAuthorizationKindFilter** out);
 
-/* Windows.System.RemoteSystems.IRemoteSystemConnectionInfoStatics */
-/* Windows.System.RemoteSystems.IRemoteSystemConnectionInfoStatics.TryCreateFromAppServiceConnection(connection) */
 HRESULT wsyre_remote_system_connection_info_statics_try_create_from_app_service_connection(WSYRE_IRemoteSystemConnectionInfoStatics *self, WAPAP_AppServiceConnection* connection, WSYRE_RemoteSystemConnectionInfo** out);
 
-/* activate Windows.System.RemoteSystems.RemoteSystemSessionInvitation */
 HRESULT wsyre_remote_system_session_invitation_new(WSYRE_RemoteSystemSessionInvitation **out);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionInvitation */
-/* Windows.System.RemoteSystems.RemoteSystemSessionInvitation.get_Sender() */
 HRESULT wsyre_remote_system_session_invitation_get__sender(WSYRE_RemoteSystemSessionInvitation *self, WSYRE_RemoteSystem** value);
 
-/* Windows.System.RemoteSystems.RemoteSystemSessionInvitation.get_SessionInfo() */
 HRESULT wsyre_remote_system_session_invitation_get__session_info(WSYRE_RemoteSystemSessionInvitation *self, WSYRE_RemoteSystemSessionInfo** value);
 
-/* Windows.System.RemoteSystems.IRemoteSystem */
-/* Windows.System.RemoteSystems.IRemoteSystem2 */
-/* Windows.System.RemoteSystems.IRemoteSystem2.get_IsAvailableBySpatialProximity() */
 HRESULT wsyre_remote_system_2_get__is_available_by_spatial_proximity(WSYRE_IRemoteSystem_2 *self, BOOL *value);
 
-/* Windows.System.RemoteSystems.IRemoteSystem2.GetCapabilitySupportedAsync(capabilityName) */
 HRESULT wsyre_remote_system_2_get_capability_supported_async(WSYRE_IRemoteSystem_2 *self, cwinrt_hstring capabilityName, WF_IAsyncOperation_Bool** out);
 
-/* Windows.System.RemoteSystems.IRemoteSystem3 */
-/* Windows.System.RemoteSystems.IRemoteSystem3.get_ManufacturerDisplayName() */
 HRESULT wsyre_remote_system_3_get__manufacturer_display_name(WSYRE_IRemoteSystem_3 *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.IRemoteSystem3.get_ModelDisplayName() */
 HRESULT wsyre_remote_system_3_get__model_display_name(WSYRE_IRemoteSystem_3 *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.IRemoteSystem4 */
-/* Windows.System.RemoteSystems.IRemoteSystem4.get_Platform() */
 HRESULT wsyre_remote_system_4_get__platform(WSYRE_IRemoteSystem_4 *self, WSYRE_RemoteSystemPlatform *value);
 
-/* Windows.System.RemoteSystems.IRemoteSystem5 */
-/* Windows.System.RemoteSystems.IRemoteSystem5.get_Apps() */
 HRESULT wsyre_remote_system_5_get__apps(WSYRE_IRemoteSystem_5 *self, WFOCO_IVectorView_WSYRE_RemoteSystemApp** value);
 
-/* Windows.System.RemoteSystems.IRemoteSystem6 */
-/* Windows.System.RemoteSystems.IRemoteSystem6.get_User() */
 HRESULT wsyre_remote_system_6_get__user(WSYRE_IRemoteSystem_6 *self, WSY_User** value);
 
-/* Windows.System.RemoteSystems.IRemoteSystemAddedEventArgs */
-/* Windows.System.RemoteSystems.IRemoteSystemApp */
-/* Windows.System.RemoteSystems.IRemoteSystemApp2 */
-/* Windows.System.RemoteSystems.IRemoteSystemApp2.get_User() */
 HRESULT wsyre_remote_system_app_2_get__user(WSYRE_IRemoteSystemApp_2 *self, WSY_User** value);
 
-/* Windows.System.RemoteSystems.IRemoteSystemApp2.get_ConnectionToken() */
 HRESULT wsyre_remote_system_app_2_get__connection_token(WSYRE_IRemoteSystemApp_2 *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.IRemoteSystemAppRegistration */
-/* Windows.System.RemoteSystems.IRemoteSystemAuthorizationKindFilter */
-/* Windows.System.RemoteSystems.IRemoteSystemConnectionInfo */
-/* Windows.System.RemoteSystems.IRemoteSystemConnectionRequest */
-/* Windows.System.RemoteSystems.IRemoteSystemConnectionRequest2 */
-/* Windows.System.RemoteSystems.IRemoteSystemConnectionRequest2.get_RemoteSystemApp() */
 HRESULT wsyre_remote_system_connection_request_2_get__remote_system_app(WSYRE_IRemoteSystemConnectionRequest_2 *self, WSYRE_RemoteSystemApp** value);
 
-/* Windows.System.RemoteSystems.IRemoteSystemConnectionRequest3 */
-/* Windows.System.RemoteSystems.IRemoteSystemConnectionRequest3.get_ConnectionToken() */
 HRESULT wsyre_remote_system_connection_request_3_get__connection_token(WSYRE_IRemoteSystemConnectionRequest_3 *self, cwinrt_hstring *value);
 
-/* Windows.System.RemoteSystems.IRemoteSystemDiscoveryTypeFilter */
-/* Windows.System.RemoteSystems.IRemoteSystemKindFilter */
-/* Windows.System.RemoteSystems.IRemoteSystemRemovedEventArgs */
-/* Windows.System.RemoteSystems.IRemoteSystemSession */
-/* Windows.System.RemoteSystems.IRemoteSystemSessionAddedEventArgs */
-/* Windows.System.RemoteSystems.IRemoteSystemSessionController */
-/* Windows.System.RemoteSystems.IRemoteSystemSessionCreationResult */
-/* Windows.System.RemoteSystems.IRemoteSystemSessionDisconnectedEventArgs */
-/* Windows.System.RemoteSystems.IRemoteSystemSessionInfo */
-/* Windows.System.RemoteSystems.IRemoteSystemSessionInvitationListener */
-/* Windows.System.RemoteSystems.IRemoteSystemSessionInvitationReceivedEventArgs */
-/* Windows.System.RemoteSystems.IRemoteSystemSessionJoinRequest */
-/* Windows.System.RemoteSystems.IRemoteSystemSessionJoinRequestedEventArgs */
-/* Windows.System.RemoteSystems.IRemoteSystemSessionJoinResult */
-/* Windows.System.RemoteSystems.IRemoteSystemSessionMessageChannel */
-/* Windows.System.RemoteSystems.IRemoteSystemSessionOptions */
-/* Windows.System.RemoteSystems.IRemoteSystemSessionParticipant */
-/* Windows.System.RemoteSystems.IRemoteSystemSessionParticipantAddedEventArgs */
-/* Windows.System.RemoteSystems.IRemoteSystemSessionParticipantRemovedEventArgs */
-/* Windows.System.RemoteSystems.IRemoteSystemSessionParticipantWatcher */
-/* Windows.System.RemoteSystems.IRemoteSystemSessionRemovedEventArgs */
-/* Windows.System.RemoteSystems.IRemoteSystemSessionUpdatedEventArgs */
-/* Windows.System.RemoteSystems.IRemoteSystemSessionValueSetReceivedEventArgs */
-/* Windows.System.RemoteSystems.IRemoteSystemSessionWatcher */
-/* Windows.System.RemoteSystems.IRemoteSystemStatusTypeFilter */
-/* Windows.System.RemoteSystems.IRemoteSystemUpdatedEventArgs */
-/* Windows.System.RemoteSystems.IRemoteSystemWatcher */
-/* Windows.System.RemoteSystems.IRemoteSystemWatcher2 */
-/* Windows.System.RemoteSystems.IRemoteSystemWatcher3 */
-/* Windows.System.RemoteSystems.IRemoteSystemWatcher3.get_User() */
 HRESULT wsyre_remote_system_watcher_3_get__user(WSYRE_IRemoteSystemWatcher_3 *self, WSY_User** value);
 
-/* Windows.System.RemoteSystems.IRemoteSystemWatcherErrorOccurredEventArgs */
-/* Windows.System.RemoteSystems.IRemoteSystemWebAccountFilter */
-/* Windows.System.RemoteSystems.IRemoteSystemSessionInvitation */
 #endif /* CWINRT_WINDOWS_SYSTEM_REMOTESYSTEMS_H */

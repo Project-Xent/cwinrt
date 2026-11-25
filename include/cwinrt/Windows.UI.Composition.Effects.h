@@ -13,12 +13,10 @@
 #include <cwinrt/Windows.Graphics.Effects.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* Types (forward declarations) */
 typedef struct WUICOEF_SceneLightingEffect WUICOEF_SceneLightingEffect;
 typedef struct WUICOEF_ISceneLightingEffect WUICOEF_ISceneLightingEffect;
 typedef struct WUICOEF_ISceneLightingEffect_2 WUICOEF_ISceneLightingEffect_2;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WGREF_IGraphicsEffectSource
 #define CWINRT_FWD_WGREF_IGraphicsEffectSource
 typedef struct WGREF_IGraphicsEffectSource WGREF_IGraphicsEffectSource;
@@ -32,7 +30,6 @@ typedef enum WUICOEF_SceneLightingEffectReflectanceModel {
 } WUICOEF_SceneLightingEffectReflectanceModel;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -45,60 +42,38 @@ static const IID CWINRT_IID_WUICOEF_ISceneLightingEffect CWINRT_MAYBE_UNUSED = {
 static const IID CWINRT_IID_WUICOEF_ISceneLightingEffect_2 CWINRT_MAYBE_UNUSED = { 0x9E270E81, 0x72F0, 0x4C5C, { 0x95, 0xF8, 0x8A, 0x6E, 0x00, 0x24, 0xF4, 0x09 } };
 #endif
 
-/* Methods */
-
-/* activate Windows.UI.Composition.Effects.SceneLightingEffect */
 HRESULT wuicoef_scene_lighting_effect_new(WUICOEF_SceneLightingEffect **out);
 
-/* Windows.UI.Composition.Effects.SceneLightingEffect */
-/* Windows.UI.Composition.Effects.SceneLightingEffect.get_AmbientAmount() */
 HRESULT wuicoef_scene_lighting_effect_get__ambient_amount(WUICOEF_SceneLightingEffect *self, float *value);
 
-/* Windows.UI.Composition.Effects.SceneLightingEffect.put_AmbientAmount() */
 HRESULT wuicoef_scene_lighting_effect_put__ambient_amount(WUICOEF_SceneLightingEffect *self, float value);
 
-/* Windows.UI.Composition.Effects.SceneLightingEffect.get_DiffuseAmount() */
 HRESULT wuicoef_scene_lighting_effect_get__diffuse_amount(WUICOEF_SceneLightingEffect *self, float *value);
 
-/* Windows.UI.Composition.Effects.SceneLightingEffect.put_DiffuseAmount() */
 HRESULT wuicoef_scene_lighting_effect_put__diffuse_amount(WUICOEF_SceneLightingEffect *self, float value);
 
-/* Windows.UI.Composition.Effects.SceneLightingEffect.get_NormalMapSource() */
 HRESULT wuicoef_scene_lighting_effect_get__normal_map_source(WUICOEF_SceneLightingEffect *self, WGREF_IGraphicsEffectSource** value);
 
-/* Windows.UI.Composition.Effects.SceneLightingEffect.put_NormalMapSource() */
 HRESULT wuicoef_scene_lighting_effect_put__normal_map_source(WUICOEF_SceneLightingEffect *self, WGREF_IGraphicsEffectSource* value);
 
-/* Windows.UI.Composition.Effects.SceneLightingEffect.get_SpecularAmount() */
 HRESULT wuicoef_scene_lighting_effect_get__specular_amount(WUICOEF_SceneLightingEffect *self, float *value);
 
-/* Windows.UI.Composition.Effects.SceneLightingEffect.put_SpecularAmount() */
 HRESULT wuicoef_scene_lighting_effect_put__specular_amount(WUICOEF_SceneLightingEffect *self, float value);
 
-/* Windows.UI.Composition.Effects.SceneLightingEffect.get_SpecularShine() */
 HRESULT wuicoef_scene_lighting_effect_get__specular_shine(WUICOEF_SceneLightingEffect *self, float *value);
 
-/* Windows.UI.Composition.Effects.SceneLightingEffect.put_SpecularShine() */
 HRESULT wuicoef_scene_lighting_effect_put__specular_shine(WUICOEF_SceneLightingEffect *self, float value);
 
-/* Windows.UI.Composition.Effects.SceneLightingEffect.get_ReflectanceModel() */
 HRESULT wuicoef_scene_lighting_effect_get__reflectance_model(WUICOEF_SceneLightingEffect *self, WUICOEF_SceneLightingEffectReflectanceModel *value);
 
-/* Windows.UI.Composition.Effects.SceneLightingEffect.put_ReflectanceModel() */
 HRESULT wuicoef_scene_lighting_effect_put__reflectance_model(WUICOEF_SceneLightingEffect *self, WUICOEF_SceneLightingEffectReflectanceModel value);
 
-/* Windows.UI.Composition.Effects.SceneLightingEffect.get_Name() */
 HRESULT wuicoef_scene_lighting_effect_get__name(WUICOEF_SceneLightingEffect *self, cwinrt_hstring *value);
 
-/* Windows.UI.Composition.Effects.SceneLightingEffect.put_Name(name) */
 HRESULT wuicoef_scene_lighting_effect_put__name(WUICOEF_SceneLightingEffect *self, cwinrt_hstring name);
 
-/* Windows.UI.Composition.Effects.ISceneLightingEffect */
-/* Windows.UI.Composition.Effects.ISceneLightingEffect2 */
-/* Windows.UI.Composition.Effects.ISceneLightingEffect2.get_ReflectanceModel() */
 HRESULT wuicoef_scene_lighting_effect_2_get__reflectance_model(WUICOEF_ISceneLightingEffect_2 *self, WUICOEF_SceneLightingEffectReflectanceModel *value);
 
-/* Windows.UI.Composition.Effects.ISceneLightingEffect2.put_ReflectanceModel() */
 HRESULT wuicoef_scene_lighting_effect_2_put__reflectance_model(WUICOEF_ISceneLightingEffect_2 *self, WUICOEF_SceneLightingEffectReflectanceModel value);
 
 #endif /* CWINRT_WINDOWS_UI_COMPOSITION_EFFECTS_H */

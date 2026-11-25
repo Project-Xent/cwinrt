@@ -121,7 +121,6 @@ static int sb_enum_sig(winmd_db const *db, uint32_t row1, char const *full, char
 	return ( size_t ) snprintf(out, cap, "enum(%s;%s)", full, u) >= cap ? -1 : 0;
 }
 
-/* Append ";<field-sig>" at *pos; returns -1 on overflow/decode failure. */
 static int sb_struct_append_field(
   winmd_db const *db, winmd_field_info const *f, char *out, size_t cap, size_t *pos, int depth
 ) {
@@ -213,8 +212,6 @@ static int sb_named_type(winmd_db const *db, uint8_t const **p, uint8_t const *e
 	return sb_typedef_depth(db, row, out, cap, depth + 1);
 }
 
-/* Parse a GenericInst header: <CLASS|VALUETYPE> <open-token> <argc>.
-   Yields the open type's GUID and arg count (1..8). */
 static int sb_generic_header(
   winmd_db const *db, uint8_t const **p, uint8_t const *end, uint8_t og [16], uint32_t *argc
 ) {
@@ -300,8 +297,6 @@ int cwinrt_sigbuild_type(winmd_db const *db, uint8_t const **p, uint8_t const *e
 	return sb_type_depth(db, p, end, out, cap, 0);
 }
 
-/* Build a human-readable display name for a GenericInst blob:
-   "Namespace.OpenName`N<arg,arg>" with args by WinRT short name. Best-effort. */
 static int sb_argname(winmd_db const *db, uint8_t const **p, uint8_t const *end, char *out, size_t cap, int depth);
 
 static int sb_typedef_name(winmd_db const *db, uint32_t row1, char *out, size_t cap) {
@@ -335,8 +330,6 @@ static int sb_named_name(winmd_db const *db, uint8_t const **p, uint8_t const *e
 	return -1;
 }
 
-/* Read the GenericInst open-type token and write its short name (sans `N arity)
-   into base. Leaves *p positioned at <argc>. */
 static int sb_generic_base_name(
   winmd_db const *db, uint8_t const **p, uint8_t const *end, char *base, size_t base_cap
 ) {
@@ -354,7 +347,6 @@ static int sb_generic_base_name(
 	return 0;
 }
 
-/* Append "arg[,arg]..." display names at *pos. */
 static int sb_generic_arg_names(
   winmd_db const *db, uint8_t const **p, uint8_t const *end, char *out, size_t cap, size_t *pos,
   uint32_t argc, int depth

@@ -14,13 +14,11 @@
 #include <cwinrt/Windows.Foundation.Numerics.h>
 #include <cwinrt/cwinrt_piids.h>
 
-/* External types (forward declarations) */
 #ifndef CWINRT_FWD_WUIIN_PointerPoint
 #define CWINRT_FWD_WUIIN_PointerPoint
 typedef struct WUIIN_PointerPoint WUIIN_PointerPoint;
 #endif
 
-/* Types (forward declarations) */
 typedef struct WUICOIN_IInteractionTrackerVector2InertiaModifierFactory WUICOIN_IInteractionTrackerVector2InertiaModifierFactory;
 typedef struct WUICOIN_IInteractionTrackerVector2InertiaNaturalMotionStatics WUICOIN_IInteractionTrackerVector2InertiaNaturalMotionStatics;
 typedef struct WUICOIN_IVisualInteractionSourceObjectFactory WUICOIN_IVisualInteractionSourceObjectFactory;
@@ -81,7 +79,6 @@ typedef struct WUICOIN_IInteractionTrackerInertiaStateEnteredArgs_2 WUICOIN_IInt
 typedef struct WUICOIN_IInteractionTrackerInertiaStateEnteredArgs_3 WUICOIN_IInteractionTrackerInertiaStateEnteredArgs_3;
 typedef struct WUICOIN_ICompositionInteractionSourceCollection WUICOIN_ICompositionInteractionSourceCollection;
 
-/* Signature-referenced types */
 #ifndef CWINRT_FWD_WUC_Comp
 #define CWINRT_FWD_WUC_Comp
 typedef struct WUC_Comp WUC_Comp;
@@ -197,7 +194,6 @@ typedef enum WUICOIN_VisualInteractionSourceRedirectionMode {
 } WUICOIN_VisualInteractionSourceRedirectionMode;
 #endif
 
-/* Interface IIDs */
 #ifndef CWINRT_MAYBE_UNUSED
 #  define CWINRT_MAYBE_UNUSED [[maybe_unused]]
 #endif
@@ -370,621 +366,380 @@ static const IID CWINRT_IID_WUICOIN_IInteractionTrackerInertiaStateEnteredArgs_3
 static const IID CWINRT_IID_WUICOIN_ICompositionInteractionSourceCollection CWINRT_MAYBE_UNUSED = { 0x1B468E4B, 0xA5BF, 0x47D8, { 0xA5, 0x47, 0x38, 0x94, 0x15, 0x5A, 0x15, 0x8C } };
 #endif
 
-/* Methods */
-
-/* Windows.UI.Composition.Interactions.IInteractionTrackerVector2InertiaNaturalMotionStatics */
-/* Windows.UI.Composition.Interactions.IInteractionTrackerVector2InertiaNaturalMotionStatics.Create(compositor) */
 HRESULT wuicoin_interaction_tracker_vector2_inertia_natural_motion_statics_create(WUICOIN_IInteractionTrackerVector2InertiaNaturalMotionStatics *self, WUC_Comp* compositor, WUICOIN_InteractionTrackerVector2InertiaNaturalMotion** out);
 
-/* Windows.UI.Composition.Interactions.IVisualInteractionSourceStatics */
-/* Windows.UI.Composition.Interactions.IVisualInteractionSourceStatics.Create(source) */
 HRESULT wuicoin_visual_interaction_source_statics_create(WUICOIN_IVisualInteractionSourceStatics *self, WUC_Visual* source, WUICOIN_VisualInteractionSource** out);
 
-/* Windows.UI.Composition.Interactions.IVisualInteractionSourceStatics2 */
-/* Windows.UI.Composition.Interactions.IVisualInteractionSourceStatics2.CreateFromIVisualElement(source) */
 HRESULT wuicoin_visual_interaction_source_statics_2_create_from_i_visual_element(WUICOIN_IVisualInteractionSourceStatics_2 *self, WUC_IVisualElement* source, WUICOIN_VisualInteractionSource** out);
 
-/* activate Windows.UI.Composition.Interactions.InteractionSourceConfiguration */
 HRESULT wuicoin_interaction_source_configuration_new(WUICOIN_InteractionSourceConfiguration **out);
 
-/* Windows.UI.Composition.Interactions.InteractionSourceConfiguration */
-/* Windows.UI.Composition.Interactions.InteractionSourceConfiguration.get_PositionXSourceMode() */
 HRESULT wuicoin_interaction_source_configuration_get__position_x_source_mode(WUICOIN_InteractionSourceConfiguration *self, WUICOIN_InteractionSourceRedirectionMode *value);
 
-/* Windows.UI.Composition.Interactions.InteractionSourceConfiguration.put_PositionXSourceMode() */
 HRESULT wuicoin_interaction_source_configuration_put__position_x_source_mode(WUICOIN_InteractionSourceConfiguration *self, WUICOIN_InteractionSourceRedirectionMode value);
 
-/* Windows.UI.Composition.Interactions.InteractionSourceConfiguration.get_PositionYSourceMode() */
 HRESULT wuicoin_interaction_source_configuration_get__position_y_source_mode(WUICOIN_InteractionSourceConfiguration *self, WUICOIN_InteractionSourceRedirectionMode *value);
 
-/* Windows.UI.Composition.Interactions.InteractionSourceConfiguration.put_PositionYSourceMode() */
 HRESULT wuicoin_interaction_source_configuration_put__position_y_source_mode(WUICOIN_InteractionSourceConfiguration *self, WUICOIN_InteractionSourceRedirectionMode value);
 
-/* Windows.UI.Composition.Interactions.InteractionSourceConfiguration.get_ScaleSourceMode() */
 HRESULT wuicoin_interaction_source_configuration_get__scale_source_mode(WUICOIN_InteractionSourceConfiguration *self, WUICOIN_InteractionSourceRedirectionMode *value);
 
-/* Windows.UI.Composition.Interactions.InteractionSourceConfiguration.put_ScaleSourceMode() */
 HRESULT wuicoin_interaction_source_configuration_put__scale_source_mode(WUICOIN_InteractionSourceConfiguration *self, WUICOIN_InteractionSourceRedirectionMode value);
 
-/* activate Windows.UI.Composition.Interactions.InteractionTracker */
 HRESULT wuicoin_interaction_tracker_new(WUICOIN_InteractionTracker **out);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker */
-/* Windows.UI.Composition.Interactions.InteractionTracker.get_InteractionSources() */
 HRESULT wuicoin_interaction_tracker_get__interaction_sources(WUICOIN_InteractionTracker *self, WUICOIN_CompositionInteractionSourceCollection** value);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.get_IsPositionRoundingSuggested() */
 HRESULT wuicoin_interaction_tracker_get__is_position_rounding_suggested(WUICOIN_InteractionTracker *self, BOOL *value);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.get_MaxPosition() */
 HRESULT wuicoin_interaction_tracker_get__max_position(WUICOIN_InteractionTracker *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.put_MaxPosition() */
 HRESULT wuicoin_interaction_tracker_put__max_position(WUICOIN_InteractionTracker *self, WFN_Vector_3 value);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.get_MaxScale() */
 HRESULT wuicoin_interaction_tracker_get__max_scale(WUICOIN_InteractionTracker *self, float *value);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.put_MaxScale() */
 HRESULT wuicoin_interaction_tracker_put__max_scale(WUICOIN_InteractionTracker *self, float value);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.get_MinPosition() */
 HRESULT wuicoin_interaction_tracker_get__min_position(WUICOIN_InteractionTracker *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.put_MinPosition() */
 HRESULT wuicoin_interaction_tracker_put__min_position(WUICOIN_InteractionTracker *self, WFN_Vector_3 value);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.get_MinScale() */
 HRESULT wuicoin_interaction_tracker_get__min_scale(WUICOIN_InteractionTracker *self, float *value);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.put_MinScale() */
 HRESULT wuicoin_interaction_tracker_put__min_scale(WUICOIN_InteractionTracker *self, float value);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.get_NaturalRestingPosition() */
 HRESULT wuicoin_interaction_tracker_get__natural_resting_position(WUICOIN_InteractionTracker *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.get_NaturalRestingScale() */
 HRESULT wuicoin_interaction_tracker_get__natural_resting_scale(WUICOIN_InteractionTracker *self, float *value);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.get_Owner() */
 HRESULT wuicoin_interaction_tracker_get__owner(WUICOIN_InteractionTracker *self, WUICOIN_IInteractionTrackerOwner** value);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.get_Position() */
 HRESULT wuicoin_interaction_tracker_get__position(WUICOIN_InteractionTracker *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.get_PositionInertiaDecayRate() */
 HRESULT wuicoin_interaction_tracker_get__position_inertia_decay_rate(WUICOIN_InteractionTracker *self, WFN_Vector_3** value);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.put_PositionInertiaDecayRate() */
 HRESULT wuicoin_interaction_tracker_put__position_inertia_decay_rate(WUICOIN_InteractionTracker *self, WFN_Vector_3* value);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.get_PositionVelocityInPixelsPerSecond() */
 HRESULT wuicoin_interaction_tracker_get__position_velocity_in_pixels_per_second(WUICOIN_InteractionTracker *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.get_Scale() */
 HRESULT wuicoin_interaction_tracker_get__scale(WUICOIN_InteractionTracker *self, float *value);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.get_ScaleInertiaDecayRate() */
 HRESULT wuicoin_interaction_tracker_get__scale_inertia_decay_rate(WUICOIN_InteractionTracker *self, float** value);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.put_ScaleInertiaDecayRate() */
 HRESULT wuicoin_interaction_tracker_put__scale_inertia_decay_rate(WUICOIN_InteractionTracker *self, float* value);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.get_ScaleVelocityInPercentPerSecond() */
 HRESULT wuicoin_interaction_tracker_get__scale_velocity_in_percent_per_second(WUICOIN_InteractionTracker *self, float *value);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.AdjustPositionXIfGreaterThanThreshold(adjustment, positionThreshold) */
 HRESULT wuicoin_interaction_tracker_adjust_position_x_if_greater_than_threshold(WUICOIN_InteractionTracker *self, float adjustment, float positionThreshold);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.AdjustPositionYIfGreaterThanThreshold(adjustment, positionThreshold) */
 HRESULT wuicoin_interaction_tracker_adjust_position_y_if_greater_than_threshold(WUICOIN_InteractionTracker *self, float adjustment, float positionThreshold);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.ConfigurePositionXInertiaModifiers(modifiers) */
 HRESULT wuicoin_interaction_tracker_configure_position_x_inertia_modifiers(WUICOIN_InteractionTracker *self, WFOCO_IIterable_WUICOIN_InteractionTrackerInertiaModifier* modifiers);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.ConfigurePositionYInertiaModifiers(modifiers) */
 HRESULT wuicoin_interaction_tracker_configure_position_y_inertia_modifiers(WUICOIN_InteractionTracker *self, WFOCO_IIterable_WUICOIN_InteractionTrackerInertiaModifier* modifiers);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.ConfigureScaleInertiaModifiers(modifiers) */
 HRESULT wuicoin_interaction_tracker_configure_scale_inertia_modifiers(WUICOIN_InteractionTracker *self, WFOCO_IIterable_WUICOIN_InteractionTrackerInertiaModifier* modifiers);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.TryUpdatePosition() */
 HRESULT wuicoin_interaction_tracker_try_update_position(WUICOIN_InteractionTracker *self, WFN_Vector_3 value, int32_t *out);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.TryUpdatePositionBy(amount) */
 HRESULT wuicoin_interaction_tracker_try_update_position_by(WUICOIN_InteractionTracker *self, WFN_Vector_3 amount, int32_t *out);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.TryUpdatePositionWithAnimation(animation) */
 HRESULT wuicoin_interaction_tracker_try_update_position_with_animation(WUICOIN_InteractionTracker *self, WUC_CompositionAnimation* animation, int32_t *out);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.TryUpdatePositionWithAdditionalVelocity(velocityInPixelsPerSecond) */
 HRESULT wuicoin_interaction_tracker_try_update_position_with_additional_velocity(WUICOIN_InteractionTracker *self, WFN_Vector_3 velocityInPixelsPerSecond, int32_t *out);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.TryUpdateScale(centerPoint) */
 HRESULT wuicoin_interaction_tracker_try_update_scale(WUICOIN_InteractionTracker *self, float value, WFN_Vector_3 centerPoint, int32_t *out);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.TryUpdateScaleWithAnimation(animation, centerPoint) */
 HRESULT wuicoin_interaction_tracker_try_update_scale_with_animation(WUICOIN_InteractionTracker *self, WUC_CompositionAnimation* animation, WFN_Vector_3 centerPoint, int32_t *out);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.TryUpdateScaleWithAdditionalVelocity(velocityInPercentPerSecond, centerPoint) */
 HRESULT wuicoin_interaction_tracker_try_update_scale_with_additional_velocity(WUICOIN_InteractionTracker *self, float velocityInPercentPerSecond, WFN_Vector_3 centerPoint, int32_t *out);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.ConfigureCenterPointXInertiaModifiers(conditionalValues) */
 HRESULT wuicoin_interaction_tracker_configure_center_point_x_inertia_modifiers(WUICOIN_InteractionTracker *self, WFOCO_IIterable_WUICOIN_CompositionConditionalValue* conditionalValues);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.ConfigureCenterPointYInertiaModifiers(conditionalValues) */
 HRESULT wuicoin_interaction_tracker_configure_center_point_y_inertia_modifiers(WUICOIN_InteractionTracker *self, WFOCO_IIterable_WUICOIN_CompositionConditionalValue* conditionalValues);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.ConfigureVector2PositionInertiaModifiers(modifiers) */
 HRESULT wuicoin_interaction_tracker_configure_vector2_position_inertia_modifiers(WUICOIN_InteractionTracker *self, WFOCO_IIterable_WUICOIN_InteractionTrackerVector2InertiaModifier* modifiers);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.TryUpdatePosition(option) */
 HRESULT wuicoin_interaction_tracker_try_update_position_3_interaction_tracker_clamping_option_i32(WUICOIN_InteractionTracker *self, WFN_Vector_3 value, WUICOIN_InteractionTrackerClampingOption option, int32_t *out);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.TryUpdatePositionBy(amount, option) */
 HRESULT wuicoin_interaction_tracker_try_update_position_by_3_interaction_tracker_clamping_option_i32(WUICOIN_InteractionTracker *self, WFN_Vector_3 amount, WUICOIN_InteractionTrackerClampingOption option, int32_t *out);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.get_IsInertiaFromImpulse() */
 HRESULT wuicoin_interaction_tracker_get__is_inertia_from_impulse(WUICOIN_InteractionTracker *self, BOOL *value);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.TryUpdatePosition(option, posUpdateOption) */
 HRESULT wuicoin_interaction_tracker_try_update_position_3_interaction_tracker_clamping_optio_624bbfb9(WUICOIN_InteractionTracker *self, WFN_Vector_3 value, WUICOIN_InteractionTrackerClampingOption option, WUICOIN_InteractionTrackerPositionUpdateOption posUpdateOption, int32_t *out);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.SetBindingMode(boundTracker1, boundTracker2, axisMode) */
 HRESULT wuicoin_interaction_tracker_set_binding_mode(WUICOIN_InteractionTracker* boundTracker1, WUICOIN_InteractionTracker* boundTracker2, WUICOIN_InteractionBindingAxisModes axisMode);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.GetBindingMode(boundTracker1, boundTracker2) */
 HRESULT wuicoin_interaction_tracker_get_binding_mode(WUICOIN_InteractionTracker* boundTracker1, WUICOIN_InteractionTracker* boundTracker2, WUICOIN_InteractionBindingAxisModes *out);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.Create(compositor) */
 HRESULT wuicoin_interaction_tracker_create(WUC_Comp* compositor, WUICOIN_InteractionTracker** out);
 
-/* Windows.UI.Composition.Interactions.InteractionTracker.CreateWithOwner(compositor, owner) */
 HRESULT wuicoin_interaction_tracker_create_with_owner(WUC_Comp* compositor, WUICOIN_IInteractionTrackerOwner* owner, WUICOIN_InteractionTracker** out);
 
-/* activate Windows.UI.Composition.Interactions.InteractionTrackerCustomAnimationStateEnteredArgs */
 HRESULT wuicoin_interaction_tracker_custom_animation_state_entered_args_new(WUICOIN_InteractionTrackerCustomAnimationStateEnteredArgs **out);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerCustomAnimationStateEnteredArgs */
-/* Windows.UI.Composition.Interactions.InteractionTrackerCustomAnimationStateEnteredArgs.get_RequestId() */
 HRESULT wuicoin_interaction_tracker_custom_animation_state_entered_args_get__request_id(WUICOIN_InteractionTrackerCustomAnimationStateEnteredArgs *self, int32_t *value);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerCustomAnimationStateEnteredArgs.get_IsFromBinding() */
 HRESULT wuicoin_interaction_tracker_custom_animation_state_entered_args_get__is_from_binding(WUICOIN_InteractionTrackerCustomAnimationStateEnteredArgs *self, BOOL *value);
 
-/* activate Windows.UI.Composition.Interactions.InteractionTrackerIdleStateEnteredArgs */
 HRESULT wuicoin_interaction_tracker_idle_state_entered_args_new(WUICOIN_InteractionTrackerIdleStateEnteredArgs **out);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerIdleStateEnteredArgs */
-/* Windows.UI.Composition.Interactions.InteractionTrackerIdleStateEnteredArgs.get_RequestId() */
 HRESULT wuicoin_interaction_tracker_idle_state_entered_args_get__request_id(WUICOIN_InteractionTrackerIdleStateEnteredArgs *self, int32_t *value);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerIdleStateEnteredArgs.get_IsFromBinding() */
 HRESULT wuicoin_interaction_tracker_idle_state_entered_args_get__is_from_binding(WUICOIN_InteractionTrackerIdleStateEnteredArgs *self, BOOL *value);
 
-/* activate Windows.UI.Composition.Interactions.InteractionTrackerInertiaMotion */
 HRESULT wuicoin_interaction_tracker_inertia_motion_new(WUICOIN_InteractionTrackerInertiaMotion **out);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerInertiaMotion */
-/* Windows.UI.Composition.Interactions.InteractionTrackerInertiaMotion.get_Condition() */
 HRESULT wuicoin_interaction_tracker_inertia_motion_get__condition(WUICOIN_InteractionTrackerInertiaMotion *self, WUC_ExpressionAnimation** value);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerInertiaMotion.put_Condition() */
 HRESULT wuicoin_interaction_tracker_inertia_motion_put__condition(WUICOIN_InteractionTrackerInertiaMotion *self, WUC_ExpressionAnimation* value);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerInertiaMotion.get_Motion() */
 HRESULT wuicoin_interaction_tracker_inertia_motion_get__motion(WUICOIN_InteractionTrackerInertiaMotion *self, WUC_ExpressionAnimation** value);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerInertiaMotion.put_Motion() */
 HRESULT wuicoin_interaction_tracker_inertia_motion_put__motion(WUICOIN_InteractionTrackerInertiaMotion *self, WUC_ExpressionAnimation* value);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerInertiaMotion.Create(compositor) */
 HRESULT wuicoin_interaction_tracker_inertia_motion_create(WUC_Comp* compositor, WUICOIN_InteractionTrackerInertiaMotion** out);
 
-/* activate Windows.UI.Composition.Interactions.InteractionTrackerInertiaNaturalMotion */
 HRESULT wuicoin_interaction_tracker_inertia_natural_motion_new(WUICOIN_InteractionTrackerInertiaNaturalMotion **out);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerInertiaNaturalMotion */
-/* Windows.UI.Composition.Interactions.InteractionTrackerInertiaNaturalMotion.get_Condition() */
 HRESULT wuicoin_interaction_tracker_inertia_natural_motion_get__condition(WUICOIN_InteractionTrackerInertiaNaturalMotion *self, WUC_ExpressionAnimation** value);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerInertiaNaturalMotion.put_Condition() */
 HRESULT wuicoin_interaction_tracker_inertia_natural_motion_put__condition(WUICOIN_InteractionTrackerInertiaNaturalMotion *self, WUC_ExpressionAnimation* value);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerInertiaNaturalMotion.get_NaturalMotion() */
 HRESULT wuicoin_interaction_tracker_inertia_natural_motion_get__natural_motion(WUICOIN_InteractionTrackerInertiaNaturalMotion *self, WUC_ScalarNaturalMotionAnimation** value);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerInertiaNaturalMotion.put_NaturalMotion() */
 HRESULT wuicoin_interaction_tracker_inertia_natural_motion_put__natural_motion(WUICOIN_InteractionTrackerInertiaNaturalMotion *self, WUC_ScalarNaturalMotionAnimation* value);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerInertiaNaturalMotion.Create(compositor) */
 HRESULT wuicoin_interaction_tracker_inertia_natural_motion_create(WUC_Comp* compositor, WUICOIN_InteractionTrackerInertiaNaturalMotion** out);
 
-/* activate Windows.UI.Composition.Interactions.InteractionTrackerInertiaRestingValue */
 HRESULT wuicoin_interaction_tracker_inertia_resting_value_new(WUICOIN_InteractionTrackerInertiaRestingValue **out);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerInertiaRestingValue */
-/* Windows.UI.Composition.Interactions.InteractionTrackerInertiaRestingValue.get_Condition() */
 HRESULT wuicoin_interaction_tracker_inertia_resting_value_get__condition(WUICOIN_InteractionTrackerInertiaRestingValue *self, WUC_ExpressionAnimation** value);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerInertiaRestingValue.put_Condition() */
 HRESULT wuicoin_interaction_tracker_inertia_resting_value_put__condition(WUICOIN_InteractionTrackerInertiaRestingValue *self, WUC_ExpressionAnimation* value);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerInertiaRestingValue.get_RestingValue() */
 HRESULT wuicoin_interaction_tracker_inertia_resting_value_get__resting_value(WUICOIN_InteractionTrackerInertiaRestingValue *self, WUC_ExpressionAnimation** value);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerInertiaRestingValue.put_RestingValue() */
 HRESULT wuicoin_interaction_tracker_inertia_resting_value_put__resting_value(WUICOIN_InteractionTrackerInertiaRestingValue *self, WUC_ExpressionAnimation* value);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerInertiaRestingValue.Create(compositor) */
 HRESULT wuicoin_interaction_tracker_inertia_resting_value_create(WUC_Comp* compositor, WUICOIN_InteractionTrackerInertiaRestingValue** out);
 
-/* Windows.UI.Composition.Interactions.IInteractionTrackerStatics2 */
-/* Windows.UI.Composition.Interactions.IInteractionTrackerStatics2.SetBindingMode(boundTracker1, boundTracker2, axisMode) */
 HRESULT wuicoin_interaction_tracker_statics_2_set_binding_mode(WUICOIN_IInteractionTrackerStatics_2 *self, WUICOIN_InteractionTracker* boundTracker1, WUICOIN_InteractionTracker* boundTracker2, WUICOIN_InteractionBindingAxisModes axisMode);
 
-/* Windows.UI.Composition.Interactions.IInteractionTrackerStatics2.GetBindingMode(boundTracker1, boundTracker2) */
 HRESULT wuicoin_interaction_tracker_statics_2_get_binding_mode(WUICOIN_IInteractionTrackerStatics_2 *self, WUICOIN_InteractionTracker* boundTracker1, WUICOIN_InteractionTracker* boundTracker2, WUICOIN_InteractionBindingAxisModes *out);
 
-/* activate Windows.UI.Composition.Interactions.InteractionTrackerInteractingStateEnteredArgs */
 HRESULT wuicoin_interaction_tracker_interacting_state_entered_args_new(WUICOIN_InteractionTrackerInteractingStateEnteredArgs **out);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerInteractingStateEnteredArgs */
-/* Windows.UI.Composition.Interactions.InteractionTrackerInteractingStateEnteredArgs.get_RequestId() */
 HRESULT wuicoin_interaction_tracker_interacting_state_entered_args_get__request_id(WUICOIN_InteractionTrackerInteractingStateEnteredArgs *self, int32_t *value);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerInteractingStateEnteredArgs.get_IsFromBinding() */
 HRESULT wuicoin_interaction_tracker_interacting_state_entered_args_get__is_from_binding(WUICOIN_InteractionTrackerInteractingStateEnteredArgs *self, BOOL *value);
 
-/* activate Windows.UI.Composition.Interactions.InteractionTrackerRequestIgnoredArgs */
 HRESULT wuicoin_interaction_tracker_request_ignored_args_new(WUICOIN_InteractionTrackerRequestIgnoredArgs **out);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerRequestIgnoredArgs */
-/* Windows.UI.Composition.Interactions.InteractionTrackerRequestIgnoredArgs.get_RequestId() */
 HRESULT wuicoin_interaction_tracker_request_ignored_args_get__request_id(WUICOIN_InteractionTrackerRequestIgnoredArgs *self, int32_t *value);
 
-/* activate Windows.UI.Composition.Interactions.InteractionTrackerValuesChangedArgs */
 HRESULT wuicoin_interaction_tracker_values_changed_args_new(WUICOIN_InteractionTrackerValuesChangedArgs **out);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerValuesChangedArgs */
-/* Windows.UI.Composition.Interactions.InteractionTrackerValuesChangedArgs.get_Position() */
 HRESULT wuicoin_interaction_tracker_values_changed_args_get__position(WUICOIN_InteractionTrackerValuesChangedArgs *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerValuesChangedArgs.get_RequestId() */
 HRESULT wuicoin_interaction_tracker_values_changed_args_get__request_id(WUICOIN_InteractionTrackerValuesChangedArgs *self, int32_t *value);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerValuesChangedArgs.get_Scale() */
 HRESULT wuicoin_interaction_tracker_values_changed_args_get__scale(WUICOIN_InteractionTrackerValuesChangedArgs *self, float *value);
 
-/* activate Windows.UI.Composition.Interactions.InteractionTrackerVector2InertiaNaturalMotion */
 HRESULT wuicoin_interaction_tracker_vector2_inertia_natural_motion_new(WUICOIN_InteractionTrackerVector2InertiaNaturalMotion **out);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerVector2InertiaNaturalMotion */
-/* Windows.UI.Composition.Interactions.InteractionTrackerVector2InertiaNaturalMotion.get_Condition() */
 HRESULT wuicoin_interaction_tracker_vector2_inertia_natural_motion_get__condition(WUICOIN_InteractionTrackerVector2InertiaNaturalMotion *self, WUC_ExpressionAnimation** value);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerVector2InertiaNaturalMotion.put_Condition() */
 HRESULT wuicoin_interaction_tracker_vector2_inertia_natural_motion_put__condition(WUICOIN_InteractionTrackerVector2InertiaNaturalMotion *self, WUC_ExpressionAnimation* value);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerVector2InertiaNaturalMotion.get_NaturalMotion() */
 HRESULT wuicoin_interaction_tracker_vector2_inertia_natural_motion_get__natural_motion(WUICOIN_InteractionTrackerVector2InertiaNaturalMotion *self, WUC_Vector2NaturalMotionAnimation** value);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerVector2InertiaNaturalMotion.put_NaturalMotion() */
 HRESULT wuicoin_interaction_tracker_vector2_inertia_natural_motion_put__natural_motion(WUICOIN_InteractionTrackerVector2InertiaNaturalMotion *self, WUC_Vector2NaturalMotionAnimation* value);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerVector2InertiaNaturalMotion.Create(compositor) */
 HRESULT wuicoin_interaction_tracker_vector2_inertia_natural_motion_create(WUC_Comp* compositor, WUICOIN_InteractionTrackerVector2InertiaNaturalMotion** out);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource */
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.get_IsPositionXRailsEnabled() */
 HRESULT wuicoin_visual_interaction_source_get__is_position_x_rails_enabled(WUICOIN_VisualInteractionSource *self, BOOL *value);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.put_IsPositionXRailsEnabled() */
 HRESULT wuicoin_visual_interaction_source_put__is_position_x_rails_enabled(WUICOIN_VisualInteractionSource *self, BOOL value);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.get_IsPositionYRailsEnabled() */
 HRESULT wuicoin_visual_interaction_source_get__is_position_y_rails_enabled(WUICOIN_VisualInteractionSource *self, BOOL *value);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.put_IsPositionYRailsEnabled() */
 HRESULT wuicoin_visual_interaction_source_put__is_position_y_rails_enabled(WUICOIN_VisualInteractionSource *self, BOOL value);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.get_ManipulationRedirectionMode() */
 HRESULT wuicoin_visual_interaction_source_get__manipulation_redirection_mode(WUICOIN_VisualInteractionSource *self, WUICOIN_VisualInteractionSourceRedirectionMode *value);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.put_ManipulationRedirectionMode() */
 HRESULT wuicoin_visual_interaction_source_put__manipulation_redirection_mode(WUICOIN_VisualInteractionSource *self, WUICOIN_VisualInteractionSourceRedirectionMode value);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.get_PositionXChainingMode() */
 HRESULT wuicoin_visual_interaction_source_get__position_x_chaining_mode(WUICOIN_VisualInteractionSource *self, WUICOIN_InteractionChainingMode *value);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.put_PositionXChainingMode() */
 HRESULT wuicoin_visual_interaction_source_put__position_x_chaining_mode(WUICOIN_VisualInteractionSource *self, WUICOIN_InteractionChainingMode value);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.get_PositionXSourceMode() */
 HRESULT wuicoin_visual_interaction_source_get__position_x_source_mode(WUICOIN_VisualInteractionSource *self, WUICOIN_InteractionSourceMode *value);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.put_PositionXSourceMode() */
 HRESULT wuicoin_visual_interaction_source_put__position_x_source_mode(WUICOIN_VisualInteractionSource *self, WUICOIN_InteractionSourceMode value);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.get_PositionYChainingMode() */
 HRESULT wuicoin_visual_interaction_source_get__position_y_chaining_mode(WUICOIN_VisualInteractionSource *self, WUICOIN_InteractionChainingMode *value);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.put_PositionYChainingMode() */
 HRESULT wuicoin_visual_interaction_source_put__position_y_chaining_mode(WUICOIN_VisualInteractionSource *self, WUICOIN_InteractionChainingMode value);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.get_PositionYSourceMode() */
 HRESULT wuicoin_visual_interaction_source_get__position_y_source_mode(WUICOIN_VisualInteractionSource *self, WUICOIN_InteractionSourceMode *value);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.put_PositionYSourceMode() */
 HRESULT wuicoin_visual_interaction_source_put__position_y_source_mode(WUICOIN_VisualInteractionSource *self, WUICOIN_InteractionSourceMode value);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.get_ScaleChainingMode() */
 HRESULT wuicoin_visual_interaction_source_get__scale_chaining_mode(WUICOIN_VisualInteractionSource *self, WUICOIN_InteractionChainingMode *value);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.put_ScaleChainingMode() */
 HRESULT wuicoin_visual_interaction_source_put__scale_chaining_mode(WUICOIN_VisualInteractionSource *self, WUICOIN_InteractionChainingMode value);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.get_ScaleSourceMode() */
 HRESULT wuicoin_visual_interaction_source_get__scale_source_mode(WUICOIN_VisualInteractionSource *self, WUICOIN_InteractionSourceMode *value);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.put_ScaleSourceMode() */
 HRESULT wuicoin_visual_interaction_source_put__scale_source_mode(WUICOIN_VisualInteractionSource *self, WUICOIN_InteractionSourceMode value);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.get_Source() */
 HRESULT wuicoin_visual_interaction_source_get__source(WUICOIN_VisualInteractionSource *self, WUC_Visual** value);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.TryRedirectForManipulation(pointerPoint) */
 HRESULT wuicoin_visual_interaction_source_try_redirect_for_manipulation(WUICOIN_VisualInteractionSource *self, WUIIN_PointerPoint* pointerPoint);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.get_DeltaPosition() */
 HRESULT wuicoin_visual_interaction_source_get__delta_position(WUICOIN_VisualInteractionSource *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.get_DeltaScale() */
 HRESULT wuicoin_visual_interaction_source_get__delta_scale(WUICOIN_VisualInteractionSource *self, float *value);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.get_Position() */
 HRESULT wuicoin_visual_interaction_source_get__position(WUICOIN_VisualInteractionSource *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.get_PositionVelocity() */
 HRESULT wuicoin_visual_interaction_source_get__position_velocity(WUICOIN_VisualInteractionSource *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.get_Scale() */
 HRESULT wuicoin_visual_interaction_source_get__scale(WUICOIN_VisualInteractionSource *self, float *value);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.get_ScaleVelocity() */
 HRESULT wuicoin_visual_interaction_source_get__scale_velocity(WUICOIN_VisualInteractionSource *self, float *value);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.ConfigureCenterPointXModifiers(conditionalValues) */
 HRESULT wuicoin_visual_interaction_source_configure_center_point_x_modifiers(WUICOIN_VisualInteractionSource *self, WFOCO_IIterable_WUICOIN_CompositionConditionalValue* conditionalValues);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.ConfigureCenterPointYModifiers(conditionalValues) */
 HRESULT wuicoin_visual_interaction_source_configure_center_point_y_modifiers(WUICOIN_VisualInteractionSource *self, WFOCO_IIterable_WUICOIN_CompositionConditionalValue* conditionalValues);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.ConfigureDeltaPositionXModifiers(conditionalValues) */
 HRESULT wuicoin_visual_interaction_source_configure_delta_position_x_modifiers(WUICOIN_VisualInteractionSource *self, WFOCO_IIterable_WUICOIN_CompositionConditionalValue* conditionalValues);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.ConfigureDeltaPositionYModifiers(conditionalValues) */
 HRESULT wuicoin_visual_interaction_source_configure_delta_position_y_modifiers(WUICOIN_VisualInteractionSource *self, WFOCO_IIterable_WUICOIN_CompositionConditionalValue* conditionalValues);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.ConfigureDeltaScaleModifiers(conditionalValues) */
 HRESULT wuicoin_visual_interaction_source_configure_delta_scale_modifiers(WUICOIN_VisualInteractionSource *self, WFOCO_IIterable_WUICOIN_CompositionConditionalValue* conditionalValues);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.get_PointerWheelConfig() */
 HRESULT wuicoin_visual_interaction_source_get__pointer_wheel_config(WUICOIN_VisualInteractionSource *self, WUICOIN_InteractionSourceConfiguration** value);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.CreateFromIVisualElement(source) */
 HRESULT wuicoin_visual_interaction_source_create_from_i_visual_element(WUC_IVisualElement* source, WUICOIN_VisualInteractionSource** out);
 
-/* Windows.UI.Composition.Interactions.VisualInteractionSource.Create(source) */
 HRESULT wuicoin_visual_interaction_source_create(WUC_Visual* source, WUICOIN_VisualInteractionSource** out);
 
-/* Windows.UI.Composition.Interactions.ICompositionConditionalValueStatics */
-/* Windows.UI.Composition.Interactions.ICompositionConditionalValueStatics.Create(compositor) */
 HRESULT wuicoin_composition_conditional_value_statics_create(WUICOIN_ICompositionConditionalValueStatics *self, WUC_Comp* compositor, WUICOIN_CompositionConditionalValue** out);
 
-/* activate Windows.UI.Composition.Interactions.CompositionConditionalValue */
 HRESULT wuicoin_composition_conditional_value_new(WUICOIN_CompositionConditionalValue **out);
 
-/* Windows.UI.Composition.Interactions.CompositionConditionalValue */
-/* Windows.UI.Composition.Interactions.CompositionConditionalValue.get_Condition() */
 HRESULT wuicoin_composition_conditional_value_get__condition(WUICOIN_CompositionConditionalValue *self, WUC_ExpressionAnimation** value);
 
-/* Windows.UI.Composition.Interactions.CompositionConditionalValue.put_Condition() */
 HRESULT wuicoin_composition_conditional_value_put__condition(WUICOIN_CompositionConditionalValue *self, WUC_ExpressionAnimation* value);
 
-/* Windows.UI.Composition.Interactions.CompositionConditionalValue.get_Value() */
 HRESULT wuicoin_composition_conditional_value_get__value(WUICOIN_CompositionConditionalValue *self, WUC_ExpressionAnimation** value);
 
-/* Windows.UI.Composition.Interactions.CompositionConditionalValue.put_Value() */
 HRESULT wuicoin_composition_conditional_value_put__value(WUICOIN_CompositionConditionalValue *self, WUC_ExpressionAnimation* value);
 
-/* Windows.UI.Composition.Interactions.CompositionConditionalValue.Create(compositor) */
 HRESULT wuicoin_composition_conditional_value_create(WUC_Comp* compositor, WUICOIN_CompositionConditionalValue** out);
 
-/* Windows.UI.Composition.Interactions.IInteractionTrackerStatics */
-/* Windows.UI.Composition.Interactions.IInteractionTrackerStatics.Create(compositor) */
 HRESULT wuicoin_interaction_tracker_statics_create(WUICOIN_IInteractionTrackerStatics *self, WUC_Comp* compositor, WUICOIN_InteractionTracker** out);
 
-/* Windows.UI.Composition.Interactions.IInteractionTrackerStatics.CreateWithOwner(compositor, owner) */
 HRESULT wuicoin_interaction_tracker_statics_create_with_owner(WUICOIN_IInteractionTrackerStatics *self, WUC_Comp* compositor, WUICOIN_IInteractionTrackerOwner* owner, WUICOIN_InteractionTracker** out);
 
-/* Windows.UI.Composition.Interactions.IInteractionTrackerOwner */
-/* Windows.UI.Composition.Interactions.IInteractionTrackerOwner.CustomAnimationStateEntered(sender, args) */
 HRESULT wuicoin_interaction_tracker_owner_custom_animation_state_entered(WUICOIN_IInteractionTrackerOwner *self, WUICOIN_InteractionTracker* sender, WUICOIN_InteractionTrackerCustomAnimationStateEnteredArgs* args);
 
-/* Windows.UI.Composition.Interactions.IInteractionTrackerOwner.IdleStateEntered(sender, args) */
 HRESULT wuicoin_interaction_tracker_owner_idle_state_entered(WUICOIN_IInteractionTrackerOwner *self, WUICOIN_InteractionTracker* sender, WUICOIN_InteractionTrackerIdleStateEnteredArgs* args);
 
-/* Windows.UI.Composition.Interactions.IInteractionTrackerOwner.InertiaStateEntered(sender, args) */
 HRESULT wuicoin_interaction_tracker_owner_inertia_state_entered(WUICOIN_IInteractionTrackerOwner *self, WUICOIN_InteractionTracker* sender, WUICOIN_InteractionTrackerInertiaStateEnteredArgs* args);
 
-/* Windows.UI.Composition.Interactions.IInteractionTrackerOwner.InteractingStateEntered(sender, args) */
 HRESULT wuicoin_interaction_tracker_owner_interacting_state_entered(WUICOIN_IInteractionTrackerOwner *self, WUICOIN_InteractionTracker* sender, WUICOIN_InteractionTrackerInteractingStateEnteredArgs* args);
 
-/* Windows.UI.Composition.Interactions.IInteractionTrackerOwner.RequestIgnored(sender, args) */
 HRESULT wuicoin_interaction_tracker_owner_request_ignored(WUICOIN_IInteractionTrackerOwner *self, WUICOIN_InteractionTracker* sender, WUICOIN_InteractionTrackerRequestIgnoredArgs* args);
 
-/* Windows.UI.Composition.Interactions.IInteractionTrackerOwner.ValuesChanged(sender, args) */
 HRESULT wuicoin_interaction_tracker_owner_values_changed(WUICOIN_IInteractionTrackerOwner *self, WUICOIN_InteractionTracker* sender, WUICOIN_InteractionTrackerValuesChangedArgs* args);
 
-/* Windows.UI.Composition.Interactions.IInteractionTrackerInertiaRestingValueStatics */
-/* Windows.UI.Composition.Interactions.IInteractionTrackerInertiaRestingValueStatics.Create(compositor) */
 HRESULT wuicoin_interaction_tracker_inertia_resting_value_statics_create(WUICOIN_IInteractionTrackerInertiaRestingValueStatics *self, WUC_Comp* compositor, WUICOIN_InteractionTrackerInertiaRestingValue** out);
 
-/* Windows.UI.Composition.Interactions.IInteractionTrackerInertiaNaturalMotionStatics */
-/* Windows.UI.Composition.Interactions.IInteractionTrackerInertiaNaturalMotionStatics.Create(compositor) */
 HRESULT wuicoin_interaction_tracker_inertia_natural_motion_statics_create(WUICOIN_IInteractionTrackerInertiaNaturalMotionStatics *self, WUC_Comp* compositor, WUICOIN_InteractionTrackerInertiaNaturalMotion** out);
 
-/* Windows.UI.Composition.Interactions.IInteractionTrackerInertiaMotionStatics */
-/* Windows.UI.Composition.Interactions.IInteractionTrackerInertiaMotionStatics.Create(compositor) */
 HRESULT wuicoin_interaction_tracker_inertia_motion_statics_create(WUICOIN_IInteractionTrackerInertiaMotionStatics *self, WUC_Comp* compositor, WUICOIN_InteractionTrackerInertiaMotion** out);
 
-/* activate Windows.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs */
 HRESULT wuicoin_interaction_tracker_inertia_state_entered_args_new(WUICOIN_InteractionTrackerInertiaStateEnteredArgs **out);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs */
-/* Windows.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs.get_ModifiedRestingPosition() */
 HRESULT wuicoin_interaction_tracker_inertia_state_entered_args_get__modified_resting_position(WUICOIN_InteractionTrackerInertiaStateEnteredArgs *self, WFN_Vector_3** value);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs.get_ModifiedRestingScale() */
 HRESULT wuicoin_interaction_tracker_inertia_state_entered_args_get__modified_resting_scale(WUICOIN_InteractionTrackerInertiaStateEnteredArgs *self, float** value);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs.get_NaturalRestingPosition() */
 HRESULT wuicoin_interaction_tracker_inertia_state_entered_args_get__natural_resting_position(WUICOIN_InteractionTrackerInertiaStateEnteredArgs *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs.get_NaturalRestingScale() */
 HRESULT wuicoin_interaction_tracker_inertia_state_entered_args_get__natural_resting_scale(WUICOIN_InteractionTrackerInertiaStateEnteredArgs *self, float *value);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs.get_PositionVelocityInPixelsPerSecond() */
 HRESULT wuicoin_interaction_tracker_inertia_state_entered_args_get__position_velocity_in_pixels_per_second(WUICOIN_InteractionTrackerInertiaStateEnteredArgs *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs.get_RequestId() */
 HRESULT wuicoin_interaction_tracker_inertia_state_entered_args_get__request_id(WUICOIN_InteractionTrackerInertiaStateEnteredArgs *self, int32_t *value);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs.get_ScaleVelocityInPercentPerSecond() */
 HRESULT wuicoin_interaction_tracker_inertia_state_entered_args_get__scale_velocity_in_percent_per_second(WUICOIN_InteractionTrackerInertiaStateEnteredArgs *self, float *value);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs.get_IsInertiaFromImpulse() */
 HRESULT wuicoin_interaction_tracker_inertia_state_entered_args_get__is_inertia_from_impulse(WUICOIN_InteractionTrackerInertiaStateEnteredArgs *self, BOOL *value);
 
-/* Windows.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs.get_IsFromBinding() */
 HRESULT wuicoin_interaction_tracker_inertia_state_entered_args_get__is_from_binding(WUICOIN_InteractionTrackerInertiaStateEnteredArgs *self, BOOL *value);
 
-/* activate Windows.UI.Composition.Interactions.CompositionInteractionSourceCollection */
 HRESULT wuicoin_composition_interaction_source_collection_new(WUICOIN_CompositionInteractionSourceCollection **out);
 
-/* Windows.UI.Composition.Interactions.CompositionInteractionSourceCollection */
-/* Windows.UI.Composition.Interactions.CompositionInteractionSourceCollection.get_Count() */
 HRESULT wuicoin_composition_interaction_source_collection_get__count(WUICOIN_CompositionInteractionSourceCollection *self, int32_t *value);
 
-/* Windows.UI.Composition.Interactions.CompositionInteractionSourceCollection.Add() */
 HRESULT wuicoin_composition_interaction_source_collection_add(WUICOIN_CompositionInteractionSourceCollection *self, WUICOIN_ICompositionInteractionSource* value);
 
-/* Windows.UI.Composition.Interactions.CompositionInteractionSourceCollection.Remove() */
 HRESULT wuicoin_composition_interaction_source_collection_remove(WUICOIN_CompositionInteractionSourceCollection *self, WUICOIN_ICompositionInteractionSource* value);
 
-/* Windows.UI.Composition.Interactions.CompositionInteractionSourceCollection.RemoveAll() */
 HRESULT wuicoin_composition_interaction_source_collection_remove_all(WUICOIN_CompositionInteractionSourceCollection *self);
 
-/* Windows.UI.Composition.Interactions.CompositionInteractionSourceCollection.First() */
 HRESULT wuicoin_composition_interaction_source_collection_first(WUICOIN_CompositionInteractionSourceCollection *self, WFOCO_IIterator_WUICOIN_ICompositionInteractionSource** out);
 
-/* Windows.UI.Composition.Interactions.IInteractionSourceConfiguration */
-/* Windows.UI.Composition.Interactions.IInteractionTracker */
-/* Windows.UI.Composition.Interactions.IInteractionTracker2 */
-/* Windows.UI.Composition.Interactions.IInteractionTracker2.ConfigureCenterPointXInertiaModifiers(conditionalValues) */
 HRESULT wuicoin_interaction_tracker_2_configure_center_point_x_inertia_modifiers(WUICOIN_IInteractionTracker_2 *self, WFOCO_IIterable_WUICOIN_CompositionConditionalValue* conditionalValues);
 
-/* Windows.UI.Composition.Interactions.IInteractionTracker2.ConfigureCenterPointYInertiaModifiers(conditionalValues) */
 HRESULT wuicoin_interaction_tracker_2_configure_center_point_y_inertia_modifiers(WUICOIN_IInteractionTracker_2 *self, WFOCO_IIterable_WUICOIN_CompositionConditionalValue* conditionalValues);
 
-/* Windows.UI.Composition.Interactions.IInteractionTracker3 */
-/* Windows.UI.Composition.Interactions.IInteractionTracker3.ConfigureVector2PositionInertiaModifiers(modifiers) */
 HRESULT wuicoin_interaction_tracker_3_configure_vector2_position_inertia_modifiers(WUICOIN_IInteractionTracker_3 *self, WFOCO_IIterable_WUICOIN_InteractionTrackerVector2InertiaModifier* modifiers);
 
-/* Windows.UI.Composition.Interactions.IInteractionTracker4 */
-/* Windows.UI.Composition.Interactions.IInteractionTracker4.TryUpdatePosition(option) */
 HRESULT wuicoin_interaction_tracker_4_try_update_position(WUICOIN_IInteractionTracker_4 *self, WFN_Vector_3 value, WUICOIN_InteractionTrackerClampingOption option, int32_t *out);
 
-/* Windows.UI.Composition.Interactions.IInteractionTracker4.TryUpdatePositionBy(amount, option) */
 HRESULT wuicoin_interaction_tracker_4_try_update_position_by(WUICOIN_IInteractionTracker_4 *self, WFN_Vector_3 amount, WUICOIN_InteractionTrackerClampingOption option, int32_t *out);
 
-/* Windows.UI.Composition.Interactions.IInteractionTracker4.get_IsInertiaFromImpulse() */
 HRESULT wuicoin_interaction_tracker_4_get__is_inertia_from_impulse(WUICOIN_IInteractionTracker_4 *self, BOOL *value);
 
-/* Windows.UI.Composition.Interactions.IInteractionTracker5 */
-/* Windows.UI.Composition.Interactions.IInteractionTracker5.TryUpdatePosition(option, posUpdateOption) */
 HRESULT wuicoin_interaction_tracker_5_try_update_position(WUICOIN_IInteractionTracker_5 *self, WFN_Vector_3 value, WUICOIN_InteractionTrackerClampingOption option, WUICOIN_InteractionTrackerPositionUpdateOption posUpdateOption, int32_t *out);
 
-/* Windows.UI.Composition.Interactions.IInteractionTrackerCustomAnimationStateEnteredArgs */
-/* Windows.UI.Composition.Interactions.IInteractionTrackerCustomAnimationStateEnteredArgs2 */
-/* Windows.UI.Composition.Interactions.IInteractionTrackerCustomAnimationStateEnteredArgs2.get_IsFromBinding() */
 HRESULT wuicoin_interaction_tracker_custom_animation_state_entered_args_2_get__is_from_binding(WUICOIN_IInteractionTrackerCustomAnimationStateEnteredArgs_2 *self, BOOL *value);
 
-/* Windows.UI.Composition.Interactions.IInteractionTrackerIdleStateEnteredArgs */
-/* Windows.UI.Composition.Interactions.IInteractionTrackerIdleStateEnteredArgs2 */
-/* Windows.UI.Composition.Interactions.IInteractionTrackerIdleStateEnteredArgs2.get_IsFromBinding() */
 HRESULT wuicoin_interaction_tracker_idle_state_entered_args_2_get__is_from_binding(WUICOIN_IInteractionTrackerIdleStateEnteredArgs_2 *self, BOOL *value);
 
-/* Windows.UI.Composition.Interactions.IInteractionTrackerInertiaMotion */
-/* Windows.UI.Composition.Interactions.IInteractionTrackerInertiaNaturalMotion */
-/* Windows.UI.Composition.Interactions.IInteractionTrackerInertiaRestingValue */
-/* Windows.UI.Composition.Interactions.IInteractionTrackerInteractingStateEnteredArgs */
-/* Windows.UI.Composition.Interactions.IInteractionTrackerInteractingStateEnteredArgs2 */
-/* Windows.UI.Composition.Interactions.IInteractionTrackerInteractingStateEnteredArgs2.get_IsFromBinding() */
 HRESULT wuicoin_interaction_tracker_interacting_state_entered_args_2_get__is_from_binding(WUICOIN_IInteractionTrackerInteractingStateEnteredArgs_2 *self, BOOL *value);
 
-/* Windows.UI.Composition.Interactions.IInteractionTrackerRequestIgnoredArgs */
-/* Windows.UI.Composition.Interactions.IInteractionTrackerValuesChangedArgs */
-/* Windows.UI.Composition.Interactions.IInteractionTrackerVector2InertiaNaturalMotion */
-/* Windows.UI.Composition.Interactions.IVisualInteractionSource */
-/* Windows.UI.Composition.Interactions.IVisualInteractionSource2 */
-/* Windows.UI.Composition.Interactions.IVisualInteractionSource2.get_DeltaPosition() */
 HRESULT wuicoin_visual_interaction_source_2_get__delta_position(WUICOIN_IVisualInteractionSource_2 *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.Interactions.IVisualInteractionSource2.get_DeltaScale() */
 HRESULT wuicoin_visual_interaction_source_2_get__delta_scale(WUICOIN_IVisualInteractionSource_2 *self, float *value);
 
-/* Windows.UI.Composition.Interactions.IVisualInteractionSource2.get_Position() */
 HRESULT wuicoin_visual_interaction_source_2_get__position(WUICOIN_IVisualInteractionSource_2 *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.Interactions.IVisualInteractionSource2.get_PositionVelocity() */
 HRESULT wuicoin_visual_interaction_source_2_get__position_velocity(WUICOIN_IVisualInteractionSource_2 *self, WFN_Vector_3 *value);
 
-/* Windows.UI.Composition.Interactions.IVisualInteractionSource2.get_Scale() */
 HRESULT wuicoin_visual_interaction_source_2_get__scale(WUICOIN_IVisualInteractionSource_2 *self, float *value);
 
-/* Windows.UI.Composition.Interactions.IVisualInteractionSource2.get_ScaleVelocity() */
 HRESULT wuicoin_visual_interaction_source_2_get__scale_velocity(WUICOIN_IVisualInteractionSource_2 *self, float *value);
 
-/* Windows.UI.Composition.Interactions.IVisualInteractionSource2.ConfigureCenterPointXModifiers(conditionalValues) */
 HRESULT wuicoin_visual_interaction_source_2_configure_center_point_x_modifiers(WUICOIN_IVisualInteractionSource_2 *self, WFOCO_IIterable_WUICOIN_CompositionConditionalValue* conditionalValues);
 
-/* Windows.UI.Composition.Interactions.IVisualInteractionSource2.ConfigureCenterPointYModifiers(conditionalValues) */
 HRESULT wuicoin_visual_interaction_source_2_configure_center_point_y_modifiers(WUICOIN_IVisualInteractionSource_2 *self, WFOCO_IIterable_WUICOIN_CompositionConditionalValue* conditionalValues);
 
-/* Windows.UI.Composition.Interactions.IVisualInteractionSource2.ConfigureDeltaPositionXModifiers(conditionalValues) */
 HRESULT wuicoin_visual_interaction_source_2_configure_delta_position_x_modifiers(WUICOIN_IVisualInteractionSource_2 *self, WFOCO_IIterable_WUICOIN_CompositionConditionalValue* conditionalValues);
 
-/* Windows.UI.Composition.Interactions.IVisualInteractionSource2.ConfigureDeltaPositionYModifiers(conditionalValues) */
 HRESULT wuicoin_visual_interaction_source_2_configure_delta_position_y_modifiers(WUICOIN_IVisualInteractionSource_2 *self, WFOCO_IIterable_WUICOIN_CompositionConditionalValue* conditionalValues);
 
-/* Windows.UI.Composition.Interactions.IVisualInteractionSource2.ConfigureDeltaScaleModifiers(conditionalValues) */
 HRESULT wuicoin_visual_interaction_source_2_configure_delta_scale_modifiers(WUICOIN_IVisualInteractionSource_2 *self, WFOCO_IIterable_WUICOIN_CompositionConditionalValue* conditionalValues);
 
-/* Windows.UI.Composition.Interactions.IVisualInteractionSource3 */
-/* Windows.UI.Composition.Interactions.IVisualInteractionSource3.get_PointerWheelConfig() */
 HRESULT wuicoin_visual_interaction_source_3_get__pointer_wheel_config(WUICOIN_IVisualInteractionSource_3 *self, WUICOIN_InteractionSourceConfiguration** value);
 
-/* Windows.UI.Composition.Interactions.ICompositionConditionalValue */
-/* Windows.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs */
-/* Windows.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs2 */
-/* Windows.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs2.get_IsInertiaFromImpulse() */
 HRESULT wuicoin_interaction_tracker_inertia_state_entered_args_2_get__is_inertia_from_impulse(WUICOIN_IInteractionTrackerInertiaStateEnteredArgs_2 *self, BOOL *value);
 
-/* Windows.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs3 */
-/* Windows.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs3.get_IsFromBinding() */
 HRESULT wuicoin_interaction_tracker_inertia_state_entered_args_3_get__is_from_binding(WUICOIN_IInteractionTrackerInertiaStateEnteredArgs_3 *self, BOOL *value);
 
-/* Windows.UI.Composition.Interactions.ICompositionInteractionSourceCollection */
 #endif /* CWINRT_WINDOWS_UI_COMPOSITION_INTERACTIONS_H */
